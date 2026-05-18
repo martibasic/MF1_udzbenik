@@ -1,36 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 540" role="img"
-     aria-labelledby="u4rcT u4rcD" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u04frc_u4rcT u04frc_u4rcD" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:480px;height:auto;">
-  <title id="u4rcT">Rotirajući cilindrični spremnik – paraboloidna slobodna površina</title>
-  <desc id="u4rcD">Poprečni presjek cilindra (R=0,35 m, ω=6,0 rad/s). Slobodna površina je paraboloid: os se spušta za Δh/2=11,25 cm, rub se diže za Δh/2=11,25 cm. Ukupni Δh≈22,5 cm.</desc>
+  <title id="u04frc_u4rcT">Rotirajući cilindrični spremnik – paraboloidna slobodna površina</title>
+  <desc id="u04frc_u4rcD">Poprečni presjek cilindra (R=0,35 m, ω=6,0 rad/s). Slobodna površina je paraboloid: os se spušta za Δh/2=11,25 cm, rub se diže za Δh/2=11,25 cm. Ukupni Δh≈22,5 cm.</desc>
   <defs>
-    <marker id="u4rcDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u4rcDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u4rcArR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u4rcArO" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#e67e22"/></marker>
-    <marker id="u4rcArOL" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L10,4 z" fill="#e67e22"/></marker>
-    <linearGradient id="u4rcfl" x1="0" y1="0" x2="0" y2="1">
+    <marker id="u04frc_u4rcDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <marker id="u04frc_u4rcDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <marker id="u04frc_u4rcArR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
+    <marker id="u04frc_u4rcArO" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#e67e22"/></marker>
+    <marker id="u04frc_u4rcArOL" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L10,4 z" fill="#e67e22"/></marker>
+    <linearGradient id="u04frc_u4rcfl" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
     </linearGradient>
-    <pattern id="u4rch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u04frc_u4rch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
     </pattern>
   </defs>
 
   <rect width="480" height="540" fill="#f4f7fb" rx="8"/>
 
-  <!-- Naslov -->
-  <text x="240" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2e42" text-anchor="middle">Rotirajući cilindrični spremnik</text>
-  <text x="240" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a5a7a" text-anchor="middle">R = 0,35 m  ·  ω = 6,0 rad/s  ·  g = 9,81 m/s²</text>
-
   <!-- Koordinatni sustav: cilindar zauzima x=100..380, y=70..400 -->
   <!-- Zidovi cilindra -->
   <!-- Lijeva stijenka: x=100..116, y=70..400 -->
-  <rect x="100" y="70" width="16" height="330" fill="url(#u4rch)" stroke="#4a5a68" stroke-width="1.6"/>
+  <rect x="100" y="70" width="16" height="330" fill="url(#u04frc_u4rch)" stroke="#4a5a68" stroke-width="1.6"/>
   <!-- Desna stijenka: x=364..380, y=70..400 -->
-  <rect x="364" y="70" width="16" height="330" fill="url(#u4rch)" stroke="#4a5a68" stroke-width="1.6"/>
+  <rect x="364" y="70" width="16" height="330" fill="url(#u04frc_u4rch)" stroke="#4a5a68" stroke-width="1.6"/>
   <!-- Dno: x=100..380, y=395..410 -->
-  <rect x="100" y="400" width="280" height="14" fill="url(#u4rch)" stroke="#4a5a68" stroke-width="1.6"/>
+  <rect x="100" y="400" width="280" height="14" fill="url(#u04frc_u4rch)" stroke="#4a5a68" stroke-width="1.6"/>
 
   <!--
     Parametri (SVG koordinate):
@@ -62,7 +58,7 @@
 
   <!-- Fluid (ispod paraboloida) -->
   <path d="M 116,263 C 160,341 200,341 240,341 C 280,341 320,341 364,263 L 364,400 L 116,400 Z"
-        fill="url(#u4rcfl)" opacity="0.88"/>
+        fill="url(#u04frc_u4rcfl)" opacity="0.88"/>
   <!-- Paraboloid površina -->
   <path d="M 116,263 C 160,341 200,341 240,341 C 280,341 320,341 364,263"
         fill="none" stroke="#1565c0" stroke-width="2.8"/>
@@ -75,7 +71,7 @@
   <!-- h0=y302, h_osa=y341 -->
   <line x1="72" y1="302" x2="78" y2="302" stroke="#e67e22" stroke-width="1.3"/>
   <line x1="72" y1="341" x2="78" y2="341" stroke="#e67e22" stroke-width="1.3"/>
-  <line x1="75" y1="304" x2="75" y2="339" stroke="#e67e22" stroke-width="1.6" marker-start="url(#u4rcArOL)" marker-end="url(#u4rcArO)"/>
+  <line x1="75" y1="304" x2="75" y2="339" stroke="#e67e22" stroke-width="1.6" marker-start="url(#u04frc_u4rcArOL)" marker-end="url(#u04frc_u4rcArO)"/>
   <text x="68" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#e67e22" text-anchor="end">Δh/2</text>
   <text x="68" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#e67e22" text-anchor="end">11,25cm</text>
 
@@ -83,30 +79,30 @@
   <!-- h0=y302, h_rub=y263 -->
   <line x1="396" y1="263" x2="402" y2="263" stroke="#e67e22" stroke-width="1.3"/>
   <line x1="396" y1="302" x2="402" y2="302" stroke="#e67e22" stroke-width="1.3"/>
-  <line x1="399" y1="265" x2="399" y2="300" stroke="#e67e22" stroke-width="1.6" marker-start="url(#u4rcArOL)" marker-end="url(#u4rcArO)"/>
+  <line x1="399" y1="265" x2="399" y2="300" stroke="#e67e22" stroke-width="1.6" marker-start="url(#u04frc_u4rcArOL)" marker-end="url(#u04frc_u4rcArO)"/>
   <text x="408" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#e67e22">Δh/2</text>
   <text x="408" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#e67e22">11,25cm</text>
 
   <!-- Kota Δh ukupno – crvena, lijevo -->
   <line x1="46" y1="263" x2="52" y2="263" stroke="#c0392b" stroke-width="1.3"/>
   <line x1="46" y1="341" x2="52" y2="341" stroke="#c0392b" stroke-width="1.3"/>
-  <line x1="49" y1="265" x2="49" y2="339" stroke="#c0392b" stroke-width="1.8" marker-start="url(#u4rcArR)" marker-end="url(#u4rcArR)"/>
+  <line x1="49" y1="265" x2="49" y2="339" stroke="#c0392b" stroke-width="1.8" marker-start="url(#u04frc_u4rcArR)" marker-end="url(#u04frc_u4rcArR)"/>
   <text x="42" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b" text-anchor="end">Δh</text>
   <text x="42" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-weight="700" fill="#c0392b" text-anchor="end">≈22,5cm</text>
 
   <!-- Kota 2R na dnu -->
   <line x1="116" y1="420" x2="116" y2="426" stroke="#b7600c" stroke-width="1.2"/>
   <line x1="364" y1="420" x2="364" y2="426" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="118" y1="423" x2="362" y2="423" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u4rcDimL)" marker-end="url(#u4rcDim)"/>
+  <line x1="118" y1="423" x2="362" y2="423" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04frc_u4rcDimL)" marker-end="url(#u04frc_u4rcDim)"/>
   <text x="240" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c" text-anchor="middle">2R = 0,70 m</text>
 
   <!-- Simbol ω – rotacija -->
   <!-- Lučna strelica na vrhu cilindra -->
-  <path d="M 210,58 A 30,12 0 0 1 270,58" fill="none" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u4rcDim)"/>
+  <path d="M 210,58 A 30,12 0 0 1 270,58" fill="none" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u04frc_u4rcDim)"/>
   <defs>
-    <marker id="u4rcwArrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/></marker>
+    <marker id="u04frc_u4rcwArrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/></marker>
   </defs>
-  <path d="M 210,58 A 30,12 0 0 1 270,58" fill="none" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u4rcwArrow)"/>
+  <path d="M 210,58 A 30,12 0 0 1 270,58" fill="none" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u04frc_u4rcwArrow)"/>
   <text x="240" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" font-weight="700" fill="#1e8449" text-anchor="middle">ω = 6,0 rad/s</text>
 
   <!-- Vertikalna os simetrije (isprekidana) -->

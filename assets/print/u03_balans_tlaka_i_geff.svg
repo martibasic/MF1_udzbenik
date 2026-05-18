@@ -1,72 +1,70 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u3balT u3balD" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u03btig_u3balT u03btig_u3balD" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:940px;height:auto;">
   <defs>
-    <pattern id="u3balS" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u03btig_u3balS" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="8" height="8" fill="#8090a0"/>
       <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
     </pattern>
-    <linearGradient id="u3balfw" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03btig_u3balfw" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d4eef8"/>
       <stop offset="100%" stop-color="#5baece"/>
     </linearGradient>
-    <marker id="u3balG" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+    <marker id="u03btig_u3balG" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
       <path d="M0,0 L0,7 L8,3.5 z" fill="#c96c35"/>
     </marker>
-    <marker id="u3balA" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+    <marker id="u03btig_u3balA" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
       <path d="M0,0 L0,7 L8,3.5 z" fill="#1565c0"/>
     </marker>
-    <marker id="u3balE" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+    <marker id="u03btig_u3balE" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
       <path d="M0,0 L0,7 L8,3.5 z" fill="#2e7d32"/>
     </marker>
-    <marker id="u3balB" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+    <marker id="u03btig_u3balB" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
       <path d="M0,0 L0,7 L8,3.5 z" fill="#8b5e3c"/>
     </marker>
   </defs>
 
-  <title id="u3balT">U03 – Balans tlaka i efektivno polje sila (g_eff)</title>
-  <desc id="u3balD">Lijevo: spojene posude s jednakim nivoima fluida. Desno: ubrzani spremnik s vektorima g, a i g_eff te nagnutom slobodnom povr&#353;inom.</desc>
+  <title id="u03btig_u3balT">U03 – Balans tlaka i efektivno polje sila (g_eff)</title>
+  <desc id="u03btig_u3balD">Lijevo: spojene posude s jednakim nivoima fluida. Desno: ubrzani spremnik s vektorima g, a i g_eff te nagnutom slobodnom povr&#353;inom.</desc>
 
   <rect width="940" height="420" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <text x="36" y="56" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#173043">U03 &#x2013; Balans tlaka i efektivno polje sila (g<tspan font-size="11" dy="4">eff</tspan><tspan dy="-4">)</tspan></text>
-
   <!-- Divider -->
   <line x1="470" y1="66" x2="470" y2="392" stroke="#d3d9de" stroke-width="1.5" stroke-dasharray="10,6"/>
 
   <!-- ===== LEFT PANEL: Spojene posude ===================================== -->
-  <text x="90" y="90" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Spojene posude (isti fluid)</text>
+  <text x="90" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Spojene posude (isti fluid)</text>
 
   <!-- LEFT VESSEL (wider) - srafura walls, open top -->
-  <rect x="78" y="130" width="14" height="242" fill="url(#u3balS)"/>   <!-- left wall -->
-  <rect x="176" y="130" width="14" height="242" fill="url(#u3balS)"/>  <!-- right wall -->
-  <rect x="92" y="358" width="84" height="14" fill="url(#u3balS)"/>    <!-- bottom -->
+  <rect x="78" y="130" width="14" height="242" fill="url(#u03btig_u3balS)"/>   <!-- left wall -->
+  <rect x="176" y="130" width="14" height="242" fill="url(#u03btig_u3balS)"/>  <!-- right wall -->
+  <rect x="92" y="358" width="84" height="14" fill="url(#u03btig_u3balS)"/>    <!-- bottom -->
   <!-- outline -->
   <line x1="78" y1="130" x2="78" y2="372" stroke="#546e7a" stroke-width="2"/>
   <line x1="190" y1="130" x2="190" y2="372" stroke="#546e7a" stroke-width="2"/>
   <line x1="78" y1="372" x2="190" y2="372" stroke="#546e7a" stroke-width="2"/>
   <!-- water fill left vessel -->
-  <rect x="92" y="236" width="84" height="122" fill="url(#u3balfw)"/>
+  <rect x="92" y="236" width="84" height="122" fill="url(#u03btig_u3balfw)"/>
   <!-- water surface dashed (at same level as right vessel) -->
   <line x1="78" y1="236" x2="190" y2="236" stroke="#1565c0" stroke-width="2" stroke-dasharray="7,5"/>
 
   <!-- RIGHT VESSEL (narrower) - srafura walls, open top -->
-  <rect x="296" y="170" width="14" height="202" fill="url(#u3balS)"/>  <!-- left wall -->
-  <rect x="384" y="170" width="14" height="202" fill="url(#u3balS)"/>  <!-- right wall -->
-  <rect x="310" y="358" width="74" height="14" fill="url(#u3balS)"/>   <!-- bottom -->
+  <rect x="296" y="170" width="14" height="202" fill="url(#u03btig_u3balS)"/>  <!-- left wall -->
+  <rect x="384" y="170" width="14" height="202" fill="url(#u03btig_u3balS)"/>  <!-- right wall -->
+  <rect x="310" y="358" width="74" height="14" fill="url(#u03btig_u3balS)"/>   <!-- bottom -->
   <!-- outline -->
   <line x1="296" y1="170" x2="296" y2="372" stroke="#546e7a" stroke-width="2"/>
   <line x1="398" y1="170" x2="398" y2="372" stroke="#546e7a" stroke-width="2"/>
   <line x1="296" y1="372" x2="398" y2="372" stroke="#546e7a" stroke-width="2"/>
   <!-- water fill right vessel -->
-  <rect x="310" y="236" width="74" height="122" fill="url(#u3balfw)"/>
+  <rect x="310" y="236" width="74" height="122" fill="url(#u03btig_u3balfw)"/>
   <!-- water surface dashed -->
   <line x1="296" y1="236" x2="398" y2="236" stroke="#1565c0" stroke-width="2" stroke-dasharray="7,5"/>
 
   <!-- CONNECTING TUBE at bottom -->
-  <rect x="190" y="346" width="106" height="12" fill="url(#u3balS)"/>  <!-- top wall of tube -->
-  <rect x="190" y="360" width="106" height="12" fill="url(#u3balS)"/>  <!-- bottom wall of tube -->
-  <rect x="190" y="350" width="106" height="10" fill="url(#u3balfw)"/> <!-- water inside tube -->
+  <rect x="190" y="346" width="106" height="12" fill="url(#u03btig_u3balS)"/>  <!-- top wall of tube -->
+  <rect x="190" y="360" width="106" height="12" fill="url(#u03btig_u3balS)"/>  <!-- bottom wall of tube -->
+  <rect x="190" y="350" width="106" height="10" fill="url(#u03btig_u3balfw)"/> <!-- water inside tube -->
   <line x1="190" y1="346" x2="296" y2="346" stroke="#546e7a" stroke-width="1.5"/>
   <line x1="190" y1="372" x2="296" y2="372" stroke="#546e7a" stroke-width="1.5"/>
 
@@ -75,67 +73,67 @@
   <!-- Reference point A on left vessel water surface -->
   <circle cx="134" cy="236" r="6" fill="#c96c35"/>
   <rect x="144" y="225" width="22" height="20" rx="5" fill="#fffbf5" stroke="#e0cfc3" stroke-width="1.2"/>
-  <text x="148" y="239" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#c96c35">A</text>
+  <text x="148" y="239" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c96c35">A</text>
   <!-- Reference point B on right vessel water surface -->
   <circle cx="347" cy="236" r="6" fill="#c96c35"/>
   <rect x="357" y="225" width="22" height="20" rx="5" fill="#fffbf5" stroke="#e0cfc3" stroke-width="1.2"/>
-  <text x="361" y="239" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#c96c35">B</text>
+  <text x="361" y="239" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c96c35">B</text>
   <!-- annotation -->
-  <text x="52" y="222" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-style="italic" fill="#c96c35">isti tlak na istoj razini</text>
-  <text x="90" y="265" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">p<tspan font-size="10" dy="3">A</tspan><tspan dy="-3"> = p</tspan><tspan font-size="10" dy="3">B</tspan></text>
+  <text x="52" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c96c35">isti tlak na istoj razini</text>
+  <text x="90" y="265" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">p<tspan font-size="10" dy="3">A</tspan><tspan dy="-3"> = p</tspan><tspan font-size="10" dy="3">B</tspan></text>
   <!-- p0 labels above vessels -->
-  <text x="106" y="120" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#516677">p<tspan font-size="11" dy="3">0</tspan></text>
-  <text x="322" y="158" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#516677">p<tspan font-size="11" dy="3">0</tspan></text>
+  <text x="106" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">p<tspan font-size="11" dy="3">0</tspan></text>
+  <text x="322" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">p<tspan font-size="11" dy="3">0</tspan></text>
 
   <!-- ===== RIGHT PANEL: Ubrzani spremnik ================================== -->
-  <text x="490" y="90" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ubrzani spremnik (a &#x2192; desno)</text>
+  <text x="490" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ubrzani spremnik (a &#x2192; desno)</text>
 
   <!-- TANK srafura walls -->
-  <rect x="490" y="126" width="14" height="246" fill="url(#u3balS)"/>   <!-- left wall -->
-  <rect x="746" y="126" width="14" height="246" fill="url(#u3balS)"/>   <!-- right wall -->
-  <rect x="504" y="126" width="242" height="14" fill="url(#u3balS)"/>   <!-- top wall (closed) -->
-  <rect x="504" y="358" width="242" height="14" fill="url(#u3balS)"/>   <!-- bottom wall -->
+  <rect x="490" y="126" width="14" height="246" fill="url(#u03btig_u3balS)"/>   <!-- left wall -->
+  <rect x="746" y="126" width="14" height="246" fill="url(#u03btig_u3balS)"/>   <!-- right wall -->
+  <rect x="504" y="126" width="242" height="14" fill="url(#u03btig_u3balS)"/>   <!-- top wall (closed) -->
+  <rect x="504" y="358" width="242" height="14" fill="url(#u03btig_u3balS)"/>   <!-- bottom wall -->
   <!-- tank outline -->
   <rect x="490" y="126" width="270" height="246" fill="none" stroke="#546e7a" stroke-width="2.2"/>
 
   <!-- TILTED water surface: left high (y=200), right low (y=310) -->
   <!-- Water polygon inside tank: (504,200) -> (746,310) -> (746,358) -> (504,358) -->
-  <polygon points="504,200 746,310 746,358 504,358" fill="url(#u3balfw)" opacity="0.95"/>
+  <polygon points="504,200 746,310 746,358 504,358" fill="url(#u03btig_u3balfw)" opacity="0.95"/>
   <!-- Free surface line (tilted) -->
   <line x1="504" y1="200" x2="746" y2="310" stroke="#1565c0" stroke-width="3"/>
 
   <!-- Tilt angle arc at left wall -->
   <path d="M 530 200 A 26 26 0 0 1 554 213" fill="none" stroke="#173043" stroke-width="2"/>
-  <text x="534" y="223" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-style="italic" fill="#173043">&#x3B1;</text>
+  <text x="534" y="223" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#173043">&#x3B1;</text>
 
   <!-- p0 inside tank above water (gas space) -->
-  <text x="570" y="172" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#516677">p<tspan font-size="11" dy="3">0</tspan></text>
+  <text x="570" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#516677">p<tspan font-size="11" dy="3">0</tspan></text>
 
   <!-- === VECTOR DIAGRAM (to the right of tank, x=780-910) === -->
   <!-- origin at (820, 200) -->
   <!-- g: vertically DOWN (orange) -->
-  <line x1="820" y1="200" x2="820" y2="270" stroke="#c96c35" stroke-width="4" marker-end="url(#u3balG)"/>
-  <text x="828" y="241" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#c96c35">g</text>
+  <line x1="820" y1="200" x2="820" y2="270" stroke="#c96c35" stroke-width="4" marker-end="url(#u03btig_u3balG)"/>
+  <text x="828" y="241" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#c96c35">g</text>
 
   <!-- a: horizontally RIGHT (blue) -->
-  <line x1="820" y1="200" x2="892" y2="200" stroke="#1565c0" stroke-width="4" marker-end="url(#u3balA)"/>
-  <text x="846" y="191" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#1565c0">a</text>
+  <line x1="820" y1="200" x2="892" y2="200" stroke="#1565c0" stroke-width="4" marker-end="url(#u03btig_u3balA)"/>
+  <text x="846" y="191" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1565c0">a</text>
 
   <!-- g_eff: diagonal (green), from origin (820,200) to (892,270) = resultant -->
-  <line x1="820" y1="200" x2="892" y2="270" stroke="#2e7d32" stroke-width="4" marker-end="url(#u3balE)"/>
-  <text x="860" y="268" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#2e7d32">g<tspan font-size="10" dy="3">eff</tspan></text>
+  <line x1="820" y1="200" x2="892" y2="270" stroke="#2e7d32" stroke-width="4" marker-end="url(#u03btig_u3balE)"/>
+  <text x="860" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2e7d32">g<tspan font-size="10" dy="3">eff</tspan></text>
 
   <!-- Right-angle marker at origin -->
   <polyline points="832,200 832,212 820,212" fill="none" stroke="#888" stroke-width="1.5"/>
 
   <!-- tilt angle label near g_eff -->
   <path d="M 820 228 A 28 28 0 0 1 841 208" fill="none" stroke="#2e7d32" stroke-width="1.8"/>
-  <text x="840" y="232" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-style="italic" fill="#2e7d32">&#x3B1;</text>
+  <text x="840" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#2e7d32">&#x3B1;</text>
 
   <!-- Formulas below vector diagram -->
   <rect x="776" y="290" width="148" height="80" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
-  <text x="786" y="313" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">tan &#x3B1; = a / g</text>
-  <text x="786" y="334" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">g<tspan font-size="9" dy="3">eff</tspan><tspan dy="-3"> = &#x221A;(g&#xB2;+a&#xB2;)</tspan></text>
-  <text x="786" y="356" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#516677">slobodna pov&#x161;. &#x22A5; g<tspan font-size="8" dy="3">eff</tspan></text>
+  <text x="786" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">tan &#x3B1; = a / g</text>
+  <text x="786" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">g<tspan font-size="9" dy="3">eff</tspan><tspan dy="-3"> = &#x221A;(g&#xB2;+a&#xB2;)</tspan></text>
+  <text x="786" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">slobodna pov&#x161;. &#x22A5; g<tspan font-size="8" dy="3">eff</tspan></text>
 
 </svg>

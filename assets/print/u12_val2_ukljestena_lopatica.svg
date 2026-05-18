@@ -1,13 +1,10 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="title">U12 Val 2 - ukljestena zakrivljena lopatica</title>
-  <desc id="desc">Skica zakrivljene lopatice ukljestene u točki O s ulaznim mlazom, izlaznim mlazom pod kutom alfa, reakcijama Rx i Ry, momentom MO te geometrijskim oznakama h i l.</desc>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="u12v2ul_title u12v2ul_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u12v2ul_title">U12 Val 2 - ukljestena zakrivljena lopatica</title>
+  <desc id="u12v2ul_desc">Skica zakrivljene lopatice ukljestene u točki O s ulaznim mlazom, izlaznim mlazom pod kutom alfa, reakcijama Rx i Ry, momentom MO te geometrijskim oznakama h i l.</desc>
   <rect width="980" height="420" fill="#fffdf8"/>
   <rect x="32" y="32" width="916" height="356" rx="22" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <text x="70" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#173043">U12 - Ukljestena zakrivljena lopatica</text>
-  <text x="70" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">Tangencijalni ulaz mlaza daje reakcije u dvije osi i moment u točki ukljestenja.</text>
-
-  <text x="86" y="142" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#173043">Skica sustava</text>
+  <text x="86" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#173043">Skica sustava</text>
 
   <rect x="772" y="106" width="18" height="238" fill="#cfd8dc" stroke="#173043" stroke-width="4"/>
   <circle cx="738" cy="258" r="6" fill="#173043"/>
@@ -16,71 +13,71 @@
   <path d="M650 206 L572 80" fill="none" stroke="#173043" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M724 252 Q732 255 738 258" fill="none" stroke="#173043" stroke-width="24" stroke-linecap="round"/>
 
-  <line x1="110" y1="302" x2="186" y2="302" stroke="#3a87ad" stroke-width="10" marker-end="url(#arrowBlueLarge)"/>
-  <text x="122" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">Q, v</text>
-  <text x="118" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">d = ?</text>
+  <line x1="110" y1="302" x2="186" y2="302" stroke="#3a87ad" stroke-width="10" marker-end="url(#u12v2ul_arrowBlueLarge)"/>
+  <text x="122" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">Q, v</text>
+  <text x="118" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">d = ?</text>
 
-  <line x1="612" y1="146" x2="590" y2="112" stroke="#3a87ad" stroke-width="6" marker-end="url(#arrowBlueSmall)"/>
-  <text x="624" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">v_2</text>
+  <line x1="612" y1="146" x2="590" y2="112" stroke="#3a87ad" stroke-width="6" marker-end="url(#u12v2ul_arrowBlueSmall)"/>
+  <text x="624" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">v_2</text>
 
   <line x1="188" y1="302" x2="738" y2="302" stroke="#6f7f89" stroke-width="2.5" stroke-dasharray="7 6"/>
   <line x1="160" y1="258" x2="738" y2="258" stroke="#6f7f89" stroke-width="2.5" stroke-dasharray="7 6"/>
   <line x1="572" y1="80" x2="676" y2="258" stroke="#6f7f89" stroke-width="2.5" stroke-dasharray="7 6"/>
 
-  <line x1="166" y1="258" x2="166" y2="302" stroke="#c96c35" stroke-width="3" marker-start="url(#arrowOrangeSmall)" marker-end="url(#arrowOrange)"/>
-  <text x="132" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">h</text>
+  <line x1="166" y1="258" x2="166" y2="302" stroke="#c96c35" stroke-width="3" marker-start="url(#u12v2ul_arrowOrangeSmall)" marker-end="url(#u12v2ul_arrowOrange)"/>
+  <text x="132" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">h</text>
 
-  <line x1="676" y1="244" x2="738" y2="244" stroke="#c96c35" stroke-width="3" marker-start="url(#arrowOrangeSmall)" marker-end="url(#arrowOrange)"/>
-  <text x="704" y="236" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">l</text>
+  <line x1="676" y1="244" x2="738" y2="244" stroke="#c96c35" stroke-width="3" marker-start="url(#u12v2ul_arrowOrangeSmall)" marker-end="url(#u12v2ul_arrowOrange)"/>
+  <text x="704" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">l</text>
 
   <path d="M704 258 A28 28 0 0 0 691 233" fill="none" stroke="#c96c35" stroke-width="3"/>
-  <text x="688" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">a</text>
+  <text x="688" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">a</text>
 
-  <line x1="738" y1="296" x2="664" y2="296" stroke="#2e7d32" stroke-width="5" marker-end="url(#arrowGreen)"/>
-  <text x="676" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">R_x</text>
+  <line x1="738" y1="296" x2="664" y2="296" stroke="#2e7d32" stroke-width="5" marker-end="url(#u12v2ul_arrowGreen)"/>
+  <text x="676" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">R_x</text>
 
-  <line x1="738" y1="258" x2="738" y2="180" stroke="#2e7d32" stroke-width="5" marker-end="url(#arrowGreen)"/>
-  <text x="748" y="196" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">R_y</text>
+  <line x1="738" y1="258" x2="738" y2="180" stroke="#2e7d32" stroke-width="5" marker-end="url(#u12v2ul_arrowGreen)"/>
+  <text x="748" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">R_y</text>
 
-  <path d="M706 288 A42 42 0 1 1 742 220" fill="none" stroke="#c23b22" stroke-width="4" marker-end="url(#arrowRed)"/>
-  <text x="690" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">M_O</text>
+  <path d="M706 288 A42 42 0 1 1 742 220" fill="none" stroke="#c23b22" stroke-width="4" marker-end="url(#u12v2ul_arrowRed)"/>
+  <text x="690" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">M_O</text>
 
-  <text x="748" y="272" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">O</text>
-  <text x="787" y="98" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">zidni nosac</text>
-  <text x="204" y="244" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">p_a</text>
-  <text x="622" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">p_a</text>
+  <text x="748" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">O</text>
+  <text x="787" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">zidni nosac</text>
+  <text x="204" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">p_a</text>
+  <text x="622" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">p_a</text>
 
-  <line x1="852" y1="292" x2="902" y2="292" stroke="#173043" stroke-width="3" marker-end="url(#arrowGray)"/>
-  <line x1="852" y1="292" x2="852" y2="242" stroke="#173043" stroke-width="3" marker-end="url(#arrowGray)"/>
-  <text x="908" y="298" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">x</text>
-  <text x="844" y="234" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">y</text>
+  <line x1="852" y1="292" x2="902" y2="292" stroke="#173043" stroke-width="3" marker-end="url(#u12v2ul_arrowGray)"/>
+  <line x1="852" y1="292" x2="852" y2="242" stroke="#173043" stroke-width="3" marker-end="url(#u12v2ul_arrowGray)"/>
+  <text x="908" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">x</text>
+  <text x="844" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">y</text>
 
   <rect x="812" y="142" width="108" height="96" rx="14" fill="#f7fafb" stroke="#d3d9de" stroke-width="2"/>
-  <text x="828" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#173043">Redoslijed</text>
-  <text x="828" y="196" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#587183">1. Q i v -> d</text>
-  <text x="828" y="216" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#587183">2. R_x, R_y</text>
-  <text x="828" y="236" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#587183">3. moment M_O</text>
+  <text x="828" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#173043">Redoslijed</text>
+  <text x="828" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#587183">1. Q i v -> d</text>
+  <text x="828" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#587183">2. R_x, R_y</text>
+  <text x="828" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#587183">3. moment M_O</text>
 
   <defs>
-    <marker id="arrowBlueLarge" markerWidth="12" markerHeight="12" refX="7" refY="4" orient="auto">
+    <marker id="u12v2ul_arrowBlueLarge" markerWidth="12" markerHeight="12" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#3a87ad"/>
     </marker>
-    <marker id="arrowBlueSmall" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto">
+    <marker id="u12v2ul_arrowBlueSmall" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#3a87ad"/>
     </marker>
-    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u12v2ul_arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#2e7d32"/>
     </marker>
-    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u12v2ul_arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#c23b22"/>
     </marker>
-    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u12v2ul_arrowOrange" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
     </marker>
-    <marker id="arrowOrangeSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+    <marker id="u12v2ul_arrowOrangeSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
       <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
     </marker>
-    <marker id="arrowGray" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u12v2ul_arrowGray" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#173043"/>
     </marker>
   </defs>

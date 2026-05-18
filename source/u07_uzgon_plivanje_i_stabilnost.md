@@ -515,82 +515,7 @@ $$
 1. Odredite koliki dio visine modula mora biti u donjem, gušćem fluidu da modul bude neutralno uronjen.
 2. Odredite silu koju mora prenijeti vodilica ako je modul pogrešno postavljen tako da je u donjem fluidu samo $x = 0{,}050\ \text{m}$ njegove visine.
 
-```{python}
-#| label: fig-u07-kalibracijski-modul
-#| fig-cap: "Kalibracijski modul na granici ulja i vode (t=0,22 m, x≈0,093 m)"
-#| fig-align: center
-#| out-width: 45%
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-fig, ax = plt.subplots(figsize=(4.5, 5.0))
-ax.set_xlim(0, 8); ax.set_ylim(0, 9)
-ax.axis('off')
-
-# Skala: 1m = 5 plot jed, visina modula t=0.22m -> 1.1 plot jed
-t_p = 1.1 * 5; x_p = 0.0933 * 5; tx_p = t_p - x_p
-mod_x = 2.5; mod_w = 3.0
-
-# Razina granice fluida (ulje/voda)
-boundary_y = 2.5
-# Razina dna modula
-mod_bottom = boundary_y - x_p
-# Razina vrha modula
-mod_top = mod_bottom + t_p
-
-# Ulje (gore)
-ax.add_patch(plt.Rectangle((0.5, boundary_y), 7.0, 4.0,
-    fc='#F9E79F', ec='none', alpha=0.7))
-ax.text(0.7, boundary_y + 2.0, 'Ulje\n' + r'$\rho_1=820$', fontsize=8, va='center', color='#7D6608')
-
-# Voda (dole)
-ax.add_patch(plt.Rectangle((0.5, 0.5), 7.0, boundary_y - 0.5,
-    fc='#AED6F1', ec='none', alpha=0.7))
-ax.text(0.7, 1.5, 'Voda\n' + r'$\rho_2=1030$', fontsize=8, va='center', color='#1A5276')
-
-# Granica fluida
-ax.plot([0.5, 7.5], [boundary_y, boundary_y], color='#888', lw=1.5, ls='--')
-
-# Modul (pravokutnik)
-ax.add_patch(plt.Rectangle((mod_x, mod_bottom), mod_w, t_p,
-    fc='#D7DBDD', ec='#555', lw=2.0))
-
-# t oznaka (ukupna visina)
-ax.annotate('', xy=(mod_x - 0.5, mod_bottom), xytext=(mod_x - 0.5, mod_top),
-    arrowprops=dict(arrowstyle='<->', color='#333', lw=1.0))
-ax.text(mod_x - 0.7, (mod_bottom + mod_top)/2, r'$t=0{,}22\ m$',
-    fontsize=8, va='center', ha='right', color='#1A252F')
-
-# x oznaka (dio u vodi)
-ax.annotate('', xy=(mod_x + mod_w + 0.3, mod_bottom),
-    xytext=(mod_x + mod_w + 0.3, boundary_y),
-    arrowprops=dict(arrowstyle='<->', color='#1A5276', lw=1.2))
-ax.text(mod_x + mod_w + 0.5, (mod_bottom + boundary_y)/2,
-    r'$x\approx0{,}093\ m$', fontsize=7.5, va='center', color='#1A5276')
-
-# t-x oznaka (dio u ulju)
-ax.annotate('', xy=(mod_x + mod_w + 0.3, boundary_y),
-    xytext=(mod_x + mod_w + 0.3, mod_top),
-    arrowprops=dict(arrowstyle='<->', color='#7D6608', lw=1.2))
-ax.text(mod_x + mod_w + 0.5, (boundary_y + mod_top)/2,
-    r'$t-x$', fontsize=7.5, va='center', color='#7D6608')
-
-# F_U1 i F_U2 strelice
-ax.annotate('', xy=(mod_x + mod_w/2, mod_top + 0.8), xytext=(mod_x + mod_w/2, mod_top),
-    arrowprops=dict(arrowstyle='->', color='#27AE60', lw=2.0))
-ax.text(mod_x + mod_w/2, mod_top + 1.1, r'$F_U$', fontsize=10, ha='center', color='#27AE60')
-
-# G strelica
-ax.annotate('', xy=(mod_x + mod_w/2, mod_bottom - 0.8),
-    xytext=(mod_x + mod_w/2, mod_bottom),
-    arrowprops=dict(arrowstyle='->', color='#E74C3C', lw=2.0))
-ax.text(mod_x + mod_w/2, mod_bottom - 1.1, r'$G$', fontsize=10, ha='center', color='#E74C3C')
-
-ax.set_title('Kalibracijski modul na granici ulja i vode (T2)', fontsize=9, pad=4)
-plt.tight_layout()
-plt.show()
-```
+![Kalibracijski modul na granici ulja i vode (t=0,22 m, x≈0,093 m)](../assets/print/u07_val3_dva_fluida_modul.svg){#fig-u07-kalibracijski-modul fig-align="center" style="width:100%;max-width:520px;"}
 
 **Pretpostavke i model**
 
@@ -921,6 +846,169 @@ Ovaj `CH` zatvara tri jezgre <span class="mf1-ch-ref"><span class="mf1-ch-code">
 1. Srednji uron mora biti između izmjerenih rubnih urona i manji od visine boka, što ovdje vrijedi.
 2. Dublje uronjena strana mora biti ona na koju je pomaknut ormar, pa znak momenta mora biti fizikalno smislen.
 3. Dobiveni pomak ormara mora biti manji od polovice širine platforme; ovdje je $e = 0{,}20\ \text{m} < B/2 = 0{,}60\ \text{m}$.
+:::
+
+::: {.mf1-ch}
+<p class="mf1-box-label">Cjeloviti zadatak - Asimetrično poplavljen balastni tank: novi gaz, nagib i provjera stabilnosti broda <span class="mf1-level">T4</span></p>
+
+**Zadano**
+
+Teretni brod pojednostavljenog pravokutnog trupa miruje u mirnoj morskoj vodi kad zbog oštećenja trupa s lijeve strane more potpuno preplavi jedan balastni tank. Zadatak je odrediti **kako brod reagira**: koliko se gaz povećao, koliki je novi bočni nagib i da li je brod ostao stabilan (uobičajeni SOLAS kriterij za teretne brodove zahtijeva GM > 0 i ograničava kut nagiba na 15$^\circ$).
+
+**Glavni podaci broda**
+
+- Duljina: $L = 80\ \text{m}$, širina: $B = 15\ \text{m}$, visina trupa: $H = 8\ \text{m}$
+- Ukupna masa broda s teretom (prije oštećenja): $m_b = 4000\ \text{t}$
+- Visina težišta broda iznad kobilice: $K\bar G_b = 3{,}0\ \text{m}$
+- Gustoća morske vode: $\rho_m = 1025\ \text{kg/m}^3$
+- $g = 9{,}81\ \text{m/s}^2$
+
+**Geometrija poplavljenog tanka**
+
+Lijevi balastni tank u sredini trupa, otvoren prema moru kroz oštećenje:
+
+- Duljina tanka: $L_t = 15\ \text{m}$
+- Širina tanka u poprečnom presjeku: $B_t = 6{,}0\ \text{m}$ (uz lijevu bočnu stijenku trupa)
+- Visina tanka od kobilice prema gore: $H_t = 3{,}0\ \text{m}$
+
+Tank se potpuno napuni morskom vodom (pretpostavlja se trajno otvoreni "prozor" prema moru).
+
+**Traženo**
+
+1. Volumen i masa morske vode koja je ušla u tank.
+2. Pomak težišta cijelog sustava (brod + voda u tanku): bočni pomak $e_G$ od osi simetrije i nova visina težišta $K\bar G'$.
+3. Novi srednji gaz $T_1$ ako bi brod ostao u uspravnom položaju, te porast gaza $\Delta T = T_1 - T_0$.
+4. Metacentarska visina $\overline{GM}$ i zaključak o stabilnosti.
+5. Ravnotežni bočni kut nagiba $\theta$ (uz pretpostavku malog kuta).
+6. Provjera: koliko se spustio bočni rub palube i je li paluba u vodi? Granični kut prije nego što paluba dotakne morsku razinu.
+
+![Asimetrično poplavljen balastni tank: trup $L \times B \times H = 80 \times 15 \times 8$ m, tank $15 \times 6 \times 3$ m uz lijevu stijenku. Težište poplavljene vode pomaknuto je 4,5 m od osi simetrije, što naginje brod prema lijevo.](../assets/print/u07_ch2_poplavljen_tank.svg){#fig-u07-poplavljen-tank fig-align="center"}
+
+**Pretpostavke i model**
+
+Brod se modelira kao kruti pravokutni trup s konstantnom raspodjelom mase – težište broda $G_b$ je na osi simetrije, na zadanoj visini $K\bar G_b$ iznad kobilice. More miruje, valovi se zanemaruju. Razmatra se konačno ravnotežno stanje **nakon** što se voda u tanku smiri (tzv. "free communication" – tank trajno spojen s morem, pa razina vode u tanku prati morsku razinu; ovdje se za jednostavnost uzima da je tank pun do svojeg vrha).
+
+Bočni nagib smatra se "malim" ($\theta < 10^\circ$), tako da se može koristiti standardna formula tan$\theta = e_G/\overline{GM}$. Drugi moment površine vodne linije računa se za pravokutni trup $L \times B$.
+
+**Rješenje**
+
+**1. Volumen i masa poplavljene vode.**
+
+$$
+V_w = L_t B_t H_t = 15 \cdot 6 \cdot 3 = 270\ \text{m}^3
+$$
+
+$$
+m_w = \rho_m V_w = 1025 \cdot 270 \approx 277\,000\ \text{kg} \approx 277\ \text{t}
+$$
+
+**2. Pomak težišta sustava.**
+
+Centroid poplavljene vode (= centar tanka) je u bočnom smjeru udaljen $B_t/2 = 3{,}0$ m od lijeve stijenke broda, što je $B/2 - B_t/2 = 7{,}5 - 3{,}0 = 4{,}5$ m lijevo od osi simetrije. Po visini, centroid je na $H_t/2 = 1{,}5$ m iznad kobilice.
+
+Bočni pomak težišta cijelog sustava (pondrirano masom):
+
+$$
+e_G = \frac{m_w \cdot e_t}{m_b + m_w} = \frac{277 \cdot 4{,}5}{4000 + 277} = \frac{1247}{4277} \approx 0{,}291\ \text{m}
+$$
+
+Nova visina težišta sustava iznad kobilice:
+
+$$
+K\bar G' = \frac{m_b \cdot K\bar G_b + m_w \cdot (H_t/2)}{m_b + m_w} = \frac{4000 \cdot 3{,}0 + 277 \cdot 1{,}5}{4277} \approx 2{,}90\ \text{m}
+$$
+
+**3. Novi gaz (uspravan položaj).** Brod plovi kad uzgon = ukupna težina, tj. istisnina $V_{displ} = (m_b + m_w)/\rho_m$. Za pravokutni trup $V_{displ} = L \cdot B \cdot T$, pa:
+
+$$
+T_1 = \frac{m_b + m_w}{\rho_m L B} = \frac{4277 \cdot 10^3}{1025 \cdot 80 \cdot 15} \approx 3{,}478\ \text{m}
+$$
+
+Originalni gaz (samo $m_b$): $T_0 = m_b / (\rho_m L B) = 4000\cdot 10^3 / 1{,}23 \cdot 10^6 \approx 3{,}252\ \text{m}$.
+
+$$
+\Delta T = T_1 - T_0 \approx 0{,}226\ \text{m}
+$$
+
+**4. Metacentarska visina.** Drugi moment površine vodne linije za pravokutni presjek:
+
+$$
+I_T = \frac{L B^3}{12} = \frac{80 \cdot 15^3}{12} = 22\,500\ \text{m}^4
+$$
+
+Volumen istisnine:
+
+$$
+V_{displ} = \frac{m_b + m_w}{\rho_m} = \frac{4277 \cdot 10^3}{1025} \approx 4172\ \text{m}^3
+$$
+
+Metacentarski radijus (razmak centra uzgona $B'$ od metacentra $M$):
+
+$$
+\overline{BM} = \frac{I_T}{V_{displ}} = \frac{22\,500}{4172} \approx 5{,}39\ \text{m}
+$$
+
+Visina centra uzgona iznad kobilice ($T_1/2$):
+
+$$
+K\bar B = T_1/2 \approx 1{,}74\ \text{m}
+$$
+
+Razmak težišta od centra uzgona:
+
+$$
+\overline{BG} = K\bar G' - K\bar B \approx 2{,}90 - 1{,}74 \approx 1{,}16\ \text{m}
+$$
+
+Metacentarska visina:
+
+$$
+\overline{GM} = \overline{BM} - \overline{BG} \approx 5{,}39 - 1{,}16 \approx 4{,}23\ \text{m}
+$$
+
+Kako je $\overline{GM} > 0$, brod je **stabilan** u smislu povratnog momenta pri malim nagibima.
+
+**5. Ravnotežni kut nagiba.** Za male kutove vrijedi:
+
+$$
+\tan\theta = \frac{e_G}{\overline{GM}} = \frac{0{,}291}{4{,}23} \approx 0{,}0689
+$$
+
+$$
+\theta \approx 3{,}94^\circ
+$$
+
+**6. Provjera bočnog ruba palube.** Originalni nadboj (freeboard) pri uspravnom položaju s novim gazom:
+
+$$
+F_b = H - T_1 \approx 8 - 3{,}478 \approx 4{,}52\ \text{m}
+$$
+
+Spuštanje lijevog ruba palube zbog nagiba:
+
+$$
+\Delta z = (B/2) \sin\theta \approx 7{,}5 \cdot \sin 3{,}94^\circ \approx 7{,}5 \cdot 0{,}0687 \approx 0{,}515\ \text{m}
+$$
+
+Preostali nadboj na lijevom rubu palube:
+
+$$
+F_{b,L} = F_b - \Delta z \approx 4{,}52 - 0{,}52 \approx 4{,}00\ \text{m}
+$$
+
+Granični kut prije nego što paluba dotakne morsku razinu:
+
+$$
+\sin\theta_{lim} = \frac{F_b}{B/2} = \frac{4{,}52}{7{,}5} \approx 0{,}603, \qquad \theta_{lim} \approx 37{,}1^\circ
+$$
+
+**Provjera i komentar**
+
+1. Brod **preživljava** poplavljenje ovog tanka: $\overline{GM} \approx 4{,}2$ m (jako pozitivno), $\theta \approx 4^\circ$ (znatno manje od SOLAS ograničenja $\approx 15^\circ$), paluba ostaje 4 m iznad mora. Razlog dobre stabilnosti je velika širina trupa: $\overline{BM}$ raste s **kubom** širine ($I_T \propto B^3$), pa široki brod prirodno ima veliki metacentarski radijus.
+2. Ali porast gaza $\Delta T \approx 0{,}23$ m čini se mali, a u praksi je vrlo opasan. Ako brod već vozi punim teretom i originalni nadboj je samo 0,5 m, ovih dodatnih 23 cm može ga približiti **graničnoj liniji opterećenja** (Plimsoll mark). Drugi tank koji se popuni vodom poslije bi mogao značiti gubitak nadboja i kaskadno poplavljenje – upravo zato SOLAS standard za teretne brodove zahtijeva "dvostruko dno" i komore koje **ograničavaju** koliko vode može ući.
+3. Mali kut nagiba $\theta \approx 4^\circ$ uveden je tipičnim aproksimativnim formulama. Točniji proračun (npr. za $\theta > 10^\circ$) traži integraciju oblika trupa i mijenjanje $I_T$ s nagibom – ovo je polje **stabilnosti pri velikim nagibima** (large angle stability), koje koristi krivulju momenata povratka (GZ-curve).
+4. Najopasniji slučaj nije ovaj **pravilan** poplavljen tank, nego *slobodna površina vode unutar tanka* (free surface effect). Ako tank nije potpuno pun (gornji rub iznad vodne linije), pomak vode pri nagibu broda dodatno pomiče težište prema **istoj** strani gdje brod nagne – efektivno smanjujući $\overline{GM}$. Zato se tankovi ili pune do vrha ili se prazne, ali ne se ostavljaju u "polupopunjenom" stanju.
+5. Inženjerska poruka: stabilnost broda nije statički podatak iz brodskog priručnika – ona se **dinamički mijenja** ovisno o tome je li teret raspoređen simetrično, jesu li tankovi puni i je li trup intaktan. Mehanika fluida ovdje prelazi u brodograđevnu disciplinu "stabilnosti i trima".
 :::
 
 ::: {.mf1-we}

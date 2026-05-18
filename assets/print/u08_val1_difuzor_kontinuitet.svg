@@ -1,46 +1,43 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 320" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="title">U08 Val 1 - difuzor i kontinuitet</title>
-  <desc id="desc">Minimalna tehnička skica difuzora s označenim kontrolnim volumenom, ulaznim i izlaznim presjekom, promjerima D1 i D2 te brzinama v1 i v2.</desc>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 320" role="img" aria-labelledby="u08v1dk_title u08v1dk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u08v1dk_title">U08 Val 1 - difuzor i kontinuitet</title>
+  <desc id="u08v1dk_desc">Minimalna tehnička skica difuzora s označenim kontrolnim volumenom, ulaznim i izlaznim presjekom, promjerima D1 i D2 te brzinama v1 i v2.</desc>
   <rect width="940" height="320" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="272" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-
-  <text x="54" y="58" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#173043">U08 - Difuzor i kontinuitet</text>
-  <text x="54" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#516677">Jedan ulaz i jedan izlaz: kroz oba presjeka mora prolaziti isti protok.</text>
 
   <rect x="172" y="112" width="72" height="96" fill="#d9edf4" stroke="#173043" stroke-width="3"/>
   <polygon points="244,112 574,82 574,238 244,208" fill="#d9edf4" stroke="#173043" stroke-width="3"/>
   <rect x="574" y="82" width="72" height="156" fill="#d9edf4" stroke="#173043" stroke-width="3"/>
 
   <rect x="132" y="66" width="554" height="188" rx="12" fill="none" stroke="#c96c35" stroke-width="3" stroke-dasharray="10 8"/>
-  <text x="454" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">kontrolni volumen</text>
+  <text x="454" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">kontrolni volumen</text>
 
-  <line x1="92" y1="160" x2="172" y2="160" stroke="#1976d2" stroke-width="5" marker-end="url(#arrowBlue)"/>
-  <line x1="646" y1="160" x2="754" y2="160" stroke="#1976d2" stroke-width="5" marker-end="url(#arrowBlue)"/>
-  <text x="100" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">A1, v1</text>
-  <text x="658" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">A2, v2 = 16 m/s</text>
+  <line x1="92" y1="160" x2="172" y2="160" stroke="#1976d2" stroke-width="5" marker-end="url(#u08v1dk_arrowBlue)"/>
+  <line x1="646" y1="160" x2="754" y2="160" stroke="#1976d2" stroke-width="5" marker-end="url(#u08v1dk_arrowBlue)"/>
+  <text x="100" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">A1, v1</text>
+  <text x="658" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">A2, v2 = 16 m/s</text>
 
-  <line x1="154" y1="112" x2="154" y2="208" stroke="#0f766e" stroke-width="3" marker-start="url(#arrowGreenSmall)" marker-end="url(#arrowGreen)"/>
-  <text x="112" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">D1 = 120 mm</text>
+  <line x1="154" y1="112" x2="154" y2="208" stroke="#0f766e" stroke-width="3" marker-start="url(#u08v1dk_arrowGreenSmall)" marker-end="url(#u08v1dk_arrowGreen)"/>
+  <text x="112" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">D1 = 120 mm</text>
 
-  <line x1="612" y1="82" x2="612" y2="238" stroke="#be123c" stroke-width="3" marker-start="url(#arrowRedSmall)" marker-end="url(#arrowRed)"/>
-  <text x="624" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">D2 = 180 mm</text>
+  <line x1="612" y1="82" x2="612" y2="238" stroke="#be123c" stroke-width="3" marker-start="url(#u08v1dk_arrowRedSmall)" marker-end="url(#u08v1dk_arrowRed)"/>
+  <text x="624" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">D2 = 180 mm</text>
 
-  <text x="186" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Za nestlacivi stacionarni tok vrijedi A1 v1 = A2 v2, pa se u sirem presjeku brzina mora smanjiti.</text>
+  <text x="186" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">Za nestlacivi stacionarni tok vrijedi A1 v1 = A2 v2, pa se u sirem presjeku brzina mora smanjiti.</text>
 
   <defs>
-    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u08v1dk_arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
     </marker>
-    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u08v1dk_arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
     </marker>
-    <marker id="arrowGreenSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+    <marker id="u08v1dk_arrowGreenSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
       <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
     </marker>
-    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u08v1dk_arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#be123c"/>
     </marker>
-    <marker id="arrowRedSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+    <marker id="u08v1dk_arrowRedSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
       <path d="M0,0 L0,6 L6,3 z" fill="#be123c"/>
     </marker>
   </defs>

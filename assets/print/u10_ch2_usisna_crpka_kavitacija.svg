@@ -1,17 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="title">U10 CH 2 - usisni vod servisne crpke s kavitacijskom granicom</title>
-  <desc id="desc">Otvoreni bazen A dovodi vodu do uzdignute centrifugalne crpke, a zatim u gornji rashladni spremnik B. Skica razdvaja usisne i tlacne gubitke, visinu ugradnje osi crpke i apsolutni tlak na usisu.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="u10c2uck_title u10c2uck_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u10c2uck_title">U10 CH 2 - usisni vod servisne crpke s kavitacijskom granicom</title>
+  <desc id="u10c2uck_desc">Otvoreni bazen A dovodi vodu do uzdignute centrifugalne crpke, a zatim u gornji rashladni spremnik B. Skica razdvaja usisne i tlacne gubitke, visinu ugradnje osi crpke i apsolutni tlak na usisu.</desc>
   <rect width="980" height="420" fill="#ffffff"/>
   <rect x="28" y="28" width="924" height="364" rx="18" fill="#ffffff" stroke="#c9d2d8" stroke-width="2"/>
-
-  <text x="58" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#173043">U10 CH - Usisni vod servisne crpke i kavitacijska granica</text>
-  <text x="58" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Isti gubici sada zatvaraju i potrebnu visinu dobave i sigurnu rezervu iznad naponske visine pare.</text>
 
   <rect x="94" y="190" width="112" height="126" rx="8" fill="#ffffff" stroke="#5b6770" stroke-width="2.5"/>
   <rect x="94" y="228" width="112" height="88" fill="#dff1f8" stroke="#5b6770" stroke-width="2.5"/>
   <line x1="94" y1="228" x2="206" y2="228" stroke="#3a87ad" stroke-width="4"/>
   <rect x="120" y="198" width="52" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="140" y="216" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">A</text>
+  <text x="140" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#173043">A</text>
 
   <line x1="206" y1="272" x2="430" y2="272" stroke="#2d3a40" stroke-width="14" stroke-linecap="round"/>
   <line x1="206" y1="272" x2="430" y2="272" stroke="#d9edf4" stroke-width="8" stroke-linecap="round"/>
@@ -23,7 +20,7 @@
   <circle cx="512" cy="170" r="34" fill="#eef3f6" stroke="#5b6770" stroke-width="2.5"/>
   <path d="M496 170 L528 154 L528 186 Z" fill="#c96c35" stroke="#5b6770" stroke-width="2"/>
   <rect x="474" y="212" width="80" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="498" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">crpka</text>
+  <text x="498" y="231" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">crpka</text>
 
   <line x1="430" y1="170" x2="478" y2="170" stroke="#2d3a40" stroke-width="14" stroke-linecap="round"/>
   <line x1="430" y1="170" x2="478" y2="170" stroke="#d9edf4" stroke-width="8" stroke-linecap="round"/>
@@ -36,51 +33,51 @@
   <rect x="766" y="132" width="110" height="116" fill="#dff1f8" stroke="#5b6770" stroke-width="2.5"/>
   <line x1="766" y1="132" x2="876" y2="132" stroke="#3a87ad" stroke-width="4"/>
   <rect x="795" y="102" width="52" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="815" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">B</text>
+  <text x="815" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#173043">B</text>
 
-  <line x1="240" y1="272" x2="392" y2="272" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
+  <line x1="240" y1="272" x2="392" y2="272" stroke="#1565c0" stroke-width="5" marker-end="url(#u10c2uck_arrowBlue)"/>
   <rect x="264" y="234" width="84" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="286" y="253" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">Q, v_s</text>
+  <text x="286" y="253" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">Q, v_s</text>
 
-  <line x1="586" y1="170" x2="728" y2="170" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
+  <line x1="586" y1="170" x2="728" y2="170" stroke="#1565c0" stroke-width="5" marker-end="url(#u10c2uck_arrowBlue)"/>
   <rect x="618" y="132" width="84" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="640" y="151" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">Q, v_d</text>
+  <text x="640" y="151" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">Q, v_d</text>
 
   <circle cx="430" cy="170" r="5" fill="#111827"/>
   <rect x="398" y="134" width="64" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="424" y="152" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">S</text>
+  <text x="424" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#173043">S</text>
 
   <rect x="350" y="92" width="126" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="366" y="111" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">p_abs,S, p_v/gamma</text>
+  <text x="366" y="111" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">p_abs,S, p_v/gamma</text>
 
-  <line x1="230" y1="228" x2="230" y2="170" stroke="#8b5e3c" stroke-width="3" marker-start="url(#arrowBrownRev)" marker-end="url(#arrowBrown)"/>
+  <line x1="230" y1="228" x2="230" y2="170" stroke="#8b5e3c" stroke-width="3" marker-start="url(#u10c2uck_arrowBrownRev)" marker-end="url(#u10c2uck_arrowBrown)"/>
   <rect x="242" y="188" width="64" height="26" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
-  <text x="262" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">z_S</text>
+  <text x="262" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">z_S</text>
 
-  <line x1="892" y1="228" x2="892" y2="132" stroke="#8b5e3c" stroke-width="3" marker-start="url(#arrowBrownRev)" marker-end="url(#arrowBrown)"/>
+  <line x1="892" y1="228" x2="892" y2="132" stroke="#8b5e3c" stroke-width="3" marker-start="url(#u10c2uck_arrowBrownRev)" marker-end="url(#u10c2uck_arrowBrown)"/>
   <rect x="810" y="168" width="76" height="26" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
-  <text x="826" y="186" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">Delta z</text>
+  <text x="826" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">Delta z</text>
 
   <rect x="258" y="304" width="126" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="278" y="323" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">h_w,s, D_s, L_s</text>
+  <text x="278" y="323" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">h_w,s, D_s, L_s</text>
 
   <rect x="634" y="204" width="128" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="654" y="223" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">h_w,d, D_d, L_d</text>
+  <text x="654" y="223" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">h_w,d, D_d, L_d</text>
 
   <rect x="610" y="260" width="286" height="92" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
-  <text x="632" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Redoslijed</text>
-  <text x="632" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">1. usisni gubici i tlak u S</text>
-  <text x="632" y="338" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">2. ukupna visina dobave H_p</text>
-  <text x="632" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">3. p_abs,S - p_v/gamma = sigurnosna rezerva</text>
+  <text x="632" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#173043">Redoslijed</text>
+  <text x="632" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">1. usisni gubici i tlak u S</text>
+  <text x="632" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">2. ukupna visina dobave H_p</text>
+  <text x="632" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">3. p_abs,S - p_v/gamma = sigurnosna rezerva</text>
 
   <defs>
-    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+    <marker id="u10c2uck_arrowBlue" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/>
     </marker>
-    <marker id="arrowBrown" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+    <marker id="u10c2uck_arrowBrown" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#8b5e3c"/>
     </marker>
-    <marker id="arrowBrownRev" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
+    <marker id="u10c2uck_arrowBrownRev" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#8b5e3c"/>
     </marker>
   </defs>

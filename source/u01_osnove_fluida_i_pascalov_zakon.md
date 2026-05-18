@@ -746,167 +746,6 @@ Omjer 16 između površina ($d_2/d_1 = 4$) realistično je za ručnu radionicu p
 
 ![Hidraulično podizanje mosta: 4 podizača (d = 110 mm) i ručna pumpa (dₚ = 22 mm, Fₚ = 500 N) — ručna pumpa nije dostatna, potrebna motorna crpka](../assets/print/u01_fig_most_podizanje.svg){#fig-u01-most-podizanje fig-align="center"}
 
-```{python}
-#| label: fig-u01-most-podizanje-UNUSED
-#| echo: false
-#| eval: false
-#| fig-cap: "Hidraulično podizanje mosta: 4 podizača (d = 110 mm) i ručna pumpa (dₚ = 22 mm, Fₚ = 500 N) — ručna pumpa nije dostatna, potrebna motorna crpka"
-#| fig-align: center
-#| out-width: 88%
-
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-import numpy as np
-
-FLUID  = '#AED6F1'
-WALL   = '#4A6070'
-KLIP   = '#7F8C8D'
-KLIPNJ = '#95A5A6'
-FORCE  = '#C0392B'
-GREEN  = '#1E8449'
-BLUE   = '#1565C0'
-DARK   = '#1A2530'
-DIM    = '#6A7A86'
-BRIDGE = '#D5D8DC'
-
-fig, ax = plt.subplots(figsize=(11, 5.5))
-fig.patch.set_facecolor('#F8F9FA')
-ax.set_xlim(0, 22); ax.set_ylim(0, 9)
-ax.set_aspect('equal'); ax.axis('off')
-
-# ─── Rasponska konstrukcija mosta ─────────────────────────────────────────
-ax.add_patch(plt.Rectangle((2.8, 6.4), 14.8, 0.9,
-    fc=BRIDGE, ec='#555', lw=2.2, zorder=4))
-# naznaka kolnika (pruge)
-for xk in np.arange(3.2, 17.4, 0.9):
-    ax.plot([xk, xk+0.5], [7.3, 7.3], color='#aaa', lw=0.8, zorder=5)
-ax.text(10.2, 6.85, 'Rasponska konstrukcija  (G = 480 kN)',
-    fontsize=9, ha='center', va='center', color=DARK, zorder=6)
-
-# G strelica prema dolje (u sredini)
-ax.annotate('', xy=(10.2, 6.4), xytext=(10.2, 7.8),
-    arrowprops=dict(arrowstyle='->', color=FORCE, lw=2.8, mutation_scale=16), zorder=7)
-ax.text(10.7, 7.05, r'$G = 480\ \mathrm{kN}$', fontsize=9.5, color=FORCE, va='center')
-
-# ─── 4 hidraulična podizača ───────────────────────────────────────────────
-pod_x = [4.0, 7.0, 11.5, 14.5]
-d_pod = 1.0    # vizualna širina (d=110mm)
-wall_p = 0.14
-inner_p = d_pod - 2*wall_p
-
-for i, px in enumerate(pod_x):
-    x0 = px - d_pod/2
-    # Stjenke cilindra (tamne)
-    ax.add_patch(plt.Rectangle((x0, 2.4), wall_p, 3.0,
-        fc=WALL, ec=WALL, lw=0, zorder=3))
-    ax.add_patch(plt.Rectangle((x0+d_pod-wall_p, 2.4), wall_p, 3.0,
-        fc=WALL, ec=WALL, lw=0, zorder=3))
-    ax.add_patch(plt.Rectangle((x0, 2.2), d_pod, wall_p*1.5,
-        fc=WALL, ec=WALL, lw=0, zorder=3))  # dno
-    # Fluid
-    ax.add_patch(plt.Rectangle((x0+wall_p, 2.35), inner_p, 1.5,
-        fc=FLUID, ec='none', zorder=2))
-    # Klip
-    ax.add_patch(plt.Rectangle((x0+wall_p*0.2, 3.75), inner_p+wall_p*1.6, wall_p*1.8,
-        fc=KLIP, ec='#333', lw=1.0, zorder=4))
-    # Klipnjača
-    klipnja_w = 0.24
-    klipnja_cx = px - klipnja_w/2
-    klipnja_top = 3.75 + wall_p*1.8
-    klipnja_h = 6.4 - klipnja_top
-    ax.add_patch(plt.Rectangle((klipnja_cx, klipnja_top), klipnja_w, klipnja_h,
-        fc=KLIPNJ, ec='#555', lw=0.8, zorder=5))
-    # Sila F_pod prema gore (zelena)
-    ax.annotate('', xy=(px, 6.4), xytext=(px, 6.1),
-        arrowprops=dict(arrowstyle='->', color=GREEN, lw=2.0), zorder=6)
-    # Oznaka (samo prvi)
-    if i == 0:
-        ax.text(px+0.65, 6.22,
-            r'$F_{\mathrm{pod}} = G/4 = 120\ \mathrm{kN}$',
-            fontsize=8.5, color=GREEN, va='center')
-
-# kota d podizača (ispod prvog)
-kx = pod_x[0]
-ax.annotate('', xy=(kx-d_pod/2, 2.0), xytext=(kx+d_pod/2, 2.0),
-    arrowprops=dict(arrowstyle='<->', color=DIM, lw=1.1))
-ax.text(kx, 1.72, r'$d = 110\ \mathrm{mm}$',
-    fontsize=8, ha='center', color=DARK)
-
-# ─── Vodoravni vod ────────────────────────────────────────────────────────
-vod_y = 1.85; vod_h = 0.4
-vod_x0 = pod_x[0]-d_pod/2+wall_p
-vod_x1 = pod_x[-1]+d_pod/2-wall_p
-ax.add_patch(plt.Rectangle((vod_x0, vod_y), vod_x1-vod_x0, vod_h,
-    fc=FLUID, ec=BLUE, lw=0.9, zorder=2))
-# Strelica toka od pumpe
-ax.annotate('', xy=(vod_x0+2.0, vod_y+vod_h/2),
-             xytext=(vod_x0+0.3, vod_y+vod_h/2),
-    arrowprops=dict(arrowstyle='->', color=BLUE, lw=1.5), zorder=3)
-ax.text((vod_x0+vod_x1)/2, vod_y+vod_h+0.18,
-    r'$p_{\min} = 12{,}6\ \mathrm{MPa}$', fontsize=9,
-    ha='center', color=BLUE)
-
-# ─── Ručna pumpa (lijevo od voda) ─────────────────────────────────────────
-px_p = 1.5; pump_w = 0.36; pump_h_cyl = 2.0
-pump_x0 = px_p - pump_w/2
-pump_cy = vod_y + vod_h  # dno cilindra pumpe je na razini voda
-
-# Stjenke pumpe
-ax.add_patch(plt.Rectangle((pump_x0, pump_cy), 0.07, pump_h_cyl,
-    fc=WALL, ec=WALL, lw=0, zorder=3))
-ax.add_patch(plt.Rectangle((pump_x0+pump_w-0.07, pump_cy), 0.07, pump_h_cyl,
-    fc=WALL, ec=WALL, lw=0, zorder=3))
-ax.add_patch(plt.Rectangle((pump_x0, pump_cy-0.1), pump_w, 0.1,
-    fc=WALL, ec=WALL, lw=0, zorder=3))
-# Fluid u pumpi
-ax.add_patch(plt.Rectangle((pump_x0+0.07, pump_cy), pump_w-0.14, 1.1,
-    fc=FLUID, ec='none', zorder=2))
-# Klip pumpe
-ax.add_patch(plt.Rectangle((pump_x0+0.03, pump_cy+1.0), pump_w-0.06, 0.18,
-    fc=KLIP, ec='#333', lw=1.0, zorder=4))
-# Klipnjača pumpe
-ax.add_patch(plt.Rectangle((px_p-0.08, pump_cy+1.18), 0.16, 1.0,
-    fc=KLIPNJ, ec='#555', lw=0.8, zorder=4))
-# Fp strelica dolje
-ax.annotate('', xy=(px_p, pump_cy+1.18),
-             xytext=(px_p, pump_cy+2.55),
-    arrowprops=dict(arrowstyle='->', color=FORCE, lw=2.2), zorder=5)
-ax.text(px_p+0.25, pump_cy+1.85,
-    r'$F_p = 500\ \mathrm{N}$', fontsize=8.5, color=FORCE, va='center')
-# kota d_p ispod pumpe
-ax.annotate('', xy=(pump_x0+0.07, pump_cy-0.3),
-             xytext=(pump_x0+pump_w-0.07, pump_cy-0.3),
-    arrowprops=dict(arrowstyle='<->', color=DIM, lw=1.0))
-ax.text(px_p, pump_cy-0.55, r'$d_p = 22\ \mathrm{mm}$',
-    fontsize=8, ha='center', color=DARK)
-# spoj pumpe s vodom (horizontalno)
-ax.plot([pump_x0+pump_w, vod_x0], [vod_y+vod_h/2, vod_y+vod_h/2],
-    color=BLUE, lw=1.2, ls='--', zorder=2)
-
-# ─── Zaključni okvir (desno) ─────────────────────────────────────────────
-info_x = 16.8
-ax.text(info_x, 6.8,
-    r'$p_{\min} = 12{,}6\ \mathrm{MPa}$',
-    fontsize=9.5, ha='left', color=DARK,
-    bbox=dict(fc='#FDEDEC', ec=FORCE, boxstyle='round,pad=0.4', lw=1.3))
-ax.text(info_x, 5.85,
-    r'$p_p = F_p/A_p = 1{,}3\ \mathrm{MPa}$',
-    fontsize=9.5, ha='left', color=GREEN,
-    bbox=dict(fc='#EAFAF1', ec=GREEN, boxstyle='round,pad=0.4', lw=1.3))
-ax.text(info_x+2.0, 4.9,
-    r'$p_p \ll p_{\min}$', fontsize=12, ha='center', color=FORCE)
-ax.text(info_x+2.0, 4.2,
-    '\u2192 ru\u010dna pumpa nije dostatna',
-    fontsize=9, ha='center', color=FORCE,
-    bbox=dict(fc='white', ec=FORCE, boxstyle='round,pad=0.35', lw=1.2))
-
-ax.set_title(
-    'Hidraulično podizanje mosta — presjek  (G = 480 kN, 4 podizača d = 110 mm)',
-    fontsize=10, color=DARK, pad=7)
-plt.tight_layout()
-plt.show()
-```
-
 **Pretpostavke i model**
 
 Teret se raspoređuje jednoliko na sva četiri podizača (simetričan raspored). Vlastita težina podizača i gubici u vodovima zanemareni. Svi podizači na istoj su razini.
@@ -941,6 +780,97 @@ $$
 **Provjera i komentar**
 
 Potrebni tlak ($12{,}6\ \text{MPa}$) gotovo je deset puta veći od tlaka ručne pumpe ($1{,}3\ \text{MPa}$). Ručni pogon nije dovoljan – u praksi se koristi motorna elektrohidraulična crpka. Tlak $12{,}6\ \text{MPa}$ realističan je za specijalizirane građevinske podizače, koji tipično rade do $70\ \text{MPa}$. Ovaj primjer pokazuje zašto se za velika nosiva opterećenja uvijek koriste motorni hidraulični agregati.
+:::
+
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Hidraulična kočnica vozila s razdiobom na više kočnih cilindara &nbsp;<span class="mf1-level">T2</span></p>
+
+🔩 **Primjer za strojare**
+
+**Kontekst:** U hidrauličnom kočnom sustavu osobnog vozila operater pritiska kočnu papučicu, a poluga papučice mehanički povećava silu prije nego se ona prenese na klip glavnog kočnog cilindra. Tlak koji se u glavnom cilindru razvije isti se prenosi do **četiri** kočna cilindra (po jedan u svakom kotaču), ali kočna kliješta na prednjoj osovini imaju veći promjer od onih na stražnjoj. Time se s **jednim** ulazom (papučicom) dobivaju **četiri različite** kočne sile prilagođene podjeli kočne težine između prednje i stražnje osovine.
+
+**Zadano**
+
+- Sila vozača na papučicu: $F_n = 300\ \text{N}$
+- Prijenosni omjer papučice: $i = 5$ (poluga $5 : 1$)
+- Promjer klipa glavnog cilindra: $d_M = 20\ \text{mm}$
+- Promjer kočnog cilindra prednjeg kotača: $d_f = 35\ \text{mm}$ (po jednom kotaču)
+- Promjer kočnog cilindra stražnjeg kotača: $d_r = 30\ \text{mm}$ (po jednom kotaču)
+
+**Traženo**
+
+1. Sila kojom poluga papučice tlači klip glavnog cilindra.
+2. Manometarski tlak u kočnoj tekućini.
+3. Sila kojom svaki **prednji** kočni cilindar pritišće kočne pločice na disk.
+4. Sila kojom svaki **stražnji** kočni cilindar pritišće kočne pločice na disk.
+5. Ukupna sila stezanja na svim kočnim cilindrima i ukupno pojačanje sile u odnosu na silu vozača na papučicu.
+
+![Hidraulična kočnica vozila: papučica s polugom $i = 5$, glavni cilindar $d_M = 20$ mm i četiri kočna cilindra (prednji $d_f = 35$ mm, stražnji $d_r = 30$ mm). Isti tlak u kočnoj tekućini daje različite sile na kočna kliješta.](../assets/print/u01_fig_kocnica_vozila.svg){#fig-u01-kocnica-vozila fig-align="center"}
+
+**Pretpostavke i model**
+
+Kočna tekućina je nestlačiva, vodovi su kruti i bez gubitaka, a svi kočni cilindri leže na približno istoj razini (hidrostatske razlike između cilindara zanemarive). Trenje u glavnom cilindru i vremenska kašnjenja zanemaruju se – promatra se ustaljeno stanje pune sile kočenja. Time se sustav svodi na Pascalov zakon: jedna ulazna sila razvija jedan tlak koji se istovremeno prenosi do svih radnih cilindara.
+
+**Rješenje**
+
+Poluga papučice mehanički pojačava silu vozača:
+
+$$
+F_M = i \cdot F_n = 5 \cdot 300 = 1500\ \text{N}
+$$
+
+Površina klipa glavnog cilindra:
+
+$$
+A_M = \frac{\pi d_M^2}{4} = \frac{\pi \cdot 0{,}020^2}{4} = 3{,}142 \cdot 10^{-4}\ \text{m}^2
+$$
+
+Manometarski tlak u kočnoj tekućini:
+
+$$
+p = \frac{F_M}{A_M} = \frac{1500}{3{,}142 \cdot 10^{-4}} = 4{,}77 \cdot 10^6\ \text{Pa} \approx 4{,}77\ \text{MPa}
+$$
+
+Površine prednjeg i stražnjeg kočnog cilindra:
+
+$$
+A_f = \frac{\pi d_f^2}{4} = \frac{\pi \cdot 0{,}035^2}{4} = 9{,}621 \cdot 10^{-4}\ \text{m}^2
+$$
+
+$$
+A_r = \frac{\pi d_r^2}{4} = \frac{\pi \cdot 0{,}030^2}{4} = 7{,}069 \cdot 10^{-4}\ \text{m}^2
+$$
+
+Isti tlak na različitim površinama daje različite sile. Sila po jednom prednjem kočnom cilindru:
+
+$$
+F_f = p \cdot A_f = 4{,}77 \cdot 10^6 \cdot 9{,}621 \cdot 10^{-4} \approx 4{,}59\ \text{kN}
+$$
+
+Sila po jednom stražnjem kočnom cilindru:
+
+$$
+F_r = p \cdot A_r = 4{,}77 \cdot 10^6 \cdot 7{,}069 \cdot 10^{-4} \approx 3{,}38\ \text{kN}
+$$
+
+Ukupna sila stezanja na svim kočnim cilindrima (dva prednja + dva stražnja):
+
+$$
+F_{uk} = 2 F_f + 2 F_r = 2 \cdot 4{,}59 + 2 \cdot 3{,}38 = 15{,}94\ \text{kN}
+$$
+
+Pojačanje sile od papučice do ukupne sile na kočnim cilindrima:
+
+$$
+k = \frac{F_{uk}}{F_n} = \frac{15{,}94 \cdot 10^3}{300} \approx 53
+$$
+
+**Provjera i komentar**
+
+1. Pojačanje sile $k \approx 53$ rezultat je dvostrukog mehanizma: poluga papučice doprinosi faktorom $i = 5$, a hidraulika preostalim faktorom $\approx 10{,}6$, jer je zbroj površina svih kočnih cilindara $(2A_f + 2A_r) \approx 10{,}6 \cdot A_M$.
+2. Prednji kočni cilindar daje veću silu od stražnjeg ($4{,}59\ \text{kN}$ prema $3{,}38\ \text{kN}$) iako je tlak u oba isti. To je inženjerska odluka: pri kočenju se masa vozila prebacuje prema naprijed, pa prednji kotači moraju preuzeti veći dio kočne sile.
+3. Radni tlak $\approx 4{,}8\ \text{MPa}$ realan je iznos za hidrauličnu kočnicu osobnog vozila – vršni tlakovi pri naglom kočenju idu i preko $10\ \text{MPa}$, što je zato i razlog što se kao kočna tekućina koristi posebno ulje (DOT 4 / DOT 5.1) s visokom temperaturom vrenja.
+4. Ako bi vozač pumpao papučicom dok kočne pločice ne dodirnu disk, ukupni hod papučice morao bi po volumnoj bilanci pokriti hod svih četiriju kočnih cilindara: $A_M s_M = 2 A_f s_f + 2 A_r s_r$. Zato „mekana" papučica nakon kvara obično znači da je u sustav ušao zrak – stlačivi medij troši hod papučice prije nego što se uopće razvije tlak.
 :::
 
 ## Usporedna tablica: strojarstvo i građevinarstvo

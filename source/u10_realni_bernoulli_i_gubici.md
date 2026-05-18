@@ -1158,25 +1158,167 @@ plt.show()
 **Rješenje**
 
 $$
-h_l = \lambda \frac{L}{D}\frac{v^2}{2g} = 0{,}028 \cdot \frac{1{,}20}{0{,}028} \cdot \frac{2{,}8^2}{2 \cdot 9{,}81} = 1{,}00 \cdot 0{,}399 = 0{,}399\ \text{m}
+h_l = \lambda \frac{L}{D}\frac{v^2}{2g} = 0{,}028 \cdot \frac{1{,}20}{0{,}028} \cdot \frac{2{,}8^2}{2 \cdot 9{,}81} = 1{,}20 \cdot 0{,}400 = 0{,}480\ \text{m}
 $$
 
 $$
-h_{loc} = \sum\xi \cdot \frac{v^2}{2g} = 4{,}2 \cdot 0{,}399 = 1{,}676\ \text{m}
+h_{loc} = \sum\xi \cdot \frac{v^2}{2g} = 4{,}2 \cdot 0{,}400 = 1{,}678\ \text{m}
 $$
 
 $$
-h_w = h_l + h_{loc} = 0{,}399 + 1{,}676 = 2{,}075\ \text{m}
+h_w = h_l + h_{loc} = 0{,}480 + 1{,}678 = 2{,}158\ \text{m}
 $$
 
 $$
-\Delta p = \rho g h_w = 1060 \cdot 9{,}81 \cdot 2{,}075 = 21{,}57\ \text{kPa}
+\Delta p = \rho g h_w = 1060 \cdot 9{,}81 \cdot 2{,}158 = 22{,}44\ \text{kPa}
 $$
 
 **Provjera i komentar**
 
-Lokalni gubici ($1{,}68\ \text{m}$) dominiraju nad linijskim ($0{,}40\ \text{m}$) jer je cijev kratka — to je tipično za kratke spojne vodove s koljenima. Pad tlaka $21{,}6\ \text{kPa}$ mora biti pokrit pritiskom pumpe. Povećanjem promjera na $D = 32\ \text{mm}$ brzina pada na $v' = (28/32)^2 \cdot 2{,}8 = 2{,}14\ \text{m/s}$ pa $h_w$ pada na ~$1{,}21\ \text{m}$ — gotovo dvostruko manje zbog kvadratne ovisnosti o brzini.
+Lokalni gubici ($1{,}68\ \text{m}$) dominiraju nad linijskim ($0{,}48\ \text{m}$) jer je cijev kratka — to je tipično za kratke spojne vodove s koljenima. Pad tlaka $22{,}4\ \text{kPa}$ mora biti pokrit pritiskom pumpe. Povećanjem promjera na $D = 32\ \text{mm}$ brzina pada na $v' = (28/32)^2 \cdot 2{,}8 = 2{,}14\ \text{m/s}$ pa $h_w$ pada na ~$1{,}26\ \text{m}$ — gotovo dvostruko manje zbog kvadratne ovisnosti o brzini.
 
+:::
+
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Starenje cijevi: kako rastuća hrapavost mijenja $\lambda$ i potrebnu snagu crpke &nbsp;<span class="mf1-level">T2</span></p>
+
+🔩 **Primjer za strojare**
+
+**Kontekst:** U industrijskom postrojenju voda se transportira čeličnim cjevovodom od crpne stanice do tehnološkog procesa. Ista cijev koja na početku rada (svježa, glatka) ima hrapavost $\varepsilon \approx 0{,}045\ \text{mm}$ nakon **10 godina** kontinuiranog rada – zbog unutarnje korozije, taloga i sitnih oštećenja – dolazi do $\varepsilon \approx 0{,}20\ \text{mm}$. Promjer cijevi i protok ostaju zadani projektom, ali raste relativna hrapavost $\varepsilon/D$ i s njom **koeficijent linijskog gubitka** $\lambda$. Inženjer mora znati koliko ta promjena povećava pad tlaka i snagu koju crpka mora isporučivati – jer ta razlika izravno povećava potrošnju električne energije i preranu zamjenu opreme.
+
+**Zadano**
+
+- Duljina cjevovoda: $L = 150\ \text{m}$
+- Promjer cijevi: $D = 80\ \text{mm}$
+- Protok vode: $Q = 8{,}0\ \text{L/s}$
+- Gustoća vode: $\rho = 1000\ \text{kg/m}^3$
+- Kinematička viskoznost vode: $\nu = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$
+- Hrapavost cijevi – svježa: $\varepsilon_{nova} = 0{,}045\ \text{mm}$
+- Hrapavost cijevi – nakon 10 godina: $\varepsilon_{stara} = 0{,}20\ \text{mm}$
+- Cjevovod je horizontalan, lokalni gubici se zanemaruju (predmet primjera su isključivo linijski gubici)
+
+**Traženo**
+
+1. Brzina strujanja i Reynoldsov broj.
+2. Relativna hrapavost u oba stanja te koeficijent $\lambda$ iz Moodyjeva dijagrama (ili Swamee–Jain aproksimacije) za oba stanja.
+3. Visina linijskog gubitka $h_l$ u oba stanja i odgovarajući pad tlaka.
+4. Hidraulička snaga koju crpka mora **dodatno** isporučivati zbog starenja cijevi i procjena dodatne električne energije godišnje (rad $24/7$).
+
+![Ista cijev, svježa ($\varepsilon = 0{,}045$ mm, $\lambda \approx 0{,}020$) i nakon 10 godina ($\varepsilon = 0{,}20$ mm, $\lambda \approx 0{,}026$). Linijski gubitak raste za $\approx 30\%$ – izravan udar na potrošnju energije.](../assets/print/u10_fig_starenje_cijevi.svg){#fig-u10-starenje-cijevi fig-align="center"}
+
+**Pretpostavke i model**
+
+Strujanje je stacionarno, voda nestlačiva, cijev s konstantnim promjerom – brzina i $Re$ ne ovise o hrapavosti. Promjena hrapavosti djeluje **isključivo** kroz $\lambda$ (preko relativne hrapavosti $\varepsilon/D$). Promjer cijevi se s vremenom ne mijenja značajno (taloženje smanjuje efektivni $D$, ali to je drugotni efekt koji ovaj primjer ne razmatra). Koristi se Swamee–Jain eksplicitna aproksimacija Colebrookove formule:
+
+$$
+\lambda = \frac{0{,}25}{\left[\log_{10}\!\left(\dfrac{\varepsilon}{3{,}7 D} + \dfrac{5{,}74}{Re^{0{,}9}}\right)\right]^{2}}
+$$
+
+Lokalni gubici (koljena, ventili) **bi** dodatno povećali ukupni pad tlaka u realnom sustavu, ali se za izoliranje učinka starenja zanemaruju.
+
+**Rješenje**
+
+Brzina u cijevi:
+
+$$
+A = \frac{\pi D^2}{4} = \frac{\pi \cdot 0{,}080^2}{4} \approx 5{,}03 \cdot 10^{-3}\ \text{m}^2
+$$
+
+$$
+v = \frac{Q}{A} = \frac{0{,}008}{5{,}03 \cdot 10^{-3}} \approx 1{,}59\ \text{m/s}
+$$
+
+Reynoldsov broj (jednak u oba stanja):
+
+$$
+Re = \frac{vD}{\nu} = \frac{1{,}59 \cdot 0{,}080}{1{,}0 \cdot 10^{-6}} \approx 1{,}27 \cdot 10^{5}
+$$
+
+Pripadajući zajednički član u nazivniku Swamee–Jaina (preko $Re$):
+
+$$
+\frac{5{,}74}{Re^{0{,}9}} = \frac{5{,}74}{(1{,}27 \cdot 10^{5})^{0{,}9}} \approx \frac{5{,}74}{47\,547} \approx 1{,}21 \cdot 10^{-4}
+$$
+
+**Svježa cijev** ($\varepsilon/D = 0{,}045/80 \approx 5{,}6 \cdot 10^{-4}$):
+
+$$
+\frac{\varepsilon_{nova}}{3{,}7 D} \approx \frac{5{,}6 \cdot 10^{-4}}{3{,}7} \approx 1{,}51 \cdot 10^{-4}
+$$
+
+$$
+\lambda_{nova} \approx \frac{0{,}25}{[\log_{10}(1{,}51\cdot 10^{-4} + 1{,}21\cdot 10^{-4})]^2} = \frac{0{,}25}{[\log_{10}(2{,}72 \cdot 10^{-4})]^2}
+$$
+
+$$
+\lambda_{nova} \approx \frac{0{,}25}{(-3{,}566)^2} \approx 0{,}0197 \approx 0{,}020
+$$
+
+**Stara cijev** ($\varepsilon/D = 0{,}20/80 = 2{,}5 \cdot 10^{-3}$):
+
+$$
+\frac{\varepsilon_{stara}}{3{,}7 D} \approx \frac{2{,}5 \cdot 10^{-3}}{3{,}7} \approx 6{,}76 \cdot 10^{-4}
+$$
+
+$$
+\lambda_{stara} \approx \frac{0{,}25}{[\log_{10}(6{,}76 \cdot 10^{-4} + 1{,}21 \cdot 10^{-4})]^2} = \frac{0{,}25}{[\log_{10}(7{,}96 \cdot 10^{-4})]^2}
+$$
+
+$$
+\lambda_{stara} \approx \frac{0{,}25}{(-3{,}099)^2} \approx 0{,}0260
+$$
+
+Linijski gubici (Darcy–Weisbach):
+
+$$
+\frac{v^2}{2g} = \frac{1{,}59^2}{2 \cdot 9{,}81} \approx 0{,}129\ \text{m}, \qquad \frac{L}{D} = \frac{150}{0{,}080} = 1875
+$$
+
+$$
+h_{l,nova} = \lambda_{nova} \frac{L}{D} \frac{v^2}{2g} \approx 0{,}020 \cdot 1875 \cdot 0{,}129 \approx 4{,}83\ \text{m}
+$$
+
+$$
+h_{l,stara} = \lambda_{stara} \frac{L}{D} \frac{v^2}{2g} \approx 0{,}026 \cdot 1875 \cdot 0{,}129 \approx 6{,}28\ \text{m}
+$$
+
+Pad tlaka u cjevovodu:
+
+$$
+\Delta p_{nova} = \rho g h_{l,nova} \approx 47{,}4\ \text{kPa}, \qquad \Delta p_{stara} \approx 61{,}6\ \text{kPa}
+$$
+
+Razlika u hidrauličkoj snazi crpke:
+
+$$
+P = \rho g Q h_l
+$$
+
+$$
+P_{nova} \approx 1000 \cdot 9{,}81 \cdot 0{,}008 \cdot 4{,}83 \approx 379\ \text{W}
+$$
+
+$$
+P_{stara} \approx 1000 \cdot 9{,}81 \cdot 0{,}008 \cdot 6{,}28 \approx 493\ \text{W}
+$$
+
+$$
+\Delta P = P_{stara} - P_{nova} \approx 114\ \text{W}
+$$
+
+Dodatna električna energija godišnje (rad $24/7$):
+
+$$
+\Delta E \approx \Delta P \cdot 8760\ \text{h} \approx 114 \cdot 8760 \approx 1000\ \text{kWh/god}
+$$
+
+**Provjera i komentar**
+
+1. Reynoldsov broj i brzina ne ovise o $\varepsilon$, samo o $Q$ i geometriji – starenje djeluje **isključivo** kroz $\lambda$. To je važno za interpretaciju Moodyjeva dijagrama: na istoj okomici ($Re$ konstantan) dvije različite vrijednosti $\lambda$ odgovaraju različitim krivuljama $\varepsilon/D$.
+2. Porast $\lambda$ od $\approx 30\%$ daje porast linijskog gubitka i potrebne snage crpke u **istom postotku** – jer su $h_l \propto \lambda$ i $P \propto \lambda$ pri konstantnom $Q$. Inženjerska poruka: kvadratna ovisnost brzine zbunjuje pri prvom pogledu, ali pri **fiksiranom protoku** zapravo svi gubici rastu **linearno** sa $\lambda$.
+3. $\Delta E \approx 1000\ \text{kWh/god}$ za jednu cijev nije zanemarivo – pri industrijskoj cijeni struje od oko 1,5 kn/kWh to je $\approx 1500\ \text{kn/god}$ samo zbog starenja. U pogonu s desetcima cijevi taj iznos se zbraja u nekoliko desetaka tisuća kuna godišnje – dovoljno da opravda preventivno čišćenje ili obnova zaštitne unutarnje obloge cijevi.
+4. **Najvažnija dimenzionirajuća odluka**: cijev se ne smije dimenzionirati za $\lambda$ svježe cijevi! Inženjerska praksa je projektirati za $\lambda$ koji odgovara **kraju projektnog vijeka** (npr. 20–25 godina). U suprotnom, crpka koja je odabrana za svježu cijev na kraju vijeka radi izvan svojeg projektnog optimuma (ispod radne točke), s nižom učinkovitošću i većim mehaničkim opterećenjem.
+5. Specifični broj $\varepsilon = 0{,}20\ \text{mm}$ tipičan je za **umjereno** korodirani čelik. Jako korodirani čelik bez katodne zaštite može doseći $\varepsilon = 1{,}0\ \text{mm}$ i više – u tom slučaju $\lambda$ raste do $\approx 0{,}04$, a snaga crpke gotovo se udvostručuje u odnosu na svježi sustav.
 :::
 
 ::: {.mf1-we}

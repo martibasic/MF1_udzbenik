@@ -1,32 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 380" role="img"
-     aria-labelledby="u5bvT u5bvD" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u05fbvb_u5bvT u05fbvb_u5bvD" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u5bvT">U05 – Klizna vrata brane</title>
-  <desc id="u5bvD">Klizna vrata brane: b=1,80 m, H=1,20 m, gornji rub na dubini h1=0,80 m. Prikazana slobodna površina, dubina h1, visina vrata H, centroid C na dubini h_C=1,40 m, centar tlaka CP na y_CP=1,486 m i rezultantna sila F≈29,6 kN.</desc>
+  <title id="u05fbvb_u5bvT">U05 – Klizna vrata brane</title>
+  <desc id="u05fbvb_u5bvD">Klizna vrata brane: b=1,80 m, H=1,20 m, gornji rub na dubini h1=0,80 m. Prikazana slobodna površina, dubina h1, visina vrata H, centroid C na dubini h_C=1,40 m, centar tlaka CP na y_CP=1,486 m i rezultantna sila F≈29,6 kN.</desc>
   <defs>
-    <marker id="u5bvaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <marker id="u05fbvb_u5bvaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
     </marker>
-    <marker id="u5bvaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <marker id="u05fbvb_u5bvaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
     </marker>
-    <marker id="u5bvaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u05fbvb_u5bvaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
     </marker>
-    <marker id="u5bvaG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <marker id="u05fbvb_u5bvaG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#1e8449"/>
     </marker>
-    <marker id="u5bvaGL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u05fbvb_u5bvaGL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#1e8449"/>
     </marker>
-    <linearGradient id="u5bvfl" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u05fbvb_u5bvfl" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
     </linearGradient>
-    <linearGradient id="u5bvpr" x1="1" y1="0" x2="0" y2="0">
+    <linearGradient id="u05fbvb_u5bvpr" x1="1" y1="0" x2="0" y2="0">
       <stop offset="0%" stop-color="#e74c3c" stop-opacity="0.58"/>
       <stop offset="100%" stop-color="#e74c3c" stop-opacity="0.07"/>
     </linearGradient>
-    <pattern id="u5bvconc" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u05fbvb_u5bvconc" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
     </pattern>
   </defs>
@@ -34,12 +34,8 @@
   <rect width="940" height="380" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="332" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <!-- Naslov -->
-  <text x="54" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#173043">U05 – Klizna vrata brane</text>
-  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">b = 1,80 m · H = 1,20 m · h₁ = 0,80 m · h_C = 1,40 m · F ≈ 29,6 kN · y_CP = 1,486 m</text>
-
   <!-- Tijelo fluida (uzvodni) -->
-  <rect x="82" y="126" width="318" height="210" fill="url(#u5bvfl)" opacity="0.83"/>
+  <rect x="82" y="126" width="318" height="210" fill="url(#u05fbvb_u5bvfl)" opacity="0.83"/>
 
   <!-- Lijeva stijenka -->
   <rect x="80" y="118" width="4" height="224" fill="#909fa8"/>
@@ -55,13 +51,13 @@
   <!-- Scale: 1m = 80px; h1=0.80m→64px, H=1.20m→96px -->
   <!-- Wall from y=100 to y=340, x=400..462 -->
   <rect x="400" y="100" width="62" height="240" fill="#909fa8" stroke="#5d6d7e" stroke-width="2"/>
-  <rect x="400" y="100" width="62" height="240" fill="url(#u5bvconc)" opacity="0.50"/>
+  <rect x="400" y="100" width="62" height="240" fill="url(#u05fbvb_u5bvconc)" opacity="0.50"/>
   <text x="408" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">brana</text>
 
   <!-- Dijagram tlaka na kliznim vratima (trapezoid na lijevoj stijenci x=400) -->
   <!-- Gate: y=190..286 (h₁=0,80m→h₁+H=2,00m); max width 50px -->
   <!-- w_top = 50×(0,80/2,00)=20px; w_bot = 50px -->
-  <polygon points="400,190 380,190 350,286 400,286" fill="url(#u5bvpr)"/>
+  <polygon points="400,190 380,190 350,286 400,286" fill="url(#u05fbvb_u5bvpr)"/>
   <line x1="380" y1="190" x2="350" y2="286" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4,3"/>
 
   <!-- Klizna vrata -->
@@ -75,14 +71,14 @@
   <line x1="298" y1="126" x2="303" y2="126" stroke="#c96c35" stroke-width="1.5"/>
   <line x1="298" y1="190" x2="303" y2="190" stroke="#c96c35" stroke-width="1.5"/>
   <line x1="300" y1="128" x2="300" y2="188" stroke="#c96c35" stroke-width="2.0"
-        marker-start="url(#u5bvaDimL)" marker-end="url(#u5bvaDim)"/>
+        marker-start="url(#u05fbvb_u5bvaDimL)" marker-end="url(#u05fbvb_u5bvaDim)"/>
   <text x="284" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#92400e" text-anchor="end">h₁ = 0,80 m</text>
 
   <!-- H kota (visina vrata) -->
   <line x1="348" y1="190" x2="353" y2="190" stroke="#0f766e" stroke-width="1.5"/>
   <line x1="348" y1="286" x2="353" y2="286" stroke="#0f766e" stroke-width="1.5"/>
   <line x1="350" y1="192" x2="350" y2="284" stroke="#0f766e" stroke-width="2.0"
-        marker-start="url(#u5bvaGL)" marker-end="url(#u5bvaG)"/>
+        marker-start="url(#u05fbvb_u5bvaGL)" marker-end="url(#u05fbvb_u5bvaG)"/>
   <text x="336" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#0f766e" text-anchor="end">H = 1,20 m</text>
 
   <!-- h_C kota (slobodna površina → centroid) -->
@@ -90,7 +86,7 @@
   <line x1="169" y1="126" x2="174" y2="126" stroke="#0f766e" stroke-width="1.5"/>
   <line x1="169" y1="238" x2="174" y2="238" stroke="#0f766e" stroke-width="1.5"/>
   <line x1="171" y1="128" x2="171" y2="236" stroke="#0f766e" stroke-width="2.0"
-        marker-start="url(#u5bvaGL)" marker-end="url(#u5bvaG)"/>
+        marker-start="url(#u05fbvb_u5bvaGL)" marker-end="url(#u05fbvb_u5bvaG)"/>
   <text x="156" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#0f766e" text-anchor="end">h_C = 1,40 m</text>
 
   <!-- Vodoravna crta kroz C -->
@@ -111,7 +107,7 @@
   <line x1="466" y1="245" x2="476" y2="280" stroke="#be123c" stroke-width="1.0" stroke-dasharray="3 3"/>
 
   <!-- F_R strelica (nizvodno, desno) -->
-  <line x1="470" y1="245" x2="700" y2="245" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u5bvaR)"/>
+  <line x1="470" y1="245" x2="700" y2="245" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u05fbvb_u5bvaR)"/>
   <text x="628" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#c0392b">F ≈ 29,6 kN</text>
 
   <!-- Napomena -->

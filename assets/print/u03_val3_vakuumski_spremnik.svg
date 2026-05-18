@@ -1,27 +1,27 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u3v3T u3v3D" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u03v3vs_u3v3T u03v3vs_u3v3D" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u3v3T">Vakuumski spremnik s otvorenim zivinim manometrom (Z27)</title>
-  <desc id="u3v3D">Zatvoreni vakuumski spremnik (p_g ispod atmosferskog), voda unutar i plin iznad slobodne povrsine. Zivini manometar (delta_h) mjeri podtlak. Tocka A na dubini h ispod slobodne povrsine.</desc>
+  <title id="u03v3vs_u3v3T">Vakuumski spremnik s otvorenim zivinim manometrom (Z27)</title>
+  <desc id="u03v3vs_u3v3D">Zatvoreni vakuumski spremnik (p_g ispod atmosferskog), voda unutar i plin iznad slobodne povrsine. Zivini manometar (delta_h) mjeri podtlak. Tocka A na dubini h ispod slobodne povrsine.</desc>
   <defs>
-    <marker id="u3v3aF" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <marker id="u03v3vs_u3v3aF" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#92400e"/>
     </marker>
-    <marker id="u3v3aR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u03v3vs_u3v3aR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#92400e"/>
     </marker>
-    <marker id="u3v3p0" markerWidth="9" markerHeight="9" refX="5" refY="4.5" orient="270">
+    <marker id="u03v3vs_u3v3p0" markerWidth="9" markerHeight="9" refX="5" refY="4.5" orient="270">
       <path d="M0,0 L0,9 L9,4.5 z" fill="#546e7a"/>
     </marker>
-    <linearGradient id="u3v3wa" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03v3vs_u3v3wa" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d4eef8"/>
       <stop offset="100%" stop-color="#5baece"/>
     </linearGradient>
-    <linearGradient id="u3v3hg" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03v3vs_u3v3hg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#b4c2cc"/>
       <stop offset="100%" stop-color="#728090"/>
     </linearGradient>
-    <pattern id="u3v3sp" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u03v3vs_u3v3sp" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="8" height="8" fill="#8090a0"/>
       <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
     </pattern>
@@ -32,11 +32,11 @@
 
   <!-- ── ZATVORENI VAKUUMSKI SPREMNIK ── -->
   <!-- Vanjski zidovi (srafura) -->
-  <rect x="34" y="72" width="300" height="314" rx="6" fill="url(#u3v3sp)"/>
+  <rect x="34" y="72" width="300" height="314" rx="6" fill="url(#u03v3vs_u3v3sp)"/>
   <!-- Unutrasnjost - plinski prostor (vakuum, plin p_g) -->
   <rect x="48" y="86" width="272" height="106" fill="#f0ece0"/>
   <!-- Voda (ispod slobodne povrsine) -->
-  <rect x="48" y="192" width="272" height="180" fill="url(#u3v3wa)"/>
+  <rect x="48" y="192" width="272" height="180" fill="url(#u03v3vs_u3v3wa)"/>
   <!-- Slobodna povrsina (crtkana linija) -->
   <line x1="48" y1="192" x2="320" y2="192" stroke="#1a5f8a" stroke-width="2" stroke-dasharray="6,4"/>
 
@@ -66,14 +66,14 @@
   <rect x="418" y="90" width="36" height="276" fill="#546e7a"/>
   <rect x="422" y="94" width="28" height="268" fill="#f0ece0"/>
   <!-- Ziva u lijevom kraku (od y=254 do dna y=354) -->
-  <rect x="422" y="254" width="28" height="100" fill="url(#u3v3hg)"/>
+  <rect x="422" y="254" width="28" height="100" fill="url(#u03v3vs_u3v3hg)"/>
   <!-- Dno U-cijevi -->
   <rect x="418" y="354" width="84" height="34" fill="#546e7a"/>
-  <rect x="422" y="358" width="76" height="26" fill="url(#u3v3hg)"/>
+  <rect x="422" y="358" width="76" height="26" fill="url(#u03v3vs_u3v3hg)"/>
   <!-- Desni krak (otvoren gore prema atmosferi) -->
   <rect x="466" y="90" width="36" height="276" fill="#546e7a"/>
   <!-- Ziva u desnom kraku (od y=194 do dna y=354) -->
-  <rect x="470" y="194" width="28" height="160" fill="url(#u3v3hg)"/>
+  <rect x="470" y="194" width="28" height="160" fill="url(#u03v3vs_u3v3hg)"/>
   <!-- Atmosferski zrak iznad zive u desnom kraku -->
   <rect x="470" y="94" width="28" height="100" fill="#e8f4f8"/>
   <!-- Otvoreni kraj - isprekinana linija i p_0 oznaka -->
@@ -90,7 +90,7 @@
   <!-- ── KOTNE LINIJE ── -->
   <!-- h: od slobodne povrsine (y=192) do tocke A (y=300), lijeva strana unutrasnjosti -->
   <line x1="100" y1="192" x2="100" y2="300" stroke="#92400e" stroke-width="1.6"
-        marker-start="url(#u3v3aR)" marker-end="url(#u3v3aF)"/>
+        marker-start="url(#u03v3vs_u3v3aR)" marker-end="url(#u03v3vs_u3v3aF)"/>
   <line x1="100" y1="192" x2="110" y2="192" stroke="#92400e" stroke-width="1"/>
   <line x1="100" y1="300" x2="110" y2="300" stroke="#92400e" stroke-width="1"/>
   <text x="84" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic"
@@ -98,7 +98,7 @@
 
   <!-- delta_h: razlika razina zive (y=254 lijevog, y=194 desnog) -->
   <line x1="510" y1="254" x2="510" y2="194" stroke="#92400e" stroke-width="1.6"
-        marker-start="url(#u3v3aR)" marker-end="url(#u3v3aF)"/>
+        marker-start="url(#u03v3vs_u3v3aR)" marker-end="url(#u03v3vs_u3v3aF)"/>
   <line x1="500" y1="254" x2="511" y2="254" stroke="#92400e" stroke-width="1"/>
   <line x1="500" y1="194" x2="511" y2="194" stroke="#92400e" stroke-width="1"/>
   <text x="524" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic"

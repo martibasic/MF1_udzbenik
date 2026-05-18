@@ -1,31 +1,31 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 440" role="img"
-     aria-labelledby="u5ch1T u5ch1D" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u05c1puv_u5ch1T u05c1puv_u5ch1D" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u5ch1T">U05 CH 1 – Zglobna pregrada s uljem iznad vode</title>
-  <desc id="u5ch1D">b=1,40 m, h_o=1,00 m (ulje ρ=820), h_w=1,80 m (voda ρ=1000). F₁=5,63 kN, F₂=42,5 kN, F=48,1 kN; y_CP=1,895 m; T=32,5 kN; R_A=15,6 kN.</desc>
+  <title id="u05c1puv_u5ch1T">U05 CH 1 – Zglobna pregrada s uljem iznad vode</title>
+  <desc id="u05c1puv_u5ch1D">b=1,40 m, h_o=1,00 m (ulje ρ=820), h_w=1,80 m (voda ρ=1000). F₁=5,63 kN, F₂=42,5 kN, F=48,1 kN; y_CP=1,895 m; T=32,5 kN; R_A=15,6 kN.</desc>
   <defs>
-    <marker id="u5ch1aR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <marker id="u05c1puv_u5ch1aR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
     </marker>
-    <marker id="u5ch1aRL" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u05c1puv_u5ch1aRL" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
     </marker>
-    <marker id="u5ch1aB" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <marker id="u05c1puv_u5ch1aB" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/>
     </marker>
-    <marker id="u5ch1aBL" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u05c1puv_u5ch1aBL" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/>
     </marker>
-    <marker id="u5ch1aDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <marker id="u05c1puv_u5ch1aDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
     </marker>
-    <marker id="u5ch1aDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u05c1puv_u5ch1aDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
     </marker>
-    <linearGradient id="u5ch1fw" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u05c1puv_u5ch1fw" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#4fa8d0"/>
     </linearGradient>
-    <pattern id="u5ch1wall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u05c1puv_u5ch1wall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
     </pattern>
   </defs>
@@ -33,17 +33,13 @@
   <rect width="940" height="440" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="392" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <!-- Naslov -->
-  <text x="54" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#173043">U05 CH 1 – Zglobna pregrada s uljem iznad vode</text>
-  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="14.5" fill="#516677">h_o=1,00 m (ulje ρ=820 kg/m³) · h_w=1,80 m (voda ρ=1000 kg/m³) · b=1,40 m → F₁+F₂=48,1 kN</text>
-
   <!-- Mjerilo 80px/m; A(zglob,gore) y=115; ulje/voda y=195; D(spojnica,dno) y=339 -->
 
   <!-- Sloj ulja (amber) -->
   <rect x="82" y="115" width="226" height="80" fill="#f6e1a6" opacity="0.90"/>
 
   <!-- Sloj vode (plava) -->
-  <rect x="82" y="195" width="226" height="144" fill="url(#u5ch1fw)" opacity="0.85"/>
+  <rect x="82" y="195" width="226" height="144" fill="url(#u05c1puv_u5ch1fw)" opacity="0.85"/>
 
   <!-- Lijeva stijenka -->
   <rect x="80" y="108" width="4" height="238" fill="#909fa8"/>
@@ -61,7 +57,7 @@
 
   <!-- Pregrada (zid s hatching) -->
   <rect x="308" y="100" width="42" height="248" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.8"/>
-  <rect x="308" y="100" width="42" height="248" fill="url(#u5ch1wall)" opacity="0.50"/>
+  <rect x="308" y="100" width="42" height="248" fill="url(#u05c1puv_u5ch1wall)" opacity="0.50"/>
 
   <!-- Zglob A (gore) -->
   <circle cx="308" cy="115" r="7" fill="#1a2530" stroke="white" stroke-width="2"/>
@@ -88,19 +84,19 @@
   <text x="232" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1565c0" text-anchor="end">p_max</text>
 
   <!-- F₁ strelica (ulje): od (308,168) DESNO, y_F1=0,667m→y=115+53=168 -->
-  <line x1="308" y1="168" x2="380" y2="168" stroke="#b7791f" stroke-width="3.0" marker-end="url(#u5ch1aR)"/>
+  <line x1="308" y1="168" x2="380" y2="168" stroke="#b7791f" stroke-width="3.0" marker-end="url(#u05c1puv_u5ch1aR)"/>
   <text x="384" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7791f">F₁ ≈ 5,63 kN</text>
 
   <!-- F₂ strelica (voda): od (308,280) DESNO, y_F2=2,057m→y=115+165=280 -->
-  <line x1="308" y1="280" x2="400" y2="280" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u5ch1aR)"/>
+  <line x1="308" y1="280" x2="400" y2="280" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u05c1puv_u5ch1aR)"/>
   <text x="404" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">F₂ ≈ 42,5 kN</text>
 
   <!-- T strelica (spojnica D, prema lijevo): od (308,339) LIJEVO -->
-  <line x1="308" y1="339" x2="228" y2="339" stroke="#1565c0" stroke-width="3.5" marker-start="url(#u5ch1aBL)"/>
+  <line x1="308" y1="339" x2="228" y2="339" stroke="#1565c0" stroke-width="3.5" marker-start="url(#u05c1puv_u5ch1aBL)"/>
   <text x="152" y="333" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">T ≈ 32,5 kN</text>
 
   <!-- R_A strelica (zglob A, prema lijevo): od (308,115) LIJEVO -->
-  <line x1="308" y1="115" x2="248" y2="115" stroke="#1e8449" stroke-width="2.8" marker-start="url(#u5ch1aBL)"/>
+  <line x1="308" y1="115" x2="248" y2="115" stroke="#1e8449" stroke-width="2.8" marker-start="url(#u05c1puv_u5ch1aBL)"/>
   <text x="152" y="111" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1e8449">R_A ≈ 15,6 kN</text>
 
   <!-- Kote (lijeva margina) -->
@@ -108,14 +104,14 @@
   <line x1="80" y1="115" x2="62" y2="115" stroke="#c96c35" stroke-width="1.0"/>
   <line x1="80" y1="195" x2="62" y2="195" stroke="#c96c35" stroke-width="1.0"/>
   <line x1="59" y1="117" x2="59" y2="193" stroke="#c96c35" stroke-width="1.6"
-        marker-start="url(#u5ch1aDimL)" marker-end="url(#u5ch1aDim)"/>
+        marker-start="url(#u05c1puv_u5ch1aDimL)" marker-end="url(#u05c1puv_u5ch1aDim)"/>
   <text x="36" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#92400e" font-style="italic">h_o</text>
   <text x="30" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#92400e">1,00 m</text>
 
   <!-- h_w: y=195..339 na x=40 -->
   <line x1="80" y1="339" x2="42" y2="339" stroke="#c96c35" stroke-width="1.0"/>
   <line x1="39" y1="197" x2="39" y2="337" stroke="#c96c35" stroke-width="1.6"
-        marker-start="url(#u5ch1aDimL)" marker-end="url(#u5ch1aDim)"/>
+        marker-start="url(#u05c1puv_u5ch1aDimL)" marker-end="url(#u05c1puv_u5ch1aDim)"/>
   <text x="28" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#92400e" font-style="italic">h_w</text>
   <text x="22" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#92400e">1,80 m</text>
 

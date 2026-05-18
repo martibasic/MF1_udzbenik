@@ -650,6 +650,111 @@ Zakretni moment $1{,}03\ \text{N m}$ realistična je vrijednost za klizni ležaj
 :::
 
 ::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Hladni start i radna temperatura: koliko košta hladno ulje &nbsp;<span class="mf1-level">T2</span></p>
+
+🔩 **Primjer za strojare**
+
+**Kontekst:** Vratilo motora u kliznom ležaju mora se okretati neovisno o tome je li motor netom upaljen ili je već zagrijan. Viskoznost motornog ulja međutim **vrlo jako pada s temperaturom** – tipičan višegrad SAE 10W-40 ima pri $T = 0^\circ\text{C}$ približno deset puta veću dinamičku viskoznost nego pri radnoj temperaturi $T = 90^\circ\text{C}$. Isti ležaj, isti broj okretaja, isti uljni procjep – ali viskozni otpor pri hladnom startu može potrošiti red veličine više snage nego pri zagrijanom radu. Zato motor pri startu na hladno "vuče" teže i privremeno smije raditi samo pri smanjenoj brzini do nego se ulje zagrije.
+
+**Zadano**
+
+Isti klizni ležaj radi pri dvjema temperaturama:
+
+- Promjer vratila: $D = 50\ \text{mm}$
+- Duljina ležaja: $L = 70\ \text{mm}$
+- Uljni procjep: $\delta = 0{,}30\ \text{mm}$
+- Brzina vrtnje: $n = 2400\ \text{min}^{-1}$
+- Dinamička viskoznost pri $T_1 = 0^\circ\text{C}$: $\mu_1 = 0{,}40\ \text{Pa s}$
+- Dinamička viskoznost pri $T_2 = 90^\circ\text{C}$: $\mu_2 = 0{,}040\ \text{Pa s}$
+
+**Traženo**
+
+1. Obodna brzina vratila i gradijent brzine u procjepu.
+2. Smično naprezanje pri obje temperature.
+3. Zakretni moment trenja pri obje temperature.
+4. Snaga koju motor mora trošiti samo na svladavanje viskoznog trenja pri obje temperature i omjer hladne i tople snage.
+
+![Klizni ležaj pri hladnom startu ($\mu_1 = 0{,}40$ Pa·s) i radnoj temperaturi ($\mu_2 = 0{,}040$ Pa·s) – ista geometrija, faktor 10 razlike u viskoznosti, faktor 10 razlike u snazi trenja.](../assets/print/u02_fig_lezaj_temperatura.svg){#fig-u02-lezaj-temperatura fig-align="center"}
+
+**Pretpostavke i model**
+
+Profil brzine u tankom uljnom procjepu aproksimira se kao linearan, pa je $dv/dy = v/\delta$ konstantan. Gustoća ulja se mijenja s temperaturom svega nekoliko postotaka – zato se promjena gustoće zanemaruje, a sve razlike u rezultatu pripisuju se isključivo promjeni viskoznosti. Geometrija ležaja i broj okretaja se ne mijenjaju. Smjer toplinskog rastapanja ulja i lokalno zagrijavanje samog procjepa zanemaruju se – $\mu$ se uzima kao stalna unutar svakog od dva razmatranja.
+
+**Rješenje**
+
+Obodna brzina vratila ne ovisi o temperaturi:
+
+$$
+v = \frac{\pi D n}{60} = \frac{\pi \cdot 0{,}050 \cdot 2400}{60} \approx 6{,}28\ \text{m/s}
+$$
+
+Gradijent brzine u procjepu:
+
+$$
+\frac{dv}{dy} \approx \frac{v}{\delta} = \frac{6{,}28}{0{,}30 \cdot 10^{-3}} \approx 2{,}09 \cdot 10^4\ \text{s}^{-1}
+$$
+
+Smično naprezanje pri hladnom startu:
+
+$$
+\tau_1 = \mu_1 \frac{v}{\delta} = 0{,}40 \cdot 2{,}09 \cdot 10^4 \approx 8{,}38 \cdot 10^3\ \text{Pa}
+$$
+
+Smično naprezanje pri radnoj temperaturi:
+
+$$
+\tau_2 = \mu_2 \frac{v}{\delta} = 0{,}040 \cdot 2{,}09 \cdot 10^4 \approx 838\ \text{Pa}
+$$
+
+Kontaktna površina ležaja:
+
+$$
+A = \pi D L = \pi \cdot 0{,}050 \cdot 0{,}070 = 1{,}10 \cdot 10^{-2}\ \text{m}^2
+$$
+
+Sila viskoznog trenja i zakretni moment pri hladnom startu:
+
+$$
+F_1 = \tau_1 A \approx 92{,}2\ \text{N}, \qquad M_1 = F_1 \cdot \frac{D}{2} \approx 2{,}30\ \text{N m}
+$$
+
+Sila viskoznog trenja i zakretni moment pri radnoj temperaturi:
+
+$$
+F_2 = \tau_2 A \approx 9{,}22\ \text{N}, \qquad M_2 = F_2 \cdot \frac{D}{2} \approx 0{,}231\ \text{N m}
+$$
+
+Kutna brzina rotacije:
+
+$$
+\omega = \frac{2\pi n}{60} \approx 251{,}3\ \text{rad/s}
+$$
+
+Snaga koju motor mora trošiti samo zbog viskoznog trenja:
+
+$$
+P_1 = M_1 \omega \approx 2{,}30 \cdot 251{,}3 \approx 578\ \text{W}
+$$
+
+$$
+P_2 = M_2 \omega \approx 0{,}231 \cdot 251{,}3 \approx 58{,}0\ \text{W}
+$$
+
+Omjer snage hladnog starta prema snazi pri radnoj temperaturi:
+
+$$
+\frac{P_1}{P_2} = \frac{\mu_1}{\mu_2} = 10
+$$
+
+**Provjera i komentar**
+
+1. Smično naprezanje, sila trenja, moment i snaga svi se linearno mijenjaju s viskoznošću – jer ulaze samo kroz $\mu$ u Newtonov zakon. Zato je faktor 10 u $\mu$ direktno faktor 10 u svim izlaznim veličinama.
+2. Snaga $578\ \text{W}$ samo za jedan klizni ležaj pri hladnom startu objašnjava zašto motor pri startu "muklo zvuči" i zašto se isključuju klimatizacija i druga trošila dok se ulje ne zagrije – snaga koja ide u svladavanje viskoznog trenja inače nedostaje za pokretanje.
+3. Inženjerska poruka: višegrad ulje ($10W-40$, $5W-30$) projektirano je upravo da u zimskim uvjetima ima što manji $\mu_1$ (znamenka prije "W" – winter), a istovremeno pri radnoj temperaturi zadrži dovoljan $\mu_2$ (znamenka iza "W") da odvoji površine. Klasa "$0W-20$" jako reducira hladni start, ali pri visokoj radnoj temperaturi ima manju rezervu nosivosti uljnog filma.
+4. Procjep $\delta$ i geometrija ležaja ne ulaze u omjer $P_1/P_2$ – mehanička konstrukcija ne pomaže oko hladnog starta. Jedina stvarna mjera je svojstvo ulja.
+:::
+
+::: {.mf1-we}
 <p class="mf1-box-label">Riješeni primjer – Kapilarni uspon vlage kroz opečni zid &nbsp;<span class="mf1-level">T1</span></p>
 
 🏗️ **Primjer za građevinare**

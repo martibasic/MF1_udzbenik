@@ -1,37 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" role="img"
-     aria-labelledby="moT moD" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u01fmp_moT u01fmp_moD" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="moT">Hidraulično podizanje mosta – 4 podizača (d=110 mm) i ručna pumpa (dₚ=22 mm)</title>
-  <desc id="moD">G=480 kN, F_pod=120 kN svaki. p_min=12,6 MPa. Pumpa daje p_p=1,3 MPa – ručna pumpa nije dostatna, potrebna motorna crpka.</desc>
+  <title id="u01fmp_moT">Hidraulično podizanje mosta – 4 podizača (d=110 mm) i ručna pumpa (dₚ=22 mm)</title>
+  <desc id="u01fmp_moD">G=480 kN, F_pod=120 kN svaki. p_min=12,6 MPa. Pumpa daje p_p=1,3 MPa – ručna pumpa nije dostatna, potrebna motorna crpka.</desc>
   <defs>
-    <marker id="moaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <marker id="u01fmp_moaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
     </marker>
-    <marker id="moaG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <marker id="u01fmp_moaG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/>
     </marker>
-    <marker id="moaBl" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <marker id="u01fmp_moaBl" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/>
     </marker>
-    <marker id="moDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <marker id="u01fmp_moDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#3a3a3a"/>
     </marker>
-    <marker id="moDimR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u01fmp_moDimR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#3a3a3a"/>
     </marker>
-    <linearGradient id="mofl" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u01fmp_mofl" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#aed6f1"/>
       <stop offset="100%" stop-color="#7fb3d3"/>
     </linearGradient>
-    <linearGradient id="mops" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u01fmp_mops" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#909fa8"/>
       <stop offset="100%" stop-color="#5d6d7e"/>
     </linearGradient>
-    <linearGradient id="moBridge" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u01fmp_moBridge" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d5d8dc"/>
       <stop offset="100%" stop-color="#b2bec3"/>
     </linearGradient>
-    <pattern id="moHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u01fmp_moHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="8" stroke="#8a9aa6" stroke-width="2"/>
     </pattern>
   </defs>
@@ -39,15 +39,11 @@
   <rect width="980" height="440" fill="#f8f9fa"/>
   <rect x="14" y="14" width="952" height="412" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5"/>
 
-  <!-- ── NASLOV ── -->
-  <text x="336" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#1a2530" text-anchor="middle">Hidrauli&#269;no podizanje mosta pri zamjeni le&#382;aja</text>
-  <text x="336" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#5a6a78" text-anchor="middle">G = 480 kN, n = 4 podiza&#269;a (d = 110 mm), ru&#269;na pumpa (d&#8346; = 22 mm, F&#8346; = 500 N)</text>
-
   <!-- ════════════════════════════════════════════
        RASPONSKA KONSTRUKCIJA MOSTA
        x: 72–660, y: 72–108 (36px tall)
   ════════════════════════════════════════════ -->
-  <rect x="72" y="72" width="588" height="36" rx="4" fill="url(#moBridge)" stroke="#555" stroke-width="2"/>
+  <rect x="72" y="72" width="588" height="36" rx="4" fill="url(#u01fmp_moBridge)" stroke="#555" stroke-width="2"/>
   <!-- Kolnik (pruge) -->
   <line x1="100" y1="72" x2="100" y2="90" stroke="#aaa" stroke-width="0.9"/>
   <line x1="160" y1="72" x2="160" y2="90" stroke="#aaa" stroke-width="0.9"/>
@@ -62,7 +58,7 @@
   <text x="366" y="95" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56" text-anchor="middle">Rasponska konstrukcija mosta</text>
 
   <!-- G strelica prema dolje (sredina mosta) -->
-  <line x1="366" y1="36" x2="366" y2="70" stroke="#c0392b" stroke-width="3.5" marker-end="url(#moaR)"/>
+  <line x1="366" y1="36" x2="366" y2="70" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u01fmp_moaR)"/>
   <text x="382" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" fill="#c0392b">G = 480 kN</text>
 
   <!-- ════════════════════════════════════════════
@@ -77,73 +73,73 @@
   <!-- Helper: draw each podizač -->
   <!-- POD 1: center=124, inner 88-160, outer 76-172 -->
   <!-- Top gland (seal) -->
-  <rect x="76" y="130" width="96" height="14" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="76" y="130" width="96" height="14" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
   <!-- Left wall -->
-  <rect x="76" y="144" width="12" height="168" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="76" y="144" width="12" height="168" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
   <!-- Right wall -->
-  <rect x="160" y="144" width="12" height="168" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="160" y="144" width="12" height="168" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
   <!-- Floor -->
-  <rect x="76" y="310" width="96" height="14" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="76" y="310" width="96" height="14" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
   <!-- Fluid -->
-  <rect x="88" y="180" width="72" height="130" fill="url(#mofl)"/>
+  <rect x="88" y="180" width="72" height="130" fill="url(#u01fmp_mofl)"/>
   <!-- Klip -->
-  <rect x="80" y="160" width="88" height="20" rx="3" fill="url(#mops)" stroke="#3a4a56" stroke-width="1.5"/>
+  <rect x="80" y="160" width="88" height="20" rx="3" fill="url(#u01fmp_mops)" stroke="#3a4a56" stroke-width="1.5"/>
   <!-- Klipnjača through seal -->
   <rect x="118" y="108" width="12" height="52" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
   <!-- F_pod arrow up (inside bridge zone) -->
-  <line x1="124" y1="115" x2="124" y2="96" stroke="#1e8449" stroke-width="2.5" marker-end="url(#moaG)"/>
+  <line x1="124" y1="115" x2="124" y2="96" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u01fmp_moaG)"/>
   <!-- Tlačne strelice -->
-  <line x1="100" y1="248" x2="100" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
-  <line x1="124" y1="248" x2="124" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
-  <line x1="148" y1="248" x2="148" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
+  <line x1="100" y1="248" x2="100" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
+  <line x1="124" y1="248" x2="124" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
+  <line x1="148" y1="248" x2="148" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
 
   <!-- POD 2: center=268, inner 232-304, outer 220-316 -->
-  <rect x="220" y="130" width="96" height="14" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="220" y="144" width="12" height="168" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="304" y="144" width="12" height="168" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="220" y="310" width="96" height="14" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="232" y="180" width="72" height="130" fill="url(#mofl)"/>
-  <rect x="224" y="160" width="88" height="20" rx="3" fill="url(#mops)" stroke="#3a4a56" stroke-width="1.5"/>
+  <rect x="220" y="130" width="96" height="14" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="220" y="144" width="12" height="168" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="304" y="144" width="12" height="168" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="220" y="310" width="96" height="14" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="232" y="180" width="72" height="130" fill="url(#u01fmp_mofl)"/>
+  <rect x="224" y="160" width="88" height="20" rx="3" fill="url(#u01fmp_mops)" stroke="#3a4a56" stroke-width="1.5"/>
   <rect x="262" y="108" width="12" height="52" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <line x1="268" y1="115" x2="268" y2="96" stroke="#1e8449" stroke-width="2.5" marker-end="url(#moaG)"/>
-  <line x1="244" y1="248" x2="244" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
-  <line x1="268" y1="248" x2="268" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
-  <line x1="292" y1="248" x2="292" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
+  <line x1="268" y1="115" x2="268" y2="96" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u01fmp_moaG)"/>
+  <line x1="244" y1="248" x2="244" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
+  <line x1="268" y1="248" x2="268" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
+  <line x1="292" y1="248" x2="292" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
 
   <!-- POD 3: center=412, inner 376-448, outer 364-460 -->
-  <rect x="364" y="130" width="96" height="14" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="364" y="144" width="12" height="168" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="448" y="144" width="12" height="168" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="364" y="310" width="96" height="14" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="376" y="180" width="72" height="130" fill="url(#mofl)"/>
-  <rect x="368" y="160" width="88" height="20" rx="3" fill="url(#mops)" stroke="#3a4a56" stroke-width="1.5"/>
+  <rect x="364" y="130" width="96" height="14" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="364" y="144" width="12" height="168" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="448" y="144" width="12" height="168" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="364" y="310" width="96" height="14" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="376" y="180" width="72" height="130" fill="url(#u01fmp_mofl)"/>
+  <rect x="368" y="160" width="88" height="20" rx="3" fill="url(#u01fmp_mops)" stroke="#3a4a56" stroke-width="1.5"/>
   <rect x="406" y="108" width="12" height="52" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <line x1="412" y1="115" x2="412" y2="96" stroke="#1e8449" stroke-width="2.5" marker-end="url(#moaG)"/>
-  <line x1="388" y1="248" x2="388" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
-  <line x1="412" y1="248" x2="412" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
-  <line x1="436" y1="248" x2="436" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
+  <line x1="412" y1="115" x2="412" y2="96" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u01fmp_moaG)"/>
+  <line x1="388" y1="248" x2="388" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
+  <line x1="412" y1="248" x2="412" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
+  <line x1="436" y1="248" x2="436" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
 
   <!-- POD 4: center=556, inner 520-592, outer 508-604 -->
-  <rect x="508" y="130" width="96" height="14" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="508" y="144" width="12" height="168" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="592" y="144" width="12" height="168" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="508" y="310" width="96" height="14" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="520" y="180" width="72" height="130" fill="url(#mofl)"/>
-  <rect x="512" y="160" width="88" height="20" rx="3" fill="url(#mops)" stroke="#3a4a56" stroke-width="1.5"/>
+  <rect x="508" y="130" width="96" height="14" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="508" y="144" width="12" height="168" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="592" y="144" width="12" height="168" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="508" y="310" width="96" height="14" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="520" y="180" width="72" height="130" fill="url(#u01fmp_mofl)"/>
+  <rect x="512" y="160" width="88" height="20" rx="3" fill="url(#u01fmp_mops)" stroke="#3a4a56" stroke-width="1.5"/>
   <rect x="550" y="108" width="12" height="52" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <line x1="556" y1="115" x2="556" y2="96" stroke="#1e8449" stroke-width="2.5" marker-end="url(#moaG)"/>
-  <line x1="532" y1="248" x2="532" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
-  <line x1="556" y1="248" x2="556" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
-  <line x1="580" y1="248" x2="580" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#moaBl)"/>
+  <line x1="556" y1="115" x2="556" y2="96" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u01fmp_moaG)"/>
+  <line x1="532" y1="248" x2="532" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
+  <line x1="556" y1="248" x2="556" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
+  <line x1="580" y1="248" x2="580" y2="208" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fmp_moaBl)"/>
 
   <!-- F_pod label (samo za pod1) -->
-  <text x="140" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1e8449">F&#8346;&#x2080;&#x2081; = G/4 = 120 kN</text>
+  <text x="140" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">pod</tspan> = G/4 = 120 kN</text>
   <text x="140" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1e8449">(svaki)</text>
 
   <!-- Kota d (pod1) -->
   <line x1="88" y1="340" x2="88" y2="348" stroke="#3a3a3a" stroke-width="1.1"/>
   <line x1="160" y1="340" x2="160" y2="348" stroke="#3a3a3a" stroke-width="1.1"/>
-  <line x1="90" y1="344" x2="158" y2="344" stroke="#3a3a3a" stroke-width="1.1" marker-start="url(#moDimR)" marker-end="url(#moDim)"/>
+  <line x1="90" y1="344" x2="158" y2="344" stroke="#3a3a3a" stroke-width="1.1" marker-start="url(#u01fmp_moDimR)" marker-end="url(#u01fmp_moDim)"/>
   <text x="124" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#3a3a3a">d = 110 mm</text>
 
   <!-- ════════════════════════════════════════════
@@ -151,9 +147,9 @@
        x: 28–604, y: 320–338
   ════════════════════════════════════════════ -->
   <rect x="28" y="320" width="580" height="18" rx="2" fill="#8a9aa6" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="36" y="324" width="565" height="10" fill="url(#mofl)" opacity="0.88"/>
+  <rect x="36" y="324" width="565" height="10" fill="url(#u01fmp_mofl)" opacity="0.88"/>
   <!-- Strelica tlaka u vodu -->
-  <line x1="340" y1="329" x2="160" y2="329" stroke="#1565c0" stroke-width="2" marker-end="url(#moaBl)"/>
+  <line x1="340" y1="329" x2="160" y2="329" stroke="#1565c0" stroke-width="2" marker-end="url(#u01fmp_moaBl)"/>
   <text x="345" y="315" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" font-weight="700" fill="#1565c0">p = 12,6 MPa  (u cijelom sustavu)</text>
 
   <!-- ════════════════════════════════════════════
@@ -164,28 +160,28 @@
        Klipnjača: x=24–32, y=110–212
   ════════════════════════════════════════════ -->
   <!-- Gland seal -->
-  <rect x="10" y="182" width="36" height="14" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="10" y="182" width="36" height="14" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
   <!-- Left wall -->
-  <rect x="10" y="196" width="9" height="126" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="10" y="196" width="9" height="126" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
   <!-- Right wall -->
-  <rect x="37" y="196" width="9" height="126" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="37" y="196" width="9" height="126" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
   <!-- Floor -->
-  <rect x="10" y="320" width="36" height="14" fill="url(#moHatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="10" y="320" width="36" height="14" fill="url(#u01fmp_moHatch)" stroke="#4a6070" stroke-width="1.2"/>
   <!-- Fluid -->
-  <rect x="19" y="236" width="18" height="84" fill="url(#mofl)"/>
+  <rect x="19" y="236" width="18" height="84" fill="url(#u01fmp_mofl)"/>
   <!-- Klip -->
-  <rect x="13" y="216" width="30" height="18" rx="3" fill="url(#mops)" stroke="#3a4a56" stroke-width="1.5"/>
+  <rect x="13" y="216" width="30" height="18" rx="3" fill="url(#u01fmp_mops)" stroke="#3a4a56" stroke-width="1.5"/>
   <!-- Klipnjača -->
   <rect x="24" y="110" width="8" height="106" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
 
-  <!-- Fp arrow down -->
-  <line x1="28" y1="62" x2="28" y2="108" stroke="#1565c0" stroke-width="3.5" marker-end="url(#moaBl)"/>
-  <text x="42" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" font-style="italic" fill="#1565c0">F&#8346; = 500 N</text>
+  <!-- Fp arrow down (ulazna - crvena per protokol) -->
+  <line x1="28" y1="62" x2="28" y2="108" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u01fmp_moaR)"/>
+  <text x="42" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" font-style="italic" fill="#c0392b">F&#8346; = 500 N</text>
 
   <!-- dp kota -->
   <line x1="19" y1="346" x2="19" y2="354" stroke="#3a3a3a" stroke-width="1.1"/>
   <line x1="37" y1="346" x2="37" y2="354" stroke="#3a3a3a" stroke-width="1.1"/>
-  <line x1="21" y1="350" x2="35" y2="350" stroke="#3a3a3a" stroke-width="1.1" marker-start="url(#moDimR)" marker-end="url(#moDim)"/>
+  <line x1="21" y1="350" x2="35" y2="350" stroke="#3a3a3a" stroke-width="1.1" marker-start="url(#u01fmp_moDimR)" marker-end="url(#u01fmp_moDim)"/>
   <text x="28" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#3a3a3a">d&#8346;=22</text>
 
   <!-- ════════════════════════════════════════════
@@ -194,7 +190,7 @@
   <!-- p_min box (red) -->
   <rect x="636" y="68" width="316" height="56" rx="8" fill="#fdedec" stroke="#c0392b" stroke-width="1.4"/>
   <text x="794" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b" text-anchor="middle">Potrebni tlak (za podizanje):</text>
-  <text x="794" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b" text-anchor="middle">p&#8348;&#x2083;&#8345; = F&#8346;&#x2080;&#x2081; / A&#8346;&#x2080;&#x2081; = <tspan fill="#8b0000">12,6 MPa</tspan></text>
+  <text x="794" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">min</tspan> = F<tspan baseline-shift="sub" font-size="0.7em">pod</tspan> / A<tspan baseline-shift="sub" font-size="0.7em">pod</tspan> = <tspan fill="#8b0000">12,6 MPa</tspan></text>
 
   <!-- p_pumpa box (green) -->
   <rect x="636" y="140" width="316" height="56" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.4"/>
@@ -203,16 +199,16 @@
 
   <!-- Comparison -->
   <rect x="636" y="212" width="316" height="70" rx="8" fill="#fff9e6" stroke="#e67e22" stroke-width="1.6"/>
-  <text x="794" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#c0392b" text-anchor="middle">p&#8346; &#171; p&#8348;&#x2083;&#8345;</text>
+  <text x="794" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#c0392b" text-anchor="middle">p&#8346; &#171; p<tspan baseline-shift="sub" font-size="0.7em">min</tspan></text>
   <text x="794" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530" text-anchor="middle">1,3 MPa &#171; 12,6 MPa</text>
   <text x="794" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#c0392b" text-anchor="middle">&#8594; ru&#269;na pumpa nije dostatna!</text>
   <text x="794" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78" text-anchor="middle">Potrebna motorna crpka (hidrauli&#269;na).</text>
 
   <!-- Kalkulator tooltip bottom right -->
   <rect x="636" y="310" width="316" height="92" rx="8" fill="#fafbfc" stroke="#dde3ea" stroke-width="1.2"/>
-  <text x="652" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">A&#8346;&#x2080;&#x2081; = &#960;d&#xB2;/4 = &#960;&#183;0,110&#xB2;/4 &#8776; 9,50&#183;10&#x207B;&#xB3; m&#xB2;</text>
-  <text x="652" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">F&#8346;&#x2080;&#x2081; = G/4 = 480/4 = 120 kN</text>
-  <text x="652" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c0392b">p&#8348;&#x2083;&#8345; = 120000/9,50&#183;10&#x207B;&#xB3; &#8776; 12,6 MPa</text>
+  <text x="652" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">A<tspan baseline-shift="sub" font-size="0.7em">pod</tspan> = &#960;d&#xB2;/4 = &#960;&#183;0,110&#xB2;/4 &#8776; 9,50&#183;10&#x207B;&#xB3; m&#xB2;</text>
+  <text x="652" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">F<tspan baseline-shift="sub" font-size="0.7em">pod</tspan> = G/4 = 480/4 = 120 kN</text>
+  <text x="652" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c0392b">p<tspan baseline-shift="sub" font-size="0.7em">min</tspan> = 120000/9,50&#183;10&#x207B;&#xB3; &#8776; 12,6 MPa</text>
   <text x="652" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">A&#8346; = &#960;&#183;0,022&#xB2;/4 &#8776; 3,80&#183;10&#x207B;&#x2074; m&#xB2;  &#8594;  p&#8346; = 500/3,80&#183;10&#x207B;&#x2074; &#8776; 1,3 MPa</text>
   <text x="652" y="397" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8a9aa8">(gubici zanemareni)</text>
 </svg>

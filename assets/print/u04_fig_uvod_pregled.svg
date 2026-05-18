@@ -1,32 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img"
-     aria-labelledby="u4pvT u4pvD" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u04fup_u4pvT u04fup_u4pvD" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u4pvT">Pregled poglavlja U04 – Relativno mirovanje fluida</title>
-  <desc id="u4pvD">Tri panela: (1) Ubrzani pravokutni spremnik s nagnutom slobodnom površinom – fizikalni princip; (2) Ključne jednadžbe Δh=aL/g i tanα=a/g; (3) Autocisterna pri kočenju – strojarsko-praktična primjena.</desc>
+  <title id="u04fup_u4pvT">Pregled poglavlja U04 – Relativno mirovanje fluida</title>
+  <desc id="u04fup_u4pvD">Tri panela: (1) Ubrzani pravokutni spremnik s nagnutom slobodnom površinom – fizikalni princip; (2) Ključne jednadžbe Δh=aL/g i tanα=a/g; (3) Autocisterna pri kočenju – strojarsko-praktična primjena.</desc>
   <defs>
-    <marker id="u4pvaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u4pvaP" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#8e44ad"/></marker>
-    <marker id="u4pvaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u4pvaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <linearGradient id="u4pvfl" x1="0" y1="0" x2="0" y2="1">
+    <marker id="u04fup_u4pvaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
+    <marker id="u04fup_u4pvaP" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#8e44ad"/></marker>
+    <marker id="u04fup_u4pvaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <marker id="u04fup_u4pvaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <linearGradient id="u04fup_u4pvfl" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
     </linearGradient>
-    <linearGradient id="u4pvfuel" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u04fup_u4pvfuel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#d4a017"/>
     </linearGradient>
-    <linearGradient id="u4pvhdr" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="u04fup_u4pvhdr" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/>
     </linearGradient>
-    <pattern id="u4pvh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u04fup_u4pvh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
     </pattern>
   </defs>
 
-  <!-- Pozadina + header -->
+  <!-- Pozadina -->
   <rect width="980" height="500" fill="#eef1f5"/>
-  <rect x="0" y="0" width="980" height="48" fill="url(#u4pvhdr)"/>
-  <text x="490" y="22" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle">U04 – Relativno mirovanje fluida</text>
-  <text x="490" y="40" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#8aaccc" text-anchor="middle">slobodna površina se nagiba  ·  efektivno polje sila  ·  Δh = aL/g  ·  paraboloid pri rotaciji</text>
 
   <!-- ═══════════════════ PANEL 1 – FIZIKALNI PRINCIP ═══════════════════ -->
   <rect x="12" y="54" width="356" height="436" rx="10" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.8"/>
@@ -37,7 +34,7 @@
   <rect x="32" y="100" width="300" height="220" fill="none" stroke="#3a4a56" stroke-width="2.2"/>
   <!-- Fluid (trapez: lijeva visina veća, desna manja – ubrzanje udesno naginje lijevu stranu gore) -->
   <!-- Lijeva strana slobodne površine y=128, desna y=198 -->
-  <polygon points="32,320 332,320 332,198 32,128" fill="url(#u4pvfl)" opacity="0.9"/>
+  <polygon points="32,320 332,320 332,198 32,128" fill="url(#u04fup_u4pvfl)" opacity="0.9"/>
   <!-- Slobodna površina -->
   <line x1="32" y1="128" x2="332" y2="198" stroke="#1565c0" stroke-width="2.4"/>
   <!-- Mirna razina (isprekidana) -->
@@ -53,23 +50,23 @@
   <!-- Slobodna površina ide od (32,128) do (332,198): smjer dx=300, dy=70
        Okomici smjer: (70,-300)/√(300²+70²)=316 → (0.221,-0.975)
        Točka na sredini: (182, 163), g_eff prema "dolje-lijevo": (182-0.221*80, 163+0.975*80) = (164,241) -->
-  <line x1="182" y1="163" x2="164" y2="241" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u4pvaP)"/>
+  <line x1="182" y1="163" x2="164" y2="241" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u04fup_u4pvaP)"/>
   <text x="144" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#8e44ad">g_eff</text>
 
   <!-- Ubrzanje a (strelica udesno, iznad posude) -->
-  <line x1="285" y1="92" x2="350" y2="92" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u4pvaR)"/>
+  <line x1="285" y1="92" x2="350" y2="92" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u04fup_u4pvaR)"/>
   <text x="267" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#c0392b">a</text>
 
   <!-- Kota Δh (lijevo od posude) -->
   <line x1="24" y1="128" x2="29" y2="128" stroke="#b7600c" stroke-width="1.3"/>
   <line x1="24" y1="198" x2="29" y2="198" stroke="#b7600c" stroke-width="1.3"/>
-  <line x1="26" y1="130" x2="26" y2="196" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u4pvaDimL)" marker-end="url(#u4pvaDim)"/>
+  <line x1="26" y1="130" x2="26" y2="196" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u04fup_u4pvaDimL)" marker-end="url(#u04fup_u4pvaDim)"/>
   <text x="18" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c" text-anchor="end">Δh</text>
 
   <!-- Kota L (ispod posude) -->
   <line x1="32" y1="326" x2="32" y2="332" stroke="#b7600c" stroke-width="1.3"/>
   <line x1="332" y1="326" x2="332" y2="332" stroke="#b7600c" stroke-width="1.3"/>
-  <line x1="34" y1="329" x2="330" y2="329" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u4pvaDimL)" marker-end="url(#u4pvaDim)"/>
+  <line x1="34" y1="329" x2="330" y2="329" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u04fup_u4pvaDimL)" marker-end="url(#u04fup_u4pvaDim)"/>
   <text x="182" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c" text-anchor="middle">L</text>
 
   <!-- Napomena -->
@@ -138,7 +135,7 @@
   <rect x="650" y="142" width="290" height="98" rx="8" fill="#e8e0d0" stroke="#a09060" stroke-width="1.4"/>
   <!-- Fluid (gorivo, nagnut trapez) – kočenje = ubrzanje nazad = gorivo naprijed/lijevo -->
   <!-- Lijevo gore, desno dolje -->
-  <polygon points="651,143 939,143 939,218 651,185" fill="url(#u4pvfuel)" opacity="0.88"/>
+  <polygon points="651,143 939,143 939,218 651,185" fill="url(#u04fup_u4pvfuel)" opacity="0.88"/>
   <!-- Slobodna površina goriva (nagnuta) -->
   <line x1="651" y1="185" x2="939" y2="218" stroke="#c8860a" stroke-width="2.2"/>
   <!-- Mirna razina -->
@@ -146,19 +143,19 @@
   <text x="941" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#a09060">h₀</text>
 
   <!-- Kočenje strelica (gorivo ide prema naprijed = lijevo) -->
-  <line x1="720" y1="112" x2="658" y2="112" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u4pvaR)"/>
+  <line x1="720" y1="112" x2="658" y2="112" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u04fup_u4pvaR)"/>
   <text x="730" y="117" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">a (kočenje)</text>
 
   <!-- Kota h_pred (lijevo) -->
   <line x1="643" y1="185" x2="648" y2="185" stroke="#b7600c" stroke-width="1.2"/>
   <line x1="643" y1="238" x2="648" y2="238" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="645" y1="187" x2="645" y2="236" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u4pvaDimL)" marker-end="url(#u4pvaDim)"/>
+  <line x1="645" y1="187" x2="645" y2="236" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04fup_u4pvaDimL)" marker-end="url(#u04fup_u4pvaDim)"/>
   <text x="634" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="end">h_p</text>
 
   <!-- Kota h_straz (desno) -->
   <line x1="942" y1="218" x2="947" y2="218" stroke="#b7600c" stroke-width="1.2"/>
   <line x1="942" y1="238" x2="947" y2="238" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="945" y1="220" x2="945" y2="236" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u4pvaDimL)" marker-end="url(#u4pvaDim)"/>
+  <line x1="945" y1="220" x2="945" y2="236" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04fup_u4pvaDimL)" marker-end="url(#u04fup_u4pvaDim)"/>
   <text x="955" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">h_s</text>
 
   <!-- Jednadžba ispod autocisterne -->
@@ -180,8 +177,8 @@
   <rect x="710" y="434" width="10" height="40" fill="#c8d0d5" stroke="#556" stroke-width="1.0"/>
   <rect x="870" y="434" width="10" height="40" fill="#c8d0d5" stroke="#556" stroke-width="1.0"/>
   <!-- Paraboloid: od (720,470) Q(790,434) (880,470) -->
-  <rect x="720" y="455" width="160" height="15" fill="url(#u4pvfl)" opacity="0.7"/>
-  <path d="M720,470 Q790,440 880,470 L880,455 Q790,440 720,455 Z" fill="url(#u4pvfl)" opacity="0.88"/>
+  <rect x="720" y="455" width="160" height="15" fill="url(#u04fup_u4pvfl)" opacity="0.7"/>
+  <path d="M720,470 Q790,440 880,470 L880,455 Q790,440 720,455 Z" fill="url(#u04fup_u4pvfl)" opacity="0.88"/>
   <path d="M720,470 Q790,440 880,470" fill="none" stroke="#1565c0" stroke-width="2.0"/>
   <!-- Referentna razina h0 -->
   <line x1="720" y1="456" x2="880" y2="456" stroke="#a0a8b0" stroke-width="1.0" stroke-dasharray="4,3"/>

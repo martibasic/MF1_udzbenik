@@ -1,11 +1,8 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="title">U07 CH 1 - plutajuća platforma na granici ulja i vode</title>
-  <desc id="desc">Plutajuća pravokutna platforma naginje se zbog bocno pomaknutog ormara, dok istodobno pluta na granici ulja i vode. Skica razdvaja urone, debljinu uljnog sloja, pomak tezista tereta i pomak centra uzgona.</desc>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" role="img" aria-labelledby="u07c1puvo_title u07c1puvo_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u07c1puvo_title">U07 CH 1 - plutajuća platforma na granici ulja i vode</title>
+  <desc id="u07c1puvo_desc">Plutajuća pravokutna platforma naginje se zbog bocno pomaknutog ormara, dok istodobno pluta na granici ulja i vode. Skica razdvaja urone, debljinu uljnog sloja, pomak tezista tereta i pomak centra uzgona.</desc>
   <rect width="980" height="440" fill="#ffffff"/>
   <rect x="28" y="28" width="924" height="384" rx="18" fill="#ffffff" stroke="#c9d2d8" stroke-width="2"/>
-
-  <text x="58" y="64" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#173043">U07 CH - Plutajuća platforma na granici ulja i vode</text>
-  <text x="58" y="94" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Ukupna istisnina sada se mora sloziti iz ulja i vode, a nagib tek onda prevesti u bocni moment ravnoteze.</text>
 
   <rect x="90" y="130" width="620" height="238" rx="10" fill="#ffffff" stroke="#5b6770" stroke-width="2.5"/>
   <rect x="90" y="130" width="620" height="58" fill="#f6e1a6"/>
@@ -15,65 +12,65 @@
   <polygon points="244,220 598,190 598,228 244,258" fill="#eef3f6" stroke="#5b6770" stroke-width="2.5"/>
   <polygon points="310,172 396,164 396,196 310,204" fill="#d8dee3" stroke="#5b6770" stroke-width="2"/>
   <rect x="320" y="132" width="78" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="338" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">ormar m_k</text>
+  <text x="338" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">ormar m_k</text>
 
   <line x1="244" y1="220" x2="598" y2="190" stroke="#5b6770" stroke-width="2" stroke-dasharray="6 6"/>
   <line x1="421" y1="148" x2="421" y2="302" stroke="#8c99a3" stroke-width="2.5" stroke-dasharray="6 6"/>
   <rect x="394" y="306" width="54" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="409" y="324" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">osa</text>
+  <text x="409" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">osa</text>
 
   <circle cx="356" cy="184" r="5" fill="#111827"/>
-  <line x1="421" y1="158" x2="356" y2="158" stroke="#b42318" stroke-width="4.5" marker-end="url(#arrowRed)"/>
+  <line x1="421" y1="158" x2="356" y2="158" stroke="#b42318" stroke-width="4.5" marker-end="url(#u07c1puvo_arrowRed)"/>
   <rect x="374" y="120" width="34" height="24" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
-  <text x="386" y="137" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#173043">e</text>
+  <text x="386" y="137" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#173043">e</text>
 
   <circle cx="386" cy="284" r="5" fill="#0f766e"/>
-  <line x1="421" y1="284" x2="386" y2="284" stroke="#0f766e" stroke-width="4.5" marker-end="url(#arrowTeal)"/>
+  <line x1="421" y1="284" x2="386" y2="284" stroke="#0f766e" stroke-width="4.5" marker-end="url(#u07c1puvo_arrowTeal)"/>
   <rect x="392" y="246" width="48" height="24" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="406" y="263" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#173043">y_B</text>
+  <text x="406" y="263" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#173043">y_B</text>
 
-  <line x1="196" y1="130" x2="196" y2="258" stroke="#8b5e3c" stroke-width="3" marker-start="url(#arrowBrown)" marker-end="url(#arrowBrown)"/>
+  <line x1="196" y1="130" x2="196" y2="258" stroke="#8b5e3c" stroke-width="3" marker-start="url(#u07c1puvo_arrowBrown)" marker-end="url(#u07c1puvo_arrowBrown)"/>
   <rect x="206" y="186" width="44" height="26" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
-  <text x="221" y="204" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">h_L</text>
+  <text x="221" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">h_L</text>
 
-  <line x1="648" y1="130" x2="648" y2="228" stroke="#8b5e3c" stroke-width="3" marker-start="url(#arrowBrown)" marker-end="url(#arrowBrown)"/>
+  <line x1="648" y1="130" x2="648" y2="228" stroke="#8b5e3c" stroke-width="3" marker-start="url(#u07c1puvo_arrowBrown)" marker-end="url(#u07c1puvo_arrowBrown)"/>
   <rect x="658" y="170" width="44" height="26" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
-  <text x="673" y="188" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">h_D</text>
+  <text x="673" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">h_D</text>
 
-  <line x1="138" y1="130" x2="138" y2="188" stroke="#8b5e3c" stroke-width="3" marker-start="url(#arrowBrown)" marker-end="url(#arrowBrown)"/>
+  <line x1="138" y1="130" x2="138" y2="188" stroke="#8b5e3c" stroke-width="3" marker-start="url(#u07c1puvo_arrowBrown)" marker-end="url(#u07c1puvo_arrowBrown)"/>
   <rect x="148" y="144" width="38" height="24" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
-  <text x="160" y="161" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#173043">delta</text>
+  <text x="160" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#173043">delta</text>
 
-  <line x1="244" y1="110" x2="598" y2="110" stroke="#6f7f89" stroke-width="3" marker-start="url(#arrowGray)" marker-end="url(#arrowGray)"/>
+  <line x1="244" y1="110" x2="598" y2="110" stroke="#6f7f89" stroke-width="3" marker-start="url(#u07c1puvo_arrowGray)" marker-end="url(#u07c1puvo_arrowGray)"/>
   <rect x="406" y="118" width="34" height="24" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="418" y="135" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#173043">B</text>
+  <text x="418" y="135" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#173043">B</text>
 
   <rect x="114" y="98" width="92" height="24" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="126" y="115" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">L okomito na skicu</text>
+  <text x="126" y="115" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">L okomito na skicu</text>
 
   <rect x="730" y="138" width="184" height="176" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
-  <text x="752" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">Citaj skicu</text>
-  <text x="752" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">1. h_L i h_D daju h_m</text>
-  <text x="752" y="228" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">2. delta dijeli V_o i V_w</text>
-  <text x="752" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">3. voda nosi y_B</text>
-  <text x="752" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">4. e zatvara moment</text>
+  <text x="752" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Citaj skicu</text>
+  <text x="752" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">1. h_L i h_D daju h_m</text>
+  <text x="752" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">2. delta dijeli V_o i V_w</text>
+  <text x="752" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">3. voda nosi y_B</text>
+  <text x="752" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">4. e zatvara moment</text>
 
   <rect x="120" y="376" width="92" height="24" rx="6" fill="#f6e1a6" stroke="#d6dde2" stroke-width="1.2"/>
-  <text x="136" y="393" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">ulje rho_o</text>
+  <text x="136" y="393" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">ulje rho_o</text>
   <rect x="222" y="376" width="100" height="24" rx="6" fill="#dff1f8" stroke="#d6dde2" stroke-width="1.2"/>
-  <text x="238" y="393" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">voda rho_w</text>
+  <text x="238" y="393" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">voda rho_w</text>
 
   <defs>
-    <marker id="arrowBrown" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
+    <marker id="u07c1puvo_arrowBrown" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#8b5e3c"/>
     </marker>
-    <marker id="arrowGray" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
+    <marker id="u07c1puvo_arrowGray" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#6f7f89"/>
     </marker>
-    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+    <marker id="u07c1puvo_arrowRed" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#b42318"/>
     </marker>
-    <marker id="arrowTeal" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+    <marker id="u07c1puvo_arrowTeal" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#0f766e"/>
     </marker>
   </defs>

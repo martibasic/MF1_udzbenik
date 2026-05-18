@@ -1,35 +1,31 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u5v3T u5v3D" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u05v3kp_u5v3T u05v3kp_u5v3D" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u5v3T">U05 Val 3 – Kosi inspekcijski poklopac na talozniku</title>
-  <desc id="u5v3D">b=0,90 m, L=1,20 m, h_A=0,80 m, θ=60° od vodoravne. F≈13,95 kN na centru tlaka CP (s_R=0,679 m od A); spojnica T≈7,89 kN pri B.</desc>
+  <title id="u05v3kp_u5v3T">U05 Val 3 – Kosi inspekcijski poklopac na talozniku</title>
+  <desc id="u05v3kp_u5v3D">b=0,90 m, L=1,20 m, h_A=0,80 m, θ=60° od vodoravne. F≈13,95 kN na centru tlaka CP (s_R=0,679 m od A); spojnica T≈7,89 kN pri B.</desc>
   <defs>
-    <marker id="u5v3aR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <marker id="u05v3kp_u5v3aR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
     </marker>
-    <marker id="u5v3aB" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <marker id="u05v3kp_u5v3aB" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/>
     </marker>
-    <marker id="u5v3aDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <marker id="u05v3kp_u5v3aDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
     </marker>
-    <marker id="u5v3aDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u05v3kp_u5v3aDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
     </marker>
-    <linearGradient id="u5v3fl" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u05v3kp_u5v3fl" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
     </linearGradient>
-    <pattern id="u5v3wall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u05v3kp_u5v3wall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
     </pattern>
   </defs>
 
   <rect width="940" height="420" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-
-  <!-- Naslov -->
-  <text x="54" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#173043">U05 Val 3 – Kosi inspekcijski poklopac na talozniku</text>
-  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="14.5" fill="#516677">b=0,90 m · L=1,20 m · h_A=0,80 m · θ=60° od vodoravne → F≈13,95 kN · T≈7,89 kN</text>
 
   <!--
     Mjerilo: 100 px/m  ·  Slobodna površina y=115
@@ -41,7 +37,7 @@
   -->
 
   <!-- Tijelo fluida (taložnik) -->
-  <polygon points="82,115 310,115 416,299 416,330 82,330" fill="url(#u5v3fl)" opacity="0.82"/>
+  <polygon points="82,115 310,115 416,299 416,330 82,330" fill="url(#u05v3kp_u5v3fl)" opacity="0.82"/>
 
   <!-- Lijeva stijenka -->
   <rect x="80" y="108" width="4" height="228" fill="#909fa8"/>
@@ -56,11 +52,11 @@
   <!-- Gornji dio zida (iznad poklopca: W→A), debljina 20 px -->
   <!-- Inner: (300,100)→(356,195); outer offset 20px u smjeru (0.866,-0.500): +17,-10 -->
   <polygon points="300,100 317,90 373,185 356,195" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.4"/>
-  <polygon points="300,100 317,90 373,185 356,195" fill="url(#u5v3wall)" opacity="0.45"/>
+  <polygon points="300,100 317,90 373,185 356,195" fill="url(#u05v3kp_u5v3wall)" opacity="0.45"/>
 
   <!-- Donji dio zida (ispod poklopca: B→ext) -->
   <polygon points="416,299 433,289 449,319 432,329" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.4"/>
-  <polygon points="416,299 433,289 449,319 432,329" fill="url(#u5v3wall)" opacity="0.45"/>
+  <polygon points="416,299 433,289 449,319 432,329" fill="url(#u05v3kp_u5v3wall)" opacity="0.45"/>
 
   <!-- Poklopac (inspection cover): A→B, istaknuto metal -->
   <line x1="356" y1="195" x2="416" y2="299" stroke="#2d3748" stroke-width="14" stroke-linecap="round"/>
@@ -87,11 +83,11 @@
   <text x="328" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#516677"> s_R=0,679 m</text>
 
   <!-- F strelica od CP u smjeru (0.866, -0.500), 72 px -->
-  <line x1="390" y1="254" x2="452" y2="218" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u5v3aR)"/>
+  <line x1="390" y1="254" x2="452" y2="218" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u05v3kp_u5v3aR)"/>
   <text x="456" y="213" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">F ≈ 13,95 kN</text>
 
   <!-- T strelica od B u smjeru (-0.866, 0.500), 52 px -->
-  <line x1="416" y1="299" x2="371" y2="325" stroke="#1565c0" stroke-width="3.5" marker-end="url(#u5v3aB)"/>
+  <line x1="416" y1="299" x2="371" y2="325" stroke="#1565c0" stroke-width="3.5" marker-end="url(#u05v3kp_u5v3aB)"/>
   <text x="350" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">T ≈ 7,89 kN</text>
 
   <!-- Kota h_A (vertikalna: od y=115 do y=195 pri x=320) -->
@@ -99,7 +95,7 @@
   <line x1="356" y1="115" x2="323" y2="115" stroke="#c96c35" stroke-width="1.0"/>
   <line x1="356" y1="195" x2="323" y2="195" stroke="#c96c35" stroke-width="1.0"/>
   <line x1="320" y1="117" x2="320" y2="193" stroke="#c96c35" stroke-width="1.8"
-        marker-start="url(#u5v3aDimL)" marker-end="url(#u5v3aDim)"/>
+        marker-start="url(#u05v3kp_u5v3aDimL)" marker-end="url(#u05v3kp_u5v3aDim)"/>
   <text x="262" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#92400e" font-style="italic">h_A = 0,80 m</text>
 
   <!-- Kota L (duž plohe, ofsetnuta za 18 px lijevo-gore od unutarnje stijene) -->
@@ -108,7 +104,7 @@
   <line x1="356" y1="195" x2="340" y2="204" stroke="#c96c35" stroke-width="1.0"/>
   <line x1="416" y1="299" x2="400" y2="308" stroke="#c96c35" stroke-width="1.0"/>
   <line x1="341" y1="205" x2="401" y2="309" stroke="#c96c35" stroke-width="1.8"
-        marker-start="url(#u5v3aDimL)" marker-end="url(#u5v3aDim)"/>
+        marker-start="url(#u05v3kp_u5v3aDimL)" marker-end="url(#u05v3kp_u5v3aDim)"/>
   <text x="295" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#92400e" font-style="italic" transform="rotate(60,295,276)">L = 1,20 m</text>
 
   <!-- Kut θ=60° pri W(310,115) -->

@@ -1,57 +1,54 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
-  <title id="title">U12 Val 1 - vodilica mlaza na ispitnom stolu</title>
-  <desc id="desc">Tlocrt mlaza i vodilice s kontrolnim volumenom, kutom skretanja i reakcijama nosaca.</desc>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="u12v1vm_title u12v1vm_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u12v1vm_title">U12 Val 1 - vodilica mlaza na ispitnom stolu</title>
+  <desc id="u12v1vm_desc">Tlocrt mlaza i vodilice s kontrolnim volumenom, kutom skretanja i reakcijama nosaca.</desc>
   <rect width="980" height="420" fill="#fffdf8"/>
   <rect x="32" y="32" width="916" height="356" rx="22" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <text x="70" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#173043">U12 - Vodilica mlaza na ispitnom stolu</text>
-  <text x="70" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#587183">Kontrolni volumen, promjena količine gibanja i reakcija nosaca.</text>
-
-  <text x="90" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#173043">Tlocrt scene</text>
+  <text x="90" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#173043">Tlocrt scene</text>
 
   <rect x="120" y="228" width="88" height="32" rx="4" fill="#e7edf1" stroke="#173043" stroke-width="4"/>
-  <text x="128" y="219" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">sapnica</text>
-  <line x1="80" y1="244" x2="250" y2="244" stroke="#1976d2" stroke-width="8" marker-end="url(#arrowBlue)"/>
-  <text x="210" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">v1</text>
+  <text x="128" y="219" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">sapnica</text>
+  <line x1="80" y1="244" x2="250" y2="244" stroke="#1976d2" stroke-width="8" marker-end="url(#u12v1vm_arrowBlue)"/>
+  <text x="210" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">v1</text>
 
   <path d="M300 244 Q360 244 392 219 Q420 198 435 164" fill="none" stroke="#173043" stroke-width="14" stroke-linecap="round"/>
   <rect x="268" y="156" width="210" height="150" rx="16" fill="none" stroke="#6f7f89" stroke-width="3" stroke-dasharray="10 8"/>
-  <text x="292" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">kontrolni volumen</text>
+  <text x="292" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">kontrolni volumen</text>
 
-  <line x1="390" y1="194" x2="340" y2="152" stroke="#1976d2" stroke-width="8" marker-end="url(#arrowBlue)"/>
-  <text x="352" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">v2</text>
+  <line x1="390" y1="194" x2="340" y2="152" stroke="#1976d2" stroke-width="8" marker-end="url(#u12v1vm_arrowBlue)"/>
+  <text x="352" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">v2</text>
 
   <path d="M355 244 A55 55 0 0 1 342 196" fill="none" stroke="#c96c35" stroke-width="3"/>
-  <text x="355" y="204" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">beta</text>
+  <text x="355" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">beta</text>
 
   <circle cx="392" cy="219" r="6" fill="#173043"/>
-  <line x1="392" y1="219" x2="322" y2="219" stroke="#c23b22" stroke-width="5" marker-end="url(#arrowRed)"/>
-  <text x="334" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">R_x</text>
-  <line x1="392" y1="219" x2="392" y2="150" stroke="#2e7d32" stroke-width="5" marker-end="url(#arrowGreen)"/>
-  <text x="404" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">R_y</text>
+  <line x1="392" y1="219" x2="322" y2="219" stroke="#c23b22" stroke-width="5" marker-end="url(#u12v1vm_arrowRed)"/>
+  <text x="334" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">R_x</text>
+  <line x1="392" y1="219" x2="392" y2="150" stroke="#2e7d32" stroke-width="5" marker-end="url(#u12v1vm_arrowGreen)"/>
+  <text x="404" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">R_y</text>
 
-  <line x1="640" y1="285" x2="710" y2="285" stroke="#173043" stroke-width="3" marker-end="url(#arrowBlack)"/>
-  <line x1="640" y1="285" x2="640" y2="215" stroke="#173043" stroke-width="3" marker-end="url(#arrowBlack)"/>
-  <text x="718" y="291" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">x</text>
-  <text x="646" y="208" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">y</text>
+  <line x1="640" y1="285" x2="710" y2="285" stroke="#173043" stroke-width="3" marker-end="url(#u12v1vm_arrowBlack)"/>
+  <line x1="640" y1="285" x2="640" y2="215" stroke="#173043" stroke-width="3" marker-end="url(#u12v1vm_arrowBlack)"/>
+  <text x="718" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">x</text>
+  <text x="646" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">y</text>
 
-  <text x="590" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#173043">Sto mora biti vidljivo</text>
-  <text x="590" y="195" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">- ulazni i izlazni smjer mlaza</text>
-  <text x="590" y="220" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">- kut skretanja</text>
-  <text x="590" y="245" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">- kontrolni volumen</text>
-  <text x="590" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">- osi i reakcije nosaca</text>
+  <text x="590" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#173043">Sto mora biti vidljivo</text>
+  <text x="590" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#587183">- ulazni i izlazni smjer mlaza</text>
+  <text x="590" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#587183">- kut skretanja</text>
+  <text x="590" y="245" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#587183">- kontrolni volumen</text>
+  <text x="590" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#587183">- osi i reakcije nosaca</text>
 
   <defs>
-    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u12v1vm_arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
     </marker>
-    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u12v1vm_arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#2e7d32"/>
     </marker>
-    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u12v1vm_arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#c23b22"/>
     </marker>
-    <marker id="arrowBlack" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u12v1vm_arrowBlack" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#173043"/>
     </marker>
   </defs>

@@ -1,95 +1,93 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 440" role="img"
-     aria-labelledby="u3ch1T u3ch1D" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u03c1zsuz_u3ch1T u03c1zsuz_u3ch1D" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:940px;height:auto;">
   <defs>
-    <pattern id="u3ch1S" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u03c1zsuz_u3ch1S" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="8" height="8" fill="#8090a0"/>
       <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
     </pattern>
-    <linearGradient id="u3ch1fw" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03c1zsuz_u3ch1fw" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d4eef8"/>
       <stop offset="100%" stop-color="#5baece"/>
     </linearGradient>
-    <linearGradient id="u3ch1oi" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03c1zsuz_u3ch1oi" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f6e1a6"/>
       <stop offset="100%" stop-color="#e8c86d"/>
     </linearGradient>
-    <linearGradient id="u3ch1hg" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03c1zsuz_u3ch1hg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#b4c2cc"/>
       <stop offset="100%" stop-color="#728090"/>
     </linearGradient>
-    <marker id="u3ch1aF" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+    <marker id="u03c1zsuz_u3ch1aF" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
       <path d="M0,0 L0,7 L8,3.5 z" fill="#8b5e3c"/>
     </marker>
-    <marker id="u3ch1aR" markerWidth="10" markerHeight="10" refX="0" refY="3.5" orient="auto">
+    <marker id="u03c1zsuz_u3ch1aR" markerWidth="10" markerHeight="10" refX="0" refY="3.5" orient="auto">
       <path d="M8,0 L8,7 L0,3.5 z" fill="#8b5e3c"/>
     </marker>
   </defs>
 
-  <title id="u3ch1T">U03 CH1 &#x2013; Zatvoreni vodeni, uljni referentni i &#x17D;ivin manometar</title>
-  <desc id="u3ch1D">Trokompozitni sustav: zatvoreni vodeni spremnik s plinskim pretlakom p_G, otvoreni uljni referentni spremnik p0 i diferencijalni &#x17E;ivin U-manometar.</desc>
+  <title id="u03c1zsuz_u3ch1T">U03 CH1 &#x2013; Zatvoreni vodeni, uljni referentni i &#x17D;ivin manometar</title>
+  <desc id="u03c1zsuz_u3ch1D">Trokompozitni sustav: zatvoreni vodeni spremnik s plinskim pretlakom p_G, otvoreni uljni referentni spremnik p0 i diferencijalni &#x17E;ivin U-manometar.</desc>
 
   <rect width="940" height="440" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="392" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <text x="36" y="57" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#173043">U03 CH1 &#x2013; Zatvoreni vodeni, uljni referentni i &#x17D;ivin manometar</text>
-
   <!-- === WATER TANK (LEFT, CLOSED) ============================================ -->
   <!-- srafura: left wall, right wall, top wall, bottom wall -->
-  <rect x="36" y="78" width="14" height="254" fill="url(#u3ch1S)"/>
-  <rect x="208" y="78" width="14" height="254" fill="url(#u3ch1S)"/>
-  <rect x="50" y="78" width="158" height="14" fill="url(#u3ch1S)"/>
-  <rect x="50" y="318" width="158" height="14" fill="url(#u3ch1S)"/>
+  <rect x="36" y="78" width="14" height="254" fill="url(#u03c1zsuz_u3ch1S)"/>
+  <rect x="208" y="78" width="14" height="254" fill="url(#u03c1zsuz_u3ch1S)"/>
+  <rect x="50" y="78" width="158" height="14" fill="url(#u03c1zsuz_u3ch1S)"/>
+  <rect x="50" y="318" width="158" height="14" fill="url(#u03c1zsuz_u3ch1S)"/>
   <!-- border outline -->
   <rect x="36" y="78" width="186" height="254" fill="none" stroke="#546e7a" stroke-width="2.2"/>
   <!-- gas space p_G -->
   <rect x="50" y="92" width="158" height="56" fill="#f0ece0"/>
   <!-- water fill -->
-  <rect x="50" y="148" width="158" height="170" fill="url(#u3ch1fw)"/>
+  <rect x="50" y="148" width="158" height="170" fill="url(#u03c1zsuz_u3ch1fw)"/>
   <!-- water surface dashed -->
   <line x1="50" y1="148" x2="208" y2="148" stroke="#1565c0" stroke-width="2.5" stroke-dasharray="9,5"/>
   <!-- gas label -->
-  <text x="78" y="116" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#5c4a1e">plin  p<tspan font-size="10" dy="3">G</tspan></text>
+  <text x="78" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#5c4a1e">plin  p<tspan font-size="10" dy="3">G</tspan></text>
   <!-- water label -->
-  <text x="68" y="218" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#174d6f">voda &#x3C1;<tspan font-size="10" dy="3">w</tspan></text>
+  <text x="68" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#174d6f">voda &#x3C1;<tspan font-size="10" dy="3">w</tspan></text>
   <!-- point 1 -->
   <circle cx="208" cy="194" r="5.5" fill="#111827"/>
   <rect x="216" y="183" width="22" height="20" rx="5" fill="#fffbf5" stroke="#c9d2d8" stroke-width="1.2"/>
-  <text x="220" y="197" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">1</text>
+  <text x="220" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">1</text>
   <!-- point C -->
   <circle cx="104" cy="268" r="5.5" fill="#111827"/>
   <rect x="112" y="257" width="22" height="20" rx="5" fill="#fffbf5" stroke="#c9d2d8" stroke-width="1.2"/>
-  <text x="116" y="271" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">C</text>
+  <text x="116" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">C</text>
 
   <!-- === OIL TANK (MIDDLE, OPEN) ============================================== -->
   <!-- srafura: left wall, right wall, bottom wall (NO top = open) -->
-  <rect x="248" y="78" width="14" height="254" fill="url(#u3ch1S)"/>
-  <rect x="400" y="78" width="14" height="254" fill="url(#u3ch1S)"/>
-  <rect x="262" y="318" width="138" height="14" fill="url(#u3ch1S)"/>
+  <rect x="248" y="78" width="14" height="254" fill="url(#u03c1zsuz_u3ch1S)"/>
+  <rect x="400" y="78" width="14" height="254" fill="url(#u03c1zsuz_u3ch1S)"/>
+  <rect x="262" y="318" width="138" height="14" fill="url(#u03c1zsuz_u3ch1S)"/>
   <!-- border outline (open top) -->
   <line x1="248" y1="332" x2="248" y2="78" stroke="#546e7a" stroke-width="2.2"/>
   <line x1="414" y1="78" x2="414" y2="332" stroke="#546e7a" stroke-width="2.2"/>
   <line x1="248" y1="332" x2="414" y2="332" stroke="#546e7a" stroke-width="2.2"/>
   <!-- p0 label above oil surface (open) -->
-  <text x="304" y="120" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#5c4a1e">p<tspan font-size="11" dy="4">0</tspan></text>
+  <text x="304" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#5c4a1e">p<tspan font-size="11" dy="4">0</tspan></text>
   <!-- oil fill -->
-  <rect x="262" y="148" width="138" height="170" fill="url(#u3ch1oi)"/>
+  <rect x="262" y="148" width="138" height="170" fill="url(#u03c1zsuz_u3ch1oi)"/>
   <!-- oil surface dashed -->
   <line x1="262" y1="148" x2="400" y2="148" stroke="#b7791f" stroke-width="2.5" stroke-dasharray="9,5"/>
   <!-- oil label -->
-  <text x="284" y="218" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#7d5a00">ulje &#x3C1;<tspan font-size="10" dy="3">o</tspan></text>
+  <text x="284" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#7d5a00">ulje &#x3C1;<tspan font-size="10" dy="3">o</tspan></text>
   <!-- point 2 -->
   <circle cx="400" cy="212" r="5.5" fill="#111827"/>
   <rect x="408" y="201" width="22" height="20" rx="5" fill="#fffbf5" stroke="#c9d2d8" stroke-width="1.2"/>
-  <text x="412" y="215" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">2</text>
+  <text x="412" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">2</text>
 
   <!-- === CONNECTION PIPES ===================================================== -->
   <!-- Pipe: water tank pt.1 (y=194) -> left manometer arm -->
   <rect x="222" y="188" width="242" height="16" fill="#546e7a"/>
-  <rect x="222" y="192" width="238" height="8" fill="url(#u3ch1fw)"/>
+  <rect x="222" y="192" width="238" height="8" fill="url(#u03c1zsuz_u3ch1fw)"/>
   <!-- Pipe: oil tank pt.2 (y=212) -> right manometer arm -->
   <rect x="414" y="208" width="148" height="14" fill="#546e7a"/>
-  <rect x="418" y="212" width="140" height="6" fill="url(#u3ch1oi)"/>
+  <rect x="418" y="212" width="140" height="6" fill="url(#u03c1zsuz_u3ch1oi)"/>
 
   <!-- === MERCURY U-MANOMETER ================================================= -->
   <!-- Left arm wall (dark gray, full arm height) -->
@@ -100,56 +98,56 @@
   <rect x="454" y="358" width="130" height="28" fill="#546e7a"/>
 
   <!-- Left arm fluid fills (on top of dark gray wall) -->
-  <rect x="460" y="192" width="16" height="86" fill="url(#u3ch1fw)"/>    <!-- water: a=86px, y=192-278 -->
-  <rect x="460" y="278" width="16" height="80" fill="url(#u3ch1hg)"/>    <!-- mercury: y=278-358 -->
+  <rect x="460" y="192" width="16" height="86" fill="url(#u03c1zsuz_u3ch1fw)"/>    <!-- water: a=86px, y=192-278 -->
+  <rect x="460" y="278" width="16" height="80" fill="url(#u03c1zsuz_u3ch1hg)"/>    <!-- mercury: y=278-358 -->
 
   <!-- Right arm fluid fills -->
-  <rect x="562" y="212" width="16" height="38" fill="url(#u3ch1oi)"/>    <!-- oil: b=38px, y=212-250 -->
-  <rect x="562" y="250" width="16" height="108" fill="url(#u3ch1hg)"/>   <!-- mercury: y=250-358 -->
+  <rect x="562" y="212" width="16" height="38" fill="url(#u03c1zsuz_u3ch1oi)"/>    <!-- oil: b=38px, y=212-250 -->
+  <rect x="562" y="250" width="16" height="108" fill="url(#u03c1zsuz_u3ch1hg)"/>   <!-- mercury: y=250-358 -->
 
   <!-- U-bottom mercury fill -->
-  <rect x="460" y="360" width="118" height="22" fill="url(#u3ch1hg)"/>
+  <rect x="460" y="360" width="118" height="22" fill="url(#u03c1zsuz_u3ch1hg)"/>
 
   <!-- &#x17D;iva label in manometer bottom -->
-  <text x="476" y="326" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#2a3540">&#x17D;iva</text>
-  <text x="473" y="342" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#2a3540">&#x3C1;<tspan font-size="9" dy="3">Hg</tspan></text>
+  <text x="476" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#2a3540">&#x17D;iva</text>
+  <text x="473" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#2a3540">&#x3C1;<tspan font-size="9" dy="3">Hg</tspan></text>
 
   <!-- === DIMENSION LINES ===================================================== -->
   <!-- h1: gap between tanks x=232, y=148-194 (46px) -->
   <line x1="232" y1="148" x2="232" y2="194" stroke="#8b5e3c" stroke-width="2"
-        marker-start="url(#u3ch1aR)" marker-end="url(#u3ch1aF)"/>
+        marker-start="url(#u03c1zsuz_u3ch1aR)" marker-end="url(#u03c1zsuz_u3ch1aF)"/>
   <rect x="218" y="161" width="30" height="18" rx="5" fill="#ffffff" stroke="#d9cdc3" stroke-width="1"/>
-  <text x="221" y="174" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#173043">h<tspan font-size="10" dy="3">1</tspan></text>
+  <text x="221" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h<tspan font-size="10" dy="3">1</tspan></text>
 
   <!-- hC: inside water tank left side x=60, y=148-268 (120px) -->
   <line x1="60" y1="148" x2="60" y2="268" stroke="#8b5e3c" stroke-width="2"
-        marker-start="url(#u3ch1aR)" marker-end="url(#u3ch1aF)"/>
+        marker-start="url(#u03c1zsuz_u3ch1aR)" marker-end="url(#u03c1zsuz_u3ch1aF)"/>
   <rect x="52" y="200" width="32" height="18" rx="5" fill="#ffffff" stroke="#d9cdc3" stroke-width="1"/>
-  <text x="55" y="213" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#173043">h<tspan font-size="10" dy="3">C</tspan></text>
+  <text x="55" y="213" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h<tspan font-size="10" dy="3">C</tspan></text>
 
   <!-- h2: right of oil tank x=422, y=148-212 (64px) -->
   <line x1="422" y1="148" x2="422" y2="212" stroke="#8b5e3c" stroke-width="2"
-        marker-start="url(#u3ch1aR)" marker-end="url(#u3ch1aF)"/>
+        marker-start="url(#u03c1zsuz_u3ch1aR)" marker-end="url(#u03c1zsuz_u3ch1aF)"/>
   <rect x="426" y="170" width="30" height="18" rx="5" fill="#ffffff" stroke="#d9cdc3" stroke-width="1"/>
-  <text x="429" y="183" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#173043">h<tspan font-size="10" dy="3">2</tspan></text>
+  <text x="429" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h<tspan font-size="10" dy="3">2</tspan></text>
 
   <!-- a: left of left manometer arm x=448, y=192-278 (86px) -->
   <line x1="448" y1="192" x2="448" y2="278" stroke="#8b5e3c" stroke-width="2"
-        marker-start="url(#u3ch1aR)" marker-end="url(#u3ch1aF)"/>
+        marker-start="url(#u03c1zsuz_u3ch1aR)" marker-end="url(#u03c1zsuz_u3ch1aF)"/>
   <rect x="432" y="226" width="20" height="18" rx="5" fill="#ffffff" stroke="#d9cdc3" stroke-width="1"/>
-  <text x="435" y="239" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#173043">a</text>
+  <text x="435" y="239" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">a</text>
 
   <!-- b: right of right manometer arm x=590, y=212-250 (38px) -->
   <line x1="590" y1="212" x2="590" y2="250" stroke="#8b5e3c" stroke-width="2"
-        marker-start="url(#u3ch1aR)" marker-end="url(#u3ch1aF)"/>
+        marker-start="url(#u03c1zsuz_u3ch1aR)" marker-end="url(#u03c1zsuz_u3ch1aF)"/>
   <rect x="594" y="223" width="20" height="18" rx="5" fill="#ffffff" stroke="#d9cdc3" stroke-width="1"/>
-  <text x="597" y="236" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#173043">b</text>
+  <text x="597" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">b</text>
 
   <!-- delta_h: between arms x=506, y=250-278 (28px, right higher than left) -->
   <line x1="506" y1="250" x2="506" y2="278" stroke="#8b5e3c" stroke-width="2"
-        marker-start="url(#u3ch1aR)" marker-end="url(#u3ch1aF)"/>
+        marker-start="url(#u03c1zsuz_u3ch1aR)" marker-end="url(#u03c1zsuz_u3ch1aF)"/>
   <rect x="510" y="255" width="36" height="18" rx="5" fill="#ffffff" stroke="#d9cdc3" stroke-width="1"/>
-  <text x="513" y="268" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#173043">&#x394;h</text>
+  <text x="513" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">&#x394;h</text>
 
   <!-- dashed reference lines at mercury levels -->
   <line x1="454" y1="278" x2="600" y2="278" stroke="#8b5e3c" stroke-width="1.5" stroke-dasharray="6,4"/>
@@ -157,33 +155,33 @@
 
   <!-- === FORMULA BOX ========================================================= -->
   <rect x="616" y="30" width="300" height="378" rx="12" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="634" y="56" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Radni slijed (hod tlaka)</text>
+  <text x="634" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Radni slijed (hod tlaka)</text>
 
-  <text x="634" y="80" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">1)  Tlak u to&#269;ki 2 (uljni spremnik):</text>
-  <text x="634" y="98" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">   p<tspan font-size="10" dy="3">2</tspan><tspan dy="-3"> = p</tspan><tspan font-size="10" dy="3">0</tspan><tspan dy="-3"> + &#x3C1;</tspan><tspan font-size="10" dy="3">o</tspan><tspan dy="-3">&#xB7;g&#xB7;h</tspan><tspan font-size="10" dy="3">2</tspan></text>
+  <text x="634" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">1)  Tlak u to&#269;ki 2 (uljni spremnik):</text>
+  <text x="634" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">   p<tspan font-size="10" dy="3">2</tspan><tspan dy="-3"> = p</tspan><tspan font-size="10" dy="3">0</tspan><tspan dy="-3"> + &#x3C1;</tspan><tspan font-size="10" dy="3">o</tspan><tspan dy="-3">&#xB7;g&#xB7;h</tspan><tspan font-size="10" dy="3">2</tspan></text>
 
-  <text x="634" y="122" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">2)  Hod kroz manometar (2 &#x2192; 1):</text>
-  <text x="634" y="140" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">   p<tspan font-size="9" dy="3">1</tspan><tspan dy="-3"> = p</tspan><tspan font-size="9" dy="3">2</tspan><tspan dy="-3"> &#x2212; &#x3C1;</tspan><tspan font-size="9" dy="3">o</tspan><tspan dy="-3">&#xB7;g&#xB7;b + &#x3C1;</tspan><tspan font-size="9" dy="3">Hg</tspan><tspan dy="-3">&#xB7;g&#xB7;&#x394;h &#x2212; &#x3C1;</tspan><tspan font-size="9" dy="3">w</tspan><tspan dy="-3">&#xB7;g&#xB7;a</tspan></text>
+  <text x="634" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">2)  Hod kroz manometar (2 &#x2192; 1):</text>
+  <text x="634" y="140" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">   p<tspan font-size="9" dy="3">1</tspan><tspan dy="-3"> = p</tspan><tspan font-size="9" dy="3">2</tspan><tspan dy="-3"> &#x2212; &#x3C1;</tspan><tspan font-size="9" dy="3">o</tspan><tspan dy="-3">&#xB7;g&#xB7;b + &#x3C1;</tspan><tspan font-size="9" dy="3">Hg</tspan><tspan dy="-3">&#xB7;g&#xB7;&#x394;h &#x2212; &#x3C1;</tspan><tspan font-size="9" dy="3">w</tspan><tspan dy="-3">&#xB7;g&#xB7;a</tspan></text>
 
   <line x1="634" y1="157" x2="900" y2="157" stroke="#c49a0a" stroke-width="1" stroke-dasharray="5,4"/>
 
-  <text x="634" y="177" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">3)  Tlak plina u zatvorenom spremniku:</text>
-  <text x="634" y="196" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">   p<tspan font-size="10" dy="3">G</tspan><tspan dy="-3"> = p</tspan><tspan font-size="10" dy="3">1</tspan><tspan dy="-3"> &#x2212; &#x3C1;</tspan><tspan font-size="10" dy="3">w</tspan><tspan dy="-3">&#xB7;g&#xB7;h</tspan><tspan font-size="10" dy="3">1</tspan></text>
+  <text x="634" y="177" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">3)  Tlak plina u zatvorenom spremniku:</text>
+  <text x="634" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">   p<tspan font-size="10" dy="3">G</tspan><tspan dy="-3"> = p</tspan><tspan font-size="10" dy="3">1</tspan><tspan dy="-3"> &#x2212; &#x3C1;</tspan><tspan font-size="10" dy="3">w</tspan><tspan dy="-3">&#xB7;g&#xB7;h</tspan><tspan font-size="10" dy="3">1</tspan></text>
 
-  <text x="634" y="220" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">4)  Tlak na to&#269;ki C (dublje u vodi):</text>
-  <text x="634" y="239" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">   p<tspan font-size="10" dy="3">C</tspan><tspan dy="-3"> = p</tspan><tspan font-size="10" dy="3">G</tspan><tspan dy="-3"> + &#x3C1;</tspan><tspan font-size="10" dy="3">w</tspan><tspan dy="-3">&#xB7;g&#xB7;h</tspan><tspan font-size="10" dy="3">C</tspan></text>
+  <text x="634" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">4)  Tlak na to&#269;ki C (dublje u vodi):</text>
+  <text x="634" y="239" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">   p<tspan font-size="10" dy="3">C</tspan><tspan dy="-3"> = p</tspan><tspan font-size="10" dy="3">G</tspan><tspan dy="-3"> + &#x3C1;</tspan><tspan font-size="10" dy="3">w</tspan><tspan dy="-3">&#xB7;g&#xB7;h</tspan><tspan font-size="10" dy="3">C</tspan></text>
 
   <line x1="634" y1="254" x2="900" y2="254" stroke="#c49a0a" stroke-width="1" stroke-dasharray="5,4"/>
 
-  <text x="634" y="274" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">Napomena:</text>
-  <text x="634" y="292" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">Za p<tspan font-size="9" dy="3">G</tspan><tspan dy="-3"> &gt; p</tspan><tspan font-size="9" dy="3">0</tspan><tspan dy="-3">: lijeva &#x17E;iva je ni&#x17E;a (a &gt; b).</tspan></text>
-  <text x="634" y="310" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">&#x394;h = razlika nivoa &#x17E;ive (lijevi minus</text>
-  <text x="634" y="327" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">desni nivo, ako je lijevi ni&#x17E;i).</text>
+  <text x="634" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Napomena:</text>
+  <text x="634" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Za p<tspan font-size="9" dy="3">G</tspan><tspan dy="-3"> &gt; p</tspan><tspan font-size="9" dy="3">0</tspan><tspan dy="-3">: lijeva &#x17E;iva je ni&#x17E;a (a &gt; b).</tspan></text>
+  <text x="634" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">&#x394;h = razlika nivoa &#x17E;ive (lijevi minus</text>
+  <text x="634" y="327" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">desni nivo, ako je lijevi ni&#x17E;i).</text>
 
   <line x1="634" y1="342" x2="900" y2="342" stroke="#c49a0a" stroke-width="1" stroke-dasharray="5,4"/>
 
-  <text x="634" y="360" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#516677">h<tspan font-size="9" dy="3">1</tspan><tspan dy="-3"> &#x2013; dubina to&#269;ke 1  |  h</tspan><tspan font-size="9" dy="3">C</tspan><tspan dy="-3"> &#x2013; dubina to&#269;ke C</tspan></text>
-  <text x="634" y="378" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#516677">h<tspan font-size="9" dy="3">2</tspan><tspan dy="-3"> &#x2013; dubina to&#269;ke 2  |  a, b &#x2013; kraci manometra</tspan></text>
-  <text x="634" y="396" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#516677">&#x3C1;<tspan font-size="9" dy="3">w</tspan><tspan dy="-3"> &#x2013; voda  |  &#x3C1;</tspan><tspan font-size="9" dy="3">o</tspan><tspan dy="-3"> &#x2013; ulje  |  &#x3C1;</tspan><tspan font-size="9" dy="3">Hg</tspan><tspan dy="-3"> &#x2013; &#x17E;iva</tspan></text>
+  <text x="634" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">h<tspan font-size="9" dy="3">1</tspan><tspan dy="-3"> &#x2013; dubina to&#269;ke 1  |  h</tspan><tspan font-size="9" dy="3">C</tspan><tspan dy="-3"> &#x2013; dubina to&#269;ke C</tspan></text>
+  <text x="634" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">h<tspan font-size="9" dy="3">2</tspan><tspan dy="-3"> &#x2013; dubina to&#269;ke 2  |  a, b &#x2013; kraci manometra</tspan></text>
+  <text x="634" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">&#x3C1;<tspan font-size="9" dy="3">w</tspan><tspan dy="-3"> &#x2013; voda  |  &#x3C1;</tspan><tspan font-size="9" dy="3">o</tspan><tspan dy="-3"> &#x2013; ulje  |  &#x3C1;</tspan><tspan font-size="9" dy="3">Hg</tspan><tspan dy="-3"> &#x2013; &#x17E;iva</tspan></text>
 
 </svg>

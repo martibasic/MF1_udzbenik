@@ -1,23 +1,23 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u3v2T u3v2D" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u03v2kk_u3v2T u03v2kk_u3v2D" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u3v2T">Ravnoteza klipa i tlak u komorama A i B (Z25)</title>
-  <desc id="u3v2D">Klip mase G_k na vodenom stupcu. Komora A (dublja, h1) i komora B (pliea, h2) spojene istim fluidom. Tlak raste s dubinom: pA veci od pB.</desc>
+  <title id="u03v2kk_u3v2T">Ravnoteza klipa i tlak u komorama A i B (Z25)</title>
+  <desc id="u03v2kk_u3v2D">Klip mase G_k na vodenom stupcu. Komora A (dublja, h1) i komora B (pliea, h2) spojene istim fluidom. Tlak raste s dubinom: pA veci od pB.</desc>
   <defs>
-    <marker id="u3v2aF" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <marker id="u03v2kk_u3v2aF" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#92400e"/>
     </marker>
-    <marker id="u3v2aR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u03v2kk_u3v2aR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#92400e"/>
     </marker>
-    <marker id="u3v2gk" markerWidth="9" markerHeight="9" refX="5" refY="4.5" orient="auto">
+    <marker id="u03v2kk_u3v2gk" markerWidth="9" markerHeight="9" refX="5" refY="4.5" orient="auto">
       <path d="M0,0 L0,9 L9,4.5 z" fill="#c0392b"/>
     </marker>
-    <linearGradient id="u3v2wa" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03v2kk_u3v2wa" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d4eef8"/>
       <stop offset="100%" stop-color="#5baece"/>
     </linearGradient>
-    <pattern id="u3v2sp" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u03v2kk_u3v2sp" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="8" height="8" fill="#8090a0"/>
       <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
     </pattern>
@@ -28,20 +28,20 @@
 
   <!-- ── KLIP (piston) i CILINDAR ── -->
   <!-- Lijevi zid cilindra (srafura) -->
-  <rect x="376" y="106" width="16" height="196" fill="url(#u3v2sp)"/>
+  <rect x="376" y="106" width="16" height="196" fill="url(#u03v2kk_u3v2sp)"/>
   <!-- Desni zid cilindra (srafura) -->
-  <rect x="514" y="106" width="16" height="196" fill="url(#u3v2sp)"/>
+  <rect x="514" y="106" width="16" height="196" fill="url(#u03v2kk_u3v2sp)"/>
   <!-- Dno cilindra -->
-  <rect x="376" y="296" width="154" height="14" fill="url(#u3v2sp)"/>
+  <rect x="376" y="296" width="154" height="14" fill="url(#u03v2kk_u3v2sp)"/>
   <!-- Voda unutar cilindra -->
-  <rect x="392" y="124" width="122" height="172" fill="url(#u3v2wa)"/>
+  <rect x="392" y="124" width="122" height="172" fill="url(#u03v2kk_u3v2wa)"/>
   <!-- Klip (sivi metalni pravokutnik) -->
   <rect x="372" y="106" width="162" height="22" rx="3" fill="#7b8d99" stroke="#4a5568" stroke-width="1.5"/>
   <!-- Crtkinasta linija na dnu klipa (granica klip/voda) -->
   <line x1="392" y1="128" x2="514" y2="128" stroke="#1a5f8a" stroke-width="1" stroke-dasharray="4,3"/>
 
   <!-- ── SILA G_k (strelica prema dolje na klip) ── -->
-  <line x1="453" y1="56" x2="453" y2="105" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u3v2gk)"/>
+  <line x1="453" y1="56" x2="453" y2="105" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u03v2kk_u3v2gk)"/>
   <text x="462" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" font-weight="700" fill="#c0392b">G</text>
   <text x="473" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c0392b">k</text>
   <text x="396" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a" text-anchor="middle">A</text>
@@ -51,11 +51,11 @@
   <!-- Zid horizontalne cijevi (lijevo) -->
   <rect x="148" y="232" width="242" height="20" fill="#546e7a"/>
   <!-- Voda u horizontalnoj cijevi (lijevo) -->
-  <rect x="152" y="236" width="240" height="12" fill="url(#u3v2wa)"/>
+  <rect x="152" y="236" width="240" height="12" fill="url(#u03v2kk_u3v2wa)"/>
   <!-- Komora A (kutija) - vanjski zid -->
   <rect x="70" y="220" width="86" height="72" rx="4" fill="#546e7a"/>
   <!-- Komora A - voda unutra -->
-  <rect x="74" y="224" width="78" height="64" fill="url(#u3v2wa)"/>
+  <rect x="74" y="224" width="78" height="64" fill="url(#u03v2kk_u3v2wa)"/>
   <!-- Oznaka A u komori -->
   <text x="113" y="265" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700"
         fill="#1a2530" text-anchor="middle">A</text>
@@ -69,11 +69,11 @@
   <!-- Zid horizontalne cijevi (desno) -->
   <rect x="514" y="186" width="224" height="20" fill="#546e7a"/>
   <!-- Voda u horizontalnoj cijevi (desno) -->
-  <rect x="518" y="190" width="220" height="12" fill="url(#u3v2wa)"/>
+  <rect x="518" y="190" width="220" height="12" fill="url(#u03v2kk_u3v2wa)"/>
   <!-- Komora B (kutija) - vanjski zid -->
   <rect x="730" y="174" width="86" height="72" rx="4" fill="#546e7a"/>
   <!-- Komora B - voda unutra -->
-  <rect x="734" y="178" width="78" height="64" fill="url(#u3v2wa)"/>
+  <rect x="734" y="178" width="78" height="64" fill="url(#u03v2kk_u3v2wa)"/>
   <!-- Oznaka B u komori -->
   <text x="773" y="219" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700"
         fill="#1a2530" text-anchor="middle">B</text>
@@ -98,7 +98,7 @@
   <!-- ── KOTNE LINIJE ── -->
   <!-- h1: od dna klipa (y=128) do razine grane A (y=242), lijeva strana cilindra x=366 -->
   <line x1="366" y1="128" x2="366" y2="242" stroke="#92400e" stroke-width="1.6"
-        marker-start="url(#u3v2aR)" marker-end="url(#u3v2aF)"/>
+        marker-start="url(#u03v2kk_u3v2aR)" marker-end="url(#u03v2kk_u3v2aF)"/>
   <line x1="366" y1="128" x2="376" y2="128" stroke="#92400e" stroke-width="1"/>
   <line x1="366" y1="242" x2="376" y2="242" stroke="#92400e" stroke-width="1"/>
   <text x="348" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic"
@@ -106,7 +106,7 @@
 
   <!-- h2: od dna klipa (y=128) do razine grane B (y=196), desna strana cilindra x=540 -->
   <line x1="540" y1="128" x2="540" y2="196" stroke="#92400e" stroke-width="1.6"
-        marker-start="url(#u3v2aR)" marker-end="url(#u3v2aF)"/>
+        marker-start="url(#u03v2kk_u3v2aR)" marker-end="url(#u03v2kk_u3v2aF)"/>
   <line x1="530" y1="128" x2="541" y2="128" stroke="#92400e" stroke-width="1"/>
   <line x1="530" y1="196" x2="541" y2="196" stroke="#92400e" stroke-width="1"/>
   <text x="556" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic"

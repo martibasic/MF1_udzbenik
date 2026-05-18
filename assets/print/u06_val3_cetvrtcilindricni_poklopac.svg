@@ -1,31 +1,31 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u6v3T u6v3D" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u06v3cp_u6v3T u06v3cp_u6v3D" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u6v3T">U06 Val 3 – Četvrtcilindrični revizijski poklopac</title>
-  <desc id="u6v3D">Četvrtcilindrični poklopac u kutu okna. Gornja točka A leži na slobodnoj površini. Voda na konkavnoj strani: FH prema desno, FV prema dolje. Rezultanta pod kutom alpha.</desc>
+  <title id="u06v3cp_u6v3T">U06 Val 3 – Četvrtcilindrični revizijski poklopac</title>
+  <desc id="u06v3cp_u6v3D">Četvrtcilindrični poklopac u kutu okna. Gornja točka A leži na slobodnoj površini. Voda na konkavnoj strani: FH prema desno, FV prema dolje. Rezultanta pod kutom alpha.</desc>
   <defs>
-    <pattern id="u6v3H" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u06v3cp_u6v3H" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="8" height="8" fill="#8090a0"/>
       <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
     </pattern>
-    <linearGradient id="u6v3Wg" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u06v3cp_u6v3Wg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d4eef8"/>
       <stop offset="100%" stop-color="#7ec8e8"/>
     </linearGradient>
-    <linearGradient id="u6v3Vi" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u06v3cp_u6v3Vi" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ddf0f9" stop-opacity="0.9"/>
       <stop offset="100%" stop-color="#9ecfe8" stop-opacity="0.9"/>
     </linearGradient>
-    <marker id="u6v3aR" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
+    <marker id="u06v3cp_u6v3aR" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L9,4 z" fill="#b42318"/>
     </marker>
-    <marker id="u6v3aG" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
+    <marker id="u06v3cp_u6v3aG" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L9,4 z" fill="#0f766e"/>
     </marker>
-    <marker id="u6v3aMg" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
+    <marker id="u06v3cp_u6v3aMg" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L9,4 z" fill="#7b1fa2"/>
     </marker>
-    <marker id="u6v3aGr" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto-start-reverse">
+    <marker id="u06v3cp_u6v3aGr" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L9,4 z" fill="#546e7a"/>
     </marker>
   </defs>
@@ -34,20 +34,16 @@
   <rect width="940" height="420" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <!-- Title -->
-  <text x="54" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U06 – Četvrtcilindrični revizijski poklopac</text>
-  <text x="54" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">Gornji rub A na slobodnoj površini (h&#x2081;=0). Projekcija daje F&#x2095; &#x2192;, zamišljeni volumen daje F&#x1D65; &#x2193;.</text>
-
   <!-- Right structural wall (srafura) -->
-  <rect x="330" y="100" width="80" height="140" fill="url(#u6v3H)"/>
+  <rect x="330" y="100" width="80" height="140" fill="url(#u06v3cp_u6v3H)"/>
   <rect x="330" y="100" width="80" height="140" fill="none" stroke="#546e7a" stroke-width="1.5"/>
   <!-- Bottom structural floor (srafura) -->
-  <rect x="80" y="240" width="330" height="50" fill="url(#u6v3H)"/>
+  <rect x="80" y="240" width="330" height="50" fill="url(#u06v3cp_u6v3H)"/>
   <rect x="80" y="240" width="330" height="50" fill="none" stroke="#546e7a" stroke-width="1.5"/>
 
   <!-- Free surface line -->
   <line x1="80" y1="100" x2="500" y2="100" stroke="#3a87ad" stroke-width="3"/>
-  <text x="510" y="105" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">slobodna površina</text>
+  <text x="510" y="105" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">slobodna površina</text>
 
   <!-- Water fill (inside corner — concave side, upper-left of arc) -->
   <!-- Arc: A(330,100) to B(190,288), center=(330,288), R=188... let me recalc -->
@@ -55,11 +51,11 @@
   <!-- Use R=140px: floor at y=100+140=240, B=(330-140,240)=(190,240) -->
   <!-- floor srafura should be at y=240, not y=288 -->
   <path d="M80,100 L330,100 A140,140 0 0 0 190,240 L80,240 Z"
-        fill="url(#u6v3Wg)" opacity="0.8"/>
+        fill="url(#u06v3cp_u6v3Wg)" opacity="0.8"/>
 
   <!-- Imaginary volume V* (quarter-circle, highlighted with dashed) -->
   <path d="M330,100 A140,140 0 0 0 190,240 L330,240 Z"
-        fill="url(#u6v3Vi)" opacity="0.85"/>
+        fill="url(#u06v3cp_u6v3Vi)" opacity="0.85"/>
   <path d="M330,100 A140,140 0 0 0 190,240 L330,240 Z"
         fill="none" stroke="#3a87ad" stroke-width="1.5" stroke-dasharray="7 5"/>
 
@@ -72,64 +68,64 @@
 
   <!-- Points A and B -->
   <circle cx="330" cy="100" r="5" fill="#173043"/>
-  <text x="337" y="97" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">A</text>
+  <text x="337" y="97" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">A</text>
   <circle cx="190" cy="240" r="5" fill="#173043"/>
-  <text x="172" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">B</text>
+  <text x="172" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">B</text>
 
   <!-- V* label -->
-  <text x="300" y="175" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-style="italic" fill="#1a6696">V*</text>
+  <text x="300" y="175" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1a6696">V*</text>
 
   <!-- FH arrow (→ rightward at depth 2R/3 = 93px) at y=193 -->
-  <line x1="330" y1="193" x2="440" y2="193" stroke="#b42318" stroke-width="4" marker-end="url(#u6v3aR)"/>
+  <line x1="330" y1="193" x2="440" y2="193" stroke="#b42318" stroke-width="4" marker-end="url(#u06v3cp_u6v3aR)"/>
   <rect x="446" y="181" width="46" height="22" rx="5" fill="#fff" stroke="#d8c7c4" stroke-width="1.2"/>
-  <text x="456" y="197" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#b42318">F&#x2095;</text>
+  <text x="456" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b42318">F&#x2095;</text>
 
   <!-- FV arrow (↓ downward at x_V = 4R/(3pi) from wall = 59px → x=271) -->
-  <line x1="271" y1="100" x2="271" y2="240" stroke="#0f766e" stroke-width="4" marker-end="url(#u6v3aG)"/>
+  <line x1="271" y1="100" x2="271" y2="240" stroke="#0f766e" stroke-width="4" marker-end="url(#u06v3cp_u6v3aG)"/>
   <rect x="277" y="158" width="46" height="22" rx="5" fill="#fff" stroke="#c7d8d6" stroke-width="1.2"/>
-  <text x="285" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#0f766e">F&#x1D65;</text>
+  <text x="285" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#0f766e">F&#x1D65;</text>
 
   <!-- FR resultant arrow (α=57.5° below horizontal from application point) -->
-  <line x1="271" y1="193" x2="314" y2="261" stroke="#7b1fa2" stroke-width="3.5" marker-end="url(#u6v3aMg)"/>
+  <line x1="271" y1="193" x2="314" y2="261" stroke="#7b1fa2" stroke-width="3.5" marker-end="url(#u06v3cp_u6v3aMg)"/>
   <rect x="318" y="216" width="46" height="22" rx="5" fill="#fff" stroke="#d8c7e2" stroke-width="1.2"/>
-  <text x="326" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#7b1fa2">F&#x1D35;</text>
+  <text x="326" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#7b1fa2">F&#x1D35;</text>
 
   <!-- alpha angle annotation -->
   <path d="M285,193 A18,18 0 0 1 295,207" fill="none" stroke="#7b1fa2" stroke-width="1.5"/>
-  <text x="298" y="208" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#7b1fa2">&#x3B1;</text>
+  <text x="298" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#7b1fa2">&#x3B1;</text>
 
   <!-- R dimension -->
-  <line x1="360" y1="100" x2="360" y2="240" stroke="#546e7a" stroke-width="2" marker-start="url(#u6v3aGr)" marker-end="url(#u6v3aGr)"/>
+  <line x1="360" y1="100" x2="360" y2="240" stroke="#546e7a" stroke-width="2" marker-start="url(#u06v3cp_u6v3aGr)" marker-end="url(#u06v3cp_u6v3aGr)"/>
   <rect x="366" y="162" width="22" height="20" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1.2"/>
-  <text x="372" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">R</text>
+  <text x="372" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">R</text>
 
   <!-- h_H annotation (depth to FH action point) -->
   <line x1="106" y1="100" x2="106" y2="193" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="5 4"/>
   <line x1="96" y1="100" x2="116" y2="100" stroke="#546e7a" stroke-width="1.5"/>
   <line x1="96" y1="193" x2="116" y2="193" stroke="#546e7a" stroke-width="1.5"/>
-  <text x="112" y="152" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">h&#x2095;</text>
-  <text x="108" y="164" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">= 2R/3</text>
+  <text x="112" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">h&#x2095;</text>
+  <text x="108" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">= 2R/3</text>
 
   <!-- x_V annotation (horizontal position of FV) -->
   <line x1="271" y1="256" x2="330" y2="256" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="5 4"/>
   <line x1="271" y1="250" x2="271" y2="262" stroke="#546e7a" stroke-width="1.5"/>
   <line x1="330" y1="250" x2="330" y2="262" stroke="#546e7a" stroke-width="1.5"/>
-  <text x="283" y="272" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">x&#x1D65;</text>
+  <text x="283" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">x&#x1D65;</text>
 
   <!-- Formula box -->
   <rect x="548" y="100" width="348" height="288" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="568" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">Rezultati (R = 0,90 m, b = 1,20 m)</text>
+  <text x="568" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#173043">Rezultati (R = 0,90 m, b = 1,20 m)</text>
   <line x1="568" y1="134" x2="880" y2="134" stroke="#e8d89a" stroke-width="1"/>
-  <text x="568" y="156" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">F&#x2095; = &#x3C1;g · (R/2) · Rb</text>
-  <text x="568" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">A&#x2093; = R·b = 1,08 m&#xB2;,  h&#x2C6;&#x1D9C;&#x2C2; = R/2 = 0,45 m</text>
-  <text x="568" y="196" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#b42318">F&#x2095; &#x2248; 4,76 kN  &#x2192;</text>
-  <text x="568" y="214" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Hvatište: h&#x2095; = 2R/3 = 0,60 m</text>
+  <text x="568" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F&#x2095; = &#x3C1;g · (R/2) · Rb</text>
+  <text x="568" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">A&#x2093; = R·b = 1,08 m&#xB2;,  h&#x2C6;&#x1D9C;&#x2C2; = R/2 = 0,45 m</text>
+  <text x="568" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">F&#x2095; &#x2248; 4,76 kN  &#x2192;</text>
+  <text x="568" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Hvatište: h&#x2095; = 2R/3 = 0,60 m</text>
   <line x1="568" y1="224" x2="880" y2="224" stroke="#e8d89a" stroke-width="1"/>
-  <text x="568" y="244" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">F&#x1D65; = &#x3C1;g · V*,   V* = &#x3C0;R&#xB2;b/4</text>
-  <text x="568" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">V* = &#x3C0;·0,81·1,20/4 = 0,763 m&#xB3;</text>
-  <text x="568" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f766e">F&#x1D65; &#x2248; 7,47 kN  &#x2193;</text>
-  <text x="568" y="302" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Hvatište: x&#x1D65; = 4R/(3&#x3C0;) = 0,382 m</text>
+  <text x="568" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F&#x1D65; = &#x3C1;g · V*,   V* = &#x3C0;R&#xB2;b/4</text>
+  <text x="568" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">V* = &#x3C0;·0,81·1,20/4 = 0,763 m&#xB3;</text>
+  <text x="568" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">F&#x1D65; &#x2248; 7,47 kN  &#x2193;</text>
+  <text x="568" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Hvatište: x&#x1D65; = 4R/(3&#x3C0;) = 0,382 m</text>
   <line x1="568" y1="312" x2="880" y2="312" stroke="#e8d89a" stroke-width="1"/>
-  <text x="568" y="332" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">F&#x1D35; = &#x221A;(F&#x2095;&#xB2;+F&#x1D65;&#xB2;) &#x2248; 8,86 kN</text>
-  <text x="568" y="354" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#7b1fa2">&#x3B1; = arctan(F&#x1D65;/F&#x2095;) &#x2248; 57,5&#xB0;</text>
+  <text x="568" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F&#x1D35; = &#x221A;(F&#x2095;&#xB2;+F&#x1D65;&#xB2;) &#x2248; 8,86 kN</text>
+  <text x="568" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#7b1fa2">&#x3B1; = arctan(F&#x1D65;/F&#x2095;) &#x2248; 57,5&#xB0;</text>
 </svg>

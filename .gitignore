@@ -2,4 +2,25 @@
 **/*.quarto_ipynb
 _site/
 _book/
+_freeze/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Privremene radne datoteke
+tools/tmp/
+
+# Generirano u runtime (preview server)
+preview.html
+
+# Lokalne konfiguracije editora
+.obsidian/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
 

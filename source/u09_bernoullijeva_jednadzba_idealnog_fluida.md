@@ -313,6 +313,83 @@ $$
 :::
 
 ::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer - Difuzor: pretvorba brzine natrag u statički tlak <span class="mf1-level">T2</span></p>
+
+**Zadano**
+
+U vodovodnom sustavu nalazi se difuzor (konično proširenje cijevi) postavljen vodoravno. Voda ulazi kroz uži presjek velikom brzinom i izlazi kroz širi presjek manjom brzinom. Difuzor je **simetrična suprotnost** prethodnom konfuzoru: dok u konfuzoru pad statičkog tlaka prati porast brzine, u difuzoru se kinetička energija "vraća" u statički tlak.
+
+- Ulazni presjek (uži): $A_1 = 0{,}010\ \text{m}^2$
+- Izlazni presjek (širi): $A_2 = 0{,}035\ \text{m}^2$
+- Ulazna brzina: $v_1 = 15\ \text{m/s}$
+- Gustoća vode: $\rho = 1000\ \text{kg/m}^3$
+- Difuzor vodoravan, bez gubitaka (idealan)
+
+**Traženo**
+
+1. Volumenski protok kroz difuzor.
+2. Izlaznu brzinu $v_2$.
+3. Porast statičkog tlaka $\Delta p = p_2 - p_1$ idealnim Bernoullijem.
+4. Procjenu **stvarnog** porasta tlaka za realni difuzor s koeficijentom povratka $\eta_{dif} = 0{,}80$, te gubitak snage koji se generira u difuzoru pri tom protoku.
+
+![Idealni difuzor – $A_1 = 0{,}010$ m², $A_2 = 0{,}035$ m², voda. Brzina pada s 15 m/s na 4,3 m/s; statički tlak raste za $\approx 103$ kPa.](../assets/print/u09_fig_difuzor.svg){#fig-u09-difuzor fig-align="center"}
+
+**Pretpostavke i model**
+
+Strujanje je stacionarno, voda nestlačiva, difuzor postavljen vodoravno (geodetske visine $z_1 = z_2$). U **idealnom** modelu zanemaruju se gubici (trenje, lokalne vrtloge na ulazu u proširenje, odvajanje strujanja kod premalog kuta otvaranja), pa vrijedi nepromijenjena Bernoullijeva jednadžba duž strujnice:
+
+$$
+p_1 + \frac{1}{2}\rho v_1^2 = p_2 + \frac{1}{2}\rho v_2^2
+$$
+
+Pad brzine od $v_1$ do $v_2$ stvara pad **dinamičkog** tlaka, koji se idealnim modelom potpuno pretvara u porast **statičkog** tlaka. U stvarnom difuzoru dio te pretvorbe ne uspijeva – izgubi se na lokalne vrtloge u proširenju – pa se uvodi koeficijent povratka $\eta_{dif}$ (tipično 0,6–0,9 ovisno o kutu otvaranja).
+
+**Rješenje**
+
+Volumenski protok je jednak u oba presjeka (kontinuitet):
+
+$$
+Q = A_1 v_1 = 0{,}010 \cdot 15 = 0{,}150\ \text{m}^3/\text{s} = 150\ \text{L/s}
+$$
+
+Izlazna brzina iz kontinuiteta:
+
+$$
+v_2 = v_1 \frac{A_1}{A_2} = 15 \cdot \frac{0{,}010}{0{,}035} \approx 4{,}29\ \text{m/s}
+$$
+
+Idealan porast statičkog tlaka:
+
+$$
+\Delta p_{ideal} = \frac{\rho}{2}\left(v_1^2 - v_2^2\right) = \frac{1000}{2}\left(15^2 - 4{,}29^2\right) = 500 \cdot (225 - 18{,}4) \approx 1{,}03 \cdot 10^5\ \text{Pa}
+$$
+
+$$
+\Delta p_{ideal} \approx 103\ \text{kPa}
+$$
+
+Realni porast tlaka uz $\eta_{dif} = 0{,}80$:
+
+$$
+\Delta p_{real} = \eta_{dif} \cdot \Delta p_{ideal} \approx 0{,}80 \cdot 103 \approx 82{,}6\ \text{kPa}
+$$
+
+Snaga gubitka u difuzoru (razlika idealne i stvarne pretvorbe puta protok):
+
+$$
+P_{gub} = (1 - \eta_{dif}) \cdot \Delta p_{ideal} \cdot Q = 0{,}20 \cdot 1{,}03 \cdot 10^5 \cdot 0{,}150 \approx 3{,}1\ \text{kW}
+$$
+
+**Provjera i komentar**
+
+1. Kako je $A_2 > A_1$, mora biti $v_2 < v_1$ – kontinuitet.
+2. U idealnom difuzoru pad brzine mora pratiti porast statičkog tlaka – upravo obrnuto od konfuzora iz prethodnog primjera. Idealna Bernoullijeva jednadžba je **simetrična** s obzirom na smjer toka: ako se voda obrne, isti difuzor postaje konfuzor s istom razlikom tlaka u istom iznosu, ali suprotnog predznaka.
+3. **Inženjerska poruka 1 – usisni dio crpke**: difuzor stoji upravo iza radnog kola centrifugalne crpke. Voda iz radnog kola izlazi brzinom 20–30 m/s; difuzor pretvara tu kinetičku energiju u statički tlak prije nego što voda uđe u tlačni vod. Bez difuzora, kinetička energija bi se rasipala u vrtlozima ulaska u cijev.
+4. **Inženjerska poruka 2 – stvarni $\eta_{dif}$ ovisi o kutu**: ako se difuzor previše naglo otvori (kut $> 15^\circ$ između stijenki), strujanje se odvaja od stijenke i nastaju vrtlozi koji rasipaju energiju – $\eta_{dif}$ padne ispod 0,5. Optimalan kut otvaranja je $7$–$10^\circ$, koji daje $\eta_{dif} \approx 0{,}85$. Difuzori su upravo zato karakteristično **dugački** – ne smiju biti naglo otvoreni.
+5. Gubitak $P_{gub} \approx 3{,}1$ kW pri ovom protoku odgovara potrošnji energije male kućanske crpke – ako je difuzor projektiran loše, taj se gubitak svaki sat plaća kao električnoj energiji. Zato projektant ne smije "skratiti" difuzor radi uštede prostora bez da uskoči u trošak energije tijekom cijelog vijeka rada.
+:::
+
+::: {.mf1-we}
 <p class="mf1-box-label">Riješeni primjer - Domet slobodnog mlaza iz velikog spremnika <span class="mf1-level">T2</span></p>
 
 **Zadano**

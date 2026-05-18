@@ -1,35 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 400" role="img"
-     aria-labelledby="u6zdjT u6zdjD" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u06fzdj_u6zdjT u06fzdj_u6zdjD" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u6zdjT">U06 – Zaobljeno dno retencijskog jezerca</title>
-  <desc id="u6zdjD">Cetvrtkružni segment dna (R=1,00 m, b=4,00 m) retencijskog jezerca s razinom h1=2,50 m iznad vrha luka. F_H=117,6 kN, F_V=128,6 kN (imaginarni volumen V*), F_R≈174 kN pri kutu 47,6° od horizontale.</desc>
+  <title id="u06fzdj_u6zdjT">U06 – Zaobljeno dno retencijskog jezerca</title>
+  <desc id="u06fzdj_u6zdjD">Cetvrtkružni segment dna (R=1,00 m, b=4,00 m) retencijskog jezerca s razinom h1=2,50 m iznad vrha luka. F_H=117,6 kN, F_V=128,6 kN (imaginarni volumen V*), F_R≈174 kN pri kutu 47,6° od horizontale.</desc>
   <defs>
-    <marker id="u6zdjaR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u06fzdj_u6zdjaR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#c0392b"/>
     </marker>
-    <marker id="u6zdjaV" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u06fzdj_u6zdjaV" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#7d3c98"/>
     </marker>
-    <marker id="u6zdjaFR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u06fzdj_u6zdjaFR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#2c3e50"/>
     </marker>
-    <marker id="u6zdjaDim" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+    <marker id="u06fzdj_u6zdjaDim" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
     </marker>
-    <marker id="u6zdjaDimL" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+    <marker id="u06fzdj_u6zdjaDimL" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
       <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
     </marker>
-    <pattern id="u6zdjwall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u06fzdj_u6zdjwall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#8a9aa6" stroke-width="2"/>
     </pattern>
   </defs>
 
   <rect width="940" height="400" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-
-  <!-- Naslov -->
-  <text x="54" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#173043">U06 – Zaobljeno dno retencijskog jezerca</text>
-  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">R = 1,00 m · b = 4,00 m · h₁ = 2,50 m · F_H = 117,6 kN · F_V = 128,6 kN · F_R ≈ 174 kN</text>
 
   <!-- Scale: 1 m = 72 px. R=1.00m→72px; h1=2.50m→180px -->
   <!-- Arc centre: (380, 344), R=72. Top of arc: (380, 272). Right: (452, 344). -->
@@ -50,11 +46,11 @@
 
   <!-- Wall (vertical) -->
   <rect x="374" y="92" width="12" height="180" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.8"/>
-  <rect x="374" y="92" width="12" height="180" fill="url(#u6zdjwall)" opacity="0.5"/>
+  <rect x="374" y="92" width="12" height="180" fill="url(#u06fzdj_u6zdjwall)" opacity="0.5"/>
 
   <!-- Floor (horizontal) -->
   <rect x="374" y="338" width="90" height="10" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.8"/>
-  <rect x="374" y="338" width="90" height="10" fill="url(#u6zdjwall)" opacity="0.5"/>
+  <rect x="374" y="338" width="90" height="10" fill="url(#u06fzdj_u6zdjwall)" opacity="0.5"/>
 
   <!-- Quarter circle arc (curved surface) -->
   <path d="M 380,272 A 72,72 0 0,1 452,344" fill="none" stroke="#5d6d7e" stroke-width="4"/>
@@ -63,26 +59,26 @@
   <line x1="322" y1="92" x2="326" y2="92" stroke="#c96c35" stroke-width="1.5"/>
   <line x1="322" y1="272" x2="326" y2="272" stroke="#c96c35" stroke-width="1.5"/>
   <line x1="324" y1="94" x2="324" y2="270" stroke="#c96c35" stroke-width="2"
-        marker-start="url(#u6zdjaDimL)" marker-end="url(#u6zdjaDim)"/>
+        marker-start="url(#u06fzdj_u6zdjaDimL)" marker-end="url(#u06fzdj_u6zdjaDim)"/>
   <text x="312" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#92400e" text-anchor="end">h₁ = 2,50 m</text>
 
   <!-- R dimension (arc radius) -->
   <line x1="380" y1="353" x2="380" y2="358" stroke="#c96c35" stroke-width="1.5"/>
   <line x1="452" y1="353" x2="452" y2="358" stroke="#c96c35" stroke-width="1.5"/>
   <line x1="382" y1="356" x2="450" y2="356" stroke="#c96c35" stroke-width="2"
-        marker-start="url(#u6zdjaDimL)" marker-end="url(#u6zdjaDim)"/>
+        marker-start="url(#u06fzdj_u6zdjaDimL)" marker-end="url(#u06fzdj_u6zdjaDim)"/>
   <text x="416" y="371" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#92400e" text-anchor="middle">R = 1,00 m</text>
 
   <!-- F_H arrow (horizontal, rightward, mid-height = 272+72/2=308) -->
-  <line x1="452" y1="308" x2="590" y2="308" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u6zdjaR)"/>
+  <line x1="452" y1="308" x2="590" y2="308" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u06fzdj_u6zdjaR)"/>
   <text x="594" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#c0392b">F_H = 117,6 kN</text>
 
   <!-- F_V arrow (downward, mid-width = 380+36=416; approx arc at x=416) -->
-  <line x1="416" y1="344" x2="416" y2="386" stroke="#7d3c98" stroke-width="3.5" marker-end="url(#u6zdjaV)"/>
+  <line x1="416" y1="344" x2="416" y2="386" stroke="#7d3c98" stroke-width="3.5" marker-end="url(#u06fzdj_u6zdjaV)"/>
   <text x="424" y="395" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#7d3c98">F_V = 128,6 kN</text>
 
   <!-- F_R diagonal arrow (from arc corner toward lower right) -->
-  <line x1="452" y1="308" x2="536" y2="366" stroke="#2c3e50" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#u6zdjaFR)"/>
+  <line x1="452" y1="308" x2="536" y2="366" stroke="#2c3e50" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#u06fzdj_u6zdjaFR)"/>
   <text x="540" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2c3e50">F_R ≈ 174 kN</text>
   <text x="540" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">θ ≈ 47,6°</text>
 

@@ -962,6 +962,133 @@ Ovaj `T4` zadatak zatvara obrat koji je u pogonu vrlo stvaran: umjesto da iz pro
 3. Ako se iz izmjerene sile odmah pokuša vratiti $p_{M1}$ bez kontinuiteta i Bernoullija, preskače se veza između reakcije i stvarne kinematike u granama.
 :::
 
+::: {.mf1-ch}
+<p class="mf1-box-label">Cjeloviti zadatak - Vodeni udar pri zatvaranju ventila i sila na prirubnicu <span class="mf1-level">T3</span></p>
+
+**Zadano**
+
+U industrijskom uljnom cjevovodu zatvara se kuglični ventil koji prekida tok. **Brzina** kojom se ventil zatvara izravno određuje koliki će tlačni val (vodeni udar, water hammer) nastati. Ovaj zadatak povezuje **količinu gibanja** (jer naglo zaustavljanje stupca fluida znači veliku silu na ventil i prirubnicu), **Bernoulli/kontinuitet** (tlak prije i nakon udara) i **čvrstoću** (preuzimanje sile od strane vijaka prirubnice).
+
+Razmatraju se tri scenarija zatvaranja ventila: brzo, srednje i sporo.
+
+**Glavni podaci**
+
+- Promjer cijevi: $D = 150\ \text{mm}$
+- Protok prije zatvaranja: $Q = 50\ \text{L/s}$
+- Gustoća ulja: $\rho = 870\ \text{kg/m}^3$
+- Efektivna brzina tlačnog vala u sustavu (ulje + čelična cijev): $c \approx 1200\ \text{m/s}$
+- Duljina cjevovoda od ventila do **najbližeg slobodnog kraja** (spremnik, akumulator, otvoren rezervoar gdje se val "reflektira"): $L = 200\ \text{m}$
+- Vremena zatvaranja ventila u tri scenarija: $\Delta t_a = 0{,}20\ \text{s}$ (brzo), $\Delta t_b = 1{,}0\ \text{s}$ (srednje), $\Delta t_c = 5{,}0\ \text{s}$ (sporo)
+
+**Granica prirubnice**
+
+Prirubnica je vezana s **4 vijka M16** klase 8.8. Dopuštena vlačna sila po jednom vijku iznosi $F_{vijak,dop} \approx 50\ \text{kN}$.
+
+**Traženo**
+
+1. Početna brzina strujanja $v_0$ u cijevi i refleksno vrijeme vala $T_{ref}$.
+2. Tlačni udar po **Joukowskom** (trenutno zatvaranje – gornja granica): $\Delta p_J$.
+3. Tlačni udar u svakom od tri zadana scenarija (primijeniti **Michaudovu korekciju** za sporiji od refleksnog vremena).
+4. Sila na prirubnicu u svakom scenariju i provjera vijaka.
+5. Komentirati: koje zatvaranje sustav siguran može podnijeti i kako se mehanički štite prirubnice u realnim postrojenjima.
+
+![Vodeni udar pri zatvaranju ventila: stupac ulja se naglo zaustavlja, tlak na ventilu skoči za $\Delta p$, sila na prirubnicu doseže desetke kN.](../assets/print/u11_ch3_vodeni_udar.svg){#fig-u11-vodeni-udar fig-align="center"}
+
+**Pretpostavke i model**
+
+Strujanje je prije udara stacionarno i nestlačivo. Tlačni val nastaje zbog **stlačivosti** ulja i elastičnosti stijenke cijevi – brzina $c$ obuhvaća oba efekta (ne miješati s brzinom zvuka u slobodnom ulju, koja je $\approx 1400\ \text{m/s}$; cijev ovaj iznos smanjuje).
+
+Joukowsky-jeva jednadžba daje maksimalni tlačni udar koji nastaje pri **trenutnom** zatvaranju ventila (kraćim od refleksnog vremena vala):
+
+$$
+\Delta p_J = \rho \cdot c \cdot \Delta v
+$$
+
+gdje je $\Delta v = v_0$ (jer brzina ulja pada s $v_0$ na nulu). Za zatvaranja **sporija** od refleksnog vremena $T_{ref} = 2L/c$, val se dijelom već vrati prije nego što se ventil potpuno zatvori, pa amplituda udara opada. Michaud daje aproksimaciju:
+
+$$
+\Delta p = \Delta p_J \cdot \frac{T_{ref}}{\Delta t} \quad \text{za } \Delta t > T_{ref}
+$$
+
+Lokalna sila na prirubnicu od tlačnog udara djeluje na poprečnu površinu cijevi: $F = \Delta p \cdot A$. (U realnom postrojenju ova sila zbraja se s normalnim hidrostatskim/radnim tlakom, ali ovdje računamo samo **dodatnu** silu od udara.)
+
+**Rješenje**
+
+**1. Brzina i refleksno vrijeme:**
+
+$$
+A = \frac{\pi D^2}{4} = \frac{\pi \cdot 0{,}150^2}{4} \approx 1{,}767 \cdot 10^{-2}\ \text{m}^2
+$$
+
+$$
+v_0 = \frac{Q}{A} = \frac{0{,}050}{0{,}01767} \approx 2{,}83\ \text{m/s}
+$$
+
+$$
+T_{ref} = \frac{2L}{c} = \frac{2 \cdot 200}{1200} \approx 0{,}333\ \text{s}
+$$
+
+**2. Joukowsky-jev tlačni udar (trenutno zatvaranje):**
+
+$$
+\Delta p_J = \rho c v_0 = 870 \cdot 1200 \cdot 2{,}83 \approx 2{,}95 \cdot 10^6\ \text{Pa} \approx 2{,}95\ \text{MPa}
+$$
+
+**3. Tlačni udar u tri scenarija.** Usporedba s $T_{ref}$:
+
+- $\Delta t_a = 0{,}20\ \text{s} < T_{ref}$ – **direktni** udar pune amplitude:
+
+$$
+\Delta p_a = \Delta p_J \approx 2{,}95\ \text{MPa}
+$$
+
+- $\Delta t_b = 1{,}0\ \text{s} > T_{ref}$ – **indirektni** udar po Michaudu:
+
+$$
+\Delta p_b = \Delta p_J \cdot \frac{T_{ref}}{\Delta t_b} = 2{,}95 \cdot \frac{0{,}333}{1{,}0} \approx 0{,}98\ \text{MPa}
+$$
+
+- $\Delta t_c = 5{,}0\ \text{s} > T_{ref}$ – vrlo polagano zatvaranje:
+
+$$
+\Delta p_c = 2{,}95 \cdot \frac{0{,}333}{5{,}0} \approx 0{,}197\ \text{MPa} \approx 197\ \text{kPa}
+$$
+
+**4. Sile na prirubnicu:**
+
+$$
+F_a = \Delta p_a \cdot A \approx 2{,}95 \cdot 10^6 \cdot 0{,}01767 \approx 52{,}2\ \text{kN}
+$$
+
+$$
+F_b \approx 0{,}98 \cdot 10^6 \cdot 0{,}01767 \approx 17{,}3\ \text{kN}
+$$
+
+$$
+F_c \approx 0{,}197 \cdot 10^6 \cdot 0{,}01767 \approx 3{,}48\ \text{kN}
+$$
+
+Sila po jednom vijku (ravnomjerna raspodjela na 4 vijka):
+
+$$
+F_{vijak,a} \approx 13{,}1\ \text{kN}, \quad F_{vijak,b} \approx 4{,}33\ \text{kN}, \quad F_{vijak,c} \approx 0{,}87\ \text{kN}
+$$
+
+Sve tri vrijednosti su **ispod** $F_{vijak,dop} = 50\ \text{kN}$ – statički, čak i scenarij (a) prolazi. Međutim, **statička provjera ne uzima u obzir umor i ponavljanje udara**: ako se ovakav udar događa stotine puta dnevno, treba primijeniti dinamički faktor sigurnosti $\geq 3$. Tada bi za scenarij (a) vijak (s rezervom $50/13{,}1 \approx 3{,}8$) bio na granici.
+
+**Provjera i komentar**
+
+1. Razlika između (a) i (c) je **faktor 15** u tlačnom udaru, samo zbog različite **brzine zatvaranja** ventila. To je razlog zašto velike industrijske ventile **nikada ne zatvaraju trenutno** – uvijek se predviđa polagano zatvaranje preko mehaničkog ili pneumatskog aktuatora s vremenom zatvaranja koje znatno premašuje $T_{ref}$.
+2. Refleksno vrijeme $T_{ref} = 2L/c$ je **karakteristično vrijeme sustava** – ono govori koliko brzo val "obleti" tam-i-natrag između ventila i najbližeg slobodnog kraja. Sve što se zbije unutar tog vremena ventil "vidi" kao trenutno; sve sporije može iskoristiti reflektirani val koji smanjuje amplitudu.
+3. Iako u scenariju (a) vijci statički prolaze, **stijenka cijevi** mora podnijeti tlak od $2{,}95\ \text{MPa}$ povrh normalnog radnog tlaka (npr. 0,5 MPa). Ukupno $\approx 3{,}5\ \text{MPa}$ je više od 6× nominalne radne vrijednosti – materijal cijevi treba dimenzionirati upravo za **vršne udarne** uvjete, ne samo radne.
+4. **Mehanička zaštita** od vodenog udara u realnim postrojenjima:
+    - **Akumulatori s plinskim jastukom** (npr. dušikom) koji apsorbira tlačni val
+    - **Sigurnosni ventili na cjevovodu** koji se otvaraju pri prelaznom porastu tlaka
+    - **Polagano zatvaranje ventila** (motorizirano, podešeno na $\Delta t > 10 T_{ref}$)
+    - **Zračnik** (cijev s otvorom prema atmosferi blizu ventila) koji daje valu "izlaz"
+5. Najopasniji slučaj nije zatvaranje ventila operaterom, nego **iznenadno gašenje crpke** (npr. zbog nestanka struje). Ulje se naglo zaustavlja, a istovremeno se stupac koji je krenuo gibati prema gore (npr. u uzlaznom dijelu cjevovoda) može stvoriti **podtlak** koji vodi u kavitaciju – kasniji "kolaps" mjehurića pare daje sekundarni udar koji može biti **jači** od onog koji je nastao zaustavljanjem. Ovo je razlog zašto su crpne stanice opremljene "soft-stop" sustavom i akumulatorima čak i kad nema potrebe za reguliranjem protoka.
+:::
+
 ::: {.mf1-we}
 <p class="mf1-box-label">Riješeni primjer – Sila na koljeno rashladnog cjevovoda &nbsp;<span class="mf1-level">T2</span></p>
 

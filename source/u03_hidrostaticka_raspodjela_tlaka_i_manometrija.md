@@ -885,6 +885,100 @@ Razlika razina $16\ \text{m}$ daje tlak od $\approx 1{,}57\ \text{bar}$ – norm
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Balastni tank broda: tlak iznutra i izvana &nbsp;<span class="mf1-level">T2</span></p>
+
+🔩 **Primjer za strojare**
+
+**Kontekst:** Brod nosi balastne tankove pri dnu trupa, koji se za prazno povratno putovanje pune slatkom (ili morskom) vodom radi stabilnosti, a pri teretnom putovanju se prazne. Stijenka tanka istovremeno odvaja **vanjsku** morsku vodu (koja pritišće prema unutra) od **unutarnje** balastne vode (koja pritišće prema van). Brodski strojar dimenzionira stijenku tanka prema **neto tlaku** – razlici dvaju hidrostatskih tlakova na istoj dubini – jer ona definira u koju stranu stijenka biva opterećena i koje je opterećenje veće (prazan vs pun tank).
+
+**Zadano**
+
+Brod plovi mirnom morskom vodom. Promatra se balastni tank u sredini trupa:
+
+- Gaz broda (dubina kobilice ispod morske razine): $T_g = 8{,}5\ \text{m}$
+- Visina tanka mjerena od dna broda prema gore: $H_t = 5{,}0\ \text{m}$
+- Promatračev prozor postavljen je na visini $h_p = 2{,}0\ \text{m}$ iznad dna tanka
+- Gustoća morske vode: $\rho_m = 1025\ \text{kg/m}^3$
+- Gustoća balastne (slatke) vode: $\rho_b = 1000\ \text{kg/m}^3$
+- Vrh tanka spojen je s atmosferom kroz odzračnik, pa je slobodna površina balasta na atmosferskom tlaku
+- $g = 9{,}81\ \text{m/s}^2$
+
+**Traženo**
+
+Razmotrite dva stanja: **(A) tank pun** balastne vode do vrha; **(B) tank prazan**.
+
+1. Manometarski tlak vanjske morske vode na razini **dna tanka**.
+2. Manometarski tlak balastne vode na razini dna tanka (stanje A).
+3. Neto manometarski tlak na dno tanka u stanju A i u stanju B; u oba slučaja navedite smjer u kojem stijenka biva tlačena.
+4. Neto manometarski tlak na **promatračev prozor** u stanju A.
+
+![Balastni tank u trupu broda na gazu $T_g = 8{,}5$ m: vanjska morska voda i unutarnja balastna voda do visine $H_t = 5{,}0$ m. Prozor je na $h_p = 2$ m iznad dna tanka.](../assets/print/u03_fig_balastni_tank.svg){#fig-u03-balastni-tank fig-align="center"}
+
+**Pretpostavke i model**
+
+Brod miruje i ne valja se – razmatra se čista hidrostatika. Slobodna površina mora i (u stanju A) slobodna površina balasta su na atmosferskom tlaku, pa se sve može računati manometarski. Stijenka tanka je nepropusna i kruta. Razlika gustoće morske i balastne vode ne mijenja se s dubinom – obje su nestlačive.
+
+**Rješenje**
+
+Manometarski tlak vanjske morske vode na razini dna tanka (dubina od morske površine = $T_g$):
+
+$$
+p_{ext,dno} = \rho_m g T_g = 1025 \cdot 9{,}81 \cdot 8{,}5 \approx 85{,}5\ \text{kPa}
+$$
+
+**Stanje A – tank pun balastne vode.** Manometarski tlak balasta na dnu tanka (dubina od slobodne površine balasta = $H_t$):
+
+$$
+p_{int,dno}^{A} = \rho_b g H_t = 1000 \cdot 9{,}81 \cdot 5{,}0 \approx 49{,}1\ \text{kPa}
+$$
+
+Neto tlak na dno tanka u stanju A (vani veći – stijenka biva tlačena prema unutra):
+
+$$
+\Delta p_{dno}^{A} = p_{ext,dno} - p_{int,dno}^{A} \approx 85{,}5 - 49{,}1 \approx 36{,}4\ \text{kPa}
+$$
+
+**Stanje B – tank prazan.** Unutarnji tlak na dno tanka jednak je atmosferskom, pa je manometarski nula:
+
+$$
+p_{int,dno}^{B} = 0
+$$
+
+Neto tlak na dno tanka u stanju B (vani veći – stijenka i dalje biva tlačena prema unutra, ali jače):
+
+$$
+\Delta p_{dno}^{B} = p_{ext,dno} - 0 \approx 85{,}5\ \text{kPa}
+$$
+
+**Promatračev prozor u stanju A.** Prozor je na visini $h_p = 2$ m iznad dna, pa:
+
+- s vanjske strane je na dubini $T_g - h_p = 8{,}5 - 2 = 6{,}5\ \text{m}$ ispod morske površine:
+
+$$
+p_{ext,proz} = \rho_m g (T_g - h_p) = 1025 \cdot 9{,}81 \cdot 6{,}5 \approx 65{,}3\ \text{kPa}
+$$
+
+- s unutarnje strane je na dubini $H_t - h_p = 5 - 2 = 3{,}0\ \text{m}$ ispod razine balasta:
+
+$$
+p_{int,proz}^{A} = \rho_b g (H_t - h_p) = 1000 \cdot 9{,}81 \cdot 3{,}0 \approx 29{,}4\ \text{kPa}
+$$
+
+Neto tlak na prozor (vani veći, prema unutra):
+
+$$
+\Delta p_{proz}^{A} \approx 65{,}3 - 29{,}4 \approx 35{,}9\ \text{kPa}
+$$
+
+**Provjera i komentar**
+
+1. Razlika između dva slučaja ($\Delta p_{dno}^{B} - \Delta p_{dno}^{A} \approx 49{,}1\ \text{kPa}$) točno je jednaka unutarnjem hidrostatskom tlaku balasta $\rho_b g H_t$ – jer **prazan tank uklanja samo unutarnji "branitelj"** vanjskog tlaka, a vanjska komponenta se ne mijenja.
+2. **Brodski strojar dimenzionira stijenku tanka za prazno stanje** ($\approx 85{,}5$ kPa neto), iako je tank u radu češće barem djelomično napunjen. Razlog je očit: dimenzioniranje "za najgori scenarij" je preduvjet sigurnosti.
+3. Neto tlak na **dno** i na **prozor** u stanju A iznose redom $36{,}4$ kPa i $35{,}9$ kPa – razlika je svega $0{,}5$ kPa. To pokazuje važan princip: ako su dvije tekućine na obje strane stijenke obje slobodne površine i imaju **slične gustoće**, neto tlak je gotovo konstantan po dubini, jer hidrostatske kontribucije s obje strane "putuju" istom brzinom prema dolje. Razlika ide samo na račun $(\rho_m - \rho_b) g$ po metru dubine – ovdje $25 \cdot 9{,}81 \approx 245$ Pa po metru = $0{,}25$ kPa/m.
+4. Brodogradnja koristi ovaj uvid pri "balansiranom" punjenju tankova: kad se pravilno balansira slatka voda u unutarnjim tankovima protiv morske vode izvana, stijenke tankova doživljavaju iznenađujuće malu neto razliku tlaka. Tanker s **dvostrukim trupom** koristi isti princip – prostor između trupova puni se balastnom vodom da neutralizira hidrostatski "pljusak" mora.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

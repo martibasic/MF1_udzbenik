@@ -480,6 +480,114 @@ prema dolje u odnosu na horizontalu.
 3. Rezultanta mora biti veća od svake pojedine komponente, ali manja od njihova zbroja.
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer - Četvrtcilindrični poklopac u zatvorenom spremniku s plinskim jastukom <span class="mf1-level">T2</span></p>
+
+**Zadano**
+
+Hidropneumatski servisni spremnik ima oblik zatvorenog cilindra. Donji dio spremnika ispunjen je uljem do slobodne površine; iznad nje nalazi se plinski jastuk (dušik) pod **manometarskim** pretlakom. Na bočnoj stijenci nalazi se četvrtcilindrični inspekcijski poklopac, oblika i orijentacije identičnih kao u prvom primjeru ovog poglavlja (potopljena četvrtina kruga), ali je sada slobodna površina ulja u **zatvorenom** spremniku pod nadtlakom plinskog jastuka.
+
+- Polumjer zakrivljenosti poklopca: $R = 0{,}50\ \text{m}$
+- Širina poklopca uzduž osi zakrivljenja: $b = 1{,}20\ \text{m}$
+- Gornji rub poklopca poklapa se s razinom slobodne površine ulja
+- Gustoća ulja: $\rho = 860\ \text{kg/m}^3$
+- Manometarski tlak plinskog jastuka: $p_g = 200\ \text{kPa}$
+- Vanjska strana poklopca je na atmosferskom tlaku
+- $g = 9{,}81\ \text{m/s}^2$
+
+**Traženo**
+
+1. Horizontalna komponenta sile na poklopac $F_H$ s razdvojenim doprinosima ulja i plina.
+2. Vertikalna komponenta $F_V$ s razdvojenim doprinosima.
+3. Iznos i smjer rezultantne sile $F$ na poklopac.
+4. Usporediti s otvorenim spremnikom (kad bi $p_g = 0$): za koliko se mijenjaju $F_H$, $F_V$, kut nagiba rezultante?
+
+![Četvrtcilindrični poklopac u zatvorenom spremniku s plinskim jastukom pod tlakom $p_g = 200$ kPa iznad slobodne površine ulja ($\rho = 860$ kg/m³). Plinski jastuk dodaje uniformni pomak tlaka na cijelu plohu.](../assets/print/u06_fig_plinski_jastuk.svg){#fig-u06-plinski-jastuk fig-align="center"}
+
+**Pretpostavke i model**
+
+Sustav je u mirovanju – razmatra se čista hidrostatika. Plin je dovoljno laganog hidrostatičkog stupca da se njegova vlastita "težina" zanemari, pa je tlak plina **jednak na cijeloj slobodnoj površini ulja**. Plin svojim tlakom djeluje ravnomjerno na slobodnu površinu, a Pascalov princip prenosi taj tlak kroz mirujuće ulje na cijelu unutarnju stijenku spremnika – uključujući i poklopac. Zato se tlak u dubini $h$ ispod slobodne površine ulja računa kao $p(h) = p_g + \rho g h$.
+
+To znači da na svaku komponentu sile postoje **dva aditivna doprinosa**: jedan od hidrostatskog tlaka ulja kao i u otvorenom spremniku, te drugi od plinskog jastuka kao da je plin svojim tlakom $p_g$ uniformno pritisnuo plohu. Komponente sila zbog plina prirodno se pišu preko **projekcija** plohe – jer uniformni tlak na zakrivljenoj plohi daje silu na njezinim projekcijama.
+
+**Rješenje**
+
+**Projekcije plohe.** Vertikalna projekcija plohe (na vertikalnu ravninu okomitu na os zakrivljenja) je pravokutnik visine $R$ i širine $b$. Horizontalna projekcija (na horizontalnu ravninu) je pravokutnik dimenzija $R \cdot b$ – iste površine kao vertikalna, jer kod četvrtkruga te dvije projekcije imaju iste dimenzije.
+
+$$
+A_{proj,v} = A_{proj,h} = R \cdot b = 0{,}50 \cdot 1{,}20 = 0{,}60\ \text{m}^2
+$$
+
+**Horizontalna komponenta $F_H$.** Doprinos ulja ($F_{H,o}$) preko težišta vertikalne projekcije, koje je na dubini $h_C = R/2 = 0{,}25$ m:
+
+$$
+F_{H,o} = \rho g h_C A_{proj,v} = 860 \cdot 9{,}81 \cdot 0{,}25 \cdot 0{,}60 \approx 1265\ \text{N} \approx 1{,}27\ \text{kN}
+$$
+
+Doprinos plina ($F_{H,g}$) – uniformni tlak $p_g$ na istu projekciju:
+
+$$
+F_{H,g} = p_g A_{proj,v} = 200\,000 \cdot 0{,}60 = 120\,000\ \text{N} = 120\ \text{kN}
+$$
+
+Ukupno:
+
+$$
+F_H = F_{H,o} + F_{H,g} \approx 1{,}27 + 120 \approx 121{,}3\ \text{kN}
+$$
+
+**Vertikalna komponenta $F_V$.** Doprinos ulja ($F_{V,o}$) jednak je težini ulja koje bi zauzimalo imaginarni četvrtkružni volumen iznad plohe (kao u potopljenoj četvrtini kruga):
+
+$$
+V_{imag} = \frac{\pi R^2}{4} \cdot b = \frac{\pi \cdot 0{,}50^2}{4} \cdot 1{,}20 \approx 0{,}2356\ \text{m}^3
+$$
+
+$$
+F_{V,o} = \rho g V_{imag} = 860 \cdot 9{,}81 \cdot 0{,}2356 \approx 1{,}99\ \text{kN}
+$$
+
+Doprinos plina ($F_{V,g}$) – uniformni tlak $p_g$ na horizontalnu projekciju:
+
+$$
+F_{V,g} = p_g A_{proj,h} = 200\,000 \cdot 0{,}60 = 120\,000\ \text{N} = 120\ \text{kN}
+$$
+
+Ukupno:
+
+$$
+F_V = F_{V,o} + F_{V,g} \approx 1{,}99 + 120 \approx 122{,}0\ \text{kN}
+$$
+
+**Iznos i smjer rezultante:**
+
+$$
+F = \sqrt{F_H^2 + F_V^2} \approx \sqrt{121{,}3^2 + 122{,}0^2} \approx 172{,}0\ \text{kN}
+$$
+
+$$
+\alpha = \arctan\frac{F_V}{F_H} = \arctan\frac{122{,}0}{121{,}3} \approx 45{,}2^\circ
+$$
+
+**Usporedba s otvorenim spremnikom** ($p_g = 0$):
+
+$$
+F_{H,open} = 1{,}27\ \text{kN}, \quad F_{V,open} = 1{,}99\ \text{kN}
+$$
+
+$$
+F_{open} = \sqrt{1{,}27^2 + 1{,}99^2} \approx 2{,}36\ \text{kN}, \quad \alpha_{open} \approx 57{,}5^\circ
+$$
+
+Omjer rezultanti $F / F_{open} \approx 73$.
+
+**Provjera i komentar**
+
+1. Plinski jastuk dodaje **isti** iznos sile (120 kN) na obje komponente, jer su projekcije plohe na vertikalnu i horizontalnu ravninu identične za četvrtinu kruga ($R \cdot b$). Zato pri dominantnom $p_g$ smjer rezultante teži ka $45^\circ$, neovisno o geometriji ploche.
+2. Zakrivljenost plohe i tip fluida postaju **sekundarni** ako je $p_g \gg \rho g R$. Pri ulja na dubini $R = 0{,}50$ m hidrostatski tlak iznosi svega $\rho g R \approx 4{,}2$ kPa – pedeset puta manje od plinskog $p_g$. Zato hidrostatski doprinos čini manje od $1\%$ ukupne sile.
+3. Inženjerska poruka: pri **dimenzioniranju stijenki i vijaka zatvorenih hidropneumatskih spremnika** glavni teret podnosi plinski tlak. To je razlog zašto kotlovi pod tlakom (PVC – pressure vessels) imaju različitu konstrukciju od otvorenih spremnika iste dubine: zakrivljene plohe i polusferne kape biraju se ne radi smanjenja hidrostatske sile, nego radi optimalnog raspodjeljivanja **plinskog/parnog tlaka** po stijenci.
+4. Hvatišta dvaju doprinosa $F_V$ nisu ista: $F_{V,o}$ djeluje u centroidu imaginarnog četvrtkružnog volumena ($x_o = 4R/3\pi \approx 0{,}212$ m od osi simetrije), a $F_{V,g}$ djeluje u centroidu horizontalne projekcije, pravokutnika ($x_g = R/2 = 0{,}25$ m). Pri momentnom proračunu vijaka treba računati sa zbirnim hvatištem, ne s jednim "prosjekom".
+:::
+
 ::: {.mf1-ch}
 <p class="mf1-box-label">Cjeloviti zadatak - Četvrtcilindrični poklopac s vodoravnom spojnicom <span class="mf1-level">T3</span></p>
 

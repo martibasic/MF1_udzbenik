@@ -419,6 +419,130 @@ $$
 3. Da je zglob dublje potopljen ili da je poklopac dulji, i rezultanta i potrebni moment zatvaranja morali bi rasti.
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer - Vertikalna ploha kroz tri sloja različitih tekućina <span class="mf1-level">T2</span></p>
+
+**Zadano**
+
+U procesnoj posudi se na vertikalnoj pregradi pojavljuju tri nemiješajuća sloja: ulje na vrhu, voda u sredini i glicerin (kao sloj veće gustoće) na dnu.
+
+- Širina pregrade: $b = 0{,}80\ \text{m}$
+- Visina pregrade (duž plohe): $L = 1{,}50\ \text{m}$
+- Gornji rub pregrade je na dubini $h_0 = 0{,}30\ \text{m}$ ispod slobodne površine **gornjeg** fluida (ulja)
+- Sloj ulja: $\rho_u = 820\ \text{kg/m}^3$, dubina granice ulje/voda od slobodne površine: $h_{uv} = 0{,}80\ \text{m}$
+- Sloj vode: $\rho_w = 998\ \text{kg/m}^3$, dubina granice voda/glicerin od slobodne površine: $h_{vg} = 1{,}50\ \text{m}$
+- Sloj glicerina: $\rho_g = 1260\ \text{kg/m}^3$
+- $g = 9{,}81\ \text{m/s}^2$
+
+**Traženo**
+
+1. Rezultantna sila $F$ na pregradu.
+2. Sile koje doprinose svakim slojem pojedinačno: $F_1$ (ulje), $F_2$ (voda), $F_3$ (glicerin).
+3. Položaj hvatišta sile $h_{CP}$, mjeren od slobodne površine.
+4. Položaj hvatišta mjeren duž plohe od gornjeg ruba pregrade ($s_{CP}$); usporediti s položajem težišta plohe.
+
+![Vertikalna pregrada širine 0,80 m i visine 1,50 m kroz tri sloja: ulje ($\rho_u = 820$), voda ($\rho_w = 998$) i glicerin ($\rho_g = 1260$ kg/m³). Tlak raste linearno unutar svakog sloja, ali s različitim nagibom – profil tlaka je izlomljena linija s tri segmenta.](../assets/print/u05_fig_tri_sloja.svg){#fig-u05-tri-sloja fig-align="center"}
+
+**Pretpostavke i model**
+
+Slojevi se ne miješaju (stabilan stratifikat – gušći fluid dolje) i u mirovanju su. Atmosferski tlak djeluje s obje strane pregrade, pa se računa samo manometarski tlak. Hidrostatski tlak unutar svakog sloja raste linearno s dubinom uz vlastiti nagib $\rho_i g$, a na granicama slojeva je kontinuiran. Profil tlaka po visini plohe nije ravan pravac nego **izlomljena linija** s tri ravna segmenta: po jedan nagib u svakom sloju.
+
+Sustavski pristup: ploha se podijeli na tri pojasa, po jedan u svakom sloju; u svakom pojasu tlak je linearan, pa je rezultanta sila tog pojasa jednaka srednjem tlaku puta površina pojasa, a hvatište je u centroidu trapeznog tlakovnog profila.
+
+**Rješenje**
+
+Najprije se odrede duljine plohe u svakom sloju. Donji rub plohe je na dubini $h_0 + L = 0{,}30 + 1{,}50 = 1{,}80\ \text{m}$, što je u sloju glicerina. Pojasi su:
+
+- Pojas 1 (ulje): od dubine $h_0 = 0{,}30$ m do $h_{uv} = 0{,}80$ m – duljina $L_1 = 0{,}50\ \text{m}$
+- Pojas 2 (voda): od $h_{uv} = 0{,}80$ do $h_{vg} = 1{,}50$ m – duljina $L_2 = 0{,}70\ \text{m}$
+- Pojas 3 (glicerin): od $h_{vg} = 1{,}50$ do $1{,}80$ m – duljina $L_3 = 0{,}30\ \text{m}$
+
+Provjera: $L_1 + L_2 + L_3 = 1{,}50$ m $= L$ ✓.
+
+Tlakovi na karakterističnim dubinama (manometarski, kumulativno prelaze granice slojeva):
+
+$$
+p(h_0) = \rho_u g h_0 = 820 \cdot 9{,}81 \cdot 0{,}30 \approx 2413\ \text{Pa}
+$$
+
+$$
+p(h_{uv}) = \rho_u g h_{uv} = 820 \cdot 9{,}81 \cdot 0{,}80 \approx 6435\ \text{Pa}
+$$
+
+$$
+p(h_{vg}) = p(h_{uv}) + \rho_w g (h_{vg} - h_{uv}) = 6435 + 998 \cdot 9{,}81 \cdot 0{,}70 \approx 13\,289\ \text{Pa}
+$$
+
+$$
+p(h_0 + L) = p(h_{vg}) + \rho_g g \cdot L_3 = 13\,289 + 1260 \cdot 9{,}81 \cdot 0{,}30 \approx 16\,997\ \text{Pa}
+$$
+
+Sila po pojasu (srednji tlak puta površina pojasa $A_i = b L_i$):
+
+$$
+F_1 = \frac{p(h_0) + p(h_{uv})}{2} \cdot b L_1 = \frac{2413 + 6435}{2} \cdot 0{,}80 \cdot 0{,}50 \approx 1770\ \text{N}
+$$
+
+$$
+F_2 = \frac{p(h_{uv}) + p(h_{vg})}{2} \cdot b L_2 = \frac{6435 + 13\,289}{2} \cdot 0{,}80 \cdot 0{,}70 \approx 5523\ \text{N}
+$$
+
+$$
+F_3 = \frac{p(h_{vg}) + p(h_0+L)}{2} \cdot b L_3 = \frac{13\,289 + 16\,997}{2} \cdot 0{,}80 \cdot 0{,}30 \approx 3634\ \text{N}
+$$
+
+Ukupna rezultanta:
+
+$$
+F = F_1 + F_2 + F_3 \approx 1770 + 5523 + 3634 \approx 10{,}93\ \text{kN}
+$$
+
+Za hvatište svakog pojasa služi se centroidom trapeznog tlakovnog profila – udaljenost centroida od **vrha** pojasa duž plohe:
+
+$$
+\Delta s_i = L_i \cdot \frac{p_{top,i} + 2 p_{bot,i}}{3(p_{top,i} + p_{bot,i})}
+$$
+
+Za svaki pojas dobiva se dubina hvatišta od slobodne površine ($h_{F,i} = h_{top,i} + \Delta s_i$):
+
+$$
+h_{F1} \approx 0{,}30 + 0{,}50 \cdot \frac{2413 + 2\cdot 6435}{3(2413 + 6435)} \approx 0{,}30 + 0{,}288 \approx 0{,}588\ \text{m}
+$$
+
+$$
+h_{F2} \approx 0{,}80 + 0{,}70 \cdot \frac{6435 + 2\cdot 13\,289}{3(6435 + 13\,289)} \approx 0{,}80 + 0{,}390 \approx 1{,}190\ \text{m}
+$$
+
+$$
+h_{F3} \approx 1{,}50 + 0{,}30 \cdot \frac{13\,289 + 2 \cdot 16\,997}{3(13\,289 + 16\,997)} \approx 1{,}50 + 0{,}156 \approx 1{,}656\ \text{m}
+$$
+
+Ukupno hvatište iz momentne ravnoteže oko slobodne površine:
+
+$$
+h_{CP} = \frac{F_1 h_{F1} + F_2 h_{F2} + F_3 h_{F3}}{F}
+$$
+
+$$
+h_{CP} \approx \frac{1770 \cdot 0{,}588 + 5523 \cdot 1{,}190 + 3634 \cdot 1{,}656}{10\,927} \approx \frac{1041 + 6573 + 6018}{10\,927} \approx 1{,}248\ \text{m}
+$$
+
+Položaj hvatišta duž plohe od gornjeg ruba:
+
+$$
+s_{CP} = h_{CP} - h_0 = 1{,}248 - 0{,}30 \approx 0{,}948\ \text{m}
+$$
+
+Težište plohe nalazi se na $L/2 = 0{,}75$ m od gornjeg ruba.
+
+**Provjera i komentar**
+
+1. Hvatište je dublje od težišta plohe ($s_{CP} > L/2$), što je očekivano jer tlak raste s dubinom – donji dio plohe je opterećeniji. Iznos pomaka ($\approx 0{,}20$ m) odražava nesimetričnost tlakovnog profila.
+2. Pojas s **najvećim doprinosom** je sloj vode ($F_2 \approx 5{,}5$ kN, oko $51\%$ ukupne sile), iako je gustoća vode srednja. Razlog je dvojak: voda zauzima najveći dio plohe ($L_2 = 0{,}70$ m) i nalazi se na dubini gdje je tlakovni profil već "podignut" hidrostatskim doprinosom ulja iznad.
+3. Najgušći sloj (glicerin) daje silu $F_3 \approx 3{,}6$ kN – manju od vode, jer iako $\rho$ raste i tlak je viši, glicerin zauzima najuži pojas plohe ($L_3 = 0{,}30$ m). Inženjerska poruka: **redoslijed slojeva** (gustoći prema dolje, što je hidrostatski stabilno) određuje na kojoj dubini se akumulira tlak; sama gustoća ne garantira veliku silu ako je geometrija plohe nepovoljna.
+4. Da su slojevi raspoređeni obrnuto (gušći gore), sustav bi bio hidrostatski **nestabilan** i miješao bi se konvekcijom; ovakav pristup integracije po pojasima ne bi vrijedio. Ovaj primjer vrijedi samo za stratificirani sustav u mirovanju.
+:::
+
 ::: {.mf1-ch}
 <p class="mf1-box-label">Cjeloviti zadatak - Zglobna pregrada s uljem iznad vode <span class="mf1-level">T3</span></p>
 

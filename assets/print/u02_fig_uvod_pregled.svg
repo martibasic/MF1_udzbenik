@@ -1,62 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img"
-     aria-labelledby="u2vtT u2vtD" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u02fup_u2vtT u02fup_u2vtD" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u2vtT">Pregled poglavlja U02 – Viskoznost, površinska napetost i kapilarnost</title>
-  <desc id="u2vtD">Lijevo: Couetteov tok s linearnim profilom brzine prikazuje Newtonov zakon viskoznosti τ=μ·dv/dy. Desno: kapilara s konkavnim meniskom, kontaktni kut θ i kapilarni uspon h=4σcosθ/(ρgd). Usporedba θ&lt;90° (uspon) i θ&gt;90° (pad).</desc>
+  <title id="u02fup_u2vtT">Pregled poglavlja U02 – Viskoznost, površinska napetost i kapilarnost</title>
+  <desc id="u02fup_u2vtD">Lijevo: Couetteov tok s linearnim profilom brzine prikazuje Newtonov zakon viskoznosti τ=μ·dv/dy. Desno: kapilara s konkavnim meniskom, kontaktni kut θ i kapilarni uspon h=4σcosθ/(ρgd). Usporedba θ&lt;90° (uspon) i θ&gt;90° (pad).</desc>
   <defs>
     <!-- Markeri -->
-    <marker id="u2vtaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <marker id="u02fup_u2vtaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
     </marker>
-    <marker id="u2vtaG" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto">
+    <marker id="u02fup_u2vtaG" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto">
       <path d="M0,0 L0,9 L11,4.5 z" fill="#1e8449"/>
     </marker>
-    <marker id="u2vtaW" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+    <marker id="u02fup_u2vtaW" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
       <path d="M0,0 L0,7 L9,3.5 z" fill="white"/>
     </marker>
-    <marker id="u2vtaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <marker id="u02fup_u2vtaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
     </marker>
-    <marker id="u2vtaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u02fup_u2vtaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
     </marker>
-    <marker id="u2vtaDk" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <marker id="u02fup_u2vtaDk" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#1a2530"/>
     </marker>
     <!-- Gradijenti -->
-    <linearGradient id="u2vtoil" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u02fup_u2vtoil" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f7d870"/>
       <stop offset="100%" stop-color="#c99010"/>
     </linearGradient>
-    <linearGradient id="u2vtwater" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u02fup_u2vtwater" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#c8edf7"/>
       <stop offset="100%" stop-color="#4a9ec4"/>
     </linearGradient>
-    <linearGradient id="u2vtwbath" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u02fup_u2vtwbath" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d5eef8"/>
       <stop offset="100%" stop-color="#7ab8d4"/>
     </linearGradient>
-    <linearGradient id="u2vtwall" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u02fup_u2vtwall" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#c8d2d8"/>
       <stop offset="100%" stop-color="#7a8a94"/>
     </linearGradient>
-    <linearGradient id="u2vthdr" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="u02fup_u2vthdr" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#1a2e42"/>
       <stop offset="100%" stop-color="#1a3a52"/>
     </linearGradient>
     <!-- Hatching stijenke -->
-    <pattern id="u2vth" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u02fup_u2vth" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
     </pattern>
   </defs>
 
   <!-- ══════════ GLOBALNA POZADINA ══════════ -->
   <rect width="980" height="560" fill="#eef1f5"/>
-
-  <!-- ══════════ HEADER BAR ══════════ -->
-  <rect x="0" y="0" width="980" height="54" fill="url(#u2vthdr)"/>
-  <text x="490" y="25" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.3">U02 – Viskoznost, površinska napetost i kapilarnost</text>
-  <text x="490" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8aaccc" text-anchor="middle">Newtonov zakon viskoznosti  ·  kinematička viskoznost  ·  površinska napetost  ·  kapilarni uspon</text>
 
   <!-- ══════════ LIJEVI PANEL – VISKOZNOST  x=14 w=460 ══════════ -->
   <rect x="14" y="60" width="460" height="492" rx="10" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.8"/>
@@ -65,17 +60,17 @@
 
   <!-- ─── Gornja ploča (gibajuća v=U) ─── -->
   <!-- v=U strelica iznad ploče -->
-  <line x1="76" y1="110" x2="208" y2="110" stroke="#1e8449" stroke-width="3.2" marker-end="url(#u2vtaG)"/>
+  <line x1="76" y1="110" x2="208" y2="110" stroke="#1e8449" stroke-width="3.2" marker-end="url(#u02fup_u2vtaG)"/>
   <text x="214" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1e8449">v = U</text>
 
-  <rect x="22" y="118" width="286" height="22" fill="url(#u2vtwall)" stroke="#2a3a46" stroke-width="1.8"/>
-  <rect x="22" y="118" width="286" height="22" fill="url(#u2vth)" opacity="0.22"/>
+  <rect x="22" y="118" width="286" height="22" fill="url(#u02fup_u2vtwall)" stroke="#2a3a46" stroke-width="1.8"/>
+  <rect x="22" y="118" width="286" height="22" fill="url(#u02fup_u2vth)" opacity="0.22"/>
   <!-- τ strelica na gornjoj ploči -->
-  <line x1="236" y1="131" x2="286" y2="131" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u2vtaR)"/>
+  <line x1="236" y1="131" x2="286" y2="131" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u02fup_u2vtaR)"/>
   <text x="291" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#c0392b">τ</text>
 
   <!-- ─── Fluid (ulje, zlatni gradijent) y=140..328 ─── -->
-  <rect x="22" y="140" width="286" height="188" fill="url(#u2vtoil)"/>
+  <rect x="22" y="140" width="286" height="188" fill="url(#u02fup_u2vtoil)"/>
 
   <!-- ─── Profil brzine – 7 bijelih strelica ─── -->
   <!-- Fluid: y=140..328, raspon=188px. Max l=200px.
@@ -87,13 +82,13 @@
        y=256: l=200*72/188=77   → (22,256)-(99,256)
        y=282: l=200*46/188=49   → (22,282)-(71,282)
        y=308: l=200*20/188=21   → (22,308)-(43,308) -->
-  <line x1="22" y1="152" x2="209" y2="152" stroke="white" stroke-width="2.2" marker-end="url(#u2vtaW)"/>
-  <line x1="22" y1="178" x2="182" y2="178" stroke="white" stroke-width="2.1" marker-end="url(#u2vtaW)"/>
-  <line x1="22" y1="204" x2="154" y2="204" stroke="white" stroke-width="2.0" marker-end="url(#u2vtaW)"/>
-  <line x1="22" y1="230" x2="126" y2="230" stroke="white" stroke-width="1.9" marker-end="url(#u2vtaW)"/>
-  <line x1="22" y1="256" x2="99"  y2="256" stroke="white" stroke-width="1.8" marker-end="url(#u2vtaW)"/>
-  <line x1="22" y1="282" x2="71"  y2="282" stroke="white" stroke-width="1.7" marker-end="url(#u2vtaW)"/>
-  <line x1="22" y1="308" x2="43"  y2="308" stroke="white" stroke-width="1.6" marker-end="url(#u2vtaW)"/>
+  <line x1="22" y1="152" x2="209" y2="152" stroke="white" stroke-width="2.2" marker-end="url(#u02fup_u2vtaW)"/>
+  <line x1="22" y1="178" x2="182" y2="178" stroke="white" stroke-width="2.1" marker-end="url(#u02fup_u2vtaW)"/>
+  <line x1="22" y1="204" x2="154" y2="204" stroke="white" stroke-width="2.0" marker-end="url(#u02fup_u2vtaW)"/>
+  <line x1="22" y1="230" x2="126" y2="230" stroke="white" stroke-width="1.9" marker-end="url(#u02fup_u2vtaW)"/>
+  <line x1="22" y1="256" x2="99"  y2="256" stroke="white" stroke-width="1.8" marker-end="url(#u02fup_u2vtaW)"/>
+  <line x1="22" y1="282" x2="71"  y2="282" stroke="white" stroke-width="1.7" marker-end="url(#u02fup_u2vtaW)"/>
+  <line x1="22" y1="308" x2="43"  y2="308" stroke="white" stroke-width="1.6" marker-end="url(#u02fup_u2vtaW)"/>
 
   <!-- Rub linearnog profila: (22,328) → (222,140) -->
   <line x1="22" y1="328" x2="222" y2="140" stroke="rgba(255,255,255,0.55)" stroke-width="1.4" stroke-dasharray="4,3"/>
@@ -104,13 +99,13 @@
   <text x="248" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.65)" text-anchor="middle">konst.</text>
 
   <!-- ─── Donja ploča (mirujuća) ─── -->
-  <rect x="22" y="328" width="286" height="22" fill="url(#u2vth)" stroke="#2a3a46" stroke-width="1.8"/>
+  <rect x="22" y="328" width="286" height="22" fill="url(#u02fup_u2vth)" stroke="#2a3a46" stroke-width="1.8"/>
   <text x="165" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a5070" text-anchor="middle">donja ploča  v = 0  (miruje)</text>
 
   <!-- ─── Kota δ (razmak ploča, desno) ─── -->
   <line x1="311" y1="140" x2="317" y2="140" stroke="#b7600c" stroke-width="1.3"/>
   <line x1="311" y1="328" x2="317" y2="328" stroke="#b7600c" stroke-width="1.3"/>
-  <line x1="314" y1="142" x2="314" y2="326" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u2vtaDimL)" marker-end="url(#u2vtaDim)"/>
+  <line x1="314" y1="142" x2="314" y2="326" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u02fup_u2vtaDimL)" marker-end="url(#u02fup_u2vtaDim)"/>
   <text x="324" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#b7600c">δ</text>
 
   <!-- ─── Jednadžbe ─── -->
@@ -146,13 +141,13 @@
 
   <!-- Posuda: centar x=596, outer width=188 -->
   <!-- Dno posude -->
-  <rect x="490" y="428" width="204" height="12" fill="url(#u2vth)" stroke="#3a4a56" stroke-width="1.4"/>
+  <rect x="490" y="428" width="204" height="12" fill="url(#u02fup_u2vth)" stroke="#3a4a56" stroke-width="1.4"/>
   <!-- Lijeva stijenka -->
-  <rect x="490" y="308" width="12" height="132" fill="url(#u2vth)" stroke="#3a4a56" stroke-width="1.4"/>
+  <rect x="490" y="308" width="12" height="132" fill="url(#u02fup_u2vth)" stroke="#3a4a56" stroke-width="1.4"/>
   <!-- Desna stijenka -->
-  <rect x="682" y="308" width="12" height="132" fill="url(#u2vth)" stroke="#3a4a56" stroke-width="1.4"/>
+  <rect x="682" y="308" width="12" height="132" fill="url(#u02fup_u2vth)" stroke="#3a4a56" stroke-width="1.4"/>
   <!-- Fluid u posudi -->
-  <rect x="502" y="348" width="180" height="80" fill="url(#u2vtwbath)" opacity="0.88"/>
+  <rect x="502" y="348" width="180" height="80" fill="url(#u02fup_u2vtwbath)" opacity="0.88"/>
   <!-- Razina u posudi (dashed) -->
   <line x1="486" y1="348" x2="698" y2="348" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="7,5"/>
   <text x="700" y="345" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1565c0">razina</text>
@@ -160,21 +155,21 @@
 
   <!-- Kapilara: centar x=596, stijenke x=566-578 i x=614-626 -->
   <!-- Lijeva stijenka kapilare -->
-  <rect x="566" y="104" width="12" height="344" fill="url(#u2vth)" stroke="#3a4a56" stroke-width="1.4"/>
+  <rect x="566" y="104" width="12" height="344" fill="url(#u02fup_u2vth)" stroke="#3a4a56" stroke-width="1.4"/>
   <!-- Desna stijenka kapilare -->
-  <rect x="614" y="104" width="12" height="344" fill="url(#u2vth)" stroke="#3a4a56" stroke-width="1.4"/>
+  <rect x="614" y="104" width="12" height="344" fill="url(#u02fup_u2vth)" stroke="#3a4a56" stroke-width="1.4"/>
   <!-- Fluid unutar kapilare (od razine do uspona) -->
-  <rect x="578" y="230" width="36" height="118" fill="url(#u2vtwater)"/>
+  <rect x="578" y="230" width="36" height="118" fill="url(#u02fup_u2vtwater)"/>
   <!-- Fluid koji se spaja s posudom -->
-  <rect x="578" y="348" width="36" height="80" fill="url(#u2vtwater)" opacity="0.88"/>
+  <rect x="578" y="348" width="36" height="80" fill="url(#u02fup_u2vtwater)" opacity="0.88"/>
 
   <!-- ─── Meniskus konkavan: M(578,238) Q(596,224) (614,238) ─── -->
-  <path d="M578,238 Q596,224 614,238 L614,230 L578,230 Z" fill="url(#u2vtwater)"/>
+  <path d="M578,238 Q596,224 614,238 L614,230 L578,230 Z" fill="url(#u02fup_u2vtwater)"/>
   <path d="M578,238 Q596,224 614,238" fill="none" stroke="#1565c0" stroke-width="2.6"/>
 
   <!-- σ strelice na rubovima meniskusa (koso gore-van) -->
-  <line x1="573" y1="244" x2="553" y2="222" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u2vtaR)"/>
-  <line x1="619" y1="244" x2="639" y2="222" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u2vtaR)"/>
+  <line x1="573" y1="244" x2="553" y2="222" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u02fup_u2vtaR)"/>
+  <line x1="619" y1="244" x2="639" y2="222" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u02fup_u2vtaR)"/>
   <!-- σ labela -->
   <text x="596" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" font-style="italic" fill="#c0392b" text-anchor="middle">σ</text>
 
@@ -185,19 +180,19 @@
   <text x="556" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c" text-anchor="end">θ</text>
 
   <!-- G strelica (težina stupca tekućine u kapilari, prema dolje) -->
-  <line x1="596" y1="272" x2="596" y2="334" stroke="#2a3a46" stroke-width="2.2" marker-end="url(#u2vtaDk)"/>
+  <line x1="596" y1="272" x2="596" y2="334" stroke="#2a3a46" stroke-width="2.2" marker-end="url(#u02fup_u2vtaDk)"/>
   <text x="604" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#2a3a46">G</text>
 
   <!-- ─── Kota h (desno od kapilare) ─── -->
   <line x1="628" y1="230" x2="634" y2="230" stroke="#b7600c" stroke-width="1.3"/>
   <line x1="628" y1="348" x2="634" y2="348" stroke="#b7600c" stroke-width="1.3"/>
-  <line x1="631" y1="232" x2="631" y2="346" stroke="#b7600c" stroke-width="1.6" marker-start="url(#u2vtaDimL)" marker-end="url(#u2vtaDim)"/>
+  <line x1="631" y1="232" x2="631" y2="346" stroke="#b7600c" stroke-width="1.6" marker-start="url(#u02fup_u2vtaDimL)" marker-end="url(#u02fup_u2vtaDim)"/>
   <text x="642" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" font-style="italic" fill="#b7600c">h</text>
 
   <!-- ─── Kota d (unutarnji promjer, pri vrhu) ─── -->
   <line x1="578" y1="112" x2="578" y2="118" stroke="#b7600c" stroke-width="1.3"/>
   <line x1="614" y1="112" x2="614" y2="118" stroke="#b7600c" stroke-width="1.3"/>
-  <line x1="580" y1="115" x2="612" y2="115" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u2vtaDimL)" marker-end="url(#u2vtaDim)"/>
+  <line x1="580" y1="115" x2="612" y2="115" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u02fup_u2vtaDimL)" marker-end="url(#u02fup_u2vtaDim)"/>
   <text x="596" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="middle">d</text>
 
   <!-- ══════════ DESNI PANEL – JEDNADŽBE (x=716-958) ══════════ -->
@@ -219,8 +214,8 @@
   <!-- θ < 90°: USPON  (mini kapilara lijevo) -->
   <rect x="714" y="250" width="116" height="106" rx="6" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.2"/>
   <!-- Kapilara mini: centar x=756, inner 14px, wall 6px -->
-  <rect x="745" y="258" width="6" height="82" fill="url(#u2vth)" stroke="#3a4a56" stroke-width="0.9"/>
-  <rect x="767" y="258" width="6" height="82" fill="url(#u2vth)" stroke="#3a4a56" stroke-width="0.9"/>
+  <rect x="745" y="258" width="6" height="82" fill="url(#u02fup_u2vth)" stroke="#3a4a56" stroke-width="0.9"/>
+  <rect x="767" y="258" width="6" height="82" fill="url(#u02fup_u2vth)" stroke="#3a4a56" stroke-width="0.9"/>
   <!-- Referentna razina: y=322 -->
   <line x1="720" y1="322" x2="838" y2="322" stroke="#1565c0" stroke-width="1.0" stroke-dasharray="4,3"/>
   <!-- Fluid unutra: y=284..340 (uspon do y=284) -->
@@ -229,10 +224,10 @@
   <path d="M751,290 Q759,282 767,290 L767,284 L751,284 Z" fill="#5baece" opacity="0.85"/>
   <path d="M751,290 Q759,282 767,290" fill="none" stroke="#1565c0" stroke-width="1.6"/>
   <!-- σ strelice mini -->
-  <line x1="748" y1="293" x2="740" y2="284" stroke="#c0392b" stroke-width="1.4" marker-end="url(#u2vtaR)"/>
-  <line x1="770" y1="293" x2="778" y2="284" stroke="#c0392b" stroke-width="1.4" marker-end="url(#u2vtaR)"/>
+  <line x1="748" y1="293" x2="740" y2="284" stroke="#c0392b" stroke-width="1.4" marker-end="url(#u02fup_u2vtaR)"/>
+  <line x1="770" y1="293" x2="778" y2="284" stroke="#c0392b" stroke-width="1.4" marker-end="url(#u02fup_u2vtaR)"/>
   <!-- h strelica gore -->
-  <line x1="784" y1="290" x2="784" y2="322" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u2vtaDimL)" marker-end="url(#u2vtaDim)"/>
+  <line x1="784" y1="290" x2="784" y2="322" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u02fup_u2vtaDimL)" marker-end="url(#u02fup_u2vtaDim)"/>
   <!-- Tekst -->
   <text x="772" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1565c0" text-anchor="middle">θ &lt; 90°</text>
   <text x="772" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">USPON</text>
@@ -240,8 +235,8 @@
   <!-- θ > 90°: PAD  (mini kapilara desno) -->
   <rect x="836" y="250" width="116" height="106" rx="6" fill="#fff0ee" stroke="#c0392b" stroke-width="1.2"/>
   <!-- Kapilara mini: centar x=878 -->
-  <rect x="867" y="258" width="6" height="82" fill="url(#u2vth)" stroke="#3a4a56" stroke-width="0.9"/>
-  <rect x="889" y="258" width="6" height="82" fill="url(#u2vth)" stroke="#3a4a56" stroke-width="0.9"/>
+  <rect x="867" y="258" width="6" height="82" fill="url(#u02fup_u2vth)" stroke="#3a4a56" stroke-width="0.9"/>
+  <rect x="889" y="258" width="6" height="82" fill="url(#u02fup_u2vth)" stroke="#3a4a56" stroke-width="0.9"/>
   <!-- Referentna razina: y=296 -->
   <line x1="842" y1="296" x2="960" y2="296" stroke="#c0392b" stroke-width="1.0" stroke-dasharray="4,3"/>
   <!-- Fluid unutra: y=296..340 (pada ispod razine do y=316) -->
@@ -250,10 +245,10 @@
   <path d="M873,314 Q881,322 889,314 L889,316 L873,316 Z" fill="#9b4040" opacity="0.55"/>
   <path d="M873,314 Q881,322 889,314" fill="none" stroke="#c0392b" stroke-width="1.6"/>
   <!-- σ strelice mini - prema dolje-van (za θ>90°) -->
-  <line x1="870" y1="317" x2="860" y2="328" stroke="#c0392b" stroke-width="1.4" marker-end="url(#u2vtaR)"/>
-  <line x1="892" y1="317" x2="902" y2="328" stroke="#c0392b" stroke-width="1.4" marker-end="url(#u2vtaR)"/>
+  <line x1="870" y1="317" x2="860" y2="328" stroke="#c0392b" stroke-width="1.4" marker-end="url(#u02fup_u2vtaR)"/>
+  <line x1="892" y1="317" x2="902" y2="328" stroke="#c0392b" stroke-width="1.4" marker-end="url(#u02fup_u2vtaR)"/>
   <!-- h (pad) strelica dolje -->
-  <line x1="906" y1="296" x2="906" y2="314" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u2vtaDimL)" marker-end="url(#u2vtaDim)"/>
+  <line x1="906" y1="296" x2="906" y2="314" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u02fup_u2vtaDimL)" marker-end="url(#u02fup_u2vtaDim)"/>
   <!-- Tekst -->
   <text x="894" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#c0392b" text-anchor="middle">θ &gt; 90°</text>
   <text x="894" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b" text-anchor="middle">PAD</text>

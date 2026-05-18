@@ -841,6 +841,186 @@ Ovaj primjer zatvara mrežni sloj <span class="mf1-ch-ref"><span class="mf1-ch-c
 3. Ukupni pad između spremnika mora biti jednak zbroju gubitaka u dovodu, paralelnom dijelu i odvodu; ako taj zbroj ne vrati $H$, mreža nije zatvorena.
 :::
 
+::: {.mf1-ch}
+<p class="mf1-box-label">Cjeloviti zadatak - Radna točka crpka⇄cjevovod: presjecište karakteristika i utjecaj regulacijskog ventila <span class="mf1-level">T4</span></p>
+
+**Zadano**
+
+Inženjer ne dimenzionira crpku tako da računa "crpkin napor" zasebno i "otpor sustava" zasebno. Pravi pogonski uvjet je **radna točka** – presjecište **dvije** karakteristike: $H_p(Q)$ koju crpka može dati i $H_s(Q)$ koju sustav (cjevovod, geodetska visina, lokalni elementi) traži. Tek na tom presjecištu vrijedi:
+
+$$
+H_p(Q_{op}) = H_s(Q_{op})
+$$
+
+i pri tom protoku $Q_{op}$ crpka stvarno radi.
+
+Ovaj zadatak rješava prvu radnu točku, zatim **mijenja sustav** djelomičnim zatvaranjem regulacijskog ventila i pronalazi **novu** radnu točku.
+
+**Karakteristika crpke** (mjerena, aproksimirana paraboličnom funkcijom):
+
+$$
+H_p(Q) = H_0 - a_p Q^2 = 25 - 0{,}0175 \cdot Q^2 \quad [\text{m, } Q \text{ u L/s}]
+$$
+
+Karakteristične točke: $H_p(0) = 25\ \text{m}$, $H_p(20) = 18\ \text{m}$.
+
+**Sustav (geometrija i fluid):**
+
+- Geodetska razlika između spremnika i potrošača: $\Delta z = 6{,}0\ \text{m}$
+- Duljina cjevovoda (od spremnika do potrošača): $L = 40\ \text{m}$
+- Promjer cijevi: $D = 80\ \text{mm}$
+- Koeficijent linijskog gubitka: $\lambda = 0{,}022$
+- Zbroj koeficijenata lokalnih gubitaka u izvornom stanju: $\sum\xi_0 = 4$
+- Voda: $\rho = 1000\ \text{kg/m}^3$, $g = 9{,}81\ \text{m/s}^2$
+- Učinkovitost crpke: $\eta = 0{,}75$
+
+**Scenarij promjene:** Regulacijski ventil na cjevovodu je djelomično zatvoren, dodajući $\xi_{vent} = 8$ lokalnim gubicima.
+
+**Traženo**
+
+1. Izvesti karakteristiku sustava $H_s(Q)$ za izvorno stanje (otvoren ventil).
+2. Odrediti **radnu točku 1** (presjecište $H_p$ i $H_{s,0}$): protok $Q_{op,1}$ i napor $H_{op,1}$.
+3. Električna snaga koju crpka stvarno troši u radnoj točki 1 (uz zadanu $\eta$).
+4. Izvesti novu karakteristiku $H_{s,1}(Q)$ s djelomično zatvorenim ventilom.
+5. Odrediti **radnu točku 2**: koliko se smanji protok i koliko poraste napor crpke.
+6. Procijeniti hidrauličku snagu koja se rasipa **samo na ventilu** u stanju 2. Što je s ukupnom električnom snagom koju crpka troši?
+
+![Karakteristika crpke $H_p(Q) = 25 - 0{,}0175 Q^2$ i sustava $H_s(Q) = 6 + 0{,}0303 Q^2$. Radna točka pri presjecištu: $Q_{op} \approx 20$ L/s, $H_{op} \approx 18$ m. Djelomično zatvaranje ventila zakreće $H_s$ "uvis" i pomiče radnu točku ulijevo.](../assets/print/u13_ch2_radna_tocka.svg){#fig-u13-radna-tocka fig-align="center"}
+
+**Pretpostavke i model**
+
+Crpka i sustav rade u stacionarnom stanju. Crpka je idealizirano modelirana paraboličnom karakteristikom $H_p = H_0 - a_p Q^2$ (uobičajeno za radijalne centrifugalne crpke u području oko nominalne radne točke).
+
+Karakteristika sustava zbraja **statički** dio (geodetska visina $\Delta z$ – ne ovisi o $Q$) i **dinamički** dio (svi gubici, kvadratno ovisni o $Q$):
+
+$$
+H_s(Q) = \Delta z + \left(\lambda \frac{L}{D} + \sum\xi\right) \frac{v^2}{2g}, \qquad v = \frac{Q}{A}, \qquad A = \frac{\pi D^2}{4}
+$$
+
+Ventil djeluje **isključivo** kroz povećanje $\sum\xi$ – ne mijenja geometriju ni $\Delta z$ ni geometrijski $\lambda L/D$.
+
+**Rješenje**
+
+**1. Karakteristika sustava (otvoren ventil).** Površina presjeka:
+
+$$
+A = \frac{\pi D^2}{4} = \frac{\pi \cdot 0{,}080^2}{4} \approx 5{,}03 \cdot 10^{-3}\ \text{m}^2
+$$
+
+Brzinski tlak po protoku (s $Q$ u m³/s):
+
+$$
+\frac{v^2}{2g} = \frac{(Q/A)^2}{2g} = \frac{Q^2}{2gA^2} \approx \frac{Q^2}{2 \cdot 9{,}81 \cdot (5{,}03 \cdot 10^{-3})^2} \approx 2017 \cdot Q^2
+$$
+
+Linijski i lokalni faktor (otvoren ventil):
+
+$$
+\lambda \frac{L}{D} + \sum\xi_0 = 0{,}022 \cdot \frac{40}{0{,}080} + 4 = 11 + 4 = 15
+$$
+
+$$
+H_{s,0}(Q) = 6 + 15 \cdot 2017 \cdot Q^2 \approx 6 + 30\,250 \cdot Q^2 \quad [\text{Q u m³/s}]
+$$
+
+Pretvorba na $Q$ u L/s ($Q_{m³/s} = Q_{L/s} \cdot 10^{-3}$, dakle $Q^2$ se pomnoži s $10^{-6}$):
+
+$$
+H_{s,0}(Q) = 6 + 0{,}0303 \cdot Q^2 \quad [\text{m, } Q \text{ u L/s}]
+$$
+
+**2. Radna točka 1.** Iz $H_p(Q) = H_{s,0}(Q)$:
+
+$$
+25 - 0{,}0175 Q^2 = 6 + 0{,}0303 Q^2
+$$
+
+$$
+19 = 0{,}0478 Q^2 \quad \Rightarrow \quad Q^2 \approx 397{,}5 \quad \Rightarrow \quad Q_{op,1} \approx 19{,}94\ \text{L/s} \approx 20{,}0\ \text{L/s}
+$$
+
+$$
+H_{op,1} = 25 - 0{,}0175 \cdot 397{,}5 \approx 18{,}0\ \text{m}
+$$
+
+**3. Električna snaga crpke u radnoj točki 1:**
+
+$$
+P_{el,1} = \frac{\rho g Q_{op,1} H_{op,1}}{\eta} = \frac{1000 \cdot 9{,}81 \cdot 0{,}01994 \cdot 18{,}0}{0{,}75} \approx 4{,}70\ \text{kW}
+$$
+
+**4. Karakteristika sustava sa zatvorenijim ventilom.** Novi zbroj koeficijenata: $\sum\xi_1 = 4 + 8 = 12$.
+
+$$
+\lambda \frac{L}{D} + \sum\xi_1 = 11 + 12 = 23
+$$
+
+$$
+H_{s,1}(Q) = 6 + 23 \cdot 2017 \cdot Q^2 \approx 6 + 0{,}0464 \cdot Q^2 \quad [\text{m, } Q \text{ u L/s}]
+$$
+
+**5. Radna točka 2:**
+
+$$
+25 - 0{,}0175 Q^2 = 6 + 0{,}0464 Q^2 \quad \Rightarrow \quad 19 = 0{,}0639 Q^2
+$$
+
+$$
+Q^2 \approx 297{,}3 \quad \Rightarrow \quad Q_{op,2} \approx 17{,}24\ \text{L/s}
+$$
+
+$$
+H_{op,2} = 25 - 0{,}0175 \cdot 297{,}3 \approx 19{,}80\ \text{m}
+$$
+
+Promjene radne točke:
+
+$$
+\Delta Q = Q_{op,2} - Q_{op,1} \approx -2{,}76\ \text{L/s} \quad (\approx -14\%)
+$$
+
+$$
+\Delta H = H_{op,2} - H_{op,1} \approx +1{,}80\ \text{m} \quad (\approx +10\%)
+$$
+
+**6. Snaga rasuta na ventilu.** Gubitak na samom ventilu pri $Q_{op,2}$:
+
+$$
+h_{vent} = \xi_{vent} \cdot \frac{v^2}{2g}
+$$
+
+$$
+v_2 = \frac{Q_{op,2}}{A} = \frac{0{,}01724}{5{,}03 \cdot 10^{-3}} \approx 3{,}43\ \text{m/s}
+$$
+
+$$
+\frac{v_2^2}{2g} = \frac{3{,}43^2}{19{,}62} \approx 0{,}60\ \text{m}
+$$
+
+$$
+h_{vent} \approx 8 \cdot 0{,}60 \approx 4{,}80\ \text{m}
+$$
+
+$$
+P_{disip,vent} = \rho g Q_{op,2} h_{vent} = 1000 \cdot 9{,}81 \cdot 0{,}01724 \cdot 4{,}80 \approx 0{,}81\ \text{kW}
+$$
+
+Ukupna električna snaga u stanju 2:
+
+$$
+P_{el,2} = \frac{\rho g Q_{op,2} H_{op,2}}{\eta} = \frac{1000 \cdot 9{,}81 \cdot 0{,}01724 \cdot 19{,}80}{0{,}75} \approx 4{,}46\ \text{kW}
+$$
+
+**Provjera i komentar**
+
+1. **Radna točka nije ona koja je u datasheetu crpke.** Crpkin "$H = 18\ \text{m}$ pri $Q = 20$ L/s" je samo **jedna točka** na njenoj krivulji $H_p(Q)$. To što stvarno radi (Q_op, H_op) određuje sustav, a ne crpka. U ovom slučaju početne radne točke prilično prate katalošku vrijednost, jer je sustav pažljivo projektiran.
+2. **Zatvaranje ventila ne smanjuje snagu, već je preraspodjeljuje.** U stanju 1 ($Q = 20$, $H = 18$): električna snaga $4{,}70$ kW. U stanju 2 ($Q = 17{,}2$, $H = 19{,}8$): električna snaga $4{,}46$ kW. Snaga se **smanjila** svega 5% iako se protok smanjio za 14%. Razlog je da crpka u stanju 2 radi pri **višem** naporu (paradoksalno, zatvaranje ventila čini cijev "težom" za crpku po jedinici protoka).
+3. **Od smanjene snage, dio sad ide u ventil**: $P_{disip,vent} \approx 0{,}81\ \text{kW}$ se **rasipa kao toplina u ventilu**, a samo $4{,}46 - 0{,}81 = 3{,}65$ kW ide u korisni rad (cjevovod + geodetski uspon). U stanju 1 ($\xi_{vent} = 0$) sva potrošena snaga ide u cjevovod i geodetski uspon. Zato **regulacija protoka prigušnim ventilom je energetski rasipnik** – dvije trećine smanjenja protoka plaća se rasipanjem energije u ventilu.
+4. **Energetski razumna alternativa** je **frekvencijska regulacija** broja okretaja crpke. Pri smanjenju $n$ od $100\%$ do $86\%$ ($Q \propto n$) crpka isporučuje manje, ali joj se i krivulja $H_p$ pomiče prema dolje – nova radna točka ima manji protok bez umjetnih gubitaka u ventilu. Snaga pada **kockoljiko** s $n$ (afinitetni zakoni: $P \propto n^3$), pa je smanjenje protoka za 14% zapravo $\approx -36\%$ snage – sedam puta manje gubitaka od prigušivanja.
+5. **Granični slučaj** $\xi_{vent} \to \infty$ (potpuno zatvoren ventil): karakteristika sustava postaje vertikalna ($H_s$ raste neograničeno za bilo koji $Q > 0$), pa se sustav siječe s $H_p$ pri $Q = 0$ na vertikalnoj osi. Crpka radi pri "shut-off head" $H_0 = 25$ m bez protoka. Ovo je opasno stanje za centrifugalnu crpku: voda u kućištu kruži bez izlaska, zagrijava se i može u nekoliko minuta dovesti do oštećenja rotora. Zato sve centrifugalne crpke imaju ili **bypass** (mali otvor koji uvijek propušta dio protoka) ili automatsko isključivanje pri shut-off uvjetu.
+6. **Inženjerska poruka**: regulacijski ventil nije problem sam po sebi (često je nužan za precizno doziranje ili sigurnost). Problem je kad se koristi kao **trajna** mjera regulacije protoka. Za varijabilni protok u velikoj instalaciji rješenje je **frekvencijski regulator** crpke; ventil ostaje za fina podešavanja, hitno zatvaranje i izolaciju.
+:::
+
 Prije zadataka vrijedi držati na okupu osnovna pravila mreže:
 
 - u seriji se zbrajaju gubici pri istom protoku

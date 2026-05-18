@@ -1,26 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" role="img"
-     aria-labelledby="u2kwT u2kwD" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u02fkvz_u2kwT u02fkvz_u2kwD" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:680px;height:auto;">
-  <title id="u2kwT">Kapilarni uspon vlage kroz opečni zid</title>
-  <desc id="u2kwD">Vlaga kapilarno uspon kroz opečni zid: d_por=0,12 mm, θ=40°, σ=0,072 N/m, ρ=998 kg/m³ daje h≈18,8 cm. Umanjenjem pora na d=0,06 mm uspon se udvostručuje na h≈37,6 cm. Inset: poprečni presjek kapilarne pore s meniskusom i kutom θ.</desc>
+  <title id="u02fkvz_u2kwT">Kapilarni uspon vlage kroz opečni zid</title>
+  <desc id="u02fkvz_u2kwD">Vlaga kapilarno uspon kroz opečni zid: d_por=0,12 mm, θ=40°, σ=0,072 N/m, ρ=998 kg/m³ daje h≈18,8 cm. Umanjenjem pora na d=0,06 mm uspon se udvostručuje na h≈37,6 cm. Inset: poprečni presjek kapilarne pore s meniskusom i kutom θ.</desc>
   <defs>
-    <marker id="u2kwaR"  markerWidth="10" markerHeight="8" refX="9"  refY="4"   orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u2kwaRev" markerWidth="10" markerHeight="8" refX="1"  refY="4"   orient="auto-start-reverse"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u2kwaBl" markerWidth="10" markerHeight="8" refX="9"  refY="4"   orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/></marker>
-    <marker id="u2kwaDim"  markerWidth="8" markerHeight="8" refX="7"  refY="4"  orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u2kwaDimL" markerWidth="8" markerHeight="8" refX="1"  refY="4"  orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <marker id="u02fkvz_u2kwaR"  markerWidth="10" markerHeight="8" refX="9"  refY="4"   orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
+    <marker id="u02fkvz_u2kwaRev" markerWidth="10" markerHeight="8" refX="1"  refY="4"   orient="auto-start-reverse"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
+    <marker id="u02fkvz_u2kwaBl" markerWidth="10" markerHeight="8" refX="9"  refY="4"   orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/></marker>
+    <marker id="u02fkvz_u2kwaDim"  markerWidth="8" markerHeight="8" refX="7"  refY="4"  orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <marker id="u02fkvz_u2kwaDimL" markerWidth="8" markerHeight="8" refX="1"  refY="4"  orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
     <!-- Gradijenti -->
-    <linearGradient id="u2kwbrick" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u02fkvz_u2kwbrick" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d4795a"/><stop offset="100%" stop-color="#a04030"/>
     </linearGradient>
-    <linearGradient id="u2kwsoil" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u02fkvz_u2kwsoil" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#8b6840"/><stop offset="100%" stop-color="#5a3e20"/>
     </linearGradient>
-    <linearGradient id="u2kwmoist" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u02fkvz_u2kwmoist" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="rgba(173,216,230,0.0)"/><stop offset="100%" stop-color="rgba(70,140,200,0.75)"/>
     </linearGradient>
     <!-- Ciglasti pattern -->
-    <pattern id="u2kwbp" width="20" height="12" patternUnits="userSpaceOnUse">
+    <pattern id="u02fkvz_u2kwbp" width="20" height="12" patternUnits="userSpaceOnUse">
       <rect width="20" height="12" fill="none"/>
       <rect x="0"  y="0" width="18" height="5"  rx="0.5" fill="#c26040" opacity="0.55"/>
       <rect x="10" y="6" width="18" height="5"  rx="0.5" fill="#b04030" opacity="0.5"/>
@@ -28,11 +28,11 @@
       <line x1="0"  y1="11" x2="20" y2="11" stroke="#a03520" stroke-width="0.6" opacity="0.4"/>
     </pattern>
     <!-- Hatch tla -->
-    <pattern id="u2kwsh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u02fkvz_u2kwsh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#6a4a20" stroke-width="1.8"/>
     </pattern>
     <!-- Hatch beton -->
-    <pattern id="u2kwch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u02fkvz_u2kwch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#8a9aaa" stroke-width="1.8"/>
     </pattern>
   </defs>
@@ -41,13 +41,9 @@
   <rect width="680" height="460" fill="#f4f6f8"/>
   <rect x="8" y="8" width="664" height="444" rx="12" fill="#ffffff" stroke="#d2dae2" stroke-width="1.5"/>
 
-  <!-- Naslov -->
-  <text x="340" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530" text-anchor="middle">Kapilarni uspon vlage kroz opečni zid</text>
-  <text x="340" y="51" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">d_por = 0,12 mm  |  θ = 40°  |  σ = 0,072 N/m  |  ρ = 998 kg/m³  →  h ≈ 18,8 cm</text>
-
   <!-- ══════════════════ TLO ══════════════════ -->
-  <rect x="80" y="386" width="300" height="30" fill="url(#u2kwsoil)" stroke="#3a2a10" stroke-width="1.4"/>
-  <rect x="80" y="386" width="300" height="30" fill="url(#u2kwsh)" opacity="0.30"/>
+  <rect x="80" y="386" width="300" height="30" fill="url(#u02fkvz_u2kwsoil)" stroke="#3a2a10" stroke-width="1.4"/>
+  <rect x="80" y="386" width="300" height="30" fill="url(#u02fkvz_u2kwsh)" opacity="0.30"/>
   <text x="230" y="407" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#f0d090" text-anchor="middle">tlo (zasićena zona)</text>
 
   <!-- Razina tla (referentna, dashed) -->
@@ -56,20 +52,20 @@
 
   <!-- ══════════════════ OPEČNI ZID ══════════════════ -->
   <!-- Zid: x=80..230, y=60..386 -->
-  <rect x="80" y="60" width="150" height="326" fill="url(#u2kwbrick)" stroke="#6a2818" stroke-width="2.0"/>
-  <rect x="80" y="60" width="150" height="326" fill="url(#u2kwbp)" opacity="0.70"/>
+  <rect x="80" y="60" width="150" height="326" fill="url(#u02fkvz_u2kwbrick)" stroke="#6a2818" stroke-width="2.0"/>
+  <rect x="80" y="60" width="150" height="326" fill="url(#u02fkvz_u2kwbp)" opacity="0.70"/>
   <!-- Granica zida naglašena -->
   <rect x="80" y="60" width="150" height="326" fill="none" stroke="#5a1808" stroke-width="2.0"/>
 
   <!-- Zona vlage – od tla do h=188px gore (h≈18,8cm ~ 188px u mjerilu 10px=1cm) -->
   <!-- Skala: zid visina=326px, predstavlja ≈32,6cm → 10px/cm ok -->
   <!-- h=18,8cm → 188px; y razine = 386, gornja granica vlage = 386-188 = 198 -->
-  <rect x="80" y="198" width="150" height="188" fill="url(#u2kwmoist)"/>
+  <rect x="80" y="198" width="150" height="188" fill="url(#u02fkvz_u2kwmoist)"/>
 
   <!-- Strelice vlage prema gore (3 strelice unutar zida) -->
-  <line x1="120" y1="260" x2="120" y2="215" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u2kwaBl)"/>
-  <line x1="155" y1="270" x2="155" y2="225" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u2kwaBl)"/>
-  <line x1="190" y1="260" x2="190" y2="215" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u2kwaBl)"/>
+  <line x1="120" y1="260" x2="120" y2="215" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u02fkvz_u2kwaBl)"/>
+  <line x1="155" y1="270" x2="155" y2="225" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u02fkvz_u2kwaBl)"/>
+  <line x1="190" y1="260" x2="190" y2="215" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u02fkvz_u2kwaBl)"/>
 
   <!-- Gornja granica vlage (isprekidana plava linija) -->
   <line x1="72" y1="198" x2="234" y2="198" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="6,4"/>
@@ -79,7 +75,7 @@
   <!-- Kota h (desno od zida, od tla do gornje vlage) -->
   <line x1="232" y1="198" x2="239" y2="198" stroke="#b7600c" stroke-width="1.2"/>
   <line x1="232" y1="386" x2="239" y2="386" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="236" y1="200" x2="236" y2="384" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u2kwaDimL)" marker-end="url(#u2kwaDim)"/>
+  <line x1="236" y1="200" x2="236" y2="384" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u02fkvz_u2kwaDimL)" marker-end="url(#u02fkvz_u2kwaDim)"/>
   <text x="244" y="297" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#b7600c">h</text>
   <text x="244" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">≈ 18,8 cm</text>
   <text x="244" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(d=0,12mm)</text>
@@ -91,24 +87,24 @@
 
   <!-- Kapilara (pore): centar x=409, y=125, r_in=18, stjenka 7 -->
   <!-- Lijeva stjenka -->
-  <rect x="384" y="80" width="7" height="66" fill="url(#u2kwch)" stroke="#4a6070" stroke-width="1.0"/>
+  <rect x="384" y="80" width="7" height="66" fill="url(#u02fkvz_u2kwch)" stroke="#4a6070" stroke-width="1.0"/>
   <!-- Desna stjenka -->
-  <rect x="418" y="80" width="7" height="66" fill="url(#u2kwch)" stroke="#4a6070" stroke-width="1.0"/>
+  <rect x="418" y="80" width="7" height="66" fill="url(#u02fkvz_u2kwch)" stroke="#4a6070" stroke-width="1.0"/>
   <!-- Voda u pori (do meniskusa) -->
   <rect x="391" y="112" width="27" height="34" fill="#6bafd0"/>
   <!-- Meniskus (konkavan, θ=40°, luk blago udubljen) -->
   <path d="M391,118 Q409,106 427,118 L427,112 L391,112 Z" fill="#6bafd0"/>
   <path d="M391,118 Q409,106 427,118" fill="none" stroke="#1565c0" stroke-width="1.8"/>
   <!-- σ strelice na meniskusu (kose) -->
-  <line x1="388" y1="122" x2="378" y2="111" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u2kwaR)"/>
-  <line x1="430" y1="122" x2="440" y2="111" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u2kwaR)"/>
+  <line x1="388" y1="122" x2="378" y2="111" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u02fkvz_u2kwaR)"/>
+  <line x1="430" y1="122" x2="440" y2="111" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u02fkvz_u2kwaR)"/>
   <!-- θ kut oznaka -->
   <path d="M391,118 A9,9 0 0 1 391,130" fill="none" stroke="#b7600c" stroke-width="1.2"/>
   <text x="376" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#b7600c" text-anchor="end">θ=40°</text>
   <!-- σ labela -->
   <text x="409" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" font-weight="700" fill="#c0392b" text-anchor="middle">σ</text>
   <!-- d kota u insertu -->
-  <line x1="391" y1="76" x2="427" y2="76" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u2kwaDimL)" marker-end="url(#u2kwaDim)"/>
+  <line x1="391" y1="76" x2="427" y2="76" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u02fkvz_u2kwaDimL)" marker-end="url(#u02fkvz_u2kwaDim)"/>
   <text x="409" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#b7600c" text-anchor="middle">d=0,12 mm</text>
 
   <!-- ══════════════════ JEDNADŽBA + USPOREDBA (desno, dolje) ══════════════════ -->

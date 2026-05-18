@@ -976,6 +976,142 @@ Ovaj `T4` zadatak zatvara stvarni rotorni rez <span class="mf1-ch-ref"><span cla
 :::
 
 ::: {.mf1-ch}
+<p class="mf1-box-label">Cjeloviti zadatak - Krivulja snage $P(u)$ Peltonove turbine: traženje optimalne brzine lopatice <span class="mf1-level">T3</span></p>
+
+**Zadano**
+
+U prethodnom zadatku Peltonov rotor s jednim mlazom dao je silu i moment pri **fiksiranoj** brzini lopatice $u$. Sada se postavlja drugačije pitanje: pri kojem $u$ rotor daje **maksimalnu snagu**?
+
+Snaga rotora ovisi i o sili (koja pada s rastom $u$, jer relativni dotok pada) i o brzini (koja raste s $u$). Krivulja $P(u)$ je dakle **parabolična** s maksimumom negdje između $u = 0$ (lopatica miruje, ne čini rad) i $u = c_1$ (sila je nula, lopatica "bježi" od mlaza). Ova analiza daje **projektnu brzinu vrtnje** Peltonove turbine.
+
+**Mlaznica i lopatica**
+
+- Promjer mlaza: $d = 50\ \text{mm}$
+- Brzina mlaza: $c_1 = 30\ \text{m/s}$
+- Izlazni kut lopatice: $\beta_2 = 165^\circ$ (gotovo U-lom, $15^\circ$ otklon za odvod vode)
+- Koeficijent relativnog izlaza (gubitak u lopatici): $k = 0{,}90$ (tj. $w_2 = k \, w_1$)
+- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
+- Polumjer Peltonovog rotora: $R = 0{,}20\ \text{m}$
+
+**Traženo**
+
+1. Funkcionalni izraz za silu $F(u)$ i snagu $P(u)$ na lopatici (sve lopatice rotora, ne samo jedna – maseni protok je puni sapnički).
+2. Brzinu lopatice $u_{opt}$ pri kojoj je snaga maksimalna (analitički iz $dP/du = 0$).
+3. Iznos $P_{max}$ i odgovarajuću brzinu vrtnje rotora $n_{opt}$.
+4. Hidrauličku snagu mlaza $P_{hid}$ i maksimalnu hidrauličku korisnost rotora $\eta_{max} = P_{max}/P_{hid}$.
+5. Snagu pri tri "necjelovita" radna stanja: $u = c_1/4$, $u = c_1/3$, $u = 2c_1/3$. Komentirati kako se snaga mijenja kad rotor odstupi od optimalne brzine.
+
+![Krivulja $P(u)$ Peltonove lopatice ($c_1 = 30$ m/s, $\beta_2 = 165^\circ$): parabolična s maksimumom pri $u = c_1/2 = 15$ m/s. Pri rubovima $u = 0$ i $u = c_1$ snaga pada na nulu.](../assets/print/u12_ch4_krivulja_snage.svg){#fig-u12-krivulja-snage fig-align="center"}
+
+**Pretpostavke i model**
+
+Promatra se Peltonov rotor s **više lopatica** raspoređenih po obodu tako da svaka lopatica zauzme mjesto prethodne prije nego što mlaz "izaide" iz radnog područja – posljedica je da **puni** sapnički maseni protok kontinuirano predaje impuls rotoru:
+
+$$
+\dot m = \rho A c_1, \qquad A = \frac{\pi d^2}{4}
+$$
+
+Tangencijalna sila na lopaticu (u apsolutnom okviru, projekcija promjene količine gibanja na os gibanja oboda):
+
+$$
+F(u) = \dot m \cdot (c_1 - u) \cdot (1 - k \cos\beta_2)
+$$
+
+Faktor $(1 - k \cos\beta_2)$ kvantificira **koliko impulsa lopatica preuzme**: za savršeni U-lom ($\beta_2 = 180^\circ$, $k = 1$) iznosi $2$ – udvostručuje impuls jer mlaz potpuno mijenja smjer. Za $\beta_2 = 165^\circ$ i $k = 0{,}90$ iznosi $1 - 0{,}90 \cdot (-0{,}966) = 1 + 0{,}870 = 1{,}870$.
+
+Snaga je sila puta brzina oboda: $P(u) = F(u) \cdot u$, što daje paraboličnu funkciju s nulom na oba kraja ($u = 0$ i $u = c_1$).
+
+**Rješenje**
+
+**1. Funkcionalni izrazi.** Površina mlaza:
+
+$$
+A = \frac{\pi d^2}{4} = \frac{\pi \cdot 0{,}050^2}{4} \approx 1{,}963 \cdot 10^{-3}\ \text{m}^2
+$$
+
+Puni maseni protok:
+
+$$
+\dot m = \rho A c_1 = 998 \cdot 1{,}963 \cdot 10^{-3} \cdot 30 \approx 58{,}77\ \text{kg/s}
+$$
+
+Sila:
+
+$$
+F(u) = \dot m \cdot (c_1 - u) \cdot 1{,}870 = 58{,}77 \cdot 1{,}870 \cdot (30 - u) \approx 109{,}9 \cdot (30 - u)\ \text{N}
+$$
+
+(s $u$ u m/s i $F$ u N).
+
+Snaga:
+
+$$
+P(u) = F(u) \cdot u = 109{,}9 \cdot (30 - u) \cdot u\ \text{W}
+$$
+
+**2. Analitički optimum.** Derivacija po $u$:
+
+$$
+\frac{dP}{du} = 109{,}9 \cdot \frac{d}{du}\left[(30 - u) u\right] = 109{,}9 \cdot (30 - 2u)
+$$
+
+Nula daje:
+
+$$
+u_{opt} = \frac{c_1}{2} = \frac{30}{2} = 15\ \text{m/s}
+$$
+
+Ovaj rezultat **ne ovisi** o $\beta_2$, $k$, $\rho$, $A$ – samo o $c_1$. Faktor $1/2$ je **univerzalna** vrijednost za Peltonove turbine.
+
+**3. Maksimalna snaga i broj okretaja:**
+
+$$
+P_{max} = P(u_{opt}) = 109{,}9 \cdot (30 - 15) \cdot 15 = 109{,}9 \cdot 225 \approx 24\,728\ \text{W} \approx 24{,}7\ \text{kW}
+$$
+
+Kutna brzina rotora i broj okretaja:
+
+$$
+\omega_{opt} = \frac{u_{opt}}{R} = \frac{15}{0{,}20} = 75\ \text{rad/s}
+$$
+
+$$
+n_{opt} = \frac{\omega_{opt} \cdot 60}{2\pi} = \frac{75 \cdot 60}{2\pi} \approx 716\ \text{min}^{-1}
+$$
+
+**4. Hidraulička korisnost:**
+
+$$
+P_{hid} = \frac{1}{2}\dot m \, c_1^2 = \frac{1}{2} \cdot 58{,}77 \cdot 30^2 \approx 26\,447\ \text{W} \approx 26{,}4\ \text{kW}
+$$
+
+$$
+\eta_{max} = \frac{P_{max}}{P_{hid}} = \frac{24{,}7}{26{,}4} \approx 0{,}936 \approx 93{,}6\%
+$$
+
+**5. Snaga izvan optimuma** (faktor $109{,}9$ u kW računa se kao $109{,}9 \cdot (30-u) \cdot u / 1000$):
+
+- $u = c_1/4 = 7{,}5\ \text{m/s}$:  $P = 109{,}9 \cdot 22{,}5 \cdot 7{,}5 / 1000 \approx 18{,}5\ \text{kW}$ ($75\%$ od $P_{max}$)
+- $u = c_1/3 = 10\ \text{m/s}$:  $P = 109{,}9 \cdot 20 \cdot 10 / 1000 \approx 22{,}0\ \text{kW}$ ($89\%$ od $P_{max}$)
+- $u = 2c_1/3 = 20\ \text{m/s}$: $P = 109{,}9 \cdot 10 \cdot 20 / 1000 \approx 22{,}0\ \text{kW}$ ($89\%$ od $P_{max}$)
+
+**Provjera i komentar**
+
+1. Krivulja $P(u)$ je **simetrična** parabola oko $u_{opt} = c_1/2$. Vrijednosti pri $u = c_1/3$ i $u = 2c_1/3$ daju **istu** snagu ($\approx 22\ \text{kW}$, oko 89% maksimuma) – jer obje točke su jednako udaljene od optimuma. Ova simetrija je matematička posljedica oblika $P \propto (c_1 - u) u$ i daje inženjeru fleksibilnost: rotor smije raditi u **prozoru** brzina od oko $u_{opt} \pm c_1/6$ s minimalnim gubitkom snage.
+2. **Univerzalnost** $u_{opt} = c_1/2$ je važna projektna činjenica: za zadanu visinu pada (koja određuje $c_1$ preko $c_1 = \sqrt{2gH}$) i zadanu brzinu vrtnje generatora ($n_{gen}$ fiksiran zbog mrežne frekvencije), polumjer rotora **mora** zadovoljiti:
+
+$$
+R = \frac{u_{opt}}{\omega} = \frac{c_1/2}{2\pi n / 60} = \frac{c_1 \cdot 30}{2\pi n}
+$$
+
+To je glavna geometrijska jednadžba za projektiranje Peltonove turbine.
+
+3. Razlika između maksimalne hidrauličke korisnosti rotora ($\approx 93{,}6\%$) i ukupne korisnosti turbine ($\approx 88\%$ za moderne strojeve) ide na račun: gubitak u lopatici ($k < 1$), gubitak na mlaznici (kontrakcija mlaza), volumetrijski gubici (voda koja "promaši" lopatice) i mehanički gubici u ležajima. Naš model uzima u obzir samo **prvi** od tih efekata.
+4. **Pad snage na rubovima parabole** je didaktički ključna poruka: ako se rotor zaustavi ($u = 0$, npr. preopterećen generator), snaga pada na **nulu** – ali sila ostaje (i čak je maksimalna pri $u = 0$). Razlika je u tome da sila bez puta ne stvara rad, a generator je upravo "uskratitelj puta". Suprotan rub je još opasniji: ako se generator otkvači i rotor "pobjegne" ($u \to c_1$), ne samo da snaga pada na nulu, nego sila također. Sustav se ne usporava nikakvim povratnim momentom – Peltonova turbina je u **"runaway" stanju**. Zato svaka Peltonova turbina ima **deflektor mlaza** (skreće mlaz mimo rotora pri nuždi) ili **kočno mehaničko zatvaranje** mlaznice.
+5. Krivulja $P(u)$ koja se ovdje dobila vrijedi za **stacionarni** mlaz konstantne brzine $c_1$. Pri stvarnoj turbini, ako se promijeni protok kroz mlaznicu (npr. iglom regulatora), mijenja se i $c_1$, pa krivulja $P(u)$ poprima drugačiji oblik – ali optimum **uvijek** ostaje pri $u/c_1 = 1/2$.
+:::
+
+::: {.mf1-ch}
 <p class="mf1-box-label">Cjeloviti zadatak - Mlazna platforma s četiri sapnice i prag lebdenja <span class="mf1-level">T4</span></p>
 
 **Zadatak**

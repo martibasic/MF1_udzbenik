@@ -1,26 +1,26 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u5v2T u5v2D" preserveAspectRatio="xMidYMid meet"
+     aria-labelledby="u05v2us_u5v2T u05v2us_u5v2D" preserveAspectRatio="xMidYMid meet"
      style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u5v2T">U05 Val 2 – Vertikalna stijenka s tri vodoravne ukrute</title>
-  <desc id="u5v2D">b=1,20 m, H=2,40 m, voda ρ=998 kg/m³. Četiri jednako opterećena polja: y₁=1,20 m, y₂=1,70 m, y₃=2,08 m. F_p≈8,46 kN po polju; y_CP,4=2,244 m.</desc>
+  <title id="u05v2us_u5v2T">U05 Val 2 – Vertikalna stijenka s tri vodoravne ukrute</title>
+  <desc id="u05v2us_u5v2D">b=1,20 m, H=2,40 m, voda ρ=998 kg/m³. Četiri jednako opterećena polja: y₁=1,20 m, y₂=1,70 m, y₃=2,08 m. F_p≈8,46 kN po polju; y_CP,4=2,244 m.</desc>
   <defs>
-    <marker id="u5v2aR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <marker id="u05v2us_u5v2aR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
     </marker>
-    <marker id="u5v2aDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <marker id="u05v2us_u5v2aDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
     </marker>
-    <marker id="u5v2aDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+    <marker id="u05v2us_u5v2aDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
       <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
     </marker>
-    <linearGradient id="u5v2fl" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u05v2us_u5v2fl" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
     </linearGradient>
-    <linearGradient id="u5v2pr" x1="1" y1="0" x2="0" y2="0">
+    <linearGradient id="u05v2us_u5v2pr" x1="1" y1="0" x2="0" y2="0">
       <stop offset="0%" stop-color="#e74c3c" stop-opacity="0.62"/>
       <stop offset="100%" stop-color="#e74c3c" stop-opacity="0.06"/>
     </linearGradient>
-    <pattern id="u5v2wall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u05v2us_u5v2wall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
     </pattern>
   </defs>
@@ -28,14 +28,10 @@
   <rect width="940" height="420" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <!-- Naslov -->
-  <text x="54" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#173043">U05 Val 2 – Vertikalna stijenka s tri vodoravne ukrute</text>
-  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="14.5" fill="#516677">b = 1,20 m · H = 2,40 m · ρ = 998 kg/m³ → četiri jednaka polja, F_p ≈ 8,46 kN po polju</text>
-
   <!-- Mjerilo: 100 px/m; slobodna površina y=115; dno y=355 -->
 
   <!-- Tijelo fluida -->
-  <rect x="82" y="115" width="186" height="243" fill="url(#u5v2fl)" opacity="0.85"/>
+  <rect x="82" y="115" width="186" height="243" fill="url(#u05v2us_u5v2fl)" opacity="0.85"/>
 
   <!-- Lijeva stijenka rezervoara (tanka) -->
   <rect x="80" y="108" width="4" height="255" fill="#909fa8"/>
@@ -49,12 +45,12 @@
 
   <!-- Stijenka s hatching -->
   <rect x="268" y="100" width="42" height="268" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.8"/>
-  <rect x="268" y="100" width="42" height="268" fill="url(#u5v2wall)" opacity="0.50"/>
+  <rect x="268" y="100" width="42" height="268" fill="url(#u05v2us_u5v2wall)" opacity="0.50"/>
 
   <!-- Dijagram tlaka (trokut na lijevoj stijenci x=268) -->
   <!-- Max width 72 px pri dnu (H=2,40m): skala 72/240=0,3 px/px no — scale=30px/m -->
   <!-- At y=355: width=72px → (268-72,355)=(196,355) -->
-  <polygon points="268,115 196,355 268,355" fill="url(#u5v2pr)"/>
+  <polygon points="268,115 196,355 268,355" fill="url(#u05v2us_u5v2pr)"/>
   <line x1="268" y1="115" x2="196" y2="355" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="5,3"/>
   <text x="192" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b" text-anchor="end">p_max = ρgH</text>
 
@@ -87,7 +83,7 @@
   <line x1="310" y1="115" x2="336" y2="115" stroke="#c96c35" stroke-width="1.0"/>
   <line x1="310" y1="355" x2="336" y2="355" stroke="#c96c35" stroke-width="1.0"/>
   <line x1="333" y1="117" x2="333" y2="353" stroke="#c96c35" stroke-width="1.8"
-        marker-start="url(#u5v2aDimL)" marker-end="url(#u5v2aDim)"/>
+        marker-start="url(#u05v2us_u5v2aDimL)" marker-end="url(#u05v2us_u5v2aDim)"/>
   <text x="340" y="241" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e" font-style="italic">H = 2,40 m</text>
 
   <!-- Tick oznake na koti H za y₁,y₂,y₃ -->
