@@ -1,0 +1,73 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
+  <title id="title">U07 Val 3 - kalibracijski modul na granici ulja i vode</title>
+  <desc id="desc">Potpuno uronjeni pravokutni modul vodi se po vodilici kroz granicu ulja i vode, s označenim visinama x i t minus x te silama težine i uzgona.</desc>
+  <rect width="980" height="420" fill="#fffdf8"/>
+  <rect x="32" y="32" width="916" height="356" rx="22" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+  <text x="70" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#173043">U07 - Kalibracijski modul na granici ulja i vode</text>
+  <text x="70" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#587183">Potpuno uronjeno tijelo, dvije gustoće i neutralna vertikalna ravnoteza.</text>
+
+  <text x="92" y="152" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#173043">Poprecni presjek spremnika</text>
+
+  <rect x="100" y="172" width="410" height="175" rx="10" fill="#f7fafb" stroke="#173043" stroke-width="5"/>
+  <rect x="106" y="178" width="398" height="78" fill="#efd89c"/>
+  <rect x="106" y="256" width="398" height="85" fill="#cfe7f3"/>
+  <line x1="106" y1="256" x2="504" y2="256" stroke="#7a8b95" stroke-width="3" stroke-dasharray="10 7"/>
+  <text x="370" y="246" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">granica fluida</text>
+
+  <line x1="304" y1="152" x2="304" y2="352" stroke="#6f7f89" stroke-width="4" stroke-dasharray="10 6"/>
+  <rect x="262" y="206" width="84" height="118" fill="#ffffff" stroke="#173043" stroke-width="5"/>
+
+  <line x1="366" y1="206" x2="366" y2="324" stroke="#c96c35" stroke-width="3" marker-start="url(#arrowOrangeSmall)" marker-end="url(#arrowOrange)"/>
+  <text x="380" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">t</text>
+
+  <line x1="236" y1="256" x2="236" y2="324" stroke="#1976d2" stroke-width="3" marker-start="url(#arrowBlueSmall)" marker-end="url(#arrowBlue)"/>
+  <text x="216" y="296" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">x</text>
+
+  <line x1="216" y1="206" x2="216" y2="256" stroke="#b17a12" stroke-width="3" marker-start="url(#arrowBrownSmall)" marker-end="url(#arrowBrown)"/>
+  <text x="174" y="238" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">t - x</text>
+
+  <line x1="304" y1="192" x2="304" y2="240" stroke="#c23b22" stroke-width="5" marker-end="url(#arrowRed)"/>
+  <text x="318" y="224" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">G</text>
+
+  <line x1="288" y1="300" x2="288" y2="262" stroke="#2e7d32" stroke-width="5" marker-end="url(#arrowGreen)"/>
+  <line x1="320" y1="286" x2="320" y2="250" stroke="#2e7d32" stroke-width="5" marker-end="url(#arrowGreen)"/>
+  <text x="332" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">F_U</text>
+
+  <text x="128" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">ulje, rho_1</text>
+  <text x="128" y="302" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">voda, rho_2</text>
+
+  <text x="590" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#173043">Logika racuna</text>
+  <rect x="580" y="176" width="300" height="150" rx="14" fill="#f7fafb" stroke="#d3d9de" stroke-width="2"/>
+  <text x="602" y="214" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">F_U = rho_1 g A (t - x) + rho_2 g A x</text>
+  <text x="602" y="248" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">Neutralno: F_U = G</text>
+  <text x="602" y="282" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">Dva fluida daju dva doprinosa uzgonu,</text>
+  <text x="602" y="304" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">ali samo jednu vertikalnu ravnotezu.</text>
+
+  <defs>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    </marker>
+    <marker id="arrowOrangeSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
+    </marker>
+    <marker id="arrowBlueSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
+    </marker>
+    <marker id="arrowBrown" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#b17a12"/>
+    </marker>
+    <marker id="arrowBrownSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#b17a12"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c23b22"/>
+    </marker>
+  </defs>
+</svg>

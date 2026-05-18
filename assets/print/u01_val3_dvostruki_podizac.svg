@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img"
+     aria-labelledby="v3t v3d" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="v3t">U01 Val 3 – Dvostruki hidraulični podizač servisne platforme</title>
+  <desc id="v3d">Dva cilindra AL=150 cm² dižu platformu G=24 kN. Crpka Ap=6 cm², Fp=480 N. p=0,80 MPa. Za sL=20 mm treba ukupni hod crpke sp=1,0 m (mnogo kratkih poteza).</desc>
+  <defs>
+    <marker id="v3aR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
+    </marker>
+    <marker id="v3aG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/>
+    </marker>
+    <marker id="v3aBl" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/>
+    </marker>
+    <marker id="v3aO" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
+    </marker>
+    <marker id="v3aOR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
+    </marker>
+    <marker id="v3aDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#3a3a3a"/>
+    </marker>
+    <marker id="v3aDimR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#3a3a3a"/>
+    </marker>
+    <linearGradient id="v3fl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1"/>
+      <stop offset="100%" stop-color="#7fb3d3"/>
+    </linearGradient>
+    <linearGradient id="v3ps" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#909fa8"/>
+      <stop offset="100%" stop-color="#5d6d7e"/>
+    </linearGradient>
+    <linearGradient id="v3car" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a9cce3"/>
+      <stop offset="100%" stop-color="#7faec6"/>
+    </linearGradient>
+    <pattern id="v3hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a9aa6" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect width="980" height="500" fill="#f8f9fa"/>
+  <rect x="14" y="14" width="952" height="472" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.8"/>
+
+  <!-- ── NASLOV ── -->
+  <text x="48" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#1a2530">U01 Val 3 – Dvostruki hidraulični podizač servisne platforme</text>
+  <text x="48" y="70" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#5a6a78">G = 24 kN,  A&#8337; = 150 cm²,  A&#8346; = 6 cm²  →  p = 0,80 MPa,  F&#8346; = 480 N,  ukupni hod crpke = 1,0 m</text>
+
+  <!-- ════════════════════════════════════════════
+       VOZILO + PLATFORMA (gore, zajednička nosiva ploča)
+  ════════════════════════════════════════════ -->
+  <!-- Karoserija vozila -->
+  <rect x="168" y="52" width="330" height="25" rx="9" fill="#8ab4cc" stroke="#3a6a88" stroke-width="1.5"/>
+  <!-- Prozorčići -->
+  <rect x="180" y="56" width="40" height="15" rx="3" fill="#d6eaf8" stroke="#3a6a88" stroke-width="1"/>
+  <rect x="232" y="56" width="40" height="15" rx="3" fill="#d6eaf8" stroke="#3a6a88" stroke-width="1"/>
+  <rect x="284" y="56" width="40" height="15" rx="3" fill="#d6eaf8" stroke="#3a6a88" stroke-width="1"/>
+  <rect x="336" y="56" width="40" height="15" rx="3" fill="#d6eaf8" stroke="#3a6a88" stroke-width="1"/>
+  <text x="387" y="67" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2a36">vozilo</text>
+  <!-- Šasija/platforma (donji dio vozila + gornji dio nosača) -->
+  <rect x="128" y="77" width="410" height="22" rx="5" fill="url(#v3car)" stroke="#3a6a88" stroke-width="2"/>
+  <text x="333" y="93" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">platforma</text>
+  <!-- Kotači -->
+  <circle cx="172" cy="103" r="14" fill="#3a4a56" stroke="#222" stroke-width="1.5"/>
+  <circle cx="494" cy="103" r="14" fill="#3a4a56" stroke="#222" stroke-width="1.5"/>
+  <circle cx="172" cy="103" r="5" fill="#7a8a96"/>
+  <circle cx="494" cy="103" r="5" fill="#7a8a96"/>
+
+  <!-- Sila G prema dolje -->
+  <line x1="333" y1="102" x2="333" y2="138" stroke="#c0392b" stroke-width="3.5" marker-end="url(#v3aR)"/>
+  <text x="348" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#c0392b">G = 24 kN</text>
+
+  <!-- ════════════════════════════════════════════
+       LIJEVI RADNI CILINDAR – AL=150 cm² (~130px unutra)
+       x unutra: 152–282; stjenke: 134–152, 282–300
+       klip y: 140–168; fluid y: 168–382; dno 382–396
+  ════════════════════════════════════════════ -->
+  <rect x="134" y="120" width="18" height="262" fill="url(#v3hatch)" stroke="#4a6070" stroke-width="1.5"/>
+  <rect x="282" y="120" width="18" height="262" fill="url(#v3hatch)" stroke="#4a6070" stroke-width="1.5"/>
+  <rect x="134" y="382" width="166" height="14" rx="2" fill="url(#v3hatch)" stroke="#4a6070" stroke-width="1.5"/>
+  <!-- Fluid -->
+  <rect x="152" y="168" width="130" height="214" fill="url(#v3fl)"/>
+  <!-- Klip -->
+  <rect x="138" y="140" width="158" height="28" rx="4" fill="url(#v3ps)" stroke="#3a4a56" stroke-width="2"/>
+  <!-- Klipnjača -->
+  <rect x="208" y="120" width="18" height="22" fill="#9aaab4" stroke="#5b6770" stroke-width="1.5"/>
+
+  <!-- Sila FL_1 gore -->
+  <line x1="217" y1="113" x2="217" y2="138" stroke="#1e8449" stroke-width="3.5" marker-end="url(#v3aG)"/>
+
+  <!-- Tlačne strelice lijevi -->
+  <line x1="178" y1="224" x2="178" y2="180" stroke="#1565c0" stroke-width="1.8" marker-end="url(#v3aBl)"/>
+  <line x1="217" y1="224" x2="217" y2="180" stroke="#1565c0" stroke-width="1.8" marker-end="url(#v3aBl)"/>
+  <line x1="256" y1="224" x2="256" y2="180" stroke="#1565c0" stroke-width="1.8" marker-end="url(#v3aBl)"/>
+
+  <!-- Kota AL lijevi -->
+  <line x1="152" y1="126" x2="152" y2="119" stroke="#3a3a3a" stroke-width="1.2"/>
+  <line x1="282" y1="126" x2="282" y2="119" stroke="#3a3a3a" stroke-width="1.2"/>
+  <line x1="155" y1="122" x2="279" y2="122" stroke="#3a3a3a" stroke-width="1.2" marker-start="url(#v3aDimR)" marker-end="url(#v3aDim)"/>
+  <text x="217" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a3a3a">A&#8337; = 150 cm²</text>
+
+  <!-- Kota sL lijevi (hod klipa) -->
+  <line x1="112" y1="120" x2="112" y2="168" stroke="#b7600c" stroke-width="1.8" marker-start="url(#v3aOR)" marker-end="url(#v3aO)"/>
+  <text x="91" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" font-style="italic" fill="#b7600c">s&#8337;</text>
+  <text x="78" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c">= 20 mm</text>
+
+  <!-- ════════════════════════════════════════════
+       DESNI RADNI CILINDAR – isti dimenzije
+       x unutra: 384–514; stjenke: 366–384, 514–532
+  ════════════════════════════════════════════ -->
+  <rect x="366" y="120" width="18" height="262" fill="url(#v3hatch)" stroke="#4a6070" stroke-width="1.5"/>
+  <rect x="514" y="120" width="18" height="262" fill="url(#v3hatch)" stroke="#4a6070" stroke-width="1.5"/>
+  <rect x="366" y="382" width="166" height="14" rx="2" fill="url(#v3hatch)" stroke="#4a6070" stroke-width="1.5"/>
+  <rect x="384" y="168" width="130" height="214" fill="url(#v3fl)"/>
+  <rect x="370" y="140" width="158" height="28" rx="4" fill="url(#v3ps)" stroke="#3a4a56" stroke-width="2"/>
+  <rect x="440" y="120" width="18" height="22" fill="#9aaab4" stroke="#5b6770" stroke-width="1.5"/>
+
+  <!-- Sila FL_2 gore + label -->
+  <line x1="449" y1="113" x2="449" y2="138" stroke="#1e8449" stroke-width="3.5" marker-end="url(#v3aG)"/>
+  <text x="312" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-style="italic" fill="#1e8449">F&#8337; = 12 kN</text>
+  <text x="312" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449">(svaki)</text>
+
+  <!-- Tlačne strelice desni -->
+  <line x1="410" y1="224" x2="410" y2="180" stroke="#1565c0" stroke-width="1.8" marker-end="url(#v3aBl)"/>
+  <line x1="449" y1="224" x2="449" y2="180" stroke="#1565c0" stroke-width="1.8" marker-end="url(#v3aBl)"/>
+  <line x1="488" y1="224" x2="488" y2="180" stroke="#1565c0" stroke-width="1.8" marker-end="url(#v3aBl)"/>
+
+  <!-- ════════════════════════════════════════════
+       VODORAVNI VOD (dno) – y: 392–414
+       Spojen s oba cilindra i crpkom
+  ════════════════════════════════════════════ -->
+  <rect x="152" y="392" width="620" height="22" rx="3" fill="#8a9aa6" stroke="#4a6070" stroke-width="1.3"/>
+  <rect x="164" y="397" width="600" height="12" fill="url(#v3fl)" opacity="0.88"/>
+  <!-- Strelica toka tlaka (od crpke udesno, prema lijevom cilindru) -->
+  <line x1="680" y1="403" x2="330" y2="403" stroke="#1565c0" stroke-width="2.5" marker-end="url(#v3aBl)"/>
+  <text x="470" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" font-style="italic" text-anchor="middle" fill="#1565c0">p = 0,80 MPa  →  prenosi se jednako</text>
+
+  <!-- ════════════════════════════════════════════
+       CRPKA (desno) – Ap=6 cm² (~26px unutra, uska)
+       x unutra: 754–780; stjenke: 740–754, 780–794
+  ════════════════════════════════════════════ -->
+  <!-- Vertikalni cijevčica od voda do crpke -->
+  <rect x="760" y="324" width="10" height="70" fill="url(#v3hatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="763" y="324" width="4" height="70" fill="url(#v3fl)"/>
+
+  <!-- Cilindar crpke -->
+  <rect x="740" y="240" width="14" height="86" fill="url(#v3hatch)" stroke="#4a6070" stroke-width="1.5"/>
+  <rect x="780" y="240" width="14" height="86" fill="url(#v3hatch)" stroke="#4a6070" stroke-width="1.5"/>
+  <rect x="740" y="324" width="54" height="10" rx="2" fill="url(#v3hatch)" stroke="#4a6070" stroke-width="1.5"/>
+  <!-- Fluid crpke -->
+  <rect x="754" y="280" width="26" height="44" fill="url(#v3fl)"/>
+  <!-- Klip crpke -->
+  <rect x="744" y="255" width="46" height="25" rx="4" fill="url(#v3ps)" stroke="#3a4a56" stroke-width="2"/>
+  <!-- Klipnjača crpke -->
+  <rect x="760" y="195" width="14" height="62" fill="#9aaab4" stroke="#5b6770" stroke-width="1.5"/>
+
+  <!-- Sila Fp prema dolje -->
+  <line x1="767" y1="145" x2="767" y2="192" stroke="#1565c0" stroke-width="4" marker-end="url(#v3aBl)"/>
+  <text x="782" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1565c0">F&#8346;</text>
+  <text x="782" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">= 480 N</text>
+
+  <!-- Kota sp (hod klipa crpke) – lijevo od crpke -->
+  <line x1="722" y1="195" x2="722" y2="255" stroke="#b7600c" stroke-width="1.8" marker-start="url(#v3aOR)" marker-end="url(#v3aO)"/>
+  <text x="703" y="229" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" font-style="italic" fill="#b7600c">s&#8346;</text>
+
+  <!-- Kota Ap -->
+  <line x1="754" y1="236" x2="754" y2="229" stroke="#3a3a3a" stroke-width="1.2"/>
+  <line x1="780" y1="236" x2="780" y2="229" stroke="#3a3a3a" stroke-width="1.2"/>
+  <line x1="756" y1="232" x2="778" y2="232" stroke="#3a3a3a" stroke-width="1.2" marker-start="url(#v3aDimR)" marker-end="url(#v3aDim)"/>
+  <text x="767" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#3a3a3a">A&#8346; = 6 cm²</text>
+
+  <!-- Natpis ispod crpke: n poteza -->
+  <text x="767" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">crpka:</text>
+  <text x="767" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">∑s&#8346; = 1,0 m</text>
+
+  <!-- ════════════════════════════════════════════
+       FORMULA BOX (dolje)
+  ════════════════════════════════════════════ -->
+  <rect x="48" y="425" width="666" height="52" rx="8" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.3"/>
+  <text x="66" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a5a">Tlak:  <tspan font-weight="700" fill="#1565c0">p = G / (2·A&#8337;) = 24000 / 0,030 = 0,80 MPa</tspan></text>
+  <text x="66" y="465" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a5a">Crpka:  <tspan font-weight="700" fill="#1a2530">F&#8346; = p·A&#8346; = 480 N</tspan>   Volumna bilanca:  <tspan font-weight="700" fill="#1a2530">A&#8346;·∑s&#8346; = 2·A&#8337;·s&#8337;  →  ∑s&#8346; = 1,0 m</tspan></text>
+
+  <!-- ── LEGENDA ── -->
+  <rect x="832" y="430" width="12" height="12" fill="#c0392b" rx="2"/>
+  <text x="849" y="441" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">težina G</text>
+  <rect x="832" y="450" width="12" height="12" fill="#1565c0" rx="2"/>
+  <text x="849" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">tlak p / sila F&#8346;</text>
+  <rect x="920" y="430" width="12" height="12" fill="#1e8449" rx="2"/>
+  <text x="937" y="441" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">F&#8337;</text>
+  <rect x="920" y="450" width="12" height="12" fill="#b7600c" rx="2"/>
+  <text x="937" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">hodovi</text>
+</svg>

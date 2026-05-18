@@ -1,0 +1,63 @@
+---
+title: "MF1 - Integrirani udžbenik"
+subtitle: "Kanonski Quarto projekt za objedinjenu web i print verziju"
+page-layout: article
+toc: false
+---
+
+::: {.mf1-hero}
+# MF1 - Integrirani udžbenik
+
+Ovo je novi kanonski projekt za objedinjeni MF1 udžbenik. Struktura je postavljena tako da isti izvor sadržaja generira i web izdanje i jedinstveni tok za ispis i PDF.
+:::
+
+## Trenutni status
+
+- Projektni kostur je postavljen.
+- Pilot skup za prvi val je inicijaliziran: `U00`, `U03`, `U08`, `U09` i `D03`.
+- Ostala poglavlja imaju radne wrappere i izvorne placeholder datoteke za daljnju migraciju.
+
+## Prvi radni val
+
+::: {.mf1-grid}
+::: {.mf1-card}
+### U00
+
+[Kako koristiti udžbenik](chapters/u00_kako_koristiti_udzbenik.qmd)
+:::
+
+::: {.mf1-card}
+### U03
+
+[Hidrostatička raspodjela tlaka i manometrija](chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd)
+:::
+
+::: {.mf1-card}
+### U08
+
+[Kontrolni volumen i kontinuitet](chapters/u08_kontrolni_volumen_i_kontinuitet.qmd)
+:::
+
+::: {.mf1-card}
+### U09
+
+[Bernoullijeva jednadžba idealnog fluida](chapters/u09_bernoullijeva_jednadzba_idealnog_fluida.qmd)
+:::
+
+::: {.mf1-card}
+### D03
+
+[Tipične pogreške po poglavljima](chapters/d03_tipicne_pogreske_po_poglavljima.qmd)
+:::
+:::
+
+## Operativna logika projekta
+
+1. `chapters/` sadrži samo tanke Quarto wrappere.
+2. `source/` sadrži kanonski tekst svakoga poglavlja.
+3. `za_ispis.qmd` okuplja cijeli udžbenik u jedan dokument za ispis i PDF.
+4. `assets/print/` rezerviran je za statičke zamjene važnih widgeta.
+
+## Sljedeci implementacijski potez
+
+Nakon kostura treba produbiti pilot-poglavlja do pune migracije, a zatim po istom obrascu otvoriti drugi val: `U01`, `U02`, `U04` i `U05`.

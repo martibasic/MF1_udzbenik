@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540" role="img"
+     aria-labelledby="u2klT u2klD" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:680px;height:auto;">
+  <title id="u2klT">Klizni ležaj – poprečni presjek i proračun viskoznog trenja</title>
+  <desc id="u2klD">Poprečni presjek kliznog ležaja: kućište (sivo), uljni film (plavo), vratilo (tamno). D=60mm, δ=0,5mm, μ=0,25 Pa·s, n=1450 min⁻¹, L=80mm. Rezultati: v=4,56 m/s, τ=2280 Pa, F=34,4 N, M=1,03 N·m.</desc>
+  <defs>
+    <marker id="u2klaR"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
+    <marker id="u2klaG"  markerWidth="12" markerHeight="9" refX="11" refY="4.5" orient="auto"><path d="M0,0 L0,9 L12,4.5 z" fill="#1e8449"/></marker>
+    <marker id="u2klaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <marker id="u2klaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <!-- Gradijenti kućišta -->
+    <radialGradient id="u2klhous" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#c0cacf"/><stop offset="100%" stop-color="#5a6a74"/>
+    </radialGradient>
+    <!-- Gradijent vratila -->
+    <radialGradient id="u2klshft" cx="32%" cy="26%" r="68%">
+      <stop offset="0%" stop-color="#8fa8b8"/><stop offset="50%" stop-color="#3a5060"/><stop offset="100%" stop-color="#1a2a36"/>
+    </radialGradient>
+    <!-- Gradijent uljnog filma -->
+    <radialGradient id="u2kloil" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d8eef8"/><stop offset="100%" stop-color="#96c8e4"/>
+    </radialGradient>
+    <!-- Pattern hatch -->
+    <pattern id="u2klh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+    </pattern>
+  </defs>
+
+  <!-- Pozadina -->
+  <rect width="680" height="540" fill="#f4f6f8"/>
+  <rect x="8" y="8" width="664" height="524" rx="12" fill="#ffffff" stroke="#d2dae2" stroke-width="1.5"/>
+
+  <!-- Naslov -->
+  <text x="340" y="35" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530" text-anchor="middle">Klizni ležaj – proračun viskoznog trenja</text>
+  <text x="340" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">D=60 mm, L=80 mm, δ=0,5 mm, μ=0,25 Pa·s, n=1450 min⁻¹</text>
+
+  <!-- ══════════════════ KRUŽNI PRESJEK  centar (248, 280) ══════════════════ -->
+  <!-- r_hous=170 (vanjski), r_bore=136 (unutarnji rub kućišta)
+       r_film_out=135, r_film_in=107 (uljni film)
+       r_shaft=106 (vanjski rub vratila) -->
+
+  <!-- Kućište (vanjski siveni disk) -->
+  <circle cx="248" cy="280" r="170" fill="url(#u2klhous)" stroke="#2a3a46" stroke-width="2.4"/>
+  <!-- Unutarnja šupljina kućišta -->
+  <circle cx="248" cy="280" r="136" fill="#e0edf5" stroke="#4a6070" stroke-width="1.2"/>
+
+  <!-- Uljni film prsten (r=107..136) -->
+  <circle cx="248" cy="280" r="135" fill="url(#u2kloil)" stroke="#1565c0" stroke-width="1.2"/>
+  <circle cx="248" cy="280" r="108" fill="#e8f4fb" stroke="#1565c0" stroke-width="0.8"/>
+
+  <!-- Vratilo -->
+  <circle cx="248" cy="280" r="107" fill="url(#u2klshft)" stroke="#1a2a36" stroke-width="2.6"/>
+  <!-- Ukrasni unutarnji krug -->
+  <circle cx="248" cy="280" r="78" fill="#2e404e" stroke="#1a2a36" stroke-width="1.2" opacity="0.8"/>
+
+  <!-- Tekst na vratilu -->
+  <text x="248" y="273" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">VRATILO</text>
+  <text x="248" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#a8c8d8" text-anchor="middle">D = 60 mm</text>
+
+  <!-- Tekst "uljni film" u prstenu (gore) -->
+  <text x="248" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">uljni film</text>
+  <text x="248" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">μ = 0,25 Pa·s</text>
+
+  <!-- Kućište tekst (desno gore, na sivom prstenu) -->
+  <text x="380" y="165" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="white" text-anchor="middle">kućište</text>
+
+  <!-- ════ Rotacijska strelica (luk gore, zelena, cca 120°) ════ -->
+  <!-- Na r=107 (površina vratila), od 200° do 340° (≈ idemo gore i desno) -->
+  <!-- 200° u SVG (mjereno od +x osi, CW): x=248+107*cos(200°*π/180), y=280+107*sin(200°*π/180) -->
+  <!-- cos(200°)=-0.9397, sin(200°)=-0.3420 → (248-100.5, 280-36.6) = (147.5, 243.4) -->
+  <!-- 340°: cos(340°)=0.9397, sin(340°)=-0.3420 → (248+100.5, 280-36.6) = (348.5, 243.4) -->
+  <!-- Luk ide CCW (usprotiv kazaljke, "gore" → "desno"), large-arc=1, sweep=0 za CCW u SVG -->
+  <path d="M 151,244 A 107,107 0 1 0 345,244" fill="none" stroke="#1e8449" stroke-width="4.0" stroke-linecap="round"/>
+  <!-- Strelica pri kraju luka (kut ~335°, tangenta prema dolje-desno) -->
+  <line x1="340" y1="246" x2="352" y2="262" stroke="#1e8449" stroke-width="4.0" stroke-linecap="round" marker-end="url(#u2klaG)"/>
+  <!-- n labela -->
+  <text x="248" y="123" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1e8449" text-anchor="middle" font-weight="700">n = 1450 min⁻¹</text>
+
+  <!-- ════ τ strelica (sila smicanja, crvena, kosa gore-lijevo na površini filma) ════ -->
+  <!-- Točka na r=135, kut=135°: cos135°=-0.7071, sin135°=-0.7071
+       x=248+135*(-0.7071)=248-95.5=152.5, y=280+135*(-0.7071)=280-95.5=184.5 -->
+  <line x1="153" y1="185" x2="127" y2="158" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u2klaR)"/>
+  <text x="120" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#c0392b" text-anchor="end">τ</text>
+  <text x="115" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b" text-anchor="end">= μ·v/δ</text>
+
+  <!-- ════ Kota δ (radijalna, pri kutu ~45°) ════ -->
+  <!-- r=108, kut=45°: x=248+108*0.7071=248+76.4=324.4, y=280-76.4=203.6 -->
+  <!-- r=135, kut=45°: x=248+135*0.7071=248+95.5=343.5, y=280-95.5=184.5 -->
+  <line x1="324" y1="204" x2="344" y2="185" stroke="#b7600c" stroke-width="2.2"/>
+  <!-- Tick-ovi na krajevima -->
+  <line x1="319" y1="209" x2="329" y2="199" stroke="#b7600c" stroke-width="1.4"/>
+  <line x1="339" y1="190" x2="349" y2="180" stroke="#b7600c" stroke-width="1.4"/>
+  <text x="358" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">δ = 0,5 mm</text>
+
+  <!-- Kota D (promjer vratila, vodoravan promjer kroz središte) -->
+  <line x1="141" y1="340" x2="355" y2="340" stroke="#b7600c" stroke-width="1.6" marker-start="url(#u2klaDimL)" marker-end="url(#u2klaDim)"/>
+  <line x1="141" y1="334" x2="141" y2="346" stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="355" y1="334" x2="355" y2="346" stroke="#b7600c" stroke-width="1.2"/>
+  <text x="248" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">D = 60 mm</text>
+
+  <!-- ══════════════════ DESNO – 4 INFO BOKSA ══════════════════ -->
+
+  <!-- Boks 1: v (brzina površine) -->
+  <rect x="446" y="65" width="216" height="62" rx="8" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.6"/>
+  <rect x="446" y="65" width="216" height="22" rx="8" fill="#1565c0"/>
+  <rect x="446" y="75" width="216" height="12" fill="#1565c0"/>
+  <text x="554" y="81" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">Brzina obodna:  v = π·D·n/60</text>
+  <text x="554" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1a2530" text-anchor="middle">= π · 0,060 · 1450/60</text>
+  <text x="554" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1565c0" text-anchor="middle">v = 4,56 m/s</text>
+
+  <!-- Boks 2: τ (smično naprezanje) -->
+  <rect x="446" y="142" width="216" height="62" rx="8" fill="#fde8e8" stroke="#c0392b" stroke-width="1.6"/>
+  <rect x="446" y="142" width="216" height="22" rx="8" fill="#c0392b"/>
+  <rect x="446" y="152" width="216" height="12" fill="#c0392b"/>
+  <text x="554" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">Smično naprezanje:  τ = μ·v/δ</text>
+  <text x="554" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1a2530" text-anchor="middle">= 0,25 · 4,56 / 0,0005</text>
+  <text x="554" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#c0392b" text-anchor="middle">τ = 2280 Pa</text>
+
+  <!-- Boks 3: F (sila trenja) -->
+  <rect x="446" y="219" width="216" height="62" rx="8" fill="#fff8e1" stroke="#c49a0a" stroke-width="1.6"/>
+  <rect x="446" y="219" width="216" height="22" rx="8" fill="#c49a0a"/>
+  <rect x="446" y="229" width="216" height="12" fill="#c49a0a"/>
+  <text x="554" y="235" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">Sila trenja:  F = τ · π·D·L</text>
+  <text x="554" y="255" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1a2530" text-anchor="middle">= 2280 · π · 0,060 · 0,080</text>
+  <text x="554" y="273" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#c49a0a" text-anchor="middle">F = 34,4 N</text>
+
+  <!-- Boks 4: M (moment) -->
+  <rect x="446" y="296" width="216" height="62" rx="8" fill="#eaf9f1" stroke="#1e8449" stroke-width="1.6"/>
+  <rect x="446" y="296" width="216" height="22" rx="8" fill="#1e8449"/>
+  <rect x="446" y="306" width="216" height="12" fill="#1e8449"/>
+  <text x="554" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">Moment trenja:  M = F · D/2</text>
+  <text x="554" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1a2530" text-anchor="middle">= 34,4 · 0,030</text>
+  <text x="554" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449" text-anchor="middle">M = 1,03 N·m</text>
+
+  <!-- Napomena stroja -->
+  <rect x="446" y="374" width="216" height="82" rx="8" fill="#f8f9fa" stroke="#d2dae2" stroke-width="1.2"/>
+  <text x="456" y="391" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#3a4a56">Inženjerska napomena:</text>
+  <text x="456" y="407" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">Ako δ → δ/2:</text>
+  <text x="456" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">τ, F, M se udvostručuju!</text>
+  <text x="456" y="435" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">Preciznost zazora δ je kritična</text>
+  <text x="456" y="449" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#8898ae" font-style="italic">Ulje je Newtonski fluid: τ∝dv/dy</text>
+
+  <!-- Jednadžba dolje lijevo -->
+  <rect x="20" y="468" width="400" height="44" rx="8" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="220" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" font-style="italic" fill="#1a2530" text-anchor="middle">v = πDn/60  →  τ = μv/δ  →  F = τπDL  →  M = F·D/2</text>
+  <text x="220" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">Petlja proračuna kliznog ležaja (Couetteova aproksimacija)</text>
+</svg>

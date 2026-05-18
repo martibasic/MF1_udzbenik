@@ -1,0 +1,151 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
+     aria-labelledby="u3v3T u3v3D" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u3v3T">Vakuumski spremnik s otvorenim zivinim manometrom (Z27)</title>
+  <desc id="u3v3D">Zatvoreni vakuumski spremnik (p_g ispod atmosferskog), voda unutar i plin iznad slobodne povrsine. Zivini manometar (delta_h) mjeri podtlak. Tocka A na dubini h ispod slobodne povrsine.</desc>
+  <defs>
+    <marker id="u3v3aF" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#92400e"/>
+    </marker>
+    <marker id="u3v3aR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#92400e"/>
+    </marker>
+    <marker id="u3v3p0" markerWidth="9" markerHeight="9" refX="5" refY="4.5" orient="270">
+      <path d="M0,0 L0,9 L9,4.5 z" fill="#546e7a"/>
+    </marker>
+    <linearGradient id="u3v3wa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#5baece"/>
+    </linearGradient>
+    <linearGradient id="u3v3hg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b4c2cc"/>
+      <stop offset="100%" stop-color="#728090"/>
+    </linearGradient>
+    <pattern id="u3v3sp" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+  </defs>
+  <!-- Pozadina i okvir -->
+  <rect width="940" height="420" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="1.8"/>
+
+  <!-- ── ZATVORENI VAKUUMSKI SPREMNIK ── -->
+  <!-- Vanjski zidovi (srafura) -->
+  <rect x="34" y="72" width="300" height="314" rx="6" fill="url(#u3v3sp)"/>
+  <!-- Unutrasnjost - plinski prostor (vakuum, plin p_g) -->
+  <rect x="48" y="86" width="272" height="106" fill="#f0ece0"/>
+  <!-- Voda (ispod slobodne povrsine) -->
+  <rect x="48" y="192" width="272" height="180" fill="url(#u3v3wa)"/>
+  <!-- Slobodna povrsina (crtkana linija) -->
+  <line x1="48" y1="192" x2="320" y2="192" stroke="#1a5f8a" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Tocka A u vodi -->
+  <circle cx="144" cy="300" r="5" fill="#c0392b"/>
+  <text x="154" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700"
+        fill="#1a2530">A</text>
+
+  <!-- Oznaka p_g u plinskom prostoru -->
+  <text x="114" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic"
+        font-weight="700" fill="#7a6a20">p</text>
+  <text x="124" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#7a6a20">g</text>
+  <text x="136" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#7a6a20">&lt; p</text>
+  <text x="162" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#7a6a20">0</text>
+
+  <!-- ── VEZA PLINSKOG PROSTORA S MANOMETROM ── -->
+  <!-- Horizontalna cijev od desnog zida spremnika do lijevog kraka manometra -->
+  <rect x="334" y="116" width="88" height="16" fill="#546e7a"/>
+  <rect x="338" y="120" width="84" height="8" fill="#f0ece0"/>
+  <!-- Tocka spoja na spremniku -->
+  <circle cx="334" cy="124" r="4" fill="#7a6a20"/>
+  <text x="296" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#7a6a20">spoj</text>
+  <text x="300" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#7a6a20">na p_g</text>
+
+  <!-- ── ZIVINI MANOMETAR (U-cijev) ── -->
+  <!-- Lijevi krak (spojen na p_g, zatvoren prema gore) -->
+  <rect x="418" y="90" width="36" height="276" fill="#546e7a"/>
+  <rect x="422" y="94" width="28" height="268" fill="#f0ece0"/>
+  <!-- Ziva u lijevom kraku (od y=254 do dna y=354) -->
+  <rect x="422" y="254" width="28" height="100" fill="url(#u3v3hg)"/>
+  <!-- Dno U-cijevi -->
+  <rect x="418" y="354" width="84" height="34" fill="#546e7a"/>
+  <rect x="422" y="358" width="76" height="26" fill="url(#u3v3hg)"/>
+  <!-- Desni krak (otvoren gore prema atmosferi) -->
+  <rect x="466" y="90" width="36" height="276" fill="#546e7a"/>
+  <!-- Ziva u desnom kraku (od y=194 do dna y=354) -->
+  <rect x="470" y="194" width="28" height="160" fill="url(#u3v3hg)"/>
+  <!-- Atmosferski zrak iznad zive u desnom kraku -->
+  <rect x="470" y="94" width="28" height="100" fill="#e8f4f8"/>
+  <!-- Otvoreni kraj - isprekinana linija i p_0 oznaka -->
+  <line x1="466" y1="90" x2="502" y2="90" stroke="#546e7a" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="484" y1="56" x2="484" y2="89" stroke="#546e7a" stroke-width="2"/>
+  <text x="492" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic"
+        font-weight="700" fill="#546e7a">p</text>
+  <text x="502" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">0</text>
+  <!-- Granicna linija zive u lijevom kraku (y=254) -->
+  <line x1="418" y1="254" x2="458" y2="254" stroke="#728090" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Granicna linija zive u desnom kraku (y=194) -->
+  <line x1="466" y1="194" x2="506" y2="194" stroke="#728090" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- ── KOTNE LINIJE ── -->
+  <!-- h: od slobodne povrsine (y=192) do tocke A (y=300), lijeva strana unutrasnjosti -->
+  <line x1="100" y1="192" x2="100" y2="300" stroke="#92400e" stroke-width="1.6"
+        marker-start="url(#u3v3aR)" marker-end="url(#u3v3aF)"/>
+  <line x1="100" y1="192" x2="110" y2="192" stroke="#92400e" stroke-width="1"/>
+  <line x1="100" y1="300" x2="110" y2="300" stroke="#92400e" stroke-width="1"/>
+  <text x="84" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic"
+        fill="#92400e" text-anchor="middle">h</text>
+
+  <!-- delta_h: razlika razina zive (y=254 lijevog, y=194 desnog) -->
+  <line x1="510" y1="254" x2="510" y2="194" stroke="#92400e" stroke-width="1.6"
+        marker-start="url(#u3v3aR)" marker-end="url(#u3v3aF)"/>
+  <line x1="500" y1="254" x2="511" y2="254" stroke="#92400e" stroke-width="1"/>
+  <line x1="500" y1="194" x2="511" y2="194" stroke="#92400e" stroke-width="1"/>
+  <text x="524" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic"
+        fill="#92400e">&#x394;h</text>
+
+  <!-- ── NATPISI ── -->
+  <text x="34" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">vakuumski</text>
+  <text x="34" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">spremnik</text>
+  <text x="184" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a5f8a" text-anchor="middle">voda</text>
+  <text x="184" y="259" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#4a8aaa" text-anchor="middle">(&#x03C1;w, g)</text>
+  <text x="436" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#4a5560" text-anchor="middle">ziva</text>
+  <text x="484" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#4a5560" text-anchor="middle">ziva</text>
+
+  <!-- ── KUTIJA FORMULE (desna strana) ── -->
+  <rect x="558" y="32" width="348" height="356" rx="10"
+        fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
+  <text x="732" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700"
+        fill="#1a2530" text-anchor="middle">Vakuumski spremnik — manometar</text>
+  <line x1="568" y1="63" x2="896" y2="63" stroke="#ddd090" stroke-width="1"/>
+
+  <text x="572" y="83" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#546e7a">1. Tlak plina p_g iz manometra:</text>
+  <text x="572" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1a2530">Putanja od p0 (desni krak) do p_g (lijevi krak):</text>
+  <text x="572" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1a2530">p&#x2080; &#x2212; &#x03C1;Hg&#xB7;g&#xB7;&#x394;h = p&#x1D4D;</text>
+  <text x="572" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1a2530">p&#x1D4D; = p&#x2080; &#x2212; &#x03C1;Hg&#xB7;g&#xB7;&#x394;h</text>
+  <text x="572" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#7a6020">(desni krak visi &#x21D2; p_g &lt; p_0, vakuum)</text>
+
+  <line x1="568" y1="162" x2="896" y2="162" stroke="#ddd090" stroke-width="0.8"/>
+  <text x="572" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#546e7a">2. Tlak u tocki A (dubina h ispod slobodne povrsine):</text>
+  <text x="572" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1a2530">p&#x2090; = p&#x1D4D; + &#x03C1;w&#xB7;g&#xB7;h</text>
+  <text x="572" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1a2530">p&#x2090; = p&#x2080; &#x2212; &#x03C1;Hg&#xB7;g&#xB7;&#x394;h + &#x03C1;w&#xB7;g&#xB7;h</text>
+
+  <line x1="568" y1="225" x2="896" y2="225" stroke="#ddd090" stroke-width="0.8"/>
+  <text x="572" y="243" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#546e7a">Manometarski (prekomjerni) tlak plina:</text>
+  <text x="572" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1a2530">p&#x1D4D;,man = p&#x1D4D; &#x2212; p&#x2080; = &#x2212;&#x03C1;Hg&#xB7;g&#xB7;&#x394;h &lt; 0</text>
+  <text x="572" y="277" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#7a6020">(negativan &#x21D2; podtlak, vakuum)</text>
+
+  <line x1="568" y1="287" x2="896" y2="287" stroke="#ddd090" stroke-width="0.8"/>
+  <text x="572" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#546e7a">Gustoce:</text>
+  <text x="572" y="321" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#2c3e50">&#x03C1;Hg = 13 600 kg/m&#xB3;,  &#x03C1;w = 1 000 kg/m&#xB3;</text>
+
+  <rect x="568" y="331" width="320" height="26" rx="6"
+        fill="#fde8e8" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="728" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700"
+        fill="#c0392b" text-anchor="middle">p&#x1D4D; = p&#x2080; &#x2212; &#x03C1;Hg&#xB7;g&#xB7;&#x394;h  (vakuum!)</text>
+
+  <rect x="568" y="361" width="320" height="26" rx="6"
+        fill="#e8f5e9" stroke="#1e8449" stroke-width="1.2"/>
+  <text x="728" y="379" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700"
+        fill="#1e5c33" text-anchor="middle">p&#x2090; = p&#x1D4D; + &#x03C1;w&#xB7;g&#xB7;h</text>
+</svg>

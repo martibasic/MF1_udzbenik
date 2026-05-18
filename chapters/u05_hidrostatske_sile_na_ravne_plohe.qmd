@@ -1,0 +1,6 @@
+---
+title: "U05 - Hidrostatske sile na ravne plohe"
+page-layout: article
+---
+
+{{< include ../source/u05_hidrostatske_sile_na_ravne_plohe.md >}}

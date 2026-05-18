@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 400" role="img"
+     aria-labelledby="u5ipT u5ipD" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u5ipT">U05 – Inspekcijski poklopac na kotlu</title>
+  <desc id="u5ipD">Vertikalni inspekcijski poklopac (b=0,40 m, h=0,60 m) na stijenki kotla, gornji rub na dubini h1=1,50 m. Centroid C i centar tlaka CP praktički se podudaraju (Δ=16,7 mm). Rezultantna sila F≈4,23 kN.</desc>
+  <defs>
+    <marker id="u5ipaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
+    </marker>
+    <marker id="u5ipaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
+    </marker>
+    <marker id="u5ipaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
+    </marker>
+    <marker id="u5ipaG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#1e8449"/>
+    </marker>
+    <marker id="u5ipaGL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#1e8449"/>
+    </marker>
+    <linearGradient id="u5ipfl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
+    </linearGradient>
+    <linearGradient id="u5ippr" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#e74c3c" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#e74c3c" stop-opacity="0.07"/>
+    </linearGradient>
+    <pattern id="u5ipwall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+    </pattern>
+  </defs>
+
+  <rect width="940" height="400" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+  <!-- Naslov -->
+  <text x="54" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#173043">U05 – Inspekcijski poklopac na kotlu</text>
+  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="14.5" fill="#516677">b=0,40 m · h=0,60 m · h₁=1,50 m · ρ=998 kg/m³ → F≈4,23 kN · y_CP=1,817 m · Δ=16,7 mm</text>
+
+  <!-- Mjerilo: 100 px/m; površina y=115 -->
+  <!-- h₁=1,50m → 150px → poklopac top y=265; h=0,60m → 60px → bottom y=325; h_C=1,80m → y=295 -->
+
+  <!-- Tijelo fluida (kotao, unutrašnjost) -->
+  <rect x="82" y="115" width="296" height="238" fill="url(#u5ipfl)" opacity="0.83"/>
+
+  <!-- Lijeva stijenka -->
+  <rect x="80" y="108" width="4" height="252" fill="#909fa8"/>
+
+  <!-- Dno -->
+  <rect x="80" y="352" width="304" height="8" fill="#909fa8" stroke="#5d6d7e" stroke-width="1"/>
+
+  <!-- Slobodna površina -->
+  <line x1="80" y1="115" x2="382" y2="115" stroke="#1565c0" stroke-width="2.8"/>
+  <text x="84" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">slobodna površina (p=0)</text>
+
+  <!-- Stijenka kotla -->
+  <rect x="378" y="100" width="46" height="268" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.8"/>
+  <rect x="378" y="100" width="46" height="268" fill="url(#u5ipwall)" opacity="0.50"/>
+
+  <!-- Inspekcijski poklopac (u stijenki) -->
+  <rect x="372" y="265" width="58" height="60" fill="#4a5568" stroke="#2d3748" stroke-width="2.8"/>
+  <text x="400" y="299" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="700"
+        fill="white" text-anchor="middle" letter-spacing="1">POKL.</text>
+
+  <!-- Dijagram tlaka na poklopcu (trapezoid) -->
+  <!-- p₁ pri top (y=265, h=1,50m): max_width=50px × (1,50/2,10)=36px → x=378-36=342 -->
+  <!-- p₂ pri dnu (y=325, h=2,10m): max_width=50px → x=378-50=328 -->
+  <polygon points="378,265 342,265 328,325 378,325" fill="url(#u5ippr)"/>
+  <line x1="342" y1="265" x2="328" y2="325" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4,3"/>
+
+  <!-- C i CP (praktički isti punkt pri Δ=1,7px) -->
+  <circle cx="378" cy="295" r="5.5" fill="#c0392b" stroke="white" stroke-width="1.5"/>
+  <line x1="378" y1="295" x2="432" y2="278" stroke="#1a2530" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <text x="436" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">C ≈ CP</text>
+  <text x="436" y="289" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#516677">(Δ=16,7 mm ≪ mjerilo)</text>
+
+  <!-- F strelica -->
+  <line x1="430" y1="295" x2="600" y2="295" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u5ipaR)"/>
+  <text x="508" y="287" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">F ≈ 4,23 kN</text>
+
+  <!-- h₁ kota -->
+  <line x1="378" y1="115" x2="355" y2="115" stroke="#c96c35" stroke-width="1.0"/>
+  <line x1="378" y1="265" x2="355" y2="265" stroke="#c96c35" stroke-width="1.0"/>
+  <line x1="352" y1="117" x2="352" y2="263" stroke="#c96c35" stroke-width="1.8"
+        marker-start="url(#u5ipaDimL)" marker-end="url(#u5ipaDim)"/>
+  <text x="344" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#92400e" text-anchor="end">h₁=1,50 m</text>
+
+  <!-- h kota -->
+  <line x1="378" y1="325" x2="330" y2="325" stroke="#1e8449" stroke-width="1.0"/>
+  <line x1="327" y1="267" x2="327" y2="323" stroke="#1e8449" stroke-width="1.8"
+        marker-start="url(#u5ipaGL)" marker-end="url(#u5ipaG)"/>
+  <text x="319" y="303" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1e8449" text-anchor="end">h=0,60 m</text>
+
+  <!-- Kutija rješenja (desno) -->
+  <rect x="616" y="108" width="296" height="256" rx="10" fill="#f8fafc" stroke="#cbd5e0" stroke-width="1.8"/>
+  <text x="634" y="133" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Rješenje:</text>
+  <text x="634" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">A = b·h = 0,40·0,60 = 0,24 m²</text>
+  <text x="634" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">h_C = 1,50 + 0,30 = 1,80 m</text>
+  <line x1="634" y1="180" x2="896" y2="180" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="634" y="199" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">F = ρgAh_C = 998·9,81·0,24·1,80</text>
+  <text x="634" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">  ⟹  F ≈ 4 234 N ≈ 4,23 kN</text>
+  <line x1="634" y1="226" x2="896" y2="226" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="634" y="245" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">I_G = bh³/12 = 0,40·0,216/12 = 0,0072 m⁴</text>
+  <text x="634" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">Δ = I_G/(Ah_C) = 0,0072/0,432 = 0,0167 m</text>
+  <line x1="634" y1="272" x2="896" y2="272" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="634" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#516677">Δ = 16,7 mm — manje od debljine stijenke.</text>
+  <text x="634" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#516677">y_CP = 1,817 m (C i CP se ne mogu</text>
+  <text x="634" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#516677">razlučiti u ovom mjerilu).</text>
+  <text x="634" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#516677">Za dublja potapanja Δ → 0.</text>
+
+  <!-- Napomena dno -->
+  <text x="54" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#516677">Dijagram tlaka (trapez) prikazuje raspodjelu hidrostatskog tlaka duž poklopca. C i CP su praktički isti — poklopac je duboko uronjen.</text>
+</svg>

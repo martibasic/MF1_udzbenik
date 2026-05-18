@@ -1,0 +1,6 @@
+---
+title: "U12 - Pokretne lopatice i potisak"
+page-layout: article
+---
+
+{{< include ../source/u12_pokretne_lopatice_i_potisak.md >}}

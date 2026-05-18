@@ -1,0 +1,77 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="title">U12 CH 2 - Peltonov rotor s jednim mlazom i momentom na obodu</title>
+  <desc id="desc">Mlaz iz sapnice udara u Peltonovu lopaticu na obodu rotora. Skica prikazuje obodnu brzinu, relativni i apsolutni izlaz, tangencijalnu silu i moment na radijusu r.</desc>
+  <rect width="980" height="420" fill="#ffffff"/>
+  <rect x="28" y="28" width="924" height="364" rx="18" fill="#ffffff" stroke="#c9d2d8" stroke-width="2"/>
+
+  <text x="58" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#173043">U12 CH - Peltonov rotor s jednim mlazom i momentom na obodu</text>
+  <text x="58" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Tangencijalna komponenta sile više nije samo reakcija lopatice, nego izravno moment i snaga na rotoru.</text>
+
+  <circle cx="326" cy="258" r="124" fill="#f8fafb" stroke="#c9d2d8" stroke-width="2"/>
+  <circle cx="326" cy="258" r="94" fill="#ffffff" stroke="#d6dde2" stroke-width="1.5"/>
+  <circle cx="326" cy="258" r="7" fill="#5b6770"/>
+
+  <path d="M414 190 Q442 172 462 188 Q444 212 418 214 Z" fill="#e8eef2" stroke="#5b6770" stroke-width="2"/>
+  <path d="M424 194 Q438 189 448 197" fill="none" stroke="#8aa6b8" stroke-width="2"/>
+
+  <line x1="102" y1="202" x2="402" y2="202" stroke="#1565c0" stroke-width="6" marker-end="url(#arrowBlue)"/>
+  <rect x="148" y="164" width="94" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="172" y="183" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">c1, Q</text>
+
+  <line x1="430" y1="202" x2="374" y2="142" stroke="#2e8b57" stroke-width="5" marker-end="url(#arrowGreen)"/>
+  <rect x="330" y="122" width="84" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="354" y="141" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">w2</text>
+
+  <line x1="430" y1="202" x2="502" y2="156" stroke="#c96c35" stroke-width="5" marker-end="url(#arrowOrange)"/>
+  <rect x="506" y="134" width="84" height="28" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
+  <text x="530" y="153" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">c2</text>
+
+  <line x1="396" y1="224" x2="484" y2="224" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
+  <rect x="412" y="240" width="92" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="438" y="259" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">u</text>
+
+  <line x1="326" y1="258" x2="430" y2="202" stroke="#8b5e3c" stroke-width="3" marker-end="url(#arrowBrown)"/>
+  <rect x="358" y="220" width="76" height="26" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
+  <text x="386" y="238" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">r</text>
+
+  <path d="M294 108 A154 154 0 0 1 408 130" fill="none" stroke="#8b5e3c" stroke-width="3" marker-end="url(#arrowBrown)"/>
+  <rect x="250" y="92" width="112" height="28" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
+  <text x="274" y="111" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">M, omega</text>
+
+  <line x1="430" y1="202" x2="520" y2="202" stroke="#a61e4d" stroke-width="5" marker-end="url(#arrowMagenta)"/>
+  <rect x="528" y="188" width="88" height="28" rx="6" fill="#ffffff" stroke="#e3cad4" stroke-width="1.5"/>
+  <text x="552" y="207" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">F_t</text>
+
+  <rect x="110" y="256" width="178" height="64" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
+  <text x="132" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Rotor</text>
+  <text x="132" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">n = 320 min^-1</text>
+
+  <rect x="620" y="118" width="286" height="112" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
+  <text x="642" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Redoslijed</text>
+  <text x="642" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">1. iz n i r vrati u i w1</text>
+  <text x="642" y="192" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">2. iz w2 vrati apsolutni c2</text>
+  <text x="642" y="214" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">3. x-komponenta sile daje M i P</text>
+
+  <rect x="620" y="256" width="286" height="88" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
+  <text x="642" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Generator</text>
+  <text x="642" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">P_G = 9,5 kW</text>
+  <text x="642" y="330" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">provjera rezerve snage</text>
+
+  <defs>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#2e8b57"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
+    </marker>
+    <marker id="arrowBrown" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#8b5e3c"/>
+    </marker>
+    <marker id="arrowMagenta" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#a61e4d"/>
+    </marker>
+  </defs>
+</svg>

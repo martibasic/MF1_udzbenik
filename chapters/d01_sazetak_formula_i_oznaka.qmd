@@ -1,0 +1,6 @@
+---
+title: "D01 - Sažetak formula i oznaka"
+page-layout: article
+---
+
+{{< include ../source/d01_sazetak_formula_i_oznaka.md >}}

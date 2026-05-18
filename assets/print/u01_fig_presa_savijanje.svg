@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 390" role="img"
+     aria-labelledby="psT psD" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="psT">Hidraulična preša – presjek: d₁ = 32 mm, d₂ = 128 mm, omjer 1:4</title>
+  <desc id="psD">Pumpni klip d₁=32 mm, sila F₁=320 N. Radni klip d₂=128 mm (4× širi, A₂/A₁=16), F₂=5,12 kN. Vod prenosi tlak p=0,40 MPa.</desc>
+  <defs>
+    <marker id="psaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
+    </marker>
+    <marker id="psaG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/>
+    </marker>
+    <marker id="psaBl" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/>
+    </marker>
+    <marker id="psaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#3a3a3a"/>
+    </marker>
+    <marker id="psaDimR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#3a3a3a"/>
+    </marker>
+    <linearGradient id="psfl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1"/>
+      <stop offset="100%" stop-color="#7fb3d3"/>
+    </linearGradient>
+    <linearGradient id="psps" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#909fa8"/>
+      <stop offset="100%" stop-color="#5d6d7e"/>
+    </linearGradient>
+    <pattern id="psHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a9aa6" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect width="980" height="390" fill="#f8f9fa"/>
+  <rect x="14" y="14" width="952" height="362" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5"/>
+
+  <!-- ── NASLOV ── -->
+  <text x="490" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#1a2530" text-anchor="middle">Hidrauli&#269;na pre&#353;a – presjek (d&#x2081; = 32 mm, d&#x2082; = 128 mm, omjer 1:4)</text>
+
+  <!-- ════════════════════════════════════════════
+       MALI CILINDAR (PUMPNI) — d₁=32mm → 42px inner, wall=14px
+       Outer: 48-118; inner: 62-104; wall L: 48-62, R: 104-118
+       Inner height: y=62-292; fluid: y=172-292; klip: y=152-172
+       Klipnjača: x=76-90 (14px), y=62-152
+  ════════════════════════════════════════════ -->
+  <!-- Left wall -->
+  <rect x="48" y="62" width="14" height="232" fill="url(#psHatch)" stroke="#4a6070" stroke-width="1.3"/>
+  <!-- Right wall -->
+  <rect x="104" y="62" width="14" height="232" fill="url(#psHatch)" stroke="#4a6070" stroke-width="1.3"/>
+  <!-- Floor -->
+  <rect x="48" y="292" width="70" height="16" fill="url(#psHatch)" stroke="#4a6070" stroke-width="1.3"/>
+  <!-- Fluid -->
+  <rect x="62" y="172" width="42" height="120" fill="url(#psfl)"/>
+  <!-- Klip -->
+  <rect x="52" y="152" width="62" height="20" rx="3" fill="url(#psps)" stroke="#3a4a56" stroke-width="1.8"/>
+  <!-- Klipnjača -->
+  <rect x="76" y="62" width="14" height="92" fill="#9aaab4" stroke="#5b6770" stroke-width="1.3"/>
+
+  <!-- F₁ arrow (down) -->
+  <line x1="83" y1="18" x2="83" y2="60" stroke="#c0392b" stroke-width="3.5" marker-end="url(#psaR)"/>
+  <text x="100" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" fill="#c0392b">F&#x2081; = 320 N</text>
+
+  <!-- Tlačne strelice unutar pumpnog klipa (up) -->
+  <line x1="70" y1="222" x2="70" y2="182" stroke="#1565c0" stroke-width="1.6" marker-end="url(#psaBl)"/>
+  <line x1="83" y1="222" x2="83" y2="182" stroke="#1565c0" stroke-width="1.6" marker-end="url(#psaBl)"/>
+  <line x1="96" y1="222" x2="96" y2="182" stroke="#1565c0" stroke-width="1.6" marker-end="url(#psaBl)"/>
+
+  <!-- Kota d₁ ispod -->
+  <line x1="62" y1="320" x2="62" y2="328" stroke="#3a3a3a" stroke-width="1.1"/>
+  <line x1="104" y1="320" x2="104" y2="328" stroke="#3a3a3a" stroke-width="1.1"/>
+  <line x1="64" y1="324" x2="102" y2="324" stroke="#3a3a3a" stroke-width="1.1" marker-start="url(#psaDimR)" marker-end="url(#psaDim)"/>
+  <text x="83" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a3a3a">d&#x2081; = 32 mm</text>
+
+  <!-- ════════════════════════════════════════════
+       VODORAVNI VOD — x: 118 to 358, y: 274-294
+  ════════════════════════════════════════════ -->
+  <rect x="118" y="274" width="240" height="20" rx="2" fill="#8a9aa6" stroke="#4a6070" stroke-width="1.2"/>
+  <rect x="126" y="278" width="224" height="12" fill="url(#psfl)"/>
+  <!-- Flow arrow -->
+  <line x1="180" y1="284" x2="260" y2="284" stroke="#1565c0" stroke-width="2" marker-end="url(#psaBl)"/>
+  <!-- p label above channel -->
+  <text x="238" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" font-style="italic" fill="#1565c0" text-anchor="middle">p = F&#x2081;/A&#x2081; = F&#x2082;/A&#x2082; = 0,40 MPa</text>
+
+  <!-- ════════════════════════════════════════════
+       VELIKI CILINDAR (RADNI) — d₂=128mm → 168px inner (4×42), wall=14px
+       Outer: 358-554; inner: 372-540; wall L: 358-372, R: 540-554
+       Inner height: same y=62-292; fluid: y=172-292; klip: y=152-172
+       Klipnjača: x=450-464 (14px), y=62-152
+  ════════════════════════════════════════════ -->
+  <rect x="358" y="62" width="14" height="232" fill="url(#psHatch)" stroke="#4a6070" stroke-width="1.3"/>
+  <rect x="540" y="62" width="14" height="232" fill="url(#psHatch)" stroke="#4a6070" stroke-width="1.3"/>
+  <rect x="358" y="292" width="196" height="16" fill="url(#psHatch)" stroke="#4a6070" stroke-width="1.3"/>
+  <!-- Fluid -->
+  <rect x="372" y="172" width="168" height="120" fill="url(#psfl)"/>
+  <!-- Klip -->
+  <rect x="362" y="152" width="190" height="20" rx="3" fill="url(#psps)" stroke="#3a4a56" stroke-width="1.8"/>
+  <!-- Klipnjača -->
+  <rect x="450" y="62" width="14" height="92" fill="#9aaab4" stroke="#5b6770" stroke-width="1.3"/>
+
+  <!-- F₂ arrow (up) -->
+  <line x1="457" y1="60" x2="457" y2="18" stroke="#1e8449" stroke-width="3.5" marker-end="url(#psaG)"/>
+  <text x="473" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" fill="#1e8449">F&#x2082; = 5,12 kN</text>
+
+  <!-- Tlačne strelice radni -->
+  <line x1="406" y1="230" x2="406" y2="184" stroke="#1565c0" stroke-width="1.6" marker-end="url(#psaBl)"/>
+  <line x1="457" y1="230" x2="457" y2="184" stroke="#1565c0" stroke-width="1.6" marker-end="url(#psaBl)"/>
+  <line x1="508" y1="230" x2="508" y2="184" stroke="#1565c0" stroke-width="1.6" marker-end="url(#psaBl)"/>
+
+  <!-- Kota d₂ ispod -->
+  <line x1="372" y1="320" x2="372" y2="328" stroke="#3a3a3a" stroke-width="1.1"/>
+  <line x1="540" y1="320" x2="540" y2="328" stroke="#3a3a3a" stroke-width="1.1"/>
+  <line x1="374" y1="324" x2="538" y2="324" stroke="#3a3a3a" stroke-width="1.1" marker-start="url(#psaDimR)" marker-end="url(#psaDim)"/>
+  <text x="456" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a3a3a">d&#x2082; = 128 mm</text>
+
+  <!-- Kota omjera (vizualni bridge između d₁ i d₂) -->
+  <text x="238" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#6a7a86">d&#x2082;/d&#x2081; = 4  &#8594;  A&#x2082;/A&#x2081; = 16</text>
+
+  <!-- ════════════════════════════════════════════
+       INFO BOX (desno)
+  ════════════════════════════════════════════ -->
+  <rect x="576" y="52" width="368" height="160" rx="9" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.4"/>
+  <text x="760" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530" text-anchor="middle">Omjer i rezultati</text>
+  <text x="594" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">
+    A&#x2082;/A&#x2081; = (d&#x2082;/d&#x2081;)&#xB2; = 4&#xB2; = <tspan font-weight="700">16</tspan>
+  </text>
+  <text x="594" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">
+    p = F&#x2081;/A&#x2081; = 320 / (&#960;&#183;0,032&#xB2;/4) &#8776; <tspan font-weight="700">0,40 MPa</tspan>
+  </text>
+  <text x="594" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449">
+    F&#x2082; = p&#183;A&#x2082; = 16&#183;F&#x2081; = <tspan font-weight="700">5,12 kN</tspan>
+  </text>
+  <text x="594" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c">
+    s&#x2082; = s&#x2081;&#183;(A&#x2081;/A&#x2082;) = s&#x2081;/16 = <tspan font-weight="700">5,0 mm</tspan> (po ciklusu)
+  </text>
+  <text x="594" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">
+    Volumna bilanca: A&#x2081;&#183;s&#x2081; = A&#x2082;&#183;s&#x2082;  &#8594;  isti volumen fluida prenesen
+  </text>
+
+  <!-- LEGENDA -->
+  <rect x="576" y="260" width="368" height="98" rx="7" fill="#fafbfc" stroke="#dde3ea" stroke-width="1.2"/>
+  <rect x="592" y="275" width="11" height="11" fill="#c0392b" rx="2"/>
+  <text x="609" y="285" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">ulazna sila F&#x2081; (pumpa)</text>
+  <rect x="592" y="296" width="11" height="11" fill="#1e8449" rx="2"/>
+  <text x="609" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">izlazna sila F&#x2082; (radni klip)</text>
+  <rect x="592" y="317" width="11" height="11" fill="#1565c0" rx="2"/>
+  <text x="609" y="327" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">tlak p u vodu (prenosi Pascalov zakon)</text>
+  <rect x="592" y="338" width="11" height="11" fill="url(#psHatch)" stroke="#4a6070" stroke-width="0.8" rx="1"/>
+  <text x="609" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">stjenke cilindra (metalni presjek)</text>
+</svg>

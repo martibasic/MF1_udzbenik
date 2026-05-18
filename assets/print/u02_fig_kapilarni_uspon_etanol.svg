@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" role="img"
+     aria-labelledby="u2keT u2keD" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:560px;height:auto;">
+  <title id="u2keT">Kapilarni uspon etanola u staklenoj kapilari</title>
+  <desc id="u2keD">Staklena kapilara (d=1,0 mm) uronjena u etanol (σ=0,022 N/m, θ=18°, ρ=790 kg/m³). Kapilarni uspon h≈10,8 mm. Ravnoteža: F_σ = πd·σ·cosθ = G = ρg·(πd²/4)·h.</desc>
+  <defs>
+    <marker id="u2keaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
+    <marker id="u2keaRev" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
+    <marker id="u2keaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <marker id="u2keaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <marker id="u2keaDkBlue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/></marker>
+    <marker id="u2keaDkBlueL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/></marker>
+    <linearGradient id="u2kefl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8edf7"/><stop offset="100%" stop-color="#5baece"/>
+    </linearGradient>
+    <linearGradient id="u2kebath" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d5eef8"/><stop offset="100%" stop-color="#8ac5e0"/>
+    </linearGradient>
+    <linearGradient id="u2kewall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d0d7dc"/><stop offset="100%" stop-color="#90a0a8"/>
+    </linearGradient>
+    <pattern id="u2keh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+    </pattern>
+  </defs>
+
+  <!-- Pozadina -->
+  <rect width="560" height="520" fill="#f4f6f8"/>
+  <rect x="8" y="8" width="544" height="504" rx="12" fill="#ffffff" stroke="#d2dae2" stroke-width="1.5"/>
+
+  <!-- Naslov -->
+  <text x="280" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530" text-anchor="middle">Kapilarni uspon etanola u staklenoj kapilari</text>
+  <text x="280" y="51" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">d = 1,0 mm  |  θ = 18°  |  σ = 0,022 N/m  |  ρ = 790 kg/m³  →  h ≈ 10,8 mm</text>
+
+  <!-- ══════════════════ POSUDA ══════════════════ -->
+  <!-- Dno posude -->
+  <rect x="80" y="418" width="310" height="14" fill="url(#u2keh)" stroke="#3a4a56" stroke-width="1.4"/>
+  <!-- Lijeva stijenka posude -->
+  <rect x="80" y="298" width="14" height="120" fill="url(#u2keh)" stroke="#3a4a56" stroke-width="1.4"/>
+  <!-- Desna stijenka posude -->
+  <rect x="376" y="298" width="14" height="120" fill="url(#u2keh)" stroke="#3a4a56" stroke-width="1.4"/>
+
+  <!-- Etanol u posudi -->
+  <rect x="94" y="348" width="282" height="70" fill="url(#u2kebath)" opacity="0.9"/>
+
+  <!-- Razina etanola u posudi (dashed) -->
+  <line x1="76" y1="348" x2="392" y2="348" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="7,5"/>
+  <text x="396" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0">razina</text>
+  <text x="396" y="357" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0">etanola</text>
+
+  <!-- ══════════════════ KAPILARA ══════════════════ -->
+  <!-- Centar kapilare x=235. Unutarnji r=14px (d=28px ≈ 1mm u mjerilu)
+       Lijeva stjenka: x=207..221, Desna: x=249..263 -->
+
+  <!-- Lijeva stjenka kapilare -->
+  <rect x="207" y="62" width="14" height="356" fill="url(#u2keh)" stroke="#3a4a56" stroke-width="1.4"/>
+  <!-- Desna stjenka kapilare -->
+  <rect x="249" y="62" width="14" height="356" fill="url(#u2keh)" stroke="#3a4a56" stroke-width="1.4"/>
+
+  <!-- Etanol u kapilari (od razine y=348 do uspona y=206) -->
+  <rect x="221" y="206" width="28" height="142" fill="url(#u2kefl)"/>
+
+  <!-- Meniskus konkavan (θ=18°, gotovo ravan, luk blago udubljen)
+       luk: M(221,212) Q(235,200) (249,212) -->
+  <path d="M221,212 Q235,200 249,212 L249,206 L221,206 Z" fill="url(#u2kefl)"/>
+  <path d="M221,212 Q235,200 249,212" fill="none" stroke="#1565c0" stroke-width="2.4"/>
+
+  <!-- σ strelice na rubovima meniskusa (kose, prema gore-van, dulje) -->
+  <line x1="217" y1="217" x2="198" y2="197" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u2keaR)"/>
+  <line x1="253" y1="217" x2="272" y2="197" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u2keaR)"/>
+  <!-- σ labela -->
+  <text x="235" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#c0392b" text-anchor="middle">σ</text>
+
+  <!-- Kontaktni kut θ na lijevoj stjenki (luk kuta) -->
+  <!-- Tangenta meniskusa pri x=221 je pod kutom ≈arctan(12/14)≈40°od vodoravnog, dakle ~50° od vertikale
+       Vizualni luk r=14px između vertikale stijenke i tangente meniskusa -->
+  <path d="M221,212 L221,228" stroke="#b7600c" stroke-width="1.4" fill="none"/>
+  <path d="M221,212 L208,201" stroke="#b7600c" stroke-width="1.4" fill="none"/>
+  <path d="M221,224 A12,12 0 0 1 213,204" fill="none" stroke="#b7600c" stroke-width="1.2"/>
+  <text x="198" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#b7600c" text-anchor="end">θ = 18°</text>
+
+  <!-- Sila površinske napetosti F_σ = πdσcosθ (strelica gore na vrhu stupca, zelena) -->
+  <line x1="235" y1="198" x2="235" y2="180" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u2keaR)"/>
+  <text x="241" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1e8449" font-style="italic">F_σ↑</text>
+
+  <!-- G strelica prema dolje (težina stupca tekućine) -->
+  <line x1="235" y1="246" x2="235" y2="336" stroke="#1a2530" stroke-width="2.4" marker-end="url(#u2keaR)"/>
+  <text x="243" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1a2530">G</text>
+  <text x="243" y="311" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">= ρg·A·h</text>
+
+  <!-- ══════════════════ KOTE ══════════════════ -->
+
+  <!-- Kota h (desno od kapilare, od razine do meniskusa) -->
+  <line x1="265" y1="206" x2="272" y2="206" stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="265" y1="348" x2="272" y2="348" stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="269" y1="208" x2="269" y2="346" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u2keaDimL)" marker-end="url(#u2keaDim)"/>
+  <text x="278" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#b7600c">h</text>
+  <text x="278" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">≈ 10,8 mm</text>
+
+  <!-- Kota d (unutarnji promjer kapilare, pri vrhu) -->
+  <line x1="221" y1="75" x2="221" y2="81" stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="249" y1="75" x2="249" y2="81" stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="223" y1="78" x2="247" y2="78" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u2keaDimL)" marker-end="url(#u2keaDim)"/>
+  <text x="235" y="70" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">d = 1,0 mm</text>
+
+  <!-- ══════════════════ DESNO – jednadžbe i ravnoteža ══════════════════ -->
+
+  <!-- Ravnoteža sila – vertikalna os ravnoteže -->
+  <text x="390" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#3a4a56">Ravnoteža sila:</text>
+
+  <!-- F_σ (površinska sila) -->
+  <rect x="380" y="88" width="164" height="44" rx="6" fill="#fde8e8" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="462" y="105" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c0392b" text-anchor="middle">F_σ = π·d·σ·cosθ</text>
+  <text x="462" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c0392b" text-anchor="middle">= π·0,001·0,022·cos18°</text>
+
+  <!-- = G -->
+  <text x="462" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#1a2530" text-anchor="middle">= G (ravnoteža)</text>
+
+  <!-- G (težina stupca) -->
+  <rect x="380" y="162" width="164" height="44" rx="6" fill="#e8f4e8" stroke="#1e8449" stroke-width="1.3"/>
+  <text x="462" y="179" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449" text-anchor="middle">G = ρ·g·(πd²/4)·h</text>
+  <text x="462" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="middle">= 790·9,81·(π·10⁻⁶/4)·h</text>
+
+  <!-- Separator -->
+  <line x1="380" y1="218" x2="544" y2="218" stroke="#d2dae2" stroke-width="1.2"/>
+
+  <!-- Formula h -->
+  <rect x="380" y="226" width="164" height="38" rx="6" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.3"/>
+  <text x="462" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1a2530" text-anchor="middle">h = 4σ·cosθ / (ρgd)</text>
+  <text x="462" y="257" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">izlazi iz uvjeta F_σ = G</text>
+
+  <!-- Numerički rezultat -->
+  <rect x="380" y="274" width="164" height="56" rx="8" fill="#eaf9f1" stroke="#1e8449" stroke-width="1.8"/>
+  <text x="462" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">4 · 0,022 · cos18°</text>
+  <line x1="390" y1="298" x2="534" y2="298" stroke="#3a4a56" stroke-width="1.0"/>
+  <text x="462" y="311" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">790 · 9,81 · 0,001</text>
+  <text x="380" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1e8449" text-anchor="start">= 0,0108 m ≈ 10,8 mm</text>
+
+  <!-- Inženjerska napomena -->
+  <rect x="380" y="342" width="164" height="76" rx="6" fill="#f8f9fa" stroke="#d2dae2" stroke-width="1.2"/>
+  <text x="389" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" font-weight="700">Inženjerske napomene:</text>
+  <text x="389" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">θ=0° (voda/staklo) → max h</text>
+  <text x="389" y="387" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">θ=90° → h = 0 (nema uspona)</text>
+  <text x="389" y="401" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">θ&gt;90° (živa) → pad razine</text>
+  <text x="389" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#8898ae" font-style="italic">Etanol: slabiji uspon od vode</text>
+
+  <!-- Jednadžba ravnoteže (dolje) -->
+  <rect x="20" y="436" width="350" height="54" rx="8" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="195" y="455" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530" text-anchor="middle">F_σ = G   →   πdσcosθ = ρg(πd²/4)h</text>
+  <text x="195" y="472" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-style="italic" fill="#1a2530" text-anchor="middle">→   h = 4σcosθ / (ρgd)</text>
+  <text x="195" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">izvod iz ravnoteže površinskih sila i gravitacije</text>
+</svg>

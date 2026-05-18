@@ -1,0 +1,118 @@
+---
+title: "MF1 - Integrirani udžbenik - verzija za ispis"
+subtitle: "Objedinjeni dokument za ispis i izvoz u PDF"
+page-layout: article
+toc: false
+number-sections: true
+---
+
+::: {.mf1-print-note .no-print}
+Koristi ispis preglednika ili izvoz u PDF za spremanje objedinjene verzije.
+:::
+
+```{=html}
+<div class="mf1-print-toolbar no-print">
+  <button class="mf1-print-button" onclick="window.print()">Ispis / Spremi kao PDF</button>
+  <a class="mf1-print-button secondary" href="index.qmd">Povratak na početnu stranicu</a>
+</div>
+```
+
+# U00 - Kako koristiti udžbenik
+
+{{< include source/u00_kako_koristiti_udzbenik.md >}}
+
+<div class="page-break"></div>
+
+# U01 - Osnove fluida i Pascalov zakon
+
+{{< include source/u01_osnove_fluida_i_pascalov_zakon.md >}}
+
+<div class="page-break"></div>
+
+# U02 - Viskoznost, površinska napetost i kapilarnost
+
+{{< include source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md >}}
+
+<div class="page-break"></div>
+
+# U03 - Hidrostatička raspodjela tlaka i manometrija
+
+{{< include source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md >}}
+
+<div class="page-break"></div>
+
+# U04 - Relativno mirovanje fluida
+
+{{< include source/u04_relativno_mirovanje_fluida.md >}}
+
+<div class="page-break"></div>
+
+# U05 - Hidrostatske sile na ravne plohe
+
+{{< include source/u05_hidrostatske_sile_na_ravne_plohe.md >}}
+
+<div class="page-break"></div>
+
+# U06 - Zakrivljene plohe i rastav sila
+
+{{< include source/u06_zakrivljene_plohe_i_rastav_sila.md >}}
+
+<div class="page-break"></div>
+
+# U07 - Uzgon, plivanje i stabilnost
+
+{{< include source/u07_uzgon_plivanje_i_stabilnost.md >}}
+
+<div class="page-break"></div>
+
+# U08 - Kontrolni volumen i kontinuitet
+
+{{< include source/u08_kontrolni_volumen_i_kontinuitet.md >}}
+
+<div class="page-break"></div>
+
+# U09 - Bernoullijeva jednadžba idealnog fluida
+
+{{< include source/u09_bernoullijeva_jednadzba_idealnog_fluida.md >}}
+
+<div class="page-break"></div>
+
+# U10 - Realni Bernoulli i gubici
+
+{{< include source/u10_realni_bernoulli_i_gubici.md >}}
+
+<div class="page-break"></div>
+
+# U11 - Količina gibanja i sile strujanja
+
+{{< include source/u11_kolicina_gibanja_i_sile_strujanja.md >}}
+
+<div class="page-break"></div>
+
+# U12 - Pokretne lopatice i potisak
+
+{{< include source/u12_pokretne_lopatice_i_potisak.md >}}
+
+<div class="page-break"></div>
+
+# U13 - Cjevovodi
+
+{{< include source/u13_cjevovodi.md >}}
+
+<div class="page-break"></div>
+
+# D01 - Sažetak formula i oznaka
+
+{{< include source/d01_sazetak_formula_i_oznaka.md >}}
+
+<div class="page-break"></div>
+
+# D02 - Pojmovnik
+
+{{< include source/d02_pojmovnik.md >}}
+
+<div class="page-break"></div>
+
+# D03 - Tipične pogreške po poglavljima
+
+{{< include source/d03_tipicne_pogreske_po_poglavljima.md >}}

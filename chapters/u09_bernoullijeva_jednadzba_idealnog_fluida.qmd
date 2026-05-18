@@ -1,0 +1,6 @@
+---
+title: "U09 - Bernoullijeva jednadžba idealnog fluida"
+page-layout: article
+---
+
+{{< include ../source/u09_bernoullijeva_jednadzba_idealnog_fluida.md >}}

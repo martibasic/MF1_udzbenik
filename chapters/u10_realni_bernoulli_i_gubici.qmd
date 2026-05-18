@@ -1,0 +1,6 @@
+---
+title: "U10 - Realni Bernoulli i gubici"
+page-layout: article
+---
+
+{{< include ../source/u10_realni_bernoulli_i_gubici.md >}}

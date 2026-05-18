@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" role="img"
+     aria-labelledby="v3t v3d" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="v3t">U02 Val 3 – Tlakovni skok u vodenoj kapljici raspršivača</title>
+  <desc id="v3d">Sferna kapljica promjera d=1,2 mm. Vanjski tlak p₀ pritiska izvana. Zakrivljena površina (Young-Laplace) stvara viši unutarnji tlak p_in. Δp = 4σ/d = 240 Pa. Za d₂=0,6 mm: Δp₂=480 Pa.</desc>
+
+  <defs>
+    <radialGradient id="v3kapljica" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#d6eaf8"/>
+      <stop offset="60%" stop-color="#aed6f1"/>
+      <stop offset="100%" stop-color="#7fb3d3"/>
+    </radialGradient>
+    <radialGradient id="v3kapljica2" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#e8f8f5"/>
+      <stop offset="60%" stop-color="#a9dfbf"/>
+      <stop offset="100%" stop-color="#73c6a0"/>
+    </radialGradient>
+    <marker id="v3aBl" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#1565c0"/>
+    </marker>
+    <marker id="v3aBlR" markerWidth="10" markerHeight="10" refX="1" refY="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#1565c0"/>
+    </marker>
+    <marker id="v3aRd" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#c0392b"/>
+    </marker>
+    <marker id="v3aRdR" markerWidth="10" markerHeight="10" refX="1" refY="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#c0392b"/>
+    </marker>
+    <marker id="v3aGn" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#1e8449"/>
+    </marker>
+    <marker id="v3aBr" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#b7600c"/>
+    </marker>
+    <marker id="v3aBrR" markerWidth="10" markerHeight="10" refX="1" refY="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#b7600c"/>
+    </marker>
+  </defs>
+
+  <rect width="980" height="440" fill="#f4f6f8"/>
+  <rect x="18" y="18" width="944" height="404" rx="14" fill="#ffffff" stroke="#d0d6de" stroke-width="2"/>
+
+  <!-- header -->
+  <text x="48" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#1a2530">U02 – Tlakovni skok u vodenoj kapljici (Young-Laplace)</text>
+  <text x="48" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#5a6a78">Sfera, jedna granica faza: Δp = 4σ/d. Za d=1,2 mm → Δp=240 Pa; za d=0,6 mm → Δp=480 Pa.</text>
+
+  <!-- === LIJEVI PANEL: velika kapljica d=1,2 mm === -->
+  <rect x="38" y="90" width="436" height="320" rx="12" fill="#f8fafc" stroke="#d0d8e4" stroke-width="1.6"/>
+  <text x="56" y="114" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Kapljica d = 1,2 mm · Δp = 240 Pa</text>
+
+  <!-- kapljica: cx=244, cy=238, r=100 -->
+  <circle cx="244" cy="238" r="100" fill="url(#v3kapljica)" stroke="#5a8fa8" stroke-width="2.5"/>
+  <!-- unutarnji krug (naznaka zakrivljenosti) -->
+  <circle cx="244" cy="238" r="68" fill="none" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="6 5" opacity="0.6"/>
+  <!-- σ luk na vrhu kapljice (površinska napetost tangencijalno) -->
+  <path d="M186,174 A78,78 0 0 1 302,174" fill="none" stroke="#1e8449" stroke-width="3" stroke-dasharray="8 5"/>
+  <text x="244" y="163" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#1e8449">σ</text>
+
+  <!-- p₀ strelice (izvana prema centru) — 4 smjera -->
+  <!-- lijevo -->
+  <line x1="82" y1="238" x2="144" y2="238" stroke="#1565c0" stroke-width="4.5" marker-end="url(#v3aBl)"/>
+  <text x="52" y="243" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" fill="#1565c0">p₀</text>
+  <!-- desno -->
+  <line x1="406" y1="238" x2="344" y2="238" stroke="#1565c0" stroke-width="4.5" marker-end="url(#v3aBl)"/>
+  <text x="412" y="243" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" fill="#1565c0">p₀</text>
+  <!-- gore -->
+  <line x1="244" y1="88" x2="244" y2="138" stroke="#1565c0" stroke-width="4.5" marker-end="url(#v3aBl)"/>
+  <text x="250" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" fill="#1565c0">p₀</text>
+  <!-- dolje -->
+  <line x1="244" y1="388" x2="244" y2="338" stroke="#1565c0" stroke-width="4.5" marker-end="url(#v3aBl)"/>
+  <text x="250" y="403" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" fill="#1565c0">p₀</text>
+
+  <!-- p_in strelica iznutra prema van (desno) — prikazuje viši unutarnji tlak -->
+  <line x1="244" y1="238" x2="318" y2="238" stroke="#c0392b" stroke-width="4" marker-end="url(#v3aRd)"/>
+  <!-- p_in label -->
+  <rect x="322" y="218" width="72" height="24" rx="6" fill="#fff5f5" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="358" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#c0392b">p_in</text>
+
+  <!-- d kota: horizontalno ispod kapljice -->
+  <line x1="144" y1="360" x2="344" y2="360" stroke="#b7600c" stroke-width="2" marker-start="url(#v3aBrR)" marker-end="url(#v3aBr)"/>
+  <text x="244" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#b7600c">d = 1,2 mm</text>
+
+  <!-- Δp badge -->
+  <rect x="56" y="214" width="110" height="44" rx="10" fill="#fff5f5" stroke="#c0392b" stroke-width="2"/>
+  <text x="111" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">Δp = 4σ/d</text>
+  <text x="111" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">= 240 Pa</text>
+
+  <!-- divider -->
+  <line x1="490" y1="88" x2="490" y2="402" stroke="#d0d8e4" stroke-width="1.8" stroke-dasharray="6 4"/>
+
+  <!-- === DESNI PANEL: usporedba i formule === -->
+  <rect x="504" y="90" width="436" height="320" rx="12" fill="#f8fafc" stroke="#d0d8e4" stroke-width="1.6"/>
+  <text x="522" y="114" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Usporedba: d₁=1,2 mm vs d₂=0,6 mm</text>
+
+  <!-- manja kapljica d=0,6 mm: cx=700, cy=185, r=52 -->
+  <circle cx="700" cy="185" r="52" fill="url(#v3kapljica2)" stroke="#5a7a66" stroke-width="2.5"/>
+  <!-- σ luk -->
+  <path d="M662,152 A44,44 0 0 1 738,152" fill="none" stroke="#1e8449" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="700" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1e8449">σ</text>
+  <!-- p₀ strelice manja -->
+  <line x1="590" y1="185" x2="648" y2="185" stroke="#1565c0" stroke-width="3.5" marker-end="url(#v3aBl)"/>
+  <line x1="810" y1="185" x2="752" y2="185" stroke="#1565c0" stroke-width="3.5" marker-end="url(#v3aBl)"/>
+  <!-- d kota manja -->
+  <line x1="648" y1="254" x2="752" y2="254" stroke="#b7600c" stroke-width="1.8" marker-start="url(#v3aBrR)" marker-end="url(#v3aBr)"/>
+  <text x="700" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c">d₂ = 0,6 mm</text>
+  <!-- Δp badge manja -->
+  <rect x="840" y="164" width="86" height="44" rx="10" fill="#fff5f5" stroke="#c0392b" stroke-width="2"/>
+  <text x="883" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">Δp₂ = 4σ/d₂</text>
+  <text x="883" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">480 Pa</text>
+
+  <!-- formula box -->
+  <rect x="522" y="288" width="408" height="108" rx="10" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="538" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a5a78">Young-Laplace, sfera (jedna granica faza):</text>
+  <text x="538" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a2530">Δp = 4σ / d → p_in = p₀ + Δp</text>
+  <line x1="530" y1="348" x2="920" y2="348" stroke="#d0d8e4" stroke-width="1"/>
+  <text x="538" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a5a78">d=1,2 mm: Δp=240 Pa · p_in=101 565 Pa ≈ 101,57 kPa</text>
+  <text x="538" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a5a78">d=0,6 mm: Δp=480 Pa (2× veći — obrnuto s d)</text>
+  <!-- napomena o mjehuru -->
+  <text x="538" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8a9aaa">Sapunica: 2 slobodne površine → Δp = 8σ/d (dvostruko više)</text>
+</svg>

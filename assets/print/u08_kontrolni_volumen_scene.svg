@@ -1,0 +1,40 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
+  <title id="title">U08 print-zamjena za kontrolni volumen</title>
+  <desc id="desc">Suženje, difuzor i kontrolni volumen s ulazima, izlazima i akumulacijom.</desc>
+  <rect width="980" height="420" fill="#fffdf8"/>
+  <rect x="32" y="32" width="916" height="356" rx="22" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text x="70" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#173043">U08 - Kontrolni volumen i bilanca mase</text>
+  <text x="70" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#587183">Tri reprezentativne scene: suženje, difuzor i spremnik s više tokova.</text>
+
+  <text x="92" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Suženje</text>
+  <path d="M90 245 L190 245 L245 210 L305 210 L305 280 L245 280 L190 245 L90 245" fill="#d9edf4" stroke="#173043" stroke-width="4"/>
+  <line x1="40" y1="245" x2="95" y2="245" stroke="#1976d2" stroke-width="6" marker-end="url(#arrowBlue)"/>
+  <line x1="305" y1="245" x2="370" y2="245" stroke="#1976d2" stroke-width="6" marker-end="url(#arrowBlue)"/>
+  <text x="48" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">m_in</text>
+  <text x="318" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">m_out</text>
+
+  <text x="415" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Difuzor</text>
+  <path d="M410 245 L470 245 L530 210 L650 210 L650 350 L530 350 L470 315 L410 315" fill="#efe6d2" stroke="#173043" stroke-width="4"/>
+  <line x1="350" y1="280" x2="410" y2="280" stroke="#1976d2" stroke-width="6" marker-end="url(#arrowBlue)"/>
+  <line x1="650" y1="280" x2="725" y2="280" stroke="#1976d2" stroke-width="6" marker-end="url(#arrowBlue)"/>
+  <text x="354" y="266" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">A1, v1</text>
+  <text x="658" y="266" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">A2, v2</text>
+
+  <text x="760" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Kontrolni volumen</text>
+  <rect x="760" y="190" width="140" height="140" rx="12" fill="#ffffff" stroke="#c96c35" stroke-width="4" stroke-dasharray="10 6"/>
+  <line x1="720" y1="225" x2="760" y2="225" stroke="#1976d2" stroke-width="6" marker-end="url(#arrowBlue)"/>
+  <line x1="900" y1="255" x2="940" y2="255" stroke="#1976d2" stroke-width="6" marker-end="url(#arrowBlue)"/>
+  <line x1="830" y1="355" x2="830" y2="330" stroke="#2e7d32" stroke-width="6" marker-end="url(#arrowGreen)"/>
+  <text x="700" y="212" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">m_1</text>
+  <text x="905" y="242" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">m_2</text>
+  <text x="840" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">akumulacija</text>
+
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+</svg>

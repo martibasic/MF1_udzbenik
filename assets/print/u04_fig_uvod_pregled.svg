@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img"
+     aria-labelledby="u4pvT u4pvD" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u4pvT">Pregled poglavlja U04 – Relativno mirovanje fluida</title>
+  <desc id="u4pvD">Tri panela: (1) Ubrzani pravokutni spremnik s nagnutom slobodnom površinom – fizikalni princip; (2) Ključne jednadžbe Δh=aL/g i tanα=a/g; (3) Autocisterna pri kočenju – strojarsko-praktična primjena.</desc>
+  <defs>
+    <marker id="u4pvaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
+    <marker id="u4pvaP" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#8e44ad"/></marker>
+    <marker id="u4pvaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <marker id="u4pvaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <linearGradient id="u4pvfl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
+    </linearGradient>
+    <linearGradient id="u4pvfuel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#d4a017"/>
+    </linearGradient>
+    <linearGradient id="u4pvhdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/>
+    </linearGradient>
+    <pattern id="u4pvh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+    </pattern>
+  </defs>
+
+  <!-- Pozadina + header -->
+  <rect width="980" height="500" fill="#eef1f5"/>
+  <rect x="0" y="0" width="980" height="48" fill="url(#u4pvhdr)"/>
+  <text x="490" y="22" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle">U04 – Relativno mirovanje fluida</text>
+  <text x="490" y="40" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#8aaccc" text-anchor="middle">slobodna površina se nagiba  ·  efektivno polje sila  ·  Δh = aL/g  ·  paraboloid pri rotaciji</text>
+
+  <!-- ═══════════════════ PANEL 1 – FIZIKALNI PRINCIP ═══════════════════ -->
+  <rect x="12" y="54" width="356" height="436" rx="10" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.8"/>
+  <text x="190" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0" text-anchor="middle">Fizikalni princip</text>
+  <text x="190" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a5a7a" text-anchor="middle" font-style="italic">ubrzani pravokutni spremnik</text>
+
+  <!-- Stijenke posude -->
+  <rect x="32" y="100" width="300" height="220" fill="none" stroke="#3a4a56" stroke-width="2.2"/>
+  <!-- Fluid (trapez: lijeva visina veća, desna manja – ubrzanje udesno naginje lijevu stranu gore) -->
+  <!-- Lijeva strana slobodne površine y=128, desna y=198 -->
+  <polygon points="32,320 332,320 332,198 32,128" fill="url(#u4pvfl)" opacity="0.9"/>
+  <!-- Slobodna površina -->
+  <line x1="32" y1="128" x2="332" y2="198" stroke="#1565c0" stroke-width="2.4"/>
+  <!-- Mirna razina (isprekidana) -->
+  <line x1="32" y1="163" x2="332" y2="163" stroke="#556678" stroke-width="1.3" stroke-dasharray="7,5"/>
+  <text x="336" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#556678">h₀</text>
+
+  <!-- Kut α s lukom i oznakom -->
+  <!-- Luk kuta između vodoravnice i slobodne površine, oko točke (182,163) -->
+  <path d="M 232,163 A 50,50 0 0 0 218,146" fill="none" stroke="#8e44ad" stroke-width="1.6"/>
+  <text x="242" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#8e44ad">α</text>
+
+  <!-- g_eff strelica (okomita na slobodnu površinu) - centralno na površini -->
+  <!-- Slobodna površina ide od (32,128) do (332,198): smjer dx=300, dy=70
+       Okomici smjer: (70,-300)/√(300²+70²)=316 → (0.221,-0.975)
+       Točka na sredini: (182, 163), g_eff prema "dolje-lijevo": (182-0.221*80, 163+0.975*80) = (164,241) -->
+  <line x1="182" y1="163" x2="164" y2="241" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u4pvaP)"/>
+  <text x="144" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#8e44ad">g_eff</text>
+
+  <!-- Ubrzanje a (strelica udesno, iznad posude) -->
+  <line x1="285" y1="92" x2="350" y2="92" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u4pvaR)"/>
+  <text x="267" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#c0392b">a</text>
+
+  <!-- Kota Δh (lijevo od posude) -->
+  <line x1="24" y1="128" x2="29" y2="128" stroke="#b7600c" stroke-width="1.3"/>
+  <line x1="24" y1="198" x2="29" y2="198" stroke="#b7600c" stroke-width="1.3"/>
+  <line x1="26" y1="130" x2="26" y2="196" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u4pvaDimL)" marker-end="url(#u4pvaDim)"/>
+  <text x="18" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c" text-anchor="end">Δh</text>
+
+  <!-- Kota L (ispod posude) -->
+  <line x1="32" y1="326" x2="32" y2="332" stroke="#b7600c" stroke-width="1.3"/>
+  <line x1="332" y1="326" x2="332" y2="332" stroke="#b7600c" stroke-width="1.3"/>
+  <line x1="34" y1="329" x2="330" y2="329" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u4pvaDimL)" marker-end="url(#u4pvaDim)"/>
+  <text x="182" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c" text-anchor="middle">L</text>
+
+  <!-- Napomena -->
+  <text x="182" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#2a3a56" text-anchor="middle" font-style="italic">Ubrzanje a nagiba slobodnu površinu.</text>
+  <text x="182" y="385" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#2a3a56" text-anchor="middle" font-style="italic">Fluid je u mirnom stanju relativno prema</text>
+  <text x="182" y="399" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#2a3a56" text-anchor="middle" font-style="italic">stijenkama – vrijedi hidrostatika u g_eff.</text>
+
+  <!-- Tlak u točki A (dubina h_A ispod površine) -->
+  <circle cx="102" cy="272" r="4" fill="#c0392b"/>
+  <text x="107" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c0392b">p_A = ρg·h_A</text>
+
+  <!-- ═══════════════════ PANEL 2 – JEDNADŽBE ═══════════════════ -->
+  <rect x="378" y="54" width="232" height="436" rx="10" fill="#eaf9f1" stroke="#1e8449" stroke-width="1.8"/>
+  <text x="494" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449" text-anchor="middle">Ključne jednadžbe</text>
+
+  <!-- Δh = aL/g -->
+  <rect x="390" y="90" width="208" height="62" rx="8" fill="white" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="494" y="115" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-style="italic" font-weight="700" fill="#1a2530" text-anchor="middle">Δh = aL/g</text>
+  <text x="494" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">razlika razina (ubrzani prav. tank)</text>
+  <text x="494" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">h_pred = h₀+Δh/2,  h_straz = h₀-Δh/2</text>
+
+  <!-- tanα = a/g -->
+  <rect x="390" y="164" width="208" height="54" rx="8" fill="white" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="494" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-style="italic" fill="#1a2530" text-anchor="middle">tan α = a/g</text>
+  <text x="494" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">kut nagiba slobodne površine</text>
+
+  <!-- Tlak u općoj točki -->
+  <rect x="390" y="228" width="208" height="54" rx="8" fill="white" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="494" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1a2530" text-anchor="middle">p = p₀ + ρg·h</text>
+  <text x="494" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">h = vertikalna dubina ispod površine</text>
+  <text x="494" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">(g zamjenjuje g_eff za rotaciju)</text>
+
+  <!-- Rotacija – paraboloid -->
+  <rect x="390" y="292" width="208" height="80" rx="8" fill="white" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="494" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b" text-anchor="middle">Rotacija (ω = konst.)</text>
+  <text x="494" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" fill="#1a2530" text-anchor="middle">Δh = ω²R²/(2g)</text>
+  <text x="494" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1a2530" text-anchor="middle">z(r) = z₀ + ω²r²/(2g)</text>
+  <text x="494" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">paraboloidna slobodna površina</text>
+
+  <!-- Ocuvanje volumena -->
+  <rect x="390" y="382" width="208" height="44" rx="8" fill="#fff8e1" stroke="#c49a0a" stroke-width="1.3"/>
+  <text x="494" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#8b5e00" text-anchor="middle">Očuvanje volumena:</text>
+  <text x="494" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56" text-anchor="middle">os se spušta, rub se diže za Δh/2</text>
+
+  <!-- Primjene -->
+  <text x="390" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" font-weight="700">Primjene:</text>
+  <text x="390" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">cisterne, centrifuge, separatori</text>
+  <text x="390" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">gorivni tankovi vozila, procesne kade</text>
+
+  <!-- ═══════════════════ PANEL 3 – AUTOCISTERNA ═══════════════════ -->
+  <rect x="620" y="54" width="352" height="436" rx="10" fill="#fdf8e8" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="796" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#8b5e00" text-anchor="middle">Primjena: autocisterna pri kočenju</text>
+  <text x="796" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a4a20" text-anchor="middle" font-style="italic">gorivo se nagiba prema prednjoj stijenci</text>
+
+  <!-- Karoserija autocisterne (oblina) -->
+  <rect x="636" y="134" width="318" height="114" rx="12" fill="#f39c12" stroke="#c0720a" stroke-width="2.2"/>
+  <!-- Kotači -->
+  <circle cx="688" cy="248" r="18" fill="#444" stroke="#222" stroke-width="1.8"/>
+  <circle cx="688" cy="248" r="9" fill="#888"/>
+  <circle cx="866" cy="248" r="18" fill="#444" stroke="#222" stroke-width="1.8"/>
+  <circle cx="866" cy="248" r="9" fill="#888"/>
+  <circle cx="906" cy="248" r="18" fill="#444" stroke="#222" stroke-width="1.8"/>
+  <circle cx="906" cy="248" r="9" fill="#888"/>
+
+  <!-- Cisterna (eliptična) unutar karoserije -->
+  <rect x="650" y="142" width="290" height="98" rx="8" fill="#e8e0d0" stroke="#a09060" stroke-width="1.4"/>
+  <!-- Fluid (gorivo, nagnut trapez) – kočenje = ubrzanje nazad = gorivo naprijed/lijevo -->
+  <!-- Lijevo gore, desno dolje -->
+  <polygon points="651,143 939,143 939,218 651,185" fill="url(#u4pvfuel)" opacity="0.88"/>
+  <!-- Slobodna površina goriva (nagnuta) -->
+  <line x1="651" y1="185" x2="939" y2="218" stroke="#c8860a" stroke-width="2.2"/>
+  <!-- Mirna razina -->
+  <line x1="651" y1="200" x2="939" y2="200" stroke="#a09060" stroke-width="1.2" stroke-dasharray="6,4"/>
+  <text x="941" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#a09060">h₀</text>
+
+  <!-- Kočenje strelica (gorivo ide prema naprijed = lijevo) -->
+  <line x1="720" y1="112" x2="658" y2="112" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u4pvaR)"/>
+  <text x="730" y="117" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">a (kočenje)</text>
+
+  <!-- Kota h_pred (lijevo) -->
+  <line x1="643" y1="185" x2="648" y2="185" stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="643" y1="238" x2="648" y2="238" stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="645" y1="187" x2="645" y2="236" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u4pvaDimL)" marker-end="url(#u4pvaDim)"/>
+  <text x="634" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="end">h_p</text>
+
+  <!-- Kota h_straz (desno) -->
+  <line x1="942" y1="218" x2="947" y2="218" stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="942" y1="238" x2="947" y2="238" stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="945" y1="220" x2="945" y2="236" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u4pvaDimL)" marker-end="url(#u4pvaDim)"/>
+  <text x="955" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">h_s</text>
+
+  <!-- Jednadžba ispod autocisterne -->
+  <rect x="636" y="280" width="318" height="46" rx="7" fill="white" stroke="#c49a0a" stroke-width="1.4"/>
+  <text x="795" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1a2530" text-anchor="middle">Δh = aL/g,  h_p = h₀+Δh/2,  h_s = h₀-Δh/2</text>
+  <text x="795" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78" text-anchor="middle">provjera prelijevanja: h_p ≤ H_cisterne</text>
+
+  <!-- Broj primjera naveden -->
+  <text x="636" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#3a4a56">Strojarski kontekst:</text>
+  <text x="636" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">cisterne za gorivo, vatrogasna vozila</text>
+  <text x="636" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">tankeri za kemikalije, prehrambeni transport</text>
+  <text x="636" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">EN 14286: provjera punjenja cisterne</text>
+
+  <!-- Paraboloid – mini prikaz -->
+  <rect x="636" y="406" width="318" height="76" rx="7" fill="#f0f8ff" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="795" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1565c0" text-anchor="middle">Rotacija: paraboloidna slobodna površina</text>
+  <!-- Mini paraboloid crtež -->
+  <!-- Cilindar: x=680..910, referentna linija y=454 -->
+  <rect x="710" y="434" width="10" height="40" fill="#c8d0d5" stroke="#556" stroke-width="1.0"/>
+  <rect x="870" y="434" width="10" height="40" fill="#c8d0d5" stroke="#556" stroke-width="1.0"/>
+  <!-- Paraboloid: od (720,470) Q(790,434) (880,470) -->
+  <rect x="720" y="455" width="160" height="15" fill="url(#u4pvfl)" opacity="0.7"/>
+  <path d="M720,470 Q790,440 880,470 L880,455 Q790,440 720,455 Z" fill="url(#u4pvfl)" opacity="0.88"/>
+  <path d="M720,470 Q790,440 880,470" fill="none" stroke="#1565c0" stroke-width="2.0"/>
+  <!-- Referentna razina h0 -->
+  <line x1="720" y1="456" x2="880" y2="456" stroke="#a0a8b0" stroke-width="1.0" stroke-dasharray="4,3"/>
+  <!-- ω oznaka -->
+  <text x="845" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" font-style="italic">ω</text>
+  <!-- Δh/2 oznake -->
+  <text x="895" y="445" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">Δh</text>
+</svg>

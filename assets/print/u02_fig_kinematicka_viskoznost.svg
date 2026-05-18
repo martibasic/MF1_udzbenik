@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img"
+     aria-labelledby="u2kvT u2kvD" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:720px;height:auto;">
+  <title id="u2kvT">Kratki primjer: kinematička viskoznost hidrauličnog ulja</title>
+  <desc id="u2kvD">Lijevo: Couetteov tok hidrauličnog ulja između dviju ploča s linearnim profilom brzine – vizualizacija dinamičke viskoznosti μ. Desno: izvod kinematičke viskoznosti ν = μ/ρ s numeričkim rezultatom za ISO VG 100 hidraulično ulje (μ=0,18 Pa·s, ρ=900 kg/m³, ν=2,00·10⁻⁴ m²/s = 200 cSt).</desc>
+  <defs>
+    <marker id="u2kvaR"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
+    <marker id="u2kvaG"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/></marker>
+    <marker id="u2kvaW"  markerWidth="9"  markerHeight="7" refX="8"  refY="3.5" orient="auto"><path d="M0,0 L0,7 L9,3.5 z" fill="white"/></marker>
+    <marker id="u2kvaDim"  markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <marker id="u2kvaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
+    <linearGradient id="u2kvfl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5c842"/><stop offset="100%" stop-color="#c9960a"/>
+    </linearGradient>
+    <linearGradient id="u2kvwall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8d0d5"/><stop offset="100%" stop-color="#7a8a94"/>
+    </linearGradient>
+    <pattern id="u2kvh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+    </pattern>
+  </defs>
+
+  <!-- Pozadina -->
+  <rect width="720" height="340" fill="#f4f6f8"/>
+  <rect x="8" y="8" width="704" height="324" rx="12" fill="#ffffff" stroke="#d2dae2" stroke-width="1.5"/>
+
+  <!-- Naslov -->
+  <text x="360" y="32" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530" text-anchor="middle">Kinematička viskoznost hidrauličnog ulja: ν = μ / ρ</text>
+  <text x="360" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">ISO VG 100: μ = 0,18 Pa·s,  ρ = 900 kg/m³  →  ν ≈ 2,00 · 10⁻⁴ m²/s  (= 200 cSt)</text>
+
+  <!-- Separator -->
+  <line x1="354" y1="60" x2="354" y2="320" stroke="#d0d8e2" stroke-width="1.2" stroke-dasharray="5,4"/>
+
+  <!-- ═══════════════════════ LIJEVO – Fizikalni prikaz ═══════════════════════ -->
+
+  <!-- Gornja ploča (gibajuća, v=U) -->
+  <rect x="28" y="70" width="300" height="22" fill="url(#u2kvwall)" stroke="#3a4a56" stroke-width="1.8"/>
+  <rect x="28" y="70" width="300" height="22" fill="url(#u2kvh)" opacity="0.2"/>
+  <!-- Strelica v=U -->
+  <line x1="80" y1="62" x2="228" y2="62" stroke="#1e8449" stroke-width="3.0" marker-end="url(#u2kvaG)"/>
+  <text x="235" y="67" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1e8449">v = U</text>
+
+  <!-- τ strelica na gornjoj ploči -->
+  <line x1="230" y1="78" x2="264" y2="78" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u2kvaR)"/>
+  <text x="268" y="83" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#c0392b">τ</text>
+
+  <!-- Fluid (ulje, žuta boja) -->
+  <rect x="28" y="92" width="300" height="160" fill="url(#u2kvfl)" opacity="0.82"/>
+
+  <!-- Profil brzine – bijele strelice linearno rastuće, 7 redova dy=26 -->
+  <line x1="28" y1="252" x2="28" y2="252" stroke="white" stroke-width="1"/><!-- v=0 -->
+  <text x="24" y="255" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.75)" text-anchor="end">0</text>
+  <line x1="28" y1="226" x2="56"  y2="226" stroke="white" stroke-width="1.7" marker-end="url(#u2kvaW)"/>
+  <line x1="28" y1="200" x2="84"  y2="200" stroke="white" stroke-width="1.8" marker-end="url(#u2kvaW)"/>
+  <line x1="28" y1="174" x2="112" y2="174" stroke="white" stroke-width="1.9" marker-end="url(#u2kvaW)"/>
+  <line x1="28" y1="148" x2="140" y2="148" stroke="white" stroke-width="2.0" marker-end="url(#u2kvaW)"/>
+  <line x1="28" y1="122" x2="168" y2="122" stroke="white" stroke-width="2.1" marker-end="url(#u2kvaW)"/>
+  <line x1="28" y1="96"  x2="196" y2="96"  stroke="white" stroke-width="2.2" marker-end="url(#u2kvaW)"/>
+
+  <!-- Rub linearnog profila (kosa crtkana linija v=0 na dnu, v=U na vrhu) -->
+  <line x1="28" y1="252" x2="196" y2="92" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- Donja ploča (mirujuća) -->
+  <rect x="28" y="252" width="300" height="22" fill="url(#u2kvh)" stroke="#3a4a56" stroke-width="1.8"/>
+  <text x="178" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#4a6070" text-anchor="middle">donja ploča   v = 0</text>
+
+  <!-- Kota δ (desno) -->
+  <line x1="332" y1="92"  x2="337" y2="92"  stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="332" y1="252" x2="337" y2="252" stroke="#b7600c" stroke-width="1.2"/>
+  <line x1="335" y1="94"  x2="335" y2="250" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u2kvaDimL)" marker-end="url(#u2kvaDim)"/>
+  <text x="343" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#b7600c">δ</text>
+
+  <!-- τ jednadžba ispod -->
+  <rect x="28" y="305" width="308" height="26" rx="5" fill="#fff3cd" stroke="#e0c040" stroke-width="1.2"/>
+  <text x="182" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1a2530" text-anchor="middle">τ = μ · U / δ   →   μ = τ · δ / U   [Pa·s]</text>
+
+  <!-- ═══════════════════════ DESNO – Matematički izvod ═══════════════════════ -->
+
+  <!-- Naslov desne strane -->
+  <text x="537" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#3a4a56" text-anchor="middle">Izvod kinematičke viskoznosti</text>
+
+  <!-- Definicija ν -->
+  <rect x="366" y="90" width="330" height="50" rx="8" fill="#eaf4fb" stroke="#c8d8e8" stroke-width="1.3"/>
+  <text x="531" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-style="italic" fill="#1a2530" text-anchor="middle">ν = μ / ρ</text>
+  <text x="531" y="131" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">ν [m²/s] = kinematička viskoznost</text>
+
+  <!-- Uvrštavanje -->
+  <text x="370" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56">Uvrštavanje zadanih podataka:</text>
+  <text x="370" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1a2530">μ = 0,18 Pa·s  (dinamička)</text>
+  <text x="370" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1a2530">ρ = 900 kg/m³  (gustoća)</text>
+
+  <!-- Razlomak -->
+  <text x="390" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-style="italic" fill="#1a2530">ν =</text>
+  <!-- Brojnik i nazivnik razlomka -->
+  <text x="448" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-style="italic" fill="#1a2530" text-anchor="middle">0,18</text>
+  <line x1="430" y1="226" x2="466" y2="226" stroke="#1a2530" stroke-width="1.5"/>
+  <text x="448" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-style="italic" fill="#1a2530" text-anchor="middle">900</text>
+
+  <!-- Rezultat -->
+  <rect x="366" y="258" width="330" height="46" rx="8" fill="#eaf9f1" stroke="#1e8449" stroke-width="1.8"/>
+  <text x="531" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-style="italic" font-weight="700" fill="#1e8449" text-anchor="middle">ν ≈ 2,00 · 10⁻⁴ m²/s</text>
+  <text x="531" y="297" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1e8449" text-anchor="middle">= 200 cSt  (centistokes)</text>
+
+  <!-- Napomene -->
+  <text x="366" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" font-style="italic">Re = v·L/ν  (Reynoldsov broj, laminarno/turbulentno)  |  1 cSt = 10⁻⁶ m²/s</text>
+</svg>

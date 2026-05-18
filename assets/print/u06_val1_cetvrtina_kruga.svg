@@ -1,0 +1,121 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
+     aria-labelledby="u6v1T u6v1D" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u6v1T">U06 Val 1 – Potopljena četvrtina kruga</title>
+  <desc id="u6v1D">Zakrivljena ploha AB presjeka četvrtine kruga s vodom na konveksnoj strani. FH djeluje prema lijevo, FV prema gore. Prikazani zamišljeni volumen V* za izračun vertikalne komponente.</desc>
+  <defs>
+    <pattern id="u6v1H" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <linearGradient id="u6v1Wg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <linearGradient id="u6v1Wi" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f5fb" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#b0d9ed" stop-opacity="0.9"/>
+    </linearGradient>
+    <marker id="u6v1aR" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L9,4 z" fill="#b42318"/>
+    </marker>
+    <marker id="u6v1aG" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L9,4 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u6v1aGr" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L9,4 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u6v1aMg" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L9,4 z" fill="#7b1fa2"/>
+    </marker>
+  </defs>
+
+  <!-- Background + border -->
+  <rect width="940" height="420" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="54" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U06 – Potopljena četvrtina kruga</text>
+  <text x="54" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">Voda na konveksnoj strani: F&#x2095; prema lijevo, F&#x1D65; prema gore. Zamišljeni volumen V* za F&#x1D65; = &#x3C1;g·V*.</text>
+
+  <!-- Structural wall (left, srafura) -->
+  <rect x="40" y="112" width="160" height="246" fill="url(#u6v1H)"/>
+  <rect x="40" y="112" width="160" height="246" fill="none" stroke="#546e7a" stroke-width="1.5"/>
+  <!-- Structural floor (bottom, srafura) -->
+  <rect x="40" y="358" width="420" height="32" fill="url(#u6v1H)"/>
+  <rect x="40" y="358" width="420" height="32" fill="none" stroke="#546e7a" stroke-width="1.5"/>
+
+  <!-- Free surface line -->
+  <line x1="140" y1="112" x2="500" y2="112" stroke="#3a87ad" stroke-width="3"/>
+  <text x="510" y="117" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">slobodna površina</text>
+
+  <!-- Actual water on convex (outer right) side -->
+  <path d="M320,112 L480,112 L480,358 L200,358 A130,130 0 0 0 320,228 Z"
+        fill="url(#u6v1Wg)" opacity="0.7"/>
+
+  <!-- Imaginary volume V* (lighter, dashed border) — V1 + V2 -->
+  <path d="M200,112 L320,112 L320,228 A130,130 0 0 1 200,358 Z"
+        fill="url(#u6v1Wi)" opacity="0.85"/>
+  <path d="M200,112 L320,112 L320,228 A130,130 0 0 1 200,358 Z"
+        fill="none" stroke="#3a87ad" stroke-width="1.5" stroke-dasharray="7 5"/>
+
+  <!-- Arc (gate surface) — thick, dark -->
+  <path d="M320,228 A130,130 0 0 1 200,358" fill="none" stroke="#173043" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Wall outline borders -->
+  <line x1="200" y1="112" x2="200" y2="358" stroke="#2d3a40" stroke-width="3"/>
+  <line x1="200" y1="358" x2="460" y2="358" stroke="#2d3a40" stroke-width="3"/>
+
+  <!-- Points A and B -->
+  <circle cx="320" cy="228" r="5" fill="#173043"/>
+  <text x="326" y="224" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">A</text>
+  <circle cx="200" cy="358" r="5" fill="#173043"/>
+  <text x="177" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">B</text>
+
+  <!-- V* label inside imaginary volume -->
+  <text x="238" y="285" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-style="italic" fill="#1a6696">V*</text>
+  <text x="230" y="302" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#1a6696">= V&#x2081;+V&#x2082;</text>
+
+  <!-- FH arrow (← leftward, red) at mid-arc height -->
+  <line x1="360" y1="293" x2="232" y2="293" stroke="#b42318" stroke-width="4" marker-end="url(#u6v1aR)"/>
+  <rect x="365" y="280" width="46" height="22" rx="5" fill="#fff" stroke="#d8c7c4" stroke-width="1.2"/>
+  <text x="375" y="296" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#b42318">F&#x2095;</text>
+
+  <!-- FV arrow (↑ upward, green) -->
+  <line x1="258" y1="370" x2="258" y2="238" stroke="#0f766e" stroke-width="4" marker-end="url(#u6v1aG)"/>
+  <rect x="264" y="296" width="46" height="22" rx="5" fill="#fff" stroke="#c7d8d6" stroke-width="1.2"/>
+  <text x="272" y="312" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#0f766e">F&#x1D65;</text>
+
+  <!-- h1 dimension arrow -->
+  <line x1="100" y1="112" x2="100" y2="228" stroke="#546e7a" stroke-width="2" marker-start="url(#u6v1aGr)" marker-end="url(#u6v1aGr)"/>
+  <rect x="52" y="160" width="42" height="20" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1.2"/>
+  <text x="60" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">h&#x2081;</text>
+
+  <!-- R dimension arrow -->
+  <line x1="80" y1="228" x2="80" y2="358" stroke="#546e7a" stroke-width="2" marker-start="url(#u6v1aGr)" marker-end="url(#u6v1aGr)"/>
+  <rect x="52" y="285" width="22" height="20" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1.2"/>
+  <text x="58" y="299" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">R</text>
+
+  <!-- Vertical projection rectangle (for FH) -->
+  <rect x="390" y="228" width="36" height="130" fill="#f0f4f8" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="396" y="384" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">A&#x2093;</text>
+
+  <!-- Formula box -->
+  <rect x="548" y="100" width="348" height="272" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="568" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">Ključne jednadžbe</text>
+  <line x1="568" y1="134" x2="880" y2="134" stroke="#e8d89a" stroke-width="1"/>
+  <text x="568" y="158" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">F&#x2095; = &#x3C1;g · h&#x2C6;&#x1D9C;&#x2C2; · A&#x2093;</text>
+  <text x="568" y="178" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">A&#x2093; = R·b = 1,22·1,83 = 2,23 m&#xB2;</text>
+  <text x="568" y="196" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">h&#x2C6;&#x1D9C;&#x2C2; = h&#x2081;+R/2 = 2,44+0,61 = 3,05 m</text>
+  <text x="568" y="218" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#b42318">F&#x2095; &#x2248; 66,7 kN  &#x2190;</text>
+  <line x1="568" y1="228" x2="880" y2="228" stroke="#e8d89a" stroke-width="1"/>
+  <text x="568" y="248" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">F&#x1D65; = &#x3C1;g · V*</text>
+  <text x="568" y="268" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">V* = h&#x2081;Rb + &#x3C0;R&#xB2;b/4 = 7,59 m&#xB3;</text>
+  <text x="568" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f766e">F&#x1D65; &#x2248; 74,3 kN  &#x2191;</text>
+  <line x1="568" y1="300" x2="880" y2="300" stroke="#e8d89a" stroke-width="1"/>
+  <text x="568" y="322" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">F&#x1D35; = &#x221A;(F&#x2095;&#xB2;+F&#x1D65;&#xB2;)</text>
+  <text x="568" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#7b1fa2">F&#x1D35; &#x2248; 99,8 kN</text>
+
+  <!-- datum line annotations -->
+  <line x1="320" y1="112" x2="320" y2="228" stroke="#546e7a" stroke-width="1.2" stroke-dasharray="5 4"/>
+</svg>

@@ -1,0 +1,130 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
+     aria-labelledby="u6c1T u6c1D" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u6c1T">U06 CH1 – Četvrtcilindrični poklopac s vodoravnom spojnicom</title>
+  <desc id="u6c1D">Poklopac okretljivo vezan u točki A (gornji rub na slobodnoj površini). Horizontalna spojnica T u točki B sprječava otvaranje. Moment ravnoteže oko A daje silu T.</desc>
+  <defs>
+    <pattern id="u6c1H" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <linearGradient id="u6c1Wg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <linearGradient id="u6c1Vi" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ddf0f9" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#9ecfe8" stop-opacity="0.9"/>
+    </linearGradient>
+    <marker id="u6c1aR" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L9,4 z" fill="#b42318"/>
+    </marker>
+    <marker id="u6c1aG" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L9,4 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u6c1aB" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L9,4 z" fill="#1565c0"/>
+    </marker>
+    <marker id="u6c1aGr" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L9,4 z" fill="#546e7a"/>
+    </marker>
+  </defs>
+
+  <!-- Background + border -->
+  <rect width="940" height="420" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="54" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U06 – Poklopac s vodoravnom spojnicom</text>
+  <text x="54" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">Šarka u A (slobodna površina), spojnica T u B. Uvjet ravnoteže: &#x3A3;M&#x2090; = 0 &#x2192; T.</text>
+
+  <!-- Right structural wall (srafura) -->
+  <rect x="330" y="100" width="80" height="140" fill="url(#u6c1H)"/>
+  <rect x="330" y="100" width="80" height="140" fill="none" stroke="#546e7a" stroke-width="1.5"/>
+  <!-- Bottom structural floor (srafura) -->
+  <rect x="80" y="240" width="330" height="46" fill="url(#u6c1H)"/>
+  <rect x="80" y="240" width="330" height="46" fill="none" stroke="#546e7a" stroke-width="1.5"/>
+
+  <!-- Free surface -->
+  <line x1="80" y1="100" x2="500" y2="100" stroke="#3a87ad" stroke-width="3"/>
+  <text x="510" y="105" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">slobodna površina</text>
+
+  <!-- Water (inside corner) -->
+  <path d="M80,100 L330,100 A140,140 0 0 0 190,240 L80,240 Z" fill="url(#u6c1Wg)" opacity="0.8"/>
+
+  <!-- Imaginary V* volume (quarter-circle) -->
+  <path d="M330,100 A140,140 0 0 0 190,240 L330,240 Z" fill="url(#u6c1Vi)" opacity="0.85"/>
+  <path d="M330,100 A140,140 0 0 0 190,240 L330,240 Z" fill="none" stroke="#3a87ad" stroke-width="1.5" stroke-dasharray="7 5"/>
+
+  <!-- Arc (gate) -->
+  <path d="M330,100 A140,140 0 0 0 190,240" fill="none" stroke="#173043" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Wall and floor outlines -->
+  <line x1="330" y1="100" x2="330" y2="240" stroke="#2d3a40" stroke-width="3"/>
+  <line x1="190" y1="240" x2="410" y2="240" stroke="#2d3a40" stroke-width="3"/>
+
+  <!-- Hinge at A (šarka) -->
+  <circle cx="330" cy="100" r="9" fill="#ffffff" stroke="#173043" stroke-width="2.5"/>
+  <circle cx="330" cy="100" r="3.5" fill="#173043"/>
+  <text x="337" y="95" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">A</text>
+  <text x="346" y="95" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">(šarka)</text>
+
+  <!-- Point B (connector) -->
+  <circle cx="190" cy="240" r="5" fill="#1565c0"/>
+  <text x="172" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">B</text>
+
+  <!-- V* label -->
+  <text x="298" y="175" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-style="italic" fill="#1a6696">V*</text>
+
+  <!-- FH arrow (→) at depth 2R/3 -->
+  <line x1="330" y1="193" x2="440" y2="193" stroke="#b42318" stroke-width="4" marker-end="url(#u6c1aR)"/>
+  <rect x="446" y="181" width="46" height="22" rx="5" fill="#fff" stroke="#d8c7c4" stroke-width="1.2"/>
+  <text x="456" y="197" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#b42318">F&#x2095;</text>
+
+  <!-- FV arrow (↓) at x_V -->
+  <line x1="271" y1="100" x2="271" y2="240" stroke="#0f766e" stroke-width="4" marker-end="url(#u6c1aG)"/>
+  <rect x="277" y="158" width="46" height="22" rx="5" fill="#fff" stroke="#c7d8d6" stroke-width="1.2"/>
+  <text x="285" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#0f766e">F&#x1D65;</text>
+
+  <!-- Connector T arrow (← leftward) at B -->
+  <line x1="300" y1="240" x2="200" y2="240" stroke="#1565c0" stroke-width="4" marker-end="url(#u6c1aB)"/>
+  <rect x="305" y="228" width="30" height="22" rx="5" fill="#fff" stroke="#c7d0e4" stroke-width="1.2"/>
+  <text x="313" y="244" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#1565c0">T</text>
+
+  <!-- R dimension -->
+  <line x1="370" y1="100" x2="370" y2="240" stroke="#546e7a" stroke-width="2" marker-start="url(#u6c1aGr)" marker-end="url(#u6c1aGr)"/>
+  <rect x="376" y="162" width="22" height="20" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1.2"/>
+  <text x="382" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">R</text>
+
+  <!-- Moment annotation arc at A -->
+  <path d="M316,116 A18,18 0 0 0 344,116" fill="none" stroke="#516677" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="296" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">&#x3A3;M&#x2090;=0</text>
+
+  <!-- arm annotations -->
+  <line x1="106" y1="100" x2="106" y2="193" stroke="#b42318" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="96" y1="100" x2="116" y2="100" stroke="#b42318" stroke-width="1.2"/>
+  <line x1="96" y1="193" x2="116" y2="193" stroke="#b42318" stroke-width="1.2"/>
+  <text x="112" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#b42318">2R/3</text>
+
+  <line x1="271" y1="260" x2="330" y2="260" stroke="#0f766e" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="271" y1="254" x2="271" y2="266" stroke="#0f766e" stroke-width="1.2"/>
+  <line x1="330" y1="254" x2="330" y2="266" stroke="#0f766e" stroke-width="1.2"/>
+  <text x="282" y="276" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#0f766e">4R/3&#x3C0;</text>
+
+  <!-- Formula box -->
+  <rect x="548" y="100" width="348" height="272" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="568" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">Rezultati (R = 1,10 m, b = 1,40 m)</text>
+  <line x1="568" y1="134" x2="880" y2="134" stroke="#e8d89a" stroke-width="1"/>
+  <text x="568" y="156" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">F&#x2095; = &#x3C1;g·(R/2)·R·b  &#x2248;  8,29 kN &#x2192;</text>
+  <text x="568" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">hvatište: h&#x2095; = 2R/3 = 0,733 m</text>
+  <line x1="568" y1="188" x2="880" y2="188" stroke="#e8d89a" stroke-width="1"/>
+  <text x="568" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">F&#x1D65; = &#x3C1;g·(&#x3C0;R&#xB2;/4)·b  &#x2248;  13,0 kN &#x2193;</text>
+  <text x="568" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">hvatište: x&#x1D65; = 4R/(3&#x3C0;) = 0,467 m</text>
+  <line x1="568" y1="242" x2="880" y2="242" stroke="#e8d89a" stroke-width="1"/>
+  <text x="568" y="264" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">&#x3A3;M&#x2090; = 0:</text>
+  <text x="568" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#173043">T·R = F&#x2095;·(2R/3) + F&#x1D65;·(4R/3&#x3C0;)</text>
+  <text x="568" y="304" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">T = F&#x2095;·(2/3) + F&#x1D65;·(4/3&#x3C0;)</text>
+  <text x="568" y="328" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#1565c0">T &#x2248; 11,1 kN  &#x2190;</text>
+  <text x="568" y="348" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">(zatvara poklopac prema zidu)</text>
+  <text x="568" y="366" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#999">Napomena: FR prolazi centrom zakrivljenosti</text>
+</svg>

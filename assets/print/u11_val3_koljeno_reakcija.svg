@@ -1,0 +1,80 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="title">U11 Val 3 - horizontalno koljeno i reakcija nosaca</title>
+  <desc id="desc">Horizontalno koljeno koje skrece tok iz osi x u os y, s jasno izdvojenim presjecima 1 i 2, tlakovima, brzinama i komponentama reakcije na nosacu.</desc>
+  <rect width="980" height="420" fill="#ffffff"/>
+  <rect x="28" y="28" width="924" height="364" rx="18" fill="#ffffff" stroke="#c9d2d8" stroke-width="2"/>
+
+  <text x="58" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#173043">U11 - Servisno koljeno na sidrenom nosacu</text>
+  <text x="58" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Čist tehnicki prikaz: presjeci, tlakovi i reakcije citaju se izvan geometrije, ne preko nje.</text>
+
+  <path d="M154 248 L360 248 Q452 248 452 156 L452 94" fill="none" stroke="#2d3a40" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M154 248 L360 248 Q452 248 452 156 L452 94" fill="none" stroke="#d9edf4" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M154 248 L360 248 Q452 248 452 156 L452 94" fill="none" stroke="#5b6770" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="296" y="176" width="214" height="140" rx="10" fill="none" stroke="#8b5e3c" stroke-width="3" stroke-dasharray="10 7"/>
+  <rect x="320" y="150" width="132" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="336" y="169" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">kontrolni volumen</text>
+
+  <line x1="78" y1="248" x2="154" y2="248" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
+  <rect x="74" y="204" width="108" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="88" y="223" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">Q, v1 = vx</text>
+
+  <line x1="452" y1="170" x2="452" y2="94" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
+  <rect x="470" y="112" width="102" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="484" y="131" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">Q, v2 = vy</text>
+
+  <circle cx="154" cy="248" r="5" fill="#111827"/>
+  <rect x="116" y="266" width="52" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="136" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">1</text>
+
+  <circle cx="452" cy="94" r="5" fill="#111827"/>
+  <rect x="468" y="72" width="52" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="488" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">2</text>
+
+  <rect x="188" y="198" width="76" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="206" y="216" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">p_M1</text>
+
+  <rect x="474" y="180" width="76" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="492" y="198" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">p_M2</text>
+
+  <line x1="402" y1="248" x2="612" y2="248" stroke="#b42318" stroke-width="5" marker-end="url(#arrowRed)"/>
+  <rect x="504" y="214" width="56" height="26" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
+  <text x="520" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#b42318">F_x</text>
+
+  <line x1="402" y1="248" x2="402" y2="352" stroke="#b42318" stroke-width="5" marker-end="url(#arrowRed)"/>
+  <rect x="414" y="292" width="56" height="26" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
+  <text x="430" y="310" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#b42318">F_y</text>
+
+  <line x1="402" y1="248" x2="574" y2="318" stroke="#8e24aa" stroke-width="4.5" marker-end="url(#arrowMagenta)"/>
+  <rect x="532" y="300" width="62" height="26" rx="6" fill="#ffffff" stroke="#d8c7e2" stroke-width="1.5"/>
+  <text x="548" y="318" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#8e24aa">F_R</text>
+
+  <line x1="624" y1="320" x2="624" y2="268" stroke="#6f7f89" stroke-width="3" marker-end="url(#arrowGray)"/>
+  <line x1="572" y1="320" x2="624" y2="320" stroke="#6f7f89" stroke-width="3" marker-end="url(#arrowGray)"/>
+  <text x="634" y="274" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">y</text>
+  <text x="630" y="340" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">x</text>
+
+  <rect x="660" y="118" width="244" height="182" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
+  <text x="682" y="148" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Čitanje skice</text>
+  <text x="682" y="180" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">1. Kontinuitet daje v1 i v2</text>
+  <text x="682" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">2. Tlakovi ulaze kao sile na presjecima</text>
+  <text x="682" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">3. Momentum se piše po osi x i po osi y</text>
+  <text x="682" y="258" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">4. Tek zatim se uzima reakcija nosaca</text>
+  <text x="682" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#516677">Oznake više ne sjede preko cijevi, a vektori imaju</text>
+  <text x="682" y="312" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#516677">vlastiti kontrast i vlastite label-boxove.</text>
+
+  <defs>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#b42318"/>
+    </marker>
+    <marker id="arrowMagenta" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#8e24aa"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#6f7f89"/>
+    </marker>
+  </defs>
+</svg>

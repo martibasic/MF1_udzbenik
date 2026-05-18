@@ -1,0 +1,56 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 320" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="title">U09 Val 2 - domet slobodnog mlaza</title>
+  <desc id="desc">Minimalna tehnička skica velikog spremnika s bocnim otvorom, izlaznom brzinom v0, visinama H i h te horizontalnim dometom x slobodnog mlaza.</desc>
+  <rect width="940" height="320" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="272" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+  <text x="54" y="58" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#173043">U09 - Domet slobodnog mlaza</text>
+  <text x="54" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#516677">Bernoulli daje izlaznu brzinu, a kinematika nakon izlaza daje vrijeme leta i domet.</text>
+
+  <rect x="144" y="108" width="162" height="144" fill="#dff1f8" stroke="#173043" stroke-width="4"/>
+  <line x1="144" y1="108" x2="306" y2="108" stroke="#3a87ad" stroke-width="4"/>
+  <circle cx="306" cy="188" r="6" fill="#173043"/>
+
+  <path d="M306 188 C370 184, 426 200, 486 252" fill="none" stroke="#1976d2" stroke-width="5" stroke-linecap="round"/>
+  <line x1="306" y1="188" x2="376" y2="188" stroke="#1976d2" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <text x="334" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">v0</text>
+
+  <line x1="118" y1="108" x2="118" y2="252" stroke="#c96c35" stroke-width="3" marker-start="url(#arrowOrangeSmall)" marker-end="url(#arrowOrange)"/>
+  <text x="88" y="186" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">H</text>
+
+  <line x1="332" y1="188" x2="332" y2="252" stroke="#be123c" stroke-width="3" marker-start="url(#arrowRedSmall)" marker-end="url(#arrowRed)"/>
+  <text x="344" y="224" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">h</text>
+
+  <line x1="306" y1="264" x2="486" y2="264" stroke="#6f7f89" stroke-width="3" marker-start="url(#arrowGray)" marker-end="url(#arrowGray)"/>
+  <text x="392" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">x</text>
+
+  <line x1="60" y1="252" x2="824" y2="252" stroke="#6f7f89" stroke-width="3"/>
+  <text x="680" y="236" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">tlo</text>
+
+  <text x="592" y="142" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">v0 = sqrt(2g(H-h))</text>
+  <text x="592" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">t = sqrt(2h/g)</text>
+  <text x="592" y="194" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">x = 2 sqrt(h(H-h))</text>
+
+  <text x="88" y="288" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Najveći domet dobiva se kad je otvor na polovici visine stupca vode: tada se najbolje uravnoteze brzina i vrijeme leta.</text>
+
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    </marker>
+    <marker id="arrowOrangeSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#be123c"/>
+    </marker>
+    <marker id="arrowRedSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#be123c"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#6f7f89"/>
+    </marker>
+  </defs>
+</svg>

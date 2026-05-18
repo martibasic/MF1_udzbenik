@@ -1,0 +1,247 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 700" role="img"
+     aria-labelledby="u3vsT u3vsD" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:980px;height:auto;">
+  <defs>
+    <pattern id="u3vsS" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <marker id="u3vsAF" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#8b5e3c"/>
+    </marker>
+    <marker id="u3vsAR" markerWidth="8" markerHeight="8" refX="0" refY="3" orient="auto">
+      <path d="M6,0 L6,6 L0,3 z" fill="#8b5e3c"/>
+    </marker>
+  </defs>
+
+  <title id="u3vsT">U03 Vjezbe &#x2013; Skice zadataka T1&#x2013;T6</title>
+  <desc id="u3vsD">&#x160;est referentnih skica za vje&#382;be iz manometrije: otvoreni i zatvoreni spremnici, U-manometri, vakuumski i diferencijalnipostavi.</desc>
+
+  <rect width="980" height="700" fill="#ffffff"/>
+  <rect x="24" y="24" width="932" height="652" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text x="36" y="58" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#173043">U03 &#x2013; Skice za vje&#x17E;be: zadaci T1&#x2013;T6</text>
+
+  <!-- ====================================================================
+       ROW 1
+       ==================================================================== -->
+
+  <!-- ── T1: Otvoreni spremnik, tocka A ── Panel x=36-328, y=70-357 -->
+  <rect x="36" y="70" width="292" height="287" rx="8" fill="#f8fafc" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="46" y="92" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">T1</text>
+  <text x="66" y="92" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">Otvoreni spremnik</text>
+  <!-- walls: left, right, bottom (open top) -->
+  <line x1="100" y1="102" x2="100" y2="338" stroke="#546e7a" stroke-width="5"/>
+  <line x1="264" y1="102" x2="264" y2="338" stroke="#546e7a" stroke-width="5"/>
+  <line x1="100" y1="338" x2="264" y2="338" stroke="#546e7a" stroke-width="6"/>
+  <!-- water fill -->
+  <rect x="103" y="226" width="158" height="109" fill="#d4eef8"/>
+  <!-- water surface dashed -->
+  <line x1="100" y1="226" x2="264" y2="226" stroke="#1565c0" stroke-width="2.5" stroke-dasharray="8,5"/>
+  <!-- atmosphere label -->
+  <text x="148" y="136" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#516677">p</text>
+  <text x="157" y="139" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#516677">0</text>
+  <!-- point A -->
+  <circle cx="182" cy="294" r="5.5" fill="#c84b1a"/>
+  <rect x="190" y="283" width="22" height="18" rx="4" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
+  <text x="194" y="296" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#c84b1a">A</text>
+  <!-- h dimension -->
+  <line x1="274" y1="226" x2="274" y2="294" stroke="#8b5e3c" stroke-width="1.8"
+        marker-start="url(#u3vsAR)" marker-end="url(#u3vsAF)"/>
+  <text x="280" y="264" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">h</text>
+
+
+  <!-- ── T2: Zatvoreni spremnik, plin p_m ── Panel x=344-636, y=70-357 -->
+  <rect x="344" y="70" width="292" height="287" rx="8" fill="#f8fafc" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="354" y="92" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">T2</text>
+  <text x="374" y="92" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">Zatvoreni spremnik</text>
+  <!-- srafura top wall (closed) -->
+  <rect x="408" y="104" width="160" height="12" fill="url(#u3vsS)"/>
+  <!-- walls: left, right, bottom -->
+  <line x1="408" y1="104" x2="408" y2="338" stroke="#546e7a" stroke-width="5"/>
+  <line x1="568" y1="104" x2="568" y2="338" stroke="#546e7a" stroke-width="5"/>
+  <line x1="408" y1="338" x2="568" y2="338" stroke="#546e7a" stroke-width="6"/>
+  <line x1="408" y1="116" x2="568" y2="116" stroke="#546e7a" stroke-width="3"/>
+  <!-- gas space -->
+  <rect x="411" y="116" width="154" height="76" fill="#f0ece0"/>
+  <!-- gas label -->
+  <text x="456" y="158" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="600" fill="#5c4a1e">p</text>
+  <text x="465" y="161" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#5c4a1e">m</text>
+  <!-- water fill -->
+  <rect x="411" y="192" width="154" height="143" fill="#d4eef8"/>
+  <!-- water surface dashed -->
+  <line x1="408" y1="192" x2="568" y2="192" stroke="#1565c0" stroke-width="2.5" stroke-dasharray="8,5"/>
+  <!-- point A -->
+  <circle cx="488" cy="282" r="5.5" fill="#c84b1a"/>
+  <rect x="496" y="271" width="22" height="18" rx="4" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
+  <text x="500" y="284" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#c84b1a">A</text>
+  <!-- h dimension -->
+  <line x1="578" y1="192" x2="578" y2="282" stroke="#8b5e3c" stroke-width="1.8"
+        marker-start="url(#u3vsAR)" marker-end="url(#u3vsAF)"/>
+  <text x="583" y="241" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#173043">h</text>
+
+
+  <!-- ── T3: U-cijev, ulje + ziva ── Panel x=652-944, y=70-357 -->
+  <rect x="652" y="70" width="292" height="287" rx="8" fill="#f8fafc" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="662" y="92" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">T3</text>
+  <text x="682" y="92" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">U-cijev, ulje i &#x17E;iva</text>
+  <!-- Left arm walls -->
+  <line x1="710" y1="104" x2="710" y2="298" stroke="#546e7a" stroke-width="5"/>
+  <line x1="752" y1="104" x2="752" y2="298" stroke="#546e7a" stroke-width="5"/>
+  <!-- Right arm walls -->
+  <line x1="820" y1="104" x2="820" y2="298" stroke="#546e7a" stroke-width="5"/>
+  <line x1="862" y1="104" x2="862" y2="298" stroke="#546e7a" stroke-width="5"/>
+  <!-- U-bottom walls -->
+  <line x1="710" y1="298" x2="862" y2="298" stroke="#546e7a" stroke-width="5"/>
+  <line x1="710" y1="332" x2="862" y2="332" stroke="#546e7a" stroke-width="5"/>
+  <!-- Left arm: oil fill (top part) + mercury (bottom) -->
+  <rect x="713" y="138" width="36" height="126" fill="#f6e1a6"/>  <!-- oil -->
+  <rect x="713" y="264" width="36" height="32" fill="#b4c2cc"/>   <!-- mercury -->
+  <!-- U-bottom mercury fill -->
+  <rect x="713" y="300" width="146" height="28" fill="#b4c2cc"/>
+  <!-- Right arm: mercury (lower level) + open above -->
+  <rect x="823" y="248" width="36" height="48" fill="#b4c2cc"/>  <!-- mercury right arm -->
+  <!-- fluid labels -->
+  <text x="718" y="192" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#7d5a00">ulje</text>
+  <text x="728" y="318" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#3a3a3a">Hg</text>
+  <!-- p0 above right arm -->
+  <text x="827" y="136" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#516677">p<tspan font-size="10" dy="3">0</tspan></text>
+  <!-- dashed lines at mercury levels -->
+  <line x1="700" y1="264" x2="876" y2="264" stroke="#8b5e3c" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <line x1="820" y1="248" x2="876" y2="248" stroke="#8b5e3c" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+
+  <!-- ====================================================================
+       ROW 2
+       ==================================================================== -->
+
+  <!-- ── T4: Diferencijalni manometar A-B, ziva, 0.30 m ── Panel x=36-328, y=379-666 -->
+  <rect x="36" y="379" width="292" height="287" rx="8" fill="#f8fafc" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="46" y="401" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">T4</text>
+  <text x="66" y="401" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">Diferencijalni manometar</text>
+  <!-- Pipe A (left) horizontal pipe -->
+  <rect x="46" y="424" width="120" height="22" rx="5" fill="#d4eef8" stroke="#546e7a" stroke-width="3"/>
+  <text x="52" y="440" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#c84b1a">A</text>
+  <!-- Pipe B (right) horizontal pipe (slightly higher) -->
+  <rect x="214" y="414" width="106" height="22" rx="5" fill="#d4eef8" stroke="#546e7a" stroke-width="3"/>
+  <text x="298" y="430" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#c84b1a">B</text>
+  <!-- Connection from pipe A down to left manometer arm at x=130 -->
+  <line x1="130" y1="446" x2="130" y2="490" stroke="#546e7a" stroke-width="4"/>
+  <line x1="107" y1="490" x2="154" y2="490" stroke="#546e7a" stroke-width="4"/>
+  <!-- Connection from pipe B down to right manometer arm at x=220 -->
+  <line x1="220" y1="436" x2="220" y2="490" stroke="#546e7a" stroke-width="4"/>
+  <line x1="197" y1="490" x2="244" y2="490" stroke="#546e7a" stroke-width="4"/>
+  <!-- Left manometer arm -->
+  <line x1="107" y1="490" x2="107" y2="596" stroke="#546e7a" stroke-width="4"/>
+  <line x1="154" y1="490" x2="154" y2="596" stroke="#546e7a" stroke-width="4"/>
+  <!-- Right manometer arm -->
+  <line x1="197" y1="490" x2="197" y2="596" stroke="#546e7a" stroke-width="4"/>
+  <line x1="244" y1="490" x2="244" y2="596" stroke="#546e7a" stroke-width="4"/>
+  <!-- U-bottom -->
+  <line x1="107" y1="596" x2="244" y2="596" stroke="#546e7a" stroke-width="4"/>
+  <line x1="107" y1="626" x2="244" y2="626" stroke="#546e7a" stroke-width="4"/>
+  <!-- Mercury fills -->
+  <rect x="110" y="534" width="42" height="60" fill="#b4c2cc"/>  <!-- left arm mercury -->
+  <rect x="110" y="596" width="132" height="26" fill="#b4c2cc"/>  <!-- U-bottom mercury -->
+  <rect x="200" y="508" width="42" height="86" fill="#b4c2cc"/>  <!-- right arm mercury (higher) -->
+  <!-- water above mercury in arms -->
+  <rect x="110" y="492" width="42" height="42" fill="#d4eef8"/>  <!-- water left arm -->
+  <rect x="200" y="492" width="42" height="16" fill="#d4eef8"/>  <!-- water right arm (very thin) -->
+  <!-- 0.30 m dimension between arm centerlines (x=130 to x=220, y=412) -->
+  <line x1="130" y1="412" x2="220" y2="412" stroke="#8b5e3c" stroke-width="1.8"
+        marker-start="url(#u3vsAR)" marker-end="url(#u3vsAF)"/>
+  <rect x="152" y="402" width="52" height="18" rx="5" fill="#ffffff" stroke="#d9cdc3" stroke-width="1"/>
+  <text x="156" y="415" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#173043">0,30 m</text>
+  <!-- Hg label -->
+  <text x="148" y="570" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#3a3a3a">Hg</text>
+
+
+  <!-- ── T5: Vakuumski spremnik + zivin manometar ── Panel x=344-636, y=379-666 -->
+  <rect x="344" y="379" width="292" height="287" rx="8" fill="#f8fafc" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="354" y="401" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">T5</text>
+  <text x="374" y="401" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">Vakuumski + &#x17E;ivin manometar</text>
+  <!-- Closed vacuum tank (left of panel) -->
+  <rect x="354" y="418" width="140" height="196" rx="4" fill="none" stroke="#546e7a" stroke-width="4"/>
+  <!-- srafura top wall -->
+  <rect x="354" y="418" width="140" height="12" fill="url(#u3vsS)"/>
+  <!-- gas (vacuum) space inside tank -->
+  <rect x="358" y="430" width="132" height="60" fill="#f0ece0"/>
+  <!-- water inside tank -->
+  <rect x="358" y="490" width="132" height="120" fill="#d4eef8"/>
+  <!-- water surface dashed -->
+  <line x1="354" y1="490" x2="494" y2="490" stroke="#1565c0" stroke-width="2" stroke-dasharray="7,5"/>
+  <!-- p_v label in gas (vacuum) -->
+  <text x="392" y="465" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="600" fill="#5c4a1e">p<tspan font-size="10" dy="3">v</tspan></text>
+  <!-- point A in water -->
+  <circle cx="418" cy="548" r="5.5" fill="#c84b1a"/>
+  <rect x="426" y="537" width="22" height="18" rx="4" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
+  <text x="430" y="550" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#c84b1a">A</text>
+  <!-- Connection pipe from tank to manometer at right wall -->
+  <line x1="494" y1="500" x2="530" y2="500" stroke="#546e7a" stroke-width="4"/>
+  <!-- Right manometer arm (left arm of U) -->
+  <line x1="518" y1="490" x2="518" y2="610" stroke="#546e7a" stroke-width="4"/>
+  <line x1="548" y1="490" x2="548" y2="610" stroke="#546e7a" stroke-width="4"/>
+  <!-- Open right arm (right arm of U) -->
+  <line x1="584" y1="420" x2="584" y2="610" stroke="#546e7a" stroke-width="4"/>
+  <line x1="614" y1="420" x2="614" y2="610" stroke="#546e7a" stroke-width="4"/>
+  <!-- U-bottom -->
+  <line x1="518" y1="610" x2="614" y2="610" stroke="#546e7a" stroke-width="4"/>
+  <line x1="518" y1="638" x2="614" y2="638" stroke="#546e7a" stroke-width="4"/>
+  <!-- Mercury fills -->
+  <rect x="521" y="556" width="24" height="52" fill="#b4c2cc"/>  <!-- left arm mercury -->
+  <rect x="521" y="612" width="90" height="22" fill="#b4c2cc"/>  <!-- U-bottom mercury -->
+  <rect x="587" y="524" width="24" height="84" fill="#b4c2cc"/>  <!-- right arm mercury (higher) -->
+  <!-- Delta h dimension -->
+  <line x1="558" y1="524" x2="558" y2="556" stroke="#8b5e3c" stroke-width="1.8"
+        marker-start="url(#u3vsAR)" marker-end="url(#u3vsAF)"/>
+  <rect x="562" y="530" width="28" height="18" rx="5" fill="#ffffff" stroke="#d9cdc3" stroke-width="1"/>
+  <text x="566" y="543" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#173043">&#x394;h</text>
+  <!-- p0 above open arm -->
+  <text x="586" y="411" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#516677">p<tspan font-size="10" dy="3">0</tspan></text>
+
+
+  <!-- ── T6: Zatvoreni spremnik + U-manometar, tocka C ── Panel x=652-944, y=379-666 -->
+  <rect x="652" y="379" width="292" height="287" rx="8" fill="#f8fafc" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="662" y="401" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">T6</text>
+  <text x="682" y="401" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">Zatvoreni + U-manometar</text>
+  <!-- Closed tank (left side of panel) -->
+  <rect x="662" y="418" width="148" height="190" rx="4" fill="none" stroke="#546e7a" stroke-width="4"/>
+  <!-- srafura top wall (closed) -->
+  <rect x="662" y="418" width="148" height="12" fill="url(#u3vsS)"/>
+  <!-- gas space -->
+  <rect x="666" y="430" width="140" height="50" fill="#f0ece0"/>
+  <!-- water fill -->
+  <rect x="666" y="480" width="140" height="124" fill="#d4eef8"/>
+  <!-- water surface dashed -->
+  <line x1="662" y1="480" x2="810" y2="480" stroke="#1565c0" stroke-width="2" stroke-dasharray="7,5"/>
+  <!-- gas label -->
+  <text x="700" y="460" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#5c4a1e">p<tspan font-size="10" dy="3">G</tspan></text>
+  <!-- point C in water -->
+  <circle cx="736" cy="558" r="5.5" fill="#c84b1a"/>
+  <rect x="744" y="547" width="22" height="18" rx="4" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
+  <text x="748" y="560" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#c84b1a">C</text>
+  <!-- h1 dimension (surface to point C) -->
+  <line x1="654" y1="480" x2="654" y2="558" stroke="#8b5e3c" stroke-width="1.8"
+        marker-start="url(#u3vsAR)" marker-end="url(#u3vsAF)"/>
+  <rect x="632" y="510" width="28" height="18" rx="5" fill="#ffffff" stroke="#d9cdc3" stroke-width="1"/>
+  <text x="636" y="523" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#173043">h<tspan font-size="9" dy="3">1</tspan></text>
+  <!-- Connection pipe from tank bottom to manometer -->
+  <line x1="810" y1="548" x2="846" y2="548" stroke="#546e7a" stroke-width="4"/>
+  <!-- Left manometer arm -->
+  <line x1="834" y1="420" x2="834" y2="606" stroke="#546e7a" stroke-width="4"/>
+  <line x1="864" y1="420" x2="864" y2="606" stroke="#546e7a" stroke-width="4"/>
+  <!-- Right manometer arm (open) -->
+  <line x1="896" y1="420" x2="896" y2="606" stroke="#546e7a" stroke-width="4"/>
+  <line x1="926" y1="420" x2="926" y2="606" stroke="#546e7a" stroke-width="4"/>
+  <!-- U-bottom -->
+  <line x1="834" y1="606" x2="926" y2="606" stroke="#546e7a" stroke-width="4"/>
+  <line x1="834" y1="634" x2="926" y2="634" stroke="#546e7a" stroke-width="4"/>
+  <!-- Mercury fills -->
+  <rect x="837" y="542" width="24" height="62" fill="#b4c2cc"/>  <!-- left arm mercury -->
+  <rect x="837" y="608" width="86" height="22" fill="#b4c2cc"/>  <!-- U-bottom mercury -->
+  <rect x="899" y="508" width="24" height="96" fill="#b4c2cc"/>  <!-- right arm mercury (higher, open arm) -->
+  <!-- water in left arm above mercury -->
+  <rect x="837" y="550" width="24" height="0" fill="#d4eef8"/>
+  <!-- p0 above open arm -->
+  <text x="898" y="411" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#516677">p<tspan font-size="10" dy="3">0</tspan></text>
+
+</svg>

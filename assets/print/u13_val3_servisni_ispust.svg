@@ -1,0 +1,62 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 340" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="title">U13 Val 3 - nezatvoreni servisni ispust na rashladnom cjevovodu</title>
+  <desc id="desc">Shema dvaju spremnika povezanih cjevovodom s nezeljenim servisnim ispustom u točki C, s označenim protocima, razinom H i piezometarskom visinom tlaka u točki C.</desc>
+  <rect width="940" height="340" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="292" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+  <text x="52" y="58" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#173043">U13 - Nezatvoreni servisni ispust</text>
+  <text x="52" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#516677">Jedan lokalni kvar mijenja protok, raspodjelu energije i procjenu otvora.</text>
+
+  <rect x="84" y="112" width="84" height="140" rx="8" fill="#eff6ff" stroke="#173043" stroke-width="3"/>
+  <rect x="760" y="154" width="84" height="98" rx="8" fill="#eff6ff" stroke="#173043" stroke-width="3"/>
+  <line x1="84" y1="142" x2="168" y2="142" stroke="#3a87ad" stroke-width="4"/>
+  <line x1="760" y1="182" x2="844" y2="182" stroke="#3a87ad" stroke-width="4"/>
+  <text x="112" y="268" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">1</text>
+  <text x="792" y="268" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">2</text>
+
+  <line x1="168" y1="182" x2="760" y2="182" stroke="#173043" stroke-width="6"/>
+
+  <circle cx="520" cy="182" r="7" fill="#173043"/>
+  <text x="512" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">C</text>
+
+  <line x1="520" y1="182" x2="520" y2="112" stroke="#173043" stroke-width="5"/>
+  <line x1="520" y1="112" x2="580" y2="112" stroke="#0f766e" stroke-width="4" marker-end="url(#arrowGreen)"/>
+  <text x="586" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">Qp</text>
+
+  <line x1="202" y1="170" x2="278" y2="170" stroke="#0f766e" stroke-width="4" marker-end="url(#arrowGreen)"/>
+  <text x="286" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">Q_C</text>
+
+  <line x1="610" y1="170" x2="686" y2="170" stroke="#0f766e" stroke-width="4" marker-end="url(#arrowGreen)"/>
+  <text x="694" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">Q_2</text>
+
+  <line x1="196" y1="142" x2="196" y2="182" stroke="#c96c35" stroke-width="3" marker-start="url(#arrowOrangeSmall)" marker-end="url(#arrowOrange)"/>
+  <text x="208" y="165" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">H</text>
+
+  <line x1="540" y1="182" x2="540" y2="142" stroke="#1976d2" stroke-width="3" marker-start="url(#arrowBlueSmall)" marker-end="url(#arrowBlue)"/>
+  <text x="552" y="165" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">p_C/gamma</text>
+
+  <line x1="252" y1="206" x2="520" y2="206" stroke="#6f7f89" stroke-width="2.5"/>
+  <line x1="520" y1="206" x2="724" y2="206" stroke="#6f7f89" stroke-width="2.5"/>
+  <text x="356" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">L_1C</text>
+  <text x="610" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">L_C2</text>
+
+  <text x="468" y="288" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Uredni rezim daje lambda, osteceni rezim daje Q_C, Q_p i otvor Ap.</text>
+
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    </marker>
+    <marker id="arrowOrangeSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
+    </marker>
+    <marker id="arrowBlueSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img"
+     aria-labelledby="u6ovT u6ovD" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u6ovT">U06 – Zakrivljene plohe i rastav sila</title>
+  <desc id="u6ovD">Pregled poglavlja: fizikalni princip rastava na F_H (horizontalna projekcija) i F_V (imaginarni volumen V*), ključne jednadžbe i primjena na zaobljenom poklopcu kotla.</desc>
+  <defs>
+    <marker id="u6ovaR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c0392b"/>
+    </marker>
+    <marker id="u6ovaV" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#7d3c98"/>
+    </marker>
+    <marker id="u6ovaDim" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    </marker>
+    <marker id="u6ovaDimL" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    </marker>
+    <marker id="u6ovaFR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#c0392b"/>
+    </marker>
+    <pattern id="u6ovwall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#8a9aa6" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="980" height="500" fill="#f0f4f8"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="980" height="54" fill="#1e3a5f" rx="0"/>
+  <text x="490" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">U06 – Zakrivljene plohe i rastav sila</text>
+  <text x="490" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#a0c4e8" text-anchor="middle">Rastav na horizontalnu (F_H) i vertikalnu (F_V) komponentu; imaginarni volumen V*</text>
+
+  <!-- ═══════════════════════════ PANEL 1: Fizikalni princip ═══════════════════════════ -->
+  <rect x="12" y="60" width="356" height="432" rx="10" fill="#eaf4fb" stroke="#b8d4e8" stroke-width="1.5"/>
+  <text x="190" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#173043">Fizikalni princip</text>
+
+  <!-- Free surface -->
+  <line x1="28" y1="145" x2="340" y2="145" stroke="#1565c0" stroke-width="2.5"/>
+  <text x="342" y="149" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">p.p.</text>
+
+  <!-- Main fluid body (left of wall) -->
+  <rect x="28" y="145" width="188" height="280" fill="#aed6f1" fill-opacity="0.55"/>
+
+  <!-- V* imaginary volume (green dashed, right of wall and above arc) -->
+  <!-- Center: (216, 425), R=100; top of arc: (216,325), right of arc: (316,425) -->
+  <path d="M 216,145 L 316,145 L 316,425 A 100,100 0 0,0 216,325 Z"
+        fill="#d5f5e3" fill-opacity="0.75" stroke="#27ae60" stroke-width="1.8" stroke-dasharray="7,4"/>
+  <text x="283" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#1e8449">V*</text>
+  <text x="283" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1e8449">imaginarni</text>
+  <text x="283" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1e8449">volumen fluida</text>
+
+  <!-- Wall (vertical stijenka) -->
+  <rect x="212" y="145" width="12" height="180" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.5"/>
+  <rect x="212" y="145" width="12" height="180" fill="url(#u6ovwall)" opacity="0.5"/>
+
+  <!-- Floor (horizontal dno) -->
+  <rect x="212" y="420" width="108" height="10" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.5"/>
+  <rect x="212" y="420" width="108" height="10" fill="url(#u6ovwall)" opacity="0.5"/>
+
+  <!-- Quarter circle arc (the curved surface) -->
+  <path d="M 216,325 A 100,100 0 0,1 316,425" fill="none" stroke="#5d6d7e" stroke-width="3.5"/>
+
+  <!-- h₁ dimension (surface to top of arc) -->
+  <line x1="168" y1="145" x2="172" y2="145" stroke="#c96c35" stroke-width="1.5"/>
+  <line x1="168" y1="325" x2="172" y2="325" stroke="#c96c35" stroke-width="1.5"/>
+  <line x1="170" y1="147" x2="170" y2="323" stroke="#c96c35" stroke-width="1.8"
+        marker-start="url(#u6ovaDimL)" marker-end="url(#u6ovaDim)"/>
+  <text x="155" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e" text-anchor="end">h₁</text>
+
+  <!-- R dimension (arc radius, horizontal) -->
+  <line x1="216" y1="432" x2="216" y2="437" stroke="#c96c35" stroke-width="1.5"/>
+  <line x1="316" y1="432" x2="316" y2="437" stroke="#c96c35" stroke-width="1.5"/>
+  <line x1="218" y1="435" x2="314" y2="435" stroke="#c96c35" stroke-width="1.8"
+        marker-start="url(#u6ovaDimL)" marker-end="url(#u6ovaDim)"/>
+  <text x="266" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e" text-anchor="middle">R</text>
+
+  <!-- F_H arrow (horizontal, rightward, at mid-height of arc) -->
+  <!-- Mid-height of vertical projection = 325 + 100/2 = 375 -->
+  <line x1="316" y1="375" x2="356" y2="375" stroke="#c0392b" stroke-width="3" marker-end="url(#u6ovaR)"/>
+  <text x="358" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#c0392b">F_H</text>
+
+  <!-- F_V arrow (downward, at mid-width of arc) -->
+  <!-- Mid-width = 216 + 100/2 = 266; arc at x=266: y = 425 - sqrt(100²-50²) = 425-86.6 ≈ 338 -->
+  <line x1="266" y1="420" x2="266" y2="462" stroke="#7d3c98" stroke-width="3" marker-end="url(#u6ovaV)"/>
+  <text x="274" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#7d3c98">F_V</text>
+
+  <!-- ═══════════════════════════ PANEL 2: Jednadžbe ═══════════════════════════ -->
+  <rect x="378" y="60" width="228" height="432" rx="10" fill="#eaf9f1" stroke="#b8e4c8" stroke-width="1.5"/>
+  <text x="492" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#173043">Jednadžbe</text>
+
+  <!-- F_H -->
+  <rect x="392" y="96" width="200" height="38" rx="6" fill="#fde8e8" stroke="#e8a0a0" stroke-width="1"/>
+  <text x="492" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">F_H = ρg · A_x · h_Cx</text>
+  <text x="492" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#8b0000">A_x = b·R  (vert. projekcija)</text>
+
+  <!-- F_V -->
+  <rect x="392" y="144" width="200" height="38" rx="6" fill="#f0e8fb" stroke="#c8a8e8" stroke-width="1"/>
+  <text x="492" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#7d3c98">F_V = ρg · V*</text>
+  <text x="492" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#4a235a">V* = b(h₁R + πR²/4)</text>
+
+  <!-- F_R -->
+  <rect x="392" y="192" width="200" height="32" rx="6" fill="#fff8e7" stroke="#e8d090" stroke-width="1"/>
+  <text x="492" y="213" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#b7600c">F_R = √(F_H² + F_V²)</text>
+
+  <!-- Separator -->
+  <line x1="392" y1="234" x2="578" y2="234" stroke="#b8e4c8" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- Direction of F_V note -->
+  <text x="492" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a6b3a">Smjer F_V:</text>
+  <text x="492" y="273" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#173043">↓ fluid je IZNAD luka</text>
+  <text x="492" y="289" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#173043">(V* pritišće dolje)</text>
+  <text x="492" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#173043">↑ fluid je ISPOD luka</text>
+  <text x="492" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#173043">(uzgon prema gore)</text>
+
+  <!-- Separator -->
+  <line x1="392" y1="342" x2="578" y2="342" stroke="#b8e4c8" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- Angle -->
+  <text x="492" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#173043">Kut rezultante:</text>
+  <text x="492" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c">θ = arctan(F_V / F_H)</text>
+
+  <!-- Separator -->
+  <line x1="392" y1="396" x2="578" y2="396" stroke="#b8e4c8" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- CP note -->
+  <text x="492" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#516677">Hvatište F_H: centar tlaka</text>
+  <text x="492" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#516677">vertikalne projekcije</text>
+  <text x="492" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#516677">Hvatište F_V: težište V*</text>
+  <text x="492" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#516677">(pravokutnik + trokut/cetvrtkrug)</text>
+
+  <!-- ═══════════════════════════ PANEL 3: Primjena ═══════════════════════════ -->
+  <rect x="616" y="60" width="356" height="432" rx="10" fill="#fef9e7" stroke="#e8d8a0" stroke-width="1.5"/>
+  <text x="794" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#173043">Primjena: zaobljeni poklopac kotla</text>
+
+  <!-- Pressure vessel (kotao) scene -->
+  <!-- Main vessel body: rectangle -->
+  <rect x="660" y="130" width="14" height="230" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.5"/>
+  <rect x="660" y="130" width="14" height="230" fill="url(#u6ovwall)" opacity="0.45"/>
+
+  <!-- Floor of vessel -->
+  <rect x="660" y="356" width="120" height="12" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.5"/>
+  <rect x="660" y="356" width="120" height="12" fill="url(#u6ovwall)" opacity="0.45"/>
+
+  <!-- Quarter circle corner (inside the vessel) -->
+  <!-- Center: (674, 356), R=110 → top: (674, 246), right: (784, 356) -->
+  <!-- Wait, let me use the vessel wall inner edge x=674, floor inner edge y=356 -->
+  <!-- Arc from (674, 256) to (784, 356), center at (674, 356), R=100 -->
+  <path d="M 674,256 A 100,100 0 0,1 774,356" fill="none" stroke="#5d6d7e" stroke-width="3"/>
+
+  <!-- Fluid inside vessel -->
+  <rect x="674" y="130" width="160" height="126" fill="#aed6f1" fill-opacity="0.6"/>
+  <!-- Fluid in arc corner -->
+  <path d="M 674,256 A 100,100 0 0,1 774,356 L 774,130 L 674,130 Z"
+        fill="#aed6f1" fill-opacity="0.55"/>
+
+  <!-- V* region (green, above arc) -->
+  <path d="M 674,130 L 774,130 L 774,356 A 100,100 0 0,0 674,256 Z"
+        fill="#d5f5e3" fill-opacity="0.7" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="740" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" font-weight="700" text-anchor="middle" fill="#1e8449">V*</text>
+
+  <!-- Free surface or pressure indicator -->
+  <line x1="674" y1="130" x2="850" y2="130" stroke="#1565c0" stroke-width="2.5"/>
+  <text x="855" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">p.p.</text>
+
+  <!-- F_H arrow -->
+  <line x1="774" y1="306" x2="830" y2="306" stroke="#c0392b" stroke-width="3" marker-end="url(#u6ovaFR)"/>
+  <text x="833" y="304" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#c0392b">F_H</text>
+
+  <!-- F_V arrow (downward) -->
+  <line x1="724" y1="356" x2="724" y2="398" stroke="#7d3c98" stroke-width="3" marker-end="url(#u6ovaV)"/>
+  <text x="732" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#7d3c98">F_V</text>
+
+  <!-- Label for vessel -->
+  <text x="820" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Kotao /</text>
+  <text x="820" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">cjevovod</text>
+
+  <!-- Formula box -->
+  <rect x="800" y="290" width="162" height="56" rx="6" fill="#fff8e7" stroke="#d4a017" stroke-width="1.2"/>
+  <text x="881" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#7d6608">F_H → vijci / prirubnica</text>
+  <text x="881" y="327" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#7d6608">F_V → oslonci / ankeri</text>
+  <text x="881" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#7d6608">F_R → rezultantna sila</text>
+
+  <!-- Note at bottom of panel 3 -->
+  <text x="794" y="440" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#516677">F_V pritišće poklopac prema dolje</text>
+  <text x="794" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#516677">(imaginarni stupac vode V* iznad)</text>
+  <text x="794" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#8b8b8b">Strojarstvo i građevinarstvo</text>
+</svg>

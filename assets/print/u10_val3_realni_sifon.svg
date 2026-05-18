@@ -1,0 +1,74 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="title">U10 Val 3 - realni sifon s gubicima</title>
+  <desc id="desc">Realni sifon između slobodne površine spremnika i slobodnog izlaza, s jasno odvojenim oznakama za vrh sifona, geodetski pad i mjesta lokalnih gubitaka.</desc>
+  <rect width="980" height="420" fill="#ffffff"/>
+  <rect x="28" y="28" width="924" height="364" rx="18" fill="#ffffff" stroke="#c9d2d8" stroke-width="2"/>
+
+  <text x="58" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#173043">U10 - Servisni sifon s raspodijeljenim gubicima</text>
+  <text x="58" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Čist tehnicki prikaz: visine, tlak u vrhu i gubici citaju se bez preklapanja s geometrijom.</text>
+
+  <rect x="92" y="186" width="210" height="136" fill="#dff1f8" stroke="#5b6770" stroke-width="2.5"/>
+  <line x1="92" y1="186" x2="302" y2="186" stroke="#3a87ad" stroke-width="4"/>
+  <circle cx="302" cy="186" r="5" fill="#111827"/>
+  <rect x="320" y="168" width="152" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="336" y="187" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">slobodna površina A</text>
+
+  <path d="M302 218 C388 218 406 122 500 122 C596 122 614 272 706 272" fill="none" stroke="#2d3a40" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M302 218 C388 218 406 122 500 122 C596 122 614 272 706 272" fill="none" stroke="#d9edf4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M302 218 C388 218 406 122 500 122 C596 122 614 272 706 272" fill="none" stroke="#5b6770" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="500" cy="122" r="5" fill="#111827"/>
+  <rect x="514" y="100" width="48" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="531" y="118" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">C</text>
+
+  <circle cx="706" cy="272" r="5" fill="#111827"/>
+  <rect x="724" y="254" width="148" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="740" y="273" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">slobodni izlaz B</text>
+
+  <line x1="706" y1="272" x2="794" y2="272" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
+  <rect x="724" y="296" width="72" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="742" y="314" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">Q, v</text>
+
+  <line x1="468" y1="186" x2="468" y2="122" stroke="#8b5e3c" stroke-width="3" marker-start="url(#arrowBrown)" marker-end="url(#arrowBrown)"/>
+  <rect x="406" y="144" width="52" height="26" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
+  <text x="423" y="162" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">z_C</text>
+
+  <line x1="848" y1="186" x2="848" y2="272" stroke="#6f7f89" stroke-width="3" marker-start="url(#arrowGray)" marker-end="url(#arrowGray)"/>
+  <rect x="860" y="216" width="74" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
+  <text x="874" y="234" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">delta z</text>
+
+  <line x1="350" y1="214" x2="424" y2="164" stroke="#b42318" stroke-width="4.5" marker-end="url(#arrowRed)"/>
+  <rect x="246" y="240" width="142" height="28" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
+  <text x="262" y="259" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">linijski gubici L</text>
+
+  <line x1="546" y1="168" x2="616" y2="226" stroke="#b42318" stroke-width="4.5" marker-end="url(#arrowRed)"/>
+  <rect x="560" y="196" width="118" height="28" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
+  <text x="576" y="215" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">vrsno koljeno</text>
+
+  <line x1="676" y1="258" x2="726" y2="258" stroke="#b42318" stroke-width="4.5" marker-end="url(#arrowRed)"/>
+  <rect x="620" y="296" width="90" height="26" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
+  <text x="640" y="314" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">izlaz xi</text>
+
+  <rect x="614" y="114" width="282" height="176" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
+  <text x="636" y="144" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Čitanje skice</text>
+  <text x="636" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">1. A -> B: delta z = v^2/(2g) + h_w</text>
+  <text x="636" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">2. h_w = h_l + sum h_loc</text>
+  <text x="636" y="228" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">3. A -> C: iz tog zapisa slijedi p_C/gamma</text>
+  <text x="636" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#516677">Lokalni gubici su označeni na mjestu gdje nastaju, a</text>
+  <text x="636" y="282" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#516677">visinske oznake i tlak u vrhu više ne ulaze u cijevni nacrt.</text>
+
+  <defs>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#b42318"/>
+    </marker>
+    <marker id="arrowBrown" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#8b5e3c"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#6f7f89"/>
+    </marker>
+  </defs>
+</svg>

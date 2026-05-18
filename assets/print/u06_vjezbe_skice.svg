@@ -1,0 +1,409 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 700" role="img"
+     aria-labelledby="u6vsT u6vsD" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u6vsT">U06 Vježbe – skice T1 do T6</title>
+  <desc id="u6vsD">Šest skica zadataka o hidrostatičkim silama na zakrivljenim plohama: četvrtine kruga, polucilindri i spojnice.</desc>
+  <defs>
+    <pattern id="u6vsH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <linearGradient id="u6vsWg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <linearGradient id="u6vsWi" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f5fb" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#b0d9ed" stop-opacity="0.85"/>
+    </linearGradient>
+    <marker id="u6vsaR" markerWidth="10" markerHeight="9" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 z" fill="#b42318"/>
+    </marker>
+    <marker id="u6vsaG" markerWidth="10" markerHeight="9" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u6vsaB" markerWidth="10" markerHeight="9" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 z" fill="#1565c0"/>
+    </marker>
+    <marker id="u6vsaMg" markerWidth="10" markerHeight="9" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 z" fill="#7b1fa2"/>
+    </marker>
+    <marker id="u6vsaGr" markerWidth="10" markerHeight="9" refX="8" refY="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,7 L8,3.5 z" fill="#546e7a"/>
+    </marker>
+  </defs>
+
+  <!-- Background + border -->
+  <rect width="940" height="700" fill="#ffffff"/>
+  <rect x="16" y="16" width="908" height="668" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+  <!-- Page title -->
+  <text x="36" y="50" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">U06 – Skice zadataka: zakrivljene plohe</text>
+  <line x1="36" y1="58" x2="904" y2="58" stroke="#d3d9de" stroke-width="1.2"/>
+
+  <!-- ═══════════════════ T1 panel (col1, row1) ═══════════════════ -->
+  <rect x="36" y="66" width="424" height="186" rx="10" fill="#f8fcff" stroke="#b0c8d8" stroke-width="1.5"/>
+  <text x="52" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T1</text>
+  <text x="68" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Četvrtina kruga — R=0,65 m, h₁=1,10 m, b=1,20 m</text>
+
+  <!-- T1: structural wall (left, srafura) -->
+  <rect x="60" y="96" width="44" height="130" fill="url(#u6vsH)"/>
+  <rect x="60" y="96" width="44" height="130" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <!-- T1: floor (bottom) -->
+  <rect x="60" y="226" width="200" height="18" fill="url(#u6vsH)"/>
+  <rect x="60" y="226" width="200" height="18" fill="none" stroke="#546e7a" stroke-width="1"/>
+
+  <!-- T1: free surface -->
+  <line x1="64" y1="96" x2="360" y2="96" stroke="#3a87ad" stroke-width="2"/>
+
+  <!-- T1: water on outside (actual water region right of arc) -->
+  <path d="M162,152 L320,152 L320,226 L104,226 A60,60 0 0 0 162,166 Z" fill="url(#u6vsWg)" opacity="0.7"/>
+
+  <!-- T1: imaginary volume V* (inside arc) -->
+  <path d="M104,96 L162,96 L162,166 A60,60 0 0 1 104,226 Z" fill="url(#u6vsWi)"/>
+  <path d="M104,96 L162,96 L162,166 A60,60 0 0 1 104,226 Z" fill="none" stroke="#3a87ad" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- T1: arc -->
+  <path d="M162,166 A60,60 0 0 1 104,226" fill="none" stroke="#173043" stroke-width="4"/>
+  <!-- T1: wall lines -->
+  <line x1="104" y1="96" x2="104" y2="226" stroke="#2d3a40" stroke-width="2.5"/>
+  <line x1="104" y1="226" x2="260" y2="226" stroke="#2d3a40" stroke-width="2.5"/>
+
+  <!-- T1: points A, B -->
+  <circle cx="162" cy="166" r="3.5" fill="#173043"/>
+  <text x="166" y="163" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">A</text>
+  <circle cx="104" cy="226" r="3.5" fill="#173043"/>
+  <text x="88" y="238" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">B</text>
+
+  <!-- T1: FH arrow ← -->
+  <line x1="188" y1="196" x2="118" y2="196" stroke="#b42318" stroke-width="3" marker-end="url(#u6vsaR)"/>
+  <text x="194" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b42318">F&#x2095;</text>
+
+  <!-- T1: FV arrow ↑ -->
+  <line x1="130" y1="226" x2="130" y2="176" stroke="#0f766e" stroke-width="3" marker-end="url(#u6vsaG)"/>
+  <text x="136" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#0f766e">F&#x1D65;</text>
+
+  <!-- T1: h1 dim -->
+  <line x1="80" y1="96" x2="80" y2="166" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u6vsaGr)" marker-end="url(#u6vsaGr)"/>
+  <text x="52" y="135" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">h₁</text>
+
+  <!-- T1: R dim -->
+  <line x1="66" y1="166" x2="66" y2="226" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u6vsaGr)" marker-end="url(#u6vsaGr)"/>
+  <text x="52" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">R</text>
+
+  <!-- T1: V* label -->
+  <text x="118" y="180" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-style="italic" fill="#1a6696">V*</text>
+
+  <!-- T1: result summary -->
+  <rect x="240" y="88" width="212" height="156" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.2"/>
+  <text x="252" y="106" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">F&#x2095; = &#x3C1;g·h&#x1D9C;&#x2C2;·R·b</text>
+  <text x="252" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b42318">F&#x2095; &#x2248; 12,6 kN &#x2190;</text>
+  <text x="252" y="140" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">F&#x1D65; = &#x3C1;g·V*</text>
+  <text x="252" y="156" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#0f766e">F&#x1D65; &#x2248; 10,7 kN &#x2191;</text>
+  <text x="252" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#7b1fa2">F&#x1D35; = &#x221A;(F&#x2095;&#xB2;+F&#x1D65;&#xB2;)</text>
+  <text x="252" y="190" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#7b1fa2">F&#x1D35; &#x2248; 16,5 kN</text>
+  <text x="252" y="234" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#999">&#x3B1; = arctan(F&#x1D65;/F&#x2095;) &#x2248; 40,3°</text>
+
+  <!-- ═══════════════════ T2 panel (col2, row1) ═══════════════════ -->
+  <rect x="480" y="66" width="424" height="186" rx="10" fill="#f8fcff" stroke="#b0c8d8" stroke-width="1.5"/>
+  <text x="496" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T2</text>
+  <text x="512" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Polucilindricni poklopac — R=0,30 m, b=0,90 m</text>
+
+  <!-- T2: container walls (right wall + floor) -->
+  <rect x="674" y="106" width="40" height="110" fill="url(#u6vsH)"/>
+  <rect x="674" y="106" width="40" height="110" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="534" y="216" width="180" height="18" fill="url(#u6vsH)"/>
+  <rect x="534" y="216" width="180" height="18" fill="none" stroke="#546e7a" stroke-width="1"/>
+
+  <!-- T2: free surface -->
+  <line x1="534" y1="106" x2="716" y2="106" stroke="#3a87ad" stroke-width="2"/>
+
+  <!-- T2: semicircle arc (from A(674,106) down to B(534,216) going through midpoint) -->
+  <!-- For semicircle: center at midpoint between A and B projected -->
+  <!-- Actually: semicircular cover at bottom-right corner, 90° arc from A on right wall to B on floor -->
+  <!-- A=(674,106) at free surface, B=(534,216), center=(674,216), R=110px... too large -->
+  <!-- Use smaller scale: center=(666,200), R=56, A=(666,144)=top, B=(610,200)=left -->
+  <!-- Actually a SEMICIRCLE (180°) — let me show it at the corner as 2x quarter-circle -->
+  <!-- Simpler: show just the semicircle as the gate, centered at floor level, water above -->
+  <!-- Semicylinder at floor level: R=50, center at (603,176), from A(553,176) to B(653,176) going down through (603,226) -->
+  <!-- Water fills above the semicircle -->
+
+  <!-- Water above semicircle -->
+  <path d="M536,106 L716,106 L716,176 L653,176 A50,50 0 0 1 553,176 L536,176 Z" fill="url(#u6vsWg)" opacity="0.7"/>
+
+  <!-- Semicircle arc (gate) — bottom half, concave up -->
+  <path d="M553,176 A50,50 0 0 1 653,176" fill="none" stroke="#173043" stroke-width="4"/>
+
+  <!-- Container floor/wall context -->
+  <line x1="536" y1="106" x2="536" y2="234" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="536" y1="234" x2="714" y2="234" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="553" y1="176" x2="536" y2="176" stroke="#2d3a40" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="653" y1="176" x2="714" y2="176" stroke="#2d3a40" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- T2: center of curvature marker -->
+  <circle cx="603" cy="176" r="5" fill="#ffffff" stroke="#7b1fa2" stroke-width="2"/>
+  <line x1="596" y1="176" x2="610" y2="176" stroke="#7b1fa2" stroke-width="1.5"/>
+  <line x1="603" y1="169" x2="603" y2="183" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="607" y="172" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#7b1fa2">C</text>
+
+  <!-- T2: FR arrow through center -->
+  <line x1="603" y1="226" x2="603" y2="150" stroke="#7b1fa2" stroke-width="2.5" marker-end="url(#u6vsaMg)"/>
+  <text x="608" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#7b1fa2">F&#x1D35;</text>
+
+  <!-- T2: FH → and FV ↓ labels -->
+  <line x1="553" y1="210" x2="603" y2="210" stroke="#b42318" stroke-width="2.5" marker-end="url(#u6vsaR)"/>
+  <text x="554" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#b42318">F&#x2095;</text>
+  <line x1="625" y1="176" x2="625" y2="226" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u6vsaG)"/>
+  <text x="630" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#0f766e">F&#x1D65;</text>
+
+  <!-- T2: R dim -->
+  <line x1="603" y1="176" x2="603" y2="226" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="608" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">R</text>
+
+  <!-- T2: note -->
+  <rect x="668" y="88" width="224" height="166" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.2"/>
+  <text x="680" y="106" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">Kružni luk — svojstvo:</text>
+  <text x="680" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">F&#x1D35; prolazi središtem</text>
+  <text x="680" y="138" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">zakrivljenosti C.</text>
+  <text x="680" y="158" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">F&#x2095; = &#x3C1;g·h&#x1D9C;&#x2C2;·(2R·b)</text>
+  <text x="680" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b42318">F&#x2095; &#x2248; 8,38 kN &#x2192;</text>
+  <text x="680" y="190" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">F&#x1D65; = &#x3C1;g·(&#x3C0;R&#xB2;/2)·b</text>
+  <text x="680" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#0f766e">F&#x1D65; &#x2248; 1,25 kN &#x2191;</text>
+  <text x="680" y="238" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#999">(voda na konveksnoj strani)</text>
+
+  <!-- ═══════════════════ T3 panel (col1, row2) ═══════════════════ -->
+  <rect x="36" y="264" width="424" height="186" rx="10" fill="#f8fcff" stroke="#b0c8d8" stroke-width="1.5"/>
+  <text x="52" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T3</text>
+  <text x="68" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Polucilindricni poklopac, šarka — R=0,40 m, e=0,85 m iznad vrha</text>
+
+  <!-- T3: similar semicircle setup with an arm extending up to hinge -->
+  <!-- Semicircle at corner: center=(245,404), A=(185,404), B=(305,404), R=60, going down through (245,464) -->
+  <!-- Hinge arm: from A(245,344) [center of top of arc] up by e_px -->
+  <!-- Actually: hinge is 0.85m ABOVE TOP of semicircle. R=0.40m so e:R = 2.125. e_px = 2.125*60 = 127.5 → too large. Use e_px=50, R_px=24 (ratio 2.1:1 approx) -->
+  <!-- OR: just show the geometry schematically with proper labels -->
+  <!-- Let's use: Semicircle center at (200,390), R=40, from A(160,390) to B(240,390) going down -->
+  <!-- Top of arc = y=390, hinge 0.85m above = show at y=310 (e_px=80 for good visual) -->
+  <!-- But actually for a semicircle going down (bottom), the top is at y=390, so free surface might be near y=310 or higher -->
+
+  <!-- Free surface -->
+  <line x1="80" y1="290" x2="390" y2="290" stroke="#3a87ad" stroke-width="2"/>
+
+  <!-- Water region -->
+  <path d="M82,290 L370,290 L370,390 L240,390 A40,40 0 0 1 160,390 L82,390 Z" fill="url(#u6vsWg)" opacity="0.7"/>
+
+  <!-- Wall and floor -->
+  <line x1="82" y1="290" x2="82" y2="440" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="82" y1="440" x2="370" y2="440" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="160" y1="390" x2="82" y2="390" stroke="#2d3a40" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="240" y1="390" x2="370" y2="390" stroke="#2d3a40" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Semicircle arc (gate) -->
+  <path d="M160,390 A40,40 0 0 1 240,390" fill="none" stroke="#173043" stroke-width="4"/>
+
+  <!-- Hinge arm: straight rod from top of arc to hinge point -->
+  <!-- Top of arc = midpoint of A-B chord = (200,390); hinge is 0.85m above = (200,310) -->
+  <line x1="200" y1="390" x2="200" y2="310" stroke="#173043" stroke-width="3"/>
+  <circle cx="200" cy="310" r="7" fill="#ffffff" stroke="#173043" stroke-width="2.5"/>
+  <circle cx="200" cy="310" r="2.5" fill="#173043"/>
+  <text x="208" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">O (šarka)</text>
+
+  <!-- T3: e dimension (distance from hinge to top of gate) -->
+  <line x1="72" y1="310" x2="72" y2="390" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u6vsaGr)" marker-end="url(#u6vsaGr)"/>
+  <text x="42" y="354" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">e</text>
+
+  <!-- T3: FH ← and FV ↑ arrows on gate -->
+  <line x1="270" y1="413" x2="220" y2="413" stroke="#b42318" stroke-width="3" marker-end="url(#u6vsaR)"/>
+  <text x="272" y="417" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#b42318">F&#x2095;</text>
+  <line x1="200" y1="432" x2="200" y2="398" stroke="#0f766e" stroke-width="3" marker-end="url(#u6vsaG)"/>
+  <text x="208" y="420" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#0f766e">F&#x1D65;</text>
+
+  <!-- T3: moment annotation -->
+  <path d="M188,304 A18,18 0 0 0 212,304" fill="none" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="218" y="302" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#7b1fa2">&#x3A3;M&#x1D3C;=0</text>
+
+  <!-- T3: result note -->
+  <rect x="280" y="272" width="172" height="110" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.2"/>
+  <text x="292" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">Moment oko O:</text>
+  <text x="292" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">&#x3A3;M&#x1D3C; = F&#x2095;·y&#x2095; + F&#x1D65;·x&#x1D65;</text>
+  <text x="292" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">gdje su hvatišta od O.</text>
+  <text x="292" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">R=0,40 m, e=0,85 m</text>
+  <text x="292" y="362" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#999">Potreban: moment sila.</text>
+
+  <!-- ═══════════════════ T4 panel (col2, row2) ═══════════════════ -->
+  <rect x="480" y="264" width="424" height="186" rx="10" fill="#f8fcff" stroke="#b0c8d8" stroke-width="1.5"/>
+  <text x="496" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T4</text>
+  <text x="512" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Četvrtina kruga s nadvišenjem tlaka p₀ = 18 kPa</text>
+
+  <!-- T4: same geometry as T1 but with p0 above free surface -->
+  <!-- Structural wall (left) -->
+  <rect x="512" y="308" width="44" height="120" fill="url(#u6vsH)"/>
+  <rect x="512" y="308" width="44" height="120" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <!-- Floor -->
+  <rect x="512" y="428" width="200" height="14" fill="url(#u6vsH)"/>
+  <rect x="512" y="428" width="200" height="14" fill="none" stroke="#546e7a" stroke-width="1"/>
+
+  <!-- T4: free surface -->
+  <line x1="516" y1="308" x2="820" y2="308" stroke="#3a87ad" stroke-width="2"/>
+
+  <!-- T4: p0 label above free surface -->
+  <rect x="550" y="272" width="120" height="24" rx="6" fill="#fff3cc" stroke="#c49a0a" stroke-width="1.2"/>
+  <text x="560" y="288" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#8a6500">p&#x2080; = 18 kPa</text>
+  <line x1="610" y1="296" x2="610" y2="308" stroke="#c49a0a" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- T4: water (outer side) -->
+  <path d="M610,364 L740,364 L740,428 L556,428 A56,56 0 0 0 610,372 Z" fill="url(#u6vsWg)" opacity="0.7"/>
+  <!-- T4: V* fill -->
+  <path d="M556,308 L610,308 L610,364 A56,56 0 0 1 556,420 Z" fill="url(#u6vsWi)"/>
+  <path d="M556,308 L610,308 L610,364 A56,56 0 0 1 556,420 Z" fill="none" stroke="#3a87ad" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- T4: arc (gate) -->
+  <path d="M610,364 A56,56 0 0 1 556,420" fill="none" stroke="#173043" stroke-width="4"/>
+  <line x1="556" y1="308" x2="556" y2="428" stroke="#2d3a40" stroke-width="2.5"/>
+  <line x1="556" y1="428" x2="712" y2="428" stroke="#2d3a40" stroke-width="2.5"/>
+
+  <!-- T4: A, B -->
+  <circle cx="610" cy="364" r="3" fill="#173043"/>
+  <text x="614" y="362" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" fill="#173043">A</text>
+  <circle cx="556" cy="420" r="3" fill="#173043"/>
+  <text x="540" y="432" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" fill="#173043">B</text>
+
+  <!-- T4: FH and FV arrows -->
+  <line x1="638" y1="396" x2="570" y2="396" stroke="#b42318" stroke-width="3" marker-end="url(#u6vsaR)"/>
+  <text x="642" y="400" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#b42318">F&#x2095;</text>
+  <line x1="578" y1="428" x2="578" y2="380" stroke="#0f766e" stroke-width="3" marker-end="url(#u6vsaG)"/>
+  <text x="584" y="412" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#0f766e">F&#x1D65;</text>
+
+  <!-- T4: note box -->
+  <rect x="726" y="276" width="170" height="166" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.2"/>
+  <text x="738" y="294" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">Utjecaj p₀:</text>
+  <text x="738" y="312" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">Ekvivalentna visina:</text>
+  <text x="738" y="328" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">h₀ = p₀/(&#x3C1;g) &#x2248; 1,84 m</text>
+  <text x="738" y="348" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">F&#x2095; = &#x3C1;g·(h₁+h₀+R/2)·R·b</text>
+  <text x="738" y="366" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">F&#x1D65; = &#x3C1;g·(h₁+h₀)·R·b</text>
+  <text x="738" y="386" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">+ &#x3C1;g·(&#x3C0;R&#xB2;/4)·b</text>
+  <text x="738" y="408" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#999">(isti h₁, b kao u T1)</text>
+  <text x="738" y="426" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#999">p₀ povećava oba iznosa.</text>
+
+  <!-- ═══════════════════ T5 panel (col1, row3) ═══════════════════ -->
+  <rect x="36" y="462" width="424" height="186" rx="10" fill="#f8fcff" stroke="#b0c8d8" stroke-width="1.5"/>
+  <text x="52" y="482" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T5</text>
+  <text x="68" y="482" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Zakrivljena ploha — V*=0,42 m³, F&#x2095;=18,5 kN, b=1,20 m</text>
+
+  <!-- T5: structural channel walls -->
+  <rect x="60" y="494" width="40" height="140" fill="url(#u6vsH)"/>
+  <rect x="60" y="494" width="40" height="140" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="60" y="634" width="240" height="14" fill="url(#u6vsH)"/>
+  <rect x="60" y="634" width="240" height="14" fill="none" stroke="#546e7a" stroke-width="1"/>
+
+  <!-- T5: free surface -->
+  <line x1="100" y1="494" x2="380" y2="494" stroke="#3a87ad" stroke-width="2"/>
+
+  <!-- T5: water fill (large column above generic curve) -->
+  <path d="M100,494 L310,494 L310,534 Q270,560 240,580 Q220,600 220,624 L100,624 Z" fill="url(#u6vsWg)" opacity="0.7"/>
+
+  <!-- T5: generic curved surface (ploha) -->
+  <path d="M310,534 Q270,560 240,580 Q220,600 220,624" fill="none" stroke="#173043" stroke-width="4"/>
+  <line x1="100" y1="494" x2="100" y2="634" stroke="#2d3a40" stroke-width="2.5"/>
+  <line x1="220" y1="624" x2="300" y2="624" stroke="#2d3a40" stroke-width="2.5"/>
+
+  <!-- T5: V* imaginary volume (dashed) -->
+  <path d="M220,494 L310,494 L310,534 Q270,560 240,580 Q220,600 220,624 L220,494 Z" fill="#d4eef8" opacity="0.5"/>
+  <path d="M220,494 L310,494 L310,534 Q270,560 240,580 Q220,600 220,624 L220,494 Z" fill="none" stroke="#3a87ad" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="250" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-style="italic" fill="#1a6696">V*</text>
+
+  <!-- T5: FH arrow → -->
+  <line x1="310" y1="580" x2="380" y2="580" stroke="#b42318" stroke-width="3" marker-end="url(#u6vsaR)"/>
+  <text x="318" y="572" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b42318">F&#x2095;</text>
+
+  <!-- T5: FV arrow — direction unknown, show as question mark -->
+  <line x1="265" y1="624" x2="265" y2="570" stroke="#0f766e" stroke-width="3" marker-end="url(#u6vsaG)"/>
+  <text x="272" y="600" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#0f766e">F&#x1D65;?</text>
+
+  <!-- T5: result note -->
+  <rect x="310" y="476" width="142" height="166" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.2"/>
+  <text x="322" y="496" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">Podaci:</text>
+  <text x="322" y="514" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">V* = 0,42 m³</text>
+  <text x="322" y="532" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">F&#x2095; = 18,5 kN</text>
+  <text x="322" y="552" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">F&#x1D65; = &#x3C1;g·V*:</text>
+  <text x="322" y="570" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#0f766e">F&#x1D65; &#x2248; 4,12 kN &#x2191;</text>
+  <text x="322" y="590" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#7b1fa2">F&#x1D35; = &#x221A;(F&#x2095;&#xB2;+F&#x1D65;&#xB2;)</text>
+  <text x="322" y="608" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#7b1fa2">&#x2248; 19,0 kN</text>
+  <text x="322" y="626" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#999">(smjer F&#x1D65; iz skice V*)</text>
+
+  <!-- ═══════════════════ T6 panel (col2, row3) ═══════════════════ -->
+  <rect x="480" y="462" width="424" height="186" rx="10" fill="#f8fcff" stroke="#b0c8d8" stroke-width="1.5"/>
+  <text x="496" y="482" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T6</text>
+  <text x="512" y="482" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Četvrtina kruga — R=0,75 m, h₁=0,45 m, šarka A, spojnica B</text>
+
+  <!-- T6: right structural wall -->
+  <rect x="720" y="496" width="40" height="140" fill="url(#u6vsH)"/>
+  <rect x="720" y="496" width="40" height="140" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <!-- T6: bottom floor -->
+  <rect x="504" y="620" width="256" height="14" fill="url(#u6vsH)"/>
+  <rect x="504" y="620" width="256" height="14" fill="none" stroke="#546e7a" stroke-width="1"/>
+
+  <!-- T6: free surface -->
+  <line x1="504" y1="496" x2="762" y2="496" stroke="#3a87ad" stroke-width="2"/>
+
+  <!-- T6: h1 zone and arc zone -->
+  <!-- h1_px = 36px (h1:R = 0.45:0.75 = 0.6, so h1_px = 0.6*60 = 36 for R_px=60) -->
+  <!-- A at (720, 496+36)=(720,532), B at (720-60, 496+36+60)=(660,596), center=(720,596) -->
+
+  <!-- T6: water fill (inside corner, concave side) -->
+  <path d="M504,496 L720,496 A60,60 0 0 0 660,596 L504,596 Z" fill="url(#u6vsWg)" opacity="0.8"/>
+
+  <!-- T6: V* fill (quarter-circle imaginary volume) -->
+  <path d="M720,532 A60,60 0 0 0 660,596... wait this is wrong. A is at (720,532), not (720,496) -->
+  <!-- Recalculate: free surface y=496. h1_px=36. A is at depth h1_px below free surface on the right wall = (720, 496+36)=(720,532). B at (720-60,596)=(660,596). Center=(720,596). -->
+  <!-- Water fill from free surface down to B level:
+    M504,496 L720,496 L720,532 A60,60 0 0 0 660,596 L504,596 Z  (includes h1 zone above arc) -->
+
+  <!-- Override water fill with correct geometry -->
+  <path d="M504,496 L720,496 L720,532 A60,60 0 0 0 660,596 L504,596 Z" fill="url(#u6vsWg)" opacity="0.8"/>
+
+  <!-- V* imaginary volume (quarter circle pie) -->
+  <path d="M720,532 A60,60 0 0 0 660,596 L720,596 Z" fill="url(#u6vsWi)" opacity="0.9"/>
+  <path d="M720,532 A60,60 0 0 0 660,596 L720,596 Z" fill="none" stroke="#3a87ad" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="692" y="580" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-style="italic" fill="#1a6696">V*</text>
+
+  <!-- T6: arc (gate) -->
+  <path d="M720,532 A60,60 0 0 0 660,596" fill="none" stroke="#173043" stroke-width="4"/>
+  <line x1="720" y1="532" x2="720" y2="596" stroke="#2d3a40" stroke-width="2.5"/>
+  <line x1="660" y1="596" x2="760" y2="596" stroke="#2d3a40" stroke-width="2.5"/>
+
+  <!-- T6: hinge at A (šarka) -->
+  <circle cx="720" cy="532" r="7" fill="#ffffff" stroke="#173043" stroke-width="2.5"/>
+  <circle cx="720" cy="532" r="2.5" fill="#173043"/>
+  <text x="727" y="530" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">A</text>
+
+  <!-- T6: h1 dimension -->
+  <line x1="700" y1="496" x2="700" y2="532" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u6vsaGr)" marker-end="url(#u6vsaGr)"/>
+  <text x="706" y="518" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#173043">h₁</text>
+
+  <!-- T6: R dimension -->
+  <line x1="752" y1="532" x2="752" y2="596" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u6vsaGr)" marker-end="url(#u6vsaGr)"/>
+  <text x="758" y="568" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#173043">R</text>
+
+  <!-- T6: connector T at B (← leftward) -->
+  <line x1="700" y1="596" x2="628" y2="596" stroke="#1565c0" stroke-width="3" marker-end="url(#u6vsaB)"/>
+  <text x="644" y="610" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1565c0">T</text>
+  <circle cx="660" cy="596" r="4" fill="#1565c0"/>
+
+  <!-- T6: B label -->
+  <text x="650" y="590" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">B</text>
+
+  <!-- T6: FH → and FV ↓ arrows -->
+  <line x1="720" y1="564" x2="786" y2="564" stroke="#b42318" stroke-width="3" marker-end="url(#u6vsaR)"/>
+  <text x="788" y="568" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b42318">F&#x2095;</text>
+  <line x1="682" y1="528" x2="682" y2="596" stroke="#0f766e" stroke-width="3" marker-end="url(#u6vsaG)"/>
+  <text x="688" y="556" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#0f766e">F&#x1D65;</text>
+
+  <!-- T6: result note -->
+  <rect x="504" y="468" width="116" height="116" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.2"/>
+  <text x="516" y="486" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">&#x3A3;M&#x2090;=0:</text>
+  <text x="516" y="504" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">T·R = F&#x2095;·y&#x2095;</text>
+  <text x="516" y="520" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">+ F&#x1D65;·x&#x1D65;</text>
+  <text x="516" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">h₁=0,45 m</text>
+  <text x="516" y="558" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">R=0,75 m</text>
+  <text x="516" y="574" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#999">b=1,10 m</text>
+</svg>

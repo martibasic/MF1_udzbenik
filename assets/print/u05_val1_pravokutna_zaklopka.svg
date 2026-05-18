@@ -1,0 +1,125 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 410" role="img"
+     aria-labelledby="u5v1T u5v1D" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u5v1T">U05 Val 1 – Vertikalna pravokutna zaklopka ispod slobodne površine</title>
+  <desc id="u5v1D">b=2,0 m, h=3,0 m, h₁=2,0 m. Trapezni dijagram tlaka, centroid C na h_C=3,50 m, centar tlaka CP na y_CP=3,714 m, F≈205,5 kN.</desc>
+  <defs>
+    <marker id="u5v1aR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
+    </marker>
+    <marker id="u5v1aDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
+    </marker>
+    <marker id="u5v1aDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
+    </marker>
+    <marker id="u5v1aG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#1e8449"/>
+    </marker>
+    <marker id="u5v1aGL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L0,8 L8,4 z" fill="#1e8449"/>
+    </marker>
+    <linearGradient id="u5v1fl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
+    </linearGradient>
+    <linearGradient id="u5v1pr" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#e74c3c" stop-opacity="0.60"/>
+      <stop offset="100%" stop-color="#e74c3c" stop-opacity="0.07"/>
+    </linearGradient>
+    <pattern id="u5v1wall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+    </pattern>
+  </defs>
+
+  <rect width="940" height="410" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="362" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+  <!-- Naslov -->
+  <text x="54" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#173043">U05 Val 1 – Vertikalna pravokutna zaklopka ispod slobodne površine</text>
+  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="14.5" fill="#516677">b = 2,0 m · h = 3,0 m · h₁ = 2,0 m · ρ = 998 kg/m³ → F ≈ 205,5 kN · y_CP = 3,714 m</text>
+
+  <!-- Tijelo fluida  (mjerilo 48 px/m; slobodna površina y=115) -->
+  <rect x="82" y="115" width="276" height="258" fill="url(#u5v1fl)" opacity="0.85"/>
+
+  <!-- Lijeva stijenka rezervoara (tanka) -->
+  <rect x="80" y="108" width="4" height="272" fill="#909fa8"/>
+
+  <!-- Dno rezervoara -->
+  <rect x="80" y="370" width="284" height="8" fill="#909fa8" stroke="#5d6d7e" stroke-width="1"/>
+
+  <!-- Slobodna površina -->
+  <line x1="80" y1="115" x2="362" y2="115" stroke="#1565c0" stroke-width="2.8"/>
+  <text x="85" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">slobodna površina  (p = 0)</text>
+
+  <!-- Stijenka s hatching-om -->
+  <!-- zaklopka: h₁=2,0m×48=96px → gornji rub y=211; h=3,0m×48=144px → donji rub y=355 -->
+  <rect x="358" y="96" width="44" height="280" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.8"/>
+  <rect x="358" y="96" width="44" height="280" fill="url(#u5v1wall)" opacity="0.50"/>
+
+  <!-- Zaklopka (ploha) – istaknuta u stijenki, y=211..355 -->
+  <rect x="352" y="211" width="56" height="144" fill="#4a5568" stroke="#2d3748" stroke-width="2.8"/>
+  <text x="380" y="287" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="700"
+        fill="white" text-anchor="middle" letter-spacing="1">PLOHA</text>
+
+  <!-- Trapezni dijagram tlaka (na lijevoj stijenci zaklopke x=358) -->
+  <!-- p(211)=ρg·2,0; p(355)=ρg·5,0; p_omjer=2/5=0,40; w_top=0,40×56=22px; w_bot=56px -->
+  <!-- Referentni dashed za tlak p=0 do gornjeg ruba zaklopke -->
+  <line x1="358" y1="115" x2="358" y2="211" stroke="#e74c3c" stroke-width="0.9" stroke-dasharray="4,3" opacity="0.55"/>
+  <!-- Trapezoid -->
+  <polygon points="358,211 336,211 302,355 358,355" fill="url(#u5v1pr)"/>
+  <line x1="336" y1="211" x2="302" y2="355" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="336" y1="211" x2="358" y2="211" stroke="#c0392b" stroke-width="1.0"/>
+  <line x1="302" y1="355" x2="358" y2="355" stroke="#c0392b" stroke-width="1.0"/>
+  <text x="332" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b" text-anchor="end">p₁ = ρgh₁</text>
+  <text x="298" y="369" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b" text-anchor="end">p₂ = ρg(h₁+h)</text>
+
+  <!-- Kote desno od stijenke -->
+  <!-- h₁ (narančasta): y=115..211 na x=424 -->
+  <line x1="402" y1="115" x2="430" y2="115" stroke="#c96c35" stroke-width="1.0"/>
+  <line x1="402" y1="211" x2="430" y2="211" stroke="#c96c35" stroke-width="1.0"/>
+  <line x1="427" y1="117" x2="427" y2="209" stroke="#c96c35" stroke-width="1.8"
+        marker-start="url(#u5v1aDimL)" marker-end="url(#u5v1aDim)"/>
+  <text x="434" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e" font-style="italic">h₁ = 2,0 m</text>
+
+  <!-- h (zelena): y=211..355 na x=458 -->
+  <line x1="402" y1="355" x2="468" y2="355" stroke="#1e8449" stroke-width="1.0"/>
+  <line x1="465" y1="213" x2="465" y2="353" stroke="#1e8449" stroke-width="1.8"
+        marker-start="url(#u5v1aGL)" marker-end="url(#u5v1aG)"/>
+  <text x="472" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e8449" font-style="italic">h = 3,0 m</text>
+
+  <!-- Centroid C  (h_C = 3,50 m × 48 = 168 px → y = 115+168 = 283) -->
+  <circle cx="358" cy="283" r="5.5" fill="#1a2530" stroke="white" stroke-width="1.5"/>
+  <line x1="358" y1="283" x2="488" y2="267" stroke="#1a2530" stroke-width="0.9" stroke-dasharray="3,3"/>
+  <text x="492" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530" font-style="italic">C</text>
+  <text x="504" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#5a6a78"> (h_C = 3,50 m)</text>
+
+  <!-- Centar tlaka CP  (Δ = 0,214 m × 48 = 10,3 px → y = 283+10 = 293) -->
+  <circle cx="358" cy="293" r="5.5" fill="#c0392b" stroke="white" stroke-width="1.5"/>
+  <line x1="358" y1="293" x2="488" y2="309" stroke="#c0392b" stroke-width="0.9" stroke-dasharray="3,3"/>
+  <text x="492" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#c0392b" font-style="italic">CP</text>
+  <text x="512" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#5a6a78"> (y_CP = 3,714 m)</text>
+
+  <!-- F strelica od CP prema desno -->
+  <line x1="408" y1="293" x2="532" y2="293" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u5v1aR)"/>
+  <text x="456" y="285" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">F ≈ 205,5 kN</text>
+
+  <!-- Kutija rješenja (desno) -->
+  <rect x="540" y="112" width="372" height="254" rx="10" fill="#f8fafc" stroke="#cbd5e0" stroke-width="1.8"/>
+  <text x="558" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Rješenje:</text>
+  <text x="558" y="157" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">h_C = h₁ + h/2 = 2,0 + 1,5 = 3,50 m</text>
+  <text x="558" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">A = b · h = 2,0 · 3,0 = 6,0 m²</text>
+  <line x1="558" y1="184" x2="898" y2="184" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="558" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#c0392b">F = ρgAh_C = 998·9,81·6,0·3,50</text>
+  <text x="558" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#c0392b">  ⟹  F ≈ 205,5 kN</text>
+  <line x1="558" y1="232" x2="898" y2="232" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="558" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">I_G = bh³/12 = 2,0·27/12 = 4,50 m⁴</text>
+  <text x="558" y="269" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">Δ = I_G/(A·h_C) = 4,50 / (6,0·3,50) = 0,214 m</text>
+  <line x1="558" y1="277" x2="898" y2="277" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="558" y="297" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#1565c0">y_CP = h_C + Δ = 3,50 + 0,214 = 3,714 m</text>
+  <text x="558" y="315" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">udaljenost od gornjeg ruba: z = y_CP − h₁ = 1,714 m</text>
+
+  <!-- Napomena na dnu -->
+  <text x="54" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#516677">
+    <tspan>Centar tlaka CP je uvijek dublje od težišta C. Pomak Δ = I_G/(A·h_C) raste za plitko potopljene plohe i pada za duboko potopljene.</tspan>
+  </text>
+</svg>

@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img"
+     aria-labelledby="vs2t vs2d" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:960px;height:auto;">
+  <title id="vs2t">U02 – Skice zadataka T1–T6</title>
+  <desc id="vs2d">Šest grayscale tehničkih skica za U02: T1 dvije ploče s viskoznim profilom, T2 vučena ploča s mjerenom silom, T3 poprečni presjek kliznog ležaja, T4 dvije kapilare s meniskusom, T5 kapilara s kapljicom, T6 kapilarna igla sa spremnikom i visinom H.</desc>
+
+  <defs>
+    <marker id="vs2aD" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 z" fill="#222"/>
+    </marker>
+    <marker id="vs2aDR" markerWidth="9" markerHeight="9" refX="1" refY="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,7 L8,3.5 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="720" fill="#f4f6f8"/>
+  <rect x="18" y="18" width="924" height="684" rx="14" fill="#ffffff" stroke="#d0d6de" stroke-width="2"/>
+
+  <!-- Naslov -->
+  <text x="50" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#1a2530">U02 – Skice zadataka T1–T6</text>
+  <text x="50" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#5a6a78">Viskoznost, kapilarnost i površinska napetost – grayscale za ispis.</text>
+
+  <!-- ========================================================
+       T1 – Dvije paralelne ploče (lijevo gore, x=36..466, y=96..276)
+  ======================================================== -->
+  <rect x="36" y="96" width="430" height="180" rx="10" fill="#f9fafb" stroke="#c8d0d8" stroke-width="1.6"/>
+  <rect x="52" y="108" width="38" height="24" rx="6" fill="#e8edf2" stroke="#b0bac4" stroke-width="1.2"/>
+  <text x="71" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">T1</text>
+  <text x="101" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#1a2530">Dvije paralelne ploče – gradijent brzine</text>
+
+  <!-- gornja ploča: x=68..398, y=140..156 -->
+  <rect x="68" y="140" width="330" height="16" rx="3" fill="#6a7a86" stroke="#3a4a56" stroke-width="1.8"/>
+  <!-- donja ploča: x=68..398, y=240..256 -->
+  <rect x="68" y="240" width="330" height="16" rx="3" fill="#6a7a86" stroke="#3a4a56" stroke-width="1.8"/>
+  <!-- fluid zona (svetlo plavo-siva) -->
+  <rect x="68" y="156" width="330" height="84" fill="#e4edf4" stroke="none"/>
+  <!-- linearni profil brzine (trokut) -->
+  <polygon points="68,156 68,240 310,156" fill="#c8d8e8" stroke="none" opacity="0.7"/>
+  <line x1="68" y1="240" x2="310" y2="156" stroke="#4a5a66" stroke-width="2"/>
+  <!-- strelice brzine -->
+  <line x1="68" y1="228" x2="120" y2="228" stroke="#444" stroke-width="2" marker-end="url(#vs2aD)"/>
+  <line x1="68" y1="207" x2="163" y2="207" stroke="#444" stroke-width="2" marker-end="url(#vs2aD)"/>
+  <line x1="68" y1="186" x2="207" y2="186" stroke="#444" stroke-width="2" marker-end="url(#vs2aD)"/>
+  <line x1="68" y1="165" x2="250" y2="165" stroke="#444" stroke-width="2" marker-end="url(#vs2aD)"/>
+  <!-- v strelica iznad gornje ploče -->
+  <line x1="110" y1="128" x2="210" y2="128" stroke="#333" stroke-width="3" marker-end="url(#vs2aD)"/>
+  <text x="100" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1a2530">v</text>
+
+  <!-- δ kota: lijevo, x=50, y=156..240 -->
+  <line x1="50" y1="156" x2="50" y2="240" stroke="#555" stroke-width="1.8" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="54" y="203" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#555">δ</text>
+
+  <!-- A labela ploče -->
+  <text x="72" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5a6a78">A = aktivna površina ploče</text>
+
+  <!-- τ strelica desno -->
+  <line x1="408" y1="198" x2="454" y2="198" stroke="#333" stroke-width="3" marker-end="url(#vs2aD)"/>
+  <text x="456" y="203" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" fill="#1a2530">τ</text>
+
+  <!-- ========================================================
+       T2 – Vučena ploča, mjerena sila F (desno gore, x=494..924, y=96..276)
+  ======================================================== -->
+  <rect x="494" y="96" width="430" height="180" rx="10" fill="#f9fafb" stroke="#c8d0d8" stroke-width="1.6"/>
+  <rect x="510" y="108" width="38" height="24" rx="6" fill="#e8edf2" stroke="#b0bac4" stroke-width="1.2"/>
+  <text x="529" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">T2</text>
+  <text x="559" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#1a2530">Vučena ploča – iz F odredi μ</text>
+
+  <!-- donja nepomična ploča: x=526..906, y=228..244 -->
+  <rect x="526" y="228" width="380" height="14" rx="3" fill="#6a7a86" stroke="#3a4a56" stroke-width="1.8"/>
+  <!-- fluid zona -->
+  <rect x="526" y="170" width="380" height="58" fill="#e4edf4" stroke="none"/>
+  <!-- klizna ploča: x=526..906, y=155..171 -->
+  <rect x="526" y="155" width="380" height="16" rx="3" fill="#9aaab4" stroke="#4a5a66" stroke-width="1.8"/>
+  <!-- procjep δ kota: desno -->
+  <line x1="914" y1="170" x2="914" y2="228" stroke="#555" stroke-width="1.8" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="918" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#555">δ</text>
+
+  <!-- v strelica iznad klizne ploče -->
+  <line x1="580" y1="143" x2="700" y2="143" stroke="#333" stroke-width="3" marker-end="url(#vs2aD)"/>
+  <text x="568" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1a2530">v</text>
+
+  <!-- F strelica (vučna sila mjerena dinamometrom) -->
+  <line x1="656" y1="163" x2="756" y2="163" stroke="#333" stroke-width="3" marker-end="url(#vs2aD)"/>
+  <text x="648" y="163" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1a2530">F</text>
+  <!-- dinamometar (kružić) -->
+  <circle cx="776" cy="163" r="16" fill="#e8edf2" stroke="#4a5a66" stroke-width="2"/>
+  <text x="776" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#3a3a3a">F</text>
+
+  <!-- A labela -->
+  <text x="530" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5a6a78">A = 0,14 m² · mjerena F = 21 N → odredi μ</text>
+
+  <!-- ========================================================
+       T3 – Klizni ležaj (poprečni presjek) lijevo srednje, x=36..466, y=296..476
+  ======================================================== -->
+  <rect x="36" y="296" width="430" height="180" rx="10" fill="#f9fafb" stroke="#c8d0d8" stroke-width="1.6"/>
+  <rect x="52" y="308" width="38" height="24" rx="6" fill="#e8edf2" stroke="#b0bac4" stroke-width="1.2"/>
+  <text x="71" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">T3</text>
+  <text x="101" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#1a2530">Klizni ležaj – poprečni presjek</text>
+
+  <!-- Kućište ležaja (vanjski prsten): cx=210, cy=396, r=68 -->
+  <circle cx="210" cy="396" r="68" fill="#c8d4dc" stroke="#4a5a66" stroke-width="2.5"/>
+  <!-- Uljni film (prsten): r=56 -->
+  <circle cx="210" cy="396" r="56" fill="#dde8f0" stroke="#7a9aaa" stroke-width="1.5"/>
+  <!-- Vratilo (unutarnji krug): r=44 -->
+  <circle cx="210" cy="396" r="44" fill="#8a9aa4" stroke="#3a4a56" stroke-width="2.5"/>
+
+  <!-- D kota (promjer vratila): horizontalno -->
+  <line x1="166" y1="440" x2="254" y2="440" stroke="#555" stroke-width="1.6" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="210" y="456" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#555">D</text>
+
+  <!-- δ kota: horizontalno (uljni film) -->
+  <line x1="254" y1="396" x2="266" y2="396" stroke="#555" stroke-width="1.6" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="272" y="401" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#555">δ</text>
+
+  <!-- v smjer gibanja (rotacijska strelica) -->
+  <path d="M 210 354 A 42 42 0 0 1 250 374" fill="none" stroke="#333" stroke-width="2.5" marker-end="url(#vs2aD)"/>
+  <text x="255" y="355" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1a2530">v</text>
+
+  <!-- L kota izvan panela (bočno): skica perspektivnih oznaka -->
+  <text x="312" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#5a6a78">L = duljina ležaja</text>
+  <text x="312" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5a6a78">A = π·D·L</text>
+  <text x="312" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5a6a78">τ = μ·v/δ</text>
+  <text x="312" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5a6a78">F = τ·A</text>
+
+  <!-- "ulje" napis u prstenu -->
+  <text x="266" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#4a6a78">ulje</text>
+  <text x="190" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="white">vratilo</text>
+
+  <!-- ========================================================
+       T4 – Dvije kapilare (desno srednje, x=494..924, y=296..476)
+  ======================================================== -->
+  <rect x="494" y="296" width="430" height="180" rx="10" fill="#f9fafb" stroke="#c8d0d8" stroke-width="1.6"/>
+  <rect x="510" y="308" width="38" height="24" rx="6" fill="#e8edf2" stroke="#b0bac4" stroke-width="1.2"/>
+  <text x="529" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">T4</text>
+  <text x="559" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#1a2530">Dvije kapilare – usporedi h₁ i h₂</text>
+
+  <!-- posuda: x=510..922, y=400..462 -->
+  <rect x="510" y="400" width="412" height="62" rx="4" fill="#e4edf4" stroke="#5a6a76" stroke-width="2"/>
+  <!-- razina u posudi -->
+  <line x1="512" y1="402" x2="920" y2="402" stroke="#4a5a66" stroke-width="2"/>
+
+  <!-- kapilara 1 (uža): x=590..614, y=336..462 -->
+  <rect x="588" y="336" width="14" height="126" fill="none" stroke="#5a6a76" stroke-width="2"/>
+  <rect x="614" y="336" width="14" height="126" fill="none" stroke="#5a6a76" stroke-width="2"/>
+  <!-- tekućina u kapilari 1: y=355..462 -->
+  <rect x="602" y="355" width="12" height="47" fill="#c8d8e4" stroke="none"/>
+  <rect x="602" y="402" width="12" height="60" fill="#a0b8c8" stroke="none"/>
+  <!-- meniskus 1 -->
+  <path d="M602,357 Q608,345 614,357" fill="#c8d8e4" stroke="#4a5a66" stroke-width="1.8"/>
+  <!-- h₁ kota -->
+  <line x1="636" y1="355" x2="636" y2="402" stroke="#555" stroke-width="1.8" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="640" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#555">h₁</text>
+  <!-- d₁ kota gore -->
+  <line x1="602" y1="340" x2="614" y2="340" stroke="#555" stroke-width="1.6" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="608" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#555">d₁</text>
+
+  <!-- kapilara 2 (šira): x=730..770, y=336..462 -->
+  <rect x="728" y="336" width="18" height="126" fill="none" stroke="#5a6a76" stroke-width="2"/>
+  <rect x="772" y="336" width="18" height="126" fill="none" stroke="#5a6a76" stroke-width="2"/>
+  <!-- tekućina u kapilari 2: manja visina jer d₂>d₁ → h₂<h₁ -->
+  <rect x="746" y="378" width="26" height="24" fill="#c8d8e4" stroke="none"/>
+  <rect x="746" y="402" width="26" height="60" fill="#a0b8c8" stroke="none"/>
+  <!-- meniskus 2 -->
+  <path d="M746,380 Q759,370 772,380" fill="#c8d8e4" stroke="#4a5a66" stroke-width="1.8"/>
+  <!-- h₂ kota -->
+  <line x1="800" y1="378" x2="800" y2="402" stroke="#555" stroke-width="1.8" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="804" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#555">h₂</text>
+  <!-- d₂ kota gore -->
+  <line x1="746" y1="340" x2="772" y2="340" stroke="#555" stroke-width="1.6" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="759" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#555">d₂</text>
+
+  <!-- h ~ 1/d napomena -->
+  <text x="660" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#5a6a78">d₁ &lt; d₂  →  h₁ &gt; h₂ · h = 4σcosθ/(ρgd)</text>
+
+  <!-- ========================================================
+       T5 – Kapilara s kapljicom (lijevo dolje, x=36..466, y=496..676)
+  ======================================================== -->
+  <rect x="36" y="496" width="430" height="180" rx="10" fill="#f9fafb" stroke="#c8d0d8" stroke-width="1.6"/>
+  <rect x="52" y="508" width="38" height="24" rx="6" fill="#e8edf2" stroke="#b0bac4" stroke-width="1.2"/>
+  <text x="71" y="525" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">T5</text>
+  <text x="101" y="525" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#1a2530">Kapilara + kapljica raspršivača</text>
+
+  <!-- posuda: x=52..250, y=590..652 -->
+  <rect x="52" y="590" width="198" height="62" rx="4" fill="#e4edf4" stroke="#5a6a76" stroke-width="2"/>
+  <line x1="54" y1="592" x2="248" y2="592" stroke="#4a5a66" stroke-width="2"/>
+
+  <!-- kapilara: x=138..154, y=536..652 -->
+  <rect x="136" y="536" width="14" height="116" fill="none" stroke="#5a6a76" stroke-width="2"/>
+  <rect x="158" y="536" width="14" height="116" fill="none" stroke="#5a6a76" stroke-width="2"/>
+  <!-- tekućina -->
+  <rect x="150" y="554" width="8" height="38" fill="#c8d8e4" stroke="none"/>
+  <rect x="150" y="592" width="8" height="60" fill="#a0b8c8" stroke="none"/>
+  <!-- meniskus -->
+  <path d="M150,556 Q154,546 158,556" fill="#c8d8e4" stroke="#4a5a66" stroke-width="1.8"/>
+  <!-- h kota -->
+  <line x1="180" y1="554" x2="180" y2="592" stroke="#555" stroke-width="1.8" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="184" y="578" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#555">h</text>
+  <!-- d kota kapilare -->
+  <line x1="150" y1="540" x2="158" y2="540" stroke="#555" stroke-width="1.6" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="154" y="534" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#555">d</text>
+
+  <!-- kapljica: cx=330, cy=574, r=22 -->
+  <circle cx="330" cy="574" r="22" fill="#dde8f0" stroke="#4a5a66" stroke-width="2.2"/>
+  <!-- dk kota -->
+  <line x1="308" y1="560" x2="352" y2="560" stroke="#555" stroke-width="1.6" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="330" y="554" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#555">d_k</text>
+  <!-- Δp labela -->
+  <text x="360" y="578" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5a6a78">Δp=4σ/d_k</text>
+
+  <!-- vod kapilara → kapljica -->
+  <line x1="172" y1="560" x2="308" y2="560" stroke="#8a9aaa" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- ========================================================
+       T6 – Kapilarna igla sa spremnikom (desno dolje, x=494..924, y=496..676)
+  ======================================================== -->
+  <rect x="494" y="496" width="430" height="180" rx="10" fill="#f9fafb" stroke="#c8d0d8" stroke-width="1.6"/>
+  <rect x="510" y="508" width="38" height="24" rx="6" fill="#e8edf2" stroke="#b0bac4" stroke-width="1.2"/>
+  <text x="529" y="525" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">T6</text>
+  <text x="559" y="525" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#1a2530">Kapilarna igla – pretlak p_M</text>
+
+  <!-- SPREMNIK: x=510..660, y=574..652 -->
+  <rect x="510" y="574" width="150" height="78" rx="4" fill="none" stroke="#5a6a76" stroke-width="2.5"/>
+  <!-- tekućina u spremniku -->
+  <rect x="512" y="604" width="146" height="46" fill="#e4edf4" stroke="none"/>
+  <line x1="512" y1="604" x2="658" y2="604" stroke="#4a5a66" stroke-width="2"/>
+  <!-- p_M box -->
+  <rect x="530" y="579" width="48" height="22" rx="4" fill="#fff8e8" stroke="#b0bac4" stroke-width="1.2"/>
+  <text x="554" y="594" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a3a00">p_M</text>
+  <!-- voda label -->
+  <text x="584" y="630" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">voda</text>
+
+  <!-- kapilarna igla: vertikalna cijev, x=644..660, y=536..574 (gore od razine) -->
+  <rect x="644" y="530" width="14" height="74" fill="none" stroke="#5a6a76" stroke-width="2"/>
+  <rect x="660" y="530" width="14" height="74" fill="none" stroke="#5a6a76" stroke-width="2"/>
+  <!-- tekućina u cijevi -->
+  <rect x="658" y="549" width="2" height="55" fill="#c8d8e4" stroke="none"/>
+
+  <!-- H kota: lijevo od igle, od razine do izlaza -->
+  <line x1="632" y1="530" x2="632" y2="604" stroke="#555" stroke-width="1.8" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="622" y="572" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="end" fill="#555">H</text>
+
+  <!-- iscrtkana linija razine izlaza -->
+  <line x1="510" y1="530" x2="686" y2="530" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="514" y="525" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#888">izlaz</text>
+
+  <!-- kapljica na izlazu: cx=667, cy=514, r=16 -->
+  <circle cx="667" cy="514" r="16" fill="#dde8f0" stroke="#4a5a66" stroke-width="2"/>
+  <!-- D kota kapljice -->
+  <line x1="651" y1="502" x2="683" y2="502" stroke="#555" stroke-width="1.6" marker-start="url(#vs2aDR)" marker-end="url(#vs2aD)"/>
+  <text x="667" y="497" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#555">D</text>
+
+  <!-- napomene -->
+  <text x="696" y="548" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5a6a78">h_cap = 4σ/(ρgd)</text>
+  <text x="696" y="566" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5a6a78">Δp = 4σ/D</text>
+  <text x="696" y="584" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5a6a78">p_M = ρg(H−h_cap)+Δp</text>
+</svg>
