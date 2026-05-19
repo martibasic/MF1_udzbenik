@@ -282,16 +282,6 @@ Tu nastaje najčešća zabuna: u seriji je isti $Q$, a u paraleli isti $h_w$. Tk
 
 Zato se većina osnovnih cjevovodnih zadataka može svesti na tri tipa: za zadanu geometriju i protok treba odrediti gubitak, za zadanu geometriju i raspoloživu energijsku visinu treba odrediti protok, a za zadani protok i dopušteni gubitak treba odabrati potreban promjer. Ta podjela ne uvodi novu fiziku, ali pomaže da se odmah prepozna što je poznato, što je nepoznato i gdje će račun biti izravan, a gdje iterativan.
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Dvije slamke spojene paralelno</p>
-
-Pripremaju se dvije slamke za piće različitog promjera (može i ista vrsta slamke, ali jedna prerezana za polovinu duljine). Slamke se na vrhu spoje pomoću male trakice ljepljive trake tako da imaju zajednički ulaz, ali zasebne izlaze. Sustav se uroni u veću čašu napunjenu obojenom vodom, držeći zajednički ulaz iznad razine vode. Pažljivim usisavanjem na zajedničkom ulazu opaža se da iz obje slamke izlazi voda — ali ne istom brzinom.
-
-Slamka s većim presjekom ili manjim hidrauličkim otporom (kraća, glađa) propušta više vode. Pokus se može pojačati paralelnim spojem triju slamki različitih duljina; protoci po pojedinim slamkama spontano se podese tako da svaka grana "plati" isti pad energije od ulaza do izlaza.
-
-**Veza s teorijom:** ovo je izravna ilustracija osnovnog uvjeta paralelnog spoja iz ovog poglavlja: $h_{w,1}(Q_1) = h_{w,2}(Q_2)$. Pri istom raspoloživom padu energije šira grana s manjim otporom propušta veći dio ukupnog protoka. Ista logika stoji iza projektiranja distribucijskih mreža vode, ventilacijskih kanala i rashladnih krugova.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

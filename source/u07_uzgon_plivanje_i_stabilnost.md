@@ -239,16 +239,6 @@ To je tek prvi dio fizikalne slike. Član $V_{ist}$ određuje koliko fluida mora
 
 Za pravokutnu platformu s linearnom promjenom urona po širini srednja uronjenost određena je vertikalnom ravnotežom, dok raspodjela urona po rubovima proizlazi iz momentne ravnoteže oko uzdužne osi. Upravo se tu vidi cjelovito značenje poglavlja: uzgon nije samo jedna brojka, nego rezultat istisnine, položaja centra uzgona i njihove geometrijske veze s ukupnom težinom sustava.
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Jaje u slatkoj i slanoj vodi</p>
-
-U običnu čašu ili manju zdjelu ulijeva se voda iz slavine do oko dvije trećine. Sirovo jaje pažljivo se spušta u čašu i opaža se da tone na dno — gustoća jaja ($\rho \approx 1080\ \text{kg/m}^3$) veća je od gustoće slatke vode ($\rho \approx 998\ \text{kg/m}^3$), pa težina nadmašuje silu uzgona.
-
-Zatim se u vodu polako dodaje obična kuhinjska sol uz pažljivo miješanje. Već nakon nekoliko žličica soli (otprilike $4$ žličice po decilitru vode), gustoća otopine dovoljno raste da jaje počne plutati. Pri određenoj koncentraciji jaje se zadržava u sredini čaše, ni potonulo ni potpuno isplivalo — što označava granično stanje u kojem je gustoća otopine točno jednaka prosječnoj gustoći jaja.
-
-**Veza s teorijom:** ovaj pokus ilustrira Arhimedov zakon — tijelo pliva ako i samo ako je njegova prosječna gustoća manja od gustoće okolnog fluida. Postupno povećanje gustoće fluida mijenja istisnuti volumen potreban za ravnotežu i u jednom trenutku omogućuje plivanje tijela koje je u manje gustom fluidu tonulo. Isti princip stoji iza praćenja gaza brodova pri prelasku iz slatke vode u slanu i pri ulasku u luku.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

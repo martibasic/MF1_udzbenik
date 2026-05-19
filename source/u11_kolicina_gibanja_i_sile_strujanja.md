@@ -235,18 +235,6 @@ Sile $\sum\vec{F}$ uključuju: tlakove na presjecima ($\vec{F}_p$), težinu flui
 
 To je razlog zašto se u strojarstvu <span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> ne čita kao još jedno poglavlje o formulama, nego kao prvi ozbiljan prijelaz s hidraulike na konstrukcijsko opterećenje. Na tlačnoj strani crpke koljeno i prije vodenog udara već nosi stalni bočni potisak. Na kalibracijskoj mlaznici vijci ne nose "protok", nego razliku tlakne sile i impulsnog skoka. U razdjelnim glavama rashladne vode ili protupožarnim granama geometrija izlaza izravno određuje stalnu silu koju temelj ili konzola moraju preuzimati satima rada.
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Mlaz vode na lagani karton</p>
-
-Za pokus su potrebni plastična boca s rupicom u dnu, voda i komad debljeg kartona (može poslužiti i poklopac obuće ili istanjeni karton od kartonske kutije). Karton se objesi vodoravno o tanki konop ili se postavi na lagani štapić tako da se može slobodno ljuljati. Boca s vodom postavi se iznad razine kartona tako da mlaz iz rupice udari okomito u njegovu sredinu.
-
-Opaža se: karton se otkloni u smjeru mlaza, a kut otklona ovisi o brzini mlaza (visini vode u boci) i o promjeru rupice. Pri zatvaranju rupice mlaz prestaje, sila prestaje djelovati, a karton se vraća u prvobitan položaj.
-
-Mjerenjem otklona, težine kartona i geometrije može se procijeniti sila mlaza i usporediti s teorijskim izračunom $F = \rho Q v = \rho A v^2$.
-
-**Veza s teorijom:** ovaj pokus izravno pokazuje da fluid koji mijenja smjer brzine pri udaru u plohu prenosi silu na tu plohu. Iznos sile ovisi o protoku mase i o promjeni brzine — što je sažeto u jednadžbi količine gibanja $\sum F = \dot{m}\Delta v$ koja se izvodi u ovom poglavlju.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

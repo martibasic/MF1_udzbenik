@@ -243,16 +243,6 @@ Za zakrivljenu slobodnu površinu vrijedi i još jedna korisna razlika: za kaplj
 Zakrivljena površina "stisne" fluid iznutra jer je površinska napetost zapregnuta po cijelom obodu i mora balansirati tlačnu silu. Što je manji promjer, to je veća zakrivljenost i veći skok tlaka. Faktor 4 za kapljicu nastaje jer sfera ima jednu slobodnu površinu i polumjer $r = d/2$; faktor 8 za mjehur dolazi od dvije paralelne slobodne površine. Ovaj skok tlaka ključan je za kavitaciju u pumpama: čim lokalni tlak padne ispod tlaka potrebnog da zatvori mikrokapljicu, nastaje kavitacijski mjehur.
 :::
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Kapilarni uspon u papirnatom ručniku i šećernoj kocki</p>
-
-Pripremaju se dvije plitke posude. U prvu se ulijeva voda s nekoliko kapljica boje za hranu (jača vidljivost), a u drugu uobičajeno jestivo ulje. Rola papirnatog ručnika otkida se i sa svake od posuda istovremeno se uranja po jedan vrh trake u tekućinu, držeći traku okomito. Promatra se kako tekućina napreduje kroz vlakna trake — voda znatno brže i više, ulje sporije i niže.
-
-Pokus se može proširiti uranjanjem jedne strane šećerne kocke u vodu s bojom: voda kapilarno prožima kocku iz unutrašnjosti dok cijela kocka ne dobije boju.
-
-**Veza s teorijom:** Vrlo tanke pore i kapilare u papirnatim vlaknima i šećernoj kocki djeluju kao mreža kapilarnih cijevi promjera $10$ do $100$ mikrometara. Iz formule $h = 4\sigma\cos\theta/(\rho g d)$ vidi se da kapilarni uspon raste s površinskom napetosti i kosinusom kontaktnog kuta — voda na celulozi ima oboje povoljno (visoka $\sigma$, mali $\theta$), dok ulje na celulozi ima oba lošije, pa je uspon manji. Isti je mehanizam odgovoran za uzlaznu vlagu u zidovima neizoliranih prizemlja zgrada.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

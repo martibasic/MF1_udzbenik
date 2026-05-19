@@ -256,16 +256,6 @@ Najčešća metodička greška nastaje kad se svi gubici tretiraju kao jedna mut
 
 Između dvaju promatranih presjeka pad energijske linije jednak je upravo ukupnom gubitku $h_w$. To je najkraći način da se vizualno vidi koliko je energije izgubljeno i koliko je još ostalo na raspolaganju sustavu.
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Pražnjenje boce kroz različite slamke</p>
-
-Tri slamke različite duljine (na primjer $5\ \text{cm}$, $15\ \text{cm}$ i $30\ \text{cm}$, dobivene rezanjem standardne slamke za piće) pripremaju se za pokus. Jedna plastična boca napuni se vodom do oznake. U boci se izbuši rupa nešto manjeg promjera od slamke i u nju se čvrsto utisne slamka. Pokus se ponavlja s različitim slamkama: mjeri se vrijeme potrebno da iz boce isteče određena količina vode.
-
-Dulja slamka uvijek daje sporije pražnjenje, čak i ako je njezin unutarnji promjer jednak kao kod kraće slamke. Pokus se može pojačati tako da se na slamku nadoda koljeno (savijanje slamke pod $90^\circ$) — pražnjenje postaje još sporije zbog dodatnog lokalnog gubitka.
-
-**Veza s teorijom:** linijski gubitak energije proporcionalan je duljini cijevi prema Darcy-Weisbachovoj formuli $h_l = \lambda(L/D)(v^2/2g)$, dok lokalni gubitak na koljenu dodaje član $\xi v^2/(2g)$. Oba se mehanizma manifestiraju kao smanjeni protok pri istoj raspoloživoj visinskoj razlici, što ovaj pokus kvalitativno pokazuje uz vrlo jednostavna sredstva.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

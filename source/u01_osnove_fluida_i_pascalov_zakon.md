@@ -251,16 +251,6 @@ Razlomci $A_2/A_1$ i $A_1/A_2$ se pokrate bez obzira na veličinu površina, pa 
 što zatvara cjelovito fizikalno značenje Pascalova zakona: hidraulični sustav mijenja omjer sile i pomaka zato što isti porast tlaka djeluje na različitim površinama, ali ukupna mehanička energija ne nastaje iz ničega.
 :::
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Hidraulika s dvije medicinske špricice</p>
-
-Dvije medicinske špricice različitog volumena (na primjer od $5\ \text{mL}$ i $20\ \text{mL}$, dostupne u svakoj ljekarni) spajaju se kratkom plastičnom cijevkom (može poslužiti i transparentno crijevo za akvarij). Sustav se prepunjava vodom tako da ne ostane zraka unutar cijevke ni klipova. Klip manje špricice pritisne se prema dolje umjerenom silom prsta; promatra se istiskivanje klipa veće špricice.
-
-Kvalitativno se opaža da je sila kojom velika špricica gura prst znatno veća od one koju ruka razvija na maloj špricici, dok je pomak velikog klipa proporcionalno manji od pomaka malog. Pokus se može ponoviti s različitim parovima špricica kako bi se uočilo da je pojačanje sile vezano isključivo uz omjer površina, neovisno o iznosu sile.
-
-**Veza s teorijom:** ovaj jednostavni sustav je hidraulična preša u malome. Isti tlak djeluje na obje klipove, a različite površine daju različite sile uz obrnuto proporcionalan odnos pomaka — što je upravo srž Pascalova zakona uz očuvanje volumena nestlačivoga fluida.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

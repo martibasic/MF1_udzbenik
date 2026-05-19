@@ -291,16 +291,6 @@ To nije formalnost. Najčešći kvar u Bernoulliju nastaje onda kada se vide tla
 
 Riješeni primjeri i zadaci za vježbu zato samo redom pokazuju kako isti Bernoullijev zapis čita pad statičkog tlaka u suženju, brzinu slobodnog mlaza, tlak u sifonu i Pitotovo lokalno mjerenje.
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Dva lista papira i strujanje zraka</p>
-
-Pokus zahtijeva dva obična lista papira formata A4. Listovi se drže okomito, paralelno, na udaljenosti od oko $4\ \text{cm}$, držeći ih za gornje rubove. Intuicija kaže da bi puhanje zraka u prostor između listova trebalo razdvojiti listove jer zrak "gura" papir izvana. Stvarno opažanje je upravo suprotno: listovi se primaknu jedan drugome i nakon malo puhanja čak se dotaknu.
-
-Drugi varijant pokusa: jedan list papira drži se vodoravno za jedan kraj, ispred lica. Drugi se kraj objesi prema dolje. Puhanjem preko gornje plohe papira opaža se da papir poskoči prema gore. Ovo pokazuje da brzo strujanje zraka stvara područje nižeg tlaka u odnosu na mirniji zrak ispod.
-
-**Veza s teorijom:** Bernoullijeva jednadžba kaže da povećanje brzine fluida prati pad statičkog tlaka uz konstantnu ukupnu energiju (uz uvjete vrijedjenja). Kad puhanjem stvaramo brzo strujanje između listova, pritisak između njih pada ispod atmosferskog, a viši okolni tlak izvana primiče listove. Isti je princip srž rada kobilice broda, krila zrakoplova i Pitotove sonde.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

@@ -242,16 +242,6 @@ Primjeri niže samo redom variraju tri osnovne situacije: suženje ili difuzor, 
 
 Ako taj redoslijed nije zatvoren, gotovo je sigurno da će zadatak biti krivo pojednostavljen.
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Brzina mlaza na vrhu vrtnog šmrka</p>
-
-Za pokus su potrebni vrtni šmrk priključen na slavinu, prazan PET-bocu ili sličnu posudu i stopericu (ili mobilna aplikacija). Prvo se mjeri vrijeme potrebno za punjenje boce poznatog volumena pri otvorenoj slavini i neograničenom izlazu šmrka — odatle se izračuna volumenski protok $Q = V/t$. Zatim se izlaz šmrka djelomično sužava palcem ili ručno tako da se otvor smanji na otprilike trećinu, te se isti pokus ponovi.
-
-Opaža se: pri suženju mlaz postaje vidno brži (manji presjek, jednaki protok), a domet vodoravno bačenog mlaza primjetno se povećava. Pri tom se može izračunati kvalitativni odnos brzina: ako se površina smanji na trećinu, brzina poraste tri puta.
-
-**Veza s teorijom:** ovo je izravna primjena jednadžbe kontinuiteta $A_1 v_1 = A_2 v_2$ za nestlačivi fluid. Volumenski protok ostaje konstantan duž šmrka, pa pri sužavanju presjeka brzina mora proporcionalno rasti. Isti princip stoji iza sapnica, mlazne propulzije i Venturijeve cijevi.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

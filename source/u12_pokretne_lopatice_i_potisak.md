@@ -254,16 +254,6 @@ Isti zakon zato vodi i Peltonov rotor i potisni sustav: u prvom slučaju fluid g
 
 To je pravi strojarski smisao <span class="mf1-ch-ref"><span class="mf1-ch-code">U12</span><span class="mf1-ch-title">Pokretne lopatice i potisak</span></span>. Na Peltonovu kolu loš odabir obodne brzine odmah smanjuje moment i snagu generatora. Na vodilici ili ispitnoj glavi pogrešno pročitan izlazni vektor znači pogrešnu reakciju nosača. Na vodomlaznome pogonu, mlaznoj platformi ili servisnoj mlaznici za hidrodinamsko čišćenje ista matematika pokazuje hoće li sustav ostati na mjestu, ubrzati ili ostati bez rezerve potiska.
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Papirna vjetrenjača i mlaz iz slamke</p>
-
-Iz komada papira izreže se i savije jednostavna četverokraka vjetrenjača (osnovni dječji model — kvadratni list papira presjeka približno $10\ \text{cm}$, izrezan po dijagonalama gotovo do središta, krakovi savijeni i pričvršćeni pribadačom uz štapić). Slamkom za piće puše se zrak na lopatice vjetrenjače pod različitim kutovima i s različite udaljenosti.
-
-Opaža se: pri puhanju paralelno s osi vjetrenjače rotacija je sporija; pri puhanju pod određenim kutom (oko $30$ do $45^\circ$ od osi) rotacija postaje znatno brža. Pri puhanju u smjeru ravno suprotnom od skretanja lopatica vjetrenjača usporava ili miruje.
-
-**Veza s teorijom:** rotacija vjetrenjače proizlazi iz tangencijalne komponente sile na lopaticu, koja prema zakonu količine gibanja ovisi o razlici tangencijalnih brzina ulazne i izlazne struje. Kutom puhanja zapravo se mijenja kut između relativne i obodne brzine, što izravno utječe na snagu predanu lopatici. Iz iste se logike izvode dijagrami trokuta brzina u Peltonovoj i drugim turbinama.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

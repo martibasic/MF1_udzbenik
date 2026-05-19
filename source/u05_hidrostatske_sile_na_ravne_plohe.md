@@ -149,16 +149,6 @@ Centar tlaka je uvijek dublje od težišta plohe ($y_{CP} > h_C$) jer raspodjela
 
 Upravo taj dodatni član pokazuje puno fizikalno značenje centra tlaka: budući da tlak raste s dubinom, donji dijelovi plohe sudjeluju jače u rezultanti nego gornji, pa se hvatište sile uvijek nalazi dublje od težišta same plohe.
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Mlazovi iz boce s otvorima na različitim visinama</p>
-
-Plastična boca dimenzija približno $1{,}5\ \text{L}$ pripremi se tako da se na bočnoj stijenki probuše tri okomito poredana otvora istoga promjera (najlakše šivaćom iglom ili tankim čavlićem), na otprilike $5\ \text{cm}$, $10\ \text{cm}$ i $15\ \text{cm}$ od dna. Otvori se začepe prstom ili ljepljivom trakom dok se boca puni vodom do vrha. Boca se zatim postavlja iznad sudopera, otvori se istovremeno otpuste i promatra se domet mlaza iz svakog otvora.
-
-Najveći domet daje donji otvor jer je u njegovoj točci pritisak najveći; gornji otvor jedva ima nadtlaka jer se nalazi blizu slobodne površine, pa mlaz ide gotovo okomito prema dolje. Mlaz iz srednjeg otvora pada negdje između.
-
-**Veza s teorijom:** Tlak na pojedinoj točki plohe raste linearno s dubinom prema $p = \rho g h$. Brzina istjecanja kroz otvor proporcionalna je $\sqrt{h}$ (Torricellijev zakon, koji izlazi iz Bernoullijeve jednadžbe u poglavlju U09), a horizontalni domet mlaza ovisi i o pripadnoj visini iznad tla. Pri integriranju tlaka po cijeloj plohi različite dubine daju različite doprinose ukupnoj sili — upravo zato hvatište rezultantne sile na okomitoj plohi nije u njezinu težištu nego ispod njega.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

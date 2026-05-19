@@ -130,16 +130,6 @@ $$
 Za vertikalnu komponentu $dF_V = p\,dA\sin\varphi = p\,dA_y$ gdje je $dA_y$ horizontalna projekcija. Umjesto integriranja po kutovima, koristimo ravnotežu imaginarnog fluidnog stupca iznad zakrivljene plohe: vertikalna sila koju ploha osjeća jednaka je težini tog stupca, pa $F_V = \rho g V^*$.
 :::
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Sila na poklopac uronjen u vodu</p>
-
-Plastični ili limeni poklopac (od kave, marmelade ili sličnog proizvoda) pažljivo se uroni u veću posudu s vodom (umivaonik ili kantu). Poklopac se drži konkavnom stranom prema gore i polako spušta okomito, pazeći da unutar njega ne ostane uhvaćen zrak. Prsti se postavljaju ispod ruba poklopca i polako počinju gurati prema gore — osjeća se znatan otpor koji raste s dubinom uranjanja.
-
-Eksperiment se može varirati i okrenutim položajem poklopca (konkavnom stranom prema dolje), pri čemu se zrak hvata ispod poklopca i daje dodatnu silu uzgona prema gore. Ako se zrak ispusti, sila se značajno smanjuje.
-
-**Veza s teorijom:** rezultantna sila na zakrivljenu plohu razlaže se na horizontalnu komponentu (koja iščezava zbog simetrije poklopca) i vertikalnu komponentu koja je jednaka težini imaginarnog volumena fluida iznad zakrivljene plohe ili težini stvarno istisnutog volumena, ovisno o orijentaciji. Ovisnost o dubini čini ovu silu predvidljivom i mjerljivom uz osnovne podatke o geometriji.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

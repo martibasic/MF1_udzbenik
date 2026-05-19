@@ -186,18 +186,6 @@ $$p_{vak} = p_{atm} - p_{aps} = -p_{man} \qquad (p_{man}<0)$$
 
 Ako je $p_{man} < 0$, to ne znači da je tlak "negativan" u apsolutnom smislu, nego da je sustav pod podtlakom u odnosu na okolinu.
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Improvizirani U-manometar od slamke</p>
-
-Prozirna plastična slamka savija se u oblik slova U tako da oba kraja stoje okomito (može se učvrstiti ljepljivom trakom na stol ili karton). U U-cijev se ulijeva voda s nekoliko kapljica boje za hranu dok se obje strane ne ispune do polovice. Provjerava se da su razine u obje strane jednake (uvjet hidrostatičke ravnoteže pri istom tlaku iznad obje slobodne površine).
-
-Zatim se s vrha jedne strane ulije manja količina jestivog ulja (gustoća približno $920\ \text{kg/m}^3$). Razine u dvjema stranama postaju različite — strana s uljem ima višu ukupnu razinu (jer dio stupca nadomješta lakši fluid), ali tlak na dnu cijevi u obje strane mora biti jednak.
-
-Mjerenjem razlika visina i poznavanjem gustoća može se provjeriti hidrostatička jednadžba: razlika hidrostatičkih doprinosa u dvjema stranama mora biti nula.
-
-**Veza s teorijom:** ovo je upravo princip rada svakog manometra s dva fluida različitih gustoća. Pri kvantitativnom mjerenju s preciznim ravnalom moguće je izvesti gustoću jednoga fluida ako je drugi poznat — što je klasična laboratorijska metoda usporedne hidrostatičke ravnoteže.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}

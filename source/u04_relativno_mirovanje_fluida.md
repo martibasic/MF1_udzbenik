@@ -104,16 +104,6 @@ $$
 
 Fizikalno značenje relacije jest neposredno: što je spremnik dulji i što je ubrzanje veće, to je veća razlika razina između krajeva, dok gravitacija $g$ djeluje kao stabilizirajući član koji površinu vraća prema vodoravnom položaju.
 
-::: {.mf1-eksperiment}
-<p class="mf1-box-label">🧪 Pokus kod kuće — Slobodna površina u rotirajućoj posudi</p>
-
-U široku posudu (zdjelu, plastičnu kantu ili veću čašu) ulijeva se voda do otprilike polovine visine. Posuda se postavlja na okretnu podlogu — može biti gramofonska ploča, okretni kuhinjski tanjur ili improvizirana ploča pričvršćena na vrtljivi stolac. Nakon nekoliko sekundi rotacije konstantnom brzinom voda se "smiri" u rotirajućem okviru i poprima karakterističan oblik slobodne površine: razina je niža u središtu posude, a viša pri stijenki.
-
-Pojačanjem brzine vrtnje opaža se da paraboloidno udubljenje postaje strmije; pri vrlo visokim brzinama središnji dio dna može i potpuno ogoljeti, dok se sva tekućina nakuplja uz vanjsku stijenku. Eksperiment se može fotografirati i kasnije izmjeriti visinske razlike kako bi se procijenila kutna brzina.
-
-**Veza s teorijom:** opaženi oblik je upravo paraboloid revolucije iz izvoda u ovom poglavlju, $h(r) = h_C + \omega^2 r^2/(2g)$. Visinska razlika između središta i stijenke izravno daje kutnu brzinu rotacije ako su polumjer posude i gravitacijska konstanta poznati — isti je princip ugrađen u rotacijski viskozimetar i u neke jednostavne mjerne uređaje za kutnu brzinu.
-:::
-
 ## Riješeni primjeri
 
 ::: {.mf1-we}
