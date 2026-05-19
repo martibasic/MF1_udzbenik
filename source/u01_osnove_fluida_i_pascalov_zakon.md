@@ -151,6 +151,21 @@ Pascalov zakon ne stvara energiju – on mijenja omjer sile i pomaka. Isti tlak 
 Ideja da se promjena tlaka u zatvorenom fluidu prenosi *istovremeno* na sve točke je upravo razlog zašto u CFD-u za nestlačivo strujanje tlak nije lokalna veličina, nego rješenje **eliptičke Poissonove jednadžbe** koja veže cijelu domenu u jednom koraku iteracije. Solveri tipa `simpleFoam` i `pisoFoam` (OpenFOAM) ili pressure-based rješavač u Fluentu računaju polje tlaka točno tako — globalno, ne marš-po-vremenu.
 :::
 
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">📈 Interaktivni prikaz — Hidraulična preša</p>
+
+Interaktivni prikaz omogućuje mijenjanje promjera ulaznog i izlaznog klipa te sile na ulazu uz neposredno praćenje izlazne sile i pripadnog omjera pomaka klipova. Vizualizacija jasno razdvaja pojačanje sile od smanjenja pomaka koje slijedi iz očuvanja istisnutog volumena.
+
+<div class="mf1-interaktivno-akcija">
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u01_hidraulicna_presa.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u01_hidraulicna_presa.svg" alt="QR kod za interaktivni prikaz hidraulične preše"/>
+</div>
+
+<div class="mf1-interaktivno-pitanja">
+**Pitanja za samostalno istraživanje:** (a) Što se događa s pojačanjem sile kada se $D_1$ približi $D_2$? (b) Postoji li teorijska granica omjera $D_2/D_1$ koju propisuje sam Pascalov zakon? (c) Vrijedi li bilanca rada $F_1 s_1 = F_2 s_2$ za sve odabire parametara?
+</div>
+:::
+
 Pojačanje sile ne znači pojačanje rada niotkuda. Ako zanemarimo gubitke i stlačivost, istisnuti volumen ostaje isti, pa je
 
 $$

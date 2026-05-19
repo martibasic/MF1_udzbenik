@@ -52,9 +52,38 @@ Quarto projekta (vidi `scripts/postavi_jupyterlite.md`).
 
 | Oznaka | Tema | Poglavlje |
 |---|---|---|
+| `u01_hidraulicna_presa.ipynb` | Hidraulična preša — pojačanje sile i pomak klipa | U01 |
+| `u02_kapilarni_uspon.ipynb` | Kapilarni uspon u tankoj cijevi | U02 |
+| `u03_diferencijalni_manometar.ipynb` | Diferencijalni manometar s dva fluida | U03 |
+| `u04_paraboloidna_povrsina.ipynb` | Paraboloidna slobodna površina u rotirajućem spremniku | U04 |
+| `u05_sila_na_ravnu_plohu.ipynb` | Sila i hvatište na pravokutnu plohu pod vodom | U05 |
+| `u06_zakrivljena_ploha.ipynb` | Sila na zakrivljenu plohu — četvrtina kruga | U06 |
+| `u07_gaz_plivajuceg_tijela.ipynb` | Gaz plivajućeg tijela | U07 |
+| `u08_kontinuitet_suzenje.ipynb` | Kontinuitet u suženju cijevi | U08 |
 | `u09_venturi.ipynb` | Venturijeva cijev — utjecaj geometrije na tlak i brzinu | U09 |
+| `u10_moody_dijagram.ipynb` | Moodyjev dijagram — koeficijent trenja | U10 |
+| `u11_sila_na_koljeno.ipynb` | Sila na koljeno — promjena smjera strujanja | U11 |
+| `u12_pelton_lopatica.ipynb` | Trokuti brzina i snaga na Peltonovoj lopatici | U12 |
+| `u13_paralelne_grane.ipynb` | Paralelne grane cjevovoda — raspodjela protoka | U13 |
 
-Daljnji notebooci dodaju se prema obrascu iz `u09_venturi.ipynb`.
+## Dodavanje novog notebooka
+
+Novi se notebooci dodaju u rječnik `NOTEBOOKS` u skripti
+`scripts/generiraj_notebooke.py`. Nakon dodavanja pokreće se:
+
+```
+python scripts/generiraj_notebooke.py
+```
+
+Veze se dopunjuju u rječniku `VEZE` u `scripts/generiraj_qr.py`,
+nakon čega se pokreće:
+
+```
+python scripts/generiraj_qr.py
+```
+
+Završno se u odgovarajućoj `.md` datoteci u mapi `source/` dodaje
+okvir `.mf1-interaktivno` uz središnju jednadžbu poglavlja.
 
 ## QR kodovi
 

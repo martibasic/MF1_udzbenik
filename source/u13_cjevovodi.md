@@ -237,6 +237,21 @@ Zato se u paraleli ne izjednačava protok nego se protok sam raspodjeljuje tako 
 U paralelnoj mreži postoji jedan "budžet" energije između dvaju čvorova: sva grana mora trošiti taj isti iznos $h_w$. Grana s manjim otporom (veći promjer, manja hrapavost, manji lokalni gubici) može pri tom padu energije propustiti više tekućine. Zato je dodavanje nove grane paralelno uvijek smanjenje ukupnog otpora mreže — poput otpora u paralelnoj el. mreži. U serijskom spoju vrijedi suprotno: svaka nova dionica dodaje otpor, a protok ostaje isti kroz sve. Tu analogiju s el. kolom vrijedi imati u glavi pri svakom proračunu mreže.
 :::
 
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">📈 Interaktivni prikaz — Paralelne grane cjevovoda</p>
+
+Interaktivni prikaz omogućuje mijenjanje duljina i promjera dvije paralelne grane te ukupnog protoka uz neposredno praćenje raspodjele protoka po granama i zajedničkog pada energije. Vizualno se odmah razabire kako geometrija određuje hidraulički udjel svake grane.
+
+<div class="mf1-interaktivno-akcija">
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u13_paralelne_grane.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u13_paralelne_grane.svg" alt="QR kod za interaktivni prikaz paralelnih grana cjevovoda"/>
+</div>
+
+<div class="mf1-interaktivno-pitanja">
+**Pitanja za samostalno istraživanje:** (a) Zašto kod identičnih grana raspodjela protoka iznosi 50:50 neovisno o ukupnom protoku? (b) Pri $L_1 = L_2$ ali $D_2 = 2 D_1$, kakva je raspodjela i koja je eksponentna ovisnost o omjeru promjera? (c) Što se događa s ukupnim padom energije pri dodavanju treće paralelne grane uz isti $Q$?
+</div>
+:::
+
 To je glavni fizikalni smisao mreže: u seriji svi dijelovi nose isti protok, a u paraleli sve grane "plaćaju" isti pad ukupne energije između zajedničkih čvorova. Zbog toga svaka promjena promjera, hrapavosti, otvora ventila ili nove grane odmah mijenja radnu točku cijeloga sustava.
 
 U <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span> već je bilo jasno da realni fluid troši energiju. U <span class="mf1-ch-ref"><span class="mf1-ch-code">U13</span><span class="mf1-ch-title">Cjevovodi</span></span> ta se slika širi na cijeli sustav dionica i čvorova, pa redoslijed modeliranja mora ostati stabilan: najprije mreža i dionice, zatim brzina i Reynoldsov broj, pa tek onda $\lambda$ i ukupni gubitci.

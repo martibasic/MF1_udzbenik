@@ -200,6 +200,21 @@ $$
 Formula za $h$ sadržava sva četiri aktera kapilarnosti: površinska napetost $\sigma$ "vuče" tekućinu gore, $\cos\theta$ smanjuje tu silu za parcijalno kvašenje (za $\theta > 90^\circ$ ona okrene smjer i tekućina pada), a gustoća $\rho$ i gravitacija $g$ pružaju otpor težine stupca. Promjer $d$ stoji u nazivniku: prepoloviti promjer znači udvostručiti uspon. Zato je kapilarnost odlučujuća u tankim porama betona i opeke, ali zanemariva u cijevima centimetarskog ili većeg promjera.
 :::
 
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">📈 Interaktivni prikaz — Kapilarni uspon</p>
+
+Interaktivni prikaz omogućuje mijenjanje površinske napetosti $\sigma$, kontaktnog kuta $\theta$ i promjera kapilare $d$ uz neposredno praćenje ravnotežne visine $h$. Krivulja $h(d)$ pokazuje karakterističnu ovisnost u logaritamskim koordinatama.
+
+<div class="mf1-interaktivno-akcija">
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u02_kapilarni_uspon.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u02_kapilarni_uspon.svg" alt="QR kod za interaktivni prikaz kapilarnog uspona"/>
+</div>
+
+<div class="mf1-interaktivno-pitanja">
+**Pitanja za samostalno istraživanje:** (a) Što se događa s usponom pri $\theta = 90°$ i pri $\theta > 90°$? (b) Koji eksponent ovisnosti $h \propto d^{?}$ slijedi iz formule? (c) Zašto je kapilarnost značajna u porama betona, ali zanemariva u cijevima centimetarskog promjera?
+</div>
+:::
+
 pa su male promjene promjera cijevi ili kontaktnog kuta odmah vidljive na visini stupca. Kad je $\theta > 90^\circ$, izraz daje negativan $h$, što znači da se ne javlja kapilarni uspon nego kapilarni pad.
 
 Za zakrivljenu slobodnu površinu vrijedi i još jedna korisna razlika: za kapljicu s jednom granicom faza tlak skoka je $\Delta p = 4\sigma/d$, dok je za sapunasti mjehur s dvjema slobodnim površinama $\Delta p = 8\sigma/d$.

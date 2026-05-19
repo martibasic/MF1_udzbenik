@@ -34,6 +34,21 @@ Vertikalna komponenta sile na zakrivljenu plohu jednaka je težini imaginarnog v
 
 gdje je $V^*$ volumen fluida između zakrivljene površine i slobodne površine.
 
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">📈 Interaktivni prikaz — Sila na zakrivljenu plohu</p>
+
+Interaktivni prikaz omogućuje mijenjanje polumjera krivulje, dubine vrha i širine plohe (četvrtina kruga uronjena u vodu) uz neposredno praćenje horizontalne i vertikalne komponente sile te rezultante s pripadnim kutom. Vektori sila pomažu intuitivno razumijevanje smjera djelovanja.
+
+<div class="mf1-interaktivno-akcija">
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u06_zakrivljena_ploha.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u06_zakrivljena_ploha.svg" alt="QR kod za interaktivni prikaz sile na zakrivljenu plohu"/>
+</div>
+
+<div class="mf1-interaktivno-pitanja">
+**Pitanja za samostalno istraživanje:** (a) Kako se omjer $F_V/F_H$ mijenja kada dubina vrha $h_t$ teži k nuli? (b) Što se događa s istim omjerom pri velikim dubinama ($h_t \gg R$)? (c) Pri kojoj kombinaciji $R$ i $h_t$ rezultanta sile prolazi kroz središte krivulje?
+</div>
+:::
+
 Najvažniji detalj nije sama formula, nego znak komponente $F_V$. Ako je zamišljeni volumen ispod slobodne površine, vertikalna komponenta tipično djeluje prema gore. Ako je dio tog volumena iznad slobodne površine, pojavljuje se podtlačni doprinos i $F_V$ može djelovati prema dolje. Matematika time razdvaja ono što geometrija na prvi pogled miješa: projekcija daje vodoravnu sliku opterećenja, a zamišljeni volumen njegov vertikalni smisao.
 
 ## Matematički izvod

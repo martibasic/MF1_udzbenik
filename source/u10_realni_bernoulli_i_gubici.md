@@ -140,6 +140,21 @@ Darcy-Weisbachova formula kaže da gubitak energije na ravnoj dionici raste prop
 Gubici energije u realnom toku — disipacija u turbulentnim vrtlozima — su upravo razlog zbog kojeg postoje **turbulentni modeli** u CFD-u. Umjesto da rješava svaki sitni vrtlog (skupo i u praksi nemoguće za inženjerske probleme), solver koristi *modele zatvaranja*: **k-ε**, **k-ω SST**, **Spalart-Allmaras**. Ovi modeli su zapravo numerička parafraza Darcy-Weisbachovog $\lambda$ — eksperimentalna kalibracija koja kaže "koliko energije turbulencija pojede po jedinici volumena i vremena".
 :::
 
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">📈 Interaktivni prikaz — Moodyjev dijagram</p>
+
+Interaktivni prikaz omogućuje mijenjanje Reynoldsovog broja i relativne hrapavosti cijevi uz neposredno praćenje pripadnog koeficijenta trenja $\lambda$ na klasičnom Moodyjevu dijagramu. Krivulje za nekoliko vrijednosti $\varepsilon/D$ olakšavaju usporedbu i izbor odgovarajućeg radnog područja.
+
+<div class="mf1-interaktivno-akcija">
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u10_moody_dijagram.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u10_moody_dijagram.svg" alt="QR kod za interaktivni prikaz Moodyjevog dijagrama"/>
+</div>
+
+<div class="mf1-interaktivno-pitanja">
+**Pitanja za samostalno istraživanje:** (a) U kojem se području Reynoldsov broj više ne utječe na $\lambda$ i što to fizikalno znači? (b) Kako se $\lambda$ ponaša s porastom $Re$ kod hidraulički gladkih cijevi? (c) Za $\lambda \approx 0{,}025$, koje kombinacije $Re$ i $\varepsilon/D$ ga daju i što govore o različitim radnim režimima?
+</div>
+:::
+
 a lokalni gubitak
 
 $$

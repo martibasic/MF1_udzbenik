@@ -90,6 +90,21 @@ $$
 Integracija tlaka po plohi $F = \int_A p\,dA$ je upravo operacija koju CFD post-procesor radi nakon što solver završi: na svakoj ćeliji uz zid zna se lokalni tlak, a zbroj $\sum_i p_i \, A_i$ po svim ćelijama jednog zida daje silu. U `ParaView`-u to je filter *Integrate Variables* na *Surface*, u `OpenFOAM`-u funkcionalan objekt `forces` izračuna $F$ i moment automatski u svakom vremenskom koraku. Mreža uz zid mora biti dovoljno fina da $p$ vjerno reproducira raspodjelu.
 :::
 
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">📈 Interaktivni prikaz — Sila na pravokutnu plohu</p>
+
+Interaktivni prikaz omogućuje mijenjanje dubine gornjeg ruba plohe, njezine visine i kuta nagiba prema vertikali uz neposredno praćenje ukupne sile, dubine težišta i položaja hvatišta. Dijagram tlaka uz plohu vizualizira linearni rast s dubinom.
+
+<div class="mf1-interaktivno-akcija">
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u05_sila_na_ravnu_plohu.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u05_sila_na_ravnu_plohu.svg" alt="QR kod za interaktivni prikaz sile na ravnu plohu"/>
+</div>
+
+<div class="mf1-interaktivno-pitanja">
+**Pitanja za samostalno istraživanje:** (a) Kako se razlika između hvatišta i težišta plohe mijenja s porastom dubine? (b) Pri istoj površini i istoj dubini težišta, daje li okomita ploha jednaku silu kao nagnuta? (c) Zašto sila raste više od dva puta kada se visina plohe udvostruči uz konstantnu $h_t$?
+</div>
+:::
+
 To je prvi temeljni rezultat: sila ovisi o površini plohe i dubini njezina težišta, a ne o dubini nekoga slučajno odabranog ruba. Zbog toga potpuno uronjena ravna ploha ne dobiva veću rezultantu samo zato što je nagnuta ili zakrenuta, ako su joj površina i dubina težišta ostale iste. Drugi temeljni rezultat odnosi se na položaj centra tlaka. Za koordinatu $y$ mjerenu od slobodne površine prema dolje, moment rezultante mora biti jednak momentu raspodijeljenoga tlaka:
 
 $$

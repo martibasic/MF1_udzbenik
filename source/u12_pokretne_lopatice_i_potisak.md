@@ -209,6 +209,21 @@ pa se odmah vidi da korisni rad ne daje bilo koja komponenta brzine, nego promje
 Moment količine gibanja na rotoru i razdvajanje apsolutne i relativne brzine ($\vec{c} = \vec{w} + \vec{u}$) je jezgra **rotacijskog CFD-a** za pumpe, ventilatore, kompresore i turbine. **MRF metoda** (Multiple Reference Frame) rješava Navier-Stokesa u rotirajućem sustavu — gleda fluid očima lopatice, kao i ti u izvodu — i dodaje Coriolisovu i centrifugalnu silu kao izvorne članove. Za nestacionarne fenomene (rotor-stator interakcija, pulsacije) koristi se **sliding mesh**: rotor mreža fizički kliže uz statorsku.
 :::
 
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">📈 Interaktivni prikaz — Trokuti brzina i snaga na Peltonovoj lopatici</p>
+
+Interaktivni prikaz omogućuje mijenjanje apsolutne brzine mlaza, obodne brzine lopatice i izlaznog kuta uz neposredno praćenje trokuta brzina i krivulje snage. Optimalna obodna brzina i pripadna maksimalna snaga jasno se očituju na grafu.
+
+<div class="mf1-interaktivno-akcija">
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u12_pelton_lopatica.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u12_pelton_lopatica.svg" alt="QR kod za interaktivni prikaz Peltonove lopatice"/>
+</div>
+
+<div class="mf1-interaktivno-pitanja">
+**Pitanja za samostalno istraživanje:** (a) Zašto maksimalna snaga pada točno na $u = c_1/2$ neovisno o izlaznom kutu? (b) Kakva je teorijska maksimalna snaga pri $\beta_2 = 180°$ i zašto stvarne lopatice imaju $\beta_2 \approx 165°$? (c) Pri $u = 0$, kolika je snaga predana rotoru iako sila postoji?
+</div>
+:::
+
 Kod potiska se priča obrće. Ako vozilo ili platforma izbacuje mlaz dok je ulazna brzina okolnog fluida u smjeru potiska mala ili zanemariva, iz jednadžbe količine gibanja slijedi
 
 $$

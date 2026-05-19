@@ -40,20 +40,19 @@ COLAB_PREDLOZAK = (
 # Ključ je oznaka prikaza (koristi se kao ime SVG datoteke),
 # vrijednost je ime notebook datoteke u mapi notebooks/.
 VEZE: dict[str, str] = {
+    "u01_hidraulicna_presa": "u01_hidraulicna_presa.ipynb",
+    "u02_kapilarni_uspon": "u02_kapilarni_uspon.ipynb",
+    "u03_diferencijalni_manometar": "u03_diferencijalni_manometar.ipynb",
+    "u04_paraboloidna_povrsina": "u04_paraboloidna_povrsina.ipynb",
+    "u05_sila_na_ravnu_plohu": "u05_sila_na_ravnu_plohu.ipynb",
+    "u06_zakrivljena_ploha": "u06_zakrivljena_ploha.ipynb",
+    "u07_gaz_plivajuceg_tijela": "u07_gaz_plivajuceg_tijela.ipynb",
+    "u08_kontinuitet_suzenje": "u08_kontinuitet_suzenje.ipynb",
     "u09_venturi": "u09_venturi.ipynb",
-    # Buduća poglavlja dodaju se ovdje istim obrascem:
-    # "u01_pascal": "u01_pascal.ipynb",
-    # "u02_kapilarnost": "u02_kapilarnost.ipynb",
-    # "u03_manometar": "u03_manometar.ipynb",
-    # "u04_paraboloid": "u04_paraboloid.ipynb",
-    # "u05_sila_na_plohu": "u05_sila_na_plohu.ipynb",
-    # "u06_zakrivljena_ploha": "u06_zakrivljena_ploha.ipynb",
-    # "u07_gaz_plivajuceg_tijela": "u07_gaz_plivajuceg_tijela.ipynb",
-    # "u08_kontinuitet": "u08_kontinuitet.ipynb",
-    # "u10_moody_dijagram": "u10_moody_dijagram.ipynb",
-    # "u11_sila_na_koljeno": "u11_sila_na_koljeno.ipynb",
-    # "u12_lopatica": "u12_lopatica.ipynb",
-    # "u13_paralelne_grane": "u13_paralelne_grane.ipynb",
+    "u10_moody_dijagram": "u10_moody_dijagram.ipynb",
+    "u11_sila_na_koljeno": "u11_sila_na_koljeno.ipynb",
+    "u12_pelton_lopatica": "u12_pelton_lopatica.ipynb",
+    "u13_paralelne_grane": "u13_paralelne_grane.ipynb",
 }
 
 
