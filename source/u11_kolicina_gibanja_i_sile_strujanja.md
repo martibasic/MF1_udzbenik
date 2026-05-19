@@ -143,6 +143,12 @@ $$
 \frac{\mathrm{d}}{\mathrm{d}t}\int_{KV} \rho \vec{v}\,\mathrm{d}V + \int_{KP} \rho \vec{v}(\vec{v}\cdot \vec{n})\,\mathrm{d}S = \sum \vec{F}
 $$
 
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Ovo je **temeljna jednadžba svakog CFD solvera**. Razlika u odnosu na MF1: u CFD-u se ne piše jedanput za jedan kontrolni volumen koljena, nego *za svaku ćeliju mreže* (milijune njih), i sve zajedno čine sustav koji se rješava iterativno. To je razlog zašto skraćenica **FVM (Finite Volume Method)** dominira u industrijskom CFD-u — ona je doslovno integralna formulacija Navier-Stokesa na malim kontrolnim volumenima.
+:::
+
 Prvi član predstavlja akumulaciju količine gibanja unutar odabranoga prostora, a drugi konvektivni prijenos količine gibanja kroz granicu volumena. U stacionarnom strujanju prvi član nestaje, pa preostaje ravnoteža između vanjskih sila i neto toka količine gibanja kroz granice kontrolnog volumena.
 
 Ako se ulazni i izlazni presjeci mogu čitati jednodimenzijski, za jedan ulaz i jedan izlaz slijedi pojednostavljenje
@@ -166,6 +172,12 @@ $$
 Tlakni članovi ne smiju se automatski izbaciti iz zapisa. Oni otpadaju tek kad su relevantni presjeci otvoreni atmosferi ili kad se njihova rezultanta doista poništi geometrijom i pravilno odabranim kontrolnim volumenom.
 
 Upravo tu leži puni fizikalni smisao poglavlja. Član $\dot m\vec V$ mjeri koliko struja "brani" svoj smjer i iznos brzine, a tlakni članovi $pA$ pokazuju koliko fluid statički gura zatvorene presjeke. Vijci, prirubnica i nosač ne nose apstraktnu jednadžbu, nego upravo vektorsku razliku tlaknih, težinskih i impulsnih doprinosa.
+
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Rastav sile na tlačnu, težinsku i impulsnu komponentu je upravo ono što CFD radi *automatski* po svakoj **ćeliji uz zid**: za svaki face elementarne mreže solver zna tlak (statički), gradijent brzine (viskozno smično naprezanje) i protok mase kroz face. Sumiranje po cijelom zidu daje silu i moment — to su `forces` / `forceCoeffs` funkcionalni objekti u OpenFOAM-u i *Force/Moment Reports* u Fluentu. Razlika u odnosu na MF1: CFD ne pretpostavlja jednodimenzijski profil brzine, pa dobivena sila u pravilu odstupa od ručnog $\dot m \Delta V$ za par postotaka — i to odstupanje govori koliko je strujanje stvarno 3D.
+:::
 
 ::: {.callout-note}
 ## 📝 Razrada koraka
@@ -514,6 +526,13 @@ U ovom koljenu fluid djeluje na konstrukciju silom od oko $1{,}45\ \text{kN}$, p
 1. Glavna komponenta sile mora ići u smjeru ulaznog tlaka i promjene osi toka, pa je ovdje prirodno veća u osi $x$ nego u osi $y$.
 2. Kad se izlazni presjek suzi, izlazna brzina mora porasti i povećati impulsni doprinos u osi $y$.
 3. Ako se na kraju dobije samo jedna os reakcije, gotovo sigurno je preskočena promjena smjera brzine ili jedan tlak na presjeku.
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">🖥️ Numerička perspektiva</p>
+
+Ovo isto koljeno u CFD-u: 3D mreža iz `snappyHexMesh`-a, *inlet* sa zadanim protokom i tlakom, *outlet* sa zadanim tlakom, izbor k-ω SST turbulentnog modela. Rezultat: puno polje brzine i tlaka unutar koljena (vidiš sekundarno strujanje i odvajanje uz unutarnju stijenku!), a funkcionalni objekt `forces` u svakoj iteraciji ispisuje $\vec{F}_x$, $\vec{F}_y$, $\vec{F}_z$ i moment. Ručni rezultat $1{,}45\ \text{kN}$ obično odstupa za $5\text{--}10\,\%$ od CFD-a — razlika dolazi od ne-jednoliko brzine na presjeku i lokalnih gubitaka koje ručna metoda zanemari.
+:::
+
 :::
 
 ::: {.mf1-ch}
@@ -1381,6 +1400,18 @@ Koljena, račve, mlaznice i prirubnice u pumpnim stanicama ne otkazuju zato što
 Jednadžba količine gibanja u ovom obliku čita stacionarni problem na jasno odabranom kontrolnom volumenu. Ako sustav ulazi u prolazne pojave, vodeni udar ili brzu promjenu protoka, stacionarna bilanca količine gibanja više nije dovoljna za puni opis opterećenja.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> je poglavlje u kojem zakon količine gibanja više nije samo zapis promjene brzine, nego i konstrukcijski odgovor sustava. Kad su povezani sila na ploču, protok, tlak i sila u vijcima, prijelaz prema složenijim koljenima, račvama i prema <span class="mf1-ch-ref"><span class="mf1-ch-code">U12</span><span class="mf1-ch-title">Pokretne lopatice i potisak</span></span> postaje prirodan.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Integralni zakon količine gibanja je **doslovno srce CFD-a**. Cijela disciplina **Computational Fluid Dynamics** je grana primijenjene matematike koja rješava Navier-Stokesove jednadžbe — koje su, u krajnjoj liniji, samo lokalna verzija upravo ove jednadžbe primijenjene na infinitezimalan kontrolni volumen.
+
+**Što numerički alat radi s tim.** Domena se rastavlja na milijune ćelija (kontrolnih volumena). U svakoj se piše bilanca količine gibanja po sve tri osi. Nelinearni član $\rho \vec{v}(\vec{v}\cdot\vec{n})$ pravi posao zanimljivim — on uvodi nestabilnosti, turbulenciju, vrtloge. Diskretizacija konvektivnog člana (npr. *upwind*, *linear*, *vanLeer*) i izbor turbulentnog modela definira točnost i cijenu simulacije.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`simpleFoam`, `pisoFoam`, `pimpleFoam` — sve rješavaju ovaj zakon) · `ANSYS Fluent` · `Star-CCM+` · `SU2` · `COMSOL` — **sve** CFD platforme rješavaju ovu jednadžbu.
+
+> *Nije gradivo MF1. Sila na koljeno koju ovdje računaš ručno za jedan kontrolni volumen, CFD računa za milijun kontrolnih volumena istovremeno — i izlazi mu ista sila, samo s mnogo više detalja o tome kako fluid teče unutra.*
 :::
 
 

@@ -38,6 +38,12 @@ $$p = p_0 + \rho g h$$
 Ovo je radna jednadžba hidrostatike: poznati tlak na slobodnoj površini ($p_0$), a zatim dodamo "težinski porast" $\rho g h$ za svaki metar dubine. Za vodu ($\rho \approx 1000\ \text{kg/m}^3$) svaki metar dubine donosi oko $9{,}81\ \text{kPa}$. Za živu ($\rho \approx 13600\ \text{kg/m}^3$) isti metar daje $\approx 133\ \text{kPa}$. Ista jednadžba vrijedi i unazad: iz poznatog tlaka u jednoj točki računa se tlak na svakoj drugoj visini u istom spojenom fluidu.
 :::
 
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Hidrostatska raspodjela $p = p_0 + \rho g h$ je **inicijalni uvjet tlaka** u gotovo svakoj CFD simulaciji s gravitacijom — prije nego što išta strujom poteče, polje tlaka mora respektirati težinu fluida. U `OpenFOAM`-u se zato uvodi polje $p_{rgh} = p - \rho g h$ (tlak bez hidrostatske komponente), čime se izbjegavaju numeričke nestabilnosti kad je strujanje vrlo sporo, a hidrostatska razlika tlaka velika. Solveri poput `buoyantSimpleFoam` i `interFoam` interno baratati s $p_{rgh}$.
+:::
+
 Ključno je da se ova relacija ne koristi mehanički. Diferencijalna jednadžba ovdje nije samo simboličan zapis, nego sažima jednu vrlo jednostavnu sliku: svaki niži sloj nosi težinu slojeva iznad sebe. Zato prije računa treba odrediti koji je tlak poznat, gdje je referentna točka i kojim se putem prolazi kroz fluid.
 
 ## Matematički izvod
@@ -1061,6 +1067,18 @@ Piezometar uz spremnik, diferencijalni manometar na filtru i tlačni priključak
 Jednostavni zapis $p = p_0 + \rho gh$ vrijedi samo dok je fluid u mirovanju ili u režimu koji se može čitati kao hidrostatika. Čim značajno uđu strujanje, promjena gustoće ili jaka akceleracija sustava, treba prijeći na širi model od čistoga manometarskog puta.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> treba učvrstiti tri stabilne navike: crtanje referentne skice, praćenje promjene tlaka po koracima i razlikovanje tipova tlaka prije nego što račun uopće počne.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Hidrostatska raspodjela tlaka je **baseline kojem se vraća svaka simulacija s gravitacijom**. Diferencijalni zakon $dp/dz = -\rho g$ je zapravo lokalna ravnoteža koja u svakoj točki domene mora vrijediti i izvan i unutar strujanja — zato CFD solver tu komponentu uvijek odvoji od dinamičke.
+
+**Što numerički alat radi s tim.** Polje tlaka se cijepa na hidrostatski dio (poznat unaprijed) i odstupanje $p_{rgh}$ (ono što solver zapravo rješava). Manometarski tlak iz ovog poglavlja izravno postaje *referentni tlak* na ulazu/izlazu (rubni uvjet `totalPressure`, `fixedValue`).
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`p_rgh`, `pRefValue`) · `ANSYS Fluent` (*Operating Pressure*, *Reference Pressure Location*) · `COMSOL` (*Hydrostatic pressure* početni uvjet).
+
+> *Nije gradivo MF1. Manometar koji si naučio čitati ovdje, u CFD-u postaje rubni uvjet.*
 :::
 
 

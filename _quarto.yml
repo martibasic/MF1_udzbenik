@@ -20,6 +20,7 @@ project:
     - chapters/d01_*.qmd
     - chapters/d02_*.qmd
     - chapters/d03_*.qmd
+    - chapters/d04_*.qmd
     - za_ispis.qmd
   resources:
     - source/*.md
@@ -77,6 +78,8 @@ website:
             href: chapters/d02_pojmovnik.qmd
           - text: "D03 - Tipične pogreške po poglavljima"
             href: chapters/d03_tipicne_pogreske_po_poglavljima.qmd
+          - text: "D04 - Numerička mehanika fluida (pregled)"
+            href: chapters/d04_numericka_mehanika_fluida.qmd
       - text: "Verzija za ispis / PDF"
         href: za_ispis.qmd
 

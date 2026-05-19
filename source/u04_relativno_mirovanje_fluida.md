@@ -869,6 +869,18 @@ Ovaj model vrijedi kad se tekućina prema spremniku zaista smirila, odnosno kad 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U04</span><span class="mf1-ch-title">Relativno mirovanje fluida</span></span> nije samo nastavak hidrostatike, nego promjena referentnog okvira. Prvo se određuje kako izgleda efektivno polje sila, zatim slobodna površina, a tek onda tlak i sila na stijenkama.
 :::
 
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Promjena referentnog okvira iz ovog poglavlja je upravo *jezgra* numeričkih pristupa rotirajućim domenama: pumpe, ventilatori, vodne i plinske turbine, centrifuge. Umjesto da mreža fizički rotira (skupo!), CFD solver dodaje **prividne sile** — centrifugalnu i Coriolisovu — točno onako kako si ti u zadacima dodavao $a_{cf} = \omega^2 r$.
+
+**Što numerički alat radi s tim.** **MRF (Moving Reference Frame)** definira zonu u mreži koja se "vrti" matematički — rješavanjem Navier-Stokesa u rotirajućem sustavu s dopisanim Coriolisovim i centrifugalnim članom. Za pune nestacionarne simulacije postoji i **sliding mesh** gdje se rotor i stator fizički kližu jedan uz drugog.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`MRFZone`, `simpleFoam` s rotacijom) · `ANSYS Fluent` (*Frame Motion*, *Sliding Mesh*) · `Star-CCM+` (*Rotating Reference Frame*).
+
+> *Nije gradivo MF1. Paraboloidnu slobodnu površinu iz centrifuge ovdje, u CFD-u ćeš vidjeti kao polje koje solver sam izračuna.*
+:::
+
 
 
 

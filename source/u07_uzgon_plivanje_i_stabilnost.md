@@ -156,6 +156,12 @@ $$
 Sila uzgona ne ovisi o obliku tijela, materijalu ni gustoći — ovisi isključivo o volumenu fluida koji tijelo istisne i gustoći tog fluida. Kilogram čelika i kilogram pluta istisnu isti volumen vode ako su iste veličine, pa imaju isti uzgon — ali čelik tone jer je teži od istisnute vode, a pluta pliva jer je lakši. Uzgon je uvijek vertikalan prema gore i prolazi kroz težište istisnutog volumena, a ne kroz težište samog tijela.
 :::
 
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Arhimedov zakon je u CFD-u utkan u **VOF metodu** (Volume of Fluid): dodatno polje $\alpha \in [0,1]$ kaže koliko je svaka ćelija ispunjena vodom, a uzgon se pojavljuje automatski jer su težinski članovi $\rho g$ različiti u "vodenim" i "zračnim" ćelijama. Solver `interFoam` u OpenFOAM-u simulira plivajuće tijelo (npr. brod u valovima) tako da prati pomicanje izolinije $\alpha = 0{,}5$ — to je upravo numerička slika slobodne površine i istisnutog volumena.
+:::
+
 Isti rezultat vrijedi i za proizvoljan oblik tijela: neto hidrostatska sila jednaka je težini fluida koji bi ispunio istisnuti volumen. Pravac djelovanja te sile prolazi kroz centar uzgona, tj. kroz težište istisnutoga volumena.
 
 Iz toga odmah slijedi i prvo pravilo stabilnosti. Kod potpuno uronjenog tijela stabilan je položaj onaj u kojem je težište tijela $G$ ispod centra uzgona $B$; ako se te dvije točke poklope, ravnoteža je neutralna, a ako je $G$ iznad $B$, mali poremećaj daje prevrtni moment. Kod plivajućeg tijela slika je drukčija jer se pri malom nagibu oblik istisnutoga volumena mijenja, pa se i centar uzgona pomiče. Tada se uvodi metacentar $M$, a znak metacentarske visine $GM$ odlučuje o početnoj stabilnosti: $GM > 0$ znači povratni moment, $GM = 0$ neutralnu ravnotežu, a $GM < 0$ nestabilan položaj.
@@ -1300,6 +1306,18 @@ Ponton, plutajuća dizalica ili radna platforma mogu zadovoljiti uvjet uzgona, a
 Ovdje se promatra statička ravnoteža ili mala odstupanja od nje. U valovima, pri slobodnoj površini unutar spremnika ili pri većim kutovima nagiba stvarna stabilnost može biti bitno drukčija od slike dobivene iz jednostavne ravnoteže sila i momenata.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U07</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span> lomi se na dvije stabilne navike: uzgon uvijek dolazi iz istisnine, a nagib iz momenta. Miješanje te dvije stvari gotovo sigurno ruši fizikalni smisao zadatka.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Uzgon, plivanje i slobodna površina su **glavna pokretačka tema multifaznog CFD-a**. Brodski trupovi u valovima, plutajući vjetroagregati, slobodna površina u akumulaciji, otvoreni kanali, prelijevanje, zapljuskivanje cisterne — sve su to **VOF simulacije** s gravitacijom.
+
+**Što numerički alat radi s tim.** Solver `interFoam` (i srodni) rješava Navier-Stokesove jednadžbe za zajedničku mješavinu *voda + zrak*, uz dodatno polje $\alpha$ za udio vode po ćeliji. Tijelo koje pliva može biti zadano kao kruti zid s **6-DOF rješavačem** koji u svakom vremenskom koraku računa novi gaz i nagib iz hidrodinamičke sile — točno onako kako si ti u zadacima radio ravnotežu sila i momenata, samo dinamički.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`interFoam`, `interDyMFoam`, `sixDoFRigidBodyMotion`) · `ANSYS Fluent` (*VOF + Dynamic Mesh*) · `Star-CCM+` (*VOF + DFBI Motion*).
+
+> *Nije gradivo MF1. Stabilnost pontona koju ovdje računaš ručno, u CFD-u solver pronađe sam — iteracijom istog uvjeta ravnoteže.*
 :::
 
 

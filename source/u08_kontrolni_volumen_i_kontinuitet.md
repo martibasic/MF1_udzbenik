@@ -151,6 +151,12 @@ $$A_1 v_1 = A_2 v_2$$
 Jednadžba $A_1 v_1 = A_2 v_2$ kaže da nestlačivi fluid ubrzava kad se cijev sužava, i usporava kad se širi. Fizikalna slika: svaka čestica fluida mora proći kroz uži presjek brže jer „masa se ne gubi" — u sekundi mora proći isti volumen. Isti princip objašnjava zašto rijeka teče brže na plitkim mjestima nego na dubokim.
 :::
 
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Kontinuitet u diferencijalnom obliku $\nabla\cdot\vec{v} = 0$ je **najteža ograničenja u nestlačivom CFD-u**: rješavač brzine i tlaka mora ga zadovoljiti u *svakoj* ćeliji *u svakom koraku*. Zato postoje algoritmi tipa **SIMPLE**, **PISO** i **PIMPLE** koji iterativno usklađuju polje tlaka tako da popravljeno polje brzine više nema lokalnih divergencija. To je razlog zašto solver `simpleFoam` u svakoj iteraciji najprije računa brzinu, pa rješava Poissonovu jednadžbu za tlak, pa korigira brzinu — sve dok $\nabla\cdot\vec{v}$ ne padne ispod tolerancije.
+:::
+
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod</p>
 
@@ -970,6 +976,18 @@ Mješalica, ventilacijska komora, razdjelnik rashladne vode ili spremnik koji se
 Pojednostavljeni zapis $A_1 v_1 = A_2 v_2$ vrijedi samo za vrlo poseban slučaj jedne ulazne i jedne izlazne grane nestlačivoga fluida. Čim sustav ima više grana, stlačivost ili akumulaciju, treba se vratiti punoj bilanci mase.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> treba ostaviti jednu pouzdanu radnu naviku: prije svake jednadžbe prvo se crta kontrolni volumen, a tek zatim se piše bilanca mase.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Kontrolni volumen koji ovdje rabiš za jedan spremnik, u CFD-u postaje **svaka ćelija mreže**. Cijela domena se rastavlja na milijune malih kontrolnih volumena, a u svakom od njih solver piše točno onu bilancu mase koju ti pišeš ručno: što ulazi kroz lijevu stranu, što izlazi kroz desnu, što se akumulira unutra. To je smisao kratice **FVM — Finite Volume Method**.
+
+**Što numerički alat radi s tim.** Diferencijalni oblik $\nabla\cdot\vec{v} = 0$ je zatvarač cijelog sustava. Algoritmi **SIMPLE** (stacionarno) i **PISO/PIMPLE** (nestacionarno) iterativno usklađuju polje tlaka i brzine tako da kontinuitet vrijedi globalno, a ne samo na ulazu i izlazu. Ako se na kraju simulacije ne zatvori masena bilanca, rezultat je numerički promašaj — bez obzira koliko izgledao lijepo.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`simpleFoam`, `pisoFoam`, `pimpleFoam`) · `ANSYS Fluent` (*Pressure-Based Solver*, *SIMPLE/PISO*) · `Star-CCM+` (*Segregated Flow Solver*).
+
+> *Nije gradivo MF1. Ovo poglavlje stoji kao mostovni stup između tvog ručnog kontrolnog volumena i milijunske mreže koju gradi mesh generator.*
 :::
 
 

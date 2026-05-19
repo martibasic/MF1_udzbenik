@@ -933,6 +933,18 @@ Najveći rizik ovdje nije algebarska pogreška, nego pogrešan odabir zamišljen
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U06</span><span class="mf1-ch-title">Zakrivljene plohe i rastav sila</span></span> nije poglavlje novih formula, nego novih pogleda na istu silu. Horizontalna komponenta čita projekciju, vertikalna težinu zamišljenog volumena, a najveći rizik nije algebra nego pogrešan smjer sile.
 :::
 
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Zakrivljene plohe su upravo razlog zašto CFD postoji kao alat. Za analitički nedostupne geometrije — segmentna ustava, vodena turbinska lopatica, krilo zrakoplova, brodski trup — više nije moguće rastavljati silu na ručne projekcije i zamišljene volumene. Numerika to radi *automatski*: za svaku ćeliju zna vektor površine $\vec{A}_i$ i tlak $p_i$, a sila je vektorska suma $\vec{F} = \sum_i p_i \vec{A}_i$.
+
+**Što numerički alat radi s tim.** Mreža mora dobro razlučiti zakrivljenost — to je zadatak generatora mreže (`snappyHexMesh`, *Fluent meshing*). Što je veća krivina lokalno, to gušća mreža mora biti uz zid. Rezultati izlaze kao horizontalna, vertikalna i ukupna sila *direktno*, bez ručnog rastavljanja.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`snappyHexMesh`, `forces`, `forceCoeffs`) · `ANSYS Fluent` (*Fluent Meshing*, *Force Report*) · `Star-CCM+` (*Surface Wrapper*, *Force Reports*).
+
+> *Nije gradivo MF1. Što ti ovdje radiš mukotrpno za segmentnu ustavu, CFD radi za bilo koju 3D geometriju u istom potezu.*
+:::
+
 
 
 

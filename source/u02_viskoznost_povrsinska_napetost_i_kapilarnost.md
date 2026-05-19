@@ -177,6 +177,12 @@ $$
 
 gdje je $\delta$ razmak među pločama.
 
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Newtonov zakon viskoznosti $\tau = \mu\,dv/dy$ ulazi u CFD solver kao **konstitutivni zakon** koji povezuje smično naprezanje s gradijentom brzine, čime se zatvara viskozni član u Navier-Stokesovim jednadžbama. U `OpenFOAM`-u ga vidiš u datoteci `transportProperties` kao izbor *viskoznog modela* (`Newtonian`, `CrossPowerLaw`, `BirdCarreau`...). Ne-newtonski fluidi (svježi beton, isplaka, krv) dobivaju složenije modele.
+:::
+
 ## Površinska napetost i kontaktni kut
 
 Na slobodnoj površini molekule nisu okružene susjedima kao u unutrašnjosti fluida. Zato površina nosi dodatnu energiju i ponaša se kao da je pod zatezanjem. Taj učinak opisujemo površinskom napetošću $\sigma$.
@@ -887,6 +893,18 @@ U ležaju viskoznost čuva razmak između dviju ploha, u raspršivaču površins
 Newtonov zakon viskoznosti ne vrijedi za svaki fluid, nego za one u kojima je veza između smičnog naprezanja i gradijenta brzine linearna. Jednako tako, kapilarni uspon i kontaktni kut vrlo su osjetljivi na onečišćenje, hrapavost i kemiju stijenke, pa idealna laboratorijska slika ne prelazi uvijek bez korekcija u stvarni sustav.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U02</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> razdvaja dvije nove fizike: unutarnje trenje u volumenu fluida i zatezanje slobodne površine. Kad je ovdje jasno koji se mehanizam čita, kasnije se sigurnije razlikuju viskoznost, hidrostatika i kapilarnost.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Površinska napetost i kontaktni kut su pokretači **multifaznog strujanja sa slobodnom površinom** — kapljice, mjehurići, valovi, tankoslojni nanosi. Bez njih CFD simulacija kapljice na lotosovom listu ili topa krv-zrak u srcu ne može vjerno reproducirati fizikalnu sliku.
+
+**Što numerički alat radi s tim.** Slobodna površina se prati **VOF metodom** (Volume of Fluid) — uvodi se dodatno polje $\alpha \in [0,1]$ koje govori koliko je svaka ćelija ispunjena vodom. Površinska napetost ulazi u jednadžbu količine gibanja kao volumna sila preko **CSF modela** (Continuum Surface Force) razmazanog oko $\alpha \approx 0{,}5$.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`interFoam`, `compressibleInterFoam`) · `ANSYS Fluent` (*VOF Multiphase*) · `Star-CCM+` (*VOF Surface Tension*).
+
+> *Nije gradivo MF1. Ovo poglavlje ti otvara vrata u svijet multifaznih simulacija.*
 :::
 
 

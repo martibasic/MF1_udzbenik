@@ -84,6 +84,12 @@ $$
 F = \rho gAh_C.
 $$
 
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Integracija tlaka po plohi $F = \int_A p\,dA$ je upravo operacija koju CFD post-procesor radi nakon što solver završi: na svakoj ćeliji uz zid zna se lokalni tlak, a zbroj $\sum_i p_i \, A_i$ po svim ćelijama jednog zida daje silu. U `ParaView`-u to je filter *Integrate Variables* na *Surface*, u `OpenFOAM`-u funkcionalan objekt `forces` izračuna $F$ i moment automatski u svakom vremenskom koraku. Mreža uz zid mora biti dovoljno fina da $p$ vjerno reproducira raspodjelu.
+:::
+
 To je prvi temeljni rezultat: sila ovisi o površini plohe i dubini njezina težišta, a ne o dubini nekoga slučajno odabranog ruba. Zbog toga potpuno uronjena ravna ploha ne dobiva veću rezultantu samo zato što je nagnuta ili zakrenuta, ako su joj površina i dubina težišta ostale iste. Drugi temeljni rezultat odnosi se na položaj centra tlaka. Za koordinatu $y$ mjerenu od slobodne površine prema dolje, moment rezultante mora biti jednak momentu raspodijeljenoga tlaka:
 
 $$
@@ -962,6 +968,18 @@ Vrata brane, servisni poklopac spremnika i brodska pregrada ne dimenzioniraju se
 Ovdje se promatra statičko opterećenje mirujućeg fluida i kruta ploha. Ako su važni elastični progib ploče, valovi, udarni režimi ili lokalno izvijanje, sama rezultanta više nije dovoljna za puni proračun sigurnosti.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U05</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span> nije samo poglavlje o jednoj rezultanti. Prava vrijednost dolazi kad se raspodjela tlaka čita dovoljno dobro da se iz nje projektiraju polja, ukrute i oslonci.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Integral $F = \int_A p\,dA$ i položaj hvatišta sile su **standardni izlazi svake CFD analize** opterećenja na zidu — bilo da govorimo o vratima brane, krilu zrakoplova, lopatici turbine ili rebru cijevi pod vanjskim tlakom. Razlika u odnosu na ovo poglavlje: $p$ nije više linearan po dubini, nego je puno polje koje solver izračuna.
+
+**Što numerički alat radi s tim.** Mreža uz zid mora razlučiti raspodjelu tlaka — premruba mreža daje točno toliko grubu silu. Funkcionalni objekti (`forces`, `forceCoeffs`, *Surface Reports*) tijekom simulacije zapisuju silu, moment i hvatište u svakom koraku, što služi i kao konvergencijski indikator: kad sila prestaje migati, rješenje je konvergiralo.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`forces`, `forceCoeffs`) · `ANSYS Fluent` (*Force Report*, *Moment Report*) · `ParaView` (*Integrate Variables*).
+
+> *Nije gradivo MF1. Hvatište sile koje izvodiš ručno za pravokutnu plohu, u CFD-u izračuna se za bilo kakvu zakrivljenu geometriju jednako lako.*
 :::
 
 

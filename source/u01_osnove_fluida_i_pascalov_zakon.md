@@ -12,6 +12,17 @@ Bez tog uvoda kasnija hidrostatika i Bernoullijeva jednadžba lako postaju samo 
 Hidraulične dizalice, preše za oblikovanje lima i brodski kormilarski hidraulični pogoni počivaju na istoj ideji: tlak prenesen zatvorenim fluidom pretvara mali ulazni napor u veliku radnu silu. Zato se u ovom poglavlju gustoća, tlak i Pascalov zakon ne čitaju odvojeno, nego kao povezane veličine kojima se čita cilindar, crpka, vod i radni alat.
 :::
 
+::: {.callout-tip collapse="true" icon="false"}
+## 🖥️ Mehanika fluida i numerika — najava
+
+Svaka jednadžba koju ćeš sresti u ovom udžbeniku ima svoju ulogu u **računalnoj dinamici fluida (CFD)**. Time se ovdje nećemo baviti — to je tema kolegija Računalna dinamika fluida. No kroz udžbenik ćeš povremeno naći dvije vrste oznaka:
+
+- **🖥️ Numerički trag** *(sklopiv, uz pojedine jednadžbe)* — kratki podsjetnik gdje ta jednadžba živi u numerici.
+- **🖥️ Numerički most** *(na kraju svakog poglavlja, plavi okvir)* — kratak osvrt kamo te ovo poglavlje vodi dalje.
+
+Nije gradivo MF1. Otvori s znatiželjom.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Fluid je tvar koja se pod djelovanjem tangencijalnog naprezanja neprestano deformira. Zato ga u inženjerskom radu ne pratimo po molekulama, nego uvodimo kontinuumski model: pretpostavljamo da su veličine poput gustoće, tlaka i brzine definirane u svakoj točki prostora.
@@ -132,6 +143,12 @@ $$
 ::: {.callout-note}
 ## 📐 Fizikalno značenje
 Pascalov zakon ne stvara energiju – on mijenja omjer sile i pomaka. Isti tlak koji mali klip unosi u zatvoreni fluid, fluid prenosi jednako prema svim stjenkama. Gdje je površina veća, isti tlak skuplja veću ukupnu silu. Omjer $A_2/A_1 = 35$ znači 35 puta veća izlazna sila, ali uz 35 puta manji izlazni pomak: mehanički rad ulaza ostaje jednak mehaničkom radu izlaza.
+:::
+
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Ideja da se promjena tlaka u zatvorenom fluidu prenosi *istovremeno* na sve točke je upravo razlog zašto u CFD-u za nestlačivo strujanje tlak nije lokalna veličina, nego rješenje **eliptičke Poissonove jednadžbe** koja veže cijelu domenu u jednom koraku iteracije. Solveri tipa `simpleFoam` i `pisoFoam` (OpenFOAM) ili pressure-based rješavač u Fluentu računaju polje tlaka točno tako — globalno, ne marš-po-vremenu.
 :::
 
 Pojačanje sile ne znači pojačanje rada niotkuda. Ako zanemarimo gubitke i stlačivost, istisnuti volumen ostaje isti, pa je
@@ -955,6 +972,18 @@ Hidraulična dizalica, preša ili kormilarski pogon rade pouzdano samo ako je ja
 Pascalov zakon u ovom obliku vrijedi kao idealizacija zatvorenog mirujućeg fluida. U stvarnim sustavima odziv mijenjaju stlačivost fluida, elastičnost vodova, unutarnje propuštanje i gubici u ventilima, pa se stvarna sila i pomak ne prenose savršeno.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U01</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> uspostavlja temeljni jezik cijeloga kolegija. Kad su ovdje jasni tlak, gustoća i Pascalov zakon, kasnija poglavlja o hidrostatici, energiji i strujanju čitaju se sigurnije i bez miješanja osnovnih veličina.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Tlak kao skalarno polje $p(x,y,z)$ — temeljni objekt koji svaki CFD solver mora prije svega *postaviti*. Pojam tlaka u kontinuumu i Pascalov zakon su upravo razlog zašto se u nestlačivom CFD-u tlak ne marsira u vremenu, nego se rješava globalno po cijeloj domeni.
+
+**Što numerički alat radi s tim.** Na početku simulacije postavlja se *inicijalni uvjet tlaka* — najčešće jednoliko polje ili hidrostatska raspodjela iz idućeg poglavlja. Promjene na rubu (klip, ulaz crpke, ventil) propagiraju se kroz mrežu kontrolnih volumena unutar jedne iteracije pressure-velocity sprege.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`setFields`, `pRefValue`) · `ANSYS Fluent` (*Operating Pressure*, *Pressure Reference*) · `COMSOL Multiphysics`.
+
+> *Nije gradivo MF1. Kad u trećoj godini otvoriš Računalnu dinamiku fluida, ovo će ti biti poznat teren.*
 :::
 
 

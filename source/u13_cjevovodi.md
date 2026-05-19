@@ -143,6 +143,12 @@ $$
 Re = \frac{\rho vD}{\mu} = \frac{vD}{\nu}.
 $$
 
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+U CFD-u Reynoldsov broj **diktira čitav workflow**: određuje koji se turbulentni model bira (k-ε za umjereno turbulentno, k-ω SST za odvajanje, LES za visoki Re), koliko gusta mora biti mreža uz zid (`y+` kriterij), i koliko se vremena računa simulacija. Za laminarno strujanje ($Re < 2300$) ne treba turbulentni model — CFD solver rješava direktno Navier-Stokesa. Za turbulentno ($Re > 4000$) bez modela disipacije svaki pokušaj rezultira numeričkim šumom.
+:::
+
 Taj broj nije samo klasifikacijska oznaka: on pokazuje dominira li u cijevi uređeno viskozno strujanje ili razvijena turbulencija. U laminarnom području otpor proizlazi izravno iz viskoznoga mehanizma, pa vrijedi
 
 $$
@@ -200,6 +206,12 @@ $$
 ::: {.callout-note}
 ## 📐 Fizikalno značenje
 Darcy-Weisbachov linijski gubitak $\lambda (L/D)(v^2/2g)$ govori da je energijski trošak trenja proporcionalan duljini, obrnutno proporcionalan promjeru i kvadratno ovisi o brzini. Udvostručenjem promjera uz isti protok brzina se smanjuje četiri puta, a gubitak šesnaest puta — to je razlog zašto se za duljine transportnih vodova biraju što veći promjeri. Lokalni gubitak $\xi v^2/2g$ opisuje disipaciju u elementima poput ventila, koljena i T-račvi: $\xi$ sažima svu geometrijsku složenost u jednu bezdimenzijsku konstantu, a korisnik treba samo brzinu u referentnom presjeku.
+:::
+
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Darcy-Weisbachov pad tlaka u ravnoj cijevi je **klasičan benchmark** za validaciju CFD-a u unutarnjem strujanju. Inženjer pokrene simulaciju duge cijevi, izmjeri pad tlaka po duljini, podijeli s $(L/D)(v^2/2g)\rho$ i dobije izračunati $\lambda$. Ako se to slaže s Moodyjevim dijagramom (za odgovarajući $Re$ i $\varepsilon/D$), simulacija dobro reproducira turbulentni granični sloj. **Wall functions** (`nutkWallFunction`, `kqRWallFunction` u OpenFOAM-u) su upravo onaj sloj koji povezuje grube zidne ćelije s analitičkim turbulentnim profilom — to su numerički ekvivalent Moodyjevog dijagrama.
 :::
 
 U tim je zapisima $p_M/(\rho g)$ tlačna visina, $z$ geodetska visina, $\alpha v^2/(2g)$ koregirana brzinska visina, $h_p$ energija koju u sustav unosi crpka, $h_t$ energija koju oduzima turbina, a $h_w$ nepovratno izgubljena mehanička energija zbog trenja, vrtloženja i lokalnih poremećaja strujanja. Tako se prvi put potpuno jasno vidi da "gubitci" nisu sporedna korekcija nego glavni jezik sustava: svaki član govori gdje energija još postoji, a gdje je već izgubljena.
@@ -317,6 +329,13 @@ $$
 1. Za $Re \approx 2{,}55 \cdot 10^5$ strujanje ne može biti laminarno.
 2. Ukupni gubitak mora biti veći od svakog pojedinačnog doprinosa.
 3. Ako je $\lambda$ odabran prije nego što je poznat $Re$, redoslijed rješavanja je kriv.
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">🖥️ Numerička perspektiva</p>
+
+Ista cijev u CFD-u: cilindrična mreža duljine $42\ \text{m}$, na ulazu zadan protok $0{,}018\ \text{m}^3$/s, na izlazu fiksni tlak, k-ω SST turbulentni model, mreža uz zid prilagođena da je $y^+ \approx 30$ (područje *wall functions*). Solver `simpleFoam` u ~2000 iteracija konvergira. Iz polja tlaka iznad i ispod presjeka direktno čitaš $\Delta p$ duž cijevi — podijeljen s $(L/D)(v^2/2g)\rho$ daje numerički izračunatu vrijednost $\lambda$, koja bi se za pravilno postavljenu simulaciju trebala slagati s Moodyjevih $\lambda \approx 0{,}027$ u granicama 2–5 %. CFD ti k tome dade i lokalne brzine — vidiš profile, sekundarno strujanje i mjesta gdje je granični sloj naručen ili odvojen.
+:::
+
 :::
 
 ::: {.mf1-we}
@@ -1317,6 +1336,18 @@ Industrijski vod, brodska rashladna mreža ili kotlovnički razvod ne mogu se pr
 Koeficijent trenja nije konstanta neovisna o protoku, a raspodjela po paralelnim granama ne čita se jednom zauvijek. Promjena hrapavosti, položaja ventila, onečišćenje ili dodatni ispust mogu pomaknuti cijeli sustav, pa mrežu uvijek treba čitati kao osjetljiv i međusobno povezan model.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U13</span><span class="mf1-ch-title">Cjevovodi</span></span> zatvara osnovni dinamički niz: od protoka i energije dolazi se do stvarnog sustava cijevi u kojem su režim strujanja, trenje i logika mreže jednako važni. Kad je ovdje jasan redoslijed $Q \to v \to Re \to \lambda \to h_w$, kasnije se sigurnije čitaju i složeniji cjevovodni sustavi.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Cjevovodi i unutarnje strujanje su **najklasičnija primjena CFD-a** — i istovremeno najbolja sredina za usporedbu inženjerskog 1D modela (ovaj udžbenik) i 3D CFD-a. Iste cijevi koje ovdje računaš ručno, profesionalni inženjeri rješavaju paralelno: 1D mrežni alati (`AFT Fathom`, `Flowmaster`, `Pipe-Flo`) za cijeli sustav, i 3D CFD samo za kritične elemente — koljeno, T-račvu, ulaz u kolektor.
+
+**Što numerički alat radi s tim.** Reynoldsov broj diktira *izbor turbulentnog modela* i *gustoću mreže uz zid* (parametar $y^+$). Moodyjev $\lambda$ je upravo ono što CFD solver implicitno rekonstruira preko **wall functions** — model koji povezuje vrijednost u prvoj ćeliji uz zid s teoretskim turbulentnim profilom (Spalding, Reichardt). Bez ispravnog $y^+$ rezultat je sustavno netočan, čak i ako mreža izgleda dovoljno gusta.
+
+**Alati gdje ćeš to sresti:** **1D mrežno**: `AFT Fathom`, `Pipe-Flo`, `EPANET` (vodoopskrba) · **3D CFD**: `OpenFOAM` (`simpleFoam` + `wallFunctions`), `ANSYS Fluent`, `Star-CCM+`.
+
+> *Nije gradivo MF1. Tvoj redoslijed $Q \to v \to Re \to \lambda \to h_w$ u CFD-u postaje izbor turbulentnog modela i kontrola $y^+$ — ali fizikalna logika ostaje identična.*
 :::
 
 

@@ -31,6 +31,8 @@ body {
 .mf1-ch,
 .mf1-izvod,
 .mf1-zavrsni-okvir,
+.mf1-numerika,
+.mf1-interaktivno,
 .mf1-checklist,
 .mf1-warning,
 .mf1-mini-summary,
@@ -63,6 +65,8 @@ body {
 .mf1-ch h3,
 .mf1-izvod h3,
 .mf1-zavrsni-okvir h3,
+.mf1-numerika h3,
+.mf1-interaktivno h3,
 .mf1-checklist h3,
 .mf1-warning h3,
 .mf1-mini-summary h3 {
@@ -189,6 +193,77 @@ body {
   background: linear-gradient(135deg, rgba(239, 230, 210, 0.8), rgba(255, 255, 255, 0.96));
 }
 
+.mf1-numerika {
+  border-left: 6px solid #1565c0;
+  background: linear-gradient(135deg, rgba(227, 242, 253, 0.85), rgba(248, 250, 252, 0.96));
+}
+
+.mf1-numerika.kompakt {
+  padding: 0.6rem 0.9rem;
+  margin: 0.75rem 0;
+}
+
+.mf1-numerika.kompakt .mf1-box-label {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.mf1-numerika code {
+  background: rgba(21, 101, 192, 0.08);
+  color: #0d3c75;
+}
+
+.mf1-interaktivno {
+  border-left: 6px solid #2e7d32;
+  background: linear-gradient(135deg, rgba(232, 245, 233, 0.85), rgba(248, 252, 248, 0.96));
+  padding: 0.8rem 1.05rem;
+}
+
+.mf1-interaktivno .mf1-box-label {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: #1b5e20;
+}
+
+.mf1-interaktivno-akcija {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+
+.mf1-interaktivno-veza {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background: #2e7d32;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 0;
+}
+
+.mf1-interaktivno-veza:hover {
+  background: #1b5e20;
+  color: white;
+}
+
+.mf1-interaktivno-qr {
+  width: 96px;
+  height: 96px;
+  border: 1px solid #c8e6c9;
+  border-radius: 6px;
+  background: white;
+  padding: 4px;
+}
+
+.mf1-interaktivno-pitanja {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+}
+
 .mf1-checklist {
   background: rgba(217, 237, 244, 0.65);
 }
@@ -270,11 +345,19 @@ body {
   .mf1-ch,
 .mf1-izvod,
 .mf1-zavrsni-okvir,
+.mf1-numerika,
+.mf1-interaktivno,
   .mf1-checklist,
   .mf1-warning,
   .mf1-mini-summary,
   .mf1-vjezbe-list,
   .mf1-print-note {
     box-shadow: none;
+  }
+
+  .mf1-interaktivno-veza {
+    background: white !important;
+    color: #1b5e20 !important;
+    border: 1px solid #1b5e20 !important;
   }
 }

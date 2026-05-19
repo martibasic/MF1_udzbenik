@@ -1,0 +1,6 @@
+---
+title: "D04 - Numerička mehanika fluida (pregled)"
+page-layout: article
+---
+
+{{< include ../source/d04_numericka_mehanika_fluida.md >}}

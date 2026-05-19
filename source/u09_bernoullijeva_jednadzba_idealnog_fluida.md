@@ -132,6 +132,27 @@ $$
 \frac{p_1}{\rho g} + \frac{v_1^2}{2g} + z_1 = \frac{p_2}{\rho g} + \frac{v_2^2}{2g} + z_2
 $$
 
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Bernoullijeva jednadžba u CFD-u rijetko se rješava — ona se najčešće koristi **za validaciju**. Kad inženjer pokrene Venturijevu cijev u OpenFOAM-u, prva provjera ispravnosti rezultata je usporedba pada tlaka između ulaza i grla s Bernoullijem. Ako CFD i Bernoulli daju isti rezultat (u idealiziranim uvjetima), simulacija "drži vodu". Razlika između njih u realnoj geometriji je upravo gubitak energije iz idućeg poglavlja.
+:::
+
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">📈 Interaktivni prikaz — Venturijeva cijev</p>
+
+Interaktivni prikaz omogućuje mijenjanje promjera ulaza $D_1$, promjera grla $D_2$ i ulazne brzine $v_1$ uz neposredno praćenje promjene brzine, tlaka, energetske linije (EGL) i hidrauličke linije (HGL) duž osi cijevi. Vrijednosti polaznih parametara prilagođene su riješenom primjeru iz ovog poglavlja.
+
+<div class="mf1-interaktivno-akcija">
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u09_venturi.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u09_venturi.svg" alt="QR kod za interaktivni prikaz Venturijeve cijevi"/>
+</div>
+
+<div class="mf1-interaktivno-pitanja">
+**Pitanja za samostalno istraživanje:** (a) Kako se ponaša tlak u grlu kada se $D_2$ smanjuje prema 10 mm? (b) Daju li svi parovi $(D_1, D_2)$ s istim omjerom 4:1 isti pad tlaka pri istoj $v_1$? (c) Zašto EGL u idealnom modelu ostaje konstantna, a HGL pada u grlu?
+</div>
+:::
+
 Ako jedan član raste, barem jedan od preostala dva mora pasti. Upravo je to fizikalna srž Venturija, Pitota, mlaza i sifona bez gubitaka.
 
 Iz istih članova odmah proizlaze i dvije korisne linije čitanja toka. Hidraulička linija ili `HGL` jednaka je zbroju tlačne i geodetske visine,
@@ -173,6 +194,12 @@ Promatra se element idealnoga fluida koji se giba duž strujnice s koordinatom $
 $$
 \rho v\frac{dv}{ds} = -\frac{dp}{ds} - \rho g\frac{dz}{ds}.
 $$
+
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Eulerova jednadžba (Navier-Stokes bez viskoznog člana) je temelj **Euler solvera** — posebne klase CFD rješavača za strujanja u kojima je viskoznost zanemariva: vanjska aerodinamika nadzvučnih projektila, akustika, atmosferska strujanja na velikim skalama. Slobodno dostupan solver `SU2` (NASA, Stanford) i komercijalni Fluent imaju *inviscid* mod koji rješava točno ovu jednadžbu — samo u 3D obliku, na mreži s milijunima ćelija.
+:::
 
 Nakon množenja s $ds/\rho$ slijedi
 
@@ -889,6 +916,12 @@ $$
 
 Brzina u grlu: $v_2 = 4 \cdot 1{,}866 = 7{,}46\ \text{m/s}$ — to je razumno za ulje u mjernoj cijevi. `HGL` u grlu je za $\Delta p/(\rho g) = 2{,}669\ \text{m}$ niže od `HGL` na ulazu, što direktno prikazuje manometarsko mjerenje. Kavitacija nije opasnost pri ovakvim brzinama ulja i pritisnim razinama industrijskog sustava.
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">🖥️ Numerička perspektiva</p>
+
+Ista Venturijeva cijev u CFD-u: 2D ili 3D mreža kroz cijev, *inlet* sa zadanom srednjom brzinom $v_1$, *outlet* sa zadanim tlakom, viskoznost ulja iz tabele. Solver `simpleFoam` u nekoliko stotina iteracija daje **puno polje brzine i tlaka**, ne samo dvije točke. Validacija: izračunaj $\Delta p$ između ulaza i grla iz CFD rezultata i usporedi s $\Delta p = \frac{\rho}{2}(v_2^2 - v_1^2)$ — slaganje od 1–3 % znak je da je mreža dovoljno fina i da je strujanje stvarno blizu Bernoullijevog idealnog modela.
+:::
+
 :::
 
 ::: {.mf1-we}
@@ -1082,6 +1115,18 @@ Venturijeve cijevi, Pitotove sonde i mlaznice rade upravo zato što se ista meha
 Idealni Bernoulli prestaje biti dovoljan čim trenje, vrtloženje, lokalni otpori ili rizik kavitacije počnu mjerljivo trošiti energiju. Tada isti problem više ne završava u ovom poglavlju, nego traži realni Bernoulli i gubitke iz <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> zatvara idealnu energetsku sliku strujanja: brzina ne raste niotkuda, nego na račun tlaka ili geodetske visine. Kad se to ovdje učvrsti, prijelaz prema <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>, gdje se toj slici prvi put dodaju stvarni gubici, postaje prirodan.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Bernoullijeva jednadžba ima u CFD-u dvije sasvim različite uloge. Prva: kao **temelj Euler solvera** za neviskozno strujanje (njena diferencijalna verzija). Druga, daleko važnija: kao **prvi alat validacije** svakog CFD rezultata — prije nego što pogledaš boje na slici, provjeri zadovoljava li polje tlaka i brzine Bernoullija u presjecima gdje gubici trebaju biti mali.
+
+**Što numerički alat radi s tim.** Inženjer postavi *probne linije* (`sampleDict` u OpenFOAM-u, *Line probes* u Fluentu) duž strujnice i izračuna `EGL` i `HGL` iz polja $p$ i $v$. Ako se `EGL` značajno spušta u području gdje to fizikalno ne bi smjelo (jer nema viskoznosti, vrtloga, prepreke), simulacija ima problem — numeričku disipaciju, prevelike diskretizacijske greške ili krivu mrežu.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`sampleDict`, `foamLog`, *inviscid* solveri) · `ANSYS Fluent` (*Inviscid Flow* model) · `SU2` (kompletan Euler/RANS framework) · `ParaView` (*Plot Over Line*).
+
+> *Nije gradivo MF1. Bernoulli koji ovdje pišeš za dvije točke, u CFD-u postaje provjera koja vrijedi za čitavu domenu.*
 :::
 
 

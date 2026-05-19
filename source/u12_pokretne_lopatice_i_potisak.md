@@ -203,6 +203,12 @@ $$
 
 pa se odmah vidi da korisni rad ne daje bilo koja komponenta brzine, nego promjena tangencijalne količine gibanja.
 
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Moment količine gibanja na rotoru i razdvajanje apsolutne i relativne brzine ($\vec{c} = \vec{w} + \vec{u}$) je jezgra **rotacijskog CFD-a** za pumpe, ventilatore, kompresore i turbine. **MRF metoda** (Multiple Reference Frame) rješava Navier-Stokesa u rotirajućem sustavu — gleda fluid očima lopatice, kao i ti u izvodu — i dodaje Coriolisovu i centrifugalnu silu kao izvorne članove. Za nestacionarne fenomene (rotor-stator interakcija, pulsacije) koristi se **sliding mesh**: rotor mreža fizički kliže uz statorsku.
+:::
+
 Kod potiska se priča obrće. Ako vozilo ili platforma izbacuje mlaz dok je ulazna brzina okolnog fluida u smjeru potiska mala ili zanemariva, iz jednadžbe količine gibanja slijedi
 
 $$
@@ -1550,6 +1556,18 @@ Peltonovo kolo, vodomlazni pogon i mlazna ispitna glava rade dobro samo ako je i
 Maksimalna sila nije isto što i maksimalna snaga, a idealizirana promjena vektora brzine nije dovoljna ako su važni gubici u lopatici, neujednačen profil brzine ili složenija geometrija mlaza. U stvarnom stroju izbor kuta i brzine uvijek treba čitati zajedno s učinkovitošću, a ne samo sa silom.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U12</span><span class="mf1-ch-title">Pokretne lopatice i potisak</span></span> počinje kontrolnim volumenom, ne turbinom. Jasno čitanje promjene količine gibanja na mirnoj vodilici daje stabilnu osnovu i za reakcije nosača i za kasnije pokretne lopatice.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Pokretne lopatice i moment količine gibanja vode te ravno u **turbomashinski CFD** — disciplinu koja računalom dimenzionira pumpe, ventilatore, vodne i plinske turbine, propelere, kompresore. Trokuti brzina koje ovdje crtaš ručno, CFD rekonstruira automatski iz polja apsolutne i relativne brzine.
+
+**Što numerički alat radi s tim.** Rotor se modelira **MRF zonom**: prostor uz lopaticu rotira matematički, a Navier-Stokes se piše u rotirajućem okviru s dodatnim Coriolisovim i centrifugalnim članom. Rezultat: polje tlaka po lopatici, lokalni napadni kutovi, mjesta odvajanja, raspodjela snage po radijusu. Za pune nestacionarne efekte (rotor-stator) prelazi se na **sliding mesh** ili **harmonic balance**.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`MRFSimpleFoam`, `pimpleDyMFoam`) · `ANSYS Fluent` (*Frame Motion*, *Sliding Mesh*) · `Star-CCM+` (*MRF / Rigid Body Motion*) · specijalizirani `TURBO` alati (*CFX Turbo*, *AxStream*).
+
+> *Nije gradivo MF1. Peltonov rotor koji ovdje računaš preko jedne reprezentativne lopatice, u CFD-u možeš pratiti za sve lopatice istovremeno, s realnim 3D vrtloženjem unutar krila.*
 :::
 
 

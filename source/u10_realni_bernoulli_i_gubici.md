@@ -134,6 +134,12 @@ $$
 Darcy-Weisbachova formula kaže da gubitak energije na ravnoj dionici raste proporcionalno s duljinom cijevi, obrnuto s promjerom i kvadratično s brzinom. Faktor $\lambda$ (koeficijent trenja) ovisi o hrapavosti stjenke i Reynoldsovom broju — tj. o turbulenciji. Gubitak nije samo „trenje stjenke" nego i disipacija u turbulentnim vrtlozima koji se stalno stvaraju i raspadaju po poprečnom presjeku. Zato dulji vod, manji promjer i veća brzina zajedno eksponencijalno povećavaju energijsku cijenu.
 :::
 
+::: {.callout-note collapse="true" icon="false"}
+## 🖥️ Numerički trag
+
+Gubici energije u realnom toku — disipacija u turbulentnim vrtlozima — su upravo razlog zbog kojeg postoje **turbulentni modeli** u CFD-u. Umjesto da rješava svaki sitni vrtlog (skupo i u praksi nemoguće za inženjerske probleme), solver koristi *modele zatvaranja*: **k-ε**, **k-ω SST**, **Spalart-Allmaras**. Ovi modeli su zapravo numerička parafraza Darcy-Weisbachovog $\lambda$ — eksperimentalna kalibracija koja kaže "koliko energije turbulencija pojede po jedinici volumena i vremena".
+:::
+
 a lokalni gubitak
 
 $$
@@ -1518,6 +1524,18 @@ Servisna crpka, rashladni vod ili ventilacijski kanal rade dobro samo ako se ras
 Koeficijenti $\lambda$ i $\xi$ nisu ukrasi koji se mogu uzeti proizvoljno, nego sažimaju režim strujanja i geometriju stvarnoga elementa. Posebno kod kavitacije sigurnost se ne smije procjenjivati manometarskim, nego apsolutnim tlakom.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span> zatvara prijelaz iz idealnog u realni tok: energija se više ne samo raspodjeljuje, nego i gubi. Kad su linijski i lokalni gubitci jasno razdvojeni, prijelaz prema <span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span>, gdje se fokus s energije prebacuje na sile strujanja, postaje prirodan.
+:::
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">🖥️ Numerički most</p>
+
+**Gdje ovo živi u numerici.** Gubici energije $h_l$ i $h_{loc}$ koje ovdje rabiš iz tabele su zapravo **integral disipacije** koju CFD u svakoj točki strujanja računa iz polja viskoznosti i turbulencije. Drugim riječima: $\lambda$ i $\xi$ su sažeti, mjerni odgovor na pitanje koje CFD odgovara po točkama. Otud i razlika u pristupu: ti integrirаš jedanput za cijelu dionicu; CFD integrira po cijeloj domeni.
+
+**Što numerički alat radi s tim.** **RANS modeli** (Reynolds-Averaged Navier-Stokes) — k-ε, k-ω SST, Spalart-Allmaras — dodaju Navier-Stokesu dvije ili više dodatnih jednadžbi za turbulentnu kinetičku energiju i njenu disipaciju. **LES** (Large Eddy Simulation) ide korak dalje: rješava velike vrtloge direktno, modelira samo male. **DNS** (Direct Numerical Simulation) rješava sve — najtočnije, najskuplje, ograničen na vrlo male geometrije.
+
+**Alati gdje ćeš to sresti:** `OpenFOAM` (`turbulenceProperties` s izborom `RAS`/`LES`/`DNS`) · `ANSYS Fluent` (*Viscous Model* dijaloški izbornik) · `Star-CCM+` (*Turbulence Models*).
+
+> *Nije gradivo MF1. Moodyjev dijagram koji ovdje rabiš za $\lambda$, u CFD-u se "ne treba" — solver sam izračuna gubitak. Ali Moodyjev dijagram i dalje validira simulaciju.*
 :::
 
 
