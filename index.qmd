@@ -1,63 +1,69 @@
 ---
-title: "MF1 - Integrirani udžbenik"
-subtitle: "Kanonski Quarto projekt za objedinjenu web i print verziju"
+title: "Mehanika fluida 1"
+subtitle: "Integrirani udžbenik za studije strojarstva i građevinarstva"
 page-layout: article
 toc: false
 ---
 
 ::: {.mf1-hero}
-# MF1 - Integrirani udžbenik
+# Mehanika fluida 1
 
-Ovo je novi kanonski projekt za objedinjeni MF1 udžbenik. Struktura je postavljena tako da isti izvor sadržaja generira i web izdanje i jedinstveni tok za ispis i PDF.
+Udžbenik prati fluide od mirovanja u zatvorenom prostoru do strujanja kroz cjevovode, lopatice i strojeve. Trinaest poglavlja izgrađenih oko jednog načela: prije svake jednadžbe mora biti jasna fizikalna slika koja se njome opisuje.
 :::
 
-## Trenutni status
+## Za koga je ovaj udžbenik
 
-- Projektni kostur je postavljen.
-- Pilot skup za prvi val je inicijaliziran: `U00`, `U03`, `U08`, `U09` i `D03`.
-- Ostala poglavlja imaju radne wrappere i izvorne placeholder datoteke za daljnju migraciju.
+Udžbenik je namijenjen ponajprije **studentima druge godine preddiplomskog studija strojarstva i građevinarstva** koji prvi put susreću Mehaniku fluida 1 kao kolegij. Sastavljen je tako da bude dovoljan kao primarni izvor za pripremu kolokvija i ispita, ali i kao referenca u kasnijim kolegijima koji se oslanjaju na strujanje fluida.
 
-## Prvi radni val
+Pretpostavlja se predznanje iz:
+
+- **Matematike I i II** — diferencijalnog i integralnog računa, vektorske analize i osnova diferencijalnih jednadžbi;
+- **Fizike I** — kinematike, dinamike, rada i energije, osnova gravitacijskog polja.
+
+Računalna dinamika fluida (CFD) i numeričke metode **nisu predznanje**. U udžbeniku se ipak povremeno pojavljuje sklopiv prilog *Numerički most* koji najavljuje gdje pojedina jednadžba živi u kasnijim kolegijima — bez ulaženja u tehnike rješavanja.
+
+## Kako je udžbenik organiziran
+
+Sadržaj prati prirodni redoslijed učenja Mehanike fluida:
 
 ::: {.mf1-grid}
 ::: {.mf1-card}
-### U00
+### Svojstva fluida i hidrostatika
+**U01 – U07**
 
-[Kako koristiti udžbenik](chapters/u00_kako_koristiti_udzbenik.qmd)
+Tlak i Pascalov zakon, viskoznost, površinska napetost i kapilarnost, hidrostatička raspodjela tlaka i manometrija, relativno mirovanje, sile na ravne i zakrivljene plohe, uzgon i stabilnost plivajućih tijela.
 :::
 
 ::: {.mf1-card}
-### U03
+### Hidrodinamika
+**U08 – U13**
 
-[Hidrostatička raspodjela tlaka i manometrija](chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd)
+Kontrolni volumen i kontinuitet, Bernoullijeva jednadžba idealnog i realnog fluida, gubici energije, količina gibanja i sile strujanja, pokretne lopatice i potisak, proračun cjevovoda.
 :::
 
 ::: {.mf1-card}
-### U08
+### Dodaci
+**D01 – D04**
 
-[Kontrolni volumen i kontinuitet](chapters/u08_kontrolni_volumen_i_kontinuitet.qmd)
-:::
-
-::: {.mf1-card}
-### U09
-
-[Bernoullijeva jednadžba idealnog fluida](chapters/u09_bernoullijeva_jednadzba_idealnog_fluida.qmd)
-:::
-
-::: {.mf1-card}
-### D03
-
-[Tipične pogreške po poglavljima](chapters/d03_tipicne_pogreske_po_poglavljima.qmd)
+Sažetak formula i oznaka, pojmovnik temeljnih pojmova, katalog tipičnih pogrešaka po poglavljima i pregledni dokument o vezi Mehanike fluida s računalnom dinamikom fluida.
 :::
 :::
 
-## Operativna logika projekta
+## Kako započeti
 
-1. `chapters/` sadrži samo tanke Quarto wrappere.
-2. `source/` sadrži kanonski tekst svakoga poglavlja.
-3. `za_ispis.qmd` okuplja cijeli udžbenik u jedan dokument za ispis i PDF.
-4. `assets/print/` rezerviran je za statičke zamjene važnih widgeta.
+Studentu koji prvi put otvara udžbenik preporučuje se sljedeći redoslijed:
 
-## Sljedeci implementacijski potez
+1. Najprije **[U00 – Kako koristiti udžbenik](chapters/u00_kako_koristiti_udzbenik.qmd)**. U njemu su sažete obrasci pisanja, oznake tipova zadataka, razine težine i preporučeni tok rada s primjerima.
+2. Zatim **[U01 – Osnove fluida i Pascalov zakon](chapters/u01_osnove_fluida_i_pascalov_zakon.qmd)**. Cijeli udžbenik počiva na pojmovima koji se ondje uvode.
+3. Pri pripremi kolokvija ili ispita korisno je konzultirati **[D03 – Tipične pogreške po poglavljima](chapters/d03_tipicne_pogreske_po_poglavljima.qmd)** — preventivni filtar prije računa i prije predaje zadatka.
 
-Nakon kostura treba produbiti pilot-poglavlja do pune migracije, a zatim po istom obrascu otvoriti drugi val: `U01`, `U02`, `U04` i `U05`.
+## Što ovo izdanje donosi
+
+- **Numerički mostovi** uz središnje jednadžbe — kratki sklopivi prilozi koji najavljuju gdje se ista jednadžba pojavljuje u računalnoj dinamici fluida i koji se alati pritom koriste. Sadržaj nije obvezan, ali daje okvir za kasnije studije.
+- **Interaktivni prikazi** u odabranim poglavljima — Jupyter notebooci s klizačima za ključne parametre. Otvaraju se u pregledniku putem QR koda u tiskanoj inačici ili poveznice u mrežnoj inačici, bez instalacije bilo kakvog programskog okruženja.
+- **Razine težine zadataka** od T1 do T4 koje studentu omogućuju biranje rasporeda učenja prema vlastitom tempu.
+- **Mrežno i tiskano izdanje iz istog izvora** — sadržaj je razumljiv u obje inačice, a interaktivni elementi nadopunjuju, a ne zamjenjuju, kanonski tekst.
+
+## Recenzentske napomene i ispravci
+
+Udžbenik je živi dokument. Primjedbe na sadržaj, predlozi za poboljšanje i prijavljeni ispravci dobrodošli su putem službenoga kanala kolegija.
