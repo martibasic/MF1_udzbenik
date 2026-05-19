@@ -909,6 +909,79 @@ Razina raste jer je ukupni ulaz ($0{,}55\ \text{m}^3/\text{s}$) veći od izlaza 
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Rashladni krug baterijskog paketa električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Litij-ionski baterijski paket električnog vozila proizvodi toplinu pri brzom punjenju i ubrzanom kretanju, koju treba odvoditi rashladnim medijem (uobičajeno smjesa glikola i vode) kako bi temperatura ćelija ostala u sigurnom radnom rasponu. Glavni vod dovodi medij iz crpke, a kolektor ga razdjeljuje na više paralelnih kanala, po jedan za svaki baterijski modul.
+
+**Zadano**
+
+- Promjer glavnog voda: $D_1 = 20\ \text{mm}$
+- Promjer pojedinog rashladnog kanala uz modul: $d = 6\ \text{mm}$
+- Broj paralelnih kanala: $n = 16$
+- Ukupni volumenski protok rashladnog medija: $Q = 25\ \text{L/min}$
+
+**Traženo**
+
+1. Srednja brzina rashladnog medija u glavnom vodu;
+2. Srednja brzina u jednom paralelnom kanalu;
+3. Procjena: što se događa s brzinom u preostalim kanalima ako se jedan začepi?
+
+**Pretpostavke i model**
+
+Rashladni medij smatra se nestlačivim, gustoća se ne mijenja s temperaturom u promatranom radnom rasponu. Strujanje je stacionarno, profili brzina u presjecima aproksimirani su jednodimenzijskim srednjim vrijednostima. Svi paralelni kanali imaju iste dimenzije i isti hidraulički otpor, pa se ukupni protok raspoređuje jednoliko na sve aktivne kanale.
+
+**Rješenje**
+
+Pretvorba protoka u SI jedinice:
+
+$$
+Q = 25\ \text{L/min} = \frac{25 \cdot 10^{-3}}{60} = 4{,}167 \cdot 10^{-4}\ \text{m}^3/\text{s}.
+$$
+
+Površina glavnog voda:
+
+$$
+A_1 = \frac{\pi D_1^2}{4} = \frac{\pi \cdot 0{,}020^2}{4} \approx 3{,}142 \cdot 10^{-4}\ \text{m}^2.
+$$
+
+Srednja brzina u glavnom vodu:
+
+$$
+v_1 = \frac{Q}{A_1} = \frac{4{,}167 \cdot 10^{-4}}{3{,}142 \cdot 10^{-4}} \approx 1{,}326\ \text{m/s}.
+$$
+
+Površina pojedinog kanala:
+
+$$
+A_d = \frac{\pi d^2}{4} = \frac{\pi \cdot 0{,}006^2}{4} \approx 2{,}827 \cdot 10^{-5}\ \text{m}^2.
+$$
+
+Ukupna površina svih paralelnih kanala:
+
+$$
+A_{n} = n \cdot A_d = 16 \cdot 2{,}827 \cdot 10^{-5} \approx 4{,}524 \cdot 10^{-4}\ \text{m}^2.
+$$
+
+Srednja brzina u pojedinom kanalu:
+
+$$
+v_d = \frac{Q}{A_{n}} = \frac{4{,}167 \cdot 10^{-4}}{4{,}524 \cdot 10^{-4}} \approx 0{,}921\ \text{m/s}.
+$$
+
+Pri začepljenju jednog od kanala broj aktivnih kanala pada na $n' = 15$, ukupna površina iznosi $A_n' = 15 \cdot 2{,}827 \cdot 10^{-5} = 4{,}241 \cdot 10^{-4}\ \text{m}^2$, a brzina u preostalim kanalima raste na
+
+$$
+v_d' = \frac{Q}{A_{n}'} = \frac{4{,}167 \cdot 10^{-4}}{4{,}241 \cdot 10^{-4}} \approx 0{,}982\ \text{m/s},
+$$
+
+što je porast od približno $6{,}6\,\%$.
+
+**Provjera i komentar**
+
+Brzine od oko $1\ \text{m/s}$ uobičajene su za rashladne krugove baterijskih paketa električnih vozila — više brzine donijele bi bolji konvektivni prijenos topline, ali bi povećale i hidrauličke gubitke i potrošnju energije crpke, dok bi niže brzine zahtijevale veće presjeke i više prostora u baterijskom paketu. Začepljenje pojedinog kanala u prvom redu nije kritično za hidrauliku — brzina u preostalim kanalima raste tek $7\,\%$ — ali pripadni baterijski modul ostaje bez hlađenja i njegova temperatura počinje brzo rasti, što može dovesti do toplinskog odbjega ćelija. Upravo zato suvremeni sustavi upravljanja baterijama (engl. *battery management system*) prate temperaturu svakog modula odvojeno i isključuju neispravan modul prije nego što hidraulički kvar postane sigurnosni problem.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

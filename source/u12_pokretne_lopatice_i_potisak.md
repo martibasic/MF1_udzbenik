@@ -1489,6 +1489,80 @@ Potisak od ~$820\ \text{N}$ za bager mase ~$2{,}5\ \text{t}$ daje ubrzanje od sa
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Propeler dronskog kvadkoptera u stanju visa &nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Kvadkopterski dron za potrebe geodetske izmjere i inspekcije infrastrukture ima četiri istovjetna propelera. U stacionarnom visu (zadržavanju nepomičnog položaja u zraku) propeleri moraju razviti ukupni potisak jednak težini cijelog drona. Pojednostavljeni proračun potiska iz teorije aktuatorskog diska omogućuje procjenu mehaničke snage svakog propelera, što je ključno za određivanje trajanja leta na jednom punjenju baterije.
+
+**Zadano**
+
+- Masa drona s teretom: $m = 2{,}4\ \text{kg}$
+- Broj propelera: $4$
+- Promjer pojedinog propelera: $D = 280\ \text{mm}$
+- Visina leta: $1\,500\ \text{m}$, temperatura zraka $5^\circ\text{C}$
+- Gustoća zraka na toj visini: $\rho = 1{,}045\ \text{kg/m}^3$
+- Učinkovitost propelera (omjer idealne i stvarne snage): $\eta = 0{,}70$
+
+**Traženo**
+
+1. Potreban potisak po pojedinom propeleru u stacionarnom visu;
+2. Srednja brzina protoka zraka kroz propeler prema teoriji aktuatorskog diska;
+3. Idealna i stvarna mehanička snaga po propeleru;
+4. Ukupna snaga svih četiriju propelera.
+
+**Pretpostavke i model**
+
+Promatra se idealizirani aktuatorski disk: propeler se zamjenjuje tankom plohom koja diskontinuirano dodaje energiju struji zraka koja kroz njega prolazi. U stacionarnom visu ulazna brzina daleko ispred propelera iznosi nula, a daleko iza propelera dvostruka je srednja brzina kroz disk. Zrak se smatra nestlačivim na ovoj brzini, gubici su sažeti u jednom koeficijentu učinkovitosti. Težina drona je u potpunosti uravnotežena ukupnim potiskom.
+
+**Rješenje**
+
+Iz ravnoteže sila u visu, potisak po pojedinom propeleru:
+
+$$
+F_p = \frac{m\,g}{4} = \frac{2{,}4 \cdot 9{,}81}{4} \approx 5{,}886\ \text{N}.
+$$
+
+Površina diska pojedinog propelera:
+
+$$
+A = \frac{\pi D^2}{4} = \frac{\pi \cdot 0{,}280^2}{4} \approx 6{,}158 \cdot 10^{-2}\ \text{m}^2.
+$$
+
+Prema teoriji aktuatorskog diska, srednja brzina protoka zraka kroz disk u stacionarnom visu iznosi:
+
+$$
+v = \sqrt{\frac{F_p}{2\rho A}} = \sqrt{\frac{5{,}886}{2 \cdot 1{,}045 \cdot 6{,}158 \cdot 10^{-2}}}.
+$$
+
+Računaju se redom $2\rho A \approx 0{,}1287$ i $5{,}886 / 0{,}1287 \approx 45{,}73$:
+
+$$
+v = \sqrt{45{,}73} \approx 6{,}76\ \text{m/s}.
+$$
+
+Idealna mehanička snaga koju propeler predaje zraku:
+
+$$
+P_{id} = F_p \cdot v = 5{,}886 \cdot 6{,}76 \approx 39{,}8\ \text{W}.
+$$
+
+Stvarna mehanička snaga uz učinkovitost propelera:
+
+$$
+P_{st} = \frac{P_{id}}{\eta} = \frac{39{,}8}{0{,}70} \approx 56{,}9\ \text{W}.
+$$
+
+Ukupna snaga svih četiriju propelera:
+
+$$
+P_{uk} = 4 \cdot P_{st} \approx 227\ \text{W}.
+$$
+
+**Provjera i komentar**
+
+Brzina protoka zraka kroz disk od oko $6{,}76\ \text{m/s}$ tipična je za male dronove u visu — niža brzina daje veću učinkovitost ali traži veće propelere, a viša brzina manje propelere ali manju učinkovitost. Ukupna snaga od približno $227\ \text{W}$ podudara se s tipičnim opažanjima za dronove te težinske klase; pri standardnoj bateriji od $5\,000\ \text{mAh}$ napona $14{,}8\ \text{V}$ ($74\ \text{Wh}$), teorijsko trajanje leta iznosi $74 / 0{,}227 \approx 326\ \text{s} \approx 20$ minuta, uz pretpostavku da cjelokupna energija baterije ide u potisak. Stvarno trajanje leta nešto je kraće zbog potrošnje elektronike za upravljanje, kamera i komunikaciju. Pri letu na nižoj visini (npr. $0\ \text{m}$, gdje je $\rho \approx 1{,}225\ \text{kg/m}^3$), zrak je gušći pa je potrebna brzina kroz disk manja, snaga niža i trajanje leta dulje — što je razlog zašto inspekcijski dronovi na velikim nadmorskim visinama (planinska područja) imaju kraće vrijeme leta nego pri obalnim misijama.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

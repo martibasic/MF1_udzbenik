@@ -1333,6 +1333,82 @@ Nosač treba preuzeti vučnu silu od ~$3{,}56\ \text{kN}$ prema natrag. Dominira
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Sila na koljeno tlačnog voda male hidroelektrane &nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Mala hidroelektrana ugrađena u području planinske rijeke koristi raspoloživu visinsku razliku za pogon Peltonove turbine snage približno $50\ \text{kW}$. Voda iz akumulacijskog bazena prolazi tlačnim vodom (čeličnom cijevi) do strojarnice, pri čemu cijev mijenja smjer u jednom horizontalnom koljenu zbog uklopa u teren. Konstruktor mora procijeniti silu kojom voda djeluje na koljeno radi pravilnog sidrenja.
+
+**Zadano**
+
+- Kut zakretanja koljena: $\beta = 60^\circ$
+- Promjer tlačnog voda: $D = 200\ \text{mm}$
+- Volumenski protok: $Q = 0{,}18\ \text{m}^3/\text{s}$
+- Manometarski tlak ispred koljena: $p_{M} = 280\ \text{kPa}$ (izračunat iz raspoložive visine umanjene za gubitke u prethodnom dijelu voda)
+- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
+- Pretpostavlja se zanemariv gubitak u samom koljenu (kratko, glatko zaobljeno)
+- Koljeno je u horizontalnoj ravnini
+
+**Traženo**
+
+1. Srednja brzina vode u tlačnom vodu;
+2. Komponente sile fluida na koljeno u smjeru ulaza i okomito na njega;
+3. Iznos rezultante i smjer djelovanja.
+
+**Pretpostavke i model**
+
+Kontrolni volumen obuhvaća cijelo koljeno. Strujanje je stacionarno i nestlačivo, tlakovi na ulazu i izlazu koljena približno su jednaki ($p_2 \approx p_1$) jer su gubici zanemarivi, a promjer je nepromijenjen. Težina vode u koljenu zanemaruje se jer je kontrolni volumen u horizontalnoj ravnini. Profili brzina aproksimiraju se jednodimenzijskim srednjim vrijednostima. Atmosferski tlak djeluje izvana na vanjsku stijenku koljena i ne utječe na izračun unutrašnjih sila.
+
+**Rješenje**
+
+Površina presjeka voda i brzina vode:
+
+$$
+A = \frac{\pi D^2}{4} = \frac{\pi \cdot 0{,}200^2}{4} \approx 3{,}142 \cdot 10^{-2}\ \text{m}^2,
+$$
+
+$$
+v = \frac{Q}{A} = \frac{0{,}18}{3{,}142 \cdot 10^{-2}} \approx 5{,}73\ \text{m/s}.
+$$
+
+Intenzitet ukupne sile na presjeku (zbroj impulsnog i tlačnog doprinosa):
+
+$$
+F_{int} = \rho Q v + p_{M} A = 998 \cdot 0{,}18 \cdot 5{,}73 + 280\,000 \cdot 3{,}142 \cdot 10^{-2}.
+$$
+
+Računaju se redom $\rho Q v \approx 1\,029\ \text{N}$ i $p_{M} A \approx 8\,798\ \text{N}$:
+
+$$
+F_{int} \approx 9\,827\ \text{N}.
+$$
+
+Komponente sile fluida na koljeno (s osi $x$ u smjeru ulaznog toka):
+
+$$
+F_x = F_{int}\,(1 - \cos\beta) = 9\,827 \cdot (1 - \cos 60^\circ) = 9\,827 \cdot 0{,}5 \approx 4{,}91\ \text{kN},
+$$
+
+$$
+F_y = F_{int}\,\sin\beta = 9\,827 \cdot \sin 60^\circ = 9\,827 \cdot 0{,}866 \approx 8{,}51\ \text{kN}.
+$$
+
+Iznos rezultante:
+
+$$
+F_R = \sqrt{F_x^2 + F_y^2} = \sqrt{4{,}91^2 + 8{,}51^2} \approx 9{,}83\ \text{kN}.
+$$
+
+Smjer rezultante u odnosu na ulaznu os:
+
+$$
+\varphi = \arctan\frac{F_y}{F_x} = \arctan\frac{8{,}51}{4{,}91} \approx 60^\circ.
+$$
+
+**Provjera i komentar**
+
+Rezultanta od približno $9{,}83\ \text{kN}$ djeluje pod kutem koji upravo raspolavlja kut zakretanja koljena (geometrijska intuicija za simetrično skretanje s jednakim tlakovima i brzinama na ulazu i izlazu). Konstrukcija sidrenja koljena mora preuzeti tu silu — najčešće betonsko sidro ili čelični ograničavač ugrađen u temelj strojarnice. U dominantnom doprinosu sile sudjeluje tlačni član ($p_M A \approx 8{,}8\ \text{kN}$), a impulsni doprinos ($\rho Q v \approx 1{,}0\ \text{kN}$) ostaje manji jer je brzina umjerena. U primjeni s većim protocima ili višim radnim tlakovima (velike hidroelektrane) sile na koljena dostižu desetine ili stotine kilonjutna, što izravno diktira izbor materijala i debljine cijevi. Suvremeni projektantski softver za male hidroelektrane integrira proračun sila na sve karakteristične elemente sustava (koljena, suženja, T-spojeve) izravno iz strujnih simulacija, ali temeljna postavka kontrolnog volumena ostaje identična onoj iz ovog primjera.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

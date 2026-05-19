@@ -864,6 +864,78 @@ $F_V = 128{,}6\ \text{kN}$ znači da zaobljeno dno „nosi" imaginarni stupac vo
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Zakrivljena pregrada u spremniku za skladištenje stlačenog CO₂ &nbsp;<span class="mf1-level">T3</span></p>
+
+**Kontekst:** U postrojenju za hvatanje i skladištenje ugljika (engl. *carbon capture and storage*, CCS) jedan je od ključnih elemenata cilindrični skladišni spremnik za stlačeni CO₂. Prije puštanja u rad provodi se obavezna hidrostatička provjera čvrstoće: spremnik se ispuni vodom i opterećenje na njegove strukturne elemente mjeri se u kontroliranom uvjetu. Unutar spremnika nalazi se zakrivljena pregrada u obliku četvrtine cilindra koja razdvaja dva odjeljka.
+
+**Zadano**
+
+- Polumjer zakrivljene pregrade: $R = 1{,}20\ \text{m}$
+- Dubina vrha pregrade ispod slobodne površine: $h_t = 2{,}50\ \text{m}$
+- Širina pregrade (dimenzija u smjeru osi spremnika): $L = 3{,}50\ \text{m}$
+- Testni medij: voda, $\rho = 998\ \text{kg/m}^3$
+- Konveksna strana pregrade okrenuta je prema fluidu pod opterećenjem
+
+**Traženo**
+
+1. Horizontalna komponenta sile na pregradu;
+2. Vertikalna komponenta sile;
+3. Iznos rezultante i kut prema horizontali.
+
+**Pretpostavke i model**
+
+Promatra se statičko stanje s vodom kao testnim medijem. Pregrada je vertikalno postavljena, vrh joj je na zadanoj dubini, a četvrtina kruga proteže se prema dolje i u stranu. Horizontalna komponenta sile jednaka je sili na vertikalnu projekciju plohe; vertikalna komponenta jednaka je težini imaginarnog volumena fluida između plohe i slobodne površine. Atmosferski tlak djeluje s obje strane spremnika, pa se njegov doprinos poništava.
+
+**Rješenje**
+
+Vertikalna projekcija pregrade ima dimenzije $R \times L$, a dubina težišta te projekcije iznosi $h_t + R/2$:
+
+$$
+F_H = \rho g L R \left(h_t + \frac{R}{2}\right) = 998 \cdot 9{,}81 \cdot 3{,}50 \cdot 1{,}20 \cdot \left(2{,}50 + \frac{1{,}20}{2}\right).
+$$
+
+Uvrštavanjem $h_t + R/2 = 3{,}10\ \text{m}$:
+
+$$
+F_H = 998 \cdot 9{,}81 \cdot 3{,}50 \cdot 1{,}20 \cdot 3{,}10 \approx 127{,}4\ \text{kN}.
+$$
+
+Imaginarni volumen fluida iznad četvrtine cilindra iznosi
+
+$$
+V_{imag} = L\left(h_t R + R^2 - \frac{\pi R^2}{4}\right) = 3{,}50 \cdot \left(2{,}50 \cdot 1{,}20 + 1{,}20^2 - \frac{\pi \cdot 1{,}20^2}{4}\right).
+$$
+
+Računaju se redom $2{,}50 \cdot 1{,}20 = 3{,}00\ \text{m}^2$, $1{,}20^2 = 1{,}44\ \text{m}^2$ i $\pi \cdot 1{,}44 / 4 \approx 1{,}131\ \text{m}^2$:
+
+$$
+V_{imag} = 3{,}50 \cdot (3{,}00 + 1{,}44 - 1{,}131) = 3{,}50 \cdot 3{,}309 \approx 11{,}58\ \text{m}^3.
+$$
+
+Vertikalna komponenta sile zato iznosi
+
+$$
+F_V = \rho g V_{imag} = 998 \cdot 9{,}81 \cdot 11{,}58 \approx 113{,}4\ \text{kN}.
+$$
+
+Iznos rezultante:
+
+$$
+F_R = \sqrt{F_H^2 + F_V^2} = \sqrt{127{,}4^2 + 113{,}4^2} \approx \sqrt{16\,231 + 12\,860} \approx 170{,}5\ \text{kN}.
+$$
+
+Kut rezultante prema horizontali:
+
+$$
+\varphi = \arctan\frac{F_V}{F_H} = \arctan\frac{113{,}4}{127{,}4} \approx 41{,}7^\circ.
+$$
+
+**Provjera i komentar**
+
+Rezultanta od $170{,}5\ \text{kN}$ predstavlja opterećenje koje pregrada mora podnijeti u testnom uvjetu s vodom. Pri stvarnoj eksploataciji s tekućim CO₂ (gustoća približno $780\ \text{kg/m}^3$ pri uobičajenim CCS uvjetima), istovjetne sile bile bi za oko $22\,\%$ niže — što je razlog zašto se test čvrstoće provodi vodom, kao najgorem scenariju za hidrostatičko opterećenje. Kut djelovanja rezultante od $41{,}7^\circ$ govori projektantu nosivih veza pregrade da konstrukcijski elementi moraju jednako podnijeti horizontalnu i vertikalnu komponentu. Pri stvarnoj eksploataciji uz CO₂ pojavljuje se i dodatno opterećenje plinskim tlakom, koje treba zasebno superponirati u proračunu sigurnosti — to nije obuhvaćeno ovim hidrostatičkim testom.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

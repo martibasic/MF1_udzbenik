@@ -801,6 +801,79 @@ Prednja stijenka doseže $1{,}751\ \text{m}$ – blizu vrha $H = 1{,}60\ \text{m
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Laboratorijska centrifuga za odvajanje plazme od eritrocita &nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U medicinskim i biotehnološkim laboratorijima centrifuga se koristi za odvajanje krvnih komponenti različite gustoće. Cijevi s uzorkom postavljaju se u rotor koji se okreće velikom kutnom brzinom; centrifugalno polje, mnogo jače od gravitacije, gura gušće sastojke (eritrocite, $\rho \approx 1095\ \text{kg/m}^3$) prema dnu cijevi, dok lakša plazma ($\rho \approx 1025\ \text{kg/m}^3$) ostaje pri vrhu.
+
+**Zadano**
+
+- Broj okretaja rotora: $n = 4000$ o/min
+- Polumjer dna cijevi od osi rotacije: $r_d = 95\ \text{mm}$
+- Polumjer vrha cijevi od osi rotacije: $r_v = 25\ \text{mm}$
+- Gustoća uzorka pune krvi: $\rho = 1060\ \text{kg/m}^3$
+
+**Traženo**
+
+1. Kutna brzina $\omega$ u rad/s;
+2. Centrifugalno ubrzanje na dnu cijevi izraženo u jedinicama $g$;
+3. Razlika tlakova između dna i vrha cijevi unutar uzorka.
+
+**Pretpostavke i model**
+
+U rotirajućem okviru fluid se nalazi u stanju relativnog mirovanja. Efektivno ubrzanje u radijalnom smjeru iznosi $a_{cf}(r) = \omega^2 r$, pa se hidrostatički zakon primjenjuje s tom radijalnom akceleracijom umjesto gravitacije. Gravitacijski doprinos zanemaruje se jer je centrifugalno ubrzanje za nekoliko redova veličine veće. Uzorak se promatra kao homogen u trenutku početka centrifugiranja (još nije došlo do potpunog razdvajanja).
+
+**Rješenje**
+
+Kutna brzina iznosi
+
+$$
+\omega = \frac{2\pi n}{60} = \frac{2\pi \cdot 4000}{60} \approx 418{,}9\ \text{rad/s}.
+$$
+
+Centrifugalno ubrzanje na dnu cijevi:
+
+$$
+a_{cf} = \omega^2 r_d = 418{,}9^2 \cdot 0{,}095 \approx 1{,}666 \cdot 10^4\ \text{m/s}^2.
+$$
+
+Izraženo u jedinicama gravitacije:
+
+$$
+\frac{a_{cf}}{g} = \frac{1{,}666 \cdot 10^4}{9{,}81} \approx 1{,}699 \cdot 10^3,
+$$
+
+dakle približno $1{,}70 \cdot 10^3\ g$ (oko 1700 puta veće od zemljine gravitacije).
+
+Razlika tlakova između dna i vrha cijevi u rotirajućem fluidu jednaka je integralu radijalnog tlačnog gradijenta:
+
+$$
+\Delta p = \int_{r_v}^{r_d} \rho\omega^2 r\,\mathrm{d}r = \frac{1}{2}\rho\omega^2 (r_d^2 - r_v^2).
+$$
+
+Uvrštavanjem:
+
+$$
+\Delta p = \frac{1}{2} \cdot 1060 \cdot 418{,}9^2 \cdot (0{,}095^2 - 0{,}025^2).
+$$
+
+Računaju se redom $0{,}095^2 - 0{,}025^2 = 9{,}025 \cdot 10^{-3} - 6{,}25 \cdot 10^{-4} = 8{,}40 \cdot 10^{-3}\ \text{m}^2$ i $418{,}9^2 \approx 1{,}754 \cdot 10^5\ \text{rad}^2/\text{s}^2$:
+
+$$
+\Delta p = 0{,}5 \cdot 1060 \cdot 1{,}754 \cdot 10^5 \cdot 8{,}40 \cdot 10^{-3} \approx 7{,}81 \cdot 10^5\ \text{Pa}.
+$$
+
+Razlika tlakova zato iznosi otprilike
+
+$$
+\Delta p \approx 781\ \text{kPa} \approx 7{,}81\ \text{bar}.
+$$
+
+**Provjera i komentar**
+
+Centrifugalno polje od oko $1700\ g$ tipično je za odvajanje krvnih komponenti u kliničkim laboratorijima; pri tom polju eritrociti dosegnu dno cijevi u nekoliko minuta. Razlika tlakova od $7{,}8\ \text{bar}$ unutar same krvi pokazuje koliko su centrifugalna polja jača od običnog hidrostatičkog tlaka u uzorku ($\rho g \Delta r \approx 0{,}73\ \text{kPa}$, što je oko 1000 puta manje). Upravo zato se centrifuge koriste i u industriji separacije, gdje je gravitacijsko odvajanje presporo ili neefikasno. Pri dizajniranju cijevi za uzorak treba uzeti u obzir i konstrukcijsku otpornost cijevi na visok unutarnji tlak: pri ovako visokim ubrzanjima, neispravno zatvorena cijev može popustiti.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

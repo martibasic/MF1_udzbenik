@@ -1032,6 +1032,70 @@ Stvarni protok bit će manji zbog gubitaka na ulazu i trenju u propustu — tipi
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Pitot-statička sonda na bespilotnoj letjelici za mjerenje brzine leta &nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Bespilotne letjelice (dronovi) korištene u geodetskim, poljoprivrednim i inspekcijskim mjerenjima opremljene su Pitot-statičkom sondom za mjerenje vlastite brzine u odnosu na okolni zrak. Sonda mjeri razliku između stagnacijskog tlaka na čelu sonde i statičkog tlaka okolnog strujanja, iz čega se Bernoullijevom jednadžbom izračunava brzina leta.
+
+**Zadano**
+
+- Razlika izmjerenih tlakova: $\Delta p = p_{st} - p_{\infty} = 380\ \text{Pa}$
+- Gustoća zraka na visini leta od $500\ \text{m}$ pri temperaturi $12^\circ\text{C}$: $\rho = 1{,}115\ \text{kg/m}^3$
+- Sonda je orijentirana paralelno s pravcem leta
+- Promjer otvora sonde: $D_s = 5\ \text{mm}$
+- Kinematička viskoznost zraka: $\nu = 1{,}5 \cdot 10^{-5}\ \text{m}^2/\text{s}$
+
+**Traženo**
+
+1. Brzina leta letjelice prema očitanju sonde;
+2. Procjena: kako bi se promijenila izmjerena brzina pri letu u olujnim uvjetima ($\rho = 1{,}25\ \text{kg/m}^3$) uz isti $\Delta p$;
+3. Provjera režima strujanja oko sonde preko Reynoldsova broja.
+
+**Pretpostavke i model**
+
+Strujanje zraka oko sonde smatra se stacionarnim i nestlačivim (Machov broj $\ll 0{,}3$). Zanemaruje se viskozni efekt na samoj sondi, kao i utjecaj smjera vjetra koji nije paralelan s osi letjelice. Točka 1 odgovara nepotečenom strujanju daleko od sonde, a točka 2 stagnacijskoj točki na čelu sonde u kojoj se zrak zaustavlja ($v_2 = 0$). Leti se na konstantnoj visini, pa članovi geodetske visine otpadaju.
+
+**Rješenje**
+
+Bernoullijeva jednadžba između nepotečene struje i stagnacijske točke daje:
+
+$$
+p_{\infty} + \frac{\rho v^2}{2} = p_{st}.
+$$
+
+Iz toga slijedi izraz za brzinu leta:
+
+$$
+v = \sqrt{\frac{2\,\Delta p}{\rho}} = \sqrt{\frac{2 \cdot 380}{1{,}115}}.
+$$
+
+Računaju se redom $2 \cdot 380 = 760$ i $760/1{,}115 \approx 681{,}6$:
+
+$$
+v = \sqrt{681{,}6} \approx 26{,}1\ \text{m/s}.
+$$
+
+Pri letu u olujnim uvjetima, uz $\rho = 1{,}25\ \text{kg/m}^3$ i isti izmjereni $\Delta p$, brzina bi se preračunala na:
+
+$$
+v_o = \sqrt{\frac{2 \cdot 380}{1{,}25}} = \sqrt{608} \approx 24{,}7\ \text{m/s}.
+$$
+
+Razlika u izračunatoj brzini iznosi približno $1{,}4\ \text{m/s}$ ili $5{,}4\,\%$ — značajna pogreška ako se ne primjenjuje korekcija prema lokalnoj gustoći zraka.
+
+Reynoldsov broj oko sonde:
+
+$$
+Re_s = \frac{v\,D_s}{\nu} = \frac{26{,}1 \cdot 0{,}005}{1{,}5 \cdot 10^{-5}} \approx 8\,700.
+$$
+
+Vrijednost $Re_s$ od reda $10^4$ odgovara turbulentnom režimu strujanja oko sonde, što je povoljno za precizno Pitot-mjerenje jer stagnacijska točka ostaje stabilna.
+
+**Provjera i komentar**
+
+Brzina od $26{,}1\ \text{m/s}$ (približno $94\ \text{km/h}$) tipična je za komercijalne dronove srednje klase pri snimanju iz zraka i inspekciji infrastrukture. Promjena gustoće od oko $12\,\%$ koja se događa pri prelasku iz mirne atmosfere u olujnu utječe na izračun brzine za oko $5\,\%$, što za precizne misije nije prihvatljivo. Zato suvremeni dronovi opremljeni su i temperaturnim i tlačnim senzorom koji mjere uvjete okolnog zraka u realnom vremenu, a softver za upravljanje letom kontinuirano korigira izračun brzine iz $\Delta p$ prema trenutnoj gustoći. Pri vrlo niskim brzinama (manje od $5\ \text{m/s}$) Pitot-očitanja postaju nepouzdana jer $\Delta p$ pada ispod razine šuma senzora, pa se za male brzine koriste alternativne metode (ultrazvučne sonde ili optičko praćenje tla).
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

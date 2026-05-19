@@ -905,6 +905,69 @@ $$
 4. Ako bi vozač pumpao papučicom dok kočne pločice ne dodirnu disk, ukupni hod papučice morao bi po volumnoj bilanci pokriti hod svih četiriju kočnih cilindara: $A_M s_M = 2 A_f s_f + 2 A_r s_r$. Zato „mekana" papučica nakon kvara obično znači da je u sustav ušao zrak – stlačivi medij troši hod papučice prije nego što se uopće razvije tlak.
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Hidraulička stezna naprava na robotskoj liniji za montažu baterijskih modula električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U robotskoj proizvodnoj liniji za sklapanje litij-ionskih baterijskih modula električnog vozila, prije zavarivanja kontakata ćelija aktivira se sustav hidrauličkih stega koji točno pozicionira modul. Centralna pumpa razvija konstantan tlak koji se istodobno prenosi na više paralelnih steznih cilindara. Svi stezni cilindri su istog promjera jer moduli zahtijevaju jednoliko opterećenje po obodu radi sprječavanja deformacije ćelija.
+
+**Zadano**
+
+- Promjer pumpnog klipa: $d_p = 14\ \text{mm}$
+- Sila pogonskog motora na pumpni klip: $F_p = 420\ \text{N}$
+- Promjer svakog steznog cilindra: $d_s = 28\ \text{mm}$
+- Broj paralelnih stega: $n = 6$
+- Najveća dopuštena sila na jednoj baterijskoj ćeliji (radi sprječavanja oštećenja): $F_{dop} = 3{,}5\ \text{kN}$
+
+**Traženo**
+
+1. manometarski tlak u sustavu;
+2. sila stezanja jednog cilindra;
+3. ukupna sila stezanja na modulu;
+4. ostaje li sila po jednoj stezi unutar dopuštene vrijednosti $F_{dop}$.
+
+**Pretpostavke i model**
+
+Hidrauličko ulje smatra se nestlačivim, gubici u vodovima zanemarivi, svi cilindri leže približno na istoj razini. Sustav radi u stacionarnom stanju nakon što su sve stege dosegle krajnji položaj. Tlak koji razvije pumpa istodobno se prenosi na sve paralelne stezne cilindre.
+
+**Rješenje**
+
+Površina pumpnog klipa iznosi
+
+$$
+A_p = \frac{\pi d_p^2}{4} = \frac{\pi \cdot 0{,}014^2}{4} = 1{,}539 \cdot 10^{-4}\ \text{m}^2.
+$$
+
+Tlak u sustavu zato je
+
+$$
+p = \frac{F_p}{A_p} = \frac{420}{1{,}539 \cdot 10^{-4}} \approx 2{,}729 \cdot 10^6\ \text{Pa} \approx 2{,}73\ \text{MPa}.
+$$
+
+Površina pojedinog steznog cilindra iznosi
+
+$$
+A_s = \frac{\pi d_s^2}{4} = \frac{\pi \cdot 0{,}028^2}{4} = 6{,}158 \cdot 10^{-4}\ \text{m}^2.
+$$
+
+Sila stezanja jednog cilindra zato je
+
+$$
+F_s = p \cdot A_s = 2{,}729 \cdot 10^6 \cdot 6{,}158 \cdot 10^{-4} \approx 1{,}680\ \text{kN}.
+$$
+
+Kako sustav ima $n = 6$ paralelnih stega, ukupna sila stezanja na modulu iznosi
+
+$$
+F_{uk} = n \cdot F_s = 6 \cdot 1{,}680 \approx 10{,}08\ \text{kN}.
+$$
+
+Sila po jednoj stezi $F_s \approx 1{,}68\ \text{kN}$ ostaje znatno ispod dopuštene granice $F_{dop} = 3{,}5\ \text{kN}$, što potvrđuje da je tlak primjereno odabran za zaštitu baterijskih ćelija.
+
+**Provjera i komentar**
+
+Radni tlak od oko $2{,}7\ \text{MPa}$ tipičan je za hidrauličke stezne sustave u robotskoj montaži; razina je dovoljna za pouzdano pozicioniranje, a istovremeno dovoljno niska da se rizik prekoračenja sile ne pojavljuje pri umjerenim promjenama radnih uvjeta. Pojačanje sile po jednoj stezi iznosi $F_s/F_p = 1680/420 = 4$, što odgovara omjeru površina $(d_s/d_p)^2 = (28/14)^2 = 4$. Ukupno pojačanje, uzimajući u obzir sve stege, iznosi $F_{uk}/F_p = 10080/420 = 24$, što je upravo zbroj pojačanja po svim paralelnim cilindrima. Sigurnosni faktor u odnosu na dopuštenu silu po ćeliji iznosi $F_{dop}/F_s \approx 2{,}1$, što ostavlja prostor za blage varijacije u tlaku pumpe bez prekoračenja konstruktivne granice ćelije.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

@@ -1268,6 +1268,114 @@ Dionica 1 (šira) nosi $74\%$ protoka uz $7{,}5\ \text{m}$ pada, dionica 2 nosi 
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Mreža navodnjavanja u vertikalnoj hidroponskoj farmi &nbsp;<span class="mf1-level">T3</span></p>
+
+**Kontekst:** Vertikalne hidroponske farme u urbanim sredinama uzgajaju zelenu salatu i druge zelene kulture u uzastopnim katovima, pri čemu se hranjiva otopina cirkulira kroz paralelne grane različitih duljina i promjera. Svaka grana opslužuje različit broj biljaka, pa se geometrija pojedine grane bira tako da svaka biljka dobije približno jednaki protok unatoč razlikama u duljini cijevi do nje. Pumpa u podrumu farme dovodi otopinu iz centralnog spremnika.
+
+**Zadano**
+
+- Grana 1 (prvi kat, $80$ biljaka): $L_1 = 25\ \text{m}$, $D_1 = 18\ \text{mm}$
+- Grana 2 (drugi kat, $120$ biljaka): $L_2 = 35\ \text{m}$, $D_2 = 22\ \text{mm}$
+- Grana 3 (treći kat, $150$ biljaka): $L_3 = 45\ \text{m}$, $D_3 = 25\ \text{mm}$
+- Ukupni protok hranjive otopine: $Q = 8\ \text{L/min}$
+- Koeficijent trenja (aproksimacija razvijenog turbulentnog područja): $\lambda = 0{,}025$
+- Gustoća hranjive otopine: $\rho = 1\,010\ \text{kg/m}^3$
+- Lokalni gubici uračunati su u efektivnu duljinu, ostali se zanemaruju
+- Tri grane vežu iste ulazne i izlazne čvorove preko vertikalnog kolektora
+
+**Traženo**
+
+1. Hidraulički otpor pojedine grane $k_i$;
+2. Raspodjela protoka po granama;
+3. Zajednički pad ukupne energije između čvorova;
+4. Procjena prosječnog protoka po pojedinoj biljci u svakom katu.
+
+**Pretpostavke i model**
+
+Sve tri grane vežu iste ulazne i izlazne čvorove, pa između njih vrijedi uvjet jednakog pada ukupne energije. Strujanje je u svakoj grani turbulentno (provjerit će se preko brzina). Hranjiva otopina smatra se newtonskim fluidom slične gustoće kao voda. Lokalni gubici (priključci na pojedinu biljku, T-spojevi) sažeti su u zajedničkom koeficijentu $\lambda$, pa se Darcy-Weisbachova formula primjenjuje na efektivnu duljinu svake grane. Razlika visine između katova u ovom proračunu zanemaruje se jer se pumpa dimenzionira posebno za nju, a ovaj proračun obrađuje samo raspodjelu protoka kroz paralelne grane.
+
+**Rješenje**
+
+Hidraulički otpor pojedine grane definira se preko $h_w = k\,Q^2$, pri čemu je koeficijent:
+
+$$
+k_i = \frac{8\,\lambda\,L_i}{\pi^2\,g\,D_i^5}.
+$$
+
+Računaju se redom:
+
+$$
+k_1 = \frac{8 \cdot 0{,}025 \cdot 25}{\pi^2 \cdot 9{,}81 \cdot 0{,}018^5} \approx 2{,}73 \cdot 10^7\ \text{s}^2/\text{m}^5,
+$$
+
+$$
+k_2 = \frac{8 \cdot 0{,}025 \cdot 35}{\pi^2 \cdot 9{,}81 \cdot 0{,}022^5} \approx 1{,}40 \cdot 10^7\ \text{s}^2/\text{m}^5,
+$$
+
+$$
+k_3 = \frac{8 \cdot 0{,}025 \cdot 45}{\pi^2 \cdot 9{,}81 \cdot 0{,}025^5} \approx 0{,}95 \cdot 10^7\ \text{s}^2/\text{m}^5.
+$$
+
+Iz uvjeta jednakog pada $k_i Q_i^2 = h_w$ za sve grane slijedi $Q_i = \sqrt{h_w/k_i}$. Ukupni protok:
+
+$$
+Q = \sum_i Q_i = \sqrt{h_w}\,\sum_i \frac{1}{\sqrt{k_i}}.
+$$
+
+Računaju se $1/\sqrt{k_i}$:
+
+$$
+\frac{1}{\sqrt{k_1}} \approx 1{,}91 \cdot 10^{-4}, \quad
+\frac{1}{\sqrt{k_2}} \approx 2{,}67 \cdot 10^{-4}, \quad
+\frac{1}{\sqrt{k_3}} \approx 3{,}24 \cdot 10^{-4},
+$$
+
+s ukupnim zbrojem približno $7{,}82 \cdot 10^{-4}$. Pretvorba protoka u SI:
+
+$$
+Q = 8\ \text{L/min} = 1{,}333 \cdot 10^{-4}\ \text{m}^3/\text{s}.
+$$
+
+Odatle slijedi:
+
+$$
+\sqrt{h_w} = \frac{Q}{\sum_i 1/\sqrt{k_i}} = \frac{1{,}333 \cdot 10^{-4}}{7{,}82 \cdot 10^{-4}} \approx 0{,}170,
+$$
+
+$$
+h_w \approx 0{,}029\ \text{m}.
+$$
+
+Pojedinačni protoci po granama:
+
+$$
+Q_1 = 0{,}170 \cdot 1{,}91 \cdot 10^{-4} \approx 3{,}26 \cdot 10^{-5}\ \text{m}^3/\text{s} \approx 1{,}96\ \text{L/min},
+$$
+
+$$
+Q_2 = 0{,}170 \cdot 2{,}67 \cdot 10^{-4} \approx 4{,}55 \cdot 10^{-5}\ \text{m}^3/\text{s} \approx 2{,}73\ \text{L/min},
+$$
+
+$$
+Q_3 = 0{,}170 \cdot 3{,}24 \cdot 10^{-4} \approx 5{,}51 \cdot 10^{-5}\ \text{m}^3/\text{s} \approx 3{,}31\ \text{L/min}.
+$$
+
+Provjera ukupnog protoka: $1{,}96 + 2{,}73 + 3{,}31 = 8{,}00\ \text{L/min}$ ✓
+
+Prosječni protok po pojedinoj biljci u svakom katu:
+
+$$
+q_1 = \frac{Q_1}{80} \approx 0{,}0245\ \text{L/min}, \quad
+q_2 = \frac{Q_2}{120} \approx 0{,}0228\ \text{L/min}, \quad
+q_3 = \frac{Q_3}{150} \approx 0{,}0221\ \text{L/min}.
+$$
+
+**Provjera i komentar**
+
+Iako su grane geometrijski različite (različite duljine i promjeri), raspodjela protoka spontano se podešava prema uvjetu jednakog pada energije. Kraće i šire grane bi inače dobile prevelik dio protoka, ali su u ovom slučaju brojevi biljaka pažljivo usklađeni s geometrijom svake grane, pa svaka biljka prima približno $22\,\text{–}\,25\ \text{mL/min}$ — vrijednost karakteristična za NFT način uzgoja (engl. *nutrient film technique*). Zajednički pad energije od svega $2{,}9\ \text{cm}$ vodenog stupca pokazuje da gubici u paralelnim granama nisu kritični; dominantna potreba za snagom pumpe dolazi iz svladavanja visinskih razlika između katova i nesimetričnih lokalnih gubitaka na čvorovima. Vertikalne hidroponske farme upravo zato koriste tihu pumpu manje snage, ali kontinuiranog rada, čime se postiže energetska učinkovitost znatno veća od klasičnog tla-baziranog uzgoja.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

@@ -903,6 +903,72 @@ Sila $29{,}63\ \text{kN}$ je realna za klizna vrata tog gabarita. Hvatište $0{,
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Inspekcijski poklopac spremnika rashladnog medija u podatkovnom centru &nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Veliki podatkovni centri koriste centralni spremnik rashladnog medija (najčešće vode ili razrjeđene smjese glikola s vodom) iz kojeg se hladi sustav servera kroz zatvoreni vodeni krug. Spremnik je opremljen kružnim inspekcijskim poklopcem na bočnoj stijenci koji omogućuje vizualnu kontrolu i čišćenje. Konstruktor mora dimenzionirati vijke poklopca prema hidrostatičkom opterećenju u nominalnom radnom stanju.
+
+**Zadano**
+
+- Promjer kružnog poklopca: $D = 600\ \text{mm}$
+- Dubina središta poklopca ispod slobodne površine: $h_C = 2{,}40\ \text{m}$
+- Gustoća rashladnog medija (smjesa glikola i vode): $\rho = 1050\ \text{kg/m}^3$
+- Poklopac je okomito orijentiran
+
+**Traženo**
+
+1. Površina poklopca;
+2. Ukupna hidrostatička sila na poklopac;
+3. Položaj hvatišta sile mjereno od slobodne površine;
+4. Moment koji vijci moraju preuzimati u odnosu na težište poklopca.
+
+**Pretpostavke i model**
+
+Promatra se statičko stanje spremnika pri nominalnoj radnoj razini. Tlak na slobodnoj površini je atmosferski, pa se račun vodi u manometarskom tlaku. Aksijalni moment tromosti za kružni presjek iznosi $I_{xc} = \pi D^4 / 64$, primjenjivo za poklopac koji je okomito uronjen (kut nagiba prema vertikali jednak je nuli).
+
+**Rješenje**
+
+Površina poklopca iznosi
+
+$$
+A = \frac{\pi D^2}{4} = \frac{\pi \cdot 0{,}600^2}{4} \approx 0{,}2827\ \text{m}^2.
+$$
+
+Ukupna sila slijedi iz osnovne relacije za uronjenu ravnu plohu:
+
+$$
+F = \rho g A h_C = 1050 \cdot 9{,}81 \cdot 0{,}2827 \cdot 2{,}40 \approx 6{,}988\ \text{kN}.
+$$
+
+Aksijalni moment tromosti za kružni presjek:
+
+$$
+I_{xc} = \frac{\pi D^4}{64} = \frac{\pi \cdot 0{,}600^4}{64} \approx 6{,}362 \cdot 10^{-3}\ \text{m}^4.
+$$
+
+Položaj hvatišta mjereno od slobodne površine (okomita ploha, $\cos\alpha = 1$):
+
+$$
+y_{CP} = h_C + \frac{I_{xc}}{A\,h_C} = 2{,}40 + \frac{6{,}362 \cdot 10^{-3}}{0{,}2827 \cdot 2{,}40} \approx 2{,}409\ \text{m}.
+$$
+
+Spuštanje hvatišta ispod težišta poklopca iznosi
+
+$$
+e = y_{CP} - h_C \approx 9{,}4\ \text{mm}.
+$$
+
+Moment u odnosu na težište poklopca koji moraju preuzimati vijci (po cijelom obodu) iznosi
+
+$$
+M = F \cdot e = 6{,}988 \cdot 10^3 \cdot 9{,}4 \cdot 10^{-3} \approx 65{,}7\ \text{N\,m}.
+$$
+
+**Provjera i komentar**
+
+Hidrostatička sila od približno $7\ \text{kN}$ relativno je skromna za poklopac promjera $0{,}6\ \text{m}$, što odgovara umjerenoj dubini ($2{,}4\ \text{m}$) i tipičnoj radnoj gustoći rashladnog medija (smjesa glikola i vode malo je gušća od čiste vode zbog dodatka antifriza). Spuštanje hvatišta ispod težišta poklopca od svega $9{,}4\ \text{mm}$ pokazuje da je pri ovakvoj dubini hidrostatički gradijent po visini poklopca relativno mali — kad bi središte bilo na $h_C = 0{,}5\ \text{m}$, spuštanje bi bilo gotovo pet puta veće. Moment od $65{,}7\ \text{N\,m}$ koji vijci moraju preuzeti uglavnom je značajan za dimenzioniranje brtve i raspodjelu sile po vijcima oboda — premali broj vijaka može dovesti do lokalnog mikropropuštanja u gornjem dijelu poklopca, gdje je pritisak najmanji, ali se u uvjetima rashladnih krugova s kondicijom čistoće traži apsolutna nepropusnost.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

@@ -1000,6 +1000,62 @@ $$
 4. Brodogradnja koristi ovaj uvid pri "balansiranom" punjenju tankova: kad se pravilno balansira slatka voda u unutarnjim tankovima protiv morske vode izvana, stijenke tankova doživljavaju iznenađujuće malu neto razliku tlaka. Tanker s **dvostrukim trupom** koristi isti princip – prostor između trupova puni se balastnom vodom da neutralizira hidrostatski "pljusak" mora.
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – IoT tlačni senzor za otkrivanje propuštanja u distribucijskoj mreži vodoopskrbe &nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U modernim gradskim vodoopskrbnim mrežama postavljaju se IoT tlačni senzori na karakterističnim čvorovima distribucijskog sustava. Senzori bežično prenose očitanja u centralnu nadzornu službu, koja iz odstupanja u odnosu na očekivanu hidrostatičku raspodjelu rano otkriva propuštanja, prekomjernu potrošnju ili kvarove. Promatraju se dva čvora distribucijske mreže, jedan u nižem dijelu grada i jedan u višem.
+
+**Zadano**
+
+- Manometarski tlak na nižem čvoru `A`: $p_{M,A} = 5{,}20\ \text{bar} = 520\ \text{kPa}$
+- Razlika visine između čvorova: $\Delta z = z_B - z_A = 38\ \text{m}$ ($B$ je viši)
+- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
+- Atmosferski tlak: $p_{atm} = 101{,}3\ \text{kPa}$
+- Mreža u stanju nominalne potrošnje, strujanje zanemarivo (čitanje se vrši u doba mirovanja)
+
+**Traženo**
+
+1. Očekivani manometarski tlak na višem čvoru `B`;
+2. Apsolutni tlak na čvoru `B`;
+3. Procjena: ako bi senzor na `A` umjesto $5{,}20\ \text{bar}$ pokazao $4{,}70\ \text{bar}$, što to znači za stanje mreže?
+
+**Pretpostavke i model**
+
+Promatra se kvazistatičko stanje mreže u kojem se zanemaruju lokalni gubici trenja jer su brzine strujanja niske (noćno mjerenje). Voda se smatra nestlačivom, gustoća se ne mijenja s visinom. Sav put između čvorova `A` i `B` prolazi kroz istu povezanu vodenu masu bez prelaza preko atmosfere.
+
+**Rješenje**
+
+Manometarski tlak na višem čvoru slijedi iz hidrostatske bilance po putu od `A` prema `B`:
+
+$$
+p_{M,B} = p_{M,A} - \rho g \Delta z = 520 \cdot 10^3 - 998 \cdot 9{,}81 \cdot 38.
+$$
+
+Drugi član iznosi $998 \cdot 9{,}81 \cdot 38 \approx 372{,}1 \cdot 10^3\ \text{Pa}$, pa je
+
+$$
+p_{M,B} \approx 520 - 372{,}1 = 147{,}9\ \text{kPa} \approx 1{,}48\ \text{bar}.
+$$
+
+Apsolutni tlak na `B` iznosi
+
+$$
+p_{aps,B} = p_{M,B} + p_{atm} = 147{,}9 + 101{,}3 = 249{,}2\ \text{kPa}.
+$$
+
+Ako bi senzor na `A` izvijestio o tlaku od $4{,}70\ \text{bar}$ umjesto očekivanih $5{,}20\ \text{bar}$, pad od $\Delta p = 50\ \text{kPa}$ predstavlja gubitak hidrostatičke visine od
+
+$$
+\Delta h = \frac{\Delta p}{\rho g} = \frac{50 \cdot 10^3}{998 \cdot 9{,}81} \approx 5{,}11\ \text{m}.
+$$
+
+Ovakav pad tlaka u stanju mirovanja mreže najčešće upućuje na propuštanje uzvodno od mjernog mjesta — bilo zbog mikropukotina, oštećene spojnice ili otvorenog ventila u dijelu mreže koji ne bi smio biti aktivan u noćnom režimu.
+
+**Provjera i komentar**
+
+Hidrostatička razlika tlakova od $372\ \text{kPa}$ između čvorova razmaknutih $38\ \text{m}$ po visini odgovara očekivanju da svaki metar razlike u visini donosi oko $9{,}81\ \text{kPa}$ promjene. Manometarski tlak na `B` od oko $1{,}5\ \text{bar}$ ostaje dovoljan za izravnu opskrbu zgrade visine do četiri kata. Pri sustavnom praćenju IoT mreže odstupanja od očekivanog tlaka u rangu nekoliko desetaka kilopaskala obično se filtriraju kao šum, dok stabilni pad veći od $50\ \text{kPa}$ izaziva automatski alarm službe održavanja. U usporedbi s povijesnim načinom otkrivanja propuštanja, koji se oslanjao na vizualni nadzor ili prijavu korisnika, IoT senzorska mreža smanjuje vrijeme otkrivanja s nekoliko dana na nekoliko minuta.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

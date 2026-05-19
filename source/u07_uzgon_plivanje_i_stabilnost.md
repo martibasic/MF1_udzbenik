@@ -1239,6 +1239,70 @@ Srednji gaz $16{,}7\ \text{cm}$ od visine boka $60\ \text{cm}$ — ponton ima do
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Plutajući vjetroagregat tipa cilindrične plovne osnove &nbsp;<span class="mf1-level">T3</span></p>
+
+**Kontekst:** Plutajuće priobalne vjetroelektrane (engl. *floating offshore wind*) koriste se za iskorištavanje vjetra na dubokim morima, gdje fiksne temeljne konstrukcije nisu ekonomski opravdane. Tip plovne osnove koji se ovdje promatra je *spar-buoy* — dugi vertikalni cilindar koji nosi turbinu na vrhu, a u donjem dijelu sadrži balast koji daje težinu potrebnu za stabilnost. Tako oblikovana konstrukcija ponaša se kao plivajuće tijelo s vrlo visokim metacentrom.
+
+**Zadano**
+
+- Ukupna masa konstrukcije s turbinom: $m_{uk} = 1\,100\ \text{t} = 1{,}10 \cdot 10^6\ \text{kg}$
+- Promjer cilindra plovne osnove: $D = 9{,}0\ \text{m}$
+- Ukupna duljina cilindra: $H = 95\ \text{m}$
+- Gustoća morske vode: $\rho_{m} = 1\,025\ \text{kg/m}^3$
+- Plovna osnova orijentirana vertikalno, turbina iznad razine mora
+
+**Traženo**
+
+1. Površina poprečnog presjeka plovne osnove;
+2. Istisnuti volumen u ravnoteži;
+3. Gaz (dubina urona) plovne osnove;
+4. Visina nadvodnog dijela (rezerva slobodnog boka).
+
+**Pretpostavke i model**
+
+Promatra se ravnoteža u mirnoj vodi, bez utjecaja vjetra na rotor i bez valova. Promjer cilindra je konstantan po visini; masa je raspoređena tako da je težište osnove duboko pod razinom mora, čime se postiže pasivna stabilnost. Atmosferski tlak djeluje s obje strane plovne osnove, pa se njegov doprinos poništava.
+
+**Rješenje**
+
+Površina poprečnog presjeka iznosi
+
+$$
+A = \frac{\pi D^2}{4} = \frac{\pi \cdot 9{,}0^2}{4} \approx 63{,}62\ \text{m}^2.
+$$
+
+Iz Arhimedovog zakona istisnuti volumen u ravnoteži jednak je masi konstrukcije podijeljenoj s gustoćom mora:
+
+$$
+V_{ist} = \frac{m_{uk}}{\rho_{m}} = \frac{1{,}10 \cdot 10^6}{1\,025} \approx 1\,073{,}2\ \text{m}^3.
+$$
+
+Gaz plovne osnove (dubina urona cilindra) slijedi iz omjera istisnutog volumena i površine presjeka:
+
+$$
+d = \frac{V_{ist}}{A} = \frac{1\,073{,}2}{63{,}62} \approx 16{,}87\ \text{m}.
+$$
+
+Visina nadvodnog dijela iznosi
+
+$$
+H - d = 95 - 16{,}87 \approx 78{,}13\ \text{m}.
+$$
+
+Promjena mase za $\pm 5\,\%$ (prirast od taloga, ledenice ili korozije; gubitak od ispražnjenog balasta) mijenja gaz na
+
+$$
+d_{+5\%} \approx \frac{1{,}155 \cdot 10^6}{1\,025 \cdot 63{,}62} \approx 17{,}71\ \text{m}, \qquad
+d_{-5\%} \approx 16{,}02\ \text{m}.
+$$
+
+Apsolutna promjena gaza zato je manja od $0{,}9\ \text{m}$, što ne ugrožava plovnost niti sigurnu visinu rotora iznad mora.
+
+**Provjera i komentar**
+
+Gaz od oko $17\ \text{m}$ tipičan je za stvarne *spar-buoy* konstrukcije priobalnih plutajućih vjetroagregata; visoka nadvodna duljina od $78\ \text{m}$ omogućuje smještaj kupole i rotora dovoljno visoko iznad mora da utjecaj valova na lopatice bude zanemariv. Cilindrična geometrija osnove daje vrlo malu površinu na razini mora, pa horizontalni valni utjecaj ostaje umjeren u odnosu na alternativnu polu-podvodnu strukturu (engl. *semi-submersible*). Stabilnost konstrukcije osigurava se dubokim balastom u donjem dijelu cilindra, čime težište cijele konstrukcije ostaje znatno ispod centra uzgona, a što daje pozitivnu metacentarsku visinu i pasivnu vertikalnu povratnu silu pri svim radnim nagibima. Kod stvarnih sustava plovna osnova dodatno se pridržava lančanim ili kabelskim sidrenjem za morsko dno, čija je uloga ograničenje horizontalnog pomaka, ali ne i nošenje težine konstrukcije — tu ulogu u potpunosti obavlja Arhimedov zakon.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

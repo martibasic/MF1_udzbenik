@@ -1456,6 +1456,123 @@ Lokalni gubici (6,5) dominiraju nad linijskim (4,1) i ovdje — koljena u gravit
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Tekućinsko hlađenje servera u podatkovnom centru — gubici u distribucijskom krugu &nbsp;<span class="mf1-level">T3</span></p>
+
+**Kontekst:** Veliki podatkovni centri sve češće koriste izravno tekućinsko hlađenje (engl. *direct liquid cooling*) za odvođenje topline s procesora; voda iz vanjskog rashladnog uređaja kruži kroz distribucijsku liniju u serverskoj sali i grana se na više paralelnih dionica, po jedan ormar (engl. *rack*). Pri projektiranju takvog sustava ključno je procijeniti ukupne hidrauličke gubitke kako bi se ispravno dimenzionirala crpka.
+
+**Zadano**
+
+- Glavna distribucijska linija: $L_1 = 80\ \text{m}$, $D_1 = 65\ \text{mm}$
+- Pojedinačna dionica do jednog ormara: $L_2 = 8\ \text{m}$, $d_2 = 25\ \text{mm}$
+- Broj paralelnih ormara: $n = 12$
+- Ukupni protok rashladne vode: $Q = 12\ \text{L/s}$
+- Kinematička viskoznost vode: $\nu = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$
+- Koeficijent trenja (procjenjeno iz Moodyjevog dijagrama za navedene režime): $\lambda = 0{,}025$
+- Zbroj lokalnih koeficijenata gubitka u jednoj dionici (ulaz, izlaz, dva koljena, ventil): $\sum\xi = 4{,}5$
+- Povratni vod ima istu duljinu i promjer kao glavna linija
+- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
+
+**Traženo**
+
+1. Srednja brzina i Reynoldsov broj u glavnoj liniji;
+2. Srednja brzina i Reynoldsov broj u pojedinačnoj dionici;
+3. Ukupni gubitak energije u sustavu (dovod + jedna dionica + povrat);
+4. Procjena potrebne snage cirkulacijske crpke uz mehaničku učinkovitost $\eta = 0{,}70$.
+
+**Pretpostavke i model**
+
+Strujanje je u svakoj dionici razvijeno turbulentno (provjerava se nakon računa Reynoldsova broja). Voda se smatra nestlačivom, gubici se rastavljaju na linijske i lokalne, a paralelne dionice nose jednaki udio ukupnog protoka jer su geometrijski jednake. Promjena visine između ulaza i izlaza sustava zanemaruje se (zatvoreni krug u istoj razini). Cijela rashladna voda prolazi kroz glavnu liniju, zatim se jednoliko dijeli u $n$ paralelnih dionica, pa se objedinjuje natrag u povratni vod.
+
+**Rješenje**
+
+Pretvorba protoka:
+
+$$
+Q = 12\ \text{L/s} = 0{,}012\ \text{m}^3/\text{s}.
+$$
+
+Površina i brzina u glavnoj liniji:
+
+$$
+A_1 = \frac{\pi D_1^2}{4} = \frac{\pi \cdot 0{,}065^2}{4} \approx 3{,}318 \cdot 10^{-3}\ \text{m}^2,
+$$
+
+$$
+v_1 = \frac{Q}{A_1} = \frac{0{,}012}{3{,}318 \cdot 10^{-3}} \approx 3{,}617\ \text{m/s}.
+$$
+
+Reynoldsov broj u glavnoj liniji:
+
+$$
+Re_1 = \frac{v_1 D_1}{\nu} = \frac{3{,}617 \cdot 0{,}065}{1 \cdot 10^{-6}} \approx 2{,}35 \cdot 10^5,
+$$
+
+što je daleko unutar razvijenog turbulentnog područja.
+
+Protok kroz jednu paralelnu dionicu:
+
+$$
+Q_2 = \frac{Q}{n} = \frac{0{,}012}{12} = 1{,}00 \cdot 10^{-3}\ \text{m}^3/\text{s}.
+$$
+
+Površina i brzina u jednoj dionici:
+
+$$
+A_2 = \frac{\pi d_2^2}{4} = \frac{\pi \cdot 0{,}025^2}{4} \approx 4{,}909 \cdot 10^{-4}\ \text{m}^2,
+$$
+
+$$
+v_2 = \frac{Q_2}{A_2} = \frac{1{,}00 \cdot 10^{-3}}{4{,}909 \cdot 10^{-4}} \approx 2{,}037\ \text{m/s},
+$$
+
+$$
+Re_2 = \frac{v_2 d_2}{\nu} \approx 5{,}09 \cdot 10^4,
+$$
+
+također turbulentno.
+
+Linijski gubitak u glavnoj liniji:
+
+$$
+h_{l,1} = \lambda\,\frac{L_1}{D_1}\,\frac{v_1^2}{2g} = 0{,}025 \cdot \frac{80}{0{,}065} \cdot \frac{3{,}617^2}{2 \cdot 9{,}81}.
+$$
+
+Računaju se redom $L_1/D_1 = 1\,231$ i $v_1^2/(2g) = 13{,}08/19{,}62 \approx 0{,}667\ \text{m}$:
+
+$$
+h_{l,1} = 0{,}025 \cdot 1\,231 \cdot 0{,}667 \approx 20{,}5\ \text{m}.
+$$
+
+Gubitak u jednoj paralelnoj dionici (linijski + lokalni):
+
+$$
+h_{w,2} = \left(\lambda\,\frac{L_2}{d_2} + \sum\xi\right)\frac{v_2^2}{2g}.
+$$
+
+Uz $\lambda L_2/d_2 = 0{,}025 \cdot 8 / 0{,}025 = 8{,}0$ i $v_2^2/(2g) \approx 0{,}212\ \text{m}$:
+
+$$
+h_{w,2} = (8{,}0 + 4{,}5) \cdot 0{,}212 \approx 2{,}65\ \text{m}.
+$$
+
+Ukupni gubitak energije u zatvorenom krugu (dovod + dionica + povrat, gdje povratni vod ima istu strukturu kao dovod):
+
+$$
+h_w = 2 h_{l,1} + h_{w,2} \approx 2 \cdot 20{,}5 + 2{,}65 \approx 43{,}7\ \text{m}.
+$$
+
+Snaga crpke uz učinkovitost $\eta = 0{,}70$:
+
+$$
+P = \frac{\rho g Q h_w}{\eta} = \frac{998 \cdot 9{,}81 \cdot 0{,}012 \cdot 43{,}7}{0{,}70} \approx 7{,}33\ \text{kW}.
+$$
+
+**Provjera i komentar**
+
+Ukupni gubitak od oko $44\ \text{m}$ vodenog stupca odgovara padu tlaka od približno $4{,}3\ \text{bara}$, što je za zatvoreni rashladni krug podatkovnog centra realna vrijednost. Snaga crpke od približno $7{,}3\ \text{kW}$ u kontinuiranom radu predstavlja godišnju potrošnju oko $64\,\text{MWh}$ samo za cirkulaciju rashladnog medija — značajan dio operativnih troškova centra. Glavna distribucijska linija doprinosi gotovo $94\,\%$ ukupnog pada tlaka, što je tipično za sustave gdje pojedinačne dionice prema ormarima nose mali pojedinačni protok. Optimizacija sustava zato se najčešće provodi povećanjem promjera glavne linije (čime se $v_1$, a time i kvadratno $h_{l,1}$, znatno smanjuje), a ne intervencijama na paralelnim dionicama. Suvremeni inženjerski pristup koristi kombinaciju CFD analize i mrežnih hidrauličkih modela za projektiranje takvih sustava prije fizičke izvedbe.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |

@@ -826,6 +826,67 @@ Visina $18{,}8\ \text{cm}$ dobro odgovara tipičnoj vlažnoj liniji koja se vidi
 
 :::
 
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer – Mikrofluidički kanal u lab-on-chip uređaju za dijagnostiku &nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U dijagnostičkim uređajima vrste *lab-on-chip* (sve aktivnosti laboratorija sažete su na čipu veličine kovanice) uzorak krvi ili sline dovodi se u mikrofluidičke kanale isključivo kapilarnim djelovanjem, bez vanjske pumpe. Kanal je izrađen od polimera (najčešće PDMS), promjera reda nekoliko desetaka mikrometara. Kapilarno usisavanje koristi se kao temeljni mehanizam za precizno doziranje vrlo malih volumena.
+
+**Zadano**
+
+- Promjer kapilarnog kanala: $d = 60\ \mu\text{m}$
+- Površinska napetost uzorka (vodena otopina sa surfaktantom): $\sigma = 0{,}055\ \text{N/m}$
+- Kontaktni kut tekućine na PDMS materijalu: $\theta = 25^\circ$
+- Gustoća uzorka (krv razrijeđena s reagensom): $\rho = 1010\ \text{kg/m}^3$
+
+**Traženo**
+
+1. Maksimalna ravnotežna visina kapilarnog uspona;
+2. Razlika tlakova na meniskusu prema Young-Laplaceovu zakonu;
+3. Učinak hidrofobnog premaza kanala (promjena kontaktnog kuta na $\theta = 110^\circ$).
+
+**Pretpostavke i model**
+
+Mikrofluidički kanal je vertikalno orijentiran, kontaktni kut je konstantan duž stijenke, gravitacijsko polje je standardno. Promatra se ravnotežno stanje (Lucas-Washburnova kinetika punjenja zanemaruje se jer je interes na konačnoj visini). Tekućina se aproksimira jednofaznim newtonskim fluidom.
+
+**Rješenje**
+
+Ravnotežna visina kapilarnog uspona slijedi iz uvjeta ravnoteže sile površinske napetosti i težine stupca:
+
+$$
+h = \frac{4\sigma\cos\theta}{\rho g d} = \frac{4 \cdot 0{,}055 \cdot \cos 25^\circ}{1010 \cdot 9{,}81 \cdot 60 \cdot 10^{-6}}.
+$$
+
+Uvrštavanjem $\cos 25^\circ \approx 0{,}906$:
+
+$$
+h = \frac{4 \cdot 0{,}055 \cdot 0{,}906}{1010 \cdot 9{,}81 \cdot 6 \cdot 10^{-5}} = \frac{0{,}1993}{0{,}5945} \approx 0{,}335\ \text{m}.
+$$
+
+Dakle visina kapilarnog uspona iznosi približno
+
+$$
+h \approx 33{,}5\ \text{cm}.
+$$
+
+Razlika tlakova na meniskusu prema Young-Laplaceovu zakonu za kružni presjek:
+
+$$
+\Delta p = \frac{4\sigma\cos\theta}{d} = \frac{4 \cdot 0{,}055 \cdot 0{,}906}{60 \cdot 10^{-6}} \approx 3{,}32 \cdot 10^3\ \text{Pa} \approx 3{,}32\ \text{kPa}.
+$$
+
+Pri hidrofobnom premazu kanala ($\theta = 110^\circ$) vrijedi $\cos 110^\circ \approx -0{,}342$, pa rezultat postaje negativan:
+
+$$
+h_{hidrofobno} = \frac{4 \cdot 0{,}055 \cdot (-0{,}342)}{1010 \cdot 9{,}81 \cdot 6 \cdot 10^{-5}} \approx -0{,}127\ \text{m}.
+$$
+
+Negativna vrijednost znači da tekućina ne ulazi u kapilaru, nego se povlači — što se u praksi koristi za izgradnju mikrofluidičkih ventila.
+
+**Provjera i komentar**
+
+Ravnotežna visina od oko $33{,}5\ \text{cm}$ daleko premašuje stvarne dimenzije lab-on-chip uređaja (tipično nekoliko centimetara), što potvrđuje da kapilarno djelovanje pouzdano dovršava punjenje kanala bez potrebe za vanjskim pogonom. Tlačni skok od $3{,}3\ \text{kPa}$ na meniskusu predstavlja okvirno onaj iznos koji konstrukcija ulaznih spojnica mora podnositi bez propuštanja. Mogućnost obrnutog ponašanja pri hidrofobnom premazu pokazuje zašto se selektivno mijenjanje kontaktnog kuta po duljini kanala koristi za izgradnju pasivnih ventila i preusmjerivača u modernim mikrofluidičkim uređajima.
+:::
+
 ## Usporedna tablica: strojarstvo i građevinarstvo
 
 | Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |
