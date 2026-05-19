@@ -116,6 +116,26 @@ Na toj se osnovi zatim grade reakcija nosača, snaga na pokretnim lopaticama i m
 Pokretne lopatice i potisak nisu školski dodatak, nego jezgra rada Peltonova kola, vodomlaznog pogona, mlaznih čistača i svake ispitne glave koja skreće mlaz radi sile ili momenta. U strojarstvu i brodogradnji isti račun odlučuje koliko snage rotor stvarno prima, koliki potisak ostaje na nosaču i kako izbor izlaznog kuta mijenja korisni učinak stroja.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- zakon količine gibanja iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span>;
+- pojam relativne i apsolutne brzine, vektor brzine i njegove komponente;
+- kinematika kružnog gibanja, kutna i obodna brzina;
+- pojam mehaničkog rada i snage u rotacijskom gibanju.
+
+**Ishodi učenja:**
+
+- razlikovati apsolutnu, relativnu i obodnu brzinu te ih ispravno kombinirati u trokutima brzina;
+- izračunati silu i snagu koju fluid predaje pokretnoj lopatici;
+- odrediti optimalnu obodnu brzinu za maksimalan korisni rad rotora;
+- primijeniti istu logiku količine gibanja na potisak (vodomlazni pogoni, sustavi reakcijskog tipa).
+
+**Procijenjeno vrijeme:** 6–7 sati za teoriju i izvode, 4 sata za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Kad mlaz promijeni smjer ili iznos brzine, mora postojati sila koja je uzrokovala tu promjenu količine gibanja. U stacionarnom kontrolnom volumenu osnovni zapis je
@@ -233,6 +253,16 @@ $$
 Isti zakon zato vodi i Peltonov rotor i potisni sustav: u prvom slučaju fluid gubi korisnu tangencijalnu količinu gibanja i stroj prima rad, a u drugom slučaju fluid dobiva izlazni impuls i platforma prima uzgon ili pogon. Nova fizika nije u drugoj formuli, nego u tome tko preuzima reakciju i u kojem se referentnom okviru čita tok.
 
 To je pravi strojarski smisao <span class="mf1-ch-ref"><span class="mf1-ch-code">U12</span><span class="mf1-ch-title">Pokretne lopatice i potisak</span></span>. Na Peltonovu kolu loš odabir obodne brzine odmah smanjuje moment i snagu generatora. Na vodilici ili ispitnoj glavi pogrešno pročitan izlazni vektor znači pogrešnu reakciju nosača. Na vodomlaznome pogonu, mlaznoj platformi ili servisnoj mlaznici za hidrodinamsko čišćenje ista matematika pokazuje hoće li sustav ostati na mjestu, ubrzati ili ostati bez rezerve potiska.
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Papirna vjetrenjača i mlaz iz slamke</p>
+
+Iz komada papira izreže se i savije jednostavna četverokraka vjetrenjača (osnovni dječji model — kvadratni list papira presjeka približno $10\ \text{cm}$, izrezan po dijagonalama gotovo do središta, krakovi savijeni i pričvršćeni pribadačom uz štapić). Slamkom za piće puše se zrak na lopatice vjetrenjače pod različitim kutovima i s različite udaljenosti.
+
+Opaža se: pri puhanju paralelno s osi vjetrenjače rotacija je sporija; pri puhanju pod određenim kutom (oko $30$ do $45^\circ$ od osi) rotacija postaje znatno brža. Pri puhanju u smjeru ravno suprotnom od skretanja lopatica vjetrenjača usporava ili miruje.
+
+**Veza s teorijom:** rotacija vjetrenjače proizlazi iz tangencijalne komponente sile na lopaticu, koja prema zakonu količine gibanja ovisi o razlici tangencijalnih brzina ulazne i izlazne struje. Kutom puhanja zapravo se mijenja kut između relativne i obodne brzine, što izravno utječe na snagu predanu lopatici. Iz iste se logike izvode dijagrami trokuta brzina u Peltonovoj i drugim turbinama.
+:::
 
 ## Riješeni primjeri
 
@@ -1572,6 +1602,40 @@ Brzina protoka zraka kroz disk od oko $6{,}76\ \text{m/s}$ tipična je za male d
 | Snaga $P = F_t u$ | Dimenzioniranje rotorske snage hidroagregate | Provjera korisne snage turbine male HE |
 | Potisak mlaza $F = \dot{m}v$ | Mlazni pogon broda; reakcijska sapnica mlaznog stroja | Hidromlazni pogon plovnog bagera; mlazna platforma za čišćenje |
 | Kut lopatice $\beta_2$ | Optimizacija Peltonovog rotora; konstruiranje difuzornih stupnjeva | Odabir kuta lopatica Kaplanove turbine za promjenljivi protok |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. Po čemu se razlikuju apsolutna, relativna i obodna brzina u problemu pokretne lopatice?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Apsolutna brzina $\vec{c}$ promatra se u nepomičnom (zemaljskom) okviru. Obodna brzina $\vec{u}$ je brzina same lopatice u istom okviru. Relativna brzina $\vec{w} = \vec{c} - \vec{u}$ je brzina fluida u okviru koji se giba s lopaticom. Maseni protok kroz lopaticu računa se iz relativne brzine, a promjena količine gibanja u apsolutnim brzinama.
+:::
+
+2. Zašto se maksimalna snaga na Peltonovoj lopatici postiže pri obodnoj brzini koja je polovica apsolutne brzine mlaza?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Iz izraza za snagu $P = \rho Q (c_1 - u) u (1 - \cos\beta_2)$ slijedi da derivacija po $u$ pada na nulu pri $u = c_1/2$. Pri toj vrijednosti umnožak $(c_1-u)u$ je maksimalan, pa je i snaga maksimalna. Pri $u = 0$ ili $u = c_1$ snaga je nula.
+:::
+
+3. Što se događa s mlazom iza Peltonove lopatice pri optimalnoj obodnoj brzini i idealnom izlaznom kutu od $180^\circ$?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Apsolutna izlazna brzina mlaza je teoretski nula — sva kinetička energija mlaza predana je rotoru. U praksi se koristi $\beta_2 \approx 165^\circ$ kako mlaz nakon izlaska iz lopatice ne bi udario u sljedeću lopaticu, što ograničava korisni rad na oko $95$ do $97\,\%$ teorijskog maksimuma.
+:::
+
+4. Vrijedi li isti pristup (trokut brzina, relativna brzina) i kod aksijalnih lopatica vjetroagregata ili samo kod hidroturbina?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Vrijedi za sve rotirajuće lopaticne strojeve gdje fluid mijenja smjer ili iznos brzine u relativnom okviru lopatice. Vjetroagregati, hidroturbine, ventilatori, kompresori i propeleri zrakoplova svi koriste analognu kinematiku trokuta brzina; razlikuju se samo radnim medijem, smjerom prijenosa energije (od fluida na lopaticu ili obrnuto) i konkretnim oblikom lopatica.
+:::
+:::
 
 ## Zadaci za vježbu
 

@@ -12,6 +12,26 @@ Cilj nije samo zapisati relaciju za tlak, nego učvrstiti radni postupak koji se
 Ista hidrostatska logika čita se na piezometru uz spremnik, na U-manometru ventilacijskog voda i na diferencijalnom manometru koji provjerava pad tlaka preko filtra ili izmjenjivača topline. U građevini i brodogradnji ta se slika širi na tlak vode po dubini u spremnicima, kesonima i balastnim tankovima, pa je manometrija ovdje instrumentacijski nastavak hidrostatike, a ne novo pravilo.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- definicija tlaka i razlikovanje sile od tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U01</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>;
+- diferencijalni i integralni račun jedne varijable (Matematika I);
+- pojam gradijenta i derivacije po koordinati;
+- razumijevanje gravitacijskog polja kao homogenog ubrzanja.
+
+**Ishodi učenja:**
+
+- izvesti diferencijalnu jednadžbu hidrostatike $\mathrm{d}p/\mathrm{d}z = -\rho g$ i njezin integralni oblik za konstantnu gustoću;
+- pratiti tlak kroz sustav od više povezanih fluida bez gubljenja predznaka;
+- razlikovati apsolutni, manometarski i vakuumski tlak te ih međusobno povezati;
+- čitati i postaviti U-manometar i diferencijalni manometar.
+
+**Procijenjeno vrijeme:** 6–7 sati za teoriju i izvode, 4 sata za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Fluid u mirovanju ne može nositi smična naprezanja povezana sa strujanjem, ali i dalje nosi raspodjelu normalnog naprezanja, odnosno tlaka. Svaki sloj fluida mora držati težinu slojeva iznad sebe, pa tlak raste s dubinom.
@@ -165,6 +185,18 @@ pa za podtlak vrijedi i relacija
 $$p_{vak} = p_{atm} - p_{aps} = -p_{man} \qquad (p_{man}<0)$$
 
 Ako je $p_{man} < 0$, to ne znači da je tlak "negativan" u apsolutnom smislu, nego da je sustav pod podtlakom u odnosu na okolinu.
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Improvizirani U-manometar od slamke</p>
+
+Prozirna plastična slamka savija se u oblik slova U tako da oba kraja stoje okomito (može se učvrstiti ljepljivom trakom na stol ili karton). U U-cijev se ulijeva voda s nekoliko kapljica boje za hranu dok se obje strane ne ispune do polovice. Provjerava se da su razine u obje strane jednake (uvjet hidrostatičke ravnoteže pri istom tlaku iznad obje slobodne površine).
+
+Zatim se s vrha jedne strane ulije manja količina jestivog ulja (gustoća približno $920\ \text{kg/m}^3$). Razine u dvjema stranama postaju različite — strana s uljem ima višu ukupnu razinu (jer dio stupca nadomješta lakši fluid), ali tlak na dnu cijevi u obje strane mora biti jednak.
+
+Mjerenjem razlika visina i poznavanjem gustoća može se provjeriti hidrostatička jednadžba: razlika hidrostatičkih doprinosa u dvjema stranama mora biti nula.
+
+**Veza s teorijom:** ovo je upravo princip rada svakog manometra s dva fluida različitih gustoća. Pri kvantitativnom mjerenju s preciznim ravnalom moguće je izvesti gustoću jednoga fluida ako je drugi poznat — što je klasična laboratorijska metoda usporedne hidrostatičke ravnoteže.
+:::
 
 ## Riješeni primjeri
 
@@ -1065,6 +1097,40 @@ Hidrostatička razlika tlakova od $372\ \text{kPa}$ između čvorova razmaknutih
 | Piezometarska visina | Provjera sila usisavanja pumpe; procjena kavitacijske margine | Terenski piezometri za praćenje razine podzemne vode; potlačne linije u brani |
 | Diferencijalni manometar | Mjerenje pada tlaka na filtru ili izmjenjivaču topline; kontrola stanja konstriktora | Razlika tlakova između uzvodnog i nizvodnog presjeka u hidroelektrani; mjerenje pada u propustu |
 | Vakuumski (negativni) tlak | Usisna strana pumpe; kondenzator pare u parnom ciklusu | Sukcijska snaga usisa u temeljnom tlu; negativni pore-water pressure |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. Zašto je za jednoznačan proračun tlaka u manometru ključno odabrati i pratiti referentni smjer kretanja?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Pri silasku kroz fluid tlak raste za $\rho g \Delta h$, pri penjanju pada za isti iznos. Ako se referentni smjer mijenja usred proračuna, predznak člana mijenja se nedosljedno i krajnji rezultat odstupa od fizikalno ispravnog.
+:::
+
+2. Koja je razlika između apsolutnog, manometarskog i vakuumskog tlaka?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Apsolutni tlak mjeri se u odnosu na idealan vakuum i uvijek je nenegativan. Manometarski tlak je razlika apsolutnog i atmosferskog tlaka, može biti pozitivan ili negativan. Vakuumski tlak je iznos kojim je apsolutni tlak ispod atmosferskog, definira se kao $p_{vak} = p_{atm} - p_{aps}$.
+:::
+
+3. Pri kojoj se gustoći manometarskog fluida postiže veća osjetljivost mjerenja za male razlike tlakova?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Veća osjetljivost (veća razlika visine za isti $\Delta p$) postiže se kad je manometarski fluid samo malo gušći od radnog fluida; tada faktor $(\rho_2 - \rho_1)$ u izrazu $\Delta p = (\rho_2-\rho_1)g\Delta h$ postaje malen, pa $\Delta h$ za isto $\Delta p$ raste.
+:::
+
+4. Vrijedi li hidrostatička jednadžba $p = p_0 + \rho gh$ za fluid u kojem postoji značajno strujanje?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Ne vrijedi izravno; uz prisutno strujanje tlak ovisi i o brzinama i o gubicima, pa se umjesto hidrostatske primjenjuje Bernoullijeva jednadžba (poglavlja U09 i U10). Hidrostatička jednadžba ostaje točna za fluid u mirovanju ili pri zanemarivim brzinama.
+:::
+:::
 
 ## Zadaci za vježbu
 

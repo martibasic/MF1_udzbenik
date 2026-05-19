@@ -112,6 +112,26 @@ Povijesni prijelaz od Torricellijeva tumačenja istjecanja do Bernoullijeve opć
 Idealni Bernoulli vidi se u Venturijevoj cijevi, Pitotovoj sondi, mlaznici za čišćenje, privremenom sifonu na gradilištu i svakom sklopu u kojem se tlak pretvara u brzinu ili obrnuto bez značajnih gubitaka. U autoindustriji, strojarstvu i brodogradnji ta logika stoji iza mjerenja protoka, tumačenja pada statičkog tlaka u suženju i čitanja energetske slike toka duž jedne strujnice.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- jednadžba kontinuiteta iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
+- pojam rada i energije iz Fizike I; kinetička, potencijalna i tlačna energija;
+- diferencijalni račun jedne varijable i osnove integriranja;
+- pojam strujnice (linije strujanja) u stacionarnom toku.
+
+**Ishodi učenja:**
+
+- izvesti Bernoullijevu jednadžbu integracijom Eulerove jednadžbe duž strujnice;
+- prepoznati uvjete pod kojima ona vrijedi (stacionarno, nestlačivo, idealno strujanje, ista strujnica);
+- primijeniti Bernoulli zajedno s kontinuitetom na Venturijevu cijev, Pitotovu sondu i istjecanje;
+- pravilno čitati energetsku liniju EGL i hidrauličku liniju HGL duž strujanja.
+
+**Procijenjeno vrijeme:** 6–7 sati za teoriju i izvode, 4 sata za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Bernoullijeva jednadžba u ovom poglavlju predstavlja bilancu mehaničke energije po jedinici težine u idealiziranom strujanju. Tri osnovna člana su:
@@ -270,6 +290,16 @@ Odmah ispod izvoda treba zatvoriti i pretpostavke modela. U <span class="mf1-ch-
 To nije formalnost. Najčešći kvar u Bernoulliju nastaje onda kada se vide tlak i brzina pa se automatski zapisuje jednadžba, a da prije toga nije provjeren model.
 
 Riješeni primjeri i zadaci za vježbu zato samo redom pokazuju kako isti Bernoullijev zapis čita pad statičkog tlaka u suženju, brzinu slobodnog mlaza, tlak u sifonu i Pitotovo lokalno mjerenje.
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Dva lista papira i strujanje zraka</p>
+
+Pokus zahtijeva dva obična lista papira formata A4. Listovi se drže okomito, paralelno, na udaljenosti od oko $4\ \text{cm}$, držeći ih za gornje rubove. Intuicija kaže da bi puhanje zraka u prostor između listova trebalo razdvojiti listove jer zrak "gura" papir izvana. Stvarno opažanje je upravo suprotno: listovi se primaknu jedan drugome i nakon malo puhanja čak se dotaknu.
+
+Drugi varijant pokusa: jedan list papira drži se vodoravno za jedan kraj, ispred lica. Drugi se kraj objesi prema dolje. Puhanjem preko gornje plohe papira opaža se da papir poskoči prema gore. Ovo pokazuje da brzo strujanje zraka stvara područje nižeg tlaka u odnosu na mirniji zrak ispod.
+
+**Veza s teorijom:** Bernoullijeva jednadžba kaže da povećanje brzine fluida prati pad statičkog tlaka uz konstantnu ukupnu energiju (uz uvjete vrijedjenja). Kad puhanjem stvaramo brzo strujanje između listova, pritisak između njih pada ispod atmosferskog, a viši okolni tlak izvana primiče listove. Isti je princip srž rada kobilice broda, krila zrakoplova i Pitotove sonde.
+:::
 
 ## Riješeni primjeri
 
@@ -1105,6 +1135,40 @@ Brzina od $26{,}1\ \text{m/s}$ (približno $94\ \text{km/h}$) tipična je za kom
 | `HGL` i `EGL` linije | Vizualizacija pada tlaka u cjevovodima procesne opreme; provjera kavitacijskih uvjeta na usisnom vodu pumpe | Crtanje energetske linije gravitacijskog kanala i propusta; provjera negativnog tlaka u sifonu |
 | Venturijev princip | Karubiratori, mješalice, ejektori, Venturijevi mjerači protoka | Venturijeva preljevna grla u hidrauličkim laboratorijima; mjerni presjeci u kanalima |
 | Kavitacijski rizik ($p < p_{para}$) | Pad tlaka u grlu pumpe ili Venturija → mjehurići pare → kavitacija | Negativni tlak u vrhu sifona → kavitacijski limit visine sifona (~10 m pri atmosferskom tlaku) |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. Pod kojim sve uvjetima vrijedi klasična Bernoullijeva jednadžba u obliku iz ovog poglavlja?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Vrijedi za stacionarno strujanje, nestlačivi fluid (gustoća konstantna), neviskozno strujanje (bez disipacije), bez vanjskog rada (bez pumpe ni turbine) i između točaka na istoj strujnici. Ako bilo koji od ovih uvjeta nije zadovoljen, treba prijeći na prošireni oblik koji se uvodi u sljedećem poglavlju.
+:::
+
+2. Po čemu se razlikuju energetska linija (EGL) i hidraulička linija (HGL) i kako se one ponašaju u idealnom strujanju?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+EGL je zbroj tlačne, brzinske i geodetske visine, a HGL samo tlačne i geodetske. U idealnom strujanju EGL ostaje konstantna duž strujnice (energija je očuvana), dok HGL pada gdje brzina raste i obratno, jer se razlikuju upravo za brzinsku visinu $v^2/(2g)$.
+:::
+
+3. Zašto se Torricellijeva formula $v = \sqrt{2gH}$ izvodi izravno iz Bernoullijeve jednadžbe?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Postavljanjem Bernoullija između slobodne površine velikog spremnika (brzina nula, tlak atmosferski, visina $H$) i izlaznog presjeka male sapnice (tlak atmosferski, visina nula) pokraćuju se tlačni i geodetski članovi i ostaje $v^2/(2g) = H$, odakle slijedi $v = \sqrt{2gH}$.
+:::
+
+4. Kada se Bernoulli koristi za istjecanje, je li dobiveni rezultat za $v$ pretežno gornja ili donja granica stvarne brzine?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Gornja granica. Stvarna brzina je manja jer u idealnom modelu nisu uračunati gubici trenja, lokalne disipacije na ulazu u sapnicu i mogući viskozni profil brzina. Razlika se uračunava preko koeficijenta isticanja $C_d < 1$ koji se uvodi u realnim primjenama.
+:::
+:::
 
 ## Zadaci za vježbu
 

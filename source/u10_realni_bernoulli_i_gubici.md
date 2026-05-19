@@ -109,6 +109,26 @@ Kad energija više ne ostaje ista duž strujnice.
 Realni Bernoulli ulazi u svaki cjevovod koji stvarno radi: servisne crpke, rashladne krugove motora, brodske balastne i protupožarne vodove te ventilacijske kanale s lokalnim otporima. Upravo ovdje tehnička praksa postaje stroža od idealnog modela, jer promjer, hrapavost, ventil, koljeno i usisna visina zajedno odlučuju hoće li sustav dobiti traženi protok ili otvoriti rizik kavitacije.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- idealna Bernoullijeva jednadžba iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span>;
+- pojam Reynoldsovog broja i razlika laminarnog od turbulentnog režima;
+- razumijevanje viskoznosti i smičnog naprezanja iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U02</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span>;
+- osnove čitanja tehničkih dijagrama (Moodyjev dijagram).
+
+**Ishodi učenja:**
+
+- proširiti Bernoullijevu jednadžbu članom gubitaka energije i ispravno ga primijeniti;
+- razlikovati linijske od lokalnih gubitaka i pravilno ih zbrojiti;
+- odabrati ili iz Moodyjevog dijagrama očitati koeficijent trenja $\lambda$ za zadane uvjete;
+- prepoznati kavitacijski limit i znati kada apsolutni tlak postaje kritičan.
+
+**Procijenjeno vrijeme:** 6–8 sati za teoriju i izvode, 5 sati za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Za realni fluid između presjeka 1 i 2 Bernoullijeva jednadžba dobiva dodatni član ukupnog gubitka energije:
@@ -235,6 +255,16 @@ Najčešća metodička greška nastaje kad se svi gubici tretiraju kao jedna mut
 - razmak `EGL - HGL` jednak je brzinskoj visini $v^2/(2g)$
 
 Između dvaju promatranih presjeka pad energijske linije jednak je upravo ukupnom gubitku $h_w$. To je najkraći način da se vizualno vidi koliko je energije izgubljeno i koliko je još ostalo na raspolaganju sustavu.
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Pražnjenje boce kroz različite slamke</p>
+
+Tri slamke različite duljine (na primjer $5\ \text{cm}$, $15\ \text{cm}$ i $30\ \text{cm}$, dobivene rezanjem standardne slamke za piće) pripremaju se za pokus. Jedna plastična boca napuni se vodom do oznake. U boci se izbuši rupa nešto manjeg promjera od slamke i u nju se čvrsto utisne slamka. Pokus se ponavlja s različitim slamkama: mjeri se vrijeme potrebno da iz boce isteče određena količina vode.
+
+Dulja slamka uvijek daje sporije pražnjenje, čak i ako je njezin unutarnji promjer jednak kao kod kraće slamke. Pokus se može pojačati tako da se na slamku nadoda koljeno (savijanje slamke pod $90^\circ$) — pražnjenje postaje još sporije zbog dodatnog lokalnog gubitka.
+
+**Veza s teorijom:** linijski gubitak energije proporcionalan je duljini cijevi prema Darcy-Weisbachovoj formuli $h_l = \lambda(L/D)(v^2/2g)$, dok lokalni gubitak na koljenu dodaje član $\xi v^2/(2g)$. Oba se mehanizma manifestiraju kao smanjeni protok pri istoj raspoloživoj visinskoj razlici, što ovaj pokus kvalitativno pokazuje uz vrlo jednostavna sredstva.
+:::
 
 ## Riješeni primjeri
 
@@ -1582,6 +1612,40 @@ Ukupni gubitak od oko $44\ \text{m}$ vodenog stupca odgovara padu tlaka od pribl
 | Koeficijent trenja $\lambda$ (Moody) | Odabir materijala cijevi (glatka čelik vs. hrapava) u industrijskim sustavima | Hrapavost betonskih ili PVC kanala; starenje odvodnih cjevovoda |
 | `EGL` pada u smjeru toka | Pad energijske linije od crpke prema potrošaču u rashladnom krugu | Pad energijske linije od gornje kote do revizijskog šahta |
 | Kavitacijski uvjet ($p_{abs} > p_{para}$) | Provjera usisnog voda pumpe — kavitacija pumpe uništava rotor | Sifon u gravitacijskoj odvodnji — kavitacija ograničava visinu sifona |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. Po čemu se linijski gubici razlikuju od lokalnih i kako se prepoznaju u praktičnom sustavu?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Linijski gubici nastaju duž ravnih dionica cijevi zbog trenja stijenke i rastu proporcionalno s duljinom. Lokalni gubici nastaju u pojedinim mjestima sustava (koljena, ventili, suženja, naglo proširenje) gdje strujnice mijenjaju smjer ili profil — iznos im je proporcionalan brzinskoj visini i koeficijentu $\xi$ koji ovisi o geometriji elementa.
+:::
+
+2. O čemu ovisi koeficijent trenja $\lambda$ u turbulentnom režimu strujanja?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+U turbulentnom režimu $\lambda$ ovisi o Reynoldsovom broju i o relativnoj hrapavosti $\varepsilon/D$. Za niži Reynoldsov broj dominira utjecaj viskoznosti, za viši dominira hrapavost. Pri vrlo velikim Reynoldsovim brojevima $\lambda$ postaje neovisan o Reynoldsovu broju i ovisi samo o $\varepsilon/D$.
+:::
+
+3. Zašto pri proračunu kavitacijskog rizika u usisnom vodu treba koristiti apsolutni, a ne manometarski tlak?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Kavitacija nastupa kad lokalni apsolutni tlak padne ispod tlaka zasićene pare radnog fluida. Manometarski tlak može biti negativan (podtlak), ali apsolutni je referenciran od nule, što daje izravno mjerilo blizine kavitacijskom limitu. Korištenje manometarskog tlaka u tom proračunu vodi na pogrešne zaključke.
+:::
+
+4. Vrijedi li proširena Bernoullijeva jednadžba i u prisutnosti pumpe ili turbine u sustavu?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Vrijedi uz dodatne članove: $h_p$ za pumpu (dodaje energiju u sustav) i $h_t$ za turbinu (oduzima energiju). Opći oblik bilance je $H_1 + h_p = H_2 + h_t + h_w$, gdje je $H_i$ ukupna mehanička visina u presjeku $i$, a $h_w$ ukupni gubitak između dvaju presjeka.
+:::
+:::
 
 ## Zadaci za vježbu
 

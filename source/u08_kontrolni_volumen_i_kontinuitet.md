@@ -111,6 +111,26 @@ plt.show()
 Kontrolni volumen je radni alat za sve sustave u kojima je važnije što ulazi, izlazi i ostaje u prostoru nego pratiti putanju svake pojedine čestice fluida: mješalice, ventilacijske komore, rashladne razdjelnike, izjednačne spremnike i građevinske retencijske komore. U strojarstvu i procesnoj tehnici upravo taj pogled zatvara masu kroz T-račve, difuzore, usisne komore i spremnike tijekom punjenja ili pražnjenja.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- pojmovi gustoće, mase i protoka iz prethodnih poglavlja;
+- vektorska analiza i osnove rada s integralnim izrazima;
+- pojam površinske normale i skalarnog produkta vektora;
+- razumijevanje stacionarnog i nestacionarnog stanja sustava.
+
+**Ishodi učenja:**
+
+- definirati i nacrtati kontrolni volumen prilagođen konkretnom problemu;
+- razlikovati masenu od volumenske bilance i ispravno ih primijeniti pri nestlačivim i stlačivim fluidima;
+- riješiti probleme s više ulaza i izlaza (mješalice, razdjelnici, čvorovi mreže);
+- prepoznati nestacionarne situacije s akumulacijom mase u kontrolnom volumenu.
+
+**Procijenjeno vrijeme:** 5–6 sati za teoriju i izvode, 3 sata za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Kad fluid struji, više nije praktično pratiti putanju iste čestice kroz vrijeme. Umjesto toga uvodi se kontrolni volumen: odabrani dio prostora kroz koji fluid može ulaziti, izlaziti i po potrebi se akumulirati.
@@ -221,6 +241,16 @@ Time se vidi puno fizikalno značenje kontinuiteta: jednadžba ne tvrdi da se dv
 Primjeri niže samo redom variraju tri osnovne situacije: suženje ili difuzor, miješanje više struja i spremnik s promjenom razine. Zato se prije bilo koje jednadžbe najprije bira kontrolni volumen, pa se provjerava piše li se masena ili volumenska bilanca, radi li se o stacionarnom ili nestacionarnom problemu te postoji li jedna grana ili više ulaza i izlaza.
 
 Ako taj redoslijed nije zatvoren, gotovo je sigurno da će zadatak biti krivo pojednostavljen.
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Brzina mlaza na vrhu vrtnog šmrka</p>
+
+Za pokus su potrebni vrtni šmrk priključen na slavinu, prazan PET-bocu ili sličnu posudu i stopericu (ili mobilna aplikacija). Prvo se mjeri vrijeme potrebno za punjenje boce poznatog volumena pri otvorenoj slavini i neograničenom izlazu šmrka — odatle se izračuna volumenski protok $Q = V/t$. Zatim se izlaz šmrka djelomično sužava palcem ili ručno tako da se otvor smanji na otprilike trećinu, te se isti pokus ponovi.
+
+Opaža se: pri suženju mlaz postaje vidno brži (manji presjek, jednaki protok), a domet vodoravno bačenog mlaza primjetno se povećava. Pri tom se može izračunati kvalitativni odnos brzina: ako se površina smanji na trećinu, brzina poraste tri puta.
+
+**Veza s teorijom:** ovo je izravna primjena jednadžbe kontinuiteta $A_1 v_1 = A_2 v_2$ za nestlačivi fluid. Volumenski protok ostaje konstantan duž šmrka, pa pri sužavanju presjeka brzina mora proporcionalno rasti. Isti princip stoji iza sapnica, mlazne propulzije i Venturijeve cijevi.
+:::
 
 ## Riješeni primjeri
 
@@ -991,6 +1021,40 @@ Brzine od oko $1\ \text{m/s}$ uobičajene su za rashladne krugove baterijskih pa
 | Akumulacija $dm_{CV}/dt \neq 0$ | Punjenje/pražnjenje akumulacijskog hidrauličnog spremnika | Punjenje retencijskog bazena pri oluji; pražnjenje vodotornja |
 | Maseni vs. volumenski protok | Bitno kod miješanja fluida različitih gustoća (ulje + voda) | Bitno kod miješanja slatke i slane vode u estuarijima i lučnim bazenima |
 | Volumenski protok $Q = Av$ | Projektiranje cjevovoda, brzina u mjernim presjecima | Projektiranje kanala, propusta i melioracijskog sustava |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. U kojem slučaju vrijedi pojednostavljeni oblik $A_1 v_1 = A_2 v_2$, a kada ga treba zamijeniti općim integralnim oblikom bilance mase?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Pojednostavljeni oblik vrijedi za stacionarno strujanje jednog nestlačivog fluida kroz jedan ulaz i jedan izlaz s približno jednolikim profilima brzine. U slučaju više ulaza i izlaza, akumulacije u kontrolnom volumenu ili miješanja fluida različitih gustoća, treba primijeniti opću masenu bilancu $\sum \dot{m}_{ul} = \sum \dot{m}_{iz} + \mathrm{d}m/\mathrm{d}t$.
+:::
+
+2. Po čemu se razlikuje masena bilanca od volumenske, i kada njihova razlika postaje važna?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Masena bilanca koristi protoke izražene preko $\dot{m} = \rho Q$, dok volumenska bilanca uspoređuje izravno $Q$. Pri nestlačivom strujanju jednog fluida obje su ekvivalentne, ali pri miješanju fluida različitih gustoća (slatka i slana voda, ulje i voda) ili pri stlačivim fluidima različite gustoće na ulazu i izlazu samo masena bilanca daje pravilan odgovor.
+:::
+
+3. Što fizikalno predstavlja član $\mathrm{d}m/\mathrm{d}t$ u općem zakonu kontinuiteta?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Predstavlja brzinu promjene ukupne mase fluida unutar kontrolnog volumena. Ako je veći od nule, masa se akumulira (spremnik se puni); ako je manji od nule, masa se gubi (spremnik se prazni); ako je nula, sustav je u stacionarnom stanju.
+:::
+
+4. Zašto je za pravilan proračun nužno najprije nacrtati kontrolni volumen?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Bez jasno definiranog kontrolnog volumena nije moguće odrediti što su ulazi, što izlazi i postoji li akumulacija. Mnogi krivo pojednostavljeni rezultati nastaju upravo zato što se napreduje s bilanca prije nego što je kontrolni volumen u potpunosti zatvoren — bilo da se ne uzima u obzir dodatna grana, bilo da se akumulacija u nestacionarnoj situaciji previdi.
+:::
+:::
 
 ## Zadaci za vježbu
 

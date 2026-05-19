@@ -12,6 +12,26 @@ Središnja ideja poglavlja nije samo da se slobodna površina naginje, nego da o
 Relativno mirovanje vidi se svaki put kad se tekućina "smiri" u spremniku koji ipak ubrzava: pri kočenju autocisterne, pri promjeni kursa broda, u gorivnom spremniku vozila i u procesnoj kadi na ubrzanoj platformi. Isti model vrijedi i za rotaciju, pa iz ovog poglavlja izravno vode centrifuge, separatori i svi sklopovi u kojima slobodna površina i tlak ovise o efektivnom polju sila, a ne samo o gravitaciji.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
+- kinematika i dinamika kružnog gibanja iz Fizike I (kutna brzina, centrifugalno ubrzanje);
+- pojam neinercijalnog referentnog okvira i prividnih sila;
+- diferencijalni račun više varijabli i osnove parcijalnih derivacija.
+
+**Ishodi učenja:**
+
+- prepoznati efektivno polje sila u translatorno ili rotacijski ubrzanom spremniku;
+- odrediti nagib ili oblik slobodne površine fluida u nestandardnom polju sila;
+- izračunati paraboloidnu slobodnu površinu rotirajućeg cilindričnog spremnika i pripadne tlakove na stijenkama;
+- raspoznati granične slučajeve u kojima model relativnog mirovanja prestaje vrijediti (prelijevanje, ogoljavanje dna).
+
+**Procijenjeno vrijeme:** 5–6 sati za teoriju i izvode, 3 sata za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Ako se spremnik giba stalnim translatornim ubrzanjem i ako se nakon prolaznih oscilacija fluid smiri u odnosu na stijenke, onda se problem može čitati kao hidrostatika u neinercijskom sustavu. U tom sustavu na fluid djeluje efektivno polje sila koje je rezultat gravitacije i inercijske sile.
@@ -83,6 +103,16 @@ $$
 $$
 
 Fizikalno značenje relacije jest neposredno: što je spremnik dulji i što je ubrzanje veće, to je veća razlika razina između krajeva, dok gravitacija $g$ djeluje kao stabilizirajući član koji površinu vraća prema vodoravnom položaju.
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Slobodna površina u rotirajućoj posudi</p>
+
+U široku posudu (zdjelu, plastičnu kantu ili veću čašu) ulijeva se voda do otprilike polovine visine. Posuda se postavlja na okretnu podlogu — može biti gramofonska ploča, okretni kuhinjski tanjur ili improvizirana ploča pričvršćena na vrtljivi stolac. Nakon nekoliko sekundi rotacije konstantnom brzinom voda se "smiri" u rotirajućem okviru i poprima karakterističan oblik slobodne površine: razina je niža u središtu posude, a viša pri stijenki.
+
+Pojačanjem brzine vrtnje opaža se da paraboloidno udubljenje postaje strmije; pri vrlo visokim brzinama središnji dio dna može i potpuno ogoljeti, dok se sva tekućina nakuplja uz vanjsku stijenku. Eksperiment se može fotografirati i kasnije izmjeriti visinske razlike kako bi se procijenila kutna brzina.
+
+**Veza s teorijom:** opaženi oblik je upravo paraboloid revolucije iz izvoda u ovom poglavlju, $h(r) = h_C + \omega^2 r^2/(2g)$. Visinska razlika između središta i stijenke izravno daje kutnu brzinu rotacije ako su polumjer posude i gravitacijska konstanta poznati — isti je princip ugrađen u rotacijski viskozimetar i u neke jednostavne mjerne uređaje za kutnu brzinu.
+:::
 
 ## Riješeni primjeri
 
@@ -882,6 +912,40 @@ Centrifugalno polje od oko $1700\ g$ tipično je za odvajanje krvnih komponenti 
 | Efektivno polje sila $\vec{g}_{eff}$ | Separacija smjese u centrifugalnom separatoru ulje-voda; raspodjela tlaka u rotirajućem pumpanom sustavu | Centrifugalni efekti pri kompaktiranju betona vibratorom; fluid u zakrivljenom turbinskom tunelu |
 | Paraboloidna slobodna površina | Centrifugalne pumpe i turbine: oblik slobodne površine u rotirajućem uljnom bazenu ležaja | Laboratorijski testovi stabilnosti pri vrtnji; vodeni prsten u centrifugalnoj bušaćoj koloni |
 | Granično stanje prelijevanja | Sigurnosni volumen u hydrauličnom rezervoaru vozila pri ubrzanju/kočenju | Projektiranje bafelnih ploča u cisternama (IACS / EN standardi za plovila) |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. Što razlikuje pristup hidrostatici u inercijalnom okviru od pristupa u ubrzanom ili rotirajućem okviru?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+U inercijalnom okviru jedina je vanjska sila gravitacija; u ubrzanom ili rotirajućem okviru uvodi se efektivno polje sila koje uključuje i prividne sile (translacijsku inerciju, centrifugalnu i Coriolisovu silu). Tlak i slobodna površina zatim ovise o vektoru efektivnog ubrzanja.
+:::
+
+2. Zašto slobodna površina u rotirajućem cilindričnom spremniku poprima oblik paraboloida, a ne ravnu nagnutu plohu kao u translacijskom ubrzanju?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Centrifugalno ubrzanje u rotirajućem okviru linearno raste s radijalnom udaljenošću ($a = \omega^2 r$), pa integracija $\mathrm{d}z/\mathrm{d}r = \omega^2 r/g$ daje parabolu. U translacijskom ubrzanju vektor inercije je konstantan, pa slobodna površina ostaje ravna, ali nagnuta.
+:::
+
+3. Pri kojoj se kombinaciji $\omega$ i polumjera $R$ središte rotirajućeg spremnika prvi put ogoljava od tekućine?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Središte se ogoljava kad visina u središtu $z_C$ padne na nulu. Iz uvjeta očuvanja volumena slijedi $z_C = h_0 - \omega^2 R^2/(4g)$, pa je granično stanje $\omega^2 R^2 = 4 g h_0$, odakle se može izračunati granična kutna brzina za poznati polumjer i početnu visinu.
+:::
+
+4. Vrijedi li model relativnog mirovanja ako se cisterna ne giba stalnim ubrzanjem nego s promjenjivim ubrzanjem (na primjer pri prelasku iz kočenja u stajanje)?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Ne; model vrijedi samo nakon što se fluid "smiri" u ubrzanom okviru, što zahtijeva da ubrzanje bude približno konstantno u promatranom vremenskom intervalu. Pri brzim promjenama ubrzanja pojavljuju se prolazne oscilacije slobodne površine koje nisu obuhvaćene jednostavnim hidrostatičkim modelom.
+:::
+:::
 
 ## Zadaci za vježbu
 

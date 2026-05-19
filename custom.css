@@ -33,6 +33,9 @@ body {
 .mf1-zavrsni-okvir,
 .mf1-numerika,
 .mf1-interaktivno,
+.mf1-priprema,
+.mf1-eksperiment,
+.mf1-samoprovjera,
 .mf1-checklist,
 .mf1-warning,
 .mf1-mini-summary,
@@ -67,6 +70,9 @@ body {
 .mf1-zavrsni-okvir h3,
 .mf1-numerika h3,
 .mf1-interaktivno h3,
+.mf1-priprema h3,
+.mf1-eksperiment h3,
+.mf1-samoprovjera h3,
 .mf1-checklist h3,
 .mf1-warning h3,
 .mf1-mini-summary h3 {
@@ -264,6 +270,42 @@ body {
   font-size: 0.95rem;
 }
 
+.mf1-priprema {
+  border-left: 6px solid #455a64;
+  background: linear-gradient(135deg, rgba(207, 216, 220, 0.55), rgba(248, 250, 252, 0.96));
+}
+
+.mf1-priprema .mf1-box-label {
+  color: #263238;
+}
+
+.mf1-eksperiment {
+  border-left: 6px solid #ef6c00;
+  background: linear-gradient(135deg, rgba(255, 224, 178, 0.55), rgba(255, 248, 225, 0.96));
+}
+
+.mf1-eksperiment .mf1-box-label {
+  color: #bf360c;
+}
+
+.mf1-samoprovjera {
+  border-left: 6px solid #00695c;
+  background: linear-gradient(135deg, rgba(178, 223, 219, 0.5), rgba(232, 245, 244, 0.96));
+}
+
+.mf1-samoprovjera .mf1-box-label {
+  color: #004d40;
+}
+
+.mf1-samoprovjera ol {
+  margin: 0.4rem 0 0;
+  padding-left: 1.4rem;
+}
+
+.mf1-samoprovjera li {
+  margin: 0 0 0.7rem;
+}
+
 .mf1-checklist {
   background: rgba(217, 237, 244, 0.65);
 }
@@ -347,6 +389,9 @@ body {
 .mf1-zavrsni-okvir,
 .mf1-numerika,
 .mf1-interaktivno,
+.mf1-priprema,
+.mf1-eksperiment,
+.mf1-samoprovjera,
   .mf1-checklist,
   .mf1-warning,
   .mf1-mini-summary,

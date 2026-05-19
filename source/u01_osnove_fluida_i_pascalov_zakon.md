@@ -12,6 +12,25 @@ Bez tog uvoda kasnija hidrostatika i Bernoullijeva jednadžba lako postaju samo 
 Hidraulične dizalice, preše za oblikovanje lima i brodski kormilarski hidraulični pogoni počivaju na istoj ideji: tlak prenesen zatvorenim fluidom pretvara mali ulazni napor u veliku radnu silu. Zato se u ovom poglavlju gustoća, tlak i Pascalov zakon ne čitaju odvojeno, nego kao povezane veličine kojima se čita cilindar, crpka, vod i radni alat.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- pojam sile i mase iz Fizike I; jedinice SI sustava;
+- osnove geometrije (površina kruga $A = \pi d^2/4$, prevođenje cm² u m²);
+- razlikovanje težine od mase u gravitacijskom polju.
+
+**Ishodi učenja:**
+
+- razlikovati silu, tlak, gustoću i specifičnu težinu kao zasebne fizikalne veličine;
+- prepoznati tlak kao skalarno polje u mirujućem fluidu i razumjeti zašto djeluje jednako u svim smjerovima;
+- primijeniti Pascalov zakon na zatvoreni hidraulični sustav s dva ili više klipova;
+- objasniti zašto pojačanje sile uvijek prati proporcionalno smanjenje pomaka.
+
+**Procijenjeno vrijeme:** 4–5 sati za teoriju i izvode, 3 sata za rješavanje primjera i zadataka.
+:::
+
 ::: {.callout-tip collapse="true" icon="false"}
 ## 🖥️ Mehanika fluida i numerika — najava
 
@@ -230,6 +249,16 @@ Razlomci $A_2/A_1$ i $A_1/A_2$ se pokrate bez obzira na veličinu površina, pa 
 :::
 
 što zatvara cjelovito fizikalno značenje Pascalova zakona: hidraulični sustav mijenja omjer sile i pomaka zato što isti porast tlaka djeluje na različitim površinama, ali ukupna mehanička energija ne nastaje iz ničega.
+:::
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Hidraulika s dvije medicinske špricice</p>
+
+Dvije medicinske špricice različitog volumena (na primjer od $5\ \text{mL}$ i $20\ \text{mL}$, dostupne u svakoj ljekarni) spajaju se kratkom plastičnom cijevkom (može poslužiti i transparentno crijevo za akvarij). Sustav se prepunjava vodom tako da ne ostane zraka unutar cijevke ni klipova. Klip manje špricice pritisne se prema dolje umjerenom silom prsta; promatra se istiskivanje klipa veće špricice.
+
+Kvalitativno se opaža da je sila kojom velika špricica gura prst znatno veća od one koju ruka razvija na maloj špricici, dok je pomak velikog klipa proporcionalno manji od pomaka malog. Pokus se može ponoviti s različitim parovima špricica kako bi se uočilo da je pojačanje sile vezano isključivo uz omjer površina, neovisno o iznosu sile.
+
+**Veza s teorijom:** ovaj jednostavni sustav je hidraulična preša u malome. Isti tlak djeluje na obje klipove, a različite površine daju različite sile uz obrnuto proporcionalan odnos pomaka — što je upravo srž Pascalova zakona uz očuvanje volumena nestlačivoga fluida.
 :::
 
 ## Riješeni primjeri
@@ -977,6 +1006,40 @@ Radni tlak od oko $2{,}7\ \text{MPa}$ tipičan je za hidrauličke stezne sustave
 | Gustoća i specifična težina | Odabir radnog ulja prema gustoći za radnu temperaturu; kavitacijska otpornost | Uzgon betonskog temelja ispod razine podzemne vode; gustoća blatne vode pri bušenju |
 | Relativna gustoća | Provjera razdvajanja ulja i vode u hidrauličnom separatoru | Flotabilnost lagane fundacijske konstrukcije ($s_r < 1$ znači isplavljenje) |
 | Volumna bilanca klipova | Dimenzioniranje crpke: koliko pumpnih hodova treba za zadani hod cilindra | Kapacitet vodotornja za punjenje distribucijske mreže; volumen injektirane smjese u tlu |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu. Preporučuje se prvo samostalno odgovoriti, a tek zatim otvoriti sklopivi blok s kratkim odgovorom.
+
+1. Što se događa s pojačanjem sile $F_2/F_1$ ako se promjer obaju klipova udvostruči?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Pojačanje sile se ne mijenja jer ovisi isključivo o omjeru površina $A_2/A_1$, a taj omjer ostaje jednak kada se oba promjera proporcionalno povećaju.
+:::
+
+2. Zašto pojačana izlazna sila u hidrauličnoj preši ne narušava zakon očuvanja energije?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Veća izlazna sila proporcionalno je nadoknađena manjim izlaznim pomakom; iz volumne bilance vrijedi $F_1 s_1 = F_2 s_2$, pa mehanički rad ulaza ostaje jednak mehaničkom radu izlaza.
+:::
+
+3. Kako tlak djeluje u pojedinoj točki mirujućega fluida — vektorski ili skalarno, i zašto?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Tlak u mirujućem fluidu djeluje jednako u svim smjerovima jer nema tangencijalnih naprezanja koja bi razlikovala smjer; opisuje ga jedan skalarni broj u svakoj točki, a ne vektor.
+:::
+
+4. Kolika je razlika između $\rho$, $\gamma$ i $s_r$, i u kojim jedinicama se izražavaju?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Gustoća $\rho$ je masa po jedinici volumena (kg/m³), specifična težina $\gamma = \rho g$ je težinska sila po jedinici volumena (N/m³), a relativna gustoća $s_r = \rho/\rho_{voda}$ je bezdimenzijski omjer prema referentnoj gustoći vode.
+:::
+:::
 
 ## Zadaci za vježbu
 

@@ -114,6 +114,26 @@ Količina gibanja ovdje postaje veza između protoka, tlaka i reakcije konstrukc
 Svako koljeno, T-račva, mlaznica ili završetak cjevovoda koji mijenja smjer ili brzinu toka prenosi silu na prirubnicu, vijčani spoj, konzolu ili temelj. Zato se ovo poglavlje izravno čita u pumpnim stanicama, brodskim strojarnicama, protupožarnim monitorima i vodenim mlaznicama, gdje konstrukcija ne nosi "protok", nego vektorsku razliku tlačnih i impulsnih doprinosa.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- jednadžba kontinuiteta i kontrolni volumen iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
+- Bernoullijeva jednadžba i pojam tlaka u presjeku iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span>;
+- Newtonovi zakoni gibanja i pojam količine gibanja iz Fizike I;
+- vektorska analiza, rastav vektora na komponente.
+
+**Ishodi učenja:**
+
+- postaviti kontrolni volumen za cijevni element i pravilno ucrtati tlakove i brzine na ulaznim i izlaznim presjecima;
+- napisati i riješiti zakon količine gibanja u vektorskoj formi za stacionarni tok;
+- razlikovati silu fluida na konstrukciju od sile konstrukcije na fluid (treći Newtonov zakon);
+- izračunati silu na koljena, mlaznice i kontrolne zatvarače u realnim sustavima.
+
+**Procijenjeno vrijeme:** 7–8 sati za teoriju i izvode, 5 sati za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Za stacionarni tok osnovni zapis ostaje
@@ -214,6 +234,18 @@ Sile $\sum\vec{F}$ uključuju: tlakove na presjecima ($\vec{F}_p$), težinu flui
 :::
 
 To je razlog zašto se u strojarstvu <span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> ne čita kao još jedno poglavlje o formulama, nego kao prvi ozbiljan prijelaz s hidraulike na konstrukcijsko opterećenje. Na tlačnoj strani crpke koljeno i prije vodenog udara već nosi stalni bočni potisak. Na kalibracijskoj mlaznici vijci ne nose "protok", nego razliku tlakne sile i impulsnog skoka. U razdjelnim glavama rashladne vode ili protupožarnim granama geometrija izlaza izravno određuje stalnu silu koju temelj ili konzola moraju preuzimati satima rada.
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Mlaz vode na lagani karton</p>
+
+Za pokus su potrebni plastična boca s rupicom u dnu, voda i komad debljeg kartona (može poslužiti i poklopac obuće ili istanjeni karton od kartonske kutije). Karton se objesi vodoravno o tanki konop ili se postavi na lagani štapić tako da se može slobodno ljuljati. Boca s vodom postavi se iznad razine kartona tako da mlaz iz rupice udari okomito u njegovu sredinu.
+
+Opaža se: karton se otkloni u smjeru mlaza, a kut otklona ovisi o brzini mlaza (visini vode u boci) i o promjeru rupice. Pri zatvaranju rupice mlaz prestaje, sila prestaje djelovati, a karton se vraća u prvobitan položaj.
+
+Mjerenjem otklona, težine kartona i geometrije može se procijeniti sila mlaza i usporediti s teorijskim izračunom $F = \rho Q v = \rho A v^2$.
+
+**Veza s teorijom:** ovaj pokus izravno pokazuje da fluid koji mijenja smjer brzine pri udaru u plohu prenosi silu na tu plohu. Iznos sile ovisi o protoku mase i o promjeni brzine — što je sažeto u jednadžbi količine gibanja $\sum F = \dot{m}\Delta v$ koja se izvodi u ovom poglavlju.
+:::
 
 ## Riješeni primjeri
 
@@ -1418,6 +1450,40 @@ Rezultanta od približno $9{,}83\ \text{kN}$ djeluje pod kutem koji upravo raspo
 | Impulsni doprinos $\dot{m}\Delta v$ | Dominira pri brzostrujnim parnim ili hidrauličnim sustavima; mlaznice | Dominira pri mlaznim monitorima, mlaznicama za čišćenje i kanalima s velikom brzinom |
 | Reakcija mlaznice (potisak) | Vatrogasna šmrka; sapnica za čišćenje; sudnica; reaktivna struja | Vatrogasni monitor na lučkom terminalu; sidrena sila mlaznice za čišćenje nasipa |
 | Vektorska priroda sile | Bočna sila na prirubničko koljeno u strojarnici; sila na zakrivljeni vod pod tlakom | Bočna sila na koljeno cjevovoda vodovoda; opterećenje temeljnog bloka pri zaokretanju trake |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. Po čemu se razlikuje impulsni doprinos $\dot{m}\Delta v$ od tlačnog doprinosa $pA$ u silikoj na koljeno?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Impulsni doprinos nastaje zbog promjene vektora brzine fluida (mijenja se smjer ili iznos) i ovisi o protoku mase i razlici brzina. Tlačni doprinos nastaje zbog statičkog tlaka na ulazni i izlazni presjek kontrolnog volumena i ovisi o tlaku i površini. Pri sporom strujanju dominira tlačni doprinos, pri brzom impulsni.
+:::
+
+2. Kako se iz sile okoline na fluid dobiva sila fluida na konstrukciju?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Po trećem Newtonovu zakonu, sila fluida na konstrukciju jednaka je po iznosu, a suprotna po smjeru sili koju konstrukcija djeluje na fluid. U proračunu se promijeni samo predznak — ali pri tumačenju rezultata to je presudno za odabir smjera sile na nosač ili sidrište.
+:::
+
+3. Zašto za pravilan proračun sile na koljeno treba uračunati i tlak i brzinu, a ne samo jedno od toga?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Jednadžba količine gibanja sadrži oba doprinosa — promjena količine gibanja i razlika sila tlaka na presjecima. U mnogim sustavima oba su istog reda veličine; izostavljanje jednoga može dovesti do pogreške od 30 do 70 % u procjeni sile, što izravno mijenja proračun nosača i sigurnosnih faktora.
+:::
+
+4. Vrijedi li primjena zakona količine gibanja i ako su gubici u koljenu nezanemarivi?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Vrijedi i tada, jer zakon količine gibanja proizlazi iz Newtonovih zakona i ne zahtijeva pretpostavku idealnog (bezgubitnog) strujanja. Razlika između idealnog i realnog slučaja ulazi preko različitih tlakova na ulaznom i izlaznom presjeku — gubici energije smanjuju tlak na izlazu, što se mora uračunati preko proširenog Bernoullijevog zakona ili izravnog mjerenja.
+:::
+:::
 
 ## Zadaci za vježbu
 

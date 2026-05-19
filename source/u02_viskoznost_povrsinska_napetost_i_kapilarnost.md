@@ -12,6 +12,25 @@ Zato ovo poglavlje namjerno drži dva mehanizma jedan uz drugi: viskoznost u vol
 Viskoznost u strojarstvu odlučuje hoće li ležaj i klizna vodilica ostati odvojeni tankim uljnim filmom ili će prijeći u trošenje, a u autoindustriji upravo ona zatvara radni prozor motornog i hidrauličnog ulja pri hladnom startu i toplom radu. Površinska napetost i kapilarnost pojavljuju se u raspršivačima, premazima, zavarivačkim kupkama i podizanju vlage kroz porozne građevinske materijale, pa ovo poglavlje spaja tribologiju, obradu površina i fiziku slobodne površine.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- pojam smičnog naprezanja i naprezanja u tvari (Fizika I, osnove čvrstoće);
+- diferencijalni račun jedne varijable, gradijent funkcije (Matematika I);
+- razlikovanje sila i tlaka uvedeno u poglavlju <span class="mf1-ch-ref"><span class="mf1-ch-code">U01</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>.
+
+**Ishodi učenja:**
+
+- razlikovati dinamičku i kinematičku viskoznost te ih pravilno koristiti;
+- primijeniti Newtonov zakon viskoznosti na strujanje između dviju ploha;
+- izračunati kapilarni uspon u kapilari zadanih svojstava;
+- procijeniti kada površinska napetost dominira nad ostalim učincima na slobodnoj površini.
+
+**Procijenjeno vrijeme:** 5–6 sati za teoriju i izvode, 3 sata za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Kad se slojevi fluida gibaju relativno jedan prema drugom, pojavljuje se smično naprezanje i otpor gibanju. U Newtonskom fluidu vrijedi
@@ -222,6 +241,16 @@ Za zakrivljenu slobodnu površinu vrijedi i još jedna korisna razlika: za kaplj
 ::: {.callout-note}
 ## 📐 Fizikalno značenje
 Zakrivljena površina "stisne" fluid iznutra jer je površinska napetost zapregnuta po cijelom obodu i mora balansirati tlačnu silu. Što je manji promjer, to je veća zakrivljenost i veći skok tlaka. Faktor 4 za kapljicu nastaje jer sfera ima jednu slobodnu površinu i polumjer $r = d/2$; faktor 8 za mjehur dolazi od dvije paralelne slobodne površine. Ovaj skok tlaka ključan je za kavitaciju u pumpama: čim lokalni tlak padne ispod tlaka potrebnog da zatvori mikrokapljicu, nastaje kavitacijski mjehur.
+:::
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Kapilarni uspon u papirnatom ručniku i šećernoj kocki</p>
+
+Pripremaju se dvije plitke posude. U prvu se ulijeva voda s nekoliko kapljica boje za hranu (jača vidljivost), a u drugu uobičajeno jestivo ulje. Rola papirnatog ručnika otkida se i sa svake od posuda istovremeno se uranja po jedan vrh trake u tekućinu, držeći traku okomito. Promatra se kako tekućina napreduje kroz vlakna trake — voda znatno brže i više, ulje sporije i niže.
+
+Pokus se može proširiti uranjanjem jedne strane šećerne kocke u vodu s bojom: voda kapilarno prožima kocku iz unutrašnjosti dok cijela kocka ne dobije boju.
+
+**Veza s teorijom:** Vrlo tanke pore i kapilare u papirnatim vlaknima i šećernoj kocki djeluju kao mreža kapilarnih cijevi promjera $10$ do $100$ mikrometara. Iz formule $h = 4\sigma\cos\theta/(\rho g d)$ vidi se da kapilarni uspon raste s površinskom napetosti i kosinusom kontaktnog kuta — voda na celulozi ima oboje povoljno (visoka $\sigma$, mali $\theta$), dok ulje na celulozi ima oba lošije, pa je uspon manji. Isti je mehanizam odgovoran za uzlaznu vlagu u zidovima neizoliranih prizemlja zgrada.
 :::
 
 ## Riješeni primjeri
@@ -896,6 +925,40 @@ Ravnotežna visina od oko $33{,}5\ \text{cm}$ daleko premašuje stvarne dimenzij
 | Kapilarni uspon | Kapilaran upijanje goriva i maziva u filtarskim materijalima; podizanje tekućeg metala u mikroporoznom lijevu | Vlaženje zidova kroz pore opeke i betona; visina kapilarnog poruba iznad razine podzemne vode (fringe) |
 | Tlakovni skok na kapljici | Tlak pare u kavitacijskom mjehuriću u pumpama i hidrauličkim ventilima | Tlak zraka u porama betona pri napredovanju vlažnog fronta (karbonatizacija i korozija armature) |
 | Kontaktni kut $\theta$ | Kvašenje površine hladila i kondenzatora; repelentni nanopremazi na turbinskim lopaticama | Hidrofobni silikonski premazi za fasade; smanjenje kapilarnog uspona u temeljnoj hidroizolaciji |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu. Preporučuje se prvo samostalno odgovoriti, a tek zatim otvoriti sklopivi blok s kratkim odgovorom.
+
+1. Po čemu se razlikuju dinamička i kinematička viskoznost te zašto se uvodi i jedna i druga?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Dinamička viskoznost $\mu$ (Pa·s) ulazi izravno u Newtonov zakon viskoznosti i veže smično naprezanje s gradijentom brzine. Kinematička viskoznost $\nu = \mu/\rho$ (m²/s) ima dimenziju difuzivnosti i prirodno se pojavljuje u bezdimenzijskim brojevima poput Reynoldsovog. Uvode se obje jer različiti zadaci zahtijevaju različitu prikladnu formu.
+:::
+
+2. Pri kojem se znaku člana $\cos\theta$ kapilarna pojava izvodi prema gore, a pri kojem prema dolje?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Za $\theta < 90^\circ$ vrijedi $\cos\theta > 0$ pa kapilarni uspon je pozitivan i tekućina se penje (tekućina kvasi stijenku). Za $\theta > 90^\circ$ vrijedi $\cos\theta < 0$ pa kapilarna pojava daje pad razine (tekućina ne kvasi stijenku).
+:::
+
+3. Zašto je kapilarni uspon značajan u porama opeke, a praktički zanemariv u cijevi promjera dva centimetra?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Kapilarni uspon je obrnuto proporcionalan promjeru, pa za pore reda $10\ \mu\text{m}$ daje desetke centimetara, dok za cijev od $20\ \text{mm}$ daje samo desetke mikrometara, što je u realnim uvjetima zanemarivo.
+:::
+
+4. Zašto Newtonov zakon viskoznosti ne vrijedi za svaki fluid?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Newtonov zakon vrijedi samo za fluide kod kojih je veza između smičnog naprezanja i gradijenta brzine linearna. Mnoge stvarne tekućine (svježi beton, krv, polimerne otopine) nisu linearne; njihovo modeliranje zahtijeva proširene konstitutivne zakone poput Bingham, power-law ili Carreau modela.
+:::
+:::
 
 ## Zadaci za vježbu
 

@@ -12,6 +12,26 @@ Poglavlje zato ne uvodi novu fiziku, nego dvije stabilne radne navike: horizonta
 Zakrivljene površine pojavljuju se na segmentnim ustavama, zaobljenim poklopcima spremnika, procesnim revizijskim otvorima i brodskim oplatama koje ne rade s ravnom stijenkom. U takvim sklopovima rezultat ne daje jedna zapamćena formula, nego rastav na projekciju i volumen, jer se tek tada može ispravno pročitati što opterećuje nosač vodoravno, a što ga gura ili rasterećuje okomito.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- sila na uronjenu ravnu plohu iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U05</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>;
+- vektorska analiza, projekcije vektora na koordinatne osi;
+- integracija po krivuljama i plohama, pojam težišta volumena;
+- osnove statike krutog tijela.
+
+**Ishodi učenja:**
+
+- rastaviti hidrostatičku silu na zakrivljenu plohu na horizontalnu i vertikalnu komponentu;
+- odrediti horizontalnu komponentu preko sile na vertikalnu projekciju plohe;
+- odrediti vertikalnu komponentu preko težine imaginarnog volumena fluida između plohe i slobodne površine;
+- ispravno utvrditi smjer vertikalne komponente (prema gore ili prema dolje).
+
+**Procijenjeno vrijeme:** 5–6 sati za teoriju i izvode, 4 sata za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Na zakrivljenoj plohi tlak i dalje djeluje okomito na svaki lokalni element površine, ali rezultantu više nije praktično tražiti izravno integracijom po svim smjerovima. Zato se sila rastavlja na dvije komponente:
@@ -108,6 +128,16 @@ $$
 F_H = \int p\,dA_x = \int \rho g y\,dA_x = \rho g h_{Cx} A_x.
 $$
 Za vertikalnu komponentu $dF_V = p\,dA\sin\varphi = p\,dA_y$ gdje je $dA_y$ horizontalna projekcija. Umjesto integriranja po kutovima, koristimo ravnotežu imaginarnog fluidnog stupca iznad zakrivljene plohe: vertikalna sila koju ploha osjeća jednaka je težini tog stupca, pa $F_V = \rho g V^*$.
+:::
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Sila na poklopac uronjen u vodu</p>
+
+Plastični ili limeni poklopac (od kave, marmelade ili sličnog proizvoda) pažljivo se uroni u veću posudu s vodom (umivaonik ili kantu). Poklopac se drži konkavnom stranom prema gore i polako spušta okomito, pazeći da unutar njega ne ostane uhvaćen zrak. Prsti se postavljaju ispod ruba poklopca i polako počinju gurati prema gore — osjeća se znatan otpor koji raste s dubinom uranjanja.
+
+Eksperiment se može varirati i okrenutim položajem poklopca (konkavnom stranom prema dolje), pri čemu se zrak hvata ispod poklopca i daje dodatnu silu uzgona prema gore. Ako se zrak ispusti, sila se značajno smanjuje.
+
+**Veza s teorijom:** rezultantna sila na zakrivljenu plohu razlaže se na horizontalnu komponentu (koja iščezava zbog simetrije poklopca) i vertikalnu komponentu koja je jednaka težini imaginarnog volumena fluida iznad zakrivljene plohe ili težini stvarno istisnutog volumena, ovisno o orijentaciji. Ovisnost o dubini čini ovu silu predvidljivom i mjerljivom uz osnovne podatke o geometriji.
 :::
 
 ## Riješeni primjeri
@@ -945,6 +975,40 @@ Rezultanta od $170{,}5\ \text{kN}$ predstavlja opterećenje koje pregrada mora p
 | Smjer $F_V$: gore vs. dolje | Prema gore na dno kotla; prema dolje na gornji lučni poklopac pod nadtlakom | Prema gore na zaobljeno dno kanala; prema dolje na zatvoreni nadvodni betonski luk |
 | Rezultanta prolazi središtem | Važno za dimenzioniranje vijaka/prirubnica zaobljenih poklopaca na procesnoj opremi | Važno za momentnu ravnotežu segmentnih zatvarača brana i lučnih betonskih konstrukcija |
 | Imaginarni volumen s plinskim jastukom | Zakrivljeni dio posude pod nadtlakom — zamišljeni volumen pomjeren prema gore | Zakrivljeni zid uz zatvoreni podzemni prostor (podvodni tunel, NPP) |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. Zašto se horizontalna komponenta sile na zakrivljenu plohu računa preko vertikalne projekcije plohe, a ne preko njezine stvarne zakrivljene površine?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Komponenta sile u smjeru osi $x$ jednaka je integralu tlaka pomnoženog s projekcijom plohe na smjer okomit na os $x$. Ta projekcija je upravo vertikalna ravna projekcija plohe, pa horizontalna komponenta sile ne ovisi o zakrivljenosti same plohe nego samo o njezinoj projekciji.
+:::
+
+2. Što fizikalno predstavlja "imaginarni volumen" pri izračunu vertikalne komponente sile?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+To je volumen koji bi zauzela tekućina ako bi se prostor između zakrivljene plohe i slobodne površine ispunio istom tekućinom. Njezina težina jednaka je vertikalnoj komponenti sile koju ploha osjeća — neovisno o tome je li taj volumen u stvarnosti ispunjen tekućinom, zrakom ili je dio izrezan iz konstrukcije.
+:::
+
+3. Kako se određuje smjer vertikalne komponente: prema gore ili prema dolje?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Smjer se određuje iz orijentacije plohe i položaja imaginarnog volumena. Ako je imaginarni volumen iznad plohe (ploha čini "dno" volumena), vertikalna komponenta djeluje prema gore. Ako je imaginarni volumen ispod plohe, komponenta djeluje prema dolje.
+:::
+
+4. Vrijedi li ovaj rastav sile na horizontalnu i vertikalnu komponentu i za plohe složenog (nepravilnog) oblika?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Da, vrijedi neovisno o obliku zakrivljenosti sve dok se ploha može opisati zatvorenom geometrijom. Za nepravilne plohe horizontalna komponenta i dalje se računa preko vertikalne projekcije, a vertikalna komponenta preko volumena između plohe i slobodne površine — premda izračuni postaju složeniji i u praksi se često rješavaju numerički.
+:::
+:::
 
 ## Zadaci za vježbu
 

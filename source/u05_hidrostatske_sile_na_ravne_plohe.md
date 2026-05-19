@@ -12,6 +12,25 @@ Zato se u ovom poglavlju ne računa samo jedna rezultantna sila na plohu, nego i
 Kad su vrata brane, inspekcijski poklopac ili stijenka spremnika potopljeni, projektanta ne zanima samo ukupna sila nego i gdje ta sila djeluje, jer od toga ovise zglob, vijci, ukrute i okvir. Isto vrijedi za brodske pregrade, taložnike i privremene građevinske zaštite od vode: linearna raspodjela tlaka postaje stvarno opterećenje koje konstrukcija mora nositi bez lokalnog preopterećenja.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
+- integralni račun jedne i dviju varijabli, pojam težišta i momenta tromosti;
+- osnove statike: ravnoteža sila i momenata, hvatište rezultantne sile.
+
+**Ishodi učenja:**
+
+- izračunati rezultantnu hidrostatičku silu na potpuno uronjenu ravnu plohu proizvoljnog oblika;
+- odrediti dubinu i položaj hvatišta sile (centar tlaka) preko aksijalnog momenta tromosti plohe;
+- razlikovati slučajeve okomite, vodoravne i nagnute uronjene plohe;
+- pretvoriti hidrostatičko opterećenje u konstrukcijski kriterij za vijke, zglobove i ukrute.
+
+**Procijenjeno vrijeme:** 6–7 sati za teoriju i izvode, 4 sata za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Za ravnu plohu uronjenu u mirujući fluid rezultantna hidrostatska sila može se zapisati preko površine i dubine težišta plohe:
@@ -129,6 +148,16 @@ Centar tlaka je uvijek dublje od težišta plohe ($y_{CP} > h_C$) jer raspodjela
 :::
 
 Upravo taj dodatni član pokazuje puno fizikalno značenje centra tlaka: budući da tlak raste s dubinom, donji dijelovi plohe sudjeluju jače u rezultanti nego gornji, pa se hvatište sile uvijek nalazi dublje od težišta same plohe.
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Mlazovi iz boce s otvorima na različitim visinama</p>
+
+Plastična boca dimenzija približno $1{,}5\ \text{L}$ pripremi se tako da se na bočnoj stijenki probuše tri okomito poredana otvora istoga promjera (najlakše šivaćom iglom ili tankim čavlićem), na otprilike $5\ \text{cm}$, $10\ \text{cm}$ i $15\ \text{cm}$ od dna. Otvori se začepe prstom ili ljepljivom trakom dok se boca puni vodom do vrha. Boca se zatim postavlja iznad sudopera, otvori se istovremeno otpuste i promatra se domet mlaza iz svakog otvora.
+
+Najveći domet daje donji otvor jer je u njegovoj točci pritisak najveći; gornji otvor jedva ima nadtlaka jer se nalazi blizu slobodne površine, pa mlaz ide gotovo okomito prema dolje. Mlaz iz srednjeg otvora pada negdje između.
+
+**Veza s teorijom:** Tlak na pojedinoj točki plohe raste linearno s dubinom prema $p = \rho g h$. Brzina istjecanja kroz otvor proporcionalna je $\sqrt{h}$ (Torricellijev zakon, koji izlazi iz Bernoullijeve jednadžbe u poglavlju U09), a horizontalni domet mlaza ovisi i o pripadnoj visini iznad tla. Pri integriranju tlaka po cijeloj plohi različite dubine daju različite doprinose ukupnoj sili — upravo zato hvatište rezultantne sile na okomitoj plohi nije u njezinu težištu nego ispod njega.
+:::
 
 ## Riješeni primjeri
 
@@ -978,6 +1007,40 @@ Hidrostatička sila od približno $7\ \text{kN}$ relativno je skromna za poklopa
 | Trokutna raspodjela tlaka | Tlak na stijenku hidrauličnog cilindra koji je izložen jednostranom hidrostatskom opterecenju | Tlak na potporni zid s jednom stranom ispunjenom vodom; bok brane s razinom na vrhu |
 | Pravokutna raspodjela tlaka | Sila na potopljenu horizontalnu plohu brtvene košuljice pod stalnim pretlakom | Sila na horizontalni element temelja potpuno ispod razine podzemne vode |
 | Složena raspodjela (više fluida) | Ploha između dva različita radna medija u spremniku (ulje + voda) | Uslojena pregrada između prostora s različitim tekućinama (muljana jama + voda) |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. Zašto hvatište sile na uronjenu ravnu plohu nije u težištu plohe?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Tlak raste linearno s dubinom, pa donji dijelovi plohe nose veći dio rezultantne sile. Time se moment sile pomiče prema dolje, a hvatište pada ispod težišta za iznos $I_{xc}\cos\alpha/(A h_C)$.
+:::
+
+2. Kako se mijenja sila na okomitu uronjenu plohu ako se njezina dubina udvostruči uz istu površinu?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Iz $F = \rho g A h_C$ slijedi da se sila udvostručuje, jer ovisi linearno o dubini težišta. Položaj hvatišta pri tome se približuje težištu jer dodatni član $I_{xc}/(A h_C)$ pada s rastom $h_C$.
+:::
+
+3. Što se događa s rezultantnom silom na ravnu plohu ako se ona nagne pri istoj površini i istoj dubini težišta?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Rezultantna sila ostaje ista jer $F = \rho g A h_C$ ne ovisi o kutu nagiba. Hvatište se, mjerno po nagnutoj plohi, pomiče bliže težištu kako se ploha približava horizontali (kosinus kuta nagiba u dodatnom članu postaje manji).
+:::
+
+4. Vrijedi li formula $y_{CP} = h_C/\cos\alpha + I_{xc}\cos\alpha/(A h_C)$ i za potpuno vodoravnu plohu na nekoj dubini?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Ne izravno, jer pri $\alpha = 90^\circ$ (ploha horizontalna) tlak je jednolik po cijeloj plohi pa nema gradijenta i hvatište se podudara s težištem. U tom slučaju standardna formula gubi smisao jer $\cos\alpha = 0$ — pravilo je tada degeneracija formule, a rezultat se može izvesti izravno iz simetrije.
+:::
+:::
 
 ::: {.mf1-vjezbe-list}
 1. **T1** Vertikalni pravokutni poklopac širine $b = 1{,}40\ \text{m}$ i visine $h = 1{,}80\ \text{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1 = 1{,}10\ \text{m}$. Odredi rezultantnu hidrostatsku silu na poklopac, dubinu centra tlaka ispod slobodne površine i udaljenost centra tlaka od gornjeg ruba poklopca.

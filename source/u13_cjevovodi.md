@@ -129,6 +129,26 @@ Jedan cjevovod ovdje zatvara gotovo cijeli kolegij.
 Cjevovodi su stvarni završetak kolegija jer se u njima na jednom mjestu sastaju izbor promjera, Reynoldsov broj, trenje, lokalni gubici i raspodjela protoka po mreži. Takav se račun svakodnevno pojavljuje u industrijskim vodovima, brodskim rashladnim i balastnim mrežama, hidrantskim granama, kotlovnicama i rashladnim krugovima vozila, gdje pogrešan redoslijed modeliranja brzo znači pogrešnu radnu točku sustava.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- realni Bernoulli s gubicima iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>;
+- kontinuitet i pojam protoka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
+- Moodyjev dijagram, Reynoldsov broj i koeficijent trenja $\lambda$;
+- osnove rješavanja nelinearnih i implicitnih jednadžbi (iterativno).
+
+**Ishodi učenja:**
+
+- pravilno postaviti redoslijed proračuna $Q \to v \to Re \to \lambda \to h_w$;
+- riješiti cjevovodni sustav u seriji i u paraleli, uključujući izbor odgovarajućeg uvjeta (isti protok ili isti pad energije);
+- procijeniti potrebnu snagu pumpe za cjevovodni sustav;
+- prepoznati granične režime (laminarno, prijelazno, turbulentno) i njihove posljedice za odabir formula.
+
+**Procijenjeno vrijeme:** 8–10 sati za teoriju i izvode, 6 sati za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 U cjevovodima se račun ne smije početi od Darcy-Weisbacha ili Moodyjeva dijagrama naslijepo. Redoslijed mora biti strogo zatvoren: iz geometrije i protoka najprije se dobiva brzina, iz brzine i promjera Reynoldsov broj, a tek nakon toga koeficijent trenja i gubitci. Taj redoslijed nije administrativna disciplina, nego fizikalna nužnost: bez brzine nema režima strujanja, a bez režima nema ni vjerodostojnoga otpora cijevi. Temeljna veza između protoka i srednje brzine jest
@@ -261,6 +281,16 @@ Zato u serijskom spoju isti protok prolazi kroz sve dionice, a u paralelnom je i
 Tu nastaje najčešća zabuna: u seriji je isti $Q$, a u paraleli isti $h_w$. Tko to pomiješa, može dobiti račun koji je numerički uredan, ali fizikalno nemoguć.
 
 Zato se većina osnovnih cjevovodnih zadataka može svesti na tri tipa: za zadanu geometriju i protok treba odrediti gubitak, za zadanu geometriju i raspoloživu energijsku visinu treba odrediti protok, a za zadani protok i dopušteni gubitak treba odabrati potreban promjer. Ta podjela ne uvodi novu fiziku, ali pomaže da se odmah prepozna što je poznato, što je nepoznato i gdje će račun biti izravan, a gdje iterativan.
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Dvije slamke spojene paralelno</p>
+
+Pripremaju se dvije slamke za piće različitog promjera (može i ista vrsta slamke, ali jedna prerezana za polovinu duljine). Slamke se na vrhu spoje pomoću male trakice ljepljive trake tako da imaju zajednički ulaz, ali zasebne izlaze. Sustav se uroni u veću čašu napunjenu obojenom vodom, držeći zajednički ulaz iznad razine vode. Pažljivim usisavanjem na zajedničkom ulazu opaža se da iz obje slamke izlazi voda — ali ne istom brzinom.
+
+Slamka s većim presjekom ili manjim hidrauličkim otporom (kraća, glađa) propušta više vode. Pokus se može pojačati paralelnim spojem triju slamki različitih duljina; protoci po pojedinim slamkama spontano se podese tako da svaka grana "plati" isti pad energije od ulaza do izlaza.
+
+**Veza s teorijom:** ovo je izravna ilustracija osnovnog uvjeta paralelnog spoja iz ovog poglavlja: $h_{w,1}(Q_1) = h_{w,2}(Q_2)$. Pri istom raspoloživom padu energije šira grana s manjim otporom propušta veći dio ukupnog protoka. Ista logika stoji iza projektiranja distribucijskih mreža vode, ventilacijskih kanala i rashladnih krugova.
+:::
 
 ## Riješeni primjeri
 
@@ -1385,6 +1415,40 @@ Iako su grane geometrijski različite (različite duljine i promjeri), raspodjel
 | Lokalni gubitak $\xi v^2/2g$ | Regulacijski ventili, nepovratni ventili u strojarnici | Priključci, zasuni i hidrantski ogranci u vodovodnoj mreži |
 | Serijski spoj: isti $Q$, zbrajaju se $h_w$ | Rashladni krug s više izmjenjivača u nizu | Vodovodna mreža s dva sekcijska ventila u nizu |
 | Paralelni spoj: isti $h_w$, raspodjela $Q$ | Paralelni rashladni ogranci industrijskog postrojenja | Razvodna mreža ulica; dvostruka vodovodna petlja |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. Zašto u proračunu cjevovoda nije dopušteno odabrati $\lambda$ prije nego što je poznat Reynoldsov broj?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Koeficijent trenja $\lambda$ ovisi o Reynoldsovu broju i o relativnoj hrapavosti, pa procjena $\lambda$ bez poznatog $Re$ daje pogrešnu vrijednost. Pravilan redoslijed je: iz geometrije i protoka odrediti $v$, iz toga $Re$, te tek nakon utvrđenog režima pročitati ili izračunati $\lambda$.
+:::
+
+2. Po čemu se razlikuju pravila spajanja cijevi u seriji od pravila spajanja u paraleli?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+U serijskom spoju iste cijevi nose isti protok $Q$, a ukupni gubitak energije jednak je zbroju gubitaka u pojedinim dionicama. U paralelnom spoju iste dionice imaju isti pad ukupne energije $h_w$ između zajedničkih čvorova, a ukupni protok jednak je zbroju protoka po pojedinim granama.
+:::
+
+3. Što se događa s ukupnim hidrauličkim otporom mreže pri dodavanju nove paralelne grane?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Ukupni se otpor smanjuje, jednako kao kod dodavanja paralelnog otpornika u električnom strujnom krugu. Pri istom raspoloživom padu energije ukupni protok kroz mrežu raste. Suprotno, dodavanje dionice u seriji povećava ukupni otpor.
+:::
+
+4. Zašto se inženjerski proračun cjevovoda često rješava iterativno, a ne izravno?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Koeficijent trenja $\lambda$ ovisi o Reynoldsovu broju, a Reynoldsov broj o brzini, koja u nekim zadacima ovisi o gubicima. To stvara međuzavisnost koja se ne može riješiti jednim algebarskim potezom; umjesto toga primjenjuje se iterativni postupak: pretpostavi se vrijednost, izračuna pripadna druga vrijednost, te se postupak ponavlja dok promjene ne postanu zanemarive.
+:::
+:::
 
 ## Zadaci za vježbu
 

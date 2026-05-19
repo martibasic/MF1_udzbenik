@@ -110,6 +110,26 @@ Zato se već na početku razdvajaju tri stvari: ukupna težina, istisnuti volume
 U brodogradnji, lučnim pontonima i plutajućim radnim platformama nije dovoljno znati samo koliko je vode istisnuto; jednako je važno gdje su težište i centar uzgona te kakav moment nastaje kad se teret pomakne. Zato ovo poglavlje izravno ulazi u stabilnost plovila, raspored opreme na pontonu, sigurnost plutajuće dizalice i svaku tehničku situaciju u kojoj mali bočni pomak tereta može otvoriti veliki nagib.
 :::
 
+::: {.mf1-priprema}
+<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+
+**Predznanje koje se pretpostavlja:**
+
+- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
+- sila na ravne plohe iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U05</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>;
+- osnovni pojmovi statike krutog tijela: ravnoteža sila, ravnoteža momenata, položaj težišta;
+- integralni račun više varijabli (težište volumena).
+
+**Ishodi učenja:**
+
+- primijeniti Arhimedov zakon na potpuno i djelomično uronjeno tijelo;
+- razlikovati uvjet plovnosti od uvjeta stabilnosti plivajućeg tijela;
+- izračunati gaz pravokutnog ili nepravilno oblikovanog plivajućeg tijela;
+- procijeniti početnu stabilnost preko metacentarske visine i prepoznati granične slučajeve.
+
+**Procijenjeno vrijeme:** 6–8 sati za teoriju i izvode, 4 sata za rješavanje primjera i zadataka.
+:::
+
 ## Fizikalni uvod i matematički izvod
 
 Za tijelo koje miruje u fluidu vrijedi da je sila uzgona jednaka težini istisnutog fluida:
@@ -218,6 +238,16 @@ Jednolikni tlak $p_0$ potpuno se poniješta između gornje i donje plohe — zat
 To je tek prvi dio fizikalne slike. Član $V_{ist}$ određuje koliko fluida mora biti istisnuto da bi se tijelo održalo na površini, ali ne određuje još i njegov nagib. Ako težište ukupne težine ne leži na istoj okomici kao centar uzgona, pojavljuje se moment koji tijelo zakreće. Zato za plivanje nisu dovoljne samo sile; mora biti zadovoljena i ravnoteža momenata.
 
 Za pravokutnu platformu s linearnom promjenom urona po širini srednja uronjenost određena je vertikalnom ravnotežom, dok raspodjela urona po rubovima proizlazi iz momentne ravnoteže oko uzdužne osi. Upravo se tu vidi cjelovito značenje poglavlja: uzgon nije samo jedna brojka, nego rezultat istisnine, položaja centra uzgona i njihove geometrijske veze s ukupnom težinom sustava.
+
+::: {.mf1-eksperiment}
+<p class="mf1-box-label">🧪 Pokus kod kuće — Jaje u slatkoj i slanoj vodi</p>
+
+U običnu čašu ili manju zdjelu ulijeva se voda iz slavine do oko dvije trećine. Sirovo jaje pažljivo se spušta u čašu i opaža se da tone na dno — gustoća jaja ($\rho \approx 1080\ \text{kg/m}^3$) veća je od gustoće slatke vode ($\rho \approx 998\ \text{kg/m}^3$), pa težina nadmašuje silu uzgona.
+
+Zatim se u vodu polako dodaje obična kuhinjska sol uz pažljivo miješanje. Već nakon nekoliko žličica soli (otprilike $4$ žličice po decilitru vode), gustoća otopine dovoljno raste da jaje počne plutati. Pri određenoj koncentraciji jaje se zadržava u sredini čaše, ni potonulo ni potpuno isplivalo — što označava granično stanje u kojem je gustoća otopine točno jednaka prosječnoj gustoći jaja.
+
+**Veza s teorijom:** ovaj pokus ilustrira Arhimedov zakon — tijelo pliva ako i samo ako je njegova prosječna gustoća manja od gustoće okolnog fluida. Postupno povećanje gustoće fluida mijenja istisnuti volumen potreban za ravnotežu i u jednom trenutku omogućuje plivanje tijela koje je u manje gustom fluidu tonulo. Isti princip stoji iza praćenja gaza brodova pri prelasku iz slatke vode u slanu i pri ulasku u luku.
+:::
 
 ## Riješeni primjeri
 
@@ -1312,6 +1342,40 @@ Gaz od oko $17\ \text{m}$ tipičan je za stvarne *spar-buoy* konstrukcije prioba
 | Nesimetrično opterećenje | Bočni nagib pontona s ekscentričnom pumpom; stabilnost plutajuće dizalice | Nagib priveznog pontona s ekscentričnom opremom; nagibi plovne platforme vodogradnje |
 | Stabilnost: $GM > 0$ | Provjera stabilnosti plovne procesne opreme pri ekscentričnom teretu | Provjera nagiba pontona ili plovnog skele pri nesimetričnom rasporedu tereta |
 | Višeslojni fluidi | Uzgon na tijelo koje se dijelom nalazi u ulju, dijelom u vodi | Uzgon na pilote ili podrumske ploče u slojevitom tlu s vodom i blatoviom |
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">🎯 Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
+
+1. Što govori Arhimedov zakon o ovisnosti sile uzgona o materijalu i obliku tijela?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Sila uzgona ovisi isključivo o istisnutom volumenu fluida i njegovoj gustoći, a ne o materijalu, masi ni unutarnjoj građi uronjenog tijela. Tijela jednake vanjske geometrije, neovisno o tome jesu li čvrsta ili šuplja, imaju jednaku silu uzgona.
+:::
+
+2. Zašto plivajuće tijelo može biti u vertikalnoj ravnoteži, a istovremeno nestabilno na nagib?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Vertikalna ravnoteža traži jednakost težine i sile uzgona, dok stabilnost traži da metacentar leži iznad težišta tijela. Tijelo može zadovoljiti prvi uvjet (pliva pravilno), ali pri malom nagibu može imati negativnu metacentarsku visinu pa moment nastaje koji ga prevrće.
+:::
+
+3. Kako se mijenja gaz istog broda pri prelasku iz slatke u slanu vodu?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Gustoća slane vode veća je od slatke, pa je za istu masu broda potreban manji istisnuti volumen. Brod plovi pliće (manji gaz) u slanoj vodi. Ovaj učinak je razlog što tankeri mogu nositi nešto veći teret na otvorenom moru nego pri ulasku u rijeke.
+:::
+
+4. Vrijedi li Arhimedov zakon i u uljnom ili plinskom fluidu, ili samo u vodi?
+
+::: {.callout-note collapse="true"}
+## Odgovor
+Vrijedi u bilo kojem fluidu, uključujući plinove. U zraku sila uzgona je obično zanemariva zbog male gustoće zraka, ali za balone, dirižable i precizna mjerenja mase u vakuumu treba je uračunati. U uljnim sustavima Arhimedov zakon koristi se pri proračunu uzgona kliznih elemenata i u multifaznim separatorima.
+:::
+:::
 
 ## Zadaci za vježbu
 
