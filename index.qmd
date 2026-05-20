@@ -8,62 +8,127 @@ toc: false
 ::: {.mf1-hero}
 # Mehanika fluida 1
 
-Udžbenik prati fluide od mirovanja u zatvorenom prostoru do strujanja kroz cjevovode, lopatice i strojeve. Trinaest poglavlja izgrađenih oko jednog načela: prije svake jednadžbe mora biti jasna fizikalna slika koja se njome opisuje.
+Trinaest poglavlja od mirovanja fluida do strujanja kroz cjevovode i lopatice. Prije svake jednadžbe jasna fizikalna slika koja se njome opisuje.
 :::
 
-## Za koga je ovaj udžbenik
+```{=html}
+<p class="mf1-section-title">Uvod</p>
 
-Udžbenik je namijenjen ponajprije **studentima druge godine preddiplomskog studija strojarstva i građevinarstva** koji prvi put susreću Mehaniku fluida 1 kao kolegij. Sastavljen je tako da bude dovoljan kao primarni izvor za pripremu kolokvija i ispita, ali i kao referenca u kasnijim kolegijima koji se oslanjaju na strujanje fluida.
+<div class="mf1-grid">
+  <a class="mf1-card" href="chapters/u00_kako_koristiti_udzbenik.html">
+    <span class="mf1-card-code">U00</span>
+    <span class="mf1-card-title">Kako koristiti udžbenik</span>
+    <span class="mf1-card-hint">Obrasci pisanja, oznake tipova zadataka, razine težine i tok rada.</span>
+  </a>
+</div>
 
-Pretpostavlja se predznanje iz:
+<p class="mf1-section-title">Hidrostatika</p>
 
-- **Matematike I i II** — diferencijalnog i integralnog računa, vektorske analize i osnova diferencijalnih jednadžbi;
-- **Fizike I** — kinematike, dinamike, rada i energije, osnova gravitacijskog polja.
+<div class="mf1-grid">
+  <a class="mf1-card" href="chapters/u01_osnove_fluida_i_pascalov_zakon.html">
+    <span class="mf1-card-code">U01</span>
+    <span class="mf1-card-title">Osnove fluida i Pascalov zakon</span>
+    <span class="mf1-card-hint">Gustoća, tlak i hidraulični prijenos sile.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u02_viskoznost_povrsinska_napetost_i_kapilarnost.html">
+    <span class="mf1-card-code">U02</span>
+    <span class="mf1-card-title">Viskoznost i kapilarnost</span>
+    <span class="mf1-card-hint">Posmik u fluidu, površinska napetost, podizanje u kapilari.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.html">
+    <span class="mf1-card-code">U03</span>
+    <span class="mf1-card-title">Hidrostatika i manometrija</span>
+    <span class="mf1-card-hint">Raspodjela tlaka po dubini i mjerenje manometrima.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u04_relativno_mirovanje_fluida.html">
+    <span class="mf1-card-code">U04</span>
+    <span class="mf1-card-title">Relativno mirovanje fluida</span>
+    <span class="mf1-card-hint">Fluid u ubrzanoj posudi i u rotaciji.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u05_hidrostatske_sile_na_ravne_plohe.html">
+    <span class="mf1-card-code">U05</span>
+    <span class="mf1-card-title">Sile na ravne plohe</span>
+    <span class="mf1-card-hint">Rezultanta tlaka i točka djelovanja na ravnu plohu.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u06_zakrivljene_plohe_i_rastav_sila.html">
+    <span class="mf1-card-code">U06</span>
+    <span class="mf1-card-title">Sile na zakrivljene plohe</span>
+    <span class="mf1-card-hint">Rastav sile na vodoravnu i okomitu komponentu.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u07_uzgon_plivanje_i_stabilnost.html">
+    <span class="mf1-card-code">U07</span>
+    <span class="mf1-card-title">Uzgon i stabilnost</span>
+    <span class="mf1-card-hint">Arhimedov uzgon, plivanje, metacentar, stabilnost.</span>
+  </a>
+</div>
 
-Računalna dinamika fluida (CFD) i numeričke metode **nisu predznanje**. U udžbeniku se ipak povremeno pojavljuje sklopiv prilog *Numerički most* koji najavljuje gdje pojedina jednadžba živi u kasnijim kolegijima — bez ulaženja u tehnike rješavanja.
+<p class="mf1-section-title">Hidrodinamika</p>
 
-## Kako je udžbenik organiziran
+<div class="mf1-grid">
+  <a class="mf1-card" href="chapters/u08_kontrolni_volumen_i_kontinuitet.html">
+    <span class="mf1-card-code">U08</span>
+    <span class="mf1-card-title">Kontrolni volumen i kontinuitet</span>
+    <span class="mf1-card-hint">Bilance mase kroz kontrolni volumen.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u09_bernoullijeva_jednadzba_idealnog_fluida.html">
+    <span class="mf1-card-code">U09</span>
+    <span class="mf1-card-title">Bernoulli &mdash; idealni fluid</span>
+    <span class="mf1-card-hint">Bilanca energije duž strujnice bez gubitaka.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u10_realni_bernoulli_i_gubici.html">
+    <span class="mf1-card-code">U10</span>
+    <span class="mf1-card-title">Bernoulli i gubici</span>
+    <span class="mf1-card-hint">Realni fluid, linijski i mjesni gubici energije.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u11_kolicina_gibanja_i_sile_strujanja.html">
+    <span class="mf1-card-code">U11</span>
+    <span class="mf1-card-title">Količina gibanja</span>
+    <span class="mf1-card-hint">Sile strujanja na koljena, mlaznice i nepokretne lopatice.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u12_pokretne_lopatice_i_potisak.html">
+    <span class="mf1-card-code">U12</span>
+    <span class="mf1-card-title">Pokretne lopatice i potisak</span>
+    <span class="mf1-card-hint">Mlaz na lopaticu, relativna brzina, radne karakteristike.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u13_cjevovodi.html">
+    <span class="mf1-card-code">U13</span>
+    <span class="mf1-card-title">Cjevovodi i mreže</span>
+    <span class="mf1-card-hint">Darcy&ndash;Weisbach, serijski i paralelni sustavi, mreže.</span>
+  </a>
+</div>
 
-Sadržaj prati prirodni redoslijed učenja Mehanike fluida:
+<p class="mf1-section-title">Dodaci</p>
 
-::: {.mf1-grid}
-::: {.mf1-card}
-### Svojstva fluida i hidrostatika
-**U01 – U07**
+<div class="mf1-grid">
+  <a class="mf1-card" href="chapters/d01_sazetak_formula_i_oznaka.html">
+    <span class="mf1-card-code">D01</span>
+    <span class="mf1-card-title">Sažetak formula</span>
+    <span class="mf1-card-hint">Pregled svih formula i oznaka kroz udžbenik.</span>
+  </a>
+  <a class="mf1-card" href="chapters/d02_pojmovnik.html">
+    <span class="mf1-card-code">D02</span>
+    <span class="mf1-card-title">Pojmovnik</span>
+    <span class="mf1-card-hint">Definicije temeljnih pojmova mehanike fluida.</span>
+  </a>
+  <a class="mf1-card" href="chapters/d03_tipicne_pogreske_po_poglavljima.html">
+    <span class="mf1-card-code">D03</span>
+    <span class="mf1-card-title">Tipične pogreške</span>
+    <span class="mf1-card-hint">Katalog pogrešaka po poglavljima &mdash; provjera prije predaje.</span>
+  </a>
+  <a class="mf1-card" href="chapters/d04_numericka_mehanika_fluida.html">
+    <span class="mf1-card-code">D04</span>
+    <span class="mf1-card-title">Numerička mehanika fluida</span>
+    <span class="mf1-card-hint">Veza MF1 jednadžbi s računalnom dinamikom fluida.</span>
+  </a>
+</div>
+```
 
-Tlak i Pascalov zakon, viskoznost, površinska napetost i kapilarnost, hidrostatička raspodjela tlaka i manometrija, relativno mirovanje, sile na ravne i zakrivljene plohe, uzgon i stabilnost plivajućih tijela.
-:::
+## O udžbeniku
 
-::: {.mf1-card}
-### Hidrodinamika
-**U08 – U13**
+Namijenjen je **studentima druge godine preddiplomskog studija strojarstva i građevinarstva** kao primarni izvor za pripremu kolokvija i ispita, te kao referenca u kasnijim kolegijima koji se oslanjaju na strujanje fluida.
 
-Kontrolni volumen i kontinuitet, Bernoullijeva jednadžba idealnog i realnog fluida, gubici energije, količina gibanja i sile strujanja, pokretne lopatice i potisak, proračun cjevovoda.
-:::
+Pretpostavlja se predznanje iz **Matematike I i II** (diferencijalni i integralni račun, vektorska analiza, osnove diferencijalnih jednadžbi) i **Fizike I** (kinematika, dinamika, rad i energija). Računalna dinamika fluida nije predznanje — povremeno se pojavljuje kratki sklopiv prilog *Numerički most* uz središnje jednadžbe.
 
-::: {.mf1-card}
-### Dodaci
-**D01 – D04**
+**Razine težine zadataka:** T1 (osnove) → T4 (sintetski zadaci). Studenti biraju raspored prema vlastitom tempu.
 
-Sažetak formula i oznaka, pojmovnik temeljnih pojmova, katalog tipičnih pogrešaka po poglavljima i pregledni dokument o vezi Mehanike fluida s računalnom dinamikom fluida.
-:::
-:::
-
-## Kako započeti
-
-Studentu koji prvi put otvara udžbenik preporučuje se sljedeći redoslijed:
-
-1. Najprije **[U00 – Kako koristiti udžbenik](chapters/u00_kako_koristiti_udzbenik.qmd)**. U njemu su sažete obrasci pisanja, oznake tipova zadataka, razine težine i preporučeni tok rada s primjerima.
-2. Zatim **[U01 – Osnove fluida i Pascalov zakon](chapters/u01_osnove_fluida_i_pascalov_zakon.qmd)**. Cijeli udžbenik počiva na pojmovima koji se ondje uvode.
-3. Pri pripremi kolokvija ili ispita korisno je konzultirati **[D03 – Tipične pogreške po poglavljima](chapters/d03_tipicne_pogreske_po_poglavljima.qmd)** — preventivni filtar prije računa i prije predaje zadatka.
-
-## Što ovo izdanje donosi
-
-- **Numerički mostovi** uz središnje jednadžbe — kratki sklopivi prilozi koji najavljuju gdje se ista jednadžba pojavljuje u računalnoj dinamici fluida i koji se alati pritom koriste. Sadržaj nije obvezan, ali daje okvir za kasnije studije.
-- **Interaktivni prikazi** u odabranim poglavljima — Jupyter notebooci s klizačima za ključne parametre. Otvaraju se u pregledniku putem QR koda u tiskanoj inačici ili poveznice u mrežnoj inačici, bez instalacije bilo kakvog programskog okruženja.
-- **Razine težine zadataka** od T1 do T4 koje studentu omogućuju biranje rasporeda učenja prema vlastitom tempu.
-- **Mrežno i tiskano izdanje iz istog izvora** — sadržaj je razumljiv u obje inačice, a interaktivni elementi nadopunjuju, a ne zamjenjuju, kanonski tekst.
-
-## Recenzentske napomene i ispravci
-
-Udžbenik je živi dokument. Primjedbe na sadržaj, predlozi za poboljšanje i prijavljeni ispravci dobrodošli su putem službenoga kanala kolegija.
+Recenzentske napomene i ispravci dobrodošli su putem službenoga kanala kolegija.
