@@ -1,8 +1,8 @@
 ## Mehanika fluida i numerika — pregled
 
-Ovaj dodatak nije gradivo Mehanike fluida 1 niti je uvod u Računalnu dinamiku fluida. On služi kao **mostovni pregled** — sažima sve numeričke pojmove iz „Numeričkih tragova" i „Numeričkih mostova" u poglavljima U01–U13 i postavlja ih u jednu cjelinu.
+Ovaj dodatak nije gradivo Mehanike fluida 1 niti je uvod u računalnu dinamiku fluida. On služi kao **mostovni pregled** — sažima sve numeričke pojmove iz „Numeričkih tragova" i „Numeričkih mostova" u poglavljima U01–U13 i postavlja ih u jednu cjelinu.
 
-Cilj nije osposobljavanje za pokretanje CFD simulacije. Cilj je da se u trećoj godini, pri upisu kolegija **Računalna dinamika fluida**, prepoznaju pojmovi i odmah jasno vidi *gdje* je svaka jednadžba iz MF1 sjela u toj disciplini.
+Cilj nije osposobljavanje za pokretanje CFD simulacije. Cilj je da se u kasnijim kolegijima posvećenima **računalnoj dinamici fluida** prepoznaju pojmovi i odmah jasno vidi *gdje* je svaka jednadžba iz MF1 sjela u toj disciplini.
 
 ::: {.callout-tip icon="false"}
 ## Što se ovdje neće dogoditi
@@ -53,7 +53,7 @@ Sljedeći alati su industrijski standard i otvorene platforme spomenute u udžbe
 
 ## Rječnik MF1 → CFD: prijevod pojmova
 
-Sljedeća tablica izravno povezuje pojmove iz ovoga udžbenika s pripadnim pojmovima u računalnoj dinamici fluida. Cilj je olakšati prelazak na trećoj godini, kada se isti koncept pojavi pod drugim imenom u CFD alatu.
+Sljedeća tablica izravno povezuje pojmove iz ovoga udžbenika s pripadnim pojmovima u računalnoj dinamici fluida. Cilj je olakšati prelazak na kasnije CFD kolegije, kada se isti koncept pojavi pod drugim imenom u alatu.
 
 | Pojam u MF1 | CFD ekvivalent ili alat |
 |---|---|
@@ -126,7 +126,7 @@ Veliki dio inženjerskog odabira CFD pristupa ovisi o vremenu i opremi koju simu
 | 3D nestacionarni RANS ili LES | tjedan – mjesec | klaster | Aeroakustika, izgaranje, valni udar, rotor-stator interakcija |
 | DNS | mjesec – godina | superkompjuter | Istraživanje turbulencije u kanalu pri umjerenom $Re$ |
 
-Pravilo prakse: za studente koji prvi put pokreću CFD na trećoj godini, **prvih nekoliko tjedana ide u laminarnim ili jednostavnim 2D problemima** koji konvergiraju u minutama; tek kad je radni tijek u alatu postao rutina, prelazi se na turbulentne 3D simulacije.
+Pravilo prakse: za studente koji prvi put pokreću CFD, **prvih nekoliko tjedana ide u laminarnim ili jednostavnim 2D problemima** koji konvergiraju u minutama; tek kad je radni tijek u alatu postao rutina, prelazi se na turbulentne 3D simulacije.
 
 ## Tipičan CFD tijek na primjeru iz MF1: Venturijeva cijev
 
@@ -182,5 +182,5 @@ Sljedeći izvori su klasični uvodi u numeričku mehaniku fluida i CFD. Nije ih 
 
 Mehanika fluida 1 daje **fizikalni jezik**: tlak, brzina, gustoća, kontinuitet, Bernoulli, količina gibanja. Računalna dinamika fluida daje **računalni alat** koji taj jezik rješava na milijunima točaka istovremeno. Numerika nije zamjena za fiziku, niti je viša razina iste discipline — to je drugi rakurs istog problema.
 
-U trećoj godini, pri prvim CFD simulacijama, prvih nekoliko tjedana protječe u radu s mrežama, rubnim uvjetima i konvergencijom. No svaka jednadžba koja se tamo pojavi — već je upoznata ovdje.
+Pri prvim CFD simulacijama prvih nekoliko tjedana protječe u radu s mrežama, rubnim uvjetima i konvergencijom. No svaka jednadžba koja se tamo pojavi — već je upoznata ovdje.
 :::

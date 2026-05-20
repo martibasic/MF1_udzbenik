@@ -1,173 +1,287 @@
 /* =================================================================
-   MF1 udžbenik — moderni minimalistički dizajn
-   Tri vizualna stila za sve sadržajne okvire:
-     A. Primjeri / izvodi / zadaci  (suptilna lijeva linija)
-     B. Bilješke / sažeci / liste   (svjetlosivkasta pozadina)
-     C. Bočne poveznice              (kompaktna horizontalna pruga)
+   MF1 udžbenik — akademski moderni svevremenski dizajn
+   • body serif (Source Serif 4) + sans (Inter) — klasični TXT par
+   • restrana paleta, jedan akcent, bez gradijenata i sjena
+   • 3 vizualna stila okvira: A primjeri/izvodi, B bilješke, C linkovi
    ================================================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root {
-  --mf1-ink:        #1a2532;
-  --mf1-muted:      #6b7c8a;
-  --mf1-soft-ink:   #3a4a5c;
+  --mf1-ink:        #11202e;
+  --mf1-soft-ink:   #2d3e51;
+  --mf1-muted:      #6e7c8b;
+  --mf1-faint:      #94a0ad;
+
   --mf1-bg:         #ffffff;
-  --mf1-bg-soft:    #f6f4ee;
-  --mf1-bg-card:    #faf8f3;
-  --mf1-accent:     #c96c35;
-  --mf1-accent-d:   #a85620;
-  --mf1-line:       #e3e0d7;
-  --mf1-line-soft:  #efece4;
+  --mf1-bg-soft:    #f6f3ec;
+  --mf1-bg-paper:   #fbfaf6;
+  --mf1-line:       #e3ddce;
+  --mf1-line-soft:  #ece8dc;
 
-  /* Tipovi (label-only) */
-  --mf1-c-we:        #2e7d32;
-  --mf1-c-gp:        #1565c0;
-  --mf1-c-po:        #6d4c41;
-  --mf1-c-ch:        #8e24aa;
-  --mf1-c-izvod:     var(--mf1-accent);
+  --mf1-accent:     #b35d27;
+  --mf1-accent-d:   #8e4519;
+  --mf1-accent-l:   rgba(179, 93, 39, 0.08);
 
-  /* Razine težine T1–T4 */
-  --mf1-t1: #e8f5e9;
-  --mf1-t2: #e3f2fd;
-  --mf1-t3: #fff3e0;
-  --mf1-t4: #fce4ec;
+  /* Oznaka tipa primjera (boja samo na labeli i 2px lijevoj liniji) */
+  --mf1-c-we:       #2c6e2e;
+  --mf1-c-gp:       #1b5fa8;
+  --mf1-c-po:       #6e4a35;
+  --mf1-c-ch:       #7c2e92;
+  --mf1-c-izvod:    var(--mf1-accent);
+
+  --mf1-serif: 'Source Serif 4', 'Source Serif Pro', Charter, 'Iowan Old Style', 'Apple Garamond', 'Times New Roman', Georgia, serif;
+  --mf1-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* =================================================================
-   1. Osnovna tipografija i raspored
+   1. Tipografija i osnovni raspored
    ================================================================= */
 
 html {
-  font-size: 17px;
+  font-size: 17.5px;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  line-height: 1.65;
+  font-family: var(--mf1-serif);
+  font-size: 1rem;
+  line-height: 1.72;
   color: var(--mf1-ink);
   background: var(--mf1-bg);
+  font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Skraćivanje glavnog stupca za bolju liniju (oko 68 znakova) */
 main, .quarto-container, .page-columns, .page-layout-article {
-  max-width: 780px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
+main { padding: 1rem 1.5rem 4rem; }
 
-h1, h2, h3, h4, h5 {
-  font-weight: 700;
-  letter-spacing: -0.01em;
+p { margin: 0 0 1rem; hyphens: auto; }
+p + p { margin-top: -0.2rem; }
+
+strong { color: var(--mf1-ink); font-weight: 600; }
+em { font-style: italic; }
+
+a {
+  color: var(--mf1-accent-d);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(142, 69, 25, 0.25);
+  transition: border-color 0.15s, color 0.15s;
+}
+a:hover {
+  border-bottom-color: var(--mf1-accent-d);
+  color: var(--mf1-accent-d);
+}
+
+/* Naslovi — serif s blago akademskim ritmom */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--mf1-serif);
   color: var(--mf1-ink);
+  font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
 h1 {
-  font-size: 2.1rem;
-  line-height: 1.2;
-  margin: 0 0 1.2rem;
+  font-weight: 600;
+  font-size: 2.35rem;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  margin: 0.4rem 0 1.4rem;
 }
 
 h2 {
+  font-weight: 600;
   font-size: 1.45rem;
-  margin: 2.6rem 0 1rem;
-  padding-top: 0.6rem;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  margin: 3rem 0 0.9rem;
+  padding-top: 1.6rem;
   border-top: 1px solid var(--mf1-line);
 }
 
 h3 {
-  font-size: 1.15rem;
-  margin: 1.8rem 0 0.6rem;
+  font-weight: 600;
+  font-size: 1.18rem;
+  line-height: 1.35;
+  margin: 2rem 0 0.6rem;
   color: var(--mf1-soft-ink);
+  font-style: italic;
 }
 
 h4 {
-  font-size: 1rem;
-  margin: 1.2rem 0 0.4rem;
-  color: var(--mf1-muted);
+  font-family: var(--mf1-sans);
+  font-weight: 700;
+  font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.1em;
+  color: var(--mf1-muted);
+  margin: 1.6rem 0 0.4rem;
 }
 
-p { margin: 0 0 0.9rem; }
-strong { color: var(--mf1-ink); }
-a {
-  color: var(--mf1-accent-d);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(168, 86, 32, 0.25);
-}
-a:hover { border-bottom-color: var(--mf1-accent-d); }
-
-/* Naslov stranice — bez "title banner" gradijenta */
+/* Naslov stranice/poglavlja */
 .quarto-title-banner {
   background: transparent !important;
   color: var(--mf1-ink) !important;
   border-bottom: 1px solid var(--mf1-line);
-  padding: 1.5rem 0 1rem;
+  padding: 1rem 1.5rem 1.4rem !important;
+  margin-bottom: 2rem;
 }
-.quarto-title-banner .title,
+.quarto-title-banner .title { color: var(--mf1-ink) !important; }
 .quarto-title-banner .subtitle {
-  color: var(--mf1-ink) !important;
-}
-
-/* Slike — diskretni okvir */
-figure {
-  margin: 1.4rem 0;
-}
-figure img {
-  border-radius: 4px;
-  max-width: 100%;
-  height: auto;
-}
-figcaption {
-  font-size: 0.88rem;
-  color: var(--mf1-muted);
+  color: var(--mf1-muted) !important;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.1rem;
   margin-top: 0.4rem;
-  text-align: center;
 }
 
-/* Formule */
-.math.display {
-  margin: 1.2rem 0;
-  overflow-x: auto;
+/* Numerika sekcija ako je uključena */
+.header-section-number {
+  color: var(--mf1-faint);
+  font-weight: 400;
+  margin-right: 0.4rem;
+  font-variant-numeric: tabular-nums;
 }
+
+/* Slike */
+figure { margin: 1.6rem 0; }
+figure img { border-radius: 2px; max-width: 100%; height: auto; }
+figcaption {
+  font-family: var(--mf1-sans);
+  font-size: 0.85rem;
+  color: var(--mf1-muted);
+  line-height: 1.45;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Math */
+.math.display {
+  margin: 1.3rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.2rem 0;
+}
+.math.inline { font-size: 1.02em; }
+
+/* Code (rijetko se pojavljuje, ali za svaki slučaj) */
+code, kbd, samp {
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--mf1-bg-soft);
+  padding: 0.08em 0.32em;
+  border-radius: 3px;
+  color: var(--mf1-soft-ink);
+}
+pre code { background: transparent; padding: 0; }
 
 /* Tablice */
 table {
   border-collapse: collapse;
-  margin: 1.2rem 0;
-  font-size: 0.95rem;
+  margin: 1.6rem 0;
+  font-size: 0.92rem;
+  width: 100%;
+  font-family: var(--mf1-sans);
 }
 th, td {
-  padding: 0.55rem 0.8rem;
-  border-bottom: 1px solid var(--mf1-line);
+  padding: 0.55rem 0.7rem;
   text-align: left;
+  border: 0;
+  border-bottom: 1px solid var(--mf1-line);
+  vertical-align: top;
 }
 th {
-  background: var(--mf1-bg-soft);
+  background: transparent;
   font-weight: 700;
+  color: var(--mf1-ink);
+  border-bottom: 2px solid var(--mf1-ink);
+  text-transform: none;
+  letter-spacing: 0;
 }
+tbody tr:last-child td { border-bottom: 1px solid var(--mf1-ink); }
+
+/* Liste */
+ul, ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+li { margin-bottom: 0.3rem; }
+
+/* Citatni blokovi (CFD "Nije gradivo MF1...") */
+blockquote {
+  margin: 1.6rem 0;
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  border-left: 2px solid var(--mf1-line);
+  color: var(--mf1-muted);
+  font-style: italic;
+  font-size: 0.97rem;
+}
+blockquote em { font-style: normal; }
+
+/* Quartoovi callouti (note, tip) — diskretniji */
+.callout {
+  border: 0 !important;
+  border-radius: 0 !important;
+  border-left: 2px solid var(--mf1-line) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin: 1.4rem 0 !important;
+  padding: 0.2rem 0 0.2rem 1.1rem !important;
+}
+.callout-header, .callout-title {
+  font-family: var(--mf1-sans) !important;
+  background: transparent !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--mf1-muted) !important;
+  padding: 0 !important;
+  margin-bottom: 0.4rem !important;
+}
+.callout-body, .callout-body-container {
+  padding: 0 !important;
+  background: transparent !important;
+}
+.callout-icon-container { display: none !important; }
+.callout-note { border-left-color: var(--mf1-c-gp) !important; }
+.callout-note .callout-title { color: var(--mf1-c-gp) !important; }
+.callout-tip { border-left-color: var(--mf1-c-we) !important; }
+.callout-tip .callout-title { color: var(--mf1-c-we) !important; }
+.callout-warning { border-left-color: var(--mf1-accent) !important; }
+.callout-warning .callout-title { color: var(--mf1-accent-d) !important; }
 
 /* =================================================================
-   2. Bočna traka — plosnata, bez padajućih sekcija
+   2. Bočna traka — plosnata, akademska, mirna
    ================================================================= */
 
 #quarto-sidebar,
 .sidebar.docked {
-  background: var(--mf1-bg-soft);
+  background: var(--mf1-bg-paper);
   border-right: 1px solid var(--mf1-line);
+  font-family: var(--mf1-sans);
 }
 
 #quarto-sidebar .sidebar-title,
 .sidebar-title {
+  font-family: var(--mf1-serif);
   font-size: 1.05rem;
-  font-weight: 800;
-  padding: 1rem 1rem 0.5rem;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  padding: 1.2rem 1.1rem 0.7rem;
+  letter-spacing: -0.005em;
   color: var(--mf1-ink);
+  border-bottom: 1px solid var(--mf1-line-soft);
+  margin-bottom: 0.4rem;
 }
 
-/* Sakrij chevron toggle i onemogući klik za sklapanje */
-#quarto-sidebar .sidebar-item-toggle {
+/* Sakrij chevron toggle */
+#quarto-sidebar .sidebar-item-toggle,
+#quarto-sidebar .bi-chevron-right,
+#quarto-sidebar .bi-chevron-down {
   display: none !important;
 }
 
@@ -176,7 +290,6 @@ th {
   cursor: default !important;
 }
 
-/* Prisili da je sekcijski popis uvijek otvoren — i ako Bootstrap ukloni .show */
 #quarto-sidebar ul.sidebar-section.collapse,
 #quarto-sidebar ul.sidebar-section.collapsing {
   display: block !important;
@@ -184,74 +297,71 @@ th {
   visibility: visible !important;
 }
 
-/* Naslov sekcije — diskretan uppercase natpis */
+/* Naslov grupe — uppercase ssm caps */
 #quarto-sidebar .sidebar-item-section > .sidebar-item-container {
   padding: 0 !important;
-  margin-top: 1.1rem;
-  border-top: 1px solid var(--mf1-line);
+  margin: 1.2rem 0 0.2rem;
   background: transparent !important;
 }
-
 #quarto-sidebar .sidebar-item-section:first-of-type > .sidebar-item-container {
-  border-top: 0;
   margin-top: 0.4rem;
 }
 
 #quarto-sidebar .sidebar-item-section > .sidebar-item-container > a.sidebar-item-text {
   display: block;
-  padding: 0.85rem 1rem 0.35rem !important;
-  font-size: 0.72rem !important;
+  padding: 0.5rem 1.1rem 0.3rem !important;
+  font-size: 0.7rem !important;
   font-weight: 800 !important;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--mf1-muted) !important;
+  letter-spacing: 0.13em;
+  color: var(--mf1-faint) !important;
   background: transparent !important;
   border: 0 !important;
-  border-bottom: 0 !important;
   text-decoration: none !important;
 }
-
 #quarto-sidebar .sidebar-item-section > .sidebar-item-container > a.sidebar-item-text:hover {
-  background: transparent !important;
   color: var(--mf1-muted) !important;
 }
 
-/* Pojedinačne stavke poglavlja */
-#quarto-sidebar ul.sidebar-section .sidebar-item-container,
-#quarto-sidebar > .sidebar-menu-container > ul > .sidebar-item > .sidebar-item-container {
-  padding: 0;
-}
-
+/* Stavke */
 #quarto-sidebar .sidebar-item-container > a.sidebar-link,
 #quarto-sidebar .sidebar-item-container > a.sidebar-item-text:not([data-bs-toggle]) {
   display: block;
-  padding: 0.42rem 1rem 0.42rem 1rem;
+  padding: 0.36rem 1.1rem 0.36rem 1.1rem;
   color: var(--mf1-soft-ink);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  font-weight: 400;
   text-decoration: none !important;
   border: 0 !important;
-  border-bottom: 0 !important;
-  border-left: 3px solid transparent !important;
-  line-height: 1.35;
+  border-left: 2px solid transparent !important;
+  line-height: 1.4;
+  transition: background 0.12s, color 0.12s;
 }
-
-#quarto-sidebar .sidebar-item-container > a.sidebar-link:hover,
-#quarto-sidebar .sidebar-item-container > a.sidebar-item-text:not([data-bs-toggle]):hover {
-  background: rgba(201, 108, 53, 0.06);
+#quarto-sidebar .sidebar-item-container > a.sidebar-link:hover {
+  background: var(--mf1-accent-l);
   color: var(--mf1-ink);
 }
-
-#quarto-sidebar .sidebar-item-container > a.sidebar-link.active,
-#quarto-sidebar .sidebar-item-container > a.sidebar-item-text.active {
-  background: rgba(201, 108, 53, 0.1);
+#quarto-sidebar .sidebar-item-container > a.sidebar-link.active {
+  background: var(--mf1-accent-l);
   border-left-color: var(--mf1-accent) !important;
   color: var(--mf1-ink);
   font-weight: 600;
 }
 
+/* Tražilica u bočnoj traci */
+#quarto-sidebar .aa-DetachedSearchButton,
+#quarto-sidebar input[type="search"] {
+  background: var(--mf1-bg);
+  border: 1px solid var(--mf1-line);
+  border-radius: 3px;
+  font-family: var(--mf1-sans);
+  font-size: 0.85rem;
+  color: var(--mf1-muted);
+}
+
 /* =================================================================
-   3. STIL A — Sadržajni blokovi
-   (primjeri, izvodi, zadaci, primjene)
+   3. STIL A — sadržajni blokovi (primjeri, izvodi, primjene)
+   Tanka lijeva linija, bez pozadinskog tinta, italic labela.
    ================================================================= */
 
 .mf1-we,
@@ -260,60 +370,61 @@ th {
 .mf1-ch,
 .mf1-izvod,
 .mf1-application {
-  background: var(--mf1-bg-card);
+  background: transparent !important;
+  background-image: none !important;
   border: 0;
-  border-left: 3px solid var(--mf1-line);
+  border-left: 2px solid var(--mf1-line);
   border-radius: 0;
   box-shadow: none;
-  padding: 1rem 1.25rem;
-  margin: 1.6rem 0;
+  padding: 0.4rem 0 0.4rem 1.3rem;
+  margin: 1.8rem 0;
 }
 
-.mf1-we      { border-left-color: var(--mf1-c-we); }
-.mf1-gp      { border-left-color: var(--mf1-c-gp); }
-.mf1-po      { border-left-color: var(--mf1-c-po); }
-.mf1-ch      { border-left-color: var(--mf1-c-ch); }
-.mf1-izvod   { border-left-color: var(--mf1-c-izvod); }
-.mf1-application { border-left-color: var(--mf1-accent); background: linear-gradient(90deg, rgba(201,108,53,0.04), transparent 60%); }
+.mf1-we          { border-left-color: var(--mf1-c-we); }
+.mf1-gp          { border-left-color: var(--mf1-c-gp); }
+.mf1-po          { border-left-color: var(--mf1-c-po); }
+.mf1-ch          { border-left-color: var(--mf1-c-ch); }
+.mf1-izvod       { border-left-color: var(--mf1-c-izvod); }
+.mf1-application { border-left-color: var(--mf1-accent); }
 
-/* Naslov bloka — diskretan, oznaka tipa */
+/* Labela bloka — sans serif, mala caps */
 .mf1-box-label {
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.55rem !important;
+  font-family: var(--mf1-sans);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
   color: var(--mf1-soft-ink);
-  font-size: 1rem;
-  font-weight: 700;
   line-height: 1.3;
-  letter-spacing: -0.005em;
 }
 
-.mf1-we      .mf1-box-label { color: var(--mf1-c-we); }
-.mf1-gp      .mf1-box-label { color: var(--mf1-c-gp); }
-.mf1-po      .mf1-box-label { color: var(--mf1-c-po); }
-.mf1-ch      .mf1-box-label { color: var(--mf1-c-ch); }
-.mf1-izvod   .mf1-box-label { color: var(--mf1-c-izvod); }
+.mf1-we          .mf1-box-label { color: var(--mf1-c-we); }
+.mf1-gp          .mf1-box-label { color: var(--mf1-c-gp); }
+.mf1-po          .mf1-box-label { color: var(--mf1-c-po); }
+.mf1-ch          .mf1-box-label { color: var(--mf1-c-ch); }
+.mf1-izvod       .mf1-box-label { color: var(--mf1-c-izvod); }
 .mf1-application .mf1-box-label { color: var(--mf1-accent-d); }
 
-/* Razine težine T1–T4 — diskretne plošice */
+/* Razine T1–T4 — sitna plošica uz labelu */
 .mf1-level {
   display: inline-block;
-  margin-left: 0.4rem;
-  padding: 0.1rem 0.45rem;
-  border-radius: 4px;
+  margin-left: 0.45rem;
+  padding: 0.06rem 0.4rem;
+  border-radius: 2px;
   background: var(--mf1-bg-soft);
   color: var(--mf1-soft-ink);
-  font-size: 0.7em;
+  font-family: var(--mf1-sans);
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   vertical-align: middle;
+  border: 1px solid var(--mf1-line);
 }
-.mf1-we .mf1-level { background: var(--mf1-t1); color: #1b5e20; }
-.mf1-gp .mf1-level { background: var(--mf1-t2); color: #0d47a1; }
-.mf1-po .mf1-level { background: var(--mf1-t3); color: #5d4037; }
-.mf1-ch .mf1-level { background: var(--mf1-t4); color: #6a1b9a; }
 
 /* =================================================================
-   4. STIL B — Bilješke i sažeci
-   (priprema, samoprovjera, checklist, sažeci, popisi, upozorenja)
+   4. STIL B — bilješke, sažeci, popisi
+   Diskretna tanka gornja crta + uppercase labela. Bez pozadine.
    ================================================================= */
 
 .mf1-priprema,
@@ -323,12 +434,15 @@ th {
 .mf1-zavrsni-okvir,
 .mf1-vjezbe-list,
 .mf1-print-note {
-  background: var(--mf1-bg-soft);
+  background: transparent !important;
+  background-image: none !important;
   border: 0;
-  border-radius: 6px;
+  border-top: 1px solid var(--mf1-line);
+  border-bottom: 1px solid var(--mf1-line);
+  border-radius: 0;
   box-shadow: none;
-  padding: 0.95rem 1.15rem;
-  margin: 1.3rem 0;
+  padding: 1rem 0 1rem;
+  margin: 2rem 0;
 }
 
 .mf1-priprema      .mf1-box-label,
@@ -336,87 +450,92 @@ th {
 .mf1-checklist     .mf1-box-label,
 .mf1-mini-summary  .mf1-box-label,
 .mf1-zavrsni-okvir .mf1-box-label,
-.mf1-vjezbe-list   .mf1-box-label {
+.mf1-vjezbe-list   .mf1-box-label,
+.mf1-print-note    .mf1-box-label {
+  font-family: var(--mf1-sans);
   color: var(--mf1-muted);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.45rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem !important;
 }
 
 .mf1-samoprovjera ol,
 .mf1-vjezbe-list ol {
-  margin: 0.2rem 0 0;
-  padding-left: 1.3rem;
+  margin: 0.3rem 0 0;
+  padding-left: 1.5rem;
+  counter-reset: list;
 }
 .mf1-samoprovjera li,
 .mf1-vjezbe-list li {
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.7rem;
+  padding-left: 0.2rem;
 }
 .mf1-vjezbe-list li {
-  padding-bottom: 0.6rem;
-  border-bottom: 1px solid var(--mf1-line);
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--mf1-line-soft);
 }
 .mf1-vjezbe-list li:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
   border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-/* Upozorenje — jedina iznimka, malo isticanja */
+/* Upozorenje — jedina iznimka, lagani akcent */
 .mf1-warning {
-  background: rgba(201, 108, 53, 0.06);
+  background: transparent !important;
+  background-image: none !important;
   border: 0;
-  border-left: 3px solid var(--mf1-accent);
+  border-left: 2px solid var(--mf1-accent);
   border-radius: 0;
   box-shadow: none;
-  padding: 0.9rem 1.15rem;
-  margin: 1.3rem 0;
+  padding: 0.4rem 0 0.4rem 1.3rem;
+  margin: 1.6rem 0;
 }
 .mf1-warning .mf1-box-label {
+  font-family: var(--mf1-sans);
   color: var(--mf1-accent-d);
-  font-size: 0.85rem;
+  font-size: 0.74rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.4rem;
+  letter-spacing: 0.11em;
+  margin-bottom: 0.4rem !important;
 }
 
 /* =================================================================
-   5. STIL C — Bočne poveznice
-   (interaktivni prikazi, numerički most)
+   5. STIL C — bočne poveznice (interaktivno, numerički most)
+   Najtiše od svega. Tanke horizontalne crte i diskretan link.
    ================================================================= */
 
 .mf1-interaktivno,
 .mf1-numerika {
   background: transparent !important;
+  background-image: none !important;
   border: 0;
   border-top: 1px solid var(--mf1-line);
   border-bottom: 1px solid var(--mf1-line);
   border-radius: 0;
   box-shadow: none;
-  padding: 1rem 0;
-  margin: 1.6rem 0;
-  background-image: none;
+  padding: 0.9rem 0;
+  margin: 2rem 0;
 }
 
 .mf1-interaktivno .mf1-box-label,
 .mf1-numerika .mf1-box-label {
   display: block;
-  margin: 0 0 0.45rem;
-  font-size: 0.75rem;
+  margin: 0 0 0.45rem !important;
+  font-family: var(--mf1-sans);
+  font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.13em;
   color: var(--mf1-muted);
 }
-.mf1-interaktivno .mf1-box-label::before { content: "▶ "; color: var(--mf1-c-we); }
-.mf1-numerika     .mf1-box-label::before { content: "→ "; color: var(--mf1-c-gp); }
+.mf1-interaktivno .mf1-box-label::before { content: "▶  "; color: var(--mf1-c-we); }
+.mf1-numerika     .mf1-box-label::before { content: "→  "; color: var(--mf1-c-gp); }
 
-.mf1-numerika.kompakt {
-  padding: 0.6rem 0;
-}
+.mf1-numerika.kompakt { padding: 0.55rem 0; margin: 1.2rem 0; }
 
 .mf1-interaktivno-akcija {
   display: flex;
@@ -425,139 +544,158 @@ th {
   gap: 0.9rem;
   margin-top: 0.5rem;
 }
-
 .mf1-interaktivno-veza {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  border-radius: 3px;
   background: var(--mf1-c-we);
   color: white !important;
   text-decoration: none !important;
+  font-family: var(--mf1-sans);
   font-weight: 600;
-  font-size: 0.92rem;
-  border: 0;
+  font-size: 0.88rem;
+  border: 0 !important;
 }
 .mf1-interaktivno-veza:hover {
-  background: #1b5e20;
+  background: #1f5421;
+  color: white !important;
 }
-
 .mf1-interaktivno-qr {
-  width: 80px;
-  height: 80px;
+  width: 76px;
+  height: 76px;
   border: 1px solid var(--mf1-line);
-  border-radius: 4px;
+  border-radius: 3px;
   background: white;
   padding: 4px;
 }
-
 .mf1-interaktivno-pitanja {
   margin-top: 0.6rem;
-  font-size: 0.93rem;
+  font-size: 0.95rem;
   color: var(--mf1-soft-ink);
+  font-style: italic;
 }
 
 /* =================================================================
-   6. Početna stranica — katalog poglavlja
+   6. Početna stranica — akademski katalog poglavlja
+   Bez "kartičastog" izgleda. Sitnije, mirnije, knjigolikije.
    ================================================================= */
 
 .mf1-hero {
-  background: transparent;
+  background: transparent !important;
+  background-image: none !important;
   border: 0;
   border-bottom: 1px solid var(--mf1-line);
   border-radius: 0;
   box-shadow: none;
-  padding: 0 0 1.5rem;
-  margin: 0 0 2rem;
+  padding: 0 0 1.6rem;
+  margin: 0 0 2.2rem;
 }
 .mf1-hero h1 {
-  font-size: 2.4rem;
-  margin: 0 0 0.6rem;
+  font-size: 2.7rem;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+  margin: 0.5rem 0 0.7rem;
 }
 .mf1-hero p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--mf1-soft-ink);
-  max-width: 60ch;
+  max-width: 58ch;
+  font-style: italic;
+  margin: 0;
 }
 
 .mf1-section-title {
-  font-size: 0.75rem;
+  font-family: var(--mf1-sans);
+  font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--mf1-muted);
-  margin: 2rem 0 0.8rem;
-  padding-bottom: 0.4rem;
+  letter-spacing: 0.14em;
+  color: var(--mf1-faint);
+  margin: 2.4rem 0 1rem !important;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--mf1-line);
 }
 
 .mf1-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 0.85rem;
-  margin: 0.5rem 0 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0;
+  margin: 0 0 1.5rem;
+  border-top: 1px solid var(--mf1-line-soft);
 }
 
+a.mf1-card,
 .mf1-card {
-  background: var(--mf1-bg-card);
-  border: 1px solid var(--mf1-line);
-  border-radius: 8px;
-  padding: 1rem 1.1rem;
-  margin: 0;
-  box-shadow: none;
-  transition: border-color 0.15s, transform 0.15s;
   display: block;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mf1-line-soft) !important;
+  border-right: 1px solid var(--mf1-line-soft) !important;
+  border-radius: 0 !important;
+  padding: 0.9rem 1.1rem 1rem;
+  margin: 0;
+  box-shadow: none !important;
+  transition: background 0.15s, color 0.15s;
   text-decoration: none !important;
   color: inherit !important;
-  border-bottom: 1px solid var(--mf1-line) !important;
 }
-.mf1-card:hover {
-  border-color: var(--mf1-accent);
-  transform: translateY(-2px);
+a.mf1-card:hover {
+  background: var(--mf1-accent-l);
 }
+a.mf1-card:hover .mf1-card-title { color: var(--mf1-accent-d); }
+
+/* Skraćuj posljednji desni rub u svakom redu — tehnički teško kroz CSS bez JS,
+   pa ostavljamo lagani borders koje grid prirodno trči */
+
 a.mf1-card .mf1-card-code,
 .mf1-card .mf1-card-code {
   display: block;
-  font-size: 0.78rem;
+  font-family: var(--mf1-sans);
+  font-size: 0.7rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  color: var(--mf1-accent);
+  letter-spacing: 0.16em;
+  color: var(--mf1-faint);
   text-transform: uppercase;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
 }
 a.mf1-card .mf1-card-title,
 .mf1-card .mf1-card-title {
   display: block;
-  font-size: 1.02rem;
-  font-weight: 700;
+  font-family: var(--mf1-serif);
+  font-size: 1.08rem;
+  font-weight: 600;
   color: var(--mf1-ink);
   line-height: 1.3;
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.005em;
 }
 a.mf1-card .mf1-card-hint,
 .mf1-card .mf1-card-hint {
   display: block;
-  font-size: 0.88rem;
+  font-family: var(--mf1-serif);
+  font-size: 0.92rem;
   color: var(--mf1-muted);
-  line-height: 1.4;
+  line-height: 1.45;
   margin: 0;
+  font-style: italic;
 }
 
 /* =================================================================
    7. Pomoćni elementi
    ================================================================= */
 
-/* Unutarnje reference na poglavlja: "U03 — Hidrostatička..." */
 .mf1-ch-ref {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.3rem;
-  padding: 0.05rem 0.45rem;
-  border-radius: 4px;
-  background: var(--mf1-bg-soft);
-  border: 1px solid var(--mf1-line);
+  padding: 0 0.3rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px dotted var(--mf1-line);
 }
 .mf1-ch-code {
+  font-family: var(--mf1-sans);
   color: var(--mf1-accent-d);
   font-size: 0.78em;
   font-weight: 800;
@@ -567,18 +705,19 @@ a.mf1-card .mf1-card-hint,
 .mf1-ch-title {
   color: var(--mf1-ink);
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .mf1-signal-chip {
   display: inline-block;
   margin: 0.15rem 0.3rem 0.15rem 0;
-  padding: 0.12rem 0.5rem;
-  border-radius: 4px;
+  padding: 0.1rem 0.5rem;
+  border-radius: 2px;
   background: var(--mf1-bg-soft);
   border: 1px solid var(--mf1-line);
   color: var(--mf1-soft-ink);
-  font-size: 0.85rem;
+  font-family: var(--mf1-sans);
+  font-size: 0.82rem;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -586,42 +725,50 @@ a.mf1-card .mf1-card-hint,
   margin: 0.6rem 0 1rem;
   color: var(--mf1-muted);
   font-size: 0.92rem;
+  font-style: italic;
 }
 
 /* D03 — koraci samoprovjere */
 .mf1-decision-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.85rem;
-  margin: 1.2rem 0;
+  gap: 0;
+  margin: 1.4rem 0;
+  border-top: 1px solid var(--mf1-line);
+  border-left: 1px solid var(--mf1-line);
 }
 .mf1-decision-step {
   position: relative;
-  background: var(--mf1-bg-soft);
-  border-radius: 6px;
-  padding: 0.9rem 1rem 0.9rem 2.4rem;
+  background: transparent;
+  border-right: 1px solid var(--mf1-line);
+  border-bottom: 1px solid var(--mf1-line);
+  border-radius: 0;
+  padding: 1rem 1rem 1rem 2.4rem;
   margin: 0;
 }
 .mf1-decision-step .mf1-box-label {
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-family: var(--mf1-serif);
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--mf1-ink);
-  margin: 0 0 0.3rem;
+  margin: 0 0 0.35rem !important;
   text-transform: none;
   letter-spacing: 0;
 }
 .mf1-step-index {
   position: absolute;
-  top: 0.85rem;
-  left: 0.9rem;
+  top: 0.95rem;
+  left: 0.95rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1.3rem;
+  height: 1.3rem;
   border-radius: 50%;
-  background: var(--mf1-accent);
-  color: white;
+  background: transparent;
+  border: 1.5px solid var(--mf1-accent);
+  color: var(--mf1-accent-d);
+  font-family: var(--mf1-sans);
   font-size: 0.78rem;
   font-weight: 800;
 }
@@ -634,25 +781,34 @@ a.mf1-card .mf1-card-hint,
 }
 .mf1-print-button {
   display: inline-block;
-  padding: 0.55rem 0.95rem;
-  border-radius: 6px;
+  padding: 0.5rem 0.9rem;
+  border-radius: 3px;
   background: var(--mf1-ink);
   color: white !important;
   text-decoration: none !important;
   border: 0 !important;
-  font-size: 0.92rem;
+  font-family: var(--mf1-sans);
+  font-size: 0.88rem;
   font-weight: 600;
 }
-.mf1-print-button.secondary {
-  background: var(--mf1-accent);
-}
-.mf1-print-button:hover {
-  background: var(--mf1-accent-d);
-}
+.mf1-print-button.secondary { background: var(--mf1-accent); }
+.mf1-print-button:hover { background: var(--mf1-accent-d); }
 
 .page-break {
   break-after: page;
   page-break-after: always;
+}
+
+/* Page navigation — naredno / prethodno poglavlje */
+.page-navigation, .pagination {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--mf1-line);
+  font-family: var(--mf1-sans);
+}
+.page-navigation a, .pagination a {
+  border-bottom: 0 !important;
+  color: var(--mf1-soft-ink);
 }
 
 /* =================================================================
@@ -660,51 +816,54 @@ a.mf1-card .mf1-card-hint,
    ================================================================= */
 
 @media (max-width: 768px) {
-  html { font-size: 16px; }
-  main, .quarto-container { padding: 0 1rem; }
+  html { font-size: 16.5px; }
+  main { padding: 0.6rem 1rem 3rem; }
 
-  h1 { font-size: 1.7rem; }
-  h2 { font-size: 1.25rem; margin-top: 2rem; }
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; padding-top: 1.2rem; }
+  h3 { font-size: 1.08rem; }
 
-  .mf1-we, .mf1-gp, .mf1-po, .mf1-ch, .mf1-izvod, .mf1-application {
-    padding: 0.85rem 1rem;
-    margin: 1.2rem 0;
+  .mf1-hero h1 { font-size: 2.1rem; }
+
+  .mf1-we, .mf1-gp, .mf1-po, .mf1-ch, .mf1-izvod, .mf1-application, .mf1-warning {
+    padding-left: 1rem;
+    margin: 1.5rem 0;
   }
 
   .mf1-priprema, .mf1-samoprovjera, .mf1-checklist,
-  .mf1-warning, .mf1-mini-summary, .mf1-zavrsni-okvir,
-  .mf1-vjezbe-list, .mf1-print-note {
-    padding: 0.8rem 1rem;
-    margin: 1rem 0;
+  .mf1-mini-summary, .mf1-zavrsni-okvir,
+  .mf1-vjezbe-list, .mf1-print-note,
+  .mf1-interaktivno, .mf1-numerika {
+    padding: 0.9rem 0;
+    margin: 1.5rem 0;
   }
 
   .mf1-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 0.6rem;
+    grid-template-columns: 1fr;
+    border-top: 1px solid var(--mf1-line);
   }
-
-  .mf1-card { padding: 0.85rem 0.95rem; }
-
-  /* Bočna traka na mobitelu — jasnije */
-  .sidebar.docked {
-    padding-top: 0.5rem;
+  a.mf1-card, .mf1-card {
+    border-right: 0 !important;
   }
 }
 
 /* =================================================================
-   9. Ispis
+   9. Ispis (PDF)
    ================================================================= */
 
 @media print {
   body { background: white; font-size: 11pt; }
-  .no-print, .sidebar, .quarto-sidebar, .navbar { display: none !important; }
+  .no-print, .sidebar, #quarto-sidebar, .navbar, .page-navigation { display: none !important; }
 
-  .mf1-we, .mf1-gp, .mf1-po, .mf1-ch, .mf1-izvod, .mf1-application,
+  main, .quarto-container { max-width: 100% !important; }
+
+  h1, h2, h3 { page-break-after: avoid; }
+  figure, table, .mf1-we, .mf1-gp, .mf1-po, .mf1-ch, .mf1-izvod, .mf1-application,
   .mf1-priprema, .mf1-samoprovjera, .mf1-checklist, .mf1-warning,
   .mf1-mini-summary, .mf1-zavrsni-okvir, .mf1-vjezbe-list, .mf1-print-note,
   .mf1-interaktivno, .mf1-numerika {
-    box-shadow: none;
     page-break-inside: avoid;
+    box-shadow: none !important;
   }
 
   .mf1-interaktivno-veza {
@@ -712,7 +871,6 @@ a.mf1-card .mf1-card-hint,
     color: var(--mf1-c-we) !important;
     border: 1px solid var(--mf1-c-we) !important;
   }
-
   a {
     border-bottom: 0;
     color: var(--mf1-ink);

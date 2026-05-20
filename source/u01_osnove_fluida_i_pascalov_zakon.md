@@ -964,7 +964,7 @@ Pascalov zakon u ovom obliku vrijedi kao idealizacija zatvorenog mirujućeg flui
 
 **Alati u kojima se to susreće:** `OpenFOAM` (`setFields`, `pRefValue`) · `ANSYS Fluent` (*Operating Pressure*, *Pressure Reference*) · `COMSOL Multiphysics`.
 
-> *Nije gradivo MF1. Pri upisu kolegija Računalna dinamika fluida u trećoj godini opisani sadržaj postat će poznat teren.*
+> *Nije gradivo MF1. U kasnijim kolegijima posvećenima računalnoj dinamici fluida opisani sadržaj postat će poznat teren.*
 :::
 
 
