@@ -101,7 +101,7 @@ fig.suptitle('U08 – Kontrolni volumen i kontinuitet',
 plt.show()
 ```
 
-## Kontrolni volumen kao prvi veliki dinamični alat
+## Kontrolni volumen — temeljni alat dinamike strujanja
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> uvodi promjenu pogleda: umjesto praćenja pojedine čestice, promatra se odabrani dio prostora kroz koji fluid prolazi. Kontinuitet zato nije samo poseban zapis $A_1 v_1 = A_2 v_2$, nego jedan rubni slučaj mnogo šire bilance mase.
 
@@ -112,7 +112,7 @@ Kontrolni volumen je radni alat za sve sustave u kojima je važnije što ulazi, 
 :::
 
 ::: {.mf1-priprema}
-<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+<p class="mf1-box-label">Prije čitanja poglavlja</p>
 
 **Predznanje koje se pretpostavlja:**
 
@@ -144,7 +144,7 @@ Najopćenitiji zapis je
 $$\sum \dot{m}_{ulaz} - \sum \dot{m}_{izlaz} = \frac{dm_{CV}}{dt}$$
 
 ::: {.callout-note}
-## 📐 Fizikalno značenje
+## Fizikalno značenje
 Ova bilanca mase kaže: što god ne izlazi iz kontrolnog volumena, ostaje unutar njega (akumulira se). Ako ulazi više nego što izlazi, razina raste ili se masa skuplja. Ako izlazi više nego što ulazi, volumen se prazni. Kada nema akumulacije (stacionarno strujanje), masa koja uđe mora i izaći — ništa se ne može ni stvoriti ni izgubiti.
 :::
 
@@ -167,18 +167,18 @@ Tek za jednu ulaznu i jednu izlaznu granu nestlačivoga fluida dobiva se poznati
 $$A_1 v_1 = A_2 v_2$$
 
 ::: {.callout-note}
-## 📐 Fizikalno značenje
+## Fizikalno značenje
 Jednadžba $A_1 v_1 = A_2 v_2$ kaže da nestlačivi fluid ubrzava kad se cijev sužava, i usporava kad se širi. Fizikalna slika: svaka čestica fluida mora proći kroz uži presjek brže jer „masa se ne gubi" — u sekundi mora proći isti volumen. Isti princip objašnjava zašto rijeka teče brže na plitkim mjestima nego na dubokim.
 :::
 
 ::: {.callout-note collapse="true" icon="false"}
-## 🖥️ Numerički trag
+## Numerički trag
 
 Kontinuitet u diferencijalnom obliku $\nabla\cdot\vec{v} = 0$ je **najteža ograničenja u nestlačivom CFD-u**: rješavač brzine i tlaka mora ga zadovoljiti u *svakoj* ćeliji *u svakom koraku*. Zato postoje algoritmi tipa **SIMPLE**, **PISO** i **PIMPLE** koji iterativno usklađuju polje tlaka tako da popravljeno polje brzine više nema lokalnih divergencija. To je razlog zašto solver `simpleFoam` u svakoj iteraciji najprije računa brzinu, pa rješava Poissonovu jednadžbu za tlak, pa korigira brzinu — sve dok $\nabla\cdot\vec{v}$ ne padne ispod tolerancije.
 :::
 
 ::: {.mf1-interaktivno}
-<p class="mf1-box-label">📈 Interaktivni prikaz — Kontinuitet u suženju cijevi</p>
+<p class="mf1-box-label">Interaktivni prikaz — Kontinuitet u suženju cijevi</p>
 
 Interaktivni prikaz omogućuje mijenjanje ulaznog i izlaznog promjera te volumenskog protoka uz neposredno praćenje brzine fluida duž cijevi. Profil brzine jasno pokazuje koliko se brzina pojačava u suženju u odnosu na ulazni presjek.
 
@@ -193,7 +193,7 @@ Interaktivni prikaz omogućuje mijenjanje ulaznog i izlaznog promjera te volumen
 :::
 
 ::: {.mf1-izvod}
-<p class="mf1-box-label">Matematički izvod</p>
+<p class="mf1-box-label">Matematički izvod — Bilanca mase u kontrolnom volumenu</p>
 
 Opći kontinuitet nije nova formula nego integralni zapis očuvanja mase na kontrolnom volumenu $KV$ omeđenom kontrolnom plohom $KP$ s vanjskom normalom $\vec n$:
 
@@ -238,6 +238,64 @@ $$
 Time se vidi puno fizikalno značenje kontinuiteta: jednadžba ne tvrdi da se dvije površine moraju "mehanički" poništiti, nego da se ukupna masa ne može izgubiti ni stvoriti između ulaza, izlaza i eventualne akumulacije unutar kontrolnog volumena.
 :::
 
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Reynoldsov transportni teorem — opći okvir</p>
+
+Sve integralne zakone fluidne mehanike — kontinuitet, količine gibanja, energije — generira jedinstveni matematički okvir poznat kao **Reynoldsov transportni teorem (RTT)**. On povezuje promjenu opće intenzivne veličine $\eta$ pridružene sustavu (Lagrangeov pristup, prati se ista masa) s promjenom unutar fiksiranog kontrolnog volumena (Eulerov pristup).
+
+Za proizvoljnu intenzivnu veličinu $\eta$ po jedinici mase RTT glasi
+
+$$
+\frac{d}{dt}\int_{sustav} \rho\eta\,dV = \frac{d}{dt}\int_{KV} \rho\eta\,dV + \int_{KP} \rho\eta(\vec{v}\cdot\vec{n})\,dA.
+$$
+
+Prvi član s desne strane je **akumulacija** unutar kontrolnog volumena, drugi je **neto izlazni protok** veličine $\eta$ kroz kontrolnu plohu. Sva tri osnovna zakona slijede izravno iz RTT-a uz odgovarajući izbor $\eta$:
+
+- **Očuvanje mase** ($\eta = 1$): $d/dt\int_{sustav}\rho\,dV = 0$, što daje jednadžbu kontinuiteta.
+- **Količina gibanja** ($\eta = \vec{v}$): $d/dt\int_{sustav}\rho\vec{v}\,dV = \sum\vec{F}$, što daje integralni zakon količine gibanja iz poglavlja U11.
+- **Energija** ($\eta = e$, ukupna specifična energija): $d/dt\int_{sustav}\rho e\,dV = \dot{Q} - \dot{W}$, što vodi na energijsku jednadžbu i Bernoulli u U09/U10.
+
+Time se sva tri kasnija zakona ne pojavljuju kao odvojeni postulati, nego kao primjene istog teorema na različite veličine. Upravo zato je sustavnost izvoda u poglavljima u redu U08 → U11 → U09 — uvijek se istom matematičkom strukturom mijenja samo fizikalna interpretacija $\eta$.
+:::
+
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Diferencijalni oblik kontinuiteta — iz integralnog preko teorema o divergenciji</p>
+
+Integralni oblik kontinuiteta vrijedi za **proizvoljan** kontrolni volumen. Iz toga slijedi i **lokalni (diferencijalni) oblik** koji vrijedi u svakoj točki fluida — što je polazna jednadžba svake CFD analize.
+
+Polazi se od integralnog zapisa
+
+$$
+\frac{d}{dt}\int_{KV}\rho\,dV + \int_{KP}\rho(\vec{v}\cdot\vec{n})\,dA = 0.
+$$
+
+Primjenom **teorema o divergenciji** površinski integral pretvara se u volumenski:
+
+$$
+\int_{KP}\rho(\vec{v}\cdot\vec{n})\,dA = \int_{KV}\nabla\cdot(\rho\vec{v})\,dV.
+$$
+
+Spajanjem dvaju članova pod jedan integral dobiva se
+
+$$
+\int_{KV}\!\left[\frac{\partial\rho}{\partial t} + \nabla\cdot(\rho\vec{v})\right]dV = 0.
+$$
+
+Kako ovaj integral mora iščeznuti za svaki kontrolni volumen, podintegralna funkcija sama mora biti nula u svakoj točki:
+
+$$
+\frac{\partial\rho}{\partial t} + \nabla\cdot(\rho\vec{v}) = 0.
+$$
+
+To je **diferencijalna jednadžba kontinuiteta** u najopćenitijem obliku — vrijedi i za stlačive i za nestlačive fluide. Za **nestlačivi fluid** ($\rho = \text{const.}$, pa $\partial\rho/\partial t = 0$ i $\nabla\rho = 0$) ona se reducira na
+
+$$
+\nabla\cdot\vec{v} = 0.
+$$
+
+Ova lokalna jednadžba čini polaznu točku diskretizacije u svakom CFD solveru: u algoritmima SIMPLE i PISO upravo se polje brzine iterativno korigira tako da $\nabla\cdot\vec{v} = 0$ vrijedi u svakoj ćeliji mreže.
+:::
+
 Primjeri niže samo redom variraju tri osnovne situacije: suženje ili difuzor, miješanje više struja i spremnik s promjenom razine. Zato se prije bilo koje jednadžbe najprije bira kontrolni volumen, pa se provjerava piše li se masena ili volumenska bilanca, radi li se o stacionarnom ili nestacionarnom problemu te postoji li jedna grana ili više ulaza i izlaza.
 
 Ako taj redoslijed nije zatvoren, gotovo je sigurno da će zadatak biti krivo pojednostavljen.
@@ -245,11 +303,16 @@ Ako taj redoslijed nije zatvoren, gotovo je sigurno da će zadatak biti krivo po
 ## Riješeni primjeri
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Voda struji kroz difuzor <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Voda struji kroz difuzor&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U cjevovodu vodoopskrbnog sustava difuzor postupno proširuje presjek kako bi se smanjila brzina vode prije ulaska u sljedeći element. Projektant iz zadanih dimenzija i izlazne brzine određuje ulaznu brzinu te volumenski i maseni protok.
 
 **Zadano**
 
-Voda struji stacionarno kroz difuzor. Ulazni promjer iznosi $D_1 = 120\ \text{mm}$, a izlazni $D_2 = 180\ \text{mm}$. Na izlazu je srednja brzina $v_2 = 16\ \text{m/s}$, a gustoće vode je $\rho = 998\ \text{kg/m}^3$.
+- Ulazni promjer difuzora: $D_1 = 120\ \text{mm}$
+- Izlazni promjer difuzora: $D_2 = 180\ \text{mm}$
+- Srednja brzina na izlazu: $v_2 = 16\ \text{m/s}$
+- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
 
 **Traženo**
 
@@ -265,50 +328,32 @@ Promatra se jedan kontrolni volumen s jednom ulaznom i jednom izlaznom granom. K
 
 **Rješenje**
 
-Za stacionarni tok nestlačivog fluida vrijedi
+Za stacionarni tok nestlačivog fluida vrijedi $Q_1 = Q_2$, odnosno $A_1 v_1 = A_2 v_2$. Površine presjeka su
 
 $$
-Q_1 = Q_2
-$$
-
-odnosno
-
-$$
-A_1 v_1 = A_2 v_2
-$$
-
-Površine presjeka su
-
-$$
-A_1 = \frac{\pi D_1^2}{4} = \frac{\pi \cdot 0{,}12^2}{4} = 0{,}01131\ \text{m}^2
+A_1 = \frac{\pi D_1^2}{4} = \frac{\pi \cdot 0{,}12^2}{4} \approx 0{,}01131\ \text{m}^2,
 $$
 
 $$
-A_2 = \frac{\pi D_2^2}{4} = \frac{\pi \cdot 0{,}18^2}{4} = 0{,}02545\ \text{m}^2
+A_2 = \frac{\pi D_2^2}{4} = \frac{\pi \cdot 0{,}18^2}{4} \approx 0{,}02545\ \text{m}^2.
 $$
 
 Iz kontinuiteta slijedi ulazna brzina
 
 $$
-v_1 = \frac{A_2}{A_1} v_2 = \left(\frac{0{,}18}{0{,}12}\right)^2 \cdot 16 = 36\ \text{m/s}
+v_1 = \frac{A_2}{A_1} v_2 = \left(\frac{0{,}18}{0{,}12}\right)^2 \cdot 16 = 36\ \text{m/s}.
 $$
 
 Volumenski protok može se sada izračunati iz bilo kojeg presjeka. Najjednostavnije je s izlaznog:
 
 $$
-Q = A_2 v_2 = 0{,}02545 \cdot 16 = 0{,}407\ \text{m}^3/\text{s}
+Q = A_2 v_2 = 0{,}02545 \cdot 16 \approx 0{,}407\ \text{m}^3/\text{s}.
 $$
 
 Maseni protok zato iznosi
 
 $$
-\dot{m} = \rho Q = 998 \cdot 0{,}407 = 406\ \text{kg/s}
-$$
-
-odnosno približno
-
-$$
-\dot{m} \approx 4{,}06 \cdot 10^2\ \text{kg/s}
+\dot{m} = \rho Q = 998 \cdot 0{,}407 \approx 406\ \text{kg/s} \approx 4{,}06 \cdot 10^2\ \text{kg/s}.
 $$
 
 **Provjera i komentar**
@@ -321,29 +366,18 @@ U užem ulaznom presjeku brzina mora biti veća nego na izlazu, jer isti protok 
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Komora za miješanje s dva ulaza i jednim izlazom <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Komora za miješanje s dva ulaza i jednim izlazom&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U procesnom postrojenju komora za miješanje spaja vodenu struju i struju ulja u jedinstvenu homogenu mješavinu koja izlazi kroz zajednički vod. Iz volumenskih protoka i gustoća pojedinih ulaza određuje se izlazna brzina i gustoća mješavine.
 
 **Zadano**
 
-U komoru za miješanje ulazi voda kroz presjek `A` volumenskim protokom
-
-$$
-Q_A = 150\ \text{dm}^3/\text{s} = 0{,}150\ \text{m}^3/\text{s}
-$$
-
-a kroz presjek `B` ulazi ulje relativne gustoće $s_B = 0{,}80$ volumenskim protokom
-
-$$
-Q_B = 30\ \text{dm}^3/\text{s} = 0{,}030\ \text{m}^3/\text{s}
-$$
-
-Smatra se da su tekućine nestlačive i da je mješavina na izlazu homogena. Promjer izlaznog presjeka `C` iznosi
-
-$$
-D_C = 0{,}30\ \text{m}
-$$
-
-Uzmi za vodu $\rho_A = 1000\ \text{kg/m}^3$.
+- Volumenski protok vode kroz ulazni presjek `A`: $Q_A = 150\ \text{dm}^3/\text{s} = 0{,}150\ \text{m}^3/\text{s}$
+- Volumenski protok ulja kroz ulazni presjek `B`: $Q_B = 30\ \text{dm}^3/\text{s} = 0{,}030\ \text{m}^3/\text{s}$
+- Relativna gustoća ulja: $s_B = 0{,}80$
+- Promjer izlaznog presjeka `C`: $D_C = 0{,}30\ \text{m}$
+- Gustoća vode: $\rho_A = 1000\ \text{kg/m}^3$
+- Tekućine se smatraju nestlačivima, a mješavina na izlazu homogenom
 
 **Traženo**
 
@@ -361,49 +395,37 @@ Ovdje više ne vrijedi pojednostavnjeni zapis jedne cijevi. Najprije treba zatvo
 Najprije iz relativne gustoće dobivamo gustoću ulja:
 
 $$
-\rho_B = s_B \rho_A = 0{,}80 \cdot 1000 = 800\ \text{kg/m}^3
+\rho_B = s_B \rho_A = 0{,}80 \cdot 1000 = 800\ \text{kg/m}^3.
 $$
 
 Kako su tekuće faze nestlačive, izlazni volumenski protok je zbroj ulaznih volumenskih protoka:
 
 $$
-Q_C = Q_A + Q_B = 0{,}150 + 0{,}030 = 0{,}180\ \text{m}^3/\text{s}
+Q_C = Q_A + Q_B = 0{,}150 + 0{,}030 = 0{,}180\ \text{m}^3/\text{s}.
 $$
 
 Izlazna površina iznosi
 
 $$
-A_C = \frac{\pi D_C^2}{4} = \frac{\pi \cdot 0{,}30^2}{4} = 0{,}0707\ \text{m}^2
+A_C = \frac{\pi D_C^2}{4} = \frac{\pi \cdot 0{,}30^2}{4} \approx 0{,}0707\ \text{m}^2,
 $$
 
 pa je srednja izlazna brzina
 
 $$
-v_C = \frac{Q_C}{A_C} = \frac{0{,}180}{0{,}0707} = 2{,}55\ \text{m/s}
+v_C = \frac{Q_C}{A_C} = \frac{0{,}180}{0{,}0707} \approx 2{,}55\ \text{m/s}.
 $$
 
 Sada zatvaramo masenu bilancu:
 
 $$
-\dot{m}_C = \dot{m}_A + \dot{m}_B = \rho_A Q_A + \rho_B Q_B
-$$
-
-odnosno
-
-$$
-\dot{m}_C = 1000 \cdot 0{,}150 + 800 \cdot 0{,}030 = 150 + 24 = 174\ \text{kg/s}
+\dot{m}_C = \dot{m}_A + \dot{m}_B = \rho_A Q_A + \rho_B Q_B = 1000 \cdot 0{,}150 + 800 \cdot 0{,}030 = 150 + 24 = 174\ \text{kg/s}.
 $$
 
 Gustoća mješavine na izlazu zato je
 
 $$
-\rho_C = \frac{\dot{m}_C}{Q_C} = \frac{174}{0{,}180} = 966{,}7\ \text{kg/m}^3
-$$
-
-odnosno približno
-
-$$
-\rho_C \approx 967\ \text{kg/m}^3
+\rho_C = \frac{\dot{m}_C}{Q_C} = \frac{174}{0{,}180} \approx 966{,}7\ \text{kg/m}^3 \approx 967\ \text{kg/m}^3.
 $$
 
 **Provjera i komentar**
@@ -418,24 +440,19 @@ U izlaznom presjeku komora daje brzinu od oko $2{,}55\ \text{m/s}$ i homogenu mj
 Ta scena zatvara stacionarni višegranski slučaj. Treća jezgrena scena <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> ide jedan korak dalje: protoci više nisu uravnoteženi, pa razlika ulaza i izlaza ne nestaje nego se pretvara u porast volumena unutar kontrolnog volumena.
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Izjednačni spremnik tijekom ispiranja filtra <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Izjednačni spremnik tijekom ispiranja filtra&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Tijekom ispiranja filtra u sustavu za pripremu vode izjednačni spremnik prima više vode nego što se odvodi servisnim ispustom, pa razina postupno raste. Operater procjenjuje brzinu porasta razine, vrijeme dosizanja gornje radne granice i pripadnu akumuliranu masu.
 
 **Zadano**
 
-Pravokutni izjednačni spremnik duljine $L = 3{,}0\ \text{m}$ i širine $b = 1{,}8\ \text{m}$ prima vodu tijekom ciklusa ispiranja filtra. U spremnik ulazi voda stalnim volumenskim protokom
-
-$$
-Q_{in} = 22\ \text{L/s} = 0{,}022\ \text{m}^3/\text{s}
-$$
-
-dok kroz servisni odvod stalno izlazi
-
-$$
-Q_{out} = 8\ \text{L/s} = 0{,}008\ \text{m}^3/\text{s}
-$$
-
-Početna dubina vode je $h_0 = 0{,}45\ \text{m}$, a gornja dopuštena radna razina $h_1 = 1{,}20\ \text{m}$. Uzmi za vodu $
-\rho = 998\ \text{kg/m}^3$.
+- Duljina pravokutnog izjednačnog spremnika: $L = 3{,}0\ \text{m}$
+- Širina spremnika: $b = 1{,}8\ \text{m}$
+- Stalni ulazni volumenski protok vode: $Q_{in} = 22\ \text{L/s} = 0{,}022\ \text{m}^3/\text{s}$
+- Stalni izlazni protok kroz servisni odvod: $Q_{out} = 8\ \text{L/s} = 0{,}008\ \text{m}^3/\text{s}$
+- Početna dubina vode: $h_0 = 0{,}45\ \text{m}$
+- Gornja dopuštena radna razina: $h_1 = 1{,}20\ \text{m}$
+- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
 
 **Traženo**
 
@@ -454,67 +471,37 @@ Promatra se kontrolni volumen koji obuhvaća cijeli spremnik. Tekućina je ista 
 Tlocrtna površina spremnika iznosi
 
 $$
-A_T = Lb = 3{,}0 \cdot 1{,}8 = 5{,}40\ \text{m}^2
+A_T = Lb = 3{,}0 \cdot 1{,}8 = 5{,}40\ \text{m}^2.
 $$
 
-Za nestacionarni kontrolni volumen vrijedi
+Za nestacionarni kontrolni volumen vrijedi $Q_{in} - Q_{out} = dV/dt$. Kako je $V = A_T h$, slijedi
 
 $$
-Q_{in} - Q_{out} = \frac{dV}{dt}
-$$
-
-Kako je $V = A_T h$, slijedi
-
-$$
-Q_{in} - Q_{out} = A_T \frac{dh}{dt}
-$$
-
-odnosno
-
-$$
-\frac{dh}{dt} = \frac{Q_{in} - Q_{out}}{A_T} = \frac{0{,}022 - 0{,}008}{5{,}40} = 2{,}59 \cdot 10^{-3}\ \text{m/s}
-$$
-
-To je jednako
-
-$$
-\frac{dh}{dt} \approx 0{,}155\ \text{m/min}
+\frac{dh}{dt} = \frac{Q_{in} - Q_{out}}{A_T} = \frac{0{,}022 - 0{,}008}{5{,}40} \approx 2{,}59 \cdot 10^{-3}\ \text{m/s} \approx 0{,}155\ \text{m/min}.
 $$
 
 Porast razine koji nas zanima iznosi
 
 $$
-\Delta h = h_1 - h_0 = 1{,}20 - 0{,}45 = 0{,}75\ \text{m}
+\Delta h = h_1 - h_0 = 1{,}20 - 0{,}45 = 0{,}75\ \text{m},
 $$
 
 pa je pripadni akumulirani volumen
 
 $$
-\Delta V = A_T \Delta h = 5{,}40 \cdot 0{,}75 = 4{,}05\ \text{m}^3
+\Delta V = A_T \Delta h = 5{,}40 \cdot 0{,}75 = 4{,}05\ \text{m}^3.
 $$
 
 Vrijeme potrebno za takvu akumulaciju je
 
 $$
-t = \frac{\Delta V}{Q_{in} - Q_{out}} = \frac{4{,}05}{0{,}014} = 289\ \text{s}
-$$
-
-odnosno približno
-
-$$
-t \approx 4{,}82\ \text{min}
+t = \frac{\Delta V}{Q_{in} - Q_{out}} = \frac{4{,}05}{0{,}014} \approx 289\ \text{s} \approx 4{,}82\ \text{min}.
 $$
 
 Masa vode koja se do tada akumulira iznosi
 
 $$
-\Delta m = \rho \Delta V = 998 \cdot 4{,}05 = 4{,}04 \cdot 10^3\ \text{kg}
-$$
-
-odnosno
-
-$$
-\Delta m \approx 4040\ \text{kg}
+\Delta m = \rho \Delta V = 998 \cdot 4{,}05 \approx 4{,}04 \cdot 10^3\ \text{kg} \approx 4040\ \text{kg}.
 $$
 
 **Provjera i komentar**
@@ -527,55 +514,21 @@ Razina vode u spremniku raste brzinom od oko $0{,}155\ \text{m/min}$, do gornje 
 :::
 
 ::: {.mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak - miješajući izjednačni spremnik s porastom razine <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Cjeloviti zadatak — miješajući izjednačni spremnik s porastom razine&nbsp;<span class="mf1-level">T3</span></p>
+
+**Kontekst:** U procesnom postrojenju miješajući izjednačni spremnik prima vodu i slanu otopinu iz dvaju ulaznih vodova, a homogenizirana mješavina izlazi kroz zajednički vod sporije nego što ulazi, pa razina postupno raste. Procesnom inženjeru trebaju izlazni protok, gustoća mješavine, brzina porasta razine te masa koja se akumulira u radnom rasponu.
 
 **Zadano**
 
-Pravokutni miješajući izjednačni spremnik tlocrtnih dimenzija
-
-$$
-L = 4{,}2\ \text{m}, \qquad b = 1{,}5\ \text{m}
-$$
-
-prima dvije stalne ulazne struje:
-
-1. vodu gustoće:
-
-$$
-\rho_A = 1000\ \text{kg/m}^3
-$$
-
-volumenskim protokom
-
-$$
-Q_A = 18\ \text{L/s} = 0{,}018\ \text{m}^3/\text{s}
-$$
-
-2. slanu otopinu relativne gustoće:
-
-$$
-s_B = 1{,}10
-$$
-
-volumenskim protokom
-
-$$
-Q_B = 6\ \text{L/s} = 0{,}006\ \text{m}^3/\text{s}
-$$
-
-Iz spremnika istječe homogena mješavina kroz izlazni vod promjera
-
-$$
-D_3 = 100\ \text{mm}
-$$
-
-pri čemu je trenutna srednja izlazna brzina
-
-$$
-v_3 = 1{,}80\ \text{m/s}
-$$
-
-Pretpostavi da je spremnik dobro izmiješan i da je njegova trenutna gustoća jednaka gustoći mješavine dviju ulaznih struja. Početna razina u promatranom intervalu je $h_0 = 0{,}80\ \text{m}$, a razmatra se porast do $h_1 = 1{,}20\ \text{m}$.
+- Tlocrtne dimenzije pravokutnog miješajućeg izjednačnog spremnika: $L = 4{,}2\ \text{m}$, $b = 1{,}5\ \text{m}$
+- Gustoća vode (ulazna struja A): $\rho_A = 1000\ \text{kg/m}^3$
+- Volumenski protok vode: $Q_A = 18\ \text{L/s} = 0{,}018\ \text{m}^3/\text{s}$
+- Relativna gustoća slane otopine (ulazna struja B): $s_B = 1{,}10$
+- Volumenski protok slane otopine: $Q_B = 6\ \text{L/s} = 0{,}006\ \text{m}^3/\text{s}$
+- Promjer izlaznog voda: $D_3 = 100\ \text{mm}$
+- Trenutna srednja izlazna brzina: $v_3 = 1{,}80\ \text{m/s}$
+- Spremnik je dobro izmiješan, gustoća u spremniku jednaka je gustoći mješavine ulaznih struja
+- Početna razina: $h_0 = 0{,}80\ \text{m}$; razmatra se porast do $h_1 = 1{,}20\ \text{m}$
 
 **Traženo**
 
@@ -596,103 +549,73 @@ Ovdje jedan kontrolni volumen obuhvaća cijeli spremnik. Izlazni tok zatvara se 
 Najprije od relativne gustoće dobivamo gustoću slane otopine:
 
 $$
-\rho_B = s_B \rho_A = 1{,}10 \cdot 1000 = 1100\ \text{kg/m}^3
+\rho_B = s_B \rho_A = 1{,}10 \cdot 1000 = 1100\ \text{kg/m}^3.
 $$
 
 Površina izlaznog presjeka iznosi
 
 $$
-A_3 = \frac{\pi D_3^2}{4} = \frac{\pi \cdot 0{,}10^2}{4} = 7{,}854 \cdot 10^{-3}\ \text{m}^2
+A_3 = \frac{\pi D_3^2}{4} = \frac{\pi \cdot 0{,}10^2}{4} \approx 7{,}854 \cdot 10^{-3}\ \text{m}^2,
 $$
 
 zato je izlazni volumenski protok
 
 $$
-Q_3 = A_3 v_3 = 7{,}854 \cdot 10^{-3} \cdot 1{,}80 = 1{,}414 \cdot 10^{-2}\ \text{m}^3/\text{s}
-$$
-
-odnosno
-
-$$
-Q_3 \approx 14{,}1\ \text{L/s}
+Q_3 = A_3 v_3 = 7{,}854 \cdot 10^{-3} \cdot 1{,}80 \approx 1{,}414 \cdot 10^{-2}\ \text{m}^3/\text{s} \approx 14{,}1\ \text{L/s}.
 $$
 
 Za homogeniziranu mješavinu najprije zatvaramo masenu bilancu dviju ulaznih struja. Ukupni ulazni maseni protok je
 
 $$
-\dot{m}_{in} = \rho_A Q_A + \rho_B Q_B = 1000 \cdot 0{,}018 + 1100 \cdot 0{,}006 = 18 + 6{,}6 = 24{,}6\ \text{kg/s}
+\dot{m}_{in} = \rho_A Q_A + \rho_B Q_B = 1000 \cdot 0{,}018 + 1100 \cdot 0{,}006 = 18 + 6{,}6 = 24{,}6\ \text{kg/s}.
 $$
 
 Ukupni ulazni volumenski protok iznosi
 
 $$
-Q_{in} = Q_A + Q_B = 0{,}018 + 0{,}006 = 0{,}024\ \text{m}^3/\text{s}
+Q_{in} = Q_A + Q_B = 0{,}018 + 0{,}006 = 0{,}024\ \text{m}^3/\text{s},
 $$
 
 pa je gustoća homogenizirane mješavine
 
 $$
-\rho_3 = \frac{\dot{m}_{in}}{Q_{in}} = \frac{24{,}6}{0{,}024} = 1025\ \text{kg/m}^3
+\rho_3 = \frac{\dot{m}_{in}}{Q_{in}} = \frac{24{,}6}{0{,}024} = 1025\ \text{kg/m}^3.
 $$
 
 Tlocrtna površina spremnika iznosi
 
 $$
-A_T = Lb = 4{,}2 \cdot 1{,}5 = 6{,}30\ \text{m}^2
+A_T = Lb = 4{,}2 \cdot 1{,}5 = 6{,}30\ \text{m}^2.
 $$
 
-Za volumensku akumulaciju vrijedi
+Za volumensku akumulaciju vrijedi $Q_A + Q_B - Q_3 = A_T \,dh/dt$, odnosno
 
 $$
-Q_A + Q_B - Q_3 = A_T \frac{dh}{dt}
-$$
-
-odnosno
-
-$$
-\frac{dh}{dt} = \frac{0{,}024 - 0{,}01414}{6{,}30} = 1{,}57 \cdot 10^{-3}\ \text{m/s}
-$$
-
-što je jednako
-
-$$
-\frac{dh}{dt} \approx 0{,}094\ \text{m/min}
+\frac{dh}{dt} = \frac{0{,}024 - 0{,}01414}{6{,}30} \approx 1{,}57 \cdot 10^{-3}\ \text{m/s} \approx 0{,}094\ \text{m/min}.
 $$
 
 Porast razine iznosi
 
 $$
-\Delta h = h_1 - h_0 = 1{,}20 - 0{,}80 = 0{,}40\ \text{m}
+\Delta h = h_1 - h_0 = 1{,}20 - 0{,}80 = 0{,}40\ \text{m},
 $$
 
 pa je akumulirani volumen
 
 $$
-\Delta V = A_T \Delta h = 6{,}30 \cdot 0{,}40 = 2{,}52\ \text{m}^3
+\Delta V = A_T \Delta h = 6{,}30 \cdot 0{,}40 = 2{,}52\ \text{m}^3.
 $$
 
 Vrijeme potrebno za takav porast razine iznosi
 
 $$
-t = \frac{\Delta V}{Q_A + Q_B - Q_3} = \frac{2{,}52}{0{,}024 - 0{,}01414} = 255\ \text{s}
-$$
-
-odnosno približno
-
-$$
-t \approx 4{,}26\ \text{min}
+t = \frac{\Delta V}{Q_A + Q_B - Q_3} = \frac{2{,}52}{0{,}024 - 0{,}01414} \approx 255\ \text{s} \approx 4{,}26\ \text{min}.
 $$
 
 Masa koja se u tom intervalu akumulira u spremniku iznosi
 
 $$
-\Delta m = \rho_3 \Delta V = 1025 \cdot 2{,}52 = 2583\ \text{kg}
-$$
-
-odnosno
-
-$$
-\Delta m \approx 2{,}58\ \text{t}
+\Delta m = \rho_3 \Delta V = 1025 \cdot 2{,}52 \approx 2583\ \text{kg} \approx 2{,}58\ \text{t}.
 $$
 
 **Provjera i komentar**
@@ -709,9 +632,9 @@ Kao sažetak poglavlja korisno je držati zajedno tri reprezentativne scene: su�
 ![U08 statička zamjena za kontrolni volumen i kontinuitet](../assets/print/u08_kontrolni_volumen_scene.svg)
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Kontinuitet kroz razvodni T-komad hidrauličnog sustava &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Kontinuitet kroz razvodni T-komad hidrauličnog sustava &nbsp;<span class="mf1-level">T2</span></p>
 
-🔩 **Primjer za strojare**
+**Primjer za strojare**
 
 **Kontekst:** U hidrauličnom sustavu strojnice T-komad dijeli ulazni tok ulja iz crpke u dva ogranka: jedan za radni cilindar, drugi za hladnjak ulja. Projektant provjerava brzine u ograncima.
 
@@ -816,14 +739,14 @@ $$
 
 **Provjera i komentar**
 
-Provjera: $Q_2 + Q_3 = 2{,}17 + 1{,}45 = 3{,}62\ \text{L/s} = Q_1$ ✓. Brzina $v_2 = 6{,}9\ \text{m/s}$ je nešto visoka za hidraulični sustav (preporučeno < 6 m/s u radnim cijevima), pa bi konstruktor razmatrao povećanje $D_2$ na npr. 22 mm.
+Provjera: $Q_2 + Q_3 = 2{,}17 + 1{,}45 = 3{,}62\ \text{L/s} = Q_1$. Brzina $v_2 = 6{,}9\ \text{m/s}$ je nešto visoka za hidraulični sustav (preporučeno < 6 m/s u radnim cijevima), pa bi konstruktor razmatrao povećanje $D_2$ na npr. 22 mm.
 
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Punjenje retencijskog bazena s više dotoka &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Punjenje retencijskog bazena s više dotoka &nbsp;<span class="mf1-level">T2</span></p>
 
-🏗️ **Primjer za građevinare**
+**Primjer za građevinare**
 
 **Kontekst:** Retencijski bazen za oborinsku vodu prima dotoke iz dva odvodna kanala i prazni se kroz jedan ispust. Hidrotehničar provjerava koliko brzo raste razina pri pljusku.
 
@@ -930,7 +853,7 @@ Razina raste jer je ukupni ulaz ($0{,}55\ \text{m}^3/\text{s}$) veći od izlaza 
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Rashladni krug baterijskog paketa električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Rashladni krug baterijskog paketa električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Litij-ionski baterijski paket električnog vozila proizvodi toplinu pri brzom punjenju i ubrzanom kretanju, koju treba odvoditi rashladnim medijem (uobičajeno smjesa glikola i vode) kako bi temperatura ćelija ostala u sigurnom radnom rasponu. Glavni vod dovodi medij iz crpke, a kolektor ga razdjeljuje na više paralelnih kanala, po jedan za svaki baterijski modul.
 
@@ -1002,46 +925,36 @@ $$
 Brzine od oko $1\ \text{m/s}$ uobičajene su za rashladne krugove baterijskih paketa električnih vozila — više brzine donijele bi bolji konvektivni prijenos topline, ali bi povećale i hidrauličke gubitke i potrošnju energije crpke, dok bi niže brzine zahtijevale veće presjeke i više prostora u baterijskom paketu. Začepljenje pojedinog kanala u prvom redu nije kritično za hidrauliku — brzina u preostalim kanalima raste tek $7\,\%$ — ali pripadni baterijski modul ostaje bez hlađenja i njegova temperatura počinje brzo rasti, što može dovesti do toplinskog odbjega ćelija. Upravo zato suvremeni sustavi upravljanja baterijama (engl. *battery management system*) prate temperaturu svakog modula odvojeno i isključuju neispravan modul prije nego što hidraulički kvar postane sigurnosni problem.
 :::
 
-## Usporedna tablica: strojarstvo i građevinarstvo
-
-| Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |
-|---------|----------------------------------|--------------------------------------|
-| $A_1 v_1 = A_2 v_2$ | Difuzor, sapnica, mjerni presjek u hidrauličnom sustavu | Suženje kanala, mostovni otvor, prolaz kroz propust |
-| $\sum \dot{m}_{ul} = \sum \dot{m}_{iz}$ | Miješanje struja ulja različitih temperatura u rashladnom krugu | Spajanje odvodnih kanala pred retencijskim bazen |
-| Akumulacija $dm_{CV}/dt \neq 0$ | Punjenje/pražnjenje akumulacijskog hidrauličnog spremnika | Punjenje retencijskog bazena pri oluji; pražnjenje vodotornja |
-| Maseni vs. volumenski protok | Bitno kod miješanja fluida različitih gustoća (ulje + voda) | Bitno kod miješanja slatke i slane vode u estuarijima i lučnim bazenima |
-| Volumenski protok $Q = Av$ | Projektiranje cjevovoda, brzina u mjernim presjecima | Projektiranje kanala, propusta i melioracijskog sustava |
-
 ::: {.mf1-samoprovjera}
-<p class="mf1-box-label">🎯 Provjeri sebe</p>
+<p class="mf1-box-label">Provjeri sebe</p>
 
 Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
 
 1. U kojem slučaju vrijedi pojednostavljeni oblik $A_1 v_1 = A_2 v_2$, a kada ga treba zamijeniti općim integralnim oblikom bilance mase?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Pojednostavljeni oblik vrijedi za stacionarno strujanje jednog nestlačivog fluida kroz jedan ulaz i jedan izlaz s približno jednolikim profilima brzine. U slučaju više ulaza i izlaza, akumulacije u kontrolnom volumenu ili miješanja fluida različitih gustoća, treba primijeniti opću masenu bilancu $\sum \dot{m}_{ul} = \sum \dot{m}_{iz} + \mathrm{d}m/\mathrm{d}t$.
 :::
 
 2. Po čemu se razlikuje masena bilanca od volumenske, i kada njihova razlika postaje važna?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Masena bilanca koristi protoke izražene preko $\dot{m} = \rho Q$, dok volumenska bilanca uspoređuje izravno $Q$. Pri nestlačivom strujanju jednog fluida obje su ekvivalentne, ali pri miješanju fluida različitih gustoća (slatka i slana voda, ulje i voda) ili pri stlačivim fluidima različite gustoće na ulazu i izlazu samo masena bilanca daje pravilan odgovor.
 :::
 
 3. Što fizikalno predstavlja član $\mathrm{d}m/\mathrm{d}t$ u općem zakonu kontinuiteta?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Predstavlja brzinu promjene ukupne mase fluida unutar kontrolnog volumena. Ako je veći od nule, masa se akumulira (spremnik se puni); ako je manji od nule, masa se gubi (spremnik se prazni); ako je nula, sustav je u stacionarnom stanju.
 :::
 
 4. Zašto je za pravilan proračun nužno najprije nacrtati kontrolni volumen?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Bez jasno definiranog kontrolnog volumena nije moguće odrediti što su ulazi, što izlazi i postoji li akumulacija. Mnogi krivo pojednostavljeni rezultati nastaju upravo zato što se napreduje s bilanca prije nego što je kontrolni volumen u potpunosti zatvoren — bilo da se ne uzima u obzir dodatna grana, bilo da se akumulacija u nestacionarnoj situaciji previdi.
 :::
 :::
@@ -1121,15 +1034,17 @@ Pojednostavljeni zapis $A_1 v_1 = A_2 v_2$ vrijedi samo za vrlo poseban slučaj 
 :::
 
 ::: {.mf1-numerika}
-<p class="mf1-box-label">🖥️ Numerički most</p>
+<p class="mf1-box-label">Numerički most</p>
 
-**Gdje ovo živi u numerici.** Kontrolni volumen koji ovdje rabiš za jedan spremnik, u CFD-u postaje **svaka ćelija mreže**. Cijela domena se rastavlja na milijune malih kontrolnih volumena, a u svakom od njih solver piše točno onu bilancu mase koju ti pišeš ručno: što ulazi kroz lijevu stranu, što izlazi kroz desnu, što se akumulira unutra. To je smisao kratice **FVM — Finite Volume Method**.
+**Gdje ovo živi u numerici.** Kontrolni volumen koji se ovdje rabi za jedan spremnik, u CFD-u postaje **svaka ćelija mreže**. Cijela domena rastavlja se na milijune malih kontrolnih volumena, a u svakom od njih solver piše točno onu bilancu mase koja se ovdje piše ručno: što ulazi kroz lijevu stranu, što izlazi kroz desnu, što se akumulira unutra. To je smisao kratice **FVM — metoda kontrolnih volumena (engl. Finite Volume Method)**.
 
-**Što numerički alat radi s tim.** Diferencijalni oblik $\nabla\cdot\vec{v} = 0$ je zatvarač cijelog sustava. Algoritmi **SIMPLE** (stacionarno) i **PISO/PIMPLE** (nestacionarno) iterativno usklađuju polje tlaka i brzine tako da kontinuitet vrijedi globalno, a ne samo na ulazu i izlazu. Ako se na kraju simulacije ne zatvori masena bilanca, rezultat je numerički promašaj — bez obzira koliko izgledao lijepo.
+**Što numerički alat radi s tim.** Diferencijalni oblik $\nabla\cdot\vec{v} = 0$ zatvarač je cijelog sustava. Algoritmi **SIMPLE** (stacionarno) i **PISO/PIMPLE** (nestacionarno) iterativno usklađuju polje tlaka i brzine tako da kontinuitet vrijedi globalno, a ne samo na ulazu i izlazu. Ako se na kraju simulacije ne zatvori masena bilanca, rezultat je numerički promašaj — bez obzira na to koliko izgledao lijepo.
 
-**Alati gdje ćeš to sresti:** `OpenFOAM` (`simpleFoam`, `pisoFoam`, `pimpleFoam`) · `ANSYS Fluent` (*Pressure-Based Solver*, *SIMPLE/PISO*) · `Star-CCM+` (*Segregated Flow Solver*).
+**Tipičan scenarij.** Praktična provjera mase u CFD simulaciji izvodi se funkcijskim objektima poput `flowRatePatch` ili *Surface Integration* na ulazu, izlazu i svim zidovima. Razlika protoka veća od oko $1\%$ ulaznog signalizira da mreža "propušta" masu — najčešće zbog nedovoljno konvergirane sprege tlaka i brzine ili neispravno postavljenih rubnih uvjeta. To je prvi kontrolni korak svake ozbiljne simulacije, prije nego se interpretiraju vrijednosti tlaka, sile ili gubitka.
 
-> *Nije gradivo MF1. Ovo poglavlje stoji kao mostovni stup između tvog ručnog kontrolnog volumena i milijunske mreže koju gradi mesh generator.*
+**Alati u kojima se to susreće:** `OpenFOAM` (`simpleFoam`, `pisoFoam`, `pimpleFoam`) · `ANSYS Fluent` (*Pressure-Based Solver*, *SIMPLE/PISO*) · `Star-CCM+` (*Segregated Flow Solver*).
+
+> *Nije gradivo MF1. Ovo poglavlje stoji kao mostovni stup između ručnog kontrolnog volumena i milijunske mreže koju gradi generator mreže.*
 :::
 
 

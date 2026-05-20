@@ -1,6 +1,6 @@
 ![Pregled poglavlja: fizikalni sustav (Pascalov zakon s dva klipa), ključna jednadžba p = F₁/A₁ = F₂/A₂ i primjena u praksi (hidraulična dizalica)](../assets/print/u01_fig_uvod_pregled.svg){#fig-uvod-u01 fig-align="center"}
 
-## Fluid kao model, a ne samo kao popis formula
+## Fluid kao kontinuum: model umjesto popisa formula
 
 Prvo poglavlje ne počinje samo definicijom tlaka ili gustoće. Najprije se razjašnjava što je fluid, zašto ga opisujemo kontinuumom i zašto su tlak i Pascalov zakon prirodne posljedice tog modela.
 
@@ -13,7 +13,7 @@ Hidraulične dizalice, preše za oblikovanje lima i brodski kormilarski hidrauli
 :::
 
 ::: {.mf1-priprema}
-<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+<p class="mf1-box-label">Prije čitanja poglavlja</p>
 
 **Predznanje koje se pretpostavlja:**
 
@@ -32,14 +32,14 @@ Hidraulične dizalice, preše za oblikovanje lima i brodski kormilarski hidrauli
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
-## 🖥️ Mehanika fluida i numerika — najava
+## Mehanika fluida i numerika — najava
 
-Svaka jednadžba koju ćeš sresti u ovom udžbeniku ima svoju ulogu u **računalnoj dinamici fluida (CFD)**. Time se ovdje nećemo baviti — to je tema kolegija Računalna dinamika fluida. No kroz udžbenik ćeš povremeno naći dvije vrste oznaka:
+Svaka jednadžba u ovom udžbeniku ima svoju ulogu u **računalnoj dinamici fluida (CFD)**. Time se ovdje neće baviti detaljnije — to je tema kolegija Računalna dinamika fluida. No kroz udžbenik javljaju se dvije vrste oznaka:
 
-- **🖥️ Numerički trag** *(sklopiv, uz pojedine jednadžbe)* — kratki podsjetnik gdje ta jednadžba živi u numerici.
-- **🖥️ Numerički most** *(na kraju svakog poglavlja, plavi okvir)* — kratak osvrt kamo te ovo poglavlje vodi dalje.
+- **Numerički trag** *(sklopiv, uz pojedine jednadžbe)* — kratki podsjetnik gdje ta jednadžba živi u numerici.
+- **Numerički most** *(na kraju svakog poglavlja, plavi okvir)* — kratak osvrt kamo navedeno poglavlje vodi dalje.
 
-Nije gradivo MF1. Otvori s znatiželjom.
+Nije gradivo MF1. Otvara se s znatiželjom.
 :::
 
 ## Fizikalni uvod i matematički izvod
@@ -55,7 +55,7 @@ p = \frac{F_n}{A}
 $$
 
 ::: {.callout-note}
-## 📐 Fizikalno značenje
+## Fizikalno značenje
 Tlak nije sila – on mjeri koliko je sile sabijeno na jedinicu površine. Ista sila raspršena na veliku površinu daje nizak tlak; stisnuta na malu površinu daje visok tlak. U mirujućem fluidu nema tangencijalnih naprezanja, pa tlak u jednoj točki djeluje jednako u svim smjerovima – vodoravno, okomito i dijagonalno – i zato ga opisujemo jednim skalarem, a ne vektorom.
 :::
 
@@ -78,22 +78,20 @@ s_r = \frac{\rho}{\rho_{voda}}
 $$
 
 ::: {.callout-note}
-## 📐 Fizikalno značenje
+## Fizikalno značenje
 Gustoća $\rho$ mjeri masenu zbijenost fluida – koliko kilograma mase stane u jedan kubni metar. Specifična težina $\gamma = \rho g$ pretvara tu masu u gravitacijsku silu: to je ono što fluid u Zemljinom polju fizički "teži" po kubnom metru. Relativna gustoća $s_r$ je bezdimenzijski omjer prema vodi: vrijednost 0,86 odmah kaže da ulje pluta na vodi jer je lakše, a vrijednost 13,6 za živu kaže da gotovo 14 litara vode teži koliko litra žive.
 :::
 
 Gustoća govori koliko mase ima u jedinici volumena, specifična težina kolika je težina tog volumena, a relativna gustoća daje odnos prema vodi kao referenci. Ako se ove tri veličine ne odvoje u <span class="mf1-ch-ref"><span class="mf1-ch-code">U01</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>, kasnije pogreške u hidrostatici i uzgonu izgledaju kao računski problem, iako su zapravo problem modela. Tlak je normalna sila po jedinici površine. U mirujućem fluidu tlak u jednoj točki djeluje jednako u svim smjerovima, pa ga opisujemo kao skalarno polje, a ne kao vektor. Taj je korak temeljni: kasnije ćemo iz tlaka dobivati sile na plohe i stijenke, ali sam tlak nije sila nego intenzitet normalnog naprezanja.
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Kratki primjer - Gustoća, specifična težina i relativna gustoća ulja <span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">Kratki primjer — Gustoća, specifična težina i relativna gustoća ulja&nbsp;<span class="mf1-level">T1</span></p>
+
+**Kontekst:** Hidraulično ulje koristi se kao radni medij u hidrauličnim sustavima. Za odabir komponenti i provjeru uzgona potrebno je razlikovati gustoću, specifičnu težinu i relativnu gustoću tog ulja.
 
 **Zadano**
 
-Hidraulično ulje ima gustoću
-
-$$
-\rho = 860\ \text{kg/m}^3
-$$
+- Gustoća hidrauličnog ulja: $\rho = 860\ \text{kg/m}^3$
 
 **Traženo**
 
@@ -121,13 +119,7 @@ $$
 Specifična težina ulja iznosi
 
 $$
-\gamma = \rho g = 860 \cdot 9{,}81 = 8437\ \text{N/m}^3
-$$
-
-odnosno
-
-$$
-\gamma \approx 8{,}44\ \text{kN/m}^3.
+\gamma = \rho g = 860 \cdot 9{,}81 = 8437\ \text{N/m}^3\approx 8{,}44\ \text{kN/m}^3.
 $$
 
 Relativna gustoća dobiva se omjerom prema vodi:
@@ -160,18 +152,18 @@ F_2 = F_1 \frac{A_2}{A_1}
 $$
 
 ::: {.callout-note}
-## 📐 Fizikalno značenje
+## Fizikalno značenje
 Pascalov zakon ne stvara energiju – on mijenja omjer sile i pomaka. Isti tlak koji mali klip unosi u zatvoreni fluid, fluid prenosi jednako prema svim stjenkama. Gdje je površina veća, isti tlak skuplja veću ukupnu silu. Omjer $A_2/A_1 = 35$ znači 35 puta veća izlazna sila, ali uz 35 puta manji izlazni pomak: mehanički rad ulaza ostaje jednak mehaničkom radu izlaza.
 :::
 
 ::: {.callout-note collapse="true" icon="false"}
-## 🖥️ Numerički trag
+## Numerički trag
 
 Ideja da se promjena tlaka u zatvorenom fluidu prenosi *istovremeno* na sve točke je upravo razlog zašto u CFD-u za nestlačivo strujanje tlak nije lokalna veličina, nego rješenje **eliptičke Poissonove jednadžbe** koja veže cijelu domenu u jednom koraku iteracije. Solveri tipa `simpleFoam` i `pisoFoam` (OpenFOAM) ili pressure-based rješavač u Fluentu računaju polje tlaka točno tako — globalno, ne marš-po-vremenu.
 :::
 
 ::: {.mf1-interaktivno}
-<p class="mf1-box-label">📈 Interaktivni prikaz — Hidraulična preša</p>
+<p class="mf1-box-label">Interaktivni prikaz — Hidraulična preša</p>
 
 Interaktivni prikaz omogućuje mijenjanje promjera ulaznog i izlaznog klipa te sile na ulazu uz neposredno praćenje izlazne sile i pripadnog omjera pomaka klipova. Vizualizacija jasno razdvaja pojačanje sile od smanjenja pomaka koje slijedi iz očuvanja istisnutog volumena.
 
@@ -192,7 +184,7 @@ A_1 s_1 = A_2 s_2
 $$
 
 ::: {.callout-note}
-## 📐 Fizikalno značenje
+## Fizikalno značenje
 Ova jednadžba je izravna posljedica nestlačivosti fluida: volumen koji uđe u sustav mora negdje izaći. Manji klip mora prijeći duži put da istisnuti volumen bude jednak volumenu koji veliki klip pomakne za kratki hod. Zato sustav s omjerom površina 35 zahtijeva da mali klip hoda 35 puta dulje od radnog klipa. Volumna bilanca vrijedi neovisno o tlaku – dovoljno je da je fluid nestlačiv.
 :::
 
@@ -201,7 +193,7 @@ Veća izlazna sila zato dolazi uz manji izlazni pomak.
 U ovom se poglavlju zato zadržavamo na osnovnom hidrauličnom prijenosu u kojem se tlak prenosi kroz zatvoreni mirujući fluid bez dodatnog hodanja po visinama. Kad radne točke nisu na istoj razini, isti se sustav mora čitati zajedno s hidrostatikom, što pripada <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>.
 
 ::: {.mf1-izvod}
-<p class="mf1-box-label">Matematički izvod</p>
+<p class="mf1-box-label">Matematički izvod — Pascalov zakon i očuvanje rada</p>
 
 Neka na mali klip površine $A_1$ djeluje dodatna sila $F_1$. Dodatni tlak koji ta sila stvara u zatvorenom mirujućem fluidu definira se relacijom
 
@@ -238,7 +230,7 @@ F_1 s_1 = F_2 s_2,
 $$
 
 ::: {.callout-note}
-## 📝 Razrada koraka
+## Razrada koraka
 Korak: $F_2 = F_1 \dfrac{A_2}{A_1}$ i $A_1 s_1 = A_2 s_2$ $\;\Rightarrow\;$ $F_1 s_1 = F_2 s_2$
 
 Iz volumne bilance slijedi $s_2 = s_1 \dfrac{A_1}{A_2}$. Uvrstimo to u rad izlaza:
@@ -251,30 +243,44 @@ Razlomci $A_2/A_1$ i $A_1/A_2$ se pokrate bez obzira na veličinu površina, pa 
 što zatvara cjelovito fizikalno značenje Pascalova zakona: hidraulični sustav mijenja omjer sile i pomaka zato što isti porast tlaka djeluje na različitim površinama, ali ukupna mehanička energija ne nastaje iz ničega.
 :::
 
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Izotropnost tlaka (Cauchyjev tetraedar)</p>
+
+Tvrdnja da u mirujućem fluidu tlak u jednoj točki djeluje jednako u svim smjerovima može se izvesti formalno iz ravnoteže sila na infinitezimalnom **trodimenzijskom tetraedru** s tri okomite plohe duž koordinatnih osi i jednom kosom plohom proizvoljne orijentacije s jediničnim vektorom normale $\vec{n} = (n_x, n_y, n_z)$.
+
+Neka su pripadne površine $A_x$, $A_y$, $A_z$ (okomite na osi) i $A_n$ (kosa). Iz geometrije slijedi:
+
+$$
+A_x = n_x A_n, \qquad A_y = n_y A_n, \qquad A_z = n_z A_n.
+$$
+
+Na svaku plohu djeluje normalna tlačna sila — neka su odgovarajući tlakovi $p_x$, $p_y$, $p_z$ na koordinatnim plohama i $p_n$ na kosoj plohi. Ravnoteža sila po osi $x$ (zanemarujući težinu jer ona ima dimenziju volumena $\propto \ell^3$ koja iščezava brže od površina $\propto \ell^2$ kada $\ell \to 0$):
+
+$$
+p_x A_x - p_n A_n n_x = 0,
+$$
+
+odakle slijedi $p_x = p_n$. Analogno za osi $y$ i $z$ daje $p_y = p_n$ i $p_z = p_n$. Time se izvodi
+
+$$
+p_x = p_y = p_z = p_n,
+$$
+
+što znači da je tlak u jednoj točki mirujućeg fluida **neovisan o orijentaciji plohe** na kojoj se mjeri. Tlak je dakle skalarna veličina, što opravdava njegov zapis kao polje $p(x, y, z)$ koje će se koristiti u svim daljnjim poglavljima. Ova svojstvenost prestaje vrijediti čim se pojavi gibanje sa smičnim naprezanjem — tada se uvodi tenzor naprezanja u kojem tlak predstavlja samo izotropni dio.
+:::
+
 ## Riješeni primjeri
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Opterećeni klip i tlak u zatvorenom cilindru <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Opterećeni klip i tlak u zatvorenom cilindru&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U hidrauličnom cilindru kružni klip zatvara ulje, a vlastita težina i dodatni teret stvaraju tlak koji se Pascalovim zakonom prenosi na drugi radni klip veće površine.
 
 **Zadano**
 
-Kružni klip promjera
-
-$$
-d_k = 160\ \text{mm}
-$$
-
-zatvara ulje u cilindru. Na klip djeluju vlastita težina i dodatni teret ukupne sile
-
-$$
-G = 3{,}60\ \text{kN}
-$$
-
-Isti tlak zatim djeluje i na drugi radni klip površine
-
-$$
-A_2 = 450\ \text{cm}^2
-$$
+- Promjer kružnog klipa: $d_k = 160\ \text{mm}$
+- Ukupna sila opterećenja na klipu: $G = 3{,}60\ \text{kN}$
+- Površina drugog radnog klipa: $A_2 = 450\ \text{cm}^2$
 
 **Traženo**
 
@@ -293,43 +299,25 @@ Na istoj razini mirujućeg ulja tlak se čita izravno iz odnosa sile i površine
 Površina klipa iznosi
 
 $$
-A_k = \frac{\pi d_k^2}{4} = \frac{\pi \cdot 0{,}16^2}{4} = 2{,}01 \cdot 10^{-2}\ \text{m}^2
-$$
-
-odnosno
-
-$$
-A_k \approx 0{,}0201\ \text{m}^2
+A_k = \frac{\pi d_k^2}{4} = \frac{\pi \cdot 0{,}16^2}{4} = 2{,}01 \cdot 10^{-2}\ \text{m}^2 \approx 0{,}0201\ \text{m}^2.
 $$
 
 Manometarski tlak neposredno ispod klipa dobiva se iz definicije tlaka:
 
 $$
-p = \frac{G}{A_k} = \frac{3600}{0{,}0201} = 1{,}79 \cdot 10^5\ \text{Pa}
-$$
-
-pa je
-
-$$
-p \approx 179\ \text{kPa}
+p = \frac{G}{A_k} = \frac{3600}{0{,}0201} = 1{,}79 \cdot 10^5\ \text{Pa} \approx 179\ \text{kPa}.
 $$
 
 Površinu radnog klipa treba zapisati u SI jedinicama:
 
 $$
-A_2 = 450 \cdot 10^{-4} = 0{,}0450\ \text{m}^2
+A_2 = 450 \cdot 10^{-4} = 0{,}0450\ \text{m}^2.
 $$
 
 Sila na radnom klipu zato je
 
 $$
-F_2 = pA_2 = 1{,}79 \cdot 10^5 \cdot 0{,}0450 = 8{,}06 \cdot 10^3\ \text{N}
-$$
-
-odnosno
-
-$$
-F_2 \approx 8{,}06\ \text{kN}
+F_2 = pA_2 = 1{,}79 \cdot 10^5 \cdot 0{,}0450 = 8{,}06 \cdot 10^3\ \text{N} \approx 8{,}06\ \text{kN}.
 $$
 
 **Provjera i komentar**
@@ -340,11 +328,16 @@ $$
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Servisna hidraulična dizalica <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Servisna hidraulična dizalica&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U radioničkoj hidrauličnoj dizalici mali upravljački klip prenosi tlak na veliki radni klip koji podiže teret. Treba odrediti tlak, izlaznu silu i izlazni pomak.
 
 **Zadano**
 
-U radioničkoj hidrauličnoj dizalici mali upravljački klip ima površinu $A_1 = 6\ \text{cm}^2$, a radni klip koji podiže teret površinu $A_2 = 210\ \text{cm}^2$. Na mali klip djeluje sila $F_1 = 150\ \text{N}$. Ako se mali klip pomakne za $s_1 = 18\ \text{cm}$.
+- Površina malog upravljačkog klipa: $A_1 = 6\ \text{cm}^2$
+- Površina velikog radnog klipa: $A_2 = 210\ \text{cm}^2$
+- Sila na malom klipu: $F_1 = 150\ \text{N}$
+- Pomak malog klipa: $s_1 = 18\ \text{cm}$
 
 **Traženo**
 
@@ -365,37 +358,25 @@ Promatra se mirujući fluid u zatvorenom hidrauličnom sustavu. Najprije se iz s
 Površinu malog klipa treba pretvoriti u kvadratne metre:
 
 $$
-A_1 = 6 \cdot 10^{-4}\ \text{m}^2
+A_1 = 6 \cdot 10^{-4}\ \text{m}^2.
 $$
 
 Zato je tlak u ulju
 
 $$
-p = \frac{F_1}{A_1} = \frac{150}{6 \cdot 10^{-4}} = 2{,}50 \cdot 10^5\ \text{Pa}
-$$
-
-odnosno
-
-$$
-p = 250\ \text{kPa}
+p = \frac{F_1}{A_1} = \frac{150}{6 \cdot 10^{-4}} = 2{,}50 \cdot 10^5\ \text{Pa} = 250\ \text{kPa}.
 $$
 
 Površina velikog klipa iznosi
 
 $$
-A_2 = 210 \cdot 10^{-4} = 2{,}10 \cdot 10^{-2}\ \text{m}^2
+A_2 = 210 \cdot 10^{-4} = 2{,}10 \cdot 10^{-2}\ \text{m}^2.
 $$
 
 pa je sila na velikom klipu
 
 $$
-F_2 = pA_2 = 2{,}50 \cdot 10^5 \cdot 2{,}10 \cdot 10^{-2} = 5250\ \text{N}
-$$
-
-Dakle,
-
-$$
-F_2 = 5{,}25\ \text{kN}
+F_2 = pA_2 = 2{,}50 \cdot 10^5 \cdot 2{,}10 \cdot 10^{-2} = 5250\ \text{N} = 5{,}25\ \text{kN}.
 $$
 
 Za pomake koristimo jednakost istisnutog volumena:
@@ -407,13 +388,7 @@ $$
 odakle slijedi
 
 $$
-s_2 = \frac{A_1}{A_2} s_1 = \frac{6}{210} \cdot 18\ \text{cm} = 0{,}514\ \text{cm}
-$$
-
-odnosno
-
-$$
-s_2 \approx 5{,}1\ \text{mm}
+s_2 = \frac{A_1}{A_2} s_1 = \frac{6}{210} \cdot 18\ \text{cm} = 0{,}514\ \text{cm} \approx 5{,}1\ \text{mm}.
 $$
 
 **Provjera i komentar**
@@ -424,21 +399,16 @@ $$
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Dvostruki hidraulični podizač servisne platforme <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Dvostruki hidraulični podizač servisne platforme&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Servisna platforma za pregled vozila oslanja se na dva paralelna radna cilindra, dok mali pumpni klip ručno potiskuje ulje. Treba odrediti radni tlak, silu na pumpi i ukupan hod potreban za podizanje.
 
 **Zadano**
 
-Servisna platforma za pregled vozila nosi ukupno opterećenje $G = 24\ \text{kN}$. Podupiru je dva jednaka radna cilindra, svaki površine
-
-$$
-A_L = 150\ \text{cm}^2
-$$
-
-Ulje u sustav potiskuje mali pumpni klip površine
-
-$$
-A_p = 6\ \text{cm}^2
-$$
+- Ukupno opterećenje servisne platforme: $G = 24\ \text{kN}$
+- Površina jednog radnog cilindra: $A_L = 150\ \text{cm}^2$ (dva jednaka cilindra)
+- Površina pumpnog klipa: $A_p = 6\ \text{cm}^2$
+- Visina podizanja platforme: $s_L = 20\ \text{mm}$
 
 **Traženo**
 
@@ -459,76 +429,52 @@ U zatvorenom mirujućem ulju prenosi se isti tlak u sve dijelove sustava. Zato s
 Površina jednog radnog cilindra u SI jedinicama iznosi
 
 $$
-A_L = 150 \cdot 10^{-4} = 0{,}015\ \text{m}^2
+A_L = 150 \cdot 10^{-4} = 0{,}015\ \text{m}^2.
 $$
 
 Ukupna nosiva površina dvaju cilindara zato je
 
 $$
-A_{uk} = 2A_L = 0{,}030\ \text{m}^2
+A_{uk} = 2A_L = 0{,}030\ \text{m}^2.
 $$
 
 Tlak potreban da platforma miruje iznosi
 
 $$
-p = \frac{G}{A_{uk}} = \frac{24000}{0{,}030} = 8{,}00 \cdot 10^5\ \text{Pa}
-$$
-
-odnosno
-
-$$
-p = 0{,}80\ \text{MPa}
+p = \frac{G}{A_{uk}} = \frac{24000}{0{,}030} = 8{,}00 \cdot 10^5\ \text{Pa} = 0{,}80\ \text{MPa}.
 $$
 
 Površina pumpnog klipa iznosi
 
 $$
-A_p = 6 \cdot 10^{-4}\ \text{m}^2
+A_p = 6 \cdot 10^{-4}\ \text{m}^2.
 $$
 
 pa je sila na pumpnom klipu
 
 $$
-F_p = pA_p = 8{,}00 \cdot 10^5 \cdot 6 \cdot 10^{-4} = 480\ \text{N}
-$$
-
-Dakle,
-
-$$
-F_p = 480\ \text{N}
+F_p = pA_p = 8{,}00 \cdot 10^5 \cdot 6 \cdot 10^{-4} = 480\ \text{N}.
 $$
 
 Ako se platforma podiže za
 
 $$
-s_L = 20\ \text{mm} = 0{,}020\ \text{m}
+s_L = 20\ \text{mm} = 0{,}020\ \text{m},
 $$
 
 tada oba radna cilindra zajedno trebaju volumen
 
 $$
-\Delta V = 2A_L s_L = 2 \cdot 0{,}015 \cdot 0{,}020 = 6{,}0 \cdot 10^{-4}\ \text{m}^3
+\Delta V = 2A_L s_L = 2 \cdot 0{,}015 \cdot 0{,}020 = 6{,}0 \cdot 10^{-4}\ \text{m}^3.
 $$
 
 Taj volumen mora dati pumpni klip, pa vrijedi
 
 $$
-A_p s_p = \Delta V
+A_p s_p = \Delta V \quad \Longrightarrow \quad s_p = \frac{\Delta V}{A_p} = \frac{6{,}0 \cdot 10^{-4}}{6 \cdot 10^{-4}} = 1{,}0\ \text{m}.
 $$
 
-odnosno
-
-$$
-s_p = \frac{\Delta V}{A_p} = \frac{6{,}0 \cdot 10^{-4}}{6 \cdot 10^{-4}} = 1{,}0\ \text{m}
-$$
-
-To znači da je potreban ukupni zbroj hodova pumpnog klipa
-
-$$
-s_p = 1{,}0\ \text{m}
-$$
-
-što se u praksi ostvaruje kroz više kratkih pumpnih poteza.
+To znači da je potreban ukupni zbroj hodova pumpnog klipa $s_p = 1{,}0\ \text{m}$, što se u praksi ostvaruje kroz više kratkih pumpnih poteza.
 
 **Provjera i komentar**
 
@@ -538,39 +484,17 @@ $$
 :::
 
 ::: {.mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak - Dvostruka hidraulična platforma s ručnom pumpom <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Cjeloviti zadatak — Dvostruka hidraulična platforma s ručnom pumpom&nbsp;<span class="mf1-level">T3</span></p>
+
+**Kontekst:** U autoservisnoj radionici servisna platforma za pregled vozila oslanja se na dva paralelna radna cilindra, dok operater ručnom pumpom razvija tlak u hidrauličnom ulju. Treba odrediti radni tlak, nosivost platforme te ukupan hod i broj poteza pumpe za podizanje na zadanu visinu.
 
 **Zadano**
 
-Servisna platforma za pregled vozila nosi se na dva jednaka radna cilindra, od kojih svaki ima površinu
-
-$$
-A_L = 150\ \text{cm}^2
-$$
-
-Mali pumpni klip ima površinu
-
-$$
-A_p = 5\ \text{cm}^2
-$$
-
-Operator na pumpni klip djeluje silom
-
-$$
-F_p = 460\ \text{N}
-$$
-
-Platforma se treba podići za
-
-$$
-s_L = 25\ \text{mm}
-$$
-
-a jedan puni hod pumpnog klipa iznosi
-
-$$
-s_h = 180\ \text{mm}
-$$
+- Površina jednog radnog cilindra: $A_L = 150\ \text{cm}^2$ (dva jednaka cilindra)
+- Površina pumpnog klipa: $A_p = 5\ \text{cm}^2$
+- Sila operatera na pumpni klip: $F_p = 460\ \text{N}$
+- Visina podizanja platforme: $s_L = 25\ \text{mm}$
+- Puni hod pumpnog klipa: $s_h = 180\ \text{mm}$
 
 Zanemari gubitke i stlačivost ulja. Pretpostavi da su oba radna cilindra jednako opterećena.
 
@@ -591,117 +515,51 @@ U zatvorenom mirujućem ulju tlak koji stvara mali pumpni klip prenosi se jednak
 
 #### 1. Tlak u ulju
 
-Površina pumpnog klipa u SI jedinicama iznosi
+Površina pumpnog klipa u SI jedinicama iznosi $A_p = 5 \cdot 10^{-4}\ \text{m}^2$. Tlak koji pumpni klip stvara u ulju jednak je
 
 $$
-A_p = 5 \cdot 10^{-4}\ \text{m}^2
-$$
-
-Tlak koji pumpni klip stvara u ulju jednak je
-
-$$
-p = \frac{F_p}{A_p} = \frac{460}{5 \cdot 10^{-4}} = 9{,}20 \cdot 10^5\ \text{Pa}
-$$
-
-pa je
-
-$$
-p = 0{,}92\ \text{MPa}
+p = \frac{F_p}{A_p} = \frac{460}{5 \cdot 10^{-4}} = 9{,}20 \cdot 10^5\ \text{Pa} = 0{,}92\ \text{MPa}.
 $$
 
 #### 2. Sila jednog cilindra i ukupno opterećenje
 
-Površina jednog radnog cilindra u SI jedinicama iznosi
+Površina jednog radnog cilindra u SI jedinicama iznosi $A_L = 150 \cdot 10^{-4} = 0{,}015\ \text{m}^2$. Sila koju preuzima jedan cilindar zato je
 
 $$
-A_L = 150 \cdot 10^{-4} = 0{,}015\ \text{m}^2
-$$
-
-Sila koju preuzima jedan cilindar zato je
-
-$$
-F_L = pA_L = 9{,}20 \cdot 10^5 \cdot 0{,}015 = 13800\ \text{N}
-$$
-
-odnosno
-
-$$
-F_L = 13{,}8\ \text{kN}
+F_L = pA_L = 9{,}20 \cdot 10^5 \cdot 0{,}015 = 13800\ \text{N} = 13{,}8\ \text{kN}.
 $$
 
 Kako postoje dva jednaka cilindra, ukupno dopušteno opterećenje platforme iznosi
 
 $$
-G = 2F_L = 2 \cdot 13800 = 27600\ \text{N}
-$$
-
-pa je
-
-$$
-G = 27{,}6\ \text{kN}
+G = 2F_L = 2 \cdot 13800 = 27600\ \text{N} = 27{,}6\ \text{kN}.
 $$
 
 #### 3. Zbroj hodova pumpnog klipa
 
-Za podizanje platforme oba radna cilindra zajedno trebaju volumen
+Za podizanje platforme oba radna cilindra zajedno, uz $s_L = 25\ \text{mm} = 0{,}025\ \text{m}$, trebaju volumen
 
 $$
-\Delta V = 2A_L s_L
+\Delta V = 2A_L s_L = 2 \cdot 0{,}015 \cdot 0{,}025 = 7{,}5 \cdot 10^{-4}\ \text{m}^3.
 $$
 
-pri cemu je
+Taj volumen mora dati pumpni klip, pa iz $A_p s_p = \Delta V$ slijedi
 
 $$
-s_L = 25\ \text{mm} = 0{,}025\ \text{m}
+s_p = \frac{\Delta V}{A_p} = \frac{7{,}5 \cdot 10^{-4}}{5 \cdot 10^{-4}} = 1{,}5\ \text{m},
 $$
 
-Zato je
-
-$$
-\Delta V = 2 \cdot 0{,}015 \cdot 0{,}025 = 7{,}5 \cdot 10^{-4}\ \text{m}^3
-$$
-
-Taj volumen mora dati pumpni klip, pa vrijedi
-
-$$
-A_p s_p = \Delta V
-$$
-
-odnosno
-
-$$
-s_p = \frac{\Delta V}{A_p} = \frac{7{,}5 \cdot 10^{-4}}{5 \cdot 10^{-4}} = 1{,}5\ \text{m}
-$$
-
-Dakle, potreban je ukupni zbroj hodova pumpnog klipa
-
-$$
-s_p = 1{,}5\ \text{m}
-$$
-
-što se u praksi opet ostvaruje nizom kratkih pumpnih poteza.
+što se u praksi ostvaruje nizom kratkih pumpnih poteza.
 
 #### 4. Broj punih pumpnih hodova
 
-Jedan puni hod pumpnog klipa iznosi
+Uz $s_h = 180\ \text{mm} = 0{,}180\ \text{m}$ najmanji potreban broj punih hodova je
 
 $$
-s_h = 180\ \text{mm} = 0{,}180\ \text{m}
+n = \frac{s_p}{s_h} = \frac{1{,}5}{0{,}180} = 8{,}33,
 $$
 
-Najmanji potreban broj punih hodova zato je
-
-$$
-n = \frac{s_p}{s_h} = \frac{1{,}5}{0{,}180} = 8{,}33
-$$
-
-pa u praksi treba uzeti
-
-$$
-n = 9
-$$
-
-punih pumpnih hodova.
+pa u praksi treba uzeti $n = 9$ punih pumpnih hodova.
 
 **Provjera i komentar**
 
@@ -713,9 +571,9 @@ Pumpni klip površine $5\ \text{cm}^2$ pod silom $460\ \text{N}$ stvara tlak od 
 ::: 
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Hidraulična preša za savijanje cijevi &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Hidraulična preša za savijanje cijevi &nbsp;<span class="mf1-level">T2</span></p>
 
-🔩 **Primjer za strojare**
+**Primjer za strojare**
 
 **Kontekst:** U strojarskoj radionici ručna hidraulična preša savija čelične cijevi prema trnu. Operator pumpnim klipom stvara tlak koji potiskuje radni klip s alatom.
 
@@ -776,9 +634,9 @@ Omjer 16 između površina ($d_2/d_1 = 4$) realistično je za ručnu radionicu p
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Hidraulično podizanje mosta pri zamjeni ležaja &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Hidraulično podizanje mosta pri zamjeni ležaja &nbsp;<span class="mf1-level">T2</span></p>
 
-🏗️ **Primjer za građevinare**
+**Primjer za građevinare**
 
 **Kontekst:** Obnova cestovnog mosta zahtijeva podizanje rasponske konstrukcije za nekoliko milimetara radi zamjene oštećenih ležajeva. Četiri hidraulična podizača postavljena su simetrično pod nosač.
 
@@ -834,9 +692,9 @@ Potrebni tlak ($12{,}6\ \text{MPa}$) gotovo je deset puta veći od tlaka ručne 
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Hidraulična kočnica vozila s razdiobom na više kočnih cilindara &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Hidraulična kočnica vozila s razdiobom na više kočnih cilindara &nbsp;<span class="mf1-level">T2</span></p>
 
-🔩 **Primjer za strojare**
+**Primjer za strojare**
 
 **Kontekst:** U hidrauličnom kočnom sustavu osobnog vozila operater pritiska kočnu papučicu, a poluga papučice mehanički povećava silu prije nego se ona prenese na klip glavnog kočnog cilindra. Tlak koji se u glavnom cilindru razvije isti se prenosi do **četiri** kočna cilindra (po jedan u svakom kotaču), ali kočna kliješta na prednjoj osovini imaju veći promjer od onih na stražnjoj. Time se s **jednim** ulazom (papučicom) dobivaju **četiri različite** kočne sile prilagođene podjeli kočne težine između prednje i stražnje osovine.
 
@@ -925,7 +783,7 @@ $$
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Hidraulička stezna naprava na robotskoj liniji za montažu baterijskih modula električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Hidraulička stezna naprava na robotskoj liniji za montažu baterijskih modula električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U robotskoj proizvodnoj liniji za sklapanje litij-ionskih baterijskih modula električnog vozila, prije zavarivanja kontakata ćelija aktivira se sustav hidrauličkih stega koji točno pozicionira modul. Centralna pumpa razvija konstantan tlak koji se istodobno prenosi na više paralelnih steznih cilindara. Svi stezni cilindri su istog promjera jer moduli zahtijevaju jednoliko opterećenje po obodu radi sprječavanja deformacije ćelija.
 
@@ -987,46 +845,36 @@ Sila po jednoj stezi $F_s \approx 1{,}68\ \text{kN}$ ostaje znatno ispod dopušt
 Radni tlak od oko $2{,}7\ \text{MPa}$ tipičan je za hidrauličke stezne sustave u robotskoj montaži; razina je dovoljna za pouzdano pozicioniranje, a istovremeno dovoljno niska da se rizik prekoračenja sile ne pojavljuje pri umjerenim promjenama radnih uvjeta. Pojačanje sile po jednoj stezi iznosi $F_s/F_p = 1680/420 = 4$, što odgovara omjeru površina $(d_s/d_p)^2 = (28/14)^2 = 4$. Ukupno pojačanje, uzimajući u obzir sve stege, iznosi $F_{uk}/F_p = 10080/420 = 24$, što je upravo zbroj pojačanja po svim paralelnim cilindrima. Sigurnosni faktor u odnosu na dopuštenu silu po ćeliji iznosi $F_{dop}/F_s \approx 2{,}1$, što ostavlja prostor za blage varijacije u tlaku pumpe bez prekoračenja konstruktivne granice ćelije.
 :::
 
-## Usporedna tablica: strojarstvo i građevinarstvo
-
-| Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |
-|---------|----------------------------------|--------------------------------------|
-| Tlak ($p = F/A$) | Hidraulični cilindar preše za oblikovanje lima; senzor tlaka u kočnom sustavu vozila | Naprezanje tla pod stupom temelja; tlak na podzemni obložni zid garaže |
-| Pascalov zakon | Hidraulična kočnica i servo upravljač vozila; stezna naprava alatnog stroja | Hidraulični podizač za montažu mosta; napinjač prednapetih kabela |
-| Gustoća i specifična težina | Odabir radnog ulja prema gustoći za radnu temperaturu; kavitacijska otpornost | Uzgon betonskog temelja ispod razine podzemne vode; gustoća blatne vode pri bušenju |
-| Relativna gustoća | Provjera razdvajanja ulja i vode u hidrauličnom separatoru | Flotabilnost lagane fundacijske konstrukcije ($s_r < 1$ znači isplavljenje) |
-| Volumna bilanca klipova | Dimenzioniranje crpke: koliko pumpnih hodova treba za zadani hod cilindra | Kapacitet vodotornja za punjenje distribucijske mreže; volumen injektirane smjese u tlu |
-
 ::: {.mf1-samoprovjera}
-<p class="mf1-box-label">🎯 Provjeri sebe</p>
+<p class="mf1-box-label">Provjeri sebe</p>
 
 Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu. Preporučuje se prvo samostalno odgovoriti, a tek zatim otvoriti sklopivi blok s kratkim odgovorom.
 
 1. Što se događa s pojačanjem sile $F_2/F_1$ ako se promjer obaju klipova udvostruči?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Pojačanje sile se ne mijenja jer ovisi isključivo o omjeru površina $A_2/A_1$, a taj omjer ostaje jednak kada se oba promjera proporcionalno povećaju.
 :::
 
 2. Zašto pojačana izlazna sila u hidrauličnoj preši ne narušava zakon očuvanja energije?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Veća izlazna sila proporcionalno je nadoknađena manjim izlaznim pomakom; iz volumne bilance vrijedi $F_1 s_1 = F_2 s_2$, pa mehanički rad ulaza ostaje jednak mehaničkom radu izlaza.
 :::
 
 3. Kako tlak djeluje u pojedinoj točki mirujućega fluida — vektorski ili skalarno, i zašto?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Tlak u mirujućem fluidu djeluje jednako u svim smjerovima jer nema tangencijalnih naprezanja koja bi razlikovala smjer; opisuje ga jedan skalarni broj u svakoj točki, a ne vektor.
 :::
 
 4. Kolika je razlika između $\rho$, $\gamma$ i $s_r$, i u kojim jedinicama se izražavaju?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Gustoća $\rho$ je masa po jedinici volumena (kg/m³), specifična težina $\gamma = \rho g$ je težinska sila po jedinici volumena (N/m³), a relativna gustoća $s_r = \rho/\rho_{voda}$ je bezdimenzijski omjer prema referentnoj gustoći vode.
 :::
 :::
@@ -1106,15 +954,17 @@ Pascalov zakon u ovom obliku vrijedi kao idealizacija zatvorenog mirujućeg flui
 :::
 
 ::: {.mf1-numerika}
-<p class="mf1-box-label">🖥️ Numerički most</p>
+<p class="mf1-box-label">Numerički most</p>
 
 **Gdje ovo živi u numerici.** Tlak kao skalarno polje $p(x,y,z)$ — temeljni objekt koji svaki CFD solver mora prije svega *postaviti*. Pojam tlaka u kontinuumu i Pascalov zakon su upravo razlog zašto se u nestlačivom CFD-u tlak ne marsira u vremenu, nego se rješava globalno po cijeloj domeni.
 
-**Što numerički alat radi s tim.** Na početku simulacije postavlja se *inicijalni uvjet tlaka* — najčešće jednoliko polje ili hidrostatska raspodjela iz idućeg poglavlja. Promjene na rubu (klip, ulaz crpke, ventil) propagiraju se kroz mrežu kontrolnih volumena unutar jedne iteracije pressure-velocity sprege.
+**Što numerički alat radi s tim.** Na početku simulacije postavlja se *inicijalni uvjet tlaka* — najčešće jednoliko polje ili hidrostatska raspodjela iz idućeg poglavlja. Promjene na rubu (klip, ulaz crpke, ventil) propagiraju se kroz mrežu kontrolnih volumena unutar jedne iteracije sprege tlaka i brzine.
 
-**Alati gdje ćeš to sresti:** `OpenFOAM` (`setFields`, `pRefValue`) · `ANSYS Fluent` (*Operating Pressure*, *Pressure Reference*) · `COMSOL Multiphysics`.
+**Tipičan scenarij.** U industrijskom hidrauličkom sustavu CFD se rijetko primjenjuje na samu Pascalovu prijenosnu silu — ona je analitički rješiva. Vrijednost numerike pojavljuje se onda kad fluid prolazi uskim kanalima, kroz ventile ili kada se promatra dinamika tlačnog vala (vodeni udar pri naglom zatvaranju ventila): tada lokalna polja brzine, tlaka i mogućih kavitacijskih zona postaju netrivijalna, a analitička procjena prestaje biti dovoljna.
 
-> *Nije gradivo MF1. Kad u trećoj godini otvoriš Računalnu dinamiku fluida, ovo će ti biti poznat teren.*
+**Alati u kojima se to susreće:** `OpenFOAM` (`setFields`, `pRefValue`) · `ANSYS Fluent` (*Operating Pressure*, *Pressure Reference*) · `COMSOL Multiphysics`.
+
+> *Nije gradivo MF1. Pri upisu kolegija Računalna dinamika fluida u trećoj godini opisani sadržaj postat će poznat teren.*
 :::
 
 

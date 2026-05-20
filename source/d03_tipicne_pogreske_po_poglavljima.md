@@ -1,6 +1,6 @@
-## D03 kao aktivni sloj protiv tipičnih pogrešaka
+## Tipične pogreške i preventivni filtar prije računa
 
-D03 nije pasivni prilog, nego radni sloj za provjeru modela prije računa, tijekom računa i prije predaje zadatka. Većina MF1 pogrešaka ne nastaje u zadnjem retku algebre, nego mnogo ranije: pri izboru modela, referentne točke, kontrolnog volumena, predznaka ili tipa protoka.
+Ovaj dodatak nije pasivni prilog, nego radni sloj za provjeru modela prije računa, tijekom računa i prije predaje zadatka. Većina pogrešaka u zadacima mehanike fluida ne nastaje u zadnjem retku algebre, nego mnogo ranije: pri izboru modela, referentne točke, kontrolnog volumena, predznaka ili tipa protoka.
 
 ## Globalna provjera prije računa
 

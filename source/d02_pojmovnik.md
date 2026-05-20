@@ -1,4 +1,4 @@
-## Brzi pojmovnik za trenutak kad termin zastane, a model još nije izgubljen
+## Radne definicije temeljnih pojmova mehanike fluida
 
 Ovaj dodatak nije zamjena za glavna poglavlja. Njegova je svrha vratiti kratko radno značenje pojma kad student zna u kojoj je temi, ali mu se zamagli točna definicija ili razlika između dvaju srodnih izraza.
 

@@ -1,5 +1,5 @@
 ---
-title: "U10 - Realni Bernoulli i gubici"
+title: "U10 - Bernoullijeva jednadžba realnog fluida i gubici"
 page-layout: article
 ---
 

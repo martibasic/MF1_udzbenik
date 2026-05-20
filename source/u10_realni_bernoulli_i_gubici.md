@@ -97,6 +97,8 @@ fig.suptitle('U10 – Realni Bernoulli i gubici',
 plt.show()
 ```
 
+## Realni tok kao idealni tok s pribrojenim gubicima energije
+
 Kad energija više ne ostaje ista duž strujnice.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> zatvorio je idealni Bernoulli: energija se preraspodjeljuje između tlaka, brzine i visine, ali se ne gubi.
@@ -110,7 +112,7 @@ Realni Bernoulli ulazi u svaki cjevovod koji stvarno radi: servisne crpke, rashl
 :::
 
 ::: {.mf1-priprema}
-<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+<p class="mf1-box-label">Prije čitanja poglavlja</p>
 
 **Predznanje koje se pretpostavlja:**
 
@@ -150,18 +152,18 @@ h_l = \lambda \frac{L}{D} \frac{v^2}{2g}
 $$
 
 ::: {.callout-note}
-## 📐 Fizikalno značenje
+## Fizikalno značenje
 Darcy-Weisbachova formula kaže da gubitak energije na ravnoj dionici raste proporcionalno s duljinom cijevi, obrnuto s promjerom i kvadratično s brzinom. Faktor $\lambda$ (koeficijent trenja) ovisi o hrapavosti stjenke i Reynoldsovom broju — tj. o turbulenciji. Gubitak nije samo „trenje stjenke" nego i disipacija u turbulentnim vrtlozima koji se stalno stvaraju i raspadaju po poprečnom presjeku. Zato dulji vod, manji promjer i veća brzina zajedno eksponencijalno povećavaju energijsku cijenu.
 :::
 
 ::: {.callout-note collapse="true" icon="false"}
-## 🖥️ Numerički trag
+## Numerički trag
 
 Gubici energije u realnom toku — disipacija u turbulentnim vrtlozima — su upravo razlog zbog kojeg postoje **turbulentni modeli** u CFD-u. Umjesto da rješava svaki sitni vrtlog (skupo i u praksi nemoguće za inženjerske probleme), solver koristi *modele zatvaranja*: **k-ε**, **k-ω SST**, **Spalart-Allmaras**. Ovi modeli su zapravo numerička parafraza Darcy-Weisbachovog $\lambda$ — eksperimentalna kalibracija koja kaže "koliko energije turbulencija pojede po jedinici volumena i vremena".
 :::
 
 ::: {.mf1-interaktivno}
-<p class="mf1-box-label">📈 Interaktivni prikaz — Moodyjev dijagram</p>
+<p class="mf1-box-label">Interaktivni prikaz — Moodyjev dijagram</p>
 
 Interaktivni prikaz omogućuje mijenjanje Reynoldsovog broja i relativne hrapavosti cijevi uz neposredno praćenje pripadnog koeficijenta trenja $\lambda$ na klasičnom Moodyjevu dijagramu. Krivulje za nekoliko vrijednosti $\varepsilon/D$ olakšavaju usporedbu i izbor odgovarajućeg radnog područja.
 
@@ -182,12 +184,12 @@ h_{loc} = \xi \frac{v^2}{2g}
 $$
 
 ::: {.callout-note}
-## 📐 Fizikalno značenje
+## Fizikalno značenje
 Lokalni gubici ($\xi v^2/2g$) modeliraju energijsku disipaciju na mjestima gdje strujanje nagle mijenja smjer ili brzinu: ventili, koljena, ulazi, izlazi, nagle promjene presjeka. Koeficijent $\xi$ je eksperimentalni broj koji govori koliki višekratnik brzinske visine košta svaki element. Ulazni rub s oštrinom ima $\xi \approx 0{,}5$, zaobljeni ulaz $\xi \approx 0{,}04$ — razlika od 10× za isti protok. U kratkim cjevovodima lokalni gubici mogu biti dominantni.
 :::
 
 ::: {.mf1-izvod}
-<p class="mf1-box-label">Matematički izvod</p>
+<p class="mf1-box-label">Matematički izvod — Bernoullijeva jednadžba s pribrojenim gubicima</p>
 
 Za stacionarni tok realnoga fluida između dvaju presjeka 1 i 2 mehanička energija više nije očuvana kao u idealnom Bernoulliju. Dio raspoložive energije nepovratno se pretvara u unutarnju energiju, vrtloge i disipaciju, pa opća energijska bilanca po jedinici težine poprima oblik
 
@@ -222,7 +224,7 @@ $$
 U tim je formulama $\lambda$ bezdimenzijski koeficijent trenja, $L/D$ geometrijski omjer koji pokazuje koliko se dugo trenje razvija duž cijevi, $\xi$ koeficijent lokalnoga elementa, a $v^2/(2g)$ brzinska visina koja predstavlja raspoloživu kinetičku energiju toka po jedinici težine. Time se ista Bernoullijeva slika iz <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> pretvara iz idealne u radno realnu: svaki pad energijske linije izravno znači da je dio mehaničke energije već potrošen na disipaciju.
 
 ::: {.callout-note}
-## 📝 Razrada koraka
+## Razrada koraka
 Korak: od idealnog Bernoullija → realni zapis s gubicima i preuredbom za $h_w$
 
 Idealni Bernoulli: $\frac{p_1}{\rho g} + \frac{v_1^2}{2g} + z_1 = \frac{p_2}{\rho g} + \frac{v_2^2}{2g} + z_2$
@@ -243,6 +245,56 @@ To je fizikalno: $h_w$ je razlika raspoložive mehaničke visine između točaka
 :::
 :::
 
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Gubitak energije kao integral disipacije</p>
+
+Član $h_w$ u proširenoj Bernoullijevoj jednadžbi nije ad-hoc dodatak — on predstavlja **integral viskozne disipacije** po cijelom kontrolnom volumenu. Po jedinici mase, brzina disipacije mehaničke energije u toplinu zadana je s funkcijom disipacije
+
+$$
+\Phi = \mu\!\left[\left(\frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i}\right)\frac{\partial v_i}{\partial x_j}\right] - \frac{2}{3}\mu(\nabla\cdot\vec{v})^2,
+$$
+
+koja je posljedica drugoga zakona termodinamike: smična naprezanja u realnom fluidu uvijek pretvaraju kinetičku energiju u toplinu (entropija raste).
+
+Ukupni gubitak energije po jedinici protočne težine između presjeka $A$ i $B$ glasi
+
+$$
+h_w = \frac{1}{\dot{m}g}\int_{V_{AB}} \Phi\,dV.
+$$
+
+Zato je $h_w$ uvijek **pozitivan**: nikad ne može biti negativan (to bi značilo da se toplina spontano pretvara u mehaničku energiju). Idealni fluid je granični slučaj $\mu = 0$, gdje $\Phi = 0$ i $h_w = 0$, što vraća na Bernoullijevu jednadžbu idealnog fluida iz U09.
+
+U inženjerskoj praksi $\Phi$ se ne integrira izravno — premjerene su tablične vrijednosti $\lambda$ i $\xi$ koje sažimaju cijeli disipativni mehanizam za pojedinu geometriju. Ali važno je razumjeti: koeficijenti trenja su **mjerni odgovor** na termodinamičko pitanje koliko energije fluid izgubi u danom uvjetu. Numeričke metode (CFD) idu obrnutim putem — ne koriste tablične $\lambda$, nego izravno integriraju $\Phi$ po cijeloj domeni iz polja brzine i turbulentnih veličina.
+:::
+
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Dimenzionalna analiza Darcy-Weisbacha — zašto kvadrat brzine?</p>
+
+Oblik Darcy-Weisbachove formule $h_l = \lambda(L/D)(v^2/(2g))$ nije proizvoljan — slijedi iz **Buckinghamova π-teorema** (dimenzionalne analize). Pad tlaka po jedinici duljine $\Delta p/L$ za strujanje u kružnoj cijevi može ovisiti samo o sljedećim parametrima:
+
+- gustoći fluida $\rho$ ($\text{kg/m}^3$);
+- viskoznosti $\mu$ ($\text{Pa s} = \text{kg/(m s)}$);
+- promjeru cijevi $D$ ($\text{m}$);
+- hrapavosti stijenke $\varepsilon$ ($\text{m}$);
+- srednjoj brzini $v$ ($\text{m/s}$).
+
+Iz pet dimenzionalnih veličina (s tri osnovne jedinice: masa, duljina, vrijeme) dimenzionalna analiza daje $5 - 3 = 2$ bezdimenzijska parametra. Prirodan izbor je Reynoldsov broj $Re = \rho v D/\mu$ i relativna hrapavost $\varepsilon/D$. Pad tlaka po duljini ima dimenziju $[\Delta p/L] = \text{Pa/m} = \text{kg/(m}^2\text{ s}^2\text{)}$, što se može zapisati i kao $\rho v^2/D$. Zato vrijedi opći funkcionalni oblik
+
+$$
+\frac{\Delta p}{L} = f(Re, \varepsilon/D) \cdot \frac{\rho v^2}{2D},
+$$
+
+gdje je $f(Re, \varepsilon/D) = \lambda$ Darcyjev koeficijent trenja. Faktor $1/2$ uvodi se po dogovoru (suglasje s definicijom kinetičke visine $v^2/(2g)$).
+
+Izraz preko visine fluida (dijeljenjem s $\rho g$) glasi
+
+$$
+\frac{h_l}{L} = \lambda \cdot \frac{1}{D} \cdot \frac{v^2}{2g} \quad\Longleftrightarrow\quad h_l = \lambda \frac{L}{D}\frac{v^2}{2g}.
+$$
+
+Ovaj izvod pokazuje da je **kvadrat brzine** nužna posljedica dimenzionalne analize — nije eksperimentalna pretpostavka. Samo numerička vrijednost koeficijenta $\lambda$ je eksperimentalna (i ovisi o $Re$ i $\varepsilon/D$, kako pokazuje Moodyjev dijagram). Strukturna istina formule je dimenzionalna nužnost.
+:::
+
 Za osnovno čitanje realnog Bernoullija najprije treba razdvojiti dvije vrste fizikalne cijene strujanja:
 
 - linijski gubici dolaze iz trenja na ravnoj dionici cijevi
@@ -256,14 +308,93 @@ Najčešća metodička greška nastaje kad se svi gubici tretiraju kao jedna mut
 
 Između dvaju promatranih presjeka pad energijske linije jednak je upravo ukupnom gubitku $h_w$. To je najkraći način da se vizualno vidi koliko je energije izgubljeno i koliko je još ostalo na raspolaganju sustavu.
 
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Hagen-Poiseuilleov zakon i podrijetlo $\lambda = 64/Re$</p>
+
+Za laminarno strujanje nestlačivog Newtonovog fluida u **kružnoj cijevi** može se analitički izvesti potpuni profil brzine i pripadni koeficijent trenja. Pretpostavlja se stacionarno, potpuno razvijeno strujanje (brzina ovisi samo o radijalnoj koordinati $r$, ne i o duljini $x$) u cijevi polumjera $R$.
+
+**Ravnoteža sila na cilindričnom elementu** fluida polumjera $r$ i duljine $dx$ uključuje silu tlaka na krajnjim plohama i silu smičnog trenja na bočnoj plohi:
+
+$$
+\pi r^2\,p(x) - \pi r^2\,p(x+dx) - \tau(r)\cdot 2\pi r\,dx = 0,
+$$
+
+odakle slijedi linearni profil smičnog naprezanja u presjeku
+
+$$
+\tau(r) = -\frac{r}{2}\frac{dp}{dx}.
+$$
+
+Smično naprezanje raste linearno s polumjerom — maksimalno je na stijenci ($r = R$), a iščezava u osi cijevi ($r = 0$).
+
+**Newtonov zakon viskoznosti** ($\tau = -\mu\,du/dr$, s negativnim predznakom jer brzina pada od osi prema zidu) izjednačavanjem daje
+
+$$
+-\mu\,\frac{du}{dr} = -\frac{r}{2}\frac{dp}{dx} \quad\Longrightarrow\quad \frac{du}{dr} = \frac{r}{2\mu}\frac{dp}{dx}.
+$$
+
+Integriranjem od $r$ do $R$ uz rubni uvjet $u(R) = 0$ (uvjet ljepljivosti na stijenci) dobiva se **parabolni profil brzine**
+
+$$
+\boxed{u(r) = -\frac{1}{4\mu}\frac{dp}{dx}\left(R^2 - r^2\right)}.
+$$
+
+Negativan predznak gradijenta tlaka ($dp/dx < 0$ jer tlak pada u smjeru strujanja) daje pozitivnu brzinu. Maksimalna brzina je u osi cijevi:
+
+$$
+u_{max} = u(0) = -\frac{R^2}{4\mu}\frac{dp}{dx}.
+$$
+
+**Volumenski protok** dobiva se integracijom brzinskog profila preko cijelog presjeka:
+
+$$
+Q = \int_0^R u(r)\,2\pi r\,dr = -\frac{\pi}{2\mu}\frac{dp}{dx}\int_0^R r(R^2 - r^2)\,dr = -\frac{\pi R^4}{8\mu}\frac{dp}{dx}.
+$$
+
+To je **Hagen-Poiseuilleov zakon**
+
+$$
+\boxed{Q = \frac{\pi R^4\,\Delta p}{8\mu L}},
+$$
+
+gdje je $\Delta p = -L\,dp/dx$ pad tlaka duž duljine $L$. Iz njega se odmah dobivaju i srednja brzina te odnos prema maksimalnoj:
+
+$$
+\bar{v} = \frac{Q}{\pi R^2} = \frac{R^2\,\Delta p}{8\mu L}, \qquad u_{max} = 2\bar{v}.
+$$
+
+Srednja brzina iznosi **točno polovicu maksimalne** — karakteristični potpis laminarnog parabolnog profila.
+
+**Veza s Darcyjevim koeficijentom trenja:** iz definicije $\Delta p = \lambda(L/D)(\rho\bar{v}^2/2)$ uz $D = 2R$, izjednačavanjem s Hagen-Poiseuilleovim izrazom $\Delta p = 32\mu L \bar{v}/D^2$ dobiva se
+
+$$
+\lambda\,\frac{L}{D}\,\frac{\rho \bar{v}^2}{2} = \frac{32\mu L \bar{v}}{D^2},
+$$
+
+odakle nakon kraćenja slijedi
+
+$$
+\boxed{\lambda = \frac{64\mu}{\rho \bar{v} D} = \frac{64}{Re}}.
+$$
+
+Time je **izveden klasičan faktor $64$** u laminarnoj grani Moodyjevog dijagrama — iz egzaktnog rješenja Navier-Stokesove jednadžbe za kružnu cijev, a ne iz eksperimenta. Eksperimentalna potvrda Hagen-Poiseuilleova zakona u $19$. stoljeću prvi je put pokazala da je viskoznost fluida fizikalno mjerljivo svojstvo, što je otvorilo put modernoj hidromehanici i osnovala disciplinu reologije.
+:::
+
 ## Riješeni primjeri
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Linijski i lokalni gubici u horizontalnoj cijevi <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Linijski i lokalni gubici u horizontalnoj cijevi&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U horizontalnoj dionici industrijskog cjevovoda voda prolazi kroz ravnu cijev s ulazom, ventilom i koljenom, na kojima nastaju i linijski i lokalni gubici energije. Projektant zbraja te gubitke u ukupnu energijsku visinu i iz nje određuje pripadni pad tlaka duž dionice.
 
 **Zadano**
 
-Voda struji horizontalnom cijevi promjera $D = 0{,}12\ \text{m}$ i duljine $L = 36\ \text{m}$ srednjom brzinom $v = 2{,}4\ \text{m/s}$. Koeficijent trenja je $\lambda = 0{,}028$, a zbroj lokalnih koeficijenata na ulazu, ventilu i koljenu iznosi $\sum \xi = 4{,}6$.
+- Promjer horizontalne cijevi: $D = 0{,}12\ \text{m}$
+- Duljina cijevi: $L = 36\ \text{m}$
+- Srednja brzina vode: $v = 2{,}4\ \text{m/s}$
+- Koeficijent trenja: $\lambda = 0{,}028$
+- Zbroj lokalnih koeficijenata (ulaz, ventil, koljeno): $\sum \xi = 4{,}6$
+- Gustoća vode: $\rho = 1000\ \text{kg/m}^3$
 
 **Traženo**
 
@@ -271,8 +402,6 @@ Voda struji horizontalnom cijevi promjera $D = 0{,}12\ \text{m}$ i duljine $L = 
 2. lokalni gubitak $\sum h_{loc}$.
 3. ukupni gubitak energije $h_w$.
 4. pad tlaka $\Delta p$.
-
-Uzmi za vodu $\rho = 1000\ \text{kg/m}^3$.
 
 ![U10 Val 1 - realni Bernoulli i gubici](../assets/print/u10_val1_realni_bernoulli_gubici.svg)
 
@@ -285,43 +414,31 @@ Promatra se horizontalna cijev sa zadanom srednjom brzinom. Zato se energijska b
 Najprije izračunamo brzinsku visinu:
 
 $$
-\frac{v^2}{2g} = \frac{2{,}4^2}{2 \cdot 9{,}81} \approx 0{,}294\ \text{m}
+\frac{v^2}{2g} = \frac{2{,}4^2}{2 \cdot 9{,}81} \approx 0{,}294\ \text{m}.
 $$
 
 Linijski gubitak glasi
 
 $$
-h_l = \lambda \frac{L}{D} \frac{v^2}{2g} = 0{,}028 \cdot \frac{36}{0{,}12} \cdot 0{,}294
-$$
-
-odakle slijedi
-
-$$
-h_l \approx 2{,}47\ \text{m}
+h_l = \lambda \frac{L}{D} \frac{v^2}{2g} = 0{,}028 \cdot \frac{36}{0{,}12} \cdot 0{,}294 \approx 2{,}47\ \text{m}.
 $$
 
 Lokalni gubitak iznosi
 
 $$
-\sum h_{loc} = \sum \xi \frac{v^2}{2g} = 4{,}6 \cdot 0{,}294 \approx 1{,}35\ \text{m}
+\sum h_{loc} = \sum \xi \frac{v^2}{2g} = 4{,}6 \cdot 0{,}294 \approx 1{,}35\ \text{m}.
 $$
 
 Ukupni gubitak energije zato je
 
 $$
-h_w = h_l + \sum h_{loc} \approx 2{,}47 + 1{,}35 = 3{,}82\ \text{m}
+h_w = h_l + \sum h_{loc} \approx 2{,}47 + 1{,}35 = 3{,}82\ \text{m}.
 $$
 
 Za horizontalnu cijev pad tlaka glasi
 
 $$
-\Delta p = \rho g h_w = 1000 \cdot 9{,}81 \cdot 3{,}82 \approx 3{,}75 \cdot 10^4\ \text{Pa}
-$$
-
-odnosno
-
-$$
-\Delta p \approx 37{,}5\ \text{kPa}
+\Delta p = \rho g h_w = 1000 \cdot 9{,}81 \cdot 3{,}82 \approx 3{,}75 \cdot 10^4\ \text{Pa} = 37{,}5\ \text{kPa}.
 $$
 
 **Provjera i komentar**
@@ -332,15 +449,15 @@ $$
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Pitot-statička cijev u struji vode <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Pitot-statička cijev u struji vode&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U cjevovodu s vodom Pitot-statička cijev mjeri lokalnu brzinu strujanja preko razlike stagnacijskog i statičkog tlaka, koja se očitava kao razina žive u diferencijalnom manometru. Iz tog očitanja Bernoullijevom relacijom za zaustavni tlak izračunava se brzina vode.
 
 **Zadano**
 
-Pitot-statička cijev uronjena je u struju vode gustoće $\rho = 1000\ \text{kg/m}^3$ i spojena na živin diferencijalni manometar gustoće $\rho_{Hg} = 13600\ \text{kg/m}^3$. Očitana razlika razina žive iznosi
-
-$$
-\Delta h_{Hg} = 63\ \text{mm}
-$$
+- Gustoća vode: $\rho = 1000\ \text{kg/m}^3$
+- Gustoća žive: $\rho_{Hg} = 13600\ \text{kg/m}^3$
+- Očitana razlika razina žive: $\Delta h_{Hg} = 63\ \text{mm} = 0{,}063\ \text{m}$
 
 **Traženo**
 
@@ -357,43 +474,13 @@ Na vrhu Pitot-cijevi tok se lokalno zaustavlja, pa se dinamički tlak pretvara u
 Razlika tlakova između stagnacijske i statičke točke očitava se preko živinog manometra:
 
 $$
-\Delta p = (\rho_{Hg} - \rho)g\Delta h_{Hg}
+\Delta p = (\rho_{Hg} - \rho)g\Delta h_{Hg} = (13600 - 1000) \cdot 9{,}81 \cdot 0{,}063 \approx 7{,}79 \cdot 10^3\ \text{Pa} = 7{,}79\ \text{kPa}.
 $$
 
-Pri tome je
+Za Pitot-statičku cijev dinamički tlak glasi $\Delta p = \tfrac{1}{2}\rho v^2$, pa je tražena brzina
 
 $$
-\Delta h_{Hg} = 0{,}063\ \text{m}
-$$
-
-pa slijedi
-
-$$
-\Delta p = (13600 - 1000) \cdot 9{,}81 \cdot 0{,}063
-$$
-
-odnosno
-
-$$
-\Delta p \approx 7{,}79 \cdot 10^3\ \text{Pa} = 7{,}79\ \text{kPa}
-$$
-
-Za Pitot-statičku cijev dinamički tlak glasi
-
-$$
-\Delta p = \frac{1}{2}\rho v^2
-$$
-
-pa je tražena brzina
-
-$$
-v = \sqrt{\frac{2\Delta p}{\rho}} = \sqrt{\frac{2 \cdot 7787}{1000}}
-$$
-
-odakle dobivamo
-
-$$
-v \approx 3{,}95\ \text{m/s}
+v = \sqrt{\frac{2\Delta p}{\rho}} = \sqrt{\frac{2 \cdot 7787}{1000}} \approx 3{,}95\ \text{m/s}.
 $$
 
 **Provjera i komentar**
@@ -408,35 +495,27 @@ Očitani manometarski stupac od $63\ \text{mm Hg}$ odgovara brzini strujanja vod
 Ta mjerna scena zatvara lokalno očitanje energije. Treća jezgrena scena <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span> je realni sifon: isti mehanizam kao u <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span>, ali sada raspoloživu geodetsku visinu troše i izlazna brzina i cijeli paket linijskih i lokalnih gubitaka.
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Servisni sifon s raspodijeljenim gubicima <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Servisni sifon s raspodijeljenim gubicima&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Pri servisnom pražnjenju spremnika sifon premošćuje rub i odvodi vodu u niži ispust, ali na cijeloj duljini i u lokalnim elementima nastaju realni gubici energije. Projektantu trebaju stvarna brzina i protok sifona te tlak u njegovoj najvišoj točki kao provjera sigurnosne razlike do naponske visine pare.
 
 **Zadano**
 
-Servisni spremnik prazni se sifonom promjera $D = 90\ \text{mm}$. Između slobodne površine spremnika `A` i slobodnog izlaza `B` postoji visinska razlika
-
-$$
-\Delta z = 2{,}6\ \text{m}
-$$
-
-Najviša točka sifona `C` nalazi se $z_C = 1{,}8\ \text{m}$ iznad slobodne površine spremnika. Ukupna duljina cijevi je $L = 16\ \text{m}$, od čega na dionicu `A-C` otpada $L_{AC} = 5\ \text{m}$. Za cijeli sifon uzmi Darcyjev koeficijent trenja
-
-$$
-\lambda = 0{,}026
-$$
-
-a zbroj lokalnih gubitaka na ulazu, vršnom koljenu i izlazu
-
-$$
-\sum \xi = 0{,}5 + 0{,}9 + 1{,}0 = 2{,}4
-$$
+- Promjer sifona: $D = 90\ \text{mm}$
+- Visinska razlika između slobodne površine spremnika `A` i izlaza `B`: $\Delta z = 2{,}6\ \text{m}$
+- Visina najviše točke `C` iznad slobodne površine: $z_C = 1{,}8\ \text{m}$
+- Ukupna duljina cijevi: $L = 16\ \text{m}$
+- Duljina dionice `A-C`: $L_{AC} = 5\ \text{m}$
+- Darcyjev koeficijent trenja: $\lambda = 0{,}026$
+- Zbroj lokalnih gubitaka (ulaz, vršno koljeno, izlaz): $\sum \xi = 0{,}5 + 0{,}9 + 1{,}0 = 2{,}4$
+- Atmosferska visina: $10{,}2\ \text{m}$ vodenog stupca
+- Naponska visina pare: $0{,}25\ \text{m}$ vodenog stupca
 
 **Traženo**
 
 1. brzinu strujanja $v$ u sifonu.
 2. volumenski protok $Q$.
 3. tlačnu visinu $p_C/\gamma$ u najvišoj točki `C`.
-
-Za procjenu sigurnosti uzmi da je atmosferska visina $10{,}2\ \text{m}$ vodenog stupca, a naponska visina pare $0{,}25\ \text{m}$ vodenog stupca.
 
 ![U10 Val 3 - realni sifon s gubicima](../assets/print/u10_val3_realni_sifon.svg)
 
@@ -449,73 +528,55 @@ Oba kraja sustava su na atmosferskom tlaku, a brzina na slobodnoj površini spre
 Iz realnog Bernoullija između `A` i `B` slijedi
 
 $$
-\Delta z = \frac{v^2}{2g} + \lambda \frac{L}{D}\frac{v^2}{2g} + \sum \xi \frac{v^2}{2g}
-$$
-
-odnosno
-
-$$
-\Delta z = \left(1 + \lambda \frac{L}{D} + \sum \xi\right)\frac{v^2}{2g}
+\Delta z = \frac{v^2}{2g} + \lambda \frac{L}{D}\frac{v^2}{2g} + \sum \xi \frac{v^2}{2g} = \left(1 + \lambda \frac{L}{D} + \sum \xi\right)\frac{v^2}{2g}.
 $$
 
 Najprije izračunajmo ukupni bezdimenzijski otpor sustava:
 
 $$
-1 + \lambda \frac{L}{D} + \sum \xi = 1 + 0{,}026 \cdot \frac{16}{0{,}09} + 2{,}4 = 8{,}02
+1 + \lambda \frac{L}{D} + \sum \xi = 1 + 0{,}026 \cdot \frac{16}{0{,}09} + 2{,}4 = 8{,}02.
 $$
 
 Zato je brzinska visina u cijevi
 
 $$
-\frac{v^2}{2g} = \frac{\Delta z}{8{,}02} = \frac{2{,}6}{8{,}02} = 0{,}324\ \text{m}
+\frac{v^2}{2g} = \frac{\Delta z}{8{,}02} = \frac{2{,}6}{8{,}02} = 0{,}324\ \text{m},
 $$
 
 pa slijedi
 
 $$
-v = \sqrt{2g \cdot 0{,}324} = 2{,}52\ \text{m/s}
+v = \sqrt{2g \cdot 0{,}324} = 2{,}52\ \text{m/s}.
 $$
 
 Površina presjeka sifona iznosi
 
 $$
-A = \frac{\pi D^2}{4} = \frac{\pi \cdot 0{,}09^2}{4} = 6{,}36 \cdot 10^{-3}\ \text{m}^2
+A = \frac{\pi D^2}{4} = \frac{\pi \cdot 0{,}09^2}{4} = 6{,}36 \cdot 10^{-3}\ \text{m}^2,
 $$
 
 pa je volumenski protok
 
 $$
-Q = Av = 6{,}36 \cdot 10^{-3} \cdot 2{,}52 = 1{,}60 \cdot 10^{-2}\ \text{m}^3/\text{s}
-$$
-
-odnosno približno
-
-$$
-Q \approx 16{,}0\ \text{L/s}
+Q = Av = 6{,}36 \cdot 10^{-3} \cdot 2{,}52 \approx 1{,}60 \cdot 10^{-2}\ \text{m}^3/\text{s} = 16{,}0\ \text{L/s}.
 $$
 
 Za tlak u vrhu sifona pišemo Bernoullija između slobodne površine `A` i točke `C`. Do točke `C` ulaze visina vrha, brzinska visina, linijski gubici na dionici $L_{AC}$ i lokalni gubici ulaza i vršnog koljena:
 
 $$
-0 = \frac{p_C}{\gamma} + z_C + \frac{v^2}{2g} + \lambda \frac{L_{AC}}{D}\frac{v^2}{2g} + (0{,}5 + 0{,}9)\frac{v^2}{2g}
+0 = \frac{p_C}{\gamma} + z_C + \frac{v^2}{2g} + \lambda \frac{L_{AC}}{D}\frac{v^2}{2g} + (0{,}5 + 0{,}9)\frac{v^2}{2g}.
 $$
 
-Kako je
+Kako je $\lambda \tfrac{L_{AC}}{D} = 0{,}026 \cdot \tfrac{5}{0{,}09} = 1{,}44$, slijedi
 
 $$
-\lambda \frac{L_{AC}}{D} = 0{,}026 \cdot \frac{5}{0{,}09} = 1{,}44
-$$
-
-slijedi
-
-$$
-\frac{p_C}{\gamma} = -\left[1{,}8 + \left(1 + 1{,}44 + 1{,}4\right)0{,}324\right] = -3{,}04\ \text{m}
+\frac{p_C}{\gamma} = -\left[1{,}8 + \left(1 + 1{,}44 + 1{,}4\right)0{,}324\right] = -3{,}04\ \text{m}.
 $$
 
 To je manometarska tlačna visina u točki `C`. Apsolutna tlačna visina zato je
 
 $$
-\left(\frac{p_C}{\gamma}\right)_{abs} = 10{,}2 - 3{,}04 = 7{,}16\ \text{m}
+\left(\frac{p_C}{\gamma}\right)_{abs} = 10{,}2 - 3{,}04 = 7{,}16\ \text{m}.
 $$
 
 Kako je to mnogo više od naponske visine pare od $0{,}25\ \text{m}$, u ovom primjeru nema neposredne opasnosti od isparavanja u vrhu sifona.
@@ -532,51 +593,21 @@ Zbog gubitaka realni sifon daje brzinu od samo oko $2{,}5\ \text{m/s}$ i protok 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span> nije samo poglavlje o padovima energije nego i prvo mjesto gdje se brzina dobiva iz lokalno izmjerene tlačne razlike, preko $p_0 - p = \rho v^2/2$ i $v = \sqrt{2(p_0-p)/\rho}$. Time ista energetska slika postaje most između teorije i mjerenja: može se čitati ili iz bilance duž sustava ili iz lokalne stagnacijske točke, a prirodni integrativni korak je stvarni vod u kojem Pitot više nije sam sebi svrha, nego ulazna mjerna informacija za cijelu energetsku bilancu.
 
 ::: {.mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak - tlačni spremnik s Pitot kontrolom i realnim gubicima <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Cjeloviti zadatak — tlačni spremnik s Pitot kontrolom i realnim gubicima&nbsp;<span class="mf1-level">T3</span></p>
+
+**Kontekst:** U ispitnom postavu zatvoreni tlačni spremnik tjera vodu kroz horizontalni vod do slobodnog izlaza, a u jednom presjeku Pitot-statička cijev mjeri lokalnu brzinu. Iz Pitot-očitanja i poznatih linijskih i lokalnih gubitaka određuju se protok, ukupni gubici i potreban pretlak plina u spremniku koji takav režim održava.
 
 **Zadano**
 
-Zatvoreni servisni spremnik potiskuje vodu u horizontalni ispitni vod stalnog promjera
+- Promjer horizontalnog ispitnog voda: $D = 80\ \text{mm}$
+- Ukupna duljina cijevi: $L = 32\ \text{m}$
+- Darcyjev koeficijent trenja: $\lambda = 0{,}025$
+- Zbroj lokalnih koeficijenata (ulaz, regulacijski ventil, izlaz): $\sum \xi = 3{,}5$
+- Gustoća žive u diferencijalnom manometru: $\rho_{Hg} = 13600\ \text{kg/m}^3$
+- Gustoća vode: $\rho = 1000\ \text{kg/m}^3$
+- Razlika razina žive (Pitot-statička cijev u presjeku `C`): $\Delta h_{Hg} = 45\ \text{mm}$
 
-$$
-D = 80\ \text{mm}
-$$
-
-koji na kraju slobodno istječe u atmosferu u točki `B`. Slobodna površina vode u spremniku `A` i os izlazne cijevi nalaze se na istoj visinskoj razini. Ukupna duljina cijevi iznosi
-
-$$
-L = 32\ \text{m}
-$$
-
-a Darcyjev koeficijent trenja je
-
-$$
-\lambda = 0{,}025
-$$
-
-Zbroj lokalnih koeficijenata na ulazu, regulacijskom ventilu i izlazu iznosi
-
-$$
-\sum \xi = 3{,}5
-$$
-
-U mjernom presjeku `C` u istoj cijevi Pitot-statička cijev spojena je na živin diferencijalni manometar gustoće
-
-$$
-\rho_{Hg} = 13600\ \text{kg/m}^3
-$$
-
-Za vodu uzmi
-
-$$
-\rho = 1000\ \text{kg/m}^3
-$$
-
-a očitana razlika razina žive je
-
-$$
-\Delta h_{Hg} = 45\ \text{mm}
-$$
+Slobodna površina vode u spremniku `A` i os izlazne cijevi nalaze se na istoj visinskoj razini, a izlaz `B` je u atmosferi.
 
 **Traženo**
 
@@ -596,97 +627,61 @@ Pitot u presjeku `C` najprije daje lokalnu brzinu u cijevi. Kako je promjer cije
 Najprije iz Pitot-manometarskog očitanja dobivamo dinamički tlak:
 
 $$
-\Delta p = (\rho_{Hg} - \rho)g\Delta h_{Hg}
+\Delta p = (\rho_{Hg} - \rho)g\Delta h_{Hg} = (13600 - 1000) \cdot 9{,}81 \cdot 0{,}045 = 5560\ \text{Pa}.
 $$
 
-odnosno
+Za Pitot-statičku cijev vrijedi $\Delta p = \tfrac{1}{2}\rho v^2$, pa je brzina strujanja
 
 $$
-\Delta p = (13600 - 1000) \cdot 9{,}81 \cdot 0{,}045 = 5560\ \text{Pa}
-$$
-
-Za Pitot-statičku cijev vrijedi
-
-$$
-\Delta p = \frac{1}{2}\rho v^2
-$$
-
-pa je brzina strujanja
-
-$$
-v = \sqrt{\frac{2\Delta p}{\rho}} = \sqrt{\frac{2 \cdot 5560}{1000}} = 3{,}34\ \text{m/s}
+v = \sqrt{\frac{2\Delta p}{\rho}} = \sqrt{\frac{2 \cdot 5560}{1000}} = 3{,}34\ \text{m/s}.
 $$
 
 Površina presjeka cijevi iznosi
 
 $$
-A = \frac{\pi D^2}{4} = \frac{\pi \cdot 0{,}08^2}{4} = 5{,}03 \cdot 10^{-3}\ \text{m}^2
+A = \frac{\pi D^2}{4} = \frac{\pi \cdot 0{,}08^2}{4} = 5{,}03 \cdot 10^{-3}\ \text{m}^2,
 $$
 
-zato je volumenski protok
+pa je volumenski protok
 
 $$
-Q = Av = 5{,}03 \cdot 10^{-3} \cdot 3{,}34 = 1{,}68 \cdot 10^{-2}\ \text{m}^3/\text{s}
-$$
-
-odnosno
-
-$$
-Q \approx 16{,}8\ \text{L/s}
+Q = Av = 5{,}03 \cdot 10^{-3} \cdot 3{,}34 = 1{,}68 \cdot 10^{-2}\ \text{m}^3/\text{s} \approx 16{,}8\ \text{L/s}.
 $$
 
 Brzinska visina glasi
 
 $$
-\frac{v^2}{2g} = \frac{3{,}34^2}{2 \cdot 9{,}81} = 0{,}569\ \text{m}
+\frac{v^2}{2g} = \frac{3{,}34^2}{2 \cdot 9{,}81} = 0{,}569\ \text{m}.
 $$
 
 Linijski gubitak iznosi
 
 $$
-h_l = \lambda \frac{L}{D} \frac{v^2}{2g} = 0{,}025 \cdot \frac{32}{0{,}08} \cdot 0{,}569
-$$
-
-pa slijedi
-
-$$
-h_l = 5{,}69\ \text{m}
+h_l = \lambda \frac{L}{D} \frac{v^2}{2g} = 0{,}025 \cdot \frac{32}{0{,}08} \cdot 0{,}569 = 5{,}69\ \text{m}.
 $$
 
 Lokalni gubitak je
 
 $$
-\sum h_{loc} = \sum \xi \frac{v^2}{2g} = 3{,}5 \cdot 0{,}569 = 1{,}99\ \text{m}
+\sum h_{loc} = \sum \xi \frac{v^2}{2g} = 3{,}5 \cdot 0{,}569 = 1{,}99\ \text{m}.
 $$
 
 Ukupni gubitak zato je
 
 $$
-h_w = h_l + \sum h_{loc} = 5{,}69 + 1{,}99 = 7{,}68\ \text{m}
+h_w = h_l + \sum h_{loc} = 5{,}69 + 1{,}99 = 7{,}68\ \text{m}.
 $$
 
 Sada pišemo realni Bernoulli između slobodne površine spremnika `A` i slobodnog izlaza `B`. Kako su $z_A = z_B$, brzina na slobodnoj površini je zanemariva, a na izlazu je tlak jednak atmosferskom, u zapisu s manometarskim tlakom vrijedi
 
 $$
-\frac{p_{M A}}{\gamma} = \frac{v^2}{2g} + h_w
-$$
-
-odnosno
-
-$$
-\frac{p_{M A}}{\gamma} = 0{,}569 + 7{,}68 = 8{,}25\ \text{m}
+\frac{p_{M A}}{\gamma} = \frac{v^2}{2g} + h_w = 0{,}569 + 7{,}68 = 8{,}25\ \text{m}.
 $$
 
 Potreban manometarski pretlak plina u spremniku zato je
 
 $$
-p_{M A} = \rho g \cdot 8{,}25 = 1000 \cdot 9{,}81 \cdot 8{,}25 = 8{,}09 \cdot 10^4\ \text{Pa}
-$$
-
-odnosno
-
-$$
-p_{M A} \approx 80{,}9\ \text{kPa}
+p_{M A} = \rho g \cdot 8{,}25 = 1000 \cdot 9{,}81 \cdot 8{,}25 = 8{,}09 \cdot 10^4\ \text{Pa} \approx 80{,}9\ \text{kPa}.
 $$
 
 **Provjera i komentar**
@@ -699,47 +694,20 @@ Ovaj primjer zatvara cjelovit slijed <span class="mf1-ch-ref"><span class="mf1-c
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Usisni tlak na ulazu male servisne crpke <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Usisni tlak na ulazu male servisne crpke&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Mala servisna crpka usisava vodu iz bazena postavljenog znatno ispod svoje osi, pa apsolutni tlak na usisnom priključku može pasti opasno blizu naponske visine pare. Iz protoka i parametara usisnog voda određuju se tlačna visina u točki `S` i sigurnosna razlika do kavitacijske granice.
 
 **Zadano**
 
-Otvoreni usisni bazen napaja malu servisnu crpku. Osa usisnog priključka crpke `S` nalazi se
-
-$$
-z_S = 6{,}6\ \text{m}
-$$
-
-iznad slobodne površine bazena. Kroz usisni vod promjera
-
-$$
-D = 80\ \text{mm}
-$$
-
-i duljine
-
-$$
-L = 4{,}5\ \text{m}
-$$
-
-struji voda protokom
-
-$$
-Q = 0{,}014\ \text{m}^3/\text{s}.
-$$
-
-Vrijedi Darcyjev koeficijent trenja
-
-$$
-\lambda = 0{,}030
-$$
-
-i zbroj lokalnih koeficijenata na usisnoj košari, ulazu i jednom koljenu
-
-$$
-\sum \xi = 1{,}6.
-$$
-
-Atmosferska visina iznosi $10{,}2\ \text{m}$ vodenog stupca, a naponska visina pare $0{,}25\ \text{m}$ vodenog stupca.
+- Visina osi usisnog priključka crpke iznad slobodne površine bazena: $z_S = 6{,}6\ \text{m}$
+- Promjer usisnog voda: $D = 80\ \text{mm}$
+- Duljina usisnog voda: $L = 4{,}5\ \text{m}$
+- Protok: $Q = 0{,}014\ \text{m}^3/\text{s}$
+- Darcyjev koeficijent trenja: $\lambda = 0{,}030$
+- Zbroj lokalnih koeficijenata (usisna košara, ulaz, jedno koljeno): $\sum \xi = 1{,}6$
+- Atmosferska visina: $10{,}2\ \text{m}$ vodenog stupca
+- Naponska visina pare: $0{,}25\ \text{m}$ vodenog stupca
 
 **Traženo**
 
@@ -840,7 +808,7 @@ $$
 Linijski gubitak na usisu je
 
 $$
-h_{l,s} = \lambda \frac{L}{D}\frac{v_s^2}{2g} = 0{,}030 \cdot \frac{4{,}5}{0{,}08} \cdot 0{,}395 = 0{,}667\ \text{m}
+h_{l,s} = \lambda \frac{L}{D}\frac{v_s^2}{2g} = 0{,}030 \cdot \frac{4{,}5}{0{,}08} \cdot 0{,}395 = 0{,}667\ \text{m},
 $$
 
 a lokalni gubitak
@@ -855,10 +823,10 @@ $$
 h_{w,s} = h_{l,s} + \sum h_{loc,s} = 0{,}667 + 0{,}632 = 1{,}30\ \text{m}.
 $$
 
-Sada pišemo realni Bernoulli između slobodne površine `A` i usisne točke `S` u manometarskom zapisu:
+Sada pišemo realni Bernoulli između slobodne površine `A` i usisne točke `S` u manometarskom zapisu
 
 $$
-0 = \frac{p_S}{\gamma} + \frac{v_s^2}{2g} + z_S + h_{w,s}
+0 = \frac{p_S}{\gamma} + \frac{v_s^2}{2g} + z_S + h_{w,s},
 $$
 
 odnosno
@@ -889,61 +857,20 @@ Dakle, usis je još iznad granice isparavanja, ali rezerva nije velika.
 :::
 
 ::: {.mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak - Usisni vod servisne crpke s kavitacijskom granicom <span class="mf1-level">T4</span></p>
+<p class="mf1-box-label">Cjeloviti zadatak — Usisni vod servisne crpke s kavitacijskom granicom&nbsp;<span class="mf1-level">T4</span></p>
+
+**Kontekst:** Servisna crpka diže topliju vodu iz nižeg bazena u viši spremnik kroz različite presjeke usisnog i tlačnog voda, pa istodobno treba odrediti potrebnu visinu dobave crpke i kavitacijsku rezervu na njezinu usisu. Projektant uz to traži i najveću dopuštenu visinu ugradnje crpke koja zadržava propisanu sigurnosnu rezervu iznad naponske visine pare.
 
 **Zadano**
 
-Otvoreni servisni bazen `A` opskrbljuje centrifugalnu crpku koja vodu šalje u otvoreni gornji rashladni spremnik `B`. Osa usisnog priključka crpke `S` nalazi se
-
-$$
-z_S = 4{,}8\ \text{m}
-$$
-
-iznad slobodne površine bazena `A`, a slobodna površina spremnika `B` nalazi se
-
-$$
-\Delta z_{AB} = 9{,}0\ \text{m}
-$$
-
-iznad slobodne površine bazena `A`.
-
-Radni protok sustava je
-
-$$
-Q = 22\ \text{L/s} = 0{,}022\ \text{m}^3/\text{s}
-$$
-
-Voda temperature oko $35^\circ\text{C}$ ima gustoću
-
-$$
-\rho = 995\ \text{kg/m}^3
-$$
-
-a odgovarajuća naponska visina pare je
-
-$$
-\frac{p_v}{\gamma} = 0{,}56\ \text{m}
-$$
-
-Atmosferska tlačna visina je
-
-$$
-H_{atm} = 10{,}3\ \text{m}
-$$
-
-Usisni vod `A-S` ima:
-
-- promjer $D_s = 100\ \text{mm}$
-- duljinu $L_s = 8{,}0\ \text{m}$
-- Darcyjev koeficijent $\lambda_s = 0{,}028$
-- zbroj lokalnih koeficijenata $\sum \xi_s = 4{,}4$
-
-Tlačni vod `S-B` ima:
-
-- promjer $D_d = 90\ \text{mm}$
-- duljinu $L_d = 28\ \text{m}$
-- Darcyjev koeficijent $\lambda_d = 0{,}026$
-- zbroj lokalnih koeficijenata $\sum \xi_d = 5{,}2$
+- Visina osi usisnog priključka `S` iznad slobodne površine bazena `A`: $z_S = 4{,}8\ \text{m}$
+- Visinska razlika slobodnih površina spremnika `B` i bazena `A`: $\Delta z_{AB} = 9{,}0\ \text{m}$
+- Radni protok sustava: $Q = 22\ \text{L/s} = 0{,}022\ \text{m}^3/\text{s}$
+- Gustoća vode (oko $35^\circ\text{C}$): $\rho = 995\ \text{kg/m}^3$
+- Naponska visina pare: $p_v/\gamma = 0{,}56\ \text{m}$
+- Atmosferska tlačna visina: $H_{atm} = 10{,}3\ \text{m}$
+- Usisni vod `A-S`: promjer $D_s = 100\ \text{mm}$, duljina $L_s = 8{,}0\ \text{m}$, $\lambda_s = 0{,}028$, $\sum \xi_s = 4{,}4$
+- Tlačni vod `S-B`: promjer $D_d = 90\ \text{mm}$, duljina $L_d = 28\ \text{m}$, $\lambda_d = 0{,}026$, $\sum \xi_d = 5{,}2$
 
 **Traženo**
 
@@ -966,128 +893,92 @@ Oba spremnika su velika i otvorena prema atmosferi, pa su brzine na slobodnim po
 
 **Rješenje**
 
-Površina usisnog presjeka iznosi
+Površine presjeka iznose
 
 $$
-A_s = \frac{\pi D_s^2}{4} = \frac{\pi \cdot 0{,}10^2}{4} = 7{,}85 \cdot 10^{-3}\ \text{m}^2
+A_s = \frac{\pi D_s^2}{4} = \frac{\pi \cdot 0{,}10^2}{4} = 7{,}85 \cdot 10^{-3}\ \text{m}^2, \qquad A_d = \frac{\pi D_d^2}{4} = \frac{\pi \cdot 0{,}09^2}{4} = 6{,}36 \cdot 10^{-3}\ \text{m}^2.
 $$
 
-pa je brzina u usisnom vodu
+Brzine u usisnom i tlačnom vodu zato su
 
 $$
-v_s = \frac{Q}{A_s} = \frac{0{,}022}{7{,}85 \cdot 10^{-3}} = 2{,}80\ \text{m/s}
-$$
-
-Za tlačni vod je
-
-$$
-A_d = \frac{\pi D_d^2}{4} = \frac{\pi \cdot 0{,}09^2}{4} = 6{,}36 \cdot 10^{-3}\ \text{m}^2
-$$
-
-pa slijedi
-
-$$
-v_d = \frac{Q}{A_d} = \frac{0{,}022}{6{,}36 \cdot 10^{-3}} = 3{,}46\ \text{m/s}
+v_s = \frac{Q}{A_s} = \frac{0{,}022}{7{,}85 \cdot 10^{-3}} = 2{,}80\ \text{m/s}, \qquad v_d = \frac{Q}{A_d} = \frac{0{,}022}{6{,}36 \cdot 10^{-3}} = 3{,}46\ \text{m/s}.
 $$
 
 Brzinske visine u dvama vodovima zato su
 
 $$
-\frac{v_s^2}{2g} = \frac{2{,}80^2}{2 \cdot 9{,}81} = 0{,}400\ \text{m}
-$$
-
-$$
-\frac{v_d^2}{2g} = \frac{3{,}46^2}{2 \cdot 9{,}81} = 0{,}610\ \text{m}
+\frac{v_s^2}{2g} = \frac{2{,}80^2}{2 \cdot 9{,}81} = 0{,}400\ \text{m}, \qquad \frac{v_d^2}{2g} = \frac{3{,}46^2}{2 \cdot 9{,}81} = 0{,}610\ \text{m}.
 $$
 
 Linijski gubitak na usisu iznosi
 
 $$
-h_{l,s} = \lambda_s \frac{L_s}{D_s}\frac{v_s^2}{2g} = 0{,}028 \cdot \frac{8{,}0}{0{,}10} \cdot 0{,}400 = 0{,}90\ \text{m}
+h_{l,s} = \lambda_s \frac{L_s}{D_s}\frac{v_s^2}{2g} = 0{,}028 \cdot \frac{8{,}0}{0{,}10} \cdot 0{,}400 = 0{,}90\ \text{m},
 $$
 
 a lokalni gubitak
 
 $$
-\sum h_{loc,s} = \sum \xi_s \frac{v_s^2}{2g} = 4{,}4 \cdot 0{,}400 = 1{,}76\ \text{m}
+\sum h_{loc,s} = \sum \xi_s \frac{v_s^2}{2g} = 4{,}4 \cdot 0{,}400 = 1{,}76\ \text{m},
 $$
 
 pa je ukupni usisni gubitak
 
 $$
-h_{w,s} = h_{l,s} + \sum h_{loc,s} = 0{,}90 + 1{,}76 = 2{,}66\ \text{m}
+h_{w,s} = h_{l,s} + \sum h_{loc,s} = 0{,}90 + 1{,}76 = 2{,}66\ \text{m}.
 $$
 
 Sada pišemo realni Bernoulli između slobodne površine bazena `A` i usisne točke `S` neposredno pred crpkom. U zapisu s manometarskim tlakom vrijedi
 
 $$
-0 = \frac{p_{M,S}}{\gamma} + z_S + \frac{v_s^2}{2g} + h_{w,s}
+0 = \frac{p_{M,S}}{\gamma} + z_S + \frac{v_s^2}{2g} + h_{w,s},
 $$
 
 odakle slijedi
 
 $$
-\frac{p_{M,S}}{\gamma} = -(4{,}8 + 0{,}400 + 2{,}66) = -7{,}86\ \text{m}
+\frac{p_{M,S}}{\gamma} = -(4{,}8 + 0{,}400 + 2{,}66) = -7{,}86\ \text{m},
 $$
 
-odnosno manometarski tlak na usisu
+pa je manometarski tlak na usisu
 
 $$
-p_{M,S} = -7{,}86\,\gamma = -7{,}86 \cdot 995 \cdot 9{,}81 = -76{,}8\ \text{kPa}
+p_{M,S} = -7{,}86\,\gamma = -7{,}86 \cdot 995 \cdot 9{,}81 = -76{,}8\ \text{kPa}.
 $$
 
 Apsolutna tlačna visina u točki `S` zato je
 
 $$
-\frac{p_{abs,S}}{\gamma} = H_{atm} + \frac{p_{M,S}}{\gamma} = 10{,}3 - 7{,}86 = 2{,}44\ \text{m}
+\frac{p_{abs,S}}{\gamma} = H_{atm} + \frac{p_{M,S}}{\gamma} = 10{,}3 - 7{,}86 = 2{,}44\ \text{m},
 $$
 
-što odgovara apsolutnom tlaku
-
-$$
-p_{abs,S} = 2{,}44\,\gamma = 23{,}8\ \text{kPa}
-$$
+što odgovara apsolutnom tlaku $p_{abs,S} = 2{,}44\,\gamma = 23{,}8\ \text{kPa}$.
 
 Za tlačni vod dobivamo linijski gubitak
 
 $$
-h_{l,d} = \lambda_d \frac{L_d}{D_d}\frac{v_d^2}{2g} = 0{,}026 \cdot \frac{28}{0{,}09} \cdot 0{,}610 = 4{,}93\ \text{m}
+h_{l,d} = \lambda_d \frac{L_d}{D_d}\frac{v_d^2}{2g} = 0{,}026 \cdot \frac{28}{0{,}09} \cdot 0{,}610 = 4{,}93\ \text{m},
 $$
 
 i lokalni gubitak
 
 $$
-\sum h_{loc,d} = \sum \xi_d \frac{v_d^2}{2g} = 5{,}2 \cdot 0{,}610 = 3{,}17\ \text{m}
+\sum h_{loc,d} = \sum \xi_d \frac{v_d^2}{2g} = 5{,}2 \cdot 0{,}610 = 3{,}17\ \text{m},
 $$
 
-pa je
+pa je $h_{w,d} = 4{,}93 + 3{,}17 = 8{,}10\ \text{m}$.
+
+Budući da su i `A` i `B` veliki otvoreni spremnici, potrebna visina dobave crpke dobiva se iz bilance između njihovih slobodnih površina:
 
 $$
-h_{w,d} = 4{,}93 + 3{,}17 = 8{,}10\ \text{m}
-$$
-
-budući da su i `A` i `B` veliki otvoreni spremnici, potrebna visina dobave crpke dobiva se iz bilance između njihovih slobodnih površina:
-
-$$
-H_p = \Delta z_{AB} + h_{w,s} + h_{w,d}
-$$
-
-odnosno
-
-$$
-H_p = 9{,}0 + 2{,}66 + 8{,}10 = 19{,}76\ \text{m}
-$$
-
-pa je tražena visina dobave približno
-
-$$
-H_p \approx 19{,}8\ \text{m}
+H_p = \Delta z_{AB} + h_{w,s} + h_{w,d} = 9{,}0 + 2{,}66 + 8{,}10 = 19{,}76\ \text{m} \approx 19{,}8\ \text{m}.
 $$
 
 Raspoloživa kavitacijska rezerva sada je
 
 $$
-\Delta H_{kav} = \frac{p_{abs,S}}{\gamma} - \frac{p_v}{\gamma} = 2{,}44 - 0{,}56 = 1{,}88\ \text{m}
+\Delta H_{kav} = \frac{p_{abs,S}}{\gamma} - \frac{p_v}{\gamma} = 2{,}44 - 0{,}56 = 1{,}88\ \text{m}.
 $$
 
 Kriterij je sada izravan: ako je $\Delta H_{kav} > 0$, apsolutni tlak na usisu još je iznad naponske visine pare; ako rezerva padne na nulu ili ispod nje, usis ulazi u područje fizikalno rizično za kavitaciju. U projektnom računu često se zato ne traži samo pozitivan rezultat, nego i minimalna dodatna sigurnosna margina.
@@ -1097,22 +988,16 @@ Dakle, usis ostaje iznad naponske visine pare, ali ne s velikom rezervom.
 Ako se zahtijeva najmanje $1{,}0\ \text{m}$ rezerve iznad naponske visine pare, mora vrijediti
 
 $$
-H_{atm} - z_{S,max} - \frac{v_s^2}{2g} - h_{w,s} - \frac{p_v}{\gamma} = 1{,}0
+H_{atm} - z_{S,max} - \frac{v_s^2}{2g} - h_{w,s} - \frac{p_v}{\gamma} = 1{,}0,
 $$
 
 pa slijedi
 
 $$
-z_{S,max} = 10{,}3 - 0{,}400 - 2{,}66 - 0{,}56 - 1{,}0 = 5{,}68\ \text{m}
+z_{S,max} = 10{,}3 - 0{,}400 - 2{,}66 - 0{,}56 - 1{,}0 = 5{,}68\ \text{m}.
 $$
 
-Trenutna ugradnja s osi crpke na $4{,}8\ \text{m}$ zato ostavlja još oko
-
-$$
-5{,}68 - 4{,}8 = 0{,}88\ \text{m}
-$$
-
-dodatne sigurnosne rezerve do zadane granice.
+Trenutna ugradnja s osi crpke na $4{,}8\ \text{m}$ zato ostavlja još oko $5{,}68 - 4{,}8 = 0{,}88\ \text{m}$ dodatne sigurnosne rezerve do zadane granice.
 
 **Provjera i komentar**
 
@@ -1124,9 +1009,9 @@ Ovaj `T4` zadatak zatvara dvije razine <span class="mf1-ch-ref"><span class="mf1
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Pad tlaka u rashladnom cjevovodu motora &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Pad tlaka u rashladnom cjevovodu motora &nbsp;<span class="mf1-level">T2</span></p>
 
-🔩 **Primjer za strojare**
+**Primjer za strojare**
 
 **Kontekst:** Rashladni krug motora u automobilu ima aluminijsku cijev koja vodi rashladno sredstvo od pumpe do radijatora. Projektant provjerava pad tlaka na toj dionici.
 
@@ -1221,9 +1106,9 @@ Lokalni gubici ($1{,}68\ \text{m}$) dominiraju nad linijskim ($0{,}48\ \text{m}$
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Starenje cijevi: kako rastuća hrapavost mijenja $\lambda$ i potrebnu snagu crpke &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Starenje cijevi: kako rastuća hrapavost mijenja $\lambda$ i potrebnu snagu crpke &nbsp;<span class="mf1-level">T2</span></p>
 
-🔩 **Primjer za strojare**
+**Primjer za strojare**
 
 **Kontekst:** U industrijskom postrojenju voda se transportira čeličnim cjevovodom od crpne stanice do tehnološkog procesa. Ista cijev koja na početku rada (svježa, glatka) ima hrapavost $\varepsilon \approx 0{,}045\ \text{mm}$ nakon **10 godina** kontinuiranog rada – zbog unutarnje korozije, taloga i sitnih oštećenja – dolazi do $\varepsilon \approx 0{,}20\ \text{mm}$. Promjer cijevi i protok ostaju zadani projektom, ali raste relativna hrapavost $\varepsilon/D$ i s njom **koeficijent linijskog gubitka** $\lambda$. Inženjer mora znati koliko ta promjena povećava pad tlaka i snagu koju crpka mora isporučivati – jer ta razlika izravno povećava potrošnju električne energije i preranu zamjenu opreme.
 
@@ -1363,9 +1248,9 @@ $$
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Pad tlaka u gravitacijskoj odvodnji zgrade &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Pad tlaka u gravitacijskoj odvodnji zgrade &nbsp;<span class="mf1-level">T2</span></p>
 
-🏗️ **Primjer za građevinare**
+**Primjer za građevinare**
 
 **Kontekst:** Gravitacijski odvodnji vod zgrade spaja krovni slivnik s revizijskim šahtom u dvorištu. Hidrotehničar provjerava ima li dovoljnog pada za željeni protok.
 
@@ -1477,7 +1362,7 @@ Lokalni gubici (6,5) dominiraju nad linijskim (4,1) i ovdje — koljena u gravit
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Tekućinsko hlađenje servera u podatkovnom centru — gubici u distribucijskom krugu &nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Riješeni primjer — Tekućinsko hlađenje servera u podatkovnom centru — gubici u distribucijskom krugu &nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** Veliki podatkovni centri sve češće koriste izravno tekućinsko hlađenje (engl. *direct liquid cooling*) za odvođenje topline s procesora; voda iz vanjskog rashladnog uređaja kruži kroz distribucijsku liniju u serverskoj sali i grana se na više paralelnih dionica, po jedan ormar (engl. *rack*). Pri projektiranju takvog sustava ključno je procijeniti ukupne hidrauličke gubitke kako bi se ispravno dimenzionirala crpka.
 
@@ -1593,46 +1478,36 @@ $$
 Ukupni gubitak od oko $44\ \text{m}$ vodenog stupca odgovara padu tlaka od približno $4{,}3\ \text{bara}$, što je za zatvoreni rashladni krug podatkovnog centra realna vrijednost. Snaga crpke od približno $7{,}3\ \text{kW}$ u kontinuiranom radu predstavlja godišnju potrošnju oko $64\,\text{MWh}$ samo za cirkulaciju rashladnog medija — značajan dio operativnih troškova centra. Glavna distribucijska linija doprinosi gotovo $94\,\%$ ukupnog pada tlaka, što je tipično za sustave gdje pojedinačne dionice prema ormarima nose mali pojedinačni protok. Optimizacija sustava zato se najčešće provodi povećanjem promjera glavne linije (čime se $v_1$, a time i kvadratno $h_{l,1}$, znatno smanjuje), a ne intervencijama na paralelnim dionicama. Suvremeni inženjerski pristup koristi kombinaciju CFD analize i mrežnih hidrauličkih modela za projektiranje takvih sustava prije fizičke izvedbe.
 :::
 
-## Usporedna tablica: strojarstvo i građevinarstvo
-
-| Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |
-|---------|----------------------------------|--------------------------------------|
-| Darcy-Weisbach $h_l = \lambda(L/D)(v^2/2g)$ | Rashladni cjevovod motora; hidraulični vod između crpke i aktuatora | Odvodnja krovnih voda; distributivna mreža vodoopskrbe |
-| Lokalni gubici $h_{loc} = \xi v^2/2g$ | Ventil, koljeno, filtar, T-komad u hidrauličnoj instalaciji | Ulaz u revizijski šaht, koljena i priključci u odvodnoj kanalizaciji |
-| Koeficijent trenja $\lambda$ (Moody) | Odabir materijala cijevi (glatka čelik vs. hrapava) u industrijskim sustavima | Hrapavost betonskih ili PVC kanala; starenje odvodnih cjevovoda |
-| `EGL` pada u smjeru toka | Pad energijske linije od crpke prema potrošaču u rashladnom krugu | Pad energijske linije od gornje kote do revizijskog šahta |
-| Kavitacijski uvjet ($p_{abs} > p_{para}$) | Provjera usisnog voda pumpe — kavitacija pumpe uništava rotor | Sifon u gravitacijskoj odvodnji — kavitacija ograničava visinu sifona |
-
 ::: {.mf1-samoprovjera}
-<p class="mf1-box-label">🎯 Provjeri sebe</p>
+<p class="mf1-box-label">Provjeri sebe</p>
 
 Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
 
 1. Po čemu se linijski gubici razlikuju od lokalnih i kako se prepoznaju u praktičnom sustavu?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Linijski gubici nastaju duž ravnih dionica cijevi zbog trenja stijenke i rastu proporcionalno s duljinom. Lokalni gubici nastaju u pojedinim mjestima sustava (koljena, ventili, suženja, naglo proširenje) gdje strujnice mijenjaju smjer ili profil — iznos im je proporcionalan brzinskoj visini i koeficijentu $\xi$ koji ovisi o geometriji elementa.
 :::
 
 2. O čemu ovisi koeficijent trenja $\lambda$ u turbulentnom režimu strujanja?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 U turbulentnom režimu $\lambda$ ovisi o Reynoldsovom broju i o relativnoj hrapavosti $\varepsilon/D$. Za niži Reynoldsov broj dominira utjecaj viskoznosti, za viši dominira hrapavost. Pri vrlo velikim Reynoldsovim brojevima $\lambda$ postaje neovisan o Reynoldsovu broju i ovisi samo o $\varepsilon/D$.
 :::
 
 3. Zašto pri proračunu kavitacijskog rizika u usisnom vodu treba koristiti apsolutni, a ne manometarski tlak?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Kavitacija nastupa kad lokalni apsolutni tlak padne ispod tlaka zasićene pare radnog fluida. Manometarski tlak može biti negativan (podtlak), ali apsolutni je referenciran od nule, što daje izravno mjerilo blizine kavitacijskom limitu. Korištenje manometarskog tlaka u tom proračunu vodi na pogrešne zaključke.
 :::
 
 4. Vrijedi li proširena Bernoullijeva jednadžba i u prisutnosti pumpe ili turbine u sustavu?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Vrijedi uz dodatne članove: $h_p$ za pumpu (dodaje energiju u sustav) i $h_t$ za turbinu (oduzima energiju). Opći oblik bilance je $H_1 + h_p = H_2 + h_t + h_w$, gdje je $H_i$ ukupna mehanička visina u presjeku $i$, a $h_w$ ukupni gubitak između dvaju presjeka.
 :::
 :::
@@ -1713,15 +1588,17 @@ Koeficijenti $\lambda$ i $\xi$ nisu ukrasi koji se mogu uzeti proizvoljno, nego 
 :::
 
 ::: {.mf1-numerika}
-<p class="mf1-box-label">🖥️ Numerički most</p>
+<p class="mf1-box-label">Numerički most</p>
 
-**Gdje ovo živi u numerici.** Gubici energije $h_l$ i $h_{loc}$ koje ovdje rabiš iz tabele su zapravo **integral disipacije** koju CFD u svakoj točki strujanja računa iz polja viskoznosti i turbulencije. Drugim riječima: $\lambda$ i $\xi$ su sažeti, mjerni odgovor na pitanje koje CFD odgovara po točkama. Otud i razlika u pristupu: ti integrirаš jedanput za cijelu dionicu; CFD integrira po cijeloj domeni.
+**Gdje ovo živi u numerici.** Gubici energije $h_l$ i $h_{loc}$ koji se ovdje očitavaju iz tablica zapravo su **integral disipacije** koju CFD u svakoj točki strujanja računa iz polja viskoznosti i turbulencije. Drugim riječima: $\lambda$ i $\xi$ sažeti su, mjerni odgovor na pitanje koje CFD odgovara po točkama. Otuda i razlika u pristupu: ručno se integrira jednom za cijelu dionicu; CFD integrira po cijeloj domeni.
 
-**Što numerički alat radi s tim.** **RANS modeli** (Reynolds-Averaged Navier-Stokes) — k-ε, k-ω SST, Spalart-Allmaras — dodaju Navier-Stokesu dvije ili više dodatnih jednadžbi za turbulentnu kinetičku energiju i njenu disipaciju. **LES** (Large Eddy Simulation) ide korak dalje: rješava velike vrtloge direktno, modelira samo male. **DNS** (Direct Numerical Simulation) rješava sve — najtočnije, najskuplje, ograničen na vrlo male geometrije.
+**Što numerički alat radi s tim.** **RANS modeli** (Reynolds-Averaged Navier-Stokes) — k-ε, k-ω SST, Spalart-Allmaras — dodaju Navier-Stokesu dvije ili više dodatnih jednadžbi za turbulentnu kinetičku energiju i njezinu disipaciju. **LES** (Large Eddy Simulation) ide korak dalje: rješava velike vrtloge izravno, a modelira samo male. **DNS** (Direct Numerical Simulation) rješava sve — najtočnije, najskuplje i ograničeno na vrlo male geometrije.
 
-**Alati gdje ćeš to sresti:** `OpenFOAM` (`turbulenceProperties` s izborom `RAS`/`LES`/`DNS`) · `ANSYS Fluent` (*Viscous Model* dijaloški izbornik) · `Star-CCM+` (*Turbulence Models*).
+**Tipičan scenarij.** Industrijski projekt cjevovoda gotovo nikad ne traži 3D RANS analizu cijelog sustava — to bi bilo ekonomski neisplativo. Standardni pristup koristi $1$D analitički proračun (s Moodyjevim $\lambda$ i tabličnim $\xi$) za cijeli sustav, a $3$D RANS samo za kritične elemente — T-račvu, koljeno, regulacijski ventil, ulaz u kolektor — gdje tablični koeficijenti mogu odstupati i $30$ do $50\%$ od stvarne geometrije zbog asimetrije ili lokalne hrapavosti.
 
-> *Nije gradivo MF1. Moodyjev dijagram koji ovdje rabiš za $\lambda$, u CFD-u se "ne treba" — solver sam izračuna gubitak. Ali Moodyjev dijagram i dalje validira simulaciju.*
+**Alati u kojima se to susreće:** `OpenFOAM` (`turbulenceProperties` s izborom `RAS`/`LES`/`DNS`) · `ANSYS Fluent` (*Viscous Model* dijaloški izbornik) · `Star-CCM+` (*Turbulence Models*).
+
+> *Nije gradivo MF1. Moodyjev dijagram koji se ovdje rabi za $\lambda$ u CFD-u "ne treba" — solver sam izračuna gubitak. No Moodyjev dijagram i dalje validira simulaciju.*
 :::
 
 

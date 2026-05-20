@@ -1,4 +1,4 @@
-## Brza mapa formula, oznaka i tipičnih jedinica
+## Sažetak formula, oznaka i tipičnih jedinica
 
 Ovaj dodatak nije zamjena za glavna poglavlja. Njegova je svrha dati brzi pregled najčešćih oznaka i radnih relacija koje se u udžbeniku stalno ponavljaju. Formulu ovdje treba čitati kao podsjetnik na zapis i jedinice, a ne kao dozvolu da se preskoče model i uvjeti primjene iz glavnog poglavlja.
 
@@ -116,7 +116,7 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 
 U turbulentnom području $\lambda$ više nije funkcija samo Reynoldsovog broja, nego i relativne hrapavosti $\varepsilon / D$ — koeficijent se očitava s Moodyjeva dijagrama.
 
-## tipične zamjene jedinica koje treba zaustaviti odmah
+## Tipične zamjene jedinica koje treba zaustaviti odmah
 
 - $\rho$ nije isto što i $\gamma$
 - tlak u Pa nije isto što i sila u N

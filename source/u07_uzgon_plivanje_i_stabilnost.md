@@ -111,7 +111,7 @@ U brodogradnji, lučnim pontonima i plutajućim radnim platformama nije dovoljno
 :::
 
 ::: {.mf1-priprema}
-<p class="mf1-box-label">📋 Prije čitanja poglavlja</p>
+<p class="mf1-box-label">Prije čitanja poglavlja</p>
 
 **Predznanje koje se pretpostavlja:**
 
@@ -172,18 +172,18 @@ F_U = \rho gV_{ist}.
 $$
 
 ::: {.callout-note}
-## 📐 Fizikalno značenje
+## Fizikalno značenje
 Sila uzgona ne ovisi o obliku tijela, materijalu ni gustoći — ovisi isključivo o volumenu fluida koji tijelo istisne i gustoći tog fluida. Kilogram čelika i kilogram pluta istisnu isti volumen vode ako su iste veličine, pa imaju isti uzgon — ali čelik tone jer je teži od istisnute vode, a pluta pliva jer je lakši. Uzgon je uvijek vertikalan prema gore i prolazi kroz težište istisnutog volumena, a ne kroz težište samog tijela.
 :::
 
 ::: {.callout-note collapse="true" icon="false"}
-## 🖥️ Numerički trag
+## Numerički trag
 
 Arhimedov zakon je u CFD-u utkan u **VOF metodu** (Volume of Fluid): dodatno polje $\alpha \in [0,1]$ kaže koliko je svaka ćelija ispunjena vodom, a uzgon se pojavljuje automatski jer su težinski članovi $\rho g$ različiti u "vodenim" i "zračnim" ćelijama. Solver `interFoam` u OpenFOAM-u simulira plivajuće tijelo (npr. brod u valovima) tako da prati pomicanje izolinije $\alpha = 0{,}5$ — to je upravo numerička slika slobodne površine i istisnutog volumena.
 :::
 
 ::: {.mf1-interaktivno}
-<p class="mf1-box-label">📈 Interaktivni prikaz — Gaz plivajućeg tijela</p>
+<p class="mf1-box-label">Interaktivni prikaz — Gaz plivajućeg tijela</p>
 
 Interaktivni prikaz omogućuje mijenjanje mase tijela i gustoće fluida uz neposredno praćenje ravnotežnog gaza i preostale visine iznad razine vode. Pri prekoračenju granice plovnosti prikaz signalizira da tijelo tone.
 
@@ -214,12 +214,12 @@ V_{ist} = \frac{m}{\rho}.
 $$
 
 ::: {.callout-note}
-## 📐 Fizikalno značenje
+## Fizikalno značenje
 Ova jednadžba kaže da plivajuće tijelo potapa se točno toliko da istisne svoju vlastitu masu fluida. Ako se teret doda, tijelo se potapa dublje; ako se teret ukloni, izroni. Volumen istisnine $V_{ist}$ nije fizička veličina tijela — on ovisi o gustoći fluida: isti brod u slanoj vodi (gustoća ~1025 kg/m³) istisne manji volumen nego u slatkoj vodi (~998 kg/m³), pa u slanoj vodi plovi nešto više.
 :::
 
 ::: {.callout-note}
-## 📝 Razrada koraka
+## Razrada koraka
 Korak: od tlakova na gornju i donju plohu → $F_U = \rho g V_{ist}$
 
 Na gornjoj plohi prizma na dubini $h_1$: $F_1 = (p_0 + \rho g h_1)A$ prema dolje.
@@ -239,14 +239,146 @@ To je tek prvi dio fizikalne slike. Član $V_{ist}$ određuje koliko fluida mora
 
 Za pravokutnu platformu s linearnom promjenom urona po širini srednja uronjenost određena je vertikalnom ravnotežom, dok raspodjela urona po rubovima proizlazi iz momentne ravnoteže oko uzdužne osi. Upravo se tu vidi cjelovito značenje poglavlja: uzgon nije samo jedna brojka, nego rezultat istisnine, položaja centra uzgona i njihove geometrijske veze s ukupnom težinom sustava.
 
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Bočni pomak centra uzgona pri linearnoj promjeni urona</p>
+
+Promatra se pravokutni ponton duljine $L$ i širine $B$ koji u nagnutom (ili nesimetrično opterećenom) položaju ima različite urone na lijevoj i desnoj strani: $h_L$ uz lijevu i $h_D$ uz desnu stijenku, uz srednji uron $h_m = (h_L + h_D)/2$.
+
+Poprečni presjek istisnutoga volumena je trapez s okomicama duljina $h_L$ i $h_D$ na razmaku $B$. Taj se trapez razlaže na pravokutnik visine $h_D$ i trokut katetа $(h_L - h_D)$ i $B$ smješten uz lijevu stijenku. Pripadne površine i položaji težišta u poprečnom presjeku (mjereno od lijevog ruba) iznose
+
+$$
+A_1 = h_D B, \qquad \bar{x}_1 = \frac{B}{2},
+$$
+
+$$
+A_2 = \frac{1}{2}(h_L - h_D) B, \qquad \bar{x}_2 = \frac{B}{3}.
+$$
+
+Težište cijelog trapeza, mjereno od lijevog ruba, dobiva se prvim momentom
+
+$$
+\bar{x} = \frac{A_1 \bar{x}_1 + A_2 \bar{x}_2}{A_1 + A_2} = \frac{h_D B \cdot \tfrac{B}{2} + \tfrac{1}{2}(h_L - h_D)B \cdot \tfrac{B}{3}}{B h_m}
+= \frac{B(h_L + 2h_D)}{6 h_m}.
+$$
+
+Bočni pomak centra uzgona od centra pontona (od ravnine simetrije, mjereno prema strani s većim uronom) iznosi
+
+$$
+y_B = \frac{B}{2} - \bar{x} = \frac{B}{2} - \frac{B(h_L + 2h_D)}{6 h_m}
+= \frac{B\,(h_L - h_D)}{12\, h_m}.
+$$
+
+Provjera: pri simetričnom uronu $h_L = h_D = h_m$ dobiva se $y_B = 0$, što znači da centar uzgona ostaje u središnjoj okomici. Pri tipičnoj razlici urona $h_L - h_D = 0{,}05\ \text{m}$ na pontonu širine $B = 1{,}2\ \text{m}$ sa srednjim uronom $h_m = 0{,}2\ \text{m}$ pomak centra uzgona iznosi $y_B = 1{,}2 \cdot 0{,}05/(12 \cdot 0{,}2) = 0{,}025\ \text{m}$, dakle $2{,}5\ \text{cm}$ — što izravno mjeri ekscentričnost rezultantne sile uzgona u odnosu na težinu tereta.
+:::
+
+Pri vrlo malim kutovima nagiba uvodi se još jedna apstraktna, ali fizikalno duboka veličina — metacentar. Iz njega proizlazi kriterij stabilnosti, koji je vrlo jasno povezan s geometrijom vodne linije plivajućeg tijela.
+
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Metacentarski radijus $\overline{BM} = I_T / V_{displ}$</p>
+
+Promatra se plivajuće tijelo nagnuto za mali kut $\theta$ oko uzdužne osi koja prolazi kroz njegovu vodnu liniju (presjek tijela s mirnom slobodnom površinom). Istisnuti volumen ostaje konstantan jer s jedne strane voda "ulazi" u tijelo, a s druge "izlazi" — masa tijela se nije promijenila.
+
+Geometrijski to znači da se s jedne strane osi rotacije pojavljuje klin dodatne istisnine (točke na udaljenosti $y > 0$ uranjaju se za $y\theta$ dublje), a s druge strane jednak klin nestaje istisnine ($y < 0$, voda se povlači za $|y|\theta$). Pomak centra uzgona $B \to B'$ u horizontalnom smjeru izračunava se prvim momentom volumna preslagivanja:
+
+$$
+V_{displ}\cdot \overline{BB'} = \int_{A_{wl}} y \cdot (y\theta)\, dA = \theta \int_{A_{wl}} y^2\, dA = \theta\, I_T,
+$$
+
+gdje je $A_{wl}$ površina vodne linije, a
+
+$$
+I_T = \int_{A_{wl}} y^2\, dA
+$$
+
+drugi moment površine vodne linije oko osi rotacije. Otud slijedi pomak centra uzgona
+
+$$
+\overline{BB'} = \frac{I_T\, \theta}{V_{displ}}.
+$$
+
+Metacentar $M$ definiran je kao točka u kojoj se sjeku okomica kroz novi centar uzgona $B'$ i prvotna osa simetrije tijela. Za male kutove vrijedi geometrijski
+
+$$
+\overline{BB'} = \overline{BM} \cdot \theta,
+$$
+
+pa izjednačavanjem dvaju izraza nastaje središnja relacija stabilnosti
+
+$$
+\boxed{\overline{BM} = \frac{I_T}{V_{displ}}}.
+$$
+
+Za pravokutnu vodnu liniju širine $B$ i duljine $L$ vrijedi $I_T = L B^3/12$, pa je
+
+$$
+\overline{BM} = \frac{L B^3}{12\, V_{displ}}.
+$$
+
+Iz toga slijedi vrlo važna inženjerska poruka: **metacentarski radijus raste s kubom širine tijela**. Brodovi i pontoni izrazito široke vodne linije (katamarani, lihteri, šlepere) prirodno su stabilniji od uskih, jer im je $\overline{BM}$ za isti volumen istisnine reda veličine veći.
+
+Konačni kriterij stabilnosti dobiva se kombiniranjem metacentarskog radijusa s razmakom centra uzgona i težišta tijela ($\overline{BG}$):
+
+$$
+\overline{GM} = \overline{BM} - \overline{BG}.
+$$
+
+Predznak $\overline{GM}$ odlučuje o početnoj stabilnosti. Pri $\overline{GM} > 0$ moment uzgona pri malom nagibu vraća tijelo u ravnotežu (povratni moment), pri $\overline{GM} = 0$ ravnoteža je neutralna, a pri $\overline{GM} < 0$ tijelo se prevrće.
+:::
+
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Krivulja stabilnosti $GZ(\theta)$ i finitni nagib</p>
+
+Metacentarski radijus $\overline{BM}$ izveden je za **infinitezimalni nagib** — pretpostavku $\sin\theta \approx \tan\theta \approx \theta$ koja vrijedi do otprilike $7{-}10^\circ$. Pri većim nagibima metacentar više nije nepokretna točka i koristi se **krivulja stabilnosti** $GZ(\theta)$ koja izravno mjeri povratni krak težine.
+
+Pri nagibu $\theta$ centar uzgona pomakne se iz prvotne pozicije $B$ u novi položaj $B_\theta$, koji ovisi o stvarnoj geometriji uronjenog dijela trupa. Težište tijela $G$ ostaje fiksirano u trupu. **Povratni krak** $GZ$ definira se kao vodoravna udaljenost od težišta $G$ do okomice koja prolazi kroz novi centar uzgona $B_\theta$:
+
+$$
+GZ(\theta) = \overline{GM}\,\sin\theta + f(\theta),
+$$
+
+gdje je prvi član linearni početni odziv (za male $\theta$ vrijedi samo on, $GZ \approx \overline{GM}\,\theta$), a $f(\theta)$ je korekcija za nelinearno preraspoređivanje istisnine pri velikim nagibima — postaje značajna kad dijelovi palube urone u vodu ili kad se rubovi trupa pojave iznad vode.
+
+Povratni **moment uzgona** koji vraća brod u uspravan položaj iznosi
+
+$$
+M_{povratni}(\theta) = \rho g V_{displ}\cdot GZ(\theta),
+$$
+
+a maksimalni kut do kojeg vrijedi $GZ > 0$ naziva se **kut iščezavajuće stabilnosti** $\theta_v$. Pri tom kutu krak povratne sile postaje nula, a brod nakon njega prelazi u nestabilno područje.
+
+Tipična krivulja $GZ(\theta)$, kakva se nalazi u stabilnosnoj brošuri svakog broda, ima sljedeća svojstva:
+
+- pri $\theta = 0$ vrijedi $GZ = 0$ (uspravni položaj);
+- nagib krivulje u ishodištu jednak je $\overline{GM}$ — poveznica s metacentarskom teorijom;
+- maksimum krivulje pojavljuje se obično pri $\theta_{max} \approx 25{-}40^\circ$;
+- pri $\theta_v$ krivulja siječe nulu (granica stabilnosti).
+
+**Integral površine ispod krivulje**
+
+$$
+A = \int_0^{\theta_v} GZ(\theta)\,d\theta
+$$
+
+ima dimenziju duljine puta kuta (m·rad) i mjeri **rezervu energije stabilnosti** — mehanički rad koji brod može apsorbirati prije prevrtanja. Iz tog razloga međunarodna SOLAS konvencija propisuje minimalne vrijednosti $A$ u različitim rasponima nagiba: $A_{0\text{-}30^\circ} \ge 0{,}055\ \text{m\,rad}$ i $A_{0\text{-}40^\circ} \ge 0{,}09\ \text{m\,rad}$.
+
+Metacentarska teorija ($\overline{GM} > 0$) i kriterij iščezavajućeg kraka ($\theta_v$, $A$) zajedno čine cjelovit sustav stabilnosti broda: prvi se primjenjuje na svaki radni nagib, drugi na izvanredne situacije poput snažnog vjetra, valova ili poplavljenog tanka.
+:::
+
 ## Riješeni primjeri
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Koliki gaz ima radni ponton pri simetričnom opterećenju <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Koliki gaz ima radni ponton pri simetričnom opterećenju&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Pravokutni radni ponton nosi simetrično postavljenu opremu na mirnoj vodi. Treba odrediti istisnuti volumen, srednji gaz i preostalu nosivost prije nego što razina vode dosegne gornji rub boka.
 
 **Zadano**
 
-Pravokutni radni ponton duljine $L = 2{,}40\ \text{m}$, širine $B = 1{,}20\ \text{m}$ i ukupne visine boka $H = 0{,}32\ \text{m}$ ima vlastitu masu $m_p = 420\ \text{kg}$. Na njega se simetrično postavlja oprema mase $m_o = 180\ \text{kg}$. Ponton pluta u vodi gustoće $\rho = 998\ \text{kg/m}^3$.
+- Duljina pravokutnog radnog pontona: $L = 2{,}40\ \text{m}$
+- Širina pontona: $B = 1{,}20\ \text{m}$
+- Ukupna visina boka: $H = 0{,}32\ \text{m}$
+- Vlastita masa pontona: $m_p = 420\ \text{kg}$
+- Simetrično postavljena oprema mase: $m_o = 180\ \text{kg}$
+- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
 
 **Traženo**
 
@@ -265,61 +397,37 @@ Kako je opterećenje postavljeno simetrično, ovdje nema bočnog nagiba ni momen
 Ukupna masa sustava iznosi
 
 $$
-m = m_p + m_o = 420 + 180 = 600\ \text{kg}
+m = m_p + m_o = 420 + 180 = 600\ \text{kg}.
 $$
 
-Za plivanje u ravnotezi vrijedi
+Za plivanje u ravnotezi vrijedi $\rho g V = mg$, pa je istisnuti volumen
 
 $$
-\rho g V = mg
+V = \frac{m}{\rho} = \frac{600}{998} \approx 0{,}601\ \text{m}^3.
 $$
 
-pa je istisnuti volumen
+Za pravokutni ponton vrijedi $V = LBh$, odakle slijedi srednji gaz
 
 $$
-V = \frac{m}{\rho} = \frac{600}{998} = 0{,}601\ \text{m}^3
+h = \frac{V}{LB} = \frac{0{,}601}{2{,}40 \cdot 1{,}20} \approx 0{,}209\ \text{m} \approx 20{,}9\ \text{cm}.
 $$
 
-Za pravokutni ponton vrijedi
+Granični slučaj prije zalijevanja palube dobiva se kad je uron jednak ukupnoj visini boka, tj. $h = H = 0{,}32\ \text{m}$. Tada je najveći mogući istisnuti volumen
 
 $$
-V = LBh
-$$
-
-odakle slijedi srednji gaz
-
-$$
-h = \frac{V}{LB} = \frac{0{,}601}{2{,}40 \cdot 1{,}20} = 0{,}209\ \text{m}
-$$
-
-odnosno
-
-$$
-h \approx 20{,}9\ \text{cm}
-$$
-
-granični slučaj prije zalijevanja palube dobiva se kad je uron jednak ukupnoj visini boka, tj. $h = H = 0{,}32\ \text{m}$. Tada je najveći mogući istisnuti volumen
-
-$$
-V_{max} = LBH = 2{,}40 \cdot 1{,}20 \cdot 0{,}32 = 0{,}922\ \text{m}^3
+V_{max} = LBH = 2{,}40 \cdot 1{,}20 \cdot 0{,}32 \approx 0{,}922\ \text{m}^3,
 $$
 
 pa odgovarajuća ukupna masa iznosi
 
 $$
-m_{max} = \rho V_{max} = 998 \cdot 0{,}922 \approx 920\ \text{kg}
+m_{max} = \rho V_{max} = 998 \cdot 0{,}922 \approx 920\ \text{kg}.
 $$
 
 Zato je dodatna masa koju ponton još može primiti
 
 $$
-\Delta m = m_{max} - m = 920 - 600 = 320\ \text{kg}
-$$
-
-odnosno približno
-
-$$
-\Delta m \approx 3{,}2 \cdot 10^2\ \text{kg}
+\Delta m = m_{max} - m = 920 - 600 = 320\ \text{kg} \approx 3{,}2 \cdot 10^2\ \text{kg}.
 $$
 
 **Provjera i komentar**
@@ -332,29 +440,16 @@ $$
  Kad je ta osnovna vertikalna ravnoteza zatvorena, korisno je najprije odvojiti još jedan međukorak: što sami rubni uroni govore o srednjem gazu i o bočnom pomaku centra uzgona, još bez traženja položaja tereta.
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Bočni pomak centra uzgona iz rubnih urona <span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">Riješeni primjer — Bočni pomak centra uzgona iz rubnih urona&nbsp;<span class="mf1-level">T1</span></p>
+
+**Kontekst:** Pravokutna plutajuća platforma neravnomjerno je opterećena, pa se na lijevom i desnom rubu mjere različite uronjenosti. Treba iz tih rubnih urona odrediti srednji gaz i bočni pomak centra uzgona od osi simetrije.
 
 **Zadano**
 
-Pravokutna plutajuća platforma širine
-
-$$
-B = 1{,}20\ \text{m}
-$$
-
-ima izmjeren uron lijevog ruba
-
-$$
-h_L = 0{,}32\ \text{m}
-$$
-
-i uron desnog ruba
-
-$$
-h_D = 0{,}24\ \text{m}.
-$$
-
-Pretpostavi linearan nagib plivajućeg presjeka.
+- Širina pravokutne plutajuće platforme: $B = 1{,}20\ \text{m}$
+- Izmjereni uron lijevog ruba: $h_L = 0{,}32\ \text{m}$
+- Izmjereni uron desnog ruba: $h_D = 0{,}24\ \text{m}$
+- Pretpostavlja se linearan nagib plivajućeg presjeka
 
 **Traženo**
 
@@ -448,19 +543,7 @@ $$
 Za pravokutnu platformu s linearnim nagibom bočni pomak centra uzgona glasi
 
 $$
-y_B = \frac{B(h_L - h_D)}{12h_m}
-$$
-
-odnosno
-
-$$
-y_B = \frac{1{,}20(0{,}32 - 0{,}24)}{12 \cdot 0{,}28} = 0{,}0286\ \text{m}.
-$$
-
-Dakle,
-
-$$
-y_B \approx 2{,}86\ \text{cm}
+y_B = \frac{B(h_L - h_D)}{12h_m} = \frac{1{,}20(0{,}32 - 0{,}24)}{12 \cdot 0{,}28} \approx 0{,}0286\ \text{m} \approx 2{,}86\ \text{cm}
 $$
 
 prema dublje uronjenoj strani.
@@ -475,13 +558,20 @@ prema dublje uronjenoj strani.
  Kad je taj geometrijski međukorak zatvoren, tek tada ima smisla prijeći na složeniji slučaj u kojem se teret bočno pomiče i uz ravnotezu sila treba zatvoriti i ravnotezu momenata.
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Plutajuća servisna platforma s pomaknutim kompresorom <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Plutajuća servisna platforma s pomaknutim kompresorom&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Na plutajućoj servisnoj platformi prijenosni kompresor postavljen je izvan osi simetrije, što izaziva mjerljiv bočni nagib. Treba odrediti istisnuti volumen, položaj težišta kompresora i porast srednjeg gaza nakon njegova postavljanja.
 
 **Zadano**
 
-Pravokutna plutajuća servisna platforma duljine $L = 3{,}10\ \text{m}$ i širine $B = 1{,}00\ \text{m}$ ima masu $m_p = 676\ \text{kg}$ i pluta u vodi gustoće $\rho = 998\ \text{kg/m}^3$. Na platformu je postavljen prijenosni kompresor mase $m_k = 190\ \text{kg}$, ali nije poznato na kojoj se udaljenosti $e$ od uzdužne osi simetrije nalazi njegovo težište.
-
-Nakon postavljanja kompresora izmjereno je da je uron lijevog ruba platforme $h_L = 0{,}34\ \text{m}$, a uron desnog ruba $h_D = 0{,}22\ \text{m}$. Pretpostavite da je platforma kruta, da joj je dno ravno, a bočne stijenke okomite.
+- Duljina pravokutne plutajuće servisne platforme: $L = 3{,}10\ \text{m}$
+- Širina platforme: $B = 1{,}00\ \text{m}$
+- Masa platforme: $m_p = 676\ \text{kg}$
+- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
+- Masa prijenosnog kompresora: $m_k = 190\ \text{kg}$
+- Izmjereni uron lijevog ruba platforme nakon postavljanja kompresora: $h_L = 0{,}34\ \text{m}$
+- Izmjereni uron desnog ruba: $h_D = 0{,}22\ \text{m}$
+- Platforma je kruta, ravnog dna i okomitih bočnih stijenki
 
 **Traženo**
 
@@ -499,37 +589,35 @@ Platforma se promatra kao kruto prizmatsko tijelo pravokutnog tlocrta i ravnog d
 
 Srednja uronjenost iznosi
 
-$$h_m = \frac{h_L + h_D}{2} = \frac{0{,}34 + 0{,}22}{2} = 0{,}28\ \text{m}$$
+$$
+h_m = \frac{h_L + h_D}{2} = \frac{0{,}34 + 0{,}22}{2} = 0{,}28\ \text{m},
+$$
 
 pa je istisnuti volumen
 
-$$V = L B h_m = 3{,}10 \cdot 1{,}00 \cdot 0{,}28 = 0{,}868\ \text{m}^3$$
+$$
+V = L B h_m = 3{,}10 \cdot 1{,}00 \cdot 0{,}28 = 0{,}868\ \text{m}^3.
+$$
 
 To odgovara istisnutoj masi vode od približno $998 \cdot 0{,}868 \approx 866\ \text{kg}$, što je u skladu s ukupnom masom platforme i kompresora.
 
 Za pravokutnu platformu s linearnom promjenom urona po širini bočni pomak centra uzgona glasi
 
-$$y_B = \frac{B(h_L - h_D)}{12h_m} = \frac{1{,}00\,(0{,}34 - 0{,}22)}{12 \cdot 0{,}28} = 0{,}0357\ \text{m}$$
+$$
+y_B = \frac{B(h_L - h_D)}{12h_m} = \frac{1{,}00\,(0{,}34 - 0{,}22)}{12 \cdot 0{,}28} \approx 0{,}0357\ \text{m}.
+$$
 
-Momentna ravnoteza oko uzdužne osi simetrije tada daje
+Momentna ravnoteza oko uzdužne osi simetrije tada daje $F_U y_B = m_k g e$, a kako je $F_U = (m_p + m_k)g$, slijedi
 
-$$F_U y_B = m_k g e$$
-
-a kako je $F_U = (m_p + m_k)g$, slijedi
-
-$$e = \frac{m_p + m_k}{m_k} y_B = \frac{676 + 190}{190} \cdot 0{,}0357 = 0{,}1628\ \text{m}$$
-
-odnosno
-
-$$e \approx 0{,}163\ \text{m}$$
+$$
+e = \frac{m_p + m_k}{m_k} y_B = \frac{676 + 190}{190} \cdot 0{,}0357 \approx 0{,}1628\ \text{m} \approx 0{,}163\ \text{m}.
+$$
 
 Povećanje srednje uronjenosti nakon postavljanja kompresora uzrokuje samo njegova masa, pa je
 
-$$\Delta h_m = \frac{m_k}{\rho L B} = \frac{190}{998 \cdot 3{,}10 \cdot 1{,}00} = 0{,}0614\ \text{m}$$
-
-odnosno
-
-$$\Delta h_m \approx 6{,}14\ \text{cm}$$
+$$
+\Delta h_m = \frac{m_k}{\rho L B} = \frac{190}{998 \cdot 3{,}10 \cdot 1{,}00} \approx 0{,}0614\ \text{m} \approx 6{,}14\ \text{cm}.
+$$
 
 **Provjera i komentar**
 
@@ -541,15 +629,17 @@ $$\Delta h_m \approx 6{,}14\ \text{cm}$$
 Plutajuća platforma nije jedini tipičan ulaz u <span class="mf1-ch-ref"><span class="mf1-ch-code">U07</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span>. Jednako je važno znati zatvoriti vertikalnu ravnotezu i za potpuno uronjeno tijelo koje presiječa granicu dvaju fluida, jer se tada ukupni uzgon čita kao zbroj dviju istisnina različitih gustoća.
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer - Kalibracijski modul na granici ulja i vode <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Kalibracijski modul na granici ulja i vode&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** Hermetički kalibracijski modul potpuno je uronjen tako da presijeca granicu između ulja i vode različitih gustoća. Treba odrediti pravilnu podjelu modula između dvaju fluida za neutralni uron i silu koju vodilica preuzima pri pogrešnom postavljanju.
 
 **Zadano**
 
-Hermetički zatvoreni kalibracijski modul pravokutnog tlocrta ima dimenzije
-
-$$
-b = 0{,}32\ \text{m}, \qquad l = 0{,}20\ \text{m}, \qquad t = 0{,}22\ \text{m}
-$$
+- Dimenzije pravokutnog tlocrta hermetičkog kalibracijskog modula: $b = 0{,}32\ \text{m}$, $l = 0{,}20\ \text{m}$
+- Visina modula: $t = 0{,}22\ \text{m}$
+- Gustoća gornjeg fluida (ulje): $\rho_1 = 820\ \text{kg/m}^3$
+- Gustoća donjeg fluida: $\rho_2 = 1030\ \text{kg/m}^3$
+- Masa modula: $m = 12{,}8\ \text{kg}$
 
 **Traženo**
 
@@ -567,97 +657,55 @@ Modul se promatra kao kruto tijelo stalnog poprečnog presjeka. Budući da je po
 Površina vodoravnog presjeka modula iznosi
 
 $$
-A = b l = 0{,}32 \cdot 0{,}20 = 0{,}064\ \text{m}^2
+A = b l = 0{,}32 \cdot 0{,}20 = 0{,}064\ \text{m}^2.
 $$
 
-Ako je `x` dio modula u donjem fluidu, tada je visina dijela u gornjem fluidu jednaka $t - x$. Za neutralnu vertikalnu ravnotezu mora vrijediti
+Ako je `x` dio modula u donjem fluidu, tada je visina dijela u gornjem fluidu jednaka $t - x$. Za neutralnu vertikalnu ravnotezu mora vrijediti $F_U = G$, odnosno
 
 $$
-F_U = G
-$$
-
-odnosno
-
-$$
-\rho_1 g A (t - x) + \rho_2 g A x = mg
+\rho_1 g A (t - x) + \rho_2 g A x = mg.
 $$
 
 Nakon skraćivanja s $g$ i uvrstavanja podataka dobiva se
 
 $$
-820 \cdot 0{,}064 \cdot (0{,}22 - x) + 1030 \cdot 0{,}064 \cdot x = 12{,}8
+820 \cdot 0{,}064 \cdot (0{,}22 - x) + 1030 \cdot 0{,}064 \cdot x = 12{,}8,
 $$
 
 što daje
 
 $$
-0{,}064 \left[820(0{,}22 - x) + 1030x\right] = 12{,}8
+0{,}064 \left[820(0{,}22 - x) + 1030x\right] = 12{,}8 \quad \Rightarrow \quad 820 \cdot 0{,}22 + (1030 - 820)x = \frac{12{,}8}{0{,}064},
 $$
 
-pa slijedi
+odnosno $180{,}4 + 210x = 200$, odakle je
 
 $$
-820 \cdot 0{,}22 + (1030 - 820)x = \frac{12{,}8}{0{,}064}
+x = \frac{19{,}6}{210} \approx 0{,}0933\ \text{m} \approx 9{,}33\ \text{cm}.
 $$
 
-$$
-180{,}4 + 210x = 200
-$$
-
-odakle je
+Visina modula u gornjem fluidu tada je
 
 $$
-x = \frac{19{,}6}{210} = 0{,}0933\ \text{m}
-$$
-
-odnosno
-
-$$
-x \approx 9{,}33\ \text{cm}
-$$
-
-visina modula u gornjem fluidu tada je
-
-$$
-t - x = 0{,}22 - 0{,}0933 = 0{,}1267\ \text{m}
-$$
-
-odnosno približno
-
-$$
-t - x \approx 12{,}7\ \text{cm}
+t - x = 0{,}22 - 0{,}0933 \approx 0{,}1267\ \text{m} \approx 12{,}7\ \text{cm}.
 $$
 
 Sada provjerimo pogrešno postavljen modul s visinom u donjem fluidu $x = 0{,}050\ \text{m}$. Tada je ukupni uzgon
 
 $$
-F_U = \rho_1 g A (0{,}22 - 0{,}05) + \rho_2 g A \cdot 0{,}05
-$$
-
-$$
-F_U = 9{,}81 \cdot 0{,}064 \left(820 \cdot 0{,}17 + 1030 \cdot 0{,}05\right)
-$$
-
-$$
-F_U \approx 119{,}9\ \text{N}
+F_U = \rho_1 g A (0{,}22 - 0{,}05) + \rho_2 g A \cdot 0{,}05 = 9{,}81 \cdot 0{,}064 \left(820 \cdot 0{,}17 + 1030 \cdot 0{,}05\right) \approx 119{,}9\ \text{N}.
 $$
 
 Težina modula iznosi
 
 $$
-G = mg = 12{,}8 \cdot 9{,}81 \approx 125{,}6\ \text{N}
+G = mg = 12{,}8 \cdot 9{,}81 \approx 125{,}6\ \text{N}.
 $$
 
 Kako je $G > F_U$, vodilica mora prenijeti dodatnu silu prema gore:
 
 $$
-F_V = G - F_U = 125{,}6 - 119{,}9 = 5{,}7\ \text{N}
-$$
-
-Dakle,
-
-$$
-F_V \approx 5{,}7\ \text{N}
+F_V = G - F_U = 125{,}6 - 119{,}9 \approx 5{,}7\ \text{N}
 $$
 
 prema gore.
@@ -670,65 +718,22 @@ prema gore.
 :::
 
 ::: {.mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak - Plutajuća servisna platforma na granici ulja i vode <span class="mf1-level">T4</span></p>
+<p class="mf1-box-label">Cjeloviti zadatak — Plutajuća servisna platforma na granici ulja i vode&nbsp;<span class="mf1-level">T4</span></p>
+
+**Kontekst:** Hermetička servisna platforma pluta na stratificiranom mediju u kojem sloj ulja leži iznad vode, a na njoj se nepoznato bočno postavlja ormar s instrumentacijom. Treba podijeliti istisninu po fluidima, naći bočni pomak centra uzgona i položaj ormara koji uravnotežuje izmjerene rubne urone.
 
 **Zadano**
 
-Hermetički zatvorena pravokutna servisna platforma duljine
-
-$$
-L = 3{,}00\ \text{m}
-$$
-
-i širine
-
-$$
-B = 1{,}20\ \text{m}
-$$
-
-ima visinu boka
-
-$$
-H = 0{,}34\ \text{m}
-$$
-
-i vlastitu masu
-
-$$
-m_p = 648\ \text{kg}
-$$
-
-Platforma pluta u separacijskom spremniku koji ima gornji sloj ulja gustoće
-
-$$
-\rho_o = 800\ \text{kg/m}^3
-$$
-
-debljine
-
-$$
-\delta = 0{,}10\ \text{m}
-$$
-
-i donji sloj vode gustoće
-
-$$
-\rho_w = 1000\ \text{kg/m}^3
-$$
-
-Na platformu je postavljen ormar instrumentacije mase
-
-$$
-m_k = 180\ \text{kg}
-$$
-
-na nepoznatoj udaljenosti $e$ od uzdužne osi simetrije. Nakon postavljanja ormara izmjereni su uroni lijevog i desnog ruba platforme, mjerene od slobodne površine ulja:
-
-$$
-h_L = 0{,}30\ \text{m}, \qquad h_D = 0{,}20\ \text{m}
-$$
-
-Pretpostavi da je platforma kruta, da su bočne stijenke okomite, da je dno ravno i da je promjena urona po širini linearna.
+- Duljina hermetičke pravokutne servisne platforme: $L = 3{,}00\ \text{m}$
+- Širina platforme: $B = 1{,}20\ \text{m}$
+- Visina boka: $H = 0{,}34\ \text{m}$
+- Vlastita masa platforme: $m_p = 648\ \text{kg}$
+- Gustoća gornjeg sloja ulja: $\rho_o = 800\ \text{kg/m}^3$
+- Debljina uljnog sloja: $\delta = 0{,}10\ \text{m}$
+- Gustoća donjeg sloja vode: $\rho_w = 1000\ \text{kg/m}^3$
+- Masa ormara instrumentacije na platformi: $m_k = 180\ \text{kg}$ na nepoznatoj udaljenosti $e$ od uzdužne osi simetrije
+- Izmjereni uroni rubova platforme (od slobodne površine ulja): $h_L = 0{,}30\ \text{m}$, $h_D = 0{,}20\ \text{m}$
+- Platforma je kruta, bočne stijenke okomite, dno ravno, promjena urona po širini linearna
 
 **Traženo**
 
@@ -749,43 +754,37 @@ Ovdje se platforma još uvijek čita kao prizmatsko tijelo, ali uzgon više ne d
 Srednja uronjenost dobiva se iz sredine izmjerenih rubnih urona:
 
 $$
-h_m = \frac{h_L + h_D}{2} = \frac{0{,}30 + 0{,}20}{2} = 0{,}25\ \text{m}
+h_m = \frac{h_L + h_D}{2} = \frac{0{,}30 + 0{,}20}{2} = 0{,}25\ \text{m}.
 $$
 
 Ukupni istisnuti volumen zato je
 
 $$
-V = L B h_m = 3{,}00 \cdot 1{,}20 \cdot 0{,}25 = 0{,}900\ \text{m}^3
+V = L B h_m = 3{,}00 \cdot 1{,}20 \cdot 0{,}25 = 0{,}900\ \text{m}^3.
 $$
 
-Kako su oba ruba uronjena više od debljine uljnog sloja, cijela platforma kroz puni tlocrt presiječa svih
+Kako su oba ruba uronjena više od debljine uljnog sloja $\delta = 0{,}10\ \text{m}$, cijela platforma kroz puni tlocrt presiječa svih $\delta$ ulja. Zato je volumen istisnine u ulju
 
 $$
-\delta = 0{,}10\ \text{m}
-$$
-
-ulja. Zato je volumen istisnine u ulju
-
-$$
-V_o = L B \delta = 3{,}00 \cdot 1{,}20 \cdot 0{,}10 = 0{,}360\ \text{m}^3
+V_o = L B \delta = 3{,}00 \cdot 1{,}20 \cdot 0{,}10 = 0{,}360\ \text{m}^3,
 $$
 
 a volumen istisnine u vodi
 
 $$
-V_w = L B (h_m - \delta) = 3{,}00 \cdot 1{,}20 \cdot (0{,}25 - 0{,}10) = 0{,}540\ \text{m}^3
+V_w = L B (h_m - \delta) = 3{,}00 \cdot 1{,}20 \cdot (0{,}25 - 0{,}10) = 0{,}540\ \text{m}^3.
 $$
 
 Provjera vertikalne ravnoteze sada glasi
 
 $$
-\rho_o V_o + \rho_w V_w = 800 \cdot 0{,}360 + 1000 \cdot 0{,}540 = 288 + 540 = 828\ \text{kg}
+\rho_o V_o + \rho_w V_w = 800 \cdot 0{,}360 + 1000 \cdot 0{,}540 = 288 + 540 = 828\ \text{kg},
 $$
 
 što se točno slaže s ukupnom masom sustava
 
 $$
-m_p + m_k = 648 + 180 = 828\ \text{kg}
+m_p + m_k = 648 + 180 = 828\ \text{kg}.
 $$
 
 Dakle, vertikalna ravnoteza je zatvorena.
@@ -793,23 +792,19 @@ Dakle, vertikalna ravnoteza je zatvorena.
 Za bočni pomak centra uzgona bitan je samo vodeni dio ispod granice fluida, jer je uljni dio simetričan po širini i ne daje bočni moment. Vodene dubine lijevo i desno iznose
 
 $$
-h_{w,L} = h_L - \delta = 0{,}30 - 0{,}10 = 0{,}20\ \text{m}
-$$
-
-$$
-h_{w,D} = h_D - \delta = 0{,}20 - 0{,}10 = 0{,}10\ \text{m}
+h_{w,L} = h_L - \delta = 0{,}30 - 0{,}10 = 0{,}20\ \text{m}, \qquad h_{w,D} = h_D - \delta = 0{,}20 - 0{,}10 = 0{,}10\ \text{m},
 $$
 
 pa je srednja vodena dubina
 
 $$
-h_{w,m} = h_m - \delta = 0{,}15\ \text{m}
+h_{w,m} = h_m - \delta = 0{,}15\ \text{m}.
 $$
 
 Centar uzgona vodenog dijela za linearni nagib pravokutnog presjeka nalazi se na udaljenosti
 
 $$
-y_{B,w} = \frac{B(h_{w,L} - h_{w,D})}{12 h_{w,m}} = \frac{1{,}20(0{,}20 - 0{,}10)}{12 \cdot 0{,}15} = 0{,}0667\ \text{m}
+y_{B,w} = \frac{B(h_{w,L} - h_{w,D})}{12 h_{w,m}} = \frac{1{,}20(0{,}20 - 0{,}10)}{12 \cdot 0{,}15} \approx 0{,}0667\ \text{m}
 $$
 
 od osi simetrije platforme, prema dublje uronjenoj strani.
@@ -817,67 +812,31 @@ od osi simetrije platforme, prema dublje uronjenoj strani.
 Kako je samo vodeni dio asimetričan, rezultantni bočni pomak ukupnog centra uzgona dobiva se težinjenjem po uzgonskim doprinosima:
 
 $$
-y_B = \frac{\rho_w V_w}{\rho_o V_o + \rho_w V_w} y_{B,w} = \frac{540}{828} \cdot 0{,}0667 = 0{,}0435\ \text{m}
+y_B = \frac{\rho_w V_w}{\rho_o V_o + \rho_w V_w} y_{B,w} = \frac{540}{828} \cdot 0{,}0667 \approx 0{,}0435\ \text{m} \approx 4{,}35\ \text{cm}.
 $$
 
-odnosno
+Momentna ravnoteza oko uzdužne osi simetrije sada daje $(m_p + m_k) g y_B = m_k g e$, odakle slijedi
 
 $$
-y_B \approx 4{,}35\ \text{cm}
-$$
-
-Momentna ravnoteza oko uzdužne osi simetrije sada daje
-
-$$
-(m_p + m_k) g y_B = m_k g e
-$$
-
-odakle slijedi
-
-$$
-e = \frac{m_p + m_k}{m_k} y_B = \frac{828}{180} \cdot 0{,}0435 = 0{,}200\ \text{m}
-$$
-
-odnosno
-
-$$
-e = 20{,}0\ \text{cm}
+e = \frac{m_p + m_k}{m_k} y_B = \frac{828}{180} \cdot 0{,}0435 \approx 0{,}200\ \text{m} = 20{,}0\ \text{cm}.
 $$
 
 Prije postavljanja ormara platforma je bila simetrično opterećena, pa je i tada bila u ravnotezi bez nagiba. Neka je tadašnji srednji uron $h_0$. Budući da je uljni sloj i dalje potpuno presijecao platformu, vrijedi
 
 $$
-\rho_o L B \delta + \rho_w L B (h_0 - \delta) = m_p
+\rho_o L B \delta + \rho_w L B (h_0 - \delta) = m_p,
 $$
 
-odnosno
+odnosno $800 \cdot 3{,}00 \cdot 1{,}20 \cdot 0{,}10 + 1000 \cdot 3{,}00 \cdot 1{,}20 \cdot (h_0 - 0{,}10) = 648$, što daje $288 + 3600(h_0 - 0{,}10) = 648$, pa je
 
 $$
-800 \cdot 3{,}00 \cdot 1{,}20 \cdot 0{,}10 + 1000 \cdot 3{,}00 \cdot 1{,}20 \cdot (h_0 - 0{,}10) = 648
-$$
-
-što daje
-
-$$
-288 + 3600(h_0 - 0{,}10) = 648
-$$
-
-pa je
-
-$$
-h_0 = 0{,}20\ \text{m}
+h_0 = 0{,}20\ \text{m}.
 $$
 
 Povećanje srednje uronjenosti nakon postavljanja ormara zato iznosi
 
 $$
-\Delta h_m = h_m - h_0 = 0{,}25 - 0{,}20 = 0{,}05\ \text{m}
-$$
-
-odnosno
-
-$$
-\Delta h_m = 5{,}0\ \text{cm}
+\Delta h_m = h_m - h_0 = 0{,}25 - 0{,}20 = 0{,}05\ \text{m} = 5{,}0\ \text{cm}.
 $$
 
 **Provjera i komentar**
@@ -890,7 +849,9 @@ Ovaj `CH` zatvara tri jezgre <span class="mf1-ch-ref"><span class="mf1-ch-code">
 :::
 
 ::: {.mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak - Asimetrično poplavljen balastni tank: novi gaz, nagib i provjera stabilnosti broda <span class="mf1-level">T4</span></p>
+<p class="mf1-box-label">Cjeloviti zadatak — Asimetrično poplavljen balastni tank: novi gaz, nagib i provjera stabilnosti broda&nbsp;<span class="mf1-level">T4</span></p>
+
+**Kontekst:** Teretni brod pojednostavljenog pravokutnog trupa pretrpio je oštećenje pa se bočni balastni tank potpuno napunio morskom vodom. Treba odrediti novi gaz, bočni nagib i metacentarsku visinu te ocijeniti je li brod zadržao stabilnost u skladu sa SOLAS kriterijima.
 
 **Zadano**
 
@@ -936,11 +897,11 @@ Bočni nagib smatra se "malim" ($\theta < 10^\circ$), tako da se može koristiti
 **1. Volumen i masa poplavljene vode.**
 
 $$
-V_w = L_t B_t H_t = 15 \cdot 6 \cdot 3 = 270\ \text{m}^3
+V_w = L_t B_t H_t = 15 \cdot 6 \cdot 3 = 270\ \text{m}^3,
 $$
 
 $$
-m_w = \rho_m V_w = 1025 \cdot 270 \approx 277\,000\ \text{kg} \approx 277\ \text{t}
+m_w = \rho_m V_w = 1025 \cdot 270 \approx 277\,000\ \text{kg} \approx 277\ \text{t}.
 $$
 
 **2. Pomak težišta sustava.**
@@ -950,61 +911,61 @@ Centroid poplavljene vode (= centar tanka) je u bočnom smjeru udaljen $B_t/2 = 
 Bočni pomak težišta cijelog sustava (pondrirano masom):
 
 $$
-e_G = \frac{m_w \cdot e_t}{m_b + m_w} = \frac{277 \cdot 4{,}5}{4000 + 277} = \frac{1247}{4277} \approx 0{,}291\ \text{m}
+e_G = \frac{m_w \cdot e_t}{m_b + m_w} = \frac{277 \cdot 4{,}5}{4000 + 277} = \frac{1247}{4277} \approx 0{,}291\ \text{m}.
 $$
 
 Nova visina težišta sustava iznad kobilice:
 
 $$
-K\bar G' = \frac{m_b \cdot K\bar G_b + m_w \cdot (H_t/2)}{m_b + m_w} = \frac{4000 \cdot 3{,}0 + 277 \cdot 1{,}5}{4277} \approx 2{,}90\ \text{m}
+K\bar G' = \frac{m_b \cdot K\bar G_b + m_w \cdot (H_t/2)}{m_b + m_w} = \frac{4000 \cdot 3{,}0 + 277 \cdot 1{,}5}{4277} \approx 2{,}90\ \text{m}.
 $$
 
 **3. Novi gaz (uspravan položaj).** Brod plovi kad uzgon = ukupna težina, tj. istisnina $V_{displ} = (m_b + m_w)/\rho_m$. Za pravokutni trup $V_{displ} = L \cdot B \cdot T$, pa:
 
 $$
-T_1 = \frac{m_b + m_w}{\rho_m L B} = \frac{4277 \cdot 10^3}{1025 \cdot 80 \cdot 15} \approx 3{,}478\ \text{m}
+T_1 = \frac{m_b + m_w}{\rho_m L B} = \frac{4277 \cdot 10^3}{1025 \cdot 80 \cdot 15} \approx 3{,}478\ \text{m}.
 $$
 
 Originalni gaz (samo $m_b$): $T_0 = m_b / (\rho_m L B) = 4000\cdot 10^3 / 1{,}23 \cdot 10^6 \approx 3{,}252\ \text{m}$.
 
 $$
-\Delta T = T_1 - T_0 \approx 0{,}226\ \text{m}
+\Delta T = T_1 - T_0 \approx 0{,}226\ \text{m}.
 $$
 
 **4. Metacentarska visina.** Drugi moment površine vodne linije za pravokutni presjek:
 
 $$
-I_T = \frac{L B^3}{12} = \frac{80 \cdot 15^3}{12} = 22\,500\ \text{m}^4
+I_T = \frac{L B^3}{12} = \frac{80 \cdot 15^3}{12} = 22\,500\ \text{m}^4.
 $$
 
 Volumen istisnine:
 
 $$
-V_{displ} = \frac{m_b + m_w}{\rho_m} = \frac{4277 \cdot 10^3}{1025} \approx 4172\ \text{m}^3
+V_{displ} = \frac{m_b + m_w}{\rho_m} = \frac{4277 \cdot 10^3}{1025} \approx 4172\ \text{m}^3.
 $$
 
 Metacentarski radijus (razmak centra uzgona $B'$ od metacentra $M$):
 
 $$
-\overline{BM} = \frac{I_T}{V_{displ}} = \frac{22\,500}{4172} \approx 5{,}39\ \text{m}
+\overline{BM} = \frac{I_T}{V_{displ}} = \frac{22\,500}{4172} \approx 5{,}39\ \text{m}.
 $$
 
 Visina centra uzgona iznad kobilice ($T_1/2$):
 
 $$
-K\bar B = T_1/2 \approx 1{,}74\ \text{m}
+K\bar B = T_1/2 \approx 1{,}74\ \text{m}.
 $$
 
 Razmak težišta od centra uzgona:
 
 $$
-\overline{BG} = K\bar G' - K\bar B \approx 2{,}90 - 1{,}74 \approx 1{,}16\ \text{m}
+\overline{BG} = K\bar G' - K\bar B \approx 2{,}90 - 1{,}74 \approx 1{,}16\ \text{m}.
 $$
 
 Metacentarska visina:
 
 $$
-\overline{GM} = \overline{BM} - \overline{BG} \approx 5{,}39 - 1{,}16 \approx 4{,}23\ \text{m}
+\overline{GM} = \overline{BM} - \overline{BG} \approx 5{,}39 - 1{,}16 \approx 4{,}23\ \text{m}.
 $$
 
 Kako je $\overline{GM} > 0$, brod je **stabilan** u smislu povratnog momenta pri malim nagibima.
@@ -1012,35 +973,31 @@ Kako je $\overline{GM} > 0$, brod je **stabilan** u smislu povratnog momenta pri
 **5. Ravnotežni kut nagiba.** Za male kutove vrijedi:
 
 $$
-\tan\theta = \frac{e_G}{\overline{GM}} = \frac{0{,}291}{4{,}23} \approx 0{,}0689
-$$
-
-$$
-\theta \approx 3{,}94^\circ
+\tan\theta = \frac{e_G}{\overline{GM}} = \frac{0{,}291}{4{,}23} \approx 0{,}0689 \quad \Rightarrow \quad \theta \approx 3{,}94^\circ.
 $$
 
 **6. Provjera bočnog ruba palube.** Originalni nadboj (freeboard) pri uspravnom položaju s novim gazom:
 
 $$
-F_b = H - T_1 \approx 8 - 3{,}478 \approx 4{,}52\ \text{m}
+F_b = H - T_1 \approx 8 - 3{,}478 \approx 4{,}52\ \text{m}.
 $$
 
 Spuštanje lijevog ruba palube zbog nagiba:
 
 $$
-\Delta z = (B/2) \sin\theta \approx 7{,}5 \cdot \sin 3{,}94^\circ \approx 7{,}5 \cdot 0{,}0687 \approx 0{,}515\ \text{m}
+\Delta z = (B/2) \sin\theta \approx 7{,}5 \cdot \sin 3{,}94^\circ \approx 7{,}5 \cdot 0{,}0687 \approx 0{,}515\ \text{m}.
 $$
 
 Preostali nadboj na lijevom rubu palube:
 
 $$
-F_{b,L} = F_b - \Delta z \approx 4{,}52 - 0{,}52 \approx 4{,}00\ \text{m}
+F_{b,L} = F_b - \Delta z \approx 4{,}52 - 0{,}52 \approx 4{,}00\ \text{m}.
 $$
 
 Granični kut prije nego što paluba dotakne morsku razinu:
 
 $$
-\sin\theta_{lim} = \frac{F_b}{B/2} = \frac{4{,}52}{7{,}5} \approx 0{,}603, \qquad \theta_{lim} \approx 37{,}1^\circ
+\sin\theta_{lim} = \frac{F_b}{B/2} = \frac{4{,}52}{7{,}5} \approx 0{,}603, \qquad \theta_{lim} \approx 37{,}1^\circ.
 $$
 
 **Provjera i komentar**
@@ -1053,9 +1010,9 @@ $$
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Uzgon na potonulo pumpno kućište pri ispitivanju &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Uzgon na potonulo pumpno kućište pri ispitivanju &nbsp;<span class="mf1-level">T2</span></p>
 
-🔩 **Primjer za strojare**
+**Primjer za strojare**
 
 **Kontekst:** Pumpa u podvodnom prihvatnom bazenu ima čelično kućište koje se ispravlja ronjenjem. Serviseri trebaju znati koliku tegežu (lančanu vezu prema dnu) trebaju koristiti da kućište ostane na dnu dok se montira priključak.
 
@@ -1148,9 +1105,9 @@ Gustoća čelika (~7850 kg/m³) >> gustoća morske vode, pa je potpuno uronjeno 
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Gaz i nagib priveznog pontona za plovni put &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Riješeni primjer — Gaz i nagib priveznog pontona za plovni put &nbsp;<span class="mf1-level">T2</span></p>
 
-🏗️ **Primjer za građevinare**
+**Primjer za građevinare**
 
 **Kontekst:** Privezni ponton za brodove na rijeci dimenzionira se za vlastitu težinu plus težinu servisnog čelika. Projektant provjerava gaz i ima li nesimetrično postavljena servisna oprema prekomjeran bočni nagib.
 
@@ -1260,7 +1217,7 @@ Srednji gaz $16{,}7\ \text{cm}$ od visine boka $60\ \text{cm}$ — ponton ima do
 :::
 
 ::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer – Plutajući vjetroagregat tipa cilindrične plovne osnove &nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Riješeni primjer — Plutajući vjetroagregat tipa cilindrične plovne osnove &nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** Plutajuće priobalne vjetroelektrane (engl. *floating offshore wind*) koriste se za iskorištavanje vjetra na dubokim morima, gdje fiksne temeljne konstrukcije nisu ekonomski opravdane. Tip plovne osnove koji se ovdje promatra je *spar-buoy* — dugi vertikalni cilindar koji nosi turbinu na vrhu, a u donjem dijelu sadrži balast koji daje težinu potrebnu za stabilnost. Tako oblikovana konstrukcija ponaša se kao plivajuće tijelo s vrlo visokim metacentrom.
 
@@ -1323,46 +1280,36 @@ Apsolutna promjena gaza zato je manja od $0{,}9\ \text{m}$, što ne ugrožava pl
 Gaz od oko $17\ \text{m}$ tipičan je za stvarne *spar-buoy* konstrukcije priobalnih plutajućih vjetroagregata; visoka nadvodna duljina od $78\ \text{m}$ omogućuje smještaj kupole i rotora dovoljno visoko iznad mora da utjecaj valova na lopatice bude zanemariv. Cilindrična geometrija osnove daje vrlo malu površinu na razini mora, pa horizontalni valni utjecaj ostaje umjeren u odnosu na alternativnu polu-podvodnu strukturu (engl. *semi-submersible*). Stabilnost konstrukcije osigurava se dubokim balastom u donjem dijelu cilindra, čime težište cijele konstrukcije ostaje znatno ispod centra uzgona, a što daje pozitivnu metacentarsku visinu i pasivnu vertikalnu povratnu silu pri svim radnim nagibima. Kod stvarnih sustava plovna osnova dodatno se pridržava lančanim ili kabelskim sidrenjem za morsko dno, čija je uloga ograničenje horizontalnog pomaka, ali ne i nošenje težine konstrukcije — tu ulogu u potpunosti obavlja Arhimedov zakon.
 :::
 
-## Usporedna tablica: strojarstvo i građevinarstvo
-
-| Koncept | Strojarstvo – gdje se pojavljuje | Građevinarstvo – gdje se pojavljuje |
-|---------|----------------------------------|--------------------------------------|
-| $F_U = \rho g V_{ist}$ | Uzgon na pumpu u bazenu; olakšanje pri izvlačenju cilindra iz vode | Uzgon na temelje i podrumske ploče ispod razine podzemnih voda; sila na pilote |
-| Ravnoteža $\rho g V_{ist} = mg$ | Gaz plivajućeg posude s opremom; regulacija plovnosti podmornicy | Gaz plovnog mosnog stupa; uporedbena dubina pontona lučnog skele |
-| Nesimetrično opterećenje | Bočni nagib pontona s ekscentričnom pumpom; stabilnost plutajuće dizalice | Nagib priveznog pontona s ekscentričnom opremom; nagibi plovne platforme vodogradnje |
-| Stabilnost: $GM > 0$ | Provjera stabilnosti plovne procesne opreme pri ekscentričnom teretu | Provjera nagiba pontona ili plovnog skele pri nesimetričnom rasporedu tereta |
-| Višeslojni fluidi | Uzgon na tijelo koje se dijelom nalazi u ulju, dijelom u vodi | Uzgon na pilote ili podrumske ploče u slojevitom tlu s vodom i blatoviom |
-
 ::: {.mf1-samoprovjera}
-<p class="mf1-box-label">🎯 Provjeri sebe</p>
+<p class="mf1-box-label">Provjeri sebe</p>
 
 Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
 
 1. Što govori Arhimedov zakon o ovisnosti sile uzgona o materijalu i obliku tijela?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Sila uzgona ovisi isključivo o istisnutom volumenu fluida i njegovoj gustoći, a ne o materijalu, masi ni unutarnjoj građi uronjenog tijela. Tijela jednake vanjske geometrije, neovisno o tome jesu li čvrsta ili šuplja, imaju jednaku silu uzgona.
 :::
 
 2. Zašto plivajuće tijelo može biti u vertikalnoj ravnoteži, a istovremeno nestabilno na nagib?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Vertikalna ravnoteža traži jednakost težine i sile uzgona, dok stabilnost traži da metacentar leži iznad težišta tijela. Tijelo može zadovoljiti prvi uvjet (pliva pravilno), ali pri malom nagibu može imati negativnu metacentarsku visinu pa moment nastaje koji ga prevrće.
 :::
 
 3. Kako se mijenja gaz istog broda pri prelasku iz slatke u slanu vodu?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Gustoća slane vode veća je od slatke, pa je za istu masu broda potreban manji istisnuti volumen. Brod plovi pliće (manji gaz) u slanoj vodi. Ovaj učinak je razlog što tankeri mogu nositi nešto veći teret na otvorenom moru nego pri ulasku u rijeke.
 :::
 
 4. Vrijedi li Arhimedov zakon i u uljnom ili plinskom fluidu, ili samo u vodi?
 
 ::: {.callout-note collapse="true"}
-## Odgovor
+### Odgovor
 Vrijedi u bilo kojem fluidu, uključujući plinove. U zraku sila uzgona je obično zanemariva zbog male gustoće zraka, ali za balone, dirižable i precizna mjerenja mase u vakuumu treba je uračunati. U uljnim sustavima Arhimedov zakon koristi se pri proračunu uzgona kliznih elemenata i u multifaznim separatorima.
 :::
 :::
@@ -1442,15 +1389,17 @@ Ovdje se promatra statička ravnoteža ili mala odstupanja od nje. U valovima, p
 :::
 
 ::: {.mf1-numerika}
-<p class="mf1-box-label">🖥️ Numerički most</p>
+<p class="mf1-box-label">Numerički most</p>
 
 **Gdje ovo živi u numerici.** Uzgon, plivanje i slobodna površina su **glavna pokretačka tema multifaznog CFD-a**. Brodski trupovi u valovima, plutajući vjetroagregati, slobodna površina u akumulaciji, otvoreni kanali, prelijevanje, zapljuskivanje cisterne — sve su to **VOF simulacije** s gravitacijom.
 
-**Što numerički alat radi s tim.** Solver `interFoam` (i srodni) rješava Navier-Stokesove jednadžbe za zajedničku mješavinu *voda + zrak*, uz dodatno polje $\alpha$ za udio vode po ćeliji. Tijelo koje pliva može biti zadano kao kruti zid s **6-DOF rješavačem** koji u svakom vremenskom koraku računa novi gaz i nagib iz hidrodinamičke sile — točno onako kako si ti u zadacima radio ravnotežu sila i momenata, samo dinamički.
+**Što numerički alat radi s tim.** Solver `interFoam` (i srodni) rješava Navier-Stokesove jednadžbe za zajedničku mješavinu *voda + zrak*, uz dodatno polje $\alpha$ za udio vode po ćeliji. Tijelo koje pliva može biti zadano kao kruti zid sa **šest-stupanjskim rješavačem gibanja (6-DOF)** koji u svakom vremenskom koraku računa novi gaz i nagib iz hidrodinamičke sile — istim postupkom ravnoteže sila i momenata kao u ručnom zadatku, samo dinamički.
 
-**Alati gdje ćeš to sresti:** `OpenFOAM` (`interFoam`, `interDyMFoam`, `sixDoFRigidBodyMotion`) · `ANSYS Fluent` (*VOF + Dynamic Mesh*) · `Star-CCM+` (*VOF + DFBI Motion*).
+**Tipičan scenarij.** Brodski hidrodinamički bazen za ispitivanje stabilnosti replicira se VOF simulacijom uz 6-DOF rješavač: brod slobodno pliva u zadanom valnom polju, a solver iterativno traži ravnotežu sila i momenata u svakom vremenskom koraku. Rezultat je dinamička slika gaza, nagiba i otpora u stvarnom moru — daleko od statičke metacentarske analize, ali sa istim teorijskim temeljem $\overline{GM}$ kao kriterijem početne stabilnosti.
 
-> *Nije gradivo MF1. Stabilnost pontona koju ovdje računaš ručno, u CFD-u solver pronađe sam — iteracijom istog uvjeta ravnoteže.*
+**Alati u kojima se to susreće:** `OpenFOAM` (`interFoam`, `interDyMFoam`, `sixDoFRigidBodyMotion`) · `ANSYS Fluent` (*VOF + Dynamic Mesh*) · `Star-CCM+` (*VOF + DFBI Motion*).
+
+> *Nije gradivo MF1. Stabilnost pontona koja se ovdje računa ručno, u CFD-u solver pronađe sam — iteracijom istog uvjeta ravnoteže.*
 :::
 
 

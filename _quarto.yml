@@ -62,13 +62,13 @@ website:
             href: chapters/u08_kontrolni_volumen_i_kontinuitet.qmd
           - text: "U09 - Bernoullijeva jednadžba idealnog fluida"
             href: chapters/u09_bernoullijeva_jednadzba_idealnog_fluida.qmd
-          - text: "U10 - Realni Bernoulli i gubici"
+          - text: "U10 - Bernoullijeva jednadžba realnog fluida i gubici"
             href: chapters/u10_realni_bernoulli_i_gubici.qmd
           - text: "U11 - Količina gibanja i sile strujanja"
             href: chapters/u11_kolicina_gibanja_i_sile_strujanja.qmd
           - text: "U12 - Pokretne lopatice i potisak"
             href: chapters/u12_pokretne_lopatice_i_potisak.qmd
-          - text: "U13 - Cjevovodi"
+          - text: "U13 - Strujanje u cjevovodima i proračun mreže"
             href: chapters/u13_cjevovodi.qmd
       - section: "Dodaci"
         contents:
@@ -78,7 +78,7 @@ website:
             href: chapters/d02_pojmovnik.qmd
           - text: "D03 - Tipične pogreške po poglavljima"
             href: chapters/d03_tipicne_pogreske_po_poglavljima.qmd
-          - text: "D04 - Numerička mehanika fluida (pregled)"
+          - text: "D04 - Numerička mehanika fluida"
             href: chapters/d04_numericka_mehanika_fluida.qmd
       - text: "Verzija za ispis / PDF"
         href: za_ispis.qmd
