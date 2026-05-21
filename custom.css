@@ -55,9 +55,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Skraćivanje glavnog stupca za bolju liniju (oko 68 znakova) */
+/* Širina glavnog stupca (oko 85 znakova) */
 main, .quarto-container, .page-columns, .page-layout-article {
-  max-width: 720px;
+  max-width: 880px;
   margin-left: auto;
   margin-right: auto;
 }
