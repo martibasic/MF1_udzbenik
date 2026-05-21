@@ -41,47 +41,47 @@ website:
         href: index.qmd
       - section: "Uvod"
         contents:
-          - text: "U00 — Kako koristiti udžbenik"
+          - text: "0. Kako koristiti udžbenik"
             href: chapters/u00_kako_koristiti_udzbenik.qmd
       - section: "Hidrostatika"
         contents:
-          - text: "U01 — Osnove fluida i Pascalov zakon"
+          - text: "1. Osnove"
             href: chapters/u01_osnove_fluida_i_pascalov_zakon.qmd
-          - text: "U02 — Viskoznost i kapilarnost"
+          - text: "2. Viskoznost"
             href: chapters/u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd
-          - text: "U03 — Hidrostatika i manometrija"
+          - text: "3. Hidrostatika"
             href: chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd
-          - text: "U04 — Relativno mirovanje fluida"
+          - text: "4. Mirovanje"
             href: chapters/u04_relativno_mirovanje_fluida.qmd
-          - text: "U05 — Sile na ravne plohe"
+          - text: "5. Sile"
             href: chapters/u05_hidrostatske_sile_na_ravne_plohe.qmd
-          - text: "U06 — Sile na zakrivljene plohe"
+          - text: "6. Zakrivljene"
             href: chapters/u06_zakrivljene_plohe_i_rastav_sila.qmd
-          - text: "U07 — Uzgon i stabilnost"
+          - text: "7. Uzgon"
             href: chapters/u07_uzgon_plivanje_i_stabilnost.qmd
       - section: "Hidrodinamika"
         contents:
-          - text: "U08 — Kontrolni volumen"
+          - text: "8. Kon. volumen"
             href: chapters/u08_kontrolni_volumen_i_kontinuitet.qmd
-          - text: "U09 — Bernoulli (idealni fluid)"
+          - text: "9. Bernoulli I"
             href: chapters/u09_bernoullijeva_jednadzba_idealnog_fluida.qmd
-          - text: "U10 — Bernoulli i gubici"
+          - text: "10. Bernoulli II"
             href: chapters/u10_realni_bernoulli_i_gubici.qmd
-          - text: "U11 — Količina gibanja"
+          - text: "11. Gibanje"
             href: chapters/u11_kolicina_gibanja_i_sile_strujanja.qmd
-          - text: "U12 — Pokretne lopatice i potisak"
+          - text: "12. Lopatice"
             href: chapters/u12_pokretne_lopatice_i_potisak.qmd
-          - text: "U13 — Cjevovodi i mreže"
+          - text: "13. Cjevovodi"
             href: chapters/u13_cjevovodi.qmd
       - section: "Dodaci"
         contents:
-          - text: "D01 — Sažetak formula"
+          - text: "Sažetak formula"
             href: chapters/d01_sazetak_formula_i_oznaka.qmd
-          - text: "D02 — Pojmovnik"
+          - text: "Pojmovnik"
             href: chapters/d02_pojmovnik.qmd
-          - text: "D03 — Tipične pogreške"
+          - text: "Tipične pogreške"
             href: chapters/d03_tipicne_pogreske_po_poglavljima.qmd
-          - text: "D04 — Numerička mehanika fluida"
+          - text: "Numerička mehanika fluida"
             href: chapters/d04_numericka_mehanika_fluida.qmd
       - text: "Verzija za ispis / PDF"
         href: za_ispis.qmd

@@ -651,12 +651,13 @@ a.mf1-card .mf1-card-code,
 .mf1-card .mf1-card-code {
   display: block;
   font-family: var(--mf1-sans);
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   color: var(--mf1-faint);
   text-transform: uppercase;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.6rem;
+  line-height: 1;
 }
 a.mf1-card .mf1-card-title,
 .mf1-card .mf1-card-title {

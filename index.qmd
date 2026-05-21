@@ -16,7 +16,7 @@ Trinaest poglavlja od mirovanja fluida do strujanja kroz cjevovode i lopatice. P
 
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u00_kako_koristiti_udzbenik.html">
-    <span class="mf1-card-code">U00</span>
+    <span class="mf1-card-code">0</span>
     <span class="mf1-card-title">Kako koristiti udžbenik</span>
     <span class="mf1-card-hint">Obrasci pisanja, oznake tipova zadataka, razine težine i tok rada.</span>
   </a>
@@ -26,37 +26,37 @@ Trinaest poglavlja od mirovanja fluida do strujanja kroz cjevovode i lopatice. P
 
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u01_osnove_fluida_i_pascalov_zakon.html">
-    <span class="mf1-card-code">U01</span>
-    <span class="mf1-card-title">Osnove fluida i Pascalov zakon</span>
+    <span class="mf1-card-code">1</span>
+    <span class="mf1-card-title">Osnove fluida</span>
     <span class="mf1-card-hint">Gustoća, tlak i hidraulični prijenos sile.</span>
   </a>
   <a class="mf1-card" href="chapters/u02_viskoznost_povrsinska_napetost_i_kapilarnost.html">
-    <span class="mf1-card-code">U02</span>
+    <span class="mf1-card-code">2</span>
     <span class="mf1-card-title">Viskoznost i kapilarnost</span>
     <span class="mf1-card-hint">Posmik u fluidu, površinska napetost, podizanje u kapilari.</span>
   </a>
   <a class="mf1-card" href="chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.html">
-    <span class="mf1-card-code">U03</span>
-    <span class="mf1-card-title">Hidrostatika i manometrija</span>
+    <span class="mf1-card-code">3</span>
+    <span class="mf1-card-title">Hidrostatika</span>
     <span class="mf1-card-hint">Raspodjela tlaka po dubini i mjerenje manometrima.</span>
   </a>
   <a class="mf1-card" href="chapters/u04_relativno_mirovanje_fluida.html">
-    <span class="mf1-card-code">U04</span>
-    <span class="mf1-card-title">Relativno mirovanje fluida</span>
+    <span class="mf1-card-code">4</span>
+    <span class="mf1-card-title">Relativno mirovanje</span>
     <span class="mf1-card-hint">Fluid u ubrzanoj posudi i u rotaciji.</span>
   </a>
   <a class="mf1-card" href="chapters/u05_hidrostatske_sile_na_ravne_plohe.html">
-    <span class="mf1-card-code">U05</span>
-    <span class="mf1-card-title">Sile na ravne plohe</span>
+    <span class="mf1-card-code">5</span>
+    <span class="mf1-card-title">Sile na plohe</span>
     <span class="mf1-card-hint">Rezultanta tlaka i točka djelovanja na ravnu plohu.</span>
   </a>
   <a class="mf1-card" href="chapters/u06_zakrivljene_plohe_i_rastav_sila.html">
-    <span class="mf1-card-code">U06</span>
-    <span class="mf1-card-title">Sile na zakrivljene plohe</span>
+    <span class="mf1-card-code">6</span>
+    <span class="mf1-card-title">Zakrivljene plohe</span>
     <span class="mf1-card-hint">Rastav sile na vodoravnu i okomitu komponentu.</span>
   </a>
   <a class="mf1-card" href="chapters/u07_uzgon_plivanje_i_stabilnost.html">
-    <span class="mf1-card-code">U07</span>
+    <span class="mf1-card-code">7</span>
     <span class="mf1-card-title">Uzgon i stabilnost</span>
     <span class="mf1-card-hint">Arhimedov uzgon, plivanje, metacentar, stabilnost.</span>
   </a>
@@ -66,34 +66,34 @@ Trinaest poglavlja od mirovanja fluida do strujanja kroz cjevovode i lopatice. P
 
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u08_kontrolni_volumen_i_kontinuitet.html">
-    <span class="mf1-card-code">U08</span>
-    <span class="mf1-card-title">Kontrolni volumen i kontinuitet</span>
+    <span class="mf1-card-code">8</span>
+    <span class="mf1-card-title">Kontrolni volumen</span>
     <span class="mf1-card-hint">Bilance mase kroz kontrolni volumen.</span>
   </a>
   <a class="mf1-card" href="chapters/u09_bernoullijeva_jednadzba_idealnog_fluida.html">
-    <span class="mf1-card-code">U09</span>
-    <span class="mf1-card-title">Bernoulli &mdash; idealni fluid</span>
+    <span class="mf1-card-code">9</span>
+    <span class="mf1-card-title">Bernoulli (idealni)</span>
     <span class="mf1-card-hint">Bilanca energije duž strujnice bez gubitaka.</span>
   </a>
   <a class="mf1-card" href="chapters/u10_realni_bernoulli_i_gubici.html">
-    <span class="mf1-card-code">U10</span>
+    <span class="mf1-card-code">10</span>
     <span class="mf1-card-title">Bernoulli i gubici</span>
     <span class="mf1-card-hint">Realni fluid, linijski i mjesni gubici energije.</span>
   </a>
   <a class="mf1-card" href="chapters/u11_kolicina_gibanja_i_sile_strujanja.html">
-    <span class="mf1-card-code">U11</span>
-    <span class="mf1-card-title">Količina gibanja</span>
-    <span class="mf1-card-hint">Sile strujanja na koljena, mlaznice i nepokretne lopatice.</span>
+    <span class="mf1-card-code">11</span>
+    <span class="mf1-card-title">Gibanje</span>
+    <span class="mf1-card-hint">Sile strujanja na koljena, mlaznice i lopatice.</span>
   </a>
   <a class="mf1-card" href="chapters/u12_pokretne_lopatice_i_potisak.html">
-    <span class="mf1-card-code">U12</span>
-    <span class="mf1-card-title">Pokretne lopatice i potisak</span>
+    <span class="mf1-card-code">12</span>
+    <span class="mf1-card-title">Lopatice</span>
     <span class="mf1-card-hint">Mlaz na lopaticu, relativna brzina, radne karakteristike.</span>
   </a>
   <a class="mf1-card" href="chapters/u13_cjevovodi.html">
-    <span class="mf1-card-code">U13</span>
-    <span class="mf1-card-title">Cjevovodi i mreže</span>
-    <span class="mf1-card-hint">Darcy&ndash;Weisbach, serijski i paralelni sustavi, mreže.</span>
+    <span class="mf1-card-code">13</span>
+    <span class="mf1-card-title">Cjevovodi</span>
+    <span class="mf1-card-hint">Darcy–Weisbach, serijski i paralelni sustavi, mreže.</span>
   </a>
 </div>
 
@@ -101,22 +101,22 @@ Trinaest poglavlja od mirovanja fluida do strujanja kroz cjevovode i lopatice. P
 
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/d01_sazetak_formula_i_oznaka.html">
-    <span class="mf1-card-code">D01</span>
+    <span class="mf1-card-code">A</span>
     <span class="mf1-card-title">Sažetak formula</span>
     <span class="mf1-card-hint">Pregled svih formula i oznaka kroz udžbenik.</span>
   </a>
   <a class="mf1-card" href="chapters/d02_pojmovnik.html">
-    <span class="mf1-card-code">D02</span>
+    <span class="mf1-card-code">B</span>
     <span class="mf1-card-title">Pojmovnik</span>
     <span class="mf1-card-hint">Definicije temeljnih pojmova mehanike fluida.</span>
   </a>
   <a class="mf1-card" href="chapters/d03_tipicne_pogreske_po_poglavljima.html">
-    <span class="mf1-card-code">D03</span>
+    <span class="mf1-card-code">C</span>
     <span class="mf1-card-title">Tipične pogreške</span>
     <span class="mf1-card-hint">Katalog pogrešaka po poglavljima &mdash; provjera prije predaje.</span>
   </a>
   <a class="mf1-card" href="chapters/d04_numericka_mehanika_fluida.html">
-    <span class="mf1-card-code">D04</span>
+    <span class="mf1-card-code">D</span>
     <span class="mf1-card-title">Numerička mehanika fluida</span>
     <span class="mf1-card-hint">Veza MF1 jednadžbi s računalnom dinamikom fluida.</span>
   </a>
@@ -127,7 +127,7 @@ Trinaest poglavlja od mirovanja fluida do strujanja kroz cjevovode i lopatice. P
 
 Namijenjen je **studentima druge godine preddiplomskog studija strojarstva i građevinarstva** kao primarni izvor za pripremu kolokvija i ispita, te kao referenca u kasnijim kolegijima koji se oslanjaju na strujanje fluida.
 
-Pretpostavlja se predznanje iz **Matematike I i II** (diferencijalni i integralni račun, vektorska analiza, osnove diferencijalnih jednadžbi) i **Fizike I** (kinematika, dinamika, rad i energija). Računalna dinamika fluida nije predznanje — povremeno se pojavljuje kratki sklopiv prilog *Numerički most* uz središnje jednadžbe.
+Pretpostavlja se predznanje iz **Matematike I i II** (diferencijalni i integralni račun, vektorska analiza, osnove diferencijalnih jednadžbi) i **Fizike I** (kinematika, dinamika, rad i energija). Računalna dinamika fluida nije predznanje — povremeno se pojavljuje kratki sklopiv prilog *Numerički most* uz spominjute jednadžbe.
 
 **Razine težine zadataka:** T1 (osnove) → T4 (sintetski zadaci). Studenti biraju raspored prema vlastitom tempu.
 
