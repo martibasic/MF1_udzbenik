@@ -1,5 +1,5 @@
 ---
-title: "U03 - Hidrostatička raspodjela tlaka i manometrija"
+title: "3. Hidrostatička raspodjela tlaka i manometrija"
 page-layout: article
 ---
 

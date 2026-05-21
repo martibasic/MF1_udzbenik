@@ -63,10 +63,10 @@ Kanonski tekst svakog poglavlja razumljiv je i bez interaktivnih elemenata. Inte
 
 Četiri dodatka strukturno nadopunjuju glavna poglavlja:
 
-- <span class="mf1-ch-ref"><span class="mf1-ch-code">D01</span><span class="mf1-ch-title">Sažetak formula i oznaka</span></span> — komprimirani pregled formula, oznaka i uvjeta primjene; služi za brzo podsjećanje prije računa.
-- <span class="mf1-ch-ref"><span class="mf1-ch-code">D02</span><span class="mf1-ch-title">Pojmovnik</span></span> — radne definicije temeljnih pojmova; služi za razdvajanje pojmova koji se često miješaju.
-- <span class="mf1-ch-ref"><span class="mf1-ch-code">D03</span><span class="mf1-ch-title">Tipične pogreške po poglavljima</span></span> — sustavni katalog načina na koje zadatak zalazi krivim putem; služi kao preventivni filtar prije računa i prije predaje zadatka.
-- <span class="mf1-ch-ref"><span class="mf1-ch-code">D04</span><span class="mf1-ch-title">Numerička mehanika fluida (pregled)</span></span> — pregledni dokument koji sažima sve oznake *Numerički most* kroz udžbenik i postavlja ih u jednu cjelinu kao najavu kolegija Računalna dinamika fluida.
+- <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. A</span><span class="mf1-ch-title">Sažetak formula i oznaka</span></span> — komprimirani pregled formula, oznaka i uvjeta primjene; služi za brzo podsjećanje prije računa.
+- <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. B</span><span class="mf1-ch-title">Pojmovnik</span></span> — radne definicije temeljnih pojmova; služi za razdvajanje pojmova koji se često miješaju.
+- <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. C</span><span class="mf1-ch-title">Tipične pogreške po poglavljima</span></span> — sustavni katalog načina na koje zadatak zalazi krivim putem; služi kao preventivni filtar prije računa i prije predaje zadatka.
+- <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida (pregled)</span></span> — pregledni dokument koji sažima sve oznake *Numerički most* kroz udžbenik i postavlja ih u jednu cjelinu kao najavu kolegija Računalna dinamika fluida.
 
 ## Preporučeni redoslijed rada
 
@@ -74,7 +74,7 @@ Kanonski tekst svakog poglavlja razumljiv je i bez interaktivnih elemenata. Inte
 2. Na **kriteriju primjene** provjeriti vrijedi li model za konkretan zadatak.
 3. Prije samostalnog računa proći barem jedan **riješeni primjer** (`WE`) iz istog poglavlja.
 4. Tek nakon toga prelaziti na **vođene** i **samostalne** zadatke, a na **cjeloviti zadatak** samo kad je osnovni postupak stabiliziran.
-5. Prije predaje zadatka konzultirati pripadnu sekciju u **D03 – Tipične pogreške po poglavljima**.
+5. Prije predaje zadatka konzultirati pripadnu sekciju u **dod. C – Tipične pogreške po poglavljima**.
 
 ::: {.mf1-mini-summary}
 <p class="mf1-box-label">Sažetak za ponijeti</p>

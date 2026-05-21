@@ -1,5 +1,5 @@
 ---
-title: "U09 - Bernoullijeva jednadžba idealnog fluida"
+title: "9. Bernoullijeva jednadžba idealnog fluida"
 page-layout: article
 ---
 

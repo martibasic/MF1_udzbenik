@@ -93,7 +93,7 @@ ax.text(7.75, 3.1, r'$m_o$', fontsize=9, ha='center', va='center', color='white'
 ax.text(5.0, 0.4, 'Plutajuci ponton s pomaknutim teretom  (Brodogradnja)',
     fontsize=7.5, ha='center', color=SUB)
 
-fig.suptitle('U07 – Uzgon, plivanje i stabilnost',
+fig.suptitle('pog. 7 – Uzgon, plivanje i stabilnost',
              fontsize=13, fontweight='bold', y=1.01)
 plt.show()
 ```
@@ -115,8 +115,8 @@ U brodogradnji, lučnim pontonima i plutajućim radnim platformama nije dovoljno
 
 **Predznanje koje se pretpostavlja:**
 
-- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
-- sila na ravne plohe iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U05</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>;
+- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
+- sila na ravne plohe iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>;
 - osnovni pojmovi statike krutog tijela: ravnoteža sila, ravnoteža momenata, položaj težišta;
 - integralni račun više varijabli (težište volumena).
 
@@ -386,7 +386,7 @@ Metacentarska teorija ($\overline{GM} > 0$) i kriterij iščezavajućeg kraka ($
 2. srednji gaz pontona $h$.
 3. koliku dodatnu masu još može primiti prije nego što gornji rub dođe do razine vode.
 
-![U07 Val 2 - ponton i gaz pri simetričnom opterećenju](../assets/print/u07_val2_ponton_gaz.svg)
+![Val 2 - ponton i gaz pri simetričnom opterećenju](../assets/print/u07_val2_ponton_gaz.svg)
 
 **Pretpostavke i model**
 
@@ -579,7 +579,7 @@ prema dublje uronjenoj strani.
 2. Odredite udaljenost $e$ težišta kompresora od uzdužne osi simetrije platforme.
 3. Odredite za koliko je srednja uronjenost platforme veća nego prije postavljanja kompresora.
 
-![U07 Val 1 - plutajuća platforma s pomaknutim kompresorom](../assets/print/u07_val1_platforma_kompresor.svg)
+![Val 1 - plutajuća platforma s pomaknutim kompresorom](../assets/print/u07_val1_platforma_kompresor.svg)
 
 **Pretpostavke i model**
 
@@ -626,7 +626,7 @@ $$
 3. Povećanje srednjeg gaza reda nekoliko centimetara razumno je za dodatnih $190\ \text{kg}$ na ovakvoj platformi.
 :::
 
-Plutajuća platforma nije jedini tipičan ulaz u <span class="mf1-ch-ref"><span class="mf1-ch-code">U07</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span>. Jednako je važno znati zatvoriti vertikalnu ravnotezu i za potpuno uronjeno tijelo koje presiječa granicu dvaju fluida, jer se tada ukupni uzgon čita kao zbroj dviju istisnina različitih gustoća.
+Plutajuća platforma nije jedini tipičan ulaz u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span>. Jednako je važno znati zatvoriti vertikalnu ravnotezu i za potpuno uronjeno tijelo koje presiječa granicu dvaju fluida, jer se tada ukupni uzgon čita kao zbroj dviju istisnina različitih gustoća.
 
 ::: {.mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Kalibracijski modul na granici ulja i vode&nbsp;<span class="mf1-level">T2</span></p>
@@ -743,7 +743,7 @@ prema gore.
 4. udaljenost $e$ težišta ormara od osi simetrije platforme.
 5. za koliko je srednja uronjenost veća nego prije postavljanja ormara.
 
-![U07 CH 1 - plutajuća platforma na granici ulja i vode](../assets/print/u07_ch1_platforma_ulje_voda_ormar.svg)
+![CH 1 - plutajuća platforma na granici ulja i vode](../assets/print/u07_ch1_platforma_ulje_voda_ormar.svg)
 
 **Pretpostavke i model**
 
@@ -841,7 +841,7 @@ $$
 
 **Provjera i komentar**
 
-Ovaj `CH` zatvara tri jezgre <span class="mf1-ch-ref"><span class="mf1-ch-code">U07</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span> u jednom zadatku: srednji uron platforme je $0{,}25\ \text{m}$, ukupna istisnina iznosi $0{,}900\ \text{m}^3$, od čega je $0{,}360\ \text{m}^3$ u ulju, a $0{,}540\ \text{m}^3$ u vodi. Rezultantni centar uzgona pomaknut je oko $4{,}35\ \text{cm}$ prema dubljoj strani, pa ormar mora biti postavljen oko $20\ \text{cm}$ od osi simetrije. Njegovo postavljanje povećalo je srednji uron za $5\ \text{cm}$.
+Ovaj `CH` zatvara tri jezgre <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span> u jednom zadatku: srednji uron platforme je $0{,}25\ \text{m}$, ukupna istisnina iznosi $0{,}900\ \text{m}^3$, od čega je $0{,}360\ \text{m}^3$ u ulju, a $0{,}540\ \text{m}^3$ u vodi. Rezultantni centar uzgona pomaknut je oko $4{,}35\ \text{cm}$ prema dubljoj strani, pa ormar mora biti postavljen oko $20\ \text{cm}$ od osi simetrije. Njegovo postavljanje povećalo je srednji uron za $5\ \text{cm}$.
 
 1. Srednji uron mora biti između izmjerenih rubnih urona i manji od visine boka, što ovdje vrijedi.
 2. Dublje uronjena strana mora biti ona na koju je pomaknut ormar, pa znak momenta mora biti fizikalno smislen.
@@ -1354,7 +1354,7 @@ Vrijedi u bilo kojem fluidu, uključujući plinove. U zraku sila uzgona je obič
 	**Skica:** da - platforma na granici ulja i vode, rubni uroni $h_L$ i $h_D$, granica fluida i bočni pomak akumulatora.
 :::
 
-![U07 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u07_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u07_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -1385,7 +1385,7 @@ Ponton, plutajuća dizalica ili radna platforma mogu zadovoljiti uvjet uzgona, a
 
 Ovdje se promatra statička ravnoteža ili mala odstupanja od nje. U valovima, pri slobodnoj površini unutar spremnika ili pri većim kutovima nagiba stvarna stabilnost može biti bitno drukčija od slike dobivene iz jednostavne ravnoteže sila i momenata.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U07</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span> lomi se na dvije stabilne navike: uzgon uvijek dolazi iz istisnine, a nagib iz momenta. Miješanje te dvije stvari gotovo sigurno ruši fizikalni smisao zadatka.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span> lomi se na dvije stabilne navike: uzgon uvijek dolazi iz istisnine, a nagib iz momenta. Miješanje te dvije stvari gotovo sigurno ruši fizikalni smisao zadatka.
 :::
 
 ::: {.mf1-numerika}

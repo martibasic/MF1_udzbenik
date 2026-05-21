@@ -1,5 +1,5 @@
 ---
-title: "U07 - Uzgon, plivanje i stabilnost"
+title: "7. Uzgon, plivanje i stabilnost"
 page-layout: article
 ---
 

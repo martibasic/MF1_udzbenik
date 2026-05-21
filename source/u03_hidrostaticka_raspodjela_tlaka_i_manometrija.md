@@ -1,4 +1,4 @@
-![Pregled poglavlja U03: Hidrostatika, raspodjela tlaka i manometrija](../assets/print/u03_fig_uvod_pregled.svg){#fig-uvod-u03 fig-align="center"}
+![Pregled poglavlja pog. 3: Hidrostatika, raspodjela tlaka i manometrija](../assets/print/u03_fig_uvod_pregled.svg){#fig-uvod-u03 fig-align="center"}
 
 ## Hidrostatika kao prvi inženjerski test modela
 
@@ -17,7 +17,7 @@ Ista hidrostatska logika čita se na piezometru uz spremnik, na U-manometru vent
 
 **Predznanje koje se pretpostavlja:**
 
-- definicija tlaka i razlikovanje sile od tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U01</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>;
+- definicija tlaka i razlikovanje sile od tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>;
 - diferencijalni i integralni račun jedne varijable (Matematika I);
 - pojam gradijenta i derivacije po koordinati;
 - razumijevanje gravitacijskog polja kao homogenog ubrzanja.
@@ -150,7 +150,7 @@ $$
 \nabla p = \rho \vec{g}.
 $$
 
-Ova vektorska Eulerova jednadžba hidrostatike vrijedi u svakom mirujućem fluidu, a pojedinačne komponente otkrivaju ključno svojstvo: tlak u mirujućem fluidu ovisi **samo o visini** $z$, ne i o horizontalnim koordinatama $x$ i $y$. Plohe konstantnog tlaka su zato horizontalne ravnine, okomite na vektor $\vec{g}$. Generalizacija na ubrzane sustave (poglavlje U04) zamijenit će $\vec{g}$ efektivnim poljem sila $\vec{g}_{eff} = \vec{g} - \vec{a}$, ali oblik jednadžbe $\nabla p = \rho \vec{g}_{eff}$ ostaje isti.
+Ova vektorska Eulerova jednadžba hidrostatike vrijedi u svakom mirujućem fluidu, a pojedinačne komponente otkrivaju ključno svojstvo: tlak u mirujućem fluidu ovisi **samo o visini** $z$, ne i o horizontalnim koordinatama $x$ i $y$. Plohe konstantnog tlaka su zato horizontalne ravnine, okomite na vektor $\vec{g}$. Generalizacija na ubrzane sustave (poglavlje pog. 4) zamijenit će $\vec{g}$ efektivnim poljem sila $\vec{g}_{eff} = \vec{g} - \vec{a}$, ali oblik jednadžbe $\nabla p = \rho \vec{g}_{eff}$ ostaje isti.
 :::
 
 ::: {.mf1-izvod}
@@ -324,7 +324,7 @@ Zanemari utjecaj visine stupca zraka i odredi manometarske tlakove u komorama `A
 
 Odredi manometarske tlakove u komorama `A` i `B`.
 
-![U03 - ravnoteza klipa i tlak u komorama](../assets/print/u03_val2_klip_komore.svg)
+![- ravnoteza klipa i tlak u komorama](../assets/print/u03_val2_klip_komore.svg)
 
 **Pretpostavke i model**
 
@@ -386,7 +386,7 @@ Komora `A` je pod pozitivnim manometarskim tlakom od oko $2{,}8\ \text{kPa}$, do
 1. razliku tlakova $p_1 - p_2$.
 2. kolika je pogreška ako se stupac zraka zanemari.
 
-![U03 Val 1 - diferencijalni manometar](../assets/print/u03_val1_diferencijalni_manometar.svg)
+![Val 1 - diferencijalni manometar](../assets/print/u03_val1_diferencijalni_manometar.svg)
 
 **Pretpostavke i model**
 
@@ -462,7 +462,7 @@ Nakon otvorenih spremnika i diferencijalnog manometra treba zatvoriti još jedan
 2. apsolutni tlak u točki `A`.
 3. manometarski tlak u točki `A` i protumači je li točka `A` još uvijek pod podtlakom u odnosu na atmosferu.
 
-![U03 Val 3 - vakuumski spremnik](../assets/print/u03_val3_vakuumski_spremnik.svg)
+![Val 3 - vakuumski spremnik](../assets/print/u03_val3_vakuumski_spremnik.svg)
 
 **Pretpostavke i model**
 
@@ -530,7 +530,7 @@ Iako se tlak pri silasku do točke `A` povećao za hidrostatički doprinos vode,
 
 Zanemari gustoće plinova u spojnim cijevima.
 
-![U03 CH 1 - zatvoreni vodeni spremnik i referentni uljni spremnik](../assets/print/u03_ch1_zatvoreni_spremnik_ulje_ziva.svg)
+![CH 1 - zatvoreni vodeni spremnik i referentni uljni spremnik](../assets/print/u03_ch1_zatvoreni_spremnik_ulje_ziva.svg)
 
 **Pretpostavke i model**
 
@@ -611,9 +611,9 @@ Otvoreni uljni spremnik daje u točki `2` tlak oko $105{,}9\ \text{kPa}$, a dife
 3. Tlak u točki `C` mora biti veći od tlaka u plinskom prostoru i veći od tlaka u točki `1`, jer je `C` najdublja promatrana točka u vodi.
 :::
 
-Kao prijelaz prema <span class="mf1-ch-ref"><span class="mf1-ch-code">U04</span><span class="mf1-ch-title">Relativno mirovanje fluida</span></span> korisno je usporediti ravnotežu tlaka u spojenim posudama s idejom efektivnog polja sila.
+Kao prijelaz prema <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 4</span><span class="mf1-ch-title">Relativno mirovanje fluida</span></span> korisno je usporediti ravnotežu tlaka u spojenim posudama s idejom efektivnog polja sila.
 
-![U03 statička zamjena za ravnotežu tlaka i efektivno polje sila](../assets/print/u03_balans_tlaka_i_geff.svg)
+![statička zamjena za ravnotežu tlaka i efektivno polje sila](../assets/print/u03_balans_tlaka_i_geff.svg)
 
 ::: {.mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Tlak na usisu pumpe za cirkulaciju ulja &nbsp;<span class="mf1-level">T2</span></p>
@@ -905,7 +905,7 @@ Veća osjetljivost (veća razlika visine za isti $\Delta p$) postiže se kad je 
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Ne vrijedi izravno; uz prisutno strujanje tlak ovisi i o brzinama i o gubicima, pa se umjesto hidrostatske primjenjuje Bernoullijeva jednadžba (poglavlja U09 i U10). Hidrostatička jednadžba ostaje točna za fluid u mirovanju ili pri zanemarivim brzinama.
+Ne vrijedi izravno; uz prisutno strujanje tlak ovisi i o brzinama i o gubicima, pa se umjesto hidrostatske primjenjuje Bernoullijeva jednadžba (poglavlja pog. 9 i pog. 10). Hidrostatička jednadžba ostaje točna za fluid u mirovanju ili pri zanemarivim brzinama.
 :::
 :::
 
@@ -949,7 +949,7 @@ Ne vrijedi izravno; uz prisutno strujanje tlak ovisi i o brzinama i o gubicima, 
 	**Skica:** da - zatvoreni vodeni spremnik, priključak na dubini $h_1$, otvoreni U-manometar sa živom i dublja unutarnja točka.
 :::
 
-![U03 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u03_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u03_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -980,7 +980,7 @@ Piezometar uz spremnik, diferencijalni manometar na filtru i tlačni priključak
 
 Jednostavni zapis $p = p_0 + \rho gh$ vrijedi samo dok je fluid u mirovanju ili u režimu koji se može čitati kao hidrostatika. Čim značajno uđu strujanje, promjena gustoće ili jaka akceleracija sustava, treba prijeći na širi model od čistoga manometarskog puta.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> treba učvrstiti tri stabilne navike: crtanje referentne skice, praćenje promjene tlaka po koracima i razlikovanje tipova tlaka prije nego što račun uopće počne.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> treba učvrstiti tri stabilne navike: crtanje referentne skice, praćenje promjene tlaka po koracima i razlikovanje tipova tlaka prije nego što račun uopće počne.
 :::
 
 ::: {.mf1-numerika}

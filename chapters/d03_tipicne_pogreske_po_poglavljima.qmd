@@ -1,5 +1,5 @@
 ---
-title: "D03 - Tipične pogreške po poglavljima"
+title: "Tipične pogreške po poglavljima"
 page-layout: article
 ---
 

@@ -1,6 +1,6 @@
 ## Mehanika fluida i numerika — pregled
 
-Ovaj dodatak nije gradivo Mehanike fluida 1 niti je uvod u računalnu dinamiku fluida. On služi kao **mostovni pregled** — sažima sve numeričke pojmove iz „Numeričkih tragova" i „Numeričkih mostova" u poglavljima U01–U13 i postavlja ih u jednu cjelinu.
+Ovaj dodatak nije gradivo Mehanike fluida 1 niti je uvod u računalnu dinamiku fluida. On služi kao **mostovni pregled** — sažima sve numeričke pojmove iz „Numeričkih tragova" i „Numeričkih mostova" u poglavljima pog. 1–13 i postavlja ih u jednu cjelinu.
 
 Cilj nije osposobljavanje za pokretanje CFD simulacije. Cilj je da se u kasnijim kolegijima posvećenima **računalnoj dinamici fluida** prepoznaju pojmovi i odmah jasno vidi *gdje* je svaka jednadžba iz MF1 sjela u toj disciplini.
 
@@ -21,19 +21,19 @@ Sljedeća tablica objedinjuje numeričke metode i alate spomenute kroz udžbenik
 | Kratica | Puno ime | Što radi | Gdje se pojavila u MF1 |
 |---|---|---|---|
 | **CFD** | Computational Fluid Dynamics | Računalno rješavanje Navier-Stokesovih jednadžbi | Svuda — kao šira disciplina |
-| **FVM** | Finite Volume Method | Domena se rastavlja na kontrolne volumene; bilanca mase i KG po svakoj ćeliji | U08 (kontinuitet), U11 (KG) |
+| **FVM** | Finite Volume Method | Domena se rastavlja na kontrolne volumene; bilanca mase i KG po svakoj ćeliji | pog. 8 (kontinuitet), pog. 11 (KG) |
 | **FEM** | Finite Element Method | Domena se rastavlja na elemente; rješava se varijacijski oblik PDJ | Strukturno-fluidne interakcije |
-| **VOF** | Volume of Fluid | Praćenje slobodne površine preko polja $\alpha \in [0,1]$ | U02 (kapilarnost), U07 (uzgon) |
-| **CSF** | Continuum Surface Force | Površinska napetost kao volumna sila u VOF-u | U02 |
-| **DNS** | Direct Numerical Simulation | Rješava sve, čak i najmanje vrtloge — najtočnije i najskuplje | U10 (gubici, turbulencija) |
-| **LES** | Large Eddy Simulation | Rješava velike vrtloge, modelira male | U10 |
-| **RANS** | Reynolds-Averaged Navier-Stokes | Računa srednje polje, modelira sve turbulentne fluktuacije | U10, U13 |
-| **k-ε** / **k-ω SST** | turbulentni modeli | Dvije dodatne jednadžbe za turbulentnu energiju i disipaciju | U10 (gubici), U13 (cjevovodi) |
-| **SIMPLE** / **PISO** / **PIMPLE** | algoritmi sprege $p$–$v$ | Iterativno usklađivanje tlaka i brzine da $\nabla\cdot\vec{v}=0$ | U01 (Pascal), U08 (kontinuitet) |
-| **MRF** | Multiple Reference Frame (više referentnih okvira) | Rotacijske domene (pumpe, turbine) bez fizičke rotacije mreže | U04 (relativno mirovanje), U12 (lopatice) |
-| **Klizajuća mreža** *(engl. sliding mesh)* | rotor i stator s međusobnim klizanjem | Rotor i stator fizički kližu jedan uz drugi | U12 |
-| **Zidne funkcije** *(engl. wall functions)* | analitička premosnica uz zid | Premošćuju grube zidne ćelije analitičkim turbulentnim profilom | U13 |
-| **y+** | $y^+$ kriterij | Bezdimenzijska udaljenost prve ćelije od zida; kontrolira rezoluciju graničnog sloja | U13 |
+| **VOF** | Volume of Fluid | Praćenje slobodne površine preko polja $\alpha \in [0,1]$ | pog. 2 (kapilarnost), pog. 7 (uzgon) |
+| **CSF** | Continuum Surface Force | Površinska napetost kao volumna sila u VOF-u | pog. 2 |
+| **DNS** | Direct Numerical Simulation | Rješava sve, čak i najmanje vrtloge — najtočnije i najskuplje | pog. 10 (gubici, turbulencija) |
+| **LES** | Large Eddy Simulation | Rješava velike vrtloge, modelira male | pog. 10 |
+| **RANS** | Reynolds-Averaged Navier-Stokes | Računa srednje polje, modelira sve turbulentne fluktuacije | pog. 10, pog. 13 |
+| **k-ε** / **k-ω SST** | turbulentni modeli | Dvije dodatne jednadžbe za turbulentnu energiju i disipaciju | pog. 10 (gubici), pog. 13 (cjevovodi) |
+| **SIMPLE** / **PISO** / **PIMPLE** | algoritmi sprege $p$–$v$ | Iterativno usklađivanje tlaka i brzine da $\nabla\cdot\vec{v}=0$ | pog. 1 (Pascal), pog. 8 (kontinuitet) |
+| **MRF** | Multiple Reference Frame (više referentnih okvira) | Rotacijske domene (pumpe, turbine) bez fizičke rotacije mreže | pog. 4 (relativno mirovanje), pog. 12 (lopatice) |
+| **Klizajuća mreža** *(engl. sliding mesh)* | rotor i stator s međusobnim klizanjem | Rotor i stator fizički kližu jedan uz drugi | pog. 12 |
+| **Zidne funkcije** *(engl. wall functions)* | analitička premosnica uz zid | Premošćuju grube zidne ćelije analitičkim turbulentnim profilom | pog. 13 |
+| **y+** | $y^+$ kriterij | Bezdimenzijska udaljenost prve ćelije od zida; kontrolira rezoluciju graničnog sloja | pog. 13 |
 | **Panel metoda** | Panel Method | Potencijalno strujanje + granični sloj na vanjskim oblicima | (vanjska aerodinamika) |
 
 ## Pregled alata
@@ -130,7 +130,7 @@ Pravilo prakse: za studente koji prvi put pokreću CFD, **prvih nekoliko tjedana
 
 ## Tipičan CFD tijek na primjeru iz MF1: Venturijeva cijev
 
-Kako bi se konkretno vidjelo što sve CFD analiza obuhvaća, pokazat će se uobičajenih pet koraka na primjeru za koji su studenti već vidjeli analitičko rješenje u poglavlju <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> — na Venturijevoj cijevi.
+Kako bi se konkretno vidjelo što sve CFD analiza obuhvaća, pokazat će se uobičajenih pet koraka na primjeru za koji su studenti već vidjeli analitičko rješenje u poglavlju <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> — na Venturijevoj cijevi.
 
 ### Korak 1 — Geometrija
 

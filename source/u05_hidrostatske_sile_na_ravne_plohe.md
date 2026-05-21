@@ -17,7 +17,7 @@ Kad su vrata brane, inspekcijski poklopac ili stijenka spremnika potopljeni, pro
 
 **Predznanje koje se pretpostavlja:**
 
-- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
+- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
 - integralni račun jedne i dviju varijabli, pojam težišta i momenta tromosti;
 - osnove statike: ravnoteža sila i momenata, hvatište rezultantne sile.
 
@@ -211,7 +211,7 @@ Pri okomitoj plohi ($\alpha = 90^\circ$, $\sin\alpha = 1$) izraz se reducira na 
 2. dubinu centra tlaka ispod slobodne površine.
 3. udaljenost centra tlaka od gornjeg ruba zaklopke.
 
-![U05 Val 1 - vertikalna pravokutna zaklopka](../assets/print/u05_val1_pravokutna_zaklopka.svg)
+![Val 1 - vertikalna pravokutna zaklopka](../assets/print/u05_val1_pravokutna_zaklopka.svg)
 
 **Pretpostavke i model**
 
@@ -293,7 +293,7 @@ Taj osnovni proračun zatvara tipičan prvi korak: jedna ploha, jedna rezultanta
 
 Zanemarite vlastitu težinu ukruta i debljinu stijenke. Pretpostavite da je stijena potpuno vertikalna i da s vanjske strane djeluje atmosferski tlak.
 
-![U05 Val 2 - raspored ukruta na stijenci spremnika](../assets/print/u05_val2_ukrute_stijenke.svg)
+![Val 2 - raspored ukruta na stijenci spremnika](../assets/print/u05_val2_ukrute_stijenke.svg)
 
 **Pretpostavke i model**
 
@@ -366,7 +366,7 @@ ispod slobodne površine, odnosno oko $0{,}16\ \text{m}$ iznad dna spremnika.
 3. Hvatište najnižeg polja mora biti vrlo blizu dna, ali i dalje unutar tog polja, što dobiveni rezultat zadovoljava.
 :::
 
-Ta projektna scena zatvara vertikalne raspodjele po poljima. Vrijedi otvoriti još jedan tipični inženjerski slučaj iste fizike: ravnu, ali kosu plohu, na kojoj i dalje vrijede rezultanta i centar tlaka iz <span class="mf1-ch-ref"><span class="mf1-ch-code">U05</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>, samo se dubina duž plohe mora čitati preko geometrije.
+Ta projektna scena zatvara vertikalne raspodjele po poljima. Vrijedi otvoriti još jedan tipični inženjerski slučaj iste fizike: ravnu, ali kosu plohu, na kojoj i dalje vrijede rezultanta i centar tlaka iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>, samo se dubina duž plohe mora čitati preko geometrije.
 
 ::: {.mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Kosi inspekcijski poklopac na talozniku&nbsp;<span class="mf1-level">T2</span></p>
@@ -388,7 +388,7 @@ Ta projektna scena zatvara vertikalne raspodjele po poljima. Vrijedi otvoriti jo
 2. položaj centra tlaka, mjeren uz plohu od zgloba `A`.
 3. silu spojnice potrebnu da poklopac ostane zatvoren.
 
-![U05 Val 3 - kosi inspekcijski poklopac](../assets/print/u05_val3_kosi_poklopac.svg)
+![Val 3 - kosi inspekcijski poklopac](../assets/print/u05_val3_kosi_poklopac.svg)
 
 **Pretpostavke i model**
 
@@ -598,11 +598,11 @@ Težište plohe nalazi se na $L/2 = 0{,}75$ m od gornjeg ruba.
 3. silu spojnice $T$ potrebnu da pregrada ostane zatvorena.
 4. vodoravnu reakciju zgloba u točki `A`.
 
-![U05 CH 1 - zglobna pregrada s uljem iznad vode](../assets/print/u05_ch1_pregrada_ulje_voda.svg)
+![CH 1 - zglobna pregrada s uljem iznad vode](../assets/print/u05_ch1_pregrada_ulje_voda.svg)
 
 **Pretpostavke i model**
 
-Pregrada je i dalje ravna vertikalna ploha, pa je fizika ista kao u ostatku <span class="mf1-ch-ref"><span class="mf1-ch-code">U05</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>; mijenja se samo tlak po dubini. Gornji dio nosi čisti trokutni dijagram tlaka ulja, dok donji dio nosi zbroj pravokutnog dijela od uljnog stupca i dodatnog trokutnog dijela od vode. Zato se najprije mora zatvoriti sila i moment po tim dijelovima, a tek onda vratiti ukupna rezultanta i sila držanja.
+Pregrada je i dalje ravna vertikalna ploha, pa je fizika ista kao u ostatku <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>; mijenja se samo tlak po dubini. Gornji dio nosi čisti trokutni dijagram tlaka ulja, dok donji dio nosi zbroj pravokutnog dijela od uljnog stupca i dodatnog trokutnog dijela od vode. Zato se najprije mora zatvoriti sila i moment po tim dijelovima, a tek onda vratiti ukupna rezultanta i sila držanja.
 
 **Rješenje**
 
@@ -676,7 +676,7 @@ $$
 
 **Provjera i komentar**
 
-Ovaj `CH` zatvara integrativni sloj <span class="mf1-ch-ref"><span class="mf1-ch-code">U05</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span> bez izlaska iz ravnih ploha: gornje uljno polje nosi oko $5{,}63\ \text{kN}$, donje polje oko $42{,}52\ \text{kN}$, ukupna rezultanta iznosi oko $48{,}15\ \text{kN}$, a centar tlaka leži na dubini oko $1{,}89\ \text{m}$ ispod slobodne površine. Da bi zglobna pregrada ostala zatvorena, spojnica mora preuzeti oko $32{,}58\ \text{kN}$, a zglob oko $15{,}6\ \text{kN}$ vodoravne reakcije.
+Ovaj `CH` zatvara integrativni sloj <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span> bez izlaska iz ravnih ploha: gornje uljno polje nosi oko $5{,}63\ \text{kN}$, donje polje oko $42{,}52\ \text{kN}$, ukupna rezultanta iznosi oko $48{,}15\ \text{kN}$, a centar tlaka leži na dubini oko $1{,}89\ \text{m}$ ispod slobodne površine. Da bi zglobna pregrada ostala zatvorena, spojnica mora preuzeti oko $32{,}58\ \text{kN}$, a zglob oko $15{,}6\ \text{kN}$ vodoravne reakcije.
 
 1. Donje polje mora nositi znatno veći dio sile jer je i dublje i opterećeno gušćim fluidom.
 2. Centar tlaka mora ležati ispod polovice ukupne visine, jer se najveći dio opterećenja nalazi u donjem dijelu pregrade.
@@ -939,7 +939,7 @@ Ne izravno, jer pri $\alpha = 90^\circ$ (ploha horizontalna) tlak je jednolik po
 	**Skica:** da - vertikalna pregrada s gornjim slojem ulja, donjim slojem vode, zglobom gore i spojnicom dolje.
 :::
 
-![U05 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u05_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u05_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -970,7 +970,7 @@ Vrata brane, servisni poklopac spremnika i brodska pregrada ne dimenzioniraju se
 
 Ovdje se promatra statičko opterećenje mirujućeg fluida i kruta ploha. Ako su važni elastični progib ploče, valovi, udarni režimi ili lokalno izvijanje, sama rezultanta više nije dovoljna za puni proračun sigurnosti.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U05</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span> nije samo poglavlje o jednoj rezultanti. Prava vrijednost dolazi kad se raspodjela tlaka čita dovoljno dobro da se iz nje projektiraju polja, ukrute i oslonci.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span> nije samo poglavlje o jednoj rezultanti. Prava vrijednost dolazi kad se raspodjela tlaka čita dovoljno dobro da se iz nje projektiraju polja, ukrute i oslonci.
 :::
 
 ::: {.mf1-numerika}

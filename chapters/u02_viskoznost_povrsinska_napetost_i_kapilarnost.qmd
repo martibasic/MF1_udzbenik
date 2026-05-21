@@ -1,5 +1,5 @@
 ---
-title: "U02 - Viskoznost, površinska napetost i kapilarnost"
+title: "2. Viskoznost, površinska napetost i kapilarnost"
 page-layout: article
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "U12 - Pokretne lopatice i potisak"
+title: "12. Pokretne lopatice i potisak"
 page-layout: article
 ---
 

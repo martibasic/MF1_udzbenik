@@ -96,14 +96,14 @@ ax.text(4.7, 3.7, r'$dh/dt$', fontsize=8.5, va='center', color='#8E44AD')
 ax.text(5.0, 0.2, 'Retencijski bazen  (Građevinarstvo)',
     fontsize=7.5, ha='center', color=SUB)
 
-fig.suptitle('U08 – Kontrolni volumen i kontinuitet',
+fig.suptitle('pog. 8 – Kontrolni volumen i kontinuitet',
              fontsize=13, fontweight='bold', y=1.01)
 plt.show()
 ```
 
 ## Kontrolni volumen — temeljni alat dinamike strujanja
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> uvodi promjenu pogleda: umjesto praćenja pojedine čestice, promatra se odabrani dio prostora kroz koji fluid prolazi. Kontinuitet zato nije samo poseban zapis $A_1 v_1 = A_2 v_2$, nego jedan rubni slučaj mnogo šire bilance mase.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> uvodi promjenu pogleda: umjesto praćenja pojedine čestice, promatra se odabrani dio prostora kroz koji fluid prolazi. Kontinuitet zato nije samo poseban zapis $A_1 v_1 = A_2 v_2$, nego jedan rubni slučaj mnogo šire bilance mase.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -252,10 +252,10 @@ $$
 Prvi član s desne strane je **akumulacija** unutar kontrolnog volumena, drugi je **neto izlazni protok** veličine $\eta$ kroz kontrolnu plohu. Sva tri osnovna zakona slijede izravno iz RTT-a uz odgovarajući izbor $\eta$:
 
 - **Očuvanje mase** ($\eta = 1$): $d/dt\int_{sustav}\rho\,dV = 0$, što daje jednadžbu kontinuiteta.
-- **Količina gibanja** ($\eta = \vec{v}$): $d/dt\int_{sustav}\rho\vec{v}\,dV = \sum\vec{F}$, što daje integralni zakon količine gibanja iz poglavlja U11.
-- **Energija** ($\eta = e$, ukupna specifična energija): $d/dt\int_{sustav}\rho e\,dV = \dot{Q} - \dot{W}$, što vodi na energijsku jednadžbu i Bernoulli u U09/U10.
+- **Količina gibanja** ($\eta = \vec{v}$): $d/dt\int_{sustav}\rho\vec{v}\,dV = \sum\vec{F}$, što daje integralni zakon količine gibanja iz poglavlja pog. 11.
+- **Energija** ($\eta = e$, ukupna specifična energija): $d/dt\int_{sustav}\rho e\,dV = \dot{Q} - \dot{W}$, što vodi na energijsku jednadžbu i Bernoulli u pog. 9/pog. 10.
 
-Time se sva tri kasnija zakona ne pojavljuju kao odvojeni postulati, nego kao primjene istog teorema na različite veličine. Upravo zato je sustavnost izvoda u poglavljima u redu U08 → U11 → U09 — uvijek se istom matematičkom strukturom mijenja samo fizikalna interpretacija $\eta$.
+Time se sva tri kasnija zakona ne pojavljuju kao odvojeni postulati, nego kao primjene istog teorema na različite veličine. Upravo zato je sustavnost izvoda u poglavljima u redu pog. 8 → pog. 11 → pog. 9 — uvijek se istom matematičkom strukturom mijenja samo fizikalna interpretacija $\eta$.
 :::
 
 ::: {.mf1-izvod}
@@ -320,7 +320,7 @@ Ako taj redoslijed nije zatvoren, gotovo je sigurno da će zadatak biti krivo po
 2. volumenski protok $Q$.
 3. maseni protok $\dot{m}$.
 
-![U08 Val 1 - difuzor i kontinuitet](../assets/print/u08_val1_difuzor_kontinuitet.svg)
+![Val 1 - difuzor i kontinuitet](../assets/print/u08_val1_difuzor_kontinuitet.svg)
 
 **Pretpostavke i model**
 
@@ -384,7 +384,7 @@ U užem ulaznom presjeku brzina mora biti veća nego na izlazu, jer isti protok 
 1. izlaznu brzinu $v_C$.
 2. gustoću mješavine na izlazu $\rho_C$.
 
-![U08 Val 2 - komora za miješanje](../assets/print/u08_val2_mjesanje_tokova.svg)
+![Val 2 - komora za miješanje](../assets/print/u08_val2_mjesanje_tokova.svg)
 
 **Pretpostavke i model**
 
@@ -437,7 +437,7 @@ U izlaznom presjeku komora daje brzinu od oko $2{,}55\ \text{m/s}$ i homogenu mj
 3. Ako se u masenoj bilanci koristi samo zbroj volumenskih protoka bez gustoća, izlazna gustoća ne može biti ispravno dobivena.
 :::
 
-Ta scena zatvara stacionarni višegranski slučaj. Treća jezgrena scena <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> ide jedan korak dalje: protoci više nisu uravnoteženi, pa razlika ulaza i izlaza ne nestaje nego se pretvara u porast volumena unutar kontrolnog volumena.
+Ta scena zatvara stacionarni višegranski slučaj. Treća jezgrena scena <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> ide jedan korak dalje: protoci više nisu uravnoteženi, pa razlika ulaza i izlaza ne nestaje nego se pretvara u porast volumena unutar kontrolnog volumena.
 
 ::: {.mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Izjednačni spremnik tijekom ispiranja filtra&nbsp;<span class="mf1-level">T2</span></p>
@@ -460,7 +460,7 @@ Ta scena zatvara stacionarni višegranski slučaj. Treća jezgrena scena <span c
 2. vrijeme potrebno da razina poraste od $h_0$ do $h_1$.
 3. kolika se masa vode akumulira u spremniku do tog trenutka.
 
-![U08 Val 3 - izjednačni spremnik s akumulacijom](../assets/print/u08_val3_izjednacni_spremnik.svg)
+![Val 3 - izjednačni spremnik s akumulacijom](../assets/print/u08_val3_izjednacni_spremnik.svg)
 
 **Pretpostavke i model**
 
@@ -506,7 +506,7 @@ $$
 
 **Provjera i komentar**
 
-Razina vode u spremniku raste brzinom od oko $0{,}155\ \text{m/min}$, do gornje radne razine dolazi za oko $4{,}8$ minuta, a u tom se vremenu u spremniku akumulira oko $4{,}04\ \text{t}$ vode. To je tipičan <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> primjer u kojem razlika protoka ne nestaje u jednadžbi, nego postaje stvarni porast mase unutar kontrolnog volumena.
+Razina vode u spremniku raste brzinom od oko $0{,}155\ \text{m/min}$, do gornje radne razine dolazi za oko $4{,}8$ minuta, a u tom se vremenu u spremniku akumulira oko $4{,}04\ \text{t}$ vode. To je tipičan <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> primjer u kojem razlika protoka ne nestaje u jednadžbi, nego postaje stvarni porast mase unutar kontrolnog volumena.
 
 1. Kako je $Q_{in} > Q_{out}$, razina mora rasti, a ne padati.
 2. Neto protok od $14\ \text{L/s}$ na spremniku tlocrtne površine $5{,}4\ \text{m}^2$ mora dati spor, ali mjerljiv rast razine reda nekoliko desetina metra u minuti.
@@ -538,7 +538,7 @@ Razina vode u spremniku raste brzinom od oko $0{,}155\ \text{m/min}$, do gornje 
 4. vrijeme potrebno da razina poraste od $h_0$ do $h_1$.
 5. masu tekućine koja se akumulira u spremniku tijekom tog porasta.
 
-![U08 CH 1 - miješajući izjednačni spremnik](../assets/print/u08_ch1_mijesajuci_spremnik.svg)
+![CH 1 - miješajući izjednačni spremnik](../assets/print/u08_ch1_mijesajuci_spremnik.svg)
 
 **Pretpostavke i model**
 
@@ -620,7 +620,7 @@ $$
 
 **Provjera i komentar**
 
-Ovaj `CH` zatvara puni <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> slijed u jednom kontrolnom volumenu: izlazni vod daje $Q_3 \approx 14{,}1\ \text{L/s}$, mješavina u spremniku ima gustoću oko $1025\ \text{kg/m}^3$, razina raste brzinom oko $0{,}094\ \text{m/min}$, a do porasta od $0{,}40\ \text{m}$ treba oko $4{,}3$ minute. U tom se vremenu akumulira oko $2{,}58$ t homogenizirane tekućine.
+Ovaj `CH` zatvara puni <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> slijed u jednom kontrolnom volumenu: izlazni vod daje $Q_3 \approx 14{,}1\ \text{L/s}$, mješavina u spremniku ima gustoću oko $1025\ \text{kg/m}^3$, razina raste brzinom oko $0{,}094\ \text{m/min}$, a do porasta od $0{,}40\ \text{m}$ treba oko $4{,}3$ minute. U tom se vremenu akumulira oko $2{,}58$ t homogenizirane tekućine.
 
 1. Gustoća mješavine mora biti između gustoće vode i gustoće slane otopine.
 2. Kako je ukupni ulazni protok veći od izlaznog, razina mora rasti, a ne padati.
@@ -629,7 +629,7 @@ Ovaj `CH` zatvara puni <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</s
 
 Kao sažetak poglavlja korisno je držati zajedno tri reprezentativne scene: suženje, difuzor i kontrolni volumen s više tokova. Uz njih prirodno stoji i standardna shema bilance mase s označenim ulazima, izlazima i akumulacijom.
 
-![U08 statička zamjena za kontrolni volumen i kontinuitet](../assets/print/u08_kontrolni_volumen_scene.svg)
+![statička zamjena za kontrolni volumen i kontinuitet](../assets/print/u08_kontrolni_volumen_scene.svg)
 
 ::: {.mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Kontinuitet kroz razvodni T-komad hidrauličnog sustava &nbsp;<span class="mf1-level">T2</span></p>
@@ -999,7 +999,7 @@ Bez jasno definiranog kontrolnog volumena nije moguće odrediti što su ulazi, �
 	**Skica:** da - miješajući spremnik s dva ulaza, jednim izlazom i rastom razine.
 :::
 
-![U08 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u08_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u08_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -1030,7 +1030,7 @@ Mješalica, ventilacijska komora, razdjelnik rashladne vode ili spremnik koji se
 
 Pojednostavljeni zapis $A_1 v_1 = A_2 v_2$ vrijedi samo za vrlo poseban slučaj jedne ulazne i jedne izlazne grane nestlačivoga fluida. Čim sustav ima više grana, stlačivost ili akumulaciju, treba se vratiti punoj bilanci mase.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> treba ostaviti jednu pouzdanu radnu naviku: prije svake jednadžbe prvo se crta kontrolni volumen, a tek zatim se piše bilanca mase.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> treba ostaviti jednu pouzdanu radnu naviku: prije svake jednadžbe prvo se crta kontrolni volumen, a tek zatim se piše bilanca mase.
 :::
 
 ::: {.mf1-numerika}

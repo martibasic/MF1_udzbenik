@@ -1,5 +1,5 @@
 ---
-title: "D01 - Sažetak formula i oznaka"
+title: "Sažetak formula i oznaka"
 page-layout: article
 ---
 

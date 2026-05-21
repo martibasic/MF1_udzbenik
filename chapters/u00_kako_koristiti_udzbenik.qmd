@@ -1,5 +1,5 @@
 ---
-title: "U00 - Kako koristiti udžbenik"
+title: "0. Kako koristiti udžbenik"
 page-layout: article
 ---
 

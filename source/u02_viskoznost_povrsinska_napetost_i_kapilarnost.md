@@ -1,8 +1,8 @@
-![Pregled poglavlja U02: Viskoznost, površinska napetost i kapilarnost](../assets/print/u02_fig_uvod_pregled.svg){#fig-uvod-u02 fig-align="center"}
+![Pregled poglavlja pog. 2: Viskoznost, površinska napetost i kapilarnost](../assets/print/u02_fig_uvod_pregled.svg){#fig-uvod-u02 fig-align="center"}
 
 ## Kad fluid više nije samo nositelj tlaka
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U01</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> zatvorio je tlak i Pascalov zakon za mirujući fluid. <span class="mf1-ch-ref"><span class="mf1-ch-code">U02</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> otvara ono što se u tehnici vrlo brzo osjeti rukom i alatom: fluid nije samo nositelj tlaka, nego i medij koji pruža otpor gibanju te stvara pojave na slobodnoj površini.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> zatvorio je tlak i Pascalov zakon za mirujući fluid. <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> otvara ono što se u tehnici vrlo brzo osjeti rukom i alatom: fluid nije samo nositelj tlaka, nego i medij koji pruža otpor gibanju te stvara pojave na slobodnoj površini.
 
 Zato ovo poglavlje namjerno drži dva mehanizma jedan uz drugi: viskoznost u volumenu fluida i površinsku napetost na granici faza.
 
@@ -19,7 +19,7 @@ Viskoznost u strojarstvu odlučuje hoće li ležaj i klizna vodilica ostati odvo
 
 - pojam smičnog naprezanja i naprezanja u tvari (Fizika I, osnove čvrstoće);
 - diferencijalni račun jedne varijable, gradijent funkcije (Matematika I);
-- razlikovanje sila i tlaka uvedeno u poglavlju <span class="mf1-ch-ref"><span class="mf1-ch-code">U01</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>.
+- razlikovanje sila i tlaka uvedeno u poglavlju <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>.
 
 **Ishodi učenja:**
 
@@ -222,7 +222,7 @@ $$
 
 što znači da viskoznost ne dodaje vlastiti **izotropni dio** naprezanja — taj je dio u potpunosti pokriven tlakom $p$.
 
-Skalarni jednodimenzijski oblik $\tau = \mu\,dv/dy$ koristi se kao radna verzija u svim $1$D problemima ovog poglavlja, ali iza njega stoji tenzorski zakon koji se pojavljuje u svakom CFD solveru kao **viskozni član** Navier-Stokesove jednadžbe (poglavlje U11).
+Skalarni jednodimenzijski oblik $\tau = \mu\,dv/dy$ koristi se kao radna verzija u svim $1$D problemima ovog poglavlja, ali iza njega stoji tenzorski zakon koji se pojavljuje u svakom CFD solveru kao **viskozni član** Navier-Stokesove jednadžbe (poglavlje pog. 11).
 :::
 
 ## Površinska napetost i kontaktni kut
@@ -366,7 +366,7 @@ Zakrivljena površina "stisne" fluid iznutra jer je površinska napetost zapregn
 3. Odredi silu potrebnu za jednoliko gibanje gornje ploče.
 4. Odredi kinematičku viskoznost $\nu$.
 
-![U02 Val 2 - viskoznost i kapilarnost](../assets/print/u02_val2_viskoznost_kapilarnost.svg)
+![Val 2 - viskoznost i kapilarnost](../assets/print/u02_val2_viskoznost_kapilarnost.svg)
 
 **Pretpostavke i model**
 
@@ -467,7 +467,7 @@ $$
 2. apsolutni tlak unutar kapljice.
 3. koliki bi bio tlakovni skok kada bi se promjer kapljice smanjio na $0{,}6\ \text{mm}$.
 
-![U02 Val 3 - tlakovni skok u kapljici](../assets/print/u02_val3_tlacni_skok_kapljica.svg)
+![Val 3 - tlakovni skok u kapljici](../assets/print/u02_val3_tlacni_skok_kapljica.svg)
 
 **Pretpostavke i model**
 
@@ -531,7 +531,7 @@ Iznad vode u spremniku može se po potrebi zadati mali manometarski pretlak $p_M
 
 Pretpostavi da je kapljica kvazistacionarna, da je gubitak u kapilari zanemariv i da se kapilarni uspon može čitati iz standardne relacije za potpunu vlažnost.
 
-![U02 CH 1 - kapilarni mikrodozator s izlaznom kapljicom](../assets/print/u02_ch1_kapilarni_mikrodozator_kapljica.svg)
+![CH 1 - kapilarni mikrodozator s izlaznom kapljicom](../assets/print/u02_ch1_kapilarni_mikrodozator_kapljica.svg)
 
 **Pretpostavke i model**
 
@@ -945,7 +945,7 @@ Newtonov zakon vrijedi samo za fluide kod kojih je veza između smičnog napreza
 	**Skica:** da - spremnik, kapilarna igla, visina $H$ i izlazna kapljica promjera $D$.
 :::
 
-![U02 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u02_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u02_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -960,7 +960,7 @@ Newtonov zakon vrijedi samo za fluide kod kojih je veza između smičnog napreza
 
 **Najčešća pogreška**
 
-Najčešća greška u <span class="mf1-ch-ref"><span class="mf1-ch-code">U02</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> je miješanje dvaju potpuno različitih mehanizama. Newtonov zakon ne rješava kapilarni uspon, a površinska napetost ne opisuje smičanje između slojeva ulja. Prvi korak mora biti odluka koji je stvarni fizikalni uzrok u zadatku.
+Najčešća greška u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> je miješanje dvaju potpuno različitih mehanizama. Newtonov zakon ne rješava kapilarni uspon, a površinska napetost ne opisuje smičanje između slojeva ulja. Prvi korak mora biti odluka koji je stvarni fizikalni uzrok u zadatku.
 
 **Nakon ovoga poglavlja mora biti moguće**
 
@@ -976,7 +976,7 @@ U ležaju viskoznost čuva razmak između dviju ploha, u raspršivaču površins
 
 Newtonov zakon viskoznosti ne vrijedi za svaki fluid, nego za one u kojima je veza između smičnog naprezanja i gradijenta brzine linearna. Jednako tako, kapilarni uspon i kontaktni kut vrlo su osjetljivi na onečišćenje, hrapavost i kemiju stijenke, pa idealna laboratorijska slika ne prelazi uvijek bez korekcija u stvarni sustav.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U02</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> razdvaja dvije nove fizike: unutarnje trenje u volumenu fluida i zatezanje slobodne površine. Kad je ovdje jasno koji se mehanizam čita, kasnije se sigurnije razlikuju viskoznost, hidrostatika i kapilarnost.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> razdvaja dvije nove fizike: unutarnje trenje u volumenu fluida i zatezanje slobodne površine. Kad je ovdje jasno koji se mehanizam čita, kasnije se sigurnije razlikuju viskoznost, hidrostatika i kapilarnost.
 :::
 
 ::: {.mf1-numerika}

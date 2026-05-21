@@ -93,7 +93,7 @@ ax.text(4.7, 2.4, r'$p_0=p+\frac{\rho v^2}{2}$',
 ax.text(5.0, 0.3, 'Pitotova sonda  (Zrakoplovstvo/Strojarstvo)',
     fontsize=7.5, ha='center', color=SUB)
 
-fig.suptitle('U09 – Bernoullijeva jednadžba idealnog fluida',
+fig.suptitle('pog. 9 – Bernoullijeva jednadžba idealnog fluida',
              fontsize=13, fontweight='bold', y=1.01)
 plt.show()
 ```
@@ -102,7 +102,7 @@ plt.show()
 
 Kad brzina raste, tlak ili visina moraju to platiti.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> zatvorio je bilancu mase i izbor kontrolnog volumena. <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> dodaje energetsku sliku strujanja: u idealiziranom toku mehanička energija ne nestaje, nego se preraspodjeljuje između tlaka, brzine i geodetske visine.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> zatvorio je bilancu mase i izbor kontrolnog volumena. <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> dodaje energetsku sliku strujanja: u idealiziranom toku mehanička energija ne nestaje, nego se preraspodjeljuje između tlaka, brzine i geodetske visine.
 
 Zato u Venturijevoj cijevi, slobodnom mlazu ili Pitotovoj sondi više nije dovoljno pitati samo koliki je protok. Jednako je važno vidjeti u kojem se obliku u promatranoj točki nalazi energija fluida.
 
@@ -119,7 +119,7 @@ Idealni Bernoulli vidi se u Venturijevoj cijevi, Pitotovoj sondi, mlaznici za č
 
 **Predznanje koje se pretpostavlja:**
 
-- jednadžba kontinuiteta iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
+- jednadžba kontinuiteta iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
 - pojam rada i energije iz Fizike I; kinetička, potencijalna i tlačna energija;
 - diferencijalni račun jedne varijable i osnove integriranja;
 - pojam strujnice (linije strujanja) u stacionarnom toku.
@@ -376,10 +376,10 @@ Ovaj izvod izravno potvrđuje da je **Bernoullijeva jednadžba zakon očuvanja m
 - $v^2/(2g)$ je **brzinska visina** — kinetička energija po jediničnoj težini;
 - $z$ je **geodetska visina** — gravitacijska potencijalna energija po jediničnoj težini.
 
-Time se dobiva dvostruki uvid u istu jednadžbu: izvod iz Eulerove jednadžbe pokazuje **mehaničko** podrijetlo (Newton II na elementu strujne cijevi), a izvod iz rada i energije pokazuje **termodinamičko** podrijetlo (očuvanje mehaničke energije). Pri prijelazu na realni fluid (poglavlje U10) dodaje se gubitak $h_w$ kao energija koja se nepovratno pretvara u toplinu zbog viskoznog trenja — drugi zakon termodinamike u jeziku hidromehanike.
+Time se dobiva dvostruki uvid u istu jednadžbu: izvod iz Eulerove jednadžbe pokazuje **mehaničko** podrijetlo (Newton II na elementu strujne cijevi), a izvod iz rada i energije pokazuje **termodinamičko** podrijetlo (očuvanje mehaničke energije). Pri prijelazu na realni fluid (poglavlje pog. 10) dodaje se gubitak $h_w$ kao energija koja se nepovratno pretvara u toplinu zbog viskoznog trenja — drugi zakon termodinamike u jeziku hidromehanike.
 :::
 
-Odmah ispod izvoda treba zatvoriti i pretpostavke modela. U <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> Bernoulli vrijedi samo kad su dovoljno dobro opravdane sljedeće pretpostavke:
+Odmah ispod izvoda treba zatvoriti i pretpostavke modela. U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> Bernoulli vrijedi samo kad su dovoljno dobro opravdane sljedeće pretpostavke:
 
 - strujanje je stacionarno
 - fluid se može uzeti nestlačivim
@@ -410,7 +410,7 @@ Riješeni primjeri i zadaci za vježbu zato samo redom pokazuju kako isti Bernou
 
 1. Odrediti pad statičkog tlaka $\Delta p$ između presjeka 1 i 2.
 
-![U09 statička zamjena za EGL i HGL](../assets/print/u09_egl_hgl_schema.svg)
+![statička zamjena za EGL i HGL](../assets/print/u09_egl_hgl_schema.svg)
 
 **Pretpostavke i model**
 
@@ -544,7 +544,7 @@ $$
 1. Izračunati domet mlaza za sva tri zadana položaja otvora.
 2. Odrediti položaj otvora koji daje najveći domet.
 
-![U09 Val 2 - domet slobodnog mlaza](../assets/print/u09_val2_slobodni_mlaz.svg)
+![Val 2 - domet slobodnog mlaza](../assets/print/u09_val2_slobodni_mlaz.svg)
 
 **Pretpostavke i model**
 
@@ -613,7 +613,7 @@ Slobodni mlaz ne dobiva najveći domet ni iz najviše ni iz najniže postavljeno
 2. volumenski protok $Q$.
 3. tlačnu visinu $p_C/\gamma$ u najvišoj točki `C` i provjeri je li tlak sigurno iznad naponske visine isparavanja ako je atmosferska visina $10{,}2\ \text{m}$ vodenog stupca, a naponska visina pare $0{,}25\ \text{m}$ vodenog stupca.
 
-![U09 Val 3 - idealni sifon između dviju razina](../assets/print/u09_val3_idealni_sifon.svg)
+![Val 3 - idealni sifon između dviju razina](../assets/print/u09_val3_idealni_sifon.svg)
 
 **Pretpostavke i model**
 
@@ -681,7 +681,7 @@ Kako je naponska visina pare $p_v/\gamma = 0{,}25\ \text{m}$, slijedi da je tlak
 
 **Provjera i komentar**
 
-Idealni sifon daje brzinu od oko $8{,}4\ \text{m/s}$ i protok od oko $42\ \text{L/s}$. U vrhu sifona tlak pada na $-5{,}8\ \text{m}$ manometarske visine, ali je apsolutna tlačna visina još uvijek oko $4{,}4\ \text{m}$ vode, pa je u ovom idealiziranom scenariju tlak sigurno iznad naponske visine pare. Upravo taj tlak u vrhu pokazuje zašto je sifon prirodan prijelaz iz <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> prema realnijem <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>.
+Idealni sifon daje brzinu od oko $8{,}4\ \text{m/s}$ i protok od oko $42\ \text{L/s}$. U vrhu sifona tlak pada na $-5{,}8\ \text{m}$ manometarske visine, ali je apsolutna tlačna visina još uvijek oko $4{,}4\ \text{m}$ vode, pa je u ovom idealiziranom scenariju tlak sigurno iznad naponske visine pare. Upravo taj tlak u vrhu pokazuje zašto je sifon prirodan prijelaz iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> prema realnijem <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>.
 
 1. Što je donja razina dublje ispod gornje, to idealna brzina sifona mora biti veća.
 2. Tlak u vrhu sifona mora biti manji od atmosferskog jer se dio ukupne energije troši na visinu vrha i na brzinski član.
@@ -713,7 +713,7 @@ Idealni sifon daje brzinu od oko $8{,}4\ \text{m/s}$ i protok od oko $42\ \text{
 4. sigurnosnu razliku do naponske visine isparavanja ako je atmosferska visina $10{,}2\ \text{m}$ vodenog stupca, a naponska visina pare $0{,}25\ \text{m}$ vodenog stupca.
 5. vodoravni domet mlaza nakon izlaza iz točke `B`.
 
-![U09 CH 1 - idealni bypass-sifon sa suženjem](../assets/print/u09_ch1_bypass_sifon_suzenje_mlaz.svg)
+![CH 1 - idealni bypass-sifon sa suženjem](../assets/print/u09_ch1_bypass_sifon_suzenje_mlaz.svg)
 
 **Pretpostavke i model**
 
@@ -791,14 +791,14 @@ $$
 
 **Provjera i komentar**
 
-Ovaj `CH` zatvara puni idealni luk <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> u jednom sustavu: Bernoulli između slobodne površine i izlaza daje brzinu oko $7{,}41\ \text{m/s}$ i protok oko $58{,}2\ \text{L/s}$, kontinuitet povećava brzinu u suženju vrha na oko $11{,}58\ \text{m/s}$, a tlak u točki `C` pada na oko $-8{,}34\ \text{m}$ manometarske visine. Ipak, apsolutna tlačna visina ostaje oko $1{,}86\ \text{m}$ vode, što je još oko $1{,}61\ \text{m}$ iznad naponske visine pare. Nakon izlaza mlaz doseze vodoravni domet od oko $3{,}96\ \text{m}$.
+Ovaj `CH` zatvara puni idealni luk <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> u jednom sustavu: Bernoulli između slobodne površine i izlaza daje brzinu oko $7{,}41\ \text{m/s}$ i protok oko $58{,}2\ \text{L/s}$, kontinuitet povećava brzinu u suženju vrha na oko $11{,}58\ \text{m/s}$, a tlak u točki `C` pada na oko $-8{,}34\ \text{m}$ manometarske visine. Ipak, apsolutna tlačna visina ostaje oko $1{,}86\ \text{m}$ vode, što je još oko $1{,}61\ \text{m}$ iznad naponske visine pare. Nakon izlaza mlaz doseze vodoravni domet od oko $3{,}96\ \text{m}$.
 
 1. U suženju mora biti $v_C > v_B$ jer isti protok prolazi kroz manji presjek.
 2. Tlak u vrhu sifona mora biti manji od atmosferskog, a u suženju pada još više zbog veće brzine.
 3. Ako se pri računu dometa koristi $v_C$ umjesto izlazne brzine $v_B$, pomiješani su unutarnji presjek sifona i stvarni izlazni mlaz.
 :::
 
-U <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> još ne treba crtati komplicirane energetske sheme, ali treba razumjeti osnovnu logiku: `EGL` prati ukupnu mehaničku energiju po jedinici težine, `HGL` zbroj tlačne i geodetske visine, a u idealnom toku `EGL` ostaje vodoravna dok se `HGL` spušta kad raste brzinski član. Upravo to u Venturiju i Pitotu odmah vizualizira što je plaćeno tlakom, a što dobiveno u brzini.
+U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> još ne treba crtati komplicirane energetske sheme, ali treba razumjeti osnovnu logiku: `EGL` prati ukupnu mehaničku energiju po jedinici težine, `HGL` zbroj tlačne i geodetske visine, a u idealnom toku `EGL` ostaje vodoravna dok se `HGL` spušta kad raste brzinski član. Upravo to u Venturiju i Pitotu odmah vizualizira što je plaćeno tlakom, a što dobiveno u brzini.
 
 ::: {.mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Venturijeva cijev za mjerenje protoka ulja &nbsp;<span class="mf1-level">T2</span></p>
@@ -1177,7 +1177,7 @@ Gornja granica. Stvarna brzina je manja jer u idealnom modelu nisu uračunati gu
 	**Skica:** da - spremnik, sifonska cijev s vrhom $C$, vodoravni izlaz i domet mlaza do tla.
 :::
 
-![U09 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u09_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u09_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -1192,7 +1192,7 @@ Gornja granica. Stvarna brzina je manja jer u idealnom modelu nisu uračunati gu
 
 **Najčešća pogreška**
 
-Najčešća greška u <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> nije algebra nego mehaničko prepisivanje Bernoullija bez provjere pretpostavki. Drugi klasični kvar je zaboraviti da porast brzine u pravilu ne donosi novu energiju, nego je plaćen padom tlaka ili visine.
+Najčešća greška u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> nije algebra nego mehaničko prepisivanje Bernoullija bez provjere pretpostavki. Drugi klasični kvar je zaboraviti da porast brzine u pravilu ne donosi novu energiju, nego je plaćen padom tlaka ili visine.
 
 **Nakon ovoga poglavlja mora biti moguće**
 
@@ -1207,9 +1207,9 @@ Venturijeve cijevi, Pitotove sonde i mlaznice rade upravo zato što se ista meha
 
 **Granica modela**
 
-Idealni Bernoulli prestaje biti dovoljan čim trenje, vrtloženje, lokalni otpori ili rizik kavitacije počnu mjerljivo trošiti energiju. Tada isti problem više ne završava u ovom poglavlju, nego traži realni Bernoulli i gubitke iz <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>.
+Idealni Bernoulli prestaje biti dovoljan čim trenje, vrtloženje, lokalni otpori ili rizik kavitacije počnu mjerljivo trošiti energiju. Tada isti problem više ne završava u ovom poglavlju, nego traži realni Bernoulli i gubitke iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> zatvara idealnu energetsku sliku strujanja: brzina ne raste niotkuda, nego na račun tlaka ili geodetske visine. Kad se to ovdje učvrsti, prijelaz prema <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>, gdje se toj slici prvi put dodaju stvarni gubici, postaje prirodan.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> zatvara idealnu energetsku sliku strujanja: brzina ne raste niotkuda, nego na račun tlaka ili geodetske visine. Kad se to ovdje učvrsti, prijelaz prema <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>, gdje se toj slici prvi put dodaju stvarni gubici, postaje prirodan.
 :::
 
 ::: {.mf1-numerika}

@@ -17,7 +17,7 @@ Zakrivljene površine pojavljuju se na segmentnim ustavama, zaobljenim poklopcim
 
 **Predznanje koje se pretpostavlja:**
 
-- sila na uronjenu ravnu plohu iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U05</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>;
+- sila na uronjenu ravnu plohu iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>;
 - vektorska analiza, projekcije vektora na koordinatne osi;
 - integracija po krivuljama i plohama, pojam težišta volumena;
 - osnove statike krutog tijela.
@@ -190,7 +190,7 @@ gdje je $\theta_v$ kut između normale na plohu i vertikale, a $dA_y$ vertikalna
 2. vertikalnu komponentu sile $F_V$ i vodoravni položaj njezina pravca djelovanja.
 3. iznos rezultante $F_R$.
 
-![U06 Val 1 - potopljena četvrtina kruga](../assets/print/u06_val1_cetvrtina_kruga.svg)
+![Val 1 - potopljena četvrtina kruga](../assets/print/u06_val1_cetvrtina_kruga.svg)
 
 **Pretpostavke i model**
 
@@ -321,7 +321,7 @@ Tek nakon tog baznog rastava ima smisla prijeći na složeniji zatvarač u kojem
 
 Zanemarite debljinu stijenke i mali uzgon na dvostruko okupanom tankom dijelu konstrukcije.
 
-![U06 Val 2 - sklopiva servisna brana s zakrivljenim rubom](../assets/print/u06_val2_sklopiva_brana.svg)
+![Val 2 - sklopiva servisna brana s zakrivljenim rubom](../assets/print/u06_val2_sklopiva_brana.svg)
 
 **Pretpostavke i model**
 
@@ -424,7 +424,7 @@ Za zatvaranje poglavlja korisno je vratiti se i na čistu referentnu geometriju 
 2. vertikalnu komponentu sile $F_V$ i vodoravni položaj njezina pravca djelovanja.
 3. iznos rezultante $F_R$ i kut koji zatvara s horizontalom.
 
-![U06 Val 3 - četvrtcilindrični poklopac](../assets/print/u06_val3_cetvrtcilindricni_poklopac.svg)
+![Val 3 - četvrtcilindrični poklopac](../assets/print/u06_val3_cetvrtcilindricni_poklopac.svg)
 
 **Pretpostavke i model**
 
@@ -632,7 +632,7 @@ Omjer rezultanti $F / F_{open} \approx 73$.
 3. iznos rezultante $F_R$ i kut koji zatvara s horizontalom.
 4. silu spojnice $T$ potrebnu da poklopac ostane zatvoren.
 
-![U06 CH 1 - četvrtcilindrični poklopac s vodoravnom spojnicom](../assets/print/u06_ch1_poklopac_spojnica.svg)
+![CH 1 - četvrtcilindrični poklopac s vodoravnom spojnicom](../assets/print/u06_ch1_poklopac_spojnica.svg)
 
 **Pretpostavke i model**
 
@@ -718,7 +718,7 @@ $$
 
 **Provjera i komentar**
 
-Ovaj `CH` zatvara puni radni luk <span class="mf1-ch-ref"><span class="mf1-ch-code">U06</span><span class="mf1-ch-title">Zakrivljene plohe i rastav sila</span></span> u jednom zatvaraču: projekcija daje $F_H \approx 8{,}29\ \text{kN}$ na dubini $0{,}733\ \text{m}$, imaginarni volumen daje $F_V \approx 13{,}03\ \text{kN}$ prema dolje s krakom $0{,}467\ \text{m}$, a njihova rezultanta iznosi oko $15{,}44\ \text{kN}$. Da bi poklopac ostao zatvoren, vodoravna spojnica mora preuzeti silu od oko $11{,}06\ \text{kN}$.
+Ovaj `CH` zatvara puni radni luk <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Zakrivljene plohe i rastav sila</span></span> u jednom zatvaraču: projekcija daje $F_H \approx 8{,}29\ \text{kN}$ na dubini $0{,}733\ \text{m}$, imaginarni volumen daje $F_V \approx 13{,}03\ \text{kN}$ prema dolje s krakom $0{,}467\ \text{m}$, a njihova rezultanta iznosi oko $15{,}44\ \text{kN}$. Da bi poklopac ostao zatvoren, vodoravna spojnica mora preuzeti silu od oko $11{,}06\ \text{kN}$.
 
 1. Kako je imaginarni volumen ovdje iznad zakrivljene plohe, $F_V$ mora biti prema dolje, a ne prema gore.
 2. Sila spojnice mora biti manja od rezultante, ali istog reda veličine, jer djeluje s punim krakom $R$.
@@ -971,7 +971,7 @@ Da, vrijedi neovisno o obliku zakrivljenosti sve dok se ploha može opisati zatv
 	**Skica:** da - četvrtcilindrični poklopac sa slobodnom površinom iznad njega, dubinom $h_1$, zglobom i spojnicom.
 :::
 
-![U06 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u06_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u06_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -1002,7 +1002,7 @@ Na segmentnoj ustavi, zaobljenom poklopcu ili zakrivljenom brodskom otvoru nije 
 
 Najveći rizik ovdje nije algebarska pogreška, nego pogrešan odabir zamišljenog volumena i smjera vertikalne komponente. Ako geometrija uključuje plinski jastuk, podtlak ili složeniju prostornu plohu, treba vrlo pažljivo provjeriti vrijedi li jednostavni 2D rastav bez dodatnih korekcija.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U06</span><span class="mf1-ch-title">Zakrivljene plohe i rastav sila</span></span> nije poglavlje novih formula, nego novih pogleda na istu silu. Horizontalna komponenta čita projekciju, vertikalna težinu zamišljenog volumena, a najveći rizik nije algebra nego pogrešan smjer sile.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Zakrivljene plohe i rastav sila</span></span> nije poglavlje novih formula, nego novih pogleda na istu silu. Horizontalna komponenta čita projekciju, vertikalna težinu zamišljenog volumena, a najveći rizik nije algebra nego pogrešan smjer sile.
 :::
 
 ::: {.mf1-numerika}

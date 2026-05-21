@@ -10,7 +10,7 @@ Najsigurniji redoslijed je:
 2. provjeriti radi li se o tlaku, sili, gubitku, protoku ili bezdimenzijskoj veličini
 3. tek onda koristiti zapis iz sažetka
 
-Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglavlje `U01-U13`, a ne ovaj dodatak.
+Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglavlje `pog. 1–13`, a ne ovaj dodatak.
 
 ## Najčešće oznake
 
@@ -47,7 +47,7 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $\xi$ | lokalni koeficijent gubitka | - |
 | $C_d$ | koeficijent istjecanja otvora | - |
 
-## U01-U02: Osnovne veličine, tlak, viskoznost i kapilarnost
+## pog. 1–2: Osnovne veličine, tlak, viskoznost i kapilarnost
 
 | Formula | Konkretan brojčani primjer |
 | --- | --- |
@@ -62,7 +62,7 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $h = 4\sigma\cos\theta / (\rho g d)$ | Voda u staklenoj kapilari $d = 1\,\text{mm}$, $\theta \approx 0$: $h \approx 30\,\text{mm}$. |
 | $\Delta p = 4\sigma / d$ (Young-Laplace) | Kapljica vode $d = 1\,\text{mm}$, $\sigma = 0{,}072\,\text{N/m}$: $\Delta p \approx 288\,\text{Pa}$. |
 
-## U03-U07: Hidrostatika, plohe i uzgon
+## pog. 3–7: Hidrostatika, plohe i uzgon
 
 | Formula | Konkretan brojčani primjer |
 | --- | --- |
@@ -79,7 +79,7 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $F_U = \rho g V_{istisnuto}$ (Arhimedov zakon) | Tijelo istisne $V = 0{,}1\,\text{m}^3$ vode: $F_U \approx 981\,\text{N}$. |
 | $G = F_U$ (uvjet plivanja) | Brod mase $10\,000\,\text{kg}$ uravnotežen je istisnutim volumenom od $\approx 10{,}02\,\text{m}^3$ vode. |
 
-## U08-U10: Kontinuitet, Bernoulli i gubici
+## pog. 8–10: Kontinuitet, Bernoulli i gubici
 
 | Formula | Konkretan brojčani primjer |
 | --- | --- |
@@ -96,7 +96,7 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $p_0 - p = \tfrac{1}{2}\rho v^2$ (Pitot, dinamički tlak) | Voda, $v = 10\,\text{m/s}$: $\Delta p = 50\,\text{kPa}$. |
 | $v = \sqrt{2(p_0 - p)/\rho}$ | Voda, $\Delta p = 5\,\text{kPa}$: $v \approx 3{,}16\,\text{m/s}$. |
 
-## U11-U13: Količina gibanja, lopatice, potisak i cjevovodi
+## pog. 11–13: Količina gibanja, lopatice, potisak i cjevovodi
 
 | Formula | Konkretan brojčani primjer |
 | --- | --- |
@@ -142,7 +142,7 @@ Najčešća pogreška pri radu sa sažetkom nije pogrešna formula nego pogreša
 ::: {.mf1-mini-summary}
 <p class="mf1-box-label">Sažetak za ponijeti</p>
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">D01</span><span class="mf1-ch-title">Sažetak formula i oznaka</span></span> je karta, a ne zamjena za put. Služi za brzu provjeru oznaka, jedinica i najčešćih relacija, ali glavni smisao svake formule i dalje dolazi iz odgovarajućeg poglavlja udžbenika. Stupac konkretnih brojčanih primjera uz svaku formulu pomaže odmah ustanoviti red veličine i jedinice rezultata prije punog izračuna.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">dod. A</span><span class="mf1-ch-title">Sažetak formula i oznaka</span></span> je karta, a ne zamjena za put. Služi za brzu provjeru oznaka, jedinica i najčešćih relacija, ali glavni smisao svake formule i dalje dolazi iz odgovarajućeg poglavlja udžbenika. Stupac konkretnih brojčanih primjera uz svaku formulu pomaže odmah ustanoviti red veličine i jedinice rezultata prije punog izračuna.
 :::
 
 

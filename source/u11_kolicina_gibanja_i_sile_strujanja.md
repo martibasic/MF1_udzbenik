@@ -97,7 +97,7 @@ ax.text(2.8, 1.4, r'$F_{nosac}$', fontsize=9, ha='center', color=FORCE)
 ax.text(5.0, 0.3, 'Mlaznica / reakcija nosaca (Strojarstvo)',
     fontsize=7.5, ha='center', color=SUB)
 
-fig.suptitle('U11 \u2013 Koli\u010dina gibanja i sile strujanja',
+fig.suptitle('pog. 11 \u2013 Koli\u010dina gibanja i sile strujanja',
              fontsize=13, fontweight='bold', y=1.01)
 plt.show()
 ```
@@ -106,7 +106,7 @@ plt.show()
 
 Količina gibanja ovdje postaje veza između protoka, tlaka i reakcije konstrukcije.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> prvo je poglavlje u kojem stacionarni kontrolni volumen treba čitati zajedno s tlakovima na presjecima i s reakcijom stvarnog cijevnog elementa.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> prvo je poglavlje u kojem stacionarni kontrolni volumen treba čitati zajedno s tlakovima na presjecima i s reakcijom stvarnog cijevnog elementa.
 
 Čim fluid više nije slobodni mlaz u zraku nego prolazi kroz mlaznicu, koljeno ili račvu, sama promjena brzine više nije dovoljna. U račun ulaze i tlakovi na ulazu i izlazu, a rezultat je često sila koju moraju preuzeti vijci, prirubnica ili nosač.
 
@@ -121,8 +121,8 @@ Svako koljeno, T-račva, mlaznica ili završetak cjevovoda koji mijenja smjer il
 
 **Predznanje koje se pretpostavlja:**
 
-- jednadžba kontinuiteta i kontrolni volumen iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
-- Bernoullijeva jednadžba i pojam tlaka u presjeku iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span>;
+- jednadžba kontinuiteta i kontrolni volumen iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
+- Bernoullijeva jednadžba i pojam tlaka u presjeku iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span>;
 - Newtonovi zakoni gibanja i pojam količine gibanja iz Fizike I;
 - vektorska analiza, rastav vektora na komponente.
 
@@ -157,7 +157,7 @@ ali se ovdje zbroj sila ne smije svesti samo na reakciju stijenke. U tipičnom c
 
 Tek nakon toga može se odrediti sila fluida na konstrukciju, odnosno opterećenje vijaka, prirubnice ili nosača. Vektorski zapis ovdje nije formalna strogost radi same sebe: on je jedini način da se iz istoga toka istodobno ispravno pročitaju smjer, predznak i veličina opterećenja konstrukcije.
 
-U <span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> Bernoulli i kontinuitet više nisu dovoljni sami za sebe. Oni vraćaju energetsku sliku i raspodjelu protoka, ali ne kažu koliku silu stvarno mora preuzeti zavareni nosač, sidro ili vijčani spoj. Tu prvi put u punom smislu ulazi zakon količine gibanja za kontrolni volumen.
+U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> Bernoulli i kontinuitet više nisu dovoljni sami za sebe. Oni vraćaju energetsku sliku i raspodjelu protoka, ali ne kažu koliku silu stvarno mora preuzeti zavareni nosač, sidro ili vijčani spoj. Tu prvi put u punom smislu ulazi zakon količine gibanja za kontrolni volumen.
 
 Za opći kontrolni volumen $KV$ omeđen kontrolnom plohom $KP$ vrijedi integralni zakon količine gibanja
 
@@ -196,7 +196,7 @@ $$
 
 Za **laminarni parabolični profil** $v(r) = v_{max}(1 - (r/R)^2)$ analitički je $\beta = 4/3 \approx 1{,}33$. Za **razvijeni turbulentni profil** s eksponentom $1/7$ vrijedi $\beta \approx 1{,}02{-}1{,}03$, što je vrlo blizu jedinici. U većini inženjerskih cjevovodnih proračuna $\beta \approx 1$ je zadovoljavajuća aproksimacija, a u laminarnim sustavima (mikrofluidika, hidraulika viskoznih ulja) korekcija je nužna.
 
-Ovaj koeficijent je sustavni analogon **Coriolisova koeficijenta $\alpha$** iz poglavlja U10 koji korigira kinetičku energiju zbog nejednolikog profila — $\alpha$ stoji uz $v^2/(2g)$ u energijskoj bilanci, $\beta$ stoji uz $\dot{m}v$ u jednadžbi količine gibanja. Veza između njih je da oba koeficijenta odražavaju različitu osjetljivost integrala $v^2$ i $v^3$ na nejednolikosti, pa je $\alpha > \beta > 1$ za svaki nejednoliki profil. Za laminarno strujanje analitički vrijedi $\alpha = 2$, $\beta = 4/3$ — što izravno pokazuje da neispravna pretpostavka $\alpha = \beta = 1$ u laminarnom sustavu može pogriješiti i sile i snage za desetke posto.
+Ovaj koeficijent je sustavni analogon **Coriolisova koeficijenta $\alpha$** iz poglavlja pog. 10 koji korigira kinetičku energiju zbog nejednolikog profila — $\alpha$ stoji uz $v^2/(2g)$ u energijskoj bilanci, $\beta$ stoji uz $\dot{m}v$ u jednadžbi količine gibanja. Veza između njih je da oba koeficijenta odražavaju različitu osjetljivost integrala $v^2$ i $v^3$ na nejednolikosti, pa je $\alpha > \beta > 1$ za svaki nejednoliki profil. Za laminarno strujanje analitički vrijedi $\alpha = 2$, $\beta = 4/3$ — što izravno pokazuje da neispravna pretpostavka $\alpha = \beta = 1$ u laminarnom sustavu može pogriješiti i sile i snage za desetke posto.
 :::
 
 No taj oblik nije dovoljan dok se vanjske sile ne rastave na stvarne doprinose. Za tipičan cijevni element vrijedi
@@ -255,7 +255,7 @@ $$
 Sile $\sum\vec{F}$ uključuju: tlakove na presjecima ($\vec{F}_p$), težinu fluida ($\vec{G}$) i silu stijenke na fluid ($\vec{R}$). Sila fluida na stijenku je $-\vec{R}$ (Newton III).
 :::
 
-To je razlog zašto se u strojarstvu <span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> ne čita kao još jedno poglavlje o formulama, nego kao prvi ozbiljan prijelaz s hidraulike na konstrukcijsko opterećenje. Na tlačnoj strani crpke koljeno i prije vodenog udara već nosi stalni bočni potisak. Na kalibracijskoj mlaznici vijci ne nose "protok", nego razliku tlakne sile i impulsnog skoka. U razdjelnim glavama rashladne vode ili protupožarnim granama geometrija izlaza izravno određuje stalnu silu koju temelj ili konzola moraju preuzimati satima rada.
+To je razlog zašto se u strojarstvu <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> ne čita kao još jedno poglavlje o formulama, nego kao prvi ozbiljan prijelaz s hidraulike na konstrukcijsko opterećenje. Na tlačnoj strani crpke koljeno i prije vodenog udara već nosi stalni bočni potisak. Na kalibracijskoj mlaznici vijci ne nose "protok", nego razliku tlakne sile i impulsnog skoka. U razdjelnim glavama rashladne vode ili protupožarnim granama geometrija izlaza izravno određuje stalnu silu koju temelj ili konzola moraju preuzimati satima rada.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Diferencijalni oblik: Eulerova i Navier-Stokesova jednadžba</p>
@@ -294,7 +294,7 @@ $$
 
 Lijeva strana je **materijalna derivacija** brzine — ubrzanje fluidnog elementa koji prati strujnu liniju. Lokalni član $\partial\vec{u}/\partial t$ opisuje vremensku promjenu brzine u fiksnoj točki prostora; konvektivni član $\vec{u}\cdot\nabla\vec{u}$ opisuje promjenu zbog gibanja elementa kroz polje različitih brzina.
 
-**Realni Newtonov nestlačivi fluid.** Smično naprezanje je $\tau_{ij} = \mu(\partial u_i/\partial x_j + \partial u_j/\partial x_i)$ (tenzorska forma Newtonova zakona viskoznosti iz poglavlja U02), a divergencija tenzora daje $\nabla\cdot\boldsymbol{\tau} = \mu\nabla^2\vec{u}$. Uvrštavanjem se dobiva **Navier-Stokesova jednadžba**:
+**Realni Newtonov nestlačivi fluid.** Smično naprezanje je $\tau_{ij} = \mu(\partial u_i/\partial x_j + \partial u_j/\partial x_i)$ (tenzorska forma Newtonova zakona viskoznosti iz poglavlja pog. 2), a divergencija tenzora daje $\nabla\cdot\boldsymbol{\tau} = \mu\nabla^2\vec{u}$. Uvrštavanjem se dobiva **Navier-Stokesova jednadžba**:
 
 $$
 \boxed{\rho\!\left(\frac{\partial\vec{u}}{\partial t} + \vec{u}\cdot\nabla\vec{u}\right) = -\nabla p + \rho\,\vec{g} + \mu\nabla^2\vec{u}}.
@@ -308,7 +308,7 @@ Tri člana imaju jasnu fizikalnu interpretaciju:
 - **Tlačni član** $-\nabla p$ — sila po jediničnom volumenu od strane gradijenta tlaka;
 - **Viskozni član** $\mu\nabla^2\vec{u}$ — sila po jediničnom volumenu od strane viskozne disipacije; dominira pri malim $Re$, postaje zanemariv u glavnini strujanja pri velikim $Re$ (osim u tankom graničnom sloju uz zid).
 
-Reynoldsov broj $Re = \rho v L/\mu$ proizlazi izravno kao bezdimenzijski omjer **inercijskog i viskoznog člana** — što je razlog zašto on klasificira režime strujanja od laminarnog ($Re$ mali, dominira viskoznost) do turbulentnog ($Re$ velik, dominira inercija). Pri laminarnom strujanju u kružnoj cijevi cjelokupna jednadžba se reducira na izvod Hagen-Poiseuilleovog zakona iz poglavlja U10.
+Reynoldsov broj $Re = \rho v L/\mu$ proizlazi izravno kao bezdimenzijski omjer **inercijskog i viskoznog člana** — što je razlog zašto on klasificira režime strujanja od laminarnog ($Re$ mali, dominira viskoznost) do turbulentnog ($Re$ velik, dominira inercija). Pri laminarnom strujanju u kružnoj cijevi cjelokupna jednadžba se reducira na izvod Hagen-Poiseuilleovog zakona iz poglavlja pog. 10.
 :::
 
 ## Riješeni primjeri
@@ -328,7 +328,7 @@ Reynoldsov broj $Re = \rho v L/\mu$ proizlazi izravno kao bezdimenzijski omjer *
 
 1. Odrediti silu potrebnu da ploča ostane u mirovanju.
 
-![U11 Val 1 - mlaz na ploču](../assets/print/u11_val1_mlaz_na_plocu.svg)
+![Val 1 - mlaz na ploču](../assets/print/u11_val1_mlaz_na_plocu.svg)
 
 **Pretpostavke i model**
 
@@ -383,7 +383,7 @@ Kod slobodnog mlaza koji se na ploči zaustavlja u osi udara sila se dobiva izra
 
 Pretpostavite jednolike profile brzine u presjecima 1 i 2, zanemarite gubitke i promatrajte horizontalnu ravninu.
 
-![U11 Val 2 - kalibracijska mlaznica na prirubnici](../assets/print/u11_val2_mlaznica_prirubnica.svg)
+![Val 2 - kalibracijska mlaznica na prirubnici](../assets/print/u11_val2_mlaznica_prirubnica.svg)
 
 **Pretpostavke i model**
 
@@ -471,7 +471,7 @@ Zanemari težinu fluida u koljenu i gubitke.
 2. komponente sile fluida na koljeno.
 3. iznos rezultantne sile koju mora preuzeti sidreni nosač.
 
-![U11 Val 3 - horizontalno koljeno i reakcija nosača](../assets/print/u11_val3_koljeno_reakcija.svg)
+![Val 3 - horizontalno koljeno i reakcija nosača](../assets/print/u11_val3_koljeno_reakcija.svg)
 
 **Pretpostavke i model**
 
@@ -531,7 +531,7 @@ Sidreni nosač mora preuzeti jednaku i suprotnu silu: ulijevo i prema gore.
 
 **Provjera i komentar**
 
-U ovom koljenu fluid djeluje na konstrukciju silom od oko $1{,}45\ \text{kN}$, pretežno prema desno, ali i s manjom komponentom prema dolje. To je tipičan <span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> rezultat: promjena smjera strujanja ne daje samo novi tlak ili novu brzinu, nego stvarno opterećenje koje mora preuzeti nosač.
+U ovom koljenu fluid djeluje na konstrukciju silom od oko $1{,}45\ \text{kN}$, pretežno prema desno, ali i s manjom komponentom prema dolje. To je tipičan <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> rezultat: promjena smjera strujanja ne daje samo novi tlak ili novu brzinu, nego stvarno opterećenje koje mora preuzeti nosač.
 
 1. Glavna komponenta sile mora ići u smjeru ulaznog tlaka i promjene osi toka, pa je ovdje prirodno veća u osi $x$ nego u osi $y$.
 2. Kad se izlazni presjek suzi, izlazna brzina mora porasti i povećati impulsni doprinos u osi $y$.
@@ -566,7 +566,7 @@ Oba izlaza otvorena su prema atmosferi. Smatraj da je sustav u horizontalnoj rav
 2. volumenske protoke $Q_1$, $Q_2$ i $Q_3$.
 3. komponente sile fluida na račvu i rezultantu sile koju mora preuzeti sidrena konzola.
 
-![U11 CH 1 - T-račva na sidrenoj konzoli](../assets/print/u11_ch1_t_racva_konzola.svg)
+![CH 1 - T-račva na sidrenoj konzoli](../assets/print/u11_ch1_t_racva_konzola.svg)
 
 **Pretpostavke i model**
 
@@ -668,7 +668,7 @@ Smjer rezultante je prema desno i prema dolje, pa sidrena konzola mora preuzeti 
 
 **Provjera i komentar**
 
-Ovo je prvi stvarni integrativni zadatak <span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span>: iz ulaznog pretlaka najprije se Bernoullijem vraćaju izlazne brzine, zatim kontinuitet zatvara razdjelu protoka, a tek onda jednadžba količine gibanja daje opterećenje račve. Dobivena rezultanta na konzoli iznosi oko $1{,}03\ \text{kN}$.
+Ovo je prvi stvarni integrativni zadatak <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span>: iz ulaznog pretlaka najprije se Bernoullijem vraćaju izlazne brzine, zatim kontinuitet zatvara razdjelu protoka, a tek onda jednadžba količine gibanja daje opterećenje račve. Dobivena rezultanta na konzoli iznosi oko $1{,}03\ \text{kN}$.
 
 1. Izlazne brzine moraju biti veće od ulazne jer se ukupna izlazna površina smanjila, a ulazni tlak je pozitivan.
 2. Komponenta sile u osi $x$ mora ostati dominantna jer u tom smjeru djeluje i ulazna tlakna sila i dio impulsne bilance.
@@ -698,7 +698,7 @@ Oba izlaza otvorena su prema atmosferi, nalaze se na istoj geodetskoj razini kao
 4. horizontalnu reakciju konzole $R_x$ i ukupnu rezultantu koju mora preuzeti nosač.
 5. je li konzola dopuštene rezultante $1{,}0\ \text{kN}$ dovoljna za ovaj radni režim.
 
-![U11 CH 2 - Y-račva s mjerenom reakcijom konzole](../assets/print/u11_ch2_y_racva_reakcija.svg)
+![CH 2 - Y-račva s mjerenom reakcijom konzole](../assets/print/u11_ch2_y_racva_reakcija.svg)
 
 **Pretpostavke i model**
 
@@ -1292,7 +1292,7 @@ Vrijedi i tada, jer zakon količine gibanja proizlazi iz Newtonovih zakona i ne 
 	**Skica:** da - Y-račva s jednim ulazom, dva izlaza, koordinatnim osima i kutom od $60^\circ$.
 :::
 
-![U11 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u11_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u11_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -1323,7 +1323,7 @@ Koljena, račve, mlaznice i prirubnice u pumpnim stanicama ne otkazuju zato što
 
 Jednadžba količine gibanja u ovom obliku čita stacionarni problem na jasno odabranom kontrolnom volumenu. Ako sustav ulazi u prolazne pojave, vodeni udar ili brzu promjenu protoka, stacionarna bilanca količine gibanja više nije dovoljna za puni opis opterećenja.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> je poglavlje u kojem zakon količine gibanja više nije samo zapis promjene brzine, nego i konstrukcijski odgovor sustava. Kad su povezani sila na ploču, protok, tlak i sila u vijcima, prijelaz prema složenijim koljenima, račvama i prema <span class="mf1-ch-ref"><span class="mf1-ch-code">U12</span><span class="mf1-ch-title">Pokretne lopatice i potisak</span></span> postaje prirodan.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> je poglavlje u kojem zakon količine gibanja više nije samo zapis promjene brzine, nego i konstrukcijski odgovor sustava. Kad su povezani sila na ploču, protok, tlak i sila u vijcima, prijelaz prema složenijim koljenima, račvama i prema <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Pokretne lopatice i potisak</span></span> postaje prirodan.
 :::
 
 ::: {.mf1-numerika}

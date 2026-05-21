@@ -1,5 +1,5 @@
 ---
-title: "U04 - Relativno mirovanje fluida"
+title: "4. Relativno mirovanje fluida"
 page-layout: article
 ---
 

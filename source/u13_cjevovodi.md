@@ -114,7 +114,7 @@ ax.annotate('', xy=(6.0, 2.1), xytext=(4.0, 2.1),
 ax.text(5.0, 0.3, 'Paralelna vodovodna mreža',
     fontsize=7.5, ha='center', color=SUB)
 
-fig.suptitle('U13 \u2013 Cjevovodi',
+fig.suptitle('pog. 13 \u2013 Cjevovodi',
              fontsize=13, fontweight='bold', y=1.01)
 plt.show()
 ```
@@ -123,7 +123,7 @@ plt.show()
 
 Jedan cjevovod ovdje zatvara gotovo cijeli kolegij.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U13</span><span class="mf1-ch-title">Cjevovodi</span></span> nije samo još jedno poglavlje o gubicima. U cjevovodima se na jednom mjestu spajaju kontinuitet, realni Bernoulli, izbor modela trenja i logika spajanja više grana. Zato cjevovodni zadatak vrlo brzo otkrije je li redoslijed modeliranja doista razumljen ili se samo prepoznaju pojedine formule.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> nije samo još jedno poglavlje o gubicima. U cjevovodima se na jednom mjestu spajaju kontinuitet, realni Bernoulli, izbor modela trenja i logika spajanja više grana. Zato cjevovodni zadatak vrlo brzo otkrije je li redoslijed modeliranja doista razumljen ili se samo prepoznaju pojedine formule.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -136,8 +136,8 @@ Cjevovodi su stvarni završetak kolegija jer se u njima na jednom mjestu sastaju
 
 **Predznanje koje se pretpostavlja:**
 
-- realni Bernoulli s gubicima iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>;
-- kontinuitet i pojam protoka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U08</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
+- realni Bernoulli s gubicima iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>;
+- kontinuitet i pojam protoka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
 - Moodyjev dijagram, Reynoldsov broj i koeficijent trenja $\lambda$;
 - osnove rješavanja nelinearnih i implicitnih jednadžbi (iterativno).
 
@@ -361,7 +361,7 @@ Interaktivni prikaz omogućuje mijenjanje duljina i promjera dvije paralelne gra
 
 To je glavni fizikalni smisao mreže: u seriji svi dijelovi nose isti protok, a u paraleli sve grane "plaćaju" isti pad ukupne energije između zajedničkih čvorova. Zbog toga svaka promjena promjera, hrapavosti, otvora ventila ili nove grane odmah mijenja radnu točku cijeloga sustava.
 
-U <span class="mf1-ch-ref"><span class="mf1-ch-code">U10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span> već je bilo jasno da realni fluid troši energiju. U <span class="mf1-ch-ref"><span class="mf1-ch-code">U13</span><span class="mf1-ch-title">Cjevovodi</span></span> ta se slika širi na cijeli sustav dionica i čvorova, pa redoslijed modeliranja mora ostati stabilan: najprije mreža i dionice, zatim brzina i Reynoldsov broj, pa tek onda $\lambda$ i ukupni gubitci.
+U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span> već je bilo jasno da realni fluid troši energiju. U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> ta se slika širi na cijeli sustav dionica i čvorova, pa redoslijed modeliranja mora ostati stabilan: najprije mreža i dionice, zatim brzina i Reynoldsov broj, pa tek onda $\lambda$ i ukupni gubitci.
 
 Zato u serijskom spoju isti protok prolazi kroz sve dionice, a u paralelnom je između istih čvorova jednak pad ukupne energije.
 
@@ -392,7 +392,7 @@ Zato se većina osnovnih cjevovodnih zadataka može svesti na tri tipa: za zadan
 2. Reynoldsov broj i režim strujanja.
 3. ukupni gubitak energije $h_w$.
 
-![U13 Val 1 - cjevovod, Reynolds i gubici](../assets/print/u13_val1_reynolds_i_gubici.svg)
+![Val 1 - cjevovod, Reynolds i gubici](../assets/print/u13_val1_reynolds_i_gubici.svg)
 
 **Pretpostavke i model**
 
@@ -475,7 +475,7 @@ Ista cijev u CFD-u: cilindrična mreža duljine $42\ \text{m}$, na ulazu zadan p
 1. brzine $v_1$ i $v_2$.
 2. protoke $Q_1$ i $Q_2$.
 
-![U13 Val 2 - paralelne grane](../assets/print/u13_val2_paralelne_grane.svg)
+![Val 2 - paralelne grane](../assets/print/u13_val2_paralelne_grane.svg)
 
 **Pretpostavke i model**
 
@@ -543,7 +543,7 @@ $$
 3. protok gubitka kroz otvoreni servisni ispust.
 4. ekvivalentnu površinu $A_p$ i promjer $d_p$ servisnog ispušta.
 
-![U13 Val 3 - nezatvoreni servisni ispust na rashladnom cjevovodu](../assets/print/u13_val3_servisni_ispust.svg)
+![Val 3 - nezatvoreni servisni ispust na rashladnom cjevovodu](../assets/print/u13_val3_servisni_ispust.svg)
 
 **Pretpostavke i model**
 
@@ -640,7 +640,7 @@ Za promatrani režim uzmi da su Darcyjevi koeficijenti trenja već određeni s M
 3. gubitke energije u dovodnom vodu $h_0$, u paralelnim granama $h_p$ i u odvodnom vodu $h_3$.
 4. snagu koju sustav disipira na hidrauličkim gubicima.
 
-![U13 CH 1 - serijsko-paralelna mreža](../assets/print/u13_ch1_serijsko_paralelna_mreza.svg)
+![CH 1 - serijsko-paralelna mreža](../assets/print/u13_ch1_serijsko_paralelna_mreza.svg)
 
 **Pretpostavke i model**
 
@@ -782,7 +782,7 @@ $$
 
 **Provjera i komentar**
 
-Ovaj primjer zatvara mrežni sloj <span class="mf1-ch-ref"><span class="mf1-ch-code">U13</span><span class="mf1-ch-title">Cjevovodi</span></span> u jednom sustavu: iz uvjeta jednakog gubitka energije slijedi $v_2 \approx 0{,}917 v_1$, ukupni protok mreže je oko $22{,}9\ \text{L/s}$, a raspodjela po granama iznosi oko $15{,}1\ \text{L/s}$ i $7{,}8\ \text{L/s}$. Gubici se tada uredno slažu kao serijski zbroj $h_0 + h_p + h_3 \approx 12\ \text{m}$, pa cijeli sustav disipira oko $2{,}70\ \text{kW}$ hidrauličke snage.
+Ovaj primjer zatvara mrežni sloj <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> u jednom sustavu: iz uvjeta jednakog gubitka energije slijedi $v_2 \approx 0{,}917 v_1$, ukupni protok mreže je oko $22{,}9\ \text{L/s}$, a raspodjela po granama iznosi oko $15{,}1\ \text{L/s}$ i $7{,}8\ \text{L/s}$. Gubici se tada uredno slažu kao serijski zbroj $h_0 + h_p + h_3 \approx 12\ \text{m}$, pa cijeli sustav disipira oko $2{,}70\ \text{kW}$ hidrauličke snage.
 
 1. Šira grana mora nositi veći dio ukupnog protoka, pa ovdje mora biti $Q_1 > Q_2$.
 2. U paralelnim granama ne izjednačava se protok nego gubitak energije između istih čvorova.
@@ -1366,7 +1366,7 @@ Koeficijent trenja $\lambda$ ovisi o Reynoldsovu broju, a Reynoldsov broj o brzi
 	**Skica:** da - jedan dovodni vod, dvije paralelne grane i jedan odvodni vod između dvaju spremnika.
 :::
 
-![U13 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u13_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u13_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -1381,7 +1381,7 @@ Koeficijent trenja $\lambda$ ovisi o Reynoldsovu broju, a Reynoldsov broj o brzi
 
 **Najčešća pogreška**
 
-Najčešća greška u <span class="mf1-ch-ref"><span class="mf1-ch-code">U13</span><span class="mf1-ch-title">Cjevovodi</span></span> nije sama algebra nego krivi redoslijed. Čest je kvar kad račun krene od koeficijenta trenja ili čak od ukupnog gubitka, a da još nisu određeni brzina, režim strujanja i logika mreže. Drugi česti kvar je primjena pravila istog protoka na paralelne grane, gdje zapravo mora biti isti gubitak energije.
+Najčešća greška u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> nije sama algebra nego krivi redoslijed. Čest je kvar kad račun krene od koeficijenta trenja ili čak od ukupnog gubitka, a da još nisu određeni brzina, režim strujanja i logika mreže. Drugi česti kvar je primjena pravila istog protoka na paralelne grane, gdje zapravo mora biti isti gubitak energije.
 
 **Nakon ovoga poglavlja mora biti moguće**
 
@@ -1398,7 +1398,7 @@ Industrijski vod, brodska rashladna mreža ili kotlovnički razvod ne mogu se pr
 
 Koeficijent trenja nije konstanta neovisna o protoku, a raspodjela po paralelnim granama ne čita se jednom zauvijek. Promjena hrapavosti, položaja ventila, onečišćenje ili dodatni ispust mogu pomaknuti cijeli sustav, pa mrežu uvijek treba čitati kao osjetljiv i međusobno povezan model.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U13</span><span class="mf1-ch-title">Cjevovodi</span></span> zatvara osnovni dinamički niz: od protoka i energije dolazi se do stvarnog sustava cijevi u kojem su režim strujanja, trenje i logika mreže jednako važni. Kad je ovdje jasan redoslijed $Q \to v \to Re \to \lambda \to h_w$, kasnije se sigurnije čitaju i složeniji cjevovodni sustavi.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> zatvara osnovni dinamički niz: od protoka i energije dolazi se do stvarnog sustava cijevi u kojem su režim strujanja, trenje i logika mreže jednako važni. Kad je ovdje jasan redoslijed $Q \to v \to Re \to \lambda \to h_w$, kasnije se sigurnije čitaju i složeniji cjevovodni sustavi.
 :::
 
 ::: {.mf1-numerika}

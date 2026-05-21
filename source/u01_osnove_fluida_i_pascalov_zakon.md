@@ -82,7 +82,7 @@ $$
 Gustoća $\rho$ mjeri masenu zbijenost fluida – koliko kilograma mase stane u jedan kubni metar. Specifična težina $\gamma = \rho g$ pretvara tu masu u gravitacijsku silu: to je ono što fluid u Zemljinom polju fizički "teži" po kubnom metru. Relativna gustoća $s_r$ je bezdimenzijski omjer prema vodi: vrijednost 0,86 odmah kaže da ulje pluta na vodi jer je lakše, a vrijednost 13,6 za živu kaže da gotovo 14 litara vode teži koliko litra žive.
 :::
 
-Gustoća govori koliko mase ima u jedinici volumena, specifična težina kolika je težina tog volumena, a relativna gustoća daje odnos prema vodi kao referenci. Ako se ove tri veličine ne odvoje u <span class="mf1-ch-ref"><span class="mf1-ch-code">U01</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>, kasnije pogreške u hidrostatici i uzgonu izgledaju kao računski problem, iako su zapravo problem modela. Tlak je normalna sila po jedinici površine. U mirujućem fluidu tlak u jednoj točki djeluje jednako u svim smjerovima, pa ga opisujemo kao skalarno polje, a ne kao vektor. Taj je korak temeljni: kasnije ćemo iz tlaka dobivati sile na plohe i stijenke, ali sam tlak nije sila nego intenzitet normalnog naprezanja.
+Gustoća govori koliko mase ima u jedinici volumena, specifična težina kolika je težina tog volumena, a relativna gustoća daje odnos prema vodi kao referenci. Ako se ove tri veličine ne odvoje u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>, kasnije pogreške u hidrostatici i uzgonu izgledaju kao računski problem, iako su zapravo problem modela. Tlak je normalna sila po jedinici površine. U mirujućem fluidu tlak u jednoj točki djeluje jednako u svim smjerovima, pa ga opisujemo kao skalarno polje, a ne kao vektor. Taj je korak temeljni: kasnije ćemo iz tlaka dobivati sile na plohe i stijenke, ali sam tlak nije sila nego intenzitet normalnog naprezanja.
 
 ::: {.mf1-we}
 <p class="mf1-box-label">Kratki primjer — Gustoća, specifična težina i relativna gustoća ulja&nbsp;<span class="mf1-level">T1</span></p>
@@ -190,7 +190,7 @@ Ova jednadžba je izravna posljedica nestlačivosti fluida: volumen koji uđe u 
 
 Veća izlazna sila zato dolazi uz manji izlazni pomak.
 
-U ovom se poglavlju zato zadržavamo na osnovnom hidrauličnom prijenosu u kojem se tlak prenosi kroz zatvoreni mirujući fluid bez dodatnog hodanja po visinama. Kad radne točke nisu na istoj razini, isti se sustav mora čitati zajedno s hidrostatikom, što pripada <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>.
+U ovom se poglavlju zato zadržavamo na osnovnom hidrauličnom prijenosu u kojem se tlak prenosi kroz zatvoreni mirujući fluid bez dodatnog hodanja po visinama. Kad radne točke nisu na istoj razini, isti se sustav mora čitati zajedno s hidrostatikom, što pripada <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Pascalov zakon i očuvanje rada</p>
@@ -288,7 +288,7 @@ $$
 2. manometarski tlak u ulju neposredno ispod klipa.
 3. silu na radnom klipu površine $A_2$.
 
-![U01 Val 1 - opterećeni klip i tlak u zatvorenom cilindru](../assets/print/u01_val1_klip_manometar.svg)
+![Val 1 - opterećeni klip i tlak u zatvorenom cilindru](../assets/print/u01_val1_klip_manometar.svg)
 
 **Pretpostavke i model**
 
@@ -347,7 +347,7 @@ $$
 
 Zanemari gubitke i stlačivost ulja.
 
-![U01 Val 2 - servisna hidraulična dizalica](../assets/print/u01_val2_hidraulicna_dizalica.svg)
+![Val 2 - servisna hidraulična dizalica](../assets/print/u01_val2_hidraulicna_dizalica.svg)
 
 **Pretpostavke i model**
 
@@ -418,7 +418,7 @@ $$
 
 Zanemari gubitke i stlačivost ulja.
 
-![U01 Val 3 - dvostruki hidraulični podizac](../assets/print/u01_val3_dvostruki_podizac.svg)
+![Val 3 - dvostruki hidraulični podizac](../assets/print/u01_val3_dvostruki_podizac.svg)
 
 **Pretpostavke i model**
 
@@ -505,7 +505,7 @@ Zanemari gubitke i stlačivost ulja. Pretpostavi da su oba radna cilindra jednak
 3. ukupni zbroj hodova pumpnog klipa potreban da se platforma podigne za $s_L$.
 4. najmanji broj punih pumpnih hodova potreban za taj podizaj.
 
-![U01 CH 1 - dvostruka hidraulična platforma s ručnom pumpom](../assets/print/u01_ch1_dvostruka_platforma_manometar.svg)
+![CH 1 - dvostruka hidraulična platforma s ručnom pumpom](../assets/print/u01_ch1_dvostruka_platforma_manometar.svg)
 
 **Pretpostavke i model**
 
@@ -919,7 +919,7 @@ Gustoća $\rho$ je masa po jedinici volumena (kg/m³), specifična težina $\gam
 	**Skica:** da - pumpni klip, tri jednaka radna cilindra i vertikalni pomak radnog stola.
 :::
 
-![U01 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u01_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u01_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -934,7 +934,7 @@ Gustoća $\rho$ je masa po jedinici volumena (kg/m³), specifična težina $\gam
 
 **Najčešća pogreška**
 
-Najčešća pogreška u <span class="mf1-ch-ref"><span class="mf1-ch-code">U01</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> nije algebra nego pogrešna identifikacija fizikalne veličine. Ako se uzme $\rho$ umjesto $\gamma$, tlak umjesto sile ili isti tlak zamijeni istom silom na oba klipa, cijeli račun može izgledati uredno, a biti fizikalno pogrešan.
+Najčešća pogreška u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> nije algebra nego pogrešna identifikacija fizikalne veličine. Ako se uzme $\rho$ umjesto $\gamma$, tlak umjesto sile ili isti tlak zamijeni istom silom na oba klipa, cijeli račun može izgledati uredno, a biti fizikalno pogrešan.
 
 **Nakon ovoga poglavlja mora biti moguće**
 
@@ -950,7 +950,7 @@ Hidraulična dizalica, preša ili kormilarski pogon rade pouzdano samo ako je ja
 
 Pascalov zakon u ovom obliku vrijedi kao idealizacija zatvorenog mirujućeg fluida. U stvarnim sustavima odziv mijenjaju stlačivost fluida, elastičnost vodova, unutarnje propuštanje i gubici u ventilima, pa se stvarna sila i pomak ne prenose savršeno.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U01</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> uspostavlja temeljni jezik cijeloga kolegija. Kad su ovdje jasni tlak, gustoća i Pascalov zakon, kasnija poglavlja o hidrostatici, energiji i strujanju čitaju se sigurnije i bez miješanja osnovnih veličina.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> uspostavlja temeljni jezik cijeloga kolegija. Kad su ovdje jasni tlak, gustoća i Pascalov zakon, kasnija poglavlja o hidrostatici, energiji i strujanju čitaju se sigurnije i bez miješanja osnovnih veličina.
 :::
 
 ::: {.mf1-numerika}

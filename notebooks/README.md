@@ -52,19 +52,19 @@ Quarto projekta (vidi `scripts/postavi_jupyterlite.md`).
 
 | Oznaka | Tema | Poglavlje |
 |---|---|---|
-| `u01_hidraulicna_presa.ipynb` | Hidraulična preša — pojačanje sile i pomak klipa | U01 |
-| `u02_kapilarni_uspon.ipynb` | Kapilarni uspon u tankoj cijevi | U02 |
-| `u03_diferencijalni_manometar.ipynb` | Diferencijalni manometar s dva fluida | U03 |
-| `u04_paraboloidna_povrsina.ipynb` | Paraboloidna slobodna površina u rotirajućem spremniku | U04 |
-| `u05_sila_na_ravnu_plohu.ipynb` | Sila i hvatište na pravokutnu plohu pod vodom | U05 |
-| `u06_zakrivljena_ploha.ipynb` | Sila na zakrivljenu plohu — četvrtina kruga | U06 |
-| `u07_gaz_plivajuceg_tijela.ipynb` | Gaz plivajućeg tijela | U07 |
-| `u08_kontinuitet_suzenje.ipynb` | Kontinuitet u suženju cijevi | U08 |
-| `u09_venturi.ipynb` | Venturijeva cijev — utjecaj geometrije na tlak i brzinu | U09 |
-| `u10_moody_dijagram.ipynb` | Moodyjev dijagram — koeficijent trenja | U10 |
-| `u11_sila_na_koljeno.ipynb` | Sila na koljeno — promjena smjera strujanja | U11 |
-| `u12_pelton_lopatica.ipynb` | Trokuti brzina i snaga na Peltonovoj lopatici | U12 |
-| `u13_paralelne_grane.ipynb` | Paralelne grane cjevovoda — raspodjela protoka | U13 |
+| `u01_hidraulicna_presa.ipynb` | Hidraulična preša — pojačanje sile i pomak klipa | pog. 1 |
+| `u02_kapilarni_uspon.ipynb` | Kapilarni uspon u tankoj cijevi | pog. 2 |
+| `u03_diferencijalni_manometar.ipynb` | Diferencijalni manometar s dva fluida | pog. 3 |
+| `u04_paraboloidna_povrsina.ipynb` | Paraboloidna slobodna površina u rotirajućem spremniku | pog. 4 |
+| `u05_sila_na_ravnu_plohu.ipynb` | Sila i hvatište na pravokutnu plohu pod vodom | pog. 5 |
+| `u06_zakrivljena_ploha.ipynb` | Sila na zakrivljenu plohu — četvrtina kruga | pog. 6 |
+| `u07_gaz_plivajuceg_tijela.ipynb` | Gaz plivajućeg tijela | pog. 7 |
+| `u08_kontinuitet_suzenje.ipynb` | Kontinuitet u suženju cijevi | pog. 8 |
+| `u09_venturi.ipynb` | Venturijeva cijev — utjecaj geometrije na tlak i brzinu | pog. 9 |
+| `u10_moody_dijagram.ipynb` | Moodyjev dijagram — koeficijent trenja | pog. 10 |
+| `u11_sila_na_koljeno.ipynb` | Sila na koljeno — promjena smjera strujanja | pog. 11 |
+| `u12_pelton_lopatica.ipynb` | Trokuti brzina i snaga na Peltonovoj lopatici | pog. 12 |
+| `u13_paralelne_grane.ipynb` | Paralelne grane cjevovoda — raspodjela protoka | pog. 13 |
 
 ## Dodavanje novog notebooka
 

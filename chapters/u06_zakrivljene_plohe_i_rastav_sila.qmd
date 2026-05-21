@@ -1,5 +1,5 @@
 ---
-title: "U06 - Zakrivljene plohe i rastav sila"
+title: "6. Zakrivljene plohe i rastav sila"
 page-layout: article
 ---
 

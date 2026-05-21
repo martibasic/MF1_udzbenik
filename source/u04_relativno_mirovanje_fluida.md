@@ -1,4 +1,4 @@
-![Pregled poglavlja U04: Relativno mirovanje fluida](../assets/print/u04_fig_uvod_pregled.svg){#fig-uvod-u04 fig-align="center"}
+![Pregled poglavlja pog. 4: Relativno mirovanje fluida](../assets/print/u04_fig_uvod_pregled.svg){#fig-uvod-u04 fig-align="center"}
 
 ## Relativno mirovanje kao hidrostatika u novom polju sila
 
@@ -17,7 +17,7 @@ Relativno mirovanje vidi se svaki put kad se tekućina "smiri" u spremniku koji 
 
 **Predznanje koje se pretpostavlja:**
 
-- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
+- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
 - kinematika i dinamika kružnog gibanja iz Fizike I (kutna brzina, centrifugalno ubrzanje);
 - pojam neinercijalnog referentnog okvira i prividnih sila;
 - diferencijalni račun više varijabli i osnove parcijalnih derivacija.
@@ -49,7 +49,7 @@ Razlika razina $\Delta h$ je izravna mjera koliko ubrzanje "naginje" slobodnu po
 
 gdje je $\Delta h$ razlika razina slobodne površine na krajevima spremnika.
 
-Najvažnija promjena u odnosu na <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> jest to da tlak više ne raste samo po dubini mjerene okomito prema dolje. Najprije treba odrediti smjer efektivnog polja sila, a tek zatim čitati geometriju slobodne površine i lokalnu dubinu.
+Najvažnija promjena u odnosu na <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> jest to da tlak više ne raste samo po dubini mjerene okomito prema dolje. Najprije treba odrediti smjer efektivnog polja sila, a tek zatim čitati geometriju slobodne površine i lokalnu dubinu.
 
 Matematika zato ne prati "nagnutu vodu" kao poseban slučaj, nego uvodi novi vektor efektivne gravitacije. Kad se taj vektor jednom odredi, geometrija slobodne površine i raspodjela tlaka opet postaju čitljive kao u hidrostatici.
 
@@ -76,7 +76,7 @@ Time se uvodi efektivno polje sila $\vec g_{eff}$: fluid se u akceleriranom spre
 
 $$\frac{\partial p}{\partial x} = -\rho a_x, \qquad \frac{\partial p}{\partial z} = -\rho(g+a_z)$$
 
-Klasična hidrostatika iz <span class="mf1-ch-ref"><span class="mf1-ch-code">U03</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> samo je poseban slučaj za $a_x = 0$ i $a_z = 0$. Jednako tako, pri slobodnom padu s $a_z = -g$ nestaje hidrostatički porast tlaka po visini, jer cijeli fluidni stupac ubrzava zajedno sa spremnikom. U najčešćem slučaju vodoravnog ubrzanja udesno vrijedi $a_x = a$ i $a_z = 0$, pa se relacija svodi na poznati zapis
+Klasična hidrostatika iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> samo je poseban slučaj za $a_x = 0$ i $a_z = 0$. Jednako tako, pri slobodnom padu s $a_z = -g$ nestaje hidrostatički porast tlaka po visini, jer cijeli fluidni stupac ubrzava zajedno sa spremnikom. U najčešćem slučaju vodoravnog ubrzanja udesno vrijedi $a_x = a$ i $a_z = 0$, pa se relacija svodi na poznati zapis
 
 $$\frac{\partial p}{\partial x} = -\rho a, \qquad \frac{\partial p}{\partial z} = -\rho g$$
 
@@ -196,7 +196,7 @@ Iz dvaju graničnih uvjeta jasno se vidi koja se pojava javlja prva: ako je spre
 2. visinu vode uz stražnju i prednju stijenku.
 3. kut nagiba slobodne površine prema vodoravnici.
 
-![U04 Val 2 - otvoreni spremnik na laboratorijskim kolicima](../assets/print/u04_val2_laboratorijska_kolica.svg)
+![Val 2 - otvoreni spremnik na laboratorijskim kolicima](../assets/print/u04_val2_laboratorijska_kolica.svg)
 
 **Pretpostavke i model**
 
@@ -256,7 +256,7 @@ Pri zadanom ubrzanju slobodna površina povisi se na stražnjoj strani za oko $1
 
 Zanemarite valjanje, površinsku napetost i prolazne oscilacije.
 
-![U04 Val 1 - procesna kada na ubrzanoj platformi](../assets/print/u04_val1_procesna_kada.svg)
+![Val 1 - procesna kada na ubrzanoj platformi](../assets/print/u04_val1_procesna_kada.svg)
 
 **Pretpostavke i model**
 
@@ -313,7 +313,7 @@ Ako se želi i položaj hvatišta rezultante, ono je za trokutastu raspodjelu na
 
 Zanemari prolazne oscilacije i promjenu gustoće plina iznad tekućine.
 
-![U04 Val 3 - zatvoreni servisni modul s kosom inspekcijskom stijenkom](../assets/print/u04_val3_kosa_stijenka.svg)
+![Val 3 - zatvoreni servisni modul s kosom inspekcijskom stijenkom](../assets/print/u04_val3_kosa_stijenka.svg)
 
 **Pretpostavke i model**
 
@@ -459,7 +459,7 @@ Nakon prolaznog razdoblja voda se postavi u relativno mirovanje kao kruto rotira
 
 Zanemari površinsku napetost, valjanje i otpor zraka.
 
-![U04 CH 1 - rotirajući cilindrični spremnik](../assets/print/u04_ch1_rotirajuci_spremnik_paraboloid.svg)
+![CH 1 - rotirajući cilindrični spremnik](../assets/print/u04_ch1_rotirajuci_spremnik_paraboloid.svg)
 
 **Pretpostavke i model**
 
@@ -482,7 +482,7 @@ $$
 
 ::: {.callout-note}
 ## Fizikalno značenje
-Parabola $h(r) = h_C + \omega^2 r^2/(2g)$ opisuje oblik slobodne površine: na osi vrtnje površina je najniža ($h_C$), a prema stjenci raste kvadratno. Veća kutna brzina $\omega$ ili veći polumjer $R$ daju strmiji paraboloid. Faktor $2g$ u nazivniku dolazi od integracije centrifugalnog ubrzanja $\omega^2 r$ po radijusu – isti tip kao $v^2/(2g)$ u Bernoullijevoj jednadžbi koja slijedi u <span class="mf1-ch-ref"><span class="mf1-ch-code">U09</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span>.
+Parabola $h(r) = h_C + \omega^2 r^2/(2g)$ opisuje oblik slobodne površine: na osi vrtnje površina je najniža ($h_C$), a prema stjenci raste kvadratno. Veća kutna brzina $\omega$ ili veći polumjer $R$ daju strmiji paraboloid. Faktor $2g$ u nazivniku dolazi od integracije centrifugalnog ubrzanja $\omega^2 r$ po radijusu – isti tip kao $v^2/(2g)$ u Bernoullijevoj jednadžbi koja slijedi u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span>.
 :::
 
 ::: {.mf1-interaktivno}
@@ -835,7 +835,7 @@ Ne; model vrijedi samo nakon što se fluid "smiri" u ubrzanom okviru, što zahti
 	**Skica:** da - aksijalni presjek cilindra, paraboloidna slobodna ploha, točke na osi i uz stijenu te kote $R$, $H$ i $h_0$.
 :::
 
-![U04 zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u04_vjezbe_skice.svg)
+![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u04_vjezbe_skice.svg)
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -866,7 +866,7 @@ Gorivni spremnik vozila pri kočenju, autocisterna u zavoju i centrifuga u radno
 
 Ovaj model vrijedi kad se tekućina prema spremniku zaista smirila, odnosno kad su prolazne oscilacije zanemarive. Ako su valjanje, udari, prskanje ili slobodno njihanje tekućine bitni, slika relativnog mirovanja više nije dovoljna sama za sebe.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">U04</span><span class="mf1-ch-title">Relativno mirovanje fluida</span></span> nije samo nastavak hidrostatike, nego promjena referentnog okvira. Prvo se određuje kako izgleda efektivno polje sila, zatim slobodna površina, a tek onda tlak i sila na stijenkama.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 4</span><span class="mf1-ch-title">Relativno mirovanje fluida</span></span> nije samo nastavak hidrostatike, nego promjena referentnog okvira. Prvo se određuje kako izgleda efektivno polje sila, zatim slobodna površina, a tek onda tlak i sila na stijenkama.
 :::
 
 ::: {.mf1-numerika}

@@ -1,5 +1,5 @@
 ---
-title: "U08 - Kontrolni volumen i kontinuitet"
+title: "8. Kontrolni volumen i kontinuitet"
 page-layout: article
 ---
 

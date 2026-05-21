@@ -1,5 +1,5 @@
 ---
-title: "U01 - Osnove fluida i Pascalov zakon"
+title: "1. Osnove fluida i Pascalov zakon"
 page-layout: article
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "D04 - Numerička mehanika fluida"
+title: "Numerička mehanika fluida"
 page-layout: article
 ---
 

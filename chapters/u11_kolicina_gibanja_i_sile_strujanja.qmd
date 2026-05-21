@@ -1,5 +1,5 @@
 ---
-title: "U11 - Količina gibanja i sile strujanja"
+title: "11. Količina gibanja i sile strujanja"
 page-layout: article
 ---
 
