@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420">
+<defs>
+  <marker id="u13fp-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
+  <marker id="u13fp-ab" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#1d4ed8"/></marker>
+  <linearGradient id="u13fp-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
+  <linearGradient id="u13fp-water2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c5e8f5"/><stop offset="100%" stop-color="#6ab8d6"/></linearGradient>
+</defs>
+<rect width="940" height="420" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+<text x="54" y="55" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Cjevovodi — pregled poglavlja U13</text>
+<text x="54" y="76" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#516677">Darcy-Weisbach · Moody · serija · paralela · serijsko-paralelna mreža · radna točka cjevovoda</text>
+
+<!-- Vertical divider -->
+<line x1="500" y1="90" x2="500" y2="396" stroke="#d3d9de" stroke-width="1.5"/>
+
+<!-- ===== LEFT: Series-parallel network sketch ===== -->
+<text x="54" y="108" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Fizikalni sustav</text>
+
+<!-- Tank A (left, high) -->
+<rect x="44" y="120" width="52" height="170" rx="5" fill="none" stroke="#2d3a40" stroke-width="2"/>
+<rect x="46" y="138" width="48" height="150" fill="url(#u13fp-water)"/>
+<line x1="44" y1="138" x2="96" y2="138" stroke="#1565c0" stroke-width="2"/>
+<text x="70" y="130" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">A</text>
+
+<!-- Tank B (right, low) -->
+<rect x="408" y="163" width="52" height="127" rx="5" fill="none" stroke="#2d3a40" stroke-width="2"/>
+<rect x="410" y="186" width="48" height="102" fill="url(#u13fp-water2)"/>
+<line x1="408" y1="186" x2="460" y2="186" stroke="#1565c0" stroke-width="2"/>
+<text x="434" y="177" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">B</text>
+
+<!-- Node C -->
+<circle cx="164" cy="230" r="7" fill="#f59e0b" stroke="#92400e" stroke-width="2"/>
+<text x="155" y="220" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#173043">C</text>
+
+<!-- Node D -->
+<circle cx="352" cy="230" r="7" fill="#f59e0b" stroke="#92400e" stroke-width="2"/>
+<text x="358" y="220" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#173043">D</text>
+
+<!-- Entry pipe A→C -->
+<rect x="96" y="224" width="60" height="18" fill="url(#u13fp-water)" stroke="#2d3a40" stroke-width="2"/>
+<!-- Pipe 1 (upper C→D) -->
+<rect x="171" y="196" width="174" height="16" fill="url(#u13fp-water)" stroke="#2d3a40" stroke-width="2"/>
+<!-- Pipe 2 (lower C→D) -->
+<rect x="171" y="222" width="174" height="20" fill="url(#u13fp-water2)" stroke="#2d3a40" stroke-width="2"/>
+<!-- Exit pipe D→B -->
+<rect x="359" y="224" width="50" height="18" fill="url(#u13fp-water)" stroke="#2d3a40" stroke-width="2"/>
+
+<!-- Flow arrows -->
+<line x1="105" y1="233" x2="140" y2="233" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u13fp-ag)"/>
+<line x1="200" y1="204" x2="250" y2="204" stroke="#0f766e" stroke-width="2" marker-end="url(#u13fp-ag)"/>
+<line x1="200" y1="232" x2="250" y2="232" stroke="#0f766e" stroke-width="2" marker-end="url(#u13fp-ag)"/>
+<line x1="370" y1="233" x2="408" y2="233" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u13fp-ag)"/>
+
+<!-- Labels -->
+<text x="258" y="192" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#173043" text-anchor="middle">Q₁, D₁</text>
+<text x="258" y="256" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#173043" text-anchor="middle">Q₂, D₂</text>
+<text x="120" y="215" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#173043" text-anchor="middle">Q</text>
+
+<!-- EGL (red dashed, dropping) -->
+<polyline points="70,110 156,145 172,168 352,185 358,198 434,210" fill="none" stroke="#b42318" stroke-width="2" stroke-dasharray="6,3"/>
+<text x="76" y="107" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#b42318">EGL</text>
+
+<!-- H level difference label -->
+<line x1="112" y1="138" x2="112" y2="186" stroke="#b45309" stroke-width="2"/>
+<line x1="106" y1="138" x2="118" y2="138" stroke="#b45309" stroke-width="1.5"/>
+<line x1="106" y1="186" x2="118" y2="186" stroke="#b45309" stroke-width="1.5"/>
+<text x="124" y="166" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#b45309">H</text>
+
+<!-- Rules box bottom-left -->
+<rect x="44" y="310" width="440" height="82" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
+<text x="60" y="330" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#173043">Pravila cjevovoda:</text>
+<text x="60" y="348" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">Serija: isti Q, zbrajaju se h_w</text>
+<text x="60" y="364" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">Paralela: isti h_w između čvorova, dijeli se Q</text>
+<text x="60" y="382" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#516677" font-style="italic">H = Σh_{w,seri} + h_{w,para}  uz Q = Q₁ + Q₂ i h_{w,1} = h_{w,2}</text>
+
+<!-- ===== RIGHT: Equations + practical ===== -->
+<text x="520" y="108" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Ključne jednadžbe</text>
+<rect x="516" y="116" width="388" height="140" rx="8" fill="#f0f7ff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="530" y="140" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Darcy-Weisbach (linijski gubitak):</text>
+<text x="530" y="162" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">h_f = λ · (L/D) · (v²/2g)</text>
+<text x="530" y="182" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Lokalni gubitak:</text>
+<text x="530" y="200" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">h_loc = Σξ · (v²/2g)</text>
+<text x="530" y="220" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677">Moody za λ:  laminarno λ=64/Re,  turbulentno: Colebrook</text>
+<text x="530" y="240" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#516677" font-style="italic">Re = vD/ν,  ε/D → Moody dijagram</text>
+
+<!-- Practical applications -->
+<text x="520" y="278" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Primjene u praksi</text>
+<rect x="516" y="286" width="388" height="106" rx="8" fill="#f0fff4" stroke="#6ee7b7" stroke-width="1.5"/>
+<text x="530" y="308" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">🔩 Strojarstvo: rashladni krugovi, hidraulički vodovi,</text>
+<text x="530" y="326" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">     turbinski napojni cjevovodi, distribucija ulja</text>
+<text x="530" y="348" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">🏗️ Građevinarstvo: vodovodi, kanalizacija, natapanje,</text>
+<text x="530" y="366" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">     oborinske odvodnje, protupožarni razvodi</text>
+</svg>

@@ -1,0 +1,101 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="370" viewBox="0 0 940 370" role="img" aria-labelledby="u7fpnT">
+  <title id="u7fpnT">U07 WE T2 – Gaz i nagib priveznog pontona s pomaknutom opremom</title>
+  <defs>
+    <linearGradient id="u7fpnWg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <marker id="u7fpnAG" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u7fpnAR" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b42318"/>
+    </marker>
+    <marker id="u7fpnAD" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u7fpnADR" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u7fpnAB" markerWidth="9" markerHeight="9" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1565c0"/>
+    </marker>
+    <marker id="u7fpnABR" markerWidth="9" markerHeight="9" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="940" height="370" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="322" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text x="54" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U07 WE T2 – Gaz i nagib priveznog pontona</text>
+  <text x="54" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">B=2,40 m, L=6,00 m, m_p=1800 kg, m_o=600 kg, e=0,60 m (desno od osi), ρ=998 kg/m³</text>
+
+  <!-- ── CROSS-SECTION ── -->
+  <!-- Water background: y=200..330 -->
+  <rect x="40" y="200" width="488" height="130" fill="url(#u7fpnWg)" opacity="0.55"/>
+  <!-- Waterline (horizontal) at y=200 -->
+  <line x1="40" y1="200" x2="528" y2="200" stroke="#1565c0" stroke-width="2"/>
+  <text x="44" y="195" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1565c0">p.p.</text>
+
+  <!-- Ponton (tilted): B=240px (2.40m×100px/m), centered at x=284
+       h_sr=0.167m, Δh/2=0.031m → exaggerated ×300px/m for vertical
+       Left (shallower): h_L = 0.167-0.031 = 0.136m → 41px → y=241
+       Right (deeper, where equipment is): h_R = 0.167+0.031 = 0.198m → 59px → y=259
+       Thickness: 18px
+       Left top: y=241-18=223; right top: y=259-18=241
+       Left bottom x=164, right bottom x=404 -->
+  <polygon points="164,223 404,241 404,259 164,241" fill="#b0bec5" stroke="#37474f" stroke-width="2.5"/>
+
+  <!-- Axis of symmetry at x=284 -->
+  <line x1="284" y1="140" x2="284" y2="295" stroke="#8090a0" stroke-width="1.5" stroke-dasharray="8 5"/>
+
+  <!-- Equipment on RIGHT at e=60px from axis → x=284+60=344
+       Platform top at x=344: y=223+(344-164)*(241-223)/240 = 223+180*18/240 = 223+13.5 ≈ 237
+       Equipment box: x=320..370, y=219..237 -->
+  <rect x="318" y="215" width="52" height="26" rx="3" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+  <text x="328" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">oprema</text>
+
+  <!-- G arrow (combined CG slightly right) at x=295 -->
+  <line x1="295" y1="160" x2="295" y2="204" stroke="#b42318" stroke-width="3.5" marker-end="url(#u7fpnAR)"/>
+  <text x="302" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#b42318">G</text>
+
+  <!-- F_U arrow (slightly right of center, at center of buoyancy) at x=290 -->
+  <line x1="290" y1="268" x2="290" y2="194" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u7fpnAG)"/>
+  <text x="296" y="276" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f766e">F_U</text>
+
+  <!-- ── DIMENSION LINES ── -->
+  <!-- h_L (left, shallower) -->
+  <line x1="150" y1="200" x2="150" y2="241" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u7fpnADR)" marker-end="url(#u7fpnAD)"/>
+  <text x="75" y="227" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">h_L=0,136m</text>
+  <!-- h_R (right, deeper) -->
+  <line x1="418" y1="200" x2="418" y2="259" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u7fpnADR)" marker-end="url(#u7fpnAD)"/>
+  <text x="424" y="236" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">h_R=0,198m</text>
+  <!-- Δh (difference between right and left) -->
+  <line x1="440" y1="241" x2="440" y2="259" stroke="#1565c0" stroke-width="1.5" marker-start="url(#u7fpnABR)" marker-end="url(#u7fpnAB)"/>
+  <text x="446" y="254" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1565c0">Δh=6,3cm</text>
+  <!-- B width -->
+  <line x1="164" y1="278" x2="404" y2="278" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u7fpnADR)" marker-end="url(#u7fpnAD)"/>
+  <text x="258" y="294" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">B = 2,40 m</text>
+  <!-- e: from axis (284) to equipment center (344) -->
+  <line x1="284" y1="310" x2="344" y2="310" stroke="#1565c0" stroke-width="1.8" marker-start="url(#u7fpnABR)" marker-end="url(#u7fpnAB)"/>
+  <text x="294" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1565c0">e = 0,60 m</text>
+  <line x1="284" y1="304" x2="284" y2="316" stroke="#1565c0" stroke-width="1"/>
+  <line x1="344" y1="304" x2="344" y2="316" stroke="#1565c0" stroke-width="1"/>
+  <!-- h_sr annotation -->
+  <text x="55" y="310" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#8090a0">L=6,00m (⊥ na skicu)</text>
+
+  <!-- ── FORMULA BOX ── -->
+  <rect x="532" y="88" width="354" height="248" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="554" y="113" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">Ključni rezultati</text>
+  <line x1="554" y1="121" x2="878" y2="121" stroke="#e8d89a" stroke-width="1"/>
+  <text x="554" y="141" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">m_uk = 1800 + 600 = 2400 kg</text>
+  <text x="554" y="161" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">V_ist = m / ρ = 2,404 m³</text>
+  <text x="554" y="181" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">h_sr = V / (L·B) = 0,167 m</text>
+  <line x1="554" y1="191" x2="878" y2="191" stroke="#e8d89a" stroke-width="1"/>
+  <text x="554" y="211" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">Iz momenta uzgona:</text>
+  <text x="554" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">y_B = m_o·e / (m_p + m_o)</text>
+  <text x="554" y="251" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">y_B = 0,150 m = 15,0 cm</text>
+  <line x1="554" y1="261" x2="878" y2="261" stroke="#e8d89a" stroke-width="1"/>
+  <text x="554" y="281" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">Razlika urona: Δh = 12·h_sr·y_B / B</text>
+  <text x="554" y="301" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">Δh ≈ 6,3 cm po strani</text>
+  <text x="554" y="323" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">(h_R = 19,8 cm, h_L = 13,6 cm)</text>
+</svg>

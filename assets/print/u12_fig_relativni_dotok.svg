@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="390" viewBox="0 0 940 390">
+<defs>
+  <marker id="u12rd-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
+  <marker id="u12rd-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b42318"/></marker>
+  <marker id="u12rd-ab" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#1d4ed8"/></marker>
+  <marker id="u12rd-ao" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b45309"/></marker>
+  <marker id="u12rd-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#546e7a"/></marker>
+  <linearGradient id="u12rd-wat" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
+  <pattern id="u12rd-hatch" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+    <rect width="8" height="8" fill="#8090a0"/>
+    <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+  </pattern>
+</defs>
+<rect width="940" height="390" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="342" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+<text x="54" y="55" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Relativni dotok na pokretnu lopaticu</text>
+<text x="54" y="76" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#516677">d = 38 mm · c₁ = 22 m/s · u = 8 m/s · w₁ = c₁ − u = 14 m/s · ṁ_rel = 63,7 % punog protoka</text>
+
+<!-- Ground/rail -->
+<line x1="44" y1="310" x2="900" y2="310" stroke="#8090a0" stroke-width="2"/>
+
+<!-- Nozzle (stationary, on ground) -->
+<rect x="55" y="228" width="68" height="58" rx="4" fill="url(#u12rd-hatch)"/>
+<rect x="116" y="236" width="5" height="42" fill="#2d3a40"/>
+<!-- Nozzle label -->
+<text x="58" y="225" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#546e7a">sapnica</text>
+<text x="58" y="210" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#546e7a">d = 38 mm</text>
+
+<!-- Full jet (entire stream from nozzle, width = d) -->
+<!-- The full jet would reach from x=121 onwards, but only a portion (63.7%) hits the blade because blade moves away -->
+<!-- Show the jet as a stream that tapers or use dashed for the "missed" portion -->
+<!-- Full nozzle discharge: solid stream x=121 to x=250 -->
+<rect x="121" y="236" width="250" height="42" fill="url(#u12rd-wat)" opacity="0.45"/>
+<!-- The part that actually "enters" the moving blade KV: width proportional to w1/c1 -->
+<!-- Annotation: "puni protok" at top of jet -->
+<text x="176" y="228" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#516677" font-style="italic">puni tok (c₁)</text>
+
+<!-- Moving blade (to the right, moving at u=8 m/s) -->
+<rect x="360" y="218" width="100" height="68" rx="5" fill="url(#u12rd-hatch)"/>
+<!-- Blade concave surface (water-colored) -->
+<path d="M 363,224 C 396,224 412,238 408,278 L 388,274 C 391,250 380,232 363,232 Z" fill="url(#u12rd-wat)" opacity="0.82"/>
+<!-- Wheels below blade -->
+<circle cx="385" cy="315" r="10" fill="#8090a0" stroke="#2d3a40" stroke-width="1.8"/>
+<circle cx="440" cy="315" r="10" fill="#8090a0" stroke="#2d3a40" stroke-width="1.8"/>
+
+<!-- Relative jet entering blade: the part of the jet from nozzle that enters the blade CV -->
+<!-- Start at x=225, highlight the portion from ~x=210 to x=365 as the "relative flow" -->
+<rect x="225" y="244" width="135" height="28" fill="url(#u12rd-wat)" opacity="0.90"/>
+
+<!-- c1 velocity arrow (absolute, from nozzle, green, long) -->
+<line x1="130" y1="225" x2="348" y2="225" stroke="#0f766e" stroke-width="3" marker-end="url(#u12rd-ag)"/>
+<text x="205" y="216" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#0f766e">c₁ = 22 m/s</text>
+
+<!-- u arrow (blade velocity, orange, shorter) -->
+<line x1="370" y1="340" x2="500" y2="340" stroke="#b45309" stroke-width="3" marker-end="url(#u12rd-ao)"/>
+<text x="388" y="360" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#b45309">u = 8 m/s</text>
+
+<!-- w1 = c1 - u arrow (relative velocity, blue dashed, medium) -->
+<line x1="130" y1="205" x2="348" y2="205" stroke="#1d4ed8" stroke-width="0.1"/>
+<!-- w1 scaled: (14/22)*218 = 139px -->
+<line x1="130" y1="200" x2="269" y2="200" stroke="#1d4ed8" stroke-width="2.8" stroke-dasharray="6,3" marker-end="url(#u12rd-ab)"/>
+<text x="148" y="192" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">w₁ = c₁ − u = 14 m/s</text>
+
+<!-- Proportion annotation -->
+<rect x="530" y="160" width="360" height="148" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+<text x="548" y="184" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Zašto ṁ_rel &lt; ṁ_sapnice ?</text>
+<text x="548" y="207" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Lopatica bježi: ne sakuplja cijeli protok.</text>
+<text x="548" y="226" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">ṁ_rel = ρ · A · w₁ = ρ · A · (c₁ − u)</text>
+<text x="548" y="246" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">ṁ_sap = ρ · A · c₁</text>
+<text x="548" y="268" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Omjer:  w₁/c₁ = 14/22 = <tspan font-weight="700" fill="#b42318">63,7 %</tspan></text>
+<text x="548" y="292" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">ṁ_rel = 1000 · 1,134·10⁻³ · 14 = 15,87 kg/s</text>
+
+<!-- Length scale annotation below c1 arrow -->
+<line x1="130" y1="180" x2="269" y2="180" stroke="#1d4ed8" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="190" y="177" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#1d4ed8">w₁ (63,7%)</text>
+<line x1="269" y1="175" x2="348" y2="175" stroke="#b45309" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="286" y="172" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#b45309">u (36,3%)</text>
+</svg>

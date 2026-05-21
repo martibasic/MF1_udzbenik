@@ -1,58 +1,110 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
-  <title id="title">U12 Val 1 - vodilica mlaza na ispitnom stolu</title>
-  <desc id="desc">Tlocrt mlaza i vodilice s kontrolnim volumenom, kutom skretanja i reakcijama nosaca.</desc>
-  <rect width="980" height="420" fill="#fffdf8"/>
-  <rect x="32" y="32" width="916" height="356" rx="22" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="480" viewBox="0 0 940 480">
+<defs>
+  <marker id="u12v1-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
+  <marker id="u12v1-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b42318"/></marker>
+  <marker id="u12v1-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#6d2694"/></marker>
+  <marker id="u12v1-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#546e7a"/></marker>
+  <linearGradient id="u12v1-wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
+  <pattern id="u12v1-hatch" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+    <rect width="8" height="8" fill="#8090a0"/>
+    <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+  </pattern>
+</defs>
+<rect width="940" height="480" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="432" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+<text x="54" y="55" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Nepomična vodilica mlaza — defleksija struje za 120°</text>
+<text x="54" y="76" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#516677">Tlocrt (horizontalna ravnina) · kontrolni volumen · sile na vodilicu</text>
 
-  <text x="70" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#173043">U12 - Vodilica mlaza na ispitnom stolu</text>
-  <text x="70" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#587183">Kontrolni volumen, promjena količine gibanja i reakcija nosaca.</text>
+<!-- Control volume dashed border -->
+<rect x="65" y="96" width="358" height="360" rx="6" fill="none" stroke="#9aabb5" stroke-width="1.4" stroke-dasharray="7,4"/>
+<text x="73" y="113" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#9aabb5">KV</text>
 
-  <text x="90" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#173043">Tlocrt scene</text>
+<!-- Inlet pipe walls -->
+<rect x="55" y="340" width="180" height="22" fill="url(#u12v1-hatch)"/>
+<rect x="55" y="400" width="180" height="22" fill="url(#u12v1-hatch)"/>
+<!-- Inlet water -->
+<rect x="55" y="362" width="180" height="38" fill="url(#u12v1-wat)" opacity="0.85"/>
 
-  <rect x="120" y="228" width="88" height="32" rx="4" fill="#e7edf1" stroke="#173043" stroke-width="4"/>
-  <text x="128" y="219" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">sapnica</text>
-  <line x1="80" y1="244" x2="250" y2="244" stroke="#1976d2" stroke-width="8" marker-end="url(#arrowBlue)"/>
-  <text x="210" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">v1</text>
+<!-- Guide vane body — plan view of curved duct walls -->
+<!-- Outer wall (south/convex side) -->
+<path d="M 235,400 C 315,402 380,310 350,192 L 368,184 C 404,314 348,428 235,422 Z" fill="url(#u12v1-hatch)"/>
+<!-- Inner wall (north/concave side) -->
+<path d="M 235,362 C 298,362 345,278 318,175 L 336,168 L 350,192 C 380,310 315,402 235,400 Z" fill="url(#u12v1-hatch)"/>
+<!-- Water in bent section -->
+<path d="M 235,365 C 296,365 340,282 315,178 L 332,170 L 346,190 C 375,305 314,396 235,396 Z" fill="url(#u12v1-wat)" opacity="0.82"/>
 
-  <path d="M300 244 Q360 244 392 219 Q420 198 435 164" fill="none" stroke="#173043" stroke-width="14" stroke-linecap="round"/>
-  <rect x="268" y="156" width="210" height="150" rx="16" fill="none" stroke="#6f7f89" stroke-width="3" stroke-dasharray="10 8"/>
-  <text x="292" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">kontrolni volumen</text>
+<!-- Exit pipe walls (direction: −0.5,−0.866 in SVG = upper-left) -->
+<!-- Inner exit edge: from (318,175) to (318−0.5·70,175−0.866·70)=(283,114) -->
+<!-- Outer exit edge: from (350,192) to (315,131) -->
+<path d="M 318,175 L 283,114 L 315,106 L 350,167 Z" fill="url(#u12v1-hatch)"/>
+<!-- Exit water -->
+<path d="M 322,179 L 287,118 L 309,110 L 344,171 Z" fill="url(#u12v1-wat)" opacity="0.82"/>
 
-  <line x1="390" y1="194" x2="340" y2="152" stroke="#1976d2" stroke-width="8" marker-end="url(#arrowBlue)"/>
-  <text x="352" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">v2</text>
+<!-- Section line ① at inlet -->
+<line x1="218" y1="333" x2="218" y2="430" stroke="#445" stroke-width="1.5" stroke-dasharray="5,4"/>
+<text x="206" y="330" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">①</text>
 
-  <path d="M355 244 A55 55 0 0 1 342 196" fill="none" stroke="#c96c35" stroke-width="3"/>
-  <text x="355" y="204" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">beta</text>
+<!-- Section line ② perpendicular to exit pipe at midpoint (300,142) -->
+<!-- Perpendicular direction to (−0.5,−0.866) is (0.866,−0.5) = (0.866,−0.5)·22 = (19,−11) -->
+<line x1="281" y1="153" x2="319" y2="131" stroke="#445" stroke-width="1.5" stroke-dasharray="5,4"/>
+<text x="322" y="129" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">②</text>
 
-  <circle cx="392" cy="219" r="6" fill="#173043"/>
-  <line x1="392" y1="219" x2="322" y2="219" stroke="#c23b22" stroke-width="5" marker-end="url(#arrowRed)"/>
-  <text x="334" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">R_x</text>
-  <line x1="392" y1="219" x2="392" y2="150" stroke="#2e7d32" stroke-width="5" marker-end="url(#arrowGreen)"/>
-  <text x="404" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#173043">R_y</text>
+<!-- v1 velocity arrow (green, rightward in inlet) -->
+<line x1="95" y1="381" x2="200" y2="381" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u12v1-ag)"/>
+<text x="102" y="373" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">v₁ = 24 m/s</text>
 
-  <line x1="640" y1="285" x2="710" y2="285" stroke="#173043" stroke-width="3" marker-end="url(#arrowBlack)"/>
-  <line x1="640" y1="285" x2="640" y2="215" stroke="#173043" stroke-width="3" marker-end="url(#arrowBlack)"/>
-  <text x="718" y="291" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">x</text>
-  <text x="646" y="208" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">y</text>
+<!-- v2 velocity arrow (green, upper-left direction from exit pipe) -->
+<!-- From (300,155) in direction (−0.5,−0.866) for 55px: (272.5,107) -->
+<line x1="300" y1="155" x2="273" y2="107" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u12v1-ag)"/>
+<text x="240" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">v₂ = 19 m/s</text>
 
-  <text x="590" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#173043">Sto mora biti vidljivo</text>
-  <text x="590" y="195" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">- ulazni i izlazni smjer mlaza</text>
-  <text x="590" y="220" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">- kut skretanja</text>
-  <text x="590" y="245" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">- kontrolni volumen</text>
-  <text x="590" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">- osi i reakcije nosaca</text>
+<!-- Beta angle indicator -->
+<path d="M 248,375 A 32,32 0 0,0 233,350" fill="none" stroke="#173043" stroke-width="1.4"/>
+<text x="252" y="355" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#173043" font-style="italic">β = 120°</text>
 
-  <defs>
-    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
-    </marker>
-    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c23b22"/>
-    </marker>
-    <marker id="arrowBlack" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#173043"/>
-    </marker>
-  </defs>
+<!-- Cross-section dimension: b and h labels -->
+<text x="58" y="355" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#173043">b=36</text>
+<text x="58" y="404" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#173043">h=14mm</text>
+
+<!-- Force arrows at vane body (fluid forces ON vane) -->
+<!-- Fx = +404 N →  (reaction on nosac: ← ) -->
+<line x1="355" y1="305" x2="415" y2="305" stroke="#b42318" stroke-width="2.5" marker-end="url(#u12v1-ar)"/>
+<text x="356" y="298" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#b42318">Fₓ = +404 N (→)</text>
+<!-- Fy = −199 N ↓  (fluid pushes down on vane) -->
+<line x1="355" y1="305" x2="355" y2="362" stroke="#b42318" stroke-width="2.5" marker-end="url(#u12v1-ar)"/>
+<text x="361" y="360" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#b42318">Fᵧ = −199 N (↓)</text>
+<!-- Resultant R on nosac (reaction: leftward-upward) direction (−0.895,+0.447) -->
+<!-- From (355,305) going 58px: (355−52,305+26)=(303,331) ... wait reaction is on nosac, direction opposes the fluid force, so (−404,+199) direction = (−0.895,+0.447)
+ From (355,305) in direction (−0.895,0.447) for 58px: (355−52,305+26)=(303,331) -->
+<line x1="355" y1="305" x2="303" y2="330" stroke="#6d2694" stroke-width="2.2" stroke-dasharray="6,3" marker-end="url(#u12v1-ap)"/>
+<text x="268" y="344" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#6d2694">R = 451 N</text>
+<text x="268" y="356" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#6d2694">(reakcija nosača)</text>
+
+<!-- Coordinate axes (plan view: x→ right, y↑ up = toward top of SVG) -->
+<line x1="66" y1="440" x2="108" y2="440" stroke="#546e7a" stroke-width="1.8" marker-end="url(#u12v1-agr)"/>
+<text x="112" y="445" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#546e7a" font-style="italic">x</text>
+<line x1="66" y1="440" x2="66" y2="398" stroke="#546e7a" stroke-width="1.8" marker-end="url(#u12v1-agr)"/>
+<text x="70" y="395" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#546e7a" font-style="italic">y</text>
+<text x="66" y="458" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#546e7a" font-style="italic">tlocrt</text>
+
+<!-- ===== INFO PANEL (right) ===== -->
+<rect x="455" y="96" width="460" height="354" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+<text x="471" y="122" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Zadano</text>
+<text x="471" y="142" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Presjek sapnice:  b = 36 mm,  h = 14 mm</text>
+<text x="471" y="160" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Ulazna brzina:  v₁ = 24 m/s  (+x smjer)</text>
+<text x="471" y="178" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Izlazna brzina:  v₂ = 19 m/s  (s trenjem)</text>
+<text x="471" y="196" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Kut defleksije:  β = 120°  (u smjeru ∢ od +x)</text>
+<line x1="471" y1="208" x2="903" y2="208" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="227" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Maseni protok</text>
+<text x="471" y="246" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">ṁ = ρ A v₁ = 1000 · (0,036 · 0,014) · 24</text>
+<text x="471" y="264" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">ṁ = 12,07 kg/s</text>
+<line x1="471" y1="275" x2="903" y2="275" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="294" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Sile fluida na vodilicu</text>
+<text x="471" y="313" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">v₂ₓ = 19 cos 120° = −9,50 m/s</text>
+<text x="471" y="331" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">v₂ᵧ = 19 sin 120° = +16,45 m/s</text>
+<text x="471" y="349" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Fₓ = ṁ(v₂ₓ − v₁ₓ) = 12,07(−9,5 − 24) = <tspan font-weight="700" fill="#b42318">−404 N</tspan></text>
+<text x="471" y="367" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Fᵧ = ṁ(v₂ᵧ − 0) = 12,07 · 16,45 = <tspan font-weight="700" fill="#b42318">+199 N</tspan></text>
+<line x1="471" y1="377" x2="903" y2="377" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="396" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Reakcija nosača:  R = √(404² + 199²)</text>
+<text x="471" y="430" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#6d2694">R = 451 N  pod kutom 26,2° iznad −x osi</text>
 </svg>

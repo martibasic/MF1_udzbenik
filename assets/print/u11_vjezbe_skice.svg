@@ -1,120 +1,175 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 700" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="title">U11 - skice zadataka T1 do T6</title>
-  <desc id="desc">Šest minimalnih grayscale tehničkih skica za U11 zadatke T1 do T6.</desc>
-  <rect width="980" height="700" fill="#ffffff"/>
-  <rect x="22" y="22" width="936" height="656" rx="18" fill="#ffffff" stroke="#d4d9de" stroke-width="2"/>
-
-  <text x="56" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2933">U11 - Skice zadataka T1-T6</text>
-  <text x="56" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#5b6670">Grayscale ploča: kontrolni volumen, presjeci i osi ostavljeni su samo ondje gdje stvarno ulaze u proračun.</text>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 730" width="940" role="img" aria-labelledby="u11vs-title" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
   <defs>
-    <marker id="arrowDark" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#3c4752"/>
+    <linearGradient id="u11vs-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <pattern id="u11vs-hatch" patternUnits="userSpaceOnUse" width="7" height="7">
+      <rect width="7" height="7" fill="#8090a0"/>
+      <line x1="0" y1="7" x2="7" y2="0" stroke="#546e7a" stroke-width="1.6"/>
+    </pattern>
+    <marker id="u11vs-ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0f766e"/>
     </marker>
-    <marker id="arrowBlack" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#111111"/>
+    <marker id="u11vs-ar" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#b42318"/>
+    </marker>
+    <marker id="u11vs-agr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#546e7a"/>
     </marker>
   </defs>
-
-  <g transform="translate(46 116)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T1</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Mlaz na ravnu ploču</text>
-    <polygon points="58,93 122,78 122,108" fill="#e7ecef" stroke="#4b5660" stroke-width="2"/>
-    <line x1="122" y1="93" x2="296" y2="93" stroke="#636d77" stroke-width="11" stroke-linecap="round"/>
-    <rect x="322" y="52" width="16" height="86" fill="#e3e7eb" stroke="#28323a" stroke-width="2.6"/>
-    <line x1="170" y1="93" x2="228" y2="93" stroke="#111111" stroke-width="3.2" marker-end="url(#arrowBlack)"/>
-    <text x="176" y="80" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">v</text>
-    <line x1="344" y1="93" x2="390" y2="93" stroke="#3c4752" stroke-width="3.2" marker-end="url(#arrowDark)"/>
-    <text x="348" y="80" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">F</text>
-  </g>
-
-  <g transform="translate(502 116)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T2</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Iz sile natrag na brzinu mlaza</text>
-    <polygon points="60,96 124,81 124,111" fill="#e7ecef" stroke="#4b5660" stroke-width="2"/>
-    <line x1="124" y1="96" x2="296" y2="96" stroke="#636d77" stroke-width="11" stroke-linecap="round"/>
-    <rect x="322" y="55" width="16" height="86" fill="#e3e7eb" stroke="#28323a" stroke-width="2.6"/>
-    <line x1="346" y1="96" x2="392" y2="96" stroke="#3c4752" stroke-width="3.2" marker-end="url(#arrowDark)"/>
-    <text x="348" y="83" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">zadano F</text>
-    <line x1="92" y1="118" x2="92" y2="144" stroke="#6c7680" stroke-width="2"/>
-    <line x1="58" y1="144" x2="124" y2="144" stroke="#6c7680" stroke-width="2"/>
-    <text x="80" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">d</text>
-  </g>
-
-  <g transform="translate(46 298)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T3</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Koljeno 90 stupnjeva</text>
-    <path d="M82 114 L210 114 L210 60" fill="none" stroke="#40484f" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M82 114 L210 114 L210 60" fill="none" stroke="#eef1f3" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M82 114 L210 114 L210 60" fill="none" stroke="#5f6871" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="44" y1="114" x2="82" y2="114" stroke="#111111" stroke-width="3" marker-end="url(#arrowBlack)"/>
-    <line x1="210" y1="60" x2="210" y2="22" stroke="#111111" stroke-width="3" marker-end="url(#arrowBlack)"/>
-    <text x="46" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">1, p1</text>
-    <text x="222" y="50" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">2, p2</text>
-    <line x1="292" y1="124" x2="332" y2="124" stroke="#3c4752" stroke-width="3" marker-end="url(#arrowDark)"/>
-    <line x1="292" y1="124" x2="292" y2="84" stroke="#3c4752" stroke-width="3" marker-end="url(#arrowDark)"/>
-    <text x="338" y="129" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">x</text>
-    <text x="297" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">y</text>
-  </g>
-
-  <g transform="translate(502 298)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T4</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">T-račva i reakcija nosaca</text>
-    <path d="M64 116 L196 116 L196 66 L266 66" fill="none" stroke="#40484f" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M64 116 L196 116 L196 66 L266 66" fill="none" stroke="#eef1f3" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M196 116 L310 116" fill="none" stroke="#40484f" stroke-width="24" stroke-linecap="round"/>
-    <path d="M196 116 L310 116" fill="none" stroke="#eef1f3" stroke-width="16" stroke-linecap="round"/>
-    <line x1="34" y1="116" x2="64" y2="116" stroke="#111111" stroke-width="3" marker-end="url(#arrowBlack)"/>
-    <line x1="266" y1="66" x2="300" y2="66" stroke="#111111" stroke-width="3" marker-end="url(#arrowBlack)"/>
-    <line x1="310" y1="116" x2="344" y2="116" stroke="#111111" stroke-width="3" marker-end="url(#arrowBlack)"/>
-    <text x="32" y="102" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">Q1</text>
-    <text x="304" y="58" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">Q3</text>
-    <text x="350" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">Q2</text>
-    <rect x="134" y="76" width="108" height="74" rx="10" fill="none" stroke="#8c6f54" stroke-width="2.2" stroke-dasharray="7 5"/>
-    <rect x="140" y="44" width="118" height="18" rx="5" fill="#ffffff" stroke="#d7dde2" stroke-width="1"/>
-    <text x="152" y="57" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6670">kontrolni volumen</text>
-  </g>
-
-  <g transform="translate(46 480)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T5</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Konvergentna mlaznica</text>
-    <path d="M82 92 L140 92 L228 80 L308 80 L308 138 L228 138 L140 124 L82 124 Z" fill="#eef1f3" stroke="#40484f" stroke-width="2.6" stroke-linejoin="round"/>
-    <rect x="140" y="72" width="18" height="72" fill="#dadfe4" stroke="#28323a" stroke-width="2.2"/>
-    <line x1="40" y1="108" x2="70" y2="108" stroke="#111111" stroke-width="3" marker-end="url(#arrowBlack)"/>
-    <line x1="308" y1="108" x2="346" y2="108" stroke="#111111" stroke-width="3" marker-end="url(#arrowBlack)"/>
-    <text x="30" y="96" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">1, p1</text>
-    <text x="352" y="96" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">2, patm</text>
-    <text x="170" y="68" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">prirubnica</text>
-  </g>
-
-  <g transform="translate(502 480)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T6</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Y-račva pod 60 stupnjeva</text>
-    <path d="M60 116 L182 116" fill="none" stroke="#40484f" stroke-width="24" stroke-linecap="round"/>
-    <path d="M60 116 L182 116" fill="none" stroke="#eef1f3" stroke-width="16" stroke-linecap="round"/>
-    <path d="M182 116 L290 116" fill="none" stroke="#40484f" stroke-width="24" stroke-linecap="round"/>
-    <path d="M182 116 L290 116" fill="none" stroke="#eef1f3" stroke-width="16" stroke-linecap="round"/>
-    <path d="M182 116 L264 68" fill="none" stroke="#40484f" stroke-width="24" stroke-linecap="round"/>
-    <path d="M182 116 L264 68" fill="none" stroke="#eef1f3" stroke-width="16" stroke-linecap="round"/>
-    <line x1="30" y1="116" x2="60" y2="116" stroke="#111111" stroke-width="3" marker-end="url(#arrowBlack)"/>
-    <line x1="290" y1="116" x2="324" y2="116" stroke="#111111" stroke-width="3" marker-end="url(#arrowBlack)"/>
-    <line x1="264" y1="68" x2="296" y2="50" stroke="#111111" stroke-width="3" marker-end="url(#arrowBlack)"/>
-    <text x="28" y="102" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">Q1</text>
-    <text x="330" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">Q2</text>
-    <text x="302" y="48" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">Q3</text>
-    <path d="M218 116 A44 44 0 0 0 252 88" fill="none" stroke="#6a737c" stroke-width="2"/>
-    <text x="214" y="94" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">60 deg</text>
-  </g>
+  <rect width="940" height="730" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="682" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text id="u11vs-title" x="54" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U11 – Zadaci za vjezbu: skice (Z1–Z6)</text>
+  <text x="54" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">Slobodni mlaz, koljeno, T-raccva, mlaznica i Y-raccva – minimalne tehnicke skice uz tekst zadataka.</text>
+  <!-- ===== PANEL GRID ===== -->
+  <!-- Panel 1 (row1 col1): Z1 T1 - mlaz na plocu, d=38mm, v=22 m/s -->
+  <rect x="40" y="92" width="416" height="196" rx="8" fill="#f8fafc" stroke="#c8d3da" stroke-width="1.5"/>
+  <rect x="40" y="92" width="50" height="22" rx="5" fill="#173043"/>
+  <text x="56" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Z1 T1</text>
+  <text x="100" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Slobodni mlaz na plocu: d=38 mm, v=22 m/s  &#x2192;  m&#x2D9;=? F=?</text>
+  <!-- Nozzle+jet -->
+  <rect x="56" y="138" width="90" height="20" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5" rx="2"/>
+  <rect x="59" y="141" width="84" height="14" fill="url(#u11vs-water)" stroke="none"/>
+  <polygon points="146,133 164,144 164,152 146,158" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
+  <rect x="164" y="144" width="166" height="10" fill="url(#u11vs-water)" stroke="#1976a8" stroke-width="1"/>
+  <!-- Plate -->
+  <rect x="330" y="116" width="18" height="66" fill="url(#u11vs-hatch)"/>
+  <rect x="330" y="116" width="18" height="66" fill="none" stroke="#2d3a40" stroke-width="1.5"/>
+  <!-- v arrow -->
+  <line x1="196" y1="149" x2="298" y2="149" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u11vs-ag)"/>
+  <text x="214" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#0f766e">v=22 m/s</text>
+  <text x="164" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">d=38 mm</text>
+  <!-- F arrow on plate -->
+  <line x1="350" y1="166" x2="400" y2="166" stroke="#b42318" stroke-width="2.5" marker-end="url(#u11vs-ar)"/>
+  <text x="352" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#b42318">F = ? (N)</text>
+  <!-- Panel 2 (row1 col2): Z2 T1 - zadana F, d=42mm -->
+  <rect x="484" y="92" width="416" height="196" rx="8" fill="#f8fafc" stroke="#c8d3da" stroke-width="1.5"/>
+  <rect x="484" y="92" width="50" height="22" rx="5" fill="#173043"/>
+  <text x="500" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Z2 T1</text>
+  <text x="544" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Mlaz na plocu: F=310 N, d=42 mm  &#x2192;  v=? Q=?</text>
+  <!-- Nozzle+jet -->
+  <rect x="500" y="138" width="88" height="22" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5" rx="2"/>
+  <rect x="503" y="141" width="82" height="16" fill="url(#u11vs-water)" stroke="none"/>
+  <polygon points="588,133 606,144 606,154 588,161" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
+  <rect x="606" y="144" width="150" height="12" fill="url(#u11vs-water)" stroke="#1976a8" stroke-width="1"/>
+  <!-- Plate -->
+  <rect x="756" y="118" width="18" height="64" fill="url(#u11vs-hatch)"/>
+  <rect x="756" y="118" width="18" height="64" fill="none" stroke="#2d3a40" stroke-width="1.5"/>
+  <!-- v arrow -->
+  <line x1="634" y1="150" x2="728" y2="150" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u11vs-ag)"/>
+  <text x="648" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#0f766e">v = ? m/s</text>
+  <!-- F label (known) -->
+  <line x1="776" y1="160" x2="830" y2="160" stroke="#b42318" stroke-width="2.5" marker-end="url(#u11vs-ar)"/>
+  <text x="770" y="178" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#b42318">F=310 N</text>
+  <!-- Panel 3 (row2 col1): Z3 T2 - koljeno 90deg -->
+  <rect x="40" y="302" width="416" height="210" rx="8" fill="#f8fafc" stroke="#c8d3da" stroke-width="1.5"/>
+  <rect x="40" y="302" width="50" height="22" rx="5" fill="#1d4ed8"/>
+  <text x="56" y="318" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Z3 T2</text>
+  <text x="100" y="318" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Koljeno 90°: D=100 mm, Q=26 L/s, p&#x2081;=180 kPa, p&#x2082;=150 kPa</text>
+  <!-- Horizontal inlet -->
+  <rect x="56" y="422" width="180" height="28" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5" rx="2"/>
+  <rect x="59" y="425" width="174" height="22" fill="url(#u11vs-water)" stroke="none"/>
+  <!-- Vertical outlet (going up) -->
+  <rect x="204" y="340" width="28" height="86" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5" rx="2"/>
+  <rect x="207" y="343" width="22" height="83" fill="url(#u11vs-water)" stroke="none"/>
+  <!-- Junction corner fill -->
+  <rect x="204" y="422" width="32" height="28" fill="url(#u11vs-water)" stroke="none"/>
+  <!-- v1 arrow (right) -->
+  <line x1="90" y1="436" x2="178" y2="436" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u11vs-ag)"/>
+  <text x="94" y="428" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">v&#x2081;</text>
+  <!-- v2 arrow (up) -->
+  <line x1="218" y1="392" x2="218" y2="352" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u11vs-ag)"/>
+  <text x="234" y="376" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">v&#x2082;</text>
+  <!-- Sections -->
+  <line x1="82" y1="416" x2="82" y2="456" stroke="#173043" stroke-width="1.5"/>
+  <text x="76" y="468" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#173043">1</text>
+  <line x1="196" y1="340" x2="240" y2="340" stroke="#173043" stroke-width="1.5"/>
+  <text x="244" y="345" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#173043">2</text>
+  <!-- Pressure labels -->
+  <text x="56" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">p&#x2081;=180 kPa</text>
+  <text x="250" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">p&#x2082;=150 kPa</text>
+  <!-- Coord axes -->
+  <line x1="354" y1="480" x2="404" y2="480" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u11vs-agr)"/>
+  <text x="408" y="484" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">x</text>
+  <line x1="354" y1="480" x2="354" y2="430" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u11vs-agr)"/>
+  <text x="358" y="428" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">y</text>
+  <!-- Panel 4 (row2 col2): Z4 T2 - T-raccva -->
+  <rect x="484" y="302" width="416" height="210" rx="8" fill="#f8fafc" stroke="#c8d3da" stroke-width="1.5"/>
+  <rect x="484" y="302" width="50" height="22" rx="5" fill="#1d4ed8"/>
+  <text x="500" y="318" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Z4 T2</text>
+  <text x="544" y="318" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">T-raccva: D&#x2081;=120, D&#x2082;=80, D&#x2083;=70 mm, Q&#x2081;=30 L/s</text>
+  <!-- T-junction wall path -->
+  <path d="M 500,436 L 686,436 L 686,352 L 706,352 L 706,448 L 850,448 L 850,462 L 706,462 L 706,474 L 500,474 Z"
+        fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M 503,440 L 688,440 L 688,355 L 703,355 L 703,451 L 847,451 L 847,459 L 703,459 L 703,471 L 503,471 Z"
+        fill="url(#u11vs-water)" stroke="none"/>
+  <!-- Sections -->
+  <line x1="540" y1="430" x2="540" y2="480" stroke="#173043" stroke-width="1.5"/>
+  <text x="534" y="492" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#173043">1</text>
+  <line x1="678" y1="344" x2="715" y2="344" stroke="#173043" stroke-width="1.5"/>
+  <text x="720" y="349" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#173043">3</text>
+  <line x1="820" y1="444" x2="820" y2="466" stroke="#173043" stroke-width="1.5"/>
+  <text x="826" y="462" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#173043">2</text>
+  <!-- Velocity arrows -->
+  <line x1="558" y1="455" x2="618" y2="455" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u11vs-ag)"/>
+  <text x="558" y="444" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">v&#x2081;</text>
+  <line x1="695" y1="420" x2="695" y2="368" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u11vs-ag)"/>
+  <text x="704" y="398" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">v&#x2083;</text>
+  <line x1="740" y1="455" x2="800" y2="455" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u11vs-ag)"/>
+  <text x="752" y="444" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">v&#x2082;</text>
+  <!-- Panel 5 (row3 col1): Z5 T3 - mlaznica s prirubnicom -->
+  <rect x="40" y="524" width="416" height="190" rx="8" fill="#f8fafc" stroke="#c8d3da" stroke-width="1.5"/>
+  <rect x="40" y="524" width="50" height="22" rx="5" fill="#7c3aed"/>
+  <text x="56" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Z5 T3</text>
+  <text x="100" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Mlaznica s vijcima: D&#x2081;=110, d=45 mm, Q=18 L/s, p&#x2081;=240 kPa</text>
+  <!-- Wide pipe -->
+  <rect x="56" y="600" width="100" height="36" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5" rx="2"/>
+  <rect x="59" y="603" width="94" height="30" fill="url(#u11vs-water)" stroke="none"/>
+  <!-- Flange -->
+  <rect x="154" y="592" width="12" height="52" fill="#78909c" stroke="#2d3a40" stroke-width="1.5" rx="2"/>
+  <circle cx="160" cy="598" r="3" fill="#2d3a40"/>
+  <circle cx="160" cy="610" r="3" fill="#2d3a40"/>
+  <circle cx="160" cy="632" r="3" fill="#2d3a40"/>
+  <circle cx="160" cy="644" r="3" fill="#2d3a40"/>
+  <!-- Nozzle taper -->
+  <polygon points="166,599 330,614 330,624 166,644" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
+  <polygon points="168,602 328,615 328,623 168,641" fill="url(#u11vs-water)" stroke="none"/>
+  <!-- Jet -->
+  <rect x="330" y="614" width="100" height="10" fill="url(#u11vs-water)" stroke="#1976a8" stroke-width="1"/>
+  <!-- Section labels -->
+  <text x="148" y="590" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">A-A</text>
+  <line x1="170" y1="586" x2="170" y2="650" stroke="#173043" stroke-width="1.2" stroke-dasharray="4 2"/>
+  <text x="162" y="660" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">1</text>
+  <text x="330" y="660" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">2 (atm)</text>
+  <!-- R bolt force label -->
+  <line x1="100" y1="680" x2="54" y2="680" stroke="#b42318" stroke-width="2.5" marker-end="url(#u11vs-ar)"/>
+  <text x="102" y="685" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#b42318">R = ? (vlak)</text>
+  <!-- Panel 6 (row3 col2): Z6 T3 - Y-raccva 60deg -->
+  <rect x="484" y="524" width="416" height="190" rx="8" fill="#f8fafc" stroke="#c8d3da" stroke-width="1.5"/>
+  <rect x="484" y="524" width="50" height="22" rx="5" fill="#7c3aed"/>
+  <text x="500" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Z6 T3</text>
+  <text x="544" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Y-raccva 60°: D&#x2081;=140 mm, Q&#x2081;=40 L/s, p&#x2081;=185 kPa</text>
+  <!-- Inlet pipe -->
+  <rect x="500" y="620" width="160" height="28" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5" rx="2"/>
+  <rect x="503" y="623" width="154" height="22" fill="url(#u11vs-water)" stroke="none"/>
+  <!-- Outlet 2 (straight right) -->
+  <rect x="658" y="626" width="200" height="18" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5" rx="2"/>
+  <rect x="661" y="629" width="194" height="12" fill="url(#u11vs-water)" stroke="none"/>
+  <!-- Junction ellipse -->
+  <ellipse cx="652" cy="634" rx="20" ry="20" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
+  <ellipse cx="652" cy="634" rx="16" ry="16" fill="url(#u11vs-water)" stroke="none"/>
+  <!-- Outlet 3 at 60deg: endpoint at (652+130*cos60, 634-130*sin60)=(717, 521) -->
+  <polygon points="644,617 710,519 724,527 658,625" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
+  <polygon points="646,619 712,522 720,524 656,621" fill="url(#u11vs-water)" stroke="none"/>
+  <!-- 60 deg arc label -->
+  <path d="M 676,634 A 24,24 0 0,0 664,613" fill="none" stroke="#546e7a" stroke-width="1.2"/>
+  <text x="682" y="622" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">60°</text>
+  <!-- Section labels -->
+  <line x1="540" y1="614" x2="540" y2="656" stroke="#173043" stroke-width="1.5"/>
+  <text x="534" y="668" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#173043">1</text>
+  <text x="840" y="632" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#173043">2</text>
+  <text x="726" y="524" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#173043">3</text>
+  <!-- F reaction question -->
+  <text x="500" y="695" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#b42318">Sila na nosac? (komponente + rezultanta)</text>
 </svg>

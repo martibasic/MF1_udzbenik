@@ -1,0 +1,158 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="460" viewBox="0 0 940 460">
+<defs>
+  <linearGradient id="u11fp-wg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#d4eef8"/>
+    <stop offset="100%" stop-color="#7ec8e8"/>
+  </linearGradient>
+  <linearGradient id="u11fp-wg2" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#d4eef8"/>
+    <stop offset="100%" stop-color="#7ec8e8"/>
+  </linearGradient>
+  <linearGradient id="u11fp-bg1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f0f7ff"/>
+    <stop offset="100%" stop-color="#e8f4fb"/>
+  </linearGradient>
+  <linearGradient id="u11fp-bg2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#fffef6"/>
+    <stop offset="100%" stop-color="#fef9e8"/>
+  </linearGradient>
+  <marker id="u11fp-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#0f766e"/>
+  </marker>
+  <marker id="u11fp-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#b42318"/>
+  </marker>
+  <marker id="u11fp-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#6d2694"/>
+  </marker>
+  <pattern id="u11fp-hatch" width="8" height="8" patternUnits="userSpaceOnUse">
+    <rect width="8" height="8" fill="#8090a0"/>
+    <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+  </pattern>
+</defs>
+
+<!-- Background -->
+<rect width="940" height="460" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="412" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+<!-- Title -->
+<text x="54" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U11 – Pregled poglavlja: Količina gibanja i sile strujanja</text>
+<text x="54" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">Newton II za kontrolni volumen · primjena na koljeno, račvu, mlaznicu</text>
+
+<!-- === PANEL LEFT: 90-degree koljeno physical overview === -->
+<rect x="40" y="90" width="390" height="340" rx="10" fill="url(#u11fp-bg1)" stroke="#93afc8" stroke-width="1.2"/>
+<!-- Panel label -->
+<rect x="52" y="100" width="130" height="22" rx="6" fill="#1e40af" opacity="0.15"/>
+<text x="117" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e3a8a" text-anchor="middle">Kontrolni volumen</text>
+
+<!-- Coordinate axes -->
+<line x1="78" y1="390" x2="120" y2="390" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u11fp-ag)"/>
+<line x1="78" y1="390" x2="78" y2="348" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u11fp-ag)"/>
+<text x="124" y="394" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">x</text>
+<text x="72" y="344" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">y</text>
+
+<!-- Koljeno geometry: horizontal pipe + 90-deg turn up -->
+<!-- Horizontal pipe wall: y=230-270 (center y=250), x=70 to 240 -->
+<rect x="70" y="228" width="170" height="44" rx="0" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.8"/>
+<!-- Vertical pipe wall: x=220-260 (center x=240), y=90 to 252 -->
+<rect x="222" y="134" width="42" height="116" rx="0" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.8"/>
+<!-- Corner fill -->
+<rect x="222" y="228" width="18" height="44" fill="#ffffff"/>
+<!-- Fluid in horizontal pipe -->
+<rect x="72" y="232" width="168" height="36" fill="url(#u11fp-wg2)"/>
+<!-- Fluid in vertical pipe -->
+<rect x="226" y="136" width="34" height="118" fill="url(#u11fp-wg)"/>
+<!-- Elbow corner fluid -->
+<rect x="226" y="232" width="12" height="36" fill="#7ec8e8"/>
+<rect x="222" y="232" width="16" height="44" fill="#c8d6df"/>
+<rect x="226" y="232" width="34" height="12" fill="#7ec8e8"/>
+
+<!-- Section 1 label (inlet) -->
+<line x1="72" y1="220" x2="72" y2="280" stroke="#516677" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="60" y="215" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">①</text>
+
+<!-- Section 2 label (outlet) -->
+<line x1="215" y1="136" x2="270" y2="136" stroke="#516677" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="275" y="141" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">②</text>
+
+<!-- v1 velocity arrow (horizontal, entering) -->
+<line x1="108" y1="250" x2="158" y2="250" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u11fp-ag)"/>
+<text x="105" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f766e">v₁</text>
+
+<!-- v2 velocity arrow (vertical, exiting upward) -->
+<line x1="243" y1="196" x2="243" y2="148" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u11fp-ag)"/>
+<text x="252" y="185" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f766e">v₂</text>
+
+<!-- p1 pressure label box -->
+<rect x="60" y="283" width="60" height="22" rx="5" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.2"/>
+<text x="90" y="298" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#1e3a8a" text-anchor="middle">p₁, A₁</text>
+
+<!-- p2 pressure label box -->
+<rect x="278" y="128" width="60" height="22" rx="5" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.2"/>
+<text x="308" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#1e3a8a">p₂, A₂</text>
+
+<!-- Rx force arrow (right = +x, fluid on koljeno) -->
+<line x1="243" y1="320" x2="310" y2="320" stroke="#b42318" stroke-width="2.5" marker-end="url(#u11fp-ar)"/>
+<text x="315" y="325" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#b42318">Rₓ</text>
+
+<!-- Ry force arrow (down = -y, fluid on koljeno) -->
+<line x1="165" y1="345" x2="165" y2="392" stroke="#b42318" stroke-width="2.5" marker-end="url(#u11fp-ar)"/>
+<text x="172" y="380" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#b42318">Rᵧ</text>
+
+<!-- Resultant FR (diagonal, down-right) -->
+<line x1="190" y1="330" x2="248" y2="378" stroke="#6d2694" stroke-width="2.8" marker-end="url(#u11fp-ap)"/>
+<text x="255" y="385" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#6d2694">F_R</text>
+
+<!-- Control volume dashed box -->
+<rect x="68" y="130" width="210" height="170" rx="6" fill="none" stroke="#b45309" stroke-width="1.8" stroke-dasharray="8,4"/>
+<text x="150" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#b45309" text-anchor="middle">k.v.</text>
+
+<!-- ṁ label in flow -->
+<text x="130" y="248" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#0c4a6e" font-weight="600">ṁ = ρAv</text>
+
+<!-- === PANEL RIGHT TOP: Key equations === -->
+<rect x="450" y="90" width="460" height="160" rx="10" fill="url(#u11fp-bg2)" stroke="#c49a0a" stroke-width="1.8"/>
+<text x="470" y="115" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#92400e">Zakon količine gibanja (KV)</text>
+
+<text x="470" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#173043">∑F⃗ = ṁ · (V⃗₂ − V⃗₁)</text>
+
+<line x1="470" y1="155" x2="895" y2="155" stroke="#c49a0a" stroke-width="1" stroke-dasharray="4,3"/>
+
+<text x="470" y="173" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#173043">Smjer x:   p₁A₁ − Rₓ = ṁ(v₂ₓ − v₁ₓ)</text>
+<text x="470" y="193" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#173043">Smjer y: −p₂A₂ + Rᵧ = ṁ(v₂ᵧ − v₁ᵧ)</text>
+
+<text x="470" y="218" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">Rₓ, Rᵧ = sila stijenke na fluid; F = −R = sila fluida na koljeno</text>
+<text x="470" y="236" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">F_R = √(Rₓ² + Rᵧ²)  [N]   ·   ṁ = ρAv = ρQ</text>
+
+<!-- === PANEL RIGHT BOTTOM: Nozzle wall example === -->
+<rect x="450" y="265" width="460" height="165" rx="10" fill="#f8fdfb" stroke="#4ade80" stroke-width="1.2" stroke-opacity="0.7"/>
+<text x="470" y="288" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#166534">Primjer: mlaznica pričvršćena na stijenci</text>
+
+<!-- Wall (nosac) srafura block -->
+<rect x="470" y="298" width="30" height="110" fill="url(#u11fp-hatch)" stroke="#2d3a40" stroke-width="1.5"/>
+
+<!-- Supply pipe -->
+<rect x="500" y="324" width="120" height="36" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
+<rect x="502" y="327" width="116" height="30" fill="url(#u11fp-wg2)"/>
+
+<!-- Nozzle convergent body -->
+<polygon points="620,324 680,336 680,360 620,360" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
+<polygon points="622,328 678,337 678,359 622,356" fill="url(#u11fp-wg2)"/>
+
+<!-- Free jet -->
+<rect x="680" y="340" width="80" height="8" fill="url(#u11fp-wg2)" stroke="none"/>
+<line x1="760" y1="344" x2="800" y2="344" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u11fp-ag)"/>
+<text x="808" y="349" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f766e">v₂</text>
+
+<!-- v1 in pipe -->
+<line x1="530" y1="342" x2="570" y2="342" stroke="#0f766e" stroke-width="2" marker-end="url(#u11fp-ag)"/>
+<text x="533" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#0f766e">v₁,p₁</text>
+
+<!-- F_nosac reaction arrow -->
+<line x1="560" y1="390" x2="498" y2="390" stroke="#b42318" stroke-width="2.5" marker-end="url(#u11fp-ar)"/>
+<text x="568" y="395" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#b42318">F_nosač</text>
+
+<!-- Formula -->
+<text x="470" y="422" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#173043">F_nosač = p₁A₁ + ṁ(v₂−v₁)   [nosač preuzima silu reakcije mlaza]</text>
+
+</svg>

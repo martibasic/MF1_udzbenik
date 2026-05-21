@@ -1,74 +1,116 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="title">U10 Val 3 - realni sifon s gubicima</title>
-  <desc id="desc">Realni sifon između slobodne površine spremnika i slobodnog izlaza, s jasno odvojenim oznakama za vrh sifona, geodetski pad i mjesta lokalnih gubitaka.</desc>
-  <rect width="980" height="420" fill="#ffffff"/>
-  <rect x="28" y="28" width="924" height="364" rx="18" fill="#ffffff" stroke="#c9d2d8" stroke-width="2"/>
-
-  <text x="58" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#173043">U10 - Servisni sifon s raspodijeljenim gubicima</text>
-  <text x="58" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Čist tehnicki prikaz: visine, tlak u vrhu i gubici citaju se bez preklapanja s geometrijom.</text>
-
-  <rect x="92" y="186" width="210" height="136" fill="#dff1f8" stroke="#5b6770" stroke-width="2.5"/>
-  <line x1="92" y1="186" x2="302" y2="186" stroke="#3a87ad" stroke-width="4"/>
-  <circle cx="302" cy="186" r="5" fill="#111827"/>
-  <rect x="320" y="168" width="152" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="336" y="187" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">slobodna površina A</text>
-
-  <path d="M302 218 C388 218 406 122 500 122 C596 122 614 272 706 272" fill="none" stroke="#2d3a40" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M302 218 C388 218 406 122 500 122 C596 122 614 272 706 272" fill="none" stroke="#d9edf4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M302 218 C388 218 406 122 500 122 C596 122 614 272 706 272" fill="none" stroke="#5b6770" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <circle cx="500" cy="122" r="5" fill="#111827"/>
-  <rect x="514" y="100" width="48" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="531" y="118" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">C</text>
-
-  <circle cx="706" cy="272" r="5" fill="#111827"/>
-  <rect x="724" y="254" width="148" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="740" y="273" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">slobodni izlaz B</text>
-
-  <line x1="706" y1="272" x2="794" y2="272" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
-  <rect x="724" y="296" width="72" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="742" y="314" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">Q, v</text>
-
-  <line x1="468" y1="186" x2="468" y2="122" stroke="#8b5e3c" stroke-width="3" marker-start="url(#arrowBrown)" marker-end="url(#arrowBrown)"/>
-  <rect x="406" y="144" width="52" height="26" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
-  <text x="423" y="162" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">z_C</text>
-
-  <line x1="848" y1="186" x2="848" y2="272" stroke="#6f7f89" stroke-width="3" marker-start="url(#arrowGray)" marker-end="url(#arrowGray)"/>
-  <rect x="860" y="216" width="74" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="874" y="234" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">delta z</text>
-
-  <line x1="350" y1="214" x2="424" y2="164" stroke="#b42318" stroke-width="4.5" marker-end="url(#arrowRed)"/>
-  <rect x="246" y="240" width="142" height="28" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
-  <text x="262" y="259" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">linijski gubici L</text>
-
-  <line x1="546" y1="168" x2="616" y2="226" stroke="#b42318" stroke-width="4.5" marker-end="url(#arrowRed)"/>
-  <rect x="560" y="196" width="118" height="28" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
-  <text x="576" y="215" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">vrsno koljeno</text>
-
-  <line x1="676" y1="258" x2="726" y2="258" stroke="#b42318" stroke-width="4.5" marker-end="url(#arrowRed)"/>
-  <rect x="620" y="296" width="90" height="26" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
-  <text x="640" y="314" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">izlaz xi</text>
-
-  <rect x="614" y="114" width="282" height="176" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
-  <text x="636" y="144" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Čitanje skice</text>
-  <text x="636" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">1. A -> B: delta z = v^2/(2g) + h_w</text>
-  <text x="636" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">2. h_w = h_l + sum h_loc</text>
-  <text x="636" y="228" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">3. A -> C: iz tog zapisa slijedi p_C/gamma</text>
-  <text x="636" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#516677">Lokalni gubici su označeni na mjestu gdje nastaju, a</text>
-  <text x="636" y="282" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#516677">visinske oznake i tlak u vrhu više ne ulaze u cijevni nacrt.</text>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="440" viewBox="0 0 940 440" role="img" aria-labelledby="u10v3-title u10v3-sub">
   <defs>
-    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/>
+    <linearGradient id="u10v3-wg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <pattern id="u10v3-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <marker id="u10v3-arrG" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
     </marker>
-    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#b42318"/>
+    <marker id="u10v3-arrD" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#546e7a"/>
     </marker>
-    <marker id="arrowBrown" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#8b5e3c"/>
-    </marker>
-    <marker id="arrowGray" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#6f7f89"/>
+    <marker id="u10v3-arrDrev" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#546e7a"/>
     </marker>
   </defs>
+  <rect width="940" height="440" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="392" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <title id="u10v3-title">U10 Val 3 – Realni sifon s raspodijeljenim gubicima</title>
+  <desc id="u10v3-desc">Servisni sifon D=90 mm: bazen A, vrh C 1,8 m iznad A, izlaz B 2,6 m ispod A. v=2,52 m/s, Q=16,0 L/s, p_C/γ=-3,04 m (man.), p_C,abs=7,16 m.</desc>
+  <!-- Titles -->
+  <text x="54" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U10 · Val 3 – Realni sifon s gubicima</text>
+  <text x="54" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">D=90 mm, Δz=2,6 m, z_C=1,8 m, λ=0,026, Σξ=2,4 → v=2,52 m/s, Q=16,0 L/s</text>
+  <!-- Scale: 50px/m. Reference z=0 = free surface A at y=192 -->
+  <!-- Basin A: x=44..194, water surface y=192 -->
+  <rect x="44" y="192" width="150" height="180" fill="url(#u10v3-wg)" stroke="#546e7a" stroke-width="2"/>
+  <rect x="44" y="120" width="150" height="72" fill="url(#u10v3-sraf)"/>
+  <!-- Basin A walls -->
+  <rect x="40" y="120" width="8" height="256" fill="#8090a0"/>
+  <rect x="190" y="192" width="8" height="184" fill="#8090a0"/>
+  <!-- Water surface A label -->
+  <line x1="40" y1="192" x2="210" y2="192" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="215" y="196" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043" dominant-baseline="middle">A (p.p.)</text>
+  <!-- Ground line at y=372 (z=0 is A surface; ground not shown explicitly) -->
+  <!-- Siphon pipe path: D=90mm → visual 18px thick -->
+  <!-- A entry at (198,192), peak C at (470,102), exit B at (748,322) -->
+  <!-- z_C = 1,8m above A → y = 192-90 = 102 -->
+  <!-- z_B = 2,6m below A → y = 192+130 = 322 -->
+  <!-- Siphon: dark outer (18px) + water fill (10px) -->
+  <path d="M198,192 C260,192 300,102 470,102 C640,102 680,322 748,322" fill="none" stroke="#2d3a40" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M198,192 C260,192 300,102 470,102 C640,102 680,322 748,322" fill="none" stroke="url(#u10v3-wg)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M198,192 C260,192 300,102 470,102 C640,102 680,322 748,322" fill="none" stroke="#546e7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Peak C label -->
+  <circle cx="470" cy="102" r="6" fill="#173043"/>
+  <rect x="480" y="86" width="52" height="26" rx="6" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
+  <text x="506" y="103" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043" text-anchor="middle">C</text>
+  <!-- Exit B: flow arrow -->
+  <circle cx="748" cy="322" r="5" fill="#173043"/>
+  <line x1="748" y1="322" x2="820" y2="322" stroke="#0f766e" stroke-width="4" marker-end="url(#u10v3-arrG)"/>
+  <rect x="826" y="308" width="62" height="26" rx="6" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
+  <text x="857" y="325" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043" text-anchor="middle">B, Q</text>
+  <!-- Flow arrow near A entry -->
+  <line x1="220" y1="175" x2="274" y2="160" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u10v3-arrG)"/>
+  <text x="232" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#0f766e">v=2,52 m/s</text>
+  <!-- === DIMENSION LINES === -->
+  <!-- z_C: from A surface (y=192) to peak C (y=102), at x=412 -->
+  <line x1="412" y1="192" x2="412" y2="102" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u10v3-arrDrev)" marker-end="url(#u10v3-arrD)"/>
+  <rect x="344" y="138" width="62" height="24" rx="6" fill="#ffffff" stroke="#d3d9de" stroke-width="1.2"/>
+  <text x="375" y="154" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043" text-anchor="middle">z_C=1,8 m</text>
+  <!-- Δz: from A surface (y=192) to B exit (y=322), at x=850 -->
+  <line x1="850" y1="192" x2="850" y2="322" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u10v3-arrDrev)" marker-end="url(#u10v3-arrD)"/>
+  <line x1="750" y1="192" x2="855" y2="192" stroke="#546e7a" stroke-width="1" stroke-dasharray="4 3"/>
+  <rect x="858" y="248" width="64" height="24" rx="6" fill="#ffffff" stroke="#d3d9de" stroke-width="1.2"/>
+  <text x="890" y="264" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043" text-anchor="middle">Δz=2,6 m</text>
+  <!-- === EGL/HGL LINES === -->
+  <!-- EGL at A (free surface): EGL = 0 → y=192 (canvas y=192 for z=0) -->
+  <!-- EGL at C: -0,92 m → y = 192+46 = 238. But C is at y=102, so the EGL is far BELOW the pipe at C -->
+  <!-- EGL at B: -2,28 m → y = 192+114 = 306 -->
+  <!-- Draw EGL as smooth line following the horizontal extent of the siphon -->
+  <!-- Using the x-coordinates: A entry x=198, C top x=470, B exit x=748 -->
+  <!-- I'll show EGL on a separate "energy axis" to the left of the siphon, as a falling line -->
+  <!-- Alternative: draw EGL on the right side as an energy diagram -->
+  <!-- For clarity, I'll draw EGL/HGL as a falling polyline behind the siphon (projected on vertical axis) -->
+  <!-- EGL line (dark red dashed): from (198,192) sloping to (748,306) (across horizontal x-span) -->
+  <!-- But showing the EGL at C (below the pipe) is the key insight -->
+  <!-- I'll draw EGL as falling from A (198,192) to B (748,306) with C marked -->
+  <polyline points="198,192 748,306" stroke="#b42318" stroke-width="2.5" fill="none" stroke-dasharray="9 5"/>
+  <!-- Mark EGL at C (x=470, y=238 by interpolation: 192 + (306-192)*(470-198)/(748-198) = 192 + 114*0.495 = 248.4) -->
+  <!-- Actually linear: y = 192 + (306-192) * (x-198)/(748-198) at x=470: y = 192 + 114*0.494 = 248 -->
+  <circle cx="470" cy="248" r="5" fill="#b42318"/>
+  <!-- Vertical dashed line from EGL at C (470,248) up to pipe at C (470,102) showing negative pressure -->
+  <line x1="470" y1="248" x2="470" y2="108" stroke="#b42318" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <!-- Arrow from C pipe to EGL -->
+  <text x="530" y="178" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#be123c" text-anchor="middle">EGL pod cijevi!</text>
+  <!-- HGL: 0.294m×50px/m = 14.7px below EGL, ≈ 15px -->
+  <polyline points="198,192 748,321" stroke="#6d2694" stroke-width="2" fill="none" stroke-dasharray="7 4"/>
+  <!-- EGL/HGL labels -->
+  <text x="160" y="188" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#b42318" text-anchor="end">EGL</text>
+  <text x="160" y="204" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#6d2694" text-anchor="end">HGL</text>
+  <!-- === LOCAL LOSS LABELS === -->
+  <!-- Inlet at A: ξ=0,5 -->
+  <text x="230" y="148" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#c49a0a">ulaz ξ=0,5</text>
+  <!-- Top bend C: ξ=0,9 -->
+  <text x="490" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#c49a0a">koljeno ξ=0,9</text>
+  <!-- Exit B: ξ=1,0 -->
+  <text x="730" y="340" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#c49a0a" text-anchor="middle">izlaz ξ=1,0</text>
+  <!-- Pressure at C info box -->
+  <rect x="530" y="212" width="182" height="76" rx="10" fill="#fff5f5" stroke="#b42318" stroke-width="1.8"/>
+  <text x="621" y="233" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#b42318" text-anchor="middle">Tlak u vrhu C</text>
+  <text x="621" y="252" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#b42318" text-anchor="middle">p_C/γ = −3,04 m (man.)</text>
+  <text x="621" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#173043" text-anchor="middle">p_C,abs = 7,16 m (ok, nema kavit.)</text>
+  <!-- Formula box -->
+  <rect x="44" y="310" width="220" height="96" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="154" y="330" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">Rješenje</text>
+  <text x="56" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#173043">otpor K = 1+λL/D+Σξ = 8,02</text>
+  <text x="56" y="368" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#0f766e">v = √(2gΔz/K) = 2,52 m/s</text>
+  <text x="56" y="386" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#173043">Q = 16,0 L/s  (D=90 mm)</text>
+  <!-- A→C step annotation -->
+  <text x="334" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">A→C: h_w,AC=(1,44+0,5+0,9)×0,324=0,92 m</text>
+  <text x="334" y="368" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">p_C/γ = -(z_C + v²/2g + h_w,AC) = -3,04 m</text>
+  <text x="334" y="386" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">p_C,abs = 10,2 - 3,04 = 7,16 m  ≫  p_vapor=0,25 m</text>
 </svg>

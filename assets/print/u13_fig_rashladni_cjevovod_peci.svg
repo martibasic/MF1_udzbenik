@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400">
+<defs>
+  <marker id="u13rc-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
+  <marker id="u13rc-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#7c3aed"/></marker>
+  <linearGradient id="u13rc-water" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
+  <linearGradient id="u13rc-hot" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fed7aa"/><stop offset="100%" stop-color="#f97316" stop-opacity="0.5"/></linearGradient>
+</defs>
+<rect width="940" height="400" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+<text x="54" y="55" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Rashladni cjevovod rotacijske peći</text>
+<text x="54" y="76" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#516677">D = 100 mm · L_uk = 170 m · Q = 0,025 m³/s · Σξ = 13,1 · ν = 1,0·10⁻⁶ m²/s</text>
+
+<!-- Pump (orange box, left) x=54..110, y=154..214 -->
+<rect x="54" y="154" width="60" height="62" rx="8" fill="#f59e0b" stroke="#92400e" stroke-width="2.5"/>
+<text x="84" y="183" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">C</text>
+<text x="84" y="200" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">crpka</text>
+<text x="54" y="145" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#b45309">Hp = hw</text>
+
+<!-- Supply pipe (top route): from pump to kiln -->
+<!-- horizontal from pump to kiln: y=148..160 (supply), x=114..480 -->
+<rect x="114" y="148" width="366" height="18" fill="url(#u13rc-water)" stroke="#2d3a40" stroke-width="2"/>
+<!-- Flow arrow supply -->
+<line x1="200" y1="157" x2="280" y2="157" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u13rc-ag)"/>
+<text x="240" y="143" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e" text-anchor="middle">Q = 0,025 m³/s</text>
+
+<!-- Fitting symbols on supply pipe -->
+<!-- non-return valve (NRV) at x=150 -->
+<circle cx="160" cy="157" r="8" fill="#fffef6" stroke="#2d3a40" stroke-width="1.5"/>
+<line x1="155" y1="152" x2="165" y2="162" stroke="#2d3a40" stroke-width="1.2"/>
+<line x1="165" y1="152" x2="155" y2="162" stroke="#2d3a40" stroke-width="1.2"/>
+<line x1="162" y1="154" x2="162" y2="160" stroke="#0f766e" stroke-width="1.5"/>
+<text x="162" y="140" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#173043" text-anchor="middle">NRV ξ=3,5</text>
+<!-- elbow at x=350 -->
+<circle cx="350" cy="157" r="6" fill="#fffef6" stroke="#2d3a40" stroke-width="1.2"/>
+<text x="350" y="139" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#173043" text-anchor="middle">4×koljeno</text>
+<!-- control valve at x=420 -->
+<rect x="408" y="149" width="24" height="16" rx="3" fill="#fffef6" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="420" y="161" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#7c3aed" text-anchor="middle">RV</text>
+<text x="420" y="141" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#7c3aed" text-anchor="middle">ξ=6,0</text>
+
+<!-- Rotary kiln: circle at x=544, y=185 -->
+<circle cx="544" cy="185" r="55" fill="url(#u13rc-hot)" stroke="#c2410c" stroke-width="3"/>
+<text x="544" y="180" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#c2410c" text-anchor="middle">rotacijska</text>
+<text x="544" y="198" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#c2410c" text-anchor="middle">peć</text>
+<!-- rotation arrows -->
+<path d="M 524,145 A 30,30 0 0,1 564,145" fill="none" stroke="#c2410c" stroke-width="2" marker-end="url(#u13rc-ag)"/>
+
+<!-- Return pipe (bottom, from kiln back to pump) -->
+<!-- from kiln down and back: y=218..234, x=114..480 -->
+<rect x="114" y="218" width="366" height="18" fill="url(#u13rc-hot)" stroke="#c2410c" stroke-width="2"/>
+<!-- flow arrow return (rightward = back to pump from kiln) -->
+<line x1="340" y1="227" x2="260" y2="227" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u13rc-ag)"/>
+<text x="300" y="214" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#c2410c" text-anchor="middle">voda iz peći (topla)</text>
+
+<!-- Connection pipes (vertical at kiln) -->
+<rect x="480" y="148" width="14" height="20" fill="url(#u13rc-water)" stroke="#2d3a40" stroke-width="2"/>
+<rect x="480" y="218" width="14" height="20" fill="url(#u13rc-hot)" stroke="#c2410c" stroke-width="2"/>
+
+<!-- Σξ label -->
+<text x="240" y="260" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">Σξ = ξ_NRV + 4·ξ_koljeno + ξ_RV = 3,5 + 4·0,9 + 6,0 = 13,1</text>
+
+<!-- L and D label -->
+<text x="240" y="280" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">L_uk = 2×85 = 170 m  ·  D = 100 mm  ·  λ = 0,022 (Moody)</text>
+
+<!-- Results panel -->
+<rect x="44" y="298" width="860" height="74" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+<text x="60" y="320" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Izračun:</text>
+<text x="60" y="340" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">v = Q/A = 0,025/7,854·10⁻³ = 3,18 m/s   ·   Re = 3,18·10⁵ (turbulentno)</text>
+<text x="60" y="358" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">h_f = 0,022·(170/0,100)·(3,18²/2·9,81) = <tspan font-weight="700" fill="#b42318">19,31 m</tspan>   ·   h_loc = 13,1·0,516 = <tspan font-weight="700" fill="#b42318">6,76 m</tspan></text>
+<text x="620" y="340" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#b42318">h_w = H_p = 26,07 m</text>
+<text x="620" y="362" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#516677" font-style="italic">Lokalni gubici: 26% ukupnih</text>
+</svg>

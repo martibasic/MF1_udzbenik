@@ -1,88 +1,88 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="title">U11 CH 1 - T-račva na sidrenoj konzoli</title>
-  <desc id="desc">Vodoravna T-račva s jednim ulazom i dva izlaza, s jasno označenim presjecima, pretlakom na ulazu, protocima u granama i rezultantnom silom na sidrenu konzolu.</desc>
-  <rect width="980" height="420" fill="#ffffff"/>
-  <rect x="28" y="28" width="924" height="364" rx="18" fill="#ffffff" stroke="#c9d2d8" stroke-width="2"/>
-
-  <text x="58" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#173043">U11 CH - T-račva na sidrenoj konzoli</text>
-  <text x="58" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Integrativni zadatak: Bernoulli za grane, kontinuitet za podjelu protoka i momentum za silu na konzolu.</text>
-
-  <path d="M118 250 L388 250 L388 146 L458 146" fill="none" stroke="#2d3a40" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M118 250 L388 250 L388 146 L458 146" fill="none" stroke="#d9edf4" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M118 250 L388 250 L388 146 L458 146" fill="none" stroke="#5b6770" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="388" y1="250" x2="520" y2="250" stroke="#2d3a40" stroke-width="28" stroke-linecap="round"/>
-  <line x1="388" y1="250" x2="520" y2="250" stroke="#d9edf4" stroke-width="18" stroke-linecap="round"/>
-  <line x1="388" y1="250" x2="520" y2="250" stroke="#5b6770" stroke-width="2.5" stroke-linecap="round"/>
-
-  <rect x="166" y="196" width="160" height="116" rx="10" fill="none" stroke="#8b5e3c" stroke-width="3" stroke-dasharray="10 7"/>
-  <rect x="190" y="170" width="132" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="206" y="189" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">kontrolni volumen</text>
-
-  <line x1="70" y1="250" x2="118" y2="250" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
-  <rect x="58" y="214" width="102" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="76" y="233" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">Q_1, v_1</text>
-
-  <line x1="458" y1="146" x2="526" y2="146" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
-  <rect x="468" y="108" width="102" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="486" y="127" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">Q_3, v_3</text>
-
-  <line x1="520" y1="250" x2="600" y2="250" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
-  <rect x="528" y="214" width="102" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="546" y="233" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">Q_2, v_2</text>
-
-  <circle cx="118" cy="250" r="5" fill="#111827"/>
-  <rect x="128" y="266" width="52" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="148" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">1</text>
-
-  <circle cx="520" cy="250" r="5" fill="#111827"/>
-  <rect x="532" y="266" width="52" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="552" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">2</text>
-
-  <circle cx="458" cy="146" r="5" fill="#111827"/>
-  <rect x="470" y="156" width="52" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="490" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#173043">3</text>
-
-  <rect x="160" y="214" width="82" height="26" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="178" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">p_M1</text>
-
-  <line x1="260" y1="250" x2="420" y2="250" stroke="#b42318" stroke-width="5" marker-end="url(#arrowRed)"/>
-  <rect x="322" y="214" width="56" height="26" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
-  <text x="338" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#b42318">F_x</text>
-
-  <line x1="260" y1="250" x2="260" y2="348" stroke="#b42318" stroke-width="5" marker-end="url(#arrowRed)"/>
-  <rect x="272" y="292" width="56" height="26" rx="6" fill="#ffffff" stroke="#d8c7c4" stroke-width="1.5"/>
-  <text x="288" y="310" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#b42318">F_y</text>
-
-  <line x1="260" y1="250" x2="408" y2="334" stroke="#8e24aa" stroke-width="4.5" marker-end="url(#arrowMagenta)"/>
-  <rect x="362" y="316" width="62" height="26" rx="6" fill="#ffffff" stroke="#d8c7e2" stroke-width="1.5"/>
-  <text x="378" y="334" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#8e24aa">F_R</text>
-
-  <line x1="630" y1="326" x2="630" y2="274" stroke="#6f7f89" stroke-width="3" marker-end="url(#arrowGray)"/>
-  <line x1="578" y1="326" x2="630" y2="326" stroke="#6f7f89" stroke-width="3" marker-end="url(#arrowGray)"/>
-  <text x="640" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">y</text>
-  <text x="636" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">x</text>
-
-  <rect x="656" y="118" width="246" height="184" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
-  <text x="678" y="148" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Čitanje skice</text>
-  <text x="678" y="180" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">1. Bernoulli daje izlazne brzine u granama</text>
-  <text x="678" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">2. Kontinuitet zatvara Q_1 = Q_2 + Q_3</text>
-  <text x="678" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">3. Momentum daje F_x i F_y na racvi</text>
-  <text x="678" y="258" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">4. Konzola preuzima suprotnu rezultantu</text>
-  <text x="678" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#516677">Sile, tlak i protoci izdvojeni su od geometrije tako da je</text>
-  <text x="678" y="312" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#516677">redoslijed Bernoulli -> kontinuitet -> momentum odmah čitljiv.</text>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 490" width="940" role="img" aria-labelledby="u11c1-title" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
   <defs>
-    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/>
+    <linearGradient id="u11c1-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <marker id="u11c1-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f766e"/>
     </marker>
-    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#b42318"/>
+    <marker id="u11c1-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#b42318"/>
     </marker>
-    <marker id="arrowMagenta" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#8e24aa"/>
+    <marker id="u11c1-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6d2694"/>
     </marker>
-    <marker id="arrowGray" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#6f7f89"/>
+    <marker id="u11c1-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#546e7a"/>
     </marker>
   </defs>
+  <rect width="940" height="490" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="442" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text id="u11c1-title" x="54" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U11 – T-racva na sidrenoj konzoli</text>
+  <text x="54" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">D&#x2081;=180 mm (p&#x2098;&#x2081;=40 kPa), D&#x2082;=90 mm (atm), D&#x2083;=80 mm (atm)  &#x21D2;  F&#x2093;=892 N (&#x2192;), F&#x1D67;=505 N (&#x2193;), F&#x209C;=1025 N</text>
+  <!-- T-junction WALL PATH -->
+  <!-- Outer T-shape: inlet left (D1=56px), vert branch up (D3=25px), outlet right (D2=28px) -->
+  <path d="M 54,264 L 365,264 L 365,106 L 390,106 L 390,278 L 640,278 L 640,306 L 390,306 L 390,320 L 54,320 Z"
+        fill="#c8d6df" stroke="#2d3a40" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Fluid inside T-shape -->
+  <path d="M 57,268 L 368,268 L 368,109 L 387,109 L 387,281 L 637,281 L 637,303 L 387,303 L 387,317 L 57,317 Z"
+        fill="url(#u11c1-water)" stroke="none"/>
+  <!-- ===== SECTIONS ===== -->
+  <!-- Section 1 (inlet) -->
+  <line x1="130" y1="258" x2="130" y2="326" stroke="#173043" stroke-width="2"/>
+  <circle cx="130" cy="292" r="5" fill="#173043"/>
+  <text x="122" y="340" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">1</text>
+  <!-- Section 2 (outlet right) -->
+  <line x1="592" y1="272" x2="592" y2="310" stroke="#173043" stroke-width="2"/>
+  <circle cx="592" cy="292" r="5" fill="#173043"/>
+  <text x="598" y="310" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">2</text>
+  <!-- Section 3 (outlet up) -->
+  <line x1="357" y1="118" x2="398" y2="118" stroke="#173043" stroke-width="2"/>
+  <circle cx="377" cy="118" r="5" fill="#173043"/>
+  <text x="404" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">3</text>
+  <!-- ===== VELOCITIES ===== -->
+  <!-- v1 (rightward, green) -->
+  <line x1="168" y1="292" x2="302" y2="292" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u11c1-ag)"/>
+  <text x="190" y="282" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#0f766e">v&#x2081; = 4,49 m/s</text>
+  <!-- v2 (rightward, green) -->
+  <line x1="472" y1="292" x2="572" y2="292" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u11c1-ag)"/>
+  <text x="478" y="282" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#0f766e">v&#x2082; = 10,0 m/s</text>
+  <!-- v3 (upward, green) -->
+  <line x1="377" y1="232" x2="377" y2="150" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u11c1-ag)"/>
+  <text x="384" y="196" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#0f766e">v&#x2083; = 10,0 m/s</text>
+  <!-- ===== PRESSURE LABELS ===== -->
+  <rect x="54" y="332" width="122" height="26" rx="6" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
+  <text x="70" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">p&#x2098;&#x2081; = 40 kPa</text>
+  <rect x="572" y="332" width="112" height="26" rx="6" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
+  <text x="588" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">p&#x2082; = 0 (atm)</text>
+  <rect x="414" y="94" width="112" height="26" rx="6" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
+  <text x="430" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">p&#x2083; = 0 (atm)</text>
+  <!-- ===== DIMENSION LABELS ===== -->
+  <text x="54" y="368" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">D&#x2081; = 180 mm</text>
+  <text x="650" y="296" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">D&#x2082; = 90 mm</text>
+  <text x="404" y="154" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">D&#x2083; = 80 mm</text>
+  <!-- ===== CONTROL VOLUME ===== -->
+  <rect x="100" y="98" width="560" height="240" rx="10" fill="none" stroke="#8090a0" stroke-width="1.8" stroke-dasharray="10 5"/>
+  <text x="114" y="114" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#8090a0">kontrolni volumen (KV)</text>
+  <!-- ===== FORCE VECTORS (fluid on raccva) ===== -->
+  <circle cx="680" cy="370" r="5" fill="#173043"/>
+  <!-- F_x = 892 N pointing right -->
+  <line x1="680" y1="370" x2="820" y2="370" stroke="#b42318" stroke-width="4" marker-end="url(#u11c1-ar)"/>
+  <text x="720" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#b42318">F&#x2093; = 892 N</text>
+  <!-- F_y = 505 N pointing down -->
+  <line x1="680" y1="370" x2="680" y2="430" stroke="#b42318" stroke-width="4" marker-end="url(#u11c1-ar)"/>
+  <text x="690" y="418" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#b42318">F&#x1D67; = 505 N</text>
+  <!-- F_R resultant -->
+  <line x1="680" y1="370" x2="800" y2="424" stroke="#6d2694" stroke-width="3.5" marker-end="url(#u11c1-ap)"/>
+  <text x="748" y="424" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#6d2694">F&#x209C; = 1025 N</text>
+  <!-- ===== COORD AXES ===== -->
+  <line x1="66" y1="430" x2="124" y2="430" stroke="#546e7a" stroke-width="2" marker-end="url(#u11c1-agr)"/>
+  <text x="128" y="435" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#546e7a">x</text>
+  <line x1="66" y1="430" x2="66" y2="372" stroke="#546e7a" stroke-width="2" marker-end="url(#u11c1-agr)"/>
+  <text x="72" y="370" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#546e7a">y</text>
+  <!-- ===== FORMULA BOX ===== -->
+  <rect x="54" y="452" width="870" height="52" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="72" y="474" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">Bernoulli (1&#x2192;2,3): v&#x2082;=v&#x2083;=10,0 m/s; v&#x2081;=4,49 m/s; Q&#x2081;=0,114 m&#xB3;/s</text>
+  <text x="72" y="494" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">F&#x2093;: p&#x2098;&#x2081;A&#x2081;+F&#x209C;&#x2093;=m&#x2D9;&#x2082;v&#x2082;&#x2212;m&#x2D9;&#x2081;v&#x2081;  &#x21D2;  F&#x209C;&#x2093;=&#x2212;892 N (stijenka na fluid)  &#x21D2;  fluid na raccvu: +892 N (&#x2192;)</text>
 </svg>

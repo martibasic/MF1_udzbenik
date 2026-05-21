@@ -1,13 +1,13 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 700" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="title">U10 - skice zadataka T1 do T6</title>
-  <desc id="desc">Šest minimalnih grayscale tehničkih skica za U10 zadatke T1 do T6.</desc>
-  <rect width="980" height="700" fill="#ffffff"/>
-  <rect x="22" y="22" width="936" height="656" rx="18" fill="#ffffff" stroke="#d4d9de" stroke-width="2"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="700" viewBox="0 0 940 700" role="img" aria-labelledby="u10vs-title u10vs-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u10vs-title">U10 - skice zadataka T1 do T6</title>
+  <desc id="u10vs-desc">Šest minimalnih grayscale tehničkih skica za U10 zadatke T1 do T6.</desc>
+  <rect width="940" height="700" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="652" rx="16" fill="#ffffff" stroke="#d4d9de" stroke-width="2"/>
   <text x="56" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2933">U10 - Skice zadataka T1-T6</text>
   <text x="56" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#5b6670">Na skicama ostaju energijski put, lokalni gubici, crest sifona i usisna visina prema crpki.</text>
 
   <defs>
-    <marker id="arrowDark" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#111111"/></marker>
+    <marker id="u10vs-arrD" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#111111"/></marker>
   </defs>
 
   <g transform="translate(46 116)">
@@ -61,7 +61,7 @@
     <line x1="64" y1="122" x2="128" y2="122" stroke="#5f6871" stroke-width="2"/>
     <text x="168" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">K</text>
     <text x="286" y="82" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">vrh</text>
-    <line x1="344" y1="132" x2="388" y2="132" stroke="#111111" stroke-width="3" marker-end="url(#arrowDark)"/>
+    <line x1="344" y1="132" x2="388" y2="132" stroke="#111111" stroke-width="3" marker-end="url(#u10vs-arrD)"/>
   </g>
 
   <g transform="translate(46 480)">

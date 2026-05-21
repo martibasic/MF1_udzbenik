@@ -1,58 +1,103 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
-  <title id="title">U07 Val 1 - plutajuća servisna platforma s kompresorom</title>
-  <desc id="desc">Poprecni presjek platforme s različitim uronima lijevo i desno, tezinskim silama, uzgonom i tlocrtom s pomakom kompresora.</desc>
-  <rect width="980" height="420" fill="#fffdf8"/>
-  <rect x="32" y="32" width="916" height="356" rx="22" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-
-  <text x="70" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#173043">U07 - Plutajuća platforma s pomaknutim kompresorom</text>
-  <text x="70" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#587183">Plivanje, srednji gaz, pomak tezista i momentna ravnoteza.</text>
-
-  <text x="90" y="158" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#173043">Poprecni presjek</text>
-
-  <rect x="70" y="225" width="470" height="120" fill="#dff1f8"/>
-  <line x1="70" y1="225" x2="540" y2="225" stroke="#3a87ad" stroke-width="4"/>
-  <polygon points="160,200 430,175 442,230 172,260" fill="#f5e5b8" stroke="#173043" stroke-width="5"/>
-  <line x1="301" y1="178" x2="301" y2="320" stroke="#6f7f89" stroke-width="2.5" stroke-dasharray="8 6"/>
-  <text x="314" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">os simetrije</text>
-
-  <line x1="160" y1="225" x2="160" y2="260" stroke="#c96c35" stroke-width="3" marker-start="url(#arrowOrangeSmall)" marker-end="url(#arrowOrange)"/>
-  <text x="98" y="248" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">h_L</text>
-  <line x1="430" y1="225" x2="430" y2="230" stroke="#c96c35" stroke-width="3" marker-start="url(#arrowOrangeSmall)" marker-end="url(#arrowOrange)"/>
-  <text x="442" y="234" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">h_D</text>
-
-  <line x1="301" y1="170" x2="301" y2="220" stroke="#c23b22" stroke-width="5" marker-end="url(#arrowRed)"/>
-  <text x="316" y="196" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">G_platforme</text>
-
-  <line x1="245" y1="155" x2="245" y2="214" stroke="#c23b22" stroke-width="5" marker-end="url(#arrowRed)"/>
-  <text x="162" y="186" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#173043">G_kompresora</text>
-
-  <line x1="270" y1="286" x2="270" y2="230" stroke="#2e7d32" stroke-width="5" marker-end="url(#arrowGreen)"/>
-  <text x="282" y="268" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">F_U</text>
-
-  <text x="610" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#173043">Tlocrtni inset</text>
-  <rect x="620" y="175" width="250" height="150" rx="14" fill="#f7fafb" stroke="#d3d9de" stroke-width="2"/>
-  <rect x="665" y="215" width="160" height="70" fill="#ffffff" stroke="#173043" stroke-width="4"/>
-  <line x1="745" y1="205" x2="745" y2="295" stroke="#6f7f89" stroke-width="2.5" stroke-dasharray="8 6"/>
-  <rect x="690" y="232" width="34" height="36" fill="#d9c26e" stroke="#173043" stroke-width="3"/>
-  <line x1="745" y1="305" x2="707" y2="305" stroke="#1976d2" stroke-width="3" marker-end="url(#arrowBlue)"/>
-  <text x="724" y="330" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#173043">e</text>
-  <text x="658" y="205" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#587183">pomak kompresora prema dubljem rubu</text>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" role="img" aria-labelledby="u7v1T">
+  <title id="u7v1T">U07 Val 1 – Plutajuća platforma s pomaknutim kompresorom</title>
   <defs>
-    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    <linearGradient id="u7v1Wg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <marker id="u7v1AG" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/>
     </marker>
-    <marker id="arrowOrangeSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    <marker id="u7v1AR" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b42318"/>
     </marker>
-    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#2e7d32"/>
+    <marker id="u7v1AD" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
     </marker>
-    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c23b22"/>
+    <marker id="u7v1ADR" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
     </marker>
-    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
+    <marker id="u7v1AB" markerWidth="9" markerHeight="9" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1565c0"/>
+    </marker>
+    <marker id="u7v1ABR" markerWidth="9" markerHeight="9" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="940" height="400" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text x="54" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U07 Val 1 – Platforma s pomaknutim kompresorom</text>
+  <text x="54" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">B=1,00 m, L=3,10 m, h_L=0,34 m, h_D=0,22 m, m_p=676 kg, m_k=190 kg, ρ=998 kg/m³</text>
+
+  <!-- ── CROSS-SECTION ── -->
+  <!-- Water background below waterline y=200 -->
+  <rect x="40" y="200" width="490" height="165" fill="url(#u7v1Wg)" opacity="0.55"/>
+  <!-- Waterline -->
+  <line x1="40" y1="200" x2="530" y2="200" stroke="#1565c0" stroke-width="2"/>
+  <text x="44" y="195" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1565c0">p.p.</text>
+
+  <!-- Platform (tilted): B=200px (1.00m×200px/m), centered at x=260
+       h_L=68px, h_D=44px, thickness=18px
+       Left bottom:  x=160, y=200+68=268
+       Right bottom: x=360, y=200+44=244
+       Left top:     x=160, y=250
+       Right top:    x=360, y=226 -->
+  <polygon points="160,250 360,226 360,244 160,268" fill="#b0bec5" stroke="#37474f" stroke-width="2.5"/>
+
+  <!-- Axis of symmetry (dashed) at x=260 -->
+  <line x1="260" y1="120" x2="260" y2="290" stroke="#8090a0" stroke-width="1.5" stroke-dasharray="8 5"/>
+
+  <!-- Kompresor box (on top of platform, at e=33px LEFT of axis, x=227)
+       Platform top at x=227: y ≈ 250-(227-160)*(250-226)/200 = 250-67*24/200 = 250-8 = 242
+       Kompresor box: x=202..252, y=218..242 -->
+  <rect x="200" y="216" width="54" height="26" rx="3" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+  <text x="210" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#173043">k.s.</text>
+
+  <!-- G_platforma arrow (red, down) at x=260 -->
+  <line x1="260" y1="158" x2="260" y2="204" stroke="#b42318" stroke-width="3" marker-end="url(#u7v1AR)"/>
+  <text x="266" y="172" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#b42318">G_p</text>
+
+  <!-- G_kompresor arrow (red, smaller) at x=227 -->
+  <line x1="227" y1="163" x2="227" y2="200" stroke="#b42318" stroke-width="2.5" marker-end="url(#u7v1AR)"/>
+  <text x="190" y="162" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#b42318">G_k</text>
+
+  <!-- F_U arrow (green, up) at center of buoyancy x=253 (7px left of axis) -->
+  <line x1="253" y1="275" x2="253" y2="193" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u7v1AG)"/>
+  <text x="258" y="282" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f766e">F_U</text>
+
+  <!-- ── DIMENSION LINES ── -->
+  <!-- h_L (left side) -->
+  <line x1="146" y1="200" x2="146" y2="268" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u7v1ADR)" marker-end="url(#u7v1AD)"/>
+  <text x="72" y="240" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">h_L=0,34m</text>
+  <!-- h_D (right side) -->
+  <line x1="376" y1="200" x2="376" y2="244" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u7v1ADR)" marker-end="url(#u7v1AD)"/>
+  <text x="382" y="227" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">h_D=0,22m</text>
+  <!-- B width -->
+  <line x1="160" y1="285" x2="360" y2="285" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u7v1ADR)" marker-end="url(#u7v1AD)"/>
+  <text x="232" y="300" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">B = 1,00 m</text>
+  <!-- e: horizontal arrow from axis (260) to kompresor center (227) at y=315 -->
+  <line x1="260" y1="315" x2="227" y2="315" stroke="#1565c0" stroke-width="1.8" marker-start="url(#u7v1ABR)" marker-end="url(#u7v1AB)"/>
+  <text x="225" y="330" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1565c0">e=0,163m</text>
+  <line x1="260" y1="308" x2="260" y2="322" stroke="#1565c0" stroke-width="1"/>
+  <line x1="227" y1="308" x2="227" y2="322" stroke="#1565c0" stroke-width="1"/>
+  <!-- L note -->
+  <text x="56" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#8090a0">L = 3,10 m (⊥ na skicu)</text>
+
+  <!-- ── FORMULA BOX ── -->
+  <rect x="532" y="88" width="354" height="268" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="554" y="113" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">Ključni rezultati</text>
+  <line x1="554" y1="121" x2="878" y2="121" stroke="#e8d89a" stroke-width="1"/>
+  <text x="554" y="141" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">h_m = (h_L + h_D) / 2</text>
+  <text x="554" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">h_m = 0,28 m</text>
+  <line x1="554" y1="170" x2="878" y2="170" stroke="#e8d89a" stroke-width="1"/>
+  <text x="554" y="190" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">V = L · B · h_m = 0,868 m³</text>
+  <text x="554" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">y_B = B(h_L−h_D) / (12 h_m)</text>
+  <text x="554" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">y_B = 3,57 cm</text>
+  <line x1="554" y1="240" x2="878" y2="240" stroke="#e8d89a" stroke-width="1"/>
+  <text x="554" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">Iz ravnoteže momenta:</text>
+  <text x="554" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">e = (m_p + m_k) · y_B / m_k</text>
+  <text x="554" y="297" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">e = 0,163 m ≈ 16,3 cm</text>
+  <line x1="554" y1="307" x2="878" y2="307" stroke="#e8d89a" stroke-width="1"/>
+  <text x="554" y="327" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">Δh_m = m_k / (ρ · L · B)</text>
+  <text x="554" y="345" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">Δh_m = 6,14 cm</text>
 </svg>

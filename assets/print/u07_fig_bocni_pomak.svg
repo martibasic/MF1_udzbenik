@@ -1,0 +1,84 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="360" viewBox="0 0 940 360" role="img" aria-labelledby="u7fbT">
+  <title id="u7fbT">U07 – Bočni pomak centra uzgona pri nesimetričnom uronu</title>
+  <defs>
+    <linearGradient id="u7fbWg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <marker id="u7fbAG" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u7fbAD" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u7fbADR" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u7fbAB" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1565c0"/>
+    </marker>
+    <marker id="u7fbABR" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="940" height="360" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="312" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text x="54" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U07 WE T1 – Bočni pomak centra uzgona</text>
+  <text x="54" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">Platforma B=1,20 m, h_L=0,32 m (lijevo), h_D=0,24 m (desno) → pomak centra uzgona B</text>
+
+  <!-- ── CROSS-SECTION ── -->
+  <!-- Water background (below waterline y=185) -->
+  <rect x="40" y="185" width="490" height="150" fill="url(#u7fbWg)" opacity="0.55"/>
+  <!-- Waterline (horizontal) -->
+  <line x1="40" y1="185" x2="530" y2="185" stroke="#1565c0" stroke-width="2"/>
+  <text x="44" y="180" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1565c0">p.p.</text>
+
+  <!-- Platform (tilted trapezoid / parallelogram)
+       Scale: 167 px/m; B=200px; h_L=53px, h_D=40px; thickness=18px
+       Waterline y=185
+       Left bottom:  x=170, y=185+53=238
+       Right bottom: x=370, y=185+40=225
+       Left top:     x=170, y=238-18=220
+       Right top:    x=370, y=225-18=207 -->
+  <polygon points="170,220 370,207 370,225 170,238" fill="#b0bec5" stroke="#37474f" stroke-width="2.5"/>
+
+  <!-- Axis of symmetry (dashed vertical through x=270) -->
+  <line x1="270" y1="120" x2="270" y2="290" stroke="#8090a0" stroke-width="1.5" stroke-dasharray="8 5"/>
+  <text x="274" y="118" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#8090a0">os simetrije</text>
+
+  <!-- Center of buoyancy B (displaced 5px left of axis to x=265)
+       Depth midpoint: y=185 + h_m/2 = 185 + 47/2 ≈ 208 -->
+  <circle cx="265" cy="210" r="7" fill="#0f766e"/>
+  <text x="250" y="207" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f766e">B</text>
+
+  <!-- y_B horizontal dimension arrow (from axis x=270 to B x=265) -->
+  <line x1="270" y1="224" x2="265" y2="224" stroke="#1565c0" stroke-width="2" marker-start="url(#u7fbABR)" marker-end="url(#u7fbAB)"/>
+  <text x="250" y="240" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#1565c0">y_B=2,86cm</text>
+
+  <!-- h_L dimension (left vertical, outside platform) -->
+  <line x1="155" y1="185" x2="155" y2="238" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u7fbADR)" marker-end="url(#u7fbAD)"/>
+  <text x="90" y="216" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">h_L=0,32m</text>
+
+  <!-- h_D dimension (right vertical, outside platform) -->
+  <line x1="385" y1="185" x2="385" y2="225" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u7fbADR)" marker-end="url(#u7fbAD)"/>
+  <text x="392" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">h_D=0,24m</text>
+
+  <!-- B width dimension (below platform) -->
+  <line x1="170" y1="254" x2="370" y2="254" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u7fbADR)" marker-end="url(#u7fbAD)"/>
+  <text x="244" y="269" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#546e7a">B = 1,20 m</text>
+
+  <!-- ── FORMULA BOX ── -->
+  <rect x="540" y="90" width="356" height="228" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="562" y="115" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">Položaj centra uzgona</text>
+  <line x1="562" y1="123" x2="888" y2="123" stroke="#e8d89a" stroke-width="1"/>
+  <text x="562" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">h_m = (h_L + h_D) / 2</text>
+  <text x="562" y="162" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">h_m = 0,28 m</text>
+  <line x1="562" y1="172" x2="888" y2="172" stroke="#e8d89a" stroke-width="1"/>
+  <text x="562" y="192" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">y_B = B(h_L − h_D) / (12 h_m)</text>
+  <text x="562" y="212" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">y_B = 1,20 · 0,08 / (12 · 0,28)</text>
+  <text x="562" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#173043">y_B = 0,0286 m = 2,86 cm</text>
+  <line x1="562" y1="242" x2="888" y2="242" stroke="#e8d89a" stroke-width="1"/>
+  <text x="562" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">B pomaknut prema dublje</text>
+  <text x="562" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">uronjenom boku (lijevo).</text>
+  <text x="562" y="298" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">Tlocrt: pravokutna platforma.</text>
+</svg>

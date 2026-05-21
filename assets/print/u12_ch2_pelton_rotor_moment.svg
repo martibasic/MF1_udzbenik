@@ -1,77 +1,120 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="title">U12 CH 2 - Peltonov rotor s jednim mlazom i momentom na obodu</title>
-  <desc id="desc">Mlaz iz sapnice udara u Peltonovu lopaticu na obodu rotora. Skica prikazuje obodnu brzinu, relativni i apsolutni izlaz, tangencijalnu silu i moment na radijusu r.</desc>
-  <rect width="980" height="420" fill="#ffffff"/>
-  <rect x="28" y="28" width="924" height="364" rx="18" fill="#ffffff" stroke="#c9d2d8" stroke-width="2"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="490" viewBox="0 0 940 490">
+<defs>
+  <marker id="u12c2-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
+  <marker id="u12c2-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b42318"/></marker>
+  <marker id="u12c2-ab" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#1d4ed8"/></marker>
+  <marker id="u12c2-ao" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b45309"/></marker>
+  <marker id="u12c2-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#546e7a"/></marker>
+  <linearGradient id="u12c2-wat" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
+  <pattern id="u12c2-hatch" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+    <rect width="8" height="8" fill="#8090a0"/>
+    <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+  </pattern>
+</defs>
+<rect width="940" height="490" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="442" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+<text x="54" y="55" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Peltonova turbina — moment i snaga jednoga mlaza</text>
+<text x="54" y="76" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#516677">c₁=31 m/s, u=15,41 m/s, w₁=15,59 m/s, β=20°, k=0,90 · r=0,46 m, n=320 min⁻¹</text>
 
-  <text x="58" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#173043">U12 CH - Peltonov rotor s jednim mlazom i momentom na obodu</text>
-  <text x="58" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#516677">Tangencijalna komponenta sile više nije samo reakcija lopatice, nego izravno moment i snaga na rotoru.</text>
+<!-- ===== PELTON ROTOR DIAGRAM (left) ===== -->
 
-  <circle cx="326" cy="258" r="124" fill="#f8fafb" stroke="#c9d2d8" stroke-width="2"/>
-  <circle cx="326" cy="258" r="94" fill="#ffffff" stroke="#d6dde2" stroke-width="1.5"/>
-  <circle cx="326" cy="258" r="7" fill="#5b6770"/>
+<!-- Nozzle on left -->
+<polygon points="44,192 44,272 90,252 90,212" fill="url(#u12c2-hatch)"/>
+<rect x="85" y="220" width="5" height="32" fill="#2d3a40"/>
+<!-- Jet (water stream) -->
+<rect x="90" y="220" width="112" height="32" fill="url(#u12c2-wat)" opacity="0.88"/>
+<!-- Label sapnica -->
+<text x="46" y="188" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#546e7a">d = 44 mm</text>
 
-  <path d="M414 190 Q442 172 462 188 Q444 212 418 214 Z" fill="#e8eef2" stroke="#5b6770" stroke-width="2"/>
-  <path d="M424 194 Q438 189 448 197" fill="none" stroke="#8aa6b8" stroke-width="2"/>
+<!-- Rotor circle: center (210, 330), radius 92px → represents r=0.46m at ~200px/m -->
+<circle cx="210" cy="330" r="92" fill="none" stroke="#2d3a40" stroke-width="2.5"/>
+<!-- Hub circle -->
+<circle cx="210" cy="330" r="18" fill="url(#u12c2-hatch)" stroke="#2d3a40" stroke-width="1.5"/>
+<!-- Spokes -->
+<line x1="210" y1="312" x2="210" y2="240" stroke="#2d3a40" stroke-width="1.8"/>
+<line x1="210" y1="348" x2="210" y2="420" stroke="#2d3a40" stroke-width="1.8"/>
+<line x1="192" y1="330" x2="120" y2="330" stroke="#2d3a40" stroke-width="1.8"/>
+<line x1="228" y1="330" x2="300" y2="330" stroke="#2d3a40" stroke-width="1.8"/>
 
-  <line x1="102" y1="202" x2="402" y2="202" stroke="#1565c0" stroke-width="6" marker-end="url(#arrowBlue)"/>
-  <rect x="148" y="164" width="94" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="172" y="183" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">c1, Q</text>
+<!-- Pelton bucket at top (12-o'clock): center at (210,238), opening facing left/jet -->
+<!-- Bucket outer shell (hatch/material) — U-shape opening left -->
+<path d="M 192,220 C 192,212 228,212 228,220 L 228,256 C 228,272 192,272 192,256 Z" fill="url(#u12c2-hatch)"/>
+<!-- Bucket inner concave surface (water) -->
+<path d="M 196,223 C 196,217 224,217 224,223 L 224,253 C 224,265 196,265 196,253 Z" fill="url(#u12c2-wat)" opacity="0.82"/>
+<!-- Bucket centerline divider (typical Pelton feature: ridge splitting flow) -->
+<line x1="210" y1="220" x2="210" y2="270" stroke="#2d3a40" stroke-width="1.5"/>
 
-  <line x1="430" y1="202" x2="374" y2="142" stroke="#2e8b57" stroke-width="5" marker-end="url(#arrowGreen)"/>
-  <rect x="330" y="122" width="84" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="354" y="141" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">w2</text>
+<!-- Radius label: r = 0.46 m from center (210,330) to bucket center (210,238) -->
+<line x1="210" y1="330" x2="210" y2="240" stroke="#546e7a" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="215" y="290" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#546e7a" font-style="italic">r = 0,46 m</text>
 
-  <line x1="430" y1="202" x2="502" y2="156" stroke="#c96c35" stroke-width="5" marker-end="url(#arrowOrange)"/>
-  <rect x="506" y="134" width="84" height="28" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
-  <text x="530" y="153" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">c2</text>
+<!-- n = 320 rpm label -->
+<!-- Rotation arc (CCW arrow) -->
+<path d="M 290,310 A 80,80 0 0,0 270,255" fill="none" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u12c2-agr)"/>
+<text x="298" y="298" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#546e7a">n = 320 min⁻¹</text>
 
-  <line x1="396" y1="224" x2="484" y2="224" stroke="#1565c0" stroke-width="5" marker-end="url(#arrowBlue)"/>
-  <rect x="412" y="240" width="92" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="438" y="259" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">u</text>
+<!-- c1 arrow (green, from nozzle going right, tangential to rotor at bucket) -->
+<line x1="102" y1="220" x2="198" y2="220" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u12c2-ag)"/>
+<text x="104" y="213" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">c₁ = 31 m/s</text>
 
-  <line x1="326" y1="258" x2="430" y2="202" stroke="#8b5e3c" stroke-width="3" marker-end="url(#arrowBrown)"/>
-  <rect x="358" y="220" width="76" height="26" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
-  <text x="386" y="238" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">r</text>
+<!-- u arrow (orange, bucket velocity = tangential = rightward at top of rotor) -->
+<line x1="228" y1="240" x2="318" y2="240" stroke="#b45309" stroke-width="2.8" marker-end="url(#u12c2-ao)"/>
+<text x="234" y="257" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#b45309">u = 15,41 m/s</text>
 
-  <path d="M294 108 A154 154 0 0 1 408 130" fill="none" stroke="#8b5e3c" stroke-width="3" marker-end="url(#arrowBrown)"/>
-  <rect x="250" y="92" width="112" height="28" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
-  <text x="274" y="111" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">M, omega</text>
+<!-- c2 exit arrow (absolute exit velocity, slightly right and up from bucket) -->
+<!-- c2 direction in SVG: (2.22, -4.80) normalized → (0.42, -0.91) scaled 60px → (25, -55) -->
+<line x1="196" y1="218" x2="221" y2="163" stroke="#0f766e" stroke-width="2.2" stroke-dasharray="5,2" marker-end="url(#u12c2-ag)"/>
+<text x="188" y="155" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#0f766e">c₂ = 5,3 m/s</text>
 
-  <line x1="430" y1="202" x2="520" y2="202" stroke="#a61e4d" stroke-width="5" marker-end="url(#arrowMagenta)"/>
-  <rect x="528" y="188" width="88" height="28" rx="6" fill="#ffffff" stroke="#e3cad4" stroke-width="1.5"/>
-  <text x="552" y="207" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">F_t</text>
+<!-- Force Fx on bucket (rightward = in direction of u) -->
+<line x1="320" y1="380" x2="388" y2="380" stroke="#b42318" stroke-width="2.5" marker-end="url(#u12c2-ar)"/>
+<text x="322" y="372" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#b42318">Fₓ = 680 N (u-smjer)</text>
 
-  <rect x="110" y="256" width="178" height="64" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
-  <text x="132" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Rotor</text>
-  <text x="132" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">n = 320 min^-1</text>
+<!-- ===== VELOCITY TRIANGLE PANEL (lower-left) ===== -->
+<rect x="44" y="360" width="390" height="110" rx="8" fill="#f0f6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="60" y="380" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#173043">Trokut brzina pri izlazu iz lopatice:</text>
 
-  <rect x="620" y="118" width="286" height="112" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
-  <text x="642" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Redoslijed</text>
-  <text x="642" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">1. iz n i r vrati u i w1</text>
-  <text x="642" y="192" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">2. iz w2 vrati apsolutni c2</text>
-  <text x="642" y="214" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">3. x-komponenta sile daje M i P</text>
+<!-- w2 vector: 14.03 m/s at β=20° from −x upward in SVG -->
+<!-- Scale: 1 m/s = 7px. w2=14.03 → 98px. β=20°: direction (−cos20°,−sin20°) SVG = (−0.940,−0.342) -->
+<!-- from (340,440): to (340+98·(−0.940), 440+98·(−0.342)) = (248,407) -->
+<line x1="340" y1="440" x2="248" y2="407" stroke="#1d4ed8" stroke-width="2.2" stroke-dasharray="5,2" marker-end="url(#u12c2-ab)"/>
+<text x="248" y="423" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#1d4ed8">w₂=14,0</text>
+<!-- u vector from tip of w2 to c2: add u=15.41 m/s rightward = 108px -->
+<line x1="248" y1="407" x2="355" y2="407" stroke="#b45309" stroke-width="2.2" marker-end="url(#u12c2-ao)"/>
+<text x="282" y="401" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#b45309">u=15,41</text>
+<!-- c2 from origin to c2 tip: c2=(2.22·7, −4.80·7)=(15.5,−33.6) from (340,440) → (355.5,406.4) ≈ (356,406) -->
+<line x1="340" y1="440" x2="356" y2="407" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u12c2-ag)"/>
+<text x="358" y="430" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#0f766e">c₂</text>
+<!-- β angle label -->
+<path d="M 310,440 A 30,30 0 0,1 329,430" fill="none" stroke="#173043" stroke-width="1.2"/>
+<text x="296" y="432" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#173043" font-style="italic">β=20°</text>
+<!-- Labels in left of panel -->
+<text x="60" y="400" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">c₁ = u + w₁ = 15,41 + 15,59 = 31 m/s ✓</text>
+<text x="60" y="418" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">w₂ = 0,90 · w₁ = 0,90 · 15,59 = 14,03 m/s</text>
+<text x="60" y="436" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">c₂ = √(2,22² + 4,80²) = 5,28 m/s</text>
+<text x="60" y="454" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#1e293b">ṁ_rel = ρ A w₁ = 1000·1,521·10⁻³·15,59 = 23,7 kg/s</text>
 
-  <rect x="620" y="256" width="286" height="88" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
-  <text x="642" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#173043">Generator</text>
-  <text x="642" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">P_G = 9,5 kW</text>
-  <text x="642" y="330" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#173043">provjera rezerve snage</text>
-
-  <defs>
-    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#2e8b57"/>
-    </marker>
-    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
-    </marker>
-    <marker id="arrowBrown" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#8b5e3c"/>
-    </marker>
-    <marker id="arrowMagenta" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#a61e4d"/>
-    </marker>
-  </defs>
+<!-- ===== INFO PANEL (right) ===== -->
+<rect x="455" y="88" width="460" height="372" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+<text x="471" y="114" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Zadano</text>
+<text x="471" y="134" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Sapnica:  d = 44 mm,  c₁ = 31 m/s</text>
+<text x="471" y="153" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Polumjer rotora:  r = 0,46 m,  n = 320 min⁻¹</text>
+<text x="471" y="172" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Izlazni kut:  β = 20°,  koef. trenja:  k = 0,90</text>
+<line x1="471" y1="184" x2="903" y2="184" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="203" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Kinematika rotora</text>
+<text x="471" y="222" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">ω = 2πn/60 = 2π·320/60 = 33,51 rad/s</text>
+<text x="471" y="241" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">u = ω·r = 33,51 · 0,46 = <tspan font-weight="700" fill="#b45309">15,41 m/s</tspan></text>
+<text x="471" y="260" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">w₁ = c₁ − u = 31 − 15,41 = 15,59 m/s</text>
+<text x="471" y="279" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">w₂ = 0,90 · 15,59 = 14,03 m/s</text>
+<line x1="471" y1="291" x2="903" y2="291" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="310" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Maseni protok i sila</text>
+<text x="471" y="330" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">A = π·(0,044)²/4 = 1,521·10⁻³ m²</text>
+<text x="471" y="349" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">ṁ_rel = ρ A w₁ = 23,7 kg/s</text>
+<text x="471" y="368" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">w₂ₓ = −14,03·cos20° = −13,18 m/s</text>
+<text x="471" y="387" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Fₓ = ṁ(w₁ − |w₂ₓ|) = 23,7·(15,59−13,18) = ... hm</text>
+<text x="471" y="406" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">Fₓ = ṁ·(w₁ + w₂·cos β) = 23,7·(15,59+13,18) = <tspan font-weight="700" fill="#b42318">680 N</tspan></text>
+<line x1="471" y1="418" x2="903" y2="418" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="436" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Moment i snaga</text>
+<text x="471" y="455" font-family="Segoe UI,Arial,sans-serif" font-size="13" fill="#1e293b">M = Fₓ · r = 680 · 0,46 = <tspan font-weight="700" fill="#b42318">313 Nm</tspan></text>
+<text x="471" y="466" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#6d2694">P = M · ω = 313 · 33,51 = 10,49 kW</text>
 </svg>

@@ -1,107 +1,231 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 700" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="title">U07 - skice zadataka T1 do T6</title>
-  <desc id="desc">Šest minimalnih grayscale tehničkih skica za U07 zadatke T1 do T6.</desc>
-  <rect width="980" height="700" fill="#ffffff"/>
-  <rect x="22" y="22" width="936" height="656" rx="18" fill="#ffffff" stroke="#d4d9de" stroke-width="2"/>
-  <text x="56" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2933">U07 - Skice zadataka T1-T6</text>
-  <text x="56" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#5b6670">Ostaju samo istisnina, vodna linija, težište, metacentar i veličine koje zaista ulaze u ravnotežu.</text>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="680" viewBox="0 0 940 680" role="img" aria-labelledby="u7vsT">
+  <title id="u7vsT">U07 – Skice zadataka za vježbu T1 do T6</title>
   <defs>
-    <marker id="arrowDark" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#111111"/></marker>
+    <linearGradient id="u7vsWg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <linearGradient id="u7vsOg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <marker id="u7vsAG" markerWidth="9" markerHeight="9" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u7vsAR" markerWidth="9" markerHeight="9" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#b42318"/>
+    </marker>
+    <marker id="u7vsAB" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1565c0"/>
+    </marker>
+    <marker id="u7vsABR" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1565c0"/>
+    </marker>
+    <marker id="u7vsAD" markerWidth="7" markerHeight="7" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u7vsADR" markerWidth="7" markerHeight="7" refX="3" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#546e7a"/>
+    </marker>
   </defs>
+  <rect width="940" height="680" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="632" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text x="54" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#173043">U07 – Skice zadataka za vježbu T1–T6</text>
+  <text x="54" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#516677">Minimalističke tehničke skice: istisnina, vodna linija, sile i mjere koje ulaze u ravnotežu.</text>
 
-  <g transform="translate(46 116)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T1</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Potpuno uronjeno tijelo</text>
-    <rect x="154" y="66" width="78" height="54" fill="#e9edf0" stroke="#3f4750" stroke-width="2"/>
-    <line x1="110" y1="48" x2="280" y2="48" stroke="#5f6871" stroke-width="2"/>
-    <line x1="194" y1="58" x2="194" y2="20" stroke="#111111" stroke-width="3" marker-end="url(#arrowDark)"/>
-    <line x1="194" y1="124" x2="194" y2="154" stroke="#111111" stroke-width="3" marker-end="url(#arrowDark)"/>
-    <line x1="226" y1="58" x2="226" y2="20" stroke="#111111" stroke-width="3" marker-end="url(#arrowDark)"/>
-    <text x="170" y="16" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">F_U</text>
-    <text x="212" y="16" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">F_drz</text>
-    <text x="204" y="152" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">G</text>
-    <text x="238" y="96" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">V</text>
+  <!-- ═══════ T1: Potpuno uronjeno tijelo ═══════ -->
+  <g transform="translate(42,92)">
+    <rect width="424" height="168" rx="10" fill="#f7f9fb" stroke="#d0d8e0" stroke-width="1.5"/>
+    <rect x="16" y="12" width="38" height="22" rx="6" fill="#e2eaf0" stroke="#b8c8d4" stroke-width="1.2"/>
+    <text x="26" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T1</text>
+    <text x="64" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">Potpuno uronjeno tijelo</text>
+    <!-- Water fill -->
+    <rect x="8" y="40" width="408" height="120" fill="url(#u7vsWg)" opacity="0.5" rx="4"/>
+    <!-- Surface -->
+    <line x1="8" y1="40" x2="416" y2="40" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="12" y="37" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1565c0">p.p.</text>
+    <!-- Submerged block -->
+    <rect x="168" y="62" width="88" height="60" rx="3" fill="#c8d6df" stroke="#546e7a" stroke-width="2"/>
+    <text x="196" y="97" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">V, m</text>
+    <!-- F_U arrow (up) -->
+    <line x1="212" y1="62" x2="212" y2="20" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u7vsAG)"/>
+    <text x="218" y="36" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#0f766e">F_U</text>
+    <!-- G arrow (down) -->
+    <line x1="212" y1="122" x2="212" y2="153" stroke="#b42318" stroke-width="2.5" marker-end="url(#u7vsAR)"/>
+    <text x="218" y="153" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b42318">G</text>
+    <!-- F_drz arrow (holding force, downward, since F_U > G) -->
+    <line x1="240" y1="20" x2="240" y2="58" stroke="#1565c0" stroke-width="2.5" marker-end="url(#u7vsAB)"/>
+    <text x="248" y="34" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1565c0">F_drz</text>
   </g>
 
-  <g transform="translate(502 116)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T2</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Ponton i srednji gaz</text>
-    <rect x="98" y="82" width="202" height="42" fill="#e9edf0" stroke="#3f4750" stroke-width="2"/>
-    <line x1="62" y1="100" x2="336" y2="100" stroke="#5f6871" stroke-width="2"/>
-    <text x="308" y="94" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">vodna linija</text>
-    <line x1="320" y1="82" x2="320" y2="100" stroke="#6a737c" stroke-width="2"/>
-    <line x1="320" y1="100" x2="320" y2="124" stroke="#6a737c" stroke-width="2"/>
-    <text x="328" y="114" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">h</text>
-    <text x="188" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">L, B</text>
+  <!-- ═══════ T2: Ponton i srednji gaz ═══════ -->
+  <g transform="translate(474,92)">
+    <rect width="424" height="168" rx="10" fill="#f7f9fb" stroke="#d0d8e0" stroke-width="1.5"/>
+    <rect x="16" y="12" width="38" height="22" rx="6" fill="#e2eaf0" stroke="#b8c8d4" stroke-width="1.2"/>
+    <text x="26" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T2</text>
+    <text x="64" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">Ponton: gaz i max. opterećenje</text>
+    <!-- Water fill -->
+    <rect x="8" y="90" width="408" height="70" fill="url(#u7vsWg)" opacity="0.5" rx="4"/>
+    <line x1="8" y1="90" x2="416" y2="90" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="12" y="87" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1565c0">p.p.</text>
+    <!-- Ponton body: y=68..124 (56px tall), waterline at y=90, gaz=22px -->
+    <rect x="100" y="68" width="224" height="56" rx="3" fill="#b0bec5" stroke="#37474f" stroke-width="2"/>
+    <!-- H total dim (right) -->
+    <line x1="332" y1="68" x2="332" y2="124" stroke="#546e7a" stroke-width="1.2" marker-start="url(#u7vsADR)" marker-end="url(#u7vsAD)"/>
+    <text x="338" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">H</text>
+    <!-- h gaz dim (right, inner) -->
+    <line x1="350" y1="90" x2="350" y2="124" stroke="#1565c0" stroke-width="1.2" marker-start="url(#u7vsABR)" marker-end="url(#u7vsAB)"/>
+    <text x="356" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#1565c0">h</text>
+    <!-- B dim (bottom) -->
+    <line x1="100" y1="142" x2="324" y2="142" stroke="#546e7a" stroke-width="1.2" marker-start="url(#u7vsADR)" marker-end="url(#u7vsAD)"/>
+    <text x="188" y="156" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">L, B</text>
+    <!-- G arrow down -->
+    <line x1="212" y1="50" x2="212" y2="73" stroke="#b42318" stroke-width="2" marker-end="url(#u7vsAR)"/>
+    <text x="218" y="64" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b42318">G</text>
+    <!-- F_U arrow up -->
+    <line x1="196" y1="124" x2="196" y2="96" stroke="#0f766e" stroke-width="2" marker-end="url(#u7vsAG)"/>
+    <text x="172" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#0f766e">F_U</text>
   </g>
 
-  <g transform="translate(46 298)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T3</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Platforma s pomaknutim kompresorom</text>
-    <rect x="96" y="84" width="196" height="40" fill="#e9edf0" stroke="#3f4750" stroke-width="2"/>
-    <line x1="60" y1="98" x2="332" y2="108" stroke="#5f6871" stroke-width="2"/>
-    <rect x="214" y="58" width="36" height="22" fill="#d8dde2" stroke="#3f4750" stroke-width="2"/>
-    <text x="216" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">kompresor</text>
-    <line x1="194" y1="84" x2="194" y2="52" stroke="#6a737c" stroke-width="2"/>
-    <text x="202" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">e</text>
-    <text x="82" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">lijevi uron</text>
-    <text x="236" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">desni uron</text>
+  <!-- ═══════ T3: Platforma s pomaknutim kompresorom ═══════ -->
+  <g transform="translate(42,268)">
+    <rect width="424" height="168" rx="10" fill="#f7f9fb" stroke="#d0d8e0" stroke-width="1.5"/>
+    <rect x="16" y="12" width="38" height="22" rx="6" fill="#e2eaf0" stroke="#b8c8d4" stroke-width="1.2"/>
+    <text x="26" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T3</text>
+    <text x="64" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">Platforma s pomaknutim kompresorom</text>
+    <!-- Water fill -->
+    <rect x="8" y="86" width="408" height="74" fill="url(#u7vsWg)" opacity="0.5" rx="4"/>
+    <line x1="8" y1="86" x2="416" y2="86" stroke="#1565c0" stroke-width="1.5"/>
+    <!-- Tilted platform: left bottom y=86+44=130, right bottom y=86+30=116, thickness 16 -->
+    <polygon points="90,114 334,100 334,116 90,130" fill="#b0bec5" stroke="#37474f" stroke-width="2"/>
+    <!-- Kompresor box on right (at e right of center x=212 → x=252) -->
+    <rect x="246" y="78" width="44" height="22" rx="3" fill="#fde68a" stroke="#d97706" stroke-width="1.5"/>
+    <text x="254" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#173043">k.s.</text>
+    <!-- h_L dim left -->
+    <line x1="78" y1="86" x2="78" y2="130" stroke="#546e7a" stroke-width="1.2" marker-start="url(#u7vsADR)" marker-end="url(#u7vsAD)"/>
+    <text x="50" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">h_L</text>
+    <!-- h_D dim right -->
+    <line x1="348" y1="86" x2="348" y2="116" stroke="#546e7a" stroke-width="1.2" marker-start="url(#u7vsADR)" marker-end="url(#u7vsAD)"/>
+    <text x="354" y="106" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">h_D</text>
+    <!-- e dim -->
+    <line x1="212" y1="148" x2="268" y2="148" stroke="#1565c0" stroke-width="1.2" marker-start="url(#u7vsABR)" marker-end="url(#u7vsAB)"/>
+    <text x="228" y="162" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#1565c0">e</text>
+    <line x1="212" y1="143" x2="212" y2="153" stroke="#1565c0" stroke-width="1"/>
+    <line x1="268" y1="143" x2="268" y2="153" stroke="#1565c0" stroke-width="1"/>
+    <!-- B dim -->
+    <line x1="90" y1="148" x2="212" y2="148" stroke="#546e7a" stroke-width="1.2" marker-start="url(#u7vsADR)" marker-end="url(#u7vsAD)"/>
+    <text x="138" y="162" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">B/2</text>
   </g>
 
-  <g transform="translate(502 298)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T4</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Areometar u vodi i ulju</text>
-    <rect x="118" y="46" width="28" height="98" rx="14" fill="#f5f7f8" stroke="#3f4750" stroke-width="2"/>
-    <rect x="254" y="46" width="28" height="98" rx="14" fill="#f5f7f8" stroke="#3f4750" stroke-width="2"/>
-    <line x1="96" y1="96" x2="168" y2="96" stroke="#5f6871" stroke-width="2"/>
-    <line x1="232" y1="110" x2="304" y2="110" stroke="#5f6871" stroke-width="2"/>
-    <text x="92" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">h1</text>
-    <text x="228" y="104" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">h2</text>
-    <text x="106" y="156" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">voda</text>
-    <text x="246" y="156" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">ulje</text>
+  <!-- ═══════ T4: Areometar u vodi i ulju ═══════ -->
+  <g transform="translate(474,268)">
+    <rect width="424" height="168" rx="10" fill="#f7f9fb" stroke="#d0d8e0" stroke-width="1.5"/>
+    <rect x="16" y="12" width="38" height="22" rx="6" fill="#e2eaf0" stroke="#b8c8d4" stroke-width="1.2"/>
+    <text x="26" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T4</text>
+    <text x="64" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">Areometar u vodi i ulju</text>
+    <!-- Left container (water) -->
+    <rect x="50" y="40" width="130" height="118" fill="url(#u7vsWg)" opacity="0.6" rx="3"/>
+    <rect x="50" y="40" width="130" height="118" fill="none" stroke="#546e7a" stroke-width="1.5" rx="3"/>
+    <text x="62" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#1565c0">voda</text>
+    <!-- Right container (oil) -->
+    <rect x="244" y="40" width="130" height="118" fill="url(#u7vsOg)" opacity="0.7" rx="3"/>
+    <rect x="244" y="40" width="130" height="118" fill="none" stroke="#546e7a" stroke-width="1.5" rx="3"/>
+    <text x="256" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#92400e">ulje</text>
+    <!-- Areometer left (water): bulge at bottom, thin stem, h1=82mm (less submerged)
+         h1 is the immersion depth. Less dense water → less submerged? No, denser water = more buoyancy = less submerged.
+         h1=82mm in water (less submerged), h2=95mm in oil (more submerged, since oil is lighter).
+         Areometer: bulge x=99..130, y=120..150; stem x=111..118, y=80..120; surface at y=100.
+         Submerged part: below y=100. -->
+    <!-- Surface water at y=100 -->
+    <line x1="54" y1="100" x2="176" y2="100" stroke="#1565c0" stroke-width="1.5"/>
+    <!-- Areometer stem left: x=110..120, y=60..100 above water; bulge at y=100..148 -->
+    <rect x="110" y="60" width="10" height="40" rx="5" fill="#e8edf0" stroke="#546e7a" stroke-width="1.5"/>
+    <ellipse cx="115" cy="130" rx="18" ry="22" fill="#e8edf0" stroke="#546e7a" stroke-width="1.5"/>
+    <!-- h1 dim: from surface y=100 to bottom of bulge submerged portion -->
+    <line x1="80" y1="100" x2="80" y2="120" stroke="#1565c0" stroke-width="1.2" marker-start="url(#u7vsABR)" marker-end="url(#u7vsAB)"/>
+    <text x="56" y="115" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#1565c0">h1</text>
+    <!-- Areometer right (oil): deeper submerged, h2=95mm -->
+    <!-- Surface oil at y=96 -->
+    <line x1="248" y1="96" x2="370" y2="96" stroke="#92400e" stroke-width="1.5"/>
+    <!-- Stem more submerged: top of stem at y=64, surface at y=96, bulge y=96..148 -->
+    <rect x="304" y="64" width="10" height="32" rx="5" fill="#e8edf0" stroke="#546e7a" stroke-width="1.5"/>
+    <ellipse cx="309" cy="130" rx="18" ry="22" fill="#e8edf0" stroke="#546e7a" stroke-width="1.5"/>
+    <!-- h2 dim -->
+    <line x1="278" y1="96" x2="278" y2="122" stroke="#92400e" stroke-width="1.2" marker-start="url(#u7vsABR)" marker-end="url(#u7vsAB)"/>
+    <text x="258" y="115" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#92400e">h2</text>
+    <text x="195" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">→</text>
+    <text x="175" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">h2 &gt; h1</text>
   </g>
 
-  <g transform="translate(46 480)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T5</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Mali nagib i GM</text>
-    <line x1="72" y1="108" x2="330" y2="108" stroke="#5f6871" stroke-width="2"/>
-    <path d="M132 116 L240 92 L250 118 L142 142 Z" fill="#edf1f4" stroke="#3f4750" stroke-width="2"/>
-    <line x1="198" y1="70" x2="198" y2="136" stroke="#6a737c" stroke-width="2"/>
-    <circle cx="198" cy="98" r="4" fill="#111111"/>
-    <circle cx="198" cy="74" r="4" fill="#111111"/>
-    <text x="206" y="102" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">G</text>
-    <text x="206" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">M</text>
-    <path d="M198 98 A34 34 0 0 1 228 110" fill="none" stroke="#111111" stroke-width="2"/>
-    <text x="232" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">phi</text>
-    <text x="246" y="80" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">GM</text>
+  <!-- ═══════ T5: Metacentarska visina GM ═══════ -->
+  <g transform="translate(42,444)">
+    <rect width="424" height="168" rx="10" fill="#f7f9fb" stroke="#d0d8e0" stroke-width="1.5"/>
+    <rect x="16" y="12" width="38" height="22" rx="6" fill="#e2eaf0" stroke="#b8c8d4" stroke-width="1.2"/>
+    <text x="26" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T5</text>
+    <text x="64" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">Metacentarska visina GM i nagib φ</text>
+    <!-- Water fill -->
+    <rect x="8" y="102" width="408" height="58" fill="url(#u7vsWg)" opacity="0.5" rx="4"/>
+    <line x1="8" y1="102" x2="416" y2="102" stroke="#1565c0" stroke-width="1.5"/>
+    <!-- Tilted ponton (7 degree tilt, represented as ~12px height difference over 200px) -->
+    <!-- Ponton center at x=212, waterline y=102, gaz ~40px -->
+    <!-- Left bottom x=112, y=102+46=148; right bottom x=312, y=102+34=136; thickness 16 -->
+    <polygon points="112,132 312,120 312,136 112,148" fill="#b0bec5" stroke="#37474f" stroke-width="2"/>
+    <!-- Center of gravity G (red square, above ponton center) -->
+    <rect x="205" y="79" width="12" height="12" fill="#b42318"/>
+    <!-- Center of buoyancy B (green circle, at draft midpoint) -->
+    <circle cx="212" cy="140" r="5" fill="#0f766e"/>
+    <!-- Metacentar M (blue diamond, above G) -->
+    <polygon points="212,48 218,58 212,68 206,58" fill="#1565c0"/>
+    <!-- GM line -->
+    <line x1="212" y1="48" x2="212" y2="91" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <!-- Labels -->
+    <text x="218" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1565c0">M</text>
+    <text x="222" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b42318">G_T</text>
+    <text x="222" y="144" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#0f766e">B</text>
+    <!-- GM brace -->
+    <line x1="194" y1="48" x2="194" y2="91" stroke="#1565c0" stroke-width="1.2" marker-start="url(#u7vsABR)" marker-end="url(#u7vsAB)"/>
+    <text x="170" y="73" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#1565c0">GM</text>
+    <!-- Angle phi annotation -->
+    <text x="290" y="118" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#516677">φ = 7°</text>
+    <!-- Restoring moment label -->
+    <text x="30" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#516677">M_R = m g GM sin φ</text>
   </g>
 
-  <g transform="translate(502 480)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2933">T6</text>
-    <text x="82" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1f2933">Platforma na ulju i vodi</text>
-    <rect x="92" y="72" width="230" height="28" fill="#f5f6f7"/>
-    <rect x="92" y="100" width="230" height="34" fill="#e9edf0"/>
-    <rect x="150" y="88" width="144" height="20" fill="#d7dde2" stroke="#3f4750" stroke-width="2"/>
-    <rect x="244" y="72" width="22" height="16" fill="#c6ccd2" stroke="#3f4750" stroke-width="2"/>
-    <line x1="126" y1="72" x2="126" y2="100" stroke="#6a737c" stroke-width="2"/>
-    <line x1="126" y1="100" x2="126" y2="134" stroke="#6a737c" stroke-width="2"/>
-    <text x="102" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">ulje</text>
-    <text x="100" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">voda</text>
-    <text x="134" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">hL</text>
-    <text x="134" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">hD</text>
-    <text x="274" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">delta</text>
+  <!-- ═══════ T6: Platforma na granici ulja i vode ═══════ -->
+  <g transform="translate(474,444)">
+    <rect width="424" height="168" rx="10" fill="#f7f9fb" stroke="#d0d8e0" stroke-width="1.5"/>
+    <rect x="16" y="12" width="38" height="22" rx="6" fill="#e2eaf0" stroke="#b8c8d4" stroke-width="1.2"/>
+    <text x="26" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#173043">T6</text>
+    <text x="64" y="27" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#173043">Platforma na granici ulja i vode</text>
+    <!-- Oil layer: surface y=72 to oil/water boundary y=85 (13px ≈ δ=0.08m) -->
+    <rect x="8" y="72" width="408" height="13" fill="url(#u7vsOg)" opacity="0.8" rx="2"/>
+    <!-- Water below: y=85..158 -->
+    <rect x="8" y="85" width="408" height="73" fill="url(#u7vsWg)" opacity="0.5" rx="2"/>
+    <!-- Surface line -->
+    <line x1="8" y1="72" x2="416" y2="72" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="12" y="69" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1565c0">p.p.</text>
+    <!-- Oil/water boundary -->
+    <line x1="8" y1="85" x2="416" y2="85" stroke="#92400e" stroke-width="1.2" stroke-dasharray="6 4"/>
+    <!-- Tilted platform: left (deeper, h_L=0.26m≈43px), right (shallower, h_D=0.18m≈30px) -->
+    <!-- Left bottom x=90, y=72+43=115; right bottom x=334, y=72+30=102; thickness 14 -->
+    <polygon points="90,101 334,88 334,102 90,115" fill="#b0bec5" stroke="#37474f" stroke-width="2"/>
+    <!-- Akumulator (accumulator) on LEFT side (deeper) -->
+    <rect x="90" y="60" width="44" height="20" rx="3" fill="#fde68a" stroke="#d97706" stroke-width="1.5"/>
+    <text x="96" y="74" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#173043">akum.</text>
+    <!-- h_L dim left -->
+    <line x1="76" y1="72" x2="76" y2="115" stroke="#546e7a" stroke-width="1.2" marker-start="url(#u7vsADR)" marker-end="url(#u7vsAD)"/>
+    <text x="46" y="99" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">h_L</text>
+    <!-- h_D dim right -->
+    <line x1="348" y1="72" x2="348" y2="102" stroke="#546e7a" stroke-width="1.2" marker-start="url(#u7vsADR)" marker-end="url(#u7vsAD)"/>
+    <text x="354" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">h_D</text>
+    <!-- δ oil thickness (left outer) -->
+    <line x1="58" y1="72" x2="58" y2="85" stroke="#92400e" stroke-width="1.2" marker-start="url(#u7vsABR)" marker-end="url(#u7vsAB)"/>
+    <text x="30" y="83" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#92400e">δ</text>
+    <!-- Oil/water labels -->
+    <text x="360" y="82" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#92400e">ulje</text>
+    <text x="360" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1565c0">voda</text>
+    <!-- B dim -->
+    <line x1="90" y1="140" x2="334" y2="140" stroke="#546e7a" stroke-width="1.2" marker-start="url(#u7vsADR)" marker-end="url(#u7vsAD)"/>
+    <text x="196" y="154" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#546e7a">B</text>
   </g>
 </svg>
