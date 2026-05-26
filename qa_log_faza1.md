@@ -688,3 +688,59 @@ Sve nove i redizajnirane SVG datoteke prošle su kroz kanonski tijek:
 - `strip_svg_titles.py` — uklanjanje top-level naslova SVG-ova
 - `fix_svg_xml.py` — popravak XML konformance (komentari, entiteti)
 
+## Faza 3 — Detaljni QA SVG-ova kroz pravila_svg.md (2026-05-26)
+
+Sustavni prolaz kroz sve SVG-ove poglavlja prema [`pravila_svg.md`](pravila_svg.md) checklisti A–E. Cilj: ispraviti Codex regresije i sistemske odstupanje od kanonske palete koje su otkrile da Codex nije imao u svom ancestoru sve Faza 1 popravke.
+
+### B-U01: Osnove fluida i Pascalov zakon — `zatvoreno (Faza 3)`
+
+**Datum**: 2026-05-26
+**SVG-ova pregledano**: 9 (val1, val2, val3, ch1, uvod, gustoca, presa, most, vjezbe)
+**Otvoreno**: 1 SVG za izradu (u01_fig_kocnica_vozila.svg — primjer iz Faze 1.5, Codex todo)
+
+#### Sistemski nalazi (popravljeno kroz tools/fix_u01_skice.py)
+
+1. **Vode gradient bottom stop**: `#7fb3d3` → `#5b9ec9` (per protokol). Pogođeno **8 SVG-ova**.
+2. **Boja kota**: tamno-siva `#3a3a3a` (i `#4a4a4a` u val1) → smeđa `#b7600c`. Pogođeno **7 SVG-ova**, ukupno **~60 instanci** (marker fill + stroke linija + tekst).
+
+#### Per-file kritični Codex regresije (vraćeni stari pre-Faza-1 obrasci)
+
+| SVG | Codex regression | Popravljeno |
+|---|---|---|
+| `u01_val2_hidraulicna_dizalica.svg` | F_1 plava (`#1565c0`) umjesto crvene (ulazna sila) | strelica + tekst + legenda u crvenu |
+| `u01_val3_dvostruki_podizac.svg` | F_p plava + oznake A_e/F_e/s_e (subscript ₑ) umjesto A_L/F_L/s_L | F_p u crvenu, ₑ → `<tspan>L</tspan>` (7 instanci) |
+| `u01_ch1_dvostruka_platforma_manometar.svg` | F_p plava + oznake A_e/F_e/s_e umjesto A_L/F_L/s_L + `s_k = 18 cm` umjesto `s_h` | F_p u crvenu, ₑ → tspan L (7 instanci), s_k → s_h (`&#8341;`) |
+| `u01_fig_most_podizanje.svg` | F_p plava + oznake F_p01/A_p01/p_t3n umjesto F_pod/A_pod/p_min + rendered title | F_p u crvenu, sve 3 oznake → `<tspan>` subscript, naslov uklonjen |
+| `u01_fig_presa_savijanje.svg` | rendered title | naslov uklonjen |
+| `u01_vjezbe_skice.svg` | oznake A_e umjesto A_L | ₑ → tspan L (2 instance) |
+
+#### Što je verificirano OK
+
+- **Oznake u skici doslovno = tekst zadatka** ✓ (svih 9 SVG-ova, provjereno cross-checkom s Zadano/Rješenje)
+- **Brojevi**: 160 mm, 3,60 kN, 179 kPa, 8,06 kN, 250 kPa, 5,25 kN, 0,80 MPa, 480 N, 0,92 MPa, 27,6 kN, 1,5 m, n=9, 5,12 kN, 0,40 MPa, 12,6 MPa, 1,3 MPa — sve match teksta
+- **Semantika boja** (nakon fixova): ulazne sile (G, F_1, F_p) crvene; izlazne (F_2, F_L, F_pod) zelene; tlak p plava; kote smeđe
+- **Subscript notacija**: lowercase preko Unicode entiteta (₁, ₂, ₚ, ₁₂); uppercase preko `<tspan baseline-shift="sub">` (L)
+- **Render PNG** za svih 9 SVG-ova kroz Inkscape (1200 px), vizualna inspekcija multimodal Read tool: paleta i layout vidno odgovaraju protokolu
+
+#### Otvorene rezidualne stavke (nije kritično, ne blokira)
+
+1. **`u01_fig_uvod_pregled.svg` panel 3 ("Pascalov zakon")**: prikazuje scenu s F_1=320 N, F_2=5,12 kN koja se direktno preklapa s primjerom "Hidraulična preša za savijanje cijevi" — krši pravilo vizualne raznolikosti (uvodni blok ne smije reciklirati scene iz P/CH). **Preporuka**: redizajn panela 3 da pokazuje drugačiju primjenu Pascalova zakona (npr. samo kočno-pedalna shema bez konkretnih brojeva).
+2. **Layout overlaps**:
+   - val2: "A_1 = 6 cm²" tekst preklapa s klipnjačom u sredini
+   - val3, ch1: oznake A_L i F_L na vrhu lijevog cilindra preklapaju s G strelicom i platformom
+   - vjezbe T5/T6: "F_p" oznake u gornjem dijelu paneli prekrivene s vozilom/platformom
+3. **U01 most**: `d_p = 22` umjesto `d_p = 22 mm` (nedostaje jedinica — vidno u rendered slici)
+
+#### Alati za Faza 3 U01
+
+- `tools/fix_u01_skice.py` (novi alat) — orchestrira sistemske + per-file popravke za U01
+- Alat zadržan u tools/ kao referenca; ne potrebno više pokretati (idempotentno bi bilo 0 promjena nakon ovog passa)
+
+#### SymPy verify nakon Faze 3 U01
+
+`py tools/verify_u01.py` → **33 OK / 1 FAIL** (jedini FAIL je pre-existing rounding U01.most.p_p_MPa). Sve oznake/brojevi i dalje konzistentni nakon SVG izmjena (SVG promjene nemaju utjecaj na verifikaciju — to je matematika u tekstu).
+
+#### Rendered PNG-ovi za autorov pregled
+
+Sve 9 PNG-ova generirano u `tools/tmp/u01_render/` (1200 px wide). Autor može vizualno provjeriti kroz preview server na http://localhost:8765/preview.html ili direktno PNG-ove.
+

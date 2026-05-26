@@ -5,10 +5,10 @@
   <desc id="u01vs_vzd">Šest skica zadataka: T1 servisna hidraulična presa, T2 dva klipa isti tlak, T3 hidraulična stega, T4 hidraulični stol, T5 platforma s dva cilindra, T6 radni stol s tri cilindra.</desc>
   <defs>
     <marker id="u01vs_vzaD" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#3a3a3a"/>
+      <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
     </marker>
     <marker id="u01vs_vzaDR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#3a3a3a"/>
+      <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
     </marker>
     <marker id="u01vs_vzaB" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
       <path d="M0,0 L0,8 L9,4 z" fill="#1a1a1a"/>
@@ -280,7 +280,7 @@
   <!-- ──────────────────── T6 – Radni stol s tri cilindra ──────────────────── -->
   <rect x="490" y="475" width="425" height="220" rx="10" fill="#ffffff" stroke="#c0ccd6" stroke-width="1.5"/>
   <text x="506" y="498" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#2a3a48">T6 — Radni stol s tri cilindra</text>
-  <text x="506" y="515" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#778899">crpka Aₚ=3,8 cm², 3× cilindar A&#8337;=95 cm²</text>
+  <text x="506" y="515" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#778899">crpka Aₚ=3,8 cm², 3× cilindar A<tspan baseline-shift="sub" font-size="0.7em">L</tspan>=95 cm²</text>
 
   <!-- Pumpa lijevo -->
   <rect x="510" y="535" width="5" height="56" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
@@ -328,5 +328,5 @@
   <text x="900" y="566" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#555">Δz</text>
 
   <!-- A_L label na jednom cilindru (T6) -->
-  <text x="793" y="531" font-family="'Segoe UI',Arial,sans-serif" font-size="8.5" text-anchor="middle" fill="#445566">A&#8337;</text>
+  <text x="793" y="531" font-family="'Segoe UI',Arial,sans-serif" font-size="8.5" text-anchor="middle" fill="#445566">A<tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
 </svg>

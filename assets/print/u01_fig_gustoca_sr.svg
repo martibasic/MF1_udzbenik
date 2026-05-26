@@ -19,7 +19,7 @@
     </linearGradient>
     <linearGradient id="u01fgs_gsWt" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#7fb3d3"/>
+      <stop offset="100%" stop-color="#5b9ec9"/>
     </linearGradient>
     <pattern id="u01fgs_gsHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="8" stroke="#8a9aa6" stroke-width="2"/>
