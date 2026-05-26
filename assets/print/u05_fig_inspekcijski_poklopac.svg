@@ -34,6 +34,9 @@
   <rect width="940" height="400" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
+  <!-- Naslov -->
+  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="14.5" fill="#516677">b=0,40 m · h=0,60 m · h₁=1,50 m · ρ=998 kg/m³ → F≈4,23 kN · y_CP=1,817 m · Δ=16,7 mm</text>
+
   <!-- Mjerilo: 100 px/m; površina y=115 -->
   <!-- h₁=1,50m → 150px → poklopac top y=265; h=0,60m → 60px → bottom y=325; h_C=1,80m → y=295 -->
 

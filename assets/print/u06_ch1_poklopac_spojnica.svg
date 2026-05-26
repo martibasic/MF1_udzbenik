@@ -34,6 +34,8 @@
   <rect width="940" height="420" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
+  <!-- Title -->
+
   <!-- Right structural wall (srafura) -->
   <rect x="330" y="100" width="80" height="140" fill="url(#u06c1ps_u6c1H)"/>
   <rect x="330" y="100" width="80" height="140" fill="none" stroke="#546e7a" stroke-width="1.5"/>

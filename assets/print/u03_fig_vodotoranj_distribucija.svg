@@ -23,6 +23,10 @@
   <rect width="660" height="440" fill="#f8f9fa"/>
   <rect x="10" y="10" width="640" height="420" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5"/>
 
+  <!-- Naslov -->
+  <text x="330" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530" text-anchor="middle">Distribucijska mreža vodotornja – tlak u kućnom priključku</text>
+  <text x="330" y="49" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">Z_t = 84 m n.m.,  Z_k = 68 m n.m.,  ΔH = 16 m,  ρ = 998 kg/m³</text>
+
   <!-- Tlo (linija, hatch ispod) -->
   <line x1="30" y1="360" x2="630" y2="360" stroke="#8b6914" stroke-width="1.5" stroke-dasharray="4,3"/>
   <rect x="30" y="360" width="600" height="14" fill="url(#u03fvd_u3vthatch)" opacity="0.45"/>

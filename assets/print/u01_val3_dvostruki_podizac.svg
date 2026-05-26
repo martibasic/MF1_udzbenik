@@ -45,6 +45,8 @@
   <rect width="980" height="500" fill="#f8f9fa"/>
   <rect x="14" y="14" width="952" height="472" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.8"/>
 
+  <!-- ── NASLOV ── -->
+
   <!-- ════════════════════════════════════════════
        VOZILO + PLATFORMA (gore, zajednička nosiva ploča)
   ════════════════════════════════════════════ -->
@@ -96,11 +98,11 @@
   <line x1="152" y1="126" x2="152" y2="119" stroke="#3a3a3a" stroke-width="1.2"/>
   <line x1="282" y1="126" x2="282" y2="119" stroke="#3a3a3a" stroke-width="1.2"/>
   <line x1="155" y1="122" x2="279" y2="122" stroke="#3a3a3a" stroke-width="1.2" marker-start="url(#u01v3dp_v3aDimR)" marker-end="url(#u01v3dp_v3aDim)"/>
-  <text x="217" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a3a3a">A<tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 150 cm²</text>
+  <text x="217" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a3a3a">A&#8337; = 150 cm²</text>
 
   <!-- Kota sL lijevi (hod klipa) -->
   <line x1="112" y1="120" x2="112" y2="168" stroke="#b7600c" stroke-width="1.8" marker-start="url(#u01v3dp_v3aOR)" marker-end="url(#u01v3dp_v3aO)"/>
-  <text x="91" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" font-style="italic" fill="#b7600c">s<tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
+  <text x="91" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" font-style="italic" fill="#b7600c">s&#8337;</text>
   <text x="78" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c">= 20 mm</text>
 
   <!-- ════════════════════════════════════════════
@@ -116,8 +118,8 @@
 
   <!-- Sila FL_2 gore + label -->
   <line x1="449" y1="113" x2="449" y2="138" stroke="#1e8449" stroke-width="3.5" marker-end="url(#u01v3dp_v3aG)"/>
-  <text x="312" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-style="italic" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 12 kN</text>
-  <text x="312" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449">(svaki cilindar)</text>
+  <text x="312" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-style="italic" fill="#1e8449">F&#8337; = 12 kN</text>
+  <text x="312" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449">(svaki)</text>
 
   <!-- Tlačne strelice desni -->
   <line x1="410" y1="224" x2="410" y2="180" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v3dp_v3aBl)"/>
@@ -153,10 +155,10 @@
   <!-- Klipnjača crpke -->
   <rect x="760" y="195" width="14" height="62" fill="#9aaab4" stroke="#5b6770" stroke-width="1.5"/>
 
-  <!-- Sila Fp prema dolje (ulazna - crvena per protokol) -->
-  <line x1="767" y1="145" x2="767" y2="192" stroke="#c0392b" stroke-width="4" marker-end="url(#u01v3dp_v3aR)"/>
-  <text x="782" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#c0392b">F&#8346;</text>
-  <text x="782" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b">= 480 N</text>
+  <!-- Sila Fp prema dolje -->
+  <line x1="767" y1="145" x2="767" y2="192" stroke="#1565c0" stroke-width="4" marker-end="url(#u01v3dp_v3aBl)"/>
+  <text x="782" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1565c0">F&#8346;</text>
+  <text x="782" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">= 480 N</text>
 
   <!-- Kota sp (hod klipa crpke) – lijevo od crpke -->
   <line x1="722" y1="195" x2="722" y2="255" stroke="#b7600c" stroke-width="1.8" marker-start="url(#u01v3dp_v3aOR)" marker-end="url(#u01v3dp_v3aO)"/>
@@ -176,16 +178,16 @@
        FORMULA BOX (dolje)
   ════════════════════════════════════════════ -->
   <rect x="48" y="425" width="666" height="52" rx="8" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.3"/>
-  <text x="66" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a5a">Tlak:  <tspan font-weight="700" fill="#1565c0">p = G / (2·A<tspan baseline-shift="sub" font-size="0.7em">L</tspan>) = 24000 / 0,030 = 0,80 MPa</tspan></text>
-  <text x="66" y="465" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a5a">Crpka:  <tspan font-weight="700" fill="#1a2530">F&#8346; = p·A&#8346; = 480 N</tspan>   Volumna bilanca:  <tspan font-weight="700" fill="#1a2530">A&#8346;·∑s&#8346; = 2·A<tspan baseline-shift="sub" font-size="0.7em">L</tspan>·s<tspan baseline-shift="sub" font-size="0.7em">L</tspan>  →  ∑s&#8346; = 1,0 m</tspan></text>
+  <text x="66" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a5a">Tlak:  <tspan font-weight="700" fill="#1565c0">p = G / (2·A&#8337;) = 24000 / 0,030 = 0,80 MPa</tspan></text>
+  <text x="66" y="465" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a5a">Crpka:  <tspan font-weight="700" fill="#1a2530">F&#8346; = p·A&#8346; = 480 N</tspan>   Volumna bilanca:  <tspan font-weight="700" fill="#1a2530">A&#8346;·∑s&#8346; = 2·A&#8337;·s&#8337;  →  ∑s&#8346; = 1,0 m</tspan></text>
 
   <!-- ── LEGENDA ── -->
-  <rect x="780" y="430" width="12" height="12" fill="#c0392b" rx="2"/>
-  <text x="797" y="441" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">G, F&#8346; (ulazne)</text>
-  <rect x="780" y="450" width="12" height="12" fill="#1565c0" rx="2"/>
-  <text x="797" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">tlak p</text>
-  <rect x="880" y="430" width="12" height="12" fill="#1e8449" rx="2"/>
-  <text x="897" y="441" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">F<tspan baseline-shift="sub" font-size="0.7em">L</tspan> (izlazna)</text>
-  <rect x="880" y="450" width="12" height="12" fill="#b7600c" rx="2"/>
-  <text x="897" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">hodovi</text>
+  <rect x="832" y="430" width="12" height="12" fill="#c0392b" rx="2"/>
+  <text x="849" y="441" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">težina G</text>
+  <rect x="832" y="450" width="12" height="12" fill="#1565c0" rx="2"/>
+  <text x="849" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">tlak p / sila F&#8346;</text>
+  <rect x="920" y="430" width="12" height="12" fill="#1e8449" rx="2"/>
+  <text x="937" y="441" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">F&#8337;</text>
+  <rect x="920" y="450" width="12" height="12" fill="#b7600c" rx="2"/>
+  <text x="937" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">hodovi</text>
 </svg>

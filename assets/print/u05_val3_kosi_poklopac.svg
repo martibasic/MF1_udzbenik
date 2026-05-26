@@ -27,6 +27,9 @@
   <rect width="940" height="420" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
+  <!-- Naslov -->
+  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="14.5" fill="#516677">b=0,90 m · L=1,20 m · h_A=0,80 m · θ=60° od vodoravne → F≈13,95 kN · T≈7,89 kN</text>
+
   <!--
     Mjerilo: 100 px/m  ·  Slobodna površina y=115
     Stijenka (kosa, θ=60° od horiz.): smjer (0.5, 0.866) u SVG

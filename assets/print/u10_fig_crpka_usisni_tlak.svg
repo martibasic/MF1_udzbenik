@@ -1,0 +1,89 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" role="img" aria-labelledby="u10fcut_u10pu-title u10fcut_u10pu-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <defs>
+    <linearGradient id="u10fcut_u10pu-wg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <pattern id="u10fcut_u10pu-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <marker id="u10fcut_u10pu-arrG" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u10fcut_u10pu-arrR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#b42318"/>
+    </marker>
+    <marker id="u10fcut_u10pu-arrRrev" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#b42318"/>
+    </marker>
+    <marker id="u10fcut_u10pu-arrD" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u10fcut_u10pu-arrDrev" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#546e7a"/>
+    </marker>
+  </defs>
+  <rect width="940" height="400" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <title id="u10fcut_u10pu-title">U10 T2 – Usisni tlak servisne crpke</title>
+  <desc id="u10fcut_u10pu-desc">Servisna crpka usisava vodu iz donjeg rezervoara na visinu z_S=6,6 m. D=80 mm, L=4,5 m, λ=0,030, Σξ=1,6. v=2,78 m/s, p_S,abs=1,90 m(vodeni stup). Rezerva 1,65 m nad parom.</desc>
+  <!-- Titles -->
+  <!-- === Basin A === -->
+  <!-- z_S=6,6m: scale 30px/m → 6,6m = 198px. A surface at y=285, pump at y=285-198=87 -->
+  <rect x="40" y="100" width="10" height="248" fill="#8090a0"/>
+  <rect x="40" y="285" width="140" height="60" fill="url(#u10fcut_u10pu-sraf)"/>
+  <rect x="40" y="245" width="140" height="40" fill="url(#u10fcut_u10pu-wg)" stroke="#546e7a" stroke-width="1.5"/>
+  <rect x="176" y="285" width="10" height="60" fill="#8090a0"/>
+  <line x1="40" y1="245" x2="188" y2="245" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <circle cx="90" cy="255" r="10" fill="#173043"/>
+  <text x="90" y="259" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">A</text>
+  <!-- Suction pipe: horizontal from basin (186,245) to vertical at x=226, then up to pump at y=87 -->
+  <!-- Horizontal section -->
+  <rect x="184" y="235" width="66" height="14" fill="url(#u10fcut_u10pu-wg)" stroke="#546e7a" stroke-width="1.5"/>
+  <!-- Vertical section -->
+  <rect x="242" y="89" width="14" height="158" fill="url(#u10fcut_u10pu-wg)" stroke="#546e7a" stroke-width="1.5"/>
+  <!-- z_S dimension: from A surface (y=245) to pump (y=89) at x=160 -->
+  <line x1="163" y1="89" x2="163" y2="243" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u10fcut_u10pu-arrDrev)" marker-end="url(#u10fcut_u10pu-arrD)"/>
+  <rect x="82" y="154" width="74" height="22" rx="4" fill="#ffffff" stroke="#d3d9de" stroke-width="1"/>
+  <text x="119" y="169" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#546e7a" text-anchor="middle">z_S=6,6 m</text>
+  <!-- Pump symbol at (260,87) center -->
+  <circle cx="266" cy="76" r="28" fill="#fffef6" stroke="#c49a0a" stroke-width="2.5"/>
+  <text x="266" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043" text-anchor="middle" font-weight="700">⚙</text>
+  <text x="266" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#c49a0a" text-anchor="middle">crpka S</text>
+  <!-- pipe labels -->
+  <text x="215" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">D=80 mm</text>
+  <text x="215" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">L=4,5 m, λ=0,030</text>
+  <text x="215" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">Σξ=1,6</text>
+  <!-- Flow arrow -->
+  <line x1="248" y1="195" x2="248" y2="120" stroke="#0f766e" stroke-width="3" marker-end="url(#u10fcut_u10pu-arrG)"/>
+  <text x="264" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#0f766e">v=2,78 m/s</text>
+  <!-- === FORMULA BOX (Right side) === -->
+  <rect x="380" y="98" width="510" height="260" rx="12" fill="#fffef6" stroke="#c49a0a" stroke-width="2"/>
+  <text x="635" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#173043" text-anchor="middle">Rješenje – Realni Bernoulli A→S</text>
+  <line x1="390" y1="132" x2="880" y2="132" stroke="#d3d9de" stroke-width="1.2"/>
+  <!-- Column headers -->
+  <text x="450" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">Veličina</text>
+  <text x="750" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">Iznos</text>
+  <line x1="390" y1="158" x2="880" y2="158" stroke="#d3d9de" stroke-width="1"/>
+  <!-- Rows -->
+  <text x="395" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">v = √(2Δp/ρ)  ili  Q/A</text>
+  <text x="395" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">v²/(2g)</text>
+  <text x="395" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h_l = λ(L/D)v²/(2g)</text>
+  <text x="395" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h_loc = Σξ · v²/(2g)</text>
+  <text x="395" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h_w = h_l + h_loc</text>
+  <line x1="390" y1="264" x2="880" y2="264" stroke="#d3d9de" stroke-width="1"/>
+  <text x="395" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p_S/γ = -(z_S + v²/2g + h_w)</text>
+  <line x1="390" y1="292" x2="880" y2="292" stroke="#d3d9de" stroke-width="1"/>
+  <text x="395" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p_S,abs/γ = H_atm + p_S/γ</text>
+  <text x="395" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Rezerva = p_S,abs/γ - p_v/γ</text>
+  <!-- Values -->
+  <text x="720" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">2,78 m/s</text>
+  <text x="720" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">0,395 m</text>
+  <text x="720" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">0,667 m</text>
+  <text x="720" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">0,632 m</text>
+  <text x="720" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">1,299 m</text>
+  <text x="720" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#b42318">−8,294 m (man.)</text>
+  <text x="720" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">1,906 m abs.</text>
+  <text x="720" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">1,656 m ≫ 0 ✓</text>
+</svg>

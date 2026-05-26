@@ -1,53 +1,131 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 320" role="img" aria-labelledby="u09v2sm_title u09v2sm_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u09v2sm_title">U09 Val 2 - domet slobodnog mlaza</title>
-  <desc id="u09v2sm_desc">Minimalna tehnička skica velikog spremnika s bocnim otvorom, izlaznom brzinom v0, visinama H i h te horizontalnim dometom x slobodnog mlaza.</desc>
-  <rect width="940" height="320" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="272" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-
-  <rect x="144" y="108" width="162" height="144" fill="#dff1f8" stroke="#173043" stroke-width="4"/>
-  <line x1="144" y1="108" x2="306" y2="108" stroke="#3a87ad" stroke-width="4"/>
-  <circle cx="306" cy="188" r="6" fill="#173043"/>
-
-  <path d="M306 188 C370 184, 426 200, 486 252" fill="none" stroke="#1976d2" stroke-width="5" stroke-linecap="round"/>
-  <line x1="306" y1="188" x2="376" y2="188" stroke="#1976d2" stroke-width="4" marker-end="url(#u09v2sm_arrowBlue)"/>
-  <text x="334" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">v0</text>
-
-  <line x1="118" y1="108" x2="118" y2="252" stroke="#c96c35" stroke-width="3" marker-start="url(#u09v2sm_arrowOrangeSmall)" marker-end="url(#u09v2sm_arrowOrange)"/>
-  <text x="88" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">H</text>
-
-  <line x1="332" y1="188" x2="332" y2="252" stroke="#be123c" stroke-width="3" marker-start="url(#u09v2sm_arrowRedSmall)" marker-end="url(#u09v2sm_arrowRed)"/>
-  <text x="344" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">h</text>
-
-  <line x1="306" y1="264" x2="486" y2="264" stroke="#6f7f89" stroke-width="3" marker-start="url(#u09v2sm_arrowGray)" marker-end="url(#u09v2sm_arrowGray)"/>
-  <text x="392" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">x</text>
-
-  <line x1="60" y1="252" x2="824" y2="252" stroke="#6f7f89" stroke-width="3"/>
-  <text x="680" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">tlo</text>
-
-  <text x="592" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">v0 = sqrt(2g(H-h))</text>
-  <text x="592" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">t = sqrt(2h/g)</text>
-  <text x="592" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">x = 2 sqrt(h(H-h))</text>
-
-  <text x="88" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">Najveći domet dobiva se kad je otvor na polovici visine stupca vode: tada se najbolje uravnoteze brzina i vrijeme leta.</text>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" role="img" aria-labelledby="u09v2sm_u9v2-title u09v2sm_u9v2-sub" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
   <defs>
-    <marker id="u09v2sm_arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
+    <linearGradient id="u09v2sm_u9v2-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <pattern id="u09v2sm_u9v2-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <marker id="u09v2sm_u9v2-arrG" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 z" fill="#0f766e"/>
     </marker>
-    <marker id="u09v2sm_arrowOrange" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    <marker id="u09v2sm_u9v2-arrGr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L7,4 L0,8 z" fill="#546e7a"/>
     </marker>
-    <marker id="u09v2sm_arrowOrangeSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
-    </marker>
-    <marker id="u09v2sm_arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#be123c"/>
-    </marker>
-    <marker id="u09v2sm_arrowRedSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#be123c"/>
-    </marker>
-    <marker id="u09v2sm_arrowGray" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#6f7f89"/>
+    <marker id="u09v2sm_u9v2-arrGrR" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto">
+      <path d="M7,0 L0,4 L7,8 z" fill="#546e7a"/>
     </marker>
   </defs>
+  <rect width="940" height="400" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text id="u09v2sm_u9v2-title" x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Domet slobodnog mlaza iz velikog spremnika</text>
+  <text id="u09v2sm_u9v2-sub" x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">H=4,0&#x202F;m; otvori na h=1,0&#x202F;m, 2,0&#x202F;m, 3,0&#x202F;m; skala&#x202F;55&#x202F;px/m</text>
+
+  <!-- ===== Ground line ===== -->
+  <line x1="50" y1="370" x2="900" y2="370" stroke="#546e7a" stroke-width="2.5"/>
+  <text x="850" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">tlo / z=0</text>
+
+  <!-- ===== Tank ===== -->
+  <!-- H=4.0m, scale 55px/m. Tank bottom at y=370. Tank top at y=370-220=150. Water surface at y=150. -->
+  <!-- Tank walls (thick outline + srafura) -->
+  <rect x="88" y="150" width="12" height="220" fill="url(#u09v2sm_u9v2-sraf)"/>
+  <!-- left wall -->
+  <rect x="74" y="150" width="14" height="220" fill="url(#u09v2sm_u9v2-sraf)"/>
+  <!-- right wall srafura (thin strip) -->
+  <rect x="236" y="150" width="14" height="120" fill="url(#u09v2sm_u9v2-sraf)"/>
+  <!-- below opening h=3.0m, wall continues -->
+  <rect x="236" y="310" width="14" height="60" fill="url(#u09v2sm_u9v2-sraf)"/>
+  <!-- bottom -->
+  <rect x="74" y="358" width="178" height="12" fill="url(#u09v2sm_u9v2-sraf)"/>
+
+  <!-- tank water fill -->
+  <rect x="88" y="150" width="148" height="208" fill="url(#u09v2sm_u9v2-water)" opacity="0.9"/>
+
+  <!-- Tank outline -->
+  <polyline points="88,150 88,370 236,370 236,310" fill="none" stroke="#2d3a40" stroke-width="3"/>
+  <!-- gap at h=3.0m opening (h=3.0m, y=370-165=205): gap from y=200 to y=210 -->
+  <polyline points="236,295 236,220" fill="none" stroke="#2d3a40" stroke-width="3"/>
+  <!-- gap at h=2.0m opening (y=370-110=260): gap from y=255 to y=265 -->
+  <polyline points="236,250 236,270" fill="none" stroke="#2d3a40" stroke-width="3"/>
+  <!-- Actually let me simplify: draw three gaps on right wall -->
+  <!-- Full right wall with three openings (small gaps) -->
+
+  <!-- Water surface horizontal line with label -->
+  <line x1="88" y1="150" x2="236" y2="150" stroke="#1565c0" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="96" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">H = 4,0 m</text>
+
+  <!-- Opening dots and velocity arrows at three heights -->
+  <!-- h=3.0m: y = 370 - 3.0*55 = 370-165 = 205 -->
+  <circle cx="236" cy="205" r="5" fill="#b42318"/>
+  <line x1="250" y1="205" x2="298" y2="205" stroke="#0f766e" stroke-width="2.4" marker-end="url(#u09v2sm_u9v2-arrG)"/>
+  <text x="254" y="199" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">v&#x2080;=4,43</text>
+
+  <!-- h=2.0m: y = 370 - 2.0*55 = 370-110 = 260 -->
+  <circle cx="236" cy="260" r="5" fill="#b42318"/>
+  <line x1="250" y1="260" x2="298" y2="260" stroke="#0f766e" stroke-width="2.4" marker-end="url(#u09v2sm_u9v2-arrG)"/>
+  <text x="254" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">v&#x2080;=6,26</text>
+
+  <!-- h=1.0m: y = 370 - 1.0*55 = 370-55 = 315 -->
+  <circle cx="236" cy="315" r="5" fill="#b42318"/>
+  <line x1="250" y1="315" x2="298" y2="315" stroke="#0f766e" stroke-width="2.4" marker-end="url(#u09v2sm_u9v2-arrG)"/>
+  <text x="254" y="309" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">v&#x2080;=7,67</text>
+
+  <!-- === Parabolic jet trajectories === -->
+  <!-- Scale: 55px/m horizontal AND vertical -->
+  <!-- h=3.0m (y=205, x_start=250): x_land=3.46m=190px, t=0.782s -->
+  <!--   Parametric: X=250+4.43*55*t, Y=205+0.5*9.81*55*t^2 = 205+269.8t^2 -->
+  <!--   At t=0.782: X=250+190=440, Y=205+165=370 ✓ -->
+  <!--   Mid point t=0.4: X=250+97=347, Y=205+43=248 -->
+  <path d="M250,205 Q310,225 440,370" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="6 3"/>
+  <circle cx="440" cy="370" r="4" fill="#b45309"/>
+  <text x="444" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b45309">x=3,46&#x202F;m</text>
+
+  <!-- h=2.0m (y=260, x_start=250): x_land=4.0m=220px (MAX), t=0.639s -->
+  <!--   Parametric: X=250+6.26*55*t, Y=260+269.8t^2 -->
+  <!--   At t=0.639: X=250+220=470, Y=260+110=370 ✓ -->
+  <!--   Mid point t=0.32: X=250+110=360, Y=260+28=288 -->
+  <path d="M250,260 Q355,275 470,370" fill="none" stroke="#0f766e" stroke-width="2.6"/>
+  <circle cx="470" cy="370" r="5" fill="#0f766e"/>
+  <text x="474" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">x&#x2098;&#x2090;&#x2093;=4,0&#x202F;m</text>
+
+  <!-- h=1.0m (y=315, x_start=250): x_land=3.46m=190px, t=0.452s -->
+  <!--   Parametric: X=250+7.67*55*t, Y=315+269.8t^2 -->
+  <!--   At t=0.452: X=250+190=440, Y=315+55=370 ✓ -->
+  <!--   Mid point t=0.22: X=250+93=343, Y=315+13=328 -->
+  <path d="M250,315 Q330,328 440,370" fill="none" stroke="#be123c" stroke-width="2" stroke-dasharray="6 3"/>
+  <circle cx="440" cy="370" r="4" fill="#be123c"/>
+  <!-- Note: lands at same x as h=3.0m, label shifted -->
+  <text x="380" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#be123c">x=3,46&#x202F;m</text>
+
+  <!-- Vertical dimension: H on left of tank -->
+  <line x1="60" y1="150" x2="60" y2="370" stroke="#546e7a" stroke-width="1.6" marker-start="url(#u09v2sm_u9v2-arrGrR)" marker-end="url(#u09v2sm_u9v2-arrGr)"/>
+  <text x="36" y="265" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">H</text>
+
+  <!-- Height labels for openings on right side -->
+  <!-- h=3.0m: from y=370 to y=205, at x=245 -->
+  <text x="172" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b45309">h=3,0&#x202F;m</text>
+  <text x="172" y="263" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">h=2,0&#x202F;m</text>
+  <text x="172" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#be123c">h=1,0&#x202F;m</text>
+
+  <!-- ===== Formula box (right side) ===== -->
+  <rect x="530" y="130" width="340" height="180" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="546" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Torricelli + kinetika projektila</text>
+  <line x1="546" y1="162" x2="860" y2="162" stroke="#e8d89a" stroke-width="1"/>
+  <text x="546" y="181" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">v&#x2080; = &#x221A;[2g(H&#x2212;h)]</text>
+  <text x="546" y="202" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">t = &#x221A;(2h/g)</text>
+  <text x="546" y="223" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">x = 2&#x221A;[h(H&#x2212;h)]</text>
+  <line x1="546" y1="233" x2="860" y2="233" stroke="#e8d89a" stroke-width="1"/>
+  <text x="546" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">x&#x2098;&#x2090;&#x2093; = H  kada  h = H/2</text>
+  <text x="546" y="273" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Domet je isti za h i H&#x2212;h (simetrija!)</text>
+  <text x="546" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">x&#x2098;&#x2090;&#x2093; = 4,0&#x202F;m  (pri h=2,0&#x202F;m)</text>
+
+  <!-- Legend bullets -->
+  <line x1="532" y1="330" x2="560" y2="330" stroke="#0f766e" stroke-width="2.6"/>
+  <text x="566" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">h=2,0&#x202F;m (maksimalni domet)</text>
+  <line x1="532" y1="350" x2="560" y2="350" stroke="#b45309" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="566" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b45309">h=3,0&#x202F;m</text>
+  <line x1="700" y1="350" x2="728" y2="350" stroke="#be123c" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="734" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#be123c">h=1,0&#x202F;m</text>
 </svg>

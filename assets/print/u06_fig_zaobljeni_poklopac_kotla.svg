@@ -24,6 +24,9 @@
   <rect width="940" height="400" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
+  <!-- Naslov -->
+  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">R = 0,60 m · b = 1,50 m · h₁ = 1,20 m · F_H = 13,22 kN · F_V = 14,74 kN · F_R ≈ 19,8 kN</text>
+
   <!-- ── Slobodna površina ── -->
   <!-- Scale: 1 m = 100 px. h1=1.20m→120px; R=0.60m→60px -->
   <!-- Arc centre: (370, 340), R=60. Top of arc: (370, 280). Right of arc: (430, 340). -->

@@ -1,0 +1,118 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 410" role="img" aria-labelledby="u08frb_u8fr-title u08frb_u8fr-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u08frb_u8fr-title">U08 – punjenje retencijskog bazena</title>
+  <desc id="u08frb_u8fr-desc">Retencijski bazen Ab=120m2, dva dotoka: Q1=0,35 m3/s i Q2=0,20 m3/s; ispust Qiz=0,18 m3/s. Razina raste dh/dt=18,5 cm/min, do porasta 0,50m treba t=162s=2,7min.</desc>
+  <defs>
+    <linearGradient id="u08frb_u8fr-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <linearGradient id="u08frb_u8fr-acc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b8dfee" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#5abbd8" stop-opacity="0.6"/>
+    </linearGradient>
+    <pattern id="u08frb_u8fr-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="4" x2="8" y2="4" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <marker id="u08frb_u8fr-arrG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u08frb_u8fr-arrR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#b42318"/>
+    </marker>
+    <marker id="u08frb_u8fr-arrGr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u08frb_u8fr-arrGrRev" markerWidth="9" markerHeight="7" refX="1" refY="3.5" orient="auto">
+      <path d="M9,0 L9,7 L0,3.5 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u08frb_u8fr-arrUp" markerWidth="10" markerHeight="8" refX="5" refY="0" orient="auto">
+      <path d="M0,8 L10,8 L5,0 z" fill="#c96c35"/>
+    </marker>
+  </defs>
+  <!-- Canvas -->
+  <rect width="940" height="410" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="362" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <!-- Title -->
+  <text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Punjenje retencijskog bazena</text>
+  <text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">A_b = 120 m², Q_ul = 0,35 + 0,20 = 0,55 m³/s; Q_iz = 0,18 m³/s; h₀ = 1,20 m, cilj: Δh = 0,50 m</text>
+
+  <!-- ===== BASIN ===== -->
+  <!-- Scale: full shown height 2.0m → 220px, scale=110px/m -->
+  <!-- h0=1.20m → 132px → water top y=336-132=204 -->
+  <!-- h0+0.5=1.70m → 187px → target y=336-187=149 -->
+
+  <!-- Basin walls (srafura = concrete) -->
+  <!-- Left wall -->
+  <rect x="188" y="96" width="20" height="260" fill="url(#u08frb_u8fr-sraf)"/>
+  <!-- Right wall -->
+  <rect x="590" y="96" width="20" height="260" fill="url(#u08frb_u8fr-sraf)"/>
+  <!-- Bottom wall -->
+  <rect x="188" y="336" width="422" height="20" fill="url(#u08frb_u8fr-sraf)"/>
+  <!-- Wall outlines -->
+  <line x1="188" y1="96" x2="188" y2="356" stroke="#3d4f5a" stroke-width="2.5"/>
+  <line x1="610" y1="96" x2="610" y2="356" stroke="#3d4f5a" stroke-width="2.5"/>
+  <line x1="188" y1="356" x2="610" y2="356" stroke="#3d4f5a" stroke-width="3"/>
+
+  <!-- Water fill (h0) -->
+  <rect x="208" y="204" width="382" height="132" fill="url(#u08frb_u8fr-water)" stroke="none"/>
+  <!-- Accumulation zone -->
+  <rect x="208" y="149" width="382" height="55" fill="url(#u08frb_u8fr-acc)" stroke="none"/>
+
+  <!-- Water surface (h0) -->
+  <line x1="188" y1="204" x2="610" y2="204" stroke="#2980b9" stroke-width="2.5"/>
+  <!-- Target level (h0+0.5) -->
+  <line x1="188" y1="149" x2="610" y2="149" stroke="#2980b9" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="616" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#2980b9" font-style="italic">h₀+0,50 m = 1,70 m</text>
+  <text x="616" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#2980b9">h₀ = 1,20 m</text>
+
+  <!-- KV dashed boundary -->
+  <rect x="178" y="86" width="442" height="280" rx="8" fill="none" stroke="#c96c35" stroke-width="2" stroke-dasharray="10,6"/>
+  <text x="188" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c96c35" font-style="italic">kontrolni volumen</text>
+
+  <!-- Inlet channel 1 (upper, bigger flow 0.35 m3/s) -->
+  <rect x="90" y="170" width="98" height="30" fill="url(#u08frb_u8fr-water)" stroke="none"/>
+  <line x1="90" y1="170" x2="188" y2="170" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="90" y1="200" x2="188" y2="200" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="90" y1="170" x2="90" y2="200" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="40" y1="185" x2="88" y2="185" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u08frb_u8fr-arrG)"/>
+  <text x="28" y="175" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">Q_ul,1</text>
+  <text x="30" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">kanal 1</text>
+  <text x="26" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">0,35 m³/s</text>
+
+  <!-- Inlet channel 2 (lower, smaller flow 0.20 m3/s) -->
+  <rect x="90" y="264" width="98" height="22" fill="url(#u08frb_u8fr-water)" stroke="none"/>
+  <line x1="90" y1="264" x2="188" y2="264" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="90" y1="286" x2="188" y2="286" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="90" y1="264" x2="90" y2="286" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="40" y1="275" x2="88" y2="275" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u08frb_u8fr-arrG)"/>
+  <text x="28" y="265" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">Q_ul,2</text>
+  <text x="30" y="279" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">kanal 2</text>
+  <text x="26" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">0,20 m³/s</text>
+
+  <!-- Outlet (ispust gravitacijski) on right -->
+  <rect x="610" y="296" width="90" height="24" fill="url(#u08frb_u8fr-water)" stroke="none"/>
+  <line x1="610" y1="296" x2="700" y2="296" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="610" y1="320" x2="700" y2="320" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="700" y1="296" x2="700" y2="320" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="700" y1="308" x2="750" y2="308" stroke="#b42318" stroke-width="3.5" marker-end="url(#u08frb_u8fr-arrR)"/>
+  <text x="754" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">Q_iz</text>
+  <text x="752" y="315" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b42318">0,18 m³/s</text>
+  <text x="748" y="329" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b42318">(gravitacijski)</text>
+
+  <!-- dh/dt upward arrow -->
+  <line x1="398" y1="200" x2="398" y2="154" stroke="#c96c35" stroke-width="3" marker-end="url(#u08frb_u8fr-arrUp)"/>
+  <text x="406" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c96c35">dh/dt</text>
+  <text x="404" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c96c35">18,5 cm/min</text>
+
+  <!-- Dimension A_b -->
+  <line x1="208" y1="378" x2="590" y2="378" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u08frb_u8fr-arrGrRev)" marker-end="url(#u08frb_u8fr-arrGr)"/>
+  <text x="380" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a" text-anchor="middle">A_b = 120 m²  (tlocrtna površina bazena)</text>
+
+  <!-- ===== FORMULA BOX ===== -->
+  <rect x="54" y="308" width="128" height="72" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
+  <text x="64" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#173043">Akumulacija</text>
+  <text x="62" y="343" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Q_net = 0,37 m³/s</text>
+  <text x="62" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">dh/dt = 18,5 cm/min</text>
+  <text x="62" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">t ≈ 162 s = 2,7 min</text>
+</svg>

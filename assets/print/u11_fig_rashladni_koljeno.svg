@@ -1,0 +1,120 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<defs>
+  <linearGradient id="u11frk_u11rk-wg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#d4eef8"/>
+    <stop offset="100%" stop-color="#7ec8e8"/>
+  </linearGradient>
+  <marker id="u11frk_u11rk-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#0f766e"/>
+  </marker>
+  <marker id="u11frk_u11rk-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#b42318"/>
+  </marker>
+  <marker id="u11frk_u11rk-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#6d2694"/>
+  </marker>
+</defs>
+
+<!-- Background -->
+<rect width="940" height="420" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+<!-- Title -->
+
+<!-- ======== KOLJENO DIAGRAM (left panel) ======== -->
+
+<!-- Pipe wall: compound path outer L minus inner L (evenodd) -->
+<path d="M 236,100 L 288,100 L 288,301 L 60,301 L 60,249 L 236,249 Z
+         M 242,103 L 282,103 L 282,295 L 63,295 L 63,255 L 242,255 Z"
+      fill="#c8d6df" fill-rule="evenodd" stroke="#2d3a40" stroke-width="1.8"/>
+
+<!-- Fluid: L-shape -->
+<path d="M 242,103 L 282,103 L 282,295 L 63,295 L 63,255 L 242,255 Z"
+      fill="url(#u11frk_u11rk-wg)"/>
+
+<!-- Pipe stroke outline on top -->
+<path d="M 236,100 L 288,100 L 288,301 L 60,301 L 60,249 L 236,249 Z"
+      fill="none" stroke="#2d3a40" stroke-width="1.8"/>
+
+<!-- Section 1: inlet (left side) -->
+<line x1="108" y1="241" x2="108" y2="309" stroke="#516677" stroke-width="1.5" stroke-dasharray="5,3"/>
+<text x="103" y="237" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043" text-anchor="middle">①</text>
+
+<!-- Section 2: outlet (top) -->
+<line x1="228" y1="125" x2="296" y2="125" stroke="#516677" stroke-width="1.5" stroke-dasharray="5,3"/>
+<text x="300" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">②</text>
+
+<!-- v1 velocity arrow -->
+<line x1="138" y1="275" x2="195" y2="275" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u11frk_u11rk-ag)"/>
+<text x="140" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">v₁ = 3,58 m/s</text>
+
+<!-- v2 velocity arrow -->
+<line x1="262" y1="205" x2="262" y2="148" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u11frk_u11rk-ag)"/>
+<text x="272" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">v₂ = 3,58 m/s</text>
+
+<!-- D label -->
+<line x1="62" y1="265" x2="62" y2="292" stroke="#546e7a" stroke-width="1"/>
+<line x1="57" y1="265" x2="67" y2="265" stroke="#546e7a" stroke-width="1"/>
+<line x1="57" y1="292" x2="67" y2="292" stroke="#546e7a" stroke-width="1"/>
+<text x="38" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">D=80</text>
+<text x="38" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">mm</text>
+
+<!-- Control volume dashed border -->
+<rect x="56" y="96" width="238" height="210" rx="8" fill="none" stroke="#b45309" stroke-width="1.8" stroke-dasharray="8,4"/>
+<text x="165" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b45309" text-anchor="middle">kontrolni volumen</text>
+
+<!-- ======= FORCE ARROWS (fluid acts on koljeno) ======= -->
+
+<!-- Rx: fluid pushes koljeno to the RIGHT (+x) -->
+<line x1="302" y1="270" x2="415" y2="270" stroke="#b42318" stroke-width="2.8" marker-end="url(#u11frk_u11rk-ar)"/>
+<rect x="305" y="248" width="120" height="20" rx="4" fill="#fff0ee"/>
+<text x="365" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b42318" text-anchor="middle">Rₓ = 1 321 N</text>
+
+<!-- Ry: fluid pushes koljeno DOWNWARD (-y) -->
+<line x1="262" y1="307" x2="262" y2="393" stroke="#b42318" stroke-width="2.8" marker-end="url(#u11frk_u11rk-ar)"/>
+<rect x="270" y="335" width="120" height="20" rx="4" fill="#fff0ee"/>
+<text x="330" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b42318">Rᵧ = 1 221 N</text>
+
+<!-- FR resultant (diagonal) -->
+<line x1="302" y1="307" x2="390" y2="378" stroke="#6d2694" stroke-width="2.8" marker-end="url(#u11frk_u11rk-ap)"/>
+<text x="397" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#6d2694">F_R = 1,80 kN</text>
+
+<!-- ======= RIGHT INFO PANEL ======= -->
+
+<!-- p1 label box -->
+<rect x="450" y="100" width="160" height="50" rx="8" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
+<text x="530" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Presjek ①  (ulaz)</text>
+<text x="530" y="140" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">p₁ = 250 kPa · v₁ = 3,58 m/s</text>
+
+<!-- p2 label box -->
+<rect x="450" y="165" width="160" height="50" rx="8" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
+<text x="530" y="185" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Presjek ②  (izlaz)</text>
+<text x="530" y="205" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">p₂ = 230 kPa · v₂ = 3,58 m/s</text>
+
+<!-- Momentum equations panel -->
+<rect x="630" y="100" width="278" height="120" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+<text x="769" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e" text-anchor="middle">Jednadžbe količine gibanja</text>
+<line x1="640" y1="126" x2="900" y2="126" stroke="#c49a0a" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="642" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#173043">x: p₁A − Rₓ = ṁ(0 − v)  →  Rₓ = p₁A + ṁv</text>
+<text x="642" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#173043">    Rₓ = 1 256,8 + 64,3 = 1 321 N</text>
+<text x="642" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#173043">y: −p₂A + Rᵧ = ṁ·v  →  Rᵧ = p₂A + ṁv</text>
+<text x="642" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#173043">    Rᵧ = 1 156,2 + 64,3 = 1 221 N</text>
+
+<!-- Formula box: resultant -->
+<rect x="450" y="235" width="458" height="52" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+<text x="679" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#6d2694" text-anchor="middle">F_R = √(1 321² + 1 221²) ≈ 1 797 N = 1,80 kN</text>
+<text x="679" y="277" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">Sila fluida na koljeno = nasuprotno od R_st→f</text>
+
+<!-- Vijci note -->
+<rect x="450" y="300" width="458" height="70" rx="8" fill="#fef9f0" stroke="#d97706" stroke-width="1.5"/>
+<text x="679" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e" text-anchor="middle">Zaključak</text>
+<text x="679" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#173043" text-anchor="middle">Vijci prirubnica moraju preuzeti F_R ≈ 1,80 kN</text>
+<text x="679" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#516677" text-anchor="middle">Dominira tlačni doprinos (p·A ≈ 2 413 N) nad impulsnim (64 N)</text>
+
+<!-- Coordinate arrows -->
+<line x1="56" y1="388" x2="86" y2="388" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u11frk_u11rk-ag)"/>
+<line x1="56" y1="388" x2="56" y2="358" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u11frk_u11rk-ag)"/>
+<text x="90" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">x</text>
+<text x="50" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">y</text>
+
+</svg>

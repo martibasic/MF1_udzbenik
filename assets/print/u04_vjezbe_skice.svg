@@ -1,100 +1,301 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 700" role="img" aria-labelledby="u04vs_title u04vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u04vs_title">U04 - skice zadataka T1 do T6</title>
-  <desc id="u04vs_desc">Šest minimalnih grayscale tehničkih skica za U04 zadatke T1 do T6.</desc>
-  <rect width="980" height="700" fill="#ffffff"/>
-  <rect x="22" y="22" width="936" height="656" rx="18" fill="#ffffff" stroke="#d4d9de" stroke-width="2"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 700" role="img"
+     aria-labelledby="u04vs_u4vsT u04vs_u4vsD" preserveAspectRatio="xMidYMid meet"
+     style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u04vs_u4vsT">U04 – Vježbe T1–T6: pregled postavki zadataka</title>
+  <desc id="u04vs_u4vsD">Šest mini-skica za vježbe poglavlja 4: T1–T2 horizontalni tankovi, T3 vertikalni cilindar, T4 sila na stijenci, T5–T6 rotirajući cilindar.</desc>
   <defs>
-    <marker id="u04vs_arrowDark" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#111111"/></marker>
+    <pattern id="u04vs_u4vsH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <linearGradient id="u04vs_u4vsWg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <marker id="u04vs_u4vsAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u04vs_u4vsArUp" markerWidth="8" markerHeight="8" refX="4" refY="1" orient="auto">
+      <path d="M0,8 L8,8 L4,0 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u04vs_u4vsArR" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L9,4 z" fill="#b42318"/>
+    </marker>
+    <marker id="u04vs_u4vsArBl" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L9,4 z" fill="#1565c0"/>
+    </marker>
   </defs>
 
-  <g transform="translate(46 116)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T1</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Ubrzani otvoreni spremnik</text>
-    <path d="M78 48 L78 128 L306 128 L306 48" fill="none" stroke="#3f4750" stroke-width="3"/>
-    <polygon points="78,72 306,104 306,128 78,128" fill="#edf1f4"/>
-    <line x1="78" y1="72" x2="306" y2="104" stroke="#5f6871" stroke-width="2"/>
-    <line x1="118" y1="40" x2="174" y2="40" stroke="#111111" stroke-width="3" marker-end="url(#u04vs_arrowDark)"/>
-    <text x="136" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">a</text>
-    <text x="180" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">L</text>
-    <text x="314" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">H</text>
-    <text x="60" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">h0</text>
-  </g>
+  <!-- Canvas background + border -->
+  <rect width="940" height="700" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="652" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <g transform="translate(502 116)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T2</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Granica prelijevanja</text>
-    <path d="M88 48 L88 128 L316 128 L316 48" fill="none" stroke="#3f4750" stroke-width="3"/>
-    <polygon points="88,48 316,110 316,128 88,128" fill="#edf1f4"/>
-    <line x1="88" y1="48" x2="316" y2="110" stroke="#5f6871" stroke-width="2"/>
-    <line x1="132" y1="40" x2="188" y2="40" stroke="#111111" stroke-width="3" marker-end="url(#u04vs_arrowDark)"/>
-    <text x="150" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">a_max</text>
-    <text x="324" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">H</text>
-    <text x="192" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">L</text>
-  </g>
+  <!-- Main title -->
 
-  <g transform="translate(46 298)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T3</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Zatvoreni cilindar prema gore</text>
-    <rect x="166" y="42" width="84" height="106" rx="10" fill="#f6f8f9" stroke="#3f4750" stroke-width="3"/>
-    <rect x="174" y="54" width="68" height="86" fill="#edf1f4"/>
-    <line x1="208" y1="34" x2="208" y2="6" stroke="#111111" stroke-width="3" marker-end="url(#u04vs_arrowDark)"/>
-    <text x="220" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">a_z</text>
-    <line x1="256" y1="54" x2="256" y2="140" stroke="#6a737c" stroke-width="2"/>
-    <text x="264" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">h</text>
-  </g>
+  <!-- ====================================================== -->
+  <!-- PANEL T1: x=32, y=90, w=428, h=183 -->
+  <!-- Horizontalni tank, a=1,20 m/s², L=1,80m, H=0,46m, h₀=0,34m -->
+  <!-- Scale: 200px / 1.80m = 111px/m -->
+  <!-- y_bot=250, y_top=199 (H=51px), y_back=202, y_front=226 -->
+  <!-- ====================================================== -->
+  <rect x="32" y="90" width="428" height="183" rx="8" fill="#f4f8fc" stroke="#d3d9de" stroke-width="1.5"/>
+  <text x="44" y="109" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">T1</text>
+  <text x="62" y="109" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">– Horizontalno ubrzanje, tražiti Δh, h_str, h_pred</text>
 
-  <g transform="translate(502 298)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T4</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Sila na straznjoj stijenci</text>
-    <path d="M88 48 L88 128 L314 128 L314 48" fill="none" stroke="#3f4750" stroke-width="3"/>
-    <polygon points="88,72 314,108 314,128 88,128" fill="#edf1f4"/>
-    <line x1="88" y1="72" x2="314" y2="108" stroke="#5f6871" stroke-width="2"/>
-    <line x1="132" y1="40" x2="188" y2="40" stroke="#111111" stroke-width="3" marker-end="url(#u04vs_arrowDark)"/>
-    <text x="150" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">a</text>
-    <line x1="64" y1="100" x2="24" y2="100" stroke="#111111" stroke-width="3" marker-end="url(#u04vs_arrowDark)"/>
-    <text x="32" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">F</text>
-    <text x="190" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">L</text>
-  </g>
+  <!-- T1 tank srafura -->
+  <rect x="33" y="199" width="19" height="51" fill="url(#u04vs_u4vsH)"/>
+  <rect x="33" y="199" width="19" height="51" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="252" y="199" width="19" height="51" fill="url(#u04vs_u4vsH)"/>
+  <rect x="252" y="199" width="19" height="51" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="33" y="250" width="238" height="16" fill="url(#u04vs_u4vsH)"/>
+  <rect x="33" y="250" width="238" height="16" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <!-- T1 water -->
+  <path d="M52,202 L252,226 L252,250 L52,250 Z" fill="url(#u04vs_u4vsWg)" opacity="0.9"/>
+  <!-- T1 inner walls -->
+  <line x1="52" y1="199" x2="52" y2="250" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="252" y1="199" x2="252" y2="250" stroke="#2d3a40" stroke-width="2"/>
+  <!-- T1 free surface -->
+  <line x1="52" y1="202" x2="252" y2="226" stroke="#1565c0" stroke-width="2"/>
+  <!-- T1 a arrow -->
+  <line x1="252" y1="179" x2="293" y2="179" stroke="#b42318" stroke-width="2.5" marker-end="url(#u04vs_u4vsArR)"/>
+  <text x="296" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">a</text>
+  <!-- T1 H annotation (right side) -->
+  <line x1="258" y1="199" x2="270" y2="199" stroke="#546e7a" stroke-width="1"/>
+  <line x1="264" y1="199" x2="264" y2="250" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u04vs_u4vsAr)"/>
+  <!-- T1 data labels -->
+  <text x="320" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">L = 1,80 m</text>
+  <text x="320" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">H = 0,46 m</text>
+  <text x="320" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">h₀ = 0,34 m</text>
+  <text x="320" y="179" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b42318">a = 1,20 m/s²</text>
+  <line x1="315" y1="186" x2="452" y2="186" stroke="#c9d2d8" stroke-width="1"/>
+  <text x="320" y="202" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Naći: Δh, h_str, h_pred</text>
+  <text x="320" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Provjeri prelijevanje.</text>
+  <!-- T1 bottom label -->
+  <text x="152" y="275" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a" text-anchor="middle">L = 1,80 m</text>
 
-  <g transform="translate(46 480)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T5</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Rotirajuća posuda</text>
-    <path d="M84 48 L84 132 L258 132 L258 48" fill="none" stroke="#3f4750" stroke-width="3"/>
-    <path d="M102 118 Q171 60 240 118" fill="none" stroke="#5f6871" stroke-width="2.4"/>
-    <rect x="166" y="34" width="10" height="112" fill="#ced5da"/>
-    <line x1="171" y1="34" x2="171" y2="10" stroke="#111111" stroke-width="3" marker-end="url(#u04vs_arrowDark)"/>
-    <text x="183" y="22" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">omega</text>
-    <line x1="171" y1="132" x2="258" y2="132" stroke="#6a737c" stroke-width="2"/>
-    <text x="210" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">R</text>
-    <text x="228" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">hR</text>
-    <text x="156" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">h0</text>
-  </g>
+  <!-- ====================================================== -->
+  <!-- PANEL T2: x=480, y=90, w=428, h=183 -->
+  <!-- Horizontalni tank, naći a_max (granica prelijevanja) -->
+  <!-- L=1,40m, H=0,42m, h₀=0,30m. Scale 200px/1.40=143px/m -->
+  <!-- y_bot=250, y_top=190 (H=60px), y_back=190=y_top, y_front=224 -->
+  <!-- ====================================================== -->
+  <rect x="480" y="90" width="428" height="183" rx="8" fill="#f4f8fc" stroke="#d3d9de" stroke-width="1.5"/>
+  <text x="492" y="109" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">T2</text>
+  <text x="510" y="109" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">– Naći a_max (granica prelijevanja)</text>
 
-  <g transform="translate(502 480)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T6</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Rotirajući spremnik i tlak</text>
-    <path d="M90 44 L90 132 L250 132 L250 44" fill="none" stroke="#3f4750" stroke-width="3"/>
-    <path d="M104 112 Q170 56 236 112" fill="none" stroke="#5f6871" stroke-width="2.4"/>
-    <rect x="166" y="30" width="10" height="116" fill="#ced5da"/>
-    <line x1="171" y1="30" x2="171" y2="8" stroke="#111111" stroke-width="3" marker-end="url(#u04vs_arrowDark)"/>
-    <line x1="90" y1="52" x2="250" y2="52" stroke="#6a737c" stroke-width="2" stroke-dasharray="5 4"/>
-    <circle cx="126" cy="128" r="4" fill="#111111"/>
-    <circle cx="214" cy="128" r="4" fill="#111111"/>
-    <text x="102" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">C</text>
-    <text x="220" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">D</text>
-    <text x="258" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">H</text>
-    <text x="156" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">h0</text>
-  </g>
+  <!-- T2 tank srafura -->
+  <rect x="481" y="190" width="19" height="60" fill="url(#u04vs_u4vsH)"/>
+  <rect x="481" y="190" width="19" height="60" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="700" y="190" width="19" height="60" fill="url(#u04vs_u4vsH)"/>
+  <rect x="700" y="190" width="19" height="60" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="481" y="250" width="238" height="16" fill="url(#u04vs_u4vsH)"/>
+  <rect x="481" y="250" width="238" height="16" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <!-- T2 water -->
+  <path d="M500,190 L700,224 L700,250 L500,250 Z" fill="url(#u04vs_u4vsWg)" opacity="0.9"/>
+  <!-- T2 inner walls -->
+  <line x1="500" y1="190" x2="500" y2="250" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="700" y1="190" x2="700" y2="250" stroke="#2d3a40" stroke-width="2"/>
+  <!-- T2 free surface (back exactly at top = overflow limit) -->
+  <line x1="500" y1="190" x2="700" y2="224" stroke="#1565c0" stroke-width="2"/>
+  <!-- T2 overflow mark: red dot at back wall top -->
+  <circle cx="500" cy="190" r="5" fill="#b42318"/>
+  <text x="485" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b42318" text-anchor="middle">max</text>
+  <!-- T2 a_max arrow -->
+  <line x1="700" y1="174" x2="738" y2="174" stroke="#b42318" stroke-width="2.5" marker-end="url(#u04vs_u4vsArR)"/>
+  <text x="741" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">a</text>
+  <!-- T2 data labels -->
+  <text x="766" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">L = 1,40 m</text>
+  <text x="766" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">H = 0,42 m</text>
+  <text x="766" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">h₀ = 0,30 m</text>
+  <line x1="762" y1="168" x2="898" y2="168" stroke="#c9d2d8" stroke-width="1"/>
+  <text x="766" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Naći: a_max</text>
+  <text x="766" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">h_str = H (back wall)</text>
+  <!-- T2 bottom label -->
+  <text x="600" y="275" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a" text-anchor="middle">L = 1,40 m</text>
+
+  <!-- ====================================================== -->
+  <!-- PANEL T3: x=32, y=286, w=428, h=183 -->
+  <!-- Vertikalni zatvoreni cilindar, a_z=2,3 m/s² ↑, ρ=870 kg/m³, h=0,75m -->
+  <!-- Tražiti: Δp = ρ(g+a_z)h -->
+  <!-- y_bot=446, Cylinder: x=122..186 (64px wide, center x=154), y_top=356 (h=90px at 120px/m) -->
+  <!-- ====================================================== -->
+  <rect x="32" y="286" width="428" height="183" rx="8" fill="#f4f8fc" stroke="#d3d9de" stroke-width="1.5"/>
+  <text x="44" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">T3</text>
+  <text x="62" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">– Vertikalni cilindar, ubrzanje navgore</text>
+
+  <!-- T3 cylinder srafura (closed: all 4 sides) -->
+  <rect x="106" y="346" width="16" height="100" fill="url(#u04vs_u4vsH)"/>
+  <rect x="106" y="346" width="16" height="100" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="186" y="346" width="16" height="100" fill="url(#u04vs_u4vsH)"/>
+  <rect x="186" y="346" width="16" height="100" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="106" y="330" width="96" height="16" fill="url(#u04vs_u4vsH)"/>
+  <rect x="106" y="330" width="96" height="16" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="106" y="446" width="96" height="16" fill="url(#u04vs_u4vsH)"/>
+  <rect x="106" y="446" width="96" height="16" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <!-- T3 water fill (full cylinder) -->
+  <rect x="122" y="346" width="64" height="100" fill="url(#u04vs_u4vsWg)" opacity="0.88"/>
+  <!-- T3 inner walls -->
+  <line x1="122" y1="346" x2="122" y2="446" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="186" y1="346" x2="186" y2="446" stroke="#2d3a40" stroke-width="2"/>
+  <!-- T3 upward arrow -->
+  <line x1="83" y1="450" x2="83" y2="340" stroke="#b42318" stroke-width="2.5"/>
+  <polygon points="83,332 77,348 89,348" fill="#b42318"/>
+  <text x="72" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">a_z</text>
+  <!-- T3 h dimension on right side -->
+  <line x1="210" y1="346" x2="210" y2="446" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u04vs_u4vsAr)"/>
+  <line x1="204" y1="346" x2="216" y2="346" stroke="#546e7a" stroke-width="1"/>
+  <line x1="204" y1="446" x2="216" y2="446" stroke="#546e7a" stroke-width="1"/>
+  <text x="214" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">h</text>
+  <!-- T3 data labels -->
+  <text x="270" y="323" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">ρ = 870 kg/m³</text>
+  <text x="270" y="341" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">h = 0,75 m</text>
+  <text x="270" y="359" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b42318">a_z = 2,3 m/s² ↑</text>
+  <line x1="266" y1="366" x2="452" y2="366" stroke="#c9d2d8" stroke-width="1"/>
+  <text x="270" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Δp = ρ(g + a_z)·h</text>
+  <text x="270" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Naći: Δp [Pa]</text>
+  <text x="270" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Cilindar: zatvoren.</text>
+
+  <!-- ====================================================== -->
+  <!-- PANEL T4: x=480, y=286, w=428, h=183 -->
+  <!-- Horizontalni tank, naći a iz sile F=820N na stražnjoj stijenci -->
+  <!-- L=1,60m, h₀=0,36m, b=0,75m. Scale 200px/1.60m=125px/m -->
+  <!-- y_bot=446, y_top=377 (H~69px), y_back=387, y_front=415 -->
+  <!-- ====================================================== -->
+  <rect x="480" y="286" width="428" height="183" rx="8" fill="#f4f8fc" stroke="#d3d9de" stroke-width="1.5"/>
+  <text x="492" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">T4</text>
+  <text x="510" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">– Sila na stražnjoj stijenci F=820 N</text>
+
+  <!-- T4 tank srafura -->
+  <rect x="481" y="377" width="19" height="69" fill="url(#u04vs_u4vsH)"/>
+  <rect x="481" y="377" width="19" height="69" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="700" y="377" width="19" height="69" fill="url(#u04vs_u4vsH)"/>
+  <rect x="700" y="377" width="19" height="69" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="481" y="446" width="238" height="16" fill="url(#u04vs_u4vsH)"/>
+  <rect x="481" y="446" width="238" height="16" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <!-- T4 water polygon -->
+  <path d="M500,387 L700,415 L700,446 L500,446 Z" fill="url(#u04vs_u4vsWg)" opacity="0.9"/>
+  <!-- T4 inner walls -->
+  <line x1="500" y1="377" x2="500" y2="446" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="700" y1="377" x2="700" y2="446" stroke="#2d3a40" stroke-width="2"/>
+  <!-- T4 free surface -->
+  <line x1="500" y1="387" x2="700" y2="415" stroke="#1565c0" stroke-width="2"/>
+  <!-- T4 pressure triangle on back wall (x=500, from y=387 to y=446) -->
+  <polygon points="500,387 526,446 500,446" fill="#1e88e5" opacity="0.35"/>
+  <line x1="500" y1="387" x2="526" y2="446" stroke="#1565c0" stroke-width="1.5"/>
+  <!-- T4 F arrow -->
+  <line x1="530" y1="432" x2="570" y2="432" stroke="#b42318" stroke-width="2.5" marker-end="url(#u04vs_u4vsArR)"/>
+  <text x="574" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b42318">F</text>
+  <!-- T4 data labels -->
+  <text x="766" y="319" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">L = 1,60 m</text>
+  <text x="766" y="337" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">h₀ = 0,36 m</text>
+  <text x="766" y="355" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">b = 0,75 m</text>
+  <text x="766" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b42318">F = 820 N</text>
+  <line x1="762" y1="380" x2="898" y2="380" stroke="#c9d2d8" stroke-width="1"/>
+  <text x="766" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">F = ρg·b·h_str²/2</text>
+  <text x="766" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Naći: a [m/s²]</text>
+
+  <!-- ====================================================== -->
+  <!-- PANEL T5: x=32, y=482, w=428, h=183 -->
+  <!-- Rotirajući cilindar R=0,28m, h₀=0,22m, ω=5,5 rad/s -->
+  <!-- Scale: 45px / 0.28m = 160.7px/m  -->
+  <!-- center x=157, x_l=112, x_r=202, y_bot=642, show from y=512 -->
+  <!-- z_h0=607, z_R=597, z_C=616, z_ctrl=635 -->
+  <!-- ====================================================== -->
+  <rect x="32" y="482" width="428" height="183" rx="8" fill="#f4f8fc" stroke="#d3d9de" stroke-width="1.5"/>
+  <text x="44" y="501" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">T5</text>
+  <text x="62" y="501" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">– Rotirajući cilindar, naći h_rub, h_os, provjeri dno</text>
+
+  <!-- T5 cylinder srafura -->
+  <rect x="97" y="514" width="15" height="128" fill="url(#u04vs_u4vsH)"/>
+  <rect x="97" y="514" width="15" height="128" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="202" y="514" width="15" height="128" fill="url(#u04vs_u4vsH)"/>
+  <rect x="202" y="514" width="15" height="128" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="97" y="642" width="120" height="15" fill="url(#u04vs_u4vsH)"/>
+  <rect x="97" y="642" width="120" height="15" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <!-- T5 water fill -->
+  <path d="M112,597 Q157,635 202,597 L202,642 L112,642 Z" fill="url(#u04vs_u4vsWg)" opacity="0.9"/>
+  <!-- T5 inner walls -->
+  <line x1="112" y1="514" x2="112" y2="642" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="202" y1="514" x2="202" y2="642" stroke="#2d3a40" stroke-width="2"/>
+  <!-- T5 parabola (solid blue) -->
+  <path d="M112,597 Q157,635 202,597" fill="none" stroke="#1565c0" stroke-width="2.5"/>
+  <!-- T5 central axis -->
+  <line x1="157" y1="514" x2="157" y2="642" stroke="#8090a0" stroke-width="1.5" stroke-dasharray="8 5"/>
+  <!-- T5 h₀ dashed line -->
+  <line x1="112" y1="607" x2="202" y2="607" stroke="#b7600c" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="205" y="611" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">h₀</text>
+  <!-- T5 ω arrow (curved, above cylinder) -->
+  <path d="M138,508 A22,12 0 0 1 176,508" fill="none" stroke="#173043" stroke-width="2.2"/>
+  <polygon points="176,508 168,504 169,513" fill="#173043"/>
+  <text x="157" y="502" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043" text-anchor="middle">ω</text>
+  <!-- T5 R dim below bottom -->
+  <line x1="157" y1="663" x2="202" y2="663" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u04vs_u4vsAr)"/>
+  <line x1="157" y1="658" x2="157" y2="668" stroke="#546e7a" stroke-width="1"/>
+  <line x1="202" y1="658" x2="202" y2="668" stroke="#546e7a" stroke-width="1"/>
+  <text x="180" y="657" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#546e7a" text-anchor="middle">R</text>
+  <!-- T5 data labels -->
+  <text x="280" y="519" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">R = 0,28 m</text>
+  <text x="280" y="537" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">h₀ = 0,22 m</text>
+  <text x="280" y="555" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b42318">ω = 5,5 rad/s</text>
+  <line x1="276" y1="562" x2="452" y2="562" stroke="#c9d2d8" stroke-width="1"/>
+  <text x="280" y="578" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Naći: h_rub, h_os</text>
+  <text x="280" y="594" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Provjeri: pokriva li</text>
+  <text x="280" y="610" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">paraboloid dno?</text>
+  <text x="280" y="626" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">(h_os &gt; 0 ?)</text>
+
+  <!-- ====================================================== -->
+  <!-- PANEL T6: x=480, y=482, w=428, h=183 -->
+  <!-- Rotirajući cilindar R=0,32m, H=0,62m, h₀=0,46m -->
+  <!-- Scale: 48px / 0.32m = 150px/m -->
+  <!-- center x=605, x_l=557, x_r=653, y_bot=642, y_top=549 -->
+  <!-- z_h0=573, ω_max: z_R=549, z_ctrl=645 -->
+  <!-- ω_op: z_R=558, z_ctrl=618 -->
+  <!-- ====================================================== -->
+  <rect x="480" y="482" width="428" height="183" rx="8" fill="#f4f8fc" stroke="#d3d9de" stroke-width="1.5"/>
+  <text x="492" y="501" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">T6</text>
+  <text x="510" y="501" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">– Rotirajući cilindar, granica i radni režim</text>
+
+  <!-- T6 cylinder srafura -->
+  <rect x="542" y="549" width="15" height="93" fill="url(#u04vs_u4vsH)"/>
+  <rect x="542" y="549" width="15" height="93" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="653" y="549" width="15" height="93" fill="url(#u04vs_u4vsH)"/>
+  <rect x="653" y="549" width="15" height="93" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <rect x="542" y="642" width="126" height="15" fill="url(#u04vs_u4vsH)"/>
+  <rect x="542" y="642" width="126" height="15" fill="none" stroke="#546e7a" stroke-width="1"/>
+  <!-- T6 water fill (operating state) -->
+  <path d="M557,558 Q605,618 653,558 L653,642 L557,642 Z" fill="url(#u04vs_u4vsWg)" opacity="0.88"/>
+  <!-- T6 inner walls -->
+  <line x1="557" y1="549" x2="557" y2="642" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="653" y1="549" x2="653" y2="642" stroke="#2d3a40" stroke-width="2"/>
+  <!-- T6 top rim (open) -->
+  <line x1="542" y1="549" x2="668" y2="549" stroke="#2d3a40" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <!-- T6 ω_max parabola (dashed red — overflow limit) -->
+  <path d="M557,549 Q605,645 653,549" fill="none" stroke="#b42318" stroke-width="2" stroke-dasharray="7 4"/>
+  <!-- T6 ω_op parabola (solid blue — operating state) -->
+  <path d="M557,558 Q605,618 653,558" fill="none" stroke="#1565c0" stroke-width="2.5"/>
+  <!-- T6 central axis -->
+  <line x1="605" y1="549" x2="605" y2="642" stroke="#8090a0" stroke-width="1.5" stroke-dasharray="8 5"/>
+  <!-- T6 h₀ dashed line -->
+  <line x1="557" y1="573" x2="653" y2="573" stroke="#b7600c" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="656" y="577" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">h₀</text>
+  <!-- T6 H dim (from top to bottom on left) -->
+  <line x1="535" y1="549" x2="535" y2="642" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u04vs_u4vsAr)"/>
+  <line x1="530" y1="549" x2="540" y2="549" stroke="#546e7a" stroke-width="1"/>
+  <line x1="530" y1="642" x2="540" y2="642" stroke="#546e7a" stroke-width="1"/>
+  <text x="519" y="597" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#546e7a" text-anchor="middle">H</text>
+  <!-- T6 ω arrow (curved, above cylinder) -->
+  <path d="M585,543 A22,12 0 0 1 625,543" fill="none" stroke="#173043" stroke-width="2.2"/>
+  <polygon points="625,543 617,539 618,548" fill="#173043"/>
+  <text x="605" y="537" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043" text-anchor="middle">ω</text>
+  <!-- T6 legend lines -->
+  <line x1="726" y1="553" x2="754" y2="553" stroke="#1565c0" stroke-width="2.5"/>
+  <text x="758" y="557" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#173043">ω = 0,80ω_max</text>
+  <line x1="726" y1="568" x2="754" y2="568" stroke="#b42318" stroke-width="2" stroke-dasharray="7 4"/>
+  <text x="758" y="572" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b42318">ω_max (granica)</text>
+  <!-- T6 data labels -->
+  <text x="726" y="597" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">R = 0,32 m</text>
+  <text x="726" y="615" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">H = 0,62 m</text>
+  <text x="726" y="633" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">h₀ = 0,46 m</text>
+  <text x="726" y="651" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Naći ω_max, h_os, h_rub</text>
+
 </svg>

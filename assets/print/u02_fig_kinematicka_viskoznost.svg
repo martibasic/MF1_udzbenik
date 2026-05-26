@@ -24,6 +24,10 @@
   <rect width="720" height="340" fill="#f4f6f8"/>
   <rect x="8" y="8" width="704" height="324" rx="12" fill="#ffffff" stroke="#d2dae2" stroke-width="1.5"/>
 
+  <!-- Naslov -->
+  <text x="360" y="32" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530" text-anchor="middle">Kinematička viskoznost hidrauličnog ulja: ν = μ / ρ</text>
+  <text x="360" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">ISO VG 100: μ = 0,18 Pa·s,  ρ = 900 kg/m³  →  ν ≈ 2,00 · 10⁻⁴ m²/s  (= 200 cSt)</text>
+
   <!-- Separator -->
   <line x1="354" y1="60" x2="354" y2="320" stroke="#d0d8e2" stroke-width="1.2" stroke-dasharray="5,4"/>
 

@@ -21,6 +21,10 @@
   <rect width="480" height="520" fill="#f8f9fa"/>
   <rect x="10" y="10" width="460" height="500" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5"/>
 
+  <!-- Naslov -->
+  <text x="240" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530" text-anchor="middle">Zatvoreni vodeni spremnik – tlak u priključku A</text>
+  <text x="240" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">p_G,m = 18 kPa,  h = 1,4 m,  ρ = 998 kg/m³,  p_atm = 100,8 kPa</text>
+
   <!-- ══ POSUDA ══ -->
   <!-- Poklopac (gore) -->
   <rect x="100" y="64" width="250" height="12" fill="url(#u03fzst_u3sthatch)" stroke="#4a6070" stroke-width="1.3"/>

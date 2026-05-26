@@ -28,6 +28,9 @@
   <rect width="940" height="420" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
+  <!-- Naslov -->
+  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="14.5" fill="#516677">b = 1,20 m · H = 2,40 m · ρ = 998 kg/m³ → četiri jednaka polja, F_p ≈ 8,46 kN po polju</text>
+
   <!-- Mjerilo: 100 px/m; slobodna površina y=115; dno y=355 -->
 
   <!-- Tijelo fluida -->

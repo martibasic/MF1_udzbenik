@@ -1,4 +1,4 @@
-svg_normalize: 93 files scanned, 0 would change.
+svg_normalize: 117 files scanned, 0 changed.
 
   ok        u01_ch1_dvostruka_platforma_manometar.svg
   ok        u01_fig_gustoca_sr.svg
@@ -54,11 +54,18 @@ svg_normalize: 93 files scanned, 0 would change.
   ok        u06_val3_cetvrtcilindricni_poklopac.svg
   ok        u06_vjezbe_skice.svg
   ok        u07_ch1_platforma_ulje_voda_ormar.svg
+  ok        u07_fig_bocni_pomak.svg
+  ok        u07_fig_ponton_nagib.svg
+  ok        u07_fig_pumpno_kuciste.svg
+  ok        u07_fig_uvod_pregled.svg
   ok        u07_val1_platforma_kompresor.svg
   ok        u07_val2_ponton_gaz.svg
   ok        u07_val3_dva_fluida_modul.svg
   ok        u07_vjezbe_skice.svg
   ok        u08_ch1_mijesajuci_spremnik.svg
+  ok        u08_fig_retencijski_bazen.svg
+  ok        u08_fig_t_komad_hidraulika.svg
+  ok        u08_fig_uvod_pregled.svg
   ok        u08_kontrolni_volumen_scene.svg
   ok        u08_val1_difuzor_kontinuitet.svg
   ok        u08_val2_mjesanje_tokova.svg
@@ -66,17 +73,27 @@ svg_normalize: 93 files scanned, 0 would change.
   ok        u08_vjezbe_skice.svg
   ok        u09_ch1_bypass_sifon_suzenje_mlaz.svg
   ok        u09_egl_hgl_schema.svg
+  ok        u09_fig_propust_brana.svg
+  ok        u09_fig_uvod_pregled.svg
+  ok        u09_fig_venturijeva_cijev.svg
   ok        u09_val2_slobodni_mlaz.svg
   ok        u09_val3_idealni_sifon.svg
   ok        u09_vjezbe_skice.svg
   ok        u10_ch1_pitot_gubici_spremnik.svg
   ok        u10_ch2_usisna_crpka_kavitacija.svg
+  ok        u10_fig_crpka_usisni_tlak.svg
+  ok        u10_fig_odvodnja_zgrade.svg
+  ok        u10_fig_rashladni_cjevovod.svg
+  ok        u10_fig_uvod_pregled.svg
   ok        u10_val1_realni_bernoulli_gubici.svg
   ok        u10_val2_pitot_prandtl.svg
   ok        u10_val3_realni_sifon.svg
   ok        u10_vjezbe_skice.svg
   ok        u11_ch1_t_racva_konzola.svg
   ok        u11_ch2_y_racva_reakcija.svg
+  ok        u11_fig_rashladni_koljeno.svg
+  ok        u11_fig_uvod_pregled.svg
+  ok        u11_fig_vatrogasni_monitor.svg
   ok        u11_val1_mlaz_na_plocu.svg
   ok        u11_val2_mlaznica_prirubnica.svg
   ok        u11_val3_koljeno_reakcija.svg
@@ -84,11 +101,18 @@ svg_normalize: 93 files scanned, 0 would change.
   ok        u12_ch1_pokretna_zakrivljena_lopatica.svg
   ok        u12_ch2_pelton_rotor_moment.svg
   ok        u12_ch3_flyboard_potisak.svg
+  ok        u12_fig_hidromlazni_pogon.svg
+  ok        u12_fig_pelton_lopatica.svg
+  ok        u12_fig_relativni_dotok.svg
+  ok        u12_fig_uvod_pregled.svg
   ok        u12_val1_vodilica_mlaza.svg
   ok        u12_val2_ukljestena_lopatica.svg
   ok        u12_val3_pokretna_lopatica.svg
   ok        u12_vjezbe_skice.svg
   ok        u13_ch1_serijsko_paralelna_mreza.svg
+  ok        u13_fig_paralelne_grane_vodovod.svg
+  ok        u13_fig_rashladni_cjevovod_peci.svg
+  ok        u13_fig_uvod_pregled.svg
   ok        u13_val1_reynolds_i_gubici.svg
   ok        u13_val2_paralelne_grane.svg
   ok        u13_val3_servisni_ispust.svg

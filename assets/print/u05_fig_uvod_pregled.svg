@@ -34,8 +34,9 @@
     </pattern>
   </defs>
 
-  <!-- Pozadina -->
+  <!-- Pozadina + header -->
   <rect width="980" height="500" fill="#eef1f5"/>
+  <rect x="0" y="0" width="980" height="48" fill="url(#u05fup_u5pvhdr)"/>
 
   <!-- ═══════════════════ PANEL 1 – FIZIKALNI PRINCIP ═══════════════════ -->
   <rect x="12" y="54" width="356" height="436" rx="10" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.8"/>

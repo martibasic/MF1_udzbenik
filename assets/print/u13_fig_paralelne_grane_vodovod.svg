@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="390" viewBox="0 0 940 390" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<defs>
+  <marker id="u13fpgv_u13pg-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
+  <marker id="u13fpgv_u13pg-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#7c3aed"/></marker>
+  <marker id="u13fpgv_u13pg-ao" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#b45309"/></marker>
+  <marker id="u13fpgv_u13pg-ao2" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="8 0,0 3,8 6" fill="#b45309"/></marker>
+  <linearGradient id="u13fpgv_u13pg-water1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
+  <linearGradient id="u13fpgv_u13pg-water2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c5e8f5"/><stop offset="100%" stop-color="#6ab8d6"/></linearGradient>
+</defs>
+<rect width="940" height="390" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="342" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+<text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Paralelna razvodna mreža vodovoda</text>
+<text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">D₁=150 mm (čelik) · D₂=100 mm (PVC) · Q=0,050 m³/s · bez lokalnih gubitaka</text>
+
+<!-- Node A (left): circle -->
+<circle cx="130" cy="200" r="14" fill="#f59e0b" stroke="#92400e" stroke-width="2.5"/>
+<text x="130" y="205" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">A</text>
+
+<!-- Node B (right): circle -->
+<circle cx="810" cy="200" r="14" fill="#f59e0b" stroke="#92400e" stroke-width="2.5"/>
+<text x="810" y="205" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">B</text>
+
+<!-- Entry pipe (before A): x=54..116, y=193..207 -->
+<rect x="54" y="193" width="62" height="22" fill="url(#u13fpgv_u13pg-water1)" stroke="#2d3a40" stroke-width="2"/>
+<!-- Q_tot arrow -->
+<line x1="64" y1="204" x2="112" y2="204" stroke="#0f766e" stroke-width="3" marker-end="url(#u13fpgv_u13pg-ag)"/>
+<text x="88" y="185" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e" text-anchor="middle">Q = 0,050 m³/s</text>
+
+<!-- Exit pipe (after B): x=824..886, y=193..207 -->
+<rect x="824" y="193" width="62" height="22" fill="url(#u13fpgv_u13pg-water1)" stroke="#2d3a40" stroke-width="2"/>
+<line x1="834" y1="204" x2="880" y2="204" stroke="#0f766e" stroke-width="3" marker-end="url(#u13fpgv_u13pg-ag)"/>
+
+<!-- Pipe 1 (top, D1=150mm, thicker 30px): y=140..170, x=144..796 -->
+<rect x="144" y="142" width="652" height="30" fill="url(#u13fpgv_u13pg-water1)" stroke="#2d3a40" stroke-width="2.5"/>
+<!-- Pipe 1 flow arrow -->
+<line x1="340" y1="157" x2="460" y2="157" stroke="#0f766e" stroke-width="3" marker-end="url(#u13fpgv_u13pg-ag)"/>
+<!-- Pipe 1 labels -->
+<text x="470" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e" text-anchor="middle">Q₁ = 37,0 L/s</text>
+<text x="470" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">D₁ = 150 mm  ·  L₁ = 250 m  ·  λ₁ = 0,020  ·  čelik</text>
+
+<!-- Pipe 2 (bottom, D2=100mm, thinner 18px): y=226..244, x=144..796 -->
+<rect x="144" y="226" width="652" height="18" fill="url(#u13fpgv_u13pg-water2)" stroke="#2d3a40" stroke-width="2"/>
+<!-- Pipe 2 flow arrow -->
+<line x1="340" y1="235" x2="460" y2="235" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u13fpgv_u13pg-ag)"/>
+<!-- Pipe 2 labels -->
+<text x="470" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e" text-anchor="middle">Q₂ = 13,0 L/s</text>
+<text x="470" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">D₂ = 100 mm  ·  L₂ = 300 m  ·  λ₂ = 0,018  ·  PVC</text>
+
+<!-- h_w equal label (orange, spanning between pipes) -->
+<line x1="470" y1="174" x2="470" y2="222" stroke="#b45309" stroke-width="2" stroke-dasharray="4,2" marker-start="url(#u13fpgv_u13pg-ao2)" marker-end="url(#u13fpgv_u13pg-ao)"/>
+<rect x="434" y="192" width="72" height="20" rx="5" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
+<text x="470" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b45309" text-anchor="middle">h_w = 7,5 m</text>
+
+<!-- Results panel -->
+<rect x="44" y="300" width="860" height="62" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+<text x="60" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Rješenje:  R₁ = 5449 s²/m⁵,  R₂ = 44665 s²/m⁵</text>
+<text x="60" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e293b">Q₁/Q₂ = √(R₂/R₁) = √8,20 = 2,863   →   <tspan font-weight="700" fill="#b42318">Q₁ = 37,0 L/s,  Q₂ = 13,0 L/s</tspan>   ·   <tspan font-weight="700" fill="#b42318">h_w = R₁Q₁² = 7,47 m ≈ 7,5 m</tspan></text>
+<text x="60" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" font-style="italic">Dionica 1 (šira) nosi 74% protoka. Ako se dionica 2 zatvori: cijeli Q ide kroz 1 → h_w = R₁·Q² = 13,6 m (pumpa mora biti na to dimenzionirana).</text>
+</svg>

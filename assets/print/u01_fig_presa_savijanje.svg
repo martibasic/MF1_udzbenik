@@ -35,6 +35,9 @@
   <rect width="980" height="390" fill="#f8f9fa"/>
   <rect x="14" y="14" width="952" height="362" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5"/>
 
+  <!-- ── NASLOV ── -->
+  <text x="490" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#1a2530" text-anchor="middle">Hidrauli&#269;na pre&#353;a – presjek (d&#x2081; = 32 mm, d&#x2082; = 128 mm, omjer 1:4)</text>
+
   <!-- ════════════════════════════════════════════
        MALI CILINDAR (PUMPNI) — d₁=32mm → 42px inner, wall=14px
        Outer: 48-118; inner: 62-104; wall L: 48-62, R: 104-118

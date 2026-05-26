@@ -32,6 +32,7 @@
   <rect width="940" height="440" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="392" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
+
   <!-- === WATER TANK (LEFT, CLOSED) ============================================ -->
   <!-- srafura: left wall, right wall, top wall, bottom wall -->
   <rect x="36" y="78" width="14" height="254" fill="url(#u03c1zsuz_u3ch1S)"/>

@@ -48,6 +48,8 @@
   <rect width="980" height="440" fill="#f4f6f8"/>
   <rect x="18" y="18" width="944" height="404" rx="14" fill="#ffffff" stroke="#d0d6de" stroke-width="2"/>
 
+  <!-- header -->
+
   <!-- === LIJEVI PANEL: smicanje x=38..474 === -->
   <rect x="38" y="90" width="436" height="320" rx="12" fill="#f8fafc" stroke="#d0d8e4" stroke-width="1.6"/>
 

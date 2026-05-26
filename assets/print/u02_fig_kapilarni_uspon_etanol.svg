@@ -28,6 +28,10 @@
   <rect width="560" height="520" fill="#f4f6f8"/>
   <rect x="8" y="8" width="544" height="504" rx="12" fill="#ffffff" stroke="#d2dae2" stroke-width="1.5"/>
 
+  <!-- Naslov -->
+  <text x="280" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530" text-anchor="middle">Kapilarni uspon etanola u staklenoj kapilari</text>
+  <text x="280" y="51" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">d = 1,0 mm  |  θ = 18°  |  σ = 0,022 N/m  |  ρ = 790 kg/m³  →  h ≈ 10,8 mm</text>
+
   <!-- ══════════════════ POSUDA ══════════════════ -->
   <!-- Dno posude -->
   <rect x="80" y="418" width="310" height="14" fill="url(#u02fkue_u2keh)" stroke="#3a4a56" stroke-width="1.4"/>

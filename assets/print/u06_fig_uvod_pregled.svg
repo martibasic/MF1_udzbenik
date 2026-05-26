@@ -27,6 +27,9 @@
   <!-- Background -->
   <rect width="980" height="500" fill="#f0f4f8"/>
 
+  <!-- Header -->
+  <rect x="0" y="0" width="980" height="54" fill="#1e3a5f" rx="0"/>
+
   <!-- ═══════════════════════════ PANEL 1: Fizikalni princip ═══════════════════════════ -->
   <rect x="12" y="60" width="356" height="432" rx="10" fill="#eaf4fb" stroke="#b8d4e8" stroke-width="1.5"/>
   <text x="190" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#173043">Fizikalni princip</text>

@@ -34,6 +34,9 @@
   <rect width="940" height="380" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="332" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
+  <!-- Naslov -->
+  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">b = 1,80 m · H = 1,20 m · h₁ = 0,80 m · h_C = 1,40 m · F ≈ 29,6 kN · y_CP = 1,486 m</text>
+
   <!-- Tijelo fluida (uzvodni) -->
   <rect x="82" y="126" width="318" height="210" fill="url(#u05fbvb_u5bvfl)" opacity="0.83"/>
 

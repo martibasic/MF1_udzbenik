@@ -19,6 +19,10 @@
 
   <rect width="480" height="540" fill="#f4f7fb" rx="8"/>
 
+  <!-- Naslov -->
+  <text x="240" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2e42" text-anchor="middle">Rotirajući cilindrični spremnik</text>
+  <text x="240" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a5a7a" text-anchor="middle">R = 0,35 m  ·  ω = 6,0 rad/s  ·  g = 9,81 m/s²</text>
+
   <!-- Koordinatni sustav: cilindar zauzima x=100..380, y=70..400 -->
   <!-- Zidovi cilindra -->
   <!-- Lijeva stijenka: x=100..116, y=70..400 -->
@@ -47,7 +51,7 @@
     Točke: lijevo (116, 263), vrh (240, 341), desno (364, 263)
     Kvadratičan Bezier: M 116,263 Q 240,419 364,263  NO - to je pre zakrivljeno
     Pravi kvadratičan: kontrolna točka = vrh*2 - (prosjek krajnjih)
-    za pravi kvadratičan: CP_y = 2*341 - (263+263)/2 = 682 - 263 = 419 -- ne, predaleko
+    za pravi kvadratičan: CP_y = 2*341 - (263+263)/2 = 682 - 263 = 419 == ne, predaleko
     Koristimo cubic Bezier s CP koji daje pravi paraboloid:
     Za paraboloid y = 341 - 78*(x-240)²/(124)²  (x u SVG px, 124px=R)
     Na 1/3R: x=240±41, y = 341-78*(41/124)²=341-78*0.1097=341-8.6=332

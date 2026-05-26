@@ -41,6 +41,10 @@
   <rect width="680" height="460" fill="#f4f6f8"/>
   <rect x="8" y="8" width="664" height="444" rx="12" fill="#ffffff" stroke="#d2dae2" stroke-width="1.5"/>
 
+  <!-- Naslov -->
+  <text x="340" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530" text-anchor="middle">Kapilarni uspon vlage kroz opečni zid</text>
+  <text x="340" y="51" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">d_por = 0,12 mm  |  θ = 40°  |  σ = 0,072 N/m  |  ρ = 998 kg/m³  →  h ≈ 18,8 cm</text>
+
   <!-- ══════════════════ TLO ══════════════════ -->
   <rect x="80" y="386" width="300" height="30" fill="url(#u02fkvz_u2kwsoil)" stroke="#3a2a10" stroke-width="1.4"/>
   <rect x="80" y="386" width="300" height="30" fill="url(#u02fkvz_u2kwsh)" opacity="0.30"/>

@@ -24,6 +24,8 @@
   <rect width="900" height="460" fill="#f0f4f8"/>
   <rect x="8" y="8" width="884" height="444" rx="14" fill="#f8f9fa" stroke="#dde3ea" stroke-width="1.5"/>
 
+  <!-- Naslov -->
+
   <!-- ════════════════════════════════════
        PANEL 1 – Fizikalni sustav (x 20..390)
        Zatvoreni spremnik, plinski prostor gore, fluid dolje,

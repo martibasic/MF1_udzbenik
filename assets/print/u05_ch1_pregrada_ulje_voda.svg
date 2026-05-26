@@ -33,6 +33,9 @@
   <rect width="940" height="440" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="392" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
+  <!-- Naslov -->
+  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="14.5" fill="#516677">h_o=1,00 m (ulje ρ=820 kg/m³) · h_w=1,80 m (voda ρ=1000 kg/m³) · b=1,40 m → F₁+F₂=48,1 kN</text>
+
   <!-- Mjerilo 80px/m; A(zglob,gore) y=115; ulje/voda y=195; D(spojnica,dno) y=339 -->
 
   <!-- Sloj ulja (amber) -->

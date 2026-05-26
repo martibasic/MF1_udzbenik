@@ -1,0 +1,131 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" role="img" aria-labelledby="u09fvc_u9fv-title u09fvc_u9fv-sub" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <defs>
+    <linearGradient id="u09fvc_u9fv-oil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8c873"/>
+      <stop offset="100%" stop-color="#c49a0a"/>
+    </linearGradient>
+    <linearGradient id="u09fvc_u9fv-hg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b0b8c0"/>
+      <stop offset="100%" stop-color="#6b7280"/>
+    </linearGradient>
+    <pattern id="u09fvc_u9fv-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <marker id="u09fvc_u9fv-arrG" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u09fvc_u9fv-arrGr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L7,4 L0,8 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u09fvc_u9fv-arrGrR" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto">
+      <path d="M7,0 L0,4 L7,8 z" fill="#546e7a"/>
+    </marker>
+  </defs>
+  <rect width="940" height="400" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text id="u09fvc_u9fv-title" x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Venturijeva cijev za mjerenje protoka ulja</text>
+  <text id="u09fvc_u9fv-sub" x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">D&#x2081;=60&#x202F;mm, D&#x2082;=30&#x202F;mm, &#x394;h&#x2098;=0,18&#x202F;m&#x202F;Hg (&#x3C1;&#x1D40;&#x1D38;=870&#x202F;kg/m&#xB3;, &#x3C1;&#x2095;&#x1D33;=13600&#x202F;kg/m&#xB3;)</text>
+
+  <!-- ===== EGL and HGL lines ===== -->
+  <!-- EGL at y=100 (horizontal, red dashed) -->
+  <line x1="50" y1="100" x2="770" y2="100" stroke="#b42318" stroke-width="2.4" stroke-dasharray="9 5"/>
+  <text x="782" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">EGL</text>
+  <!-- HGL: flat at y=118 from x=50..200; drops to y=178 at throat x=390..520; back to y=118 at x=700..770 -->
+  <!-- Using a polyline with natural slope through the Venturi -->
+  <polyline points="50,118 200,118 390,178 520,178 700,118 770,118" fill="none" stroke="#6d2694" stroke-width="2.4" stroke-dasharray="7 4"/>
+  <text x="782" y="121" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#6d2694">HGL</text>
+
+  <!-- ===== Venturi pipe shape ===== -->
+  <!-- Pipe center at y=210. D1=60mm, D2=30mm. At scale: D1=36px half=18, D2=18px half=9 -->
+  <!-- Inlet x=60..220 (D=60mm), confuser 220..390, throat 390..520, diffuser 520..720, outlet 720..840 -->
+  <!-- Top wall: srafura then outline -->
+  <polygon points="60,192 220,192 390,201 520,201 720,192 840,192 840,188 720,188 520,197 390,197 220,188 60,188" fill="url(#u09fvc_u9fv-sraf)"/>
+  <polygon points="60,228 220,228 390,219 520,219 720,228 840,228 840,232 720,232 520,223 390,223 220,232 60,232" fill="url(#u09fvc_u9fv-sraf)"/>
+  <!-- Oil fill inside pipe -->
+  <polygon points="60,192 220,192 390,201 520,201 720,192 840,192 840,228 720,228 520,219 390,219 220,228 60,228" fill="url(#u09fvc_u9fv-oil)" opacity="0.75"/>
+  <!-- Pipe outline: top -->
+  <polyline points="60,188 220,188 390,197 520,197 720,188 840,188" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
+  <polyline points="60,192 220,192 390,201 520,201 720,192 840,192" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
+  <!-- Pipe outline: bottom -->
+  <polyline points="60,232 220,232 390,223 520,223 720,232 840,232" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
+  <polyline points="60,228 220,228 390,219 520,219 720,228 840,228" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
+  <!-- Endcaps -->
+  <line x1="60" y1="188" x2="60" y2="232" stroke="#2d3a40" stroke-width="2.2"/>
+  <line x1="840" y1="188" x2="840" y2="232" stroke="#2d3a40" stroke-width="2.2"/>
+
+  <!-- Flow arrows -->
+  <line x1="66" y1="210" x2="120" y2="210" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u09fvc_u9fv-arrG)"/>
+  <text x="68" y="205" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">v&#x2081;</text>
+  <line x1="760" y1="210" x2="828" y2="210" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u09fvc_u9fv-arrG)"/>
+  <!-- Throat arrow (faster) -->
+  <line x1="404" y1="210" x2="506" y2="210" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u09fvc_u9fv-arrG)"/>
+  <text x="420" y="205" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">v&#x2082;=4v&#x2081;</text>
+
+  <!-- Velocity head brackets at section 1 and throat -->
+  <line x1="148" y1="100" x2="148" y2="118" stroke="#546e7a" stroke-width="1.6"/>
+  <text x="154" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#546e7a">v&#x2081;&#xB2;/(2g)</text>
+  <line x1="455" y1="100" x2="455" y2="178" stroke="#546e7a" stroke-width="1.6"/>
+  <text x="461" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#546e7a">v&#x2082;&#xB2;/(2g)</text>
+
+  <!-- Pressure head lines (pipe axis to HGL) -->
+  <line x1="140" y1="210" x2="140" y2="118" stroke="#b45309" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="100" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">p&#x2081;/(&#x3C1;g)</text>
+  <line x1="446" y1="210" x2="446" y2="178" stroke="#b45309" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="406" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">p&#x2082;/(&#x3C1;g)</text>
+
+  <!-- === Point labels ===  -->
+  <circle cx="220" cy="210" r="5" fill="#b42318"/>
+  <text x="228" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">&#x2460;</text>
+  <circle cx="455" cy="210" r="5" fill="#b42318"/>
+  <text x="463" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">&#x2461;</text>
+
+  <!-- === Dimension lines for D1 and D2 === -->
+  <!-- D1 at section 1 -->
+  <line x1="130" y1="246" x2="130" y2="232" stroke="#546e7a" stroke-width="1.4"/>
+  <line x1="130" y1="278" x2="130" y2="228" stroke="#546e7a" stroke-width="1.4" marker-start="url(#u09fvc_u9fv-arrGrR)" marker-end="url(#u09fvc_u9fv-arrGr)"/>
+  <text x="136" y="265" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">D&#x2081;=60&#x202F;mm</text>
+  <!-- D2 at throat -->
+  <line x1="455" y1="228" x2="455" y2="246" stroke="#546e7a" stroke-width="1.4" marker-start="url(#u09fvc_u9fv-arrGrR)" marker-end="url(#u09fvc_u9fv-arrGr)"/>
+  <text x="461" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">D&#x2082;=30&#x202F;mm</text>
+
+  <!-- === Manometer (U-tube with mercury) === -->
+  <!-- Connecting tubes from pipe to U-tube -->
+  <!-- From section 1 (x=220) downward -->
+  <line x1="220" y1="232" x2="220" y2="310" stroke="#2d3a40" stroke-width="3"/>
+  <!-- From throat (x=455) downward -->
+  <line x1="455" y1="219" x2="455" y2="310" stroke="#2d3a40" stroke-width="3"/>
+  <!-- U-tube base: horizontal at y=310..320 from x=220 to x=455 -->
+  <rect x="210" y="310" width="14" height="70" rx="2" fill="#e0e8f0" stroke="#2d3a40" stroke-width="2"/>
+  <rect x="448" y="310" width="14" height="70" rx="2" fill="#e0e8f0" stroke="#2d3a40" stroke-width="2"/>
+  <line x1="210" y1="380" x2="462" y2="380" stroke="#2d3a40" stroke-width="2"/>
+  <!-- Mercury in U-tube (grey/silver) - left side higher since p1>p2 -->
+  <!-- Left column mercury from y=335 to y=380 (45px = height) -->
+  <rect x="212" y="344" width="10" height="36" fill="url(#u09fvc_u9fv-hg)" rx="1"/>
+  <!-- Right column mercury from y=325 to y=380 (55px = 0.18m at scale) -->
+  <!-- Delta h_m = 0.18m. Left side at y=344 (36px), right at y=334 (46px)... difference=10px.  -->
+  <!-- Actually the mercury level on the HIGH pressure side is LOWER (pushed down) and on LOW pressure side is HIGHER (pushed up) -->
+  <!-- p1 > p2: mercury pushed from left (section 1) side to right (throat) side -->
+  <!-- Left (section 1): mercury low at y=344..380 -->
+  <!-- Right (throat): mercury high at y=326..380 -->
+  <rect x="450" y="326" width="10" height="54" fill="url(#u09fvc_u9fv-hg)" rx="1"/>
+  <!-- Oil above mercury in both columns (connecting to pipe) -->
+  <rect x="212" y="310" width="10" height="34" fill="url(#u09fvc_u9fv-oil)" opacity="0.5"/>
+  <rect x="450" y="310" width="10" height="16" fill="url(#u09fvc_u9fv-oil)" opacity="0.5"/>
+  <!-- Delta h annotation -->
+  <line x1="468" y1="326" x2="468" y2="344" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u09fvc_u9fv-arrGrR)" marker-end="url(#u09fvc_u9fv-arrGr)"/>
+  <text x="474" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">&#x394;h&#x2098;</text>
+  <text x="474" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">0,18&#x202F;m</text>
+  <!-- Mercury label -->
+  <text x="370" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">&#x17D;iva (Hg)</text>
+
+  <!-- === Formula box (right) === -->
+  <rect x="700" y="250" width="216" height="130" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="714" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#173043">Rezultat</text>
+  <line x1="714" y1="280" x2="908" y2="280" stroke="#e8d89a" stroke-width="1"/>
+  <text x="714" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">&#x394;p = (&#x3C1;&#x2095;&#x1D33;&#x2212;&#x3C1;&#x1D40;&#x1D38;)g&#x394;h&#x2098;</text>
+  <text x="714" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">&#x394;p &#x2248; 22,74&#x202F;kPa</text>
+  <line x1="714" y1="326" x2="908" y2="326" stroke="#e8d89a" stroke-width="1"/>
+  <text x="714" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">v&#x2081;=1,866&#x202F;m/s, v&#x2082;=7,46&#x202F;m/s</text>
+  <text x="714" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">Q &#x2248; 5,27&#x202F;L/s</text>
+</svg>

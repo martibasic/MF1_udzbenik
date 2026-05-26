@@ -29,6 +29,7 @@
 
   <rect width="940" height="420" fill="#ffffff"/>
   <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
   <!-- Divider -->
   <line x1="470" y1="66" x2="470" y2="392" stroke="#d3d9de" stroke-width="1.5" stroke-dasharray="10,6"/>
 

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="460" viewBox="0 0 940 460" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<defs>
+  <marker id="u12fup_u12fp-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
+  <marker id="u12fup_u12fp-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b42318"/></marker>
+  <marker id="u12fup_u12fp-ao" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b45309"/></marker>
+  <marker id="u12fup_u12fp-ab" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#1d4ed8"/></marker>
+  <marker id="u12fup_u12fp-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#546e7a"/></marker>
+  <linearGradient id="u12fup_u12fp-wat" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
+  <linearGradient id="u12fup_u12fp-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8f4fd"/><stop offset="100%" stop-color="#c5e4f3"/></linearGradient>
+  <pattern id="u12fup_u12fp-hatch" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+    <rect width="8" height="8" fill="#8090a0"/>
+    <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+  </pattern>
+</defs>
+<rect width="940" height="460" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="412" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+<!-- Vertical divider -->
+<line x1="470" y1="94" x2="470" y2="432" stroke="#d3d9de" stroke-width="1.5"/>
+
+<!-- ===== LEFT PANEL: Physical concept — moving blade ===== -->
+<text x="54" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Fizikalni princip (pokretni kontrolni volumen)</text>
+
+<!-- Background -->
+<rect x="44" y="118" width="408" height="298" rx="6" fill="#f0f7ff"/>
+
+<!-- Ground (rail) -->
+<line x1="54" y1="388" x2="444" y2="388" stroke="#8090a0" stroke-width="2"/>
+
+<!-- Nozzle (stationary) -->
+<rect x="60" y="310" width="55" height="50" rx="3" fill="url(#u12fup_u12fp-hatch)"/>
+<!-- Jet -->
+<rect x="115" y="316" width="120" height="38" fill="url(#u12fup_u12fp-wat)" opacity="0.85"/>
+
+<!-- Moving blade (on wheels) -->
+<rect x="235" y="300" width="105" height="60" rx="5" fill="url(#u12fup_u12fp-hatch)"/>
+<!-- Blade concave surface (inside, water-colored) -->
+<path d="M 238,305 C 270,305 285,320 280,352 L 260,348 C 264,326 255,312 238,312 Z" fill="url(#u12fup_u12fp-wat)" opacity="0.80"/>
+<!-- Wheels -->
+<circle cx="255" cy="390" r="8" fill="#8090a0" stroke="#2d3a40" stroke-width="1.5"/>
+<circle cx="325" cy="390" r="8" fill="#8090a0" stroke="#2d3a40" stroke-width="1.5"/>
+
+<!-- c1 arrow: absolute jet velocity -->
+<line x1="128" y1="305" x2="228" y2="305" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u12fup_u12fp-ag)"/>
+<text x="148" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">c₁</text>
+
+<!-- u arrow: blade velocity (smaller, orange) -->
+<line x1="240" y1="374" x2="310" y2="374" stroke="#b45309" stroke-width="2.5" marker-end="url(#u12fup_u12fp-ao)"/>
+<text x="262" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b45309">u</text>
+
+<!-- w1 = c1 - u: relative velocity (blue dashed) -->
+<line x1="128" y1="292" x2="192" y2="292" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="5,2" marker-end="url(#u12fup_u12fp-ab)"/>
+<text x="132" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1d4ed8">w₁ = c₁ − u</text>
+
+<!-- Ft arrow: force on blade (red, rightward = direction of u) -->
+<line x1="340" y1="330" x2="415" y2="330" stroke="#b42318" stroke-width="2.5" marker-end="url(#u12fup_u12fp-ar)"/>
+<text x="342" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b42318">Ft</text>
+
+<!-- Key insight box -->
+<rect x="54" y="132" width="398" height="52" rx="6" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
+<text x="66" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">Pokretni KV: samo relativni tok <tspan font-weight="700">w₁ = c₁ − u</tspan> "ulazi".</text>
+<text x="66" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">ṁ_rel = ρ A w₁  ·  F = ṁ_rel · Δw  ·  P = F · u</text>
+
+<!-- ===== RIGHT PANEL (top): Key equations ===== -->
+<text x="486" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Ključne jednadžbe</text>
+<rect x="480" y="118" width="432" height="150" rx="6" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
+<text x="496" y="145" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Relativna brzina na ulazu:</text>
+<text x="496" y="163" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">w₁ = c₁ − u</text>
+<text x="496" y="187" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Relativni maseni protok:  ṁ_rel = ρ A w₁</text>
+<text x="496" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Sila na lopaticu (zakrivljena, β izlazni kut):</text>
+<text x="496" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ft = ṁ_rel · (w₁ + w₂ · cos β)  →  P = Ft · u</text>
+<text x="496" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Za ravnu ploču:  w₂ = w₁,  Ft = ṁ_rel · w₁</text>
+
+<!-- ===== RIGHT PANEL (bottom): Pelton turbine schematic ===== -->
+<text x="486" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Peltonova turbina (principijelna skica)</text>
+<rect x="480" y="292" width="432" height="124" rx="6" fill="url(#u12fup_u12fp-sky)"/>
+<!-- Runner circle -->
+<circle cx="810" cy="354" r="60" fill="none" stroke="#2d3a40" stroke-width="2"/>
+<circle cx="810" cy="354" r="12" fill="#8090a0" stroke="#2d3a40" stroke-width="1.5"/>
+<!-- Spokes -->
+<line x1="810" y1="342" x2="810" y2="296" stroke="#2d3a40" stroke-width="1.5"/>
+<line x1="810" y1="366" x2="810" y2="412" stroke="#2d3a40" stroke-width="1.5"/>
+<!-- Pelton bucket at top -->
+<path d="M 797,294 C 797,288 823,288 823,294 L 823,310 C 823,318 797,318 797,310 Z" fill="url(#u12fup_u12fp-hatch)"/>
+<!-- Nozzle (pointing right toward top bucket) -->
+<polygon points="496,286 496,306 756,298" fill="url(#u12fup_u12fp-hatch)" opacity="0.6"/>
+<!-- Jet -->
+<rect x="490" y="290" width="306" height="16" fill="url(#u12fup_u12fp-wat)" opacity="0.8"/>
+<!-- c1 jet label -->
+<text x="588" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">c₁ (mlaz)</text>
+<!-- u label -->
+<text x="828" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b45309">u = ω r</text>
+<!-- Labels -->
+<text x="500" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">Mlaz c₁ udara Peltonove lopatice</text>
+<text x="500" y="347" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">tangencijalno → moment M = Ft · r</text>
+<text x="500" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#6d2694">P = M · ω = Ft · u</text>
+<text x="500" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Optimalno: u ≈ c₁/2</text>
+<text x="500" y="405" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Visoke glave, velike snage (hidroelektrane)</text>
+</svg>

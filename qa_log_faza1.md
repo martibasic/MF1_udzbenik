@@ -604,3 +604,87 @@ Codex isporučuje SVG-ove paralelno s 27 matplotlib→SVG konverzija već otvore
 3. Quarto render check nakon svih SVG-eva.
 4. Rounding fix u U01 most.p_p_MPa (1,3 → 1,32 MPa).
 
+## Faza 2 — Integracija Codex isporuke i normalizacija (2026-05-26)
+
+Codex je predao SVG redizajn na `origin/codex` grani (commit `cd6aec6`).
+Branched s `d6126f2` (prije Faze 1.5), pa je merge tražio selektivno
+povlačenje samo onih izmjena koje su relevantne za SVG sloj.
+
+### Selektivna integracija
+
+Iz `origin/codex` povučeno **samo**:
+- 117 SVG datoteka u `assets/print/` (24 nove + 93 redizajna postojećih)
+
+Iz `origin/codex` **nije** povučeno:
+- `chapters/*.quarto_ipynb_XX` (oko 80 quarto build artefakata) — to su privremene render datoteke koje ne pripadaju u repo
+- Izmjene `source/uXX_*.md` — Codex je branchao prije Faze 1.5, pa bi
+  njegove tekstualne izmjene poništile 11 novih primjera. Umjesto toga
+  napravljen je surgical merge: zadržan kompletan main source, samo su
+  matplotlib blokovi zamijenjeni SVG referencama (skripta
+  `tools/replace_matplotlib_blocks.py`)
+- Pseudo-brisanja: tools/, todo_svg_za_codex.md, dodaci d04 — sve to nije
+  Codex namjerno brisao, samo nije imao u svojem ancestor commitu
+
+### Matplotlib → SVG zamjene (24 mapiranja)
+
+| Poglavlje | Matplotlib label | SVG datoteka |
+|-----------|------------------|--------------|
+| U07 | `fig-uvod-u07` | `u07_fig_uvod_pregled.svg` |
+| U07 | `fig-u07-bocni-pomak-centra-uzgona` | `u07_fig_bocni_pomak.svg` |
+| U07 | `fig-u07-pumpno-kuciste-uzgon` | `u07_fig_pumpno_kuciste.svg` |
+| U07 | `fig-u07-ponton-nagib` | `u07_fig_ponton_nagib.svg` |
+| U08 | `fig-uvod-u08` | `u08_fig_uvod_pregled.svg` |
+| U08 | `fig-u08-t-komad-hidraulika` | `u08_fig_t_komad_hidraulika.svg` |
+| U08 | `fig-u08-retencijski-bazen` | `u08_fig_retencijski_bazen.svg` |
+| U09 | `fig-uvod-u09` | `u09_fig_uvod_pregled.svg` |
+| U09 | `fig-u09-venturijeva-cijev` | `u09_fig_venturijeva_cijev.svg` |
+| U09 | `fig-u09-brzina-istjecanja-propust` | `u09_fig_propust_brana.svg` |
+| U10 | `fig-uvod-u10` | `u10_fig_uvod_pregled.svg` |
+| U10 | `fig-u10-usisni-tlak-crpka` | `u10_fig_crpka_usisni_tlak.svg` |
+| U10 | `fig-u10-rashladni-cjevovod` | `u10_fig_rashladni_cjevovod.svg` |
+| U10 | `fig-u10-gravitacijska-odvodnja` | `u10_fig_odvodnja_zgrade.svg` |
+| U11 | `fig-uvod-u11` | `u11_fig_uvod_pregled.svg` |
+| U11 | `fig-u11-koljeno-rashladni` | `u11_fig_rashladni_koljeno.svg` |
+| U11 | `fig-u11-mlaznica-vatrogasni-monitor` | `u11_fig_vatrogasni_monitor.svg` |
+| U12 | `fig-uvod-u12` | `u12_fig_uvod_pregled.svg` |
+| U12 | `fig-u12-relativni-dotok-lopatica` | `u12_fig_relativni_dotok.svg` |
+| U12 | `fig-u12-pelton-lopatica` | `u12_fig_pelton_lopatica.svg` |
+| U12 | `fig-u12-hidromlazni-pogon` | `u12_fig_hidromlazni_pogon.svg` |
+| U13 | `fig-uvod-u13` | `u13_fig_uvod_pregled.svg` |
+| U13 | `fig-u13-rashladni-cjevovod-peci` | `u13_fig_rashladni_cjevovod_peci.svg` |
+| U13 | `fig-u13-paralelne-grane-vodovod` | `u13_fig_paralelne_grane_vodovod.svg` |
+
+Status nakon zamjene: **0 matplotlib blokova preostalo u source/u*.md**.
+
+### Primjena protokolnih pravila na sve SVG-ove
+
+Sve nove i redizajnirane SVG datoteke prošle su kroz kanonski tijek:
+
+1. **`tools/svg_normalize.py`** — 117 datoteka:
+   - prefiksirani ID-evi (iz imena datoteke)
+   - kanonski font `'Segoe UI',Arial,sans-serif`
+   - `preserveAspectRatio` i responsive root atributi
+   - aria-labelledby na prefiksirane title/desc
+2. **`tools/strip_svg_titles.py`** (novi alat) — 69 datoteka:
+   - uklonjeni top-level `<text>` naslovi tipa "U[0-9]+ - ..."
+   - uklonjeni podnaslovi (smaller font, sivi fill, neposredno ispod)
+   - `<title>` accessibility element ostaje (screen reader)
+3. **`tools/fix_svg_xml.py`** (novi alat) — popravljena XML konformanca:
+   - sekvenca `--` unutar XML komentara zamijenjena s `==`
+   - nedostajući `;` u hex entitetima (`&#xNNNN`) dodani
+   - corrupt path s prosom u `d` atributu uklonjen (u06)
+
+### Rezultati
+
+- **117/117 SVG datoteka XML-valjano** (lxml/ET.parse OK)
+- **0 matplotlib blokova** u source/u*.md
+- **0 top-level naslova** u SVG-ovima
+- **SymPy verify**: 497/498 PASS (jedini fail je pre-existing U01 rounding)
+- **Otvoreno**: 11 SVG-ova za primjere Faze 1.5 (specifikacije u `todo_svg_za_codex.md`); Quarto render check; rounding fix U01
+
+### Novi alati u tools/
+
+- `replace_matplotlib_blocks.py` — surgical replace matplotlib → SVG referenca po labelu
+- `strip_svg_titles.py` — uklanjanje top-level naslova SVG-ova
+- `fix_svg_xml.py` — popravak XML konformance (komentari, entiteti)
+

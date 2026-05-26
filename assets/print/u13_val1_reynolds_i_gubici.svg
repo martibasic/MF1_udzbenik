@@ -1,52 +1,84 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 320" role="img" aria-labelledby="u13v1rig_title u13v1rig_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u13v1rig_title">U13 Val 1 - cjevovod, Reynolds i gubici</title>
-  <desc id="u13v1rig_desc">Minimalna tehnička skica postupka za jednu dionicu cjevovoda: iz protoka se dobiva brzina, zatim Reynoldsov broj, koeficijent trenja i ukupni gubitak energije.</desc>
-  <rect width="940" height="320" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="272" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="390" viewBox="0 0 940 390" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<defs>
+  <marker id="u13v1rig_u13v1-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
+  <marker id="u13v1rig_u13v1-ao" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b45309"/></marker>
+  <marker id="u13v1rig_u13v1-ab" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#1d4ed8"/></marker>
+  <marker id="u13v1rig_u13v1-agr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#546e7a"/></marker>
+  <marker id="u13v1rig_u13v1-agr2" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="8 0,0 3,8 6" fill="#546e7a"/></marker>
+  <linearGradient id="u13v1rig_u13v1-fluid" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
+</defs>
+<rect width="940" height="390" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="342" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+<text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Proračun jedne cijevne dionice: Q → v → Re → λ → h_w</text>
+<text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">Darcy-Weisbach jednadžba · Moodyjev dijagram · lokalni koeficijenti ξ</text>
 
-  <rect x="96" y="190" width="360" height="28" rx="10" fill="#dff1f8" stroke="#173043" stroke-width="3"/>
-  <line x1="70" y1="204" x2="150" y2="204" stroke="#0f766e" stroke-width="4" marker-end="url(#u13v1rig_arrowGreen)"/>
-  <text x="76" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">Q</text>
-  <line x1="136" y1="168" x2="416" y2="168" stroke="#6b7280" stroke-width="2" marker-start="url(#u13v1rig_arrowGray)" marker-end="url(#u13v1rig_arrowGray)"/>
-  <text x="264" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">L</text>
-  <line x1="472" y1="188" x2="472" y2="220" stroke="#c96c35" stroke-width="3" marker-start="url(#u13v1rig_arrowOrangeSmall)" marker-end="url(#u13v1rig_arrowOrange)"/>
-  <text x="482" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">D</text>
-  <text x="232" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">eps, sum xi</text>
+<!-- Pipe section: y=118..178 (60px high), x=60..580 -->
+<!-- Pipe wall top and bottom -->
+<rect x="60" y="118" width="520" height="60" rx="0" fill="url(#u13v1rig_u13v1-fluid)" stroke="#2d3a40" stroke-width="2.5"/>
+<!-- Pipe end caps (wall symbols) -->
+<line x1="60" y1="110" x2="60" y2="186" stroke="#2d3a40" stroke-width="3"/>
+<line x1="580" y1="110" x2="580" y2="186" stroke="#2d3a40" stroke-width="3"/>
+<!-- Q inlet arrow -->
+<line x1="34" y1="148" x2="58" y2="148" stroke="#0f766e" stroke-width="3" marker-end="url(#u13v1rig_u13v1-ag)"/>
+<text x="36" y="140" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">Q</text>
+<!-- Flow arrow inside pipe -->
+<line x1="90" y1="148" x2="200" y2="148" stroke="#0f766e" stroke-width="2" marker-end="url(#u13v1rig_u13v1-ag)"/>
+<!-- D dimension (vertical orange) -->
+<line x1="610" y1="118" x2="610" y2="178" stroke="#b45309" stroke-width="2" marker-start="url(#u13v1rig_u13v1-ao)" marker-end="url(#u13v1rig_u13v1-ao)"/>
+<text x="620" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b45309">D</text>
+<!-- L dimension (horizontal gray) -->
+<line x1="60" y1="103" x2="580" y2="103" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u13v1rig_u13v1-agr2)" marker-end="url(#u13v1rig_u13v1-agr)"/>
+<text x="300" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a" text-anchor="middle">L</text>
+<!-- ε/D label below pipe -->
+<text x="300" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677" text-anchor="middle">hrapavost: ε/D → relativna hrapavost za Moody</text>
+<!-- Local fitting symbols (valve = circle with X, elbow = arc) at x=180, 350, 480 -->
+<circle cx="220" cy="148" r="10" fill="#fffef6" stroke="#2d3a40" stroke-width="2"/>
+<line x1="213" y1="141" x2="227" y2="155" stroke="#2d3a40" stroke-width="1.5"/>
+<line x1="227" y1="141" x2="213" y2="155" stroke="#2d3a40" stroke-width="1.5"/>
+<text x="214" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#173043">ξ₁</text>
+<circle cx="430" cy="148" r="10" fill="#fffef6" stroke="#2d3a40" stroke-width="2"/>
+<line x1="423" y1="141" x2="437" y2="155" stroke="#2d3a40" stroke-width="1.5"/>
+<line x1="437" y1="141" x2="423" y2="155" stroke="#2d3a40" stroke-width="1.5"/>
+<text x="424" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#173043">ξ₂</text>
 
-  <rect x="148" y="108" width="126" height="38" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
-  <rect x="314" y="108" width="126" height="38" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
-  <rect x="480" y="108" width="146" height="38" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
-  <rect x="666" y="108" width="146" height="38" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
-  <text x="184" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">v = Q / A</text>
-  <text x="348" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">Re = vD / nu</text>
-  <text x="516" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">Moody -> lambda</text>
-  <text x="706" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">h_w = h_l + h_loc</text>
-  <line x1="274" y1="127" x2="314" y2="127" stroke="#93c5fd" stroke-width="2" marker-end="url(#u13v1rig_arrowBlue)"/>
-  <line x1="440" y1="127" x2="480" y2="127" stroke="#93c5fd" stroke-width="2" marker-end="url(#u13v1rig_arrowBlue)"/>
-  <line x1="626" y1="127" x2="666" y2="127" stroke="#93c5fd" stroke-width="2" marker-end="url(#u13v1rig_arrowBlue)"/>
+<!-- Calculation chain: 4 boxes at y=240, then result -->
+<!-- Box 1: v = Q/A -->
+<rect x="54" y="232" width="140" height="46" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+<text x="124" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">A = πD²/4</text>
+<text x="124" y="269" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8" text-anchor="middle">v = Q / A</text>
+<!-- Arrow -->
+<line x1="196" y1="255" x2="220" y2="255" stroke="#93c5fd" stroke-width="2" marker-end="url(#u13v1rig_u13v1-ab)"/>
+<!-- Box 2: Re = vD/ν -->
+<rect x="222" y="232" width="140" height="46" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+<text x="292" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">ν (kinematička</text>
+<text x="292" y="269" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8" text-anchor="middle">Re = vD / ν</text>
+<!-- Arrow -->
+<line x1="364" y1="255" x2="388" y2="255" stroke="#93c5fd" stroke-width="2" marker-end="url(#u13v1rig_u13v1-ab)"/>
+<!-- Box 3: Moody → λ -->
+<rect x="390" y="232" width="140" height="46" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+<text x="460" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">Re, ε/D →</text>
+<text x="460" y="269" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8" text-anchor="middle">Moody → λ</text>
+<!-- Arrow -->
+<line x1="532" y1="255" x2="556" y2="255" stroke="#93c5fd" stroke-width="2" marker-end="url(#u13v1rig_u13v1-ab)"/>
+<!-- Box 4: h_f = λ(L/D)(v²/2g) -->
+<rect x="558" y="232" width="170" height="46" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+<text x="643" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043" text-anchor="middle">h_f = λ·(L/D)·v²/2g</text>
+<text x="643" y="269" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1d4ed8" text-anchor="middle">h_loc = Σξ·v²/2g</text>
+<!-- Arrow down to result -->
+<line x1="643" y1="280" x2="643" y2="304" stroke="#93c5fd" stroke-width="2" marker-end="url(#u13v1rig_u13v1-ab)"/>
 
-  <path d="M612 206 L650 178 L650 194 L776 194 L776 218 L650 218 L650 234 Z" fill="#eef7ff" stroke="#173043" stroke-width="3"/>
-  <path d="M612 206 L650 152 L650 168 L776 168" fill="none" stroke="#173043" stroke-width="3"/>
-  <path d="M650 244 L650 228 L776 228" fill="none" stroke="#173043" stroke-width="3"/>
-  <text x="804" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">Q1</text>
-  <text x="804" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">Q2</text>
-  <text x="622" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">paralela: isti h_w između čvorova</text>
+<!-- Result box -->
+<rect x="558" y="306" width="170" height="46" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="2"/>
+<text x="643" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">ukupni gubitak:</text>
+<text x="643" y="343" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b42318" text-anchor="middle">h_w = h_f + h_loc</text>
 
-  <defs>
-    <marker id="u13v1rig_arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
-    </marker>
-    <marker id="u13v1rig_arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#2563eb"/>
-    </marker>
-    <marker id="u13v1rig_arrowOrange" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
-    </marker>
-    <marker id="u13v1rig_arrowOrangeSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
-    </marker>
-    <marker id="u13v1rig_arrowGray" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#6b7280"/>
-    </marker>
-  </defs>
+<!-- Info panel top-right -->
+<rect x="660" y="110" width="260" height="110" rx="10" fill="#f0f7ff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="674" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#173043">Darcy-Weisbach:</text>
+<text x="674" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e293b">h_f = λ · (L/D) · (v²/2g)</text>
+<text x="674" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#173043">Lokalni gubitak:</text>
+<text x="674" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e293b">h_loc = Σξ · (v²/2g)</text>
+
+<!-- Laminar note -->
+<text x="54" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" font-style="italic">Laminarno (Re &lt; 2300): λ = 64/Re    Turbulentno: Colebrook-White ili Moody</text>
 </svg>

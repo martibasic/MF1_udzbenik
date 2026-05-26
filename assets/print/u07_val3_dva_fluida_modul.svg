@@ -1,70 +1,93 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="u07v3dfm_title u07v3dfm_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u07v3dfm_title">U07 Val 3 - kalibracijski modul na granici ulja i vode</title>
-  <desc id="u07v3dfm_desc">Potpuno uronjeni pravokutni modul vodi se po vodilici kroz granicu ulja i vode, s označenim visinama x i t minus x te silama težine i uzgona.</desc>
-  <rect width="980" height="420" fill="#fffdf8"/>
-  <rect x="32" y="32" width="916" height="356" rx="22" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-
-  <text x="92" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#173043">Poprecni presjek spremnika</text>
-
-  <rect x="100" y="172" width="410" height="175" rx="10" fill="#f7fafb" stroke="#173043" stroke-width="5"/>
-  <rect x="106" y="178" width="398" height="78" fill="#efd89c"/>
-  <rect x="106" y="256" width="398" height="85" fill="#cfe7f3"/>
-  <line x1="106" y1="256" x2="504" y2="256" stroke="#7a8b95" stroke-width="3" stroke-dasharray="10 7"/>
-  <text x="370" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">granica fluida</text>
-
-  <line x1="304" y1="152" x2="304" y2="352" stroke="#6f7f89" stroke-width="4" stroke-dasharray="10 6"/>
-  <rect x="262" y="206" width="84" height="118" fill="#ffffff" stroke="#173043" stroke-width="5"/>
-
-  <line x1="366" y1="206" x2="366" y2="324" stroke="#c96c35" stroke-width="3" marker-start="url(#u07v3dfm_arrowOrangeSmall)" marker-end="url(#u07v3dfm_arrowOrange)"/>
-  <text x="380" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">t</text>
-
-  <line x1="236" y1="256" x2="236" y2="324" stroke="#1976d2" stroke-width="3" marker-start="url(#u07v3dfm_arrowBlueSmall)" marker-end="url(#u07v3dfm_arrowBlue)"/>
-  <text x="216" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">x</text>
-
-  <line x1="216" y1="206" x2="216" y2="256" stroke="#b17a12" stroke-width="3" marker-start="url(#u07v3dfm_arrowBrownSmall)" marker-end="url(#u07v3dfm_arrowBrown)"/>
-  <text x="174" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">t - x</text>
-
-  <line x1="304" y1="192" x2="304" y2="240" stroke="#c23b22" stroke-width="5" marker-end="url(#u07v3dfm_arrowRed)"/>
-  <text x="318" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">G</text>
-
-  <line x1="288" y1="300" x2="288" y2="262" stroke="#2e7d32" stroke-width="5" marker-end="url(#u07v3dfm_arrowGreen)"/>
-  <line x1="320" y1="286" x2="320" y2="250" stroke="#2e7d32" stroke-width="5" marker-end="url(#u07v3dfm_arrowGreen)"/>
-  <text x="332" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">F_U</text>
-
-  <text x="128" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">ulje, rho_1</text>
-  <text x="128" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">voda, rho_2</text>
-
-  <text x="590" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#173043">Logika racuna</text>
-  <rect x="580" y="176" width="300" height="150" rx="14" fill="#f7fafb" stroke="#d3d9de" stroke-width="2"/>
-  <text x="602" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">F_U = rho_1 g A (t - x) + rho_2 g A x</text>
-  <text x="602" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">Neutralno: F_U = G</text>
-  <text x="602" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#587183">Dva fluida daju dva doprinosa uzgonu,</text>
-  <text x="602" y="304" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#587183">ali samo jednu vertikalnu ravnotezu.</text>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="390" viewBox="0 0 940 390" role="img" aria-labelledby="u07v3dfm_u7v3T" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u07v3dfm_u7v3T">U07 Val 3 – Kalibracijski modul na granici ulja i vode</title>
   <defs>
-    <marker id="u07v3dfm_arrowOrange" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    <pattern id="u07v3dfm_u7v3H" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <linearGradient id="u07v3dfm_u7v3Wg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <linearGradient id="u07v3dfm_u7v3Og" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <marker id="u07v3dfm_u7v3AG" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/>
     </marker>
-    <marker id="u07v3dfm_arrowOrangeSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
+    <marker id="u07v3dfm_u7v3AR" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b42318"/>
     </marker>
-    <marker id="u07v3dfm_arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
+    <marker id="u07v3dfm_u7v3AD" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
     </marker>
-    <marker id="u07v3dfm_arrowBlueSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
-    </marker>
-    <marker id="u07v3dfm_arrowBrown" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#b17a12"/>
-    </marker>
-    <marker id="u07v3dfm_arrowBrownSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#b17a12"/>
-    </marker>
-    <marker id="u07v3dfm_arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#2e7d32"/>
-    </marker>
-    <marker id="u07v3dfm_arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c23b22"/>
+    <marker id="u07v3dfm_u7v3ADR" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
     </marker>
   </defs>
+  <rect width="940" height="390" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="342" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+
+  <!-- ── CONTAINER CROSS-SECTION ── -->
+  <!-- Container outer walls (srafura) -->
+  <rect x="174" y="88" width="140" height="258" fill="url(#u07v3dfm_u7v3H)"/>
+  <!-- Oil fill (top) -->
+  <rect x="182" y="96" width="124" height="110" fill="url(#u07v3dfm_u7v3Og)" opacity="0.85"/>
+  <!-- Water fill (bottom) -->
+  <rect x="182" y="206" width="124" height="132" fill="url(#u07v3dfm_u7v3Wg)" opacity="0.7"/>
+  <!-- Oil/water boundary line -->
+  <line x1="174" y1="206" x2="314" y2="206" stroke="#546e7a" stroke-width="2" stroke-dasharray="8 5"/>
+  <!-- Container inner walls (white top and bottom, black border) -->
+  <rect x="174" y="88" width="140" height="258" fill="none" stroke="#37474f" stroke-width="3"/>
+
+  <!-- Module body: centered, x=206..282 (76px wide), y=102..282 (180px = t=0.22m×818px/m≈180px) -->
+  <!-- t=0.22m, scale ≈ 180px/0.22m = 818px/m -->
+  <!-- x in water = 0.0933m × 818 = 76px; t-x in oil = 0.1267m × 818 = 104px -->
+  <!-- Interface at y=206; module bottom: y=206+76=282; module top: y=282-180=102 -->
+  <rect x="208" y="102" width="72" height="180" rx="3" fill="#eceff1" stroke="#37474f" stroke-width="2.5"/>
+
+  <!-- Oil zone label -->
+  <text x="112" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#92400e">ulje</text>
+  <text x="100" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#92400e">ρ₁=820</text>
+  <!-- Water zone label -->
+  <text x="108" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">voda</text>
+  <text x="96" y="253" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">ρ₂=1030</text>
+  <!-- "granica fluida" label -->
+  <text x="322" y="203" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">granica fluida</text>
+
+  <!-- F_U arrow (green, upward from module bottom) -->
+  <line x1="244" y1="290" x2="244" y2="92" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u07v3dfm_u7v3AG)"/>
+  <text x="252" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">F_U</text>
+  <!-- G arrow (red, downward from module top) -->
+  <line x1="244" y1="96" x2="244" y2="298" stroke="#b42318" stroke-width="3" marker-end="url(#u07v3dfm_u7v3AR)"/>
+  <text x="252" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">G</text>
+
+  <!-- ── DIMENSION LINES (right of container) ── -->
+  <!-- t (total height): x=325, y=102..282 -->
+  <line x1="325" y1="102" x2="325" y2="282" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u07v3dfm_u7v3ADR)" marker-end="url(#u07v3dfm_u7v3AD)"/>
+  <text x="332" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#546e7a">t=0,22m</text>
+  <!-- t-x (in oil): x=348, y=102..206 -->
+  <line x1="348" y1="102" x2="348" y2="206" stroke="#92400e" stroke-width="1.5" marker-start="url(#u07v3dfm_u7v3ADR)" marker-end="url(#u07v3dfm_u7v3AD)"/>
+  <text x="356" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#92400e">t−x=0,127m</text>
+  <!-- x (in water): x=370, y=206..282 -->
+  <line x1="370" y1="206" x2="370" y2="282" stroke="#1565c0" stroke-width="1.5" marker-start="url(#u07v3dfm_u7v3ADR)" marker-end="url(#u07v3dfm_u7v3AD)"/>
+  <text x="378" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">x=0,093m</text>
+
+  <!-- ── FORMULA BOX ── -->
+  <rect x="420" y="88" width="484" height="268" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="442" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ravnoteža uzgona i težine</text>
+  <line x1="442" y1="121" x2="896" y2="121" stroke="#e8d89a" stroke-width="1"/>
+  <text x="442" y="141" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">F_U = ρ₁ g A(t−x) + ρ₂ g A x</text>
+  <text x="442" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">F_U = G  →  neutralno plutanje</text>
+  <line x1="442" y1="170" x2="896" y2="170" stroke="#e8d89a" stroke-width="1"/>
+  <text x="442" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">A = b·l = 0,32·0,20 = 0,064 m²</text>
+  <text x="442" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">G = m g = 12,8 · 9,81 = 125,6 N</text>
+  <text x="442" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">820·9,81·0,064·(0,22−x) + 1030·9,81·0,064·x = 125,6</text>
+  <line x1="442" y1="242" x2="896" y2="242" stroke="#e8d89a" stroke-width="1"/>
+  <text x="442" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">x = 0,0933 m  (dubina urona u vodu)</text>
+  <text x="442" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">Provjera: F_U ≈ 125,5 N ≈ G ✓</text>
+  <line x1="442" y1="292" x2="896" y2="292" stroke="#e8d89a" stroke-width="1"/>
+  <text x="442" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">Za x=0,050m (vodilica):  F_U = 119,9 N</text>
+  <text x="442" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">F_V = 125,6 − 119,9 = 5,7 N ↑  (sila vodilice)</text>
 </svg>

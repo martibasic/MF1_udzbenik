@@ -1,67 +1,107 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="u11c2yrr_title u11c2yrr_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u11c2yrr_title">U11 CH 2 - Y-račva s mjerenom reakcijom konzole</title>
-  <desc id="u11c2yrr_desc">Vodoravna Y-račva s jednim ravnim i jednim kosim izlazom. Konzola mjeri vertikalnu reakciju, a iz nje se vraćaju brzina, protok i ulazni tlak.</desc>
-  <rect width="980" height="420" fill="#ffffff"/>
-  <rect x="28" y="28" width="924" height="364" rx="18" fill="#ffffff" stroke="#c9d2d8" stroke-width="2"/>
-
-  <line x1="108" y1="240" x2="404" y2="240" stroke="#2d3a40" stroke-width="16" stroke-linecap="round"/>
-  <line x1="108" y1="240" x2="404" y2="240" stroke="#d9edf4" stroke-width="9" stroke-linecap="round"/>
-  <line x1="108" y1="240" x2="404" y2="240" stroke="#5b6770" stroke-width="2" stroke-linecap="round"/>
-
-  <line x1="404" y1="240" x2="742" y2="240" stroke="#2d3a40" stroke-width="16" stroke-linecap="round"/>
-  <line x1="404" y1="240" x2="742" y2="240" stroke="#d9edf4" stroke-width="9" stroke-linecap="round"/>
-  <line x1="404" y1="240" x2="742" y2="240" stroke="#5b6770" stroke-width="2" stroke-linecap="round"/>
-
-  <line x1="404" y1="240" x2="507" y2="62" stroke="#2d3a40" stroke-width="16" stroke-linecap="round"/>
-  <line x1="404" y1="240" x2="507" y2="62" stroke="#d9edf4" stroke-width="9" stroke-linecap="round"/>
-  <line x1="404" y1="240" x2="507" y2="62" stroke="#5b6770" stroke-width="2" stroke-linecap="round"/>
-
-  <circle cx="404" cy="240" r="10" fill="#eef3f6" stroke="#5b6770" stroke-width="2"/>
-
-  <polygon points="356,318 452,318 404,264" fill="#e8eef2" stroke="#5b6770" stroke-width="2"/>
-  <rect x="330" y="320" width="148" height="22" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="360" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#173043">servisna konzola</text>
-
-  <line x1="182" y1="240" x2="344" y2="240" stroke="#1565c0" stroke-width="5" marker-end="url(#u11c2yrr_arrowBlue)"/>
-  <rect x="204" y="202" width="92" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="226" y="221" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">Q1, v1</text>
-
-  <line x1="482" y1="240" x2="674" y2="240" stroke="#1565c0" stroke-width="5" marker-end="url(#u11c2yrr_arrowBlue)"/>
-  <rect x="542" y="202" width="86" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="566" y="221" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">Q2, v</text>
-
-  <line x1="440" y1="183" x2="465" y2="140" stroke="#1565c0" stroke-width="5" marker-end="url(#u11c2yrr_arrowBlue)"/>
-  <rect x="472" y="102" width="86" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="496" y="121" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">Q3, v</text>
-
-  <line x1="404" y1="306" x2="404" y2="210" stroke="#2e8b57" stroke-width="5" marker-end="url(#u11c2yrr_arrowGreen)"/>
-  <rect x="420" y="264" width="108" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="440" y="283" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">R_y = 625 N</text>
-
-  <rect x="126" y="150" width="126" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="150" y="169" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">p_M1, D1</text>
-
-  <rect x="706" y="202" width="116" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="726" y="221" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">p_M2 = 0, D2</text>
-
-  <rect x="528" y="42" width="148" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="548" y="61" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">p_M3 = 0, D3, 60°</text>
-
-  <path d="M456 240 A52 52 0 0 0 430 195" fill="none" stroke="#8b5e3c" stroke-width="3"/>
-  <text x="462" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">60°</text>
-
-  <rect x="620" y="266" width="276" height="90" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
-  <text x="642" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#173043">Redoslijed</text>
-  <text x="642" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">1. iz R_y vrati v po osi y</text>
-  <text x="642" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">2. kontinuitet daje v1 i protoke</text>
-  <text x="642" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">3. Bernoulli vraća p_M1, x-momentum R_x</text>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 490" width="940" role="img" aria-labelledby="u11c2yrr_u11c2-title" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
   <defs>
-    <marker id="u11c2yrr_arrowBlue" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/>
+    <linearGradient id="u11c2yrr_u11c2-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <marker id="u11c2yrr_u11c2-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f766e"/>
     </marker>
-    <marker id="u11c2yrr_arrowGreen" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#2e8b57"/>
+    <marker id="u11c2yrr_u11c2-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#b42318"/>
+    </marker>
+    <marker id="u11c2yrr_u11c2-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6d2694"/>
+    </marker>
+    <marker id="u11c2yrr_u11c2-ao" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#b45309"/>
+    </marker>
+    <marker id="u11c2yrr_u11c2-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#546e7a"/>
     </marker>
   </defs>
+  <rect width="940" height="490" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="442" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <!-- ===== Y-JUNCTION GEOMETRY ===== -->
+  <!-- Horizontal inlet pipe (D1=170mm~54px, center y=270) -->
+  <!-- Wall -->
+  <rect x="54" y="243" width="338" height="54" rx="3" fill="#c8d6df" stroke="#2d3a40" stroke-width="2.5"/>
+  <!-- Fluid -->
+  <rect x="57" y="247" width="332" height="46" fill="url(#u11c2yrr_u11c2-water)" stroke="none"/>
+  <!-- Straight outlet 2 (D2=100mm~32px, center y=270) -->
+  <!-- Wall -->
+  <rect x="388" y="254" width="252" height="32" rx="3" fill="#c8d6df" stroke="#2d3a40" stroke-width="2.5"/>
+  <!-- Fluid -->
+  <rect x="391" y="257" width="246" height="26" fill="url(#u11c2yrr_u11c2-water)" stroke="none"/>
+  <!-- Y-junction body (filled blob) -->
+  <ellipse cx="382" cy="270" rx="30" ry="34" fill="#c8d6df" stroke="#2d3a40" stroke-width="2"/>
+  <ellipse cx="382" cy="270" rx="26" ry="30" fill="url(#u11c2yrr_u11c2-water)" stroke="none"/>
+  <!-- Branch outlet 3 (D3=80mm~26px, at 60deg above x-axis from junction at 382,270) -->
+  <!-- 60deg: dx=cos60=0.5, dy=sin60=0.866 (upward on screen = negative y) -->
+  <!-- Branch length ~200px: endpoint at (382+200*0.5, 270-200*0.866) = (482, 97) -->
+  <!-- Branch wall (two parallel lines 26px apart, perpendicular to 60deg direction) -->
+  <!-- Perpendicular to 60deg: direction (-sin60, -cos60) = (-0.866, -0.5) for top, (+0.866, +0.5) for bottom -->
+  <!-- Top edge: from (382-13*0.866, 270+13*0.5) to (482-13*0.866, 97+13*0.5) = (371,277) to (471,104) -->
+  <!-- Bot edge: from (382+13*0.866, 270-13*0.5) to (482+13*0.866, 97-13*0.5) = (393,264) to (493,91) -->
+  <polygon points="371,277 471,104 493,91 393,264" fill="#c8d6df" stroke="#2d3a40" stroke-width="2"/>
+  <!-- Branch fluid -->
+  <polygon points="373,274 473,105 490,94 390,263" fill="url(#u11c2yrr_u11c2-water)" stroke="none"/>
+  <!-- ===== SECTIONS ===== -->
+  <!-- Section 1 (inlet) -->
+  <line x1="120" y1="236" x2="120" y2="304" stroke="#173043" stroke-width="2"/>
+  <circle cx="120" cy="270" r="5" fill="#173043"/>
+  <text x="112" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">1</text>
+  <!-- Section 2 (straight outlet) -->
+  <line x1="560" y1="248" x2="560" y2="294" stroke="#173043" stroke-width="2"/>
+  <circle cx="560" cy="271" r="5" fill="#173043"/>
+  <text x="566" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">2</text>
+  <!-- Section 3 (angled outlet - perpendicular cross at end of branch) -->
+  <line x1="472" y1="100" x2="494" y2="92" stroke="#173043" stroke-width="2"/>
+  <circle cx="483" cy="96" r="5" fill="#173043"/>
+  <text x="498" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">3</text>
+  <!-- ===== VELOCITIES ===== -->
+  <!-- v1 (rightward) -->
+  <line x1="162" y1="270" x2="290" y2="270" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u11c2yrr_u11c2-ag)"/>
+  <text x="184" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#0f766e">v&#x2081; = 6,81 m/s</text>
+  <!-- v2 (rightward) -->
+  <line x1="436" y1="270" x2="536" y2="270" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u11c2yrr_u11c2-ag)"/>
+  <text x="446" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#0f766e">v&#x2082; = 12,0 m/s</text>
+  <!-- v3 (along 60deg, ~midpoint of branch at ~430,186) -->
+  <line x1="420" y1="196" x2="450" y2="140" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u11c2yrr_u11c2-ag)"/>
+  <text x="456" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#0f766e">v&#x2083; = 12,0 m/s</text>
+  <!-- 60deg angle label -->
+  <path d="M 410,270 A 30,30 0 0,0 425,244" fill="none" stroke="#546e7a" stroke-width="1.5"/>
+  <text x="420" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">60°</text>
+  <!-- ===== PRESSURE LABELS ===== -->
+  <rect x="54" y="318" width="122" height="26" rx="6" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
+  <text x="70" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p&#x2098;&#x2081; = 48,6 kPa</text>
+  <rect x="570" y="295" width="116" height="26" rx="6" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
+  <text x="586" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p&#x2082; = 0 (atm)</text>
+  <rect x="498" y="76" width="116" height="26" rx="6" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
+  <text x="514" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p&#x2083; = 0 (atm)</text>
+  <!-- ===== MEASURED REACTION (R_y = 625 N, upward on konzola) ===== -->
+  <!-- Konzola reacts upward => fluid on raccva pushes DOWN => R_y annotation -->
+  <line x1="310" y1="370" x2="310" y2="310" stroke="#b45309" stroke-width="3.5" marker-end="url(#u11c2yrr_u11c2-ao)"/>
+  <rect x="244" y="370" width="152" height="26" rx="6" fill="#fff8ec" stroke="#b45309" stroke-width="1.5"/>
+  <text x="260" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#b45309">R&#x1D67; = 625 N (izmjereno)</text>
+  <!-- ===== REACTION FORCES ON RACCVA ===== -->
+  <circle cx="680" cy="370" r="5" fill="#173043"/>
+  <!-- R_x = 664 N pointing left (konzola) -->
+  <line x1="680" y1="370" x2="540" y2="370" stroke="#b42318" stroke-width="4" marker-end="url(#u11c2yrr_u11c2-ar)"/>
+  <text x="568" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#b42318">R&#x2093; = 664 N</text>
+  <!-- R_y = 625 N pointing up (konzola) -->
+  <line x1="680" y1="370" x2="680" y2="310" stroke="#b42318" stroke-width="4" marker-end="url(#u11c2yrr_u11c2-ar)"/>
+  <text x="690" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#b42318">R&#x1D67; = 625 N</text>
+  <!-- R resultant (konzola) -->
+  <line x1="680" y1="370" x2="566" y2="318" stroke="#6d2694" stroke-width="3.5" marker-end="url(#u11c2yrr_u11c2-ap)"/>
+  <text x="590" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#6d2694">R = 912 N &#x2248; 0,91 kN</text>
+  <!-- ===== COORD AXES ===== -->
+  <line x1="66" y1="430" x2="124" y2="430" stroke="#546e7a" stroke-width="2" marker-end="url(#u11c2yrr_u11c2-agr)"/>
+  <text x="128" y="435" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#546e7a">x</text>
+  <line x1="66" y1="430" x2="66" y2="372" stroke="#546e7a" stroke-width="2" marker-end="url(#u11c2yrr_u11c2-agr)"/>
+  <text x="72" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#546e7a">y</text>
+  <!-- ===== FORMULA BOX ===== -->
+  <rect x="54" y="452" width="870" height="52" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="72" y="473" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">R&#x1D67;=625 N &#x21D2; v=11,99&#x2248;12,0 m/s; v&#x2081;=6,81 m/s; Q&#x2081;=155 L/s; p&#x2098;&#x2081;=48,6 kPa</text>
+  <text x="72" y="493" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Os x: p&#x2098;&#x2081;A&#x2081;+F&#x209C;&#x2093;=m&#x2D9;&#x2082;v+m&#x2D9;&#x2083;v&#xB7;cos60&#xB0;&#x2212;m&#x2D9;&#x2081;v&#x2081;  &#x21D2;  R&#x2093;=664 N; R=&#x221A;(664&#xB2;+625&#xB2;)=912 N&lt;1000 N (konzola u redu)</text>
 </svg>

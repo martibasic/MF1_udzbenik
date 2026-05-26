@@ -18,6 +18,10 @@
 
   <rect width="720" height="380" fill="#f4f7fb" rx="8"/>
 
+  <!-- Naslov -->
+  <text x="360" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2e42" text-anchor="middle">Nagib goriva u autocisterni pri kočenju</text>
+  <text x="360" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a5a7a" text-anchor="middle">L = 1,2 m  ·  h₀ = 0,45 m  ·  a = 3,8 m/s²</text>
+
   <!--
     Cisterna: unutarnja x=120..600, y=70..310
     Visina=240px, L=1,2m → scale_x=400/1.2=333 px/m

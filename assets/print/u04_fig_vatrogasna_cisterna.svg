@@ -17,6 +17,10 @@
 
   <rect width="720" height="400" fill="#f4f7fb" rx="8"/>
 
+  <!-- Naslov -->
+  <text x="360" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2e42" text-anchor="middle">Vodena cisterna vatrogasnog vozila pri zaustavljanju</text>
+  <text x="360" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a5a7a" text-anchor="middle">L = 2,4 m  ·  h₀ = 1,2 m  ·  a = 4,5 m/s²</text>
+
   <!--
     Cisterna: unutarnja x=122..598, y=70..330
     Unutarnja visina=260px, L=2,4m → scale: max h_pred=1.751m

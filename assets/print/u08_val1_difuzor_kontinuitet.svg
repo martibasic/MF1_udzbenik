@@ -1,44 +1,86 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 320" role="img" aria-labelledby="u08v1dk_title u08v1dk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u08v1dk_title">U08 Val 1 - difuzor i kontinuitet</title>
-  <desc id="u08v1dk_desc">Minimalna tehnička skica difuzora s označenim kontrolnim volumenom, ulaznim i izlaznim presjekom, promjerima D1 i D2 te brzinama v1 i v2.</desc>
-  <rect width="940" height="320" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="272" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-
-  <rect x="172" y="112" width="72" height="96" fill="#d9edf4" stroke="#173043" stroke-width="3"/>
-  <polygon points="244,112 574,82 574,238 244,208" fill="#d9edf4" stroke="#173043" stroke-width="3"/>
-  <rect x="574" y="82" width="72" height="156" fill="#d9edf4" stroke="#173043" stroke-width="3"/>
-
-  <rect x="132" y="66" width="554" height="188" rx="12" fill="none" stroke="#c96c35" stroke-width="3" stroke-dasharray="10 8"/>
-  <text x="454" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">kontrolni volumen</text>
-
-  <line x1="92" y1="160" x2="172" y2="160" stroke="#1976d2" stroke-width="5" marker-end="url(#u08v1dk_arrowBlue)"/>
-  <line x1="646" y1="160" x2="754" y2="160" stroke="#1976d2" stroke-width="5" marker-end="url(#u08v1dk_arrowBlue)"/>
-  <text x="100" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">A1, v1</text>
-  <text x="658" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">A2, v2 = 16 m/s</text>
-
-  <line x1="154" y1="112" x2="154" y2="208" stroke="#0f766e" stroke-width="3" marker-start="url(#u08v1dk_arrowGreenSmall)" marker-end="url(#u08v1dk_arrowGreen)"/>
-  <text x="112" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">D1 = 120 mm</text>
-
-  <line x1="612" y1="82" x2="612" y2="238" stroke="#be123c" stroke-width="3" marker-start="url(#u08v1dk_arrowRedSmall)" marker-end="url(#u08v1dk_arrowRed)"/>
-  <text x="624" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">D2 = 180 mm</text>
-
-  <text x="186" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">Za nestlacivi stacionarni tok vrijedi A1 v1 = A2 v2, pa se u sirem presjeku brzina mora smanjiti.</text>
-
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 380" role="img" aria-labelledby="u08v1dk_u8v1-title u08v1dk_u8v1-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u08v1dk_u8v1-title">U08 Val 1 – difuzor i kontinuitet</title>
+  <desc id="u08v1dk_u8v1-desc">Difuzor D1=120mm, D2=180mm, v2=16 m/s → v1=36 m/s. Kontrolni volumen obuhvaca cijevi oba presjeka.</desc>
   <defs>
-    <marker id="u08v1dk_arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#1976d2"/>
+    <linearGradient id="u08v1dk_u8v1-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <pattern id="u08v1dk_u8v1-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="4" x2="8" y2="4" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <marker id="u08v1dk_u8v1-arrG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#0f766e"/>
     </marker>
-    <marker id="u08v1dk_arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
+    <marker id="u08v1dk_u8v1-arrGr" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#546e7a"/>
     </marker>
-    <marker id="u08v1dk_arrowGreenSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
-    </marker>
-    <marker id="u08v1dk_arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#be123c"/>
-    </marker>
-    <marker id="u08v1dk_arrowRedSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#be123c"/>
+    <marker id="u08v1dk_u8v1-arrGrRev" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto">
+      <path d="M10,0 L10,8 L0,4 z" fill="#546e7a"/>
     </marker>
   </defs>
+  <!-- Canvas -->
+  <rect width="940" height="380" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="332" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <!-- Title -->
+  <text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Difuzor — stacionarni kontinuitet</text>
+  <text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">D₁ = 120 mm, D₂ = 180 mm, v₂ = 16 m/s → traži se v₁</text>
+
+  <!-- ===== DIFUZOR GEOMETRY ===== -->
+  <!-- Pipe walls (srafura pattern) — top wall above fluid -->
+  <!-- Inlet (left) top wall: y=158..178 -->
+  <polygon points="82,158 82,178 680,163 680,143" fill="url(#u08v1dk_u8v1-sraf)" stroke="none"/>
+  <!-- Inlet (left) bottom wall: y=242..262 -->
+  <polygon points="82,242 82,262 680,277 680,257" fill="url(#u08v1dk_u8v1-sraf)" stroke="none"/>
+  <!-- Wall outlines -->
+  <line x1="82" y1="158" x2="680" y2="143" stroke="#3d4f5a" stroke-width="2.5"/>
+  <line x1="82" y1="262" x2="680" y2="277" stroke="#3d4f5a" stroke-width="2.5"/>
+  <line x1="82" y1="158" x2="82" y2="262" stroke="#3d4f5a" stroke-width="2.5"/>
+  <line x1="680" y1="143" x2="680" y2="277" stroke="#3d4f5a" stroke-width="2.5"/>
+
+  <!-- Fluid fill polygon (between walls) -->
+  <polygon points="82,178 680,163 680,257 82,242" fill="url(#u08v1dk_u8v1-water)" stroke="none"/>
+
+  <!-- KV dashed boundary -->
+  <rect x="72" y="132" width="620" height="136" rx="10" fill="none" stroke="#c96c35" stroke-width="2" stroke-dasharray="10,6"/>
+  <text x="82" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c96c35" font-style="italic">kontrolni volumen</text>
+
+  <!-- v1 arrow (fast, long) -->
+  <line x1="30" y1="210" x2="80" y2="210" stroke="#0f766e" stroke-width="3" marker-end="url(#u08v1dk_u8v1-arrG)"/>
+  <text x="28" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">v₁</text>
+  <text x="26" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">36 m/s</text>
+
+  <!-- v2 arrow (slow, shorter) -->
+  <line x1="682" y1="210" x2="732" y2="210" stroke="#0f766e" stroke-width="3" marker-end="url(#u08v1dk_u8v1-arrG)"/>
+  <text x="735" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">v₂</text>
+  <text x="733" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">16 m/s</text>
+
+  <!-- D1 dimension arrow (left) -->
+  <line x1="58" y1="180" x2="58" y2="240" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u08v1dk_u8v1-arrGrRev)" marker-end="url(#u08v1dk_u8v1-arrGr)"/>
+  <text x="36" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">D₁</text>
+  <text x="30" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">120 mm</text>
+
+  <!-- D2 dimension arrow (right) -->
+  <line x1="700" y1="165" x2="700" y2="255" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u08v1dk_u8v1-arrGrRev)" marker-end="url(#u08v1dk_u8v1-arrGr)"/>
+  <text x="708" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">D₂</text>
+  <text x="706" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">180 mm</text>
+
+  <!-- A1, A2 labels inside pipe -->
+  <text x="108" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043" opacity="0.85">A₁</text>
+  <text x="596" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043" opacity="0.85">A₂</text>
+
+  <!-- ===== FORMULA BOX ===== -->
+  <rect x="750" y="104" width="158" height="164" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="766" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Rezultati</text>
+  <line x1="757" y1="131" x2="900" y2="131" stroke="#e8d89a" stroke-width="1"/>
+  <text x="766" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">A₁v₁ = A₂v₂</text>
+  <text x="766" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">v₁ = (D₂/D₁)² · v₂</text>
+  <text x="766" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">v₁ = 36 m/s</text>
+  <line x1="757" y1="196" x2="900" y2="196" stroke="#e8d89a" stroke-width="1"/>
+  <text x="766" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Q = A₂v₂ = 0,407 m³/s</text>
+  <text x="766" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">ṁ = ρQ = 406 kg/s</text>
+
+  <!-- Bottom note -->
+  <text x="54" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">U difuzoru presjek raste → brzina pada. Isti Q prolazi kroz oba presjeka jer je fluid nestlačiv i tok stacionaran.</text>
 </svg>

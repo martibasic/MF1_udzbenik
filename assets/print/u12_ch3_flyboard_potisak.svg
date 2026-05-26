@@ -1,74 +1,106 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="u12c3fp_title u12c3fp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u12c3fp_title">U12 CH 3 - flyboard s cetiri sapnice i prag lebdenja</title>
-  <desc id="u12c3fp_desc">Shematski flyboard s cetiri sapnice koje izbacuju vodu prema dolje. Skica prikazuje potisak, tezinu, brzinu mlaza i ciljnu visinu lebdenja.</desc>
-  <rect width="980" height="420" fill="#ffffff"/>
-  <rect x="28" y="28" width="924" height="364" rx="18" fill="#ffffff" stroke="#c9d2d8" stroke-width="2"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="460" viewBox="0 0 940 460" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<defs>
+  <marker id="u12c3fp_u12c3-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
+  <marker id="u12c3fp_u12c3-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b42318"/></marker>
+  <marker id="u12c3fp_u12c3-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#6d2694"/></marker>
+  <marker id="u12c3fp_u12c3-ao" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b45309"/></marker>
+  <marker id="u12c3fp_u12c3-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#546e7a"/></marker>
+  <linearGradient id="u12c3fp_u12c3-jet" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8" stop-opacity="0.3"/></linearGradient>
+  <pattern id="u12c3fp_u12c3-hatch" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+    <rect width="8" height="8" fill="#8090a0"/>
+    <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+  </pattern>
+</defs>
+<rect width="940" height="460" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="412" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+<text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Mlazna platforma — potisak i ubrzanje (4 sapnice)</text>
+<text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">m = 150 kg · 4 × d = 50 mm · v = 15 m/s · ρ = 1000 kg/m³</text>
 
-  <rect x="160" y="264" width="660" height="78" rx="16" fill="#dff1f8" stroke="#8db7c9" stroke-width="2"/>
-  <path d="M160 300 C220 286 280 316 340 300 C400 284 460 316 520 300 C580 284 640 316 700 300 C750 287 785 309 820 300" fill="none" stroke="#3a87ad" stroke-width="4"/>
+<!-- ===== PLATFORM DIAGRAM ===== -->
 
-  <rect x="416" y="170" width="120" height="22" rx="6" fill="#e8eef2" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="438" y="144" width="76" height="34" rx="10" fill="#f8fafb" stroke="#5b6770" stroke-width="1.5"/>
-  <circle cx="476" cy="122" r="18" fill="#f8fafb" stroke="#5b6770" stroke-width="1.5"/>
-  <line x1="448" y1="178" x2="438" y2="224" stroke="#5b6770" stroke-width="4"/>
-  <line x1="504" y1="178" x2="514" y2="224" stroke="#5b6770" stroke-width="4"/>
-  <line x1="452" y1="196" x2="432" y2="242" stroke="#5b6770" stroke-width="4"/>
-  <line x1="500" y1="196" x2="520" y2="242" stroke="#5b6770" stroke-width="4"/>
+<!-- Height scale on left -->
+<line x1="58" y1="102" x2="58" y2="410" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="3,4"/>
+<text x="45" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9aabb5">h</text>
 
-  <rect x="426" y="224" width="18" height="20" rx="4" fill="#e8eef2" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="458" y="224" width="18" height="20" rx="4" fill="#e8eef2" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="476" y="224" width="18" height="20" rx="4" fill="#e8eef2" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="508" y="224" width="18" height="20" rx="4" fill="#e8eef2" stroke="#5b6770" stroke-width="1.5"/>
+<!-- Platform body (horizontal board) -->
+<rect x="130" y="218" width="170" height="18" rx="3" fill="url(#u12c3fp_u12c3-hatch)"/>
 
-  <line x1="435" y1="244" x2="435" y2="322" stroke="#1565c0" stroke-width="5" marker-end="url(#u12c3fp_arrowBlue)"/>
-  <line x1="467" y1="244" x2="467" y2="322" stroke="#1565c0" stroke-width="5" marker-end="url(#u12c3fp_arrowBlue)"/>
-  <line x1="485" y1="244" x2="485" y2="322" stroke="#1565c0" stroke-width="5" marker-end="url(#u12c3fp_arrowBlue)"/>
-  <line x1="517" y1="244" x2="517" y2="322" stroke="#1565c0" stroke-width="5" marker-end="url(#u12c3fp_arrowBlue)"/>
+<!-- Person simplified silhouette (stick-like figure above platform) -->
+<!-- Head -->
+<circle cx="215" cy="175" r="16" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
+<!-- Body/torso rectangle -->
+<rect x="200" y="192" width="30" height="26" rx="4" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
+<!-- Arms not shown for simplicity -->
 
-  <rect x="548" y="252" width="86" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="572" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">4v</text>
+<!-- 4 nozzles at bottom of platform -->
+<!-- Nozzle 1: x=150 -->
+<rect x="144" y="236" width="12" height="8" rx="1" fill="#2d3a40"/>
+<!-- Nozzle 2: x=175 -->
+<rect x="169" y="236" width="12" height="8" rx="1" fill="#2d3a40"/>
+<!-- Nozzle 3: x=248 -->
+<rect x="246" y="236" width="12" height="8" rx="1" fill="#2d3a40"/>
+<!-- Nozzle 4: x=278 -->
+<rect x="274" y="236" width="12" height="8" rx="1" fill="#2d3a40"/>
 
-  <line x1="476" y1="132" x2="476" y2="68" stroke="#2e8b57" stroke-width="5" marker-end="url(#u12c3fp_arrowGreen)"/>
-  <rect x="492" y="84" width="104" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="516" y="103" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">F_p</text>
+<!-- Water jets flowing down from nozzles (tapered, spreading) -->
+<path d="M 144,244 L 141,360 L 157,360 L 156,244 Z" fill="url(#u12c3fp_u12c3-jet)"/>
+<path d="M 169,244 L 166,360 L 182,360 L 181,244 Z" fill="url(#u12c3fp_u12c3-jet)"/>
+<path d="M 246,244 L 243,360 L 259,360 L 258,244 Z" fill="url(#u12c3fp_u12c3-jet)"/>
+<path d="M 274,244 L 271,360 L 287,360 L 286,244 Z" fill="url(#u12c3fp_u12c3-jet)"/>
 
-  <line x1="446" y1="116" x2="446" y2="186" stroke="#a61e4d" stroke-width="5" marker-end="url(#u12c3fp_arrowMagenta)"/>
-  <rect x="330" y="118" width="94" height="28" rx="6" fill="#ffffff" stroke="#e3cad4" stroke-width="1.5"/>
-  <text x="356" y="137" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">G = mg</text>
+<!-- Water jet velocity arrows on one nozzle (representative) -->
+<line x1="150" y1="270" x2="150" y2="335" stroke="#1d4ed8" stroke-width="2" marker-end="url(#u12c3fp_u12c3-agr)"/>
+<text x="155" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1d4ed8">v = 15 m/s</text>
 
-  <line x1="732" y1="300" x2="732" y2="132" stroke="#8b5e3c" stroke-width="3" marker-start="url(#u12c3fp_arrowBrownRev)" marker-end="url(#u12c3fp_arrowBrown)"/>
-  <rect x="748" y="204" width="78" height="28" rx="6" fill="#ffffff" stroke="#d9cdc3" stroke-width="1.5"/>
-  <text x="774" y="223" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">h</text>
+<!-- Fp (thrust/potisak) arrow: from platform center going UP (large green) -->
+<line x1="215" y1="218" x2="215" y2="122" stroke="#0f766e" stroke-width="4" marker-end="url(#u12c3fp_u12c3-ag)"/>
+<text x="220" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">Fp = 1767 N ↑</text>
 
-  <line x1="708" y1="132" x2="744" y2="132" stroke="#8db7c9" stroke-width="3"/>
-  <rect x="626" y="118" width="74" height="28" rx="6" fill="#ffffff" stroke="#c9d2d8" stroke-width="1.5"/>
-  <text x="648" y="137" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">10 m</text>
+<!-- G (gravity/težina) arrow: from platform center going DOWN (large red) -->
+<line x1="215" y1="236" x2="215" y2="344" stroke="#b42318" stroke-width="4" marker-end="url(#u12c3fp_u12c3-ar)"/>
+<text x="220" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">G = 1472 N ↓</text>
 
-  <rect x="116" y="132" width="164" height="72" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
-  <text x="138" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#173043">Ulazni podaci</text>
-  <text x="138" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">m = 150 kg</text>
-  <text x="138" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">4 x d = 50 mm</text>
+<!-- FR (net force) = Fp - G: small purple arrow near top -->
+<line x1="350" y1="218" x2="350" y2="162" stroke="#6d2694" stroke-width="2.8" marker-end="url(#u12c3fp_u12c3-ap)"/>
+<text x="356" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#6d2694">FR = 295 N ↑</text>
+<text x="356" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#6d2694">a = 1,97 m/s²</text>
 
-  <rect x="620" y="256" width="286" height="88" rx="12" fill="#f8fafb" stroke="#d6dde2" stroke-width="1.5"/>
-  <text x="642" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#173043">Redoslijed</text>
-  <text x="642" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">1. A i v_min iz F_p = rho A v^2</text>
-  <text x="642" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">2. visak potiska daje a, zatim kinematika</text>
+<!-- v_min label (hover condition) -->
+<line x1="82" y1="218" x2="128" y2="218" stroke="#b45309" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="60" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">hover</text>
+<text x="60" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">h₀</text>
 
-  <defs>
-    <marker id="u12c3fp_arrowBlue" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#1565c0"/>
-    </marker>
-    <marker id="u12c3fp_arrowGreen" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#2e8b57"/>
-    </marker>
-    <marker id="u12c3fp_arrowMagenta" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#a61e4d"/>
-    </marker>
-    <marker id="u12c3fp_arrowBrown" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#8b5e3c"/>
-    </marker>
-    <marker id="u12c3fp_arrowBrownRev" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#8b5e3c"/>
-    </marker>
-  </defs>
+<!-- dashed horizontal line for ground (bottom of trajectory) -->
+<line x1="82" y1="410" x2="420" y2="410" stroke="#888" stroke-width="1.2" stroke-dasharray="5,4"/>
+<text x="86" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#888">h = 0 (ravnina vode)</text>
+
+<!-- Height marker h=10m on scale -->
+<line x1="53" y1="218" x2="63" y2="218" stroke="#b45309" stroke-width="1.5"/>
+<text x="35" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">10 m</text>
+
+<!-- Nozzle labels -->
+<text x="132" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#173043">4×</text>
+<text x="144" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#173043">d=50mm</text>
+
+<!-- ===== INFO PANEL (right) ===== -->
+<rect x="455" y="88" width="460" height="348" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+<text x="471" y="114" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Zadano</text>
+<text x="471" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Masa platforme s osobom:  m = 150 kg</text>
+<text x="471" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">4 sapnice:  d = 50 mm,  v = 15 m/s,  ρ = 1000 kg/m³</text>
+<line x1="471" y1="165" x2="903" y2="165" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Potisna sila</text>
+<text x="471" y="203" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">A₁ = π d²/4 = 1,964 · 10⁻³ m² ;  A_uk = 4 A₁ = 7,854 · 10⁻³ m²</text>
+<text x="471" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Fp = ρ A_uk v² = 1000 · 7,854·10⁻³ · 15² = <tspan font-weight="700" fill="#0f766e">1767 N</tspan></text>
+<line x1="471" y1="234" x2="903" y2="234" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="253" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Uvjet lebdenja (v_min)</text>
+<text x="471" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">G = m g = 150 · 9,81 = 1471,5 N</text>
+<text x="471" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Fp = G  →  v_min = √(G / ρA_uk) = √(1471,5 / 7,854) = <tspan font-weight="700">13,7 m/s</tspan></text>
+<line x1="471" y1="303" x2="903" y2="303" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ubrzanje pri v = 15 m/s</text>
+<text x="471" y="341" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">FR = Fp − G = 1767 − 1471,5 = 295,5 N</text>
+<text x="471" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">a = FR / m = 295,5 / 150 = <tspan font-weight="700" fill="#6d2694">1,97 m/s²</tspan></text>
+<line x1="471" y1="372" x2="903" y2="372" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="391" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Dizanje do h = 10 m  (a = konst.)</text>
+<text x="471" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">h = ½ a t²  →  t = √(2h/a) = √(20/1,97) = 3,19 s</text>
+<text x="471" y="429" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">v_h10 = a·t = 1,97·3,19 = 6,29 m/s  (brzina pri h=10 m)</text>
 </svg>

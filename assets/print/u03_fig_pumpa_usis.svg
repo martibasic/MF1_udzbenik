@@ -23,6 +23,10 @@
   <rect width="520" height="520" fill="#f8f9fa"/>
   <rect x="10" y="10" width="500" height="500" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5"/>
 
+  <!-- Naslov -->
+  <text x="260" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530" text-anchor="middle">Usisni vod pumpe za ulje – podtlak na usisu</text>
+  <text x="260" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">ρ = 870 kg/m³,  H = 2,4 m,  p_atm = 101,3 kPa,  p_v ≈ 200 Pa</text>
+
   <!-- ══ OTVORENI SPREMNIK (dolje, x=60..340, y=350..450) ══ -->
   <!-- Dno -->
   <rect x="60" y="440" width="280" height="12" fill="url(#u03fpu_u3puhatch)" stroke="#4a6070" stroke-width="1.2"/>

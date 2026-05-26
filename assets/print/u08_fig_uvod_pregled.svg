@@ -1,0 +1,127 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 440" role="img" aria-labelledby="u08fup_u8fp-title u08fup_u8fp-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u08fup_u8fp-title">U08 – kontrolni volumen i kontinuitet – pregled poglavlja</title>
+  <desc id="u08fup_u8fp-desc">Tri panela: fizikalni sustav s T-komad T-junction, kljucne jednadžbe, primjena u inzenjeriji.</desc>
+  <defs>
+    <linearGradient id="u08fup_u8fp-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4eef8"/>
+      <stop offset="100%" stop-color="#7ec8e8"/>
+    </linearGradient>
+    <linearGradient id="u08fup_u8fp-acc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bde0f4" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#50b0d0" stop-opacity="0.7"/>
+    </linearGradient>
+    <pattern id="u08fup_u8fp-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="4" x2="8" y2="4" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <marker id="u08fup_u8fp-arrG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u08fup_u8fp-arrG2" markerWidth="10" markerHeight="8" refX="5" refY="0" orient="auto">
+      <path d="M0,8 L10,8 L5,0 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u08fup_u8fp-arrG3" markerWidth="10" markerHeight="8" refX="5" refY="8" orient="auto">
+      <path d="M0,0 L10,0 L5,8 z" fill="#b42318"/>
+    </marker>
+    <marker id="u08fup_u8fp-arrR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L10,4 z" fill="#b42318"/>
+    </marker>
+    <marker id="u08fup_u8fp-arrUp" markerWidth="10" markerHeight="8" refX="5" refY="0" orient="auto">
+      <path d="M0,8 L10,8 L5,0 z" fill="#c96c35"/>
+    </marker>
+  </defs>
+  <!-- Canvas -->
+  <rect width="940" height="440" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="392" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <!-- Title -->
+  <text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Kontrolni volumen i kontinuitet — pregled</text>
+  <text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">Zatvoriti granicu, prebrojati ulaze i izlaze, zadržati akumulaciju gdje je protoci nisu uravnoteženi.</text>
+
+  <!-- ===== PANEL 1: Fizikalni sustav (T-junction) ===== -->
+  <!-- Panel background -->
+  <rect x="42" y="94" width="400" height="308" rx="12" fill="#f4f8fb" stroke="#d0dde8" stroke-width="1.5"/>
+  <text x="58" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Fizikalni sustav — T-komad</text>
+
+  <!-- T-junction: horizontal inlet from left, two branches (upper and lower) -->
+  <!-- Inlet pipe: y=220, height=28, x=70..270 -->
+  <!-- Inlet walls + fluid -->
+  <rect x="70" y="200" width="200" height="40" fill="url(#u08fup_u8fp-sraf)" stroke="none"/>
+  <rect x="82" y="212" width="188" height="16" fill="url(#u08fup_u8fp-water)" stroke="none"/>
+  <line x1="70" y1="200" x2="270" y2="200" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="70" y1="240" x2="270" y2="240" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="70" y1="200" x2="70" y2="240" stroke="#3d4f5a" stroke-width="2"/>
+
+  <!-- Junction body: x=270..306, y=140..320 -->
+  <rect x="270" y="140" width="36" height="200" fill="url(#u08fup_u8fp-sraf)" stroke="none"/>
+  <rect x="282" y="152" width="12" height="176" fill="url(#u08fup_u8fp-water)" stroke="none"/>
+  <line x1="270" y1="140" x2="306" y2="140" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="270" y1="340" x2="306" y2="340" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="270" y1="140" x2="270" y2="200" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="270" y1="240" x2="270" y2="340" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="306" y1="140" x2="306" y2="340" stroke="#3d4f5a" stroke-width="2"/>
+
+  <!-- Upper branch: y=140..166, from x=306..406 -->
+  <rect x="306" y="140" width="110" height="38" fill="url(#u08fup_u8fp-sraf)" stroke="none"/>
+  <rect x="306" y="152" width="110" height="14" fill="url(#u08fup_u8fp-water)" stroke="none"/>
+  <line x1="306" y1="140" x2="416" y2="140" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="306" y1="178" x2="416" y2="178" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="416" y1="140" x2="416" y2="178" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="416" y1="159" x2="438" y2="159" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u08fup_u8fp-arrG)"/>
+
+  <!-- Lower branch: y=302..340, from x=306..406 -->
+  <rect x="306" y="302" width="100" height="38" fill="url(#u08fup_u8fp-sraf)" stroke="none"/>
+  <rect x="306" y="314" width="100" height="14" fill="url(#u08fup_u8fp-water)" stroke="none"/>
+  <line x1="306" y1="302" x2="406" y2="302" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="306" y1="340" x2="406" y2="340" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="406" y1="302" x2="406" y2="340" stroke="#3d4f5a" stroke-width="2"/>
+  <line x1="406" y1="321" x2="428" y2="321" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u08fup_u8fp-arrG)"/>
+
+  <!-- KV dashed box around junction -->
+  <rect x="258" y="130" width="60" height="220" rx="8" fill="none" stroke="#c96c35" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="328" y="235" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c96c35" font-style="italic">KV</text>
+
+  <!-- Flow arrow into junction -->
+  <line x1="46" y1="220" x2="68" y2="220" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u08fup_u8fp-arrG)"/>
+
+  <!-- Labels -->
+  <text x="50" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">Q₁</text>
+  <text x="440" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">Q₂</text>
+  <text x="430" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">Q₃</text>
+  <text x="130" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">A₁, v₁</text>
+
+  <text x="58" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Q₁ = Q₂ + Q₃</text>
+  <text x="58" y="385" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">stacionarni tok, nestlačiv fluid</text>
+
+  <!-- ===== PANEL 2: Ključne jednadžbe (right top) ===== -->
+  <rect x="456" y="94" width="460" height="178" rx="12" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="472" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ključne jednadžbe</text>
+  <line x1="462" y1="125" x2="906" y2="125" stroke="#e8d89a" stroke-width="1"/>
+  <text x="472" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Volumenski protok:     Q = A · v</text>
+  <text x="472" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Jedna cijev:     A₁ v₁ = A₂ v₂</text>
+  <text x="472" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Višestruki tokovi:     ΣQ_ul = ΣQ_iz  (stacionarno)</text>
+  <text x="472" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Akumulacija:     ΣQ_ul − ΣQ_iz = dV_CV/dt</text>
+  <text x="472" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Razina:     dh/dt = (Q_ul − Q_iz) / A_tlocrta</text>
+  <text x="472" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Masena bilanca ṁ = ρQ kad su različite gustoće</text>
+  <text x="472" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">(miješanje, višefazni tokovi)</text>
+
+  <!-- ===== PANEL 3: Primjena (right bottom) ===== -->
+  <rect x="456" y="284" width="460" height="118" rx="12" fill="#f4f8fb" stroke="#d0dde8" stroke-width="1.5"/>
+  <text x="472" y="307" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Gdje se primjenjuje</text>
+  <!-- Mini tank sketch -->
+  <rect x="620" y="316" width="80" height="66" fill="none" stroke="#3d4f5a" stroke-width="2"/>
+  <rect x="620" y="344" width="80" height="38" fill="url(#u08fup_u8fp-water)" stroke="none"/>
+  <line x1="620" y1="344" x2="700" y2="344" stroke="#2980b9" stroke-width="2"/>
+  <line x1="620" y1="330" x2="700" y2="330" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- Qin arrow left -->
+  <line x1="576" y1="333" x2="618" y2="333" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u08fup_u8fp-arrG)"/>
+  <!-- Qout arrow right -->
+  <line x1="700" y1="355" x2="738" y2="355" stroke="#b42318" stroke-width="2.5" marker-end="url(#u08fup_u8fp-arrR)"/>
+  <!-- dh/dt -->
+  <line x1="660" y1="342" x2="660" y2="332" stroke="#c96c35" stroke-width="2" marker-end="url(#u08fup_u8fp-arrUp)"/>
+  <!-- Labels -->
+  <text x="472" y="335" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">• hidraulični razvodi i sapnice</text>
+  <text x="472" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">• komore za miješanje fluida</text>
+  <text x="472" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">• retencijski bazeni, vodotornjevi</text>
+  <text x="742" y="335" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">Q_in</text>
+  <text x="740" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b42318">Q_out</text>
+</svg>

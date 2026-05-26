@@ -30,6 +30,10 @@
   <rect width="680" height="540" fill="#f4f6f8"/>
   <rect x="8" y="8" width="664" height="524" rx="12" fill="#ffffff" stroke="#d2dae2" stroke-width="1.5"/>
 
+  <!-- Naslov -->
+  <text x="340" y="35" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530" text-anchor="middle">Klizni ležaj – proračun viskoznog trenja</text>
+  <text x="340" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">D=60 mm, L=80 mm, δ=0,5 mm, μ=0,25 Pa·s, n=1450 min⁻¹</text>
+
   <!-- ══════════════════ KRUŽNI PRESJEK  centar (248, 280) ══════════════════ -->
   <!-- r_hous=170 (vanjski), r_bore=136 (unutarnji rub kućišta)
        r_film_out=135, r_film_in=107 (uljni film)

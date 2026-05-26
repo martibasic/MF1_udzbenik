@@ -1,37 +1,107 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="u09ehs_title u09ehs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u09ehs_title">U09 print-zamjena za EGL i HGL</title>
-  <desc id="u09ehs_desc">Dvije točke na strujnici s prikazom p/rho g, v na kvadrat kroz 2g, z te EGL i HGL linija.</desc>
-  <rect width="980" height="420" fill="#fffdf8"/>
-  <rect x="32" y="32" width="916" height="356" rx="22" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <line x1="90" y1="330" x2="900" y2="330" stroke="#173043" stroke-width="3"/>
-  <text x="92" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">referentna razina z = 0</text>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420" role="img" aria-labelledby="u09ehs_u9eh-title u09ehs_u9eh-sub" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <defs>
+    <pattern id="u09ehs_u9eh-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#8090a0"/>
+      <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+    </pattern>
+    <marker id="u09ehs_u9eh-arrG" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 z" fill="#0f766e"/>
+    </marker>
+    <marker id="u09ehs_u9eh-arrR" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L7,4 L0,8 z" fill="#546e7a"/>
+    </marker>
+    <marker id="u09ehs_u9eh-arrRev" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto">
+      <path d="M7,0 L0,4 L7,8 z" fill="#546e7a"/>
+    </marker>
+    <linearGradient id="u09ehs_u9eh-air" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f6fb"/>
+      <stop offset="100%" stop-color="#daeaf5"/>
+    </linearGradient>
+  </defs>
+  <rect width="940" height="420" fill="#ffffff"/>
+  <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <text id="u09ehs_u9eh-title" x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">EGL i HGL kroz horizontalni konfuzor</text>
+  <text id="u09ehs_u9eh-sub" x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">A&#x2081;=0,07&#x202F;m&#xB2;, A&#x2082;=0,0185&#x202F;m&#xB2;, v&#x2081;=8,10&#x202F;m/s, v&#x2082;=30,63&#x202F;m/s, zrak &#x3C1;=1,2&#x202F;kg/m&#xB3;</text>
 
-  <path d="M120 280 C260 250, 380 295, 510 250 S760 220, 860 255" fill="none" stroke="#3a87ad" stroke-width="10" stroke-linecap="round"/>
-  <text x="120" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">strujnica</text>
+  <!-- EGL horizontal (red dashed) at y=105 -->
+  <line x1="48" y1="105" x2="780" y2="105" stroke="#b42318" stroke-width="2.4" stroke-dasharray="9 5"/>
+  <text x="792" y="109" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">EGL</text>
 
-  <circle cx="260" cy="270" r="8" fill="#c96c35"/>
-  <circle cx="700" cy="235" r="8" fill="#c96c35"/>
-  <text x="248" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">1</text>
-  <text x="688" y="217" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">2</text>
+  <!-- HGL: flat at y=125 from x=48..230, drops to y=210 by x=610, flat at y=210 from x=610..780 -->
+  <polyline points="48,125 230,125 610,210 780,210" fill="none" stroke="#6d2694" stroke-width="2.4" stroke-dasharray="7 4"/>
+  <text x="792" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#6d2694">HGL</text>
 
-  <line x1="260" y1="330" x2="260" y2="270" stroke="#6d4c41" stroke-width="4"/>
-  <line x1="700" y1="330" x2="700" y2="235" stroke="#6d4c41" stroke-width="4"/>
-  <text x="270" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">z1</text>
-  <text x="710" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">z2</text>
+  <!-- === Velocity head arrows (EGL down to HGL) === -->
+  <!-- Section 1 (x=140): small v1 head -->
+  <line x1="140" y1="105" x2="140" y2="125" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u09ehs_u9eh-arrRev)" marker-end="url(#u09ehs_u9eh-arrR)"/>
+  <text x="146" y="117" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">v&#x2081;&#xB2;/(2g)</text>
+  <!-- Section 2 (x=690): large v2 head -->
+  <line x1="690" y1="105" x2="690" y2="210" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u09ehs_u9eh-arrRev)" marker-end="url(#u09ehs_u9eh-arrR)"/>
+  <text x="696" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">v&#x2082;&#xB2;/(2g)</text>
 
-  <line x1="110" y1="165" x2="875" y2="165" stroke="#8e24aa" stroke-width="5"/>
-  <text x="795" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">EGL</text>
+  <!-- === Duct walls (confuser) === -->
+  <!-- Srafura sloj: top wall -->
+  <polygon points="48,210 230,210 610,248 780,248 780,236 610,236 230,198 48,198" fill="url(#u09ehs_u9eh-sraf)"/>
+  <!-- Srafura sloj: bottom wall -->
+  <polygon points="48,330 230,330 610,292 780,292 780,304 610,304 230,342 48,342" fill="url(#u09ehs_u9eh-sraf)"/>
+  <!-- Outline: top wall -->
+  <polyline points="48,198 230,198 610,236 780,236" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
+  <polyline points="48,210 230,210 610,248 780,248" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
+  <!-- Outline: bottom wall -->
+  <polyline points="48,330 230,330 610,292 780,292" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
+  <polyline points="48,342 230,342 610,304 780,304" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
+  <!-- End caps -->
+  <line x1="48" y1="198" x2="48" y2="342" stroke="#2d3a40" stroke-width="2.2"/>
+  <line x1="780" y1="236" x2="780" y2="304" stroke="#2d3a40" stroke-width="2.2"/>
 
-  <line x1="110" y1="210" x2="875" y2="185" stroke="#2e7d32" stroke-width="5"/>
-  <text x="795" y="175" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#173043">HGL</text>
+  <!-- Air fill inside duct -->
+  <polygon points="48,210 230,210 610,248 780,248 780,292 610,292 230,330 48,330" fill="url(#u09ehs_u9eh-air)"/>
 
-  <line x1="260" y1="210" x2="260" y2="165" stroke="#1976d2" stroke-width="4" stroke-dasharray="8 6"/>
-  <line x1="700" y1="185" x2="700" y2="165" stroke="#1976d2" stroke-width="4" stroke-dasharray="8 6"/>
-  <text x="274" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">v1^2 / 2g</text>
-  <text x="714" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">v2^2 / 2g</text>
+  <!-- === Pressure head lines (duct centre → HGL) === -->
+  <!-- Centre of duct at section 1: y=(210+330)/2=270 -->
+  <!-- Centre of duct at section 2: y=(248+292)/2=270 (roughly same, horizontal duct) -->
+  <!-- p1/(ρg): from duct axis y=270 up to HGL y=125, at x=140 -->
+  <line x1="112" y1="270" x2="112" y2="125" stroke="#b45309" stroke-width="1.8" stroke-dasharray="4 3"/>
+  <text x="70" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">p&#x2081;/(&#x3C1;g)</text>
+  <!-- p2/(ρg): from duct axis y=270 up to HGL y=210, at x=690 -->
+  <line x1="720" y1="270" x2="720" y2="210" stroke="#b45309" stroke-width="1.8" stroke-dasharray="4 3"/>
+  <text x="726" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">p&#x2082;/(&#x3C1;g)</text>
 
-  <line x1="220" y1="270" x2="220" y2="210" stroke="#c96c35" stroke-width="4"/>
-  <line x1="660" y1="235" x2="660" y2="185" stroke="#c96c35" stroke-width="4"/>
-  <text x="176" y="243" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">p1 / rho g</text>
-  <text x="612" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#173043">p2 / rho g</text>
+  <!-- === Flow arrows in duct === -->
+  <!-- Section 1: slow wide flow -->
+  <line x1="60" y1="270" x2="170" y2="270" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u09ehs_u9eh-arrG)"/>
+  <text x="66" y="263" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">v&#x2081;</text>
+  <!-- Section 2: fast narrow flow -->
+  <line x1="610" y1="270" x2="770" y2="270" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u09ehs_u9eh-arrG)"/>
+  <text x="620" y="263" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">v&#x2082; &#x226B; v&#x2081;</text>
+
+  <!-- === Point labels === -->
+  <circle cx="230" cy="270" r="6" fill="#b42318"/>
+  <text x="238" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b42318">&#x2460;</text>
+  <circle cx="610" cy="270" r="6" fill="#b42318"/>
+  <text x="618" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b42318">&#x2461;</text>
+
+  <!-- === Dimension lines for duct heights === -->
+  <!-- A1 = 0,07 m² label below section 1 -->
+  <line x1="48" y1="356" x2="48" y2="376" stroke="#546e7a" stroke-width="1.5"/>
+  <line x1="230" y1="356" x2="230" y2="376" stroke="#546e7a" stroke-width="1.5"/>
+  <line x1="48" y1="366" x2="230" y2="366" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u09ehs_u9eh-arrRev)" marker-end="url(#u09ehs_u9eh-arrR)"/>
+  <text x="95" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">A&#x2081;&#x202F;=&#x202F;0,07&#x202F;m&#xB2;</text>
+  <!-- A2 = 0,0185 m² label below section 2 -->
+  <line x1="610" y1="316" x2="610" y2="376" stroke="#546e7a" stroke-width="1.5"/>
+  <line x1="780" y1="316" x2="780" y2="376" stroke="#546e7a" stroke-width="1.5"/>
+  <line x1="610" y1="366" x2="780" y2="366" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u09ehs_u9eh-arrRev)" marker-end="url(#u09ehs_u9eh-arrR)"/>
+  <text x="645" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">A&#x2082;&#x202F;=&#x202F;0,0185&#x202F;m&#xB2;</text>
+
+  <!-- === Formula box === -->
+  <rect x="810" y="95" width="110" height="100" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+  <text x="820" y="115" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#173043">Bernoulli</text>
+  <text x="820" y="133" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#173043">z&#x2081;=z&#x2082;, bez gubitaka</text>
+  <line x1="816" y1="140" x2="916" y2="140" stroke="#e8d89a" stroke-width="1"/>
+  <text x="820" y="157" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">&#x394;p = &#x3C1;(v&#x2082;&#xB2;&#x2212;v&#x2081;&#xB2;)/2</text>
+  <text x="820" y="177" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">&#x2248;&#x202F;523&#x202F;Pa</text>
+
+  <!-- Annotation: EGL constant, HGL drops = pressure drop -->
+  <text x="310" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6d2694">HGL pada &#x2194; staticki tlak pada</text>
+  <text x="310" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6d2694">(v raste &#x21D2; p/(&#x3C1;g) pada)</text>
 </svg>

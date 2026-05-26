@@ -1,84 +1,120 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-labelledby="u12v2ul_title u12v2ul_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u12v2ul_title">U12 Val 2 - ukljestena zakrivljena lopatica</title>
-  <desc id="u12v2ul_desc">Skica zakrivljene lopatice ukljestene u točki O s ulaznim mlazom, izlaznim mlazom pod kutom alfa, reakcijama Rx i Ry, momentom MO te geometrijskim oznakama h i l.</desc>
-  <rect width="980" height="420" fill="#fffdf8"/>
-  <rect x="32" y="32" width="916" height="356" rx="22" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="460" viewBox="0 0 940 460" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<defs>
+  <marker id="u12v2ul_u12v2-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
+  <marker id="u12v2ul_u12v2-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b42318"/></marker>
+  <marker id="u12v2ul_u12v2-ao" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b45309"/></marker>
+  <marker id="u12v2ul_u12v2-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#546e7a"/></marker>
+  <linearGradient id="u12v2ul_u12v2-wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
+  <pattern id="u12v2ul_u12v2-hatch" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+    <rect width="8" height="8" fill="#8090a0"/>
+    <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+  </pattern>
+</defs>
+<rect width="940" height="460" fill="#ffffff"/>
+<rect x="24" y="24" width="892" height="412" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+<text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Ukliještena zakrivljena lopatica — sile i moment u osloncu</text>
+<text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">Tlocrt · ulaz tangencijalno (+x), izlaz α = 60° iznad −x osi · oslonac O</text>
 
-  <text x="86" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#173043">Skica sustava</text>
+<!-- ===== PHYSICAL DIAGRAM (left, x=40-430) ===== -->
 
-  <rect x="772" y="106" width="18" height="238" fill="#cfd8dc" stroke="#173043" stroke-width="4"/>
-  <circle cx="738" cy="258" r="6" fill="#173043"/>
+<!-- Clamp wall (right side) -->
+<rect x="310" y="118" width="40" height="298" fill="url(#u12v2ul_u12v2-hatch)"/>
+<line x1="310" y1="118" x2="310" y2="416" stroke="#2d3a40" stroke-width="2"/>
 
-  <path d="M188 302 C302 302 398 292 492 248 C566 214 620 178 650 206 C675 228 695 242 724 252" fill="none" stroke="#173043" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M650 206 L572 80" fill="none" stroke="#173043" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M724 252 Q732 255 738 258" fill="none" stroke="#173043" stroke-width="24" stroke-linecap="round"/>
+<!-- Point O marker -->
+<circle cx="310" cy="192" r="5" fill="#173043"/>
+<text x="318" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">O</text>
 
-  <line x1="110" y1="302" x2="186" y2="302" stroke="#3a87ad" stroke-width="10" marker-end="url(#u12v2ul_arrowBlueLarge)"/>
-  <text x="122" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">Q, v</text>
-  <text x="118" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">d = ?</text>
+<!-- Inlet pipe walls -->
+<rect x="48" y="230" width="218" height="18" fill="url(#u12v2ul_u12v2-hatch)"/>
+<rect x="48" y="276" width="218" height="18" fill="url(#u12v2ul_u12v2-hatch)"/>
+<!-- Inlet water -->
+<rect x="48" y="248" width="218" height="28" fill="url(#u12v2ul_u12v2-wat)" opacity="0.85"/>
 
-  <line x1="612" y1="146" x2="590" y2="112" stroke="#3a87ad" stroke-width="6" marker-end="url(#u12v2ul_arrowBlueSmall)"/>
-  <text x="624" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">v_2</text>
+<!-- Curved blade body: turns flow from +x to direction (−0.5,−0.866) in SVG = upper-left -->
+<!-- Blade outer wall (convex, lower-right side): from inlet bottom (266,294) curving to exit outer -->
+<path d="M 266,294 C 330,294 355,240 290,172 L 278,160 C 330,230 312,294 266,276" fill="none"/>
+<!-- Blade shape: full compound closed path -->
+<!-- Outer (convex) wall: from inlet outer-bottom (266,276) via bend to exit outer -->
+<!-- Entry outer bottom: x=266, y=276; Entry outer top: x=266, y=248 -->
+<!-- Bend: turning from +x to direction 120° CCW -->
+<!-- Exit inner (concave): approx (228,165); Exit outer (convex): approx (252,180) -->
+<!-- Outer wall path: -->
+<path d="M 48,276 L 266,276 C 325,276 360,240 295,168 L 278,156 C 338,228 308,294 266,294 L 48,294 Z" fill="url(#u12v2ul_u12v2-hatch)"/>
+<!-- Inner wall path: -->
+<path d="M 48,248 L 266,248 C 312,248 342,218 282,158 L 270,148 L 278,156 C 308,220 283,266 266,266 L 48,266 Z" fill="url(#u12v2ul_u12v2-hatch)"/>
+<!-- Water inside blade channel: -->
+<path d="M 48,250 L 266,250 C 308,250 338,222 278,160 L 270,150 L 282,158 C 336,222 317,270 266,268 L 48,268 Z" fill="url(#u12v2ul_u12v2-wat)" opacity="0.82"/>
 
-  <line x1="188" y1="302" x2="738" y2="302" stroke="#6f7f89" stroke-width="2.5" stroke-dasharray="7 6"/>
-  <line x1="160" y1="258" x2="738" y2="258" stroke="#6f7f89" stroke-width="2.5" stroke-dasharray="7 6"/>
-  <line x1="572" y1="80" x2="676" y2="258" stroke="#6f7f89" stroke-width="2.5" stroke-dasharray="7 6"/>
+<!-- Exit pipe walls (direction: (−0.5,−0.866) in SVG = 120° from +x physics = upper-left) -->
+<!-- Exit inner: (270,148) going 65px in (−0.5,−0.866): (237.5, 91.6) -->
+<!-- Exit outer: (295,168) going 65px: (262.5, 111.6) -->
+<path d="M 270,148 L 238,92 L 263,83 L 295,139 Z" fill="url(#u12v2ul_u12v2-hatch)"/>
+<!-- Exit water -->
+<path d="M 274,152 L 242,96 L 258,88 L 290,144 Z" fill="url(#u12v2ul_u12v2-wat)" opacity="0.82"/>
 
-  <line x1="166" y1="258" x2="166" y2="302" stroke="#c96c35" stroke-width="3" marker-start="url(#u12v2ul_arrowOrangeSmall)" marker-end="url(#u12v2ul_arrowOrange)"/>
-  <text x="132" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">h</text>
+<!-- v1 velocity arrow (green, rightward) -->
+<line x1="75" y1="262" x2="200" y2="262" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u12v2ul_u12v2-ag)"/>
+<text x="82" y="245" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">v₁ = 12,5 m/s</text>
 
-  <line x1="676" y1="244" x2="738" y2="244" stroke="#c96c35" stroke-width="3" marker-start="url(#u12v2ul_arrowOrangeSmall)" marker-end="url(#u12v2ul_arrowOrange)"/>
-  <text x="704" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">l</text>
+<!-- v2 velocity arrow (green, upper-left from exit pipe) -->
+<!-- From (265,115) in direction (−0.5,−0.866) for 55px: (237.5,67.4) -->
+<line x1="265" y1="115" x2="238" y2="67" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u12v2ul_u12v2-ag)"/>
+<text x="198" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">v₂ = 12,5 m/s</text>
 
-  <path d="M704 258 A28 28 0 0 0 691 233" fill="none" stroke="#c96c35" stroke-width="3"/>
-  <text x="688" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">a</text>
+<!-- Section labels ① and ② -->
+<line x1="200" y1="225" x2="200" y2="302" stroke="#555" stroke-width="1.4" stroke-dasharray="5,4"/>
+<text x="190" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">①</text>
+<line x1="252" y1="130" x2="290" y2="108" stroke="#555" stroke-width="1.4" stroke-dasharray="5,4"/>
+<text x="292" y="107" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">②</text>
 
-  <line x1="738" y1="296" x2="664" y2="296" stroke="#2e7d32" stroke-width="5" marker-end="url(#u12v2ul_arrowGreen)"/>
-  <text x="676" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">R_x</text>
+<!-- h dimension: from O (310,192) down to inlet axis (310,262) -->
+<line x1="295" y1="192" x2="295" y2="262" stroke="#b45309" stroke-width="1.5" stroke-dasharray="4,3"/>
+<line x1="289" y1="192" x2="301" y2="192" stroke="#b45309" stroke-width="1.5"/>
+<line x1="289" y1="262" x2="301" y2="262" stroke="#b45309" stroke-width="1.5"/>
+<text x="256" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b45309" font-weight="700">h = 0,45 m</text>
 
-  <line x1="738" y1="258" x2="738" y2="180" stroke="#2e7d32" stroke-width="5" marker-end="url(#u12v2ul_arrowGreen)"/>
-  <text x="748" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">R_y</text>
+<!-- l dimension: perp from O to exit velocity line -->
+<!-- Foot of perp from O(310,192) to exit line through (282,152) dir (−0.5,−0.866): foot ≈ (267,220) -->
+<line x1="310" y1="192" x2="267" y2="220" stroke="#b45309" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="268" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b45309" font-weight="700">l = 0,70 m</text>
 
-  <path d="M706 288 A42 42 0 1 1 742 220" fill="none" stroke="#c23b22" stroke-width="4" marker-end="url(#u12v2ul_arrowRed)"/>
-  <text x="690" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">M_O</text>
+<!-- Reaction forces at O (clamp on blade) -->
+<!-- Rx = −281 N (leftward): from O going left -->
+<line x1="310" y1="192" x2="252" y2="192" stroke="#b42318" stroke-width="2.5" marker-end="url(#u12v2ul_u12v2-ar)"/>
+<text x="244" y="187" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#b42318">Rₓ = 281 N</text>
+<!-- Ry = +162 N (upward in physics = upward on screen = −y in SVG): from O going up -->
+<line x1="310" y1="192" x2="310" y2="140" stroke="#b42318" stroke-width="2.5" marker-end="url(#u12v2ul_u12v2-ar)"/>
+<text x="316" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#b42318">Rᵧ = 162 N</text>
+<!-- Mo clockwise moment arc at O: Mo = 197.6 Nm (CW in physics) -->
+<path d="M 340,170 A 30,30 0 0,1 340,214" fill="none" stroke="#6d2694" stroke-width="2.2" marker-end="url(#u12v2ul_u12v2-agr)"/>
+<text x="345" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#6d2694">M₀ = 198 Nm</text>
 
-  <text x="748" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043">O</text>
-  <text x="787" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">zidni nosac</text>
-  <text x="204" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">p_a</text>
-  <text x="622" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">p_a</text>
+<!-- Coordinate axes -->
+<line x1="56" y1="415" x2="98" y2="415" stroke="#546e7a" stroke-width="1.8" marker-end="url(#u12v2ul_u12v2-agr)"/>
+<text x="102" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a" font-style="italic">x</text>
+<line x1="56" y1="415" x2="56" y2="373" stroke="#546e7a" stroke-width="1.8" marker-end="url(#u12v2ul_u12v2-agr)"/>
+<text x="60" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a" font-style="italic">y</text>
+<text x="56" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#546e7a" font-style="italic">tlocrt</text>
 
-  <line x1="852" y1="292" x2="902" y2="292" stroke="#173043" stroke-width="3" marker-end="url(#u12v2ul_arrowGray)"/>
-  <line x1="852" y1="292" x2="852" y2="242" stroke="#173043" stroke-width="3" marker-end="url(#u12v2ul_arrowGray)"/>
-  <text x="908" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">x</text>
-  <text x="844" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="17" fill="#173043">y</text>
-
-  <rect x="812" y="142" width="108" height="96" rx="14" fill="#f7fafb" stroke="#d3d9de" stroke-width="2"/>
-  <text x="828" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#173043">Redoslijed</text>
-  <text x="828" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#587183">1. Q i v -> d</text>
-  <text x="828" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#587183">2. R_x, R_y</text>
-  <text x="828" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#587183">3. moment M_O</text>
-
-  <defs>
-    <marker id="u12v2ul_arrowBlueLarge" markerWidth="12" markerHeight="12" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#3a87ad"/>
-    </marker>
-    <marker id="u12v2ul_arrowBlueSmall" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#3a87ad"/>
-    </marker>
-    <marker id="u12v2ul_arrowGreen" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#2e7d32"/>
-    </marker>
-    <marker id="u12v2ul_arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c23b22"/>
-    </marker>
-    <marker id="u12v2ul_arrowOrange" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
-    </marker>
-    <marker id="u12v2ul_arrowOrangeSmall" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
-    </marker>
-    <marker id="u12v2ul_arrowGray" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#173043"/>
-    </marker>
-  </defs>
+<!-- ===== INFO PANEL (right) ===== -->
+<rect x="455" y="92" width="460" height="338" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
+<text x="471" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Zadano</text>
+<text x="471" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Protok:  Q = 15 L/s,  d = 39,1 mm,  v = 12,5 m/s</text>
+<text x="471" y="157" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Oslonac O:  h = 0,45 m (ispod ulaza),  l = 0,70 m</text>
+<text x="471" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Kut izlaza:  α = 60° iznad osi −x</text>
+<line x1="471" y1="188" x2="903" y2="188" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Maseni protok  i  komponente v₂</text>
+<text x="471" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">ṁ = ρ Q = 1000 · 0,015 = <tspan font-weight="700" fill="#0f766e">15,0 kg/s</tspan></text>
+<text x="471" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">v₂ₓ = 12,5 · cos 120° = −6,25 m/s</text>
+<text x="471" y="265" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">v₂ᵧ = 12,5 · sin 120° = +10,83 m/s</text>
+<line x1="471" y1="276" x2="903" y2="276" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Reakcija oslonca (ravnotežna jednadžba)</text>
+<text x="471" y="315" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Rₓ = −ṁ(v₂ₓ−v₁) = −15·(−6,25−12,5) = <tspan font-weight="700" fill="#b42318">−281 N</tspan></text>
+<text x="471" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Rᵧ = −ṁ·v₂ᵧ = −15·10,83 = <tspan font-weight="700" fill="#b42318">+162 N</tspan></text>
+<line x1="471" y1="344" x2="903" y2="344" stroke="#e2e8f0" stroke-width="1"/>
+<text x="471" y="363" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Moment savijanja u osloncu O</text>
+<text x="471" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">M₀ = −ṁ·v₁·h + ṁ·v₂ᵧ·l</text>
+<text x="471" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">M₀ = −15·12,5·0,45 + 15·10,83·0,70</text>
+<text x="471" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#6d2694">M₀ = −197,6 Nm  (smjer kazaljke sata)</text>
 </svg>

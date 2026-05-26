@@ -53,6 +53,9 @@
   <!-- ══════════ GLOBALNA POZADINA ══════════ -->
   <rect width="980" height="560" fill="#eef1f5"/>
 
+  <!-- ══════════ HEADER BAR ══════════ -->
+  <rect x="0" y="0" width="980" height="54" fill="url(#u02fup_u2vthdr)"/>
+
   <!-- ══════════ LIJEVI PANEL – VISKOZNOST  x=14 w=460 ══════════ -->
   <rect x="14" y="60" width="460" height="492" rx="10" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.8"/>
   <text x="244" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1565c0" text-anchor="middle" letter-spacing="1">VISKOZNOST</text>

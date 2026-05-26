@@ -37,6 +37,9 @@
   <rect width="940" height="700" fill="#ffffff"/>
   <rect x="16" y="16" width="908" height="668" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
+  <!-- Page title -->
+  <line x1="36" y1="58" x2="904" y2="58" stroke="#d3d9de" stroke-width="1.2"/>
+
   <!-- ═══════════════════ T1 panel (col1, row1) ═══════════════════ -->
   <rect x="36" y="66" width="424" height="186" rx="10" fill="#f8fcff" stroke="#b0c8d8" stroke-width="1.5"/>
   <text x="52" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">T1</text>
@@ -347,12 +350,6 @@
 
   <!-- T6: water fill (inside corner, concave side) -->
   <path d="M504,496 L720,496 A60,60 0 0 0 660,596 L504,596 Z" fill="url(#u06vs_u6vsWg)" opacity="0.8"/>
-
-  <!-- T6: V* fill (quarter-circle imaginary volume) -->
-  <path d="M720,532 A60,60 0 0 0 660,596... wait this is wrong. A is at (720,532), not (720,496) -->
-  <!-- Recalculate: free surface y=496. h1_px=36. A is at depth h1_px below free surface on the right wall = (720, 496+36)=(720,532). B at (720-60,596)=(660,596). Center=(720,596). -->
-  <!-- Water fill from free surface down to B level:
-    M504,496 L720,496 L720,532 A60,60 0 0 0 660,596 L504,596 Z  (includes h1 zone above arc) -->
 
   <!-- Override water fill with correct geometry -->
   <path d="M504,496 L720,496 L720,532 A60,60 0 0 0 660,596 L504,596 Z" fill="url(#u06vs_u6vsWg)" opacity="0.8"/>

@@ -45,6 +45,8 @@
   <rect width="980" height="460" fill="#f8f9fa"/>
   <rect x="14" y="14" width="952" height="432" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.8"/>
 
+  <!-- ── NASLOV ── -->
+
   <!-- ════════════════════════════════════════════
        MALI CILINDAR (pumpa) – A1=6 cm² (uski, ~60px)
        Unutrašnjost: 95–155, visina: 110–370
@@ -61,10 +63,10 @@
   <!-- Klipnjača: y 108..222 -->
   <rect x="118" y="108" width="14" height="116" fill="#9aaab4" stroke="#5b6770" stroke-width="1.5"/>
 
-  <!-- Sila F1 prema dolje (ulazna - crvena per protokol) -->
-  <line x1="125" y1="42" x2="125" y2="105" stroke="#c0392b" stroke-width="4" marker-end="url(#u01v2hd_v2aR)"/>
-  <text x="138" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" font-style="italic" fill="#c0392b">F₁</text>
-  <text x="138" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b">= 150 N</text>
+  <!-- Sila F1 prema dolje -->
+  <line x1="125" y1="42" x2="125" y2="105" stroke="#1565c0" stroke-width="4" marker-end="url(#u01v2hd_v2aBl)"/>
+  <text x="138" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" font-style="italic" fill="#1565c0">F₁</text>
+  <text x="138" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">= 150 N</text>
 
   <!-- Tlačne strelice gore -->
   <line x1="107" y1="290" x2="107" y2="258" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_v2aBl)"/>
@@ -167,7 +169,7 @@
   <text x="732" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">rad se ne stvara niotkuda</text>
   <line x1="728" y1="303" x2="938" y2="303" stroke="#dde8f0" stroke-width="1"/>
   <text x="832" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#4a5a6a">F₁ · s₁ = F₂ · s₂</text>
-  <text x="832" y="341" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#4a5a6a">150·0,18 ≈ 5250·0,0051 ✓</text>
+  <text x="832" y="341" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#4a5a6a">150·0,18 = 5250·0,0051 ✓</text>
 
   <!-- Rezultat badge -->
   <rect x="720" y="376" width="228" height="56" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.5"/>
@@ -175,12 +177,10 @@
   <text x="734" y="415" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">F₂ = 5,25 kN  |  s₂ ≈ 5 mm</text>
 
   <!-- ── LEGENDA ── -->
-  <rect x="48" y="422" width="12" height="12" fill="#c0392b" rx="2"/>
-  <text x="65" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">ulazna sila F₁</text>
-  <rect x="175" y="422" width="12" height="12" fill="#1565c0" rx="2"/>
-  <text x="192" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">tlak p u fluidu</text>
-  <rect x="295" y="422" width="12" height="12" fill="#1e8449" rx="2"/>
-  <text x="312" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">izlazna sila F₂</text>
-  <rect x="430" y="422" width="12" height="12" fill="#b7600c" rx="2"/>
-  <text x="447" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">hodovi s₁, s₂ (volumna bilanca)</text>
+  <rect x="48" y="422" width="12" height="12" fill="#1565c0" rx="2"/>
+  <text x="65" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">ulazna sila F₁, tlak p</text>
+  <rect x="215" y="422" width="12" height="12" fill="#1e8449" rx="2"/>
+  <text x="232" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">izlazna sila F₂</text>
+  <rect x="350" y="422" width="12" height="12" fill="#b7600c" rx="2"/>
+  <text x="367" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">hodovi s₁, s₂ (volumna bilanca)</text>
 </svg>
