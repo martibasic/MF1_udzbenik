@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 580" role="img" aria-labelledby="u07c2pt_title u07c2pt_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u07c2pt_title">Asimetricno poplavljen balastni tank: poprecni presjek trupa</title>
+  <desc id="u07c2pt_desc">Poprecni presjek pravokutnog trupa broda sirine B=15 m i visine H=8 m. Lijevi balastni tank dimenzija B_t=6 m i H_t=3 m napunjen je morskom vodom; tezisteg poplavljene vode e_t=4,5 m lijevo od osi simetrije pomice ukupno teziste sustava za e_G=0,291 m. Prikazani su kljucni vertikalni nivoi (kobilica K, centar uzgona B-prim, novi centar tezista G-prim, metacentar M), novi gaz T_1, te smjer nagiba theta=3,94 stupnja prema lijevo. Desni panel donosi sazete jednadzbe i konacne rezultate stabilnosti.</desc>
+
+  <defs>
+    <linearGradient id="u07c2pt_sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <linearGradient id="u07c2pt_tank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9ec8e0" />
+      <stop offset="100%" stop-color="#4d8bb6" />
+    </linearGradient>
+    <linearGradient id="u07c2pt_hull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#909fa8" />
+      <stop offset="100%" stop-color="#5d6d7e" />
+    </linearGradient>
+    <pattern id="u07c2pt_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.0" />
+    </pattern>
+    <marker id="u07c2pt_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u07c2pt_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u07c2pt_aP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+    </marker>
+    <marker id="u07c2pt_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u07c2pt_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+  </defs>
+
+  <!-- Pozadina + okviri panela -->
+  <rect x="0" y="0" width="980" height="580" fill="#ffffff" />
+  <rect x="14" y="14" width="586" height="552" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="612" y="14" width="354" height="552" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+
+  <!-- Naslovi panela -->
+  <!-- ============================================================
+       LIJEVI PANEL: poprecni presjek
+       Skala: 1 m = 28 px (sirina hull 15 m -> 420 px)
+       Hull interior: x=98..518 (sirina 420 px = 15 m)
+       Hull exterior (debljina stjenke 12 px): x=86..530
+       Keel y=470, deck y=246 (visina 224 px = 8 m)
+       Tank: x=98..266 (sirina 168 px = 6 m), y=386..470 (visina 84 px = 3 m)
+       Vodna linija T_1 = 3,478 m -> 97 px iznad kobilice -> y=373
+  ============================================================ -->
+
+  <!-- More izvan trupa (lijevo i desno) ispod vodne linije, do dna panela -->
+  <rect x="20" y="373" width="66" height="186" fill="url(#u07c2pt_sea)" />
+  <rect x="530" y="373" width="64" height="186" fill="url(#u07c2pt_sea)" />
+
+  <!-- Morska razina (vanjska) - linije s obje strane -->
+  <line x1="20" y1="373" x2="86" y2="373" stroke="#1565c0" stroke-width="2" />
+  <line x1="530" y1="373" x2="594" y2="373" stroke="#1565c0" stroke-width="2" />
+  <!-- Mirna razina (referenca) - isprekidano kroz trup za vizualnu kontinuiranost -->
+  <line x1="20" y1="373" x2="594" y2="373" stroke="#5b9ec9" stroke-width="0.8" stroke-dasharray="6,5" opacity="0.45" />
+
+  <!-- Voda u tanku (puni 0..H_t = 3 m, do y=386) -->
+  <rect x="98" y="386" width="168" height="84" fill="url(#u07c2pt_tank)" />
+  <!-- Tank free surface line -->
+  <line x1="98" y1="386" x2="266" y2="386" stroke="#0d47a1" stroke-width="1.6" />
+
+  <!-- TRUP - stjenke (zatvoreni, plus unutarnja pregrada tanka) -->
+  <!-- Lijeva vanjska stjenka -->
+  <rect x="86" y="234" width="12" height="248" fill="url(#u07c2pt_hull)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Desna vanjska stjenka -->
+  <rect x="518" y="234" width="12" height="248" fill="url(#u07c2pt_hull)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Dno trupa (kobilica) -->
+  <rect x="86" y="470" width="444" height="12" fill="url(#u07c2pt_hull)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Paluba (gornja stijenka, otvoreni nadboj prikazujemo tankom linijom) -->
+  <rect x="86" y="234" width="444" height="12" fill="url(#u07c2pt_hull)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Unutarnja pregrada tanka (vertikalna) -->
+  <rect x="262" y="246" width="6" height="224" fill="#7a8a96" stroke="#3a4a56" stroke-width="1.0" />
+  <!-- Gornja stijenka tanka (samo iznad tanka, od pregrade do lijeve stjenke) -->
+  <rect x="98" y="380" width="164" height="6" fill="#7a8a96" stroke="#3a4a56" stroke-width="1.0" />
+
+  <!-- Ostecenje (prozor) u lijevoj vanjskoj stjenci na visini tanka -->
+  <!-- Spoj tank-more: fluid overlay preko vanjske stjenke -->
+  <rect x="80" y="408" width="18" height="20" fill="url(#u07c2pt_sea)" />
+  <!-- Iznad i ispod prozora ostavljamo stjenku vidljivu; oznacavamo rub ostecenja -->
+  <line x1="86" y1="408" x2="98" y2="408" stroke="#c0392b" stroke-width="1.4" />
+  <line x1="86" y1="428" x2="98" y2="428" stroke="#c0392b" stroke-width="1.4" />
+  <!-- Oznaka "ostecenje" -->
+  <line x1="80" y1="406" x2="92" y2="414" stroke="#c0392b" stroke-width="0.8" />
+
+  <!-- Os simetrije (vertikalna isprekidana) - samo unutar trupa, label u sredini blizu palube -->
+  <line x1="308" y1="246" x2="308" y2="470" stroke="#5a6a78" stroke-width="0.9" stroke-dasharray="6,5" />
+  <line x1="345" y1="254" x2="312" y2="252" stroke="#5a6a78" stroke-width="0.6" />
+
+  <!-- ============================================================
+       KLJUCNE TOCKE: K, B', G_b, G', M (s desne strane od osi)
+       Pozicije po visini:
+         K (kobilica) = y 470  (sredisnja x = 308)
+         B' (centar uzgona) = T_1/2 = 1,74 m -> y 470-49 = 421
+         G' (novi teziste) = KG' = 2,90 m -> y 470-81 = 389  i pomak e_G=0,291 m -> x 308-8 = 300
+         G_b (originalni teziste) = KG_b = 3,0 m -> y 470-84 = 386 (lagano iznad G')  x=308
+         M (metacentar) = KM = 7,13 m -> y 470-200 = 270 (unutar trupa, ispod palube)
+    ============================================================ -->
+  <!-- K (kobilica) -->
+  <circle cx="308" cy="470" r="3.4" fill="#1a2530" />
+  <!-- B' (centar uzgona) -->
+  <circle cx="308" cy="421" r="3.4" fill="#1e8449" />
+  <!-- G_b (originalni teziste, na osi) - mali sivi marker (bez velikog labela; oznaka u legendi) -->
+  <circle cx="308" cy="386" r="2.6" fill="#7a8a96" stroke="#3a4a56" stroke-width="0.6" />
+  <!-- G' (novi teziste, pomaknuto ulijevo za e_G) -->
+  <circle cx="300" cy="389" r="3.8" fill="#c0392b" />
+  <!-- M (metacentar) -->
+  <circle cx="308" cy="270" r="3.8" fill="#8e44ad" />
+  <!-- Vektor tezine G (kroz G', prema dolje, crveni) -->
+  <line x1="300" y1="394" x2="300" y2="446" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u07c2pt_aR)" />
+  <!-- Vektor uzgona F_U (kroz B', prema gore, zeleni) - dovoljno desno od osi da ne kolidira s G_b -->
+  <line x1="336" y1="420" x2="336" y2="360" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u07c2pt_aG)" />
+  <!-- Teziste poplavljene vode (centar tanka) - oznaka G_w -->
+  <circle cx="182" cy="428" r="3.2" fill="#0d47a1" />
+  <!-- Strelica koja pokazuje pomak G_b -> G' (e_G) - mala horizontalna -->
+  <line x1="306" y1="386" x2="302" y2="388" stroke="#c0392b" stroke-width="1.4" marker-end="url(#u07c2pt_aR)" />
+  <!-- ============================================================
+       KOTE
+  ============================================================ -->
+
+  <!-- Kota sirina trupa B = 15 m (ispod hull, gornja razina) -->
+  <!-- Kota sirina tanka B_t = 6 m (iznad palube, lijevo) -->
+  <!-- Kota visina trupa H = 8 m (desno od trupa) -->
+  <!-- Kota visina tanka H_t = 3 m (lijevo, izmedju kobilice i vrha tanka) -->
+  <!-- Kota gaz T_1 (desno od vanjske stjenke, izmedju vodne linije i kobilice) -->
+  <!-- Kota e_t = 4,5 m (horizontalna, IZNAD tanka i palube, od osi do centra tanka) -->
+  <!-- ============================================================
+       INDIKATOR NAGIBA (theta) - nagnuta vodena linija PREKO trupa
+       i kutni marker theta uz desni rub trupa, iznad horizontalne
+       vodne linije.
+       Nagnuta linija prolazi kroz tocku centra T_1 razine (308,373)
+       s nagibom theta=3,94 stupnja ulijevo (lijeva strana spustena).
+       tan(theta) = 0,069 -> nad sirinom 444 px to je ~30 px ukupno
+       (15 px gore desno, 15 px dolje lijevo). Linija od (86,388) do (530,358).
+    ============================================================ -->
+  <line x1="86" y1="388" x2="530" y2="358" stroke="#8e44ad" stroke-width="1.4" stroke-dasharray="5,4" />
+  <!-- Kutni marker theta izmedju vodne linije (horizontalne) i nagnute -->
+  <line x1="500" y1="373" x2="535" y2="373" stroke="#5a6a78" stroke-width="0.6" stroke-dasharray="3,3" />
+  <path d="M535,373 A30,30 0 0,0 533,365" fill="none" stroke="#8e44ad" stroke-width="1.2" />
+  <!-- Strelica koja pokazuje smjer nagiba (mala krivulja nad palubom) -->
+  <path d="M450,228 Q420,212 390,228" fill="none" stroke="#c0392b" stroke-width="1.4" marker-end="url(#u07c2pt_aR)" />
+  <!-- More oznaka (premjesteno nize, pod morsku razinu, da ne kolidira s ostecenjem) -->
+  <!-- Tank label -->
+  <!-- Legenda tocke (mini) - ispod B=15m kote, lijevo poravnata -->
+  <g transform="translate(30,552)">
+    <circle cx="0" cy="0" r="3" fill="#1a2530" />
+    <circle cx="88" cy="0" r="3" fill="#1e8449" />
+    <circle cx="220" cy="0" r="3" fill="#c0392b" />
+    <circle cx="356" cy="0" r="3" fill="#8e44ad" />
+    <circle cx="464" cy="0" r="3" fill="#0d47a1" />
+    <text x="8" y="3" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56">K kobilica</text>
+    <text x="96" y="3" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56">B′ centar uzgona</text>
+    <text x="228" y="3" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56">G′ težište (novo)</text>
+    <text x="364" y="3" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56">M metacentar</text>
+    <text x="472" y="3" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56">G<tspan baseline-shift="sub" font-size="0.7em">w</tspan> težište vode</text>
+  </g>
+
+  <!-- ============================================================
+       DESNI PANEL: FORMULE I REZULTATI
+       Header bar plavi, blokovi vertikalno slozeni s tankim separatorima
+       Panel: x=624..954
+       Sirina = 330 px, centar = 789
+  ============================================================ -->
+  <!-- Header bar -->
+  <rect x="624" y="60" width="330" height="32" rx="8" fill="#1565c0" />
+  <rect x="624" y="84" width="330" height="8" fill="#1565c0" />
+  <!-- Glavni panel rect (okvir) -->
+  <rect x="624" y="60" width="330" height="430" rx="8" fill="none" stroke="#1565c0" stroke-width="1.4" />
+
+  <!-- Blok 1: Masa poplavljene vode (y 92..152) -->
+  <line x1="644" y1="162" x2="934" y2="162" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 2: Bocni pomak tezista e_G (y 162..222) -->
+  <line x1="644" y1="230" x2="934" y2="230" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 3: Novi gaz T_1 (y 230..290) -->
+  <line x1="644" y1="298" x2="934" y2="298" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 4: Metacentarska visina (y 298..374) -->
+  <line x1="644" y1="382" x2="934" y2="382" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 5: Ravnotezni kut nagiba (y 382..438) -->
+  <line x1="644" y1="450" x2="934" y2="450" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Sazetak italic (y 450..488) -->
+  <!-- REZULTATI badge -->
+  <rect x="624" y="502" width="330" height="62" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="86" y1="490" x2="86" y2="510" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="530" y1="490" x2="530" y2="510" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="86" y1="513" x2="86" y2="498" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="530" y1="513" x2="530" y2="498" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="89" y1="506" x2="527" y2="506" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c2pt_dimL)" marker-end="url(#u07c2pt_dim)" />
+  <line x1="98" y1="234" x2="98" y2="214" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="262" y1="234" x2="262" y2="214" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="98" y1="211" x2="98" y2="226" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="262" y1="211" x2="262" y2="226" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="101" y1="218" x2="259" y2="218" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c2pt_dimL)" marker-end="url(#u07c2pt_dim)" />
+  <line x1="530" y1="246" x2="558" y2="246" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="530" y1="470" x2="558" y2="470" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="555" y1="246" x2="555" y2="470" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c2pt_dimL)" marker-end="url(#u07c2pt_dim)" />
+  <line x1="98" y1="380" x2="56" y2="380" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="86" y1="470" x2="56" y2="470" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="59" y1="380" x2="59" y2="470" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c2pt_dimL)" marker-end="url(#u07c2pt_dim)" />
+  <line x1="594" y1="373" x2="594" y2="373" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="530" y1="373" x2="582" y2="373" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="530" y1="482" x2="582" y2="482" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="579" y1="373" x2="579" y2="482" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c2pt_dimL)" marker-end="url(#u07c2pt_dim)" />
+  <line x1="308" y1="246" x2="308" y2="186" stroke="#b7600c" stroke-width="0.6" opacity="0.7" />
+  <line x1="182" y1="380" x2="182" y2="186" stroke="#b7600c" stroke-width="0.6" opacity="0.7" />
+  <line x1="182" y1="183" x2="182" y2="198" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="308" y1="183" x2="308" y2="198" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="185" y1="190" x2="305" y2="190" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c2pt_dimL)" marker-end="url(#u07c2pt_dim)" />
+  <text x="32" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Poprečni presjek trupa (pogled s pramca)</text>
+  <text x="628" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Ključne jednadžbe i rezultati</text>
+
+  <text x="78" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="end" fill="#c0392b">oštećenje</text>
+  <text x="350" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#5a6a78">os simetrije</text>
+  <text x="316" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1a2530">K</text>
+
+  <text x="316" y="425" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">B′</text>
+
+  <text x="316" y="383" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">G<tspan baseline-shift="sub" font-size="0.7em">b</tspan></text>
+
+  <text x="280" y="385" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#c0392b">G′</text>
+
+  <text x="316" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#8e44ad">M</text>
+
+  <text x="288" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-weight="700">G</tspan></text>
+
+  <text x="342" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">U</tspan></text>
+
+  <text x="182" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#0d47a1">G<tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
+
+  <text x="298" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-style="italic">e</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan></text>
+
+  <text x="540" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad">θ ≈ 3,94°</text>
+  <text x="420" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#c0392b">nagib prema lijevo</text>
+
+  <text x="36" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#0d47a1">more</text>
+  <text x="544" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1a2530">ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 1025 kg/m³</text>
+
+  <text x="180" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#0d47a1">poplavljen tank</text>
+  <text x="180" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#0d47a1">V<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 270 m³</text>
+
+  <text x="789" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Stabilnost broda nakon poplave</text>
+
+  <text x="789" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Masa poplavljene vode</text>
+  <text x="789" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> = ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan> · L<tspan baseline-shift="sub" font-size="0.7em">t</tspan>B<tspan baseline-shift="sub" font-size="0.7em">t</tspan>H<tspan baseline-shift="sub" font-size="0.7em">t</tspan></text>
+  <text x="789" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 277 t</text>
+  <text x="789" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Bočni pomak težišta sustava</text>
+  <text x="789" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">e</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan> = m<tspan baseline-shift="sub" font-size="0.7em">w</tspan>·e<tspan baseline-shift="sub" font-size="0.7em">t</tspan> / (m<tspan baseline-shift="sub" font-size="0.7em">b</tspan> + m<tspan baseline-shift="sub" font-size="0.7em">w</tspan>)</text>
+  <text x="789" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 0,291 m</text>
+  <text x="789" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Novi srednji gaz</text>
+  <text x="789" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">T</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = (m<tspan baseline-shift="sub" font-size="0.7em">b</tspan> + m<tspan baseline-shift="sub" font-size="0.7em">w</tspan>) / (ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan> L B)</text>
+  <text x="789" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 3,48 m   (ΔT ≈ 0,23 m)</text>
+  <text x="789" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Metacentarska visina</text>
+  <text x="789" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">BM = I<tspan baseline-shift="sub" font-size="0.7em">T</tspan>/V = (L B³/12)/V ≈ 5,39 m</text>
+  <text x="789" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">BG = KG′ − KB ≈ 2,90 − 1,74 = 1,16 m</text>
+  <text x="789" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">GM = BM − BG ≈ 4,23 m   &gt; 0 ✓</text>
+  <text x="789" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Ravnotežni kut nagiba</text>
+  <text x="789" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">tan θ = e<tspan baseline-shift="sub" font-size="0.7em">G</tspan>/GM = 0,291/4,23</text>
+  <text x="789" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#8e44ad">θ ≈ 3,94°</text>
+  <text x="789" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Široki trup (BM ∝ B³) → veliki GM,</text>
+  <text x="789" y="482" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">brod ostaje stabilan i unutar SOLAS granice (&lt; 15°).</text>
+
+  <text x="789" y="520" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="688" y="540" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">e</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan> ≈ 0,29 m</text>
+  <text x="789" y="540" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0">ΔT ≈ 0,23 m</text>
+  <text x="890" y="540" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449">GM ≈ 4,23 m</text>
+  <text x="789" y="558" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#8e44ad">θ ≈ 3,94°   (granica θ<tspan baseline-shift="sub" font-size="0.7em">lim</tspan> ≈ 37,1°)</text>
+<text x="308" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">B</tspan> = 15 m</text>
+
+  <text x="180" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">B</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 6 m</text>
+
+  <text x="568" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">H</tspan> = 8 m</text>
+
+  <text x="48" y="428" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#b7600c"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 3 m</text>
+
+  <text x="588" y="424" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c"><tspan font-style="italic">T</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="605.6" y="424.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c">≈ 3,48 m</text>
+
+  <text x="245" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">e</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 4,5 m</text>
+
+  </svg>

@@ -1,101 +1,226 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" role="img" aria-labelledby="u07v1pk_u7v1T" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u07v1pk_u7v1T">U07 Val 1 – Plutajuća platforma s pomaknutim kompresorom</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="u07v1pk_title u07v1pk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u07v1pk_title">Plutajuca servisna platforma s pomaknutim kompresorom</title>
+  <desc id="u07v1pk_desc">Lijevo: poprecni presjek pravokutne platforme sirine B = 1,00 m s kompresorom mase m_k = 190 kg pomaknutim za e od uzdulne osi simetrije; lijevi rub uronjen h_L = 0,34 m, desni rub h_D = 0,22 m; tezine G_p i G_k crveno prema dolje, uzgon F_U zeleno prema gore u centru uzgona pomaknutom za y_B. Desno: stupac od cetiri formule (srednji gaz i volumen, pomak centra uzgona, ekscentar e, povecanje srednje uronjenosti) i rezultati.</desc>
+
   <defs>
-    <linearGradient id="u07v1pk_u7v1Wg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <linearGradient id="u07v1pk_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
     </linearGradient>
-    <marker id="u07v1pk_u7v1AG" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/>
+    <linearGradient id="u07v1pk_plat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#909fa8" />
+      <stop offset="1" stop-color="#5d6d7e" />
+    </linearGradient>
+    <pattern id="u07v1pk_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#e4e8eb" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+
+    <marker id="u07v1pk_fr" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u07v1pk_u7v1AR" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#b42318"/>
+    <marker id="u07v1pk_fg" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u07v1pk_u7v1AD" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
+    <marker id="u07v1pk_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u07v1pk_u7v1ADR" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
+    <marker id="u07v1pk_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u07v1pk_u7v1AB" markerWidth="9" markerHeight="9" refX="4" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#1565c0"/>
+    <marker id="u07v1pk_eb" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u07v1pk_u7v1ABR" markerWidth="9" markerHeight="9" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L8,3 z" fill="#1565c0"/>
+    <marker id="u07v1pk_ebL" markerWidth="6" markerHeight="4" refX="0.5" refY="2" orient="auto-start-reverse">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <marker id="u07v1pk_purp" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#8e44ad" />
+    </marker>
+    <marker id="u07v1pk_purpL" markerWidth="6" markerHeight="4" refX="0.5" refY="2" orient="auto-start-reverse">
+      <path d="M0,0 L0,4 L6,2 z" fill="#8e44ad" />
     </marker>
   </defs>
-  <rect width="940" height="400" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <!-- ── CROSS-SECTION ── -->
-  <!-- Water background below waterline y=200 -->
-  <rect x="40" y="200" width="490" height="165" fill="url(#u07v1pk_u7v1Wg)" opacity="0.55"/>
-  <!-- Waterline -->
-  <line x1="40" y1="200" x2="530" y2="200" stroke="#1565c0" stroke-width="2"/>
-  <text x="44" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">p.p.</text>
+  <!-- pozadina i paneli -->
+  <rect x="0" y="0" width="960" height="520" fill="#ffffff" />
+  <rect x="16" y="16" width="528" height="488" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="560" y="16" width="384" height="488" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-  <!-- Platform (tilted): B=200px (1.00m×200px/m), centered at x=260
-       h_L=68px, h_D=44px, thickness=18px
-       Left bottom:  x=160, y=200+68=268
-       Right bottom: x=360, y=200+44=244
-       Left top:     x=160, y=250
-       Right top:    x=360, y=226 -->
-  <polygon points="160,250 360,226 360,244 160,268" fill="#b0bec5" stroke="#37474f" stroke-width="2.5"/>
+  <!-- ===================== LIJEVI PANEL: presjek ===================== -->
+  <!-- =========================================================
+       GEOMETRIJA, skala: 1 m = 240 px po sirini
+         B  = 1,00 m   -> 240 px
+         h_L = 0,34 m  -> 82 px
+         h_D = 0,22 m  -> 53 px
+         h_m = 0,28 m  -> 67 px
+         e   = 0,163 m -> 39 px
+         y_B = 0,036 m -> 9  px
 
-  <!-- Axis of symmetry (dashed) at x=260 -->
-  <line x1="260" y1="120" x2="260" y2="290" stroke="#8090a0" stroke-width="1.5" stroke-dasharray="8 5"/>
+       Os simetrije platforme u presjeku: x_axis = 282
+       Slobodna povrsina vode: y_water = 220
+       Lijevi gornji ugao platforme: x=162, y=288 (uron 82 px do y=302+nije bas tako)
+         Lijevi rub: gornji ugao na visini h_L iznad donjeg ruba
+           dno lijevog: y_water + h_L = 220 + 82 = 302
+           gornji rub deck na lijevoj strani: 302 - 22 (debljina) = 280
+         Desni rub:
+           dno: 220 + 53 = 273
+           gornji rub: 273 - 22 = 251
+       Sirina pojasa B = 240 px; debljina deck = 22 px.
+       ========================================================= -->
 
-  <!-- Kompresor box (on top of platform, at e=33px LEFT of axis, x=227)
-       Platform top at x=227: y ≈ 250-(227-160)*(250-226)/200 = 250-67*24/200 = 250-8 = 242
-       Kompresor box: x=202..252, y=218..242 -->
-  <rect x="200" y="216" width="54" height="26" rx="3" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
-  <text x="210" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#173043">k.s.</text>
+  <!-- vodena povrsina -->
+  <rect x="40" y="220" width="480" height="220" fill="url(#u07v1pk_voda)" opacity="0.88" />
+  <line x1="40" y1="220" x2="520" y2="220" stroke="#1565c0" stroke-width="2" />
+  <!-- dno bazena (hatch) -->
+  <rect x="40" y="440" width="480" height="14" fill="url(#u07v1pk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- G_platforma arrow (red, down) at x=260 -->
-  <line x1="260" y1="158" x2="260" y2="204" stroke="#b42318" stroke-width="3" marker-end="url(#u07v1pk_u7v1AR)"/>
-  <text x="266" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b42318">G_p</text>
+  <!-- platforma (tilted deck): lijevi dublje (h_L), desni plice (h_D) -->
+  <polygon points="162,280 402,251 402,273 162,302" fill="url(#u07v1pk_plat)" stroke="#3a4a56" stroke-width="1.8" />
 
-  <!-- G_kompresor arrow (red, smaller) at x=227 -->
-  <line x1="227" y1="163" x2="227" y2="200" stroke="#b42318" stroke-width="2.5" marker-end="url(#u07v1pk_u7v1AR)"/>
-  <text x="190" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b42318">G_k</text>
+  <!-- ===================== KOMPRESOR ===================== -->
+  <!-- Pomaknut LIJEVO za e (prema dubljoj strani). Centar kompresora x = 282 - 39 = 243.
+       Lokalna y gornje stranice deck-a na x=243:
+         t = (243 - 162) / 240 = 0,3375
+         y_top = 280 + (251 - 280) * 0,3375 = 280 - 9,79 = 270,2 -->
+  <g>
+    <!-- baza (sluzbeno pravokutna, ali prati nagib) -->
+    <!-- gornji cilindarski blok kompresora -->
+    <!-- mali ventil -->
+    <line x1="243" y1="222" x2="243" y2="212" stroke="#3a4a56" stroke-width="2" />
+    <circle cx="243" cy="210" r="3" fill="#3a4a56" />
+    <!-- leader linija do labele kompresora -->
+    <line x1="222" y1="232" x2="180" y2="246" stroke="#5a6a78" stroke-width="0.8" />
+    <polygon points="215,270 271,263 271,237 215,244" fill="#fde68a" stroke="#b7600c" stroke-width="1.6" />
+    <rect x="222" y="222" width="42" height="22" rx="3" fill="#f0c14b" stroke="#b7600c" stroke-width="1.4" />
+    <text x="176" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="end" fill="#1a2530">kompresor</text>
+    <text x="176" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="end" fill="#1a2530">m<tspan baseline-shift="sub" font-size="0.7em">k</tspan> = 190 kg</text>
+  </g>
 
-  <!-- F_U arrow (green, up) at center of buoyancy x=253 (7px left of axis) -->
-  <line x1="253" y1="275" x2="253" y2="193" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u07v1pk_u7v1AG)"/>
-  <text x="258" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">F_U</text>
+  <!-- leader za "platforma m_p" - smjesta ispod deck-a na desnoj strani -->
+  <line x1="370" y1="266" x2="430" y2="320" stroke="#5a6a78" stroke-width="0.8" />
+  <!-- os simetrije platforme (dashed, vertikalna) -->
+  <line x1="282" y1="100" x2="282" y2="330" stroke="#8090a0" stroke-width="1.2" stroke-dasharray="6,4" />
+  <!-- centar uzgona pomaknut za y_B prema dubljoj (lijevoj) strani -->
+  <!-- C_B: x = 282 - 9 = 273, y = 287 (sredina uronjenog dijela) -->
+  <circle cx="273" cy="287" r="3.6" fill="#8e44ad" />
+  <circle cx="273" cy="287" r="1.6" fill="#ffffff" />
+  <!-- leader za "centar uzgona" -->
+  <line x1="270" y1="289" x2="170" y2="362" stroke="#8e44ad" stroke-width="0.8" />
+  <!-- ===================== SILE ===================== -->
+  <!-- G_p (tezina platforme) - crvena, dolje, na osi simetrije; tip iznad deck-a -->
+  <line x1="282" y1="172" x2="282" y2="260" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u07v1pk_fr)" />
+  <!-- G_k (tezina kompresora) - crvena, dolje, na centru kompresora (x=243); tip na vrhu cilindra -->
+  <line x1="243" y1="172" x2="243" y2="219" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u07v1pk_fr)" />
+  <!-- F_U (uzgon) - zelena, gore, kroz centar uzgona (x=273); tip na C_B -->
+  <line x1="273" y1="380" x2="273" y2="293" stroke="#1e8449" stroke-width="2.8" marker-end="url(#u07v1pk_fg)" />
+  <!-- ===================== KOTE ===================== -->
+  <!-- h_L (uron lijevog ruba): od y=220 (waterline) do y=302 (lijevi donji rub) -->
+  <!-- h_D (uron desnog ruba) -->
+  <!-- B (sirina platforme) - donja kota -->
+  <!-- e (ekscentar kompresora, plava). Postavljamo iznad kompresora gdje ima prostora -->
+  <!-- Tikovi na x=243 (centar kompresora) i x=282 (os simetrije), na y=140 (iznad kompresora i sila) -->
+  <line x1="243" y1="222" x2="243" y2="138" stroke="#1565c0" stroke-width="0.7" stroke-dasharray="3,3" />
+  <!-- vertikalni odsjecak osi simetrije vec postoji (dashed) - dovoljno -->
+  <line x1="243" y1="138" x2="243" y2="150" stroke="#1565c0" stroke-width="1.1" />
+  <line x1="282" y1="138" x2="282" y2="150" stroke="#1565c0" stroke-width="1.1" />
+  <line x1="245" y1="144" x2="280" y2="144" stroke="#1565c0" stroke-width="1.5" marker-start="url(#u07v1pk_ebL)" marker-end="url(#u07v1pk_eb)" />
+  <!-- y_B oznaka: zoom u krug pored C_B - pokazuje stvarni mali pomak (9 px ~ 3,57 cm)
+       Tikovi tocno na x=273 (C_B) i x=282 (os) ispod plata na y=395, pomocne tanjsje crte -->
+  <line x1="273" y1="298" x2="273" y2="395" stroke="#8e44ad" stroke-width="0.5" stroke-dasharray="2,3" opacity="0.65" />
+  <line x1="282" y1="332" x2="282" y2="395" stroke="#8e44ad" stroke-width="0.5" stroke-dasharray="2,3" opacity="0.65" />
+  <line x1="273" y1="389" x2="273" y2="401" stroke="#8e44ad" stroke-width="1.1" />
+  <line x1="282" y1="389" x2="282" y2="401" stroke="#8e44ad" stroke-width="1.1" />
+  <line x1="271" y1="395" x2="284" y2="395" stroke="#8e44ad" stroke-width="1.3" marker-start="url(#u07v1pk_purpL)" marker-end="url(#u07v1pk_purp)" />
+  <!-- strelice koje pokazuju stranu nagiba -->
+  <path d="M150,338 L120,338" stroke="#5a6a78" stroke-width="1" fill="none" marker-end="url(#u07v1pk_fr)" opacity="0" />
+  <path d="M150,338 L120,338" stroke="#5a6a78" stroke-width="1" fill="none" />
+  <path d="M124,335 L118,338 L124,341" stroke="#5a6a78" stroke-width="1" fill="none" />
+  <path d="M414,338 L444,338" stroke="#5a6a78" stroke-width="1" fill="none" />
+  <path d="M440,335 L446,338 L440,341" stroke="#5a6a78" stroke-width="1" fill="none" />
+  <!-- legenda L (duljina okomita na presjek) i konstante -->
+  <!-- ===================== DESNI PANEL: formule ===================== -->
+  <!-- Header bar -->
+  <rect x="560" y="16" width="384" height="36" rx="14" fill="#1565c0" />
+  <rect x="560" y="38" width="384" height="14" fill="#1565c0" />
+  <!-- Korak 1: h_m i V -->
+  <rect x="576" y="66" width="352" height="84" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="576" y="66" width="5" height="84" rx="2.5" fill="#1565c0" />
+  <!-- Korak 2: y_B -->
+  <rect x="576" y="160" width="352" height="84" rx="8" fill="#f7f3fb" stroke="#e0d0ec" stroke-width="1.2" />
+  <rect x="576" y="160" width="5" height="84" rx="2.5" fill="#8e44ad" />
+  <!-- Korak 3: e iz momentne ravnoteze -->
+  <rect x="576" y="254" width="352" height="106" rx="8" fill="#fff7ee" stroke="#f0d8b6" stroke-width="1.2" />
+  <!-- Korak 4: Delta h_m -->
+  <rect x="576" y="370" width="352" height="84" rx="8" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="576" y="370" width="5" height="84" rx="2.5" fill="#1e8449" />
+  <!-- REZULTATI badge -->
+  <rect x="576" y="464" width="352" height="32" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="162" y1="220" x2="100" y2="220" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="162" y1="302" x2="100" y2="302" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="105" y1="220" x2="105" y2="302" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07v1pk_dimL)" marker-end="url(#u07v1pk_dim)" />
+  <line x1="402" y1="220" x2="478" y2="220" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="402" y1="273" x2="478" y2="273" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="471" y1="220" x2="471" y2="273" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07v1pk_dimL)" marker-end="url(#u07v1pk_dim)" />
+  <line x1="162" y1="302" x2="162" y2="416" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="402" y1="273" x2="402" y2="416" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="165" y1="410" x2="399" y2="410" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07v1pk_dimL)" marker-end="url(#u07v1pk_dim)" />
+  <rect x="576" y="254" width="5" height="106" rx="2.5" fill="#b7600c" />
+  <text x="40" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Poprecni presjek platforme (pogled duz osi L)</text>
 
-  <!-- ── DIMENSION LINES ── -->
-  <!-- h_L (left side) -->
-  <line x1="146" y1="200" x2="146" y2="268" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u07v1pk_u7v1ADR)" marker-end="url(#u07v1pk_u7v1AD)"/>
-  <text x="72" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">h_L=0,34m</text>
-  <!-- h_D (right side) -->
-  <line x1="376" y1="200" x2="376" y2="244" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u07v1pk_u7v1ADR)" marker-end="url(#u07v1pk_u7v1AD)"/>
-  <text x="382" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">h_D=0,22m</text>
-  <!-- B width -->
-  <line x1="160" y1="285" x2="360" y2="285" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u07v1pk_u7v1ADR)" marker-end="url(#u07v1pk_u7v1AD)"/>
-  <text x="232" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">B = 1,00 m</text>
-  <!-- e: horizontal arrow from axis (260) to kompresor center (227) at y=315 -->
-  <line x1="260" y1="315" x2="227" y2="315" stroke="#1565c0" stroke-width="1.8" marker-start="url(#u07v1pk_u7v1ABR)" marker-end="url(#u07v1pk_u7v1AB)"/>
-  <text x="225" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">e=0,163m</text>
-  <line x1="260" y1="308" x2="260" y2="322" stroke="#1565c0" stroke-width="1"/>
-  <line x1="227" y1="308" x2="227" y2="322" stroke="#1565c0" stroke-width="1"/>
-  <!-- L note -->
-  <text x="56" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8090a0">L = 3,10 m (⊥ na skicu)</text>
+  <text x="48" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0">slobodna povrsina vode</text>
 
-  <!-- ── FORMULA BOX ── -->
-  <rect x="532" y="88" width="354" height="268" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="554" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ključni rezultati</text>
-  <line x1="554" y1="121" x2="878" y2="121" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="141" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">h_m = (h_L + h_D) / 2</text>
-  <text x="554" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">h_m = 0,28 m</text>
-  <line x1="554" y1="170" x2="878" y2="170" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">V = L · B · h_m = 0,868 m³</text>
-  <text x="554" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">y_B = B(h_L−h_D) / (12 h_m)</text>
-  <text x="554" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">y_B = 3,57 cm</text>
-  <line x1="554" y1="240" x2="878" y2="240" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">Iz ravnoteže momenta:</text>
-  <text x="554" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">e = (m_p + m_k) · y_B / m_k</text>
-  <text x="554" y="297" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">e = 0,163 m ≈ 16,3 cm</text>
-  <line x1="554" y1="307" x2="878" y2="307" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="327" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Δh_m = m_k / (ρ · L · B)</text>
-  <text x="554" y="345" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Δh_m = 6,14 cm</text>
-</svg>
+  <text x="432" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1a2530">platforma</text>
+  <text x="432" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">m<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 676 kg</text>
+
+  <text x="286" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">os simetrije platforme</text>
+
+  <text x="166" y="375" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#8e44ad">centar uzgona C<tspan baseline-shift="sub" font-size="0.7em">B</tspan></text>
+
+  <text x="290" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b"><tspan font-weight="700">G</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = m<tspan baseline-shift="sub" font-size="0.7em">p</tspan> g</text>
+
+  <text x="186" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b"><tspan font-weight="700">G</tspan><tspan baseline-shift="sub" font-size="0.7em">k</tspan> = m<tspan baseline-shift="sub" font-size="0.7em">k</tspan> g</text>
+
+  <text x="280" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">U</tspan> = ρ g V</text>
+
+  <text x="262" y="135" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">e</tspan></text>
+
+  <text x="292" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad"><tspan>y</tspan><tspan baseline-shift="sub" font-size="0.75em">B</tspan> ≈ 3,57 cm</text>
+
+  <text x="156" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">dublji uron (lijevo)</text>
+
+  <text x="412" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="end" fill="#5a6a78">plici uron</text>
+
+  <text x="40" y="474" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">Duljina platforme <tspan font-style="italic">L</tspan> = 3,10 m je okomita na ravninu presjeka.</text>
+  <text x="40" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78"><tspan font-style="italic">ρ</tspan> = 998 kg/m³,  <tspan font-style="italic">g</tspan> = 9,81 m/s²</text>
+
+  <text x="752" y="40" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Rjesenje korak po korak</text>
+
+  <text x="752" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1) Srednji gaz i istisnuti volumen</text>
+  <text x="752" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">m</tspan> = (h<tspan baseline-shift="sub" font-size="0.7em">L</tspan> + h<tspan baseline-shift="sub" font-size="0.7em">D</tspan>) / 2 = 0,28 m</text>
+  <text x="752" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">V</tspan> = L · B · h<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 3,10 · 1,00 · 0,28 ≈ 0,868 m³</text>
+
+  <text x="752" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2) Pomak centra uzgona od osi simetrije</text>
+  <text x="752" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="0.7em">B</tspan> = B(h<tspan baseline-shift="sub" font-size="0.7em">L</tspan> − h<tspan baseline-shift="sub" font-size="0.7em">D</tspan>) / (12 h<tspan baseline-shift="sub" font-size="0.7em">m</tspan>)</text>
+  <text x="752" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#8e44ad">= 1,00 · 0,12 / (12 · 0,28) ≈ 0,0357 m</text>
+
+  <text x="752" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3) Ekscentar kompresora (iz momenata oko osi)</text>
+  <text x="752" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">U</tspan> · y<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = m<tspan baseline-shift="sub" font-size="0.7em">k</tspan> g · e  →  e = (m<tspan baseline-shift="sub" font-size="0.7em">p</tspan> + m<tspan baseline-shift="sub" font-size="0.7em">k</tspan>)/m<tspan baseline-shift="sub" font-size="0.7em">k</tspan> · y<tspan baseline-shift="sub" font-size="0.7em">B</tspan></text>
+  <text x="752" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">= (676 + 190)/190 · 0,0357</text>
+  <text x="752" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">e</tspan> ≈ 0,163 m ≈ 16,3 cm</text>
+
+  <text x="752" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4) Povecanje srednje uronjenosti (od kompresora)</text>
+  <text x="752" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">Δ<tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">m</tspan> = m<tspan baseline-shift="sub" font-size="0.7em">k</tspan> / (ρ L B) = 190 / (998 · 3,10 · 1,00)</text>
+  <text x="752" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 0,0614 m ≈ 6,14 cm</text>
+
+  <text x="600" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#5a6a78">REZULTATI</text>
+  <text x="704" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0">V ≈ 0,868 m³</text>
+  <text x="808" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c0392b">e ≈ 0,163 m</text>
+  <text x="902" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449">Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan> ≈ 6,14 cm</text>
+<text x="96" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="end" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 0,34 m</text>
+
+  <text x="478" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">D</tspan> = 0,22 m</text>
+
+  <text x="282" y="428" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">B</tspan> = 1,00 m</text>
+
+  </svg>

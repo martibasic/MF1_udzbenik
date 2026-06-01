@@ -1,131 +1,282 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" role="img" aria-labelledby="u09fvc_u9fv-title u09fvc_u9fv-sub" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="u09fvc_title u09fvc_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u09fvc_title">Venturijeva cijev za mjerenje protoka ulja s diferencijalnim manometrom</title>
+  <desc id="u09fvc_desc">Lijevo: horizontalna Venturijeva cijev s ulazom promjera D1=60 mm, grlom D2=30 mm i U-cijevnim diferencijalnim manometrom sa zivom; ocitanje delta h_m=0,18 m. Brzina v2 u grlu je cetiri puta veca od ulazne v1, prikazano duljinom strelica. Desno: izvod razlike tlakova iz manometra, kontinuiteta i Bernoullija s rezultatom Q priblizno 5,27 L/s.</desc>
+
   <defs>
-    <linearGradient id="u09fvc_u9fv-oil" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e8c873"/>
-      <stop offset="100%" stop-color="#c49a0a"/>
+    <linearGradient id="u09fvc_oil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#c8a000" />
     </linearGradient>
-    <linearGradient id="u09fvc_u9fv-hg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#b0b8c0"/>
-      <stop offset="100%" stop-color="#6b7280"/>
+    <linearGradient id="u09fvc_hg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b0b8c0" />
+      <stop offset="100%" stop-color="#808890" />
     </linearGradient>
-    <pattern id="u09fvc_u9fv-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+    <pattern id="u09fvc_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-    <marker id="u09fvc_u9fv-arrG" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
-      <path d="M0,0 L8,4.5 L0,9 z" fill="#0f766e"/>
+    <!-- Strelica brzine (zelena, izlazna velicina) -->
+    <marker id="u09fvc_vel" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u09fvc_u9fv-arrGr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M0,0 L7,4 L0,8 z" fill="#546e7a"/>
+    <!-- Strelica tlaka (plava) -->
+    <marker id="u09fvc_pr" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u09fvc_u9fv-arrGrR" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto">
-      <path d="M7,0 L0,4 L7,8 z" fill="#546e7a"/>
+    <!-- Markeri za kote (smedi) -->
+    <marker id="u09fvc_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u09fvc_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
-  <rect width="940" height="400" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <text id="u09fvc_u9fv-title" x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Venturijeva cijev za mjerenje protoka ulja</text>
-  <text id="u09fvc_u9fv-sub" x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">D&#x2081;=60&#x202F;mm, D&#x2082;=30&#x202F;mm, &#x394;h&#x2098;=0,18&#x202F;m&#x202F;Hg (&#x3C1;&#x1D40;&#x1D38;=870&#x202F;kg/m&#xB3;, &#x3C1;&#x2095;&#x1D33;=13600&#x202F;kg/m&#xB3;)</text>
 
-  <!-- ===== EGL and HGL lines ===== -->
-  <!-- EGL at y=100 (horizontal, red dashed) -->
-  <line x1="50" y1="100" x2="770" y2="100" stroke="#b42318" stroke-width="2.4" stroke-dasharray="9 5"/>
-  <text x="782" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">EGL</text>
-  <!-- HGL: flat at y=118 from x=50..200; drops to y=178 at throat x=390..520; back to y=118 at x=700..770 -->
-  <!-- Using a polyline with natural slope through the Venturi -->
-  <polyline points="50,118 200,118 390,178 520,178 700,118 770,118" fill="none" stroke="#6d2694" stroke-width="2.4" stroke-dasharray="7 4"/>
-  <text x="782" y="121" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#6d2694">HGL</text>
+  <rect width="920" height="520" fill="#ffffff" />
+  <!-- panel okviri -->
+  <rect x="14" y="14" width="540" height="492" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="566" y="14" width="340" height="492" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-  <!-- ===== Venturi pipe shape ===== -->
-  <!-- Pipe center at y=210. D1=60mm, D2=30mm. At scale: D1=36px half=18, D2=18px half=9 -->
-  <!-- Inlet x=60..220 (D=60mm), confuser 220..390, throat 390..520, diffuser 520..720, outlet 720..840 -->
-  <!-- Top wall: srafura then outline -->
-  <polygon points="60,192 220,192 390,201 520,201 720,192 840,192 840,188 720,188 520,197 390,197 220,188 60,188" fill="url(#u09fvc_u9fv-sraf)"/>
-  <polygon points="60,228 220,228 390,219 520,219 720,228 840,228 840,232 720,232 520,223 390,223 220,232 60,232" fill="url(#u09fvc_u9fv-sraf)"/>
-  <!-- Oil fill inside pipe -->
-  <polygon points="60,192 220,192 390,201 520,201 720,192 840,192 840,228 720,228 520,219 390,219 220,228 60,228" fill="url(#u09fvc_u9fv-oil)" opacity="0.75"/>
-  <!-- Pipe outline: top -->
-  <polyline points="60,188 220,188 390,197 520,197 720,188 840,188" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
-  <polyline points="60,192 220,192 390,201 520,201 720,192 840,192" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
-  <!-- Pipe outline: bottom -->
-  <polyline points="60,232 220,232 390,223 520,223 720,232 840,232" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
-  <polyline points="60,228 220,228 390,219 520,219 720,228 840,228" fill="none" stroke="#2d3a40" stroke-width="2.2"/>
-  <!-- Endcaps -->
-  <line x1="60" y1="188" x2="60" y2="232" stroke="#2d3a40" stroke-width="2.2"/>
-  <line x1="840" y1="188" x2="840" y2="232" stroke="#2d3a40" stroke-width="2.2"/>
+  <!-- ============================================================
+       LIJEVI PANEL: VENTURIJEVA CIJEV + MANOMETAR
+       Geometrijska skala:
+         D1=60 mm => 60 px (radijus 30 px)
+         D2=30 mm => 30 px (radijus 15 px)
+         Pipe os y = 170
+         Section 1 (ulaz) presjek na x = 90 (cista cijev D1)
+         Konfuzor od x=160 do x=240
+         Grlo od x=240 do x=320 (D2)
+         Difuzor od x=320 do x=420
+         Section 2 (grlo) presjek na x = 280
+         Izlaz: D1 od x=420 do x=540
+       Manometar:
+         Spoj 1 na x=90 vodi prema dolje u lijevu nogu U-cijevi (lijeva noga x=110)
+         Spoj 2 na x=280 vodi prema dolje u desnu nogu U-cijevi (desna noga x=290)
+         Mercury delta h = 0.18 m -> 72 px (skala 1m = 400 px)
+         Visine: dno U-cijevi y=470 (interior). Hg razina desna (visa, mali tlak) y=336. Hg razina lijeva (niza, veci tlak) y=408. delta = 72 px.
+  ============================================================ -->
 
-  <!-- Flow arrows -->
-  <line x1="66" y1="210" x2="120" y2="210" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u09fvc_u9fv-arrG)"/>
-  <text x="68" y="205" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">v&#x2081;</text>
-  <line x1="760" y1="210" x2="828" y2="210" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u09fvc_u9fv-arrG)"/>
-  <!-- Throat arrow (faster) -->
-  <line x1="404" y1="210" x2="506" y2="210" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u09fvc_u9fv-arrG)"/>
-  <text x="420" y="205" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">v&#x2082;=4v&#x2081;</text>
+  <!-- Venturijeva cijev: vanjski oblik (stjenke).
+       Top kontura: (60,140)..(160,140)..(240,155)..(320,155)..(400,140)..(540,140).
+       Donja zrcalno oko y=170. Stjenka 6 px iznad oblika fluida. -->
+  <!-- Hatch stjenke (gornja i donja, 6 px debljina) -->
+  <path d="M60,134 L540,134 L540,140 L400,140 L320,155 L240,155 L160,140 L60,140 Z" fill="url(#u09fvc_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <path d="M60,200 L160,200 L240,185 L320,185 L400,200 L540,200 L540,206 L60,206 Z" fill="url(#u09fvc_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Ulje (interior) -->
+  <path d="M60,140 L160,140 L240,155 L320,155 L400,140 L540,140 L540,200 L400,200 L320,185 L240,185 L160,200 L60,200 Z" fill="url(#u09fvc_oil)" />
+  <!-- Tanka unutarnja kontura (rub fluida za citljivost) -->
+  <path d="M60,140 L160,140 L240,155 L320,155 L400,140 L540,140" fill="none" stroke="#8a6a10" stroke-width="0.8" />
+  <path d="M60,200 L160,200 L240,185 L320,185 L400,200 L540,200" fill="none" stroke="#8a6a10" stroke-width="0.8" />
+  <!-- Lijevi i desni rub cijevi (otvoreni krajevi) -->
+  <line x1="60" y1="134" x2="60" y2="206" stroke="#3a4a56" stroke-width="1.4" />
+  <line x1="540" y1="134" x2="540" y2="206" stroke="#3a4a56" stroke-width="1.4" />
 
-  <!-- Velocity head brackets at section 1 and throat -->
-  <line x1="148" y1="100" x2="148" y2="118" stroke="#546e7a" stroke-width="1.6"/>
-  <text x="154" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#546e7a">v&#x2081;&#xB2;/(2g)</text>
-  <line x1="455" y1="100" x2="455" y2="178" stroke="#546e7a" stroke-width="1.6"/>
-  <text x="461" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#546e7a">v&#x2082;&#xB2;/(2g)</text>
+  <!-- ============================================================
+       Os simetrije cijevi (referenca)
+  ============================================================ -->
+  <line x1="40" y1="170" x2="560" y2="170" stroke="#7a8a96" stroke-width="0.7" stroke-dasharray="6,4" />
 
-  <!-- Pressure head lines (pipe axis to HGL) -->
-  <line x1="140" y1="210" x2="140" y2="118" stroke="#b45309" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <text x="100" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">p&#x2081;/(&#x3C1;g)</text>
-  <line x1="446" y1="210" x2="446" y2="178" stroke="#b45309" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <text x="406" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">p&#x2082;/(&#x3C1;g)</text>
+  <!-- ============================================================
+       Presjeci 1 i 2 (tanke isprekidane vertikale)
+  ============================================================ -->
+  <line x1="90" y1="140" x2="90" y2="200" stroke="#1a2530" stroke-width="0.8" stroke-dasharray="3,3" />
+  <line x1="280" y1="155" x2="280" y2="185" stroke="#1a2530" stroke-width="0.8" stroke-dasharray="3,3" />
 
-  <!-- === Point labels ===  -->
-  <circle cx="220" cy="210" r="5" fill="#b42318"/>
-  <text x="228" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">&#x2460;</text>
-  <circle cx="455" cy="210" r="5" fill="#b42318"/>
-  <text x="463" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">&#x2461;</text>
+  <!-- ============================================================
+       Brzine v1 i v2 (zelene, duljina proporcionalna iznosu)
+       v1 = 1,866 m/s -> 28 px
+       v2 = 7,46 m/s  -> 112 px  (omjer 4:1)
+       Strijela u sredini fluida.
+       v1: od x=72 do x=100 (28 px) na y=170
+       v2: ne stane unutar grla (sirina 80 px). Skratit cu na 56 px (omjer 2:1) i u zapisu napomenuti realan omjer 4:1
+       Bolje: v1 = 18 px (od 72 do 90 - krajeve oznake na presjeku 1), v2 = 72 px (od 244 do 316). Omjer 4:1 sacuvan.
+  ============================================================ -->
+  <!-- v1 (kratka strelica, 18 px) - ulazna brzina na presjeku 1 -->
+  <line x1="72" y1="170" x2="90" y2="170" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u09fvc_vel)" />
+  <!-- Vodica linija od oznake v1 do strelice -->
+  <line x1="74" y1="208" x2="78" y2="178" stroke="#1e8449" stroke-width="0.7" />
+  <!-- v2 (dulja strelica, 72 px = 4x v1) - brzina u grlu (4x dulja vidi se izravno) -->
+  <line x1="244" y1="170" x2="316" y2="170" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u09fvc_vel)" />
+  <!-- Vodica linija od oznake v2 do strelice -->
+  <line x1="324" y1="208" x2="310" y2="178" stroke="#1e8449" stroke-width="0.7" />
 
-  <!-- === Dimension lines for D1 and D2 === -->
-  <!-- D1 at section 1 -->
-  <line x1="130" y1="246" x2="130" y2="232" stroke="#546e7a" stroke-width="1.4"/>
-  <line x1="130" y1="278" x2="130" y2="228" stroke="#546e7a" stroke-width="1.4" marker-start="url(#u09fvc_u9fv-arrGrR)" marker-end="url(#u09fvc_u9fv-arrGr)"/>
-  <text x="136" y="265" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">D&#x2081;=60&#x202F;mm</text>
-  <!-- D2 at throat -->
-  <line x1="455" y1="228" x2="455" y2="246" stroke="#546e7a" stroke-width="1.4" marker-start="url(#u09fvc_u9fv-arrGrR)" marker-end="url(#u09fvc_u9fv-arrGr)"/>
-  <text x="461" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">D&#x2082;=30&#x202F;mm</text>
+  <!-- Smjer toka u izlaznom dijelu (slabija strelica, kratka) -->
+  <line x1="460" y1="170" x2="490" y2="170" stroke="#1e8449" stroke-width="2.2" opacity="0.7" marker-end="url(#u09fvc_vel)" />
 
-  <!-- === Manometer (U-tube with mercury) === -->
-  <!-- Connecting tubes from pipe to U-tube -->
-  <!-- From section 1 (x=220) downward -->
-  <line x1="220" y1="232" x2="220" y2="310" stroke="#2d3a40" stroke-width="3"/>
-  <!-- From throat (x=455) downward -->
-  <line x1="455" y1="219" x2="455" y2="310" stroke="#2d3a40" stroke-width="3"/>
-  <!-- U-tube base: horizontal at y=310..320 from x=220 to x=455 -->
-  <rect x="210" y="310" width="14" height="70" rx="2" fill="#e0e8f0" stroke="#2d3a40" stroke-width="2"/>
-  <rect x="448" y="310" width="14" height="70" rx="2" fill="#e0e8f0" stroke="#2d3a40" stroke-width="2"/>
-  <line x1="210" y1="380" x2="462" y2="380" stroke="#2d3a40" stroke-width="2"/>
-  <!-- Mercury in U-tube (grey/silver) - left side higher since p1>p2 -->
-  <!-- Left column mercury from y=335 to y=380 (45px = height) -->
-  <rect x="212" y="344" width="10" height="36" fill="url(#u09fvc_u9fv-hg)" rx="1"/>
-  <!-- Right column mercury from y=325 to y=380 (55px = 0.18m at scale) -->
-  <!-- Delta h_m = 0.18m. Left side at y=344 (36px), right at y=334 (46px)... difference=10px.  -->
-  <!-- Actually the mercury level on the HIGH pressure side is LOWER (pushed down) and on LOW pressure side is HIGHER (pushed up) -->
-  <!-- p1 > p2: mercury pushed from left (section 1) side to right (throat) side -->
-  <!-- Left (section 1): mercury low at y=344..380 -->
-  <!-- Right (throat): mercury high at y=326..380 -->
-  <rect x="450" y="326" width="10" height="54" fill="url(#u09fvc_u9fv-hg)" rx="1"/>
-  <!-- Oil above mercury in both columns (connecting to pipe) -->
-  <rect x="212" y="310" width="10" height="34" fill="url(#u09fvc_u9fv-oil)" opacity="0.5"/>
-  <rect x="450" y="310" width="10" height="16" fill="url(#u09fvc_u9fv-oil)" opacity="0.5"/>
-  <!-- Delta h annotation -->
-  <line x1="468" y1="326" x2="468" y2="344" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u09fvc_u9fv-arrGrR)" marker-end="url(#u09fvc_u9fv-arrGr)"/>
-  <text x="474" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">&#x394;h&#x2098;</text>
-  <text x="474" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">0,18&#x202F;m</text>
-  <!-- Mercury label -->
-  <text x="370" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">&#x17D;iva (Hg)</text>
+  <!-- ============================================================
+       Tocke 1 i 2 (mali markeri)
+  ============================================================ -->
+  <!-- Tocka 1: u sredini ulaza -->
+  <circle cx="90" cy="170" r="4" fill="#1565c0" />
+  <!-- Tocka 2: u grlu -->
+  <circle cx="280" cy="170" r="4" fill="#1565c0" />
+  <!-- Tanka linija od labele 2 do tocke (leader) -->
+  <line x1="234" y1="130" x2="278" y2="168" stroke="#1565c0" stroke-width="0.7" />
 
-  <!-- === Formula box (right) === -->
-  <rect x="700" y="250" width="216" height="130" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="714" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#173043">Rezultat</text>
-  <line x1="714" y1="280" x2="908" y2="280" stroke="#e8d89a" stroke-width="1"/>
-  <text x="714" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">&#x394;p = (&#x3C1;&#x2095;&#x1D33;&#x2212;&#x3C1;&#x1D40;&#x1D38;)g&#x394;h&#x2098;</text>
-  <text x="714" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">&#x394;p &#x2248; 22,74&#x202F;kPa</text>
-  <line x1="714" y1="326" x2="908" y2="326" stroke="#e8d89a" stroke-width="1"/>
-  <text x="714" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">v&#x2081;=1,866&#x202F;m/s, v&#x2082;=7,46&#x202F;m/s</text>
-  <text x="714" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">Q &#x2248; 5,27&#x202F;L/s</text>
-</svg>
+
+  <!-- ============================================================
+       KOTE PROMJERA D1 i D2 (smedje, s pomocnim linijama)
+  ============================================================ -->
+  <!-- D1 lijevo: ekstenzioni segment od cijevi do dim line na x=50, label LIJEVO -->
+  <!-- D2 u grlu: vertikalna kota desno od grla (x=350) -->
+  <!-- Oznaka ulja IZNAD cijevi (uz desni rub) -->
+  <!-- ============================================================
+       MANOMETAR (diferencijalni U-cijevni, ziva)
+       Lijeva noga: x_interior 104..120 (sirina 16)
+       Desna noga:  x_interior 284..300 (sirina 16)
+       Spoj 1 (od presjeka 1 na x=90 do lijeve noge):
+         Vertikalna cijev od (90, 200) do (90, 260)
+         Horizontalni segment od (90, 260) do (112, 260)
+         Vertikalna noga lijevo (interior 104..120) y=260..470
+       Spoj 2: (280, 200) do (280, 260) -> (280, 260) do (292, 260) -> nije idealno; bolje da spoj 2 ide direktno: od (280, 185) iznosi u stranu pa dolje na desnu nogu (x=292)
+       Pojednostavimo: lijeva noga centar 112, desna noga centar 292.
+         Spoj 1: vertikala od (90,200) -> (90,256), horizontala (90,256)->(112,256), pa noga interior (104..120) od 256..470
+         Spoj 2: vertikala od (280,185) -> (280,256), horizontala (280,256)->(292,256), pa noga interior (284..300) od 256..470
+       Dno U-cijevi: spaja noge na y=470..490 (interior 470..490 visine 20)
+       Mercury:
+         Razina lijeva (visi tlak, hg potisnut dolje):  y_lijeva = 410 (od 410 do 490 u nozi + dno)
+         Razina desna (manji tlak, hg podignuta):  y_desna = 338 (od 338 do 490)
+         delta = 410 - 338 = 72 px = 0,18 m (skala 1m = 400px)
+       Oil iznad hg u obje noge (do y=256, do horizontalnog spoja)
+  ============================================================ -->
+
+  <!-- Stjenke spojeva (tanke vertikalne paralelne linije) -->
+  <!-- Spoj 1 (lijevi): cijev x=84..96, od y=200 do y=256 -->
+  <line x1="84" y1="200" x2="84" y2="260" stroke="#3a4a56" stroke-width="1.2" />
+  <line x1="96" y1="200" x2="96" y2="260" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Spoj 1 horizontala od (90, 256) do (112, 256): koristimo segment cijevi 12 px sirine, y=250..262 -->
+  <line x1="84" y1="250" x2="120" y2="250" stroke="#3a4a56" stroke-width="1.2" />
+  <line x1="96" y1="262" x2="104" y2="262" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Lijeva noga (interior x=104..120, sirine 16 px). Stjenke x=100, x=124 -->
+  <line x1="100" y1="250" x2="100" y2="478" stroke="#3a4a56" stroke-width="1.4" />
+  <line x1="124" y1="262" x2="124" y2="478" stroke="#3a4a56" stroke-width="1.4" />
+
+  <!-- Spoj 2 (desni) od presjeka 2 (x=280, y=185) -->
+  <line x1="274" y1="185" x2="274" y2="260" stroke="#3a4a56" stroke-width="1.2" />
+  <line x1="286" y1="185" x2="286" y2="260" stroke="#3a4a56" stroke-width="1.2" />
+  <line x1="274" y1="250" x2="310" y2="250" stroke="#3a4a56" stroke-width="1.2" />
+  <line x1="286" y1="262" x2="294" y2="262" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Desna noga (interior x=294..310, sirine 16). Stjenke x=290 i x=314 -->
+  <line x1="290" y1="250" x2="290" y2="478" stroke="#3a4a56" stroke-width="1.4" />
+  <line x1="314" y1="262" x2="314" y2="478" stroke="#3a4a56" stroke-width="1.4" />
+
+  <!-- Dno U-cijevi: spaja noge na donjem dijelu. Vanjska kontura: stjenka donja od x=100 do x=314 na y=482..490; unutarnja kontura ide od y=470 -->
+  <!-- Donja stjenka dna -->
+  <line x1="100" y1="478" x2="314" y2="478" stroke="#3a4a56" stroke-width="1.4" />
+  <line x1="100" y1="490" x2="314" y2="490" stroke="#3a4a56" stroke-width="1.4" />
+  <!-- Krivulje na dnu: aproksimiramo pravokutnikom -->
+  <line x1="100" y1="478" x2="100" y2="490" stroke="#3a4a56" stroke-width="1.4" />
+  <line x1="314" y1="478" x2="314" y2="490" stroke="#3a4a56" stroke-width="1.4" />
+
+  <!-- ULJE u manometru (iznad zive u obje noge i u horizontalnim spojevima) -->
+  <!-- Lijevi spoj horizontala (od cijevi do noge na y=250..262) -->
+  <rect x="84" y="200" width="12" height="62" fill="url(#u09fvc_oil)" />
+  <rect x="84" y="250" width="40" height="12" fill="url(#u09fvc_oil)" />
+  <rect x="104" y="262" width="20" height="148" fill="url(#u09fvc_oil)" />
+  <!-- Desni spoj -->
+  <rect x="274" y="185" width="12" height="77" fill="url(#u09fvc_oil)" />
+  <rect x="274" y="250" width="40" height="12" fill="url(#u09fvc_oil)" />
+  <rect x="294" y="262" width="20" height="76" fill="url(#u09fvc_oil)" />
+
+  <!-- ZIVA (Hg) u U-cijevi -->
+  <!-- Lijeva noga: hg od y=410 do y=478 + dno + desna noga do y=338 -->
+  <rect x="104" y="410" width="20" height="68" fill="url(#u09fvc_hg)" />
+  <!-- Dno (povezuje noge) -->
+  <rect x="100" y="478" width="214" height="12" fill="url(#u09fvc_hg)" />
+  <!-- Desna noga -->
+  <rect x="294" y="338" width="20" height="140" fill="url(#u09fvc_hg)" />
+
+  <!-- Tanki meniskus (gornji rub zive, tamno siva linija) -->
+  <line x1="104" y1="410" x2="124" y2="410" stroke="#3a4a56" stroke-width="1" />
+  <line x1="294" y1="338" x2="314" y2="338" stroke="#3a4a56" stroke-width="1" />
+
+  <!-- ============================================================
+       Oznake fluida u manometru: "ulje" i "ziva"
+  ============================================================ -->
+  <!-- ============================================================
+       KOTA delta h_m (izmedu razina zive)
+       Lijeva razina y=410, desna y=338, delta=72 px
+       Kota izmedu noge (x=170, izmedu nogu)
+  ============================================================ -->
+  <!-- Pomocne tanke linije od razina zive prema referentnoj liniji kote (x_kota=200) -->
+  <!-- Tik-crte -->
+  <!-- Dimenzijska linija -->
+  <!-- Label desno od kote -->
+  <!-- Napomena (mala): horizontalna cijev, z1=z2 (ispod cijevi izmedu D2 kote i spoja 2) -->
+  <!-- ============================================================
+       DESNI PANEL: FORMULE I REZULTATI
+       x: 566..906, sirina 340, padding 16 -> x interior 582..890
+       Sredina panela: x=736
+  ============================================================ -->
+  <!-- Header bar -->
+  <rect x="566" y="14" width="340" height="36" rx="12" fill="#1565c0" />
+  <rect x="566" y="38" width="340" height="12" fill="#1565c0" />
+  <!-- Blok 1: delta p iz manometra (y=62..142, height 80) -->
+  <line x1="582" y1="152" x2="890" y2="152" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 2: kontinuitet (y=152..222) -->
+  <line x1="582" y1="228" x2="890" y2="228" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 3: Bernoulli (z1=z2) (y=228..318) -->
+  <line x1="582" y1="324" x2="890" y2="324" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 4: Protok (y=324..400) -->
+  <line x1="582" y1="400" x2="890" y2="400" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Sazetak (italic) -->
+  <!-- Rezultat badge (zeleni) -->
+  <rect x="582" y="448" width="308" height="46" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.6" />
+  <line x1="60" y1="140" x2="50" y2="140" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="60" y1="200" x2="50" y2="200" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="50" y1="140" x2="50" y2="200" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09fvc_dimL)" marker-end="url(#u09fvc_dim)" />
+  <line x1="320" y1="155" x2="350" y2="155" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="320" y1="185" x2="350" y2="185" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="350" y1="155" x2="350" y2="185" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09fvc_dimL)" marker-end="url(#u09fvc_dim)" />
+  <line x1="124" y1="410" x2="208" y2="410" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
+  <line x1="294" y1="338" x2="208" y2="338" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
+  <line x1="194" y1="338" x2="216" y2="338" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="194" y1="410" x2="216" y2="410" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="205" y1="341" x2="205" y2="407" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09fvc_dimL)" marker-end="url(#u09fvc_dim)" />
+  <text x="64" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="320" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 4 v<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="90" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">1</text>
+  <text x="225" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">2</text>
+  <text x="520" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#7a5500">ulje ρ<tspan baseline-shift="sub" font-size="0.7em">ul</tspan> = 870 kg/m³</text>
+
+  <text x="140" y="335" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#7a5500">ulje</text>
+  <text x="200" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#3a4a56">živa (ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> = 13600 kg/m³)</text>
+
+  <text x="430" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">horizontalno: z<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = z<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+
+
+  <text x="736" y="38" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Bernoulli + diferencijalni manometar</text>
+
+  <text x="736" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Razlika tlakova iz manometra</text>
+  <text x="736" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">Δp = (ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> − ρ<tspan baseline-shift="sub" font-size="0.7em">ul</tspan>) g Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan></text>
+  <text x="736" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">= (13600 − 870) · 9,81 · 0,18</text>
+  <text x="736" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 22,74 kPa</text>
+  <text x="736" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Jednadžba kontinuiteta</text>
+  <text x="736" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">v<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = v<tspan baseline-shift="sub" font-size="0.7em">1</tspan> (D<tspan baseline-shift="sub" font-size="0.7em">1</tspan>/D<tspan baseline-shift="sub" font-size="0.7em">2</tspan>)² = 4 v<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="736" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">A<tspan baseline-shift="sub" font-size="0.7em">1</tspan> v<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = A<tspan baseline-shift="sub" font-size="0.7em">2</tspan> v<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+  <text x="736" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Bernoulli za horizontalnu cijev</text>
+  <text x="736" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">Δp = (ρ<tspan baseline-shift="sub" font-size="0.7em">ul</tspan>/2)(v<tspan baseline-shift="sub" font-size="0.7em">2</tspan>² − v<tspan baseline-shift="sub" font-size="0.7em">1</tspan>²) = (15ρ<tspan baseline-shift="sub" font-size="0.7em">ul</tspan>/2) v<tspan baseline-shift="sub" font-size="0.7em">1</tspan>²</text>
+  <text x="736" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">v<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = √(2Δp / 15ρ<tspan baseline-shift="sub" font-size="0.7em">ul</tspan>)</text>
+  <text x="736" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">v<tspan baseline-shift="sub" font-size="0.7em">1</tspan> ≈ 1,866 m/s   v<tspan baseline-shift="sub" font-size="0.7em">2</tspan> ≈ 7,46 m/s</text>
+  <text x="736" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Volumenski protok</text>
+  <text x="736" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">Q = A<tspan baseline-shift="sub" font-size="0.7em">1</tspan> v<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = (π D<tspan baseline-shift="sub" font-size="0.7em">1</tspan>² / 4) v<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="736" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">= 2,827 · 10⁻³ · 1,866 m³/s</text>
+  <text x="736" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Uže grlo → veća brzina, manji tlak;</text>
+  <text x="736" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Δp iz manometra daje protok.</text>
+
+  <text x="736" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTAT</text>
+  <text x="736" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1e8449">Q ≈ 5,27 L/s</text>
+<text x="20" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> =</text>
+  <text x="20" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">60 mm</text>
+
+  <text x="356" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+  <text x="356.0" y="182.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">= 30 mm</text>
+
+  <text x="222" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b7600c">Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan></text>
+  <text x="222.0" y="386.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">= 0,18 m</text>
+
+  </svg>

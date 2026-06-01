@@ -1,127 +1,219 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 440" role="img" aria-labelledby="u08fup_u8fp-title u08fup_u8fp-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u08fup_u8fp-title">U08 – kontrolni volumen i kontinuitet – pregled poglavlja</title>
-  <desc id="u08fup_u8fp-desc">Tri panela: fizikalni sustav s T-komad T-junction, kljucne jednadžbe, primjena u inzenjeriji.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="u08fup_title u08fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
+  <title id="u08fup_title">Pregled poglavlja 8: Kontrolni volumen i kontinuitet</title>
+  <desc id="u08fup_desc">Tropanelni uvodni blok. Lijevo: opci kontrolni volumen kao odabrani dio prostora s ulaznim masenim protokom, dva izlazna toka i clanom akumulacije unutar isprekidane granice. Desno gore: kljucne jednadzbe poglavlja od opce masene bilance preko stacionarnog strujanja do klasicnog kontinuiteta A1 v1 = A2 v2. Desno dolje: cetiri primjera primjene u inzenjeriji (T-racva, ventil, spremnik, mjesalica).</desc>
+
   <defs>
-    <linearGradient id="u08fup_u8fp-water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <linearGradient id="u08fup_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u08fup_u8fp-acc" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bde0f4" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#50b0d0" stop-opacity="0.7"/>
-    </linearGradient>
-    <pattern id="u08fup_u8fp-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="4" x2="8" y2="4" stroke="#546e7a" stroke-width="1.8"/>
+    <pattern id="u08fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#dfe5ea" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-    <marker id="u08fup_u8fp-arrG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#0f766e"/>
+    <!-- Force / flow markers -->
+    <marker id="u08fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u08fup_u8fp-arrG2" markerWidth="10" markerHeight="8" refX="5" refY="0" orient="auto">
-      <path d="M0,8 L10,8 L5,0 z" fill="#0f766e"/>
+    <marker id="u08fup_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u08fup_u8fp-arrG3" markerWidth="10" markerHeight="8" refX="5" refY="8" orient="auto">
-      <path d="M0,0 L10,0 L5,8 z" fill="#b42318"/>
+    <marker id="u08fup_aO" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#e67e22" />
     </marker>
-    <marker id="u08fup_u8fp-arrR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#b42318"/>
+    <marker id="u08fup_aBrown" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
-    <marker id="u08fup_u8fp-arrUp" markerWidth="10" markerHeight="8" refX="5" refY="0" orient="auto">
-      <path d="M0,8 L10,8 L5,0 z" fill="#c96c35"/>
+    <marker id="u08fup_aBlue" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <marker id="u08fup_aN" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#5a6a78" />
     </marker>
   </defs>
-  <!-- Canvas -->
-  <rect width="940" height="440" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="392" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <!-- Title -->
-  <text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Kontrolni volumen i kontinuitet — pregled</text>
-  <text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">Zatvoriti granicu, prebrojati ulaze i izlaze, zadržati akumulaciju gdje je protoci nisu uravnoteženi.</text>
 
-  <!-- ===== PANEL 1: Fizikalni sustav (T-junction) ===== -->
-  <!-- Panel background -->
-  <rect x="42" y="94" width="400" height="308" rx="12" fill="#f4f8fb" stroke="#d0dde8" stroke-width="1.5"/>
-  <text x="58" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Fizikalni sustav — T-komad</text>
+  <!-- pozadina i okviri -->
+  <rect x="14" y="14" width="932" height="442" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-  <!-- T-junction: horizontal inlet from left, two branches (upper and lower) -->
-  <!-- Inlet pipe: y=220, height=28, x=70..270 -->
-  <!-- Inlet walls + fluid -->
-  <rect x="70" y="200" width="200" height="40" fill="url(#u08fup_u8fp-sraf)" stroke="none"/>
-  <rect x="82" y="212" width="188" height="16" fill="url(#u08fup_u8fp-water)" stroke="none"/>
-  <line x1="70" y1="200" x2="270" y2="200" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="70" y1="240" x2="270" y2="240" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="70" y1="200" x2="70" y2="240" stroke="#3d4f5a" stroke-width="2"/>
+  <!-- ===================== LIJEVI PANEL: KV KONCEPT ===================== -->
+  <rect x="28" y="28" width="540" height="414" rx="10" fill="#ffffff" stroke="#e1ebf3" stroke-width="1.2" />
 
-  <!-- Junction body: x=270..306, y=140..320 -->
-  <rect x="270" y="140" width="36" height="200" fill="url(#u08fup_u8fp-sraf)" stroke="none"/>
-  <rect x="282" y="152" width="12" height="176" fill="url(#u08fup_u8fp-water)" stroke="none"/>
-  <line x1="270" y1="140" x2="306" y2="140" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="270" y1="340" x2="306" y2="340" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="270" y1="140" x2="270" y2="200" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="270" y1="240" x2="270" y2="340" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="306" y1="140" x2="306" y2="340" stroke="#3d4f5a" stroke-width="2"/>
+  <!-- Generic device / "any region" body inside KV (light slab) -->
+  <rect x="180" y="170" width="240" height="170" rx="12" fill="#eef3f7" stroke="#9fb3c0" stroke-width="1.4" />
+  <!-- discrete fluid streamlets inside the device to suggest "process region" -->
+  <path d="M210 200 Q260 230 310 200 T410 200" fill="none" stroke="#aed6f1" stroke-width="2" />
+  <path d="M210 235 Q260 265 310 235 T410 235" fill="none" stroke="#aed6f1" stroke-width="2" />
+  <path d="M210 270 Q260 300 310 270 T410 270" fill="none" stroke="#aed6f1" stroke-width="2" />
+  <path d="M210 305 Q260 335 310 305 T410 305" fill="none" stroke="#aed6f1" stroke-width="2" />
+  <!-- Akumulacija oznaka unutar KV -->
+  <!-- vertical orange up arrow indicating accumulation > 0 -->
+  <line x1="300" y1="312" x2="300" y2="252" stroke="#e67e22" stroke-width="2.6" marker-end="url(#u08fup_aO)" />
 
-  <!-- Upper branch: y=140..166, from x=306..406 -->
-  <rect x="306" y="140" width="110" height="38" fill="url(#u08fup_u8fp-sraf)" stroke="none"/>
-  <rect x="306" y="152" width="110" height="14" fill="url(#u08fup_u8fp-water)" stroke="none"/>
-  <line x1="306" y1="140" x2="416" y2="140" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="306" y1="178" x2="416" y2="178" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="416" y1="140" x2="416" y2="178" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="416" y1="159" x2="438" y2="159" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u08fup_u8fp-arrG)"/>
+  <!-- KV granica - dashed brown rectangle (kontrolna ploha KP) -->
+  <!-- KV oznaka -->
+  <!-- ULAZ: red mass flow arrow crossing left boundary into KV -->
+  <!-- arrow starts outside, ends inside crossing the dashed line at x=150 -->
+  <line x1="64" y1="220" x2="190" y2="220" stroke="#c0392b" stroke-width="3" marker-end="url(#u08fup_aR)" />
+  <!-- normalna na granici (n vector) at inlet -->
+  <line x1="150" y1="240" x2="134" y2="240" stroke="#5a6a78" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
+  <!-- IZLAZ 1: green mass flow arrow exiting top-right -->
+  <line x1="450" y1="200" x2="560" y2="200" stroke="#1e8449" stroke-width="3" marker-end="url(#u08fup_aG)" />
+  <line x1="450" y1="220" x2="466" y2="220" stroke="#5a6a78" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
+  <!-- IZLAZ 2: green mass flow arrow exiting bottom-right -->
+  <line x1="450" y1="310" x2="560" y2="310" stroke="#1e8449" stroke-width="3" marker-end="url(#u08fup_aG)" />
+  <line x1="450" y1="330" x2="466" y2="330" stroke="#5a6a78" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
+  <!-- bilanca formula at bottom of left panel -->
+  <!-- ===================== DESNI GORNJI PANEL: KLJUCNE JEDNADZBE ===================== -->
+  <rect x="582" y="28" width="364" height="232" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="582" y="28" width="364" height="30" rx="10" fill="#1565c0" />
+  <rect x="582" y="44" width="364" height="14" fill="#1565c0" />
+  <!-- Blok 1: opca bilanca -->
+  <line x1="604" y1="118" x2="924" y2="118" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Lower branch: y=302..340, from x=306..406 -->
-  <rect x="306" y="302" width="100" height="38" fill="url(#u08fup_u8fp-sraf)" stroke="none"/>
-  <rect x="306" y="314" width="100" height="14" fill="url(#u08fup_u8fp-water)" stroke="none"/>
-  <line x1="306" y1="302" x2="406" y2="302" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="306" y1="340" x2="406" y2="340" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="406" y1="302" x2="406" y2="340" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="406" y1="321" x2="428" y2="321" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u08fup_u8fp-arrG)"/>
+  <!-- Blok 2: stacionarno -->
+  <line x1="604" y1="176" x2="924" y2="176" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- KV dashed box around junction -->
-  <rect x="258" y="130" width="60" height="220" rx="8" fill="none" stroke="#c96c35" stroke-width="2" stroke-dasharray="8,5"/>
-  <text x="328" y="235" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c96c35" font-style="italic">KV</text>
+  <!-- Blok 3: nestlaciv, jedna grana -->
+  <!-- ===================== DESNI DONJI PANEL: PRIMJENA ===================== -->
+  <rect x="582" y="276" width="364" height="166" rx="10" fill="#ffffff" stroke="#cce7d4" stroke-width="1.4" />
+  <rect x="582" y="276" width="364" height="26" rx="10" fill="#1e8449" />
+  <rect x="582" y="290" width="364" height="12" fill="#1e8449" />
+  <!-- 4 mini ikone u redu: ventil, T-racva, spremnik, mjesalica -->
+  <!-- centri: 632, 720, 808, 896 -->
 
-  <!-- Flow arrow into junction -->
-  <line x1="46" y1="220" x2="68" y2="220" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u08fup_u8fp-arrG)"/>
+  <!-- IKONA 1: VENTIL (kuglasti ventil sa prolazom) -->
+  <g>
+    <!-- cijev lijevo -->
+    <rect x="600" y="332" width="20" height="20" fill="url(#u08fup_water)" stroke="#5a6a78" stroke-width="1" />
+    <!-- tijelo ventila (krug) -->
+    <circle cx="632" cy="342" r="16" fill="#eef3f7" stroke="#5a6a78" stroke-width="1.3" />
+    <!-- kuglica prolaza -->
+    <circle cx="632" cy="342" r="9" fill="url(#u08fup_water)" stroke="#1565c0" stroke-width="1.2" />
+    <line x1="623" y1="342" x2="641" y2="342" stroke="#1a2530" stroke-width="2" />
+    <!-- rucica -->
+    <line x1="632" y1="342" x2="632" y2="320" stroke="#3a4a56" stroke-width="2.2" />
+    <rect x="624" y="314" width="16" height="6" fill="#3a4a56" />
+    <!-- cijev desno -->
+    <rect x="644" y="332" width="20" height="20" fill="url(#u08fup_water)" stroke="#5a6a78" stroke-width="1" />
+    <!-- strelica protoka -->
+    <line x1="594" y1="342" x2="606" y2="342" stroke="#1e8449" stroke-width="2" marker-end="url(#u08fup_aG)" />
+    <line x1="664" y1="342" x2="676" y2="342" stroke="#1e8449" stroke-width="2" marker-end="url(#u08fup_aG)" />
+    <text x="632" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">ventil</text>
+    <text x="632" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#5a6a78">(prigušenje)</text>
+  </g>
 
-  <!-- Labels -->
-  <text x="50" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">Q₁</text>
-  <text x="440" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">Q₂</text>
-  <text x="430" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">Q₃</text>
-  <text x="130" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">A₁, v₁</text>
+  <!-- IKONA 2: T-RACVA -->
+  <g>
+    <!-- horizontalna cijev -->
+    <rect x="692" y="346" width="56" height="14" fill="url(#u08fup_water)" stroke="#5a6a78" stroke-width="1" />
+    <!-- vertikalna grana -->
+    <rect x="713" y="318" width="14" height="28" fill="url(#u08fup_water)" stroke="#5a6a78" stroke-width="1" />
+    <!-- Q1 ulaz -->
+    <line x1="686" y1="353" x2="694" y2="353" stroke="#c0392b" stroke-width="1.8" marker-end="url(#u08fup_aR)" />
+    <!-- Q2 izlaz desno -->
+    <line x1="748" y1="353" x2="758" y2="353" stroke="#1e8449" stroke-width="1.8" marker-end="url(#u08fup_aG)" />
+    <!-- Q3 izlaz gore -->
+    <line x1="720" y1="318" x2="720" y2="310" stroke="#1e8449" stroke-width="1.8" marker-end="url(#u08fup_aG)" />
+    <text x="720" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">T-račva</text>
+    <text x="720" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#5a6a78">(razdjelnik)</text>
+  </g>
 
-  <text x="58" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Q₁ = Q₂ + Q₃</text>
-  <text x="58" y="385" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">stacionarni tok, nestlačiv fluid</text>
+  <!-- IKONA 3: SPREMNIK s promjenjivom razinom -->
+  <g>
+    <!-- tijelo spremnika -->
+    <rect x="788" y="318" width="50" height="50" fill="#ffffff" stroke="#3a4a56" stroke-width="1.4" />
+    <!-- voda -->
+    <rect x="788" y="338" width="50" height="30" fill="url(#u08fup_water)" />
+    <!-- slobodna povrsina -->
+    <line x1="788" y1="338" x2="838" y2="338" stroke="#1565c0" stroke-width="1.6" />
+    <!-- ciljna razina iznad (dashed) -->
+    <line x1="788" y1="326" x2="838" y2="326" stroke="#7a8a96" stroke-width="0.9" stroke-dasharray="4,3" />
+    <!-- Q_ul s lijeva -->
+    <line x1="772" y1="328" x2="786" y2="328" stroke="#c0392b" stroke-width="1.8" marker-end="url(#u08fup_aR)" />
+    <!-- Q_iz desno dolje -->
+    <line x1="838" y1="360" x2="852" y2="360" stroke="#1e8449" stroke-width="1.8" marker-end="url(#u08fup_aG)" />
+    <!-- dh/dt up arrow inside -->
+    <line x1="813" y1="346" x2="813" y2="328" stroke="#e67e22" stroke-width="1.8" marker-end="url(#u08fup_aO)" />
+    <text x="813" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">spremnik</text>
+    <text x="813" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#5a6a78">(akumulacija)</text>
+  </g>
 
-  <!-- ===== PANEL 2: Ključne jednadžbe (right top) ===== -->
-  <rect x="456" y="94" width="460" height="178" rx="12" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="472" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ključne jednadžbe</text>
-  <line x1="462" y1="125" x2="906" y2="125" stroke="#e8d89a" stroke-width="1"/>
-  <text x="472" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Volumenski protok:     Q = A · v</text>
-  <text x="472" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Jedna cijev:     A₁ v₁ = A₂ v₂</text>
-  <text x="472" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Višestruki tokovi:     ΣQ_ul = ΣQ_iz  (stacionarno)</text>
-  <text x="472" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Akumulacija:     ΣQ_ul − ΣQ_iz = dV_CV/dt</text>
-  <text x="472" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Razina:     dh/dt = (Q_ul − Q_iz) / A_tlocrta</text>
-  <text x="472" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Masena bilanca ṁ = ρQ kad su različite gustoće</text>
-  <text x="472" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">(miješanje, višefazni tokovi)</text>
+  <!-- IKONA 4: MJESALICA (komora s dva ulaza i jednim izlazom + lopatica) -->
+  <g>
+    <!-- komora -->
+    <rect x="876" y="318" width="50" height="50" rx="4" fill="#ffffff" stroke="#3a4a56" stroke-width="1.4" />
+    <!-- voda u komori -->
+    <rect x="876" y="338" width="50" height="30" fill="url(#u08fup_water)" />
+    <line x1="876" y1="338" x2="926" y2="338" stroke="#1565c0" stroke-width="1.4" />
+    <!-- mijesac (rotirajuca lopatica) -->
+    <circle cx="901" cy="353" r="2.2" fill="#3a4a56" />
+    <line x1="901" y1="353" x2="901" y2="328" stroke="#3a4a56" stroke-width="1.4" />
+    <line x1="893" y1="357" x2="909" y2="357" stroke="#3a4a56" stroke-width="2" />
+    <line x1="895" y1="361" x2="907" y2="361" stroke="#3a4a56" stroke-width="1.4" />
+    <!-- ulazi (2) gore -->
+    <line x1="884" y1="306" x2="884" y2="316" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u08fup_aR)" />
+    <line x1="918" y1="306" x2="918" y2="316" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u08fup_aR)" />
+    <!-- izlaz dolje -->
+    <line x1="901" y1="370" x2="901" y2="380" stroke="#1e8449" stroke-width="1.8" marker-end="url(#u08fup_aG)" />
+    <text x="901" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">mješalica</text>
+    <text x="901" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#5a6a78">(miješanje)</text>
+  </g>
 
-  <!-- ===== PANEL 3: Primjena (right bottom) ===== -->
-  <rect x="456" y="284" width="460" height="118" rx="12" fill="#f4f8fb" stroke="#d0dde8" stroke-width="1.5"/>
-  <text x="472" y="307" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Gdje se primjenjuje</text>
-  <!-- Mini tank sketch -->
-  <rect x="620" y="316" width="80" height="66" fill="none" stroke="#3d4f5a" stroke-width="2"/>
-  <rect x="620" y="344" width="80" height="38" fill="url(#u08fup_u8fp-water)" stroke="none"/>
-  <line x1="620" y1="344" x2="700" y2="344" stroke="#2980b9" stroke-width="2"/>
-  <line x1="620" y1="330" x2="700" y2="330" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <!-- Qin arrow left -->
-  <line x1="576" y1="333" x2="618" y2="333" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u08fup_u8fp-arrG)"/>
-  <!-- Qout arrow right -->
-  <line x1="700" y1="355" x2="738" y2="355" stroke="#b42318" stroke-width="2.5" marker-end="url(#u08fup_u8fp-arrR)"/>
-  <!-- dh/dt -->
-  <line x1="660" y1="342" x2="660" y2="332" stroke="#c96c35" stroke-width="2" marker-end="url(#u08fup_u8fp-arrUp)"/>
-  <!-- Labels -->
-  <text x="472" y="335" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">• hidraulični razvodi i sapnice</text>
-  <text x="472" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">• komore za miješanje fluida</text>
-  <text x="472" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">• retencijski bazeni, vodotornjevi</text>
-  <text x="742" y="335" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">Q_in</text>
-  <text x="740" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b42318">Q_out</text>
-</svg>
+  <!-- summary footer in donjem panelu -->
+  <rect x="150" y="140" width="300" height="230" rx="14" fill="none" stroke="#b7600c" stroke-width="1.8" stroke-dasharray="8,5" />
+  <rect x="408" y="146" width="36" height="20" rx="4" fill="#fdf3e6" stroke="#b7600c" stroke-width="1" />
+  <rect x="46" y="402" width="504" height="32" rx="6" fill="#fdf3e6" stroke="#b7600c" stroke-width="1.1" />
+  <text x="46" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Kontrolni volumen — odabrani dio prostora</text>
+  <text x="46" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#5a6a78">umjesto praćenja čestice, prati se ulaz, izlaz i akumulacija mase</text>
+
+  <text x="300" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" font-style="italic" fill="#5a6a78">bilo koji proces / uređaj</text>
+
+  <text x="300" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#e67e22">akumulacija</text>
+  <text x="300" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="15" text-anchor="middle" fill="#e67e22">d<tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">KV</tspan> / d<tspan font-style="italic">t</tspan></text>
+  <text x="64" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#c0392b"><tspan font-weight="700">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">ul</tspan>, ρ<tspan baseline-shift="sub" font-size="0.7em">1</tspan>, <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>, <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="132" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" font-style="italic" fill="#5a6a78">n̂</text>
+
+  <text x="476" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">iz,1</tspan></text>
+  <text x="470" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">n̂</text>
+
+  <text x="476" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">iz,2</tspan></text>
+  <text x="470" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">n̂</text>
+
+  <text x="298" y="423" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">
+    Σ <tspan font-style="italic">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">ul</tspan>
+    − Σ <tspan font-style="italic">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">iz</tspan>
+    = d<tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">KV</tspan> / d<tspan font-style="italic">t</tspan>
+  </text>
+
+  <text x="764" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Ključne jednadžbe poglavlja</text>
+
+  <text x="764" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">opća masena bilanca (nestacionarno)</text>
+  <text x="764" y="103" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530">
+    Σ <tspan font-style="italic">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">ul</tspan>
+    − Σ <tspan font-style="italic">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">iz</tspan>
+    = d<tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">KV</tspan> / d<tspan font-style="italic">t</tspan>
+  </text>
+  <text x="764" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">stacionarno strujanje (bez akumulacije)</text>
+  <text x="764" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530">
+    Σ <tspan font-style="italic">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">ul</tspan>
+    = Σ <tspan font-style="italic">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">iz</tspan>
+    ,   <tspan font-style="italic">ṁ</tspan> = ρ <tspan font-style="italic">Q</tspan> = ρ <tspan font-style="italic">A v</tspan>
+  </text>
+  <text x="764" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">nestlačiv fluid, jedan ulaz i jedan izlaz</text>
+  <text x="764" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#1565c0">
+    <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>
+    <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>
+    = <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>
+    <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>
+  </text>
+
+  <text x="764" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">kontinuitet je rubni slučaj šire masene bilance</text>
+
+  <text x="764" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#ffffff">Gdje se KV i kontinuitet primjenjuju</text>
+
+  <text x="764" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">crveno = ulazi,  zeleno = izlazi,  narančasto = akumulacija</text>
+
+<text x="426" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c">KV</text>
+  <text x="156" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#b7600c">kontrolna ploha KP (granica)</text>
+
+  </svg>

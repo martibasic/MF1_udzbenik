@@ -1,72 +1,247 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-<defs>
-  <marker id="u13frcp_u13rc-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
-  <marker id="u13frcp_u13rc-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#7c3aed"/></marker>
-  <linearGradient id="u13frcp_u13rc-water" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
-  <linearGradient id="u13frcp_u13rc-hot" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fed7aa"/><stop offset="100%" stop-color="#f97316" stop-opacity="0.5"/></linearGradient>
-</defs>
-<rect width="940" height="400" fill="#ffffff"/>
-<rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-<text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Rashladni cjevovod rotacijske peći</text>
-<text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">D = 100 mm · L_uk = 170 m · Q = 0,025 m³/s · Σξ = 13,1 · ν = 1,0·10⁻⁶ m²/s</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="u13frcp_title u13frcp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u13frcp_title">Rashladni cjevovod rotacijske peci u cementari</title>
+  <desc id="u13frcp_desc">Lijevo: shema rashladnog kruga s crpkom, dovodnom cijevi prema rotacijskoj peci, plastom oko peci i odvodnom cijevi natrag prema crpki. Ucrtani su nepovratni ventil (xi 3,5), cetiri koljena (xi 0,9) i regulacijski ventil (xi 6,0). Desno: formula panel s povrsinom presjeka, brzinom, Reynoldsovim brojem, gubitkom trenja i lokalnim gubicima te badge s ukupnim h_w.</desc>
 
-<!-- Pump (orange box, left) x=54..110, y=154..214 -->
-<rect x="54" y="154" width="60" height="62" rx="8" fill="#f59e0b" stroke="#92400e" stroke-width="2.5"/>
-<text x="84" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">C</text>
-<text x="84" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">crpka</text>
-<text x="54" y="145" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b45309">Hp = hw</text>
+  <defs>
+    <linearGradient id="u13frcp_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
+    </linearGradient>
+    <linearGradient id="u13frcp_kiln" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3c382" />
+      <stop offset="0.5" stop-color="#d97a26" />
+      <stop offset="1" stop-color="#a14a0f" />
+    </linearGradient>
+    <linearGradient id="u13frcp_jacket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe5f3" />
+      <stop offset="1" stop-color="#7fb1d4" />
+    </linearGradient>
+    <linearGradient id="u13frcp_pump" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#909fa8" />
+      <stop offset="1" stop-color="#5d6d7e" />
+    </linearGradient>
+    <pattern id="u13frcp_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#e8ecef" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u13frcp_flow" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u13frcp_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u13frcp_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u13frcp_rot" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#a14a0f" />
+    </marker>
+  </defs>
 
-<!-- Supply pipe (top route): from pump to kiln -->
-<!-- horizontal from pump to kiln: y=148..160 (supply), x=114..480 -->
-<rect x="114" y="148" width="366" height="18" fill="url(#u13frcp_u13rc-water)" stroke="#2d3a40" stroke-width="2"/>
-<!-- Flow arrow supply -->
-<line x1="200" y1="157" x2="280" y2="157" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u13frcp_u13rc-ag)"/>
-<text x="240" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e" text-anchor="middle">Q = 0,025 m³/s</text>
+  <!-- okvirni paneli -->
+  <rect x="16" y="16" width="556" height="488" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="588" y="16" width="356" height="488" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-<!-- Fitting symbols on supply pipe -->
-<!-- non-return valve (NRV) at x=150 -->
-<circle cx="160" cy="157" r="8" fill="#fffef6" stroke="#2d3a40" stroke-width="1.5"/>
-<line x1="155" y1="152" x2="165" y2="162" stroke="#2d3a40" stroke-width="1.2"/>
-<line x1="165" y1="152" x2="155" y2="162" stroke="#2d3a40" stroke-width="1.2"/>
-<line x1="162" y1="154" x2="162" y2="160" stroke="#0f766e" stroke-width="1.5"/>
-<text x="162" y="140" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#173043" text-anchor="middle">NRV ξ=3,5</text>
-<!-- elbow at x=350 -->
-<circle cx="350" cy="157" r="6" fill="#fffef6" stroke="#2d3a40" stroke-width="1.2"/>
-<text x="350" y="139" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#173043" text-anchor="middle">4×koljeno</text>
-<!-- control valve at x=420 -->
-<rect x="408" y="149" width="24" height="16" rx="3" fill="#fffef6" stroke="#7c3aed" stroke-width="1.5"/>
-<text x="420" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#7c3aed" text-anchor="middle">RV</text>
-<text x="420" y="141" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#7c3aed" text-anchor="middle">ξ=6,0</text>
+  <!-- ===================== LIJEVI PANEL: SHEMA ===================== -->
+  <!-- ===== ROTACIJSKA PEC (dugacki nagnut cilindar) ===== -->
+  <!-- nagib peci ~ 4 stupnja (cementare): lijevo gore, desno dolje. Os od (130,220) do (510,240) -->
+  <!-- Plast (cooling jacket) - tanji omotac oko peci u istom nagibu -->
+  <g transform="translate(320,230) rotate(3)">
+    <!-- jacket oko peci (svjetloplava) -->
+    <rect x="-185" y="-58" width="370" height="116" rx="14" fill="url(#u13frcp_jacket)" stroke="#3d6f8e" stroke-width="1.5" />
+    <!-- jacket inner outline -->
+    <rect x="-178" y="-50" width="356" height="100" rx="10" fill="none" stroke="#3d6f8e" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6" />
+    <!-- pec (vatrostalna obloga + zid) -->
+    <rect x="-170" y="-40" width="340" height="80" rx="8" fill="url(#u13frcp_kiln)" stroke="#7a3a10" stroke-width="2" />
+    <!-- vatrene cigle - tanke vertikalne linije -->
+    <g stroke="#7a3a10" stroke-width="0.6" opacity="0.5">
+      <line x1="-140" y1="-40" x2="-140" y2="40" />
+      <line x1="-100" y1="-40" x2="-100" y2="40" />
+      <line x1="-60" y1="-40" x2="-60" y2="40" />
+      <line x1="-20" y1="-40" x2="-20" y2="40" />
+      <line x1="20" y1="-40" x2="20" y2="40" />
+      <line x1="60" y1="-40" x2="60" y2="40" />
+      <line x1="100" y1="-40" x2="100" y2="40" />
+      <line x1="140" y1="-40" x2="140" y2="40" />
+    </g>
+    <!-- oznaka "rotacijska pec" unutra -->
+    <!-- rotation arc (ω) iznad peci -->
+    <path d="M -90,-80 A 26,16 0 0 1 -40,-80" fill="none" stroke="#a14a0f" stroke-width="1.6" marker-end="url(#u13frcp_rot)" />
+    <text x="0" y="-6" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3a1a05">rotacijska peć</text>
+    <text x="0" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#3a1a05">vatrostalna obloga</text>
+    <text x="-65" y="-86" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#a14a0f">ω</text>
+  </g>
 
-<!-- Rotary kiln: circle at x=544, y=185 -->
-<circle cx="544" cy="185" r="55" fill="url(#u13frcp_u13rc-hot)" stroke="#c2410c" stroke-width="3"/>
-<text x="544" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c2410c" text-anchor="middle">rotacijska</text>
-<text x="544" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c2410c" text-anchor="middle">peć</text>
-<!-- rotation arrows -->
-<path d="M 524,145 A 30,30 0 0,1 564,145" fill="none" stroke="#c2410c" stroke-width="2" marker-end="url(#u13frcp_u13rc-ag)"/>
+  <!-- ===== CRPKA (dolje lijevo) ===== -->
+  <!-- kuciste crpke -->
+  <g transform="translate(80,400)">
+    <circle cx="0" cy="0" r="26" fill="url(#u13frcp_pump)" stroke="#3a4a56" stroke-width="2" />
+    <!-- impeler -->
+    <circle cx="0" cy="0" r="12" fill="#3a4a56" />
+    <path d="M 0,-10 A 10,10 0 0 1 8,6 L 0,0 z" fill="#909fa8" />
+    <path d="M 8,6 A 10,10 0 0 1 -8,6 L 0,0 z" fill="#7a8a96" />
+    <path d="M -8,6 A 10,10 0 0 1 0,-10 L 0,0 z" fill="#909fa8" />
+    <!-- stalak / postolje -->
+    <rect x="-30" y="26" width="60" height="8" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1" />
+    <!-- oznaka -->
+    <text x="0" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">crpka</text>
+    <text x="0" y="71" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
+  </g>
 
-<!-- Return pipe (bottom, from kiln back to pump) -->
-<!-- from kiln down and back: y=218..234, x=114..480 -->
-<rect x="114" y="218" width="366" height="18" fill="url(#u13frcp_u13rc-hot)" stroke="#c2410c" stroke-width="2"/>
-<!-- flow arrow return (rightward = back to pump from kiln) -->
-<line x1="340" y1="227" x2="260" y2="227" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u13frcp_u13rc-ag)"/>
-<text x="300" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c2410c" text-anchor="middle">voda iz peći (topla)</text>
+  <!-- ===== DOVODNA CIJEV (od crpke prema peci - gornja ruta) ===== -->
+  <!-- vertical up from pump (80,374) to (80,180), then horizontal to (510,180), then down to jacket (510,200) -->
+  <!-- Voda u cijevi -->
+  <g>
+    <!-- ulazni vertikalni segment -->
+    <rect x="73" y="180" width="14" height="194" fill="url(#u13frcp_voda)" stroke="#2d3a40" stroke-width="1.6" />
+    <!-- horizontalna dovodna -->
+    <rect x="80" y="173" width="430" height="14" fill="url(#u13frcp_voda)" stroke="#2d3a40" stroke-width="1.6" />
+    <!-- spojni vertikalni do jacket -->
+    <rect x="503" y="180" width="14" height="40" fill="url(#u13frcp_voda)" stroke="#2d3a40" stroke-width="1.6" />
+  </g>
 
-<!-- Connection pipes (vertical at kiln) -->
-<rect x="480" y="148" width="14" height="20" fill="url(#u13frcp_u13rc-water)" stroke="#2d3a40" stroke-width="2"/>
-<rect x="480" y="218" width="14" height="20" fill="url(#u13frcp_u13rc-hot)" stroke="#c2410c" stroke-width="2"/>
+  <!-- ===== ODVODNA CIJEV (od peci natrag - donja ruta) ===== -->
+  <g>
+    <!-- vertikalni spoj iz jacket dolje -->
+    <rect x="143" y="280" width="14" height="120" fill="url(#u13frcp_voda)" stroke="#2d3a40" stroke-width="1.6" />
+    <!-- horizontalna povratna -->
+    <rect x="80" y="393" width="77" height="14" fill="url(#u13frcp_voda)" stroke="#2d3a40" stroke-width="1.6" />
+  </g>
 
-<!-- Σξ label -->
-<text x="240" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">Σξ = ξ_NRV + 4·ξ_koljeno + ξ_RV = 3,5 + 4·0,9 + 6,0 = 13,1</text>
+  <!-- ===== PRIKLJUCAK NA JACKET (port overlay na desnoj strani jacket-a) ===== -->
+  <!-- Dovod ulazi u jacket s vrha na desnoj strani -->
+  <rect x="503" y="200" width="14" height="20" fill="url(#u13frcp_voda)" stroke="none" />
+  <!-- Odvod izlazi iz jacket-a s dna na lijevoj strani -->
+  <rect x="143" y="270" width="14" height="20" fill="url(#u13frcp_voda)" stroke="none" />
 
-<!-- L and D label -->
-<text x="240" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">L_uk = 2×85 = 170 m  ·  D = 100 mm  ·  λ = 0,022 (Moody)</text>
+  <!-- ===== FITTINGS NA DOVODU (gornja horizontala) ===== -->
+  <!-- Koljeno 1 (kut crpka -> horizontala): x=80,y=180 -->
+  <circle cx="80" cy="180" r="9" fill="#fdfdfd" stroke="#2d3a40" stroke-width="1.4" />
+  <!-- Koljeno 2 (horizontala -> dolje na jacket): x=510,y=180 -->
+  <circle cx="510" cy="180" r="9" fill="#fdfdfd" stroke="#2d3a40" stroke-width="1.4" />
+  <!-- Nepovratni ventil NRV - kvadratni element na vertikali ulaza -->
+  <rect x="65" y="240" width="30" height="26" rx="3" fill="#fdfdfd" stroke="#2d3a40" stroke-width="1.6" />
+  <!-- NRV symbol: kuglica + sjedalo -->
+  <circle cx="80" cy="256" r="5" fill="#1e8449" />
+  <line x1="71" y1="251" x2="89" y2="251" stroke="#2d3a40" stroke-width="1.4" />
+  <!-- NRV badge premjesten lijevo od ventila s leader linijom -->
+  <line x1="65" y1="253" x2="55" y2="253" stroke="#5a6a78" stroke-width="0.7" stroke-dasharray="3,2" />
+  <!-- Regulacijski ventil RV - na horizontali dovoda -->
+  <rect x="260" y="160" width="34" height="40" rx="3" fill="#f3eafa" stroke="#8e44ad" stroke-width="1.8" />
+  <!-- RV symbol: dva trokuta + handle -->
+  <path d="M 263,180 L 291,180 L 277,170 z" fill="#fdfdfd" stroke="#8e44ad" stroke-width="1.2" />
+  <path d="M 263,180 L 291,180 L 277,190 z" fill="#fdfdfd" stroke="#8e44ad" stroke-width="1.2" />
+  <line x1="277" y1="160" x2="277" y2="167" stroke="#8e44ad" stroke-width="2" />
+  <rect x="271" y="155" width="12" height="6" rx="1" fill="#8e44ad" />
+  <!-- RV labele premjestene gore (iznad ventila) da ne preklapaju naslov peci -->
+  <line x1="294" y1="170" x2="308" y2="164" stroke="#8e44ad" stroke-width="0.7" stroke-dasharray="3,2" />
 
-<!-- Results panel -->
-<rect x="44" y="298" width="860" height="74" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-<text x="60" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Izračun:</text>
-<text x="60" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e293b">v = Q/A = 0,025/7,854·10⁻³ = 3,18 m/s   ·   Re = 3,18·10⁵ (turbulentno)</text>
-<text x="60" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e293b">h_f = 0,022·(170/0,100)·(3,18²/2·9,81) = <tspan font-weight="700" fill="#b42318">19,31 m</tspan>   ·   h_loc = 13,1·0,516 = <tspan font-weight="700" fill="#b42318">6,76 m</tspan></text>
-<text x="620" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b42318">h_w = H_p = 26,07 m</text>
-<text x="620" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677" font-style="italic">Lokalni gubici: 26% ukupnih</text>
-</svg>
+  <!-- ===== FITTINGS NA ODVODU (donja horizontala) ===== -->
+  <!-- Koljeno 3 (jacket -> dolje): x=150,y=280 -->
+  <circle cx="150" cy="280" r="9" fill="#fdfdfd" stroke="#2d3a40" stroke-width="1.4" />
+  <!-- Koljeno 4 (donji kut): x=150,y=400 -->
+  <circle cx="150" cy="400" r="9" fill="#fdfdfd" stroke="#2d3a40" stroke-width="1.4" />
+
+  <!-- Oznake koljena (label) -->
+  <!-- Skupna oznaka 4 koljena -->
+  <!-- ===== STRELICE PROTOKA Q ===== -->
+  <!-- Dovod: prema gore (crpka -> jacket) -->
+  <line x1="80" y1="335" x2="80" y2="305" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u13frcp_flow)" />
+  <!-- Dovod: udesno (gornja horizontala) -->
+  <line x1="180" y1="180" x2="240" y2="180" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u13frcp_flow)" />
+  <line x1="340" y1="180" x2="400" y2="180" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u13frcp_flow)" />
+  <!-- Dovod: prema dolje u jacket -->
+  <line x1="510" y1="195" x2="510" y2="215" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u13frcp_flow)" />
+  <!-- Odvod: prema dolje iz jacket-a -->
+  <line x1="150" y1="320" x2="150" y2="360" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u13frcp_flow)" />
+  <!-- Odvod: prema lijevo (povratna horizontala) -->
+  <line x1="135" y1="400" x2="115" y2="400" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u13frcp_flow)" />
+
+  <!-- Q label -->
+  <rect x="358" y="143" width="100" height="22" rx="5" fill="#e8f5ec" stroke="#1e8449" stroke-width="1.2" />
+  <!-- "topla voda iz peci" oznaka -->
+  <!-- ===== KOTA D (promjer cijevi) - na povratnoj horizontali, pomaknuta dalje od crpke ===== -->
+  <!-- pomocne linije od gornjeg i donjeg ruba cijevi do mjerne linije -->
+  <!-- mjerna oznaka D -->
+  <!-- ===== KOTA L_uk = 170 m ===== -->
+  <!-- pomocna od koljena k1 dolje -->
+  <!-- Sigma xi sumarna oznaka -->
+  <!-- ===================== DESNI PANEL: FORMULE ===================== -->
+  <!-- Header bar -->
+  <rect x="588" y="16" width="356" height="34" rx="14" fill="#1565c0" />
+  <rect x="588" y="36" width="356" height="14" fill="#1565c0" />
+  <!-- Blok 1: presjek + brzina -->
+  <line x1="612" y1="130" x2="920" y2="130" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 2: Reynolds -->
+  <line x1="612" y1="204" x2="920" y2="204" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 3: gubici trenja po duljini -->
+  <line x1="612" y1="296" x2="920" y2="296" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 4: lokalni gubici -->
+  <line x1="612" y1="388" x2="920" y2="388" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Saze tak italic -->
+  <!-- Result badge: h_w = 26,07 m -->
+  <rect x="612" y="424" width="308" height="62" rx="10" fill="#e8f5ec" stroke="#1e8449" stroke-width="1.6" />
+  <!-- napomena o udjelu lokalnih gubitaka -->
+  <line x1="115" y1="393" x2="200" y2="435" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,2" />
+  <line x1="115" y1="407" x2="200" y2="448" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,2" />
+  <line x1="200" y1="432" x2="200" y2="451" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="195" y1="441" x2="205" y2="441" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="80" y1="180" x2="80" y2="478" stroke="#b7600c" stroke-width="0.7" opacity="0" />
+  <line x1="510" y1="180" x2="510" y2="478" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="80" y1="475" x2="80" y2="463" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="510" y1="475" x2="510" y2="463" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="83" y1="469" x2="507" y2="469" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u13frcp_dimL)" marker-end="url(#u13frcp_dim)" />
+  <rect x="320" y="445" width="240" height="22" rx="5" fill="#fff5e8" stroke="#b7600c" stroke-width="1.2" opacity="0" />
+
+  <text x="40" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Shema rashladnog kruga</text>
+  <text x="40" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78"><tspan font-style="italic">L</tspan> = 2 × 85 m, <tspan font-style="italic">D</tspan> = 100 mm, <tspan font-style="italic">Q</tspan> = 0,025 m³/s</text>
+
+  <text x="52" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="end" fill="#1a2530">NRV</text>
+  <text x="52" y="263" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#5a6a78">ξ = 3,5</text>
+
+  <text x="310" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#8e44ad">RV</text>
+  <text x="310" y="179" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8e44ad">ξ = 6,0</text>
+  <text x="80" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">k1</text>
+  <text x="510" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">k2</text>
+  <text x="135" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#5a6a78">k3</text>
+  <text x="135" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#5a6a78">k4</text>
+
+  <text x="290" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4 × koljeno (k1…k4), ξ = 0,9 svako</text>
+
+  <text x="408" y="159" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">Q</tspan> = 0,025 m³/s</text>
+
+  <text x="70" y="427" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">povrat (topla)</text>
+  <text x="35" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">dovod</text>
+  <text x="35" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">(hladna)</text>
+
+  <text x="766" y="38" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Proračun gubitaka</text>
+
+  <text x="766" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">presjek i srednja brzina</text>
+  <text x="766" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">A</tspan> = π<tspan font-style="italic">D</tspan>²/4 = 7,854 · 10⁻³ m²</text>
+  <text x="766" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">v</tspan> = <tspan font-style="italic">Q</tspan>/<tspan font-style="italic">A</tspan> = 3,183 m/s</text>
+  <text x="766" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Reynoldsov broj (turbulentno)</text>
+  <text x="766" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">Re</tspan> = <tspan font-style="italic">vD</tspan>/ν = 3,183 · 0,1 / 1,0 · 10⁻⁶</text>
+  <text x="766" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">Re</tspan> ≈ 3,18 · 10⁵  →  λ = 0,022 (Moody)</text>
+  <text x="766" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">linijski (po duljini) gubici</text>
+  <text x="766" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">f</tspan> = λ (<tspan font-style="italic">L</tspan>/<tspan font-style="italic">D</tspan>) (<tspan font-style="italic">v</tspan>²/2g)</text>
+  <text x="766" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530">= 0,022 · 1700 · 0,5164</text>
+  <text x="766" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 19,31 m</text>
+  <text x="766" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">lokalni (na elementima) gubici</text>
+  <text x="766" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530">Σξ = 3,5 + 4 · 0,9 + 6,0 = 13,1</text>
+  <text x="766" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">loc</tspan> = Σξ · <tspan font-style="italic">v</tspan>²/2g</text>
+  <text x="766" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 13,1 · 0,5164 = 6,76 m</text>
+  <text x="766" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Δ<tspan font-style="italic">z</tspan> = 0,  <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>  →  <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
+
+  <text x="766" y="444" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTAT</text>
+  <text x="766" y="471" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">f</tspan> + <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">loc</tspan> = 26,07 m</text>
+
+  <text x="766" y="498" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">lokalni gubici ≈ 26 % ukupnih (znacaj reg. ventila)</text>
+<text x="210" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c"><tspan font-style="italic">D</tspan> = 100 mm</text>
+
+  <text x="295" y="489" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">L</tspan><tspan baseline-shift="sub" font-size="0.7em">uk</tspan> = 2 × 85 = 170 m  (dovod + povrat)</text>
+
+  </svg>

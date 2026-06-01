@@ -1,102 +1,462 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="700" viewBox="0 0 940 700" role="img" aria-labelledby="u10vs-title u10vs-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u10vs-title">U10 - skice zadataka T1 do T6</title>
-  <desc id="u10vs-desc">Šest minimalnih grayscale tehničkih skica za U10 zadatke T1 do T6.</desc>
-  <rect width="940" height="700" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="652" rx="16" fill="#ffffff" stroke="#d4d9de" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" role="img" aria-labelledby="u10vs-title u10vs-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u10vs-title">U10 vjezbe - sest tehnickih skica uz zadatke T1 do T6</title>
+  <desc id="u10vs-desc">Sest mini panela: T1 ravna cijev s lokalnim elementima, T2 dva spremnika i cijev s koljenom, T3 Pitot-statik cijev s diferencijalnim manometrom, T4 realni sifon s vrhom, T5 usisni vod i crpka iznad spremnika, T6 crpka izmedju usisnog i tlacnog spremnika.</desc>
 
   <defs>
-    <marker id="u10vs-arrD" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#111111"/></marker>
+    <linearGradient id="u10vs-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <linearGradient id="u10vs-pipe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cdd5dc" />
+      <stop offset="100%" stop-color="#8a98a3" />
+    </linearGradient>
+    <radialGradient id="u10vs-pump" cx="0.45" cy="0.4" r="0.65">
+      <stop offset="0%" stop-color="#f1f4f7" />
+      <stop offset="100%" stop-color="#8a98a3" />
+    </radialGradient>
+    <pattern id="u10vs-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.4" />
+    </pattern>
+    <marker id="u10vs-aFlow" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
+    </marker>
+    <marker id="u10vs-aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u10vs-aDimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u10vs-aRed" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
   </defs>
 
-  <g transform="translate(46 116)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T1</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Ravna cijev i lokalni gubici</text>
-    <line x1="72" y1="104" x2="344" y2="104" stroke="#3f4750" stroke-width="10" stroke-linecap="round"/>
-    <circle cx="148" cy="104" r="12" fill="#d8dde2" stroke="#3f4750" stroke-width="2"/>
-    <circle cx="256" cy="104" r="12" fill="#d8dde2" stroke="#3f4750" stroke-width="2"/>
-    <text x="138" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">xi</text>
-    <text x="246" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">xi</text>
-    <text x="186" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">L, D, lambda</text>
-  </g>
+  <rect width="1200" height="920" fill="#ffffff" />
 
-  <g transform="translate(502 116)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T2</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Dva spremnika i jedna cijev</text>
-    <path d="M88 58 L88 132 L156 132 L156 58" fill="none" stroke="#3f4750" stroke-width="3"/>
-    <path d="M278 44 L278 132 L346 132 L346 44" fill="none" stroke="#3f4750" stroke-width="3"/>
-    <rect x="88" y="88" width="68" height="44" fill="#edf1f4"/>
-    <rect x="278" y="70" width="68" height="62" fill="#edf1f4"/>
-    <line x1="156" y1="118" x2="278" y2="118" stroke="#3f4750" stroke-width="8" stroke-linecap="round"/>
-    <text x="196" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">L, D</text>
-    <text x="182" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">delta z</text>
-  </g>
+  <!-- ============================================================
+       PANEL T1 (top-left) - Ravna cijev s lokalnim elementima
+       (0,0) - (400,300) relativno
+  ============================================================ -->
+  <g transform="translate(20 20)">
+    <rect x="0" y="0" width="380" height="280" rx="12" fill="#fbfdff" stroke="#cfdde9" stroke-width="1.4" />
 
-  <g transform="translate(46 298)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T3</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Pitot-statik i delta h</text>
-    <line x1="64" y1="104" x2="228" y2="104" stroke="#3f4750" stroke-width="8" stroke-linecap="round"/>
-    <line x1="166" y1="70" x2="166" y2="104" stroke="#3f4750" stroke-width="4"/>
-    <path d="M166 70 L206 70 L206 132" fill="none" stroke="#3f4750" stroke-width="4"/>
-    <line x1="236" y1="70" x2="236" y2="132" stroke="#3f4750" stroke-width="4"/>
-    <line x1="206" y1="132" x2="236" y2="132" stroke="#3f4750" stroke-width="4"/>
-    <line x1="252" y1="82" x2="252" y2="118" stroke="#6a737c" stroke-width="2"/>
-    <text x="260" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">delta h</text>
-    <text x="150" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">C</text>
-  </g>
+    <!-- Badge T1 -->
+    <rect x="14" y="14" width="40" height="26" rx="6" fill="#1565c0" />
+    <!-- Cijev - puna (pipe gradient) -->
+    <rect x="30" y="148" width="320" height="36" fill="url(#u10vs-pipe)" stroke="#3a4a56" stroke-width="1.4" />
+    <!-- Vodena ispuna unutar cijevi (mali pojas u sredini) -->
+    <rect x="30" y="156" width="320" height="20" fill="url(#u10vs-water)" opacity="0.6" />
 
-  <g transform="translate(502 298)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T4</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Realni sifon</text>
-    <path d="M98 122 L98 72 Q98 48 122 48 L252 48 Q276 48 276 72 L276 132 L344 132" fill="none" stroke="#3f4750" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="64" y1="122" x2="128" y2="122" stroke="#5f6871" stroke-width="2"/>
-    <text x="168" y="38" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">K</text>
-    <text x="286" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">vrh</text>
-    <line x1="344" y1="132" x2="388" y2="132" stroke="#111111" stroke-width="3" marker-end="url(#u10vs-arrD)"/>
-  </g>
+    <!-- Lokalni elementi (xi): ulazno koljeno (lijevo), ventil (sredina), izlaz -->
+    <!-- Koljeno markirano kao "xi_1" -->
+    <circle cx="98" cy="166" r="9" fill="#f0f4f7" stroke="#3a4a56" stroke-width="1.6" />
+    <!-- Ventil (sredinski) - kvadratic -->
+    <rect x="184" y="142" width="22" height="48" fill="#dce5ec" stroke="#3a4a56" stroke-width="1.4" />
+    <line x1="184" y1="142" x2="206" y2="190" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="206" y1="142" x2="184" y2="190" stroke="#3a4a56" stroke-width="1.2" />
+    <!-- Izlaz - mala oznaka -->
+    <circle cx="282" cy="166" r="9" fill="#f0f4f7" stroke="#3a4a56" stroke-width="1.6" />
+    <!-- Strelica toka (v) -->
+    <line x1="42" y1="166" x2="76" y2="166" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u10vs-aFlow)" />
+    <line x1="312" y1="166" x2="346" y2="166" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u10vs-aFlow)" />
+    <!-- Kota L (vodoravno ispod cijevi) -->
+    <!-- Kota D (vertikalno lijevo) -->
+    <!-- Parametri (donji red) -->
+    <line x1="30" y1="186" x2="30" y2="220" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="350" y1="186" x2="350" y2="220" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="30" y1="224" x2="30" y2="210" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="350" y1="224" x2="350" y2="210" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="33" y1="217" x2="347" y2="217" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10vs-aDimL)" marker-end="url(#u10vs-aDim)" />
+    <line x1="20" y1="148" x2="22" y2="148" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="20" y1="184" x2="22" y2="184" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="20" y1="150" x2="20" y2="182" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10vs-aDimL)" marker-end="url(#u10vs-aDim)" />
+    <text x="34" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">T1</text>
+    <text x="62" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Ravna cijev – linijski i lokalni gubici</text>
 
-  <g transform="translate(46 480)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T5</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Usisni vod i crpka</text>
-    <path d="M42 108 L42 132 L100 132 L100 108" fill="none" stroke="#3f4750" stroke-width="2.4"/>
-    <line x1="42" y1="108" x2="100" y2="108" stroke="#5f6871" stroke-width="2"/>
-    <path d="M100 118 L164 118 L164 90 L236 90 L236 74 L258 74" fill="none" stroke="#3f4750" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="278" cy="74" r="18" fill="#e9edf0" stroke="#3f4750" stroke-width="2"/>
-    <text x="268" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">P</text>
-    <line x1="238" y1="74" x2="238" y2="108" stroke="#6a737c" stroke-width="2"/>
-    <text x="246" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">zS</text>
-    <text x="146" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">Ls, Ds, sum xi</text>
-    <text x="302" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">p_abs</text>
-  </g>
+    <text x="98" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1a2530">ξ₁</text>
+    <text x="195" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1a2530">ξ₂</text>
+    <text x="282" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1a2530">ξ₃</text>
 
-  <g transform="translate(502 480)">
-    <rect x="0" y="0" width="430" height="164" rx="14" fill="#fbfbfb" stroke="#d8dde1" stroke-width="1.6"/>
-    <rect x="18" y="14" width="44" height="24" rx="6" fill="#f0f2f4" stroke="#c6ccd2" stroke-width="1.3"/>
-    <text x="32" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">T6</text>
-    <text x="82" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#1f2933">Crpka između dva spremnika</text>
-    <path d="M34 108 L34 132 L94 132 L94 108" fill="none" stroke="#3f4750" stroke-width="2.4"/>
-    <path d="M324 84 L324 132 L384 132 L384 84" fill="none" stroke="#3f4750" stroke-width="2.4"/>
-    <line x1="34" y1="108" x2="94" y2="108" stroke="#5f6871" stroke-width="2"/>
-    <line x1="324" y1="84" x2="384" y2="84" stroke="#5f6871" stroke-width="2"/>
-    <path d="M94 118 L150 118 L150 96 L194 96" fill="none" stroke="#3f4750" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="212" cy="96" r="18" fill="#e9edf0" stroke="#3f4750" stroke-width="2"/>
-    <text x="202" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">P</text>
-    <path d="M230 96 L274 96 L274 84 L324 84" fill="none" stroke="#3f4750" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="134" y1="96" x2="134" y2="108" stroke="#6a737c" stroke-width="2"/>
-    <line x1="292" y1="84" x2="292" y2="96" stroke="#6a737c" stroke-width="2"/>
-    <text x="116" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">hs</text>
-    <text x="300" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">hd</text>
-    <text x="204" y="70" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">Hp</text>
-    <text x="48" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">A</text>
-    <text x="390" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1f2933">B</text>
+    <text x="58" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1565c0"><tspan font-weight="700">v</tspan> = 2,1 m/s</text>
+
+    <text x="190" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#3a4a56">λ = 0,031  ·  Σξ = 3,8</text>
+  <text x="190" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c"><tspan font-weight="700">L</tspan> = 28 m</text>
+
+    <text x="14" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#b7600c"><tspan font-weight="700">D</tspan></text>
+    <text x="14.0" y="186.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#b7600c">= 90 mm</text>
+
+    </g>
+
+  <!-- ============================================================
+       PANEL T2 (top-middle) - Dva spremnika spojena cijevi s koljenom
+       transform translate(420 20)
+  ============================================================ -->
+  <g transform="translate(420 20)">
+    <rect x="0" y="0" width="380" height="280" rx="12" fill="#fbfdff" stroke="#cfdde9" stroke-width="1.4" />
+
+    <rect x="14" y="14" width="40" height="26" rx="6" fill="#1565c0" />
+    <!-- Gornji spremnik (lijevi) - razina visa -->
+    <!-- Voda gornji -->
+    <rect x="30" y="78" width="84" height="86" fill="url(#u10vs-water)" />
+    <!-- Stjenke gornji -->
+    <rect x="22" y="64" width="8" height="120" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="114" y="64" width="8" height="120" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="22" y="184" width="100" height="8" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <!-- Slobodna povrsina gornji -->
+    <line x1="30" y1="78" x2="114" y2="78" stroke="#1565c0" stroke-width="1.6" />
+
+    <!-- Donji spremnik (desni) - razina niza -->
+    <rect x="262" y="118" width="88" height="46" fill="url(#u10vs-water)" />
+    <rect x="254" y="100" width="8" height="84" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="350" y="100" width="8" height="84" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="254" y="184" width="104" height="8" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="262" y1="118" x2="350" y2="118" stroke="#1565c0" stroke-width="1.6" />
+
+    <!-- Spojna cijev s koljenom: izlazi iz dna gornjeg, ide dolje, koljeno, vodoravno, ulazi u donji -->
+    <!-- Vertikalni segment iz gornjeg dolje (port + cijev) -->
+    <rect x="74" y="150" width="14" height="14" fill="url(#u10vs-water)" />
+    <!-- Cijev (siva) horizontalno na y=150..164 ide od x=74 do x=262 sa koljenom u sredini gore-dolje -->
+    <path d="M 74 144 L 200 144 L 200 138 L 262 138 L 262 152 L 200 152 L 200 158 L 74 158 Z" fill="url(#u10vs-pipe)" stroke="#3a4a56" stroke-width="1.4" />
+    <!-- Vodena ispuna u cijevi -->
+    <path d="M 88 148 L 196 148 L 196 142 L 254 142 L 254 154 L 196 154 L 196 158 L 88 158 Z" fill="url(#u10vs-water)" opacity="0.85" />
+
+    <!-- Port overlay - prelaze stjenke -->
+    <rect x="114" y="144" width="8" height="14" fill="url(#u10vs-water)" />
+    <rect x="254" y="138" width="8" height="16" fill="url(#u10vs-water)" />
+
+    <!-- Koljeno marker (xi) -->
+    <circle cx="200" cy="146" r="8" fill="#f0f4f7" stroke="#3a4a56" stroke-width="1.4" />
+    <!-- Strelica toka -->
+    <line x1="140" y1="151" x2="172" y2="151" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u10vs-aFlow)" />
+
+    <!-- Kota Δz (vertikalno desno od oba spremnika) -->
+    <line x1="78" y1="78" x2="252" y2="78" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="78" y1="118" x2="252" y2="118" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <!-- Kota L (cijev, ispod) -->
+    <!-- Parametri -->
+    <line x1="240" y1="78" x2="240" y2="118" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10vs-aDimL)" marker-end="url(#u10vs-aDim)" />
+    <line x1="232" y1="78" x2="248" y2="78" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="232" y1="118" x2="248" y2="118" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="80" y1="190" x2="80" y2="216" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="256" y1="190" x2="256" y2="216" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="80" y1="220" x2="80" y2="208" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="256" y1="220" x2="256" y2="208" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="83" y1="214" x2="253" y2="214" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10vs-aDimL)" marker-end="url(#u10vs-aDim)" />
+    <text x="34" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">T2</text>
+    <text x="62" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Dva spremnika – jedna cijev</text>
+
+    <text x="200" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#1a2530">ξ</text>
+
+    <text x="190" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#3a4a56">λ = 0,029  ·  Σξ = 5,1</text>
+  <text x="244" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c"><tspan font-weight="700">Δz</tspan> = 6,2 m</text>
+
+    <text x="168" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c"><tspan font-weight="700">L</tspan> = 42 m,  <tspan font-weight="700">D</tspan> = 75 mm</text>
+
+    </g>
+
+  <!-- ============================================================
+       PANEL T3 (top-right) - Pitot-statik s diferencijalnim manometrom
+       transform translate(820 20)
+  ============================================================ -->
+  <g transform="translate(820 20)">
+    <rect x="0" y="0" width="360" height="280" rx="12" fill="#fbfdff" stroke="#cfdde9" stroke-width="1.4" />
+
+    <rect x="14" y="14" width="40" height="26" rx="6" fill="#1565c0" />
+    <!-- Glavna cijev (horizontalna) s vodom -->
+    <rect x="20" y="178" width="320" height="46" fill="url(#u10vs-water)" stroke="#1565c0" stroke-width="1.4" />
+    <!-- Tok strelica -->
+    <line x1="38" y1="201" x2="80" y2="201" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u10vs-aFlow)" />
+    <!-- Statički otvor (na stjenci cijevi) -->
+    <circle cx="160" cy="178" r="3" fill="#1565c0" />
+    <!-- Pitot sonda (savijena cijev): otvor unutar toka, vodi gore -->
+    <path d="M 220 222 L 220 130 L 180 130" fill="none" stroke="#3a4a56" stroke-width="2.2" />
+    <!-- Vrh Pitota (stagnacijska tocka, mala crvena tocka unutar toka) -->
+    <circle cx="220" cy="218" r="3.5" fill="#c0392b" />
+
+    <!-- Statička stupac (visi sa otvora gore) -->
+    <line x1="160" y1="178" x2="160" y2="130" stroke="#3a4a56" stroke-width="2.2" />
+    <line x1="160" y1="130" x2="140" y2="130" stroke="#3a4a56" stroke-width="2.2" />
+
+    <!-- Diferencijalni manometar (dvije vertikalne staklene cijevi gore lijevo) -->
+    <!-- Lijeva (statička) cijev s vodom do razine A -->
+    <rect x="132" y="60" width="16" height="70" fill="url(#u10vs-water)" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="132" y1="100" x2="148" y2="100" stroke="#1565c0" stroke-width="1.6" />
+    <!-- Desna (Pitot) cijev s vodom do razine B (visa) -->
+    <rect x="172" y="60" width="16" height="70" fill="url(#u10vs-water)" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="172" y1="76" x2="188" y2="76" stroke="#1565c0" stroke-width="1.6" />
+
+    <!-- Oznake C i delta h -->
+    <!-- Kota delta h izmedu razina -->
+    <line x1="148" y1="100" x2="226" y2="100" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="188" y1="76" x2="226" y2="76" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <!-- Koeficijent sonde -->
+    <rect x="248" y="124" width="100" height="32" rx="6" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.2" />
+    <!-- Donja stjenka cijevi (hatched) -->
+    <rect x="20" y="224" width="320" height="8" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+
+    <line x1="218" y1="76" x2="218" y2="100" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10vs-aDimL)" marker-end="url(#u10vs-aDim)" />
+    <line x1="212" y1="76" x2="224" y2="76" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="212" y1="100" x2="224" y2="100" stroke="#b7600c" stroke-width="1.2" />
+    <text x="34" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">T3</text>
+    <text x="62" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Pitot-statik cijev – Δh</text>
+
+    <text x="58" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1565c0"><tspan font-weight="700">v</tspan></text>
+
+    <text x="140" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">stat.</text>
+    <text x="180" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">stag.</text>
+
+    <text x="298" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1565c0"><tspan font-weight="700">C</tspan> = 0,98</text>
+
+    <text x="180" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#3a4a56"><tspan font-style="italic">v</tspan> = <tspan font-style="italic">C</tspan> · √(2<tspan font-style="italic">g</tspan> Δ<tspan font-style="italic">h</tspan>)</text>
+  <text x="232" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c"><tspan font-weight="700">Δh</tspan> = 0,32 m</text>
+
+    </g>
+
+  <!-- ============================================================
+       PANEL T4 (bottom-left) - Realni sifon
+       transform translate(20 320)
+  ============================================================ -->
+  <g transform="translate(20 320)">
+    <rect x="0" y="0" width="380" height="280" rx="12" fill="#fbfdff" stroke="#cfdde9" stroke-width="1.4" />
+
+    <rect x="14" y="14" width="40" height="26" rx="6" fill="#1565c0" />
+    <!-- Spremnik (lijevo) -->
+    <rect x="32" y="118" width="116" height="80" fill="url(#u10vs-water)" />
+    <rect x="24" y="100" width="8" height="118" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="148" y="100" width="8" height="118" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="24" y="218" width="132" height="8" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="32" y1="118" x2="148" y2="118" stroke="#1565c0" stroke-width="1.6" />
+
+    <!-- Sifon: usisni dio (uronjen, izlazi gore preko ruba, vrh, silazi dolje, izlaz desno) -->
+    <!-- Cijev (siva) -->
+    <path d="M 96 192 L 96 78 L 280 78 L 280 226" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Voda u sifonu (uza linija unutar) -->
+    <path d="M 96 192 L 96 78 L 280 78 L 280 226" fill="none" stroke="#5b9ec9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Vrh sifona (oznaka K) -->
+    <circle cx="188" cy="78" r="5" fill="#c0392b" />
+    <!-- Izlaz strelica (v) -->
+    <line x1="284" y1="232" x2="284" y2="252" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u10vs-aFlow)" />
+    <!-- Kota: vrh K iznad razine (0,90 m) -->
+    <line x1="188" y1="118" x2="350" y2="118" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="188" y1="78" x2="350" y2="78" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <!-- Kota Δz (slobodna povrsina do izlaza) -->
+    <line x1="280" y1="226" x2="316" y2="226" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <!-- Promjer D i koeficijent K -->
+    <line x1="342" y1="78" x2="342" y2="118" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10vs-aDimL)" marker-end="url(#u10vs-aDim)" />
+    <line x1="334" y1="78" x2="350" y2="78" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="334" y1="118" x2="350" y2="118" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="316" y1="118" x2="316" y2="226" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10vs-aDimL)" marker-end="url(#u10vs-aDim)" />
+    <line x1="308" y1="118" x2="324" y2="118" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="308" y1="226" x2="324" y2="226" stroke="#b7600c" stroke-width="1.2" />
+    <text x="34" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">T4</text>
+    <text x="62" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Realni sifon – brzina i vrh</text>
+
+    <text x="188" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" text-anchor="middle" fill="#c0392b">K</text>
+
+    <text x="292" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0"><tspan font-weight="700">v</tspan></text>
+
+    <text x="20" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#3a4a56"><tspan font-style="italic">D</tspan> = 60 mm  ·  <tspan font-style="italic">K</tspan> = 6,8 (ukupni gubici)</text>
+  <text x="358" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">0,90 m</text>
+
+    <text x="324" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c"><tspan font-weight="700">Δz</tspan> = 2,4 m</text>
+
+    </g>
+
+  <!-- ============================================================
+       PANEL T5 (bottom-middle) - Usisni vod i crpka iznad spremnika
+       transform translate(420 320)
+  ============================================================ -->
+  <g transform="translate(420 320)">
+    <rect x="0" y="0" width="380" height="280" rx="12" fill="#fbfdff" stroke="#cfdde9" stroke-width="1.4" />
+
+    <rect x="14" y="14" width="40" height="26" rx="6" fill="#1565c0" />
+    <!-- Spremnik (donji) -->
+    <rect x="22" y="170" width="132" height="50" fill="url(#u10vs-water)" />
+    <rect x="14" y="150" width="8" height="84" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="154" y="150" width="8" height="84" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="14" y="234" width="148" height="8" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="22" y1="170" x2="154" y2="170" stroke="#1565c0" stroke-width="1.6" />
+
+    <!-- Otvoreni spremnik - atmosfera (p0) - desno od pipe corner-a, unutar tanka -->
+    <!-- Usisni vod: izlazi iz dna spremnika gore, koljeno, vodoravno desno do crpke -->
+    <path d="M 88 218 L 88 100 L 226 100" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 88 218 L 88 100 L 226 100" fill="none" stroke="#5b9ec9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Crpka (krug s "P") -->
+    <circle cx="252" cy="100" r="22" fill="url(#u10vs-pump)" stroke="#3a4a56" stroke-width="1.8" />
+    <!-- Mala oznaka U (ulaz u crpku) -->
+    <circle cx="228" cy="100" r="4" fill="#c0392b" />
+    <!-- Strelica toka u cijevi -->
+    <line x1="140" y1="100" x2="180" y2="100" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u10vs-aFlow)" />
+
+    <!-- Kota: visina h_s = 2,6 m (od slobodne razine do ulaza) -->
+    <line x1="88" y1="170" x2="340" y2="170" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="228" y1="100" x2="340" y2="100" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <!-- Parametri -->
+    <line x1="332" y1="100" x2="332" y2="170" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10vs-aDimL)" marker-end="url(#u10vs-aDim)" />
+    <line x1="324" y1="100" x2="340" y2="100" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="324" y1="170" x2="340" y2="170" stroke="#b7600c" stroke-width="1.2" />
+    <text x="34" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">T5</text>
+    <text x="62" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Usisni vod – tlak na ulazu u crpku</text>
+
+    <text x="124" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 101 kPa</text>
+
+    <text x="252" y="105" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#1a2530">P</text>
+    <text x="228" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" font-style="italic" text-anchor="middle" fill="#c0392b">U</text>
+
+    <text x="190" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56"><tspan font-style="italic">D</tspan> = 80 mm, <tspan font-style="italic">L</tspan> = 5,0 m, <tspan font-style="italic">Q</tspan> = 0,014 m³/s</text>
+    <text x="190" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">λ = 0,030, Σξ = 1,8, <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 2,34 kPa</text>
+  <text x="346" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c"><tspan font-weight="700">h</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 2,6 m</text>
+
+    </g>
+
+  <!-- ============================================================
+       PANEL T6 (bottom-right) - Crpka izmedju dva spremnika
+       transform translate(820 320)
+       T6 IS THE TARGET TASK (spec data confirmed)
+  ============================================================ -->
+  <g transform="translate(820 320)">
+    <rect x="0" y="0" width="360" height="280" rx="12" fill="#fbfdff" stroke="#cfdde9" stroke-width="1.4" />
+
+    <rect x="14" y="14" width="40" height="26" rx="6" fill="#1e8449" />
+    <!-- Donji spremnik A (lijevo dolje) -->
+    <rect x="22" y="200" width="76" height="36" fill="url(#u10vs-water)" />
+    <rect x="14" y="186" width="8" height="58" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="98" y="186" width="8" height="58" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="14" y="244" width="92" height="8" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="22" y1="200" x2="98" y2="200" stroke="#1565c0" stroke-width="1.6" />
+    <!-- Gornji spremnik B (desno gore) -->
+    <rect x="262" y="80" width="76" height="36" fill="url(#u10vs-water)" />
+    <rect x="254" y="66" width="8" height="58" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="338" y="66" width="8" height="58" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="254" y="124" width="92" height="8" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="262" y1="80" x2="338" y2="80" stroke="#1565c0" stroke-width="1.6" />
+    <!-- Usisni vod (A -> crpka): iz dna spremnika gore i desno do crpke -->
+    <path d="M 60 232 L 60 158 L 158 158" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 60 232 L 60 158 L 158 158" fill="none" stroke="#5b9ec9" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Crpka -->
+    <circle cx="184" cy="158" r="20" fill="url(#u10vs-pump)" stroke="#1e8449" stroke-width="2" />
+    <!-- Tlacni vod (crpka -> B): od crpke desno, pa gore u dno B -->
+    <path d="M 210 158 L 300 158 L 300 116" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 210 158 L 300 158 L 300 116" fill="none" stroke="#5b9ec9" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Strelice toka -->
+    <line x1="106" y1="158" x2="138" y2="158" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u10vs-aFlow)" />
+    <line x1="236" y1="158" x2="268" y2="158" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u10vs-aFlow)" />
+
+    <!-- Δz kota desno - od razine A do razine B -->
+    <line x1="60" y1="200" x2="232" y2="200" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="300" y1="80" x2="232" y2="80" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+    <!-- Parametri (donji red - dvije linije za usis i tlak) -->
+    <line x1="226" y1="80" x2="226" y2="200" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10vs-aDimL)" marker-end="url(#u10vs-aDim)" />
+    <line x1="220" y1="80" x2="232" y2="80" stroke="#b7600c" stroke-width="1.2" />
+    <line x1="220" y1="200" x2="232" y2="200" stroke="#b7600c" stroke-width="1.2" />
+    <text x="34" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">T6</text>
+    <text x="62" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Crpka – usisni i tlačni vod</text>
+
+    <text x="60" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1a2530">A</text>
+    <text x="60" y="221" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" text-anchor="middle" fill="#0d47a1">usisni</text>
+
+    <text x="300" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1a2530">B</text>
+    <text x="300" y="101" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" text-anchor="middle" fill="#0d47a1">tlačni</text>
+
+    <text x="184" y="163" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530">P</text>
+
+    <text x="180" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#3a4a56">usis: <tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan>=90 mm, <tspan font-style="italic">L</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan>=6,0 m, λ<tspan baseline-shift="sub" font-size="0.7em">s</tspan>=0,028, Σξ<tspan baseline-shift="sub" font-size="0.7em">s</tspan>=2,0</text>
+    <text x="180" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#3a4a56">tlak: <tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">d</tspan>=80 mm, <tspan font-style="italic">L</tspan><tspan baseline-shift="sub" font-size="0.7em">d</tspan>=24 m, λ<tspan baseline-shift="sub" font-size="0.7em">d</tspan>=0,026, Σξ<tspan baseline-shift="sub" font-size="0.7em">d</tspan>=4,8, <tspan font-style="italic">Q</tspan>=0,018 m³/s</text>
+  <text x="216" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#b7600c"><tspan font-weight="700">Δz</tspan> = 8,5 m</text>
+
+    </g>
+
+  <!-- ============================================================
+       Legenda na dnu
+  ============================================================ -->
+  <g transform="translate(20 620)">
+    <rect x="0" y="0" width="1160" height="280" rx="12" fill="#f4f9fd" stroke="#cfdde9" stroke-width="1.2" />
+    <!-- 3x2 grid jednadzbi, podijeljen na 6 sekcija sirine ~190 px svaka -->
+    <!-- Sekcija 1: T1 (linijski + lokalni gubici, ukupno) -->
+    <g transform="translate(20 50)">
+      <text x="0" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0">T1</text>
+      <text x="0" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> = (λ<tspan font-style="italic">L</tspan>/<tspan font-style="italic">D</tspan> + Σξ) <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>)</text>
+      <text x="0" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">Δ<tspan font-style="italic">p</tspan> = ρ <tspan font-style="italic">g</tspan> <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
+      <text x="0" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">linijski + lokalni gubici</text>
+    </g>
+
+    <!-- Sekcija 2: T2 (dva spremnika, brzina i protok) -->
+    <g transform="translate(210 50)">
+      <text x="0" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0">T2</text>
+      <text x="0" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">Δ<tspan font-style="italic">z</tspan> = (λ<tspan font-style="italic">L</tspan>/<tspan font-style="italic">D</tspan> + Σξ) <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>)</text>
+      <text x="0" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">Q</tspan> = <tspan font-style="italic">A</tspan> <tspan font-style="italic">v</tspan></text>
+      <text x="0" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">razlika razina = ukupni gubici</text>
+    </g>
+
+    <!-- Sekcija 3: T3 (Pitot) -->
+    <g transform="translate(410 50)">
+      <text x="0" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0">T3</text>
+      <text x="0" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">v</tspan> = <tspan font-style="italic">C</tspan> √(2<tspan font-style="italic">g</tspan> Δ<tspan font-style="italic">h</tspan>)</text>
+      <text x="0" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">Δ<tspan font-style="italic">h</tspan> ≅ <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>)</text>
+      <text x="0" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">stagnacija – stat. tlak</text>
+    </g>
+
+    <!-- Sekcija 4: T4 (sifon, tlak u vrhu) -->
+    <g transform="translate(600 50)">
+      <text x="0" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0">T4</text>
+      <text x="0" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">Δ<tspan font-style="italic">z</tspan> = <tspan font-style="italic">K</tspan> <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>)</text>
+      <text x="0" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">K,aps</tspan> iz Bernoullija 0→K</text>
+      <text x="0" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">tlak u vrhu sifona &lt; <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+    </g>
+
+    <!-- Sekcija 5: T5 (kavitacija) -->
+    <g transform="translate(770 50)">
+      <text x="0" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0">T5</text>
+      <text x="0" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">U,aps</tspan>/ρ<tspan font-style="italic">g</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan>/ρ<tspan font-style="italic">g</tspan> − <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan> − <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w,s</tspan> − <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>)</text>
+      <text x="0" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">uvjet: <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">U,aps</tspan> &gt; <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan> (bez kavitacije)</text>
+      <text x="0" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">apsolutni, ne manometarski tlak</text>
+    </g>
+
+    <!-- Sekcija 6: T6 (Hp + kavitacijska rezerva) -->
+    <g transform="translate(990 50)">
+      <text x="0" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449">T6</text>
+      <text x="0" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = Δ<tspan font-style="italic">z</tspan> + <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w,s</tspan> + <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w,d</tspan></text>
+      <text x="0" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">NPSH<tspan baseline-shift="sub" font-size="0.7em">a</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan>/ρ<tspan font-style="italic">g</tspan> − <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan>/ρ<tspan font-style="italic">g</tspan> − <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan> − <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w,s</tspan></text>
+      <text x="0" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">visina dobave + kavitacijska rezerva</text>
+    </g>
+
+    <!-- Separator -->
+    <line x1="20" y1="140" x2="1140" y2="140" stroke="#cfdde9" stroke-width="1" />
+
+    <!-- Legenda boja -->
+    <g transform="translate(40 158)">
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#1565c0" />
+      <text x="22" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">tok fluida i tlačna visina</text>
+
+      <rect x="200" y="0" width="14" height="14" rx="2" fill="#c0392b" />
+      <text x="222" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">karakteristična točka (K, U)</text>
+
+      <rect x="430" y="0" width="14" height="14" rx="2" fill="#b7600c" />
+      <text x="452" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">kota / dimenzija</text>
+
+      <rect x="600" y="0" width="14" height="14" rx="2" fill="url(#u10vs-water)" stroke="#1565c0" stroke-width="0.8" />
+      <text x="622" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">voda</text>
+
+      <rect x="700" y="0" width="14" height="14" rx="2" fill="url(#u10vs-hatch)" stroke="#3a4a56" stroke-width="0.8" />
+      <text x="722" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">stjenka / dno</text>
+
+      <rect x="830" y="0" width="14" height="14" rx="2" fill="url(#u10vs-pipe)" stroke="#3a4a56" stroke-width="0.8" />
+      <text x="852" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">cijev</text>
+
+      <rect x="900" y="0" width="14" height="14" rx="2" fill="#e8f5e9" stroke="#1e8449" stroke-width="1" />
+      <text x="922" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">T6 – ciljani zadatak poglavlja</text>
+    </g>
+
+    <!-- Sazetak ispod -->
+    <text x="580" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Kljucne jednadzbe za zadatke T1–T6</text>
+
+    <text x="580" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#5a6a78">Prvo brzina iz protoka ili razlike razina, zatim gubici, na kraju apsolutni tlak i (gdje treba) kavitacijska provjera.</text>
+    <text x="580" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">T1, T2 – samo gubici  ·  T3 – mjerenje brzine  ·  T4, T5 – tlak ispod atmosferskog  ·  T6 – cjeloviti sustav s crpkom</text>
+    <text x="580" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1e8449" font-weight="700">Skice su konceptualne – geometrija sustava nije u mjerilu.</text>
   </g>
 </svg>

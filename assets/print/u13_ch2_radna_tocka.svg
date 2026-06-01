@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-labelledby="u13c2rt_title u13c2rt_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:920px;height:auto;">
+  <title id="u13c2rt_title">Radna tocka crpke i sustava H(Q) dijagram</title>
+  <desc id="u13c2rt_desc">Lijevo: H-Q dijagram s karakteristikom crpke Hp = 25 - 0,0175 Q^2 (zelena), karakteristikom sustava Hs = 6 + 0,0303 Q^2 (plava) i pomaknutom karakteristikom Hs,1 = 6 + 0,0464 Q^2 (narancasta isprekidana) nakon djelomicnog zatvaranja ventila. Radna tocka 1 pri Q = 20 L/s, H = 18 m; radna tocka 2 pri Q = 17,24 L/s, H = 19,80 m. Desno: panel s jednadzbama i sazetkom rezultata.</desc>
+
+  <defs>
+    <marker id="u13c2rt_arrG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u13c2rt_arrB" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
+    </marker>
+    <marker id="u13c2rt_arrO" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#d35400" />
+    </marker>
+    <marker id="u13c2rt_axR" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3a4a56" />
+    </marker>
+    <marker id="u13c2rt_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u13c2rt_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u13c2rt_shift" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#8e44ad" />
+    </marker>
+  </defs>
+
+  <!-- pozadina + paneli -->
+  <rect width="980" height="500" fill="#ffffff" />
+  <rect x="14" y="14" width="952" height="472" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.4" />
+
+  <!-- Lijevi panel: H-Q dijagram -->
+  <rect x="24" y="26" width="596" height="448" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
+  <!-- Desni panel: formule i rezultati -->
+  <rect x="632" y="26" width="322" height="448" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
+
+  <!-- =========================================================
+       LIJEVI PANEL: H-Q DIJAGRAM
+       Plot area: x 80..540, y 60..380
+       Q skala: 0..30 L/s -> 0..460 px (15.333 px/Lps)
+       H skala: 0..28 m  -> 320..0 px (11.429 px/m)
+  ========================================================= -->
+
+  <!-- finalna mreza (gridlines) -->
+  <!-- vertikalne (Q = 5,10,15,20,25,30) -->
+  <line x1="156.7" y1="60" x2="156.7" y2="380" stroke="#eef2f6" stroke-width="1" />
+  <line x1="233.3" y1="60" x2="233.3" y2="380" stroke="#eef2f6" stroke-width="1" />
+  <line x1="310" y1="60" x2="310" y2="380" stroke="#eef2f6" stroke-width="1" />
+  <line x1="386.7" y1="60" x2="386.7" y2="380" stroke="#eef2f6" stroke-width="1" />
+  <line x1="463.3" y1="60" x2="463.3" y2="380" stroke="#eef2f6" stroke-width="1" />
+  <line x1="540" y1="60" x2="540" y2="380" stroke="#eef2f6" stroke-width="1" />
+  <!-- horizontalne (H = 5,10,15,20,25) -->
+  <line x1="80" y1="322.9" x2="540" y2="322.9" stroke="#eef2f6" stroke-width="1" />
+  <line x1="80" y1="265.7" x2="540" y2="265.7" stroke="#eef2f6" stroke-width="1" />
+  <line x1="80" y1="208.6" x2="540" y2="208.6" stroke="#eef2f6" stroke-width="1" />
+  <line x1="80" y1="151.4" x2="540" y2="151.4" stroke="#eef2f6" stroke-width="1" />
+  <line x1="80" y1="94.3" x2="540" y2="94.3" stroke="#eef2f6" stroke-width="1" />
+
+  <!-- glavna H = 0 referenca os X (puna tanka) i prosirenje -->
+  <line x1="80" y1="380" x2="552" y2="380" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u13c2rt_axR)" />
+  <line x1="80" y1="392" x2="80" y2="50" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u13c2rt_axR)" />
+
+  <!-- osne oznake (ticks na osi Q) -->
+  <line x1="80" y1="380" x2="80" y2="385" stroke="#3a4a56" stroke-width="1" />
+  <line x1="156.7" y1="380" x2="156.7" y2="385" stroke="#3a4a56" stroke-width="1" />
+  <line x1="233.3" y1="380" x2="233.3" y2="385" stroke="#3a4a56" stroke-width="1" />
+  <line x1="310" y1="380" x2="310" y2="385" stroke="#3a4a56" stroke-width="1" />
+  <line x1="386.7" y1="380" x2="386.7" y2="385" stroke="#3a4a56" stroke-width="1" />
+  <line x1="463.3" y1="380" x2="463.3" y2="385" stroke="#3a4a56" stroke-width="1" />
+  <line x1="540" y1="380" x2="540" y2="385" stroke="#3a4a56" stroke-width="1" />
+
+  <!-- ticks os Y (H) -->
+  <line x1="75" y1="380" x2="80" y2="380" stroke="#3a4a56" stroke-width="1" />
+  <line x1="75" y1="322.9" x2="80" y2="322.9" stroke="#3a4a56" stroke-width="1" />
+  <line x1="75" y1="265.7" x2="80" y2="265.7" stroke="#3a4a56" stroke-width="1" />
+  <line x1="75" y1="208.6" x2="80" y2="208.6" stroke="#3a4a56" stroke-width="1" />
+  <line x1="75" y1="151.4" x2="80" y2="151.4" stroke="#3a4a56" stroke-width="1" />
+  <line x1="75" y1="94.3" x2="80" y2="94.3" stroke="#3a4a56" stroke-width="1" />
+
+  <!-- H_s,0 referentni "&#916;z = 6 m" stati&#269;ki dio (svjetla isprekidana) -->
+  <line x1="80" y1="311.4" x2="540" y2="311.4" stroke="#5b9ec9" stroke-width="1" stroke-dasharray="5,4" opacity="0.7" />
+  <!-- ============== KARAKTERISTIKA CRPKE (zelena) Hp = 25 - 0.0175 Q^2 ============== -->
+  <path d="M80,94.3 L118.3,95.5 L156.7,99.3 L195,105.5 L233.3,114.3 L271.7,125.5 L310,139.3 L348.3,155.5 L386.7,174.3 L425,195.5 L463.3,219.3 L501.7,245.5 L540,274.3" fill="none" stroke="#1e8449" stroke-width="2.6" />
+
+  <!-- Hp labela -->
+  <line x1="312" y1="80" x2="328" y2="100" stroke="#1e8449" stroke-width="0.8" />
+
+  <!-- ============== KARAKTERISTIKA SUSTAVA H_s,0 (plava) Hs = 6 + 0.0303 Q^2 ============== -->
+  <path d="M80,311.4 L118.3,309.2 L156.7,302.7 L195,291.6 L233.3,276.8 L271.7,257.5 L310,233.5 L348.3,205.4 L386.7,173.0 L425,136.3 L463.3,95.1 L486.5,68.9" fill="none" stroke="#1565c0" stroke-width="2.6" />
+
+  <!-- Hs,0 labela -->
+  <line x1="408" y1="285" x2="425" y2="200" stroke="#1565c0" stroke-width="0.8" />
+
+  <!-- ============== KARAKTERISTIKA H_s,1 (naran&#269;asta isprekidana) Hs = 6 + 0.0464 Q^2 ============== -->
+  <path d="M80,311.4 L118.3,308.1 L156.7,298.1 L195,281.4 L233.3,258.4 L271.7,228.6 L310,192.1 L344.4,153.8 L386.7,99.4 L406,71.6" fill="none" stroke="#d35400" stroke-width="2.4" stroke-dasharray="9,5" />
+
+  <!-- Hs,1 labela -->
+  <line x1="262" y1="200" x2="308" y2="195" stroke="#d35400" stroke-width="0.8" />
+
+  <!-- ===== Strelica pomaka radne to&#269;ke (od OP1 prema OP2) ===== -->
+  <path d="M386.7,174.3 Q368,162 350.5,155" fill="none" stroke="#8e44ad" stroke-width="1.6" marker-end="url(#u13c2rt_shift)" />
+
+  <!-- ===== RADNA TO&#268;KA 1 (Q=20, H=18) ===== -->
+  <!-- projekcijske linije -->
+  <line x1="386.7" y1="174.3" x2="386.7" y2="380" stroke="#3a4a56" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6" />
+  <line x1="80" y1="174.3" x2="386.7" y2="174.3" stroke="#3a4a56" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6" />
+  <circle cx="386.7" cy="174.3" r="6" fill="#ffffff" stroke="#1a2530" stroke-width="2" />
+  <circle cx="386.7" cy="174.3" r="2.5" fill="#1a2530" />
+
+  <!-- OP1 label box -->
+  <rect x="406" y="180" width="118" height="40" rx="6" fill="#ffffff" stroke="#1a2530" stroke-width="1.2" />
+  <!-- mali tick markeri na osima za OP1 -->
+  <line x1="386.7" y1="378" x2="386.7" y2="384" stroke="#1a2530" stroke-width="1.8" />
+  <line x1="76" y1="174.3" x2="82" y2="174.3" stroke="#1a2530" stroke-width="1.8" />
+
+  <!-- ===== RADNA TO&#268;KA 2 (Q=17.24, H=19.80) ===== -->
+  <line x1="344.4" y1="153.8" x2="344.4" y2="380" stroke="#8e44ad" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.7" />
+  <line x1="80" y1="153.8" x2="344.4" y2="153.8" stroke="#8e44ad" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.7" />
+  <circle cx="344.4" cy="153.8" r="6" fill="#ffffff" stroke="#8e44ad" stroke-width="2" />
+  <circle cx="344.4" cy="153.8" r="2.5" fill="#8e44ad" />
+
+  <!-- OP2 label box (smje&#353;ten u prazni prostor lijevo, ispod OP1) -->
+  <rect x="98" y="118" width="148" height="42" rx="6" fill="#ffffff" stroke="#8e44ad" stroke-width="1.2" />
+  <line x1="246" y1="145" x2="340" y2="153" stroke="#8e44ad" stroke-width="0.8" />
+
+  <!-- mali tick markeri na osima za OP2 -->
+  <line x1="344.4" y1="378" x2="344.4" y2="384" stroke="#8e44ad" stroke-width="1.8" />
+  <line x1="76" y1="153.8" x2="82" y2="153.8" stroke="#8e44ad" stroke-width="1.8" />
+
+  <!-- ===== KOTE: &#916;Q i &#916;H ===== -->
+  <!-- &#916;Q (vodoravno) ispod osi: od x=344.4 do x=386.7 na y ~ 425 -->
+  <!-- &#916;H (okomito) lijevo: od y=153.8 do y=174.3 na x ~ 46 -->
+  <!-- legenda donji desni kut grafa -->
+  <rect x="412" y="320" width="120" height="54" rx="5" fill="#ffffff" stroke="#d4e3f0" stroke-width="1" />
+  <line x1="420" y1="334" x2="442" y2="334" stroke="#1e8449" stroke-width="2.6" />
+  <line x1="420" y1="350" x2="442" y2="350" stroke="#1565c0" stroke-width="2.6" />
+  <line x1="420" y1="366" x2="442" y2="366" stroke="#d35400" stroke-width="2.4" stroke-dasharray="6,3" />
+  <!-- =========================================================
+       DESNI PANEL: FORMULE I REZULTATI (x=632..954)
+  ========================================================= -->
+
+  <!-- Header bar -->
+  <rect x="632" y="26" width="322" height="32" rx="10" fill="#1565c0" />
+  <rect x="632" y="44" width="322" height="14" fill="#1565c0" />
+  <!-- Blok 1: presjeci&#353;te jednadzba -->
+  <line x1="650" y1="115" x2="936" y2="115" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 2: stanje 1 -->
+  <line x1="650" y1="204" x2="936" y2="204" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 3: stanje 2 -->
+  <line x1="650" y1="293" x2="936" y2="293" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 4: snage -->
+  <line x1="650" y1="363" x2="936" y2="363" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Sazetak italic -->
+  <!-- REZULTATI badge -->
+  <rect x="650" y="398" width="286" height="62" rx="8" fill="#eaf6ee" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="344.4" y1="385" x2="344.4" y2="430" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="386.7" y1="385" x2="386.7" y2="430" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="344.4" y1="432" x2="344.4" y2="420" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="386.7" y1="432" x2="386.7" y2="420" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="347" y1="426" x2="384" y2="426" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u13c2rt_dimL)" marker-end="url(#u13c2rt_dim)" />
+  <line x1="55" y1="174.3" x2="42" y2="174.3" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="55" y1="153.8" x2="42" y2="153.8" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="40" y1="174.3" x2="52" y2="174.3" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="40" y1="153.8" x2="52" y2="153.8" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="46" y1="172" x2="46" y2="156" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u13c2rt_dimL)" marker-end="url(#u13c2rt_dim)" />
+  <text x="44" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Karakteristike i radna točka</text>
+
+  <text x="80" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">0</text>
+  <text x="156.7" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">5</text>
+  <text x="233.3" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">10</text>
+  <text x="310" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">15</text>
+  <text x="386.7" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">20</text>
+  <text x="463.3" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">25</text>
+  <text x="540" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">30</text>
+
+  <text x="568" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#3a4a56">Q</text>
+  <text x="568" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">[L/s]</text>
+
+  <text x="70" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#3a4a56">0</text>
+  <text x="70" y="326.9" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#3a4a56">5</text>
+  <text x="70" y="269.7" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#3a4a56">10</text>
+  <text x="70" y="212.6" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#3a4a56">15</text>
+  <text x="70" y="155.4" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#3a4a56">20</text>
+  <text x="70" y="98.3" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#3a4a56">25</text>
+
+  <text x="58" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#3a4a56">H</text>
+  <text x="58" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">[m]</text>
+
+  <text x="544" y="315" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0">Δz = 6 m</text>
+
+  <text x="240" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.75em">p</tspan>(Q) = 25 − 0,0175 Q²</text>
+  <text x="386" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.75em">s,0</tspan>(Q) = 6 + 0,0303 Q²</text>
+  <text x="92" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#d35400"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.75em">s,1</tspan>(Q) = 6 + 0,0464 Q²</text>
+  <text x="92" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#a04300">(zatvoreniji ventil, ξ<tspan baseline-shift="sub" font-size="0.7em">vent</tspan> = 8)</text>
+  <text x="465" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1a2530">Radna točka 1</text>
+  <text x="465" y="213" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">Q₁ ≈ 20,0 L/s   H₁ ≈ 18,0 m</text>
+
+  <text x="172" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#8e44ad">Radna točka 2 (pomak)</text>
+  <text x="172" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#8e44ad">Q₂ ≈ 17,24 L/s,  H₂ ≈ 19,80 m</text>
+  <text x="447" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">crpka <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan>(Q)</text>
+  <text x="447" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">sustav <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">s,0</tspan>(Q)</text>
+  <text x="447" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">sustav <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">s,1</tspan>(Q)</text>
+
+  <text x="793" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Uvjet radne točke</text>
+
+  <text x="793" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">presjecište krivulja</text>
+  <text x="793" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.75em">p</tspan>(Q<tspan baseline-shift="sub" font-size="0.75em">op</tspan>) = <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.75em">s</tspan>(Q<tspan baseline-shift="sub" font-size="0.75em">op</tspan>)</text>
+  <text x="793" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">stanje 1 (otvoren ventil)</text>
+  <text x="793" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">25 − 0,0175 Q² = 6 + 0,0303 Q²</text>
+  <text x="793" y="171" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">19 = 0,0478 Q²  →  Q² ≈ 397,5</text>
+  <text x="793" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">Q<tspan baseline-shift="sub" font-size="0.75em">op,1</tspan> ≈ 19,94 L/s,  H<tspan baseline-shift="sub" font-size="0.75em">op,1</tspan> ≈ 18,0 m</text>
+  <text x="793" y="223" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">stanje 2 (zatvoreniji ventil, ξ<tspan baseline-shift="sub" font-size="0.7em">vent</tspan> = 8)</text>
+  <text x="793" y="242" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">25 − 0,0175 Q² = 6 + 0,0464 Q²</text>
+  <text x="793" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">19 = 0,0639 Q²  →  Q² ≈ 297,3</text>
+  <text x="793" y="279" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#d35400">Q<tspan baseline-shift="sub" font-size="0.75em">op,2</tspan> ≈ 17,24 L/s,  H<tspan baseline-shift="sub" font-size="0.75em">op,2</tspan> ≈ 19,80 m</text>
+  <text x="793" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">električna snaga, P<tspan baseline-shift="sub" font-size="0.7em">el</tspan> = ρ g Q H / η</text>
+  <text x="793" y="331" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530">P<tspan baseline-shift="sub" font-size="0.75em">el,1</tspan> ≈ 4,70 kW    P<tspan baseline-shift="sub" font-size="0.75em">el,2</tspan> ≈ 4,46 kW</text>
+  <text x="793" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#c0392b">P<tspan baseline-shift="sub" font-size="0.75em">disip,vent</tspan> ≈ 0,81 kW (rasipa na ventilu)</text>
+  <text x="793" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Prigušivanje ventilom: Q ↓ 14 %, P<tspan baseline-shift="sub" font-size="0.7em">el</tspan> tek ↓ 5 %.</text>
+
+  <text x="793" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI – promjena radne točke</text>
+  <text x="724" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c0392b">ΔQ ≈ −2,76 L/s</text>
+  <text x="862" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449">ΔH ≈ +1,80 m</text>
+  <text x="793" y="454" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">(−14 %)          (+10 %)</text>
+<text x="365.5" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c">ΔQ ≈ −2,76 L/s</text>
+
+  <text x="34" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c" transform="rotate(-90 34 167)">ΔH ≈ +1,80 m</text>
+
+  </svg>

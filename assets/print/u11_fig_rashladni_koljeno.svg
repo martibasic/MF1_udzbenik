@@ -1,120 +1,201 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-<defs>
-  <linearGradient id="u11frk_u11rk-wg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#d4eef8"/>
-    <stop offset="100%" stop-color="#7ec8e8"/>
-  </linearGradient>
-  <marker id="u11frk_u11rk-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#0f766e"/>
-  </marker>
-  <marker id="u11frk_u11rk-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#b42318"/>
-  </marker>
-  <marker id="u11frk_u11rk-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#6d2694"/>
-  </marker>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 500" role="img" aria-labelledby="u11frk_title u11frk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
+  <title id="u11frk_title">Sila na koljeno 90 stupnjeva u rashladnom cjevovodu</title>
+  <desc id="u11frk_desc">Lijevo: tlocrt horizontalnog koljena s ulaznim presjekom 1 (brzina v u smjeru plus x, tlak p1) i izlaznim presjekom 2 (brzina v u smjeru plus y, tlak p2), kontrolni volumen oko koljena i komponente reakcije Rx i Ry te rezultanta FR. Desno: koraci 1 do 4 - povrsina i brzina, x i y bilanca kolicine gibanja, te rezultanta 1,80 kN.</desc>
 
-<!-- Background -->
-<rect width="940" height="420" fill="#ffffff"/>
-<rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <defs>
+    <linearGradient id="u11frk_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
+    </linearGradient>
+    <linearGradient id="u11frk_vodaH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#7fb6d6" />
+    </linearGradient>
+    <marker id="u11frk_v" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u11frk_p" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <marker id="u11frk_R" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u11frk_FR" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u11frk_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u11frk_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u11frk_ax" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#5a6a78" />
+    </marker>
+  </defs>
 
-<!-- Title -->
+  <!-- okvirni paneli -->
+  <rect x="16" y="16" width="448" height="468" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="476" y="16" width="448" height="468" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-<!-- ======== KOLJENO DIAGRAM (left panel) ======== -->
+  <!-- ============================================================ -->
+  <!-- LIJEVI PANEL: TLOCRT KOLJENA                                  -->
+  <!-- ============================================================ -->
+  <!-- KOLJENO: L-oblik, horizontalni dolaz (lijevo &#8594; desno) i vertikalni odvod (gore) -->
+  <!-- Definicija geometrije:
+       Ulaz centerline na y=320, od x=60 do x=280 (zavoj)
+       Izlaz centerline na x=280, od y=320 (zavoj) do y=120
+       Promjer cijevi 50 px = 80 mm (skala ~ 0,625 px/mm)
+       Vanjski rub: ulaz y=295..345, izlaz x=255..305
+       Spojni luk: vanjski R=50, unutarnji R=0 (oštri kut izvana je preokrenut na luk)
+  -->
 
-<!-- Pipe wall: compound path outer L minus inner L (evenodd) -->
-<path d="M 236,100 L 288,100 L 288,301 L 60,301 L 60,249 L 236,249 Z
-         M 242,103 L 282,103 L 282,295 L 63,295 L 63,255 L 242,255 Z"
-      fill="#c8d6df" fill-rule="evenodd" stroke="#2d3a40" stroke-width="1.8"/>
+  <!-- Vanjska kontura stijenke koljena (L oblik sa zaobljenim vanjskim kutom) -->
+  <path d="M 60,295            L 230,295            A 50,50 0 0 1 280,245            L 280,120            L 305,120            L 305,270            A 75,75 0 0 1 230,345            L 60,345            Z" fill="#d6dde2" stroke="#3a4a56" stroke-width="1.6" />
 
-<!-- Fluid: L-shape -->
-<path d="M 242,103 L 282,103 L 282,295 L 63,295 L 63,255 L 242,255 Z"
-      fill="url(#u11frk_u11rk-wg)"/>
+  <!-- Fluid (voda) - unutarnja kontura, kontinuirana L -->
+  <path d="M 60,295            L 230,295            A 50,50 0 0 1 280,245            L 280,120            L 305,120            L 305,270            A 75,75 0 0 1 230,345            L 60,345            Z" fill="url(#u11frk_voda)" stroke="none" transform="translate(0,0)" />
 
-<!-- Pipe stroke outline on top -->
-<path d="M 236,100 L 288,100 L 288,301 L 60,301 L 60,249 L 236,249 Z"
-      fill="none" stroke="#2d3a40" stroke-width="1.8"/>
+  <!-- Stijenka: vanjska obloga (siva traka oko fluida) -->
+  <!-- Gornji dio horizontalnog kraka (stjenka iznad ulazne cijevi) -->
+  <rect x="60" y="285" width="170" height="10" fill="#909fa8" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Donji dio horizontalnog kraka -->
+  <rect x="60" y="345" width="170" height="10" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Lijeva (vertikalna) stjenka vertikalnog kraka -->
+  <rect x="270" y="120" width="10" height="125" fill="#909fa8" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Desna (vertikalna) stjenka vertikalnog kraka -->
+  <rect x="305" y="120" width="10" height="150" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Vanjski zaobljeni rub koljena (gornji-desni luk) -->
+  <path d="M 230,285 A 60,60 0 0 1 280,235 L 280,245 A 50,50 0 0 0 230,295 Z" fill="#909fa8" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Unutarnji zaobljeni rub koljena (donji-desni luk, deblji) -->
+  <path d="M 230,355 A 85,85 0 0 0 315,270 L 305,270 A 75,75 0 0 1 230,345 Z" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1.2" />
 
-<!-- Section 1: inlet (left side) -->
-<line x1="108" y1="241" x2="108" y2="309" stroke="#516677" stroke-width="1.5" stroke-dasharray="5,3"/>
-<text x="103" y="237" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043" text-anchor="middle">①</text>
+  <!-- Prirubnice (flanges) na ulazu i izlazu -->
+  <rect x="56" y="280" width="6" height="80" fill="#3a4a56" />
+  <rect x="265" y="116" width="55" height="6" fill="#3a4a56" />
 
-<!-- Section 2: outlet (top) -->
-<line x1="228" y1="125" x2="296" y2="125" stroke="#516677" stroke-width="1.5" stroke-dasharray="5,3"/>
-<text x="300" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">②</text>
+  <!-- Fluid (voda) - ponovno preko, da bude na vrhu unutarnjeg dijela -->
+  <path d="M 62,295            L 230,295            A 50,50 0 0 1 280,245            L 280,122            L 305,122            L 305,270            A 75,75 0 0 1 230,345            L 62,345            Z" fill="url(#u11frk_voda)" stroke="none" />
 
-<!-- v1 velocity arrow -->
-<line x1="138" y1="275" x2="195" y2="275" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u11frk_u11rk-ag)"/>
-<text x="140" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">v₁ = 3,58 m/s</text>
+  <!-- Centerlines (osi cijevi, isprekidane) -->
+  <line x1="56" y1="320" x2="280" y2="320" stroke="#5a6a78" stroke-width="0.8" stroke-dasharray="5,4" />
+  <line x1="292" y1="118" x2="292" y2="320" stroke="#5a6a78" stroke-width="0.8" stroke-dasharray="5,4" />
 
-<!-- v2 velocity arrow -->
-<line x1="262" y1="205" x2="262" y2="148" stroke="#0f766e" stroke-width="2.8" marker-end="url(#u11frk_u11rk-ag)"/>
-<text x="272" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">v₂ = 3,58 m/s</text>
+  <!-- KOTA: promjer D = 80 mm na ulaznoj cijevi (vertikalna kota lijevo uz cijev) -->
+  <!-- PRESJEK 1 (ulaz) - okomita isprekidana linija preko cijevi -->
+  <line x1="100" y1="278" x2="100" y2="362" stroke="#1a2530" stroke-width="1.4" stroke-dasharray="6,4" />
+  <circle cx="100" cy="270" r="10" fill="#ffffff" stroke="#1a2530" stroke-width="1.4" />
+  <!-- PRESJEK 2 (izlaz) - vodoravna isprekidana linija preko vertikalne cijevi -->
+  <line x1="262" y1="160" x2="322" y2="160" stroke="#1a2530" stroke-width="1.4" stroke-dasharray="6,4" />
+  <circle cx="335" cy="160" r="10" fill="#ffffff" stroke="#1a2530" stroke-width="1.4" />
+  <!-- TLAK p1 na presjeku 1 (plave strelice prema +x = u smjeru toka) -->
+  <line x1="64" y1="308" x2="84" y2="308" stroke="#1565c0" stroke-width="2" marker-end="url(#u11frk_p)" />
+  <line x1="64" y1="320" x2="84" y2="320" stroke="#1565c0" stroke-width="2" marker-end="url(#u11frk_p)" />
+  <line x1="64" y1="332" x2="84" y2="332" stroke="#1565c0" stroke-width="2" marker-end="url(#u11frk_p)" />
+  <!-- TLAK p2 na presjeku 2 (plave strelice prema -y, t.j. nadolje, jer fluid izlazi prema gore a okolni tlak gura natrag) -->
+  <line x1="280" y1="138" x2="280" y2="156" stroke="#1565c0" stroke-width="2" marker-end="url(#u11frk_p)" />
+  <line x1="292" y1="138" x2="292" y2="156" stroke="#1565c0" stroke-width="2" marker-end="url(#u11frk_p)" />
+  <line x1="304" y1="138" x2="304" y2="156" stroke="#1565c0" stroke-width="2" marker-end="url(#u11frk_p)" />
+  <!-- BRZINA v1 na ulazu (zelena, prema +x) -->
+  <line x1="115" y1="320" x2="175" y2="320" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u11frk_v)" />
+  <!-- BRZINA v2 na izlazu (zelena, prema +y = gore) -->
+  <line x1="292" y1="220" x2="292" y2="170" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u11frk_v)" />
+  <!-- KONTROLNI VOLUMEN (smeđa isprekidana granica) -->
+  <!-- ============================================================ -->
+  <!-- REAKCIJSKE SILE Rx, Ry (sile stijenke NA fluid: -x, +y)        -->
+  <!-- Prikazujemo sile FLUIDA NA KOLJENO (suprotne)                  -->
+  <!-- F_x na koljeno: prema +x (desno, izvan koljena)                -->
+  <!-- F_y na koljeno: prema -y (dolje, izvan koljena)                -->
+  <!-- ============================================================ -->
 
-<!-- D label -->
-<line x1="62" y1="265" x2="62" y2="292" stroke="#546e7a" stroke-width="1"/>
-<line x1="57" y1="265" x2="67" y2="265" stroke="#546e7a" stroke-width="1"/>
-<line x1="57" y1="292" x2="67" y2="292" stroke="#546e7a" stroke-width="1"/>
-<text x="38" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">D=80</text>
-<text x="38" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">mm</text>
+  <!-- F_x (sila fluida na koljeno, prema +x) - zelena (komponenta izlazne sile) -->
+  <line x1="330" y1="320" x2="425" y2="320" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u11frk_FR)" />
+  <!-- F_y (sila fluida na koljeno, prema -y) -->
+  <line x1="292" y1="365" x2="292" y2="450" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u11frk_FR)" />
+  <!-- F_R (rezultanta, dijagonalno prema desno-dolje) - zelena bold (konacni rezultat) -->
+  <line x1="325" y1="355" x2="415" y2="445" stroke="#1e8449" stroke-width="3.4" marker-end="url(#u11frk_FR)" />
+  <!-- Koordinatne osi xy (referenca smjerova) -->
+  <line x1="50" y1="450" x2="86" y2="450" stroke="#5a6a78" stroke-width="1.4" marker-end="url(#u11frk_ax)" />
+  <line x1="50" y1="450" x2="50" y2="414" stroke="#5a6a78" stroke-width="1.4" marker-end="url(#u11frk_ax)" />
+  <circle cx="50" cy="450" r="2.2" fill="#5a6a78" />
 
-<!-- Control volume dashed border -->
-<rect x="56" y="96" width="238" height="210" rx="8" fill="none" stroke="#b45309" stroke-width="1.8" stroke-dasharray="8,4"/>
-<text x="165" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b45309" text-anchor="middle">kontrolni volumen</text>
+  <!-- ============================================================ -->
+  <!-- DESNI PANEL: KORACI RJESENJA                                  -->
+  <!-- ============================================================ -->
 
-<!-- ======= FORCE ARROWS (fluid acts on koljeno) ======= -->
+  <!-- Header bar -->
+  <rect x="492" y="34" width="416" height="30" rx="6" fill="#1565c0" />
+  <!-- Zadano (mali blok) -->
+  <rect x="492" y="74" width="416" height="44" rx="7" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <!-- Korak 1: A, v, m_dot (plava) -->
+  <rect x="492" y="128" width="416" height="80" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="492" y="128" width="6" height="80" rx="3" fill="#1565c0" />
+  <!-- Korak 2: smjer x (crvena - ulazna sila Rx) -->
+  <rect x="492" y="218" width="416" height="88" rx="9" fill="#fdf3f0" stroke="#ecc7be" stroke-width="1.2" />
+  <rect x="492" y="218" width="6" height="88" rx="3" fill="#c0392b" />
+  <!-- Korak 3: smjer y (crvena - ulazna sila Ry) -->
+  <rect x="492" y="316" width="416" height="88" rx="9" fill="#fdf3f0" stroke="#ecc7be" stroke-width="1.2" />
+  <rect x="492" y="316" width="6" height="88" rx="3" fill="#c0392b" />
+  <!-- Korak 4: rezultanta (zelena) -->
+  <rect x="492" y="414" width="416" height="60" rx="9" fill="#eaf5ee" stroke="#bcdcc7" stroke-width="1.2" />
+  <rect x="492" y="414" width="6" height="60" rx="3" fill="#1e8449" />
+  <!-- Sazetak ispod desnog panela (italic kratak komentar) -->
+  <line x1="60" y1="295" x2="40" y2="295" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="60" y1="345" x2="40" y2="345" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="44" y1="295" x2="44" y2="345" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u11frk_dimL)" marker-end="url(#u11frk_dim)" />
+  <line x1="44" y1="345" x2="44" y2="372" stroke="#b7600c" stroke-width="0.6" stroke-dasharray="3,2" />
+  <line x1="44" y1="372" x2="60" y2="372" stroke="#b7600c" stroke-width="0.6" stroke-dasharray="3,2" />
 
-<!-- Rx: fluid pushes koljeno to the RIGHT (+x) -->
-<line x1="302" y1="270" x2="415" y2="270" stroke="#b42318" stroke-width="2.8" marker-end="url(#u11frk_u11rk-ar)"/>
-<rect x="305" y="248" width="120" height="20" rx="4" fill="#fff0ee"/>
-<text x="365" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b42318" text-anchor="middle">Rₓ = 1 321 N</text>
+  <path d="M 95,265            L 245,265            A 80,80 0 0 1 325,185            L 325,115            L 255,115            L 255,225            A 35,35 0 0 1 220,260            L 95,260            Z" fill="none" stroke="#b7600c" stroke-width="1.4" stroke-dasharray="7,4" opacity="0.85" />
+  <text x="40" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Tlocrt koljena 90° (horizontalno)</text>
+  <text x="40" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">kontrolni volumen oko skretnice; sile na stijenku</text>
 
-<!-- Ry: fluid pushes koljeno DOWNWARD (-y) -->
-<line x1="262" y1="307" x2="262" y2="393" stroke="#b42318" stroke-width="2.8" marker-end="url(#u11frk_u11rk-ar)"/>
-<rect x="270" y="335" width="120" height="20" rx="4" fill="#fff0ee"/>
-<text x="330" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b42318">Rᵧ = 1 221 N</text>
+  <text x="100" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">1</text>
 
-<!-- FR resultant (diagonal) -->
-<line x1="302" y1="307" x2="390" y2="378" stroke="#6d2694" stroke-width="2.8" marker-end="url(#u11frk_u11rk-ap)"/>
-<text x="397" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#6d2694">F_R = 1,80 kN</text>
+  <text x="335" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">2</text>
 
-<!-- ======= RIGHT INFO PANEL ======= -->
+  <text x="56" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0"><tspan font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 250 kPa</text>
 
-<!-- p1 label box -->
-<rect x="450" y="100" width="160" height="50" rx="8" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
-<text x="530" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Presjek ①  (ulaz)</text>
-<text x="530" y="140" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">p₁ = 250 kPa · v₁ = 3,58 m/s</text>
+  <text x="335" y="135" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0"><tspan font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 230 kPa</text>
 
-<!-- p2 label box -->
-<rect x="450" y="165" width="160" height="50" rx="8" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
-<text x="530" y="185" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Presjek ②  (izlaz)</text>
-<text x="530" y="205" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">p₂ = 230 kPa · v₂ = 3,58 m/s</text>
+  <text x="118" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-style="italic" fill="#1e8449"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 3,58 m/s</text>
 
-<!-- Momentum equations panel -->
-<rect x="630" y="100" width="278" height="120" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-<text x="769" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e" text-anchor="middle">Jednadžbe količine gibanja</text>
-<line x1="640" y1="126" x2="900" y2="126" stroke="#c49a0a" stroke-width="1" stroke-dasharray="3,2"/>
-<text x="642" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#173043">x: p₁A − Rₓ = ṁ(0 − v)  →  Rₓ = p₁A + ṁv</text>
-<text x="642" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#173043">    Rₓ = 1 256,8 + 64,3 = 1 321 N</text>
-<text x="642" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#173043">y: −p₂A + Rᵧ = ṁ·v  →  Rᵧ = p₂A + ṁv</text>
-<text x="642" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#173043">    Rᵧ = 1 156,2 + 64,3 = 1 221 N</text>
+  <text x="220" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-style="italic" fill="#1e8449"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 3,58 m/s</text>
 
-<!-- Formula box: resultant -->
-<rect x="450" y="235" width="458" height="52" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-<text x="679" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#6d2694" text-anchor="middle">F_R = √(1 321² + 1 221²) ≈ 1 797 N = 1,80 kN</text>
-<text x="679" y="277" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">Sila fluida na koljeno = nasuprotno od R_st→f</text>
+  <text x="378" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = 1 321 N</text>
 
-<!-- Vijci note -->
-<rect x="450" y="300" width="458" height="70" rx="8" fill="#fef9f0" stroke="#d97706" stroke-width="1.5"/>
-<text x="679" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e" text-anchor="middle">Zaključak</text>
-<text x="679" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#173043" text-anchor="middle">Vijci prirubnica moraju preuzeti F_R ≈ 1,80 kN</text>
-<text x="679" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#516677" text-anchor="middle">Dominira tlačni doprinos (p·A ≈ 2 413 N) nad impulsnim (64 N)</text>
+  <text x="300" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = 1 221 N</text>
 
-<!-- Coordinate arrows -->
-<line x1="56" y1="388" x2="86" y2="388" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u11frk_u11rk-ag)"/>
-<line x1="56" y1="388" x2="56" y2="358" stroke="#546e7a" stroke-width="1.5" marker-end="url(#u11frk_u11rk-ag)"/>
-<text x="90" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">x</text>
-<text x="50" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">y</text>
+  <text x="455" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" font-weight="700" text-anchor="end" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 1,80 kN</text>
 
-</svg>
+  <text x="92" y="454" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#5a6a78">x</text>
+  <text x="46" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#5a6a78">y</text>
+  <text x="700" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Bilanca količine gibanja na kontrolnom volumenu</text>
+
+  <text x="500" y="91" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#5a6a78">ZADANO</text>
+  <text x="500" y="109" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">D</tspan> = 80 mm  ·  <tspan font-style="italic">Q</tspan> = 0,018 m³/s  ·  <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 250 kPa  ·  <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 230 kPa  ·  ρ = 998 kg/m³</text>
+
+  <text x="510" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">1. Površina, brzina i maseni protok</text>
+  <text x="510" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530"><tspan font-style="italic">A</tspan> = π<tspan font-style="italic">D</tspan>²/4 = 5,027·10⁻³ m²   <tspan font-style="italic">v</tspan> = <tspan font-style="italic">Q</tspan>/<tspan font-style="italic">A</tspan> = 3,581 m/s</text>
+  <text x="510" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0"><tspan font-style="italic">ṁ</tspan> = ρ<tspan font-style="italic">Q</tspan> = 998 · 0,018 = 17,96 kg/s</text>
+
+  <text x="510" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">2. Smjer <tspan font-style="italic">x</tspan> → sila <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> stijenke na fluid</text>
+  <text x="510" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan><tspan font-style="italic">A</tspan> − <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = <tspan font-style="italic">ṁ</tspan> (0 − <tspan font-style="italic">v</tspan>)  →  <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan><tspan font-style="italic">A</tspan> + <tspan font-style="italic">ṁv</tspan></text>
+  <text x="510" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530"><tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = 1 256,8 + 64,3 N</text>
+  <text x="900" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#c0392b"><tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = 1 321,1 N</text>
+
+  <text x="510" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">3. Smjer <tspan font-style="italic">y</tspan> → sila <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> stijenke na fluid</text>
+  <text x="510" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">−<tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan><tspan font-style="italic">A</tspan> + <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = <tspan font-style="italic">ṁ</tspan> (<tspan font-style="italic">v</tspan> − 0)  →  <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan><tspan font-style="italic">A</tspan> + <tspan font-style="italic">ṁv</tspan></text>
+  <text x="510" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530"><tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = 1 156,2 + 64,3 N</text>
+  <text x="900" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#c0392b"><tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = 1 220,5 N</text>
+
+  <text x="510" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449">4. Rezultanta sile fluida na koljeno</text>
+  <text x="510" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = √(<tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan>² + <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan>²) ≈ 1 797 N</text>
+  <text x="900" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 1,80 kN</text>
+
+  <text x="700" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Dominira tlačni doprinos (<tspan font-style="italic">p·A</tspan> ≈ 2 413 N) nad impulsnim (64 N po smjeru).</text>
+
+<text x="80" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">D</tspan> = 80 mm</text>
+  <text x="165" y="105" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" font-style="italic">kontrolni volumen</text>
+
+  </svg>

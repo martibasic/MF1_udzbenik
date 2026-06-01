@@ -1,133 +1,262 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 430" role="img" aria-labelledby="u08c1ms_u8c1-title u08c1ms_u8c1-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u08c1ms_u8c1-title">U08 CH1 – mijesajuci izjednacni spremnik</title>
-  <desc id="u08c1ms_u8c1-desc">Mijesajuci spremnik L=4,2m b=1,5m. QA=18 L/s voda, QB=6 L/s slana otopina rhoB=1100. Q3=14,1 L/s, rho3=1025, dh/dt=0,094 m/min, t=255s.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="u08c1ms_title u08c1ms_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
+  <title id="u08c1ms_title">Mijesajuci izjednacni spremnik – kontrolni volumen s akumulacijom</title>
+  <desc id="u08c1ms_desc">Pravokutni miješajući spremnik L=4,2 m, b=1,5 m. Ulaz A (voda) Q_A=18 L/s, ρ_A=1000; ulaz B (slana otopina) Q_B=6 L/s, ρ_B=1100. Izlaz: D_3=100 mm, v_3=1,80 m/s → Q_3≈14,1 L/s, ρ_3=1025 kg/m³. Razina raste od h_0=0,80 m do h_1=1,20 m brzinom dh/dt≈0,094 m/min za t≈255 s. Akumulirana masa Δm≈2,58 t.</desc>
+
   <defs>
-    <linearGradient id="u08c1ms_u8c1-water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <!-- Gradijenti fluida -->
+    <linearGradient id="u08c1ms_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u08c1ms_u8c1-salt" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#c8e8f4"/>
-      <stop offset="100%" stop-color="#4a9ab8"/>
+    <linearGradient id="u08c1ms_salt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8d9c2" />
+      <stop offset="100%" stop-color="#7aa078" />
     </linearGradient>
-    <linearGradient id="u08c1ms_u8c1-mix" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bbdff0"/>
-      <stop offset="100%" stop-color="#5aafce"/>
+    <linearGradient id="u08c1ms_mix" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b8d5d0" />
+      <stop offset="100%" stop-color="#6aa599" />
     </linearGradient>
-    <linearGradient id="u08c1ms_u8c1-acc" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#a8d8ea" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#4aa0c0" stop-opacity="0.55"/>
+    <linearGradient id="u08c1ms_acc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cfe2dd" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#9ec2b8" stop-opacity="0.6" />
     </linearGradient>
-    <pattern id="u08c1ms_u8c1-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="4" x2="8" y2="4" stroke="#546e7a" stroke-width="1.8"/>
+
+    <!-- Srafura stjenki -->
+    <pattern id="u08c1ms_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8" />
     </pattern>
-    <marker id="u08c1ms_u8c1-arrG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#0f766e"/>
+
+    <!-- Markeri sila / protoka (7x5) -->
+    <marker id="u08c1ms_aB" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
     </marker>
-    <marker id="u08c1ms_u8c1-arrB" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/>
+    <marker id="u08c1ms_aSalt" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u08c1ms_u8c1-arrS" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#0a6080"/>
+    <marker id="u08c1ms_aMix" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#0e6e63" />
     </marker>
-    <marker id="u08c1ms_u8c1-arrGr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
-      <path d="M0,0 L0,7 L9,3.5 z" fill="#546e7a"/>
+    <marker id="u08c1ms_aAcc" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
     </marker>
-    <marker id="u08c1ms_u8c1-arrGrRev" markerWidth="9" markerHeight="7" refX="1" refY="3.5" orient="auto">
-      <path d="M9,0 L9,7 L0,3.5 z" fill="#546e7a"/>
+
+    <!-- Markeri kota (smedja) -->
+    <marker id="u08c1ms_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
-    <marker id="u08c1ms_u8c1-arrUp" markerWidth="10" markerHeight="8" refX="5" refY="0" orient="auto">
-      <path d="M0,8 L10,8 L5,0 z" fill="#c96c35"/>
+    <marker id="u08c1ms_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
   </defs>
+
   <!-- Canvas -->
-  <rect width="940" height="430" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="382" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <!-- Title -->
-  <text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Miješajući izjednačni spremnik</text>
-  <text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">L = 4,2 m, b = 1,5 m; voda Q_A + slana Q_B → homogena mješavina Q₃, razina raste od h₀ do h₁</text>
+  <rect width="1000" height="520" fill="#ffffff" />
 
-  <!-- ===== TANK ===== -->
-  <!-- Scale: full shown height 1.6m → 230px, scale=143.75px/m -->
-  <!-- h0=0.80m → 115px → water top y=352-115=237 -->
-  <!-- h1=1.20m → 172px → target y=352-172=180 -->
-  <!-- Left wall -->
-  <rect x="188" y="96" width="18" height="256" fill="url(#u08c1ms_u8c1-sraf)"/>
-  <!-- Right wall -->
-  <rect x="572" y="96" width="18" height="256" fill="url(#u08c1ms_u8c1-sraf)"/>
-  <!-- Bottom wall -->
-  <rect x="188" y="334" width="402" height="18" fill="url(#u08c1ms_u8c1-sraf)"/>
-  <!-- Wall outlines -->
-  <line x1="188" y1="96" x2="188" y2="352" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="590" y1="96" x2="590" y2="352" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="188" y1="352" x2="590" y2="352" stroke="#3d4f5a" stroke-width="3"/>
+  <!-- Lijevi panel (fizikalni model) – x: 14..650 -->
+  <rect x="14" y="14" width="636" height="492" rx="12" fill="#fbfdff" stroke="#dde3ea" stroke-width="1.4" />
+  <!-- Desni panel (formule + rezultati) – x: 662..986 -->
+  <rect x="662" y="14" width="324" height="492" rx="12" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
 
-  <!-- Water fill (current h0) -->
-  <rect x="206" y="237" width="366" height="115" fill="url(#u08c1ms_u8c1-mix)" stroke="none"/>
-  <!-- Accumulation zone (h0 to h1) -->
-  <rect x="206" y="180" width="366" height="57" fill="url(#u08c1ms_u8c1-acc)" stroke="none"/>
+  <!-- ============================================================
+       SKICA SPREMNIKA U PRESJEKU
+       Skala visine: 1 m = 150 px
+       Dno (gornji rub dna): y = 420
+       Razina h_0 = 0,80 m -> y = 420 - 120 = 300
+       Razina h_1 = 1,20 m -> y = 420 - 180 = 240
+       Tank interior x = 220..540 (320 px)
+       Tank top (otvoren): y = 120
+  ============================================================ -->
 
-  <!-- Water surface (h0) -->
-  <line x1="188" y1="237" x2="590" y2="237" stroke="#2980b9" stroke-width="2.5"/>
-  <!-- Target level (h1) -->
-  <line x1="188" y1="180" x2="590" y2="180" stroke="#2980b9" stroke-width="2" stroke-dasharray="8,5"/>
-  <text x="600" y="177" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#2980b9" font-style="italic">h₁ = 1,20 m</text>
-  <text x="600" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#2980b9">h₀ = 0,80 m</text>
+  <!-- Kontrolni volumen (dashed boundary) – iznad i oko tanka -->
+  <rect x="204" y="108" width="356" height="318" rx="6" fill="none" stroke="#8e44ad" stroke-width="1.4" stroke-dasharray="9,5" />
+  <!-- Akumulacijski sloj (h_0 -> h_1) -->
+  <rect x="220" y="240" width="320" height="60" fill="url(#u08c1ms_acc)" />
 
-  <!-- KV dashed boundary -->
-  <rect x="178" y="86" width="422" height="276" rx="8" fill="none" stroke="#c96c35" stroke-width="2" stroke-dasharray="10,6"/>
-  <text x="186" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c96c35" font-style="italic">kontrolni volumen</text>
+  <!-- Mjesavina u spremniku (do h_0) -->
+  <rect x="220" y="300" width="320" height="120" fill="url(#u08c1ms_mix)" />
 
-  <!-- Inlet A — water (upper) -->
-  <rect x="90" y="192" width="98" height="22" fill="url(#u08c1ms_u8c1-water)" stroke="none"/>
-  <line x1="90" y1="192" x2="188" y2="192" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="90" y1="214" x2="188" y2="214" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="90" y1="192" x2="90" y2="214" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="40" y1="203" x2="88" y2="203" stroke="#1565c0" stroke-width="3.5" marker-end="url(#u08c1ms_u8c1-arrB)"/>
-  <text x="30" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">A</text>
-  <text x="28" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">voda</text>
-  <text x="24" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">18 L/s</text>
+  <!-- ============================================================
+       ULAZNE CIJEVI (kroz lijevu stjenku)
+       A (voda) gornje: cijev y = 158..180 (sredina 169)
+       B (slana otopina) donje: cijev y = 208..228 (sredina 218)
+  ============================================================ -->
+  <!-- Cijev A: fluid voda -->
+  <rect x="80" y="158" width="140" height="22" fill="url(#u08c1ms_water)" />
+  <!-- Cijev B: fluid salt -->
+  <rect x="80" y="208" width="140" height="20" fill="url(#u08c1ms_salt)" />
 
-  <!-- Inlet B — salt solution (lower) -->
-  <rect x="90" y="272" width="98" height="16" fill="url(#u08c1ms_u8c1-salt)" stroke="none"/>
-  <line x1="90" y1="272" x2="188" y2="272" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="90" y1="288" x2="188" y2="288" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="90" y1="272" x2="90" y2="288" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="40" y1="280" x2="88" y2="280" stroke="#0a6080" stroke-width="3.5" marker-end="url(#u08c1ms_u8c1-arrS)"/>
-  <text x="30" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0a6080">B</text>
-  <text x="24" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0a6080">slana</text>
-  <text x="24" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0a6080">6 L/s</text>
+  <!-- Cijev A stijenke -->
+  <line x1="80" y1="158" x2="220" y2="158" stroke="#3a4a56" stroke-width="2" />
+  <line x1="80" y1="180" x2="220" y2="180" stroke="#3a4a56" stroke-width="2" />
+  <!-- Cijev B stijenke -->
+  <line x1="80" y1="208" x2="220" y2="208" stroke="#3a4a56" stroke-width="2" />
+  <line x1="80" y1="228" x2="220" y2="228" stroke="#3a4a56" stroke-width="2" />
 
-  <!-- Outlet 3 — horizontal pipe to right (at lower part of tank) -->
-  <rect x="590" y="307" width="130" height="18" fill="url(#u08c1ms_u8c1-mix)" stroke="none"/>
-  <line x1="590" y1="307" x2="720" y2="307" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="590" y1="325" x2="720" y2="325" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="720" y1="307" x2="720" y2="325" stroke="#3d4f5a" stroke-width="2"/>
-  <line x1="720" y1="316" x2="762" y2="316" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u08c1ms_u8c1-arrG)"/>
-  <text x="768" y="307" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">Q₃</text>
-  <text x="766" y="321" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">D₃=100 mm</text>
-  <text x="766" y="335" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">v₃=1,80 m/s</text>
+  <!-- ============================================================
+       SPREMNIK – stjenke (lijeva, desna, dno).  Vrh otvoren.
+       Lijeva stjenka segmenti (debljina 16):
+         y = 120..158, 180..208, 228..420
+       Desna stjenka segmenti (gap za izlaz Q3 na y=346..370):
+         y = 120..346, 370..420
+       Dno: x = 204..556, y = 420..438
+  ============================================================ -->
+  <rect x="204" y="120" width="16" height="38" fill="url(#u08c1ms_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+  <rect x="204" y="180" width="16" height="28" fill="url(#u08c1ms_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+  <rect x="204" y="228" width="16" height="192" fill="url(#u08c1ms_hatch)" stroke="#3a4a56" stroke-width="1.4" />
 
-  <!-- dh/dt arrow -->
-  <line x1="388" y1="234" x2="388" y2="185" stroke="#c96c35" stroke-width="3" marker-end="url(#u08c1ms_u8c1-arrUp)"/>
-  <text x="396" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c96c35">dh/dt</text>
+  <rect x="540" y="120" width="16" height="226" fill="url(#u08c1ms_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+  <rect x="540" y="370" width="16" height="50" fill="url(#u08c1ms_hatch)" stroke="#3a4a56" stroke-width="1.4" />
 
-  <!-- Dimension h0, h1 (left side) -->
-  <line x1="162" y1="237" x2="162" y2="352" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u08c1ms_u8c1-arrGrRev)" marker-end="url(#u08c1ms_u8c1-arrGr)"/>
-  <text x="138" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">h₀</text>
+  <!-- Dno -->
+  <rect x="204" y="420" width="352" height="18" fill="url(#u08c1ms_hatch)" stroke="#3a4a56" stroke-width="1.4" />
 
-  <line x1="148" y1="180" x2="148" y2="352" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u08c1ms_u8c1-arrGrRev)" marker-end="url(#u08c1ms_u8c1-arrGr)"/>
-  <text x="124" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">h₁</text>
+  <!-- ============================================================
+       IZLAZNA CIJEV (Q3) – y = 346..370, kratka (do x=600)
+  ============================================================ -->
+  <rect x="556" y="346" width="44" height="24" fill="url(#u08c1ms_mix)" />
+  <line x1="556" y1="346" x2="600" y2="346" stroke="#3a4a56" stroke-width="2" />
+  <line x1="556" y1="370" x2="600" y2="370" stroke="#3a4a56" stroke-width="2" />
+  <line x1="600" y1="346" x2="600" y2="370" stroke="#3a4a56" stroke-width="2" />
 
-  <!-- Dimension L (bottom) -->
-  <line x1="206" y1="378" x2="572" y2="378" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u08c1ms_u8c1-arrGrRev)" marker-end="url(#u08c1ms_u8c1-arrGr)"/>
-  <text x="370" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#546e7a" text-anchor="middle">L = 4,2 m   (b = 1,5 m ⊥ skici)</text>
+  <!-- ============================================================
+       PORT FLUID OVERLAY-i kroz stjenke (kontinuitet)
+  ============================================================ -->
+  <rect x="204" y="158" width="16" height="22" fill="url(#u08c1ms_water)" />
+  <rect x="204" y="208" width="16" height="20" fill="url(#u08c1ms_salt)" />
+  <rect x="540" y="346" width="16" height="24" fill="url(#u08c1ms_mix)" />
 
-  <!-- ===== FORMULA BOX ===== -->
-  <rect x="54" y="308" width="124" height="72" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
-  <text x="64" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#173043">Ključni rezultati</text>
-  <text x="62" y="343" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Q₃ ≈ 14,1 L/s</text>
-  <text x="62" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">ρ₃ = 1025 kg/m³</text>
-  <text x="62" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">t ≈ 255 s ≈ 4,3 min</text>
-</svg>
+  <!-- Slobodna povrsina h_0 (puna) -->
+  <line x1="220" y1="300" x2="540" y2="300" stroke="#1565c0" stroke-width="2.2" />
+  <!-- Ciljna razina h_1 (dashed) -->
+  <line x1="220" y1="240" x2="540" y2="240" stroke="#1565c0" stroke-width="1.8" stroke-dasharray="8,5" />
+
+  <!-- ============================================================
+       STRELICE ULAZA / IZLAZA – proporcionalne
+       Q_A = 18 L/s -> 56 px (od x=24 do x=80)
+       Q_B =  6 L/s -> 20 px (od x=60 do x=80, 3x manje)
+       Q_3 = 14 L/s -> 44 px (od x=630 do x=674)
+  ============================================================ -->
+  <!-- Q_A strelica -->
+  <line x1="24" y1="169" x2="78" y2="169" stroke="#1565c0" stroke-width="2.8" marker-end="url(#u08c1ms_aB)" />
+  <!-- Q_B strelica -->
+  <line x1="60" y1="218" x2="78" y2="218" stroke="#1e8449" stroke-width="2.8" marker-end="url(#u08c1ms_aSalt)" />
+  <!-- Q_3 strelica – kratka u tijelu cijevi, vrh stoji na otvoru -->
+  <line x1="600" y1="358" x2="644" y2="358" stroke="#0e6e63" stroke-width="2.8" marker-end="url(#u08c1ms_aMix)" />
+
+  <!-- ============================================================
+       LABELE STRELICA SILA (jednoredne, iznad cijevi)
+  ============================================================ -->
+  <!-- Q_A label – iznad cijevi A -->
+  <!-- Q_B label – ispod cijevi B (jer iznad B je cijev A) -->
+  <!-- Q_3 label – iznad izlazne cijevi (unutar lijevog panela) -->
+  <!-- ============================================================
+       LABELE FLUIDA UNUTAR CIJEVI
+  ============================================================ -->
+  <!-- Oznaka mjesavine unutar spremnika -->
+  <!-- ============================================================
+       dh/dt strelica (ljubicasta) – u sloju akumulacije
+  ============================================================ -->
+  <line x1="280" y1="298" x2="280" y2="242" stroke="#8e44ad" stroke-width="2.6" marker-end="url(#u08c1ms_aAcc)" />
+  <!-- Label sloja akumulacije -->
+  <!-- ============================================================
+       KOTE
+  ============================================================ -->
+  <!-- h_0 (vertikalna, lijevo) -->
+  <!-- h_1 (vertikalna, jos lijevije) -->
+  <!-- D_3 + v_3 labels – iznad Q_3 strelice (unutar lijevog panela) -->
+  <!-- L kota (horizontalna, ispod dna) -->
+  <!-- ============================================================
+       DESNI PANEL – formule
+       Sredina: x = 824, x_left=662, x_right=986
+  ============================================================ -->
+  <!-- Header bar -->
+  <rect x="662" y="14" width="324" height="34" rx="12" fill="#1565c0" />
+  <rect x="662" y="32" width="324" height="16" fill="#1565c0" />
+  <!-- Blok 1: Izlazni protok (y = 56..120) -->
+  <line x1="682" y1="124" x2="966" y2="124" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 2: Gustoca mjesavine (y = 124..192) -->
+  <line x1="682" y1="196" x2="966" y2="196" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 3: dh/dt (y = 196..264) -->
+  <line x1="682" y1="268" x2="966" y2="268" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 4: Vrijeme (y = 268..336) -->
+  <line x1="682" y1="340" x2="966" y2="340" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 5: Akumulirana masa (y = 340..408) -->
+  <line x1="682" y1="412" x2="966" y2="412" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Sazetak italic -->
+  <!-- REZULTATI badge (y = 446..492) -->
+  <rect x="672" y="446" width="304" height="46" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="204" y1="300" x2="178" y2="300" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="204" y1="420" x2="178" y2="420" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="178" y1="300" x2="168" y2="300" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="178" y1="420" x2="168" y2="420" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="173" y1="303" x2="173" y2="417" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u08c1ms_aDimR)" marker-end="url(#u08c1ms_aDim)" />
+  <line x1="204" y1="240" x2="128" y2="240" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="204" y1="420" x2="128" y2="420" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="128" y1="240" x2="118" y2="240" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="128" y1="420" x2="118" y2="420" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="123" y1="243" x2="123" y2="417" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u08c1ms_aDimR)" marker-end="url(#u08c1ms_aDim)" />
+  <line x1="220" y1="438" x2="220" y2="464" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="540" y1="438" x2="540" y2="464" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="220" y1="467" x2="220" y2="455" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="540" y1="467" x2="540" y2="455" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="223" y1="461" x2="537" y2="461" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u08c1ms_aDimR)" marker-end="url(#u08c1ms_aDim)" />
+  <text x="382" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#8e44ad">kontrolni volumen (KV)</text>
+
+  <text x="22" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1565c0"><tspan font-weight="700">Q<tspan baseline-shift="sub" font-size="0.7em">A</tspan></tspan> = 18 L/s</text>
+  <text x="22" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">Q<tspan baseline-shift="sub" font-size="0.7em">B</tspan></tspan> = 6 L/s</text>
+
+  <text x="622" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#0e6e63"><tspan font-weight="700">Q<tspan baseline-shift="sub" font-size="0.7em">3</tspan></tspan> = A<tspan baseline-shift="sub" font-size="0.7em">3</tspan>·v<tspan baseline-shift="sub" font-size="0.7em">3</tspan></text>
+
+  <text x="150" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" font-style="italic" text-anchor="middle" fill="#0d3d6e">A: voda</text>
+  <text x="150" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" font-style="italic" text-anchor="middle" fill="#1c5a2f">B: slana otopina</text>
+  <text x="150" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#1c5a2f">(s<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = 1,10)</text>
+
+
+  <text x="380" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" text-anchor="middle" fill="#0a4a44">ρ<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 1025 kg/m³</text>
+  <text x="380" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#0a4a44">(homogeno miješano)</text>
+
+  <text x="288" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#8e44ad">dh/dt</text>
+  <text x="288" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#8e44ad">≈ 0,094 m/min</text>
+
+  <text x="470" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5b4a72">ΔV = A<tspan baseline-shift="sub" font-size="0.7em">T</tspan>·Δh</text>
+
+  <text x="380" y="498" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">A<tspan baseline-shift="sub" font-size="0.7em">T</tspan> = L · b = 6,30 m²</text>
+
+  <text x="824" y="36" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#ffffff">Ključne jednadžbe (KV)</text>
+
+  <text x="824" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Izlazni volumni protok</text>
+  <text x="824" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">Q<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = A<tspan baseline-shift="sub" font-size="0.7em">3</tspan> · v<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = (π D<tspan baseline-shift="sub" font-size="0.7em">3</tspan>² / 4) · v<tspan baseline-shift="sub" font-size="0.7em">3</tspan></text>
+  <text x="824" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#0e6e63">≈ 14,1 L/s</text>
+  <text x="824" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Gustoća homogenizirane mješavine</text>
+  <text x="824" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1a2530">ρ<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = (ρ<tspan baseline-shift="sub" font-size="0.7em">A</tspan>Q<tspan baseline-shift="sub" font-size="0.7em">A</tspan> + ρ<tspan baseline-shift="sub" font-size="0.7em">B</tspan>Q<tspan baseline-shift="sub" font-size="0.7em">B</tspan>) / (Q<tspan baseline-shift="sub" font-size="0.7em">A</tspan> + Q<tspan baseline-shift="sub" font-size="0.7em">B</tspan>)</text>
+  <text x="824" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 24,6 / 0,024 = 1025 kg/m³</text>
+  <text x="824" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Brzina porasta razine</text>
+  <text x="824" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">dh/dt = (Q<tspan baseline-shift="sub" font-size="0.7em">A</tspan> + Q<tspan baseline-shift="sub" font-size="0.7em">B</tspan> − Q<tspan baseline-shift="sub" font-size="0.7em">3</tspan>) / A<tspan baseline-shift="sub" font-size="0.7em">T</tspan></text>
+  <text x="824" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#8e44ad">≈ 0,094 m/min</text>
+  <text x="824" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Vrijeme porasta Δh = h<tspan baseline-shift="sub" font-size="0.7em">1</tspan> − h<tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+  <text x="824" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">t = A<tspan baseline-shift="sub" font-size="0.7em">T</tspan> · Δh / (Q<tspan baseline-shift="sub" font-size="0.7em">A</tspan> + Q<tspan baseline-shift="sub" font-size="0.7em">B</tspan> − Q<tspan baseline-shift="sub" font-size="0.7em">3</tspan>)</text>
+  <text x="824" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#8e44ad">≈ 255 s ≈ 4,3 min</text>
+  <text x="824" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">5. Akumulirana masa</text>
+  <text x="824" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">Δm = ρ<tspan baseline-shift="sub" font-size="0.7em">3</tspan> · A<tspan baseline-shift="sub" font-size="0.7em">T</tspan> · Δh</text>
+  <text x="824" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 2583 kg ≈ 2,58 t</text>
+  <text x="824" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Q<tspan baseline-shift="sub" font-size="0.7em">A</tspan> + Q<tspan baseline-shift="sub" font-size="0.7em">B</tspan> &gt; Q<tspan baseline-shift="sub" font-size="0.7em">3</tspan> → razina raste, KV akumulira masu</text>
+
+  <text x="824" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="730" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#0e6e63">Q<tspan baseline-shift="sub" font-size="0.7em">3</tspan> ≈ 14,1 L/s</text>
+  <text x="824" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0">ρ<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 1025 kg/m³</text>
+  <text x="918" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">Δm ≈ 2,58 t</text>
+
+<text x="165" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 0,80 m</text>
+
+  <text x="115" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1,20 m</text>
+
+  <text x="622" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">D<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 100 mm</text>
+  <text x="622" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">v<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 1,80 m/s</text>
+
+  <text x="380" y="482" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c">L = 4,2 m   (b = 1,5 m ⟂ skici)</text>
+  </svg>

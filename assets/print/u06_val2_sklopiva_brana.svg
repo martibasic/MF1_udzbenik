@@ -1,136 +1,229 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u06v2sb_u6v2T u06v2sb_u6v2D" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u06v2sb_u6v2T">U06 Val 2 – Sklopiva servisna brana sa zakrivljenim rubom</title>
-  <desc id="u06v2sb_u6v2D">Brana s ravnim segmentom OA pod 45 stupnjeva i zakrivljenim segmentom ABD. Vertikalna komponenta na zakrivljenom dijelu djeluje prema dolje jer voda leži iznad zakrivljene plohe.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u06v2sb_title u06v2sb_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u06v2sb_title">Sklopiva servisna brana s ravnim segmentom OA pod 45 stupnjeva i zakrivljenim rubom ABD</title>
+  <desc id="u06v2sb_desc">Lijevo: presjek hidrotehnickog objekta. Brana je sarkom O okretljivo vezana na slobodnoj povrsini. Ravni segment OA spusta se pod 45 stupnjeva u vodu, a zakrivljeni rub ABD nastavlja do tocke D u kojoj djeluje vodoravna sila drzanja F. Voda lezi s lijeve strane brane. Prikazane su sile F-OA okomito na OA, F-V prema dolje na ABD, tezina brane W i izlazna sila F u tocki D, te kote H, h, h-a, a, y i kut 45 stupnjeva. Desno: panel s rezultatima i krajnjom silom drzanja.</desc>
+
   <defs>
-    <pattern id="u06v2sb_u6v2H" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
-    </pattern>
-    <linearGradient id="u06v2sb_u6v2Wg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <linearGradient id="u06v2sb_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
     </linearGradient>
-    <marker id="u06v2sb_u6v2aR" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#b42318"/>
+    <pattern id="u06v2sb_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <pattern id="u06v2sb_vstar" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#e8f1f9" />
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#7da7c8" stroke-width="0.7" />
+    </pattern>
+    <marker id="u06v2sb_fR" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u06v2sb_u6v2aG" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#0f766e"/>
+    <marker id="u06v2sb_fG" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u06v2sb_u6v2aO" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#c96c35"/>
+    <marker id="u06v2sb_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u06v2sb_u6v2aB" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#1565c0"/>
-    </marker>
-    <marker id="u06v2sb_u6v2aGr" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L9,4 z" fill="#546e7a"/>
+    <marker id="u06v2sb_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
 
-  <!-- Background + border -->
-  <rect width="940" height="420" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <!-- pozadinski paneli -->
+  <rect x="16" y="16" width="948" height="528" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <line x1="540" y1="40" x2="540" y2="520" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
-  <!-- Title -->
+  <!-- ===================== LIJEVI PANEL: FIZIKALNI MODEL ===================== -->
+  <!--
+    GEOMETRIJSKA SHEMA (skala ~75 px/m):
+    H = 2,10 m  = 158 px (ukupna dubina od povrsine do dna)
+    h = 1,92 m  = 144 px (od povrsine do tocke D)
+    h-a = 1,46 m = 110 px (vertikalni pad od O do A; OA pod 45 stupnjeva, horizontal isto 110)
+    a = 0,46 m  = 35 px (vertikalni pad od A do D)
+    y = 0,64 m  = 48 px (pomocna mjera zakrivljenog ruba)
+    L = 2,065 m
 
-  <!-- Left structural wall (srafura) -->
-  <rect x="40" y="148" width="60" height="218" fill="url(#u06v2sb_u6v2H)"/>
-  <rect x="40" y="148" width="60" height="218" fill="none" stroke="#546e7a" stroke-width="1.5"/>
-  <!-- Bottom structural floor (srafura) -->
-  <rect x="40" y="366" width="460" height="34" fill="url(#u06v2sb_u6v2H)"/>
-  <rect x="40" y="366" width="460" height="34" fill="none" stroke="#546e7a" stroke-width="1.5"/>
+    Tocke:
+    O = (240, 100)  sarka na slobodnoj povrsini
+    A = (350, 210)  prijelaz OA -> ABD; dubina 1,46 m
+    D = (240, 244)  donja tocka brane; dubina 1,92 m
+    Dno = y 258 (dubina 2,10 m)
+    Krivulja ABD: blagi luk od A(350,210) preko B(310,238) do D(240,244)
+  -->
 
-  <!-- Free surface -->
-  <line x1="100" y1="148" x2="500" y2="148" stroke="#3a87ad" stroke-width="3"/>
-  <text x="505" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">slobodna površina</text>
+  <!-- LIJEVA STIJENKA REZERVOARA (zatvorena, puna visina) -->
+  <rect x="60" y="80" width="22" height="178" fill="url(#u06v2sb_hatch)" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- Water fill -->
-  <path d="M100,148 L210,148 L340,278 Q300,318 250,358 L100,358 Z" fill="url(#u06v2sb_u6v2Wg)" opacity="0.75"/>
+  <!-- DNO REZERVOARA -->
+  <rect x="60" y="258" width="450" height="22" fill="url(#u06v2sb_hatch)" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- Gate — straight segment OA -->
-  <line x1="210" y1="148" x2="340" y2="278" stroke="#173043" stroke-width="5" stroke-linecap="round"/>
-  <!-- Gate — curved segment ABD -->
-  <path d="M340,278 Q300,318 250,358" fill="none" stroke="#173043" stroke-width="5" stroke-linecap="round"/>
+  <!-- DESNA STRUKTURA (zid na koji se brana pridrzava u D) -->
+  <rect x="400" y="80" width="22" height="178" fill="url(#u06v2sb_hatch)" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- Container wall and floor outlines -->
-  <line x1="100" y1="148" x2="100" y2="366" stroke="#2d3a40" stroke-width="3"/>
-  <line x1="100" y1="366" x2="460" y2="366" stroke="#2d3a40" stroke-width="3"/>
-  <line x1="460" y1="148" x2="460" y2="366" stroke="#2d3a40" stroke-width="2" stroke-dasharray="8 6"/>
+  <!-- VODA: omedjena lijevom stijenkom, dnom, branom OA, krivuljom ABD i dnom do D, te vertikalom D-do-dna -->
+  <path d="M82,100 L240,100 L350,210 Q310,238 240,244 L240,258 L82,258 Z" fill="url(#u06v2sb_voda)" />
 
-  <!-- Hinge O -->
-  <circle cx="210" cy="148" r="8" fill="#ffffff" stroke="#173043" stroke-width="2.5"/>
-  <circle cx="210" cy="148" r="3" fill="#173043"/>
-  <text x="195" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">O</text>
-  <text x="222" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">(šarka)</text>
+  <!-- SLOBODNA POVRSINA (od lijeve stijenke do sarke O) -->
+  <line x1="82" y1="100" x2="240" y2="100" stroke="#1565c0" stroke-width="2.2" />
+  <!-- ZAMISLJENI VOLUMEN V* iznad zakrivljene plohe ABD -->
+  <path d="M240,210 L350,210 Q310,238 240,244 Z" fill="none" opacity="0.9" stroke="#5b9ec9" stroke-width="1" stroke-dasharray="4,3" />
+  <!-- VODA OZNAKA -->
+  <!-- BRANA: ravni segment OA (deblja crna linija) -->
+  <line x1="240" y1="100" x2="350" y2="210" stroke="#2d3a40" stroke-width="4.5" stroke-linecap="round" />
+  <!-- BRANA: zakrivljeni segment ABD -->
+  <path d="M350,210 Q310,238 240,244" fill="none" stroke="#2d3a40" stroke-width="4.5" stroke-linecap="round" />
 
-  <!-- Point A -->
-  <circle cx="340" cy="278" r="5" fill="#173043"/>
-  <text x="348" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">A</text>
+  <!-- Pomocna isprekidana vertikala od D do dna (D je iznad dna za H-h = 0,18 m) -->
+  <line x1="240" y1="244" x2="240" y2="258" stroke="#5d6d7e" stroke-width="1" stroke-dasharray="3,3" />
 
-  <!-- Point D -->
-  <circle cx="250" cy="358" r="5" fill="#173043"/>
-  <text x="256" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">D</text>
+  <!-- KARAKTERISTICNE TOCKE -->
+  <!-- O: sarka na slobodnoj povrsini -->
+  <circle cx="240" cy="100" r="6" fill="#ffffff" stroke="#1a2530" stroke-width="2" />
+  <circle cx="240" cy="100" r="2.2" fill="#1a2530" />
+  <!-- A: prijelaz OA-ABD -->
+  <circle cx="350" cy="210" r="4" fill="#1a2530" />
+  <!-- B: srednja tocka krivulje -->
+  <circle cx="310" cy="238" r="3" fill="#1a2530" />
+  <!-- D: donja tocka brane -->
+  <circle cx="240" cy="244" r="4" fill="#1a2530" />
+  <!-- KUT 45 stupnjeva uz O -->
+  <path d="M260,100 A20,20 0 0,1 254,114" fill="none" stroke="#5a6a78" stroke-width="1" />
+  <!-- ============== SILE ============== -->
 
-  <!-- FOA: perpendicular to OA, pointing lower-right (water on left of OA) -->
-  <!-- OA direction: (1,1)/sqrt2; perpendicular from water side: (1,-1)/sqrt2 pointing upper-right -->
-  <!-- In the diagram, show F_OA as perpendicular to OA at midpoint, pointing away from water (upper-right) -->
-  <line x1="258" y1="235" x2="302" y2="191" stroke="#b42318" stroke-width="4" marker-end="url(#u06v2sb_u6v2aR)"/>
-  <rect x="304" y="180" width="52" height="22" rx="5" fill="#fff" stroke="#d8c7c4" stroke-width="1.2"/>
-  <text x="312" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">F&#x1D12A;</text>
+  <!-- F_OA: okomita na OA u hvatistu (priblizno 2/3 od O prema A, ali pomaknuto za citljivost).
+       OA smjer: (1,1)/sqrt2. Normala suprotno od vode (voda lijevo-gore, tj. ploha gleda dolje-lijevo, sila djeluje na branu prema dolje-desno): smjer (1,-1)/sqrt2? Provjera: tlak u vodi u tocki na OA djeluje na branu okomito u smjeru udaljavanja od vode. Voda je s LIJEVE strane od OA (oblak vode iznad OA i s gornje-lijeve strane krivulje). Vektor od vode (lijevo) prema brani je u +x smjeru. Okomito na OA: rotacija OA smjera (1,1)/sqrt2 za -90 stupnjeva = (1,-1)/sqrt2. To je gore-desno. Ali sila bi se trebala usmjeriti dolje-desno (s vodene strane prema suvoj strani). Ovdje voda je iznad ravnog dijela OA (jer OA ide iz povrsine prema dolje-desno, a voda je s lijeve i ispod) -> hmm.
+       Bolje: Voda popunjava prostor LIJEVO od brane. Ravni dio OA: voda je s gornje LIJEVE strane plohe (jer ploha visi udesno, voda lijevo). Sila na branu = normala u smjeru udaljavanja od vode = (1,-1)/sqrt2 = DESNO-GORE. To je ono sto smo crtali.
+       Krak F_OA je L/3 od O = 110/3 horizontal i vert = pomak (37,37) od O = (277, 137). -->
+  <line x1="280" y1="140" x2="316" y2="104" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u06v2sb_fR)" />
+  <!-- F_V: vertikalna komponenta na ABD, prema DOLJE (V* iznad krivulje).
+       Hvatiste u centroidu V* (x~290, y~220). Strelica unutar V* zone, label desno. -->
+  <line x1="290" y1="190" x2="290" y2="230" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u06v2sb_fR)" />
+  <line x1="252" y1="190" x2="287" y2="200" stroke="#a04030" stroke-width="0.5" />
 
-  <!-- FV on curved part (↓ downward) -->
-  <line x1="308" y1="308" x2="308" y2="360" stroke="#0f766e" stroke-width="4" marker-end="url(#u06v2sb_u6v2aG)"/>
-  <rect x="315" y="328" width="46" height="22" rx="5" fill="#fff" stroke="#c7d8d6" stroke-width="1.2"/>
-  <text x="323" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">F&#x1D65;</text>
+  <!-- W = mg: tezina brane, prema dolje. Strelica blizu A, na zracnoj (desnoj) strani brane. -->
+  <line x1="362" y1="172" x2="362" y2="208" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u06v2sb_fR)" />
+  <!-- F: vodoravna sila drzanja u D, na branu, djeluje iz desne strukture prema lijevo? Brana se odgurava od vode prema desno; sila F drzi je da ne pada u-desno. Ne: voda je lijevo, brana se naginje DESNO (od vode). Sila F u D mora vuci branu LIJEVO da kompenzira. ALI source kaze: "Brana se pridrzava vodoravnom silom F u donjoj tocki D" - sila koja DRZI branu, dakle suprotno od smjera otklona.
+       U Codex skici F je prema desno; ali fizikalno F je sila REAKCIJE iz oslonca na branu, i ide u smjeru koji uravnotezi momente. Po formuli F*H pozitivno suprotstavlja (W+F_V)*H. Iz suma momenata oko O, smjer F mora biti takav da daje negativan moment koji uravnotezuje W+F_V (oba dolje, na desno od O daju moment u smjeru kazaljke). F treba dati moment u SUPROTNOM smjeru. Ako F djeluje u D vodoravno PREMA LIJEVO (u-x), krak (od O do D vertikalno) je H, moment je F*H suprotno kazaljki. Tako uravnotezi.
+       Dakle F je PREMA LIJEVO (u smjeru -x), u D, prema vodi (logicno: sila drzanja gura branu k vodi). -->
+  <line x1="240" y1="244" x2="200" y2="244" stroke="#1e8449" stroke-width="2.8" marker-end="url(#u06v2sb_fG)" />
+  <!-- ============== KOTE ============== -->
+  <!-- KOTA H (totalna dubina, lijevo od stijenke) -->
+  <!-- KOTA h (od povrsine do D razine, desno od desne strukture) -->
+  <!-- KOTA (h-a) - vertikalna od povrsine do A, smjestena izmedju A i desne strukture (uska zona x=350..400) -->
+  <!-- KOTA a - od A razine do D razine, desno od desne strukture izmedju h kota i desnog ruba -->
+  <!-- KOTA y - horizontalna od x=240 do x=304 (y=48 px = 0,64 m), na razini ispod D -->
+  <!-- KOTA L (duljina OA) iskazana u Zadano i u formula panelu; ne crtamo dijagonalnu kotu da ne pretrpamo skicu. -->
+  <!-- Umjesto kote, mala oznaka L uz samu liniju OA -->
+  <!-- ZADANO LEGENDA u dnu lijeve plohe -->
+  <rect x="60" y="338" width="450" height="50" rx="6" fill="#f3f7fa" stroke="#cfdde8" stroke-width="1" />
+  <!-- Komentar -->
+  <!-- ===================== DESNI PANEL: REZULTATI ===================== -->
 
-  <!-- mg: weight of gate (↓ downward) at centroid of gate -->
-  <line x1="270" y1="228" x2="270" y2="276" stroke="#c96c35" stroke-width="4" marker-end="url(#u06v2sb_u6v2aO)"/>
-  <rect x="278" y="244" width="40" height="22" rx="5" fill="#fff" stroke="#e2d0c0" stroke-width="1.2"/>
-  <text x="283" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c96c35">mg</text>
+  <!-- HEADER bar -->
+  <rect x="556" y="56" width="396" height="34" rx="8" fill="#1565c0" />
+  <!-- BLOK 1: Geometrija -->
+  <rect x="556" y="100" width="396" height="80" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="556" y="100" width="6" height="80" rx="3" fill="#1565c0" />
+  <!-- BLOK 2: F_OA -->
+  <rect x="556" y="188" width="396" height="84" rx="9" fill="#fdf3f1" stroke="#ecc7c2" stroke-width="1.2" />
+  <rect x="556" y="188" width="6" height="84" rx="3" fill="#c0392b" />
+  <!-- BLOK 3: F_V -->
+  <rect x="556" y="280" width="396" height="84" rx="9" fill="#fdf3f1" stroke="#ecc7c2" stroke-width="1.2" />
+  <rect x="556" y="280" width="6" height="84" rx="3" fill="#c0392b" />
+  <!-- BLOK 4: Tezina brane -->
+  <rect x="556" y="372" width="396" height="46" rx="9" fill="#fdf3f1" stroke="#ecc7c2" stroke-width="1.2" />
+  <rect x="556" y="372" width="6" height="46" rx="3" fill="#c0392b" />
+  <!-- BLOK 5: Sila drzanja F -->
+  <rect x="556" y="426" width="396" height="80" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="556" y="426" width="6" height="80" rx="3" fill="#1e8449" />
+  <!-- (REZULTATI je vec citljiv iz blokova; badge ispustamo da se ne dupla) -->
+<line x1="60" y1="100" x2="40" y2="100" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="60" y1="258" x2="40" y2="258" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="40" y1="100" x2="40" y2="258" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u06v2sb_dimL)" marker-end="url(#u06v2sb_dim)" />
+  <line x1="422" y1="100" x2="496" y2="100" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="422" y1="244" x2="496" y2="244" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="490" y1="100" x2="490" y2="244" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u06v2sb_dimL)" marker-end="url(#u06v2sb_dim)" />
+  <line x1="350" y1="100" x2="395" y2="100" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="350" y1="210" x2="395" y2="210" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="388" y1="100" x2="388" y2="210" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u06v2sb_dimL)" marker-end="url(#u06v2sb_dim)" />
+  <line x1="422" y1="210" x2="456" y2="210" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="422" y1="244" x2="456" y2="244" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="452" y1="210" x2="452" y2="244" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u06v2sb_dimL)" marker-end="url(#u06v2sb_dim)" />
+  <line x1="240" y1="244" x2="240" y2="298" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="288" y1="244" x2="288" y2="298" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="240" y1="294" x2="288" y2="294" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u06v2sb_dimL)" marker-end="url(#u06v2sb_dim)" />
+  <text x="44" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Presjek brane (voda s lijeve strane)</text>
 
-  <!-- F: horizontal connector at D (→ rightward) -->
-  <line x1="250" y1="358" x2="338" y2="358" stroke="#1565c0" stroke-width="4" marker-end="url(#u06v2sb_u6v2aB)"/>
-  <rect x="342" y="346" width="28" height="22" rx="5" fill="#fff" stroke="#c7d0e4" stroke-width="1.2"/>
-  <text x="349" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">F</text>
+  <text x="100" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#0d47a1" font-style="italic">slobodna površina</text>
 
-  <!-- H dimension (total depth) -->
-  <line x1="148" y1="148" x2="148" y2="366" stroke="#546e7a" stroke-width="2" marker-start="url(#u06v2sb_u6v2aGr)" marker-end="url(#u06v2sb_u6v2aGr)"/>
-  <rect x="120" y="248" width="24" height="20" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1.2"/>
-  <text x="127" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">H</text>
+  <text x="300" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1a6696" text-anchor="middle">V*</text>
 
-  <!-- h-a dimension (O to A depth) -->
-  <line x1="382" y1="148" x2="382" y2="278" stroke="#c96c35" stroke-width="1.8" marker-start="url(#u06v2sb_u6v2aGr)" marker-end="url(#u06v2sb_u6v2aGr)"/>
-  <rect x="390" y="204" width="38" height="20" rx="5" fill="#fff" stroke="#e2d0c0" stroke-width="1.2"/>
-  <text x="394" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c96c35">h–a</text>
+  <text x="135" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0d47a1">voda</text>
+  <text x="135" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">ρ = 998 kg/m³</text>
 
-  <!-- a dimension (above A) -->
-  <line x1="414" y1="148" x2="414" y2="214" stroke="#c96c35" stroke-width="1.8" marker-start="url(#u06v2sb_u6v2aGr)" marker-end="url(#u06v2sb_u6v2aGr)"/>
-  <rect x="422" y="172" width="18" height="20" rx="5" fill="#fff" stroke="#e2d0c0" stroke-width="1.2"/>
-  <text x="426" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c96c35">a</text>
+  <text x="226" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">O</text>
+  <text x="216" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">šarka</text>
 
-  <!-- V_imaginatory annotation on curved part -->
-  <rect x="157" y="285" width="86" height="62" rx="6" fill="#dff1f8" opacity="0.7" stroke="#3a87ad" stroke-width="1.2" stroke-dasharray="6 4"/>
-  <text x="163" y="307" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a6696">zamišljeni</text>
-  <text x="163" y="323" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a6696">volumen V*</text>
-  <text x="163" y="339" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a6696">iznad plohe</text>
+  <text x="354" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">A</text>
 
-  <!-- Formula box -->
-  <rect x="548" y="100" width="348" height="276" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="568" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#173043">Rezultati</text>
-  <text x="568" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">H=2,10 m, h=1,92 m, a=0,46 m, m=580 kg, B=1,00 m</text>
-  <line x1="568" y1="152" x2="880" y2="152" stroke="#e8d89a" stroke-width="1"/>
-  <text x="568" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F&#x1D12A; = &#x3C1;g · h&#x1D9C;&#x2C2; · L·B</text>
-  <text x="568" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">L = H&#x221A;2/2 = 1,485 m,  h&#x1D9C;&#x2C2; = h/2 = 0,96 m</text>
-  <text x="568" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">F&#x1D12A; &#x2248; 14,76 kN  (&#x22A5; na OA)</text>
-  <line x1="568" y1="220" x2="880" y2="220" stroke="#e8d89a" stroke-width="1"/>
-  <text x="568" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F&#x1D65; = &#x3C1;g · V*   (V* iznad plohe ABD)</text>
-  <text x="568" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">F&#x1D65; &#x2248; 4,01 kN  &#x2193;</text>
-  <line x1="568" y1="270" x2="880" y2="270" stroke="#e8d89a" stroke-width="1"/>
-  <text x="568" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">W = mg = 580·9,81 &#x2248; 5,69 kN  &#x2193;</text>
-  <line x1="568" y1="302" x2="880" y2="302" stroke="#e8d89a" stroke-width="1"/>
-  <text x="568" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">&#x3A3;M&#x1D12A; = 0 oko točke A:</text>
-  <text x="568" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">F &#x2248; 4,86 kN  &#x2192;</text>
-  <text x="568" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#999">(horizontalna spojnica u D)</text>
-</svg>
+  <text x="316" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1a2530">B</text>
+
+  <text x="228" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530" text-anchor="end">D</text>
+
+  <text x="264" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">45°</text>
+
+  <text x="296" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b" text-anchor="middle"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">OA</tspan></text>
+
+  <text x="248" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c0392b" text-anchor="end"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan> ↓</text>
+  <text x="368" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b"><tspan font-weight="700">W</tspan></text>
+
+  <text x="195" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449" text-anchor="end"><tspan font-weight="700">F</tspan></text>
+  <text x="195" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#155d31" text-anchor="end">sila držanja</text>
+
+  <text x="276" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78" transform="rotate(45 276 172)">L</text>
+
+  <text x="72" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1a2530">Zadano:</text>
+  <text x="72" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">m = 580 kg   ·   ρ = 998 kg/m³   ·   B = 1,00 m</text>
+  <text x="72" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">H = 2,10 m   ·   h = 1,92 m   ·   a = 0,46 m   ·   OA pod 45°</text>
+
+  <text x="60" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> ↓ jer V* leži iznad zakrivljene plohe (podtlačni doprinos, ne uzgon).</text>
+  <text x="60" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">F drži branu zatvorenom: vuče D suprotno od smjera otklona.</text>
+
+  <text x="754" y="79" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Rastav sila i ravnoteža momenata oko O</text>
+
+  <text x="754" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Geometrija ravnog dijela</text>
+  <text x="754" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">L</tspan> = (h−a)√2,   <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = (h−a)/2</text>
+  <text x="754" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0">L ≈ 2,065 m,   h<tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 0,73 m</text>
+
+  <text x="754" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Sila na ravni dio OA (okomita na plohu)</text>
+  <text x="754" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">OA</tspan> = ρ g h<tspan baseline-shift="sub" font-size="0.7em">C</tspan> · L · B</text>
+  <text x="754" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">OA</tspan> ≈ 14,76 kN</text>
+  <text x="754" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">krak oko O: L/3 ≈ 0,688 m</text>
+
+  <text x="754" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Vertikalna komponenta na zakrivljeni rub ABD</text>
+  <text x="754" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan> = ρ g V*,  V* = y²B,  y = H+a−h = 0,64 m</text>
+  <text x="754" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan> ≈ 4,01 kN  ↓</text>
+  <text x="754" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">smjer: prema dolje (V* iznad plohe)</text>
+
+  <text x="754" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Težina brane</text>
+  <text x="754" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">W</tspan> = mg = 580·9,81 ≈ 5,69 kN ↓</text>
+
+  <text x="754" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Ravnoteža momenata oko O → sila držanja u D</text>
+  <text x="754" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan>·H + F<tspan baseline-shift="sub" font-size="0.7em">OA</tspan>·(L/2−Δy) − (W+F<tspan baseline-shift="sub" font-size="0.7em">V</tspan>)·H = 0</text>
+  <text x="754" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">F</tspan> ≈ 4,86 kN  (vodoravno u D)</text>
+
+  <text x="32" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b7600c" text-anchor="middle"><tspan font-style="italic">H</tspan></text>
+  <text x="32.0" y="192.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle">= 2,10 m</text>
+
+  <text x="510" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b7600c"><tspan font-style="italic">h</tspan></text>
+  <text x="510.0" y="186.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 1,92 m</text>
+
+  <text x="395" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="end">h−a</text>
+  <text x="395" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#b7600c" text-anchor="end">1,46 m</text>
+
+  <text x="464" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#b7600c"><tspan font-style="italic">a</tspan></text>
+  <text x="464.0" y="242.0" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#b7600c">= 0,46 m</text>
+
+  <text x="264" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle"><tspan font-style="italic">y</tspan> = 0,64 m</text>
+
+  </svg>

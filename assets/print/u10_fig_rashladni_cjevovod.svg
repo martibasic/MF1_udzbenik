@@ -1,69 +1,187 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="380" viewBox="0 0 940 380" role="img" aria-labelledby="u10frc_u10rc-title u10frc_u10rc-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-labelledby="u10frc_title u10frc_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:920px;height:auto;">
+  <title id="u10frc_title">Rashladni cjevovod motora – pad tlaka na dionici pumpa – motor</title>
+  <desc id="u10frc_desc">Lijevo: shema rashladne dionice motora s pumpom (lijevo), aluminijskom cijevi promjera D=28 mm i duljine L=1,20 m izmedju dva koljena (na koljenima i ulaz/izlaz dolazi zbroj lokalnih koeficijenata Sigma ksi = 4,2) te motorom (desno). Srednja brzina rashladnog sredstva v=2,8 m/s, gustoca rho=1060 kg/m3, koeficijent trenja lambda=0,028. Desno: izvod ukupnog gubitka hw=2,158 m i pripadnog pada tlaka Delta p priblizno 22,4 kPa kroz cetiri koraka.</desc>
+
   <defs>
-    <linearGradient id="u10frc_u10rc-wg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffd5b8"/>
-      <stop offset="100%" stop-color="#ff9966"/>
+    <linearGradient id="u10frc_cool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
     </linearGradient>
-    <pattern id="u10frc_u10rc-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
-    </pattern>
-    <marker id="u10frc_u10rc-arrG" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c2440c"/>
+    <linearGradient id="u10frc_metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cdd5da" />
+      <stop offset="1" stop-color="#909fa8" />
+    </linearGradient>
+    <marker id="u10frc_flow" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
     </marker>
-    <marker id="u10frc_u10rc-arrO" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c49a0a"/>
+    <marker id="u10frc_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u10frc_u10rc-arrOrev" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c49a0a"/>
+    <marker id="u10frc_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u10frc_dp" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#c0392b" />
+    </marker>
+    <marker id="u10frc_dpL" markerWidth="6" markerHeight="4" refX="1" refY="2" orient="auto-start-reverse">
+      <path d="M0,0 L0,4 L6,2 z" fill="#c0392b" />
     </marker>
   </defs>
-  <rect width="940" height="380" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="332" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <title id="u10frc_u10rc-title">U10 T2 – Rashladni cjevovod motora</title>
-  <desc id="u10frc_u10rc-desc">Rashladni cjevovod motora: smjesa glikola ρ=1060 kg/m³, D=28 mm, L=1,20 m, v=2,8 m/s, Σξ=4,2 (ulaz, izlaz, 2 koljena). h_w=2,075 m, Δp=21,57 kPa.</desc>
-  <!-- Titles -->
-  <!-- === Engine block schematic === -->
-  <!-- Engine body -->
-  <rect x="350" y="120" width="240" height="140" rx="10" fill="#e8ecef" stroke="#546e7a" stroke-width="2.5"/>
-  <text x="470" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#173043" text-anchor="middle">Motor</text>
-  <text x="470" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677" text-anchor="middle">ρ=1060 kg/m³ (glikol)</text>
-  <!-- === Cooling circuit: entry left (350,190), exit right (590,190) === -->
-  <!-- Entry pipe: x=44..350, y=182..202 (coolant hot on left/inlet) -->
-  <!-- Actually flow: pump (left) pushes through engine (right) and returns -->
-  <!-- Inlet pipe to engine: x=44..350 -->
-  <rect x="52" y="176" width="298" height="18" fill="url(#u10frc_u10rc-sraf)"/>
-  <rect x="52" y="218" width="298" height="18" fill="url(#u10frc_u10rc-sraf)"/>
-  <rect x="52" y="194" width="298" height="24" fill="url(#u10frc_u10rc-wg)" stroke="#546e7a" stroke-width="1.5"/>
-  <!-- Exit pipe from engine: x=590..890 -->
-  <rect x="590" y="176" width="298" height="18" fill="url(#u10frc_u10rc-sraf)"/>
-  <rect x="590" y="218" width="298" height="18" fill="url(#u10frc_u10rc-sraf)"/>
-  <rect x="590" y="194" width="298" height="24" fill="url(#u10frc_u10rc-wg)" stroke="#546e7a" stroke-width="1.5"/>
-  <!-- Flow arrows (orange-red for hot coolant) -->
-  <line x1="80" y1="206" x2="160" y2="206" stroke="#c2440c" stroke-width="3.5" marker-end="url(#u10frc_u10rc-arrG)"/>
-  <line x1="680" y1="206" x2="760" y2="206" stroke="#c2440c" stroke-width="3.5" marker-end="url(#u10frc_u10rc-arrG)"/>
-  <!-- Local loss symbols (elbows/fittings) -->
-  <!-- Entry fitting ξ₁ = ulaz 0.5 -->
-  <circle cx="100" cy="194" r="9" fill="#c49a0a" opacity="0.8"/>
-  <text x="100" y="175" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c49a0a" text-anchor="middle">ulaz</text>
-  <text x="100" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c49a0a" text-anchor="middle">ξ₁</text>
-  <!-- Elbow at entry to engine: ξ₂ = koljeno 0.9 -->
-  <circle cx="250" cy="194" r="9" fill="#c49a0a" opacity="0.8"/>
-  <text x="250" y="175" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c49a0a" text-anchor="middle">koljeno</text>
-  <text x="250" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c49a0a" text-anchor="middle">ξ₂</text>
-  <!-- Exit elbow: ξ₃ -->
-  <circle cx="700" cy="194" r="9" fill="#c49a0a" opacity="0.8"/>
-  <text x="700" y="175" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c49a0a" text-anchor="middle">koljeno</text>
-  <text x="700" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c49a0a" text-anchor="middle">ξ₃</text>
-  <!-- Exit fitting: ξ₄ = izlaz -->
-  <circle cx="840" cy="194" r="9" fill="#c49a0a" opacity="0.8"/>
-  <text x="840" y="175" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c49a0a" text-anchor="middle">izlaz</text>
-  <text x="840" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c49a0a" text-anchor="middle">ξ₄</text>
-  <!-- Pipe label -->
-  <text x="175" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043" text-anchor="middle">D=28 mm, v=2,8 m/s</text>
-  <!-- === FORMULA BOX === -->
-  <rect x="44" y="268" width="840" height="78" rx="12" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="464" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">Rješenje – Bernoulli duž rashladnog kruga</text>
-  <text x="54" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">v²/(2g) = 0,399 m    h_l = λ(L/D)·v²/(2g) = 0,028·(1,20/0,028)·0,399 = 0,399 m    h_loc = 4,2·0,399 = 1,676 m</text>
-  <text x="54" y="333" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">h_w = 2,075 m    Δp = ρg·h_w = 1060·9,81·2,075 = 21 570 Pa ≈ 21,6 kPa</text>
-</svg>
+
+  <!-- okvirni paneli -->
+  <rect x="16" y="16" width="476" height="468" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="504" y="16" width="460" height="468" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+
+  <!-- ===================== LIJEVI PANEL ===================== -->
+  <!-- ===== KOTA L (smedja, gore iznad cijevi) ===== -->
+  <!-- L se mjeri izmedju dva koljena (x=88 do x=400) -->
+  <!-- pomocne linije od koljena prema osi kote (y=104) -->
+  <!-- tik-crte -->
+  <!-- kota linija -->
+  <!-- ===== PUMPA (lijevo) ===== -->
+  <!-- kuciste pumpe na y=240 -->
+  <circle cx="60" cy="244" r="32" fill="url(#u10frc_metal)" stroke="#3a4a56" stroke-width="1.6" />
+  <circle cx="60" cy="244" r="22" fill="none" stroke="#3a4a56" stroke-width="1" />
+  <path d="M60,244 L74,232 M60,244 L46,232 M60,244 L74,256 M60,244 L46,256" stroke="#3a4a56" stroke-width="1.4" fill="none" />
+  <circle cx="60" cy="244" r="3" fill="#3a4a56" />
+  <!-- ===== MOTOR (desno) ===== -->
+  <rect x="402" y="190" width="74" height="116" rx="6" fill="#e8ecef" stroke="#3a4a56" stroke-width="1.8" />
+  <!-- cylinder rebra -->
+  <line x1="414" y1="200" x2="414" y2="296" stroke="#aab4bd" stroke-width="1" />
+  <line x1="426" y1="200" x2="426" y2="296" stroke="#aab4bd" stroke-width="1" />
+  <line x1="438" y1="200" x2="438" y2="296" stroke="#aab4bd" stroke-width="1" />
+  <line x1="450" y1="200" x2="450" y2="296" stroke="#aab4bd" stroke-width="1" />
+  <line x1="462" y1="200" x2="462" y2="296" stroke="#aab4bd" stroke-width="1" />
+  <!-- ===== CJEVOVOD: vanjska stijenka cijevi (sivo) ===== -->
+  <!-- vertikala iznad pumpe x=48..72, y=148..212 -->
+  <rect x="48" y="148" width="24" height="64" fill="url(#u10frc_metal)" stroke="#3a4a56" stroke-width="1.4" />
+  <!-- vodoravna dionica x=48..440, y=148..172 (visina 24) -->
+  <rect x="48" y="148" width="392" height="24" fill="url(#u10frc_metal)" stroke="#3a4a56" stroke-width="1.4" />
+  <!-- vertikala ulaz u motor x=416..440, y=148..210 -->
+  <rect x="416" y="148" width="24" height="62" fill="url(#u10frc_metal)" stroke="#3a4a56" stroke-width="1.4" />
+
+  <!-- ===== UNUTRASNJOST CIJEVI: rashladno sredstvo (plavi gradient) ===== -->
+  <rect x="52" y="152" width="16" height="60" fill="url(#u10frc_cool)" />
+  <rect x="52" y="152" width="388" height="16" fill="url(#u10frc_cool)" />
+  <rect x="420" y="156" width="16" height="54" fill="url(#u10frc_cool)" />
+
+  <!-- ===== FLOW ARROWS (smjer toka kroz cijev) ===== -->
+  <!-- vertikala iznad pumpe (prema gore) -->
+  <line x1="60" y1="200" x2="60" y2="176" stroke="#0d47a1" stroke-width="2.2" marker-end="url(#u10frc_flow)" />
+  <!-- vodoravna 1. trecina -->
+  <line x1="156" y1="160" x2="208" y2="160" stroke="#0d47a1" stroke-width="2.4" marker-end="url(#u10frc_flow)" />
+  <!-- vodoravna 2. trecina -->
+  <line x1="252" y1="160" x2="304" y2="160" stroke="#0d47a1" stroke-width="2.4" marker-end="url(#u10frc_flow)" />
+  <!-- vertikala ulaz motora (prema dolje) -->
+  <line x1="428" y1="184" x2="428" y2="206" stroke="#0d47a1" stroke-width="2.2" marker-end="url(#u10frc_flow)" />
+
+  <!-- oznaka v (iznad jedne od strelica) -->
+  <!-- ===== LOKALNI OTPORI (mali kruzici na 4 mjesta) ===== -->
+  <!-- &#958;1: ulaz iz pumpe u cijev (na donjem dijelu vertikale) -->
+  <!-- &#958;2: koljeno gore-lijevo -->
+  <!-- &#958;3: koljeno gore-desno -->
+  <!-- &#958;4: izlaz iz cijevi u motor -->
+  <!-- ===== KOTA D (vodoravna, ispod vodoravne dionice cijevi) ===== -->
+  <!-- Postavimo D kotu ISPOD vodoravne cijevi na slobodnom segmentu izmedju ksi2 i v-strelica -->
+  <!-- Vodoravna cijev je y=148..172. Mjerimo izmedju vrha (y=148) i dna (y=172) PA STAVLJAMO U BOK na x=204..228 (mali nepogodan zoom) -->
+  <!-- Bolje: D kota ide u prazno polje iznad pumpe x=140..170, y=180..220 (lijevo od ksi1) -->
+  <!-- Zapravo: koristimo prazan segment ISPOD cijevi ali iznad sigma-ksi boksa, npr. x=160, y=192..216 -->
+  <!-- Pomocne linije iz stijenki cijevi prema dolje -->
+  <!-- tik-crte na visini kote y=216 -->
+  <!-- kota linija (vodoravna) -->
+  <!-- label desno od kote -->
+  <!-- ===== PRESJECI 1 i 2 (referentne tocke za Delta p) ===== -->
+  <!-- presjek 1: na vertikali iznad pumpe (x=60), y=212 (donji rub vode) -->
+  <line x1="36" y1="212" x2="84" y2="212" stroke="#c0392b" stroke-width="1.0" stroke-dasharray="4,3" />
+  <circle cx="60" cy="212" r="3" fill="#c0392b" />
+  <!-- presjek 2: na vertikali ulaz motora (x=428), y=212 -->
+  <line x1="404" y1="212" x2="488" y2="212" stroke="#c0392b" stroke-width="1.0" stroke-dasharray="4,3" />
+  <circle cx="428" cy="212" r="3" fill="#c0392b" />
+  <!-- ===== Sigma ksi info (ispod cijevi, slobodan prostor) ===== -->
+  <rect x="84" y="358" width="332" height="46" rx="6" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
+  <!-- ===== Delta p rezultat (crvena tablica) ===== -->
+  <rect x="84" y="414" width="332" height="56" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.4" />
+  <!-- ===== ZADANO (dolje, kompaktno) ===== -->
+  <!-- ===================== DESNI PANEL: 4 KORAKA ===================== -->
+  <!-- Korak 1: v^2/(2g) baza -->
+  <rect x="524" y="62" width="424" height="84" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="524" y="62" width="6" height="84" rx="3" fill="#1565c0" />
+  <!-- Korak 2: h_l linijski -->
+  <rect x="524" y="156" width="424" height="84" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="524" y="156" width="6" height="84" rx="3" fill="#1565c0" />
+  <!-- Korak 3: h_loc lokalni -->
+  <rect x="524" y="250" width="424" height="84" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
+  <!-- Korak 4: zbroj h_w + Delta p (rezultat) -->
+  <rect x="524" y="344" width="424" height="128" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="524" y="344" width="6" height="128" rx="3" fill="#1e8449" />
+  <line x1="552" y1="426" x2="920" y2="426" stroke="#c8d6e4" stroke-width="1" />
+  <line x1="88" y1="156" x2="88" y2="100" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="400" y1="156" x2="400" y2="100" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="88" y1="112" x2="88" y2="96" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="400" y1="112" x2="400" y2="96" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="91" y1="104" x2="397" y2="104" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10frc_dimL)" marker-end="url(#u10frc_dim)" />
+  <circle cx="60" cy="210" r="8" fill="#fff4e6" stroke="#b7600c" stroke-width="1.4" />
+  <circle cx="88" cy="160" r="8" fill="#fff4e6" stroke="#b7600c" stroke-width="1.4" />
+  <circle cx="400" cy="160" r="8" fill="#fff4e6" stroke="#b7600c" stroke-width="1.4" />
+  <circle cx="428" cy="208" r="8" fill="#fff4e6" stroke="#b7600c" stroke-width="1.4" />
+  <line x1="160" y1="172" x2="160" y2="226" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="190" y1="172" x2="190" y2="226" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="160" y1="208" x2="160" y2="224" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="190" y1="208" x2="190" y2="224" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="163" y1="216" x2="187" y2="216" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10frc_dimL)" marker-end="url(#u10frc_dim)" />
+  <rect x="524" y="250" width="6" height="84" rx="3" fill="#b7600c" />
+  <text x="36" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Rashladna dionica pumpa – motor</text>
+  <text x="36" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">aluminijska cijev, smjer toka rashladnog sredstva u plavom</text>
+
+  <text x="60" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">PUMPA</text>
+
+  <text x="439" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">MOTOR</text>
+  <text x="439" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">(potrosac topline)</text>
+
+  <text x="230" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#0d47a1"><tspan font-weight="700">v</tspan> = 2,8 m/s</text>
+
+  <text x="32" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#c0392b">1</text>
+
+  <text x="492" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">2</text>
+
+  <text x="250" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">Σξ = ξ<tspan baseline-shift="sub" font-size="0.7em">1</tspan> + ξ<tspan baseline-shift="sub" font-size="0.7em">2</tspan> + ξ<tspan baseline-shift="sub" font-size="0.7em">3</tspan> + ξ<tspan baseline-shift="sub" font-size="0.7em">4</tspan> = <tspan font-weight="700" fill="#b7600c">4,2</tspan>   (ulaz, 2 koljena, izlaz na motor)</text>
+
+  <text x="250" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#7a2a20">PAD TLAKA NA DIONICI 1 → 2</text>
+  <text x="250" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#c0392b">Δ<tspan font-style="italic">p</tspan> ≈ 22,4 kPa</text>
+
+  <text x="36" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-weight="700">Zadano:</tspan> <tspan font-style="italic">D</tspan> = 28 mm, <tspan font-style="italic">L</tspan> = 1,20 m, <tspan font-style="italic">v</tspan> = 2,8 m/s, <tspan font-style="italic">λ</tspan> = 0,028</text>
+  <text x="36" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">         <tspan font-style="italic">ρ</tspan> = 1060 kg/m³ (smjesa s glikolom),  Σξ = 4,2</text>
+
+  <text x="524" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Izvod ukupnog gubitka <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> i pada tlaka Δ<tspan font-style="italic">p</tspan></text>
+
+  <text x="540" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">1. Kineticka visina (baza za sve gubitke)</text>
+  <text x="736" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">v</tspan>² / (2<tspan font-style="italic">g</tspan>) = 2,8² / (2·9,81)</text>
+  <text x="736" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 0,400 m</text>
+
+  <text x="540" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">2. Linijski gubitak (Darcy – Weisbach)</text>
+  <text x="736" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">l</tspan> = <tspan font-style="italic">λ</tspan> (<tspan font-style="italic">L</tspan>/<tspan font-style="italic">D</tspan>) <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>) = 0,028 · (1,20/0,028) · 0,400</text>
+  <text x="736" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 0,480 m</text>
+
+  <text x="736" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">loc</tspan> = Σξ · <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>) = 4,2 · 0,400</text>
+  <text x="540" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">4. Ukupni gubitak i pad tlaka</text>
+  <text x="736" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">l</tspan> + <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">loc</tspan> = 0,480 + 1,678</text>
+  <text x="736" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1e8449">= 2,158 m</text>
+  <text x="736" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530">Δ<tspan font-style="italic">p</tspan> = <tspan font-style="italic">ρ</tspan> <tspan font-style="italic">g</tspan> <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1060 · 9,81 · 2,158</text>
+  <text x="736" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 22 440 Pa ≈ 22,4 kPa</text>
+<text x="244" y="91" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">L</tspan> = 1,20 m</text>
+
+  <text x="60" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#b7600c">ξ<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+
+  <text x="88" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#b7600c">ξ<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+
+  <text x="400" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#b7600c">ξ<tspan baseline-shift="sub" font-size="0.7em">3</tspan></text>
+
+  <text x="428" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#b7600c">ξ<tspan baseline-shift="sub" font-size="0.7em">4</tspan></text>
+
+  <text x="198" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">D</tspan> = 28 mm</text>
+
+  <text x="250" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#b7600c">Zbroj koeficijenata lokalnih gubitaka</text>
+  <text x="540" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">3. Lokalni gubici (ulaz + 2 koljena + izlaz)</text>
+  <text x="736" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c">= 1,678 m</text>
+
+  </svg>

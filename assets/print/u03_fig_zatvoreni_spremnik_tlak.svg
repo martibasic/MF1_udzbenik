@@ -1,82 +1,162 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 520" role="img"
-     aria-labelledby="u03fzst_u3stT u03fzst_u3stD" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:480px;height:auto;">
-  <title id="u03fzst_u3stT">Tlak u priključku zatvorenog vodenog spremnika</title>
-  <desc id="u03fzst_u3stD">Zatvoreni vodeni spremnik s plinskim prostorom (p_G,m=18 kPa) iznad vode. Priključak A nalazi se h=1,4 m ispod razine vode. Tlak u točki A: p_A ≈ 132,5 kPa (apsolutni), p_A,m ≈ 31,7 kPa (manometarski).</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" role="img" aria-labelledby="u03fzst_title u03fzst_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
+  <title id="u03fzst_title">Tlak u prikljucku zatvorenog vodenog spremnika</title>
+  <desc id="u03fzst_desc">Zatvoreni vodeni spremnik s plinskim prostorom pretlaka p-G,m = 18 kPa iznad mirne razine vode i prikljuckom A na dubini h = 1,4 m. Lijevi panel: geometrija spremnika s kotom dubine, oznakom plinskog pretlaka i tlackom kaskadom prema dolje. Desni panel: tri koraka rjesenja - apsolutni tlak plinskog prostora p-G = 118,8 kPa, apsolutni tlak u tocki A = 132,5 kPa, manometarski tlak u A = 31,7 kPa.</desc>
+
   <defs>
-    <marker id="u03fzst_u3staR"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u03fzst_u3staG"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/></marker>
-    <marker id="u03fzst_u3staBr" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#8b5e00"/></marker>
-    <marker id="u03fzst_u3staDim"  markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u03fzst_u3staDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u03fzst_u3staBlu" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/></marker>
-    <linearGradient id="u03fzst_u3stfl" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#7fb3d3"/>
+    <linearGradient id="u03fzst_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <pattern id="u03fzst_u3sthatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a9aa6" stroke-width="2"/>
+    <linearGradient id="u03fzst_plin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff5d6" />
+      <stop offset="100%" stop-color="#f3e2a8" />
+    </linearGradient>
+    <pattern id="u03fzst_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
+    <marker id="u03fzst_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <marker id="u03fzst_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u03fzst_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u03fzst_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
   </defs>
 
-  <rect width="480" height="520" fill="#f8f9fa"/>
-  <rect x="10" y="10" width="460" height="500" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5"/>
+  <!-- pozadina + paneli -->
+  <rect width="880" height="500" fill="#ffffff" />
+  <rect x="14" y="14" width="436" height="472" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="464" y="14" width="402" height="472" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-  <!-- Naslov -->
-  <text x="240" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530" text-anchor="middle">Zatvoreni vodeni spremnik – tlak u priključku A</text>
-  <text x="240" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">p_G,m = 18 kPa,  h = 1,4 m,  ρ = 998 kg/m³,  p_atm = 100,8 kPa</text>
+  <!-- =====================================================
+       LIJEVI PANEL: GEOMETRIJA ZATVORENOG SPREMNIKA
+       Kanonska geometrija: zatvoreni tank, stijenke pune visine,
+       gas prostor iznad mirne razine, voda ispod, prikljucak A na dubini h.
+       Vertikalna skala: 1 m vode = 100 px, h = 1,4 m -> 140 px
+  ===================================================== -->
 
-  <!-- ══ POSUDA ══ -->
-  <!-- Poklopac (gore) -->
-  <rect x="100" y="64" width="250" height="12" fill="url(#u03fzst_u3sthatch)" stroke="#4a6070" stroke-width="1.3"/>
-  <!-- Lijeva stijenka -->
-  <rect x="88" y="64" width="12" height="330" fill="url(#u03fzst_u3sthatch)" stroke="#4a6070" stroke-width="1.3"/>
-  <!-- Desna stijenka -->
-  <rect x="350" y="64" width="12" height="330" fill="url(#u03fzst_u3sthatch)" stroke="#4a6070" stroke-width="1.3"/>
-  <!-- Dno -->
-  <rect x="88" y="394" width="274" height="12" fill="url(#u03fzst_u3sthatch)" stroke="#4a6070" stroke-width="1.3"/>
+  <!-- stijenke spremnika: vanjski tank x=100..364, y=86..420 -->
+  <!-- gornja stjenka (poklopac) - PUNA, tank ZATVOREN -->
+  <rect x="100" y="86" width="264" height="14" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+  <!-- lijeva stjenka PUNE visine -->
+  <rect x="100" y="100" width="14" height="306" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+  <!-- desna stjenka PUNE visine -->
+  <rect x="350" y="100" width="14" height="306" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+  <!-- dno -->
+  <rect x="100" y="406" width="264" height="14" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
 
-  <!-- Plinski prostor (p_G) -->
-  <rect x="100" y="76" width="250" height="90" fill="#f5f0e0" stroke="none"/>
-  <rect x="108" y="82" width="234" height="48" rx="6" fill="#fffbe0" stroke="#c8a830" stroke-width="1.0"/>
-  <text x="225" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8b5e00" text-anchor="middle" font-weight="700">Plin: p_G,m = 18 kPa</text>
-  <text x="225" y="117" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8b5e00" text-anchor="middle">p_G,abs = 100,8 + 18 = 118,8 kPa</text>
-  <!-- Strelica tlaka plina prema dolje -->
-  <line x1="225" y1="166" x2="225" y2="153" stroke="#8b5e00" stroke-width="2.0" marker-end="url(#u03fzst_u3staBr)"/>
+  <!-- plinski prostor (zuto-bezi): y=100..170 -->
+  <rect x="114" y="100" width="236" height="70" fill="url(#u03fzst_plin)" />
 
-  <!-- Razina vode (dashed) -->
-  <line x1="86" y1="166" x2="364" y2="166" stroke="#1565c0" stroke-width="1.8" stroke-dasharray="6,4"/>
-  <text x="372" y="163" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0">razina</text>
+  <!-- voda: y=170..406 -->
+  <rect x="114" y="170" width="236" height="236" fill="url(#u03fzst_voda)" />
 
-  <!-- Voda -->
-  <rect x="100" y="166" width="250" height="228" fill="url(#u03fzst_u3stfl)"/>
+  <!-- mirna povrsina vode (granica plin/voda) - deblja plava linija -->
+  <line x1="114" y1="170" x2="350" y2="170" stroke="#1565c0" stroke-width="2.4" />
 
-  <!-- Točka A (priključak, h=1,4m ispod razine → ~1,4/3,0 * 228 ≈ 107px ispod razine = y~273) -->
-  <!-- Priključna cijev (lijevo) -->
-  <rect x="50" y="262" width="38" height="10" fill="#aab8c2" stroke="#4a6070" stroke-width="1.0"/>
-  <!-- Točka A (krug na stijenki) -->
-  <circle cx="100" cy="267" r="9" fill="#c0392b" stroke="#922b21" stroke-width="1.5"/>
-  <text x="38" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#c0392b" text-anchor="end">A</text>
+  <!-- ====== plinski prostor: oznaka p_G ====== -->
+  <!-- 3 simbolicke strelice tlaka iz plina prema dolje na povrsinu -->
+  <line x1="152" y1="120" x2="152" y2="164" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u03fzst_aB)" />
+  <line x1="232" y1="120" x2="232" y2="164" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u03fzst_aB)" />
+  <line x1="312" y1="120" x2="312" y2="164" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u03fzst_aB)" />
 
-  <!-- Strelica tlaka od razine prema dolje do A (crvena, isprekidana) -->
-  <line x1="280" y1="172" x2="280" y2="260" stroke="#c0392b" stroke-width="2.0" stroke-dasharray="5,4" marker-end="url(#u03fzst_u3staR)"/>
-  <text x="294" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c0392b">+ρgh</text>
+  <!-- oznaka plinskog prostora -->
+  <!-- ====== prikljucak A na dubini h = 1,4 m ====== -->
+  <!-- referentna razina h=0 na povrsini vode y=170
+       skala 1 m = 100 px -> h=1,4 m: y_A = 170 + 140 = 310 -->
 
-  <!-- Kota h (desno od posude) -->
-  <line x1="364" y1="166" x2="370" y2="166" stroke="#b7600c" stroke-width="1"/>
-  <line x1="364" y1="267" x2="370" y2="267" stroke="#b7600c" stroke-width="1"/>
-  <line x1="367" y1="168" x2="367" y2="265" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fzst_u3staDimL)" marker-end="url(#u03fzst_u3staDim)"/>
-  <text x="378" y="213" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#b7600c">h</text>
-  <text x="378" y="229" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">= 1,4 m</text>
+  <!-- prikljucna cijev izlazi iz lijeve stjenke -->
+  <!-- cijev geometrija (hatch stjenke) y=302..318 -->
+  <rect x="56" y="302" width="44" height="16" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- vodeni overlay unutar cijevi -->
+  <rect x="58" y="305" width="42" height="10" fill="url(#u03fzst_voda)" />
+  <!-- port fluid overlay PREKO lijeve stjenke spremnika (tank ostaje zatvoren) -->
+  <rect x="100" y="305" width="14" height="10" fill="url(#u03fzst_voda)" />
 
-  <!-- Raspodjela tlaka (trokut desno) -->
-  <polygon points="362,166 362,394 405,394" fill="#c0392b" fill-opacity="0.18" stroke="#c0392b" stroke-width="1.3"/>
-  <text x="412" y="397" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b">p_max</text>
-  <text x="368" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b">p_G</text>
+  <!-- tocka A: crveni krug na izlazu cijevi -->
+  <circle cx="56" cy="310" r="6" fill="#c0392b" stroke="#7d2419" stroke-width="1.4" />
+  <!-- ====== KOTA h (desno od spremnika) ====== -->
+  <!-- pomocne linije od razine vode (y=170) i od osi prikljucka (y=310) do dim osi (x=400) -->
+  <!-- tik crte na krajevima dimenzijske linije -->
+  <!-- dimenzijska linija -->
+  <!-- label kote -->
+  <!-- ====== HIDROSTATICKA KASKADA TLAKA u vodi ======
+       Vertikalna strelica koja vizualno pokazuje rast tlaka prema dolje
+       (+ rho g h doprinos od povrsine prema A)
+       Smjesta se unutar vode, ne preklapa kote -->
+  <line x1="262" y1="180" x2="262" y2="300" stroke="#1565c0" stroke-width="2.4" stroke-dasharray="5,4" marker-end="url(#u03fzst_aB)" />
+  <!-- label uz strelicu (desno od strelice, lijevo od dim linije) -->
+  <!-- oznaka voda (lijevo unutar vode, ispod cijevi) -->
+  <!-- ====== p_atm vanjski okvir ======
+       Mala oznaka iznad poklopca -->
+  <!-- ====== Napomena pri dnu lijevog panela ====== -->
+  <!-- =====================================================
+       DESNI PANEL: 3 KORAKA RJESENJA + REZULTATI BADGE
+  ===================================================== -->
 
-  <!-- ══ JEDNADŽBA I REZULTATI ══ -->
-  <rect x="30" y="420" width="420" height="78" rx="8" fill="#eaf4fb" stroke="#c8d8e8" stroke-width="1.3"/>
-  <text x="240" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="middle" font-weight="700">Rješenje</text>
-  <text x="240" y="456" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1a2530" text-anchor="middle">p_A = p_G + ρ·g·h = 118 800 + 998·9,81·1,4</text>
-  <text x="240" y="474" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b" text-anchor="middle">p_A ≈ 132,5 kPa  |  p_A,m ≈ 31,7 kPa</text>
-  <text x="240" y="491" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle" font-style="italic">p_A,m = p_A − p_atm = 132 512 − 100 800 ≈ 31 712 Pa</text>
-</svg>
+  <!-- naslov panela -->
+  <!-- Korak 1: Apsolutni tlak u plinskom prostoru (zuto/smedje - plin) -->
+  <rect x="484" y="84" width="362" height="92" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
+  <!-- Korak 2: Apsolutni tlak u tocki A (plavo - tlak) -->
+  <rect x="484" y="186" width="362" height="116" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="484" y="186" width="6" height="116" rx="3" fill="#1565c0" />
+  <!-- Korak 3: Manometarski tlak u tocki A (zelena - finalni rezultat) -->
+  <rect x="484" y="312" width="362" height="92" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="484" y="312" width="6" height="92" rx="3" fill="#1e8449" />
+  <!-- REZULTATI badge -->
+  <rect x="484" y="416" width="362" height="56" rx="8" fill="#eef5fb" stroke="#1565c0" stroke-width="1.4" />
+  <line x1="350" y1="170" x2="406" y2="170" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="350" y1="310" x2="406" y2="310" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="394" y1="170" x2="410" y2="170" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="394" y1="310" x2="410" y2="310" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="402" y1="173" x2="402" y2="307" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fzst_aDimL)" marker-end="url(#u03fzst_aDim)" />
+  <rect x="484" y="84" width="6" height="92" rx="3" fill="#b7600c" />
+  <text x="232" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530" text-anchor="middle">Zatvoreni vodeni spremnik</text>
+  <text x="232" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#5a6a78" text-anchor="middle">plinski pretlak iznad mirne razine, priključak A na dubini h</text>
+
+  <text x="232" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-style="italic" fill="#8b6914" text-anchor="middle" font-weight="700">plin (zrak): <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">G,m</tspan> = 18 kPa</text>
+
+  <text x="46" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#c0392b" text-anchor="middle">A</text>
+
+  <text x="272" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1565c0" font-weight="700">+ρ g h</text>
+  <text x="272" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0">hidrostatski</text>
+  <text x="272" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0">doprinos</text>
+
+  <text x="180" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-style="italic" fill="#0d47a1">voda</text>
+  <text x="180" y="389" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">ρ = 998 kg/m³</text>
+
+  <text x="232" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan> = 100,8 kPa (okolina)</text>
+
+  <text x="232" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">Hod kroz fluid: kreni od plinskog prostora dolje za dubinu <tspan font-style="italic">h</tspan></text>
+  <text x="232" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">u priključku A vrijedi: <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan> + ρ g h</text>
+
+  <text x="665" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530" text-anchor="middle">Postupak: tri koraka</text>
+  <text x="665" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#5a6a78" text-anchor="middle">apsolutni i manometarski tlak u priključku A</text>
+
+  <text x="504" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#5a6a78"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan> + <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">G,m</tspan> = 100,8 + 18,0 kPa</text>
+  <text x="504" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan> = 118,8 kPa = 118 800 Pa</text>
+
+  <text x="504" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">2. Apsolutni tlak u točki A</text>
+  <text x="504" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#5a6a78"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan> + ρ g h</text>
+  <text x="504" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">= 118 800 + 998 · 9,81 · 1,40</text>
+  <text x="504" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> = 132 512 Pa ≈ 132,5 kPa</text>
+
+  <text x="504" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449">3. Manometarski tlak u točki A</text>
+  <text x="504" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#5a6a78"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A,m</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> − <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan> = 132 512 − 100 800</text>
+  <text x="504" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A,m</tspan> = 31 712 Pa ≈ 31,7 kPa</text>
+
+  <text x="665" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="545" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan> ≈ 118,8 kPa</text>
+  <text x="665" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> ≈ 132,5 kPa</text>
+  <text x="790" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A,m</tspan> ≈ 31,7 kPa</text>
+<text x="414" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#b7600c">h</text>
+  <text x="414.0" y="252.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">= 1,4 m</text>
+
+  <text x="504" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b7600c">1. Apsolutni tlak u plinskom prostoru</text>
+  </svg>

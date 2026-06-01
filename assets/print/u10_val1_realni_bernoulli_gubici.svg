@@ -1,103 +1,320 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" role="img" aria-labelledby="u10v1rbg_u10v1-title u10v1-sub" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" role="img" aria-labelledby="u10v1rbg_title u10v1rbg_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
+  <title id="u10v1rbg_title">Linijski i lokalni gubici u horizontalnoj cijevi</title>
+  <desc id="u10v1rbg_desc">Horizontalna cijev D=0,12 m, L=36 m s ulazom iz spremnika, ventilom i koljenom. Brzina v=2,4 m/s, koeficijent trenja lambda=0,028, suma lokalnih koeficijenata 4,6. Energijska crta EGL pada zbog linijskih i lokalnih gubitaka; piezometricka crta HGL paralelna je s EGL na razmaku v na kvadrat kroz 2g = 0,294 m. Ukupni gubitak h_w = 3,82 m daje pad tlaka 37,5 kPa.</desc>
+
   <defs>
-    <linearGradient id="u10v1rbg_u10v1-wg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <linearGradient id="u10v1rbg_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <pattern id="u10v1rbg_u10v1-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+    <pattern id="u10v1rbg_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-    <marker id="u10v1rbg_u10v1-arrG" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
+    <marker id="u10v1rbg_aV" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u10v1rbg_u10v1-arrR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#b42318"/>
+    <marker id="u10v1rbg_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u10v1rbg_u10v1-arrRrev" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#b42318"/>
+    <marker id="u10v1rbg_aRrev" markerWidth="7" markerHeight="5" refX="0.5" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u10v1rbg_u10v1-arrO" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c49a0a"/>
+    <marker id="u10v1rbg_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u10v1rbg_u10v1-arrOrev" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c49a0a"/>
+    <marker id="u10v1rbg_aDimR" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u10v1rbg_aS" markerWidth="6" markerHeight="5" refX="5.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#5a6a78" />
+    </marker>
+    <marker id="u10v1rbg_aSrev" markerWidth="6" markerHeight="5" refX="0.5" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#5a6a78" />
     </marker>
   </defs>
-  <rect width="940" height="400" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <title id="u10v1rbg_u10v1-title">U10 Val 1 – Gubitci u horizontalnoj cijevi</title>
-  <desc id="u10v1rbg_u10v1-desc">Horizontalna cijev D=0,12 m, L=36 m s ventilom: EGL pada u dva linearna odsječka s lokalnim stupnjastim padom na ventilu, HGL paralelan s EGL.</desc>
-  <!-- Titles -->
-  <!-- Srafura walls -->
-  <rect x="110" y="140" width="640" height="46" fill="url(#u10v1rbg_u10v1-sraf)"/>
-  <rect x="110" y="222" width="640" height="46" fill="url(#u10v1rbg_u10v1-sraf)"/>
-  <!-- Water body -->
-  <rect x="110" y="186" width="640" height="36" fill="url(#u10v1rbg_u10v1-wg)" stroke="#546e7a" stroke-width="1.5"/>
-  <!-- Gate valve at x=425 -->
-  <rect x="415" y="186" width="20" height="36" fill="#fffef6" stroke="#c49a0a" stroke-width="2"/>
-  <polygon points="415,186 435,186 425,204" fill="#c49a0a"/>
-  <polygon points="415,222 435,222 425,204" fill="#c49a0a"/>
-  <!-- Section dashed lines -->
-  <line x1="188" y1="120" x2="188" y2="278" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <line x1="660" y1="120" x2="660" y2="278" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <!-- Section circles -->
-  <circle cx="188" cy="283" r="12" fill="#173043"/>
-  <text x="188" y="287" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" dominant-baseline="middle">①</text>
-  <circle cx="660" cy="283" r="12" fill="#173043"/>
-  <text x="660" y="287" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" dominant-baseline="middle">②</text>
-  <!-- EGL: (188,118)→(425,138) step (425,160)→(660,180), dashed dark red -->
-  <polyline points="188,118 425,138" stroke="#b42318" stroke-width="3" fill="none" stroke-dasharray="9 5"/>
-  <line x1="425" y1="138" x2="425" y2="160" stroke="#b42318" stroke-width="3"/>
-  <polyline points="425,160 660,180" stroke="#b42318" stroke-width="3" fill="none" stroke-dasharray="9 5"/>
-  <text x="110" y="115" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">EGL</text>
-  <!-- HGL: 8px below EGL (representing v²/2g=0,294 m) -->
-  <polyline points="188,126 425,146" stroke="#6d2694" stroke-width="2.5" fill="none" stroke-dasharray="7 4"/>
-  <line x1="425" y1="146" x2="425" y2="168" stroke="#6d2694" stroke-width="2.5" stroke-dasharray="7 4"/>
-  <polyline points="425,168 660,188" stroke="#6d2694" stroke-width="2.5" fill="none" stroke-dasharray="7 4"/>
-  <text x="110" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#6d2694">HGL</text>
-  <!-- h_w total annotation: reference line at y=97, arrow down to EGL end -->
-  <line x1="188" y1="97" x2="660" y2="97" stroke="#b42318" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <line x1="188" y1="97" x2="188" y2="118" stroke="#b42318" stroke-width="1.5"/>
-  <line x1="660" y1="97" x2="660" y2="180" stroke="#b42318" stroke-width="2" marker-end="url(#u10v1rbg_u10v1-arrR)"/>
-  <text x="424" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#b42318" text-anchor="middle">h_w = 3,82 m</text>
-  <!-- v²/2g bracket at section ① -->
-  <line x1="158" y1="118" x2="158" y2="126" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u10v1rbg_u10v1-arrRrev)" marker-end="url(#u10v1rbg_u10v1-arrR)"/>
-  <text x="72" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a" text-anchor="middle">v²/2g</text>
-  <text x="72" y="135" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a" text-anchor="middle">=0,294 m</text>
-  <!-- h_loc step annotation -->
-  <line x1="445" y1="138" x2="505" y2="138" stroke="#c49a0a" stroke-width="1.2"/>
-  <line x1="445" y1="160" x2="505" y2="160" stroke="#c49a0a" stroke-width="1.2"/>
-  <line x1="505" y1="138" x2="505" y2="160" stroke="#c49a0a" stroke-width="2" marker-start="url(#u10v1rbg_u10v1-arrOrev)" marker-end="url(#u10v1rbg_u10v1-arrO)"/>
-  <text x="514" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c49a0a" dominant-baseline="middle">h_loc = 1,35 m</text>
-  <!-- h_l annotation (two diagonal sections) -->
-  <text x="295" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b42318" text-anchor="middle">trenje</text>
-  <text x="545" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b42318" text-anchor="middle">trenje</text>
-  <text x="295" y="173" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b42318" text-anchor="middle">h_l,1 = 1,235 m</text>
-  <text x="545" y="185" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b42318" text-anchor="middle">h_l,2 = 1,235 m</text>
-  <!-- Flow arrows in pipe -->
-  <line x1="130" y1="204" x2="205" y2="204" stroke="#0f766e" stroke-width="3" marker-end="url(#u10v1rbg_u10v1-arrG)"/>
-  <line x1="480" y1="204" x2="555" y2="204" stroke="#0f766e" stroke-width="3" marker-end="url(#u10v1rbg_u10v1-arrG)"/>
-  <text x="215" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#0f766e">v = 2,4 m/s</text>
-  <!-- Ventil label -->
-  <text x="425" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c49a0a" text-anchor="middle">ventil</text>
-  <text x="425" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">Σξ = 4,6</text>
-  <!-- Pipe length dimension -->
-  <line x1="110" y1="308" x2="750" y2="308" stroke="#546e7a" stroke-width="1.2"/>
-  <line x1="110" y1="303" x2="110" y2="313" stroke="#546e7a" stroke-width="1.2"/>
-  <line x1="750" y1="303" x2="750" y2="313" stroke="#546e7a" stroke-width="1.2"/>
-  <text x="430" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#546e7a" text-anchor="middle">L = 36 m,  D = 0,12 m</text>
-  <!-- Formula box -->
-  <rect x="752" y="110" width="152" height="178" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="828" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">Rješenje</text>
-  <text x="764" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">v²/2g = 0,294 m</text>
-  <text x="764" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b42318">h_l = 2,47 m</text>
-  <text x="764" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c49a0a">Σh_loc = 1,35 m</text>
-  <line x1="764" y1="196" x2="892" y2="196" stroke="#d3d9de" stroke-width="1"/>
-  <text x="764" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">h_w = 3,82 m</text>
-  <text x="764" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">Δp = 37,5 kPa</text>
-  <text x="764" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">= ρg·h_w</text>
-  <text x="764" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">horizontalna cijev</text>
-  <!-- Footer -->
-  <text x="54" y="375" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">EGL-HGL razmak = v²/2g = konst. (stalni D). EGL pada → disipacija energije na trenju i ventilu.</text>
-</svg>
+
+  <!-- Pozadina + okviri panela -->
+  <rect width="980" height="540" fill="#ffffff" />
+  <rect x="14" y="14" width="624" height="512" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="650" y="14" width="316" height="512" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+
+  <!-- panel header -->
+  <!-- Datum line (donja referentna razina) -->
+  <line x1="46" y1="490" x2="612" y2="490" stroke="#7a8a96" stroke-width="1.2" stroke-dasharray="8,5" />
+  <!-- ============================================================
+       SPREMNIK (lijevo) - otvoreni rezervoar
+       Geometrija:
+         vanjska lijeva stjenka: x=60..70, y=200..420 (visina 220 px)
+         dno: x=70..130, y=406..420 (debljina 14)
+         desna stjenka (gornja iznad cijevi): x=120..130, y=200..278
+         desna stjenka (donja ispod cijevi): x=120..130, y=322..406
+         voda u spremniku: x=70..120, y=240..406 (slob. pov. y=240)
+         voda u portu (kroz desnu stjenku) prijelaz u cijev: x=120..130, y=282..318
+       Cijev:
+         centerline y=300, walls y=278 (top), y=322 (bottom), D u px = 44
+         horizontalna trasa x=130..530
+         u stvarnosti D=0,12 m -> ako je 44 px -> 367 px/m -> L=36m = 13200 px (necitljivo)
+         Cijev simbolicki, kotaiv prikazani brojcano.
+  ============================================================ -->
+
+  <!-- Voda u spremniku (nacrtaj prvo da stjenke i ostalo idu iznad) -->
+  <rect x="70" y="240" width="50" height="166" fill="url(#u10v1rbg_voda)" />
+
+  <!-- Voda u cijevi (kontinuirano) -->
+  <rect x="120" y="282" width="410" height="36" fill="url(#u10v1rbg_voda)" />
+
+  <!-- KOLJENO i vertikalni odvod - voda u koljenu (prije stjenki) -->
+  <!-- Koljeno kao zaobljeni 90 stupnjeva: centar zakrivljenja na (530,322), R_unutarnji=0, R_vanjski=44
+       Vanjski (gornji-desni) rub: cetvrt kruga oko (530,322) polumjera 44, od kuta 90 do 0:
+         pocetak (530, 278), kraj (574, 322)
+       Unutarnji rub: vrh u (530,322) - kvadratni kut, ali fizicki to bi bila ostra ostrica.
+       Simbolicki: nacrtaj koljeno kao 90 stupnjeva pravokutni zavoj
+         Vanjska stjenka: od (530,278) -> krivulja -> (574,322) -> nastavak vertikalno (574, 408)
+         Unutarnja stjenka: od (530,322) (nije zaobljena) -> vertikalno (530, 408)
+       Vertikalni izlaz: x=530..574 (sirina 44 = D), y=322..408 (dugacak 86 px)
+       Voda u koljenu (popunjen path):
+         M 130,282 H 530 (gornja granica vodene mase do koljena)
+         Sada krivulja kroz koljeno: idemo po vanjskom rubu:
+         Q 574,282 574,326 V 408
+         H 530 (donja granica vertikalnog stupca - lijevi rub)
+         V 322 (vraca se gore po unutarnjoj stjenki - pravokutni rub)
+         H 130 (gornja stjenka cijevi obrnuto, dno do x=130)
+         V 282 (zatvori) ne valja, vec smo na 282
+       Pojednostavi: vodu u horizontalnoj cijevi i vodu u vertikali nacrtaj zasebno + spojni cetvrt-disk za krivinu.
+  -->
+  <!-- Voda u vertikalnom izlazu koljena -->
+  <rect x="530" y="322" width="44" height="86" fill="url(#u10v1rbg_voda)" />
+  <!-- Voda u zaobljenju koljena - cetvrtina diska polumjera 44 sa centrom (530,322) -->
+  <!-- Ali to bi prekrilo vec nacrtanu horizontalnu vodu. OK, samo se preklapa, fluid je isti. -->
+  <path d="M 530,278 A 44,44 0 0 1 574,322 L 530,322 Z" fill="url(#u10v1rbg_voda)" />
+
+  <!-- ============================================================
+       STIJENKE
+  ============================================================ -->
+
+  <!-- Spremnik: vanjska lijeva stjenka (hatched) -->
+  <rect x="60" y="200" width="10" height="220" fill="url(#u10v1rbg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Spremnik: dno (hatched) -->
+  <rect x="70" y="406" width="60" height="14" fill="url(#u10v1rbg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Spremnik: gornja stjenka (samo lijevi dio, ostavlja otvor za atm. tlak / no zid od x=70 do x=130 - otvoreni) -->
+  <!-- Otvoreni spremnik: bez gornje stjenke -->
+  <!-- Spremnik: desna stjenka (puna visina - ZATVORENA) -->
+  <line x1="120" y1="200" x2="120" y2="406" stroke="#3a4a56" stroke-width="1.5" />
+  <!-- Port fluid overlay (preko stjenke na visini cijevi) - kontinuitet fluida -->
+  <rect x="118" y="282" width="6" height="36" fill="url(#u10v1rbg_voda)" />
+
+  <!-- Slobodna povrsina u spremniku -->
+  <line x1="70" y1="240" x2="120" y2="240" stroke="#1565c0" stroke-width="2" />
+  <!-- Cijev: gornja stjenka -->
+  <line x1="130" y1="278" x2="530" y2="278" stroke="#3a4a56" stroke-width="2.4" />
+  <!-- Cijev: donja stjenka -->
+  <line x1="130" y1="322" x2="530" y2="322" stroke="#3a4a56" stroke-width="2.4" />
+
+  <!-- Koljeno: vanjska zaobljena stjenka -->
+  <path d="M 530,278 A 44,44 0 0 1 574,322 L 574,408" fill="none" stroke="#3a4a56" stroke-width="2.4" />
+  <!-- Koljeno: unutarnja (ostra) stjenka -->
+  <line x1="530" y1="322" x2="530" y2="408" stroke="#3a4a56" stroke-width="2.4" />
+
+  <!-- ============================================================
+       VENTIL na x=310 (gate valve sa zatvaracem)
+  ============================================================ -->
+  <!-- tijelo ventila -->
+  <rect x="300" y="252" width="20" height="26" fill="#c8a96a" stroke="#7a5d2e" stroke-width="1.2" />
+  <!-- vretenastica iznad -->
+  <line x1="310" y1="234" x2="310" y2="252" stroke="#7a5d2e" stroke-width="2" />
+  <!-- volan (rucica) -->
+  <line x1="294" y1="234" x2="326" y2="234" stroke="#7a5d2e" stroke-width="2.6" />
+  <!-- klin u struji (leptir) -->
+  <polygon points="300,282 320,282 310,300" fill="#c8a96a" stroke="#7a5d2e" stroke-width="1.1" />
+  <polygon points="300,318 320,318 310,300" fill="#c8a96a" stroke="#7a5d2e" stroke-width="1.1" />
+  <!-- labela ventila iznad -->
+  <!-- ============================================================
+       OZNAKE FITTING-a (ulaz, ventil, koljeno) - ispod cijevi
+  ============================================================ -->
+  <!-- ulaz oznaka -->
+  <line x1="145" y1="322" x2="145" y2="356" stroke="#7a5d2e" stroke-width="0.7" stroke-dasharray="3,3" />
+  <!-- ventil koeficijent -->
+  <!-- koljeno oznaka (na vertikalnom dijelu cijevi) -->
+  <line x1="513" y1="322" x2="513" y2="356" stroke="#7a5d2e" stroke-width="0.7" stroke-dasharray="3,3" />
+  <!-- IZLAZNA STRUJA (donja sekcija koljena) -->
+  <line x1="552" y1="412" x2="552" y2="442" stroke="#1e8449" stroke-width="3" marker-end="url(#u10v1rbg_aV)" />
+  <!-- strelice protoka unutar cijevi -->
+  <line x1="172" y1="300" x2="218" y2="300" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u10v1rbg_aV)" />
+  <line x1="370" y1="300" x2="420" y2="300" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u10v1rbg_aV)" />
+
+  <!-- Sekcije ① i ② -->
+  <line x1="135" y1="60" x2="135" y2="278" stroke="#5a6a78" stroke-width="1" stroke-dasharray="4,4" />
+  <line x1="552" y1="60" x2="552" y2="408" stroke="#5a6a78" stroke-width="1" stroke-dasharray="4,4" />
+  <circle cx="135" cy="222" r="9" fill="#1a2530" />
+  <circle cx="552" cy="454" r="9" fill="#1a2530" />
+  <!-- ============================================================
+       EGL / HGL crte iznad cijevi
+       Skala: 1 m = 27,2 px
+       Plan EGL y:
+         (135, 64)   pocetak (puna energijska razina)
+         (135, 68)   nakon ulaza (h_ul = 4 px)
+         (310, 96.3) prije ventila (+28,3 px trenje seg1)
+         (310, 120.3) nakon ventila (h_v = 24 px)
+         (530, 155.8) prije koljena (+35,5 px trenje seg2)
+         (530, 164.6) nakon koljena (h_k = 8,8 px)
+         (552, 168.1) na sekciji 2 (+3,5 px trenje seg3)
+         Ukupno pad: 104 px = 3,82 m
+       HGL paralelno 8 px ispod
+  ============================================================ -->
+
+  <!-- E0 referentna razina (totalna energijska razina) - tanka dashed plava -->
+  <line x1="48" y1="64" x2="135" y2="64" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5,4" />
+  <!-- EGL: puna crvena -->
+  <path d="M135,64 L135,68 L310,96.3 L310,120.3 L530,155.8 L530,164.6 L552,168.1" fill="none" stroke="#c0392b" stroke-width="2.6" />
+
+  <!-- HGL: ljubicasta isprekidana, paralelno -->
+  <path d="M135,72 L135,76 L310,104.3 L310,128.3 L530,163.8 L530,172.6 L552,176.1" fill="none" stroke="#8e44ad" stroke-width="2" stroke-dasharray="6,4" />
+
+  <!-- EGL labela: lijevo gore, iznad pocetka EGL crte -->
+  <!-- HGL labela: ispod nagnute sekcije seg2 -->
+  <!-- leader od HGL teksta do crte (HGL na x=400 je y = 128.3 + 44.3*(400-310)/220 = 128.3 + 18.1 = 146.4) -->
+  <line x1="380" y1="170" x2="400" y2="148" stroke="#8e44ad" stroke-width="0.7" />
+
+  <!-- v^2/2g kota (razmak EGL-HGL) - mjeri se na x=230 (na pocetnoj horizontalnoj sekciji EGL/HGL) -->
+  <line x1="232" y1="68" x2="232" y2="76" stroke="#5a6a78" stroke-width="1.3" marker-start="url(#u10v1rbg_aSrev)" marker-end="url(#u10v1rbg_aS)" />
+  <line x1="225" y1="68" x2="240" y2="68" stroke="#5a6a78" stroke-width="0.7" />
+  <line x1="225" y1="76" x2="240" y2="76" stroke="#5a6a78" stroke-width="0.7" />
+  <!-- LOKALNI gubici (smede kote) -->
+  <!-- h_ul (mali korak na x=135) -->
+  <!-- h_v (najveci korak na x=310) -->
+  <!-- h_k (korak na x=530) -->
+  <!-- Labela "trenje" na nagnutim sekcijama EGL -->
+  <!-- ============================================================
+       UKUPNA kota h_w (lijevo od grafa)
+  ============================================================ -->
+  <!-- ============================================================
+       Promjer D kota - vertikalna kota na desnoj strani vertikalnog izlaza
+       Extension lines horizontalno desno od stjenki vertikalnog dijela.
+       Mjerimo na y=410 (donji rub vertikalnog izlaza), dim line vertikalna izvan.
+       Nije moguce mjeriti DIJAMETAR vertikalnom kotom (mjeri visinu).
+       Stoga: kota D horizontalna, smjestena IZNAD horizontalne cijevi
+       na praznom mjestu izmedu ventila i koljena (x=400..460, y iznad pipe top).
+       Ali tamo je EGL/HGL u toj horizontalnoj sekciji y=120..160.
+       Bolje: leader callout (jedan tekst s tankom linijom prema cijevi).
+  ============================================================ -->
+  <!-- Leader callout za D (ne formalni kotalisni sustav) -->
+  <!-- ============================================================
+       L kota (ispod cijevi od ulaza do koljena, mjereci trasu)
+  ============================================================ -->
+  <!-- Komentar footer (ispod datum-a) -->
+  <!-- ============================================================
+       DESNI PANEL: formule + rezultati
+  ============================================================ -->
+
+  <!-- Header bar -->
+  <rect x="650" y="14" width="316" height="44" rx="12" fill="#1565c0" />
+  <rect x="650" y="34" width="316" height="24" fill="#1565c0" />
+  <!-- Blok 1: brzinska visina -->
+  <rect x="664" y="68" width="288" height="76" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.1" />
+  <rect x="664" y="68" width="6" height="76" rx="3" fill="#1565c0" />
+  <!-- Blok 2: linijski gubitak -->
+  <rect x="664" y="152" width="288" height="86" rx="8" fill="#fdf3f1" stroke="#ecd0c8" stroke-width="1.1" />
+  <rect x="664" y="152" width="6" height="86" rx="3" fill="#c0392b" />
+  <!-- Blok 3: lokalni gubitak -->
+  <rect x="664" y="248" width="288" height="86" rx="8" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.1" />
+  <!-- Blok 4: ukupni gubitak -->
+  <rect x="664" y="344" width="288" height="76" rx="8" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.1" />
+  <rect x="664" y="344" width="6" height="76" rx="3" fill="#1e8449" />
+  <!-- REZULTAT badge: pad tlaka -->
+  <rect x="664" y="428" width="288" height="86" rx="8" fill="#fbeae6" stroke="#c0392b" stroke-width="1.6" />
+  <line x1="110" y1="64" x2="110" y2="68" stroke="#b7600c" stroke-width="1.3" />
+  <line x1="107" y1="64" x2="113" y2="64" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="107" y1="68" x2="113" y2="68" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="340" y1="96.3" x2="340" y2="120.3" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u10v1rbg_aDimR)" marker-end="url(#u10v1rbg_aDim)" />
+  <line x1="330" y1="96.3" x2="347" y2="96.3" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="330" y1="120.3" x2="347" y2="120.3" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="498" y1="155.8" x2="498" y2="164.6" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10v1rbg_aDimR)" marker-end="url(#u10v1rbg_aDim)" />
+  <line x1="494" y1="155.8" x2="535" y2="155.8" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="494" y1="164.6" x2="535" y2="164.6" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="135" y1="64" x2="46" y2="64" stroke="#b7600c" stroke-width="0.6" />
+  <line x1="135" y1="168.1" x2="46" y2="168.1" stroke="#b7600c" stroke-width="0.6" />
+  <line x1="52" y1="64" x2="52" y2="168.1" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u10v1rbg_aDimR)" marker-end="url(#u10v1rbg_aDim)" />
+  <line x1="475" y1="298" x2="490" y2="270" stroke="#b7600c" stroke-width="0.7" />
+  <circle cx="475" cy="298" r="1.4" fill="#b7600c" />
+  <line x1="130" y1="378" x2="130" y2="478" stroke="#b7600c" stroke-width="0.6" />
+  <line x1="552" y1="466" x2="552" y2="478" stroke="#b7600c" stroke-width="0.6" />
+  <line x1="130" y1="481" x2="130" y2="465" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="552" y1="481" x2="552" y2="465" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="133" y1="473" x2="549" y2="473" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u10v1rbg_aDimR)" marker-end="url(#u10v1rbg_aDim)" />
+  <rect x="664" y="248" width="6" height="86" rx="3" fill="#b7600c" />
+  <text x="28" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#5a6a78">ENERGIJSKI DIJAGRAM</text>
+
+  <text x="616" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">datum</text>
+
+  <text x="73" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#0d47a1">slob. pov.</text>
+
+  <text x="310" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#7a5d2e">ventil</text>
+
+  <text x="148" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#7a5d2e">ulaz</text>
+  <text x="148" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#7a5d2e">ξ<tspan baseline-shift="sub" font-size="0.7em">ul</tspan> ≈ 0,5</text>
+
+  <text x="310" y="345" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#7a5d2e">ξ<tspan baseline-shift="sub" font-size="0.7em">v</tspan> ≈ 3,0</text>
+
+  <text x="510" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#7a5d2e">koljeno</text>
+  <text x="510" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#7a5d2e">ξ<tspan baseline-shift="sub" font-size="0.7em">k</tspan> ≈ 1,1</text>
+
+  <text x="582" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449"><tspan font-weight="700">v</tspan> = 2,4 m/s</text>
+
+  <text x="135" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">1</text>
+  <text x="552" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">2</text>
+
+  <text x="52" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1565c0">totalna E₀</text>
+
+  <text x="145" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#c0392b">EGL</text>
+  <text x="183" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b">energijska crta</text>
+
+  <text x="350" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#8e44ad">HGL</text>
+  <text x="350" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8e44ad">piezometrijska crta</text>
+  <text x="246" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">v²/2g</text>
+  <text x="246" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">= 0,294 m</text>
+
+  <text x="220" y="115" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b">trenje</text>
+  <text x="440" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b">trenje</text>
+
+  <text x="46" y="514" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">Razmak EGL–HGL = v²/2g je konstantan (stalni promjer D). EGL pada zbog disipacije energije.</text>
+
+  <text x="808" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">RJEŠENJE PO KORACIMA</text>
+
+  <text x="808" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Brzinska visina</text>
+  <text x="808" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">v²/2g = 2,4² / (2·9,81)</text>
+  <text x="808" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 0,294 m</text>
+
+  <text x="808" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Linijski gubitak (Darcy)</text>
+  <text x="808" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">h<tspan baseline-shift="sub" font-size="0.7em">l</tspan> = λ · (L/D) · v²/2g</text>
+  <text x="808" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">= 0,028 · (36/0,12) · 0,294</text>
+  <text x="808" y="231" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 2,47 m</text>
+
+  <text x="808" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Lokalni gubitak (ulaz + ventil + koljeno)</text>
+  <text x="808" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">Σh<tspan baseline-shift="sub" font-size="0.7em">loc</tspan> = Σξ · v²/2g</text>
+  <text x="808" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">= 4,6 · 0,294</text>
+  <text x="808" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Ukupni gubitak energije</text>
+  <text x="808" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">h<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = h<tspan baseline-shift="sub" font-size="0.7em">l</tspan> + Σh<tspan baseline-shift="sub" font-size="0.7em">loc</tspan> = 2,47 + 1,35</text>
+  <text x="808" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 3,82 m</text>
+
+  <text x="808" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTAT — pad tlaka</text>
+  <text x="808" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">Δp = ρ g h<tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
+  <text x="808" y="488" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">= 1000 · 9,81 · 3,82</text>
+  <text x="808" y="508" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#c0392b">Δp ≈ 37,5 kPa</text>
+
+<text x="103" y="71" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="end" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">ul</tspan></text>
+
+  <text x="346" y="111" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
+  <text x="346.0" y="127.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 0,88 m</text>
+
+  <text x="490" y="163" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">k</tspan></text>
+
+  <text x="40" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c" transform="rotate(-90 40 116)"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 3,82 m</text>
+
+  <text x="495" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c"><tspan font-style="italic">D</tspan> = 0,12 m</text>
+
+  <text x="341" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">L</tspan> = 36 m</text>
+
+  <text x="808" y="327" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#b7600c">≈ 1,35 m</text>
+
+  </svg>

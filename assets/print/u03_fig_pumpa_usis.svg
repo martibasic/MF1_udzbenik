@@ -1,90 +1,198 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img"
-     aria-labelledby="u03fpu_u3puT u03fpu_u3puD" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:520px;height:auto;">
-  <title id="u03fpu_u3puT">Tlak na usisu pumpe za cirkulaciju ulja</title>
-  <desc id="u03fpu_u3puD">Pumpa za ulje (ρ=870 kg/m³) smještena H=2,4 m iznad razine ulja u otvorenom spremniku. Na usisu vlada podtlak p_man=−20,5 kPa. Maksimalna teorijska usisna visina bez kavitacije: H_max≈11,8 m.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u03fpu_title u03fpu_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u03fpu_title">Tlak na usisu pumpe za cirkulaciju ulja</title>
+  <desc id="u03fpu_desc">Otvoreni spremnik s uljem (gustoca 870 kg/m3) na atmosferskom tlaku. Pumpa je smjestena H = 2,4 m iznad slobodne povrsine i preko vertikalnog usisnog voda crpi ulje. Na usisu pumpe vlada podtlak p_man = -20,5 kPa, odnosno apsolutni tlak p_aps = 80,8 kPa. Desno panel prikazuje izvod p_man, p_aps i ocjenu maksimalne usisne visine H_max prije kavitacije.</desc>
+
   <defs>
-    <marker id="u03fpu_u3puaR"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u03fpu_u3puaG"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/></marker>
-    <marker id="u03fpu_u3puaO"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c8860a"/></marker>
-    <marker id="u03fpu_u3puaDim"  markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u03fpu_u3puaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <linearGradient id="u03fpu_u3puoil" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f5e090"/><stop offset="100%" stop-color="#e8c040"/>
+    <linearGradient id="u03fpu_oil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a" />
+      <stop offset="1" stop-color="#c8a000" />
     </linearGradient>
-    <linearGradient id="u03fpu_u3puoilpipe" x1="1" y1="0" x2="0" y2="0">
-      <stop offset="0%" stop-color="#f5e090" stop-opacity="0.7"/><stop offset="100%" stop-color="#f0c060" stop-opacity="0.4"/>
+    <linearGradient id="u03fpu_oilpipe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a" />
+      <stop offset="1" stop-color="#d4a017" />
     </linearGradient>
-    <pattern id="u03fpu_u3puhatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a9aa6" stroke-width="2"/>
+    <pattern id="u03fpu_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
+    <marker id="u03fpu_atm" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#5a6a78" />
+    </marker>
+    <marker id="u03fpu_flow" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#b07a10" />
+    </marker>
+    <marker id="u03fpu_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u03fpu_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
   </defs>
 
-  <rect width="520" height="520" fill="#f8f9fa"/>
-  <rect x="10" y="10" width="500" height="500" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5"/>
+  <!-- pozadinski okviri panela -->
+  <rect x="16" y="16" width="440" height="528" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="476" y="16" width="488" height="528" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-  <!-- Naslov -->
-  <text x="260" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530" text-anchor="middle">Usisni vod pumpe za ulje – podtlak na usisu</text>
-  <text x="260" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">ρ = 870 kg/m³,  H = 2,4 m,  p_atm = 101,3 kPa,  p_v ≈ 200 Pa</text>
+  <!-- ============================================================ -->
+  <!-- LIJEVI PANEL: fizikalna shema (otvoreni spremnik + pumpa)    -->
+  <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- Vertikalne koordinate kljucnih razina:                        -->
+  <!--   y = 130 : centar pumpe (tlacni vod), gornji rub pumpe = 102 -->
+  <!--   y = 162 : suction port (donji rub pumpe), tu je tocka 'U'   -->
+  <!--   y = 162..458 = usisni vod (proporcionalno H = 2,40 m)       -->
+  <!--   y = 458 : slobodna povrsina ulja, tocka '0'                 -->
+  <!--   y = 458..515 = ulje u spremniku, dno spremnika y = 515      -->
+  <!-- ============================================================ -->
 
-  <!-- ══ OTVORENI SPREMNIK (dolje, x=60..340, y=350..450) ══ -->
-  <!-- Dno -->
-  <rect x="60" y="440" width="280" height="12" fill="url(#u03fpu_u3puhatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <!-- Lijeva stijenka -->
-  <rect x="60" y="340" width="12" height="100" fill="url(#u03fpu_u3puhatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <!-- Desna stijenka -->
-  <rect x="328" y="340" width="12" height="100" fill="url(#u03fpu_u3puhatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <!-- Ulje u spremniku -->
-  <rect x="72" y="380" width="256" height="60" fill="url(#u03fpu_u3puoil)" opacity="0.85"/>
-  <!-- Razina ulja -->
-  <line x1="58" y1="380" x2="342" y2="380" stroke="#c8860a" stroke-width="1.8"/>
-  <!-- p_atm oznaka -->
-  <text x="348" y="377" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">p_atm</text>
-  <!-- Tekst ulje -->
-  <text x="200" y="415" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#7d4e00" text-anchor="middle" font-style="italic">ulje (ρ = 870 kg/m³)</text>
+  <!-- ===== ZRAK + ATMOSFERSKI TLAK NA SLOBODNU POVRSINU ===== -->
+  <!-- Labela samo desno od cijevi (cijev je na x=190..216). Strelice tlaka samo desno. -->
+  <!-- atmosferske strelice na slobodnu povrsinu (samo desno od cijevi) -->
+  <line x1="262" y1="436" x2="262" y2="453" stroke="#5a6a78" stroke-width="1.4" marker-end="url(#u03fpu_atm)" />
+  <line x1="298" y1="436" x2="298" y2="453" stroke="#5a6a78" stroke-width="1.4" marker-end="url(#u03fpu_atm)" />
+  <line x1="334" y1="436" x2="334" y2="453" stroke="#5a6a78" stroke-width="1.4" marker-end="url(#u03fpu_atm)" />
 
-  <!-- ══ USISNI VOD (vertikalna cijev) ══ -->
-  <!-- Vanjska cijev x=182..218, od y=200 do y=380 -->
-  <rect x="182" y="200" width="36" height="180" fill="none" stroke="#4a6070" stroke-width="2.0"/>
-  <!-- Ulje u cijevi (kretanje gore) -->
-  <rect x="188" y="202" width="24" height="178" fill="#f0c060" fill-opacity="0.55"/>
-  <!-- Strelice kretanja gore u cijevi -->
-  <line x1="200" y1="360" x2="200" y2="338" stroke="#c8860a" stroke-width="1.8" marker-end="url(#u03fpu_u3puaO)"/>
-  <line x1="200" y1="300" x2="200" y2="278" stroke="#c8860a" stroke-width="1.8" marker-end="url(#u03fpu_u3puaO)"/>
-  <line x1="200" y1="248" x2="200" y2="226" stroke="#c8860a" stroke-width="1.8" marker-end="url(#u03fpu_u3puaO)"/>
+  <!-- ===== SPREMNIK: stijenke i dno (otvoren odozgo) ===== -->
+  <!-- lijeva stijenka -->
+  <rect x="60" y="458" width="10" height="62" fill="url(#u03fpu_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- desna stijenka -->
+  <rect x="370" y="458" width="10" height="62" fill="url(#u03fpu_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- dno spremnika -->
+  <rect x="60" y="515" width="320" height="10" fill="url(#u03fpu_hatch)" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- ══ PUMPA (x=120..280, y=140..200) ══ -->
-  <rect x="120" y="140" width="160" height="60" rx="10" fill="#7f8c8d" stroke="#3a4a56" stroke-width="2.0"/>
-  <text x="200" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">PUMPA</text>
-  <text x="200" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#d0dde6" text-anchor="middle">→ tlačni vod (izlaz)</text>
-  <!-- Tlačni vod (vodoravno desno) -->
-  <rect x="280" y="154" width="80" height="18" fill="url(#u03fpu_u3puoilpipe)" stroke="#4a6070" stroke-width="1.5"/>
-  <line x1="305" y1="163" x2="352" y2="163" stroke="#c8860a" stroke-width="1.8" marker-end="url(#u03fpu_u3puaO)"/>
+  <!-- ulje u spremniku (slobodna povrsina na y=458) -->
+  <rect x="70" y="458" width="300" height="57" fill="url(#u03fpu_oil)" />
 
-  <!-- ══ KOTA H ══ -->
-  <line x1="350" y1="200" x2="356" y2="200" stroke="#b7600c" stroke-width="1"/>
-  <line x1="350" y1="380" x2="356" y2="380" stroke="#b7600c" stroke-width="1"/>
-  <line x1="353" y1="202" x2="353" y2="378" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fpu_u3puaDimL)" marker-end="url(#u03fpu_u3puaDim)"/>
-  <text x="364" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#b7600c">H</text>
-  <text x="364" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">= 2,4 m</text>
+  <!-- slobodna povrsina (deblja plava) -->
+  <line x1="70" y1="458" x2="370" y2="458" stroke="#1565c0" stroke-width="2.2" />
 
-  <!-- ══ PODTLAK BOX na usisu pumpe ══ -->
-  <rect x="30" y="148" width="84" height="56" rx="7" fill="#fde8e8" stroke="#c0392b" stroke-width="1.3"/>
-  <text x="72" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b" text-anchor="middle" font-weight="700">usis pumpe</text>
-  <text x="72" y="181" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b" text-anchor="middle" font-style="italic">p_man =</text>
-  <text x="72" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b" text-anchor="middle" font-style="italic">−20,5 kPa</text>
-  <!-- Strelica od boxa prema usisu pumpe -->
-  <line x1="114" y1="172" x2="122" y2="172" stroke="#c0392b" stroke-width="1.5" marker-end="url(#u03fpu_u3puaR)"/>
+  <!-- ulje oznaka -->
+  <!-- ===== USISNI VOD: vertikalna cijev iz spremnika u pumpu ===== -->
+  <!-- Cijev je od y=162 (donja strana pumpe) do y=510 (dno cijevi u ulju). -->
+  <!-- Donji kraj cijevi mora biti potopljen u ulje (ulazna usisna fugacija). -->
 
-  <!-- ══ REZULTATI (dolje desno) ══ -->
-  <rect x="30" y="460" width="460" height="38" rx="8" fill="#eaf4fb" stroke="#c8d8e8" stroke-width="1.3"/>
-  <text x="260" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#3a4a56" text-anchor="middle">p_man = −ρgH = −870·9,81·2,4 ≈ −20,5 kPa  |  p_abs ≈ 80,8 kPa</text>
-  <text x="260" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="middle">H_max (kavitacija) = (p_atm − p_v)/(ρg) ≈ 11,8 m</text>
+  <!-- Ulje u cijevi (kontinuirano s uljem u spremniku) - sirina 22, x=192..214 -->
+  <rect x="192" y="162" width="22" height="348" fill="url(#u03fpu_oilpipe)" />
 
-  <!-- ══ NAPOMENA KAVITACIJA ══ -->
-  <rect x="380" y="140" width="116" height="66" rx="7" fill="#fff8e8" stroke="#e0c870" stroke-width="1.2"/>
-  <text x="438" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5c3d00" text-anchor="middle" font-weight="700">Kavitacija</text>
-  <text x="438" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5c3d00" text-anchor="middle">ako p_abs &lt; p_v</text>
-  <text x="438" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5c3d00" text-anchor="middle">mjehurići paru!</text>
-  <text x="438" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5c3d00" text-anchor="middle">H_max ≈ 11,8 m</text>
-</svg>
+  <!-- Vanjske stijenke cijevi (sive linije) - od y=162 (vrh) do y=510 (dno) -->
+  <line x1="190" y1="162" x2="190" y2="510" stroke="#3a4a56" stroke-width="1.8" />
+  <line x1="216" y1="162" x2="216" y2="510" stroke="#3a4a56" stroke-width="1.8" />
+  <!-- dno cijevi otvoreno (samo male oznake) -->
+  <line x1="186" y1="510" x2="220" y2="510" stroke="#3a4a56" stroke-width="0.8" stroke-dasharray="2,2" />
+
+  <!-- strelice strujanja ulja u cijevi (gore) -->
+  <line x1="203" y1="490" x2="203" y2="470" stroke="#b07a10" stroke-width="1.7" marker-end="url(#u03fpu_flow)" />
+  <line x1="203" y1="420" x2="203" y2="400" stroke="#b07a10" stroke-width="1.7" marker-end="url(#u03fpu_flow)" />
+  <line x1="203" y1="360" x2="203" y2="340" stroke="#b07a10" stroke-width="1.7" marker-end="url(#u03fpu_flow)" />
+  <line x1="203" y1="300" x2="203" y2="280" stroke="#b07a10" stroke-width="1.7" marker-end="url(#u03fpu_flow)" />
+  <line x1="203" y1="240" x2="203" y2="220" stroke="#b07a10" stroke-width="1.7" marker-end="url(#u03fpu_flow)" />
+  <line x1="203" y1="195" x2="203" y2="175" stroke="#b07a10" stroke-width="1.7" marker-end="url(#u03fpu_flow)" />
+
+  <!-- ===== PUMPA (kucište) ===== -->
+  <!-- Kucište: x=146..330, y=102..162 (visina 60, sirina 184) -->
+  <rect x="146" y="102" width="184" height="60" rx="11" fill="#7f8c8d" stroke="#3a4a56" stroke-width="1.8" />
+  <!-- Suction port (donji ulaz pumpe) - tamna pruga koja "guta" cijev -->
+  <rect x="186" y="158" width="34" height="8" fill="#3a4a56" />
+  <!-- Pogonski impeller indicator (krug + krizic) na desnoj strani kucista -->
+  <circle cx="290" cy="132" r="16" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1.4" />
+  <line x1="278" y1="132" x2="302" y2="132" stroke="#cdd6dd" stroke-width="1.6" />
+  <line x1="290" y1="120" x2="290" y2="144" stroke="#cdd6dd" stroke-width="1.6" />
+  <!-- Natpis 'PUMPA' (centriran u lijevoj polovici kucista, izmedu suction porta i impellera) -->
+  <!-- ===== Tlacni vod (izlaz iz pumpe desno) ===== -->
+  <rect x="330" y="120" width="70" height="22" fill="url(#u03fpu_oilpipe)" stroke="#3a4a56" stroke-width="1.4" />
+  <line x1="346" y1="131" x2="394" y2="131" stroke="#b07a10" stroke-width="1.8" marker-end="url(#u03fpu_flow)" />
+  <!-- ===== TOCKA USISA: 'U' na ulazu pumpe (y=162) ===== -->
+  <circle cx="203" cy="162" r="4" fill="#c0392b" stroke="#7a1f15" stroke-width="1" />
+  <!-- leader od tocke U prema labeli desno-dolje od pumpe -->
+  <line x1="207" y1="162" x2="244" y2="186" stroke="#c0392b" stroke-width="0.9" />
+  <!-- ===== TOCKA SLOBODNE POVRSINE: '0' (lijevo, izvan zone atm strelica) ===== -->
+  <circle cx="100" cy="458" r="4" fill="#1565c0" stroke="#0d3b6e" stroke-width="1" />
+  <line x1="104" y1="458" x2="138" y2="442" stroke="#1565c0" stroke-width="0.9" />
+  <!-- ===== KOTA H (visina pumpe iznad razine ulja) ===== -->
+  <!-- Mjeri se od tocke U (y=162) do slobodne povrsine (y=458). -->
+  <!-- Pomocne linije od geometrije do dim osi (desno od cijevi, prije bocnog ruba spremnika) -->
+  <!-- tik-crte -->
+  <!-- dim linija -->
+  <!-- labela H = 2,40 m -->
+  <!-- ===== PODTLAK CALLOUT (lijevo gore) ===== -->
+  <rect x="32" y="82" width="108" height="84" rx="8" fill="#fde8e8" stroke="#c0392b" stroke-width="1.4" />
+  <line x1="44" y1="124" x2="128" y2="124" stroke="#c0392b" stroke-width="0.8" opacity="0.5" />
+  <!-- veza callout->tocka U (dashed) -->
+  <path d="M 140 140 Q 165 152 197 162" fill="none" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="4,3" />
+
+  <!-- ===== LEGENDA strujanja (gore desno od pumpe, izvan tank zone) ===== -->
+  <line x1="332" y1="187" x2="350" y2="187" stroke="#b07a10" stroke-width="1.7" marker-end="url(#u03fpu_flow)" />
+  <!-- ============================================================ -->
+  <!-- DESNI PANEL: izvod (3 koraka) + REZULTATI + kavitacija       -->
+  <!-- ============================================================ -->
+
+  <!-- Header bar -->
+  <rect x="496" y="34" width="448" height="32" rx="8" fill="#1565c0" />
+  <rect x="496" y="50" width="448" height="16" fill="#1565c0" />
+  <!-- ===== KORAK 1: p_man (manometarski tlak) ===== -->
+  <rect x="496" y="80" width="448" height="92" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="496" y="80" width="6" height="92" rx="3" fill="#1565c0" />
+  <!-- ===== KORAK 2: p_aps (apsolutni tlak) ===== -->
+  <rect x="496" y="182" width="448" height="86" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="496" y="182" width="6" height="86" rx="3" fill="#1565c0" />
+  <!-- ===== KORAK 3: H_max bez kavitacije ===== -->
+  <rect x="496" y="278" width="448" height="98" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
+  <!-- ===== REZULTATI badge ===== -->
+  <rect x="496" y="392" width="448" height="50" rx="9" fill="#eaf6ee" stroke="#1e8449" stroke-width="1.6" />
+  <!-- ===== Provjera/napomena (kavitacija) ===== -->
+  <rect x="496" y="456" width="448" height="74" rx="9" fill="#fff7e6" stroke="#e0c870" stroke-width="1.2" />
+  <line x1="216" y1="162" x2="430" y2="162" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="370" y1="458" x2="430" y2="458" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="422" y1="162" x2="438" y2="162" stroke="#b7600c" stroke-width="1.3" />
+  <line x1="422" y1="458" x2="438" y2="458" stroke="#b7600c" stroke-width="1.3" />
+  <line x1="430" y1="166" x2="430" y2="454" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fpu_dimL)" marker-end="url(#u03fpu_dim)" />
+  <rect x="496" y="278" width="6" height="98" rx="3" fill="#b7600c" />
+  <text x="40" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Pumpa iznad otvorenog spremnika ulja</text>
+  <text x="40" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">Hidrostatski pad tlaka u usisnom vodu visine H</text>
+
+  <text x="320" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#5a6a78"><tspan font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan> = 101,3 kPa</text>
+  <text x="300" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#7d4e00">ulje</text>
+  <text x="300" y="507" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#7d4e00">ρ = 870 kg/m³</text>
+
+  <text x="225" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">PUMPA</text>
+
+  <text x="368" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">tlacni vod</text>
+
+  <text x="248" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c0392b"><tspan font-weight="700">U</tspan> – usis</text>
+
+  <text x="142" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0"><tspan font-weight="700">0</tspan> – slob. površina</text>
+
+  <text x="86" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#c0392b">PODTLAK</text>
+  <text x="86" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#c0392b">na usisu pumpe</text>
+  <text x="86" y="140" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#c0392b"><tspan font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">man</tspan> = −20,5 kPa</text>
+  <text x="86" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#c0392b"><tspan font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">aps</tspan> ≈ 80,8 kPa</text>
+  <text x="356" y="191" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">smjer strujanja</text>
+
+  <text x="720" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#ffffff">Hidrostatski izvod tlaka na usisu</text>
+
+  <text x="514" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">1. Manometarski tlak na usisu (uspon kroz fluid)</text>
+  <text x="720" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic" font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">man</tspan> = −ρ g H = −870 · 9,81 · 2,40</text>
+  <text x="720" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">man</tspan> ≈ −20,49 kPa ≈ −20,5 kPa</text>
+
+  <text x="514" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">2. Apsolutni tlak na usisu</text>
+  <text x="720" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic" font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">aps</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan> + p<tspan baseline-shift="sub" font-size="0.7em">man</tspan> = 101 300 − 20 490 Pa</text>
+  <text x="720" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">aps</tspan> ≈ 80 810 Pa ≈ 80,8 kPa</text>
+
+  <text x="720" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic" font-weight="700">H</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> = (p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan> − p<tspan baseline-shift="sub" font-size="0.7em">v</tspan>) / (ρ g)</text>
+  <text x="720" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#5a6a78">= (101 300 − 200) / (870 · 9,81) = 101 100 / 8534</text>
+  <text x="720" y="409" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1e8449">REZULTATI</text>
+  <text x="582" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">man</tspan> ≈ −20,5 kPa</text>
+  <text x="722" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">aps</tspan> ≈ 80,8 kPa</text>
+  <text x="862" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 11,8 m</text>
+
+  <text x="510" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#7a5c00">Kavitacija</text>
+  <text x="510" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Ako p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> padne ispod tlaka pare p<tspan baseline-shift="sub" font-size="0.7em">v</tspan>, ulje isparava u mjehurice (kavitacija).</text>
+  <text x="510" y="510" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Ovdje p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> = 80,8 kPa ≫ 0,2 kPa → daleko od kavitacijske granice.</text>
+  <text x="510" y="524" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">U praksi se H<tspan baseline-shift="sub" font-size="0.7em">max</tspan> reducira na 6–8 m zbog hidraulickih gubitaka.</text>
+<text x="442" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#b7600c">H</text>
+  <text x="442.0" y="322.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#b7600c">= 2,40 m</text>
+
+  <text x="514" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">3. Maksimalna usisna visina bez kavitacije (p<tspan baseline-shift="sub" font-size="0.7em">v</tspan> ≈ 200 Pa)</text>
+  <text x="720" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 11,8 m</text>
+
+  </svg>

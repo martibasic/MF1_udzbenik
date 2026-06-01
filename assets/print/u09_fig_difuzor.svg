@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="u09fd_title u09fd_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u09fd_title">Idealni difuzor – pretvorba brzine u statički tlak</title>
+  <desc id="u09fd_desc">Vodoravni difuzor: voda ulazi presjekom A1=0,010 m^2 brzinom v1=15 m/s i izlazi širim presjekom A2=0,035 m^2 brzinom v2=4,3 m/s. Pad brzine od 15 na 4,3 m/s pretvara se Bernoullijem u porast statičkog tlaka p2-p1≈103 kPa. Desni panel: protok Q=0,150 m^3/s, idealni i realni porast tlaka (η_dif=0,80) te gubitak snage P_gub≈3,1 kW.</desc>
+
+  <defs>
+    <!-- Markeri sila/brzina/tlaka/kota -->
+    <marker id="u09fd_aV1" markerWidth="9" markerHeight="7" refX="8.5" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#0f766e" />
+    </marker>
+    <marker id="u09fd_aV2" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#0f766e" />
+    </marker>
+    <marker id="u09fd_aP" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <marker id="u09fd_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u09fd_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u09fd_aFlow" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1a2530" />
+    </marker>
+
+    <!-- Gradient vode -->
+    <linearGradient id="u09fd_fluid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+
+    <!-- Hatch stijenke -->
+    <pattern id="u09fd_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+  </defs>
+
+  <!-- Pozadina i okvir -->
+  <rect width="980" height="520" fill="#ffffff" />
+  <rect x="14" y="14" width="952" height="492" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
+
+  <!-- Razdjelnik panela -->
+  <line x1="620" y1="34" x2="620" y2="486" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
+
+  <!-- ============================================================
+       LIJEVI PANEL: GEOMETRIJA DIFUZORA
+       Difuzor je vodoravan, simetrican oko osi y=260
+       Ulaz x=110 (A1, unutar y=230..290 = 60 px sirina)
+       Izlaz x=510 (A2, unutar y=204..316 = 112 px sirina)
+       Omjer A2/A1 = 3,5 -> D2/D1 = sqrt(3,5) = 1,871 -> D2 = 60*1,871 = 112 px
+  ============================================================ -->
+
+  <!-- Fluid (kontinuiran) u difuzoru -->
+  <polygon points="110,230 510,204 510,316 110,290" fill="url(#u09fd_fluid)" />
+
+  <!-- Prikljucne cijevi (ravne sekcije ulaza/izlaza) -->
+  <polygon points="60,230 110,230 110,290 60,290" fill="url(#u09fd_fluid)" />
+  <polygon points="510,204 590,204 590,316 510,316" fill="url(#u09fd_fluid)" />
+
+  <!-- Stijenke difuzora (gornja + donja) -->
+  <!-- Gornja stijenka -->
+  <polygon points="60,222 110,222 510,196 590,196 590,204 510,204 110,230 60,230" fill="url(#u09fd_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+  <!-- Donja stijenka -->
+  <polygon points="60,290 110,290 510,316 590,316 590,324 510,324 110,298 60,298" fill="url(#u09fd_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+
+  <!-- Os simetrije -->
+  <line x1="48" y1="260" x2="602" y2="260" stroke="#5a6a78" stroke-width="0.9" stroke-dasharray="8,5,2,5" />
+
+  <!-- ============================================================
+       OZNAKE PRESJEKA 1 i 2 (donja oznaka kako ne bi smetala v labelima)
+  ============================================================ -->
+  <!-- Presjek 1 vertikalna isprekidana (od fluida prema dolje, ispod stjenke) -->
+  <line x1="110" y1="298" x2="110" y2="370" stroke="#1a2530" stroke-width="1.2" stroke-dasharray="3,3" />
+  <circle cx="110" cy="382" r="11" fill="#ffffff" stroke="#1a2530" stroke-width="1.4" />
+  <!-- Presjek 2 -->
+  <line x1="510" y1="316" x2="510" y2="370" stroke="#1a2530" stroke-width="1.2" stroke-dasharray="3,3" />
+  <circle cx="510" cy="382" r="11" fill="#ffffff" stroke="#1a2530" stroke-width="1.4" />
+  <!-- ============================================================
+       STRELICE BRZINE v1 (duga) i v2 (kratka)
+       Skala: 1 m/s = 4 px -> v1=60 px, v2=17 px
+       Boja: tirkizno-zelena #0f766e (brzina toka)
+  ============================================================ -->
+  <!-- v1: tri strelice na ulazu, duge, unutar fluida ulazne cijevi -->
+  <line x1="66" y1="244" x2="124" y2="244" stroke="#0f766e" stroke-width="3" marker-end="url(#u09fd_aV1)" />
+  <line x1="66" y1="260" x2="124" y2="260" stroke="#0f766e" stroke-width="3" marker-end="url(#u09fd_aV1)" />
+  <line x1="66" y1="276" x2="124" y2="276" stroke="#0f766e" stroke-width="3" marker-end="url(#u09fd_aV1)" />
+  <!-- v2: tri strelice na izlazu, kratke -->
+  <line x1="520" y1="232" x2="552" y2="232" stroke="#0f766e" stroke-width="2.4" marker-end="url(#u09fd_aV2)" />
+  <line x1="520" y1="260" x2="552" y2="260" stroke="#0f766e" stroke-width="2.4" marker-end="url(#u09fd_aV2)" />
+  <line x1="520" y1="288" x2="552" y2="288" stroke="#0f766e" stroke-width="2.4" marker-end="url(#u09fd_aV2)" />
+  <!-- ============================================================
+       STATICKI TLAK (plave male strelice okomito na stjenku)
+       Niski tlak p1 (kratke strelice) -> visoki tlak p2 (duze strelice)
+       Strelice idu IZVANA prema unutra (tlak djeluje na stjenku iznutra,
+       ali pokazujemo kao strelice koje predstavljaju tlak unutar fluida)
+  ============================================================ -->
+  <!-- p1: kratke strelice u ulaznoj cijevi (nizi tlak) -->
+  <line x1="80" y1="216" x2="80" y2="226" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u09fd_aP)" />
+  <line x1="80" y1="304" x2="80" y2="294" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u09fd_aP)" />
+  <!-- p2: duze strelice u izlaznoj cijevi (visi tlak) -->
+  <line x1="560" y1="180" x2="560" y2="200" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u09fd_aP)" />
+  <line x1="560" y1="340" x2="560" y2="320" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u09fd_aP)" />
+  <!-- ============================================================
+       KOTE PRESJEKA (A1, A2) - vertikalne, lijevo od ulaza i desno od izlaza
+  ============================================================ -->
+  <!-- A1: kota lijevo od ulazne cijevi (x=50), label ispod kote -->
+  <!-- A2: kota desno od izlazne cijevi (x=606) -->
+  <!-- ============================================================
+       OZNAKA KUTA OTVARANJA 2theta - jednostavni callout iznad stjenke
+       Leader iz tocke na gornjoj stjenci do labela iznad (van geometrije)
+  ============================================================ -->
+  <line x1="320" y1="213" x2="360" y2="180" stroke="#8e44ad" stroke-width="0.8" />
+  <!-- ============================================================
+       OZNAKA FLUIDA + GUSTOCE (ispod osi simetrije, unutar fluida)
+  ============================================================ -->
+  <!-- Strelica smjera toka (ispod difuzora, izmedju oznaka presjeka) -->
+  <line x1="180" y1="395" x2="430" y2="395" stroke="#1a2530" stroke-width="1.6" marker-end="url(#u09fd_aFlow)" />
+  <!-- ============================================================
+       INFO-KUTIJA U DNU LIJEVOG PANELA: BERNOULLI INTUICIJA
+  ============================================================ -->
+  <rect x="40" y="420" width="560" height="62" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <!-- ============================================================
+       DESNI PANEL: FORMULE I REZULTATI
+       x=640..954
+  ============================================================ -->
+  <rect x="640" y="44" width="312" height="396" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
+  <!-- Header bar -->
+  <rect x="640" y="44" width="312" height="32" rx="10" fill="#1565c0" />
+  <rect x="640" y="68" width="312" height="8" fill="#1565c0" />
+  <!-- Blok 1: Protok Q (y=76..144) -->
+  <line x1="660" y1="152" x2="932" y2="152" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 2: Izlazna brzina v2 (y=152..220) -->
+  <line x1="660" y1="228" x2="932" y2="228" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 3: Idealni porast tlaka (y=228..296) -->
+  <line x1="660" y1="304" x2="932" y2="304" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 4: Realni porast tlaka (y=304..360) -->
+  <line x1="660" y1="368" x2="932" y2="368" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 5: Gubitak snage (y=368..432) -->
+  <!-- Rezultat badge ispod -->
+  <rect x="640" y="450" width="312" height="44" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <!-- ============================================================
+       LEGENDA na dnu lijevog panela
+  ============================================================ -->
+  <rect x="40" y="494" width="11" height="3" fill="#0f766e" />
+  <polygon points="51,491 51,500 60,495.5" fill="#0f766e" />
+  <rect x="148" y="493" width="11" height="3" fill="#1565c0" />
+  <polygon points="159,490 159,499 168,494.5" fill="#1565c0" />
+  <rect x="280" y="488" width="12" height="12" fill="#aed6f1" stroke="#1565c0" stroke-width="0.8" rx="2" />
+  <line x1="60" y1="230" x2="42" y2="230" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="60" y1="290" x2="42" y2="290" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="50" y1="230" x2="50" y2="290" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09fd_aDimL)" marker-end="url(#u09fd_aDim)" />
+  <line x1="590" y1="204" x2="612" y2="204" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="590" y1="316" x2="612" y2="316" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="606" y1="204" x2="606" y2="316" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09fd_aDimL)" marker-end="url(#u09fd_aDim)" />
+  <rect x="430" y="492" width="11" height="3" fill="#b7600c" />
+  <polygon points="441,489 441,498 450,493.5" fill="#b7600c" />
+  <text x="110" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">1</text>
+
+  <text x="510" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">2</text>
+
+  <text x="125" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0f766e"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 15 m/s</text>
+
+  <text x="525" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0f766e"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> ≈ 4,3 m/s</text>
+
+  <text x="80" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1565c0"><tspan font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> (nizi)</text>
+
+  <text x="560" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1565c0"><tspan font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> (visi)</text>
+
+  <text x="365" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad">2θ ≈ 7° (kut otvaranja)</text>
+
+  <text x="335" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#0d47a1">voda</text>
+  <text x="335" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1a2530">ρ = 1000 kg/m³</text>
+
+  <text x="305" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1a2530">smjer toka</text>
+
+  <text x="55" y="440" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0d47a1">Energetska bilanca (Bernoulli, vodoravno, bez gubitaka):</text>
+  <text x="55" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">1</tspan> + ½ρ<tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>² = p<tspan baseline-shift="sub" font-size="0.7em">2</tspan> + ½ρ<tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>²</text>
+  <text x="335" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#5a6a78">brzina ↓ → statički tlak ↑</text>
+  <text x="55" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Pad dinamičkog tlaka ½ρ(<tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>² − <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>²) pretvara se u porast statičkog tlaka Δp = p<tspan baseline-shift="sub" font-size="0.7em">2</tspan> − p<tspan baseline-shift="sub" font-size="0.7em">1</tspan>.</text>
+
+  <text x="796" y="66" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Rješenje – ključne jednadžbe</text>
+
+  <text x="796" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Volumenski protok (kontinuitet)</text>
+  <text x="796" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Q = A<tspan baseline-shift="sub" font-size="0.7em">1</tspan> · v<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 0,010 · 15</text>
+  <text x="796" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 0,150 m³/s = 150 L/s</text>
+  <text x="796" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Izlazna brzina (kontinuitet)</text>
+  <text x="796" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">v<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = v<tspan baseline-shift="sub" font-size="0.7em">1</tspan> · A<tspan baseline-shift="sub" font-size="0.7em">1</tspan> / A<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+  <text x="796" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 4,29 m/s</text>
+  <text x="796" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Idealni porast statičkog tlaka</text>
+  <text x="796" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Δp<tspan baseline-shift="sub" font-size="0.7em">ideal</tspan> = ½ρ(v<tspan baseline-shift="sub" font-size="0.7em">1</tspan>² − v<tspan baseline-shift="sub" font-size="0.7em">2</tspan>²)</text>
+  <text x="796" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 103 kPa</text>
+  <text x="796" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Realni porast (η<tspan baseline-shift="sub" font-size="0.7em">dif</tspan> = 0,80)</text>
+  <text x="796" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Δp<tspan baseline-shift="sub" font-size="0.7em">real</tspan> = η<tspan baseline-shift="sub" font-size="0.7em">dif</tspan> · Δp<tspan baseline-shift="sub" font-size="0.7em">ideal</tspan> ≈ 82,6 kPa</text>
+  <text x="796" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">5. Gubitak snage u difuzoru</text>
+  <text x="796" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">P<tspan baseline-shift="sub" font-size="0.7em">gub</tspan> = (1−η<tspan baseline-shift="sub" font-size="0.7em">dif</tspan>) · Δp<tspan baseline-shift="sub" font-size="0.7em">ideal</tspan> · Q</text>
+  <text x="796" y="428" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 3,1 kW</text>
+
+  <text x="796" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="720" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0">Δp ≈ 103 kPa</text>
+  <text x="874" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c0392b">P<tspan baseline-shift="sub" font-size="0.7em">gub</tspan> ≈ 3,1 kW</text>
+
+  <text x="66" y="499" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">brzina v</text>
+
+  <text x="174" y="499" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">statički tlak p</text>
+
+  <text x="298" y="499" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">voda (kontinuirana)</text>
+
+  <text x="456" y="499" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">kote (A₁, A₂)</text>
+<text x="50" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="50" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#b7600c">0,010 m²</text>
+
+  <text x="606" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+  <text x="606" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#b7600c">0,035 m²</text>
+
+  </svg>

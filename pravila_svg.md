@@ -2,6 +2,8 @@
 
 > Konsolidirani sažetak pravila iz [`protokol_prerade_zadataka_i_skica.md`](protokol_prerade_zadataka_i_skica.md), [`kucni_stil_skica_val1.md`](kucni_stil_skica_val1.md) i operativnih odluka u [`qa_log_faza1.md`](qa_log_faza1.md). Ovaj dokument je radna referenca; izvori ostaju autoritativni.
 
+> **Ažurirano 2026-05-26 (Faza 3 redizajn)** s naucima iz iterativnog redizajna val1: geometrijska koherentnost fluida, format sila, struktura formula panela. Vidi sekcije 12–14 na dnu.
+
 ---
 
 ## 1. Što SVG skica MORA imati
@@ -233,5 +235,144 @@ Ako imaš samo 30 sekundi po SVG-u:
 2. **Crvena za ulaz, zelena za izlaz, plava za tlak?** (palette)
 3. **Nema rendered naslova "U[0-9]+ – ..."?** (top-level title removal)
 4. **Brojevi u skici = brojevi iz Zadano?** (numerička točnost)
+5. **Fluid teče?** Trasiraj putanju od ulaza do izlaza — nema "skoka preko stjenke" (vidi sekciju 12)
 
-Ako sve četiri točke OK, SVG je vjerojatno spreman. Detaljnija provjera (tipografija, srafura, kote) ide tek kad osnovna semantika prolazi.
+Ako sve točke OK, SVG je vjerojatno spreman. Detaljnija provjera (tipografija, srafura, kote) ide tek kad osnovna semantika prolazi.
+
+---
+
+## 12. Geometrijska koherentnost hidrauličkog sustava
+
+> Najvažnije pravilo Faze 3: skica nije ukras, mora vjerno reproducirati **stvarnu fluidnu putanju**.
+
+### Spojni vod između dvaju cilindara
+1. **Cijev/vod mora biti na samom dnu fluida**, neposredno iznad zajedničkog dna (ne u sredini fluida). Razlog: tako se gravitacijski stvarno povezuju spremnici u realnom hidrauličkom sustavu.
+2. **Fluid mora vidno biti kontinuiran** kroz cijeli sustav. Tehnički: više `<rect>` elemenata istog fill-a (gradijent vode) postavljenih bez razmaka da formiraju jedan vizualni "blob" preko cilindara i voda.
+3. **Tank mora ostati VIZUALNO ZATVOREN** — stjenke su PUNE visine (od top cap-a do zajedničkog dna), bez gapa. Spoj fluida kroz port rješava se **fluid overlay-em**, NE rupom u stjenci:
+   - **Krivo** (tank izgleda otvoren): stjenka podijeljena na TOP + BOTTOM s prazninom na visini voda.
+   - **Ispravno**: stjenka je jedan rect pune visine (zatvoren tank). Nakon što su sve stjenke nacrtane, doda se **port fluid overlay** — mali `<rect>` u boji fluida PREKO stjenke na visini spoja (y voda). Redoslijed: (1) fluid u cilindrima i vodu, (2) sve stjenke pune visine, (3) port fluid overlay preko stjenki, (4) klipovi/sile/kote.
+4. **Zajedničko dno** preko svih cilindara + voda — jedan kontinuirani hatched rect, ne više odvojenih.
+5. **Klipnjača prolazi kroz brtvu** u top cap-u: tamni rect (`fill="#3a4a56"`) s 2 horizontalne svjetle linije (vizualna oznaka brtve), umjesto rupe ili overlap-a klipnjače preko hatched top cap-a.
+6. **Klip mora dotaknuti fluid** — donji rub klipa = gornji rub fluida (bez gapa). Svi klipovi istog sustava neka imaju istu debljinu radi konzistentnosti.
+
+### Što nije dopušteno geometrijski
+- Cijev koja prolazi **kroz** stjenku cilindra ili dno bez vidljive rupe
+- Cijev koja "lebdi" odvojeno od cilindara (gap između tube fluida i cyl fluida)
+- Preklapanje voda s dnom cilindra (oba na istoj y)
+- Klipnjača preko hatched cap-a bez vidljive brtve
+- Tanke cijevi (<10 px) koje ne čitaju kao "veza"
+
+### Provjera prije nego što se kaže "gotovo"
+Trasiraj fluid pixel-by-pixel od ulaza (klip lijevog cilindra) do izlaza (klip desnog cilindra). Svaki segment mora **dotaknuti** sljedeći. Ako vidiš sivi piksel (stjenka, hatched) između dva plava područja koja navodno predstavljaju isti fluid, geometrija je pogrešna.
+
+---
+
+## 13. Strelice sila — proporcionalne i čitljive
+
+### Format labele
+**Jedna linija**, ne dvije: simbol bold + vrijednost regular weight u istom `<text>`:
+```xml
+<text x="..." y="..." font-size="14" font-style="italic" fill="#c0392b">
+  <tspan font-weight="700">G</tspan> = 3,60 kN
+</text>
+```
+
+Pogrešno (Codex pattern):
+```xml
+<text>G</text>
+<text>= 3,60 kN</text>  <!-- u drugom redu, ispod -->
+```
+
+### Veličina trokuta strelice
+Manji trokuti (Codex je koristio prevelike):
+- Sile: `markerWidth="7" markerHeight="5"`, path `M0,0 L0,5 L7,2.5 z`
+- Tlačne strelice u fluidu: `markerWidth="6" markerHeight="4"`, path `M0,0 L0,4 L6,2 z`
+- Kote: `markerWidth="6" markerHeight="5"`, path `M0,0 L0,5 L6,2.5 z`
+
+### Duljina strelice proporcionalna iznosu sile
+Veća sila → vidno duža strelica. Skala se bira po SVG-u tako da:
+- Najmanja sila bude min. ~15 px (vidljiva)
+- Najveća stane u dostupan prostor iznad/ispod cilindra
+
+Tipična skala kad su sile bliske (npr. val1: G = 3,60 kN i F₂ = 8,06 kN, omjer 2,24):
+- 1 kN ≈ 7 px → G = 25 px, F₂ = 56 px
+
+Kad je omjer velik (npr. val2: F₁ = 150 N i F₂ = 5,25 kN, omjer 35:1):
+- Ne ide čisto linearno (F₁ bi bila 1 px) — koristi **stupnjevanu** skalu ili dvije zone:
+  - F₁: min visible (15–20 px)
+  - F₂: ~3–4× dulja od F₁ (ne 35× — samo dovoljno da se vidi da je puno veća)
+- Komentarno objasniti u Provjera sekciji da je strelica simbolično skraćena.
+
+### Pravac strelice
+- Sila prema dolje (npr. G teret): line `y1 < y2`, `marker-end` na donjem kraju
+- Sila prema gore (npr. F₂ podizač): line `y1 > y2`, `marker-end` na gornjem kraju
+- Tipka: `marker-end` je uvijek tip strelice (kraj linije)
+
+### Pomoćne (extension) linije za kote — OBVEZNO
+Kota mora biti vidno **vezana za geometriju** koju mjeri. Sama tik-crta visoko iznad geometrije ne čita se. Standard:
+1. **Pomoćne linije** (tanke, `stroke-width="0.7"`, smeđe `#b7600c`) idu OD geometrije (npr. ruba cilindra) DO razine dimenzijske linije.
+2. **Tik-crte** (kratke, `stroke-width="1.2"`) na krajevima dimenzijske linije, perpendikularne na nju.
+3. **Dimenzijska linija** s markerima (`marker-start` + `marker-end`) između tik-crta.
+
+Primjer za vodoravnu kotu širine cilindra (interior x=50–190, stjenke od y=240):
+```xml
+<!-- Pomocne linije od stjenke do kote -->
+<line x1="50" y1="240" x2="50" y2="320" stroke="#b7600c" stroke-width="0.7"/>
+<line x1="190" y1="240" x2="190" y2="320" stroke="#b7600c" stroke-width="0.7"/>
+<!-- Tik-crte -->
+<line x1="50" y1="330" x2="50" y2="318" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="190" y1="330" x2="190" y2="318" stroke="#b7600c" stroke-width="1.2"/>
+<!-- Dimenzijska linija -->
+<line x1="53" y1="325" x2="187" y2="325" stroke="#b7600c" stroke-width="1.3" marker-start="url(#PFXDimR)" marker-end="url(#PFXDim)"/>
+```
+
+Za vertikalnu kotu (npr. hod s_L) pomoćne linije idu HORIZONTALNO od geometrije do dimenzijske osi.
+
+### Kotači na vozilu
+Ako prikaz ima vozilo na platformi (dizalica, podizač): kotači pripadaju **vozilu**, ne platformi. Dno kotača stoji NA platformi, vrh kotača veže se za karoseriju vozila. NE crtati kotače ISPOD platforme.
+
+---
+
+## 14. Format informacijskog panela (formula box)
+
+### Struktura panela
+1. **Header bar** ispunjen tematskom bojom (plava `#1565c0` za formule, zelena `#1e8449` za rezultate), tekst u bijelom centrirano
+2. **Jednako visoki blokovi** za svaku jednadžbu, svi centrirano (`text-anchor="middle"`)
+3. **Tanke svjetle separator linije** između blokova
+4. **Sažetak italic** na dnu panela
+5. **Zaseban "REZULTATI" badge** ispod glavnog panela (kompaktni prikaz ključnih brojeva)
+
+### Struktura jednog bloka
+```
+Label sive (font-size=11, fill="#5a6a78")      ← što se računa
+Formula bold crna (font-size=14, fill="#1a2530") ← kako se računa
+Rezultat bold u boji (font-size=13)              ← rezultat
+```
+
+Boje rezultata:
+- Plava `#1565c0` za tlak/površinu (procesni rezultati)
+- Zelena `#1e8449` za izlaznu silu (krajnji rezultat)
+- Crvena `#c0392b` za ulazni tlak/silu kad je ključan (npr. u rezultatima badge)
+
+### Što izbjegavati
+- **Lijevo poravnanje** mješano s indented rezultatima → izgleda netjedno
+- **Različite veličine fonta** za iste tipove elemenata kroz panel
+- **Nedostatak header bara** → panel izgleda kao nedovršen
+- **Dvije linije gdje stane jedna** → npr. "Isti tlak · veća površina" + "→ veća sila" mogu biti zajedno na jednoj liniji ako stanu
+
+### Primjer urednog bloka (centriran)
+```xml
+<!-- Blok n: y_top..y_bottom (visina ~70 px) -->
+<text x="CENTER" y="Y_LABEL" font-size="11" text-anchor="middle" fill="#5a6a78">Label</text>
+<text x="CENTER" y="Y_FORMULA" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Formula</text>
+<text x="CENTER" y="Y_RESULT" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ vrijednost</text>
+<line x1="..." y1="Y_SEP" x2="..." y2="Y_SEP" stroke="#c8d6e4" stroke-width="1"/>
+```
+
+### Result badge format
+```xml
+<rect x="..." y="..." width="..." height="44" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4"/>
+<text x="CENTER" y="Y_TITLE" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+<text x="X_LEFT" y="Y_VAL" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">prvi rezultat</text>
+<text x="X_RIGHT" y="Y_VAL" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">drugi rezultat</text>
+```

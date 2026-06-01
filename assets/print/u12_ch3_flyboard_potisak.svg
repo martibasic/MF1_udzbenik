@@ -1,106 +1,213 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="460" viewBox="0 0 940 460" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-<defs>
-  <marker id="u12c3fp_u12c3-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
-  <marker id="u12c3fp_u12c3-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b42318"/></marker>
-  <marker id="u12c3fp_u12c3-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#6d2694"/></marker>
-  <marker id="u12c3fp_u12c3-ao" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b45309"/></marker>
-  <marker id="u12c3fp_u12c3-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#546e7a"/></marker>
-  <linearGradient id="u12c3fp_u12c3-jet" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8" stop-opacity="0.3"/></linearGradient>
-  <pattern id="u12c3fp_u12c3-hatch" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-    <rect width="8" height="8" fill="#8090a0"/>
-    <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
-  </pattern>
-</defs>
-<rect width="940" height="460" fill="#ffffff"/>
-<rect x="24" y="24" width="892" height="412" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-<text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Mlazna platforma — potisak i ubrzanje (4 sapnice)</text>
-<text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">m = 150 kg · 4 × d = 50 mm · v = 15 m/s · ρ = 1000 kg/m³</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 520" role="img" aria-labelledby="u12c3fp_title u12c3fp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u12c3fp_title">Mlazna platforma s cetiri sapnice nad vodom</title>
+  <desc id="u12c3fp_desc">Lijevo: scena mlazne platforme na visini h iznad vode, vozac stoji na platformi, ispod platforme cetiri okomite sapnice promjera d s mlazovima vode brzine v. Potisak F_p prema gore (zelena), tezina G prema dolje (crvena), referencne razine h i h max. Desno: petblokovni panel s formulama A, v_min, F_p i a, kinematika do h, slobodni let nakon prekida dotoka, te badge s rezultatima.</desc>
 
-<!-- ===== PLATFORM DIAGRAM ===== -->
+  <defs>
+    <linearGradient id="u12c3fp_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
+    </linearGradient>
+    <linearGradient id="u12c3fp_jet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#5b9ec9" stop-opacity="0.55" />
+    </linearGradient>
+    <linearGradient id="u12c3fp_morE" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#3a7aa5" />
+    </linearGradient>
+    <pattern id="u12c3fp_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#909fa8" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#5d6d7e" stroke-width="1.1" />
+    </pattern>
+    <marker id="u12c3fp_force" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="context-stroke" />
+    </marker>
+    <marker id="u12c3fp_forceG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u12c3fp_forceR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u12c3fp_vjet" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <marker id="u12c3fp_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u12c3fp_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+  </defs>
 
-<!-- Height scale on left -->
-<line x1="58" y1="102" x2="58" y2="410" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="3,4"/>
-<text x="45" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9aabb5">h</text>
+  <!-- okvirni paneli -->
+  <rect x="14" y="14" width="912" height="492" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <line x1="392" y1="34" x2="392" y2="486" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
-<!-- Platform body (horizontal board) -->
-<rect x="130" y="218" width="170" height="18" rx="3" fill="url(#u12c3fp_u12c3-hatch)"/>
+  <!-- ===================== LIJEVI PANEL: SCENA ===================== -->
 
-<!-- Person simplified silhouette (stick-like figure above platform) -->
-<!-- Head -->
-<circle cx="215" cy="175" r="16" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
-<!-- Body/torso rectangle -->
-<rect x="200" y="192" width="30" height="26" rx="4" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.5"/>
-<!-- Arms not shown for simplicity -->
+  <!-- Naslov scene -->
+  <!-- Skala visine s tik-crtama za h=0 i h=10 m -->
+  <!-- pomocna os (siva isprekidana) -->
+  <line x1="74" y1="120" x2="74" y2="416" stroke="#b7c1c9" stroke-width="1.1" stroke-dasharray="4,4" />
 
-<!-- 4 nozzles at bottom of platform -->
-<!-- Nozzle 1: x=150 -->
-<rect x="144" y="236" width="12" height="8" rx="1" fill="#2d3a40"/>
-<!-- Nozzle 2: x=175 -->
-<rect x="169" y="236" width="12" height="8" rx="1" fill="#2d3a40"/>
-<!-- Nozzle 3: x=248 -->
-<rect x="246" y="236" width="12" height="8" rx="1" fill="#2d3a40"/>
-<!-- Nozzle 4: x=278 -->
-<rect x="274" y="236" width="12" height="8" rx="1" fill="#2d3a40"/>
+  <!-- Razina vode (mora ostati ispod) -->
+  <!-- Glavni vodeni resurs (povrsina + dubina) -->
+  <rect x="44" y="416" width="334" height="60" fill="url(#u12c3fp_morE)" />
+  <line x1="44" y1="416" x2="378" y2="416" stroke="#1565c0" stroke-width="2.2" />
+  <!-- referentna razina h=0 oznaka -->
+  <!-- referentna razina h_max iscrtkana (12,02 m) - vrh leta nakon prekida dotoka -->
+  <line x1="80" y1="120" x2="386" y2="120" stroke="#8e44ad" stroke-width="1" stroke-dasharray="6,4" opacity="0.85" />
+  <!-- referentna razina h=10 m (razina platforme) - samo isprekidana linija, oznaceno smedom kotom h -->
+  <!-- Tik-crte na osi za h-skalu -->
+  <line x1="70" y1="120" x2="78" y2="120" stroke="#1e8449" stroke-width="1.2" />
 
-<!-- Water jets flowing down from nozzles (tapered, spreading) -->
-<path d="M 144,244 L 141,360 L 157,360 L 156,244 Z" fill="url(#u12c3fp_u12c3-jet)"/>
-<path d="M 169,244 L 166,360 L 182,360 L 181,244 Z" fill="url(#u12c3fp_u12c3-jet)"/>
-<path d="M 246,244 L 243,360 L 259,360 L 258,244 Z" fill="url(#u12c3fp_u12c3-jet)"/>
-<path d="M 274,244 L 271,360 L 287,360 L 286,244 Z" fill="url(#u12c3fp_u12c3-jet)"/>
+  <!-- Kota h = 10 m (lijevo od platforme) -->
+  <!-- pomocne linije -->
+  <!-- dimenzijska linija -->
+  <!-- Platforma (mlazna ploca) na razini h=10 m -->
+  <!-- Glavna ploca -->
+  <rect x="138" y="146" width="170" height="14" rx="2" fill="url(#u12c3fp_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Tamniji rub ispod (vizualna debljina) -->
+  <rect x="138" y="160" width="170" height="4" fill="#3a4a56" />
 
-<!-- Water jet velocity arrows on one nozzle (representative) -->
-<line x1="150" y1="270" x2="150" y2="335" stroke="#1d4ed8" stroke-width="2" marker-end="url(#u12c3fp_u12c3-agr)"/>
-<text x="155" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1d4ed8">v = 15 m/s</text>
+  <!-- Vozac (simbolicna silueta) -->
+  <!-- glava -->
+  <circle cx="223" cy="98" r="10" fill="#c8d6df" stroke="#2d3a40" stroke-width="1.3" />
+  <!-- vrat -->
+  <line x1="223" y1="108" x2="223" y2="116" stroke="#2d3a40" stroke-width="1.3" />
+  <!-- torzo (T-oblik) -->
+  <path d="M223,116 L223,138 M203,124 L243,124" stroke="#2d3a40" stroke-width="1.6" stroke-linecap="round" />
+  <!-- noge na platformi -->
+  <line x1="223" y1="138" x2="213" y2="146" stroke="#2d3a40" stroke-width="1.6" stroke-linecap="round" />
+  <line x1="223" y1="138" x2="233" y2="146" stroke="#2d3a40" stroke-width="1.6" stroke-linecap="round" />
+  <!-- vest oznaka (vodoodbojna) -->
+  <rect x="215" y="119" width="16" height="14" rx="2" fill="#fde68a" stroke="#c8a000" stroke-width="0.8" />
 
-<!-- Fp (thrust/potisak) arrow: from platform center going UP (large green) -->
-<line x1="215" y1="218" x2="215" y2="122" stroke="#0f766e" stroke-width="4" marker-end="url(#u12c3fp_u12c3-ag)"/>
-<text x="220" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">Fp = 1767 N ↑</text>
+  <!-- 4 sapnice ispod platforme -->
+  <!-- nozzle: visible cilindricni tijelo -->
+  <!-- pozicije: 158, 198, 248, 288 (po dvije bliske u parovima ne, neka su ravnomjerne) -->
+  <!-- ravnomjerno: 158, 198, 248, 288 -->
+  <g>
+    <!-- sapnica 1 -->
+    <rect x="153" y="164" width="14" height="14" rx="1.5" fill="#3a4a56" />
+    <rect x="155" y="166" width="10" height="3" fill="#5d6d7e" />
+    <!-- sapnica 2 -->
+    <rect x="193" y="164" width="14" height="14" rx="1.5" fill="#3a4a56" />
+    <rect x="195" y="166" width="10" height="3" fill="#5d6d7e" />
+    <!-- sapnica 3 -->
+    <rect x="239" y="164" width="14" height="14" rx="1.5" fill="#3a4a56" />
+    <rect x="241" y="166" width="10" height="3" fill="#5d6d7e" />
+    <!-- sapnica 4 -->
+    <rect x="279" y="164" width="14" height="14" rx="1.5" fill="#3a4a56" />
+    <rect x="281" y="166" width="10" height="3" fill="#5d6d7e" />
+  </g>
 
-<!-- G (gravity/težina) arrow: from platform center going DOWN (large red) -->
-<line x1="215" y1="236" x2="215" y2="344" stroke="#b42318" stroke-width="4" marker-end="url(#u12c3fp_u12c3-ar)"/>
-<text x="220" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">G = 1472 N ↓</text>
+  <!-- Mlazovi vode (suzeni stupci od sapnice do vode) -->
+  <!-- Mlaz 1 -->
+  <path d="M154,178 L150,416 L170,416 L166,178 Z" fill="url(#u12c3fp_jet)" stroke="#5b9ec9" stroke-width="0.7" opacity="0.92" />
+  <!-- Mlaz 2 -->
+  <path d="M194,178 L190,416 L210,416 L206,178 Z" fill="url(#u12c3fp_jet)" stroke="#5b9ec9" stroke-width="0.7" opacity="0.92" />
+  <!-- Mlaz 3 -->
+  <path d="M240,178 L236,416 L256,416 L252,178 Z" fill="url(#u12c3fp_jet)" stroke="#5b9ec9" stroke-width="0.7" opacity="0.92" />
+  <!-- Mlaz 4 -->
+  <path d="M280,178 L276,416 L296,416 L292,178 Z" fill="url(#u12c3fp_jet)" stroke="#5b9ec9" stroke-width="0.7" opacity="0.92" />
 
-<!-- FR (net force) = Fp - G: small purple arrow near top -->
-<line x1="350" y1="218" x2="350" y2="162" stroke="#6d2694" stroke-width="2.8" marker-end="url(#u12c3fp_u12c3-ap)"/>
-<text x="356" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#6d2694">FR = 295 N ↑</text>
-<text x="356" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#6d2694">a = 1,97 m/s²</text>
+  <!-- Brzina mlaza v (na sapnici 4 - desnoj) - plava strelica nadolje -->
+  <line x1="319" y1="220" x2="319" y2="296" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u12c3fp_vjet)" />
+  <!-- Promjer sapnice d=50 mm (kota na sapnici 1) -->
+  <!-- Sile na platformu - F_p (gore, zelena, velika) i G (dolje, crvena) -->
+  <!-- Skala: 1 kN ~ 38 px -> F_p = 1,767 kN ~ 68 px ; G = 1,4715 kN ~ 56 px ; F_R = 0,2955 kN ~ 11 px -->
+  <line x1="155" y1="146" x2="155" y2="78" stroke="#1e8449" stroke-width="3" marker-end="url(#u12c3fp_forceG)" />
+  <!-- F_R rezultanta (mala, ljubicasta) iznad platforme, blizu F_p (vizualno razlika F_p - G) -->
+  <line x1="178" y1="146" x2="178" y2="134" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u12c3fp_force)" />
+  <!-- G tezina - crvena strelica prema dolje s desne strane platforme -->
+  <line x1="293" y1="146" x2="293" y2="206" stroke="#c0392b" stroke-width="3" marker-end="url(#u12c3fp_forceR)" />
+  <!-- Bilance sila legenda preko vode (bijela podloga za citljivost) -->
+  <rect x="50" y="450" width="318" height="38" rx="5" fill="#ffffff" stroke="#cfdce6" stroke-width="0.8" opacity="0.94" />
+  <!-- ===================== DESNI PANEL: FORMULE ===================== -->
 
-<!-- v_min label (hover condition) -->
-<line x1="82" y1="218" x2="128" y2="218" stroke="#b45309" stroke-width="1.5" stroke-dasharray="4,3"/>
-<text x="60" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">hover</text>
-<text x="60" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">h₀</text>
+  <!-- Header bar (zelena tematska boja - izlazna sila/rezultat) -->
+  <rect x="408" y="34" width="504" height="36" rx="8" fill="#1e8449" />
+  <!-- Blok 1: Povrsine sapnica - plavi akcent -->
+  <rect x="408" y="80" width="504" height="66" rx="7" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.1" />
+  <rect x="408" y="80" width="5" height="66" rx="2" fill="#1565c0" />
+  <!-- Blok 2: Prag lebdenja - plavi akcent -->
+  <rect x="408" y="152" width="504" height="66" rx="7" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.1" />
+  <rect x="408" y="152" width="5" height="66" rx="2" fill="#1565c0" />
+  <!-- Blok 3: Potisak i ubrzanje pri v=15 - zeleni akcent (krajnji rezultat radne tocke) -->
+  <rect x="408" y="224" width="504" height="78" rx="7" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.1" />
+  <rect x="408" y="224" width="5" height="78" rx="2" fill="#1e8449" />
+  <!-- Blok 4: Kinematika do h=10 m - smedi akcent (kote / vrijeme) -->
+  <rect x="408" y="308" width="504" height="66" rx="7" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.1" />
+  <!-- Blok 5: Slobodni let nakon prekida dotoka - ljubicasti akcent (slobodno polje) -->
+  <rect x="408" y="380" width="504" height="66" rx="7" fill="#f7f3fa" stroke="#dccceb" stroke-width="1.1" />
+  <rect x="408" y="380" width="5" height="66" rx="2" fill="#8e44ad" />
+  <!-- REZULTATI badge -->
+  <rect x="408" y="456" width="504" height="34" rx="7" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.3" />
+  <line x1="80" y1="156" x2="138" y2="156" stroke="#b7600c" stroke-width="1.1" stroke-dasharray="6,4" />
+  <line x1="308" y1="156" x2="386" y2="156" stroke="#b7600c" stroke-width="1.1" stroke-dasharray="6,4" />
 
-<!-- dashed horizontal line for ground (bottom of trajectory) -->
-<line x1="82" y1="410" x2="420" y2="410" stroke="#888" stroke-width="1.2" stroke-dasharray="5,4"/>
-<text x="86" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#888">h = 0 (ravnina vode)</text>
+  <line x1="70" y1="156" x2="78" y2="156" stroke="#b7600c" stroke-width="1.4" />
+  <line x1="70" y1="416" x2="78" y2="416" stroke="#b7600c" stroke-width="1.4" />
+  <line x1="74" y1="156" x2="38" y2="156" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="74" y1="416" x2="38" y2="416" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="42" y1="158" x2="42" y2="414" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u12c3fp_dimL)" marker-end="url(#u12c3fp_dim)" />
+  <line x1="153" y1="184" x2="153" y2="208" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="167" y1="184" x2="167" y2="208" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="153" y1="210" x2="153" y2="200" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="167" y1="210" x2="167" y2="200" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="156" y1="205" x2="164" y2="205" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u12c3fp_dimL)" marker-end="url(#u12c3fp_dim)" />
+  <rect x="408" y="308" width="5" height="66" rx="2" fill="#b7600c" />
+  <text x="50" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Mlazna platforma iznad vode</text>
+  <text x="50" y="66" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">m = 150 kg · 4 sapnice, d = 50 mm · v = 15 m/s</text>
 
-<!-- Height marker h=10m on scale -->
-<line x1="53" y1="218" x2="63" y2="218" stroke="#b45309" stroke-width="1.5"/>
-<text x="35" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b45309">10 m</text>
+  <text x="362" y="435" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="end" fill="#0d47a1">voda (ρ = 1000 kg/m³)</text>
+  <text x="80" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">h = 0  (površina vode)</text>
 
-<!-- Nozzle labels -->
-<text x="132" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#173043">4×</text>
-<text x="144" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#173043">d=50mm</text>
+  <text x="386" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#8e44ad">h<tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 12,0 m  (vrh leta)</text>
 
-<!-- ===== INFO PANEL (right) ===== -->
-<rect x="455" y="88" width="460" height="348" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-<text x="471" y="114" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Zadano</text>
-<text x="471" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Masa platforme s osobom:  m = 150 kg</text>
-<text x="471" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">4 sapnice:  d = 50 mm,  v = 15 m/s,  ρ = 1000 kg/m³</text>
-<line x1="471" y1="165" x2="903" y2="165" stroke="#e2e8f0" stroke-width="1"/>
-<text x="471" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Potisna sila</text>
-<text x="471" y="203" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">A₁ = π d²/4 = 1,964 · 10⁻³ m² ;  A_uk = 4 A₁ = 7,854 · 10⁻³ m²</text>
-<text x="471" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Fp = ρ A_uk v² = 1000 · 7,854·10⁻³ · 15² = <tspan font-weight="700" fill="#0f766e">1767 N</tspan></text>
-<line x1="471" y1="234" x2="903" y2="234" stroke="#e2e8f0" stroke-width="1"/>
-<text x="471" y="253" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Uvjet lebdenja (v_min)</text>
-<text x="471" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">G = m g = 150 · 9,81 = 1471,5 N</text>
-<text x="471" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">Fp = G  →  v_min = √(G / ρA_uk) = √(1471,5 / 7,854) = <tspan font-weight="700">13,7 m/s</tspan></text>
-<line x1="471" y1="303" x2="903" y2="303" stroke="#e2e8f0" stroke-width="1"/>
-<text x="471" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ubrzanje pri v = 15 m/s</text>
-<text x="471" y="341" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">FR = Fp − G = 1767 − 1471,5 = 295,5 N</text>
-<text x="471" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">a = FR / m = 295,5 / 150 = <tspan font-weight="700" fill="#6d2694">1,97 m/s²</tspan></text>
-<line x1="471" y1="372" x2="903" y2="372" stroke="#e2e8f0" stroke-width="1"/>
-<text x="471" y="391" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Dizanje do h = 10 m  (a = konst.)</text>
-<text x="471" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">h = ½ a t²  →  t = √(2h/a) = √(20/1,97) = 3,19 s</text>
-<text x="471" y="429" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e293b">v_h10 = a·t = 1,97·3,19 = 6,29 m/s  (brzina pri h=10 m)</text>
-</svg>
+  <text x="323" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0"><tspan font-weight="700">v</tspan> = 15 m/s</text>
+
+  <text x="105" y="221" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">(4 sapnice)</text>
+
+  <text x="148" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 1767 N</text>
+
+  <text x="184" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#8e44ad"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan></text>
+
+  <text x="301" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b"><tspan font-style="italic">G</tspan> = 1471,5 N</text>
+
+  <text x="58" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530"><tspan font-weight="700">Bilanca:</tspan>  F<tspan baseline-shift="sub" font-size="0.7em">p</tspan> &gt; G → F<tspan baseline-shift="sub" font-size="0.7em">R</tspan> ubrzava platformu prema gore.</text>
+  <text x="58" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">Mlaz dolje, reakcija na platformu gore (zakon količine gibanja).</text>
+
+  <text x="660" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Rješenje — mlazna platforma (F<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = ρ A v²)</text>
+
+  <text x="424" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0">1.  Izlazna površina sapnica</text>
+  <text x="424" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">A<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = πd²/4 = π·(0,050)²/4 = 1,964·10⁻³ m²</text>
+  <text x="424" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">A = 4 A<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 7,854·10⁻³ m²</text>
+
+  <text x="424" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0">2.  Prag lebdenja  (F<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = G)</text>
+  <text x="424" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">ρ A v<tspan baseline-shift="sub" font-size="0.7em">min</tspan>² = mg  →  v<tspan baseline-shift="sub" font-size="0.7em">min</tspan> = √(mg / ρA)</text>
+  <text x="424" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">v<tspan baseline-shift="sub" font-size="0.7em">min</tspan> = √(150·9,81 / 1000·7,854·10⁻³) = 13,69 m/s</text>
+
+  <text x="424" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449">3.  Potisak i vertikalno ubrzanje pri v = 15 m/s</text>
+  <text x="424" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = ρ A v² = 1000·7,854·10⁻³·15² = <tspan font-weight="700" fill="#1e8449">1767 N</tspan></text>
+  <text x="424" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan> = F<tspan baseline-shift="sub" font-size="0.7em">p</tspan> − G = 1767 − 1471,5 = 295,5 N</text>
+  <text x="424" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#8e44ad">a = F<tspan baseline-shift="sub" font-size="0.7em">R</tspan> / m = 295,5 / 150 = 1,97 m/s²</text>
+
+  <text x="424" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">t = √(2h / a) = √(20 / 1,97) = <tspan font-weight="700" fill="#b7600c">3,19 s</tspan></text>
+  <text x="424" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">v<tspan baseline-shift="sub" font-size="0.7em">10</tspan> = a·t = 1,97·3,19 = <tspan font-weight="700" fill="#b7600c">6,29 m/s</tspan></text>
+
+  <text x="424" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#8e44ad">5.  Slobodni let nakon prekida dotoka  (samo G)</text>
+  <text x="424" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">Δh = v<tspan baseline-shift="sub" font-size="0.7em">10</tspan>² / 2g = 6,29² / 19,62 = <tspan font-weight="700" fill="#8e44ad">2,02 m</tspan>  →  h<tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 12,0 m</text>
+  <text x="424" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">t<tspan baseline-shift="sub" font-size="0.7em">iznad 10</tspan> = 2·v<tspan baseline-shift="sub" font-size="0.7em">10</tspan>/g = 2·6,29/9,81 = <tspan font-weight="700" fill="#8e44ad">1,28 s</tspan></text>
+
+  <text x="420" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#5a6a78">REZULTATI</text>
+  <text x="498" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1565c0">v<tspan baseline-shift="sub" font-size="0.7em">min</tspan> = 13,69 m/s</text>
+  <text x="618" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 1767 N</text>
+  <text x="804" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#8e44ad">h<tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 12,0 m</text>
+<text x="34" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#b7600c" transform="rotate(-90 34 290)"><tspan font-style="italic">h</tspan> = 10 m</text>
+
+  <text x="105" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c"><tspan font-style="italic">d</tspan> = 50 mm</text>
+  <text x="424" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#b7600c">4.  Dizanje do ciljne visine  (h = ½ a t², a = konst.)</text>
+  <text x="720" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#b7600c">t = 3,19 s</text>
+  </svg>

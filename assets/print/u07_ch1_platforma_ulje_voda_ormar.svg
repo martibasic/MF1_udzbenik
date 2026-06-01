@@ -1,118 +1,244 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430" role="img" aria-labelledby="u07c1puvo_u7c1T" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u07c1puvo_u7c1T">U07 CH 1 – Plutajuća platforma na granici ulja i vode s ormarom</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u07c1pluvo_title u07c1pluvo_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u07c1pluvo_title">Plutajuca platforma na granici ulja i vode s ormarom</title>
+  <desc id="u07c1pluvo_desc">Poprecni presjek hermeticke pravokutne platforme sirine B = 1,20 m koja pluta na stratificiranom mediju ulje-voda. Lijevi rub uronjen h_L = 0,30 m, desni h_D = 0,20 m. Uljni sloj debljine 0,10 m presjeca cijeli tlocrt. Ormar mase 180 kg postavljen je na udaljenosti e = 0,20 m lijevo od osi simetrije. Desni panel: kljucne formule i rezultati za h_m, V, V_o, V_w, y_B, e i delta h_m.</desc>
+
   <defs>
-    <linearGradient id="u07c1puvo_u7c1Wg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <linearGradient id="u07c1pluvo_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u07c1puvo_u7c1Og" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fef3c7"/>
-      <stop offset="100%" stop-color="#fbbf24"/>
+    <linearGradient id="u07c1pluvo_ulje" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#c8a000" />
     </linearGradient>
-    <marker id="u07c1puvo_u7c1AG" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/>
+    <linearGradient id="u07c1pluvo_platf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#909fa8" />
+      <stop offset="100%" stop-color="#5d6d7e" />
+    </linearGradient>
+    <linearGradient id="u07c1pluvo_orm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8b377" />
+      <stop offset="100%" stop-color="#8a5a2a" />
+    </linearGradient>
+    <marker id="u07c1pluvo_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u07c1puvo_u7c1AR" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#b42318"/>
+    <marker id="u07c1pluvo_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u07c1puvo_u7c1AD" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
+    <marker id="u07c1pluvo_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u07c1puvo_u7c1ADR" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
+    <marker id="u07c1pluvo_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u07c1puvo_u7c1AB" markerWidth="9" markerHeight="9" refX="4" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#1565c0"/>
-    </marker>
-    <marker id="u07c1puvo_u7c1ABR" markerWidth="9" markerHeight="9" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L8,3 z" fill="#1565c0"/>
+    <marker id="u07c1pluvo_aDimR" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
-  <rect width="940" height="430" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="382" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <!-- ── FLUID LAYERS (left panel) ── -->
-  <!-- Oil layer: surface y=185 to boundary y=202 (17px = 0.10m×167px/m) -->
-  <rect x="40" y="185" width="490" height="17" fill="url(#u07c1puvo_u7c1Og)" opacity="0.85"/>
-  <!-- Oil surface line -->
-  <line x1="40" y1="185" x2="530" y2="185" stroke="#1565c0" stroke-width="2"/>
-  <text x="44" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">p.p.</text>
-  <!-- Oil/water boundary -->
-  <line x1="40" y1="202" x2="530" y2="202" stroke="#92400e" stroke-width="1.8" stroke-dasharray="8 5"/>
-  <text x="44" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#92400e">ulje/voda granica</text>
-  <!-- Water layer: y=202 to y=400 -->
-  <rect x="40" y="202" width="490" height="195" fill="url(#u07c1puvo_u7c1Wg)" opacity="0.55"/>
+  <!-- pozadina i okvir -->
+  <rect width="980" height="560" fill="#ffffff" />
+  <rect x="14" y="14" width="952" height="532" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-  <!-- Platform (tilted): B=200px (1.20m×167px/m), centered at x=270
-       h_L=50px (0.30m), h_D=33px (0.20m), thickness=18px
-       Waterline at y=185 (oil surface)
-       Left bottom:  x=170, y=185+50=235
-       Right bottom: x=370, y=185+33=218
-       Left top:     x=170, y=217
-       Right top:    x=370, y=200 -->
-  <polygon points="170,217 370,200 370,218 170,235" fill="#b0bec5" stroke="#37474f" stroke-width="2.5"/>
+  <!-- ============================================================
+       LIJEVI PANEL: PRESJEK PLATFORME (x = 14..580)
+       Skala: 1 m = 280 px
+       Razina ulja (p.p.) y = 230
+       Granica ulje/voda y = 230 + 28 = 258  (delta = 0,10 m)
+       Os simetrije platforme x = 290
+       Polusirina B/2 = 0,60 m = 168 px -> x_L = 122, x_D = 458
+       Lijevi rub uronjen h_L = 0,30 m -> dno lijevog ruba y = 230 + 84 = 314
+       Desni rub uronjen h_D = 0,20 m -> dno desnog ruba y = 230 + 56 = 286
+       Visina boka H = 0,34 m = 95 px
+       Lijevi rub vrha y = 314 - 95 = 219
+       Desni rub vrha y = 286 - 95 = 191
+    ============================================================ -->
 
-  <!-- Ormar (cabinet) on top of platform, at e=33px LEFT of axis (x=270 → x=237)
-       Platform top at x=237: approx y=217-(237-170)*(217-200)/200 = 217-67*17/200 ≈ 217-6 = 211
-       Ormar box: x=214..260, y=185..211 (26px tall) -->
-  <rect x="212" y="183" width="50" height="28" rx="3" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
-  <text x="222" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#173043">ormar</text>
+  <!-- separator vertikalan izmedu panela -->
+  <line x1="588" y1="36" x2="588" y2="524" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
-  <!-- Axis of symmetry (dashed) at x=270 -->
-  <line x1="270" y1="120" x2="270" y2="310" stroke="#8090a0" stroke-width="1.5" stroke-dasharray="8 5"/>
+  <!-- ====== FLUIDI (kontinuirani, ispod platforme se presijecaju s polygonom) ====== -->
+  <!-- Sloj ulja od y=230 do y=258 preko cijele scene -->
+  <rect x="30" y="230" width="544" height="28" fill="url(#u07c1pluvo_ulje)" opacity="0.85" />
+  <!-- Sloj vode od y=258 do y=460 preko cijele scene -->
+  <rect x="30" y="258" width="544" height="202" fill="url(#u07c1pluvo_voda)" opacity="0.9" />
+  <!-- Linija slobodne povrsine ulja -->
+  <line x1="30" y1="230" x2="574" y2="230" stroke="#1565c0" stroke-width="2" />
+  <!-- Linija granice ulje/voda -->
+  <line x1="30" y1="258" x2="574" y2="258" stroke="#0d47a1" stroke-width="1.4" stroke-dasharray="7,4" />
 
-  <!-- G_platforma arrow (red, down) at x=270 -->
-  <line x1="270" y1="145" x2="270" y2="188" stroke="#b42318" stroke-width="3" marker-end="url(#u07c1puvo_u7c1AR)"/>
-  <text x="276" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b42318">G_p</text>
+  <!-- Dno (sediment / pomocna povrsina) -->
+  <line x1="30" y1="460" x2="574" y2="460" stroke="#7a8a96" stroke-width="1.2" />
 
-  <!-- G_ormar arrow (red, smaller) at x=237 -->
-  <line x1="237" y1="148" x2="237" y2="183" stroke="#b42318" stroke-width="2.5" marker-end="url(#u07c1puvo_u7c1AR)"/>
-  <text x="200" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b42318">G_o</text>
+  <!-- ====== PLATFORMA (nagnuti pravokutnik s thicknessom) ======
+       Donja stranica: (122,314) - (458,286)
+       Gornja stranica: (122,219) - (458,191) -->
+  <polygon points="122,219 458,191 458,286 122,314" fill="url(#u07c1pluvo_platf)" stroke="#3a4a56" stroke-width="1.8" />
 
-  <!-- F_U arrow (green, up) at center of buoyancy x=263 (7px left of axis) -->
-  <line x1="263" y1="248" x2="263" y2="179" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u07c1puvo_u7c1AG)"/>
-  <text x="268" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#0f766e">F_U</text>
+  <!-- Bocne stjenke s laganom debljinom (tamniji rub) - vec ukljuceno u polygon stroke -->
 
-  <!-- ── DIMENSION LINES ── -->
-  <!-- h_L (left side) -->
-  <line x1="155" y1="185" x2="155" y2="235" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u07c1puvo_u7c1ADR)" marker-end="url(#u07c1puvo_u7c1AD)"/>
-  <text x="74" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">h_L=0,30m</text>
-  <!-- h_D (right side) -->
-  <line x1="386" y1="185" x2="386" y2="218" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u07c1puvo_u7c1ADR)" marker-end="url(#u07c1puvo_u7c1AD)"/>
-  <text x="392" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">h_D=0,20m</text>
-  <!-- δ (oil thickness, left outer) -->
-  <line x1="132" y1="185" x2="132" y2="202" stroke="#92400e" stroke-width="1.5" marker-start="url(#u07c1puvo_u7c1ADR)" marker-end="url(#u07c1puvo_u7c1AD)"/>
-  <text x="56" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#92400e">δ=0,10m</text>
-  <!-- B width -->
-  <line x1="170" y1="255" x2="370" y2="255" stroke="#546e7a" stroke-width="1.5" marker-start="url(#u07c1puvo_u7c1ADR)" marker-end="url(#u07c1puvo_u7c1AD)"/>
-  <text x="244" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">B = 1,20 m</text>
-  <!-- e: horizontal arrow from axis (270) to ormar center (237) at y=290 -->
-  <line x1="270" y1="290" x2="237" y2="290" stroke="#1565c0" stroke-width="1.8" marker-start="url(#u07c1puvo_u7c1ABR)" marker-end="url(#u07c1puvo_u7c1AB)"/>
-  <text x="228" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">e=0,20m</text>
-  <line x1="270" y1="284" x2="270" y2="296" stroke="#1565c0" stroke-width="1"/>
-  <line x1="237" y1="284" x2="237" y2="296" stroke="#1565c0" stroke-width="1"/>
+  <!-- ====== ORMAR (na vrhu, e = 0,20 m lijevo od osi simetrije) ======
+       Os simetrije x = 290, e = 56 px -> centar ormara x = 234
+       Sirina ormara ~ 70 px (~ 0,25 m), visina 60 px
+       Donji rubovi ormara leze na nagnutoj gornjoj stranici platforme
+       Top platforme: kut nagiba odredjen s (314-286)/(458-122) = 28/336
+       y_top(x) = 219 + (x-122)*(191-219)/(458-122) = 219 - 28*(x-122)/336
+       Za x = 234: y_top = 219 - 28*112/336 = 219 - 9,33 = 209,67
+       Za x = 234-35 = 199: y_top = 219 - 28*77/336 = 219 - 6,42 = 212,58
+       Za x = 234+35 = 269: y_top = 219 - 28*147/336 = 219 - 12,25 = 206,75
+       -->
+  <polygon points="199,212.6 269,206.7 269,150.7 199,156.6" fill="url(#u07c1pluvo_orm)" stroke="#5a3a14" stroke-width="1.6" />
+  <!-- Detalji ormara: vrata -->
+  <line x1="234" y1="155.5" x2="234" y2="211" stroke="#5a3a14" stroke-width="1" opacity="0.7" />
+  <rect x="223" y="178" width="6" height="3" fill="#3a2410" />
+  <rect x="239" y="177" width="6" height="3" fill="#3a2410" />
+  <!-- ====== OS SIMETRIJE PLATFORME (vertikalna isprekidana) ====== -->
+  <line x1="290" y1="76" x2="290" y2="474" stroke="#5a6a78" stroke-width="1.2" stroke-dasharray="6,5" />
+  <!-- ====== OZNAKE FLUIDA ====== -->
+  <!-- voda - u sirokom prostoru fluida ispod platforme, desno -->
+  <!-- p.p. oznaka -->
+  <!-- ====== SILE ====== -->
+  <!-- G_p (tezina platforme) na osi simetrije - krece ispod e-kote da ne presijeca dimenziju -->
+  <line x1="290" y1="160" x2="290" y2="205" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u07c1pluvo_aR)" />
+  <!-- G_k (tezina ormara) iznad ormara -->
+  <line x1="234" y1="105" x2="234" y2="150" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u07c1pluvo_aR)" />
+  <!-- F_U (uzgon, prema gore) iz tezista uzgona -->
+  <!-- Teziste uzgona pomaknuto za y_B = 0,0435 m = 12,2 px desno od osi (dublja strana = lijeva pa pomak je prema lijevoj strani) -->
+  <!-- Prema tekstu: y_B prema dubljoj strani, a dublje je lijevo (h_L=0,30 > h_D=0,20) -->
+  <!-- Dakle B pomaknut LIJEVO od osi za 12,2 px -> x_B = 290 - 12 = 278 -->
+  <line x1="278" y1="400" x2="278" y2="340" stroke="#1e8449" stroke-width="3.2" marker-end="url(#u07c1pluvo_aG)" />
+  <!-- B (centar uzgona) tocka -->
+  <circle cx="278" cy="340" r="3.5" fill="#1e8449" stroke="#ffffff" stroke-width="1" />
+  <!-- ====== KOTE ======
+       1) h_L (lijevo, vertikalna) od y=230 do y=314 na x=78
+       2) h_D (desno, vertikalna) od y=230 do y=286 na x=502
+       3) delta (uljni sloj) na lijevoj strani na x=78 (gore)
+       4) B (sirina platforme) ispod, na y=440
+       5) e (pomak ormara) od osi simetrije do centra ormara, na y = 165 (iznad platforme)
+       6) y_B (pomak centra uzgona) od osi do strelice uzgona, oznaka kratkim kotama
+    -->
 
-  <!-- Fluid zone labels -->
-  <text x="410" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#92400e" font-weight="700">ulje δ=0,10m</text>
-  <text x="410" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">voda ρ=1000</text>
+  <!-- KOTA h_L (lijevo, vertikalna) -->
+  <!-- KOTA h_D (desno, vertikalna) -->
+  <!-- KOTA delta (debljina uljnog sloja) - lijevo, izmedu h_L i ruba okvira -->
+  <!-- ulje labela: kratko unutar sloja ulja desno od platforme, izmedu platforme i h_D kote -->
+  <!-- KOTA B (sirina platforme, horizontalna ispod) -->
+  <!-- KOTA e (pomak ormara od osi simetrije) - horizontalna iznad ormara na y=143 -->
+  <!-- KOTA y_B (pomak centra uzgona od osi) - mali, na y=420 -->
+  <!-- ====== KOMENTAR / LEGENDA NA DNU ====== -->
+  <!-- ============================================================
+       DESNI PANEL: FORMULE I REZULTATI (x = 600..960)
+    ============================================================ -->
 
-  <!-- ── FORMULA BOX ── -->
-  <rect x="532" y="88" width="354" height="310" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="554" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ključni rezultati</text>
-  <line x1="554" y1="121" x2="878" y2="121" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="141" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h_m = 0,25 m</text>
-  <text x="554" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">V = L·B·h_m = 0,900 m³</text>
-  <line x1="554" y1="171" x2="878" y2="171" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="191" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">V_o = 0,360 m³  (u ulju)</text>
-  <text x="554" y="211" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">V_w = 0,540 m³  (u vodi)</text>
-  <line x1="554" y1="221" x2="878" y2="221" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="241" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">y_B = (ρ_w·V_w·y_B_w − ρ_o·V_o·y_B_o) / (F_U/g)</text>
-  <text x="554" y="261" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">y_B = 4,35 cm  (prema lijevoj strani)</text>
-  <line x1="554" y1="271" x2="878" y2="271" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">Iz ravnoteže momenta (ormar):</text>
-  <text x="554" y="311" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">e = 20,0 cm</text>
-  <line x1="554" y1="321" x2="878" y2="321" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="341" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Δh_m = m_o / (ρ_ef · L · B)</text>
-  <text x="554" y="361" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Δh_m = 5,0 cm</text>
-  <text x="554" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8090a0">L = 3,00 m (⊥ na skicu)</text>
-</svg>
+  <!-- Glavni okvir formula panela -->
+  <rect x="608" y="60" width="344" height="396" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.4" />
+  <!-- Header bar -->
+  <rect x="608" y="60" width="344" height="32" rx="10" fill="#1565c0" />
+  <rect x="608" y="84" width="344" height="8" fill="#1565c0" />
+  <!-- Blok 1: Srednji uron h_m (y=92..156) -->
+  <line x1="628" y1="166" x2="932" y2="166" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 2: Podjela istisnine (y=166..222) -->
+  <line x1="628" y1="232" x2="932" y2="232" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 3: Bocni pomak centra uzgona y_B (y=232..298) -->
+  <line x1="628" y1="304" x2="932" y2="304" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 4: Polozaj ormara e (y=304..360) -->
+  <line x1="628" y1="372" x2="932" y2="372" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 5: Povecanje srednje uronjenosti (y=372..432) -->
+  <!-- Italic sazetak -->
+  <!-- Rezultat badge -->
+  <rect x="608" y="470" width="344" height="54" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="122" y1="314" x2="76" y2="314" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="30" y1="230" x2="76" y2="230" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="82" y1="230" x2="82" y2="240" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="82" y1="314" x2="82" y2="304" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="82" y1="233" x2="82" y2="311" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="458" y1="286" x2="514" y2="286" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="458" y1="230" x2="514" y2="230" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="508" y1="230" x2="508" y2="240" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="508" y1="286" x2="508" y2="276" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="508" y1="233" x2="508" y2="283" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="30" y1="258" x2="46" y2="258" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="40" y1="230" x2="40" y2="258" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="122" y1="314" x2="122" y2="440" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="458" y1="286" x2="458" y2="440" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="122" y1="430" x2="122" y2="446" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="458" y1="430" x2="458" y2="446" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="125" y1="438" x2="455" y2="438" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="234" y1="155" x2="234" y2="139" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="290" y1="149" x2="290" y2="139" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="234" y1="140" x2="234" y2="148" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="290" y1="140" x2="290" y2="148" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="237" y1="144" x2="287" y2="144" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="278" y1="345" x2="278" y2="412" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="290" y1="345" x2="290" y2="412" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="278" y1="410" x2="278" y2="418" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="290" y1="410" x2="290" y2="418" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="279" y1="414" x2="289" y2="414" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <text x="234" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">ormar</text>
+  <text x="234" y="202" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#ffffff">mₖ = 180 kg</text>
+
+  <text x="290" y="70" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78" font-style="italic">os simetrije platforme</text>
+
+  <text x="546" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" text-anchor="end" fill="#0d47a1">voda</text>
+
+  <text x="36" y="225" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0">p.p.</text>
+
+  <text x="298" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b"><tspan font-weight="700">G</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 6,36 kN</text>
+  <text x="298" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(648 kg)</text>
+
+  <text x="160" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b"><tspan font-weight="700">G</tspan><tspan baseline-shift="sub" font-size="0.7em">k</tspan> = 1,77 kN</text>
+  <text x="174" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(180 kg)</text>
+
+  <text x="284" y="395" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">U</tspan> = 8,13 kN</text>
+
+  <text x="262" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" font-weight="700" text-anchor="end" fill="#1e8449">B</text>
+
+  <text x="483" y="249" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" font-style="italic" text-anchor="middle" fill="#7a4a00">ulje</text>
+
+  <text x="300" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">ρₒ = 800 kg/m³  ·  ρₙ = 1000 kg/m³  ·  m<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 648 kg  ·  H = 0,34 m</text>
+  <text x="300" y="508" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">L = 3,00 m (okomito na ravninu skice)  ·  dublja strana je lijevo (pod ormarom)</text>
+
+  <text x="780" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Ključne jednadžbe i rezultati</text>
+
+  <text x="780" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Srednji uron i istisnina</text>
+  <text x="780" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">h<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = (h<tspan baseline-shift="sub" font-size="0.7em">L</tspan> + h<tspan baseline-shift="sub" font-size="0.7em">D</tspan>) / 2 = 0,25 m</text>
+  <text x="780" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">V = L · B · h<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 0,900 m³</text>
+  <text x="780" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Podjela istisnine po fluidima</text>
+  <text x="780" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">V<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = L B δ = 0,360 m³    V<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = L B(h<tspan baseline-shift="sub" font-size="0.7em">m</tspan>−δ) = 0,540 m³</text>
+  <text x="780" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">ρₒV<tspan baseline-shift="sub" font-size="0.7em">o</tspan> + ρₙV<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 828 kg = m<tspan baseline-shift="sub" font-size="0.7em">p</tspan> + m<tspan baseline-shift="sub" font-size="0.7em">k</tspan>  ✓</text>
+  <text x="780" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Bočni pomak centra uzgona</text>
+  <text x="780" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">y<tspan baseline-shift="sub" font-size="0.7em">B,w</tspan> = B(h<tspan baseline-shift="sub" font-size="0.7em">w,L</tspan>−h<tspan baseline-shift="sub" font-size="0.7em">w,D</tspan>) / (12 h<tspan baseline-shift="sub" font-size="0.7em">w,m</tspan>) ≈ 0,0667 m</text>
+  <text x="780" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">y<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = (ρₙV<tspan baseline-shift="sub" font-size="0.7em">w</tspan>/ΣρV) · y<tspan baseline-shift="sub" font-size="0.7em">B,w</tspan> ≈ 4,35 cm</text>
+  <text x="780" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Položaj ormara (momentna ravnoteža)</text>
+  <text x="780" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">(m<tspan baseline-shift="sub" font-size="0.7em">p</tspan>+m<tspan baseline-shift="sub" font-size="0.7em">k</tspan>) g · y<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = m<tspan baseline-shift="sub" font-size="0.7em">k</tspan> g · e</text>
+  <text x="780" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">e = (m<tspan baseline-shift="sub" font-size="0.7em">p</tspan>+m<tspan baseline-shift="sub" font-size="0.7em">k</tspan>)/m<tspan baseline-shift="sub" font-size="0.7em">k</tspan> · y<tspan baseline-shift="sub" font-size="0.7em">B</tspan> ≈ 20,0 cm</text>
+  <text x="780" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">5. Povećanje srednjeg urona (zbog ormara)</text>
+  <text x="780" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">h₀ = 0,20 m (bez ormara)  →  Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = h<tspan baseline-shift="sub" font-size="0.7em">m</tspan> − h₀</text>
+  <text x="780" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 5,0 cm</text>
+
+  <text x="780" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Samo vodeni dio daje bočni moment (ulje je simetričan po B).</text>
+
+  <text x="780" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="668" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0">h<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 0,25 m</text>
+  <text x="780" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">e ≈ 20,0 cm</text>
+  <text x="892" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 5,0 cm</text>
+  <text x="780" y="520" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">V = 0,900 m³ (V<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 0,360  ·  V<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 0,540)</text>
+<text x="74" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" text-anchor="end" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
+  <text x="74.0" y="286.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#b7600c">= 0,30 m</text>
+
+  <text x="516" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">D</tspan></text>
+  <text x="516.0" y="272.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">= 0,20 m</text>
+
+  <text x="46" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">δ = 0,10 m</text>
+
+  <text x="290" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" text-anchor="middle" fill="#b7600c">B = 1,20 m</text>
+
+  <text x="262" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" text-anchor="middle" fill="#b7600c">e = 0,20 m</text>
+
+  <text x="248" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" font-weight="700" text-anchor="end" fill="#b7600c">y<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = 4,35 cm</text>
+
+  </svg>

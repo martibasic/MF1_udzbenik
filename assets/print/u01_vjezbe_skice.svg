@@ -1,332 +1,284 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img"
-     aria-labelledby="u01vs_vzt u01vs_vzd" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:960px;height:auto;">
-  <title id="u01vs_vzt">U01 Vježbe – Skice T1–T6: Hidraulički sustavi</title>
-  <desc id="u01vs_vzd">Šest skica zadataka: T1 servisna hidraulična presa, T2 dva klipa isti tlak, T3 hidraulična stega, T4 hidraulični stol, T5 platforma s dva cilindra, T6 radni stol s tri cilindra.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" role="img" aria-labelledby="u01vs_title u01vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u01vs_title">U01 - Mini skice za zadatke T1 do T6</title>
+  <desc id="u01vs_desc">Sest mini skica hidraulickih sustava za zadatke za vjezbu poglavlja U01. Svaka skica prikazuje tipologiju sustava: T1 - dva klipa razlicite velicine, T2 - dva klipa iste grane, T3 - hidraulicna stega, T4 - hidraulicni stol s dva radna cilindra, T5 - rucna pumpa s dva radna cilindra, T6 - tri jednaka radna cilindra. Svi sustavi prikazuju kontinuiran fluid kroz vod na dnu.</desc>
   <defs>
-    <marker id="u01vs_vzaD" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
+    <marker id="u01vs_aR" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#c0392b" />
     </marker>
-    <marker id="u01vs_vzaDR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
+    <marker id="u01vs_aG" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1e8449" />
     </marker>
-    <marker id="u01vs_vzaB" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#1a1a1a"/>
-    </marker>
-    <marker id="u01vs_vzaBR" markerWidth="9" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L9,4 z" fill="#1a1a1a"/>
-    </marker>
-    <marker id="u01vs_vzaRd" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#666"/>
-    </marker>
-    <marker id="u01vs_vzaRdR" markerWidth="9" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L9,4 z" fill="#666"/>
-    </marker>
-    <linearGradient id="u01vs_vzfl" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#c8d8e4"/>
-      <stop offset="100%" stop-color="#a4bfcc"/>
+    <linearGradient id="u01vs_fluid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u01vs_vzps" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8a9aa4"/>
-      <stop offset="100%" stop-color="#6a7a86"/>
+    <linearGradient id="u01vs_piston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#909fa8" />
+      <stop offset="100%" stop-color="#5d6d7e" />
     </linearGradient>
-    <pattern id="u01vs_vzhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="6" stroke="#8a9aa6" stroke-width="1.5"/>
+    <pattern id="u01vs_hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#7a8a96" stroke-width="1.2" />
     </pattern>
   </defs>
 
-  <rect width="960" height="720" fill="#f4f6f8"/>
+  <rect width="980" height="660" fill="#ffffff" />
+  <rect x="14" y="14" width="952" height="632" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
 
-  <!-- ════════════════════════════════════
-    Grid: 2 cols × 3 rows
-    Col1: x=30..455   Col2: x=490..920
-    Row1: y=15..235   Row2: y=245..465  Row3: y=475..695
-  ════════════════════════════════════ -->
+  <!-- ============================================================
+       T1 - Servisna hidraulicna presa (gornji lijevo)
+       d_1 = 28 mm, F_1 = 180 N, d_2 = 140 mm, s_1 = 120 mm
+  ============================================================ -->
+  <rect x="30" y="30" width="305" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
+  <rect x="30" y="30" width="305" height="26" rx="8" fill="#1565c0" />
+  <rect x="30" y="50" width="305" height="6" fill="#1565c0" />
+  <!-- Mali cyl + Veliki cyl + vod -->
+  <rect x="55" y="180" width="44" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="99" y="246" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="113" y="246" width="125" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="238" y="246" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="252" y="180" width="78" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="42" y="130" width="13" height="120" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="99" y="130" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="238" y="130" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="330" y="130" width="13" height="120" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="113" y="238" width="125" height="8" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="42" y="258" width="301" height="14" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <!-- Brtve -->
+  <rect x="62" y="130" width="30" height="14" fill="#3a4a56" />
+  <rect x="262" y="130" width="60" height="14" fill="#3a4a56" />
+  <!-- Klipovi -->
+  <rect x="55" y="160" width="44" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="252" y="160" width="78" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <!-- Klipnjace -->
+  <rect x="71" y="78" width="12" height="82" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <rect x="284" y="78" width="14" height="82" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <!-- F_1 dolje, F_2 gore -->
+  <line x1="77" y1="60" x2="77" y2="78" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u01vs_aR)" />
+  <line x1="291" y1="78" x2="291" y2="60" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u01vs_aG)" />
+  <!-- Kote -->
+  <!-- ============================================================
+       T2 - Dva klipa, ista grana (gornji sredina)
+       d = 24 mm, F = 95 N, D = 72 mm
+  ============================================================ -->
+  <rect x="345" y="30" width="290" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
+  <rect x="345" y="30" width="290" height="26" rx="8" fill="#1565c0" />
+  <rect x="345" y="50" width="290" height="6" fill="#1565c0" />
+  <rect x="370" y="180" width="40" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="410" y="246" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="424" y="246" width="119" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="543" y="246" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="557" y="180" width="56" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="357" y="130" width="13" height="120" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="410" y="130" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="543" y="130" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="613" y="130" width="13" height="120" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="424" y="238" width="119" height="8" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="357" y="258" width="269" height="14" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="375" y="130" width="30" height="14" fill="#3a4a56" />
+  <rect x="567" y="130" width="40" height="14" fill="#3a4a56" />
+  <rect x="370" y="160" width="40" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="557" y="160" width="56" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="384" y="78" width="12" height="82" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <rect x="579" y="78" width="14" height="82" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <line x1="390" y1="60" x2="390" y2="78" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u01vs_aR)" />
+  <line x1="586" y1="78" x2="586" y2="60" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u01vs_aG)" />
+  <!-- ============================================================
+       T3 - Hidraulicna stega (gornji desni)
+       p = 2,4 MPa, d = 52 mm, F_stezanja = ?
+  ============================================================ -->
+  <rect x="645" y="30" width="305" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
+  <rect x="645" y="30" width="305" height="26" rx="8" fill="#1565c0" />
+  <rect x="645" y="50" width="305" height="6" fill="#1565c0" />
+  <!-- Tank s ulazom tlaka -->
+  <rect x="660" y="190" width="14" height="60" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="674" y="190" width="56" height="60" fill="url(#u01vs_fluid)" />
+  <rect x="660" y="250" width="70" height="12" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <!-- Klip stege -->
+  <rect x="730" y="195" width="20" height="50" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="750" y="215" width="60" height="10" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <!-- Radni komad (stezanje desno od klipa) -->
+  <rect x="820" y="170" width="80" height="80" fill="#d4a01a" stroke="#7a4d10" stroke-width="1.4" />
+  <!-- F_stezanja strelica -->
+  <line x1="788" y1="220" x2="818" y2="220" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u01vs_aG)" />
+  <!-- Tlak (oznaka) -->
+  <!-- Oznake -->
+  <!-- ============================================================
+       T4 - Hidraulicni stol, dva radna cilindra (donji lijevi)
+       m = 1350 kg, D = 95 mm, d = 18 mm, s = 160 mm
+  ============================================================ -->
+  <rect x="30" y="335" width="305" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
+  <rect x="30" y="335" width="305" height="26" rx="8" fill="#1565c0" />
+  <rect x="30" y="355" width="305" height="6" fill="#1565c0" />
+  <!-- Stol/platforma na vrhu dva radna cyl -->
+  <rect x="65" y="402" width="180" height="14" rx="2" fill="#a9cce3" stroke="#3a6a88" stroke-width="1.4" />
+  <!-- 2 radna cilindra -->
+  <rect x="70" y="490" width="50" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="120" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="134" y="556" width="56" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="190" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="204" y="490" width="50" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="270" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="284" y="490" width="16" height="78" fill="url(#u01vs_fluid)" />
+  <!-- Walls -->
+  <rect x="57" y="440" width="13" height="120" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="120" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="190" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="254" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="270" y="460" width="14" height="96" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="300" y="460" width="13" height="100" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="134" y="548" width="56" height="8" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="57" y="568" width="256" height="12" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <!-- Brtve -->
+  <rect x="83" y="440" width="24" height="14" fill="#3a4a56" />
+  <rect x="217" y="440" width="24" height="14" fill="#3a4a56" />
+  <rect x="278" y="460" width="20" height="14" fill="#3a4a56" />
+  <!-- Klipovi i klipnjace -->
+  <rect x="70" y="470" width="50" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="204" y="470" width="50" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="284" y="474" width="16" height="18" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="91" y="416" width="8" height="54" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <rect x="225" y="416" width="8" height="54" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <rect x="289" y="430" width="6" height="44" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <!-- F_p dolje na pumpa -->
+  <line x1="292" y1="414" x2="292" y2="428" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u01vs_aR)" />
+  <!-- G dolje na stol -->
+  <line x1="155" y1="384" x2="155" y2="402" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u01vs_aR)" />
+  <!-- Oznake -->
+  <!-- ============================================================
+       T5 - Rucna pumpa, 2 radna cilindra (donji sredina)
+       d = 25 mm, F_p = 420 N, D = 140 mm, Δz = 30 mm
+  ============================================================ -->
+  <rect x="345" y="335" width="290" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
+  <rect x="345" y="335" width="290" height="26" rx="8" fill="#1565c0" />
+  <rect x="345" y="355" width="290" height="6" fill="#1565c0" />
+  <!-- Platforma -->
+  <rect x="370" y="402" width="180" height="14" rx="2" fill="#a9cce3" stroke="#3a6a88" stroke-width="1.4" />
+  <!-- 2 radna cilindra + pumpa -->
+  <rect x="380" y="490" width="50" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="430" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="444" y="556" width="46" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="490" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="504" y="490" width="50" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="570" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="584" y="490" width="20" height="78" fill="url(#u01vs_fluid)" />
+  <!-- Walls -->
+  <rect x="367" y="440" width="13" height="120" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="430" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="490" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="554" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="570" y="460" width="14" height="96" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="604" y="460" width="13" height="100" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="444" y="548" width="46" height="8" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="367" y="568" width="250" height="12" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="393" y="440" width="24" height="14" fill="#3a4a56" />
+  <rect x="517" y="440" width="24" height="14" fill="#3a4a56" />
+  <rect x="578" y="460" width="20" height="14" fill="#3a4a56" />
+  <rect x="380" y="470" width="50" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="504" y="470" width="50" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="584" y="474" width="20" height="18" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="401" y="416" width="8" height="54" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <rect x="525" y="416" width="8" height="54" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <rect x="591" y="430" width="6" height="44" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <line x1="594" y1="414" x2="594" y2="428" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u01vs_aR)" />
+  <!-- ============================================================
+       T6 - 3 jednaka radna cilindra + pumpa (donji desni)
+       A_L = 95 cm², d = 22 mm, F_p = 360 N, Δz = 18 mm
+  ============================================================ -->
+  <rect x="645" y="335" width="305" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
+  <rect x="645" y="335" width="305" height="26" rx="8" fill="#1565c0" />
+  <rect x="645" y="355" width="305" height="6" fill="#1565c0" />
+  <!-- Radni stol -->
+  <rect x="660" y="402" width="220" height="14" rx="2" fill="#a9cce3" stroke="#3a6a88" stroke-width="1.4" />
+  <!-- 3 radna + pumpa -->
+  <rect x="670" y="490" width="40" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="710" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="724" y="556" width="26" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="750" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="764" y="490" width="40" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="804" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="818" y="556" width="26" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="844" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="858" y="490" width="40" height="78" fill="url(#u01vs_fluid)" />
+  <rect x="898" y="556" width="14" height="12" fill="url(#u01vs_fluid)" />
+  <rect x="912" y="490" width="16" height="78" fill="url(#u01vs_fluid)" />
+  <!-- Walls (compact for 3 cyl + pumpa) -->
+  <rect x="660" y="440" width="10" height="120" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="710" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="750" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="804" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="844" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="898" y="440" width="14" height="116" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="928" y="460" width="10" height="100" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="724" y="548" width="26" height="8" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="818" y="548" width="26" height="8" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="660" y="568" width="278" height="12" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" />
+  <rect x="680" y="440" width="22" height="14" fill="#3a4a56" />
+  <rect x="774" y="440" width="22" height="14" fill="#3a4a56" />
+  <rect x="868" y="440" width="22" height="14" fill="#3a4a56" />
+  <rect x="914" y="460" width="14" height="14" fill="#3a4a56" />
+  <rect x="670" y="470" width="40" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="764" y="470" width="40" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="858" y="470" width="40" height="20" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="912" y="474" width="16" height="18" rx="2" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" />
+  <rect x="687" y="416" width="8" height="54" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <rect x="781" y="416" width="8" height="54" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <rect x="875" y="416" width="8" height="54" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <rect x="918" y="430" width="6" height="44" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <line x1="921" y1="414" x2="921" y2="428" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u01vs_aR)" />
+  <text x="182" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T1 — Servisna preša</text>
 
-  <!-- ──────────────────── T1 – Servisna hidraulična presa ──────────────────── -->
-  <rect x="30" y="15" width="425" height="220" rx="10" fill="#ffffff" stroke="#c0ccd6" stroke-width="1.5"/>
-  <text x="46" y="38" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#2a3a48">T1 — Servisna hidraulična presa</text>
-  <text x="46" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#778899">d₁ = 28 mm, d₂ = 140 mm, F₁↓, F₂↑</text>
+  <text x="92" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b"><tspan font-weight="700">F₁</tspan> = 180 N</text>
+  <text x="240" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="end" fill="#1e8449"><tspan font-weight="700">F₂</tspan> = ?</text>
+  <text x="182" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">s₁ = 120 mm → s₂ = ?</text>
 
-  <!-- Mali cilindar lijevo, d1=28mm ≈ 28px unutra -->
-  <!-- Unutra: 82–110; stjenke: 74–82, 110–118; hod s1: y65–100 klip, fluid: 100–174 -->
-  <rect x="74" y="100" width="8" height="75" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="110" y="100" width="8" height="75" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="74" y="173" width="44" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="82" y="115" width="28" height="58" fill="url(#u01vs_vzfl)"/>
-  <rect x="78" y="100" width="36" height="15" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <!-- klipnjača gore -->
-  <rect x="89" y="80" width="14" height="22" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <!-- F1 strelica dolje -->
-  <line x1="96" y1="62" x2="96" y2="78" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#u01vs_vzaB)"/>
-  <text x="102" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1a1a1a">F₁</text>
-  <!-- kota d1 -->
-  <line x1="82" y1="96" x2="82" y2="89" stroke="#444" stroke-width="1"/>
-  <line x1="110" y1="96" x2="110" y2="89" stroke="#444" stroke-width="1"/>
-  <line x1="84" y1="92" x2="108" y2="92" stroke="#444" stroke-width="1" marker-start="url(#u01vs_vzaDR)" marker-end="url(#u01vs_vzaD)"/>
-  <text x="96" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#444">d₁=28</text>
-  <!-- kota s1 (lijevo od malog cil.) -->
-  <line x1="66" y1="100" x2="66" y2="115" stroke="#666" stroke-width="1.2" marker-start="url(#u01vs_vzaRdR)" marker-end="url(#u01vs_vzaRd)"/>
-  <text x="56" y="111" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#666">s₁</text>
+  <text x="490" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T2 — Dva klipa, isti tlak</text>
 
-  <!-- Vodoravni vod -->
-  <rect x="82" y="173" width="196" height="12" rx="2" fill="#8a9aa6" stroke="#4a6070" stroke-width="1"/>
-  <rect x="90" y="177" width="180" height="5" fill="url(#u01vs_vzfl)"/>
+  <text x="405" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b"><tspan font-weight="700">F</tspan> = 95 N</text>
+  <text x="540" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="end" fill="#1e8449"><tspan font-weight="700">F₂</tspan> = ?</text>
+  <text x="490" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">p = F/A → F₂ = pA₂</text>
 
-  <!-- Veliki cilindar desno, d2=140mm ≈ 112px unutra -->
-  <!-- Unutra: 192–304; stjenke: 182–192, 304–314 -->
-  <rect x="182" y="100" width="10" height="73" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="304" y="100" width="10" height="73" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="182" y="173" width="132" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="192" y="120" width="112" height="53" fill="url(#u01vs_vzfl)"/>
-  <rect x="186" y="105" width="124" height="15" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <!-- klipnjača gore -->
-  <rect x="241" y="80" width="14" height="27" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <!-- F2 strelica gore -->
-  <line x1="248" y1="78" x2="248" y2="62" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#u01vs_vzaB)"/>
-  <text x="255" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1a1a1a">F₂</text>
-  <!-- kota d2 -->
-  <line x1="192" y1="96" x2="192" y2="89" stroke="#444" stroke-width="1"/>
-  <line x1="304" y1="96" x2="304" y2="89" stroke="#444" stroke-width="1"/>
-  <line x1="194" y1="92" x2="302" y2="92" stroke="#444" stroke-width="1" marker-start="url(#u01vs_vzaDR)" marker-end="url(#u01vs_vzaD)"/>
-  <text x="248" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#444">d₂=140 mm</text>
-  <!-- kota s2 desno -->
-  <line x1="322" y1="100" x2="322" y2="115" stroke="#666" stroke-width="1.2" marker-start="url(#u01vs_vzaRdR)" marker-end="url(#u01vs_vzaRd)"/>
-  <text x="332" y="111" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#666">s₂</text>
+  <text x="797" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T3 — Hidraulična stega</text>
 
-  <!-- natpis u vodu -->
-  <text x="130" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#445566">p = F₁/A₁ = F₂/A₂</text>
+  <text x="860" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" font-weight="700" fill="#3a2a08">radni</text>
+  <text x="860" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" font-weight="700" fill="#3a2a08">komad</text>
+  <text x="803" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#1e8449"><tspan font-weight="700">F</tspan> = ?</text>
+  <text x="702" y="225" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" font-weight="700" text-anchor="middle" fill="#1565c0">p</text>
+  <text x="797" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">p = 2,4 MPa → F = ?</text>
 
-  <!-- ──────────────────── T2 – Dva klipa isti tlak ──────────────────── -->
-  <rect x="490" y="15" width="425" height="220" rx="10" fill="#ffffff" stroke="#c0ccd6" stroke-width="1.5"/>
-  <text x="506" y="38" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#2a3a48">T2 — Dva klipa — isti tlak</text>
-  <text x="506" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#778899">d = 24 mm, D = 72 mm, F↓, F₂↑</text>
+  <text x="182" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T4 — Hidraulični stol</text>
 
-  <!-- Lijevi cilindar d=24mm ~ 24px unutra -->
-  <rect x="548" y="100" width="7" height="80" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="579" y="100" width="7" height="80" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="548" y="178" width="38" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="555" y="118" width="24" height="60" fill="url(#u01vs_vzfl)"/>
-  <rect x="551" y="103" width="32" height="15" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="560" y="82" width="14" height="22" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <line x1="567" y1="64" x2="567" y2="80" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#u01vs_vzaB)"/>
-  <text x="574" y="77" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1a1a1a">F</text>
-  <!-- kota d -->
-  <line x1="555" y1="97" x2="555" y2="90" stroke="#444" stroke-width="1"/>
-  <line x1="579" y1="97" x2="579" y2="90" stroke="#444" stroke-width="1"/>
-  <line x1="557" y1="93" x2="577" y2="93" stroke="#444" stroke-width="1" marker-start="url(#u01vs_vzaDR)" marker-end="url(#u01vs_vzaD)"/>
-  <text x="567" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#444">d=24</text>
+  <text x="155" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1a2a36">stol m = 1350 kg</text>
 
-  <!-- Vod -->
-  <rect x="555" y="178" width="228" height="12" rx="2" fill="#8a9aa6" stroke="#4a6070" stroke-width="1"/>
-  <rect x="562" y="182" width="215" height="5" fill="url(#u01vs_vzfl)"/>
-  <text x="660" y="191" font-family="'Segoe UI',Arial,sans-serif" font-size="8.5" text-anchor="middle" fill="#445566">p = F/A</text>
+  <text x="302" y="425" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" fill="#c0392b"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></tspan> = ?</text>
+  <text x="170" y="395" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b"><tspan font-weight="700">G</tspan> = mg</text>
+  <text x="182" y="620" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">Δz = 45 mm, n = ?</text>
 
-  <!-- Desni cilindar D=72mm ~ 72px unutra -->
-  <rect x="710" y="100" width="8" height="80" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="790" y="100" width="8" height="80" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="710" y="178" width="88" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="718" y="118" width="72" height="60" fill="url(#u01vs_vzfl)"/>
-  <rect x="714" y="103" width="80" height="15" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="747" y="82" width="14" height="22" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <line x1="754" y1="80" x2="754" y2="64" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#u01vs_vzaB)"/>
-  <text x="762" y="77" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1a1a1a">F₂</text>
-  <!-- kota D -->
-  <line x1="718" y1="97" x2="718" y2="90" stroke="#444" stroke-width="1"/>
-  <line x1="790" y1="97" x2="790" y2="90" stroke="#444" stroke-width="1"/>
-  <line x1="720" y1="93" x2="788" y2="93" stroke="#444" stroke-width="1" marker-start="url(#u01vs_vzaDR)" marker-end="url(#u01vs_vzaD)"/>
-  <text x="754" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#444">D=72 mm</text>
+  <text x="490" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T5 — Pumpa + 2 cilindra</text>
 
-  <!-- ──────────────────── T3 – Hidraulična stega ──────────────────── -->
-  <rect x="30" y="245" width="425" height="220" rx="10" fill="#ffffff" stroke="#c0ccd6" stroke-width="1.5"/>
-  <text x="46" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#2a3a48">T3 — Hidraulična stega</text>
-  <text x="46" y="285" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#778899">crpka → vod → radni klip → stezna sila F→</text>
+  <text x="460" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1a2a36">platforma G = ?</text>
 
-  <!-- Crpka (gornji cilindar, vertikalni) -->
-  <!-- Cilindar crpke unutra 56-72, stjenke 50-56, 72-78; y: 300-370 -->
-  <rect x="56" y="305" width="6" height="58" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="72" y="305" width="6" height="58" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="56" y="362" width="28" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="62" y="327" width="10" height="35" fill="url(#u01vs_vzfl)"/>
-  <rect x="58" y="311" width="18" height="16" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="60" y="292" width="14" height="19" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <!-- Fp dolje -->
-  <line x1="67" y1="274" x2="67" y2="290" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#u01vs_vzaB)"/>
-  <text x="74" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1a1a1a">Fₚ</text>
-  <text x="46" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#555">crpka</text>
+  <text x="608" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" fill="#c0392b"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></tspan> = 420 N</text>
+  <text x="490" y="620" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">Δz = 30 mm, G = ?, Σs<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = ?</text>
 
-  <!-- Vod horizontalni: od crpke desno (y=366, od x=64 do x=270) -->
-  <rect x="62" y="366" width="210" height="10" rx="2" fill="#8a9aa6" stroke="#4a6070" stroke-width="1"/>
-  <rect x="70" y="369" width="195" height="4" fill="url(#u01vs_vzfl)"/>
+  <text x="797" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T6 — Stol s 3 cilindra</text>
 
-  <!-- Vertikalni ulaz u radni cilindar: x=265, y=330-372 -->
-  <rect x="260" y="330" width="10" height="38" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="263" y="332" width="4" height="36" fill="url(#u01vs_vzfl)"/>
+  <text x="770" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1a2a36">radni stol G = ?</text>
 
-  <!-- Radni cilindar (horizontalni = stega)
-       Tijelo: x=230–360, y=308–440; klip ide desno, gura predmet -->
-  <!-- Gornja i donja stijenka -->
-  <rect x="230" y="316" width="130" height="12" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="230" y="406" width="130" height="12" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <!-- Lijeva stijenka s otvorom za klipnjaču (lijevom) -->
-  <rect x="230" y="328" width="10" height="78" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <!-- Desna stijenka -->
-  <rect x="350" y="328" width="10" height="78" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <!-- Fluid lijevo od klipa -->
-  <rect x="240" y="328" width="60" height="78" fill="url(#u01vs_vzfl)"/>
-  <!-- Klip (vertikalni bar inside horizontal cylinder) -->
-  <rect x="300" y="330" width="16" height="74" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <!-- Klipnjača desno od klipa, izlazi kroz desni kraj -->
-  <rect x="316" y="358" width="52" height="16" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-
-  <!-- Strelica sile F→ -->
-  <line x1="370" y1="366" x2="388" y2="366" stroke="#1a1a1a" stroke-width="3" marker-end="url(#u01vs_vzaB)"/>
-  <text x="390" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1a1a1a">F →</text>
-
-  <!-- kota d radnog klipa -->
-  <line x1="296" y1="330" x2="290" y2="330" stroke="#444" stroke-width="1"/>
-  <line x1="296" y1="404" x2="290" y2="404" stroke="#444" stroke-width="1"/>
-  <line x1="292" y1="332" x2="292" y2="402" stroke="#444" stroke-width="1" marker-start="url(#u01vs_vzaDR)" marker-end="url(#u01vs_vzaD)"/>
-  <text x="258" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#444">d</text>
-  <text x="222" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="8.5" fill="#555">radni</text>
-  <text x="218" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="8.5" fill="#555">cilindar</text>
-
-  <!-- ──────────────────── T4 – Hidraulični stol i pumpa ──────────────────── -->
-  <rect x="490" y="245" width="425" height="220" rx="10" fill="#ffffff" stroke="#c0ccd6" stroke-width="1.5"/>
-  <text x="506" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#2a3a48">T4 — Hidraulični stol i pumpa</text>
-  <text x="506" y="285" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#778899">crpka d=18 mm, radni cilindar D=95 mm</text>
-
-  <!-- Pumpa lijevo (d=18mm ~ 18px unutra): 520-538, stjenke 514-520, 538-544 -->
-  <rect x="520" y="305" width="6" height="58" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="538" y="305" width="6" height="58" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="520" y="362" width="24" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="526" y="327" width="12" height="35" fill="url(#u01vs_vzfl)"/>
-  <rect x="522" y="311" width="20" height="16" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="524" y="292" width="16" height="19" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <line x1="532" y1="274" x2="532" y2="290" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#u01vs_vzaB)"/>
-  <text x="540" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1a1a1a">Fₚ</text>
-  <text x="512" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#555">crpka (d=18)</text>
-
-  <!-- Vod -->
-  <rect x="526" y="366" width="212" height="10" rx="2" fill="#8a9aa6" stroke="#4a6070" stroke-width="1"/>
-  <rect x="533" y="369" width="198" height="4" fill="url(#u01vs_vzfl)"/>
-
-  <!-- Radni cilindar D=95mm ~ 76px unutra: 688-764, stjenke 680-688, 764-772 -->
-  <rect x="680" y="305" width="8" height="63" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="764" y="305" width="8" height="63" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="680" y="366" width="92" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="688" y="325" width="76" height="41" fill="url(#u01vs_vzfl)"/>
-  <rect x="684" y="310" width="84" height="15" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="719" y="292" width="14" height="18" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <!-- Stol gore -->
-  <rect x="660" y="284" width="132" height="10" rx="2" fill="#5a6a76" stroke="#3a4a56" stroke-width="1.5"/>
-
-  <!-- Kota Δz -->
-  <line x1="806" y1="292" x2="806" y2="370" stroke="#666" stroke-width="1.2" marker-start="url(#u01vs_vzaRdR)" marker-end="url(#u01vs_vzaRd)"/>
-  <text x="814" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#555">Δz</text>
-
-  <!-- kota D-->
-  <line x1="688" y1="300" x2="688" y2="293" stroke="#444" stroke-width="1"/>
-  <line x1="764" y1="300" x2="764" y2="293" stroke="#444" stroke-width="1"/>
-  <line x1="690" y1="296" x2="762" y2="296" stroke="#444" stroke-width="1" marker-start="url(#u01vs_vzaDR)" marker-end="url(#u01vs_vzaD)"/>
-  <text x="726" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#444">D=95 mm</text>
-
-  <!-- ──────────────────── T5 – Platforma s dva cilindra ──────────────────── -->
-  <rect x="30" y="475" width="425" height="220" rx="10" fill="#ffffff" stroke="#c0ccd6" stroke-width="1.5"/>
-  <text x="46" y="498" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#2a3a48">T5 — Platforma s dva cilindra</text>
-  <text x="46" y="515" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#778899">crpka d=25 mm, 2× radni cilindar D=140 mm</text>
-
-  <!-- Pumpa: 54-80, stjenke 48-54, 80-86 -->
-  <rect x="54" y="535" width="6" height="56" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="72" y="535" width="6" height="56" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="54" y="590" width="24" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="60" y="556" width="12" height="34" fill="url(#u01vs_vzfl)"/>
-  <rect x="56" y="540" width="22" height="16" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="58" y="523" width="16" height="17" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <line x1="66" y1="505" x2="66" y2="521" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#u01vs_vzaB)"/>
-  <text x="74" y="517" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1a1a1a">Fₚ</text>
-  <text x="44" y="530" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#555">crpka</text>
-
-  <!-- Vod od crpke desno -->
-  <rect x="60" y="594" width="360" height="10" rx="2" fill="#8a9aa6" stroke="#4a6070" stroke-width="1"/>
-  <rect x="67" y="597" width="346" height="4" fill="url(#u01vs_vzfl)"/>
-
-  <!-- Radni cilindar A (lijevi), D=140mm ~ 112px unutra: 154-266, stjenke 144-154, 266-276 -->
-  <rect x="144" y="534" width="10" height="62" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="266" y="534" width="10" height="62" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="144" y="594" width="132" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="154" y="553" width="112" height="41" fill="url(#u01vs_vzfl)"/>
-  <rect x="148" y="539" width="124" height="14" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="203" y="524" width="14" height="16" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-
-  <!-- Radni cilindar B (desni), isti -->
-  <rect x="284" y="534" width="10" height="62" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="406" y="534" width="10" height="62" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="284" y="594" width="132" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="294" y="553" width="112" height="41" fill="url(#u01vs_vzfl)"/>
-  <rect x="288" y="539" width="124" height="14" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="343" y="524" width="14" height="16" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-
-  <!-- Platforma (nosi vozilo) -->
-  <rect x="128" y="513" width="310" height="12" rx="2" fill="#5a6a76" stroke="#3a4a56" stroke-width="1.5"/>
-  <!-- Vozilo skica -->
-  <rect x="180" y="493" width="212" height="22" rx="7" fill="#8ab4cc" stroke="#3a6a88" stroke-width="1"/>
-  <text x="286" y="508" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#1a2a36">vozilo</text>
-
-  <!-- Kota Δz -->
-  <line x1="438" y1="524" x2="438" y2="598" stroke="#666" stroke-width="1.2" marker-start="url(#u01vs_vzaRdR)" marker-end="url(#u01vs_vzaRd)"/>
-  <text x="446" y="566" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#555">Δz</text>
-
-  <!-- ──────────────────── T6 – Radni stol s tri cilindra ──────────────────── -->
-  <rect x="490" y="475" width="425" height="220" rx="10" fill="#ffffff" stroke="#c0ccd6" stroke-width="1.5"/>
-  <text x="506" y="498" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#2a3a48">T6 — Radni stol s tri cilindra</text>
-  <text x="506" y="515" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#778899">crpka Aₚ=3,8 cm², 3× cilindar A<tspan baseline-shift="sub" font-size="0.7em">L</tspan>=95 cm²</text>
-
-  <!-- Pumpa lijevo -->
-  <rect x="510" y="535" width="5" height="56" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="525" y="535" width="5" height="56" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="510" y="590" width="20" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="515" y="556" width="10" height="34" fill="url(#u01vs_vzfl)"/>
-  <rect x="512" y="541" width="18" height="14" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="514" y="524" width="12" height="18" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <line x1="520" y1="506" x2="520" y2="522" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#u01vs_vzaB)"/>
-  <text x="528" y="518" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1a1a1a">Fₚ</text>
-  <text x="496" y="532" font-family="'Segoe UI',Arial,sans-serif" font-size="8.5" fill="#555">Aₚ=3,8 cm²</text>
-
-  <!-- Vod -->
-  <rect x="515" y="594" width="390" height="10" rx="2" fill="#8a9aa6" stroke="#4a6070" stroke-width="1"/>
-  <rect x="522" y="597" width="376" height="4" fill="url(#u01vs_vzfl)"/>
-
-  <!-- 3 radna cilindra (AL=95 cm² ~ 68px unutra): x=557,665,773; stjenke -7,+68+7 -->
-  <!-- Cilindar 1 -->
-  <rect x="550" y="534" width="7" height="62" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="625" y="534" width="7" height="62" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="550" y="594" width="82" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="557" y="556" width="68" height="38" fill="url(#u01vs_vzfl)"/>
-  <rect x="554" y="540" width="74" height="14" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="587" y="524" width="12" height="16" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <!-- Cilindar 2 -->
-  <rect x="655" y="534" width="7" height="62" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="730" y="534" width="7" height="62" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="655" y="594" width="82" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="662" y="556" width="68" height="38" fill="url(#u01vs_vzfl)"/>
-  <rect x="659" y="540" width="74" height="14" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="692" y="524" width="12" height="16" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-  <!-- Cilindar 3 -->
-  <rect x="760" y="534" width="7" height="62" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="835" y="534" width="7" height="62" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="760" y="594" width="82" height="8" rx="1" fill="url(#u01vs_vzhatch)" stroke="#4a6070" stroke-width="1"/>
-  <rect x="767" y="556" width="68" height="38" fill="url(#u01vs_vzfl)"/>
-  <rect x="764" y="540" width="74" height="14" rx="3" fill="url(#u01vs_vzps)" stroke="#5b6770" stroke-width="1.5"/>
-  <rect x="797" y="524" width="12" height="16" fill="#9aaab4" stroke="#5b6770" stroke-width="1.2"/>
-
-  <!-- Stol -->
-  <rect x="534" y="513" width="376" height="12" rx="2" fill="#5a6a76" stroke="#3a4a56" stroke-width="1.5"/>
-
-  <!-- Kota Δz -->
-  <line x1="896" y1="524" x2="896" y2="598" stroke="#666" stroke-width="1.2" marker-start="url(#u01vs_vzaRdR)" marker-end="url(#u01vs_vzaRd)"/>
-  <text x="900" y="566" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#555">Δz</text>
-
-  <!-- A_L label na jednom cilindru (T6) -->
-  <text x="793" y="531" font-family="'Segoe UI',Arial,sans-serif" font-size="8.5" text-anchor="middle" fill="#445566">A<tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
-</svg>
+  <text x="921" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#c0392b"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></tspan>=360 N</text>
+  <text x="797" y="620" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">Δz = 18 mm, G = ?, Σs<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = ?</text>
+<text x="77" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">d₁ = 28 mm</text>
+  <text x="291" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">d₂ = 140 mm</text>
+  <text x="390" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">d = 24 mm</text>
+  <text x="585" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">D = 72 mm</text>
+  <text x="797" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">d = 52 mm</text>
+  <text x="95" y="606" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">D = 95 mm</text>
+  <text x="229" y="606" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">D = 95 mm</text>
+  <text x="292" y="606" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">d=18</text>
+  <text x="405" y="606" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">D = 140 mm</text>
+  <text x="529" y="606" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">D = 140 mm</text>
+  <text x="594" y="606" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">d=25</text>
+  <text x="690" y="606" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">A<tspan baseline-shift="sub" font-size="0.7em">L</tspan>=95</text>
+  <text x="784" y="606" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">A<tspan baseline-shift="sub" font-size="0.7em">L</tspan>=95</text>
+  <text x="878" y="606" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">A<tspan baseline-shift="sub" font-size="0.7em">L</tspan>=95</text>
+  <text x="921" y="606" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#b7600c">d=22</text>
+  </svg>

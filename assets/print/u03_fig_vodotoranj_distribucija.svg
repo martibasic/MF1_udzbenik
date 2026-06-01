@@ -1,92 +1,273 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 440" role="img"
-     aria-labelledby="u03fvd_u3vtT u03fvd_u3vtD" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:660px;height:auto;">
-  <title id="u03fvd_u3vtT">Distribucijska mreža iz vodotornja – tlak u kućnom priključku</title>
-  <desc id="u03fvd_u3vtD">Vodotoranj (Z_t=84 m) opskrbljuje vodovodom stambenu zgradu (Z_k=68 m). Visinska razlika ΔH=16 m daje manometarski tlak p_man≈156,7 kPa u kućnom priključku K.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" role="img" aria-labelledby="u03fvd_title u03fvd_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u03fvd_title">Distribucijska mreža iz vodotornja – tlak u kućnom priključku</title>
+  <desc id="u03fvd_desc">Vodotoranj sa slobodnom površinom vode na visini Z_t = 84 m n.m. opskrbljuje stambenu zgradu s priključkom K na visini Z_k = 68 m n.m. Visinska razlika ΔH = 16 m daje manometarski tlak p_man ≈ 156,7 kPa, a apsolutni tlak p_aps ≈ 257,2 kPa u priključku. Tlak više nego dvostruko premai minimalni zahtjev 100 kPa.</desc>
+
   <defs>
-    <marker id="u03fvd_u3vtaR"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u03fvd_u3vtaG"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/></marker>
-    <marker id="u03fvd_u3vtaBlu" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/></marker>
-    <marker id="u03fvd_u3vtaDim"  markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u03fvd_u3vtaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <linearGradient id="u03fvd_u3vtfl" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#7fb3d3"/>
+    <linearGradient id="u03fvd_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u03fvd_u3vttower" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#c8d0d5"/><stop offset="100%" stop-color="#7f8c8d"/>
+    <linearGradient id="u03fvd_tower" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b8c2cb" />
+      <stop offset="55%" stop-color="#909fa8" />
+      <stop offset="100%" stop-color="#6c7a86" />
     </linearGradient>
-    <pattern id="u03fvd_u3vthatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a9aa6" stroke-width="2"/>
+    <linearGradient id="u03fvd_bldg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4e9d8" />
+      <stop offset="100%" stop-color="#d6c4a3" />
+    </linearGradient>
+    <pattern id="u03fvd_ground" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#a08465" stroke-width="1.2" />
     </pattern>
+    <marker id="u03fvd_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u03fvd_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u03fvd_aFlow" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
+    </marker>
+    <marker id="u03fvd_aPres" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
   </defs>
 
-  <rect width="660" height="440" fill="#f8f9fa"/>
-  <rect x="10" y="10" width="640" height="420" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5"/>
+  <!-- ============================================================
+       POZADINA + DVA PANELA
+  ============================================================ -->
+  <rect width="920" height="540" fill="#ffffff" />
+  <rect x="14" y="14" width="540" height="512" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="566" y="14" width="340" height="512" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-  <!-- Naslov -->
-  <text x="330" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530" text-anchor="middle">Distribucijska mreža vodotornja – tlak u kućnom priključku</text>
-  <text x="330" y="49" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">Z_t = 84 m n.m.,  Z_k = 68 m n.m.,  ΔH = 16 m,  ρ = 998 kg/m³</text>
+  <!-- ============================================================
+       VERTIKALNA REFERENTNA SKALA (visinski profil)
+       1 m = 12 px
+       y(Z) = 460 &#8722; (Z &#8722; 60) &#183; 12, tj.:
+         Z = 60 m n.m. -> y = 460 (referentna nula, malo ispod tla)
+         Z = 65 m n.m. -> y = 400 (tlo)
+         Z = 68 m n.m. -> y = 364 (priklju&#269;ak K)
+         Z = 84 m n.m. -> y = 172 (slobodna povr&#353;ina vodotornja)
+         Z = 90 m n.m. -> y = 100 (vrh tornja)
+  ============================================================ -->
 
-  <!-- Tlo (linija, hatch ispod) -->
-  <line x1="30" y1="360" x2="630" y2="360" stroke="#8b6914" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <rect x="30" y="360" width="600" height="14" fill="url(#u03fvd_u3vthatch)" opacity="0.45"/>
-  <text x="40" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#5c4a00">tlo</text>
+  <!-- Vertikalna skala (lijevi rub scene) -->
+  <line x1="48" y1="100" x2="48" y2="430" stroke="#9aa6b0" stroke-width="1" />
+  <!-- Tikovi i oznake skale -->
+  <line x1="44" y1="172" x2="52" y2="172" stroke="#9aa6b0" stroke-width="1" />
+  <line x1="44" y1="220" x2="52" y2="220" stroke="#9aa6b0" stroke-width="0.8" />
+  <line x1="44" y1="268" x2="52" y2="268" stroke="#9aa6b0" stroke-width="0.8" />
+  <line x1="44" y1="316" x2="52" y2="316" stroke="#9aa6b0" stroke-width="0.8" />
+  <line x1="44" y1="364" x2="52" y2="364" stroke="#9aa6b0" stroke-width="1" />
+  <line x1="44" y1="412" x2="52" y2="412" stroke="#9aa6b0" stroke-width="0.8" />
+  <!-- ============================================================
+       TLO (linija + srafura ispod, blago nagnut profil)
+  ============================================================ -->
+  <line x1="58" y1="400" x2="540" y2="400" stroke="#7a5a30" stroke-width="1.4" />
+  <rect x="58" y="400" width="482" height="14" fill="url(#u03fvd_ground)" opacity="0.55" />
+  <!-- ============================================================
+       VODOTORANJ (lijevo)
+       Stup tornja: x = 102..142 (sirina 40), y = 200..400
+       Spremnik: x = 80..164 (sirina 84), y = 100..200
+  ============================================================ -->
 
-  <!-- ══ VODOTORANJ (lijevo) ══ -->
-  <!-- Trup stupa -->
-  <rect x="65" y="230" width="46" height="130" fill="url(#u03fvd_u3vttower)" stroke="#4a6070" stroke-width="1.8"/>
-  <!-- Posuda vodotornja -->
-  <rect x="45" y="160" width="86" height="70" rx="4" fill="url(#u03fvd_u3vttower)" stroke="#4a6070" stroke-width="1.8"/>
-  <!-- Voda u posudi -->
-  <rect x="52" y="168" width="72" height="46" fill="url(#u03fvd_u3vtfl)"/>
-  <!-- Razina vode (Z_t=84m) -->
-  <line x1="42" y1="168" x2="134" y2="168" stroke="#1565c0" stroke-width="2.0" stroke-dasharray="5,3"/>
-  <!-- p_atm oznaka -->
-  <text x="138" y="165" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">p_atm</text>
-  <!-- Z_t oznaka -->
-  <text x="88" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">Z_t = 84 m n.m.</text>
-  <text x="88" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#4a6070" text-anchor="middle">vodotoranj</text>
+  <!-- Stup -->
+  <rect x="102" y="200" width="40" height="200" fill="url(#u03fvd_tower)" stroke="#4a5a66" stroke-width="1.4" />
+  <!-- Spojne plohe stupa s tlom (mali prirubnice) -->
+  <rect x="96" y="396" width="52" height="6" fill="#5d6d7e" stroke="#3a4a56" stroke-width="0.8" />
 
-  <!-- ══ DISTRIBUCIJSKI VOD (zakopan) ══ -->
-  <!-- Vodovod: zakopan, od baze tornja (x~111) do baze zgrade (x~440), y~344 -->
-  <line x1="111" y1="344" x2="440" y2="344" stroke="#1565c0" stroke-width="4.0"/>
-  <text x="275" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">distribucijski vodovod (zakopan)</text>
-  <!-- Strelica smjera toka -->
-  <line x1="250" y1="344" x2="290" y2="344" stroke="#1565c0" stroke-width="3.0" marker-end="url(#u03fvd_u3vtaBlu)"/>
-  <!-- Vertikalni priključni vod do zgrade -->
-  <line x1="440" y1="344" x2="440" y2="290" stroke="#1565c0" stroke-width="3.5"/>
+  <!-- Spremnik (cilindricni, prikazan kao zaobljeni pravokutnik) -->
+  <rect x="80" y="100" width="84" height="100" rx="6" fill="url(#u03fvd_tower)" stroke="#4a5a66" stroke-width="1.6" />
+  <!-- Vrh spremnika (kupola) -->
+  <path d="M 80,108 Q 122,84 164,108" fill="#a3afba" stroke="#4a5a66" stroke-width="1.4" />
+  <!-- Voda u spremniku -->
+  <rect x="86" y="172" width="72" height="26" fill="url(#u03fvd_water)" />
+  <!-- Slobodna povrsina -->
+  <line x1="86" y1="172" x2="158" y2="172" stroke="#1565c0" stroke-width="1.8" />
+  <!-- Odzracnik / atmosfera (mala cijev na vrhu) -->
+  <line x1="122" y1="92" x2="122" y2="78" stroke="#4a5a66" stroke-width="1.4" />
+  <circle cx="122" cy="76" r="2.5" fill="#4a5a66" />
+  <!-- (oznaka "voda" uklonjena - slobodna povrsina i plavi gradient su dovoljni) -->
 
-  <!-- ══ STAMBENA ZGRADA (desno) ══ -->
-  <!-- Temelj -->
-  <rect x="420" y="348" width="160" height="12" fill="#909fa8" stroke="#4a6070" stroke-width="1.2"/>
-  <!-- Zidovi zgrade -->
-  <rect x="430" y="228" width="140" height="120" fill="none" stroke="#4a6070" stroke-width="2.0"/>
-  <!-- Horizontale katova -->
-  <line x1="430" y1="268" x2="570" y2="268" stroke="#d0d8e0" stroke-width="0.9"/>
-  <line x1="430" y1="308" x2="570" y2="308" stroke="#d0d8e0" stroke-width="0.9"/>
-  <!-- Krov (trokut) -->
-  <polygon points="415,228 500,188 585,228" fill="#c0392b" fill-opacity="0.35" stroke="#922b21" stroke-width="1.8"/>
-  <text x="500" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#4a6070" text-anchor="middle">stambena zgrada</text>
 
-  <!-- Priključak K (na visini Z_k=68m → y=290 apsolutno; pozicija: x=440, y=290) -->
-  <circle cx="440" cy="290" r="9" fill="#c0392b" stroke="#922b21" stroke-width="1.5"/>
-  <text x="427" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#c0392b" text-anchor="end">K</text>
-  <text x="454" y="287" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56">Z_k = 68 m n.m.</text>
+  <!-- Etiketa "vodotoranj" -->
+  <!-- ============================================================
+       SPOJNI VOD (silazni iz tornja, podzemni horizontalni,
+                  uzlazni do priklju&#269;ka K)
+       Silazna cijev unutar stupa: x=118..126 (sirina 8), y=172..408
+       Podzemni vod: y=408..416, x=126..360
+       Uzlazna cijev u zgradi: x=352..360, y=364..416
+       Sve fluid plavom, debljina cijevi 8 px
+  ============================================================ -->
 
-  <!-- ══ KOTA ΔH (desno od svega) ══ -->
-  <!-- Horizontalne linije za kotu: razina vodotornja y=168, razina priključka y=290 -->
-  <line x1="592" y1="168" x2="598" y2="168" stroke="#b7600c" stroke-width="1"/>
-  <line x1="592" y1="290" x2="598" y2="290" stroke="#b7600c" stroke-width="1"/>
-  <line x1="595" y1="170" x2="595" y2="288" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fvd_u3vtaDimL)" marker-end="url(#u03fvd_u3vtaDim)"/>
-  <text x="606" y="225" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#b7600c">ΔH</text>
-  <text x="606" y="241" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">= 16 m</text>
+  <!-- Silazna cijev (unutar stupa, prikazana kao plava linija s obrubom) -->
+  <rect x="118" y="172" width="8" height="244" fill="url(#u03fvd_water)" stroke="#0d47a1" stroke-width="0.8" />
+  <!-- Podzemni horizontalni vod -->
+  <rect x="118" y="408" width="242" height="8" fill="url(#u03fvd_water)" stroke="#0d47a1" stroke-width="0.8" />
+  <!-- Uzlazna cijev do K -->
+  <rect x="352" y="364" width="8" height="52" fill="url(#u03fvd_water)" stroke="#0d47a1" stroke-width="0.8" />
 
-  <!-- Piezometrijska linija (vodoravna od razine vodotornja prema desno) -->
-  <line x1="134" y1="168" x2="600" y2="168" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="8,5" opacity="0.5"/>
-  <text x="320" y="163" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1565c0" text-anchor="middle" font-style="italic">piezometarska linija (razina vodotornja)</text>
+  <!-- Strelica smjera toka u podzemnom vodu -->
+  <line x1="200" y1="412" x2="260" y2="412" stroke="#0d47a1" stroke-width="1.6" marker-end="url(#u03fvd_aFlow)" />
+  <!-- ============================================================
+       STAMBENA ZGRADA (desno)
+       x = 380..520 (sirina 140), y = 240..400 (tlo)
+       Krov: trokut 372..528, vrh y=210
+  ============================================================ -->
+  <rect x="380" y="240" width="140" height="160" fill="url(#u03fvd_bldg)" stroke="#7a5a30" stroke-width="1.5" />
+  <polygon points="372,242 450,196 528,242" fill="#a85230" stroke="#7a3018" stroke-width="1.4" />
 
-  <!-- ══ REZULTAT BOX ══ -->
-  <rect x="240" y="376" width="300" height="46" rx="8" fill="#eaf9f1" stroke="#1e8449" stroke-width="1.3"/>
-  <text x="390" y="395" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="middle">p_man = ρ·g·ΔH = 998·9,81·16</text>
-  <text x="390" y="413" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449" text-anchor="middle">p_man ≈ 156,7 kPa  ✓  (zahtjev: 100 kPa)</text>
-</svg>
+  <!-- Horizontalne medjuetazne linije -->
+  <line x1="380" y1="280" x2="520" y2="280" stroke="#9a7a4a" stroke-width="0.8" opacity="0.7" />
+  <line x1="380" y1="320" x2="520" y2="320" stroke="#9a7a4a" stroke-width="0.8" opacity="0.7" />
+  <line x1="380" y1="360" x2="520" y2="360" stroke="#9a7a4a" stroke-width="0.8" opacity="0.7" />
+
+  <!-- Prozori (mali, dekorativni) -->
+  <rect x="394" y="252" width="14" height="14" fill="#e8eef2" stroke="#7a5a30" stroke-width="0.7" />
+  <rect x="492" y="252" width="14" height="14" fill="#e8eef2" stroke="#7a5a30" stroke-width="0.7" />
+  <rect x="394" y="292" width="14" height="14" fill="#e8eef2" stroke="#7a5a30" stroke-width="0.7" />
+  <rect x="492" y="292" width="14" height="14" fill="#e8eef2" stroke="#7a5a30" stroke-width="0.7" />
+  <rect x="394" y="332" width="14" height="14" fill="#e8eef2" stroke="#7a5a30" stroke-width="0.7" />
+  <rect x="492" y="332" width="14" height="14" fill="#e8eef2" stroke="#7a5a30" stroke-width="0.7" />
+  <!-- Vrata u prizemlju -->
+  <rect x="436" y="368" width="20" height="32" fill="#6a4a20" stroke="#3a2a10" stroke-width="0.8" />
+
+  <!-- Priklju&#269;na to&#269;ka K (na visini Z_k = 68 m -> y = 364) -->
+  <circle cx="378" cy="364" r="6.5" fill="#c0392b" stroke="#7a1f10" stroke-width="1.4" />
+  <!-- Etiketa "stambena zgrada" -->
+  <!-- ============================================================
+       PIEZOMETARSKA LINIJA (vodoravna od slobodne povr&#353;ine vodotornja
+                            preko cijele scene, isprekidana plava)
+  ============================================================ -->
+  <line x1="166" y1="172" x2="528" y2="172" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="9,5" opacity="0.65" />
+  <!-- Sjenovita oznaka "ekvivalentni stupac vode" iznad K (lagani plavi pojas) -->
+  <rect x="372" y="172" width="12" height="192" fill="#1565c0" fill-opacity="0.10" />
+  <line x1="372" y1="172" x2="372" y2="364" stroke="#1565c0" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.65" />
+  <line x1="384" y1="172" x2="384" y2="364" stroke="#1565c0" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.65" />
+
+  <!-- ============================================================
+       KOTA &#916;H (na samom desnom rubu scene, izvan zgrade)
+       Pomocne linije: od slobodne povrsine (y=172) i od K (y=364) prema desno do x=548
+       Dimenzijska linija: x=544, y=172..364
+       Labela &#916;H lijevo od dim. linije (u praznom dijelu iznad zgrade)
+  ============================================================ -->
+  <!-- Pomocne linije od geometrije (svjetlije, ne ulaze u zgradu) -->
+  <!-- Tik-crte -->
+  <!-- Dimenzijska linija -->
+  <!-- Labela &#916;H (mala pozadinska plo&#269;a) - postavljena uz desni rub, malo iznad sredine -->
+  <!-- ============================================================
+       OZNAKE Z_t i Z_k uz vertikalnu skalu / geometriju
+  ============================================================ -->
+  <!-- Z_t leader (s desne strane spremnika, pri slobodnoj povrsini) -->
+  <!-- Z_k leader (desno od K, malo iznad K markera na razini Z_k) -->
+  <rect x="388" y="356" width="86" height="18" rx="3" fill="#fbeaea" stroke="#c0392b" stroke-width="0.8" />
+  <!-- ============================================================
+       INDIKATOR TLAKA U PRIKLJUCKU (callout odvojen od K leader-om)
+       Pozicija: iznad podzemnog voda, izme&#273;u tornja i zgrade (slobodan prostor)
+  ============================================================ -->
+  <rect x="186" y="320" width="148" height="44" rx="6" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.3" />
+  <!-- Leader od callout-a do K -->
+  <line x1="334" y1="358" x2="372" y2="364" stroke="#1565c0" stroke-width="0.9" opacity="0.8" />
+
+  <!-- ============================================================
+       PANEL ETIKETA SCENE (gore lijevo)
+  ============================================================ -->
+  <!-- ============================================================
+       FORMULA PANEL (desni panel)
+       x = 566..906 (sirina 340), y = 14..526
+  ============================================================ -->
+
+  <!-- Header bar -->
+  <rect x="566" y="14" width="340" height="34" rx="12" fill="#1565c0" />
+  <rect x="566" y="36" width="340" height="14" fill="#1565c0" />
+  <!-- Blok 1: Visinska razlika (y=62..130) -->
+  <line x1="586" y1="140" x2="886" y2="140" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 2: Manometarski tlak (y=140..222) -->
+  <line x1="586" y1="238" x2="886" y2="238" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 3: Apsolutni tlak (y=238..318) -->
+  <line x1="586" y1="336" x2="886" y2="336" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 4: Provjera zahtjeva (y=336..414) -->
+  <line x1="586" y1="436" x2="886" y2="436" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Sazetak italic -->
+  <!-- Rezultati badge -->
+  <rect x="580" y="482" width="312" height="34" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <!-- ============================================================
+       LEGENDA (donji rub scene)
+  ============================================================ -->
+  <rect x="58" y="492" width="12" height="12" fill="#aed6f1" stroke="#1565c0" stroke-width="0.8" rx="2" />
+  <line x1="166" y1="498" x2="186" y2="498" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="9,5" opacity="0.7" />
+  <circle cx="446" cy="498" r="5" fill="#c0392b" stroke="#7a1f10" stroke-width="1" />
+  <line x1="384" y1="172" x2="548" y2="172" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="384" y1="364" x2="548" y2="364" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="536" y1="172" x2="548" y2="172" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="536" y1="364" x2="548" y2="364" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="542" y1="175" x2="542" y2="361" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fvd_aDimL)" marker-end="url(#u03fvd_aDim)" />
+  <rect x="496" y="252" width="50" height="34" rx="5" fill="#fff5e8" stroke="#b7600c" stroke-width="1" />
+  <rect x="320" y="492" width="12" height="12" fill="#b7600c" rx="2" />
+  <text x="40" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="end" fill="#5a6a78">84</text>
+  <text x="40" y="223" font-family="'Segoe UI',Arial,sans-serif" font-size="9" text-anchor="end" fill="#7a8a96">80</text>
+  <text x="40" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="9" text-anchor="end" fill="#7a8a96">76</text>
+  <text x="40" y="319" font-family="'Segoe UI',Arial,sans-serif" font-size="9" text-anchor="end" fill="#7a8a96">72</text>
+  <text x="40" y="367" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="end" fill="#5a6a78">68</text>
+  <text x="40" y="415" font-family="'Segoe UI',Arial,sans-serif" font-size="9" text-anchor="end" fill="#7a8a96">64</text>
+  <text x="32" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#5a6a78">Z [m n.m.]</text>
+
+  <text x="290" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" text-anchor="middle" fill="#7a5a30">tlo (Z ≈ 65 m n.m.)</text>
+
+  <text x="130" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#5a6a78">p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
+
+  <text x="122" y="464" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#3a4a56">Vodotoranj</text>
+
+  <text x="230" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#0d47a1">smjer toka</text>
+
+  <text x="378" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">K</text>
+
+  <text x="450" y="464" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#3a4a56">Stambena zgrada</text>
+
+  <text x="340" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#1565c0">piezometarska linija</text>
+
+  <text x="170" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#1565c0"><tspan font-weight="700">Z<tspan baseline-shift="sub" font-size="0.7em">t</tspan></tspan> = 84 m n.m.</text>
+
+  <text x="431" y="369" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#c0392b"><tspan font-weight="700">Z<tspan baseline-shift="sub" font-size="0.7em">k</tspan></tspan> = 68 m n.m.</text>
+
+  <text x="260" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">manometarski tlak u K</text>
+  <text x="260" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">man</tspan> ≈ 156,7 kPa</text>
+  <text x="36" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1a2530">Visinski profil mreže</text>
+  <text x="36" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">ρ = 998 kg/m³,  p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan> = 100,5 kPa,  g = 9,81 m/s²</text>
+
+  <text x="736" y="36" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Hidrostatički tlak u priključku</text>
+
+  <text x="736" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Visinska razlika</text>
+  <text x="736" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">ΔH = Z<tspan baseline-shift="sub" font-size="0.7em">t</tspan> − Z<tspan baseline-shift="sub" font-size="0.7em">k</tspan> = 84 − 68</text>
+  <text x="736" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Manometarski tlak u K</text>
+  <text x="736" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">man</tspan> = ρ g ΔH</text>
+  <text x="736" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530">= 998 · 9,81 · 16</text>
+  <text x="736" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 156,7 kPa</text>
+  <text x="736" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Apsolutni tlak u K</text>
+  <text x="736" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan> + p<tspan baseline-shift="sub" font-size="0.7em">man</tspan></text>
+  <text x="736" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530">= 100 500 + 156 700</text>
+  <text x="736" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 257,2 kPa</text>
+  <text x="736" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Provjera zahtjeva</text>
+  <text x="736" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">man</tspan> &gt; p<tspan baseline-shift="sub" font-size="0.7em">man,min</tspan></text>
+  <text x="736" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530">156,7 kPa &gt; 100 kPa</text>
+  <text x="736" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">✓ uvjet zadovoljen</text>
+  <text x="736" y="456" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Tlak u priključku ovisi samo o</text>
+  <text x="736" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">visinskoj razlici – ne o duljini voda.</text>
+
+  <text x="616" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">man</tspan> ≈ 156,7 kPa</text>
+  <text x="784" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> ≈ 257,2 kPa</text>
+  <text x="868" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">✓</text>
+
+  <text x="76" y="502" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">voda u mreži</text>
+  <text x="192" y="502" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">piezometarska linija</text>
+  <text x="338" y="502" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">visinska kota ΔH</text>
+  <text x="456" y="502" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">priključak K</text>
+<text x="521" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#b7600c">ΔH</text>
+  <text x="521.0" y="286.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c">= 16 m</text>
+
+  <text x="736" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c">= 16 m</text>
+  </svg>

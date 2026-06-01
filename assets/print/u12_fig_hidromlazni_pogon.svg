@@ -1,72 +1,203 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-<defs>
-  <marker id="u12fhp_u12hj-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
-  <marker id="u12fhp_u12hj-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b42318"/></marker>
-  <marker id="u12fhp_u12hj-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#546e7a"/></marker>
-  <linearGradient id="u12fhp_u12hj-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7ec8e8"/><stop offset="100%" stop-color="#4aa8d0"/></linearGradient>
-  <linearGradient id="u12fhp_u12hj-jet" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8" stop-opacity="0.3"/></linearGradient>
-  <pattern id="u12fhp_u12hj-hatch" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-    <rect width="8" height="8" fill="#8090a0"/>
-    <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
-  </pattern>
-</defs>
-<rect width="940" height="400" fill="#ffffff"/>
-<rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-<text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Hidromlazni pogon plovnog bagera</text>
-<text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">d = 120 mm · v_mlaz = 8,5 m/s · V_plovilo = 1,2 m/s · ρ = 1005 kg/m³ → Fp = 820 N</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="u12fhp_title u12fhp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u12fhp_title">Hidromlazni pogon plovnog bagera</title>
+  <desc id="u12fhp_desc">Bocni presjek plovila s pumpnim agregatom: usis vode kroz dno, izbacivanje kroz straznju mlaznicu promjera d=120 mm brzinom v_mlaz=8,5 m/s; reakcijski potisak na plovilo F_p=820 N; brzina plovidbe V_plovilo=1,2 m/s. Desno panel s kljucnim formulama za maseni protok, potisak i korisnu snagu.</desc>
 
-<!-- Water surface (fills bottom portion) -->
-<rect x="36" y="258" width="870" height="112" rx="0" fill="url(#u12fhp_u12hj-water)" opacity="0.35"/>
-<line x1="36" y1="258" x2="906" y2="258" stroke="#1565c0" stroke-width="2"/>
-<!-- Water surface label -->
-<text x="840" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" font-style="italic">razina vode</text>
+  <defs>
+    <linearGradient id="u12fhp_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <linearGradient id="u12fhp_vodaJet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5b9ec9" />
+      <stop offset="100%" stop-color="#aed6f1" stop-opacity="0.45" />
+    </linearGradient>
+    <linearGradient id="u12fhp_trup" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a3b0b9" />
+      <stop offset="100%" stop-color="#5d6d7e" />
+    </linearGradient>
+    <pattern id="u12fhp_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.2" />
+    </pattern>
+    <!-- Markeri sila -->
+    <marker id="u12fhp_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u12fhp_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u12fhp_aBlue" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <marker id="u12fhp_aGray" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#5a6a78" />
+    </marker>
+    <!-- Markeri kota -->
+    <marker id="u12fhp_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u12fhp_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+  </defs>
 
-<!-- Barge hull (ship shape) -->
-<!-- Hull outline: polygon shape, front tapered left, flat bottom, stern at right -->
-<polygon points="90,180 720,180 750,210 740,255 80,255 70,210" fill="#95a5a6" stroke="#2d3a40" stroke-width="2"/>
-<!-- Cabin/superstructure -->
-<rect x="150" y="140" width="200" height="40" rx="4" fill="#8090a0" stroke="#2d3a40" stroke-width="1.5"/>
-<!-- Windows -->
-<rect x="165" y="148" width="25" height="20" rx="2" fill="#c5e8f8"/>
-<rect x="205" y="148" width="25" height="20" rx="2" fill="#c5e8f8"/>
-<rect x="245" y="148" width="25" height="20" rx="2" fill="#c5e8f8"/>
-<rect x="285" y="148" width="25" height="20" rx="2" fill="#c5e8f8"/>
-<!-- Hull fill (slightly lighter inside) -->
-<polygon points="91,182 719,182 748,210 738,252 82,252 72,210" fill="#adb5bd"/>
+  <!-- Pozadina -->
+  <rect width="960" height="500" fill="#ffffff" />
 
-<!-- Intake pipe at bottom center of hull (vertical suction from below) -->
-<rect x="365" y="232" width="28" height="60" rx="3" fill="#8090a0" stroke="#2d3a40" stroke-width="1.5"/>
-<!-- Suction arrow (water entering upward) -->
-<line x1="379" y1="298" x2="379" y2="240" stroke="#0f766e" stroke-width="2.5" marker-end="url(#u12fhp_u12hj-ag)"/>
-<text x="392" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">usisava</text>
-<text x="392" y="304" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">vodu</text>
+  <!-- ================== LIJEVI PANEL: FIZICKA SCENA ================== -->
+  <rect x="14" y="14" width="566" height="472" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-<!-- Stern nozzle (rear of barge, right side) -->
-<rect x="720" y="212" width="35" height="30" rx="2" fill="url(#u12fhp_u12hj-hatch)"/>
-<!-- Nozzle label: d=120mm -->
-<text x="724" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#546e7a">d=120mm</text>
+  <!-- Naslov panela (caption u dokumentu, ovo je samo oznaka panela) -->
+  <!-- Nebo (lagani tonus) iznad povrsine -->
+  <rect x="28" y="60" width="538" height="146" fill="#f4f9fd" />
 
-<!-- Exit jet (going right = backward direction = +x in SVG, but propels ship to left) -->
-<path d="M 755,222 L 890,218 L 890,234 L 755,238 Z" fill="url(#u12fhp_u12hj-jet)"/>
-<!-- v_mlaz arrow (green, rightward = jet direction) -->
-<line x1="762" y1="230" x2="875" y2="230" stroke="#0f766e" stroke-width="3" marker-end="url(#u12fhp_u12hj-ag)"/>
-<text x="790" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">v_mlaz = 8,5 m/s</text>
+  <!-- Vodena masa (rijeka) ispod razine -->
+  <rect x="28" y="206" width="538" height="252" fill="url(#u12fhp_voda)" opacity="0.55" />
+  <!-- Slobodna povrsina rijeke -->
+  <line x1="28" y1="206" x2="566" y2="206" stroke="#1565c0" stroke-width="2" />
+  <!-- ================== TRUP PLOVILA (BOCNI PRESJEK) ================== -->
+  <!-- Trup je presjecen po simetrali; vidljiv presjek pumpnog sustava -->
+  <!-- Vanjska kontura trupa (s otvorom za mlaznicu na krmi y=210..230) -->
+  <path d="M 120,150 L 470,150 L 500,178 L 500,210 L 478,210 L 478,228 L 500,228 L 500,238 Q 500,256 482,256 L 138,256 Q 120,256 110,238 Z" fill="url(#u12fhp_trup)" stroke="#3a4a56" stroke-width="1.8" />
+  <!-- Unutrasnjost stroharnice (svjetlo polje za pumpu) -->
+  <path d="M 132,158 L 462,158 L 488,182 L 488,210 L 478,210 L 478,228 L 488,228 L 488,238 Q 488,244 470,244 L 144,244 Q 130,244 124,232 Z" fill="#eef3f6" stroke="#3a4a56" stroke-width="0.8" />
 
-<!-- Fp thrust arrow (leftward = forward direction of barge, reaction force) -->
-<line x1="700" y1="200" x2="580" y2="200" stroke="#b42318" stroke-width="3.5" marker-end="url(#u12fhp_u12hj-ar)"/>
-<text x="600" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b42318">Fp = 820 N</text>
+  <!-- Linija razine vode preko trupa (gaz plovila) -->
+  <line x1="110" y1="206" x2="500" y2="206" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="6,4" opacity="0.8" />
 
-<!-- V_plovilo arrow (ship velocity, leftward, gray dashed) -->
-<line x1="200" y1="130" x2="120" y2="130" stroke="#546e7a" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#u12fhp_u12hj-agr)"/>
-<text x="125" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">V_plovilo = 1,2 m/s</text>
+  <!-- Krov nadgradnje (kabina) -->
+  <rect x="170" y="108" width="160" height="42" fill="#909fa8" stroke="#3a4a56" stroke-width="1.4" />
+  <rect x="186" y="116" width="34" height="22" rx="2" fill="#c5e1f0" stroke="#3a4a56" stroke-width="0.6" />
+  <rect x="230" y="116" width="34" height="22" rx="2" fill="#c5e1f0" stroke="#3a4a56" stroke-width="0.6" />
+  <rect x="274" y="116" width="34" height="22" rx="2" fill="#c5e1f0" stroke="#3a4a56" stroke-width="0.6" />
+  <!-- ================== PUMPNI AGREGAT (unutar trupa) ================== -->
+  <!-- Usisna cijev (vertikalna) -->
+  <rect x="208" y="200" width="34" height="42" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Otvor usisa kroz dno (port preko hatched dna) -->
+  <rect x="212" y="244" width="26" height="14" fill="url(#u12fhp_voda)" />
+  <!-- Voda u usisnoj cijevi -->
+  <rect x="212" y="200" width="26" height="42" fill="url(#u12fhp_voda)" />
 
-<!-- ===== INFO PANEL (bottom-right) ===== -->
-<rect x="44" y="310" width="540" height="60" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
-<text x="58" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">A = π·(0,120)²/4 = 1,131·10⁻² m²   ·   ṁ = ρ·A·v = 1005·1,131·10⁻²·8,5 = <tspan font-weight="700" fill="#0f766e">96,6 kg/s</tspan></text>
-<text x="58" y="355" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">Fp = ρ·A·v_mlaz² = 1005·1,131·10⁻²·72,25 = <tspan font-weight="700" fill="#b42318">820 N</tspan>   ·   P = Fp·V_plovilo = 820·1,2 = <tspan font-weight="700" fill="#6d2694">984 W ≈ 1,0 kW</tspan></text>
+  <!-- Kuciste pumpe (krug s lopaticama) -->
+  <circle cx="296" cy="218" r="28" fill="#dfe6eb" stroke="#3a4a56" stroke-width="1.6" />
+  <circle cx="296" cy="218" r="9" fill="#3a4a56" />
+  <!-- Tri lopatice -->
+  <path d="M 296,218 L 314,206 Q 318,216 312,224 Z" fill="#7a8a96" stroke="#3a4a56" stroke-width="0.8" />
+  <path d="M 296,218 L 286,196 Q 296,192 304,198 Z" fill="#7a8a96" stroke="#3a4a56" stroke-width="0.8" />
+  <path d="M 296,218 L 278,224 Q 280,234 290,236 Z" fill="#7a8a96" stroke="#3a4a56" stroke-width="0.8" />
+  <!-- Spojni vod od pumpe do mlaznice (horizontalan, ispunjen vodom) -->
+  <rect x="324" y="210" width="118" height="20" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="326" y="212" width="116" height="16" fill="url(#u12fhp_voda)" />
 
-<!-- Note: suction is vertical so no horizontal momentum from inlet -->
-<text x="602" y="335" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" font-style="italic">Ulaz je vertikalan →</text>
-<text x="602" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" font-style="italic">horizontalni impuls = 0.</text>
-<text x="602" y="365" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" font-style="italic">Potisak = ṁ · v_mlaz.</text>
-</svg>
+  <!-- Spoj usisne cijevi i pumpe (kratki spoj) -->
+  <rect x="242" y="212" width="26" height="14" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="244" y="214" width="24" height="10" fill="url(#u12fhp_voda)" />
+
+  <!-- Mlaznica (konfuzor) na krmenom kraju -->
+  <path d="M 442,200 L 478,212 L 478,228 L 442,240 Z" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.4" />
+  <!-- Voda u mlaznici (konvergira) -->
+  <path d="M 444,202 L 476,213 L 476,227 L 444,238 Z" fill="url(#u12fhp_voda)" />
+
+  <!-- ================== USIS - strelica prema gore (voda ulazi) ================== -->
+  <line x1="225" y1="304" x2="225" y2="266" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u12fhp_aBlue)" />
+  <!-- ================== IZLAZNI MLAZ (zona iza krme) ================== -->
+  <!-- Mlaz vode izlazi udesno -->
+  <path d="M 478,210 L 552,212 L 552,228 L 478,230 Z" fill="url(#u12fhp_vodaJet)" stroke="#5b9ec9" stroke-width="0.6" />
+  <!-- Kapljice mlaza -->
+  <circle cx="540" cy="218" r="2.4" fill="#5b9ec9" opacity="0.6" />
+  <circle cx="528" cy="224" r="1.8" fill="#5b9ec9" opacity="0.6" />
+  <circle cx="546" cy="226" r="1.6" fill="#5b9ec9" opacity="0.5" />
+
+  <!-- Strelica brzine mlaza v_mlaz (CRVENA - ulazna velicina iz koje racunamo F_p) -->
+  <line x1="500" y1="194" x2="556" y2="194" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u12fhp_aR)" />
+  <!-- ================== POTISAK F_p (ZELENA - izlazna sila na plovilo) ================== -->
+  <!-- Reakcijski potisak djeluje na plovilo u smjeru gibanja (ulijevo) -->
+  <line x1="200" y1="178" x2="120" y2="178" stroke="#1e8449" stroke-width="3.0" marker-end="url(#u12fhp_aG)" />
+  <!-- ================== BRZINA PLOVILA V_plovilo (siva isprekidana) ================== -->
+  <line x1="100" y1="128" x2="60" y2="128" stroke="#5a6a78" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#u12fhp_aGray)" />
+  <!-- ================== KONTROLNI VOLUMEN (isprekidani okvir oko pumpnog sustava) ================== -->
+  <rect x="200" y="196" width="276" height="60" fill="none" stroke="#8e44ad" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.85" />
+  <line x1="338" y1="173" x2="338" y2="196" stroke="#8e44ad" stroke-width="0.8" stroke-dasharray="2,2" />
+
+  <!-- ================== KOTA d (promjer mlaznice exit, leader-callout zbog male geometrije) ================== -->
+  <!-- Leader linija od presjeka mlaznice do oznake -->
+  <!-- Tik-crte na ulaznoj tocki -->
+  <!-- Label -->
+  <!-- ================== OZNAKE FLUIDA ================== -->
+  <!-- ================== LEGENDA SMJERA ================== -->
+  <rect x="40" y="402" width="290" height="64" rx="8" fill="#f4faf6" stroke="#1e8449" stroke-width="1.1" />
+  <line x1="52" y1="432" x2="74" y2="432" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u12fhp_aR)" />
+  <line x1="52" y1="448" x2="74" y2="448" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u12fhp_aG)" />
+  <line x1="52" y1="462" x2="74" y2="462" stroke="#5a6a78" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#u12fhp_aGray)" />
+  <!-- ================== DESNI PANEL: FORMULE ================== -->
+  <rect x="594" y="14" width="352" height="472" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+
+  <!-- Header bar -->
+  <rect x="594" y="14" width="352" height="36" rx="12" fill="#1565c0" />
+  <rect x="594" y="32" width="352" height="18" fill="#1565c0" />
+  <!-- ================== BLOK 1: Povrsina mlaznice ================== -->
+  <line x1="614" y1="134" x2="926" y2="134" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- ================== BLOK 2: Maseni protok ================== -->
+  <line x1="614" y1="230" x2="926" y2="230" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- ================== BLOK 3: Potisak (reakcijska sila) ================== -->
+  <line x1="614" y1="308" x2="926" y2="308" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- ================== BLOK 4: Snaga mlaza ================== -->
+  <!-- ================== REZULTATI BADGE ================== -->
+  <rect x="614" y="396" width="312" height="50" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <!-- Sazetak italic -->
+  <line x1="478" y1="220" x2="510" y2="268" stroke="#b7600c" stroke-width="0.9" />
+  <line x1="475" y1="212" x2="481" y2="212" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="475" y1="228" x2="481" y2="228" stroke="#b7600c" stroke-width="1.2" />
+  <text x="40" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Bocni presjek plovila i mlaznice</text>
+
+  <text x="46" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0">razina rijeke</text>
+
+  <text x="250" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">plovni bager</text>
+
+  <text x="296" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">pumpa</text>
+
+  <text x="237" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0">usis</text>
+  <text x="237" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(v ≈ 0)</text>
+
+  <text x="528" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#c0392b"><tspan font-style="italic" font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">mlaz</tspan> = 8,5 m/s</text>
+
+  <text x="160" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1e8449"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">p</tspan> = 820 N</text>
+
+  <text x="80" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">V</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">plovilo</tspan></text>
+  <text x="80" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">1,2 m/s</text>
+
+  <text x="338" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" font-style="italic" fill="#8e44ad">kontrolni volumen (CV)</text>
+  <text x="380" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#0d47a1">rijecna voda</text>
+  <text x="380" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">ρ = 1005 kg/m³</text>
+
+  <text x="52" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#5a6a78">SMJER SILA I BRZINA</text>
+  <text x="82" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">mlaz vode prema krmi (izlaz)</text>
+  <text x="82" y="452" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">reakcijski potisak na plovilo</text>
+  <text x="82" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">brzina plovidbe</text>
+
+  <text x="770" y="38" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Potisak hidromlaznog pogona</text>
+
+  <text x="770" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Povrsina presjeka mlaznice</text>
+  <text x="770" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">A</tspan> = π<tspan font-style="italic">d</tspan>² / 4</text>
+  <text x="770" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">A</tspan> = 1,131·10⁻² m²</text>
+  <text x="770" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Maseni protok mlaza</text>
+  <text x="770" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">ṁ</tspan> = ρ <tspan font-style="italic">A</tspan> <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">mlaz</tspan></text>
+  <text x="770" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">ṁ</tspan> = 1005 · 1,131·10⁻² · 8,5</text>
+  <text x="770" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 96,5 kg/s</text>
+  <text x="770" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Reakcijski potisak na plovilo</text>
+  <text x="770" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">p</tspan> = <tspan font-style="italic">ṁ</tspan> (<tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">mlaz</tspan> − 0)</text>
+  <text x="770" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">p</tspan> = 96,5 · 8,5 ≈ 820 N</text>
+  <text x="770" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Kineticka snaga mlaza (neto korisna)</text>
+  <text x="770" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">P</tspan> ≈ ½ <tspan font-style="italic">ṁ</tspan> <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">mlaz</tspan>²</text>
+  <text x="770" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">P</tspan> = 0,5 · 96,5 · 8,5² ≈ 3,5 kW</text>
+
+  <text x="770" y="413" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="688" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">p</tspan> = 820 N</text>
+  <text x="852" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">P</tspan> ≈ 3,5 kW</text>
+
+  <text x="770" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Potisak = promjena kolicine gibanja vode kroz kontrolni volumen</text>
+<text x="514" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">d</tspan> = 120 mm</text>
+
+  </svg>

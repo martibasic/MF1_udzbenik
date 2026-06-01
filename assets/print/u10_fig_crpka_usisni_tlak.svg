@@ -1,89 +1,223 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" role="img" aria-labelledby="u10fcut_u10pu-title u10fcut_u10pu-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="u10fcut-title u10fcut-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
+  <title id="u10fcut-title">Usisni vod servisne crpke i pad tlačne visine od A do S</title>
+  <desc id="u10fcut-desc">Lijevo: bazen A sa slobodnom površinom, vertikalni usisni vod D=80 mm, L=4,5 m, te crpka S na visini z_S=6,6 m. Strelica protoka pokazuje smjer vode prema gore. Desno: stupac tlačne visine od 0 m u A do −8,30 m manometarski u S i +1,90 m apsolutno, s rezervom 1,65 m nad naponskom visinom pare 0,25 m.</desc>
+
   <defs>
-    <linearGradient id="u10fcut_u10pu-wg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <linearGradient id="u10fcut-voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
     </linearGradient>
-    <pattern id="u10fcut_u10pu-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+    <pattern id="u10fcut-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-    <marker id="u10fcut_u10pu-arrG" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
+    <marker id="u10fcut-flow" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
     </marker>
-    <marker id="u10fcut_u10pu-arrR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#b42318"/>
+    <marker id="u10fcut-pr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u10fcut_u10pu-arrRrev" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#b42318"/>
+    <marker id="u10fcut-dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u10fcut_u10pu-arrD" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#546e7a"/>
+    <marker id="u10fcut-dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u10fcut_u10pu-arrDrev" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#546e7a"/>
+    <marker id="u10fcut-bar" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#1565c0" />
+    </marker>
+    <marker id="u10fcut-barL" markerWidth="7" markerHeight="6" refX="1" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="940" height="400" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <title id="u10fcut_u10pu-title">U10 T2 – Usisni tlak servisne crpke</title>
-  <desc id="u10fcut_u10pu-desc">Servisna crpka usisava vodu iz donjeg rezervoara na visinu z_S=6,6 m. D=80 mm, L=4,5 m, λ=0,030, Σξ=1,6. v=2,78 m/s, p_S,abs=1,90 m(vodeni stup). Rezerva 1,65 m nad parom.</desc>
-  <!-- Titles -->
-  <!-- === Basin A === -->
-  <!-- z_S=6,6m: scale 30px/m → 6,6m = 198px. A surface at y=285, pump at y=285-198=87 -->
-  <rect x="40" y="100" width="10" height="248" fill="#8090a0"/>
-  <rect x="40" y="285" width="140" height="60" fill="url(#u10fcut_u10pu-sraf)"/>
-  <rect x="40" y="245" width="140" height="40" fill="url(#u10fcut_u10pu-wg)" stroke="#546e7a" stroke-width="1.5"/>
-  <rect x="176" y="285" width="10" height="60" fill="#8090a0"/>
-  <line x1="40" y1="245" x2="188" y2="245" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="5 3"/>
-  <circle cx="90" cy="255" r="10" fill="#173043"/>
-  <text x="90" y="259" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">A</text>
-  <!-- Suction pipe: horizontal from basin (186,245) to vertical at x=226, then up to pump at y=87 -->
-  <!-- Horizontal section -->
-  <rect x="184" y="235" width="66" height="14" fill="url(#u10fcut_u10pu-wg)" stroke="#546e7a" stroke-width="1.5"/>
-  <!-- Vertical section -->
-  <rect x="242" y="89" width="14" height="158" fill="url(#u10fcut_u10pu-wg)" stroke="#546e7a" stroke-width="1.5"/>
-  <!-- z_S dimension: from A surface (y=245) to pump (y=89) at x=160 -->
-  <line x1="163" y1="89" x2="163" y2="243" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u10fcut_u10pu-arrDrev)" marker-end="url(#u10fcut_u10pu-arrD)"/>
-  <rect x="82" y="154" width="74" height="22" rx="4" fill="#ffffff" stroke="#d3d9de" stroke-width="1"/>
-  <text x="119" y="169" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#546e7a" text-anchor="middle">z_S=6,6 m</text>
-  <!-- Pump symbol at (260,87) center -->
-  <circle cx="266" cy="76" r="28" fill="#fffef6" stroke="#c49a0a" stroke-width="2.5"/>
-  <text x="266" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#173043" text-anchor="middle" font-weight="700">⚙</text>
-  <text x="266" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#c49a0a" text-anchor="middle">crpka S</text>
-  <!-- pipe labels -->
-  <text x="215" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">D=80 mm</text>
-  <text x="215" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">L=4,5 m, λ=0,030</text>
-  <text x="215" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">Σξ=1,6</text>
-  <!-- Flow arrow -->
-  <line x1="248" y1="195" x2="248" y2="120" stroke="#0f766e" stroke-width="3" marker-end="url(#u10fcut_u10pu-arrG)"/>
-  <text x="264" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#0f766e">v=2,78 m/s</text>
-  <!-- === FORMULA BOX (Right side) === -->
-  <rect x="380" y="98" width="510" height="260" rx="12" fill="#fffef6" stroke="#c49a0a" stroke-width="2"/>
-  <text x="635" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#173043" text-anchor="middle">Rješenje – Realni Bernoulli A→S</text>
-  <line x1="390" y1="132" x2="880" y2="132" stroke="#d3d9de" stroke-width="1.2"/>
-  <!-- Column headers -->
-  <text x="450" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">Veličina</text>
-  <text x="750" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">Iznos</text>
-  <line x1="390" y1="158" x2="880" y2="158" stroke="#d3d9de" stroke-width="1"/>
-  <!-- Rows -->
-  <text x="395" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">v = √(2Δp/ρ)  ili  Q/A</text>
-  <text x="395" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">v²/(2g)</text>
-  <text x="395" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h_l = λ(L/D)v²/(2g)</text>
-  <text x="395" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h_loc = Σξ · v²/(2g)</text>
-  <text x="395" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h_w = h_l + h_loc</text>
-  <line x1="390" y1="264" x2="880" y2="264" stroke="#d3d9de" stroke-width="1"/>
-  <text x="395" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p_S/γ = -(z_S + v²/2g + h_w)</text>
-  <line x1="390" y1="292" x2="880" y2="292" stroke="#d3d9de" stroke-width="1"/>
-  <text x="395" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p_S,abs/γ = H_atm + p_S/γ</text>
-  <text x="395" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Rezerva = p_S,abs/γ - p_v/γ</text>
-  <!-- Values -->
-  <text x="720" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">2,78 m/s</text>
-  <text x="720" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">0,395 m</text>
-  <text x="720" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">0,667 m</text>
-  <text x="720" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">0,632 m</text>
-  <text x="720" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">1,299 m</text>
-  <text x="720" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#b42318">−8,294 m (man.)</text>
-  <text x="720" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">1,906 m abs.</text>
-  <text x="720" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">1,656 m ≫ 0 ✓</text>
-</svg>
+
+  <!-- okvirni paneli -->
+  <rect x="16" y="16" width="464" height="468" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="496" y="16" width="448" height="468" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+
+  <!-- ===================== LIJEVI PANEL: fizikalni model ===================== -->
+  <!-- Vertikalna skala: z_S = 6,6 m mapira na ~210 px (32 px/m).
+       Slobodna povr&#353;ina A na y = 410. Ulaz u crpku S na y = 200. -->
+
+  <!-- == BAZEN A (donji desno) == -->
+  <!-- Bazen je &#353;iri otvoreni rezervoar: lijeva i desna stijenka + dno, voda unutra. -->
+  <!-- dno bazena -->
+  <rect x="170" y="445" width="280" height="14" fill="url(#u10fcut-hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- lijeva stijenka bazena -->
+  <rect x="170" y="395" width="10" height="50" fill="url(#u10fcut-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- desna stijenka bazena -->
+  <rect x="440" y="395" width="10" height="50" fill="url(#u10fcut-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- voda u bazenu -->
+  <rect x="180" y="410" width="260" height="35" fill="url(#u10fcut-voda)" />
+  <!-- slobodna povr&#353;ina A -->
+  <line x1="180" y1="410" x2="440" y2="410" stroke="#1565c0" stroke-width="2" />
+
+  <!-- to&#269;ka A na slobodnoj povr&#353;ini, ne na ulazu u vod (referentna razina) -->
+  <circle cx="395" cy="410" r="5.5" fill="#ffffff" stroke="#1565c0" stroke-width="2" />
+  <!-- == USISNI VOD == -->
+  <!-- horizontalni ulazni segment kratko ispod povr&#353;ine + lakat + vertikalni segment do crpke. -->
+  <!-- vanjska kontura voda (cijev): dvije linije iznad i ispod fluida -->
+  <!-- vertikalni dio (x = 240..262), od y=425 do y=205 -->
+  <rect x="240" y="200" width="22" height="225" fill="url(#u10fcut-voda)" />
+  <line x1="240" y1="200" x2="240" y2="425" stroke="#3a4a56" stroke-width="1.4" />
+  <line x1="262" y1="200" x2="262" y2="425" stroke="#3a4a56" stroke-width="1.4" />
+
+  <!-- usisni ko&#353; (sito) na dnu voda u bazenu -->
+  <rect x="234" y="425" width="34" height="6" fill="#7a8a96" stroke="#3a4a56" stroke-width="1" />
+  <line x1="238" y1="431" x2="238" y2="437" stroke="#3a4a56" stroke-width="1" />
+  <line x1="244" y1="431" x2="244" y2="437" stroke="#3a4a56" stroke-width="1" />
+  <line x1="250" y1="431" x2="250" y2="437" stroke="#3a4a56" stroke-width="1" />
+  <line x1="256" y1="431" x2="256" y2="437" stroke="#3a4a56" stroke-width="1" />
+  <line x1="262" y1="431" x2="262" y2="437" stroke="#3a4a56" stroke-width="1" />
+  <!-- strelica protoka (smjer toka prema gore) -->
+  <line x1="251" y1="380" x2="251" y2="265" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u10fcut-flow)" />
+  <line x1="232" y1="320" x2="248" y2="320" stroke="#1565c0" stroke-width="0.7" />
+  <!-- == CRPKA S na vrhu voda == -->
+  <!-- kvadrat s kru&#382;nim rotorom kao stilizirana crpka -->
+  <rect x="218" y="160" width="66" height="40" rx="6" fill="#f1f4f7" stroke="#3a4a56" stroke-width="1.6" />
+  <circle cx="251" cy="180" r="14" fill="#ffffff" stroke="#3a4a56" stroke-width="1.4" />
+  <path d="M251,180 L260,172 M251,180 L260,188 M251,180 L242,175 M251,180 L242,185" stroke="#3a4a56" stroke-width="1.3" fill="none" />
+  <!-- to&#269;ka S na ulazu u crpku (gornji rub fluida unutar voda) -->
+  <circle cx="251" cy="200" r="5.5" fill="#ffffff" stroke="#c0392b" stroke-width="2" />
+  <!-- == KOTA z_S (vertikalno, lijevo od voda) == -->
+  <!-- pomo&#263;ne (extension) linije od geometrije do dim osi na x=110 -->
+  <!-- tik-crte -->
+  <!-- dimenzijska linija -->
+  <!-- oznaka kote -->
+  <!-- == KOTA L (du&#382; voda, desno od cijevi) == -->
+  <!-- == KOTA D (promjer cijevi) - leader prema gornjem dijelu voda == -->
+  <line x1="240" y1="232" x2="170" y2="246" stroke="#5a6a78" stroke-width="0.7" />
+  <line x1="262" y1="232" x2="170" y2="246" stroke="#5a6a78" stroke-width="0.7" />
+  <!-- == Parametri voda (gore lijevo iznad bazena) == -->
+  <rect x="36" y="60" width="200" height="56" rx="6" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1" />
+  <!-- == Iscrtkana referentna razina kroz A (za podsje&#263;anje na manometarsku nulu) == -->
+  <line x1="180" y1="410" x2="438" y2="410" stroke="#7a8a96" stroke-width="0.9" stroke-dasharray="6,4" />
+
+  <!-- ===================== DESNI PANEL: razlaganje tla&#269;ne visine ===================== -->
+  <!-- Vertikalna os tla&#269;ne visine: nula na y=410 (poravnano s povr&#353;inom A lijevo).
+       Skala: 1 m = 18 px. Raspon prikaza od +12 m (y=410-216=194) do -10 m (y=410+180=590)
+       ali canvas seze do y=480 pa raspon u praksi: nula y=410, -10 m bi bilo y=590 (izvan).
+       Skaliranje: koristim 1 m = 16 px, raspon -9 do +12 m. Nula y=300 (sredina panela).
+  -->
+
+  <!-- redefiniram skalu: 1 m = 17 px, nula na y = 270.
+       +10,2 m &#8594; y = 270 - 173 = 97
+       -8,30 m &#8594; y = 270 + 141 = 411
+       +1,90 m &#8594; y = 270 - 32 = 238
+       +0,25 m &#8594; y = 270 - 4 = 266
+  -->
+
+  <!-- nula linija (povr&#353;ina A, manometarska nula) -->
+  <line x1="520" y1="270" x2="760" y2="270" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
+
+  <!-- vertikalna os (skalna) -->
+  <line x1="560" y1="80" x2="560" y2="440" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- tickovi os: na svakih 2 m, kratki -->
+  <g font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="end">
+    <line x1="554" y1="100" x2="566" y2="100" stroke="#3a4a56" stroke-width="0.9" /><line x1="554" y1="134" x2="566" y2="134" stroke="#3a4a56" stroke-width="0.9" /><line x1="554" y1="168" x2="566" y2="168" stroke="#3a4a56" stroke-width="0.9" /><line x1="554" y1="202" x2="566" y2="202" stroke="#3a4a56" stroke-width="0.9" /><line x1="554" y1="236" x2="566" y2="236" stroke="#3a4a56" stroke-width="0.9" /><line x1="554" y1="270" x2="566" y2="270" stroke="#3a4a56" stroke-width="1.1" /><line x1="554" y1="304" x2="566" y2="304" stroke="#3a4a56" stroke-width="0.9" /><line x1="554" y1="338" x2="566" y2="338" stroke="#3a4a56" stroke-width="0.9" /><line x1="554" y1="372" x2="566" y2="372" stroke="#3a4a56" stroke-width="0.9" /><line x1="554" y1="406" x2="566" y2="406" stroke="#3a4a56" stroke-width="0.9" /><text x="551" y="104">+10</text>
+    <text x="551" y="138">+8</text>
+    <text x="551" y="172">+6</text>
+    <text x="551" y="206">+4</text>
+    <text x="551" y="240">+2</text>
+    <text x="551" y="274">0</text>
+    <text x="551" y="308">−2</text>
+    <text x="551" y="342">−4</text>
+    <text x="551" y="376">−6</text>
+    <text x="551" y="410">−8</text>
+  </g>
+  <!-- == LIJEVI STUPAC: razlomak pada na manometarskoj strani == -->
+  <!-- bar 1: z_S = 6,6 m (smeda komponenta) -->
+  <!-- bar 2: v_s^2/(2g) = 0,395 m (plava) -->
+  <rect x="590" y="382" width="60" height="7" fill="#1565c0" fill-opacity="0.30" stroke="#1565c0" stroke-width="1.2" />
+  <line x1="650" y1="385" x2="690" y2="395" stroke="#1565c0" stroke-width="0.7" />
+  <!-- bar 3: h_w,s = 1,30 m (zeleno-smeda - gubici) -->
+  <rect x="590" y="389" width="60" height="22" fill="#6b3a0a" fill-opacity="0.32" stroke="#6b3a0a" stroke-width="1.2" />
+  <line x1="650" y1="402" x2="694" y2="426" stroke="#6b3a0a" stroke-width="0.7" />
+  <!-- ukupna kota desno od stupca: 0 .. -8,30 m -->
+  <line x1="664" y1="270" x2="664" y2="411" stroke="#c0392b" stroke-width="1.6" marker-start="url(#u10fcut-dimL)" marker-end="url(#u10fcut-dim)" />
+  <!-- == DESNI STUPAC: atmosferski +10,2 m i preostali apsolutni == -->
+  <!-- atmosferski stupac od 0 do +10,2 m (svjetlo plavi) -->
+  <rect x="800" y="97" width="60" height="173" fill="#aed6f1" fill-opacity="0.55" stroke="#1565c0" stroke-width="1.2" />
+  <!-- apsolutna razina u S na +1,90 m (y = 270 - 32 = 238) -->
+  <line x1="780" y1="238" x2="884" y2="238" stroke="#1e8449" stroke-width="2" stroke-dasharray="4,3" />
+  <!-- naponska visina pare 0,25 m (crvena puna traka na +0,25 m) -->
+  <rect x="800" y="266" width="60" height="4" fill="#c0392b" stroke="#c0392b" stroke-width="1" />
+  <line x1="866" y1="280" x2="906" y2="294" stroke="#c0392b" stroke-width="0.7" />
+  <!-- rezerva 1,65 m izme&#273;u +1,90 i +0,25: zeleni vertikalni kotni segment desno od stupca -->
+  <line x1="880" y1="238" x2="880" y2="266" stroke="#1e8449" stroke-width="1.6" marker-start="url(#u10fcut-dimL)" marker-end="url(#u10fcut-dim)" />
+  <!-- == REZULTATI badge na dnu desnog panela == -->
+  <rect x="516" y="436" width="420" height="40" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="180" y1="410" x2="100" y2="410" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="240" y1="200" x2="100" y2="200" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="100" y1="410" x2="116" y2="410" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="100" y1="200" x2="116" y2="200" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="108" y1="406" x2="108" y2="204" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u10fcut-dimL)" marker-end="url(#u10fcut-dim)" />
+  <line x1="262" y1="200" x2="335" y2="200" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="262" y1="425" x2="335" y2="425" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="328" y1="200" x2="328" y2="216" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="328" y1="425" x2="328" y2="409" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="328" y1="208" x2="328" y2="417" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u10fcut-dimL)" marker-end="url(#u10fcut-dim)" />
+  <rect x="590" y="270" width="60" height="112" fill="#b7600c" fill-opacity="0.20" stroke="#b7600c" stroke-width="1.2" />
+  <text x="36" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Usisni vod od bazena A do crpke S</text>
+
+  <text x="406" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0d47a1">A</text>
+  <text x="406" y="421" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>, v ≈ 0)</text>
+
+  <text x="282" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">usisni koš (ξ uključen u ∑ξ)</text>
+
+  <text x="228" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#1565c0">Q = 14 L/s</text>
+  <text x="228" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#1565c0">v<tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 2,78 m/s</text>
+
+  <text x="295" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">crpka</text>
+  <text x="295" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(potisak na tlačnu stranu)</text>
+
+  <text x="222" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#c0392b">S</text>
+  <text x="222" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#5a6a78">(ulaz u crpku)</text>
+
+  <text x="346" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(dužina usisa)</text>
+
+  <text x="160" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="end" fill="#1a2530"><tspan font-style="italic">D</tspan> = 80 mm</text>
+  <text x="160" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#5a6a78">A<tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 5,03·10⁻³ m²</text>
+
+  <text x="46" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1a2530">Zadano:</text>
+  <text x="46" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">λ = 0,030,  ∑ξ = 1,6</text>
+  <text x="46" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">H<tspan baseline-shift="sub" font-size="0.7em">atm</tspan> = 10,2 m,  p<tspan baseline-shift="sub" font-size="0.7em">v</tspan>/γ = 0,25 m</text>
+
+  <text x="516" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Bernoulli A → S: pad tlačne visine na ulazu u crpku</text>
+
+  <text x="528" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1a2530">p/γ</text>
+  <text x="528" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">[m H₂O]</text>
+
+  <text x="620" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">geodetska</text>
+
+  <text x="694" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan>²/(2g) = 0,395 m</text>
+
+  <text x="620" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a3000"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w,s</tspan></text>
+  <text x="698" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a3000">1,30 m (gubici)</text>
+
+  <text x="670" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">−8,30 m</text>
+  <text x="670" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(manom.)</text>
+  <text x="670" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">p<tspan baseline-shift="sub" font-size="0.7em">S</tspan>/γ</text>
+
+  <text x="830" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#0d47a1">H<tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
+  <text x="830.0" y="174.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#0d47a1">= 10,2 m</text>
+  <text x="830" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">atmosfera</text>
+
+  <text x="776" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="end" fill="#1e8449">p<tspan baseline-shift="sub" font-size="0.7em">S,aps</tspan>/γ</text>
+  <text x="776" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="end" fill="#1e8449">1,90 m</text>
+
+  <text x="908" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b">p<tspan baseline-shift="sub" font-size="0.7em">v</tspan>/γ = 0,25 m</text>
+
+  <text x="888" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449">1,65 m</text>
+  <text x="888" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">rezerva</text>
+
+  <text x="528" y="453" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#5a6a78">REZULTATI</text>
+  <text x="528" y="469" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-weight="700" fill="#c0392b">p<tspan baseline-shift="sub" font-size="0.7em">S</tspan>/γ = −8,30 m</tspan>  |  <tspan font-weight="700" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">S,aps</tspan>/γ = 1,90 m</tspan>  |  <tspan font-weight="700" fill="#1e8449">rezerva 1,65 m → bez kavitacije</tspan></text>
+<text x="86" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">z</tspan><tspan baseline-shift="sub" font-size="0.7em">S</tspan></text>
+  <text x="86.0" y="318.0" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c">= 6,6 m</text>
+
+  <text x="346" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b7600c"><tspan font-style="italic">L</tspan></text>
+  <text x="346.0" y="322.0" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c">= 4,5 m</text>
+  <text x="620" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">z</tspan><tspan baseline-shift="sub" font-size="0.7em">S</tspan></text>
+  <text x="620.0" y="348.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c">= 6,60 m</text>
+  </svg>

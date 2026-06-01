@@ -1,158 +1,306 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img"
-     aria-labelledby="u03fup_u3vT u03fup_u3vD" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u03fup_u3vT">Pregled poglavlja U03: Hidrostatika, raspodjela tlaka i manometrija</title>
-  <desc id="u03fup_u3vD">Tri panela: (1) fizikalni sustav – zatvoreni spremnik s linearnom raspodjelom tlaka i kapilarnom kotom h; (2) ključne jednadžbe – p = p₀ + ρgh i dp/dz = −ρg; (3) primjena – hidrotehnička brana s trokutnom raspodjelom tlaka.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-labelledby="u03fup_title u03fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u03fup_title">Pregled poglavlja 3 - Hidrostatika, raspodjela tlaka i manometrija</title>
+  <desc id="u03fup_desc">Tri panela uvodnog pregleda. Lijevo: otvoreni spremnik vode s dubinom h, slobodnom povrsinom i linearnom hidrostatskom raspodjelom tlaka p = p0 + ro g h. Sredina gore: zatvoreni U-manometar sa zivom koji ocitava pretlak iz razlike razina Delta h. Sredina dolje: diferencijalni manometar izmedju dvaju paralelnih vodova mjeri Delta p preko visine zive. Desno: panel kljucnih jednadzbi - diferencijalni i integralni oblik, piezometarska visina, apsolutni i manometarski tlak, radni postupak kroz manometar.</desc>
+
   <defs>
-    <marker id="u03fup_u3vaR"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u03fup_u3vaRev" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u03fup_u3vaG"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/></marker>
-    <marker id="u03fup_u3vaDim"  markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u03fup_u3vaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u03fup_u3vaBlu" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/></marker>
-    <linearGradient id="u03fup_u3vfl" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#7fb3d3"/>
+    <linearGradient id="u03fup_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u03fup_u3vpres" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#c0392b" stop-opacity="0"/><stop offset="100%" stop-color="#c0392b" stop-opacity="0.35"/>
+    <linearGradient id="u03fup_ziva" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b0b8c0" />
+      <stop offset="100%" stop-color="#808890" />
     </linearGradient>
-    <pattern id="u03fup_u3vhatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a9aa6" stroke-width="2"/>
+    <linearGradient id="u03fup_pres" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c0392b" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#c0392b" stop-opacity="0.55" />
+    </linearGradient>
+    <pattern id="u03fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
     </pattern>
+    <marker id="u03fup_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <marker id="u03fup_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u03fup_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
   </defs>
 
-  <rect width="900" height="460" fill="#f0f4f8"/>
-  <rect x="8" y="8" width="884" height="444" rx="14" fill="#f8f9fa" stroke="#dde3ea" stroke-width="1.5"/>
+  <!-- Pozadina i okvir -->
+  <rect width="980" height="500" fill="#ffffff" />
+  <rect x="10" y="10" width="960" height="480" rx="14" fill="#fbfdff" stroke="#dde3ea" stroke-width="1.4" />
 
-  <!-- Naslov -->
+  <!-- =========================================================
+       PANEL 1 (LIJEVO) - Hidrostatska raspodjela u otvorenom spremniku
+       Okvir x=20..360, y=22..478
+  ========================================================= -->
+  <rect x="20" y="22" width="340" height="456" rx="10" fill="#f4f9fd" stroke="#cfe0ee" stroke-width="1.3" />
+  <!-- spremnik: otvoren odozgo, stijenke i dno punog presjeka -->
+  <!-- dno -->
+  <rect x="78" y="408" width="200" height="14" fill="url(#u03fup_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- lijeva stijenka (od y=110 do y=408) -->
+  <rect x="78" y="110" width="14" height="298" fill="url(#u03fup_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- desna stijenka -->
+  <rect x="264" y="110" width="14" height="298" fill="url(#u03fup_hatch)" stroke="#3a4a56" stroke-width="1.3" />
 
-  <!-- ════════════════════════════════════
-       PANEL 1 – Fizikalni sustav (x 20..390)
-       Zatvoreni spremnik, plinski prostor gore, fluid dolje,
-       raspodjela tlaka kao trokut desno
-       ════════════════════════════════════ -->
-  <rect x="20" y="46" width="370" height="406" rx="10" fill="#eaf4fb" stroke="#c8d8e8" stroke-width="1.3"/>
-  <text x="205" y="66" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1a2530" text-anchor="middle">Fizikalni sustav</text>
+  <!-- voda u spremniku (od slobodne povrsine y=152 do dna y=408) -->
+  <rect x="92" y="152" width="172" height="256" fill="url(#u03fup_voda)" />
 
-  <!-- Stijenke (hatch) -->
-  <!-- Dno -->
-  <rect x="80" y="380" width="220" height="12" fill="url(#u03fup_u3vhatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <!-- Lijeva stijenka -->
-  <rect x="68" y="100" width="12" height="280" fill="url(#u03fup_u3vhatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <!-- Desna stijenka -->
-  <rect x="300" y="100" width="12" height="280" fill="url(#u03fup_u3vhatch)" stroke="#4a6070" stroke-width="1.2"/>
-  <!-- Poklopac (gore) -->
-  <rect x="68" y="88" width="244" height="12" fill="url(#u03fup_u3vhatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <!-- slobodna povrsina (deblja plava linija) -->
+  <line x1="92" y1="152" x2="264" y2="152" stroke="#1565c0" stroke-width="2.2" />
 
-  <!-- Plinski prostor (p₀) -->
-  <rect x="80" y="100" width="220" height="72" fill="#f5f0e0" stroke="none"/>
-  <!-- Razina fluida (dashed) -->
-  <line x1="68" y1="172" x2="312" y2="172" stroke="#1565c0" stroke-width="1.8" stroke-dasharray="6,4"/>
-  <!-- p₀ labela desno od razine -->
-  <text x="320" y="169" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#8b5e00">p₀</text>
-  <!-- Plinski tlak simbol -->
-  <text x="190" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8b5e00" text-anchor="middle" font-style="italic">plin (p₀)</text>
+  <!-- atmosferski tlak iznad slobodne povrsine -->
+  <line x1="178" y1="134" x2="178" y2="148" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u03fup_aB)" />
 
-  <!-- Fluid -->
-  <rect x="80" y="172" width="220" height="208" fill="url(#u03fup_u3vfl)"/>
+  <!-- oznaka vode -->
+  <!-- karakteristicna tocka A na dubini h -->
+  <circle cx="175" cy="334" r="3.5" fill="#1a2530" />
+  <!-- horizontalna pomocna linija A do desne stjenke -->
+  <line x1="175" y1="334" x2="264" y2="334" stroke="#1565c0" stroke-width="0.6" stroke-dasharray="3,3" />
 
-  <!-- Strelice tlaka unutar fluida (horizontalne, prema desnoj stjenki, rastu s dubinom) -->
-  <line x1="142" y1="210" x2="172" y2="210" stroke="#1565c0" stroke-width="1.2" marker-end="url(#u03fup_u3vaBlu)"/>
-  <line x1="130" y1="250" x2="172" y2="250" stroke="#1565c0" stroke-width="1.3" marker-end="url(#u03fup_u3vaBlu)"/>
-  <line x1="115" y1="290" x2="172" y2="290" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u03fup_u3vaBlu)"/>
-  <line x1="98"  y1="330" x2="172" y2="330" stroke="#1565c0" stroke-width="1.7" marker-end="url(#u03fup_u3vaBlu)"/>
-  <line x1="80"  y1="370" x2="172" y2="370" stroke="#1565c0" stroke-width="2.0" marker-end="url(#u03fup_u3vaBlu)"/>
+  <!-- kota h: dubina od slobodne povrsine do tocke A (LIJEVO od spremnika) -->
+  <!-- extension lines -->
+  <!-- tik-crte -->
+  <!-- dim line -->
+  <!-- raspodjela tlaka: trokut DESNO od spremnika (vrh na razini slobodne povrsine, baza na dnu) -->
+  <polygon points="288,152 288,408 348,408" fill="url(#u03fup_pres)" stroke="#c0392b" stroke-width="1.4" />
 
-  <!-- Kota h (lijevo) -->
-  <line x1="58" y1="172" x2="64" y2="172" stroke="#b7600c" stroke-width="1"/>
-  <line x1="58" y1="380" x2="64" y2="380" stroke="#b7600c" stroke-width="1"/>
-  <line x1="61" y1="174" x2="61" y2="378" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fup_u3vaDimL)" marker-end="url(#u03fup_u3vaDim)"/>
-  <text x="48" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#b7600c" text-anchor="middle">h</text>
+  <!-- horizontalne strelice tlaka unutar trokuta (rastu s dubinom) -->
+  <line x1="290" y1="200" x2="302" y2="200" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u03fup_aB)" />
+  <line x1="290" y1="240" x2="312" y2="240" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u03fup_aB)" />
+  <line x1="290" y1="280" x2="322" y2="280" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u03fup_aB)" />
+  <line x1="290" y1="334" x2="334" y2="334" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u03fup_aB)" />
+  <line x1="290" y1="395" x2="346" y2="395" stroke="#1565c0" stroke-width="2.0" marker-end="url(#u03fup_aB)" />
 
-  <!-- Raspodjela tlaka (trokut desno od posude) -->
-  <!-- Trokut: vrh pri y=172 (p=p₀), baza pri y=380 (p=p₀+ρgh) -->
-  <polygon points="312,172 312,380 355,380" fill="#c0392b" fill-opacity="0.22" stroke="#c0392b" stroke-width="1.5"/>
-  <text x="358" y="383" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#c0392b">p_max</text>
-  <text x="325" y="169" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#c0392b">p₀</text>
+  <!-- oznake p_0 (vrh) i p (baza) -->
+  <!-- tocka A na pravcu raspodjele tlaka -->
+  <circle cx="300" cy="334" r="3" fill="#1565c0" />
+  <!-- caption ispod panela -->
+  <!-- =========================================================
+       PANEL 2 (SREDINA GORE) - Zatvoreni U-manometar sa zivom
+       Okvir x=372..672, y=22..248
+       Mjeri pretlak plina u spremniku.
+       Geometrija (y koordinate):
+        y=58  vrh spremnika (kapa)
+        y=64  unutarnji vrh spremnika
+        y=140 osvjetljena visina prikljucka (cijev iz spremnika)
+        y=152 dno cijevi
+        y=210 dno spremnika
+        Lijevi krak U-cijevi (otvoren odozgo): vanjski x=502..524, unutarnji x=504..522
+        Desni krak (otvoren u atmosferu): vanjski x=560..582, unutarnji x=562..580
+        Razina zive: lijeva (spojena s plinom, vise iznad nje) y=170, desna y=130 (gura ju atm pretlak nadolje? Ne. p_g > p_atm gura zivu u lijevom KRAKU NIZE i u desnom VISE. Lijeva razina y=180, desna y=130, Delta h = 50.
+        Dno U cijevi: y_top=210, y_bottom=224
+  ========================================================= -->
+  <rect x="372" y="22" width="300" height="226" rx="10" fill="#f8f4f9" stroke="#d8c4dc" stroke-width="1.3" />
+  <!-- ZATVORENI spremnik s plinom (lijevo): x=392..476, y=64..210 -->
+  <!-- gornja kapa -->
+  <rect x="388" y="58" width="92" height="6" fill="url(#u03fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- lijeva stijenka -->
+  <rect x="388" y="64" width="6" height="152" fill="url(#u03fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- desna stijenka (puna - port resava overlay) -->
+  <rect x="474" y="64" width="6" height="152" fill="url(#u03fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- donja kapa -->
+  <rect x="388" y="210" width="92" height="6" fill="url(#u03fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- unutarnji prostor (plin) -->
+  <rect x="394" y="64" width="80" height="146" fill="#ffffff" />
+  <!-- Prikljucna cijev (gornji + donji rub), unutar nje gas (bijelo) -->
+  <!-- cijev visina y=130..148, od desne stijenke spremnika do lijevog kraka U-cijevi -->
+  <rect x="480" y="132" width="22" height="14" fill="#ffffff" />
+  <line x1="480" y1="132" x2="504" y2="132" stroke="#3a4a56" stroke-width="1.3" />
+  <line x1="480" y1="146" x2="504" y2="146" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- port overlay preko desne stjenke spremnika (gas) -->
+  <rect x="474" y="133" width="6" height="12" fill="#ffffff" />
 
-  <!-- Jednadžba unutar panela -->
-  <rect x="82" y="395" width="218" height="28" rx="6" fill="white" stroke="#c8d8e8" stroke-width="1.2"/>
-  <text x="191" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1a2530" text-anchor="middle">p = p₀ + ρ·g·h</text>
+  <!-- U-cijev geometrija -->
+  <!-- Lijevi krak: vanjski x=502..524, unutarnji x=504..522. Otvoren odozdo do spojnice s cijevi i sustavom -->
+  <!-- Visina krakova: y=110 (vrh) do y=210 (dno). Mercury u lijevom kraku od y=180 do y=210. -->
+  <!-- Desni krak: x=560..582 unutarnji. Visina y=85 (vrh) do y=210 dno. Mercury y=130 do y=210. -->
+  <!-- Dno U cijevi spaja x=504..582 na y_top=210..y_bot=224 -->
 
-  <!-- ════════════════════════════════════
-       PANEL 2 – Jednadžbe (x 400..590)
-       ════════════════════════════════════ -->
-  <rect x="400" y="46" width="190" height="406" rx="10" fill="#eaf9f1" stroke="#b8e0c8" stroke-width="1.3"/>
-  <text x="495" y="66" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1a2530" text-anchor="middle">Ključne jednadžbe</text>
+  <!-- ZIVA (prvo) -->
+  <rect x="504" y="180" width="18" height="44" fill="url(#u03fup_ziva)" />
+  <rect x="562" y="130" width="18" height="94" fill="url(#u03fup_ziva)" />
+  <rect x="504" y="212" width="76" height="12" fill="url(#u03fup_ziva)" />
 
-  <!-- Osnovna jednadžba -->
-  <text x="495" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-style="italic" fill="#1a2530" text-anchor="middle">p = p₀ + ρgh</text>
-  <line x1="418" y1="128" x2="572" y2="128" stroke="#b8e0c8" stroke-width="1.0"/>
+  <!-- Plin iznad zive u lijevom kraku (od y=148 do y=180) - sirine 18 px -->
+  <rect x="504" y="148" width="18" height="32" fill="#ffffff" />
 
-  <!-- Diferencijalni oblik -->
-  <text x="495" y="165" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" fill="#1a2530" text-anchor="middle">dp/dz = −ρg</text>
-  <line x1="418" y1="178" x2="572" y2="178" stroke="#b8e0c8" stroke-width="1.0"/>
+  <!-- Otvoren prostor iznad zive u desnom kraku (zrak/atm) -->
+  <!-- (vec je bijelo izvan fluida) -->
 
-  <!-- Opis -->
-  <text x="495" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a6a4a" text-anchor="middle" font-style="italic">tlak raste linearno</text>
-  <text x="495" y="221" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a6a4a" text-anchor="middle" font-style="italic">s dubinom h</text>
-  <line x1="418" y1="232" x2="572" y2="232" stroke="#b8e0c8" stroke-width="1.0"/>
+  <!-- Stjenke U cijevi (overlay preko fluida) -->
+  <!-- lijevi krak -->
+  <line x1="502" y1="146" x2="502" y2="226" stroke="#3a4a56" stroke-width="1.3" />
+  <line x1="524" y1="146" x2="524" y2="210" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- vrh lijevog kraka spojen s cijevi (gornja kapa na lijevom kraku zatvara stijenku iznad cijevi) -->
+  <!-- gornji rub krakova: lijevi krak ima cap od y=146 prema gore? Ne - cijev ulazi sa strane. -->
+  <!-- Stjenka lijevog kraka iznad cijevi (od y=146 gore do gornjeg ruba) - nema je: krak je otvoren odozgo? Ne, krak je ZATVOREN i samo cijev ulazi sa strane. -->
+  <!-- Pa: lijevi krak ima gornji cap na y=146 (cijev ulazi izravno na vrh) -->
+  <line x1="502" y1="146" x2="524" y2="146" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- desni krak (otvoren odozgo u atmosferu) -->
+  <line x1="560" y1="100" x2="560" y2="210" stroke="#3a4a56" stroke-width="1.3" />
+  <line x1="582" y1="100" x2="582" y2="226" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- dno U cijevi -->
+  <line x1="502" y1="226" x2="582" y2="226" stroke="#3a4a56" stroke-width="1.5" />
+  <line x1="524" y1="210" x2="560" y2="210" stroke="#3a4a56" stroke-width="1.5" />
 
-  <!-- Piezometarska visina -->
-  <text x="495" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1a2530" text-anchor="middle">H_p = p/(ρg) + z</text>
-  <text x="495" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a6a4a" text-anchor="middle" font-style="italic">piezometarska visina</text>
-  <line x1="418" y1="290" x2="572" y2="290" stroke="#b8e0c8" stroke-width="1.0"/>
+  <!-- atmosfera iznad desnog kraka -->
+  <line x1="571" y1="104" x2="571" y2="124" stroke="#1565c0" stroke-width="1.2" marker-end="url(#u03fup_aB)" />
 
-  <!-- Diferencijalni manometar napomena -->
-  <text x="495" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530" text-anchor="middle" font-style="italic">Δp = ρ_ind·g·Δh</text>
-  <text x="495" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a6a4a" text-anchor="middle" font-style="italic">U-manometar</text>
-  <line x1="418" y1="344" x2="572" y2="344" stroke="#b8e0c8" stroke-width="1.0"/>
+  <!-- razine zive (horizontalne pomocne linije) -->
+  <line x1="524" y1="180" x2="606" y2="180" stroke="#5a6a78" stroke-width="0.6" stroke-dasharray="3,3" />
+  <line x1="582" y1="130" x2="606" y2="130" stroke="#5a6a78" stroke-width="0.6" stroke-dasharray="3,3" />
 
-  <!-- Kavitacija napomena -->
-  <rect x="415" y="352" width="160" height="56" rx="6" fill="#fff8e8" stroke="#e0c870" stroke-width="1.0"/>
-  <text x="495" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5c3d00" text-anchor="middle" font-weight="700">Pažnja: kavitacija</text>
-  <text x="495" y="385" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5c3d00" text-anchor="middle">p_abs ≥ p_para fluida</text>
-  <text x="495" y="399" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5c3d00" text-anchor="middle">→ limit usisne visine pumpe</text>
+  <!-- kota Delta h (desno od desnog kraka) -->
+  <!-- extension lines -->
+  <!-- tik-crte -->
+  <!-- dim line -->
+  <!-- oznaka ziva (na desnoj strani lijevog kraka kraj zive) -->
+  <!-- formula u dnu panela -->
+  <!-- =========================================================
+       PANEL 3 (SREDINA DOLJE) - Diferencijalni manometar
+       Okvir x=372..672, y=258..478
+       Dva paralelna voda s vodom, U-cijev sa zivom mjeri razliku tlakova.
+  ========================================================= -->
+  <rect x="372" y="258" width="300" height="220" rx="10" fill="#fdf2e9" stroke="#e8c8a0" stroke-width="1.3" />
+  <!-- Lijevi vod (visi tlak p_1) - horizontalna cijev s vodom -->
+  <!-- Vod 1: x=388..520, y=296..318 (visina 22) -->
+  <rect x="388" y="296" width="132" height="22" fill="url(#u03fup_voda)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Desni vod (nizi tlak p_2) -->
+  <!-- Vod 2: x=524..656, y=296..318 -->
+  <rect x="524" y="296" width="132" height="22" fill="url(#u03fup_voda)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- U-cijev geometrija:
+       Lijevi krak: vanjski x=434..456, unutarnji x=436..454. Visina y=318..438.
+       Desni krak: vanjski x=588..610, unutarnji x=590..608. Visina y=318..438.
+       Dno U cijevi: y_top=438, y_bot=450. -->
 
-  <!-- ════════════════════════════════════
-       PANEL 3 – Primjena u praksi (x 610..880)
-       Hidrotehnička brana s vodom i trokutnom raspodjelom tlaka
-       ════════════════════════════════════ -->
-  <rect x="610" y="46" width="270" height="406" rx="10" fill="#fdf2e9" stroke="#e8c8a0" stroke-width="1.3"/>
-  <text x="745" y="66" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1a2530" text-anchor="middle">Primjena u praksi</text>
+  <!-- VODA (radni fluid) iznad zive u oba kraka. Voda u vodovima nastavlja se u krakove. -->
+  <!-- Razine zive: lijevi krak (visi tlak p1 gura zivu dolje) y=400, desni krak (nizi tlak) y=370. Delta h = 30 px -->
+  <rect x="436" y="318" width="18" height="82" fill="url(#u03fup_voda)" />
+  <rect x="590" y="318" width="18" height="52" fill="url(#u03fup_voda)" />
 
-  <!-- Tlo (hatch) -->
-  <rect x="625" y="388" width="245" height="12" fill="url(#u03fup_u3vhatch)" stroke="#4a6070" stroke-width="1.2"/>
+  <!-- ZIVA (denser) na dnu U cijevi -->
+  <rect x="436" y="400" width="18" height="38" fill="url(#u03fup_ziva)" />
+  <rect x="590" y="370" width="18" height="68" fill="url(#u03fup_ziva)" />
+  <rect x="436" y="438" width="172" height="12" fill="url(#u03fup_ziva)" />
 
-  <!-- Brana (trapez) -->
-  <polygon points="720,100 760,100 775,388 705,388" fill="#909fa8" stroke="#4a6070" stroke-width="2.0"/>
-  <text x="740" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="700">brana</text>
+  <!-- stjenke U-cijevi (preko fluida) -->
+  <line x1="434" y1="318" x2="434" y2="452" stroke="#3a4a56" stroke-width="1.3" />
+  <line x1="456" y1="318" x2="456" y2="438" stroke="#3a4a56" stroke-width="1.3" />
+  <line x1="588" y1="318" x2="588" y2="438" stroke="#3a4a56" stroke-width="1.3" />
+  <line x1="610" y1="318" x2="610" y2="452" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- dno U cijevi -->
+  <line x1="434" y1="452" x2="610" y2="452" stroke="#3a4a56" stroke-width="1.5" />
+  <line x1="456" y1="438" x2="588" y2="438" stroke="#3a4a56" stroke-width="1.5" />
 
-  <!-- Voda (lijevo od brane) -->
-  <polygon points="625,100 720,100 705,388 625,388" fill="url(#u03fup_u3vfl)" stroke="none"/>
-  <!-- Slobodna površina -->
-  <line x1="622" y1="100" x2="722" y2="100" stroke="#1565c0" stroke-width="1.8" stroke-dasharray="6,4"/>
-  <!-- p₀=atm labela -->
-  <text x="640" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8b5e00" font-style="italic">p₀=p_atm</text>
-  <!-- H kota lijevo -->
-  <line x1="618" y1="100" x2="624" y2="100" stroke="#b7600c" stroke-width="1"/>
-  <line x1="618" y1="388" x2="624" y2="388" stroke="#b7600c" stroke-width="1"/>
-  <line x1="621" y1="102" x2="621" y2="386" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fup_u3vaDimL)" marker-end="url(#u03fup_u3vaDim)"/>
-  <text x="630" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#b7600c">H</text>
+  <!-- razine zive - pomocne linije / kota Delta h -->
+  <!-- Mercury razine: lijeva y=400, desna y=370. Delta h = 30 px. -->
+  <!-- Kotu Delta h crtam u sredini (izmedu krakova), unutar U-cijevi prostora -->
+  <!-- pomocne linije od mercury rubova do dim osi (x=522 sredina) -->
+  <!-- tik-crte na lijevoj strani kote (kraj lijevog kraka unutarnji) -->
+  <!-- dim line vertikalna -->
+  <!-- oznaka ziva (na dnu U) -->
+  <!-- formula -->
+  <!-- =========================================================
+       PANEL 4 (DESNO) - Kljucne jednadzbe poglavlja
+       Okvir x=684..960, y=22..478
+  ========================================================= -->
+  <rect x="684" y="22" width="276" height="456" rx="10" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.4" />
+  <!-- header -->
+  <rect x="684" y="22" width="276" height="34" rx="10" fill="#1565c0" />
+  <rect x="684" y="40" width="276" height="16" fill="#1565c0" />
+  <!-- Blok 1: diferencijalni oblik -->
+  <line x1="710" y1="124" x2="934" y2="124" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Raspodjela tlaka (desno od brane, trokut) -->
-  <polygon points="775,100 775,388 840,388" fill="#c0392b" fill-opacity="0.22" stroke="#c0392b" stroke-width="1.5"/>
-  <text x="848" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#c0392b">p_max=ρgH</text>
-  <text x="782" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#c0392b">p₀</text>
+  <!-- Blok 2: integralni oblik (radna jednadzba) -->
+  <line x1="710" y1="190" x2="934" y2="190" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Strelice tlaka na lijevoj plohi brane (horizontalne prema brani) -->
-  <line x1="680" y1="150" x2="715" y2="150" stroke="#1565c0" stroke-width="1.1" marker-end="url(#u03fup_u3vaBlu)"/>
-  <line x1="672" y1="210" x2="713" y2="210" stroke="#1565c0" stroke-width="1.3" marker-end="url(#u03fup_u3vaBlu)"/>
-  <line x1="663" y1="275" x2="711" y2="275" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u03fup_u3vaBlu)"/>
-  <line x1="651" y1="340" x2="710" y2="340" stroke="#1565c0" stroke-width="2.0" marker-end="url(#u03fup_u3vaBlu)"/>
+  <!-- Blok 3: piezometarska visina -->
+  <line x1="710" y1="256" x2="934" y2="256" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Primjena label -->
-  <rect x="625" y="405" width="245" height="34" rx="6" fill="white" stroke="#e8c8a0" stroke-width="1.0"/>
-  <text x="747" y="419" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Strojarstvo: tlak na dnu tlačnog cilindra,</text>
-  <text x="747" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Građevinarstvo: opterećenje brane, keson, temelj</text>
-</svg>
+  <!-- Blok 4: apsolutni / manometarski tlak -->
+  <line x1="710" y1="340" x2="934" y2="340" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 5: radni postupak kroz manometar -->
+  <!-- footer: primjena -->
+  <rect x="700" y="414" width="244" height="50" rx="7" fill="#ffffff" stroke="#1565c0" stroke-width="1.2" />
+  <line x1="92" y1="152" x2="48" y2="152" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="175" y1="334" x2="48" y2="334" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="55" y1="148" x2="55" y2="156" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="55" y1="330" x2="55" y2="338" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="55" y1="155" x2="55" y2="331" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fup_aDimR)" marker-end="url(#u03fup_aDim)" />
+  <line x1="582" y1="180" x2="624" y2="180" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="582" y1="130" x2="624" y2="130" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="614" y1="180" x2="622" y2="180" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="614" y1="130" x2="622" y2="130" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="618" y1="178" x2="618" y2="132" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fup_aDimR)" marker-end="url(#u03fup_aDim)" />
+  <line x1="456" y1="400" x2="586" y2="400" stroke="#b7600c" stroke-width="0.6" stroke-dasharray="3,3" />
+  <line x1="456" y1="370" x2="586" y2="370" stroke="#b7600c" stroke-width="0.6" stroke-dasharray="3,3" />
+  <line x1="518" y1="400" x2="526" y2="400" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="518" y1="370" x2="526" y2="370" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="522" y1="397" x2="522" y2="373" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03fup_aDimR)" marker-end="url(#u03fup_aDim)" />
+  <text x="190" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">Hidrostatska raspodjela tlaka</text>
+
+  <text x="178" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#5a6a78" font-style="italic">p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
+  <text x="130" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#0d47a1">voda, ρ</text>
+
+  <text x="182" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1a2530">A</text>
+
+  <text x="292" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+  <text x="346" y="424" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#1565c0">p = p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> + ρgh</text>
+
+  <text x="306" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">A</tspan></text>
+
+  <text x="190" y="454" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56" font-style="italic">Tlak raste linearno s dubinom h</text>
+  <text x="190" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">(plave strelice prikazuju iznos tlaka na stjenci)</text>
+
+  <text x="522" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">U-manometar (zatvoreni spremnik)</text>
+
+  <text x="434" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78" font-style="italic">plin</text>
+  <text x="434" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" font-weight="700" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">g</tspan></text>
+
+  <text x="571" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78" font-style="italic">p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
+  <text x="540" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1a2530" font-style="italic">živa, ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan></text>
+
+  <text x="522" y="242" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">g</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan> + ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> g · Δh</text>
+
+  <text x="522" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">Diferencijalni manometar</text>
+
+  <text x="396" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" font-style="italic">vod 1</text>
+  <text x="512" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" font-weight="700" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+
+  <text x="648" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="end" fill="#5a6a78" font-style="italic">vod 2</text>
+  <text x="532" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+
+  <text x="522" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1a2530" font-style="italic">živa, ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan></text>
+
+  <text x="522" y="464" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1a2530">Δp = p<tspan baseline-shift="sub" font-size="0.7em">1</tspan> − p<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = (ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> − ρ) g · Δh</text>
+
+  <text x="822" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Ključne jednadžbe poglavlja</text>
+
+  <text x="822" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">diferencijalni oblik</text>
+  <text x="822" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#1a2530" font-style="italic">dp/dz = −ρg</text>
+  <text x="822" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">radna jednadžba (homogen fluid)</text>
+  <text x="822" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#1a2530" font-style="italic">p = p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> + ρgh</text>
+  <text x="822" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">piezometarska visina</text>
+  <text x="822" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#1a2530" font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">man</tspan> / (ρg)</text>
+  <text x="822" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">apsolutni i manometarski tlak</text>
+  <text x="822" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530" font-style="italic">p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan> + p<tspan baseline-shift="sub" font-size="0.7em">man</tspan></text>
+  <text x="822" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78" font-style="italic">p<tspan baseline-shift="sub" font-size="0.7em">man</tspan> &lt; 0 → podtlak (vakuum)</text>
+  <text x="822" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">radni postupak kroz manometar</text>
+  <text x="822" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1a2530">silazak: +ρgΔh   penjanje: −ρgΔh</text>
+  <text x="822" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1a2530">ista razina → isti tlak (isti fluid)</text>
+
+  <text x="822" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78" font-weight="700">PRIMJENA</text>
+  <text x="822" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#3a4a56">spremnici · piezometri · U-manometri</text>
+  <text x="822" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#3a4a56">diferencijalni manometri preko filtra ili izmjenjivaca</text>
+<text x="42" y="247" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#b7600c">h</text>
+
+  <text x="638" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#b7600c">Δh</text>
+
+  <text x="540" y="389" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#b7600c">Δh</text>
+
+  </svg>

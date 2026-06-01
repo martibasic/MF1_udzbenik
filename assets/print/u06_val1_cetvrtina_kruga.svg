@@ -1,119 +1,194 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u06v1ck_u6v1T u06v1ck_u6v1D" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u06v1ck_u6v1T">U06 Val 1 – Potopljena četvrtina kruga</title>
-  <desc id="u06v1ck_u6v1D">Zakrivljena ploha AB presjeka četvrtine kruga s vodom na konveksnoj strani. FH djeluje prema lijevo, FV prema gore. Prikazani zamišljeni volumen V* za izračun vertikalne komponente.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="u06v1ck_title u06v1ck_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u06v1ck_title">Potopljena cetvrtina kruga AB - rastav hidrostatske sile</title>
+  <desc id="u06v1ck_desc">U lijevoj polovici skice prikazana je voda u spremniku sa slobodnom povrsinom. Cetvrtina kruga AB radijusa R = 1,22 m nalazi se na bocnoj stijenci. Gornja tocka A na dubini h1 = 2,44 m, donja tocka B na dubini h1 + R = 3,66 m. Iznad zakrivljene plohe AB zamisljen je imaginarni volumen V* = V1 + V2 = h1Rb + (piR^2/4)b, prikazan dvjema svijetlo plavim zonama. Horizontalna sila FH = 66,7 kN djeluje na dubini hCx = 3,05 m prema desno, vertikalna sila FV = 74,3 kN prema gore (uzgon zbog vode ispod plohe), rezultanta FR = 99,8 kN. U desnoj polovici jednadzbe i numericki koraci za FH, FV i FR.</desc>
+
   <defs>
-    <pattern id="u06v1ck_u6v1H" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
+    <linearGradient id="u06v1ck_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u06v1ck_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-    <linearGradient id="u06v1ck_u6v1Wg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
-    </linearGradient>
-    <linearGradient id="u06v1ck_u6v1Wi" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e8f5fb" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#b0d9ed" stop-opacity="0.9"/>
-    </linearGradient>
-    <marker id="u06v1ck_u6v1aR" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#b42318"/>
+    <pattern id="u06v1ck_imag" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#dbe9f4" />
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#88b4d2" stroke-width="0.8" />
+    </pattern>
+    <marker id="u06v1ck_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u06v1ck_u6v1aG" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#0f766e"/>
+    <marker id="u06v1ck_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u06v1ck_u6v1aGr" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L9,4 z" fill="#546e7a"/>
+    <marker id="u06v1ck_aP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
     </marker>
-    <marker id="u06v1ck_u6v1aMg" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#7b1fa2"/>
+    <marker id="u06v1ck_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u06v1ck_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
 
-  <!-- Background + border -->
-  <rect width="940" height="420" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <!-- POZADINA -->
+  <rect width="900" height="520" fill="#ffffff" />
+  <rect x="14" y="14" width="872" height="492" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <line x1="540" y1="32" x2="540" y2="488" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
-  <!-- Title -->
+  <!-- =====================================================
+       LIJEVI PANEL - FIZIKALNI MODEL
+       Skala: 1 m = 80 px
+       Slobodna povrsina: y = 80
+       Tocka A (gornja, dubina h1=2,44 m): (380, 275)
+       Tocka B (donja, dubina h1+R=3,66 m): (282, 373)
+       Centar C arc-a: (282, 275)  - upper-LEFT od pie square
+       Arc konveksno DOLJE-DESNO (prema (380, 373))
+       VODA: na konveksnoj strani arc-a (DOLJE-LIJEVO) - dakle voda popunjava tank lijevo i ispod bulge-a
+       SOLID/zid: konkavna strana arc-a (GORE-DESNO) - V_2 disk sektor SOLID, V_1 rect iznad SOLID
+       Floor y=460. Lijevi rub voda x=70.
+  ===================================================== -->
 
-  <!-- Structural wall (left, srafura) -->
-  <rect x="40" y="112" width="160" height="246" fill="url(#u06v1ck_u6v1H)"/>
-  <rect x="40" y="112" width="160" height="246" fill="none" stroke="#546e7a" stroke-width="1.5"/>
-  <!-- Structural floor (bottom, srafura) -->
-  <rect x="40" y="358" width="420" height="32" fill="url(#u06v1ck_u6v1H)"/>
-  <rect x="40" y="358" width="420" height="32" fill="none" stroke="#546e7a" stroke-width="1.5"/>
+  <!-- ===== VODA (glavni tank) ===== -->
+  <!-- Voda se proteze od povrsine do dna, izbjegavajuci V_1 i V_2 solid -->
+  <!-- Polygon CW: (70,80) -> (282,80) [top do solid] -> (282,373) [down uz lijevu CB granicu V2 solid]
+       -> arc od B(282,373) do A(380,275) [oko V2 sektora, preko anti-pie corner-a]
+       -> (380, 460) [down uz desni zid] -> (70, 460) [floor] -> close -->
+  <path d="M 70,80 L 282,80 L 282,373 A 98,98 0 0 0 380,275 L 380,460 L 70,460 Z" fill="url(#u06v1ck_voda)" />
 
-  <!-- Free surface line -->
-  <line x1="140" y1="112" x2="500" y2="112" stroke="#3a87ad" stroke-width="3"/>
-  <text x="510" y="117" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">slobodna površina</text>
+  <!-- Slobodna povrsina (debela plava linija) - lijevo od V_1 solid -->
+  <line x1="70" y1="80" x2="282" y2="80" stroke="#1565c0" stroke-width="2.4" />
+  <!-- ===== KONSTRUKCIJA / ZID (HATCHED) ===== -->
+  <!-- Lijeva stijenka -->
+  <rect x="50" y="60" width="20" height="420" fill="url(#u06v1ck_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- Desna stijenka (puna visina) -->
+  <rect x="380" y="60" width="20" height="420" fill="url(#u06v1ck_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- Dno -->
+  <rect x="50" y="460" width="350" height="20" fill="url(#u06v1ck_hatch)" stroke="#3a4a56" stroke-width="1.3" />
 
-  <!-- Actual water on convex (outer right) side -->
-  <path d="M320,112 L480,112 L480,358 L200,358 A130,130 0 0 0 320,228 Z"
-        fill="url(#u06v1ck_u6v1Wg)" opacity="0.7"/>
+  <!-- ===== STRUKTURNI BLOK SOLID (bulge iznad arc) =====
+       V_1 rect [282-380, 80-275] i V_2 disk sektor centriran na C(282,275)
+       Combined SOLID - hatched s "imag" pattern (svjetlo plavi) jer predstavlja
+       i fizicki solid i imaginarni volumen V* za F_V proracun.
+       Granica solid-voda = arc AB. -->
+  <!-- V_1 solid hatched (imag pattern - light blue cross-hatch) -->
+  <rect x="282" y="80" width="98" height="195" fill="url(#u06v1ck_imag)" />
+  <rect x="282" y="80" width="98" height="195" fill="none" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="6,4" />
 
-  <!-- Imaginary volume V* (lighter, dashed border) — V1 + V2 -->
-  <path d="M200,112 L320,112 L320,228 A130,130 0 0 1 200,358 Z"
-        fill="url(#u06v1ck_u6v1Wi)" opacity="0.85"/>
-  <path d="M200,112 L320,112 L320,228 A130,130 0 0 1 200,358 Z"
-        fill="none" stroke="#3a87ad" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <!-- V_2 disk sektor (pie slice centriran na C, A-B arc) -->
+  <path d="M 282,275 L 380,275 A 98,98 0 0 0 282,373 Z" fill="url(#u06v1ck_imag)" />
+  <!-- Crtkani rub V_2 - CA edge, arc, BC edge -->
+  <path d="M 282,275 L 380,275" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="6,4" fill="none" />
+  <path d="M 282,275 L 282,373" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="6,4" fill="none" />
 
-  <!-- Arc (gate surface) — thick, dark -->
-  <path d="M320,228 A130,130 0 0 1 200,358" fill="none" stroke="#173043" stroke-width="5" stroke-linecap="round"/>
+  <!-- Granica izmedju V_1 (gore) i V_2 (dolje) je horizontalni segment y=275 od x=282 do x=380,
+       ali on je vec dio V_1 donjeg ruba (= V_2 gornjeg ruba); preklapaju se. -->
 
-  <!-- Wall outline borders -->
-  <line x1="200" y1="112" x2="200" y2="358" stroke="#2d3a40" stroke-width="3"/>
-  <line x1="200" y1="358" x2="460" y2="358" stroke="#2d3a40" stroke-width="3"/>
+  <!-- ===== ARC AB - zakrivljena ploha (debela tamna linija) ===== -->
+  <path d="M 380,275 A 98,98 0 0 0 282,373" fill="none" stroke="#1a2530" stroke-width="3.6" stroke-linecap="round" />
 
-  <!-- Points A and B -->
-  <circle cx="320" cy="228" r="5" fill="#173043"/>
-  <text x="326" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">A</text>
-  <circle cx="200" cy="358" r="5" fill="#173043"/>
-  <text x="177" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">B</text>
+  <!-- ===== Tocke A, B, C ===== -->
+  <circle cx="380" cy="275" r="4.2" fill="#1a2530" />
+  <circle cx="282" cy="373" r="4.2" fill="#1a2530" />
+  <circle cx="282" cy="275" r="2.6" fill="#5a6a78" />
+  <!-- ===== OZNAKE VOLUMENA ===== -->
+  <!-- ===== KOTE ===== -->
+  <!-- Kota h1 (lijevo od kanvasa, od povrsine do dubine A) -->
+  <!-- Kota R (lijevo od kanvasa, od dubine A do dubine B) -->
+  <!-- ===== SILE ===== -->
 
-  <!-- V* label inside imaginary volume -->
-  <text x="238" y="285" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" fill="#1a6696">V*</text>
-  <text x="230" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a6696">= V&#x2081;+V&#x2082;</text>
+  <!-- F_H horizontalna (crvena, voda pritiska plohu udesno) na dubini hCx=3,05 m -> y = 80 + 3,05*80 = 324 -->
+  <line x1="190" y1="324" x2="278" y2="324" stroke="#c0392b" stroke-width="3" marker-end="url(#u06v1ck_aR)" />
+  <!-- Label F_H iznad strelice -->
+  <!-- Pomocna info ispod strelice -->
+  <!-- Horizontalna iscrtkana linija za hCx - kompaktnija, lijevo od F_H -->
+  <line x1="74" y1="324" x2="190" y2="324" stroke="#c0392b" stroke-width="0.7" stroke-dasharray="3,3" opacity="0.55" />
+  <!-- F_V vertikalna (zelena, uzgon prema gore, voda ispod plohe pritisce GORE)
+       x_FV = 0,584 m od C-osi (= x=282 + 0,584*80 = 329) -->
+  <line x1="329" y1="450" x2="329" y2="382" stroke="#1e8449" stroke-width="3" marker-end="url(#u06v1ck_aG)" />
+  <!-- Vertikalna iscrtkana linija kroz x_FV (gore kroz V_1/V_2, prikazuje pravac F_V) -->
+  <line x1="329" y1="80" x2="329" y2="376" stroke="#1e8449" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.45" />
 
-  <!-- FH arrow (← leftward, red) at mid-arc height -->
-  <line x1="360" y1="293" x2="232" y2="293" stroke="#b42318" stroke-width="4" marker-end="url(#u06v1ck_u6v1aR)"/>
-  <rect x="365" y="280" width="46" height="22" rx="5" fill="#fff" stroke="#d8c7c4" stroke-width="1.2"/>
-  <text x="375" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b42318">F&#x2095;</text>
+  <!-- Voda oznaka (tekstualna) - lijevo dolje u vodi -->
+  <!-- Caption ispod modela -->
+  <!-- =====================================================
+       DESNI PANEL - JEDNADZBE I REZULTATI
+  ===================================================== -->
 
-  <!-- FV arrow (↑ upward, green) -->
-  <line x1="258" y1="370" x2="258" y2="238" stroke="#0f766e" stroke-width="4" marker-end="url(#u06v1ck_u6v1aG)"/>
-  <rect x="264" y="296" width="46" height="22" rx="5" fill="#fff" stroke="#c7d8d6" stroke-width="1.2"/>
-  <text x="272" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#0f766e">F&#x1D65;</text>
+  <rect x="560" y="50" width="320" height="380" rx="10" fill="#ffffff" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="560" y="50" width="320" height="32" rx="10" fill="#1565c0" />
+  <rect x="560" y="66" width="320" height="16" fill="#1565c0" />
+  <!-- Blok 1: F_H (y 86..188) -->
+  <line x1="580" y1="190" x2="860" y2="190" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- h1 dimension arrow -->
-  <line x1="100" y1="112" x2="100" y2="228" stroke="#546e7a" stroke-width="2" marker-start="url(#u06v1ck_u6v1aGr)" marker-end="url(#u06v1ck_u6v1aGr)"/>
-  <rect x="52" y="160" width="42" height="20" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1.2"/>
-  <text x="60" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h&#x2081;</text>
+  <!-- Blok 2: F_V (y 196..292) -->
+  <line x1="580" y1="296" x2="860" y2="296" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- R dimension arrow -->
-  <line x1="80" y1="228" x2="80" y2="358" stroke="#546e7a" stroke-width="2" marker-start="url(#u06v1ck_u6v1aGr)" marker-end="url(#u06v1ck_u6v1aGr)"/>
-  <rect x="52" y="285" width="22" height="20" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1.2"/>
-  <text x="58" y="299" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">R</text>
+  <!-- Blok 3: F_R -->
+  <line x1="580" y1="400" x2="860" y2="400" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Vertical projection rectangle (for FH) -->
-  <rect x="390" y="228" width="36" height="130" fill="#f0f4f8" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <text x="396" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">A&#x2093;</text>
+  <!-- Sazetak italic -->
+  <!-- REZULTATI badge -->
+  <rect x="560" y="446" width="320" height="44" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="70" y1="80" x2="20" y2="80" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="282" y1="275" x2="20" y2="275" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
+  <line x1="28" y1="80" x2="28" y2="275" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u06v1ck_aDimL)" marker-end="url(#u06v1ck_aDim)" />
+  <line x1="282" y1="373" x2="20" y2="373" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
+  <line x1="28" y1="275" x2="28" y2="373" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u06v1ck_aDimL)" marker-end="url(#u06v1ck_aDim)" />
+  <text x="76" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0">slobodna površina</text>
 
-  <!-- Formula box -->
-  <rect x="548" y="100" width="348" height="272" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="568" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#173043">Ključne jednadžbe</text>
-  <line x1="568" y1="134" x2="880" y2="134" stroke="#e8d89a" stroke-width="1"/>
-  <text x="568" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F&#x2095; = &#x3C1;g · h&#x2C6;&#x1D9C;&#x2C2; · A&#x2093;</text>
-  <text x="568" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">A&#x2093; = R·b = 1,22·1,83 = 2,23 m&#xB2;</text>
-  <text x="568" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">h&#x2C6;&#x1D9C;&#x2C2; = h&#x2081;+R/2 = 2,44+0,61 = 3,05 m</text>
-  <text x="568" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">F&#x2095; &#x2248; 66,7 kN  &#x2190;</text>
-  <line x1="568" y1="228" x2="880" y2="228" stroke="#e8d89a" stroke-width="1"/>
-  <text x="568" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F&#x1D65; = &#x3C1;g · V*</text>
-  <text x="568" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">V* = h&#x2081;Rb + &#x3C0;R&#xB2;b/4 = 7,59 m&#xB3;</text>
-  <text x="568" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">F&#x1D65; &#x2248; 74,3 kN  &#x2191;</text>
-  <line x1="568" y1="300" x2="880" y2="300" stroke="#e8d89a" stroke-width="1"/>
-  <text x="568" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F&#x1D35; = &#x221A;(F&#x2095;&#xB2;+F&#x1D65;&#xB2;)</text>
-  <text x="568" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#7b1fa2">F&#x1D35; &#x2248; 99,8 kN</text>
+  <text x="388" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">A</text>
 
-  <!-- datum line annotations -->
-  <line x1="320" y1="112" x2="320" y2="228" stroke="#546e7a" stroke-width="1.2" stroke-dasharray="5 4"/>
-</svg>
+  <text x="274" y="391" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#1a2530">B</text>
+
+  <text x="276" y="269" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="end" fill="#5a6a78">C</text>
+
+  <text x="331" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" text-anchor="middle" fill="#1565c0">V<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="331.0" y="196.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1565c0">= <tspan font-style="italic">h</tspan>₁<tspan font-style="italic">Rb</tspan>= h₁Rb</text>
+
+  <text x="313" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" text-anchor="middle" fill="#1565c0">V<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+  <text x="313.0" y="321.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1565c0">= π<tspan font-style="italic">R</tspan>²<tspan font-style="italic">b</tspan>= πR²b/4</text>
+
+
+  <text x="234" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#c0392b"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan> = 66,7 kN</text>
+  <text x="234" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#c0392b">hvatište na <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">F,H</tspan> ≈ 3,09 m</text>
+
+  <text x="78" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#a8503a"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">Cx</tspan> = 3,05 m</text>
+
+  <text x="343" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan> = 74,3 kN</text>
+  <text x="343" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1e8449">u pravcu <tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="0.7em">F,V</tspan> ≈ 0,584 m</text>
+
+  <text x="105" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0d47a1">voda</text>
+  <text x="105" y="115" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">ρ = 998 kg/m³</text>
+
+  <text x="225" y="500" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">cetvrtina kruga <tspan font-weight="700" font-style="normal">AB</tspan>, sirina spremnika <tspan font-style="italic">b</tspan> = 1,83 m</text>
+
+
+  <text x="720" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Kljucne jednadzbe rastava sile</text>
+
+  <text x="720" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Horizontalna komponenta</text>
+  <text x="720" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan> = ρ <tspan font-style="italic">g</tspan> <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">Cx</tspan></text>
+  <text x="720" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = <tspan font-style="italic">Rb</tspan> = 2,233 m²    <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">Cx</tspan> = <tspan font-style="italic">h</tspan>₁ + <tspan font-style="italic">R</tspan>/2 = 3,05 m</text>
+  <text x="720" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan> ≈ 66,7 kN  (→)</text>
+  <text x="720" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Vertikalna komponenta</text>
+  <text x="720" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan> = ρ <tspan font-style="italic">g V*</tspan></text>
+  <text x="720" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">V*</tspan> = <tspan font-style="italic">h</tspan>₁<tspan font-style="italic">Rb</tspan> + π<tspan font-style="italic">R</tspan>²<tspan font-style="italic">b</tspan>/4 = 5,448 + 2,139 = 7,587 m³</text>
+  <text x="720" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan> ≈ 74,3 kN  (↑)</text>
+  <text x="720" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Rezultanta</text>
+  <text x="720" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = √(<tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan>² + <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan>²)</text>
+  <text x="720" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">tanα = <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan> / <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan> = 74,3 / 66,7 → α ≈ 48°</text>
+  <text x="720" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#8e44ad"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 99,8 kN</text>
+  <text x="720" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> je prema gore jer imag. volumen V* lezi ispod slobodne povrsine.</text>
+
+  <text x="720" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="610" y="482" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan> = 66,7 kN</text>
+  <text x="720" y="482" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan> = 74,3 kN</text>
+  <text x="830" y="482" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#8e44ad"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = 99,8 kN</text>
+<text x="22" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">h</tspan>₁</text>
+  <text x="22.0" y="186.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c">= 2,44 m</text>
+
+  <text x="22" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">R</tspan></text>
+  <text x="22.0" y="336.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c">= 1,22 m</text>
+
+  </svg>

@@ -1,233 +1,189 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img"
-     aria-labelledby="u01fup_uv2T u01fup_uv2D" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u01fup_uv2T">Pregled poglavlja – Osnove fluida i Pascalov zakon</title>
-  <desc id="u01fup_uv2D">Tri panela: (1) Kontinuumski model – polje tlaka u cjevovodu; (2) Osnovne velicine rho, gamma, sr za ulje i vodu; (3) Pascalov zakon – hidraulicna presa za savijanje cijevi.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 460" role="img" aria-labelledby="u01fup_title u01fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u01fup_title">U01 - Pregled poglavlja: Osnove fluida i Pascalov zakon</title>
+  <desc id="u01fup_desc">Tri panela uvodnog bloka: (1) kontinuumski model fluida i tlak kao skalarno polje, (2) osnovne velicine - gustoca ρ, specificna tezina γ, relativna gustoca s_r za ulje i vodu, (3) Pascalov zakon i prijenos tlaka u zatvorenom fluidu kroz hidraulicku presu.</desc>
   <defs>
-    <marker id="u01fup_u2aR"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u01fup_u2aG"  markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/></marker>
-    <marker id="u01fup_u2aBl" markerWidth="9"  markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L0,7 L9,3.5 z" fill="#1565c0"/></marker>
-    <marker id="u01fup_u2aBls" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#1565c0"/></marker>
-    <marker id="u01fup_u2aDim"  markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u01fup_u2aDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <linearGradient id="u01fup_u2fl"  x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-    <linearGradient id="u01fup_u2oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f8e090"/><stop offset="100%" stop-color="#d4a020"/></linearGradient>
-    <linearGradient id="u01fup_u2wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#1565c0"/></linearGradient>
-    <linearGradient id="u01fup_u2ps"  x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient>
-    <linearGradient id="u01fup_u2pHeat" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#c0392b"/>
-      <stop offset="45%"  stop-color="#f5a623"/>
-      <stop offset="80%"  stop-color="#1e8bc3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+    <marker id="u01fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u01fup_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u01fup_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <linearGradient id="u01fup_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u01fup_u2leg" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#c0392b"/>
-      <stop offset="50%"  stop-color="#f5a623"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+    <linearGradient id="u01fup_oil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#c8a000" />
     </linearGradient>
-    <pattern id="u01fup_u2H" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a9aa6" stroke-width="2"/>
+    <linearGradient id="u01fup_piston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#909fa8" />
+      <stop offset="100%" stop-color="#5d6d7e" />
+    </linearGradient>
+    <pattern id="u01fup_hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#7a8a96" stroke-width="1.5" />
     </pattern>
   </defs>
 
-  <rect width="900" height="500" fill="#f4f6f8"/>
-  <rect x="12" y="12" width="876" height="476" rx="14" fill="#ffffff" stroke="#d8dee6" stroke-width="1.5"/>
+  <rect width="980" height="460" fill="#ffffff" />
+  <rect x="14" y="14" width="952" height="432" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
 
-  <!-- Naslov -->
+  <!-- ============================================================
+       PANEL 1: KONTINUUMSKI MODEL — TLAK KAO POLJE
+  ============================================================ -->
+  <rect x="30" y="30" width="290" height="400" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.4" />
+  <rect x="30" y="30" width="290" height="30" rx="8" fill="#1565c0" />
+  <rect x="30" y="52" width="290" height="8" fill="#1565c0" />
+  <!-- Posuda s fluidom -->
+  <rect x="60" y="100" width="14" height="200" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="276" y="100" width="14" height="200" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="60" y="300" width="230" height="14" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="74" y="140" width="202" height="160" fill="url(#u01fup_water)" />
+  <line x1="74" y1="140" x2="276" y2="140" stroke="#1565c0" stroke-width="2" />
 
-  <!-- ═══ PANEL 1: KONTINUUMSKI MODEL (lijevo) x=22 w=264 ═══ -->
-  <rect x="22" y="68" width="264" height="416" rx="10" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.4"/>
-  <text x="154" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0" text-anchor="middle">Kontinuumski model</text>
-  <text x="154" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle" font-style="italic">molekule → polje p(x,y,z)</text>
+  <!-- Tocka P u fluidu s istog tlaka u svim smjerovima -->
+  <circle cx="175" cy="220" r="4" fill="#173043" stroke="#1565c0" stroke-width="1.5" />
+  <!-- 8 strelica iz tocke P (isotropan tlak) -->
+  <line x1="175" y1="220" x2="175" y2="195" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="175" y1="220" x2="200" y2="220" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="175" y1="220" x2="175" y2="245" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="175" y1="220" x2="150" y2="220" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="175" y1="220" x2="193" y2="202" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="175" y1="220" x2="193" y2="238" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="175" y1="220" x2="157" y2="238" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="175" y1="220" x2="157" y2="202" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
 
-  <!-- Cjevovod: gornja i donja stjenka -->
-  <rect x="48" y="120" width="224" height="14" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.2"/>
-  <rect x="48" y="271" width="224" height="14" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.2"/>
-  <!-- Fluid s heatmapom tlaka (visok s lijeva, nizak desno) -->
-  <rect x="48" y="134" width="224" height="137" fill="url(#u01fup_u2pHeat)" opacity="0.68"/>
-  <!-- Izobare (okomite isprekidane linije = linije jednakog p) -->
-  <line x1="90"  y1="134" x2="90"  y2="271" stroke="white" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
-  <line x1="136" y1="134" x2="136" y2="271" stroke="white" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
-  <line x1="182" y1="134" x2="182" y2="271" stroke="white" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
-  <line x1="228" y1="134" x2="228" y2="271" stroke="white" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
-  <!-- Profil brzine v(y) – vodoravne strelice, parabolično dulje u sredini -->
-  <line x1="140" y1="152" x2="175" y2="152" stroke="#fff" stroke-width="1.4" marker-end="url(#u01fup_u2aBl)"/>
-  <line x1="140" y1="167" x2="195" y2="167" stroke="#fff" stroke-width="1.6" marker-end="url(#u01fup_u2aBl)"/>
-  <line x1="140" y1="183" x2="210" y2="183" stroke="#fff" stroke-width="1.9" marker-end="url(#u01fup_u2aBl)"/>
-  <line x1="140" y1="202" x2="218" y2="202" stroke="#fff" stroke-width="2.2" marker-end="url(#u01fup_u2aBl)"/>
-  <line x1="140" y1="219" x2="210" y2="219" stroke="#fff" stroke-width="1.9" marker-end="url(#u01fup_u2aBl)"/>
-  <line x1="140" y1="237" x2="194" y2="237" stroke="#fff" stroke-width="1.6" marker-end="url(#u01fup_u2aBl)"/>
-  <line x1="140" y1="252" x2="175" y2="252" stroke="#fff" stroke-width="1.4" marker-end="url(#u01fup_u2aBl)"/>
-  <text x="142" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#fffde8">v(y)</text>
-  <!-- os p s lijeva -->
-  <line x1="42" y1="134" x2="42" y2="271" stroke="#c0392b" stroke-width="1.3"/>
-  <text x="37" y="137" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#c0392b" text-anchor="end">p₁</text>
-  <text x="37" y="273" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1565c0" text-anchor="end">p₂</text>
-  <text x="34" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1a2530" text-anchor="end">p(x)</text>
-  <!-- Legenda heatmap -->
-  <rect x="68" y="296" width="168" height="11" rx="3" fill="url(#u01fup_u2leg)" stroke="#ccc" stroke-width="0.7"/>
-  <text x="68"  y="319" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#c0392b">p visok</text>
-  <text x="236" y="319" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1565c0" text-anchor="end">p nizak</text>
-  <text x="152" y="319" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78" text-anchor="middle">· · · izobare · · ·</text>
+  <!-- Manje strelice tlaka na stijenkama (svuda iste duljine na istoj dubini) -->
+  <line x1="74" y1="180" x2="86" y2="180" stroke="#1565c0" stroke-width="1.2" marker-end="url(#u01fup_aB)" />
+  <line x1="276" y1="180" x2="264" y2="180" stroke="#1565c0" stroke-width="1.2" marker-end="url(#u01fup_aB)" />
+  <line x1="74" y1="270" x2="92" y2="270" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="276" y1="270" x2="258" y2="270" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="120" y1="300" x2="120" y2="288" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="175" y1="300" x2="175" y2="288" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
+  <line x1="230" y1="300" x2="230" y2="288" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_aB)" />
 
-  <!-- Tekst objašnjenje -->
-  <text x="154" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530" text-anchor="middle" font-weight="700">Zašto kontinuumski model?</text>
-  <text x="36" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">Molekule su suviše malene za</text>
-  <text x="36" y="377" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">praćenje jednu po jednu.</text>
-  <text x="36" y="395" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">Definiramo polje tlaka p(x,y,z)</text>
-  <text x="36" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">i gustoće ρ(x,y,z) u svakoj</text>
-  <text x="36" y="425" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">točki prostora.</text>
-  <text x="36" y="445" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" font-style="italic">Tek tada ∂p/∂x = –ρ·g</text>
-  <text x="36" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" font-style="italic">i Pascalov zakon imaju smisla.</text>
-  <text x="36" y="475" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8a9ab4" font-style="italic">(Knudsenov br. Kn ≪ 1 → model vrijedi)</text>
+  <!-- Sazetak ispod -->
+  <rect x="50" y="402" width="250" height="20" rx="4" fill="#e6effa" stroke="#1565c0" stroke-width="1" />
+  <!-- ============================================================
+       PANEL 2: OSNOVNE VELIČINE — ρ, γ, s_r
+  ============================================================ -->
+  <rect x="340" y="30" width="300" height="400" rx="8" fill="#fffbef" stroke="#c8a000" stroke-width="1.4" />
+  <rect x="340" y="30" width="300" height="30" rx="8" fill="#c8a000" />
+  <rect x="340" y="52" width="300" height="8" fill="#c8a000" />
+  <!-- Mali spremnik ulje + mali spremnik voda -->
+  <!-- Ulje -->
+  <rect x="378" y="120" width="10" height="160" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="448" y="120" width="10" height="160" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="378" y="280" width="80" height="12" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="388" y="148" width="60" height="132" fill="url(#u01fup_oil)" />
+  <line x1="388" y1="148" x2="448" y2="148" stroke="#7a4d10" stroke-width="2" />
+  <!-- Voda -->
+  <rect x="522" y="120" width="10" height="160" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="592" y="120" width="10" height="160" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="522" y="280" width="80" height="12" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="532" y="148" width="60" height="132" fill="url(#u01fup_water)" />
+  <line x1="532" y1="148" x2="592" y2="148" stroke="#1565c0" stroke-width="2" />
+  <!-- ΔG indikator izmedu -->
+  <rect x="468" y="170" width="44" height="42" rx="4" fill="#fdedec" stroke="#c0392b" stroke-width="1.2" />
+  <!-- Jednadzbe -->
+  <rect x="350" y="328" width="280" height="22" rx="4" fill="#fef7e0" stroke="#c8a000" stroke-width="1" />
+  <rect x="350" y="354" width="280" height="22" rx="4" fill="#eafaf1" stroke="#1e8449" stroke-width="1" />
+  <rect x="350" y="380" width="280" height="22" rx="4" fill="#f3eafa" stroke="#7d3c98" stroke-width="1" />
+  <!-- ============================================================
+       PANEL 3: PASCALOV ZAKON — HIDRAULIČNA PREŠA
+  ============================================================ -->
+  <rect x="660" y="30" width="290" height="400" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.4" />
+  <rect x="660" y="30" width="290" height="30" rx="8" fill="#1565c0" />
+  <rect x="660" y="52" width="290" height="8" fill="#1565c0" />
+  <!-- Mini preša s dva klipa, vodom na dnu, kontinuiran fluid -->
+  <!-- Fluid (kontinuiran preko mali + vod + veliki) -->
+  <rect x="690" y="170" width="40" height="80" fill="url(#u01fup_water)" />
+  <rect x="730" y="240" width="12" height="10" fill="url(#u01fup_water)" />
+  <rect x="742" y="240" width="76" height="10" fill="url(#u01fup_water)" />
+  <rect x="818" y="240" width="12" height="10" fill="url(#u01fup_water)" />
+  <rect x="830" y="170" width="80" height="80" fill="url(#u01fup_water)" />
+  <!-- Mali cilindar stjenke -->
+  <rect x="680" y="130" width="10" height="120" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="730" y="130" width="12" height="110" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <!-- Veliki cilindar stjenke -->
+  <rect x="818" y="130" width="12" height="110" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="910" y="130" width="10" height="120" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <!-- Vod stjenka gornja -->
+  <rect x="742" y="232" width="76" height="8" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <!-- Zajednicko dno -->
+  <rect x="680" y="250" width="240" height="14" fill="url(#u01fup_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <!-- Brtve -->
+  <rect x="700" y="130" width="20" height="10" fill="#3a4a56" stroke="#4a6070" stroke-width="1" />
+  <rect x="860" y="130" width="20" height="10" fill="#3a4a56" stroke="#4a6070" stroke-width="1" />
+  <!-- Klipovi -->
+  <rect x="690" y="150" width="40" height="20" rx="2" fill="url(#u01fup_piston)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="830" y="150" width="80" height="20" rx="2" fill="url(#u01fup_piston)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Klipnjace -->
+  <rect x="706" y="106" width="8" height="44" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <rect x="866" y="106" width="8" height="44" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
+  <!-- F_1 dolje (kraca, ulazna sila) -->
+  <line x1="710" y1="90" x2="710" y2="106" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u01fup_aR)" />
+  <!-- F_2 gore (dulja, izlazna sila) -->
+  <line x1="870" y1="106" x2="870" y2="70" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u01fup_aG)" />
+  <!-- A1, A2 labele i tlak p u vodu -->
+  <!-- Jednadzbe -->
+  <rect x="670" y="280" width="270" height="22" rx="4" fill="#e6effa" stroke="#1565c0" stroke-width="1" />
+  <rect x="670" y="308" width="270" height="22" rx="4" fill="#eafaf1" stroke="#1e8449" stroke-width="1" />
+  <rect x="670" y="364" width="270" height="22" rx="4" fill="#f3eafa" stroke="#7d3c98" stroke-width="1" />
+  <rect x="670" y="336" width="270" height="22" rx="4" fill="#fdf3e6" stroke="#b7600c" stroke-width="1" />
+  <text x="175" y="51" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1. Kontinuumski model</text>
+  <text x="175" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">Fluid kao kontinuirano polje tlaka</text>
 
-  <!-- ═══ PANEL 2: OSNOVNE VELIČINE (sredina) x=298 w=254 ═══ -->
-  <rect x="298" y="68" width="254" height="416" rx="10" fill="#fdf9e6" stroke="#d4a020" stroke-width="1.4"/>
-  <text x="425" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#b7600c" text-anchor="middle">Osnovne veličine</text>
-  <text x="425" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle" font-style="italic">ρ, γ, s_r — ulje vs voda, isti volumen V</text>
+  <text x="190" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" font-weight="700" fill="#1565c0">P</text>
+  <text x="175" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#3a4a56">• fluid = kontinuirani medij (ρ neprekidno)</text>
+  <text x="175" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#3a4a56">• tlak p djeluje jednako u svim smjerovima</text>
+  <text x="175" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#3a4a56">• p je skalarno polje p(x, y, z)</text>
+  <text x="175" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#3a4a56">• raste s dubinom u gravitacijskom polju</text>
+  <text x="175" y="417" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1565c0">p = F / A   (skalarno polje)</text>
 
-  <!-- Ulje (lijeva posuda): x=316–388, y=115–270 (155 px visina), fluid=86% = 133 px -->
-  <rect x="316" y="115" width="10" height="155" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="378" y="115" width="10" height="155" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="316" y="270" width="72" height="10" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="326" y="137" width="52" height="133" fill="url(#u01fup_u2oil)"/>
-  <line x1="314" y1="137" x2="390" y2="137" stroke="#d4a020" stroke-width="1.4" stroke-dasharray="4,3"/>
-  <text x="392" y="141" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#b7600c">nivo</text>
-  <!-- G strelica ulje -->
-  <line x1="352" y1="268" x2="352" y2="284" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u01fup_u2aR)"/>
+  <text x="490" y="51" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">2. Osnovne veličine fluida</text>
+  <text x="490" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">Gustoća, specifična težina i relativna gustoća</text>
 
-  <!-- Voda (desna posuda): x=416–488, ista visina, fluid=100% = 155px -->
-  <rect x="416" y="115" width="10" height="155" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="478" y="115" width="10" height="155" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="416" y="270" width="72" height="10" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="426" y="115" width="52" height="155" fill="url(#u01fup_u2wat)"/>
-  <line x1="414" y1="115" x2="490" y2="115" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4,3"/>
-  <!-- G strelica voda -->
-  <line x1="452" y1="268" x2="452" y2="284" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u01fup_u2aR)"/>
+  <text x="418" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#7a4d10">ulje</text>
+  <text x="418" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#7a4d10">V = 1 L</text>
+  <text x="418" y="304" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#7a4d10">ρ = 860 kg/m³</text>
 
-  <!-- Labele posuda -->
-  <text x="352" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#b7600c" text-anchor="middle">Ulje</text>
-  <text x="452" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0" text-anchor="middle">Voda</text>
+  <text x="562" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#1565c0">voda</text>
+  <text x="562" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1565c0">V = 1 L</text>
+  <text x="562" y="304" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1565c0">ρ = 1000 kg/m³</text>
 
-  <!-- Kota V (zajednička s desne strane) -->
-  <line x1="491" y1="115" x2="497" y2="115" stroke="#b7600c" stroke-width="1"/>
-  <line x1="491" y1="270" x2="497" y2="270" stroke="#b7600c" stroke-width="1"/>
-  <line x1="494" y1="117" x2="494" y2="268" stroke="#b7600c" stroke-width="1" marker-start="url(#u01fup_u2aDimL)" marker-end="url(#u01fup_u2aDim)"/>
-  <text x="503" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#b7600c">V</text>
-  <text x="503" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">(isti!)</text>
+  <text x="490" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#c0392b">ΔG</text>
+  <text x="506.4" y="186.0" font-family="'Segoe UI',Arial,sans-serif" font-size="9" text-anchor="middle" fill="#c0392b">≈ 14%</text>
 
-  <!-- ΔG razlika -->
-  <line x1="388" y1="282" x2="388" y2="296" stroke="#c0392b" stroke-width="1.1" stroke-dasharray="2,2"/>
-  <line x1="416" y1="282" x2="416" y2="296" stroke="#c0392b" stroke-width="1.1" stroke-dasharray="2,2"/>
-  <line x1="390" y1="289" x2="414" y2="289" stroke="#c0392b" stroke-width="1.3" marker-start="url(#u01fup_u2aDimL)" marker-end="url(#u01fup_u2aDim)"/>
-  <text x="403" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#c0392b" text-anchor="middle">ΔG</text>
+  <text x="490" y="343" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#7a4d10">ρ = m / V   (gustoća)</text>
 
-  <!-- Tablica veličina -->
-  <text x="314" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#3a4a56">Veličina</text>
-  <text x="390" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#b7600c" text-anchor="middle">Ulje</text>
-  <text x="470" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0" text-anchor="middle">Voda</text>
-  <line x1="310" y1="334" x2="538" y2="334" stroke="#e0c870" stroke-width="0.9"/>
+  <text x="490" y="369" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">γ = ρ · g   (specifična težina)</text>
 
-  <text x="314" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#3a4a56">ρ [kg/m³]</text>
-  <text x="390" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">860</text>
-  <text x="470" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">1 000</text>
+  <text x="490" y="395" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#7d3c98">s<tspan baseline-shift="sub" font-size="0.7em">r</tspan> = ρ / ρ<tspan baseline-shift="sub" font-size="0.7em">H₂O</tspan>   (relativna gustoća)</text>
 
-  <text x="314" y="367" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#3a4a56">γ [kN/m³]</text>
-  <text x="390" y="367" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">8,44</text>
-  <text x="470" y="367" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">9,81</text>
+  <text x="490" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">s<tspan baseline-shift="sub" font-size="0.7em">r</tspan> &lt; 1 → fluid pluta na vodi (npr. ulje, s<tspan baseline-shift="sub" font-size="0.7em">r</tspan> = 0,86)</text>
 
-  <text x="314" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#3a4a56">s_r  [–]</text>
-  <text x="390" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">0,86 ← pluta</text>
-  <text x="470" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">1,00 (ref.)</text>
-  <line x1="310" y1="390" x2="538" y2="390" stroke="#e0c870" stroke-width="0.9"/>
+  <text x="805" y="51" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">3. Pascalov zakon</text>
+  <text x="805" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">Tlak se prenosi jednako</text>
 
-  <text x="314" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#3a4a56">p = F/A  [Pa]</text>
+  <text x="722" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#c0392b"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">1</tspan></tspan></text>
+  <text x="882" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1e8449"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">2</tspan></tspan></text>
 
-  <text x="314" y="428" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" font-style="italic">γ = ρg  →  ista fizika, drugačija jedinica</text>
-  <text x="314" y="444" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" font-style="italic">s_r = ρ/ρ_voda  (bezdimenzijsko)</text>
-  <text x="314" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" font-style="italic">s_r &lt; 1 → fluid pluta na vodi</text>
-  <text x="314" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" font-style="italic">isti V, veće ρ → veći G = γ·V</text>
+  <text x="780" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="700" font-style="italic" text-anchor="middle" fill="#ffffff">p</text>
 
-  <!-- ═══ PANEL 3: PASCALOV ZAKON – PREŠA (desno) x=564 w=312 ═══ -->
-  <rect x="564" y="68" width="312" height="416" rx="10" fill="#eaf9f1" stroke="#1e8449" stroke-width="1.4"/>
-  <text x="720" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449" text-anchor="middle">Pascalov zakon</text>
-  <text x="720" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle" font-style="italic">hidraulična preša za savijanje cijevi</text>
+  <text x="805" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0">p = F<tspan baseline-shift="sub" font-size="0.7em">1</tspan>/A<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = F<tspan baseline-shift="sub" font-size="0.7em">2</tspan>/A<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
 
-  <!-- Mali cilindar (pumpa): centar x=620, inner=28, wall=10, outer=48, x:596–644 -->
-  <rect x="596" y="150" width="10" height="140" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="634" y="150" width="10" height="140" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="596" y="290" width="48" height="10" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="606" y="162" width="28" height="128" fill="url(#u01fup_u2fl)"/>
-  <rect x="594" y="134" width="52" height="16" rx="2" fill="url(#u01fup_u2ps)" stroke="#3a4a56" stroke-width="1.3"/>
-  <rect x="616" y="118" width="8" height="16" fill="#9aaab4" stroke="#5b6770" stroke-width="1"/>
-  <!-- F₁ strelica dolje -->
-  <line x1="620" y1="100" x2="620" y2="116" stroke="#c0392b" stroke-width="3.2" marker-end="url(#u01fup_u2aR)"/>
-  <text x="635" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#c0392b">F₁</text>
-  <!-- d₁ kota -->
-  <line x1="606" y1="305" x2="606" y2="313" stroke="#b7600c" stroke-width="1"/>
-  <line x1="634" y1="305" x2="634" y2="313" stroke="#b7600c" stroke-width="1"/>
-  <line x1="608" y1="309" x2="632" y2="309" stroke="#b7600c" stroke-width="1" marker-start="url(#u01fup_u2aDimL)" marker-end="url(#u01fup_u2aDim)"/>
-  <text x="620" y="323" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="middle">d₁</text>
-  <!-- Tlak strelice mali cilindar -->
-  <line x1="611" y1="250" x2="611" y2="228" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_u2aBls)"/>
-  <line x1="625" y1="250" x2="625" y2="228" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_u2aBls)"/>
+  <text x="805" y="323" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = (A<tspan baseline-shift="sub" font-size="0.7em">2</tspan>/A<tspan baseline-shift="sub" font-size="0.7em">1</tspan>) · F<tspan baseline-shift="sub" font-size="0.7em">1</tspan>   (pojačanje)</text>
 
-  <!-- Horizontalni kanal: x=644–698, y=290–300 -->
-  <rect x="644" y="290" width="54" height="10" fill="url(#u01fup_u2fl)" stroke="#4a6070" stroke-width="1.1"/>
-  <text x="671" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" fill="#1565c0" text-anchor="middle">p</text>
-  <line x1="652" y1="295" x2="690" y2="295" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01fup_u2aBl)"/>
+  <text x="805" y="379" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#7d3c98">F<tspan baseline-shift="sub" font-size="0.7em">1</tspan>·s<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = F<tspan baseline-shift="sub" font-size="0.7em">2</tspan>·s<tspan baseline-shift="sub" font-size="0.7em">2</tspan>   (rad jednak)</text>
 
-  <!-- Veliki cilindar (radni): centar x=752, inner=56, wall=12, outer=80, x:698–778 -->
-  <rect x="698" y="150" width="12" height="140" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="766" y="150" width="12" height="140" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="698" y="290" width="80" height="10" fill="url(#u01fup_u2H)" stroke="#4a6070" stroke-width="1.1"/>
-  <rect x="710" y="162" width="56" height="128" fill="url(#u01fup_u2fl)"/>
-  <rect x="696" y="134" width="84" height="16" rx="2" fill="url(#u01fup_u2ps)" stroke="#3a4a56" stroke-width="1.3"/>
-  <rect x="732" y="118" width="10" height="16" fill="#9aaab4" stroke="#5b6770" stroke-width="1"/>
-  <!-- F₂ strelica gore -->
-  <line x1="737" y1="116" x2="737" y2="98" stroke="#1e8449" stroke-width="3.2" marker-end="url(#u01fup_u2aG)"/>
-  <text x="752" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1e8449">F₂</text>
-  <!-- d₂ kota -->
-  <line x1="710" y1="305" x2="710" y2="313" stroke="#b7600c" stroke-width="1"/>
-  <line x1="766" y1="305" x2="766" y2="313" stroke="#b7600c" stroke-width="1"/>
-  <line x1="712" y1="309" x2="764" y2="309" stroke="#b7600c" stroke-width="1" marker-start="url(#u01fup_u2aDimL)" marker-end="url(#u01fup_u2aDim)"/>
-  <text x="738" y="323" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="middle">d₂ = 2·d₁</text>
-  <text x="738" y="337" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="middle">A₂ = 4·A₁</text>
+  <text x="805" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">Hidraulika: hidraulična preša, dizalica,</text>
+  <text x="805" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">stega, kočni sustav, podizanje mostova</text>
+<text x="710" y="145" font-family="'Segoe UI',Arial,sans-serif" font-size="9" text-anchor="middle" fill="#b7600c">A<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
+  <text x="870" y="145" font-family="'Segoe UI',Arial,sans-serif" font-size="9" text-anchor="middle" fill="#b7600c">A<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+  <text x="805" y="351" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c">A<tspan baseline-shift="sub" font-size="0.7em">1</tspan>·s<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = A<tspan baseline-shift="sub" font-size="0.7em">2</tspan>·s<tspan baseline-shift="sub" font-size="0.7em">2</tspan>   (volumna bilanca)</text>
 
-  <!-- Tlak strelice veliki cilindar (više strelica = ista gustoća p, veća ukupna sila) -->
-  <line x1="716" y1="250" x2="716" y2="228" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_u2aBls)"/>
-  <line x1="730" y1="250" x2="730" y2="228" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_u2aBls)"/>
-  <line x1="744" y1="250" x2="744" y2="228" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_u2aBls)"/>
-  <line x1="758" y1="250" x2="758" y2="228" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u01fup_u2aBls)"/>
-
-  <!-- Alat na vrhu: cijev na trnu za savijanje -->
-  <rect x="700" y="88" width="74" height="12" rx="5" fill="#7f8c8d" stroke="#444" stroke-width="1.6"/>
-  <polygon points="733,118 743,118 738,102" fill="#c0392b" stroke="#8b0000" stroke-width="1.2"/>
-  <text x="580" y="85" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#2e7d32" font-style="italic">cijev na trnu</text>
-  <line x1="638" y1="82" x2="700" y2="90" stroke="#2e7d32" stroke-width="1" marker-end="url(#u01fup_u2aG)"/>
-
-  <!-- Jednadžba -->
-  <text x="578" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" fill="#1a2530">p</text>
-  <text x="592" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530"> = </text>
-  <text x="630" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" fill="#c0392b" text-anchor="middle">F₁</text>
-  <line x1="616" y1="362" x2="644" y2="362" stroke="#1a2530" stroke-width="1.5"/>
-  <text x="630" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#566573" text-anchor="middle">A₁</text>
-  <text x="654" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530"> = </text>
-  <text x="696" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" fill="#1e8449" text-anchor="middle">F₂</text>
-  <line x1="680" y1="362" x2="712" y2="362" stroke="#1a2530" stroke-width="1.5"/>
-  <text x="696" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#566573" text-anchor="middle">A₂</text>
-  <text x="722" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">  →  </text>
-  <text x="764" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" fill="#1e8449">F₂</text>
-  <text x="780" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530"> = F₁ · </text>
-  <text x="848" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#566573" text-anchor="middle">A₂</text>
-  <line x1="836" y1="362" x2="860" y2="362" stroke="#1a2530" stroke-width="1.4"/>
-  <text x="848" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#566573" text-anchor="middle">A₁</text>
-
-  <!-- Primjer s brojevima -->
-  <text x="578" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#2e7d32" font-style="italic">d₁=32 mm, d₂=128 mm  →  A₂/A₁ = 16</text>
-  <text x="578" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#2e7d32" font-style="italic">F₁=320 N  →  p=0,40 MPa  →  F₂=5,12 kN</text>
-  <text x="578" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#566573" font-style="italic">hod: s₂ = s₁·A₁/A₂  (kontinuitet volumena)</text>
-  <text x="578" y="452" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#566573" font-style="italic">pretpostavke: nestlačiv fluid, isti nivo, bez gubitaka</text>
-  <text x="578" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449" font-style="italic">mali F₁ → isti p → velika F₂  (Pascalov zakon)</text>
-  <text x="578" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#566573" font-style="italic">primjena: preša, stega, tlačni razvodni blok</text>
-</svg>
+  </svg>

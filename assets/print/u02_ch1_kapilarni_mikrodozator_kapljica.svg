@@ -1,142 +1,124 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" role="img"
-     aria-labelledby="u02c1kmk_ch1t u02c1kmk_ch1d" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:1000px;height:auto;">
-  <title id="u02c1kmk_ch1t">U02 CH 1 – Kapilarni mikrodozator s izlaznom kapljicom</title>
-  <desc id="u02c1kmk_ch1d">Spremnik vode pod pretlakom p_M, tanka kapilara d=0,80 mm, kapilarni uspon h_cap=36,8 mm, izlaz na visini H=60 mm, sferna kapljica D=2,4 mm. Δp=120 Pa, p_M,min=347 Pa.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 520" role="img" aria-labelledby="u02c1kmk_title u02c1kmk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u02c1kmk_title">Kapilarni mikrodozator s izlaznom kapljicom</title>
+  <desc id="u02c1kmk_desc">Lijevo: spremnik vode s pretlakom p-M, tanka staklena kapilara s kapilarnim usponom h-cap manjim od visine izlaza H i izlaznom kapljicom promjera D. Desno: cetiri koraka rjesenja s kapilarnim usponom, tlacnim skokom kapljice, najmanjim pretlakom i zakljuckom.</desc>
 
   <defs>
-    <linearGradient id="u02c1kmk_ch1fl" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#7fb3d3"/>
+    <linearGradient id="u02c1kmk_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
     </linearGradient>
-    <radialGradient id="u02c1kmk_ch1kap" cx="38%" cy="30%" r="65%">
-      <stop offset="0%" stop-color="#d6eaf8"/>
-      <stop offset="100%" stop-color="#7fb3d3"/>
+    <radialGradient id="u02c1kmk_kap" cx="0.38" cy="0.32" r="0.78">
+      <stop offset="0" stop-color="#d6ebf8" />
+      <stop offset="1" stop-color="#5b9ec9" />
     </radialGradient>
-    <marker id="u02c1kmk_ch1aBr" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
-      <path d="M0,0 L0,7 L9,3.5 z" fill="#b7600c"/>
+    <pattern id="u02c1kmk_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u02c1kmk_pr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u02c1kmk_ch1aBrR" markerWidth="10" markerHeight="10" refX="1" refY="3.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,7 L9,3.5 z" fill="#b7600c"/>
+    <marker id="u02c1kmk_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u02c1kmk_ch1aG" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
-      <path d="M0,0 L0,7 L9,3.5 z" fill="#3a3a3a"/>
-    </marker>
-    <marker id="u02c1kmk_ch1aGR" markerWidth="10" markerHeight="10" refX="1" refY="3.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,7 L9,3.5 z" fill="#3a3a3a"/>
-    </marker>
-    <marker id="u02c1kmk_ch1aRd" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
-      <path d="M0,0 L0,7 L9,3.5 z" fill="#c0392b"/>
-    </marker>
-    <marker id="u02c1kmk_ch1aRdR" markerWidth="10" markerHeight="10" refX="1" refY="3.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,7 L9,3.5 z" fill="#c0392b"/>
-    </marker>
-    <marker id="u02c1kmk_ch1aBl" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
-      <path d="M0,0 L0,7 L9,3.5 z" fill="#1565c0"/>
+    <marker id="u02c1kmk_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
 
-  <rect width="1000" height="500" fill="#f4f6f8"/>
-  <rect x="18" y="18" width="964" height="464" rx="14" fill="#ffffff" stroke="#d0d6de" stroke-width="2"/>
+  <!-- pozadina -->
+  <rect x="16" y="16" width="1008" height="488" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <line x1="402" y1="40" x2="402" y2="480" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
-  <!-- header -->
+  <!-- ===================== LIJEVO: UREDAJ ===================== -->
 
-  <!-- ===== LIJEVI PANEL: fizikalna skica x=38..350 ===== -->
+  <!-- spremnik stijenke (zatvoreni tank) -->
+  <rect x="80" y="255" width="170" height="190" fill="url(#u02c1kmk_hatch)" stroke="#3a4a56" stroke-width="1.5" />
+  <rect x="86" y="261" width="158" height="178" fill="#ffffff" />
+  <!-- voda u spremniku -->
+  <rect x="86" y="295" width="158" height="144" fill="url(#u02c1kmk_voda)" />
+  <!-- slobodna povrsina -->
+  <line x1="86" y1="295" x2="244" y2="295" stroke="#1565c0" stroke-width="2" />
 
-  <!-- SPREMNIK: x=48..230, y=200..430 -->
-  <rect x="48" y="200" width="182" height="230" rx="6" fill="none" stroke="#5a6a76" stroke-width="2.5"/>
-  <!-- tekućina u spremniku -->
-  <rect x="50" y="270" width="178" height="158" fill="url(#u02c1kmk_ch1fl)" opacity="0.85"/>
-  <!-- razina u spremniku -->
-  <line x1="50" y1="270" x2="228" y2="270" stroke="#1565c0" stroke-width="2.5"/>
-  <text x="56" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">slobodna površina</text>
-  <!-- voda info -->
-  <text x="114" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0d47a1" text-anchor="middle">voda</text>
-  <text x="114" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">ρ=998 kg/m³</text>
-  <text x="114" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530">σ=0,072 N/m</text>
+  <!-- kapilara (staklene stijenke + voda) -->
+  <rect x="201" y="110" width="22" height="315" fill="#eaf1f6" stroke="#9fb3c0" stroke-width="1.2" />
+  <rect x="204" y="182" width="16" height="243" fill="url(#u02c1kmk_voda)" />
+  <!-- konkavni meniskus (kvasenje) -->
+  <path d="M204,184 Q212,192 220,184" fill="none" stroke="#0d47a1" stroke-width="1.4" />
 
-  <!-- p_M pretlak zona (iznad razine) -->
-  <rect x="56" y="210" width="122" height="52" rx="6" fill="#fff8e8" stroke="#b7600c" stroke-width="1.5"/>
-  <text x="117" y="231" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" font-weight="700" text-anchor="middle" fill="#b7600c">p_M</text>
-  <text x="117" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c">tlačni plin</text>
-  <!-- p_M strelica prema dolje (tlači vodu) -->
-  <line x1="117" y1="262" x2="117" y2="270" stroke="#b7600c" stroke-width="3" marker-end="url(#u02c1kmk_ch1aBr)"/>
+  <!-- izlazna kapljica D na vrhu -->
+  <circle cx="212" cy="96" r="13" fill="url(#u02c1kmk_kap)" stroke="#1565c0" stroke-width="2" />
 
-  <!-- KAPILARA: stijenke x=202..216 i x=228..242; od y=106 do y=430 -->
-  <!-- lijeva stijenka -->
-  <rect x="200" y="106" width="16" height="324" fill="none" stroke="#5a6a76" stroke-width="2.5"/>
-  <!-- desna stijenka -->
-  <rect x="236" y="106" width="16" height="324" fill="none" stroke="#5a6a76" stroke-width="2.5"/>
+  <!-- pretlak p_M na slobodnu povrsinu -->
+  <line x1="160" y1="270" x2="160" y2="289" stroke="#1565c0" stroke-width="2" marker-end="url(#u02c1kmk_pr)" />
+  <!-- voda oznake -->
+  <!-- D leader -->
+  <line x1="158" y1="92" x2="197" y2="95" stroke="#5a6a78" stroke-width="0.8" />
+  <!-- d leader -->
+  <line x1="158" y1="130" x2="201" y2="122" stroke="#5a6a78" stroke-width="0.8" />
+  <!-- theta leader -->
+  <line x1="178" y1="186" x2="203" y2="185" stroke="#5a6a78" stroke-width="0.8" />
+  <!-- kota H (lijevo) -->
+  <!-- kota h_cap (desno od kapilare) -->
+  <!-- kota gap (H - h_cap) -->
+  <!-- ===================== DESNO: 4 KORAKA ===================== -->
 
-  <!-- tekućina u kapilari: od razine (y=270) gore do uspona (y=206; h_cap≈64px na plot skali ~2.75px/mm) -->
-  <!-- h_cap = 36.8 mm → pri skali 2.75 px/mm = 101 px gore od y=270 → y=169 -->
-  <!-- no, let's set reference: H=60mm from y=270 to y=106+distance; scale: (270-106)/60 = 2.73 px/mm -->
-  <!-- h_cap = 36.8mm → 36.8*2.73 = 100px → y_cap = 270-100 = 170 -->
-  <!-- H = 60mm → 60*2.73 = 164px → y_H = 270-164 = 106 ✓ (top of kapilara) -->
-  <rect x="216" y="170" width="20" height="100" fill="#aed6f1" opacity="0.95"/>
-  <!-- tekućina unutar posude u kapilari -->
-  <rect x="216" y="270" width="20" height="160" fill="#7fb3d3" opacity="0.95"/>
-  <!-- meniskus (θ=0° → perfektno konkavan) -->
-  <path d="M216,173 Q226,158 236,173" fill="#aed6f1" stroke="#1565c0" stroke-width="2.5"/>
+  <!-- Korak 1 -->
+  <rect x="418" y="58" width="600" height="96" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="418" y="58" width="6" height="96" rx="3" fill="#1565c0" />
+  <!-- Korak 2 -->
+  <rect x="418" y="164" width="600" height="96" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="418" y="164" width="6" height="96" rx="3" fill="#1565c0" />
+  <!-- Korak 3 -->
+  <rect x="418" y="270" width="600" height="96" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
+  <!-- Korak 4 -->
+  <rect x="418" y="376" width="600" height="96" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="418" y="376" width="6" height="96" rx="3" fill="#1e8449" />
+  <line x1="201" y1="110" x2="54" y2="110" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="80" y1="295" x2="54" y2="295" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="54" y1="110" x2="54" y2="295" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02c1kmk_dimL)" marker-end="url(#u02c1kmk_dim)" />
+  <line x1="220" y1="182" x2="300" y2="182" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="244" y1="295" x2="300" y2="295" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="300" y1="182" x2="300" y2="295" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02c1kmk_dimL)" marker-end="url(#u02c1kmk_dim)" />
+  <line x1="223" y1="110" x2="352" y2="110" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="300" y1="182" x2="352" y2="182" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="352" y1="110" x2="352" y2="182" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02c1kmk_dimL)" marker-end="url(#u02c1kmk_dim)" />
+  <rect x="418" y="270" width="6" height="96" rx="3" fill="#b7600c" />
+  <text x="154" y="283" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">M</tspan></text>
+  <text x="96" y="283" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">(zrak)</text>
 
-  <!-- razina u spremniku iscrtkana -->
-  <line x1="230" y1="270" x2="248" y2="270" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="120" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0d47a1">voda</text>
+  <text x="96" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">ρ = 998 kg/m³</text>
+  <text x="96" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">σ = 0,072 N/m</text>
 
-  <!-- KAPLJICA na izlazu kapilare: cx=226, cy=84, r=22 -->
-  <circle cx="226" cy="82" r="22" fill="url(#u02c1kmk_ch1kap)" stroke="#1565c0" stroke-width="2.5"/>
-  <!-- D kota kapljice -->
-  <line x1="204" y1="68" x2="248" y2="68" stroke="#3a3a3a" stroke-width="1.8" marker-start="url(#u02c1kmk_ch1aGR)" marker-end="url(#u02c1kmk_ch1aG)"/>
-  <text x="226" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#3a3a3a">D=2,4 mm</text>
+  <text x="154" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#1a2530"><tspan font-style="italic">D</tspan> = 2,4 mm</text>
+  <text x="154" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#1a2530"><tspan font-style="italic">d</tspan> = 0,8 mm</text>
+  <text x="174" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#1a2530">θ = 0°</text>
 
-  <!-- Δp kapljice label -->
-  <rect x="254" y="60" width="90" height="26" rx="6" fill="#fff5f5" stroke="#c0392b" stroke-width="1.5"/>
-  <text x="299" y="77" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">Δp=4σ/D=120 Pa</text>
-  <line x1="254" y1="73" x2="248" y2="73" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="100" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">izlaz na visini H &gt; uspon h<tspan baseline-shift="sub" font-size="0.7em">cap</tspan> → treba pretlak</text>
 
-  <!-- iscrtkana linija razine izlaza (y=106) -->
-  <line x1="48" y1="106" x2="358" y2="106" stroke="#b7600c" stroke-width="1.2" stroke-dasharray="5 4"/>
-  <text x="52" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">razina izlaza</text>
+  <text x="438" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">1. Kapilarni uspon (θ = 0°, cos θ = 1)</text>
+  <text x="438" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">cap</tspan> = 4σ / (ρ g d) = 4·0,072 / (998·9,81·0,8·10⁻³)</text>
+  <text x="438" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">cap</tspan> ≈ 36,8 mm  &lt;  H = 60 mm  → kapilarnost nije dovoljna</text>
 
-  <!-- h_cap kota: desno od kapilare, x=258, od y=170 do y=270 -->
-  <line x1="258" y1="170" x2="258" y2="270" stroke="#c0392b" stroke-width="2" marker-start="url(#u02c1kmk_ch1aRdR)" marker-end="url(#u02c1kmk_ch1aRd)"/>
-  <text x="264" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b">h_cap</text>
-  <text x="264" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b">36,8 mm</text>
+  <text x="438" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">2. Tlačni skok na kapljici (sfera, D = 2,4 mm)</text>
+  <text x="438" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530">Δp = 4σ / D = 4·0,072 / 2,4·10⁻³ = 120 Pa</text>
+  <text x="438" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">in</tspan> = p₀ + Δp ≈ 101 445 Pa ≈ 101,45 kPa</text>
 
-  <!-- H kota: lijevo od kapilare, x=36, od y=106 do y=270 -->
-  <line x1="36" y1="106" x2="36" y2="270" stroke="#b7600c" stroke-width="2.2" marker-start="url(#u02c1kmk_ch1aBrR)" marker-end="url(#u02c1kmk_ch1aBr)"/>
-  <text x="20" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#b7600c">H</text>
-  <text x="20" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">60 mm</text>
+  <text x="438" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">M,min</tspan> = ρ g (H − h<tspan baseline-shift="sub" font-size="0.7em">cap</tspan>) + Δp</text>
+  <text x="438" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">= 227 + 120 = 347 Pa ≈ 0,347 kPa</text>
 
-  <!-- d kota kapilare: iznad, od x=216 do x=236, y=108 -->
-  <line x1="216" y1="114" x2="236" y2="114" stroke="#3a3a3a" stroke-width="1.8" marker-start="url(#u02c1kmk_ch1aGR)" marker-end="url(#u02c1kmk_ch1aG)"/>
-  <text x="226" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a3a3a">d=0,8 mm</text>
+  <text x="438" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449">4. Zaključak</text>
+  <text x="438" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">h<tspan baseline-shift="sub" font-size="0.7em">cap</tspan> = 36,8 mm &lt; H = 60 mm → sama kapilarnost ne doseže izlaz.</text>
+  <text x="438" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">Manja kapilara → veći uspon;   manja kapljica → veći Δp.</text>
+<text x="46" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">H</tspan></text>
+  <text x="46.0" y="214.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c">= 60 mm</text>
 
-  <!-- (H - h_cap) označena razlika -->
-  <line x1="302" y1="106" x2="302" y2="170" stroke="#8a9aaa" stroke-width="1.5" stroke-dasharray="4 3" marker-start="url(#u02c1kmk_ch1aGR)" marker-end="url(#u02c1kmk_ch1aG)"/>
-  <text x="308" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8a9aaa">H−h_cap</text>
-  <text x="308" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8a9aaa">23,2 mm</text>
+  <text x="306" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">cap</tspan></text>
+  <text x="306.0" y="250.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c">= 36,8 mm</text>
 
-  <!-- ===== DESNI PANEL: formula boxovi x=370..964 ===== -->
+  <text x="358" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#b7600c">H−h<tspan baseline-shift="sub" font-size="0.7em">cap</tspan></text>
+  <text x="358" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#b7600c">23,2 mm</text>
 
-  <!-- Box 1: h_cap -->
-  <rect x="370" y="96" width="582" height="84" rx="12" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.8"/>
-  <text x="390" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">1. Kapilarni uspon (θ=0°, cosθ=1)</text>
-  <text x="390" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530">h_cap = 4σ/(ρgd) = 4·0,072/(998·9,81·8·10⁻⁴)</text>
-  <text x="390" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449">h_cap ≈ 36,8 mm  &lt;  H = 60 mm  → kapilarnost sama nije dovoljna</text>
-
-  <!-- Box 2: Δp kapljica -->
-  <rect x="370" y="196" width="582" height="72" rx="12" fill="#fff5f5" stroke="#c0392b" stroke-width="1.8"/>
-  <text x="390" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">2. Tlakovni skok na kapljici (sfera, D=2,4 mm)</text>
-  <text x="390" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530">Δp = 4σ/D = 4·0,072/0,0024 = 120 Pa  →  p_in ≈ 101 445 Pa</text>
-
-  <!-- Box 3: p_M,min -->
-  <rect x="370" y="284" width="582" height="84" rx="12" fill="#fff8e8" stroke="#b7600c" stroke-width="1.8"/>
-  <text x="390" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">3. Minimalni pretlak u spremniku</text>
-  <text x="390" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530">p_M,min = ρg(H−h_cap) + Δp</text>
-  <text x="390" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#5a6a78">= 998·9,81·0,0232 + 120 = 227 + 120 = 347 Pa ≈ 0,347 kPa</text>
-
-  <!-- Box 4: zaključak -->
-  <rect x="370" y="384" width="582" height="68" rx="12" fill="#eafaf1" stroke="#1e8449" stroke-width="1.8"/>
-  <text x="390" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">4. Zaključak</text>
-  <text x="390" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e8449">h_cap=36,8 mm &lt; H=60 mm → treba p_M,min≈347 Pa. Manja kapilara → veći uspon, manji p_M.</text>
-</svg>
+  <text x="438" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b7600c">3. Najmanji pretlak u spremniku</text>
+  </svg>

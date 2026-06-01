@@ -1,190 +1,250 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img"
-     aria-labelledby="u04fup_u4pvT u04fup_u4pvD" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u04fup_u4pvT">Pregled poglavlja U04 – Relativno mirovanje fluida</title>
-  <desc id="u04fup_u4pvD">Tri panela: (1) Ubrzani pravokutni spremnik s nagnutom slobodnom površinom – fizikalni princip; (2) Ključne jednadžbe Δh=aL/g i tanα=a/g; (3) Autocisterna pri kočenju – strojarsko-praktična primjena.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 510" role="img" aria-labelledby="u04fup_title u04fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u04fup_title">Pregled poglavlja 4 - Relativno mirovanje fluida</title>
+  <desc id="u04fup_desc">Tri panela uvodnog bloka. Lijevo: brod u zaokretu - voda u pravokutnom spremniku na palubi naginje se prema vanjskoj strani zavoja zbog centrifugalnog ubrzanja. Srednji: kljucni princip - hidrostatika u efektivnom polju sila g_eff = g - a, s jednadzbama tan(alpha) = a/g, Delta h = aL/g, Delta h = omega^2 R^2 / (2g). Desno: centrifugalni separator - cilindricni rotirajuci spremnik s paraboloidnom slobodnom povrsinom.</desc>
   <defs>
-    <marker id="u04fup_u4pvaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/></marker>
-    <marker id="u04fup_u4pvaP" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4 z" fill="#8e44ad"/></marker>
-    <marker id="u04fup_u4pvaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <marker id="u04fup_u4pvaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse"><path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/></marker>
-    <linearGradient id="u04fup_u4pvfl" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
+    <!-- Strelice sila (7x5) -->
+    <marker id="u04fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u04fup_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u04fup_aP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+    </marker>
+    <!-- Kote (smede) -->
+    <marker id="u04fup_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u04fup_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <!-- Gradijenti -->
+    <linearGradient id="u04fup_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u04fup_u4pvfuel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#d4a017"/>
+    <linearGradient id="u04fup_hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a2e42" />
+      <stop offset="100%" stop-color="#243d54" />
     </linearGradient>
-    <linearGradient id="u04fup_u4pvhdr" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/>
+    <linearGradient id="u04fup_hull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8dee5" />
+      <stop offset="100%" stop-color="#8995a3" />
     </linearGradient>
-    <pattern id="u04fup_u4pvh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+    <linearGradient id="u04fup_sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7fb6d8" />
+      <stop offset="100%" stop-color="#3a6f8f" />
+    </linearGradient>
+    <pattern id="u04fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
     </pattern>
   </defs>
 
-  <!-- Pozadina + header -->
-  <rect width="980" height="500" fill="#eef1f5"/>
-  <rect x="0" y="0" width="980" height="48" fill="url(#u04fup_u4pvhdr)"/>
+  <!-- Pozadina + okvirni header -->
+  <rect width="980" height="510" fill="#ffffff" />
+  <rect x="10" y="10" width="960" height="490" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="10" y="10" width="960" height="36" rx="12" fill="url(#u04fup_hdr)" />
+  <rect x="10" y="28" width="960" height="18" fill="url(#u04fup_hdr)" />
+  <!-- ===================================================================
+       PANEL 1 (lijevo): BROD U ZAOKRETU
+  ==================================================================== -->
+  <rect x="22" y="58" width="324" height="430" rx="9" fill="#f4f9fc" stroke="#1565c0" stroke-width="1.4" />
+  <!-- More (pozadina) -->
+  <rect x="34" y="350" width="300" height="58" fill="url(#u04fup_sea)" opacity="0.55" />
+  <path d="M34,360 Q64,354 94,360 T154,360 T214,360 T274,360 T334,360" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.65" />
+  <path d="M34,376 Q64,370 94,376 T154,376 T214,376 T274,376 T334,376" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.5" />
 
-  <!-- ═══════════════════ PANEL 1 – FIZIKALNI PRINCIP ═══════════════════ -->
-  <rect x="12" y="54" width="356" height="436" rx="10" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.8"/>
-  <text x="190" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0" text-anchor="middle">Fizikalni princip</text>
-  <text x="190" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a5a7a" text-anchor="middle" font-style="italic">ubrzani pravokutni spremnik</text>
+  <!-- Trup broda (paluba na vrhu) -->
+  <path d="M70,340 L298,340 L320,360 L48,360 Z" fill="url(#u04fup_hull)" stroke="#3a4a56" stroke-width="1.6" />
+  <!-- Paluba -->
+  <line x1="70" y1="340" x2="298" y2="340" stroke="#3a4a56" stroke-width="1.6" />
 
-  <!-- Stijenke posude -->
-  <rect x="32" y="100" width="300" height="220" fill="none" stroke="#3a4a56" stroke-width="2.2"/>
-  <!-- Fluid (trapez: lijeva visina veća, desna manja – ubrzanje udesno naginje lijevu stranu gore) -->
-  <!-- Lijeva strana slobodne površine y=128, desna y=198 -->
-  <polygon points="32,320 332,320 332,198 32,128" fill="url(#u04fup_u4pvfl)" opacity="0.9"/>
-  <!-- Slobodna površina -->
-  <line x1="32" y1="128" x2="332" y2="198" stroke="#1565c0" stroke-width="2.4"/>
-  <!-- Mirna razina (isprekidana) -->
-  <line x1="32" y1="163" x2="332" y2="163" stroke="#556678" stroke-width="1.3" stroke-dasharray="7,5"/>
-  <text x="336" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#556678">h₀</text>
+  <!-- Spremnik na palubi (zatvoreni pravokutnik) -->
+  <!-- vanjske dimenzije: x=98..270, y=200..340
+       Brod skrece LIJEVO (centar zavoja lijevo), centripetalno ubrzanje a prema LIJEVO,
+       pseudo-sila na fluid prema DESNO (centrifugalna, prema vani od centra zavoja),
+       fluid se akumulira na DESNOJ (vanjskoj) strani: desna visina veca (y=232), lijeva manja (y=268). -->
+  <polygon points="106,268 262,232 262,332 106,332" fill="url(#u04fup_water)" />
+  <!-- Slobodna povrsina (nagnuta: lijevo nize, desno vise) -->
+  <line x1="106" y1="268" x2="262" y2="232" stroke="#1565c0" stroke-width="2.2" />
 
-  <!-- Kut α s lukom i oznakom -->
-  <!-- Luk kuta između vodoravnice i slobodne površine, oko točke (182,163) -->
-  <path d="M 232,163 A 50,50 0 0 0 218,146" fill="none" stroke="#8e44ad" stroke-width="1.6"/>
-  <text x="242" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#8e44ad">α</text>
+  <!-- Stjenke spremnika (zatvoreni, pune visine) -->
+  <rect x="98" y="200" width="8" height="140" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="262" y="200" width="8" height="140" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="98" y="332" width="172" height="8" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Top cap (otvoreni spremnik bez vrha) - tanak rub -->
+  <rect x="98" y="195" width="8" height="6" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.0" />
+  <rect x="262" y="195" width="8" height="6" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.0" />
 
-  <!-- g_eff strelica (okomita na slobodnu površinu) - centralno na površini -->
-  <!-- Slobodna površina ide od (32,128) do (332,198): smjer dx=300, dy=70
-       Okomici smjer: (70,-300)/√(300²+70²)=316 → (0.221,-0.975)
-       Točka na sredini: (182, 163), g_eff prema "dolje-lijevo": (182-0.221*80, 163+0.975*80) = (164,241) -->
-  <line x1="182" y1="163" x2="164" y2="241" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u04fup_u4pvaP)"/>
-  <text x="144" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#8e44ad">g_eff</text>
+  <!-- Mirna razina (referenca, isprekidano) -->
+  <line x1="106" y1="250" x2="262" y2="250" stroke="#7a8a96" stroke-width="1.0" stroke-dasharray="6,4" />
+  <!-- Kut alpha (luk uz desnu stjenku, izmedju vodoravnice i kose povrsine - lijevo od desnog rubnog kuta) -->
+  <path d="M 236,236 A 26,26 0 0 0 234,232" fill="none" stroke="#8e44ad" stroke-width="1.4" />
+  <!-- g_eff strelica (okomito na slobodnu povrsinu) -->
+  <!-- Povrsina ide od (106,268) do (262,232): smjer (156,-36), tangenta normirana (0.974, -0.225)
+       Normala (90° clockwise = u fluid + smjer centrifugalne sile): (0.225, 0.974)
+       Pocetak na sredini povrsine: (184, 250), kraj: (184 + 0.225*54, 250 + 0.974*54) = (196, 303) -->
+  <line x1="184" y1="250" x2="196" y2="302" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u04fup_aP)" />
+  <!-- Centripetalno ubrzanje (akceleracija sustava, prema centru zavoja - lijevo), strelica vodoravno prema lijevo iznad spremnika -->
+  <line x1="200" y1="178" x2="120" y2="178" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04fup_aR)" />
+  <!-- Kota Delta h (desno od spremnika, od mirne razine do nove (vise) razine) -->
+  <!-- Kota L (ispod spremnika) -->
+  <!-- Smjer zaokreta (luk koji ide u lijevo - centripetalno a prema lijevo) -->
+  <path d="M 280,438 Q 184,420 102,440" fill="none" stroke="#1e8449" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#u04fup_aG)" />
+  <!-- Tekst napomena -->
+  <!-- ===================================================================
+       PANEL 2 (srednji): KLJUCNI PRINCIP / JEDNADZBE
+  ==================================================================== -->
+  <rect x="358" y="58" width="252" height="430" rx="9" fill="#f7fbff" stroke="#1565c0" stroke-width="1.4" />
+  <!-- Header bar -->
+  <rect x="358" y="58" width="252" height="34" rx="9" fill="#1565c0" />
+  <rect x="358" y="76" width="252" height="16" fill="#1565c0" />
+  <!-- Blok 1: opci zapis (ravnoteza) -->
+  <line x1="378" y1="174" x2="590" y2="174" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Ubrzanje a (strelica udesno, iznad posude) -->
-  <line x1="285" y1="92" x2="350" y2="92" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u04fup_u4pvaR)"/>
-  <text x="267" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#c0392b">a</text>
+  <!-- Blok 2: translatorno ubrzanje -->
+  <line x1="378" y1="250" x2="590" y2="250" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Kota Δh (lijevo od posude) -->
-  <line x1="24" y1="128" x2="29" y2="128" stroke="#b7600c" stroke-width="1.3"/>
-  <line x1="24" y1="198" x2="29" y2="198" stroke="#b7600c" stroke-width="1.3"/>
-  <line x1="26" y1="130" x2="26" y2="196" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u04fup_u4pvaDimL)" marker-end="url(#u04fup_u4pvaDim)"/>
-  <text x="18" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c" text-anchor="end">Δh</text>
+  <!-- Blok 3: rotacija (paraboloid) -->
+  <line x1="378" y1="326" x2="590" y2="326" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Kota L (ispod posude) -->
-  <line x1="32" y1="326" x2="32" y2="332" stroke="#b7600c" stroke-width="1.3"/>
-  <line x1="332" y1="326" x2="332" y2="332" stroke="#b7600c" stroke-width="1.3"/>
-  <line x1="34" y1="329" x2="330" y2="329" stroke="#b7600c" stroke-width="1.5" marker-start="url(#u04fup_u4pvaDimL)" marker-end="url(#u04fup_u4pvaDim)"/>
-  <text x="182" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c" text-anchor="middle">L</text>
+  <!-- Blok 4: tlak -->
+  <line x1="378" y1="382" x2="590" y2="382" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Napomena -->
-  <text x="182" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#2a3a56" text-anchor="middle" font-style="italic">Ubrzanje a nagiba slobodnu površinu.</text>
-  <text x="182" y="385" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#2a3a56" text-anchor="middle" font-style="italic">Fluid je u mirnom stanju relativno prema</text>
-  <text x="182" y="399" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#2a3a56" text-anchor="middle" font-style="italic">stijenkama – vrijedi hidrostatika u g_eff.</text>
+  <!-- Sazetak (italic footer) -->
+  <!-- Granicni uvjeti badge -->
+  <rect x="372" y="434" width="224" height="44" rx="8" fill="#fff4e5" stroke="#c49a0a" stroke-width="1.2" />
+  <!-- ===================================================================
+       PANEL 3 (desni): CENTRIFUGALNI SEPARATOR
+  ==================================================================== -->
+  <rect x="622" y="58" width="336" height="430" rx="9" fill="#f7f3fb" stroke="#8e44ad" stroke-width="1.4" />
+  <!-- Os rotacije (vertikalna, isprekidana) -->
+  <line x1="790" y1="156" x2="790" y2="402" stroke="#8e44ad" stroke-width="1.0" stroke-dasharray="5,4" />
+  <!-- Cilindricni spremnik (presjek): x=680..900 (R=110 px), y_dno=370, y_top=160 -->
+  <!-- Fluid (paraboloid): h(r) = h_C + omega^2 r^2/(2g) -->
+  <!-- Vrh paraboloida u centru y=h_C=320, na rubu y=200, h0 mirne razine y=260 -->
+  <!-- Slobodna povrsina: simetricna parabola, vrh dolje u (790, 320), rubovi u (680,200) i (900,200) -->
 
-  <!-- Tlak u točki A (dubina h_A ispod površine) -->
-  <circle cx="102" cy="272" r="4" fill="#c0392b"/>
-  <text x="107" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c0392b">p_A = ρg·h_A</text>
+  <!-- Fluid blok (path: parabola gore, dno + bocne stjenke do dna) -->
+  <path d="M 680,200 Q 790,440 900,200 L 900,370 L 680,370 Z" fill="url(#u04fup_water)" />
 
-  <!-- ═══════════════════ PANEL 2 – JEDNADŽBE ═══════════════════ -->
-  <rect x="378" y="54" width="232" height="436" rx="10" fill="#eaf9f1" stroke="#1e8449" stroke-width="1.8"/>
-  <text x="494" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449" text-anchor="middle">Ključne jednadžbe</text>
+  <!-- Stjenke cilindra (zatvorene, pune visine) -->
+  <rect x="672" y="160" width="8" height="218" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="900" y="160" width="8" height="218" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Dno cilindra -->
+  <rect x="672" y="370" width="236" height="8" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Top cap (kratki rubovi - otvoreni spremnik) -->
+  <rect x="672" y="154" width="8" height="6" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.0" />
+  <rect x="900" y="154" width="8" height="6" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.0" />
 
-  <!-- Δh = aL/g -->
-  <rect x="390" y="90" width="208" height="62" rx="8" fill="white" stroke="#1e8449" stroke-width="1.5"/>
-  <text x="494" y="115" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-style="italic" font-weight="700" fill="#1a2530" text-anchor="middle">Δh = aL/g</text>
-  <text x="494" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">razlika razina (ubrzani prav. tank)</text>
-  <text x="494" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">h_pred = h₀+Δh/2,  h_straz = h₀-Δh/2</text>
+  <!-- Slobodna povrsina paraboloid (kriva linija) -->
+  <path d="M 680,200 Q 790,440 900,200" fill="none" stroke="#1565c0" stroke-width="2.4" />
 
-  <!-- tanα = a/g -->
-  <rect x="390" y="164" width="208" height="54" rx="8" fill="white" stroke="#8e44ad" stroke-width="1.5"/>
-  <text x="494" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-style="italic" fill="#1a2530" text-anchor="middle">tan α = a/g</text>
-  <text x="494" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">kut nagiba slobodne površine</text>
+  <!-- Mirna razina h0 (isprekidana) -->
+  <line x1="680" y1="260" x2="900" y2="260" stroke="#7a8a96" stroke-width="1.0" stroke-dasharray="6,4" />
+  <!-- Strelice rotacije (gore iznad cilindra) -->
+  <path d="M 740,138 A 50,14 0 0 1 840,138" fill="none" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u04fup_aG)" />
+  <!-- g_eff strelice: na lijevoj i desnoj stjenci, perpendikularno na lokalnu parabolu (kosi prema dolje-prema osi)
+       Parabola: y = 200 + a*(x-790)^2, a = (320-200)/110^2/(-1)... ne, parabola otvorena prema gore vrh u (790,320), prolazi (680,200): 200 = 320 + a*(790-680)^2 -> a = -120/12100 = -0.00992 (parabola otvorena prema gore u zaslonu znaci y manji = gore, vrh u 320, krajevi u 200 = gore)
+       Stvarni vrh: y_vrh = 320 (najnize u kanvasu = vrh prema dolje), parabola: y(r) = 320 - (120/12100)*r^2
+       Tangenta na (R=110, y=200): dy/dr = -2*(120/12100)*110 = -2.18, znaci pri r=R parabola "ide gore"
+       Normala (vanjska iz fluida, prema gore-prema osi) suprotno - g_eff je prema unutra: smjer (dy/dr, -1)/norma normirano u fluid
+       Za g_eff strelicu na desnoj stjenci: pocetak negdje na povrsini (npr. (850, 254) gdje y(60)=320-120/12100*3600=320-35.7=284, nije bas... hmm)
+       Pojednostavimo: prikazem g_eff samo na jednom mjestu (sredina lijeve stijenke fluida) i g na osi.
+       -->
+  <!-- g_eff lijevo: pocetna na povrsini (740, 287), smjer dolje-lijevo (van + dolje) -->
+  <line x1="740" y1="287" x2="715" y2="335" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u04fup_aP)" />
+  <!-- g_eff desno: pocetna na (840, 287), smjer dolje-desno -->
+  <line x1="840" y1="287" x2="865" y2="335" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u04fup_aP)" />
+  <!-- Gravitacija g i centrifugalno polje ω²r kao razdjeljeni vektori (na centru) -->
+  <line x1="790" y1="338" x2="790" y2="362" stroke="#3a4a56" stroke-width="1.8" marker-end="url(#u04fup_aP)" />
+  <!-- Kota R (radijus, od osi do desne stjenke) -->
+  <!-- Kota Delta h (lijevo, od rubne visine do dna parabole na osi) -->
+  <!-- Oznake h_R i h_C na fluidu -->
+  <!-- Tekst napomena dolje -->
+  <line x1="274" y1="232" x2="284" y2="232" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="274" y1="250" x2="284" y2="250" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="288" y1="230" x2="288" y2="252" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="282" y1="252" x2="282" y2="232" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04fup_dim)" marker-end="url(#u04fup_dimL)" />
+  <line x1="106" y1="346" x2="106" y2="368" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="262" y1="346" x2="262" y2="368" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="104" y1="370" x2="104" y2="358" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="264" y1="370" x2="264" y2="358" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="108" y1="365" x2="260" y2="365" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04fup_dimL)" marker-end="url(#u04fup_dim)" />
+  <line x1="790" y1="384" x2="790" y2="404" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="900" y1="384" x2="900" y2="404" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="790" y1="406" x2="790" y2="394" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="900" y1="406" x2="900" y2="394" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="792" y1="400" x2="898" y2="400" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04fup_dimL)" marker-end="url(#u04fup_dim)" />
+  <line x1="672" y1="200" x2="660" y2="200" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="790" y1="320" x2="660" y2="320" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
+  <line x1="654" y1="200" x2="666" y2="200" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="654" y1="320" x2="666" y2="320" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="660" y1="202" x2="660" y2="318" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04fup_dimL)" marker-end="url(#u04fup_dim)" />
+  <text x="490" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Relativno mirovanje fluida — hidrostatika u efektivnom polju sila</text>
 
-  <!-- Tlak u općoj točki -->
-  <rect x="390" y="228" width="208" height="54" rx="8" fill="white" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="494" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1a2530" text-anchor="middle">p = p₀ + ρg·h</text>
-  <text x="494" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">h = vertikalna dubina ispod površine</text>
-  <text x="494" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">(g zamjenjuje g_eff za rotaciju)</text>
+  <text x="184" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0" text-anchor="middle">Brod u zaokretu</text>
+  <text x="184" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#3a5a7a" text-anchor="middle">površina se naginje prema vanjskoj strani zavoja</text>
 
-  <!-- Rotacija – paraboloid -->
-  <rect x="390" y="292" width="208" height="80" rx="8" fill="white" stroke="#c0392b" stroke-width="1.5"/>
-  <text x="494" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b" text-anchor="middle">Rotacija (ω = konst.)</text>
-  <text x="494" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" fill="#1a2530" text-anchor="middle">Δh = ω²R²/(2g)</text>
-  <text x="494" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1a2530" text-anchor="middle">z(r) = z₀ + ω²r²/(2g)</text>
-  <text x="494" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">paraboloidna slobodna površina</text>
+  <text x="266" y="247" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#7a8a96">h₀</text>
 
-  <!-- Ocuvanje volumena -->
-  <rect x="390" y="382" width="208" height="44" rx="8" fill="#fff8e1" stroke="#c49a0a" stroke-width="1.3"/>
-  <text x="494" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#8b5e00" text-anchor="middle">Očuvanje volumena:</text>
-  <text x="494" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56" text-anchor="middle">os se spušta, rub se diže za Δh/2</text>
+  <text x="220" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#8e44ad">α</text>
 
-  <!-- Primjene -->
-  <text x="390" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" font-weight="700">Primjene:</text>
-  <text x="390" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">cisterne, centrifuge, separatori</text>
-  <text x="390" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">gorivni tankovi vozila, procesne kade</text>
+  <text x="160" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#8e44ad" text-anchor="end"><tspan font-weight="700">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
 
-  <!-- ═══════════════════ PANEL 3 – AUTOCISTERNA ═══════════════════ -->
-  <rect x="620" y="54" width="352" height="436" rx="10" fill="#fdf8e8" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="796" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#8b5e00" text-anchor="middle">Primjena: autocisterna pri kočenju</text>
-  <text x="796" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a4a20" text-anchor="middle" font-style="italic">gorivo se nagiba prema prednjoj stijenci</text>
+  <text x="208" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c0392b"><tspan font-weight="700">a</tspan> = ω²R</text>
 
-  <!-- Karoserija autocisterne (oblina) -->
-  <rect x="636" y="134" width="318" height="114" rx="12" fill="#f39c12" stroke="#c0720a" stroke-width="2.2"/>
-  <!-- Kotači -->
-  <circle cx="688" cy="248" r="18" fill="#444" stroke="#222" stroke-width="1.8"/>
-  <circle cx="688" cy="248" r="9" fill="#888"/>
-  <circle cx="866" cy="248" r="18" fill="#444" stroke="#222" stroke-width="1.8"/>
-  <circle cx="866" cy="248" r="9" fill="#888"/>
-  <circle cx="906" cy="248" r="18" fill="#444" stroke="#222" stroke-width="1.8"/>
-  <circle cx="906" cy="248" r="9" fill="#888"/>
+  <text x="184" y="456" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1e8449" text-anchor="middle">putanja broda u zaokretu</text>
 
-  <!-- Cisterna (eliptična) unutar karoserije -->
-  <rect x="650" y="142" width="290" height="98" rx="8" fill="#e8e0d0" stroke="#a09060" stroke-width="1.4"/>
-  <!-- Fluid (gorivo, nagnut trapez) – kočenje = ubrzanje nazad = gorivo naprijed/lijevo -->
-  <!-- Lijevo gore, desno dolje -->
-  <polygon points="651,143 939,143 939,218 651,185" fill="url(#u04fup_u4pvfuel)" opacity="0.88"/>
-  <!-- Slobodna površina goriva (nagnuta) -->
-  <line x1="651" y1="185" x2="939" y2="218" stroke="#c8860a" stroke-width="2.2"/>
-  <!-- Mirna razina -->
-  <line x1="651" y1="200" x2="939" y2="200" stroke="#a09060" stroke-width="1.2" stroke-dasharray="6,4"/>
-  <text x="941" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#a09060">h₀</text>
+  <text x="184" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle" font-style="italic">Slobodna površina ostaje okomita na <tspan font-weight="700">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan>.</text>
+  <text x="184" y="480" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle" font-style="italic">Fluid miruje relativno prema stijenkama.</text>
 
-  <!-- Kočenje strelica (gorivo ide prema naprijed = lijevo) -->
-  <line x1="720" y1="112" x2="658" y2="112" stroke="#c0392b" stroke-width="3.0" marker-end="url(#u04fup_u4pvaR)"/>
-  <text x="730" y="117" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">a (kočenje)</text>
+  <text x="484" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Ključni princip</text>
 
-  <!-- Kota h_pred (lijevo) -->
-  <line x1="643" y1="185" x2="648" y2="185" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="643" y1="238" x2="648" y2="238" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="645" y1="187" x2="645" y2="236" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04fup_u4pvaDimL)" marker-end="url(#u04fup_u4pvaDim)"/>
-  <text x="634" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="end">h_p</text>
+  <text x="484" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">ravnoteža tlaka u efektivnom polju</text>
+  <text x="484" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#1a2530" text-anchor="middle">∇p = ρ <tspan fill="#8e44ad">g</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#8e44ad">eff</tspan></text>
+  <text x="484" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78" text-anchor="middle"><tspan fill="#8e44ad" font-weight="700">g</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#8e44ad">eff</tspan> = <tspan fill="#1a2530">g</tspan> − <tspan fill="#c0392b">a</tspan></text>
+  <text x="484" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">translatorno ubrzanje (kolica, brod, vozilo)</text>
+  <text x="484" y="217" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1a2530" text-anchor="middle">tan α = a / g</text>
+  <text x="484" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1565c0" text-anchor="middle">Δh = a L / g</text>
+  <text x="484" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">rotacija konstantnom ω (centrifuga)</text>
+  <text x="484" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1a2530" text-anchor="middle">z(r) = z<tspan baseline-shift="sub" font-size="0.7em">C</tspan> + ω² r² / (2g)</text>
+  <text x="484" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1565c0" text-anchor="middle">Δh = ω² R² / (2g)</text>
+  <text x="484" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">tlak u točki dubine h ispod površine</text>
+  <text x="484" y="369" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1a2530" text-anchor="middle">p = p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> + ρ g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan> · h</text>
+  <text x="484" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#3a4a56" text-anchor="middle">Hidrostatika ostaje – mijenja se samo</text>
+  <text x="484" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#3a4a56" text-anchor="middle">smjer i iznos efektivnog polja sila.</text>
 
-  <!-- Kota h_straz (desno) -->
-  <line x1="942" y1="218" x2="947" y2="218" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="942" y1="238" x2="947" y2="238" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="945" y1="220" x2="945" y2="236" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04fup_u4pvaDimL)" marker-end="url(#u04fup_u4pvaDim)"/>
-  <text x="955" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">h_s</text>
+  <text x="484" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#8b5e00" text-anchor="middle">GRANICE MODELA</text>
+  <text x="484" y="467" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a4a20" text-anchor="middle">prelijevanje površine · ogoljavanje dna</text>
 
-  <!-- Jednadžba ispod autocisterne -->
-  <rect x="636" y="280" width="318" height="46" rx="7" fill="white" stroke="#c49a0a" stroke-width="1.4"/>
-  <text x="795" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1a2530" text-anchor="middle">Δh = aL/g,  h_p = h₀+Δh/2,  h_s = h₀-Δh/2</text>
-  <text x="795" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78" text-anchor="middle">provjera prelijevanja: h_p ≤ H_cisterne</text>
+  <text x="790" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#8e44ad" text-anchor="middle">Centrifugalni separator</text>
+  <text x="790" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a3a78" text-anchor="middle">paraboloidna slobodna površina pri rotaciji</text>
 
-  <!-- Broj primjera naveden -->
-  <text x="636" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#3a4a56">Strojarski kontekst:</text>
-  <text x="636" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">cisterne za gorivo, vatrogasna vozila</text>
-  <text x="636" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">tankeri za kemikalije, prehrambeni transport</text>
-  <text x="636" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">EN 14286: provjera punjenja cisterne</text>
+  <text x="794" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#8e44ad">os rotacije</text>
 
-  <!-- Paraboloid – mini prikaz -->
-  <rect x="636" y="406" width="318" height="76" rx="7" fill="#f0f8ff" stroke="#1565c0" stroke-width="1.2"/>
-  <text x="795" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1565c0" text-anchor="middle">Rotacija: paraboloidna slobodna površina</text>
-  <!-- Mini paraboloid crtež -->
-  <!-- Cilindar: x=680..910, referentna linija y=454 -->
-  <rect x="710" y="434" width="10" height="40" fill="#c8d0d5" stroke="#556" stroke-width="1.0"/>
-  <rect x="870" y="434" width="10" height="40" fill="#c8d0d5" stroke="#556" stroke-width="1.0"/>
-  <!-- Paraboloid: od (720,470) Q(790,434) (880,470) -->
-  <rect x="720" y="455" width="160" height="15" fill="url(#u04fup_u4pvfl)" opacity="0.7"/>
-  <path d="M720,470 Q790,440 880,470 L880,455 Q790,440 720,455 Z" fill="url(#u04fup_u4pvfl)" opacity="0.88"/>
-  <path d="M720,470 Q790,440 880,470" fill="none" stroke="#1565c0" stroke-width="2.0"/>
-  <!-- Referentna razina h0 -->
-  <line x1="720" y1="456" x2="880" y2="456" stroke="#a0a8b0" stroke-width="1.0" stroke-dasharray="4,3"/>
-  <!-- ω oznaka -->
-  <text x="845" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" font-style="italic">ω</text>
-  <!-- Δh/2 oznake -->
-  <text x="895" y="445" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">Δh</text>
-</svg>
+  <text x="912" y="263" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#7a8a96">h₀</text>
+
+  <text x="730" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" font-weight="700" fill="#1e8449" text-anchor="end">ω</text>
+
+  <text x="745" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad"><tspan font-weight="700">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
+  <text x="820" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad" text-anchor="end"><tspan font-weight="700">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
+  <text x="795" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#3a4a56"><tspan font-weight="700">g</tspan></text>
+
+  <text x="918" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#0d47a1">h<tspan baseline-shift="sub" font-size="0.7em">R</tspan></text>
+  <text x="794" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#0d47a1">h<tspan baseline-shift="sub" font-size="0.7em">C</tspan></text>
+
+  <text x="790" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle" font-style="italic">Centrifugalno polje ω²r → paraboloid.</text>
+  <text x="790" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle" font-style="italic">Primjene: separatori, centrifuge,</text>
+  <text x="790" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle" font-style="italic">procesne kade, lijevanje pod rotacijom.</text>
+
+<text x="306" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="middle">Δh/2</text>
+
+  <text x="184" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="middle">L</text>
+
+  <text x="845" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="middle">R</text>
+
+  <text x="640" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="middle">Δh</text>
+
+  </svg>

@@ -1,174 +1,188 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u04c1rsp_u4c1T u04c1rsp_u4c1D" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u04c1rsp_u4c1T">U04 CH 1 – Rotirajući cilindrični spremnik, granica prelijevanja</title>
-  <desc id="u04c1rsp_u4c1D">Aksijalni presjek cilindra (R=0,40 m, H=0,78 m, h₀=0,60 m). Pri ω=5,20 rad/s: Δh=0,221 m, h_C=0,490 m, h_R=0,710 m. Granica prelijevanja: ω_max=6,64 rad/s. Manometarski tlakovi na dnu u C i D.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 520" role="img" aria-labelledby="u04c1rsp_title u04c1rsp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u04c1rsp_title">Rotirajuci cilindricni spremnik s paraboloidnom slobodnom povrsinom</title>
+  <desc id="u04c1rsp_desc">Aksijalni presjek otvorenog cilindricnog spremnika polumjera R=0,40 m i visine H=0,78 m. Pri kutnoj brzini omega=5,20 rad/s slobodna povrsina vode postaje paraboloid revolucije: na osi dubina h_C=0,490 m, uz stijenku h_R=0,710 m, razlika Delta h=0,221 m. Tlakovi na dnu: p_M,C=4,80 kPa u tocki C, p_M,D=6,97 kPa u tocki D. Granica prelijevanja: omega_max=6,64 rad/s odnosno n_max=63,4 okr/min.</desc>
+
   <defs>
-    <pattern id="u04c1rsp_u4c1H" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
-    </pattern>
-    <linearGradient id="u04c1rsp_u4c1Wg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <linearGradient id="u04c1rsp_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
     </linearGradient>
-    <marker id="u04c1rsp_u4c1aGr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#546e7a"/>
+    <pattern id="u04c1rsp_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u04c1rsp_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u04c1rsp_u4c1aGrL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#546e7a"/>
+    <marker id="u04c1rsp_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u04c1rsp_u4c1aRd" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#b42318"/>
+    <marker id="u04c1rsp_pr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u04c1rsp_u4c1aOr" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#b7600c"/>
+    <marker id="u04c1rsp_om" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+    </marker>
+    <marker id="u04c1rsp_omL" markerWidth="7" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
     </marker>
   </defs>
 
-  <!-- Background + border -->
-  <rect width="940" height="420" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <!-- okvirni paneli -->
+  <rect x="16" y="16" width="908" height="488" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <line x1="500" y1="34" x2="500" y2="486" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
-  <!-- Title + subtitle -->
+  <!-- ===================== LIJEVI PANEL: AKSIJALNI PRESJEK ===================== -->
+  <!-- Skala 200 px/m: R=0,40 m -> 80 px, H=0,78 m -> 156 px, h0=0,60 m -> 120 px -->
+  <!-- Cilindar: cetrina x=260, unutarnji od x=180 do x=340, dno y=380, vrh y=224 -->
+  <!-- Mirna razina h0: y = 380-120 = 260 -->
+  <!-- Radni rezim: z_C = 380-98 = 282, z_R = 380-142 = 238 -->
+  <!-- Granica: z_C_max = 380-84 = 296, z_R_max = 380-156 = 224 -->
 
-  <!-- === LEFT PANEL: Cylindrical container (axial cross-section) === -->
-  <!-- Scale: 150 px/m. R=0,40m→60px, H=0,78m→117px -->
-  <!-- Container: centered at x=290, left x=230, right x=350 (120px = 2R) -->
-  <!-- Bottom y=348, top y=231 (open, H=117px) -->
+  <!-- Panel naslov (deskriptivno, ne figure title) -->
+  <!-- Stijenke spremnika (pune visine, otvoreni vrh) -->
+  <!-- Lijeva stijenka -->
+  <rect x="166" y="224" width="14" height="156" fill="url(#u04c1rsp_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- Desna stijenka -->
+  <rect x="340" y="224" width="14" height="156" fill="url(#u04c1rsp_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <!-- Dno spremnika -->
+  <rect x="166" y="380" width="188" height="14" fill="url(#u04c1rsp_hatch)" stroke="#3a4a56" stroke-width="1.3" />
 
-  <!-- Left wall srafura -->
-  <rect x="205" y="231" width="25" height="117" fill="url(#u04c1rsp_u4c1H)"/>
-  <rect x="205" y="231" width="25" height="117" fill="none" stroke="#546e7a" stroke-width="1.2"/>
-  <!-- Right wall srafura -->
-  <rect x="350" y="231" width="25" height="117" fill="url(#u04c1rsp_u4c1H)"/>
-  <rect x="350" y="231" width="25" height="117" fill="none" stroke="#546e7a" stroke-width="1.2"/>
-  <!-- Bottom floor srafura -->
-  <rect x="205" y="348" width="170" height="24" fill="url(#u04c1rsp_u4c1H)"/>
-  <rect x="205" y="348" width="170" height="24" fill="none" stroke="#546e7a" stroke-width="1.2"/>
+  <!-- Voda s paraboloidnom slobodnom povrsinom (radni rezim) -->
+  <!-- Parabola od (180,238) do (340,238) s vrhom u (260,282); kontrolna tocka y_ctrl=326 -->
+  <path d="M180,238 Q260,326 340,238 L340,380 L180,380 Z" fill="url(#u04c1rsp_voda)" />
 
-  <!-- Water fill with parabolic free surface -->
-  <!-- ω=5,20 rad/s: h_C=0,490m→73.5px → z_C=348-73.5=274.5≈275 -->
-  <!--              h_R=0,710m→106.5px → z_R=348-106.5=241.5≈242 -->
-  <!-- Parabola M230,242 Q290,? 350,242: vertex at (290,275): -->
-  <!--   at t=0.5: 0.25*242+0.5*y_ctrl+0.25*242 = 275 → y_ctrl = (275-121)/0.5 = 308 -->
-  <path d="M230,242 Q290,308 350,242 L350,348 L230,348 Z" fill="url(#u04c1rsp_u4c1Wg)" opacity="0.9"/>
+  <!-- Konturno isticanje slobodne povrsine (radni rezim) -->
+  <path d="M180,238 Q260,326 340,238" fill="none" stroke="#1565c0" stroke-width="2.4" />
 
-  <!-- Tank inner wall faces -->
-  <line x1="230" y1="231" x2="230" y2="348" stroke="#2d3a40" stroke-width="2.5"/>
-  <line x1="350" y1="231" x2="350" y2="348" stroke="#2d3a40" stroke-width="2.5"/>
+  <!-- Granicna paraboloidna povrsina (dashed) - omega_max -->
+  <!-- Parabola od (180,224) do (340,224) s vrhom u (260,296); y_ctrl=368 -->
+  <path d="M180,224 Q260,368 340,224" fill="none" stroke="#8e44ad" stroke-width="1.7" stroke-dasharray="7,4" />
 
-  <!-- Open top rim (dashed, representing open container top) -->
-  <line x1="205" y1="231" x2="375" y2="231" stroke="#2d3a40" stroke-width="2" stroke-dasharray="6 4"/>
+  <!-- Mirna razina h0 (referenca, isprekidana smeda) -->
+  <!-- Os simetrije (isprekidana siva, proteze se iznad i ispod cilindra) -->
+  <line x1="260" y1="200" x2="260" y2="218" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
+  <line x1="260" y1="224" x2="260" y2="380" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
+  <!-- Kutna brzina omega - zakrivljena strelica iznad spremnika -->
+  <path d="M222,196 A42,16 0 0 1 298,196" fill="none" stroke="#8e44ad" stroke-width="2.2" marker-end="url(#u04c1rsp_om)" />
+  <!-- Tocke C (na osi, na dnu) i D (uz rub, na dnu) - bijeli krug za citljivost -->
+  <circle cx="260" cy="380" r="4.5" fill="#ffffff" stroke="#1a2530" stroke-width="1.6" />
+  <circle cx="260" cy="380" r="2.2" fill="#1a2530" />
+  <circle cx="340" cy="380" r="4.5" fill="#ffffff" stroke="#1a2530" stroke-width="1.6" />
+  <circle cx="340" cy="380" r="2.2" fill="#1a2530" />
+  <!-- C i D etikete u praznoj zoni izmedu dna spremnika i R-kote -->
+  <line x1="260" y1="384" x2="255" y2="400" stroke="#1a2530" stroke-width="0.7" />
+  <line x1="340" y1="384" x2="345" y2="400" stroke="#1a2530" stroke-width="0.7" />
 
-  <!-- Parabola at ω=5,20 (working state, solid blue) -->
-  <path d="M230,242 Q290,308 350,242" fill="none" stroke="#1565c0" stroke-width="2.5"/>
+  <!-- Tlacne strelice na dnu C i D (plave, smjer dolje na dno) -->
+  <line x1="270" y1="362" x2="270" y2="376" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u04c1rsp_pr)" />
+  <line x1="330" y1="362" x2="330" y2="376" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u04c1rsp_pr)" />
+  <!-- ===================== KOTE ===================== -->
 
-  <!-- Overflow-limit parabola (dashed, ω_max=6,64 rad/s) -->
-  <!-- h_C_max=0,420m→63px → z_C_max=348-63=285; h_R_max=H=0,78m=117px → z_R_max=231 -->
-  <!-- Parabola M230,231 Q290,? 350,231: vertex at (290,285): y_ctrl=(285-115.5)/0.5=339 -->
-  <path d="M230,231 Q290,339 350,231" fill="none" stroke="#b42318" stroke-width="2" stroke-dasharray="8 5"/>
+  <!-- Kota H (lijevo od cilindra, od vrha do dna) -->
+  <!-- Kota h_C (unutar fluida, od povrsine na osi do dna) - lijevo od osi -->
+  <!-- Kota h_R (desno od cilindra, od povrsine uz stijenku do dna) -->
+  <!-- Kota Delta h - narancasta, izmedu razine na osi (282) i razine uz stijenku (238), desno od stijenke -->
+  <line x1="354" y1="282" x2="374" y2="282" stroke="#e67e22" stroke-width="0.7" />
+  <line x1="369" y1="238" x2="369" y2="282" stroke="#e67e22" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+  <line x1="364" y1="282" x2="374" y2="282" stroke="#e67e22" stroke-width="1.2" />
+  <!-- Kota R (ispod dna, od osi do desnog ruba unutarnjeg promjera) -->
+  <!-- Legenda za paraboloide (donji dio lijevog panela) -->
+  <line x1="40" y1="466" x2="78" y2="466" stroke="#1565c0" stroke-width="2.4" />
+  <line x1="270" y1="466" x2="308" y2="466" stroke="#8e44ad" stroke-width="1.7" stroke-dasharray="7,4" />
+  <!-- h0 oznaka iznad mirne razine, u centralnoj zracnoj zoni (parabola tu je iznad linije) -->
+  <!-- ===================== DESNI PANEL: FORMULE ===================== -->
 
-  <!-- Central axis (dashed vertical) -->
-  <line x1="290" y1="215" x2="290" y2="348" stroke="#8090a0" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <!-- Header bar (ljubicasta - rotacija) -->
+  <rect x="518" y="46" width="392" height="34" rx="8" fill="#8e44ad" />
+  <!-- Glavna jednadzba (oblik povrsine) -->
+  <rect x="518" y="90" width="392" height="46" rx="6" fill="#f5eef9" stroke="#d6c2e3" stroke-width="1.1" />
+  <!-- Blok 1: Delta h -->
+  <rect x="518" y="146" width="392" height="76" rx="8" fill="#fef6ef" stroke="#f0d8b8" stroke-width="1.1" />
+  <rect x="518" y="146" width="6" height="76" rx="3" fill="#e67e22" />
+  <!-- Blok 2: h_C, h_R -->
+  <rect x="518" y="230" width="392" height="76" rx="8" fill="#fef6ef" stroke="#f0d8b8" stroke-width="1.1" />
+  <!-- Blok 3: Tlakovi p_M,C i p_M,D -->
+  <rect x="518" y="314" width="392" height="76" rx="8" fill="#eaf3fb" stroke="#bcd6ec" stroke-width="1.1" />
+  <rect x="518" y="314" width="6" height="76" rx="3" fill="#1565c0" />
+  <!-- Blok 4: Granica prelijevanja -->
+  <rect x="518" y="398" width="392" height="76" rx="8" fill="#f5eef9" stroke="#d6c2e3" stroke-width="1.1" />
+  <rect x="518" y="398" width="6" height="76" rx="3" fill="#8e44ad" />
+  <!-- Italic footer -->
+  <line x1="180" y1="260" x2="340" y2="260" stroke="#b7600c" stroke-width="1.3" stroke-dasharray="6,4" opacity="0.85" />
 
-  <!-- h₀ dashed reference line (initial level, h₀=0,60m→90px, y=348-90=258) -->
-  <line x1="230" y1="258" x2="350" y2="258" stroke="#b7600c" stroke-width="1.5" stroke-dasharray="7 5"/>
-  <rect x="354" y="249" width="58" height="20" rx="4" fill="#fffbf5" stroke="#e0c080" stroke-width="1"/>
-  <text x="383" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">h₀=0,60 m</text>
+  <line x1="166" y1="224" x2="100" y2="224" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="166" y1="380" x2="100" y2="380" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="105" y1="224" x2="105" y2="380" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+  <line x1="100" y1="224" x2="110" y2="224" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="100" y1="380" x2="110" y2="380" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="180" y1="282" x2="142" y2="282" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,2" />
+  <line x1="147" y1="282" x2="147" y2="380" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+  <line x1="142" y1="282" x2="152" y2="282" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="142" y1="380" x2="152" y2="380" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="354" y1="238" x2="404" y2="238" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="354" y1="380" x2="404" y2="380" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="399" y1="238" x2="399" y2="380" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+  <line x1="394" y1="238" x2="404" y2="238" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="394" y1="380" x2="404" y2="380" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="260" y1="394" x2="260" y2="436" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="340" y1="394" x2="340" y2="436" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="260" y1="431" x2="340" y2="431" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+  <line x1="260" y1="426" x2="260" y2="436" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="340" y1="426" x2="340" y2="436" stroke="#b7600c" stroke-width="1.2" />
+  <rect x="518" y="230" width="6" height="76" rx="3" fill="#b7600c" />
+  <text x="260" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">Aksijalni presjek (paraboloid revolucije)</text>
 
-  <!-- ω rotation symbol (curved arrow above container) -->
-  <!-- Arc above centre, from left-ish to right-ish, with arrowhead -->
-  <path d="M264,220 A30,16 0 0 1 316,220" fill="none" stroke="#173043" stroke-width="2.5"/>
-  <!-- Arrowhead at end of arc: approximate position (316,220) going rightward-downward -->
-  <polygon points="316,220 307,217 309,226" fill="#173043"/>
-  <rect x="234" y="205" width="60" height="18" rx="4" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="264" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043" text-anchor="middle">ω = 5,20</text>
-  <text x="264" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#516677" text-anchor="middle">rad/s</text>
+  <text x="270" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#5a6a78">os vrtnje</text>
 
-  <!-- Points C (center bottom) and D (rim bottom) -->
-  <circle cx="290" cy="348" r="5" fill="#173043"/>
-  <rect x="277" y="356" width="26" height="20" rx="4" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="290" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">C</text>
+  <text x="260" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#8e44ad"><tspan font-weight="700">ω</tspan> = 5,20 rad/s</text>
 
-  <circle cx="350" cy="348" r="5" fill="#173043"/>
-  <rect x="355" y="356" width="26" height="20" rx="4" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="368" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">D</text>
+  <text x="251" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">C</text>
+  <text x="349" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">D</text>
+  <text x="278" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">M,C</tspan></text>
 
-  <!-- === DIMENSION LINES === -->
+  <text x="306" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">M,D</tspan></text>
 
-  <!-- h_C dim (inside/left, at x=218, from z_C=275 to bottom 348) → 73px -->
-  <line x1="218" y1="275" x2="218" y2="348" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u04c1rsp_u4c1aGrL)" marker-end="url(#u04c1rsp_u4c1aGr)"/>
-  <line x1="213" y1="275" x2="223" y2="275" stroke="#546e7a" stroke-width="1.3"/>
-  <line x1="213" y1="348" x2="223" y2="348" stroke="#546e7a" stroke-width="1.3"/>
-  <rect x="140" y="300" width="56" height="32" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="168" y="315" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">h_C</text>
-  <text x="168" y="329" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">0,490 m</text>
+  <text x="378" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#e67e22">Δ<tspan font-style="italic">h</tspan></text>
+  <text x="378.0" y="274.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#e67e22">= 0,221 m</text>
 
-  <!-- h_R dim (left, at x=195, from z_R=242 to bottom 348) → 106px -->
-  <line x1="195" y1="242" x2="195" y2="348" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u04c1rsp_u4c1aGrL)" marker-end="url(#u04c1rsp_u4c1aGr)"/>
-  <line x1="190" y1="242" x2="200" y2="242" stroke="#546e7a" stroke-width="1.3"/>
-  <rect x="110" y="281" width="56" height="32" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="138" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">h_R</text>
-  <text x="138" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">0,710 m</text>
+  <text x="84" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">radni rezim (ω = 5,20 rad/s)</text>
+  <text x="314" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">granica prelijevanja (ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan>)</text>
 
-  <!-- H dim (right side, at x=400, from y=231 to y=348) → 117px -->
-  <line x1="400" y1="231" x2="400" y2="348" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u04c1rsp_u4c1aGrL)" marker-end="url(#u04c1rsp_u4c1aGr)"/>
-  <line x1="395" y1="231" x2="405" y2="231" stroke="#546e7a" stroke-width="1.3"/>
-  <line x1="395" y1="348" x2="405" y2="348" stroke="#546e7a" stroke-width="1.3"/>
-  <rect x="407" y="279" width="56" height="34" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="435" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">H</text>
-  <text x="435" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">0,78 m</text>
+  <text x="714" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#ffffff">Paraboloidna slobodna povrsina − kljucne jednadzbe</text>
 
-  <!-- Δh dim (between z_R=242 and z_C=275, at x=370, right of container) -->
-  <line x1="370" y1="242" x2="370" y2="275" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u04c1rsp_u4c1aGrL)" marker-end="url(#u04c1rsp_u4c1aGr)"/>
-  <line x1="365" y1="242" x2="375" y2="242" stroke="#546e7a" stroke-width="1.3"/>
-  <line x1="365" y1="275" x2="375" y2="275" stroke="#546e7a" stroke-width="1.3"/>
-  <rect x="377" y="250" width="54" height="19" rx="4" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="404" y="263" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">Δh</text>
-  <text x="365" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#516677">0,221 m</text>
+  <text x="528" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Oblik slobodne povrsine</text>
+  <text x="714" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan>(<tspan font-style="italic">r</tspan>) = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> + ω²<tspan font-style="italic">r</tspan>² / (2<tspan font-style="italic">g</tspan>)</text>
 
-  <!-- R dim (from center x=290 to rim x=350, below bottom, y=385) -->
-  <line x1="290" y1="385" x2="350" y2="385" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u04c1rsp_u4c1aGrL)" marker-end="url(#u04c1rsp_u4c1aGr)"/>
-  <line x1="290" y1="380" x2="290" y2="390" stroke="#546e7a" stroke-width="1.3"/>
-  <line x1="350" y1="380" x2="350" y2="390" stroke="#546e7a" stroke-width="1.3"/>
-  <rect x="300" y="390" width="66" height="20" rx="4" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="333" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">R = 0,40 m</text>
+  <text x="538" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#e67e22">1. Razlika razina Δ<tspan font-style="italic">h</tspan></text>
+  <text x="714" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">Δ<tspan font-style="italic">h</tspan> = ω²<tspan font-style="italic">R</tspan>² / (2<tspan font-style="italic">g</tspan>) = 5,20² · 0,40² / (2 · 9,81)</text>
+  <text x="714" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#e67e22">Δ<tspan font-style="italic">h</tspan> ≈ 0,221 m</text>
 
-  <!-- Legend for parabolas -->
-  <line x1="105" y1="175" x2="145" y2="175" stroke="#1565c0" stroke-width="2.5"/>
-  <text x="150" y="179" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">Radni režim (ω=5,20 rad/s)</text>
-  <line x1="105" y1="192" x2="145" y2="192" stroke="#b42318" stroke-width="2" stroke-dasharray="8 5"/>
-  <text x="150" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">Granica prelijevanja (ω_max=6,64 rad/s)</text>
+  <text x="714" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> − Δ<tspan font-style="italic">h</tspan>/2,  <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> + Δ<tspan font-style="italic">h</tspan>/2</text>
+  <text x="538" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">3. Manometarski tlakovi na dnu</text>
+  <text x="714" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M</tspan> = ρ<tspan font-style="italic">g</tspan> <tspan font-style="italic">h</tspan>(<tspan font-style="italic">r</tspan>)</text>
+  <text x="714" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M,C</tspan> ≈ 4,80 kPa,  <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M,D</tspan> ≈ 6,97 kPa</text>
 
-  <!-- p_M,C and p_M,D pressure annotations at C and D -->
-  <text x="250" y="401" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">p_C≈4,81 kPa</text>
-  <text x="350" y="401" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">p_D≈6,97 kPa</text>
+  <text x="538" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#8e44ad">4. Granica prelijevanja (<tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = <tspan font-style="italic">H</tspan>)</text>
+  <text x="714" y="440" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan> = √[4<tspan font-style="italic">g</tspan>(<tspan font-style="italic">H</tspan> − <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan>) / <tspan font-style="italic">R</tspan>²]</text>
+  <text x="714" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#8e44ad">ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 6,64 rad/s,  <tspan font-style="italic">n</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 63,4 okr/min</text>
 
-  <!-- === RIGHT PANEL: Formula box === -->
-  <rect x="500" y="88" width="398" height="310" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="520" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#173043">Ključne jednadžbe</text>
-  <line x1="520" y1="120" x2="882" y2="120" stroke="#e8d89a" stroke-width="1"/>
+  <text x="714" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">∂<tspan font-style="italic">p</tspan>/∂<tspan font-style="italic">r</tspan> = ρω²<tspan font-style="italic">r</tspan>,  ∂<tspan font-style="italic">p</tspan>/∂<tspan font-style="italic">z</tspan> = −ρ<tspan font-style="italic">g</tspan>  →  <tspan font-style="italic">h</tspan>(<tspan font-style="italic">r</tspan>) paraboloid</text>
 
-  <text x="520" y="140" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h(r) = h_C + ω²r² / (2g)</text>
-  <text x="520" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Δh = ω²R² / (2g)</text>
-  <text x="520" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">  = 5,20² · 0,40² / (2·9,81)</text>
-  <text x="520" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">  Δh ≈ 0,221 m</text>
-  <line x1="520" y1="202" x2="882" y2="202" stroke="#e8d89a" stroke-width="1"/>
+<text x="92" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">H</tspan></text>
+  <text x="92.0" y="314.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c">= 0,78 m</text>
 
-  <text x="520" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h_C = h₀ − Δh/2 = 0,60−0,11 = 0,490 m</text>
-  <text x="520" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h_R = h₀ + Δh/2 = 0,60+0,11 = 0,710 m</text>
-  <line x1="520" y1="246" x2="882" y2="246" stroke="#e8d89a" stroke-width="1"/>
+  <text x="139" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan></text>
+  <text x="139.0" y="344.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#b7600c">= 0,490 m</text>
 
-  <text x="520" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p_M,C = ρg·h_C = 1000·9,81·0,490</text>
-  <text x="520" y="281" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">  p_M,C ≈ 4,81 kPa</text>
-  <text x="520" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p_M,D = ρg·h_R = 1000·9,81·0,710</text>
-  <text x="520" y="315" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">  p_M,D ≈ 6,97 kPa</text>
-  <line x1="520" y1="323" x2="882" y2="323" stroke="#e8d89a" stroke-width="1"/>
+  <text x="416" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan></text>
+  <text x="416.0" y="322.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#b7600c">= 0,710 m</text>
 
-  <text x="520" y="341" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Granica prelijevanja: h_R = H</text>
-  <text x="520" y="359" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">  ω_max² = 2g·(H−h₀)·2/R² = 2·9,81·0,36/0,16</text>
-  <text x="520" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">  ω_max ≈ 6,64 rad/s → n_max ≈ 63 o/min</text>
-  <text x="520" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">R=0,40 m, H=0,78 m, h₀=0,60 m, ρ=1000 kg/m³</text>
+  <text x="300" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">R</tspan> = 0,40 m</text>
 
-</svg>
+  <text x="222" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 0,60 m (mirno)</text>
+
+  <text x="538" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">2. Dubine na osi i uz stijenku</text>
+  <text x="714" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 0,490 m,  <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 0,710 m</text>
+
+  </svg>

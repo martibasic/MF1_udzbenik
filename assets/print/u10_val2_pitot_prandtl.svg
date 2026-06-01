@@ -1,110 +1,251 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420" role="img" aria-labelledby="u10v2pp_u10v2-title u10v2-sub" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" role="img" aria-labelledby="u10v2pp_title u10v2pp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u10v2pp_title">Pitot-staticka cijev u struji vode s zivinim diferencijalnim manometrom</title>
+  <desc id="u10v2pp_desc">U vodoravnoj cijevi s vodom koja struji slijeva nadesno smjestena je Pitot-staticka sonda. Stagnacijski otvor na vrhu pijuka gleda uzvodno (mjeri p-nula), staticki otvor na boku sape mjeri p. Dva tanka voda spajaju otvore s U-cijevi smjestenom ispod cijevi; ziva pokazuje razliku razina Delta h_Hg = 63 mm, sto daje Delta p ribl. 7,79 kPa i brzinu v ribl. 3,95 m/s.</desc>
+
   <defs>
-    <linearGradient id="u10v2pp_u10v2-wg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <linearGradient id="u10v2pp_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u10v2pp_u10v2-hg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#b0b0b8"/>
-      <stop offset="100%" stop-color="#808090"/>
+    <linearGradient id="u10v2pp_ziva" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b0b8c0" />
+      <stop offset="100%" stop-color="#808890" />
     </linearGradient>
-    <pattern id="u10v2pp_u10v2-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="8" x2="8" y2="0" stroke="#546e7a" stroke-width="1.8"/>
+    <linearGradient id="u10v2pp_metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#909fa8" />
+      <stop offset="100%" stop-color="#5d6d7e" />
+    </linearGradient>
+    <pattern id="u10v2pp_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
     </pattern>
-    <marker id="u10v2pp_u10v2-arrG" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#0f766e"/>
+
+    <!-- Strelica toka / izlazne velicine (zelena) -->
+    <marker id="u10v2pp_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u10v2pp_u10v2-arrO" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c49a0a"/>
+    <!-- Strelica tlaka (plava) -->
+    <marker id="u10v2pp_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u10v2pp_u10v2-arrOrev" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c49a0a"/>
+    <!-- Marker za kote (smedi) -->
+    <marker id="u10v2pp_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u10v2pp_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
-  <rect width="940" height="420" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <title id="u10v2pp_u10v2-title">U10 Val 2 – Pitot-Prandtl cijev s živinim manometrom</title>
-  <desc id="u10v2pp_u10v2-desc">Pitot-Prandtl sonda u vodoravnom toku vode. Sonda usmjerena uzvodno mjeri stagnacijski tlak p₀; statički otvor mjeri p. U-cijev s živom pokazuje razliku razina Δh_Hg=63 mm iz koje slijedi v=3,95 m/s.</desc>
-  <!-- Titles -->
-  <!-- Pipe walls (srafura) -->
-  <rect x="54" y="140" width="520" height="42" fill="url(#u10v2pp_u10v2-sraf)"/>
-  <rect x="54" y="238" width="520" height="42" fill="url(#u10v2pp_u10v2-sraf)"/>
-  <!-- Water body in pipe -->
-  <rect x="54" y="182" width="520" height="56" fill="url(#u10v2pp_u10v2-wg)" stroke="#546e7a" stroke-width="1.5"/>
-  <!-- Flow arrows left → right -->
-  <line x1="74" y1="210" x2="160" y2="210" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u10v2pp_u10v2-arrG)"/>
-  <line x1="415" y1="210" x2="500" y2="210" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u10v2pp_u10v2-arrG)"/>
-  <text x="172" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#0f766e">v = 3,95 m/s</text>
-  <!-- === PITOT-PRANDTL PROBE === -->
-  <!-- Pitot tube body: vertical from pipe center up -->
-  <!-- Probe is at x=310, inside pipe from y=182 to y=238 -->
-  <!-- Pointed upstream (left) end at x=270, y=210 (stagnation point) -->
-  <!-- Stagnation opening tip -->
-  <polygon points="270,200 270,220 310,210" fill="#173043"/>
-  <!-- Probe shaft from x=310 upward -->
-  <rect x="304" y="92" width="12" height="130" fill="#ddd" stroke="#546e7a" stroke-width="1.5"/>
-  <!-- Small horizontal bar at probe top y=92 -->
-  <line x1="295" y1="92" x2="325" y2="92" stroke="#546e7a" stroke-width="2"/>
-  <!-- Stagnation port dot -->
-  <circle cx="270" cy="210" r="5" fill="#be123c"/>
-  <text x="256" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#be123c" text-anchor="middle">p₀</text>
-  <!-- Static port: at x=360, side of pipe wall (top) -->
-  <circle cx="360" cy="182" r="5" fill="#0f766e"/>
-  <text x="360" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e" text-anchor="middle">p</text>
-  <!-- === CONNECTIONS TO MANOMETER === -->
-  <!-- Right manometer arm (stagnation p₀, higher p → lower Hg): -->
-  <!--   From probe top (310,92) → right → (680,92) → down to (680,162) -->
-  <path d="M310,92 L680,92 L680,162" fill="none" stroke="#173043" stroke-width="2" stroke-dasharray="4 3"/>
-  <!-- Left manometer arm (static p, lower p → higher Hg): -->
-  <!--   From static port (360,182) → up → (360,130) → right → (620,130) → down → (620,140) -->
-  <path d="M360,182 L360,130 L620,130 L620,140" fill="none" stroke="#173043" stroke-width="2" stroke-dasharray="4 3"/>
-  <!-- Label connecting lines -->
-  <text x="495" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#be123c" text-anchor="middle">stagnacijski vod (p₀)</text>
-  <text x="490" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e" text-anchor="middle">statički vod (p)</text>
-  <!-- === U-TUBE MANOMETER === -->
-  <!-- Left arm at x=608..632, right arm at x=668..692, U-bottom at y=340 -->
-  <!-- Left arm outer rect -->
-  <rect x="606" y="140" width="26" height="204" rx="3" fill="none" stroke="#546e7a" stroke-width="2"/>
-  <!-- Right arm outer rect -->
-  <rect x="666" y="162" width="26" height="182" rx="3" fill="none" stroke="#546e7a" stroke-width="2"/>
-  <!-- U-bottom connecting tube -->
-  <rect x="606" y="336" width="86" height="20" rx="4" fill="none" stroke="#546e7a" stroke-width="2"/>
-  <!-- Water above Hg in left arm: y=140..210 (height=70px) -->
-  <rect x="608" y="142" width="22" height="68" rx="2" fill="url(#u10v2pp_u10v2-wg)" opacity="0.8"/>
-  <!-- Water above Hg in right arm: y=162..210 (height=48px) -->
-  <rect x="668" y="164" width="22" height="46" rx="2" fill="url(#u10v2pp_u10v2-wg)" opacity="0.8"/>
-  <!-- Hg fill in left arm: y=210..336 (height=126) -->
-  <rect x="608" y="210" width="22" height="126" fill="url(#u10v2pp_u10v2-hg)"/>
-  <!-- Hg fill in right arm: y=250..336 (height=86) -->
-  <!-- Right arm Hg level is LOWER by Δh=40px (representing 63mm) -->
-  <rect x="668" y="250" width="22" height="86" fill="url(#u10v2pp_u10v2-hg)"/>
-  <!-- Hg fill in bottom connector -->
-  <rect x="608" y="337" width="84" height="18" rx="3" fill="url(#u10v2pp_u10v2-hg)"/>
-  <!-- Δh_Hg arrow: between left Hg top (y=210) and right Hg top (y=250) -->
-  <line x1="650" y1="210" x2="650" y2="250" stroke="#c49a0a" stroke-width="2.5" marker-start="url(#u10v2pp_u10v2-arrOrev)" marker-end="url(#u10v2pp_u10v2-arrO)"/>
-  <rect x="658" y="218" width="88" height="26" rx="6" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
-  <text x="702" y="235" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#c49a0a" text-anchor="middle">Δh_Hg=63 mm</text>
-  <!-- Manometer labels -->
-  <text x="619" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">p (statika)</text>
-  <text x="679" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">p₀ (stag.)</text>
-  <text x="619" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">niži tlak</text>
-  <text x="679" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">viši tlak</text>
-  <!-- Hg label -->
-  <text x="765" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#546e7a">Hg</text>
-  <text x="765" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">ρ=13600</text>
-  <text x="765" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">kg/m³</text>
-  <!-- Formula box -->
-  <rect x="752" y="105" width="152" height="180" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="828" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043" text-anchor="middle">Rješenje</text>
-  <text x="764" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">Δp=(ρ_Hg-ρ)gΔh</text>
-  <text x="764" y="163" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c49a0a">Δp = 7 790 Pa</text>
-  <text x="764" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">v=√(2Δp/ρ)</text>
-  <line x1="764" y1="188" x2="892" y2="188" stroke="#d3d9de" stroke-width="1"/>
-  <text x="764" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">v = 3,95 m/s</text>
-  <text x="764" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">= 12600·9,81·0,063</text>
-  <text x="764" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">/ (ρ_Hg-ρ)g  ↔  Pitot</text>
-  <text x="764" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">Δp=½ρv² → v iz Δp</text>
-  <!-- Footer -->
-  <text x="54" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Pitot: stagnacijski otvor zaustavlja tok lokalno → p₀&gt;p. Manometar pretvara Δp u mjerljivi Δh_Hg.</text>
-</svg>
+
+  <!-- Pozadina i okvir -->
+  <rect width="940" height="560" fill="#ffffff" />
+  <rect x="14" y="14" width="912" height="532" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
+
+  <!-- ============================================================
+       LIJEVI POLU-PANEL (x = 28..610)
+       Layout (top->bottom):
+         y=80..195  : sapa sonde (vert. dio) + spojni vodovi koji idu prema dolje
+         y=195..295 : VODORAVNA CIJEV (stjenke + voda)
+         y=295..390 : spojni vodovi vode prema U-cijevi
+         y=350..490 : U-CIJEV s zivom (ispod cijevi)
+  ============================================================ -->
+
+  <!-- ============================================================
+       VODORAVNA CIJEV
+         stjenka gornja  y=195..215
+         interior voda   y=215..275
+         stjenka donja   y=275..295
+  ============================================================ -->
+  <rect x="40" y="195" width="540" height="20" fill="url(#u10v2pp_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+  <rect x="40" y="275" width="540" height="20" fill="url(#u10v2pp_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+  <!-- Krajevi cijevi - isprekidano, "siri" tok -->
+  <line x1="40" y1="215" x2="40" y2="275" stroke="#3a4a56" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="580" y1="215" x2="580" y2="275" stroke="#3a4a56" stroke-width="1" stroke-dasharray="3,3" />
+
+  <!-- Voda u cijevi (kontinuiran fluid) -->
+  <rect x="40" y="215" width="540" height="60" fill="url(#u10v2pp_voda)" />
+
+  <!-- Strelice strujanja (zelene) - 3 lijevo, 3 desno -->
+  <line x1="56" y1="228" x2="120" y2="228" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u10v2pp_aG)" />
+  <line x1="56" y1="245" x2="120" y2="245" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u10v2pp_aG)" />
+  <line x1="56" y1="262" x2="120" y2="262" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u10v2pp_aG)" />
+  <line x1="490" y1="228" x2="562" y2="228" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u10v2pp_aG)" />
+  <line x1="490" y1="245" x2="562" y2="245" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u10v2pp_aG)" />
+  <line x1="490" y1="262" x2="562" y2="262" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u10v2pp_aG)" />
+
+  <!-- Voda label - postavljeno unutar vode na desnoj strani cijevi izvan strelica i sape -->
+  <!-- ============================================================
+       PITOT-STATICKA SONDA
+         x sape: 296..324
+         vrh sape: y=80
+         dno (probija donju stjenku): y=315 (vidi ulaz/izlaz iz fluida)
+         Stagnacijski pijuk: L-koljeno na osi cijevi (y=245), uzvodni vrh na x=232
+         Staticki otvor: na boku unutarnje sape (vanjski/desna sapa) unutar struje, npr. y=265
+  ============================================================ -->
+
+  <!-- Vanjska (stagnacijska) sapa, ide gore do izlaza -->
+  <rect x="296" y="80" width="12" height="115" rx="2" fill="url(#u10v2pp_metal)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Unutarnja (staticka) sapa, paralelna desno -->
+  <rect x="312" y="80" width="12" height="115" rx="2" fill="url(#u10v2pp_metal)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Krunski cap na vrhu sape (zapeta) -->
+  <rect x="290" y="72" width="40" height="10" rx="2" fill="#7a8a96" stroke="#3a4a56" stroke-width="1.2" />
+
+  <!-- Dijelovi sape unutar fluida (vidljivi preko vode) -->
+  <rect x="296" y="215" width="12" height="60" fill="url(#u10v2pp_metal)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="312" y="215" width="12" height="60" fill="url(#u10v2pp_metal)" stroke="#3a4a56" stroke-width="1.2" />
+
+  <!-- Stagnacijski pijuk: vodoravni L-produzetak od stagnacijske sape prema uzvodno (na osi cijevi y=246) -->
+  <!-- Stagnacijska sapa zavrsava na njenom dnu (308, 275) - pijuk je horizontalni dio koji izlazi iz dna i ide uzvodno -->
+  <rect x="232" y="242" width="64" height="8" fill="url(#u10v2pp_metal)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Otvor stagnacije: mali plavi krug na uzvodnom vrhu pijuka -->
+  <circle cx="232" cy="246" r="3.4" fill="#0d47a1" />
+
+  <!-- Staticki otvor: rupica na boku unutarnje sape (istocna strana) -->
+  <line x1="324" y1="246" x2="332" y2="246" stroke="#0d47a1" stroke-width="2.4" />
+  <circle cx="332" cy="246" r="2.8" fill="#0d47a1" />
+
+  <!-- Oznake otvora p_0 i p -->
+  <line x1="222" y1="260" x2="172" y2="170" stroke="#1565c0" stroke-width="0.8" />
+  <line x1="332" y1="246" x2="386" y2="174" stroke="#1565c0" stroke-width="0.8" />
+  <!-- ============================================================
+       SPOJNI VODOVI od vrha sape prema U-cijevi
+       U-cijev ispod, dno na y=470, grane: lijeva x=410..432, desna x=478..500
+       Spojni vodovi idu OD VRHA sape (y~76) -> gore na y=60 -> u stranu -> dolje izvan cijevi -> u U-cijev
+       Tlakovi se vode po SAPI -> dolaze na vrh sape -> spojnim vodom u U-cijev.
+       Da izbjegnemo prelazak preko cijevi, vodovi idu lijevo i desno IZVAN cijevi.
+       Cijev je x=40..580; U-cijev grane x=410..500 (unutar x raspona cijevi, ali ISPOD nje).
+       Vodovi idu: vrh sape (y=72) -> gore (y=44) -> lijevo (za stagnacijski) na x=410 -> dolje izvan cijevi do U-cijevi (y=320).
+                  vrh sape (y=72) -> gore (y=44) -> desno (za staticki) na x=500 -> dolje izvan cijevi do U-cijevi (y=320).
+  ============================================================ -->
+  <!-- Stagnacijski vod (ide vani prema lijevoj grani U-cijevi) -->
+  <path d="M302,72 L302,44 L416,44 L416,320" fill="none" stroke="#0d47a1" stroke-width="1.6" stroke-dasharray="6,4" />
+  <!-- Staticki vod (ide vani prema desnoj grani U-cijevi) -->
+  <path d="M318,72 L318,32 L488,32 L488,320" fill="none" stroke="#0d47a1" stroke-width="1.6" stroke-dasharray="6,4" />
+
+  <!-- Oznake vodova -->
+  <!-- ============================================================
+       U-CIJEV S ZIVOM (ispod cijevi)
+         Lijeva grana: x=410..432  (stagnacijski, visi tlak -> ziva NIZJA)
+         Desna grana:  x=478..500  (staticki, nizi tlak -> ziva VISA)
+         Vrhovi grana otvoreni za spojne vodove na y=320
+         Dno (luk) na y=460..480
+         Razine zive:
+           Lijeva (stagn.):  y = 400  (nizja)
+           Desna  (stat.):   y = 380  (visa)
+         Iznad zive je voda do vrhova grana.
+  ============================================================ -->
+  <!-- Staklene stijenke grana -->
+  <line x1="410" y1="320" x2="410" y2="460" stroke="#3a4a56" stroke-width="1.5" />
+  <line x1="432" y1="320" x2="432" y2="460" stroke="#3a4a56" stroke-width="1.5" />
+  <line x1="478" y1="320" x2="478" y2="460" stroke="#3a4a56" stroke-width="1.5" />
+  <line x1="500" y1="320" x2="500" y2="460" stroke="#3a4a56" stroke-width="1.5" />
+  <!-- Dno (luk) -->
+  <path d="M410,460 Q410,482 432,482 L478,482 Q500,482 500,460" fill="none" stroke="#3a4a56" stroke-width="1.5" />
+
+  <!-- Voda iznad zive: lijeva grana 320..400, desna 320..380 -->
+  <rect x="411" y="320" width="20" height="80" fill="url(#u10v2pp_voda)" />
+  <rect x="479" y="320" width="20" height="60" fill="url(#u10v2pp_voda)" />
+
+  <!-- Ziva: lijeva grana 400..460, desna 380..460, dno -->
+  <rect x="411" y="400" width="20" height="60" fill="url(#u10v2pp_ziva)" />
+  <rect x="479" y="380" width="20" height="80" fill="url(#u10v2pp_ziva)" />
+  <path d="M411,460 Q411,480 432,480 L478,480 Q499,480 499,460 Z" fill="url(#u10v2pp_ziva)" />
+
+  <!-- Granicne (Hg) povrsine -->
+  <line x1="411" y1="400" x2="431" y2="400" stroke="#3a4a56" stroke-width="1.3" />
+  <line x1="479" y1="380" x2="499" y2="380" stroke="#3a4a56" stroke-width="1.3" />
+
+  <!-- ============================================================
+       KOTA Delta h_Hg = 63 mm  (izmedu Hg razina; smeda)
+       Pomocne linije od interface zive prema desnoj kotnoj osi (x=552)
+  ============================================================ -->
+  <!-- Tik-crte -->
+  <!-- Dimenzijska linija -->
+  <!-- Labela kote -->
+  <!-- Oznake na granama: kojem otvoru pripadaju -->
+  <!-- Hg label sa strane U-cijevi (citljivo) -->
+  <!-- Leader linija od labela prema zivi u U-cijevi -->
+  <line x1="338" y1="450" x2="408" y2="430" stroke="#5a6a78" stroke-width="0.7" />
+
+  <!-- ============================================================
+       LEGENDA - jedan red, ispod cijevi (oko y=350-360)
+  ============================================================ -->
+  <rect x="40" y="350" width="12" height="12" fill="#1e8449" rx="2" />
+  <rect x="40" y="370" width="12" height="12" fill="#1565c0" rx="2" />
+  <rect x="40" y="390" width="12" height="12" fill="url(#u10v2pp_voda)" stroke="#1565c0" stroke-width="0.7" rx="2" />
+  <rect x="40" y="410" width="12" height="12" fill="url(#u10v2pp_ziva)" stroke="#3a4a56" stroke-width="0.7" rx="2" />
+  <!-- Donja napomena -->
+  <!-- ============================================================
+       DESNI PANEL: FORMULE I REZULTATI
+       x_panel = 632, sirina = 282
+  ============================================================ -->
+  <rect x="632" y="60" width="282" height="380" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.4" />
+  <!-- Header bar -->
+  <rect x="632" y="60" width="282" height="34" rx="10" fill="#1565c0" />
+  <rect x="632" y="84" width="282" height="10" fill="#1565c0" />
+  <!-- Blok 1: Tlacna razlika iz manometra -->
+  <line x1="660" y1="206" x2="886" y2="206" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 2: Pitot-Bernoulli -->
+  <line x1="660" y1="298" x2="886" y2="298" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 3: Numericka brzina -->
+  <!-- Sazetak italic -->
+  <!-- Rezultat badge -->
+  <rect x="632" y="452" width="282" height="50" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="431" y1="400" x2="552" y2="400" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="499" y1="380" x2="552" y2="380" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="548" y1="400" x2="556" y2="400" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="548" y1="380" x2="556" y2="380" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="552" y1="382" x2="552" y2="398" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10v2pp_aDimL)" marker-end="url(#u10v2pp_aDim)" />
+  <rect x="40" y="430" width="12" height="12" fill="#b7600c" rx="2" />
+  <text x="88" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1e8449"><tspan font-weight="700">v</tspan> ≈ 3,95 m/s</text>
+
+  <text x="558" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#0d47a1">voda   ρ = 1000 kg/m³</text>
+
+  <text x="170" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#1565c0"><tspan font-weight="700">p₀</tspan> stagnacijski</text>
+
+  <text x="388" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0"><tspan font-weight="700">p</tspan> statički</text>
+
+  <text x="370" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">stagnacijski vod</text>
+  <text x="440" y="24" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">statički vod</text>
+
+  <text x="421" y="500" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1565c0">p₀ (visi)</text>
+  <text x="489" y="500" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1565c0">p (nizi)</text>
+
+  <text x="312" y="442" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#3a4a56">Hg</text>
+  <text x="312" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#3a4a56">ρ<tspan baseline-shift="sub" font-size="0.75em">Hg</tspan> = 13 600</text>
+  <text x="312" y="472" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#3a4a56">kg/m³</text>
+  <text x="58" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">brzina v</text>
+
+  <text x="58" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">tlacni otvori i vodovi</text>
+
+  <text x="58" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">voda</text>
+
+  <text x="58" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">živa (Hg)</text>
+
+  <text x="58" y="440" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">kota Δh<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan></text>
+
+  <text x="310" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Stagnacijski otvor zaustavlja tok lokalno (p₀ &gt; p); manometar pretvara Δp u mjerljivi Δh<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan>.</text>
+
+  <text x="773" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Kljucne jednadzbe</text>
+
+  <text x="773" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Tlacna razlika iz manometra</text>
+  <text x="773" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Δp = (ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> − ρ) g Δh<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan></text>
+  <text x="773" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#5a6a78">= 12600 · 9,81 · 0,063</text>
+  <text x="773" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 7,79 kPa</text>
+  <text x="773" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Pitot – Bernoullijev zaustavni tlak</text>
+  <text x="773" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Δp = ½ ρ v²</text>
+  <text x="773" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">v = √(2 Δp / ρ)</text>
+  <text x="773" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Tražena brzina vode</text>
+  <text x="773" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">v = √(2 · 7787 / 1000)</text>
+  <text x="773" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 3,95 m/s</text>
+
+  <text x="773" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Veci Δh<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> → veci Δp → veca brzina v.</text>
+
+  <text x="773" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="700" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Δp ≈ 7,79 kPa</text>
+  <text x="848" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">v ≈ 3,95 m/s</text>
+<text x="562" y="387" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c">Δh<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan></text>
+  <text x="562.0" y="403.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">= 63 mm</text>
+
+  </svg>

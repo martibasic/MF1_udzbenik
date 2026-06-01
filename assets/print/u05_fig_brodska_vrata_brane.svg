@@ -1,118 +1,228 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 380" role="img"
-     aria-labelledby="u05fbvb_u5bvT u05fbvb_u5bvD" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u05fbvb_u5bvT">U05 – Klizna vrata brane</title>
-  <desc id="u05fbvb_u5bvD">Klizna vrata brane: b=1,80 m, H=1,20 m, gornji rub na dubini h1=0,80 m. Prikazana slobodna površina, dubina h1, visina vrata H, centroid C na dubini h_C=1,40 m, centar tlaka CP na y_CP=1,486 m i rezultantna sila F≈29,6 kN.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 520" role="img" aria-labelledby="u05fbvb_title u05fbvb_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u05fbvb_title">Klizna vrata brane - hidrostatska sila i centar tlaka</title>
+  <desc id="u05fbvb_desc">Pravokutna klizna vrata brane sirine b=1,80 m i visine H_vr=1,20 m. Gornji rub vrata je na dubini h_1=0,80 m ispod slobodne povrsine vode. Tezisni centar C na dubini h_C=1,40 m. Trapezni dijagram hidrostatskog tlaka raste s dubinom. Rezultantna sila F=29,63 kN djeluje horizontalno u centru tlaka CP na dubini y_CP=1,486 m, tj. 0,514 m iznad dna vrata.</desc>
+
   <defs>
-    <marker id="u05fbvb_u5bvaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
+    <!-- Sila (zelena - rezultantna izlazna) -->
+    <marker id="u05fbvb_aF" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u05fbvb_u5bvaDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
+    <!-- Tlacne strelice (plave) -->
+    <marker id="u05fbvb_aP" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u05fbvb_u5bvaDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
+    <!-- Kote (smeda) -->
+    <marker id="u05fbvb_aD" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
-    <marker id="u05fbvb_u5bvaG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#1e8449"/>
+    <marker id="u05fbvb_aDL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
-    <marker id="u05fbvb_u5bvaGL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#1e8449"/>
-    </marker>
-    <linearGradient id="u05fbvb_u5bvfl" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
+
+    <!-- Voda gradient -->
+    <linearGradient id="u05fbvb_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u05fbvb_u5bvpr" x1="1" y1="0" x2="0" y2="0">
-      <stop offset="0%" stop-color="#e74c3c" stop-opacity="0.58"/>
-      <stop offset="100%" stop-color="#e74c3c" stop-opacity="0.07"/>
+    <!-- Tlacni trapez (plavi, gusca prema dnu) -->
+    <linearGradient id="u05fbvb_press" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1565c0" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#1565c0" stop-opacity="0.50" />
     </linearGradient>
-    <pattern id="u05fbvb_u5bvconc" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+    <!-- Hatch (beton brane / dno) -->
+    <pattern id="u05fbvb_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
     </pattern>
   </defs>
 
-  <rect width="940" height="380" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="332" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <rect width="940" height="520" fill="#ffffff" />
+  <rect x="14" y="14" width="912" height="492" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
 
-  <!-- Naslov -->
-  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">b = 1,80 m · H = 1,20 m · h₁ = 0,80 m · h_C = 1,40 m · F ≈ 29,6 kN · y_CP = 1,486 m</text>
+  <!-- =====================================================
+       LIJEVI PANEL - FIZIKALNI MODEL  (x: 14..540)
+       Skala vertikalna: 1 m = 130 px
+       Slobodna povrsina:  y =  90
+       Gornji rub vrata:   y = 194  (h_1 = 0,80 m = 104 px)
+       Donji rub vrata:    y = 350  (H_vr = 1,20 m = 156 px)
+       Tezisni centar C:   y = 272  (h_C = 1,40 m = 182 px od povrsine)
+       Centar tlaka CP:    y = 283  (y_CP = 1,486 m = 193 px od povrsine)
+       Dno:                y = 410  (na dubini 2,46 m - vise nego vrata)
+       Brana (zid):        x = 400..480, y = 60..410 (puna visina + nadvisenje)
+  ===================================================== -->
 
-  <!-- Tijelo fluida (uzvodni) -->
-  <rect x="82" y="126" width="318" height="210" fill="url(#u05fbvb_u5bvfl)" opacity="0.83"/>
+  <!-- Tlo i podloga ispod kanala (hatched) -->
+  <rect x="20" y="410" width="510" height="40" fill="url(#u05fbvb_hatch)" />
+  <line x1="20" y1="410" x2="530" y2="410" stroke="#3a4a56" stroke-width="1.6" />
 
-  <!-- Lijeva stijenka -->
-  <rect x="80" y="118" width="4" height="224" fill="#909fa8"/>
+  <!-- Voda (uzvodna strana, lijevo od brane) -->
+  <rect x="60" y="90" width="340" height="320" fill="url(#u05fbvb_voda)" />
 
-  <!-- Dno uzvodno -->
-  <rect x="80" y="336" width="324" height="8" fill="#909fa8" stroke="#5d6d7e" stroke-width="1"/>
+  <!-- Lijeva (uzvodna) granica vode - rub kanala -->
+  <rect x="52" y="60" width="8" height="350" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.2" />
 
-  <!-- Slobodna površina -->
-  <line x1="80" y1="126" x2="402" y2="126" stroke="#1565c0" stroke-width="2.8"/>
-  <text x="84" y="119" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">slobodna površina (p=0)</text>
+  <!-- Slobodna povrsina vode (plava deblja linija) -->
+  <line x1="60" y1="90" x2="400" y2="90" stroke="#1565c0" stroke-width="2.4" />
+  <!-- Trapezni dijagram tlaka na uzvodnoj strani vrata (od y=194 do y=350) -->
+  <!-- Sirina trapeza je proporcionalna dubini. Najveca sirina = 70 px na dnu vrata. -->
+  <!-- p(h) = rho*g*h.  Pri y=194 (h=0,80 m) sirina = 70*(0,80/2,00) = 28 px -->
+  <!-- Pri y=350 (h=2,00 m) sirina = 70 px -->
+  <polygon points="400,194 372,194 330,350 400,350" fill="url(#u05fbvb_press)" stroke="#1565c0" stroke-width="1.3" />
+  <!-- Dijagonalna granica trapeza (linija porasta tlaka) -->
+  <line x1="372" y1="194" x2="330" y2="350" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4,3" />
 
-  <!-- Tijelo brane (zid) -->
-  <!-- Scale: 1m = 80px; h1=0.80m→64px, H=1.20m→96px -->
-  <!-- Wall from y=100 to y=340, x=400..462 -->
-  <rect x="400" y="100" width="62" height="240" fill="#909fa8" stroke="#5d6d7e" stroke-width="2"/>
-  <rect x="400" y="100" width="62" height="240" fill="url(#u05fbvb_u5bvconc)" opacity="0.50"/>
-  <text x="408" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">brana</text>
+  <!-- Tlacne strelice (vodoravne, smjer prema brani) na 3 razine -->
+  <line x1="380" y1="210" x2="400" y2="210" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u05fbvb_aP)" />
+  <line x1="365" y1="260" x2="400" y2="260" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u05fbvb_aP)" />
+  <line x1="345" y1="320" x2="400" y2="320" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u05fbvb_aP)" />
 
-  <!-- Dijagram tlaka na kliznim vratima (trapezoid na lijevoj stijenci x=400) -->
-  <!-- Gate: y=190..286 (h₁=0,80m→h₁+H=2,00m); max width 50px -->
-  <!-- w_top = 50×(0,80/2,00)=20px; w_bot = 50px -->
-  <polygon points="400,190 380,190 350,286 400,286" fill="url(#u05fbvb_u5bvpr)"/>
-  <line x1="380" y1="190" x2="350" y2="286" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4,3"/>
+  <!-- Oznaka p(h) = rho*g*h u srednjem dijelu trapeza -->
+  <!-- Tijelo brane (beton, hatched, puna visina) -->
+  <rect x="400" y="60" width="80" height="350" fill="#c4ccd2" stroke="#3a4a56" stroke-width="1.6" />
+  <rect x="400" y="60" width="80" height="350" fill="url(#u05fbvb_hatch)" opacity="0.55" />
+  <!-- Vodilice klizne (utor u brani gdje se vrata spustaju/dizu) -->
+  <line x1="403" y1="60" x2="403" y2="410" stroke="#5d6d7e" stroke-width="1.0" stroke-dasharray="3,3" />
 
-  <!-- Klizna vrata -->
-  <!-- top: y=126+64=190, bottom: y=190+96=286 -->
-  <rect x="392" y="190" width="78" height="96" fill="#5D6D7E" stroke="#2C3E50" stroke-width="2.8"/>
-  <text x="478" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#2C3E50">klizna vrata</text>
-  <text x="478" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#2C3E50">b = 1,80 m</text>
-  <text x="478" y="247" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#2C3E50">H = 1,20 m</text>
+  <!-- Klizna vrata (uronjena u utor brane), tamno siva -->
+  <rect x="397" y="194" width="10" height="156" fill="#5d6d7e" stroke="#2c3e50" stroke-width="1.8" />
+  <!-- Pravokutni oznaka vrata - oznaka pomocna (sirina b ide u dubinu lista, ne prikazujemo je kao kotu) -->
 
-  <!-- h₁ kota (slobodna površina → gornji rub vrata) -->
-  <line x1="298" y1="126" x2="303" y2="126" stroke="#c96c35" stroke-width="1.5"/>
-  <line x1="298" y1="190" x2="303" y2="190" stroke="#c96c35" stroke-width="1.5"/>
-  <line x1="300" y1="128" x2="300" y2="188" stroke="#c96c35" stroke-width="2.0"
-        marker-start="url(#u05fbvb_u5bvaDimL)" marker-end="url(#u05fbvb_u5bvaDim)"/>
-  <text x="284" y="162" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#92400e" text-anchor="end">h₁ = 0,80 m</text>
+  <!-- Mehanizam podizanja vrata (klizni mehanizam) - ucvrsteni nosaci na vrhu -->
+  <rect x="393" y="62" width="18" height="14" fill="#7a8a96" stroke="#3a4a56" stroke-width="1.2" />
+  <line x1="402" y1="60" x2="402" y2="194" stroke="#5d6d7e" stroke-width="2.4" />
 
-  <!-- H kota (visina vrata) -->
-  <line x1="348" y1="190" x2="353" y2="190" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="348" y1="286" x2="353" y2="286" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="350" y1="192" x2="350" y2="284" stroke="#0f766e" stroke-width="2.0"
-        marker-start="url(#u05fbvb_u5bvaGL)" marker-end="url(#u05fbvb_u5bvaG)"/>
-  <text x="336" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#0f766e" text-anchor="end">H = 1,20 m</text>
+  <!-- Tezisni centar C (na dubini h_C = 1,40 m, y = 90 + 1,40*130 = 272) -->
+  <!-- C tocka i oznaka pomaknuta lijevo na vodu (vidljivo na plavoj pozadini) -->
+  <circle cx="397" cy="272" r="3.6" fill="#1a2530" />
+  <rect x="362" y="262" width="28" height="20" rx="3" fill="#ffffff" opacity="0.95" />
+  <line x1="390" y1="272" x2="395" y2="272" stroke="#1a2530" stroke-width="0.7" />
 
-  <!-- h_C kota (slobodna površina → centroid) -->
-  <!-- hC=1.40m → 112px → centroid y=126+112=238 -->
-  <line x1="169" y1="126" x2="174" y2="126" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="169" y1="238" x2="174" y2="238" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="171" y1="128" x2="171" y2="236" stroke="#0f766e" stroke-width="2.0"
-        marker-start="url(#u05fbvb_u5bvaGL)" marker-end="url(#u05fbvb_u5bvaG)"/>
-  <text x="156" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#0f766e" text-anchor="end">h_C = 1,40 m</text>
+  <!-- Centar tlaka CP (y_CP = 1,486 m, y = 90 + 1,486*130 = 283) -->
+  <circle cx="397" cy="283" r="3.6" fill="#c0392b" />
+  <rect x="356" y="358" width="34" height="20" rx="3" fill="#ffffff" opacity="0.95" />
+  <line x1="395" y1="285" x2="373" y2="358" stroke="#c0392b" stroke-width="0.7" />
 
-  <!-- Vodoravna crta kroz C -->
-  <line x1="174" y1="238" x2="392" y2="238" stroke="#1a2530" stroke-width="1.0" stroke-dasharray="5 4"/>
+  <!-- Pomocne tanke vodoravne crte kroz C i CP do desno (do mjesta gdje krece kota) -->
 
-  <!-- Centroid C -->
-  <circle cx="431" cy="238" r="5" fill="#1a2530"/>
-  <text x="478" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#1a2530">C  (h_C = 1,40 m)</text>
+  <!-- Rezultantna sila F u CP, horizontalna prema desno (smjer toka vode) -->
+  <!-- F = 29,63 kN; max prostor na desnoj strani brane oko 100 px. Skala: ~3 px/kN -> 90 px. -->
+  <!-- Pocetak strelice odmaknut od vrata (na nizvodnoj strani: nakon brane, x = 480) -->
+  <!-- Sila se prikazuje desno od brane u liniji y_CP, polazi iz CP, prolazi kroz branu virtualno. -->
+  <!-- Da bismo izbjegli vizualnu konfuziju, crtamo F kao strelicu desno od brane na visini y=283 -->
+  <line x1="490" y1="283" x2="528" y2="283" stroke="#1e8449" stroke-width="3" marker-end="url(#u05fbvb_aF)" />
+  <!-- Pomocna tanka linija od CP do pocetka F strelice (kroz branu, isprekidano) -->
+  <line x1="406" y1="283" x2="490" y2="283" stroke="#1e8449" stroke-width="0.9" stroke-dasharray="3,3" opacity="0.7" />
 
-  <!-- y_CP kota (slobodna površina → CP) -->
-  <!-- y_CP=1.486m → 118.9px → CP y=126+119=245 -->
-  <!-- vodoravna crta kroz CP -->
-  <line x1="392" y1="245" x2="470" y2="245" stroke="#be123c" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <!-- ============================================
+       KOTE  (sve u smedoj, s pomocnim linijama)
+  ============================================ -->
 
-  <!-- Centar tlaka CP -->
-  <circle cx="431" cy="245" r="5" fill="#be123c"/>
-  <text x="478" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#be123c">CP  (y_CP = 1,486 m)</text>
-  <line x1="466" y1="245" x2="476" y2="280" stroke="#be123c" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <!-- Kota h_1 = 0,80 m  (vertikalna, lijevo od brane od povrsine do gornjeg ruba vrata) -->
+  <!-- Postavljena na x = 250 (sredina vode) - vidljiva u plavoj pozadini, ali jasno smeda -->
+  <!-- Pomocne linije: od slobodne povrsine (y=90) i od gornjeg ruba vrata (y=194) idu prema x=250 -->
+  <!-- Tik-crte na krajevima -->
+  <!-- Label na bijeloj plocici da bude citljiv preko plave vode -->
+  <rect x="200" y="132" width="56" height="20" rx="3" fill="#ffffff" opacity="0.95" />
+  <!-- Kota H_vr = 1,20 m (vertikalna, lijevo od gornje/donje granice vrata) -->
+  <rect x="268" y="262" width="62" height="20" rx="3" fill="#ffffff" opacity="0.95" />
+  <!-- Kota h_C = 1,40 m (najlijevije, od povrsine do C, ide IZVAN vode lijevo) -->
+  <!-- Pomocne linije od y=90 i y=272 do x=42 (izvan vode, lijevo od kanala) -->
+  <!-- Kota y_CP = 1,486 m (na desnoj strani brane, ide od povrsine projecirano dolje do CP) -->
+  <!-- Postavljena dalje desno na x = 555, label rotiran vertikalno radi ustede prostora -->
+  <!-- Oznaka sirine b (b ulazi u dubinu, prikazano kao informacija sa strelicom prema vratima) -->
+  <!-- Voda labela (smjestena visoko, izvan dashed linije kroz C/CP) -->
+  <!-- Mali kompasi: smjer toka vode (info) -->
+  <!-- =====================================================
+       LEGENDA na dnu (samo na lijevoj polovici)
+  ===================================================== -->
+  <rect x="40" y="468" width="12" height="12" fill="#1e8449" rx="2" />
+  <rect x="190" y="468" width="12" height="12" fill="#1565c0" rx="2" />
+  <!-- =====================================================
+       DESNI PANEL - FORMULA BOX  (x: 600..920)
+  ===================================================== -->
+  <rect x="600" y="60" width="320" height="350" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.4" />
+  <!-- Header -->
+  <rect x="600" y="60" width="320" height="32" rx="10" fill="#1565c0" />
+  <rect x="600" y="84" width="320" height="8" fill="#1565c0" />
+  <!-- Blok 1: Dubina tezista h_C (y=92..152) -->
+  <line x1="624" y1="162" x2="896" y2="162" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- F_R strelica (nizvodno, desno) -->
-  <line x1="470" y1="245" x2="700" y2="245" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u05fbvb_u5bvaR)"/>
-  <text x="628" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#c0392b">F ≈ 29,6 kN</text>
+  <!-- Blok 2: Povrsina A (y=162..212) -->
+  <line x1="624" y1="222" x2="896" y2="222" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Napomena -->
-  <text x="54" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#516677">Vodilica zasuna treba biti na Δ=0,086 m ispod polovice vrata (y_CP=1,486 m od površine). Dijagram tlaka prikazuje trapez, ne trokut — vrata nisu pri površini.</text>
-</svg>
+  <!-- Blok 3: Rezultantna sila F (y=222..292) -->
+  <line x1="624" y1="306" x2="896" y2="306" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 4: Centar tlaka y_CP (y=306..382) -->
+  <!-- Sazetak italic -->
+  <!-- Result badge: REZULTATI -->
+  <rect x="600" y="420" width="320" height="58" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="260" y1="90" x2="260" y2="194" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u05fbvb_aDL)" marker-end="url(#u05fbvb_aD)" />
+  <line x1="254" y1="90" x2="266" y2="90" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="254" y1="194" x2="266" y2="194" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="320" y1="194" x2="320" y2="350" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u05fbvb_aDL)" marker-end="url(#u05fbvb_aD)" />
+  <line x1="314" y1="194" x2="326" y2="194" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="314" y1="350" x2="326" y2="350" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="52" y1="90" x2="42" y2="90" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="395" y1="272" x2="42" y2="272" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="2,3" />
+  <line x1="42" y1="90" x2="42" y2="272" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u05fbvb_aDL)" marker-end="url(#u05fbvb_aD)" />
+  <line x1="36" y1="90" x2="48" y2="90" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="36" y1="272" x2="48" y2="272" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="400" y1="90" x2="555" y2="90" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="2,3" />
+  <line x1="406" y1="283" x2="555" y2="283" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="2,3" />
+  <line x1="555" y1="90" x2="555" y2="283" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u05fbvb_aDL)" marker-end="url(#u05fbvb_aD)" />
+  <line x1="549" y1="90" x2="561" y2="90" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="549" y1="283" x2="561" y2="283" stroke="#b7600c" stroke-width="1.2" />
+  <rect x="350" y="468" width="12" height="12" fill="#b7600c" rx="2" />
+  <text x="78" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0">slobodna povrsina (p = p₀)</text>
+
+  <text x="316" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1565c0">p(h) = ρ g h</text>
+
+  <text x="440" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">brana</text>
+
+  <text x="376" y="277" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" text-anchor="middle" fill="#1a2530">C</text>
+  <text x="373" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" text-anchor="middle" fill="#c0392b">CP</text>
+  <text x="495" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan> = 29,63 kN</text>
+  <text x="190" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">sirina vrata (u dubinu lista): <tspan font-style="italic" font-weight="700">b</tspan> = 1,80 m</text>
+
+  <text x="130" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#0d47a1">voda</text>
+  <text x="130" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">ρ = 998 kg/m³</text>
+
+  <text x="78" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">uzvodna strana</text>
+  <text x="498" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">nizvodno</text>
+
+  <text x="58" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">rezultantna sila F</text>
+  <text x="208" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">tlak p = ρgh (trapez)</text>
+  <text x="368" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">kote / dimenzije</text>
+
+  <text x="760" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Hidrostatska sila i centar tlaka</text>
+
+  <text x="760" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Dubina tezista vrata</text>
+  <text x="760" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> + <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">vr</tspan>/2</text>
+  <text x="760" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 0,80 + 0,60 = 1,40 m</text>
+  <text x="760" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Povrsina vrata</text>
+  <text x="760" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">A</tspan> = <tspan font-style="italic">b</tspan> · <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">vr</tspan> = 1,80 · 1,20 = 2,16 m²</text>
+  <text x="760" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Rezultantna hidrostatska sila</text>
+  <text x="760" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan> = ρ g <tspan font-style="italic">A</tspan> <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan></text>
+  <text x="760" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">= 998 · 9,81 · 2,16 · 1,40</text>
+  <text x="760" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 29,63 kN</text>
+  <text x="760" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Centar tlaka (<tspan font-style="italic">I</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan> = <tspan font-style="italic">b</tspan> <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">vr</tspan>³/12 = 0,2592 m⁴)</text>
+  <text x="760" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="0.7em">CP</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> + <tspan font-style="italic">I</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan>/(<tspan font-style="italic">A</tspan> <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>)</text>
+  <text x="760" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">= 1,40 + 0,2592/(2,16 · 1,40)</text>
+  <text x="760" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 1,486 m</text>
+
+  <text x="760" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">CP je 0,086 m ispod tezista C</text>
+
+  <text x="760" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="680" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">F</tspan> ≈ 29,63 kN</text>
+  <text x="840" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="0.7em">CP</tspan> ≈ 1,486 m</text>
+  <text x="760" y="474" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">vodilica vrata: 0,514 m iznad dna vrata</text>
+
+<text x="228" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 0,80 m</text>
+
+  <text x="299" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.75em">vr</tspan> = 1,20 m</text>
+
+  <text x="32" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c" transform="rotate(-90 32 186)"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.75em">C</tspan> = 1,40 m</text>
+
+  <text x="578" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c" transform="rotate(-90 578 186)"><tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="0.75em">CP</tspan> = 1,486 m</text>
+
+  </svg>

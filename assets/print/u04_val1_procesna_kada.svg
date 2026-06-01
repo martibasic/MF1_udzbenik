@@ -1,168 +1,214 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u04v1pk_u4v1T u04v1pk_u4v1D" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u04v1pk_u4v1T">U04 Val 1 – Procesna kada na ubrzanoj platformi</title>
-  <desc id="u04v1pk_u4v1D">Otvorena pravokutna kada (L=1,80 m, H=0,72 m, ρ=970 kg/m³). Granično stanje: slobodna površina doseže vrh stražnje stijenke. a_max≈1,96 m/s², F_R≈2,34 kN, hvatište na H/3=0,24 m od dna.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 500" role="img" aria-labelledby="u04v1pk_title u04v1pk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u04v1pk_title">Procesna kada na ubrzanoj platformi - granicno stanje prelijevanja</title>
+  <desc id="u04v1pk_desc">Otvorena pravokutna kada (L=1,80 m, H=0,72 m, B=0,95 m, ro=970 kg/m3, h0=0,54 m) na platformi s ubrzanjem a udesno. U granicnom stanju slobodna povrsina dodiruje gornji rub straznje stijenke (h_straznja=H=0,72 m), prednja dubina je 0,36 m. Najvece ubrzanje a_max je 1,96 m/s2; rezultantna sila na straznju stijenku F_R je 2,34 kN s hvatistem na H/3=0,24 m od dna.</desc>
+
   <defs>
-    <pattern id="u04v1pk_u4v1H" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
+    <linearGradient id="u04v1pk_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
+    </linearGradient>
+    <linearGradient id="u04v1pk_ptri" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#c0392b" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#c0392b" stop-opacity="0.05" />
+    </linearGradient>
+    <pattern id="u04v1pk_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-    <linearGradient id="u04v1pk_u4v1Wg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
-    </linearGradient>
-    <!-- pressure triangle gradient (left-to-right: transparent to red) -->
-    <linearGradient id="u04v1pk_u4v1Pg" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#b42318" stop-opacity="0.0"/>
-      <stop offset="100%" stop-color="#b42318" stop-opacity="0.35"/>
-    </linearGradient>
-    <marker id="u04v1pk_u4v1aGr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#546e7a"/>
+    <marker id="u04v1pk_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u04v1pk_u4v1aGrL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#546e7a"/>
+    <marker id="u04v1pk_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u04v1pk_u4v1aB" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#1565c0"/>
+    <marker id="u04v1pk_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u04v1pk_u4v1aR" markerWidth="12" markerHeight="10" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L9,4 z" fill="#b42318"/>
+    <marker id="u04v1pk_aP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+    </marker>
+    <marker id="u04v1pk_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u04v1pk_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
 
-  <!-- Background + border -->
-  <rect width="940" height="420" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <!-- pozadina -->
+  <rect width="940" height="500" fill="#ffffff" />
+  <rect x="16" y="16" width="908" height="468" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-  <!-- Title + subtitle -->
+  <!-- ===================== LIJEVI PANEL: procesna kada na platformi ===================== -->
+  <!-- Geometrija: skala 1 m = 200 px. L=360, H=144, h0=108, h_pred=72 -->
+  <!-- Tank floor at y=370. Tank top at y=226 (370-144). Interior x=95..455 (sirina 360). -->
+  <!-- Wall thickness 14 px. Back (left) wall x=81..95, front (right) wall x=455..469. -->
+  <!-- Water at limit: back top at (95,226), front top at (455, 298). h_pred=72px -> y=370-72=298 -->
 
-  <!-- === LEFT PANEL: tank cross-section at limiting acceleration === -->
-  <!-- Scale: 150 px/m. L=1,80m→270px, H=0,72m→108px -->
-  <!-- Tank: left inner x=140, right x=410 (270px), bottom y=338, top y=230 (108px) -->
-  <!-- h_back = H = 0,72m→108px → water top y=230 (= tank top, limit!) -->
-  <!-- h_front = 0,36m → 54px → water top y=284 -->
+  <!-- ZAJEDNICKO DNO + PLATFORMA -->
+  <!-- Dno kade (hatched, 14 px) -->
+  <rect x="81" y="370" width="388" height="14" fill="url(#u04v1pk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Platforma (siva ploca ispod kade) -->
+  <rect x="40" y="384" width="490" height="20" rx="2" fill="#a8b4be" stroke="#3a4a56" stroke-width="1.4" />
+  <line x1="40" y1="394" x2="530" y2="394" stroke="#3a4a56" stroke-width="0.5" opacity="0.35" />
 
-  <!-- Structural walls (srafura) -->
-  <!-- Left (back) wall -->
-  <rect x="110" y="230" width="30" height="108" fill="url(#u04v1pk_u4v1H)"/>
-  <rect x="110" y="230" width="30" height="108" fill="none" stroke="#546e7a" stroke-width="1.2"/>
-  <!-- Right (front) wall -->
-  <rect x="410" y="230" width="30" height="108" fill="url(#u04v1pk_u4v1H)"/>
-  <rect x="410" y="230" width="30" height="108" fill="none" stroke="#546e7a" stroke-width="1.2"/>
-  <!-- Bottom floor -->
-  <rect x="110" y="338" width="330" height="24" fill="url(#u04v1pk_u4v1H)"/>
-  <rect x="110" y="338" width="330" height="24" fill="none" stroke="#546e7a" stroke-width="1.2"/>
+  <!-- KOTACI VOZILA - pripadaju platformi (vozilo se ne crta - prikaz je samo platforma s ubrzanjem) -->
+  <circle cx="120" cy="416" r="12" fill="#3a4a56" stroke="#1a2530" stroke-width="1.4" />
+  <circle cx="120" cy="416" r="4" fill="#909fa8" />
+  <circle cx="290" cy="416" r="12" fill="#3a4a56" stroke="#1a2530" stroke-width="1.4" />
+  <circle cx="290" cy="416" r="4" fill="#909fa8" />
+  <circle cx="460" cy="416" r="12" fill="#3a4a56" stroke="#1a2530" stroke-width="1.4" />
+  <circle cx="460" cy="416" r="4" fill="#909fa8" />
 
-  <!-- Water fill -->
-  <!-- back top y=230 (= tank top!), front top y=284, bottom y=338 -->
-  <path d="M140,230 L410,284 L410,338 L140,338 Z" fill="url(#u04v1pk_u4v1Wg)" opacity="0.9"/>
+  <!-- VODA - klizajuca povrsina (poligon: cetiri tocke) -->
+  <!-- (95,226) straznja gore (limit) -> (455,298) prednja gore -> (455,370) prednja dno -> (95,370) straznja dno -->
+  <polygon points="95,226 455,298 455,370 95,370" fill="url(#u04v1pk_voda)" />
 
-  <!-- Tank inner wall faces -->
-  <line x1="140" y1="230" x2="140" y2="338" stroke="#2d3a40" stroke-width="2.5"/>
-  <line x1="410" y1="230" x2="410" y2="338" stroke="#2d3a40" stroke-width="2.5"/>
-  <!-- Top rim (tank top edge) -->
-  <line x1="140" y1="230" x2="410" y2="230" stroke="#2d3a40" stroke-width="2.5"/>
+  <!-- Slobodna povrsina (debela plava) -->
+  <line x1="95" y1="226" x2="455" y2="298" stroke="#1565c0" stroke-width="2.4" />
 
-  <!-- Free surface line (touching top of back wall) -->
-  <line x1="140" y1="230" x2="410" y2="284" stroke="#3a87ad" stroke-width="2.5"/>
+  <!-- Mirna razina h0 (referenca, isprekidana) - prekinuta da bi label bio citljiv -->
+  <line x1="95" y1="262" x2="195" y2="262" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
+  <line x1="355" y1="262" x2="455" y2="262" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
+  <!-- STIJENKE KADE (PUNE visine, otvoren tank: bez gornje stranice) -->
+  <!-- Straznja (lijeva) stijenka -->
+  <rect x="81" y="218" width="14" height="152" fill="url(#u04v1pk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Prednja (desna) stijenka -->
+  <rect x="455" y="218" width="14" height="152" fill="url(#u04v1pk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- *** KEY VISUAL: free surface touches top of back wall *** -->
-  <!-- Highlight at corner where surface meets back wall top -->
-  <circle cx="140" cy="230" r="5" fill="#b42318"/>
-  <text x="96" y="225" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b42318" font-weight="700">granično!</text>
+  <!-- Naglasak: granicna tocka na vrhu straznje stijenke -->
+  <circle cx="95" cy="226" r="4.5" fill="#c0392b" />
+  <line x1="60" y1="196" x2="92" y2="222" stroke="#c0392b" stroke-width="0.9" />
+  <!-- OZNAKE STIJENKI -->
+  <!-- TLACNI TROKUT na straznjoj stijenci (s unutarnje strane, x=95 prema 95+50=145, p_max na dnu) -->
+  <!-- Apex u tocki (95,226) p=0; baza na (95,370) -> (145,370) p_max -->
+  <polygon points="95,226 95,370 145,370" fill="url(#u04v1pk_ptri)" stroke="#c0392b" stroke-width="0.9" />
+  <line x1="95" y1="370" x2="145" y2="370" stroke="#c0392b" stroke-width="1.4" />
+  <!-- horizontalne crtice raspodjele tlaka unutar trokuta -->
+  <line x1="95" y1="258" x2="106" y2="258" stroke="#c0392b" stroke-width="0.9" />
+  <line x1="95" y1="290" x2="117" y2="290" stroke="#c0392b" stroke-width="0.9" />
+  <line x1="95" y1="322" x2="128" y2="322" stroke="#c0392b" stroke-width="0.9" />
+  <line x1="95" y1="354" x2="140" y2="354" stroke="#c0392b" stroke-width="0.9" />
+  <!-- F_R rezultanta SILE FLUIDA NA STRAZNJU STIJENKU - hvatiste H/3 od dna, smjer prema stijenci (lijevo) -->
+  <!-- y_FR = 370 - 48 = 322 (H/3 = 0,24 m -> 48 px). Strelica zelena (rezultanta) iz fluida prema stijenci. -->
+  <line x1="170" y1="322" x2="107" y2="322" stroke="#1e8449" stroke-width="3" marker-end="url(#u04v1pk_aG)" />
+  <!-- hvatiste indikator: H/3 isprekidana linija -->
+  <!-- UBRZANJE PLATFORME a -->
+  <line x1="200" y1="448" x2="370" y2="448" stroke="#c0392b" stroke-width="3" marker-end="url(#u04v1pk_aR)" />
+  <!-- g_eff vektor (ljubicasti) - kosi vektor: g dolje + (-a) lijevo (zbog inercije u ne-inerc. sustavu) -->
+  <!-- Smjesten u gornje-srednji prostor iznad fluida da ne preklapa kotu L. Pocetak (310,80) -->
+  <!-- Komponente: g_y = 65 px (dolje), inercijalna komponenta -a = -13 px (lijevo) -->
+  <!-- (skala: 9.81 -> 65 px, 1.96 -> 13 px) -->
+  <line x1="310" y1="80" x2="297" y2="145" stroke="#8e44ad" stroke-width="2.6" marker-end="url(#u04v1pk_aP)" />
+  <!-- pomocne komponente (tanke) -->
+  <line x1="310" y1="80" x2="310" y2="145" stroke="#8e44ad" stroke-width="0.8" stroke-dasharray="3,3" />
+  <line x1="310" y1="145" x2="297" y2="145" stroke="#8e44ad" stroke-width="0.8" stroke-dasharray="3,3" />
+  <!-- KOTA L (ispod platforme, ali s pomocnim linijama do stijenki) -->
+  <line x1="95" y1="370" x2="95" y2="225" stroke="none" />
+  <rect x="245" y="425" width="60" height="18" rx="3" fill="#fbfdff" stroke="none" />
+  <!-- KOTA H (lijevo od straznje stijenke, ali pomicno izvan tlacnog trokuta -> stavlja se desno od prednje stijenke nije moguce, premjestamo s lijeve strane iznad granicne tocke i pomocne linije gore) -->
+  <!-- KOTA H smjestena s desne strane prednje stijenke (interno, od y=298 do y=370 = h_pred i od y=226 do y=370 = H ne stane oba). -->
+  <!-- Ipak najjasnija: dvije kote desno od prednje stijenke: gornji segment h_pred (298..370), donji H_straznja (226..370 na razini back) -->
+  <!-- Ali backwall (lijevo) je vec ispunjena tlakom; H stavljamo na DESNU stranu (prednja stijenka) -->
+  <!-- Kota h_pred desno od prednje stijenke -->
+  <!-- Kota H = h_straznja (vise prema desno: x=548) -->
+  <!-- Sirina B napomena (oznaka u skici) -->
+  <!-- Delta h indikator - mala oznaka iznad povrsine -->
+  <line x1="455" y1="226" x2="475" y2="226" stroke="none" />
+  <!-- Delta h kota lijevo gore na samoj povrsini: vertikalna razlika izmedu y=226 (back) i y=298 (front)? Krivo - oba su sa razlicitih x. Pravilna interpretacija: Dh = h_str - h_pred = 36 cm = 0,36 m. Pokazujemo na grafu vertikalnom kotom izmedu projekcije obje razine na isti x. -->
+  <!-- Smjestamo na sredinu: x=350. Povucimo isprekidane horizontalne linije od (95,226) i od (455,298) -->
+  <!-- ===================== DESNI PANEL: 4 koraka rjesenja ===================== -->
+  <line x1="588" y1="40" x2="588" y2="460" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
-  <!-- Pressure triangle on back (left) wall -->
-  <!-- Back wall: x=140, from y=230 (top, p=0) to y=338 (bottom, p=p_max) -->
-  <!-- Triangle: apex at (140,230), base at (140,338) extending left by ~50px -->
-  <polygon points="140,230 140,338 90,338" fill="url(#u04v1pk_u4v1Pg)"/>
-  <line x1="140" y1="230" x2="90" y2="338" stroke="#b42318" stroke-width="1.5" stroke-dasharray="5 3"/>
-  <!-- Pressure distribution bars (horizontal lines at back wall) -->
-  <line x1="140" y1="250" x2="132" y2="250" stroke="#b42318" stroke-width="1.2"/>
-  <line x1="140" y1="270" x2="121" y2="270" stroke="#b42318" stroke-width="1.2"/>
-  <line x1="140" y1="290" x2="110" y2="290" stroke="#b42318" stroke-width="1.2"/>
-  <line x1="140" y1="310" x2="99"  y2="310" stroke="#b42318" stroke-width="1.2"/>
-  <line x1="140" y1="330" x2="88"  y2="330" stroke="#b42318" stroke-width="1.2"/>
+  <!-- Korak 1: granicni uvjet -->
+  <rect x="608" y="70" width="300" height="84" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
+  <!-- Korak 2: maksimalno ubrzanje -->
+  <rect x="608" y="162" width="300" height="84" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="608" y="162" width="6" height="84" rx="3" fill="#1565c0" />
+  <!-- Korak 3: rezultantna sila na straznjoj stijenci -->
+  <rect x="608" y="254" width="300" height="98" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="608" y="254" width="6" height="98" rx="3" fill="#1e8449" />
+  <!-- Korak 4: zakljucak -->
+  <rect x="608" y="360" width="300" height="62" rx="9" fill="#fdf2f2" stroke="#e4c4c0" stroke-width="1.2" />
+  <rect x="608" y="360" width="6" height="62" rx="3" fill="#c0392b" />
+  <!-- REZULTATI badge -->
+  <rect x="608" y="430" width="300" height="44" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="95" y1="322" x2="65" y2="322" stroke="#b7600c" stroke-width="0.8" stroke-dasharray="3,3" />
+  <line x1="65" y1="322" x2="65" y2="370" stroke="#b7600c" stroke-width="0.8" stroke-dasharray="3,3" />
+  <line x1="95" y1="384" x2="95" y2="436" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="2,3" />
+  <line x1="455" y1="384" x2="455" y2="436" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="2,3" />
+  <line x1="95" y1="432" x2="95" y2="442" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="455" y1="432" x2="455" y2="442" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="98" y1="437" x2="452" y2="437" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04v1pk_dimL)" marker-end="url(#u04v1pk_dim)" />
+  <line x1="469" y1="298" x2="500" y2="298" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="469" y1="370" x2="500" y2="370" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="495" y1="298" x2="505" y2="298" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="495" y1="370" x2="505" y2="370" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="500" y1="301" x2="500" y2="367" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04v1pk_dimL)" marker-end="url(#u04v1pk_dim)" />
+  <line x1="95" y1="226" x2="545" y2="226" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="2,3" />
+  <line x1="469" y1="370" x2="545" y2="370" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="540" y1="226" x2="550" y2="226" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="540" y1="370" x2="550" y2="370" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="545" y1="229" x2="545" y2="367" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04v1pk_dimL)" marker-end="url(#u04v1pk_dim)" />
+  <line x1="455" y1="298" x2="475" y2="298" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="95" y1="226" x2="455" y2="226" stroke="#b7600c" stroke-width="0.5" stroke-dasharray="2,3" opacity="0.5" />
 
-  <!-- F_R resultant force arrow (pointing left, at hvatište H/3=0,24m from bottom → 36px above bottom) -->
-  <!-- y_FR = 338 - 36 = 302 -->
-  <line x1="140" y1="302" x2="60" y2="302" stroke="#b42318" stroke-width="4" marker-end="url(#u04v1pk_u4v1aR)"/>
-  <rect x="55" y="285" width="46" height="20" rx="5" fill="#fff8f8" stroke="#d8c7c4" stroke-width="1.2"/>
-  <text x="78" y="299" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318" text-anchor="middle">F_R</text>
+  <rect x="608" y="70" width="6" height="84" rx="3" fill="#b7600c" />
+  <text x="44" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Granicno stanje prelijevanja</text>
+  <text x="44" y="63" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">slobodna povrsina dodiruje vrh straznje stijenke</text>
 
-  <!-- hvatište annotation: H/3 from bottom -->
-  <line x1="72" y1="302" x2="72" y2="338" stroke="#b42318" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <rect x="36" y="312" width="30" height="18" rx="4" fill="#fff8f8" stroke="#e0c5c5" stroke-width="1"/>
-  <text x="51" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b42318" text-anchor="middle">H/3</text>
+  <text x="275" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">mirna razina h₀ = 0,54 m</text>
 
-  <!-- Acceleration arrow (above tank, pointing right) -->
-  <line x1="198" y1="196" x2="348" y2="196" stroke="#1565c0" stroke-width="3.5" marker-end="url(#u04v1pk_u4v1aB)"/>
-  <rect x="213" y="178" width="120" height="20" rx="5" fill="#eef4ff" stroke="#c5d5e8" stroke-width="1"/>
-  <text x="273" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" font-weight="700" text-anchor="middle">a = a_max ≈ 1,96 m/s²</text>
+  <text x="36" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b">granicna</text>
+  <text x="36" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b">tocka</text>
 
-  <!-- "stražnja" and "prednja" labels -->
-  <text x="140" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">stražnja</text>
-  <text x="410" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">prednja</text>
+  <text x="88" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">straznja</text>
+  <text x="462" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">prednja</text>
 
-  <!-- === DIMENSION LINES === -->
+  <text x="151" y="363" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b">p<tspan baseline-shift="sub" font-size="0.7em">max</tspan> = ρ<tspan font-style="italic">g</tspan>H</text>
 
-  <!-- H dim (right of right wall, from tank top to bottom, x=455, y=230..338) -->
-  <line x1="455" y1="230" x2="455" y2="338" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u04v1pk_u4v1aGrL)" marker-end="url(#u04v1pk_u4v1aGr)"/>
-  <line x1="450" y1="230" x2="460" y2="230" stroke="#546e7a" stroke-width="1.3"/>
-  <line x1="450" y1="338" x2="460" y2="338" stroke="#546e7a" stroke-width="1.3"/>
-  <rect x="462" y="272" width="56" height="34" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="490" y="287" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">H</text>
-  <text x="490" y="301" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">0,72 m</text>
-  <!-- note: H = h_str at limit -->
-  <text x="490" y="315" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b42318" text-anchor="middle">= h_str!</text>
+  <text x="178" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = 2,34 kN</text>
+  <text x="285" y="464" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#c0392b"><tspan font-weight="700">a</tspan> = a<tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 1,96 m/s²</text>
 
-  <!-- h_pred dim (further right, x=500, from y=284 to y=338) -->
-  <line x1="500" y1="284" x2="500" y2="338" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u04v1pk_u4v1aGrL)" marker-end="url(#u04v1pk_u4v1aGr)"/>
-  <line x1="495" y1="284" x2="505" y2="284" stroke="#546e7a" stroke-width="1.3"/>
-  <line x1="495" y1="338" x2="505" y2="338" stroke="#546e7a" stroke-width="1.3"/>
-  <rect x="507" y="299" width="56" height="34" rx="5" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="535" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">h_pred</text>
-  <text x="535" y="327" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">0,36 m</text>
+  <text x="318" y="115" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#8e44ad"><tspan font-weight="700">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
+  <text x="316" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#8e44ad">(⊥ slob. povrsina)</text>
 
-  <!-- L dim (below floor, y=375, x=140 to x=410) -->
-  <line x1="140" y1="375" x2="410" y2="375" stroke="#546e7a" stroke-width="1.8" marker-start="url(#u04v1pk_u4v1aGrL)" marker-end="url(#u04v1pk_u4v1aGr)"/>
-  <line x1="140" y1="370" x2="140" y2="380" stroke="#546e7a" stroke-width="1.3"/>
-  <line x1="410" y1="370" x2="410" y2="380" stroke="#546e7a" stroke-width="1.3"/>
-  <rect x="234" y="380" width="76" height="20" rx="4" fill="#fff" stroke="#c9d2d8" stroke-width="1"/>
-  <text x="272" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043" text-anchor="middle">L = 1,80 m</text>
+  <text x="275" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#0d47a1">voda, ρ = 970 kg/m³</text>
+  <text x="275" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1a2530">sirina kade B = 0,95 m</text>
 
-  <!-- h₀ dashed mid-level indicator: h₀=0,54m→81px, y=338-81=257 -->
-  <line x1="140" y1="257" x2="410" y2="257" stroke="#b7600c" stroke-width="1.2" stroke-dasharray="7 5"/>
-  <rect x="292" y="260" width="76" height="17" rx="3" fill="#fffbf5" stroke="#e0c080" stroke-width="1"/>
-  <text x="330" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle">h₀ = 0,54 m (mirno)</text>
+  <text x="608" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Postupak rjesenja</text>
 
-  <!-- === RIGHT PANEL: Formula box === -->
-  <rect x="566" y="90" width="350" height="310" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="586" y="115" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#173043">Ključne jednadžbe</text>
-  <line x1="586" y1="122" x2="900" y2="122" stroke="#e8d89a" stroke-width="1"/>
+  <text x="624" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">straznja</tspan> = <tspan font-style="italic">H</tspan> = 0,72 m</text>
+  <text x="624" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">prednja</tspan> = 2<tspan font-style="italic">h</tspan>₀ − <tspan font-style="italic">H</tspan></text>
+  <text x="624" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">2. Maksimalno ubrzanje</text>
+  <text x="624" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">Δ<tspan font-style="italic">h</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">straznja</tspan> − <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">prednja</tspan> = 0,36 m</text>
+  <text x="624" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> = <tspan font-style="italic">g</tspan> · Δ<tspan font-style="italic">h</tspan> / <tspan font-style="italic">L</tspan> = 9,81·0,36 / 1,80</text>
+  <text x="624" y="241" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0"><tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 1,96 m/s²</text>
 
-  <!-- a_max -->
-  <text x="586" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Granično stanje: h_str = H</text>
-  <text x="586" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">a_max = g · Δh / L</text>
-  <text x="586" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">  Δh = 2(H − h₀) = 2(0,72 − 0,54) = 0,36 m</text>
-  <text x="586" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">  a_max = 9,81 · 0,36 / 1,80</text>
-  <text x="586" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">a_max ≈ 1,96 m/s²</text>
-  <line x1="586" y1="222" x2="900" y2="222" stroke="#e8d89a" stroke-width="1"/>
+  <text x="624" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449">3. Sila na straznju stijenku (trokutasta raspodjela)</text>
+  <text x="624" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = ½ · ρ · <tspan font-style="italic">g</tspan> · <tspan font-style="italic">B</tspan> · <tspan font-style="italic">H</tspan>²</text>
+  <text x="624" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#5a6a78">= ½ · 970 · 9,81 · 0,95 · 0,72²</text>
+  <text x="624" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 2,34 kN</text>
+  <text x="624" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">hvatiste: <tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = <tspan font-style="italic">H</tspan>/3 = 0,24 m od dna</text>
 
-  <!-- h_pred -->
-  <text x="586" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">h_pred = 2h₀ − H = 0,36 m</text>
-  <line x1="586" y1="250" x2="900" y2="250" stroke="#e8d89a" stroke-width="1"/>
+  <text x="624" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">4. Provjera</text>
+  <text x="624" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 0,20<tspan font-style="italic">g</tspan> – razumno za granicno stanje;</text>
+  <text x="624" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">prednja</tspan> &gt; 0 → dno ostaje pokriveno.</text>
 
-  <!-- F_R -->
-  <text x="586" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Trokutasta raspodjela na stražnjoj st.:</text>
-  <text x="586" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F_R = ½ρgBH²</text>
-  <text x="586" y="304" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">  = ½ · 970 · 9,81 · 0,95 · 0,72²</text>
-  <text x="586" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">F_R ≈ 2,34 kN  ←</text>
-  <line x1="586" y1="330" x2="900" y2="330" stroke="#e8d89a" stroke-width="1"/>
+  <text x="758" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="678" y="465" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 1,96 m/s²</text>
+  <text x="838" y="465" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 2,34 kN</text>
+<text x="42" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">H/3 = 0,24 m</text>
 
-  <!-- hvatište -->
-  <text x="586" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Hvatište: y_R = H/3 = 0,24 m od dna</text>
-  <text x="586" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">(trokutasta raspodjela: centroid na 1/3 visine)</text>
-  <text x="586" y="385" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">ρ = 970 kg/m³,  B = 0,95 m,  H = 0,72 m</text>
+  <text x="275" y="439" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">L</tspan> = 1,80 m</text>
 
-</svg>
+  <text x="510" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">pred</tspan></text>
+  <text x="510.0" y="348.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c">= 0,36 m</text>
+
+  <text x="554" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">straznja</tspan></text>
+  <text x="554" y="304" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">= <tspan font-style="italic">H</tspan> = 0,72 m</text>
+
+  <text x="624" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#b7600c">1. Granicni uvjet (bez prelijevanja)</text>
+  <text x="624" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">= 2·0,54 − 0,72 = 0,36 m</text>
+
+  </svg>

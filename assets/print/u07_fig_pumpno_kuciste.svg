@@ -1,80 +1,132 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="340" viewBox="0 0 940 340" role="img" aria-labelledby="u07fpk_u7fkT" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u07fpk_u7fkT">U07 WE – Uzgon na potonulo pumpno kućište</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" role="img" aria-labelledby="u07fpk_title u07fpk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:860px;height:auto;">
+  <title id="u07fpk_title">Potonulo pumpno kućište u morskoj vodi</title>
+  <desc id="u07fpk_desc">Lijevo: bazen ispunjen morskom vodom s pumpnim kućištem volumena 0,045 kubičnih metara i mase 85 kilograma položenim na dno; uzgon F-U prema gore (zelena) i težina G prema dolje (crvena) djeluju na kućište. Desno: ravnoteža sila s računom F-U, G i neto sile prema dolje koja iznosi 381,4 N.</desc>
+
   <defs>
-    <pattern id="u07fpk_u7fkH" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#546e7a" stroke-width="1.8"/>
-    </pattern>
-    <linearGradient id="u07fpk_u7fkWg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#cce8f4"/>
-      <stop offset="100%" stop-color="#5db8d8"/>
+    <linearGradient id="u07fpk_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
     </linearGradient>
-    <marker id="u07fpk_u7fkAG" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/>
+    <linearGradient id="u07fpk_kuc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#909fa8" />
+      <stop offset="1" stop-color="#5d6d7e" />
+    </linearGradient>
+    <pattern id="u07fpk_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u07fpk_fG" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u07fpk_u7fkAR" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#b42318"/>
+    <marker id="u07fpk_fU" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u07fpk_u7fkAD" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
+    <marker id="u07fpk_fN" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#7b2e22" />
     </marker>
-    <marker id="u07fpk_u7fkADR" markerWidth="8" markerHeight="8" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L8,3 z" fill="#546e7a"/>
+    <marker id="u07fpk_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u07fpk_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
-  <rect width="940" height="340" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="292" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
 
-  <!-- ── BASIN (left panel) ── -->
-  <!-- Seawater fill -->
-  <rect x="80" y="90" width="400" height="210" fill="url(#u07fpk_u7fkWg)" opacity="0.7"/>
-  <!-- Basin floor (srafura) -->
-  <rect x="80" y="300" width="400" height="10" fill="url(#u07fpk_u7fkH)"/>
-  <!-- Basin walls (srafura left/right) -->
-  <rect x="56" y="90" width="24" height="220" fill="url(#u07fpk_u7fkH)"/>
-  <rect x="480" y="90" width="24" height="220" fill="url(#u07fpk_u7fkH)"/>
-  <!-- Water surface -->
-  <line x1="80" y1="90" x2="480" y2="90" stroke="#1565c0" stroke-width="2"/>
-  <text x="84" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0">p.p.</text>
-  <!-- Basin floor line -->
-  <line x1="80" y1="300" x2="480" y2="300" stroke="#37474f" stroke-width="2"/>
+  <!-- pozadina -->
+  <rect x="14" y="14" width="852" height="442" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <line x1="430" y1="40" x2="430" y2="432" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
-  <!-- Pump housing (on floor): x=168..312 (144px), y=242..300 (58px) -->
-  <rect x="168" y="242" width="144" height="58" rx="4" fill="#90a4ae" stroke="#37474f" stroke-width="3"/>
-  <!-- Inner detail (cross pattern suggesting machinery) -->
-  <line x1="168" y1="271" x2="312" y2="271" stroke="#546e7a" stroke-width="1" stroke-dasharray="4 3"/>
-  <line x1="240" y1="242" x2="240" y2="300" stroke="#546e7a" stroke-width="1" stroke-dasharray="4 3"/>
-  <text x="210" y="263" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">pumpno</text>
-  <text x="213" y="277" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#173043">kućište</text>
+  <!-- ================================================================
+       LIJEVI PANEL: bazen s morskom vodom + ku&#263;i&#353;te na dnu
+       ================================================================ -->
+  <!-- bazen: stijenke (lijeva, desna, dno) -->
+  <rect x="60" y="100" width="14" height="290" fill="url(#u07fpk_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <rect x="392" y="100" width="14" height="290" fill="url(#u07fpk_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <rect x="60" y="390" width="346" height="14" fill="url(#u07fpk_hatch)" stroke="#3a4a56" stroke-width="1.3" />
 
-  <!-- F_U arrow (green, upward from top of housing) -->
-  <line x1="240" y1="242" x2="240" y2="100" stroke="#0f766e" stroke-width="4" marker-end="url(#u07fpk_u7fkAG)"/>
-  <text x="248" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#0f766e">F_U = 452,5 N</text>
+  <!-- voda u bazenu -->
+  <rect x="74" y="115" width="318" height="275" fill="url(#u07fpk_voda)" />
 
-  <!-- G arrow (red, downward into housing) -->
-  <line x1="195" y1="160" x2="195" y2="238" stroke="#b42318" stroke-width="4" marker-end="url(#u07fpk_u7fkAR)"/>
-  <text x="136" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b42318">G = 833,9 N</text>
+  <!-- slobodna povrsina mora -->
+  <line x1="74" y1="115" x2="392" y2="115" stroke="#1565c0" stroke-width="2" />
+  <!-- oznaka gustoce -->
+  <!-- pumpno kuciste na dnu: x = 165..325, y = 320..390 -->
+  <rect x="165" y="320" width="160" height="70" rx="6" fill="url(#u07fpk_kuc)" stroke="#3a4a56" stroke-width="2" />
+  <!-- detalj: gornja prirubnica + bocna prirubnica -->
+  <rect x="200" y="312" width="90" height="10" rx="2" fill="#7a8a96" stroke="#3a4a56" stroke-width="1.2" />
+  <circle cx="245" cy="355" r="14" fill="#3a4a56" />
+  <circle cx="245" cy="355" r="6" fill="#90a4ae" />
+  <line x1="231" y1="355" x2="259" y2="355" stroke="#90a4ae" stroke-width="1.2" />
+  <line x1="245" y1="341" x2="245" y2="369" stroke="#90a4ae" stroke-width="1.2" />
+  <!-- naljepnica V i m -->
+  <!-- F_U: zelena strelica prema gore, hvati&#353;te u centru tijela, vrh visoko (uzgon je 453 N) -->
+  <!-- duljina ~85 px (zelena) -->
+  <line x1="200" y1="345" x2="200" y2="260" stroke="#1e8449" stroke-width="2.8" marker-end="url(#u07fpk_fU)" />
+  <!-- G: crvena strelica prema dolje, hvati&#353;te iznad ku&#263;i&#353;ta (te&#382;ina ~834 N, vidno dulja od F_U) -->
+  <!-- duljina ~155 px (crvena) -->
+  <line x1="295" y1="180" x2="295" y2="332" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u07fpk_fG)" />
+  <!-- F_neto: kratka tamno-crvena strelica unutar bazena (desno od ku&#263;i&#353;ta, iznad poda) -->
+  <line x1="358" y1="265" x2="358" y2="320" stroke="#7b2e22" stroke-width="2.4" marker-end="url(#u07fpk_fN)" />
+  <!-- volumen V i masa m: callout box ispod oznake gusto&#263;e (lijevo, izvan putanje strelica) -->
+  <rect x="86" y="200" width="118" height="36" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#5a6a78" stroke-width="1" />
+  <!-- napomena ispod -->
+  <!-- ================================================================
+       DESNI PANEL: 4 koraka rje&#353;enja (formula box stack)
+       ================================================================ -->
+  <!-- KORAK 1: F_U (plava akcent traka) -->
+  <rect x="452" y="66" width="396" height="78" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="452" y="66" width="6" height="78" rx="3" fill="#1565c0" />
+  <!-- KORAK 2: G (crvena akcent traka) -->
+  <rect x="452" y="154" width="396" height="78" rx="9" fill="#fdf4f3" stroke="#eccac2" stroke-width="1.2" />
+  <rect x="452" y="154" width="6" height="78" rx="3" fill="#c0392b" />
+  <!-- KORAK 3: F_neto (smedja akcent traka) -->
+  <rect x="452" y="242" width="396" height="78" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
+  <!-- KORAK 4: zakljucak (zelena akcent traka) -->
+  <rect x="452" y="330" width="396" height="60" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="452" y="330" width="6" height="60" rx="3" fill="#1e8449" />
+  <!-- REZULTATI badge -->
+  <rect x="452" y="402" width="396" height="40" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <rect x="452" y="242" width="6" height="78" rx="3" fill="#b7600c" />
+  <text x="40" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Pumpno kućište u morskoj vodi</text>
 
-  <!-- Net force annotation -->
-  <text x="155" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b42318">F_neto=381,4N↓</text>
-  <text x="155" y="242" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b42318">(kućište tone)</text>
+  <text x="80" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">slobodna površina (more)</text>
 
-  <!-- Volume annotation -->
-  <text x="325" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">V=0,045m³</text>
-  <text x="325" y="287" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#173043">m=85 kg</text>
+  <text x="86" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0d47a1">morska voda</text>
+  <text x="86" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0d47a1">ρ = 1025 kg/m³</text>
 
-  <!-- ── FORMULA BOX ── -->
-  <rect x="532" y="88" width="354" height="210" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="554" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">Ravnoteža sila</text>
-  <line x1="554" y1="121" x2="878" y2="121" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="141" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F_U = ρ g V = 1025·9,81·0,045</text>
-  <text x="554" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#0f766e">F_U = 452,5 N</text>
-  <line x1="554" y1="171" x2="878" y2="171" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="191" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">G = m g = 85 · 9,81</text>
-  <text x="554" y="211" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b42318">G = 833,9 N</text>
-  <line x1="554" y1="221" x2="878" y2="221" stroke="#e8d89a" stroke-width="1"/>
-  <text x="554" y="241" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">F_neto = G − F_U</text>
-  <text x="554" y="261" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">F_neto = 381,4 N  (prema dolje)</text>
-  <text x="554" y="283" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Kućište je teže od istisnine</text>
-  <text x="554" y="299" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">→ ne može plutati, tone na dno.</text>
-</svg>
+  <text x="245" y="383" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#ffffff">pumpno kućište</text>
+
+  <text x="208" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#1e8449"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic" font-weight="700">U</tspan> = 453 N</text>
+
+  <text x="306" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#c0392b"><tspan font-style="italic" font-weight="700">G</tspan> = 834 N</text>
+
+  <text x="365" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#7b2e22"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic" font-weight="700">neto</tspan></text>
+  <text x="406.2" y="288.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#7b2e22">≈ 381 N</text>
+
+  <text x="145" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">V</tspan> = 0,045 m³</text>
+  <text x="145" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">m</tspan> = 85 kg</text>
+
+  <text x="40" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Težina nadmašuje uzgon → kućište samo tone na dno (nema potrebe za tegežom).</text>
+
+  <text x="452" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Ravnoteža sila na uronjeno kućište</text>
+
+  <text x="472" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">1. Sila uzgona (Arhimed)</text>
+  <text x="472" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic" font-weight="700">U</tspan> = ρ g V = 1025 · 9,81 · 0,045</text>
+  <text x="472" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">U</tspan> ≈ 452,5 N ≈ 0,453 kN</text>
+
+  <text x="472" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">2. Težina kućišta</text>
+  <text x="472" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic" font-weight="700">G</tspan> = m g = 85 · 9,81</text>
+  <text x="472" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#c0392b"><tspan font-style="italic">G</tspan> ≈ 833,9 N ≈ 0,834 kN</text>
+
+  <text x="472" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic" font-weight="700">neto</tspan> = G − F<tspan baseline-shift="sub" font-size="0.7em">U</tspan> = 833,9 − 452,5</text>
+  <text x="472" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#7b2e22"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">neto</tspan> ≈ 381,4 N ↓</text>
+
+  <text x="472" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449">4. Zaključak</text>
+  <text x="472" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">G &gt; F<tspan baseline-shift="sub" font-size="0.7em">U</tspan> → kućište se samo potapa, nije potrebna tegeža.</text>
+
+  <text x="468" y="427" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#5a6a78">REZULTATI</text>
+  <text x="568" y="427" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">U</tspan> ≈ 453 N</text>
+  <text x="688" y="427" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b"><tspan font-style="italic">G</tspan> ≈ 834 N</text>
+  <text x="800" y="427" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#7b2e22"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="italic">neto</tspan> ≈ 381 N</text>
+<text x="472" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#b7600c">3. Neto sila (prema dolje)</text>
+  </svg>

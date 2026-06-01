@@ -1,107 +1,279 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 490" width="940" role="img" aria-labelledby="u11c2yrr_u11c2-title" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="u11c2yrr_title u11c2yrr_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u11c2yrr_title">Y-racva s mjerenom reakcijom konzole</title>
+  <desc id="u11c2yrr_desc">Lijevi panel: Y-racva s ulaznim presjekom 1 (D1 = 170 mm) u smjeru osi x, ravnim izlazom 2 (D2 = 100 mm) i kosim izlazom 3 (D3 = 80 mm) pod 60 stupnjeva iznad osi x. Oznake brzina v1, v2 i v3, tlakova pM1 ulazno i p2 = p3 = 0 izlazno, te reakcija konzole Rx i Ry s rezultantom R = 913 N. Desni panel: cetiri koraka rjesenja od izlazne brzine preko ulazne brzine i protoka do reakcija i nosivosti konzole.</desc>
+
   <defs>
-    <linearGradient id="u11c2yrr_u11c2-water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <linearGradient id="u11c2yrr_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
     </linearGradient>
-    <marker id="u11c2yrr_u11c2-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#0f766e"/>
+    <pattern id="u11c2yrr_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#e6ebef" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1" />
+    </pattern>
+    <!-- Velocity arrow (green) -->
+    <marker id="u11c2yrr_vel" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u11c2yrr_u11c2-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#b42318"/>
+    <!-- Pressure arrow (blue) -->
+    <marker id="u11c2yrr_pres" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u11c2yrr_u11c2-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#6d2694"/>
+    <!-- Force arrow (red) -->
+    <marker id="u11c2yrr_for" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u11c2yrr_u11c2-ao" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#b45309"/>
+    <!-- Resultant arrow (purple) -->
+    <marker id="u11c2yrr_res" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
     </marker>
-    <marker id="u11c2yrr_u11c2-agr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#546e7a"/>
+    <!-- Kota markers (brown) -->
+    <marker id="u11c2yrr_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u11c2yrr_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <!-- Axis arrow -->
+    <marker id="u11c2yrr_axis" markerWidth="6" markerHeight="5" refX="5.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#5a6a78" />
     </marker>
   </defs>
-  <rect width="940" height="490" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="442" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <!-- ===== Y-JUNCTION GEOMETRY ===== -->
-  <!-- Horizontal inlet pipe (D1=170mm~54px, center y=270) -->
-  <!-- Wall -->
-  <rect x="54" y="243" width="338" height="54" rx="3" fill="#c8d6df" stroke="#2d3a40" stroke-width="2.5"/>
-  <!-- Fluid -->
-  <rect x="57" y="247" width="332" height="46" fill="url(#u11c2yrr_u11c2-water)" stroke="none"/>
-  <!-- Straight outlet 2 (D2=100mm~32px, center y=270) -->
-  <!-- Wall -->
-  <rect x="388" y="254" width="252" height="32" rx="3" fill="#c8d6df" stroke="#2d3a40" stroke-width="2.5"/>
-  <!-- Fluid -->
-  <rect x="391" y="257" width="246" height="26" fill="url(#u11c2yrr_u11c2-water)" stroke="none"/>
-  <!-- Y-junction body (filled blob) -->
-  <ellipse cx="382" cy="270" rx="30" ry="34" fill="#c8d6df" stroke="#2d3a40" stroke-width="2"/>
-  <ellipse cx="382" cy="270" rx="26" ry="30" fill="url(#u11c2yrr_u11c2-water)" stroke="none"/>
-  <!-- Branch outlet 3 (D3=80mm~26px, at 60deg above x-axis from junction at 382,270) -->
-  <!-- 60deg: dx=cos60=0.5, dy=sin60=0.866 (upward on screen = negative y) -->
-  <!-- Branch length ~200px: endpoint at (382+200*0.5, 270-200*0.866) = (482, 97) -->
-  <!-- Branch wall (two parallel lines 26px apart, perpendicular to 60deg direction) -->
-  <!-- Perpendicular to 60deg: direction (-sin60, -cos60) = (-0.866, -0.5) for top, (+0.866, +0.5) for bottom -->
-  <!-- Top edge: from (382-13*0.866, 270+13*0.5) to (482-13*0.866, 97+13*0.5) = (371,277) to (471,104) -->
-  <!-- Bot edge: from (382+13*0.866, 270-13*0.5) to (482+13*0.866, 97-13*0.5) = (393,264) to (493,91) -->
-  <polygon points="371,277 471,104 493,91 393,264" fill="#c8d6df" stroke="#2d3a40" stroke-width="2"/>
-  <!-- Branch fluid -->
-  <polygon points="373,274 473,105 490,94 390,263" fill="url(#u11c2yrr_u11c2-water)" stroke="none"/>
-  <!-- ===== SECTIONS ===== -->
-  <!-- Section 1 (inlet) -->
-  <line x1="120" y1="236" x2="120" y2="304" stroke="#173043" stroke-width="2"/>
-  <circle cx="120" cy="270" r="5" fill="#173043"/>
-  <text x="112" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">1</text>
-  <!-- Section 2 (straight outlet) -->
-  <line x1="560" y1="248" x2="560" y2="294" stroke="#173043" stroke-width="2"/>
-  <circle cx="560" cy="271" r="5" fill="#173043"/>
-  <text x="566" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">2</text>
-  <!-- Section 3 (angled outlet - perpendicular cross at end of branch) -->
-  <line x1="472" y1="100" x2="494" y2="92" stroke="#173043" stroke-width="2"/>
-  <circle cx="483" cy="96" r="5" fill="#173043"/>
-  <text x="498" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">3</text>
-  <!-- ===== VELOCITIES ===== -->
-  <!-- v1 (rightward) -->
-  <line x1="162" y1="270" x2="290" y2="270" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u11c2yrr_u11c2-ag)"/>
-  <text x="184" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#0f766e">v&#x2081; = 6,81 m/s</text>
-  <!-- v2 (rightward) -->
-  <line x1="436" y1="270" x2="536" y2="270" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u11c2yrr_u11c2-ag)"/>
-  <text x="446" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#0f766e">v&#x2082; = 12,0 m/s</text>
-  <!-- v3 (along 60deg, ~midpoint of branch at ~430,186) -->
-  <line x1="420" y1="196" x2="450" y2="140" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u11c2yrr_u11c2-ag)"/>
-  <text x="456" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#0f766e">v&#x2083; = 12,0 m/s</text>
-  <!-- 60deg angle label -->
-  <path d="M 410,270 A 30,30 0 0,0 425,244" fill="none" stroke="#546e7a" stroke-width="1.5"/>
-  <text x="420" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">60°</text>
-  <!-- ===== PRESSURE LABELS ===== -->
-  <rect x="54" y="318" width="122" height="26" rx="6" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
-  <text x="70" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p&#x2098;&#x2081; = 48,6 kPa</text>
-  <rect x="570" y="295" width="116" height="26" rx="6" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
-  <text x="586" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p&#x2082; = 0 (atm)</text>
-  <rect x="498" y="76" width="116" height="26" rx="6" fill="#f0f7ff" stroke="#93afc8" stroke-width="1.5"/>
-  <text x="514" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">p&#x2083; = 0 (atm)</text>
-  <!-- ===== MEASURED REACTION (R_y = 625 N, upward on konzola) ===== -->
-  <!-- Konzola reacts upward => fluid on raccva pushes DOWN => R_y annotation -->
-  <line x1="310" y1="370" x2="310" y2="310" stroke="#b45309" stroke-width="3.5" marker-end="url(#u11c2yrr_u11c2-ao)"/>
-  <rect x="244" y="370" width="152" height="26" rx="6" fill="#fff8ec" stroke="#b45309" stroke-width="1.5"/>
-  <text x="260" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#b45309">R&#x1D67; = 625 N (izmjereno)</text>
-  <!-- ===== REACTION FORCES ON RACCVA ===== -->
-  <circle cx="680" cy="370" r="5" fill="#173043"/>
-  <!-- R_x = 664 N pointing left (konzola) -->
-  <line x1="680" y1="370" x2="540" y2="370" stroke="#b42318" stroke-width="4" marker-end="url(#u11c2yrr_u11c2-ar)"/>
-  <text x="568" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#b42318">R&#x2093; = 664 N</text>
-  <!-- R_y = 625 N pointing up (konzola) -->
-  <line x1="680" y1="370" x2="680" y2="310" stroke="#b42318" stroke-width="4" marker-end="url(#u11c2yrr_u11c2-ar)"/>
-  <text x="690" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#b42318">R&#x1D67; = 625 N</text>
-  <!-- R resultant (konzola) -->
-  <line x1="680" y1="370" x2="566" y2="318" stroke="#6d2694" stroke-width="3.5" marker-end="url(#u11c2yrr_u11c2-ap)"/>
-  <text x="590" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#6d2694">R = 912 N &#x2248; 0,91 kN</text>
-  <!-- ===== COORD AXES ===== -->
-  <line x1="66" y1="430" x2="124" y2="430" stroke="#546e7a" stroke-width="2" marker-end="url(#u11c2yrr_u11c2-agr)"/>
-  <text x="128" y="435" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#546e7a">x</text>
-  <line x1="66" y1="430" x2="66" y2="372" stroke="#546e7a" stroke-width="2" marker-end="url(#u11c2yrr_u11c2-agr)"/>
-  <text x="72" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#546e7a">y</text>
-  <!-- ===== FORMULA BOX ===== -->
-  <rect x="54" y="452" width="870" height="52" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="72" y="473" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">R&#x1D67;=625 N &#x21D2; v=11,99&#x2248;12,0 m/s; v&#x2081;=6,81 m/s; Q&#x2081;=155 L/s; p&#x2098;&#x2081;=48,6 kPa</text>
-  <text x="72" y="493" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">Os x: p&#x2098;&#x2081;A&#x2081;+F&#x209C;&#x2093;=m&#x2D9;&#x2082;v+m&#x2D9;&#x2083;v&#xB7;cos60&#xB0;&#x2212;m&#x2D9;&#x2081;v&#x2081;  &#x21D2;  R&#x2093;=664 N; R=&#x221A;(664&#xB2;+625&#xB2;)=912 N&lt;1000 N (konzola u redu)</text>
-</svg>
+
+  <!-- background -->
+  <rect width="960" height="540" fill="#ffffff" />
+
+  <!-- okvirni paneli -->
+  <rect x="16" y="16" width="540" height="508" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="572" y="16" width="372" height="508" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+
+  <!-- ============= LIJEVI PANEL: GEOMETRIJA RACVE ============= -->
+  <!-- =========== Y-junction geometry ===========
+       Junction center: (340, 290)
+       D1 inlet horizontal: from x=60 to x=340, fluid half-height=28 (56 px)
+       D2 outlet horizontal: from x=340 to x=540, fluid half-height=16 (32 px)
+       D3 outlet at 60deg above x-axis: from (340,290), length ~165 px, half-width=13 (26 px)
+       Branch dir: (cos60, -sin60) = (0.5, -0.866)
+       Endpoint: (340 + 165*0.5, 290 - 165*0.866) = (422.5, 147.1) ~ (423, 147)
+       Perpendicular (for thickness): (-sin60, -cos60) = (-0.866, -0.5) "top-left side"
+                                       (sin60, cos60)  = (0.866, 0.5)  "bottom-right side"
+       Top-left edge of branch:  (340 - 13*0.866, 290 - 13*0.5) = (328.7, 283.5) to (411.7, 140.6)
+       Bot-right edge of branch: (340 + 13*0.866, 290 + 13*0.5) = (351.3, 296.5) to (434.3, 153.6)
+  -->
+
+  <!-- INLET PIPE D1: walls (top + bottom) -->
+  <rect x="60" y="256" width="280" height="6" fill="#909fa8" stroke="#3a4a56" stroke-width="1" />
+  <rect x="60" y="318" width="280" height="6" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1" />
+  <!-- INLET FLUID D1 -->
+  <rect x="60" y="262" width="280" height="56" fill="url(#u11c2yrr_voda)" />
+
+  <!-- OUTLET 2 PIPE: walls -->
+  <rect x="340" y="272" width="200" height="5" fill="#909fa8" stroke="#3a4a56" stroke-width="1" />
+  <rect x="340" y="303" width="200" height="5" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1" />
+  <!-- OUTLET 2 FLUID -->
+  <rect x="340" y="277" width="200" height="26" fill="url(#u11c2yrr_voda)" />
+
+  <!-- BRANCH 3 walls (two thin parallel strips) - using polygons
+       top-left wall edge offset by +3 perpendicular (outside fluid)
+       fluid: from (328.7, 283.5)-(411.7,140.6) to (351.3,296.5)-(434.3,153.6)
+       outer top-left: shift further by 3 in (-0.866,-0.5): (326.1,282) to (409.1,139.1)
+       outer bot-right: shift by (0.866,0.5): (353.9,298) to (436.9,155.1)
+  -->
+  <!-- top-left wall strip (lighter top) -->
+  <polygon points="326.1,282 409.1,139.1 411.7,140.6 328.7,283.5" fill="#909fa8" stroke="#3a4a56" stroke-width="0.8" />
+  <!-- bottom-right wall strip (darker bottom) -->
+  <polygon points="351.3,296.5 434.3,153.6 436.9,155.1 353.9,298" fill="#5d6d7e" stroke="#3a4a56" stroke-width="0.8" />
+  <!-- branch fluid -->
+  <polygon points="328.7,283.5 411.7,140.6 434.3,153.6 351.3,296.5" fill="url(#u11c2yrr_voda)" />
+
+  <!-- ===== Junction blend (smooth fluid in T-area) =====
+       Make the fluid continuous at the junction by filling small area where pipes meet -->
+  <!-- horizontal fluid blend at junction (between D1 fluid and D2 fluid) -->
+  <rect x="335" y="262" width="20" height="56" fill="url(#u11c2yrr_voda)" />
+  <!-- triangle to smoothly close junction at inner branch entrance (top side) -->
+  <polygon points="335,262 355,262 351.3,296.5 328.7,283.5" fill="url(#u11c2yrr_voda)" />
+
+  <!-- ===== Section markers 1, 2, 3 ===== -->
+  <!-- Section 1 (inlet, x=115) -->
+  <line x1="115" y1="248" x2="115" y2="332" stroke="#3a4a56" stroke-width="1.6" stroke-dasharray="5,3" />
+  <circle cx="115" cy="290" r="4.5" fill="#1a2530" />
+  <!-- Section 2 (straight outlet, x=505) -->
+  <line x1="505" y1="265" x2="505" y2="316" stroke="#3a4a56" stroke-width="1.6" stroke-dasharray="5,3" />
+  <circle cx="505" cy="290" r="4.5" fill="#1a2530" />
+  <!-- Section 3 (along branch ~70% length) -->
+  <!-- At 70% along branch: P = (340 + 115*0.5, 290 - 115*0.866) = (397.5, 190.4) -->
+  <!-- Section line perpendicular to branch (length 30 across) -->
+  <!-- perp dir = (-0.866, -0.5), so endpoints: (397.5-15*0.866, 190.4-15*0.5) and (397.5+15*0.866, 190.4+15*0.5) -->
+  <!-- = (384.5, 182.9) to (410.5, 197.9) -->
+  <line x1="384.5" y1="182.9" x2="410.5" y2="197.9" stroke="#3a4a56" stroke-width="1.6" stroke-dasharray="5,3" />
+  <circle cx="397.5" cy="190.4" r="4.5" fill="#1a2530" />
+  <!-- ===== Velocity arrows (green) ===== -->
+  <!-- v1 along inlet axis, in fluid -->
+  <line x1="73" y1="290" x2="100" y2="290" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u11c2yrr_vel)" />
+  <!-- v2 along outlet 2 axis -->
+  <line x1="455" y1="290" x2="495" y2="290" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u11c2yrr_vel)" />
+  <!-- v3 along branch (in fluid) - centered around (397.5,190.4), direction (0.5,-0.866), 40 px length -->
+  <!-- start (377.5, 207.7), end (417.5, 172.4) (closer to section 3) but we want a clear arrow -->
+  <!-- Place arrow in branch fluid from 35% to 55% along branch length
+       35%: (340+57.75*0.5, 290-57.75*0.866) = (368.9, 240)
+       55%: (340+90.75*0.5, 290-90.75*0.866) = (385.4, 211.4) -->
+  <line x1="368.9" y1="240" x2="385.4" y2="211.4" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u11c2yrr_vel)" />
+  <!-- v3 label placed left of branch -->
+  <!-- ===== Pressure labels (blue boxes) ===== -->
+  <!-- p_M1 below section 1 -->
+  <rect x="46" y="340" width="138" height="26" rx="6" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.3" />
+  <!-- p_2 below section 2 -->
+  <rect x="444" y="340" width="122" height="26" rx="6" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.3" />
+  <!-- p_3 above section 3 -->
+  <rect x="416" y="138" width="122" height="26" rx="6" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.3" />
+  <!-- leader from p3 box to section 3 -->
+  <line x1="416" y1="158" x2="403" y2="180" stroke="#1565c0" stroke-width="0.7" stroke-dasharray="3,2" />
+
+  <!-- ===== 60 degree angle arc + label ===== -->
+  <!-- arc from horizontal (right of junction along D2) to branch dir
+       from junction (340,290) at angle 0 to angle -60 (in screen y-down)
+       radius 50 -->
+  <path d="M 392,290 A 52,52 0 0,0 366,245" fill="none" stroke="#5a6a78" stroke-width="1.4" />
+  <!-- ===== Diameter kotas (brown) ===== -->
+  <!-- D1 vertical kota on left side, label centered above dim line -->
+  <!-- D2 vertical kota on right side - label below pipe -->
+  <!-- D3 kota perpendicular to branch near the top end
+       Branch axis at branch end (~423,147), perpendicular dir (-0.866,-0.5)
+       Place kota beyond top of branch:
+       offset 18 px outward in (-0.866,-0.5)*from outer edges (409.1,139.1) and (436.9,155.1)
+       extension lines from (409.1,139.1) outward by 18: (393.5,130.1)
+                          from (436.9,155.1) outward by 18: (421.3,146.1)
+       dim line between (393.5,130.1) and (421.3,146.1)
+       Use a simpler approach: small leader from branch end + label
+  -->
+  <!-- extension lines outward from branch endpoints perpendicular to axis -->
+  <!-- dim line between extension ends -->
+  <!-- ===== Reactions on the KONZOLA (red) =====
+       Free-body anchor point at right of junction, place below at (440, 410)
+       Place tucked-in well to the right of pipe so it doesn't overlap with v2 / p2.
+       Actually, the konzola supports racva from below; show reactions at a chosen anchor (430,420):
+         Ry pointing UP (measured): length ~52 px (625 N)
+         Rx pointing LEFT (computed): length ~55 px (664 N)
+         R resultant: purple, magnitude ~76 px, angle 43.3 deg above neg-x
+       Scale: 1 N = 0.083 px so 625 N = 52, 664 N = 55, 912 N = 76 -->
+
+  <!-- Anchor point K -->
+  <circle cx="430" cy="420" r="4" fill="#1a2530" />
+  <!-- Ry up (red, force) -->
+  <line x1="430" y1="420" x2="430" y2="368" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u11c2yrr_for)" />
+  <!-- Rx left (red, force) -->
+  <line x1="430" y1="420" x2="375" y2="420" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u11c2yrr_for)" />
+  <!-- R resultant (purple, up-left): from (430,420) at angle 180-43.3 = 136.7 deg from +x (i.e., dx=-cos43.3*76=-55.3, dy=-sin43.3*76=-52.1) -->
+  <!-- Endpoint: (430-55.3, 420-52.1) = (374.7, 367.9) -->
+  <line x1="430" y1="420" x2="374.7" y2="367.9" stroke="#8e44ad" stroke-width="2.6" stroke-dasharray="6,3" marker-end="url(#u11c2yrr_res)" />
+  <!-- phi angle (43.3 deg between -x axis and R) at K -->
+  <path d="M 405,420 A 25,25 0 0,0 412,406" fill="none" stroke="#8e44ad" stroke-width="1.1" />
+  <!-- ===== Measured Ry tag note ===== -->
+  <rect x="290" y="448" width="180" height="22" rx="6" fill="#fff5ee" stroke="#c0392b" stroke-width="1.2" />
+  <!-- ===== Konzola schematic (vertical bracket, hatched, behind K) ===== -->
+  <!-- Konzola attaches to the right side (a wall on the right edge of panel),
+       horizontal bracket going from wall to anchor K -->
+  <rect x="488" y="382" width="22" height="80" fill="url(#u11c2yrr_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="430" y="416" width="60" height="10" fill="#909fa8" stroke="#3a4a56" stroke-width="1" />
+  <!-- ===== Coordinate axes (bottom left) ===== -->
+  <line x1="36" y1="492" x2="84" y2="492" stroke="#5a6a78" stroke-width="1.6" marker-end="url(#u11c2yrr_axis)" />
+  <line x1="36" y1="492" x2="36" y2="448" stroke="#5a6a78" stroke-width="1.6" marker-end="url(#u11c2yrr_axis)" />
+  <!-- ===== Legend (small note) at bottom-left ===== -->
+  <!-- ============= DESNI PANEL: 4-koracna stuktura rjesenja ============= -->
+
+  <!-- Header bar -->
+  <rect x="592" y="34" width="332" height="32" rx="8" fill="#1565c0" />
+  <!-- Korak 1 -->
+  <rect x="592" y="78" width="332" height="86" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="592" y="78" width="6" height="86" rx="3" fill="#1e8449" />
+  <!-- Korak 2 -->
+  <rect x="592" y="174" width="332" height="86" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="592" y="174" width="6" height="86" rx="3" fill="#1e8449" />
+  <!-- Korak 3 -->
+  <rect x="592" y="270" width="332" height="74" rx="9" fill="#eaf3fb" stroke="#b7d4ea" stroke-width="1.2" />
+  <rect x="592" y="270" width="6" height="74" rx="3" fill="#1565c0" />
+  <!-- Korak 4 -->
+  <rect x="592" y="354" width="332" height="86" rx="9" fill="#fff5ee" stroke="#f0c7b5" stroke-width="1.2" />
+  <rect x="592" y="354" width="6" height="86" rx="3" fill="#c0392b" />
+  <!-- REZULTATI badge -->
+  <rect x="592" y="452" width="332" height="58" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="60" y1="256" x2="42" y2="256" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="60" y1="324" x2="42" y2="324" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="46" y1="256" x2="46" y2="324" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u11c2yrr_dimL)" marker-end="url(#u11c2yrr_dim)" />
+  <line x1="540" y1="272" x2="551" y2="272" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="540" y1="308" x2="551" y2="308" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="548" y1="272" x2="548" y2="308" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u11c2yrr_dimL)" marker-end="url(#u11c2yrr_dim)" />
+  <line x1="409.1" y1="139.1" x2="386.5" y2="126.1" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="436.9" y1="155.1" x2="414.3" y2="142.1" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="389" y1="127.5" x2="412" y2="140.7" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u11c2yrr_dimL)" marker-end="url(#u11c2yrr_dim)" />
+  <text x="36" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Y-račva: D₁ / D₂ / D₃ i reakcija konzole</text>
+
+  <text x="115" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">1</text>
+
+  <text x="505" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">2</text>
+
+  <text x="377" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">3</text>
+
+  <text x="86" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+
+  <text x="475" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+
+  <text x="356" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#1e8449"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan></text>
+
+  <text x="115" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M1</tspan> = 48,6 kPa</text>
+
+  <text x="505" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 0 (atm)</text>
+
+  <text x="477" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 0 (atm)</text>
+  <text x="388" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5a6a78">60°</text>
+
+  <text x="438" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1a2530">K</text>
+
+  <text x="437" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b"><tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = 625 N</text>
+
+  <text x="402" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = 664 N</text>
+
+  <text x="350" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#8e44ad"><tspan font-style="italic">R</tspan> = 913 N</text>
+
+  <text x="394" y="411" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad">φ</text>
+
+  <text x="380" y="463" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = 625 N — izmjereno (mjerna ćelija)</text>
+
+  <text x="498" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" text-anchor="middle">konzola</text>
+
+  <text x="88" y="496" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#5a6a78">x</text>
+  <text x="40" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#5a6a78">y</text>
+
+  <text x="106" y="498" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">brzine zelene · tlakovi plavi · reakcije crvene · rezultanta ljubičasto</text>
+
+  <text x="758" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#ffffff">Tijek rješenja iz mjerene reakcije</text>
+
+  <text x="608" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">1. Izlazna brzina iz <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> (KG po osi y)</text>
+  <text x="608" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = ρ A₃ v² sin 60°</text>
+  <text x="608" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">625 = 998 · 5,027·10⁻³ · v² · 0,866</text>
+  <text x="608" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449"><tspan font-style="italic">v</tspan> = <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> ≈ 12,0 m/s</text>
+
+  <text x="608" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">2. Ulazna brzina i protoci (kontinuitet)</text>
+  <text x="608" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = (A₂ + A₃) v / A₁ ≈ 6,81 m/s</text>
+  <text x="608" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 94,2 L/s    <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 60,3 L/s</text>
+  <text x="608" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> + <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> ≈ 155 L/s</text>
+
+  <text x="608" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">3. Ulazni manometarski tlak (Bernoulli 1–2)</text>
+  <text x="608" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M1</tspan> = ½ ρ (v² − v₁²) = ½·998·(11,99²−6,81²)</text>
+  <text x="608" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M1</tspan> ≈ 48,6 kPa</text>
+
+  <text x="608" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">4. Horizontalna reakcija i rezultanta (KG po x)</text>
+  <text x="608" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M1</tspan>A₁ − <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = ṁ₂v + ṁ₃v cos 60° − ṁ₁v₁</text>
+  <text x="608" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">1103 − <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = 439   ⇒   <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = 664 N</text>
+  <text x="608" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b"><tspan font-style="italic">R</tspan> = √(<tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan>² + <tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan>²) ≈ 913 N</text>
+
+  <text x="758" y="469" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">PROVJERA NOSIVOSTI KONZOLE</text>
+  <text x="758" y="489" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">R</tspan> ≈ 0,913 kN  &lt;  1,0 kN  ⇒ konzola dovoljna</text>
+  <text x="758" y="504" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">rezerva ≈ 87 N (mala margina)  ·  φ = 43,3° iznad −x</text>
+<text x="58" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 170 mm</text>
+
+  <text x="518" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 100 mm</text>
+
+  <text x="367" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 80 mm</text>
+
+  </svg>

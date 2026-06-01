@@ -1,188 +1,244 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 460" role="img"
-     aria-labelledby="u01v2hd_v2t u01v2hd_v2d" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u01v2hd_v2t">U01 Val 2 – Servisna hidraulična dizalica</title>
-  <desc id="u01v2hd_v2d">Mali klip A₁=6 cm², F₁=150 N, hod s₁=18 cm. Tlak p=250 kPa prenosi se na A₂=210 cm² → F₂=5,25 kN. Hod s₂=5,1 mm.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" role="img" aria-labelledby="u01v2hd_title u01v2hd_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u01v2hd_title">U01 Val 2 - Servisna hidraulicna dizalica</title>
+  <desc id="u01v2hd_desc">Mali upravljacki klip A_1=6 cm^2 pod silom F_1=150 N stvara tlak p=250 kPa u ulju. Vod na dnu povezuje cilindre kontinuiranim fluidom. Veliki radni klip A_2=210 cm^2 (35x veca povrsina) podize vozilo silom F_2=5,25 kN. Hod malog klipa s_1=18 cm daje hod velikog s_2 cca 5,1 mm.</desc>
   <defs>
-    <marker id="u01v2hd_v2aR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
+    <marker id="u01v2hd_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u01v2hd_v2aG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/>
+    <marker id="u01v2hd_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u01v2hd_v2aBl" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/>
+    <marker id="u01v2hd_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u01v2hd_v2aO" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
+    <marker id="u01v2hd_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
-    <marker id="u01v2hd_v2aOR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
+    <marker id="u01v2hd_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
-    <marker id="u01v2hd_v2aDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
-    </marker>
-    <marker id="u01v2hd_v2aDimR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
-    </marker>
-    <linearGradient id="u01v2hd_v2fl" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
+    <linearGradient id="u01v2hd_fluid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u01v2hd_v2ps" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#909fa8"/>
-      <stop offset="100%" stop-color="#5d6d7e"/>
+    <linearGradient id="u01v2hd_piston" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#909fa8" />
+      <stop offset="100%" stop-color="#5d6d7e" />
     </linearGradient>
-    <linearGradient id="u01v2hd_v2car" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#a9cce3"/>
-      <stop offset="100%" stop-color="#7faec6"/>
+    <linearGradient id="u01v2hd_car" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a9cce3" />
+      <stop offset="100%" stop-color="#7faec6" />
     </linearGradient>
-    <pattern id="u01v2hd_v2hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a9aa6" stroke-width="2"/>
+    <pattern id="u01v2hd_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8" />
     </pattern>
   </defs>
 
-  <rect width="980" height="460" fill="#f8f9fa"/>
-  <rect x="14" y="14" width="952" height="432" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.8"/>
+  <rect width="980" height="540" fill="#ffffff" />
+  <rect x="14" y="14" width="952" height="512" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
 
-  <!-- ── NASLOV ── -->
+  <!-- ============================================================
+       KONTINUIRAN FLUID PUT - vod na dnu povezuje oba cilindra
+       Mali cyl interior x=50-110 (60 px), Veliki cyl interior x=400-640 (240 px = 4x)
+       Vod fluid y=460-480 (na samom dnu, neposredno iznad zajednickog dna)
+  ============================================================ -->
+  <!-- Mali cilindar fluid (interior x=50-110, y=330-480) -->
+  <rect x="50" y="330" width="60" height="150" fill="url(#u01v2hd_fluid)" />
+  <!-- Port lijevi (kroz rwall mali, x=110-130) -->
+  <rect x="110" y="460" width="20" height="20" fill="url(#u01v2hd_fluid)" />
+  <!-- Vod fluid (x=130-380) -->
+  <rect x="130" y="460" width="250" height="20" fill="url(#u01v2hd_fluid)" />
+  <!-- Port desni (kroz lwall veliki, x=380-400) -->
+  <rect x="380" y="460" width="20" height="20" fill="url(#u01v2hd_fluid)" />
+  <!-- Veliki cilindar fluid (interior x=400-640, y=330-480) -->
+  <rect x="400" y="330" width="240" height="150" fill="url(#u01v2hd_fluid)" />
 
-  <!-- ════════════════════════════════════════════
-       MALI CILINDAR (pumpa) – A1=6 cm² (uski, ~60px)
-       Unutrašnjost: 95–155, visina: 110–370
-  ════════════════════════════════════════════ -->
-  <!-- Stjenke s hatchingom -->
-  <rect x="78"  y="108" width="17" height="262" fill="url(#u01v2hd_v2hatch)" stroke="#4a6070" stroke-width="1.5"/>
-  <rect x="155" y="108" width="17" height="262" fill="url(#u01v2hd_v2hatch)" stroke="#4a6070" stroke-width="1.5"/>
-  <!-- Dno -->
-  <rect x="78" y="368" width="94" height="14" rx="2" fill="url(#u01v2hd_v2hatch)" stroke="#4a6070" stroke-width="1.5"/>
-  <!-- Fluid od klipa do dna: y 250..368 -->
-  <rect x="95" y="250" width="60" height="118" fill="url(#u01v2hd_v2fl)"/>
-  <!-- Klip: y 222..250 -->
-  <rect x="82" y="222" width="86" height="28" rx="4" fill="url(#u01v2hd_v2ps)" stroke="#3a4a56" stroke-width="2"/>
-  <!-- Klipnjača: y 108..222 -->
-  <rect x="118" y="108" width="14" height="116" fill="#9aaab4" stroke="#5b6770" stroke-width="1.5"/>
+  <!-- ============================================================
+       MALI CILINDAR - stjenke
+  ============================================================ -->
+  <!-- Top cap LEFT -->
+  <rect x="30" y="180" width="38" height="20" fill="url(#u01v2hd_hatch)" stroke="#4a6070" stroke-width="1.4" />
+  <!-- Top cap RIGHT -->
+  <rect x="92" y="180" width="38" height="20" fill="url(#u01v2hd_hatch)" stroke="#4a6070" stroke-width="1.4" />
+  <!-- Brtva (seal) -->
+  <rect x="68" y="180" width="24" height="20" fill="#3a4a56" stroke="#4a6070" stroke-width="1" />
+  <line x1="71" y1="185" x2="89" y2="185" stroke="#9aaab4" stroke-width="0.8" />
+  <line x1="71" y1="195" x2="89" y2="195" stroke="#9aaab4" stroke-width="0.8" />
+  <!-- Side wall LEFT -->
+  <rect x="30" y="200" width="20" height="280" fill="url(#u01v2hd_hatch)" stroke="#4a6070" stroke-width="1.4" />
+  <!-- Side wall RIGHT PUNE visine (zatvoren tank) -->
+  <rect x="110" y="200" width="20" height="280" fill="url(#u01v2hd_hatch)" stroke="#4a6070" stroke-width="1.4" />
 
-  <!-- Sila F1 prema dolje -->
-  <line x1="125" y1="42" x2="125" y2="105" stroke="#c0392b" stroke-width="4" marker-end="url(#u01v2hd_v2aR)"/>
-  <text x="138" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" font-style="italic" fill="#c0392b">F₁</text>
-  <text x="138" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b">= 150 N</text>
+  <!-- ============================================================
+       VELIKI CILINDAR - stjenke
+  ============================================================ -->
+  <!-- Top cap LEFT -->
+  <rect x="380" y="180" width="128" height="20" fill="url(#u01v2hd_hatch)" stroke="#4a6070" stroke-width="1.4" />
+  <!-- Top cap RIGHT -->
+  <rect x="532" y="180" width="128" height="20" fill="url(#u01v2hd_hatch)" stroke="#4a6070" stroke-width="1.4" />
+  <!-- Brtva (seal) -->
+  <rect x="508" y="180" width="24" height="20" fill="#3a4a56" stroke="#4a6070" stroke-width="1" />
+  <line x1="511" y1="185" x2="529" y2="185" stroke="#9aaab4" stroke-width="0.8" />
+  <line x1="511" y1="195" x2="529" y2="195" stroke="#9aaab4" stroke-width="0.8" />
+  <!-- Side wall LEFT PUNE visine (zatvoren tank) -->
+  <rect x="380" y="200" width="20" height="280" fill="url(#u01v2hd_hatch)" stroke="#4a6070" stroke-width="1.4" />
+  <!-- Side wall RIGHT -->
+  <rect x="640" y="200" width="20" height="280" fill="url(#u01v2hd_hatch)" stroke="#4a6070" stroke-width="1.4" />
 
-  <!-- Tlačne strelice gore -->
-  <line x1="107" y1="290" x2="107" y2="258" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_v2aBl)"/>
-  <line x1="125" y1="290" x2="125" y2="258" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_v2aBl)"/>
-  <line x1="143" y1="290" x2="143" y2="258" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_v2aBl)"/>
-  <text x="125" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" text-anchor="middle" fill="#1565c0">p</text>
+  <!-- ============================================================
+       VOD - gornja stjenka (donja je zajednicko dno, x=130-380)
+  ============================================================ -->
+  <rect x="130" y="450" width="250" height="10" fill="url(#u01v2hd_hatch)" stroke="#4a6070" stroke-width="1.4" />
 
-  <!-- Kota A1 -->
-  <line x1="82"  y1="208" x2="82"  y2="201" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="168" y1="208" x2="168" y2="201" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="85"  y1="204" x2="165" y2="204" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u01v2hd_v2aDimR)" marker-end="url(#u01v2hd_v2aDim)"/>
-  <text x="125" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#b7600c">A₁ = 6 cm²</text>
+  <!-- ============================================================
+       ZAJEDNICKO DNO
+  ============================================================ -->
+  <rect x="30" y="480" width="630" height="20" fill="url(#u01v2hd_hatch)" stroke="#4a6070" stroke-width="1.4" />
 
-  <!-- Kota s1 (hod malog klipa) – lijevo od cilindra, smeđa -->
-  <line x1="57" y1="108" x2="57" y2="222" stroke="#b7600c" stroke-width="1.8" marker-start="url(#u01v2hd_v2aOR)" marker-end="url(#u01v2hd_v2aO)"/>
-  <text x="35" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#b7600c">s₁</text>
-  <text x="22" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">= 18 cm</text>
+  <!-- ============================================================
+       PORT FLUID OVERLAY (preko stjenki, na y=460-480)
+  ============================================================ -->
+  <rect x="110" y="460" width="20" height="20" fill="url(#u01v2hd_fluid)" />
+  <rect x="380" y="460" width="20" height="20" fill="url(#u01v2hd_fluid)" />
 
-  <!-- ════════════════════════════════════════════
-       U-KANAL (dno) – prenosi tlak
-       y: 376..396; x: 95..470
-  ════════════════════════════════════════════ -->
-  <rect x="78" y="376" width="564" height="22" rx="3" fill="#8a9aa6" stroke="#4a6070" stroke-width="1.3"/>
-  <rect x="95" y="381" width="540" height="12" fill="url(#u01v2hd_v2fl)" opacity="0.9"/>
-  <!-- Strelica toka -->
-  <line x1="175" y1="387" x2="414" y2="387" stroke="#1565c0" stroke-width="2.5" marker-end="url(#u01v2hd_v2aBl)"/>
-  <text x="295" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" font-style="italic" text-anchor="middle" fill="#1565c0">isti tlak: p = F₁/A₁ = F₂/A₂ = 250 kPa</text>
+  <!-- ============================================================
+       KLIPOVI I KLIPNJACE
+  ============================================================ -->
+  <!-- Mali klip -->
+  <rect x="50" y="300" width="60" height="30" rx="3" fill="url(#u01v2hd_piston)" stroke="#3a4a56" stroke-width="1.6" />
+  <line x1="50" y1="308" x2="110" y2="308" stroke="#3a4a56" stroke-width="0.5" opacity="0.5" />
+  <!-- Mali klipnjaca (od navrtke kroz brtvu do klipa) -->
+  <rect x="68" y="158" width="24" height="142" fill="#9aaab4" stroke="#5b6770" stroke-width="1.4" />
+  <!-- Mali navrtka -->
+  <rect x="63" y="142" width="34" height="16" rx="2" fill="#7a8a96" stroke="#4a5a66" stroke-width="1.4" />
 
-  <!-- ════════════════════════════════════════════
-       VELIKI CILINDAR (radni) – A2=210 cm² (~3,5× širi = ~210px)
-       Unutrašnjost: 452–660, visina: 110–370
-  ════════════════════════════════════════════ -->
-  <rect x="434" y="108" width="18" height="270" fill="url(#u01v2hd_v2hatch)" stroke="#4a6070" stroke-width="1.5"/>
-  <rect x="660" y="108" width="18" height="270" fill="url(#u01v2hd_v2hatch)" stroke="#4a6070" stroke-width="1.5"/>
-  <!-- Dno -->
-  <rect x="434" y="376" width="244" height="14" rx="2" fill="url(#u01v2hd_v2hatch)" stroke="#4a6070" stroke-width="1.5"/>
-  <!-- Fluid: y 250..376 -->
-  <rect x="452" y="250" width="208" height="126" fill="url(#u01v2hd_v2fl)"/>
-  <!-- Klip: y 222..250 -->
-  <rect x="438" y="222" width="234" height="28" rx="4" fill="url(#u01v2hd_v2ps)" stroke="#3a4a56" stroke-width="2"/>
-  <!-- Klipnjača: y 108..222 -->
-  <rect x="550" y="108" width="16" height="116" fill="#9aaab4" stroke="#5b6770" stroke-width="1.5"/>
+  <!-- Veliki klip -->
+  <rect x="400" y="300" width="240" height="30" rx="3" fill="url(#u01v2hd_piston)" stroke="#3a4a56" stroke-width="1.6" />
+  <line x1="400" y1="308" x2="640" y2="308" stroke="#3a4a56" stroke-width="0.5" opacity="0.5" />
+  <!-- Veliki klipnjaca -->
+  <rect x="508" y="130" width="24" height="170" fill="#9aaab4" stroke="#5b6770" stroke-width="1.4" />
 
-  <!-- Tlačne strelice gore (desni cilindar) -->
-  <line x1="496" y1="290" x2="496" y2="258" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_v2aBl)"/>
-  <line x1="558" y1="290" x2="558" y2="258" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_v2aBl)"/>
-  <line x1="620" y1="290" x2="620" y2="258" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_v2aBl)"/>
-  <text x="558" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" text-anchor="middle" fill="#1565c0">p</text>
-
-  <!-- Vozilo / teret na vrhu klipa -->
-  <!-- Platforma (šasija) -->
-  <rect x="434" y="80" width="244" height="30" rx="4" fill="url(#u01v2hd_v2car)" stroke="#3a6a88" stroke-width="2"/>
+  <!-- ============================================================
+       VOZILO (na vrhu velike klipnjace)
+  ============================================================ -->
+  <!-- Platforma/sasija -->
+  <rect x="400" y="110" width="240" height="20" rx="3" fill="url(#u01v2hd_car)" stroke="#3a6a88" stroke-width="1.6" />
   <!-- Karoserija -->
-  <rect x="474" y="54" width="164" height="28" rx="10" fill="#8ab4cc" stroke="#3a6a88" stroke-width="1.5"/>
-  <!-- Prozori -->
-  <rect x="483" y="58" width="36" height="18" rx="3" fill="#d6eaf8" stroke="#3a6a88" stroke-width="1"/>
-  <rect x="527" y="58" width="36" height="18" rx="3" fill="#d6eaf8" stroke="#3a6a88" stroke-width="1"/>
-  <rect x="571" y="58" width="36" height="18" rx="3" fill="#d6eaf8" stroke="#3a6a88" stroke-width="1"/>
-  <!-- Kotači -->
-  <circle cx="486" cy="114" r="13" fill="#3a4a56" stroke="#222" stroke-width="1.5"/>
-  <circle cx="626" cy="114" r="13" fill="#3a4a56" stroke="#222" stroke-width="1.5"/>
-  <circle cx="486" cy="114" r="5" fill="#7a8a96"/>
-  <circle cx="626" cy="114" r="5" fill="#7a8a96"/>
-  <!-- Natpis u automobilu -->
-  <text x="556" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2a36">vozilo</text>
+  <rect x="430" y="78" width="180" height="32" rx="10" fill="#8ab4cc" stroke="#3a6a88" stroke-width="1.4" />
+  <!-- Prozorcici -->
+  <rect x="442" y="84" width="36" height="20" rx="3" fill="#d6eaf8" stroke="#3a6a88" stroke-width="1" />
+  <rect x="488" y="84" width="36" height="20" rx="3" fill="#d6eaf8" stroke="#3a6a88" stroke-width="1" />
+  <rect x="534" y="84" width="36" height="20" rx="3" fill="#d6eaf8" stroke="#3a6a88" stroke-width="1" />
+  <!-- Kotaci -->
+  <circle cx="436" cy="134" r="11" fill="#3a4a56" stroke="#222" stroke-width="1.4" />
+  <circle cx="604" cy="134" r="11" fill="#3a4a56" stroke="#222" stroke-width="1.4" />
+  <circle cx="436" cy="134" r="4" fill="#7a8a96" />
+  <circle cx="604" cy="134" r="4" fill="#7a8a96" />
+  <!-- Natpis vozilo -->
+  <!-- ============================================================
+       SILE - skala stupnjevana (omjer F1:F2 = 35:1 preveliko za linearno)
+       F_1 = 150 N -> 22 px (min vidljivo)
+       F_2 = 5,25 kN -> 60 px (cca 3x dulje, vizualno jasno vece)
+  ============================================================ -->
+  <!-- F_1 dolje (22 px) -->
+  <line x1="80" y1="120" x2="80" y2="142" stroke="#c0392b" stroke-width="3" marker-end="url(#u01v2hd_aR)" />
+  <!-- F_2 gore (60 px) -->
+  <line x1="520" y1="76" x2="520" y2="16" stroke="#1e8449" stroke-width="3" marker-end="url(#u01v2hd_aG)" />
+  <!-- ============================================================
+       TLACNE STRELICE
+  ============================================================ -->
+  <!-- Mali cyl (jedna strelica, uski cyl) -->
+  <line x1="80" y1="440" x2="80" y2="342" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_aB)" />
+  <!-- Veliki cyl (vise strelica, sira povrsina) -->
+  <line x1="440" y1="440" x2="440" y2="342" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_aB)" />
+  <line x1="490" y1="440" x2="490" y2="342" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_aB)" />
+  <line x1="540" y1="440" x2="540" y2="342" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_aB)" />
+  <line x1="590" y1="440" x2="590" y2="342" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u01v2hd_aB)" />
+  <!-- Tlak label u vodu -->
+  <!-- ============================================================
+       KOTE - A_1 i A_2 (sirina cilindara)
+  ============================================================ -->
+  <!-- A_1 -->
+  <!-- A_2 -->
+  <!-- s_1 hod malog klipa (vertikalna kota lijevo od malog cyl, tekst desno od linije) -->
+  <!-- s_2 hod velikog klipa (mala vertikalna strelica desno od cyl; vrijednost u Formula boxu) -->
+  <!-- ============================================================
+       FORMULA BOX (zaseban panel, y=60-368)
+  ============================================================ -->
+  <rect x="700" y="60" width="262" height="308" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="700" y="60" width="262" height="32" rx="10" fill="#1565c0" />
+  <rect x="700" y="84" width="262" height="8" fill="#1565c0" />
+  <!-- Blok 1: Tlak -->
+  <line x1="724" y1="170" x2="938" y2="170" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Sila F2 gore (izlazna – zelena) -->
-  <line x1="558" y1="42" x2="558" y2="77" stroke="#1e8449" stroke-width="4.5" marker-end="url(#u01v2hd_v2aG)"/>
-  <text x="412" y="38" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" font-style="italic" fill="#1e8449">F₂</text>
-  <text x="412" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449">= 5,25 kN</text>
+  <!-- Blok 2: Sila F_2 -->
+  <line x1="724" y1="246" x2="938" y2="246" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Kota A2 -->
-  <line x1="452" y1="208" x2="452" y2="201" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="660" y1="208" x2="660" y2="201" stroke="#b7600c" stroke-width="1.2"/>
-  <line x1="455" y1="204" x2="657" y2="204" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u01v2hd_v2aDimR)" marker-end="url(#u01v2hd_v2aDim)"/>
-  <text x="556" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#b7600c">A₂ = 210 cm²</text>
+  <!-- Blok 3: Volumna bilanca -->
+  <line x1="724" y1="322" x2="938" y2="322" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Kota s2 (hod) – desno od cilindra -->
-  <line x1="690" y1="222" x2="690" y2="250" stroke="#b7600c" stroke-width="1.8" marker-start="url(#u01v2hd_v2aOR)" marker-end="url(#u01v2hd_v2aO)"/>
-  <text x="701" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" fill="#b7600c">s₂</text>
-  <text x="700" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">≈ 5,1 mm</text>
+  <!-- Sazetak (ostaje unutar blue panela) -->
+  <!-- Rezultati badge (ZASEBAN panel ispod, y=380-440) -->
+  <rect x="700" y="380" width="262" height="60" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <!-- ============================================================
+       LEGENDA
+  ============================================================ -->
+  <rect x="48" y="510" width="12" height="12" fill="#c0392b" rx="2" />
+  <rect x="172" y="510" width="12" height="12" fill="#1565c0" rx="2" />
+  <rect x="288" y="510" width="12" height="12" fill="#1e8449" rx="2" />
+  <rect x="416" y="510" width="12" height="12" fill="#aed6f1" stroke="#1565c0" stroke-width="0.8" rx="2" />
+  <line x1="50" y1="290" x2="50" y2="280" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="110" y1="290" x2="110" y2="280" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="53" y1="285" x2="107" y2="285" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u01v2hd_aDimR)" marker-end="url(#u01v2hd_aDim)" />
+  <line x1="400" y1="290" x2="400" y2="280" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="640" y1="290" x2="640" y2="280" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="403" y1="285" x2="637" y2="285" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u01v2hd_aDimR)" marker-end="url(#u01v2hd_aDim)" />
+  <line x1="156" y1="158" x2="156" y2="300" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u01v2hd_aDimR)" marker-end="url(#u01v2hd_aDim)" />
+  <line x1="670" y1="294" x2="670" y2="306" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u01v2hd_aDimR)" marker-end="url(#u01v2hd_aDim)" />
+  <rect x="588" y="510" width="12" height="12" fill="#b7600c" rx="2" />
+  <text x="520" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2a36">vozilo</text>
 
-  <!-- ════════════════════════════════════════════
-       FORMULA BOX (desno) 
-  ════════════════════════════════════════════ -->
-  <rect x="720" y="90" width="228" height="272" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="738" y="114" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Omjer klipova</text>
-  <line x1="728" y1="122" x2="938" y2="122" stroke="#c8d6e4" stroke-width="1"/>
+  <text x="100" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#c0392b"><tspan font-weight="700">F₁</tspan> = 150 N</text>
 
-  <text x="732" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a5a">A₂ / A₁ = 210 / 6 = 35</text>
-  <line x1="728" y1="153" x2="938" y2="153" stroke="#dde8f0" stroke-width="1"/>
-  <text x="732" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">p = F₁/A₁ = 250 kPa</text>
-  <line x1="728" y1="182" x2="938" y2="182" stroke="#dde8f0" stroke-width="1"/>
-  <text x="732" y="201" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449">F₂ = 35 · F₁ = 5,25 kN</text>
-  <line x1="728" y1="211" x2="938" y2="211" stroke="#dde8f0" stroke-width="1"/>
-  <text x="732" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#b7600c">s₂ = s₁/35 ≈ 5,1 mm</text>
-  <line x1="728" y1="240" x2="938" y2="240" stroke="#dde8f0" stroke-width="1"/>
-  <text x="732" y="259" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#5a6a78">Volumna bilanca:</text>
-  <text x="732" y="277" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">A₁ s₁ = A₂ s₂</text>
-  <text x="732" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">rad se ne stvara niotkuda</text>
-  <line x1="728" y1="303" x2="938" y2="303" stroke="#dde8f0" stroke-width="1"/>
-  <text x="832" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#4a5a6a">F₁ · s₁ = F₂ · s₂</text>
-  <text x="832" y="341" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#4a5a6a">150·0,18 = 5250·0,0051 ✓</text>
+  <text x="540" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1e8449"><tspan font-weight="700">F₂</tspan> = 5,25 kN</text>
 
-  <!-- Rezultat badge -->
-  <rect x="720" y="376" width="228" height="56" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.5"/>
-  <text x="734" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">p = 250 kPa</text>
-  <text x="734" y="415" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">F₂ = 5,25 kN  |  s₂ ≈ 5 mm</text>
+  <text x="80" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" text-anchor="middle" fill="#1565c0">p</text>
 
-  <!-- ── LEGENDA ── -->
-  <rect x="48" y="422" width="12" height="12" fill="#c0392b" rx="2"/>
-  <text x="65" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">ulazna sila F₁</text>
-  <rect x="142" y="422" width="12" height="12" fill="#1565c0" rx="2"/>
-  <text x="159" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">tlak p</text>
-  <rect x="215" y="422" width="12" height="12" fill="#1e8449" rx="2"/>
-  <text x="232" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">izlazna sila F₂</text>
-  <rect x="350" y="422" width="12" height="12" fill="#b7600c" rx="2"/>
-  <text x="367" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">hodovi s₁, s₂ (volumna bilanca)</text>
-</svg>
+  <text x="520" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" text-anchor="middle" fill="#1565c0">p</text>
+
+  <text x="265" y="474" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" font-style="italic" text-anchor="middle" fill="#ffffff">p = 250 kPa</text>
+
+  <text x="831" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Ključne jednadžbe</text>
+
+  <text x="831" y="114" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Tlak u ulju</text>
+  <text x="831" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">p = F<tspan baseline-shift="sub" font-size="0.7em">1</tspan> / A<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="831" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 250 kPa</text>
+  <text x="831" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Pascalov zakon – sila F₂</text>
+  <text x="831" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = p · A<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 35·F<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="831" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">= 5,25 kN</text>
+  <text x="831" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Volumna bilanca – hod s₂</text>
+  <text x="831" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">s<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = s<tspan baseline-shift="sub" font-size="0.7em">1</tspan> · A<tspan baseline-shift="sub" font-size="0.7em">1</tspan>/A<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+  <text x="831" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">F₁ · s₁ = F₂ · s₂  (rad jednak)</text>
+  <text x="831" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">150·0,18 ≈ 5250·0,0051 = 27 J</text>
+
+  <text x="831" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="754" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0">p = 250 kPa</text>
+  <text x="838" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">F₂ = 5,25 kN</text>
+  <text x="831" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="9" text-anchor="middle" fill="#7a8a96">omjer A₂/A₁ = 35</text>
+
+  <text x="66" y="520" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">ulazna sila F₁</text>
+  <text x="190" y="520" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">tlak p u ulju</text>
+  <text x="306" y="520" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">izlazna sila F₂</text>
+  <text x="434" y="520" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">ulje (kontinuirani fluid)</text>
+  <text x="606" y="520" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">hodovi s₁, s₂</text>
+<text x="80" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">A<tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 6 cm²</text>
+
+  <text x="520" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">A<tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 210 cm² (35·A<tspan baseline-shift="sub" font-size="0.75em">1</tspan>)</text>
+
+  <text x="162" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c"><tspan font-weight="700">s₁</tspan> = 18 cm</text>
+
+  <text x="678" y="304" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#b7600c">s₂</text>
+
+  <text x="831" y="304.0" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c">≈ 5,1 mm</text>
+  <text x="916" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c">s₂ ≈ 5,1 mm</text>
+  </svg>

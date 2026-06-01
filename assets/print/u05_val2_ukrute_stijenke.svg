@@ -1,130 +1,266 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" role="img"
-     aria-labelledby="u05v2us_u5v2T u05v2us_u5v2D" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u05v2us_u5v2T">U05 Val 2 – Vertikalna stijenka s tri vodoravne ukrute</title>
-  <desc id="u05v2us_u5v2D">b=1,20 m, H=2,40 m, voda ρ=998 kg/m³. Četiri jednako opterećena polja: y₁=1,20 m, y₂=1,70 m, y₃=2,08 m. F_p≈8,46 kN po polju; y_CP,4=2,244 m.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="u05v2us_title u05v2us_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u05v2us_title">Raspored tri vodoravne ukrute na vertikalnoj stijenci spremnika</title>
+  <desc id="u05v2us_desc">Servisni spremnik širine b = 1,20 m i visine H = 2,40 m ispunjen vodom ρ = 998 kg/m³. Tri vodoravne ukrute dijele stijenku na četiri polja jednake hidrostatske sile. Dubine ukruta: y₁ = 1,20 m, y₂ = 1,70 m, y₃ = 2,08 m. Sila po polju Fₚ ≈ 8,46 kN. Hvatište najnižeg polja y_CP,4 ≈ 2,24 m.</desc>
+
   <defs>
-    <marker id="u05v2us_u5v2aR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
+    <!-- Marker za silu po polju (zelena - rezultantna izlazna na ukrutu) -->
+    <marker id="u05v2us_aF" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u05v2us_u5v2aDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
+    <!-- Marker za tlak (plava) -->
+    <marker id="u05v2us_aP" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u05v2us_u5v2aDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-      <path d="M0,0 L0,8 L8,4 z" fill="#c96c35"/>
+    <!-- Marker za kote (smedi) -->
+    <marker id="u05v2us_aD" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
-    <linearGradient id="u05v2us_u5v2fl" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#c8e8f6"/><stop offset="100%" stop-color="#5baece"/>
+    <marker id="u05v2us_aDL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <!-- Marker CP -->
+    <marker id="u05v2us_aCP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+
+    <linearGradient id="u05v2us_fluid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u05v2us_u5v2pr" x1="1" y1="0" x2="0" y2="0">
-      <stop offset="0%" stop-color="#e74c3c" stop-opacity="0.62"/>
-      <stop offset="100%" stop-color="#e74c3c" stop-opacity="0.06"/>
+    <!-- Pressure diagram gradient (horizontal, faded blue) -->
+    <linearGradient id="u05v2us_pgrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1565c0" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#1565c0" stop-opacity="0.45" />
     </linearGradient>
-    <pattern id="u05v2us_u5v2wall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+    <pattern id="u05v2us_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
     </pattern>
   </defs>
 
-  <rect width="940" height="420" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="372" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <!-- Pozadina i okvir -->
+  <rect width="900" height="520" fill="#ffffff" />
+  <rect x="14" y="14" width="872" height="492" rx="12" fill="#fbfdff" stroke="#dde3ea" stroke-width="1.4" />
 
-  <!-- Naslov -->
-  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="14.5" fill="#516677">b = 1,20 m · H = 2,40 m · ρ = 998 kg/m³ → četiri jednaka polja, F_p ≈ 8,46 kN po polju</text>
+  <!-- ============================================================
+       LIJEVI PANEL: fizikalni model
+       Skala: 1 m = 100 px (po dubini)
+       Slobodna povr&#353;ina: y = 80
+       Dno: y = 320 (H = 240 px = 2,40 m)
+       Lijeva stjenka tanka: x = 70
+       Desna stjenka (radna): x = 220 (debljina 12 px)
+       &#352;irina dna (b): 220 - 70 = 150 px -> sluzi kao b = 1,20 m
+  ============================================================ -->
 
-  <!-- Mjerilo: 100 px/m; slobodna površina y=115; dno y=355 -->
+  <!-- Voda (fluid) -->
+  <rect x="70" y="80" width="150" height="240" fill="url(#u05v2us_fluid)" />
 
-  <!-- Tijelo fluida -->
-  <rect x="82" y="115" width="186" height="243" fill="url(#u05v2us_u5v2fl)" opacity="0.85"/>
+  <!-- Slobodna povrsina -->
+  <line x1="70" y1="80" x2="220" y2="80" stroke="#1565c0" stroke-width="2.4" />
+  <!-- Lijeva stjenka -->
+  <rect x="58" y="74" width="12" height="252" fill="url(#u05v2us_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Desna (analizirana) stjenka - bold border -->
+  <rect x="220" y="74" width="14" height="252" fill="url(#u05v2us_hatch)" stroke="#3a4a56" stroke-width="1.6" />
+  <!-- Dno -->
+  <rect x="58" y="320" width="176" height="12" fill="url(#u05v2us_hatch)" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- Lijeva stijenka rezervoara (tanka) -->
-  <rect x="80" y="108" width="4" height="255" fill="#909fa8"/>
+  <!-- Vrh stijenke (zatvoreno) - mala kapica iznad slob.povrsine -->
+  <line x1="220" y1="74" x2="234" y2="74" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- Dno rezervoara -->
-  <rect x="80" y="356" width="194" height="8" fill="#909fa8" stroke="#5d6d7e" stroke-width="1"/>
+  <!-- ============================================================
+       TRI VODORAVNE UKRUTE
+       y1 = 1,20 m -> y = 80 + 120 = 200
+       y2 = 1,70 m -> y = 80 + 170 = 250
+       y3 = 2,08 m -> y = 80 + 208 = 288
+  ============================================================ -->
+  <!-- Ukruta 1 (vanjska, oko stjenke, T-profil) -->
+  <rect x="218" y="196" width="22" height="8" fill="#8b6914" stroke="#5a4408" stroke-width="1.1" />
+  <rect x="234" y="192" width="6" height="16" fill="#8b6914" stroke="#5a4408" stroke-width="1.1" />
+  <!-- Ukruta 2 -->
+  <rect x="218" y="246" width="22" height="8" fill="#8b6914" stroke="#5a4408" stroke-width="1.1" />
+  <rect x="234" y="242" width="6" height="16" fill="#8b6914" stroke="#5a4408" stroke-width="1.1" />
+  <!-- Ukruta 3 -->
+  <rect x="218" y="284" width="22" height="8" fill="#8b6914" stroke="#5a4408" stroke-width="1.1" />
+  <rect x="234" y="280" width="6" height="16" fill="#8b6914" stroke="#5a4408" stroke-width="1.1" />
 
-  <!-- Slobodna površina -->
-  <line x1="80" y1="115" x2="272" y2="115" stroke="#1565c0" stroke-width="2.8"/>
-  <text x="84" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">slobodna površina  (p = 0)</text>
+  <!-- Oznake ukruta unutar polja na lijevoj strani -->
+  <!-- ============================================================
+       DIJAGRAM TLAKA - desno od stjenke
+       Trokut: x=234 (stjenka) do x=234+pmax pri y=320
+       Skala: pmax pri H=2,40 m, biramo pmax = 80 px sirinu
+       p(y) = pmax * (y - 80) / 240
+  ============================================================ -->
+  <!-- Trokut tlaka (puni gradient) -->
+  <polygon points="234,80 234,320 314,320" fill="url(#u05v2us_pgrad)" stroke="#1565c0" stroke-width="1.4" />
 
-  <!-- Stijenka s hatching -->
-  <rect x="268" y="100" width="42" height="268" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.8"/>
-  <rect x="268" y="100" width="42" height="268" fill="url(#u05v2us_u5v2wall)" opacity="0.50"/>
+  <!-- Horizontalne podjele po ukrutama (dijele trokut u 4 jednake povrsine) -->
+  <!-- Pri y=200: p_width = 80 * 120/240 = 40 -->
+  <!-- Pri y=250: p_width = 80 * 170/240 = 56,67 -->
+  <!-- Pri y=288: p_width = 80 * 208/240 = 69,33 -->
+  <line x1="234" y1="200" x2="274" y2="200" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="5,3" />
+  <line x1="234" y1="250" x2="290.7" y2="250" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="5,3" />
+  <line x1="234" y1="288" x2="303.3" y2="288" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="5,3" />
 
-  <!-- Dijagram tlaka (trokut na lijevoj stijenci x=268) -->
-  <!-- Max width 72 px pri dnu (H=2,40m): skala 72/240=0,3 px/px no — scale=30px/m -->
-  <!-- At y=355: width=72px → (268-72,355)=(196,355) -->
-  <polygon points="268,115 196,355 268,355" fill="url(#u05v2us_u5v2pr)"/>
-  <line x1="268" y1="115" x2="196" y2="355" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="5,3"/>
-  <text x="192" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b" text-anchor="end">p_max = ρgH</text>
+  <!-- Tlacne strelice - tri reprezentativne po visini -->
+  <line x1="270" y1="130" x2="248" y2="130" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u05v2us_aP)" />
+  <line x1="295" y1="220" x2="248" y2="220" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u05v2us_aP)" />
+  <line x1="320" y1="305" x2="248" y2="305" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u05v2us_aP)" />
 
-  <!-- Vodoravne linije pri ukrutama (dijele trokut na 4 jednakapovršinska polja) -->
-  <!-- y₁=1,20m→y=235; y₂=1,70m→y=285; y₃=2,08m→y=323 -->
-  <!-- Širine trokuta pri tim dubinama: w(y) = 72*(y-115)/240 -->
-  <!-- w(235)=72*120/240=36px; w(285)=72*170/240=51px; w(323)=72*208/240=62px -->
-  <line x1="268" y1="235" x2="232" y2="235" stroke="white" stroke-width="2.0" stroke-dasharray="8,5" opacity="0.90"/>
-  <line x1="268" y1="285" x2="217" y2="285" stroke="white" stroke-width="2.0" stroke-dasharray="8,5" opacity="0.90"/>
-  <line x1="268" y1="323" x2="206" y2="323" stroke="white" stroke-width="2.0" stroke-dasharray="8,5" opacity="0.90"/>
+  <!-- Oznaka p_max na dnu trokuta - pomaknuto nize ispod dna -->
+  <!-- ============================================================
+       OZNAKE POLJA F1..F4 (unutar zona trokuta)
+       Sredine polja po dubini:
+       F1: (80+200)/2 = 140
+       F2: (200+250)/2 = 225
+       F3: (250+288)/2 = 269
+       F4: (288+320)/2 = 304
+  ============================================================ -->
+  <!-- ============================================================
+       CP - hvatiste 4. polja
+       y_CP,4 = 2,244 m -> y = 80 + 224,4 = 304,4
+  ============================================================ -->
+  <circle cx="234" cy="304" r="4" fill="#c0392b" stroke="white" stroke-width="1.2" />
+  <line x1="234" y1="304" x2="180" y2="370" stroke="#c0392b" stroke-width="0.9" />
+  <!-- ============================================================
+       KOTE - dubine ukruta y1, y2, y3 (LIJEVA STRANA)
+       Stjenka lijeva na x=58, kota os na x = 38
+  ============================================================ -->
+  <!-- Pomocne (extension) linije od slob. povrsine i ukruta do osi kota -->
+  <!-- Tik-crte -->
+  <!-- Dimenzijska linija y1 (od povrsine do ukruta 1) -->
+  <!-- Dimenzijska linija y2 -->
+  <!-- Dimenzijska linija y3 (od ukrute 2 do ukrute 3) -->
+  <!-- Dimenzijska linija H4 (od ukrute 3 do dna) -->
+  <!-- Labele kota (uz lijevu stranu, izvan tika) -->
+  <!-- ============================================================
+       KOTA H (desno od stjenke, lijevo od trokuta tlaka)
+       Ne, postavimo H kotu na DESNU STRANU TROKUTA TLAKA, na x ~ 350
+  ============================================================ -->
+  <!-- Pomocne linije za H -->
+  <!-- ============================================================
+       KOTA b (sirina stjenke - upravljana s gornje strane)
+       Pomocne linije od vrha stjenke prema gore
+  ============================================================ -->
+  <!-- ============================================================
+       SILE F_p (jednake) - male zelene strelice usmjerene na svaku ukrutu
+       Crtamo ih izvan trokuta tlaka, sve iste duljine = 28 px
+       Polozaji: na sredinama polja po y, na x ~ 422 prema lijevo
+  ============================================================ -->
+  <!-- F1 polje (sredina y=140) -->
+  <line x1="422" y1="140" x2="394" y2="140" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u05v2us_aF)" />
+  <!-- F2 polje (sredina y=225) -->
+  <line x1="422" y1="225" x2="394" y2="225" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u05v2us_aF)" />
+  <!-- F3 polje (sredina y=269) -->
+  <line x1="422" y1="269" x2="394" y2="269" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u05v2us_aF)" />
+  <!-- F4 polje (sredina y=304) -->
+  <line x1="422" y1="304" x2="394" y2="304" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u05v2us_aF)" />
 
-  <!-- Ukrute (strukturni pojasevi) – žuto-smeđe vodoravne ploče -->
-  <rect x="252" y="231" width="58" height="8" fill="#c8a84a" stroke="#8b6914" stroke-width="1.4"/>
-  <rect x="252" y="281" width="58" height="8" fill="#c8a84a" stroke="#8b6914" stroke-width="1.4"/>
-  <rect x="252" y="319" width="58" height="8" fill="#c8a84a" stroke="#8b6914" stroke-width="1.4"/>
+  <!-- Labele F_p za sve cetiri sile -->
+  <!-- Vrijednost po polju (jednom u sredini desno od strelica) -->
+  <rect x="380" y="412" width="116" height="36" rx="6" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.2" />
+  <!-- Pojasevi (banda) koji ilustriraju cetiri polja - vrlo svijetli odvojene zone -->
+  <!-- Implicitno vidljivi kroz horizontalne crte na trokutu i ukrute -->
 
-  <!-- Oznake polja unutar dijagrama tlaka -->
-  <!-- Dubine sredina polja: F₁→(115+235)/2=175; F₂→(235+285)/2=260; F₃→(285+323)/2=304; F₄→(323+355)/2=339 -->
-  <text x="263" y="179" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b" text-anchor="end">F₁</text>
-  <text x="263" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b" text-anchor="end">F₂</text>
-  <text x="263" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b" text-anchor="end">F₃</text>
-  <text x="263" y="343" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b" text-anchor="end">F₄</text>
+  <!-- Napomena ispod modela -->
+  <!-- ============================================================
+       DESNI PANEL: FORMULA BOX (x = 530..880, y = 40..480)
+  ============================================================ -->
+  <rect x="530" y="40" width="350" height="440" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
+  <!-- Header bar -->
+  <rect x="530" y="40" width="350" height="32" rx="10" fill="#1565c0" />
+  <rect x="530" y="62" width="350" height="10" fill="#1565c0" />
+  <!-- Blok 1: Ukupna sila (y=72..146) -->
+  <line x1="552" y1="152" x2="858" y2="152" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- y_CP,4 = 2,244m → y = 115+224 = 339; unutar polja 4 (323..355) -->
-  <circle cx="268" cy="339" r="5.5" fill="#c0392b" stroke="white" stroke-width="1.5"/>
-  <line x1="268" y1="339" x2="320" y2="339" stroke="#c0392b" stroke-width="0.9" stroke-dasharray="3,3"/>
-  <text x="323" y="343" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#c0392b">CP₄</text>
+  <!-- Blok 2: Sila po polju (y=152..220) -->
+  <line x1="552" y1="226" x2="858" y2="226" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Kota H (desno od stijenke) -->
-  <line x1="310" y1="115" x2="336" y2="115" stroke="#c96c35" stroke-width="1.0"/>
-  <line x1="310" y1="355" x2="336" y2="355" stroke="#c96c35" stroke-width="1.0"/>
-  <line x1="333" y1="117" x2="333" y2="353" stroke="#c96c35" stroke-width="1.8"
-        marker-start="url(#u05v2us_u5v2aDimL)" marker-end="url(#u05v2us_u5v2aDim)"/>
-  <text x="340" y="241" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e" font-style="italic">H = 2,40 m</text>
+  <!-- Blok 3: Polozaji ukruta (y=226..330) -->
+  <line x1="552" y1="330" x2="858" y2="330" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Tick oznake na koti H za y₁,y₂,y₃ -->
-  <line x1="326" y1="235" x2="338" y2="235" stroke="#c96c35" stroke-width="1.2"/>
-  <line x1="326" y1="285" x2="338" y2="285" stroke="#c96c35" stroke-width="1.2"/>
-  <line x1="326" y1="323" x2="338" y2="323" stroke="#c96c35" stroke-width="1.2"/>
+  <!-- Blok 4: Hvatiste 4. polja (y=330..414) -->
+  <!-- REZULTATI badge (y=420..470) -->
+  <rect x="546" y="422" width="318" height="46" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="58" y1="80" x2="32" y2="80" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="58" y1="200" x2="32" y2="200" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="58" y1="250" x2="32" y2="250" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="58" y1="288" x2="32" y2="288" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="58" y1="320" x2="32" y2="320" stroke="#b7600c" stroke-width="0.7" />
 
-  <!-- Labele za y₁,y₂,y₃ desno od kote -->
-  <text x="342" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#92400e">y₁ = 1,20 m</text>
-  <text x="342" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#92400e">y₂ = 1,70 m</text>
-  <text x="342" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#92400e">y₃ = 2,08 m</text>
+  <line x1="33" y1="80" x2="45" y2="80" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="33" y1="200" x2="45" y2="200" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="33" y1="250" x2="45" y2="250" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="33" y1="288" x2="45" y2="288" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="33" y1="320" x2="45" y2="320" stroke="#b7600c" stroke-width="1.2" />
 
-  <!-- Kutija rješenja (desno) -->
-  <rect x="430" y="108" width="478" height="282" rx="10" fill="#f8fafc" stroke="#cbd5e0" stroke-width="1.8"/>
+  <line x1="39" y1="83" x2="39" y2="197" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u05v2us_aDL)" marker-end="url(#u05v2us_aD)" />
+  <line x1="39" y1="203" x2="39" y2="247" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u05v2us_aDL)" marker-end="url(#u05v2us_aD)" />
+  <line x1="39" y1="253" x2="39" y2="285" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u05v2us_aDL)" marker-end="url(#u05v2us_aD)" />
+  <line x1="39" y1="291" x2="39" y2="317" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u05v2us_aDL)" marker-end="url(#u05v2us_aD)" />
 
-  <text x="448" y="133" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Projektni kriterij: F₁ = F₂ = F₃ = F₄ = F_uk / 4</text>
-  <line x1="448" y1="141" x2="894" y2="141" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="314" y1="80" x2="380" y2="80" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" opacity="0.6" />
+  <line x1="314" y1="320" x2="380" y2="320" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" opacity="0.6" />
+  <line x1="375" y1="80" x2="363" y2="80" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="375" y1="320" x2="363" y2="320" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="369" y1="83" x2="369" y2="317" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u05v2us_aDL)" marker-end="url(#u05v2us_aD)" />
+  <line x1="70" y1="74" x2="70" y2="44" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="220" y1="74" x2="220" y2="44" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="70" y1="46" x2="70" y2="58" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="220" y1="46" x2="220" y2="58" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="73" y1="52" x2="217" y2="52" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u05v2us_aDL)" marker-end="url(#u05v2us_aD)" />
+  <text x="78" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1565c0">slobodna površina (p = 0)</text>
 
-  <!-- Ukupna sila i F_p -->
-  <text x="448" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">F_uk = ½ρgbH² = ½·998·9,81·1,20·2,40² = 33 836 N</text>
-  <text x="448" y="179" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">F_p = F_uk / 4 = 33 836 / 4 ≈ 8 459 N ≈ 8,46 kN</text>
-  <line x1="448" y1="187" x2="894" y2="187" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="78" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#0d47a1">voda</text>
+  <text x="78" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#0d47a1">ρ = 998 kg/m³</text>
 
-  <!-- Položaji ukruta -->
-  <text x="448" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">Iz uvjeta jednakih polja:  y_i² = i · H²/4</text>
-  <text x="448" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">y₁ = H/2         = 1,200 m</text>
-  <text x="448" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">y₂ = H/√2        = 1,697 m  ≈ 1,70 m</text>
-  <text x="448" y="265" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">y₃ = H·√3/2      = 2,078 m  ≈ 2,08 m</text>
-  <line x1="448" y1="273" x2="894" y2="273" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="316" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">max</tspan> = ρgH</text>
 
-  <!-- Hvatište 4. polja -->
-  <text x="448" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">Hvatište 4. polja:</text>
-  <text x="448" y="311" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">y_CP,4 = 2·(H³−y₃³) / [3·(H²−y₃²)] = 2,244 m</text>
-  <text x="448" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#516677">(tj. 0,16 m iznad dna — ukruta D mora biti viša od ovog mjesta)</text>
-  <line x1="448" y1="338" x2="894" y2="338" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="448" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#516677">Ukrute su gušće pri dnu jer tlak raste s dubinom. Gornji razmak (y₁=H/2)</text>
-  <text x="448" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#516677">je znatno veći od donjeg razmaka (y₃→H = 2,08→2,40 m).</text>
+  <text x="240" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="248" y="229" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+  <text x="258" y="273" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">3</tspan></text>
+  <text x="268" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">4</tspan></text>
 
-  <!-- Napomena na dnu -->
-  <text x="54" y="403" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#516677">Bijele iscrtkane linije u dijagramu tlaka dijele trokut na 4 zone jednakih površina — svaka nosi isti udio ukupne hidrostatske sile F_uk.</text>
-</svg>
+  <text x="98" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#c0392b">CP₄ (hvatište polja 4)</text>
+  <text x="98" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b">y_CP,4 ≈ 2,24 m</text>
+
+  <text x="428" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1e8449"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">1</tspan></tspan> = F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
+  <text x="428" y="229" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1e8449"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">2</tspan></tspan> = F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
+  <text x="428" y="273" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1e8449"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">3</tspan></tspan> = F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
+  <text x="428" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1e8449"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">4</tspan></tspan> = F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
+
+  <text x="438" y="427" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">jednako po polju</text>
+  <text x="438" y="442" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan> ≈ 8,46 kN</text>
+
+  <text x="56" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Ukrute dijele trokut tlaka na četiri zone jednake površine → jednaka sila po polju.</text>
+  <text x="56" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Razmaci su gušći pri dnu jer tlak raste linearno s dubinom.</text>
+
+  <text x="705" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Projektni kriterij: F₁ = F₂ = F₃ = F₄</text>
+
+  <text x="705" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Ukupna sila na stijenku</text>
+  <text x="705" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">uk</tspan> = ½ ρ g b H²</text>
+  <text x="705" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 33 836 N ≈ 33,84 kN</text>
+  <text x="705" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Sila po polju</text>
+  <text x="705" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = F<tspan baseline-shift="sub" font-size="0.7em">uk</tspan> / 4</text>
+  <text x="705" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 8 459 N ≈ 8,46 kN</text>
+  <text x="705" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Iz uvjeta jednakih površina: y<tspan baseline-shift="sub" font-size="0.7em">i</tspan>² = i · H²/4</text>
+  <text x="705" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">y<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = H/2   y<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = H/√2   y<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = H√3/2</text>
+  <text x="705" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">razmaci se smanjuju prema dnu (1,20 → 0,50 → 0,38 → 0,32 m)</text>
+  <text x="705" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Hvatište rezultante na najnižem polju</text>
+  <text x="705" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">y<tspan baseline-shift="sub" font-size="0.7em">CP,4</tspan> = (2/3) · (H³ − y<tspan baseline-shift="sub" font-size="0.7em">3</tspan>³) / (H² − y<tspan baseline-shift="sub" font-size="0.7em">3</tspan>²)</text>
+  <text x="705" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 2,24 m (0,16 m iznad dna)</text>
+
+  <text x="705" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="800" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan> ≈ 8,46 kN</text>
+<text x="18" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">y<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="18" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">Δy<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+  <text x="18" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">Δy<tspan baseline-shift="sub" font-size="0.7em">3</tspan></text>
+  <text x="18" y="307" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">Δy<tspan baseline-shift="sub" font-size="0.7em">4</tspan></text>
+
+  <text x="385" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#b7600c"><tspan font-weight="700">H</tspan> = 2,40 m</text>
+
+  <text x="145" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c"><tspan font-weight="700">b</tspan> = 1,20 m</text>
+
+  <text x="586" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#b7600c">y<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1,20 m</text>
+  <text x="705" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#b7600c">y<tspan baseline-shift="sub" font-size="0.7em">2</tspan> ≈ 1,70 m</text>
+  <text x="824" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#b7600c">y<tspan baseline-shift="sub" font-size="0.7em">3</tspan> ≈ 2,08 m</text>
+  <text x="625" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c">y₁,₂,₃ = 1,20 / 1,70 / 2,08 m</text>
+  </svg>

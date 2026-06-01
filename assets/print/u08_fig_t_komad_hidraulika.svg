@@ -1,112 +1,202 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 390" role="img" aria-labelledby="u08ftkh_u8ft-title u08ftkh_u8ft-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u08ftkh_u8ft-title">U08 – razvodni T-komad hidraulicnog sustava</title>
-  <desc id="u08ftkh_u8ft-desc">T-komad: D1=32mm v1=4,5 m/s, Q1=3,62 L/s. Grana 2 (radni cilindar): D2=20mm, 60% Q, v2=6,9 m/s. Grana 3 (hladnjak): D3=25mm, 40% Q, v3=3,0 m/s.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="u08ftkh-title u08ftkh-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u08ftkh-title">Razvodni T-komad hidraulicnog sustava</title>
+  <desc id="u08ftkh-desc">Lijevo: T-razdjelnik u kojem ulazna struja ulja D1=32 mm, v1=4,5 m/s, Q1=3,62 L/s ulazi vodoravno te se grana na gornji ogranak D2=20 mm (60 percent, v2=6,9 m/s) prema radnom cilindru i donji ogranak D3=24,8 mm (40 percent, v3=3,0 m/s) prema hladnjaku ulja. Desno: cetiri koraka rjesenja kontinuiteta s rezultatima.</desc>
+
   <defs>
-    <linearGradient id="u08ftkh_u8ft-oil" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fff0b8"/>
-      <stop offset="100%" stop-color="#d4960a"/>
+    <linearGradient id="u08ftkh-oil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a" />
+      <stop offset="1" stop-color="#c8a000" />
     </linearGradient>
-    <pattern id="u08ftkh_u8ft-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="4" x2="8" y2="4" stroke="#546e7a" stroke-width="1.8"/>
+    <pattern id="u08ftkh-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-    <marker id="u08ftkh_u8ft-arrG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#0f766e"/>
+    <marker id="u08ftkh-flow" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#b7791f" />
     </marker>
-    <marker id="u08ftkh_u8ft-arrR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#b42318"/>
+    <marker id="u08ftkh-flow2" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u08ftkh_u8ft-arrGr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
-      <path d="M0,0 L0,7 L9,3.5 z" fill="#546e7a"/>
+    <marker id="u08ftkh-flow3" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#e67e22" />
     </marker>
-    <marker id="u08ftkh_u8ft-arrGrRev" markerWidth="9" markerHeight="7" refX="1" refY="3.5" orient="auto">
-      <path d="M9,0 L9,7 L0,3.5 z" fill="#546e7a"/>
+    <marker id="u08ftkh-dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u08ftkh-dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
-  <!-- Canvas -->
-  <rect width="940" height="390" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="342" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <!-- Title -->
-  <text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Razvodni T-komad — hidraulični sustav</text>
-  <text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">D₁ = 32 mm, v₁ = 4,5 m/s → 60 % u radni cilindar (D₂ = 20 mm), 40 % u hladnjak (D₃ ≈ 25 mm)</text>
 
-  <!-- ===== T-JUNCTION GEOMETRY ===== -->
-  <!-- Inlet pipe: horizontal, from left to junction center at (460,210) -->
-  <!-- D1=32mm → scaled 40px diameter (20px half-height) -->
-  <!-- Inlet walls (srafura) -->
-  <rect x="90" y="190" width="370" height="40" fill="url(#u08ftkh_u8ft-sraf)" stroke="none"/>
-  <!-- Inlet fluid -->
-  <rect x="102" y="202" width="358" height="16" fill="url(#u08ftkh_u8ft-oil)" stroke="none"/>
-  <!-- Inlet wall lines -->
-  <line x1="90" y1="190" x2="460" y2="190" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="90" y1="230" x2="460" y2="230" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="90" y1="190" x2="90" y2="230" stroke="#3d4f5a" stroke-width="2.5"/>
+  <!-- pozadina + paneli -->
+  <rect x="16" y="16" width="928" height="488" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <line x1="476" y1="40" x2="476" y2="480" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
-  <!-- Junction body (rect at center) -->
-  <rect x="460" y="160" width="40" height="270" fill="url(#u08ftkh_u8ft-sraf)" stroke="none"/>
-  <rect x="474" y="172" width="12" height="246" fill="url(#u08ftkh_u8ft-oil)" stroke="none"/>
-  <line x1="460" y1="160" x2="460" y2="430" stroke="none"/>
-  <!-- Junction outline (partial) -->
-  <line x1="460" y1="160" x2="500" y2="160" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="460" y1="430" x2="500" y2="430" stroke="none"/>
+  <!-- =========================================================== -->
+  <!-- LIJEVI PANEL: geometrija T-komada                             -->
+  <!-- =========================================================== -->
+  <!--
+    Geometrijska osnova (centralna os T-komada na x=270, y=270):
+    - Ulazna cijev (D1=32 mm -> 48 px) horizontalna, od x=70 do x=246, y-os = 270.
+      Stijenke: y = 246..294, kanal ulja y = 250..290 (40 px). Visok unutarnji svjetli > stijenka 4 px.
+    - Junction body: kvadrat 84x84 px, x=246..330, y=228..312 (4 px iznad/ispod ulaznih stijenki + bocno cleano spajanje).
+    - Gornja grana (D2=20 mm -> 30 px): od (270 px, y=120) do junction. Stijenke x=255..303, kanal x=259..299 (30 px wider visually scaled to 24).
+      Actually keep D2 channel = 30 px (1.5x scale). Stijenke 4 px each side -> x=255..305 outer.
+    - Donja grana (D3=24,8 mm -> 37 px): od (270 px, y=420) do junction. Kanal 37 px -> stijenke x=251.5..308.5 outer.
+      Round to integers: D3 channel 38 px -> x=251..289 channel, walls x=247..293 outer (46 px wide).
+    Korigiram: zbog citljivosti i razmjernosti drzim sirinu D1 = 48 px, D2 = 30 px, D3 = 38 px.
+  -->
 
-  <!-- Upper branch to radni cilindar: D2=20mm → 25px diameter (12.5px half) -->
-  <rect x="460" y="116" width="40" height="74" fill="url(#u08ftkh_u8ft-sraf)" stroke="none"/>
-  <rect x="474" y="128" width="12" height="50" fill="url(#u08ftkh_u8ft-oil)" stroke="none"/>
-  <line x1="460" y1="116" x2="500" y2="116" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="460" y1="190" x2="500" y2="190" stroke="#3d4f5a" stroke-width="2.5"/>
-  <!-- Upper branch horizontal (to radni cilindar) -->
-  <rect x="500" y="129" width="200" height="48" fill="url(#u08ftkh_u8ft-sraf)" stroke="none"/>
-  <rect x="500" y="141" width="200" height="24" fill="url(#u08ftkh_u8ft-oil)" stroke="none"/>
-  <line x1="500" y1="129" x2="700" y2="129" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="500" y1="177" x2="700" y2="177" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="700" y1="129" x2="700" y2="177" stroke="#3d4f5a" stroke-width="2.5"/>
-  <!-- Flow arrow upper -->
-  <line x1="700" y1="153" x2="752" y2="153" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u08ftkh_u8ft-arrG)"/>
-  <text x="756" y="145" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">Q₂ = 60%</text>
-  <text x="756" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">2,17 L/s</text>
-  <text x="756" y="175" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0f766e">v₂ = 6,9 m/s</text>
-  <!-- Radni cilindar label -->
-  <text x="560" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677" font-style="italic">→ radni cilindar</text>
+  <!-- ============ FLUID FIRST (so walls can sit on top, port overlay later) ============ -->
+  <!-- Inlet fluid (horizontal): x=70..270, y=250..290 (40 px = D1 inner) -->
+  <rect x="70" y="250" width="200" height="40" fill="url(#u08ftkh-oil)" />
+  <!-- Junction body fluid: x=246..330, y=228..312 (84x84 centered at 288,270) -->
+  <rect x="246" y="228" width="84" height="84" fill="url(#u08ftkh-oil)" />
+  <!-- Upper branch fluid (vertical): center x=288, channel width 30 -> x=273..303, y=120..240 -->
+  <rect x="273" y="120" width="30" height="120" fill="url(#u08ftkh-oil)" />
+  <!-- Lower branch fluid (vertical): center x=288, channel width 38 -> x=269..307, y=300..420 -->
+  <rect x="269" y="300" width="38" height="120" fill="url(#u08ftkh-oil)" />
 
-  <!-- Lower branch to hladnjak: D3=25mm → 31px diameter (15.5px half) -->
-  <rect x="460" y="230" width="40" height="74" fill="url(#u08ftkh_u8ft-sraf)" stroke="none"/>
-  <rect x="473" y="242" width="14" height="50" fill="url(#u08ftkh_u8ft-oil)" stroke="none"/>
-  <line x1="460" y1="230" x2="500" y2="230" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="460" y1="304" x2="500" y2="304" stroke="#3d4f5a" stroke-width="2.5"/>
-  <!-- Lower branch horizontal (to hladnjak) -->
-  <rect x="500" y="243" width="180" height="48" fill="url(#u08ftkh_u8ft-sraf)" stroke="none"/>
-  <rect x="500" y="255" width="180" height="24" fill="url(#u08ftkh_u8ft-oil)" stroke="none"/>
-  <line x1="500" y1="243" x2="680" y2="243" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="500" y1="291" x2="680" y2="291" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="680" y1="243" x2="680" y2="291" stroke="#3d4f5a" stroke-width="2.5"/>
-  <!-- Flow arrow lower -->
-  <line x1="680" y1="267" x2="732" y2="267" stroke="#b42318" stroke-width="3.5" marker-end="url(#u08ftkh_u8ft-arrR)"/>
-  <text x="736" y="259" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">Q₃ = 40%</text>
-  <text x="736" y="275" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b42318">1,45 L/s</text>
-  <text x="736" y="289" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b42318">v₃ = 3,0 m/s</text>
-  <!-- Hladnjak label -->
-  <text x="550" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677" font-style="italic">→ hladnjak ulja</text>
+  <!-- ============ WALLS (drawn after fluid, but fluid bleeds into junction so walls don't intersect fluid path) ============ -->
+  <!-- Inlet walls (top + bottom strips of inlet pipe) -->
+  <rect x="70" y="240" width="200" height="10" fill="url(#u08ftkh-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="70" y="290" width="200" height="10" fill="url(#u08ftkh-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Inlet left cap (open end - just a thin border) -->
+  <line x1="70" y1="240" x2="70" y2="300" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- Inlet arrow and label -->
-  <line x1="40" y1="210" x2="88" y2="210" stroke="#0f766e" stroke-width="3.5" marker-end="url(#u08ftkh_u8ft-arrG)"/>
-  <text x="36" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">Q₁</text>
-  <text x="30" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">3,62 L/s</text>
-  <text x="32" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">v₁=4,5 m/s</text>
+  <!-- Upper branch walls (left + right strips) -->
+  <rect x="263" y="120" width="10" height="120" fill="url(#u08ftkh-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="303" y="120" width="10" height="120" fill="url(#u08ftkh-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Upper branch top cap (open end) -->
+  <line x1="263" y1="120" x2="313" y2="120" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- D1 dim annotation -->
-  <line x1="90" y1="244" x2="460" y2="244" stroke="#546e7a" stroke-width="1.2" stroke-dasharray="4,3"/>
-  <text x="260" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a" text-anchor="middle">D₁ = 32 mm</text>
+  <!-- Lower branch walls (left + right strips) -->
+  <rect x="259" y="300" width="10" height="120" fill="url(#u08ftkh-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="307" y="300" width="10" height="120" fill="url(#u08ftkh-hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Lower branch bottom cap (open end) -->
+  <line x1="259" y1="420" x2="317" y2="420" stroke="#3a4a56" stroke-width="1.2" />
 
-  <!-- D2 dim -->
-  <text x="544" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">D₂ = 20 mm</text>
+  <!-- Junction body outer wall outline (frames the +-junction shape) -->
+  <!-- top-left corner: from (246,228) right to (263,228) (where upper branch left wall starts) -->
+  <line x1="246" y1="228" x2="263" y2="228" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- top-right corner: from (313,228) right to (330,228) -->
+  <line x1="313" y1="228" x2="330" y2="228" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- right side: (330,228) down to (330,312) -->
+  <line x1="330" y1="228" x2="330" y2="312" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- bottom-right corner: from (307,312) right to (330,312) -->
+  <line x1="307" y1="312" x2="330" y2="312" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- bottom-left corner: from (246,312) right to (259,312) -->
+  <line x1="246" y1="312" x2="259" y2="312" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Junction left side has the inlet opening: top (246,228) -> (246,240) inlet wall starts -->
+  <line x1="246" y1="228" x2="246" y2="240" stroke="#3a4a56" stroke-width="1.2" />
+  <line x1="246" y1="300" x2="246" y2="312" stroke="#3a4a56" stroke-width="1.2" />
+  <!-- Connect inlet pipe walls into junction (small fillets implied by extending wall strips) -->
+  <line x1="270" y1="240" x2="263" y2="240" stroke="#3a4a56" stroke-width="0.8" opacity="0.5" />
+  <line x1="270" y1="300" x2="263" y2="300" stroke="#3a4a56" stroke-width="0.8" opacity="0.5" />
 
-  <!-- D3 dim -->
-  <text x="536" y="242" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#546e7a">D₃ ≈ 25 mm</text>
+  <!-- ============ FLOW DIRECTION ARROWS (inside fluid, oil-colored darker) ============ -->
+  <!-- Inlet flow Q1 -> right -->
+  <line x1="90" y1="270" x2="220" y2="270" stroke="#b7791f" stroke-width="2.6" marker-end="url(#u08ftkh-flow)" />
+  <!-- Upper branch flow Q2 -> up -->
+  <line x1="288" y1="225" x2="288" y2="145" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u08ftkh-flow2)" />
+  <!-- Lower branch flow Q3 -> down -->
+  <line x1="288" y1="315" x2="288" y2="395" stroke="#e67e22" stroke-width="2.6" marker-end="url(#u08ftkh-flow3)" />
 
-  <!-- ===== FORMULA BOX ===== -->
-  <rect x="54" y="320" width="740" height="60" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="70" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Kontinuitet:</text>
-  <text x="70" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Q₁ = Q₂ + Q₃     →     3,62 = 2,17 + 1,45 L/s  ✓</text>
-  <text x="400" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">v₂ = Q₂/A₂ = 6,9 m/s   |   D₃ = √(4Q₃/πv₃) = 24,8 mm ≈ 25 mm</text>
-</svg>
+  <!-- ============ FLOW LABELS ============ -->
+  <!-- Q1 label (above inlet, well clear of pipe) -->
+  <!-- Q2 label (right of upper branch) -->
+  <!-- Q3 label (right of lower branch) -->
+  <!-- ============ KOTE (smedje, dimenzije promjera) ============ -->
+
+  <!-- D1 kota - ispod ulazne cijevi (vertikalna kota) -->
+  <!-- D2 kota - lijevo od gornje grane (horizontalna kota iznad) -->
+  <!-- D3 kota - lijevo od donje grane (horizontalna kota ispod) -->
+  <!-- ============ KONTROLNI VOLUMEN (isprekidana kutija oko cvora) ============ -->
+  <rect x="232" y="216" width="116" height="108" fill="none" stroke="#5a6a78" stroke-width="1.1" stroke-dasharray="6,4" />
+  <!-- leader iz CV kutije prema labeli desno-dolje -->
+  <line x1="348" y1="324" x2="372" y2="338" stroke="#5a6a78" stroke-width="0.7" />
+  <!-- ============ ULJE LABEL (ispod ulazne cijevi, ne preko strelice) ============ -->
+  <!-- ============ Donji opis lijevog panela ============ -->
+  <!-- =========================================================== -->
+  <!-- DESNI PANEL: cetiri koraka rjesenja                          -->
+  <!-- =========================================================== -->
+  <!-- Korak 1: ulazni protok Q1 -->
+  <rect x="498" y="96" width="430" height="84" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="498" y="96" width="6" height="84" rx="3" fill="#1565c0" />
+  <!-- Korak 2: podjela protoka -->
+  <rect x="498" y="188" width="430" height="84" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="498" y="188" width="6" height="84" rx="3" fill="#1565c0" />
+  <!-- Korak 3: brzina v2 u D2 -->
+  <rect x="498" y="280" width="430" height="84" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="498" y="280" width="6" height="84" rx="3" fill="#1e8449" />
+  <!-- Korak 4: traženi D3 -->
+  <rect x="498" y="372" width="430" height="84" rx="9" fill="#fdf5ec" stroke="#ecd2b3" stroke-width="1.2" />
+  <rect x="498" y="372" width="6" height="84" rx="3" fill="#e67e22" />
+  <!-- Provjera (italic footer ispod 4 koraka) -->
+  <line x1="92" y1="250" x2="92" y2="332" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="92" y1="290" x2="92" y2="332" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="80" y1="250" x2="104" y2="250" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="80" y1="290" x2="104" y2="290" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="92" y1="253" x2="92" y2="287" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u08ftkh-dimL)" marker-end="url(#u08ftkh-dim)" />
+  <line x1="52" y1="270" x2="78" y2="270" stroke="#b7600c" stroke-width="0.7" />
+
+  <line x1="273" y1="135" x2="218" y2="135" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="303" y1="135" x2="218" y2="135" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="273" y1="123" x2="273" y2="147" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="303" y1="123" x2="303" y2="147" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="276" y1="135" x2="300" y2="135" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u08ftkh-dimL)" marker-end="url(#u08ftkh-dim)" />
+  <line x1="269" y1="408" x2="214" y2="408" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="307" y1="408" x2="214" y2="408" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="269" y1="420" x2="269" y2="396" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="307" y1="420" x2="307" y2="396" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="272" y1="408" x2="304" y2="408" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u08ftkh-dimL)" marker-end="url(#u08ftkh-dim)" />
+  <text x="44" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Razvod ulja kroz T-komad</text>
+  <text x="44" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">ulazna grana D₁, dvije izlazne grane D₂ (60 %) i D₃ (40 %)</text>
+
+  <text x="155" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#b7791f"><tspan font-weight="700" font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 3,62 L/s</text>
+  <text x="155" y="237" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#7a5a10"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 4,5 m/s  (100 %)</text>
+
+  <text x="328" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e8449"><tspan font-weight="700" font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 2,17 L/s</text>
+  <text x="328" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#155d33"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 6,9 m/s  (60 %)</text>
+  <text x="328" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">→ radni cilindar</text>
+
+  <text x="328" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#e67e22"><tspan font-weight="700" font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 1,45 L/s</text>
+  <text x="328" y="387" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#9b5414"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 3,0 m/s  (40 %)</text>
+  <text x="328" y="403" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">→ hladnjak ulja</text>
+
+  <text x="376" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">kontrolni volumen</text>
+
+  <text x="155" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#7a5a10">hidraulično ulje, ρ = 870 kg/m³</text>
+
+  <text x="44" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Bilanca mase u stacionarnom toku: ono što uđe u čvor mora i izaći (nestlačivo ulje).</text>
+  <text x="44" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Promjeri su crtani razmjerno (D₁ &gt; D₃ &gt; D₂), a duljina strelica prikazuje smjer toka.</text>
+
+  <text x="500" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Tijek rješenja</text>
+  <text x="500" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">kontinuitet i geometrija presjeka korak po korak</text>
+
+  <text x="516" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">1. Ulazni presjek i protok</text>
+  <text x="516" y="141" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = π <tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>² / 4 = 8,042 · 10⁻⁴ m²</text>
+  <text x="516" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 3,62 L/s</text>
+
+  <text x="516" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">2. Podjela protoka (60 % / 40 %)</text>
+  <text x="516" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 0,60 <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 2,17 L/s</text>
+  <text x="516" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 0,40 <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1,45 L/s</text>
+
+  <text x="516" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449">3. Brzina u ogranku 1 (radni cilindar)</text>
+  <text x="516" y="325" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = π <tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>² / 4 = 3,142 · 10⁻⁴ m²</text>
+  <text x="516" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> / <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 6,9 m/s</text>
+
+  <text x="516" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#b85f10">4. Potrebni promjer ogranka 2 (hladnjak), <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 3,0 m/s</text>
+  <text x="516" y="417" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> / <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 4,83 · 10⁻⁴ m²</text>
+  <text x="516" y="442" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b85f10"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = √(4<tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan>/π) ≈ 24,8 mm</text>
+
+  <text x="713" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Provjera: <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> + <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 2,17 + 1,45 = 3,62 L/s = <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> ✓</text>
+<text x="48" y="265" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#b7600c" text-anchor="end"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="48.0" y="281.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="end">= 32 mm</text>
+  <text x="210" y="131" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#b7600c" text-anchor="end"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+  <text x="210.0" y="147.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="end">= 20 mm</text>
+
+  <text x="206" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#b7600c" text-anchor="end"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan></text>
+  <text x="206.0" y="420.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="end">= 24,8 mm</text>
+
+  </svg>

@@ -1,79 +1,232 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-<defs>
-  <marker id="u13v3si_u13v3-ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#0f766e"/></marker>
-  <marker id="u13v3si_u13v3-ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b42318"/></marker>
-  <marker id="u13v3si_u13v3-ao" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#b45309"/></marker>
-  <marker id="u13v3si_u13v3-ao2" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="8 0,0 3,8 6" fill="#b45309"/></marker>
-  <marker id="u13v3si_u13v3-ab" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#1d4ed8"/></marker>
-  <linearGradient id="u13v3si_u13v3-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4eef8"/><stop offset="100%" stop-color="#7ec8e8"/></linearGradient>
-  <linearGradient id="u13v3si_u13v3-water2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c5e8f5"/><stop offset="100%" stop-color="#6ab8d6"/></linearGradient>
-</defs>
-<rect width="940" height="400" fill="#ffffff"/>
-<rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-<text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Nezatvoreni servisni ispust na razvodu</text>
-<text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">Čvor C dijeli protok: Q_{1} (ulaz) = Q_{2} (prema spremniku 2) + Q_p (ispust)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u13v3si_title u13v3si_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
+  <title id="u13v3si_title">Nezatvoreni servisni ispust na rashladnom cjevovodu</title>
+  <desc id="u13v3si_desc">Lijevo: dva otvorena spremnika 1 i 2 spojena horizontalnim cjevovodom promjera D = 0,16 m. Razlika razina H = 6,3 m, ukupna duljina L = 520 m. Na presjeku C, na udaljenosti L_1C = 340 m od spremnika 1, otvoren je servisni ispust kroz koji istjece Q_p, dok preostali Q_2 = 0,025 m^3/s ide u spremnik 2. Piezometarska visina u C je p_C/gama = 1,40 m. Desno: cetiri koraka rjesenja s lambda, v_C, Q_p i geometrijom otvora A_p, d_p.</desc>
 
-<!-- Tank 1 (left, high level): x=44..116, y=100..300 -->
-<rect x="44" y="100" width="72" height="214" rx="6" fill="none" stroke="#2d3a40" stroke-width="2.5"/>
-<rect x="46" y="118" width="68" height="194" fill="url(#u13v3si_u13v3-water)"/>
-<line x1="44" y1="118" x2="116" y2="118" stroke="#1565c0" stroke-width="2"/>
-<text x="80" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043" text-anchor="middle">1</text>
+  <defs>
+    <linearGradient id="u13v3si_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aed6f1" />
+      <stop offset="1" stop-color="#5b9ec9" />
+    </linearGradient>
+    <linearGradient id="u13v3si_mlaz" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#5b9ec9" />
+      <stop offset="1" stop-color="#aed6f1" stop-opacity="0.35" />
+    </linearGradient>
+    <pattern id="u13v3si_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
 
-<!-- Tank 2 (right, lower level): x=824..896, y=165..300 -->
-<rect x="824" y="165" width="72" height="149" rx="6" fill="none" stroke="#2d3a40" stroke-width="2.5"/>
-<rect x="826" y="198" width="68" height="114" fill="url(#u13v3si_u13v3-water2)"/>
-<line x1="824" y1="198" x2="896" y2="198" stroke="#1565c0" stroke-width="2"/>
-<text x="860" y="185" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043" text-anchor="middle">2</text>
+    <!-- markers -->
+    <marker id="u13v3si_flow" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u13v3si_qp" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u13v3si_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u13v3si_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u13v3si_pr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+  </defs>
 
-<!-- Main horizontal pipe: y=216..242, connecting tank1 to tank2 -->
-<rect x="116" y="218" width="708" height="24" fill="url(#u13v3si_u13v3-water)" stroke="#2d3a40" stroke-width="2.5"/>
+  <!-- okvirni paneli -->
+  <rect x="14" y="14" width="600" height="532" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="624" y="14" width="342" height="532" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-<!-- Node C (center, x=470) -->
-<circle cx="470" cy="230" r="8" fill="#f59e0b" stroke="#92400e" stroke-width="2"/>
-<text x="455" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#173043">C</text>
+  <!-- ===================== LIJEVI PANEL: SHEMA SUSTAVA ===================== -->
+  <!--
+    Koordinatni sustav lijevog panela:
+      Razina spremnika 1 (slobodna povrsina): y = 110
+      Razina spremnika 2 (slobodna povrsina): y = 268
+      Tlo (zajednicki referentni nivo, dno spremnika 2 i razina cjevovoda): y = 400
+      Razlika H = 6,3 m  ↔ (268-110) = 158 px  ↔ skala ~25 px/m
+      Spremnik 1: x = 60..150
+      Spremnik 2: x = 530..600
+      Cjevovod: y = 396 (gornji rub) .. 412 (donji rub), x = 150..530
+      Cvor C: x = 360, gornja udaljenost L_1C = 340 m, L_C2 = 180 m, omjer 340:180 ≈ 1,89
+        Horizontalna duljina vidljive cijevi: 530-150 = 380 px → C na 150 + (340/520)*380 ≈ 150 + 248 = 398
+    Da bismo C imali blize sredini i imali prostora za ispust, pomaknut cu C na x=400.
+  -->
 
-<!-- Q1 flow arrow (left of C) -->
-<line x1="180" y1="230" x2="250" y2="230" stroke="#0f766e" stroke-width="3" marker-end="url(#u13v3si_u13v3-ag)"/>
-<text x="212" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e" text-anchor="middle">Q₁</text>
+  <!-- TLO / referentna linija (isprekidana) -->
+  <line x1="32" y1="475" x2="600" y2="475" stroke="#7a8a96" stroke-width="1" stroke-dasharray="8,5" />
+  <!-- ===== SPREMNIK 1 (lijevi, visi) ===== -->
+  <!-- voda u spremniku 1 (puna do y=110, dno spojeno s cjevovodom) -->
+  <rect x="64" y="110" width="82" height="294" fill="url(#u13v3si_voda)" />
+  <!-- stijenke spremnika 1 (otvoren odozgo) -->
+  <rect x="60" y="100" width="4" height="304" fill="#5d6d7e" stroke="#3a4a56" stroke-width="0.6" />
+  <rect x="146" y="100" width="4" height="304" fill="#5d6d7e" stroke="#3a4a56" stroke-width="0.6" />
+  <!-- dno spremnika 1 -->
+  <rect x="60" y="404" width="90" height="6" fill="#5d6d7e" stroke="#3a4a56" stroke-width="0.6" />
+  <!-- slobodna povrsina 1 -->
+  <line x1="60" y1="110" x2="150" y2="110" stroke="#1565c0" stroke-width="2" />
+  <!-- oznaka spremnika -->
+  <!-- atmosferska oznaka (mala strelica nadolje na slobodnu povrsinu) -->
+  <line x1="105" y1="92" x2="105" y2="106" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u13v3si_pr)" />
+  <!-- ===== SPREMNIK 2 (desni, nizi) ===== -->
+  <rect x="534" y="268" width="62" height="136" fill="url(#u13v3si_voda)" />
+  <rect x="530" y="258" width="4" height="146" fill="#5d6d7e" stroke="#3a4a56" stroke-width="0.6" />
+  <rect x="596" y="258" width="4" height="146" fill="#5d6d7e" stroke="#3a4a56" stroke-width="0.6" />
+  <rect x="530" y="404" width="70" height="6" fill="#5d6d7e" stroke="#3a4a56" stroke-width="0.6" />
+  <line x1="530" y1="268" x2="600" y2="268" stroke="#1565c0" stroke-width="2" />
+  <line x1="565" y1="250" x2="565" y2="264" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u13v3si_pr)" />
+  <!-- ===== HORIZONTALNI CJEVOVOD (D = 0,16 m) ===== -->
+  <!-- Cjevovod ide od dna spremnika 1 do dna spremnika 2; cijev je vodom ispunjena -->
+  <!-- Voda u cijevi (kontinuirano povezana s oba spremnika) -->
+  <rect x="150" y="394" width="380" height="14" fill="url(#u13v3si_voda)" />
+  <!-- Gornji i donji rub cijevi (stijenke cijevi) -->
+  <line x1="150" y1="394" x2="530" y2="394" stroke="#3a4a56" stroke-width="1.6" />
+  <line x1="150" y1="408" x2="530" y2="408" stroke="#3a4a56" stroke-width="1.6" />
 
-<!-- Q2 flow arrow (right of C) -->
-<line x1="620" y1="230" x2="700" y2="230" stroke="#0f766e" stroke-width="3" marker-end="url(#u13v3si_u13v3-ag)"/>
-<text x="660" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e" text-anchor="middle">Q₂</text>
+  <!-- ===== CVOR C i SERVISNI ISPUST ===== -->
+  <!-- Cvor C na x = 400, vertikalna grana ispusta ide gore do otvora -->
+  <!-- Vertikalna grana (kratka cijev) y = 320..394, x = 394..406 -->
+  <rect x="394" y="320" width="12" height="74" fill="url(#u13v3si_voda)" />
+  <line x1="394" y1="320" x2="394" y2="394" stroke="#3a4a56" stroke-width="1.6" />
+  <line x1="406" y1="320" x2="406" y2="394" stroke="#3a4a56" stroke-width="1.6" />
+  <!-- Otvor na vrhu (mala prirubnica) -->
+  <rect x="384" y="314" width="32" height="6" fill="#5d6d7e" stroke="#3a4a56" stroke-width="0.6" />
+  <!-- Mlaz vode iz otvora prema gore (simbolicki) -->
+  <path d="M395,313 Q392,290 396,272 Q400,254 398,238" stroke="#1565c0" stroke-width="1.4" fill="none" opacity="0.7" />
+  <path d="M400,313 Q402,285 400,268 Q398,250 402,232" stroke="#1565c0" stroke-width="1.4" fill="none" opacity="0.6" />
+  <path d="M405,313 Q408,290 404,272 Q400,254 406,240" stroke="#1565c0" stroke-width="1.4" fill="none" opacity="0.5" />
+  <!-- Kapljice mlaza -->
+  <circle cx="396" cy="248" r="2.2" fill="#5b9ec9" />
+  <circle cx="402" cy="230" r="1.8" fill="#5b9ec9" />
+  <circle cx="408" cy="252" r="1.6" fill="#5b9ec9" />
+  <circle cx="392" cy="262" r="1.8" fill="#5b9ec9" />
 
-<!-- Qp branch (upward from C) -->
-<rect x="462" y="118" width="16" height="112" fill="url(#u13v3si_u13v3-water)" stroke="#2d3a40" stroke-width="2"/>
-<!-- Qp arrow upward -->
-<line x1="470" y1="210" x2="470" y2="138" stroke="#b42318" stroke-width="3" marker-end="url(#u13v3si_u13v3-ar)"/>
-<text x="488" y="175" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b42318">Q_p</text>
-<text x="488" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677">(ispust)</text>
-<!-- Service outlet end (top of branch) -->
-<line x1="453" y1="118" x2="487" y2="118" stroke="#2d3a40" stroke-width="3"/>
+  <!-- Cvor C oznaka -->
+  <circle cx="400" cy="401" r="3.5" fill="#1a2530" />
+  <!-- Naljepnica "servisni ispust" -->
+  <!-- ===== PIEZOMETARSKA RAZINA (HGL) u C: p_C/gama = 1,40 m ===== -->
+  <!-- Mali rastojanje iznad cijevi: 1,40 m * 25 px/m = 35 px → HGL na y=359 (cijev na y=394) -->
+  <!-- Kratka horizontalna isprekidana linija HGL kraj C -->
+  <line x1="340" y1="359" x2="460" y2="359" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="5,3" />
+  <!-- Kota p_C/gama (od cijevi do HGL) -->
+  <line x1="360" y1="394" x2="360" y2="359" stroke="#1565c0" stroke-width="1.4" marker-start="url(#u13v3si_pr)" marker-end="url(#u13v3si_pr)" />
+  <!-- ===== KOTA H (razlika slobodnih razina) ===== -->
+  <!-- pomocne linije od slobodnih razina do dim osi (lijevo, x = 30) -->
+  <!-- dim linija -->
+  <!-- ===== KOTE DULJINA L_1C i L_C2 (ispod cjevovoda) ===== -->
+  <!-- pomocne linije od pipe rub do dim osi y = 442 -->
+  <!-- tik-crte -->
+  <!-- dim linije -->
+  <!-- labele -->
+  <!-- ===== KOTA D promjera cijevi (mala kota desno od cjevovoda) ===== -->
+  <!-- ===== STRELICE PROTOKA ===== -->
+  <!-- Q_C (na dionici 1 -> C), zeleno, deblja, smjestena unutar cijevi -->
+  <line x1="195" y1="401" x2="355" y2="401" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u13v3si_flow)" />
+  <!-- label iznad cijevi, izmaknut lijevo od p_C kote (koja zauzima x=318..360) -->
+  <!-- Q_2 (na dionici C -> 2), zeleno tanje (manji protok) -->
+  <line x1="430" y1="401" x2="510" y2="401" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u13v3si_flow)" />
+  <!-- Q_p (gore kroz ispust), crveno (gubitak) -->
+  <line x1="400" y1="370" x2="400" y2="318" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u13v3si_qp)" />
+  <!-- pomocna linija od strelice do labele lijevo, iznad HGL (HGL je na y=359) -->
+  <line x1="400" y1="334" x2="338" y2="334" stroke="#c0392b" stroke-width="0.7" stroke-dasharray="2,2" />
+  <!-- ===== Legenda kontinuiteta u dnu lijevog panela ===== -->
+  <rect x="32" y="506" width="568" height="30" rx="7" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1" />
+  <!-- ===================== DESNI PANEL: KORACI RJESENJA ===================== -->
+  <!-- Geometrija desnog panela: x = 638..952, blokovi visine ~78 px, 4 koraka + REZULTATI -->
 
-<!-- H level difference: tank1 level (y=118) to pipe centerline (y=230) -->
-<line x1="130" y1="118" x2="130" y2="230" stroke="#b45309" stroke-width="2.5" marker-start="url(#u13v3si_u13v3-ao2)" marker-end="url(#u13v3si_u13v3-ao)"/>
-<text x="142" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b45309">H</text>
+  <!-- Korak 1: lambda iz urednog rezima (smedi / kote-tipa, kalibracija) -->
+  <rect x="638" y="58" width="316" height="84" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
+  <!-- Korak 2: Bernoulli 1 -> C, v_C, Q_C (plavi / proces) -->
+  <rect x="638" y="150" width="316" height="98" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
+  <rect x="638" y="150" width="6" height="98" rx="3" fill="#1565c0" />
+  <!-- Korak 3: Kontinuitet u C, Q_p (crveni / gubitak) -->
+  <rect x="638" y="256" width="316" height="78" rx="9" fill="#fdf3f0" stroke="#f0c7be" stroke-width="1.2" />
+  <rect x="638" y="256" width="6" height="78" rx="3" fill="#c0392b" />
+  <!-- Korak 4: Otvor A_p, d_p (zeleni / finalni geom rezultat) -->
+  <rect x="638" y="342" width="316" height="98" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
+  <rect x="638" y="342" width="6" height="98" rx="3" fill="#1e8449" />
+  <!-- REZULTATI badge -->
+  <rect x="638" y="450" width="316" height="80" rx="8" fill="#fbfdff" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="654" y1="476" x2="938" y2="476" stroke="#c8d6e4" stroke-width="1" />
+  <line x1="60" y1="110" x2="32" y2="110" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="530" y1="268" x2="32" y2="268" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,4" />
+  <line x1="32" y1="113" x2="32" y2="265" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u13v3si_dimL)" marker-end="url(#u13v3si_dim)" />
+  <line x1="150" y1="408" x2="150" y2="446" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="400" y1="408" x2="400" y2="446" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="530" y1="408" x2="530" y2="446" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="150" y1="438" x2="150" y2="450" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="400" y1="438" x2="400" y2="450" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="530" y1="438" x2="530" y2="450" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="153" y1="442" x2="397" y2="442" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u13v3si_dimL)" marker-end="url(#u13v3si_dim)" />
+  <line x1="403" y1="442" x2="527" y2="442" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u13v3si_dimL)" marker-end="url(#u13v3si_dim)" />
+  <line x1="495" y1="394" x2="520" y2="378" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="495" y1="408" x2="520" y2="424" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="520" y1="378" x2="520" y2="424" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u13v3si_dimL)" marker-end="url(#u13v3si_dim)" />
+  <rect x="638" y="58" width="6" height="84" rx="3" fill="#b7600c" />
+  <text x="38" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Cjevovod s otvorenim servisnim ispustom</text>
 
-<!-- p_C/γ annotation: piezometric height at C (from pipe to pressure level in C) -->
-<!-- piezometric height = H - losses from 1 to C -->
-<!-- Show as small blue bracket from pipe top (y=218) up by some amount (~40px) -->
-<line x1="496" y1="218" x2="496" y2="178" stroke="#1d4ed8" stroke-width="2" marker-start="url(#u13v3si_u13v3-ab)" marker-end="url(#u13v3si_u13v3-ab)"/>
-<text x="508" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1d4ed8">p_C/γ</text>
+  <text x="40" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">referentna razina</text>
 
-<!-- L1C dimension (left section) -->
-<line x1="136" y1="262" x2="460" y2="262" stroke="#546e7a" stroke-width="1.5"/>
-<line x1="136" y1="256" x2="136" y2="268" stroke="#546e7a" stroke-width="1.5"/>
-<line x1="460" y1="256" x2="460" y2="268" stroke="#546e7a" stroke-width="1.5"/>
-<text x="298" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">L₁C</text>
+  <text x="105" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">spremnik 1</text>
 
-<!-- LC2 dimension (right section) -->
-<line x1="480" y1="262" x2="812" y2="262" stroke="#546e7a" stroke-width="1.5"/>
-<line x1="480" y1="256" x2="480" y2="268" stroke="#546e7a" stroke-width="1.5"/>
-<line x1="812" y1="256" x2="812" y2="268" stroke="#546e7a" stroke-width="1.5"/>
-<text x="646" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" text-anchor="middle">L_C2</text>
+  <text x="120" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0">p₀</text>
 
-<!-- Info panel bottom -->
-<rect x="44" y="292" width="860" height="72" rx="8" fill="#fffef6" stroke="#c49a0a" stroke-width="1.5"/>
-<text x="60" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#173043">Jednadžbe čvora C:</text>
-<text x="60" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e293b">Kontinuitet: Q₁ = Q₂ + Q_p    ·    Energija 1→C: H = h_{w,1C} + p_C/γ    ·    Energija C→2: p_C/γ = h_{w,C2} + Δz</text>
-<text x="60" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#516677" font-style="italic">Uredni režim: Q₁ prolazi do 2. Oštećeni režim: Q_p uzrokuje piezometarski pad u C → procjena otvora A_p iz Q_p = C_d A_p √(2g p_C/γ)</text>
-</svg>
+  <text x="565" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">spremnik 2</text>
+  <text x="578" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0">p₀</text>
+
+  <text x="412" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#1a2530">C</text>
+
+  <text x="400" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">servisni ispust</text>
+  <text x="400" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">(otvoren u atmosferu)</text>
+
+  <text x="466" y="363" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1565c0">HGL u C</text>
+
+  <text x="318" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ</text>
+  <text x="318" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">= 1,40 m</text>
+
+  <text x="220" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-weight="700">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 0,0323 m³/s</text>
+
+  <text x="470" y="389" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#1e8449"><tspan font-weight="700">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 0,025</text>
+
+  <text x="335" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-weight="700">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 0,0073 (gubitak)</text>
+
+  <text x="316" y="525" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">Kontinuitet u <tspan font-style="italic">C</tspan>:  <tspan font-weight="700" font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = <tspan font-weight="700" font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> + <tspan font-weight="700" font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan>  ·  Lokalni gubici zanemarivi, λ isti kao u urednom rezimu</text>
+
+  <text x="648" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Koraci rješenja</text>
+
+  <text x="654" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan>/<tspan font-style="italic">A</tspan> = 0,030/2,011·10⁻² ≈ 1,49 m/s</text>
+  <text x="654" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">λ = 2g<tspan font-style="italic">HD</tspan>/(<tspan font-style="italic">L v</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan>²) = 2·9,81·6,3·0,16/(520·1,49²)</text>
+  <text x="654" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">2. Bernoulli 1 → C → <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>, <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan></text>
+  <text x="654" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">H</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ + (1 + λ<tspan font-style="italic">L</tspan><tspan baseline-shift="sub" font-size="0.7em">1C</tspan>/<tspan font-style="italic">D</tspan>) <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>²/2g</text>
+  <text x="654" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">6,3 = 1,40 + 37,3 · <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>²/2g  →  <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 1,60 m/s</text>
+  <text x="654" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = <tspan font-style="italic">A v</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 2,011·10⁻² · 1,60</text>
+  <text x="932" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#1565c0">≈ 0,0323 m³/s</text>
+
+  <text x="654" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">3. Kontinuitet u C → protok ispusta</text>
+  <text x="654" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> − <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 0,0323 − 0,0250</text>
+  <text x="654" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> ≈ 0,0073 m³/s ≈ 7,3 L/s</text>
+
+  <text x="654" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449">4. Geometrija servisnog ispusta</text>
+  <text x="654" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = <tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="0.7em">d</tspan> <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> √(2g <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ)</text>
+  <text x="654" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 0,0073/(0,62 · √(2·9,81·1,40)) ≈ 2,25·10⁻³ m²</text>
+  <text x="654" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = √(4<tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan>/π) ≈ 0,0535 m</text>
+  <text x="932" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#1e8449">≈ 53,5 mm</text>
+
+  <text x="796" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="654" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">λ ≈ <tspan font-weight="700" fill="#b7600c">0,0171</tspan></text>
+  <text x="800" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ <tspan font-weight="700" fill="#1565c0">32,3 L/s</tspan></text>
+  <text x="654" y="512" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> ≈ <tspan font-weight="700" fill="#c0392b">7,3 L/s</tspan></text>
+  <text x="800" y="512" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> ≈ <tspan font-weight="700" fill="#1e8449">53,5 mm</tspan></text>
+  <text x="796" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">otvor reda nekoliko cm → otvoreni servisni prikljucak</text>
+
+<text x="22" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#b7600c" transform="rotate(-90 22 186)"><tspan font-style="italic">H</tspan> = 6,3 m</text>
+
+  <text x="275" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">L</tspan><tspan baseline-shift="sub" font-size="0.7em">1C</tspan> = 340 m</text>
+  <text x="465" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">L</tspan><tspan baseline-shift="sub" font-size="0.7em">C2</tspan> = 180 m</text>
+
+  <text x="526" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c"><tspan font-style="italic">D</tspan> = 0,16 m</text>
+
+  <text x="654" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#b7600c">1. Uredni rezim → λ</text>
+  <text x="654" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b7600c">λ ≈ 0,0171</text>
+
+  </svg>

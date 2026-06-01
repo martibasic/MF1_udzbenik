@@ -1,90 +1,203 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 400" role="img"
-     aria-labelledby="u06fzdj_u6zdjT u06fzdj_u6zdjD" preserveAspectRatio="xMidYMid meet"
-     style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u06fzdj_u6zdjT">U06 – Zaobljeno dno retencijskog jezerca</title>
-  <desc id="u06fzdj_u6zdjD">Cetvrtkružni segment dna (R=1,00 m, b=4,00 m) retencijskog jezerca s razinom h1=2,50 m iznad vrha luka. F_H=117,6 kN, F_V=128,6 kN (imaginarni volumen V*), F_R≈174 kN pri kutu 47,6° od horizontale.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="u06zdj_title u06zdj_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u06zdj_title">Sile na zaobljeno dno retencijskog jezerca</title>
+  <desc id="u06zdj_desc">Poprecni presjek retencijskog jezerca sirine b=4,00 m s polumjerom zaobljenja R=1,00 m u kutu izmedju vertikalne stijenke i horizontalnog dna. Slobodna povrsina vode je h1=2,50 m iznad vrha zaobljenog segmenta. Horizontalna komponenta hidrostatske sile na zaobljeni segment F_H=117,6 kN djeluje na dubini hCx=3,00 m, vertikalna komponenta F_V=128,6 kN jednaka je tezini imaginarnog volumena V*=13,14 m^3 iznad arce. Rezultanta F_R priblizno 174,0 kN pod kutom 47,6 stupnjeva od horizontale.</desc>
+
   <defs>
-    <marker id="u06fzdj_u6zdjaR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c0392b"/>
-    </marker>
-    <marker id="u06fzdj_u6zdjaV" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#7d3c98"/>
-    </marker>
-    <marker id="u06fzdj_u6zdjaFR" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#2c3e50"/>
-    </marker>
-    <marker id="u06fzdj_u6zdjaDim" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
-    </marker>
-    <marker id="u06fzdj_u6zdjaDimL" markerWidth="10" markerHeight="10" refX="4" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L6,3 z" fill="#c96c35"/>
-    </marker>
-    <pattern id="u06fzdj_u6zdjwall" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#8a9aa6" stroke-width="2"/>
+    <linearGradient id="u06zdj_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u06zdj_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
+    <pattern id="u06zdj_tlo" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#ede4d3" />
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#b89968" stroke-width="1.2" />
+    </pattern>
+    <marker id="u06zdj_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u06zdj_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u06zdj_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <marker id="u06zdj_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
+    <marker id="u06zdj_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    </marker>
   </defs>
 
-  <rect width="940" height="400" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="352" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
+  <!-- pozadina i okvirni paneli -->
+  <rect width="920" height="520" fill="#ffffff" />
+  <rect x="14" y="14" width="538" height="492" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="562" y="14" width="344" height="492" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
 
-  <!-- Naslov -->
-  <text x="54" y="87" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#516677">R = 1,00 m · b = 4,00 m · h₁ = 2,50 m · F_H = 117,6 kN · F_V = 128,6 kN · F_R ≈ 174 kN</text>
+  <!-- =====================================================
+       LIJEVI PANEL - FIZIKALNI MODEL JEZERCA
+       Skala: 1 m = 60 px
+       R = 60 px, h1 = 150 px
+       Geometrija:
+         slobodna povrsina y = 100
+         lijeva stijenka x = 90, od y=100 do y=310
+         lijevi luk: centar (170, 250), R=60, od (90, 250) doje to ne... pricekaj
+       Preracun: Centar luka = (Xw + R, Yf - R) za lijevi kut.
+       Lijevi kut: Xw_lijevo = 90, Yf = 310. Centar = (150, 250). Luk od (90, 250) do (150, 310).
+       Desni kut: Xw_desno = 440, Yf = 310. Centar = (380, 250). Luk od (440, 250) do (380, 310).
+       h1 = 150 px → vrh luka na y = 250, slobodna povrsina na y = 100.
+       Sirina jezerca = 440 - 90 = 350 px (sirina cross-sectiona).
+  ===================================================== -->
 
-  <!-- Scale: 1 m = 72 px. R=1.00m→72px; h1=2.50m→180px -->
-  <!-- Arc centre: (380, 344), R=72. Top of arc: (380, 272). Right: (452, 344). -->
-  <!-- Free surface: y = 272 - 180 = 92. Wall: x=374..386, y=92..272. Floor: y=340..350, x=380..510. -->
+  <!-- naslov panela -->
+  <!-- TLO (okolno) - lijevi i desni dio okolnog terena -->
+  <rect x="20" y="100" width="70" height="340" fill="url(#u06zdj_hatch)" stroke="#3a4a56" stroke-width="0" />
+  <rect x="440" y="100" width="80" height="340" fill="url(#u06zdj_hatch)" stroke="#3a4a56" stroke-width="0" />
+  <rect x="20" y="370" width="500" height="70" fill="url(#u06zdj_hatch)" stroke="#3a4a56" stroke-width="0" />
 
-  <!-- Free surface -->
-  <line x1="80" y1="92" x2="490" y2="92" stroke="#3a87ad" stroke-width="3.5"/>
-  <text x="495" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#173043">slobodna površina</text>
+  <!-- VODA - osnovni pravokutnik unutar jezerca -->
+  <rect x="90" y="100" width="350" height="210" fill="url(#u06zdj_voda)" />
+  <!-- VODA u podrucju lukova: ispuna izmedju arc-a i bounding-box-a -->
+  <!-- Lijevi kut: voda popunjava lijevu donju zonu osim kvadrant ispod luka -->
+  <!-- Zona: rect (90,250) - (150,310) MINUS quarter circle ostavlja "mjesec" iznad luka -->
+  <path d="M 90,250 L 150,250 L 150,310 L 90,310 Z" fill="url(#u06zdj_voda)" />
+  <!-- Sad uklanjamo donji-lijevi kvadrant ispod luka pomocu path-a u boji tla -->
+  <path d="M 90,310 L 90,250 A 60,60 0 0,0 150,310 Z" fill="url(#u06zdj_hatch)" />
+  <!-- Desni kut analogno -->
+  <path d="M 380,250 L 440,250 L 440,310 L 380,310 Z" fill="url(#u06zdj_voda)" />
+  <path d="M 440,250 L 440,310 L 380,310 A 60,60 0 0,1 440,250 Z" fill="url(#u06zdj_hatch)" />
 
-  <!-- Fluid (left of wall) -->
-  <rect x="80" y="92" width="296" height="252" fill="#aed6f1" fill-opacity="0.55"/>
+  <!-- IMAGINARNI VOLUMEN V* iznad zaobljenog segmenta DESNO (zelena isprekidana zona) -->
+  <!-- Zona: od (380,100) do (440,100) do (440,250)→ duz arc-a do (380,310) → vertikalno gore do (380,100) -->
+  <path d="M 380,100 L 440,100 L 440,250 A 60,60 0 0,0 380,310 L 380,100 Z" fill="none" stroke="#1e8449" stroke-width="1.6" stroke-dasharray="7,4" />
+  <!-- STIJENKE jezerca (vidljive kao tamne linije na granici fluid/tlo) -->
+  <!-- Lijeva stijenka -->
+  <line x1="90" y1="100" x2="90" y2="250" stroke="#3a4a56" stroke-width="2.2" />
+  <!-- Lijevi luk -->
+  <path d="M 90,250 A 60,60 0 0,1 150,310" fill="none" stroke="#3a4a56" stroke-width="2.4" />
+  <!-- Dno -->
+  <line x1="150" y1="310" x2="380" y2="310" stroke="#3a4a56" stroke-width="2.2" />
+  <!-- Desni luk -->
+  <path d="M 380,310 A 60,60 0 0,1 440,250" fill="none" stroke="#3a4a56" stroke-width="2.4" />
+  <!-- Desna stijenka -->
+  <line x1="440" y1="100" x2="440" y2="250" stroke="#3a4a56" stroke-width="2.2" />
 
-  <!-- V* imaginary volume (green dashed) -->
-  <!-- Path: (380,92)→(452,92)→(452,344) arc-CCW→(380,272)→close -->
-  <path d="M 380,92 L 452,92 L 452,344 A 72,72 0 0,0 380,272 Z"
-        fill="#d5f5e3" fill-opacity="0.8" stroke="#27ae60" stroke-width="2" stroke-dasharray="7,4"/>
-  <text x="426" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" font-weight="700" text-anchor="middle" fill="#1e8449">V*</text>
+  <!-- SLOBODNA POVRSINA - deblja plava linija -->
+  <line x1="90" y1="100" x2="440" y2="100" stroke="#1565c0" stroke-width="2.6" />
+  <!-- Oznaka vode -->
+  <!-- ============================================================
+       KOTE
+  ============================================================ -->
+  <!-- h1 = 2,50 m  (lijevo od jezerca, od slobodne povrsine do vrha luka y=250) -->
+  <!-- R = 1,00 m (desno, od vrha luka do dna na desnom segmentu) - vertikalna kota na osi simetrije luka -->
+  <!-- Desni luk: arc center (380,250), top (440,250), bottom (380,310). R kao radial line od centra do (440,250) -->
+  <!-- b - sirina sekcije (okomito na presjek), prikazano kao perspektivna oznaka u dnu -->
+  <!-- perspektivna strelica dubine -->
+  <!-- ============================================================
+       SILE - na zaobljeni segment (desni luk)
+       Skala: 1 kN ≈ 0,35 px (F_H=117,6 → 41 px, F_V=128,6 → 45 px)
+       Strelice djeluju IZ vode NA strukturu (smjer sile koja se predaje temelju).
+       F_H djeluje horizontalno na vertikalnu projekciju (od x=380 do x=440 na y=250..310),
+         djelovanje u centroidu projekcije: (440, 280) → strelica desno (u stijenku).
+       F_V djeluje vertikalno (uzgon) - prema gore (sukladno izvoru "↑" → uzgon na temeljnu plocu).
+       Pricakanjska tocka: centroid imaginarnog volumena, otprilike (415, 240).
+    ============================================================ -->
+  <!-- F_H: na vertikalnoj projekciji, akcija na strukturu = u desno; duljina 70 px za citljivost -->
+  <line x1="440" y1="280" x2="510" y2="280" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u06zdj_aR)" />
+  <!-- F_V: prema gore (uzgon na temeljnu plocu), od arc-a (415,303) prema gore za 75 px do (415,228) -->
+  <line x1="415" y1="303" x2="415" y2="228" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u06zdj_aR)" />
+  <!-- Indikator dubine centroida h_Cx - tanka isprekidana linija samo do desne stijenke -->
+  <line x1="150" y1="280" x2="380" y2="280" stroke="#1565c0" stroke-width="0.7" stroke-dasharray="4,4" opacity="0.55" />
+  <!-- Rezultanta F_R - dijagonala od tocke djelovanja na vert. projekciji (440,280) prema gore-desno pod ~47,6° -->
+  <!-- Skala ~0,53 px/kN: F_R=174 kN -> ~92 px. cos47,6=0,674; sin47,6=0,739 -->
+  <!-- kraj: (440+62, 280-68) = (502, 212) -->
+  <line x1="440" y1="280" x2="502" y2="212" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u06zdj_aG)" />
+  <!-- Napomena na dnu lijevog panela -->
+  <!-- =====================================================
+       DESNI PANEL - FORMULE I REZULTATI
+  ===================================================== -->
 
-  <!-- Wall (vertical) -->
-  <rect x="374" y="92" width="12" height="180" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.8"/>
-  <rect x="374" y="92" width="12" height="180" fill="url(#u06fzdj_u6zdjwall)" opacity="0.5"/>
+  <!-- Header bar -->
+  <rect x="562" y="14" width="344" height="32" rx="12" fill="#1565c0" />
+  <rect x="562" y="32" width="344" height="14" fill="#1565c0" />
+  <!-- Blok 1: A_x i h_Cx  (y=46..118) -->
+  <line x1="580" y1="124" x2="888" y2="124" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Floor (horizontal) -->
-  <rect x="374" y="338" width="90" height="10" fill="#909fa8" stroke="#5d6d7e" stroke-width="1.8"/>
-  <rect x="374" y="338" width="90" height="10" fill="url(#u06fzdj_u6zdjwall)" opacity="0.5"/>
+  <!-- Blok 2: F_H  (y=124..200) -->
+  <line x1="580" y1="216" x2="888" y2="216" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- Quarter circle arc (curved surface) -->
-  <path d="M 380,272 A 72,72 0 0,1 452,344" fill="none" stroke="#5d6d7e" stroke-width="4"/>
+  <!-- Blok 3: V* i F_V  (y=216..312) -->
+  <line x1="580" y1="328" x2="888" y2="328" stroke="#c8d6e4" stroke-width="1" />
 
-  <!-- h₁ dimension (surface → top of arc) -->
-  <line x1="322" y1="92" x2="326" y2="92" stroke="#c96c35" stroke-width="1.5"/>
-  <line x1="322" y1="272" x2="326" y2="272" stroke="#c96c35" stroke-width="1.5"/>
-  <line x1="324" y1="94" x2="324" y2="270" stroke="#c96c35" stroke-width="2"
-        marker-start="url(#u06fzdj_u6zdjaDimL)" marker-end="url(#u06fzdj_u6zdjaDim)"/>
-  <text x="312" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#92400e" text-anchor="end">h₁ = 2,50 m</text>
+  <!-- Blok 4: Rezultanta  (y=328..400) -->
+  <!-- Sazetak italic -->
+  <!-- REZULTATI badge -->
+  <rect x="580" y="446" width="308" height="50" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.5" />
+  <line x1="90" y1="100" x2="56" y2="100" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="90" y1="250" x2="56" y2="250" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="60" y1="100" x2="60" y2="250" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u06zdj_aDimL)" marker-end="url(#u06zdj_aDim)" />
+  <line x1="380" y1="250" x2="440" y2="250" stroke="#b7600c" stroke-width="1.3" stroke-dasharray="3,3" />
+  <line x1="380" y1="252" x2="380" y2="248" stroke="#b7600c" stroke-width="1.4" />
+  <circle cx="380" cy="250" r="2" fill="#b7600c" />
+  <line x1="200" y1="395" x2="230" y2="395" stroke="#b7600c" stroke-width="1.2" marker-end="url(#u06zdj_aDim)" />
+  <line x1="330" y1="395" x2="300" y2="395" stroke="#b7600c" stroke-width="1.2" marker-end="url(#u06zdj_aDim)" />
 
-  <!-- R dimension (arc radius) -->
-  <line x1="380" y1="353" x2="380" y2="358" stroke="#c96c35" stroke-width="1.5"/>
-  <line x1="452" y1="353" x2="452" y2="358" stroke="#c96c35" stroke-width="1.5"/>
-  <line x1="382" y1="356" x2="450" y2="356" stroke="#c96c35" stroke-width="2"
-        marker-start="url(#u06fzdj_u6zdjaDimL)" marker-end="url(#u06fzdj_u6zdjaDim)"/>
-  <text x="416" y="371" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#92400e" text-anchor="middle">R = 1,00 m</text>
+  <text x="36" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Poprecni presjek retencijskog jezerca</text>
+  <text x="36" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">zaobljeni segment (cetvrtina kruga) izmedju stijenke i dna</text>
 
-  <!-- F_H arrow (horizontal, rightward, mid-height = 272+72/2=308) -->
-  <line x1="452" y1="308" x2="590" y2="308" stroke="#c0392b" stroke-width="3.5" marker-end="url(#u06fzdj_u6zdjaR)"/>
-  <text x="594" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#c0392b">F_H = 117,6 kN</text>
+  <text x="410" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="middle" fill="#1e8449">V*</text>
+  <text x="410" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1e8449">13,14 m³</text>
 
-  <!-- F_V arrow (downward, mid-width = 380+36=416; approx arc at x=416) -->
-  <line x1="416" y1="344" x2="416" y2="386" stroke="#7d3c98" stroke-width="3.5" marker-end="url(#u06fzdj_u6zdjaV)"/>
-  <text x="424" y="395" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#7d3c98">F_V = 128,6 kN</text>
+  <text x="100" y="93" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#0d47a1">slobodna površina</text>
 
-  <!-- F_R diagonal arrow (from arc corner toward lower right) -->
-  <line x1="452" y1="308" x2="536" y2="366" stroke="#2c3e50" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#u06fzdj_u6zdjaFR)"/>
-  <text x="540" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2c3e50">F_R ≈ 174 kN</text>
-  <text x="540" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">θ ≈ 47,6°</text>
+  <text x="265" y="245" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0d47a1">voda</text>
+  <text x="265" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530" text-anchor="middle">ρ = 998 kg/m³</text>
 
-  <!-- Note -->
-  <text x="54" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#516677">F_V pritišće zaobljeno dno prema dolje — u proračunu temelja = uzgon koji kompenzira masa ploče ili ankeri.</text>
-</svg>
+  <text x="540" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan></tspan> = 117,6 kN</text>
+  <text x="540" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="9" text-anchor="end" fill="#a04030">vert. projekcija</text>
+
+  <text x="378" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan></tspan> = 128,6 kN  (↑)</text>
+
+  <text x="160" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1565c0">težište vert. projekcije → h<tspan baseline-shift="sub" font-size="0.7em">Cx</tspan> = 3,00 m</text>
+
+  <text x="540" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#1e8449"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan></tspan> ≈ 174,0 kN</text>
+  <text x="540" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#1e8449">α ≈ 47,6°</text>
+
+  <text x="36" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> djeluje na zaobljeni segment kao uzgon → temeljna ploča (ili ankeri) mora preuzeti tu silu.</text>
+  <text x="36" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">V* = imaginarni volumen vode iznad zaobljenog dna (pravokutnik h<tspan baseline-shift="sub" font-size="0.7em">1</tspan>R + ¼ kruga).</text>
+
+  <text x="734" y="36" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Ključne jednadžbe (zaobljeni segment)</text>
+
+  <text x="734" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Vertikalna projekcija i dubina težišta</text>
+  <text x="734" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">A<tspan baseline-shift="sub" font-size="0.7em">x</tspan> = R · b = 1,00 · 4,00 = 4,00 m²</text>
+  <text x="734" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">h<tspan baseline-shift="sub" font-size="0.7em">Cx</tspan> = h<tspan baseline-shift="sub" font-size="0.7em">1</tspan> + R/2 = 2,50 + 0,50 = 3,00 m</text>
+  <text x="734" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Horizontalna komponenta (na vert. projekciju)</text>
+  <text x="734" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan> = ρ g A<tspan baseline-shift="sub" font-size="0.7em">x</tspan> h<tspan baseline-shift="sub" font-size="0.7em">Cx</tspan></text>
+  <text x="734" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">= 998 · 9,81 · 4,00 · 3,00</text>
+  <text x="734" y="202" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 117,6 kN</text>
+  <text x="734" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Imaginarni volumen i vertikalna komponenta</text>
+  <text x="734" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">V* = b (h<tspan baseline-shift="sub" font-size="0.7em">1</tspan> R + π R²/4)</text>
+  <text x="734" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">= 4,00 · (2,50 · 1,00 + π/4) ≈ 13,14 m³</text>
+  <text x="734" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> = ρ g V*</text>
+  <text x="734" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 128,6 kN  (↑)</text>
+  <text x="734" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Rezultanta i kut s horizontalom</text>
+  <text x="734" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan> = √(F<tspan baseline-shift="sub" font-size="0.7em">H</tspan>² + F<tspan baseline-shift="sub" font-size="0.7em">V</tspan>²)</text>
+  <text x="734" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">tan α = F<tspan baseline-shift="sub" font-size="0.7em">V</tspan>/F<tspan baseline-shift="sub" font-size="0.7em">H</tspan> = 128,6/117,6 → α ≈ 47,6°</text>
+
+  <text x="734" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Vertikalna komponenta tlači temeljnu ploču prema gore</text>
+  <text x="734" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">(uzgon = težina imaginarnog volumena vode iznad luka).</text>
+
+  <text x="734" y="463" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="618" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan>≈117,6 kN</text>
+  <text x="734" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan>≈128,6 kN</text>
+  <text x="852" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>≈174,0 kN</text>
+<text x="38" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="38.0" y="188.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c">= 2,50 m</text>
+
+  <text x="408" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c">R = 1,00 m</text>
+
+  <text x="265" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">b</tspan> = 4,00 m  (širina sekcije, ⊥ na presjek)</text>
+  </svg>

@@ -1,95 +1,200 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 390" role="img" aria-labelledby="u08v2mt_u8v2-title u08v2mt_u8v2-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u08v2mt_u8v2-title">U08 Val 2 – komora za miješanje</title>
-  <desc id="u08v2mt_u8v2-desc">Komora za mijesanje: voda QA=0,150 m3/s i ulje QB=0,030 m3/s, izlaz QC=0,180 m3/s, vC=2,55 m/s, rhoC=967 kg/m3.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 500" role="img" aria-labelledby="u08v2mt_title u08v2mt_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u08v2mt_title">Komora za mijesanje - bilanca volumena i mase</title>
+  <desc id="u08v2mt_desc">Komora s dva ulaza i jednim izlazom. Ulaz A: voda Q_A = 0,150 m^3/s, ulaz B: ulje Q_B = 0,030 m^3/s, s_B = 0,80. Izlaz C: mjesavina, D_C = 0,30 m. Bilanca volumena daje Q_C = 0,180 m^3/s, srednju brzinu v_C priblizno 2,55 m/s, a bilanca mase rho_C priblizno 967 kg/m^3.</desc>
+
   <defs>
-    <linearGradient id="u08v2mt_u8v2-water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4eef8"/>
-      <stop offset="100%" stop-color="#7ec8e8"/>
+    <linearGradient id="u08v2mt_voda" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u08v2mt_u8v2-oil" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fff3cc"/>
-      <stop offset="100%" stop-color="#e6b84a"/>
+    <linearGradient id="u08v2mt_ulje" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#c8a000" />
     </linearGradient>
-    <linearGradient id="u08v2mt_u8v2-mix" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#c9e8f2"/>
-      <stop offset="100%" stop-color="#68b4d4"/>
+    <linearGradient id="u08v2mt_mix" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bcd9ce" />
+      <stop offset="100%" stop-color="#6c9a86" />
     </linearGradient>
-    <pattern id="u08v2mt_u8v2-sraf" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="8" height="8" fill="#8090a0"/>
-      <line x1="0" y1="4" x2="8" y2="4" stroke="#546e7a" stroke-width="1.8"/>
+    <pattern id="u08v2mt_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
     </pattern>
-    <marker id="u08v2mt_u8v2-arrG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#0f766e"/>
+    <!-- Strelice protoka (sile/protoci) -->
+    <marker id="u08v2mt_aBlue" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
     </marker>
-    <marker id="u08v2mt_u8v2-arrB" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/>
+    <marker id="u08v2mt_aOil" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c8a000" />
     </marker>
-    <marker id="u08v2mt_u8v2-arrA" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L10,4 z" fill="#b07000"/>
+    <marker id="u08v2mt_aGreen" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <!-- Kota markeri (smedji) -->
+    <marker id="u08v2mt_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u08v2mt_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
   </defs>
-  <!-- Canvas -->
-  <rect width="940" height="390" fill="#ffffff"/>
-  <rect x="24" y="24" width="892" height="342" rx="16" fill="#ffffff" stroke="#d3d9de" stroke-width="2"/>
-  <!-- Title -->
-  <text x="54" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#173043">Komora za miješanje — bilanca mase</text>
-  <text x="54" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#516677">Q_A = 0,150 m³/s (voda) + Q_B = 0,030 m³/s (ulje) → izlaz C, D_C = 0,30 m</text>
 
-  <!-- ===== KOMORA ===== -->
-  <!-- Central chamber walls -->
-  <rect x="354" y="110" width="180" height="220" fill="url(#u08v2mt_u8v2-sraf)" stroke="none"/>
-  <rect x="366" y="122" width="156" height="196" fill="url(#u08v2mt_u8v2-mix)" stroke="none"/>
-  <!-- Chamber border -->
-  <rect x="354" y="110" width="180" height="220" rx="0" fill="none" stroke="#3d4f5a" stroke-width="2.5"/>
+  <!-- Pozadina i okvir -->
+  <rect width="940" height="500" fill="#ffffff" />
+  <rect x="14" y="14" width="912" height="472" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.4" />
 
-  <!-- KV dashed boundary -->
-  <rect x="340" y="96" width="210" height="250" rx="10" fill="none" stroke="#c96c35" stroke-width="2" stroke-dasharray="10,6"/>
-  <text x="352" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c96c35" font-style="italic">KV</text>
+  <!-- Vertikalni separator izmedju scene i panela -->
+  <line x1="568" y1="40" x2="568" y2="460" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
-  <!-- Label inside chamber -->
-  <text x="420" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043" text-anchor="middle">mješavina</text>
-  <text x="420" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677" text-anchor="middle">ρ_C ≈ 967 kg/m³</text>
+  <!-- =====================================================
+       LIJEVI DIO: FIZIKALNA SCENA (svi labeli x<568)
+       Komora: x=240..370, y=140..360 (130 x 220)
+       Ulaz A (voda):  pipe y=160..192 (28 px fluid), arrow x=42..118
+       Ulaz B (ulje):  pipe y=298..318 (16 px fluid), arrow x=78..118
+       Izlaz C (mix):  pipe y=232..272 (36 px fluid), arrow x=470..540
+  ===================================================== -->
 
-  <!-- Inlet A — water (upper, wider pipe) -->
-  <!-- Pipe walls -->
-  <rect x="90" y="148" width="266" height="52" fill="url(#u08v2mt_u8v2-sraf)" stroke="none"/>
-  <rect x="102" y="160" width="254" height="28" fill="url(#u08v2mt_u8v2-water)" stroke="none"/>
-  <line x1="90" y1="148" x2="354" y2="148" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="90" y1="200" x2="354" y2="200" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="90" y1="148" x2="90" y2="200" stroke="#3d4f5a" stroke-width="2.5"/>
-  <!-- A label and arrow -->
-  <line x1="44" y1="174" x2="88" y2="174" stroke="#1565c0" stroke-width="3" marker-end="url(#u08v2mt_u8v2-arrB)"/>
-  <text x="32" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0">A</text>
-  <text x="28" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">voda</text>
-  <text x="28" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">0,150 m³/s</text>
+  <!-- === FLUID PUTANJE (ispod stjenki) === -->
+  <!-- Voda u ulaznom vodu A (cijev) -->
+  <rect x="118" y="164" width="128" height="28" fill="url(#u08v2mt_voda)" />
+  <!-- Ulje u ulaznom vodu B (cijev) -->
+  <rect x="118" y="302" width="128" height="16" fill="url(#u08v2mt_ulje)" />
+  <!-- Mjesavina u komori -->
+  <rect x="240" y="144" width="130" height="212" fill="url(#u08v2mt_mix)" />
+  <!-- Mjesavina u izlaznom vodu C (cijev) -->
+  <rect x="364" y="234" width="106" height="36" fill="url(#u08v2mt_mix)" />
 
-  <!-- Inlet B — oil (lower, narrower pipe) -->
-  <rect x="130" y="256" width="226" height="38" fill="url(#u08v2mt_u8v2-sraf)" stroke="none"/>
-  <rect x="142" y="264" width="214" height="22" fill="url(#u08v2mt_u8v2-oil)" stroke="none"/>
-  <line x1="130" y1="256" x2="354" y2="256" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="130" y1="294" x2="354" y2="294" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="130" y1="256" x2="130" y2="294" stroke="#3d4f5a" stroke-width="2.5"/>
-  <!-- B label and arrow -->
-  <line x1="80" y1="275" x2="128" y2="275" stroke="#b07000" stroke-width="3" marker-end="url(#u08v2mt_u8v2-arrA)"/>
-  <text x="68" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b07000">B</text>
-  <text x="66" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b07000">ulje</text>
-  <text x="60" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b07000">0,030 m³/s</text>
+  <!-- === STJENKE CIJEVI ULAZA A (voda) === -->
+  <rect x="118" y="156" width="128" height="8" fill="url(#u08v2mt_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="118" y="192" width="128" height="8" fill="url(#u08v2mt_hatch)" stroke="#4a6070" stroke-width="1.2" />
 
-  <!-- Outlet C — mixed (pipe to the right) -->
-  <rect x="534" y="196" width="210" height="50" fill="url(#u08v2mt_u8v2-sraf)" stroke="none"/>
-  <rect x="546" y="208" width="198" height="26" fill="url(#u08v2mt_u8v2-mix)" stroke="none"/>
-  <line x1="534" y1="196" x2="744" y2="196" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="534" y1="246" x2="744" y2="246" stroke="#3d4f5a" stroke-width="2.5"/>
-  <line x1="744" y1="196" x2="744" y2="246" stroke="#3d4f5a" stroke-width="2.5"/>
-  <!-- C label and arrow -->
-  <line x1="744" y1="221" x2="790" y2="221" stroke="#0f766e" stroke-width="3" marker-end="url(#u08v2mt_u8v2-arrG)"/>
-  <text x="796" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0f766e">C</text>
-  <text x="794" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">D_C = 0,30 m</text>
-  <text x="794" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0f766e">v_C = 2,55 m/s</text>
+  <!-- === STJENKE CIJEVI ULAZA B (ulje) === -->
+  <rect x="118" y="294" width="128" height="8" fill="url(#u08v2mt_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="118" y="318" width="128" height="8" fill="url(#u08v2mt_hatch)" stroke="#4a6070" stroke-width="1.2" />
 
-  <!-- ===== FORMULA BOX ===== -->
-  <rect x="54" y="312" width="760" height="74" rx="10" fill="#fffef6" stroke="#c49a0a" stroke-width="1.8"/>
-  <text x="70" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#173043">Bilanca mase:</text>
-  <text x="70" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#173043">Q_C = Q_A + Q_B = 0,180 m³/s</text>
-  <text x="70" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#516677">v_C = Q_C / A_C = 0,180 / 0,0707 = 2,55 m/s    |    ṁ_C = ρ_A·Q_A + ρ_B·Q_B = 174 kg/s    |    ρ_C = ṁ_C / Q_C ≈ 967 kg/m³</text>
-</svg>
+  <!-- === STJENKE CIJEVI IZLAZA C (mix) === -->
+  <rect x="364" y="226" width="106" height="8" fill="url(#u08v2mt_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <rect x="364" y="270" width="106" height="8" fill="url(#u08v2mt_hatch)" stroke="#4a6070" stroke-width="1.2" />
+
+  <!-- === STJENKE KOMORE (pune visine - zatvoreni spremnik) === -->
+  <!-- Gornja stjenka -->
+  <rect x="232" y="136" width="146" height="8" fill="url(#u08v2mt_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <!-- Donja stjenka -->
+  <rect x="232" y="356" width="146" height="8" fill="url(#u08v2mt_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <!-- Lijeva stjenka (puna visine) -->
+  <rect x="232" y="144" width="8" height="212" fill="url(#u08v2mt_hatch)" stroke="#4a6070" stroke-width="1.2" />
+  <!-- Desna stjenka (puna visine) -->
+  <rect x="370" y="144" width="8" height="212" fill="url(#u08v2mt_hatch)" stroke="#4a6070" stroke-width="1.2" />
+
+  <!-- === PORT FLUID OVERLAYS (preko stjenki) === -->
+  <!-- Port A: voda kroz lijevu stjenku komore -->
+  <rect x="232" y="164" width="8" height="28" fill="url(#u08v2mt_voda)" />
+  <!-- Port B: ulje kroz lijevu stjenku komore -->
+  <rect x="232" y="302" width="8" height="16" fill="url(#u08v2mt_ulje)" />
+  <!-- Port C: mjesavina kroz desnu stjenku komore -->
+  <rect x="370" y="234" width="8" height="36" fill="url(#u08v2mt_mix)" />
+
+  <!-- === KONTROLNI VOLUMEN (isprekidana granica) === -->
+  <rect x="222" y="126" width="166" height="248" rx="6" fill="none" stroke="#8e44ad" stroke-width="1.6" stroke-dasharray="9,5" />
+  <!-- === OZNAKA UNUTAR KOMORE === -->
+  <!-- === STRELICE PROTOKA (duljine proporcionalne Q) === -->
+  <!-- Q_A: voda, ~75 px arrow (Q_A = 0,150) -->
+  <line x1="42" y1="178" x2="115" y2="178" stroke="#1565c0" stroke-width="3" marker-end="url(#u08v2mt_aBlue)" />
+  <!-- Q_B: ulje, ~30 px arrow (Q_B = 0,030, 1/5 of Q_A) -->
+  <line x1="85" y1="310" x2="115" y2="310" stroke="#c8a000" stroke-width="3" marker-end="url(#u08v2mt_aOil)" />
+  <!-- Q_C: mjesavina, ~90 px arrow (Q_C = 0,180) -->
+  <line x1="472" y1="252" x2="562" y2="252" stroke="#1e8449" stroke-width="3" marker-end="url(#u08v2mt_aGreen)" />
+
+  <!-- === LABELE ULAZA / IZLAZA === -->
+  <!-- A: voda -->
+  <!-- B: ulje -->
+  <!-- C: mjesavina (label IZNAD strelice, da ne udju u panel) -->
+  <!-- === KOTA D_C (vertikalna; mjeri unutarnji promjer izlazne cijevi C; dim linija desno od pipe-a u clean spacu) ===
+       Pipe konci na x=470. Strelica na y=252 (od x=472 do x=562).
+       Dim linija ce ici vertikalno na x=455 (tik pred kraj pipe-a, unutar fluida), s ticovima i labelom desno. -->
+  <!-- Tik-crte vodoravne (zauzimaju samo 14 px) - perpendikularne na dim liniju, dakle horizontalne -->
+  <!-- Vertikalna dim linija s dvostrukim strelicama izmedju gornjeg i donjeg fluid edge-a -->
+  <!-- Label DESNO od dim linije, jedan red, IZNAD centra strelice -->
+  <!-- === BILJESKA O NESTLACIVOSTI === -->
+  <!-- === LEGENDA BOJA (donji rub lijevog dijela) === -->
+  <rect x="30" y="448" width="11" height="11" fill="url(#u08v2mt_voda)" stroke="#1565c0" stroke-width="0.6" rx="2" />
+  <rect x="90" y="448" width="11" height="11" fill="url(#u08v2mt_ulje)" stroke="#a07a00" stroke-width="0.6" rx="2" />
+  <rect x="142" y="448" width="11" height="11" fill="url(#u08v2mt_mix)" stroke="#1e8449" stroke-width="0.6" rx="2" />
+  <line x1="234" y1="453" x2="262" y2="453" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="5,3" />
+  <!-- =====================================================
+       DESNI PANEL: KLJUCNE JEDNADZBE I REZULTATI
+       Panel: x=584..916 (332 w), centar = 750
+  ===================================================== -->
+  <rect x="584" y="40" width="332" height="380" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.4" />
+  <!-- Header -->
+  <rect x="584" y="40" width="332" height="32" rx="10" fill="#1565c0" />
+  <rect x="584" y="64" width="332" height="8" fill="#1565c0" />
+  <!-- Blok 1: Bilanca volumena (y=72..152) -->
+  <line x1="610" y1="152" x2="890" y2="152" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 2: Izlazna povrsina (y=152..220) -->
+  <line x1="610" y1="230" x2="890" y2="230" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 3: Srednja izlazna brzina (y=230..298) -->
+  <line x1="610" y1="308" x2="890" y2="308" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Blok 4: Bilanca mase (y=308..404) -->
+  <line x1="610" y1="404" x2="890" y2="404" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- Sazetak -->
+  <!-- === REZULTATI BADGE === -->
+  <rect x="584" y="432" width="332" height="44" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
+  <line x1="448" y1="234" x2="462" y2="234" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="448" y1="270" x2="462" y2="270" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="455" y1="237" x2="455" y2="267" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u08v2mt_aDimR)" marker-end="url(#u08v2mt_aDim)" />
+  <rect x="416" y="448" width="11" height="11" fill="#b7600c" rx="2" />
+  <text x="226" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#8e44ad">KV</text>
+
+  <text x="305" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#1a2530">mješavina</text>
+  <text x="305" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#3a4a56">homogena</text>
+
+  <text x="42" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1565c0">A</text>
+  <text x="62" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0">voda</text>
+  <text x="42" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0d47a1"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> = 0,150 m³/s</text>
+  <text x="42" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">ρ<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = 1000 kg/m³</text>
+
+  <text x="42" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#a07a00">B</text>
+  <text x="62" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#a07a00">ulje</text>
+  <text x="42" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#7a5e00"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">B</tspan> = 0,030 m³/s</text>
+  <text x="42" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="0.7em">B</tspan> = 0,80 → ρ<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = 800 kg/m³</text>
+
+  <text x="482" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449">C</text>
+  <text x="502" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449">mješavina</text>
+  <text x="482" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#0c5a2e"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 0,180 m³/s</text>
+
+  <text x="290" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">tekuće faze nestlačive, mješavina homogena</text>
+  <text x="290" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">duljine strelica ∝ <tspan font-style="italic">Q</tspan></text>
+
+  <text x="46" y="457" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">voda</text>
+  <text x="106" y="457" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">ulje</text>
+  <text x="158" y="457" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">mješavina</text>
+  <text x="268" y="457" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">kontrolni volumen (KV)</text>
+  <text x="432" y="457" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">kote</text>
+
+  <text x="750" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Bilanca volumena i mase</text>
+
+  <text x="750" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Bilanca volumena (nestlačivo)</text>
+  <text x="750" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> + <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">B</tspan></text>
+  <text x="750" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0">= 0,150 + 0,030 = 0,180 m³/s</text>
+  <text x="750" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Površina izlaznog presjeka</text>
+  <text x="750" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = π <tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>² / 4</text>
+  <text x="750" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 0,0707 m²</text>
+  <text x="750" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Srednja izlazna brzina</text>
+  <text x="750" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> / <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan></text>
+  <text x="750" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 2,55 m/s</text>
+  <text x="750" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Bilanca mase → gustoća mješavine</text>
+  <text x="750" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">ρ<tspan baseline-shift="sub" font-size="0.7em">C</tspan> = (ρ<tspan baseline-shift="sub" font-size="0.7em">A</tspan> <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> + ρ<tspan baseline-shift="sub" font-size="0.7em">B</tspan> <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">B</tspan>) / <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan></text>
+  <text x="750" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#3a4a56">= (1000·0,150 + 800·0,030) / 0,180</text>
+  <text x="750" y="393" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 967 kg/m³</text>
+  <text x="750" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">istodobno volumen + masa → brzina i gustoća</text>
+
+  <text x="750" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
+  <text x="666" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 2,55 m/s</text>
+  <text x="838" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">ρ<tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 967 kg/m³</text>
+<text x="467" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#b7600c"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 0,30 m</text>
+
+
+  </svg>
