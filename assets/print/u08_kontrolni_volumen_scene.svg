@@ -39,8 +39,6 @@
 
   <!-- Pozadina i okvir -->
   <rect width="960" height="520" fill="#ffffff" />
-  <rect x="12" y="12" width="936" height="496" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.4" />
-
   <!-- =================================================================
        GORNJA TRAKA: opca masena bilanca (header preko cijelog canvasa)
   ================================================================== -->

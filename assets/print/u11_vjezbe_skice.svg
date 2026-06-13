@@ -41,8 +41,6 @@
 
   <!-- pozadina i okvir -->
   <rect width="960" height="940" fill="#ffffff" />
-  <rect x="14" y="14" width="932" height="912" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- ============================================================ -->
   <!--  PANEL 1 (R1C1)  Z1 T1 — slobodni mlaz na plocu (sve poznato) -->
   <!-- ============================================================ -->

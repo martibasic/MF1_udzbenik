@@ -28,8 +28,6 @@
 
   <!-- pozadina + paneli -->
   <rect width="980" height="500" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="472" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.4" />
-
   <!-- Lijevi panel: H-Q dijagram -->
   <rect x="24" y="26" width="596" height="448" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
   <!-- Desni panel: formule i rezultati -->

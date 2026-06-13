@@ -41,8 +41,6 @@
 
   <!-- Background and outer frame -->
   <rect width="980" height="560" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="532" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- ==========================================================================
        LAYOUT REFERENCE
        Left panel (diagram): x 30..620

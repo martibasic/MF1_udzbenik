@@ -36,8 +36,6 @@
   </defs>
 
   <rect width="940" height="520" fill="#ffffff" />
-  <rect x="14" y="14" width="912" height="492" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- =====================================================
        LIJEVI PANEL - FIZIKALNI MODEL  (x: 14..540)
        Skala vertikalna: 1 m = 130 px

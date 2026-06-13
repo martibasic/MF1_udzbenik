@@ -38,8 +38,6 @@
 
   <!-- Pozadina i okvir -->
   <rect width="980" height="520" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="492" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- Razdjelnik panela -->
   <line x1="620" y1="34" x2="620" y2="486" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 

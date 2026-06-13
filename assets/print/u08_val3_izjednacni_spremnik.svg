@@ -33,8 +33,6 @@
 
   <!-- Canvas background -->
   <rect width="980" height="520" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="492" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- =====================================================================
        LIJEVI PANEL: GEOMETRIJA SPREMNIKA
        Tank interior: x=110..490 (sirina 380 px = 3,0 m, ali tlocrtno)

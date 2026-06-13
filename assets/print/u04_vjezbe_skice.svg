@@ -43,8 +43,6 @@
 
   <!-- Pozadina -->
   <rect width="960" height="740" fill="#ffffff" />
-  <rect x="14" y="14" width="932" height="712" rx="14" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- ======================================================================
        PANEL T1: x=28, y=30, w=448, h=224
        Horizontalno ubrzani otvoreni spremnik

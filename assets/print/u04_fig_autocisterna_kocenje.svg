@@ -44,8 +44,6 @@
 
   <!-- Pozadina -->
   <rect width="960" height="520" fill="#ffffff" />
-  <rect x="14" y="14" width="932" height="492" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- ============================================================
        LIJEVI PANEL: bo&#269;ni presjek autocisterne pri ko&#269;enju
        Spremnik unutarnji: x = 90 .. 530 (interior &#353;irina 440 px = L)

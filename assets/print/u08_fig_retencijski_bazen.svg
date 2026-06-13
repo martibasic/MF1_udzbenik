@@ -38,8 +38,6 @@
 
   <!-- Pozadina -->
   <rect width="1080" height="520" fill="#ffffff" />
-  <rect x="14" y="14" width="1052" height="492" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.4" />
-
   <!-- ===================== LIJEVI PANEL (presjek bazena) =====================
        Skala vertikalna: 1 m = 110 px.
        Dno bazena (interno): y = 420

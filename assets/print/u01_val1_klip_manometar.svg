@@ -32,8 +32,6 @@
   </defs>
 
   <rect width="980" height="520" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="492" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- ============================================================
        KONTINUIRAN FLUID PUT - vod na DNU cilindara
        Skala: 1 kN = 7 px za sile (G=25 px, F_2=56 px)

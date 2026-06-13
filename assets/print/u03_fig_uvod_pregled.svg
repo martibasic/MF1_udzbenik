@@ -31,8 +31,6 @@
 
   <!-- Pozadina i okvir -->
   <rect width="980" height="500" fill="#ffffff" />
-  <rect x="10" y="10" width="960" height="480" rx="14" fill="#fbfdff" stroke="#dde3ea" stroke-width="1.4" />
-
   <!-- =========================================================
        PANEL 1 (LIJEVO) - Hidrostatska raspodjela u otvorenom spremniku
        Okvir x=20..360, y=22..478

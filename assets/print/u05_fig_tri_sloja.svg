@@ -43,8 +43,6 @@
 
   <!-- Pozadina i okvir -->
   <rect width="980" height="600" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="572" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- Suptilne vertikalne separator linije izmedju zona -->
   <line x1="446" y1="40" x2="446" y2="560" stroke="#e2e8ee" stroke-width="1" stroke-dasharray="4,5" />
   <line x1="728" y1="40" x2="728" y2="560" stroke="#e2e8ee" stroke-width="1" stroke-dasharray="4,5" />

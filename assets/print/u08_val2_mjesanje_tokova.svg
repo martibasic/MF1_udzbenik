@@ -39,8 +39,6 @@
 
   <!-- Pozadina i okvir -->
   <rect width="940" height="500" fill="#ffffff" />
-  <rect x="14" y="14" width="912" height="472" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.4" />
-
   <!-- Vertikalni separator izmedju scene i panela -->
   <line x1="568" y1="40" x2="568" y2="460" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 

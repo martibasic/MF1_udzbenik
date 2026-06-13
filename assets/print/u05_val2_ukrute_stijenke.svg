@@ -39,8 +39,6 @@
 
   <!-- Pozadina i okvir -->
   <rect width="900" height="520" fill="#ffffff" />
-  <rect x="14" y="14" width="872" height="492" rx="12" fill="#fbfdff" stroke="#dde3ea" stroke-width="1.4" />
-
   <!-- ============================================================
        LIJEVI PANEL: fizikalni model
        Skala: 1 m = 100 px (po dubini)

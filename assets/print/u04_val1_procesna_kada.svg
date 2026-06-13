@@ -37,8 +37,6 @@
 
   <!-- pozadina -->
   <rect width="940" height="500" fill="#ffffff" />
-  <rect x="16" y="16" width="908" height="468" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- ===================== LIJEVI PANEL: procesna kada na platformi ===================== -->
   <!-- Geometrija: skala 1 m = 200 px. L=360, H=144, h0=108, h_pred=72 -->
   <!-- Tank floor at y=370. Tank top at y=226 (370-144). Interior x=95..455 (sirina 360). -->

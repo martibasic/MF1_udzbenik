@@ -40,8 +40,6 @@
   </defs>
 
   <!-- okvir cijele slike -->
-  <rect x="10" y="10" width="940" height="620" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- zajednicki ulazni podaci (header bar) -->
   <rect x="24" y="22" width="912" height="40" rx="8" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.2" />
   <!-- vertikalna razdvojna -->

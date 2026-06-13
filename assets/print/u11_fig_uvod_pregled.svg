@@ -41,8 +41,6 @@
 
   <!-- Pozadina -->
   <rect width="980" height="540" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="512" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- Vertikalni razdjelnik -->
   <line x1="540" y1="34" x2="540" y2="506" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 

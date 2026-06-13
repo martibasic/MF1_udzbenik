@@ -19,8 +19,8 @@
     </marker>
     <!-- Hatch materijala (srafura presjeka) — 45°, tamnosiva -->
     <pattern id="u07fbp_matH" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="6" height="6" fill="#cdd6dc"/>
-      <line x1="0" y1="0" x2="0" y2="6" stroke="#7a8a96" stroke-width="1.4"/>
+      <rect width="6" height="6" fill="#cdd6dc" />
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#7a8a96" stroke-width="1.4" />
     </pattern>
     <marker id="u07fbp_yarr" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L6,2.5 z" fill="#1e8449" />
@@ -31,7 +31,6 @@
   </defs>
 
   <!-- okvirni paneli -->
-  <rect x="14" y="14" width="872" height="442" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
   <line x1="500" y1="34" x2="500" y2="436" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
   <!-- ===================== LIJEVO: POPRECNI PRESJEK ===================== -->
@@ -82,8 +81,7 @@
   <polygon points="115,184 355,168 355.5,176 115.5,192" fill="#909fa8" stroke="none" />
   <!-- srafura uronjenog dijela presjeka platforme
        WL intersects left side at (116,200), right side at (357,200) -->
-  <polygon points="116,200 357,200 360,248 120,264"
-           fill="url(#u07fbp_matH)" stroke="none" opacity="0.9"/>
+  <polygon points="116,200 357,200 360,248 120,264" fill="url(#u07fbp_matH)" stroke="none" opacity="0.9" />
 
   <!-- mokra povrsina (donja granica platforme) izrazena malo deblje radi jasnoce -->
   <line x1="120" y1="264" x2="360" y2="248" stroke="#3a4a56" stroke-width="1.6" />

@@ -36,8 +36,6 @@
   </defs>
 
   <!-- pozadina + okviri panela -->
-  <rect x="16" y="16" width="888" height="508" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- ===================== LIJEVO: usporedba dva profila ===================== -->
   <!-- ============ LIJEVI PROFIL: HLADNI START (mu_1) ============ -->
   <!-- Layout: lezaj na vrhu, procjep, vratilo na dnu. Procjep prikazan uvelican (razmazan). -->

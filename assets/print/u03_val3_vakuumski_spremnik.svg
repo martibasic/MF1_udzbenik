@@ -46,8 +46,6 @@
 
   <!-- Pozadina i okvir -->
   <rect width="940" height="500" fill="#ffffff" />
-  <rect x="14" y="14" width="912" height="472" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.4" />
-
   <!-- Vertikalni separator izmedju panela -->
   <line x1="540" y1="36" x2="540" y2="464" stroke="#dce7f0" stroke-width="1.1" stroke-dasharray="4,5" />
 

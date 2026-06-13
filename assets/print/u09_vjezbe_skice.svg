@@ -32,8 +32,6 @@
 
   <!-- Pozadina -->
   <rect width="960" height="760" fill="#ffffff" />
-  <rect x="14" y="14" width="932" height="732" rx="14" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- =====================================================
        T1 (lijevo gore): Spremnik s bocnom sapnicom
        Panel: x=28..474, y=32..262

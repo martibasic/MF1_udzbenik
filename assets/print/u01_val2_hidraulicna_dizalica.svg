@@ -35,8 +35,6 @@
   </defs>
 
   <rect width="980" height="540" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="512" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- ============================================================
        KONTINUIRAN FLUID PUT - vod na dnu povezuje oba cilindra
        Mali cyl interior x=50-110 (60 px), Veliki cyl interior x=400-640 (240 px = 4x)

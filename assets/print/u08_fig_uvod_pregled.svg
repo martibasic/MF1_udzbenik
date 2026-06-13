@@ -33,8 +33,6 @@
   </defs>
 
   <!-- pozadina i okviri -->
-  <rect x="14" y="14" width="932" height="442" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- ===================== LIJEVI PANEL: KV KONCEPT ===================== -->
   <rect x="28" y="28" width="540" height="414" rx="10" fill="#ffffff" stroke="#e1ebf3" stroke-width="1.2" />
 

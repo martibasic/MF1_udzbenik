@@ -48,8 +48,6 @@
 
   <!-- ===== pozadina + glavni okvir ===== -->
   <rect width="960" height="980" fill="#ffffff" />
-  <rect x="14" y="14" width="932" height="952" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- ===== panel layout: 2 stupca x 3 reda, gap=14 ===== -->
   <!-- Col1: x=24..476 (w=452)   Col2: x=484..936 (w=452) -->
   <!-- Row1: y=24..324  Row2: y=332..632  Row3: y=640..956 (zadnji deblji za T3#6) -->

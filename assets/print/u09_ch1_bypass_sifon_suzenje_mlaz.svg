@@ -33,7 +33,6 @@
 
   <!-- Pozadina -->
   <rect width="1140" height="620" fill="#ffffff" />
-  <rect x="14" y="14" width="1112" height="592" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
   <line x1="800" y1="34" x2="800" y2="586" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 
   <!-- ==================================================

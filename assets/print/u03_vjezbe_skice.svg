@@ -30,8 +30,6 @@
   </defs>
 
   <rect width="980" height="760" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="732" rx="14" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- =====================================================================
        PANEL 1 — Otvoreni spremnik vode, tocka A na dubini h=2,40 m
        Box: x=28..328, y=34..374

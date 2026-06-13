@@ -38,8 +38,6 @@
 
   <!-- Pozadina i okvir -->
   <rect width="940" height="560" fill="#ffffff" />
-  <rect x="14" y="14" width="912" height="532" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- ============================================================
        LIJEVI POLU-PANEL (x = 28..610)
        Layout (top->bottom):

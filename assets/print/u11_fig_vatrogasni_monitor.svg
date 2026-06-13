@@ -45,8 +45,6 @@
 
   <!-- pozadina + okvir -->
   <rect width="960" height="540" fill="#ffffff" />
-  <rect x="14" y="14" width="932" height="512" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- ============================================================
        LIJEVI PANEL: fizicki model (x=14..620)
   ============================================================ -->

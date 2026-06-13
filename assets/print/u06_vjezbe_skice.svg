@@ -41,8 +41,6 @@
 
   <!-- Pozadina + okvir -->
   <rect width="940" height="720" fill="#ffffff" />
-  <rect x="14" y="14" width="912" height="692" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- ===================== T1 (lijevo gore): cetvrtina kruga uronjena ===================== -->
   <rect x="28" y="28" width="436" height="218" rx="10" fill="#ffffff" stroke="#c8d6e4" stroke-width="1.2" />
   <rect x="28" y="28" width="56" height="22" rx="6" fill="#1565c0" />

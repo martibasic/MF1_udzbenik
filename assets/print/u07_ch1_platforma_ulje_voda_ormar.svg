@@ -38,8 +38,6 @@
 
   <!-- pozadina i okvir -->
   <rect width="980" height="560" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="532" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- ============================================================
        LIJEVI PANEL: PRESJEK PLATFORME (x = 14..580)
        Skala: 1 m = 280 px

@@ -23,7 +23,6 @@
   </defs>
 
   <!-- Pozadina i okvirni paneli -->
-  <rect x="14" y="14" width="912" height="472" rx="14" fill="#ffffff" stroke="#d4e3f0" stroke-width="1.2" />
   <rect x="22" y="22" width="500" height="456" rx="10" fill="#fbfdff" stroke="#dde8f1" stroke-width="1" />
   <rect x="530" y="22" width="396" height="456" rx="10" fill="#fbfdff" stroke="#dde8f1" stroke-width="1" />
 

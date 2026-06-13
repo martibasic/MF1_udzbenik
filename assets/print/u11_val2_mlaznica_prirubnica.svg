@@ -42,8 +42,6 @@
 
   <!-- pozadina -->
   <rect width="960" height="520" fill="#ffffff" />
-  <rect x="14" y="14" width="932" height="492" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- =====================================================================
        LIJEVI PANEL - GEOMETRIJA SUSTAVA (x: 14..620)
        Os simetrije sustava: y=240

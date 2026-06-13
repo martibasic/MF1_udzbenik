@@ -46,8 +46,6 @@
 
   <!-- Pozadina -->
   <rect width="980" height="580" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="552" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- =========================================================
        LIJEVI PANEL - Fizicka scena cjevovoda s ventilom
   ========================================================== -->

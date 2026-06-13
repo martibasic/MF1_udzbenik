@@ -35,8 +35,6 @@
   </defs>
 
   <rect width="980" height="590" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="562" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- KONTINUIRAN FLUID -->
   <rect x="50" y="370" width="60" height="150" fill="url(#u01fps_fluid)" />
   <rect x="110" y="500" width="20" height="20" fill="url(#u01fps_fluid)" />

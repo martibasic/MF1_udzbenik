@@ -44,8 +44,6 @@
 
   <!-- background -->
   <rect width="980" height="440" fill="#f4f6f8" />
-  <rect x="18" y="18" width="944" height="404" rx="14" fill="#ffffff" stroke="#d0d6de" stroke-width="2" />
-
   <!-- header -->
 
   <!-- === LIJEVI PANEL: smicanje x=38..474 === -->
@@ -125,40 +123,40 @@
 
   <!-- === DESNI PANEL: kapilarni uspon x=504..944 === -->
   <rect x="504" y="90" width="436" height="320" rx="12" fill="#f8fafc" stroke="#d0d8e4" stroke-width="1.6" />
-  <!-- posuda: x=520..700, y=200..370 -->
-  <rect x="520" y="200" width="180" height="170" rx="4" fill="none" stroke="#5a6a76" stroke-width="2.5" />
+  <!-- posuda: x=520..700, y=200..305 -->
+  <rect x="520" y="200" width="180" height="105" rx="4" fill="none" stroke="#5a6a76" stroke-width="2.5" />
   <!-- tekućina u posudi -->
-  <rect x="522" y="258" width="176" height="110" fill="url(#u02v2vk_v2flCap)" opacity="0.9" />
+  <rect x="522" y="248" width="176" height="55" fill="url(#u02v2vk_v2flCap)" opacity="0.9" />
   <!-- razina u posudi -->
-  <line x1="522" y1="258" x2="700" y2="258" stroke="#1565c0" stroke-width="2.5" />
-  <!-- kapilara: stijenke x=616..628 i x=652..664; od y=130 do y=370 -->
+  <line x1="522" y1="248" x2="700" y2="248" stroke="#1565c0" stroke-width="2.5" />
+  <!-- kapilara: stijenke x=616..628 i x=652..664; od y=140 do y=305 -->
   <!-- lijeva stijenka kapilare -->
-  <rect x="614" y="130" width="14" height="240" fill="none" stroke="#5a6a76" stroke-width="2.5" />
+  <rect x="614" y="140" width="14" height="165" fill="none" stroke="#5a6a76" stroke-width="2.5" />
   <!-- desna stijenka kapilare -->
-  <rect x="650" y="130" width="14" height="240" fill="none" stroke="#5a6a76" stroke-width="2.5" />
-  <!-- tekućina u kapilari (uspon do y=194 ≈ 64px iznad razine=258, h≈10.8mm→plot scale~64px) -->
-  <rect x="628" y="194" width="22" height="64" fill="#aed6f1" opacity="0.95" />
+  <rect x="650" y="140" width="14" height="165" fill="none" stroke="#5a6a76" stroke-width="2.5" />
+  <!-- tekućina u kapilari (uspon od meniskusa y=180 do razine y=248, h≈10.8mm) -->
+  <rect x="628" y="180" width="22" height="68" fill="#aed6f1" opacity="0.95" />
   <!-- tekućina u kapilari unutar posude -->
-  <rect x="628" y="258" width="22" height="112" fill="#5b9ec9" opacity="0.95" />
+  <rect x="628" y="248" width="22" height="55" fill="#5b9ec9" opacity="0.95" />
   <!-- meniskus konkavan gore: θ=18° → blago zakrivljen -->
-  <path d="M628,196 Q639,183 650,196" fill="#aed6f1" stroke="#1565c0" stroke-width="2.2" />
+  <path d="M628,182 Q639,169 650,182" fill="#aed6f1" stroke="#1565c0" stroke-width="2.2" />
   <!-- iscrtkana linija razine -->
-  <line x1="528" y1="258" x2="615" y2="258" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4 3" />
-  <line x1="663" y1="258" x2="698" y2="258" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4 3" />
+  <line x1="528" y1="248" x2="615" y2="248" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4 3" />
+  <line x1="663" y1="248" x2="698" y2="248" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4 3" />
 
   <!-- σ strelice na meniskusu (površinska napetost) -->
-  <line x1="618" y1="196" x2="604" y2="180" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u02v2vk_v2aSig)" />
-  <line x1="650" y1="196" x2="664" y2="180" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u02v2vk_v2aSig)" />
+  <line x1="618" y1="182" x2="604" y2="166" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u02v2vk_v2aSig)" />
+  <line x1="650" y1="182" x2="664" y2="166" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u02v2vk_v2aSig)" />
   <!-- θ kut oznaka -->
   <!-- h kota: desno, x=678, od y=194 do y=258 -->
   <!-- d kota: iznad cijevi, ext linije od y=130 (vrh stijenki) do y=126 -->
   <!-- formula box desno -->
   <rect x="520" y="322" width="408" height="76" rx="10" fill="#eaf4fb" stroke="#1565c0" stroke-width="1.5" />
   <line x1="46" y1="150" x2="46" y2="290" stroke="#b7600c" stroke-width="2" marker-start="url(#u02v2vk_v2aDR)" marker-end="url(#u02v2vk_v2aD)" />
-  <line x1="672" y1="194" x2="672" y2="258" stroke="#b7600c" stroke-width="2" marker-start="url(#u02v2vk_v2aDR)" marker-end="url(#u02v2vk_v2aD)" />
-  <line x1="628" y1="130" x2="628" y2="126" stroke="#b7600c" stroke-width="1" stroke-dasharray="2 2" />
-  <line x1="650" y1="130" x2="650" y2="126" stroke="#b7600c" stroke-width="1" stroke-dasharray="2 2" />
-  <line x1="628" y1="126" x2="650" y2="126" stroke="#b7600c" stroke-width="1.8" marker-start="url(#u02v2vk_v2aDR)" marker-end="url(#u02v2vk_v2aD)" />
+  <line x1="672" y1="180" x2="672" y2="248" stroke="#b7600c" stroke-width="2" marker-start="url(#u02v2vk_v2aDR)" marker-end="url(#u02v2vk_v2aD)" />
+  <line x1="628" y1="140" x2="628" y2="134" stroke="#b7600c" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="650" y1="140" x2="650" y2="134" stroke="#b7600c" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="628" y1="134" x2="650" y2="134" stroke="#b7600c" stroke-width="1.8" marker-start="url(#u02v2vk_v2aDR)" marker-end="url(#u02v2vk_v2aD)" />
   <text x="56" y="114" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Smicanje između paralelnih ploča</text>
 
   <text x="336" y="123" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0"><tspan font-weight="700">v</tspan> = 0,90 m/s</text>
@@ -176,14 +174,14 @@
 
   <text x="522" y="114" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Kapilarni uspon etanola u staklenoj kapilari</text>
 
-  <text x="528" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">slobodna površina</text>
-  <text x="565" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0d47a1">etanol</text>
-  <text x="528" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">ρ = 790 kg/m³</text>
-  <text x="528" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">σ = 0,022 N/m</text>
+  <text x="528" y="242" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">slobodna površina</text>
+  <text x="560" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0d47a1">etanol</text>
+  <text x="716" y="165" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">ρ = 790 kg/m³</text>
+  <text x="716" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">σ = 0,022 N/m</text>
 
-  <text x="639" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#1565c0">σ</text>
+  <text x="639" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#1565c0">σ</text>
 
-  <text x="602" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="end">θ=18°</text>
+  <text x="602" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="end">θ=18°</text>
 
   <text x="536" y="343" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a5a78">Kapilarni uspon (ravnoteža σ i težine stupca):</text>
   <text x="536" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a2530">h = 4σ cosθ / (ρgd)</text>
@@ -191,10 +189,10 @@
 <text x="52" y="225" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#b7600c">δ</text>
   <text x="52.0" y="241.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 3 mm</text>
 
-  <text x="679" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#b7600c">h</text>
-  <text x="679.0" y="244.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 10,8 mm</text>
+  <text x="679" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#b7600c">h</text>
+  <text x="679.0" y="224.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 10,8 mm</text>
 
-  <text x="620" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="end" fill="#b7600c">d</text>
-  <text x="670" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 1,0 mm</text>
+  <text x="620" y="131" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="end" fill="#b7600c">d</text>
+  <text x="670" y="131" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 1,0 mm</text>
 
   </svg>

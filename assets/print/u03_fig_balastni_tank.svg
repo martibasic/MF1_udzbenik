@@ -40,8 +40,6 @@
 
   <!-- Pozadina -->
   <rect width="980" height="560" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="532" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- Vertikalni separator izmedu panela -->
   <line x1="610" y1="34" x2="610" y2="526" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
 

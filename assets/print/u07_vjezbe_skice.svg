@@ -47,8 +47,6 @@
 
   <!-- Pozadina + okvir -->
   <rect width="960" height="760" fill="#ffffff" />
-  <rect x="14" y="14" width="932" height="732" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- ============================================================
        T1 - Hermeticki zatvoreno tijelo, potpuno uronjeno (gornji lijevo)
        V = 0,085 m^3, m = 62 kg, rho = 998 kg/m^3

@@ -45,8 +45,6 @@
   </defs>
 
   <!-- pozadina -->
-  <rect x="14" y="14" width="952" height="432" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- ===================== LIJEVI PANEL: Fizikalni model ===================== -->
   <rect x="28" y="28" width="446" height="404" rx="10" fill="#ffffff" stroke="#cfe0ee" stroke-width="1.2" />
   <!-- Slobodna povrsina i voda -->

@@ -39,7 +39,6 @@
   </defs>
 
   <!-- okvirni panel -->
-  <rect x="14" y="14" width="952" height="532" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
   <line x1="412" y1="32" x2="412" y2="528" stroke="#dce7f0" stroke-width="1.1" stroke-dasharray="4,5" />
   <line x1="700" y1="32" x2="700" y2="528" stroke="#dce7f0" stroke-width="1.1" stroke-dasharray="4,5" />
 

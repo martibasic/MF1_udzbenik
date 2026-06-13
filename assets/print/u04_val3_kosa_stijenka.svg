@@ -37,8 +37,6 @@
 
   <!-- Background + outer frame -->
   <rect width="940" height="540" fill="#ffffff" />
-  <rect x="14" y="14" width="912" height="512" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- ===================== HORIZONTAL ACCELERATION ARROW (above module) ===================== -->
   <!-- Module accelerates to the RIGHT. Arrow drawn above the module. -->
   <line x1="160" y1="80" x2="360" y2="80" stroke="#8e44ad" stroke-width="3" marker-end="url(#u04v3ks_aV)" />

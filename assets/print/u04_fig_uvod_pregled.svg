@@ -43,7 +43,6 @@
 
   <!-- Pozadina + okvirni header -->
   <rect width="980" height="510" fill="#ffffff" />
-  <rect x="10" y="10" width="960" height="490" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
   <rect x="10" y="10" width="960" height="36" rx="12" fill="url(#u04fup_hdr)" />
   <rect x="10" y="28" width="960" height="18" fill="url(#u04fup_hdr)" />
   <!-- ===================================================================

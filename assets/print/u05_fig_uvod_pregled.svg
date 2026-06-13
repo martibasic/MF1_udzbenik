@@ -34,8 +34,6 @@
   </defs>
 
   <!-- Pozadina (cijeli okvir) -->
-  <rect x="14" y="14" width="952" height="492" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
   <!-- ===================== PANEL 1: FIZIKALNI MODEL ===================== -->
   <rect x="24" y="24" width="354" height="472" rx="10" fill="#ffffff" stroke="#cfe0ee" stroke-width="1.2" />
   <rect x="24" y="24" width="354" height="32" rx="10" fill="#1565c0" />

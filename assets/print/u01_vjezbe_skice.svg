@@ -22,8 +22,6 @@
   </defs>
 
   <rect width="980" height="660" fill="#ffffff" />
-  <rect x="14" y="14" width="952" height="632" rx="12" fill="#ffffff" stroke="#dde3ea" stroke-width="1.5" />
-
   <!-- ============================================================
        T1 - Servisna hidraulicna presa (gornji lijevo)
        d_1 = 28 mm, F_1 = 180 N, d_2 = 140 mm, s_1 = 120 mm
