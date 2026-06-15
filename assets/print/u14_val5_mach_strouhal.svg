@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 470" role="img" aria-labelledby="u14v5ms_title u14v5ms_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u14v5ms_title">U14 Val 5 - Machov i Strouhalov broj</title>
+  <desc id="u14v5ms_desc">Lijevo: vod zraka promjera 80 mm; pri Ma=0,234 strujanje je nestlacivo, pri Ma=0,468 stlacivo, granica je Ma=0,3. Desno: dimnjak promjera 2 m na vjetru 12 m/s otpusta Karmanove vrtloge frekvencijom 1,2 Hz pri Strouhalovom broju 0,2; rezonancija pri 6 m/s.</desc>
+  <defs>
+    <marker id="u14v5ms_aGray" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#5d6d7e" />
+    </marker>
+    <marker id="u14v5ms_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u14v5ms_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u14v5ms_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <pattern id="u14v5ms_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
+    </pattern>
+  </defs>
+
+  <rect width="980" height="470" fill="#ffffff" />
+
+  <!-- ===================== LIJEVO: Mach ===================== -->
+  <rect x="24" y="28" width="456" height="414" rx="10" fill="#fcfdff" stroke="#5d6d7e" stroke-width="1.2" />
+  <rect x="24" y="28" width="456" height="30" rx="10" fill="#34495e" />
+  <rect x="24" y="50" width="456" height="8" fill="#34495e" />
+  <text x="252" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Machov broj: granica nestlačivosti</text>
+
+  <!-- vod -->
+  <rect x="70" y="108" width="380" height="14" fill="url(#u14v5ms_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="70" y="190" width="380" height="14" fill="url(#u14v5ms_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="70" y="122" width="380" height="68" fill="#eef3f6" />
+  <line x1="120" y1="156" x2="220" y2="156" stroke="#5d6d7e" stroke-width="2.6" marker-end="url(#u14v5ms_aGray)" />
+  <text x="300" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#5a6a78">zrak, a = 340 m/s</text>
+  <!-- kota D -->
+  <line x1="92" y1="122" x2="92" y2="190" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u14v5ms_aDimR)" marker-end="url(#u14v5ms_aDim)" />
+  <text x="60" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c"><tspan font-weight="700">D</tspan> = 80 mm</text>
+
+  <!-- Ma skala -->
+  <text x="252" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#5a6a78">Machov broj</text>
+  <rect x="70" y="266" width="108" height="20" fill="#eafaf1" stroke="#1e8449" stroke-width="1.1" />
+  <rect x="178" y="266" width="272" height="20" fill="#fdedec" stroke="#c0392b" stroke-width="1.1" />
+  <line x1="70" y1="266" x2="70" y2="300" stroke="#3a4a56" stroke-width="1" />
+  <line x1="450" y1="266" x2="450" y2="300" stroke="#3a4a56" stroke-width="1" />
+  <line x1="178" y1="260" x2="178" y2="306" stroke="#c0392b" stroke-width="1.3" stroke-dasharray="5,4" />
+  <!-- markeri -->
+  <circle cx="154" cy="276" r="5" fill="#1e8449" stroke="#14532d" stroke-width="1" />
+  <circle cx="238" cy="276" r="5" fill="#c0392b" stroke="#7b241c" stroke-width="1" />
+  <text x="124" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">0</text>
+  <text x="178" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#c0392b">0,3</text>
+  <text x="450" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1</text>
+  <text x="124" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#14532d"><tspan font-weight="700">Ma₁ = 0,234</tspan> nestlačivo</text>
+  <text x="238" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#7b241c"><tspan font-weight="700">Ma₂ = 0,468</tspan> stlačivo</text>
+  <text x="252" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">Q_lim (Ma = 0,3) ≈ 0,513 m³/s</text>
+  <text x="252" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#163b57">Q₁ = 0,40 m³/s  ·  Q₂ = 0,80 m³/s</text>
+
+  <!-- ===================== DESNO: Strouhal ===================== -->
+  <rect x="500" y="28" width="456" height="414" rx="10" fill="#fcfdff" stroke="#8e44ad" stroke-width="1.2" />
+  <rect x="500" y="28" width="456" height="30" rx="10" fill="#6c3483" />
+  <rect x="500" y="50" width="456" height="8" fill="#6c3483" />
+  <text x="728" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Strouhalov broj: vrtložno otpuštanje</text>
+
+  <!-- vjetar -->
+  <line x1="520" y1="240" x2="576" y2="240" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u14v5ms_aR)" />
+  <line x1="520" y1="200" x2="576" y2="200" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u14v5ms_aR)" />
+  <line x1="520" y1="280" x2="576" y2="280" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u14v5ms_aR)" />
+  <text x="524" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b"><tspan font-weight="700">vjetar</tspan> v = 12 m/s</text>
+
+  <!-- dimnjak -->
+  <rect x="596" y="120" width="40" height="240" fill="url(#u14v5ms_hatch)" stroke="#3a4a56" stroke-width="1.6" />
+  <!-- kota D dimnjaka -->
+  <line x1="596" y1="378" x2="636" y2="378" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u14v5ms_aDimR)" marker-end="url(#u14v5ms_aDim)" />
+  <text x="616" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c"><tspan font-weight="700">D</tspan> = 2,0 m</text>
+
+  <!-- vrtlozi (Karmanova staza) -->
+  <circle cx="680" cy="208" r="13" fill="none" stroke="#8e44ad" stroke-width="1.8" />
+  <circle cx="724" cy="272" r="13" fill="none" stroke="#8e44ad" stroke-width="1.8" />
+  <circle cx="772" cy="208" r="13" fill="none" stroke="#8e44ad" stroke-width="1.8" />
+  <circle cx="818" cy="272" r="13" fill="none" stroke="#8e44ad" stroke-width="1.8" />
+  <circle cx="866" cy="208" r="13" fill="none" stroke="#8e44ad" stroke-width="1.8" />
+  <line x1="640" y1="240" x2="900" y2="240" stroke="#7a8a96" stroke-width="0.9" stroke-dasharray="9,6" />
+
+  <rect x="540" y="408" width="380" height="0" />
+  <text x="728" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#6c3483">Kármánova vrtložna staza</text>
+  <text x="728" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#163b57"><tspan font-weight="700">f</tspan> = St·v/D = 1,2 Hz  ·  St ≈ 0,2  ·  v_rez = 6,0 m/s</text>
+</svg>

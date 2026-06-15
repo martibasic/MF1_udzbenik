@@ -45,7 +45,15 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $\varepsilon$ | apsolutna hrapavost cijevi | m |
 | $\lambda$ | Darcyjev koeficijent trenja | - |
 | $\xi$ | lokalni koeficijent gubitka | - |
-| $C_d$ | koeficijent istjecanja otvora | - |
+| $C_d$ | koeficijent istjecanja otvora (i koeficijent otpora tijela, $F_D/\tfrac12\rho v^2 A$) | - |
+| $Fr$ | Froudeov broj, $v/\sqrt{gL}$ | - |
+| $Eu$ | Eulerov broj, $\Delta p/(\rho v^2)$ | - |
+| $C_p$ | koeficijent tlaka, $(p-p_\infty)/(\tfrac12\rho v^2)$ | - |
+| $\sigma_{kav}$ | kavitacijski broj (ne miješati s napetošću $\sigma$) | - |
+| $We$ | Weberov broj, $\rho v^2 L/\sigma$ | - |
+| $Bo$ | Bondov (Eötvösov) broj, $\rho g L^2/\sigma$ | - |
+| $St$ | Strouhalov broj, $fL/v$ | - |
+| $Ma$ | Machov broj, $v/a$ | - |
 
 ## pog. 1–2: Osnovne veličine, tlak, viskoznost i kapilarnost
 
@@ -115,6 +123,24 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $Q_{tot} = \sum_i Q_i$, $h_{w,1} = h_{w,2}$ (paralelni spoj) | Dvije grane: kraća prima $Q_1 = 6\,\text{L/s}$, dulja $Q_2 = 4\,\text{L/s}$ za isti pad od $3\,\text{m}$. |
 
 U turbulentnom području $\lambda$ više nije funkcija samo Reynoldsovog broja, nego i relativne hrapavosti $\varepsilon / D$ — koeficijent se očitava s Moodyjeva dijagrama.
+
+## pog. 14: Bezdimenzijski brojevi i sličnost
+
+Svaki broj je omjer dviju sila (inercija kao referenca); pri sličnosti se čuva mjerodavni broj.
+
+| Formula | Konkretan brojčani primjer |
+| --- | --- |
+| $Re = \rho v L/\mu = vL/\nu$ (inercija/viskoznost) | Voda u kanalu $D = 6\,\text{mm}$, $v = 1{,}2\,\text{m/s}$: $Re = 7200$ (turbulentno). |
+| $Fr = v/\sqrt{gL}$ (inercija/gravitacija) | Brod $L = 150\,\text{m}$, $v = 9\,\text{m/s}$: $Fr \approx 0{,}235$. |
+| $Eu = \Delta p/(\rho v^2)$ (tlak/inercija) | Cijev $\Delta p = 18\,\text{kPa}$, $v = 2\,\text{m/s}$: $Eu = 4{,}5$. |
+| $\sigma_{kav} = (p - p_v)/(\tfrac12\rho v^2)$ (kavitacija) | Venturi $p_1 = 101{,}3\,\text{kPa}$, $v_2 = 19{,}1\,\text{m/s}$: $\sigma_{kav} \approx 0{,}543$. |
+| $We = \rho v^2 L/\sigma$ (inercija/napetost) | Kap $d = 3\,\text{mm}$, $v = 25\,\text{m/s}$ u zraku: $We \approx 31$ ($>12$ → raspad). |
+| $Bo = \rho g L^2/\sigma$ (gravitacija/napetost) | Voda $L = 3\,\text{mm}$: $Bo \approx 1{,}2$; kapilarna duljina $L_c \approx 2{,}7\,\text{mm}$. |
+| $St = fL/v$ (vrtložno otpuštanje) | Dimnjak $D = 2\,\text{m}$, $v = 12\,\text{m/s}$, $St \approx 0{,}2$: $f \approx 1{,}2\,\text{Hz}$. |
+| $Ma = v/a$ (inercija/stlačivost) | Zrak $v = 79{,}6\,\text{m/s}$, $a = 340\,\text{m/s}$: $Ma \approx 0{,}23$ ($<0{,}3$ → nestlačivo). |
+| $C_d = F_D/(\tfrac12\rho v^2 A)$ (otpor tijela) | Kugla $Re = 4\cdot10^4$: $C_d \approx 0{,}45$ → $F_D \approx 76\,\text{mN}$. |
+
+Froudeova i Reynoldsova sličnost u pravilu se ne mogu zadovoljiti istovremeno istim fluidom; bira se dominantni broj, a drugi se korigira (npr. otpor broda se razdvaja na valni i viskozni dio).
 
 ## Tipične zamjene jedinica koje treba zaustaviti odmah
 

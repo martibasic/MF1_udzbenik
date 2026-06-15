@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" role="img" aria-labelledby="u14v1rk_title u14v1rk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
+  <title id="u14v1rk_title">U14 Val 1 - Reynoldsov broj u dva sustava iste geometrije</title>
+  <desc id="u14v1rk_desc">Isti kanal promjera 6 mm. Gore voda brzine 1,2 m/s daje Re=7200 i turbulentno strujanje (vrtlozi). Dolje ulje brzine 0,30 m/s daje Re=45 i izrazito laminarno strujanje (paralelne strujnice). Rezim odreduje omjer sila kroz Reynoldsov broj, ne geometrija.</desc>
+  <defs>
+    <marker id="u14v1rk_aB" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
+    </marker>
+    <marker id="u14v1rk_aO" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#7a4d10" />
+    </marker>
+    <marker id="u14v1rk_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u14v1rk_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <linearGradient id="u14v1rk_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <linearGradient id="u14v1rk_oil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#c8a000" />
+    </linearGradient>
+    <pattern id="u14v1rk_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
+    </pattern>
+  </defs>
+
+  <rect width="880" height="460" fill="#ffffff" />
+
+  <!-- ====================== GORE: VODA (turbulentno) ====================== -->
+  <rect x="150" y="92" width="600" height="14" fill="url(#u14v1rk_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="150" y="172" width="600" height="14" fill="url(#u14v1rk_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="150" y="106" width="600" height="66" fill="url(#u14v1rk_water)" />
+  <!-- turbulentne strujnice (vrtlozi) -->
+  <path d="M170,139 q30,-22 60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0" fill="none" stroke="#10405f" stroke-width="1.4" opacity="0.7" />
+  <circle cx="300" cy="125" r="9" fill="none" stroke="#10405f" stroke-width="1.2" opacity="0.6" />
+  <circle cx="470" cy="155" r="10" fill="none" stroke="#10405f" stroke-width="1.2" opacity="0.6" />
+  <circle cx="610" cy="124" r="8" fill="none" stroke="#10405f" stroke-width="1.2" opacity="0.6" />
+  <line x1="660" y1="139" x2="735" y2="139" stroke="#1565c0" stroke-width="2.6" marker-end="url(#u14v1rk_aB)" />
+  <!-- kota D -->
+  <line x1="128" y1="106" x2="128" y2="172" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u14v1rk_aDimR)" marker-end="url(#u14v1rk_aDim)" />
+  <line x1="150" y1="106" x2="124" y2="106" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="150" y1="172" x2="124" y2="172" stroke="#b7600c" stroke-width="0.7" />
+
+  <!-- ====================== DOLJE: ULJE (laminarno) ====================== -->
+  <rect x="150" y="286" width="600" height="14" fill="url(#u14v1rk_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="150" y="366" width="600" height="14" fill="url(#u14v1rk_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="150" y="300" width="600" height="66" fill="url(#u14v1rk_oil)" />
+  <!-- laminarne strujnice (paralelne) -->
+  <line x1="180" y1="313" x2="700" y2="313" stroke="#7a4d10" stroke-width="1.3" opacity="0.7" marker-end="url(#u14v1rk_aO)" />
+  <line x1="180" y1="333" x2="710" y2="333" stroke="#7a4d10" stroke-width="1.6" opacity="0.8" marker-end="url(#u14v1rk_aO)" />
+  <line x1="180" y1="353" x2="700" y2="353" stroke="#7a4d10" stroke-width="1.3" opacity="0.7" marker-end="url(#u14v1rk_aO)" />
+  <!-- kota D -->
+  <line x1="128" y1="300" x2="128" y2="366" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u14v1rk_aDimR)" marker-end="url(#u14v1rk_aDim)" />
+  <line x1="150" y1="300" x2="124" y2="300" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="150" y1="366" x2="124" y2="366" stroke="#b7600c" stroke-width="0.7" />
+
+  <!-- ====================== TEKST ====================== -->
+  <text x="450" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#5a6a78">isti kanal D = 6 mm — režim mijenja samo omjer sila</text>
+
+  <text x="100" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="end" fill="#b7600c">D</text>
+  <text x="100" y="337" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="end" fill="#b7600c">D</text>
+
+  <text x="760" y="135" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#10405f"><tspan font-weight="700">voda</tspan></text>
+  <text x="760" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#163b57">v = 1,2 m/s</text>
+  <text x="760" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">Re = 7200</text>
+  <text x="760" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#c0392b">turbulentno</text>
+
+  <text x="760" y="329" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#7a4d10"><tspan font-weight="700">ulje</tspan></text>
+  <text x="760" y="347" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#163b57">v = 0,30 m/s</text>
+  <text x="760" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449">Re = 45</text>
+  <text x="760" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1e8449">laminarno</text>
+
+  <text x="450" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">Re = vD/ν  ·  prijelaz u cijevi: Re_kr ≈ 2300  ·  v_kr (voda) ≈ 0,383 m/s</text>
+</svg>

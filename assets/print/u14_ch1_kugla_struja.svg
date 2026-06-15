@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="u14c1ks_title u14c1ks_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+  <title id="u14c1ks_title">U14 CH 1 - Buckinghamova analiza otpora kugle i krivulja Cd(Re)</title>
+  <desc id="u14c1ks_desc">Lijevo: kugla promjera 20 mm u struji zraka brzine 30 m/s, sila otpora 76,3 mN pri Reynoldsovom broju 40000. Desno: univerzalna krivulja koeficijenta otpora Cd u ovisnosti o Re (log-log), s radnom tockom Cd=0,45 i otpornom krizom oko 2 do 3 puta 10 na petu.</desc>
+  <defs>
+    <marker id="u14c1ks_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u14c1ks_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    </marker>
+    <marker id="u14c1ks_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u14c1ks_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <radialGradient id="u14c1ks_sphere" cx="38%" cy="34%" r="72%">
+      <stop offset="0%" stop-color="#c2ccd3" />
+      <stop offset="100%" stop-color="#5d6d7e" />
+    </radialGradient>
+  </defs>
+
+  <rect width="980" height="520" fill="#ffffff" />
+
+  <!-- ===================== LIJEVO: kugla u struji ===================== -->
+  <rect x="24" y="28" width="446" height="464" rx="10" fill="#fcfdff" stroke="#90a4b4" stroke-width="1.2" />
+  <rect x="24" y="28" width="446" height="30" rx="10" fill="#34495e" />
+  <rect x="24" y="50" width="446" height="8" fill="#34495e" />
+
+  <!-- struja zraka -->
+  <line x1="60" y1="210" x2="158" y2="210" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u14c1ks_aR)" />
+  <line x1="60" y1="262" x2="158" y2="262" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u14c1ks_aR)" />
+  <line x1="60" y1="314" x2="158" y2="314" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u14c1ks_aR)" />
+
+  <!-- kugla -->
+  <circle cx="250" cy="262" r="58" fill="url(#u14c1ks_sphere)" stroke="#3a4a56" stroke-width="1.6" />
+
+  <!-- sila otpora -->
+  <line x1="312" y1="262" x2="406" y2="262" stroke="#1e8449" stroke-width="3" marker-end="url(#u14c1ks_aG)" />
+
+  <!-- kota D -->
+  <line x1="338" y1="204" x2="338" y2="320" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u14c1ks_aDimR)" marker-end="url(#u14c1ks_aDim)" />
+  <line x1="250" y1="204" x2="342" y2="204" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="308" y1="320" x2="342" y2="320" stroke="#b7600c" stroke-width="0.7" />
+
+  <text x="247" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Kugla u struji zraka</text>
+  <text x="60" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#c0392b"><tspan font-weight="700">struja</tspan>  v = 30 m/s</text>
+  <text x="410" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.75em">D</tspan> = 76,3 mN</text>
+  <text x="352" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#b7600c"><tspan font-weight="700">D</tspan> = 20 mm</text>
+
+  <rect x="48" y="384" width="398" height="86" rx="8" fill="#f4f6f7" stroke="#90a4b4" stroke-width="1.1" />
+  <text x="247" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57"><tspan font-weight="700">Re</tspan> = vD/ν = 4,0 · 10⁴</text>
+  <text x="247" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">C<tspan baseline-shift="sub" font-size="0.7em">d</tspan> = 0,45  →  F<tspan baseline-shift="sub" font-size="0.7em">D</tspan> = C<tspan baseline-shift="sub" font-size="0.7em">d</tspan> · ½ρv²A</text>
+  <text x="247" y="457" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">Π₁ = F_D/(ρv²D²) = 0,177 = C_d · π/8</text>
+
+  <!-- ===================== DESNO: graf Cd(Re) ===================== -->
+  <rect x="494" y="28" width="462" height="464" rx="10" fill="#fcfdff" stroke="#90a4b4" stroke-width="1.2" />
+  <rect x="494" y="28" width="462" height="30" rx="10" fill="#1565c0" />
+  <rect x="494" y="50" width="462" height="8" fill="#1565c0" />
+  <text x="725" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Univerzalna krivulja C_d(Re)</text>
+
+  <!-- osi -->
+  <line x1="540" y1="98" x2="540" y2="460" stroke="#3a4a56" stroke-width="1.4" />
+  <line x1="540" y1="460" x2="930" y2="460" stroke="#3a4a56" stroke-width="1.4" />
+
+  <!-- gridline Cd -->
+  <line x1="540" y1="336.7" x2="930" y2="336.7" stroke="#e1e8ee" stroke-width="1" />
+  <line x1="540" y1="213.3" x2="930" y2="213.3" stroke="#e1e8ee" stroke-width="1" />
+  <line x1="540" y1="90" x2="930" y2="90" stroke="#e1e8ee" stroke-width="1" />
+  <!-- gridline Re -->
+  <line x1="637.5" y1="98" x2="637.5" y2="460" stroke="#e1e8ee" stroke-width="1" />
+  <line x1="735" y1="98" x2="735" y2="460" stroke="#e1e8ee" stroke-width="1" />
+  <line x1="832.5" y1="98" x2="832.5" y2="460" stroke="#e1e8ee" stroke-width="1" />
+
+  <!-- krivulja -->
+  <path d="M540,332 Q600,378 637,378 Q690,386 735,384 L794,380 L832,376 L862,373 C872,376 880,432 886,458 C902,448 918,433 930,429" fill="none" stroke="#1565c0" stroke-width="2.6" />
+
+  <!-- radna tocka -->
+  <circle cx="794" cy="380" r="5.5" fill="#c0392b" stroke="#7b241c" stroke-width="1" />
+  <line x1="794" y1="380" x2="794" y2="460" stroke="#c0392b" stroke-width="0.8" stroke-dasharray="4,4" />
+
+  <!-- otporna kriza -->
+  <line x1="886" y1="430" x2="906" y2="392" stroke="#5d6d7e" stroke-width="0.9" />
+  <text x="906" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5d6d7e">otporna</text>
+  <text x="906" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5d6d7e">kriza</text>
+
+  <!-- oznake osi -->
+  <text x="936" y="464" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#3a4a56">Re</text>
+  <text x="528" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#3a4a56">C_d</text>
+  <text x="540" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">10²</text>
+  <text x="637.5" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">10³</text>
+  <text x="735" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">10⁴</text>
+  <text x="832.5" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">10⁵</text>
+  <text x="930" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">10⁶</text>
+  <text x="534" y="464" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#5a6a78">0,1</text>
+  <text x="534" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#5a6a78">1</text>
+  <text x="534" y="217" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#5a6a78">10</text>
+  <text x="534" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#5a6a78">100</text>
+  <text x="794" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#c0392b">0,45</text>
+</svg>

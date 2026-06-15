@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-labelledby="u14fpb_title u14fpb_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u14fpb_title">U14 - Buckinghamov Pi postupak na primjeru otpora kugle</title>
+  <desc id="u14fpb_desc">Popis varijabli F_D, rho, v, D, mu i njihova dimenzijska matrica u M-L-T. Pet varijabli i tri neovisne dimenzije daju dvije bezdimenzijske grupe: Pi_1 = F/(rho v^2 D^2) i Pi_2 = rho v D / mu = Re. Time se otpor svodi na C_d = f(Re).</desc>
+  <defs>
+    <marker id="u14fpb_aDn" markerWidth="8" markerHeight="7" refX="4" refY="6.5" orient="auto">
+      <path d="M0,0 L8,0 L4,7 z" fill="#1565c0" />
+    </marker>
+  </defs>
+
+  <rect width="900" height="480" fill="#ffffff" />
+  <rect x="20" y="20" width="860" height="34" rx="8" fill="#1565c0" />
+  <text x="450" y="43" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">Dimenzijska matrica → bezdimenzijske grupe</text>
+
+  <!-- ===== Matrica ===== -->
+  <rect x="60" y="78" width="780" height="160" rx="6" fill="#f8fbff" stroke="#90a4b4" stroke-width="1.2" />
+  <!-- vertikalne linije -->
+  <line x1="180" y1="78" x2="180" y2="238" stroke="#c8d6e4" stroke-width="1" />
+  <line x1="312" y1="78" x2="312" y2="238" stroke="#c8d6e4" stroke-width="1" />
+  <line x1="444" y1="78" x2="444" y2="238" stroke="#c8d6e4" stroke-width="1" />
+  <line x1="576" y1="78" x2="576" y2="238" stroke="#c8d6e4" stroke-width="1" />
+  <line x1="708" y1="78" x2="708" y2="238" stroke="#c8d6e4" stroke-width="1" />
+  <!-- horizontalne linije -->
+  <line x1="60" y1="118" x2="840" y2="118" stroke="#c8d6e4" stroke-width="1" />
+  <line x1="60" y1="158" x2="840" y2="158" stroke="#c8d6e4" stroke-width="1" />
+  <line x1="60" y1="198" x2="840" y2="198" stroke="#c8d6e4" stroke-width="1" />
+
+  <!-- zaglavlje stupaca -->
+  <text x="120" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#34495e">dimenzija</text>
+  <text x="246" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" font-weight="700" text-anchor="middle" fill="#c0392b">F<tspan baseline-shift="sub" font-size="0.7em">D</tspan></text>
+  <text x="378" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" font-weight="700" text-anchor="middle" fill="#1565c0">ρ</text>
+  <text x="510" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" font-weight="700" text-anchor="middle" fill="#1565c0">v</text>
+  <text x="642" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" font-weight="700" text-anchor="middle" fill="#1565c0">D</text>
+  <text x="774" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" font-weight="700" text-anchor="middle" fill="#5d6d7e">μ</text>
+
+  <!-- redak M -->
+  <text x="120" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#34495e">M</text>
+  <text x="246" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">1</text>
+  <text x="378" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">1</text>
+  <text x="510" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">0</text>
+  <text x="642" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">0</text>
+  <text x="774" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">1</text>
+
+  <!-- redak L -->
+  <text x="120" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#34495e">L</text>
+  <text x="246" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">1</text>
+  <text x="378" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">−3</text>
+  <text x="510" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">1</text>
+  <text x="642" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">1</text>
+  <text x="774" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">−1</text>
+
+  <!-- redak T -->
+  <text x="120" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#34495e">T</text>
+  <text x="246" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">−2</text>
+  <text x="378" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">0</text>
+  <text x="510" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">−1</text>
+  <text x="642" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">0</text>
+  <text x="774" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#163b57">−1</text>
+
+  <!-- strelica -->
+  <line x1="450" y1="252" x2="450" y2="290" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u14fpb_aDn)" />
+  <text x="600" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#5a6a78">n = 5,  k = 3  →  broj Π-grupa = n − k = 2</text>
+
+  <!-- rezultati -->
+  <rect x="120" y="306" width="300" height="92" rx="10" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="480" y="306" width="300" height="92" rx="10" fill="#eafaf1" stroke="#1e8449" stroke-width="1.4" />
+
+  <text x="270" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#5a6a78">grupa otpora</text>
+  <text x="270" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-style="italic" font-weight="700" text-anchor="middle" fill="#1565c0">Π₁ = F<tspan baseline-shift="sub" font-size="0.7em">D</tspan> / (ρv²D²)</text>
+
+  <text x="630" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#5a6a78">Reynoldsov broj</text>
+  <text x="630" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-style="italic" font-weight="700" text-anchor="middle" fill="#1e8449">Π₂ = ρvD / μ = Re</text>
+
+  <text x="450" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" text-anchor="middle" fill="#163b57">Π₁ = f(Π₂)  ⟹  C<tspan baseline-shift="sub" font-size="0.7em">d</tspan> = f(Re)</text>
+</svg>

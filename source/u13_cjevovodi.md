@@ -58,7 +58,7 @@ $$
 \lambda = \frac{64}{Re},
 $$
 
-dok u turbulentnom području $\lambda$ više ne ovisi samo o $Re$, nego i o relativnoj hrapavosti $\varepsilon/D$. Kvantitativni izraz daje Colebrook-Whiteova jednadžba, koja je standardni model na kojemu je grafički zasnovan Moodyjev dijagram.
+dok u turbulentnom području $\lambda$ više ne ovisi samo o $Re$, nego i o relativnoj hrapavosti $\varepsilon/D$. Kvantitativni izraz daje Colebrook-Whiteova jednadžba, koja je standardni model na kojemu je grafički zasnovan Moodyjev dijagram. Zašto $\lambda$ ovisi baš o $Re$ i $\varepsilon/D$ dokazuje se Buckinghamovim $\Pi$ teoremom u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span>.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Colebrook-Whiteova jednadžba i Moodyjev dijagram</p>

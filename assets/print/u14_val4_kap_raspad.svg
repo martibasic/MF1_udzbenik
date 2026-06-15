@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="u14v4kr_title u14v4kr_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:820px;height:auto;">
+  <title id="u14v4kr_title">U14 Val 4 - Weberov i Bondov broj: raspad kapi u struji zraka</title>
+  <desc id="u14v4kr_desc">Kap promjera 3 mm u struji zraka brzine 25 m/s. Weberov broj 31,3 nadmasuje kriticnih 12 pa inercija zraka nadvlada povrsinsku napetost i kap se raspada. Bondov broj 1,23 znaci da su gravitacija i napetost usporedive; kapilarna duljina 2,71 mm.</desc>
+  <defs>
+    <marker id="u14v4kr_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u14v4kr_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+    </marker>
+    <marker id="u14v4kr_aP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+    </marker>
+    <marker id="u14v4kr_aGray" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#5d6d7e" />
+    </marker>
+    <radialGradient id="u14v4kr_drop" cx="38%" cy="34%" r="70%">
+      <stop offset="0%" stop-color="#d6ebfa" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </radialGradient>
+  </defs>
+
+  <rect width="820" height="440" fill="#ffffff" />
+  <text x="410" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#5a6a78">Inercija struje zraka vs. površinska napetost koja drži kap</text>
+
+  <!-- struja zraka -->
+  <line x1="56" y1="150" x2="150" y2="150" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u14v4kr_aR)" />
+  <line x1="56" y1="200" x2="150" y2="200" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u14v4kr_aR)" />
+  <line x1="56" y1="250" x2="150" y2="250" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u14v4kr_aR)" />
+  <text x="60" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#c0392b"><tspan font-weight="700">struja zraka</tspan>  v = 25 m/s</text>
+
+  <!-- kap (spljostena u disk okomit na struju) -->
+  <ellipse cx="290" cy="200" rx="36" ry="56" fill="url(#u14v4kr_drop)" stroke="#3a6e96" stroke-width="1.5" />
+  <!-- napetost (inward) -->
+  <line x1="290" y1="120" x2="290" y2="150" stroke="#1565c0" stroke-width="2" marker-end="url(#u14v4kr_aB)" />
+  <line x1="290" y1="280" x2="290" y2="250" stroke="#1565c0" stroke-width="2" marker-end="url(#u14v4kr_aB)" />
+  <!-- gravitacija -->
+  <line x1="330" y1="210" x2="330" y2="282" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u14v4kr_aP)" />
+
+  <!-- prijelaz u raspad -->
+  <line x1="360" y1="200" x2="452" y2="200" stroke="#5d6d7e" stroke-width="2.6" marker-end="url(#u14v4kr_aGray)" />
+  <text x="406" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5d6d7e">We &gt; 12</text>
+
+  <!-- fragmenti -->
+  <circle cx="510" cy="168" r="15" fill="url(#u14v4kr_drop)" stroke="#3a6e96" stroke-width="1.2" />
+  <circle cx="548" cy="206" r="10" fill="url(#u14v4kr_drop)" stroke="#3a6e96" stroke-width="1.2" />
+  <circle cx="505" cy="232" r="8" fill="url(#u14v4kr_drop)" stroke="#3a6e96" stroke-width="1.2" />
+  <circle cx="560" cy="160" r="6" fill="url(#u14v4kr_drop)" stroke="#3a6e96" stroke-width="1.2" />
+  <circle cx="540" cy="244" r="5" fill="url(#u14v4kr_drop)" stroke="#3a6e96" stroke-width="1.2" />
+  <circle cx="582" cy="214" r="6" fill="url(#u14v4kr_drop)" stroke="#3a6e96" stroke-width="1.2" />
+  <text x="544" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#3a6e96">raspad u sitnije kapi</text>
+
+  <!-- oznake -->
+  <text x="290" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#1565c0">σ (napetost)</text>
+  <text x="338" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#8e44ad">g</text>
+  <text x="244" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#10405f"><tspan font-weight="700">d</tspan> = 3 mm</text>
+
+  <!-- panel rezultata -->
+  <rect x="640" y="120" width="156" height="170" rx="10" fill="#fcfdff" stroke="#90a4b4" stroke-width="1.2" />
+  <text x="718" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#5a6a78">rezultati</text>
+  <line x1="656" y1="156" x2="780" y2="156" stroke="#c8d6e4" stroke-width="1" />
+  <text x="718" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" text-anchor="middle" fill="#c0392b">We = 31,3</text>
+  <text x="718" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">We_kr ≈ 12 → raspad</text>
+  <line x1="656" y1="222" x2="780" y2="222" stroke="#c8d6e4" stroke-width="1" />
+  <text x="718" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" text-anchor="middle" fill="#8e44ad">Bo = 1,23</text>
+  <text x="718" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">L_c ≈ 2,71 mm</text>
+
+  <rect x="60" y="356" width="700" height="28" rx="6" fill="#fdedec" stroke="#c0392b" stroke-width="1.1" />
+  <text x="410" y="375" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#7b241c">We = ρ_zr v² d / σ   ·   Bo = ρ_v g d² / σ   ·   kritična brzina (We = 12) ≈ 15,5 m/s</text>
+</svg>

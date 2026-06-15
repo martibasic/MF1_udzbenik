@@ -187,7 +187,7 @@ $$
 \frac{\Delta p}{L} = f(Re, \varepsilon/D) \cdot \frac{\rho v^2}{2D},
 $$
 
-gdje je $f(Re, \varepsilon/D) = \lambda$ Darcyjev koeficijent trenja. Faktor $1/2$ uvodi se po dogovoru (suglasje s definicijom kinetičke visine $v^2/(2g)$).
+gdje je $f(Re, \varepsilon/D) = \lambda$ Darcyjev koeficijent trenja. Faktor $1/2$ uvodi se po dogovoru (suglasje s definicijom kinetičke visine $v^2/(2g)$). Sustavno izvođenje ove ovisnosti Buckinghamovim $\Pi$ teoremom, zajedno s ostalim bezdimenzijskim brojevima, dano je u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span>.
 
 Izraz preko visine fluida (dijeljenjem s $\rho g$) glasi
 

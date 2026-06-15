@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-labelledby="u14v3vk_title u14v3vk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u14v3vk_title">U14 Val 3 - Kavitacija u Venturijevom suzenju</title>
+  <desc id="u14v3vk_desc">Venturijevo suzenje s ulazom D1=60 mm i grlom D2=20 mm. Brzina raste s 2,12 na 19,10 m/s, a tlak u grlu prema Bernoulliju pada ispod tlaka isparavanja pa nastaje kavitacija. Kavitacijski broj 0,543; najveci protok bez kavitacije priblizno 4,45 L/s.</desc>
+  <defs>
+    <marker id="u14v3vk_aB" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
+    </marker>
+    <marker id="u14v3vk_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u14v3vk_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <linearGradient id="u14v3vk_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="480" fill="#ffffff" />
+
+  <!-- ===================== VENTURI ===================== -->
+  <!-- fluid -->
+  <polygon points="80,125 360,162 520,162 820,125 820,235 520,198 360,198 80,235" fill="url(#u14v3vk_water)" />
+  <!-- stjenke -->
+  <polyline points="80,125 360,162 520,162 820,125" fill="none" stroke="#3a4a56" stroke-width="2" />
+  <polyline points="80,235 360,198 520,198 820,235" fill="none" stroke="#3a4a56" stroke-width="2" />
+  <!-- centralna os -->
+  <line x1="70" y1="180" x2="830" y2="180" stroke="#7a8a96" stroke-width="1" stroke-dasharray="9,6" />
+  <!-- protok -->
+  <line x1="110" y1="180" x2="190" y2="180" stroke="#1565c0" stroke-width="2.8" marker-end="url(#u14v3vk_aB)" />
+  <line x1="560" y1="180" x2="640" y2="180" stroke="#1565c0" stroke-width="2.8" marker-end="url(#u14v3vk_aB)" />
+  <!-- kavitacijska zona u grlu -->
+  <circle cx="500" cy="172" r="5" fill="#fadbd8" stroke="#c0392b" stroke-width="1" />
+  <circle cx="512" cy="186" r="4" fill="#fadbd8" stroke="#c0392b" stroke-width="1" />
+  <circle cx="488" cy="188" r="3.5" fill="#fadbd8" stroke="#c0392b" stroke-width="1" />
+  <circle cx="524" cy="174" r="3" fill="#fadbd8" stroke="#c0392b" stroke-width="1" />
+
+  <!-- kote D1, D2 -->
+  <line x1="100" y1="125" x2="100" y2="235" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u14v3vk_aDimR)" marker-end="url(#u14v3vk_aDim)" />
+  <line x1="445" y1="162" x2="445" y2="198" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u14v3vk_aDimR)" marker-end="url(#u14v3vk_aDim)" />
+
+  <!-- ===================== PROFIL TLAKA ===================== -->
+  <line x1="80" y1="300" x2="80" y2="430" stroke="#90a4b4" stroke-width="1.2" />
+  <line x1="80" y1="430" x2="830" y2="430" stroke="#90a4b4" stroke-width="1.2" />
+  <!-- p_v linija -->
+  <line x1="80" y1="392" x2="830" y2="392" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="8,5" />
+  <!-- krivulja tlaka -->
+  <path d="M80,318 C300,318 365,405 445,412 C525,405 545,330 820,322" fill="none" stroke="#1565c0" stroke-width="2.4" />
+  <!-- spojnica grlo->krivulja -->
+  <line x1="445" y1="198" x2="445" y2="412" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
+
+  <!-- ===================== TEKST ===================== -->
+  <text x="450" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#5a6a78">Venturijevo suženje — tlak u grlu pada do isparavanja</text>
+
+  <text x="92" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#b7600c"><tspan font-weight="700">D</tspan><tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 60 mm</text>
+  <text x="455" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c"><tspan font-weight="700">D</tspan><tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 20 mm</text>
+  <text x="150" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#10405f"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 2,12 m/s</text>
+  <text x="600" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#10405f"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 19,10 m/s</text>
+  <text x="556" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b">kavitacija</text>
+
+  <text x="846" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0">p</text>
+  <text x="836" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b">p_v</text>
+  <text x="448" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">grlo</text>
+
+  <rect x="80" y="446" width="750" height="26" rx="6" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.1" />
+  <text x="455" y="464" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#163b57"><tspan font-weight="700" font-style="italic">σ</tspan> = (p₁ − p_v)/(½ρv₂²) = 0,543   ·   Q_max bez kavitacije ≈ 4,45 L/s</text>
+</svg>

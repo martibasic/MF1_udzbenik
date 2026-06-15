@@ -78,6 +78,22 @@ Pojmovnik je zato namjerno kratak. On vraća fizikalni smisao termina, ali ne mo
 | Paralelni spoj cjevovoda | Spoj u kojem se protok dijeli među granama, a gubitak energije između istih čvorova mora biti jednak. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> | Više patchova s rubnim uvjetima $p$ ili $Q$ na zajedničkim čvorovima granjenja. |
 | Radna točka sustava | Točka presjeka zahtjeva sustava i mogućnosti crpke ili postrojenja. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> | Određuje se iterativnom CFD simulacijom (sweep) ili komplementarnim 1D mrežnim modelom. |
 
+## Bezdimenzijska analiza i sličnost `pog. 14`
+
+| Pojam | Kratka radna definicija | Tipično poglavlje | U numerici |
+| --- | --- | --- | --- |
+| Bezdimenzijski broj | Omjer dviju sila (ili veličina iste dimenzije) koji mjeri koja sila dominira. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Bezdimenzionirane jednadžbe; jedan parametar zamjenjuje više dimenzijskih veličina. |
+| Sila inercije | Težnja fluida da nastavi gibanje, $F_i \sim \rho v^2 L^2$; referenca za većinu brojeva. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Konvektivni član Navier-Stokesove jednadžbe. |
+| Froudeov broj | Omjer inercije i gravitacije, $Fr = v/\sqrt{gL}$; vlada kod slobodne površine. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Skaliranje slobodne površine u VOF simulaciji broda ili kanala. |
+| Eulerov broj / koeficijent tlaka | Omjer tlačne i inercijske sile, $Eu = \Delta p/(\rho v^2)$, $C_p$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Izlazni koeficijent (`forceCoeffs`) ili polje $C_p$. |
+| Kavitacijski broj | Rezerva tlaka iznad isparavanja, $\sigma_{kav} = (p - p_v)/(\tfrac12\rho v^2)$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Prag kavitacijskog modela (npr. Schnerr-Sauer). |
+| Weberov broj | Omjer inercije i površinske napetosti, $We = \rho v^2 L/\sigma$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Parametar VOF/CSF modela raspršivanja. |
+| Bondov (Eötvösov) broj | Omjer gravitacije i površinske napetosti, $Bo = \rho g L^2/\sigma$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Važnost napetosti vs gravitacije u multifaznom modelu. |
+| Strouhalov broj | Bezdimenzijska frekvencija vrtložnog otpuštanja, $St = fL/v$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Validacija nestacionarne simulacije (vortex shedding). |
+| Machov broj | Omjer inercije i stlačivosti, $Ma = v/a$; granica nestlačivosti $Ma < 0{,}3$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Izbor nestlačivog ili stlačivog solvera. |
+| Buckinghamov Π teorem | Metoda koja iz $n$ veličina i $k$ dimenzija daje $n - k$ bezdimenzijskih grupa. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Opravdava bezdimenzioniranje jednadžbi prije simulacije. |
+| Dinamička sličnost | Jednakost mjerodavnih bezdimenzijskih brojeva modela i prototipa. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Uvjet da rezultat simulacije modela vrijedi za prototip. |
+
 ::: {.mf1-warning}
 <p class="mf1-box-label">Najčešća pogreška</p>
 

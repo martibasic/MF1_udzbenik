@@ -17,6 +17,7 @@ project:
     - chapters/u11_*.qmd
     - chapters/u12_*.qmd
     - chapters/u13_*.qmd
+    - chapters/u14_*.qmd
     - chapters/d01_*.qmd
     - chapters/d02_*.qmd
     - chapters/d03_*.qmd
@@ -73,6 +74,8 @@ website:
             href: chapters/u12_pokretne_lopatice_i_potisak.qmd
           - text: "13. Cjevovodi"
             href: chapters/u13_cjevovodi.qmd
+          - text: "14. Bezdimenzijski brojevi"
+            href: chapters/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.qmd
       - section: "Dodaci"
         contents:
           - text: "Sažetak formula"

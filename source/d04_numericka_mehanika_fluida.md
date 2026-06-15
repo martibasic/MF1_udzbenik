@@ -68,6 +68,8 @@ Sljedeća tablica izravno povezuje pojmove iz ovoga udžbenika s pripadnim pojmo
 | Sila na zid | Funkcijski objekt `forces` ili `forceCoeffs` |
 | Centar tlaka na plohi | Težište raspodjele tlaka po zidnom patchu |
 | Reynoldsov broj | Bezdimenzijski kriterij izbora turbulentnog modela |
+| Froudeov, Weberov, Machov broj (pog. 14) | Skaliranje slobodne površine (VOF), raspršivanje, granica stlačivosti |
+| Bezdimenzioniranje jednadžbi, Π teorem (pog. 14) | Bezdimenzionirane Navier-Stokesove jednadžbe; $Re$ kao jedini parametar nestlačivog toka |
 | Moodyjev dijagram i koeficijent $\lambda$ | Zidne funkcije (`wallFunctions`) u RANS modelu |
 | Bernoullijeva jednadžba (validacija) | Probna linija (`sampleDict`) duž strujnice |
 | Mlaz koji udara o plohu (sila) | Zidni patch s integracijom tlaka i smičnih naprezanja |
@@ -96,6 +98,7 @@ Ova tablica sažima glavne jednadžbe iz udžbenika i pokazuje njihovu izravnu u
 | Integralni zakon količine gibanja | **Srce svakog CFD solvera** — FVM |
 | Moment količine gibanja, $\vec{w} = \vec{c} - \vec{u}$ | MRF metoda, klizajuća mreža (sliding mesh) za rotore |
 | Reynoldsov broj $Re = vD/\nu$ | Izbor turbulentnog modela, $y^+$ kriterij |
+| Bezdimenzijski brojevi $Re, Fr, We, Ma$ (pog. 14) | Bezdimenzionirane jednadžbe; ulazni parametri i kriteriji izbora modela |
 
 ## Kada CFD ne treba: granice primjenjivosti
 

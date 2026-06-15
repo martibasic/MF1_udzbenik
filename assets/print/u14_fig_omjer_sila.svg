@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="u14fos_title u14fos_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:720px;height:auto;">
+  <title id="u14fos_title">U14 - Svaki bezdimenzijski broj kao omjer sila</title>
+  <desc id="u14fos_desc">Cestica fluida i pet sila koje se natjecu: inercijska, viskozna, gravitacijska, tlacna i napetosna. Svaki bezdimenzijski broj nastaje kao omjer dviju sila, najcesce inercije prema preostaloj sili: Re=F_i/F_mu, Fr^2=F_i/F_g, Eu=F_p/F_i, We=F_i/F_sigma, Ma^2=F_i/F_elast.</desc>
+  <defs>
+    <marker id="u14fos_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+    </marker>
+    <marker id="u14fos_aGray" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#5d6d7e" />
+    </marker>
+    <marker id="u14fos_aP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+    </marker>
+    <marker id="u14fos_aB" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
+    </marker>
+    <radialGradient id="u14fos_part" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#d6ebfa" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </radialGradient>
+  </defs>
+
+  <rect width="720" height="520" fill="#ffffff" />
+
+  <!-- ===================== LIJEVO: cestica i sile ===================== -->
+  <rect x="24" y="24" width="372" height="472" rx="10" fill="#f8fbff" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="24" y="24" width="372" height="30" rx="10" fill="#1565c0" />
+  <rect x="24" y="46" width="372" height="8" fill="#1565c0" />
+
+  <!-- Cestica fluida -->
+  <circle cx="208" cy="270" r="48" fill="url(#u14fos_part)" stroke="#3a6e96" stroke-width="1.4" />
+
+  <!-- Inercija (crvena, gore) -->
+  <line x1="208" y1="218" x2="208" y2="120" stroke="#c0392b" stroke-width="3" marker-end="url(#u14fos_aR)" />
+  <!-- Viskoznost (siva, lijevo) -->
+  <line x1="156" y1="270" x2="70" y2="270" stroke="#5d6d7e" stroke-width="3" marker-end="url(#u14fos_aGray)" />
+  <!-- Gravitacija (ljubicasta, dolje) -->
+  <line x1="208" y1="322" x2="208" y2="416" stroke="#8e44ad" stroke-width="3" marker-end="url(#u14fos_aP)" />
+  <!-- Tlak (plava, desno) -->
+  <line x1="260" y1="270" x2="348" y2="270" stroke="#1565c0" stroke-width="3" marker-end="url(#u14fos_aB)" />
+  <!-- Napetost (plava, dijagonala dolje-desno) -->
+  <line x1="246" y1="308" x2="312" y2="372" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u14fos_aB)" />
+
+  <!-- ===================== DESNO: omjeri ===================== -->
+  <rect x="420" y="24" width="276" height="472" rx="10" fill="#fcfdff" stroke="#90a4b4" stroke-width="1.2" />
+  <rect x="420" y="24" width="276" height="30" rx="10" fill="#34495e" />
+  <rect x="420" y="46" width="276" height="8" fill="#34495e" />
+
+  <!-- 5 chipova -->
+  <rect x="438" y="74" width="240" height="68" rx="8" fill="#fdedec" stroke="#c0392b" stroke-width="1.2" />
+  <rect x="438" y="156" width="240" height="68" rx="8" fill="#f3eafa" stroke="#8e44ad" stroke-width="1.2" />
+  <rect x="438" y="238" width="240" height="68" rx="8" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.2" />
+  <rect x="438" y="320" width="240" height="68" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.2" />
+  <rect x="438" y="402" width="240" height="68" rx="8" fill="#f4f6f7" stroke="#5d6d7e" stroke-width="1.2" />
+
+  <!-- ===================== TEKST ===================== -->
+  <text x="210" y="45" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Sile na čestici fluida</text>
+  <text x="208" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#10405f">čestica</text>
+
+  <text x="208" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#c0392b"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.75em">i</tspan> inercija</text>
+  <text x="64" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="start" fill="#5d6d7e"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.75em">μ</tspan> viskoznost</text>
+  <text x="208" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#8e44ad"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.75em">g</tspan> gravitacija</text>
+  <text x="354" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#1565c0"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.75em">p</tspan> tlak</text>
+  <text x="322" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1565c0"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.75em">σ</tspan> napetost</text>
+
+  <text x="558" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Brojevi = omjeri sila</text>
+
+  <text x="458" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#c0392b">Re = F<tspan baseline-shift="sub" font-size="0.7em">i</tspan> / F<tspan baseline-shift="sub" font-size="0.7em">μ</tspan></text>
+  <text x="458" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">inercija / viskoznost</text>
+
+  <text x="458" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#8e44ad">Fr² = F<tspan baseline-shift="sub" font-size="0.7em">i</tspan> / F<tspan baseline-shift="sub" font-size="0.7em">g</tspan></text>
+  <text x="458" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">inercija / gravitacija</text>
+
+  <text x="458" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#1565c0">Eu = F<tspan baseline-shift="sub" font-size="0.7em">p</tspan> / F<tspan baseline-shift="sub" font-size="0.7em">i</tspan></text>
+  <text x="458" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">tlak / inercija</text>
+
+  <text x="458" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#1e8449">We = F<tspan baseline-shift="sub" font-size="0.7em">i</tspan> / F<tspan baseline-shift="sub" font-size="0.7em">σ</tspan></text>
+  <text x="458" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">inercija / napetost</text>
+
+  <text x="458" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#5d6d7e">Ma² = F<tspan baseline-shift="sub" font-size="0.7em">i</tspan> / F<tspan baseline-shift="sub" font-size="0.7em">elast</tspan></text>
+  <text x="458" y="456" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">inercija / stlačivost</text>
+</svg>

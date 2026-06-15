@@ -95,6 +95,11 @@ Trinaest poglavlja od mirovanja fluida do strujanja kroz cjevovode i lopatice. P
     <span class="mf1-card-title">Cjevovodi</span>
     <span class="mf1-card-hint">Darcy–Weisbach, serijski i paralelni sustavi, mreže.</span>
   </a>
+  <a class="mf1-card" href="chapters/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.html">
+    <span class="mf1-card-code">14</span>
+    <span class="mf1-card-title">Bezdimenzijski brojevi</span>
+    <span class="mf1-card-hint">Omjeri sila, Buckingham Π, sličnost i modelska ispitivanja.</span>
+  </a>
 </div>
 
 <p class="mf1-section-title">Dodaci</p>

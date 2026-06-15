@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" role="img" aria-labelledby="u14v2bb_title u14v2bb_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
+  <title id="u14v2bb_title">U14 Val 2 - Froudeova slicnost: model broda u vucnom bazenu</title>
+  <desc id="u14v2bb_desc">Prototip broda duljine 150 m i brzine 9 m/s te model u mjerilu 1:25 (duljina 6 m, brzina 1,8 m/s) imaju isti Froudeov broj 0,235. Reynoldsov broj se razlikuje 125 puta (lambda na 1,5) pa se ne moze istovremeno izjednaciti.</desc>
+  <defs>
+    <marker id="u14v2bb_aV" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#34495e" />
+    </marker>
+    <marker id="u14v2bb_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <marker id="u14v2bb_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+    </marker>
+    <linearGradient id="u14v2bb_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u14v2bb_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
+    </pattern>
+  </defs>
+
+  <rect width="880" height="470" fill="#ffffff" />
+
+  <!-- ===================== LIJEVO: prototip ===================== -->
+  <rect x="24" y="28" width="404" height="392" rx="10" fill="#f8fbff" stroke="#1565c0" stroke-width="1.3" />
+  <rect x="24" y="28" width="404" height="30" rx="10" fill="#1565c0" />
+  <rect x="24" y="50" width="404" height="8" fill="#1565c0" />
+  <!-- more -->
+  <rect x="36" y="250" width="380" height="120" fill="url(#u14v2bb_water)" />
+  <path d="M36,250 q20,-9 40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0" fill="none" stroke="#1565c0" stroke-width="1.6" />
+  <!-- trup -->
+  <path d="M120,214 L330,214 L312,250 L302,286 Q226,304 150,286 L138,250 Z" fill="#cfd8df" stroke="#3a4a56" stroke-width="1.6" />
+  <line x1="138" y1="250" x2="312" y2="250" stroke="#3a4a56" stroke-width="1" stroke-dasharray="6,4" />
+  <!-- brzina v_s -->
+  <line x1="330" y1="200" x2="404" y2="200" stroke="#34495e" stroke-width="2.6" marker-end="url(#u14v2bb_aV)" />
+  <!-- kota L_s -->
+  <line x1="120" y1="330" x2="330" y2="330" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u14v2bb_aDimR)" marker-end="url(#u14v2bb_aDim)" />
+  <line x1="120" y1="288" x2="120" y2="336" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="330" y1="288" x2="330" y2="336" stroke="#b7600c" stroke-width="0.7" />
+
+  <!-- ===================== DESNO: model u bazenu ===================== -->
+  <rect x="452" y="28" width="404" height="392" rx="10" fill="#fcfdff" stroke="#1e8449" stroke-width="1.3" />
+  <rect x="452" y="28" width="404" height="30" rx="10" fill="#1e8449" />
+  <rect x="452" y="50" width="404" height="8" fill="#1e8449" />
+  <!-- bazen stjenke -->
+  <rect x="500" y="250" width="14" height="120" fill="url(#u14v2bb_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="794" y="250" width="14" height="120" fill="url(#u14v2bb_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="500" y="356" width="308" height="14" fill="url(#u14v2bb_hatch)" stroke="#4a6070" stroke-width="1.3" />
+  <rect x="514" y="262" width="280" height="94" fill="url(#u14v2bb_water)" />
+  <path d="M514,262 q14,-7 28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0" fill="none" stroke="#1565c0" stroke-width="1.4" />
+  <!-- mali trup -->
+  <path d="M610,242 L700,242 L693,262 L688,278 Q655,288 622,278 L617,262 Z" fill="#cfd8df" stroke="#3a4a56" stroke-width="1.4" />
+  <!-- brzina v_m -->
+  <line x1="700" y1="232" x2="752" y2="232" stroke="#34495e" stroke-width="2.4" marker-end="url(#u14v2bb_aV)" />
+  <!-- kota L_m -->
+  <line x1="610" y1="330" x2="700" y2="330" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u14v2bb_aDimR)" marker-end="url(#u14v2bb_aDim)" />
+  <line x1="610" y1="282" x2="610" y2="336" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="700" y1="282" x2="700" y2="336" stroke="#b7600c" stroke-width="0.7" />
+
+  <!-- ===================== TEKST ===================== -->
+  <text x="226" y="49" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Prototip (more)</text>
+  <text x="654" y="49" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Model 1 : 25 (vučni bazen)</text>
+
+  <text x="367" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#34495e"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.75em">s</tspan> = 9,0 m/s</text>
+  <text x="225" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#b7600c"><tspan font-weight="700">L</tspan><tspan baseline-shift="sub" font-size="0.75em">s</tspan> = 150 m</text>
+
+  <text x="726" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#34495e"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.75em">m</tspan> = 1,8 m/s</text>
+  <text x="655" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#b7600c"><tspan font-weight="700">L</tspan><tspan baseline-shift="sub" font-size="0.75em">m</tspan> = 6,0 m</text>
+
+  <!-- donji sazetak -->
+  <rect x="24" y="432" width="832" height="30" rx="6" fill="#eafaf1" stroke="#1e8449" stroke-width="1.2" />
+  <text x="440" y="452" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#14532d"><tspan font-weight="700" font-style="italic">Fr</tspan> = v/√(gL) = 0,235 (jednak)   ·   v_m = v_s/√λ   ·   Re_s / Re_m = λ^1,5 = 125  →  Re se ne može izjednačiti</text>
+</svg>
