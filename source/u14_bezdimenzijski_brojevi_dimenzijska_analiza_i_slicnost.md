@@ -738,6 +738,12 @@ Identificiraju se najveća i druga po veličini sila u problemu; njihov omjer je
 	**Natuknica:** $Eu = \Delta p/(\rho v^2)$; iz $\Delta p = \lambda (L/D)\tfrac{1}{2}\rho v^2$ slijedi $\lambda = 2\,Eu\,D/L$; $Re = vD/\nu$. (Rješenje: $Eu = 4{,}5$, $\lambda = 0{,}0225$, $Re = 1{,}0 \cdot 10^5$.)
 
 	**Skica:** da - dionica cijevi s kotama $D$, $L$ i padom tlaka $\Delta p$.
+
+7. **T4** Preljev brane ispituje se modelom u mjerilu $\lambda_L = 30$. Prototip pri projektnom protoku ima brzinu preljeva $v_p = 6{,}0\ \text{m/s}$ i protok $Q_p = 480\ \text{m}^3/\text{s}$, a izmjerena vodoravna sila na tijelo brane iznosi $F_p = 220\ \text{kN}$. (a) Iz Froudeove sličnosti odredi brzinu i protok modela. (b) Odredi silu koja odgovara toj sili na modelu. (c) Za dubinu preljeva na modelu $h_m = 0{,}25\ \text{m}$ i $\nu = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$ provjeri Reynoldsov broj modela i procijeni ostaje li strujanje turbulentno, tako da je pogreška zbog neispunjene Reynoldsove sličnosti mala.
+
+	**Natuknica:** kod slobodne površine vlada gravitacija pa se čuva $Fr$: $v_m = v_p/\sqrt{\lambda_L}$, $Q_m = Q_p/\lambda_L^{5/2}$, $F_m = F_p/\lambda_L^{3}$; zatim $Re_m = v_m h_m/\nu$ i usporedi s prijelaznim područjem. (Rješenje: $v_m \approx 1{,}10\ \text{m/s}$; $Q_m \approx 97{,}4\ \text{L/s}$; $F_m \approx 8{,}15\ \text{N}$; $Re_m \approx 2{,}7 \cdot 10^5 \gg 4000$ — model je turbulentan, pa je odstupanje zbog neočuvanog $Re$ malo.)
+
+	**Skica:** da - preljev brane s modelom i prototipom, slobodna površina, mjerilo $\lambda_L$ i kote $v$, $h_m$.
 :::
 
 ![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u14_vjezbe_skice.svg)

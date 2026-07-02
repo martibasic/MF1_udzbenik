@@ -13,7 +13,9 @@ Ovo je aktualni statusni presjek kanonskog udzbenika u `MF1_udzbenik`. Dokument 
 > - Uvodni vodic `U00` uskladen sa stvarnim tipovima primjera (Rijeseni/Kratki primjer, Cjeloviti zadatak, Zadaci za vjezbu) i brojem primjera (5–8 po poglavlju); uklonjeni nepostojeci tipovi `GP`/`PO`.
 > - `za_ispis.qmd` sada ukljucuje i `D04`; opce reference "pog. 1–13" prosirene na "pog. 1–14".
 >
-> **Otvoreno (Faza B–E)**: brojcani odgovori na vjezbe U01–U13, T1 ulazni zadaci i T4 za U14, notebook+QR za U14; kinematika strujanja kao novi uvod u U08; popis literature i impressum; repo higijena (245 commitanih `*.quarto_ipynb_N` artefakata) i CI provjera.
+> **Faza B (u tijeku)**: B1 — 78 brojcanih odgovora na vjezbe U01–U13 dodano (zatvoreno); B2 — utvrdjeno da sve vjezbe vec imaju T1 zadatke (nije potrebno); B3 — dodan T4 sintezni zadatak u U14 (Froudeova slicnost + provjera rezima). Otvoreno: B4 — notebook+QR za U14 (jedino poglavlje bez interaktivnog prikaza; treba `u14_vjezbe_skice.svg` prosiriti 7. mini-skicom).
+>
+> **Otvoreno (Faza C–E)**: kinematika strujanja kao novi uvod u U08; popis literature i impressum; repo higijena (245 commitanih `*.quarto_ipynb_N` artefakata) i CI provjera; captioni skica uz vjezbe.
 
 > **Faza 1 — QA i unaprjeđenje primjera, zadataka i skica — tekstualni i strukturni dio završen 2026-05-18**. Tracking u [`qa_log_faza1.md`](qa_log_faza1.md). Otvoreno: matplotlib→SVG konverzija (27 blokova kroz U07–U13) i finalni quarto render check.
 >
