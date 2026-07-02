@@ -17,7 +17,9 @@ Ovo je aktualni statusni presjek kanonskog udzbenika u `MF1_udzbenik`. Dokument 
 >
 > **Faza D (zatvoreno)**: uklonjeno 245 commitanih `*.quarto_ipynb_*` build-artefakata (+ `.gitignore` popravak — stablo ostaje cisto nakon rendera); 26 radnih dokumenata premjesteno u `docs/radno/`; dodatak `D05 Literatura` + `references.bib`; impressum (autorica, verzija, licenca CC BY-NC-SA 4.0); `toc` za web poglavlja; CI korak `verify_all.py` (blokirajuci, 498/498); `tools/README.md`. Popravljen check `U01.most.p_p_MPa` (sada 498/498 umjesto 497/1).
 >
-> **Otvoreno (Faza C, E, B4)**: kinematika strujanja kao novi uvod u U08; captioni skica uz vjezbe; nova SVG skica za kinematiku; interaktivni notebook+QR za U14.
+> **Faza C (zatvoreno)**: kinematika strujanja dodana kao uvod u U08 (polje brzine, strujnica/trajektorija, stacionarnost, 1D srednja brzina, materijalna derivacija) + WE primjer T2 + samoprovjera; nova skica `u08_fig_kinematika.svg`; U09 predznanje→U08; D02 pojmovnik prosiren; U14 izlazna napomena "Kamo dalje". verify_all 500/500.
+>
+> **Otvoreno (Faza E, B4)**: captioni 14× `uXX_vjezbe_skice.svg`; interaktivni notebook+QR za U14. Napomena: `svg_normalize.py` dvostruko prefiksira ID-eve pri ponovnom pokretanju (nije idempotentan) — nove SVG rucno uskladiti sa standardom dok se alat ne popravi.
 
 > **Faza 1 — QA i unaprjeđenje primjera, zadataka i skica — tekstualni i strukturni dio završen 2026-05-18**. Tracking u [`qa_log_faza1.md`](docs/radno/qa_log_faza1.md). Otvoreno: matplotlib→SVG konverzija (27 blokova kroz U07–U13) i finalni quarto render check.
 >
