@@ -8,8 +8,9 @@ Ovo je glavni radni folder projekta. Aktualni MF1 udzbenik razvija se ovdje i sa
 - `chapters/` – Quarto omotači za web i print tok
 - `assets/print/` – statičke SVG ilustracije i skice (jedini dopušteni format za figure)
 - `status_izrade_udzbenika.md` – kratki status projekta
-- `plan_prijenosa_zadataka.md` – zaključeni status prijenosa i pravila za buduće dopune
 - `protokol_prerade_zadataka_i_skica.md` – **autoritativan dokument** za protokol prerade zadataka i kanonski SVG dizajnerski standard
+- `pravila_svg.md` – konsolidirani cheat-sheet SVG pravila
+- `docs/radno/` – arhiva radnih dokumenata (matrice sparivanja, evidencije prijenosa, QA log, plan prijenosa, val1 prerade); nije dio studentskog teksta niti build-toka
 
 ## Što je ovdje već zaključano
 

@@ -15,9 +15,11 @@ Ovo je aktualni statusni presjek kanonskog udzbenika u `MF1_udzbenik`. Dokument 
 >
 > **Faza B (u tijeku)**: B1 — 78 brojcanih odgovora na vjezbe U01–U13 dodano (zatvoreno); B2 — utvrdjeno da sve vjezbe vec imaju T1 zadatke (nije potrebno); B3 — dodan T4 sintezni zadatak u U14 (Froudeova slicnost + provjera rezima). Otvoreno: B4 — notebook+QR za U14 (jedino poglavlje bez interaktivnog prikaza; treba `u14_vjezbe_skice.svg` prosiriti 7. mini-skicom).
 >
-> **Otvoreno (Faza C–E)**: kinematika strujanja kao novi uvod u U08; popis literature i impressum; repo higijena (245 commitanih `*.quarto_ipynb_N` artefakata) i CI provjera; captioni skica uz vjezbe.
+> **Faza D (u tijeku)**: uklonjeno 245 commitanih `*.quarto_ipynb_*` build-artefakata (+ `.gitignore` popravak); 26 radnih dokumenata (matrice, evidencije, qa_log, val1...) premjesteno u `docs/radno/`. Otvoreno: popis literature, impressum, `toc` za web, CI korak `verify_all.py`, `tools/README.md`.
+>
+> **Otvoreno (Faza C, E)**: kinematika strujanja kao novi uvod u U08; captioni skica uz vjezbe; nova SVG skica za kinematiku.
 
-> **Faza 1 — QA i unaprjeđenje primjera, zadataka i skica — tekstualni i strukturni dio završen 2026-05-18**. Tracking u [`qa_log_faza1.md`](qa_log_faza1.md). Otvoreno: matplotlib→SVG konverzija (27 blokova kroz U07–U13) i finalni quarto render check.
+> **Faza 1 — QA i unaprjeđenje primjera, zadataka i skica — tekstualni i strukturni dio završen 2026-05-18**. Tracking u [`qa_log_faza1.md`](docs/radno/qa_log_faza1.md). Otvoreno: matplotlib→SVG konverzija (27 blokova kroz U07–U13) i finalni quarto render check.
 >
 > **Rezultati Faze 1**:
 > - 13/13 poglavlja prošlo tekstualni QA prema protokolu (Zadano/Traženo/Skica/Pretpostavke/Rješenje s fizikalnim tumačenjima/Provjera).
@@ -27,13 +29,13 @@ Ovo je aktualni statusni presjek kanonskog udzbenika u `MF1_udzbenik`. Dokument 
 > - 1 orphan SVG spojen s primjerom (U07 Kalibracijski modul).
 > - U01 SVG sistemski popravci: oznake $A_e \to A_L$, $F_e \to F_L$, plave ulazne sile $\to$ crvene (per protokol).
 >
-> **Faza 1.5 — Didaktičko obogaćivanje (završeno tekstualno 2026-05-18)**. 11 novih primjera/cjelovitih zadataka uvedeno kroz U01–U13 da bi popunilo didaktičke prilike koje su identificirane kroz analizu pokrivenosti teorija↔primjeri. Detalji u [`qa_log_faza1.md`](qa_log_faza1.md) i SVG specifikacije za Codex u [`todo_svg_za_codex.md`](todo_svg_za_codex.md).
+> **Faza 1.5 — Didaktičko obogaćivanje (završeno tekstualno 2026-05-18)**. 11 novih primjera/cjelovitih zadataka uvedeno kroz U01–U13 da bi popunilo didaktičke prilike koje su identificirane kroz analizu pokrivenosti teorija↔primjeri. Detalji u [`qa_log_faza1.md`](docs/radno/qa_log_faza1.md) i SVG specifikacije za Codex u [`todo_svg_za_codex.md`](docs/radno/todo_svg_za_codex.md).
 >
 > **Rezultati Faze 1.5**:
 > - 11 novih primjera dodano kroz U01–U13 (5× T2 P, 4× T3/T4 CH, 2× T2 P proširenja postojećih scena).
 > - Glavni didaktički koncepti uvedeni: temperatura↔viskoznost (U02), neto tlak stijenke broda (U03), tri sloja fluida (U05), plinski jastuk + zakrivljena ploha (U06), stabilnost broda + SOLAS (U07), difuzor (U09), starenje cijevi (U10), vodeni udar (U11), optimalna brzina lopatice $u_{opt} = c_1/2$ (U12), radna točka crpka⇄cjevovod (U13), hidraulična kočnica vozila (U01).
 > - 70 novih SymPy checkova; ukupno sada 497/498 PASS (1 pre-existing rounding u U01.most.p_p_MPa).
-> - 11 novih SVG datoteka **za izradu** (Codex – specifikacije u `todo_svg_za_codex.md`).
+> - 11 novih SVG datoteka **za izradu** (Codex – specifikacije u `docs/radno/todo_svg_za_codex.md`).
 > - Ukupno SVG otvoreno za izradu: 27 (Faza 1 matplotlib konverzija) + 11 (Faza 1.5 novi primjeri) = **38 SVG datoteka**.
 
 ## Trenutno stanje u jednoj recenici
