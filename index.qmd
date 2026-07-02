@@ -8,7 +8,7 @@ toc: false
 ::: {.mf1-hero}
 # Mehanika fluida 1
 
-Trinaest poglavlja od mirovanja fluida do strujanja kroz cjevovode i lopatice. Prije svake jednadžbe jasna fizikalna slika koja se njome opisuje.
+Četrnaest poglavlja od mirovanja fluida do strujanja kroz cjevovode, lopatice i bezdimenzijsku analizu. Prije svake jednadžbe jasna fizikalna slika koja se njome opisuje.
 :::
 
 ```{=html}

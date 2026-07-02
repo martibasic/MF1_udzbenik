@@ -100,13 +100,13 @@ Ako $Re < 2300$ → laminarno; ako $Re > 4000$ → turbulentno.
 - Turbulentno hidraulički glatke: Blaziusova aproksimacija $\lambda \approx 0{,}316\, Re^{-1/4}$ za $Re < 10^5$.
 
 **4. Linijski gubitak:**
-$$h_f = \lambda \frac{L}{D}\frac{v^2}{2g}.$$
+$$h_l = \lambda \frac{L}{D}\frac{v^2}{2g}.$$
 
 **5. Lokalni gubici (suma):**
 $$h_{loc} = \sum \xi \frac{v^2}{2g}.$$
 
 **6. Ukupni gubitak:**
-$$h_w = h_f + h_{loc}.$$
+$$h_w = h_l + h_{loc}.$$
 
 Tipična greška: korak 3 se pogodi (npr. $\lambda = 0{,}02$ po osjećaju) bez provjere $Re$ i $\varepsilon/D$. To vodi na pogrešnu radnu točku, posebno pri promjeni protoka.
 :::
@@ -885,7 +885,7 @@ Re = \frac{3{,}183 \cdot 0{,}100}{1{,}0 \cdot 10^{-6}} = 3{,}18 \cdot 10^5 \quad
 $$
 
 $$
-h_f = 0{,}022 \cdot \frac{170}{0{,}100} \cdot \frac{3{,}183^2}{2 \cdot 9{,}81} = 0{,}022 \cdot 1700 \cdot 0{,}5164 = 19{,}31\ \text{m}
+h_l = 0{,}022 \cdot \frac{170}{0{,}100} \cdot \frac{3{,}183^2}{2 \cdot 9{,}81} = 0{,}022 \cdot 1700 \cdot 0{,}5164 = 19{,}31\ \text{m}
 $$
 
 $$

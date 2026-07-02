@@ -1,8 +1,19 @@
-# Status izrade MF1_udzbenika (svibanj 2026)
+# Status izrade MF1_udzbenika (srpanj 2026)
 
 ## Svrha dokumenta
 
 Ovo je aktualni statusni presjek kanonskog udzbenika u `MF1_udzbenik`. Dokument vise ne vodi otvoreni migracijski backlog, nego opisuje sto je stvarno zatvoreno, sto je sada u odrzavanju i koji su najblizi vrijedni potezi.
+
+> **Faza 2 — generalna recenzija i plan nadogradnje (pokrenuto 2026-07-02).** Provedena je sveobuhvatna recenzija udzbenika (sadrzaj, didaktika, notacija, produkcija, figure). Plan izmjena u pet faza (A–E) vodi se izvan repozitorija; Faza A (brzi popravci konzistentnosti) je u tijeku.
+>
+> **Zatvoreno u Fazi 2 / A**:
+> - Poglavlje `U14` (bezdimenzijski brojevi, dimenzijska analiza i slicnost) i dodatak `D04` (numericka mehanika fluida) sada su dio knjige; glavni niz je `U00`, `U01–U14`, dodaci `D01–D04`.
+> - **Matplotlib→SVG konverzija je dovrsena**: 0 preostalih python/matplotlib figure-blokova u `source/`, svih 139 SVG-ova referencirano (0 slijepih referenci, 0 orphana). Raniji backlog od 26–27 blokova vise ne postoji.
+> - Notacija ujednacena: `h_f`→`h_l` (U13), `p_man`→`p_M` (U03/D01/D02), turbostrojarska trojka `c/w/u` uskladena u D01/D03 (uklonjen nekoristeni `v_rel`).
+> - Uvodni vodic `U00` uskladen sa stvarnim tipovima primjera (Rijeseni/Kratki primjer, Cjeloviti zadatak, Zadaci za vjezbu) i brojem primjera (5–8 po poglavlju); uklonjeni nepostojeci tipovi `GP`/`PO`.
+> - `za_ispis.qmd` sada ukljucuje i `D04`; opce reference "pog. 1–13" prosirene na "pog. 1–14".
+>
+> **Otvoreno (Faza B–E)**: brojcani odgovori na vjezbe U01–U13, T1 ulazni zadaci i T4 za U14, notebook+QR za U14; kinematika strujanja kao novi uvod u U08; popis literature i impressum; repo higijena (245 commitanih `*.quarto_ipynb_N` artefakata) i CI provjera.
 
 > **Faza 1 — QA i unaprjeđenje primjera, zadataka i skica — tekstualni i strukturni dio završen 2026-05-18**. Tracking u [`qa_log_faza1.md`](qa_log_faza1.md). Otvoreno: matplotlib→SVG konverzija (27 blokova kroz U07–U13) i finalni quarto render check.
 >
@@ -25,20 +36,20 @@ Ovo je aktualni statusni presjek kanonskog udzbenika u `MF1_udzbenik`. Dokument 
 
 ## Trenutno stanje u jednoj recenici
 
-`MF1_udzbenik` je stabilna integrirana Quarto knjiga s poglavljima `U00`, `U01-U13` i dodacima `D01-D03`; prijenos zadataka je urednicki zatvoren, a glavni posao presao je u odrzavanje, finu kalibraciju i selektivno autorsko jacanje.
+`MF1_udzbenik` je stabilna integrirana Quarto knjiga s poglavljima `U00`, `U01-U14` i dodacima `D01-D04`; prijenos zadataka je urednicki zatvoren, a glavni posao presao je u odrzavanje, finu kalibraciju i selektivno autorsko jacanje.
 
 ## Sto je stvarno zatvoreno
 
 1. Kanonska struktura knjige postoji i upotrebljiva je za web i print tok.
-2. Glavna poglavlja `U01-U13` postoje kao stvarna, cjelovita poglavlja, a ne kao pilot-kosturi.
+2. Glavna poglavlja `U01-U14` postoje kao stvarna, cjelovita poglavlja, a ne kao pilot-kosturi.
 3. Teorija, matematicki izvodi, rijeseni primjeri i zadaci nalaze se u istom toku citanja.
 4. Uvodi su prosireni stvarnim inzenjerskim kontekstom; pocetni application-okviri standardizirani su pod oznakom `Inzenjerski kontekst`.
-5. Provedeni su jezikoslovni, stilisticki i interpunkcijski prolazi kroz glavni niz `U01-U13`.
+5. Provedeni su jezikoslovni, stilisticki i interpunkcijski prolazi kroz glavni niz `U01-U14`.
 6. Suvisna didakticka mini-potpoglavlja u prozi srezana su i pretvorena u kompaktniji tok prema primjerima.
 7. Zadatkovni sloj i skice uskladeni su s kucnim print-first standardom.
 8. Puni `quarto render` prolazi, a editor i problems checkovi su cisti.
 9. Kanonski SVG dizajnerski standard definiran je u `protokol_prerade_zadataka_i_skica.md`; svi novi i prerađeni figure-blokovi koriste statičke SVG datoteke u `assets/print/` umjesto matplotlib/Python koda.
-10. Stvarno stanje SVG konverzije (provjereno u svibnju 2026): U02, U03, U04, U05, U06 nemaju nijedan matplotlib figure-blok; U01 ima 1, U07 ima 5, U08 ima 3, U09 ima 3, U10 ima 4, U11 ima 3, U12 ima 4, U13 ima 3 — ukupno 26 preostalih blokova za zamjenu statičkim SVG-om kroz Fazu 1.
+10. SVG konverzija je dovršena (provjereno 2026-07-02): u `source/` nema nijednog matplotlib/python figure-bloka, a svih 139 SVG datoteka u `assets/print/` je referencirano iz teksta (0 slijepih referenci, 0 orphana). Raniji backlog od 26 preostalih blokova više ne postoji.
 11. Strukturna SVG normalizacija (prefiks ID-eva, font, aria, root atributi) provedena je jednokratnom skriptom `tools/svg_normalize.py` nad svih 93 SVG-a u `assets/print/`.
 
 ## Status po cjelinama
@@ -46,12 +57,12 @@ Ovo je aktualni statusni presjek kanonskog udzbenika u `MF1_udzbenik`. Dokument 
 | Cjelina | Status | Napomena |
 | --- | --- | --- |
 | Arhitektura knjige | `zatvoreno` | `MF1_udzbenik` je jedini kanonski projekt |
-| `U00` i `U01-U13` | `zatvoreno` | glavni niz postoji i urednicki je konsolidiran |
-| `D01-D03` | `odrzavanje` | ostaju aktivni i trebaju pratiti notaciju i terminologiju knjige |
+| `U00` i `U01-U14` | `zatvoreno` | glavni niz postoji i urednicki je konsolidiran |
+| `D01-D04` | `odrzavanje` | ostaju aktivni i trebaju pratiti notaciju i terminologiju knjige |
 | Prijenos zadataka | `zatvoreno` | donorski backlog vise nije otvoreni razvojni problem |
 | Jezik i urednistvo | `zatvoreno` | veliki sweepovi su odradeni; ostaje samo selektivno odrzavanje |
 | Vizualni standard skica | `odrzavanje` | baza je zakljucana, ali pojedine skice se mogu i dalje dizati |
-| SVG konverzija figura | `u tijeku` | U02–U06 čisti; U01 i U07–U13 imaju ukupno 26 preostalih matplotlib blokova (rješava se kroz Fazu 1) |
+| SVG konverzija figura | `zatvoreno` | 0 preostalih matplotlib blokova; svih 139 SVG-ova referencirano (0 slijepih referenci, 0 orphana) |
 | Strukturna normalizacija SVG-a | `zatvoreno` | `tools/svg_normalize.py` proveden globalno; prefiksirani ID-evi, kanonski font, aria, root atributi |
 | Validacija builda | `cisto` | puni render prolazi i nema editor gresaka |
 | Legacy vjezbe | `zamrznuto` | ne diraju se do sljedece akademske godine |
@@ -67,7 +78,7 @@ Ovo je aktualni statusni presjek kanonskog udzbenika u `MF1_udzbenik`. Dokument 
 
 ## Aktivni prioriteti odrzavanja
 
-1. Drzati `D01-D03` uskladenima s glavnim poglavljima kad se promijeni notacija, termin ili tipicna greska.
+1. Drzati `D01-D04` uskladenima s glavnim poglavljima kad se promijeni notacija, termin ili tipicna greska.
 2. Fino kalibrirati tezinske oznake i raspored zadataka ondje gdje jos ima prostora za bolju gradaciju.
 3. Selektivno podizati standard skica i print/PDF citljivosti.
 4. Povremeno raditi puni render i lokalne chapter-render provjere nakon vecih urednickih promjena.

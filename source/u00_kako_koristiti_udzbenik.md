@@ -1,6 +1,6 @@
 ## Dobrodošli u Mehaniku fluida 1
 
-Udžbenik prati studenta kroz trinaest poglavlja koja se mogu pročitati u približno **60 do 80 sati rada**, što odgovara semestralnom opterećenju kolegija od šest ECTS bodova. Najveći dio tog vremena nije čitanje, nego rad s primjerima i zadacima — udžbenik je zato sastavljen tako da se teorija, riješeni primjeri i samostalni zadaci čitaju kao **jedan radni tok**, a ne kao tri odvojene cjeline.
+Udžbenik prati studenta kroz četrnaest poglavlja koja se mogu pročitati u približno **60 do 80 sati rada**, što odgovara semestralnom opterećenju kolegija od šest ECTS bodova. Najveći dio tog vremena nije čitanje, nego rad s primjerima i zadacima — udžbenik je zato sastavljen tako da se teorija, riješeni primjeri i samostalni zadaci čitaju kao **jedan radni tok**, a ne kao tri odvojene cjeline.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Predznanje koje se pretpostavlja</p>
@@ -18,24 +18,23 @@ Svako poglavlje slijedi isti unutarnji raspored:
 
 1. **Inženjerski kontekst** — kratak okvir koji povezuje temu sa stvarnim sustavima u praksi.
 2. **Fizikalni uvod i matematički izvod** — postupno uvođenje središnjih jednadžbi uz prateća tumačenja u okvirima *Fizikalno značenje*.
-3. **Riješeni primjeri** — dva do tri primjera označena razinom težine T1 do T4.
-4. **Zadaci za samostalan rad** — niz zadataka u rasponu T1 do T3, s natuknicom i zahtjevom za skicu.
+3. **Riješeni primjeri** — obično pet do osam riješenih primjera i jedan do četiri cjelovita zadatka, označeni razinom težine T1 do T4.
+4. **Zadaci za vježbu** — niz zadataka za samostalan rad u rasponu T1 do T3, svaki s natuknicom i zahtjevom za skicu.
 5. **Završni okvir** *Za ponijeti iz poglavlja* — sažeta provjera, najčešća pogreška, granica modela i prijenos prema sljedećem poglavlju.
 6. **Numerički most** — sklopivi okvir koji povezuje poglavlje s kolegijem Računalna dinamika fluida.
 
 Odabrana poglavlja sadrže i **interaktivne prikaze** u obliku Jupyter notebooka koji se otvaraju u pregledniku putem QR koda ili poveznice. Klizači omogućuju mijenjanje ključnih parametara i neposredno praćenje učinka — korisno za izgradnju fizikalne intuicije prije rješavanja zadataka.
 
-## Oznake tipova zadataka
+## Tipovi primjera i zadataka
 
-Tipovi zadataka razlikuju se prema razini vođenja koju nude:
+Primjeri i zadaci razlikuju se prema razini vođenja koju nude:
 
 ::: {.mf1-checklist}
 <p class="mf1-box-label">Kako birati tip zadatka</p>
 
-- **Riješeni primjer** (`WE`) — usvaja se prvi put novi model ili radni ritual. Cijeli postupak je raspisan korak po korak.
-- **Vođeni primjer** (`GP`) — potrebno je još nekoliko koraka vođenja, ali se već prelazi prema samostalnom računu.
-- **Samostalni zadatak** (`PO`) — trening nakon što je osnovni postupak stabiliziran.
-- **Cjeloviti zadatak** (`CH`) — integracija više ideja iz poglavlja ili priprema za teži ispitni zadatak.
+- **Riješeni primjer** — usvaja se prvi put novi model ili radni ritual; cijeli je postupak raspisan korak po korak. Kraći uvodni slučajevi nose oznaku *Kratki primjer*.
+- **Cjeloviti zadatak** — integracija više ideja iz poglavlja ili priprema za teži ispitni zadatak; postupak je i dalje vođen, ali traži samostalne odluke o modelu, geometriji i predznaku.
+- **Zadaci za vježbu** — niz numeriranih zadataka za samostalan rad na kraju poglavlja; svaki nosi razinu težine, natuknicu i zahtjev za skicu.
 :::
 
 ## Razine težine
@@ -72,12 +71,12 @@ Kanonski tekst svakog poglavlja razumljiv je i bez interaktivnih elemenata. Inte
 
 1. Pročitati **uvodni motivacijski dio** i temeljnu ideju poglavlja prije bilo kakvog računa.
 2. Na **kriteriju primjene** provjeriti vrijedi li model za konkretan zadatak.
-3. Prije samostalnog računa proći barem jedan **riješeni primjer** (`WE`) iz istog poglavlja.
-4. Tek nakon toga prelaziti na **vođene** i **samostalne** zadatke, a na **cjeloviti zadatak** samo kad je osnovni postupak stabiliziran.
+3. Prije samostalnog računa proći barem jedan **riješeni primjer** iz istog poglavlja.
+4. Tek nakon toga prelaziti na **zadatke za vježbu**, a na **cjeloviti zadatak** samo kad je osnovni postupak stabiliziran.
 5. Prije predaje zadatka konzultirati pripadnu sekciju u **dod. C – Tipične pogreške po poglavljima**.
 
 ::: {.mf1-mini-summary}
 <p class="mf1-box-label">Sažetak za ponijeti</p>
 
-Udžbenik je zamišljen kao jedan radni tok: ideja → kriterij primjene → vođeni primjer → samostalni zadatak → provjera tipičnih pogrešaka. Interaktivni prikazi i sklopivi prilozi *Numerički most* dodatni su slojevi koji nadopunjuju, ali ne mijenjaju, taj temeljni tok.
+Udžbenik je zamišljen kao jedan radni tok: ideja → kriterij primjene → riješeni primjer → zadatak za vježbu → provjera tipičnih pogrešaka. Interaktivni prikazi i sklopivi prilozi *Numerički most* dodatni su slojevi koji nadopunjuju, ali ne mijenjaju, taj temeljni tok.
 :::

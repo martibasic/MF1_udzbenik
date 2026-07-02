@@ -10,7 +10,7 @@ Najsigurniji redoslijed je:
 2. provjeriti radi li se o tlaku, sili, gubitku, protoku ili bezdimenzijskoj veličini
 3. tek onda koristiti zapis iz sažetka
 
-Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglavlje `pog. 1–13`, a ne ovaj dodatak.
+Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglavlje `pog. 1–14`, a ne ovaj dodatak.
 
 ## Najčešće oznake
 
@@ -24,6 +24,7 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $p$ | tlak | Pa |
 | $\Delta p$ | razlika tlakova ili tlakovni skok | Pa |
 | $p_0$ | stagnacijski tlak ili poznati referentni tlak | Pa |
+| $p_M$ | manometarski (pretlak) tlak, $p_M = p_{aps} - p_{atm}$ | Pa |
 | $p_{M0}$ | jednoliki manometarski pretlak plina iznad tekućine | Pa |
 | $z$ | geodetska visina | m |
 | $h$ | visina stupca ili gubitak izražen u metrima fluida | m |
@@ -32,9 +33,10 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $A$ | površina presjeka ili plohe | m$^2$ |
 | $A_p$ | površina otvora ili pukotine | m$^2$ |
 | $V$ | volumen | m$^3$ |
-| $v$ | srednja ili lokalna brzina | m/s |
+| $v$ | srednja ili lokalna brzina (opća oznaka, pog. 1–11 i 13–14) | m/s |
+| $c$ | apsolutna brzina fluida (turbostrojarska poglavlja 11–12) | m/s |
 | $u$ | brzina gibajućeg elementa ili lopatice | m/s |
-| $v_{rel}$ | relativna brzina fluida prema gibajućem elementu | m/s |
+| $w$ | relativna brzina fluida prema gibajućem elementu, $w = c - u$ (pog. 12) | m/s |
 | $Q$ | volumenski protok | m$^3$/s |
 | $Q_p$ | protok kroz pukotinu ili servisni ispust | m$^3$/s |
 | $\dot{m}$ | maseni protok | kg/s |
@@ -76,7 +78,7 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | --- | --- |
 | $dp/dz = -\rho g$ | Voda: tlak raste oko $9810\,\text{Pa}$ po metru dubine (≈ $1\,\text{bar}$ na svakih $10\,\text{m}$). |
 | $p = p_0 + \rho g h$ | Pri $p_0 = 101\,325\,\text{Pa}$ na dubini $h = 5\,\text{m}$ vode: $p \approx 150\,\text{kPa}$. |
-| $p_{aps} = p_{atm} + p_{man}$ | Manometar pokazuje $50\,\text{kPa}$ → apsolutni tlak $\approx 151\,\text{kPa}$. |
+| $p_{aps} = p_{atm} + p_M$ | Manometar pokazuje $50\,\text{kPa}$ → apsolutni tlak $\approx 151\,\text{kPa}$. |
 | $\tan\theta = a/g$ (slobodna površina pri linijskom ubrzanju) | Spremnik koji ubrzava $a = 2\,\text{m/s}^2$: slobodna površina nagnuta za $\theta \approx 11{,}5^\circ$. |
 | $g_{eff} = \sqrt{g^2 + a^2}$ | Pri $a = 5\,\text{m/s}^2$: $g_{eff} \approx 11{,}0\,\text{m/s}^2$. |
 | $F = \rho g z_T A$ (sila na ravnu plohu) | Pravokutna zaklopka $2 \times 3\,\text{m}$, težište na dubini $z_T = 3{,}5\,\text{m}$: $F \approx 205\,\text{kN}$. |
@@ -109,8 +111,8 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | Formula | Konkretan brojčani primjer |
 | --- | --- |
 | $\sum \vec{F} = \dot{m}(\vec{v}_{izl} - \vec{v}_{ul})$ | Mlaz $\dot{m} = 5\,\text{kg/s}$ skreće za $90^\circ$ pri $v = 20\,\text{m/s}$: $|F_x| = |F_y| = 100\,\text{N}$. |
-| $v_{rel} = v - u$ | Mlaz $v = 30\,\text{m/s}$, obodna brzina lopatice $u = 12\,\text{m/s}$: $v_{rel} = 18\,\text{m/s}$. |
-| $\dot{m}_{rel} = \rho A v_{rel}$ | Mlaz $A = 1\,\text{cm}^2$ vode, $v_{rel} = 18\,\text{m/s}$: $\dot{m}_{rel} = 1{,}8\,\text{kg/s}$. |
+| $w = c - u$ (relativna brzina, pog. 12) | Mlaz $c = 30\,\text{m/s}$, obodna brzina lopatice $u = 12\,\text{m/s}$: $w = 18\,\text{m/s}$. |
+| $\dot{m}_{rel} = \rho A w$ | Mlaz $A = 1\,\text{cm}^2$ vode, $w = 18\,\text{m/s}$: $\dot{m}_{rel} = 1{,}8\,\text{kg/s}$. |
 | $F \approx \dot{m} v$ (mlaz na nepokretnu plohu) | $\dot{m} = 2\,\text{kg/s}$, $v = 25\,\text{m/s}$: $F = 50\,\text{N}$. |
 | $F \approx 2\dot{m} v$ (mlaz potpuno skreće za $180^\circ$) | Isti primjer: $F = 100\,\text{N}$. |
 | $P = F u$ (snaga predana lopatici) | Lopatica $F = 1\,\text{kN}$, obodna brzina $u = 10\,\text{m/s}$: $P = 10\,\text{kW}$. |

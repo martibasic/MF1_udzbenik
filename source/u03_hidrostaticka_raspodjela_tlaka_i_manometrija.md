@@ -203,10 +203,10 @@ $$p = p_{pov} + \rho g h$$
 
 Najčešća greška ovdje nije u računu, nego u tome što se atmosfera mehanički uzme kao nula i kad za to nema fizikalnog opravdanja.
 
-Iz manometarskog tlaka odmah se može čitati i piezometarska visina
+Iz manometarskog tlaka $p_M$ (indeks $M$ = manometarski; ista oznaka koristi se u ostatku udžbenika) odmah se može čitati i piezometarska visina
 
 $$
-h_p = \frac{p_{man}}{\rho g},
+h_p = \frac{p_M}{\rho g},
 $$
 
 ::: {.callout-note}
@@ -239,7 +239,7 @@ Jednako je važno stalno razlikovati apsolutni, manometarski i vakuumski tlak: a
 
 Veza je uvijek
 
-$$p_{aps} = p_{atm} + p_{man}$$
+$$p_{aps} = p_{atm} + p_M$$
 
 ::: {.callout-note}
 ## Fizikalno značenje
@@ -248,9 +248,9 @@ Apsolutni tlak je "prava" fizikalna veličina mjerena od idealnog vakuuma ($p = 
 
 pa za podtlak vrijedi i relacija
 
-$$p_{vak} = p_{atm} - p_{aps} = -p_{man} \qquad (p_{man}<0)$$
+$$p_{vak} = p_{atm} - p_{aps} = -p_M \qquad (p_M<0)$$
 
-Ako je $p_{man} < 0$, to ne znači da je tlak "negativan" u apsolutnom smislu, nego da je sustav pod podtlakom u odnosu na okolinu.
+Ako je $p_M < 0$, to ne znači da je tlak "negativan" u apsolutnom smislu, nego da je sustav pod podtlakom u odnosu na okolinu.
 
 ## Riješeni primjeri
 
@@ -645,17 +645,17 @@ Zanemaruju se gubici u usisnom vodu (samo hidrostatika). Slobodna površina ulja
 Manometarski tlak na usisu pumpe (uspon od slobodne površine za $H$):
 
 $$
-p_{man} = -\rho g H = -870 \cdot 9{,}81 \cdot 2{,}40 = -20{,}49 \cdot 10^3\ \text{Pa}
+p_M = -\rho g H = -870 \cdot 9{,}81 \cdot 2{,}40 = -20{,}49 \cdot 10^3\ \text{Pa}
 $$
 
 $$
-p_{man} \approx -20{,}5\ \text{kPa}
+p_M \approx -20{,}5\ \text{kPa}
 $$
 
 Apsolutni tlak na usisu:
 
 $$
-p_{aps} = p_{atm} + p_{man} = 101300 - 20490 = 80810\ \text{Pa} \approx 80{,}8\ \text{kPa}
+p_{aps} = p_{atm} + p_M = 101300 - 20490 = 80810\ \text{Pa} \approx 80{,}8\ \text{kPa}
 $$
 
 Maksimalna teorijska visina aspiracije (bez kavitacije):
@@ -708,16 +708,16 @@ $$
 Manometarski tlak u priključku:
 
 $$
-p_{man} = \rho g \Delta H = 998 \cdot 9{,}81 \cdot 16 = 156{,}7 \cdot 10^3\ \text{Pa} \approx 156{,}7\ \text{kPa}
+p_M = \rho g \Delta H = 998 \cdot 9{,}81 \cdot 16 = 156{,}7 \cdot 10^3\ \text{Pa} \approx 156{,}7\ \text{kPa}
 $$
 
 Apsolutni tlak u priključku:
 
 $$
-p_{aps} = p_{atm} + p_{man} = 100500 + 156700 = 257200\ \text{Pa} \approx 257{,}2\ \text{kPa}
+p_{aps} = p_{atm} + p_M = 100500 + 156700 = 257200\ \text{Pa} \approx 257{,}2\ \text{kPa}
 $$
 
-Usporedba s minimalnim zahtjevom: $p_{man} = 156{,}7\ \text{kPa} > 100\ \text{kPa}$ – uvjet je zadovoljen.
+Usporedba s minimalnim zahtjevom: $p_M = 156{,}7\ \text{kPa} > 100\ \text{kPa}$ – uvjet je zadovoljen.
 
 **Provjera i komentar**
 

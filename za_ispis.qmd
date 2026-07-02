@@ -122,3 +122,9 @@ Koristi ispis preglednika ili izvoz u PDF za spremanje objedinjene verzije.
 # Tipične pogreške po poglavljima
 
 {{< include source/d03_tipicne_pogreske_po_poglavljima.md >}}
+
+<div class="page-break"></div>
+
+# Numerička mehanika fluida
+
+{{< include source/d04_numericka_mehanika_fluida.md >}}

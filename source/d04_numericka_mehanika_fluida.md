@@ -1,6 +1,6 @@
 ## Mehanika fluida i numerika — pregled
 
-Ovaj dodatak nije gradivo Mehanike fluida 1 niti je uvod u računalnu dinamiku fluida. On služi kao **mostovni pregled** — sažima sve numeričke pojmove iz „Numeričkih tragova" i „Numeričkih mostova" u poglavljima pog. 1–13 i postavlja ih u jednu cjelinu.
+Ovaj dodatak nije gradivo Mehanike fluida 1 niti je uvod u računalnu dinamiku fluida. On služi kao **mostovni pregled** — sažima sve numeričke pojmove iz „Numeričkih tragova" i „Numeričkih mostova" u poglavljima pog. 1–14 i postavlja ih u jednu cjelinu.
 
 Cilj nije osposobljavanje za pokretanje CFD simulacije. Cilj je da se u kasnijim kolegijima posvećenima **računalnoj dinamici fluida** prepoznaju pojmovi i odmah jasno vidi *gdje* je svaka jednadžba iz MF1 sjela u toj disciplini.
 
