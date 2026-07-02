@@ -142,3 +142,11 @@ Pretpostavlja se predznanje iz **Matematike I i II** (diferencijalni i integraln
 **Razine težine zadataka:** T1 (osnove) → T4 (sintetski zadaci). Studenti biraju raspored prema vlastitom tempu.
 
 Recenzentske napomene i ispravci dobrodošli su putem službenoga kanala kolegija.
+
+## Impressum
+
+- **Autorica:** Martina Bašić
+- **Naslov:** Mehanika fluida 1 — integrirani udžbenik za studije strojarstva i građevinarstva
+- **Verzija:** 0.9 (radno izdanje), srpanj 2026.
+- **Licenca:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.hr) — dopušteno je dijeljenje i prerada uz navođenje autorice, u nekomercijalne svrhe i pod istim uvjetima.
+- **ISBN / DOI:** u pripremi.

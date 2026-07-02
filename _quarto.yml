@@ -29,6 +29,7 @@ project:
     - assets/**
 
 lang: hr
+author: "Martina Bašić"
 bibliography: references.bib
 
 website:
