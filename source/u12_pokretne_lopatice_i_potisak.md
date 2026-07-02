@@ -1252,7 +1252,7 @@ Vrijedi za sve rotirajuće lopaticne strojeve gdje fluid mijenja smjer ili iznos
 	**Skica:** da - platforma s četiri sapnice, smjerovi mlazova, ukupni potisak i težina sustava.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u12_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — ploče, pokretne lopatice i sapnice (poglavlje 12).](../assets/print/u12_vjezbe_skice.svg){#fig-u12-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

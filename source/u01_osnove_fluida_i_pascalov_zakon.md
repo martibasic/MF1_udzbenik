@@ -919,7 +919,7 @@ Gustoća $\rho$ je masa po jedinici volumena (kg/m³), specifična težina $\gam
 	**Skica:** da - pumpni klip, tri jednaka radna cilindra i vertikalni pomak radnog stola.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u01_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — hidraulične preše, klipovi i radni cilindri (poglavlje 1).](../assets/print/u01_vjezbe_skice.svg){#fig-u01-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

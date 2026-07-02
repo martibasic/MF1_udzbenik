@@ -929,7 +929,7 @@ Bez jasno definiranog kontrolnog volumena nije moguće odrediti što su ulazi, �
 	**Skica:** da - miješajući spremnik s dva ulaza, jednim izlazom i rastom razine.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u08_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — cijevi, mješalice i razdjelnici protoka (poglavlje 8).](../assets/print/u08_vjezbe_skice.svg){#fig-u08-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

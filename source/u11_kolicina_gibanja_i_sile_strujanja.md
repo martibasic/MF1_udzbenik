@@ -1082,7 +1082,7 @@ Vrijedi i tada, jer zakon količine gibanja proizlazi iz Newtonovih zakona i ne 
 	**Skica:** da - Y-račva s jednim ulazom, dva izlaza, koordinatnim osima i kutom od $60^\circ$.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u11_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — mlazovi na plohe, koljena i račve (poglavlje 11).](../assets/print/u11_vjezbe_skice.svg){#fig-u11-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

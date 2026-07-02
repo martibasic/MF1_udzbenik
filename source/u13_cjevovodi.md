@@ -1126,7 +1126,7 @@ Koeficijent trenja $\lambda$ ovisi o Reynoldsovu broju, a Reynoldsov broj o brzi
 	**Skica:** da - jedan dovodni vod, dvije paralelne grane i jedan odvodni vod između dvaju spremnika.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u13_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — pojedinačne, serijske i paralelne cijevne dionice (poglavlje 13).](../assets/print/u13_vjezbe_skice.svg){#fig-u13-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

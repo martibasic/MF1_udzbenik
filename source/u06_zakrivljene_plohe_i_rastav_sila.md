@@ -971,7 +971,7 @@ Da, vrijedi neovisno o obliku zakrivljenosti sve dok se ploha može opisati zatv
 	**Skica:** da - četvrtcilindrični poklopac sa slobodnom površinom iznad njega, dubinom $h_1$, zglobom i spojnicom.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u06_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — zakrivljeni poklopci i rastav sila (poglavlje 6).](../assets/print/u06_vjezbe_skice.svg){#fig-u06-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

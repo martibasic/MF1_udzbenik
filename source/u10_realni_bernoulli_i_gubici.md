@@ -1274,7 +1274,7 @@ Vrijedi uz dodatne članove: $h_p$ za pumpu (dodaje energiju u sustav) i $h_t$ z
 	**Skica:** da - donji usisni spremnik, crpka, gornji tlačni spremnik, usisni i tlačni vod s označenim gubicima.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u10_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — cjevovodi s gubicima i crpni sustavi (poglavlje 10).](../assets/print/u10_vjezbe_skice.svg){#fig-u10-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

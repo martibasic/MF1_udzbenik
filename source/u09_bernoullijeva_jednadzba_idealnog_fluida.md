@@ -942,7 +942,7 @@ Gornja granica. Stvarna brzina je manja jer u idealnom modelu nisu uračunati gu
 	**Skica:** da - spremnik, sifonska cijev s vrhom $C$, vodoravni izlaz i domet mlaza do tla.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u09_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — sapnice, Venturijeve cijevi, Pitot i sifoni (poglavlje 9).](../assets/print/u09_vjezbe_skice.svg){#fig-u09-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

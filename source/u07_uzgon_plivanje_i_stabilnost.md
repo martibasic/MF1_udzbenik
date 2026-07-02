@@ -1073,7 +1073,7 @@ Vrijedi u bilo kojem fluidu, uključujući plinove. U zraku sila uzgona je obič
 	**Skica:** da - platforma na granici ulja i vode, rubni uroni $h_L$ i $h_D$, granica fluida i bočni pomak akumulatora.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u07_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — pontoni, areometri i plutajuće platforme (poglavlje 7).](../assets/print/u07_vjezbe_skice.svg){#fig-u07-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

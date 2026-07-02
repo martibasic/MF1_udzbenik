@@ -939,7 +939,7 @@ Ne izravno, jer pri $\alpha = 90^\circ$ (ploha horizontalna) tlak je jednolik po
 	**Skica:** da - vertikalna pregrada s gornjim slojem ulja, donjim slojem vode, zglobom gore i spojnicom dolje.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u05_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — ravni poklopci, pregrade i slojevi tekućina (poglavlje 5).](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

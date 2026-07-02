@@ -746,7 +746,7 @@ Identificiraju se najveća i druga po veličini sila u problemu; njihov omjer je
 	**Skica:** da - preljev brane s modelom i prototipom, slobodna površina, mjerilo $\lambda_L$ i kote $v$, $h_m$.
 :::
 
-![zadaci za vježbu - minimalne grayscale tehničke skice uz zadatke.](../assets/print/u14_vjezbe_skice.svg)
+![Skice uz zadatke za vježbu — modelska ispitivanja i bezdimenzijski brojevi (poglavlje 14).](../assets/print/u14_vjezbe_skice.svg){#fig-u14-vjezbe fig-align="center"}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
