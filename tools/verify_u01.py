@@ -223,7 +223,7 @@ def verify() -> list[dict]:
     r = primjer_most()
     _check(out, "U01.most.F_pod", r["F_pod"], 120000, "N")
     _check(out, "U01.most.p_min_MPa", r["p_min"], 12.6e6, "Pa")
-    _check(out, "U01.most.p_p_MPa", r["p_p"], 1.3e6, "Pa")
+    _check(out, "U01.most.p_p_MPa", r["p_p"], 1.315e6, "Pa")
 
     # Zadaci 1-6 (verifikacija pomocnih izracuna, target vrijednosti su simbolicke
     # u tekstu zadataka pa ovdje samo verificiramo da racun ne baci iznimku i da

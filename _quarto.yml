@@ -99,7 +99,9 @@ format:
   html:
     theme: flatly
     css: custom.css
-    toc: false
+    toc: true
+    toc-depth: 2
+    toc-title: "Na ovoj stranici"
     number-sections: true
     code-fold: false
 
