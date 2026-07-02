@@ -904,37 +904,37 @@ Ne izravno, jer pri $\alpha = 90^\circ$ (ploha horizontalna) tlak je jednolik po
 ::: {.mf1-vjezbe-list}
 1. **T1** Vertikalni pravokutni poklopac širine $b = 1{,}40\ \text{m}$ i visine $h = 1{,}80\ \text{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1 = 1{,}10\ \text{m}$. Odredi rezultantnu hidrostatsku silu na poklopac, dubinu centra tlaka ispod slobodne površine i udaljenost centra tlaka od gornjeg ruba poklopca.
 
-	**Natuknica:** $F = \rho gAh_C$; zatim $y_{CP} = h_C + I_G/(Ah_C)$ i udaljenost od gornjeg ruba dobiva se oduzimanjem $h_1$.
+	**Natuknica:** $F = \rho gAh_C$; zatim $y_{CP} = h_C + I_G/(Ah_C)$ i udaljenost od gornjeg ruba dobiva se oduzimanjem $h_1$. (Rješenje: $F \approx 49{,}4\ \text{kN}$; $y_{CP} \approx 2{,}14\ \text{m}$; od gornjeg ruba $\approx 1{,}04\ \text{m}$.)
 
 	**Skica:** da - vertikalna ploha, slobodna površina, dubina $h_1$, širina $b$ i visina $h$.
 
 2. **T1** Kružni inspekcijski prozor promjera $D = 0{,}60\ \text{m}$ nalazi se u vodi tako da mu je središte na dubini $h_C = 2{,}20\ \text{m}$. Odredi rezultantnu silu na prozor i dubinu centra tlaka.
 
-	**Natuknica:** koristi $A = \pi D^2/4$ i $I_G = \pi D^4/64$; zatim isti slijed $F = \rho gAh_C$ i $y_{CP} = h_C + I_G/(Ah_C)$.
+	**Natuknica:** koristi $A = \pi D^2/4$ i $I_G = \pi D^4/64$; zatim isti slijed $F = \rho gAh_C$ i $y_{CP} = h_C + I_G/(Ah_C)$. (Rješenje: $F \approx 6{,}10\ \text{kN}$; $y_{CP} \approx 2{,}21\ \text{m}$.)
 
 	**Skica:** da - kružna ploha s označenim središtem, promjerom $D$ i dubinom $h_C$.
 
 3. **T2** Kosi inspekcijski poklopac širine $b = 0{,}80\ \text{m}$ i duljine $L = 1{,}00\ \text{m}$ nalazi se pod kutom $40^\circ$ prema vodoravnici. Gornji rub poklopca je na dubini $0{,}90\ \text{m}$ i spojen je zglobom. Odredi rezultantnu silu na poklopac, položaj centra tlaka duž plohe i silu držanja potrebnu na donjem rubu da poklopac ostane zatvoren.
 
-	**Natuknica:** srednja dubina je $h_C = h_1 + (L/2)\sin\theta$; silu računaj preko $\rho gAh_C$, a silu držanja iz momentne ravnoteže oko zgloba.
+	**Natuknica:** srednja dubina je $h_C = h_1 + (L/2)\sin\theta$; silu računaj preko $\rho gAh_C$, a silu držanja iz momentne ravnoteže oko zgloba. (Rješenje: $F \approx 9{,}59\ \text{kN}$; centar tlaka $\approx 0{,}54\ \text{m}$ od gornjeg ruba uz plohu; sila držanja $T \approx 5{,}21\ \text{kN}$.)
 
 	**Skica:** da - kosa ploha sa zglobom, duljina $L$, kut $\theta$ i rezultanta na plohi.
 
 4. **T2** Vertikalna stijena širine $b = 1{,}80\ \text{m}$ zadržava vodu do visine $1{,}50\ \text{m}$, iznad koje se nalazi ulje gustoće $\rho_u = 820\ \text{kg/m}^3$ još do dodatne visine $0{,}90\ \text{m}$. Odredi ukupnu rezultantnu silu na stijenu i dubinu njezina hvatišta.
 
-	**Natuknica:** tlak razdvoji na dva dijela; za svaku tekućinu računaj zasebnu rezultantu i moment, pa ih zbroji u zajedničko hvatište.
+	**Natuknica:** tlak razdvoji na dva dijela; za svaku tekućinu računaj zasebnu rezultantu i moment, pa ih zbroji u zajedničko hvatište. (Rješenje: $F \approx 45{,}3\ \text{kN}$; $y_{CP} \approx 1{,}62\ \text{m}$.)
 
 	**Skica:** da - vertikalna stijena s dvije tekućine i prijelomom dijagrama tlaka na granici slojeva.
 
 5. **T3** Vertikalna stijenka spremnika visine $H = 4{,}20\ \text{m}$ i širine $b = 2{,}50\ \text{m}$ potpuno je ispunjena vodom. Dvije vodoravne ukrute trebaju podijeliti opterećenje stijenke na tri pojasa jednakih rezultantnih sila. Odredi dubine na kojima treba postaviti ukrute mjereno od slobodne površine.
 
-	**Natuknica:** radi s površinom dijagrama tlaka; svako polje mora imati istu rezultantu, pa uvjet postavi preko jednakih integrala po dubini.
+	**Natuknica:** radi s površinom dijagrama tlaka; svako polje mora imati istu rezultantu, pa uvjet postavi preko jednakih integrala po dubini. (Rješenje: granice pojaseva jednakih sila su $y_1 = H/\sqrt{3} \approx 2{,}42\ \text{m}$ i $y_2 = H\sqrt{2/3} \approx 3{,}43\ \text{m}$.)
 
 	**Skica:** da - stijena spremnika, linearni dijagram tlaka i dvije nepoznate razine ukruta.
 
 6. **T3** Zglobna vertikalna pregrada širine $b = 1{,}20\ \text{m}$ i visine $H = 2{,}40\ \text{m}$ zadržava s jedne strane ulje gustoće $\rho_u = 820\ \text{kg/m}^3$ do visine $0{,}80\ \text{m}$, a ispod njega vodu gustoće $\rho_w = 998\ \text{kg/m}^3$ do ukupne visine $H$. Pregrada je zglobno vezana u gornjem rubu, a na donjem rubu pridržava se vodoravnom spojnicom. Odredi ukupnu rezultantnu silu, dubinu centra tlaka i silu u spojnici.
 
-	**Natuknica:** tlak razdvoji na gornje uljno i donje vodeno polje; zasebno zatvori sile i momente, zatim vrati ukupno hvatište i momentnu ravnotežu oko zgloba.
+	**Natuknica:** tlak razdvoji na gornje uljno i donje vodeno polje; zasebno zatvori sile i momente, zatim vrati ukupno hvatište i momentnu ravnotežu oko zgloba. (Rješenje: $F \approx 30{,}5\ \text{kN}$; $y_{CP} \approx 1{,}62\ \text{m}$; sila u spojnici $T \approx 20{,}6\ \text{kN}$.)
 
 	**Skica:** da - vertikalna pregrada s gornjim slojem ulja, donjim slojem vode, zglobom gore i spojnicom dolje.
 :::

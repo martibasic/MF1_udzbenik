@@ -884,37 +884,37 @@ Gustoća $\rho$ je masa po jedinici volumena (kg/m³), specifična težina $\gam
 ::: {.mf1-vjezbe-list}
 1. **T1** U servisnoj hidrauličnoj preši mali klip promjera $d_1 = 28\ \text{mm}$ potiskuje ulje prema radnom klipu promjera $d_2 = 140\ \text{mm}$. Ako operater na mali klip djeluje silom $F_1 = 180\ \text{N}$, odredi tlak u ulju, silu na radnom klipu i pomak radnog klipa ako mali klip prijeđe put $s_1 = 120\ \text{mm}$.
 
-	**Natuknica:** $p = F_1/A_1$; zatim $F_2 = pA_2$ i iz volumne bilance $A_1 s_1 = A_2 s_2$.
+	**Natuknica:** $p = F_1/A_1$; zatim $F_2 = pA_2$ i iz volumne bilance $A_1 s_1 = A_2 s_2$. (Rješenje: $p \approx 292\ \text{kPa}$; $F_2 = 4{,}5\ \text{kN}$; $s_2 = 4{,}8\ \text{mm}$.)
 
 	**Skica:** da - dva klipa spojena istim fluidom, kote $d_1$, $d_2$, $s_1$, $s_2$ i sile $F_1$, $F_2$.
 
 2. **T1** Na kružni klip promjera $d = 24\ \text{mm}$ djeluje sila $F = 95\ \text{N}$. Odredi tlak u ulju i silu koju isti tlak daje na drugi klip promjera $D = 72\ \text{mm}$.
 
-	**Natuknica:** najprije $A = \pi d^2/4$, zatim $p = F/A$ i na većem klipu $F_2 = pA_2$.
+	**Natuknica:** najprije $A = \pi d^2/4$, zatim $p = F/A$ i na većem klipu $F_2 = pA_2$. (Rješenje: $p \approx 210\ \text{kPa}$; $F_2 = 855\ \text{N}$.)
 
 	**Skica:** da - dva kružna klipa različitih promjera u istoj hidrauličnoj grani.
 
 3. **T2** U zatvorenoj hidrauličnoj stezi tlak ulja iznosi $p = 2{,}4\ \text{MPa}$, a radni klip ima promjer $d = 52\ \text{mm}$. Odredi silu stezanja i procijeni koliki bi promjer morao imati novi klip ako se pri istom tlaku traži sila stezanja od najmanje $8{,}0\ \text{kN}$.
 
-	**Natuknica:** koristi $F = pA$; iz tražene sile vrati površinu $A = F/p$, pa zatim promjer iz $A = \pi d^2/4$.
+	**Natuknica:** koristi $F = pA$; iz tražene sile vrati površinu $A = F/p$, pa zatim promjer iz $A = \pi d^2/4$. (Rješenje: $F \approx 5{,}1\ \text{kN}$; $d_{min} \approx 65\ \text{mm}$.)
 
 	**Skica:** da - hidraulična stega s jednim radnim klipom i označenom silom stezanja.
 
 4. **T2** Hidraulični stol nosi teret mase $m = 1350\ \text{kg}$ preko dvaju jednakih radnih cilindara promjera $D = 95\ \text{mm}$. Ulje se dovodi ručnom pumpom čiji klip ima promjer $d = 18\ \text{mm}$ i hod $s = 160\ \text{mm}$. Odredi minimalnu silu na pumpnom klipu potrebnu za podizanje tereta i broj punih pumpnih hodova potreban da se stol podigne za $\Delta z = 45\ \text{mm}$.
 
-	**Natuknica:** teret raspodijeli na dva cilindra; iz $p = G/(2A_D)$ dobij $F_p = pA_d$, a broj hodova iz $nA_d s = 2A_D \Delta z$.
+	**Natuknica:** teret raspodijeli na dva cilindra; iz $p = G/(2A_D)$ dobij $F_p = pA_d$, a broj hodova iz $nA_d s = 2A_D \Delta z$. (Rješenje: $p \approx 0{,}93\ \text{MPa}$; $F_p \approx 238\ \text{N}$; $n = 16$ hodova.)
 
 	**Skica:** da - pumpni klip, dva radna cilindra i vertikalni pomak stola $\Delta z$.
 
 5. **T3** Ručna pumpa s klipom promjera $d = 25\ \text{mm}$ razvija silu $F_p = 420\ \text{N}$. Dva radna cilindra promjera $D = 140\ \text{mm}$ nalaze se na istoj razini i podižu platformu. Odredi tlak u ulju, ukupno nosivo opterećenje platforme i ukupni hod pumpnog klipa potreban da se platforma podigne za $\Delta z = 30\ \text{mm}$.
 
-	**Natuknica:** najprije izračunaj tlak iz $p = F_p/A_d$; zatim ukupno opterećenje iz $G = 2pA_D$, a ukupan hod pumpe iz volumne bilance $A_d s_p = 2A_D \Delta z$.
+	**Natuknica:** najprije izračunaj tlak iz $p = F_p/A_d$; zatim ukupno opterećenje iz $G = 2pA_D$, a ukupan hod pumpe iz volumne bilance $A_d s_p = 2A_D \Delta z$. (Rješenje: $p \approx 856\ \text{kPa}$; $G \approx 26{,}3\ \text{kN}$; $s_p \approx 1{,}88\ \text{m}$.)
 
 	**Skica:** da - pumpni klip, dva radna cilindra na istoj razini i nosiva platforma.
 
 6. **T3** Hidraulični radni stol podupiru tri jednaka cilindra, svaki površine $A_L = 95\ \text{cm}^2$. Ulje dovodi pumpni klip promjera $d = 22\ \text{mm}$ na koji djeluje sila $F_p = 360\ \text{N}$. Odredi tlak u ulju, ukupno opterećenje koje stol može nositi i ukupan hod pumpnog klipa potreban da se stol podigne za $\Delta z = 18\ \text{mm}$.
 
-	**Natuknica:** prvo izračunaj $A_p$ i tlak iz $p = F_p/A_p$; zatim ukupno opterećenje iz $G = 3pA_L$, a hod pumpe iz volumne bilance $A_p s_p = 3A_L \Delta z$.
+	**Natuknica:** prvo izračunaj $A_p$ i tlak iz $p = F_p/A_p$; zatim ukupno opterećenje iz $G = 3pA_L$, a hod pumpe iz volumne bilance $A_p s_p = 3A_L \Delta z$. (Rješenje: $p \approx 947\ \text{kPa}$; $G \approx 27{,}0\ \text{kN}$; $s_p \approx 1{,}35\ \text{m}$.)
 
 	**Skica:** da - pumpni klip, tri jednaka radna cilindra i vertikalni pomak radnog stola.
 :::

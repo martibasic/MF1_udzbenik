@@ -1091,37 +1091,37 @@ Koeficijent trenja $\lambda$ ovisi o Reynoldsovu broju, a Reynoldsov broj o brzi
 ::: {.mf1-vjezbe-list}
 1. **T1** Voda struji cijevi promjera $D = 75\ \text{mm}$ protokom $Q = 0{,}013\ \text{m}^3/\text{s}$. Duljina cijevi je $L = 34\ \text{m}$, apsolutna hrapavost $\varepsilon = 0{,}12\ \text{mm}$, a zbroj lokalnih koeficijenata iznosi $\sum\xi = 4{,}1$. Za vodu uzmi $\nu = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$ i Moodyjev koeficijent $\lambda = 0{,}026$. Odredi srednju brzinu, Reynoldsov broj i ukupni gubitak energije.
 
-	**Natuknica:** redoslijed je $Q \rightarrow v \rightarrow Re \rightarrow h_w$; ukupni gubitak je zbroj linijskog i lokalnog dijela.
+	**Natuknica:** redoslijed je $Q \rightarrow v \rightarrow Re \rightarrow h_w$; ukupni gubitak je zbroj linijskog i lokalnog dijela. (Rješenje: $v \approx 2{,}94\ \text{m/s}$; $Re \approx 2{,}2 \cdot 10^5$; $h_w \approx 7{,}0\ \text{m}$.)
 
 	**Skica:** da - jedna cijevna dionica s duljinom $L$, promjerom $D$ i lokalnim elementima.
 
 2. **T1** Voda struji cijevi promjera $D = 18\ \text{mm}$ protokom $Q = 1{,}0\times10^{-4}\ \text{m}^3/\text{s}$. Odredi srednju brzinu, Reynoldsov broj i zaključak je li tok laminaran. Ako je laminaran, izračunaj koeficijent trenja.
 
-	**Natuknica:** prvo $v = Q/A$, zatim $Re = vD/\nu$; za laminarni tok vrijedi $\lambda = 64/Re$.
+	**Natuknica:** prvo $v = Q/A$, zatim $Re = vD/\nu$; za laminarni tok vrijedi $\lambda = 64/Re$. (Rješenje: $v \approx 0{,}39\ \text{m/s}$; $Re \approx 7100$ — tok je turbulentan ($Re > 4000$) pa se $\lambda = 64/Re$ ne primjenjuje.)
 
 	**Skica:** da - kratka cijev s jednim presjekom i označenim protokom $Q$.
 
 3. **T2** Cjevovodni sustav sastoji se od dviju serijski spojenih dionica. Prva dionica ima $D_1 = 80\ \text{mm}$, $L_1 = 28\ \text{m}$, $\lambda_1 = 0{,}030$ i $\sum\xi_1 = 2{,}4$, a druga $D_2 = 60\ \text{mm}$, $L_2 = 16\ \text{m}$, $\lambda_2 = 0{,}034$ i $\sum\xi_2 = 3{,}1$. Ako je protok kroz sustav $Q = 0{,}010\ \text{m}^3/\text{s}$, odredi ukupni gubitak energije.
 
-	**Natuknica:** u seriji je isti protok kroz obje dionice; zato svaku dionicu računaj zasebno i na kraju zbroji gubitke.
+	**Natuknica:** u seriji je isti protok kroz obje dionice; zato svaku dionicu računaj zasebno i na kraju zbroji gubitke. (Rješenje: $h_{w1} \approx 2{,}6\ \text{m}$, $h_{w2} \approx 7{,}8\ \text{m}$; ukupno $h_w \approx 10{,}4\ \text{m}$.)
 
 	**Skica:** da - dvije serijski spojene cijevne dionice različitih promjera.
 
 4. **T2** U ravnoj cijevi vrijedi ukupni koeficijent $K = \lambda L/D + \sum\xi = 68$. Ako je zadani ukupni gubitak energije $h_w = 5{,}4\ \text{m}$, a promjer cijevi $D = 90\ \text{mm}$, odredi potrebni protok vode.
 
-	**Natuknica:** iz $h_w = K v^2/(2g)$ vrati $v$, a zatim protok iz $Q = Av$.
+	**Natuknica:** iz $h_w = K v^2/(2g)$ vrati $v$, a zatim protok iz $Q = Av$. (Rješenje: $v \approx 1{,}25\ \text{m/s}$; $Q \approx 7{,}9\ \text{L/s}$.)
 
 	**Skica:** da - jedna cijevna dionica s označenim ukupnim gubitkom $h_w$.
 
 5. **T3** Dvije paralelne grane imaju aproksimativne relacije gubitka energije $h_{w1} = 1450Q_1^2$ i $h_{w2} = 2400Q_2^2$, pri čemu su $h_w$ u metrima, a protoci u $\text{m}^3/\text{s}$. Ako je ukupni protok kroz razdjelnik $Q = 0{,}032\ \text{m}^3/\text{s}$, odredi protoke $Q_1$ i $Q_2$ te zajednički gubitak energije između čvorova.
 
-	**Natuknica:** u paraleli mora biti $h_{w1} = h_{w2}$ uz uvjet $Q = Q_1 + Q_2$; riješi te dvije jednadžbe zajedno.
+	**Natuknica:** u paraleli mora biti $h_{w1} = h_{w2}$ uz uvjet $Q = Q_1 + Q_2$; riješi te dvije jednadžbe zajedno. (Rješenje: $Q_1 \approx 18{,}0\ \text{L/s}$, $Q_2 \approx 14{,}0\ \text{L/s}$; zajednički gubitak $h_w \approx 0{,}47\ \text{m}$.)
 
 	**Skica:** da - razdjelnik s dvjema paralelnim granama i zajedničkim ulaznim/izlaznim čvorovima.
 
 6. **T3** Voda teče iz spremnika `A` u spremnik `B` kroz zajednički dovodni vod $D_0 = 100\ \text{mm}$, $L_0 = 20\ \text{m}$, $\lambda_0 = 0{,}025$, $\sum\xi_0 = 1{,}6$, zatim kroz dvije paralelne grane: grana `1` ima $D_1 = 80\ \text{mm}$, $L_1 = 24\ \text{m}$, $\lambda_1 = 0{,}028$, $\sum\xi_1 = 2{,}0$, a grana `2` ima $D_2 = 60\ \text{mm}$, $L_2 = 18\ \text{m}$, $\lambda_2 = 0{,}030$, $\sum\xi_2 = 2{,}6$. Nakon spajanja tok odlazi kroz vod $D_3 = 100\ \text{mm}$, $L_3 = 14\ \text{m}$, $\lambda_3 = 0{,}025$, $\sum\xi_3 = 1{,}0$. Razlika slobodnih razina spremnika iznosi $H = 9{,}5\ \text{m}$. Odredi odnos brzina u granama, protoke $Q_1$ i $Q_2$ te ukupni protok sustava.
 
-	**Natuknica:** u paralelnim granama izjednači $h_{w1}$ i $h_{w2}$, kontinuitetom zbroji $Q_1 + Q_2 = Q$, a ukupni pad energije zatvori kao serijski zbroj dovoda, paralelnog dijela i odvoda.
+	**Natuknica:** u paralelnim granama izjednači $h_{w1}$ i $h_{w2}$, kontinuitetom zbroji $Q_1 + Q_2 = Q$, a ukupni pad energije zatvori kao serijski zbroj dovoda, paralelnog dijela i odvoda. (Rješenje: $v_1/v_2 \approx 1{,}06$; $Q_1 \approx 14{,}9\ \text{L/s}$, $Q_2 \approx 8{,}0\ \text{L/s}$; ukupni protok $Q \approx 22{,}9\ \text{L/s}$.)
 
 	**Skica:** da - jedan dovodni vod, dvije paralelne grane i jedan odvodni vod između dvaju spremnika.
 :::

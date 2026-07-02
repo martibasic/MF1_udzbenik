@@ -936,37 +936,37 @@ Da, vrijedi neovisno o obliku zakrivljenosti sve dok se ploha može opisati zatv
 ::: {.mf1-vjezbe-list}
 1. **T1** Zakrivljeni poklopac presjeka četvrtine kruga polumjera $R = 0{,}65\ \text{m}$ i širine $b = 1{,}20\ \text{m}$ nalazi se u vodi. Gornja točka poklopca na dubini je $h_1 = 1{,}10\ \text{m}$ ispod slobodne površine. Odredi horizontalnu komponentu sile, vertikalnu komponentu sile i iznos rezultante.
 
-	**Natuknica:** $F_H$ čitaj preko vertikalne projekcije, $F_V$ preko težine zamišljenog volumena, a rezultantu iz $F_R = \sqrt{F_H^2 + F_V^2}$.
+	**Natuknica:** $F_H$ čitaj preko vertikalne projekcije, $F_V$ preko težine zamišljenog volumena, a rezultantu iz $F_R = \sqrt{F_H^2 + F_V^2}$. (Rješenje: $F_H \approx 10{,}9\ \text{kN}$; $F_V \approx 12{,}3\ \text{kN}$; $F_R \approx 16{,}4\ \text{kN}$.)
 
 	**Skica:** da - četvrtina kruga, slobodna površina, projekcija i zamišljeni volumen $V^*$.
 
 2. **T1** Polucilindrični poklopac radijusa $R = 0{,}30\ \text{m}$ i širine $b = 0{,}90\ \text{m}$ potpuno je uronjen u vodu. Odredi komponente $F_H$ i $F_V$ te pravac rezultante ako ona prolazi središtem zakrivljenosti.
 
-	**Natuknica:** projekcija daje $F_H$, zamišljeni volumen $F_V$; smjer rezultante zatvara odnos $\tan\alpha = F_V/F_H$.
+	**Natuknica:** projekcija daje $F_H$, zamišljeni volumen $F_V$; smjer rezultante zatvara odnos $\tan\alpha = F_V/F_H$. (Rješenje: $F_V \approx 1{,}25\ \text{kN}$, $= \rho g\,\pi R^2 b/2$ i ne ovisi o dubini; $F_H = \rho g\,h_C\,(2Rb)$ traži dubinu središta koja u ovom zadatku nije zadana.)
 
 	**Skica:** da - polucilindrična ploha, središte zakrivljenosti i pravac rezultante.
 
 3. **T2** Polucilindrični revizijski poklopac radijusa $R = 0{,}40\ \text{m}$ i širine $b = 1{,}00\ \text{m}$ zglobno je ovješen na gornjem rubu. Voda doseže slobodnu površinu $0{,}85\ \text{m}$ iznad najviše točke zakrivljene plohe. Odredi silu rezultante i moment oko zgloba potreban za zadržavanje poklopca u zatvorenom položaju.
 
-	**Natuknica:** prvo odredi $F_H$ i $F_V$ s njihovim pravcima djelovanja, a tek zatim prenesi svaku komponentu u moment oko zgloba.
+	**Natuknica:** prvo odredi $F_H$ i $F_V$ s njihovim pravcima djelovanja, a tek zatim prenesi svaku komponentu u moment oko zgloba. (Rješenje: $F_H \approx 9{,}79\ \text{kN}$, $F_V \approx 2{,}46\ \text{kN}$, $F_R \approx 10{,}1\ \text{kN}$; rezultanta prolazi središtem zakrivljenosti pa je moment oko zgloba $M = F_H R \approx 3{,}9\ \text{kN·m}$.)
 
 	**Skica:** da - zakrivljeni poklopac sa zglobom, komponentama i krakovima momenata.
 
 4. **T2** Zakrivljeni zatvarač presjeka četvrtine kruga polumjera $R = 0{,}55\ \text{m}$ zatvara spremnik s vodom, ali je iznad plohe zatvoren zračni prostor s jednolikim nadtlakom $p_0 = 18\ \text{kPa}$. Odredi kako se mijenjaju $F_H$ i $F_V$ u odnosu na slučaj bez nadtlaka.
 
-	**Natuknica:** nadtlak dodaj na projekciju i na zamišljeni volumen kao jednoliki dodatni tlak; smjer $F_V$ provjeri iz stvarnog rasporeda fluida iznad plohe.
+	**Natuknica:** nadtlak dodaj na projekciju i na zamišljeni volumen kao jednoliki dodatni tlak; smjer $F_V$ provjeri iz stvarnog rasporeda fluida iznad plohe. (Rješenje: obje komponente rastu — jednoliki nadtlak dodaje $p_0 A_x = p_0 Rb$ na $F_H$ i $p_0 A_y = p_0 Rb$ na $F_V$; za četvrtinu kruga projekcije su jednake pa svaka komponenta dobiva isti dodatak $p_0\,Rb$.)
 
 	**Skica:** da - zakrivljena ploha, slobodna površina ili zatvoreni zračni jastuk i označeni nadtlak $p_0$.
 
 5. **T3** Zakrivljena ploha na dnu servisnog kanala zatvara volumen vode ispod stlačenog zračnog jastuka. Zamišljeni volumen koji određuje $F_V$ ima obujam $V^* = 0{,}42\ \text{m}^3$, a horizontalna projekcija plohe daje silu $F_H = 18{,}5\ \text{kN}$. Odredi vertikalnu komponentu sile, procijeni njezin smjer i izračunaj iznos rezultante.
 
-	**Natuknica:** iz $F_V = \rho gV^*$ najprije dobij iznos, smjer odredi iz zamišljenog volumena i rasporeda tlaka, a rezultantu zatvori vektorskim zbrojem.
+	**Natuknica:** iz $F_V = \rho gV^*$ najprije dobij iznos, smjer odredi iz zamišljenog volumena i rasporeda tlaka, a rezultantu zatvori vektorskim zbrojem. (Rješenje: $F_V = \rho gV^* \approx 4{,}11\ \text{kN}$ (prema gore, volumen je ispod plohe); $F_R \approx 19{,}0\ \text{kN}$.)
 
 	**Skica:** da - podna zakrivljena ploha, zamišljeni volumen $V^*$, projekcija za $F_H$ i smjerovi komponenti.
 
 6. **T3** Četvrtcilindrični poklopac polumjera $R = 0{,}75\ \text{m}$ i širine $b = 1{,}10\ \text{m}$ nalazi se tako da mu je gornja točka na dubini $h_1 = 0{,}45\ \text{m}$ ispod slobodne površine vode. Poklopac je zglobno vezan u gornjoj točki, a na donjem rubu pridržava ga vodoravna spojnica. Odredi horizontalnu komponentu sile, vertikalnu komponentu sile, iznos rezultante i silu spojnice potrebnu da poklopac ostane zatvoren.
 
-	**Natuknica:** za $F_H$ koristi vertikalnu projekciju na dubini $h_1 + R/2$; za $F_V$ uzmi težinu imaginarnog volumena koji sada uključuje i pravokutni dio iznad četvrtine kruga; na kraju zatvori momente oko zgloba.
+	**Natuknica:** za $F_H$ koristi vertikalnu projekciju na dubini $h_1 + R/2$; za $F_V$ uzmi težinu imaginarnog volumena koji sada uključuje i pravokutni dio iznad četvrtine kruga; na kraju zatvori momente oko zgloba. (Rješenje: $F_H \approx 6{,}66\ \text{kN}$; $F_V \approx 8{,}39\ \text{kN}$; $F_R \approx 10{,}7\ \text{kN}$; silu spojnice zatvori iz momentne ravnoteže oko zgloba s pripadnim krakovima komponenti.)
 
 	**Skica:** da - četvrtcilindrični poklopac sa slobodnom površinom iznad njega, dubinom $h_1$, zglobom i spojnicom.
 :::

@@ -1217,37 +1217,37 @@ Vrijedi za sve rotirajuće lopaticne strojeve gdje fluid mijenja smjer ili iznos
 ::: {.mf1-vjezbe-list}
 1. **T1** Vodeni mlaz brzine $v = 24\ \text{m/s}$ izlazi iz kružne sapnice promjera $d = 22\ \text{mm}$ i udara okomito na nepomičnu ravnu ploču. Odredi silu na ploču.
 
-	**Natuknica:** $\dot m = \rho Av$, a za potpuno kočenje komponente brzine na ploči vrijedi $F = \dot m v$.
+	**Natuknica:** $\dot m = \rho Av$, a za potpuno kočenje komponente brzine na ploči vrijedi $F = \dot m v$. (Rješenje: $\dot m \approx 9{,}1\ \text{kg/s}$; $F \approx 219\ \text{N}$.)
 
 	**Skica:** da - sapnica, ravna ploča i os mlaza sa silom reakcije.
 
 2. **T1** Vodeni mlaz brzine $v = 26\ \text{m/s}$ izlazi iz pravokutne sapnice širine $b = 30\ \text{mm}$ i visine $h = 16\ \text{mm}$ te udara u nepomičnu vodilicu koja tok zakreće za $110^\circ$ bez promjene iznosa brzine. Odredi komponente sile fluida na vodilicu i iznos reakcije nosača.
 
-	**Natuknica:** iz presjeka dobij $\dot m$, a zatim razliku ulazne i izlazne komponente brzine u x i y smjeru.
+	**Natuknica:** iz presjeka dobij $\dot m$, a zatim razliku ulazne i izlazne komponente brzine u x i y smjeru. (Rješenje: $\dot m \approx 12{,}5\ \text{kg/s}$; $F_x \approx 435\ \text{N}$, $F_y \approx -304\ \text{N}$; reakcija nosača $\approx 531\ \text{N}$.)
 
 	**Skica:** da - zakrenuta nepomična vodilica, ulazni i izlazni vektor brzine.
 
 3. **T2** Na pokretnu lopaticu dolazi mlaz vode apsolutnom brzinom $v_1 = 32\ \text{m/s}$, dok se lopatica giba brzinom $u = 12\ \text{m/s}$ u smjeru mlaza. Pretpostavi da je relativna izlazna brzina po iznosu jednaka ulaznoj i zakrenuta za $150^\circ$ u odnosu na ulazni relativni smjer. Ako je maseni protok $\dot{m} = 18\ \text{kg/s}$, odredi tangencijalnu silu na lopaticu i snagu koju mlaz predaje lopatici.
 
-	**Natuknica:** prijeđi na relativne brzine, zatim vrati apsolutnu izlaznu brzinu i iz tangencijalne promjene količine gibanja dobij silu; snaga je $P = Fu$.
+	**Natuknica:** prijeđi na relativne brzine, zatim vrati apsolutnu izlaznu brzinu i iz tangencijalne promjene količine gibanja dobij silu; snaga je $P = Fu$. (Rješenje: $w_1 = 20\ \text{m/s}$; $F_t \approx 672\ \text{N}$; $P \approx 8{,}06\ \text{kW}$.)
 
 	**Skica:** da - pokretna lopatica, brzina lopatice $u$, ulazni i izlazni trokut brzina.
 
 4. **T2** Peltonova lopatica na rotoru radijusa $R = 0{,}42\ \text{m}$ prima mlaz vode masenog protoka $\dot m = 24\ \text{kg/s}$. Tangencijalna komponenta apsolutne brzine na ulazu iznosi $v_{u1} = 28\ \text{m/s}$, a na izlazu $v_{u2} = 6\ \text{m/s}$. Odredi tangencijalnu silu na lopaticu i moment na vratilu.
 
-	**Natuknica:** tangencijalna sila slijedi iz $F_t = \dot m (v_{u1} - v_{u2})$, a moment je $M = F_t R$.
+	**Natuknica:** tangencijalna sila slijedi iz $F_t = \dot m (v_{u1} - v_{u2})$, a moment je $M = F_t R$. (Rješenje: $F_t = 528\ \text{N}$; $M \approx 222\ \text{N·m}$.)
 
 	**Skica:** da - rotor, polumjer $R$, mlaz i tangencijalne komponente brzine na ulazu i izlazu.
 
 5. **T3** Potisni modul ima tri jednake sapnice promjera $d = 30\ \text{mm}$. Iz svake sapnice voda izlazi brzinom $v = 42\ \text{m/s}$ u suprotnom smjeru od gibanja platforme. Odredi ukupni potisak modula i hidrauličku snagu mlaza ako je gustoća vode $\rho = 998\ \text{kg/m}^3$.
 
-	**Natuknica:** za jednu sapnicu vrijedi $F = \dot m v$ i $P = \dot m v^2/2$; ukupni rezultat je trostruki zbroj.
+	**Natuknica:** za jednu sapnicu vrijedi $F = \dot m v$ i $P = \dot m v^2/2$; ukupni rezultat je trostruki zbroj. (Rješenje: ukupni potisak $\approx 3{,}73\ \text{kN}$; hidraulička snaga $\approx 78{,}4\ \text{kW}$.)
 
 	**Skica:** da - platforma s tri sapnice, smjer mlaza i rezultantni potisak.
 
 6. **T3** Mlazna platforma ukupne mase $m = 110\ \text{kg}$ ima četiri jednake sapnice promjera $d = 28\ \text{mm}$. Voda iz svake sapnice izlazi okomito prema dolje brzinom $v = 36\ \text{m/s}$. Odredi ukupni potisak, najveću ukupnu masu koju takav sustav može držati u lebdenju i vertikalno ubrzanje platforme pri zadanoj masi sustava.
 
-	**Natuknica:** najprije zbroji izlazne površine svih sapnica; zatim koristi $F_p = \rho A v^2$, uvjet lebdenja $F_p = mg$ i za zadanu masu Newtonov zakon $a = (F_p - mg)/m$.
+	**Natuknica:** najprije zbroji izlazne površine svih sapnica; zatim koristi $F_p = \rho A v^2$, uvjet lebdenja $F_p = mg$ i za zadanu masu Newtonov zakon $a = (F_p - mg)/m$. (Rješenje: $F_p \approx 3{,}19\ \text{kN}$; najveća masa lebdenja $\approx 325\ \text{kg}$; pri $m = 110\ \text{kg}$ ubrzanje $a \approx 19{,}2\ \text{m/s}^2$.)
 
 	**Skica:** da - platforma s četiri sapnice, smjerovi mlazova, ukupni potisak i težina sustava.
 :::
