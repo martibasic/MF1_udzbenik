@@ -15,9 +15,9 @@ Ovo je aktualni statusni presjek kanonskog udzbenika u `MF1_udzbenik`. Dokument 
 >
 > **Faza B (u tijeku)**: B1 — 78 brojcanih odgovora na vjezbe U01–U13 dodano (zatvoreno); B2 — utvrdjeno da sve vjezbe vec imaju T1 zadatke (nije potrebno); B3 — dodan T4 sintezni zadatak u U14 (Froudeova slicnost + provjera rezima). Otvoreno: B4 — notebook+QR za U14 (jedino poglavlje bez interaktivnog prikaza; treba `u14_vjezbe_skice.svg` prosiriti 7. mini-skicom).
 >
-> **Faza D (u tijeku)**: uklonjeno 245 commitanih `*.quarto_ipynb_*` build-artefakata (+ `.gitignore` popravak); 26 radnih dokumenata (matrice, evidencije, qa_log, val1...) premjesteno u `docs/radno/`. Otvoreno: popis literature, impressum, `toc` za web, CI korak `verify_all.py`, `tools/README.md`.
+> **Faza D (zatvoreno)**: uklonjeno 245 commitanih `*.quarto_ipynb_*` build-artefakata (+ `.gitignore` popravak — stablo ostaje cisto nakon rendera); 26 radnih dokumenata premjesteno u `docs/radno/`; dodatak `D05 Literatura` + `references.bib`; impressum (autorica, verzija, licenca CC BY-NC-SA 4.0); `toc` za web poglavlja; CI korak `verify_all.py` (blokirajuci, 498/498); `tools/README.md`. Popravljen check `U01.most.p_p_MPa` (sada 498/498 umjesto 497/1).
 >
-> **Otvoreno (Faza C, E)**: kinematika strujanja kao novi uvod u U08; captioni skica uz vjezbe; nova SVG skica za kinematiku.
+> **Otvoreno (Faza C, E, B4)**: kinematika strujanja kao novi uvod u U08; captioni skica uz vjezbe; nova SVG skica za kinematiku; interaktivni notebook+QR za U14.
 
 > **Faza 1 — QA i unaprjeđenje primjera, zadataka i skica — tekstualni i strukturni dio završen 2026-05-18**. Tracking u [`qa_log_faza1.md`](docs/radno/qa_log_faza1.md). Otvoreno: matplotlib→SVG konverzija (27 blokova kroz U07–U13) i finalni quarto render check.
 >
