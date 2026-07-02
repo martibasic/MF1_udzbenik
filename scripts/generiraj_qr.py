@@ -53,6 +53,7 @@ VEZE: dict[str, str] = {
     "u11_sila_na_koljeno": "u11_sila_na_koljeno.ipynb",
     "u12_pelton_lopatica": "u12_pelton_lopatica.ipynb",
     "u13_paralelne_grane": "u13_paralelne_grane.ipynb",
+    "u14_cd_re_kugla": "u14_cd_re_kugla.ipynb",
 }
 
 

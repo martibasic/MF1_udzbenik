@@ -605,6 +605,21 @@ $$
 3. Granica modela: oko $Re \approx 2{,}5 \cdot 10^5$ nastupa „otporna kriza" (granični sloj postaje turbulentan, $C_d$ naglo padne), pa konstantni $C_d = 0{,}45$ vrijedi samo u podkritičnom području u kojem je zadatak postavljen.
 :::
 
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">Interaktivni prikaz — Univerzalna krivulja otpora kugle</p>
+
+Interaktivni prikaz crta univerzalnu krivulju $C_d(Re)$ i pomiče radnu točku kako mijenjaš brzinu, promjer kugle te viskoznost i gustoću fluida. Odmah se vidi da posve različiti sustavi (mala kugla u ulju, velika u zraku) leže na **istoj** krivulji čim im se izjednači Reynoldsov broj — praktična moć dimenzijske analize.
+
+<div class="mf1-interaktivno-akcija">
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u14_cd_re_kugla.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u14_cd_re_kugla.svg" alt="QR kod za interaktivni prikaz univerzalne krivulje Cd(Re)"/>
+</div>
+
+<div class="mf1-interaktivno-pitanja">
+**Pitanja za samostalno istraživanje:** (a) Kako namjestiti vodu i zrak da postignu isti $Re$, i zašto im je tada $C_d$ jednak iako su sile otpora različite? (b) Ispod kojeg $Re$ krivulja prelazi u Stokesov režim $C_d = 24/Re$ i što to znači za taloženje sitnih čestica? (c) Pri fiksnom $C_d$, zašto udvostručenje brzine daje četverostruku silu otpora?
+</div>
+:::
+
 ::: {.mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Machov i Strouhalov broj: stlačivost i vrtložno otpuštanje&nbsp;<span class="mf1-level">T2</span></p>
 

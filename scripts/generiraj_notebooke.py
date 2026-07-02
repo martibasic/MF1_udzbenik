@@ -2146,6 +2146,151 @@ NOTEBOOKS["u13_paralelne_grane"] = dict(
 )
 
 
+NOTEBOOKS["u14_cd_re_kugla"] = dict(
+    naslov="Univerzalna krivulja otpora kugle — Cd(Re)",
+    poglavlje="Poglavlje U14: Bezdimenzijski brojevi, dimenzijska analiza i sličnost",
+    uvod=(
+        "Ovaj interaktivni prikaz materijalizira glavni rezultat "
+        "dimenzijske analize: otpor kugle svodi se na jednu univerzalnu "
+        "krivulju $C_d(Re)$. Mijenjanjem brzine, promjera i fluida "
+        "radna se točka pomiče po istoj krivulji — bez obzira na "
+        "veličinu i vrstu fluida."
+    ),
+    cilj=(
+        "Buckinghamova analiza pokazuje da problem otpora kugle "
+        "($F_D, \\rho, v, D, \\mu$) ovisi samo o dvije $\\Pi$-grupe, pa "
+        "je $C_d = f(Re)$. Prikaz omogućuje:\n"
+        "\n"
+        "1. mijenjanje brzine strujanja $v$;\n"
+        "2. mijenjanje promjera kugle $D$;\n"
+        "3. izbor fluida preko kinematičke viskoznosti $\\nu$ i gustoće "
+        "$\\rho$;\n"
+        "4. praćenje kako se radna točka $(Re, C_d)$ kreće po jednoj "
+        "univerzalnoj krivulji i kolika je pripadna sila otpora."
+    ),
+    pretpostavke=(
+        "- glatka kruta kugla u ustaljenoj struji;\n"
+        "- nestlačivo strujanje ($Ma < 0{,}3$);\n"
+        "- $C_d(Re)$ prema Clift-Gauvinovoj korelaciji, valjanoj do "
+        "otporne krize (oko $Re \\approx 2\\cdot 10^5$);\n"
+        "- karakteristična duljina je promjer $D$, čeona površina "
+        "$A = \\pi D^2/4$."
+    ),
+    model_md=(
+        "Dimenzijska analiza svodi pet veličina na dvije grupe:\n"
+        "\n"
+        "$$\\Pi_1 = \\frac{F_D}{\\rho v^2 D^2}, \\qquad "
+        "\\Pi_2 = \\frac{\\rho v D}{\\mu} = Re "
+        "\\quad\\Rightarrow\\quad C_d = f(Re).$$\n"
+        "\n"
+        "Koeficijent otpora i sila:\n"
+        "\n"
+        "$$C_d = \\frac{F_D}{\\tfrac{1}{2}\\rho v^2 A}, \\qquad "
+        "F_D = C_d\\,\\tfrac{1}{2}\\rho v^2 A, \\qquad Re = \\frac{vD}{\\nu}.$$\n"
+        "\n"
+        "Korelacija za glatku kuglu (Clift-Gauvin):\n"
+        "\n"
+        "$$C_d = \\frac{24}{Re}\\left(1 + 0{,}15\\,Re^{0{,}687}\\right) + "
+        "\\frac{0{,}42}{1 + 4{,}25\\cdot 10^4\\,Re^{-1{,}16}}.$$"
+    ),
+    kod_funkcije=(
+        "G = 9.81\n"
+        "\n"
+        "def cd_kugla(Re):\n"
+        "    # Clift-Gauvin korelacija za glatku kuglu (Re < ~3e5)\n"
+        "    return 24.0/Re*(1 + 0.15*Re**0.687) + 0.42/(1 + 4.25e4*Re**(-1.16))\n"
+        "\n"
+        "def otpor_kugle(v, D_mm, nu_e6, rho):\n"
+        "    D = D_mm/1000.0\n"
+        "    nu = nu_e6*1e-6\n"
+        "    Re = v*D/nu\n"
+        "    Cd = cd_kugla(Re)\n"
+        "    A = np.pi*D**2/4\n"
+        "    F_D = Cd*0.5*rho*v**2*A\n"
+        "    return {'Re': Re, 'Cd': Cd, 'F_D': F_D, 'A': A}"
+    ),
+    prikaz_md=(
+        "Klizačima se biraju brzina, promjer kugle te viskoznost i "
+        "gustoća fluida. Prikaz crta univerzalnu krivulju $C_d(Re)$ i "
+        "označava trenutnu radnu točku; ista krivulja vrijedi za sve "
+        "veličine i fluide."
+    ),
+    kod_prikaz=(
+        "def otpor_prikaz(v, D_mm, nu_e6, rho):\n"
+        "    r = otpor_kugle(v, D_mm, nu_e6, rho)\n"
+        "    Re_k = np.logspace(-1, 5.5, 400)\n"
+        "    Cd_k = cd_kugla(Re_k)\n"
+        "\n"
+        "    fig, ax = plt.subplots(figsize=(9, 5.5))\n"
+        "    ax.loglog(Re_k, Cd_k, color='#1565c0', lw=2,\n"
+        "               label='$C_d(Re)$ glatka kugla')\n"
+        "    mask = Re_k < 2\n"
+        "    ax.loglog(Re_k[mask], 24/Re_k[mask], '--', color='#7a8a96',\n"
+        "               lw=1.4, label='Stokes  $C_d = 24/Re$')\n"
+        "    ax.axvspan(2e5, 5e5, color='#f5e6e0', alpha=0.7)\n"
+        "    ax.text(2.4e5, 0.85, 'otporna\\nkriza', color='#b7600c',\n"
+        "             fontsize=9, ha='left')\n"
+        "    ax.plot(r['Re'], r['Cd'], 'o', color='#c0392b', ms=11,\n"
+        "             label='radna točka')\n"
+        "    ax.annotate(f\"Re = {r['Re']:.3g}\\n$C_d$ = {r['Cd']:.3g}\",\n"
+        "                 xy=(r['Re'], r['Cd']),\n"
+        "                 xytext=(r['Re']*2.2, r['Cd']*2.8),\n"
+        "                 color='#c0392b', fontsize=10,\n"
+        "                 arrowprops=dict(arrowstyle='->', color='#c0392b'))\n"
+        "    ax.set_xlabel('Reynoldsov broj  $Re = vD/\\\\nu$')\n"
+        "    ax.set_ylabel('koeficijent otpora  $C_d$')\n"
+        "    ax.set_title(f\"Sila otpora  $F_D$ = {r['F_D']:.3g} N\")\n"
+        "    ax.grid(True, which='both', ls=':', alpha=0.5)\n"
+        "    ax.legend(loc='upper right', fontsize=9)\n"
+        "    plt.tight_layout()\n"
+        "    plt.show()\n"
+        "\n"
+        "\n"
+        "interact(\n"
+        "    otpor_prikaz,\n"
+        "    v=FloatSlider(min=0.5, max=60, step=0.5, value=30,\n"
+        "                   description='$v$ (m/s)',\n"
+        "                   layout=Layout(width='420px')),\n"
+        "    D_mm=FloatSlider(min=2, max=200, step=2, value=20,\n"
+        "                      description='$D$ (mm)',\n"
+        "                      layout=Layout(width='420px')),\n"
+        "    nu_e6=FloatSlider(min=1, max=50, step=1, value=15,\n"
+        "                       description='ν (1e-6 m²/s)',\n"
+        "                       layout=Layout(width='420px')),\n"
+        "    rho=FloatSlider(min=1.0, max=1200, step=1, value=1.2,\n"
+        "                     description='ρ (kg/m³)',\n"
+        "                     layout=Layout(width='420px'))\n"
+        ");"
+    ),
+    pitanja=(
+        "1. **Ista krivulja, razni fluidi.** Namjesti vodu ($\\nu = 1$, "
+        "$\\rho = 1000$) i zrak ($\\nu = 15$, $\\rho = 1{,}2$) tako da "
+        "postigneš isti $Re$. Zašto je $C_d$ jednak iako su sile otpora "
+        "posve različite?\n"
+        "\n"
+        "2. **Stokesov režim.** Spusti $Re$ ispod $\\approx 1$ (mala "
+        "kugla, velika viskoznost). Poklapa li se krivulja sa "
+        "$C_d = 24/Re$? Što to znači za taloženje sitnih čestica?\n"
+        "\n"
+        "3. **Otporna kriza.** Približi radnu točku području "
+        "$Re \\approx 2\\cdot 10^5$. Zašto stvarni $C_d$ tu naglo pada, "
+        "a korelacija to više ne opisuje?\n"
+        "\n"
+        "4. **Skaliranje sile.** Pri fiksnom $C_d$, kako $F_D$ ovisi o "
+        "$v$ i o $D$? Zašto udvostručenje brzine daje četverostruku silu?"
+    ),
+    teorija=(
+        "Ovaj prikaz materijalizira središnji rezultat poglavlja U14: "
+        "dimenzijska analiza svodi problem s pet veličina na funkciju "
+        "jedne bezdimenzijske varijable, $C_d = f(Re)$. Jedna izmjerena "
+        "krivulja zato vrijedi za sve veličine i fluide — golema ušteda "
+        "u odnosu na mjerenje svake kombinacije posebno. Ista logika "
+        "stoji iza koeficijenta trenja $\\lambda(Re, \\varepsilon/D)$ i "
+        "koeficijenta tlaka $C_p$."
+    ),
+)
+
+
 # ============================================================================
 # Glavna funkcija
 # ============================================================================
