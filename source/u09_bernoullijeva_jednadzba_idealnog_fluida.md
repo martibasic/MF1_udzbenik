@@ -24,7 +24,7 @@ Idealni Bernoulli vidi se u Venturijevoj cijevi, Pitotovoj sondi, mlaznici za č
 - jednadžba kontinuiteta iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
 - pojam rada i energije iz Fizike I; kinetička, potencijalna i tlačna energija;
 - diferencijalni račun jedne varijable i osnove integriranja;
-- pojam strujnice (linije strujanja) u stacionarnom toku.
+- pojam strujnice, trajektorije i polja brzine iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>.
 
 **Ishodi učenja:**
 

@@ -145,8 +145,20 @@ def zadatak_6(A_T=4.8, Q_A=0.011, Q_B=0.004, rho_B=1080.0, D=0.080,
     return {"Q_3": Q_3, "rho_mix": rho_mix, "dhdt": dhdt, "dm": dm}
 
 
+def primjer_kinematika_srednja(R=0.025, v_max=3.0):
+    # Paraboloidni profil v(r)=v_max(1-(r/R)^2): srednja = v_max/2
+    v_mean = v_max / 2
+    A = math.pi * R**2
+    Q = v_mean * A
+    return {"v_mean": v_mean, "A": A, "Q": Q}
+
+
 def verify():
     out = []
+
+    r = primjer_kinematika_srednja()
+    _check(out, "U08.KIN.v_mean", r["v_mean"], 1.5, "m/s")
+    _check(out, "U08.KIN.Q", r["Q"], 2.945e-3, "m^3/s")
 
     r = primjer_1_difuzor()
     _check(out, "U08.P1.v_1", r["v_1"], 36.0, "m/s")

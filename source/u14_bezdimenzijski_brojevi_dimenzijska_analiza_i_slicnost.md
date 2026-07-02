@@ -777,6 +777,15 @@ Modelska ispitivanja u bazenu, aerotunelu i na crpkama imaju smisla samo ako je 
 
 Bezdimenzijski brojevi sažimaju fiziku, ali ne zamjenjuju je. Kad dva broja istovremeno postanu važna (npr. $Re$ i $Fr$ kod broda, ili $We$ i $Re$ kod mlaza), potpuna sličnost nije ostvariva i nužne su korekcije ili rastav doprinosa.
 
+**Kamo dalje nakon MF1**
+
+Ovaj kolegij namjerno ostaje u području **integralne** analize nestlačivog strujanja. Teme koje se prirodno nastavljaju, a izlaze iz opsega MF1, spominju se ovdje samo kao putokaz za sljedeće kolegije:
+
+- **granični sloj i otpor tijela** — kako viskoznost uz stijenku stvara otpor i uzgon (koeficijent $C_d$, „otporna kriza" iz ovog poglavlja detaljno se obrađuje u aerodinamici i hidrodinamici);
+- **strujanje u otvorenim kanalima** — gdje vlada Froudeov broj, hidraulički skok i preljevi;
+- **stlačivo strujanje** ($Ma > 0{,}3$) — plinodinamika, mlaznice i udarni valovi;
+- **diferencijalna i računalna dinamika fluida** — Navier-Stokesove jednadžbe po točkama i njihovo numeričko rješavanje (najavljeno kroz oznake *Numerički most* i sažeto u <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>).
+
 <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> zatvara kolegij time što sile iz svih prethodnih poglavlja okuplja u jedan jezik omjera. Tko nauči prepoznati dominantnu silu, taj zna i kako problem ispravno bezdimenzionirati.
 :::
 

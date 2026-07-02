@@ -18,16 +18,172 @@ Kontrolni volumen je radni alat za sve sustave u kojima je važnije što ulazi, 
 - pojmovi gustoće, mase i protoka iz prethodnih poglavlja;
 - vektorska analiza i osnove rada s integralnim izrazima;
 - pojam površinske normale i skalarnog produkta vektora;
-- razumijevanje stacionarnog i nestacionarnog stanja sustava.
+- pojam derivacije po vremenu i po prostoru (parcijalna derivacija).
 
 **Ishodi učenja:**
 
+- opisati strujanje **poljem brzine** i razlikovati Eulerov pogled (točka prostora) od Lagrangeova (čestica fluida);
+- razlikovati **strujnicu** od **trajektorije** i znati kada se podudaraju;
+- povezati stvarni profil brzine sa **srednjom (1D) brzinom** koja ulazi u kontinuitet;
 - definirati i nacrtati kontrolni volumen prilagođen konkretnom problemu;
 - razlikovati masenu od volumenske bilance i ispravno ih primijeniti pri nestlačivim i stlačivim fluidima;
-- riješiti probleme s više ulaza i izlaza (mješalice, razdjelnici, čvorovi mreže);
-- prepoznati nestacionarne situacije s akumulacijom mase u kontrolnom volumenu.
+- riješiti probleme s više ulaza i izlaza (mješalice, razdjelnici, čvorovi mreže) i prepoznati nestacionarnu akumulaciju mase.
 
-**Procijenjeno vrijeme:** 5–6 sati za teoriju i izvode, 3 sata za rješavanje primjera i zadataka.
+**Procijenjeno vrijeme:** 6–7 sati za teoriju i izvode, 3 sata za rješavanje primjera i zadataka.
+:::
+
+## Kinematika strujanja: kako opisujemo gibanje fluida
+
+Prije nego što uvedemo bilance mase i energije, treba dogovoriti **kako uopće opisujemo gibanje fluida**. Za jednu kuglicu dovoljno je pratiti njezin položaj kroz vrijeme. U fluidu je čestica bezbroj, pa se nameću dva pogleda:
+
+- **Lagrangeov pogled** — prati se pojedina čestica fluida i bilježi kako se njezin položaj i brzina mijenjaju kroz vrijeme (kao da smo obojili jednu kap i gledali kamo putuje).
+- **Eulerov pogled** — biramo nepomične točke prostora i u svakoj bilježimo brzinu fluida koji baš u tom trenutku prolazi (kao mreža senzora brzine ugrađenih u cijev).
+
+Inženjerski račun gotovo uvijek koristi Eulerov pogled, jer nas zanima što se događa na određenom mjestu (grlo Venturija, presjek cijevi, ulaz u crpku), a ne kamo je otputovala baš jedna čestica.
+
+### Polje brzine
+
+U Eulerovu pogledu brzina je **polje** — vektor pridružen svakoj točki prostora i svakom trenutku:
+
+$$
+\vec{v} = \vec{v}(x, y, z, t).
+$$
+
+To je središnji objekt cijele dinamike fluida: iz polja brzine čitaju se protok, sile i gubici. Sva poglavlja koja slijede zapravo su načini da se to polje (ili barem njegova srednja vrijednost na nekom presjeku) odredi iz poznatih uvjeta.
+
+::: {.callout-note}
+## Fizikalno značenje
+Polje brzine nije brzina jedne čestice, nego „snimka" brzina svih čestica odjednom. Ako u presjeku cijevi izmjerimo brzinu u svakoj točki, dobili smo dio polja brzine u tom trenutku. Zato senzor na fiksnom mjestu (Eulerov pogled) mjeri kako se mijenja brzina *tamo*, a ne što se događa s jednom određenom česticom koja je odavno otplovila dalje.
+:::
+
+### Strujnica, trajektorija i strujna cijev
+
+Iz polja brzine izvode se dvije krivulje koje se lako pomiješaju:
+
+- **Strujnica** (linija strujanja) je krivulja koja je u **jednom trenutku** u svakoj svojoj točki tangentna na vektor brzine. To je trenutna „slika smjera" strujanja.
+- **Trajektorija** (putanja) je stvarni put koji **jedna čestica** fluida prijeđe **kroz vrijeme**.
+
+![Strujnica je tangentna na vektore brzine u istom trenutku; trajektorija je putanja jedne čestice kroz vrijeme. U stacionarnom strujanju obje krivulje imaju isti oblik.](../assets/print/u08_fig_kinematika.svg){#fig-u08-kinematika fig-align="center"}
+
+::: {.callout-note}
+## Fizikalno značenje
+U **stacionarnom** strujanju polje brzine se ne mijenja kroz vrijeme, pa čestica koja krene po strujnici zauvijek ostaje na njoj — strujnica i trajektorija se **podudaraju**. U **nestacionarnom** strujanju polje se mijenja dok čestica putuje, pa njezina trajektorija „bježi" s trenutne strujnice i dvije krivulje više nisu iste. U MF1 gotovo uvijek radimo sa stacionarnim strujanjem, pa smijemo govoriti jednostavno o „strujnici".
+:::
+
+Skup strujnica koje prolaze rubom neke male zatvorene krivulje tvori **strujnu cijev**: fluid kroz njezinu plašt ne prolazi (brzina je tangentna na strujnice), pa se ponaša kao stvarna cijev bez stijenki. Upravo je strujna cijev geometrijska podloga za kontinuitet i za Bernoullijevu jednadžbu u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span>.
+
+### Stacionarno i nestacionarno strujanje
+
+Strujanje je **stacionarno** ako se polje brzine (i tlak, gustoća…) u svakoj *fiksnoj točki* ne mijenja kroz vrijeme:
+
+$$
+\frac{\partial \vec{v}}{\partial t} = 0 \quad (\text{u svakoj točki prostora}).
+$$
+
+Pozor: stacionarno **ne znači** da se čestica ne ubrzava. Voda u suženju ustaljeno struji (slika se ne mijenja), ali svaka čestica koja uđe u suženje ubrzava jer prelazi u područje veće brzine. Nestacionarno strujanje javlja se pri pokretanju i zaustavljanju crpke, zatvaranju ventila (vodeni udar, <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span>) ili pri punjenju i pražnjenju spremnika, gdje član akumulacije $dm_{CV}/dt$ nije nula.
+
+### Od stvarnog profila do srednje brzine (1D model)
+
+U stvarnoj cijevi brzina nije jednaka po presjeku: najveća je u osi, a uz stijenku pada na nulu zbog viskoznosti. Točan protok je integral polja brzine po presjeku:
+
+$$
+Q = \int_A v \, dA .
+$$
+
+Da ne bismo u svakom zadatku integrirali cijeli profil, uvodi se **srednja (1D) brzina** — jedna brzina koja kroz isti presjek daje isti protok:
+
+$$
+v = \frac{Q}{A} = \frac{1}{A}\int_A v\, dA .
+$$
+
+Time složeni dvo- ili trodimenzijski profil zamjenjujemo jednim brojem po presjeku. To je **jednodimenzijski (1D) model** na kojem počiva cijela integralna analiza u MF1: kad god pišemo $Q = Av$ ili $A_1 v_1 = A_2 v_2$, tiho koristimo srednju brzinu, a ne brzinu u osi.
+
+::: {.mf1-we}
+<p class="mf1-box-label">Riješeni primjer — Srednja brzina iz profila brzine&nbsp;<span class="mf1-level">T2</span></p>
+
+**Kontekst:** U cijevi je brzina najveća u osi, a nula uz stijenku. Da bismo mogli koristiti jednostavni 1D kontinuitet, treba iz stvarnog profila izvući jednu srednju brzinu.
+
+**Zadano**
+
+- Polumjer cijevi: $R = 25\ \text{mm}$
+- Profil brzine: $v(r) = v_{max}\left(1 - (r/R)^2\right)$, $v_{max} = 3{,}0\ \text{m/s}$
+
+**Traženo**
+
+1. srednju brzinu $v$ i njezin odnos prema $v_{max}$.
+2. volumenski protok $Q$.
+
+**Pretpostavke i model**
+
+Strujanje je osnosimetrično i stacionarno; protok je $Q = \int_A v\,dA$ uz prstenasti element $dA = 2\pi r\, dr$.
+
+**Rješenje**
+
+Protok se dobiva integracijom profila po presjeku:
+
+$$
+Q = \int_0^R v_{max}\left(1 - \frac{r^2}{R^2}\right) 2\pi r\, dr = 2\pi v_{max}\left[\frac{R^2}{2} - \frac{R^2}{4}\right] = v_{max}\,\frac{\pi R^2}{2}.
+$$
+
+Srednja brzina je protok podijeljen površinom $A = \pi R^2$:
+
+$$
+v = \frac{Q}{A} = \frac{v_{max}\,\pi R^2/2}{\pi R^2} = \frac{v_{max}}{2} = 1{,}5\ \text{m/s}.
+$$
+
+Uz $A = \pi R^2 = \pi \cdot 0{,}025^2 = 1{,}963 \cdot 10^{-3}\ \text{m}^2$ slijedi
+
+$$
+Q = vA = 1{,}5 \cdot 1{,}963 \cdot 10^{-3} \approx 2{,}95 \cdot 10^{-3}\ \text{m}^3/\text{s} = 2{,}95\ \text{L/s}.
+$$
+
+**Provjera i komentar**
+
+1. Za ovaj (parabolični) profil srednja je brzina točno **pola** vršne — koristan orijentir.
+2. U 1D modelu cijeli profil zamjenjuje jedan broj $v = 1{,}5\ \text{m/s}$; upravo taj broj ulazi u $Q = Av$ i u kontinuitet.
+3. Da smo pogrešno uzeli $v_{max}$ umjesto srednje brzine, protok bismo precijenili dvostruko.
+:::
+
+### Materijalna derivacija: ubrzanje čestice
+
+Kad nas zanima ubrzanje **čestice** (a ono ulazi u Newtonov zakon i u sve dinamičke jednadžbe), ne smijemo samo derivirati polje po vremenu u fiksnoj točki. Čestica se ubrzava iz dva razloga: jer se polje s vremenom mijenja i jer čestica putuje u područje druge brzine. Oba doprinosa spaja **materijalna (supstancijalna) derivacija**:
+
+$$
+\vec{a} = \frac{D\vec{v}}{Dt} = \underbrace{\frac{\partial \vec{v}}{\partial t}}_{\text{lokalno}} + \underbrace{(\vec{v}\cdot\nabla)\vec{v}}_{\text{konvektivno}} .
+$$
+
+::: {.callout-note}
+## Fizikalno značenje
+**Lokalni** član $\partial\vec{v}/\partial t$ opisuje ubrzanje jer se cijelo polje pojačava ili slabi (npr. pri pokretanju crpke). **Konvektivni** član $(\vec{v}\cdot\nabla)\vec{v}$ opisuje ubrzanje jer čestica putuje u područje druge brzine — točno ono što se događa u suženju gdje je strujanje stacionarno ($\partial\vec{v}/\partial t = 0$), a čestica ipak ubrzava. Zato voda u mlaznici ubrzava iako je „slika" strujanja nepromjenjiva: sav doprinos dolazi iz konvektivnog člana.
+:::
+
+Tu se materijalna derivacija u ovom udžbeniku i zaustavlja na razini pojma; puni izvod pojavljuje se u Eulerovoj jednadžbi u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> i u bilanci količine gibanja u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span>.
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">Provjeri sebe</p>
+
+Sljedeća pitanja služe za samostalnu provjeru prije prelaska na kontrolni volumen.
+
+1. U čemu je razlika između strujnice i trajektorije i kada se podudaraju?
+
+::: {.callout-note collapse="true"}
+### Odgovor
+Strujnica je krivulja tangentna na polje brzine u jednom trenutku; trajektorija je stvarni put jedne čestice kroz vrijeme. Podudaraju se u stacionarnom strujanju, jer se polje brzine tada ne mijenja dok čestica putuje.
+:::
+
+2. Može li strujanje biti stacionarno, a da se čestica ipak ubrzava?
+
+::: {.callout-note collapse="true"}
+### Odgovor
+Može. Stacionarnost znači $\partial\vec{v}/\partial t = 0$ u svakoj fiksnoj točki, ali čestica koja prelazi iz šireg u uži presjek ulazi u područje veće brzine i ubrzava preko konvektivnog člana $(\vec{v}\cdot\nabla)\vec{v}$. Primjer je voda u mlaznici.
+:::
+
+3. Zašto u kontinuitetu $Q = Av$ koristimo srednju, a ne vršnu brzinu?
+
+::: {.callout-note collapse="true"}
+### Odgovor
+Jer je protok integral cijelog profila, $Q = \int_A v\,dA$. Srednja brzina $v = Q/A$ definirana je tako da kroz presjek daje isti protok kao stvarni profil; vršna brzina (u osi) veća je od srednje i dala bi precijenjen protok.
+:::
 :::
 
 ## Fizikalni uvod i matematički izvod
