@@ -22,12 +22,14 @@ project:
     - chapters/d02_*.qmd
     - chapters/d03_*.qmd
     - chapters/d04_*.qmd
+    - chapters/d05_*.qmd
     - za_ispis.qmd
   resources:
     - source/*.md
     - assets/**
 
 lang: hr
+bibliography: references.bib
 
 website:
   title: "Mehanika fluida 1"
@@ -86,6 +88,8 @@ website:
             href: chapters/d03_tipicne_pogreske_po_poglavljima.qmd
           - text: "Numerička mehanika fluida"
             href: chapters/d04_numericka_mehanika_fluida.qmd
+          - text: "Literatura"
+            href: chapters/d05_literatura.qmd
       - text: "Verzija za ispis / PDF"
         href: za_ispis.qmd
 

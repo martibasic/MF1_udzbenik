@@ -125,6 +125,11 @@ toc: false
     <span class="mf1-card-title">Numerička mehanika fluida</span>
     <span class="mf1-card-hint">Veza MF1 jednadžbi s računalnom dinamikom fluida.</span>
   </a>
+  <a class="mf1-card" href="chapters/d05_literatura.html">
+    <span class="mf1-card-code">E</span>
+    <span class="mf1-card-title">Literatura</span>
+    <span class="mf1-card-hint">Izvori i preporučena literatura za dublje čitanje.</span>
+  </a>
 </div>
 ```
 
