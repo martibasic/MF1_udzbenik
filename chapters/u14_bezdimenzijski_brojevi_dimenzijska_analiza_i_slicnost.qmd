@@ -1,6 +1,12 @@
 ---
-title: "14. Bezdimenzijski brojevi, dimenzijska analiza i sličnost"
+title: "Poglavlje je premješteno"
 page-layout: article
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=u11_dimenzijska_analiza_i_slicnost.html">
+        <link rel="canonical" href="u11_dimenzijska_analiza_i_slicnost.html">
 ---
 
-{{< include ../source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md >}}
+Sadržaj je premješten u [11. Dimenzijska analiza i sličnost](u11_dimenzijska_analiza_i_slicnost.qmd).

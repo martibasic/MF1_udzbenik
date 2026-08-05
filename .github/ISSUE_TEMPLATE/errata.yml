@@ -1,0 +1,102 @@
+name: Errata udžbenika
+description: Prijavite pogrešku u tekstu, jednadžbi, zadatku, rezultatu, slici ili poveznici.
+title: "[Errata] "
+labels:
+  - errata
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hvala na preciznoj prijavi. Jedna prijava treba opisivati jednu pogrešku.
+        Molimo ne unosite osobne podatke studenata ni povjerljive podatke iz projekata.
+
+  - type: input
+    id: version
+    attributes:
+      label: Inačica izdanja
+      description: Navedite oznaku iz impresuma ili datum pristupa mrežnom izdanju.
+      placeholder: "npr. 1.0-rc1, mrežno izdanje pristupljeno 2026-08-01"
+    validations:
+      required: true
+
+  - type: input
+    id: stable_id
+    attributes:
+      label: Stabilni ID sadržaja
+      description: Navedite ID primjera, zadatka, jednadžbe, slike ili odjeljka. Ako ga ne možete pronaći, upišite "nije pronađen" i ispunite točnu lokaciju ispod.
+      placeholder: "npr. task-priguseni-protok"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Lokacija
+      description: Dodajte URL ili poglavlje, naslov odjeljka i broj stranice u PDF-u.
+      placeholder: "U09, Prigušenje protoka, str. 214 ili https://…"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Vrsta pogreške
+      options:
+        - Fizikalni model ili područje valjanosti
+        - Matematički izvod ili jednadžba
+        - Brojčani rezultat, jedinica ili zaokruživanje
+        - Zadatak ili naputak
+        - Skica, oznaka ili alternativni opis
+        - Citat, poveznica ili QR kod
+        - Pristupačnost ili prikaz
+        - Jezik ili tipografska pogreška
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Procijenjeni utjecaj
+      description: Uredništvo će pri trijaži potvrditi konačnu razinu.
+      options:
+        - Ne znam
+        - P0 — može dovesti do opasnog ili normativno pogrešnog zaključka
+        - P1 — mijenja fizikalni ili brojčani rezultat
+        - P2 — otežava razumijevanje, ali ne mijenja glavni rezultat
+        - P3 — jezik, stil ili prikaz bez promjene značenja
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: Uočena pogreška
+      description: Prepišite samo nužni dio i objasnite zašto smatrate da je pogrešan.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: Očekivani ili predloženi ispravak
+      description: Navedite ispravan rezultat, formulaciju ili smjer provjere ako ga znate.
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Postupak provjere i izvor
+      description: Dodajte račun, granični slučaj, jedinice, snimku zaslona ili poveznicu na primarni izvor. Ne lijepite dugačke zaštićene tekstove.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Završna provjera
+      options:
+        - label: Pretražene su postojeće otvorene prijave i javna evidencija errate.
+          required: true
+        - label: Prijava ne sadrži osobne ni povjerljive podatke.
+          required: true

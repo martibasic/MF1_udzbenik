@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u07c1pluvo_title u07c1pluvo_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
   <title id="u07c1pluvo_title">Plutajuca platforma na granici ulja i vode s ormarom</title>
-  <desc id="u07c1pluvo_desc">Poprecni presjek hermeticke pravokutne platforme sirine B = 1,20 m koja pluta na stratificiranom mediju ulje-voda. Lijevi rub uronjen h_L = 0,30 m, desni h_D = 0,20 m. Uljni sloj debljine 0,10 m presjeca cijeli tlocrt. Ormar mase 180 kg postavljen je na udaljenosti e = 0,20 m lijevo od osi simetrije. Desni panel: kljucne formule i rezultati za h_m, V, V_o, V_w, y_B, e i delta h_m.</desc>
+  <desc id="u07c1pluvo_desc">Poprecni presjek hermeticke pravokutne platforme sirine B = 1,20 m koja pluta na stratificiranom mediju ulje-voda. Lijevi rub uronjen h_L = 0,30 m, desni h_D = 0,20 m. Uljni sloj debljine 0,10 m presjeca cijeli tlocrt. Ormar mase 180 kg postavljen je na udaljenosti e = 0,164 m lijevo od osi simetrije. Desni panel razlikuje geometrijski pomak centra uzgona od kraka stabilnosti te prikazuje ekvivalentne KB, BM, KG i GM.</desc>
 
   <defs>
     <linearGradient id="u07c1pluvo_voda" x1="0" y1="0" x2="0" y2="1">
@@ -75,21 +75,21 @@
 
   <!-- Bocne stjenke s laganom debljinom (tamniji rub) - vec ukljuceno u polygon stroke -->
 
-  <!-- ====== ORMAR (na vrhu, e = 0,20 m lijevo od osi simetrije) ======
-       Os simetrije x = 290, e = 56 px -> centar ormara x = 234
+  <!-- ====== ORMAR (na vrhu, e = 0,164 m lijevo od osi simetrije) ======
+       Os simetrije x = 290, e = 46 px -> centar ormara x = 244
        Sirina ormara ~ 70 px (~ 0,25 m), visina 60 px
        Donji rubovi ormara leze na nagnutoj gornjoj stranici platforme
        Top platforme: kut nagiba odredjen s (314-286)/(458-122) = 28/336
        y_top(x) = 219 + (x-122)*(191-219)/(458-122) = 219 - 28*(x-122)/336
-       Za x = 234: y_top = 219 - 28*112/336 = 219 - 9,33 = 209,67
-       Za x = 234-35 = 199: y_top = 219 - 28*77/336 = 219 - 6,42 = 212,58
-       Za x = 234+35 = 269: y_top = 219 - 28*147/336 = 219 - 12,25 = 206,75
+       Za x = 244: y_top = 219 - 28*122/336 = 208,83
+       Za x = 244-35 = 209: y_top = 211,75
+       Za x = 244+35 = 279: y_top = 205,92
        -->
-  <polygon points="199,212.6 269,206.7 269,150.7 199,156.6" fill="url(#u07c1pluvo_orm)" stroke="#5a3a14" stroke-width="1.6" />
+  <polygon points="209,211.8 279,205.9 279,149.9 209,155.8" fill="url(#u07c1pluvo_orm)" stroke="#5a3a14" stroke-width="1.6" />
   <!-- Detalji ormara: vrata -->
-  <line x1="234" y1="155.5" x2="234" y2="211" stroke="#5a3a14" stroke-width="1" opacity="0.7" />
-  <rect x="223" y="178" width="6" height="3" fill="#3a2410" />
-  <rect x="239" y="177" width="6" height="3" fill="#3a2410" />
+  <line x1="244" y1="154.7" x2="244" y2="210" stroke="#5a3a14" stroke-width="1" opacity="0.7" />
+  <rect x="233" y="177" width="6" height="3" fill="#3a2410" />
+  <rect x="249" y="176" width="6" height="3" fill="#3a2410" />
   <!-- ====== OS SIMETRIJE PLATFORME (vertikalna isprekidana) ====== -->
   <line x1="290" y1="76" x2="290" y2="474" stroke="#5a6a78" stroke-width="1.2" stroke-dasharray="6,5" />
   <!-- ====== OZNAKE FLUIDA ====== -->
@@ -99,7 +99,7 @@
   <!-- G_p (tezina platforme) na osi simetrije - krece ispod e-kote da ne presijeca dimenziju -->
   <line x1="290" y1="160" x2="290" y2="205" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u07c1pluvo_aR)" />
   <!-- G_k (tezina ormara) iznad ormara -->
-  <line x1="234" y1="105" x2="234" y2="150" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u07c1pluvo_aR)" />
+  <line x1="244" y1="105" x2="244" y2="149" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u07c1pluvo_aR)" />
   <!-- F_U (uzgon, prema gore) iz tezista uzgona -->
   <!-- Teziste uzgona pomaknuto za y_B = 0,0435 m = 12,2 px desno od osi (dublja strana = lijeva pa pomak je prema lijevoj strani) -->
   <!-- Prema tekstu: y_B prema dubljoj strani, a dublje je lijevo (h_L=0,30 > h_D=0,20) -->
@@ -166,18 +166,18 @@
   <line x1="122" y1="430" x2="122" y2="446" stroke="#b7600c" stroke-width="1.2" />
   <line x1="458" y1="430" x2="458" y2="446" stroke="#b7600c" stroke-width="1.2" />
   <line x1="125" y1="438" x2="455" y2="438" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
-  <line x1="234" y1="155" x2="234" y2="139" stroke="#b7600c" stroke-width="0.7" />
+  <line x1="244" y1="155" x2="244" y2="139" stroke="#b7600c" stroke-width="0.7" />
   <line x1="290" y1="149" x2="290" y2="139" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="234" y1="140" x2="234" y2="148" stroke="#b7600c" stroke-width="1.2" />
+  <line x1="244" y1="140" x2="244" y2="148" stroke="#b7600c" stroke-width="1.2" />
   <line x1="290" y1="140" x2="290" y2="148" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="237" y1="144" x2="287" y2="144" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="247" y1="144" x2="287" y2="144" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
   <line x1="278" y1="345" x2="278" y2="412" stroke="#b7600c" stroke-width="0.7" />
   <line x1="290" y1="345" x2="290" y2="412" stroke="#b7600c" stroke-width="0.7" />
   <line x1="278" y1="410" x2="278" y2="418" stroke="#b7600c" stroke-width="1.2" />
   <line x1="290" y1="410" x2="290" y2="418" stroke="#b7600c" stroke-width="1.2" />
   <line x1="279" y1="414" x2="289" y2="414" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
-  <text x="234" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">ormar</text>
-  <text x="234" y="202" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#ffffff">mₖ = 180 kg</text>
+  <text x="244" y="189" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">ormar</text>
+  <text x="244" y="201" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#ffffff">mₖ = 180 kg</text>
 
   <text x="290" y="70" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78" font-style="italic">os simetrije platforme</text>
 
@@ -211,18 +211,18 @@
   <text x="780" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Bočni pomak centra uzgona</text>
   <text x="780" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">y<tspan baseline-shift="sub" font-size="0.7em">B,w</tspan> = B(h<tspan baseline-shift="sub" font-size="0.7em">w,L</tspan>−h<tspan baseline-shift="sub" font-size="0.7em">w,D</tspan>) / (12 h<tspan baseline-shift="sub" font-size="0.7em">w,m</tspan>) ≈ 0,0667 m</text>
   <text x="780" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">y<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = (ρₙV<tspan baseline-shift="sub" font-size="0.7em">w</tspan>/ΣρV) · y<tspan baseline-shift="sub" font-size="0.7em">B,w</tspan> ≈ 4,35 cm</text>
-  <text x="780" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Položaj ormara (momentna ravnoteža)</text>
-  <text x="780" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">(m<tspan baseline-shift="sub" font-size="0.7em">p</tspan>+m<tspan baseline-shift="sub" font-size="0.7em">k</tspan>) g · y<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = m<tspan baseline-shift="sub" font-size="0.7em">k</tspan> g · e</text>
-  <text x="780" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">e = (m<tspan baseline-shift="sub" font-size="0.7em">p</tspan>+m<tspan baseline-shift="sub" font-size="0.7em">k</tspan>)/m<tspan baseline-shift="sub" font-size="0.7em">k</tspan> · y<tspan baseline-shift="sub" font-size="0.7em">B</tspan> ≈ 20,0 cm</text>
+  <text x="780" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Pocetna stabilnost i polozaj ormara</text>
+  <text x="780" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1a2530">KB<tspan baseline-shift="sub" font-size="0.7em">eq</tspan> ≈ 0,118 m · BM<tspan baseline-shift="sub" font-size="0.7em">eq</tspan> ≈ 0,522 m · KG ≈ 0,211 m</text>
+  <text x="780" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1e8449">GM<tspan baseline-shift="sub" font-size="0.7em">eq</tspan> ≈ 0,429 m · e = (828/180) GM<tspan baseline-shift="sub" font-size="0.7em">eq</tspan> tanθ ≈ 16,4 cm</text>
   <text x="780" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">5. Povećanje srednjeg urona (zbog ormara)</text>
   <text x="780" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">h₀ = 0,20 m (bez ormara)  →  Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = h<tspan baseline-shift="sub" font-size="0.7em">m</tspan> − h₀</text>
   <text x="780" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 5,0 cm</text>
 
-  <text x="780" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Samo vodeni dio daje bočni moment (ulje je simetričan po B).</text>
+  <text x="780" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">yB = BMeq tanθ nije GZ; zakljucak vrijedi samo za mali nagib.</text>
 
   <text x="780" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
   <text x="668" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0">h<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 0,25 m</text>
-  <text x="780" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">e ≈ 20,0 cm</text>
+  <text x="780" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">e ≈ 16,4 cm</text>
   <text x="892" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 5,0 cm</text>
   <text x="780" y="520" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">V = 0,900 m³ (V<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 0,360  ·  V<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 0,540)</text>
 <text x="74" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" text-anchor="end" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
@@ -235,7 +235,7 @@
 
   <text x="290" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" text-anchor="middle" fill="#b7600c">B = 1,20 m</text>
 
-  <text x="262" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" text-anchor="middle" fill="#b7600c">e = 0,20 m</text>
+  <text x="267" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" text-anchor="middle" fill="#b7600c">e = 0,164 m</text>
 
   <text x="248" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" font-weight="700" text-anchor="end" fill="#b7600c">y<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = 4,35 cm</text>
 

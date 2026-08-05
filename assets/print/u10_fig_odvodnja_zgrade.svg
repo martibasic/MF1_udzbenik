@@ -232,9 +232,9 @@
   <text x="540" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
   <text x="630" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">v ≈ 2,545 m/s</text>
   <text x="810" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">Q ≈ 24,18 L/s</text>
-<text x="243" y="121" font-family="'Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#b7600c">1</text>
-  <text x="242" y="359" font-family="'Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#b7600c">2</text>
-  <text x="404" y="409" font-family="'Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#b7600c">3</text>
+<text x="243" y="121" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#b7600c">1</text>
+  <text x="242" y="359" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#b7600c">2</text>
+  <text x="404" y="409" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#b7600c">3</text>
 
   <text x="81" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c">Δz</text>
   <text x="81.0" y="290.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c">= 3,50 m</text>

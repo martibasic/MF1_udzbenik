@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" role="img" aria-labelledby="u14v1rk_title u14v1rk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
-  <title id="u14v1rk_title">U14 Val 1 - Reynoldsov broj u dva sustava iste geometrije</title>
+  <title id="u14v1rk_title">Reynoldsov broj u dva sustava iste geometrije</title>
   <desc id="u14v1rk_desc">Isti kanal promjera 6 mm. Gore voda brzine 1,2 m/s daje Re=7200 i turbulentno strujanje (vrtlozi). Dolje ulje brzine 0,30 m/s daje Re=45 i izrazito laminarno strujanje (paralelne strujnice). Rezim odreduje omjer sila kroz Reynoldsov broj, ne geometrija.</desc>
   <defs>
     <marker id="u14v1rk_aB" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 720" role="img" aria-labelledby="u06vs_title u06vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:920px;height:auto;">
   <title id="u06vs_title">Zadaci za vjezbu - sest skica zakrivljenih ploha</title>
-  <desc id="u06vs_desc">Sest minimalnih grayscale tehnickih skica: T1 cetvrtina kruga uronjena, T1 polucilindar potpuno uronjen, T2 polucilindar sa zglobom, T2 cetvrtina kruga s nadtlakom p0, T3 podna zakrivljena ploha, T3 cetvrtcilindricni poklopac sa zglobom i spojnicom. Svaka skica pokazuje horizontalnu komponentu F_H (crveno), vertikalnu komponentu F_V (zeleno), polozaj slobodne povrsine i geometrijske kote R, h, b.</desc>
+  <desc id="u06vs_desc">Sest skica uskladjenih sa zadacima: cetvrtcilindricni poklopac s vodom na konveksnoj strani; polucilindar s okomitim promjerom i h_C=1,20 m; simetricna polucilindricna kapa sa zglobom u C; cetvrtina kruga sirine b=1,00 m s nadtlakom p0; zakrivljena ploha koju voda tlaci s donje strane; te cetvrtcilindricni poklopac sa zglobom A i spojnicom T. Strelice pokazuju zadane smjerove F_H i F_V.</desc>
 
   <defs>
     <!-- Vodena ispuna -->
@@ -85,27 +85,18 @@
   <!-- Voda -->
   <rect x="522" y="92" width="346" height="138" fill="url(#u06vs_water)" opacity="0.55" />
 
-  <!-- Polucilindar: centar C=(694,170), R=50, luk gornji od (644,170) do (744,170), konveksan prema gore -->
-  <!-- Polucilindar moze biti poklopac u sredini fluida; uzimam orijentaciju: konveksan dolje (puno uronjen) -->
-  <!-- Luk donji: od A(644,170) do B(744,170) idu dolje preko (694,220) -->
-  <!-- Gornji polukrug zatvara kako bi se vidio puni polucilindar (puni krug zapravo) -->
-  <!-- Bolje: prikazi samo polukruzni poklopac s konveksnom donjom polovicom -->
-  <!-- Tijelo poklopca (puni polukrug konveksno dolje) -->
-  <path d="M644,170 A50,50 0 0 0 744,170 Z" fill="#e8edf1" stroke="#1a2530" stroke-width="2.6" />
-  <!-- Ravna gornja granica iznad luka (vec u path Z) -->
+  <!-- Polucilindar s okomitim promjerom, C=(694,170), R=50; luk je desno od promjera -->
+  <path d="M694,120 A50,50 0 0 1 694,220 Z" fill="#e8edf1" stroke="#1a2530" stroke-width="2.6" />
 
   <!-- Centar zakrivljenosti C -->
   <circle cx="694" cy="170" r="3.5" fill="#ffffff" stroke="#1a2530" stroke-width="1.4" />
   <circle cx="694" cy="170" r="1.2" fill="#1a2530" />
-  <!-- Tezisna dubina h_T (do osi cilindra) -->
-  <!-- F_H (vodoravna, prema desno) -->
-  <line x1="600" y1="186" x2="640" y2="186" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u06vs_aR)" />
-  <!-- F_V (vertikalna, prema dolje - tezina vode iznad luka pritisce na poklopac) -->
-  <line x1="694" y1="112" x2="694" y2="158" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u06vs_aG)" />
-  <!-- Rezultanta F_R kroz C (ljubicasta), pod kutem -->
-  <line x1="694" y1="170" x2="760" y2="220" stroke="#8e44ad" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#u06vs_aM)" />
+  <!-- F_H ulijevo i F_V prema gore; rezultanta prolazi kroz C -->
+  <line x1="760" y1="170" x2="710" y2="170" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u06vs_aR)" />
+  <line x1="735" y1="218" x2="735" y2="178" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u06vs_aG)" />
+  <line x1="694" y1="170" x2="640" y2="159" stroke="#8e44ad" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#u06vs_aM)" />
   <!-- Kota R od C do ruba -->
-  <!-- ===================== T2 (lijevo sredina): polucilindar sa zglobom ===================== -->
+  <!-- ===================== T2 (lijevo sredina): simetricna polucilindricna kapa sa zglobom u C ===================== -->
   <rect x="28" y="260" width="436" height="218" rx="10" fill="#ffffff" stroke="#c8d6e4" stroke-width="1.2" />
   <rect x="28" y="260" width="56" height="22" rx="6" fill="#1565c0" />
   <!-- Stijenka s portom: lijeva strana zatvorena, polucilindar visi sa zgloba O na gornjem rubu -->
@@ -120,7 +111,7 @@
   <!-- Voda -->
   <rect x="120" y="316" width="308" height="146" fill="url(#u06vs_water)" opacity="0.55" />
 
-  <!-- Zglob O na gornjem rubu, na desnom dijelu (na slobodnoj povrsini gore? Ne - O je na vrhu zakrivljene plohe) -->
+  <!-- Os zgloba prolazi sredistem zakrivljenosti C -->
   <!-- Postavi: vrh poklopca na (280, 400), zglob O upravo tu; polucilindar siri od (220,400) do (340,400) idu nadolje -->
   <!-- Hmm, ali "zglobno ovjesen na gornjem rubu" - poklopac se okrece oko gornjeg ruba (osi). Vrh = gornji rub = O. -->
   <!-- Smjer: poklopac visi od osi O, "luk" je 180° polukrug. Najjednostavnije: vrh O u sredini, luk ide dolje -->
@@ -143,8 +134,7 @@
   <!-- F_V (uzgon prema gore - djeluje na donjoj tocki luka) -->
   <line x1="260" y1="450" x2="260" y2="430" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u06vs_aG)" />
   <!-- Krak vertikalne komponente od O do hvatista -->
-  <!-- Moment oko O -->
-  <path d="M218,366 A18,18 0 0 0 220,396" fill="none" stroke="#8e44ad" stroke-width="1.6" marker-end="url(#u06vs_aM)" />
+  <!-- Svaka lokalna normala prolazi kroz C, pa je M_C=0 -->
   <!-- Kota R od O do ruba (po horizontali) -->
   <!-- F_H pomocna (lijevo i desno simetricno se ponistavaju) -->
   <line x1="186" y1="402" x2="214" y2="402" stroke="#c0392b" stroke-width="1.8" marker-end="url(#u06vs_aR)" />
@@ -192,7 +182,7 @@
   <!-- ===================== T3 (lijevo dolje): podna zakrivljena ploha ===================== -->
   <rect x="28" y="492" width="436" height="208" rx="10" fill="#ffffff" stroke="#c8d6e4" stroke-width="1.2" />
   <rect x="28" y="492" width="56" height="22" rx="6" fill="#1565c0" />
-  <!-- Zatvoreni kanal: gornji poklopac s zracnim jastukom, voda ispod, dno ima zakrivljenu plohu -->
+  <!-- Kanal povezan s otvorenim spremnikom; voda djeluje na donju stranu zakrivljene plohe -->
   <!-- Top cap -->
   <rect x="108" y="546" width="320" height="10" fill="url(#u06vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <!-- Lijeva stijenka -->
@@ -200,27 +190,22 @@
   <!-- Desna stijenka -->
   <rect x="416" y="546" width="12" height="140" fill="url(#u06vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
 
-  <!-- Zracni jastuk -->
-  <rect x="120" y="556" width="296" height="34" fill="#fff4d6" opacity="0.7" />
-  <!-- Voda -->
-  <rect x="120" y="590" width="296" height="60" fill="url(#u06vs_water)" opacity="0.55" />
+  <!-- Atmosferski referentni prostor na suprotnoj strani -->
+  <rect x="120" y="556" width="296" height="34" fill="#ffffff" opacity="0.7" />
+  <!-- Referentna slobodna povrsina u spojenom otvorenom spremniku -->
   <line x1="120" y1="590" x2="416" y2="590" stroke="#1565c0" stroke-width="2" />
 
-  <!-- Zakrivljena podna ploha: udubljenje na sredini dna -->
-  <!-- "Mokra" strana je odozgo, "suha" strana je zrak (atmosfera) ispod -->
-  <!-- Path: dno horizontalno od x=120 do x=200, zatim luk dolje do (320,650), pa horizontalno do x=416 -->
-  <path d="M120,650 L200,650 Q230,680 270,680 Q310,680 340,650 L416,650" fill="none" stroke="#1a2530" stroke-width="2.6" />
-  <!-- Voda iznad plohe ispunjava -->
-  <path d="M120,590 L416,590 L416,650 L340,650 Q310,680 270,680 Q230,680 200,650 L120,650 Z" fill="url(#u06vs_water)" opacity="0.55" />
+  <!-- Zakrivljena ploha visi iznad vode; mokra strana je donja -->
+  <path d="M120,600 L200,600 Q230,640 270,640 Q310,640 340,600 L416,600 L416,686 L120,686 Z" fill="url(#u06vs_water)" opacity="0.55" />
+  <path d="M120,600 L200,600 Q230,640 270,640 Q310,640 340,600 L416,600" fill="none" stroke="#1a2530" stroke-width="2.6" />
 
-  <!-- V* zamisljeni volumen (od slobodne razine medja zrak/voda gore do plohe) -->
-  <path d="M200,590 L340,590 L340,650 Q310,680 270,680 Q230,680 200,650 Z" fill="url(#u06vs_vstar)" />
-  <path d="M200,590 L200,650 Q230,680 270,680 Q310,680 340,650 L340,590 Z" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="4,3" />
+  <!-- Pomocni volumen V* za magnitudu F_V -->
+  <path d="M200,590 L340,590 L340,600 Q310,640 270,640 Q230,640 200,600 Z" fill="url(#u06vs_vstar)" />
+  <path d="M200,590 L200,600 Q230,640 270,640 Q310,640 340,600 L340,590 Z" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="4,3" />
   <!-- F_H (mala horizontalna, ovdje na bocnu projekciju plohe; pretpostavi prema desno) -->
-  <line x1="146" y1="660" x2="190" y2="660" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u06vs_aR)" />
-  <!-- F_V (prema dolje - tezina vode pritisce na podnu plohu) -->
-  <line x1="290" y1="608" x2="290" y2="660" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u06vs_aG)" />
-  <!-- Dolazna oznaka: smjer F_V dolje zbog rasporeda fluida -->
+  <line x1="146" y1="630" x2="190" y2="630" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u06vs_aR)" />
+  <!-- F_V prema gore jer voda tlaci donju stranu plohe -->
+  <line x1="290" y1="670" x2="290" y2="618" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u06vs_aG)" />
   <!-- ===================== T3b (desno dolje): cetvrtcilindricni poklopac sa zglobom A i spojnicom B ===================== -->
   <rect x="476" y="492" width="436" height="208" rx="10" fill="#ffffff" stroke="#c8d6e4" stroke-width="1.2" />
   <rect x="476" y="492" width="56" height="22" rx="6" fill="#1565c0" />
@@ -239,15 +224,15 @@
   <!-- h1 = 0.45m. R = 0.75m. Skala: R_px=70. h1_px = 0.45/0.75 * 70 = 42. -->
   <!-- A=(868, 546+42)=(868,588). B (donji rub) = (868-70, 588+70) = (798,658) -->
 
-  <!-- Cetvrtinski poklopac: luk od A(868,588) ide dolje-lijevo do B(798,658), centar luka=(868,658) (na dnu desno) -->
-  <!-- Provjeri: udaljenost (868,588)-(868,658)=70 = R. Udaljenost (798,658)-(868,658)=70 = R. Luk konkavan prema gore-desno -->
+  <!-- Cetvrtinski poklopac: luk od A(868,588) ide dolje-lijevo do B(798,658), centar luka=(798,588) -->
+  <!-- Voda je na konkavnoj strani iznad i lijevo od luka; pomocni volumen je pravokutnik plus cetvrtina kruga. -->
 
   <!-- V* zamisljeni volumen: pravokutni dio (od slobodne povrsine do horiz. razine A, sirine R) PLUS cetvrtina kruga (od A do B oko centra) -->
   <!-- Pravokutni dio: x=798..868, y=546..588 (sirina 70, visina 42) -->
-  <path d="M798,546 L868,546 L868,588 A70,70 0 0 0 798,658 Z" fill="url(#u06vs_vstar)" />
-  <path d="M798,546 L868,546 L868,588 A70,70 0 0 0 798,658 L798,546" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="4,3" />
+  <path d="M798,546 L868,546 L868,588 A70,70 0 0 1 798,658 Z" fill="url(#u06vs_vstar)" />
+  <path d="M798,546 L868,546 L868,588 A70,70 0 0 1 798,658 L798,546" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="4,3" />
   <!-- Luk (poklopac, debela linija) -->
-  <path d="M868,588 A70,70 0 0 0 798,658" fill="none" stroke="#1a2530" stroke-width="3" />
+  <path d="M868,588 A70,70 0 0 1 798,658" fill="none" stroke="#1a2530" stroke-width="3" />
 
   <!-- Zglob A -->
   <circle cx="868" cy="588" r="6" fill="#ffffff" stroke="#1a2530" stroke-width="2" />
@@ -312,36 +297,36 @@
   <text x="226" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan></text>
 
   <text x="504" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T1</text>
-  <text x="542" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#1a2530">Polucilindricni poklopac, potpuno uronjen</text>
+  <text x="542" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#1a2530">Polucilindar s okomitim promjerom</text>
   <text x="542" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78"><tspan font-style="italic">R</tspan> = 0,30 m,
       <tspan font-style="italic">b</tspan> = 0,90 m,
-      rezultanta kroz <tspan font-style="italic">C</tspan></text>
+      <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.75em">C</tspan> = 1,20 m</text>
 
   <text x="688" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="end" fill="#1a2530">C</text>
 
-  <text x="596" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan></text>
+  <text x="768" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c0392b"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan></text>
 
-  <text x="700" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan></text>
+  <text x="742" y="205" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan></text>
 
-  <text x="766" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#8e44ad"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan></text>
-  <text x="694" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" text-anchor="middle" fill="#5a6a78">rezultanta <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> prolazi središtem C</text>
+  <text x="626" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#8e44ad"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan></text>
+  <text x="694" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" text-anchor="middle" fill="#5a6a78">okomiti promjer 2R; rezultanta prolazi kroz C</text>
 
   <text x="56" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T2</text>
-  <text x="94" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#1a2530">Polucilindricni revizijski poklopac, zglobno ovjesen</text>
+  <text x="94" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#1a2530">Simetricna polucilindricna kapa, zglob u C</text>
   <text x="94" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78"><tspan font-style="italic">R</tspan> = 0,40 m,
       <tspan font-style="italic">b</tspan> = 1,00 m, voda 0,85 m iznad vrha</text>
 
-  <text x="252" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="end" fill="#1a2530">O</text>
+  <text x="252" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="end" fill="#1a2530">C</text>
 
   <text x="268" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan></text>
 
-  <text x="206" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#8e44ad"><tspan font-weight="700">M</tspan><tspan baseline-shift="sub" font-size="0.7em">O</tspan></text>
+  <text x="206" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#8e44ad"><tspan font-weight="700">M</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 0</text>
 
   <text x="348" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan> = 0 (simetrija)</text>
 
   <text x="504" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T2</text>
   <text x="542" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#1a2530">Cetvrtina kruga sa zatvorenim zracnim jastukom</text>
-  <text x="542" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78"><tspan font-style="italic">R</tspan> = 0,55 m,
+  <text x="542" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78"><tspan font-style="italic">R</tspan> = 0,55 m, <tspan font-style="italic">b</tspan> = 1,00 m,
       <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">0</tspan> = 18 kPa</text>
 
   <text x="552" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0"><tspan font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.75em">0</tspan> = 18 kPa</text>
@@ -354,11 +339,11 @@
   <text x="694" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" text-anchor="middle" fill="#5a6a78">nadtlak <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">0</tspan> dodaje se na <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan> i <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan></text>
 
   <text x="56" y="508" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T3</text>
-  <text x="94" y="508" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#1a2530">Podna zakrivljena ploha sa zracnim jastukom</text>
+  <text x="94" y="508" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#1a2530">Voda na donjoj strani zakrivljene plohe</text>
   <text x="94" y="524" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78"><tspan font-style="italic">V*</tspan> = 0,42 m³,
       <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan> = 18,5 kN</text>
 
-  <text x="140" y="578" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">stlaceni zracni jastuk</text>
+  <text x="140" y="578" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">atmosferski referentni tlak</text>
 
   <text x="270" y="616" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#0d47a1">V*</text>
 
@@ -366,7 +351,7 @@
 
   <text x="296" y="638" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan></text>
 
-  <text x="404" y="676" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" text-anchor="end" fill="#5a6a78">smjer iz položaja <tspan font-style="italic">V*</tspan></text>
+  <text x="404" y="676" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" text-anchor="end" fill="#5a6a78">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> ↑: voda je na donjoj strani</text>
 
   <text x="504" y="508" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T3</text>
   <text x="542" y="508" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#1a2530">Cetvrtcilindricni poklopac: zglob A i spojnica B</text>
@@ -386,12 +371,12 @@
 
   <text x="818" y="624" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan></text>
 
-  <text x="844" y="574" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="end" fill="#8e44ad"><tspan font-weight="700">M</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> = 0</text>
+  <text x="844" y="574" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="end" fill="#8e44ad"><tspan font-weight="700">T</tspan> ≈ 8,39 kN</text>
 <text x="364" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
 
   <text x="400" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#b7600c">R</text>
 
-  <text x="548" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.75em">T</tspan></text>
+  <text x="548" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.75em">C</tspan> = 1,20 m</text>
 
   <text x="720" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#b7600c">R</text>
 

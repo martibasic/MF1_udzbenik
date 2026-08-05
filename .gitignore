@@ -4,11 +4,21 @@
 _site/
 _book/
 _freeze/
+.jupyterlite.doit.db
+*.typ
+!assets/typst/*.typ
+
+# Quarto single-file probe renderi uz izvorne omotače
+chapters/*.html
+index.html
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
+
+# Node / headless publication QA
+node_modules/
 
 # Privremene radne datoteke
 tools/tmp/
@@ -24,4 +34,3 @@ preview.html
 # OS
 .DS_Store
 Thumbs.db
-

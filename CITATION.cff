@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Ako koristite ovaj udžbenik, citirajte ovu radnu inačicu."
+title: "Mehanika fluida 1: integrirani udžbenik za strojarstvo i brodogradnju"
+type: book
+version: "1.0-rc1"
+date-released: 2026-08-01
+license: CC-BY-NC-SA-4.0
+authors:
+  - family-names: "Bašić"
+    given-names: "Martina"
+repository-code: "https://github.com/martibasic/MF1_udzbenik"
+url: "https://martibasic.github.io/MF1_udzbenik/"
+abstract: >-
+  Sveučilišni udžbenik Mehanike fluida 1 s petnaest poglavlja, izvedenim
+  bilancama, modernim inženjerskim zadatcima, numeričkim pokusima i
+  pripremljenim CFD V&V slučajevima. Inačica rc1 ostaje radna dok ne završe
+  neovisna stručna recenzija i studentski pilot.

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="u15ot-title u15ot-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
+  <title id="u15ot-title">Režimi otvorenog toka i hidraulički skok</title>
+  <desc id="u15ot-desc">Kanal prelazi iz dubokog mirnog toka u kritični presjek, zatim u plitki siloviti tok i naposljetku kroz hidraulički skok ponovno u dublji tok uz disipaciju energije.</desc>
+  <defs>
+    <linearGradient id="u15ot-water" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#aed6f1"/><stop offset="1" stop-color="#5b9ec9"/></linearGradient>
+    <marker id="u15ot-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1565c0"/></marker>
+    <style>.t{font-family:'Segoe UI',Arial,sans-serif;fill:#243442}.h{font-size:18px;font-weight:700}.l{font-size:15px}.a{stroke:#1565c0;stroke-width:3;fill:none;marker-end:url(#u15ot-arrow)}</style>
+  </defs>
+  <rect x="10" y="10" width="940" height="280" rx="18" fill="#f7fafc" stroke="#c7d4dd"/>
+  <path d="M30 235 L280 235 Q350 235 405 195 Q455 160 520 205 L920 205" fill="none" stroke="#506371" stroke-width="8"/>
+  <path d="M30 105 C170 112 280 120 410 150 C500 174 610 176 670 145 C720 120 775 130 920 132 L920 205 L520 205 Q455 160 405 195 Q350 235 280 235 L30 235 Z" fill="url(#u15ot-water)" opacity="0.86"/>
+  <path d="M30 105 C170 112 280 120 410 150 C500 174 610 176 670 145 C720 120 775 130 920 132" fill="none" stroke="#1565c0" stroke-width="4"/>
+  <path class="a" d="M90 155 H180"/><path class="a" d="M380 178 H470"/><path class="a" d="M770 165 H860"/>
+  <path d="M670 145 C645 115 690 90 665 65" fill="none" stroke="#c0392b" stroke-width="5"/>
+  <text class="t h" x="140" y="55" text-anchor="middle">mirni tok</text><text class="t l" x="140" y="78" text-anchor="middle">Fr &lt; 1</text>
+  <text class="t h" x="455" y="75" text-anchor="middle">kritični presjek</text><text class="t l" x="455" y="98" text-anchor="middle">Fr = 1</text>
+  <text class="t h" x="585" y="245" text-anchor="middle">siloviti tok, Fr &gt; 1</text>
+  <text class="t h" x="690" y="55" text-anchor="middle">hidraulički skok</text>
+  <text class="t h" x="840" y="85" text-anchor="middle">mirni tok</text>
+</svg>

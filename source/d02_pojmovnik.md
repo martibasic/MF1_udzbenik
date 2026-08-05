@@ -1,116 +1,83 @@
-## Radne definicije temeljnih pojmova mehanike fluida
+## Pojmovnik
 
-Ovaj dodatak nije zamjena za glavna poglavlja. Njegova je svrha vratiti kratko radno značenje pojma kad student zna u kojoj je temi, ali mu se zamagli točna definicija ili razlika između dvaju srodnih izraza.
+Pojmovnik daje kratke **radne definicije**. One služe za prisjećanje, a ne zamjenjuju pretpostavke, izvode i granice modela iz glavnih poglavlja. Oznaka u zadnjem stupcu upućuje na poglavlje u kojem se pojam uvodi ili sustavno primjenjuje.
 
-## Kako koristiti ovaj dodatak
+| Pojam | Kratka radna definicija | Poglavlje |
+|---|---|---|
+| Apsolutni tlak | Tlak mjeren u odnosu na idealni vakuum; mora se rabiti u jednadžbi stanja, pri provjeri kavitacije i u kompresibilnom toku. | U03, U08–U09 |
+| Akumulacija | Vremenska promjena ekstenzivne veličine unutar kontrolnog volumena. Ne nestaje samo zato što su ulazni i izlazni protoci trenutačno jednaki. | U07, U10 |
+| Aktuatorski disk | Idealizirana ploha preko koje struja prima ili predaje energiju i količinu gibanja; temeljni model propelera, rotora i vjetroturbine. | U14 |
+| Bezdimenzijski broj | Bezdimenzijska kombinacija veličina koja sažima utjecaj određenih članova modela. Može biti omjer karakterističnih učinaka, vremena, brzina ili drugih istodimenzijskih veličina; nije nužno doslovan omjer sila. | U11 |
+| Bondov broj | $Bo=\Delta\rho gL^2/\sigma$; mjeri relativnu važnost gravitacije i površinske napetosti. | U02, U11 |
+| Brzina zvuka | Brzina širenja male izentropske tlačne smetnje, $a^2=(\partial p/\partial\rho)_s$; za kalorijski savršen idealni plin $a=\sqrt{\kappa RT}$. | U09 |
+| Buckinghamov $\Pi$-teorem | Ako problem sadrži $n$ dimenzijskih veličina i rang dimenzijske matrice je $k$, može se opisati s $n-k$ neovisnih bezdimenzijskih grupa. Teorem ne određuje sam oblik veze među grupama. | U11 |
+| Centar tlaka | Točka hvatišta rezultante raspodijeljenog tlaka na plohu. Položaj ovisi o geometriji, raspodjeli tlaka i odabranoj referenci tlaka. | U05 |
+| Centar uzgona | Težište istisnutog volumena; kroz njega prolazi pravac Arhimedove sile u homogenom fluidu i jednolikom gravitacijskom polju. | U06 |
+| CFD | Računalna dinamika fluida: numeričko približavanje jednadžbi strujanja uz eksplicitne modele, rubne uvjete, mrežu i procjenu numeričke pogreške. | U12, D04 |
+| Dinamička sličnost | Stanje u kojem model i prototip imaju jednake mjerodavne bezdimenzijske parametre. U praksi sve parametre često nije moguće istodobno izjednačiti. | U11 |
+| Dinamička viskoznost | Koeficijent $\mu$ u Newtonovu zakonu viskoznosti; za jednostavno smicanje Newtonova fluida vrijedi $\tau=\mu\,du/dy$. | U02, U12 |
+| Efektivno ubrzanje | Zbroj stvarnih i inercijskih ubrzanja koji u odabranom neinercijskom sustavu određuje gradijent tlaka i oblik slobodne površine pri relativnom mirovanju. | U04 |
+| Energijska linija (EGL) | Linija ukupne mehaničke visine $z+p/(\rho g)+\alpha v^2/(2g)$ duž sustava; pada zbog disipacije, a raste preko crpke. | U08, U13 |
+| Eulerov broj | $Eu=\Delta p/(\rho V^2)$ uz jasno zadanu konvenciju za dinamički tlak; opisuje bezdimenzijsku razliku tlaka. | U11 |
+| Froudeov broj | $Fr=V/\sqrt{gL}$; omjer karakteristične brzine i brzine gravitacijskog vala. Omjer inercijskog i gravitacijskog učinka razmjeran je $Fr^2$. | U11, U15 |
+| Geometrijska sličnost | Jednakost svih odgovarajućih omjera duljina modela i prototipa. Sama nije dovoljna za dinamičku sličnost. | U11 |
+| Gibajući kontrolni volumen | Kontrolni volumen čija se granica giba brzinom $\mathbf v_b$; protok kroz granicu određuje relativna normalna brzina $(\mathbf v-\mathbf v_b)\!\cdot\!\mathbf n$. | U07, U10, U14 |
+| Gustoća | Masa po volumenu, $\rho=dm/dV$ u lokalnom smislu kontinuumskog modela. Može biti konstanta ili polje koje ovisi o tlaku, temperaturi i sastavu. | U01, U03, U09 |
+| Hidraulička linija (HGL) | Linija piezometarske visine $z+p/(\rho g)$; od EGL-a se razlikuje za brzinsku visinu. | U08, U13 |
+| Hidraulički skok | Nagli prijelaz iz superkritičnog u subkritični otvoreni tok uz snažnu disipaciju energije; količina gibanja služi za vezu konjugiranih dubina. | U15 |
+| Izotropni tlak | Skalarni dio normalnog naprezanja koji u jednostavnom fluidu djeluje jednako u svim smjerovima. U gibanju ukupno normalno naprezanje može sadržavati i viskozni devijatorski dio. | U01–U02, U12 |
+| Kavitacija | Nastanak i dinamika parnih šupljina kada lokalni apsolutni tlak dosegne uvjete isparavanja; negativan manometarski tlak sam po sebi nije dokaz kavitacije. | U03, U08, U11, U13 |
+| Kavitacijski broj | Bezdimenzijska tlačna rezerva, često $\sigma=(p_\infty-p_v)/(\tfrac12\rho V^2)$; definicija referentnog tlaka i brzine mora se navesti. | U11 |
+| Kinematička viskoznost | Omjer dinamičke viskoznosti i gustoće, $\nu=\mu/\rho$. | U02, U12–U13 |
+| Kinematička sličnost | Sličnost putanja i omjera brzina u odgovarajućim točkama modela i prototipa. | U11 |
+| Količina gibanja | Ekstenzivna vektorska veličina $\int \rho\mathbf v\,dV$; njezina bilanca povezuje vanjske sile, akumulaciju i tok kroz kontrolnu plohu. | U10 |
+| Kontaktni kut | Kut na dodiru krutine, kapljevine i plina, definiran kroz odabranu fazu; zajedno s površinskom napetošću i geometrijom određuje kvašenje. | U02 |
+| Kontinuitet | Lokalna ili integralna bilanca mase. Za nestlačiv fluid stalne gustoće daje $\nabla\!\cdot\!\mathbf v=0$, ali tok može ostati nestacionaran. | U07, U12 |
+| Kontinuumski model | Idealizacija u kojoj se makroskopska svojstva pridružuju svakoj točki prostora i dovoljno su glatka za diferencijalni opis. Valjanost ovisi o razmjeru problema. | U01 |
+| Kontrolni volumen | Odabrani dio prostora, nepomičan, deformabilan ili gibajući, preko čije se granice vode tokovi mase, energije i količine gibanja. | U07, U10 |
+| Kritična dubina | Dubina pri kojoj je specifična energija minimalna za zadani protok; u pravokutnom kanalu odgovara uvjetu $Fr=1$. | U15 |
+| Laminarni tok | Režim u kojem gibanje ostaje uređeno i prijenos količine gibanja viskoznošću nije nadjačan turbulentnim miješanjem. Prag prijelaza ovisi o geometriji i smetnjama. | U12–U13 |
+| Linijski gubitak | Disipativni pad mehaničke energije duž dionice zbog zidnog smicanja; u potpuno razvijenom toku cijevi često se modelira Darcy–Weisbachovom relacijom. | U13 |
+| Lokalni gubitak | Disipativni pad vezan uz armaturu ili promjenu geometrije, obično zapisan $h_L=K V^2/(2g)$ uz navedenu referentnu brzinu i područje valjanosti $K$. | U13 |
+| Machov broj | $Ma=V/a$, omjer brzine toka i lokalne brzine zvuka. Kriterij prihvatljivosti nestlačivog modela ovisi o dopuštenoj promjeni gustoće, ne samo o jednom univerzalnom pragu. | U09, U11 |
+| Manningov koeficijent | Empirijski koeficijent hrapavosti $n$ u Manningovoj jednadžbi otvorenog toka; ovisi o oblozi, vegetaciji, geometriji i stanju korita. | U15 |
+| Manometarski tlak | Razlika apsolutnog i lokalnog referentnog, najčešće atmosferskog tlaka. Može biti negativan bez pojave vakuuma ili kavitacije. | U03, U08 |
+| Maseni protok | Neto tok mase kroz plohu, $\dot m=\int_A\rho\mathbf v\!\cdot\!\mathbf n\,dA$ za nepomičnu plohu; predznak određuje odabrana vanjska normala. | U07 |
+| Materijalna derivacija | Brzina promjene koju osjeća čestica: $D()/Dt=\partial()/\partial t+\mathbf v\!\cdot\!\nabla()$. Sadrži lokalnu i konvektivnu promjenu. | U07, U12 |
+| Metacentrična visina | $GM$ je udaljenost metacentra i težišta u početnoj aproksimaciji malog nagiba. Znak daje lokalnu početnu stabilnost, ne potpunu provjeru velikih kutova ili oštećenja. | U06 |
+| Mrežna konvergencija | Provjera približava li se promatrana numerička veličina stabilnoj vrijednosti pri sustavnom profinjenju mreže. Zahtijeva više mreža i usporediv režim rješavanja. | U12, D04 |
+| Navier–Stokesove jednadžbe | Bilance količine gibanja za Newtonov fluid, uz kontinuitet, konstitutivnu vezu i rubne/početne uvjete. Pojednostavljenja moraju slijediti iz skala i pretpostavki. | U12 |
+| Nestacionarni tok | Tok u kojem barem jedna Eulerova veličina u fiksnoj točki ima nenultu parcijalnu vremensku derivaciju. | U07, U12 |
+| Newtonov fluid | Fluid u kojem je devijatorsko naprezanje linearno povezano s brzinom deformacije, uz viskoznost neovisnu o brzini smicanja za zadano termodinamičko stanje. | U02, U12 |
+| No-slip uvjet | Rubni uvjet jednakosti tangencijalne brzine viskoznog fluida i brzine nepropusne stijenke na makroskopskoj skali. | U12 |
+| Normalni udarni val | Tanka, gotovo diskontinuirana zona okomita na nadolazeći nadzvučni tok kroz koju rastu tlak, gustoća i entropija, a Machov broj prelazi u podzvučni. | U09 |
+| Očuvanje | Za zatvoren sustav promjena ekstenzivne veličine jednaka je zbroju odgovarajućih vanjskih prijenosa i izvora; kontrolno-volumenski zapis dodaje tok kroz granicu. | U07–U10, U12 |
+| Odvajanje graničnog sloja | Odmak struje od stijenke pod nepovoljnim gradijentom tlaka nakon snažnog usporavanja prizidnog toka; položaj ovisi o Reynoldsovu broju, geometriji i stanju graničnog sloja. | U12 |
+| Pascalov zakon | U statičkom ili kvazistatičkom zatvorenom fluidu nametnuta promjena tlaka prenosi se bez umanjenja, dok se stvarna smetnja širi konačnom brzinom i može imati prolazne učinke. | U01 |
+| Površinska napetost | Slobodna energija po površini, odnosno sila po duljini u jednostavnom opisu sučelja, označena s $\sigma$. | U02 |
+| Prigušenje sapnice | Dosezanje najvećeg masenog protoka kada na kritičnom presjeku nastupi $Ma=1$; daljnje snižavanje nizvodnog tlaka ne povećava izentropski protok kroz taj presjek. | U09 |
+| Radna točka | Presjek karakteristike stroja i karakteristike sustava; određuje stvarni protok i visinu, uz provjeru učinkovitosti, dopuštenog područja rada i kavitacijske rezerve. | U13–U14 |
+| Reynoldsov broj | $Re=VL/\nu$; omjer karakterističnog inercijskog i viskoznog učinka. Sam po sebi ne određuje univerzalno režim toka za sve geometrije. | U11–U13 |
+| Reynoldsov transportni teorem | Veza između vremenske promjene ekstenzivne veličine materijalnog sustava i akumulacije te toka kroz granicu kontrolnog volumena. | U07, U10 |
+| Relativna brzina | Brzina fluida u odnosu na gibajuću granicu ili lopaticu. U turbostrojevima se uz dosljednu konvenciju često zapisuje $\mathbf w=\mathbf c-\mathbf u$. | U07, U10, U14 |
+| Rezidual | Mjera diskretnog debalansa jednadžbe tijekom iteriranja. Mali reziduali nisu sami dovoljan dokaz točnosti ni konvergencije fizikalno važne veličine. | U12, D04 |
+| Rubni uvjet | Matematički podatak na granici domene. Mora biti kompatibilan s jednadžbama i fizikalnim sustavom; pogrešan rubni uvjet ne popravlja finija mreža. | U12, D04 |
+| Specifična energija otvorenog toka | Energijska visina u odnosu na dno kanala, $E=y+\alpha V^2/(2g)$ za blagi nagib i hidrostatsku raspodjelu. | U15 |
+| Stagnacijska veličina | Vrijednost koju bi tok postigao pri zamišljenom usporavanju do mirovanja prema navedenom procesu; u idealnom kompresibilnom toku proces je izentropski. | U08–U09 |
+| Strouhalov broj | $St=fL/V$; uspoređuje karakteristično vrijeme nestacionarnosti s konvektivnim vremenom. | U11–U12 |
+| Strujnica | Krivulja koja je u promatranom trenutku tangencijalna lokalnom vektoru brzine. | U07 |
+| Trajektorija čestice | Put jedne označene čestice kroz vrijeme. Podudara se sa strujnicom samo u stacionarnom toku. | U07 |
+| Turbulencija | Trodimenzijsko nestacionarno gibanje širokog raspona skala koje pojačava miješanje i prijenos količine gibanja; statistički model nije svojstvo fluida nego aproksimacija toka. | U12 |
+| Uzgon | Rezultanta hidrostatskog tlaka jednaka težini istisnutog fluida, uz smjer suprotan volumnoj sili u homogenom fluidu i jednolikom gravitacijskom polju. | U06 |
+| Validacija | Procjena koliko matematički i računalni model opisuje stvarnost za namjeravanu uporabu, usporedbom s relevantnim eksperimentom i njegovom nesigurnošću. | U12, D04 |
+| Verifikacija | Provjera rješavaju li kod i numerički postupak zadane jednadžbe dovoljno točno; uključuje provjeru koda, iteracijsku i diskretizacijsku pogrešku te očuvanje. | U12, D04 |
+| Vertikalna komponenta sile na zakrivljenu plohu | Dobiva se integralom tlaka ili metodom zamišljenog fluida; iznos je povezan s njegovom težinom, a smjer se mora odrediti iz normale i strane na kojoj je fluid. | U05 |
+| Volumenski protok | Neto tok volumena kroz plohu, $Q=\int_A\mathbf v\!\cdot\!\mathbf n\,dA$ za nepomičnu plohu; za stlačiv tok općenito nije očuvana veličina. | U07 |
+| Weberov broj | $We=\rho V^2L/\sigma$; uspoređuje inercijski i kapilarni učinak. | U02, U11 |
+| Young–Laplaceova relacija | Skok normalnog naprezanja preko mirnog zakrivljenog sučelja razmjeran je površinskoj napetosti i zbroju glavnih zakrivljenosti, uz dosljednu konvenciju normale. | U02 |
 
-Najprirodniji redoslijed je:
+::: {.mf1-granica-modela}
+<p class="mf1-box-label">Kako čitati pragove</p>
 
-1. prepoznati kojoj temi pojam pripada
-2. ovdje provjeriti kratku radnu definiciju
-3. ako pojam i dalje nije jasan, vratiti se u odgovarajuće glavno poglavlje
-
-Pojmovnik je zato namjerno kratak. On vraća fizikalni smisao termina, ali ne može zamijeniti cijeli model iz poglavlja.
-
-## Temeljni pojmovi `pog. 1–2`
-
-| Pojam | Kratka radna definicija | Tipično poglavlje | U numerici |
-| --- | --- | --- | --- |
-| Kontinuumski model | Idealizacija prema kojoj su svojstva fluida definirana u svakoj točki prostora. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> | Diskretizirana polja na svakoj ćeliji mreže — temelj FVM i FEM solvera. |
-| Gustoća | Masa po jedinici volumena, $\rho = m/V$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> | Skalarno polje $\rho$ ili konstanta u solveru; u VOF nastaje miješanjem dviju faznih gustoća. |
-| Specifična težina | Težina po jedinici volumena, $\gamma = \rho g$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> | Ulazi neizravno preko $\rho g$ u gravitacijskom članu Navier-Stokesove jednadžbe. |
-| Relativna gustoća | Omjer gustoće promatranog fluida i gustoće vode. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> | Koristi se pri zadavanju početnih uvjeta i identifikaciji faza u multifaznim simulacijama. |
-| Tlak | Normalna sila po jedinici površine; u fluidu se tretira kao skalarno polje. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> | Skalarno polje koje se rješava Poissonovom jednadžbom u SIMPLE ili PISO algoritmu. |
-| Izotropnost tlaka | Svojstvo mirujućeg fluida da tlak u jednoj točki djeluje jednako u svim smjerovima. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> | Temeljna pretpostavka kod razdvajanja normalnih i smičnih naprezanja u tenzorskom zapisu. |
-| Pascalov zakon | Promjena tlaka zadana u zatvorenom mirujućem fluidu prenosi se kroz cijeli fluid. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span> | Implicitno zadovoljeno u svakom koraku iterativnog rješavanja tlačne jednadžbe. |
-| Dinamička viskoznost | Mjera unutarnjeg trenja fluida, označena s $\mu$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> | Koeficijent ispred viskoznog (Laplaceova) člana u Navier-Stokesovoj jednadžbi. |
-| Kinematička viskoznost | Omjer dinamičke viskoznosti i gustoće, $\nu = \mu / \rho$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> | Ulazi u definiciju lokalnog Reynoldsovog broja i u izvore $k$-$\varepsilon$ modela. |
-| Površinska napetost | Površinski učinak koji se ponaša kao zatezanje slobodne površine, označen s $\sigma$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> | Modelira se preko CSF modela (Continuum Surface Force) u VOF solverima. |
-| Kontaktni kut | Kut kojim se slobodna površina siječe sa stijenkom; određuje kvasi li tekućina stijenku. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> | Rubni uvjet `contactAngle` na zidnim plohama u multifaznim simulacijama. |
-| Kapilarnost | Uspon ili pad tekućine u uskoj cjevčici zbog površinske napetosti i kontaktnog kuta. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> | Posljedica zajedničkog djelovanja CSF modela i kontaktnog kuta na slobodnoj površini. |
-| Tlakovni skok | Porast ili pad tlaka preko zakrivljene slobodne površine, opisan Young-Laplaceovom relacijom. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Viskoznost, površinska napetost i kapilarnost</span></span> | Diskretni skok polja tlaka preko sučelja faza u VOF simulacijama. |
-
-## Hidrostatika i sile `pog. 3–7`
-
-| Pojam | Kratka radna definicija | Tipično poglavlje | U numerici |
-| --- | --- | --- | --- |
-| Apsolutni tlak | Tlak mjeren u odnosu na idealni vakuum. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> | Rijetko se rješava izravno; rekonstruira se iz polja $p_M$ uvećanog za $p_{atm}$. |
-| Manometarski tlak | Tlak mjeren u odnosu na lokalni atmosferski tlak. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> | Standardno polje $p$ ili $p_{rgh}$ u nestlačivim solverima. |
-| Vakuumski tlak | Mjera koliko je tlak u sustavu ispod atmosferskog tlaka. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> | Rubni uvjet niže od $p_{atm}$, npr. na usisu pumpe ili kondenzatora. |
-| Relativno mirovanje fluida | Stanje u kojem se fluid prema spremniku ponaša kao da miruje, iako se cijeli sustav može gibati. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 4</span><span class="mf1-ch-title">Relativno mirovanje fluida</span></span> | Modelirano MRF zonom (Moving Reference Frame) ili rotirajućim okvirom referencije. |
-| Efektivno ubrzanje | Rezultantno ubrzanje gravitacije i gibanja spremnika koje određuje nagib slobodne površine i lokalnu raspodjelu tlaka. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 4</span><span class="mf1-ch-title">Relativno mirovanje fluida</span></span> | Volumni izvor sile koji uračunava centrifugalno i Coriolisovo ubrzanje. |
-| Centar tlaka | Točka u kojoj djeluje rezultanta raspodijeljenog hidrostatskog tlaka na plohu. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span> | Post-procesni izračun integralima $p \vec{r}$ i $p$ preko zidnoga patcha. |
-| Horizontalna komponenta sile | Komponenta sile na zakrivljenoj plohi koja se često dobiva iz vertikalne projekcije. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Zakrivljene plohe i rastav sila</span></span> | Alati `forces` (OpenFOAM) ili `Surface integrate` (ParaView) na zadanom patchu. |
-| Vertikalna komponenta sile | Komponenta sile na zakrivljenoj plohi povezana s težinom fluida iznad plohe. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Zakrivljene plohe i rastav sila</span></span> | Isti alat — projekcija ukupne sile na zidu na vertikalnu os. |
-| Uzgon | Rezultantna sila prema gore koja nastaje zbog hidrostatskog tlaka na uronjeno tijelo. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span> | U VOF se izračunava iz polja $\alpha$ pomnoženog razlikom gustoća dviju faza. |
-| Centar uzgona | Težište istisnutog volumena fluida; pravac djelovanja uzgona prolazi kroz njega. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span> | Težište područja $\alpha > 0{,}5$ (vodena faza) ispod slobodne površine. |
-
-## Strujanje, energija i mjerenje `pog. 8–10`
-
-| Pojam | Kratka radna definicija | Tipično poglavlje | U numerici |
-| --- | --- | --- | --- |
-| Kontrolni volumen | Zamišljeni dio prostora kroz koji fluid može ulaziti, izlaziti i akumulirati se. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> | Svaka ćelija mreže je elementarni kontrolni volumen u FVM diskretizaciji. |
-| Akumulacija | Promjena mase ili volumena unutar kontrolnog volumena tijekom vremena. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> | Vremenski član $\partial/\partial t$ u diskretizaciji tranzijentnih jednadžbi. |
-| Volumenski protok | Volumen fluida koji prođe kroz presjek u jedinici vremena, $Q = dV/dt$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> | Post-procesni integral $\vec{u} \cdot \vec{n}$ preko zadanog presjeka mreže. |
-| Maseni protok | Masa fluida koja prođe kroz presjek u jedinici vremena, $\dot{m} = dm/dt$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> | Isti integral pomnožen lokalnom gustoćom; alat `flowRatePatch` u OpenFOAM-u. |
-| Polje brzine | Vektor brzine pridružen svakoj točki prostora i trenutku, $\vec{v}(x,y,z,t)$; Eulerov opis strujanja. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> | Primarno polje `U` koje solver rješava u svakoj ćeliji mreže. |
-| Strujnica | Krivulja koja je u jednom trenutku u svakoj točki tangencijalna na vektor brzine. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> | Vizualizacija: `streamline` filter u ParaView-u ili `streamlines` u Fluentu. |
-| Trajektorija | Stvarni put jedne čestice fluida kroz vrijeme; podudara se sa strujnicom u stacionarnom strujanju. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> | `pathline` (integracija čestice po vremenu), za razliku od trenutne strujnice. |
-| Materijalna derivacija | Ubrzanje čestice, $D\vec{v}/Dt = \partial\vec{v}/\partial t + (\vec{v}\cdot\nabla)\vec{v}$ (lokalni + konvektivni član). | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span> | Konvektivni član je izvor nelinearnosti Navier-Stokesove jednadžbe. |
-| Geodetska visina | Položajna komponenta energije fluida, označena s $z$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 9</span><span class="mf1-ch-title">Bernoullijeva jednadžba idealnog fluida</span></span> | U nestlačivim solverima ugrađena je u definiciju $p_{rgh} = p - \rho g h$. |
-| Stagnacijska točka | Mjesto gdje lokalna brzina fluida pada na nulu. | `pog. 9–10` | Detektira se kao lokalni minimum $|\vec{u}|$ uz tijelo u struji. |
-| Stagnacijski tlak | Tlak koji bi fluid imao kada bi se idealno zaustavio bez gubitaka. | `pog. 9–10` | Skalarno polje $p + \tfrac{1}{2}\rho v^2$ izračunato u post-procesu. |
-| EGL | Energijska linija koja prati ukupnu mehaničku energiju po jedinici težine. | `pog. 9–10` | Vizualizacijska linija ukupne energije po odabranoj strujnici. |
-| HGL | Hidraulička linija koja prati tlačnu i geodetsku visinu, bez brzinskog člana. | `pog. 9–10` | Polje $p/(\rho g) + z$ prikazano kao iso-površina ili linija. |
-| Pitot-statička cijev | Instrument koji iz razlike stagnacijskog i statičkog tlaka određuje brzinu strujanja. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span> | Validacijska sonda: točkasti probe za $p$ i komponente $\vec{u}$ na zadanoj koordinati. |
-| Linijski gubici | Gubici energije zbog trenja uz stijenku cijevi duž ravne dionice. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span> | U RANS modelima dobiju se preko zidnih funkcija i odgovarajuće $y^+$ rezolucije. |
-| Lokalni gubici | Gubici energije uzrokovani ventilima, koljenima, suženjima i drugim lokalnim poremećajima. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span> | Razrešavaju se finijom mrežom oko geometrijskih singulariteta. |
-
-## Sile strujanja i cjevovodi `pog. 11–13`
-
-| Pojam | Kratka radna definicija | Tipično poglavlje | U numerici |
-| --- | --- | --- | --- |
-| Količina gibanja | Vektorska veličina koja povezuje protok mase i brzinu te određuje sile u kontrolnom volumenu. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> | Konvektivni član $\nabla \cdot (\rho \vec{u} \otimes \vec{u})$ — srž Navier-Stokesove jednadžbe u svakom FVM koraku. |
-| Reakcijska sila strujanja | Sila koju promjena brzine ili smjera struje proizvodi na cijev, mlaznicu, plohu ili spoj. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Količina gibanja i sile strujanja</span></span> | Funkcijski objekt `forces` ili `forceCoeffs` integrira tlak i smična naprezanja po patchu. |
-| Relativna brzina | Brzina fluida promatrana u odnosu na gibajući element, $w = c - u$; važna za lopatice i potisak. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Pokretne lopatice i potisak</span></span> | U MRF zonama transformacija polja brzine u rotirajući okvir referencije. |
-| Reynoldsov broj | Bezdimenzijski broj koji uspoređuje učinak inercije i viskoznosti, $Re = vD/\nu$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> | Određuje izbor solvera: laminarni, RANS ($k$-$\varepsilon$, $k$-$\omega$ SST), LES ili DNS. |
-| Moodyjev dijagram | Grafički alat za određivanje Darcyjeva koeficijenta trenja iz $Re$ i relativne hrapavosti. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> | Zamjenjuje se zidnim funkcijama (low-Re ili high-Re), izbor ovisi o $y^+$ rezoluciji mreže. |
-| Darcyjev koeficijent trenja | Bezdimenzijski koeficijent $\lambda$ koji povezuje režim strujanja i linijske gubitke u cijevi. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> | Indirektno preko smičnog naprezanja na zidu i izabranih zidnih funkcija. |
-| Koeficijent istjecanja | Bezdimenzijski faktor $C_d$ koji povezuje idealno i stvarno istjecanje kroz otvor ili pukotinu. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> | Razrešava se mrežom uskih otvora ili nadomješta diskretnim modelom otvora. |
-| Serijski spoj cjevovoda | Spoj u kojem isti protok prolazi kroz sve dionice, a gubici se zbrajaju. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> | Modelira se kontinuiranom mrežom kroz sve dionice s istim ulaznim i izlaznim patchom. |
-| Paralelni spoj cjevovoda | Spoj u kojem se protok dijeli među granama, a gubitak energije između istih čvorova mora biti jednak. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> | Više patchova s rubnim uvjetima $p$ ili $Q$ na zajedničkim čvorovima granjenja. |
-| Radna točka sustava | Točka presjeka zahtjeva sustava i mogućnosti crpke ili postrojenja. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> | Određuje se iterativnom CFD simulacijom (sweep) ili komplementarnim 1D mrežnim modelom. |
-
-## Bezdimenzijska analiza i sličnost `pog. 14`
-
-| Pojam | Kratka radna definicija | Tipično poglavlje | U numerici |
-| --- | --- | --- | --- |
-| Bezdimenzijski broj | Omjer dviju sila (ili veličina iste dimenzije) koji mjeri koja sila dominira. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Bezdimenzionirane jednadžbe; jedan parametar zamjenjuje više dimenzijskih veličina. |
-| Sila inercije | Težnja fluida da nastavi gibanje, $F_i \sim \rho v^2 L^2$; referenca za većinu brojeva. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Konvektivni član Navier-Stokesove jednadžbe. |
-| Froudeov broj | Omjer inercije i gravitacije, $Fr = v/\sqrt{gL}$; vlada kod slobodne površine. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Skaliranje slobodne površine u VOF simulaciji broda ili kanala. |
-| Eulerov broj / koeficijent tlaka | Omjer tlačne i inercijske sile, $Eu = \Delta p/(\rho v^2)$, $C_p$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Izlazni koeficijent (`forceCoeffs`) ili polje $C_p$. |
-| Kavitacijski broj | Rezerva tlaka iznad isparavanja, $\sigma_{kav} = (p - p_v)/(\tfrac12\rho v^2)$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Prag kavitacijskog modela (npr. Schnerr-Sauer). |
-| Weberov broj | Omjer inercije i površinske napetosti, $We = \rho v^2 L/\sigma$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Parametar VOF/CSF modela raspršivanja. |
-| Bondov (Eötvösov) broj | Omjer gravitacije i površinske napetosti, $Bo = \rho g L^2/\sigma$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Važnost napetosti vs gravitacije u multifaznom modelu. |
-| Strouhalov broj | Bezdimenzijska frekvencija vrtložnog otpuštanja, $St = fL/v$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Validacija nestacionarne simulacije (vortex shedding). |
-| Machov broj | Omjer inercije i stlačivosti, $Ma = v/a$; granica nestlačivosti $Ma < 0{,}3$. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Izbor nestlačivog ili stlačivog solvera. |
-| Buckinghamov Π teorem | Metoda koja iz $n$ veličina i $k$ dimenzija daje $n - k$ bezdimenzijskih grupa. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Opravdava bezdimenzioniranje jednadžbi prije simulacije. |
-| Dinamička sličnost | Jednakost mjerodavnih bezdimenzijskih brojeva modela i prototipa. | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span> | Uvjet da rezultat simulacije modela vrijedi za prototip. |
-
-::: {.mf1-warning}
-<p class="mf1-box-label">Najčešća pogreška</p>
-
-Najčešća pogreška pri radu s pojmovnikom nije pogrešna definicija nego pokušaj da se kratka definicija koristi kao zamjena za cijelo poglavlje. Ako pojam i dalje nije jasan u konkretnom zadatku, treba se vratiti na model i primjer iz pripadnog poglavlja, a ne tražiti još kraću verziju iste definicije.
+Brojevi poput $Re$, $Ma$ i $Fr$ ne nose univerzalnu granicu primjenjivosti neovisnu o geometriji, rubnim uvjetima i traženoj točnosti. Kada je odluka osjetljiva, u glavnom poglavlju treba provjeriti definiciju karakterističnih veličina i područje valjanosti primijenjene korelacije.
 :::
-
-::: {.mf1-mini-summary}
-<p class="mf1-box-label">Sažetak za ponijeti</p>
-
-<span class="mf1-ch-ref"><span class="mf1-ch-code">dod. B</span><span class="mf1-ch-title">Pojmovnik</span></span> je brza orijentacijska karta pojmova, ne skraćeni udžbenik. Služi onda kad je tema poznata, ali je potrebno odmah vratiti točan fizikalni smisao termina prije nastavka računa. Stupac *U numerici* uz svaki pojam najavljuje gdje se isti pojam pojavljuje u računalnoj dinamici fluida — detaljnije u <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
-:::
-
-
-
-
-
-

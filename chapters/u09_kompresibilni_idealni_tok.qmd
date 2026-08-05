@@ -1,0 +1,6 @@
+---
+title: "Kompresibilni idealni tok"
+page-layout: article
+---
+
+{{< include ../source/u09_kompresibilni_idealni_tok.md >}}

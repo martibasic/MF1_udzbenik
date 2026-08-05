@@ -1,6 +1,12 @@
 ---
-title: "12. Pokretne lopatice i potisak"
+title: "Poglavlje je premješteno"
 page-layout: article
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=u14_turbostrojevi_i_propulzija.html">
+        <link rel="canonical" href="u14_turbostrojevi_i_propulzija.html">
 ---
 
-{{< include ../source/u12_pokretne_lopatice_i_potisak.md >}}
+Sadržaj je premješten u [14. Turbostrojevi i propulzija](u14_turbostrojevi_i_propulzija.qmd).

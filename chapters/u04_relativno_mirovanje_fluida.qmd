@@ -1,5 +1,5 @@
 ---
-title: "4. Relativno mirovanje fluida"
+title: "Relativno mirovanje fluida"
 page-layout: article
 ---
 

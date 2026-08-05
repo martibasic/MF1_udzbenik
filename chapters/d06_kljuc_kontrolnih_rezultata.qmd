@@ -1,0 +1,6 @@
+---
+title: "Ključ kontrolnih rezultata"
+page-layout: article
+---
+
+{{< include ../source/d06_kljuc_kontrolnih_rezultata.md >}}

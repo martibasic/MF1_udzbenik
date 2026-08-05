@@ -128,9 +128,11 @@ def primjer_odvodnja(D=0.110, L=18.0, dz=3.50, sum_xi=6.5, lam=0.025,
 def zadatak_1(D=0.090, L=28.0, v=2.1, lam=0.031, sum_xi=3.8,
                rho=998.0, g=9.81):
     vh = v**2 / (2 * g)
-    h_w = (lam * L / D + sum_xi) * vh
+    h_l = lam * L / D * vh
+    h_loc = sum_xi * vh
+    h_w = h_l + h_loc
     dp = rho * g * h_w
-    return {"h_w": h_w, "dp": dp}
+    return {"h_l": h_l, "h_loc": h_loc, "h_w": h_w, "dp": dp}
 
 
 def zadatak_2(D=0.075, L=42.0, dz=6.2, sum_xi=5.1, lam=0.029, g=9.81):
@@ -146,11 +148,14 @@ def zadatak_3(dh=0.32, C=0.98, g=9.81):
     return {"v": v}
 
 
-def zadatak_4(D=0.060, dz=2.4, K=6.8, z_C=0.90, atm_h=10.2, g=9.81):
+def zadatak_4(D=0.060, dz=2.4, K=6.8, z_C=0.90, K_AC=3.2,
+              p_atm=101.3e3, rho=1000.0, g=9.81):
     v = math.sqrt(2 * g * dz / K)
     vh = v**2 / (2 * g)
-    # Treba znati gubitak do vrha; bez tog podatka uzeti ~ pola K
-    return {"v": v, "vh": vh}
+    A = math.pi * D**2 / 4
+    Q = A * v
+    p_C_abs = p_atm - rho * g * (z_C + K_AC * vh)
+    return {"v": v, "Q": Q, "p_C_abs": p_C_abs}
 
 
 def zadatak_5(D=0.080, z=2.6, L=5.0, Q=0.014, lam=0.030, sum_xi=1.8,
@@ -160,12 +165,13 @@ def zadatak_5(D=0.080, z=2.6, L=5.0, Q=0.014, lam=0.030, sum_xi=1.8,
     vh = v**2 / (2 * g)
     h_w = (lam * L / D + sum_xi) * vh
     p_aps = p_atm - rho * g * (z + vh + h_w)
-    return {"v": v, "p_aps": p_aps}
+    NPSH_a = p_aps / (rho * g) + vh - p_v / (rho * g)
+    return {"v": v, "p_aps": p_aps, "NPSH_a": NPSH_a}
 
 
 def zadatak_6(dz=8.5, D_s=0.090, L_s=6.0, lam_s=0.028, sum_xi_s=2.0,
                D_d=0.080, L_d=24.0, lam_d=0.026, sum_xi_d=4.8,
-               Q=0.018, atm_h=10.3, p_v_h=0.40, g=9.81):
+               Q=0.018, atm_h=10.3, p_v_h=0.40, z_s=1.5, g=9.81):
     A_s = math.pi * D_s**2 / 4
     A_d = math.pi * D_d**2 / 4
     v_s = Q / A_s
@@ -175,7 +181,15 @@ def zadatak_6(dz=8.5, D_s=0.090, L_s=6.0, lam_s=0.028, sum_xi_s=2.0,
     h_w_s = (lam_s * L_s / D_s + sum_xi_s) * vh_s
     h_w_d = (lam_d * L_d / D_d + sum_xi_d) * vh_d
     H_p = dz + h_w_s + h_w_d
-    return {"H_p": H_p, "v_s": v_s, "v_d": v_d}
+    p_s_abs_h = atm_h - z_s - vh_s - h_w_s
+    NPSH_a = p_s_abs_h + vh_s - p_v_h
+    return {
+        "H_p": H_p,
+        "v_s": v_s,
+        "v_d": v_d,
+        "p_s_abs_h": p_s_abs_h,
+        "NPSH_a": NPSH_a,
+    }
 
 
 # ------------ Faza 1.5 dodatak: Starenje cijevi i lambda ----------------
@@ -258,11 +272,35 @@ def verify():
     _check(out, "U10.odvodnja.v", r["v"], 2.545, "m/s", rel=0.02)
     _check(out, "U10.odvodnja.Q_Ls", r["Q"] * 1000, 24.18, "L/s", rel=0.02)
 
-    for name, fn in [("Z1", zadatak_1), ("Z2", zadatak_2), ("Z3", zadatak_3),
-                     ("Z4", zadatak_4), ("Z5", zadatak_5), ("Z6", zadatak_6)]:
-        r = fn()
-        first_key = next(iter(r))
-        _check(out, f"U10.{name}.{first_key}_pos", r[first_key], r[first_key])
+    r = zadatak_1()
+    _check(out, "U10.Z1.h_l", r["h_l"], 2.17, "m", rel=0.02)
+    _check(out, "U10.Z1.h_loc", r["h_loc"], 0.85, "m", rel=0.02)
+    _check(out, "U10.Z1.h_w", r["h_w"], 3.02, "m", rel=0.02)
+    _check(out, "U10.Z1.dp_kPa", r["dp"] / 1000, 29.6, "kPa", rel=0.02)
+
+    r = zadatak_2()
+    _check(out, "U10.Z2.v", r["v"], 2.39, "m/s", rel=0.02)
+    _check(out, "U10.Z2.Q_Ls", r["Q"] * 1000, 10.5, "L/s", rel=0.02)
+
+    r = zadatak_3()
+    _check(out, "U10.Z3.v", r["v"], 2.46, "m/s", rel=0.02)
+
+    r = zadatak_4()
+    _check(out, "U10.Z4.v", r["v"], 2.63, "m/s", rel=0.02)
+    _check(out, "U10.Z4.Q_Ls", r["Q"] * 1000, 7.44, "L/s", rel=0.02)
+    _check(out, "U10.Z4.p_C_abs_kPa", r["p_C_abs"] / 1000, 81.4, "kPa", rel=0.02)
+
+    r = zadatak_5()
+    _check(out, "U10.Z5.v", r["v"], 2.79, "m/s", rel=0.02)
+    _check(out, "U10.Z5.p_abs_kPa", r["p_aps"] / 1000, 57.4, "kPa", rel=0.02)
+    _check(out, "U10.Z5.NPSH_a", r["NPSH_a"], 6.0, "m", rel=0.02)
+
+    r = zadatak_6()
+    _check(out, "U10.Z6.v_s", r["v_s"], 2.83, "m/s", rel=0.02)
+    _check(out, "U10.Z6.v_d", r["v_d"], 3.58, "m/s", rel=0.02)
+    _check(out, "U10.Z6.H_p", r["H_p"], 18.3, "m", rel=0.02)
+    _check(out, "U10.Z6.p_s_abs_h", r["p_s_abs_h"], 6.81, "m", rel=0.02)
+    _check(out, "U10.Z6.NPSH_a", r["NPSH_a"], 6.82, "m", rel=0.02)
 
     # Faza 1.5: Starenje cijevi i lambda
     r = primjer_starenje()

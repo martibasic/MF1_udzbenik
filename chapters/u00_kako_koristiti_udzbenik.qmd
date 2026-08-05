@@ -1,6 +1,7 @@
 ---
-title: "0. Kako koristiti udžbenik"
 page-layout: article
 ---
+
+# 0. Kako koristiti udžbenik {.unnumbered}
 
 {{< include ../source/u00_kako_koristiti_udzbenik.md >}}

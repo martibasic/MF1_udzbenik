@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u03fpu_title u03fpu_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
   <title id="u03fpu_title">Tlak na usisu pumpe za cirkulaciju ulja</title>
-  <desc id="u03fpu_desc">Otvoreni spremnik s uljem (gustoca 870 kg/m3) na atmosferskom tlaku. Pumpa je smjestena H = 2,4 m iznad slobodne povrsine i preko vertikalnog usisnog voda crpi ulje. Na usisu pumpe vlada podtlak p_man = -20,5 kPa, odnosno apsolutni tlak p_aps = 80,8 kPa. Desno panel prikazuje izvod p_man, p_aps i ocjenu maksimalne usisne visine H_max prije kavitacije.</desc>
+  <desc id="u03fpu_desc">Otvoreni spremnik s uljem (gustoca 870 kg/m3) na atmosferskom tlaku. Pumpa je smjestena H = 2,4 m iznad slobodne povrsine i preko vertikalnog usisnog voda crpi ulje. Na usisu pumpe u statickom modelu vlada podtlak p_man = -20,5 kPa, odnosno apsolutni tlak p_aps = 80,8 kPa. Desni panel izvodi staticku gornju granicu H_max pri Q=0; radna pumpa zahtijeva ukljucivanje brzine i gubitaka te provjeru NPSH_A prema NPSH_R.</desc>
 
   <defs>
     <linearGradient id="u03fpu_oil" x1="0" y1="0" x2="0" y2="1">
@@ -187,12 +187,12 @@
 
   <text x="510" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#7a5c00">Kavitacija</text>
   <text x="510" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Ako p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> padne ispod tlaka pare p<tspan baseline-shift="sub" font-size="0.7em">v</tspan>, ulje isparava u mjehurice (kavitacija).</text>
-  <text x="510" y="510" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Ovdje p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> = 80,8 kPa ≫ 0,2 kPa → daleko od kavitacijske granice.</text>
-  <text x="510" y="524" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">U praksi se H<tspan baseline-shift="sub" font-size="0.7em">max</tspan> reducira na 6–8 m zbog hidraulickih gubitaka.</text>
+  <text x="510" y="510" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Pri Q = 0: p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> = 80,8 kPa ≫ 0,2 kPa; staticka granica nije dosegnuta.</text>
+  <text x="510" y="524" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">U radu ukljuciti brzinu i gubitke te provjeriti NPSH<tspan baseline-shift="sub" font-size="0.7em">A</tspan> &gt; NPSH<tspan baseline-shift="sub" font-size="0.7em">R</tspan>.</text>
 <text x="442" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#b7600c">H</text>
   <text x="442.0" y="322.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#b7600c">= 2,40 m</text>
 
-  <text x="514" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">3. Maksimalna usisna visina bez kavitacije (p<tspan baseline-shift="sub" font-size="0.7em">v</tspan> ≈ 200 Pa)</text>
+  <text x="514" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">3. Staticka gornja granica (Q = 0; p<tspan baseline-shift="sub" font-size="0.7em">v</tspan> ≈ 200 Pa)</text>
   <text x="720" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 11,8 m</text>
 
   </svg>

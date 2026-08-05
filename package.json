@@ -1,0 +1,16 @@
+{
+  "name": "mf1-publication-qa",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Headless viewport and WCAG checks for the rendered MF1 textbook",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "audit:viewports": "node tools/audit_viewports.mjs"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.3",
+    "playwright-core": "1.54.2"
+  }
+}

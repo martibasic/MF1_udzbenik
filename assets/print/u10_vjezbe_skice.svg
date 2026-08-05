@@ -234,7 +234,7 @@
     <!-- Voda u sifonu (uza linija unutar) -->
     <path d="M 96 192 L 96 78 L 280 78 L 280 226" fill="none" stroke="#5b9ec9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
 
-    <!-- Vrh sifona (oznaka K) -->
+    <!-- Vrh sifona (oznaka C) -->
     <circle cx="188" cy="78" r="5" fill="#c0392b" />
     <!-- Izlaz strelica (v) -->
     <line x1="284" y1="232" x2="284" y2="252" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u10vs-aFlow)" />
@@ -253,11 +253,11 @@
     <text x="34" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">T4</text>
     <text x="62" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Realni sifon – brzina i vrh</text>
 
-    <text x="188" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" text-anchor="middle" fill="#c0392b">K</text>
+    <text x="188" y="64" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" font-style="italic" text-anchor="middle" fill="#c0392b">C</text>
 
     <text x="292" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0"><tspan font-weight="700">v</tspan></text>
 
-    <text x="20" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#3a4a56"><tspan font-style="italic">D</tspan> = 60 mm  ·  <tspan font-style="italic">K</tspan> = 6,8 (ukupni gubici)</text>
+    <text x="20" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56"><tspan font-style="italic">D</tspan> = 60 mm  ·  <tspan font-style="italic">K</tspan><tspan baseline-shift="sub" font-size="0.7em">AE</tspan> = 6,8  ·  <tspan font-style="italic">K</tspan><tspan baseline-shift="sub" font-size="0.7em">AC</tspan> = 3,2</text>
   <text x="358" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">0,90 m</text>
 
     <text x="324" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c"><tspan font-weight="700">Δz</tspan> = 2,4 m</text>
@@ -346,6 +346,8 @@
     <!-- Strelice toka -->
     <line x1="106" y1="158" x2="138" y2="158" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u10vs-aFlow)" />
     <line x1="236" y1="158" x2="268" y2="158" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u10vs-aFlow)" />
+    <line x1="142" y1="158" x2="142" y2="200" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u10vs-aDimL)" marker-end="url(#u10vs-aDim)" />
+    <text x="148" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#b7600c">z<tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 1,5 m</text>
 
     <!-- Δz kota desno - od razine A do razine B -->
     <line x1="60" y1="200" x2="232" y2="200" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
@@ -404,8 +406,8 @@
     <!-- Sekcija 4: T4 (sifon, tlak u vrhu) -->
     <g transform="translate(600 50)">
       <text x="0" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0">T4</text>
-      <text x="0" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">Δ<tspan font-style="italic">z</tspan> = <tspan font-style="italic">K</tspan> <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>)</text>
-      <text x="0" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">K,aps</tspan> iz Bernoullija 0→K</text>
+      <text x="0" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">Δ<tspan font-style="italic">z</tspan> = <tspan font-style="italic">K</tspan><tspan baseline-shift="sub" font-size="0.7em">AE</tspan> <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>)</text>
+      <text x="0" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">C,aps</tspan> iz Bernoullija A→C</text>
       <text x="0" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">tlak u vrhu sifona &lt; <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
     </g>
 
@@ -413,8 +415,8 @@
     <g transform="translate(770 50)">
       <text x="0" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1565c0">T5</text>
       <text x="0" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">U,aps</tspan>/ρ<tspan font-style="italic">g</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan>/ρ<tspan font-style="italic">g</tspan> − <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan> − <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w,s</tspan> − <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>)</text>
-      <text x="0" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">uvjet: <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">U,aps</tspan> &gt; <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan> (bez kavitacije)</text>
-      <text x="0" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">apsolutni, ne manometarski tlak</text>
+      <text x="0" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">NPSH<tspan baseline-shift="sub" font-size="0.7em">a</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">U,aps</tspan>/ρ<tspan font-style="italic">g</tspan> + <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>) − <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan>/ρ<tspan font-style="italic">g</tspan></text>
+      <text x="0" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">konačna provjera traži NPSH<tspan baseline-shift="sub" font-size="0.7em">r</tspan> i marginu</text>
     </g>
 
     <!-- Sekcija 6: T6 (Hp + kavitacijska rezerva) -->
@@ -434,7 +436,7 @@
       <text x="22" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">tok fluida i tlačna visina</text>
 
       <rect x="200" y="0" width="14" height="14" rx="2" fill="#c0392b" />
-      <text x="222" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">karakteristična točka (K, U)</text>
+      <text x="222" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">karakteristična točka (C, U)</text>
 
       <rect x="430" y="0" width="14" height="14" rx="2" fill="#b7600c" />
       <text x="452" y="12" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">kota / dimenzija</text>

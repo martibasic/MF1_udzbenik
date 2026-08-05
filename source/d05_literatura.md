@@ -1,37 +1,34 @@
 ## Literatura i izvori
 
-Ovaj dodatak navodi izvore na kojima počiva gradivo udžbenika i preporučenu
-literaturu za dublje čitanje. Notacija, izvodi i redoslijed tema u glavnim
-poglavljima usklađeni su s uvriježenim sveučilišnim udžbenicima mehanike fluida;
-gdje se u tekstu spominju standardi ili dijagrami (Moodyjev dijagram, ITTC
-postupci, SOLAS zahtjevi stabilnosti), oni su navedeni u pripadnoj skupini.
+Lokalni citat uz tvrdnju određuje koji izvor podupire model, podatak ili područje valjanosti. Ovaj dodatak zato nije nepovezan popis naslova, nego karta za nastavak učenja.
 
-## Temeljni udžbenici mehanike fluida
+## Temelji i integralne bilance
 
-- White, F. M. *Fluid Mechanics*, 7. izdanje. McGraw-Hill, 2011.
-- Munson, B. R., Young, D. F., Okiishi, T. H., Huebsch, W. W. *Fundamentals of Fluid Mechanics*, 6. izdanje. John Wiley & Sons, 2009.
-- Çengel, Y. A., Cimbala, J. M. *Fluid Mechanics: Fundamentals and Applications*, 3. izdanje. McGraw-Hill, 2014.
-- Streeter, V. L., Wylie, E. B., Bedford, K. W. *Fluid Mechanics*, 9. izdanje. McGraw-Hill, 1998.
+Za opći prvi kolegij, hidrostatiku, kontrolne volumene, Bernoullijevu jednadžbu i cjevovode korisni su White [@white2011], Munson i suradnici [@munson2009] te Çengel i Cimbala [@cengel2014]. Streeter, Wylie i Bedford [@streeter] daju klasičan inženjerski prikaz, a Virag [@virag] dodatni oslonac na hrvatskom jeziku.
 
-## Literatura na hrvatskom jeziku
+## Kompresibilni, viskozni i turbulentni tok
 
-- Virag, Z. *Mehanika fluida — odabrana poglavlja*. Fakultet strojarstva i brodogradnje, Sveučilište u Zagrebu.
+Kompresibilni idealni tok, sapnice i udarni valovi u U09 slijede standardni prikaz Andersona [@anderson2021]. Granični sloj i odvajanje u U12 mogu se produbiti prema Schlichtingu i Gerstenu [@schlichting2017], a turbulencija prema Popeu [@pope2000].
 
-## Klasični radovi i dijagrami
+## Cjevovodi i otvoreni tokovi
 
-- Moody, L. F. „Friction factors for pipe flow", *Transactions of the ASME*, 66(8), 1944, str. 671–684. (Moodyjev dijagram, <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span>)
-- Colebrook, C. F. „Turbulent flow in pipes…", *Journal of the Institution of Civil Engineers*, 11(4), 1939, str. 133–156. (Colebrook-Whiteova jednadžba koeficijenta trenja)
+Moodyjev dijagram potječe iz rada [@moody1944], a implicitna veza za turbulentni koeficijent trenja iz rada [@colebrook1939]. Za otvorene tokove, specifičnu energiju, postupno promjenjiv tok i hidraulički skok referentni je izvor Chow [@chow1959]. Empirijske koeficijente uvijek treba uzeti iz izvora koji odgovara geometriji, hrapavosti i rasponu Reynoldsova broja konkretnog problema.
 
-## Norme i tehnički postupci
+## Brodogradnja, stabilitet i modelska ispitivanja
 
-- International Towing Tank Conference (ITTC). *Recommended Procedures and Guidelines.* (Postupci modelskog ispitivanja u vučnom bazenu i Froudeova sličnost, <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span>)
-- International Maritime Organization (IMO). *SOLAS — International Convention for the Safety of Life at Sea.* (Zahtjevi intaktne stabilnosti broda, <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Uzgon, plivanje i stabilnost</span></span>)
+Početna metacentrična analiza u U06 jest obrazovni model, a nije zamjena za obveznu provjeru intaktnog ili oštećenog stabiliteta. Za kriterije intaktnog stabiliteta mjerodavan je IMO-ov IS Code [@imo-is-code-2008], a za aktualni okvir oštećenog stabiliteta i SOLAS zahtjeve IMO-ova dokumentacija [@imo-damage-stability]. Postupke modelskih ispitivanja, analize nesigurnosti i ekstrapolacije treba vezati uz odgovarajući aktualni ITTC postupak [@ittc].
+
+## Numerička mehanika fluida
+
+U D04 pojmovi verifikacije i validacije slijede NASA-in vodič [@nasa-cfd-vv] i ASME V&V 20 [@asme-vv20-2009]. Profilni nastavni skup povezuje Ladsonov eksperiment [@ladson1988] s kuriranim NASA TMR slučajem [@nasa-tmr-naca0012]. Postotno slaganje bez procjene eksperimentalne, iteracijske, diskretizacijske i modelske nesigurnosti nije opći kriterij valjanosti.
 
 ::: {.mf1-mini-summary}
-<p class="mf1-box-label">Napomena o korištenju</p>
+<p class="mf1-box-label">Pravilo korištenja izvora</p>
 
-Za pripremu ispita dovoljna su glavna poglavlja i dodaci ovog udžbenika. Navedena
-literatura služi za proširenje pojedine teme, provjeru alternativnih zapisa i za
-prijelaz prema naprednijim kolegijima (računalna dinamika fluida, brodska
-hidromehanika, hidraulika).
+Udžbenik je dovoljan za praćenje kolegija, ali svojstva fluida, empirijski koeficijenti, normativni kriteriji i softverski postupci moraju se provjeriti u izdanju izvora primjerenom godini i namjeni projekta.
+:::
+
+## Bibliografski zapisi
+
+::: {#refs}
 :::

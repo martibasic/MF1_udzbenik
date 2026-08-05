@@ -1,16 +1,16 @@
-# Postavljanje JupyterLite-a kao rezervne inačice
+# Postavljanje JupyterLite-a kao primarnog pregledničkog okruženja
 
 JupyterLite omogućuje pokretanje Jupyter notebooka izravno u pregledniku,
 bez ikakve prijave i bez lokalne instalacije. Pokreće se kao statički
-sklop koji se može poslužiti uz Quarto mrežno izdanje udžbenika.
+sklop uz Quarto mrežno izdanje udžbenika. Colab je samo pričuvni put.
 
 ## Postupak postavljanja (jednokratno)
 
 ### 1. Instalacija JupyterLite alata
 
 ```
-pip install jupyterlite-core
-pip install jupyterlite-pyodide-kernel
+pip install jupyterlite-core==0.8.1
+pip install jupyterlite-pyodide-kernel==0.8.1
 ```
 
 `pyodide-kernel` je Python jezgra koja se izvršava u pregledniku
@@ -22,7 +22,7 @@ su potrebni za naše notebooke.
 U korijenu repozitorija:
 
 ```
-jupyter lite build --contents notebooks --output-dir _site/jlite
+jupyter lite build --config=jupyter_lite_config.py --contents notebooks --output-dir _site/jlite
 ```
 
 Ova naredba uzima sve notebooke iz `notebooks/` i pakira ih u statički
@@ -38,7 +38,7 @@ dva koraka u skripti `scripts/izgradi.ps1`:
 ```powershell
 # scripts/izgradi.ps1
 quarto render
-jupyter lite build --contents notebooks --output-dir _site/jlite
+jupyter lite build --config=jupyter_lite_config.py --contents notebooks --output-dir _site/jlite
 ```
 
 ### 4. Veze prema JupyterLite-u u poglavljima
@@ -48,7 +48,7 @@ JupyterLite umjesto Colab-a, korisno za studente koji ne žele
 prijavu na Google:
 
 ```html
-<a class="mf1-interaktivno-veza" href="/jlite/lab/index.html?path=u09_venturi.ipynb">
+<a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u09_venturi.ipynb">
   Otvori u pregledniku (bez prijave)
 </a>
 ```
@@ -58,13 +58,14 @@ prijavu na Google:
 - **Sporiji start** — prvi put treba 5–15 sekundi za učitavanje Python
   okruženja u preglednik.
 - **Manji izbor knjižnica** — sve knjižnice moraju biti dostupne kao
-  WebAssembly inačica. `numpy`, `matplotlib`, `ipywidgets`, `pandas`
-  su dostupni. Specijalizirane knjižnice mogu nedostajati.
+  WebAssembly inačica. Ovaj projekt namjerno ostaje na `numpy`, `matplotlib`
+  i `ipywidgets`; specijalizirane knjižnice nisu dio ugovora notebooka.
 - **Veće datoteke** — `_site/jlite/` može biti 50–100 MB. Ne stavlja
   se u git nego se generira pri izgradnji.
 
 ## Status integracije
 
-JupyterLite je trenutno **dokumentiran ali nije izgrađen**. Pilot inačica
-udžbenika koristi samo Colab vezu. Kada se odluči o aktivaciji
-JupyterLite-a, slijede se koraci iz ovog dokumenta.
+JupyterLite je dio proizvodnoga CI toka. Workflow prvo izvršava svih 17
+notebooka u čistim kernelima, zatim gradi statički sklop u `_site/jlite` i
+provjerava `lab/index.html` te inventar svih 17 bilježnica. Colab ostaje
+pričuvni put ako preglednik ili mrežna politika ne dopuštaju WebAssembly.

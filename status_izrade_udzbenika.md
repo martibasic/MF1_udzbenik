@@ -1,101 +1,127 @@
-# Status izrade MF1_udzbenika (srpanj 2026)
+# Status izrade udžbenika MF1
 
-## Svrha dokumenta
+**Presjek:** 1. kolovoza 2026.
 
-Ovo je aktualni statusni presjek kanonskog udzbenika u `MF1_udzbenik`. Dokument vise ne vodi otvoreni migracijski backlog, nego opisuje sto je stvarno zatvoreno, sto je sada u odrzavanju i koji su najblizi vrijedni potezi.
+**Cilj izdanja:** tehničko stanje **spremno je za `1.0-rc1`**; `v1.0` dolazi tek
+nakon dviju neovisnih stručnih recenzija i studentskog pilota.
 
-> **Faza 2 — generalna recenzija i plan nadogradnje (pokrenuto 2026-07-02).** Provedena je sveobuhvatna recenzija udzbenika (sadrzaj, didaktika, notacija, produkcija, figure). Plan izmjena u pet faza (A–E) vodi se izvan repozitorija; Faza A (brzi popravci konzistentnosti) je u tijeku.
->
-> **Zatvoreno u Fazi 2 / A**:
-> - Poglavlje `U14` (bezdimenzijski brojevi, dimenzijska analiza i slicnost) i dodatak `D04` (numericka mehanika fluida) sada su dio knjige; glavni niz je `U00`, `U01–U14`, dodaci `D01–D04`.
-> - **Matplotlib→SVG konverzija je dovrsena**: 0 preostalih python/matplotlib figure-blokova u `source/`, svih 139 SVG-ova referencirano (0 slijepih referenci, 0 orphana). Raniji backlog od 26–27 blokova vise ne postoji.
-> - Notacija ujednacena: `h_f`→`h_l` (U13), `p_man`→`p_M` (U03/D01/D02), turbostrojarska trojka `c/w/u` uskladena u D01/D03 (uklonjen nekoristeni `v_rel`).
-> - Uvodni vodic `U00` uskladen sa stvarnim tipovima primjera (Rijeseni/Kratki primjer, Cjeloviti zadatak, Zadaci za vjezbu) i brojem primjera (5–8 po poglavlju); uklonjeni nepostojeci tipovi `GP`/`PO`.
-> - `za_ispis.qmd` sada ukljucuje i `D04`; opce reference "pog. 1–13" prosirene na "pog. 1–14".
->
-> **Faza B (u tijeku)**: B1 — 78 brojcanih odgovora na vjezbe U01–U13 dodano (zatvoreno); B2 — utvrdjeno da sve vjezbe vec imaju T1 zadatke (nije potrebno); B3 — dodan T4 sintezni zadatak u U14 (Froudeova slicnost + provjera rezima). Otvoreno: B4 — notebook+QR za U14 (jedino poglavlje bez interaktivnog prikaza; treba `u14_vjezbe_skice.svg` prosiriti 7. mini-skicom).
->
-> **Faza D (zatvoreno)**: uklonjeno 245 commitanih `*.quarto_ipynb_*` build-artefakata (+ `.gitignore` popravak — stablo ostaje cisto nakon rendera); 26 radnih dokumenata premjesteno u `docs/radno/`; dodatak `D05 Literatura` + `references.bib`; impressum (autorica, verzija, licenca CC BY-NC-SA 4.0); `toc` za web poglavlja; CI korak `verify_all.py` (blokirajuci, 498/498); `tools/README.md`. Popravljen check `U01.most.p_p_MPa` (sada 498/498 umjesto 497/1).
->
-> **Faza C (zatvoreno)**: kinematika strujanja dodana kao uvod u U08 (polje brzine, strujnica/trajektorija, stacionarnost, 1D srednja brzina, materijalna derivacija) + WE primjer T2 + samoprovjera; nova skica `u08_fig_kinematika.svg`; U09 predznanje→U08; D02 pojmovnik prosiren; U14 izlazna napomena "Kamo dalje". verify_all 500/500.
->
-> **Faza E (zatvoreno)**: 14× `uXX_vjezbe_skice` dobili poglavlje-specificne informativne captione + `{#fig-uXX-vjezbe}` sidra; `u14_vjezbe_skice.svg` prosiren 7. mini-skicom (model preljeva).
-> **Faza B4 (zatvoreno)**: interaktivni notebook `u14_cd_re_kugla` (univerzalna krivulja Cd(Re)) + QR + `mf1-interaktivno` okvir u U14; postojeci notebooki resinkronizirani s generatorom. Sada svih 14 poglavlja ima interaktivni prikaz.
->
-> **Sve faze plana (A–E + B4) zatvorene.** verify_all 500/500; puni `quarto render` cist; git stablo cisto nakon rendera. Preostalo za buducnost: popraviti `svg_normalize.py` (dvostruko prefiksira ID-eve pri ponovnom pokretanju — nije idempotentan; nove SVG dotad rucno uskladiti sa standardom).
+Ovaj dokument opisuje stanje v2 revizije u aktualnoj radnoj grani. Kanonski
+izvori, HTML, nativni PDF i JupyterLite sekvencijski su izgrađeni i prošli
+tehnički QA. Time se ne tvrdi da je izdanju dodijeljena oznaka `v1.0`, da su
+ljudski kriteriji provedeni ili da je kandidat javno deployan.
 
-> **Faza 1 — QA i unaprjeđenje primjera, zadataka i skica — tekstualni i strukturni dio završen 2026-05-18**. Tracking u [`qa_log_faza1.md`](docs/radno/qa_log_faza1.md). Otvoreno: matplotlib→SVG konverzija (27 blokova kroz U07–U13) i finalni quarto render check.
->
-> **Rezultati Faze 1**:
-> - 13/13 poglavlja prošlo tekstualni QA prema protokolu (Zadano/Traženo/Skica/Pretpostavke/Rješenje s fizikalnim tumačenjima/Provjera).
-> - 427/428 SymPy provjera prošlo (1 zaokruženje, dokumentirano u qa_log).
-> - 93 SVG-a normalizirano i naslovi uklonjeni (caption u Markdownu pokriva tu ulogu).
-> - 1 stvarna matematička greška u izvoru otkrivena i popravljena (U10 rashladni cjevovod: λ·L/D = 1,20 umjesto 1,00).
-> - 1 orphan SVG spojen s primjerom (U07 Kalibracijski modul).
-> - U01 SVG sistemski popravci: oznake $A_e \to A_L$, $F_e \to F_L$, plave ulazne sile $\to$ crvene (per protokol).
->
-> **Faza 1.5 — Didaktičko obogaćivanje (završeno tekstualno 2026-05-18)**. 11 novih primjera/cjelovitih zadataka uvedeno kroz U01–U13 da bi popunilo didaktičke prilike koje su identificirane kroz analizu pokrivenosti teorija↔primjeri. Detalji u [`qa_log_faza1.md`](docs/radno/qa_log_faza1.md) i SVG specifikacije za Codex u [`todo_svg_za_codex.md`](docs/radno/todo_svg_za_codex.md).
->
-> **Rezultati Faze 1.5**:
-> - 11 novih primjera dodano kroz U01–U13 (5× T2 P, 4× T3/T4 CH, 2× T2 P proširenja postojećih scena).
-> - Glavni didaktički koncepti uvedeni: temperatura↔viskoznost (U02), neto tlak stijenke broda (U03), tri sloja fluida (U05), plinski jastuk + zakrivljena ploha (U06), stabilnost broda + SOLAS (U07), difuzor (U09), starenje cijevi (U10), vodeni udar (U11), optimalna brzina lopatice $u_{opt} = c_1/2$ (U12), radna točka crpka⇄cjevovod (U13), hidraulična kočnica vozila (U01).
-> - 70 novih SymPy checkova; ukupno sada 497/498 PASS (1 pre-existing rounding u U01.most.p_p_MPa).
-> - 11 novih SVG datoteka **za izradu** (Codex – specifikacije u `docs/radno/todo_svg_za_codex.md`).
-> - Ukupno SVG otvoreno za izradu: 27 (Faza 1 matplotlib konverzija) + 11 (Faza 1.5 novi primjeri) = **38 SVG datoteka**.
+## Legenda
 
-## Trenutno stanje u jednoj recenici
+- **Implementirano** — sadržaj ili provjera postoji i prolazi u radnoj grani.
+- **Tehnički RC spremno** — završni artefakt iz aktualnih izvora izgrađen je i
+  prošao pripadajući automatizirani i renderirani QA.
+- **Ljudski kriterij** — zahtijeva vanjske recenzente ili stvarne studente i ne
+  može se zatvoriti automatizacijom u repozitoriju.
 
-`MF1_udzbenik` je stabilna integrirana Quarto knjiga s poglavljima `U00`, `U01-U14` i dodacima `D01-D04`; prijenos zadataka je urednicki zatvoren, a glavni posao presao je u odrzavanje, finu kalibraciju i selektivno autorsko jacanje.
+## Sažetak po radnim tokovima
 
-## Sto je stvarno zatvoreno
+| Radni tok | Status | Dokaz i granica tvrdnje |
+|---|---|---|
+| Arhitektura U01–U15 | **Implementirano** | Kanonski slijed ima 15 poglavlja i šest dodataka. Stari javni URL-ovi imaju prijelazna preusmjerenja, a `source/` ostaje jedini kanonski izvor. |
+| Sadržaj i opterećenje | **Implementirano** | Inventar sadrži 87 riješenih primjera, 90 samostalnih zadataka i 145 sati rada uz udžbenik. Svako glavno poglavlje ima šest zadataka u raspodjeli `2×T1 + 2×T2 + T3 + T4`. |
+| Konciznost glavnog teksta | **Implementirano** | Usporedivi regex inventar leksičkih tokena smanjen je sa 124.957 u prethodnih 14 poglavlja na 108.711 u RC-u s 15 poglavlja (`−13,00 %`), pa je kriterij rasta od najviše 5 % ispunjen. |
+| Znanstvena korektura | **Implementirano u rukopisu** | Ispravljeni su poznati P0/P1 nalazi o predznacima, referentnom tlaku, nestacionarnosti, radu strojeva, kavitaciji, stabilitetu i granicama modela. Automatizirane fizikalne regresije prolaze 22/22; neovisna stručna potvrda ostaje zaseban ljudski kriterij. |
+| Tekst i izvodi | **Implementirano** | Uvedeni su standardni blokovi, jasnije pretpostavke, granični slučajevi i granice modela; napredni detalji odvojeni su u blokove `Dublje` ili dodatke. |
+| Zadaci i ključ | **Implementirano** | Svih 90 zadataka ima stabilni ID, razinu, zapis u zasebnom D06 ključu i `golden` ugovor u manifestu sheme v2. Manifest sadrži 393 parsirana skalarna ulaza i 312 ugovora rezultata; naputci i kontrolni rezultati odvojeni su od iskaza zadatka. |
+| Numerički QA | **Implementirano** | `verify_all.py` obuhvaća 19 modula i prolazi 1.001 provjeru: 924 usporedbe s unaprijed zadanim ciljem te 77 invarijantnih, dimenzijskih ili graničnih provjera. Evidentirano je 0 self-comparison usporedbi, 0 rupa i 0 neprovjerenih zadataka. |
+| Notebookovi | **Implementirano** | Svih 17 notebookova slijedi obrazac `predvidi → izračunaj → provjeri`, ima najmanje dvije izvršive tvrdnje i analizu pogreške, konvergencije, osjetljivosti ili nesigurnosti. Lokalno izvršavanje u čistim kernelima prolazi 17/17. |
+| CFD V&V paketi | **2 spremna + 1 referentni** | Poiseuille i Venturi/difuzor imaju tri mreže, reziduale/monitore, masenu bilancu i GCI; oba su jasno označena kao sintetički nastavna. NACA 0012 ima javna mjerenja i tri najfinije FUN3D mreže, ali izvorna arhiva nema reziduale, monitore, maseni debalans ni potpuni mjerni budžet nesigurnosti. |
+| Stabilna javna sučelja | **Implementirano** | Inventar sadrži 1.185 stabilnih ID-jeva i 789 prikazanih jednadžbi. Unutarnje veze, 11 prijelaznih preusmjerenja i zabrana kopiranja kanonskog `source/` u javni izlaz provjeravaju se automatizirano. |
+| Skice i izvorna pristupačnost | **Tehnički RC spremno** | 143/143 SVG datoteke prošle su izvorni audit; završni HTML sadrži 210 renderiranih slika, a PDF i A4 prikaz uključeni su u izlazni vizualni QA. |
+| Hrvatska lokalizacija | **Tehnički RC spremno** | Hrvatski UI, tipkovnički fokus, smanjeno gibanje, mobilno prelamanje i kontrast provjereni su u 72 prikaza na 320, 768 i 1.440 px te u zasebnom A4 prikazu. |
+| HTML izdanje | **Tehnički RC spremno** | Sekvencijski izgrađen artefakt prolazi audit: 24 stranice, 210 slika, 2.081 veza, 472 sklopiva bloka i 11 preusmjerenja. |
+| Nativni PDF | **Tehnički RC spremno** | Quarto/Typst PDF ima 299 A4 stranica i 7.045.244 B; audit ekstrahira 536.983 znaka. Autorski blokovi i primjeri nativno su stilizirani, prvi red odlomka nema uvlaku, a razmak između odlomaka iznosi `0.72em`. |
+| JupyterLite | **Tehnički RC spremno** | Završni paket s Pyodide kernelom i svih 17 notebookova izgrađen je; strukturni audit i preglednički smoke-test kernela prolaze. Colab ostaje pričuvni put. |
+| Citati i normativne tvrdnje | **Implementirano u rukopisu** | Lokalni citati povezuju promjenjive i normativne tvrdnje s primarnim izvorima, a konstrukcijska i sigurnosna značenja ograničena su na stvarno provedeni model. Vanjski recenzenti provjeravaju konačnu stručnu dostatnost. |
+| Errata i dnevnik izmjena | **Implementirano** | Postoje javni issue obrazac, evidencija po stabilnom ID-ju i `CHANGELOG.md`; tablica errate ostaje prazna dok nema potvrđene pogreške objavljenoga izdanja. |
 
-1. Kanonska struktura knjige postoji i upotrebljiva je za web i print tok.
-2. Glavna poglavlja `U01-U14` postoje kao stvarna, cjelovita poglavlja, a ne kao pilot-kosturi.
-3. Teorija, matematicki izvodi, rijeseni primjeri i zadaci nalaze se u istom toku citanja.
-4. Uvodi su prosireni stvarnim inzenjerskim kontekstom; pocetni application-okviri standardizirani su pod oznakom `Inzenjerski kontekst`.
-5. Provedeni su jezikoslovni, stilisticki i interpunkcijski prolazi kroz glavni niz `U01-U14`.
-6. Suvisna didakticka mini-potpoglavlja u prozi srezana su i pretvorena u kompaktniji tok prema primjerima.
-7. Zadatkovni sloj i skice uskladeni su s kucnim print-first standardom.
-8. Puni `quarto render` prolazi, a editor i problems checkovi su cisti.
-9. Kanonski SVG dizajnerski standard definiran je u `protokol_prerade_zadataka_i_skica.md`; svi novi i prerađeni figure-blokovi koriste statičke SVG datoteke u `assets/print/` umjesto matplotlib/Python koda.
-10. SVG konverzija je dovršena (provjereno 2026-07-02): u `source/` nema nijednog matplotlib/python figure-bloka, a svih 139 SVG datoteka u `assets/print/` je referencirano iz teksta (0 slijepih referenci, 0 orphana). Raniji backlog od 26 preostalih blokova više ne postoji.
-11. Strukturna SVG normalizacija (prefiks ID-eva, font, aria, root atributi) provedena je jednokratnom skriptom `tools/svg_normalize.py` nad svih 93 SVG-a u `assets/print/`.
+## Aktualna QA snimka
 
-## Status po cjelinama
+Provjere su pokrenute iz korijena repozitorija 1. kolovoza 2026. nad kanonskim
+izvorima i sekvencijski izgrađenim RC artefaktima.
 
-| Cjelina | Status | Napomena |
-| --- | --- | --- |
-| Arhitektura knjige | `zatvoreno` | `MF1_udzbenik` je jedini kanonski projekt |
-| `U00` i `U01-U14` | `zatvoreno` | glavni niz postoji i urednicki je konsolidiran |
-| `D01-D04` | `odrzavanje` | ostaju aktivni i trebaju pratiti notaciju i terminologiju knjige |
-| Prijenos zadataka | `zatvoreno` | donorski backlog vise nije otvoreni razvojni problem |
-| Jezik i urednistvo | `zatvoreno` | veliki sweepovi su odradeni; ostaje samo selektivno odrzavanje |
-| Vizualni standard skica | `odrzavanje` | baza je zakljucana, ali pojedine skice se mogu i dalje dizati |
-| SVG konverzija figura | `zatvoreno` | 0 preostalih matplotlib blokova; svih 139 SVG-ova referencirano (0 slijepih referenci, 0 orphana) |
-| Strukturna normalizacija SVG-a | `zatvoreno` | `tools/svg_normalize.py` proveden globalno; prefiksirani ID-evi, kanonski font, aria, root atributi |
-| Validacija builda | `cisto` | puni render prolazi i nema editor gresaka |
-| Legacy vjezbe | `zamrznuto` | ne diraju se do sljedece akademske godine |
+| Provjera | Rezultat | Tumačenje |
+|---|---|---|
+| `python tools/generate_verification_manifest.py` | **PASS**, shema v2, 90/90 `golden` zadataka | Manifest se reproducibilno izvodi iz kanonskih zadataka; sadrži 393 parsirana skalarna ulaza i 312 ugovora rezultata. |
+| `python tools/verify_all.py` | **PASS**, 19 modula, 1.001/1.001 | 924 usporedbe s hard-coded ciljem + 77 invarijantnih, dimenzijskih ili graničnih provjera; 0 self-comparison zapisa i 0 rupa. |
+| `python tools/verify_physics.py` | **PASS**, 22/22 | Kritični golden testovi pokrivaju predznake, bilance, granične slučajeve i energetski ledger; nisu zamjena za čitanje cijeloga rukopisa. |
+| `python tools/execute_notebooks.py` | **PASS**, 17/17 | Svaki notebook izvršen je od početka u zasebnom čistom kernelu bez spremljenih izlaza. |
+| `python tools/validate_cfd_vv.py` | **PASS**, 2 spremna + 1 referentni | Validator čuva eksplicitne arhivske praznine NACA skupa i ne proizvodi sintetičke dokaze za njih. |
+| `python tools/audit_publication.py` | **PASS** | Potvrđuje 15 poglavlja, 87 primjera, 90 zadataka, šest dodataka, 145 sati, 1.185 stabilnih ID-jeva, 789 jednadžbi i 17 JupyterLite ulaza. |
+| `python tools/audit_rendered_site.py _site` | **PASS** | HTML ima 24 stranice, 210 slika, 2.081 vezu, 472 sklopiva bloka i 11 preusmjerenja; kanonski Markdown nije javni resurs. |
+| `python tools/audit_pdf.py` | **PASS** | Nativni PDF ima 299 A4 stranica, 7.045.244 B i 536.983 tekstualno ekstrahirana znaka; metapodatci, kazalo, poglavlja i reprezentativni rasteri prolaze. |
+| `python tools/audit_jupyterlite.py _site/jlite` | **PASS**, 17 notebookova | Završni JupyterLite paket i Pyodide runtime strukturno su potpuni; preglednički kernel doseže stanje `Idle`. |
+| `npm run audit:viewports -- _site` | **PASS**, 72 prikaza + A4 | Provjerene su širine 320, 768 i 1.440 px, WCAG pravila, tipkovnica, overflow i zasebni A4 prikaz. |
 
-## Sto vise nije otvoreno pitanje
+### Struktura numeričkih provjera
 
-1. Ne otvara se nova masovna migracija iz starih izvora.
-2. Ne tretira se zaseban teorijski prirucnik kao obvezan paralelni javni proizvod.
-3. Ne lovi se vise mehanicka simetrija poglavlja samo radi forme.
-4. Ne dira se `vjezba_01.qmd` do `vjezba_13.qmd` u ovom ciklusu.
-5. Ne koristi se matplotlib/Python kod za generiranje figura u finalnoj knjizi; sve figure su staticke SVG datoteke.
-6. Ne reciklira se isti vizualni motiv (npr. dizalica s vozilom, most) unutar istog poglavlja za razlicite figure — svaka figura nosi vlastitu vizualnu scenu.
+| Kategorija | Broj | Status |
+|---|---:|---|
+| Usporedbe s unaprijed zadanim ciljem | 924 | prolazi |
+| Invarijantne, dimenzijske i granične provjere | 77 | prolazi |
+| Ukupno | 1.001 | prolazi |
+| Self-comparison usporedbe | 0 | nije dopušteno manifestom v2 |
+| Rupe ili zadatci bez provjere | 0 | nije dopušteno manifestom v2 |
 
-## Aktivni prioriteti odrzavanja
+Usporedba s ciljem provjerava izračun prema unaprijed deklariranoj vrijednosti i
+toleranciji. Invarijantna provjera ne ponavlja isti broj, nego provjerava
+dimenziju, bilancu, predznak, monotonost, granični slučaj ili red veličine.
+Manifest v2 čuva autoritativni tekst zadatka, strukturirane ulaze s jedinicama,
+pretpostavke, objavljene rezultate, tolerancije, neovisne provjere i
+pripadajuće verifier ID-jeve; svih 90 javnih zadataka ima `golden` ugovor.
 
-1. Drzati `D01-D04` uskladenima s glavnim poglavljima kad se promijeni notacija, termin ili tipicna greska.
-2. Fino kalibrirati tezinske oznake i raspored zadataka ondje gdje jos ima prostora za bolju gradaciju.
-3. Selektivno podizati standard skica i print/PDF citljivosti.
-4. Povremeno raditi puni render i lokalne chapter-render provjere nakon vecih urednickih promjena.
-5. Otvarati nove zadatke ili visi integracijski sloj samo kad postoji stvarna didakticka rupa.
-6. Završiti SVG konverziju preostalih matplotlib blokova po poglavljima (U01 - 1; U07 - 5; U08 - 3; U09 - 3; U10 - 4; U11 - 3; U12 - 4; U13 - 3). Napomena: `assets/print/u07_val3_dva_fluida_modul.svg` već postoji kao pripremljena zamjena za matplotlib blok `fig-u07-kalibracijski-modul`.
-7. Za svako poglavlje osigurati da uvodni figure-blok (`#fig-uvod-uXX`) prikazuje tri temeljne ideje poglavlja s različitim vizualnim scenama — ne smije ponavljati motiv iz riješenih primjera unutar istog poglavlja.
-8. Poštovati kanonsku paletu boja, standard kota i standard markera definiran u `protokol_prerade_zadataka_i_skica.md` pri svakom novom SVG-u.
+## Implementirani opseg v2
 
-## Operativni zakljucak
+1. Puna jezgra MF1 s 15 poglavlja, 87 primjera, 90 zadataka i šest dodataka.
+2. Tri uzdužna lajtmotiva i radni ritual
+   `izmjeri → idealiziraj → izračunaj → numerički provjeri → procijeni valjanost`.
+3. Kurikularna matrica s ukupno 145 sati rada uz udžbenik.
+4. Autorski ugovor za semantičke blokove, stabilne ID-jeve, manifest v2,
+   notebookove i SVG.
+5. Hrvatska Quarto lokalizacija te zajednički izvor za HTML i nativni Typst PDF.
+6. Sedamnaest izvršivih notebookova i JupyterLite/Colab poveznice.
+7. Tri CFD podatkovna paketa s provenijencom i strojnom validacijom strukture:
+   dva spremna nastavna slučaja i jedan ograničeni referentni paket.
+8. Reproducibilni numerički QA bez tautoloških usporedbi i deklariranih rupa.
+9. Javni tok za prijavu i praćenje errate.
+10. Sekvencijski izgrađeni i auditirani HTML, nativni PDF i JupyterLite te
+    završni viewport/WCAG pregled.
 
-Projekt je izasao iz faze dokazivanja da integrirani udzbenik postoji. Sada vrijedi jednostavnije pravilo: `MF1_udzbenik` je stabilna baza, a svaki sljedeci zahvat mora imati jasan razlog - bolju gradaciju, bolju skicu, bolji jezik, bolji appendix ili jaci inzenjerski smisao - umjesto da se otvara novi migracijski val.
+## Tehnički kriteriji za 1.0-rc1
+
+Svi tehnički kriteriji su **zatvoreni**: aktualni commit ima sekvencijski
+izgrađene HTML/PDF/JupyterLite artefakte, audit javnih sučelja i pregledničkog
+kernela te završni viewport/WCAG i A4 pregled. Stanje je zato tehnički spremno
+za `1.0-rc1`. Ovaj zapis ne stvara Git oznaku, ne pokreće javni deploy i ne
+pretvara kandidata u `v1.0`.
+
+## Neizvršeni ljudski kriteriji za v1.0
+
+Sljedeća tri kriterija **nisu provedena** i ne mogu se označiti dovršenima samo
+promjenom repozitorija:
+
+- neovisnu stručnu provjeru potpisuje najmanje jedan nastavnik mehanike fluida;
+- odvojenu primjensku provjeru potpisuje recenzent iz strojarstva ili
+  brodogradnje;
+- pilot s 8–12 stvarnih studenata provjerava izbor modela i pretpostavki prije
+  algebre, uz cilj najmanje 80 % točnih izbora.
+
+Nalazi se evidentiraju po stabilnim ID-jevima, ispravljaju i ponovno
+provjeravaju prije oznake `v1.0`.
+
+Postupci i obrasci nalaze se u
+[protokolu stručne recenzije](docs/protokol_strucne_recenzije.md) i
+[protokolu studentskog pilota](docs/protokol_studentskog_pilota.md).
+
+## Javni trag ispravaka
+
+Pogreške se prijavljuju kroz
+[GitHub obrazac](https://github.com/martibasic/MF1_udzbenik/issues/new?template=errata.yml).
+Potvrđeni zapisi ulaze u [javnu erratu](docs/errata.md), a promjene jednadžbi,
+brojčanih odgovora i područja valjanosti bilježe se u
+[dnevniku promjena](CHANGELOG.md).

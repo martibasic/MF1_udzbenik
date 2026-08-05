@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "case_id": "hydrofoil_experiment",
+  "status": "partial_reference_archive",
+  "spatial_discretization": {
+    "method": "three-grid GCI with nominal refinement ratio 2 and safety factor 1.25",
+    "cd": {
+      "convergence": "monotone",
+      "observed_order": 2.0396845215377852,
+      "gci_fine_percent": 0.01591038121065239
+    },
+    "cl": {
+      "convergence": "monotone over the finest three grids",
+      "observed_order": 2.1843808524460377,
+      "gci_fine_percent": 0.0007036687354868505,
+      "gci_reported": true
+    }
+  },
+  "experimental_uncertainty": {
+    "available_in_distributed_force_file": false,
+    "consequence": "No combined numerical-plus-experimental validation interval or pass/fail verdict is reported."
+  },
+  "not_included": [
+    "iterative error of archived runs",
+    "mass conservation record of archived runs",
+    "force-monitor statistical convergence",
+    "measurement uncertainty and tunnel corrections",
+    "0.10 degree mismatch between selected measurement and CFD incidence",
+    "turbulence-model-form uncertainty",
+    "transfer effects from aerodynamic profile to submerged hydrofoil"
+  ]
+}

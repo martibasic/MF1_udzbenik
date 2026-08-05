@@ -3,6 +3,7 @@ name: Publish Quarto site
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -11,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -23,6 +24,8 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "1.9.37"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -30,14 +33,83 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: Install Python dependencies
-        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: package-lock.json
 
-      - name: Verify numerics (SymPy/numeric checks)
+      - name: Install Python dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Install viewport QA dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Verify numerics and coverage manifest
         run: python tools/verify_all.py
 
+      - name: Verify physical invariants
+        run: python tools/verify_physics.py
+
+      - name: Audit verifier independence
+        run: python tools/qa_audit.py
+
+      - name: Audit canonical publication structure
+        run: python tools/audit_publication.py
+
+      - name: Audit native Typst authoring blocks
+        run: python tools/audit_typst.py
+
+      - name: Verify public references and alternative text
+        run: python scripts/normalize_public_text.py
+
+      - name: Verify generated QR links
+        run: python scripts/generate_qr_assets.py
+
+      - name: Verify generated exercise key
+        run: python scripts/generate_exercise_key.py
+
+      - name: Validate CFD V&V data packages
+        run: python tools/validate_cfd_vv.py
+
+      - name: Execute teaching notebooks
+        timeout-minutes: 15
+        env:
+          MPLBACKEND: Agg
+        run: python tools/execute_notebooks.py --timeout 120
+
       - name: Render site
+        timeout-minutes: 20
         run: quarto render
+
+      - name: Render native Typst book
+        timeout-minutes: 20
+        run: quarto render --profile pdf
+
+      - name: Audit native PDF
+        run: python tools/audit_pdf.py
+
+      - name: Publish native PDF
+        run: |
+          test -s _site/index.html
+          test -s _book/mehanika-fluida-1.pdf
+          mkdir -p _site/downloads
+          cp _book/mehanika-fluida-1.pdf _site/downloads/mehanika-fluida-1.pdf
+
+      - name: Build JupyterLite
+        timeout-minutes: 15
+        run: python -m jupyterlite_core.app build --config=jupyter_lite_config.py --contents notebooks --output-dir _site/jlite
+
+      - name: Verify publication artifacts
+        timeout-minutes: 20
+        run: |
+          test -s _site/index.html
+          test -s _site/downloads/mehanika-fluida-1.pdf
+          test -s _site/jlite/lab/index.html
+          python tools/audit_jupyterlite.py _site/jlite
+          python tools/audit_rendered_site.py _site
+          npm run audit:viewports -- _site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -45,6 +117,7 @@ jobs:
           path: _site
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:

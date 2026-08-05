@@ -1,10 +1,10 @@
-![Pregled poglavlja: Cjevovodi](../assets/print/u13_fig_uvod_pregled.svg){#fig-uvod-u13 fig-align="center"}
+![Pregled poglavlja: Cjevovodi](../assets/print/u13_fig_uvod_pregled.svg){#fig-uvod-u13 fig-align="center" fig-alt="Pregled poglavlja: Cjevovodi"}
 
 ## Cjevovod kao mreža dionica, čvorova i hidrauličkih otpora
 
 Jedan cjevovod ovdje zatvara gotovo cijeli kolegij.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> nije samo još jedno poglavlje o gubicima. U cjevovodima se na jednom mjestu spajaju kontinuitet, realni Bernoulli, izbor modela trenja i logika spajanja više grana. Zato cjevovodni zadatak vrlo brzo otkrije je li redoslijed modeliranja doista razumljen ili se samo prepoznaju pojedine formule.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span> nije samo još jedno poglavlje o gubicima. U cjevovodima se na jednom mjestu spajaju kontinuitet, realni Bernoulli, izbor modela trenja i logika spajanja više grana. Zato cjevovodni zadatak vrlo brzo otkrije je li redoslijed modeliranja doista razumljen ili se samo prepoznaju pojedine formule.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -17,8 +17,8 @@ Cjevovodi su stvarni završetak kolegija jer se u njima na jednom mjestu sastaju
 
 **Predznanje koje se pretpostavlja:**
 
-- realni Bernoulli s gubicima iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span>;
-- kontinuitet i pojam protoka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Kontrolni volumen i kontinuitet</span></span>;
+- realni Bernoulli s gubicima iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span>;
+- kontinuitet i pojam protoka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Kinematika, kontrolni volumen i kontinuitet</span></span>;
 - Moodyjev dijagram, Reynoldsov broj i koeficijent trenja $\lambda$;
 - osnove rješavanja nelinearnih i implicitnih jednadžbi (iterativno).
 
@@ -49,7 +49,7 @@ $$
 ::: {.callout-note collapse="true" icon="false"}
 ## Numerički trag
 
-U CFD-u Reynoldsov broj **upravlja cjelokupnim tijekom rada**: određuje koji se turbulentni model bira ($k$-$\varepsilon$ za umjereno turbulentno, $k$-$\omega$ SST za odvajanje, LES za visoki $Re$), koliko gusta mora biti mreža uz zid (kriterij $y^+$) i koliko se vremena računa simulacija. Za laminarno strujanje ($Re < 2300$) turbulentni model nije potreban — CFD solver izravno rješava Navier-Stokesove jednadžbe. Za turbulentno ($Re > 4000$) bez modela disipacije svaki pokušaj rezultira numeričkim šumom.
+U CFD-u Reynoldsov broj pomaže procijeniti važnost viskoznih učinaka i potrebnu razlučivost strujanja, ali **ne određuje sam** izbor modela ni mreže. Važni su i geometrija, odvajanje, nestacionarnost, tražena izlazna veličina i zidna obrada. Za laminarni model turbulencijsko zatvaranje nije potrebno. Turbulentno strujanje može se modelirati RANS-om, djelomično razriješiti LES-om ili, pri dostupnoj razlučivosti, izravnije razriješiti; izostavljanje RANS modela samo po sebi ne znači „numerički šum”, nego mijenja koje se skale moraju mrežom i vremenom razriješiti.
 :::
 
 Taj broj nije samo klasifikacijska oznaka: on pokazuje dominira li u cijevi uređeno viskozno strujanje ili razvijena turbulencija. U laminarnom području otpor proizlazi izravno iz viskoznoga mehanizma, pa vrijedi
@@ -58,7 +58,7 @@ $$
 \lambda = \frac{64}{Re},
 $$
 
-dok u turbulentnom području $\lambda$ više ne ovisi samo o $Re$, nego i o relativnoj hrapavosti $\varepsilon/D$. Kvantitativni izraz daje Colebrook-Whiteova jednadžba, koja je standardni model na kojemu je grafički zasnovan Moodyjev dijagram. Zašto $\lambda$ ovisi baš o $Re$ i $\varepsilon/D$ dokazuje se Buckinghamovim $\Pi$ teoremom u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Bezdimenzijski brojevi, dimenzijska analiza i sličnost</span></span>.
+dok u turbulentnom području $\lambda$ više ne ovisi samo o $Re$, nego i o relativnoj hrapavosti $\varepsilon/D$. Kvantitativni izraz daje Colebrook-Whiteova jednadžba, koja je standardni model na kojemu je grafički zasnovan Moodyjev dijagram. Zašto $\lambda$ ovisi baš o $Re$ i $\varepsilon/D$ dokazuje se Buckinghamovim $\Pi$ teoremom u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Dimenzijska analiza i sličnost</span></span>.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Colebrook-Whiteova jednadžba i Moodyjev dijagram</p>
@@ -71,12 +71,12 @@ $$
 
 To je **implicitna** jednadžba — $\lambda$ se javlja na obje strane — pa se rješava iterativno. Ona objedinjuje dva granična režima:
 
-- **Hidraulički glatka cijev** ($\varepsilon/D \to 0$, $Re$ umjereno): doprinos hrapavosti je zanemariv, pa se Colebrook-White reducira na implicitni Prandtlov zakon $1/\sqrt{\lambda} = -2\log_{10}(2{,}51/(Re\sqrt{\lambda}))$. Za $Re < 10^5$ obično se umjesto njega koristi eksplicitna **Blaziusova aproksimacija** $\lambda \approx 0{,}316\, Re^{-1/4}$.
+- **Hidraulički glatka cijev** ($\varepsilon/D \to 0$): doprinos hrapavosti je zanemariv, pa se Colebrook-White reducira na implicitni Prandtlov zakon $1/\sqrt{\lambda} = -2\log_{10}(2{,}51/(Re\sqrt{\lambda}))$. U približnom području $4\cdot10^3\lesssim Re\lesssim10^5$ često se koristi **Blasiusova aproksimacija** $\lambda \approx 0{,}316\,Re^{-1/4}$.
 - **Potpuno turbulentno područje** (vrlo veliki $Re$, hrapavost dominira): drugi član u zagradi nestaje, pa $\lambda$ više **ne ovisi o $Re$** nego samo o relativnoj hrapavosti. Granična vrijednost je $1/\sqrt{\lambda} = -2\log_{10}(\varepsilon/(3{,}7 D))$.
 
 **Moodyjev dijagram** je grafička reprezentacija upravo Colebrook-Whiteove jednadžbe: krivulje $\lambda(Re)$ parametrizirane su s $\varepsilon/D$, a kako $Re$ raste, svaka krivulja se približava svojoj horizontalnoj asimptoti potpuno turbulentnog područja.
 
-Za inženjersku procjenu bez iteracije često se koristi **Swamee-Jainova eksplicitna aproksimacija** s greškom manjom od $1\%$ u širokom rasponu:
+Za inženjersku procjenu bez iteracije često se koristi **Swamee–Jainova eksplicitna aproksimacija**. Njezinu točnost treba prosuditi u deklariranom području primjene i, kada je osjetljivost rezultata važna, provjeriti prema Colebrook–Whiteovoj jednadžbi:
 
 $$
 \lambda \approx \frac{0{,}25}{\left[\log_{10}\!\left(\dfrac{\varepsilon/D}{3{,}7} + \dfrac{5{,}74}{Re^{0{,}9}}\right)\right]^2}.
@@ -97,7 +97,7 @@ Ako $Re < 2300$ → laminarno; ako $Re > 4000$ → turbulentno.
 **3. Koeficijent trenja:**
 - Laminarno: $\lambda = 64/Re$ (egzaktno, bez dijagrama).
 - Turbulentno (razvijeno, hrapave cijevi): Colebrook-Whiteova jednadžba ili Moodijev dijagram s $\varepsilon/D$ i $Re$.
-- Turbulentno hidraulički glatke: Blaziusova aproksimacija $\lambda \approx 0{,}316\, Re^{-1/4}$ za $Re < 10^5$.
+- Turbulentno hidraulički glatke: Blasiusova aproksimacija $\lambda \approx 0{,}316\,Re^{-1/4}$ približno za $4\cdot10^3\lesssim Re\lesssim10^5$.
 
 **4. Linijski gubitak:**
 $$h_l = \lambda \frac{L}{D}\frac{v^2}{2g}.$$
@@ -117,7 +117,7 @@ $$
 H_A + h_p - h_t = H_B + h_w,
 $$
 
-pri čemu je ukupna specifična mehanička energija fluida
+pri čemu je ukupna **mehanička visina**, odnosno mehanička energija po jedinici težine fluida,
 
 $$
 H = \frac{p_M}{\rho g} + z + \alpha\frac{v^2}{2g},
@@ -129,18 +129,26 @@ $$
 h_w = \lambda \frac{L}{D}\frac{v^2}{2g} + \sum \xi \frac{v^2}{2g}.
 $$
 
-::: {.callout-note}
-## Fizikalno značenje
-Darcy-Weisbachov linijski gubitak $\lambda (L/D)(v^2/2g)$ govori da je energijski trošak trenja proporcionalan duljini, obrnutno proporcionalan promjeru i kvadratno ovisi o brzini. Udvostručenjem promjera uz isti protok brzina se smanjuje četiri puta, a gubitak šesnaest puta — to je razlog zašto se za duljine transportnih vodova biraju što veći promjeri. Lokalni gubitak $\xi v^2/2g$ opisuje disipaciju u elementima poput ventila, koljena i T-račvi: $\xi$ sažima svu geometrijsku složenost u jednu bezdimenzijsku konstantu, a korisnik treba samo brzinu u referentnom presjeku.
+::: {.mf1-fizikalno-znacenje}
+<p class="mf1-box-label">Fizikalno značenje</p>
+Darcy–Weisbachov linijski gubitak $\lambda(L/D)(v^2/2g)$ pri zadanom $\lambda$ proporcionalan je duljini i približno $D^{-5}$ pri zadanom protoku: $v\propto D^{-2}$ daje faktor $D^{-4}$, a $L/D$ još jedan faktor $D^{-1}$. Zato udvostručenje promjera uz isti $Q$, $L$ i **isti $\lambda$** smanjuje linijski gubitak $2^5=32$ puta. Lokalni gubitak pri istom $\xi$ smanjuje se 16 puta jer nema faktor $L/D$. U stvarnom proračunu treba ponovno odrediti $Re$, relativnu hrapavost i $\lambda$, pa ukupni omjer ne mora biti točno ni 32 ni 16.
 :::
 
 ::: {.callout-note collapse="true" icon="false"}
 ## Numerički trag
 
-Darcy-Weisbachov pad tlaka u ravnoj cijevi je **klasičan benchmark** za validaciju CFD-a u unutarnjem strujanju. Inženjer pokrene simulaciju duge cijevi, izmjeri pad tlaka po duljini, podijeli s $(L/D)(v^2/2g)\rho$ i dobije izračunati $\lambda$. Ako se to slaže s Moodyjevim dijagramom (za odgovarajući $Re$ i $\varepsilon/D$), simulacija dobro reproducira turbulentni granični sloj. **Wall functions** (`nutkWallFunction`, `kqRWallFunction` u OpenFOAM-u) su upravo onaj sloj koji povezuje grube zidne ćelije s analitičkim turbulentnim profilom — to su numerički ekvivalent Moodyjevog dijagrama.
+Pad tlaka u potpuno razvijenoj ravnoj cijevi koristan je **referentni slučaj** za unutarnje strujanje. Iz simuliranog gradijenta tlaka određuje se ekvivalentni $\lambda$ i uspoređuje s mjerenjem ili prihvaćenom korelacijom pri istim $Re$, $\varepsilon/D$ i uvjetima razvoja. Zidne funkcije nisu numerički ekvivalent Moodyjeva dijagrama: one zatvaraju područje uz zid u turbulentnom modelu, dok je Moodyjev dijagram neovisna 1D korelacija za ukupni otpor cijevi. Slaganje s mjerenjem pridonosi validaciji fizikalnog modela, dok usporedba mreža i bilanci pripada verifikaciji numeričkog rješenja.
 :::
 
-U tim je zapisima $p_M/(\rho g)$ tlačna visina, $z$ geodetska visina, $\alpha v^2/(2g)$ koregirana brzinska visina, $h_p$ energija koju u sustav unosi crpka, $h_t$ energija koju oduzima turbina, a $h_w$ nepovratno izgubljena mehanička energija zbog trenja, vrtloženja i lokalnih poremećaja strujanja. Tako se prvi put potpuno jasno vidi da "gubitci" nisu sporedna korekcija nego glavni jezik sustava: svaki član govori gdje energija još postoji, a gdje je već izgubljena.
+U tim je zapisima $p_M/(\rho g)$ tlačna visina, $z$ geodetska visina, $\alpha v^2/(2g)$ korigirana brzinska visina, $h_p$ visina koju crpka dodaje, $h_t$ visina koju turbina oduzima, a $h_w$ gubitak mehaničke visine. Svi članovi imaju jedinicu metra; tek množenjem s $g$ dobiva se energija po jedinici mase.
+
+Hidraulička snaga koju crpka predaje fluidu iznosi
+
+$$
+P_h=\rho gQh_p,
+$$
+
+a potrebna ulazna snaga pogona uz ukupnu učinkovitost $\eta$ jest $P_{ul}=P_h/\eta$. Hidraulička i električna snaga zato se ne smiju izravno oduzimati: razlika pripada gubitcima pretvorbe u crpki, motoru i pogonu.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Hidraulički otpor i karakteristika sustava</p>
@@ -175,6 +183,8 @@ $$
 \boxed{h_w = R\,Q^2}.
 $$
 
+Ovaj je zapis egzaktan samo ako je $R$ u promatranom rasponu protoka konstantan, odnosno ako se $\lambda$ i lokalni koeficijenti mogu smatrati konstantnima. Općenito je $\lambda=\lambda(Re,\varepsilon/D)$, pa je $R=R(Q)$ i jednadžba se rješava iterativno. U laminarnom području $\lambda=64/Re\propto1/Q$, zbog čega linijski dio gubitka raste linearno s $Q$, a ne kvadratno.
+
 Za dionicu bez lokalnih gubitaka (samo trenje cijevi) izraz se reducira na klasični
 
 $$
@@ -193,15 +203,15 @@ $$
 \boxed{H_s(Q) = \Delta z + R\,Q^2}.
 $$
 
-Ovo je parabola u koordinatama $(Q, H)$ s tjemenom u točki $(0, \Delta z)$: pri nultom protoku crpka mora svladati samo statičku razliku razina, a pri svakom radnom protoku k tome se pribrajaju gubici. Radna točka sustava nalazi se u presjeku $H_s(Q)$ s karakteristikom crpke $H_p(Q)$ — to je jedinstvena točka u kojoj crpka isporučuje točno onaj napor koji sustav traži za pripadni protok.
+Uz konstantan $R$ to je parabola u koordinatama $(Q,H)$ s tjemenom u točki $(0,\Delta z)$. Kada se $\lambda$ znatno mijenja s protokom, karakteristika nije točna parabola i treba je izračunati točku po točku. Radna točka sustava nalazi se u presjeku $H_s(Q)$ s karakteristikom crpke $H_p(Q)$.
 
-**Paralelno spojeni hidraulički otpori** ne zbrajaju se kao u električnoj mreži zbog kvadratne ovisnosti $h_w(Q)$. Za dvije paralelne grane vrijedi isti gubitak, pa iz $h_w = R_1 Q_1^2 = R_2 Q_2^2$ slijedi $Q_i = \sqrt{h_w/R_i}$. Bilanca protoka $Q_{tot} = Q_1 + Q_2$ daje ukupni otpor preko relacije
+**Paralelno spojeni hidraulički otpori** s konstantnim $R_i$ ne zbrajaju se kao električni otpori zbog kvadratne ovisnosti $h_w(Q)$. Za dvije paralelne grane vrijedi isti gubitak, pa iz $h_w = R_1 Q_1^2 = R_2 Q_2^2$ slijedi $Q_i = \sqrt{h_w/R_i}$. Bilanca protoka $Q_{tot} = Q_1 + Q_2$ tada daje ekvivalentni otpor
 
 $$
 \frac{1}{\sqrt{R_{eq}}} = \frac{1}{\sqrt{R_1}} + \frac{1}{\sqrt{R_2}}.
 $$
 
-Za **serijski spoj** vrijedi $h_{w,tot} = h_{w,1} + h_{w,2}$ uz isti $Q$, pa otpori se zbrajaju izravno: $R_{eq} = R_1 + R_2$.
+Za **serijski spoj** uz konstantne $R_i$ vrijedi $h_{w,tot}=h_{w,1}+h_{w,2}$ pri istom $Q$, pa je $R_{eq}=R_1+R_2$. Ako $\lambda$ ovisi o protoku, temeljna pravila — isti $Q$ u seriji i isti pad energije u paraleli — ostaju valjana, ali se jednostavne formule za $R_{eq}$ zamjenjuju iterativnim rješenjem.
 :::
 
 Kad se cjevovod grana, energijska jednadžba više nije dovoljna sama. Tada se moraju zatvoriti i topološka pravila mreže. U čvoru vrijedi bilanca protoka
@@ -220,8 +230,8 @@ Razlog nije proizvoljno pravilo nego činjenica da obje grane polaze iz istoga u
 
 Zato se u paraleli ne izjednačava protok nego se protok sam raspodjeljuje tako da svaka grana, sa svojom vlastitom geometrijom i otporom, "sjedne" na isti zajednički pad energije. Upravo je to razlog zašto šira ili hidraulički povoljnija grana spontano preuzima veći dio ukupnog protoka: ne zato što joj je propisan veći protok, nego zato što na istom dopuštenom padu energije može propustiti više tekućine.
 
-::: {.callout-note}
-## Fizikalno značenje
+::: {.mf1-fizikalno-znacenje}
+<p class="mf1-box-label">Fizikalno značenje</p>
 U paralelnoj mreži postoji jedan "budžet" energije između dvaju čvorova: sva grana mora trošiti taj isti iznos $h_w$. Grana s manjim otporom (veći promjer, manja hrapavost, manji lokalni gubici) može pri tom padu energije propustiti više tekućine. Zato je dodavanje nove grane paralelno uvijek smanjenje ukupnog otpora mreže — poput otpora u paralelnoj el. mreži. U serijskom spoju vrijedi suprotno: svaka nova dionica dodaje otpor, a protok ostaje isti kroz sve. Tu analogiju s el. kolom vrijedi imati u glavi pri svakom proračunu mreže.
 :::
 
@@ -231,7 +241,8 @@ U paralelnoj mreži postoji jedan "budžet" energije između dvaju čvorova: sva
 Interaktivni prikaz omogućuje mijenjanje duljina i promjera dvije paralelne grane te ukupnog protoka uz neposredno praćenje raspodjele protoka po granama i zajedničkog pada energije. Vizualno se odmah razabire kako geometrija određuje hidraulički udjel svake grane.
 
 <div class="mf1-interaktivno-akcija">
-<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u13_paralelne_grane.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u13_paralelne_grane.ipynb">Pokreni u pregledniku</a>
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u13_paralelne_grane.ipynb" target="_blank" rel="noopener">Pričuvno: otvori u Colabu</a>
 <img class="mf1-interaktivno-qr" src="../assets/qr/u13_paralelne_grane.svg" alt="QR kod za interaktivni prikaz paralelnih grana cjevovoda"/>
 </div>
 
@@ -242,7 +253,7 @@ Interaktivni prikaz omogućuje mijenjanje duljina i promjera dvije paralelne gra
 
 To je glavni fizikalni smisao mreže: u seriji svi dijelovi nose isti protok, a u paraleli sve grane "plaćaju" isti pad ukupne energije između zajedničkih čvorova. Zbog toga svaka promjena promjera, hrapavosti, otvora ventila ili nove grane odmah mijenja radnu točku cijeloga sustava.
 
-U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Realni Bernoulli i gubici</span></span> već je bilo jasno da realni fluid troši energiju. U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> ta se slika širi na cijeli sustav dionica i čvorova, pa redoslijed modeliranja mora ostati stabilan: najprije mreža i dionice, zatim brzina i Reynoldsov broj, pa tek onda $\lambda$ i ukupni gubitci.
+U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span> već je bilo jasno da realni fluid troši energiju. U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span> ta se slika širi na cijeli sustav dionica i čvorova, pa redoslijed modeliranja mora ostati stabilan: najprije mreža i dionice, zatim brzina i Reynoldsov broj, pa tek onda $\lambda$ i ukupni gubitci.
 
 Zato u serijskom spoju isti protok prolazi kroz sve dionice, a u paralelnom je između istih čvorova jednak pad ukupne energije.
 
@@ -252,7 +263,7 @@ Zato se većina osnovnih cjevovodnih zadataka može svesti na tri tipa: za zadan
 
 ## Riješeni primjeri
 
-::: {.mf1-we}
+::: {#ex-u13-od-reynoldsovog-broja-do-ukupnog-gubitka-u .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Od Reynoldsovog broja do ukupnog gubitka u jednoj dionici&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U jednoj dionici industrijskog cjevovoda s poznatim protokom treba sustavno odrediti gubitak energije od Reynoldsovog broja, preko izbora Darcyjeva koeficijenta s Moodyjeva dijagrama, do zbrajanja linijskih i lokalnih gubitaka. Time se ilustrira redoslijed proračuna koji čini osnovu svih cjevovodnih analiza.
@@ -273,7 +284,7 @@ Zato se većina osnovnih cjevovodnih zadataka može svesti na tri tipa: za zadan
 2. Reynoldsov broj i režim strujanja.
 3. ukupni gubitak energije $h_w$.
 
-![Val 1 - cjevovod, Reynolds i gubici](../assets/print/u13_val1_reynolds_i_gubici.svg)
+![cjevovod, Reynolds i gubici](../assets/print/u13_val1_reynolds_i_gubici.svg){#fig-u13-cjevovod-reynolds-i-gubici fig-alt="cjevovod, Reynolds i gubici"}
 
 **Pretpostavke i model**
 
@@ -332,12 +343,12 @@ $$
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerička perspektiva</p>
 
-Ista cijev u CFD-u: cilindrična mreža duljine $42\ \text{m}$, na ulazu zadan protok $0{,}018\ \text{m}^3/\text{s}$, na izlazu fiksni tlak, $k$-$\omega$ SST turbulentni model, mreža uz zid prilagođena tako da je $y^+ \approx 30$ (područje *wall functions*). Solver `simpleFoam` konvergira u oko $2000$ iteracija. Iz polja tlaka iznad i ispod presjeka izravno se čita $\Delta p$ duž cijevi — podijeljen s $(L/D)(v^2/2g)\rho$ daje numerički izračunatu vrijednost $\lambda$, koja bi se za pravilno postavljenu simulaciju trebala slagati s Moodyjevom procjenom $\lambda \approx 0{,}027$ u granicama $2{-}5\%$. CFD k tome daje i lokalne brzine — vide se profili, sekundarno strujanje i mjesta gdje je granični sloj odvojen.
+Ista se cijev u CFD-u može prikazati cilindričnom mrežom duljine $42\ \text{m}$, uz zadani protok $0{,}018\ \text{m}^3/\text{s}$ na ulazu i tlak na izlazu. Za odabrani turbulentni model i zidni postupak mreža uz zid mora zadovoljiti pripadni zahtjev za $y^+$. Iz pada tlaka na potpuno razvijenom dijelu računa se ekvivalentni $\lambda=2\Delta pD/(\rho L v^2)$ i uspoređuje s Moodyjevom procjenom pri istim $Re$ i $\varepsilon/D$. Prihvatljivo odstupanje određuje tražena nesigurnost, a ne unaprijed zadani postotak; prije usporedbe provjeravaju se iteracijska i mrežna konvergencija te duljina ulaznog razvoja.
 :::
 
 :::
 
-::: {.mf1-we}
+::: {#ex-u13-raspodjela-ukupnog-protoka-u-dvjema-paralelnim-granama .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Raspodjela ukupnog protoka u dvjema paralelnim granama&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U razvodnom čvoru cjevovoda ukupni protok dijeli se između dviju paralelnih grana različitih promjera, pri čemu je gubitak energije između istih čvorova jednak. Iz tog uvjeta i kontinuiteta određuje se kako se ukupni protok raspoređuje, što je temeljni alat za projektiranje vodovodnih i industrijskih razvodnih mreža.
@@ -356,7 +367,7 @@ Ista cijev u CFD-u: cilindrična mreža duljine $42\ \text{m}$, na ulazu zadan p
 1. brzine $v_1$ i $v_2$.
 2. protoke $Q_1$ i $Q_2$.
 
-![Val 2 - paralelne grane](../assets/print/u13_val2_paralelne_grane.svg)
+![paralelne grane](../assets/print/u13_val2_paralelne_grane.svg){#fig-u13-paralelne-grane fig-alt="paralelne grane"}
 
 **Pretpostavke i model**
 
@@ -399,7 +410,7 @@ $$
 3. Ako je izračun dao $Q_1 + Q_2 \neq Q_{tot}$, kontinuitet je negdje izgubljen.
 :::
 
-::: {.mf1-we}
+::: {#ex-u13-nezatvoreni-servisni-ispust-na-rashladnom-cjevovodu-t2 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Nezatvoreni servisni ispust na rashladnom cjevovodu&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Na rashladnom cjevovodu između dvaju spremnika nehotice je ostao otvoren servisni ispust, pa dio vode istječe u međuprostoru i smanjuje protok prema krajnjem spremniku. Iz mjerenja u urednom režimu i poznatih veličina u oštećenom režimu rekonstruira se gubitak protoka i veličina ispusnog otvora, što omogućuje brzu dijagnostiku kvara.
@@ -424,7 +435,7 @@ $$
 3. protok gubitka kroz otvoreni servisni ispust.
 4. ekvivalentnu površinu $A_p$ i promjer $d_p$ servisnog ispušta.
 
-![Val 3 - nezatvoreni servisni ispust na rashladnom cjevovodu](../assets/print/u13_val3_servisni_ispust.svg)
+![nezatvoreni servisni ispust na rashladnom cjevovodu](../assets/print/u13_val3_servisni_ispust.svg){#fig-u13-nezatvoreni-servisni-ispust-na-rashladnom-cjevovodu fig-alt="nezatvoreni servisni ispust na rashladnom cjevovodu"}
 
 **Pretpostavke i model**
 
@@ -499,7 +510,7 @@ $$
 3. Dobiveni promjer reda nekoliko centimetara odgovara otvorenom servisnom priključku, a ne sitnoj mikropukotini.
 :::
 
-::: {.mf1-ch}
+::: {#ex-u13-serijsko-paralelna-mreza-izme-u-dvaju-spremnika .mf1-ch}
 <p class="mf1-box-label">Cjeloviti zadatak — Serijsko-paralelna mreža između dvaju spremnika&nbsp;<span class="mf1-level">T4</span></p>
 
 **Kontekst:** Između dvaju otvorenih spremnika voda prolazi kroz serijsko-paralelnu mrežu cjevovoda u kojoj dovodni i odvodni vod opslužuju dvije paralelne grane različitih promjera i duljina. Iz jednakosti gubitaka u paralelnim granama i ukupne energijske bilance određuju se protoci, gubici po dionicama i ukupna disipirana hidraulička snaga.
@@ -521,11 +532,11 @@ Za promatrani režim uzmi da su Darcyjevi koeficijenti trenja već određeni s M
 3. gubitke energije u dovodnom vodu $h_0$, u paralelnim granama $h_p$ i u odvodnom vodu $h_3$.
 4. snagu koju sustav disipira na hidrauličkim gubicima.
 
-![CH 1 - serijsko-paralelna mreža](../assets/print/u13_ch1_serijsko_paralelna_mreza.svg)
+![serijsko-paralelna mreža](../assets/print/u13_ch1_serijsko_paralelna_mreza.svg){#fig-u13-serijsko-paralelna-mreza fig-alt="serijsko-paralelna mreža"}
 
 **Pretpostavke i model**
 
-Ovaj `CH` ne vraća se na izbor `\lambda`, jer je taj korak već zatvoren na razini pojedinih dionica. Ovdje je fokus na logici mreže: u paraleli je isti gubitak energije između istih čvorova, a u seriji se gubici zbrajaju pri istom ukupnom protoku. Zato se najprije svaka dionica prevede u svoj koeficijent otpora, zatim se zatvara raspodjela po granama, a tek onda ukupna energijska bilanca sustava.
+Ovaj cjeloviti zadatak ne vraća se na izbor `\lambda`, jer je taj korak već zatvoren na razini pojedinih dionica. Ovdje je fokus na logici mreže: u paraleli je isti gubitak energije između istih čvorova, a u seriji se gubici zbrajaju pri istom ukupnom protoku. Zato se najprije svaka dionica prevede u svoj koeficijent otpora, zatim se zatvara raspodjela po granama, a tek onda ukupna energijska bilanca sustava.
 
 **Rješenje**
 
@@ -663,14 +674,14 @@ $$
 
 **Provjera i komentar**
 
-Ovaj primjer zatvara mrežni sloj <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> u jednom sustavu: iz uvjeta jednakog gubitka energije slijedi $v_2 \approx 0{,}917 v_1$, ukupni protok mreže je oko $22{,}9\ \text{L/s}$, a raspodjela po granama iznosi oko $15{,}1\ \text{L/s}$ i $7{,}8\ \text{L/s}$. Gubici se tada uredno slažu kao serijski zbroj $h_0 + h_p + h_3 \approx 12\ \text{m}$, pa cijeli sustav disipira oko $2{,}70\ \text{kW}$ hidrauličke snage.
+Ovaj primjer zatvara mrežni sloj <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span> u jednom sustavu: iz uvjeta jednakog gubitka energije slijedi $v_2 \approx 0{,}917 v_1$, ukupni protok mreže je oko $22{,}9\ \text{L/s}$, a raspodjela po granama iznosi oko $15{,}1\ \text{L/s}$ i $7{,}8\ \text{L/s}$. Gubici se tada uredno slažu kao serijski zbroj $h_0 + h_p + h_3 \approx 12\ \text{m}$, pa cijeli sustav disipira oko $2{,}70\ \text{kW}$ hidrauličke snage.
 
 1. Šira grana mora nositi veći dio ukupnog protoka, pa ovdje mora biti $Q_1 > Q_2$.
 2. U paralelnim granama ne izjednačava se protok nego gubitak energije između istih čvorova.
 3. Ukupni pad između spremnika mora biti jednak zbroju gubitaka u dovodu, paralelnom dijelu i odvodu; ako taj zbroj ne vrati $H$, mreža nije zatvorena.
 :::
 
-::: {.mf1-ch}
+::: {#ex-u13-radna-tocka-crpka-cjevovod-presjeciste-karakteristika-i .mf1-ch}
 <p class="mf1-box-label">Cjeloviti zadatak — Radna točka crpka⇄cjevovod: presjecište karakteristika i utjecaj regulacijskog ventila&nbsp;<span class="mf1-level">T4</span></p>
 
 **Kontekst:** Stvarni radni režim crpke u sustavu određen je presjecištem njezine karakteristike i karakteristike cjevovoda. Ovim zadatkom najprije se određuje izvorna radna točka, a zatim se prati pomak protoka i napora kada se djelomično zatvori regulacijski ventil, čime se kvantificira energetska cijena prigušivanja umjesto frekvencijske regulacije.
@@ -703,7 +714,7 @@ Karakteristične točke: $H_p(0) = 25\ \text{m}$, $H_p(20) = 18\ \text{m}$.
 - Koeficijent linijskog gubitka: $\lambda = 0{,}022$
 - Zbroj koeficijenata lokalnih gubitaka u izvornom stanju: $\sum\xi_0 = 4$
 - Voda: $\rho = 1000\ \text{kg/m}^3$, $g = 9{,}81\ \text{m/s}^2$
-- Učinkovitost crpke: $\eta = 0{,}75$
+- Ukupna učinkovitost crpke i pogona: $\eta = 0{,}75$
 
 **Scenarij promjene:** Regulacijski ventil na cjevovodu je djelomično zatvoren, dodajući $\xi_{vent} = 8$ lokalnim gubicima.
 
@@ -715,8 +726,9 @@ Karakteristične točke: $H_p(0) = 25\ \text{m}$, $H_p(20) = 18\ \text{m}$.
 4. Izvesti novu karakteristiku $H_{s,1}(Q)$ s djelomično zatvorenim ventilom.
 5. Odrediti **radnu točku 2**: koliko se smanji protok i koliko poraste napor crpke.
 6. Procijeniti hidrauličku snagu koja se rasipa **samo na ventilu** u stanju 2. Što je s ukupnom električnom snagom koju crpka troši?
+7. Bez dodatnog prigušenja postići isti protok $Q_{op,2}$ promjenom broja okretaja. Odrediti potreban omjer $s=n_2/n_1$ i snagu uz pretpostavku da $\eta$ ostaje konstantna.
 
-![Karakteristika crpke $H_p(Q) = 25 - 0{,}0175 Q^2$ i sustava $H_s(Q) = 6 + 0{,}0303 Q^2$. Radna točka pri presjecištu: $Q_{op} \approx 20$ L/s, $H_{op} \approx 18$ m. Djelomično zatvaranje ventila zakreće $H_s$ "uvis" i pomiče radnu točku ulijevo.](../assets/print/u13_ch2_radna_tocka.svg){#fig-u13-radna-tocka fig-align="center"}
+![Karakteristika crpke $H_p(Q) = 25 - 0{,}0175 Q^2$ i sustava $H_s(Q) = 6 + 0{,}0303 Q^2$. Radna točka pri presjecištu: $Q_{op} \approx 20$ L/s, $H_{op} \approx 18$ m. Djelomično zatvaranje ventila zakreće $H_s$ "uvis" i pomiče radnu točku ulijevo.](../assets/print/u13_ch2_radna_tocka.svg){#fig-u13-radna-tocka fig-align="center" fig-alt="Karakteristika crpke $H_p(Q) = 25 - 0{,}0175 Q^2$ i sustava $H_s(Q) = 6 + 0{,}0303 Q^2$. Radna točka pri presjecištu: $Q_{op} \approx 20$ L/s, $H_{op} \approx 18$ m. Djelomično zatvaranje ventila zakreće $H_s$ &quot;uvis&quot; i pomiče radnu točku ulijevo."}
 
 **Pretpostavke i model**
 
@@ -842,13 +854,49 @@ $$
 P_{el,2} = \frac{\rho g Q_{op,2} H_{op,2}}{\eta} = \frac{1000 \cdot 9{,}81 \cdot 0{,}01724 \cdot 19{,}80}{0{,}75} \approx 4{,}46\ \text{kW}
 $$
 
+Pritom je hidraulička snaga predana fluidu
+
+$$
+P_{h,2}=\rho gQ_{op,2}H_{op,2}\approx3{,}35\ \text{kW}.
+$$
+
+Od toga se približno $0{,}81\ \text{kW}$ disipira na ventilu, a oko $2{,}54\ \text{kW}$ odlazi na geodetski uspon i ostale gubitke sustava. Razlika $P_{el,2}-P_{h,2}\approx1{,}11\ \text{kW}$ pripada gubitcima pretvorbe obuhvaćenima s $\eta$.
+
+**7. Frekvencijska regulacija za isti protok bez dodatnog prigušenja.** Za isti impeler i približno sličan režim afinitetni zakoni pomiču karakteristiku crpke:
+
+$$
+H_{p,s}(Q)=s^2H_p(Q/s)=25s^2-0{,}0175Q^2.
+$$
+
+Pri željenom $Q=17{,}24\ \text{L/s}$ izvorni, neprigušeni sustav traži
+
+$$
+H_{s,0}=6+0{,}0303\cdot17{,}24^2\approx15{,}0\ \text{m}.
+$$
+
+Uvjet radne točke zato daje
+
+$$
+25s^2-0{,}0175\cdot17{,}24^2=15{,}0
+\quad\Longrightarrow\quad
+s\approx0{,}899.
+$$
+
+Uz pretpostavljenu stalnu ukupnu učinkovitost,
+
+$$
+P_{el,VFD}=\frac{\rho gQH_{s,0}}{\eta}
+\approx\frac{1000\cdot9{,}81\cdot0{,}01724\cdot15{,}0}{0{,}75}
+\approx3{,}38\ \text{kW}.
+$$
+
 **Provjera i komentar**
 
 1. **Radna točka nije ona koja je u datasheetu crpke.** Crpkin "$H = 18\ \text{m}$ pri $Q = 20$ L/s" je samo **jedna točka** na njenoj krivulji $H_p(Q)$. To što stvarno radi (Q_op, H_op) određuje sustav, a ne crpka. U ovom slučaju početne radne točke prilično prate katalošku vrijednost, jer je sustav pažljivo projektiran.
-2. **Zatvaranje ventila ne smanjuje snagu, već je preraspodjeljuje.** U stanju 1 ($Q = 20$, $H = 18$): električna snaga $4{,}70$ kW. U stanju 2 ($Q = 17{,}2$, $H = 19{,}8$): električna snaga $4{,}46$ kW. Snaga se **smanjila** svega 5% iako se protok smanjio za 14%. Razlog je da crpka u stanju 2 radi pri **višem** naporu (paradoksalno, zatvaranje ventila čini cijev "težom" za crpku po jedinici protoka).
-3. **Od smanjene snage, dio sad ide u ventil**: $P_{disip,vent} \approx 0{,}81\ \text{kW}$ se **rasipa kao toplina u ventilu**, a samo $4{,}46 - 0{,}81 = 3{,}65$ kW ide u korisni rad (cjevovod + geodetski uspon). U stanju 1 ($\xi_{vent} = 0$) sva potrošena snaga ide u cjevovod i geodetski uspon. Zato **regulacija protoka prigušnim ventilom je energetski rasipnik** – dvije trećine smanjenja protoka plaća se rasipanjem energije u ventilu.
-4. **Energetski razumna alternativa** je **frekvencijska regulacija** broja okretaja crpke. Pri smanjenju $n$ od $100\%$ do $86\%$ ($Q \propto n$) crpka isporučuje manje, ali joj se i krivulja $H_p$ pomiče prema dolje – nova radna točka ima manji protok bez umjetnih gubitaka u ventilu. Snaga pada **kockoljiko** s $n$ (afinitetni zakoni: $P \propto n^3$), pa je smanjenje protoka za 14% zapravo $\approx -36\%$ snage – sedam puta manje gubitaka od prigušivanja.
-5. **Granični slučaj** $\xi_{vent} \to \infty$ (potpuno zatvoren ventil): karakteristika sustava postaje vertikalna ($H_s$ raste neograničeno za bilo koji $Q > 0$), pa se sustav siječe s $H_p$ pri $Q = 0$ na vertikalnoj osi. Crpka radi pri "shut-off head" $H_0 = 25$ m bez protoka. Ovo je opasno stanje za centrifugalnu crpku: voda u kućištu kruži bez izlaska, zagrijava se i može u nekoliko minuta dovesti do oštećenja rotora. Zato sve centrifugalne crpke imaju ili **bypass** (mali otvor koji uvijek propušta dio protoka) ili automatsko isključivanje pri shut-off uvjetu.
+2. **Prigušenje ne smanjuje snagu razmjerno protoku.** Protok se smanjio oko $14\,\%$, a električna snaga samo oko $5\,\%$, jer crpka sada radi pri većem naporu.
+3. **Treba uspoređivati jednake vrste snage.** U stanju 2 ventil disipira $0{,}81\ \text{kW}$ od ukupno $3{,}35\ \text{kW}$ hidrauličke snage. Električni ulaz od $4{,}46\ \text{kW}$ dodatno uključuje približno $1{,}11\ \text{kW}$ gubitaka pretvorbe; zato se $0{,}81\ \text{kW}$ ne oduzima izravno od električne snage da bi se dobio „koristan ostatak”.
+4. **Frekvencijska regulacija mijenja i crpkinu krivulju i radnu točku.** Za isti protok od $17{,}24\ \text{L/s}$ ovdje je potreban omjer brzina oko $0{,}90$, a ne jednostavno omjer protoka $17{,}24/19{,}94$. Uz konstantnu $\eta$ dobiva se oko $3{,}38\ \text{kW}$, približno $24\,\%$ manje od prigušenog stanja. Zakon $P\propto n^3$ vrijedi za međusobno slične radne točke; u sustavu sa statičkom visinom i promjenjivom učinkovitošću uštedu treba dobiti iz novoga presjecišta karakteristika, kao ovdje.
+5. **Granični slučaj** $\xi_{vent} \to \infty$ (potpuno zatvoren ventil): za svaki konačni napor protok teži nuli, pa crpka dolazi na zapornu točku (*shut-off*) $Q=0$, $H=H_0=25\ \text{m}$. Dopušteno trajanje takva rada ovisi o izvedbi crpke i uputama proizvođača; bez dovoljnoga minimalnog protoka fluid se može zagrijavati, a recirkulacija i hidrauličke sile mogu oštetiti crpku. Zbog toga se prema zahtjevima sustava predviđa zaštita minimalnog protoka, recirkulacijski vod ili automatsko isključivanje.
 6. **Inženjerska poruka**: regulacijski ventil nije problem sam po sebi (često je nužan za precizno doziranje ili sigurnost). Problem je kad se koristi kao **trajna** mjera regulacije protoka. Za varijabilni protok u velikoj instalaciji rješenje je **frekvencijski regulator** crpke; ventil ostaje za fina podešavanja, hitno zatvaranje i izolaciju.
 :::
 
@@ -857,7 +905,7 @@ Prije zadataka vrijedi držati na okupu osnovna pravila mreže:
 - u seriji se zbrajaju gubici pri istom protoku
 - u paraleli se protok raspodjeljuje pri istom gubitku između čvorova
 
-::: {.mf1-we}
+::: {#ex-u13-rashladni-cjevovod-rotacijske-peci-t2 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Rashladni cjevovod rotacijske peći &nbsp;<span class="mf1-level">T2</span></p>
 
 **Primjer za strojare**
@@ -872,7 +920,7 @@ Prije zadataka vrijedi držati na okupu osnovna pravila mreže:
 - Geodetska razlika između usisa i potiska crpke: $\Delta z = 0$ (isti nivo)
 - Na ulazu i izlazu rashladnika: $p_1 = p_2$ (isti nadtlak)
 
-![Rashladni cjevovod rotacijske peći: D=100 mm, L=170 m, Q=0,025 m3/s, h_w=26 m](../assets/print/u13_fig_rashladni_cjevovod_peci.svg){#fig-u13-rashladni-cjevovod-peci fig-align="center"}
+![Rashladni cjevovod rotacijske peći: D=100 mm, L=170 m, Q=0,025 m3/s, h_w=26 m](../assets/print/u13_fig_rashladni_cjevovod_peci.svg){#fig-u13-rashladni-cjevovod-peci fig-align="center" fig-alt="Rashladni cjevovod rotacijske peći: D=100 mm, L=170 m, Q=0,025 m3/s, h_w=26 m"}
 
 **Rješenje**
 
@@ -900,11 +948,11 @@ Crpka mora savladati gubitke u krugu, pa je potrebna dopremna visina crpke: $H_p
 
 **Provjera i komentar**
 
-Lokalni gubici čine $26\%$ ukupnih — značajan udio zbog regulacijskog ventila ($\xi = 6$). Ako se ventil zatvori na $\xi = 12$, lokalni gubici rastu na $12{,}2\ \text{m}$, ukupni na $31{,}5\ \text{m}$ — +21%. To pokazuje zašto regulacijski ventili moraju biti u proračunu crpne instalacije, ne naknadno dodani.
+Lokalni gubici čine oko $26\%$ ukupnih — značajan udio zbog regulacijskog ventila ($\xi=6$). Ako se pri **istom protoku** koeficijent ventila poveća na $\xi=12$, novi zbroj iznosi $\sum\xi=19{,}1$, pa lokalni gubitak raste na približno $9{,}86\ \text{m}$, a ukupni na $29{,}17\ \text{m}$, oko $12\%$ više. U stvarnom sustavu s nepromijenjenom crpkom protok bi se pritom pomaknuo na novu radnu točku, pa se promjena ne dobiva samo računom pri fiksnom $Q$.
 
 :::
 
-::: {.mf1-we}
+::: {#ex-u13-paralelna-razvodna-mreza-vodovoda-t2 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Paralelna razvodna mreža vodovoda &nbsp;<span class="mf1-level">T2</span></p>
 
 **Primjer za građevinare**
@@ -914,7 +962,8 @@ Lokalni gubici čine $26\%$ ukupnih — značajan udio zbog regulacijskog ventil
 **Traženo**
 
 Distribucija protoka $Q_1$ i $Q_2$ te zajednički pad tlaka između A i B.
-![Paralelna vodovodna mreža: D1=150 mm, D2=100 mm, Q=0,050 m3/s, h_w=7,5 m](../assets/print/u13_fig_paralelne_grane_vodovod.svg){#fig-u13-paralelne-grane-vodovod fig-align="center"}
+![Paralelna vodovodna mreža: D1=150 mm, D2=100 mm, Q=0,050 m3/s, h_w=7,5 m](../assets/print/u13_fig_paralelne_grane_vodovod.svg){#fig-u13-paralelne-grane-vodovod fig-align="center" fig-alt="Paralelna vodovodna mreža: D1=150 mm, D2=100 mm, Q=0,050 m3/s, h_w=7,5 m"}
+
 **Rješenje**
 
 Koeficijent otpora svake grane: $R_i = \lambda_i \frac{L_i}{D_i} \frac{1}{2g A_i^2}$ (iz $h_{w,i} = R_i Q_i^2$).
@@ -940,11 +989,11 @@ $$h_w = R_1 Q_1^2 = 5449 \cdot (0{,}03704)^2 = 5449 \cdot 1{,}372 \cdot 10^{-3} 
 
 **Provjera i komentar**
 
-Dionica 1 (šira) nosi $74\%$ protoka uz $7{,}5\ \text{m}$ pada, dionica 2 nosi samo $26\%$. Ako se dionica 2 zatvori (kvar), cijeli protok ide kroz dionicu 1, a pad energije pada na $R_1 \cdot 0{,}050^2 = 13{,}6\ \text{m}$ — pumpa mora biti dimenzioniranana za tu rezervu.
+Dionica 1 (šira) nosi $74\%$ protoka uz $7{,}5\ \text{m}$ pada, a dionica 2 oko $26\%$. Ako se dionica 2 zatvori i želi se kroz dionicu 1 zadržati isti ukupni protok $0{,}050\ \text{m}^3/\text{s}$, potreban pad **raste** na $R_1\cdot0{,}050^2\approx13{,}6\ \text{m}$. S nepromijenjenom crpkom protok se općenito ne bi zadržao, nego bi novu vrijednost odredio presjek karakteristike crpke i izmijenjene mreže.
 
 :::
 
-::: {.mf1-we}
+::: {#ex-u13-mreza-navodnjavanja-u-vertikalnoj-hidroponskoj-farmi-t3 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Mreža navodnjavanja u vertikalnoj hidroponskoj farmi &nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** Vertikalne hidroponske farme u urbanim sredinama uzgajaju zelenu salatu i druge zelene kulture u uzastopnim katovima, pri čemu se hranjiva otopina cirkulira kroz paralelne grane različitih duljina i promjera. Svaka grana opslužuje različit broj biljaka, pa se geometrija pojedine grane bira tako da svaka biljka dobije približno jednaki protok unatoč razlikama u duljini cijevi do nje. Pumpa u podrumu farme dovodi otopinu iz centralnog spremnika.
@@ -1088,45 +1137,111 @@ Koeficijent trenja $\lambda$ ovisi o Reynoldsovu broju, a Reynoldsov broj o brzi
 
 ## Zadaci za vježbu
 
-::: {.mf1-vjezbe-list}
-1. **T1** Voda struji cijevi promjera $D = 75\ \text{mm}$ protokom $Q = 0{,}013\ \text{m}^3/\text{s}$. Duljina cijevi je $L = 34\ \text{m}$, apsolutna hrapavost $\varepsilon = 0{,}12\ \text{mm}$, a zbroj lokalnih koeficijenata iznosi $\sum\xi = 4{,}1$. Za vodu uzmi $\nu = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$ i Moodyjev koeficijent $\lambda = 0{,}026$. Odredi srednju brzinu, Reynoldsov broj i ukupni gubitak energije.
+::::: {.mf1-vjezbe-list}
+1. [**T1**]{#task-u13-voda-struji-cijevi-promjera-protokom-duljina-cijevi} Voda struji cijevi promjera $D = 75\ \text{mm}$ protokom $Q = 0{,}013\ \text{m}^3/\text{s}$. Duljina cijevi je $L = 34\ \text{m}$, apsolutna hrapavost $\varepsilon = 0{,}12\ \text{mm}$, a zbroj lokalnih koeficijenata iznosi $\sum\xi = 4{,}1$. Za vodu uzmi $\nu = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$ i Moodyjev koeficijent $\lambda = 0{,}026$. Odredi srednju brzinu, Reynoldsov broj i ukupni gubitak energije.
 
-	**Natuknica:** redoslijed je $Q \rightarrow v \rightarrow Re \rightarrow h_w$; ukupni gubitak je zbroj linijskog i lokalnog dijela. (Rješenje: $v \approx 2{,}94\ \text{m/s}$; $Re \approx 2{,}2 \cdot 10^5$; $h_w \approx 7{,}0\ \text{m}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   redoslijed je $Q \rightarrow v \rightarrow Re \rightarrow h_w$; ukupni gubitak je zbroj linijskog i lokalnog dijela.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - jedna cijevna dionica s duljinom $L$, promjerom $D$ i lokalnim elementima.
+   $v \approx 2{,}94\ \text{m/s}$; $Re \approx 2{,}2 \cdot 10^5$; $h_w \approx 7{,}0\ \text{m}$.
+   :::
+   ::::
+   **Skica:** da - jedna cijevna dionica s duljinom $L$, promjerom $D$ i lokalnim elementima.
 
-2. **T1** Voda struji cijevi promjera $D = 18\ \text{mm}$ protokom $Q = 1{,}0\times10^{-4}\ \text{m}^3/\text{s}$. Odredi srednju brzinu, Reynoldsov broj i zaključak je li tok laminaran. Ako je laminaran, izračunaj koeficijent trenja.
+2. [**T1**]{#task-u13-voda-struji-cijevi-promjera-protokom-odredi-srednju} Voda struji cijevi promjera $D = 18\ \text{mm}$ protokom $Q = 1{,}0\times10^{-4}\ \text{m}^3/\text{s}$. Odredi srednju brzinu, Reynoldsov broj i zaključak je li tok laminaran. Ako je laminaran, izračunaj koeficijent trenja.
 
-	**Natuknica:** prvo $v = Q/A$, zatim $Re = vD/\nu$; za laminarni tok vrijedi $\lambda = 64/Re$. (Rješenje: $v \approx 0{,}39\ \text{m/s}$; $Re \approx 7100$ — tok je turbulentan ($Re > 4000$) pa se $\lambda = 64/Re$ ne primjenjuje.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   prvo $v = Q/A$, zatim $Re = vD/\nu$; za laminarni tok vrijedi $\lambda = 64/Re$.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - kratka cijev s jednim presjekom i označenim protokom $Q$.
+   $v \approx 0{,}39\ \text{m/s}$; $Re \approx 7100$ — tok je turbulentan ($Re > 4000$) pa se $\lambda = 64/Re$ ne primjenjuje.
+   :::
+   ::::
+   **Skica:** da - kratka cijev s jednim presjekom i označenim protokom $Q$.
 
-3. **T2** Cjevovodni sustav sastoji se od dviju serijski spojenih dionica. Prva dionica ima $D_1 = 80\ \text{mm}$, $L_1 = 28\ \text{m}$, $\lambda_1 = 0{,}030$ i $\sum\xi_1 = 2{,}4$, a druga $D_2 = 60\ \text{mm}$, $L_2 = 16\ \text{m}$, $\lambda_2 = 0{,}034$ i $\sum\xi_2 = 3{,}1$. Ako je protok kroz sustav $Q = 0{,}010\ \text{m}^3/\text{s}$, odredi ukupni gubitak energije.
+3. [**T2**]{#task-u13-cjevovodni-sustav-sastoji-se-od-dviju-serijski} Cjevovodni sustav sastoji se od dviju serijski spojenih dionica. Prva dionica ima $D_1 = 80\ \text{mm}$, $L_1 = 28\ \text{m}$, $\lambda_1 = 0{,}030$ i $\sum\xi_1 = 2{,}4$, a druga $D_2 = 60\ \text{mm}$, $L_2 = 16\ \text{m}$, $\lambda_2 = 0{,}034$ i $\sum\xi_2 = 3{,}1$. Ako je protok kroz sustav $Q = 0{,}010\ \text{m}^3/\text{s}$, odredi ukupni gubitak energije.
 
-	**Natuknica:** u seriji je isti protok kroz obje dionice; zato svaku dionicu računaj zasebno i na kraju zbroji gubitke. (Rješenje: $h_{w1} \approx 2{,}6\ \text{m}$, $h_{w2} \approx 7{,}8\ \text{m}$; ukupno $h_w \approx 10{,}4\ \text{m}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   u seriji je isti protok kroz obje dionice; zato svaku dionicu računaj zasebno i na kraju zbroji gubitke.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - dvije serijski spojene cijevne dionice različitih promjera.
+   $h_{w1} \approx 2{,}6\ \text{m}$, $h_{w2} \approx 7{,}8\ \text{m}$; ukupno $h_w \approx 10{,}4\ \text{m}$.
+   :::
+   ::::
+   **Skica:** da - dvije serijski spojene cijevne dionice različitih promjera.
 
-4. **T2** U ravnoj cijevi vrijedi ukupni koeficijent $K = \lambda L/D + \sum\xi = 68$. Ako je zadani ukupni gubitak energije $h_w = 5{,}4\ \text{m}$, a promjer cijevi $D = 90\ \text{mm}$, odredi potrebni protok vode.
+4. [**T2**]{#task-u13-u-ravnoj-cijevi-vrijedi-ukupni-koeficijent-ako} U ravnoj cijevi vrijedi ukupni koeficijent $K = \lambda L/D + \sum\xi = 68$. Ako je zadani ukupni gubitak energije $h_w = 5{,}4\ \text{m}$, a promjer cijevi $D = 90\ \text{mm}$, odredi potrebni protok vode.
 
-	**Natuknica:** iz $h_w = K v^2/(2g)$ vrati $v$, a zatim protok iz $Q = Av$. (Rješenje: $v \approx 1{,}25\ \text{m/s}$; $Q \approx 7{,}9\ \text{L/s}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   iz $h_w = K v^2/(2g)$ vrati $v$, a zatim protok iz $Q = Av$.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - jedna cijevna dionica s označenim ukupnim gubitkom $h_w$.
+   $v \approx 1{,}25\ \text{m/s}$; $Q \approx 7{,}9\ \text{L/s}$.
+   :::
+   ::::
+   **Skica:** da - jedna cijevna dionica s označenim ukupnim gubitkom $h_w$.
 
-5. **T3** Dvije paralelne grane imaju aproksimativne relacije gubitka energije $h_{w1} = 1450Q_1^2$ i $h_{w2} = 2400Q_2^2$, pri čemu su $h_w$ u metrima, a protoci u $\text{m}^3/\text{s}$. Ako je ukupni protok kroz razdjelnik $Q = 0{,}032\ \text{m}^3/\text{s}$, odredi protoke $Q_1$ i $Q_2$ te zajednički gubitak energije između čvorova.
+5. [**T3**]{#task-u13-dvije-paralelne-grane-imaju-aproksimativne-relacije-gubitka} Dvije paralelne grane imaju aproksimativne relacije gubitka energije $h_{w1} = 1450Q_1^2$ i $h_{w2} = 2400Q_2^2$, pri čemu su $h_w$ u metrima, a protoci u $\text{m}^3/\text{s}$. Ako je ukupni protok kroz razdjelnik $Q = 0{,}032\ \text{m}^3/\text{s}$, odredi protoke $Q_1$ i $Q_2$ te zajednički gubitak energije između čvorova.
 
-	**Natuknica:** u paraleli mora biti $h_{w1} = h_{w2}$ uz uvjet $Q = Q_1 + Q_2$; riješi te dvije jednadžbe zajedno. (Rješenje: $Q_1 \approx 18{,}0\ \text{L/s}$, $Q_2 \approx 14{,}0\ \text{L/s}$; zajednički gubitak $h_w \approx 0{,}47\ \text{m}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   u paraleli mora biti $h_{w1} = h_{w2}$ uz uvjet $Q = Q_1 + Q_2$; riješi te dvije jednadžbe zajedno.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - razdjelnik s dvjema paralelnim granama i zajedničkim ulaznim/izlaznim čvorovima.
+   $Q_1 \approx 18{,}0\ \text{L/s}$, $Q_2 \approx 14{,}0\ \text{L/s}$; zajednički gubitak $h_w \approx 0{,}47\ \text{m}$.
+   :::
+   ::::
+   **Skica:** da - razdjelnik s dvjema paralelnim granama i zajedničkim ulaznim/izlaznim čvorovima.
 
-6. **T3** Voda teče iz spremnika `A` u spremnik `B` kroz zajednički dovodni vod $D_0 = 100\ \text{mm}$, $L_0 = 20\ \text{m}$, $\lambda_0 = 0{,}025$, $\sum\xi_0 = 1{,}6$, zatim kroz dvije paralelne grane: grana `1` ima $D_1 = 80\ \text{mm}$, $L_1 = 24\ \text{m}$, $\lambda_1 = 0{,}028$, $\sum\xi_1 = 2{,}0$, a grana `2` ima $D_2 = 60\ \text{mm}$, $L_2 = 18\ \text{m}$, $\lambda_2 = 0{,}030$, $\sum\xi_2 = 2{,}6$. Nakon spajanja tok odlazi kroz vod $D_3 = 100\ \text{mm}$, $L_3 = 14\ \text{m}$, $\lambda_3 = 0{,}025$, $\sum\xi_3 = 1{,}0$. Razlika slobodnih razina spremnika iznosi $H = 9{,}5\ \text{m}$. Odredi odnos brzina u granama, protoke $Q_1$ i $Q_2$ te ukupni protok sustava.
+6. [**T3**]{#task-u13-voda-tece-iz-spremnika-a-u-spremnik} Voda teče iz spremnika `A` u spremnik `B` kroz zajednički dovodni vod $D_0 = 100\ \text{mm}$, $L_0 = 20\ \text{m}$, $\lambda_0 = 0{,}025$, $\sum\xi_0 = 1{,}6$, zatim kroz dvije paralelne grane: grana `1` ima $D_1 = 80\ \text{mm}$, $L_1 = 24\ \text{m}$, $\lambda_1 = 0{,}028$, $\sum\xi_1 = 2{,}0$, a grana `2` ima $D_2 = 60\ \text{mm}$, $L_2 = 18\ \text{m}$, $\lambda_2 = 0{,}030$, $\sum\xi_2 = 2{,}6$. Nakon spajanja tok odlazi kroz vod $D_3 = 100\ \text{mm}$, $L_3 = 14\ \text{m}$, $\lambda_3 = 0{,}025$, $\sum\xi_3 = 1{,}0$. Razlika slobodnih razina spremnika iznosi $H = 9{,}5\ \text{m}$. Odredi odnos brzina u granama, protoke $Q_1$ i $Q_2$ te ukupni protok sustava.
 
-	**Natuknica:** u paralelnim granama izjednači $h_{w1}$ i $h_{w2}$, kontinuitetom zbroji $Q_1 + Q_2 = Q$, a ukupni pad energije zatvori kao serijski zbroj dovoda, paralelnog dijela i odvoda. (Rješenje: $v_1/v_2 \approx 1{,}06$; $Q_1 \approx 14{,}9\ \text{L/s}$, $Q_2 \approx 8{,}0\ \text{L/s}$; ukupni protok $Q \approx 22{,}9\ \text{L/s}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   u paralelnim granama izjednači $h_{w1}$ i $h_{w2}$, kontinuitetom zbroji $Q_1 + Q_2 = Q$, a ukupni pad energije zatvori kao serijski zbroj dovoda, paralelnog dijela i odvoda.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - jedan dovodni vod, dvije paralelne grane i jedan odvodni vod između dvaju spremnika.
-:::
+   $v_1/v_2 \approx 1{,}06$; $Q_1 \approx 14{,}9\ \text{L/s}$, $Q_2 \approx 8{,}0\ \text{L/s}$; ukupni protok $Q \approx 22{,}9\ \text{L/s}$.
+   :::
+   ::::
+   **Skica:** da - jedan dovodni vod, dvije paralelne grane i jedan odvodni vod između dvaju spremnika.
+:::::
 
-![Skice uz zadatke za vježbu — pojedinačne, serijske i paralelne cijevne dionice (poglavlje 13).](../assets/print/u13_vjezbe_skice.svg){#fig-u13-vjezbe fig-align="center"}
+![Skice uz zadatke za vježbu — pojedinačne, serijske i paralelne cijevne dionice (poglavlje 13).](../assets/print/u13_vjezbe_skice.svg){#fig-u13-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — pojedinačne, serijske i paralelne cijevne dionice (poglavlje 13)."}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -1141,7 +1256,7 @@ Koeficijent trenja $\lambda$ ovisi o Reynoldsovu broju, a Reynoldsov broj o brzi
 
 **Najčešća pogreška**
 
-Najčešća greška u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> nije sama algebra nego krivi redoslijed. Čest je kvar kad račun krene od koeficijenta trenja ili čak od ukupnog gubitka, a da još nisu određeni brzina, režim strujanja i logika mreže. Drugi česti kvar je primjena pravila istog protoka na paralelne grane, gdje zapravo mora biti isti gubitak energije.
+Najčešća greška u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span> nije sama algebra nego krivi redoslijed. Čest je kvar kad račun krene od koeficijenta trenja ili čak od ukupnog gubitka, a da još nisu određeni brzina, režim strujanja i logika mreže. Drugi česti kvar je primjena pravila istog protoka na paralelne grane, gdje zapravo mora biti isti gubitak energije.
 
 **Nakon ovoga poglavlja mora biti moguće**
 
@@ -1158,7 +1273,7 @@ Industrijski vod, brodska rashladna mreža ili kotlovnički razvod ne mogu se pr
 
 Koeficijent trenja nije konstanta neovisna o protoku, a raspodjela po paralelnim granama ne čita se jednom zauvijek. Promjena hrapavosti, položaja ventila, onečišćenje ili dodatni ispust mogu pomaknuti cijeli sustav, pa mrežu uvijek treba čitati kao osjetljiv i međusobno povezan model.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Cjevovodi</span></span> zatvara osnovni dinamički niz: od protoka i energije dolazi se do stvarnog sustava cijevi u kojem su režim strujanja, trenje i logika mreže jednako važni. Kad je ovdje jasan redoslijed $Q \to v \to Re \to \lambda \to h_w$, kasnije se sigurnije čitaju i složeniji cjevovodni sustavi.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span> zatvara osnovni dinamički niz: od protoka i energije dolazi se do stvarnog sustava cijevi u kojem su režim strujanja, trenje i logika mreže jednako važni. Kad je ovdje jasan redoslijed $Q \to v \to Re \to \lambda \to h_w$, kasnije se sigurnije čitaju i složeniji cjevovodni sustavi.
 :::
 
 ::: {.mf1-numerika}
@@ -1166,7 +1281,7 @@ Koeficijent trenja nije konstanta neovisna o protoku, a raspodjela po paralelnim
 
 **Gdje ovo živi u numerici.** Cjevovodi i unutarnje strujanje **najklasičnija su primjena CFD-a** — i istovremeno najbolja sredina za usporedbu inženjerskog 1D modela (ovaj udžbenik) i 3D CFD-a. Iste cijevi koje se ovdje računaju ručno, profesionalni inženjeri rješavaju paralelno: 1D mrežni alati (`AFT Fathom`, `Flowmaster`, `Pipe-Flo`) za cijeli sustav, a 3D CFD samo za kritične elemente — koljeno, T-račvu, ulaz u kolektor.
 
-**Što numerički alat radi s tim.** Reynoldsov broj određuje *izbor turbulentnog modela* i *gustoću mreže uz zid* (parametar $y^+$). Moodyjev $\lambda$ upravo je ono što CFD solver implicitno rekonstruira preko **zidnih funkcija (engl. wall functions)** — model koji povezuje vrijednost u prvoj ćeliji uz zid s teoretskim turbulentnim profilom (Spalding, Reichardt). Bez ispravnog $y^+$ rezultat je sustavno netočan, čak i ako mreža izgleda dovoljno gusta.
+**Što numerički alat radi s tim.** Reynoldsov broj jedan je od ulaznih kriterija za izbor fizikalnog modela i rezolucije područja uz zid, ali nije jedini. CFD rješava polja brzine i tlaka; iz dobivenoga gradijenta tlaka tek se naknadno određuje ekvivalentni $\lambda$. Zidne funkcije povezuju prvu ćeliju s modelom strujanja uz zid i imaju vlastito ciljano područje $y^+$, no nisu Moodyjev dijagram niti ga automatski reproduciraju.
 
 **Tipičan scenarij.** Standardni industrijski pristup spaja dvije razine modela: $1$D mrežni alat (`AFT Fathom`, `EPANET`) modelira cijeli vodoopskrbni ili procesni sustav s tisućama dionica, a $3$D CFD se koristi samo za pojedine kritične elemente — pumpni usisni kanal, hidroaktivnu komoru, akumulacijsku zonu ili zonu mogućeg vodenog udara. Tako se troškovi simulacije svedu na djelić cijene pune $3$D analize uz zadržavanje točnosti tamo gdje je doista potrebna.
 
@@ -1176,15 +1291,7 @@ Koeficijent trenja nije konstanta neovisna o protoku, a raspodjela po paralelnim
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
-## Validacija CFD-a ručnim računom
+## Provjera CFD-a referentnim padom tlaka
 
-CFD simulacija ravne cijevi u turbulentnom režimu mora reproducirati Moodyjev koeficijent trenja kao prvi kriterij ispravnosti. Iz simulacije se očita pad tlaka $\Delta p$ duž dionice duljine $L$, a izračuna se efektivni $\lambda_{CFD} = 2\,\Delta p\,D/(\rho L v^2)$. Za pravilno postavljen $y^+$ i odgovarajući turbulentni model razlika prema tabličnoj Moodyjevoj vrijednosti $\lambda$ (za zadani $Re$ i $\varepsilon/D$) trebala bi biti unutar $5{-}10\%$. Veće odstupanje ukazuje na neadekvatnu rezoluciju graničnog sloja ili pogrešan izbor zidne funkcije; bez te provjere niti jedan složeniji rezultat simulacije (T-račva, ventil, koljeno) nije pouzdan.
+Pad tlaka u potpuno razvijenoj ravnoj cijevi koristan je referentni slučaj za turbulentno unutarnje strujanje. Iz simulacije se računa $\lambda_{CFD}=2\Delta pD/(\rho L v^2)$ i uspoređuje s dokumentiranom korelacijom ili mjerenjem pri istim $Re$, $\varepsilon/D$ i toplinskim rubnim uvjetima. Najprije se provjeravaju bilanca mase, iteracijska konvergencija i osjetljivost na mrežu; tek se zatim tumači razlika prema referenci. Prihvatljiva razlika ovisi o namjeni modela i nesigurnosti reference, a njezin uzrok ne može se samo iz veličine odstupanja pripisati mreži, zidnoj funkciji ili turbulentnom modelu.
 :::
-
-
-
-
-
-
-
-

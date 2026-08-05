@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "case_id": "hydrofoil_experiment",
+  "title": "NACA 0012 profil — javni eksperimentalni i tro-mrezni referentni podaci",
+  "status": "reference_ready",
+  "data_role": "experimental_validation_reference_with_archival_diagnostic_gaps",
+  "data_classification": "public_reference_archive",
+  "data_available": true,
+  "transfer_note": "Aeroprofil i potpuno uronjeni hidroprofil dijele bezdimenzijske koeficijente uzgona i otpora, ali slobodna povrsina, kavitacija i svojstva medija nisu obuhvaceni ovim aerodinamickim skupom.",
+  "geometry": {
+    "profile": "NASA TMR sharp-trailing-edge scaled NACA 0012",
+    "chord_normalized": 1.0,
+    "maximum_thickness_over_chord": 0.11894,
+    "surface_formula": "y=+-0.594689181*(0.298222773*sqrt(x)-0.127125232*x-0.357907906*x^2+0.291984971*x^3-0.105174606*x^4)"
+  },
+  "flow_conditions": {
+    "mach": 0.15,
+    "reynolds_chord": 6000000,
+    "angle_of_attack_cfd_deg": 10.0,
+    "reference_temperature_rankine": 540.0,
+    "boundary_layer": "fully turbulent over most of the profile",
+    "farfield_extent_chords": 500,
+    "farfield_point_vortex_correction": true,
+    "turbulence_model": "Spalart-Allmaras / SA-neg in FUN3D archive"
+  },
+  "comparison_measurement": {
+    "source_zone": "Ladson NASA TM 4074, transition tripped, 120 grit",
+    "angle_of_attack_deg": 10.10,
+    "cl": 1.0775,
+    "cd": 0.01175,
+    "angle_mismatch_deg": 0.10
+  },
+  "files": {
+    "grids": "grids.csv",
+    "experimental_forces": "experimental_forces.csv",
+    "uncertainty": "uncertainty.json",
+    "provenance": "provenance.json"
+  },
+  "archival_diagnostics": {
+    "solver_residual_history_available": false,
+    "force_monitor_history_available": false,
+    "mass_imbalance_available": false,
+    "consequence": "The package supports a grid trend and comparison with measurements, but cannot certify convergence or conservation of the archived runs. A new solver run must supply these diagnostics."
+  }
+}

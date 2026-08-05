@@ -1,0 +1,6 @@
+---
+title: "Diferencijalni opis realnog toka"
+page-layout: article
+---
+
+{{< include ../source/u12_diferencijalni_opis_realnog_toka.md >}}

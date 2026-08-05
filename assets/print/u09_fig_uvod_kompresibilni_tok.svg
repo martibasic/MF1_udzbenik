@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="u09ct-title u09ct-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
+  <title id="u09ct-title">Od tlačnog vala do prigušenja strujanja u sapnici</title>
+  <desc id="u09ct-desc">Tri povezana prikaza: širenje malog tlačnog poremećaja brzinom zvuka, ubrzavanje plina kroz konvergentno-divergentnu sapnicu i skok tlaka kroz normalni udarni val.</desc>
+  <defs>
+    <linearGradient id="u09ct-flow" x1="0" x2="1"><stop offset="0" stop-color="#aed6f1"/><stop offset="1" stop-color="#5b9ec9"/></linearGradient>
+    <marker id="u09ct-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1565c0"/></marker>
+    <style>.t{font-family:'Segoe UI',Arial,sans-serif;fill:#243442}.h{font-size:18px;font-weight:700}.l{font-size:15px}.s{stroke:#506371;stroke-width:3;fill:none}.a{stroke:#1565c0;stroke-width:3;fill:none;marker-end:url(#u09ct-arrow)}</style>
+  </defs>
+  <rect x="10" y="10" width="940" height="280" rx="18" fill="#f7fafc" stroke="#c7d4dd"/>
+  <g transform="translate(35,35)">
+    <text class="t h" x="120" y="0" text-anchor="middle">Tlačni poremećaj</text>
+    <line class="s" x1="10" y1="105" x2="230" y2="105"/>
+    <circle cx="120" cy="105" r="12" fill="#c0392b"/>
+    <path class="a" d="M100 105 H42"/><path class="a" d="M140 105 H198"/>
+    <path d="M76 60 Q52 105 76 150 M164 60 Q188 105 164 150" fill="none" stroke="#5b9ec9" stroke-width="3"/>
+    <text class="t l" x="120" y="190" text-anchor="middle">val se širi brzinom <tspan font-style="italic">a</tspan></text>
+  </g>
+  <g transform="translate(335,35)">
+    <text class="t h" x="145" y="0" text-anchor="middle">Izentropska sapnica</text>
+    <path d="M5 55 C95 55 105 92 145 98 C185 92 195 55 285 55 L285 175 C195 175 185 138 145 132 C105 138 95 175 5 175 Z" fill="url(#u09ct-flow)" stroke="#506371" stroke-width="3"/>
+    <path class="a" d="M35 115 H120"/><path class="a" d="M165 115 H255"/>
+    <text class="t l" x="145" y="210" text-anchor="middle"><tspan font-style="italic">M</tspan> = 1 u grlu pri prigušenju</text>
+  </g>
+  <g transform="translate(680,35)">
+    <text class="t h" x="120" y="0" text-anchor="middle">Normalni udarni val</text>
+    <rect x="5" y="60" width="230" height="115" rx="8" fill="url(#u09ct-flow)" stroke="#506371" stroke-width="3"/>
+    <path d="M125 55 V180" stroke="#c0392b" stroke-width="6"/>
+    <path class="a" d="M25 117 H95"/><path class="a" d="M145 117 H205"/>
+    <text class="t l" x="65" y="205" text-anchor="middle"><tspan font-style="italic">M</tspan>₁ &gt; 1</text>
+    <text class="t l" x="180" y="205" text-anchor="middle"><tspan font-style="italic">M</tspan>₂ &lt; 1</text>
+    <text class="t l" x="120" y="230" text-anchor="middle">tlak raste, ukupni tlak pada</text>
+  </g>
+</svg>

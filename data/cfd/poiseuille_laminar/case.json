@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "case_id": "poiseuille_laminar",
+  "title": "Stacionarni laminarni tok u kruznoj cijevi",
+  "status": "ready",
+  "data_role": "solution_verification",
+  "data_classification": "synthetic_analytic",
+  "governing_model": "steady incompressible axisymmetric laminar Navier-Stokes",
+  "geometry_m": {
+    "diameter": 0.02,
+    "radius": 0.01,
+    "length": 1.0
+  },
+  "fluid_si": {
+    "density_kg_m3": 998.2,
+    "dynamic_viscosity_pa_s": 0.001002
+  },
+  "boundary_conditions": {
+    "pressure_drop_pa": 2.004,
+    "wall": "no-slip",
+    "axis": "axisymmetric",
+    "thermal_model": "not solved"
+  },
+  "analytical_reference": {
+    "area_m2": 0.0003141592653589793,
+    "reynolds_diameter": 498.1037924151697,
+    "mean_velocity_m_s": 0.025,
+    "centerline_velocity_m_s": 0.05,
+    "volume_flow_m3_s": 0.000007853981633974484,
+    "mass_flow_kg_s": 0.00783984446703333,
+    "pressure_drop_pa": 2.004,
+    "wall_shear_pa": 0.01002,
+    "relations": [
+      "u(r)=2*Umean*(1-(r/R)^2)",
+      "Delta_p=32*mu*L*Umean/D^2",
+      "Q=pi*D^2*Umean/4"
+    ]
+  },
+  "acceptance": {
+    "required_grids": 3,
+    "max_mass_imbalance_percent": 0.1,
+    "max_final_continuity_residual_l2": 1e-7,
+    "max_final_momentum_residual_l2": 1e-7,
+    "min_residual_reduction_orders": 5.0,
+    "max_last_monitor_change_percent": 0.01,
+    "require_monotonic_grid_convergence": true,
+    "require_gci": true
+  },
+  "files": {
+    "grids": "grids.csv",
+    "history": "solver_history.csv",
+    "profile": "velocity_profile.csv",
+    "uncertainty": "uncertainty.json",
+    "provenance": "provenance.json"
+  }
+}

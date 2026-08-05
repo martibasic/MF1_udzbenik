@@ -1,6 +1,12 @@
 ---
-title: "7. Uzgon, plivanje i stabilnost"
+title: "Poglavlje je premješteno"
 page-layout: article
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=u06_uzgon_plivanje_i_stabilnost.html">
+        <link rel="canonical" href="u06_uzgon_plivanje_i_stabilnost.html">
 ---
 
-{{< include ../source/u07_uzgon_plivanje_i_stabilnost.md >}}
+Sadržaj je premješten u [6. Uzgon, plivanje i početni stabilitet](u06_uzgon_plivanje_i_stabilnost.qmd).

@@ -1,6 +1,12 @@
 ---
-title: "11. Količina gibanja i sile strujanja"
+title: "Poglavlje je premješteno"
 page-layout: article
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=u10_kolicina_i_moment_kolicine_gibanja.html">
+        <link rel="canonical" href="u10_kolicina_i_moment_kolicine_gibanja.html">
 ---
 
-{{< include ../source/u11_kolicina_gibanja_i_sile_strujanja.md >}}
+Sadržaj je premješten u [10. Količina i moment količine gibanja](u10_kolicina_i_moment_kolicine_gibanja.qmd).

@@ -20,6 +20,15 @@ def _check(out, rid, value, target, unit="", rel=TOL):
     })
 
 
+def _invariant(out, rid, condition, details=""):
+    out.append({
+        "id": rid,
+        "status": "OK" if condition else "FAIL",
+        "details": "" if condition else details,
+        "verification": "invariant",
+    })
+
+
 def primjer_1_reynolds(D=0.09, Q=0.018, L=42.0, sum_xi=5.2,
                         lam=0.027, nu=1.0e-6, g=9.81):
     A = math.pi * D**2 / 4
@@ -182,7 +191,13 @@ def zadatak_6(D_0=0.100, L_0=20.0, lam_0=0.025, xi_0=1.6,
     Q = factor_Q * v_1
     Q_1 = A_1 * v_1
     Q_2 = A_2 * ratio * v_1
-    return {"ratio": ratio, "Q": Q, "Q_1": Q_1, "Q_2": Q_2}
+    return {
+        "ratio_v2_v1": ratio,
+        "ratio_v1_v2": 1 / ratio,
+        "Q": Q,
+        "Q_1": Q_1,
+        "Q_2": Q_2,
+    }
 
 
 # ------------ Faza 1.5 dodatak: Radna tocka crpka-cjevovod (CH T4) ----------------
@@ -259,11 +274,38 @@ def verify():
     _check(out, "U13.vodovod.Q_2_Ls", r["Q_2"] * 1000, 12.96, "L/s", rel=0.02)
     _check(out, "U13.vodovod.h_w", r["h_w"], 7.47, "m", rel=0.02)
 
-    for name, fn in [("Z1", zadatak_1), ("Z2", zadatak_2), ("Z3", zadatak_3),
-                     ("Z4", zadatak_4), ("Z5", zadatak_5), ("Z6", zadatak_6)]:
-        r = fn()
-        first_key = next(iter(r))
-        _check(out, f"U13.{name}.{first_key}_pos", r[first_key], r[first_key])
+    r = zadatak_1()
+    _check(out, "U13.Z1.v", r["v"], 2.94, "m/s", rel=0.02)
+    _check(out, "U13.Z1.Re", r["Re"], 2.2e5, "", rel=0.03)
+    _check(out, "U13.Z1.h_w", r["h_w"], 7.0, "m", rel=0.03)
+
+    r = zadatak_2()
+    _check(out, "U13.Z2.v", r["v"], 0.393, "m/s", rel=0.02)
+    _check(out, "U13.Z2.Re", r["Re"], 7100.0, "", rel=0.02)
+    _invariant(
+        out,
+        "U13.Z2.turbulent_model_choice",
+        r["Re"] > 4000 and r["lam"] is None,
+        "Za Re>4000 verifier ne smije primijeniti lambda=64/Re.",
+    )
+
+    r = zadatak_3()
+    _check(out, "U13.Z3.h_w_total", r["h_w_total"], 10.4, "m", rel=0.03)
+
+    r = zadatak_4()
+    _check(out, "U13.Z4.v", r["v"], 1.25, "m/s", rel=0.02)
+    _check(out, "U13.Z4.Q_Ls", r["Q"] * 1000, 7.9, "L/s", rel=0.03)
+
+    r = zadatak_5()
+    _check(out, "U13.Z5.Q_1_Ls", r["Q_1"] * 1000, 18.0, "L/s", rel=0.02)
+    _check(out, "U13.Z5.Q_2_Ls", r["Q_2"] * 1000, 14.0, "L/s", rel=0.02)
+    _check(out, "U13.Z5.h_w", r["h_w"], 0.47, "m", rel=0.03)
+
+    r = zadatak_6()
+    _check(out, "U13.Z6.ratio_v1_v2", r["ratio_v1_v2"], 1.06, "", rel=0.02)
+    _check(out, "U13.Z6.Q_Ls", r["Q"] * 1000, 22.9, "L/s", rel=0.02)
+    _check(out, "U13.Z6.Q_1_Ls", r["Q_1"] * 1000, 14.9, "L/s", rel=0.03)
+    _check(out, "U13.Z6.Q_2_Ls", r["Q_2"] * 1000, 8.0, "L/s", rel=0.03)
 
     # Faza 1.5: Radna tocka crpka-cjevovod (CH T4)
     r = cjeloviti_2_radna_tocka()

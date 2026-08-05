@@ -120,41 +120,116 @@ def primjer_vatrogasni(d=0.050, v_2=28.0, p_1=600e3, D_1=0.100, rho=998.0):
     return {"v_1": v_1, "Q": Q, "R_x": R_x}
 
 
-def zadatak_1(m_dot=12.0, v=18.0):
-    return {"F": m_dot * v}
+def primjer_mala_hidroelektrana(D=0.200, Q=0.18, p=280e3,
+                                 beta_deg=60.0, rho=998.0):
+    """Javni primjer sile na simetrično koljeno tlačnoga voda."""
+
+    A = math.pi * D**2 / 4
+    v = Q / A
+    F_int = rho * Q * v + p * A
+    beta = math.radians(beta_deg)
+    F_x = F_int * (1 - math.cos(beta))
+    F_y = F_int * math.sin(beta)
+    F_R = math.hypot(F_x, F_y)
+    phi = math.degrees(math.atan2(F_y, F_x))
+    return {
+        "v": v,
+        "F_int": F_int,
+        "F_x": F_x,
+        "F_y": F_y,
+        "F_R": F_R,
+        "phi": phi,
+    }
 
 
-def zadatak_2(D=0.100, Q=0.025, p_1=200e3, rho=998.0):
+def zadatak_1(d=0.038, v=22.0, rho=998.0):
+    A = math.pi * d**2 / 4
+    Q = A * v
+    m_dot = rho * Q
+    return {"m_dot": m_dot, "F": m_dot * v}
+
+
+def zadatak_2(d=0.042, F=310.0, rho=998.0):
+    A = math.pi * d**2 / 4
+    v = math.sqrt(F / (rho * A))
+    Q = A * v
+    return {"v": v, "Q": Q}
+
+
+def zadatak_3(D=0.100, Q=0.026, p_1=180e3, p_2=150e3, rho=998.0):
     A = math.pi * D**2 / 4
     v = Q / A
     m_dot = rho * Q
-    return {"v": v, "m_dot": m_dot}
+    F_x = p_1 * A + m_dot * v
+    F_y = -(p_2 * A + m_dot * v)
+    F_R = math.hypot(F_x, F_y)
+    return {"v": v, "F_x": F_x, "F_y": F_y, "F_R": F_R}
 
 
-def zadatak_3(D=0.150, Q=0.040, p_1=180e3, p_2=160e3, rho=998.0):
-    A = math.pi * D**2 / 4
-    v = Q / A
-    m_dot = rho * Q
-    R_x = p_1 * A + m_dot * v
-    return {"v": v, "R_x": R_x}
-
-
-def zadatak_4(D=0.120, v_1=2.5, p_1=180e3, rho=998.0):
-    A = math.pi * D**2 / 4
-    Q = A * v_1
-    return {"Q": Q}
-
-
-def zadatak_5(D_1=0.180, D_2=0.110, p_1=300e3, rho=998.0):
+def zadatak_4(D_1=0.120, D_2=0.080, D_3=0.070, Q_1=0.030,
+              Q_2=0.018, p_1=210e3, rho=998.0):
+    Q_3 = Q_1 - Q_2
     A_1 = math.pi * D_1**2 / 4
     A_2 = math.pi * D_2**2 / 4
-    return {"A_1": A_1, "A_2": A_2}
+    A_3 = math.pi * D_3**2 / 4
+    v_1 = Q_1 / A_1
+    v_2 = Q_2 / A_2
+    v_3 = Q_3 / A_3
+    F_x = p_1 * A_1 + rho * Q_1 * v_1 - rho * Q_2 * v_2
+    F_y = -rho * Q_3 * v_3
+    F_R = math.hypot(F_x, F_y)
+    return {"Q_3": Q_3, "F_x": F_x, "F_y": F_y, "F_R": F_R}
 
 
-def zadatak_6(D=0.090, Q=0.020, rho=998.0):
-    A = math.pi * D**2 / 4
-    v = Q / A
-    return {"v": v}
+def zadatak_5(D_1=0.110, D_2=0.045, Q=0.018, p_1=240e3,
+              rho=998.0):
+    A_1 = math.pi * D_1**2 / 4
+    A_2 = math.pi * D_2**2 / 4
+    v_1 = Q / A_1
+    v_2 = Q / A_2
+    F_bolts = p_1 * A_1 - rho * Q * (v_2 - v_1)
+    return {"v_1": v_1, "v_2": v_2, "F_bolts": F_bolts}
+
+
+def zadatak_6(D_1=0.140, D_2=0.090, D_3=0.080, Q_1=0.040,
+              p_1=185e3, split=0.60, angle_deg=60.0, rho=998.0,
+              dp=5e3, rel_Q=0.02, dsplit=0.03, design_factor=1.15):
+    def force(p_value, Q_value, split_value):
+        A_1 = math.pi * D_1**2 / 4
+        A_2 = math.pi * D_2**2 / 4
+        A_3 = math.pi * D_3**2 / 4
+        Q_2 = split_value * Q_value
+        Q_3 = Q_value - Q_2
+        v_1 = Q_value / A_1
+        v_2 = Q_2 / A_2
+        v_3 = Q_3 / A_3
+        beta = math.radians(angle_deg)
+        F_x = (
+            p_value * A_1
+            + rho * Q_value * v_1
+            - rho * Q_2 * v_2
+            - rho * Q_3 * v_3 * math.cos(beta)
+        )
+        F_y = -rho * Q_3 * v_3 * math.sin(beta)
+        return Q_2, Q_3, F_x, F_y, math.hypot(F_x, F_y)
+
+    Q_2, Q_3, F_x, F_y, F_R = force(p_1, Q_1, split)
+    corner_forces = []
+    for p_value in (p_1 - dp, p_1 + dp):
+        for Q_value in (Q_1 * (1 - rel_Q), Q_1 * (1 + rel_Q)):
+            for split_value in (split - dsplit, split + dsplit):
+                corner_forces.append(force(p_value, Q_value, split_value)[-1])
+    F_max = max(corner_forces)
+    required_rating = design_factor * F_max
+    return {
+        "Q_2": Q_2,
+        "Q_3": Q_3,
+        "F_x": F_x,
+        "F_y": F_y,
+        "F_R": F_R,
+        "F_max": F_max,
+        "required_rating": required_rating,
+    }
 
 
 # ------------ Faza 1.5 dodatak: Vodeni udar (CH T3) ----------------
@@ -212,31 +287,46 @@ def verify():
     _check(out, "U11.CH2.R_x", r["R_x"], 664.0, "N", rel=0.05)
     _check(out, "U11.CH2.R_total", r["R_total"], 912.0, "N", rel=0.02)
 
-    r = primjer_koljeno_rashladni()
-    _check(out, "U11.koljeno.R_x", r["R_x"], 1321.0, "N", rel=0.02)
-    _check(out, "U11.koljeno.R_y", r["R_y"], 1221.0, "N", rel=0.02)
-    _check(out, "U11.koljeno.F_R", r["F_R"], 1797.0, "N", rel=0.02)
+    r = primjer_mala_hidroelektrana()
+    _check(out, "U11.P6.v", r["v"], 5.73, "m/s", rel=0.02)
+    _check(out, "U11.P6.F_x_kN", r["F_x"] / 1000, 4.91, "kN", rel=0.02)
+    _check(out, "U11.P6.F_y_kN", r["F_y"] / 1000, 8.51, "kN", rel=0.02)
+    _check(out, "U11.P6.F_R_kN", r["F_R"] / 1000, 9.83, "kN", rel=0.02)
+    _check(out, "U11.P6.phi", r["phi"], 60.0, "deg", rel=0.01)
 
-    r = primjer_vatrogasni()
-    _check(out, "U11.vatrogasni.v_1", r["v_1"], 7.0, "m/s", rel=0.02)
-    _check(out, "U11.vatrogasni.Q_Ls", r["Q"] * 1000, 54.97, "L/s", rel=0.02)
-    _check(out, "U11.vatrogasni.R_x", r["R_x"], 3560.0, "N", rel=0.02)
+    r = zadatak_1()
+    _check(out, "U11.Z1.m_dot", r["m_dot"], 24.9, "kg/s", rel=0.02)
+    _check(out, "U11.Z1.F", r["F"], 548.0, "N", rel=0.02)
 
-    for name, fn in [("Z1", zadatak_1), ("Z2", zadatak_2), ("Z3", zadatak_3),
-                     ("Z4", zadatak_4), ("Z5", zadatak_5), ("Z6", zadatak_6)]:
-        r = fn()
-        first_key = next(iter(r))
-        _check(out, f"U11.{name}.{first_key}_pos", r[first_key], r[first_key])
+    r = zadatak_2()
+    _check(out, "U11.Z2.v", r["v"], 15.0, "m/s", rel=0.02)
+    _check(out, "U11.Z2.Q_Ls", r["Q"] * 1000, 20.7, "L/s", rel=0.02)
 
-    # Faza 1.5: Vodeni udar (CH T3)
-    r = cjeloviti_3_vodeni_udar()
-    _check(out, "U11.CH3.v_0", r["v_0"], 2.83, "m/s", rel=0.02)
-    _check(out, "U11.CH3.T_ref", r["T_ref"], 0.333, "s")
-    _check(out, "U11.CH3.dp_J_MPa", r["dp_J"] / 1e6, 2.95, "MPa", rel=0.02)
-    _check(out, "U11.CH3.dp_b_MPa", r["dp_b"] / 1e6, 0.98, "MPa", rel=0.02)
-    _check(out, "U11.CH3.dp_c_kPa", r["dp_c"] / 1000, 197.0, "kPa", rel=0.02)
-    _check(out, "U11.CH3.F_a_kN", r["F_a"] / 1000, 52.2, "kN", rel=0.02)
-    _check(out, "U11.CH3.F_c_kN", r["F_c"] / 1000, 3.48, "kN", rel=0.02)
+    r = zadatak_3()
+    _check(out, "U11.Z3.v", r["v"], 3.31, "m/s", rel=0.02)
+    _check(out, "U11.Z3.F_x_kN", r["F_x"] / 1000, 1.50, "kN", rel=0.02)
+    _check(out, "U11.Z3.F_y_kN", r["F_y"] / 1000, -1.26, "kN", rel=0.02)
+    _check(out, "U11.Z3.F_R_kN", r["F_R"] / 1000, 1.96, "kN", rel=0.02)
+
+    r = zadatak_4()
+    _check(out, "U11.Z4.Q_3_Ls", r["Q_3"] * 1000, 12.0, "L/s")
+    _check(out, "U11.Z4.F_x_kN", r["F_x"] / 1000, 2.39, "kN", rel=0.02)
+    _check(out, "U11.Z4.F_y", r["F_y"], -37.0, "N", rel=0.05)
+    _check(out, "U11.Z4.F_R_kN", r["F_R"] / 1000, 2.39, "kN", rel=0.02)
+
+    r = zadatak_5()
+    _check(out, "U11.Z5.v_1", r["v_1"], 1.89, "m/s", rel=0.02)
+    _check(out, "U11.Z5.v_2", r["v_2"], 11.3, "m/s", rel=0.02)
+    _check(out, "U11.Z5.F_bolts_kN", r["F_bolts"] / 1000, 2.11, "kN", rel=0.02)
+
+    r = zadatak_6()
+    _check(out, "U11.Z6.Q_2_Ls", r["Q_2"] * 1000, 24.0, "L/s")
+    _check(out, "U11.Z6.Q_3_Ls", r["Q_3"] * 1000, 16.0, "L/s")
+    _check(out, "U11.Z6.F_x_kN", r["F_x"] / 1000, 2.84, "kN", rel=0.02)
+    _check(out, "U11.Z6.F_y", r["F_y"], -44.0, "N", rel=0.05)
+    _check(out, "U11.Z6.F_R_kN", r["F_R"] / 1000, 2.84, "kN", rel=0.02)
+    _check(out, "U11.Z6.F_max_kN", r["F_max"] / 1000, 2.92, "kN", rel=0.02)
+    _check(out, "U11.Z6.required_rating_kN", r["required_rating"] / 1000, 3.36, "kN", rel=0.02)
 
     return out
 

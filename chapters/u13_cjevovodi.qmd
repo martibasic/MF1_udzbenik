@@ -1,6 +1,12 @@
 ---
-title: "13. Strujanje u cjevovodima i proračun mreže"
+title: "Poglavlje je objedinjeno"
 page-layout: article
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=u13_gubici_cjevovodi_crpke_i_mreze.html">
+        <link rel="canonical" href="u13_gubici_cjevovodi_crpke_i_mreze.html">
 ---
 
-{{< include ../source/u13_cjevovodi.md >}}
+Sadržaj je premješten u [13. Gubitci, cjevovodi, crpke i mreže](u13_gubici_cjevovodi_crpke_i_mreze.qmd).

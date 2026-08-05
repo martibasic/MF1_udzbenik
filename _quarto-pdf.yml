@@ -1,0 +1,96 @@
+project:
+  type: book
+  output-dir: _book
+  render:
+    - index.qmd
+    - chapters/u00_kako_koristiti_udzbenik.qmd
+    - chapters/u01_osnove_fluida_i_pascalov_zakon.qmd
+    - chapters/u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd
+    - chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd
+    - chapters/u04_relativno_mirovanje_fluida.qmd
+    - chapters/u05_hidrostatske_sile_na_plohe.qmd
+    - chapters/u06_uzgon_plivanje_i_stabilnost.qmd
+    - chapters/u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd
+    - chapters/u08_energijska_jednadzba_i_bernoulli.qmd
+    - chapters/u09_kompresibilni_idealni_tok.qmd
+    - chapters/u10_kolicina_i_moment_kolicine_gibanja.qmd
+    - chapters/u11_dimenzijska_analiza_i_slicnost.qmd
+    - chapters/u12_diferencijalni_opis_realnog_toka.qmd
+    - chapters/u13_gubici_cjevovodi_crpke_i_mreze.qmd
+    - chapters/u14_turbostrojevi_i_propulzija.qmd
+    - chapters/u15_otvoreni_tokovi.qmd
+    - chapters/d01_sazetak_formula_i_oznaka.qmd
+    - chapters/d02_pojmovnik.qmd
+    - chapters/d03_tipicne_pogreske_po_poglavljima.qmd
+    - chapters/d04_numericka_mehanika_fluida.qmd
+    - chapters/d05_literatura.qmd
+    - chapters/d06_kljuc_kontrolnih_rezultata.qmd
+
+book:
+  title: "Mehanika fluida 1"
+  subtitle: "Integrirani udžbenik za strojarstvo i brodogradnju"
+  author: "Martina Bašić"
+  date: last-modified
+  output-file: "mehanika-fluida-1"
+  chapters:
+    - index.qmd
+    - chapters/u00_kako_koristiti_udzbenik.qmd
+    - part: "Temelji"
+      chapters:
+        - chapters/u01_osnove_fluida_i_pascalov_zakon.qmd
+        - chapters/u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd
+    - part: "Statika fluida"
+      chapters:
+        - chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd
+        - chapters/u04_relativno_mirovanje_fluida.qmd
+        - chapters/u05_hidrostatske_sile_na_plohe.qmd
+        - chapters/u06_uzgon_plivanje_i_stabilnost.qmd
+    - part: "Integralna dinamika"
+      chapters:
+        - chapters/u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd
+        - chapters/u08_energijska_jednadzba_i_bernoulli.qmd
+        - chapters/u09_kompresibilni_idealni_tok.qmd
+        - chapters/u10_kolicina_i_moment_kolicine_gibanja.qmd
+    - part: "Sličnost i realni tok"
+      chapters:
+        - chapters/u11_dimenzijska_analiza_i_slicnost.qmd
+        - chapters/u12_diferencijalni_opis_realnog_toka.qmd
+    - part: "Inženjerski sustavi"
+      chapters:
+        - chapters/u13_gubici_cjevovodi_crpke_i_mreze.qmd
+        - chapters/u14_turbostrojevi_i_propulzija.qmd
+        - chapters/u15_otvoreni_tokovi.qmd
+  appendices:
+    - chapters/d01_sazetak_formula_i_oznaka.qmd
+    - chapters/d02_pojmovnik.qmd
+    - chapters/d03_tipicne_pogreske_po_poglavljima.qmd
+    - chapters/d04_numericka_mehanika_fluida.qmd
+    - chapters/d05_literatura.qmd
+    - chapters/d06_kljuc_kontrolnih_rezultata.qmd
+
+format:
+  typst:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    section-numbering: "1.1"
+    papersize: a4
+    margin:
+      x: 22mm
+      y: 20mm
+    fontsize: 10.5pt
+    linestretch: 1.08
+    colorlinks: true
+    linkcolor: "#8e4519"
+    citecolor: "#536577"
+    page-numbering: "1"
+    theorem-appearance: simple
+    include-in-header:
+      - assets/typst/mf1-author-blocks.typ
+    keep-typ: false
+
+filters:
+  - filters/mf1-typst-author-blocks.lua
+
+execute:
+  enabled: false

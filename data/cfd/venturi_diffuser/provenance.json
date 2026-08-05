@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "case_id": "venturi_diffuser",
+  "created": "2026-08-01",
+  "data_classification": "synthetic_pedagogical",
+  "external_measurements_used": false,
+  "generator": "Deterministic pedagogical construction documented in this file; no CFD solver was run.",
+  "construction": {
+    "reference": "Continuity and incompressible 1D Bernoulli with K_loss=0.2 based on throat dynamic pressure.",
+    "mesh_sequence": "Nominal cell counts 25000, 100000 and 400000; representative h ratio 2.",
+    "synthetic_spatial_error": "Inlet-to-throat pressure-drop errors -4, -1 and -0.25 percent; total-loss errors +10, +2.5 and +0.625 percent.",
+    "synthetic_mass_imbalance": "Outlet flow deficits 0.08, 0.02 and 0.005 percent.",
+    "synthetic_iteration_history": "Residual and pressure-loss histories selected only to exercise QA thresholds."
+  },
+  "method_sources": [
+    {
+      "type": "uncertainty_method",
+      "citation": "Celik et al. (2008), Procedure for Estimation and Reporting of Uncertainty Due to Discretization in CFD Applications",
+      "url": "https://doi.org/10.1115/1.2960953"
+    }
+  ],
+  "limitations": [
+    "No physical experiment or CFD solver output is represented.",
+    "The prescribed loss coefficient is an input to the reference model, not a validated prediction.",
+    "The dataset tests conservation, convergence and reporting logic only.",
+    "A real diffuser assessment also requires inlet-profile, turbulence, wall-resolution and separation evidence."
+  ],
+  "license_note": "No external numerical data were copied; repository terms apply to these generated records."
+}

@@ -79,6 +79,22 @@ def primjer_propust(H=8.50, d=0.40, g=9.81):
     return {"v": v, "Q": Q}
 
 
+def primjer_pitot_uav(dp=380.0, rho=1.115, rho_dense=1.25,
+                       D_s=0.005, nu=1.5e-5):
+    """Javni primjer Pitot-statičke sonde na bespilotnoj letjelici."""
+
+    v = math.sqrt(2 * dp / rho)
+    v_dense = math.sqrt(2 * dp / rho_dense)
+    Re_s = v * D_s / nu
+    change_percent = (v - v_dense) / v * 100
+    return {
+        "v": v,
+        "v_dense": v_dense,
+        "Re_s": Re_s,
+        "change_percent": change_percent,
+    }
+
+
 def zadatak_1(H=3.20, d=0.026, rho=998.0, g=9.81):
     v = math.sqrt(2 * g * H)
     A = math.pi * d**2 / 4
@@ -114,11 +130,20 @@ def zadatak_5(dz=2.8, z_C=1.1, g=9.81, p_atm=101e3, rho=1000.0):
     # p_C(man) = -(v²/2g + z_C)
     p_C_g = -(v**2 / (2 * g) + z_C)
     p_C_abs = p_atm + rho * g * p_C_g
-    return {"v": v, "p_C_abs": p_C_abs}
+    HGL_C = p_C_g + z_C
+    p_v = 2.34e3
+    vapor_margin = p_C_abs - p_v
+    return {
+        "v": v,
+        "p_C_abs": p_C_abs,
+        "HGL_C": HGL_C,
+        "vapor_margin": vapor_margin,
+    }
 
 
 def zadatak_6(D=0.070, dz=2.6, z_C=1.7, h_exit=1.2, g=9.81,
-               p_atm=101.3e3, rho=1000.0):
+               p_atm=101.3e3, rho=1000.0, K_sum=2.0, dK_sum=0.5,
+               K_C=1.2, dK_C=0.3):
     v = math.sqrt(2 * g * dz)
     A = math.pi * D**2 / 4
     Q = A * v
@@ -126,7 +151,25 @@ def zadatak_6(D=0.070, dz=2.6, z_C=1.7, h_exit=1.2, g=9.81,
     p_C_abs = p_atm + rho * g * p_C_g
     t = math.sqrt(2 * h_exit / g)
     x = v * t
-    return {"v": v, "Q": Q, "p_C_abs": p_C_abs, "x": x}
+    v_real = math.sqrt(2 * g * dz / (1 + K_sum))
+    Q_real = A * v_real
+    Q_max = A * math.sqrt(2 * g * dz / (1 + K_sum - dK_sum))
+    Q_min = A * math.sqrt(2 * g * dz / (1 + K_sum + dK_sum))
+    # Najmanji tlak nastaje uz najveći K_C i najmanji ukupni K_sum.
+    vh_at_p_min = dz / (1 + K_sum - dK_sum)
+    p_C_abs_min = p_atm - rho * g * (
+        z_C + (1 + K_C + dK_C) * vh_at_p_min
+    )
+    return {
+        "v": v,
+        "Q": Q,
+        "p_C_abs": p_C_abs,
+        "x": x,
+        "Q_real": Q_real,
+        "Q_min": Q_min,
+        "Q_max": Q_max,
+        "p_C_abs_min": p_C_abs_min,
+    }
 
 
 # ------------ Faza 1.5 dodatak: Difuzor (povratak tlaka) ----------------
@@ -173,23 +216,42 @@ def verify():
     _check(out, "U09.venturi.v_1", r["v_1"], 1.866, "m/s", rel=0.02)
     _check(out, "U09.venturi.Q_Ls", r["Q"] * 1000, 5.27, "L/s", rel=0.02)
 
-    r = primjer_propust()
-    _check(out, "U09.propust.v", r["v"], 12.91, "m/s")
-    _check(out, "U09.propust.Q", r["Q"], 1.622, "m^3/s", rel=0.02)
+    r = primjer_pitot_uav()
+    _check(out, "U09.P6.v", r["v"], 26.1, "m/s", rel=0.02)
+    _check(out, "U09.P6.v_dense", r["v_dense"], 24.7, "m/s", rel=0.02)
+    _check(out, "U09.P6.Re_s", r["Re_s"], 8700.0, "", rel=0.02)
+    _check(out, "U09.P6.change_percent", r["change_percent"], 5.4, "%", rel=0.05)
 
-    for name, fn in [("Z1", zadatak_1), ("Z2", zadatak_2), ("Z3", zadatak_3),
-                     ("Z4", zadatak_4), ("Z5", zadatak_5), ("Z6", zadatak_6)]:
-        r = fn()
-        first_key = next(iter(r))
-        _check(out, f"U09.{name}.{first_key}_pos", r[first_key], r[first_key])
+    r = zadatak_1()
+    _check(out, "U09.Z1.v", r["v"], 7.92, "m/s", rel=0.02)
+    _check(out, "U09.Z1.Q_Ls", r["Q"] * 1000, 4.21, "L/s", rel=0.02)
+    _check(out, "U09.Z1.m_dot", r["m_dot"], 4.20, "kg/s", rel=0.02)
 
-    # Faza 1.5: Difuzor
-    r = primjer_difuzor()
-    _check(out, "U09.difuzor.Q", r["Q"], 0.150, "m^3/s")
-    _check(out, "U09.difuzor.v_2", r["v_2"], 4.29, "m/s")
-    _check(out, "U09.difuzor.dp_ideal_kPa", r["dp_ideal"] / 1000, 103.3, "kPa", rel=0.02)
-    _check(out, "U09.difuzor.dp_real_kPa", r["dp_real"] / 1000, 82.6, "kPa", rel=0.02)
-    _check(out, "U09.difuzor.P_gub_kW", r["P_gub"] / 1000, 3.1, "kW", rel=0.02)
+    r = zadatak_2()
+    _check(out, "U09.Z2.dp", r["dp"], 235.0, "Pa", rel=0.02)
+
+    r = zadatak_3()
+    _check(out, "U09.Z3.v_2", r["v_2"], 7.38, "m/s", rel=0.02)
+    _check(out, "U09.Z3.Q_Ls", r["Q"] * 1000, 28.4, "L/s", rel=0.02)
+
+    r = zadatak_4()
+    _check(out, "U09.Z4.v", r["v"], 4.13, "m/s", rel=0.02)
+
+    r = zadatak_5()
+    _check(out, "U09.Z5.v", r["v"], 7.41, "m/s", rel=0.02)
+    _check(out, "U09.Z5.p_C_abs_kPa", r["p_C_abs"] / 1000, 62.8, "kPa", rel=0.02)
+    _check(out, "U09.Z5.HGL_C", r["HGL_C"], -2.8, "m", rel=0.01)
+    _check(out, "U09.Z5.vapor_margin_kPa", r["vapor_margin"] / 1000, 60.5, "kPa", rel=0.02)
+
+    r = zadatak_6()
+    _check(out, "U09.Z6.v_ideal", r["v"], 7.14, "m/s", rel=0.02)
+    _check(out, "U09.Z6.Q_ideal_Ls", r["Q"] * 1000, 27.5, "L/s", rel=0.02)
+    _check(out, "U09.Z6.p_C_ideal_kPa", r["p_C_abs"] / 1000, 59.2, "kPa", rel=0.02)
+    _check(out, "U09.Z6.x", r["x"], 3.53, "m", rel=0.02)
+    _check(out, "U09.Z6.Q_real_Ls", r["Q_real"] * 1000, 15.9, "L/s", rel=0.02)
+    _check(out, "U09.Z6.Q_min_Ls", r["Q_min"] * 1000, 14.7, "L/s", rel=0.02)
+    _check(out, "U09.Z6.Q_max_Ls", r["Q_max"] * 1000, 17.4, "L/s", rel=0.02)
+    _check(out, "U09.Z6.p_C_min_kPa", r["p_C_abs_min"] / 1000, 59.2, "kPa", rel=0.02)
 
     return out
 

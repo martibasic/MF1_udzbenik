@@ -30,6 +30,15 @@ def _check(out, rid, value, target, unit="", rel=TOL):
     })
 
 
+def _invariant(out, rid, condition, details=""):
+    out.append({
+        "id": rid,
+        "status": "OK" if condition else "FAIL",
+        "details": "" if condition else details,
+        "verification": "invariant",
+    })
+
+
 # --------------------------------------------------------------------------
 def primjer_1_reynolds(D=0.006, v_voda=1.2, nu_voda=NU_V,
                        v_ulje=0.30, nu_ulje=4.0e-5, Re_kr=2300.0):
@@ -131,11 +140,26 @@ def zadatak_5(D=0.100, Q=0.5, a=A_SOUND):
     return {"v": v, "Ma": Ma}
 
 
+def zadatak_5_strouhal(D=0.050, rho=1.20, mu=1.80e-5, v=12.0, St=0.190):
+    Re = rho * v * D / mu
+    f = St * v / D
+    return {"Re": Re, "f": f}
+
+
 def zadatak_6(dp=18000.0, v=2.0, D=0.050, L=20.0, rho=RHO_V, nu=NU_V):
     Eu = dp / (rho * v**2)
     lam = 2 * Eu * D / L
     Re = v * D / nu
     return {"Eu": Eu, "lam": lam, "Re": Re}
+
+
+def zadatak_6_froude_model(lam_L=30.0, v_p=6.0, Q_p=480.0,
+                            F_p=220e3, h_m=0.25, nu=NU_V):
+    v_m = v_p / math.sqrt(lam_L)
+    Q_m = Q_p / lam_L**2.5
+    F_m = F_p / lam_L**3
+    Re_m = v_m * h_m / nu
+    return {"v_m": v_m, "Q_m": Q_m, "F_m": F_m, "Re_m": Re_m}
 
 
 def verify():
@@ -182,9 +206,9 @@ def verify():
     _check(out, "U14.Z1.Re_krv", r["Re_krv"], 0.4545, "", rel=0.02)
     _check(out, "U14.Z1.Re_voda", r["Re_voda"], 450000.0, "", rel=0.01)
 
-    r = zadatak_2()
-    _check(out, "U14.Z2.v_m", r["v_m"], 1.006, "m/s", rel=0.02)
-    _check(out, "U14.Z2.Q_m", r["Q_m"], 0.1957, "m3/s", rel=0.02)
+    r = zadatak_5()
+    _check(out, "U14.Z2.v", r["v"], 63.7, "m/s", rel=0.02)
+    _check(out, "U14.Z2.Ma", r["Ma"], 0.187, "", rel=0.02)
 
     r = zadatak_3()
     _check(out, "U14.Z3.sigma", r["sigma"], 9.707, "", rel=0.02)
@@ -192,13 +216,40 @@ def verify():
     r = zadatak_4()
     _check(out, "U14.Z4.We", r["We"], 46.08, "", rel=0.02)
 
-    r = zadatak_5()
-    _check(out, "U14.Z5.Ma", r["Ma"], 0.187, "", rel=0.02)
+    r = zadatak_5_strouhal()
+    _check(out, "U14.Z5.Re", r["Re"], 4.00e4, "", rel=0.01)
+    _check(out, "U14.Z5.f", r["f"], 45.6, "Hz", rel=0.01)
 
-    r = zadatak_6()
-    _check(out, "U14.Z6.Eu", r["Eu"], 4.5, "", rel=0.01)
-    _check(out, "U14.Z6.lam", r["lam"], 0.0225, "", rel=0.01)
-    _check(out, "U14.Z6.Re", r["Re"], 100000.0, "", rel=0.01)
+    # Buckinghamov dio zadatka jednoznačno mora dati n-k=2 i dimenzijski
+    # valjane St i Re grupe; broj St i dalje dolazi iz podataka ili modela.
+    n_variables, k_dimensions = 5, 3
+    _invariant(
+        out,
+        "U14.Z5.group_count",
+        n_variables - k_dimensions == 2,
+        "Pet veličina i tri neovisne dimenzije moraju dati dvije Pi-grupe.",
+    )
+    dim_f = (0, 0, -1)
+    dim_D = (0, 1, 0)
+    dim_v = (0, 1, -1)
+    dim_rho = (1, -3, 0)
+    dim_mu = (1, -1, -1)
+    dim_St = tuple(dim_f[i] + dim_D[i] - dim_v[i] for i in range(3))
+    dim_Re = tuple(
+        dim_rho[i] + dim_v[i] + dim_D[i] - dim_mu[i] for i in range(3)
+    )
+    _invariant(
+        out,
+        "U14.Z5.group_dimensions",
+        dim_St == (0, 0, 0) and dim_Re == (0, 0, 0),
+        "St=fD/v i Re=rho*v*D/mu moraju biti bezdimenzijski.",
+    )
+
+    r = zadatak_6_froude_model()
+    _check(out, "U14.Z6.v_m", r["v_m"], 1.10, "m/s", rel=0.02)
+    _check(out, "U14.Z6.Q_m_Ls", r["Q_m"] * 1000, 97.4, "L/s", rel=0.02)
+    _check(out, "U14.Z6.F_m", r["F_m"], 8.15, "N", rel=0.02)
+    _check(out, "U14.Z6.Re_m", r["Re_m"], 2.7e5, "", rel=0.03)
 
     return out
 

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="u14c1ks_title u14c1ks_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u14c1ks_title">U14 CH 1 - Buckinghamova analiza otpora kugle i krivulja Cd(Re)</title>
-  <desc id="u14c1ks_desc">Lijevo: kugla promjera 20 mm u struji zraka brzine 30 m/s, sila otpora 76,3 mN pri Reynoldsovom broju 40000. Desno: univerzalna krivulja koeficijenta otpora Cd u ovisnosti o Re (log-log), s radnom tockom Cd=0,45 i otpornom krizom oko 2 do 3 puta 10 na petu.</desc>
+  <title id="u14c1ks_title">Buckinghamova analiza otpora kugle i krivulja Cd(Re)</title>
+  <desc id="u14c1ks_desc">Lijevo: glatka izolirana kugla promjera 20 mm u jednolikoj struji zraka brzine 30 m/s, sila otpora 76,3 mN pri Reynoldsovom broju 40000. Desno: krivulja koeficijenta otpora Cd u ovisnosti o Re za navedene pretpostavke, s radnom tockom Cd=0,45.</desc>
   <defs>
     <marker id="u14c1ks_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
@@ -57,7 +57,7 @@
   <rect x="494" y="28" width="462" height="464" rx="10" fill="#fcfdff" stroke="#90a4b4" stroke-width="1.2" />
   <rect x="494" y="28" width="462" height="30" rx="10" fill="#1565c0" />
   <rect x="494" y="50" width="462" height="8" fill="#1565c0" />
-  <text x="725" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Univerzalna krivulja C_d(Re)</text>
+  <text x="725" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Glatka izolirana kugla: C_d(Re)</text>
 
   <!-- osi -->
   <line x1="540" y1="98" x2="540" y2="460" stroke="#3a4a56" stroke-width="1.4" />

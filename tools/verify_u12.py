@@ -145,6 +145,27 @@ def primjer_hidromlazni(d=0.120, v_mlaz=8.5, rho=1005.0, V_plovilo=1.2):
     return {"A": A, "m_dot": m_dot, "F_p": F_p, "P_kin": P_kin}
 
 
+def primjer_kvadrokopter(m=2.4, rotor_count=4, D=0.280, rho=1.045,
+                          eta=0.70, g=9.81, battery_Wh=74.0):
+    """Javni primjer aktuatorskoga diska kvadrokoptera u visu."""
+
+    thrust = m * g / rotor_count
+    A = math.pi * D**2 / 4
+    induced_velocity = math.sqrt(thrust / (2 * rho * A))
+    P_ideal = thrust * induced_velocity
+    P_shaft = P_ideal / eta
+    P_total = rotor_count * P_shaft
+    duration_min = battery_Wh / P_total * 60
+    return {
+        "thrust": thrust,
+        "induced_velocity": induced_velocity,
+        "P_ideal": P_ideal,
+        "P_shaft": P_shaft,
+        "P_total": P_total,
+        "duration_min": duration_min,
+    }
+
+
 def zadatak_1(d=0.022, v=24.0, rho=998.0):
     A = math.pi * d**2 / 4
     m_dot = rho * A * v
@@ -187,14 +208,26 @@ def zadatak_5(d=0.030, v=42.0, n_sapnica=3, rho=998.0):
     return {"F": F, "P": P}
 
 
-def zadatak_6(m=110.0, d=0.028, n_sapnica=4, v=36.0, rho=998.0, g=9.81):
+def zadatak_6(m=110.0, d=0.028, n_sapnica=4, v=36.0, rho=998.0,
+              g=9.81, dd=0.0003, dv=1.5, reserve=0.10):
     A_1 = math.pi * d**2 / 4
     A = n_sapnica * A_1
     F_p = rho * A * v**2
     m_max = F_p / g
     G = m * g
     a = (F_p - G) / m
-    return {"F_p": F_p, "m_max": m_max, "a": a}
+    d_min = d - dd
+    v_min = v - dv
+    A_min = n_sapnica * math.pi * d_min**2 / 4
+    F_min = rho * A_min * v_min**2
+    m_cert = F_min / ((1 + reserve) * g)
+    return {
+        "F_p": F_p,
+        "m_max": m_max,
+        "a": a,
+        "F_min": F_min,
+        "m_cert": m_cert,
+    }
 
 
 # ------------ Faza 1.5 dodatak: Krivulja snage P(u) i optimum (CH T3) ----------------
@@ -233,70 +266,65 @@ def verify():
     _check(out, "U12.P1.F_f_x", r["F_f_x"], 404.4, "N", rel=0.02)
     _check(out, "U12.P1.R", r["R"], 451.0, "N", rel=0.02)
 
-    r = primjer_2_ukljestena()
-    _check(out, "U12.P2.d_mm", r["d"] * 1000, 39.1, "mm", rel=0.02)
-    _check(out, "U12.P2.R_x_abs", abs(r["R_x"]), 281.0, "N", rel=0.05)
-    _check(out, "U12.P2.M_O", r["M_O"], -198.0, "Nm", rel=0.02)
-
     r = primjer_3_relativni()
-    _check(out, "U12.P3.w_1", r["w_1"], 14.0, "m/s")
-    _check(out, "U12.P3.m_rel", r["m_rel"], 15.85, "kg/s", rel=0.02)
-    _check(out, "U12.P3.ratio", r["ratio"], 0.637, "", rel=0.02)
+    _check(out, "U12.P2.w_1", r["w_1"], 14.0, "m/s")
+    _check(out, "U12.P2.m_rel", r["m_rel"], 15.85, "kg/s", rel=0.02)
+    _check(out, "U12.P2.ratio", r["ratio"], 0.637, "", rel=0.02)
 
     r = primjer_4_pokretna_ravna()
-    _check(out, "U12.P4.m_rel", r["m_rel"], 18.82, "kg/s", rel=0.02)
-    _check(out, "U12.P4.F", r["F"], 282.0, "N", rel=0.02)
-    _check(out, "U12.P4.P", r["P"], 2541.0, "W", rel=0.02)
+    _check(out, "U12.P3.m_rel", r["m_rel"], 18.82, "kg/s", rel=0.02)
+    _check(out, "U12.P3.F", r["F"], 282.0, "N", rel=0.02)
+    _check(out, "U12.P3.P", r["P"], 2541.0, "W", rel=0.02)
 
     r = cjeloviti_1_zakrivljena()
-    _check(out, "U12.CH1.m_rel", r["m_rel"], 25.4, "kg/s", rel=0.02)
-    _check(out, "U12.CH1.c_2x", r["c_2x"], -2.47, "m/s", rel=0.05)
-    _check(out, "U12.CH1.F_f_x", r["F_f_x"], 723.0, "N", rel=0.02)
-    _check(out, "U12.CH1.F", r["F"], 746.0, "N", rel=0.02)
-    _check(out, "U12.CH1.P", r["P"], 7233.0, "W", rel=0.02)
+    _check(out, "U12.P4.m_rel", r["m_rel"], 25.4, "kg/s", rel=0.02)
+    _check(out, "U12.P4.c_2x", r["c_2x"], -2.47, "m/s", rel=0.05)
+    _check(out, "U12.P4.F_f_x", r["F_f_x"], 723.0, "N", rel=0.02)
+    _check(out, "U12.P4.F", r["F"], 746.0, "N", rel=0.02)
+    _check(out, "U12.P4.P", r["P"], 7233.0, "W", rel=0.02)
 
     r = cjeloviti_2_pelton()
-    _check(out, "U12.CH2.u", r["u"], 15.41, "m/s", rel=0.02)
-    _check(out, "U12.CH2.w_1", r["w_1"], 15.59, "m/s", rel=0.02)
-    _check(out, "U12.CH2.m_rel", r["m_rel"], 23.65, "kg/s", rel=0.02)
-    _check(out, "U12.CH2.F_f_x", r["F_f_x"], 680.4, "N", rel=0.02)
-    _check(out, "U12.CH2.M", r["M"], 313.0, "Nm", rel=0.02)
-    _check(out, "U12.CH2.P_kW", r["P"] / 1000, 10.49, "kW", rel=0.02)
+    _check(out, "U12.P5.u", r["u"], 15.41, "m/s", rel=0.02)
+    _check(out, "U12.P5.w_1", r["w_1"], 15.59, "m/s", rel=0.02)
+    _check(out, "U12.P5.m_rel", r["m_rel"], 23.65, "kg/s", rel=0.02)
+    _check(out, "U12.P5.F_f_x", r["F_f_x"], 680.4, "N", rel=0.02)
+    _check(out, "U12.P5.M", r["M"], 313.0, "Nm", rel=0.02)
+    _check(out, "U12.P5.P_kW", r["P"] / 1000, 10.49, "kW", rel=0.02)
 
-    r = cjeloviti_3_flyboard()
-    _check(out, "U12.CH3.v_min", r["v_min"], 13.69, "m/s", rel=0.02)
-    _check(out, "U12.CH3.F_p", r["F_p"], 1767.0, "N", rel=0.02)
-    _check(out, "U12.CH3.a", r["a"], 1.97, "m/s^2", rel=0.02)
-    _check(out, "U12.CH3.t", r["t"], 3.19, "s", rel=0.02)
-    _check(out, "U12.CH3.v_10", r["v_10"], 6.29, "m/s", rel=0.02)
-    _check(out, "U12.CH3.h_max", r["h_max"], 12.02, "m", rel=0.02)
-    _check(out, "U12.CH3.t_iznad_10", r["t_iznad_10"], 1.28, "s", rel=0.02)
+    r = primjer_kvadrokopter()
+    _check(out, "U12.P6.thrust", r["thrust"], 5.886, "N", rel=0.02)
+    _check(out, "U12.P6.induced_velocity", r["induced_velocity"], 6.76, "m/s", rel=0.02)
+    _check(out, "U12.P6.P_ideal", r["P_ideal"], 39.8, "W", rel=0.02)
+    _check(out, "U12.P6.P_shaft", r["P_shaft"], 56.9, "W", rel=0.02)
+    _check(out, "U12.P6.P_total", r["P_total"], 227.0, "W", rel=0.02)
+    _check(out, "U12.P6.duration_min", r["duration_min"], 19.6, "min", rel=0.02)
 
-    r = primjer_pelton_lopatica()
-    _check(out, "U12.pelton.w_1", r["w_1"], 22.0, "m/s")
-    _check(out, "U12.pelton.m_dot", r["m_dot"], 62.04, "kg/s", rel=0.02)
-    _check(out, "U12.pelton.F_t", r["F_t"], 2683.0, "N", rel=0.02)
-    _check(out, "U12.pelton.P_kW", r["P"] / 1000, 48.3, "kW", rel=0.02)
+    r = zadatak_1()
+    _check(out, "U12.Z1.F", r["F"], 219.0, "N", rel=0.02)
 
-    r = primjer_hidromlazni()
-    _check(out, "U12.hidromlazni.m_dot", r["m_dot"], 96.5, "kg/s", rel=0.02)
-    _check(out, "U12.hidromlazni.F_p", r["F_p"], 820.0, "N", rel=0.02)
+    r = zadatak_2()
+    _check(out, "U12.Z2.F_x", r["F_x"], 435.0, "N", rel=0.02)
+    _check(out, "U12.Z2.F_y", r["F_y"], -304.0, "N", rel=0.02)
+    _check(out, "U12.Z2.R", math.hypot(r["F_x"], r["F_y"]), 531.0, "N", rel=0.02)
 
-    for name, fn in [("Z1", zadatak_1), ("Z2", zadatak_2), ("Z3", zadatak_3),
-                     ("Z4", zadatak_4), ("Z5", zadatak_5), ("Z6", zadatak_6)]:
-        r = fn()
-        first_key = next(iter(r))
-        _check(out, f"U12.{name}.{first_key}_pos", r[first_key], r[first_key])
+    r = zadatak_3()
+    _check(out, "U12.Z3.F", r["F"], 672.0, "N", rel=0.02)
+    _check(out, "U12.Z3.P_kW", r["P"] / 1000, 8.06, "kW", rel=0.02)
 
-    # Faza 1.5: Krivulja snage P(u) Peltonove turbine (CH T3)
-    r = cjeloviti_4_optimum()
-    _check(out, "U12.CH4.u_opt", r["u_opt"], 15.0, "m/s")
-    _check(out, "U12.CH4.faktor", r["faktor"], 1.870, "", rel=0.01)
-    _check(out, "U12.CH4.P_max_kW", r["P_max"] / 1000, 24.7, "kW", rel=0.02)
-    _check(out, "U12.CH4.n_opt", r["n_opt"], 716.0, "min^-1", rel=0.02)
-    _check(out, "U12.CH4.eta_max", r["eta_max"], 0.936, "", rel=0.02)
-    _check(out, "U12.CH4.P_third_kW", r["P_third"] / 1000, 22.0, "kW", rel=0.02)
-    _check(out, "U12.CH4.P_two_third_kW", r["P_two_third"] / 1000, 22.0, "kW", rel=0.02)
+    r = zadatak_4()
+    _check(out, "U12.Z4.F_t", r["F_t"], 528.0, "N", rel=0.02)
+    _check(out, "U12.Z4.M", r["M"], 222.0, "Nm", rel=0.02)
+
+    r = zadatak_5()
+    _check(out, "U12.Z5.F_kN", r["F"] / 1000, 3.73, "kN", rel=0.02)
+    _check(out, "U12.Z5.P_kW", r["P"] / 1000, 78.4, "kW", rel=0.02)
+
+    r = zadatak_6()
+    _check(out, "U12.Z6.F_p_kN", r["F_p"] / 1000, 3.19, "kN", rel=0.02)
+    _check(out, "U12.Z6.m_max", r["m_max"], 325.0, "kg", rel=0.02)
+    _check(out, "U12.Z6.a", r["a"], 19.2, "m/s2", rel=0.02)
+    _check(out, "U12.Z6.F_min_kN", r["F_min"] / 1000, 2.86, "kN", rel=0.02)
+    _check(out, "U12.Z6.m_cert", r["m_cert"], 265.0, "kg", rel=0.02)
 
     return out
 

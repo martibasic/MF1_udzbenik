@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="u06zdj_title u06zdj_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
   <title id="u06zdj_title">Sile na zaobljeno dno retencijskog jezerca</title>
-  <desc id="u06zdj_desc">Poprecni presjek retencijskog jezerca sirine b=4,00 m s polumjerom zaobljenja R=1,00 m u kutu izmedju vertikalne stijenke i horizontalnog dna. Slobodna povrsina vode je h1=2,50 m iznad vrha zaobljenog segmenta. Horizontalna komponenta hidrostatske sile na zaobljeni segment F_H=117,6 kN djeluje na dubini hCx=3,00 m, vertikalna komponenta F_V=128,6 kN jednaka je tezini imaginarnog volumena V*=13,14 m^3 iznad arce. Rezultanta F_R priblizno 174,0 kN pod kutom 47,6 stupnjeva od horizontale.</desc>
+  <desc id="u06zdj_desc">Poprecni presjek retencijskog jezerca sirine b=4,00 m s cetvrtkruznim zaobljenjem R=1,00 m izmedju vertikalne stijenke i dna. Slobodna povrsina vode je h1=2,50 m iznad vrha segmenta. Voda kvasi konkavnu stranu odozgo, pa su F_H=117,6 kN prema stijenci i F_V=128,6 kN prema dolje. Rezultanta F_R priblizno 174,0 kN djeluje 47,6 stupnjeva ispod horizontale.</desc>
 
   <defs>
     <linearGradient id="u06zdj_voda" x1="0" y1="0" x2="0" y2="1">
@@ -102,19 +102,19 @@
        Strelice djeluju IZ vode NA strukturu (smjer sile koja se predaje temelju).
        F_H djeluje horizontalno na vertikalnu projekciju (od x=380 do x=440 na y=250..310),
          djelovanje u centroidu projekcije: (440, 280) → strelica desno (u stijenku).
-       F_V djeluje vertikalno (uzgon) - prema gore (sukladno izvoru "↑" → uzgon na temeljnu plocu).
+       F_V djeluje vertikalno prema dolje jer voda kvasi konkavnu stranu odozgo.
        Pricakanjska tocka: centroid imaginarnog volumena, otprilike (415, 240).
     ============================================================ -->
   <!-- F_H: na vertikalnoj projekciji, akcija na strukturu = u desno; duljina 70 px za citljivost -->
   <line x1="440" y1="280" x2="510" y2="280" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u06zdj_aR)" />
-  <!-- F_V: prema gore (uzgon na temeljnu plocu), od arc-a (415,303) prema gore za 75 px do (415,228) -->
-  <line x1="415" y1="303" x2="415" y2="228" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u06zdj_aR)" />
+  <!-- F_V: prema dolje, od segmenta prema temeljnoj konstrukciji -->
+  <line x1="415" y1="303" x2="415" y2="378" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u06zdj_aR)" />
   <!-- Indikator dubine centroida h_Cx - tanka isprekidana linija samo do desne stijenke -->
   <line x1="150" y1="280" x2="380" y2="280" stroke="#1565c0" stroke-width="0.7" stroke-dasharray="4,4" opacity="0.55" />
-  <!-- Rezultanta F_R - dijagonala od tocke djelovanja na vert. projekciji (440,280) prema gore-desno pod ~47,6° -->
+  <!-- Rezultanta F_R - dijagonala prema dolje-desno pod ~47,6° -->
   <!-- Skala ~0,53 px/kN: F_R=174 kN -> ~92 px. cos47,6=0,674; sin47,6=0,739 -->
-  <!-- kraj: (440+62, 280-68) = (502, 212) -->
-  <line x1="440" y1="280" x2="502" y2="212" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u06zdj_aG)" />
+  <!-- kraj: (440+62, 280+68) = (502, 348) -->
+  <line x1="440" y1="280" x2="502" y2="348" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u06zdj_aG)" />
   <!-- Napomena na dnu lijevog panela -->
   <!-- =====================================================
        DESNI PANEL - FORMULE I REZULTATI
@@ -159,15 +159,15 @@
   <text x="540" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan></tspan> = 117,6 kN</text>
   <text x="540" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="9" text-anchor="end" fill="#a04030">vert. projekcija</text>
 
-  <text x="378" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan></tspan> = 128,6 kN  (↑)</text>
+  <text x="408" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan></tspan> = 128,6 kN  (↓)</text>
 
   <text x="160" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1565c0">težište vert. projekcije → h<tspan baseline-shift="sub" font-size="0.7em">Cx</tspan> = 3,00 m</text>
 
-  <text x="540" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#1e8449"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan></tspan> ≈ 174,0 kN</text>
-  <text x="540" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#1e8449">α ≈ 47,6°</text>
+  <text x="540" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#1e8449"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan></tspan> ≈ 174,0 kN</text>
+  <text x="540" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#1e8449">α ≈ 47,6° ispod horizontale</text>
 
-  <text x="36" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> djeluje na zaobljeni segment kao uzgon → temeljna ploča (ili ankeri) mora preuzeti tu silu.</text>
-  <text x="36" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">V* = imaginarni volumen vode iznad zaobljenog dna (pravokutnik h<tspan baseline-shift="sub" font-size="0.7em">1</tspan>R + ¼ kruga).</text>
+  <text x="36" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Unutarnja voda prenosi F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> prema dolje; vanjski uzgon podzemne vode provjerava se zasebno.</text>
+  <text x="36" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">V* = pomoćni volumen iznad zaobljenog dna (pravokutnik h<tspan baseline-shift="sub" font-size="0.7em">1</tspan>R + ¼ kruga).</text>
 
   <text x="734" y="36" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Ključne jednadžbe (zaobljeni segment)</text>
 
@@ -182,13 +182,13 @@
   <text x="734" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">V* = b (h<tspan baseline-shift="sub" font-size="0.7em">1</tspan> R + π R²/4)</text>
   <text x="734" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">= 4,00 · (2,50 · 1,00 + π/4) ≈ 13,14 m³</text>
   <text x="734" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> = ρ g V*</text>
-  <text x="734" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 128,6 kN  (↑)</text>
+  <text x="734" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 128,6 kN  (↓)</text>
   <text x="734" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Rezultanta i kut s horizontalom</text>
   <text x="734" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan> = √(F<tspan baseline-shift="sub" font-size="0.7em">H</tspan>² + F<tspan baseline-shift="sub" font-size="0.7em">V</tspan>²)</text>
   <text x="734" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1a2530">tan α = F<tspan baseline-shift="sub" font-size="0.7em">V</tspan>/F<tspan baseline-shift="sub" font-size="0.7em">H</tspan> = 128,6/117,6 → α ≈ 47,6°</text>
 
-  <text x="734" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Vertikalna komponenta tlači temeljnu ploču prema gore</text>
-  <text x="734" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">(uzgon = težina imaginarnog volumena vode iznad luka).</text>
+  <text x="734" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Unutarnja voda tlači zaobljeni segment prema dolje</text>
+  <text x="734" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">(|F<tspan baseline-shift="sub" font-size="0.7em">V</tspan>| = težina pomoćnoga volumena V*).</text>
 
   <text x="734" y="463" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
   <text x="618" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan>≈117,6 kN</text>

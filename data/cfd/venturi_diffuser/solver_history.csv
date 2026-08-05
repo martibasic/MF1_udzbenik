@@ -1,0 +1,16 @@
+grid_id,iteration,continuity_residual_l2,momentum_residual_l2,primary_monitor_name,primary_monitor_value
+coarse,1,0.2,0.3,total_pressure_loss_pa,1800.0
+coarse,250,0.02,0.04,total_pressure_loss_pa,2500.0
+coarse,700,0.001,0.002,total_pressure_loss_pa,2810.0
+coarse,1200,0.00003,0.00001,total_pressure_loss_pa,2847.5
+coarse,1400,0.000007,0.000003,total_pressure_loss_pa,2848.068763211769
+medium,1,0.2,0.3,total_pressure_loss_pa,1800.0
+medium,300,0.015,0.03,total_pressure_loss_pa,2400.0
+medium,850,0.0005,0.001,total_pressure_loss_pa,2620.0
+medium,1500,0.000015,0.000006,total_pressure_loss_pa,2653.5
+medium,1800,0.000002,0.000001,total_pressure_loss_pa,2653.882256629148
+fine,1,0.2,0.3,total_pressure_loss_pa,1800.0
+fine,400,0.01,0.02,total_pressure_loss_pa,2350.0
+fine,1100,0.0002,0.0005,total_pressure_loss_pa,2570.0
+fine,2100,0.000008,0.000003,total_pressure_loss_pa,2605.1
+fine,2400,0.0000006,0.0000003,total_pressure_loss_pa,2605.335629983493

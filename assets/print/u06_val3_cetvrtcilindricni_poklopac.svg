@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 460" role="img" aria-labelledby="u06v3cp_title u06v3cp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
   <title id="u06v3cp_title">Cetvrtcilindricni revizijski poklopac uz slobodnu povrsinu</title>
-  <desc id="u06v3cp_desc">Lijevo: bocna stijenka spremnika s cetvrtcilindricnim poklopcem polumjera R = 0,90 m i sirine b = 1,20 m, ciji gornji rub A lezi na slobodnoj povrsini vode. Voda na konkavnoj strani luka pritisce poklopac vodoravnom silom F_H = 4,76 kN udesno na dubini 2R/3 i vertikalnom silom F_V = 7,47 kN nadolje na udaljenosti 4R/(3 pi) od vertikalne stijenke. Desno: stupac formula za F_H, F_V i rezultantu F_R = 8,86 kN pod kutom alfa = 57,5 stupnjeva.</desc>
+  <desc id="u06v3cp_desc">Lijevo: bocna stijenka spremnika s cetvrtcilindricnim poklopcem polumjera R=0,90 m i sirine b=1,20 m, ciji gornji rub A lezi na slobodnoj povrsini vode. Voda kvasi konveksnu gornju i lijevu stranu luka; lokalne normale prema stijenci imaju komponentu nadolje. Sile su F_H=4,76 kN udesno na dubini 2R/3 i F_V=7,47 kN nadolje na udaljenosti 4R/(3 pi) od vertikalne stijenke. Rezultanta F_R=8,86 kN djeluje 57,5 stupnjeva ispod horizontale.</desc>
 
   <defs>
     <linearGradient id="u06v3cp_voda" x1="0" y1="0" x2="0" y2="1">
@@ -34,7 +34,7 @@
   <!-- ===================== LIJEVI PANEL: fizikalni model ===================== -->
   <!-- Geometrija (sve mjere u px): A = (340,105), R_px = 160, B = (180,265). Floor y = 265. -->
 
-  <!-- voda na konkavnoj strani luka: poligon (od slobodne povrsine, lijevo vani, do dna, do tocke B, pa luk natrag do A) -->
+  <!-- voda na konveksnoj gornjoj i lijevoj strani luka -->
   <path d="M 70,105 L 340,105 A 160,160 0 0 0 180,265 L 70,265 Z" fill="url(#u06v3cp_voda)" />
 
   <!-- Konstrukcijski elementi spremnika: -->

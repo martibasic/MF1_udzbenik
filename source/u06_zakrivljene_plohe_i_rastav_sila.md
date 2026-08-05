@@ -1,4 +1,4 @@
-![Pregled poglavlja: Zakrivljene plohe i rastav sila](../assets/print/u06_fig_uvod_pregled.svg){#fig-uvod-u06 fig-align="center" style="width:100%;max-width:980px;"}
+![Pregled poglavlja: Zakrivljene plohe i rastav sila](../assets/print/u06_fig_uvod_pregled.svg){#fig-uvod-u06 fig-align="center" style="width:100%;max-width:980px;" fig-alt="Pregled poglavlja: Zakrivljene plohe i rastav sila"}
 
 ## Zakrivljena ploha — nova geometrija razlaganja sile
 
@@ -17,7 +17,7 @@ Zakrivljene površine pojavljuju se na segmentnim ustavama, zaobljenim poklopcim
 
 **Predznanje koje se pretpostavlja:**
 
-- sila na uronjenu ravnu plohu iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>;
+- sila na uronjenu ravnu plohu iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne i zakrivljene plohe</span></span>;
 - vektorska analiza, projekcije vektora na koordinatne osi;
 - integracija po krivuljama i plohama, pojam težišta volumena;
 - osnove statike krutog tijela.
@@ -38,21 +38,21 @@ Na zakrivljenoj plohi tlak i dalje djeluje okomito na svaki lokalni element povr
 
 $$F_H = \rho g A_x h_{Cx}$$
 
-::: {.callout-note}
-## Fizikalno značenje
+::: {.mf1-fizikalno-znacenje}
+<p class="mf1-box-label">Fizikalno značenje</p>
 Horizontalna komponenta sile na zakrivljenu plohu jednaka je sili na zamišljenu ravnu (vertikalnu) plohu iste projekcije. Zakrivljenost plohe horizontalnu silu ne mijenja — ona ovisi samo o tome koliko je „široka" sjena plohe u vodoravnom smjeru i na kojoj je dubini njezino težište. Intuitivno: zakrivljenost preraspoređuje smjer lokalnih sila, ali ne mijenja ukupnu vodoravnu komponentu.
 :::
 
 gdje je $A_x$ vertikalna projekcija zakrivljene površine, a $h_{Cx}$ dubina težišta te projekcije, te
 
-$$F_V = \rho gV^*$$
+$$|F_V| = \rho gV^*$$
 
-::: {.callout-note}
-## Fizikalno značenje
-Vertikalna komponenta sile na zakrivljenu plohu jednaka je težini imaginarnog volumena fluida između plohe i slobodne površine. Taj volumen ne mora biti fizički ispunjen fluidom — može biti prazni prostor ili dio iznad slobodne površine. Ključno je da volumen definira koliki bi bio vertikalni tlačni teret da je taj prostor ispunjen fluidom do slobodne površine. Smjer ($\uparrow$ ili $\downarrow$) ovisi o tome je li taj zamišljeni stupac fluida ispod ili iznad plohe.
+::: {.mf1-fizikalno-znacenje}
+<p class="mf1-box-label">Fizikalno značenje</p>
+U otvorenom spremniku, kada se radi s manometarskim tlakom, **iznos** vertikalne komponente jednak je težini odgovarajućega pomoćnog volumena $V^*$. Predznak se ne određuje time je li nacrtani volumen „ispod slobodne površine”, nego iz stvarne okupane strane plohe: fluid iznad konkavne plohe opterećuje je prema dolje, a fluid ispod konveksne plohe gura je prema gore. Pomoćni volumen može ležati i na strani na kojoj stvarnoga fluida nema.
 :::
 
-gdje je $V^*$ volumen fluida između zakrivljene površine i slobodne površine.
+gdje je $V^*$ geometrijski pomoćni volumen omeđen zakrivljenom površinom, vertikalnim bočnim plohama i vodoravnom plohom poznatoga tlaka.
 
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Sila na zakrivljenu plohu</p>
@@ -60,7 +60,8 @@ gdje je $V^*$ volumen fluida između zakrivljene površine i slobodne površine.
 Interaktivni prikaz omogućuje mijenjanje polumjera krivulje, dubine vrha i širine plohe (četvrtina kruga uronjena u vodu) uz neposredno praćenje horizontalne i vertikalne komponente sile te rezultante s pripadnim kutom. Vektori sila pomažu intuitivno razumijevanje smjera djelovanja.
 
 <div class="mf1-interaktivno-akcija">
-<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u06_zakrivljena_ploha.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u06_zakrivljena_ploha.ipynb">Pokreni u pregledniku</a>
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u06_zakrivljena_ploha.ipynb" target="_blank" rel="noopener">Pričuvno: otvori u Colabu</a>
 <img class="mf1-interaktivno-qr" src="../assets/qr/u06_zakrivljena_ploha.svg" alt="QR kod za interaktivni prikaz sile na zakrivljenu plohu"/>
 </div>
 
@@ -69,23 +70,29 @@ Interaktivni prikaz omogućuje mijenjanje polumjera krivulje, dubine vrha i šir
 </div>
 :::
 
-Najvažniji detalj nije sama formula, nego znak komponente $F_V$. Ako je zamišljeni volumen ispod slobodne površine, vertikalna komponenta tipično djeluje prema gore. Ako je dio tog volumena iznad slobodne površine, pojavljuje se podtlačni doprinos i $F_V$ može djelovati prema dolje. Matematika time razdvaja ono što geometrija na prvi pogled miješa: projekcija daje vodoravnu sliku opterećenja, a zamišljeni volumen njegov vertikalni smisao.
+Najvažniji detalj nije sama formula, nego orijentacija sile. Uvedimo $\vec n_f$ kao jediničnu normalu usmjerenu **iz fluida prema stijenci**. Tada je sila fluida na stijenku
+
+$$
+d\vec F=p\,\vec n_f\,dA.
+$$
+
+Znak svake komponente čita se iz komponente normale $\vec n_f$ na stvarno okupanoj strani. Time se izbjegava nepouzdano pravilo zasnovano samo na položaju nacrtanoga pomoćnog volumena.
 
 ## Matematički izvod
 
-Na lokalnom elementu zakrivljene plohe površine $dA$ tlak djeluje okomito na plohu, pa je elementarna sila
+Na lokalnom elementu zakrivljene plohe površine $dA$ tlak djeluje okomito na plohu, pa je elementarna sila fluida na stijenku
 
 $$
-dF = p\,dA.
+d\vec F = p\,\vec n_f\,dA.
 $$
 
-Ako normala na plohu zatvara kut $\varphi$ s vodoravnicom, horizontalna komponenta elementarne sile iznosi
+Ako normala na plohu zatvara kut $\varphi$ s odabranim pozitivnim vodoravnim smjerom, horizontalna komponenta elementarne sile iznosi
 
 $$
-dF_H = dF\cos\varphi = p\,dA\cos\varphi.
+dF_x = p\,n_{f,x}\,dA=p\,dA\cos\varphi.
 $$
 
-Kako je $dA\cos\varphi = dA_x$, odnosno upravo vertikalna projekcija lokalnoga elementa, slijedi
+Veličina $n_{f,x}dA$ jest **predznačena** površina projekcije na okomitu ravninu. Za plohu na kojoj se vodoravna komponenta normale ne mijenja po predznaku, iznos horizontalne komponente zato je
 
 $$
 F_H = \int p\,dA_x.
@@ -97,17 +104,17 @@ $$
 F_H = \rho g A_x h_{Cx}.
 $$
 
-Vertikalnu komponentu nije najčišće čitati preko lokalnih kutova, nego preko ravnoteže zamišljenoga volumena fluida iznad ili ispod zakrivljene plohe. Za taj imaginarni fluidni blok vertikalna ravnoteža pokazuje da vertikalna komponenta hidrostatske sile mora biti jednaka težini tog volumena:
+Vertikalnu komponentu često je jednostavnije dobiti ravnotežom pomoćnoga volumena nego integriranjem lokalnih kutova. U otvorenom spremniku s manometarskim tlakom njezin je iznos
 
 $$
-F_V = \rho gV^*.
+|F_V| = \rho gV^*.
 $$
 
-Ovdje je $V^*$ volumen između zakrivljene plohe i slobodne površine, odnosno između plohe i zamišljene zatvarajuće plohe kad je tlak iznad fluida drugačiji od atmosferskoga. To je drugi temeljni rezultat: vertikalna komponenta nije posljedica projekcije nego težine zamišljenoga stupca fluida koji bi "sjedio" na zakrivljenoj plohi.
+Ovdje je $V^*$ pomoćni volumen između zakrivljene plohe i vodoravne plohe na kojoj je manometarski tlak nula. Formula daje **magnitudu**; smjer se određuje iz $n_{f,z}$ na stvarno okupanoj strani. Ako na zatvarajućoj plohi djeluje nenulti jednoliki tlak, njegov se doprinos mora uključiti zasebno.
 
 Jednako je važno znati i gdje te komponente djeluju. Horizontalna komponenta ima isti pravac djelovanja kao sila na vertikalnu projekciju zakrivljene plohe, pa se njezino hvatište dobiva kao centar tlaka te projekcije. Vertikalna komponenta prolazi kroz težište zamišljenoga volumena $V^*$, jer po ulozi odgovara njegovoj težini. Tek nakon toga komponente se smiju spojiti u jednu rezultantu i uključiti u momentnu ravnotežu poklopca, brane ili zatvarača.
 
-Predznak komponente $F_V$ nosi puni fizikalni smisao zadatka. Ako zamišljeni volumen fluida doista leži iznad plohe, vertikalna komponenta najčešće djeluje prema gore. Ako geometrija ili tlakovi iznad plohe mijenjaju raspored zamišljenoga volumena, ista komponenta može djelovati i prema dolje. Nakon što su određene obje komponente, rezultanta se dobiva iz vektorskoga zbroja
+Praktična provjera smjera glasi: nacrtaj jednu lokalnu tlačnu strelicu od fluida prema stijenci. Ako njezina vertikalna komponenta pokazuje prema dolje duž cijele plohe, i $F_V$ je prema dolje; ako pokazuje prema gore, i $F_V$ je prema gore. Nakon što su određene predznačene komponente, iznos rezultante dobiva se iz
 
 $$
 F_R = \sqrt{F_H^2 + F_V^2},
@@ -117,62 +124,47 @@ a smjer rezultante određuje se iz odgovarajućeg omjera $F_V/F_H$. Ako je ploha
 
 ::: {.callout-note}
 ## Razrada koraka
-Korak: od $dF = p\,dA$ → rastav na $F_H = \rho g A_x h_{Cx}$ i $F_V = \rho g V^*$
+Korak: od $d\vec F=p\vec n_f\,dA$ → rastav na $F_H=\rho gA_xh_{Cx}$ i $|F_V|=\rho gV^*$
 
-Elementarna sila $dF = p\,dA$ djeluje okomito na element zakrivljene plohe. Ako normala tog elementa zatvara kut $\varphi$ s vodoravnicom:
+Elementarna sila fluida na stijenku $d\vec F=p\vec n_f\,dA$ djeluje okomito na element zakrivljene plohe. Ako komponenta normale u promatranom vodoravnom smjeru ne mijenja predznak:
 $$
-dF_H = dF\cos\varphi = p\,dA\cos\varphi = p\,dA_x,
+dF_H = p\,|n_{f,x}|dA = p\,dA_x,
 $$
-jer je $dA_x = dA\cos\varphi$ upravo vertikalna projekcija elementa. Integriranjem:
+jer je $dA_x=|n_{f,x}|dA$ iznos vertikalne projekcije elementa. Integriranjem:
 $$
 F_H = \int p\,dA_x = \int \rho g y\,dA_x = \rho g h_{Cx} A_x.
 $$
-Za vertikalnu komponentu $dF_V = p\,dA\sin\varphi = p\,dA_y$ gdje je $dA_y$ horizontalna projekcija. Umjesto integriranja po kutovima, koristimo ravnotežu imaginarnog fluidnog stupca iznad zakrivljene plohe: vertikalna sila koju ploha osjeća jednaka je težini tog stupca, pa $F_V = \rho g V^*$.
+Za vertikalnu komponentu vrijedi $dF_z=p\,n_{f,z}dA$; iznos $|n_{f,z}|dA$ odgovara **horizontalnoj** projekciji elementa. Umjesto integriranja po kutovima može se primijeniti ravnoteža pomoćnoga volumena, čime se u otvorenom manometarskom slučaju dobiva $|F_V|=\rho gV^*$. Predznak se zatim uzima iz $n_{f,z}$, a ne iz samoga položaja $V^*$.
 :::
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Vertikalna sila na zakrivljenu plohu — ravnoteža imaginarnog volumena fluida</p>
 
-Da bi se odredila vertikalna komponenta sile koju fluid vrši na zakrivljenu plohu, uvodi se zamišljeni volumen fluida $V^*$ omeđen samom zakrivljenom plohom i njezinom vertikalnom projekcijom na slobodnu površinu (ili na drugu poznatu ravninu na kojoj se tlak može odrediti).
+Pomoćni volumen $V^*$ zatvara se zakrivljenom plohom, **okomitim bočnim plohama** i gornjom vodoravnom plohom $A_t$ na kojoj je tlak $p_t$ poznat. Bočne plohe nemaju vertikalnu komponentu tlačne sile. Najprije razmotrimo slučaj u kojem stvarni fluid leži iznad konkavne plohe, pa se taj volumen može izravno izdvojiti kao fluidno tijelo.
 
-Pretpostavlja se da bi taj zamišljeni volumen, da postoji kao stvarni fluid, bio u ravnoteži. Na njega djeluju tri vertikalne sile:
-
-- vlastita težina: $W^* = \rho g V^*$, usmjerena prema dolje;
-- sila tlaka na gornju (vodoravnu zatvarajuću) plohu $A_t$: $F_t = p_t A_t$, usmjerena prema dolje (tlak gura prema unutra);
-- sila tlaka kojom okolni fluid djeluje na zakrivljenu plohu $A_z$ (sa strane zakrivljene plohe prema imaginarnom volumenu): označi se s $F_z$ i traži se njezin smjer i iznos.
-
-Iz uvjeta ravnoteže $\sum F_z = 0$ slijedi
+Na izdvojeni volumen djeluju težina $W^*=\rho gV^*$ prema dolje, sila $p_tA_t$ na gornjoj plohi prema dolje te sila stijenke na fluid prema gore. Ravnoteža zato daje
 
 $$
-F_z = W^* + F_t = \rho g V^* + p_t A_t.
+F_{stijenka\to fluid,z}=\rho gV^*+p_tA_t.
 $$
 
-Pri **otvorenom spremniku** sa slobodnom površinom na visini $A_t$ vrijedi $p_t = 0$ (manometarski), pa se izraz reducira na klasični
+Po Newtonovu trećem zakonu sila fluida na konkavnu stijenku usmjerena je **prema dolje** i ima isti iznos. U otvorenom spremniku na slobodnoj površini $p_t=0$ manometarski, pa ostaje $|F_V|=\rho gV^*$.
+
+Ako stvarni fluid kvasi suprotnu, konveksnu donju stranu plohe, lokalne normale $\vec n_f$ pokazuju s vertikalnom komponentom prema gore. Tada je sila fluida na stijenku **prema gore**; isti geometrijski volumen može poslužiti za magnitudu, ali nije stvarni „stupac koji sjedi na plohi”. Zato smjer uvijek treba potvrditi stvarnom okupanom stranom.
+
+Najopćenitija kontrola jest izravni predznačeni integral
 
 $$
-F_V = \rho g V^*.
+F_V=\int_{A_z}p\,n_{f,z}\,dA
+   =\int_{A_z}p\cos\theta_v\,dA,
 $$
 
-Pri **zatvorenom spremniku s plinom pod tlakom $p_g$** iznad fluida dodatno se pojavljuje član $p_g A_t$:
-
-$$
-F_V = \rho g V^* + p_g A_t.
-$$
-
-Newtonov treći zakon daje obrnutu silu fluida na samu zakrivljenu plohu (i samim time na konstrukciju koja je drži): $F_{fluid\to ploha} = -F_z$, dakle prema dolje ako je $V^*$ "iznad" plohe (fluid je iznad), a prema gore ako je "ispod" (fluid je ispod plohe i $V^*$ je samo geometrijski pomoćni volumen). Predznak vertikalne komponente $F_V$ time je strogo posljedica geometrije konkretne plohe i ne treba ga "pogađati" iz iskustva.
-
-Alternativno se ista sila može računati izravnim integralom
-
-$$
-F_V = \int_{A_z} p\,dA_y = \int_{A_z} p\,dA \cdot \cos\theta_v,
-$$
-
-gdje je $\theta_v$ kut između normale na plohu i vertikale, a $dA_y$ vertikalna projekcija elementa plohe. Oba pristupa daju identičan rezultat — argument preko imaginarnog volumena samo nudi geometrijski intuitivnu sliku iste matematike.
+gdje je $\theta_v$ kut između $\vec n_f$ i pozitivne vertikale. Iznos $|n_{f,z}|dA$ jest horizontalna projekcija elementa. Integral i ravnoteža pomoćnoga volumena daju isti rezultat kada se dosljedno zadrže orijentacija normale, poznati tlak na zatvarajućoj plohi i reakcijski par fluid–stijenka.
 :::
 
 ## Riješeni primjeri
 
-::: {.mf1-we}
+::: {#ex-u06-potopljena-cetvrtina-kruga-t2 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Potopljena četvrtina kruga&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U bočnoj stijenci spremnika potopljena je zakrivljena ploha oblika četvrtine kruga, ispod slobodne površine vode. Treba rastaviti hidrostatsku silu na horizontalnu i vertikalnu komponentu i odrediti iznos rezultante.
@@ -190,11 +182,11 @@ gdje je $\theta_v$ kut između normale na plohu i vertikale, a $dA_y$ vertikalna
 2. vertikalnu komponentu sile $F_V$ i vodoravni položaj njezina pravca djelovanja.
 3. iznos rezultante $F_R$.
 
-![Val 1 - potopljena četvrtina kruga](../assets/print/u06_val1_cetvrtina_kruga.svg)
+![potopljena četvrtina kruga](../assets/print/u06_val1_cetvrtina_kruga.svg){#fig-u06-potopljena-cetvrtina-kruga fig-alt="potopljena četvrtina kruga"}
 
 **Pretpostavke i model**
 
-Horizontalna komponenta čita se preko vertikalne projekcije zakrivljene površine, a vertikalna preko težine zamišljenog volumena vode iznad te plohe. U ovom primjeru taj imaginarni volumen leži potpuno ispod slobodne površine, pa je $F_V$ usmjerena prema gore.
+Horizontalna komponenta čita se preko vertikalne projekcije zakrivljene površine. Skica pokazuje da stvarna voda kvasi **konveksnu vanjsku i donju stranu** plohe `AB`, pa lokalne tlačne sile imaju vertikalne komponente prema gore. Pomoćni volumen $V^*$ nalazi se na suprotnoj, konkavnoj strani i služi samo za račun magnitude $|F_V|=\rho gV^*$.
 
 **Rješenje**
 
@@ -238,7 +230,7 @@ $$
 
 #### 2. Vertikalna komponenta
 
-Vertikalna komponenta jednaka je težini zamišljenog volumena vode iznad plohe `AB`. Taj volumen sastoji se od:
+Magnituda vertikalne komponente jednaka je težini geometrijskoga pomoćnog volumena na konkavnoj strani plohe `AB`. Taj volumen sastoji se od:
 
 1. pravokutnog bloka volumena $V_1 = h_1Rb$.
 2. četvrtine cilindra volumena $V_2 = \frac{\pi R^2}{4}b$.
@@ -265,7 +257,7 @@ $$
 F_V = \rho g V^* = 998 \cdot 9{,}81 \cdot 7{,}587 \approx 7{,}43 \cdot 10^4\ \text{N} = 74{,}3\ \text{kN}.
 $$
 
-Smjer sile je **prema gore**, jer zamišljeni volumen predstavlja stvarni stupac vode iznad zakrivljene površine.
+Smjer sile je **prema gore**, jer stvarna voda kvasi konveksnu donju stranu plohe i tlači je prema gore. Pomoćni volumen nije stvarni stupac vode na toj strani konstrukcije.
 
 Vodoravni položaj pravca djelovanja dobiva se iz težišta tog volumena:
 
@@ -289,14 +281,14 @@ $$
 
 **Provjera i komentar**
 
-1. Ovdje je $F_V$ prema gore jer se imaginarni volumen nalazi ispod slobodne površine; to je suprotan slučaj od podtlačnog doprinosa u složenijim geometrijama.
+1. Ovdje je $F_V$ prema gore jer je stvarna okupana strana konveksna i nalazi se ispod plohe; sam položaj pomoćnoga volumena prema slobodnoj površini nije kriterij smjera.
 2. Horizontalna komponenta mora se dobiti iz projekcije, pa je razumno reda sile na ravnu vertikalnu plohu sličnih dimenzija.
 3. Rezultanta mora biti veća od svake pojedine komponente, ali manja od njihova aritmetičkog zbroja.
 :::
 
 Tek nakon tog baznog rastava ima smisla prijeći na složeniji zatvarač u kojem se na zakrivljeni dio nadovezuju još ravni segment, vlastita težina konstrukcije i momentna ravnoteža.
 
-::: {.mf1-we}
+::: {#ex-u06-sklopiva-servisna-brana-s-zakrivljenim-rubom-t2 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Sklopiva servisna brana s zakrivljenim rubom&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U hidrotehničkom objektu sklopiva servisna brana s ravnim i zakrivljenim segmentom okretljivo je vezana pri slobodnoj površini. Treba odrediti hidrostatske komponente na pojedinim dijelovima i silu držanja koja drži branu zatvorenom.
@@ -321,11 +313,11 @@ Tek nakon tog baznog rastava ima smisla prijeći na složeniji zatvarač u kojem
 
 Zanemarite debljinu stijenke i mali uzgon na dvostruko okupanom tankom dijelu konstrukcije.
 
-![Val 2 - sklopiva servisna brana s zakrivljenim rubom](../assets/print/u06_val2_sklopiva_brana.svg)
+![sklopiva servisna brana s zakrivljenim rubom](../assets/print/u06_val2_sklopiva_brana.svg){#fig-u06-sklopiva-servisna-brana-s-zakrivljenim-rubom fig-alt="sklopiva servisna brana s zakrivljenim rubom"}
 
 **Pretpostavke i model**
 
-Ravni dio `OA` tretira se kao klasična ravna ploha nagnuta pod $45^\circ$, dok se zakrivljeni rub `ABD` čita preko vertikalne komponente sile. Za taj zakrivljeni dio nije potreban detaljan lokalni rastav tlakova; dovoljan je zamišljeni volumen fluida koji ga definira.
+Ravni dio `OA` tretira se kao klasična ravna ploha nagnuta pod $45^\circ$. Na zakrivljenom rubu `ABD` stvarna voda prema skici kvasi njegovu gornju, konkavnu stranu, pa lokalne tlačne strelice imaju vertikalnu komponentu prema dolje. Magnituda se dobiva iz pomoćnoga volumena.
 
 **Rješenje**
 
@@ -369,13 +361,13 @@ $$
 
 #### 2. Vertikalna komponenta na zakrivljeni rub `ABD`
 
-Vertikalna komponenta jednaka je težini zamišljenog volumena fluida koji definira zakrivljeni rub. U ovoj geometriji taj se volumen svodi na pravokutni blok volumena $V^* = y^2 B$, pa je
+Magnituda vertikalne komponente jednaka je težini pomoćnoga volumena koji definira zakrivljeni rub. U ovoj geometriji taj se volumen svodi na pravokutni blok volumena $V^*=y^2B$, pa je
 
 $$
 F_V = \rho g y^2 B = 998 \cdot 9{,}81 \cdot 0{,}64^2 \cdot 1{,}00 \approx 4010\ \text{N} \approx 4{,}01\ \text{kN}.
 $$
 
-Smjer ove sile je **prema dolje**, jer zamišljeni volumen koji je definira u ovoj sceni leži iznad slobodne površine, pa zakrivljeni rub zapravo osjeća podtlačni doprinos, a ne klasični uzgonski potisak prema gore.
+Smjer ove sile je **prema dolje**, jer voda kvasi gornju, konkavnu stranu zakrivljenoga ruba. To je tlačno opterećenje vode, a ne „podtlačni doprinos iznad slobodne površine”.
 
 #### 3. Sila držanja u točki `D`
 
@@ -406,7 +398,7 @@ $$
 
 Za zatvaranje poglavlja korisno je vratiti se i na čistu referentnu geometriju u kojoj je zakrivljena površina neposredno vezana uz slobodnu površinu. Tada se najjasnije vidi kako projekcija daje $F_H$, imaginarni volumen daje $F_V$, a rezultanta se dobiva tek na kraju.
 
-::: {.mf1-we}
+::: {#ex-u06-cetvrtcilindricni-revizijski-poklopac-uz-slobodnu-povrsinu-t2 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Četvrtcilindrični revizijski poklopac uz slobodnu površinu&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Na bočnoj stijenci spremnika ugrađen je četvrtcilindrični revizijski poklopac čiji gornji rub leži upravo na slobodnoj površini vode. Treba rastaviti hidrostatsku silu na komponente i odrediti iznos i smjer rezultante.
@@ -424,11 +416,11 @@ Za zatvaranje poglavlja korisno je vratiti se i na čistu referentnu geometriju 
 2. vertikalnu komponentu sile $F_V$ i vodoravni položaj njezina pravca djelovanja.
 3. iznos rezultante $F_R$ i kut koji zatvara s horizontalom.
 
-![Val 3 - četvrtcilindrični poklopac](../assets/print/u06_val3_cetvrtcilindricni_poklopac.svg)
+![četvrtcilindrični poklopac](../assets/print/u06_val3_cetvrtcilindricni_poklopac.svg){#fig-u06-cetvrtcilindricni-poklopac fig-alt="četvrtcilindrični poklopac"}
 
 **Pretpostavke i model**
 
-Kako gornji rub poklopca leži na slobodnoj površini, vertikalna projekcija je jednostavan pravokutnik visine $R$, a imaginarni volumen iznad zakrivljene plohe točno je četvrtina valjka. Zato se obje komponente mogu pročitati bez dodatnih geometrijskih korekcija.
+Kako gornji rub poklopca leži na slobodnoj površini, vertikalna projekcija je pravokutnik visine $R$, a pomoćni volumen iznad zakrivljene plohe četvrtina je valjka. Na skici voda kvasi konveksnu gornju i lijevu stranu plohe; lokalne normale od fluida prema stijenci imaju komponente prema dolje, pa je i vertikalna komponenta prema dolje.
 
 **Rješenje**
 
@@ -460,7 +452,7 @@ $$
 
 #### 2. Vertikalna komponenta
 
-Vertikalna komponenta jednaka je težini imaginarnog volumena vode iznad zakrivljene plohe. Ovdje je taj volumen četvrtina valjka:
+Magnituda vertikalne komponente jednaka je težini pomoćnoga volumena vode iznad zakrivljene plohe. Ovdje je taj volumen četvrtina valjka:
 
 $$
 V^* = \frac{\pi R^2}{4} b = \frac{\pi \cdot 0{,}90^2}{4} \cdot 1{,}20 \approx 0{,}763\ \text{m}^3.
@@ -472,7 +464,7 @@ $$
 F_V = \rho g V^* = 998 \cdot 9{,}81 \cdot 0{,}763 \approx 7474\ \text{N} \approx 7{,}47\ \text{kN}.
 $$
 
-Smjer je **prema dolje** jer imaginarni volumen vode leži iznad zakrivljene plohe. Pravac djelovanja te sile prolazi težištem četvrtine kruga, pa je vodoravna udaljenost od okomite stijenke
+Smjer je **prema dolje** jer lokalne normale od stvarne vode prema stijenci na prikazanoj konveksnoj strani imaju komponente prema dolje. Pravac djelovanja te sile prolazi težištem pomoćne četvrtine kruga, pa je vodoravna udaljenost od okomite stijenke
 
 $$
 x_V = \frac{4R}{3\pi} = \frac{4 \cdot 0{,}90}{3\pi} \approx 0{,}382\ \text{m}.
@@ -501,14 +493,14 @@ prema dolje u odnosu na horizontalu.
 3. Rezultanta mora biti veća od svake pojedine komponente, ali manja od njihova zbroja.
 :::
 
-::: {.mf1-we}
+::: {#ex-u06-cetvrtcilindricni-poklopac-u-zatvorenom-spremniku-s-plinskim .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Četvrtcilindrični poklopac u zatvorenom spremniku s plinskim jastukom&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U zatvorenom hidropneumatskom servisnom spremniku iznad slobodne površine ulja djeluje plinski jastuk pod manometarskim pretlakom. Treba razdvojiti doprinose hidrostatskog tlaka ulja i ravnomjernog plinskog tlaka na zakrivljenom poklopcu i usporediti rezultantu s otvorenim slučajem.
 
 **Zadano**
 
-Hidropneumatski servisni spremnik ima oblik zatvorenog cilindra. Donji dio spremnika ispunjen je uljem do slobodne površine; iznad nje nalazi se plinski jastuk (dušik) pod **manometarskim** pretlakom. Na bočnoj stijenci nalazi se četvrtcilindrični inspekcijski poklopac, oblika i orijentacije identičnih kao u prvom primjeru ovog poglavlja (potopljena četvrtina kruga), ali je sada slobodna površina ulja u **zatvorenom** spremniku pod nadtlakom plinskog jastuka.
+Hidropneumatski servisni spremnik ima oblik zatvorenog cilindra. Donji dio spremnika ispunjen je uljem do razdjelnice; iznad nje nalazi se plinski jastuk (dušik) pod **manometarskim** pretlakom. Na bočnoj stijenci nalazi se četvrtcilindrični inspekcijski poklopac. Na skici ulje kvasi **unutarnju konveksnu stranu** poklopca; lokalne normale od ulja prema poklopcu usmjerene su prema van iz spremnika i imaju vertikalnu komponentu prema dolje. Zato su $F_H$ i $F_V$ usmjerene kako je prikazano.
 
 - Polumjer zakrivljenosti poklopca: $R = 0{,}50\ \text{m}$
 - Širina poklopca uzduž osi zakrivljenja: $b = 1{,}20\ \text{m}$
@@ -525,7 +517,7 @@ Hidropneumatski servisni spremnik ima oblik zatvorenog cilindra. Donji dio sprem
 3. Iznos i smjer rezultantne sile $F$ na poklopac.
 4. Usporediti s otvorenim spremnikom (kad bi $p_g = 0$): za koliko se mijenjaju $F_H$, $F_V$, kut nagiba rezultante?
 
-![Četvrtcilindrični poklopac u zatvorenom spremniku s plinskim jastukom pod tlakom $p_g = 200$ kPa iznad slobodne površine ulja ($\rho = 860$ kg/m³). Plinski jastuk dodaje uniformni pomak tlaka na cijelu plohu.](../assets/print/u06_fig_plinski_jastuk.svg){#fig-u06-plinski-jastuk fig-align="center"}
+![Četvrtcilindrični poklopac u zatvorenom spremniku s plinskim jastukom pod tlakom $p_g = 200$ kPa iznad slobodne površine ulja ($\rho = 860$ kg/m³). Plinski jastuk dodaje uniformni pomak tlaka na cijelu plohu.](../assets/print/u06_fig_plinski_jastuk.svg){#fig-u06-plinski-jastuk fig-align="center" fig-alt="Četvrtcilindrični poklopac u zatvorenom spremniku s plinskim jastukom pod tlakom $p_g = 200$ kPa iznad slobodne površine ulja ($\rho = 860$ kg/m³). Plinski jastuk dodaje uniformni pomak tlaka na cijelu plohu."}
 
 **Pretpostavke i model**
 
@@ -559,7 +551,7 @@ $$
 F_H = F_{H,o} + F_{H,g} \approx 1{,}27 + 120 \approx 121{,}3\ \text{kN}.
 $$
 
-**Vertikalna komponenta $F_V$.** Doprinos ulja ($F_{V,o}$) jednak je težini ulja koje bi zauzimalo imaginarni četvrtkružni volumen iznad plohe (kao u potopljenoj četvrtini kruga):
+**Vertikalna komponenta $F_V$.** Doprinos ulja ($F_{V,o}$) po magnitudi je jednak težini pomoćnoga četvrtkružnog volumena iznad plohe i usmjeren je prema dolje:
 
 $$
 V_{imag} = \frac{\pi R^2}{4} \cdot b = \frac{\pi \cdot 0{,}50^2}{4} \cdot 1{,}20 \approx 0{,}2356\ \text{m}^3,
@@ -581,7 +573,7 @@ $$
 F_V = F_{V,o} + F_{V,g} \approx 1{,}99 + 120 \approx 122{,}0\ \text{kN}.
 $$
 
-**Iznos i smjer rezultante:**
+**Iznos i smjer rezultante** (kut ispod horizontale):
 
 $$
 F = \sqrt{F_H^2 + F_V^2} \approx \sqrt{121{,}3^2 + 122{,}0^2} \approx 172{,}0\ \text{kN},
@@ -605,13 +597,13 @@ Omjer rezultanti $F / F_{open} \approx 73$.
 
 **Provjera i komentar**
 
-1. Plinski jastuk dodaje **isti** iznos sile (120 kN) na obje komponente, jer su projekcije plohe na vertikalnu i horizontalnu ravninu identične za četvrtinu kruga ($R \cdot b$). Zato pri dominantnom $p_g$ smjer rezultante teži ka $45^\circ$, neovisno o geometriji ploche.
+1. Plinski jastuk ovdje dodaje **isti** iznos sile (120 kN) na obje komponente jer su dvije projekcije baš ove četvrtcilindrične plohe jednake ($Rb$). Zato pri dominantnom $p_g$ kut teži $45^\circ$; to nije rezultat neovisan o geometriji općenite zakrivljene plohe.
 2. Zakrivljenost plohe i tip fluida postaju **sekundarni** ako je $p_g \gg \rho g R$. Pri ulja na dubini $R = 0{,}50$ m hidrostatski tlak iznosi svega $\rho g R \approx 4{,}2$ kPa – pedeset puta manje od plinskog $p_g$. Zato hidrostatski doprinos čini manje od $1\%$ ukupne sile.
-3. Inženjerska poruka: pri **dimenzioniranju stijenki i vijaka zatvorenih hidropneumatskih spremnika** glavni teret podnosi plinski tlak. To je razlog zašto kotlovi pod tlakom (PVC – pressure vessels) imaju različitu konstrukciju od otvorenih spremnika iste dubine: zakrivljene plohe i polusferne kape biraju se ne radi smanjenja hidrostatske sile, nego radi optimalnog raspodjeljivanja **plinskog/parnog tlaka** po stijenci.
+3. U ovom primjeru $p_g\gg\rho gR$, pa jednoliki plinski tlak dominira opterećenjem. Dobivene komponente ipak nisu proračun čvrstoće tlačne posude ili vijčanoga spoja: za to trebaju membranska i lokalna naprezanja, geometrijski diskontinuiteti, materijal, ciklusi, brtvljenje i mjerodavni propisi.
 4. Hvatišta dvaju doprinosa $F_V$ nisu ista: $F_{V,o}$ djeluje u centroidu imaginarnog četvrtkružnog volumena ($x_o = 4R/3\pi \approx 0{,}212$ m od osi simetrije), a $F_{V,g}$ djeluje u centroidu horizontalne projekcije, pravokutnika ($x_g = R/2 = 0{,}25$ m). Pri momentnom proračunu vijaka treba računati sa zbirnim hvatištem, ne s jednim "prosjekom".
 :::
 
-::: {.mf1-ch}
+::: {#ex-u06-cetvrtcilindricni-poklopac-s-vodoravnom-spojnicom-t3 .mf1-ch}
 <p class="mf1-box-label">Cjeloviti zadatak — Četvrtcilindrični poklopac s vodoravnom spojnicom&nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** U servisnom spremniku četvrtcilindrični poklopac zglobno je vezan u gornjoj točki, a donji rub pridržava vodoravna spojnica. Treba odrediti komponente hidrostatske sile, rezultantu i silu koju spojnica mora preuzeti da poklopac ostane zatvoren.
@@ -632,11 +624,11 @@ Omjer rezultanti $F / F_{open} \approx 73$.
 3. iznos rezultante $F_R$ i kut koji zatvara s horizontalom.
 4. silu spojnice $T$ potrebnu da poklopac ostane zatvoren.
 
-![CH 1 - četvrtcilindrični poklopac s vodoravnom spojnicom](../assets/print/u06_ch1_poklopac_spojnica.svg)
+![četvrtcilindrični poklopac s vodoravnom spojnicom](../assets/print/u06_ch1_poklopac_spojnica.svg){#fig-u06-cetvrtcilindricni-poklopac-s-vodoravnom-spojnicom fig-alt="četvrtcilindrični poklopac s vodoravnom spojnicom"}
 
 **Pretpostavke i model**
 
-Ovo je i dalje čista hidrostatska sila na zakrivljenoj plohi, ali sada komponente više nisu konačni odgovor. Horizontalna komponenta čita se preko vertikalne projekcije, vertikalna preko težine imaginarnog volumena vode iznad poklopca, a tek se zatim iz ravnoteze momenata oko zgloba `A` dobiva potrebna sila držanja spojnice.
+Ovo je i dalje čista hidrostatska sila na zakrivljenoj plohi, ali sada komponente više nisu konačni odgovor. Na prikazanoj geometriji voda kvasi konveksnu donju i lijevu stranu poklopca. Lokalne normale od vode prema stijenci imaju vertikalne komponente prema gore, pa je $F_V$ prema gore. Horizontalna komponenta čita se preko vertikalne projekcije, magnituda vertikalne preko težine pomoćnoga volumena, a tek se zatim iz ravnoteže momenata oko zgloba `A` dobiva potrebna sila držanja spojnice.
 
 **Rješenje**
 
@@ -668,7 +660,7 @@ $$
 
 #### 2. Vertikalna komponenta
 
-Vertikalna komponenta jednaka je težini imaginarnog volumena vode iznad zakrivljene plohe. Ovdje je taj volumen četvrtina valjka:
+Magnituda vertikalne komponente jednaka je težini pomoćnoga volumena iznad zakrivljene plohe. Ovdje je taj volumen četvrtina valjka:
 
 $$
 V^* = \frac{\pi R^2}{4} b = \frac{\pi \cdot 1{,}10^2}{4} \cdot 1{,}40 \approx 1{,}331\ \text{m}^3.
@@ -680,10 +672,12 @@ $$
 F_V = \rho g V^* = 998 \cdot 9{,}81 \cdot 1{,}331 \approx 13026\ \text{N} \approx 13{,}03\ \text{kN}.
 $$
 
-Smjer je **prema dolje** jer imaginarni volumen vode leži iznad zakrivljene plohe. Pravac djelovanja te sile prolazi tezistem četvrtine kruga, pa je vodoravna udaljenost od vertikale kroz zglob `A`
+Smjer je **prema gore** jer voda kvasi konveksnu donju stranu plohe. Pomoćna četvrtina kruga leži na suprotnoj strani luka; njezino je težište udaljeno $4R/(3\pi)$ od desnoga radijusa, pa je vodoravni krak sile prema zglobu `A`
 
 $$
-x_V = \frac{4R}{3\pi} = \frac{4 \cdot 1{,}10}{3\pi} \approx 0{,}467\ \text{m}.
+x_V=R-\frac{4R}{3\pi}
+=1{,}10-\frac{4\cdot1{,}10}{3\pi}
+\approx0{,}633\ \text{m}.
 $$
 
 #### 3. Rezultanta
@@ -700,7 +694,7 @@ $$
 \alpha = \arctan\left(\frac{F_V}{F_H}\right) = \arctan\left(\frac{13{,}03}{8{,}29}\right) \approx 57{,}5^\circ
 $$
 
-prema dolje u odnosu na horizontalu.
+prema gore u odnosu na horizontalu.
 
 #### 4. Sila spojnice
 
@@ -713,29 +707,29 @@ $$
 Uvrstavanjem brojeva dobiva se potrebna sila spojnice
 
 $$
-T = \frac{8292 \cdot 0{,}733 + 13026 \cdot 0{,}467}{1{,}10} \approx 11057\ \text{N} \approx 11{,}06\ \text{kN}.
+T = \frac{8292 \cdot 0{,}733 + 13026 \cdot 0{,}633}{1{,}10} \approx 13026\ \text{N} \approx 13{,}03\ \text{kN}.
 $$
 
 **Provjera i komentar**
 
-Ovaj `CH` zatvara puni radni luk <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Zakrivljene plohe i rastav sila</span></span> u jednom zatvaraču: projekcija daje $F_H \approx 8{,}29\ \text{kN}$ na dubini $0{,}733\ \text{m}$, imaginarni volumen daje $F_V \approx 13{,}03\ \text{kN}$ prema dolje s krakom $0{,}467\ \text{m}$, a njihova rezultanta iznosi oko $15{,}44\ \text{kN}$. Da bi poklopac ostao zatvoren, vodoravna spojnica mora preuzeti silu od oko $11{,}06\ \text{kN}$.
+Ovaj cjeloviti zadatak zatvara puni radni luk <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne i zakrivljene plohe</span></span> u jednom zatvaraču: projekcija daje $F_H\approx8{,}29\ \text{kN}$ na dubini $0{,}733\ \text{m}$, pomoćni volumen daje $F_V\approx13{,}03\ \text{kN}$ prema gore s krakom $0{,}633\ \text{m}$, a rezultanta iznosi oko $15{,}44\ \text{kN}$. Da bi poklopac ostao zatvoren, vodoravna spojnica mora preuzeti silu od oko $13{,}03\ \text{kN}$.
 
-1. Kako je imaginarni volumen ovdje iznad zakrivljene plohe, $F_V$ mora biti prema dolje, a ne prema gore.
-2. Sila spojnice mora biti manja od rezultante, ali istog reda veličine, jer djeluje s punim krakom $R$.
+1. Kako voda na skici kvasi konveksnu donju stranu plohe, $F_V$ mora biti prema gore, a ne prema dolje.
+2. Sila spojnice istoga je reda veličine kao rezultanta jer djeluje s punim krakom $R$; njezin se iznos dobiva iz momenata, a ne usporedbom magnituda sila.
 3. Ako se pri momentu oko `A` uzme krak $F_H$ jednak polumjeru umjesto dubine $h_H$, geometrija pravca djelovanja nije dobro pročitana.
 :::
 
-::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Hidrostatska sila na zaobljeni poklopac procesnog kotla &nbsp;<span class="mf1-level">T2</span></p>
+::: {#ex-u06-hidrostatska-sila-na-zaobljeni-prijelaz-otvorenoga-kalibracijskog .mf1-we}
+<p class="mf1-box-label">Riješeni primjer — Hidrostatska sila na zaobljeni prijelaz otvorenoga kalibracijskog spremnika &nbsp;<span class="mf1-level">T2</span></p>
 
 **Primjer za strojare**
 
-**Kontekst:** Cilindrični tlačni kotao u kemijskom postrojenju ima zaobljeni prijelaz boka u dno (četvrtina kruga). Projektant provjerava hidrostatske komponente na taj segment pri ispitivanju vodom.
+**Kontekst:** Otvoreni kalibracijski spremnik u procesnom laboratoriju ima zaobljeni unutarnji prijelaz boka u dno u obliku četvrtine kruga. Spremnik se polagano puni vodom kako bi se izdvojilo gravitacijsko hidrostatsko opterećenje segmenta. Ovo nije proračun tlačne posude niti propisani hidrotest pod nadtlakom.
 
 **Zadano**
 
 - Polumjer zakrivljenja: $R = 0{,}60\ \text{m}$
-- Širina kotla (okomito): $b = 1{,}50\ \text{m}$
+- Širina segmenta okomito na presjek: $b = 1{,}50\ \text{m}$
 - Slobodna površina je $h_1 = 1{,}20\ \text{m}$ iznad vrha zaobljenog segmenta
 - Gustoća vode: $\rho = 998\ \text{kg/m}^3$
 
@@ -743,11 +737,11 @@ Ovaj `CH` zatvara puni radni luk <span class="mf1-ch-ref"><span class="mf1-ch-co
 
 Horizontalna i vertikalna komponenta sile te iznos rezultante.
 
-![Zaobljeni poklopac procesnog kotla: R=0,60 m, b=1,50 m, h₁=1,20 m, F_H=13,22 kN, F_V=14,74 kN](../assets/print/u06_fig_zaobljeni_poklopac_kotla.svg){#fig-u06-zaobljeni-poklopac-kotla fig-align="center" style="width:100%;max-width:940px;"}
+![Zaobljeni prijelaz otvorenoga kalibracijskog spremnika: R=0,60 m, b=1,50 m, h₁=1,20 m, F_H=13,22 kN, F_V=14,74 kN prema dolje](../assets/print/u06_fig_zaobljeni_poklopac_kotla.svg){#fig-u06-zaobljeni-poklopac-kotla fig-align="center" style="width:100%;max-width:940px;" fig-alt="Zaobljeni prijelaz otvorenoga kalibracijskog spremnika: R=0,60 m, b=1,50 m, h₁=1,20 m, F_H=13,22 kN, F_V=14,74 kN prema dolje"}
 
 **Pretpostavke i model**
 
-Zaobljeni segment = četvrtina kruga. $F_H$ po vertikalnoj projekciji, $F_V$ po imaginarnom volumenu (pravokutnik + četvrtina kruga) iznad segmenta.
+Zaobljeni segment je četvrtina kruga. Voda kvasi njegovu konkavnu stranu odozgo, pa je $F_V$ prema dolje. $F_H$ se računa po vertikalnoj projekciji, a magnituda $F_V$ po pomoćnom volumenu (pravokutnik + četvrtina kruga) iznad segmenta.
 
 **Rješenje**
 
@@ -764,7 +758,7 @@ V^* = b\!\left(h_1 R + \tfrac{\pi R^2}{4}\right) = 1{,}50\!\left(1{,}20 \cdot 0{
 $$
 
 $$
-F_V = 998 \cdot 9{,}81 \cdot 1{,}505 = 14{,}74\ \text{kN}\quad(\uparrow)
+F_V = 998 \cdot 9{,}81 \cdot 1{,}505 = 14{,}74\ \text{kN}\quad(\downarrow)
 $$
 
 $$
@@ -773,16 +767,16 @@ $$
 
 **Provjera i komentar**
 
-$F_V$ je prema gore jer zamišljeni volumen leži ispod slobodne površine — ploha „osjeća" njegovu težinu prema gore. Rezultanta $19{,}8\ \text{kN}$ realna je za kotao tog gabarita. Smjer rezultante zatvara kut $\arctan(14{,}74/13{,}22) \approx 48°$ s horizontalom.
+$F_V$ je prema dolje jer voda kvasi konkavnu stranu segmenta odozgo. Rezultanta iznosi $19{,}8\ \text{kN}$ i zatvara kut $\arctan(14{,}74/13{,}22)\approx48^\circ$ **ispod** horizontale. To su samo hidrostatske komponente za zadanu otvorenu geometriju.
 
 :::
 
-::: {.mf1-we}
+::: {#ex-u06-sile-na-zaobljeno-dno-retencijskog-jezerca-t2 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Sile na zaobljeno dno retencijskog jezerca &nbsp;<span class="mf1-level">T2</span></p>
 
 **Primjer za građevinare**
 
-**Kontekst:** Na kraju kanala za odvodnju oborinske vode nalazi se retencijsko jezerce s polukružnim dnom. Projektant određuje hidrostatske sile na zaobljeni segment pri puni razini za dimenzioniranje temeljne ploče.
+**Kontekst:** Na kraju kanala za odvodnju oborinske vode nalazi se retencijsko jezerce sa zaobljenim prijelazom boka u dno. Promatra se jedan četvrtkružni segment pri punoj razini kako bi se odredilo opterećenje koje unutarnja voda prenosi na temeljnu konstrukciju.
 
 **Zadano**
 
@@ -795,7 +789,11 @@ $F_V$ je prema gore jer zamišljeni volumen leži ispod slobodne površine — p
 
 Horizontalna i vertikalna komponenta sile te rezultanta i smjer.
 
-![Zaobljeno dno retencijskog jezerca: R=1,00 m, b=4,00 m, h₁=2,50 m, F_H=117,6 kN, F_V=128,6 kN](../assets/print/u06_fig_zaobljeno_dno_jezerca.svg){#fig-u06-zaobljeno-dno-jezerca fig-align="center" style="width:100%;max-width:940px;"}
+![Zaobljeno dno retencijskog jezerca: R=1,00 m, b=4,00 m, h₁=2,50 m, F_H=117,6 kN, F_V=128,6 kN prema dolje](../assets/print/u06_fig_zaobljeno_dno_jezerca.svg){#fig-u06-zaobljeno-dno-jezerca fig-align="center" style="width:100%;max-width:940px;" fig-alt="Zaobljeno dno retencijskog jezerca: R=1,00 m, b=4,00 m, h₁=2,50 m, F_H=117,6 kN, F_V=128,6 kN prema dolje"}
+
+**Pretpostavke i model**
+
+Voda kvasi konkavnu unutarnju stranu segmenta odozgo. Zato je vertikalna komponenta sile unutarnje vode prema dolje; eventualni uzgon podzemne vode na vanjsku stranu temeljne ploče zaseban je slučaj opterećenja.
 
 **Rješenje**
 
@@ -812,7 +810,7 @@ V^* = 4{,}00\!\left(2{,}50 \cdot 1{,}00 + \tfrac{\pi \cdot 1{,}00^2}{4}\right) =
 $$
 
 $$
-F_V = 998 \cdot 9{,}81 \cdot 13{,}14 = 128{,}6\ \text{kN}\quad(\uparrow)
+F_V = 998 \cdot 9{,}81 \cdot 13{,}14 = 128{,}6\ \text{kN}\quad(\downarrow)
 $$
 
 $$
@@ -821,21 +819,21 @@ $$
 
 **Provjera i komentar**
 
-$F_V = 128{,}6\ \text{kN}$ znači da zaobljeno dno „nosi" imaginarni stupac vode prema gore. U proračunu temeljne ploče to je uzgon koji mora biti nadoknađen vlastitom težinom ploče ili ankerima. Kut rezultante: $\arctan(128{,}6/117{,}6) \approx 47{,}6°$ od horizontale.
+Unutarnja voda opterećuje zaobljeni segment vertikalnom komponentom $F_V=128{,}6\ \text{kN}$ prema dolje. Rezultanta zatvara kut $\arctan(128{,}6/117{,}6)\approx47{,}6^\circ$ ispod horizontale. Provjera uzgona temeljne ploče zahtijeva zaseban model vanjske podzemne vode i neto tlakova s obiju strana.
 
 :::
 
-::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Zakrivljena pregrada u spremniku za skladištenje stlačenog CO₂ &nbsp;<span class="mf1-level">T3</span></p>
+::: {#ex-u06-otvorena-hidrostatska-kalibracija-zakrivljene-pregrade-t3 .mf1-we}
+<p class="mf1-box-label">Riješeni primjer — Otvorena hidrostatska kalibracija zakrivljene pregrade &nbsp;<span class="mf1-level">T3</span></p>
 
-**Kontekst:** U postrojenju za hvatanje i skladištenje ugljika (engl. *carbon capture and storage*, CCS) jedan je od ključnih elemenata cilindrični skladišni spremnik za stlačeni CO₂. Prije puštanja u rad provodi se obavezna hidrostatička provjera čvrstoće: spremnik se ispuni vodom i opterećenje na njegove strukturne elemente mjeri se u kontroliranom uvjetu. Unutar spremnika nalazi se zakrivljena pregrada u obliku četvrtine cilindra koja razdvaja dva odjeljka.
+**Kontekst:** Za razvoj zakrivljene pregrade budućega procesnog spremnika izrađen je otvoreni, atmosferski kalibracijski bazen. Model pregrade oblika četvrtine cilindra polagano se opterećuje vodom kako bi se provjerili ručni hidrostatski integrali. Račun namjerno ne predstavlja ispitivanje čvrstoće spremnika pod tlakom.
 
 **Zadano**
 
 - Polumjer zakrivljene pregrade: $R = 1{,}20\ \text{m}$
 - Dubina vrha pregrade ispod slobodne površine: $h_t = 2{,}50\ \text{m}$
 - Širina pregrade (dimenzija u smjeru osi spremnika): $L = 3{,}50\ \text{m}$
-- Testni medij: voda, $\rho = 998\ \text{kg/m}^3$
+- Kalibracijski medij: voda, $\rho = 998\ \text{kg/m}^3$
 - Konveksna strana pregrade okrenuta je prema fluidu pod opterećenjem
 
 **Traženo**
@@ -846,7 +844,7 @@ $F_V = 128{,}6\ \text{kN}$ znači da zaobljeno dno „nosi" imaginarni stupac vo
 
 **Pretpostavke i model**
 
-Promatra se statičko stanje s vodom kao testnim medijem. Pregrada je vertikalno postavljena, vrh joj je na zadanoj dubini, a četvrtina kruga proteže se prema dolje i u stranu. Horizontalna komponenta sile jednaka je sili na vertikalnu projekciju plohe; vertikalna komponenta jednaka je težini imaginarnog volumena fluida između plohe i slobodne površine. Atmosferski tlak djeluje s obje strane spremnika, pa se njegov doprinos poništava.
+Promatra se statičko stanje u otvorenom bazenu. Pregrada je vertikalno postavljena, vrh joj je na zadanoj dubini, a četvrtina kruga proteže se prema dolje i u stranu. Voda kvasi **konveksnu stranu** pregrade, pa je $F_V$ prema gore. Magnituda horizontalne komponente dobiva se iz vertikalne projekcije, a magnituda vertikalne iz pomoćnoga volumena. Atmosferski se tlak poništava u neto opterećenju.
 
 **Rješenje**
 
@@ -877,7 +875,7 @@ $$
 Vertikalna komponenta sile zato iznosi
 
 $$
-F_V = \rho g V_{imag} = 998 \cdot 9{,}81 \cdot 11{,}58 \approx 113{,}4\ \text{kN}.
+F_V = \rho g V_{imag} = 998 \cdot 9{,}81 \cdot 11{,}58 \approx 113{,}4\ \text{kN}\quad(\uparrow).
 $$
 
 Iznos rezultante:
@@ -886,7 +884,7 @@ $$
 F_R = \sqrt{F_H^2 + F_V^2} = \sqrt{127{,}4^2 + 113{,}4^2} \approx \sqrt{16\,231 + 12\,860} \approx 170{,}5\ \text{kN}.
 $$
 
-Kut rezultante prema horizontali:
+Kut rezultante iznad horizontale:
 
 $$
 \varphi = \arctan\frac{F_V}{F_H} = \arctan\frac{113{,}4}{127{,}4} \approx 41{,}7^\circ.
@@ -894,7 +892,7 @@ $$
 
 **Provjera i komentar**
 
-Rezultanta od $170{,}5\ \text{kN}$ predstavlja opterećenje koje pregrada mora podnijeti u testnom uvjetu s vodom. Pri stvarnoj eksploataciji s tekućim CO₂ (gustoća približno $780\ \text{kg/m}^3$ pri uobičajenim CCS uvjetima), istovjetne sile bile bi za oko $22\,\%$ niže — što je razlog zašto se test čvrstoće provodi vodom, kao najgorem scenariju za hidrostatičko opterećenje. Kut djelovanja rezultante od $41{,}7^\circ$ govori projektantu nosivih veza pregrade da konstrukcijski elementi moraju jednako podnijeti horizontalnu i vertikalnu komponentu. Pri stvarnoj eksploataciji uz CO₂ pojavljuje se i dodatno opterećenje plinskim tlakom, koje treba zasebno superponirati u proračunu sigurnosti — to nije obuhvaćeno ovim hidrostatičkim testom.
+U otvorenoj kalibraciji rezultanta iznosi $170{,}5\ \text{kN}$ i djeluje $41{,}7^\circ$ iznad horizontale. Taj se rezultat ne smije proglasiti „najgorim scenarijem” niti sigurnosnim testom stvarnoga procesnog spremnika. U tlačnoj opremi opterećenje pregrade ovisi o diferencijalnom tlaku između odjeljaka, zadanom ispitnom tlaku, temperaturi i faznom stanju medija; gustoća tekućine određuje samo gravitacijski gradijent. Postupak ispitivanja i dopuštena opterećenja određuju se prema konstrukciji i mjerodavnom propisu.
 :::
 
 ::: {.mf1-samoprovjera}
@@ -913,65 +911,131 @@ Komponenta sile u smjeru osi $x$ jednaka je integralu tlaka pomnoženog s projek
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-To je volumen koji bi zauzela tekućina ako bi se prostor između zakrivljene plohe i slobodne površine ispunio istom tekućinom. Njezina težina jednaka je vertikalnoj komponenti sile koju ploha osjeća — neovisno o tome je li taj volumen u stvarnosti ispunjen tekućinom, zrakom ili je dio izrezan iz konstrukcije.
+To je geometrijski volumen zatvoren zakrivljenom plohom, okomitim bočnim plohama i vodoravnom plohom poznatoga tlaka. U otvorenom manometarskom slučaju njegova težina daje **magnitudu** vertikalne komponente; smjer dolazi iz stvarno okupane strane plohe.
 :::
 
 3. Kako se određuje smjer vertikalne komponente: prema gore ili prema dolje?
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Smjer se određuje iz orijentacije plohe i položaja imaginarnog volumena. Ako je imaginarni volumen iznad plohe (ploha čini "dno" volumena), vertikalna komponenta djeluje prema gore. Ako je imaginarni volumen ispod plohe, komponenta djeluje prema dolje.
+Smjer se određuje iz normale usmjerene od stvarnoga fluida prema stijenci. Fluid koji kvasi konkavnu stranu plohe odozgo daje komponentu prema dolje; fluid koji kvasi konveksnu donju stranu daje komponentu prema gore. Položaj pomoćnoga volumena sam nije dovoljan kriterij.
 :::
 
 4. Vrijedi li ovaj rastav sile na horizontalnu i vertikalnu komponentu i za plohe složenog (nepravilnog) oblika?
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Da, vrijedi neovisno o obliku zakrivljenosti sve dok se ploha može opisati zatvorenom geometrijom. Za nepravilne plohe horizontalna komponenta i dalje se računa preko vertikalne projekcije, a vertikalna komponenta preko volumena između plohe i slobodne površine — premda izračuni postaju složeniji i u praksi se često rješavaju numerički.
+Vektorski integral tlaka vrijedi za svaku dovoljno glatku plohu. Jednostavna zamjena $F_H$ jednom ravnom projekcijom i $|F_V|$ jednim pomoćnim volumenom traži da su projekcije i zatvarajuće plohe jednoznačno definirane; kod pregiba, prevjesa ili promjene predznaka normale dijelove treba rastaviti i zbrojiti predznačeno. Za složene trodimenzijske plohe integral se zato često računa numerički.
 :::
 :::
 
 ## Zadaci za vježbu
 
-::: {.mf1-vjezbe-list}
-1. **T1** Zakrivljeni poklopac presjeka četvrtine kruga polumjera $R = 0{,}65\ \text{m}$ i širine $b = 1{,}20\ \text{m}$ nalazi se u vodi. Gornja točka poklopca na dubini je $h_1 = 1{,}10\ \text{m}$ ispod slobodne površine. Odredi horizontalnu komponentu sile, vertikalnu komponentu sile i iznos rezultante.
+::::: {.mf1-vjezbe-list}
+1. [**T1**]{#task-u06-zakrivljeni-poklopac-presjeka-cetvrtine-kruga-polumjera-i} Zakrivljeni poklopac presjeka četvrtine kruga polumjera $R = 0{,}65\ \text{m}$ i širine $b = 1{,}20\ \text{m}$ nalazi se u vodi. Gornja točka poklopca na dubini je $h_1 = 1{,}10\ \text{m}$ ispod slobodne površine. Voda kvasi konveksnu vanjsku i donju stranu poklopca, pa je $F_V$ prema gore. Odredi horizontalnu komponentu sile, vertikalnu komponentu sile i iznos rezultante.
 
-	**Natuknica:** $F_H$ čitaj preko vertikalne projekcije, $F_V$ preko težine zamišljenog volumena, a rezultantu iz $F_R = \sqrt{F_H^2 + F_V^2}$. (Rješenje: $F_H \approx 10{,}9\ \text{kN}$; $F_V \approx 12{,}3\ \text{kN}$; $F_R \approx 16{,}4\ \text{kN}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   $F_H$ čitaj preko vertikalne projekcije, magnitudu $F_V$ preko težine pomoćnoga volumena, a rezultantu iz $F_R = \sqrt{F_H^2 + F_V^2}$.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - četvrtina kruga, slobodna površina, projekcija i zamišljeni volumen $V^*$.
+   $F_H \approx 10{,}9\ \text{kN}$; $F_V \approx 12{,}3\ \text{kN}$ prema gore; $F_R \approx 16{,}4\ \text{kN}$.
+   :::
+   ::::
+   **Skica:** da - četvrtina kruga, slobodna površina, projekcija i zamišljeni volumen $V^*$.
 
-2. **T1** Polucilindrični poklopac radijusa $R = 0{,}30\ \text{m}$ i širine $b = 0{,}90\ \text{m}$ potpuno je uronjen u vodu. Odredi komponente $F_H$ i $F_V$ te pravac rezultante ako ona prolazi središtem zakrivljenosti.
+2. [**T1**]{#task-u06-polucilindricni-poklopac-ima-okomit-promjer-radijus-i} Polucilindrični poklopac ima **okomit promjer**, radijus $R = 0{,}30\ \text{m}$ i širinu $b = 0{,}90\ \text{m}$. Središte zakrivljenosti nalazi se na dubini $h_C=1{,}20\ \text{m}$. Voda kvasi konveksnu stranu poklopca, a $F_V$ je prema gore. Odredi $F_H$, $F_V$, $F_R$ i kut rezultante prema horizontali.
 
-	**Natuknica:** projekcija daje $F_H$, zamišljeni volumen $F_V$; smjer rezultante zatvara odnos $\tan\alpha = F_V/F_H$. (Rješenje: $F_V \approx 1{,}25\ \text{kN}$, $= \rho g\,\pi R^2 b/2$ i ne ovisi o dubini; $F_H = \rho g\,h_C\,(2Rb)$ traži dubinu središta koja u ovom zadatku nije zadana.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   vertikalna projekcija ima površinu $2Rb$, a pomoćni volumen polucilindra $\pi R^2b/2$.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - polucilindrična ploha, središte zakrivljenosti i pravac rezultante.
+   $F_H=\rho gh_C(2Rb)\approx6{,}34\ \text{kN}$; $F_V=\rho g\pi R^2b/2\approx1{,}25\ \text{kN}$ prema gore; $F_R\approx6{,}47\ \text{kN}$; $\alpha\approx11{,}1^\circ$ iznad horizontale.
+   :::
+   ::::
+   **Skica:** da - polucilindrična ploha, središte zakrivljenosti i pravac rezultante.
 
-3. **T2** Polucilindrični revizijski poklopac radijusa $R = 0{,}40\ \text{m}$ i širine $b = 1{,}00\ \text{m}$ zglobno je ovješen na gornjem rubu. Voda doseže slobodnu površinu $0{,}85\ \text{m}$ iznad najviše točke zakrivljene plohe. Odredi silu rezultante i moment oko zgloba potreban za zadržavanje poklopca u zatvorenom položaju.
+3. [**T2**]{#task-u06-polucilindricna-kapa-radijusa-i-sirine-potpuno-je} Polucilindrična kapa radijusa $R=0{,}40\ \text{m}$ i širine $b=1{,}00\ \text{m}$ potpuno je uronjena, a slobodna površina nalazi se $h_t=0{,}85\ \text{m}$ iznad najviše točke kape. Voda kvasi simetričnu konveksnu donju stranu, dok je konkavna strana ventilirana na atmosferski tlak. Os zgloba prolazi središtem zakrivljenosti $C$. Odredi rezultantu hidrostatskoga pretlaka i njezin moment oko osi kroz $C$.
 
-	**Natuknica:** prvo odredi $F_H$ i $F_V$ s njihovim pravcima djelovanja, a tek zatim prenesi svaku komponentu u moment oko zgloba. (Rješenje: $F_H \approx 9{,}79\ \text{kN}$, $F_V \approx 2{,}46\ \text{kN}$, $F_R \approx 10{,}1\ \text{kN}$; rezultanta prolazi središtem zakrivljenosti pa je moment oko zgloba $M = F_H R \approx 3{,}9\ \text{kN·m}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   vodoravne se komponente poništavaju simetrijom, a svaka lokalna tlačna normala prolazi kroz $C$. Pomoćni volumen obuhvaća pravokutni stupac $2Rh_tb$ i polucilindar.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - zakrivljeni poklopac sa zglobom, komponentama i krakovima momenata.
+   $F_H=0$; $F_V=\rho gb(2Rh_t+\pi R^2/2)\approx9{,}12\ \text{kN}$ prema gore; $F_R=9{,}12\ \text{kN}$ i $M_C=0$ u idealnom modelu.
+   :::
+   ::::
+   **Skica:** da - zakrivljeni poklopac sa zglobom, komponentama i krakovima momenata.
 
-4. **T2** Zakrivljeni zatvarač presjeka četvrtine kruga polumjera $R = 0{,}55\ \text{m}$ zatvara spremnik s vodom, ali je iznad plohe zatvoren zračni prostor s jednolikim nadtlakom $p_0 = 18\ \text{kPa}$. Odredi kako se mijenjaju $F_H$ i $F_V$ u odnosu na slučaj bez nadtlaka.
+4. [**T2**]{#task-u06-zakrivljeni-zatvarac-presjeka-cetvrtine-kruga-polumjera-i} Zakrivljeni zatvarač presjeka četvrtine kruga polumjera $R=0{,}55\ \text{m}$ i širine $b=1{,}00\ \text{m}$ počinje na razdjelnici vode i zatvorenoga zračnog prostora. Zrak ima jednoliki manometarski nadtlak $p_0=18\ \text{kPa}$, voda kvasi konkavnu stranu zatvarača, a vanjska je strana na atmosferi. Odredi kako se mijenjaju $F_H$ i $F_V$ u odnosu na slučaj $p_0=0$.
 
-	**Natuknica:** nadtlak dodaj na projekciju i na zamišljeni volumen kao jednoliki dodatni tlak; smjer $F_V$ provjeri iz stvarnog rasporeda fluida iznad plohe. (Rješenje: obje komponente rastu — jednoliki nadtlak dodaje $p_0 A_x = p_0 Rb$ na $F_H$ i $p_0 A_y = p_0 Rb$ na $F_V$; za četvrtinu kruga projekcije su jednake pa svaka komponenta dobiva isti dodatak $p_0\,Rb$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   jednoliki nadtlak integrira se preko vertikalne i horizontalne projekcije.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - zakrivljena ploha, slobodna površina ili zatvoreni zračni jastuk i označeni nadtlak $p_0$.
+   $\Delta F_H=p_0Rb=9{,}90\ \text{kN}$ u vodoravnom smjeru prema van; $\Delta F_V=p_0Rb=9{,}90\ \text{kN}$ prema dolje. Ti se vektorski doprinosi dodaju komponentama za $p_0=0$.
+   :::
+   ::::
+   **Skica:** da - zakrivljena ploha, slobodna površina ili zatvoreni zračni jastuk i označeni nadtlak $p_0$.
 
-5. **T3** Zakrivljena ploha na dnu servisnog kanala zatvara volumen vode ispod stlačenog zračnog jastuka. Zamišljeni volumen koji određuje $F_V$ ima obujam $V^* = 0{,}42\ \text{m}^3$, a horizontalna projekcija plohe daje silu $F_H = 18{,}5\ \text{kN}$. Odredi vertikalnu komponentu sile, procijeni njezin smjer i izračunaj iznos rezultante.
+5. [**T3**]{#task-u06-u-otvorenom-servisnom-kanalu-voda-kvasi-konveksnu} U otvorenom servisnom kanalu voda kvasi konveksnu donju stranu zakrivljene plohe, pa je vertikalna komponenta prema gore; isti atmosferski tlak poništava se s druge strane. Pomoćni volumen ima obujam $V^*=0{,}42\ \text{m}^3$, a integracija po vertikalnoj projekciji već je dala $F_H=18{,}5\ \text{kN}$. Odredi $F_V$ i $F_R$.
 
-	**Natuknica:** iz $F_V = \rho gV^*$ najprije dobij iznos, smjer odredi iz zamišljenog volumena i rasporeda tlaka, a rezultantu zatvori vektorskim zbrojem. (Rješenje: $F_V = \rho gV^* \approx 4{,}11\ \text{kN}$ (prema gore, volumen je ispod plohe); $F_R \approx 19{,}0\ \text{kN}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   iz $|F_V|=\rho gV^*$ najprije dobij magnitudu, a zadana okupana strana određuje smjer.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - podna zakrivljena ploha, zamišljeni volumen $V^*$, projekcija za $F_H$ i smjerovi komponenti.
+   $F_V\approx4{,}11\ \text{kN}$ prema gore; $F_R\approx19{,}0\ \text{kN}$.
+   :::
+   ::::
+   **Skica:** da - podna zakrivljena ploha, zamišljeni volumen $V^*$, projekcija za $F_H$ i smjerovi komponenti.
 
-6. **T3** Četvrtcilindrični poklopac polumjera $R = 0{,}75\ \text{m}$ i širine $b = 1{,}10\ \text{m}$ nalazi se tako da mu je gornja točka na dubini $h_1 = 0{,}45\ \text{m}$ ispod slobodne površine vode. Poklopac je zglobno vezan u gornjoj točki, a na donjem rubu pridržava ga vodoravna spojnica. Odredi horizontalnu komponentu sile, vertikalnu komponentu sile, iznos rezultante i silu spojnice potrebnu da poklopac ostane zatvoren.
+6. [**T3**]{#task-u06-cetvrtcilindricni-poklopac-polumjera-i-sirine-nalazi-se} Četvrtcilindrični poklopac polumjera $R=0{,}75\ \text{m}$ i širine $b=1{,}10\ \text{m}$ nalazi se tako da mu je gornja točka na dubini $h_1=0{,}45\ \text{m}$ ispod slobodne površine vode. Voda kvasi konkavnu stranu poklopca odozgo, pa je $F_V$ prema dolje. Poklopac je zglobno vezan u gornjoj točki, a na donjem rubu pridržava ga vodoravna spojnica. Odredi $F_H$, $F_V$, $F_R$ i silu spojnice.
 
-	**Natuknica:** za $F_H$ koristi vertikalnu projekciju na dubini $h_1 + R/2$; za $F_V$ uzmi težinu imaginarnog volumena koji sada uključuje i pravokutni dio iznad četvrtine kruga; na kraju zatvori momente oko zgloba. (Rješenje: $F_H \approx 6{,}66\ \text{kN}$; $F_V \approx 8{,}39\ \text{kN}$; $F_R \approx 10{,}7\ \text{kN}$; silu spojnice zatvori iz momentne ravnoteže oko zgloba s pripadnim krakovima komponenti.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   za $F_H$ koristi vertikalnu projekciju na dubini $h_1+R/2$; za $F_V$ uzmi težinu pomoćnoga volumena koji uključuje pravokutni dio i četvrtinu valjka. Za moment oko zgloba trebaju $h_H=h_C+R^2/(12h_C)$ i težište složenoga volumena.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - četvrtcilindrični poklopac sa slobodnom površinom iznad njega, dubinom $h_1$, zglobom i spojnicom.
-:::
+   $F_H\approx6{,}66\ \text{kN}$; $h_H\approx0{,}882\ \text{m}$ ispod slobodne površine, odnosno krak $0{,}432\ \text{m}$ prema zglobu; $F_V\approx8{,}39\ \text{kN}$ prema dolje. Težište volumena leži $\bar x_V\approx0{,}343\ \text{m}$ od lijeve granice, pa je krak do zgloba $R-\bar x_V\approx0{,}407\ \text{m}$; $F_R\approx10{,}7\ \text{kN}$; $T=[F_H\cdot0{,}432+F_V(R-\bar x_V)]/R\approx8{,}39\ \text{kN}$.
+   :::
+   ::::
+   **Skica:** da - četvrtcilindrični poklopac sa slobodnom površinom iznad njega, dubinom $h_1$, zglobom i spojnicom.
+:::::
 
-![Skice uz zadatke za vježbu — zakrivljeni poklopci i rastav sila (poglavlje 6).](../assets/print/u06_vjezbe_skice.svg){#fig-u06-vjezbe fig-align="center"}
+![Skice uz zadatke za vježbu — zakrivljeni poklopci i rastav sila (poglavlje 6).](../assets/print/u06_vjezbe_skice.svg){#fig-u06-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — zakrivljeni poklopci i rastav sila (poglavlje 6)."}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -980,13 +1044,13 @@ Da, vrijedi neovisno o obliku zakrivljenosti sve dok se ploha može opisati zatv
 
 - Treba jasno odvojiti koja se sila računa na ravnoj, a koja na zakrivljenoj plohi.
 - Za horizontalnu komponentu treba koristiti projekciju, a ne stvarnu zakrivljenu površinu.
-- Treba utvrditi nalazi li se zamišljeni volumen za $F_V$ ispod ili iznad slobodne površine.
+- Treba označiti stvarno okupanu stranu i normalu od fluida prema stijenci; tek zatim pomoćnim volumenom računati magnitudu $F_V$.
 - Prije momentne ravnoteže potrebno je točno odrediti gdje prolaze pravci djelovanja pojedinih sila.
 - Treba provjeriti ima li dobivena vertikalna komponenta fizikalno smislen smjer.
 
 **Najčešća pogreška**
 
-Najčešća greška je mehanički pretpostaviti da je vertikalna komponenta na zakrivljenoj plohi uvijek prema gore. To vrijedi samo dok zamišljeni volumen koji definira $F_V$ stvarno predstavlja tekućinu ispod slobodne površine. Kad geometrija nametne podtlačni dio, smjer se mijenja.
+Najčešća je greška odrediti smjer samo prema položaju pomoćnoga volumena. Pouzdana provjera je lokalna tlačna strelica od stvarnoga fluida prema stijenci: njezina vertikalna komponenta odmah pokazuje je li rezultantni $F_V$ prema gore ili prema dolje.
 
 **Nakon ovoga poglavlja mora biti moguće**
 
@@ -1002,13 +1066,13 @@ Na segmentnoj ustavi, zaobljenom poklopcu ili zakrivljenom brodskom otvoru nije 
 
 Najveći rizik ovdje nije algebarska pogreška, nego pogrešan odabir zamišljenog volumena i smjera vertikalne komponente. Ako geometrija uključuje plinski jastuk, podtlak ili složeniju prostornu plohu, treba vrlo pažljivo provjeriti vrijedi li jednostavni 2D rastav bez dodatnih korekcija.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Zakrivljene plohe i rastav sila</span></span> nije poglavlje novih formula, nego novih pogleda na istu silu. Horizontalna komponenta čita projekciju, vertikalna težinu zamišljenog volumena, a najveći rizik nije algebra nego pogrešan smjer sile.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne i zakrivljene plohe</span></span> nije poglavlje novih formula, nego novih pogleda na istu silu. Horizontalna komponenta čita projekciju, vertikalna težinu zamišljenog volumena, a najveći rizik nije algebra nego pogrešan smjer sile.
 :::
 
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički most</p>
 
-**Gdje ovo živi u numerici.** Zakrivljene plohe su upravo razlog zašto CFD postoji kao alat. Za analitički nedostupne geometrije — segmentna ustava, vodena turbinska lopatica, krilo zrakoplova, brodski trup — više nije moguće rastavljati silu na ručne projekcije i zamišljene volumene. Numerika to radi *automatski*: za svaku ćeliju zna vektor površine $\vec{A}_i$ i tlak $p_i$, a sila je vektorska suma $\vec{F} = \sum_i p_i \vec{A}_i$.
+**Gdje ovo živi u numerici.** Za analitički nedostupne geometrije — segmentnu ustavu, turbinsku lopaticu, krilo ili brodski trup — sila se dobiva vektorskom integracijom trakcije. Ako je $\vec A_i$ vanjski vektor površine **fluidnoga** kontrolnog volumena, tlakova sila stijenke na fluid jest približno $-\sum_i p_i\vec A_i$, uz dodatak viskozne trakcije; sila fluida na stijenku ima suprotan predznak. Znak zato ovisi o tome izvještava li alat silu na fluid ili na zid i kako je orijentirana normala.
 
 **Što numerički alat radi s tim.** Mreža mora dobro razlučiti zakrivljenost — to je zadatak generatora mreže (`snappyHexMesh`, *Fluent meshing*). Što je veća krivina lokalno, to gušća mreža mora biti uz zid. Rezultati izlaze kao horizontalna, vertikalna i ukupna sila *izravno*, bez ručnog rastavljanja.
 
@@ -1018,10 +1082,3 @@ Najveći rizik ovdje nije algebarska pogreška, nego pogrešan odabir zamišljen
 
 > *Nije gradivo MF1. Ono što se ovdje radi mukotrpno za segmentnu ustavu, CFD radi za bilo koju trodimenzijsku geometriju u istom potezu.*
 :::
-
-
-
-
-
-
-

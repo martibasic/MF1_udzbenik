@@ -1,31 +1,39 @@
-# Interaktivni prikazi (Jupyter notebooci)
+# Interaktivni prikazi (Jupyter notebookovi)
 
-Ova mapa sadrži interaktivne Jupyter notebooke koji nadopunjuju
-poglavlja udžbenika. Svaki notebook je samostalna jedinica koja
-omogućuje studentu mijenjanje ključnih parametara i neposredno
-praćenje učinka na rezultat.
+Ova mapa sadrži 17 interaktivnih Jupyter notebookova koji nadopunjuju
+kanonska poglavlja U01–U15. Svaki notebook je samostalni numerički pokus:
+student najprije predviđa ishod, zatim izvodi račun i naposljetku provjerava
+bilancu, granični slučaj, pogrešku, konvergenciju, osjetljivost ili nesigurnost.
 
 ## Struktura notebooka
 
 Svaki notebook prati istu akademsku strukturu:
 
-1. **Naslov i poveznica s poglavljem** — kratak opis o čemu se radi.
-2. **Cilj i pretpostavke modela** — što se istražuje i pod kojim uvjetima.
-3. **Računski model** — jednadžbe u istom obliku kao u poglavlju.
-4. **Interaktivni prikaz** — 2 do 3 klizača za ključne parametre.
-5. **Pitanja za samostalno istraživanje** — 3 do 4 otvorena pitanja.
-6. **Veza s teorijom poglavlja** — kratak zatvarač.
+1. **Predvidi** — kvalitativni smjer, predznak ili red veličine prije računa.
+2. **Model i pretpostavke** — sustav, jednadžbe i područje valjanosti.
+3. **Izračunaj** — reproducibilni Python račun s pregledničkim ovisnostima.
+4. **Provjeri** — najmanje dvije neovisne izvršive tvrdnje.
+5. **Numerička kvaliteta** — analiza pogreške, konvergencije, osjetljivosti,
+   reziduala ili nesigurnosti.
+6. **Protumači** — pitanja o fizikalnom značenju i granici modela.
 
 ## Pokretanje
 
-### Google Colab (preporučeno)
+### JupyterLite (primarni mrežni put)
 
-Najjednostavniji način korištenja. Klikom na vezu
-*Otvori interaktivni prikaz* u poglavlju, notebook se otvara
-izravno u pregledniku. Potreban je Google račun.
+Svako kanonsko poglavlje vodi na odgovarajući notebook u JupyterLiteu, bez
+prijave i bez lokalne instalacije. Paket koristi Python/Pyodide u pregledniku i
+gradi se u `_site/jlite`. Konfiguracija, hashovi svih 17 notebookova i pokretanje
+kernela provjeravaju se automatizirano; konačni javni artefakt ipak se ne smatra
+spremnim dok ne prođe završni proizvodni build aktualnoga commita.
 
-Veze imaju oblik:
-```
+### Google Colab (pričuvni put)
+
+Ako preglednik ili mrežna politika ne podržava JupyterLite, poveznica
+*Pričuvno: otvori u Colabu* otvara isti izvorni notebook. Potreban je Google
+račun. Veze imaju oblik:
+
+```text
 https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/<ime>.ipynb
 ```
 
@@ -33,38 +41,59 @@ https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/noteb
 
 Za rad bez interneta potrebne su sljedeće knjižnice:
 
+```powershell
+python -m pip install -r requirements.txt
+python -m notebook
 ```
-pip install jupyter numpy matplotlib ipywidgets
-jupyter notebook
-```
 
-Klizači zahtijevaju proširenje `ipywidgets` koje je u standardnoj
-Jupyter distribuciji uključeno.
-
-### JupyterLite (mrežno izdanje udžbenika)
-
-U mrežnom izdanju udžbenika integriran je JupyterLite koji omogućuje
-pokretanje notebooka izravno u pregledniku, bez prijave i bez
-lokalne instalacije. Postavlja se kao zaseban podsklop pri izgradnji
-Quarto projekta (vidi `scripts/postavi_jupyterlite.md`).
+Notebookovi namjerno ovise samo o `numpy` i `matplotlib`, pa isti račun radi u
+lokalnom kernelu, Colabu i pregledničkom Pyodide kernelu.
 
 ## Popis dostupnih notebooka
 
 | Oznaka | Tema | Poglavlje |
 |---|---|---|
-| `u01_hidraulicna_presa.ipynb` | Hidraulična preša — pojačanje sile i pomak klipa | pog. 1 |
-| `u02_kapilarni_uspon.ipynb` | Kapilarni uspon u tankoj cijevi | pog. 2 |
-| `u03_diferencijalni_manometar.ipynb` | Diferencijalni manometar s dva fluida | pog. 3 |
-| `u04_paraboloidna_povrsina.ipynb` | Paraboloidna slobodna površina u rotirajućem spremniku | pog. 4 |
-| `u05_sila_na_ravnu_plohu.ipynb` | Sila i hvatište na pravokutnu plohu pod vodom | pog. 5 |
-| `u06_zakrivljena_ploha.ipynb` | Sila na zakrivljenu plohu — četvrtina kruga | pog. 6 |
-| `u07_gaz_plivajuceg_tijela.ipynb` | Gaz plivajućeg tijela | pog. 7 |
-| `u08_kontinuitet_suzenje.ipynb` | Kontinuitet u suženju cijevi | pog. 8 |
-| `u09_venturi.ipynb` | Venturijeva cijev — utjecaj geometrije na tlak i brzinu | pog. 9 |
-| `u10_moody_dijagram.ipynb` | Moodyjev dijagram — koeficijent trenja | pog. 10 |
-| `u11_sila_na_koljeno.ipynb` | Sila na koljeno — promjena smjera strujanja | pog. 11 |
-| `u12_pelton_lopatica.ipynb` | Trokuti brzina i snaga na Peltonovoj lopatici | pog. 12 |
-| `u13_paralelne_grane.ipynb` | Paralelne grane cjevovoda — raspodjela protoka | pog. 13 |
+| `u01_hidraulicna_presa.ipynb` | Hidraulična preša — pojačanje sile i pomak klipa | U01 |
+| `u02_kapilarni_uspon.ipynb` | Kapilarni uspon u tankoj cijevi | U02 |
+| `u03_diferencijalni_manometar.ipynb` | Diferencijalni manometar s dva fluida | U03 |
+| `u04_paraboloidna_povrsina.ipynb` | Paraboloidna slobodna površina u rotirajućem spremniku | U04 |
+| `u05_sila_na_ravnu_plohu.ipynb` | Sila i hvatište na pravokutnu plohu pod vodom | U05 |
+| `u06_zakrivljena_ploha.ipynb` | Sila na zakrivljenu plohu — četvrtina kruga | U05 |
+| `u07_gaz_plivajuceg_tijela.ipynb` | Gaz plivajućeg tijela | U06 |
+| `u08_kontinuitet_suzenje.ipynb` | Kontinuitet u suženju cijevi | U07 |
+| `u09_venturi.ipynb` | Venturijeva cijev — utjecaj geometrije na tlak i brzinu | U08 |
+| `u09_kompresibilna_sapnica.ipynb` | Kompresibilna sapnica i prigušenje protoka | U09 |
+| `u11_sila_na_koljeno.ipynb` | Sila na koljeno — promjena smjera strujanja | U10 |
+| `u14_cd_re_kugla.ipynb` | Ovisnost koeficijenta otpora kugle o Reynoldsovu broju | U11 |
+| `u12_poiseuille_konvergencija.ipynb` | Poiseuilleov profil i numerička konvergencija | U12 |
+| `u10_moody_dijagram.ipynb` | Colebrookova jednadžba i koeficijent trenja | U13 |
+| `u13_paralelne_grane.ipynb` | Paralelne grane cjevovoda — raspodjela protoka | U13 |
+| `u12_pelton_lopatica.ipynb` | Trokuti brzina i snaga na Peltonovoj lopatici | U14 |
+| `u15_otvoreni_tokovi.ipynb` | Režimi otvorenog toka i kritična dubina | U15 |
+
+## Automatska provjera
+
+Kanonski popis svih 17 obveznih notebookova nalazi se u manifestu sheme v2,
+`tools/verification_manifest.json`. Sljedeća naredba provjerava inventar, JSON,
+Python sintaksu, faze `predvidi → izračunaj → provjeri`, najmanje dvije neovisne
+tvrdnje, numeričku analizu i dopuštene pregledničke ovisnosti bez pokretanja
+kernela:
+
+```
+python tools/execute_notebooks.py --validate-only
+```
+
+Potpuna provjera pokreće svaki notebook u zasebnom čistom kernelu, u memoriji,
+bez prepisivanja izvornog `.ipynb` zapisa:
+
+```
+python tools/execute_notebooks.py
+```
+
+Ista se potpuna provjera izvršava u Pages CI-ju prije Quarto rendera. Aktualni
+lokalni presjek prolazi 17/17 notebookova u zasebnim čistim kernelima. To
+potvrđuje izvršivost i ugovor notebooka, ali nije zamjena za stručnu validaciju
+fizikalnoga modela.
 
 ## Dodavanje novog notebooka
 

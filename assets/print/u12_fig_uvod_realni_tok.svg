@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="u12rt-title u12rt-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
+  <title id="u12rt-title">Od lokalne bilance do graničnog sloja i turbulencije</title>
+  <desc id="u12rt-desc">Prikaz kontrolnog elementa s tlakom i viskoznim naprezanjem, rasta graničnog sloja uz stijenku te vremenskog zapisa turbulentne brzine oko srednje vrijednosti.</desc>
+  <defs>
+    <marker id="u12rt-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1565c0"/></marker>
+    <style>.t{font-family:'Segoe UI',Arial,sans-serif;fill:#243442}.h{font-size:18px;font-weight:700}.l{font-size:15px}.a{stroke:#1565c0;stroke-width:3;fill:none;marker-end:url(#u12rt-arrow)}</style>
+  </defs>
+  <rect x="10" y="10" width="940" height="280" rx="18" fill="#f7fafc" stroke="#c7d4dd"/>
+  <g transform="translate(35,35)">
+    <text class="t h" x="120" y="0" text-anchor="middle">Lokalna bilanca</text>
+    <rect x="72" y="60" width="96" height="96" fill="#dce9f1" stroke="#506371" stroke-width="3"/>
+    <path class="a" d="M25 108 H70"/><path class="a" d="M215 108 H170"/>
+    <path d="M88 55 H150" stroke="#c0392b" stroke-width="3" marker-end="url(#u12rt-arrow)"/>
+    <text class="t l" x="30" y="95">p</text><text class="t l" x="196" y="95">p+dp</text><text class="t l" x="115" y="45">τ</text>
+    <text class="t l" x="120" y="205" text-anchor="middle">inercija = tlak + viskoznost + težina</text>
+  </g>
+  <g transform="translate(340,35)">
+    <text class="t h" x="140" y="0" text-anchor="middle">Granični sloj</text>
+    <line x1="5" y1="175" x2="280" y2="175" stroke="#506371" stroke-width="6"/>
+    <path d="M10 170 C70 135 155 85 275 55 L275 170 Z" fill="#aed6f1" opacity="0.72"/>
+    <path d="M10 170 C70 135 155 85 275 55" fill="none" stroke="#1565c0" stroke-width="3"/>
+    <path class="a" d="M25 45 H110"/><path class="a" d="M125 45 H210"/>
+    <text class="t l" x="140" y="205" text-anchor="middle">no-slip stvara rastući sloj δ(x)</text>
+  </g>
+  <g transform="translate(675,35)">
+    <text class="t h" x="120" y="0" text-anchor="middle">Turbulentna fluktuacija</text>
+    <line x1="10" y1="115" x2="230" y2="115" stroke="#7a8a96" stroke-width="2" stroke-dasharray="6 5"/>
+    <path d="M10 125 L24 82 L38 148 L52 100 L66 118 L80 72 L94 145 L108 93 L122 132 L136 75 L150 126 L164 104 L178 150 L192 86 L206 120 L230 96" fill="none" stroke="#c0392b" stroke-width="3"/>
+    <text class="t l" x="18" y="105">U</text><text class="t l" x="120" y="205" text-anchor="middle">u(t) = U + u′(t), intenzitet I</text>
+  </g>
+</svg>

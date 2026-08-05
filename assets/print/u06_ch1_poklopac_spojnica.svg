@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="u06c1ps_title u06c1ps_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:920px;height:auto;">
   <title id="u06c1ps_title">Cetvrtcilindricni poklopac s vodoravnom spojnicom</title>
-  <desc id="u06c1ps_desc">Cetvrtcilindricni poklopac sirine b=1,40 m i polumjera R=1,10 m. Gornja tocka A na slobodnoj povrsini vodi je zglob, donja tocka D pridrzana je vodoravnom spojnicom T. Hidrostaticke komponente: F_H=8,29 kN na dubini h_H=2R/3=0,733 m i F_V=13,03 kN prema dolje s krakom x_V=4R/(3pi)=0,467 m. Rezultanta F_R=15,44 kN pod kutom 57,5 stupnjeva. Iz momenta oko A sila spojnice T=11,06 kN prema lijevo.</desc>
+  <desc id="u06c1ps_desc">Cetvrtcilindricni poklopac sirine b=1,40 m i polumjera R=1,10 m. Gornja tocka A na slobodnoj povrsini je zglob, a donja tocka D pridrzana je vodoravnom spojnicom T. Voda kvasi konveksnu donju stranu. Hidrostaticke komponente su F_H=8,29 kN udesno na dubini h_H=0,733 m i F_V=13,03 kN prema gore s krakom x_V=R-4R/(3pi)=0,633 m od zgloba A. Rezultanta F_R=15,44 kN djeluje 57,5 stupnjeva iznad horizontale, a iz momenta oko A slijedi T=13,03 kN prema lijevo.</desc>
 
   <defs>
     <linearGradient id="u06c1ps_voda" x1="0" y1="0" x2="0" y2="1">
@@ -62,9 +62,8 @@
   <!-- Sila F_H: horizontalno na poklopac na dubini h_H, smjer udesno (voda gura poklopac) -->
   <!-- h_H = 2R/3 = 96 px ispod A, dakle y=264. Strelica zavrsava na luku (x na luku gdje y=264): (x-364)^2+(264-168)^2=144^2 -> x=364-sqrt(144^2-96^2)=364-107=257 -->
   <line x1="180" y1="264" x2="254" y2="264" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u06c1ps_fR)" />
-  <!-- Sila F_V: vertikalno prema dolje na poklopac (tezina V*) -->
-  <!-- x_V = 4R/(3pi) = 61 px desno od A, dakle x=283. Luk: y=168+sqrt(144^2-81^2)=168+119=287 -->
-  <line x1="283" y1="208" x2="283" y2="285" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u06c1ps_fR)" />
+  <!-- Sila F_V prema gore; krak od A je R-4R/(3pi), priblizno 83 px, x=305. -->
+  <line x1="305" y1="285" x2="305" y2="208" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u06c1ps_fR)" />
   <!-- Sila spojnice T: vodoravno u D, prema lijevo (reakcija - zelena) -->
   <line x1="362" y1="312" x2="297" y2="312" stroke="#1e8449" stroke-width="2.8" marker-end="url(#u06c1ps_fG)" />
   <!-- Naznaka momentnog uvjeta oko A (luk + oznaka) -->
@@ -73,7 +72,7 @@
   <!-- Kota R (radijus horizontalno): od A do (364,168), iznad slobodne povrsine -->
   <!-- Kota R vertikalno (visina poklopca = R), desno od desne stjenke -->
   <!-- Kota h_H = 2R/3 (dubina pravca djelovanja F_H), lijevo od lijeve stjenke -->
-  <!-- Kota x_V = 4R/(3pi) (vodoravni krak F_V), ispod dna desno -->
+  <!-- Kota x_V = R-4R/(3pi) (vodoravni krak F_V od zgloba A) -->
   <!-- Vertikalna referenca kroz A (tanka isprekidana) za x_V citanje -->
   <line x1="222" y1="168" x2="222" y2="345" stroke="#7a8a96" stroke-width="0.6" stroke-dasharray="3,3" />
 
@@ -105,8 +104,8 @@
   <line x1="64" y1="264" x2="40" y2="264" stroke="#b7600c" stroke-width="0.7" />
   <line x1="46" y1="171" x2="46" y2="261" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u06c1ps_dimL)" marker-end="url(#u06c1ps_dim)" />
   <line x1="222" y1="346" x2="222" y2="384" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="283" y1="287" x2="283" y2="384" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="225" y1="378" x2="280" y2="378" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u06c1ps_dimL)" marker-end="url(#u06c1ps_dim)" />
+  <line x1="305" y1="287" x2="305" y2="384" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
+  <line x1="225" y1="378" x2="302" y2="378" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u06c1ps_dimL)" marker-end="url(#u06c1ps_dim)" />
   <rect x="508" y="274" width="6" height="78" rx="3" fill="#b7600c" />
   <text x="40" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Cetvrtcilindricni poklopac u spremniku</text>
   <text x="40" y="66" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">A: zglob na slobodnoj povrsini • D: vodoravna spojnica T</text>
@@ -127,17 +126,17 @@
   <text x="175" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">H</tspan></text>
   <text x="175.0" y="276.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="end" fill="#c0392b">= 8,29 kN</text>
 
-  <text x="294" y="242" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan></text>
-  <text x="294.0" y="258.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#c0392b">= 13,03 kN</text>
+  <text x="314" y="242" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> ↑</text>
+  <text x="314" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#c0392b">= 13,03 kN</text>
 
   <text x="332" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1e8449"><tspan font-weight="700">T</tspan></text>
-  <text x="332.0" y="322.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1e8449">= 11,06 kN</text>
+  <text x="332.0" y="322.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1e8449">= 13,03 kN</text>
 
   <text x="237" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">ΣM<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = 0</text>
 
   <text x="80" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78"><tspan font-style="italic">b</tspan> = 1,40 m (okomito na ravninu crteza)</text>
 
-  <text x="80" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">V* je imaginarni volumen vode iznad poklopca (cetvrtina valjka);</text>
+  <text x="80" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">V* je pomocni volumen na suprotnoj strani luka (cetvrtina valjka);</text>
   <text x="80" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan> i F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> otvaraju poklopac, spojnica T ga zatvara.</text>
 
   <text x="720" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Postupak (R = 1,10 m, b = 1,40 m, ρ = 998 kg/m³)</text>
@@ -149,21 +148,21 @@
 
   <text x="524" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">2. Vertikalna komponenta (tezina V*)</text>
   <text x="524" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">V* = πR²b / 4 = 1,331 m³</text>
-  <text x="524" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> = ρ g V* ≈ <tspan font-weight="700" fill="#c0392b">13,03 kN</tspan> (prema dolje)</text>
-  <text x="524" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">krak od zgloba A: x<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> = 4R/(3π) ≈ 0,467 m</text>
+  <text x="524" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> = ρ g V* ≈ <tspan font-weight="700" fill="#c0392b">13,03 kN</tspan> (prema gore)</text>
+  <text x="524" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">krak od A: x<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> = R−4R/(3π) ≈ 0,633 m</text>
 
   <text x="524" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">R</tspan> = √(F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">H</tspan>² + F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan>²) ≈ <tspan font-weight="700" fill="#b7600c">15,44 kN</tspan></text>
-  <text x="524" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">α = arctan(F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> / F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">H</tspan>) ≈ <tspan font-weight="700" fill="#b7600c">57,5°</tspan> (prema dolje)</text>
+  <text x="524" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">α = arctan(F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> / F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">H</tspan>) ≈ <tspan font-weight="700" fill="#b7600c">57,5°</tspan> (prema gore)</text>
 
   <text x="524" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">4. Sila spojnice iz ΣM<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = 0</text>
   <text x="524" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">T · R = F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">H</tspan> · h<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">H</tspan> + F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> · x<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan></text>
   <text x="524" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">T = (F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">H</tspan> · h<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">H</tspan> + F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> · x<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan>) / R</text>
-  <text x="524" y="444" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449">T ≈ 11,06 kN  (prema lijevo)</text>
+  <text x="524" y="444" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449">T ≈ 13,03 kN  (prema lijevo)</text>
 
   <text x="720" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
   <text x="556" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#c0392b">F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">H</tspan> = 8,29 kN</text>
   <text x="660" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#c0392b">F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> = 13,03 kN</text>
-  <text x="864" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1e8449">T = 11,06 kN</text>
+  <text x="864" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1e8449">T = 13,03 kN</text>
 <text x="293" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">R</tspan> = 1,10 m</text>
 
   <text x="418" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c"><tspan font-style="italic">R</tspan></text>
@@ -172,7 +171,7 @@
   <text x="32" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#b7600c">0,733</text>
   <text x="32" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#b7600c">m</text>
 
-  <text x="252" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> = 0,467 m</text>
+  <text x="264" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">V</tspan> = 0,633 m</text>
 
   <text x="524" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">3. Rezultanta i kut prema horizontali</text>
   <text x="772" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#b7600c">F<tspan baseline-shift="sub" font-size="0.7em" font-weight="700">R</tspan> = 15,44 kN</text>

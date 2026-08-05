@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "case_id": "hydrofoil_experiment",
+  "created": "2026-08-01",
+  "last_access_check": "2026-08-01",
+  "data_classification": "public_reference_archive",
+  "external_measurements_used": true,
+  "measurements_copied": true,
+  "curve_digitization_performed": false,
+  "sources": [
+    {
+      "role": "case definition and curation",
+      "title": "NASA Turbulence Modeling Resource — 2D NACA 0012 Airfoil Validation Case",
+      "url": "https://tmbwg.github.io/turbmodels/naca0012_val.html",
+      "maintainer": "NASA Turbulence Modeling Resource / Turbulence Model Benchmarking Working Group"
+    },
+    {
+      "role": "experimental force table",
+      "title": "Ladson force data, NASA TM 4074 (1988), Re=6 million, M=0.15, transition tripped",
+      "url": "https://tmbwg.github.io/turbmodels/NACA0012_validation/CLCD_Ladson_expdata.dat",
+      "selection": "120-grit zone copied to experimental_forces.csv without graph digitization"
+    },
+    {
+      "role": "three-grid CFD reference",
+      "title": "FUN3D SA/SA-neg results with point-vortex farfield correction, grid family II",
+      "url": "https://tmbwg.github.io/turbmodels/NACA0012numerics_val/fun3d_results_sa_withN.dat",
+      "selection": "finest three available family-II grids copied to grids.csv"
+    },
+    {
+      "role": "primary experimental report",
+      "title": "Effects of Independent Variation of Mach and Reynolds Numbers on the Low-Speed Aerodynamic Characteristics of the NACA 0012 Airfoil Section",
+      "author": "Charles L. Ladson",
+      "report": "NASA TM 4074",
+      "year": 1988,
+      "url": "https://ntrs.nasa.gov/citations/19880019495"
+    }
+  ],
+  "limitations": [
+    "The experimental row nearest the CFD incidence is at 10.10 degrees, not exactly 10.00 degrees.",
+    "The distributed force table does not carry a complete measurement-uncertainty budget.",
+    "The archived integral CFD table does not include residual, force-monitor or mass-imbalance histories.",
+    "The case is aerodynamic; using it as a hydrofoil analogue excludes free-surface, cavitation and medium-specific effects.",
+    "Grid-family choice strongly affects the asymptote; only NASA TMR family II is used here."
+  ]
+}

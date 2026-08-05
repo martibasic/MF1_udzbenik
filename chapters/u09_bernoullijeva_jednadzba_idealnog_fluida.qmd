@@ -1,6 +1,12 @@
 ---
-title: "9. Bernoullijeva jednadžba idealnog fluida"
+title: "Poglavlje je premješteno"
 page-layout: article
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=u08_energijska_jednadzba_i_bernoulli.html">
+        <link rel="canonical" href="u08_energijska_jednadzba_i_bernoulli.html">
 ---
 
-{{< include ../source/u09_bernoullijeva_jednadzba_idealnog_fluida.md >}}
+Sadržaj je premješten u [8. Energijska jednadžba i Bernoulli](u08_energijska_jednadzba_i_bernoulli.qmd).

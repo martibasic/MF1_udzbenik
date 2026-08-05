@@ -21,6 +21,15 @@ def _check(out, rid, value, target, unit="", rel=TOL):
     })
 
 
+def _invariant(out, rid, condition, details):
+    out.append({
+        "id": rid,
+        "status": "OK" if condition else "FAIL",
+        "verification": "invariant",
+        "details": "" if condition else details,
+    })
+
+
 def primjer_1_cetvrtina(R=1.22, b=1.83, h_1=2.44, rho=998.0, g=9.81):
     A_x = R * b
     h_Cx = h_1 + R / 2
@@ -75,11 +84,14 @@ def cjeloviti_1_spojnica(R=1.10, b=1.40, rho=998.0, g=9.81):
     h_H = 2 * R / 3
     V_star = math.pi * R**2 / 4 * b
     F_V = rho * g * V_star
-    x_V = 4 * R / (3 * math.pi)
+    # Kvasi se konveksna donja/lijeva strana. Teziste cetvrtine kruga udaljeno
+    # je 4R/(3pi) od desnoga radijusa, pa je krak prema zglobu A njegov komplement.
+    x_V = R - 4 * R / (3 * math.pi)
     F_R = math.sqrt(F_H**2 + F_V**2)
+    alpha_deg = math.degrees(math.atan2(F_V, F_H))
     T = (F_H * h_H + F_V * x_V) / R
     return {"F_H": F_H, "h_H": h_H, "F_V": F_V, "x_V": x_V,
-            "F_R": F_R, "T": T}
+            "F_R": F_R, "alpha_deg": alpha_deg, "T": T}
 
 
 def primjer_5_kotao(R=0.60, b=1.50, h_1=1.20, rho=998.0, g=9.81):
@@ -112,38 +124,32 @@ def zadatak_1(R=0.65, b=1.20, h_1=1.10, rho=998.0, g=9.81):
             "F_R": math.sqrt(F_H**2 + F_V**2)}
 
 
-def zadatak_2(R=0.30, b=0.90, rho=998.0, g=9.81):
-    # potpuno uronjen polucilindar - F_H = ρg(2R)b · h_C (h_C dubina sredista)
-    # Za potpuno uronjen polucilindar bez specificiranja h_C, pretpostavi
-    # h_C = R kao minimalna dubina dno-kraj projekcije
-    # ili treba dubinu sredista; nedovoljno definirano u tekstu
-    # Pa samo vratim F_H i F_V kao funkciju nominalne projekcije
-    return {"A_x": 2 * R * b}
+def zadatak_2(R=0.30, b=0.90, h_C=1.20, rho=998.0, g=9.81):
+    A_x = 2 * R * b
+    F_H = rho * g * h_C * A_x
+    V_star = math.pi * R**2 * b / 2
+    F_V = rho * g * V_star
+    F_R = math.hypot(F_H, F_V)
+    alpha_deg = math.degrees(math.atan2(F_V, F_H))
+    return {"F_H": F_H, "F_V": F_V, "F_R": F_R,
+            "alpha_deg": alpha_deg}
 
 
 def zadatak_3(R=0.40, b=1.00, h_top=0.85, rho=998.0, g=9.81):
-    # Polucilindricni s zglobom gore, voda do h_top iznad gornjeg ruba
-    A_x = 2 * R * b
-    h_Cx = h_top + R  # srediste vertikalne projekcije
-    F_H = rho * g * A_x * h_Cx
-    # F_V za polucilindar dolje = razlika dviju imaginarnih volumena
-    # Pojednostavljeno: V* = pravokutnik (h_top + R) * 2R * b - polucilindar
-    V_pravokutnik = (h_top + R) * 2 * R * b
-    V_polucilindar = math.pi * R**2 / 2 * b
-    V_iznad = V_pravokutnik - V_polucilindar
-    F_V = rho * g * V_iznad
-    return {"F_H": F_H, "F_V": F_V}
+    # Simetricna polukapa: horizontalni doprinosi i svi momenti oko C se
+    # ponistavaju. Pomocni volumen je stupac iznad tjemena plus polucilindar.
+    F_H = 0.0
+    V_star = b * (2 * R * h_top + math.pi * R**2 / 2)
+    F_V = rho * g * V_star
+    return {"F_H": F_H, "F_V": F_V, "F_R": F_V, "M_C": 0.0}
 
 
-def zadatak_4(R=0.55, p_0=18e3, b=1.0, rho=998.0, g=9.81):
-    # Cetvrtina kruga s nadtlakom p_0
-    A_x = R * b
-    F_H_no_p = rho * g * A_x * (R / 2)
-    F_H = F_H_no_p + p_0 * A_x
-    V_star = math.pi * R**2 / 4 * b
-    F_V_no_p = rho * g * V_star
-    F_V = F_V_no_p + p_0 * R * b
-    return {"F_H": F_H, "F_V": F_V}
+def zadatak_4(R=0.55, p_0=18e3, b=1.0):
+    # Trazene su promjene u odnosu na p0=0. Jednoliki tlak integrira se po
+    # okomitoj odnosno vodoravnoj projekciji, obje povrsine Rb.
+    delta_F_H = p_0 * R * b
+    delta_F_V = p_0 * R * b
+    return {"delta_F_H": delta_F_H, "delta_F_V": delta_F_V}
 
 
 def zadatak_5(V_star=0.42, F_H=18.5e3, rho=998.0, g=9.81):
@@ -156,10 +162,22 @@ def zadatak_6(R=0.75, b=1.10, h_1=0.45, rho=998.0, g=9.81):
     A_x = R * b
     h_Cx = h_1 + R / 2
     F_H = rho * g * A_x * h_Cx
-    V_star = b * (h_1 * R + math.pi * R**2 / 4)
+    I_G = b * R**3 / 12
+    h_H = h_Cx + I_G / (A_x * h_Cx)
+    lever_H = h_H - h_1
+    V_rect = b * h_1 * R
+    V_quarter = b * math.pi * R**2 / 4
+    V_star = V_rect + V_quarter
     F_V = rho * g * V_star
+    x_bar_V = (
+        V_rect * (R / 2) + V_quarter * (4 * R / (3 * math.pi))
+    ) / V_star
+    lever_V = R - x_bar_V
     F_R = math.sqrt(F_H**2 + F_V**2)
-    return {"F_H": F_H, "F_V": F_V, "F_R": F_R}
+    T = (F_H * lever_H + F_V * lever_V) / R
+    return {"F_H": F_H, "h_H": h_H, "lever_H": lever_H,
+            "F_V": F_V, "x_bar_V": x_bar_V, "lever_V": lever_V,
+            "F_R": F_R, "T": T}
 
 
 # ------------ Faza 1.5 dodatak: Plinski jastuk iznad cetvrtkruga ----------------
@@ -212,9 +230,10 @@ def verify():
     _check(out, "U06.CH1.F_H_kN", r["F_H"] / 1000, 8.29, "kN")
     _check(out, "U06.CH1.h_H", r["h_H"], 0.733, "m")
     _check(out, "U06.CH1.F_V_kN", r["F_V"] / 1000, 13.03, "kN")
-    _check(out, "U06.CH1.x_V", r["x_V"], 0.467, "m")
+    _check(out, "U06.CH1.x_V", r["x_V"], 0.633, "m")
     _check(out, "U06.CH1.F_R_kN", r["F_R"] / 1000, 15.44, "kN", rel=0.02)
-    _check(out, "U06.CH1.T_kN", r["T"] / 1000, 11.06, "kN", rel=0.02)
+    _check(out, "U06.CH1.alpha_deg", r["alpha_deg"], 57.5, "deg", rel=0.02)
+    _check(out, "U06.CH1.T_kN", r["T"] / 1000, 13.03, "kN", rel=0.02)
 
     r = primjer_5_kotao()
     _check(out, "U06.P5.F_H_kN", r["F_H"] / 1000, 13.22, "kN")
@@ -226,11 +245,69 @@ def verify():
     _check(out, "U06.P6.F_V_kN", r["F_V"] / 1000, 128.6, "kN")
     _check(out, "U06.P6.F_R_kN", r["F_R"] / 1000, 174.0, "kN", rel=0.02)
 
-    for name, fn in [("Z1", zadatak_1), ("Z2", zadatak_2), ("Z3", zadatak_3),
-                     ("Z4", zadatak_4), ("Z5", zadatak_5), ("Z6", zadatak_6)]:
-        r = fn()
-        first_key = next(iter(r))
-        _check(out, f"U06.{name}.{first_key}_pos", r[first_key], r[first_key])
+    z1 = zadatak_1()
+    _check(out, "U06.Z1.F_H_kN", z1["F_H"] / 1000, 10.9, "kN")
+    _check(out, "U06.Z1.F_V_kN", z1["F_V"] / 1000, 12.3, "kN")
+    _check(out, "U06.Z1.F_R_kN", z1["F_R"] / 1000, 16.4, "kN")
+
+    z2 = zadatak_2()
+    _check(out, "U06.Z2.F_H_kN", z2["F_H"] / 1000, 6.34, "kN")
+    _check(out, "U06.Z2.F_V_kN", z2["F_V"] / 1000, 1.25, "kN")
+    _check(out, "U06.Z2.F_R_kN", z2["F_R"] / 1000, 6.47, "kN")
+    _check(out, "U06.Z2.alpha_deg", z2["alpha_deg"], 11.1, "deg")
+
+    z3 = zadatak_3()
+    _check(out, "U06.Z3.F_H_kN", z3["F_H"] / 1000, 0.0, "kN")
+    _check(out, "U06.Z3.F_V_kN", z3["F_V"] / 1000, 9.12, "kN")
+    _check(out, "U06.Z3.F_R_kN", z3["F_R"] / 1000, 9.12, "kN")
+    _check(out, "U06.Z3.M_C", z3["M_C"], 0.0, "N m")
+
+    z4 = zadatak_4()
+    _check(out, "U06.Z4.delta_F_H_kN", z4["delta_F_H"] / 1000, 9.90, "kN")
+    _check(out, "U06.Z4.delta_F_V_kN", z4["delta_F_V"] / 1000, 9.90, "kN")
+
+    z5 = zadatak_5()
+    _check(out, "U06.Z5.F_V_kN", z5["F_V"] / 1000, 4.11, "kN")
+    _check(out, "U06.Z5.F_R_kN", z5["F_R"] / 1000, 19.0, "kN")
+
+    z6 = zadatak_6()
+    _check(out, "U06.Z6.F_H_kN", z6["F_H"] / 1000, 6.66, "kN")
+    _check(out, "U06.Z6.h_H", z6["h_H"], 0.882, "m")
+    _check(out, "U06.Z6.lever_H", z6["lever_H"], 0.432, "m")
+    _check(out, "U06.Z6.F_V_kN", z6["F_V"] / 1000, 8.39, "kN")
+    _check(out, "U06.Z6.x_bar_V", z6["x_bar_V"], 0.343, "m")
+    _check(out, "U06.Z6.lever_V", z6["lever_V"], 0.407, "m")
+    _check(out, "U06.Z6.F_R_kN", z6["F_R"] / 1000, 10.7, "kN")
+    _check(out, "U06.Z6.T_kN", z6["T"] / 1000, 8.39, "kN")
+
+    _invariant(
+        out,
+        "U06.INV.resultant_component_balance",
+        abs(z1["F_R"] ** 2 - z1["F_H"] ** 2 - z1["F_V"] ** 2) < 1e-6,
+        "Rezultanta nije vektorski zbroj komponenti.",
+    )
+    _invariant(
+        out,
+        "U06.INV.semicylinder_symmetry",
+        z3["F_H"] == 0.0 and z3["M_C"] == 0.0 and z3["F_V"] > 0.0,
+        "Simetricna polukapa ne ponistava FH i moment oko C.",
+    )
+    _invariant(
+        out,
+        "U06.INV.uniform_pressure_projections",
+        z4["delta_F_H"] == z4["delta_F_V"] == 18e3 * 0.55,
+        "Jednaki projekcijski presjeci nisu dali jednake dodatke sile.",
+    )
+    _invariant(
+        out,
+        "U06.INV.hinge_moment_balance",
+        abs(
+            z6["T"] * 0.75
+            - z6["F_H"] * z6["lever_H"]
+            - z6["F_V"] * z6["lever_V"]
+        ) < 1e-9,
+        "Sila spojnice ne zatvara moment hidrostatskih komponenti.",
+    )
 
     # Faza 1.5: Plinski jastuk iznad cetvrtkruga
     r = primjer_plinski_jastuk()

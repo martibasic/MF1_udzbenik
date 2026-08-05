@@ -21,6 +21,15 @@ def _check(out: list, rid: str, value: float, target: float, unit: str = "", rel
     })
 
 
+def _invariant(out: list, rid: str, condition: bool, details: str):
+    out.append({
+        "id": rid,
+        "status": "OK" if condition else "FAIL",
+        "verification": "invariant",
+        "details": "" if condition else details,
+    })
+
+
 def kratki(mu=0.18, rho=900.0):
     return {"nu": mu / rho}
 
@@ -74,6 +83,17 @@ def primjer_vlaga_zid(d_por=0.12e-3, sigma=0.072, theta_deg=40.0, rho=998.0, g=9
     return {"h": h, "h_2": h_2}
 
 
+def primjer_lab_on_chip(d=60e-6, sigma=0.055, theta_deg=25.0,
+                         rho=1010.0, theta_hydrophobic_deg=110.0, g=9.81):
+    theta = math.radians(theta_deg)
+    h = 4 * sigma * math.cos(theta) / (rho * g * d)
+    dp = 4 * sigma * math.cos(theta) / d
+    h_hydrophobic = (
+        4 * sigma * math.cos(math.radians(theta_hydrophobic_deg)) / (rho * g * d)
+    )
+    return {"h": h, "dp": dp, "h_hydrophobic": h_hydrophobic}
+
+
 def zadatak_1(delta=2.4e-3, A=0.22, v=0.65, mu=0.84):
     dvdy = v / delta
     tau = mu * dvdy
@@ -113,8 +133,13 @@ def zadatak_6(d=0.50e-3, sigma=0.072, rho=998.0, g=9.81, theta_deg=0.0,
     cos_t = math.cos(math.radians(theta_deg))
     h_cap = 4 * sigma * cos_t / (rho * g * d)
     dp = 4 * sigma / D
-    p_M = rho * g * max(H - h_cap, 0.0) + dp
-    return {"h_cap": h_cap, "dp": dp, "p_M": p_M}
+    # Kapilarni tlak 4 sigma/d istodobno podize stupac. Dodatni spremnicki
+    # pretlak potreban je samo za dio ukupnog zahtjeva koji kapilara ne pokriva.
+    pressure_margin = rho * g * H + dp - 4 * sigma * cos_t / d
+    p_M = max(pressure_margin, 0.0)
+    p_M_conservative = rho * g * H + dp
+    return {"h_cap": h_cap, "dp": dp, "pressure_margin": pressure_margin,
+            "p_M": p_M, "p_M_conservative": p_M_conservative}
 
 
 # ------------ Faza 1.5 dodatak: Klizni lezaj pri hladnoj/toploj temperaturi ----------------
@@ -151,40 +176,57 @@ def verify() -> list:
     r = primjer_etanol()
     _check(out, "U02.P2.h_mm", r["h"] * 1000, 10.8, "mm")
 
-    r = primjer_kapljica()
-    _check(out, "U02.P3.dp", r["dp"], 240.0, "Pa")
-    _check(out, "U02.P3.p_in_Pa", r["p_in"], 101565.0, "Pa")
-    r2 = primjer_kapljica_2()
-    _check(out, "U02.P3.dp_2", r2["dp"], 480.0, "Pa")
-
     r = cjeloviti_mikrodozator()
     _check(out, "U02.CH1.h_cap_mm", r["h_cap"] * 1000, 36.8, "mm")
     _check(out, "U02.CH1.dp", r["dp"], 120.0, "Pa")
     _check(out, "U02.CH1.p_in_Pa", r["p_in"], 101445.0, "Pa")
     _check(out, "U02.CH1.p_M_min", r["p_M_min"], 347.0, "Pa", rel=0.03)
 
-    r = primjer_lezaj()
-    _check(out, "U02.lezaj.v", r["v"], 4.56, "m/s")
-    _check(out, "U02.lezaj.tau", r["tau"], 2280.0, "Pa")
-    _check(out, "U02.lezaj.F", r["F"], 34.4, "N")
-    _check(out, "U02.lezaj.M", r["M"], 1.03, "Nm")
-
-    r = primjer_vlaga_zid()
-    _check(out, "U02.vlaga.h_cm", r["h"] * 100, 18.8, "cm")
-    _check(out, "U02.vlaga.h_2_cm", r["h_2"] * 100, 37.6, "cm")
-
     z1 = zadatak_1()
-    _check(out, "U02.Z1.dvdy_pos", z1["dvdy"], z1["dvdy"])
+    _check(out, "U02.Z1.dvdy", z1["dvdy"], 271.0, "1/s")
+    _check(out, "U02.Z1.tau", z1["tau"], 228.0, "Pa")
+    _check(out, "U02.Z1.F", z1["F"], 50.0, "N")
     z2 = zadatak_2()
-    _check(out, "U02.Z2.mu_pos", z2["mu"], z2["mu"])
+    _check(out, "U02.Z2.tau", z2["tau"], 150.0, "Pa")
+    _check(out, "U02.Z2.mu", z2["mu"], 0.34, "Pa s")
     z3 = zadatak_3()
-    _check(out, "U02.Z3.F_pos", z3["F"], z3["F"])
+    _check(out, "U02.Z3.tau", z3["tau"], 960.0, "Pa")
+    _check(out, "U02.Z3.F", z3["F"], 51.0, "N")
     z4 = zadatak_4()
-    _check(out, "U02.Z4.h1_gt_h2", 1.0 if z4["h1"] > z4["h2"] else 0.0, 1.0)
+    _check(out, "U02.Z4.h1_mm", z4["h1"] * 1000, 18.0, "mm")
+    _check(out, "U02.Z4.h2_mm", z4["h2"] * 1000, 9.0, "mm")
     z5 = zadatak_5()
-    _check(out, "U02.Z5.h_pos", z5["h"], z5["h"])
+    _check(out, "U02.Z5.h_mm", z5["h"] * 1000, 32.2, "mm")
+    _check(out, "U02.Z5.dp", z5["dp"], 240.0, "Pa")
     z6 = zadatak_6()
-    _check(out, "U02.Z6.p_M_pos", z6["p_M"], z6["p_M"])
+    _check(out, "U02.Z6.h_cap_mm", z6["h_cap"] * 1000, 58.8, "mm")
+    _check(out, "U02.Z6.p_M", z6["p_M"], 0.0, "Pa")
+    _check(out, "U02.Z6.p_M_conservative_kPa", z6["p_M_conservative"] / 1000, 0.571, "kPa", rel=0.02)
+    _invariant(
+        out,
+        "U02.Z6.regulator_insufficient",
+        z6["p_M_conservative"] > 500.0,
+        "Regulator 0.50 kPa pogresno je oznacen dostatnim za oba modela.",
+    )
+
+    _invariant(
+        out,
+        "U02.INV.newton_force_balance",
+        abs(z1["F"] - z1["tau"] * 0.22) < 1e-12,
+        "Sila nije jednaka smicnom naprezanju puta povrsina.",
+    )
+    _invariant(
+        out,
+        "U02.INV.capillary_inverse_diameter",
+        abs(z4["h1"] / z4["h2"] - 2.0) < 1e-12,
+        "Udvostrucenje promjera nije prepolovilo kapilarni uspon.",
+    )
+    _invariant(
+        out,
+        "U02.INV.capillary_pressure_budget",
+        z6["pressure_margin"] < 0.0 and z6["p_M"] == 0.0,
+        "Kapilarni tlak ne zatvara objavljeni ukupni tlakovni zahtjev.",
+    )
 
     # Faza 1.5: Klizni lezaj pri hladnom startu i radnoj temperaturi
     r = primjer_lezaj_temp()
@@ -194,6 +236,11 @@ def verify() -> list:
     _check(out, "U02.lezaj_temp.P_c", r["P_c"], 578, "W")
     _check(out, "U02.lezaj_temp.P_h", r["P_h"], 58.0, "W")
     _check(out, "U02.lezaj_temp.ratio", r["ratio"], 10.0)
+
+    r = primjer_lab_on_chip()
+    _check(out, "U02.lab_chip.h_cm", r["h"] * 100, 33.5, "cm", rel=0.02)
+    _check(out, "U02.lab_chip.dp_kPa", r["dp"] / 1000, 3.32, "kPa", rel=0.02)
+    _check(out, "U02.lab_chip.h_hydrophobic", r["h_hydrophobic"], -0.127, "m", rel=0.02)
 
     return out
 

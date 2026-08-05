@@ -1,6 +1,12 @@
 ---
-title: "8. Kontrolni volumen i kontinuitet"
+title: "Poglavlje je premješteno"
 page-layout: article
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=u07_kinematika_kontrolni_volumen_i_kontinuitet.html">
+        <link rel="canonical" href="u07_kinematika_kontrolni_volumen_i_kontinuitet.html">
 ---
 
-{{< include ../source/u08_kontrolni_volumen_i_kontinuitet.md >}}
+Sadržaj je premješten u [7. Kinematika, kontrolni volumen i kontinuitet](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd).

@@ -25,14 +25,14 @@ except ImportError:
     sys.exit(1)
 
 
-# Korijen repozitorija na GitHubu — koristi se za izradu Colab veza.
+# Korijen javnog JupyterLite izdanja. Colab poveznice u tekstu ostaju pričuva.
 GITHUB_KORISNIK = "martibasic"
 GITHUB_REPOZITORIJ = "MF1_udzbenik"
 GITHUB_GRANA = "main"
 
 COLAB_PREDLOZAK = (
-    "https://colab.research.google.com/github/"
-    f"{GITHUB_KORISNIK}/{GITHUB_REPOZITORIJ}/blob/{GITHUB_GRANA}/notebooks/"
+    f"https://{GITHUB_KORISNIK}.github.io/{GITHUB_REPOZITORIJ}/"
+    "jlite/lab/index.html?path="
 )
 
 
@@ -121,4 +121,8 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    # Zadržana kompatibilna ulazna točka; kanonski generator ujedno provjerava
+    # pristupačne title/desc oznake i svih 17 javnih JupyterLite URL-ova.
+    from generate_qr_assets import main as generate_all
+
+    sys.exit(generate_all())

@@ -21,6 +21,15 @@ def _check(out, rid, value, target, unit="", rel=TOL):
     })
 
 
+def _invariant(out, rid, condition, details):
+    out.append({
+        "id": rid,
+        "status": "OK" if condition else "FAIL",
+        "verification": "invariant",
+        "details": "" if condition else details,
+    })
+
+
 def primjer_1_kolica(L=1.60, h_0=0.42, a=1.35, g=9.81):
     dh = a * L / g
     h_str = h_0 + dh / 2
@@ -83,7 +92,23 @@ def primjer_5_autocisterna(L=1.20, h_0=0.45, H=0.80, a=3.8, rho=750.0, g=9.81):
     dh = a * L / g
     h_pred = h_0 + dh / 2
     h_str = h_0 - dh / 2
-    return {"dh": dh, "h_pred": h_pred, "h_str": h_str}
+    a_overflow = 2 * g * (H - h_0) / L
+    a_dry = 2 * g * h_0 / L
+    return {
+        "dh": dh,
+        "h_pred": h_pred,
+        "h_str": h_str,
+        "a_overflow": a_overflow,
+        "a_dry": a_dry,
+    }
+
+
+def primjer_centrifuga(n=4000.0, r_d=0.095, r_v=0.025,
+                        rho=1060.0, g=9.81):
+    omega = 2 * math.pi * n / 60
+    a_cf = omega**2 * r_d
+    dp = 0.5 * rho * omega**2 * (r_d**2 - r_v**2)
+    return {"omega": omega, "a_cf": a_cf, "a_cf_g": a_cf / g, "dp": dp}
 
 
 def primjer_6_vatrogasna(L=2.40, h_0=1.20, H=1.60, a=4.5, g=9.81):
@@ -96,7 +121,10 @@ def primjer_6_vatrogasna(L=2.40, h_0=1.20, H=1.60, a=4.5, g=9.81):
 
 def zadatak_1(L=1.80, h_0=0.34, a=1.20, H=0.46, g=9.81):
     dh = a * L / g
-    return {"dh": dh, "h_str": h_0 + dh / 2, "h_pred": h_0 - dh / 2}
+    h_str = h_0 + dh / 2
+    h_pred = h_0 - dh / 2
+    return {"dh": dh, "h_str": h_str, "h_pred": h_pred,
+            "overflow": h_str >= H}
 
 
 def zadatak_2(L=1.40, h_0=0.30, H=0.42, g=9.81):
@@ -107,7 +135,10 @@ def zadatak_2(L=1.40, h_0=0.30, H=0.42, g=9.81):
 
 def zadatak_3(rho=870.0, h=0.75, a_z=2.3, g=9.81):
     dp = rho * (g + a_z) * h
-    return {"dp": dp}
+    dp_0 = rho * g * h
+    increase_percent = 100 * (dp / dp_0 - 1)
+    return {"dp": dp, "dp_0": dp_0,
+            "increase_percent": increase_percent}
 
 
 def zadatak_4(b=0.75, L=1.60, h_0=0.36, F=820.0, rho=1000.0, g=9.81):
@@ -119,15 +150,31 @@ def zadatak_4(b=0.75, L=1.60, h_0=0.36, F=820.0, rho=1000.0, g=9.81):
 
 def zadatak_5(R=0.28, h_0=0.22, omega=5.5, g=9.81):
     dh = omega**2 * R**2 / (2 * g)
-    return {"dh": dh, "h_rub": h_0 + dh / 2, "h_osa": h_0 - dh / 2}
+    h_rub = h_0 + dh / 2
+    h_osa = h_0 - dh / 2
+    return {"dh": dh, "h_rub": h_rub, "h_osa": h_osa,
+            "axis_covered": h_osa > 0.0}
 
 
-def zadatak_6(R=0.32, H=0.62, h_0=0.46, rho=1000.0, g=9.81):
+def zadatak_6(R=0.32, H=0.62, h_0=0.46, rho=1000.0, g=9.81,
+              alpha=0.80, overspeed=0.05, h_axis_min=0.350):
     omega_max = math.sqrt(4 * g * (H - h_0) / R**2)
-    omega = 0.80 * omega_max
+    omega = alpha * omega_max
     dh = omega**2 * R**2 / (2 * g)
+    h_osa = h_0 - dh / 2
+    h_rub = h_0 + dh / 2
+    actual_ratio = alpha * (1 + overspeed)
+    h_axis_worst = h_0 - actual_ratio**2 * (H - h_0)
+    h_rim_worst = h_0 + actual_ratio**2 * (H - h_0)
+    alpha_max = math.sqrt((h_0 - h_axis_min) / (H - h_0)) / (1 + overspeed)
     return {"omega_max": omega_max, "dh": dh,
-            "h_osa": h_0 - dh / 2, "h_rub": h_0 + dh / 2}
+            "h_osa": h_osa, "h_rub": h_rub,
+            "p_M_osa": rho * g * h_osa,
+            "p_M_rub": rho * g * h_rub,
+            "actual_ratio": actual_ratio,
+            "h_axis_worst": h_axis_worst,
+            "h_rim_worst": h_rim_worst,
+            "alpha_max": alpha_max}
 
 
 def verify():
@@ -138,11 +185,6 @@ def verify():
     _check(out, "U04.P1.h_str", r["h_str"], 0.530, "m")
     _check(out, "U04.P1.h_pred", r["h_pred"], 0.310, "m")
     _check(out, "U04.P1.theta_deg", r["theta_deg"], 7.9, "deg", rel=0.02)
-
-    r = primjer_2_kada()
-    _check(out, "U04.P2.h_pred", r["h_pred"], 0.36, "m")
-    _check(out, "U04.P2.a_max", r["a_max"], 1.962, "m/s^2")
-    _check(out, "U04.P2.F_R", r["F_R"], 2343.0, "N", rel=0.02)
 
     r = primjer_3_modul()
     _check(out, "U04.P3.theta_deg", r["theta_deg"], 19.1, "deg", rel=0.02)
@@ -172,18 +214,79 @@ def verify():
     _check(out, "U04.P5.dh", r["dh"], 0.465, "m")
     _check(out, "U04.P5.h_pred", r["h_pred"], 0.683, "m")
     _check(out, "U04.P5.h_str", r["h_str"], 0.217, "m")
+    _check(out, "U04.P5.a_overflow", r["a_overflow"], 5.72, "m/s2", rel=0.02)
+    _check(out, "U04.P5.a_dry", r["a_dry"], 7.36, "m/s2", rel=0.02)
 
-    r = primjer_6_vatrogasna()
-    _check(out, "U04.P6.dh", r["dh"], 1.101, "m")
-    _check(out, "U04.P6.h_pred", r["h_pred"], 1.751, "m")
-    _check(out, "U04.P6.h_str", r["h_str"], 0.650, "m")
-    _check(out, "U04.P6.theta_deg", r["theta_deg"], 24.7, "deg", rel=0.02)
+    r = primjer_centrifuga()
+    _check(out, "U04.P6.omega", r["omega"], 418.9, "rad/s", rel=0.02)
+    _check(out, "U04.P6.a_cf", r["a_cf"], 1.666e4, "m/s2", rel=0.02)
+    _check(out, "U04.P6.a_cf_g", r["a_cf_g"], 1.699e3, "g", rel=0.02)
+    _check(out, "U04.P6.dp_kPa", r["dp"] / 1000, 781.0, "kPa", rel=0.02)
 
-    for name, fn in [("Z1", zadatak_1), ("Z2", zadatak_2), ("Z3", zadatak_3),
-                     ("Z4", zadatak_4), ("Z5", zadatak_5), ("Z6", zadatak_6)]:
-        r = fn()
-        first_key = next(iter(r))
-        _check(out, f"U04.{name}.{first_key}_pos", r[first_key], r[first_key])
+    z1 = zadatak_1()
+    _check(out, "U04.Z1.dh", z1["dh"], 0.22, "m")
+    _check(out, "U04.Z1.h_str", z1["h_str"], 0.45, "m")
+    _check(out, "U04.Z1.h_pred", z1["h_pred"], 0.23, "m")
+
+    z2 = zadatak_2()
+    _check(out, "U04.Z2.a_max", z2["a_max"], 1.68, "m/s^2")
+
+    z3 = zadatak_3()
+    _check(out, "U04.Z3.dp_kPa", z3["dp"] / 1000, 7.90, "kPa")
+    _check(out, "U04.Z3.dp_0_kPa", z3["dp_0"] / 1000, 6.40, "kPa")
+    _check(out, "U04.Z3.increase_percent", z3["increase_percent"], 23.0, "%", rel=0.03)
+
+    z4 = zadatak_4()
+    _check(out, "U04.Z4.h_str", z4["h_str"], 0.47, "m")
+    _check(out, "U04.Z4.a", z4["a"], 1.38, "m/s^2")
+
+    z5 = zadatak_5()
+    _check(out, "U04.Z5.dh", z5["dh"], 0.12, "m")
+    _check(out, "U04.Z5.h_rub", z5["h_rub"], 0.28, "m")
+    _check(out, "U04.Z5.h_osa", z5["h_osa"], 0.16, "m")
+
+    z6 = zadatak_6()
+    _check(out, "U04.Z6.omega_max", z6["omega_max"], 7.83, "rad/s")
+    _check(out, "U04.Z6.h_osa", z6["h_osa"], 0.36, "m")
+    _check(out, "U04.Z6.h_rub", z6["h_rub"], 0.56, "m")
+    _check(out, "U04.Z6.p_M_osa_kPa", z6["p_M_osa"] / 1000, 3.51, "kPa")
+    _check(out, "U04.Z6.p_M_rub_kPa", z6["p_M_rub"] / 1000, 5.52, "kPa")
+    _check(out, "U04.Z6.actual_ratio", z6["actual_ratio"], 0.84, "")
+    _check(out, "U04.Z6.h_axis_worst", z6["h_axis_worst"], 0.347, "m", rel=0.02)
+    _check(out, "U04.Z6.h_rim_worst", z6["h_rim_worst"], 0.573, "m", rel=0.02)
+    _check(out, "U04.Z6.alpha_max", z6["alpha_max"], 0.790, "", rel=0.02)
+    _invariant(
+        out,
+        "U04.Z6.coverage_not_met_at_alpha_080",
+        z6["h_rim_worst"] < 0.62 and z6["h_axis_worst"] < 0.350,
+        "Nepovoljna tolerancija mora zadrzati volumen, ali prekrsiti dubinu usisa.",
+    )
+
+    _invariant(
+        out,
+        "U04.INV.translational_volume_balance",
+        abs((z1["h_str"] + z1["h_pred"]) / 2 - 0.34) < 1e-14,
+        "Srednja dubina ubrzanog spremnika nije sacuvana.",
+    )
+    _invariant(
+        out,
+        "U04.INV.no_overflow_and_axis_covered",
+        not z1["overflow"] and z5["axis_covered"],
+        "Objavljeni granicni zakljucak o preljevu/pokrivenosti osi nije ispunjen.",
+    )
+    _invariant(
+        out,
+        "U04.INV.effective_gravity_sign",
+        z3["dp"] > z3["dp_0"] > 0.0,
+        "Ubrzanje prema gore nije povecalo tlakovnu razliku.",
+    )
+    _invariant(
+        out,
+        "U04.INV.rotational_volume_and_limit",
+        abs((z6["h_osa"] + z6["h_rub"]) / 2 - 0.46) < 1e-14
+        and z6["h_rub"] < 0.62,
+        "Radni rotacijski rezim ne cuva volumen ili prelijeva.",
+    )
 
     return out
 

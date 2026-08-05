@@ -1,6 +1,6 @@
 # Pravila za provjeru i izmjenu SVG skica — operativni cheat-sheet
 
-> Konsolidirani sažetak pravila iz [`protokol_prerade_zadataka_i_skica.md`](protokol_prerade_zadataka_i_skica.md), [`kucni_stil_skica_val1.md`](kucni_stil_skica_val1.md) i operativnih odluka u [`qa_log_faza1.md`](qa_log_faza1.md). Ovaj dokument je radna referenca; izvori ostaju autoritativni.
+> Konsolidirani sažetak pravila iz [`protokol_prerade_zadataka_i_skica.md`](protokol_prerade_zadataka_i_skica.md), [`kucni_stil_skica_val1.md`](docs/radno/kucni_stil_skica_val1.md) i operativnih odluka u [`qa_log_faza1.md`](docs/radno/qa_log_faza1.md). Ovaj dokument je radna referenca; izvori ostaju autoritativni.
 
 > **Ažurirano 2026-05-26 (Faza 3 redizajn)** s naucima iz iterativnog redizajna val1: geometrijska koherentnost fluida, format sila, struktura formula panela. Vidi sekcije 12–14 na dnu.
 

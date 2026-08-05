@@ -1,6 +1,12 @@
 ---
-title: "5. Hidrostatske sile na ravne plohe"
+title: "Poglavlje je objedinjeno"
 page-layout: article
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=u05_hidrostatske_sile_na_plohe.html">
+        <link rel="canonical" href="u05_hidrostatske_sile_na_plohe.html">
 ---
 
-{{< include ../source/u05_hidrostatske_sile_na_ravne_plohe.md >}}
+Sadržaj je premješten u [5. Hidrostatske sile na ravne i zakrivljene plohe](u05_hidrostatske_sile_na_plohe.qmd).

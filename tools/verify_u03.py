@@ -21,6 +21,15 @@ def _check(out, rid, value, target, unit="", rel=TOL):
     })
 
 
+def _invariant(out, rid, condition, details):
+    out.append({
+        "id": rid,
+        "status": "OK" if condition else "FAIL",
+        "verification": "invariant",
+        "details": "" if condition else details,
+    })
+
+
 def primjer_1(rho=998.0, p_G_m=18e3, h=1.40, p_atm=100.8e3, g=9.81):
     p_G = p_atm + p_G_m
     p_A = p_G + rho * g * h
@@ -79,6 +88,18 @@ def primjer_vodotoranj(Z_t=84.0, Z_k=68.0, rho=998.0, p_atm=100.5e3, g=9.81):
     return {"dH": dH, "p_man": p_man, "p_aps": p_aps}
 
 
+def primjer_iot_tlak(p_A=520e3, dz=38.0, rho=998.0,
+                      p_atm=101.3e3, dp_alarm=50e3, g=9.81):
+    hydrostatic_drop = rho * g * dz
+    p_B_gauge = p_A - hydrostatic_drop
+    return {
+        "hydrostatic_drop": hydrostatic_drop,
+        "p_B_gauge": p_B_gauge,
+        "p_B_abs": p_B_gauge + p_atm,
+        "equivalent_head": dp_alarm / (rho * g),
+    }
+
+
 def zadatak_1(h=2.40, rho=998.0, p_atm=100.8e3, g=9.81):
     p_m = rho * g * h
     return {"p_m": p_m, "p_aps": p_atm + p_m}
@@ -96,9 +117,9 @@ def zadatak_3(rho_u=860.0, rho_Hg=13600.0, dh=0.185, a=0.12, g=9.81):
 
 
 def zadatak_4(rho_w=998.0, rho_Hg=13600.0, dh=0.145, dz_AB=0.30, g=9.81):
-    # idem od A prema B: dolje za dz_AB kroz vodu (tlak raste), gore za dh kroz zivu (tlak pada)
-    # ali ovisi o orijentaciji; uzmi standardnu interpretaciju
-    p_diff = rho_Hg * g * dh - rho_w * g * dz_AB
+    # Standardna zatvorena putanja: zivin stupac daje kontrast gustoca, a A je
+    # dz_AB ispod B pa vodeni visinski clan povecava p_A-p_B.
+    p_diff = (rho_Hg - rho_w) * g * dh + rho_w * g * dz_AB
     return {"p_A_minus_p_B": p_diff}
 
 
@@ -110,11 +131,23 @@ def zadatak_5(rho_Hg=13600.0, dh=0.230, p_atm=98.6e3, h_voda=0.90,
 
 
 def zadatak_6(h1=0.65, dh=0.210, h_tocka=1.30, rho_w=998.0, rho_Hg=13600.0,
-              p_atm=100.9e3, g=9.81):
+              p_atm=100.9e3, dh_tol=0.002, h_tol=0.005,
+              p_atm_tol=0.4e3, scale_margin=0.05, g=9.81):
     p_priklj = p_atm + rho_Hg * g * dh
     p_G = p_priklj - rho_w * g * h1
     p_tocka = p_G + rho_w * g * h_tocka
-    return {"p_G": p_G, "p_tocka": p_tocka}
+    p_max = (
+        p_atm + p_atm_tol
+        + rho_Hg * g * (dh + dh_tol)
+        - rho_w * g * (h1 - h_tol)
+        + rho_w * g * (h_tocka + h_tol)
+    )
+    return {
+        "p_G": p_G,
+        "p_tocka": p_tocka,
+        "p_max": p_max,
+        "required_full_scale": (1 + scale_margin) * p_max,
+    }
 
 
 # ------------ Faza 1.5 dodatak: Balastni tank broda ----------------
@@ -143,21 +176,9 @@ def verify():
     _check(out, "U03.P1.p_A_kPa", r["p_A"] / 1000, 132.5, "kPa")
     _check(out, "U03.P1.p_A_m_kPa", r["p_A_m"] / 1000, 31.7, "kPa")
 
-    r = primjer_2()
-    _check(out, "U03.P2.A_k_cm2", r["A_k"] * 1e4, 707.0, "cm^2")
-    _check(out, "U03.P2.p_c_Pa", r["p_c"], 353.6, "Pa")
-    _check(out, "U03.P2.p_A_Pa", r["p_A"], 2806.0, "Pa")
-    _check(out, "U03.P2.p_B_Pa", r["p_B"], -2099.0, "Pa")
-
     r = primjer_3()
     _check(out, "U03.P3.dp_bez_zraka_Pa", r["dp_bez_zraka"], 3394.0, "Pa")
     _check(out, "U03.P3.dp_sa_zrakom_Pa", r["dp_sa_zrakom"], 3402.0, "Pa")
-
-    r = primjer_4()
-    _check(out, "U03.P4.p_g_kPa", r["p_g"] / 1000, 77.31, "kPa")
-    _check(out, "U03.P4.p_g_m_kPa", r["p_g_m"] / 1000, -24.0, "kPa")
-    _check(out, "U03.P4.p_A_kPa", r["p_A"] / 1000, 89.1, "kPa")
-    _check(out, "U03.P4.p_A_m_kPa", r["p_A_m"] / 1000, -12.2, "kPa")
 
     r = cjeloviti_1()
     _check(out, "U03.CH1.p_2_kPa", r["p_2"] / 1000, 105.9, "kPa")
@@ -172,23 +193,49 @@ def verify():
     _check(out, "U03.pumpa.p_aps_kPa", r["p_aps"] / 1000, 80.8, "kPa")
     _check(out, "U03.pumpa.H_max_m", r["H_max"], 11.8, "m")
 
-    r = primjer_vodotoranj()
-    _check(out, "U03.vodotoranj.dH", r["dH"], 16.0, "m")
-    _check(out, "U03.vodotoranj.p_man_kPa", r["p_man"] / 1000, 156.7, "kPa")
-    _check(out, "U03.vodotoranj.p_aps_kPa", r["p_aps"] / 1000, 257.2, "kPa")
-
     z1 = zadatak_1()
-    _check(out, "U03.Z1.p_m_pos", z1["p_m"], z1["p_m"])
+    _check(out, "U03.Z1.p_m_kPa", z1["p_m"] / 1000, 23.5, "kPa")
+    _check(out, "U03.Z1.p_aps_kPa", z1["p_aps"] / 1000, 124.3, "kPa")
     z2 = zadatak_2()
-    _check(out, "U03.Z2.p_pos", z2["p_priklj_m"], z2["p_priklj_m"])
+    _check(out, "U03.Z2.p_m_kPa", z2["p_priklj_m"] / 1000, 43.6, "kPa")
+    _check(out, "U03.Z2.p_aps_kPa", z2["p_priklj_aps"] / 1000, 142.8, "kPa")
     z3 = zadatak_3()
-    _check(out, "U03.Z3.p_m_pos", z3["p_m"], z3["p_m"])
+    _check(out, "U03.Z3.p_m_kPa", z3["p_m"] / 1000, 23.7, "kPa")
     z4 = zadatak_4()
-    _check(out, "U03.Z4.p_diff_pos", z4["p_A_minus_p_B"], z4["p_A_minus_p_B"])
+    _check(out, "U03.Z4.p_diff_kPa", z4["p_A_minus_p_B"] / 1000, 20.9, "kPa")
     z5 = zadatak_5()
-    _check(out, "U03.Z5.p_g_aps_pos", z5["p_g_aps"], z5["p_g_aps"])
+    _check(out, "U03.Z5.p_g_aps_kPa", z5["p_g_aps"] / 1000, 67.9, "kPa")
+    _check(out, "U03.Z5.p_tocka_kPa", z5["p_tocka"] / 1000, 76.7, "kPa")
     z6 = zadatak_6()
-    _check(out, "U03.Z6.p_G_pos", z6["p_G"], z6["p_G"])
+    _check(out, "U03.Z6.p_G_kPa", z6["p_G"] / 1000, 122.6, "kPa")
+    _check(out, "U03.Z6.p_tocka_kPa", z6["p_tocka"] / 1000, 135.3, "kPa")
+    _check(out, "U03.Z6.p_max_kPa", z6["p_max"] / 1000, 136.05, "kPa", rel=0.02)
+    _check(out, "U03.Z6.required_full_scale_kPa", z6["required_full_scale"] / 1000, 142.9, "kPa", rel=0.02)
+    _invariant(
+        out,
+        "U03.Z6.sensor_range_choice",
+        140e3 < z6["required_full_scale"] <= 160e3,
+        "Ocekivani omotac ne zahtijeva deklarirani raspon 0--160 kPa.",
+    )
+
+    _invariant(
+        out,
+        "U03.INV.absolute_gauge_offset",
+        abs((z1["p_aps"] - z1["p_m"]) - 100.8e3) < 1e-9,
+        "Apsolutni i manometarski tlak ne razlikuju se za p_atm.",
+    )
+    _invariant(
+        out,
+        "U03.INV.pressure_increases_with_depth",
+        z5["p_tocka"] > z5["p_g_aps"] and z6["p_tocka"] > z6["p_G"],
+        "Tlak u istom mirnom fluidu nije porastao s dubinom.",
+    )
+    _invariant(
+        out,
+        "U03.INV.manometer_pressure_signs",
+        z5["p_g_aps"] < 98.6e3 and z6["p_G"] > 100.9e3,
+        "Vakuumski i nadtlacni manometar nemaju ocekivane predznake.",
+    )
 
     # Faza 1.5: Balastni tank broda
     r = primjer_balastni()
@@ -196,6 +243,12 @@ def verify():
     _check(out, "U03.balastni.delta_dno_A_kPa", r["delta_dno_A"] / 1000, 36.4, "kPa")
     _check(out, "U03.balastni.delta_dno_B_kPa", r["delta_dno_B"] / 1000, 85.5, "kPa")
     _check(out, "U03.balastni.delta_proz_A_kPa", r["delta_proz_A"] / 1000, 35.9, "kPa")
+
+    r = primjer_iot_tlak()
+    _check(out, "U03.iot.hydrostatic_drop_kPa", r["hydrostatic_drop"] / 1000, 372.1, "kPa", rel=0.02)
+    _check(out, "U03.iot.p_B_gauge_kPa", r["p_B_gauge"] / 1000, 147.9, "kPa", rel=0.02)
+    _check(out, "U03.iot.p_B_abs_kPa", r["p_B_abs"] / 1000, 249.2, "kPa", rel=0.02)
+    _check(out, "U03.iot.equivalent_head", r["equivalent_head"], 5.11, "m", rel=0.02)
 
     return out
 

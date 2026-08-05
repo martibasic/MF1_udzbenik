@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "dataset_id": "mf1-cfd-vv-2026-08",
+  "title": "Nastavni CFD verification and validation cases",
+  "created": "2026-08-01",
+  "cases": [
+    {
+      "case_id": "poiseuille_laminar",
+      "path": "poiseuille_laminar",
+      "status": "ready",
+      "role": "solution_verification"
+    },
+    {
+      "case_id": "venturi_diffuser",
+      "path": "venturi_diffuser",
+      "status": "ready",
+      "role": "pedagogical_verification"
+    },
+    {
+      "case_id": "hydrofoil_experiment",
+      "path": "hydrofoil_experiment",
+      "status": "reference_ready",
+      "role": "public_experimental_reference_and_grid_study"
+    }
+  ],
+  "required_ready_case_files": [
+    "case.json",
+    "grids.csv",
+    "solver_history.csv",
+    "uncertainty.json",
+    "provenance.json",
+    "README.md"
+  ],
+  "required_placeholder_files": [
+    "case.json",
+    "uncertainty.json",
+    "provenance.json",
+    "README.md"
+  ],
+  "required_reference_case_files": [
+    "case.json",
+    "grids.csv",
+    "experimental_forces.csv",
+    "uncertainty.json",
+    "provenance.json",
+    "README.md"
+  ]
+}

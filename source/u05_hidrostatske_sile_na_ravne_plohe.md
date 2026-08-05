@@ -1,4 +1,4 @@
-![Pregled poglavlja: Hidrostatske sile na ravne plohe](../assets/print/u05_fig_uvod_pregled.svg){#fig-uvod-u05 fig-align="center" style="width:100%;max-width:980px;"}
+![Pregled poglavlja: Hidrostatske sile na ravne plohe](../assets/print/u05_fig_uvod_pregled.svg){#fig-uvod-u05 fig-align="center" style="width:100%;max-width:980px;" fig-alt="Pregled poglavlja: Hidrostatske sile na ravne plohe"}
 
 ## Sila na ravnu plohu kao integral raspodijeljenog tlaka
 
@@ -33,13 +33,13 @@ Kad su vrata brane, inspekcijski poklopac ili stijenka spremnika potopljeni, pro
 
 ## Fizikalni uvod i matematički izvod
 
-Za ravnu plohu uronjenu u mirujući fluid rezultantna hidrostatska sila može se zapisati preko površine i dubine težišta plohe:
+Za ravnu plohu uronjenu u mirujući fluid, kada se radi s manometarskim tlakom $p=\rho gh$ i isti jednoliki tlak djeluje s druge strane, iznos rezultantne hidrostatske sile može se zapisati preko površine i dubine težišta plohe:
 
 $$F = \rho g A h_C$$
 
-::: {.callout-note}
-## Fizikalno značenje
-Rezultantna sila nije tlak u najdubljem ili najpliem rubu plohe – to je površina množena tlakom u težištu. Dubina težišta $h_C$ predstavlja "prosjek" geometrije plohe. Ako se ploha naginje ili rotira (ali ostaje ista površina i dubina težišta), rezultantna sila ne mijenja se. Zato ovo nije intuitivni zakon: deblje plohe ili nagnute plohe ne znače nužno veću ukupnu silu, nego samo drukčiji moment koji učine.
+::: {.mf1-fizikalno-znacenje}
+<p class="mf1-box-label">Fizikalno značenje</p>
+Rezultantna sila nije tlak u najdubljem ili najplićem rubu plohe – za linearno polje to je površina množena tlakom u težištu. Dubina težišta $h_C$ predstavlja geometrijski prosjek dubina. Ako se ploha naginje, ali joj površina i dubina težišta ostanu iste, iznos rezultante ostaje isti; mogu se promijeniti njezin smjer u prostoru i moment prema odabranoj točki.
 :::
 
 Ako na istu stranu plohe djeluje i jednoliki tlak $p_0$, tada se opći zapis može čitati kao
@@ -106,7 +106,7 @@ $$
 ::: {.callout-note collapse="true" icon="false"}
 ## Numerički trag
 
-Integracija tlaka po plohi $F = \int_A p\,dA$ je upravo operacija koju CFD post-procesor radi nakon što solver završi: na svakoj ćeliji uz zid zna se lokalni tlak, a zbroj $\sum_i p_i \, A_i$ po svim ćelijama jednog zida daje silu. U `ParaView`-u to je filter *Integrate Variables* na *Surface*, u `OpenFOAM`-u funkcionalan objekt `forces` izračuna $F$ i moment automatski u svakom vremenskom koraku. Mreža uz zid mora biti dovoljno fina da $p$ vjerno reproducira raspodjelu.
+CFD postprocesor integrira **vektorsku trakciju**, ne samo skalarni tlak. Za vanjsku normalu $\vec n$ kontrolnog volumena sila stijenke na fluid glasi $\vec F=\int_A[-p\vec n+\boldsymbol{\tau}\!\cdot\!\vec n]\,dA$; sila fluida na stijenku ima suprotan predznak. Skalarni zbroj $\sum_i p_iA_i$ daje samo tlakovu komponentu magnitude na ravnoj plohi stalne normale. Na zakrivljenoj plohi treba zbrajati vektore površina, a pri strujanju uključiti i viskoznu trakciju.
 :::
 
 ::: {.mf1-interaktivno}
@@ -115,7 +115,8 @@ Integracija tlaka po plohi $F = \int_A p\,dA$ je upravo operacija koju CFD post-
 Interaktivni prikaz omogućuje mijenjanje dubine gornjeg ruba plohe, njezine visine i kuta nagiba prema vertikali uz neposredno praćenje ukupne sile, dubine težišta i položaja hvatišta. Dijagram tlaka uz plohu vizualizira linearni rast s dubinom.
 
 <div class="mf1-interaktivno-akcija">
-<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u05_sila_na_ravnu_plohu.ipynb" target="_blank" rel="noopener">Otvori interaktivni prikaz</a>
+<a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u05_sila_na_ravnu_plohu.ipynb">Pokreni u pregledniku</a>
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u05_sila_na_ravnu_plohu.ipynb" target="_blank" rel="noopener">Pričuvno: otvori u Colabu</a>
 <img class="mf1-interaktivno-qr" src="../assets/qr/u05_sila_na_ravnu_plohu.svg" alt="QR kod za interaktivni prikaz sile na ravnu plohu"/>
 </div>
 
@@ -142,12 +143,14 @@ $$
 y_{CP} = h_C + \frac{I_G}{Ah_C}.
 $$
 
-::: {.callout-note}
-## Fizikalno značenje
-Centar tlaka je uvijek dublje od težišta plohe ($y_{CP} > h_C$) jer raspodjela tlaka nije jednolika nego linearna – dublji dijelovi plohe nose veće tlakove i "vuku" hvatište prema dolje. Član $I_G/(Ah_C)$ mjeri tu asimetriju: veće plohe duboko potopljene imaju mali pomak (hvatište blizu težišta), dok plitko potopljene plohe imaju veći pomak. U praksi je ova informacija ključna za dimenzioniranje zglobova, bravica i nosive konstrukcije zaklopke ili brane.
+Ovaj oblik vrijedi za linearno **manometarsko** polje $p=\rho gy$. Ako na promatranu stranu djeluje i jednoliki dio $p_0$ koji se ne poništava tlakom s druge strane, ukupna sila je $(p_0+\rho gh_C)A$, a položaj njezina hvatišta mora se dobiti iz ukupnoga momenta raspodjele $p_0+\rho gy$; tada gornja formula za $y_{CP}$ nije primjenjiva bez izmjene.
+
+::: {.mf1-fizikalno-znacenje}
+<p class="mf1-box-label">Fizikalno značenje</p>
+Za nehorizontalnu plohu opterećenu pozitivnim linearnim manometarskim tlakom centar tlaka dublji je od težišta ($y_{CP}>h_C$), jer dublji dijelovi nose veće tlakove. Kod horizontalne plohe ili potpuno jednolikoga neto tlaka hvatište je u težištu. Član $I_G/(Ah_C)$ pokazuje i dvije odvojene ovisnosti: pri zadanoj plohi veća dubina smanjuje pomak, dok pri zadanoj dubini povećanje linearne mjere geometrijski slične plohe povećava $I_G/A$ i apsolutni pomak.
 :::
 
-Upravo taj dodatni član pokazuje puno fizikalno značenje centra tlaka: budući da tlak raste s dubinom, donji dijelovi plohe sudjeluju jače u rezultanti nego gornji, pa se hvatište sile uvijek nalazi dublje od težišta same plohe.
+Upravo taj dodatni član pokazuje fizikalno značenje centra tlaka u promatranom linearnom manometarskom polju: budući da tlak raste s dubinom, donji dijelovi nehorizontalne plohe sudjeluju jače u rezultanti nego gornji, pa se hvatište nalazi dublje od težišta.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Sila i centar tlaka na nagnutoj plohi</p>
@@ -193,7 +196,7 @@ Pri okomitoj plohi ($\alpha = 90^\circ$, $\sin\alpha = 1$) izraz se reducira na 
 
 ## Riješeni primjeri
 
-::: {.mf1-we}
+::: {#ex-u05-vertikalna-pravokutna-zaklopka-ispod-slobodne-povrsine-t2 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Vertikalna pravokutna zaklopka ispod slobodne površine&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U bočnoj stijenci spremnika ugrađena je pravokutna zaklopka potpuno uronjena ispod slobodne površine vode. Treba odrediti rezultantnu hidrostatsku silu i dubinu centra tlaka radi dimenzioniranja oslonca i vodilica.
@@ -211,7 +214,7 @@ Pri okomitoj plohi ($\alpha = 90^\circ$, $\sin\alpha = 1$) izraz se reducira na 
 2. dubinu centra tlaka ispod slobodne površine.
 3. udaljenost centra tlaka od gornjeg ruba zaklopke.
 
-![Val 1 - vertikalna pravokutna zaklopka](../assets/print/u05_val1_pravokutna_zaklopka.svg)
+![vertikalna pravokutna zaklopka](../assets/print/u05_val1_pravokutna_zaklopka.svg){#fig-u05-vertikalna-pravokutna-zaklopka fig-alt="vertikalna pravokutna zaklopka"}
 
 **Pretpostavke i model**
 
@@ -272,7 +275,7 @@ ispod gornjeg ruba.
 
 Taj osnovni proračun zatvara tipičan prvi korak: jedna ploha, jedna rezultanta i jedno hvatište. Tek nakon toga ima smisla prijeći na projektni zadatak u kojem se ista stijenka dijeli na više polja i svako polje mora nositi kontroliranu silu.
 
-::: {.mf1-we}
+::: {#ex-u05-servisni-spremnik-s-tri-vodoravne-ukrute-t2 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Servisni spremnik s tri vodoravne ukrute&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U projektiranju servisnog spremnika bočnu stijenu treba podijeliti na četiri jednako opterećena polja postavljanjem tri vodoravne ukrute. Treba odrediti dubine ukruta, silu po polju i hvatište rezultante na najnižem polju.
@@ -293,7 +296,7 @@ Taj osnovni proračun zatvara tipičan prvi korak: jedna ploha, jedna rezultanta
 
 Zanemarite vlastitu težinu ukruta i debljinu stijenke. Pretpostavite da je stijena potpuno vertikalna i da s vanjske strane djeluje atmosferski tlak.
 
-![Val 2 - raspored ukruta na stijenci spremnika](../assets/print/u05_val2_ukrute_stijenke.svg)
+![raspored ukruta na stijenci spremnika](../assets/print/u05_val2_ukrute_stijenke.svg){#fig-u05-raspored-ukruta-na-stijenci-spremnika fig-alt="raspored ukruta na stijenci spremnika"}
 
 **Pretpostavke i model**
 
@@ -366,9 +369,9 @@ ispod slobodne površine, odnosno oko $0{,}16\ \text{m}$ iznad dna spremnika.
 3. Hvatište najnižeg polja mora biti vrlo blizu dna, ali i dalje unutar tog polja, što dobiveni rezultat zadovoljava.
 :::
 
-Ta projektna scena zatvara vertikalne raspodjele po poljima. Vrijedi otvoriti još jedan tipični inženjerski slučaj iste fizike: ravnu, ali kosu plohu, na kojoj i dalje vrijede rezultanta i centar tlaka iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>, samo se dubina duž plohe mora čitati preko geometrije.
+Ta projektna scena zatvara vertikalne raspodjele po poljima. Vrijedi otvoriti još jedan tipični inženjerski slučaj iste fizike: ravnu, ali kosu plohu, na kojoj i dalje vrijede rezultanta i centar tlaka iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne i zakrivljene plohe</span></span>, samo se dubina duž plohe mora čitati preko geometrije.
 
-::: {.mf1-we}
+::: {#ex-u05-kosi-inspekcijski-poklopac-na-talozniku-t2 .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Kosi inspekcijski poklopac na talozniku&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Na nagnutoj stijenci taložnika ugrađen je pravokutni inspekcijski poklopac, zglobno ovješen na vrhu i pridržan zateznom spojnicom na donjem rubu. Treba odrediti rezultantnu hidrostatsku silu, položaj centra tlaka i potrebnu silu spojnice da poklopac ostane zatvoren.
@@ -388,7 +391,7 @@ Ta projektna scena zatvara vertikalne raspodjele po poljima. Vrijedi otvoriti jo
 2. položaj centra tlaka, mjeren uz plohu od zgloba `A`.
 3. silu spojnice potrebnu da poklopac ostane zatvoren.
 
-![Val 3 - kosi inspekcijski poklopac](../assets/print/u05_val3_kosi_poklopac.svg)
+![kosi inspekcijski poklopac](../assets/print/u05_val3_kosi_poklopac.svg){#fig-u05-kosi-inspekcijski-poklopac fig-alt="kosi inspekcijski poklopac"}
 
 **Pretpostavke i model**
 
@@ -453,7 +456,7 @@ $$
 3. Da je zglob dublje potopljen ili da je poklopac dulji, i rezultanta i potrebni moment zatvaranja morali bi rasti.
 :::
 
-::: {.mf1-we}
+::: {#ex-u05-vertikalna-ploha-kroz-tri-sloja-razlicitih-tekucina .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Vertikalna ploha kroz tri sloja različitih tekućina&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U procesnoj posudi vertikalna pregrada presijeca tri nemiješajuća sloja različitih gustoća (ulje, voda, glicerin). Treba odrediti rezultantnu silu po slojevima i ukupno hvatište radi dimenzioniranja pregrade i njezinih spojeva.
@@ -477,7 +480,7 @@ U procesnoj posudi se na vertikalnoj pregradi pojavljuju tri nemiješajuća sloj
 3. Položaj hvatišta sile $h_{CP}$, mjeren od slobodne površine.
 4. Položaj hvatišta mjeren duž plohe od gornjeg ruba pregrade ($s_{CP}$); usporediti s položajem težišta plohe.
 
-![Vertikalna pregrada širine 0,80 m i visine 1,50 m kroz tri sloja: ulje ($\rho_u = 820$), voda ($\rho_w = 998$) i glicerin ($\rho_g = 1260$ kg/m³). Tlak raste linearno unutar svakog sloja, ali s različitim nagibom – profil tlaka je izlomljena linija s tri segmenta.](../assets/print/u05_fig_tri_sloja.svg){#fig-u05-tri-sloja fig-align="center"}
+![Vertikalna pregrada širine 0,80 m i visine 1,50 m kroz tri sloja: ulje ($\rho_u = 820$), voda ($\rho_w = 998$) i glicerin ($\rho_g = 1260$ kg/m³). Tlak raste linearno unutar svakog sloja, ali s različitim nagibom – profil tlaka je izlomljena linija s tri segmenta.](../assets/print/u05_fig_tri_sloja.svg){#fig-u05-tri-sloja fig-align="center" fig-alt="Vertikalna pregrada širine 0,80 m i visine 1,50 m kroz tri sloja: ulje ($\rho_u = 820$), voda ($\rho_w = 998$) i glicerin ($\rho_g = 1260$ kg/m³). Tlak raste linearno unutar svakog sloja, ali s različitim nagibom – profil tlaka je izlomljena linija s tri segmenta."}
 
 **Pretpostavke i model**
 
@@ -575,7 +578,7 @@ Težište plohe nalazi se na $L/2 = 0{,}75$ m od gornjeg ruba.
 4. Da su slojevi raspoređeni obrnuto (gušći gore), sustav bi bio hidrostatski **nestabilan** i miješao bi se konvekcijom; ovakav pristup integracije po pojasima ne bi vrijedio. Ovaj primjer vrijedi samo za stratificirani sustav u mirovanju.
 :::
 
-::: {.mf1-ch}
+::: {#ex-u05-zglobna-pregrada-s-uljem-iznad-vode-t3 .mf1-ch}
 <p class="mf1-box-label">Cjeloviti zadatak — Zglobna pregrada s uljem iznad vode&nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** U dvofaznom spremniku vertikalna servisna pregrada zglobno je ovješena na slobodnoj površini ulja, a donji rub pridržan je vodoravnom spojnicom. Treba odrediti sile na uljno i vodeno polje, položaj centra tlaka, silu spojnice i vodoravnu reakciju zgloba.
@@ -598,11 +601,11 @@ Težište plohe nalazi se na $L/2 = 0{,}75$ m od gornjeg ruba.
 3. silu spojnice $T$ potrebnu da pregrada ostane zatvorena.
 4. vodoravnu reakciju zgloba u točki `A`.
 
-![CH 1 - zglobna pregrada s uljem iznad vode](../assets/print/u05_ch1_pregrada_ulje_voda.svg)
+![zglobna pregrada s uljem iznad vode](../assets/print/u05_ch1_pregrada_ulje_voda.svg){#fig-u05-zglobna-pregrada-s-uljem-iznad-vode fig-alt="zglobna pregrada s uljem iznad vode"}
 
 **Pretpostavke i model**
 
-Pregrada je i dalje ravna vertikalna ploha, pa je fizika ista kao u ostatku <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span>; mijenja se samo tlak po dubini. Gornji dio nosi čisti trokutni dijagram tlaka ulja, dok donji dio nosi zbroj pravokutnog dijela od uljnog stupca i dodatnog trokutnog dijela od vode. Zato se najprije mora zatvoriti sila i moment po tim dijelovima, a tek onda vratiti ukupna rezultanta i sila držanja.
+Pregrada je i dalje ravna vertikalna ploha, pa je fizika ista kao u ostatku <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne i zakrivljene plohe</span></span>; mijenja se samo tlak po dubini. Gornji dio nosi čisti trokutni dijagram tlaka ulja, dok donji dio nosi zbroj pravokutnog dijela od uljnog stupca i dodatnog trokutnog dijela od vode. Zato se najprije mora zatvoriti sila i moment po tim dijelovima, a tek onda vratiti ukupna rezultanta i sila držanja.
 
 **Rješenje**
 
@@ -676,25 +679,25 @@ $$
 
 **Provjera i komentar**
 
-Ovaj `CH` zatvara integrativni sloj <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span> bez izlaska iz ravnih ploha: gornje uljno polje nosi oko $5{,}63\ \text{kN}$, donje polje oko $42{,}52\ \text{kN}$, ukupna rezultanta iznosi oko $48{,}15\ \text{kN}$, a centar tlaka leži na dubini oko $1{,}89\ \text{m}$ ispod slobodne površine. Da bi zglobna pregrada ostala zatvorena, spojnica mora preuzeti oko $32{,}58\ \text{kN}$, a zglob oko $15{,}6\ \text{kN}$ vodoravne reakcije.
+Ovaj cjeloviti zadatak zatvara integrativni sloj <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne i zakrivljene plohe</span></span> bez izlaska iz ravnih ploha: gornje uljno polje nosi oko $5{,}63\ \text{kN}$, donje polje oko $42{,}52\ \text{kN}$, ukupna rezultanta iznosi oko $48{,}15\ \text{kN}$, a centar tlaka leži na dubini oko $1{,}89\ \text{m}$ ispod slobodne površine. Da bi zglobna pregrada ostala zatvorena, spojnica mora preuzeti oko $32{,}58\ \text{kN}$, a zglob oko $15{,}6\ \text{kN}$ vodoravne reakcije.
 
 1. Donje polje mora nositi znatno veći dio sile jer je i dublje i opterećeno gušćim fluidom.
 2. Centar tlaka mora ležati ispod polovice ukupne visine, jer se najveći dio opterećenja nalazi u donjem dijelu pregrade.
 3. Ako se donje polje tretira kao jedan čisti trokut bez uljnog pravokutnog doprinosa, rezultanta i moment će biti premali.
 :::
 
-::: {.mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Hidrostatska sila na inspekcijski poklopac tlakova kotla &nbsp;<span class="mf1-level">T2</span></p>
+::: {#ex-u05-hidrostatska-sila-na-inspekcijski-poklopac-ventiliranoga-spremnika .mf1-we}
+<p class="mf1-box-label">Riješeni primjer — Hidrostatska sila na inspekcijski poklopac ventiliranoga spremnika &nbsp;<span class="mf1-level">T2</span></p>
 
 **Primjer za strojare**
 
-**Kontekst:** Na bočnoj stjenci tlakova kotla za paru u energani ugraden je pravokutni inspekcijski poklopac. Kotao je u radu djelomice ispunjen vodom, a iznad vode vlada parna atm. Provjera: kolika hidrostatska sila djeluje na poklopac?
+**Kontekst:** Na bočnoj stijenci otvorenoga procesnog spremnika ugrađen je pravokutni inspekcijski poklopac. Spremnik je djelomice ispunjen vodom, a zračni prostor iznad vode ventiliran je u atmosferu. Treba izdvojiti neto hidrostatsko opterećenje poklopca.
 
 **Zadano**
 
 - Dimenzije poklopca: širina $b = 0{,}40\ \text{m}$, visina $h = 0{,}60\ \text{m}$ (vertikalan)
 - Gornji rub poklopca na dubini $h_1 = 1{,}50\ \text{m}$ ispod slobodne površine vode
-- Tlak pare iznad vode: $p_0 = 0$ (zanemari; s druge strane poklopca je isti atmosferski tlak)
+- Manometarski tlak zraka iznad vode: $p_0 = 0$; s vanjske strane poklopca također djeluje atmosfera
 - Gustoća vode: $\rho = 998\ \text{kg/m}^3$
 
 **Traženo**
@@ -703,11 +706,11 @@ Ovaj `CH` zatvara integrativni sloj <span class="mf1-ch-ref"><span class="mf1-ch
 2. Dubina centra tlaka.
 3. Udaljenost centra tlaka od gornjeg ruba poklopca.
 
-![Inspekcijski poklopac na kotlu: b=0,40 m, h=0,60 m, h₁=1,50 m, F≈4,23 kN](../assets/print/u05_fig_inspekcijski_poklopac.svg){#fig-u05-inspekcijski-poklopac fig-align="center" style="width:100%;max-width:940px;"}
+![Inspekcijski poklopac ventiliranoga spremnika: b=0,40 m, h=0,60 m, h₁=1,50 m, F≈4,23 kN](../assets/print/u05_fig_inspekcijski_poklopac.svg){#fig-u05-inspekcijski-poklopac fig-align="center" style="width:100%;max-width:940px;" fig-alt="Inspekcijski poklopac ventiliranoga spremnika: b=0,40 m, h=0,60 m, h₁=1,50 m, F≈4,23 kN"}
 
 **Pretpostavke i model**
 
-S obje strane poklopca djeluje isti tlak pare, pa se jednoliki dio poništava i ostaje samo hidrostatski pretlak od vodenog stupca. Poklopac je vertikalan, pa vrijedi standardna formula.
+S obje strane poklopca djeluje isti atmosferski tlak, pa se jednoliki dio poništava i ostaje samo hidrostatski pretlak od vodenoga stupca. Poklopac je vertikalan, pa vrijedi standardna formula za manometarsko polje.
 
 **Rješenje**
 
@@ -740,11 +743,11 @@ Udaljenost od gornjeg ruba: $1{,}817 - 1{,}50 = 0{,}317\ \text{m}$ (nešto ispod
 
 **Provjera i komentar**
 
-Sila $4{,}23\ \text{kN}$ realna je vrijednost za poklopac te veličine i dubine. Centar tlaka je $16{,}7\ \text{mm}$ ispod težišta – zbog plitke potopljenosti pomak je mali, ali neželimno zanemariv pri dimenzioniranju zaptivačke spojnice. Zabrtvljivači i vijci uvijek se računaju na silu u centru tlaka, ne u težištu.
+U idealiziranom spremniku rezultanta iznosi $4{,}23\ \text{kN}$, a centar tlaka leži $16{,}7\ \text{mm}$ ispod težišta. Te dvije veličine čine ulazno opterećenje za zaseban proračun poklopca, brtve i spoja; ne određuju same po sebi sile u pojedinim vijcima ni nepropusnost.
 
 :::
 
-::: {.mf1-we}
+::: {#ex-u05-sila-i-hvatiste-na-brodska-vrata-brane .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Sila i hvatište na brodska vrata brane &nbsp;<span class="mf1-level">T2</span></p>
 
 **Primjer za građevinare**
@@ -763,7 +766,7 @@ Sila $4{,}23\ \text{kN}$ realna je vrijednost za poklopac te veličine i dubine.
 2. Dubina centra tlaka.
 3. Na kojoj visini od dna vrata djeluje rezultanta?
 
-![Klizna vrata brane: b=1,80 m, H=1,20 m, h₁=0,80 m, F≈29,6 kN, y_CP=1,486 m](../assets/print/u05_fig_brodska_vrata_brane.svg){#fig-u05-brodska-vrata-brane fig-align="center" style="width:100%;max-width:940px;"}
+![Klizna vrata brane: b=1,80 m, H=1,20 m, h₁=0,80 m, F≈29,6 kN, y_CP=1,486 m](../assets/print/u05_fig_brodska_vrata_brane.svg){#fig-u05-brodska-vrata-brane fig-align="center" style="width:100%;max-width:940px;" fig-alt="Klizna vrata brane: b=1,80 m, H=1,20 m, h₁=0,80 m, F≈29,6 kN, y_CP=1,486 m"}
 
 **Pretpostavke i model**
 
@@ -801,7 +804,7 @@ Sila $29{,}63\ \text{kN}$ je realna za klizna vrata tog gabarita. Hvatište $0{,
 
 :::
 
-::: {.mf1-we}
+::: {#ex-u05-inspekcijski-poklopac-spremnika-rashladnog-medija-u-podatkovnom .mf1-we}
 <p class="mf1-box-label">Riješeni primjer — Inspekcijski poklopac spremnika rashladnog medija u podatkovnom centru &nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Veliki podatkovni centri koriste centralni spremnik rashladnog medija (najčešće vode ili razrjeđene smjese glikola s vodom) iz kojeg se hladi sustav servera kroz zatvoreni vodeni krug. Spremnik je opremljen kružnim inspekcijskim poklopcem na bočnoj stijenci koji omogućuje vizualnu kontrolu i čišćenje. Konstruktor mora dimenzionirati vijke poklopca prema hidrostatičkom opterećenju u nominalnom radnom stanju.
@@ -818,11 +821,11 @@ Sila $29{,}63\ \text{kN}$ je realna za klizna vrata tog gabarita. Hvatište $0{,
 1. Površina poklopca;
 2. Ukupna hidrostatička sila na poklopac;
 3. Položaj hvatišta sile mjereno od slobodne površine;
-4. Moment koji vijci moraju preuzimati u odnosu na težište poklopca.
+4. Moment hidrostatske rezultante u odnosu na težište poklopca, kao ulaz za kasniji model spoja.
 
 **Pretpostavke i model**
 
-Promatra se statičko stanje spremnika pri nominalnoj radnoj razini. Tlak na slobodnoj površini je atmosferski, pa se račun vodi u manometarskom tlaku. Aksijalni moment tromosti za kružni presjek iznosi $I_{xc} = \pi D^4 / 64$, primjenjivo za poklopac koji je okomito uronjen (kut nagiba prema vertikali jednak je nuli).
+Promatra se statičko stanje spremnika pri nominalnoj radnoj razini. Tlak na slobodnoj površini je atmosferski, pa se račun vodi u manometarskom tlaku. Aksijalni moment površine kružnice iznosi $I_{xc}=\pi D^4/64$. Ne modeliraju se krutost poklopca i prirubnice, prednaprezanje, raspored vijaka, efektivna površina i karakteristika brtve ni dopuštena naprezanja.
 
 **Rješenje**
 
@@ -856,7 +859,7 @@ $$
 e = y_{CP} - h_C \approx 9{,}4\ \text{mm}.
 $$
 
-Moment u odnosu na težište poklopca koji moraju preuzimati vijci (po cijelom obodu) iznosi
+Moment hidrostatske rezultante u odnosu na težište poklopca iznosi
 
 $$
 M = F \cdot e = 6{,}988 \cdot 10^3 \cdot 9{,}4 \cdot 10^{-3} \approx 65{,}7\ \text{N\,m}.
@@ -864,7 +867,7 @@ $$
 
 **Provjera i komentar**
 
-Hidrostatička sila od približno $7\ \text{kN}$ relativno je skromna za poklopac promjera $0{,}6\ \text{m}$, što odgovara umjerenoj dubini ($2{,}4\ \text{m}$) i tipičnoj radnoj gustoći rashladnog medija (smjesa glikola i vode malo je gušća od čiste vode zbog dodatka antifriza). Spuštanje hvatišta ispod težišta poklopca od svega $9{,}4\ \text{mm}$ pokazuje da je pri ovakvoj dubini hidrostatički gradijent po visini poklopca relativno mali — kad bi središte bilo na $h_C = 0{,}5\ \text{m}$, spuštanje bi bilo gotovo pet puta veće. Moment od $65{,}7\ \text{N\,m}$ koji vijci moraju preuzeti uglavnom je značajan za dimenzioniranje brtve i raspodjelu sile po vijcima oboda — premali broj vijaka može dovesti do lokalnog mikropropuštanja u gornjem dijelu poklopca, gdje je pritisak najmanji, ali se u uvjetima rashladnih krugova s kondicijom čistoće traži apsolutna nepropusnost.
+Hidrostatska rezultanta iznosi približno $7\ \text{kN}$, a njezina ekscentričnost prema težištu $9{,}4\ \text{mm}$ daje moment $65{,}7\ \text{N\,m}$. Pri većoj dubini ista se ploha opterećuje gotovo jednolikije, pa se centar tlaka približava težištu. Dobivene sila i moment tek su **vanjska opterećenja** za model spoja: raspodjela po vijcima i brtvi ovisi o prednaprezanju, krutostima, rasporedu vijaka, efektivnoj brtvenoj površini, tlakovima izvan nominalnoga stanja te mjerodavnim pravilima i faktorima sigurnosti. Iz ovoga se primjera ne može zaključiti broj vijaka ni zajamčiti nepropusnost.
 :::
 
 ::: {.mf1-samoprovjera}
@@ -901,45 +904,111 @@ Ne izravno, jer pri $\alpha = 90^\circ$ (ploha horizontalna) tlak je jednolik po
 :::
 :::
 
-::: {.mf1-vjezbe-list}
-1. **T1** Vertikalni pravokutni poklopac širine $b = 1{,}40\ \text{m}$ i visine $h = 1{,}80\ \text{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1 = 1{,}10\ \text{m}$. Odredi rezultantnu hidrostatsku silu na poklopac, dubinu centra tlaka ispod slobodne površine i udaljenost centra tlaka od gornjeg ruba poklopca.
+::::: {.mf1-vjezbe-list}
+1. [**T1**]{#task-u05-vertikalni-pravokutni-poklopac-sirine-i-visine-nalazi} Vertikalni pravokutni poklopac širine $b = 1{,}40\ \text{m}$ i visine $h = 1{,}80\ \text{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1 = 1{,}10\ \text{m}$. Odredi rezultantnu hidrostatsku silu na poklopac, dubinu centra tlaka ispod slobodne površine i udaljenost centra tlaka od gornjeg ruba poklopca.
 
-	**Natuknica:** $F = \rho gAh_C$; zatim $y_{CP} = h_C + I_G/(Ah_C)$ i udaljenost od gornjeg ruba dobiva se oduzimanjem $h_1$. (Rješenje: $F \approx 49{,}4\ \text{kN}$; $y_{CP} \approx 2{,}14\ \text{m}$; od gornjeg ruba $\approx 1{,}04\ \text{m}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   $F = \rho gAh_C$; zatim $y_{CP} = h_C + I_G/(Ah_C)$ i udaljenost od gornjeg ruba dobiva se oduzimanjem $h_1$.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - vertikalna ploha, slobodna površina, dubina $h_1$, širina $b$ i visina $h$.
+   $F \approx 49{,}4\ \text{kN}$; $y_{CP} \approx 2{,}14\ \text{m}$; od gornjeg ruba $\approx 1{,}04\ \text{m}$.
+   :::
+   ::::
+   **Skica:** da - vertikalna ploha, slobodna površina, dubina $h_1$, širina $b$ i visina $h$.
 
-2. **T1** Kružni inspekcijski prozor promjera $D = 0{,}60\ \text{m}$ nalazi se u vodi tako da mu je središte na dubini $h_C = 2{,}20\ \text{m}$. Odredi rezultantnu silu na prozor i dubinu centra tlaka.
+2. [**T1**]{#task-u05-kruzni-inspekcijski-prozor-promjera-nalazi-se-u} Kružni inspekcijski prozor promjera $D = 0{,}60\ \text{m}$ nalazi se u vodi tako da mu je središte na dubini $h_C = 2{,}20\ \text{m}$. Odredi rezultantnu silu na prozor i dubinu centra tlaka.
 
-	**Natuknica:** koristi $A = \pi D^2/4$ i $I_G = \pi D^4/64$; zatim isti slijed $F = \rho gAh_C$ i $y_{CP} = h_C + I_G/(Ah_C)$. (Rješenje: $F \approx 6{,}10\ \text{kN}$; $y_{CP} \approx 2{,}21\ \text{m}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   koristi $A = \pi D^2/4$ i $I_G = \pi D^4/64$; zatim isti slijed $F = \rho gAh_C$ i $y_{CP} = h_C + I_G/(Ah_C)$.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - kružna ploha s označenim središtem, promjerom $D$ i dubinom $h_C$.
+   $F \approx 6{,}10\ \text{kN}$; $y_{CP} \approx 2{,}21\ \text{m}$.
+   :::
+   ::::
+   **Skica:** da - kružna ploha s označenim središtem, promjerom $D$ i dubinom $h_C$.
 
-3. **T2** Kosi inspekcijski poklopac širine $b = 0{,}80\ \text{m}$ i duljine $L = 1{,}00\ \text{m}$ nalazi se pod kutom $40^\circ$ prema vodoravnici. Gornji rub poklopca je na dubini $0{,}90\ \text{m}$ i spojen je zglobom. Odredi rezultantnu silu na poklopac, položaj centra tlaka duž plohe i silu držanja potrebnu na donjem rubu da poklopac ostane zatvoren.
+3. [**T2**]{#task-u05-kosi-inspekcijski-poklopac-sirine-i-duljine-nalazi} Kosi inspekcijski poklopac širine $b = 0{,}80\ \text{m}$ i duljine $L = 1{,}00\ \text{m}$ nalazi se pod kutom $40^\circ$ prema vodoravnici. Gornji rub poklopca je na dubini $0{,}90\ \text{m}$ i spojen je zglobom. Odredi rezultantnu silu na poklopac, položaj centra tlaka duž plohe i silu držanja potrebnu na donjem rubu da poklopac ostane zatvoren.
 
-	**Natuknica:** srednja dubina je $h_C = h_1 + (L/2)\sin\theta$; silu računaj preko $\rho gAh_C$, a silu držanja iz momentne ravnoteže oko zgloba. (Rješenje: $F \approx 9{,}59\ \text{kN}$; centar tlaka $\approx 0{,}54\ \text{m}$ od gornjeg ruba uz plohu; sila držanja $T \approx 5{,}21\ \text{kN}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   srednja dubina je $h_C = h_1 + (L/2)\sin\theta$; silu računaj preko $\rho gAh_C$, a silu držanja iz momentne ravnoteže oko zgloba.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - kosa ploha sa zglobom, duljina $L$, kut $\theta$ i rezultanta na plohi.
+   $F \approx 9{,}59\ \text{kN}$; centar tlaka $\approx 0{,}54\ \text{m}$ od gornjeg ruba uz plohu; sila držanja $T \approx 5{,}21\ \text{kN}$.
+   :::
+   ::::
+   **Skica:** da - kosa ploha sa zglobom, duljina $L$, kut $\theta$ i rezultanta na plohi.
 
-4. **T2** Vertikalna stijena širine $b = 1{,}80\ \text{m}$ zadržava vodu do visine $1{,}50\ \text{m}$, iznad koje se nalazi ulje gustoće $\rho_u = 820\ \text{kg/m}^3$ još do dodatne visine $0{,}90\ \text{m}$. Odredi ukupnu rezultantnu silu na stijenu i dubinu njezina hvatišta.
+4. [**T2**]{#task-u05-vertikalna-stijena-sirine-zadrzava-vodu-do-visine} Vertikalna stijena širine $b = 1{,}80\ \text{m}$ zadržava vodu do visine $1{,}50\ \text{m}$, iznad koje se nalazi ulje gustoće $\rho_u = 820\ \text{kg/m}^3$ još do dodatne visine $0{,}90\ \text{m}$. Odredi ukupnu rezultantnu silu na stijenu i dubinu njezina hvatišta.
 
-	**Natuknica:** tlak razdvoji na dva dijela; za svaku tekućinu računaj zasebnu rezultantu i moment, pa ih zbroji u zajedničko hvatište. (Rješenje: $F \approx 45{,}3\ \text{kN}$; $y_{CP} \approx 1{,}62\ \text{m}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   tlak razdvoji na dva dijela; za svaku tekućinu računaj zasebnu rezultantu i moment, pa ih zbroji u zajedničko hvatište.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - vertikalna stijena s dvije tekućine i prijelomom dijagrama tlaka na granici slojeva.
+   $F \approx 45{,}3\ \text{kN}$; $y_{CP} \approx 1{,}62\ \text{m}$.
+   :::
+   ::::
+   **Skica:** da - vertikalna stijena s dvije tekućine i prijelomom dijagrama tlaka na granici slojeva.
 
-5. **T3** Vertikalna stijenka spremnika visine $H = 4{,}20\ \text{m}$ i širine $b = 2{,}50\ \text{m}$ potpuno je ispunjena vodom. Dvije vodoravne ukrute trebaju podijeliti opterećenje stijenke na tri pojasa jednakih rezultantnih sila. Odredi dubine na kojima treba postaviti ukrute mjereno od slobodne površine.
+5. [**T3**]{#task-u05-vertikalna-stijenka-spremnika-visine-i-sirine-potpuno} Vertikalna stijenka spremnika visine $H = 4{,}20\ \text{m}$ i širine $b = 2{,}50\ \text{m}$ potpuno je ispunjena vodom. Dvije vodoravne ukrute trebaju podijeliti opterećenje stijenke na tri pojasa jednakih rezultantnih sila. Odredi dubine na kojima treba postaviti ukrute mjereno od slobodne površine.
 
-	**Natuknica:** radi s površinom dijagrama tlaka; svako polje mora imati istu rezultantu, pa uvjet postavi preko jednakih integrala po dubini. (Rješenje: granice pojaseva jednakih sila su $y_1 = H/\sqrt{3} \approx 2{,}42\ \text{m}$ i $y_2 = H\sqrt{2/3} \approx 3{,}43\ \text{m}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   radi s površinom dijagrama tlaka; svako polje mora imati istu rezultantu, pa uvjet postavi preko jednakih integrala po dubini.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - stijena spremnika, linearni dijagram tlaka i dvije nepoznate razine ukruta.
+   granice pojaseva jednakih sila su $y_1 = H/\sqrt{3} \approx 2{,}42\ \text{m}$ i $y_2 = H\sqrt{2/3} \approx 3{,}43\ \text{m}$.
+   :::
+   ::::
+   **Skica:** da - stijena spremnika, linearni dijagram tlaka i dvije nepoznate razine ukruta.
 
-6. **T3** Zglobna vertikalna pregrada širine $b = 1{,}20\ \text{m}$ i visine $H = 2{,}40\ \text{m}$ zadržava s jedne strane ulje gustoće $\rho_u = 820\ \text{kg/m}^3$ do visine $0{,}80\ \text{m}$, a ispod njega vodu gustoće $\rho_w = 998\ \text{kg/m}^3$ do ukupne visine $H$. Pregrada je zglobno vezana u gornjem rubu, a na donjem rubu pridržava se vodoravnom spojnicom. Odredi ukupnu rezultantnu silu, dubinu centra tlaka i silu u spojnici.
+6. [**T3**]{#task-u05-zglobna-vertikalna-pregrada-sirine-i-visine-zadrzava} Zglobna vertikalna pregrada širine $b = 1{,}20\ \text{m}$ i visine $H = 2{,}40\ \text{m}$ zadržava s jedne strane ulje gustoće $\rho_u = 820\ \text{kg/m}^3$ do visine $0{,}80\ \text{m}$, a ispod njega vodu gustoće $\rho_w = 998\ \text{kg/m}^3$ do ukupne visine $H$. Pregrada je zglobno vezana u gornjem rubu, a na donjem rubu pridržava se vodoravnom spojnicom. Odredi ukupnu rezultantnu silu, dubinu centra tlaka i silu u spojnici.
 
-	**Natuknica:** tlak razdvoji na gornje uljno i donje vodeno polje; zasebno zatvori sile i momente, zatim vrati ukupno hvatište i momentnu ravnotežu oko zgloba. (Rješenje: $F \approx 30{,}5\ \text{kN}$; $y_{CP} \approx 1{,}62\ \text{m}$; sila u spojnici $T \approx 20{,}6\ \text{kN}$.)
+   :::: {.content-visible .mf1-hint-online when-format="html"}
+   ::: {.callout-note collapse="true" data-hint-key="true"}
+   ### Naputak
+   tlak razdvoji na gornje uljno i donje vodeno polje; zasebno zatvori sile i momente, zatim vrati ukupno hvatište i momentnu ravnotežu oko zgloba.
+   :::
+   ::::
+   :::: {.content-visible .mf1-answer-online when-format="html"}
+   ::: {.callout-tip collapse="true" data-answer-key="true"}
+   ### Kontrolni rezultat
 
-	**Skica:** da - vertikalna pregrada s gornjim slojem ulja, donjim slojem vode, zglobom gore i spojnicom dolje.
-:::
+   $F \approx 30{,}5\ \text{kN}$; $y_{CP} \approx 1{,}62\ \text{m}$; sila u spojnici $T \approx 20{,}6\ \text{kN}$.
+   :::
+   ::::
+   **Skica:** da - vertikalna pregrada s gornjim slojem ulja, donjim slojem vode, zglobom gore i spojnicom dolje.
+:::::
 
-![Skice uz zadatke za vježbu — ravni poklopci, pregrade i slojevi tekućina (poglavlje 5).](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe fig-align="center"}
+![Skice uz zadatke za vježbu — ravni poklopci, pregrade i slojevi tekućina (poglavlje 5).](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — ravni poklopci, pregrade i slojevi tekućina (poglavlje 5)."}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -970,7 +1039,7 @@ Vrata brane, servisni poklopac spremnika i brodska pregrada ne dimenzioniraju se
 
 Ovdje se promatra statičko opterećenje mirujućeg fluida i kruta ploha. Ako su važni elastični progib ploče, valovi, udarni režimi ili lokalno izvijanje, sama rezultanta više nije dovoljna za puni proračun sigurnosti.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne plohe</span></span> nije samo poglavlje o jednoj rezultanti. Prava vrijednost dolazi kad se raspodjela tlaka čita dovoljno dobro da se iz nje projektiraju polja, ukrute i oslonci.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na ravne i zakrivljene plohe</span></span> nije samo poglavlje o jednoj rezultanti. Prava vrijednost dolazi kad se raspodjela tlaka čita dovoljno dobro da se iz nje projektiraju polja, ukrute i oslonci.
 :::
 
 ::: {.mf1-numerika}
@@ -992,8 +1061,6 @@ Ovdje se promatra statičko opterećenje mirujućeg fluida i kruta ploha. Ako su
 
 Pri CFD simulaciji potopljene ravne plohe (vrata brane, inspekcijski poklopac, stijenka spremnika), funkcijski objekt `forces` integrira raspodjelu tlaka po patchu i daje rezultantnu silu. Ručna provjera iz ovog poglavlja glasi: $F = \rho g z_T A$ za poznato $z_T$ (dubina težišta) i $A$ (površina plohe). Za mirnu vodu razlika između CFD rezultata i analitičke vrijednosti trebala bi biti manja od $2\%$; veće odstupanje signalizira pogrešno postavljen rubni uvjet tlaka ili nepravilnu raspodjelu hidrostatike u domeni. Bez ove provjere CFD rezultat nije pouzdan za projektnu odluku.
 :::
-
-
 
 
 

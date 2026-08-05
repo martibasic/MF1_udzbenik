@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "case_id": "venturi_diffuser",
+  "title": "Venturi i blagi difuzor s propisanim ukupnim gubitkom",
+  "status": "ready",
+  "data_role": "pedagogical_verification",
+  "data_classification": "synthetic_pedagogical",
+  "governing_model": "steady incompressible flow; 1D reference with a prescribed loss coefficient",
+  "geometry_m": {
+    "inlet_diameter": 0.1,
+    "throat_diameter": 0.05,
+    "outlet_diameter": 0.1,
+    "diffuser_half_angle_deg": 7.0
+  },
+  "fluid_si": {
+    "density_kg_m3": 998.2,
+    "dynamic_viscosity_pa_s": 0.001002
+  },
+  "boundary_conditions": {
+    "inlet_volume_flow_m3_s": 0.01,
+    "inlet_static_pressure_pa": 100000.0,
+    "wall": "no-slip",
+    "thermal_model": "not solved"
+  },
+  "reference_model": {
+    "description": "1D Bernoulli reference plus K_loss=0.2 referred to throat dynamic pressure",
+    "loss_coefficient_throat_basis": 0.2,
+    "inlet_area_m2": 0.007853981633974483,
+    "throat_area_m2": 0.001963495408493621,
+    "inlet_velocity_m_s": 1.2732395447351625,
+    "throat_velocity_m_s": 5.09295817894065,
+    "reynolds_inlet": 126841.0891771097,
+    "reynolds_throat": 253682.1783542194,
+    "ideal_inlet_to_throat_pressure_drop_pa": 12136.656661413785,
+    "prescribed_total_pressure_loss_pa": 2589.153421101608,
+    "throat_static_pressure_pa": 87863.34333858622,
+    "outlet_static_pressure_pa": 97410.84657889839,
+    "pressure_recovery_coefficient": 0.7375
+  },
+  "acceptance": {
+    "required_grids": 3,
+    "max_mass_imbalance_percent": 0.1,
+    "max_final_continuity_residual_l2": 1e-5,
+    "max_final_momentum_residual_l2": 5e-6,
+    "min_residual_reduction_orders": 4.0,
+    "max_last_monitor_change_percent": 0.05,
+    "require_monotonic_grid_convergence": true,
+    "require_gci": true
+  },
+  "files": {
+    "grids": "grids.csv",
+    "history": "solver_history.csv",
+    "uncertainty": "uncertainty.json",
+    "provenance": "provenance.json"
+  }
+}

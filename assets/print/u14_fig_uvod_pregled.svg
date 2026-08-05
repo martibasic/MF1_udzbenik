@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 460" role="img" aria-labelledby="u14fup_title u14fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
   <title id="u14fup_title">U14 - Pregled poglavlja: bezdimenzijski brojevi, dimenzijska analiza i slicnost</title>
-  <desc id="u14fup_desc">Tri panela: lijevo prepoznavanje dominantne sile kao vage izmedu inercije i viskoznosti, gravitacije ili napetosti; sredina kljucni brojevi Re, Fr, Eu, We i Ma; desno primjena u aerotunelu gdje jednak Reynoldsov broj daje jednak koeficijent otpora modela i prototipa.</desc>
+  <desc id="u14fup_desc">Tri panela: lijevo usporedba karakteristicnih mehanizama, sredina kljucni brojevi Re, Fr, Eu, We i Ma, a desno prijenos koeficijenta otpora iz aerotunela uz jednak Reynoldsov broj i ostale jednake bezdimenzijske uvjete.</desc>
   <defs>
     <marker id="u14fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
@@ -13,7 +13,7 @@
   <rect x="24" y="28" width="306" height="404" rx="10" fill="#f8fbff" stroke="#c0392b" stroke-width="1.3" />
   <rect x="24" y="28" width="306" height="30" rx="10" fill="#c0392b" />
   <rect x="24" y="50" width="306" height="8" fill="#c0392b" />
-  <text x="177" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Koja sila dominira?</text>
+  <text x="177" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Usporedi mehanizme</text>
 
   <!-- vaga 1: inercija vs viskoznost -->
   <text x="44" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56">inercija ↔ viskoznost</text>
@@ -33,8 +33,8 @@
   <rect x="177" y="288" width="133" height="24" fill="#eaf3fb" stroke="#1565c0" stroke-width="1" />
   <text x="177" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#1565c0">We = ρv²L / σ</text>
 
-  <text x="177" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">Veći omjer → inercija</text>
-  <text x="177" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">nadvladava drugu silu</text>
+  <text x="177" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">Omjer pokazuje relativnu</text>
+  <text x="177" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">važnost dvaju mehanizama</text>
 
   <!-- ===================== PANEL 2: kljucni brojevi ===================== -->
   <rect x="342" y="28" width="306" height="404" rx="10" fill="#fcfdff" stroke="#1565c0" stroke-width="1.3" />
@@ -44,7 +44,7 @@
 
   <rect x="362" y="76" width="266" height="60" rx="6" fill="#fdedec" stroke="#c0392b" stroke-width="1.1" />
   <text x="378" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#c0392b">Re = vL / ν</text>
-  <text x="378" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">režim strujanja</text>
+  <text x="378" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">inercija / viskoznost</text>
 
   <rect x="362" y="144" width="266" height="60" rx="6" fill="#f3eafa" stroke="#8e44ad" stroke-width="1.1" />
   <text x="378" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#8e44ad">Fr = v / √(gL)</text>
@@ -60,7 +60,7 @@
 
   <rect x="362" y="348" width="266" height="60" rx="6" fill="#f4f6f7" stroke="#5d6d7e" stroke-width="1.1" />
   <text x="378" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#5d6d7e">Ma = v / a</text>
-  <text x="378" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">stlačivost (Ma &lt; 0,3)</text>
+  <text x="378" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">stlačivost; prag je uvjetan</text>
 
   <!-- ===================== PANEL 3: aerotunel ===================== -->
   <rect x="660" y="28" width="296" height="404" rx="10" fill="#fcfdff" stroke="#1e8449" stroke-width="1.3" />
@@ -79,7 +79,7 @@
   <circle cx="872" cy="278" r="12" fill="#34495e" />
   <line x1="690" y1="270" x2="740" y2="270" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
 
-  <text x="808" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#14532d"><tspan font-weight="700">jednak Re</tspan> → jednak C_d</text>
-  <text x="808" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">jedna krivulja vrijedi za</text>
-  <text x="808" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">sve veličine i fluide</text>
+  <text x="808" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#14532d"><tspan font-weight="700">jednak Re + isti ostali uvjeti</tspan></text>
+  <text x="808" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">→ jednak C_d unutar</text>
+  <text x="808" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">granica odabranoga modela</text>
 </svg>

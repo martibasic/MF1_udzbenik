@@ -1,0 +1,46 @@
+<script>
+(() => {
+  "use strict";
+
+  const enhanceCollapsibleCallouts = () => {
+    const headers = document.querySelectorAll(
+      '.callout-header[data-bs-toggle="collapse"]'
+    );
+
+    for (const header of headers) {
+      if (header.dataset.mf1KeyboardReady === "true") continue;
+
+      const titleCopy = header
+        .querySelector(".callout-title-container")
+        ?.cloneNode(true);
+      titleCopy
+        ?.querySelectorAll(".screen-reader-only")
+        .forEach((element) => element.remove());
+      const title = titleCopy?.textContent.replace(/\s+/g, " ").trim();
+      header.setAttribute("role", "button");
+      header.setAttribute("tabindex", "0");
+      header.setAttribute(
+        "aria-label",
+        title
+          ? `Prikaži ili sakrij odjeljak: ${title}`
+          : "Prikaži ili sakrij odjeljak"
+      );
+      header.dataset.mf1KeyboardReady = "true";
+
+      header.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        header.click();
+      });
+    }
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", enhanceCollapsibleCallouts, {
+      once: true,
+    });
+  } else {
+    enhanceCollapsibleCallouts();
+  }
+})();
+</script>

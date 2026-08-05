@@ -10,8 +10,9 @@
 :root {
   --mf1-ink:        #11202e;
   --mf1-soft-ink:   #2d3e51;
-  --mf1-muted:      #6e7c8b;
-  --mf1-faint:      #94a0ad;
+  /* Najsvjetliji tekst ostaje iznad WCAG AA omjera 4,5 : 1 na bijeloj podlozi. */
+  --mf1-muted:      #536577;
+  --mf1-faint:      #657587;
 
   --mf1-bg:         #ffffff;
   --mf1-bg-soft:    #f6f3ec;
@@ -80,6 +81,37 @@ a:hover {
   color: var(--mf1-accent-d);
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #0b6fcc;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Dugi URL-ovi, oznake i jednadžbe ne smiju proširiti cijelu stranicu. */
+p, li, td, th, figcaption, .mf1-ch-title,
+.csl-entry, .csl-right-inline, .csl-entry a.uri {
+  overflow-wrap: anywhere;
+}
+
+/* Bibliografski URL nije prozna riječ pa je na uskom zaslonu dopušten prijelom
+   u bilo kojoj točki. Min-width: 0 otključava prijelom unutar CSL grida. */
+.csl-entry, .csl-right-inline { min-width: 0; }
+.csl-entry a.uri {
+  word-break: break-all;
+  hyphens: none;
+}
+
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Naslovi — serif s blago akademskim ritmom */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--mf1-serif);
@@ -143,10 +175,24 @@ h4 {
 
 /* Numerika sekcija ako je uključena */
 .header-section-number {
-  color: var(--mf1-faint);
+  color: var(--mf1-muted) !important;
+  opacity: 1 !important;
   font-weight: 400;
   margin-right: 0.4rem;
   font-variant-numeric: tabular-nums;
+}
+
+/* Flatlyjeva zelena za poveznice sadržaja nema dovoljan kontrast na bijeloj
+   podlozi. Aktivna stavka ostaje akcentirana tamnijom bojom. */
+#TOC .nav-link {
+  color: var(--mf1-soft-ink) !important;
+}
+#TOC .nav-link.active,
+#TOC .nav-link:hover {
+  color: var(--mf1-accent-d) !important;
+}
+#TOC .nav-link .header-section-number {
+  color: inherit !important;
 }
 
 /* Slike */
@@ -164,12 +210,27 @@ figcaption {
 
 /* Math */
 .math.display {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   margin: 1.3rem 0;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0.2rem 0;
+  -webkit-overflow-scrolling: touch;
 }
-.math.inline { font-size: 1.02em; }
+.math.inline {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-size: 1.02em;
+  line-height: 1.35;
+  vertical-align: -0.25em;
+  -webkit-overflow-scrolling: touch;
+}
 
 /* Code (rijetko se pojavljuje, ali za svaki slučaj) */
 code, kbd, samp {
@@ -240,6 +301,7 @@ blockquote em { font-style: normal; }
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--mf1-muted) !important;
+  opacity: 1 !important;
   padding: 0 !important;
   margin-bottom: 0.4rem !important;
 }
@@ -249,11 +311,17 @@ blockquote em { font-style: normal; }
 }
 .callout-icon-container { display: none !important; }
 .callout-note { border-left-color: var(--mf1-c-gp) !important; }
-.callout-note .callout-title { color: var(--mf1-c-gp) !important; }
+.callout-note .callout-title,
+.callout-note .callout-header,
+.callout-note .callout-title-container { color: var(--mf1-c-gp) !important; }
 .callout-tip { border-left-color: var(--mf1-c-we) !important; }
-.callout-tip .callout-title { color: var(--mf1-c-we) !important; }
+.callout-tip .callout-title,
+.callout-tip .callout-header,
+.callout-tip .callout-title-container { color: var(--mf1-c-we) !important; }
 .callout-warning { border-left-color: var(--mf1-accent) !important; }
-.callout-warning .callout-title { color: var(--mf1-accent-d) !important; }
+.callout-warning .callout-title,
+.callout-warning .callout-header,
+.callout-warning .callout-title-container { color: var(--mf1-accent-d) !important; }
 
 /* =================================================================
    2. Bočna traka — plosnata, akademska, mirna
@@ -369,7 +437,12 @@ blockquote em { font-style: normal; }
 .mf1-po,
 .mf1-ch,
 .mf1-izvod,
-.mf1-application {
+.mf1-application,
+.mf1-temelj,
+.mf1-fizikalno-znacenje,
+.mf1-granica-modela,
+.mf1-numerika,
+.mf1-dublje {
   background: transparent !important;
   background-image: none !important;
   border: 0;
@@ -386,6 +459,11 @@ blockquote em { font-style: normal; }
 .mf1-ch          { border-left-color: var(--mf1-c-ch); }
 .mf1-izvod       { border-left-color: var(--mf1-c-izvod); }
 .mf1-application { border-left-color: var(--mf1-accent); }
+.mf1-temelj { border-left-color: var(--mf1-c-gp); }
+.mf1-fizikalno-znacenje { border-left-color: var(--mf1-c-we); }
+.mf1-granica-modela { border-left-color: var(--mf1-c-po); }
+.mf1-numerika { border-left-color: var(--mf1-accent); }
+.mf1-dublje { border-left-color: var(--mf1-c-ch); }
 
 /* Labela bloka — sans serif, mala caps */
 .mf1-box-label {
@@ -405,6 +483,11 @@ blockquote em { font-style: normal; }
 .mf1-ch          .mf1-box-label { color: var(--mf1-c-ch); }
 .mf1-izvod       .mf1-box-label { color: var(--mf1-c-izvod); }
 .mf1-application .mf1-box-label { color: var(--mf1-accent-d); }
+.mf1-temelj .mf1-box-label { color: var(--mf1-c-gp); }
+.mf1-fizikalno-znacenje .mf1-box-label { color: var(--mf1-c-we); }
+.mf1-granica-modela .mf1-box-label { color: var(--mf1-c-po); }
+.mf1-numerika .mf1-box-label { color: var(--mf1-accent-d); }
+.mf1-dublje .mf1-box-label { color: var(--mf1-c-ch); }
 
 /* Razine T1–T4 — sitna plošica uz labelu */
 .mf1-level {
@@ -589,6 +672,12 @@ blockquote em { font-style: normal; }
   box-shadow: none;
   padding: 0 0 1.6rem;
   margin: 0 0 2.2rem;
+}
+.mf1-home-title {
+  font-size: 2.7rem;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+  margin: 0.5rem 0 0.7rem;
 }
 .mf1-hero h1 {
   font-size: 2.7rem;
@@ -825,8 +914,25 @@ a.mf1-card .mf1-card-hint,
   h3 { font-size: 1.08rem; }
 
   .mf1-hero h1 { font-size: 2.1rem; }
+  .mf1-home-title { font-size: 2.1rem; }
 
-  .mf1-we, .mf1-gp, .mf1-po, .mf1-ch, .mf1-izvod, .mf1-application, .mf1-warning {
+  main, .quarto-container, .page-columns, .page-layout-article,
+  #quarto-content, .content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  img, svg, video, iframe { max-width: 100%; height: auto; }
+
+  .math.display {
+    max-width: 100%;
+    padding-bottom: 0.4rem;
+  }
+
+  .mf1-we, .mf1-gp, .mf1-po, .mf1-ch, .mf1-izvod, .mf1-application,
+  .mf1-temelj, .mf1-fizikalno-znacenje, .mf1-granica-modela, .mf1-numerika, .mf1-dublje,
+  .mf1-warning {
     padding-left: 1rem;
     margin: 1.5rem 0;
   }
@@ -848,6 +954,21 @@ a.mf1-card .mf1-card-hint,
   }
 }
 
+@media (max-width: 360px) {
+  html { font-size: 16px; }
+  main { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .quarto-title-banner { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* =================================================================
    9. Ispis (PDF)
    ================================================================= */
@@ -856,10 +977,18 @@ a.mf1-card .mf1-card-hint,
   body { background: white; font-size: 11pt; }
   .no-print, .sidebar, #quarto-sidebar, .navbar, .page-navigation { display: none !important; }
 
+  /* Naputci i kontrolni rezultati uz zadatak pripadaju interaktivnom izdanju.
+     Tiskani ih dodatak D06 okuplja odvojeno od teksta zadatka. */
+  [data-hint-key="true"], [data-answer-key="true"],
+  .mf1-hint-online, .mf1-answer-online {
+    display: none !important;
+  }
+
   main, .quarto-container { max-width: 100% !important; }
 
   h1, h2, h3 { page-break-after: avoid; }
   figure, table, .mf1-we, .mf1-gp, .mf1-po, .mf1-ch, .mf1-izvod, .mf1-application,
+  .mf1-temelj, .mf1-fizikalno-znacenje, .mf1-granica-modela, .mf1-numerika, .mf1-dublje,
   .mf1-priprema, .mf1-samoprovjera, .mf1-checklist, .mf1-warning,
   .mf1-mini-summary, .mf1-zavrsni-okvir, .mf1-vjezbe-list, .mf1-print-note,
   .mf1-interaktivno, .mf1-numerika {

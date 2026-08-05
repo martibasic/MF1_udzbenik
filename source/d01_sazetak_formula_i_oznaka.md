@@ -10,7 +10,7 @@ Najsigurniji redoslijed je:
 2. provjeriti radi li se o tlaku, sili, gubitku, protoku ili bezdimenzijskoj veličini
 3. tek onda koristiti zapis iz sažetka
 
-Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglavlje `pog. 1–14`, a ne ovaj dodatak.
+Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglavlje `pog. 1–15`, a ne ovaj dodatak.
 
 ## Najčešće oznake
 
@@ -33,10 +33,11 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $A$ | površina presjeka ili plohe | m$^2$ |
 | $A_p$ | površina otvora ili pukotine | m$^2$ |
 | $V$ | volumen | m$^3$ |
-| $v$ | srednja ili lokalna brzina (opća oznaka, pog. 1–11 i 13–14) | m/s |
-| $c$ | apsolutna brzina fluida (turbostrojarska poglavlja 11–12) | m/s |
+| $v$ | srednja ili lokalna brzina fluida | m/s |
+| $a$ | brzina zvuka; iz konteksta se razlikuje od translacijskog ubrzanja | m/s |
+| $c$ | apsolutna brzina fluida u turbostrojevima | m/s |
 | $u$ | brzina gibajućeg elementa ili lopatice | m/s |
-| $w$ | relativna brzina fluida prema gibajućem elementu, $w = c - u$ (pog. 12) | m/s |
+| $w$ | relativna brzina fluida prema gibajućem elementu, $\mathbf w = \mathbf c-\mathbf u$ (pog. 14) | m/s |
 | $Q$ | volumenski protok | m$^3$/s |
 | $Q_p$ | protok kroz pukotinu ili servisni ispust | m$^3$/s |
 | $\dot{m}$ | maseni protok | kg/s |
@@ -47,7 +48,8 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $\varepsilon$ | apsolutna hrapavost cijevi | m |
 | $\lambda$ | Darcyjev koeficijent trenja | - |
 | $\xi$ | lokalni koeficijent gubitka | - |
-| $C_d$ | koeficijent istjecanja otvora (i koeficijent otpora tijela, $F_D/\tfrac12\rho v^2 A$) | - |
+| $C_d$ | koeficijent istjecanja otvora | - |
+| $C_D$ | koeficijent otpora tijela, $F_D/(\tfrac12\rho v^2 A)$ | - |
 | $Fr$ | Froudeov broj, $v/\sqrt{gL}$ | - |
 | $Eu$ | Eulerov broj, $\Delta p/(\rho v^2)$ | - |
 | $C_p$ | koeficijent tlaka, $(p-p_\infty)/(\tfrac12\rho v^2)$ | - |
@@ -72,7 +74,7 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $h = 4\sigma\cos\theta / (\rho g d)$ | Voda u staklenoj kapilari $d = 1\,\text{mm}$, $\theta \approx 0$: $h \approx 30\,\text{mm}$. |
 | $\Delta p = 4\sigma / d$ (Young-Laplace) | Kapljica vode $d = 1\,\text{mm}$, $\sigma = 0{,}072\,\text{N/m}$: $\Delta p \approx 288\,\text{Pa}$. |
 
-## pog. 3–7: Hidrostatika, plohe i uzgon
+## pog. 3–6: Hidrostatika, plohe i uzgon
 
 | Formula | Konkretan brojčani primjer |
 | --- | --- |
@@ -83,13 +85,13 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $g_{eff} = \sqrt{g^2 + a^2}$ | Pri $a = 5\,\text{m/s}^2$: $g_{eff} \approx 11{,}0\,\text{m/s}^2$. |
 | $F = \rho g z_T A$ (sila na ravnu plohu) | Pravokutna zaklopka $2 \times 3\,\text{m}$, težište na dubini $z_T = 3{,}5\,\text{m}$: $F \approx 205\,\text{kN}$. |
 | $F_H = \rho g z_T A_{proj}$ | Vertikalna projekcija zakrivljene plohe iste površine i težišta daje istu $F_H$ kao kod ravne plohe. |
-| $F_V = \rho g V$ | Imaginarni "vodeni stupac" volumena $V = 1\,\text{m}^3$ iznad zakrivljene plohe: $F_V \approx 9810\,\text{N}$. |
+| $|F_V| = \rho g V$ | Magnituda vertikalne komponente odgovara težini odgovarajućeg imaginarnog volumena; smjer se određuje iz lokalnih normala i strane na kojoj je fluid. |
 | $F_R = \sqrt{F_H^2 + F_V^2}$ | $F_H = 20\,\text{kN}$ i $F_V = 15\,\text{kN}$: $F_R = 25\,\text{kN}$. |
 | $y_R = \sum_i F_i y_i / \sum_i F_i$ (momentna superpozicija) | Dva doprinosa $F_1 = 10\,\text{kN}$ na $y_1 = 2\,\text{m}$ i $F_2 = 30\,\text{kN}$ na $y_2 = 5\,\text{m}$: $y_R = 170/40 = 4{,}25\,\text{m}$. |
 | $F_U = \rho g V_{istisnuto}$ (Arhimedov zakon) | Tijelo istisne $V = 0{,}1\,\text{m}^3$ vode: $F_U \approx 981\,\text{N}$. |
 | $G = F_U$ (uvjet plivanja) | Brod mase $10\,000\,\text{kg}$ uravnotežen je istisnutim volumenom od $\approx 10{,}02\,\text{m}^3$ vode. |
 
-## pog. 8–10: Kontinuitet, Bernoulli i gubici
+## pog. 7–8 i 13: Kontinuitet, Bernoulli i gubitci
 
 | Formula | Konkretan brojčani primjer |
 | --- | --- |
@@ -106,17 +108,17 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 | $p_0 - p = \tfrac{1}{2}\rho v^2$ (Pitot, dinamički tlak) | Voda, $v = 10\,\text{m/s}$: $\Delta p = 50\,\text{kPa}$. |
 | $v = \sqrt{2(p_0 - p)/\rho}$ | Voda, $\Delta p = 5\,\text{kPa}$: $v \approx 3{,}16\,\text{m/s}$. |
 
-## pog. 11–13: Količina gibanja, lopatice, potisak i cjevovodi
+## pog. 10 i 13–14: Količina gibanja, cjevovodi i turbostrojevi
 
 | Formula | Konkretan brojčani primjer |
 | --- | --- |
 | $\sum \vec{F} = \dot{m}(\vec{v}_{izl} - \vec{v}_{ul})$ | Mlaz $\dot{m} = 5\,\text{kg/s}$ skreće za $90^\circ$ pri $v = 20\,\text{m/s}$: $|F_x| = |F_y| = 100\,\text{N}$. |
-| $w = c - u$ (relativna brzina, pog. 12) | Mlaz $c = 30\,\text{m/s}$, obodna brzina lopatice $u = 12\,\text{m/s}$: $w = 18\,\text{m/s}$. |
+| $\mathbf w = \mathbf c-\mathbf u$ (relativna brzina, pog. 14) | Kolinerani mlaz $c = 30\,\text{m/s}$ i lopatica $u = 12\,\text{m/s}$ daju $w = 18\,\text{m/s}$; u općem slučaju račun je vektorski. |
 | $\dot{m}_{rel} = \rho A w$ | Mlaz $A = 1\,\text{cm}^2$ vode, $w = 18\,\text{m/s}$: $\dot{m}_{rel} = 1{,}8\,\text{kg/s}$. |
 | $F \approx \dot{m} v$ (mlaz na nepokretnu plohu) | $\dot{m} = 2\,\text{kg/s}$, $v = 25\,\text{m/s}$: $F = 50\,\text{N}$. |
 | $F \approx 2\dot{m} v$ (mlaz potpuno skreće za $180^\circ$) | Isti primjer: $F = 100\,\text{N}$. |
 | $P = F u$ (snaga predana lopatici) | Lopatica $F = 1\,\text{kN}$, obodna brzina $u = 10\,\text{m/s}$: $P = 10\,\text{kW}$. |
-| $Re = vD/\nu$ | Voda u cijevi $D = 50\,\text{mm}$, $v = 1\,\text{m/s}$, $\nu = 10^{-6}\,\text{m}^2/\text{s}$: $Re = 5 \cdot 10^4$ (turbulentno). |
+| $Re = vD/\nu$ | Voda u kružnoj tehničkoj cijevi $D = 50\,\text{mm}$, $v = 1\,\text{m/s}$, $\nu = 10^{-6}\,\text{m}^2/\text{s}$: $Re = 5 \cdot 10^4$; za uobičajene ulazne poremećaje i hrapavost očekuje se turbulentan razvijeni tok. |
 | $\lambda = 64/Re$ (laminarno strujanje) | $Re = 1500$: $\lambda \approx 0{,}043$. |
 | $h_w = \lambda(L/D)(v^2/2g) + \sum \xi v^2/(2g)$ | Cijev s linijskim gubitkom $5\,\text{m}$ i tri lokalna otpora po $0{,}4\,\text{m}$: $h_w = 6{,}2\,\text{m}$. |
 | $Q_p = C_d A_p \sqrt{2gH}$ (istjecanje kroz otvor) | Otvor $A_p = 1\,\text{cm}^2$, $C_d = 0{,}62$, $H = 5\,\text{m}$: $Q_p \approx 0{,}61\,\text{L/s}$. |
@@ -126,23 +128,56 @@ Ako nije jasno zašto formula vrijedi, prioritet uvijek ima odgovarajuće poglav
 
 U turbulentnom području $\lambda$ više nije funkcija samo Reynoldsovog broja, nego i relativne hrapavosti $\varepsilon / D$ — koeficijent se očitava s Moodyjeva dijagrama.
 
-## pog. 14: Bezdimenzijski brojevi i sličnost
+## pog. 11: Bezdimenzijski brojevi i sličnost
 
-Svaki broj je omjer dviju sila (inercija kao referenca); pri sličnosti se čuva mjerodavni broj.
+Bezdimenzijski broj može izražavati omjer sila, brzina, vremenskih skala ili drugih istodimenzijskih veličina. Pri sličnosti se čuvaju sve grupe važne za promatranu fiziku, rubne i početne uvjete.
 
 | Formula | Konkretan brojčani primjer |
 | --- | --- |
-| $Re = \rho v L/\mu = vL/\nu$ (inercija/viskoznost) | Voda u kanalu $D = 6\,\text{mm}$, $v = 1{,}2\,\text{m/s}$: $Re = 7200$ (turbulentno). |
+| $Re = \rho v L/\mu = vL/\nu$ (relativna važnost inercijskog i viskoznog člana za odabrane skale) | Voda u tehničkom toku kružne cijevi $D = 6\,\text{mm}$, $v = 1{,}2\,\text{m/s}$: $Re = 7200$; najčešće se očekuje turbulentan režim, uz provjeru ulaza, poremećaja i geometrije. |
 | $Fr = v/\sqrt{gL}$ (inercija/gravitacija) | Brod $L = 150\,\text{m}$, $v = 9\,\text{m/s}$: $Fr \approx 0{,}235$. |
 | $Eu = \Delta p/(\rho v^2)$ (tlak/inercija) | Cijev $\Delta p = 18\,\text{kPa}$, $v = 2\,\text{m/s}$: $Eu = 4{,}5$. |
 | $\sigma_{kav} = (p - p_v)/(\tfrac12\rho v^2)$ (kavitacija) | Venturi $p_1 = 101{,}3\,\text{kPa}$, $v_2 = 19{,}1\,\text{m/s}$: $\sigma_{kav} \approx 0{,}543$. |
-| $We = \rho v^2 L/\sigma$ (inercija/napetost) | Kap $d = 3\,\text{mm}$, $v = 25\,\text{m/s}$ u zraku: $We \approx 31$ ($>12$ → raspad). |
+| $We = \rho v^2 L/\sigma$ (relativna važnost deformirajućeg toka i površinske napetosti) | Kap $d = 3\,\text{mm}$, $v = 25\,\text{m/s}$ u zraku: $We \approx 31$; zadani orijentacijski kriterij može predvidjeti početak određenoga režima raspada, ali prag ovisi o omjerima gustoće i viskoznosti, početnoj deformaciji i definiciji režima. |
 | $Bo = \rho g L^2/\sigma$ (gravitacija/napetost) | Voda $L = 3\,\text{mm}$: $Bo \approx 1{,}2$; kapilarna duljina $L_c \approx 2{,}7\,\text{mm}$. |
 | $St = fL/v$ (vrtložno otpuštanje) | Dimnjak $D = 2\,\text{m}$, $v = 12\,\text{m/s}$, $St \approx 0{,}2$: $f \approx 1{,}2\,\text{Hz}$. |
-| $Ma = v/a$ (inercija/stlačivost) | Zrak $v = 79{,}6\,\text{m/s}$, $a = 340\,\text{m/s}$: $Ma \approx 0{,}23$ ($<0{,}3$ → nestlačivo). |
-| $C_d = F_D/(\tfrac12\rho v^2 A)$ (otpor tijela) | Kugla $Re = 4\cdot10^4$: $C_d \approx 0{,}45$ → $F_D \approx 76\,\text{mN}$. |
+| $Ma = v/a$ (brzina toka prema brzini širenja malog poremećaja) | Zrak $v = 79{,}6\,\text{m/s}$, $a = 340\,\text{m/s}$: $Ma \approx 0{,}23$; model konstantne gustoće početno je razuman samo ako su i toplinske te ukupne tlačne promjene dovoljno male. |
+| $C_D = F_D/(\tfrac12\rho v^2 A)$ (otpor tijela) | Kugla $Re = 4\cdot10^4$: $C_D \approx 0{,}45$ → $F_D \approx 76\,\text{mN}$. |
 
 Froudeova i Reynoldsova sličnost u pravilu se ne mogu zadovoljiti istovremeno istim fluidom; bira se dominantni broj, a drugi se korigira (npr. otpor broda se razdvaja na valni i viskozni dio).
+
+## pog. 9: Kompresibilni idealni tok
+
+| Formula | Pretpostavke i kontrolni primjer |
+| --- | --- |
+| $a^2=(\partial p/\partial\rho)_s$, $a=\sqrt{\gamma RT}$ | Mali, izentropski poremećaj; zrak pri $293\,\text{K}$ ima $a\approx343\,\text{m/s}$. |
+| $Ma=v/a$ | Prvi filtar stlačivosti; $Ma<0{,}3$ je heuristika samo uz ograničene promjene temperature i tlaka. |
+| $T_0/T=1+(\gamma-1)Ma^2/2$ | Stacionarni adijabatski tok kalorijski idealnog plina bez rada vratila. |
+| $p_0/p=[1+(\gamma-1)Ma^2/2]^{\gamma/(\gamma-1)}$ | Dodatno reverzibilan, odnosno izentropski prijelaz. |
+| $dA/A=(Ma^2-1)dv/v$ | Kvazijednodimenzijski izentropski tok; za $Ma>1$ ubrzanje traži divergentnu sapnicu. |
+| $p^*/p_0=[2/(\gamma+1)]^{\gamma/(\gamma-1)}$ | Kritični omjer prigušenja; za zrak približno $0{,}528$. |
+
+## pog. 12: Diferencijalni opis realnog toka
+
+| Formula | Pretpostavke i kontrolni primjer |
+| --- | --- |
+| $D\mathbf u/Dt=\partial\mathbf u/\partial t+(\mathbf u\cdot\nabla)\mathbf u$ | Lokalno + konvektivno ubrzanje; stacionarni tok može imati nenulto ubrzanje. |
+| $\nabla\cdot\mathbf u=0$ | Nestlačiv fluid konstantne gustoće. |
+| $\rho D\mathbf u/Dt=-\nabla p+\mu\nabla^2\mathbf u+\rho\mathbf b$ | Newtonski fluid, konstantni $\rho$ i $\mu$. |
+| $\Delta p=128\mu LQ/(\pi D^4)$ | Potpuno razvijen laminarni tok; obvezni granični slučaj $\Delta p\propto Q$. |
+| $\delta_{99}\approx5x/\sqrt{Re_x}$ | Laminarna glatka ravna ploča, približno nulti gradijent tlaka. |
+| $I_u=u'_{rms}/U$ | Mjera lokalne fluktuacije, ne dokaz potpuno razvijenog toka ni izbor modela sam po sebi. |
+
+## pog. 15: Otvoreni tokovi
+
+| Formula | Pretpostavke i kontrolni primjer |
+| --- | --- |
+| $D_h=A/T$, $Fr=v/\sqrt{gD_h}$ | Plitkovodni gravitacijski val; $Fr<1$ mirni, $Fr>1$ siloviti tok. |
+| $E=y+q^2/(2gy^2)$ | Pravokutni kanal i približno hidrostatička raspodjela tlaka. |
+| $y_c=(q^2/g)^{1/3}$, $E_{min}=3y_c/2$ | Kritično stanje pri zadanom protoku po širini. |
+| $y_2/y_1=[\sqrt{1+8Fr_1^2}-1]/2$ | Spregnute dubine pravokutnog hidrauličkog skoka. |
+| $\Delta E=(y_2-y_1)^3/(4y_1y_2)$ | Disipacija skoka; energija se ne čuva između rubnih presjeka. |
+| $Q=A R_h^{2/3}S_f^{1/2}/n$ | Empirijski uniformni tok; Manningov $n$ treba lokalni izvor i raspon valjanosti. |
 
 ## Tipične zamjene jedinica koje treba zaustaviti odmah
 
@@ -172,9 +207,6 @@ Najčešća pogreška pri radu sa sažetkom nije pogrešna formula nego pogreša
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. A</span><span class="mf1-ch-title">Sažetak formula i oznaka</span></span> je karta, a ne zamjena za put. Služi za brzu provjeru oznaka, jedinica i najčešćih relacija, ali glavni smisao svake formule i dalje dolazi iz odgovarajućeg poglavlja udžbenika. Stupac konkretnih brojčanih primjera uz svaku formulu pomaže odmah ustanoviti red veličine i jedinice rezultata prije punog izračuna.
 :::
-
-
-
 
 
 

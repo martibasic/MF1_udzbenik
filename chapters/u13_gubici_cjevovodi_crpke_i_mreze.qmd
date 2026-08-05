@@ -1,0 +1,6 @@
+---
+title: "Gubitci, cjevovodi, crpke i mreže"
+page-layout: article
+---
+
+{{< include ../source/u13_gubici_cjevovodi_crpke_i_mreze.md >}}

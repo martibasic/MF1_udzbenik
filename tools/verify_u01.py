@@ -4,11 +4,9 @@ Pokriva:
 - Kratki primjer (T1): Gustoca, specificna tezina, relativna gustoca
 - Primjer 1 (T2): Optereceni klip
 - Primjer 2 (T2): Servisna hidraulicna dizalica
-- Primjer 3 (T2): Dvostruki hidraulicni podizac
 - Cjeloviti zadatak 1 (T3): Dvostruka platforma s rucnom pumpom
-- Primjer Presa (T2): Hidraulicna presa
-- Primjer Most (T2): Hidraulicno podizanje mosta
-- Zadaci za vjezbu 1-6 (T1-T3)
+- Primjer hidraulicne kocnice i primjer robotske stege
+- Zadaci za vjezbu 1-6 (T1-T4)
 
 Svaki racun reprodukuje brojeve navedene u source/u01_*.md i verificira
 da odstupanje od deklariranih vrijednosti nije vece od TOLERANCIJA (rel.).
@@ -27,11 +25,27 @@ def _close(value: float, target: float, rel: float = TOLERANCIJA) -> bool:
     return abs(value - target) / abs(target) <= rel
 
 
-def _check(results: list[dict], rid: str, value: float, target: float, unit: str = "") -> None:
-    ok = _close(value, target)
+def _check(
+    results: list[dict],
+    rid: str,
+    value: float,
+    target: float,
+    unit: str = "",
+    rel: float = TOLERANCIJA,
+) -> None:
+    ok = _close(value, target, rel)
     status = "OK" if ok else "FAIL"
     details = f"{value:.4g} vs {target:.4g} {unit}".strip()
     results.append({"id": rid, "status": status, "details": "" if ok else details})
+
+
+def _invariant(results: list[dict], rid: str, condition: bool, details: str) -> None:
+    results.append({
+        "id": rid,
+        "status": "OK" if condition else "FAIL",
+        "verification": "invariant",
+        "details": "" if condition else details,
+    })
 
 
 # ------------ Kratki primjer: Gustoca ----------------
@@ -106,6 +120,15 @@ def primjer_most(G_total: float = 480000.0, n_pod: int = 4, d_pod: float = 0.110
     return {"F_pod": F_pod, "A_pod": A_pod, "p_min": p_min, "A_p": A_p, "p_p": p_p}
 
 
+def primjer_robot_stega(d_p: float = 0.014, F_p: float = 420.0,
+                         d_s: float = 0.028, n: int = 6):
+    A_p = math.pi * d_p**2 / 4
+    A_s = math.pi * d_s**2 / 4
+    p = F_p / A_p
+    F_s = p * A_s
+    return {"A_p": A_p, "p": p, "A_s": A_s, "F_s": F_s, "F_total": n * F_s}
+
+
 # ------------ Zadaci za vjezbu ----------------
 def zadatak_1(d_1: float = 0.028, d_2: float = 0.140, F_1: float = 180.0, s_1: float = 0.120):
     A_1 = math.pi * d_1**2 / 4
@@ -139,8 +162,10 @@ def zadatak_4(m: float = 1350.0, D: float = 0.095, d: float = 0.018, s: float = 
     A_d = math.pi * d**2 / 4
     p = G / (2 * A_D)
     F_p = p * A_d
-    n = 2 * A_D * Delta_z / (A_d * s)
-    return {"p": p, "F_p": F_p, "n": n}
+    n_continuous = 2 * A_D * Delta_z / (A_d * s)
+    n_full = math.ceil(n_continuous)
+    return {"p": p, "F_p": F_p, "n": n_full,
+            "n_continuous": n_continuous}
 
 
 def zadatak_5(d: float = 0.025, F_p: float = 420.0, D: float = 0.140, Delta_z: float = 0.030):
@@ -152,13 +177,24 @@ def zadatak_5(d: float = 0.025, F_p: float = 420.0, D: float = 0.140, Delta_z: f
     return {"p": p, "G": G, "s_p": s_p}
 
 
-def zadatak_6(A_L_cm2: float = 95.0, d: float = 0.022, F_p: float = 360.0, Delta_z: float = 0.018):
+def zadatak_6(A_L_cm2: float = 95.0, d: float = 0.022, F_p: float = 360.0,
+              Delta_z: float = 0.018, eta_F: float = 0.86,
+              u_eta_F: float = 0.04, eta_V: float = 0.90,
+              u_eta_V: float = 0.03):
     A_p = math.pi * d**2 / 4
     A_L = A_L_cm2 * 1e-4
     p = F_p / A_p
     G = 3 * p * A_L
     s_p = 3 * A_L * Delta_z / A_p
-    return {"p": p, "G": G, "s_p": s_p}
+    return {
+        "p": p,
+        "G": G,
+        "s_p": s_p,
+        "G_useful": eta_F * G,
+        "G_useful_min": (eta_F - u_eta_F) * G,
+        "s_actual": s_p / eta_V,
+        "s_actual_max": s_p / (eta_V - u_eta_V),
+    }
 
 
 # ------------ Faza 1.5 dodatak: Hidraulicna kocnica vozila (P T2) ----------------
@@ -194,60 +230,91 @@ def verify() -> list[dict]:
 
     # Primjer 2
     r = primjer_2()
-    _check(out, "U01.P2.p_kPa", r["p"], 250e3, "Pa")
+    _check(out, "U01.P2.p_kPa", r["p"] / 1000, 250.0, "kPa")
     _check(out, "U01.P2.F_2", r["F_2"], 5250, "N")
     _check(out, "U01.P2.s_2_mm", r["s_2"] * 1000, 5.1, "mm")
 
-    # Primjer 3
-    r = primjer_3()
-    _check(out, "U01.P3.p_MPa", r["p"], 0.80e6, "Pa")
-    _check(out, "U01.P3.F_p", r["F_p"], 480, "N")
-    _check(out, "U01.P3.s_p_m", r["s_p"], 1.0, "m")
-
     # Cjeloviti zadatak
     r = cjeloviti_1()
-    _check(out, "U01.CH1.p_MPa", r["p"], 0.92e6, "Pa")
+    _check(out, "U01.CH1.p_MPa", r["p"] / 1e6, 0.92, "MPa")
     _check(out, "U01.CH1.F_L", r["F_L"], 13800, "N")
     _check(out, "U01.CH1.G", r["G"], 27600, "N")
     _check(out, "U01.CH1.s_p_total_m", r["s_p_total"], 1.5, "m")
     _check(out, "U01.CH1.n", r["n"], 9, "hodova")
 
-    # Presa
-    r = primjer_presa()
-    _check(out, "U01.presa.omjer", r["omjer"], 16)
-    _check(out, "U01.presa.p_MPa", r["p"], 0.40e6, "Pa")
-    _check(out, "U01.presa.F_2", r["F_2"], 5120, "N")
-    _check(out, "U01.presa.s_2_mm", r["s_2"] * 1000, 5.0, "mm")
-
-    # Most
-    r = primjer_most()
-    _check(out, "U01.most.F_pod", r["F_pod"], 120000, "N")
-    _check(out, "U01.most.p_min_MPa", r["p_min"], 12.6e6, "Pa")
-    _check(out, "U01.most.p_p_MPa", r["p_p"], 1.315e6, "Pa")
-
-    # Zadaci 1-6 (verifikacija pomocnih izracuna, target vrijednosti su simbolicke
-    # u tekstu zadataka pa ovdje samo verificiramo da racun ne baci iznimku i da
-    # je rezultat fizikalno razuman)
+    # Zadaci 1-6: svaki actual ponovno se racuna iz objavljenih ulaza, a target
+    # je broj objavljen u rjesenju zadatka.
     z1 = zadatak_1()
-    _check(out, "U01.Z1.p_kPa_pos", z1["p"], z1["p"], "Pa")  # trivijalno
+    _check(out, "U01.Z1.p_kPa", z1["p"] / 1000, 292.0, "kPa")
+    _check(out, "U01.Z1.F_2_kN", z1["F_2"] / 1000, 4.5, "kN")
+    _check(out, "U01.Z1.s_2_mm", z1["s_2"] * 1000, 4.8, "mm")
     z2 = zadatak_2()
-    _check(out, "U01.Z2.F_2_pos", z2["F_2"], z2["F_2"], "N")
+    _check(out, "U01.Z2.p_kPa", z2["p"] / 1000, 210.0, "kPa")
+    _check(out, "U01.Z2.F_2", z2["F_2"], 855.0, "N")
     z3 = zadatak_3()
-    _check(out, "U01.Z3.d_new_mm_pos", z3["d_new"] * 1000, z3["d_new"] * 1000, "mm")
+    _check(out, "U01.Z3.F_kN", z3["F"] / 1000, 5.1, "kN")
+    _check(out, "U01.Z3.d_min_mm", z3["d_new"] * 1000, 65.0, "mm")
     z4 = zadatak_4()
-    _check(out, "U01.Z4.n_pos", z4["n"], z4["n"])
+    _check(out, "U01.Z4.p_MPa", z4["p"] / 1e6, 0.93, "MPa")
+    _check(out, "U01.Z4.F_p", z4["F_p"], 238.0, "N")
+    _check(out, "U01.Z4.n", z4["n"], 16.0, "hodova")
     z5 = zadatak_5()
-    _check(out, "U01.Z5.G_pos", z5["G"], z5["G"], "N")
+    _check(out, "U01.Z5.p_kPa", z5["p"] / 1000, 856.0, "kPa")
+    _check(out, "U01.Z5.G_kN", z5["G"] / 1000, 26.3, "kN")
+    _check(out, "U01.Z5.s_p", z5["s_p"], 1.88, "m")
     z6 = zadatak_6()
-    _check(out, "U01.Z6.G_pos", z6["G"], z6["G"], "N")
+    _check(out, "U01.Z6.p_kPa", z6["p"] / 1000, 947.0, "kPa")
+    _check(out, "U01.Z6.G_kN", z6["G"] / 1000, 27.0, "kN")
+    _check(out, "U01.Z6.s_p", z6["s_p"], 1.35, "m")
+    _check(out, "U01.Z6.G_useful_kN", z6["G_useful"] / 1000, 23.2, "kN")
+    _check(out, "U01.Z6.G_useful_min_kN", z6["G_useful_min"] / 1000, 22.1, "kN")
+    _check(out, "U01.Z6.s_actual", z6["s_actual"], 1.50, "m")
+    _check(out, "U01.Z6.s_actual_max", z6["s_actual_max"], 1.55, "m")
+    _invariant(
+        out,
+        "U01.Z6.both_requirements",
+        z6["G_useful_min"] >= 22e3 and z6["s_actual_max"] <= 1.60,
+        "Konzervativni omotac ne zadovoljava oba zahtjeva.",
+    )
+
+    area_ratio = (0.140 / 0.028) ** 2
+    _invariant(
+        out,
+        "U01.INV.pascal_force_ratio",
+        abs(z1["F_2"] / 180.0 - area_ratio) < 1e-12,
+        "F2/F1 nije jednak A2/A1.",
+    )
+    volume_residual = (
+        math.pi * 0.028**2 / 4 * 0.120
+        - math.pi * 0.140**2 / 4 * z1["s_2"]
+    )
+    _invariant(
+        out,
+        "U01.INV.volume_balance",
+        abs(volume_residual) < 1e-15,
+        f"Volumna bilanca klipova ima ostatak {volume_residual:.6g} m^3.",
+    )
+    _invariant(
+        out,
+        "U01.INV.full_stroke_ceiling",
+        z4["n"] - 1 < z4["n_continuous"] <= z4["n"],
+        "Broj punih hodova nije strop kontinuiranog broja hodova.",
+    )
 
     # Faza 1.5: Hidraulicna kocnica vozila
     r = primjer_kocnica()
     _check(out, "U01.kocnica.F_M", r["F_M"], 1500, "N")
-    _check(out, "U01.kocnica.p_MPa", r["p"], 4.77e6, "Pa")
-    _check(out, "U01.kocnica.F_f_kN", r["F_f"], 4590, "N")
-    _check(out, "U01.kocnica.F_r_kN", r["F_r"], 3375, "N")
+    _check(out, "U01.kocnica.p_MPa", r["p"] / 1e6, 4.77, "MPa")
+    _check(out, "U01.kocnica.F_f_kN", r["F_f"] / 1000, 4.590, "kN")
+    _check(out, "U01.kocnica.F_r_kN", r["F_r"] / 1000, 3.375, "kN")
     _check(out, "U01.kocnica.k", r["k"], 53.1)
+
+    r = primjer_robot_stega()
+    _check(out, "U01.robot.A_p", r["A_p"], 1.539e-4, "m2", rel=0.02)
+    _check(out, "U01.robot.p_MPa", r["p"] / 1e6, 2.73, "MPa", rel=0.02)
+    _check(out, "U01.robot.A_s", r["A_s"], 6.158e-4, "m2", rel=0.02)
+    _check(out, "U01.robot.F_s_kN", r["F_s"] / 1000, 1.680, "kN", rel=0.02)
+    _check(out, "U01.robot.F_total_kN", r["F_total"] / 1000, 10.08, "kN", rel=0.02)
 
     return out
 

@@ -1,0 +1,6 @@
+---
+title: "Turbostrojevi i propulzija"
+page-layout: article
+---
+
+{{< include ../source/u12_pokretne_lopatice_i_potisak.md >}}

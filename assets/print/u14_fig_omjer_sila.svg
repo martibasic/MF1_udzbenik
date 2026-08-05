@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="u14fos_title u14fos_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:720px;height:auto;">
-  <title id="u14fos_title">U14 - Svaki bezdimenzijski broj kao omjer sila</title>
-  <desc id="u14fos_desc">Cestica fluida i pet sila koje se natjecu: inercijska, viskozna, gravitacijska, tlacna i napetosna. Svaki bezdimenzijski broj nastaje kao omjer dviju sila, najcesce inercije prema preostaloj sili: Re=F_i/F_mu, Fr^2=F_i/F_g, Eu=F_p/F_i, We=F_i/F_sigma, Ma^2=F_i/F_elast.</desc>
+  <title id="u14fos_title">U14 - Omjeri karakterističnih sila u bezdimenzijskim grupama</title>
+  <desc id="u14fos_desc">Cestica fluida i pet karakteristicnih djelovanja: inercijsko, viskozno, gravitacijsko, tlacno i napetosno. Prikazani bezdimenzijski brojevi mogu se tumaciti omjerima njihovih karakteristicnih mjerila: Re=F_i/F_mu, Fr^2=F_i/F_g, Eu=F_p/F_i, We=F_i/F_sigma i Ma^2=F_i/F_elast.</desc>
   <defs>
     <marker id="u14fos_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
@@ -63,7 +63,7 @@
   <text x="354" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#1565c0"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.75em">p</tspan> tlak</text>
   <text x="322" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1565c0"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.75em">σ</tspan> napetost</text>
 
-  <text x="558" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Brojevi = omjeri sila</text>
+  <text x="558" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Odabrane grupe kao omjeri sila</text>
 
   <text x="458" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#c0392b">Re = F<tspan baseline-shift="sub" font-size="0.7em">i</tspan> / F<tspan baseline-shift="sub" font-size="0.7em">μ</tspan></text>
   <text x="458" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">inercija / viskoznost</text>

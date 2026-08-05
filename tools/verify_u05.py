@@ -21,6 +21,15 @@ def _check(out, rid, value, target, unit="", rel=TOL):
     })
 
 
+def _invariant(out, rid, condition, details):
+    out.append({
+        "id": rid,
+        "status": "OK" if condition else "FAIL",
+        "verification": "invariant",
+        "details": "" if condition else details,
+    })
+
+
 def primjer_1_zaklopka(b=2.0, h=3.0, h_1=2.0, rho=998.0, g=9.81):
     A = b * h
     h_C = h_1 + h / 2
@@ -98,13 +107,18 @@ def zadatak_1(b=1.40, h=1.80, h_1=1.10, rho=998.0, g=9.81):
     h_C = h_1 + h / 2
     A = b * h
     F = rho * g * A * h_C
-    return {"F": F, "h_C": h_C}
+    I_G = b * h**3 / 12
+    y_CP = h_C + I_G / (A * h_C)
+    return {"F": F, "h_C": h_C, "y_CP": y_CP,
+            "from_top": y_CP - h_1}
 
 
 def zadatak_2(D=0.60, h_C=2.20, rho=998.0, g=9.81):
     A = math.pi * D**2 / 4
     F = rho * g * A * h_C
-    return {"F": F, "A": A}
+    I_G = math.pi * D**4 / 64
+    y_CP = h_C + I_G / (A * h_C)
+    return {"F": F, "A": A, "y_CP": y_CP}
 
 
 def zadatak_3(b=0.80, L=1.00, theta_deg=40.0, h_1=0.90, rho=998.0, g=9.81):
@@ -112,16 +126,25 @@ def zadatak_3(b=0.80, L=1.00, theta_deg=40.0, h_1=0.90, rho=998.0, g=9.81):
     A = b * L
     h_C = h_1 + (L / 2) * math.sin(theta)
     F = rho * g * A * h_C
-    return {"F": F, "h_C": h_C}
+    s_R = (
+        h_1 * L**2 / 2 + math.sin(theta) * L**3 / 3
+    ) / (h_1 * L + math.sin(theta) * L**2 / 2)
+    T = F * s_R / L
+    return {"F": F, "h_C": h_C, "s_R": s_R, "T": T}
 
 
 def zadatak_4(b=1.80, h_v=1.50, h_u=0.90, rho_u=820.0, rho_w=998.0, g=9.81):
     # Slojevi: ulje gore (0..h_u), voda dolje (h_u..h_u+h_v)
     F_u = 0.5 * rho_u * g * b * h_u**2
-    F_w = (rho_u * g * b * h_u * h_v +
-           0.5 * rho_w * g * b * h_v**2)
-    F = F_u + F_w
-    return {"F": F}
+    F_u_rect = rho_u * g * b * h_u * h_v
+    F_w_triangle = 0.5 * rho_w * g * b * h_v**2
+    F = F_u + F_u_rect + F_w_triangle
+    moment = (
+        F_u * (2 * h_u / 3)
+        + F_u_rect * (h_u + h_v / 2)
+        + F_w_triangle * (h_u + 2 * h_v / 3)
+    )
+    return {"F": F, "y_CP": moment / F}
 
 
 def zadatak_5(H=4.20, b=2.50, rho=998.0, g=9.81):
@@ -134,10 +157,17 @@ def zadatak_5(H=4.20, b=2.50, rho=998.0, g=9.81):
 def zadatak_6(b=1.20, H=2.40, h_u=0.80, rho_u=820.0, rho_w=998.0, g=9.81):
     h_w = H - h_u
     F_u = 0.5 * rho_u * g * b * h_u**2
-    F_w = (rho_u * g * b * h_u * h_w +
-           0.5 * rho_w * g * b * h_w**2)
-    F = F_u + F_w
-    return {"F": F}
+    F_u_rect = rho_u * g * b * h_u * h_w
+    F_w_triangle = 0.5 * rho_w * g * b * h_w**2
+    F = F_u + F_u_rect + F_w_triangle
+    moment = (
+        F_u * (2 * h_u / 3)
+        + F_u_rect * (h_u + h_w / 2)
+        + F_w_triangle * (h_u + 2 * h_w / 3)
+    )
+    y_CP = moment / F
+    T = moment / H
+    return {"F": F, "y_CP": y_CP, "T": T, "moment": moment}
 
 
 # ------------ Faza 1.5 dodatak: Vertikalna ploha kroz tri sloja fluida ----------------
@@ -215,11 +245,56 @@ def verify():
     _check(out, "U05.P6.y_CP", r["y_CP"], 1.486, "m")
     _check(out, "U05.P6.h_from_bottom", r["h_from_bottom"], 0.514, "m", rel=0.02)
 
-    for name, fn in [("Z1", zadatak_1), ("Z2", zadatak_2), ("Z3", zadatak_3),
-                     ("Z4", zadatak_4), ("Z5", zadatak_5), ("Z6", zadatak_6)]:
-        r = fn()
-        first_key = next(iter(r))
-        _check(out, f"U05.{name}.{first_key}_pos", r[first_key], r[first_key])
+    z1 = zadatak_1()
+    _check(out, "U05.Z1.F_kN", z1["F"] / 1000, 49.4, "kN")
+    _check(out, "U05.Z1.y_CP", z1["y_CP"], 2.14, "m")
+    _check(out, "U05.Z1.from_top", z1["from_top"], 1.04, "m")
+
+    z2 = zadatak_2()
+    _check(out, "U05.Z2.F_kN", z2["F"] / 1000, 6.10, "kN")
+    _check(out, "U05.Z2.y_CP", z2["y_CP"], 2.21, "m")
+
+    z3 = zadatak_3()
+    _check(out, "U05.Z3.F_kN", z3["F"] / 1000, 9.59, "kN")
+    _check(out, "U05.Z3.s_R", z3["s_R"], 0.54, "m")
+    _check(out, "U05.Z3.T_kN", z3["T"] / 1000, 5.21, "kN")
+
+    z4 = zadatak_4()
+    _check(out, "U05.Z4.F_kN", z4["F"] / 1000, 45.3, "kN")
+    _check(out, "U05.Z4.y_CP", z4["y_CP"], 1.62, "m")
+
+    z5 = zadatak_5()
+    _check(out, "U05.Z5.y_1", z5["y_1"], 2.42, "m")
+    _check(out, "U05.Z5.y_2", z5["y_2"], 3.43, "m")
+
+    z6 = zadatak_6()
+    _check(out, "U05.Z6.F_kN", z6["F"] / 1000, 30.5, "kN")
+    _check(out, "U05.Z6.y_CP", z6["y_CP"], 1.62, "m")
+    _check(out, "U05.Z6.T_kN", z6["T"] / 1000, 20.6, "kN")
+
+    _invariant(
+        out,
+        "U05.INV.pressure_center_bounds",
+        2.0 < z1["y_CP"] < 2.9 and 2.2 < z2["y_CP"] < 2.5,
+        "Centar tlaka nije ispod tezista ili je izvan plohe.",
+    )
+    band_forces = (
+        z5["y_1"] ** 2,
+        z5["y_2"] ** 2 - z5["y_1"] ** 2,
+        4.20**2 - z5["y_2"] ** 2,
+    )
+    _invariant(
+        out,
+        "U05.INV.equal_force_bands",
+        max(band_forces) - min(band_forces) < 1e-12,
+        f"Pojasi nemaju jednake integrale tlaka: {band_forces}.",
+    )
+    _invariant(
+        out,
+        "U05.INV.hinge_moment_balance",
+        abs(z6["T"] * 2.40 - z6["F"] * z6["y_CP"]) < 1e-9,
+        "Sila spojnice ne zatvara moment oko gornjeg zgloba.",
+    )
 
     # Faza 1.5: Vertikalna ploha kroz tri sloja fluida
     r = primjer_tri_sloja()

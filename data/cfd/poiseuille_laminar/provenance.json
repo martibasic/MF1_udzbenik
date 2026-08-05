@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "case_id": "poiseuille_laminar",
+  "created": "2026-08-01",
+  "data_classification": "synthetic_analytic",
+  "external_measurements_used": false,
+  "generator": "Deterministic pedagogical construction documented in this file; no CFD solver was run.",
+  "construction": {
+    "reference": "The analytical Hagen-Poiseuille profile and integral relations in case.json.",
+    "mesh_sequence": "Axisymmetric structured meshes 160x8, 320x16 and 640x32; representative h ratio 2.",
+    "synthetic_profile": "u_h(r)=u_exact(r)*(1+a_h*(1-0.5*(r/R)^2)), with a_h=0.048, 0.012, 0.003.",
+    "synthetic_iteration_history": "Monotone residual and flow-monitor histories chosen only to exercise QA thresholds."
+  },
+  "method_sources": [
+    {
+      "type": "uncertainty_method",
+      "citation": "Celik et al. (2008), Procedure for Estimation and Reporting of Uncertainty Due to Discretization in CFD Applications",
+      "url": "https://doi.org/10.1115/1.2960953"
+    }
+  ],
+  "limitations": [
+    "The numerical columns are synthetic and are not solver benchmark results.",
+    "The case verifies a post-processing and grid-convergence workflow, not a CFD code implementation.",
+    "Only spatial discretization behavior is represented; iteration histories are illustrative."
+  ],
+  "license_note": "No external numerical data were copied; repository terms apply to these generated records."
+}

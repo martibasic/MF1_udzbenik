@@ -1,152 +1,145 @@
 ---
-title: "Mehanika fluida 1"
-subtitle: "Integrirani udžbenik za studije strojarstva i građevinarstva"
 page-layout: article
 toc: false
 ---
 
-::: {.mf1-hero}
-# Mehanika fluida 1
+# Mehanika fluida 1 {.unnumbered .mf1-home-title}
 
-Četrnaest poglavlja od mirovanja fluida do strujanja kroz cjevovode, lopatice i bezdimenzijsku analizu. Prije svake jednadžbe jasna fizikalna slika koja se njome opisuje.
+::: {.content-visible when-format="typst"}
+Ovaj udžbenik vodi od fizikalnog modela i bilance do analitičkog rješenja, mjerenja i numeričke provjere. Primarna su publika studenti strojarstva i brodogradnje, a primjeri iz građevinarstva, energetike, okoliša, biomedicine i procesne tehnike koriste se kada isti zakon pokazuju iz drugog kuta.
+
+Svako poglavlje razdvaja temeljni model, matematički izvod, granicu valjanosti i samostalnu odluku studenta. Tri uzdužna lajtmotiva — pomorska dekarbonizacija, hlađenje elektrificiranih sustava i klimatski otporan vodni grad — povezuju gradivo metodom *izmjeri → idealiziraj → izračunaj → numerički provjeri → procijeni valjanost*.
+:::
+
+::: {.mf1-hero .content-visible when-format="html"}
+Petnaest konciznih poglavlja od svojstava fluida i hidrostatike do kompresibilnog toka, realnog strujanja, turbostrojeva i otvorenih tokova. Svaka jednadžba počinje fizičkim pitanjem i završava provjerom granice modela.
 :::
 
 ```{=html}
-<p class="mf1-section-title">Uvod</p>
+<div class="mf1-print-toolbar">
+  <a class="mf1-print-button" href="downloads/mehanika-fluida-1.pdf">Preuzmi nativni PDF</a>
+  <a class="mf1-print-button secondary" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html">Otvori numeričke laboratorije</a>
+</div>
 
+<p class="mf1-section-title">Uvod</p>
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u00_kako_koristiti_udzbenik.html">
-    <span class="mf1-card-code">0</span>
-    <span class="mf1-card-title">Kako koristiti udžbenik</span>
-    <span class="mf1-card-hint">Obrasci pisanja, oznake tipova zadataka, razine težine i tok rada.</span>
+    <span class="mf1-card-code">0</span><span class="mf1-card-title">Kako koristiti udžbenik</span>
+    <span class="mf1-card-hint">Radni tok, razine vođenja, provjera modela i numerički pokusi.</span>
   </a>
 </div>
 
-<p class="mf1-section-title">Hidrostatika</p>
-
+<p class="mf1-section-title">Temelji</p>
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u01_osnove_fluida_i_pascalov_zakon.html">
-    <span class="mf1-card-code">1</span>
-    <span class="mf1-card-title">Osnove fluida</span>
-    <span class="mf1-card-hint">Gustoća, tlak i hidraulični prijenos sile.</span>
+    <span class="mf1-card-code">1</span><span class="mf1-card-title">Fluid, svojstva i tlak</span>
+    <span class="mf1-card-hint">Kontinuum, tlak, stlačivost i Pascalov zakon.</span>
   </a>
   <a class="mf1-card" href="chapters/u02_viskoznost_povrsinska_napetost_i_kapilarnost.html">
-    <span class="mf1-card-code">2</span>
-    <span class="mf1-card-title">Viskoznost i kapilarnost</span>
-    <span class="mf1-card-hint">Posmik u fluidu, površinska napetost, podizanje u kapilari.</span>
-  </a>
-  <a class="mf1-card" href="chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.html">
-    <span class="mf1-card-code">3</span>
-    <span class="mf1-card-title">Hidrostatika</span>
-    <span class="mf1-card-hint">Raspodjela tlaka po dubini i mjerenje manometrima.</span>
-  </a>
-  <a class="mf1-card" href="chapters/u04_relativno_mirovanje_fluida.html">
-    <span class="mf1-card-code">4</span>
-    <span class="mf1-card-title">Relativno mirovanje</span>
-    <span class="mf1-card-hint">Fluid u ubrzanoj posudi i u rotaciji.</span>
-  </a>
-  <a class="mf1-card" href="chapters/u05_hidrostatske_sile_na_ravne_plohe.html">
-    <span class="mf1-card-code">5</span>
-    <span class="mf1-card-title">Sile na plohe</span>
-    <span class="mf1-card-hint">Rezultanta tlaka i točka djelovanja na ravnu plohu.</span>
-  </a>
-  <a class="mf1-card" href="chapters/u06_zakrivljene_plohe_i_rastav_sila.html">
-    <span class="mf1-card-code">6</span>
-    <span class="mf1-card-title">Zakrivljene plohe</span>
-    <span class="mf1-card-hint">Rastav sile na vodoravnu i okomitu komponentu.</span>
-  </a>
-  <a class="mf1-card" href="chapters/u07_uzgon_plivanje_i_stabilnost.html">
-    <span class="mf1-card-code">7</span>
-    <span class="mf1-card-title">Uzgon i stabilnost</span>
-    <span class="mf1-card-hint">Arhimedov uzgon, plivanje, metacentar, stabilnost.</span>
+    <span class="mf1-card-code">2</span><span class="mf1-card-title">Reologija i međupovršine</span>
+    <span class="mf1-card-hint">Newtonski i nenewtonovski fluidi, viskoznost, kapilarnost.</span>
   </a>
 </div>
 
-<p class="mf1-section-title">Hidrodinamika</p>
-
+<p class="mf1-section-title">Statika fluida</p>
 <div class="mf1-grid">
-  <a class="mf1-card" href="chapters/u08_kontrolni_volumen_i_kontinuitet.html">
-    <span class="mf1-card-code">8</span>
-    <span class="mf1-card-title">Kontrolni volumen</span>
-    <span class="mf1-card-hint">Bilance mase kroz kontrolni volumen.</span>
+  <a class="mf1-card" href="chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.html">
+    <span class="mf1-card-code">3</span><span class="mf1-card-title">Hidrostatika i manometrija</span>
+    <span class="mf1-card-hint">Tlačno polje, promjenjiva gustoća i mjerenje.</span>
   </a>
-  <a class="mf1-card" href="chapters/u09_bernoullijeva_jednadzba_idealnog_fluida.html">
-    <span class="mf1-card-code">9</span>
-    <span class="mf1-card-title">Bernoulli (idealni)</span>
-    <span class="mf1-card-hint">Bilanca energije duž strujnice bez gubitaka.</span>
+  <a class="mf1-card" href="chapters/u04_relativno_mirovanje_fluida.html">
+    <span class="mf1-card-code">4</span><span class="mf1-card-title">Relativno mirovanje</span>
+    <span class="mf1-card-hint">Fluid u ubrzanoj posudi i pri rotaciji.</span>
   </a>
-  <a class="mf1-card" href="chapters/u10_realni_bernoulli_i_gubici.html">
-    <span class="mf1-card-code">10</span>
-    <span class="mf1-card-title">Bernoulli i gubici</span>
-    <span class="mf1-card-hint">Realni fluid, linijski i mjesni gubici energije.</span>
+  <a class="mf1-card" href="chapters/u05_hidrostatske_sile_na_plohe.html">
+    <span class="mf1-card-code">5</span><span class="mf1-card-title">Sile na plohe</span>
+    <span class="mf1-card-hint">Ravne i zakrivljene plohe, hvatišta, momenti i predznaci.</span>
   </a>
-  <a class="mf1-card" href="chapters/u11_kolicina_gibanja_i_sile_strujanja.html">
-    <span class="mf1-card-code">11</span>
-    <span class="mf1-card-title">Gibanje</span>
-    <span class="mf1-card-hint">Sile strujanja na koljena, mlaznice i lopatice.</span>
+  <a class="mf1-card" href="chapters/u06_uzgon_plivanje_i_stabilnost.html">
+    <span class="mf1-card-code">6</span><span class="mf1-card-title">Uzgon i stabilitet</span>
+    <span class="mf1-card-hint">Arhimedov zakon, gaz i jasno ograničen početni stabilitet.</span>
   </a>
-  <a class="mf1-card" href="chapters/u12_pokretne_lopatice_i_potisak.html">
-    <span class="mf1-card-code">12</span>
-    <span class="mf1-card-title">Lopatice</span>
-    <span class="mf1-card-hint">Mlaz na lopaticu, relativna brzina, radne karakteristike.</span>
+</div>
+
+<p class="mf1-section-title">Integralna dinamika</p>
+<div class="mf1-grid">
+  <a class="mf1-card" href="chapters/u07_kinematika_kontrolni_volumen_i_kontinuitet.html">
+    <span class="mf1-card-code">7</span><span class="mf1-card-title">Kinematika i kontrolni volumen</span>
+    <span class="mf1-card-hint">Polje brzine, RTT i bilanca mase za fiksne i gibajuće granice.</span>
   </a>
-  <a class="mf1-card" href="chapters/u13_cjevovodi.html">
-    <span class="mf1-card-code">13</span>
-    <span class="mf1-card-title">Cjevovodi</span>
-    <span class="mf1-card-hint">Darcy–Weisbach, serijski i paralelni sustavi, mreže.</span>
+  <a class="mf1-card" href="chapters/u08_energijska_jednadzba_i_bernoulli.html">
+    <span class="mf1-card-code">8</span><span class="mf1-card-title">Energija i Bernoulli</span>
+    <span class="mf1-card-hint">Statički, dinamički i ukupni tlak; strujnica i granice idealizacije.</span>
   </a>
-  <a class="mf1-card" href="chapters/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.html">
-    <span class="mf1-card-code">14</span>
-    <span class="mf1-card-title">Bezdimenzijski brojevi</span>
-    <span class="mf1-card-hint">Omjeri sila, Buckingham Π, sličnost i modelska ispitivanja.</span>
+  <a class="mf1-card" href="chapters/u09_kompresibilni_idealni_tok.html">
+    <span class="mf1-card-code">9</span><span class="mf1-card-title">Kompresibilni tok</span>
+    <span class="mf1-card-hint">Brzina zvuka, Mach, izentropska sapnica, prigušenje i udarni val.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u10_kolicina_i_moment_kolicine_gibanja.html">
+    <span class="mf1-card-code">10</span><span class="mf1-card-title">Količina gibanja</span>
+    <span class="mf1-card-hint">Sile, moment, mlazovi i gibajući kontrolni volumen.</span>
+  </a>
+</div>
+
+<p class="mf1-section-title">Sličnost i realni tok</p>
+<div class="mf1-grid">
+  <a class="mf1-card" href="chapters/u11_dimenzijska_analiza_i_slicnost.html">
+    <span class="mf1-card-code">11</span><span class="mf1-card-title">Dimenzijska analiza</span>
+    <span class="mf1-card-hint">Buckingham Π, relevantne skale i modelna ispitivanja.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u12_diferencijalni_opis_realnog_toka.html">
+    <span class="mf1-card-code">12</span><span class="mf1-card-title">Diferencijalni realni tok</span>
+    <span class="mf1-card-hint">Navier–Stokes, Poiseuille, granični sloj, odvajanje i turbulencija.</span>
+  </a>
+</div>
+
+<p class="mf1-section-title">Inženjerski sustavi</p>
+<div class="mf1-grid">
+  <a class="mf1-card" href="chapters/u13_gubici_cjevovodi_crpke_i_mreze.html">
+    <span class="mf1-card-code">13</span><span class="mf1-card-title">Cjevovodi, crpke i mreže</span>
+    <span class="mf1-card-hint">Režim, trenje, lokalni gubitci, radna točka i nelinearne mreže.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u14_turbostrojevi_i_propulzija.html">
+    <span class="mf1-card-code">14</span><span class="mf1-card-title">Turbostrojevi i propulzija</span>
+    <span class="mf1-card-hint">Trokuti brzina, pumpe, turbine, propeleri i aktuatorski disk.</span>
+  </a>
+  <a class="mf1-card" href="chapters/u15_otvoreni_tokovi.html">
+    <span class="mf1-card-code">15</span><span class="mf1-card-title">Otvoreni tokovi</span>
+    <span class="mf1-card-hint">Froudeov broj, kritična dubina i hidraulički skok.</span>
   </a>
 </div>
 
 <p class="mf1-section-title">Dodaci</p>
-
 <div class="mf1-grid">
-  <a class="mf1-card" href="chapters/d01_sazetak_formula_i_oznaka.html">
-    <span class="mf1-card-code">A</span>
-    <span class="mf1-card-title">Sažetak formula</span>
-    <span class="mf1-card-hint">Pregled svih formula i oznaka kroz udžbenik.</span>
-  </a>
-  <a class="mf1-card" href="chapters/d02_pojmovnik.html">
-    <span class="mf1-card-code">B</span>
-    <span class="mf1-card-title">Pojmovnik</span>
-    <span class="mf1-card-hint">Definicije temeljnih pojmova mehanike fluida.</span>
-  </a>
-  <a class="mf1-card" href="chapters/d03_tipicne_pogreske_po_poglavljima.html">
-    <span class="mf1-card-code">C</span>
-    <span class="mf1-card-title">Tipične pogreške</span>
-    <span class="mf1-card-hint">Katalog pogrešaka po poglavljima &mdash; provjera prije predaje.</span>
-  </a>
-  <a class="mf1-card" href="chapters/d04_numericka_mehanika_fluida.html">
-    <span class="mf1-card-code">D</span>
-    <span class="mf1-card-title">Numerička mehanika fluida</span>
-    <span class="mf1-card-hint">Veza MF1 jednadžbi s računalnom dinamikom fluida.</span>
-  </a>
-  <a class="mf1-card" href="chapters/d05_literatura.html">
-    <span class="mf1-card-code">E</span>
-    <span class="mf1-card-title">Literatura</span>
-    <span class="mf1-card-hint">Izvori i preporučena literatura za dublje čitanje.</span>
-  </a>
+  <a class="mf1-card" href="chapters/d01_sazetak_formula_i_oznaka.html"><span class="mf1-card-code">A</span><span class="mf1-card-title">Sažetak formula</span><span class="mf1-card-hint">Formule, oznake, pretpostavke i granice.</span></a>
+  <a class="mf1-card" href="chapters/d02_pojmovnik.html"><span class="mf1-card-code">B</span><span class="mf1-card-title">Pojmovnik</span><span class="mf1-card-hint">Radne definicije temeljnih pojmova.</span></a>
+  <a class="mf1-card" href="chapters/d03_tipicne_pogreske_po_poglavljima.html"><span class="mf1-card-code">C</span><span class="mf1-card-title">Tipične pogreške</span><span class="mf1-card-hint">Fizikalni i računski filtar prije predaje.</span></a>
+  <a class="mf1-card" href="chapters/d04_numericka_mehanika_fluida.html"><span class="mf1-card-code">D</span><span class="mf1-card-title">Numerika i CFD V&amp;V</span><span class="mf1-card-hint">Očuvanje, konvergencija, verifikacija, validacija i nesigurnost.</span></a>
+  <a class="mf1-card" href="chapters/d05_literatura.html"><span class="mf1-card-code">E</span><span class="mf1-card-title">Literatura</span><span class="mf1-card-hint">Primarni izvori, standardi i preporučeno čitanje.</span></a>
+  <a class="mf1-card" href="chapters/d06_kljuc_kontrolnih_rezultata.html"><span class="mf1-card-code">F</span><span class="mf1-card-title">Ključ rezultata</span><span class="mf1-card-hint">Odvojeni kontrolni rezultati i kriteriji otvorenih zadataka.</span></a>
 </div>
 ```
 
 ## O udžbeniku
 
-Namijenjen je **studentima druge godine preddiplomskog studija strojarstva i građevinarstva** kao primarni izvor za pripremu kolokvija i ispita, te kao referenca u kasnijim kolegijima koji se oslanjaju na strujanje fluida.
+Udžbenik je namijenjen studentima druge godine strojarstva i brodogradnje. Građevinski, energetski, okolišni, biomedicinski i procesni primjeri uključeni su kada prenose isti model i pomažu studentu prepoznati njegovu opću strukturu.
 
-Pretpostavlja se predznanje iz **Matematike I i II** (diferencijalni i integralni račun, vektorska analiza, osnove diferencijalnih jednadžbi) i **Fizike I** (kinematika, dinamika, rad i energija). Računalna dinamika fluida nije predznanje — povremeno se pojavljuje kratki sklopiv prilog *Numerički most* uz spominjute jednadžbe.
+Temeljni radni tok glasi **fizičko pitanje → kontrolni volumen ili sustav → pretpostavke → bilanca → račun → neovisna provjera → granica modela**. Napredni blokovi *Dublje* nisu preduvjet za osnovni ishod, a numerički pokusi ne zamjenjuju analitičku procjenu.
 
-**Razine težine zadataka:** T1 (osnove) → T4 (sintetski zadaci). Studenti biraju raspored prema vlastitom tempu.
+## Lajtmotivi i numerika
 
-Recenzentske napomene i ispravci dobrodošli su putem službenoga kanala kolegija.
+- pomorska i offshore dekarbonizacija;
+- hlađenje elektrificiranih i digitalnih sustava;
+- klimatski otporan vodni grad.
+
+Notebookovi slijede obrazac **predvidi → izračunaj → provjeri**. CFD se ne ocjenjuje univerzalnim postotkom slaganja, nego odvojenom provjerom modela, očuvanja, iterativne/mrežne konvergencije i validacijskom usporedbom.
 
 ## Impressum
 
 - **Autorica:** Martina Bašić
-- **Naslov:** Mehanika fluida 1 — integrirani udžbenik za studije strojarstva i građevinarstva
-- **Verzija:** 0.9 (radno izdanje), srpanj 2026.
-- **Licenca:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.hr) — dopušteno je dijeljenje i prerada uz navođenje autorice, u nekomercijalne svrhe i pod istim uvjetima.
-- **ISBN / DOI:** u pripremi.
+- **Naslov:** *Mehanika fluida 1 — integrirani udžbenik za strojarstvo i brodogradnju*
+- **Verzija:** 1.0-rc1, kolovoz 2026.
+- **Licenca:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.hr)
+- **ISBN / DOI:** u pripremi
+
+Znanstvene i numeričke ispravke objavljuju se uz stabilni ID sadržaja i zapis promjene; rukopis ostaje radno izdanje dok ne prođe [neovisnu stručnu recenziju](https://github.com/martibasic/MF1_udzbenik/blob/main/docs/protokol_strucne_recenzije.md) i [studentski pilot](https://github.com/martibasic/MF1_udzbenik/blob/main/docs/protokol_studentskog_pilota.md). Potvrđene pogreške vode se u [javnoj errati](https://github.com/martibasic/MF1_udzbenik/blob/main/docs/errata.md).

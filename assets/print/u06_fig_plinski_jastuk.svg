@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="u06fpj_title u06fpj_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:920px;height:auto;">
   <title id="u06fpj_title">Cetvrtcilindricni poklopac u zatvorenom spremniku s plinskim jastukom</title>
-  <desc id="u06fpj_desc">Lijevo: zatvoreni hidropneumatski spremnik. Iznad slobodne povrsine ulja nalazi se plinski jastuk pod manometarskim tlakom p_g = 200 kPa, ispod je ulje gustoce 860 kg/m^3. Cetvrtcilindricni inspekcijski poklopac radijusa R = 0,50 m i sirine b = 1,20 m nalazi se na bocnoj stijenci s gornjim rubom na slobodnoj povrsini. Sile na poklopac: F_H = 121,3 kN vodoravno, F_V = 122,0 kN okomito, F = 172,0 kN pod kutom 45,2 stupnja. Desno: rastav doprinosa ulja i plina, formule i rezultati.</desc>
+  <desc id="u06fpj_desc">Zatvoreni hidropneumatski spremnik s plinskim jastukom p_g=200 kPa i uljem gustoce 860 kg/m^3. Ulje kvasi konveksnu unutarnju stranu cetvrtcilindricnog poklopca R=0,50 m i b=1,20 m; lokalne normale od ulja prema poklopcu imaju komponentu prema dolje. Sile su F_H=121,3 kN prema van i F_V=122,0 kN prema dolje, a rezultanta F=172,0 kN djeluje 45,2 stupnja ispod horizontale.</desc>
 
   <defs>
     <linearGradient id="u06fpj_ulje" x1="0" y1="0" x2="0" y2="1">
@@ -118,7 +118,7 @@
   <text x="378" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-style="italic" text-anchor="middle" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan> = 122,0 kN</text>
 
   <text x="448" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#8e44ad"><tspan font-weight="700">F</tspan> = 172,0 kN</text>
-  <text x="448" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad">α ≈ 45,2°</text>
+  <text x="448" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad">α ≈ 45,2° ispod horizontale</text>
 
   <text x="470" y="488" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">(vanjska strana poklopca: <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan>)</text>
   <text x="40" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0">slob. površina</text>
@@ -143,7 +143,7 @@
   <text x="803" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan> ≈ 122,0 kN</text>
   <text x="803" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Rezultanta i smjer</text>
   <text x="803" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan> = √(<tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan>² + <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan>²)</text>
-  <text x="803" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#8e44ad"><tspan font-style="italic">F</tspan> ≈ 172,0 kN   α ≈ 45,2°</text>
+  <text x="803" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#8e44ad"><tspan font-style="italic">F</tspan> ≈ 172,0 kN   α ≈ 45,2° dolje</text>
 
   <text x="803" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Plin dodaje isti iznos (120 kN) na obje</text>
   <text x="803" y="440" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">komponente → rezultanta teži 45°</text>

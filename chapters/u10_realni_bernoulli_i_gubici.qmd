@@ -1,6 +1,12 @@
 ---
-title: "10. Bernoullijeva jednadžba realnog fluida i gubici"
+title: "Poglavlje je premješteno"
 page-layout: article
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=u13_gubici_cjevovodi_crpke_i_mreze.html">
+        <link rel="canonical" href="u13_gubici_cjevovodi_crpke_i_mreze.html">
 ---
 
-{{< include ../source/u10_realni_bernoulli_i_gubici.md >}}
+Sadržaj je premješten u [13. Gubitci, cjevovodi, crpke i mreže](u13_gubici_cjevovodi_crpke_i_mreze.qmd).

@@ -1,0 +1,148 @@
+---
+title: "MF1 — pregled za ispis u pregledniku"
+subtitle: "Pomoćna HTML inačica; nativni PDF ostaje primarni tiskani proizvod"
+page-layout: article
+toc: false
+number-sections: true
+---
+
+::: {.mf1-print-note .no-print}
+Za stabilan prijelom, sadržaj, paginaciju i bibliografiju preuzmi [nativni PDF](../downloads/mehanika-fluida-1.pdf). Ova stranica služi brzom ispisu iz preglednika.
+:::
+
+```{=html}
+<div class="mf1-print-toolbar no-print">
+  <button class="mf1-print-button" onclick="window.print()">Ispis / Spremi kao PDF</button>
+  <a class="mf1-print-button secondary" href="../index.qmd">Povratak na početnu stranicu</a>
+</div>
+```
+
+# 0. Kako koristiti udžbenik
+
+{{< include ../source/u00_kako_koristiti_udzbenik.md >}}
+
+<div class="page-break"></div>
+
+# 1. Osnove fluida i Pascalov zakon
+
+{{< include ../source/u01_osnove_fluida_i_pascalov_zakon.md >}}
+
+<div class="page-break"></div>
+
+# 2. Viskoznost, površinska napetost i kapilarnost
+
+{{< include ../source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md >}}
+
+<div class="page-break"></div>
+
+# 3. Hidrostatička raspodjela tlaka i manometrija
+
+{{< include ../source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md >}}
+
+<div class="page-break"></div>
+
+# 4. Relativno mirovanje fluida
+
+{{< include ../source/u04_relativno_mirovanje_fluida.md >}}
+
+<div class="page-break"></div>
+
+# 5. Hidrostatske sile na ravne i zakrivljene plohe
+
+{{< include ../source/u05_hidrostatske_sile_na_plohe.md >}}
+
+<div class="page-break"></div>
+
+# 6. Uzgon, plivanje i početni stabilitet
+
+{{< include ../source/u07_uzgon_plivanje_i_stabilnost.md >}}
+
+<div class="page-break"></div>
+
+# 7. Kinematika, kontrolni volumen i kontinuitet
+
+{{< include ../source/u08_kontrolni_volumen_i_kontinuitet.md >}}
+
+<div class="page-break"></div>
+
+# 8. Energijska jednadžba i Bernoulli
+
+{{< include ../source/u09_bernoullijeva_jednadzba_idealnog_fluida.md >}}
+
+<div class="page-break"></div>
+
+# 9. Kompresibilni idealni tok
+
+{{< include ../source/u09_kompresibilni_idealni_tok.md >}}
+
+<div class="page-break"></div>
+
+# 10. Količina i moment količine gibanja
+
+{{< include ../source/u11_kolicina_gibanja_i_sile_strujanja.md >}}
+
+<div class="page-break"></div>
+
+# 11. Dimenzijska analiza i sličnost
+
+{{< include ../source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md >}}
+
+<div class="page-break"></div>
+
+# 12. Diferencijalni opis realnog toka
+
+{{< include ../source/u12_diferencijalni_opis_realnog_toka.md >}}
+
+<div class="page-break"></div>
+
+# 13. Gubitci, cjevovodi, crpke i mreže
+
+{{< include ../source/u13_gubici_cjevovodi_crpke_i_mreze.md >}}
+
+<div class="page-break"></div>
+
+# 14. Turbostrojevi i propulzija
+
+{{< include ../source/u12_pokretne_lopatice_i_potisak.md >}}
+
+<div class="page-break"></div>
+
+# 15. Otvoreni tokovi
+
+{{< include ../source/u15_otvoreni_tokovi.md >}}
+
+<div class="page-break"></div>
+
+# Sažetak formula i oznaka
+
+{{< include ../source/d01_sazetak_formula_i_oznaka.md >}}
+
+<div class="page-break"></div>
+
+# Pojmovnik
+
+{{< include ../source/d02_pojmovnik.md >}}
+
+<div class="page-break"></div>
+
+# Tipične pogreške po poglavljima
+
+{{< include ../source/d03_tipicne_pogreske_po_poglavljima.md >}}
+
+<div class="page-break"></div>
+
+# Numerička mehanika fluida
+
+{{< include ../source/d04_numericka_mehanika_fluida.md >}}
+
+<div class="page-break"></div>
+
+# Literatura
+
+{{< include ../source/d05_literatura.md >}}
+
+<div class="page-break"></div>
+
+# Ključ kontrolnih rezultata
+
+{{< include ../source/d06_kljuc_kontrolnih_rezultata.md >}}

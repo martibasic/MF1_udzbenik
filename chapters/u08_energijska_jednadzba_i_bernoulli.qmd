@@ -1,0 +1,6 @@
+---
+title: "Energijska jednadžba i Bernoulli"
+page-layout: article
+---
+
+{{< include ../source/u09_bernoullijeva_jednadzba_idealnog_fluida.md >}}

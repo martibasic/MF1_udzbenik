@@ -18,22 +18,28 @@ project:
     - chapters/u12_*.qmd
     - chapters/u13_*.qmd
     - chapters/u14_*.qmd
+    - chapters/u15_*.qmd
     - chapters/d01_*.qmd
     - chapters/d02_*.qmd
     - chapters/d03_*.qmd
     - chapters/d04_*.qmd
     - chapters/d05_*.qmd
+    - chapters/d06_*.qmd
+    - chapters/za_ispis.qmd
     - za_ispis.qmd
   resources:
-    - source/*.md
     - assets/**
+    - data/cfd/**
 
 lang: hr
+language: _language.yml
 author: "Martina Bašić"
 bibliography: references.bib
 
 website:
   title: "Mehanika fluida 1"
+  site-url: "https://martibasic.github.io/MF1_udzbenik/"
+  repo-url: "https://github.com/martibasic/MF1_udzbenik"
   page-navigation: true
   back-to-top-navigation: true
   sidebar:
@@ -47,38 +53,46 @@ website:
         contents:
           - text: "0. Kako koristiti udžbenik"
             href: chapters/u00_kako_koristiti_udzbenik.qmd
-      - section: "Hidrostatika"
+      - section: "Temelji"
         contents:
           - text: "1. Osnove"
             href: chapters/u01_osnove_fluida_i_pascalov_zakon.qmd
-          - text: "2. Viskoznost"
+          - text: "2. Reologija i međupovršine"
             href: chapters/u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd
+      - section: "Statika fluida"
+        contents:
           - text: "3. Hidrostatika"
             href: chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd
-          - text: "4. Mirovanje"
+          - text: "4. Relativno mirovanje"
             href: chapters/u04_relativno_mirovanje_fluida.qmd
-          - text: "5. Sile"
-            href: chapters/u05_hidrostatske_sile_na_ravne_plohe.qmd
-          - text: "6. Zakrivljene"
-            href: chapters/u06_zakrivljene_plohe_i_rastav_sila.qmd
-          - text: "7. Uzgon"
-            href: chapters/u07_uzgon_plivanje_i_stabilnost.qmd
-      - section: "Hidrodinamika"
+          - text: "5. Sile na plohe"
+            href: chapters/u05_hidrostatske_sile_na_plohe.qmd
+          - text: "6. Uzgon i stabilitet"
+            href: chapters/u06_uzgon_plivanje_i_stabilnost.qmd
+      - section: "Integralna dinamika"
         contents:
-          - text: "8. Kon. volumen"
-            href: chapters/u08_kontrolni_volumen_i_kontinuitet.qmd
-          - text: "9. Bernoulli I"
-            href: chapters/u09_bernoullijeva_jednadzba_idealnog_fluida.qmd
-          - text: "10. Bernoulli II"
-            href: chapters/u10_realni_bernoulli_i_gubici.qmd
-          - text: "11. Gibanje"
-            href: chapters/u11_kolicina_gibanja_i_sile_strujanja.qmd
-          - text: "12. Lopatice"
-            href: chapters/u12_pokretne_lopatice_i_potisak.qmd
-          - text: "13. Cjevovodi"
-            href: chapters/u13_cjevovodi.qmd
-          - text: "14. Bezdimenzijski brojevi"
-            href: chapters/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.qmd
+          - text: "7. Kinematika i kontrolni volumen"
+            href: chapters/u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd
+          - text: "8. Energija i Bernoulli"
+            href: chapters/u08_energijska_jednadzba_i_bernoulli.qmd
+          - text: "9. Kompresibilni tok"
+            href: chapters/u09_kompresibilni_idealni_tok.qmd
+          - text: "10. Količina gibanja"
+            href: chapters/u10_kolicina_i_moment_kolicine_gibanja.qmd
+      - section: "Sličnost i realni tok"
+        contents:
+          - text: "11. Dimenzijska analiza"
+            href: chapters/u11_dimenzijska_analiza_i_slicnost.qmd
+          - text: "12. Diferencijalni realni tok"
+            href: chapters/u12_diferencijalni_opis_realnog_toka.qmd
+      - section: "Inženjerski sustavi"
+        contents:
+          - text: "13. Cjevovodi, crpke i mreže"
+            href: chapters/u13_gubici_cjevovodi_crpke_i_mreze.qmd
+          - text: "14. Turbostrojevi i propulzija"
+            href: chapters/u14_turbostrojevi_i_propulzija.qmd
+          - text: "15. Otvoreni tokovi"
+            href: chapters/u15_otvoreni_tokovi.qmd
       - section: "Dodaci"
         contents:
           - text: "Sažetak formula"
@@ -91,8 +105,12 @@ website:
             href: chapters/d04_numericka_mehanika_fluida.qmd
           - text: "Literatura"
             href: chapters/d05_literatura.qmd
-      - text: "Verzija za ispis / PDF"
-        href: za_ispis.qmd
+          - text: "Ključ kontrolnih rezultata"
+            href: chapters/d06_kljuc_kontrolnih_rezultata.qmd
+      - text: "Preuzmi nativni PDF"
+        href: downloads/mehanika-fluida-1.pdf
+      - text: "Pregled za ispis u pregledniku"
+        href: chapters/za_ispis.qmd
 
 execute:
   echo: false
@@ -104,10 +122,15 @@ format:
   html:
     theme: flatly
     css: custom.css
+    include-after-body: includes/html-accessibility.html
     toc: true
     toc-depth: 2
     toc-title: "Na ovoj stranici"
     number-sections: true
     code-fold: false
+    anchor-sections: true
+    link-external-icon: true
+    link-external-newwindow: true
+    fig-responsive: true
 
 editor: visual
