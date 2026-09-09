@@ -85,6 +85,34 @@ local function extract_label(content, fallback)
 end
 
 local function render_author_block(div)
+  if div.classes:includes("mf1-vjezbe-list") then
+    -- Keep the small level label with the task's last visible paragraph.
+    -- HTML-only hints/results may occur between that paragraph and the label.
+    local content = pandoc.List()
+    for _, block in ipairs(div.content) do
+      local footer = block.t == "Para" and #block.content == 1
+        and block.content[1].t == "Span"
+        and block.content[1].classes:includes("mf1-task-level")
+      local previous = #content
+      if footer then
+        while previous > 0 and content[previous].t ~= "Para"
+          and content[previous].t ~= "Plain" and content[previous].t ~= "Header" do
+          previous = previous - 1
+        end
+      end
+      if footer and previous > 0
+        and (content[previous].t == "Para" or content[previous].t == "Plain") then
+        content:insert(previous, pandoc.RawBlock("typst", "#block(width: 100%, breakable: false)["))
+        content:insert(block)
+        content:insert(pandoc.RawBlock("typst", "]"))
+      else
+        content:insert(block)
+      end
+    end
+    div.content = content
+    return div
+  end
+
   local style = style_for(div)
   if style == nil then
     return nil
@@ -110,7 +138,27 @@ local function render_author_block(div)
   return result
 end
 
-local function render_level(span)
+local function render_span(span)
+  if span.classes:includes("mf1-task-level") then
+    local result = pandoc.List({ pandoc.RawInline("typst", "#mf1-task-level([") })
+    result:extend(span.content)
+    result:insert(pandoc.RawInline("typst", "])"))
+    return pandoc.Span(result, span.attr)
+  end
+
+  -- HTML separates the chapter code and title with CSS; PDF needs an actual
+  -- space so references do not collapse to e.g. "pog. 10Količina gibanja".
+  if span.classes:includes("mf1-ch-ref") then
+    local content = pandoc.List()
+    for _, inline in ipairs(span.content) do
+      if inline.t == "Span" and inline.classes:includes("mf1-ch-title") then
+        content:insert(pandoc.Space())
+      end
+      content:insert(inline)
+    end
+    return pandoc.Span(content, span.attr)
+  end
+
   if not span.classes:includes("mf1-level") then
     return nil
   end
@@ -152,18 +200,39 @@ local function render_minor_heading(para)
   return result
 end
 
+local function render_step_heading(header)
+  if not header.classes:includes("mf1-step") then
+    return nil
+  end
+  local identifier = header.identifier:gsub("\\", "\\\\"):gsub('"', '\\"')
+  local anchor = identifier ~= "" and (' #label("' .. identifier .. '")') or ""
+  return {
+    pandoc.RawBlock("typst", "#mf1-minor-heading(["),
+    pandoc.Plain(header.content),
+    pandoc.RawBlock("typst", "])" .. anchor),
+  }
+end
+
 local function configure_document(doc)
   -- This block is emitted inside orange-book's body, after its own paragraph
   -- defaults, so it intentionally wins without forking Quarto's template.
+  -- Pandoc renders \boxed as a box containing another math.equation. Keep
+  -- the outer equation's number, but prevent nested equations from inheriting
+  -- orange-book's numbering (which otherwise doubles numbers and counters).
   doc.blocks:insert(1, pandoc.RawBlock(
     "typst",
-    "#set par(first-line-indent: 0pt, spacing: 0.72em)"
+    [[#set par(first-line-indent: 0pt, spacing: 0.72em)
+#show math.equation: it => {
+  set math.equation(numbering: none)
+  it
+}]]
   ))
   return doc
 end
 
 return {
-  { Span = render_level },
+  { Span = render_span },
+  { Header = render_step_heading },
   { Para = render_minor_heading },
   { Div = render_author_block },
   { Pandoc = configure_document },

@@ -190,7 +190,7 @@ Horizontalna komponenta čita se preko vertikalne projekcije zakrivljene površi
 
 **Rješenje**
 
-#### 1. Horizontalna komponenta
+### 1. Horizontalna komponenta {.unnumbered .unlisted .mf1-step}
 
 Vertikalna projekcija zakrivljene površine jest pravokutnik površine
 
@@ -228,7 +228,7 @@ $$
 h_{FH} = 3{,}05 + \frac{0{,}277}{3{,}05 \cdot 2{,}233} \approx 3{,}09\ \text{m}.
 $$
 
-#### 2. Vertikalna komponenta
+### 2. Vertikalna komponenta {.unnumbered .unlisted .mf1-step}
 
 Magnituda vertikalne komponente jednaka je težini geometrijskoga pomoćnog volumena na konkavnoj strani plohe `AB`. Taj volumen sastoji se od:
 
@@ -271,7 +271,7 @@ $$
 x_{FV} = \frac{5{,}448 \cdot 0{,}61 + 2{,}139 \cdot 0{,}518}{7{,}587} \approx 0{,}584\ \text{m}.
 $$
 
-#### 3. Rezultanta
+### 3. Rezultanta {.unnumbered .unlisted .mf1-step}
 
 Kako su komponente okomite jedna na drugu, iznos rezultante je
 
@@ -333,7 +333,7 @@ $$
 y = H + a - h = 2{,}10 + 0{,}46 - 1{,}92 = 0{,}64\ \text{m}.
 $$
 
-#### 1. Sila na ravni dio `OA`
+### 1. Sila na ravni dio `OA` {.unnumbered .unlisted .mf1-step}
 
 Težište ravnog dijela nalazi se na dubini
 
@@ -359,7 +359,7 @@ $$
 \frac{L}{2} - \Delta y = \frac{L}{3} \approx 0{,}688\ \text{m}.
 $$
 
-#### 2. Vertikalna komponenta na zakrivljeni rub `ABD`
+### 2. Vertikalna komponenta na zakrivljeni rub `ABD` {.unnumbered .unlisted .mf1-step}
 
 Magnituda vertikalne komponente jednaka je težini pomoćnoga volumena koji definira zakrivljeni rub. U ovoj geometriji taj se volumen svodi na pravokutni blok volumena $V^*=y^2B$, pa je
 
@@ -369,7 +369,7 @@ $$
 
 Smjer ove sile je **prema dolje**, jer voda kvasi gornju, konkavnu stranu zakrivljenoga ruba. To je tlačno opterećenje vode, a ne „podtlačni doprinos iznad slobodne površine”.
 
-#### 3. Sila držanja u točki `D`
+### 3. Sila držanja u točki `D` {.unnumbered .unlisted .mf1-step}
 
 Težina brane iznosi
 
@@ -424,7 +424,7 @@ Kako gornji rub poklopca leži na slobodnoj površini, vertikalna projekcija je 
 
 **Rješenje**
 
-#### 1. Horizontalna komponenta
+### 1. Horizontalna komponenta {.unnumbered .unlisted .mf1-step}
 
 Vertikalna projekcija zakrivljene plohe jest pravokutnik površine
 
@@ -450,7 +450,7 @@ $$
 h_H = \frac{2R}{3} = 0{,}60\ \text{m}.
 $$
 
-#### 2. Vertikalna komponenta
+### 2. Vertikalna komponenta {.unnumbered .unlisted .mf1-step}
 
 Magnituda vertikalne komponente jednaka je težini pomoćnoga volumena vode iznad zakrivljene plohe. Ovdje je taj volumen četvrtina valjka:
 
@@ -470,7 +470,7 @@ $$
 x_V = \frac{4R}{3\pi} = \frac{4 \cdot 0{,}90}{3\pi} \approx 0{,}382\ \text{m}.
 $$
 
-#### 3. Rezultanta
+### 3. Rezultanta {.unnumbered .unlisted .mf1-step}
 
 Kako su komponente okomite jedna na drugu, iznos rezultante je
 
@@ -632,7 +632,7 @@ Ovo je i dalje čista hidrostatska sila na zakrivljenoj plohi, ali sada komponen
 
 **Rješenje**
 
-#### 1. Horizontalna komponenta
+### 1. Horizontalna komponenta {.unnumbered .unlisted .mf1-step}
 
 Vertikalna projekcija zakrivljene plohe jest pravokutnik površine
 
@@ -658,7 +658,7 @@ $$
 h_H = \frac{2R}{3} = \frac{2 \cdot 1{,}10}{3} \approx 0{,}733\ \text{m}.
 $$
 
-#### 2. Vertikalna komponenta
+### 2. Vertikalna komponenta {.unnumbered .unlisted .mf1-step}
 
 Magnituda vertikalne komponente jednaka je težini pomoćnoga volumena iznad zakrivljene plohe. Ovdje je taj volumen četvrtina valjka:
 
@@ -680,7 +680,7 @@ x_V=R-\frac{4R}{3\pi}
 \approx0{,}633\ \text{m}.
 $$
 
-#### 3. Rezultanta
+### 3. Rezultanta {.unnumbered .unlisted .mf1-step}
 
 Kako su komponente okomite jedna na drugu, iznos rezultante je
 
@@ -696,7 +696,7 @@ $$
 
 prema gore u odnosu na horizontalu.
 
-#### 4. Sila spojnice
+### 4. Sila spojnice {.unnumbered .unlisted .mf1-step}
 
 Obje hidrostatske komponente otvaraju poklopac oko zgloba `A`, pa iz ravnoteze momenata oko te točke vrijedi
 

@@ -61,7 +61,7 @@ U jednodimenzijskom modelu plitke vode, uz približno hidrostatičku raspodjelu 
 Ova je interpretacija preciznija od tvrdnje da je $Fr$ sam po sebi omjer sila: $Fr$ je omjer brzine toka i karakteristične brzine gravitacijskog vala, dok je $Fr^2$ omjer inercijske i gravitacijske skale.
 
 ::: {#ex-rezim-retencijski-kanal .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Režim u retencijskom kanalu <span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">P1. Režim u retencijskom kanalu <span class="mf1-level">T1</span></p>
 
 Pravokutni kanal širine $b=2{,}0\ \text{m}$ vodi $Q=3{,}0\ \text{m}^3/\text{s}$ pri dubini $y=0{,}80\ \text{m}$.
 
@@ -106,7 +106,7 @@ $$ {#eq-kriticna-dubina}
 Uvrštavanjem $q=v y$ dobiva se $v^2=gy$ odnosno $Fr=1$. Za istu energiju veću od minimuma postoje dvije alternativne dubine: dublja mirna i plića silovita.
 
 ::: {#ex-kriticni-preljev .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Kritični presjek na širokom preljevu <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P2. Kritični presjek na širokom preljevu <span class="mf1-level">T2</span></p>
 
 Za kanal širine $b=4{,}0\ \text{m}$ i protok $Q=8{,}0\ \text{m}^3/\text{s}$ vrijedi $q=2{,}0\ \text{m}^2/\text{s}$. Kritična dubina je
 
@@ -137,7 +137,7 @@ $$ {#eq-postupno-promjenjivi-tok}
 gdje je $S_0$ nagib dna, a $S_f$ nagib energijske linije zbog trenja. Nazivnik pokazuje zašto se kritična dubina ponaša kao kontrolni presjek: pri $Fr\to1$ mala razlika nagiba može proizvesti veliku promjenu dubine, a jednostavna diferencijalna procjena postaje osjetljiva.
 
 ::: {#ex-dvije-dubine .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Dvije dubine za istu energiju <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P3. Dvije dubine za istu energiju <span class="mf1-level">T2</span></p>
 
 Za $q=1{,}5\ \text{m}^2/\text{s}$ i $E=1{,}20\ \text{m}$ rješava se
 
@@ -160,7 +160,7 @@ $$
 M(y)=\frac{y^2}{2}+\frac{q^2}{gy}.
 $$ {#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01}
 
-Ako su vanjske uzdužne sile na kratkom kontrolnom volumenu zanemarive, $M(y_1)=M(y_2)$. Eliminacija $q$ daje omjer spregnutih dubina
+Za kratak kontrolni volumen u približno vodoravnom pravokutnom kanalu zanemaruju se trenje o dno i stijenke te uzdužna komponenta težine. Hidrostatičke tlačne sile na ulaznom i izlaznom presjeku zadržavaju se; upravo one daju član $y^2/2$. Uz korekcijski faktor toka količine gibanja $\beta\approx1$ slijedi $M(y_1)=M(y_2)$. Eliminacija $q$ daje omjer spregnutih dubina
 
 $$
 \boxed{
@@ -175,7 +175,7 @@ $$
 $$ {#eq-gubitak-skoka}
 
 ::: {#ex-hidraulicki-skok-bazen .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Disipacijski bazen iza ustave <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P4. Disipacijski bazen iza ustave <span class="mf1-level">T3</span></p>
 
 Ispod ustave pravokutnog kanala izmjereni su $y_1=0{,}25\ \text{m}$ i $v_1=6{,}0\ \text{m/s}$. Tada je
 
@@ -189,10 +189,12 @@ $$
 $$ {#eq-otvoreni-tokovi-rijeseni-primjer-disipacijski-bazen-iza-ustave-t-02}
 
 $$
-\Delta E=\frac{(1{,}24-0{,}25)^3}{4(0{,}25)(1{,}24)}=0{,}774\ \text{m}.
+\Delta E=\frac{(y_2-y_1)^3}{4y_1y_2}\approx0{,}774\ \text{m}.
 $$ {#eq-otvoreni-tokovi-rijeseni-primjer-disipacijski-bazen-iza-ustave-t-03}
 
-**Provjera:** nizvodna je dubina veća, a specifična energija manja. Dobivena duljina ili konstrukcija bazena ne slijedi iz ovoga 1D računa; za nju su potrebne empirijske korelacije, modelno ispitivanje ili CFD validiran za odgovarajući režim, geometriju i ciljnu veličinu [@nasa-cfd-vv; @asme-vv20-2009].
+U posljednjem računu zadržava se puna preciznost dubine $y_2=1{,}235326\ldots\ \text{m}$; ranije zaokruživanje na $1{,}24\ \text{m}$ dalo bi oko $0{,}7825\ \text{m}$ gubitka.
+
+**Provjera:** nizvodna je dubina veća, a specifična energija manja. Potrebna duljina ili konstrukcija bazena ne slijedi iz ovoga 1D računa; za nju su potrebne empirijske korelacije, modelno ispitivanje ili CFD validiran za odgovarajući režim, geometriju i ciljnu veličinu [@nasa-cfd-vv; @asme-vv20-2009].
 :::
 
 ## Uniformni tok i Manningova jednadžba {#sec-uniformni-tok}
@@ -203,10 +205,10 @@ $$
 Q=\frac{1}{n}A R_h^{2/3}S_f^{1/2}.
 $$ {#eq-manning}
 
-Koeficijent $n$ nije svojstvo fluida: on sažima hrapavost, oblik, vegetaciju, nepravilnost i stanje kanala te mora imati izvor i područje valjanosti [@chow1959]. Jednadžba nije zamjena za lokalnu bilancu pri brzom suženju, preljevu ili hidrauličkom skoku.
+U ovom SI zapisu Manningov koeficijent $n$ ima jedinicu $\text{s}/\text{m}^{1/3}$; nije bezdimenzijski. Nije ni svojstvo fluida: on sažima hrapavost, oblik, vegetaciju, nepravilnost i stanje kanala te mora imati izvor i područje valjanosti [@chow1959]. U primjerima i zadatcima vrijednosti $n$ zadane su u toj jedinici. Jednadžba nije zamjena za lokalnu bilancu pri brzom suženju, preljevu ili hidrauličkom skoku.
 
 ::: {#ex-manning-osjetljivost .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Osjetljivost klimatskog kanala na održavanje <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P5. Osjetljivost klimatskog kanala na održavanje <span class="mf1-level">T3</span></p>
 
 Pravokutni kanal ima $b=3{,}0\ \text{m}$, $y=1{,}0\ \text{m}$ i $S_f=0{,}001$. Površina je $A=3{,}0\ \text{m}^2$, omočen opseg $P=5{,}0\ \text{m}$ i $R_h=0{,}60\ \text{m}$. Za čist kanal $n=0{,}015$:
 
@@ -242,92 +244,123 @@ Brzina uzvodnog gravitacijskog vala tada nadmašuje srednju brzinu toka. U minim
 ## Zadaci za vježbu {#sec-otvoreni-tok-zadaci}
 
 ::::: {.mf1-vjezbe-list}
-1. [**T1**]{#task-otvoreni-fr} Pravokutni kanal $b=1{,}5\ \text{m}$ vodi $Q=1{,}2\ \text{m}^3/\text{s}$ pri $y=0{,}60\ \text{m}$. Odredi $v$, $Fr$ i smjer mogućeg širenja poremećaja.
 
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z1. Froudeov broj i širenje poremećaja {#task-otvoreni-fr .unnumbered .unlisted}
 
-   $v=1{,}33\ \text{m/s}$, $Fr=0{,}55$.
-   :::
-   ::::
-2. [**T1**]{#task-kriticna-dubina} Za $q=3{,}0\ \text{m}^2/\text{s}$ odredi $y_c$ i $E_{min}$.
+Pravokutni kanal $b=1{,}5\ \text{m}$ vodi $Q=1{,}2\ \text{m}^3/\text{s}$ pri $y=0{,}60\ \text{m}$. Odredi $v$, $Fr$ i smjer mogućeg širenja poremećaja.
 
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   $y_c\approx0{,}972\ \text{m}$, $E_{min}\approx1{,}46\ \text{m}$.
-   :::
-   ::::
-3. [**T2**]{#task-trapezni-presjek} Simetrični trapezni kanal ima širinu dna $b=2{,}40\ \text{m}$, pokos $z=1{,}50$ vodoravno na jedan okomito, dubinu $y=0{,}900\ \text{m}$ i protok $Q=3{,}60\ \text{m}^3/\text{s}$. Izračunaj $A$, $T$, $P$, $D_h$, $R_h$, srednju brzinu i $Fr$; skicom jasno razdvoji širinu slobodne površine i omočen opseg.
+$v=1{,}33\ \text{m/s}$, $Fr=0{,}55$.
+:::
+::::
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
+[Razina: T1]{.mf1-task-level}
 
-   Za pokos $z{:}1$ vrijedi $A=y(b+zy)$, $T=b+2zy$ i $P=b+2y\sqrt{1+z^2}$. U izrazu za $Fr$ upotrijebi $D_h=A/T$, a ne $R_h$.
-   :::
-   ::::
+### Z2. Kritična dubina i minimalna energija {#task-kriticna-dubina .unnumbered .unlisted}
 
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+Za $q=3{,}0\ \text{m}^2/\text{s}$ odredi $y_c$ i $E_{min}$.
 
-   $A=3{,}375\ \text{m}^2$, $T=5{,}100\ \text{m}$, $P=5{,}645\ \text{m}$, $D_h=0{,}6618\ \text{m}$, $R_h=0{,}5979\ \text{m}$, $v=1{,}0667\ \text{m/s}$ i $Fr=0{,}4186$ (mirni tok).
-   :::
-   ::::
-4. [**T2**]{#task-alternativne-dubine} U pravokutnom kanalu protok po jedinici širine iznosi $q=2{,}20\ \text{m}^2/\text{s}$, a specifična energija $E=1{,}600\ \text{m}$. Bez uporabe gotove formule za korijene najprije provjeri $E>E_{min}$, zatim numerički odredi obje pozitivne dubine uz rezidual energije manji od $\varepsilon_E=1{,}0\cdot10^{-6}\ \text{m}$ i klasificiraj grane s pomoću $Fr$.
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
+$y_c\approx0{,}972\ \text{m}$, $E_{min}\approx1{,}46\ \text{m}$.
+:::
+::::
 
-   Kritična dubina razdvaja intervale traženja korijena funkcije $f(y)=y+q^2/(2gy^2)-E$. Jedan korijen traži u $0<y<y_c$, a drugi u $y>y_c$; zapiši i kriterij zaustavljanja numeričkog postupka.
-   :::
-   ::::
+[Razina: T1]{.mf1-task-level}
 
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z3. Geometrija i tok trapeznog kanala {#task-trapezni-presjek .unnumbered .unlisted}
 
-   $y_c=0{,}7902\ \text{m}$ i $E_{min}=1{,}1853\ \text{m}$. Plića je grana $y_s=0{,}4665\ \text{m}$, $Fr_s=2{,}204$; dublja je $y_d=1{,}4887\ \text{m}$, $Fr_d=0{,}3867$.
-   :::
-   ::::
-5. [**T3**]{#task-skok-mjerenje} Na vodoravnom pravokutnom pokusnom kanalu izmjereni su $Q=1{,}800\pm0{,}018\ \text{m}^3/\text{s}$, $b=1{,}200\pm0{,}003\ \text{m}$, $y_1=0{,}250\pm0{,}003\ \text{m}$ i $y_2=1{,}220\pm0{,}008\ \text{m}$; navedene su neovisne standardne nesigurnosti ($k=1$). Presjeci su izvan valjka skoka, a na kratkom kontrolnom volumenu možeš zanemariti uzdužnu silu dna i stijenki te uzeti hidrostatički tlak i $\beta_1=\beta_2=1$. Definiraj kontrolni volumen i vanjske sile, izvedi rezidual bilance količine gibanja $R=M_2-M_1$, linearno propagiraj nesigurnost svih četiriju mjerenja i odluči zatvara li se bilanca prema kriteriju $|R|\le2u_R$.
+Simetrični trapezni kanal ima širinu dna $b=2{,}40\ \text{m}$, pokos $z=1{,}50$ vodoravno na jedan okomito, dubinu $y=0{,}900\ \text{m}$ i protok $Q=3{,}60\ \text{m}^3/\text{s}$. Izračunaj $A$, $T$, $P$, $D_h$, $R_h$, srednju brzinu i $Fr$; skicom jasno razdvoji širinu slobodne površine i omočen opseg.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
 
-   Najprije propagiraj $q=Q/b$. Za $M(y,q)=y^2/2+q^2/(gy)$ izračunaj parcijalne derivacije reziduala prema $y_1$, $y_2$ i $q$, a zatim primijeni korijen iz zbroja kvadrata. Hidrostatičke sile na krajnjim presjecima djeluju u suprotnim smjerovima; težina nema uzdužnu komponentu.
-   :::
-   ::::
+Za pokos $z{:}1$ vrijedi $A=y(b+zy)$, $T=b+2zy$ i $P=b+2y\sqrt{1+z^2}$. U izrazu za $Fr$ upotrijebi $D_h=A/T$, a ne $R_h$.
+:::
+::::
 
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   $q=1{,}5000\ \text{m}^2/\text{s}$ i $u_q=0{,}01546\ \text{m}^2/\text{s}$. Dobiva se $R=-0{,}01648\ \text{m}^2$, $u_R=0{,}02010\ \text{m}^2$ i $|R|/u_R=0{,}820<2$, pa se u granicama zadanoga modela bilanca zatvara. Iz srednjih ulaza teorijska je spregnuta dubina $1{,}2353\ \text{m}$.
-   :::
-   ::::
-6. [**T4**]{#task-klimatski-kanal} Trapezni oborinski kanal ima $b=3{,}00\ \text{m}$, pokos $z=2{,}00$, nagib $S_f=0{,}00150$ i konstrukcijsku dubinu $H=1{,}50\ \text{m}$; traže se projektni protok $Q_d=8{,}00\ \text{m}^3/\text{s}$ i slobodni rub najmanje $f_{min}=0{,}300\ \text{m}$. Procjene triju stanja jesu A: $n_A=0{,}018\pm0{,}001\ \text{s}/\text{m}^{1/3}$, B: $n_B=0{,}026\pm0{,}002\ \text{s}/\text{m}^{1/3}$ i C: $n_C=0{,}035\pm0{,}004\ \text{s}/\text{m}^{1/3}$ (standardne nesigurnosti). Manningovom jednadžbom usporedi kapacitete pri $y=H-f_{min}$, normalne dubine i slobodne rubove pri $Q_d$, a robusnost provjeri s $n_c=n+2u_n$. Kanal se ulijeva u pravokutni bazen širine $B=5{,}00\ \text{m}$ s ulaznom dubinom $y_1=0{,}350\ \text{m}$ i dopuštenom spregnutom dubinom $y_{2,dop}=1{,}40\ \text{m}$: provjeri skok pri $Q_d$ i pri kapacitetu svakog stanja, preporuči režim održavanja te navedi što prije odluke treba terenski kalibrirati.
+$A=3{,}375\ \text{m}^2$, $T=5{,}100\ \text{m}$, $P=5{,}645\ \text{m}$, $D_h=0{,}6618\ \text{m}$, $R_h=0{,}5979\ \text{m}$, $v=1{,}0667\ \text{m/s}$ i $Fr=0{,}4186$ (mirni tok).
+:::
+::::
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
+[Razina: T2]{.mf1-task-level}
 
-   Za svaki $n$ najprije računaj kapacitet na dopuštenoj dubini $1{,}20\ \text{m}$, a normalnu dubinu pri $Q_d$ pronađi kao korijen Manningove jednadžbe. Odvojeno provjeri srednju procjenu i konzervativni $n_c$. U bazenu je $q=Q/B$; ista vrijednost $Q_d$ daje isti skok neovisno o stanju uzvodnog održavanja, ali kapaciteti daju različitu izvanprojektnu ovojnicu.
-   :::
-   ::::
+### Z4. Alternativne dubine toka {#task-alternativne-dubine .unnumbered .unlisted}
 
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+U pravokutnom kanalu protok po jedinici širine iznosi $q=2{,}20\ \text{m}^2/\text{s}$, a specifična energija $E=1{,}600\ \text{m}$. Bez uporabe gotove formule za korijene najprije provjeri $E>E_{min}$, zatim numerički odredi obje pozitivne dubine uz rezidual energije manji od $\varepsilon_E=1{,}0\cdot10^{-6}\ \text{m}$ i klasificiraj grane s pomoću $Fr$.
 
-   Za A/B/C kapaciteti pri $y=1{,}20\ \text{m}$ iznose $11{,}759/8{,}141/6{,}047\ \text{m}^3/\text{s}$, a normalne dubine pri $Q_d$ $0{,}985/1{,}189/1{,}380\ \text{m}$, odnosno slobodni rubovi $0{,}515/0{,}311/0{,}120\ \text{m}$. S $n_c$ kapaciteti padaju na $10{,}583/7{,}055/4{,}922\ \text{m}^3/\text{s}$, pa samo A robusno zadovoljava oba zahtjeva. Pri $Q_d$ je $y_2=1{,}059\ \text{m}$; pri kapacitetima A/B/C dobiva se $y_2=1{,}628/1{,}080/0{,}765\ \text{m}$, pa bazen ne pokriva cijelu izvanprojektnu ovojnicu očišćenog kanala. Prije odluke treba terenski kalibrirati $n$, stvarni presjek i nagib, ulaznu dubinu i nizvodni vodostaj te projektnu hidrološku krivulju protoka.
-   :::
-   ::::
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+
+Kritična dubina razdvaja intervale traženja korijena funkcije $f(y)=y+q^2/(2gy^2)-E$. Jedan korijen traži u $0<y<y_c$, a drugi u $y>y_c$; zapiši i kriterij zaustavljanja numeričkog postupka.
+:::
+::::
+
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$y_c=0{,}7902\ \text{m}$ i $E_{min}=1{,}1853\ \text{m}$. Plića je grana $y_s=0{,}4665\ \text{m}$, $Fr_s=2{,}204$; dublja je $y_d=1{,}4887\ \text{m}$, $Fr_d=0{,}3867$.
+:::
+::::
+
+[Razina: T2]{.mf1-task-level}
+
+### Z5. Provjera mjerenja hidrauličkog skoka {#task-skok-mjerenje .unnumbered .unlisted}
+
+Na vodoravnom pravokutnom pokusnom kanalu izmjereni su $Q=1{,}800\pm0{,}018\ \text{m}^3/\text{s}$, $b=1{,}200\pm0{,}003\ \text{m}$, $y_1=0{,}250\pm0{,}003\ \text{m}$ i $y_2=1{,}220\pm0{,}008\ \text{m}$; navedene su neovisne standardne nesigurnosti ($k=1$). Presjeci su izvan valjka skoka, a na kratkom kontrolnom volumenu možeš zanemariti uzdužnu silu dna i stijenki te uzeti hidrostatički tlak i $\beta_1=\beta_2=1$. Definiraj kontrolni volumen i vanjske sile, izvedi rezidual bilance količine gibanja $R=M_2-M_1$, linearno propagiraj nesigurnost svih četiriju mjerenja i odluči zatvara li se bilanca prema kriteriju $|R|\le2u_R$.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+
+Najprije propagiraj $q=Q/b$. Za $M(y,q)=y^2/2+q^2/(gy)$ izračunaj parcijalne derivacije reziduala prema $y_1$, $y_2$ i $q$, a zatim primijeni korijen iz zbroja kvadrata. Hidrostatičke sile na krajnjim presjecima djeluju u suprotnim smjerovima; težina nema uzdužnu komponentu.
+:::
+::::
+
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$q=1{,}5000\ \text{m}^2/\text{s}$ i $u_q=0{,}01546\ \text{m}^2/\text{s}$. Dobiva se $R=-0{,}01648\ \text{m}^2$, $u_R=0{,}02010\ \text{m}^2$ i $|R|/u_R=0{,}820<2$, pa se u granicama zadanoga modela bilanca zatvara. Iz srednjih ulaza teorijska je spregnuta dubina $1{,}2353\ \text{m}$.
+:::
+::::
+
+[Razina: T3]{.mf1-task-level}
+
+### Z6. Propusnost oborinskog kanala {#task-klimatski-kanal .unnumbered .unlisted}
+
+Trapezni oborinski kanal ima $b=3{,}00\ \text{m}$, pokos $z=2{,}00$, nagib $S_f=0{,}00150$ i konstrukcijsku dubinu $H=1{,}50\ \text{m}$; traže se projektni protok $Q_d=8{,}00\ \text{m}^3/\text{s}$ i slobodni rub najmanje $f_{min}=0{,}300\ \text{m}$. Procjene triju stanja jesu A: $n_A=0{,}018\pm0{,}001\ \text{s}/\text{m}^{1/3}$, B: $n_B=0{,}026\pm0{,}002\ \text{s}/\text{m}^{1/3}$ i C: $n_C=0{,}035\pm0{,}004\ \text{s}/\text{m}^{1/3}$ (standardne nesigurnosti). Manningovom jednadžbom usporedi kapacitete pri $y=H-f_{min}$, normalne dubine i slobodne rubove pri $Q_d$, a robusnost provjeri s $n_c=n+2u_n$. Kanal se ulijeva u pravokutni bazen širine $B=5{,}00\ \text{m}$ s ulaznom dubinom $y_1=0{,}350\ \text{m}$ i dopuštenom spregnutom dubinom $y_{2,dop}=1{,}40\ \text{m}$: provjeri skok pri $Q_d$ i pri kapacitetu svakog stanja, preporuči režim održavanja te navedi što prije odluke treba terenski kalibrirati.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+
+Za svaki $n$ najprije računaj kapacitet na dopuštenoj dubini $1{,}20\ \text{m}$, a normalnu dubinu pri $Q_d$ pronađi kao korijen Manningove jednadžbe. Odvojeno provjeri srednju procjenu i konzervativni $n_c$. U bazenu je $q=Q/B$; ista vrijednost $Q_d$ daje isti skok neovisno o stanju uzvodnog održavanja, ali kapaciteti daju različitu izvanprojektnu ovojnicu.
+:::
+::::
+
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+Za A/B/C kapaciteti pri $y=1{,}20\ \text{m}$ iznose $11{,}759/8{,}141/6{,}047\ \text{m}^3/\text{s}$, a normalne dubine pri $Q_d$ $0{,}985/1{,}189/1{,}380\ \text{m}$, odnosno slobodni rubovi $0{,}515/0{,}311/0{,}120\ \text{m}$. S $n_c$ kapaciteti padaju na $10{,}583/7{,}055/4{,}922\ \text{m}^3/\text{s}$, pa samo A robusno zadovoljava oba zahtjeva. Pri $Q_d$ je $y_2=1{,}059\ \text{m}$; pri kapacitetima A/B/C dobiva se $y_2=1{,}628/1{,}080/0{,}765\ \text{m}$, pa bazen ne pokriva cijelu izvanprojektnu ovojnicu očišćenog kanala. Prije odluke treba terenski kalibrirati $n$, stvarni presjek i nagib, ulaznu dubinu i nizvodni vodostaj te projektnu hidrološku krivulju protoka.
+:::
+::::
+
+[Razina: T4]{.mf1-task-level}
+
 :::::
 
 ::: {.mf1-zavrsni-okvir}

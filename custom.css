@@ -429,7 +429,7 @@ blockquote em { font-style: normal; }
 
 /* =================================================================
    3. STIL A — sadržajni blokovi (primjeri, izvodi, primjene)
-   Tanka lijeva linija, bez pozadinskog tinta, italic labela.
+   Primjeri bez okvira; ostali autorski blokovi s tankom lijevom linijom.
    ================================================================= */
 
 .mf1-we,
@@ -453,10 +453,10 @@ blockquote em { font-style: normal; }
   margin: 1.8rem 0;
 }
 
-.mf1-we          { border-left-color: var(--mf1-c-we); }
-.mf1-gp          { border-left-color: var(--mf1-c-gp); }
-.mf1-po          { border-left-color: var(--mf1-c-po); }
-.mf1-ch          { border-left-color: var(--mf1-c-ch); }
+.mf1-we, .mf1-gp, .mf1-po, .mf1-ch {
+  border-left: 0;
+  padding-left: 0;
+}
 .mf1-izvod       { border-left-color: var(--mf1-c-izvod); }
 .mf1-application { border-left-color: var(--mf1-accent); }
 .mf1-temelj { border-left-color: var(--mf1-c-gp); }
@@ -544,25 +544,36 @@ blockquote em { font-style: normal; }
   margin-bottom: 0.5rem !important;
 }
 
-.mf1-samoprovjera ol,
-.mf1-vjezbe-list ol {
+.mf1-samoprovjera ol {
   margin: 0.3rem 0 0;
   padding-left: 1.5rem;
   counter-reset: list;
 }
-.mf1-samoprovjera li,
-.mf1-vjezbe-list li {
+.mf1-samoprovjera li {
   margin: 0 0 0.7rem;
   padding-left: 0.2rem;
 }
-.mf1-vjezbe-list li {
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid var(--mf1-line-soft);
+.mf1-vjezbe-list h3 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
 }
-.mf1-vjezbe-list li:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
+
+/* Koraci rješenja nisu dodatna razina numeracije poglavlja. */
+h3.mf1-step {
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--mf1-ink);
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.mf1-task-level {
+  display: block;
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--mf1-muted);
 }
 
 /* Upozorenje — jedina iznimka, lagani akcent */
@@ -935,6 +946,10 @@ a.mf1-card .mf1-card-hint,
   .mf1-warning {
     padding-left: 1rem;
     margin: 1.5rem 0;
+  }
+
+  .mf1-we, .mf1-gp, .mf1-po, .mf1-ch {
+    padding-left: 0;
   }
 
   .mf1-priprema, .mf1-samoprovjera, .mf1-checklist,

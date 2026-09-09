@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 740" role="img" aria-labelledby="u04vs_title u04vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u04vs_title">Vjezbe poglavlja 4 - sest minimalnih skica za zadatke T1-T6</title>
-  <desc id="u04vs_desc">Mreza 2x3 sa sest mini-skica: T1 horizontalno ubrzani spremnik s kosom slobodnom plohom, T2 granica prelijevanja pri ubrzanju, T3 zatvoreni vertikalni cilindar s ubrzanjem prema gore, T4 sila na straznjoj stijenci ubrzanog spremnika, T5 rotirajuca posuda s parabolom slobodne plohe, T6 otvoreni rotirajuci cilindar s graficnom i radnom parabolom.</desc>
+  <title id="u04vs_title">Vjezbe poglavlja 4 - sest minimalnih skica za zadatke Z1-Z6</title>
+  <desc id="u04vs_desc">Mreza 2x3 sa sest mini-skica: Z1 horizontalno ubrzani spremnik s kosom slobodnom plohom, Z2 granica prelijevanja pri ubrzanju, Z3 zatvoreni vertikalni cilindar s ubrzanjem prema gore, Z4 sila na straznjoj stijenci ubrzanog spremnika, Z5 rotirajuca posuda s parabolom slobodne plohe, Z6 otvoreni rotirajuci cilindar s graficnom i radnom parabolom.</desc>
 
   <defs>
     <!-- Voda gradient (kanon) -->
@@ -8,7 +8,7 @@
       <stop offset="0%" stop-color="#aed6f1" />
       <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <!-- Ulje gradient za T3 -->
+    <!-- Ulje gradient za Z3 -->
     <linearGradient id="u04vs_ulje" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fde68a" />
       <stop offset="100%" stop-color="#c8a000" />
@@ -44,7 +44,7 @@
   <!-- Pozadina -->
   <rect width="960" height="740" fill="#ffffff" />
   <!-- ======================================================================
-       PANEL T1: x=28, y=30, w=448, h=224
+       PANEL Z1: x=28, y=30, w=448, h=224
        Horizontalno ubrzani otvoreni spremnik
        L=1,80 m, h0=0,34 m, H=0,46 m, a=1,20 m/s2
        Skala: 180 px / 1,80 m = 100 px/m
@@ -57,7 +57,7 @@
        Razina stražnja: y=186-11=175. Prednja: y=186+11=197.
   ====================================================================== -->
   <rect x="28" y="30" width="448" height="224" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- T1 stijenke (otvoreni odozgo) -->
+  <!-- Z1 stijenke (otvoreni odozgo) -->
   <!-- Lijeva stražnja stijenka -->
   <rect x="100" y="120" width="10" height="100" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <!-- Desna prednja stijenka -->
@@ -65,21 +65,21 @@
   <!-- Dno -->
   <rect x="100" y="220" width="200" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
 
-  <!-- T1 voda - polygon s kosom slobodnom plohom -->
+  <!-- Z1 voda - polygon s kosom slobodnom plohom -->
   <path d="M110,175 L290,197 L290,220 L110,220 Z" fill="url(#u04vs_voda)" />
   <!-- Slobodna ploha -->
   <line x1="110" y1="175" x2="290" y2="197" stroke="#1565c0" stroke-width="2" />
   <!-- Mirna razina (referenca) -->
   <line x1="110" y1="186" x2="290" y2="186" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
 
-  <!-- T1 strelica a (crvena, desno na razini iznad spremnika) -->
+  <!-- Z1 strelica a (crvena, desno na razini iznad spremnika) -->
   <line x1="200" y1="100" x2="260" y2="100" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04vs_aR)" />
-  <!-- T1 kota L (ispod dna) -->
-  <!-- T1 oznaka stražnje / prednje stijenke -->
-  <!-- T1 podatkovni blok desno -->
+  <!-- Z1 kota L (ispod dna) -->
+  <!-- Z1 oznaka stražnje / prednje stijenke -->
+  <!-- Z1 podatkovni blok desno -->
   <line x1="320" y1="138" x2="468" y2="138" stroke="#c8d6e4" stroke-width="1" />
   <!-- ======================================================================
-       PANEL T2: x=484, y=30, w=448, h=224
+       PANEL Z2: x=484, y=30, w=448, h=224
        Granicno ubrzanje (rub prelijevanja)
        L=1,40 m, h0=0,30 m, H=0,42 m
        Stražnja stijenka tocno do ruba (h_str = H)
@@ -90,35 +90,35 @@
        Provjera: stražnja = h0 + dh/2 = 30 + 12 = 42 -> y=178. Tocno H. Match.
   ====================================================================== -->
   <rect x="484" y="30" width="448" height="224" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- T2 stijenke -->
+  <!-- Z2 stijenke -->
   <rect x="560" y="178" width="10" height="42" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <rect x="700" y="178" width="10" height="42" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <rect x="560" y="220" width="150" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
 
-  <!-- T2 voda -->
+  <!-- Z2 voda -->
   <path d="M570,178 L700,202 L700,220 L570,220 Z" fill="url(#u04vs_voda)" />
   <!-- Slobodna ploha tocno do ruba straznje stijenke -->
   <line x1="570" y1="178" x2="700" y2="202" stroke="#1565c0" stroke-width="2" />
   <!-- Mirna razina -->
   <line x1="570" y1="190" x2="700" y2="190" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
 
-  <!-- T2 oznaka "rub prelijevanja" na gornjem rubu straznje stijenke -->
+  <!-- Z2 oznaka "rub prelijevanja" na gornjem rubu straznje stijenke -->
   <circle cx="570" cy="178" r="3.6" fill="#c0392b" />
   <line x1="570" y1="178" x2="538" y2="158" stroke="#c0392b" stroke-width="0.9" />
-  <!-- T2 strelica a_max -->
+  <!-- Z2 strelica a_max -->
   <line x1="610" y1="150" x2="676" y2="150" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04vs_aR)" />
-  <!-- T2 kota L (ispod dna) -->
-  <!-- T2 podatkovni blok desno -->
+  <!-- Z2 kota L (ispod dna) -->
+  <!-- Z2 podatkovni blok desno -->
   <line x1="740" y1="120" x2="924" y2="120" stroke="#c8d6e4" stroke-width="1" />
   <!-- ======================================================================
-       PANEL T3: x=28, y=268, w=448, h=224
+       PANEL Z3: x=28, y=268, w=448, h=224
        Zatvoreni vertikalni cilindar napunjen uljem, ubrzanje navise
        rho=870 kg/m3, h=0,75 m, a_z=2,3 m/s2 navise
        Cilindar uzak: x=170-230 (60 px wide), y_dno=470, y_vrh=320 (h=150 px za 0,75m)
        Skala 200 px/m
   ====================================================================== -->
   <rect x="28" y="268" width="448" height="224" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- T3 cilindar stjenke (zatvoren: top + bot + bocne) -->
+  <!-- Z3 cilindar stjenke (zatvoren: top + bot + bocne) -->
   <!-- Top cap -->
   <rect x="160" y="310" width="80" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <!-- Bottom cap -->
@@ -130,17 +130,17 @@
   <!-- Ulje (pun cilindar) -->
   <rect x="170" y="320" width="60" height="150" fill="url(#u04vs_ulje)" />
 
-  <!-- T3 oznaka ulje -->
-  <!-- T3 strelica a_z (zelena ne, crvena = ulazno ubrzanje), prema gore lijevo od cilindra -->
+  <!-- Z3 oznaka ulje -->
+  <!-- Z3 strelica a_z (zelena ne, crvena = ulazno ubrzanje), prema gore lijevo od cilindra -->
   <line x1="118" y1="430" x2="118" y2="350" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04vs_aR)" />
-  <!-- T3 kota h (desno od cilindra) -->
-  <!-- T3 oznake tocaka A (vrh) i B (dno) - za delta p -->
+  <!-- Z3 kota h (desno od cilindra) -->
+  <!-- Z3 oznake tocaka A (vrh) i B (dno) - za delta p -->
   <circle cx="200" cy="320" r="2.6" fill="#1565c0" />
   <circle cx="200" cy="470" r="2.6" fill="#1565c0" />
-  <!-- T3 podatkovni blok desno -->
+  <!-- Z3 podatkovni blok desno -->
   <line x1="320" y1="362" x2="468" y2="362" stroke="#c8d6e4" stroke-width="1" />
   <!-- ======================================================================
-       PANEL T4: x=484, y=268, w=448, h=224
+       PANEL Z4: x=484, y=268, w=448, h=224
        Hidrostatska sila F=820N na straznjoj stijenci ubrzanog spremnika
        L=1,60 m, h0=0,36 m, b=0,75 m
        Skala 100 px / 1 m. L=160 px. h0=36 px.
@@ -149,31 +149,31 @@
        Stražnja razina y=434-15=419 (visa). Prednja y=434+15=449.
   ====================================================================== -->
   <rect x="484" y="268" width="448" height="224" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- T4 stijenke -->
+  <!-- Z4 stijenke -->
   <rect x="560" y="380" width="10" height="90" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <rect x="720" y="380" width="10" height="90" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <rect x="560" y="470" width="170" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
 
-  <!-- T4 voda (kosa povrsina) -->
+  <!-- Z4 voda (kosa povrsina) -->
   <path d="M570,419 L720,449 L720,470 L570,470 Z" fill="url(#u04vs_voda)" />
   <!-- Slobodna ploha -->
   <line x1="570" y1="419" x2="720" y2="449" stroke="#1565c0" stroke-width="2" />
   <!-- Mirna razina -->
   <line x1="570" y1="434" x2="720" y2="434" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
 
-  <!-- T4 trokut tlaka na straznjoj stijenci (samo kontura) -->
+  <!-- Z4 trokut tlaka na straznjoj stijenci (samo kontura) -->
   <polygon points="570,419 590,470 570,470" fill="#1565c0" opacity="0.22" />
   <line x1="570" y1="419" x2="590" y2="470" stroke="#1565c0" stroke-width="1.4" />
 
-  <!-- T4 strelica F (zelena - rezultantna izlazna sila iz hidrostatike) -->
+  <!-- Z4 strelica F (zelena - rezultantna izlazna sila iz hidrostatike) -->
   <line x1="600" y1="455" x2="650" y2="455" stroke="#1e8449" stroke-width="2.8" marker-end="url(#u04vs_aG)" />
-  <!-- T4 strelica a (crvena, iznad spremnika) -->
+  <!-- Z4 strelica a (crvena, iznad spremnika) -->
   <line x1="630" y1="358" x2="690" y2="358" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04vs_aR)" />
-  <!-- T4 oznaka b (sirina) - mali tag na bocnoj strani -->
-  <!-- T4 podatkovni blok desno -->
+  <!-- Z4 oznaka b (sirina) - mali tag na bocnoj strani -->
+  <!-- Z4 podatkovni blok desno -->
   <line x1="750" y1="380" x2="924" y2="380" stroke="#c8d6e4" stroke-width="1" />
   <!-- ======================================================================
-       PANEL T5: x=28, y=506, w=448, h=220
+       PANEL Z5: x=28, y=506, w=448, h=220
        Rotirajuca posuda R=0,28 m, h0=0,22 m, omega=5,5 rad/s
        Trazi h_rub, h_os, provjera dna
        Skala 200 px/m. R=0,28 -> 56 px. h0=0,22 -> 44 px.
@@ -185,34 +185,34 @@
        Parabola: x=144,y=644; x=200,y=668; x=256,y=644
   ====================================================================== -->
   <rect x="28" y="506" width="448" height="220" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- T5 stjenke (otvorena posuda) -->
+  <!-- Z5 stjenke (otvorena posuda) -->
   <rect x="134" y="566" width="10" height="134" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <rect x="256" y="566" width="10" height="134" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <rect x="134" y="700" width="132" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
 
-  <!-- T5 voda - paraboloid -->
+  <!-- Z5 voda - paraboloid -->
   <path d="M144,644 Q200,692 256,644 L256,700 L144,700 Z" fill="url(#u04vs_voda)" />
   <!-- Slobodna ploha (parabola) -->
   <path d="M144,644 Q200,692 256,644" fill="none" stroke="#1565c0" stroke-width="2" />
 
-  <!-- T5 os rotacije (isprekidana) -->
+  <!-- Z5 os rotacije (isprekidana) -->
   <line x1="200" y1="552" x2="200" y2="716" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
 
-  <!-- T5 mirna razina h0 -->
+  <!-- Z5 mirna razina h0 -->
   <line x1="144" y1="656" x2="256" y2="656" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
 
-  <!-- T5 omega strelica zakrivljena iznad posude (zelena) -->
+  <!-- Z5 omega strelica zakrivljena iznad posude (zelena) -->
   <path d="M178,562 A18,10 0 0 1 222,562" fill="none" stroke="#1e8449" stroke-width="2" />
   <polygon points="222,562 215,558 215,567" fill="#1e8449" />
-  <!-- T5 oznake tocaka -->
+  <!-- Z5 oznake tocaka -->
   <circle cx="200" cy="668" r="2.6" fill="#1565c0" />
   <line x1="252" y1="644" x2="285" y2="640" stroke="#1565c0" stroke-width="0.8" />
-  <!-- T5 kota R (od osi do desne stjenke, ispod) -->
-  <!-- T5 kota h0 (lijevo, mali tag) -->
-  <!-- T5 podatkovni blok desno -->
+  <!-- Z5 kota R (od osi do desne stjenke, ispod) -->
+  <!-- Z5 kota h0 (lijevo, mali tag) -->
+  <!-- Z5 podatkovni blok desno -->
   <line x1="320" y1="598" x2="468" y2="598" stroke="#c8d6e4" stroke-width="1" />
   <!-- ======================================================================
-       PANEL T6: x=484, y=506, w=448, h=220
+       PANEL Z6: x=484, y=506, w=448, h=220
        Otvoreni cilindar R=0,32 m, H=0,62 m, h0=0,46 m
        Trazi omega_max, te za omega=0,80*omega_max: h_osa, h_rub, p_M
        Skala 200 px/m. R=0,32 -> 64 px. H=0,62 -> 124 px. h0=0,46 -> 92 px.
@@ -224,37 +224,37 @@
        h_osa_op = h0 - Dh/2 = 46-10,24 = 35,76 cm -> y=700-71,5=628,5
   ====================================================================== -->
   <rect x="484" y="506" width="448" height="220" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- T6 stjenke -->
+  <!-- Z6 stjenke -->
   <rect x="546" y="572" width="10" height="128" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <rect x="684" y="572" width="10" height="128" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
   <rect x="546" y="700" width="148" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
 
-  <!-- T6 voda (radni rezim) -->
+  <!-- Z6 voda (radni rezim) -->
   <path d="M556,588 Q620,669 684,588 L684,700 L556,700 Z" fill="url(#u04vs_voda)" />
   <!-- Parabola RADNA (puna plava) -->
   <path d="M556,588 Q620,669 684,588" fill="none" stroke="#1565c0" stroke-width="2.2" />
   <!-- Parabola GRANIČNA (crvena isprekidana) -->
   <path d="M556,572 Q620,704 684,572" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="6,3" />
 
-  <!-- T6 os rotacije -->
+  <!-- Z6 os rotacije -->
   <line x1="620" y1="558" x2="620" y2="716" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
 
-  <!-- T6 mirna razina h0 -->
+  <!-- Z6 mirna razina h0 -->
   <line x1="556" y1="608" x2="684" y2="608" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
 
-  <!-- T6 omega strelica iznad (zelena) -->
+  <!-- Z6 omega strelica iznad (zelena) -->
   <path d="M598,568 A18,10 0 0 1 642,568" fill="none" stroke="#1e8449" stroke-width="2" />
   <polygon points="642,568 635,564 635,573" fill="#1e8449" />
-  <!-- T6 tocke -->
+  <!-- Z6 tocke -->
   <circle cx="620" cy="628.5" r="2.6" fill="#1565c0" />
   <circle cx="684" cy="588" r="2.6" fill="#1565c0" />
 
-  <!-- T6 kota H (lijevo izvan posude) -->
-  <!-- T6 kota R (ispod, od osi do desne stjenke) -->
-  <!-- T6 legenda parabola (dva mala uzorka iznad podatkovnog bloka) -->
+  <!-- Z6 kota H (lijevo izvan posude) -->
+  <!-- Z6 kota R (ispod, od osi do desne stjenke) -->
+  <!-- Z6 legenda parabola (dva mala uzorka iznad podatkovnog bloka) -->
   <line x1="746" y1="552" x2="772" y2="552" stroke="#1565c0" stroke-width="2.2" />
   <line x1="746" y1="568" x2="772" y2="568" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="6,3" />
-  <!-- T6 podatkovni blok desno -->
+  <!-- Z6 podatkovni blok desno -->
   <line x1="742" y1="642" x2="924" y2="642" stroke="#c8d6e4" stroke-width="1" />
   <line x1="110" y1="230" x2="110" y2="246" stroke="#b7600c" stroke-width="0.7" />
   <line x1="290" y1="230" x2="290" y2="246" stroke="#b7600c" stroke-width="0.7" />
@@ -286,7 +286,7 @@
   <line x1="620" y1="718" x2="620" y2="714" stroke="#b7600c" stroke-width="1.2" />
   <line x1="684" y1="718" x2="684" y2="714" stroke="#b7600c" stroke-width="1.2" />
   <line x1="623" y1="717" x2="681" y2="717" stroke="#b7600c" stroke-width="1.3" marker-end="url(#u04vs_dim)" />
-  <text x="42" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">T1</text>
+  <text x="42" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z1</text>
   <text x="62" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Horizontalno ubrzani otvoreni spremnik</text>
 
   <text x="225" y="93" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#c0392b" text-anchor="middle">a</text>
@@ -303,7 +303,7 @@
   <text x="324" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">+ provjera prelijevanja.</text>
   <text x="324" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d">Δ<tspan font-style="italic">h</tspan> = <tspan font-style="italic">aL</tspan>/<tspan font-style="italic">g</tspan></text>
 
-  <text x="498" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">T2</text>
+  <text x="498" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z2</text>
   <text x="518" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Granica prelijevanja - naći <tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan></text>
 
   <text x="534" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#c0392b" text-anchor="end">rub prelijevanja</text>
@@ -318,7 +318,7 @@
   <text x="744" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d">Δ<tspan font-style="italic">h</tspan> = 2(<tspan font-style="italic">H</tspan>−<tspan font-style="italic">h</tspan>₀)</text>
   <text x="744" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d"><tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> = <tspan font-style="italic">g</tspan>Δ<tspan font-style="italic">h</tspan>/<tspan font-style="italic">L</tspan></text>
 
-  <text x="42" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">T3</text>
+  <text x="42" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z3</text>
   <text x="62" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Zatvoreni vertikalni cilindar - ubrzanje naviše</text>
 
   <text x="200" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#7a5500" text-anchor="middle">ulje</text>
@@ -336,7 +336,7 @@
   <text x="324" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d">Δ<tspan font-style="italic">p</tspan> = ρ(<tspan font-style="italic">g</tspan>+<tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">z</tspan>)<tspan font-style="italic">h</tspan></text>
   <text x="324" y="454" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d">usporedi s Δ<tspan font-style="italic">p</tspan>₀ = ρ<tspan font-style="italic">gh</tspan></text>
 
-  <text x="498" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">T4</text>
+  <text x="498" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z4</text>
   <text x="518" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Sila na stražnjoj stijenci ubrzanog spremnika</text>
 
   <text x="654" y="459" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#1e8449">F</text>
@@ -354,7 +354,7 @@
   <text x="754" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d"><tspan font-style="italic">F</tspan> = ½ ρ<tspan font-style="italic">gb h</tspan><tspan baseline-shift="sub" font-size="0.7em">str</tspan>²</text>
   <text x="754" y="456" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">str</tspan> → Δ<tspan font-style="italic">h</tspan> → <tspan font-style="italic">a</tspan></text>
 
-  <text x="42" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">T5</text>
+  <text x="42" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z5</text>
   <text x="62" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Rotirajuća posuda - naći <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">rub</tspan> i <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">osa</tspan></text>
 
   <text x="200" y="555" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#1e8449" text-anchor="middle">ω</text>
@@ -371,7 +371,7 @@
   <text x="324" y="678" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d">Δ<tspan font-style="italic">h</tspan> = ω²<tspan font-style="italic">R</tspan>²/(2<tspan font-style="italic">g</tspan>)</text>
   <text x="324" y="696" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">rub/osa</tspan> = <tspan font-style="italic">h</tspan>₀ ± Δ<tspan font-style="italic">h</tspan>/2</text>
 
-  <text x="498" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">T6</text>
+  <text x="498" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z6</text>
   <text x="518" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Otvoreni cilindar - granica i radni režim (ω = 0,80 ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan>)</text>
 
   <text x="620" y="561" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#1e8449" text-anchor="middle">ω</text>

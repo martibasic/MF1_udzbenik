@@ -8,24 +8,24 @@ toc: false
 ::: {.content-visible when-format="typst"}
 Ovaj udžbenik vodi od fizikalnog modela i bilance do analitičkog rješenja, mjerenja i numeričke provjere. Primarna su publika studenti strojarstva i brodogradnje, a primjeri iz građevinarstva, energetike, okoliša, biomedicine i procesne tehnike koriste se kada isti zakon pokazuju iz drugog kuta.
 
-Svako poglavlje razdvaja temeljni model, matematički izvod, granicu valjanosti i samostalnu odluku studenta. Tri uzdužna lajtmotiva — pomorska dekarbonizacija, hlađenje elektrificiranih sustava i klimatski otporan vodni grad — povezuju gradivo metodom *izmjeri → idealiziraj → izračunaj → numerički provjeri → procijeni valjanost*.
+Uz izvode i riješene primjere nalaze se zadatci za samostalan rad. Dodatni numerički pokusi omogućuju istraživanje utjecaja podataka i pretpostavki na rezultat.
 :::
 
 ::: {.mf1-hero .content-visible when-format="html"}
-Petnaest konciznih poglavlja od svojstava fluida i hidrostatike do kompresibilnog toka, realnog strujanja, turbostrojeva i otvorenih tokova. Svaka jednadžba počinje fizičkim pitanjem i završava provjerom granice modela.
+Od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i otvorenim kanalima: objašnjenja, izvodi, riješeni primjeri i zadatci za samostalan rad u petnaest poglavlja.
 :::
 
 ```{=html}
 <div class="mf1-print-toolbar">
-  <a class="mf1-print-button" href="downloads/mehanika-fluida-1.pdf">Preuzmi nativni PDF</a>
-  <a class="mf1-print-button secondary" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html">Otvori numeričke laboratorije</a>
+  <a class="mf1-print-button" href="downloads/mehanika-fluida-1.pdf">Preuzmi PDF</a>
+  <a class="mf1-print-button secondary" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html">Otvori numeričke pokuse</a>
 </div>
 
 <p class="mf1-section-title">Uvod</p>
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u00_kako_koristiti_udzbenik.html">
     <span class="mf1-card-code">0</span><span class="mf1-card-title">Kako koristiti udžbenik</span>
-    <span class="mf1-card-hint">Radni tok, razine vođenja, provjera modela i numerički pokusi.</span>
+    <span class="mf1-card-hint">Odakle početi, kako vježbati i gdje pronaći rezultate.</span>
   </a>
 </div>
 
@@ -124,15 +124,11 @@ Petnaest konciznih poglavlja od svojstava fluida i hidrostatike do kompresibilno
 
 Udžbenik je namijenjen studentima druge godine strojarstva i brodogradnje. Građevinski, energetski, okolišni, biomedicinski i procesni primjeri uključeni su kada prenose isti model i pomažu studentu prepoznati njegovu opću strukturu.
 
-Temeljni radni tok glasi **fizičko pitanje → kontrolni volumen ili sustav → pretpostavke → bilanca → račun → neovisna provjera → granica modela**. Napredni blokovi *Dublje* nisu preduvjet za osnovni ishod, a numerički pokusi ne zamjenjuju analitičku procjenu.
+Pri rješavanju kreni od skice sustava i pretpostavki, napiši bilancu pa izračunaj i provjeri rezultat. Napredni blokovi *Dublje* mogu se preskočiti pri prvom čitanju.
 
-## Lajtmotivi i numerika
+## Numerički pokusi {#lajtmotivi-i-numerika}
 
-- pomorska i offshore dekarbonizacija;
-- hlađenje elektrificiranih i digitalnih sustava;
-- klimatski otporan vodni grad.
-
-Notebookovi slijede obrazac **predvidi → izračunaj → provjeri**. CFD se ne ocjenjuje univerzalnim postotkom slaganja, nego odvojenom provjerom modela, očuvanja, iterativne/mrežne konvergencije i validacijskom usporedbom.
+Uz svako poglavlje dostupna je bilježnica koja se može pokrenuti u pregledniku. Predvidi rezultat, promijeni podatke i usporedi izračun s očekivanjem. Za razumijevanje glavnog teksta nije potrebno programiranje; dodatak D uvodi numeričke metode i provjeru simulacija.
 
 ## Impressum
 

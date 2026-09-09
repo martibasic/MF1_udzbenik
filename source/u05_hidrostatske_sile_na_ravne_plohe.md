@@ -104,9 +104,11 @@ F = \rho gAh_C.
 $$
 
 ::: {.callout-note collapse="true" icon="false"}
-## Numerički trag
+## Od tlaka do sile na stijenku
 
-CFD postprocesor integrira **vektorsku trakciju**, ne samo skalarni tlak. Za vanjsku normalu $\vec n$ kontrolnog volumena sila stijenke na fluid glasi $\vec F=\int_A[-p\vec n+\boldsymbol{\tau}\!\cdot\!\vec n]\,dA$; sila fluida na stijenku ima suprotan predznak. Skalarni zbroj $\sum_i p_iA_i$ daje samo tlakovu komponentu magnitude na ravnoj plohi stalne normale. Na zakrivljenoj plohi treba zbrajati vektore površina, a pri strujanju uključiti i viskoznu trakciju.
+Računalo može podijeliti stijenku na mnogo malih ploha. Na svakoj od njih tlak daje silu približno jednaku $p_iA_i$, okomitu na tu plohu. Ukupna sila dobiva se zbrajanjem tih malih sila.
+
+Na ravnom poklopcu tlačne sile imaju isti smjer, pa se njihovi iznosi mogu izravno zbrojiti. Na zakrivljenom poklopcu smjer se mijenja i sile treba zbrajati po komponentama. Ako fluid struji, uz tlak mogu djelovati i viskozne sile duž stijenke. Pri čitanju rezultata treba provjeriti prikazuje li program silu fluida na stijenku ili suprotnu silu stijenke na fluid.
 :::
 
 ::: {.mf1-interaktivno}
@@ -615,7 +617,7 @@ $$
 H = h_o + h_w = 1{,}00 + 1{,}80 = 2{,}80\ \text{m}.
 $$
 
-#### 1. Sila na gornje i donje polje
+### 1. Sila na gornje i donje polje {.unnumbered .unlisted .mf1-step}
 
 Na gornjem uljnom polju tlak raste linearno od nule do vrijednosti na granici fluida, pa je sila
 
@@ -629,7 +631,7 @@ $$
 F_2 = \rho_o g b h_o h_w + \frac{1}{2} \rho_w g b h_w^2 = 820 \cdot 9{,}81 \cdot 1{,}40 \cdot 1{,}00 \cdot 1{,}80 + \frac{1}{2} \cdot 1000 \cdot 9{,}81 \cdot 1{,}40 \cdot 1{,}80^2 = 20271 + 22249 = 42520\ \text{N} \approx 42{,}52\ \text{kN}.
 $$
 
-#### 2. Ukupna rezultanta i centar tlaka
+### 2. Ukupna rezultanta i centar tlaka {.unnumbered .unlisted .mf1-step}
 
 Ukupna sila na pregradu je
 
@@ -661,7 +663,7 @@ $$
 y_{CP} = \frac{M_A}{F} = \frac{91218}{48151} \approx 1{,}894\ \text{m} \approx 1{,}89\ \text{m}.
 $$
 
-#### 3. Sila spojnice
+### 3. Sila spojnice {.unnumbered .unlisted .mf1-step}
 
 Iz ravnoteze momenata oko zgloba `A` vrijedi $T H = F y_{CP}$, pa je tražena sila spojnice
 
@@ -669,7 +671,7 @@ $$
 T = \frac{F y_{CP}}{H} = \frac{48151 \cdot 1{,}894}{2{,}80} \approx 32578\ \text{N} \approx 32{,}58\ \text{kN}.
 $$
 
-#### 4. Reakcija zgloba
+### 4. Reakcija zgloba {.unnumbered .unlisted .mf1-step}
 
 Kako su sve sile vodoravne, iz ravnoteze sila po vodoravnoj osi slijedi $R_A + T - F = 0$, pa je vodoravna reakcija zgloba
 

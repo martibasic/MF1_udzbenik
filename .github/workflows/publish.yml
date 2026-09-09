@@ -49,12 +49,6 @@ jobs:
       - name: Verify numerics and coverage manifest
         run: python tools/verify_all.py
 
-      - name: Verify physical invariants
-        run: python tools/verify_physics.py
-
-      - name: Audit verifier independence
-        run: python tools/qa_audit.py
-
       - name: Audit canonical publication structure
         run: python tools/audit_publication.py
 
@@ -85,7 +79,7 @@ jobs:
 
       - name: Render native Typst book
         timeout-minutes: 20
-        run: quarto render --profile pdf
+        run: quarto render --profile pdf --to typst
 
       - name: Audit native PDF
         run: python tools/audit_pdf.py

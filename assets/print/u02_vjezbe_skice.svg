@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="u02vs_title u02vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
   <title id="u02vs_title">Skice za vjezbu uz poglavlje 2 — viskoznost, povrsinska napetost i kapilarnost</title>
-  <desc id="u02vs_desc">Sest minimalnih grayscale skica za zadatke T1 do T6. T1 dvije paralelne ploce s linearnim profilom brzine, debljinom delta i vucnom silom F. T2 vucena ploca u uljnom procjepu izmedu dvije nepomicne plohe s mjerenom silom F i dinamometrom. T3 klizni lezaj — poprecni presjek vratila u kucistu, uljni procjep delta, promjer D, duljina L. T4 dvije staklene kapilare razlicitog promjera u tekucini s meniscima i visinama uspona h1 i h2. T5 staklena kapilara s konkavnim meniskusom uz zasebnu sfernu kapljicu raspisivaca promjera d-k. T6 zatvoreni spremnik vode s manometarskim pretlakom p-M, kapilarna igla, visina H do izlaza i kapljica promjera D na vrhu.</desc>
+  <desc id="u02vs_desc">Sest minimalnih grayscale skica za zadatke Z1 do Z6. Z1 dvije paralelne ploce s linearnim profilom brzine, debljinom delta i vucnom silom F. Z2 vucena ploca u uljnom procjepu izmedu dvije nepomicne plohe s mjerenom silom F i dinamometrom. Z3 klizni lezaj — poprecni presjek vratila u kucistu, uljni procjep delta, promjer D, duljina L. Z4 dvije staklene kapilare razlicitog promjera u tekucini s meniscima i visinama uspona h1 i h2. Z5 staklena kapilara s konkavnim meniskusom uz zasebnu sfernu kapljicu raspisivaca promjera d-k. Z6 zatvoreni spremnik vode s manometarskim pretlakom p-M, kapilarna igla, visina H do izlaza i kapljica promjera D na vrhu.</desc>
 
   <defs>
     <linearGradient id="u02vs_voda" x1="0" y1="0" x2="0" y2="1">
@@ -47,7 +47,7 @@
   <!-- pozadina -->
   <rect width="960" height="720" fill="#fbfdff" />
   <!-- ===========================================================
-       T1 — Dvije paralelne ploce, profil brzine
+       Z1 — Dvije paralelne ploce, profil brzine
        Panel: x=22..324, y=28..360
   =========================================================== -->
   <rect x="22" y="28" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
@@ -74,7 +74,7 @@
   <!-- gornja ploca: oznaka A -->
   <!-- legend block dolje -->
   <!-- ===========================================================
-       T2 — Vucena ploca, mjerena F, odredi mu
+       Z2 — Vucena ploca, mjerena F, odredi mu
        Panel: x=331..633, y=28..360
   =========================================================== -->
   <rect x="331" y="28" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
@@ -100,7 +100,7 @@
   <!-- kota delta procjepa: lijevo, izmedu klizne ploce (donji rub) i donje ploce (gornji rub) -->
   <!-- ploca oznaka A na klizoj ploci -->
   <!-- ===========================================================
-       T3 — Klizni lezaj (poprecni presjek vratila u kucistu)
+       Z3 — Klizni lezaj (poprecni presjek vratila u kucistu)
        Panel: x=640..942, y=28..360
   =========================================================== -->
   <rect x="640" y="28" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
@@ -119,7 +119,7 @@
   <!-- D kota (promjer vratila): horizontalno preko vratila ispod -->
   <!-- delta (uljni film): leader od prstena, oznaka desno -->
   <!-- ===========================================================
-       T4 — Dvije kapilare u etanolu
+       Z4 — Dvije kapilare u etanolu
        Panel: x=22..324, y=370..702
   =========================================================== -->
   <rect x="22" y="370" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
@@ -148,7 +148,7 @@
   <!-- d2 kota gore -->
   <!-- etanol labela u posudi -->
   <!-- ===========================================================
-       T5 — Kapilara s meniskusom + zasebna kapljica
+       Z5 — Kapilara s meniskusom + zasebna kapljica
        Panel: x=331..633, y=370..702
   =========================================================== -->
   <rect x="331" y="370" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
@@ -185,7 +185,7 @@
   <!-- d_k kota: ispod kapljice -->
   <!-- Delta p label za kapljicu -->
   <!-- ===========================================================
-       T6 — Kapilarna igla, spremnik s pretlakom p_M
+       Z6 — Kapilarna igla, spremnik s pretlakom p_M
        Panel: x=640..942, y=370..702
   =========================================================== -->
   <rect x="640" y="370" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
@@ -272,7 +272,7 @@
   <line x1="794" y1="410" x2="772" y2="410" stroke="#b7600c" stroke-width="0.7" />
   <line x1="794" y1="442" x2="772" y2="442" stroke="#b7600c" stroke-width="0.7" />
   <line x1="778" y1="410" x2="778" y2="442" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <text x="36" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">T1</text>
+  <text x="36" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z1</text>
   <text x="60" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Paralelne ploče — linearni profil v(y)</text>
 
   <text x="247" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b">v</text>
@@ -283,7 +283,7 @@
   <text x="40" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">v</tspan> = 0,65 m/s,  δ = 2,4 mm</text>
   <text x="40" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">A</tspan> = 0,22 m²  →  F = τA</text>
 
-  <text x="345" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">T2</text>
+  <text x="345" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z2</text>
   <text x="369" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Vučena ploča u uljnom procjepu — mjeri F</text>
 
   <text x="393" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#2c3e50">v</text>
@@ -296,7 +296,7 @@
   <text x="349" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">v</tspan> = 0,80 m/s,  mjereno <tspan font-style="italic">F</tspan> = 21 N</text>
   <text x="349" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">odredi μ iz τ = μ<tspan font-style="italic">v</tspan>/δ</text>
 
-  <text x="654" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">T3</text>
+  <text x="654" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z3</text>
   <text x="678" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Klizni ležaj — poprecni presjek</text>
 
   <text x="820" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#2c3e50">v</text>
@@ -307,7 +307,7 @@
   <text x="656" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">L</tspan> = 0,24 m,  δ = 0,60 mm,  μ = 0,36 Pa·s</text>
   <text x="656" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">v</tspan> = 1,6 m/s,  <tspan font-style="italic">A</tspan> = π<tspan font-style="italic">DL</tspan>,  <tspan font-style="italic">F</tspan> = τ<tspan font-style="italic">A</tspan></text>
 
-  <text x="36" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">T4</text>
+  <text x="36" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z4</text>
   <text x="60" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Dvije kapilare u etanolu — h ∝ 1/d</text>
 
   <text x="56" y="614" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#0d47a1">etanol</text>
@@ -315,7 +315,7 @@
   <text x="40" y="678" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 0,6 mm,  <tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 1,2 mm,  θ = 18°</text>
   <text x="40" y="694" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">h</tspan> = 4σcosθ/(ρg<tspan font-style="italic">d</tspan>)</text>
 
-  <text x="345" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">T5</text>
+  <text x="345" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z5</text>
   <text x="369" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Kapilara + kapljica raspršivača</text>
 
   <text x="345" y="676" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">d</tspan> = 0,9 mm</text>
@@ -326,7 +326,7 @@
   <text x="500" y="676" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">σ=0,072 N/m, θ=10°</text>
   <text x="500" y="692" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Δp = 4σ/<tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">k</tspan></text>
 
-  <text x="654" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">T6</text>
+  <text x="654" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z6</text>
   <text x="678" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Kapilarna igla — potrebni pretlak <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M</tspan></text>
 
   <text x="730" y="588" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">M</tspan></text>

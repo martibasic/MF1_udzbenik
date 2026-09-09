@@ -302,7 +302,7 @@ $NPSH_a$ opisuje sustav do dogovorenoga usisnog presjeka. Ne zamjenjuje proizvo�
 ## Riješeni primjeri {#sec-u13-rijeseni-primjeri}
 
 ::: {#ex-gubitci-jedne-dionice .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Linijski i lokalni gubitci jedne dionice <span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">P1. Linijski i lokalni gubitci jedne dionice <span class="mf1-level">T1</span></p>
 
 Voda gustoće $\rho=1000\ \mathrm{kg/m^3}$ struji horizontalnom cijevi promjera $D=0{,}12\ \mathrm{m}$ i duljine $L=36\ \mathrm{m}$ srednjom brzinom $v=2{,}4\ \mathrm{m/s}$. Zadani su $\lambda=0{,}028$ i $\sum\xi=4{,}6$. Odredimo linijski, lokalni i ukupni gubitak te pad tlaka.
 
@@ -335,7 +335,7 @@ $$ {#eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-04}
 :::
 
 ::: {#ex-laminarni-rashladni-vod .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Laminarni vod rashladnog modula <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P2. Laminarni vod rashladnog modula <span class="mf1-level">T2</span></p>
 
 Rashladna smjesa gustoće $1050\ \mathrm{kg/m^3}$ i kinematičke viskoznosti $\nu=5{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ teče kroz idealiziranu kružnu cijev $D=4{,}0\ \mathrm{mm}$, $L=2{,}0\ \mathrm{m}$ protokom $Q=8{,}0\cdot10^{-6}\ \mathrm{m^3/s}$. Zanemarimo ulazno područje i lokalne gubitke.
 
@@ -375,7 +375,7 @@ Jednak rezultat iz dva neovisna zapisa provjerava i faktor 64 i pretvorbu protok
 :::
 
 ::: {#ex-serijsko-paralelna-mreza .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Serijsko-paralelna mreža između spremnika <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P3. Serijsko-paralelna mreža između spremnika <span class="mf1-level">T3</span></p>
 
 Između otvorenih spremnika raspoloživa je razlika visina $H=12{,}0\ \mathrm{m}$. Dovod 0, dvije paralelne grane 1 i 2 te odvod 3 imaju već određene koeficijente $K_i=\lambda_iL_i/D_i+\sum\xi_i$:
 
@@ -433,7 +433,7 @@ $$ {#eq-cjevovodi-rijeseni-primjer-serijsko-paralelna-mreza-izme-u-06}
 :::
 
 ::: {#ex-radna-tocka-vfd .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Radna točka i promjena brzine vrtnje <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P4. Radna točka i promjena brzine vrtnje <span class="mf1-level">T3</span></p>
 
 Karakteristika crpke pri nazivnoj brzini i karakteristika otvorenoga sustava zadane su s $q$ u $\mathrm{L/s}$:
 
@@ -477,7 +477,7 @@ $$ {#eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-06}
 :::
 
 ::: {#ex-energijski-ledger-hladenja .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Godišnja energija rashladnog kruga <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P5. Godišnja energija rashladnog kruga <span class="mf1-level">T2</span></p>
 
 Rashladni krug radi $7000\ \mathrm{h/god}$ protokom $Q=6{,}0\ \mathrm{L/s}$ pri potrebnoj visini $H=12{,}0\ \mathrm{m}$. Gustoća je $1000\ \mathrm{kg/m^3}$, a učinkovitosti su $\eta_p=0{,}78$, $\eta_m=0{,}92$ i $\eta_f=0{,}97$.
 
@@ -512,7 +512,7 @@ Ako čišćenje izmjenjivača pri istom protoku smanji potrebnu visinu na $10\ \
 :::
 
 ::: {#ex-npsha-usisne-crpke .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Raspoloživi NPSH servisne crpke <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P6. Raspoloživi NPSH servisne crpke <span class="mf1-level">T3</span></p>
 
 Crpka je $z_s=2{,}6\ \mathrm{m}$ iznad slobodne površine otvorenog spremnika. Voda protječe usisom $D=80\ \mathrm{mm}$, $L=5{,}0\ \mathrm{m}$ protokom $Q=0{,}014\ \mathrm{m^3/s}$. Zadano je $\lambda=0{,}030$, $\sum\xi=1{,}8$, $p_{atm}=101\ \mathrm{kPa}$, $p_v=2{,}34\ \mathrm{kPa}$ i $\rho=1000\ \mathrm{kg/m^3}$.
 
@@ -587,9 +587,9 @@ Nedostaju proizvođačev $NPSH_r$ pri radnoj točki i zahtijevana margina. $NPSH
 
 ::::: {.mf1-vjezbe-list}
 
-### Gubitci ravne dionice {#task-gubitci-ravne-dionice}
+### Z1. Gubitci ravne dionice {#task-gubitci-ravne-dionice .unnumbered .unlisted}
 
-**Razina: T1.** Voda gustoće $998\ \mathrm{kg/m^3}$ protječe cijevi $D=0{,}10\ \mathrm{m}$, $L=50\ \mathrm{m}$ protokom $Q=0{,}012\ \mathrm{m^3/s}$. Zadano je $\lambda=0{,}025$ i $\sum\xi=4{,}0$. Odredi brzinu, linijski i lokalni gubitak, ukupni gubitak i pad tlaka.
+Voda gustoće $998\ \mathrm{kg/m^3}$ protječe cijevi $D=0{,}10\ \mathrm{m}$, $L=50\ \mathrm{m}$ protokom $Q=0{,}012\ \mathrm{m^3/s}$. Zadano je $\lambda=0{,}025$ i $\sum\xi=4{,}0$. Odredi brzinu, linijski i lokalni gubitak, ukupni gubitak i pad tlaka.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
@@ -603,9 +603,12 @@ Najprije izračunaj $A$ i $v=Q/A$. Tek zatim zajedničku brzinsku visinu pomnož
 $v=1{,}528\ \mathrm{m/s}$, $h_l=1{,}487\ \mathrm{m}$, $h_{loc}=0{,}476\ \mathrm{m}$, $h_w=1{,}963\ \mathrm{m}$ i $\Delta p=19{,}2\ \mathrm{kPa}$. Provjeri da je $\Delta p/(\rho g)=h_w$.
 :::
 ::::
-### Laminarna cijev viskozne smjese {#task-laminarna-cijev-smjese}
 
-**Razina: T1.** Smjesa gustoće $1100\ \mathrm{kg/m^3}$ i $\nu=3{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ protječe kružnom cijevi $D=6{,}0\ \mathrm{mm}$, $L=5{,}0\ \mathrm{m}$ protokom $Q=6{,}0\cdot10^{-6}\ \mathrm{m^3/s}$. Zanemari lokalne gubitke. Odredi $Re$, $\lambda$ i $\Delta p$.
+[Razina: T1]{.mf1-task-level}
+
+### Z2. Laminarni tok viskozne smjese {#task-laminarna-cijev-smjese .unnumbered .unlisted}
+
+Smjesa gustoće $1100\ \mathrm{kg/m^3}$ i $\nu=3{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ protječe kružnom cijevi $D=6{,}0\ \mathrm{mm}$, $L=5{,}0\ \mathrm{m}$ protokom $Q=6{,}0\cdot10^{-6}\ \mathrm{m^3/s}$. Zanemari lokalne gubitke. Odredi $Re$, $\lambda$ i $\Delta p$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
@@ -619,9 +622,12 @@ Izračunaj režim prije izbora korelacije. Ako je tok laminaran, upotrijebi $\la
 $v=0{,}212\ \mathrm{m/s}$, $Re=424$, $\lambda=0{,}1508$ i $\Delta p=3{,}11\ \mathrm{kPa}$. Udvostručenje $Q$ uz ostale iste podatke udvostručuje $\Delta p$ dok tok ostaje laminaran.
 :::
 ::::
-### Raspodjela kroz dvije paralelne grane {#task-raspodjela-paralelnih-grana}
 
-**Razina: T2.** Između istih čvorova spojene su grane s približno konstantnim otporima $R_1=12\,000\ \mathrm{s^2/m^5}$ i $R_2=48\,000\ \mathrm{s^2/m^5}$. Ukupni protok iznosi $Q=0{,}020\ \mathrm{m^3/s}$. Odredi $Q_1$, $Q_2$ i zajednički pad energije.
+[Razina: T1]{.mf1-task-level}
+
+### Z3. Raspodjela kroz dvije paralelne grane {#task-raspodjela-paralelnih-grana .unnumbered .unlisted}
+
+Između istih čvorova spojene su grane s približno konstantnim otporima $R_1=12\,000\ \mathrm{s^2/m^5}$ i $R_2=48\,000\ \mathrm{s^2/m^5}$. Ukupni protok iznosi $Q=0{,}020\ \mathrm{m^3/s}$. Odredi $Q_1$, $Q_2$ i zajednički pad energije.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
@@ -635,9 +641,12 @@ Postavi $R_1Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$. Prije računa predvidi koja grana nos
 $Q_1=13{,}33\ \mathrm{L/s}$, $Q_2=6{,}67\ \mathrm{L/s}$ i $h_{AB}=2{,}13\ \mathrm{m}$. Obje grane moraju vratiti isti $h_{AB}$.
 :::
 ::::
-### Radna točka i tri razine snage {#task-radna-tocka-tri-snage}
 
-**Razina: T2.** Za $Q$ u $\mathrm{m^3/s}$ zadane su krivulje $H_p=30-30\,000Q^2$ i $H_s=8+20\,000Q^2$. Za vodu uzmi $\rho=1000\ \mathrm{kg/m^3}$. U radnoj točki vrijede $\eta_p=0{,}76$ i $\eta_m=0{,}92$; gubitke pretvarača zanemari. Odredi $Q_{op}$, $H_{op}$, $P_h$, $P_{vr}$ i $P_{el}$.
+[Razina: T2]{.mf1-task-level}
+
+### Z4. Radna točka i snaga crpke {#task-radna-tocka-tri-snage .unnumbered .unlisted}
+
+Za $Q$ u $\mathrm{m^3/s}$ zadane su krivulje $H_p=30-30\,000Q^2$ i $H_s=8+20\,000Q^2$. Za vodu uzmi $\rho=1000\ \mathrm{kg/m^3}$. U radnoj točki vrijede $\eta_p=0{,}76$ i $\eta_m=0{,}92$; gubitke pretvarača zanemari. Odredi $Q_{op}$, $H_{op}$, $P_h$, $P_{vr}$ i $P_{el}$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
@@ -651,9 +660,12 @@ Najprije izjednači krivulje. Zatim slijedi pretvorbeni lanac $P_h=\rho gQH$, $P
 $Q_{op}=20{,}98\ \mathrm{L/s}$, $H_{op}=16{,}8\ \mathrm{m}$, $P_h=3{,}46\ \mathrm{kW}$, $P_{vr}=4{,}55\ \mathrm{kW}$ i $P_{el}=4{,}94\ \mathrm{kW}$. Provjeri da snage rastu prema električnom ulazu.
 :::
 ::::
-### Robustan izbor promjera {#task-robustan-izbor-promjera}
 
-**Razina: T3.** Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $6{,}0$, a zbog starenja je $\lambda$ između 0,020 i 0,028. Dostupni su promjeri 80, 100 i 125 mm. Odaberi najmanji promjer koji i u nepovoljnom slučaju zadovoljava $h_w\le15\ \mathrm{m}$. Objasni zašto račun samo sa svježom cijevi nije robustan.
+[Razina: T2]{.mf1-task-level}
+
+### Z5. Izbor promjera uz nesiguran otpor {#task-robustan-izbor-promjera .unnumbered .unlisted}
+
+Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $6{,}0$, a zbog starenja je $\lambda$ između 0,020 i 0,028. Dostupni su promjeri 80, 100 i 125 mm. Odaberi najmanji promjer koji i u nepovoljnom slučaju zadovoljava $h_w\le15\ \mathrm{m}$. Objasni zašto račun samo sa svježom cijevi nije robustan.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
@@ -667,9 +679,12 @@ Za svaki kandidat izračunaj brzinu, a zatim raspon $h_w$ za obje granice $\lamb
 Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3,29–4,34 m za 125 mm. Najmanji robustan izbor jest 100 mm. Provjera odluke jest gornja granica $12{,}85<15\ \mathrm{m}$.
 :::
 ::::
-### Regulacija crpke, godišnja energija i usisna rezerva {#task-regulacija-energija-npsh}
 
-**Razina: T4.** Crpka pri nazivnoj brzini ima $H_p(q)=24-0{,}012q^2$, gdje je $q$ u $\mathrm{L/s}$. Izvorni sustav ima $H_s(q)=5+0{,}025q^2$. Prigušivanje ventila mijenja ga u $H_{s,V}(q)=5+0{,}040q^2$. Ukupna učinkovitost pretvorbe električna $\to$ hidraulička iznosi 0,72, a pogon radi $5000\ \mathrm{h/god}$.
+[Razina: T3]{.mf1-task-level}
+
+### Z6. Regulacija crpke, energija i usisna rezerva {#task-regulacija-energija-npsh .unnumbered .unlisted}
+
+Crpka pri nazivnoj brzini ima $H_p(q)=24-0{,}012q^2$, gdje je $q$ u $\mathrm{L/s}$. Izvorni sustav ima $H_s(q)=5+0{,}025q^2$. Prigušivanje ventila mijenja ga u $H_{s,V}(q)=5+0{,}040q^2$. Ukupna učinkovitost pretvorbe električna $\to$ hidraulička iznosi 0,72, a pogon radi $5000\ \mathrm{h/god}$.
 
 1. Odredi radnu točku prigušenog sustava i godišnju električnu energiju.
 2. Za isti protok odredi omjer brzina $s$ ako se ventil ponovno otvori i protok regulira promjenom brzine. Odredi godišnju uštedu uz istu učinkovitost.
@@ -687,6 +702,9 @@ Prigušenu radnu točku dobiješ iz $H_p=H_{s,V}$. Za otvoren sustav pri istom $
 Prigušeno: $q=19{,}12\ \mathrm{L/s}$, $H=19{,}62\ \mathrm{m}$ i $P_{el}=5{,}11\ \mathrm{kW}$. Regulacija brzinom: otvoren sustav traži $H=14{,}13\ \mathrm{m}$, $s=0{,}878$, $P_{el}=3{,}68\ \mathrm{kW}$ i idealizirana godišnja ušteda je $7{,}14\ \mathrm{MWh}$. Za usis su $NPSH_a=6{,}65\ \mathrm{m}$, $NPSH_r=3{,}10\ \mathrm{m}$ i numerička razlika $3{,}55\ \mathrm{m}$. Prihvatljivost ipak zahtijeva proizvođačev kriterij margine, dopušteno radno područje i stvarne temperaturne/atmosferske uvjete.
 :::
 ::::
+
+[Razina: T4]{.mf1-task-level}
+
 :::::
 
 ## Za ponijeti {#sec-u13-zakljucak}

@@ -271,6 +271,9 @@ def audit() -> tuple[dict[str, object], list[str]]:
     for chapter in chapters:
         code = f"U{chapter.number:02}"
         examples = EXAMPLE_RE.findall(chapter.text)
+        example_numbers = re.findall(r'<p class="mf1-box-label">P(\d+)\. ', chapter.text)
+        if example_numbers != [str(number) for number in range(1, len(examples) + 1)]:
+            issues.append(f"{code}: primjeri moraju redom nositi oznake P1–P{len(examples)}")
         tasks = TASK_RE.findall(chapter.text)
         levels = LEVEL_RE.findall(chapter.text)
         # Razine u tekstu prije liste zadataka mogu pripadati primjerima; zadnjih

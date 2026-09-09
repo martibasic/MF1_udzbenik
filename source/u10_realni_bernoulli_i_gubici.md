@@ -68,9 +68,11 @@ $$
 Za potpuno razvijeno strujanje u kružnoj cijevi $Re\lesssim2300$ obično pripada laminarnom području, $2300\lesssim Re\lesssim4000$ prijelaznom području, a pri $Re\gtrsim4000$ strujanje je u uobičajenim tehničkim uvjetima turbulentno. Granice ovise o poremećajima, ulaznim uvjetima i geometriji, pa ih ne treba prenositi na vanjsko strujanje oko tijela.
 
 ::: {.callout-note collapse="true" icon="false"}
-## Numerički trag
+## Kako se procjenjuje utjecaj vrtloga
 
-CFD rješava lokalne bilance mase i količine gibanja, a u RANS pristupu nerazrijeđeni učinak turbulentnih fluktuacija zatvara modelima kao što su **k-ε**, **k-ω SST** ili **Spalart-Allmaras**. Ti modeli nisu numerički oblik Darcyjeva $\lambda$: oni daju polja brzine, tlaka i turbulentnih veličina, iz kojih se pad tlaka tek naknadno može svesti na ekvivalentni $\lambda$ i usporediti s Moodyjevim dijagramom.
+U turbulentnom toku nastaje mnogo vrtloga različitih veličina. Praćenje svakoga od njih tražilo bi vrlo velik računalni proračun. Zato se u mnogim inženjerskim simulacijama računa njihovo prosječno djelovanje na tok, uz dodatni model turbulencije.
+
+Taj model pomaže procijeniti raspodjelu brzine i pad tlaka. Dobiveni pad tlaka u ravnoj cijevi možemo zatim usporediti s ručnim računom preko Darcyjeva koeficijenta otpora. Model turbulencije i koeficijent otpora nisu ista stvar: prvi opisuje utjecaj vrtloga, a drugi sažima ukupni otpor cijevi.
 :::
 
 ::: {.mf1-interaktivno}

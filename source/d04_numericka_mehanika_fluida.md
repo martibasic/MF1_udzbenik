@@ -129,11 +129,11 @@ Laminarni referentni slučaj s poznatim rješenjem zato je bolji prvi korak od s
 
 Kako bi se konkretno vidjelo što sve CFD analiza obuhvaća, prikazuje se šest koraka na Venturijevoj cijevi. Presjeci usporedbe moraju biti unaprijed definirani: presjek 1 u razvijenom ulaznom toku i presjek 2 u grlu.
 
-### Korak 1 — Geometrija
+### Korak 1 — Geometrija {.unnumbered .unlisted .mf1-step}
 
 Iz CAD modela ili izravno u alatu konstruira se trodimenzijska geometrija cijevi sa suženjem. Za simetrične probleme često je dovoljna polovica geometrije s ravninom simetrije, što prepolavlja troškove simulacije. Ulazni presjek, izlazni presjek, ravnina simetrije i unutarnji zid cijevi označavaju se kao zasebne patcheve.
 
-### Korak 2 — Mreža
+### Korak 2 — Mreža {.unnumbered .unlisted .mf1-step}
 
 Geometrija se diskretizira u mrežu kontrolnih volumena. Ključne odluke:
 
@@ -143,7 +143,7 @@ Geometrija se diskretizira u mrežu kontrolnih volumena. Ključne odluke:
 
 Broj ćelija sam po sebi nije kriterij dostatnosti. Potrebna je najmanje gruba, srednja i fina mreža s usporedivim obrascem profinjenja, a mjerodavne izlazne veličine moraju pokazati konvergenciju.
 
-### Korak 3 — Rubni uvjeti
+### Korak 3 — Rubni uvjeti {.unnumbered .unlisted .mf1-step}
 
 Svakoj plohi geometrije pridružuje se odgovarajući uvjet:
 
@@ -153,11 +153,11 @@ Svakoj plohi geometrije pridružuje se odgovarajući uvjet:
 
 Rubni uvjeti moraju odgovarati fizičkom eksperimentu i analitičkom modelu s kojim će se rezultat usporediti.
 
-### Korak 4 — Solver i iteracijska konvergencija
+### Korak 4 — Solver i iteracijska konvergencija {.unnumbered .unlisted .mf1-step}
 
 Za nestlačivi stacionarni problem bira se odgovarajući stacionarni solver i sprega tlaka s brzinom. Pad reziduala potreban je, ali nije dovoljan dokaz konvergencije. Istodobno se prate protok kroz svaki otvor, relativna neravnoteža mase, $\Delta p_{12}$, sile i druge izlazne veličine. Kriteriji se zadaju prema namjeni modela; ne postoji univerzalan broj redova veličine koji jamči ispravan rezultat.
 
-### Korak 5 — Verifikacija numeričkog rješenja
+### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
 
 **Verifikacija pita: rješavamo li odabrane jednadžbe dovoljno točno?** Najprije se zatvara globalna bilanca mase. Zatim se na najmanje tri sustavno profinjene mreže uspoređuju $\Delta p_{12}$, brzina u grlu i druga projektno važna veličina. Treba izvijestiti relativne promjene među mrežama i, kada je red profinjenja dovoljno uredan, procijeniti diskretizacijsku nesigurnost. Za nestacionarni model analogno se provjerava vremenski korak. Reziduali, bilanca i mrežna/vremenska konvergencija tri su odvojena dokaza.
 
@@ -169,7 +169,7 @@ $$ {#eq-cfd-vv-korak-5-verifikacija-numerickog-rjesenja-01}
 
 Razlika bi se trebala smanjivati s konvergencijom rješenja. Ne zadaje se unaprijed univerzalna tolerancija od $5$ ili $10\,%$; prihvatljivost ovisi o potrebnoj nesigurnosti projektne odluke.
 
-### Korak 6 — Validacija fizikalnog modela
+### Korak 6 — Validacija fizikalnog modela {.unnumbered .unlisted .mf1-step}
 
 **Validacija pita: opisuju li odabrane jednadžbe stvarni sustav dovoljno dobro?** Viskozni model s uvjetom ljepljivosti validira se prema mjerenom $\Delta p_{12}$, koeficijentu protoka ili drugom eksperimentalnom podatku pri istim geometrijskim i radnim uvjetima. Mjerna i numerička nesigurnost moraju se prikazati uz usporedbu.
 

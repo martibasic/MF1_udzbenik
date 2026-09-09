@@ -80,13 +80,18 @@ Pojedinačne naredbe za razvoj:
 
 ```powershell
 python tools/verify_all.py
-python tools/verify_physics.py
 python tools/execute_notebooks.py --validate-only
 python tools/validate_cfd_vv.py
 quarto render
-quarto render --profile pdf
+quarto render --profile pdf --to typst
 python -m jupyterlite_core.app build --config=jupyter_lite_config.py --contents notebooks --output-dir _site/jlite
 ```
+
+`verify_all.py` već uključuje audit neovisnosti verifikatora (`qa_audit.py`) i
+fizikalne regresije (`verify_physics.py`). Te se provjere u punoj izgradnji
+izvršavaju jednom; zasebne skripte ostaju dostupne za ciljanu dijagnostiku.
+Opcija `--to typst` ograničava PDF korak na taj format jer profil inače
+nasljeđuje i HTML format mrežnog izdanja.
 
 GitHub Pages workflow izvršava numerički QA i notebookove, gradi HTML, nativni
 PDF i JupyterLite te provjerava javne artefakte. Isti build radi i na pull
@@ -105,14 +110,14 @@ rezultata. Ne dopušta tautološku usporedbu rezultata sa samim sobom ni zadatak
 bez deklarirane provjere; aktualni presjek ima **0 self-comparison zapisa i 0
 rupa**. Odvojeni paket kritičnih fizikalnih regresija prolazi **22/22** provjere.
 
-Sekvencijski proizvodni QA dodatno prolazi za 17/17 notebookova te za HTML:
-24 stranice, 210 slika, 2.081 veza, 472 sklopiva bloka i 11 preusmjerenja. Uz to
-prolazi audit nativnoga PDF-a od 299 A4 stranica, 7.045.244 B i 536.983
-ekstrahirana znaka.
-Viewport/WCAG audit prolazi 72 prikaza na širinama 320, 768 i 1.440 px te
-zasebni A4 prikaz. Ti brojevi dokazuju strojno
-provjerena svojstva trenutačnoga RC stanja, ali nisu zamjena za stručnu
-recenziju cijeloga rukopisa ni studentski pilot.
+Proizvodni QA izvršava notebookove i provjerava slike, poveznice,
+preusmjerenja, PDF te prikaz na širinama 320, 768 i 1.440 px. Rezultate čitaj
+iz izlaza posljednje izgradnje; arhivski presjek nalazi se u
+[statusu izrade](status_izrade_udzbenika.md).
+
+Automatizirane provjere ne ocjenjuju jasnoću objašnjenja niti mogu otkriti
+svaku pogrešku u pretpostavkama ili prijelomu. Uz njih treba pregledati
+izmijenjene stranice i provesti stručnu recenziju te studentski pilot.
 
 ## Autorski rad i doprinosi
 

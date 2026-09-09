@@ -179,7 +179,7 @@ Prva se javlja pojava s manjom kritičnom kutnom brzinom. Budući da se uspoređ
 ## Riješeni primjeri
 
 ::: {#ex-u04-otvoreni-spremnik-na-laboratorijskim-kolicima-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Otvoreni spremnik na laboratorijskim kolicima&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P1. Otvoreni spremnik na laboratorijskim kolicima&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Otvoreni pravokutni spremnik na laboratorijskim kolicima giba se vodoravno stalnim ubrzanjem. U relativnom mirovanju treba odrediti nagib slobodne površine i visine uz stijenke.
 
@@ -236,7 +236,7 @@ Pri zadanom ubrzanju slobodna površina povisi se na stražnjoj strani za oko $1
 :::
 
 ::: {#ex-u04-zatvoreni-servisni-modul-s-kosom-inspekcijskom-stijenkom .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Zatvoreni servisni modul s kosom inspekcijskom stijenkom&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P2. Zatvoreni servisni modul s kosom inspekcijskom stijenkom&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Zatvoreni transportni modul s tehnološkom tekućinom i plinskim pretlakom ubrzava se vodoravno. Treba postaviti inspekcijsku stijenku tako da bude okomita na slobodnu površinu te odrediti silu i hvatište rezultante.
 
@@ -328,7 +328,7 @@ ispod ruba `A`, mjereno uzduž stijenke.
 :::
 
 ::: {#ex-u04-rotirajuci-cilindricni-spremnik-bez-prelijevanja-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Rotirajući cilindrični spremnik bez prelijevanja&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P3. Rotirajući cilindrični spremnik bez prelijevanja&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Otvoreni cilindrični spremnik s vodom vrti se oko svoje osi konstantnom kutnom brzinom. Slobodna površina prelazi u paraboloid, a treba odrediti razliku razina i visine uz rub i u osi.
 
@@ -380,7 +380,7 @@ $$ {#eq-relativno-mirovanje-rijeseni-primjer-rotirajuci-cilindricni-spremnik-03}
 :::
 
 ::: {#ex-u04-rotirajuci-cilindricni-spremnik-s-granicom-prelijevanja-t3 .mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak — rotirajući cilindrični spremnik s granicom prelijevanja&nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P4. rotirajući cilindrični spremnik s granicom prelijevanja&nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** U procesnom postrojenju otvoreni cilindrični spremnik s vodom vrti se oko vertikalne osi konstantnom kutnom brzinom. Treba odrediti oblik paraboloidne slobodne površine, dubinske tlakove na dnu te granični broj okretaja prije prelijevanja preko ruba.
 
@@ -467,7 +467,7 @@ gdje je $r$ udaljenost od osi vrtnje. Budući da nema prelijevanja pri zadanom r
 
 **Rješenje**
 
-### 1. Razlika razina slobodne površine
+### 1. Razlika razina slobodne površine {.unnumbered .unlisted .mf1-step}
 
 Iz izraza za paraboloidnu slobodnu površinu razlika između stijenke i osi spremnika iznosi
 
@@ -475,7 +475,7 @@ $$
 \Delta h = h_R - h_C = \frac{\omega^2 R^2}{2g} = \frac{5{,}20^2 \cdot 0{,}40^2}{2 \cdot 9{,}81} = 0{,}2205\ \text{m} \approx 22{,}1\ \text{cm}.
 $$ {#eq-relativno-mirovanje-1-razlika-razina-slobodne-povrsine-01}
 
-#### 2. Dubina na osi i uz stijenku
+### 2. Dubina na osi i uz stijenku {.unnumbered .unlisted .mf1-step}
 
 Kako se volumen nije promijenio, srednja visina ostaje $h_0 = (h_C + h_R)/2$, uz relaciju $h_R - h_C = \Delta h$. Zato je
 
@@ -487,7 +487,7 @@ $$
 h_R = h_0 + \frac{\Delta h}{2} = 0{,}60 + \frac{0{,}2205}{2} = 0{,}7103\ \text{m} \approx 0{,}710\ \text{m}.
 $$ {#eq-relativno-mirovanje-2-dubina-na-osi-i-uz-stijenku-02}
 
-#### 3. Tlak na dnu u točkama `C` i `D`
+### 3. Tlak na dnu u točkama `C` i `D` {.unnumbered .unlisted .mf1-step}
 
 Na dnu spremnika lokalni manometarski tlak dobiva se iz lokalne dubine ispod slobodne površine. U osi spremnika vrijedi
 
@@ -501,7 +501,7 @@ $$
 p_{M,D} = \rho g h_R = 1000 \cdot 9{,}81 \cdot 0{,}7103 = 6968\ \text{Pa} \approx 6{,}97\ \text{kPa}.
 $$ {#eq-relativno-mirovanje-3-tlak-na-dnu-u-tockama-c-02}
 
-#### 4. Granica prelijevanja
+### 4. Granica prelijevanja {.unnumbered .unlisted .mf1-step}
 
 Do prelijevanja dolazi kada slobodna površina uz stijenku dosegne rub spremnika, odnosno kada je
 
@@ -531,7 +531,7 @@ Pri radnoj brzini vrtnje slobodna površina podigne se uz stijenku za oko $22{,}
 :::
 
 ::: {#ex-u04-nagib-goriva-u-spremniku-autocisterne-pri-kocenju .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Nagib goriva u spremniku autocisterne pri kočenju &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P5. Nagib goriva u spremniku autocisterne pri kočenju &nbsp;<span class="mf1-level">T2</span></p>
 
 **Primjer za strojare**
 
@@ -584,7 +584,7 @@ Prednja stijenka dostiže $h=0{,}683\ \text{m}$, što je ispod vrha ($H=0{,}80\ 
 :::
 
 ::: {#ex-u04-laboratorijska-centrifuga-za-odvajanje-plazme-od-eritrocita .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Laboratorijska centrifuga za odvajanje plazme od eritrocita &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P6. Laboratorijska centrifuga za odvajanje plazme od eritrocita &nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U laboratorijskoj centrifugi cijev s uzorkom postavlja se približno radijalno, pa relativno mirovanje daje tlačni porast prema većem polumjeru. Uzorak se u ovome računu namjerno tretira kao homogen fluid zadane gustoće; razdvajanje njegovih sastojaka nije dio modela.
 
@@ -693,107 +693,133 @@ Ne; model vrijedi samo nakon što se fluid "smiri" u ubrzanom okviru, što zahti
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
-1. [**T1**]{#task-u04-otvoreni-pravokutni-spremnik-duljine-i-pocetne-dubine} Otvoreni pravokutni spremnik duljine $L = 1{,}80\ \text{m}$ i početne dubine vode $h_0 = 0{,}34\ \text{m}$ giba se vodoravno stalnim ubrzanjem $a = 1{,}20\ \text{m/s}^2$. Odredi razliku razina između krajeva spremnika, lokalne dubine uz stražnju i prednju stijenku te provjeri dolazi li do prelijevanja ako je visina boka $H = 0{,}46\ \text{m}$.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   $\Delta h = aL/g$; zatim $h_{str} = h_0 + \Delta h/2$ i $h_{pred} = h_0 - \Delta h/2$; usporedi $h_{str}$ s $H$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z1. Slobodna površina pri ubrzanju {#task-u04-otvoreni-pravokutni-spremnik-duljine-i-pocetne-dubine .unnumbered .unlisted}
 
-   $\Delta h \approx 0{,}22\ \text{m}$; $h_{str} \approx 0{,}45\ \text{m}$, $h_{pred} \approx 0{,}23\ \text{m}$; nema prelijevanja jer je $h_{str} < H$.
-   :::
-   ::::
-   **Skica:** da - pravokutni spremnik, vektor $a$, kosa slobodna ploha, kote $L$, $h_0$ i $H$.
+Otvoreni pravokutni spremnik duljine $L = 1{,}80\ \text{m}$ i početne dubine vode $h_0 = 0{,}34\ \text{m}$ giba se vodoravno stalnim ubrzanjem $a = 1{,}20\ \text{m/s}^2$. Odredi razliku razina između krajeva spremnika, lokalne dubine uz stražnju i prednju stijenku te provjeri dolazi li do prelijevanja ako je visina boka $H = 0{,}46\ \text{m}$.
 
-2. [**T1**]{#task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine} Otvoreni spremnik duljine $L = 1{,}40\ \text{m}$ napunjen je do visine $h_0 = 0{,}30\ \text{m}$, a visina boka je $H = 0{,}42\ \text{m}$. Odredi najveće vodoravno ubrzanje prije početka prelijevanja.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+$\Delta h = aL/g$; zatim $h_{str} = h_0 + \Delta h/2$ i $h_{pred} = h_0 - \Delta h/2$; usporedi $h_{str}$ s $H$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   u graničnom stanju vrijedi $h_{str} = H$ i $\Delta h = 2(H-h_0)$; nakon toga $a = g\Delta h/L$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+$\Delta h \approx 0{,}22\ \text{m}$; $h_{str} \approx 0{,}45\ \text{m}$, $h_{pred} \approx 0{,}23\ \text{m}$; nema prelijevanja jer je $h_{str} < H$.
+:::
+::::
+**Skica:** da - pravokutni spremnik, vektor $a$, kosa slobodna ploha, kote $L$, $h_0$ i $H$.
 
-   $a_{max} \approx 1{,}68\ \text{m/s}^2$.
-   :::
-   ::::
-   **Skica:** da - spremnik s rubom prelijevanja, kosa slobodna ploha i kote $L$, $h_0$, $H$.
+[Razina: T1]{.mf1-task-level}
 
-3. [**T2**]{#task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce} Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. Sustav se giba prema gore ubrzanjem $a_z = 2{,}3\ \text{m/s}^2$. Odredi razliku tlaka između dna i vrha cilindra te usporedi rezultat s mirovnim stanjem.
+### Z2. Ubrzanje na granici prelijevanja {#task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine .unnumbered .unlisted}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   koristi efektivnu težinu fluida: $\Delta p = \rho (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho gh$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+Otvoreni spremnik duljine $L = 1{,}40\ \text{m}$ napunjen je do visine $h_0 = 0{,}30\ \text{m}$, a visina boka je $H = 0{,}42\ \text{m}$. Odredi najveće vodoravno ubrzanje prije početka prelijevanja.
 
-   $\Delta p \approx 7{,}90\ \text{kPa}$; u mirovanju $\Delta p_0 \approx 6{,}40\ \text{kPa}$ — oko 23 % više.
-   :::
-   ::::
-   **Skica:** da - vertikalni cilindar, smjer $a_z$, kote $h$ te tlakovi na vrhu i dnu.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+u graničnom stanju vrijedi $h_{str} = H$ i $\Delta h = 2(H-h_0)$; nakon toga $a = g\Delta h/L$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-4. [**T2**]{#task-u04-ubrzani-otvoreni-spremnik-sirine-stijenke-i-duljine} Ubrzani otvoreni spremnik širine stijenke $b = 0{,}75\ \text{m}$ i duljine $L = 1{,}60\ \text{m}$ s početnom dubinom $h_0 = 0{,}36\ \text{m}$ nosi na stražnjoj stijenci hidrostatsku silu $F = 820\ \text{N}$. Odredi ubrzanje spremnika ako nema prelijevanja.
+$a_{max} \approx 1{,}68\ \text{m/s}^2$.
+:::
+::::
+**Skica:** da - spremnik s rubom prelijevanja, kosa slobodna ploha i kote $L$, $h_0$, $H$.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   iz sile vrati lokalnu dubinu preko $F = \rho g b h_{str}^2/2$; zatim $h_{str} = h_0 + \Delta h/2$ i $a = g\Delta h/L$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+[Razina: T1]{.mf1-task-level}
 
-   $h_{str} \approx 0{,}47\ \text{m}$; $a \approx 1{,}38\ \text{m/s}^2$.
-   :::
-   ::::
-   **Skica:** da - spremnik, stražnja stijena s rezultantom $F$, slobodna ploha i vektor $a$.
+### Z3. Tlak pri vertikalnom ubrzanju {#task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce .unnumbered .unlisted}
 
-5. [**T3**]{#task-u04-cilindricna-posuda-radijusa-s-pocetnom-dubinom-vode} Cilindrična posuda radijusa $R = 0{,}28\ \text{m}$ s početnom dubinom vode $h_0 = 0{,}22\ \text{m}$ vrti se stalnom kutnom brzinom $\omega = 5{,}5\ \text{rad/s}$. Odredi porast razine uz stijenku, spuštanje razine u osi i procijeni ostaje li dno u osi potpuno prekriveno vodom.
+Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. Sustav se giba prema gore ubrzanjem $a_z = 2{,}3\ \text{m/s}^2$. Odredi razliku tlaka između dna i vrha cilindra te usporedi rezultat s mirovnim stanjem.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   razlika razina je $\Delta h = \omega^2 R^2/(2g)$; uz očuvanje volumena vrijedi $h_{rub} = h_0 + \Delta h/2$ i $h_{osa} = h_0 - \Delta h/2$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+koristi efektivnu težinu fluida: $\Delta p = \rho (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho gh$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   $\Delta h \approx 0{,}12\ \text{m}$; $h_{rub} \approx 0{,}28\ \text{m}$, $h_{osa} \approx 0{,}16\ \text{m}$ — dno u osi ostaje pokriveno.
-   :::
-   ::::
-   **Skica:** da - aksijalni presjek posude, parabolična slobodna ploha, kote $R$, $h_0$, $h_{rub}$ i $h_{osa}$.
+$\Delta p \approx 7{,}90\ \text{kPa}$; u mirovanju $\Delta p_0 \approx 6{,}40\ \text{kPa}$ — oko 23 % više.
+:::
+::::
+**Skica:** da - vertikalni cilindar, smjer $a_z$, kote $h$ te tlakovi na vrhu i dnu.
 
-6. [**T4**]{#task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen} Otvoreni cilindrični spremnik polumjera $R = 0{,}32\ \text{m}$ i visine $H = 0{,}62\ \text{m}$ ispunjen je vodom do početne srednje visine $h_0 = 0{,}46\ \text{m}$. Odredi najveću kutnu brzinu pri kojoj još nema prelijevanja. Zatim za radni režim $\omega = 0{,}80\,\omega_{max}$ odredi dubinu vode u osi i uz stijenu te manometarske tlakove na dnu u tim dvjema točkama. Pretvarač frekvencije može stvarnu brzinu vrtnje povisiti do $5\ \%$ iznad zadane, a usis u osi mora stalno imati dubinu vode najmanje $0{,}350\ \text{m}$. Provjeri zadani režim u nepovoljnoj toleranciji, odredi najveći dopušteni zadani omjer $\alpha=\omega_{zad}/\omega_{max}$ i preporuči radnu postavku.
+[Razina: T2]{.mf1-task-level}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   u graničnom stanju vrijedi $h_{rub} = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim $h_{osa}$ i $h_{rub}$, a tlakove iz $p_M = \rho gh$. U provjeri tolerancije koristi $\omega=1{,}05\alpha\omega_{max}$ i iz uvjeta $h_{osa}\ge0{,}350\ \text{m}$ riješi gornju granicu za $\alpha$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z4. Ubrzanje iz sile na stijenku {#task-u04-ubrzani-otvoreni-spremnik-sirine-stijenke-i-duljine .unnumbered .unlisted}
 
-   $\omega_{max} \approx 7{,}83\ \text{rad/s}$; pri $\omega = 0{,}80\,\omega_{max}$: $h_{osa} \approx 0{,}36\ \text{m}$, $h_{rub} \approx 0{,}56\ \text{m}$; $p_{M,osa} \approx 3{,}51\ \text{kPa}$, $p_{M,rub} \approx 5{,}52\ \text{kPa}$. U nepovoljnoj toleranciji stvarni je omjer $0{,}84$, pa je $h_{osa}\approx0{,}347\ \text{m}$, a $h_{rub}\approx0{,}573\ \text{m}$: nema prelijevanja, ali usis nije dovoljno prekriven. Iz uvjeta dubine slijedi $\alpha_{max}\approx0{,}790$; razumna je postavka $\alpha=0{,}78$ ili manja, koja zadržava mjerljivu rezervu.
-   :::
-   ::::
-   **Skica:** da - aksijalni presjek cilindra, paraboloidna slobodna ploha, točke na osi i uz stijenu te kote $R$, $H$ i $h_0$.
+Ubrzani otvoreni spremnik širine stijenke $b = 0{,}75\ \text{m}$ i duljine $L = 1{,}60\ \text{m}$ s početnom dubinom $h_0 = 0{,}36\ \text{m}$ nosi na stražnjoj stijenci hidrostatsku silu $F = 820\ \text{N}$. Odredi ubrzanje spremnika ako nema prelijevanja.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+iz sile vrati lokalnu dubinu preko $F = \rho g b h_{str}^2/2$; zatim $h_{str} = h_0 + \Delta h/2$ i $a = g\Delta h/L$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$h_{str} \approx 0{,}47\ \text{m}$; $a \approx 1{,}38\ \text{m/s}^2$.
+:::
+::::
+**Skica:** da - spremnik, stražnja stijena s rezultantom $F$, slobodna ploha i vektor $a$.
+
+[Razina: T2]{.mf1-task-level}
+
+### Z5. Slobodna površina pri rotaciji {#task-u04-cilindricna-posuda-radijusa-s-pocetnom-dubinom-vode .unnumbered .unlisted}
+
+Cilindrična posuda radijusa $R = 0{,}28\ \text{m}$ s početnom dubinom vode $h_0 = 0{,}22\ \text{m}$ vrti se stalnom kutnom brzinom $\omega = 5{,}5\ \text{rad/s}$. Odredi porast razine uz stijenku, spuštanje razine u osi i procijeni ostaje li dno u osi potpuno prekriveno vodom.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+razlika razina je $\Delta h = \omega^2 R^2/(2g)$; uz očuvanje volumena vrijedi $h_{rub} = h_0 + \Delta h/2$ i $h_{osa} = h_0 - \Delta h/2$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$\Delta h \approx 0{,}12\ \text{m}$; $h_{rub} \approx 0{,}28\ \text{m}$, $h_{osa} \approx 0{,}16\ \text{m}$ — dno u osi ostaje pokriveno.
+:::
+::::
+**Skica:** da - aksijalni presjek posude, parabolična slobodna ploha, kote $R$, $h_0$, $h_{rub}$ i $h_{osa}$.
+
+[Razina: T3]{.mf1-task-level}
+
+### Z6. Rotirajući spremnik i prelijevanje {#task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen .unnumbered .unlisted}
+
+Otvoreni cilindrični spremnik polumjera $R = 0{,}32\ \text{m}$ i visine $H = 0{,}62\ \text{m}$ ispunjen je vodom do početne srednje visine $h_0 = 0{,}46\ \text{m}$. Odredi najveću kutnu brzinu pri kojoj još nema prelijevanja. Zatim za radni režim $\omega = 0{,}80\,\omega_{max}$ odredi dubinu vode u osi i uz stijenu te manometarske tlakove na dnu u tim dvjema točkama. Pretvarač frekvencije može stvarnu brzinu vrtnje povisiti do $5\ \%$ iznad zadane, a usis u osi mora stalno imati dubinu vode najmanje $0{,}350\ \text{m}$. Provjeri zadani režim u nepovoljnoj toleranciji, odredi najveći dopušteni zadani omjer $\alpha=\omega_{zad}/\omega_{max}$ i preporuči radnu postavku.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+u graničnom stanju vrijedi $h_{rub} = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim $h_{osa}$ i $h_{rub}$, a tlakove iz $p_M = \rho gh$. U provjeri tolerancije koristi $\omega=1{,}05\alpha\omega_{max}$ i iz uvjeta $h_{osa}\ge0{,}350\ \text{m}$ riješi gornju granicu za $\alpha$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$\omega_{max} \approx 7{,}83\ \text{rad/s}$; pri $\omega = 0{,}80\,\omega_{max}$: $h_{osa} \approx 0{,}36\ \text{m}$, $h_{rub} \approx 0{,}56\ \text{m}$; $p_{M,osa} \approx 3{,}51\ \text{kPa}$, $p_{M,rub} \approx 5{,}52\ \text{kPa}$. U nepovoljnoj toleranciji stvarni je omjer $0{,}84$, pa je $h_{osa}\approx0{,}347\ \text{m}$, a $h_{rub}\approx0{,}573\ \text{m}$: nema prelijevanja, ali usis nije dovoljno prekriven. Iz uvjeta dubine slijedi $\alpha_{max}\approx0{,}790$; razumna je postavka $\alpha=0{,}78$ ili manja, koja zadržava mjerljivu rezervu.
+:::
+::::
+**Skica:** da - aksijalni presjek cilindra, paraboloidna slobodna ploha, točke na osi i uz stijenu te kote $R$, $H$ i $h_0$.
+
+[Razina: T4]{.mf1-task-level}
+
 :::::
 
 ![Skice uz zadatke za vježbu — ubrzani i rotirajući spremnici s fluidom (poglavlje 4).](../assets/print/u04_vjezbe_skice.svg){#fig-u04-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — ubrzani i rotirajući spremnici s fluidom (poglavlje 4)."}

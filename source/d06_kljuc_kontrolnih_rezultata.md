@@ -2,11 +2,11 @@
 
 ## Ključ naputaka i kontrolnih rezultata
 
-Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom izdanju. Ne zamjenjuje postupak: prije provjere treba zapisati model, pretpostavke, jedinice i barem jednu neovisnu fizikalnu provjeru. Otvoreni T3/T4 zadatci namjerno nemaju jedinstven broj.
+Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom tekstu. Ovaj dodatak sadrži naputke i kontrolne rezultate za tiskano izdanje. Ne zamjenjuje postupak: prije provjere treba zapisati model, pretpostavke, jedinice i barem jednu neovisnu fizikalnu provjeru. Otvoreni zadatci razina T3 i T4 mogu imati više prihvatljivih odgovora.
 
 ## Osnove fluida i Pascalov zakon
 
-### Zadatak 1 · T1 {#key-task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera}
+### Z1. Servisna hidraulična preša {#key-task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera .unnumbered .unlisted}
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera)
 
@@ -16,7 +16,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $p \approx 292\ \text{kPa}$; $F_2 = 4{,}5\ \text{kN}$; $s_2 = 4{,}8\ \text{mm}$.
 
-### Zadatak 2 · T1 {#key-task-u01-na-kruzni-klip-promjera-djeluje-sila-odredi}
+### Z2. Dva klipa pod istim tlakom {#key-task-u01-na-kruzni-klip-promjera-djeluje-sila-odredi .unnumbered .unlisted}
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-na-kruzni-klip-promjera-djeluje-sila-odredi)
 
@@ -26,7 +26,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $p \approx 210\ \text{kPa}$; $F_2 = 855\ \text{N}$.
 
-### Zadatak 3 · T2 {#key-task-u01-u-zatvorenoj-hidraulicnoj-stezi-tlak-ulja-iznosi}
+### Z3. Dimenzioniranje hidraulične stege {#key-task-u01-u-zatvorenoj-hidraulicnoj-stezi-tlak-ulja-iznosi .unnumbered .unlisted}
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-u-zatvorenoj-hidraulicnoj-stezi-tlak-ulja-iznosi)
 
@@ -36,7 +36,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $F \approx 5{,}1\ \text{kN}$; $d_{min} \approx 65\ \text{mm}$.
 
-### Zadatak 4 · T2 {#key-task-u01-hidraulicni-stol-nosi-teret-mase-preko-dvaju}
+### Z4. Podizanje hidrauličnog stola {#key-task-u01-hidraulicni-stol-nosi-teret-mase-preko-dvaju .unnumbered .unlisted}
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-hidraulicni-stol-nosi-teret-mase-preko-dvaju)
 
@@ -46,7 +46,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $p \approx 0{,}93\ \text{MPa}$; $F_p \approx 238\ \text{N}$; $n = 16$ hodova.
 
-### Zadatak 5 · T3 {#key-task-u01-rucna-pumpa-s-klipom-promjera-razvija-silu}
+### Z5. Ručna pumpa i podizna platforma {#key-task-u01-rucna-pumpa-s-klipom-promjera-razvija-silu .unnumbered .unlisted}
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-rucna-pumpa-s-klipom-promjera-razvija-silu)
 
@@ -56,7 +56,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $p \approx 856\ \text{kPa}$; $G \approx 26{,}3\ \text{kN}$; $s_p \approx 1{,}88\ \text{m}$.
 
-### Zadatak 6 · T4 {#key-task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra}
+### Z6. Nosivost stola uz nesigurnu učinkovitost {#key-task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra .unnumbered .unlisted}
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra)
 
@@ -68,7 +68,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Viskoznost, površinska napetost i kapilarnost
 
-### Zadatak 1 · T1 {#key-task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se}
+### Z1. Viskozna sila između ploča {#key-task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se .unnumbered .unlisted}
 
 [Vrati se na zadatak](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd#task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se)
 
@@ -78,7 +78,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $dv/dy \approx 271\ \text{s}^{-1}$; $\tau \approx 228\ \text{Pa}$; $F \approx 50\ \text{N}$.
 
-### Zadatak 2 · T1 {#key-task-u02-klizna-ploca-povrsine-giba-se-brzinom-kroz}
+### Z2. Mjerenje viskoznosti ulja {#key-task-u02-klizna-ploca-povrsine-giba-se-brzinom-kroz .unnumbered .unlisted}
 
 [Vrati se na zadatak](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd#task-u02-klizna-ploca-povrsine-giba-se-brzinom-kroz)
 
@@ -88,7 +88,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\tau = 150\ \text{Pa}$; $\mu \approx 0{,}34\ \text{Pa s}$.
 
-### Zadatak 3 · T2 {#key-task-u02-vratilo-promjera-i-duljine-vrti-se-tako}
+### Z3. Otpor vrtnji vratila {#key-task-u02-vratilo-promjera-i-duljine-vrti-se-tako .unnumbered .unlisted}
 
 [Vrati se na zadatak](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd#task-u02-vratilo-promjera-i-duljine-vrti-se-tako)
 
@@ -98,7 +98,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\tau = 960\ \text{Pa}$; $F \approx 51\ \text{N}$.
 
-### Zadatak 4 · T2 {#key-task-u02-kapilara-promjera-uronjena-je-u-etanol-za}
+### Z4. Kapilarni uspon etanola {#key-task-u02-kapilara-promjera-uronjena-je-u-etanol-za .unnumbered .unlisted}
 
 [Vrati se na zadatak](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd#task-u02-kapilara-promjera-uronjena-je-u-etanol-za)
 
@@ -108,7 +108,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $h \approx 18{,}0\ \text{mm}$; kod $d = 1{,}2\ \text{mm}$ upola manje, $h \approx 9{,}0\ \text{mm}$.
 
-### Zadatak 5 · T3 {#key-task-u02-staklena-kapilara-promjera-uronjena-je-u-vodu}
+### Z5. Kapilarni uspon i tlak u kapljici {#key-task-u02-staklena-kapilara-promjera-uronjena-je-u-vodu .unnumbered .unlisted}
 
 [Vrati se na zadatak](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd#task-u02-staklena-kapilara-promjera-uronjena-je-u-vodu)
 
@@ -118,7 +118,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $h \approx 32{,}2\ \text{mm}$; $\Delta p \approx 240\ \text{Pa}$.
 
-### Zadatak 6 · T4 {#key-task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na}
+### Z6. Kapilarna igla pod tlakom {#key-task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na .unnumbered .unlisted}
 
 [Vrati se na zadatak](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd#task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na)
 
@@ -130,7 +130,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Hidrostatička raspodjela tlaka i manometrija
 
-### Zadatak 1 · T1 {#key-task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu}
+### Z1. Tlak u otvorenom spremniku {#key-task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu .unnumbered .unlisted}
 
 [Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu)
 
@@ -140,7 +140,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $p_M \approx 23{,}5\ \text{kPa}$; $p_{aps} \approx 124{,}3\ \text{kPa}$.
 
-### Zadatak 2 · T1 {#key-task-u03-u-zatvorenom-spremniku-iznad-vode-vlada-manometarski}
+### Z2. Tlak u zatvorenom spremniku {#key-task-u03-u-zatvorenom-spremniku-iznad-vode-vlada-manometarski .unnumbered .unlisted}
 
 [Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-u-zatvorenom-spremniku-iznad-vode-vlada-manometarski)
 
@@ -150,7 +150,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $p_M \approx 43{,}6\ \text{kPa}$; $p_{aps} \approx 142{,}8\ \text{kPa}$.
 
-### Zadatak 3 · T2 {#key-task-u03-cjevovod-s-uljem-gustoce-spojen-je-na}
+### Z3. U-manometar s uljem i živom {#key-task-u03-cjevovod-s-uljem-gustoce-spojen-je-na .unnumbered .unlisted}
 
 [Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-cjevovod-s-uljem-gustoce-spojen-je-na)
 
@@ -160,7 +160,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $p_M \approx 23{,}7\ \text{kPa}$.
 
-### Zadatak 4 · T2 {#key-task-u03-diferencijalni-manometar-ispunjen-zivom-spaja-dvije-tocke}
+### Z4. Diferencijalni manometar {#key-task-u03-diferencijalni-manometar-ispunjen-zivom-spaja-dvije-tocke .unnumbered .unlisted}
 
 [Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-diferencijalni-manometar-ispunjen-zivom-spaja-dvije-tocke)
 
@@ -170,7 +170,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $p_A - p_B \approx 20{,}9\ \text{kPa}$.
 
-### Zadatak 5 · T3 {#key-task-u03-vakuumski-spremnik-spojen-je-na-otvoreni-zivin}
+### Z5. Vakuumski spremnik {#key-task-u03-vakuumski-spremnik-spojen-je-na-otvoreni-zivin .unnumbered .unlisted}
 
 [Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-vakuumski-spremnik-spojen-je-na-otvoreni-zivin)
 
@@ -180,7 +180,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $p_{gas} \approx 67{,}9\ \text{kPa}$ (aps.); na dubini $0{,}90\ \text{m}$: $p \approx 76{,}7\ \text{kPa}$.
 
-### Zadatak 6 · T4 {#key-task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor}
+### Z6. Tlak plina iz manometarskog mjerenja {#key-task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor .unnumbered .unlisted}
 
 [Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor)
 
@@ -192,7 +192,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Relativno mirovanje fluida
 
-### Zadatak 1 · T1 {#key-task-u04-otvoreni-pravokutni-spremnik-duljine-i-pocetne-dubine}
+### Z1. Slobodna površina pri ubrzanju {#key-task-u04-otvoreni-pravokutni-spremnik-duljine-i-pocetne-dubine .unnumbered .unlisted}
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-otvoreni-pravokutni-spremnik-duljine-i-pocetne-dubine)
 
@@ -202,7 +202,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\Delta h \approx 0{,}22\ \text{m}$; $h_{str} \approx 0{,}45\ \text{m}$, $h_{pred} \approx 0{,}23\ \text{m}$; nema prelijevanja jer je $h_{str} < H$.
 
-### Zadatak 2 · T1 {#key-task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine}
+### Z2. Ubrzanje na granici prelijevanja {#key-task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine .unnumbered .unlisted}
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine)
 
@@ -212,7 +212,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $a_{max} \approx 1{,}68\ \text{m/s}^2$.
 
-### Zadatak 3 · T2 {#key-task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce}
+### Z3. Tlak pri vertikalnom ubrzanju {#key-task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce .unnumbered .unlisted}
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce)
 
@@ -222,7 +222,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\Delta p \approx 7{,}90\ \text{kPa}$; u mirovanju $\Delta p_0 \approx 6{,}40\ \text{kPa}$ — oko 23 % više.
 
-### Zadatak 4 · T2 {#key-task-u04-ubrzani-otvoreni-spremnik-sirine-stijenke-i-duljine}
+### Z4. Ubrzanje iz sile na stijenku {#key-task-u04-ubrzani-otvoreni-spremnik-sirine-stijenke-i-duljine .unnumbered .unlisted}
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-ubrzani-otvoreni-spremnik-sirine-stijenke-i-duljine)
 
@@ -232,7 +232,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $h_{str} \approx 0{,}47\ \text{m}$; $a \approx 1{,}38\ \text{m/s}^2$.
 
-### Zadatak 5 · T3 {#key-task-u04-cilindricna-posuda-radijusa-s-pocetnom-dubinom-vode}
+### Z5. Slobodna površina pri rotaciji {#key-task-u04-cilindricna-posuda-radijusa-s-pocetnom-dubinom-vode .unnumbered .unlisted}
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-cilindricna-posuda-radijusa-s-pocetnom-dubinom-vode)
 
@@ -242,7 +242,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\Delta h \approx 0{,}12\ \text{m}$; $h_{rub} \approx 0{,}28\ \text{m}$, $h_{osa} \approx 0{,}16\ \text{m}$ — dno u osi ostaje pokriveno.
 
-### Zadatak 6 · T4 {#key-task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen}
+### Z6. Rotirajući spremnik i prelijevanje {#key-task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen .unnumbered .unlisted}
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen)
 
@@ -254,7 +254,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Hidrostatske sile na ravne i zakrivljene plohe
 
-### Zadatak 1 · T1 {#key-task-u05-ravna-pravokutna-zaklopka}
+### Z1. Sila na pravokutni poklopac {#key-task-u05-ravna-pravokutna-zaklopka .unnumbered .unlisted}
 
 [Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-ravna-pravokutna-zaklopka)
 
@@ -264,7 +264,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $F=49{,}34\ \mathrm{kN}$; $h_{CP}=2{,}135\ \mathrm{m}$; udaljenost od gornjeg ruba $1{,}035\ \mathrm{m}$.
 
-### Zadatak 2 · T1 {#key-task-u05-zakrivljeni-poklopac-cetvrtine-kruga}
+### Z2. Sila na zakrivljeni poklopac {#key-task-u05-zakrivljeni-poklopac-cetvrtine-kruga .unnumbered .unlisted}
 
 [Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-zakrivljeni-poklopac-cetvrtine-kruga)
 
@@ -274,7 +274,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $F_H=10{,}88\ \mathrm{kN}$; $F_V=+12{,}30\ \mathrm{kN}$ prema gore; $F_R=16{,}42\ \mathrm{kN}$.
 
-### Zadatak 3 · T2 {#key-task-u05-kosi-poklopac-sa-zglobom}
+### Z3. Kosi poklopac sa zglobom {#key-task-u05-kosi-poklopac-sa-zglobom .unnumbered .unlisted}
 
 [Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-kosi-poklopac-sa-zglobom)
 
@@ -284,7 +284,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $F=9{,}566\ \mathrm{kN}$; $s_{CP}=0{,}5439\ \mathrm{m}$; $T=5{,}203\ \mathrm{kN}$.
 
-### Zadatak 4 · T2 {#key-task-u05-dvoslojna-vertikalna-stijena}
+### Z4. Stijena uz dva sloja fluida {#key-task-u05-dvoslojna-vertikalna-stijena .unnumbered .unlisted}
 
 [Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-dvoslojna-vertikalna-stijena)
 
@@ -294,7 +294,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $F=45{,}24\ \mathrm{kN}$; $h_{CP}=1{,}623\ \mathrm{m}$.
 
-### Zadatak 5 · T3 {#key-task-u05-zglobni-zakrivljeni-poklopac-model}
+### Z5. Model zglobnog zakrivljenog poklopca {#key-task-u05-zglobni-zakrivljeni-poklopac-model .unnumbered .unlisted}
 
 [Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-zglobni-zakrivljeni-poklopac-model)
 
@@ -304,7 +304,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $F_H=6{,}664\ \mathrm{kN}$; $h_H=0{,}8818\ \mathrm{m}$ ispod slobodne površine, odnosno krak $0{,}4318\ \mathrm{m}$ prema zglobu; $F_V=8{,}392\ \mathrm{kN}$ prema dolje s krakom $0{,}4071\ \mathrm{m}$; $F_R=10{,}72\ \mathrm{kN}$; $T=8{,}392\ \mathrm{kN}$.
 
-### Zadatak 6 · T4 {#key-task-u05-nesigurnost-modela-i-mjerenja}
+### Z6. Nesigurnost sile na mjerni panel {#key-task-u05-nesigurnost-modela-i-mjerenja .unnumbered .unlisted}
 
 [Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-nesigurnost-modela-i-mjerenja)
 
@@ -316,7 +316,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Uzgon, plivanje i početni stabilitet
 
-### Zadatak 1 · T1 {#key-task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno}
+### Z1. Uzgon potpuno uronjenog tijela {#key-task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno .unnumbered .unlisted}
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno)
 
@@ -326,7 +326,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $F_U \approx 832\ \text{N}$; kako je $F_U > G = 608\ \text{N}$, treba dodatna sila prema dolje $\approx 224\ \text{N}$.
 
-### Zadatak 2 · T1 {#key-task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine}
+### Z2. Gaz opterećenog pontona {#key-task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine .unnumbered .unlisted}
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine)
 
@@ -336,7 +336,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $V_{ist} \approx 0{,}73\ \text{m}^3$; srednji gaz $h \approx 0{,}20\ \text{m}$; dodatna masa do ruba $\approx 650\ \text{kg}$.
 
-### Zadatak 3 · T2 {#key-task-u07-plutajuca-servisna-platforma-duljine-i-sirine-ima}
+### Z3. Nagib platforme pri pomaku tereta {#key-task-u07-plutajuca-servisna-platforma-duljine-i-sirine-ima .unnumbered .unlisted}
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-plutajuca-servisna-platforma-duljine-i-sirine-ima)
 
@@ -346,7 +346,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $h_m\approx0{,}255\ \text{m}$; $KB\approx0{,}128\ \text{m}$; $BM\approx0{,}327\ \text{m}$; $GM\approx0{,}274\ \text{m}$; $|h_L-h_D|\approx0{,}133\ \text{m}$, pri čemu je desni rub dublje uronjen.
 
-### Zadatak 4 · T2 {#key-task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta}
+### Z4. Gustoća ulja iz očitanja areometra {#key-task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta .unnumbered .unlisted}
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta)
 
@@ -356,7 +356,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\rho_{ulje} \approx 990\ \text{kg/m}^3$; uron je veći jer je ulje rjeđe pa je za istu težinu potreban veći istisnuti volumen.
 
-### Zadatak 5 · T3 {#key-task-u07-plutajuci-modul-istiskuje-volumen-vode-i-ima}
+### Z5. Povratni moment stabilnosti {#key-task-u07-plutajuci-modul-istiskuje-volumen-vode-i-ima .unnumbered .unlisted}
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-plutajuci-modul-istiskuje-volumen-vode-i-ima)
 
@@ -366,7 +366,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\Delta \approx 6{,}07\ \text{kN}$; $M_r \approx 133\ \text{N·m}$; $GM > 0$ pa je ravnoteža stabilna.
 
-### Zadatak 6 · T4 {#key-task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta}
+### Z6. Platforma na granici ulja i vode {#key-task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta .unnumbered .unlisted}
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta)
 
@@ -378,7 +378,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Kinematika, kontrolni volumen i kontinuitet
 
-### Zadatak 1 · T1 {#key-task-u08-voda-struji-kroz-cijev-koja-se-siri}
+### Z1. Protok kroz proširenje cijevi {#key-task-u08-voda-struji-kroz-cijev-koja-se-siri .unnumbered .unlisted}
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-voda-struji-kroz-cijev-koja-se-siri)
 
@@ -388,7 +388,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $Q \approx 37{,}7\ \text{L/s}$; $v_2 \approx 1{,}88\ \text{m/s}$; $\dot m \approx 37{,}6\ \text{kg/s}$.
 
-### Zadatak 2 · T1 {#key-task-u08-voda-ulazi-u-sapnicu-promjera-srednjom-brzinom}
+### Z2. Brzina na izlazu sapnice {#key-task-u08-voda-ulazi-u-sapnicu-promjera-srednjom-brzinom .unnumbered .unlisted}
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-voda-ulazi-u-sapnicu-promjera-srednjom-brzinom)
 
@@ -398,7 +398,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $Q \approx 35{,}1\ \text{L/s}$; $v_2 \approx 17{,}9\ \text{m/s}$; $\dot m \approx 35{,}0\ \text{kg/s}$.
 
-### Zadatak 3 · T2 {#key-task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene}
+### Z3. Bilanca komore za miješanje {#key-task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene .unnumbered .unlisted}
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene)
 
@@ -408,7 +408,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $Q_3 = 20\ \text{L/s}$; $v_3 \approx 1{,}77\ \text{m/s}$.
 
-### Zadatak 4 · T2 {#key-task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz}
+### Z4. Raspodjela protoka u dvije grane {#key-task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz .unnumbered .unlisted}
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz)
 
@@ -418,7 +418,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v_3 \approx 1{,}81\ \text{m/s}$, $v_2 \approx 3{,}62\ \text{m/s}$; $Q_2 \approx 23{,}0\ \text{L/s}$, $Q_3 \approx 7{,}0\ \text{L/s}$.
 
-### Zadatak 5 · T3 {#key-task-u08-cilindricni-spremnik-promjera-puni-se-dotokom-dok}
+### Z5. Porast razine u spremniku {#key-task-u08-cilindricni-spremnik-promjera-puni-se-dotokom-dok .unnumbered .unlisted}
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-cilindricni-spremnik-promjera-puni-se-dotokom-dok)
 
@@ -428,7 +428,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $dh/dt \approx 2{,}49\ \text{mm/s}$; $t \approx 322\ \text{s} \approx 5{,}4\ \text{min}$.
 
-### Zadatak 6 · T4 {#key-task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce}
+### Z6. Bilanca spremnika s dvama fluidima {#key-task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce .unnumbered .unlisted}
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce)
 
@@ -440,7 +440,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Energijska jednadžba i Bernoulli
 
-### Zadatak 1 · T1 {#key-task-u09-veliki-otvoreni-spremnik-sadrzi-vodu-do-visine}
+### Z1. Istjecanje iz otvorenog spremnika {#key-task-u09-veliki-otvoreni-spremnik-sadrzi-vodu-do-visine .unnumbered .unlisted}
 
 [Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-veliki-otvoreni-spremnik-sadrzi-vodu-do-visine)
 
@@ -450,7 +450,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v \approx 7{,}92\ \text{m/s}$; $Q \approx 4{,}21\ \text{L/s}$; $\dot m \approx 4{,}20\ \text{kg/s}$.
 
-### Zadatak 2 · T1 {#key-task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s}
+### Z2. Tlak u suženju ventilacijskog kanala {#key-task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s .unnumbered .unlisted}
 
 [Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s)
 
@@ -460,7 +460,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v_1 = 7{,}0\ \text{m/s}$, $v_2 = 21{,}0\ \text{m/s}$; $\Delta p \approx 235\ \text{Pa}$.
 
-### Zadatak 3 · T2 {#key-task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni}
+### Z3. Protok kroz Venturijevu cijev {#key-task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni .unnumbered .unlisted}
 
 [Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni)
 
@@ -470,7 +470,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v_2 \approx 7{,}38\ \text{m/s}$; $Q \approx 28{,}4\ \text{L/s}$.
 
-### Zadatak 4 · T2 {#key-task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok}
+### Z4. Brzina iz Pitotova mjerenja {#key-task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok .unnumbered .unlisted}
 
 [Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok)
 
@@ -480,7 +480,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v \approx 4{,}13\ \text{m/s}$.
 
-### Zadatak 5 · T3 {#key-task-u09-idealni-sifon-prazni-otvoreni-spremnik-razlika-razina}
+### Z5. Tlak u vrhu sifona {#key-task-u09-idealni-sifon-prazni-otvoreni-spremnik-razlika-razina .unnumbered .unlisted}
 
 [Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-idealni-sifon-prazni-otvoreni-spremnik-razlika-razina)
 
@@ -490,7 +490,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v \approx 7{,}41\ \text{m/s}$; $p_C \approx 62{,}8\ \text{kPa}$ (aps.); $HGL_C=-2{,}8\ \text{m}$ u odnosu na slobodnu površinu; $p_C-p_v\approx60{,}5\ \text{kPa}$, pa idealni račun pokazuje pozitivnu rezervu.
 
-### Zadatak 6 · T4 {#key-task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako}
+### Z6. Sifon i putanja izlaznog mlaza {#key-task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako .unnumbered .unlisted}
 
 [Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako)
 
@@ -502,7 +502,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Kompresibilni idealni tok
 
-### Zadatak 1 · T1 {#key-task-brzina-zvuka-helium}
+### Z1. Brzina zvuka u heliju {#key-task-brzina-zvuka-helium .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-brzina-zvuka-helium)
 
@@ -510,7 +510,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $a\approx1019\ \text{m/s}$.
 
-### Zadatak 2 · T1 {#key-task-mach-ventilacija}
+### Z2. Machov broj u ventilacijskom vodu {#key-task-mach-ventilacija .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-mach-ventilacija)
 
@@ -518,7 +518,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $Ma\approx0{,}186$.
 
-### Zadatak 3 · T2 {#key-task-stagnacijska-temperatura}
+### Z3. Stagnacijska temperatura zraka {#key-task-stagnacijska-temperatura .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-stagnacijska-temperatura)
 
@@ -526,7 +526,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $T_0=348\ \text{K}$.
 
-### Zadatak 4 · T2 {#key-task-priguseni-protok}
+### Z4. Kritični tlak pri prigušenju protoka {#key-task-priguseni-protok .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-priguseni-protok)
 
@@ -534,7 +534,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $p^*\approx4{,}23\ \text{bar(abs)}$.
 
-### Zadatak 5 · T3 {#key-task-sapnica-model}
+### Z5. Model protoka kroz konvergentnu sapnicu {#key-task-sapnica-model .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-sapnica-model)
 
@@ -544,7 +544,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $C_dA_{eff}\approx42{,}50\ \text{mm}^2$; uz neovisno kalibrirano $A_{eff}$ slijedi $C_d\approx0{,}885$ i $u(C_d)\approx0{,}014$. Bez neovisne geometrijske ili protokovne kalibracije mjerenje određuje samo produkt, pa su $A_{eff}$ i $C_d$ neidentifikabilni zasebno.
 
-### Zadatak 6 · T4 {#key-task-udarni-val-podaci}
+### Z6. Provjera podataka o udarnom valu {#key-task-udarni-val-podaci .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-udarni-val-podaci)
 
@@ -556,7 +556,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Količina i moment količine gibanja
 
-### Zadatak 1 · T1 {#key-task-u11-vodeni-mlaz-promjera-izlazi-iz-sapnice-brzinom}
+### Z1. Sila mlaza na nepomičnu ploču {#key-task-u11-vodeni-mlaz-promjera-izlazi-iz-sapnice-brzinom .unnumbered .unlisted}
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-vodeni-mlaz-promjera-izlazi-iz-sapnice-brzinom)
 
@@ -566,7 +566,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\dot m \approx 24{,}9\ \text{kg/s}$; $F \approx 548\ \text{N}$.
 
-### Zadatak 2 · T1 {#key-task-u11-mlaz-vode-udara-okomito-na-nepomicnu-plocu}
+### Z2. Brzina mlaza iz izmjerene sile {#key-task-u11-mlaz-vode-udara-okomito-na-nepomicnu-plocu .unnumbered .unlisted}
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-mlaz-vode-udara-okomito-na-nepomicnu-plocu)
 
@@ -576,7 +576,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v \approx 15{,}0\ \text{m/s}$; $Q \approx 20{,}7\ \text{L/s}$.
 
-### Zadatak 3 · T2 {#key-task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez}
+### Z3. Sile na cijevno koljeno {#key-task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez .unnumbered .unlisted}
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez)
 
@@ -586,7 +586,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v \approx 3{,}31\ \text{m/s}$; komponente sile fluida na koljeno $F_x \approx 1{,}50\ \text{kN}$, $F_y \approx -1{,}26\ \text{kN}$; rezultanta $\approx 1{,}96\ \text{kN}$.
 
-### Zadatak 4 · T2 {#key-task-u11-t-racva-prima-vodu-kroz-ulaz-promjera}
+### Z4. Sile na T-račvu {#key-task-u11-t-racva-prima-vodu-kroz-ulaz-promjera .unnumbered .unlisted}
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-t-racva-prima-vodu-kroz-ulaz-promjera)
 
@@ -596,7 +596,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $Q_3 = 12\ \text{L/s}$; reakcija nosača $\approx 2{,}39\ \text{kN}$ (pretežno u osi ulaza), okomita komponenta $\approx 37\ \text{N}$.
 
-### Zadatak 5 · T3 {#key-task-u11-konvergentna-mlaznica-ima-ulazni-promjer-izlazni-promjer}
+### Z5. Sila na konvergentnu mlaznicu {#key-task-u11-konvergentna-mlaznica-ima-ulazni-promjer-izlazni-promjer .unnumbered .unlisted}
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-konvergentna-mlaznica-ima-ulazni-promjer-izlazni-promjer)
 
@@ -606,7 +606,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v_1 \approx 1{,}89\ \text{m/s}$, $v_2 \approx 11{,}3\ \text{m/s}$; sila u vijcima prirubnice $\approx 2{,}11\ \text{kN}$.
 
-### Zadatak 6 · T4 {#key-task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz}
+### Z6. Sile na Y-račvu {#key-task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz .unnumbered .unlisted}
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz)
 
@@ -618,7 +618,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Dimenzijska analiza i sličnost
 
-### Zadatak 1 · T1 {#key-task-u14-krv-tece-arteriolom-promjera-brzinom-a-voda}
+### Z1. Reynoldsov broj u arterioli i vodovodu {#key-task-u14-krv-tece-arteriolom-promjera-brzinom-a-voda .unnumbered .unlisted}
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-krv-tece-arteriolom-promjera-brzinom-a-voda)
 
@@ -628,7 +628,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $Re_{krv} \approx 0{,}45$ — viskoznost dominira; $Re_{voda} \approx 4{,}5 \cdot 10^5$ — inercija dominira.
 
-### Zadatak 2 · T1 {#key-task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom}
+### Z2. Machov broj i izbor modela {#key-task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom .unnumbered .unlisted}
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom)
 
@@ -638,7 +638,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v\approx63{,}7\ \text{m/s}$, $Ma\approx0{,}19$; prema zadanom kriteriju nestlačiva je aproksimacija razumna uz navedene dodatne pretpostavke.
 
-### Zadatak 3 · T2 {#key-task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak}
+### Z3. Kavitacijski broj na usisu crpke {#key-task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak .unnumbered .unlisted}
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak)
 
@@ -648,7 +648,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\sigma_{kav}\approx9{,}7>\sigma_{kr}=3{,}0$; prema zadanoj karakteristici crpka ima rezervu u toj radnoj točki.
 
-### Zadatak 4 · T2 {#key-task-u14-kap-goriva-promjera-izlozena-je-relativnoj-struji}
+### Z4. Weberov broj i raspad kapi {#key-task-u14-kap-goriva-promjera-izlozena-je-relativnoj-struji .unnumbered .unlisted}
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-kap-goriva-promjera-izlozena-je-relativnoj-struji)
 
@@ -658,7 +658,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $We\approx46>12$; pojednostavljeni kriterij predviđa raspad, ali bez viskoznosti, omjera gustoća i modela sekundarnog raspada ne određuje raspodjelu veličina kapljica.
 
-### Zadatak 5 · T3 {#key-task-u14-frekvencija-otpustanja-vrtloga-iza-geometrijski-slicnog-tijela}
+### Z5. Dimenzijska analiza otpuštanja vrtloga {#key-task-u14-frekvencija-otpustanja-vrtloga-iza-geometrijski-slicnog-tijela .unnumbered .unlisted}
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-frekvencija-otpustanja-vrtloga-iza-geometrijski-slicnog-tijela)
 
@@ -668,7 +668,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $n=5$, $k=3$, pa nastaju dvije grupe; izborom ponavljajućih varijabli dobivaju se $\Pi_1=fD/v=St$ i $\Pi_2=\rho vD/\mu=Re$, odnosno $St=\Phi(Re)$. Za zadani slučaj $Re=4{,}00\cdot10^4$ i $f=St\,v/D=45{,}6\ \text{Hz}$. Dimenzijska analiza određuje oblik ovisnosti, ali broj $St=0{,}190$ dolazi iz mjerenja ili odgovarajućega modela, ne iz samog Buckinghamova postupka.
 
-### Zadatak 6 · T4 {#key-task-u14-preljev-brane-ispituje-se-vodenim-modelom-u}
+### Z6. Sličnost modela preljeva brane {#key-task-u14-preljev-brane-ispituje-se-vodenim-modelom-u .unnumbered .unlisted}
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-preljev-brane-ispituje-se-vodenim-modelom-u)
 
@@ -680,7 +680,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Diferencijalni opis realnog toka
 
-### Zadatak 1 · T1 {#key-task-materijalna-derivacija}
+### Z1. Lokalno i konvektivno ubrzanje {#key-task-materijalna-derivacija .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-materijalna-derivacija)
 
@@ -688,7 +688,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $u=5\ \text{m/s}$, $a_{lok}=2$, $a_{kon}=10$, $a=12\ \text{m/s}^2$.
 
-### Zadatak 2 · T1 {#key-task-viskozna-difuzija}
+### Z2. Vrijeme viskozne difuzije {#key-task-viskozna-difuzija .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-viskozna-difuzija)
 
@@ -696,7 +696,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $t_\nu\sim100\ \text{s}$.
 
-### Zadatak 3 · T2 {#key-task-poiseuille-inverzni}
+### Z3. Viskoznost iz mjerenja u kapilari {#key-task-poiseuille-inverzni .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-poiseuille-inverzni)
 
@@ -706,7 +706,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\mu\approx1{,}000\ \text{mPa s}$, $u(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Sam promjer doprinosi relativnoj nesigurnosti od $4\,\%$, pa dominira zadanim mjernim budžetom.
 
-### Zadatak 4 · T2 {#key-task-couette-povrat}
+### Z4. Povratni tok između ploča {#key-task-couette-povrat .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-couette-povrat)
 
@@ -716,7 +716,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $(dp/dx)_{krit}=4{,}00\cdot10^5\ \text{Pa/m}$; pri $0{,}90$ te vrijednosti $\tau_0=+20{,}0\ \text{Pa}$, a pri $1{,}10$ vrijedi $\tau_0=-20{,}0\ \text{Pa}$. Promjena predznaka zidnog naprezanja označuje početak lokalnog povratnog toka na donjoj stijenci.
 
-### Zadatak 5 · T3 {#key-task-granicni-sloj-model}
+### Z5. Izbor modela graničnog sloja {#key-task-granicni-sloj-model .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-granicni-sloj-model)
 
@@ -726,7 +726,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $Re_x=6{,}00\cdot10^5$, $\delta_{99}\approx2{,}58\ \text{mm}$, $k_s/\delta_{99}\approx1{,}94\cdot10^{-3}$ i $(x/U_e)dU_e/dx=-0{,}0667$. Hrapavost je mala prema procijenjenoj debljini, ali mjerljiva promjena $U_e$ krši pretpostavku nultoga gradijenta tlaka, a stanje laminarnosti pri tom $Re_x$ nije dokazano; Blasius zato nije opravdan bez dodatne provjere profila i prijelaza.
 
-### Zadatak 6 · T4 {#key-task-cfd-tri-mreze}
+### Z6. Konvergencija rješenja na trima mrežama {#key-task-cfd-tri-mreze .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-cfd-tri-mreze)
 
@@ -738,61 +738,61 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Gubitci, cjevovodi, crpke i mreže
 
-### Zadatak 1 · T1 {#key-task-gubitci-ravne-dionice}
+### Z1. Gubitci ravne dionice {#key-task-gubitci-ravne-dionice .unnumbered .unlisted}
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-gubitci-ravne-dionice)
 
-**Sažetak.** Gubitci ravne dionice — Voda gustoće $998\ \mathrm{kg/m^3}$ protječe cijevi $D=0{,}10\ \mathrm{m}$, $L=50\ \mathrm{m}$ protokom $Q=0{,}012\ \mathrm{m^3/s}$. Zadano je $\lambda=0{,}025$ i $\sum\xi=4{,}0$. Odredi brzinu, linijski i lokalni…
+**Sažetak.** Voda gustoće $998\ \mathrm{kg/m^3}$ protječe cijevi $D=0{,}10\ \mathrm{m}$, $L=50\ \mathrm{m}$ protokom $Q=0{,}012\ \mathrm{m^3/s}$. Zadano je $\lambda=0{,}025$ i $\sum\xi=4{,}0$. Odredi brzinu, linijski i lokalni gubitak, ukupni gubitak…
 
 **Naputak.** Najprije izračunaj $A$ i $v=Q/A$. Tek zatim zajedničku brzinsku visinu pomnoži s $\lambda L/D$ odnosno $\sum\xi$.
 
 **Kontrolni rezultat ili kriterij.** $v=1{,}528\ \mathrm{m/s}$, $h_l=1{,}487\ \mathrm{m}$, $h_{loc}=0{,}476\ \mathrm{m}$, $h_w=1{,}963\ \mathrm{m}$ i $\Delta p=19{,}2\ \mathrm{kPa}$. Provjeri da je $\Delta p/(\rho g)=h_w$.
 
-### Zadatak 2 · T1 {#key-task-laminarna-cijev-smjese}
+### Z2. Laminarni tok viskozne smjese {#key-task-laminarna-cijev-smjese .unnumbered .unlisted}
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-laminarna-cijev-smjese)
 
-**Sažetak.** Laminarna cijev viskozne smjese — Smjesa gustoće $1100\ \mathrm{kg/m^3}$ i $\nu=3{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ protječe kružnom cijevi $D=6{,}0\ \mathrm{mm}$, $L=5{,}0\ \mathrm{m}$ protokom $Q=6{,}0\cdot10^{-6}\ \mathrm{m^3/s}$.…
+**Sažetak.** Smjesa gustoće $1100\ \mathrm{kg/m^3}$ i $\nu=3{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ protječe kružnom cijevi $D=6{,}0\ \mathrm{mm}$, $L=5{,}0\ \mathrm{m}$ protokom $Q=6{,}0\cdot10^{-6}\ \mathrm{m^3/s}$. Zanemari lokalne gubitke. Odredi $Re$…
 
 **Naputak.** Izračunaj režim prije izbora korelacije. Ako je tok laminaran, upotrijebi $\lambda=64/Re$; rezultat zatim provjeri Poiseuilleovim zakonom.
 
 **Kontrolni rezultat ili kriterij.** $v=0{,}212\ \mathrm{m/s}$, $Re=424$, $\lambda=0{,}1508$ i $\Delta p=3{,}11\ \mathrm{kPa}$. Udvostručenje $Q$ uz ostale iste podatke udvostručuje $\Delta p$ dok tok ostaje laminaran.
 
-### Zadatak 3 · T2 {#key-task-raspodjela-paralelnih-grana}
+### Z3. Raspodjela kroz dvije paralelne grane {#key-task-raspodjela-paralelnih-grana .unnumbered .unlisted}
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-raspodjela-paralelnih-grana)
 
-**Sažetak.** Raspodjela kroz dvije paralelne grane — Između istih čvorova spojene su grane s približno konstantnim otporima $R_1=12\,000\ \mathrm{s^2/m^5}$ i $R_2=48\,000\ \mathrm{s^2/m^5}$. Ukupni protok iznosi $Q=0{,}020\ \mathrm{m^3/s}$. Odredi…
+**Sažetak.** Između istih čvorova spojene su grane s približno konstantnim otporima $R_1=12\,000\ \mathrm{s^2/m^5}$ i $R_2=48\,000\ \mathrm{s^2/m^5}$. Ukupni protok iznosi $Q=0{,}020\ \mathrm{m^3/s}$. Odredi $Q_1$, $Q_2$ i zajednički pad energije.
 
 **Naputak.** Postavi $R_1Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$. Prije računa predvidi koja grana nosi veći protok.
 
 **Kontrolni rezultat ili kriterij.** $Q_1=13{,}33\ \mathrm{L/s}$, $Q_2=6{,}67\ \mathrm{L/s}$ i $h_{AB}=2{,}13\ \mathrm{m}$. Obje grane moraju vratiti isti $h_{AB}$.
 
-### Zadatak 4 · T2 {#key-task-radna-tocka-tri-snage}
+### Z4. Radna točka i snaga crpke {#key-task-radna-tocka-tri-snage .unnumbered .unlisted}
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-radna-tocka-tri-snage)
 
-**Sažetak.** Radna točka i tri razine snage — Za $Q$ u $\mathrm{m^3/s}$ zadane su krivulje $H_p=30-30\,000Q^2$ i $H_s=8+20\,000Q^2$. Za vodu uzmi $\rho=1000\ \mathrm{kg/m^3}$. U radnoj točki vrijede $\eta_p=0{,}76$ i $\eta_m=0{,}92$; gubitke…
+**Sažetak.** Za $Q$ u $\mathrm{m^3/s}$ zadane su krivulje $H_p=30-30\,000Q^2$ i $H_s=8+20\,000Q^2$. Za vodu uzmi $\rho=1000\ \mathrm{kg/m^3}$. U radnoj točki vrijede $\eta_p=0{,}76$ i $\eta_m=0{,}92$; gubitke pretvarača zanemari. Odredi $Q_{op}$…
 
 **Naputak.** Najprije izjednači krivulje. Zatim slijedi pretvorbeni lanac $P_h=\rho gQH$, $P_{vr}=P_h/\eta_p$, $P_{el}=P_{vr}/\eta_m$.
 
 **Kontrolni rezultat ili kriterij.** $Q_{op}=20{,}98\ \mathrm{L/s}$, $H_{op}=16{,}8\ \mathrm{m}$, $P_h=3{,}46\ \mathrm{kW}$, $P_{vr}=4{,}55\ \mathrm{kW}$ i $P_{el}=4{,}94\ \mathrm{kW}$. Provjeri da snage rastu prema električnom ulazu.
 
-### Zadatak 5 · T3 {#key-task-robustan-izbor-promjera}
+### Z5. Izbor promjera uz nesiguran otpor {#key-task-robustan-izbor-promjera .unnumbered .unlisted}
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-robustan-izbor-promjera)
 
-**Sažetak.** Robustan izbor promjera — Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $6{,}0$, a zbog starenja je $\lambda$ između 0,020 i 0,028. Dostupni su promjeri 80, 100 i 125 mm.…
+**Sažetak.** Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $6{,}0$, a zbog starenja je $\lambda$ između 0,020 i 0,028. Dostupni su promjeri 80, 100 i 125 mm. Odaberi najmanji promjer…
 
 **Naputak.** Za svaki kandidat izračunaj brzinu, a zatim raspon $h_w$ za obje granice $\lambda$. Odluku donesi prema najvećem, ne srednjem gubitku.
 
 **Kontrolni rezultat ili kriterij.** Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3,29–4,34 m za 125 mm. Najmanji robustan izbor jest 100 mm. Provjera odluke jest gornja granica $12{,}85<15\ \mathrm{m}$.
 
-### Zadatak 6 · T4 {#key-task-regulacija-energija-npsh}
+### Z6. Regulacija crpke, energija i usisna rezerva {#key-task-regulacija-energija-npsh .unnumbered .unlisted}
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-regulacija-energija-npsh)
 
-**Sažetak.** Regulacija crpke, godišnja energija i usisna rezerva — Crpka pri nazivnoj brzini ima $H_p(q)=24-0{,}012q^2$, gdje je $q$ u $\mathrm{L/s}$. Izvorni sustav ima $H_s(q)=5+0{,}025q^2$. Prigušivanje ventila mijenja ga u…
+**Sažetak.** Crpka pri nazivnoj brzini ima $H_p(q)=24-0{,}012q^2$, gdje je $q$ u $\mathrm{L/s}$. Izvorni sustav ima $H_s(q)=5+0{,}025q^2$. Prigušivanje ventila mijenja ga u $H_{s,V}(q)=5+0{,}040q^2$. Ukupna učinkovitost pretvorbe električna $\to$…
 
 **Naputak.** Prigušenu radnu točku dobiješ iz $H_p=H_{s,V}$. Za otvoren sustav pri istom $q$ vrijedi $H_{p,s}(q)=24s^2-0{,}012q^2=H_s(q)$. Energiju računaj iz $P_{el}=\rho gQH/0{,}72$. Za usis upotrijebi [odgovarajući izraz](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-npsha-spremnik).
 
@@ -800,7 +800,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Turbostrojevi i propulzija
 
-### Zadatak 1 · T1 {#key-task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice}
+### Z1. Sila mlaza na nepomičnu ploču {#key-task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice .unnumbered .unlisted}
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice)
 
@@ -810,7 +810,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\dot m \approx 9{,}1\ \text{kg/s}$; $F \approx 219\ \text{N}$.
 
-### Zadatak 2 · T1 {#key-task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice}
+### Z2. Zakretanje mlaza u vodilici {#key-task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice .unnumbered .unlisted}
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice)
 
@@ -820,7 +820,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $\dot m \approx 12{,}5\ \text{kg/s}$; $F_x \approx 435\ \text{N}$, $F_y \approx -304\ \text{N}$; reakcija nosača $\approx 531\ \text{N}$.
 
-### Zadatak 3 · T2 {#key-task-u12-na-pokretnu-lopaticu-dolazi-mlaz-vode-apsolutnom}
+### Z3. Sila na pokretnu lopaticu {#key-task-u12-na-pokretnu-lopaticu-dolazi-mlaz-vode-apsolutnom .unnumbered .unlisted}
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-u12-na-pokretnu-lopaticu-dolazi-mlaz-vode-apsolutnom)
 
@@ -830,7 +830,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $w_1 = 20\ \text{m/s}$; $F_t \approx 672\ \text{N}$; $P \approx 8{,}06\ \text{kW}$.
 
-### Zadatak 4 · T2 {#key-task-u12-peltonova-lopatica-na-rotoru-radijusa-prima-mlaz}
+### Z4. Moment i snaga Peltonove lopatice {#key-task-u12-peltonova-lopatica-na-rotoru-radijusa-prima-mlaz .unnumbered .unlisted}
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-u12-peltonova-lopatica-na-rotoru-radijusa-prima-mlaz)
 
@@ -840,7 +840,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $F_t = 528\ \text{N}$; $M \approx 222\ \text{N·m}$.
 
-### Zadatak 5 · T3 {#key-task-u12-potisni-modul-ima-tri-jednake-sapnice-promjera}
+### Z5. Potisak modula s trima sapnicama {#key-task-u12-potisni-modul-ima-tri-jednake-sapnice-promjera .unnumbered .unlisted}
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-u12-potisni-modul-ima-tri-jednake-sapnice-promjera)
 
@@ -850,7 +850,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** ukupni potisak $\approx 3{,}73\ \text{kN}$; hidraulička snaga $\approx 78{,}4\ \text{kW}$.
 
-### Zadatak 6 · T4 {#key-task-u12-mlazna-platforma-ukupne-mase-ima-cetiri-jednake}
+### Z6. Podizanje mlazne platforme {#key-task-u12-mlazna-platforma-ukupne-mase-ima-cetiri-jednake .unnumbered .unlisted}
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-u12-mlazna-platforma-ukupne-mase-ima-cetiri-jednake)
 
@@ -862,7 +862,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 ## Otvoreni tokovi
 
-### Zadatak 1 · T1 {#key-task-otvoreni-fr}
+### Z1. Froudeov broj i širenje poremećaja {#key-task-otvoreni-fr .unnumbered .unlisted}
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-otvoreni-fr)
 
@@ -870,7 +870,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $v=1{,}33\ \text{m/s}$, $Fr=0{,}55$.
 
-### Zadatak 2 · T1 {#key-task-kriticna-dubina}
+### Z2. Kritična dubina i minimalna energija {#key-task-kriticna-dubina .unnumbered .unlisted}
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-kriticna-dubina)
 
@@ -878,7 +878,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $y_c\approx0{,}972\ \text{m}$, $E_{min}\approx1{,}46\ \text{m}$.
 
-### Zadatak 3 · T2 {#key-task-trapezni-presjek}
+### Z3. Geometrija i tok trapeznog kanala {#key-task-trapezni-presjek .unnumbered .unlisted}
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-trapezni-presjek)
 
@@ -888,7 +888,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $A=3{,}375\ \text{m}^2$, $T=5{,}100\ \text{m}$, $P=5{,}645\ \text{m}$, $D_h=0{,}6618\ \text{m}$, $R_h=0{,}5979\ \text{m}$, $v=1{,}0667\ \text{m/s}$ i $Fr=0{,}4186$ (mirni tok).
 
-### Zadatak 4 · T2 {#key-task-alternativne-dubine}
+### Z4. Alternativne dubine toka {#key-task-alternativne-dubine .unnumbered .unlisted}
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-alternativne-dubine)
 
@@ -898,7 +898,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $y_c=0{,}7902\ \text{m}$ i $E_{min}=1{,}1853\ \text{m}$. Plića je grana $y_s=0{,}4665\ \text{m}$, $Fr_s=2{,}204$; dublja je $y_d=1{,}4887\ \text{m}$, $Fr_d=0{,}3867$.
 
-### Zadatak 5 · T3 {#key-task-skok-mjerenje}
+### Z5. Provjera mjerenja hidrauličkog skoka {#key-task-skok-mjerenje .unnumbered .unlisted}
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-skok-mjerenje)
 
@@ -908,7 +908,7 @@ Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom i
 
 **Kontrolni rezultat ili kriterij.** $q=1{,}5000\ \text{m}^2/\text{s}$ i $u_q=0{,}01546\ \text{m}^2/\text{s}$. Dobiva se $R=-0{,}01648\ \text{m}^2$, $u_R=0{,}02010\ \text{m}^2$ i $|R|/u_R=0{,}820<2$, pa se u granicama zadanoga modela bilanca zatvara. Iz srednjih ulaza teorijska je spregnuta dubina $1{,}2353\ \text{m}$.
 
-### Zadatak 6 · T4 {#key-task-klimatski-kanal}
+### Z6. Propusnost oborinskog kanala {#key-task-klimatski-kanal .unnumbered .unlisted}
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-klimatski-kanal)
 

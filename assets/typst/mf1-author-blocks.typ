@@ -1,6 +1,6 @@
 // MF1 authoring blocks for the native Quarto/Typst PDF.
-// Kept deliberately quiet: a thin semantic rule, a restrained tint and a
-// compact label.  The block remains breakable for long derivations on A4.
+// Examples use an open layout with a title and whitespace. Other authoring
+// blocks keep their semantic rules. Long blocks remain breakable on A4.
 
 #let mf1-author-block(
   title: [],
@@ -17,7 +17,9 @@
     none
   }
 
-  let frame = if mode == "panel" {
+  let frame = if mode == "example" {
+    none
+  } else if mode == "panel" {
     (
       top: 0.45pt + rule,
       right: none,
@@ -33,7 +35,9 @@
     )
   }
 
-  let padding = if mode == "panel" {
+  let padding = if mode == "example" {
+    (top: 7pt, right: 0pt, bottom: 7pt, left: 0pt)
+  } else if mode == "panel" {
     (top: 8pt, right: 2pt, bottom: 8pt, left: 2pt)
   } else {
     (top: 7pt, right: 9pt, bottom: 7pt, left: 11pt)
@@ -72,6 +76,11 @@
 )[
   #set text(size: 7.2pt, weight: "bold", fill: rgb("#4f5963"))
   #body
+]
+
+// Razina samostalnog zadatka stoji na kraju, odvojena od lijeve numeracije.
+#let mf1-task-level(body) = align(right)[
+  #text(size: 8pt, weight: "regular", fill: rgb("#69727b"), body)
 ]
 
 // Strukturni podnaslov unutar primjera.  Veći razmak iznad odvaja novu fazu

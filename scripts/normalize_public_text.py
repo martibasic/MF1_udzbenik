@@ -107,6 +107,14 @@ LEGACY_EXAMPLE_RE = re.compile(
     r"(?m)^::: \{\.(?P<class>mf1-(?:we|ch))\}\s*\n"
     r"(?P<label><p class=\"mf1-box-label\">(?P<title>[^\n]+)</p>)$"
 )
+EXAMPLE_LABEL_RE = re.compile(
+    r'(?m)^(?P<opening>::: \{[^}\n]*\.mf1-(?:we|gp|po|ch)\b[^}\n]*\}\s*\n'
+    r'<p class="mf1-box-label">)(?P<title>[^\n]+)(?P<closing></p>)$'
+)
+STEP_HEADING_RE = re.compile(
+    r'(?m)^#{2,6}\s+(?P<title>(?:\d+[.)]\s+|Korak\s+\d+\s*[-–—:]\s*).+?)'
+    r'(?:\s+\{(?P<attrs>[^}\n]*)\})?[ \t]*$'
+)
 MARKDOWN_IMAGE_RE = re.compile(
     r"(?m)^(?P<image>!\[(?P<alt>[^\]]*)\]\((?P<target>[^)]+)\))"
     r'''(?P<attrs>\{(?:[^}"']+|"[^"]*"|'[^']*')*\})?[ \t]*$'''
@@ -174,6 +182,7 @@ def slugify_task(prompt: str) -> str:
 
 def slugify_example(label: str) -> str:
     text = re.sub(r"<(?:span|/span)[^>]*>", " ", label)
+    text = re.sub(r"^P\d+\.\s*", "", text)
     text = re.sub(
         r"^(?:Riješeni primjer|Kratki primjer|Cjeloviti zadatak)\s*[-–—:]\s*",
         "",
@@ -181,6 +190,31 @@ def slugify_example(label: str) -> str:
         flags=re.IGNORECASE,
     )
     return slugify_task(text)
+
+
+def number_examples(text: str) -> str:
+    """Numeriraj primjere redom unutar poglavlja, uz nepromijenjene ID-jeve."""
+    ordinal = 0
+
+    def label(match: re.Match[str]) -> str:
+        nonlocal ordinal
+        ordinal += 1
+        title = re.sub(r"^P\d+\.\s*", "", match.group("title"))
+        return f"{match.group('opening')}P{ordinal}. {title}{match.group('closing')}"
+
+    return EXAMPLE_LABEL_RE.sub(label, text)
+
+
+def normalize_step_headings(text: str) -> str:
+    """Koraci su ravnopravni podnaslovi bez dodatnog broja odjeljka."""
+    def heading(match: re.Match[str]) -> str:
+        attrs = (match.group("attrs") or "").split()
+        for class_name in (".unnumbered", ".unlisted", ".mf1-step"):
+            if class_name not in attrs:
+                attrs.append(class_name)
+        return f"### {match.group('title')} {{{' '.join(attrs)}}}"
+
+    return STEP_HEADING_RE.sub(heading, text)
 
 
 def label_display_equations(text: str, chapter_topic: str) -> str:
@@ -228,8 +262,8 @@ def label_display_equations(text: str, chapter_topic: str) -> str:
             r'<p\s+class="mf1-box-label">(.+?)</p>', stripped, re.I
         )
         if box_label and display_start is None:
-            section = box_label.group(1)
-        task_anchor = re.search(r"\{#(task-[A-Za-z0-9-]+)\}", stripped)
+            section = re.sub(r"^P\d+\.\s*", "", box_label.group(1))
+        task_anchor = re.search(r"\{#(task-[A-Za-z0-9-]+)\b[^}]*\}", stripped)
         if task_anchor and display_start is None:
             section = task_anchor.group(1).removeprefix("task-")
 
@@ -491,6 +525,9 @@ def main() -> int:
         chapter_code = CANONICAL_SOURCE_CHAPTER.get(path.name)
         source_key = chapter_code or path.stem
         updated = normalize(original, source_key)
+        updated = normalize_step_headings(updated)
+        if chapter_code:
+            updated = number_examples(updated)
         equation_topic = CANONICAL_SOURCE_TOPIC.get(
             path.name, PUBLIC_APPENDIX_TOPIC.get(path.name)
         )

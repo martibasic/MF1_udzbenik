@@ -17,8 +17,8 @@ Brod se prije gradnje ispituje kao model u vučnom bazenu, automobil i zrakoplov
 
 **Predznanje koje se pretpostavlja:**
 
-- pojam viskoznosti i Reynoldsovog broja iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Reologija, viskoznost i međupovršinske pojave</span></span> i <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span>;
-- linijski gubitci i koeficijent trenja $\lambda$ iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span>;
+- pojam viskoznosti i kvalitativno značenje Reynoldsova broja iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Reologija, viskoznost i međupovršinske pojave</span></span>;
+- odnos tlaka, brzine i energije iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span>; koeficijenti gubitaka ovdje se uvode kao bezdimenzijski rezultati, a sustavno primjenjuju u poglavlju 13;
 - površinska napetost $\sigma$ i kapilarnost iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Reologija, viskoznost i međupovršinske pojave</span></span>;
 - pojam inercijske sile iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Količina i moment količine gibanja</span></span>; SI jedinice i dimenzije iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>.
 
@@ -35,7 +35,7 @@ Brod se prije gradnje ispituje kao model u vučnom bazenu, automobil i zrakoplov
 
 ## Dimenzije, jedinice i sila inercije kao referenca
 
-Svaka fizikalna veličina u mehanici fluida izražava se preko tri **primarne dimenzije**: mase $\mathsf{M}$, duljine $\mathsf{L}$ i vremena $\mathsf{T}$. Tako brzina ima dimenziju $\mathsf{L}\,\mathsf{T}^{-1}$, gustoća $\mathsf{M}\,\mathsf{L}^{-3}$, a tlak i naprezanje $\mathsf{M}\,\mathsf{L}^{-1}\,\mathsf{T}^{-2}$. Načelo **dimenzijske homogenosti** kaže da svaki ispravan fizikalni izraz mora s obje strane imati istu dimenziju — to je ujedno prva i najjeftinija provjera svake jednadžbe.
+Mehaničke veličine u ovom poglavlju izražavaju se preko tri **primarne dimenzije**: mase $\mathsf{M}$, duljine $\mathsf{L}$ i vremena $\mathsf{T}$. Tako brzina ima dimenziju $\mathsf{L}\,\mathsf{T}^{-1}$, gustoća $\mathsf{M}\,\mathsf{L}^{-3}$, a tlak i naprezanje $\mathsf{M}\,\mathsf{L}^{-1}\,\mathsf{T}^{-2}$. Kada problem uključuje toplinske veličine, potrebna je i dimenzija temperature $\Theta$. Načelo **dimenzijske homogenosti** kaže da svaki ispravan fizikalni izraz mora s obje strane imati istu dimenziju — to je ujedno prva i najjeftinija provjera svake jednadžbe.
 
 Bezdimenzijski broj nastaje kombiniranjem veličina tako da se dimenzije pokrate. U mehanici fluida osobito su korisna karakteristična mjerila sila jer omogućuju usporedbu fizikalnih mehanizama. Za mnoge tokove polazi se od sljedećih mjerila:
 
@@ -137,9 +137,11 @@ $$ {#eq-slicnost-bezdimenzijske-grupe-kao-omjeri-mehanizama-09}
 Darcyjev $\lambda$ i koeficijent otpora $C_d$ jesu bezdimenzijski odzivi. Jedna izmjerena krivulja može se prenositi samo unutar iste bezdimenzijske geometrije, rubnih uvjeta i skupa relevantnih grupa; primjerice $C_d$ osim o $Re$ može ovisiti o hrapavosti, $Ma$, slobodnoj turbulenciji i blizini stijenke.
 
 ::: {.callout-note collapse="true" icon="false"}
-## Numerički trag
+## Kada se rezultat može prenijeti na drugi sustav
 
-Za jednofazni, nestlačivi Newtonov fluid konstantnih svojstava, bez dodatnih aktivnih mehanizama, bezdimenzioniranje jednadžbi uvodi Reynoldsov broj. Jednaki $Re$ daje isto bezdimenzijsko rješenje tek uz jednaku bezdimenzijsku geometriju te iste početne i rubne uvjete. Slobodna površina, površinska napetost, rotacija, uzgon ili nestacionarno pobuđivanje uvode dodatne grupe poput $Fr$, $We$, Rossbyjeva ili Strouhalova broja.
+Zamislimo dva geometrijski slična cjevovoda različitih veličina. Za nestlačivi tok istog tipa jednaki Reynoldsovi brojevi mogu omogućiti usporedbu raspodjela brzine i tlaka, izraženih u odnosu na odabranu brzinu i tlak. Pritom moraju odgovarati i ostali uvjeti, poput relativne hrapavosti i načina ulaska fluida.
+
+Ako sustav ima slobodnu površinu ili kapljice, važni postaju i drugi omjeri sila. Za model vala treba paziti na Froudeov broj, a za kapljice i na Weberov broj. Prije prenošenja računalnog rezultata na drugi uređaj zato treba provjeriti koje pojave određuju njegovo ponašanje.
 :::
 
 Tablica sažima sve brojeve poglavlja; ista tablica u skraćenom obliku ulazi u <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. A</span><span class="mf1-ch-title">Sažetak formula i oznaka</span></span>.
@@ -330,7 +332,7 @@ Otpor tijela → **koeficijent otpora** $C_d$; pad tlaka u cijevi → **koeficij
 ## Riješeni primjeri
 
 ::: {#ex-u14-reynoldsov-broj-u-dva-sustava-iste-geometrije .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Reynoldsov broj u dva sustava iste geometrije&nbsp;<span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">P1. Reynoldsov broj u dva sustava iste geometrije&nbsp;<span class="mf1-level">T1</span></p>
 
 **Kontekst:** Mikrohladnjak za snažnu elektroniku ima kanal istog promjera kojim nekad teče rashladna voda, a nekad hidrauličko ulje. Iako je geometrija identična, režim strujanja je posve drukčiji jer ga ne određuje geometrija nego omjer sila.
 
@@ -379,7 +381,7 @@ $$ {#eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-03}
 :::
 
 ::: {#ex-u14-froudeova-slicnost-model-broda-u-vucnom-bazenu .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Froudeova sličnost: model broda u vučnom bazenu&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P2. Froudeova sličnost: model broda u vučnom bazenu&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Brod se prije gradnje ispituje kao umanjeni model u vučnom bazenu. Otpor valova ovisi o Froudeovom broju, pa se brzina modela bira tako da Froudeov broj modela bude jednak onom prototipa.
 
@@ -436,7 +438,7 @@ $$ {#eq-slicnost-rijeseni-primjer-froudeova-slicnost-model-broda-04}
 :::
 
 ::: {#ex-u14-kavitacija-u-venturijevom-suzenju-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Kavitacija u Venturijevom suženju&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P3. Kavitacija u Venturijevom suženju&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U usisnom vodu crpke ugrađen je Venturijev mjerač. Pri velikom protoku tlak u grlu može pasti do tlaka isparavanja, pa nastaje kavitacija — buka, erozija i pad protoka.
 
@@ -498,7 +500,7 @@ $$ {#eq-slicnost-rijeseni-primjer-kavitacija-u-venturijevom-suzen-05}
 :::
 
 ::: {#ex-u14-weberov-i-bondov-broj-raspad-kapi-u .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Weberov i Bondov broj: raspad kapi u struji zraka&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P4. Weberov i Bondov broj: raspad kapi u struji zraka&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Mlaznica raspršuje kap koja se relativnom brzinom giba kroz zrak. Hoće li se kap raspasti ovisi o tome nadvlada li inercija struje zraka silu površinske napetosti koja drži kap na okupu.
 
@@ -550,7 +552,7 @@ $$ {#eq-slicnost-rijeseni-primjer-weberov-i-bondov-broj-raspad-03}
 :::
 
 ::: {#ex-u14-buckinghamova-analiza-otpora-kugle-i-krivulja-cd .mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak — Buckinghamova analiza otpora kugle i krivulja Cd(Re)&nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P5. Buckinghamova analiza otpora kugle i krivulja Cd(Re)&nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** Za izoliranu glatku kuglu u jednolikoj nestlačivoj struji dimenzijska analiza pokazuje da se, unutar zadanih pretpostavki, koeficijent otpora može prikazati krivuljom $C_d(Re)$. Hrapavost, blizina stijenke, slobodna turbulencija ili stlačivost tražili bi dodatne parametre.
 
@@ -574,7 +576,7 @@ Kugla je glatka, struja ustaljena i nestlačiva ($Ma < 0{,}3$). Koristi se $\Pi$
 
 **Rješenje**
 
-### 1. Dimenzijska analiza
+### 1. Dimenzijska analiza {.unnumbered .unlisted .mf1-step}
 
 Varijable $\{F_D, \rho, v, D, \mu\}$ daju $n = 5$, dimenzije $\mathsf{M}, \mathsf{L}, \mathsf{T}$ daju $k = 3$, pa nastaju $\Pi = 5 - 3 = 2$ grupe:
 
@@ -582,13 +584,13 @@ $$
 \Pi_1 = \frac{F_D}{\rho v^2 D^2}, \qquad \Pi_2 = \frac{\rho v D}{\mu} = Re \quad\Rightarrow\quad C_d = f(Re).
 $$ {#eq-slicnost-1-dimenzijska-analiza-01}
 
-#### 2. Reynoldsov broj
+### 2. Reynoldsov broj {.unnumbered .unlisted .mf1-step}
 
 $$
 Re = \frac{v D}{\nu} = \frac{30 \cdot 0{,}020}{1{,}5 \cdot 10^{-5}} = 4{,}0 \cdot 10^{4}.
 $$ {#eq-slicnost-2-reynoldsov-broj-01}
 
-#### 3. Sila otpora i grupa Π₁
+### 3. Sila otpora i grupa Π₁ {.unnumbered .unlisted .mf1-step}
 
 Čeona površina $A = \pi D^2/4 = 3{,}142 \cdot 10^{-4}\ \text{m}^2$. Sila otpora:
 
@@ -626,7 +628,7 @@ Interaktivni prikaz crta krivulju $C_d(Re)$ za zadani model glatke izolirane kug
 :::
 
 ::: {#ex-u14-machov-i-strouhalov-broj-stlacivost-i-vrtlozno .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Machov i Strouhalov broj: stlačivost i vrtložno otpuštanje&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P6. Machov i Strouhalov broj: stlačivost i vrtložno otpuštanje&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Dva pitanja koja statički $Re$ i $Fr$ ne hvataju: smije li se brzi protok zraka računati kao nestlačiv (Mach), i kojom frekvencijom dimnjak otpušta vrtloge na vjetru (Strouhal), uz rizik rezonancije.
 
@@ -725,107 +727,132 @@ Najprije se popišu svi mehanizmi i bezdimenzijski rubni uvjeti koji mogu utjeca
 Šest zadataka napreduje od izravnog računanja dviju grupa, preko izbora referentnih veličina, do samostalne Buckinghamove analize i procjene mjerilnog učinka u modelskom ispitivanju.
 
 ::::: {.mf1-vjezbe-list}
-1. [**T1**]{#task-u14-krv-tece-arteriolom-promjera-brzinom-a-voda} Krv teče arteriolom promjera $D = 0{,}3\ \text{mm}$ brzinom $v = 5\ \text{mm/s}$ ($\nu = 3{,}3 \cdot 10^{-6}\ \text{m}^2/\text{s}$), a voda gradskim vodom promjera $D = 0{,}3\ \text{m}$ brzinom $v = 1{,}5\ \text{m/s}$ ($\nu = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$). Odredi Reynoldsov broj u oba slučaja i prosudi koja sila dominira.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   $Re = vD/\nu$; za kružnu cijev usporedi s orijentacijskim područjima režima, bez prijenosa praga $2300$ na geometriju arteriole.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z1. Reynoldsov broj u arterioli i vodovodu {#task-u14-krv-tece-arteriolom-promjera-brzinom-a-voda .unnumbered .unlisted}
 
-   $Re_{krv} \approx 0{,}45$ — viskoznost dominira; $Re_{voda} \approx 4{,}5 \cdot 10^5$ — inercija dominira.
-   :::
-   ::::
-   **Skica:** da - dva presjeka cijevi vrlo različitih veličina s označenim $D$, $v$.
+Krv teče arteriolom promjera $D = 0{,}3\ \text{mm}$ brzinom $v = 5\ \text{mm/s}$ ($\nu = 3{,}3 \cdot 10^{-6}\ \text{m}^2/\text{s}$), a voda gradskim vodom promjera $D = 0{,}3\ \text{m}$ brzinom $v = 1{,}5\ \text{m/s}$ ($\nu = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$). Odredi Reynoldsov broj u oba slučaja i prosudi koja sila dominira.
 
-2. [**T1**]{#task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom} Zrak struji vodom promjera $D = 100\ \text{mm}$ lokalnim volumenskim protokom $Q = 0{,}5\ \text{m}^3/\text{s}$; brzina zvuka $a = 340\ \text{m/s}$. Odredi brzinu i Machov broj te prosudi je li, bez velikih toplinskih i tlačnih promjena, aproksimacija konstantne gustoće razumna.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+$Re = vD/\nu$; za kružnu cijev usporedi s orijentacijskim područjima režima, bez prijenosa praga $2300$ na geometriju arteriole.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   $v=Q/A$, $Ma=v/a$; vrijednost $0{,}3$ uzmi kao orijentacijski prag.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+$Re_{krv} \approx 0{,}45$ — viskoznost dominira; $Re_{voda} \approx 4{,}5 \cdot 10^5$ — inercija dominira.
+:::
+::::
+**Skica:** da - dva presjeka cijevi vrlo različitih veličina s označenim $D$, $v$.
 
-   $v\approx63{,}7\ \text{m/s}$, $Ma\approx0{,}19$; prema zadanom kriteriju nestlačiva je aproksimacija razumna uz navedene dodatne pretpostavke.
-   :::
-   ::::
-   **Skica:** da - vod zraka s presjekom, oznake $D$, $Q$.
+[Razina: T1]{.mf1-task-level}
 
-3. [**T2**]{#task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak} Na referentnom presjeku usisa crpke apsolutni tlak iznosi $p_{ref}=80\ \text{kPa}$, brzina $v_{ref}=4\ \text{m/s}$, gustoća vode $\rho=1000\ \text{kg/m}^3$, a tlak zasićene pare $p_v=2340\ \text{Pa}$. Ispitivanje iste crpke, pri istoj definiciji referentnog presjeka, daje početak kavitacije pri $\sigma_{kr}=3{,}0$. Odredi kavitacijski broj i usporedi ga s kritičnim.
+### Z2. Machov broj i izbor modela {#task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom .unnumbered .unlisted}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   koristi iste referentne veličine kao u definiciji kritične vrijednosti.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+Zrak struji vodom promjera $D = 100\ \text{mm}$ lokalnim volumenskim protokom $Q = 0{,}5\ \text{m}^3/\text{s}$; brzina zvuka $a = 340\ \text{m/s}$. Odredi brzinu i Machov broj te prosudi je li, bez velikih toplinskih i tlačnih promjena, aproksimacija konstantne gustoće razumna.
 
-   $\sigma_{kav}\approx9{,}7>\sigma_{kr}=3{,}0$; prema zadanoj karakteristici crpka ima rezervu u toj radnoj točki.
-   :::
-   ::::
-   **Skica:** da - usisni vod crpke s označenim $p$, $v$ i razinom $p_v$.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+$v=Q/A$, $Ma=v/a$; vrijednost $0{,}3$ uzmi kao orijentacijski prag.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-4. [**T2**]{#task-u14-kap-goriva-promjera-izlozena-je-relativnoj-struji} Kap goriva promjera $d=0{,}15\ \text{mm}$ izložena je relativnoj struji zraka brzine $v=80\ \text{m/s}$ ($\rho_{zr}=1{,}2\ \text{kg/m}^3$, $\sigma=0{,}025\ \text{N/m}$). Za ovaj pojednostavljeni slučaj zanemari viskozne učinke i kao orijentacijski prag početka aerodinamičkog raspada uzmi $We_{kr}=12$. Odredi Weberov broj i prosudi predviđa li taj kriterij početak raspada. Objasni zašto iz toga još ne slijedi veličina nastalih kapljica.
+$v\approx63{,}7\ \text{m/s}$, $Ma\approx0{,}19$; prema zadanom kriteriju nestlačiva je aproksimacija razumna uz navedene dodatne pretpostavke.
+:::
+::::
+**Skica:** da - vod zraka s presjekom, oznake $D$, $Q$.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   izračunaj $We=\rho_{zr}v^2d/\sigma$ i usporedi ga sa zadanim pragom, ali odvoji „početak raspada” od „kvalitete atomizacije”.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+[Razina: T1]{.mf1-task-level}
 
-   $We\approx46>12$; pojednostavljeni kriterij predviđa raspad, ali bez viskoznosti, omjera gustoća i modela sekundarnog raspada ne određuje raspodjelu veličina kapljica.
-   :::
-   ::::
-   **Skica:** da - mlaznica s kapi u struji zraka, oznake $d$, $v$.
+### Z3. Kavitacijski broj na usisu crpke {#task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak .unnumbered .unlisted}
 
-5. [**T3**]{#task-u14-frekvencija-otpustanja-vrtloga-iza-geometrijski-slicnog-tijela} Frekvencija otpuštanja vrtloga $f$ iza geometrijski sličnog tijela ovisi o brzini neporemećene struje $v$, karakterističnoj duljini $D$, gustoći $\rho$ i dinamičkoj viskoznosti $\mu$. Buckinghamovim postupkom, uz ponavljajuće varijable $\rho$, $v$ i $D$, odredi broj $\Pi$-grupa i pokaži da se rezultat može zapisati kao $St=\Phi(Re)$. Zatim za cilindar promjera $D=0{,}050\ \text{m}$ u zraku gustoće $\rho=1{,}20\ \text{kg/m}^3$ i viskoznosti $\mu=1{,}80\cdot10^{-5}\ \text{Pa s}$ pri $v=12{,}0\ \text{m/s}$ izračunaj $Re$ i frekvenciju ako mjerenje za geometrijski sličan slučaj pri tom režimu daje $St=0{,}190$. Objasni zašto vrijednost $St$ nije izvedena samo dimenzijskom analizom.
+Na referentnom presjeku usisa crpke apsolutni tlak iznosi $p_{ref}=80\ \text{kPa}$, brzina $v_{ref}=4\ \text{m/s}$, gustoća vode $\rho=1000\ \text{kg/m}^3$, a tlak zasićene pare $p_v=2340\ \text{Pa}$. Ispitivanje iste crpke, pri istoj definiciji referentnog presjeka, daje početak kavitacije pri $\sigma_{kr}=3{,}0$. Odredi kavitacijski broj i usporedi ga s kritičnim.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   u popis uključi i zavisnu varijablu $f$; tek potom primijeni $n-k$. Nemoj unaprijed uvrstiti gotove definicije $St$ i $Re$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+koristi iste referentne veličine kao u definiciji kritične vrijednosti.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   $n=5$, $k=3$, pa nastaju dvije grupe; izborom ponavljajućih varijabli dobivaju se $\Pi_1=fD/v=St$ i $\Pi_2=\rho vD/\mu=Re$, odnosno $St=\Phi(Re)$. Za zadani slučaj $Re=4{,}00\cdot10^4$ i $f=St\,v/D=45{,}6\ \text{Hz}$. Dimenzijska analiza određuje oblik ovisnosti, ali broj $St=0{,}190$ dolazi iz mjerenja ili odgovarajućega modela, ne iz samog Buckinghamova postupka.
-   :::
-   ::::
-   **Skica:** da - tijelo u struji, karakteristična duljina $D$, brzina $v$ i periodična vrtložna staza frekvencije $f$.
+$\sigma_{kav}\approx9{,}7>\sigma_{kr}=3{,}0$; prema zadanoj karakteristici crpka ima rezervu u toj radnoj točki.
+:::
+::::
+**Skica:** da - usisni vod crpke s označenim $p$, $v$ i razinom $p_v$.
 
-6. [**T4**]{#task-u14-preljev-brane-ispituje-se-vodenim-modelom-u} Preljev brane ispituje se vodenim modelom u mjerilu $\lambda_L=30$, pri istom gravitacijskom ubrzanju i gustoći kao prototip. Prototip pri projektnom protoku ima brzinu preljeva $v_p=6{,}0\ \text{m/s}$ i protok $Q_p=480\ \text{m}^3/\text{s}$, a odgovarajuća vodoravna sila iznosi $F_p=220\ \text{kN}$. (a) Iz Froudeove sličnosti odredi brzinu i protok modela. (b) Odredi silu na modelu. (c) Za dubinu na modelu $h_m=0{,}25\ \text{m}$ i $\nu=1{,}0\cdot10^{-6}\ \text{m}^2/\text{s}$ izračunaj $Re_m$. Navedi što velik $Re_m$ sugerira, ali i zašto ne dokazuje da je mjerilna pogreška zbog nejednakog $Re$ mala.
+[Razina: T2]{.mf1-task-level}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   čuvaj $Fr$ te koristi $v_m=v_p/\sqrt{\lambda_L}$, $Q_m=Q_p/\lambda_L^{5/2}$ i, zbog jednake gustoće, $F_m=F_p/\lambda_L^3$. Zatim izračunaj $Re_m=v_mh_m/\nu$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z4. Weberov broj i raspad kapi {#task-u14-kap-goriva-promjera-izlozena-je-relativnoj-struji .unnumbered .unlisted}
 
-   $v_m\approx1{,}10\ \text{m/s}$; $Q_m\approx97{,}4\ \text{L/s}$; $F_m\approx8{,}15\ \text{N}$; $Re_m\approx2{,}7\cdot10^5$. Model je vjerojatno turbulentan, ali veličina viskozne mjerilne pogreške mora se provjeriti korekcijom otpora, nizom modelskih mjerila ili podatcima — ne slijedi samo iz oznake „turbulentno”.
-   :::
-   ::::
-   **Skica:** da - preljev brane s modelom i prototipom, slobodna površina, mjerilo $\lambda_L$ i kote $v$, $h_m$.
+Kap goriva promjera $d=0{,}15\ \text{mm}$ izložena je relativnoj struji zraka brzine $v=80\ \text{m/s}$ ($\rho_{zr}=1{,}2\ \text{kg/m}^3$, $\sigma=0{,}025\ \text{N/m}$). Za ovaj pojednostavljeni slučaj zanemari viskozne učinke i kao orijentacijski prag početka aerodinamičkog raspada uzmi $We_{kr}=12$. Odredi Weberov broj i prosudi predviđa li taj kriterij početak raspada. Objasni zašto iz toga još ne slijedi veličina nastalih kapljica.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+izračunaj $We=\rho_{zr}v^2d/\sigma$ i usporedi ga sa zadanim pragom, ali odvoji „početak raspada” od „kvalitete atomizacije”.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$We\approx46>12$; pojednostavljeni kriterij predviđa raspad, ali bez viskoznosti, omjera gustoća i modela sekundarnog raspada ne određuje raspodjelu veličina kapljica.
+:::
+::::
+**Skica:** da - mlaznica s kapi u struji zraka, oznake $d$, $v$.
+
+[Razina: T2]{.mf1-task-level}
+
+### Z5. Dimenzijska analiza otpuštanja vrtloga {#task-u14-frekvencija-otpustanja-vrtloga-iza-geometrijski-slicnog-tijela .unnumbered .unlisted}
+
+Frekvencija otpuštanja vrtloga $f$ iza geometrijski sličnog tijela ovisi o brzini neporemećene struje $v$, karakterističnoj duljini $D$, gustoći $\rho$ i dinamičkoj viskoznosti $\mu$. Buckinghamovim postupkom, uz ponavljajuće varijable $\rho$, $v$ i $D$, odredi broj $\Pi$-grupa i pokaži da se rezultat može zapisati kao $St=\Phi(Re)$. Zatim za cilindar promjera $D=0{,}050\ \text{m}$ u zraku gustoće $\rho=1{,}20\ \text{kg/m}^3$ i viskoznosti $\mu=1{,}80\cdot10^{-5}\ \text{Pa s}$ pri $v=12{,}0\ \text{m/s}$ izračunaj $Re$ i frekvenciju ako mjerenje za geometrijski sličan slučaj pri tom režimu daje $St=0{,}190$. Objasni zašto vrijednost $St$ nije izvedena samo dimenzijskom analizom.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+u popis uključi i zavisnu varijablu $f$; tek potom primijeni $n-k$. Nemoj unaprijed uvrstiti gotove definicije $St$ i $Re$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$n=5$, $k=3$, pa nastaju dvije grupe; izborom ponavljajućih varijabli dobivaju se $\Pi_1=fD/v=St$ i $\Pi_2=\rho vD/\mu=Re$, odnosno $St=\Phi(Re)$. Za zadani slučaj $Re=4{,}00\cdot10^4$ i $f=St\,v/D=45{,}6\ \text{Hz}$. Dimenzijska analiza određuje oblik ovisnosti, ali broj $St=0{,}190$ dolazi iz mjerenja ili odgovarajućega modela, ne iz samog Buckinghamova postupka.
+:::
+::::
+**Skica:** da - tijelo u struji, karakteristična duljina $D$, brzina $v$ i periodična vrtložna staza frekvencije $f$.
+
+[Razina: T3]{.mf1-task-level}
+
+### Z6. Sličnost modela preljeva brane {#task-u14-preljev-brane-ispituje-se-vodenim-modelom-u .unnumbered .unlisted}
+
+Preljev brane ispituje se vodenim modelom u mjerilu $\lambda_L=30$, pri istom gravitacijskom ubrzanju i gustoći kao prototip. Prototip pri projektnom protoku ima brzinu preljeva $v_p=6{,}0\ \text{m/s}$ i protok $Q_p=480\ \text{m}^3/\text{s}$, a odgovarajuća vodoravna sila iznosi $F_p=220\ \text{kN}$. (a) Iz Froudeove sličnosti odredi brzinu i protok modela. (b) Odredi silu na modelu. (c) Za dubinu na modelu $h_m=0{,}25\ \text{m}$ i $\nu=1{,}0\cdot10^{-6}\ \text{m}^2/\text{s}$ izračunaj $Re_m$. Navedi što velik $Re_m$ sugerira, ali i zašto ne dokazuje da je mjerilna pogreška zbog nejednakog $Re$ mala.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+čuvaj $Fr$ te koristi $v_m=v_p/\sqrt{\lambda_L}$, $Q_m=Q_p/\lambda_L^{5/2}$ i, zbog jednake gustoće, $F_m=F_p/\lambda_L^3$. Zatim izračunaj $Re_m=v_mh_m/\nu$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$v_m\approx1{,}10\ \text{m/s}$; $Q_m\approx97{,}4\ \text{L/s}$; $F_m\approx8{,}15\ \text{N}$; $Re_m\approx2{,}7\cdot10^5$. Model je vjerojatno turbulentan, ali veličina viskozne mjerilne pogreške mora se provjeriti korekcijom otpora, nizom modelskih mjerila ili podatcima — ne slijedi samo iz oznake „turbulentno”.
+:::
+::::
+**Skica:** da - preljev brane s modelom i prototipom, slobodna površina, mjerilo $\lambda_L$ i kote $v$, $h_m$.
+
+[Razina: T4]{.mf1-task-level}
 
 :::::
 

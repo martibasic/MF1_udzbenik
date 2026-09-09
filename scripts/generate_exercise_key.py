@@ -34,17 +34,14 @@ WRAPPERS = [
 
 INCLUDE_RE = re.compile(r"\{\{<\s*include\s+\.\./source/([^ >]+)\s*>\}\}")
 TITLE_RE = re.compile(r'^title:\s*["\'](?P<title>.+?)["\']\s*$', re.MULTILINE)
-TASK_RE = re.compile(
-    r"(?m)^(?P<number>\d+)\.\s+\[\*\*(?P<level>T[1-4])\*\*\]"
-    r"\{#(?P<id>task-[A-Za-z0-9-]+)\}\s+(?P<prompt>.+)$"
-)
 HEADING_TASK_RE = re.compile(
-    r"(?m)^###\s+(?P<title>.+?)\s+\{#(?P<id>task-[A-Za-z0-9-]+)\}\s*$"
+    r"(?m)^###\s+Z(?P<number>\d+)\.\s+(?P<title>.+?)\s+"
+    r"\{#(?P<id>task-[A-Za-z0-9-]+)\s+\.unnumbered\s+\.unlisted\}\s*$"
 )
-HEADING_LEVEL_RE = re.compile(
-    r"(?m)^\*\*Razina:\s*(?P<level>T[1-4])\.\*\*\s*(?P<prompt>.*)$"
+TASK_LEVEL_RE = re.compile(
+    r"(?m)^\[Razina:\s*(?P<level>T[1-4])\]\{\.mf1-task-level\}\s*$"
 )
-TASK_ANCHOR_RE = re.compile(r"(?m)^.*\{#task-[A-Za-z0-9-]+\}.*$")
+TASK_ANCHOR_RE = re.compile(r"(?m)^.*\{#task-[A-Za-z0-9-]+\b[^}]*\}.*$")
 HINT_RE = re.compile(
     r"(?ms)^[ \t]*::: \{\.callout-(?:note|tip)[^\n]*data-hint-key=\"true\"[^\n]*\}\s*\n"
     r"[ \t]*### Naputak\s*\n\s*(?P<hint>.*?)\n[ \t]*:::\s*$"
@@ -83,38 +80,26 @@ def tasks_from_source(path: Path) -> list[dict[str, str]]:
         end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
         anchor_line = match.group(0)
         chunk = text[match.end() : end]
-        ordered = TASK_RE.fullmatch(anchor_line)
         heading = HEADING_TASK_RE.fullmatch(anchor_line)
-        if ordered:
-            number = ordered.group("number")
-            level = ordered.group("level")
-            task_id = ordered.group("id")
-            prompt = ordered.group("prompt")
-        elif heading:
-            level_match = HEADING_LEVEL_RE.search(chunk)
-            if not level_match:
-                raise ValueError(f"Zadatak {heading.group('id')} nema razinu")
-            statement_start = level_match.end()
-            statement_tail = chunk[statement_start:]
-            statement_tail = re.split(
-                r"(?m)^\s*:{3,}\s*(?:\{|$)|^###\s+", statement_tail, maxsplit=1
-            )[0]
-            number = str(len(tasks) + 1)
-            level = level_match.group("level")
-            task_id = heading.group("id")
-            statement = " ".join(
-                part for part in (level_match.group("prompt"), statement_tail) if part.strip()
-            )
-            prompt = f"{heading.group('title')} — {statement}"
-        else:
+        if not heading:
             raise ValueError(f"Nepodržan zapis zadatka u {path.name}: {anchor_line}")
+        number = heading.group("number")
+        if int(number) != index + 1:
+            raise ValueError(f"{path.name}: očekivan Z{index + 1}, pronađen Z{number}")
+        level_match = TASK_LEVEL_RE.search(chunk)
+        if not level_match:
+            raise ValueError(f"Zadatak {heading.group('id')} nema razinu")
+        prompt = re.split(
+            r"(?m)^\s*:{3,}\s*(?:\{|$)|^###\s+|^\[Razina:", chunk, maxsplit=1
+        )[0]
         hint_match = HINT_RE.search(chunk)
         answer_match = ANSWER_RE.search(chunk)
         tasks.append(
             {
                 "number": number,
-                "level": level,
-                "id": task_id,
+                "title": heading.group("title"),
+                "level": level_match.group("level"),
+                "id": heading.group("id"),
                 "prompt": compact(prompt),
                 "hint": compact(hint_match.group("hint"), 500) if hint_match else "",
                 "answer": compact(answer_match.group("answer"), 500)
@@ -131,7 +116,7 @@ def build() -> str:
         "",
         "## Ključ naputaka i kontrolnih rezultata",
         "",
-        "Ovaj dodatak odvaja naputke i kontrolne rezultate od teksta zadatka u tiskanom izdanju. Ne zamjenjuje postupak: prije provjere treba zapisati model, pretpostavke, jedinice i barem jednu neovisnu fizikalnu provjeru. Otvoreni T3/T4 zadatci namjerno nemaju jedinstven broj.",
+        "Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom tekstu. Ovaj dodatak sadrži naputke i kontrolne rezultate za tiskano izdanje. Ne zamjenjuje postupak: prije provjere treba zapisati model, pretpostavke, jedinice i barem jednu neovisnu fizikalnu provjeru. Otvoreni zadatci razina T3 i T4 mogu imati više prihvatljivih odgovora.",
         "",
     ]
     seen: set[str] = set()
@@ -147,7 +132,7 @@ def build() -> str:
         if not chapter_tasks:
             raise ValueError(f"Nema zadataka u javnom poglavlju {wrapper_name}")
         lines.extend([f"## {title}", ""])
-        for local_number, task in enumerate(chapter_tasks, start=1):
+        for task in chapter_tasks:
             if task["id"] in seen:
                 raise ValueError(f"Duplicirani stabilni ID: {task['id']}")
             seen.add(task["id"])
@@ -158,7 +143,7 @@ def build() -> str:
             answer = portable_xrefs(task["answer"], wrapper_name)
             lines.extend(
                 [
-                    f"### Zadatak {local_number} · {task['level']} {{#{key_id}}}",
+                    f"### Z{task['number']}. {task['title']} {{#{key_id} .unnumbered .unlisted}}",
                     "",
                     f"[Vrati se na zadatak]({wrapper_name}#{task['id']})",
                     "",

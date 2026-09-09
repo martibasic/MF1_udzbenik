@@ -1,85 +1,59 @@
 ## Dobrodošli u Mehaniku fluida 1
 
-Udžbenik prati studenta kroz petnaest poglavlja. Kurikularna matrica predviđa približno **145 sati rada uz udžbenik** — čitanja, izvođenja, riješenih primjera, samostalnih zadataka i numeričkih pokusa. To nije isto što i cjelokupno ECTS opterećenje kolegija, koje uključuje nastavu, laboratorij, pripremu provjera i ispit. Teorija, riješeni primjeri i samostalni zadatci čitaju se kao **jedan radni tok**, a ne kao tri odvojene cjeline.
+Udžbenik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. Petnaest poglavlja vodi od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i otvorenim kanalima.
 
-::: {.mf1-application}
-<p class="mf1-box-label">Predznanje koje se pretpostavlja</p>
+Za prvo čitanje prati glavni tekst i riješene primjere, zatim samostalno pokušaj početne zadatke. Blokove *Dublje* i napomene o računalnim proračunima možeš ostaviti za kasnije; nisu preduvjet za razumijevanje osnovnog gradiva.
 
-- diferencijalni i integralni račun (Matematika I i II);
-- vektorska analiza i osnove diferencijalnih jednadžbi;
-- mehanika, rad i energija (Fizika I).
+## Predznanje
 
-Ako pojedina matematička tehnika u nekom izvodu nije do kraja poznata, dovoljno je pratiti fizikalni smisao koraka; potpuna ovladanost tehnikom postiže se kasnije, paralelno s vježbanjem.
-:::
+Potrebni su osnove mehanike, rad i energija te račun s jedinicama i vektorima. Diferencijalni i integralni račun koriste se u izvodima, a vektorska analiza osobito je važna za diferencijalni opis toka. Okvir *Prije čitanja poglavlja* navodi konkretno predznanje i ishode koje trebaš usvojiti.
 
-## Što očekivati od svakog poglavlja
+Procijenjeno vrijeme uz poglavlja služi planiranju samostalnog rada. Ukupno je predviđeno približno **145 sati rada uz udžbenik**, uključujući zadatke i numeričke pokuse; to nije cjelokupno ECTS opterećenje kolegija.
 
-Svako poglavlje slijedi isti unutarnji raspored:
+## Kako raditi s poglavljem
 
-1. **Inženjerski kontekst** — kratak okvir koji povezuje temu sa stvarnim sustavima u praksi.
-2. **Fizikalni uvod i matematički izvod** — postupno uvođenje središnjih jednadžbi uz prateća tumačenja u okvirima *Fizikalno značenje*.
-3. **Riješeni primjeri** — pet do sedam odabranih primjera, označenih razinom odluke T1 do T4.
-4. **Zadaci za vježbu** — šest zadataka za samostalan rad: dva T1, dva T2, jedan T3 i jedan T4; pomoć se smanjuje kako raste razina.
-5. **Završni okvir** *Za ponijeti iz poglavlja* — sažeta provjera, najčešća pogreška, granica modela i prijenos prema sljedećem poglavlju.
-6. **Numerički pokus** — obrazac *predvidi → izračunaj → provjeri* koji uvodi integraciju, iteraciju, nesigurnost ili konvergenciju samo kada ona donosi novu fizikalnu spoznaju.
+1. Pročitaj uvod i odredi koje fizikalno pitanje poglavlje rješava.
+2. Uz izvod prati skicu, pretpostavke i značenje svakog člana jednadžbe.
+3. U riješenom primjeru pokušaj sam napisati početnu jednadžbu prije čitanja rješenja.
+4. Riješi zadatke za vježbu. U mrežnom izdanju otvori naputak ili kontrolni rezultat tek nakon vlastitog pokušaja; u PDF-u ih pronađi u dodatku F.
+5. Odgovori na pitanja *Provjeri sebe* i pročitaj završni sažetak.
 
-Svako poglavlje ima pripadni **Jupyter notebook** koji se može pokrenuti bez prijave u JupyterLiteu ili, kao pričuvni put, u Google Colabu. Notebook mora sadržavati izvršivu provjeru rezultata i pitanja interpretacije; klizač zatvorene formule sam po sebi nije numerički laboratorij.
+Kratki primjeri uvode pojedinu relaciju, a cjeloviti zadatci povezuju više koraka. Okviri *Fizikalno značenje* tumače rezultat, dok *Granica modela* objašnjava kada odabrane pretpostavke prestaju vrijediti.
 
-## Tipovi primjera i zadataka
+## Oznake i razine zadataka
 
-Primjeri i zadaci razlikuju se prema razini vođenja koju nude:
+Riješeni primjeri označeni su **P1, P2, … unutar svakog poglavlja**. Oznaka stoji lijevo ispred naslova. Koraci unutar rješenja imaju vlastiti redoslijed 1., 2., 3., bez dodatne numeracije odjeljka.
+
+Zadatci za vježbu označeni su **Z1–Z6 unutar svakog poglavlja**, uz kratak naslov problema. Iste oznake i naslove koristi ključ rezultata u dodatku F. Pri upućivanju navedi i poglavlje, primjerice „poglavlje 3, Z2”.
+
+Razine T1–T4, sitno navedene na kraju zadatka, pokazuju koliko samostalnog izbora zadatak traži, a ne samo koliko je račun dug.
+
+| Razina | Što zadatak traži |
+| --- | --- |
+| **T1** | Primjenu već odabranog zakona. |
+| **T2** | Izbor geometrije, pretvorbu jedinica ili manju odluku o modelu. |
+| **T3** | Izbor ili povezivanje modela uz obrazloženje pretpostavki. |
+| **T4** | Procjenu nesigurnosti, rad s nepotpunim podatcima ili obrazloženu inženjersku odluku. |
+
+U svakom poglavlju šest je samostalnih zadataka, od T1 do T4. Kreni redom; ako zapneš na T1 ili T2, vrati se pripadnom riješenom primjeru. Za T3 i T4 uz rezultat napiši i obrazloženje odabranog postupka.
+
+## Numerički pokusi i izdanja
+
+Numerički pokusi pomažu istražiti kako promjena podataka utječe na rezultat. Prije pokretanja predvidi što će se promijeniti, zatim izračunaj i usporedi s predviđanjem. Bilježnice (*Jupyter notebooks*) otvaraju se preko poveznica ili QR kodova, bez prijave u JupyterLiteu; dostupna je i poveznica za Google Colab.
+
+**Za čitanje i rješavanje zadataka dovoljan je tekst udžbenika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. Za ispis preuzmi PDF.
+
+## Dodaci za brzo snalaženje
+
+- **A — Sažetak formula i oznaka:** podsjetnik na relacije, jedinice i uvjete primjene.
+- **B — Pojmovnik:** kratke definicije i upute na pripadno poglavlje.
+- **C — Tipične pogreške:** pomoć pri traženju pogreške u vlastitom postupku.
+- **D — Numerička mehanika fluida:** dodatno čitanje o numeričkim metodama i provjeri simulacija.
+- **E — Literatura i izvori:** izvori i preporučeno čitanje.
+- **F — Ključ kontrolnih rezultata:** naputci, rezultati i kriteriji za otvorene zadatke.
 
 ::: {.mf1-checklist}
-<p class="mf1-box-label">Kako birati tip zadatka</p>
+<p class="mf1-box-label">Prije završetka zadatka</p>
 
-- **Riješeni primjer** — usvaja se prvi put novi model ili radni ritual; cijeli je postupak raspisan korak po korak. Kraći uvodni slučajevi nose oznaku *Kratki primjer*.
-- **Cjeloviti zadatak** — integracija više ideja iz poglavlja ili priprema za teži ispitni zadatak; postupak je i dalje vođen, ali traži samostalne odluke o modelu, geometriji i predznaku.
-- **Zadaci za vježbu** — niz numeriranih zadataka za samostalan rad na kraju poglavlja; svaki nosi razinu težine, natuknicu i zahtjev za skicu.
-:::
-
-## Razine težine
-
-Svaki zadatak nosi oznaku razine težine:
-
-- **T1** — primjena jednoga već odabranog zakona, bez modelske odluke.
-- **T2** — jedan dominantni model uz geometrijsku, jediničnu ili manju modelsku odluku.
-- **T3** — izbor ili kombiniranje modela uz obrazloženje pretpostavki i granica.
-- **T4** — nepotpuni ili šumni podaci, nesigurnost, kompromis, optimiranje ili obranjena inženjerska odluka.
-
-Studentu se preporučuje da prvih nekoliko zadataka u svakom poglavlju rješava redoslijedom po rastućoj težini, a tek nakon stabilnog T1 i T2 prelazi na T3 i eventualne T4 zadatke.
-
-## Mrežno i tiskano izdanje
-
-Isti izvor sadržaja generira **mrežno izdanje**, **nativni Quarto/Typst PDF** i JupyterLite. Pregled za ispis iz preglednika ostaje pomoćna inačica, a ne primarni PDF proizvod. QR kodovi i javne poveznice provjeravaju se kao dio izgradnje.
-
-::: {.mf1-warning}
-<p class="mf1-box-label">Pravilo čitanja</p>
-
-Kanonski tekst svakog poglavlja razumljiv je i bez interaktivnih elemenata. Interaktivni prikazi nadopunjuju, a ne zamjenjuju, izvod i primjere u tekstu.
-:::
-
-## Dodaci
-
-Šest dodataka strukturno nadopunjuje glavna poglavlja:
-
-- <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. A</span><span class="mf1-ch-title">Sažetak formula i oznaka</span></span> — komprimirani pregled formula, oznaka i uvjeta primjene; služi za brzo podsjećanje prije računa.
-- <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. B</span><span class="mf1-ch-title">Pojmovnik</span></span> — radne definicije temeljnih pojmova; služi za razdvajanje pojmova koji se često miješaju.
-- <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. C</span><span class="mf1-ch-title">Tipične pogreške po poglavljima</span></span> — sustavni katalog načina na koje zadatak zalazi krivim putem; služi kao preventivni filtar prije računa i prije predaje zadatka.
-- <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida (pregled)</span></span> — pregledni dokument koji sažima sve oznake *Numerički most* kroz udžbenik i postavlja ih u jednu cjelinu kao najavu kolegija Računalna dinamika fluida.
-- <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. E</span><span class="mf1-ch-title">Literatura i izvori</span></span> — primarni izvori, norme i preporučeni udžbenici povezani s konkretnim tvrdnjama u tekstu.
-- <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. F</span><span class="mf1-ch-title">Ključ kontrolnih rezultata</span></span> — u tisku odvaja rezultate od teksta zadatka, a otvorene zadatke veže uz kriterije vrednovanja i stabilne ID-jeve.
-
-## Preporučeni redoslijed rada
-
-1. Započni fizičkim pitanjem i nacrtaj **sustav ili kontrolni volumen**.
-2. Odredi osi, pozitivne smjerove, referencu tlaka i granicu sustava.
-3. Napiši pretpostavke prije jednadžbe i provjeri vrijedi li model.
-4. Izvedi ili odaberi bilancu, tek zatim uvrsti podatke.
-5. Provedi najmanje jednu neovisnu provjeru: jedinice, predznak, bilancu, granični slučaj ili red veličine.
-6. Na kraju zapiši što bi u stvarnom sustavu moglo srušiti zaključak te, kada je predviđeno, usporedi s numeričkim pokusom.
-
-::: {.mf1-mini-summary}
-<p class="mf1-box-label">Sažetak za ponijeti</p>
-
-Udžbenik je zamišljen kao jedan radni tok: **izmjeri → idealiziraj → izračunaj → numerički provjeri → procijeni valjanost**. Interaktivni prikazi nadopunjuju, ali ne zamjenjuju, fizičku sliku, izvod i provjeru modela.
+Provjeri skicu, pretpostavke, jedinice i predznak rezultata. Zatim odaberi još jednu provjeru primjerenu zadatku: bilancu, granični slučaj ili očekivani red veličine. Zapiši što rezultat znači za promatrani sustav.
 :::

@@ -25,12 +25,9 @@ $pythonCommand = Resolve-PythonCommand
 
 Push-Location $repoRoot
 try {
+    # Zbirni runner već uključuje qa_audit i verify_physics.
     & $pythonCommand tools/verify_all.py
     Assert-NativeSuccess "provjera numerike"
-    & $pythonCommand tools/verify_physics.py
-    Assert-NativeSuccess "provjera fizikalnih invarijanti"
-    & $pythonCommand tools/qa_audit.py
-    Assert-NativeSuccess "audit neovisnosti verifiera"
     & $pythonCommand tools/audit_publication.py
     Assert-NativeSuccess "audit strukture publikacije"
     & $pythonCommand tools/audit_typst.py
@@ -69,7 +66,7 @@ try {
     # Quarto renderi dijele radnu predmemoriju i zato se namjerno izvode redom.
     quarto render
     Assert-NativeSuccess "HTML render"
-    quarto render --profile pdf
+    quarto render --profile pdf --to typst
     Assert-NativeSuccess "Typst PDF render"
     & $pythonCommand tools/audit_pdf.py
     Assert-NativeSuccess "audit nativnog PDF-a"

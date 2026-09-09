@@ -57,9 +57,11 @@ $$
 $$ {#eq-energijska-bilanca-fizikalni-uvod-i-matematicki-izvod-02}
 
 ::: {.callout-note collapse="true" icon="false"}
-## Numerički trag
+## Ručni račun kao provjera simulacije
 
-Bernoullijeva jednadžba može služiti kao analitička referenca za **verifikaciju** idealiziranoga Eulerova slučaja. U Venturijevoj cijevi tada se uspoređuju isti presjeci i prati približava li se numeričko rješenje referenci pri iteracijskoj i mrežnoj konvergenciji. U viskoznom modelu razlika može sadržavati fizikalni gubitak energije, razliku pretpostavki i numeričku pogrešku; te doprinose treba razdvojiti prije validacijske usporedbe s mjerenjem [@nasa-cfd-vv; @asme-vv20-2009].
+U Venturijevoj cijevi voda ubrzava u suženju, a statički tlak pada. Ako zanemarimo gubitke, promjenu tlaka možemo izračunati Bernoullijevom jednadžbom. To daje jednostavnu provjeru računalnog proračuna: uz iste pretpostavke i na istim presjecima rezultati trebaju biti bliski.
+
+Prostor se u računalnom modelu dijeli na male dijelove. Ponovimo li račun sa sitnijom podjelom, možemo provjeriti približava li se rezultat ručnom računu. Ako uključimo viskoznost, pojavit će se i stvarni gubitci energije, pa razlika prema idealnom računu ne mora značiti pogrešku. Takav model dodatno uspoređujemo s mjerenjem [@nasa-cfd-vv; @asme-vv20-2009].
 :::
 
 ::: {.mf1-interaktivno}
@@ -159,9 +161,11 @@ $$
 $$ {#eq-energijska-bilanca-matematicki-izvod-bernoullijeva-jednadzba-iz-eul-01}
 
 ::: {.callout-note collapse="true" icon="false"}
-## Numerički trag
+## Kada se trenje može zanemariti
 
-Eulerove jednadžbe čine neviskozni model toka. Numerički se rješavaju kada je zanemarivanje viskoznih naprezanja opravdano za traženu izlaznu veličinu; izbor modela ne određuje naziv softvera, nego pretpostavke, rubni uvjeti i mjerodavne skale problema.
+Eulerove jednadžbe opisuju tok u kojem zanemarujemo viskozne sile. Računalo tada može procijeniti, primjerice, kako se brzina i tlak mijenjaju u glatkom suženju ako su gubitci mali.
+
+Takav proračun nije dovoljan kada nas zanima otpor duge cijevi ili sila trenja na stijenci: izostavili bismo upravo pojavu koju želimo izračunati. Prije odabira modela zato treba odrediti što tražimo i koje sile na taj rezultat najviše utječu.
 :::
 
 Nakon množenja s $ds/\rho$ slijedi
@@ -297,7 +301,7 @@ Riješeni primjeri i zadaci za vježbu zato samo redom pokazuju kako isti Bernou
 ## Riješeni primjeri
 
 ::: {#ex-u09-pad-statickog-tlaka-u-konfuzoru-ventilacijskog-kanala .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Pad statičkog tlaka u konfuzoru ventilacijskog kanala&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P1. Pad statičkog tlaka u konfuzoru ventilacijskog kanala&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U sustavu prisilne ventilacije konfuzor (suženje) ubrzava struju zraka prije ulaska u uži dio kanala. Projektant iz masenog protoka i geometrije presjeka određuje pad statičkog tlaka koji se javlja zbog ubrzanja zraka u suženju.
 
@@ -359,7 +363,7 @@ $$ {#eq-energijska-bilanca-rijeseni-primjer-pad-statickog-tlaka-u-konfuzoru-05}
 U suženju se kinetički i tlačni član razmjenjuju unutar voda. Kod slobodnog mlaza ista bilanca najprije daje izlaznu brzinu, a zatim se nastavlja običnom kinematikom čestice.
 
 ::: {#ex-u09-domet-slobodnog-mlaza-iz-velikog-spremnika-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Domet slobodnog mlaza iz velikog spremnika&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P2. Domet slobodnog mlaza iz velikog spremnika&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Iz bočne stijenke velikog otvorenog spremnika voda istječe kroz malu rupicu i tvori slobodni mlaz koji pada na tlo (Torricellijev problem). Treba odrediti vodoravni domet mlaza za nekoliko položaja otvora te onaj položaj koji daje najveći domet.
 
@@ -424,7 +428,7 @@ Slobodni mlaz ne dobiva najveći domet ni iz najviše ni iz najniže postavljeno
 :::
 
 ::: {#ex-u09-privremeni-sifon-za-praznjenje-servisnog-bazena-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Privremeni sifon za praznjenje servisnog bazena&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P3. Privremeni sifon za praznjenje servisnog bazena&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Pri privremenom praznjenju servisnog bazena postavlja se sifon koji premošćuje rub bazena i odvodi vodu u niži ispustni kanal. Operater iz visinske razlike određuje brzinu i protok sifona te provjerava tlak u njegovoj najvišoj točki kako bi se isključila opasnost od isparavanja.
 
@@ -519,7 +523,7 @@ Idealni sifon daje brzinu od oko $8{,}4\ \text{m/s}$ i protok od oko $42\ \text{
 :::
 
 ::: {#ex-u09-idealni-bypass-sifon-sa-suzenjem-u-vrhu .mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak — Idealni bypass-sifon sa suženjem u vrhu i mlaznim ispuštom&nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P4. Idealni bypass-sifon sa suženjem u vrhu i mlaznim ispuštom&nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** Idealizirani bypass-sifon premošćuje rub bazena, ima suženje u najvišoj točki i završava slobodnim vodoravnim mlazom iznad podloge. Traže se protok, brzina i tlak u suženju, modelska razlika prema tlaku pare te vodoravni domet mlaza.
 
@@ -631,7 +635,7 @@ Ovaj cjeloviti zadatak zatvara puni idealni luk poglavlja <span class="mf1-ch-re
 U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> još ne treba crtati komplicirane energetske sheme, ali treba razumjeti osnovnu logiku: `EGL` prati ukupnu mehaničku energiju po jedinici težine, `HGL` zbroj tlačne i geodetske visine, a u idealnom toku `EGL` ostaje vodoravna dok se `HGL` spušta kad raste brzinski član. Upravo to u Venturiju i Pitotu odmah vizualizira što je plaćeno tlakom, a što dobiveno u brzini.
 
 ::: {#ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Venturijeva cijev za mjerenje protoka ulja &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P5. Venturijeva cijev za mjerenje protoka ulja &nbsp;<span class="mf1-level">T2</span></p>
 
 **Primjer za strojare**
 
@@ -692,7 +696,7 @@ Ista Venturijeva cijev u CFD-u daje polje brzine i tlaka, ne samo dvije točke. 
 Venturi protok zaključuje iz razlike statičkih tlakova; Pitotova sonda sljedeća zaključuje brzinu iz razlike stagnacijskog i statičkog tlaka.
 
 ::: {#ex-u09-pitot-staticka-sonda-na-bespilotnoj-letjelici-za .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Pitot-statička sonda na bespilotnoj letjelici za mjerenje brzine leta &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P6. Pitot-statička sonda na bespilotnoj letjelici za mjerenje brzine leta &nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Bespilotne letjelice (dronovi) korištene u geodetskim, poljoprivrednim i inspekcijskim mjerenjima opremljene su Pitot-statičkom sondom za mjerenje vlastite brzine u odnosu na okolni zrak. Sonda mjeri razliku između stagnacijskog tlaka na čelu sonde i statičkog tlaka okolnog strujanja, iz čega se Bernoullijevom jednadžbom izračunava brzina leta.
 
@@ -792,107 +796,133 @@ Gornja granica. Stvarna brzina je manja jer u idealnom modelu nisu uračunati gu
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
-1. [**T1**]{#task-u09-veliki-otvoreni-spremnik-sadrzi-vodu-do-visine} Veliki otvoreni spremnik sadrži vodu do visine $H = 3{,}20\ \text{m}$ iznad osi male bočne sapnice promjera $d = 26\ \text{mm}$. Zanemari gubitke i odredi izlaznu brzinu mlaza, volumenski protok i maseni protok vode.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   između slobodne površine i izlaza vrijedi Torricelli: $v = \sqrt{2gH}$; nakon toga $Q = Av$ i $\dot m = \rho Q$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z1. Istjecanje iz otvorenog spremnika {#task-u09-veliki-otvoreni-spremnik-sadrzi-vodu-do-visine .unnumbered .unlisted}
 
-   $v \approx 7{,}92\ \text{m/s}$; $Q \approx 4{,}21\ \text{L/s}$; $\dot m \approx 4{,}20\ \text{kg/s}$.
-   :::
-   ::::
-   **Skica:** da - veliki spremnik, slobodna površina, izlazna sapnica i geodetska visina $H$.
+Veliki otvoreni spremnik sadrži vodu do visine $H = 3{,}20\ \text{m}$ iznad osi male bočne sapnice promjera $d = 26\ \text{mm}$. Zanemari gubitke i odredi izlaznu brzinu mlaza, volumenski protok i maseni protok vode.
 
-2. [**T1**]{#task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s} Horizontalnim ventilacijskim kanalom smanjuje se presjek s $A_1 = 0{,}060\ \text{m}^2$ na $A_2 = 0{,}020\ \text{m}^2$. Volumenski protok zraka iznosi $Q = 0{,}42\ \text{m}^3/\text{s}$, a gustoća zraka je $\rho = 1{,}20\ \text{kg/m}^3$. Odredi pad statičkog tlaka.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+između slobodne površine i izlaza vrijedi Torricelli: $v = \sqrt{2gH}$; nakon toga $Q = Av$ i $\dot m = \rho Q$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   iz kontinuiteta dobij $v_1$ i $v_2$, a za horizontalni kanal bez gubitaka vrijedi $p_1 + \rho v_1^2/2 = p_2 + \rho v_2^2/2$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+$v \approx 7{,}92\ \text{m/s}$; $Q \approx 4{,}21\ \text{L/s}$; $\dot m \approx 4{,}20\ \text{kg/s}$.
+:::
+::::
+**Skica:** da - veliki spremnik, slobodna površina, izlazna sapnica i geodetska visina $H$.
 
-   $v_1 = 7{,}0\ \text{m/s}$, $v_2 = 21{,}0\ \text{m/s}$; $\Delta p \approx 235\ \text{Pa}$.
-   :::
-   ::::
-   **Skica:** da - horizontalni konfuzor s dva presjeka, brzinama i tlakovima.
+[Razina: T1]{.mf1-task-level}
 
-3. [**T2**]{#task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni} Idealna Venturijeva cijev za vodu ima ulazni promjer $D_1 = 120\ \text{mm}$ i promjer grla $D_2 = 70\ \text{mm}$. Razlika statičkih tlakova između ulaza i grla iznosi $\Delta p = 24\ \text{kPa}$. Odredi brzinu u grlu i volumenski protok kroz Venturi.
+### Z2. Tlak u suženju ventilacijskog kanala {#task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s .unnumbered .unlisted}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   spoji kontinuitet $A_1 v_1 = A_2 v_2$ s Bernoullijem između ulaza i grla, pa riješi dvije nepoznate brzine.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+Horizontalnim ventilacijskim kanalom smanjuje se presjek s $A_1 = 0{,}060\ \text{m}^2$ na $A_2 = 0{,}020\ \text{m}^2$. Volumenski protok zraka iznosi $Q = 0{,}42\ \text{m}^3/\text{s}$, a gustoća zraka je $\rho = 1{,}20\ \text{kg/m}^3$. Odredi pad statičkog tlaka.
 
-   $v_2 \approx 7{,}38\ \text{m/s}$; $Q \approx 28{,}4\ \text{L/s}$.
-   :::
-   ::::
-   **Skica:** da - Venturi s ulazom, grlom i označenom razlikom tlakova $\Delta p$.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+iz kontinuiteta dobij $v_1$ i $v_2$, a za horizontalni kanal bez gubitaka vrijedi $p_1 + \rho v_1^2/2 = p_2 + \rho v_2^2/2$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-4. [**T2**]{#task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok} Pitotova cijev uronjena je u vodeni tok. Razlika između stagnacijskog i statičkog tlaka iznosi $\Delta p = 8{,}5\ \text{kPa}$. Odredi lokalnu brzinu strujanja.
+$v_1 = 7{,}0\ \text{m/s}$, $v_2 = 21{,}0\ \text{m/s}$; $\Delta p \approx 235\ \text{Pa}$.
+:::
+::::
+**Skica:** da - horizontalni konfuzor s dva presjeka, brzinama i tlakovima.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   u Pitotu vrijedi $\Delta p = \rho v^2/2$, pa brzina slijedi iz $v = \sqrt{2\Delta p/\rho}$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+[Razina: T1]{.mf1-task-level}
 
-   $v \approx 4{,}13\ \text{m/s}$.
-   :::
-   ::::
-   **Skica:** da - strujna cijev s Pitot otvorom, stagnacijska i statička točka.
+### Z3. Protok kroz Venturijevu cijev {#task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni .unnumbered .unlisted}
 
-5. [**T3**]{#task-u09-idealni-sifon-prazni-otvoreni-spremnik-razlika-razina} Idealni sifon prazni otvoreni spremnik. Razlika razina između slobodne površine u spremniku i izlaza sifona iznosi $\Delta z = 2{,}8\ \text{m}$, a vrh sifona nalazi se $1{,}1\ \text{m}$ iznad slobodne površine. Odredi brzinu strujanja, apsolutni tlak u vrhu sifona te položaj HGL-a u vrhu u odnosu na slobodnu površinu. Ako je $p_{atm} = 101\ \text{kPa}$ i tlak zasićene pare $p_v=2{,}34\ \text{kPa}$, procijeni postoji li u idealnom radnom stanju kavitacijska rezerva.
+Idealna Venturijeva cijev za vodu ima ulazni promjer $D_1 = 120\ \text{mm}$ i promjer grla $D_2 = 70\ \text{mm}$. Razlika statičkih tlakova između ulaza i grla iznosi $\Delta p = 24\ \text{kPa}$. Odredi brzinu u grlu i volumenski protok kroz Venturi.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   brzinu dobij iz Bernoullija između slobodne površine i izlaza, a tlak u vrhu iz Bernoullija između slobodne površine i vrha sifona. Uz manometarski tlak vrijedi $HGL_C=z_C+p_{M,C}/(\rho g)$, dok se kavitacija provjerava apsolutnim tlakom.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+spoji kontinuitet $A_1 v_1 = A_2 v_2$ s Bernoullijem između ulaza i grla, pa riješi dvije nepoznate brzine.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   $v \approx 7{,}41\ \text{m/s}$; $p_C \approx 62{,}8\ \text{kPa}$ (aps.); $HGL_C=-2{,}8\ \text{m}$ u odnosu na slobodnu površinu; $p_C-p_v\approx60{,}5\ \text{kPa}$, pa idealni račun pokazuje pozitivnu rezervu.
-   :::
-   ::::
-   **Skica:** da - spremnik, sifonska cijev, vrh sifona, izlaz i visinske kote.
+$v_2 \approx 7{,}38\ \text{m/s}$; $Q \approx 28{,}4\ \text{L/s}$.
+:::
+::::
+**Skica:** da - Venturi s ulazom, grlom i označenom razlikom tlakova $\Delta p$.
 
-6. [**T4**]{#task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako} Idealni sifon promjera $D = 70\ \text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\Delta z = 2{,}6\ \text{m}$ ispod slobodne površine. Vrh sifona je $z_C = 1{,}7\ \text{m}$ iznad slobodne površine, a izlaz se nalazi $1{,}2\ \text{m}$ iznad tla. Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza ako je $p_{atm} = 101{,}3\ \text{kPa}$. Zatim razmotri izvedeni sustav: ukupni koeficijent gubitaka od spremnika do izlaza iznosi $K_\Sigma=2{,}0\pm0{,}5$, a do vrha sifona $K_C=1{,}2\pm0{,}3$; oba su definirana uz brzinu u sifonu. Odredi nominalni stvarni protok i konzervativne granice protoka i tlaka u vrhu. Može li se zajamčiti zahtjev $Q\ge15{,}0\ \text{L/s}$ i $p_C\ge30\ \text{kPa}$ apsolutno?
+[Razina: T2]{.mf1-task-level}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   Bernoullijem između slobodne površine i izlaza vrati idealni $v$, između slobodne površine i vrha sifona vrati tlak, a domet mlaza zatvori kao vodoravno izbačeno tijelo s visine $1{,}2\ \text{m}$. Za izvedeni sustav koristi $v=\sqrt{2g\Delta z/(1+K_\Sigma)}$ i $p_C=p_{atm}-\rho g[z_C+(1+K_C)v^2/(2g)]$. Najmanji protok daje najveći $K_\Sigma$; najmanji tlak u vrhu provjeri konzervativnim kutovima zadanih intervala, ne samo nominalnim koeficijentima.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z4. Brzina iz Pitotova mjerenja {#task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok .unnumbered .unlisted}
 
-   Idealni model daje $v \approx 7{,}14\ \text{m/s}$; $Q \approx 27{,}5\ \text{L/s}$; $p_C \approx 59{,}2\ \text{kPa}$ (aps.); domet $x \approx 3{,}53\ \text{m}$. Za $K_\Sigma=2{,}0$ stvarni je protok približno $15{,}9\ \text{L/s}$, a za interval $K_\Sigma=1{,}5$--$2{,}5$ iznosi približno $17{,}4$--$14{,}7\ \text{L/s}$. Konzervativni tlak u vrhu ostaje oko $59{,}2\ \text{kPa}$ apsolutno, pa je tlačni zahtjev zadovoljen, ali se zahtjev protoka ne može zajamčiti. Potrebno je smanjiti gubitke, povećati promjer ili potvrditi $K_\Sigma$ mjerenjem.
-   :::
-   ::::
-   **Skica:** da - spremnik, sifonska cijev s vrhom $C$, vodoravni izlaz i domet mlaza do tla.
+Pitotova cijev uronjena je u vodeni tok. Razlika između stagnacijskog i statičkog tlaka iznosi $\Delta p = 8{,}5\ \text{kPa}$. Odredi lokalnu brzinu strujanja.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+u Pitotu vrijedi $\Delta p = \rho v^2/2$, pa brzina slijedi iz $v = \sqrt{2\Delta p/\rho}$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$v \approx 4{,}13\ \text{m/s}$.
+:::
+::::
+**Skica:** da - strujna cijev s Pitot otvorom, stagnacijska i statička točka.
+
+[Razina: T2]{.mf1-task-level}
+
+### Z5. Tlak u vrhu sifona {#task-u09-idealni-sifon-prazni-otvoreni-spremnik-razlika-razina .unnumbered .unlisted}
+
+Idealni sifon prazni otvoreni spremnik. Razlika razina između slobodne površine u spremniku i izlaza sifona iznosi $\Delta z = 2{,}8\ \text{m}$, a vrh sifona nalazi se $1{,}1\ \text{m}$ iznad slobodne površine. Odredi brzinu strujanja, apsolutni tlak u vrhu sifona te položaj HGL-a u vrhu u odnosu na slobodnu površinu. Ako je $p_{atm} = 101\ \text{kPa}$ i tlak zasićene pare $p_v=2{,}34\ \text{kPa}$, procijeni postoji li u idealnom radnom stanju kavitacijska rezerva.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+brzinu dobij iz Bernoullija između slobodne površine i izlaza, a tlak u vrhu iz Bernoullija između slobodne površine i vrha sifona. Uz manometarski tlak vrijedi $HGL_C=z_C+p_{M,C}/(\rho g)$, dok se kavitacija provjerava apsolutnim tlakom.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$v \approx 7{,}41\ \text{m/s}$; $p_C \approx 62{,}8\ \text{kPa}$ (aps.); $HGL_C=-2{,}8\ \text{m}$ u odnosu na slobodnu površinu; $p_C-p_v\approx60{,}5\ \text{kPa}$, pa idealni račun pokazuje pozitivnu rezervu.
+:::
+::::
+**Skica:** da - spremnik, sifonska cijev, vrh sifona, izlaz i visinske kote.
+
+[Razina: T3]{.mf1-task-level}
+
+### Z6. Sifon i putanja izlaznog mlaza {#task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako .unnumbered .unlisted}
+
+Idealni sifon promjera $D = 70\ \text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\Delta z = 2{,}6\ \text{m}$ ispod slobodne površine. Vrh sifona je $z_C = 1{,}7\ \text{m}$ iznad slobodne površine, a izlaz se nalazi $1{,}2\ \text{m}$ iznad tla. Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza ako je $p_{atm} = 101{,}3\ \text{kPa}$. Zatim razmotri izvedeni sustav: ukupni koeficijent gubitaka od spremnika do izlaza iznosi $K_\Sigma=2{,}0\pm0{,}5$, a do vrha sifona $K_C=1{,}2\pm0{,}3$; oba su definirana uz brzinu u sifonu. Odredi nominalni stvarni protok i konzervativne granice protoka i tlaka u vrhu. Može li se zajamčiti zahtjev $Q\ge15{,}0\ \text{L/s}$ i $p_C\ge30\ \text{kPa}$ apsolutno?
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+Bernoullijem između slobodne površine i izlaza vrati idealni $v$, između slobodne površine i vrha sifona vrati tlak, a domet mlaza zatvori kao vodoravno izbačeno tijelo s visine $1{,}2\ \text{m}$. Za izvedeni sustav koristi $v=\sqrt{2g\Delta z/(1+K_\Sigma)}$ i $p_C=p_{atm}-\rho g[z_C+(1+K_C)v^2/(2g)]$. Najmanji protok daje najveći $K_\Sigma$; najmanji tlak u vrhu provjeri konzervativnim kutovima zadanih intervala, ne samo nominalnim koeficijentima.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+Idealni model daje $v \approx 7{,}14\ \text{m/s}$; $Q \approx 27{,}5\ \text{L/s}$; $p_C \approx 59{,}2\ \text{kPa}$ (aps.); domet $x \approx 3{,}53\ \text{m}$. Za $K_\Sigma=2{,}0$ stvarni je protok približno $15{,}9\ \text{L/s}$, a za interval $K_\Sigma=1{,}5$--$2{,}5$ iznosi približno $17{,}4$--$14{,}7\ \text{L/s}$. Konzervativni tlak u vrhu ostaje oko $59{,}2\ \text{kPa}$ apsolutno, pa je tlačni zahtjev zadovoljen, ali se zahtjev protoka ne može zajamčiti. Potrebno je smanjiti gubitke, povećati promjer ili potvrditi $K_\Sigma$ mjerenjem.
+:::
+::::
+**Skica:** da - spremnik, sifonska cijev s vrhom $C$, vodoravni izlaz i domet mlaza do tla.
+
+[Razina: T4]{.mf1-task-level}
+
 :::::
 
 ![Skice uz zadatke za vježbu — sapnice, Venturijeve cijevi, Pitot i sifoni.](../assets/print/u09_vjezbe_skice.svg){#fig-u09-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — sapnice, Venturijeve cijevi, Pitot i sifoni."}

@@ -5,6 +5,52 @@ pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
 ## Unreleased — tehnički spremno za `1.0-rc1`
 
+### Urednička dorada — 9. rujna 2026.
+
+- Riješeni primjeri dobili su oznake P1, P2, … unutar svakog poglavlja.
+  Numeracija se automatski usklađuje i provjerava. Koraci rješenja imaju
+  jedinstvenu razinu naslova i samo svoj redni broj; uklonjene su dvostruke
+  oznake poput „2.6.1 1.” i pogrešno ugniježđeni koraci. Isto pravilo vrijedi
+  za korake računalnog proračuna u dodatku D.
+- Svih 87 riješenih primjera i cjelovitih vođenih zadataka ima izravni
+  naslov problema, bez ponovljenog generičkog prefiksa. U HTML-u i PDF-u
+  uklonjene su vertikalne crte i lijeve uvlake tih blokova, uključujući
+  mobilni prikaz i preglednički ispis.
+- Svih 90 samostalnih zadataka ima oznaku Z1–Z6 unutar poglavlja i kratak
+  naslov problema. Razina T1–T4 sitna je oznaka na kraju, desno; uklonjeno je
+  miješanje popisne i odjeljačne numeracije. Ključ rezultata preuzima isti
+  broj i naslov te provjerava redoslijed. Usklađene su i oznake na skicama.
+- Svih 15 kratkih napomena s naslovom „Numerički trag” (11 u javnom toku)
+  dobilo je opisne naslove i pristupačnije objašnjenje preko fizikalnog
+  sustava. Divergencija je objašnjena kao lokalno širenje ili sabijanje
+  fluida; uklonjeni su preuranjeni nazivi algoritama i neobjašnjeni stručni
+  izrazi. Uvod u CFD usklađen je s tim pristupom.
+- Skraćene studentske upute i početna stranica: jasnije je odakle početi,
+  kako koristiti razine T1–T4 te što se može ostaviti za dodatno čitanje.
+  Uklonjena su ponavljanja u sažetku formula i tehnički detalji iz studentskog uvoda.
+- U01 razlikuje lokalni i srednji tlak te gustoću. U09 ispravlja zapis
+  `dρ/ρ = −Ma² dv/v`, navodi izentropske pretpostavke, definira `γ = cp/cv`
+  i dosljedno koristi oznaku `Ma` za Machov broj. Izvod površina–brzina
+  uspoređen je s [NASA-inim izvodom](https://www.grc.nasa.gov/www/k-12/airplane/tunnozt.html).
+- U12 uklanja pogrešnu implikaciju da nejednolik profil nužno znači
+  konvektivno ubrzanje i definira brzinu trenja magnitudom zidnog naprezanja.
+- U11 više ne traži prethodno čitanje kasnijeg U13; opis dimenzija
+  razlikuje mehaničke od toplinskih veličina.
+- U15 zadržava tlačne sile u objašnjenju bilance hidrauličkog skoka,
+  uklanja nedosljednost zbog preranog zaokruživanja u primjeru bazena
+  (`ex-hidraulicki-skok-bazen`) i navodi SI jedinicu Manningova koeficijenta.
+- Sažetak formula i pojmovnik usklađeni su s glavnim tekstom: dopunjeni su
+  uvjeti energijske i količinske bilance, značenja višeznačnih oznaka,
+  Bondov i Froudeov broj te razlika između disipacije mehaničke i očuvanja
+  ukupne energije.
+- Lokalna i CI izgradnja više zasebno ne ponavljaju dvije provjere koje
+  već izvodi `verify_all.py`; opseg provjera ostaje isti.
+  PDF korak izričito bira `--to typst` i ne ponavlja naslijeđeni HTML render.
+- PDF više dvostruko ne numerira uokvirene jednadžbe: uklonjena je
+  naslijeđena numeracija unutarnje formule koju Pandoc stvara za `\boxed`.
+  Time se uklanjaju preklapanja brojeva i pogrešni pomaci numeracije.
+  Oznaka i naslov poglavlja u PDF referencama odvajaju se razmakom.
+
 Sekvencijski proizvodni build i tehnički QA prolaze. Kandidat još nije javno
 deployan niti je proglašen izdanjem `v1.0`; za to ostaju obvezne dvije neovisne
 stručne recenzije i studentski pilot.

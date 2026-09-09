@@ -240,9 +240,11 @@ $$ {#eq-turbostrojevi-matematicki-izvod-eulerova-turbinska-jednadzba-i-05}
 Iz Eulerove jednadžbe odmah se vidi da korisni rad ne daje bilo koja komponenta brzine, nego promjena tangencijalne količine gibanja — to je razlog zašto su ulazni i izlazni kutovi lopatica središnji projektni parametri svakoga turbostroja.
 
 ::: {.callout-note collapse="true" icon="false"}
-## Numerički trag
+## Strujanje gledano s lopatice
 
-Moment količine gibanja na rotoru i razdvajanje apsolutne i relativne brzine ($\vec{c} = \vec{w} + \vec{u}$) jezgra je **rotacijskog CFD-a** za pumpe, ventilatore, kompresore i turbine. **MRF metoda** (Multiple Reference Frame) rješava Navier-Stokesa u rotirajućem sustavu — gleda fluid očima lopatice, jednako kao u izvodu u ovom poglavlju — i dodaje Coriolisovu i centrifugalnu silu kao izvorne članove. Za nestacionarne fenomene (interakcija rotor-stator, pulsacije) koristi se **klizajuća mreža (engl. sliding mesh)**: rotorska mreža fizički kliže uz statorsku.
+Promatrač koji miruje uz crpku i promatrač koji se vrti s lopaticom vide različite brzine istog fluida. Računalo može iskoristiti pogled s lopatice: ona u tom prikazu miruje, a njezina vrtnja uzima se u obzir u jednadžbama gibanja. To olakšava procjenu prosječnog momenta i snage rotora.
+
+Za promjene tlaka koje nastaju svaki put kada lopatica prođe pokraj nepomičnog dijela crpke treba pratiti gibanje kroz vrijeme. Izbor postupka zato ovisi o pitanju: tražimo li prosječnu snagu ili i promjene opterećenja tijekom jednog okreta?
 :::
 
 ::: {.mf1-interaktivno}
@@ -345,7 +347,7 @@ To je pravi strojarski smisao <span class="mf1-ch-ref"><span class="mf1-ch-code"
 ## Riješeni primjeri
 
 ::: {#ex-u12-vodilica-mlaza-na-ispitnom-stolu-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Vodilica mlaza na ispitnom stolu&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P1. Vodilica mlaza na ispitnom stolu&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Na hidrauličkom ispitnom stolu nepomična vodilica skreće pravokutni mlaz vode u horizontalnoj ravnini za određeni kut, pri čemu se brzina zbog gubitaka smanjuje. Iz promjene količine gibanja određuje se reakcijska sila na nosač vodilice, što je tipičan ulazni primjer za analizu sila na lopaticama.
 
@@ -423,7 +425,7 @@ $$ {#eq-turbostrojevi-rijeseni-primjer-vodilica-mlaza-na-ispitnom-stol-07}
 
 
 ::: {#ex-u12-relativni-dotok-na-pokretnu-lopaticu-t1 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Relativni dotok na pokretnu lopaticu&nbsp;<span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">P2. Relativni dotok na pokretnu lopaticu&nbsp;<span class="mf1-level">T1</span></p>
 
 **Kontekst:** Kada se lopatica giba u smjeru mlaza, kroz njezin pokretni kontrolni volumen ulazi samo relativni protok određen razlikom brzina mlaza i lopatice. Ovaj uvodni primjer pokazuje koliko se taj efektivni protok razlikuje od punog sapničkog protoka, što je osnovna postavka za rad svake turbine s djelomično zahvaćenim mlazom.
 
@@ -489,7 +491,7 @@ odnosno oko $63{,}7\%$ punog sapničkog protoka.
 :::
 
 ::: {#ex-u12-pokretna-ravna-lopatica-u-mlazu-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Pokretna ravna lopatica u mlazu&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P3. Pokretna ravna lopatica u mlazu&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Ravna pokretna lopatica koja se giba u smjeru mlaza prima samo dio impulsa fluida i time crpi snagu iz mlaza. Iz relativnog dotoka i promjene apsolutne brzine određuju se sila i snaga koje lopatica predaje nosaču, što je didaktička priprema za rotorne lopatice.
 
@@ -547,7 +549,7 @@ $$ {#eq-turbostrojevi-rijeseni-primjer-pokretna-ravna-lopatica-u-mlazu-04}
 :::
 
 ::: {#ex-u12-pokretna-zakrivljena-lopatica-s-relativnim-izlazom-t3 .mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak — Pokretna zakrivljena lopatica s relativnim izlazom&nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P4. Pokretna zakrivljena lopatica s relativnim izlazom&nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** Zakrivljena lopatica koja se giba u smjeru mlaza skreće relativni tok pod određenim kutom, a izlazna relativna brzina je manja od ulazne zbog gubitaka u kanalu lopatice. Iz vektorskog zbrajanja relativnih i transportnih brzina određuju se sila i snaga koje fluid predaje lopatici, što je radni model jedne lopatice rotorskog stroja.
 
@@ -629,7 +631,7 @@ Ovaj cjeloviti zadatak zatvara puni prijelaz kroz <span class="mf1-ch-ref"><span
 :::
 
 ::: {#ex-u12-peltonov-rotor-s-jednim-mlazom-i-momentom .mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak — Reprezentativna Peltonova lopatica i trenutačni moment&nbsp;<span class="mf1-level">T4</span></p>
+<p class="mf1-box-label">P5. Reprezentativna Peltonova lopatica i trenutačni moment&nbsp;<span class="mf1-level">T4</span></p>
 
 **Kontekst:** Jedna reprezentativna Peltonova lopatica prolazi kroz mlaz pri zadanoj obodnoj brzini. Iz tangencijalne komponente sile izvode se njezin trenutačni doprinos momentu i snazi. Budući da se koristi maseni protok kroz kontrolni volumen vezan uz jednu lopaticu, rezultat nije kontinuirana snaga cijeloga višelopatičnog rotora.
 
@@ -730,7 +732,7 @@ Ovaj `T4` zadatak zatvara račun reprezentativne lopatice u <span class="mf1-ch-
 Posljednji primjer mijenja medij i uređaj, ali ne i metodu: Peltonov impulsni rotor zamjenjuje aktuatorski disk, a bilanca količine gibanja povezuje potisak, induciranu brzinu i snagu.
 
 ::: {#ex-u12-propeler-dronskog-kvadkoptera-u-stanju-visa-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Propeler dronskog kvadkoptera u stanju visa &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P6. Propeler dronskog kvadkoptera u stanju visa &nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Kvadkopterski dron za potrebe geodetske izmjere i inspekcije infrastrukture ima četiri istovjetna propelera. U stacionarnom visu (zadržavanju nepomičnog položaja u zraku) propeleri moraju razviti ukupni potisak jednak težini cijelog drona. Pojednostavljeni proračun potiska iz teorije aktuatorskog diska omogućuje procjenu mehaničke snage svakog propelera, što je ključno za određivanje trajanja leta na jednom punjenju baterije.
 
@@ -846,107 +848,133 @@ Vrijedi za rotirajuće lopatične strojeve u kojima fluid mijenja smjer ili izno
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
-1. [**T1**]{#task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice} Vodeni mlaz brzine $v = 24\ \text{m/s}$ izlazi iz kružne sapnice promjera $d = 22\ \text{mm}$ i udara okomito na nepomičnu ravnu ploču. Odredi silu na ploču.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   $\dot m = \rho Av$, a za potpuno kočenje komponente brzine na ploči vrijedi $F = \dot m v$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z1. Sila mlaza na nepomičnu ploču {#task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice .unnumbered .unlisted}
 
-   $\dot m \approx 9{,}1\ \text{kg/s}$; $F \approx 219\ \text{N}$.
-   :::
-   ::::
-   **Skica:** da - sapnica, ravna ploča i os mlaza sa silom reakcije.
+Vodeni mlaz brzine $v = 24\ \text{m/s}$ izlazi iz kružne sapnice promjera $d = 22\ \text{mm}$ i udara okomito na nepomičnu ravnu ploču. Odredi silu na ploču.
 
-2. [**T1**]{#task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice} Vodeni mlaz brzine $v = 26\ \text{m/s}$ izlazi iz pravokutne sapnice širine $b = 30\ \text{mm}$ i visine $h = 16\ \text{mm}$ te udara u nepomičnu vodilicu koja tok zakreće za $110^\circ$ bez promjene iznosa brzine. Odredi komponente sile fluida na vodilicu i iznos reakcije nosača.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+$\dot m = \rho Av$, a za potpuno kočenje komponente brzine na ploči vrijedi $F = \dot m v$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   iz presjeka dobij $\dot m$, a zatim razliku ulazne i izlazne komponente brzine u x i y smjeru.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+$\dot m \approx 9{,}1\ \text{kg/s}$; $F \approx 219\ \text{N}$.
+:::
+::::
+**Skica:** da - sapnica, ravna ploča i os mlaza sa silom reakcije.
 
-   $\dot m \approx 12{,}5\ \text{kg/s}$; $F_x \approx 435\ \text{N}$, $F_y \approx -304\ \text{N}$; reakcija nosača $\approx 531\ \text{N}$.
-   :::
-   ::::
-   **Skica:** da - zakrenuta nepomična vodilica, ulazni i izlazni vektor brzine.
+[Razina: T1]{.mf1-task-level}
 
-3. [**T2**]{#task-u12-na-pokretnu-lopaticu-dolazi-mlaz-vode-apsolutnom} Na pokretnu lopaticu dolazi mlaz vode apsolutnom brzinom $v_1 = 32\ \text{m/s}$, dok se lopatica giba brzinom $u = 12\ \text{m/s}$ u smjeru mlaza. Pretpostavi da je relativna izlazna brzina po iznosu jednaka ulaznoj i zakrenuta za $150^\circ$ u odnosu na ulazni relativni smjer. Ako je maseni protok $\dot{m} = 18\ \text{kg/s}$, odredi tangencijalnu silu na lopaticu i snagu koju mlaz predaje lopatici.
+### Z2. Zakretanje mlaza u vodilici {#task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice .unnumbered .unlisted}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   prijeđi na relativne brzine, zatim vrati apsolutnu izlaznu brzinu i iz tangencijalne promjene količine gibanja dobij silu; snaga je $P = Fu$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+Vodeni mlaz brzine $v = 26\ \text{m/s}$ izlazi iz pravokutne sapnice širine $b = 30\ \text{mm}$ i visine $h = 16\ \text{mm}$ te udara u nepomičnu vodilicu koja tok zakreće za $110^\circ$ bez promjene iznosa brzine. Odredi komponente sile fluida na vodilicu i iznos reakcije nosača.
 
-   $w_1 = 20\ \text{m/s}$; $F_t \approx 672\ \text{N}$; $P \approx 8{,}06\ \text{kW}$.
-   :::
-   ::::
-   **Skica:** da - pokretna lopatica, brzina lopatice $u$, ulazni i izlazni trokut brzina.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+iz presjeka dobij $\dot m$, a zatim razliku ulazne i izlazne komponente brzine u x i y smjeru.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-4. [**T2**]{#task-u12-peltonova-lopatica-na-rotoru-radijusa-prima-mlaz} Peltonova lopatica na rotoru radijusa $R = 0{,}42\ \text{m}$ prima mlaz vode masenog protoka $\dot m = 24\ \text{kg/s}$. Tangencijalna komponenta apsolutne brzine na ulazu iznosi $v_{u1} = 28\ \text{m/s}$, a na izlazu $v_{u2} = 6\ \text{m/s}$. Odredi tangencijalnu silu na lopaticu i moment na vratilu.
+$\dot m \approx 12{,}5\ \text{kg/s}$; $F_x \approx 435\ \text{N}$, $F_y \approx -304\ \text{N}$; reakcija nosača $\approx 531\ \text{N}$.
+:::
+::::
+**Skica:** da - zakrenuta nepomična vodilica, ulazni i izlazni vektor brzine.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   tangencijalna sila slijedi iz $F_t = \dot m (v_{u1} - v_{u2})$, a moment je $M = F_t R$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+[Razina: T1]{.mf1-task-level}
 
-   $F_t = 528\ \text{N}$; $M \approx 222\ \text{N·m}$.
-   :::
-   ::::
-   **Skica:** da - rotor, polumjer $R$, mlaz i tangencijalne komponente brzine na ulazu i izlazu.
+### Z3. Sila na pokretnu lopaticu {#task-u12-na-pokretnu-lopaticu-dolazi-mlaz-vode-apsolutnom .unnumbered .unlisted}
 
-5. [**T3**]{#task-u12-potisni-modul-ima-tri-jednake-sapnice-promjera} Potisni modul ima tri jednake sapnice promjera $d = 30\ \text{mm}$. Iz svake sapnice voda izlazi brzinom $v = 42\ \text{m/s}$ u suprotnom smjeru od gibanja platforme. Odredi ukupni potisak modula i hidrauličku snagu mlaza ako je gustoća vode $\rho = 998\ \text{kg/m}^3$.
+Na pokretnu lopaticu dolazi mlaz vode apsolutnom brzinom $v_1 = 32\ \text{m/s}$, dok se lopatica giba brzinom $u = 12\ \text{m/s}$ u smjeru mlaza. Pretpostavi da je relativna izlazna brzina po iznosu jednaka ulaznoj i zakrenuta za $150^\circ$ u odnosu na ulazni relativni smjer. Ako je maseni protok $\dot{m} = 18\ \text{kg/s}$, odredi tangencijalnu silu na lopaticu i snagu koju mlaz predaje lopatici.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   za jednu sapnicu vrijedi $F = \dot m v$ i $P = \dot m v^2/2$; ukupni rezultat je trostruki zbroj.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+prijeđi na relativne brzine, zatim vrati apsolutnu izlaznu brzinu i iz tangencijalne promjene količine gibanja dobij silu; snaga je $P = Fu$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   ukupni potisak $\approx 3{,}73\ \text{kN}$; hidraulička snaga $\approx 78{,}4\ \text{kW}$.
-   :::
-   ::::
-   **Skica:** da - platforma s tri sapnice, smjer mlaza i rezultantni potisak.
+$w_1 = 20\ \text{m/s}$; $F_t \approx 672\ \text{N}$; $P \approx 8{,}06\ \text{kW}$.
+:::
+::::
+**Skica:** da - pokretna lopatica, brzina lopatice $u$, ulazni i izlazni trokut brzina.
 
-6. [**T4**]{#task-u12-mlazna-platforma-ukupne-mase-ima-cetiri-jednake} Mlazna platforma ukupne mase $m = 110\ \text{kg}$ ima četiri jednake sapnice promjera $d = 28\ \text{mm}$. Voda gustoće $\rho=998\ \text{kg/m}^3$ iz svake sapnice izlazi okomito prema dolje brzinom $v = 36\ \text{m/s}$. Odredi ukupni potisak, najveću ukupnu masu koju takav sustav može držati u lebdenju i vertikalno ubrzanje platforme pri zadanoj masi sustava. Stvarni promjer svake sapnice može biti $0{,}3\ \text{mm}$ manji od nazivnoga, a regulirana brzina mlaza do $1{,}5\ \text{m/s}$ manja od zadane. Ako zadani statički kriterij traži najmanje $10\ \%$ rezerve potiska iznad težine, odredi najveću masu koja ga zadovoljava i objasni zašto se ta vrijednost ne smije nazvati certificiranom nosivošću platforme.
+[Razina: T2]{.mf1-task-level}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   najprije zbroji izlazne površine svih sapnica; zatim koristi $F_p = \rho A v^2$, uvjet lebdenja $F_p = mg$ i za zadanu masu Newtonov zakon $a = (F_p - mg)/m$. Za masu prema zadanom kriteriju izračunaj najmanji potisak s $d_{min}$ i $v_{min}$ te postavi $F_{p,min}=1{,}10\,m_{krit}g$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z4. Moment i snaga Peltonove lopatice {#task-u12-peltonova-lopatica-na-rotoru-radijusa-prima-mlaz .unnumbered .unlisted}
 
-   $F_p \approx 3{,}19\ \text{kN}$; najveća masa lebdenja $\approx 325\ \text{kg}$; pri $m = 110\ \text{kg}$ ubrzanje $a \approx 19{,}2\ \text{m/s}^2$. Za $d_{min}=27{,}7\ \text{mm}$ i $v_{min}=34{,}5\ \text{m/s}$ najmanji je potisak približno $2{,}86\ \text{kN}$, pa zadani kriterij daje $m_{krit}\approx265\ \text{kg}$. To je rezultat idealiziranoga statičkog modela, ne certificirana nosivost; nedostaju dinamika, stabilnost, konstrukcija, upravljanje i mjerodavni propisi.
-   :::
-   ::::
-   **Skica:** da - platforma s četiri sapnice, smjerovi mlazova, ukupni potisak i težina sustava.
+Peltonova lopatica na rotoru radijusa $R = 0{,}42\ \text{m}$ prima mlaz vode masenog protoka $\dot m = 24\ \text{kg/s}$. Tangencijalna komponenta apsolutne brzine na ulazu iznosi $v_{u1} = 28\ \text{m/s}$, a na izlazu $v_{u2} = 6\ \text{m/s}$. Odredi tangencijalnu silu na lopaticu i moment na vratilu.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+tangencijalna sila slijedi iz $F_t = \dot m (v_{u1} - v_{u2})$, a moment je $M = F_t R$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$F_t = 528\ \text{N}$; $M \approx 222\ \text{N·m}$.
+:::
+::::
+**Skica:** da - rotor, polumjer $R$, mlaz i tangencijalne komponente brzine na ulazu i izlazu.
+
+[Razina: T2]{.mf1-task-level}
+
+### Z5. Potisak modula s trima sapnicama {#task-u12-potisni-modul-ima-tri-jednake-sapnice-promjera .unnumbered .unlisted}
+
+Potisni modul ima tri jednake sapnice promjera $d = 30\ \text{mm}$. Iz svake sapnice voda izlazi brzinom $v = 42\ \text{m/s}$ u suprotnom smjeru od gibanja platforme. Odredi ukupni potisak modula i hidrauličku snagu mlaza ako je gustoća vode $\rho = 998\ \text{kg/m}^3$.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+za jednu sapnicu vrijedi $F = \dot m v$ i $P = \dot m v^2/2$; ukupni rezultat je trostruki zbroj.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+ukupni potisak $\approx 3{,}73\ \text{kN}$; hidraulička snaga $\approx 78{,}4\ \text{kW}$.
+:::
+::::
+**Skica:** da - platforma s tri sapnice, smjer mlaza i rezultantni potisak.
+
+[Razina: T3]{.mf1-task-level}
+
+### Z6. Podizanje mlazne platforme {#task-u12-mlazna-platforma-ukupne-mase-ima-cetiri-jednake .unnumbered .unlisted}
+
+Mlazna platforma ukupne mase $m = 110\ \text{kg}$ ima četiri jednake sapnice promjera $d = 28\ \text{mm}$. Voda gustoće $\rho=998\ \text{kg/m}^3$ iz svake sapnice izlazi okomito prema dolje brzinom $v = 36\ \text{m/s}$. Odredi ukupni potisak, najveću ukupnu masu koju takav sustav može držati u lebdenju i vertikalno ubrzanje platforme pri zadanoj masi sustava. Stvarni promjer svake sapnice može biti $0{,}3\ \text{mm}$ manji od nazivnoga, a regulirana brzina mlaza do $1{,}5\ \text{m/s}$ manja od zadane. Ako zadani statički kriterij traži najmanje $10\ \%$ rezerve potiska iznad težine, odredi najveću masu koja ga zadovoljava i objasni zašto se ta vrijednost ne smije nazvati certificiranom nosivošću platforme.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+najprije zbroji izlazne površine svih sapnica; zatim koristi $F_p = \rho A v^2$, uvjet lebdenja $F_p = mg$ i za zadanu masu Newtonov zakon $a = (F_p - mg)/m$. Za masu prema zadanom kriteriju izračunaj najmanji potisak s $d_{min}$ i $v_{min}$ te postavi $F_{p,min}=1{,}10\,m_{krit}g$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$F_p \approx 3{,}19\ \text{kN}$; najveća masa lebdenja $\approx 325\ \text{kg}$; pri $m = 110\ \text{kg}$ ubrzanje $a \approx 19{,}2\ \text{m/s}^2$. Za $d_{min}=27{,}7\ \text{mm}$ i $v_{min}=34{,}5\ \text{m/s}$ najmanji je potisak približno $2{,}86\ \text{kN}$, pa zadani kriterij daje $m_{krit}\approx265\ \text{kg}$. To je rezultat idealiziranoga statičkog modela, ne certificirana nosivost; nedostaju dinamika, stabilnost, konstrukcija, upravljanje i mjerodavni propisi.
+:::
+::::
+**Skica:** da - platforma s četiri sapnice, smjerovi mlazova, ukupni potisak i težina sustava.
+
+[Razina: T4]{.mf1-task-level}
+
 :::::
 
 ![Skice uz zadatke za vježbu — ploče, pokretne lopatice i sapnice.](../assets/print/u12_vjezbe_skice.svg){#fig-u12-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — ploče, pokretne lopatice i sapnice."}

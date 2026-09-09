@@ -48,7 +48,7 @@ CANONICAL_CHAPTERS: list[dict[str, str]] = [
 ]
 
 TASK_LINE_RE = re.compile(
-    r"(?m)^(?P<line>[^\n]*\{#(?P<id>task-[A-Za-z0-9_-]+)\}[^\n]*)$"
+    r"(?m)^(?P<line>[^\n]*\{#(?P<id>task-[A-Za-z0-9_-]+)\b[^}\n]*\}[^\n]*)$"
 )
 LEVEL_RE = re.compile(r"(?:\[\*\*|Razina:\s*)(T[1-4])")
 INLINE_MATH_RE = re.compile(r"(?<!\$)\$(?!\$)([^$\n]+?)\$(?!\$)")
@@ -93,26 +93,12 @@ def _section_payload(block: str, heading: str) -> tuple[str | None, int | None]:
     return (value or None), _line_number(block, match.start())
 
 
-def _task_statement(anchor_line: str, following: str) -> str:
-    if LEVEL_RE.search(anchor_line):
-        return _compact(anchor_line.split("}", 1)[1])
-
+def _task_statement(following: str) -> str:
     lines = following.splitlines()
     payload: list[str] = []
-    started = False
     for line in lines:
         stripped = line.strip()
-        if not started:
-            if not stripped:
-                continue
-            level = re.match(r"\*\*Razina:\s*T[1-4]\.\*\*\s*(.*)", stripped)
-            if not level:
-                continue
-            started = True
-            if level.group(1):
-                payload.append(level.group(1))
-            continue
-        if stripped.startswith(":::") or re.match(r"^#{2,}\s", stripped):
+        if stripped.startswith((":::", "[Razina:")) or re.match(r"^#{2,}\s", stripped):
             break
         payload.append(stripped)
     return _compact("\n".join(payload))
@@ -512,7 +498,7 @@ def build_canonical_tasks(manifest: dict[str, Any] | None = None) -> list[dict[s
             level_match = LEVEL_RE.search(block)
             if not level_match:
                 raise ValueError(f"{chapter['id']} Z{ordinal}: nema razinu T1--T4")
-            statement = _task_statement(anchor_line, following)
+            statement = _task_statement(following)
             if not statement:
                 raise ValueError(f"{chapter['id']} Z{ordinal}: nije izvučen tekst zadatka")
             hint, hint_relative_line = _section_payload(block, "Naputak")

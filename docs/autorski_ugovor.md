@@ -13,6 +13,22 @@ Ovaj ugovor određuje javna i autorska sučelja udžbenika. CI smije odbiti prom
 
 Odgovarajuće CSS klase su `.mf1-temelj`, `.mf1-izvod`, `.mf1-fizikalno-znacenje`, `.mf1-granica-modela`, `.mf1-numerika` i `.mf1-dublje`.
 
+Riješeni primjeri i cjeloviti vođeni zadatci prikazuju se bez vertikalne crte
+i bez lijeve uvlake cijelog bloka. Naslov izravno imenuje problem, primjerice
+„Vrijeme odziva pneumatskog voda”, bez prefiksa „Riješeni primjer —”,
+„Kratki primjer —” ili „Cjeloviti zadatak —”. Semantička klasa, stabilni ID
+i oznaka razine ostaju uz primjer; ovo pravilo vrijedi za HTML i PDF.
+
+Ispred naslova primjera stoji P1, P2, … redom unutar poglavlja. Oznake
+automatski usklađuje `scripts/normalize_public_text.py --write`; broj nije
+dio stabilnog ID-ja. Koraci rješenja imaju istu razinu naslova i klase
+`.unnumbered .unlisted .mf1-step`, pa zadržavaju samo svoj broj 1., 2., 3.
+i ne mijenjaju numeraciju ni sadržaj poglavlja.
+
+Kratke napomene o računalnim proračunima imaju opisni naslov i polaze od
+fizikalnog primjera. Novi pojam odmah se objašnjava običnim jezikom; nazivi
+algoritama i detalji numeričkih metoda pripadaju dodatnom gradivu.
+
 ## Stabilni identifikatori
 
 ID opisuje fizikalni sadržaj, a ne trenutačni broj retka ili redni broj unutar poglavlja:
@@ -31,6 +47,16 @@ Svaki novi identifikator mora biti čisto semantički i ne smije kodirati broj
 poglavlja ni trenutačni položaj sadržaja.
 
 ## Ugovor zadatka i verifikatora
+
+Samostalni zadatci nose oznake Z1–Z6 unutar poglavlja i kratak naslov problema.
+Razina T1–T4 navodi se na kraju zadatka, sitno i desno poravnata, odvojeno
+od lijeve numeracije. Naslov se zapisuje kao
+`### Z1. Naslov problema {#task-stabilni-id .unnumbered .unlisted}`,
+a oznaka razine kao `[Razina: T1]{.mf1-task-level}`. Time zadatak ne dobiva
+dodatni broj odjeljka niti ulazi u sadržaj knjige. Iste oznake i naslovi
+automatski se prenose u ključ rezultata; generator provjerava neprekinuti
+redoslijed brojeva. Skice koriste oznake Z1–Z6. Pri upućivanju na zadatak
+izvan njegova poglavlja navodi se i broj poglavlja.
 
 Manifest zadataka koristi **shemu v2**. Kanonski dio reproducibilno se generira
 iz `source/`; ručna izmjena generiranih polja nije dopuštena. Za svaki od 90

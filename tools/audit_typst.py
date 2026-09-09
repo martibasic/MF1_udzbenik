@@ -63,7 +63,7 @@ def main() -> int:
         '#let mf1-minor-heading',
         'mode = "example"',
         'Para = render_minor_heading',
-        'Span = render_level',
+        'Span = render_span',
         "breakable: true",
         "first-line-indent: 0pt",
         "sticky: true",

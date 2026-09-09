@@ -9,7 +9,7 @@ Pojmovnik daje kratke **radne definicije**. One služe za prisjećanje, a ne zam
 | Aktuatorski disk | Idealizirana ploha preko koje struja prima ili predaje energiju i količinu gibanja; temeljni model propelera, rotora i vjetroturbine. | U14 |
 | Bezdimenzijski broj | Bezdimenzijska kombinacija veličina koja sažima utjecaj određenih članova modela. Može biti omjer karakterističnih učinaka, vremena, brzina ili drugih istodimenzijskih veličina; nije nužno doslovan omjer sila. | U11 |
 | Bondov broj | $Bo=\Delta\rho gL^2/\sigma$; mjeri relativnu važnost gravitacije i površinske napetosti. | U02, U11 |
-| Brzina zvuka | Brzina širenja male izentropske tlačne smetnje, $a^2=(\partial p/\partial\rho)_s$; za kalorijski savršen idealni plin $a=\sqrt{\kappa RT}$. | U09 |
+| Brzina zvuka | Brzina širenja male izentropske tlačne smetnje, $a^2=(\partial p/\partial\rho)_s$; za kalorijski idealan plin $a=\sqrt{\gamma RT}$, uz $\gamma=c_p/c_v$. | U09 |
 | Buckinghamov $\Pi$-teorem | Ako problem sadrži $n$ dimenzijskih veličina i rang dimenzijske matrice je $k$, može se opisati s $n-k$ neovisnih bezdimenzijskih grupa. Teorem ne određuje sam oblik veze među grupama. | U11 |
 | Centar tlaka | Točka hvatišta rezultante raspodijeljenog tlaka na plohu. Položaj ovisi o geometriji, raspodjeli tlaka i odabranoj referenci tlaka. | U05 |
 | Centar uzgona | Težište istisnutog volumena; kroz njega prolazi pravac Arhimedove sile u homogenom fluidu i jednolikom gravitacijskom polju. | U06 |
@@ -40,7 +40,7 @@ Pojmovnik daje kratke **radne definicije**. One služe za prisjećanje, a ne zam
 | Linijski gubitak | Disipativni pad mehaničke energije duž dionice zbog zidnog smicanja; u potpuno razvijenom toku cijevi često se modelira Darcy–Weisbachovom relacijom. | U13 |
 | Lokalni gubitak | Disipativni pad vezan uz armaturu ili promjenu geometrije, obično zapisan $h_L=K V^2/(2g)$ uz navedenu referentnu brzinu i područje valjanosti $K$. | U13 |
 | Machov broj | $Ma=V/a$, omjer brzine toka i lokalne brzine zvuka. Kriterij prihvatljivosti nestlačivog modela ovisi o dopuštenoj promjeni gustoće, ne samo o jednom univerzalnom pragu. | U09, U11 |
-| Manningov koeficijent | Empirijski koeficijent hrapavosti $n$ u Manningovoj jednadžbi otvorenog toka; ovisi o oblozi, vegetaciji, geometriji i stanju korita. | U15 |
+| Manningov koeficijent | Empirijski koeficijent hrapavosti $n$ u Manningovoj jednadžbi otvorenog toka, s jedinicom $\text{s}/\text{m}^{1/3}$ u SI zapisu; ovisi o oblozi, vegetaciji, geometriji i stanju korita. | U15 |
 | Manometarski tlak | Razlika apsolutnog i lokalnog referentnog, najčešće atmosferskog tlaka. Može biti negativan bez pojave vakuuma ili kavitacije. | U03, U08 |
 | Maseni protok | Neto tok mase kroz plohu, $\dot m=\int_A\rho\mathbf v\!\cdot\!\mathbf n\,dA$ za nepomičnu plohu; predznak određuje odabrana vanjska normala. | U07 |
 | Materijalna derivacija | Brzina promjene koju osjeća čestica: $D()/Dt=\partial()/\partial t+\mathbf v\!\cdot\!\nabla()$. Sadrži lokalnu i konvektivnu promjenu. | U07, U12 |

@@ -79,9 +79,11 @@ U jednolikom gravitacijskom polju uzgon ovisi o istisnutom volumenu i gustoći f
 :::
 
 ::: {.callout-note collapse="true" icon="false"}
-## Numerički trag
+## Kako računalo prati plutanje
 
-U jednoj čestoj numeričkoj metodi za dvije faze, VOF-u (*Volume of Fluid*), polje $\alpha\in[0,1]$ predstavlja udio faze u ćeliji. Uz dosljedno polje gustoće i gravitacijski član model može reproducirati hidrostatski uzgon, dok gibanje plutajućega tijela zahtijeva dodatnu spregu sila i momenata s jednadžbama gibanja tijela. To treba provjeriti na mirnom plutanju prije valova ili složenoga toka.
+Za proračun plutanja računalo mora razlikovati vodu od zraka i pratiti gdje se nalazi njihova granica. Jedan je postupak podijeliti prostor na male dijelove, zvane ćelije, i u svakoj pratiti koliki dio zauzima voda.
+
+Iz raspodjele tlaka na uronjenoj površini dobiva se sila uzgona. Ako se tijelo smije gibati, njegove sile i momenti određuju podizanje, spuštanje i nagib. Prva je provjera jednostavna: miran ponton treba imati isti gaz kao u ručnom računu i ostati u ravnoteži. Tek nakon toga ima smisla dodati valove.
 :::
 
 ::: {.mf1-interaktivno}
@@ -301,7 +303,7 @@ Metacentarska teorija opisuje samo početni odziv oko uspravnoga položaja. Stab
 ## Riješeni primjeri
 
 ::: {#ex-u07-koliki-gaz-ima-radni-ponton-pri-simetricnom .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Koliki gaz ima radni ponton pri simetričnom opterećenju&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P1. Koliki gaz ima radni ponton pri simetričnom opterećenju&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Pravokutni radni ponton nosi simetrično postavljenu opremu na mirnoj vodi. Treba odrediti istisnuti volumen, srednji gaz i preostalu nosivost prije nego što razina vode dosegne gornji rub boka.
 
@@ -376,7 +378,7 @@ $$ {#eq-uzgon-stabilitet-rijeseni-primjer-koliki-gaz-ima-radni-ponton-06}
  Kad je taj geometrijski međukorak zatvoren, tek tada ima smisla prijeći na složeniji slučaj u kojem se teret bočno pomiče i uz ravnotezu sila treba zatvoriti i ravnotezu momenata.
 
 ::: {#ex-u07-plutajuca-servisna-platforma-s-pomaknutim-kompresorom-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Plutajuća servisna platforma s pomaknutim kompresorom&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P2. Plutajuća servisna platforma s pomaknutim kompresorom&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Na plutajućoj servisnoj platformi prijenosni kompresor postavljen je izvan osi simetrije, što izaziva mjerljiv bočni nagib. Treba odrediti istisnuti volumen, položaj težišta kompresora i porast srednjeg gaza nakon njegova postavljanja.
 
@@ -474,7 +476,7 @@ $$ {#eq-uzgon-stabilitet-rijeseni-primjer-plutajuca-servisna-platforma-s-08}
 Plutajuća platforma nije jedini tipičan ulaz u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Uzgon, plivanje i početni stabilitet</span></span>. Jednako je važno znati zatvoriti vertikalnu ravnotezu i za potpuno uronjeno tijelo koje presiječa granicu dvaju fluida, jer se tada ukupni uzgon čita kao zbroj dviju istisnina različitih gustoća.
 
 ::: {#ex-u07-plutajuca-servisna-platforma-na-granici-ulja-i .mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak — Plutajuća servisna platforma na granici ulja i vode&nbsp;<span class="mf1-level">T4</span></p>
+<p class="mf1-box-label">P3. Plutajuća servisna platforma na granici ulja i vode&nbsp;<span class="mf1-level">T4</span></p>
 
 **Kontekst:** Hermetička servisna platforma pluta na stratificiranom mediju u kojem sloj ulja leži iznad vode, a na njoj se nepoznato bočno postavlja ormar s instrumentacijom. Treba podijeliti istisninu po fluidima, naći bočni pomak centra uzgona i položaj ormara koji uravnotežuje izmjerene rubne urone.
 
@@ -644,7 +646,7 @@ Ovaj cjeloviti zadatak zatvara tri jezgre <span class="mf1-ch-ref"><span class="
 :::
 
 ::: {#ex-u07-izolirani-puni-bocni-tank-kao-dodana-masa .mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak — Izolirani puni bočni tank kao dodana masa: gaz, nagib i početna stabilnost&nbsp;<span class="mf1-level">T4</span></p>
+<p class="mf1-box-label">P4. Izolirani puni bočni tank kao dodana masa: gaz, nagib i početna stabilnost&nbsp;<span class="mf1-level">T4</span></p>
 
 **Kontekst:** Na pojednostavljenom pravokutnom trupu bočni se tank tijekom izvanrednoga događaja napunio morskom vodom, nakon čega je dotok zaustavljen i tank izoliran. Tank je potpuno pun, pa se voda u ovom nastavnom modelu može tretirati kao nepomična dodana masa bez slobodne površine. Treba procijeniti novi gaz, bočni nagib i početni $GM$.
 
@@ -807,7 +809,7 @@ Vrijednost $37{,}1^\circ$ samo je geometrijska ekstrapolacija krutoga pravokutni
 :::
 
 ::: {#ex-u07-uzgon-na-potonulo-pumpno-kuciste-pri-ispitivanju .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Uzgon na potonulo pumpno kućište pri ispitivanju &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P5. Uzgon na potonulo pumpno kućište pri ispitivanju &nbsp;<span class="mf1-level">T2</span></p>
 
 **Primjer za strojare**
 
@@ -851,7 +853,7 @@ Za zadanu masu i vanjski istisnuti volumen prosječna gustoća kućišta iznosi 
 :::
 
 ::: {#ex-u07-plutajuci-vjetroagregat-tipa-cilindricne-plovne-osnove-t3 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Plutajući vjetroagregat tipa cilindrične plovne osnove &nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P6. Plutajući vjetroagregat tipa cilindrične plovne osnove &nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** Pojednostavljena cilindrična plovna osnova tipa *spar* nosi vjetroagregat. Ovdje se računa samo vertikalna ravnoteža i promjena gaza; stabilnost, gibanje na valovima, sidrenje i položaj rotora ostaju izvan modela.
 
@@ -951,107 +953,133 @@ Vrijedi u bilo kojem fluidu, uključujući plinove. U zraku sila uzgona je obič
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
-1. [**T1**]{#task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno} Hermetički zatvoreno tijelo volumena $V = 0{,}085\ \text{m}^3$ i mase $m = 62\ \text{kg}$ potpuno je uronjeno u vodu gustoće $\rho = 998\ \text{kg/m}^3$. Odredi silu uzgona i silu koju treba primijeniti da tijelo ostane potpuno uronjeno i u mirovanju.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   uzgon je $F_U = \rho gV$; potom usporedi $F_U$ i težinu $G = mg$ da dobiješ potrebnu dodatnu silu.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z1. Uzgon potpuno uronjenog tijela {#task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno .unnumbered .unlisted}
 
-   $F_U \approx 832\ \text{N}$; kako je $F_U > G = 608\ \text{N}$, treba dodatna sila prema dolje $\approx 224\ \text{N}$.
-   :::
-   ::::
-   **Skica:** da - potpuno uronjeni blok, volumen $V$, smjerovi $F_U$, $G$ i dodatne sile držanja.
+Hermetički zatvoreno tijelo volumena $V = 0{,}085\ \text{m}^3$ i mase $m = 62\ \text{kg}$ potpuno je uronjeno u vodu gustoće $\rho = 998\ \text{kg/m}^3$. Odredi silu uzgona i silu koju treba primijeniti da tijelo ostane potpuno uronjeno i u mirovanju.
 
-2. [**T1**]{#task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine} Pravokutni radni ponton duljine $L = 2{,}60\ \text{m}$, širine $B = 1{,}40\ \text{m}$ i visine boka $H = 0{,}38\ \text{m}$ ima vlastitu masu $m_p = 510\ \text{kg}$. Na njega se simetrično postavlja teret mase $m_t = 220\ \text{kg}$. Ponton pluta u vodi gustoće $\rho = 998\ \text{kg/m}^3$. Odredi istisnuti volumen, srednji gaz i preostalu dodatnu masu koju ponton može primiti prije nego što rub boka dođe do razine vode.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+uzgon je $F_U = \rho gV$; potom usporedi $F_U$ i težinu $G = mg$ da dobiješ potrebnu dodatnu silu.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   iz vertikalne ravnoteže vrijedi $\rho gV_{ist} = (m_p + m_t)g$; srednji gaz slijedi iz $V_{ist} = LBh$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+$F_U \approx 832\ \text{N}$; kako je $F_U > G = 608\ \text{N}$, treba dodatna sila prema dolje $\approx 224\ \text{N}$.
+:::
+::::
+**Skica:** da - potpuno uronjeni blok, volumen $V$, smjerovi $F_U$, $G$ i dodatne sile držanja.
 
-   $V_{ist} \approx 0{,}73\ \text{m}^3$; srednji gaz $h \approx 0{,}20\ \text{m}$; dodatna masa do ruba $\approx 650\ \text{kg}$.
-   :::
-   ::::
-   **Skica:** da - ponton pravokutnog presjeka, srednji gaz $h$ i slobodni bok $H-h$.
+[Razina: T1]{.mf1-task-level}
 
-3. [**T2**]{#task-u07-plutajuca-servisna-platforma-duljine-i-sirine-ima} Plutajuća servisna platforma duljine $L = 2{,}20\ \text{m}$ i širine $B = 1{,}00\ \text{m}$ ima ukupnu masu s opremom $m = 560\ \text{kg}$ i ukupno težište na visini $KG=0{,}18\ \text{m}$ iznad dna. Kompresor mase $85\ \text{kg}$ pomakne se za $e = 0{,}24\ \text{m}$ udesno od središnje osi. Ako platforma pluta u vodi gustoće $998\ \text{kg/m}^3$ i ostaje u linearnom režimu malog nagiba, odredi srednji gaz, $KB$, $BM$, $GM$ te razliku urona rubova.
+### Z2. Gaz opterećenog pontona {#task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine .unnumbered .unlisted}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   srednji gaz dolazi iz ukupne težine. Zatim upotrijebi $KB=h_m/2$, $BM=B^2/(12h_m)$, $GM=KB+BM-KG$ i $m_k e=mGM\tan\theta$, uz $|h_L-h_D|=B\tan\theta$; nemoj izjednačiti geometrijski $y_B$ s krakom $GZ$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+Pravokutni radni ponton duljine $L = 2{,}60\ \text{m}$, širine $B = 1{,}40\ \text{m}$ i visine boka $H = 0{,}38\ \text{m}$ ima vlastitu masu $m_p = 510\ \text{kg}$. Na njega se simetrično postavlja teret mase $m_t = 220\ \text{kg}$. Ponton pluta u vodi gustoće $\rho = 998\ \text{kg/m}^3$. Odredi istisnuti volumen, srednji gaz i preostalu dodatnu masu koju ponton može primiti prije nego što rub boka dođe do razine vode.
 
-   $h_m\approx0{,}255\ \text{m}$; $KB\approx0{,}128\ \text{m}$; $BM\approx0{,}327\ \text{m}$; $GM\approx0{,}274\ \text{m}$; $|h_L-h_D|\approx0{,}133\ \text{m}$, pri čemu je desni rub dublje uronjen.
-   :::
-   ::::
-   **Skica:** da - platforma, pomaknuti kompresor, lijevi i desni uron te širina $B$.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+iz vertikalne ravnoteže vrijedi $\rho gV_{ist} = (m_p + m_t)g$; srednji gaz slijedi iz $V_{ist} = LBh$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-4. [**T2**]{#task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta} Areometar mase $m = 0{,}085\ \text{kg}$ s cilindričnim vratom promjera $d = 8\ \text{mm}$ pluta tako da mu je u vodi uronjena duljina $h_1 = 82\ \text{mm}$, a u nepoznatom ulju $h_2 = 95\ \text{mm}$. Odredi gustoću ulja i protumači zašto je uron u ulju veći nego u vodi.
+$V_{ist} \approx 0{,}73\ \text{m}^3$; srednji gaz $h \approx 0{,}20\ \text{m}$; dodatna masa do ruba $\approx 650\ \text{kg}$.
+:::
+::::
+**Skica:** da - ponton pravokutnog presjeka, srednji gaz $h$ i slobodni bok $H-h$.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   u oba fluida vrijedi $\rho gV_{ist} = mg$; razlika je samo u uronjenom volumenu vrata i tijela areometra.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+[Razina: T1]{.mf1-task-level}
 
-   $\rho_{ulje} \approx 990\ \text{kg/m}^3$; uron je veći jer je ulje rjeđe pa je za istu težinu potreban veći istisnuti volumen.
-   :::
-   ::::
-   **Skica:** da - areometar s cilindričnim vratom i dvije razine urona $h_1$, $h_2$.
+### Z3. Nagib platforme pri pomaku tereta {#task-u07-plutajuca-servisna-platforma-duljine-i-sirine-ima .unnumbered .unlisted}
 
-5. [**T3**]{#task-u07-plutajuci-modul-istiskuje-volumen-vode-i-ima} Plutajući modul istiskuje volumen vode $V_{ist} = 0{,}62\ \text{m}^3$ i ima metacentarsku visinu $GM = 0{,}18\ \text{m}$. Ako se pri malom nagibu zakrene za $\varphi = 7^\circ$, odredi povratni moment stabilnosti i procijeni je li ravnoteža stabilna.
+Plutajuća servisna platforma duljine $L = 2{,}20\ \text{m}$ i širine $B = 1{,}00\ \text{m}$ ima ukupnu masu s opremom $m = 560\ \text{kg}$ i ukupno težište na visini $KG=0{,}18\ \text{m}$ iznad dna. Kompresor mase $85\ \text{kg}$ pomakne se za $e = 0{,}24\ \text{m}$ udesno od središnje osi. Ako platforma pluta u vodi gustoće $998\ \text{kg/m}^3$ i ostaje u linearnom režimu malog nagiba, odredi srednji gaz, $KB$, $BM$, $GM$ te razliku urona rubova.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   deplasman je $\Delta = \rho gV_{ist}$, a za male nagibe povratni moment je $M_r = \Delta GM\sin\varphi$; znak $GM$ odlučuje o stabilnosti.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+srednji gaz dolazi iz ukupne težine. Zatim upotrijebi $KB=h_m/2$, $BM=B^2/(12h_m)$, $GM=KB+BM-KG$ i $m_k e=mGM\tan\theta$, uz $|h_L-h_D|=B\tan\theta$; nemoj izjednačiti geometrijski $y_B$ s krakom $GZ$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   $\Delta \approx 6{,}07\ \text{kN}$; $M_r \approx 133\ \text{N·m}$; $GM > 0$ pa je ravnoteža stabilna.
-   :::
-   ::::
-   **Skica:** da - presjek tijela s težištem, metacentrom, nagibom $\varphi$ i ramenom povratnog momenta.
+$h_m\approx0{,}255\ \text{m}$; $KB\approx0{,}128\ \text{m}$; $BM\approx0{,}327\ \text{m}$; $GM\approx0{,}274\ \text{m}$; $|h_L-h_D|\approx0{,}133\ \text{m}$, pri čemu je desni rub dublje uronjen.
+:::
+::::
+**Skica:** da - platforma, pomaknuti kompresor, lijevi i desni uron te širina $B$.
 
-6. [**T4**]{#task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta} Pravokutna servisna platforma duljine $L = 2{,}80\ \text{m}$ i širine $B = 1{,}20\ \text{m}$ pluta na granici ulja gustoće $\rho_o = 820\ \text{kg/m}^3$ debljine $\delta = 0{,}08\ \text{m}$ i vode gustoće $\rho_w = 998\ \text{kg/m}^3$. Nakon pomaka akumulatora lijevi rub uronjen je $h_L = 0{,}26\ \text{m}$, a desni $h_D = 0{,}18\ \text{m}$. Ukupna masa platforme s opremom je $m=690\ \text{kg}$, od čega akumulator ima $m_a=70\ \text{kg}$, a ukupno težište nalazi se na $KG=0{,}200\ \text{m}$ iznad dna. Odredi srednji uron, volumene istisnine u ulju i vodi, bočni pomak rezultantnoga centra uzgona, ekvivalentne $KB$, $BM$ i $GM$ te udaljenost akumulatora od osi simetrije. Rubni uroni mjere se s nesigurnošću $\pm3\ \text{mm}$, vrijedi $\rho_w=998\pm3\ \text{kg/m}^3$, $m_a=70\pm1\ \text{kg}$ i $KG=0{,}200\pm0{,}005\ \text{m}$; ostale podatke uzmi kao točne. Konzervativno procijeni najveću moguću udaljenost akumulatora provjerom rubnih kombinacija ulaza i odluči smije li se raspored prihvatiti ako montažni koridor dopušta najviše $0{,}34\ \text{m}$ od osi.
+[Razina: T2]{.mf1-task-level}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   najprije uzmi $h_m=(h_L+h_D)/2$ i $m_\Delta=\rho_oV_o+\rho_wV_w$. Za položaje uzgonskih doprinosa vrijedi $z_{B,o}=h_m-\delta/2$ i $z_{B,w}=(h_m-\delta)/2$, pa izračunaj $KB_{eq}$ njihovim uzgonskim težinjenjem. U ovom modelu $BM_{eq}=\rho_w I_T/m_\Delta$, gdje je $I_T=LB^3/12$, a $GM_{eq}=KB_{eq}+BM_{eq}-KG$. Tek zatim primijeni $m_a e=mGM_{eq}\tan\theta$ i $\tan\theta=(h_L-h_D)/B$. Za konzervativni omotač izračunaj svih $2^5=32$ rubnih kombinacija pet nesigurnih skalarnih ulaza.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z4. Gustoća ulja iz očitanja areometra {#task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta .unnumbered .unlisted}
 
-   $h_m=0{,}220\ \text{m}$; $V_o\approx0{,}269\ \text{m}^3$; $V_w\approx0{,}470\ \text{m}^3$; $m_\Delta\approx689{,}9\ \text{kg}$. Geometrijski su $y_{B,w}\approx0{,}0571\ \text{m}$ i $y_B\approx0{,}0389\ \text{m}$, ali $y_B$ nije $GZ$. Dobiva se $KB_{eq}\approx0{,}105\ \text{m}$, $BM_{eq}\approx0{,}583\ \text{m}$, $GM_{eq}\approx0{,}488\ \text{m}$ i $e\approx0{,}321\ \text{m}$. Najveća rubna vrijednost nastaje za $h_L=0{,}263\ \text{m}$, $h_D=0{,}177\ \text{m}$, $\rho_w=1001\ \text{kg/m}^3$, $m_a=69\ \text{kg}$ i $KG=0{,}195\ \text{m}$ te iznosi $e_{max}\approx0{,}354\ \text{m}$. Nominalni račun prolazi, ali raspored se uz zadanu nesigurnost ne prihvaća za koridor od $0{,}34\ \text{m}$ bez preciznijega mjerenja ili pomicanja akumulatora prema osi. To je odluka unutar zadanoga početnog modela, ne normativna provjera stabiliteta.
-   :::
-   ::::
-   **Skica:** da - platforma na granici ulja i vode, rubni uroni $h_L$ i $h_D$, granica fluida i bočni pomak akumulatora.
+Areometar mase $m = 0{,}085\ \text{kg}$ s cilindričnim vratom promjera $d = 8\ \text{mm}$ pluta tako da mu je u vodi uronjena duljina $h_1 = 82\ \text{mm}$, a u nepoznatom ulju $h_2 = 95\ \text{mm}$. Odredi gustoću ulja i protumači zašto je uron u ulju veći nego u vodi.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+u oba fluida vrijedi $\rho gV_{ist} = mg$; razlika je samo u uronjenom volumenu vrata i tijela areometra.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$\rho_{ulje} \approx 990\ \text{kg/m}^3$; uron je veći jer je ulje rjeđe pa je za istu težinu potreban veći istisnuti volumen.
+:::
+::::
+**Skica:** da - areometar s cilindričnim vratom i dvije razine urona $h_1$, $h_2$.
+
+[Razina: T2]{.mf1-task-level}
+
+### Z5. Povratni moment stabilnosti {#task-u07-plutajuci-modul-istiskuje-volumen-vode-i-ima .unnumbered .unlisted}
+
+Plutajući modul istiskuje volumen vode $V_{ist} = 0{,}62\ \text{m}^3$ i ima metacentarsku visinu $GM = 0{,}18\ \text{m}$. Ako se pri malom nagibu zakrene za $\varphi = 7^\circ$, odredi povratni moment stabilnosti i procijeni je li ravnoteža stabilna.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+deplasman je $\Delta = \rho gV_{ist}$, a za male nagibe povratni moment je $M_r = \Delta GM\sin\varphi$; znak $GM$ odlučuje o stabilnosti.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$\Delta \approx 6{,}07\ \text{kN}$; $M_r \approx 133\ \text{N·m}$; $GM > 0$ pa je ravnoteža stabilna.
+:::
+::::
+**Skica:** da - presjek tijela s težištem, metacentrom, nagibom $\varphi$ i ramenom povratnog momenta.
+
+[Razina: T3]{.mf1-task-level}
+
+### Z6. Platforma na granici ulja i vode {#task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta .unnumbered .unlisted}
+
+Pravokutna servisna platforma duljine $L = 2{,}80\ \text{m}$ i širine $B = 1{,}20\ \text{m}$ pluta na granici ulja gustoće $\rho_o = 820\ \text{kg/m}^3$ debljine $\delta = 0{,}08\ \text{m}$ i vode gustoće $\rho_w = 998\ \text{kg/m}^3$. Nakon pomaka akumulatora lijevi rub uronjen je $h_L = 0{,}26\ \text{m}$, a desni $h_D = 0{,}18\ \text{m}$. Ukupna masa platforme s opremom je $m=690\ \text{kg}$, od čega akumulator ima $m_a=70\ \text{kg}$, a ukupno težište nalazi se na $KG=0{,}200\ \text{m}$ iznad dna. Odredi srednji uron, volumene istisnine u ulju i vodi, bočni pomak rezultantnoga centra uzgona, ekvivalentne $KB$, $BM$ i $GM$ te udaljenost akumulatora od osi simetrije. Rubni uroni mjere se s nesigurnošću $\pm3\ \text{mm}$, vrijedi $\rho_w=998\pm3\ \text{kg/m}^3$, $m_a=70\pm1\ \text{kg}$ i $KG=0{,}200\pm0{,}005\ \text{m}$; ostale podatke uzmi kao točne. Konzervativno procijeni najveću moguću udaljenost akumulatora provjerom rubnih kombinacija ulaza i odluči smije li se raspored prihvatiti ako montažni koridor dopušta najviše $0{,}34\ \text{m}$ od osi.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+najprije uzmi $h_m=(h_L+h_D)/2$ i $m_\Delta=\rho_oV_o+\rho_wV_w$. Za položaje uzgonskih doprinosa vrijedi $z_{B,o}=h_m-\delta/2$ i $z_{B,w}=(h_m-\delta)/2$, pa izračunaj $KB_{eq}$ njihovim uzgonskim težinjenjem. U ovom modelu $BM_{eq}=\rho_w I_T/m_\Delta$, gdje je $I_T=LB^3/12$, a $GM_{eq}=KB_{eq}+BM_{eq}-KG$. Tek zatim primijeni $m_a e=mGM_{eq}\tan\theta$ i $\tan\theta=(h_L-h_D)/B$. Za konzervativni omotač izračunaj svih $2^5=32$ rubnih kombinacija pet nesigurnih skalarnih ulaza.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$h_m=0{,}220\ \text{m}$; $V_o\approx0{,}269\ \text{m}^3$; $V_w\approx0{,}470\ \text{m}^3$; $m_\Delta\approx689{,}9\ \text{kg}$. Geometrijski su $y_{B,w}\approx0{,}0571\ \text{m}$ i $y_B\approx0{,}0389\ \text{m}$, ali $y_B$ nije $GZ$. Dobiva se $KB_{eq}\approx0{,}105\ \text{m}$, $BM_{eq}\approx0{,}583\ \text{m}$, $GM_{eq}\approx0{,}488\ \text{m}$ i $e\approx0{,}321\ \text{m}$. Najveća rubna vrijednost nastaje za $h_L=0{,}263\ \text{m}$, $h_D=0{,}177\ \text{m}$, $\rho_w=1001\ \text{kg/m}^3$, $m_a=69\ \text{kg}$ i $KG=0{,}195\ \text{m}$ te iznosi $e_{max}\approx0{,}354\ \text{m}$. Nominalni račun prolazi, ali raspored se uz zadanu nesigurnost ne prihvaća za koridor od $0{,}34\ \text{m}$ bez preciznijega mjerenja ili pomicanja akumulatora prema osi. To je odluka unutar zadanoga početnog modela, ne normativna provjera stabiliteta.
+:::
+::::
+**Skica:** da - platforma na granici ulja i vode, rubni uroni $h_L$ i $h_D$, granica fluida i bočni pomak akumulatora.
+
+[Razina: T4]{.mf1-task-level}
+
 :::::
 
 ![Skice uz zadatke za vježbu — pontoni, areometri i plutajuće platforme.](../assets/print/u07_vjezbe_skice.svg){#fig-u07-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — pontoni, areometri i plutajuće platforme."}

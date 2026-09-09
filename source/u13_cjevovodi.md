@@ -47,9 +47,11 @@ Re = \frac{\rho vD}{\mu} = \frac{vD}{\nu}.
 $$
 
 ::: {.callout-note collapse="true" icon="false"}
-## Numerički trag
+## Od režima strujanja do računalnog modela
 
-U CFD-u Reynoldsov broj pomaže procijeniti važnost viskoznih učinaka i potrebnu razlučivost strujanja, ali **ne određuje sam** izbor modela ni mreže. Važni su i geometrija, odvajanje, nestacionarnost, tražena izlazna veličina i zidna obrada. Za laminarni model turbulencijsko zatvaranje nije potrebno. Turbulentno strujanje može se modelirati RANS-om, djelomično razriješiti LES-om ili, pri dostupnoj razlučivosti, izravnije razriješiti; izostavljanje RANS modela samo po sebi ne znači „numerički šum”, nego mijenja koje se skale moraju mrežom i vremenom razriješiti.
+Reynoldsov broj pomaže procijeniti hoće li tok u cijevi biti miran i slojevit ili će u njemu biti važno vrtloženje. To je koristan prvi korak i pri računalnom proračunu. Za laminarni tok ne treba dodavati model turbulencije; za turbulentni tok mora se uzeti u obzir utjecaj vrtloga.
+
+Ipak, isti Reynoldsov broj ne jamči jednako jednostavan račun. Ravna cijev i oštro koljeno mogu zahtijevati različitu podjelu prostora jer se tok u koljenu naglo zakreće. Treba gledati i oblik sustava te odlučiti trebamo li samo ukupni pad tlaka ili detalje toka.
 :::
 
 Taj broj nije samo klasifikacijska oznaka: on pokazuje dominira li u cijevi uređeno viskozno strujanje ili razvijena turbulencija. U laminarnom području otpor proizlazi izravno iz viskoznoga mehanizma, pa vrijedi
@@ -135,9 +137,11 @@ Darcy–Weisbachov linijski gubitak $\lambda(L/D)(v^2/2g)$ pri zadanom $\lambda$
 :::
 
 ::: {.callout-note collapse="true" icon="false"}
-## Numerički trag
+## Provjera pada tlaka u ravnoj cijevi
 
-Pad tlaka u potpuno razvijenoj ravnoj cijevi koristan je **referentni slučaj** za unutarnje strujanje. Iz simuliranog gradijenta tlaka određuje se ekvivalentni $\lambda$ i uspoređuje s mjerenjem ili prihvaćenom korelacijom pri istim $Re$, $\varepsilon/D$ i uvjetima razvoja. Zidne funkcije nisu numerički ekvivalent Moodyjeva dijagrama: one zatvaraju područje uz zid u turbulentnom modelu, dok je Moodyjev dijagram neovisna 1D korelacija za ukupni otpor cijevi. Slaganje s mjerenjem pridonosi validaciji fizikalnog modela, dok usporedba mreža i bilanci pripada verifikaciji numeričkog rješenja.
+Ravna cijev dobar je početni primjer za provjeru računalnog modela. Poznajemo njezin promjer, duljinu, hrapavost i protok, pa očekivani pad tlaka možemo dobiti ručnim računom ili mjerenjem. Uspoređivati treba istu tekućinu i uvjete u dijelu cijevi u kojem se profil brzine više ne mijenja duž toka.
+
+Računalni proračun zatim ponovimo sa sitnijom podjelom prostora i provjerimo mijenja li se pad tlaka još znatno. Ako se rezultat ustalio, a i dalje odstupa od mjerenja, treba provjeriti zadanu hrapavost, svojstva fluida i opis toka uz stijenku. Sitnija podjela ne može popraviti pogrešan ulazni podatak.
 :::
 
 U tim je zapisima $p_M/(\rho g)$ tlačna visina, $z$ geodetska visina, $\alpha v^2/(2g)$ korigirana brzinska visina, $h_p$ visina koju crpka dodaje, $h_t$ visina koju turbina oduzima, a $h_w$ gubitak mehaničke visine. Svi članovi imaju jedinicu metra; tek množenjem s $g$ dobiva se energija po jedinici mase.

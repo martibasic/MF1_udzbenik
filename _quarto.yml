@@ -107,7 +107,7 @@ website:
             href: chapters/d05_literatura.qmd
           - text: "Ključ kontrolnih rezultata"
             href: chapters/d06_kljuc_kontrolnih_rezultata.qmd
-      - text: "Preuzmi nativni PDF"
+      - text: "Preuzmi PDF"
         href: downloads/mehanika-fluida-1.pdf
       - text: "Pregled za ispis u pregledniku"
         href: chapters/za_ispis.qmd

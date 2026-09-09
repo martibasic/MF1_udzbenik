@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 980" role="img" aria-labelledby="u12vs-title u12vs-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
   <title id="u12vs-title">Vježbe uz poglavlje 12 – šest minimalnih skica zadataka iz pokretnih lopatica i potiska</title>
-  <desc id="u12vs-desc">Šest tehničkih skica za zadatke T1 do T3: 1) okrugla sapnica d=22 mm i vodoravni mlaz brzine v=24 m/s na nepomičnu ploču s reakcijom F; 2) pravokutna sapnica b=30 mm i h=16 mm s mlazom v=26 m/s na nepomičnu vodilicu zakrenutu za 110 stupnjeva, ulazna i izlazna brzina te reakcija R; 3) pokretna lopatica brzine u=12 m/s na kojoj mlaz apsolutne brzine c=32 m/s prijelazi u relativni okvir s w1=20 m/s i izlazi pod 150 stupnjeva, tangencijalna sila Ft i snaga P; 4) Peltonov rotor polumjera R=0,42 m s ulaznom tangencijalnom brzinom vu1=28 m/s i izlaznom vu2=6 m/s, tangencijalna sila i moment na vratilu; 5) potisni modul s tri sapnice d=30 mm i brzinom v=42 m/s, ukupni potisak i snaga; 6) mlazna platforma mase m=110 kg s četiri sapnice d=28 mm i okomito izlaznom brzinom v=36 m/s, potisak, najveća masa za lebdenje i ubrzanje.</desc>
+  <desc id="u12vs-desc">Šest tehničkih skica za zadatke Z1 do Z3: 1) okrugla sapnica d=22 mm i vodoravni mlaz brzine v=24 m/s na nepomičnu ploču s reakcijom F; 2) pravokutna sapnica b=30 mm i h=16 mm s mlazom v=26 m/s na nepomičnu vodilicu zakrenutu za 110 stupnjeva, ulazna i izlazna brzina te reakcija R; 3) pokretna lopatica brzine u=12 m/s na kojoj mlaz apsolutne brzine c=32 m/s prijelazi u relativni okvir s w1=20 m/s i izlazi pod 150 stupnjeva, tangencijalna sila Ft i snaga P; 4) Peltonov rotor polumjera R=0,42 m s ulaznom tangencijalnom brzinom vu1=28 m/s i izlaznom vu2=6 m/s, tangencijalna sila i moment na vratilu; 5) potisni modul s tri sapnice d=30 mm i brzinom v=42 m/s, ukupni potisak i snaga; 6) mlazna platforma mase m=110 kg s četiri sapnice d=28 mm i okomito izlaznom brzinom v=36 m/s, potisak, najveća masa za lebdenje i ubrzanje.</desc>
 
   <defs>
     <linearGradient id="u12vs-voda" x1="0" y1="0" x2="0" y2="1">
@@ -50,10 +50,10 @@
   <rect width="960" height="980" fill="#ffffff" />
   <!-- ===== panel layout: 2 stupca x 3 reda, gap=14 ===== -->
   <!-- Col1: x=24..476 (w=452)   Col2: x=484..936 (w=452) -->
-  <!-- Row1: y=24..324  Row2: y=332..632  Row3: y=640..956 (zadnji deblji za T3#6) -->
+  <!-- Row1: y=24..324  Row2: y=332..632  Row3: y=640..956 (zadnji deblji za Z3#6) -->
 
   <!-- ============================================================ -->
-  <!--  PANEL 1 (T1 #1)  Slobodni mlaz na nepomi&#269;nu ravnu plo&#269;u   -->
+  <!--  PANEL 1 (Z1 #1)  Slobodni mlaz na nepomi&#269;nu ravnu plo&#269;u   -->
   <!--  d = 22 mm, v = 24 m/s, F = ?                                -->
   <!-- ============================================================ -->
   <rect x="24" y="24" width="452" height="300" rx="10" fill="#ffffff" stroke="#cfdce6" stroke-width="1.3" />
@@ -90,7 +90,7 @@
   <!-- info traka dolje -->
   <line x1="38" y1="272" x2="462" y2="272" stroke="#d4e3f0" stroke-width="1" />
   <!-- ============================================================ -->
-  <!--  PANEL 2 (T1 #2)  Pravokutna sapnica, vodilica 110&#176;          -->
+  <!--  PANEL 2 (Z1 #2)  Pravokutna sapnica, vodilica 110&#176;          -->
   <!--  b=30 mm, h=16 mm, v=26 m/s, defleksija 110&#176;, R = ?         -->
   <!-- ============================================================ -->
   <rect x="484" y="24" width="452" height="300" rx="10" fill="#ffffff" stroke="#cfdce6" stroke-width="1.3" />
@@ -123,7 +123,7 @@
   <!-- info traka dolje -->
   <line x1="498" y1="272" x2="922" y2="272" stroke="#d4e3f0" stroke-width="1" />
   <!-- ============================================================ -->
-  <!--  PANEL 3 (T2 #3)  Pokretna lopatica, defleksija 150&#176;        -->
+  <!--  PANEL 3 (Z2 #3)  Pokretna lopatica, defleksija 150&#176;        -->
   <!--  c1 = 32 m/s, u = 12 m/s, &#7763; = 18 kg/s, Ft, P = ?           -->
   <!-- ============================================================ -->
   <rect x="24" y="332" width="452" height="300" rx="10" fill="#ffffff" stroke="#cfdce6" stroke-width="1.3" />
@@ -160,7 +160,7 @@
   <!-- info traka dolje -->
   <line x1="38" y1="580" x2="462" y2="580" stroke="#d4e3f0" stroke-width="1" />
   <!-- ============================================================ -->
-  <!--  PANEL 4 (T2 #4)  Peltonov rotor &#8211; moment i sila            -->
+  <!--  PANEL 4 (Z2 #4)  Peltonov rotor &#8211; moment i sila            -->
   <!--  R=0,42 m, &#7763;=24 kg/s, vu1=28 m/s, vu2=6 m/s, Ft, M = ?    -->
   <!-- ============================================================ -->
   <rect x="484" y="332" width="452" height="300" rx="10" fill="#ffffff" stroke="#cfdce6" stroke-width="1.3" />
@@ -200,7 +200,7 @@
   <!-- info traka dolje -->
   <line x1="498" y1="580" x2="922" y2="580" stroke="#d4e3f0" stroke-width="1" />
   <!-- ============================================================ -->
-  <!--  PANEL 5 (T3 #5)  Potisni modul s 3 sapnice                  -->
+  <!--  PANEL 5 (Z3 #5)  Potisni modul s 3 sapnice                  -->
   <!--  d = 30 mm, v = 42 m/s, F, P = ?                             -->
   <!-- ============================================================ -->
   <rect x="24" y="640" width="452" height="316" rx="10" fill="#ffffff" stroke="#cfdce6" stroke-width="1.3" />
@@ -237,7 +237,7 @@
   <!-- napomena: 3 sapnice -->
   <!-- info traka dolje -->
   <!-- ============================================================ -->
-  <!--  PANEL 6 (T3 #6)  Mlazna platforma za lebdenje                -->
+  <!--  PANEL 6 (Z3 #6)  Mlazna platforma za lebdenje                -->
   <!--  m=110 kg, 4 sapnice d=28 mm, v=36 m/s                       -->
   <!--  &#8594; Fp, m_max, a = ?                                       -->
   <!-- ============================================================ -->
@@ -299,7 +299,7 @@
   <line x1="641" y1="894" x2="641" y2="876" stroke="#b7600c" stroke-width="1.2" />
   <line x1="655" y1="894" x2="655" y2="876" stroke="#b7600c" stroke-width="1.2" />
   <line x1="644" y1="885" x2="652" y2="885" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u12vs-dimL)" marker-end="url(#u12vs-dim)" />
-  <text x="58" y="41" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">T1</text>
+  <text x="58" y="41" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">Z1</text>
   <text x="90" y="41" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#ffffff">Vodeni mlaz na nepomičnu ravnu ploču</text>
 
   <text x="210" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#2c3e50"><tspan font-weight="700">v</tspan> = 24 m/s</text>
@@ -310,7 +310,7 @@
   <text x="38" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">Traži se: <tspan fill="#c0392b" font-weight="700">F</tspan></text>
   <text x="462" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#1a2530"><tspan font-weight="700">F</tspan> = ρ A v²</text>
 
-  <text x="518" y="41" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">T1</text>
+  <text x="518" y="41" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">Z1</text>
   <text x="550" y="41" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#ffffff">Vodilica mlaza – zakretanje za 110°</text>
 
   <text x="622" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#2c3e50"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 26 m/s</text>
@@ -325,7 +325,7 @@
   <text x="498" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">Traži se: <tspan fill="#1e8449" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1e8449" font-weight="700">x</tspan><tspan fill="#1a2530">, </tspan><tspan fill="#1e8449" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1e8449" font-weight="700">y</tspan><tspan fill="#1a2530">, </tspan><tspan fill="#1e8449" font-weight="700">R</tspan></text>
   <text x="922" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#1a2530"><tspan font-weight="700">R</tspan> = √(<tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan>² + <tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan>²)</text>
 
-  <text x="58" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">T2</text>
+  <text x="58" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">Z2</text>
   <text x="90" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#ffffff">Pokretna lopatica – zakretanje za 150°</text>
 
   <text x="154" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#2c3e50"><tspan font-weight="700">c</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 32 m/s</text>
@@ -343,7 +343,7 @@
   <text x="38" y="616" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">Traži se: <tspan fill="#c0392b" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#c0392b" font-weight="700">t</tspan><tspan fill="#1a2530">, </tspan><tspan fill="#1e8449" font-weight="700">P</tspan></text>
   <text x="462" y="616" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#1a2530"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan>= <tspan font-style="italic">ṁ</tspan>Δ<tspan font-style="italic">w</tspan>,  <tspan font-weight="700">P</tspan>=<tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan>·<tspan font-style="italic">u</tspan></text>
 
-  <text x="518" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">T2</text>
+  <text x="518" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">Z2</text>
   <text x="550" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#ffffff">Peltonov rotor – tangencijalna sila i moment</text>
 
   <text x="624" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#2c3e50"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">u1</tspan> = 28 m/s</text>
@@ -358,7 +358,7 @@
   <text x="498" y="616" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">Traži se: <tspan fill="#c0392b" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#c0392b" font-weight="700">t</tspan><tspan fill="#1a2530">, </tspan><tspan fill="#1e8449" font-weight="700">M</tspan></text>
   <text x="922" y="616" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#1a2530"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan>=<tspan font-style="italic">ṁ</tspan>(<tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">u1</tspan>−<tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">u2</tspan>),  <tspan font-weight="700">M</tspan>=<tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan>·<tspan font-style="italic">R</tspan></text>
 
-  <text x="58" y="657" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">T3</text>
+  <text x="58" y="657" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">Z3</text>
   <text x="90" y="657" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#ffffff">Potisni modul – tri jednake sapnice</text>
 
   <text x="290" y="765" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1a2530">potisni modul</text>
@@ -371,7 +371,7 @@
 
   <text x="380" y="930" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1a2530"><tspan font-weight="700">F</tspan> = 3 ρAv²</text>
 
-  <text x="518" y="657" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">T3</text>
+  <text x="518" y="657" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">Z3</text>
   <text x="550" y="657" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#ffffff">Mlazna platforma – četiri sapnice, lebdenje</text>
 
   <text x="730" y="744" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1a2530">platforma  <tspan font-weight="700">m</tspan> = 110 kg</text>

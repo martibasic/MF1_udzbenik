@@ -99,7 +99,7 @@ $$ {#eq-kinematika-kv-od-stvarnog-profila-do-srednje-brzine-1d-02}
 Time složeni dvo- ili trodimenzijski profil zamjenjujemo jednim brojem po presjeku. To je **jednodimenzijski (1D) model** na kojem počiva cijela integralna analiza u MF1: kad god pišemo $Q = A\bar v$ ili $A_1\bar v_1 = A_2\bar v_2$, podrazumijevamo da je presjek okomit na glavni smjer strujanja i koristimo srednju normalnu, a ne vršnu brzinu. U nastavku se, radi kraćeg zapisa, crtica nad srednjom brzinom izostavlja.
 
 ::: {#ex-u08-srednja-brzina-iz-profila-brzine-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Srednja brzina iz profila brzine&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P1. Srednja brzina iz profila brzine&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U cijevi je brzina najveća u osi, a nula uz stijenku. Da bismo mogli koristiti jednostavni 1D kontinuitet, treba iz stvarnog profila izvući jednu srednju brzinu.
 
@@ -227,9 +227,11 @@ Jednadžba $A_1 v_1 = A_2 v_2$ kaže da se pri stacionarnom toku kroz jednu stru
 :::
 
 ::: {.callout-note collapse="true" icon="false"}
-## Numerički trag
+## Očuvanje mase u računalnom proračunu
 
-U nestlačivom CFD modelu polje brzine mora zadovoljiti ograničenje $\nabla\cdot\vec v=0$. Metode sprege tlaka i brzine zato korigiraju polja tako da se diskretizirana bilanca mase zatvori u ćelijama i globalno. Mala lokalna divergencija sama ipak nije dokaz da su mreža, rubni uvjeti i fizikalni model prikladni.
+Za nestlačivo strujanje vrijedi $\nabla\cdot\vec v=0$. Divergencija brzine opisuje lokalno širenje ili sabijanje fluida. Kada je nula, mali dio fluida zadržava volumen dok se giba. Gledano kroz mali nepomični prostor, u istom vremenu mora izaći jednak volumen fluida kakav je ušao.
+
+Računalo zato podijeli prostor strujanja na mnogo malih dijelova, zvanih ćelije, i u svakome provjerava ulaz i izlaz fluida. Ako se oni ne podudaraju, popravlja izračun tlaka i brzine. To je ista provjera koju ručno radimo za cijelu cijev ili račvu. Uredna bilanca ipak nije dovoljna sama za sebe: treba provjeriti i odgovaraju li zadani promjeri, protoci i ostali podatci stvarnom sustavu.
 :::
 
 ::: {.mf1-interaktivno}
@@ -366,7 +368,7 @@ Ako taj redoslijed nije zatvoren, gotovo je sigurno da će zadatak biti krivo po
 ## Riješeni primjeri
 
 ::: {#ex-u08-voda-struji-kroz-difuzor-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Voda struji kroz difuzor&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P2. Voda struji kroz difuzor&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** U cjevovodu vodoopskrbnog sustava difuzor postupno proširuje presjek kako bi se smanjila brzina vode prije ulaska u sljedeći element. Projektant iz zadanih dimenzija i izlazne brzine određuje ulaznu brzinu te volumenski i maseni protok.
 
@@ -432,7 +434,7 @@ U užem ulaznom presjeku brzina mora biti veća nego na izlazu, jer isti protok 
 Difuzor zatvara stacionarni jednovodni slučaj. Sljedeća jezgrena scena <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Kinematika, kontrolni volumen i kontinuitet</span></span> ide jedan korak dalje: protoci više nisu uravnoteženi, pa razlika ulaza i izlaza ne nestaje nego se pretvara u porast volumena unutar kontrolnog volumena.
 
 ::: {#ex-u08-izjednacni-spremnik-tijekom-ispiranja-filtra-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Izjednačni spremnik tijekom ispiranja filtra&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P3. Izjednačni spremnik tijekom ispiranja filtra&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Tijekom ispiranja filtra u sustavu za pripremu vode izjednačni spremnik prima više vode nego što se odvodi servisnim ispustom, pa razina postupno raste. Operater procjenjuje brzinu porasta razine, vrijeme dosizanja gornje radne granice i pripadnu akumuliranu masu.
 
@@ -506,7 +508,7 @@ Razina vode u spremniku raste brzinom od oko $0{,}155\ \text{m/min}$, do gornje 
 :::
 
 ::: {#ex-u08-mijesajuci-izjednacni-spremnik-s-porastom-razine-t3 .mf1-ch}
-<p class="mf1-box-label">Cjeloviti zadatak — miješajući izjednačni spremnik s porastom razine&nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P4. miješajući izjednačni spremnik s porastom razine&nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** U procesnom postrojenju miješajući izjednačni spremnik prima vodu i slanu otopinu iz dvaju ulaznih vodova, a homogenizirana mješavina izlazi kroz zajednički vod sporije nego što ulazi, pa razina postupno raste. Procesnom inženjeru trebaju izlazni protok, gustoća mješavine, brzina porasta razine te masa koja se akumulira u radnom rasponu.
 
@@ -624,7 +626,7 @@ Kao sažetak poglavlja korisno je držati zajedno tri reprezentativne scene: su�
 ![statička zamjena za kontrolni volumen i kontinuitet](../assets/print/u08_kontrolni_volumen_scene.svg){#fig-u08-staticka-zamjena-za-kontrolni-volumen-i-kontinuitet fig-alt="statička zamjena za kontrolni volumen i kontinuitet"}
 
 ::: {#ex-u08-kontinuitet-kroz-razvodni-t-komad-hidraulicnog-sustava .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Kontinuitet kroz razvodni T-komad hidrauličnog sustava &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P5. Kontinuitet kroz razvodni T-komad hidrauličnog sustava &nbsp;<span class="mf1-level">T2</span></p>
 
 **Primjer za strojare**
 
@@ -676,7 +678,7 @@ Provjera: $Q_2 + Q_3 = 2{,}17 + 1{,}45 = 3{,}62\ \text{L/s} = Q_1$. Brzina $v_2 
 Razdjelnik rashladnog kruga primjenjuje istu višegransku bilancu, ali dodaje odluku o posljedicama blokade jedne grane.
 
 ::: {#ex-u08-rashladni-krug-baterijskog-paketa-elektricnog-vozila-t2 .mf1-we}
-<p class="mf1-box-label">Riješeni primjer — Rashladni krug baterijskog paketa električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P6. Rashladni krug baterijskog paketa električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Rashladni kolektor baterijskog paketa razdjeljuje zadani protok na više paralelnih kanala. Primjer ispituje samo volumensku bilancu pri zatvaranju jedne grane; temperatura ćelija i upravljačka logika nisu dio modela.
 
@@ -785,107 +787,133 @@ Bez jasno definiranog kontrolnog volumena nije moguće odrediti što su ulazi, �
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
-1. [**T1**]{#task-u08-voda-struji-kroz-cijev-koja-se-siri} Voda struji kroz cijev koja se širi s promjera $D_1 = 0{,}10\ \text{m}$ na $D_2 = 0{,}16\ \text{m}$. Ako je ulazna srednja brzina $v_1 = 4{,}8\ \text{m/s}$, a gustoća vode $\rho = 998\ \text{kg/m}^3$, odredi izlaznu brzinu, volumenski protok i maseni protok.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   najprije $Q = A_1 v_1$, zatim $v_2 = Q/A_2$ i na kraju $\dot m = \rho Q$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z1. Protok kroz proširenje cijevi {#task-u08-voda-struji-kroz-cijev-koja-se-siri .unnumbered .unlisted}
 
-   $Q \approx 37{,}7\ \text{L/s}$; $v_2 \approx 1{,}88\ \text{m/s}$; $\dot m \approx 37{,}6\ \text{kg/s}$.
-   :::
-   ::::
-   **Skica:** da - cijev s ulaznim i izlaznim presjekom, oznake $D_1$, $D_2$, $v_1$, $v_2$.
+Voda struji kroz cijev koja se širi s promjera $D_1 = 0{,}10\ \text{m}$ na $D_2 = 0{,}16\ \text{m}$. Ako je ulazna srednja brzina $v_1 = 4{,}8\ \text{m/s}$, a gustoća vode $\rho = 998\ \text{kg/m}^3$, odredi izlaznu brzinu, volumenski protok i maseni protok.
 
-2. [**T1**]{#task-u08-voda-ulazi-u-sapnicu-promjera-srednjom-brzinom} Voda ulazi u sapnicu promjera $D_1 = 120\ \text{mm}$ srednjom brzinom $v_1 = 3{,}1\ \text{m/s}$ i izlazi kroz otvor promjera $D_2 = 50\ \text{mm}$. Odredi izlaznu brzinu i maseni protok.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+najprije $Q = A_1 v_1$, zatim $v_2 = Q/A_2$ i na kraju $\dot m = \rho Q$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   za nestlačivu vodu vrijedi isti $Q$ kroz oba presjeka; iz $Q = A_1 v_1$ vrati $v_2$ i $\dot m$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+$Q \approx 37{,}7\ \text{L/s}$; $v_2 \approx 1{,}88\ \text{m/s}$; $\dot m \approx 37{,}6\ \text{kg/s}$.
+:::
+::::
+**Skica:** da - cijev s ulaznim i izlaznim presjekom, oznake $D_1$, $D_2$, $v_1$, $v_2$.
 
-   $Q \approx 35{,}1\ \text{L/s}$; $v_2 \approx 17{,}9\ \text{m/s}$; $\dot m \approx 35{,}0\ \text{kg/s}$.
-   :::
-   ::::
-   **Skica:** da - sapnica s jednim ulazom i jednim izlazom, oba presjeka jasno označena.
+[Razina: T1]{.mf1-task-level}
 
-3. [**T2**]{#task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene} U komoru za miješanje ulaze dvije vodene struje: prva s protokom $Q_1 = 0{,}012\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 90\ \text{mm}$, a druga s protokom $Q_2 = 0{,}008\ \text{m}^3/\text{s}$ kroz cijev promjera $D_2 = 70\ \text{mm}$. Iz komore izlazi jedna struja kroz cijev promjera $D_3 = 120\ \text{mm}$. Odredi izlaznu brzinu i napiši masenu bilancu sustava.
+### Z2. Brzina na izlazu sapnice {#task-u08-voda-ulazi-u-sapnicu-promjera-srednjom-brzinom .unnumbered .unlisted}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   za stacionarnu mješalicu vrijedi $\dot m_1 + \dot m_2 = \dot m_3$; za vodu je dovoljno računati preko volumenskih protoka.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+Voda ulazi u sapnicu promjera $D_1 = 120\ \text{mm}$ srednjom brzinom $v_1 = 3{,}1\ \text{m/s}$ i izlazi kroz otvor promjera $D_2 = 50\ \text{mm}$. Odredi izlaznu brzinu i maseni protok.
 
-   $Q_3 = 20\ \text{L/s}$; $v_3 \approx 1{,}77\ \text{m/s}$.
-   :::
-   ::::
-   **Skica:** da - komora s dva ulaza i jednim izlazom, označeni protoci i presjeci.
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+za nestlačivu vodu vrijedi isti $Q$ kroz oba presjeka; iz $Q = A_1 v_1$ vrati $v_2$ i $\dot m$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-4. [**T2**]{#task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz} U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 140\ \text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\ \text{mm}$ i $D_3 = 70\ \text{mm}$, pri čemu je brzina u drugoj grani dvostruko veća od brzine u trećoj. Odredi protoke u granama.
+$Q \approx 35{,}1\ \text{L/s}$; $v_2 \approx 17{,}9\ \text{m/s}$; $\dot m \approx 35{,}0\ \text{kg/s}$.
+:::
+::::
+**Skica:** da - sapnica s jednim ulazom i jednim izlazom, oba presjeka jasno označena.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   postavi $Q = Q_2 + Q_3$ i vezu brzina $v_2 = 2v_3$; preko $Q = Av$ zatvori sustav za dvije nepoznanice.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+[Razina: T1]{.mf1-task-level}
 
-   $v_3 \approx 1{,}81\ \text{m/s}$, $v_2 \approx 3{,}62\ \text{m/s}$; $Q_2 \approx 23{,}0\ \text{L/s}$, $Q_3 \approx 7{,}0\ \text{L/s}$.
-   :::
-   ::::
-   **Skica:** da - jedna ulazna i dvije izlazne grane s označenim promjerima i odnosom brzina.
+### Z3. Bilanca komore za miješanje {#task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene .unnumbered .unlisted}
 
-5. [**T3**]{#task-u08-cilindricni-spremnik-promjera-puni-se-dotokom-dok} Cilindrični spremnik promjera $D = 1{,}60\ \text{m}$ puni se dotokom $Q_{in} = 0{,}014\ \text{m}^3/\text{s}$, dok kroz odvod stalno izlazi $Q_{out} = 0{,}009\ \text{m}^3/\text{s}$. Odredi brzinu porasta razine u spremniku i vrijeme potrebno da se razina poveća za $0{,}80\ \text{m}$.
+U komoru za miješanje ulaze dvije vodene struje: prva s protokom $Q_1 = 0{,}012\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 90\ \text{mm}$, a druga s protokom $Q_2 = 0{,}008\ \text{m}^3/\text{s}$ kroz cijev promjera $D_2 = 70\ \text{mm}$. Iz komore izlazi jedna struja kroz cijev promjera $D_3 = 120\ \text{mm}$. Odredi izlaznu brzinu i napiši masenu bilancu sustava.
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   akumulacija je $Q_{in} - Q_{out}$; zatim vrijedi $A\,dh/dt = Q_{in} - Q_{out}$ i iz toga slijedi vrijeme za zadani porast razine.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+za stacionarnu mješalicu vrijedi $\dot m_1 + \dot m_2 = \dot m_3$; za vodu je dovoljno računati preko volumenskih protoka.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
 
-   $dh/dt \approx 2{,}49\ \text{mm/s}$; $t \approx 322\ \text{s} \approx 5{,}4\ \text{min}$.
-   :::
-   ::::
-   **Skica:** da - spremnik s dotokom, odvodom i rastom razine $h(t)$.
+$Q_3 = 20\ \text{L/s}$; $v_3 \approx 1{,}77\ \text{m/s}$.
+:::
+::::
+**Skica:** da - komora s dva ulaza i jednim izlazom, označeni protoci i presjeci.
 
-6. [**T4**]{#task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce} Miješajući spremnik tlocrtne površine $A_T = 4{,}8\ \text{m}^2$ prima vodu gustoće $\rho_A=1000\ \text{kg/m}^3$ protokom $Q_A = 0{,}011\ \text{m}^3/\text{s}$ i slanu otopinu gustoće $\rho_B = 1080\ \text{kg/m}^3$ protokom $Q_B = 0{,}004\ \text{m}^3/\text{s}$. Homogena mješavina izlazi kroz cijev promjera $D = 80\ \text{mm}$ srednjom brzinom $v_3 = 1{,}6\ \text{m/s}$. Pretpostavi savršeno miješanje i da je spremnik na početku već napunjen mješavinom istog sastava kao spojeni dotoci; gustoća sadržaja i izlaza zato tijekom promatranih $6\ \text{min}$ ostaje jednaka omjeru ukupnoga ulaznog masenog i volumnog protoka. Odredi izlazni volumenski protok, gustoću mješavine, brzinu porasta razine i masu akumuliranu u spremniku tijekom $6\ \text{min}$. Mjerila ulaznih protoka imaju granice $\pm2\ \%$ za $Q_A$ i $\pm3\ \%$ za $Q_B$, a izlazna brzina $v_3$ granicu $\pm0{,}08\ \text{m/s}$. Početni slobodni bok iznosi $0{,}560\ \text{m}$. Konzervativno procijeni najveći porast razine, provjeri ostaje li šestominutni rad unutar geometrijskog kriterija slobodnog boka i odredi najdulje trajanje prije idealiziranog prelijevanja bez regulatora razine.
+[Razina: T2]{.mf1-task-level}
 
-   :::: {.content-visible .mf1-hint-online when-format="html"}
-   ::: {.callout-note collapse="true" data-hint-key="true"}
-   ### Naputak
-   najprije izračunaj $Q_3 = A_3 v_3$, zatim gustoću mješavine iz masene bilance ulaza, a član akumulacije zatvori preko $Q_A + Q_B - Q_3 = A_T\,dh/dt$. Za najveći porast razine uzmi oba ulazna protoka na gornjoj, a izlaznu brzinu na donjoj granici. Najdulje trajanje slijedi iz $t_{max}=h_{slob}/(dh/dt)_{max}$.
-   :::
-   ::::
-   :::: {.content-visible .mf1-answer-online when-format="html"}
-   ::: {.callout-tip collapse="true" data-answer-key="true"}
-   ### Kontrolni rezultat
+### Z4. Raspodjela protoka u dvije grane {#task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz .unnumbered .unlisted}
 
-   $Q_3 \approx 8{,}0\ \text{L/s}$; $\rho_{mix} \approx 1020\ \text{kg/m}^3$; $dh/dt \approx 1{,}45\ \text{mm/s}$; akumulirana masa za 6 min $\approx 2{,}55 \cdot 10^3\ \text{kg}$. U nepovoljnoj kombinaciji granica $(dh/dt)_{max}\approx1{,}60\ \text{mm/s}$, pa bi razina za $6\ \text{min}$ porasla približno $0{,}577\ \text{m}$ i premašila slobodni bok za oko $17\ \text{mm}$. Zadani geometrijski kriterij nije zadovoljen; idealizirano vrijeme do ruba iznosi približno $349\ \text{s}$, odnosno $5{,}8\ \text{min}$, i nije opća sigurnosna granica rada.
-   :::
-   ::::
-   **Skica:** da - miješajući spremnik s dva ulaza, jednim izlazom i rastom razine.
+U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 140\ \text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\ \text{mm}$ i $D_3 = 70\ \text{mm}$, pri čemu je brzina u drugoj grani dvostruko veća od brzine u trećoj. Odredi protoke u granama.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+postavi $Q = Q_2 + Q_3$ i vezu brzina $v_2 = 2v_3$; preko $Q = Av$ zatvori sustav za dvije nepoznanice.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$v_3 \approx 1{,}81\ \text{m/s}$, $v_2 \approx 3{,}62\ \text{m/s}$; $Q_2 \approx 23{,}0\ \text{L/s}$, $Q_3 \approx 7{,}0\ \text{L/s}$.
+:::
+::::
+**Skica:** da - jedna ulazna i dvije izlazne grane s označenim promjerima i odnosom brzina.
+
+[Razina: T2]{.mf1-task-level}
+
+### Z5. Porast razine u spremniku {#task-u08-cilindricni-spremnik-promjera-puni-se-dotokom-dok .unnumbered .unlisted}
+
+Cilindrični spremnik promjera $D = 1{,}60\ \text{m}$ puni se dotokom $Q_{in} = 0{,}014\ \text{m}^3/\text{s}$, dok kroz odvod stalno izlazi $Q_{out} = 0{,}009\ \text{m}^3/\text{s}$. Odredi brzinu porasta razine u spremniku i vrijeme potrebno da se razina poveća za $0{,}80\ \text{m}$.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+akumulacija je $Q_{in} - Q_{out}$; zatim vrijedi $A\,dh/dt = Q_{in} - Q_{out}$ i iz toga slijedi vrijeme za zadani porast razine.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$dh/dt \approx 2{,}49\ \text{mm/s}$; $t \approx 322\ \text{s} \approx 5{,}4\ \text{min}$.
+:::
+::::
+**Skica:** da - spremnik s dotokom, odvodom i rastom razine $h(t)$.
+
+[Razina: T3]{.mf1-task-level}
+
+### Z6. Bilanca spremnika s dvama fluidima {#task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce .unnumbered .unlisted}
+
+Miješajući spremnik tlocrtne površine $A_T = 4{,}8\ \text{m}^2$ prima vodu gustoće $\rho_A=1000\ \text{kg/m}^3$ protokom $Q_A = 0{,}011\ \text{m}^3/\text{s}$ i slanu otopinu gustoće $\rho_B = 1080\ \text{kg/m}^3$ protokom $Q_B = 0{,}004\ \text{m}^3/\text{s}$. Homogena mješavina izlazi kroz cijev promjera $D = 80\ \text{mm}$ srednjom brzinom $v_3 = 1{,}6\ \text{m/s}$. Pretpostavi savršeno miješanje i da je spremnik na početku već napunjen mješavinom istog sastava kao spojeni dotoci; gustoća sadržaja i izlaza zato tijekom promatranih $6\ \text{min}$ ostaje jednaka omjeru ukupnoga ulaznog masenog i volumnog protoka. Odredi izlazni volumenski protok, gustoću mješavine, brzinu porasta razine i masu akumuliranu u spremniku tijekom $6\ \text{min}$. Mjerila ulaznih protoka imaju granice $\pm2\ \%$ za $Q_A$ i $\pm3\ \%$ za $Q_B$, a izlazna brzina $v_3$ granicu $\pm0{,}08\ \text{m/s}$. Početni slobodni bok iznosi $0{,}560\ \text{m}$. Konzervativno procijeni najveći porast razine, provjeri ostaje li šestominutni rad unutar geometrijskog kriterija slobodnog boka i odredi najdulje trajanje prije idealiziranog prelijevanja bez regulatora razine.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+najprije izračunaj $Q_3 = A_3 v_3$, zatim gustoću mješavine iz masene bilance ulaza, a član akumulacije zatvori preko $Q_A + Q_B - Q_3 = A_T\,dh/dt$. Za najveći porast razine uzmi oba ulazna protoka na gornjoj, a izlaznu brzinu na donjoj granici. Najdulje trajanje slijedi iz $t_{max}=h_{slob}/(dh/dt)_{max}$.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$Q_3 \approx 8{,}0\ \text{L/s}$; $\rho_{mix} \approx 1020\ \text{kg/m}^3$; $dh/dt \approx 1{,}45\ \text{mm/s}$; akumulirana masa za 6 min $\approx 2{,}55 \cdot 10^3\ \text{kg}$. U nepovoljnoj kombinaciji granica $(dh/dt)_{max}\approx1{,}60\ \text{mm/s}$, pa bi razina za $6\ \text{min}$ porasla približno $0{,}577\ \text{m}$ i premašila slobodni bok za oko $17\ \text{mm}$. Zadani geometrijski kriterij nije zadovoljen; idealizirano vrijeme do ruba iznosi približno $349\ \text{s}$, odnosno $5{,}8\ \text{min}$, i nije opća sigurnosna granica rada.
+:::
+::::
+**Skica:** da - miješajući spremnik s dva ulaza, jednim izlazom i rastom razine.
+
+[Razina: T4]{.mf1-task-level}
+
 :::::
 
 ![Skice uz zadatke za vježbu — cijevi, mješalice i razdjelnici protoka.](../assets/print/u08_vjezbe_skice.svg){#fig-u08-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — cijevi, mješalice i razdjelnici protoka."}

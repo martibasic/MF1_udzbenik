@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" role="img" aria-labelledby="u01vs_title u01vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u01vs_title">U01 - Mini skice za zadatke T1 do T6</title>
-  <desc id="u01vs_desc">Sest mini skica hidraulickih sustava za zadatke za vjezbu poglavlja U01. Svaka skica prikazuje tipologiju sustava: T1 - dva klipa razlicite velicine, T2 - dva klipa iste grane, T3 - hidraulicna stega, T4 - hidraulicni stol s dva radna cilindra, T5 - rucna pumpa s dva radna cilindra, T6 - tri jednaka radna cilindra. Svi sustavi prikazuju kontinuiran fluid kroz vod na dnu.</desc>
+  <title id="u01vs_title">U01 - Mini skice za zadatke Z1 do Z6</title>
+  <desc id="u01vs_desc">Sest mini skica hidraulickih sustava za zadatke za vjezbu poglavlja U01. Svaka skica prikazuje tipologiju sustava: Z1 - dva klipa razlicite velicine, Z2 - dva klipa iste grane, Z3 - hidraulicna stega, Z4 - hidraulicni stol s dva radna cilindra, Z5 - rucna pumpa s dva radna cilindra, Z6 - tri jednaka radna cilindra. Svi sustavi prikazuju kontinuiran fluid kroz vod na dnu.</desc>
   <defs>
     <marker id="u01vs_aR" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
       <path d="M0,0 L0,4 L6,2 z" fill="#c0392b" />
@@ -23,7 +23,7 @@
 
   <rect width="980" height="660" fill="#ffffff" />
   <!-- ============================================================
-       T1 - Servisna hidraulicna presa (gornji lijevo)
+       Z1 - Servisna hidraulicna presa (gornji lijevo)
        d_1 = 28 mm, F_1 = 180 N, d_2 = 140 mm, s_1 = 120 mm
   ============================================================ -->
   <rect x="30" y="30" width="305" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
@@ -55,7 +55,7 @@
   <line x1="291" y1="78" x2="291" y2="60" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u01vs_aG)" />
   <!-- Kote -->
   <!-- ============================================================
-       T2 - Dva klipa, ista grana (gornji sredina)
+       Z2 - Dva klipa, ista grana (gornji sredina)
        d = 24 mm, F = 95 N, D = 72 mm
   ============================================================ -->
   <rect x="345" y="30" width="290" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
@@ -81,7 +81,7 @@
   <line x1="390" y1="60" x2="390" y2="78" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u01vs_aR)" />
   <line x1="586" y1="78" x2="586" y2="60" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u01vs_aG)" />
   <!-- ============================================================
-       T3 - Hidraulicna stega (gornji desni)
+       Z3 - Hidraulicna stega (gornji desni)
        p = 2,4 MPa, d = 52 mm, F_stezanja = ?
   ============================================================ -->
   <rect x="645" y="30" width="305" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
@@ -101,7 +101,7 @@
   <!-- Tlak (oznaka) -->
   <!-- Oznake -->
   <!-- ============================================================
-       T4 - Hidraulicni stol, dva radna cilindra (donji lijevi)
+       Z4 - Hidraulicni stol, dva radna cilindra (donji lijevi)
        m = 1350 kg, D = 95 mm, d = 18 mm, s = 160 mm
   ============================================================ -->
   <rect x="30" y="335" width="305" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
@@ -143,7 +143,7 @@
   <line x1="155" y1="384" x2="155" y2="402" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u01vs_aR)" />
   <!-- Oznake -->
   <!-- ============================================================
-       T5 - Rucna pumpa, 2 radna cilindra (donji sredina)
+       Z5 - Rucna pumpa, 2 radna cilindra (donji sredina)
        d = 25 mm, F_p = 420 N, D = 140 mm, Δz = 30 mm
   ============================================================ -->
   <rect x="345" y="335" width="290" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
@@ -179,7 +179,7 @@
   <rect x="591" y="430" width="6" height="44" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
   <line x1="594" y1="414" x2="594" y2="428" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u01vs_aR)" />
   <!-- ============================================================
-       T6 - 3 jednaka radna cilindra + pumpa (donji desni)
+       Z6 - 3 jednaka radna cilindra + pumpa (donji desni)
        A_L = 95 cm², d = 22 mm, F_p = 360 N, Δz = 18 mm
   ============================================================ -->
   <rect x="645" y="335" width="305" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2" />
@@ -223,19 +223,19 @@
   <rect x="875" y="416" width="8" height="54" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
   <rect x="918" y="430" width="6" height="44" fill="#9aaab4" stroke="#5b6770" stroke-width="0.8" />
   <line x1="921" y1="414" x2="921" y2="428" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u01vs_aR)" />
-  <text x="182" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T1 — Servisna preša</text>
+  <text x="182" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">Z1 — Servisna preša</text>
 
   <text x="92" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b"><tspan font-weight="700">F₁</tspan> = 180 N</text>
   <text x="240" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="end" fill="#1e8449"><tspan font-weight="700">F₂</tspan> = ?</text>
   <text x="182" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">s₁ = 120 mm → s₂ = ?</text>
 
-  <text x="490" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T2 — Dva klipa, isti tlak</text>
+  <text x="490" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">Z2 — Dva klipa, isti tlak</text>
 
   <text x="405" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b"><tspan font-weight="700">F</tspan> = 95 N</text>
   <text x="540" y="73" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="end" fill="#1e8449"><tspan font-weight="700">F₂</tspan> = ?</text>
   <text x="490" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">p = F/A → F₂ = pA₂</text>
 
-  <text x="797" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T3 — Hidraulična stega</text>
+  <text x="797" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">Z3 — Hidraulična stega</text>
 
   <text x="860" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" font-weight="700" fill="#3a2a08">radni</text>
   <text x="860" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" font-weight="700" fill="#3a2a08">komad</text>
@@ -243,7 +243,7 @@
   <text x="702" y="225" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" font-weight="700" text-anchor="middle" fill="#1565c0">p</text>
   <text x="797" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">p = 2,4 MPa → F = ?</text>
 
-  <text x="182" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T4 — Hidraulični stol</text>
+  <text x="182" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">Z4 — Hidraulični stol</text>
 
   <text x="155" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1a2a36">stol m = 1350 kg</text>
 
@@ -251,14 +251,14 @@
   <text x="170" y="395" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#c0392b"><tspan font-weight="700">G</tspan> = mg</text>
   <text x="182" y="620" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">Δz = 45 mm, n = ?</text>
 
-  <text x="490" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T5 — Pumpa + 2 cilindra</text>
+  <text x="490" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">Z5 — Pumpa + 2 cilindra</text>
 
   <text x="460" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1a2a36">platforma G = ?</text>
 
   <text x="608" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" fill="#c0392b"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></tspan> = 420 N</text>
   <text x="490" y="620" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="middle" fill="#5a6a78">Δz = 30 mm, G = ?, Σs<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = ?</text>
 
-  <text x="797" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">T6 — Stol s 3 cilindra</text>
+  <text x="797" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">Z6 — Stol s 3 cilindra</text>
 
   <text x="770" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1a2a36">radni stol G = ?</text>
 
