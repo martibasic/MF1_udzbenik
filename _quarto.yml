@@ -123,9 +123,7 @@ format:
     theme: flatly
     css: custom.css
     include-after-body: includes/html-accessibility.html
-    toc: true
-    toc-depth: 2
-    toc-title: "Na ovoj stranici"
+    toc: false
     number-sections: true
     code-fold: false
     anchor-sections: true

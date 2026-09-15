@@ -1,8 +1,8 @@
 ![Od raspodjele hidrostatskog tlaka do rezultantne sile i njezina pravca djelovanja na ravnoj plohi](../assets/print/u05_fig_uvod_pregled.svg){#fig-u05-pregled-sila-na-plohe fig-align="center" style="width:100%;max-width:980px;" fig-alt="Od raspodjele hidrostatskog tlaka do rezultantne sile i njezina pravca djelovanja na ravnoj plohi"}
 
-## Od lokalnog tlaka do sile na plohu
+## Hidrostatske sile na plohe
 
-Tlak je lokalna veličina, a poklopac, vrata ili stijenka odgovaraju na njegovu raspodjelu po cijeloj površini. Zato hidrostatika ploha uvijek traži dva odgovora:
+Tlak je lokalna veličina, dok je opterećenje poklopca, vrata ili stijenke određeno njegovom raspodjelom po cijeloj plohi. Za hidrostatsku analizu određuju se:
 
 1. koliki je vektor rezultantne sile;
 2. kojim pravcem taj vektor djeluje.
@@ -21,22 +21,7 @@ gdje je $\mathbf n_f$ jedinična normala usmjerena **iz stvarnog fluida prema st
 Isti se račun pojavljuje na brodskim i procesnim poklopcima, ustavama retencijskih bazena, stijenkama rashladnih spremnika i zakrivljenim prijelazima vodnih građevina. Hidrostatika daje opterećenje fluida za zadanu geometriju i stanje. Ne provjerava sama po sebi čvrstoću, zamor, brtvljenje, stabilnost cijele konstrukcije ni normativnu prihvatljivost.
 :::
 
-::: {.mf1-priprema}
-<p class="mf1-box-label">Ishodi i pretpostavke poglavlja</p>
-
-Nakon poglavlja student može:
-
-- od referentnog tlaka i geometrije postaviti neto raspodjelu tlaka;
-- izvesti rezultantu i centar tlaka ravne plohe;
-- jasno definirati kut nagnute plohe i postaviti momentnu ravnotežu;
-- rastaviti silu na zakrivljenu plohu preko vertikalne projekcije i pomoćnog volumena;
-- odrediti smjer $F_V$ iz stvarne okupane strane, a ne iz položaja nacrtanog pomoćnog volumena;
-- provjeriti rezultat bilansom momenata, graničnim slučajem ili neovisnom integracijom.
-
-U glavnom modelu fluid miruje, gustoća svakog homogenog sloja je stalna, gravitacijsko polje je jednoliko, a kapilarni učinci nisu važni za razmatranu mjeru.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 11 sati.
-:::
+U osnovnom modelu fluid miruje, gustoća svakog homogenog sloja je stalna, gravitacijsko polje je jednoliko, a kapilarni učinci zanemarivi.
 
 ## Referentni tlak i smjer sile
 
@@ -53,16 +38,6 @@ p_{\mathrm{net}}(h)=p_0+\rho gh.
 $$ {#eq-sile-plohe-referentni-tlak-i-smjer-sile-02}
 
 Jednoliki član mijenja i silu i položaj njezina hvatišta. Zbog toga formula za centar tlaka izvedena samo za $p=\rho gh$ ne smije biti automatski primijenjena na zatvoren spremnik s plinskim nadtlakom.
-
-::: {.mf1-temelj}
-<p class="mf1-box-label">Temelj — radni slijed prije računa</p>
-
-1. Izdvoji plohu i označi stvarnu okupanu stranu.
-2. Zapiši je li tlak apsolutni, manometarski ili neto tlak između dviju strana.
-3. Odaberi osi i pozitivne smjerove; za nagnutu plohu definiraj kut prema navedenoj osi.
-4. Integriraj silu i moment iste raspodjele tlaka.
-5. Provjeri nalazi li se pravac djelovanja unutar fizički mogućeg područja i odgovara li smjer lokalnim tlačnim strelicama.
-:::
 
 ## Ravna ploha: rezultanta i centar tlaka
 
@@ -146,9 +121,9 @@ $$ {#eq-u05-centar-tlaka-nagnuta}
 Za $\theta=90^\circ$ dobiva se vertikalna ploha. Kada $\theta\to0$ tlak po vodoravnoj plohi postaje jednolik i $h_{CP}\to h_C$. To je važan granični slučaj izvoda.
 
 ::: {.mf1-interaktivno}
-<p class="mf1-box-label">Numerički pokus — ravna ploha</p>
+<p class="mf1-box-label">Interaktivni prikaz — ravna ploha</p>
 
-Prije pokretanja predvidite kako će se promijeniti $F$ i razlika $h_{CP}-h_C$ kada se cijela ploha spusti dublje, a kako kada se pri istoj dubini težišta promijeni nagib.
+Prikaz povezuje dubinu i nagib plohe s rezultantnom silom $F$ te razlikom $h_{CP}-h_C$.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u05_sila_na_ravnu_plohu.ipynb">Pokreni u pregledniku</a>
@@ -356,9 +331,9 @@ $$ {#eq-sile-plohe-vertikalna-komponenta-i-njezin-smjer-02}
 Funkcija $\operatorname{atan2}$ zadržava kvadrant; obični $\arctan(F_V/F_H)$ može sakriti pogrešan predznak. Na kružnom luku u ravninskom presjeku sve lokalne tlačne sile prolaze središtem zakrivljenosti, pa kroz njega prolazi i rezultanta. To geometrijsko svojstvo ne vrijedi za proizvoljnu zakrivljenu plohu.
 
 ::: {.mf1-interaktivno}
-<p class="mf1-box-label">Numerički pokus — zakrivljena ploha</p>
+<p class="mf1-box-label">Interaktivni prikaz — zakrivljena ploha</p>
 
-Prije pokretanja odredite smjer $F_V$ samo iz okupane strane. Zatim mijenjajte dubinu i polumjer te usporedite numerički rast $F_H$ i $F_V$ s njihovim geometrijskim izrazima.
+Prikaz povezuje dubinu i polumjer zakrivljene plohe s komponentama $F_H$ i $F_V$.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u06_zakrivljena_ploha.ipynb">Pokreni u pregledniku</a>
@@ -538,16 +513,6 @@ $$ {#eq-sile-plohe-rijeseni-primjer-zglobni-poklopac-s-vertikalnom-08}
 Zbroj je $\rho gb\pi R^3/4=F_VR$, pa identitet daje $T=F_V=13{,}026\ \mathrm{kN}$. Jednakost je geometrijska provjera ovog slučaja, a ne opće pravilo za zakrivljene poklopce.
 :::
 
-## Konceptualna provjera
-
-::: {.mf1-questions}
-1. Može li se iznos sile na nagnutu plohu odrediti samo iz njezina kuta? Obrazložite koje se geometrijske veličine moraju držati jednakima pri usporedbi.
-2. Zašto je centar tlaka vertikalne plohe u manometarskom polju dublji od težišta, ali se kod vodoravne plohe s njime podudara?
-3. Zašto položaj zamišljenog volumena ne određuje smjer $F_V$?
-4. U kojem slučaju jedna vertikalna projekcija nije dovoljna za račun $F_H$ zakrivljene plohe?
-5. Koja bi se dodatna fizika morala uključiti kada je fluid u gibanju ili kada je druga strana poklopca pod nepoznatim tlakom?
-:::
-
 ## Zadaci za samostalan rad
 
 U svim zadatcima uzmite $g=9{,}81\ \mathrm{m/s^2}$. Ako nije drukčije navedeno, voda ima $\rho=998\ \mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak. Skica s okupanom stranom, normalom i pozitivnim smjerovima dio je postavljanja modela.
@@ -694,12 +659,12 @@ $F=12{,}218\ \mathrm{kN}$; $u(F)=0{,}192\ \mathrm{kN}$; kombinirana nesigurnost 
 
 :::::
 
-## Za ponijeti
+## Sažetak
 
 ::: {.mf1-zavrsni-okvir}
-<p class="mf1-box-label">Sažetak modela i njegovih granica</p>
+<p class="mf1-box-label">Hidrostatske sile na ravne i zakrivljene plohe</p>
 
-- Za ravnu plohu prvo integrirajte neto tlak: pri $p=\rho gh$ vrijedi $F=\rho gAh_C$.
+- Za ravnu plohu integrira se neto tlak; pri $p=\rho gh$ vrijedi $F=\rho gAh_C$.
 - Centar tlaka dolazi iz momenta **iste** raspodjele. Formula $h_C+I_G/(Ah_C)$ nije opća za nenulti jednoliki dodatak tlaka.
 - Kut nagnute plohe ovdje je kut prema vodoravnici; geometrija dubina ulazi preko $\sin\theta$.
 - Za zakrivljenu plohu $F_H$ se dobiva iz sile na vertikalnu projekciju, a $|F_V|$ iz težine odgovarajućega pomoćnog volumena kada su ispunjene pretpostavke otvorenog manometarskog slučaja.

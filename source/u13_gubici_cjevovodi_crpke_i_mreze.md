@@ -1,6 +1,6 @@
 ![Od pojedine dionice do serijsko-paralelne mreže: protok određuje brzinu i režim, a gubitci zatvaraju energijsku bilancu.](../assets/print/u13_fig_uvod_pregled.svg){#fig-cjevovodna-mreza-pregled fig-align="center" fig-alt="Od pojedine dionice do serijsko-paralelne mreže: protok određuje brzinu i režim, a gubitci zatvaraju energijsku bilancu."}
 
-## Od energijske bilance do radne točke {#sec-cjevovodi-motivacija}
+## Gubitci, cjevovodi, crpke i mreže {#sec-cjevovodi-motivacija}
 
 Cjevovod nije popis formula za cijevi, koljena i ventile. To je sustav kroz koji se prenose masa i mehanička energija. Kontinuitet određuje kako se protok dijeli, energijska bilanca govori koliko je visine potrebno, a konstitutivni i empirijski modeli određuju koliko se te visine nepovratno disipira. Crpka pritom ne nameće proizvoljan protok: stvarni se režim uspostavlja ondje gdje se podudaraju mogućnosti crpke i zahtjev sustava.
 
@@ -8,23 +8,6 @@ Cjevovod nije popis formula za cijevi, koljena i ventile. To je sustav kroz koji
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
 Isti graf modela opisuje balastni vod broda, rashladni krug podatkovnog centra, protupožarnu mrežu, sustav centralnog grijanja i tlačni vod vodnoga grada. Razlikuju se fluid, geometrija i kriterij odluke; bilance ostaju iste. U modernom projektu račun se ne završava promjerom cijevi: provjeravaju se radna točka, godišnja električna energija, osjetljivost na hrapavost i usisno ograničenje crpke.
-:::
-
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje:** kontinuitet $Q=Av$, Reynoldsov broj, energijska jednadžba, apsolutni i manometarski tlak te osnovno čitanje grafa.
-
-**Ishodi učenja:**
-
-- postaviti realnu energijsku bilancu s jasnim presjecima, referencom tlaka i predznacima;
-- razlikovati linijske i lokalne gubitke te odabrati brzinu svojstvenu svakom elementu;
-- odrediti Darcyjev koeficijent trenja u laminarnom i turbulentnom režimu;
-- riješiti jednostavnu serijsku i paralelnu mrežu;
-- odrediti radnu točku crpke i voditi bilancu hidrauličke, vratilne i električne snage;
-- izračunati $NPSH_a$ i objasniti zašto bez $NPSH_r$ nema konačne kavitacijske provjere.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 12 sati.
 :::
 
 ## Realna energijska bilanca sustava {#sec-realna-energijska-bilanca}

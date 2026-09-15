@@ -1,12 +1,8 @@
 ![Pregled poglavlja: turbostrojevi i propulzija kroz pokretne lopatice, moment i potisak.](../assets/print/u12_fig_uvod_pregled.svg){#fig-uvod-u12 fig-align="center" fig-alt="Pregled poglavlja: turbostrojevi i propulzija kroz pokretne lopatice, moment i potisak."}
 
-## Turbostrojevi i propulzija — račun u relativnom okviru
+## Turbostrojevi i propulzija
 
-Količina gibanja je ovdje izravni ulaz u lopatice i mlazni potisak.
-
-Naslov poglavlja vodi prema turbinama, vodilicama i potisku, ali temelj ostaje isti kao i u prethodnom poglavlju: jasan kontrolni volumen i ispravno pročitana promjena količine gibanja.
-
-Na toj se osnovi zatim grade reakcija nosača, snaga na pokretnim lopaticama i mlazni potisak.
+Analiza turbostrojeva i propulzijskih sustava temelji se na promjeni količine gibanja fluida u kontrolnom volumenu. Taj pristup određuje reakciju nosača, snagu na pokretnim lopaticama i mlazni potisak.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -14,27 +10,7 @@ Na toj se osnovi zatim grade reakcija nosača, snaga na pokretnim lopaticama i m
 Pokretne lopatice i potisak nisu školski dodatak, nego jezgra rada Peltonova kola, vodomlaznog pogona, mlaznih čistača i svake ispitne glave koja skreće mlaz radi sile ili momenta. U strojarstvu i brodogradnji isti račun odlučuje koliko snage rotor stvarno prima, koliki potisak ostaje na nosaču i kako izbor izlaznog kuta mijenja korisni učinak stroja.
 :::
 
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje koje se pretpostavlja:**
-
-- zakon količine gibanja iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Količina i moment količine gibanja</span></span>;
-- pojam relativne i apsolutne brzine, vektor brzine i njegove komponente;
-- kinematika kružnog gibanja, kutna i obodna brzina;
-- pojam mehaničkog rada i snage u rotacijskom gibanju.
-
-**Ishodi učenja:**
-
-- razlikovati apsolutnu, relativnu i obodnu brzinu te ih ispravno kombinirati u trokutima brzina;
-- izračunati silu i snagu koju fluid predaje pokretnoj lopatici;
-- odrediti optimalnu obodnu brzinu za maksimalan korisni rad rotora;
-- primijeniti istu logiku količine gibanja na potisak (vodomlazni pogoni, sustavi reakcijskog tipa).
-
-**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
-:::
-
-## Fizikalni uvod i matematički izvod
+## Zakon količine gibanja za lopatice i vodilice
 
 Kad mlaz promijeni smjer ili iznos brzine, mora postojati sila koja je uzrokovala tu promjenu količine gibanja. Za nepomični kontrolni volumen, stacionaran tok te jedan ulaz i izlaz osnovni zapis je
 

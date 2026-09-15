@@ -1,38 +1,16 @@
 ![Pregled poglavlja pog. 3: Hidrostatika, raspodjela tlaka i manometrija](../assets/print/u03_fig_uvod_pregled.svg){#fig-uvod-u03 fig-align="center" fig-alt="Pregled poglavlja pog. 3: Hidrostatika, raspodjela tlaka i manometrija"}
 
-## Hidrostatika kao prvi inženjerski test modela
+## Hidrostatička raspodjela tlaka
 
-Hidrostatika je prvo poglavlje u kojem model odmah mora dati i mjerenje.
-
-Cilj nije samo zapisati relaciju za tlak, nego učvrstiti radni postupak koji se ponavlja kroz spremnike, piezometre, U-manometre i diferencijalne manometre.
+Hidrostatika proučava raspodjelu tlaka u fluidu u mirovanju. Njezine se relacije primjenjuju pri analizi spremnika, piezometara, U-manometara i diferencijalnih manometara.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Ista hidrostatska logika čita se na piezometru uz spremnik, na U-manometru ventilacijskog voda i na diferencijalnom manometru koji provjerava pad tlaka preko filtra ili izmjenjivača topline. U građevini i brodogradnji ta se slika širi na tlak vode po dubini u spremnicima, kesonima i balastnim tankovima, pa je manometrija ovdje instrumentacijski nastavak hidrostatike, a ne novo pravilo.
+Piezometri, U-manometri i diferencijalni manometri primjenjuju hidrostatsku ravnotežu za mjerenje tlaka. Isti se princip koristi za određivanje opterećenja vode po dubini u spremnicima, kesonima i balastnim tankovima.
 :::
 
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje koje se pretpostavlja:**
-
-- definicija tlaka i razlikovanje sile od tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>;
-- diferencijalni i integralni račun jedne varijable (Matematika I);
-- pojam gradijenta i derivacije po koordinati;
-- razumijevanje gravitacijskog polja kao homogenog ubrzanja.
-
-**Ishodi učenja:**
-
-- izvesti diferencijalnu jednadžbu hidrostatike $\mathrm{d}p/\mathrm{d}z = -\rho g$ i njezin integralni oblik za konstantnu gustoću;
-- pratiti tlak kroz sustav od više povezanih fluida bez gubljenja predznaka;
-- razlikovati apsolutni, manometarski i vakuumski tlak te ih međusobno povezati;
-- čitati i postaviti U-manometar i diferencijalni manometar.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
-:::
-
-## Fizikalni uvod i matematički izvod
+### Diferencijalna jednadžba hidrostatike
 
 Fluid u mirovanju ne može nositi smična naprezanja povezana sa strujanjem, ali i dalje nosi raspodjelu normalnog naprezanja, odnosno tlaka. Svaki sloj fluida mora držati težinu slojeva iznad sebe, pa tlak raste s dubinom.
 
@@ -42,7 +20,7 @@ $$\frac{dp}{dz} = -\rho g$$ {#eq-hidrostatika-fizikalni-uvod-i-matematicki-izvod
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Ova diferencijalna jednadžba kaže jednu jednostavnu stvar: lokalni gradijent tlaka uravnotežuje težinu fluida. Negativan predznak govori da, kad idemo prema gore ($z$ raste), tlak pada. Relacija $dp/dz=-\rho(z)g$ vrijedi i kada se gustoća mijenja s visinom; tada se samo ne smije iz integrala izvući konstantna $\rho$. Linearni porast $\rho gh$ poseban je slučaj približno konstantnih $\rho$ i $g$.
+Lokalni gradijent tlaka uravnotežuje težinu fluida. Negativan predznak označuje smanjenje tlaka s porastom koordinate $z$. Relacija $dp/dz=-\rho(z)g$ vrijedi i pri promjenjivoj gustoći, ali se tada gustoća ne može izlučiti iz integrala. Linearni porast tlaka $\rho gh$ poseban je slučaj približno konstantnih $\rho$ i $g$.
 :::
 
 Ako je gustoće moguće uzeti konstantnom, to prelazi u radni zapis
@@ -58,15 +36,7 @@ $$p = p_0 + \rho g h$$ {#eq-hidrostatika-fizikalno-znacenje-02}
 Ovo je radna jednadžba hidrostatike: poznati tlak na slobodnoj površini ($p_0$), a zatim dodamo "težinski porast" $\rho g h$ za svaki metar dubine. Za vodu ($\rho \approx 1000\ \text{kg/m}^3$) svaki metar dubine donosi oko $9{,}81\ \text{kPa}$. Za živu ($\rho \approx 13600\ \text{kg/m}^3$) isti metar daje $\approx 133\ \text{kPa}$. Ista jednadžba vrijedi i unazad: iz poznatog tlaka u jednoj točki računa se tlak na svakoj drugoj visini u istom spojenom fluidu.
 :::
 
-::: {.callout-note collapse="true" icon="false"}
-## Mirna voda kao provjera proračuna
-
-Prije proračuna valova u spremniku korisno je provjeriti može li računalni model opisati vodu koja miruje. Na većoj dubini tlak mora biti veći jer nosi težinu višeg stupca vode: $p=p_0+\rho gh$, pri čemu je $h$ dubina ispod površine.
-
-Ako se voda u takvoj provjeri počne sama gibati, treba provjeriti jesu li tlak i težina vode pravilno uravnoteženi. Ta jednostavna provjera može otkriti pogrešan smjer gravitacije, početnu raspodjelu tlaka ili postavke proračuna.
-:::
-
-Ključno je da se ova relacija ne koristi mehanički. Diferencijalna jednadžba ovdje nije samo simboličan zapis, nego sažima jednu vrlo jednostavnu sliku: svaki niži sloj nosi težinu slojeva iznad sebe. Zato prije računa treba odrediti koji je tlak poznat, gdje je referentna točka i kojim se putem prolazi kroz fluid.
+U nižim slojevima tlak je veći jer oni nose težinu slojeva iznad sebe. Pri primjeni jednadžbe određuju se poznati tlak, referentna točka i put kroz promatrani fluid.
 
 ## Matematički izvod
 
@@ -106,20 +76,17 @@ $$
 p_2 - p_1 = -\rho g (z_2 - z_1) = \rho g (z_1 - z_2).
 $$ {#eq-hidrostatika-matematicki-izvod-06}
 
-::: {.callout-note}
-## Razrada koraka
-Korak: integrirani oblik s $z$ → praktični zapis s dubinom $h$
-
-Neka je $z_1$ visina slobodne površine i $z_2$ visina promatrane točke (niže, dakle $z_2 < z_1$). Tada je $h = z_1 - z_2 > 0$ upravo dubina promatrane točke ispod slobodne površine. Uvrstimo u integrirani oblik:
+Neka je $z_1$ visina slobodne površine, a $z_2$ visina promatrane točke, pri čemu je $z_2<z_1$. Dubina promatrane točke iznosi $h=z_1-z_2>0$, pa iz integriranoga oblika slijedi
 $$
 p_2 - p_1 = \rho g (z_1 - z_2) = \rho g h.
 $$ {#eq-hidrostatika-razrada-koraka-01}
-Ako je $p_1 = p_0$ (tlak na slobodnoj površini), dobivamo:
+
+Ako je $p_1=p_0$, gdje je $p_0$ tlak na slobodnoj površini, dobiva se
 $$
 p_2 = p_0 + \rho g h.
 $$ {#eq-hidrostatika-razrada-koraka-02}
-Promjena konvencije: $z$ je koordinata prema gore, $h$ je dubina prema dolje. Oba zapisa su ekvivalentni, ali $h$ je pozitivan prema dolje pa je oblik s $h$ intuitivniji za hidrostatička izračunavanja.
-:::
+
+Koordinata $z$ usmjerena je prema gore, dok je dubina $h$ pozitivna prema dolje. Zapisi su međusobno ekvivalentni.
 
 Ako se umjesto koordinate $z$ uvede dubina $h$ mjerena prema dolje od poznate slobodne površine, dobiva se praktični zapis
 
@@ -221,7 +188,7 @@ Manometar nije novi zakon fizike, nego instrumentacijski zapis iste hidrostatske
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Diferencijalni manometar</p>
 
-Interaktivni prikaz omogućuje mijenjanje gustoća radnog i manometarskog fluida te razlike visine očitanja $\Delta h$ uz neposredno praćenje izmjerene razlike tlakova. Shema U-manometra vizualizira odnos između razlike visina i razlike gustoća.
+Interaktivni prikaz prikazuje utjecaj gustoće radnoga i manometarskog fluida te razlike visina $\Delta h$ na izmjerenu razliku tlakova. Shema U-manometra prikazuje odnos razlike visina i gustoća.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u03_diferencijalni_manometar.ipynb">Pokreni u pregledniku</a>
@@ -229,12 +196,9 @@ Interaktivni prikaz omogućuje mijenjanje gustoća radnog i manometarskog fluida
 <img class="mf1-interaktivno-qr" src="../assets/qr/u03_diferencijalni_manometar.svg" alt="QR kod za interaktivni prikaz diferencijalnog manometra"/>
 </div>
 
-<div class="mf1-interaktivno-pitanja">
-**Pitanja za samostalno istraživanje:** (a) Što se događa s mjerenjem kada se gustoće dvaju fluida približe? (b) Zašto se za male razlike tlakova bira manometarski fluid bliže gustoći radnog fluida? (c) Kako se osnovna formula proširuje na manometarski put kroz tri fluida različitih gustoća?
-</div>
 :::
 
-Ako se usred rješenja promijeni referentni smjer ili se preskoči promjena fluida, gotovo je sigurno da će predznaci otići u krivom smjeru.
+Nedosljedna promjena referentnoga smjera ili zanemarivanje promjene fluida uzrokuje pogrešan predznak u manometarskoj jednadžbi.
 
 Jednako je važno stalno razlikovati apsolutni, manometarski i vakuumski tlak: apsolutni se mjeri u odnosu na idealni vakuum, manometarski u odnosu na lokalni atmosferski tlak, a vakuumski opisuje koliko je apsolutni tlak ispod atmosferskoga.
 
@@ -701,40 +665,6 @@ Očitano odstupanje od $50\ \text{kPa}$ ekvivalentno je približno $5{,}11\ \tex
 Hidrostatička razlika tlakova od $372\ \text{kPa}$ između čvorova razmaknutih $38\ \text{m}$ po visini odgovara promjeni oko $9{,}8\ \text{kPa}$ po metru vodenog stupca. Dobivenih $1{,}48\ \text{bar}$ u točki `B` rezultat je zadanoga kvazistatičkog modela, a ne provjera uslužnog tlaka mreže. Alarmni prag mora proizaći iz mjerne nesigurnosti, prirodne varijabilnosti pogona i procjene posljedica, ne iz univerzalne vrijednosti $50\ \text{kPa}$.
 :::
 
-::: {.mf1-samoprovjera}
-<p class="mf1-box-label">Provjeri sebe</p>
-
-Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
-
-1. Zašto je za jednoznačan proračun tlaka u manometru ključno odabrati i pratiti referentni smjer kretanja?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-Pri silasku kroz fluid tlak raste za $\rho g \Delta h$, pri penjanju pada za isti iznos. Ako se referentni smjer mijenja usred proračuna, predznak člana mijenja se nedosljedno i krajnji rezultat odstupa od fizikalno ispravnog.
-:::
-
-2. Koja je razlika između apsolutnog, manometarskog i vakuumskog tlaka?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-Apsolutni tlak mjeri se u odnosu na idealan vakuum i uvijek je nenegativan. Manometarski tlak je razlika apsolutnog i atmosferskog tlaka, može biti pozitivan ili negativan. Vakuumski tlak je iznos kojim je apsolutni tlak ispod atmosferskog, definira se kao $p_{vak} = p_{atm} - p_{aps}$.
-:::
-
-3. Pri kojoj se gustoći manometarskog fluida postiže veća osjetljivost mjerenja za male razlike tlakova?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-Veća osjetljivost (veća razlika visine za isti $\Delta p$) postiže se kad je manometarski fluid samo malo gušći od radnog fluida; tada faktor $(\rho_2 - \rho_1)$ u izrazu $\Delta p = (\rho_2-\rho_1)g\Delta h$ postaje malen, pa $\Delta h$ za isto $\Delta p$ raste.
-:::
-
-4. Vrijedi li hidrostatička jednadžba $p = p_0 + \rho gh$ za fluid u kojem postoji značajno strujanje?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-Ne vrijedi izravno; uz prisutno strujanje tlak ovisi i o brzinama i o gubitcima, pa se rabe energijska jednadžba iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> i, kada je potrebno, modeli iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span>. Hidrostatička jednadžba ostaje točna za fluid u mirovanju ili pri zanemarivim brzinama.
-:::
-:::
-
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
@@ -869,46 +799,10 @@ $p_{gas} \approx 122{,}6\ \text{kPa}$ (aps.); na dubini $1{,}30\ \text{m}$: $p \
 
 ![Skice uz zadatke za vježbu — otvoreni i zatvoreni spremnici te U-manometri (poglavlje 3).](../assets/print/u03_vjezbe_skice.svg){#fig-u03-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — otvoreni i zatvoreni spremnici te U-manometri (poglavlje 3)."}
 
-::: {.mf1-zavrsni-okvir}
-<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
+## Sažetak
 
-**Sažeta provjera prije računa**
+U fluidu u mirovanju gradijent tlaka uravnotežuje volumne sile. Za jednoliko gravitacijsko polje usmjereno prema dolje vrijedi $dp/dz=-\rho g$. Kada je gustoća konstantna, tlak između dviju točaka povezan je relacijom $p_2-p_1=\rho g(z_1-z_2)$, odnosno $p=p_0+\rho gh$ za dubinu $h$ mjerenu od slobodne površine prema dolje.
 
-- Treba jasno označiti referentnu točku i poznati tlak.
-- Treba razlikovati gdje se radi s apsolutnim, a gdje s manometarskim tlakom.
-- Kretanje gore ili dolje kroz svaki stupac treba pratiti bez miješanja znakova.
-- Treba provjeriti mijenja li se fluid, pa s njim i gustoća u izrazu $\rho g \Delta h$.
-- Treba odvojiti čistu hidrostatiku od relativnog mirovanja i uzgona.
+U otvorenome je spremniku tlak na slobodnoj površini atmosferski, dok u zatvorenome spremniku tlak na slobodnoj površini određuje stanje plinskoga prostora. Apsolutni tlak mjeri se u odnosu na idealni vakuum, manometarski tlak u odnosu na lokalni atmosferski tlak, a vakuumski tlak opisuje sniženje apsolutnoga tlaka ispod atmosferskoga.
 
-**Najčešća pogreška**
-
-Najčešća greška nije sama algebra, nego prerano skrivanje fizike u jednu dugu jednadžbu. Ako se ne vidi gdje tlak raste, gdje pada i koji je tlak poznat na početku putanje, treba se vratiti na skicu.
-
-**Nakon ovoga poglavlja mora biti moguće**
-
-1. pročitati raspodjelu tlaka u otvorenom ili zatvorenom spremniku.
-2. razlikovati apsolutni, manometarski i vakuumski tlak.
-3. dosljedno pročitati više-fluidni manometar bez gubitka predznaka.
-
-**U tehnici to znači**
-
-Piezometar uz spremnik, diferencijalni manometar na filtru i tlačni priključak na balastnom tanku svi se čitaju istom hidrostatikom. Tko zna pratiti tlak kroz stupce fluida i tipove tlaka, zna i ispravno tumačiti očitanje instrumenta na stvarnom sustavu.
-
-**Granica modela**
-
-Jednostavni zapis $p = p_0 + \rho gh$ vrijedi samo dok je fluid u mirovanju ili u režimu koji se može čitati kao hidrostatika. Čim značajno uđu strujanje, promjena gustoće ili jaka akceleracija sustava, treba prijeći na širi model od čistoga manometarskog puta.
-
-<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> treba učvrstiti tri stabilne navike: crtanje referentne skice, praćenje promjene tlaka po koracima i razlikovanje tipova tlaka prije nego što račun uopće počne.
-:::
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Gdje ovo živi u numerici.** Hidrostatsko stanje prirodan je referentni slučaj za numerički model s gravitacijom. Zakon $dp/dz=-\rho g$ vrijedi kada je vertikalna bilanca doista hidrostatska; u strujajućem fluidu lokalna ubrzanja i naprezanja općenito mijenjaju gradijent tlaka.
-
-**Što numerički alat radi s tim.** Može se rješavati puni tlak ili modificirani tlak iz kojega je izdvojen gravitacijski potencijal. Pri povratku na apsolutni ili manometarski tlak treba dosljedno vratiti referencu, predznak gravitacije i, kod promjenjive gustoće, odgovarajuću gustoću po domeni.
-
-**Tipičan scenarij.** Mirna posuda poznate gustoće dobar je verifikacijski test: rekonstruirani tlak mora slijediti zadanu hidrostatsku raspodjelu unutar očekivane diskretizacijske i iteracijske pogreške. Tek nakon toga ima smisla tumačiti dinamičko odstupanje od hidrostatike.
-
-> *Nije gradivo MF1. Ključna veza jest razlika između hidrostatskoga referentnog polja i dodatne dinamike koju rješava numerički model.*
-:::
+Manometrija se temelji na istoj hidrostatskoj ravnoteži. Pri prolazu kroz stupac pojedinoga fluida tlak se pri silasku povećava za $\rho g\Delta h$, a pri usponu smanjuje za isti iznos. Za svaki segment koristi se gustoća pripadnoga fluida. Jednostavni hidrostatski model vrijedi za fluid u mirovanju; pri značajnom strujanju, promjenjivoj gustoći ili ubrzanome gibanju sustava potreban je širi model.

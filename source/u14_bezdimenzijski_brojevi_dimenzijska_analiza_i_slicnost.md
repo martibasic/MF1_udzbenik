@@ -1,36 +1,13 @@
 ![Pregled poglavlja: tri lica iste ideje — režim strujanja (laminarno/turbulentno), ključni omjeri sila (Re, Fr, Eu, We, Ma) i modelsko ispitivanje broda u vučnom bazenu po Froudeovoj sličnosti](../assets/print/u14_fig_uvod_pregled.svg){#fig-uvod-u14 fig-align="center" fig-alt="Pregled poglavlja: tri lica iste ideje — režim strujanja (laminarno/turbulentno), ključni omjeri sila (Re, Fr, Eu, We, Ma) i modelsko ispitivanje broda u vučnom bazenu po Froudeovoj sličnosti"}
 
-## Sile kao zajednički jezik cijele knjige
+## Dimenzijska analiza i sličnost
 
-Cijeli je udžbenik bio niz sila: tlačna sila u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>, viskozna sila u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Reologija, viskoznost i međupovršinske pojave</span></span>, gravitacijska sila kroz hidrostatiku i uzgon u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Uzgon, plivanje i početni stabilitet</span></span>, inercijska sila u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Količina i moment količine gibanja</span></span> te viskozni gubitci i Reynoldsov broj u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span>.
-
-Ovo poglavlje **ne uvodi nijednu novu silu** — ono postojeće mehanizme uspoređuje bezdimenzijskim grupama. Mnogi važni brojevi mogu se povezati s omjerima karakterističnih sila, ali neki prirodnije predstavljaju omjere vremenskih skala, brzina ili normirane izlazne veličine. Zadatak dimenzijske analize nije unaprijed proglasiti jednu silu „vladarom”, nego utvrditi koje grupe mogu utjecati na promatrani rezultat.
+Dimenzijska analiza povezuje tlačne, viskozne, gravitacijske, inercijske i međupovršinske učinke bezdimenzijskim grupama. One mogu predstavljati omjere karakterističnih sila, vremenskih skala ili brzina te normirane odzivne veličine. Svrha je utvrditi mjerodavne fizikalne mehanizme promatranoga problema.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
 Brod se prije gradnje ispituje kao model u vučnom bazenu, automobil i zrakoplovno krilo u aerotunelu, a brodski vijak i centrifugalna crpka provjeravaju se na kavitaciju. Model i prototip ponašaju se jednako u bezdimenzijskom smislu samo ako su im jednaki **svi mjerodavni** brojevi te bezdimenzijski rubni i početni uvjeti. Kad to nije moguće, bira se prioritetna sličnost i kvantificira učinak neusklađenih grupa. Isti jezik povezuje vrtložno otpuštanje, raspad mlaza, stlačivost i prijenos rezultata iz laboratorija u pogon.
-:::
-
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje koje se pretpostavlja:**
-
-- pojam viskoznosti i kvalitativno značenje Reynoldsova broja iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Reologija, viskoznost i međupovršinske pojave</span></span>;
-- odnos tlaka, brzine i energije iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span>; koeficijenti gubitaka ovdje se uvode kao bezdimenzijski rezultati, a sustavno primjenjuju u poglavlju 13;
-- površinska napetost $\sigma$ i kapilarnost iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 2</span><span class="mf1-ch-title">Reologija, viskoznost i međupovršinske pojave</span></span>;
-- pojam inercijske sile iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Količina i moment količine gibanja</span></span>; SI jedinice i dimenzije iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</span><span class="mf1-ch-title">Osnove fluida i Pascalov zakon</span></span>.
-
-**Ishodi učenja:**
-
-- fizikalno protumačiti bezdimenzijske brojeve kao omjere sila, vremenskih skala ili normirane rezultate te prepoznati relevantne mehanizme problema;
-- provesti Buckinghamovu dimenzijsku analizu i dobiti bezdimenzijske grupe ($\Pi$-grupe) iz popisa varijabli;
-- primijeniti uvjete geometrijske, kinematičke i dinamičke sličnosti na modelsko ispitivanje;
-- objasniti zašto se Reynoldsova i Froudeova sličnost u pravilu ne mogu zadovoljiti istovremeno i kako se ta nepotpunost rješava;
-- odabrati mjerodavne grupe na temelju jednadžbi, geometrije i rubnih uvjeta te obrazložiti zanemarene učinke.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
 :::
 
 ## Dimenzije, jedinice i sila inercije kao referenca

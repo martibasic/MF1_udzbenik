@@ -1,12 +1,8 @@
 ![Pregled poglavlja: količina i moment količine gibanja.](../assets/print/u11_fig_uvod_pregled.svg){#fig-uvod-u11 fig-align="center" fig-alt="Pregled poglavlja: količina i moment količine gibanja."}
 
-## Količina gibanja kao izvor sila na cijevi, mlaznice i lopatice
+## Količina i moment količine gibanja
 
-Količina gibanja ovdje postaje veza između protoka, tlaka i reakcije konstrukcije.
-
-<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Količina i moment količine gibanja</span></span> prvo je poglavlje u kojem stacionarni kontrolni volumen treba čitati zajedno s tlakovima na presjecima i s reakcijom stvarnog cijevnog elementa.
-
-Čim fluid više nije slobodni mlaz u zraku nego prolazi kroz mlaznicu, koljeno ili račvu, sama promjena brzine više nije dovoljna. U račun ulaze i tlakovi na ulazu i izlazu, a rezultat je često sila koju moraju preuzeti vijci, prirubnica ili nosač.
+Zakon količine gibanja povezuje protok, tlak i reakciju konstrukcije. Pri strujanju kroz mlaznicu, koljeno ili račvu promjena brzine fluida, zajedno s tlakovima na ulaznim i izlaznim presjecima, određuje opterećenje vijaka, prirubnice ili nosača.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -14,27 +10,7 @@ Količina gibanja ovdje postaje veza između protoka, tlaka i reakcije konstrukc
 Svako koljeno, T-račva, mlaznica ili završetak cjevovoda koji mijenja smjer ili brzinu toka prenosi silu na prirubnicu, vijčani spoj, konzolu ili temelj. Zato se ovo poglavlje izravno čita u pumpnim stanicama, brodskim strojarnicama, protupožarnim monitorima i vodenim mlaznicama, gdje konstrukcija ne nosi "protok", nego vektorsku razliku tlačnih i impulsnih doprinosa.
 :::
 
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje koje se pretpostavlja:**
-
-- jednadžba kontinuiteta i kontrolni volumen iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Kinematika, kontrolni volumen i kontinuitet</span></span>;
-- energijska jednadžba i pojam tlaka u presjeku iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span>;
-- Newtonovi zakoni gibanja i pojam količine gibanja iz Fizike I;
-- vektorska analiza, rastav vektora na komponente.
-
-**Ishodi učenja:**
-
-- postaviti kontrolni volumen za cijevni element i pravilno ucrtati tlakove i brzine na ulaznim i izlaznim presjecima;
-- napisati i riješiti zakon količine gibanja u vektorskoj formi za stacionarni tok;
-- razlikovati silu fluida na konstrukciju od sile konstrukcije na fluid (treći Newtonov zakon);
-- izračunati silu na koljena, mlaznice i kontrolne zatvarače u realnim sustavima.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
-:::
-
-## Fizikalni uvod i matematički izvod
+## Integralni zakon količine gibanja
 
 Za stacionarni tok osnovni zapis ostaje
 

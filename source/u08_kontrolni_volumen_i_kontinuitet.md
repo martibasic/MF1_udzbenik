@@ -1,8 +1,8 @@
 ![Pregled poglavlja: kinematika, kontrolni volumen i kontinuitet.](../assets/print/u08_fig_uvod_pregled.svg){#fig-uvod-u08 fig-align="center" fig-alt="Pregled poglavlja: kinematika, kontrolni volumen i kontinuitet."}
 
-## Kontrolni volumen — temeljni alat dinamike strujanja
+## Kinematika, kontrolni volumen i kontinuitet
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Kinematika, kontrolni volumen i kontinuitet</span></span> uvodi promjenu pogleda: umjesto praćenja pojedine čestice, promatra se odabrani dio prostora kroz koji fluid prolazi. Kontinuitet zato nije samo poseban zapis $A_1 v_1 = A_2 v_2$, nego jedan rubni slučaj mnogo šire bilance mase.
+Kinematika strujanja može se opisati praćenjem pojedine čestice fluida ili promatranjem odabranoga dijela prostora kroz koji fluid protječe. Kontinuitet nije samo poseban zapis $A_1 v_1 = A_2 v_2$, nego rubni slučaj opće bilance mase.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -10,36 +10,14 @@
 Kontrolni volumen je radni alat za sve sustave u kojima je važnije što ulazi, izlazi i ostaje u prostoru nego pratiti putanju svake pojedine čestice fluida: mješalice, ventilacijske komore, rashladne razdjelnike, izjednačne spremnike i građevinske retencijske komore. U strojarstvu i procesnoj tehnici upravo taj pogled zatvara masu kroz T-račve, difuzore, usisne komore i spremnike tijekom punjenja ili pražnjenja.
 :::
 
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
+## Kinematika strujanja
 
-**Predznanje koje se pretpostavlja:**
+Gibanje pojedine čestice može se pratiti njezinim položajem tijekom vremena. Za opis strujanja koriste se dva komplementarna pristupa:
 
-- pojmovi gustoće, mase i protoka iz prethodnih poglavlja;
-- vektorska analiza i osnove rada s integralnim izrazima;
-- pojam površinske normale i skalarnog produkta vektora;
-- pojam derivacije po vremenu i po prostoru (parcijalna derivacija).
+- **Lagrangeov opis** prati pojedinu česticu fluida te njezin položaj i brzinu u vremenu.
+- **Eulerov opis** određuje brzinu fluida u nepomičnim točkama prostora u funkciji vremena.
 
-**Ishodi učenja:**
-
-- opisati strujanje **poljem brzine** i razlikovati Eulerov pogled (točka prostora) od Lagrangeova (čestica fluida);
-- razlikovati **strujnicu** od **trajektorije** i znati kada se podudaraju;
-- povezati stvarni profil brzine sa **srednjom (1D) brzinom** koja ulazi u kontinuitet;
-- definirati i nacrtati kontrolni volumen prilagođen konkretnom problemu;
-- razlikovati masenu od volumenske bilance i ispravno ih primijeniti pri nestlačivim i stlačivim fluidima;
-- riješiti probleme s više ulaza i izlaza (mješalice, razdjelnici, čvorovi mreže) i prepoznati nestacionarnu akumulaciju mase.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
-:::
-
-## Kinematika strujanja: kako opisujemo gibanje fluida
-
-Prije nego što uvedemo bilance mase i energije, treba dogovoriti **kako uopće opisujemo gibanje fluida**. Za jednu kuglicu dovoljno je pratiti njezin položaj kroz vrijeme. U fluidu je čestica bezbroj, pa se nameću dva pogleda:
-
-- **Lagrangeov pogled** — prati se pojedina čestica fluida i bilježi kako se njezin položaj i brzina mijenjaju kroz vrijeme (kao da smo obojili jednu kap i gledali kamo putuje).
-- **Eulerov pogled** — biramo nepomične točke prostora i u svakoj bilježimo brzinu fluida koji baš u tom trenutku prolazi (kao mreža senzora brzine ugrađenih u cijev).
-
-Inženjerski račun gotovo uvijek koristi Eulerov pogled, jer nas zanima što se događa na određenom mjestu (grlo Venturija, presjek cijevi, ulaz u crpku), a ne kamo je otputovala baš jedna čestica.
+U inženjerskim se proračunima pretežno primjenjuje Eulerov opis jer određuje stanje strujanja na odabranom mjestu, primjerice u presjeku cijevi ili na ulazu u crpku.
 
 ### Polje brzine
 
@@ -159,34 +137,7 @@ $$ {#eq-kinematika-kv-materijalna-derivacija-ubrzanje-cestice-01}
 
 Tu se materijalna derivacija zaustavlja na razini pojma. Eulerova jednadžba pojavljuje se u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span>, integralna bilanca količine gibanja u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 10</span><span class="mf1-ch-title">Količina i moment količine gibanja</span></span>, a puni lokalni izvod u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span>.
 
-::: {.mf1-samoprovjera}
-<p class="mf1-box-label">Provjeri sebe</p>
-
-Sljedeća pitanja služe za samostalnu provjeru prije prelaska na kontrolni volumen.
-
-1. U čemu je razlika između strujnice i trajektorije i kada se podudaraju?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-Strujnica je krivulja tangentna na polje brzine u jednom trenutku; trajektorija je stvarni put jedne čestice kroz vrijeme. Podudaraju se u stacionarnom strujanju, jer se polje brzine tada ne mijenja dok čestica putuje.
-:::
-
-2. Može li strujanje biti stacionarno, a da se čestica ipak ubrzava?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-Može. Stacionarnost znači $\partial\vec{v}/\partial t = 0$ u svakoj fiksnoj točki, ali čestica koja prelazi iz šireg u uži presjek ulazi u područje veće brzine i ubrzava preko konvektivnog člana $(\vec{v}\cdot\nabla)\vec{v}$. Primjer je voda u mlaznici.
-:::
-
-3. Zašto u kontinuitetu $Q = Av$ koristimo srednju, a ne vršnu brzinu?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-Jer je protok integral cijelog profila, $Q = \int_A v\,dA$. Srednja brzina $v = Q/A$ definirana je tako da kroz presjek daje isti protok kao stvarni profil; vršna brzina (u osi) veća je od srednje i dala bi precijenjen protok.
-:::
-:::
-
-## Fizikalni uvod i matematički izvod
+## Kontrolni volumen i bilanca mase
 
 Kad fluid struji, više nije praktično pratiti putanju iste čestice kroz vrijeme. Umjesto toga uvodi se kontrolni volumen: odabrani dio prostora kroz koji fluid može ulaziti, izlaziti i po potrebi se akumulirati.
 
@@ -226,14 +177,6 @@ $$A_1 v_1 = A_2 v_2$$ {#eq-kinematika-kv-fizikalno-znacenje-03}
 Jednadžba $A_1 v_1 = A_2 v_2$ kaže da se pri stacionarnom toku kroz jednu strujnu cijev nestlačivoga fluida **srednja brzina** povećava kad se raspoloživa površina presjeka smanji. Zato se tok ubrzava u suženju cijevi. Za rijeku nije dovoljna sama dubina: mjerodavna je cijela površina poprečnog presjeka, koja ovisi i o širini korita, te raspodjela brzine po tom presjeku.
 :::
 
-::: {.callout-note collapse="true" icon="false"}
-## Očuvanje mase u računalnom proračunu
-
-Za nestlačivo strujanje vrijedi $\nabla\cdot\vec v=0$. Divergencija brzine opisuje lokalno širenje ili sabijanje fluida. Kada je nula, mali dio fluida zadržava volumen dok se giba. Gledano kroz mali nepomični prostor, u istom vremenu mora izaći jednak volumen fluida kakav je ušao.
-
-Računalo zato podijeli prostor strujanja na mnogo malih dijelova, zvanih ćelije, i u svakome provjerava ulaz i izlaz fluida. Ako se oni ne podudaraju, popravlja izračun tlaka i brzine. To je ista provjera koju ručno radimo za cijelu cijev ili račvu. Uredna bilanca ipak nije dovoljna sama za sebe: treba provjeriti i odgovaraju li zadani promjeri, protoci i ostali podatci stvarnom sustavu.
-:::
-
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Kontinuitet u suženju cijevi</p>
 
@@ -245,9 +188,6 @@ Interaktivni prikaz omogućuje mijenjanje ulaznog i izlaznog promjera te volumen
 <img class="mf1-interaktivno-qr" src="../assets/qr/u08_kontinuitet_suzenje.svg" alt="QR kod za interaktivni prikaz kontinuiteta u suženju cijevi"/>
 </div>
 
-<div class="mf1-interaktivno-pitanja">
-**Pitanja za samostalno istraživanje:** (a) Koliko je puta veća izlazna brzina kada je $D_2 = D_1/2$, a koliko kada je $D_2 = D_1/4$? (b) Vrijedi li jednadžba kontinuiteta i pri $D_1 = D_2$? (c) Zašto u stvarnoj cijevi profil brzina nije jednolik nego približno paraboličan ili polako-jednolik?
-</div>
 :::
 
 ::: {.mf1-izvod}

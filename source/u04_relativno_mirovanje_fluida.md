@@ -1,38 +1,16 @@
 ![Pregled poglavlja pog. 4: Relativno mirovanje fluida](../assets/print/u04_fig_uvod_pregled.svg){#fig-uvod-u04 fig-align="center" fig-alt="Pregled poglavlja pog. 4: Relativno mirovanje fluida"}
 
-## Relativno mirovanje kao hidrostatika u novom polju sila
+## Relativno mirovanje fluida
 
-Relativno mirovanje počinje ondje gdje se tekućina prema stijenkama spremnika smiri, iako se cijeli sustav i dalje ubrzava.
-
-Središnja ideja poglavlja nije samo da se slobodna površina naginje, nego da obična hidrostatika prelazi u hidrostatiku u novom, efektivnom polju sila.
+Relativno mirovanje nastupa kada se fluid u odnosu na stijenke spremnika smiri, premda se spremnik translatorno ubrzava ili rotira. Takvo se stanje opisuje hidrostatikom u efektivnom polju sila.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Relativno mirovanje vidi se svaki put kad se tekućina "smiri" u spremniku koji ipak ubrzava: pri kočenju autocisterne, pri promjeni kursa broda, u gorivnom spremniku vozila i u procesnoj kadi na ubrzanoj platformi. Isti model vrijedi i za rotaciju, pa iz ovog poglavlja izravno vode centrifuge, separatori i svi sklopovi u kojima slobodna površina i tlak ovise o efektivnom polju sila, a ne samo o gravitaciji.
+Relativno mirovanje javlja se pri kočenju autocisterne, u gorivnom spremniku vozila, u procesnoj kadi na ubrzanoj platformi te pri rotaciji centrifuga i separatora. Slobodna površina i tlak tada ovise o efektivnom polju sila, a ne samo o gravitaciji.
 :::
 
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje koje se pretpostavlja:**
-
-- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
-- kinematika i dinamika kružnog gibanja iz Fizike I (kutna brzina, centrifugalno ubrzanje);
-- pojam neinercijalnog referentnog okvira i prividnih sila;
-- diferencijalni račun više varijabli i osnove parcijalnih derivacija.
-
-**Ishodi učenja:**
-
-- prepoznati efektivno polje sila u translatorno ili rotacijski ubrzanom spremniku;
-- odrediti nagib ili oblik slobodne površine fluida u nestandardnom polju sila;
-- izračunati paraboloidnu slobodnu površinu rotirajućeg cilindričnog spremnika i pripadne tlakove na stijenkama;
-- raspoznati granične slučajeve u kojima model relativnog mirovanja prestaje vrijediti (prelijevanje, ogoljavanje dna).
-
-**Procijenjeno vrijeme rada uz udžbenik:** 8 sati.
-:::
-
-## Fizikalni uvod i matematički izvod
+### Translatorno ubrzanje
 
 Ako se spremnik giba stalnim translatornim ubrzanjem i ako se nakon prolaznih oscilacija fluid smiri u odnosu na stijenke, onda se problem može čitati kao hidrostatika u neinercijskom sustavu. U tom sustavu na fluid djeluje efektivno polje sila koje je rezultat gravitacije i inercijske sile.
 
@@ -42,16 +20,11 @@ Za gibanje spremnika ubrzanjem $a$ udesno, slobodna površina ostaje okomita na 
 
 $$\Delta h = \frac{aL}{g}$$ {#eq-relativno-mirovanje-fizikalni-uvod-i-matematicki-izvod-01}
 
-::: {.mf1-fizikalno-znacenje}
-<p class="mf1-box-label">Fizikalno značenje</p>
-Razlika razina $\Delta h$ je izravna mjera koliko ubrzanje "naginje" slobodnu površinu. Veće ubrzanje ili dulji spremnik daje veći nagib jer inercijska pseudo-sila ima više prostora za djelovanje. Gravitacija $g$ u nazivniku je stabilizirajući član: što je veća sila teže, to manji kut postignuća pri istom ubrzanju. Formula vrijedi samo dok se površina ne prelije ili dok ne ogoli dno: ispod tih graničnih stanja vrijedi pretpostavka o ravnoj slobodnoj površini.
-:::
+Razlika razina $\Delta h$ povećava se s ubrzanjem i duljinom spremnika, a smanjuje s gravitacijskim ubrzanjem $g$. Relacija vrijedi dok nema prelijevanja ni ogoljavanja dna, kada je slobodna površina ravna.
 
 gdje je $\Delta h$ razlika razina slobodne površine na krajevima spremnika.
 
-Najvažnija promjena u odnosu na <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span> jest to da tlak više ne raste samo po dubini mjerene okomito prema dolje. Najprije treba odrediti smjer efektivnog polja sila, a tek zatim čitati geometriju slobodne površine i lokalnu dubinu.
-
-Matematika zato ne prati "nagnutu vodu" kao poseban slučaj, nego uvodi novi vektor efektivne gravitacije. Kad se taj vektor jednom odredi, geometrija slobodne površine i raspodjela tlaka opet postaju čitljive kao u hidrostatici.
+Za razliku od hidrostatike u mirujućem spremniku, tlak ne raste samo s okomitom dubinom. Smjer efektivnog polja sila određuje geometriju slobodne površine, lokalnu dubinu i raspodjelu tlaka.
 
 ## Matematički izvod
 
@@ -69,7 +42,7 @@ $$ {#eq-relativno-mirovanje-matematicki-izvod-02}
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Efektivno polje sila $\vec{g}_{eff}$ je vektorski zbroj gravitacije i inercijskog člana: fluid se u akceleriranom sustavu "ne zna" razlikovati je li u gravitacijskom polju ili u ubrzanom okviru. Upravo to je razlog zašto slobodna površina u ubrzanom spremniku ostaje okomita na $\vec{g}_{eff}$ – ista fizika kao i u običnoj hidrostatici, samo s novim "gravitacijskim" vektorom. U slobodnom padu ($\vec{a} = \vec{g}$) vrijedi $\vec{g}_{eff} = 0$ i hidrostatski tlak nestaje: astronauti u orbiti ne osjećaju težinu kolone tekucine.
+Efektivno polje sila $\vec{g}_{eff}$ vektorski je zbroj gravitacijskog i inercijskog člana. Slobodna je površina u ubrzanom spremniku okomita na $\vec{g}_{eff}$. U slobodnom padu, kada je $\vec{a}=\vec{g}$, vrijedi $\vec{g}_{eff}=0$ te nestaje hidrostatski gradijent tlaka.
 :::
 
 Time se uvodi efektivno polje sila $\vec g_{eff}$: fluid se u akceleriranom spremniku ponaša kao da se nalazi u novom gravitacijskom polju koje je vektorski zbroj stvarne gravitacije i suprotno usmjerene inercijske akceleracije. Za translatorno gibanje spremnika s komponentama ubrzanja $a_x$ i $a_z$, uz os $x$ vodoravno i os $z$ prema gore, slijede komponente
@@ -440,9 +413,6 @@ Interaktivni prikaz omogućuje mijenjanje kutne brzine $\omega$, polumjera sprem
 <img class="mf1-interaktivno-qr" src="../assets/qr/u04_paraboloidna_povrsina.svg" alt="QR kod za interaktivni prikaz paraboloidne slobodne površine"/>
 </div>
 
-<div class="mf1-interaktivno-pitanja">
-**Pitanja za samostalno istraživanje:** (a) Pri kojoj kombinaciji $\omega$ i $R$ središte spremnika počinje ogoljavati? (b) Ako se polumjer udvostruči uz konstantne $\omega$ i $h_0$, kako se mijenja razlika $z_R - z_d$? (c) Vrijedi li volumno očuvanje između paraboloida iznad razine $h_0$ i praznog prostora ispod nje?
-</div>
 :::
 
 ::: {.callout-note}
@@ -656,40 +626,6 @@ $$ {#eq-relativno-mirovanje-rijeseni-primjer-laboratorijska-centrifuga-za-od-07}
 Izračunano ubrzanje na dnu iznosi oko $1700\,g$, a razlika tlakova u homogenom stupcu oko $7{,}8\ \text{bar}$. Gravitacijski doprinos preko iste radijalne duljine bio bi oko $0{,}73\ \text{kPa}$, pa je njegovo zanemarivanje konzistentno s redom veličine. Ovaj račun ne predviđa vrijeme separacije ni dopušteno opterećenje cijevi i rotora; za njih su potrebni model čestica, stvarna geometrija te upute i dopuštenja proizvođača.
 :::
 
-::: {.mf1-samoprovjera}
-<p class="mf1-box-label">Provjeri sebe</p>
-
-Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na zadatke za vježbu.
-
-1. Što razlikuje pristup hidrostatici u inercijalnom okviru od pristupa u ubrzanom ili rotirajućem okviru?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-U inercijalnom okviru jedina je vanjska sila gravitacija; u ubrzanom ili rotirajućem okviru uvodi se efektivno polje sila koje uključuje i prividne sile (translacijsku inerciju, centrifugalnu i Coriolisovu silu). Tlak i slobodna površina zatim ovise o vektoru efektivnog ubrzanja.
-:::
-
-2. Zašto slobodna površina u rotirajućem cilindričnom spremniku poprima oblik paraboloida, a ne ravnu nagnutu plohu kao u translacijskom ubrzanju?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-Centrifugalno ubrzanje u rotirajućem okviru linearno raste s radijalnom udaljenošću ($a = \omega^2 r$), pa integracija $\mathrm{d}z/\mathrm{d}r = \omega^2 r/g$ daje parabolu. U translacijskom ubrzanju vektor inercije je konstantan, pa slobodna površina ostaje ravna, ali nagnuta.
-:::
-
-3. Pri kojoj se kombinaciji $\omega$ i polumjera $R$ središte rotirajućeg spremnika prvi put ogoljava od tekućine?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-Središte se ogoljava kad visina u središtu $z_C$ padne na nulu. Iz uvjeta očuvanja volumena slijedi $z_C = h_0 - \omega^2 R^2/(4g)$, pa je granično stanje $\omega^2 R^2 = 4 g h_0$, odakle se može izračunati granična kutna brzina za poznati polumjer i početnu visinu.
-:::
-
-4. Vrijedi li model relativnog mirovanja ako se cisterna ne giba stalnim ubrzanjem nego s promjenjivim ubrzanjem (na primjer pri prelasku iz kočenja u stajanje)?
-
-::: {.callout-note collapse="true"}
-### Odgovor
-Ne; model vrijedi samo nakon što se fluid "smiri" u ubrzanom okviru, što zahtijeva da ubrzanje bude približno konstantno u promatranom vremenskom intervalu. Pri brzim promjenama ubrzanja pojavljuju se prolazne oscilacije slobodne površine koje nisu obuhvaćene jednostavnim hidrostatičkim modelom.
-:::
-:::
-
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
@@ -824,46 +760,10 @@ $\omega_{max} \approx 7{,}83\ \text{rad/s}$; pri $\omega = 0{,}80\,\omega_{max}$
 
 ![Skice uz zadatke za vježbu — ubrzani i rotirajući spremnici s fluidom (poglavlje 4).](../assets/print/u04_vjezbe_skice.svg){#fig-u04-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — ubrzani i rotirajući spremnici s fluidom (poglavlje 4)."}
 
-::: {.mf1-zavrsni-okvir}
-<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
+## Sažetak
 
-**Sažeta provjera prije računa**
+Fluid se nalazi u relativnom mirovanju kada se u odnosu na ubrzani ili rotirajući spremnik ne giba. Raspodjela tlaka tada se određuje iz efektivnog polja sila $\vec g_{eff}=\vec g-\vec a$. U translatorno ubrzanom spremniku slobodna je površina ravnina okomita na efektivno polje sila, a pri vodoravnom ubrzanju razlika razina iznosi $\Delta h=aL/g$.
 
-- Treba najprije odrediti smjer efektivnog polja sila, a ne odmah krenuti na tlak.
-- Treba razlikovati znači li zadano stanje očuvanje volumena, prelijevanje ili ogoljavanje dna.
-- Relacija $\Delta h = aL/g$ koristi se tek nakon što je geometrija spremnika jasna.
-- Sila na stijenci treba se računati iz lokalne dubine uz tu stijenu, a ne iz početne mirne razine.
-- Translaciju, vertikalno ubrzanje i rotaciju treba razdvojiti kao tri različita fizikalna scenarija.
+U spremniku koji rotira stalnom kutnom brzinom tlak raste s radijalnom udaljenošću, a slobodna površina poprima paraboloidni oblik $h(r)=h_C+\omega^2r^2/(2g)$. Očuvanje volumena određuje visine u središtu i uz stijenku, dok se granice primjene osnovnog modela određuju uvjetima prelijevanja i ogoljavanja dna.
 
-**Najčešća pogreška**
-
-Najčešća greška je pročitati granično stanje samo jednim uvjetom. U zadacima prelijevanja treba istodobno zadovoljiti dodir slobodne površine s rubom spremnika i očuvanje srednje visine sve dok nema gubitka volumena.
-
-**Nakon ovoga poglavlja mora biti moguće**
-
-1. odrediti smjer i ulogu efektivnog polja sila u translatorno ubrzanom spremniku.
-2. pročitati nagib slobodne površine i iz njega izvesti lokalne dubine uz stijene.
-3. spojiti geometriju slobodne površine s raspodjelom tlaka i rezultantnom silom.
-
-**U tehnici to znači**
-
-Gorivni spremnik vozila pri kočenju, autocisterna u zavoju i centrifuga u radnom režimu svi traže isto čitanje: gdje se u novom polju sila nalazi slobodna površina i kakav tlak zbog toga nastaje uz stijenke. Na toj se osnovi procjenjuju prelijevanje, ogoljavanje usisa i promjena opterećenja konstrukcije.
-
-**Granica modela**
-
-Ovaj model vrijedi kad se tekućina prema spremniku zaista smirila, odnosno kad su prolazne oscilacije zanemarive. Ako su valjanje, udari, prskanje ili slobodno njihanje tekućine bitni, slika relativnog mirovanja više nije dovoljna sama za sebe.
-
-<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 4</span><span class="mf1-ch-title">Relativno mirovanje fluida</span></span> nije samo nastavak hidrostatike, nego promjena referentnog okvira. Prvo se određuje kako izgleda efektivno polje sila, zatim slobodna površina, a tek onda tlak i sila na stijenkama.
-:::
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Gdje ovo živi u numerici.** Promjena referentnog okvira iz ovog poglavlja je upravo *jezgra* numeričkih pristupa rotirajućim domenama: pumpe, ventilatori, vodne i plinske turbine, centrifuge. Umjesto da mreža fizički rotira (skupo!), CFD solver dodaje **prividne sile** — centrifugalnu i Coriolisovu — točno onako kako se u zadacima dodavalo $a_{cf} = \omega^2 r$.
-
-**Što numerički alat radi s tim.** **MRF (Moving Reference Frame)** definira zonu u mreži koja se "vrti" matematički — rješavanjem Navier-Stokesa u rotirajućem sustavu s dopisanim Coriolisovim i centrifugalnim članom. Za pune nestacionarne simulacije postoji i **klizajuća mreža (engl. sliding mesh)** u kojoj se rotor i stator fizički kližu jedan uz drugog.
-
-**Tipičan scenarij.** Stacionarni MRF model može dati početnu procjenu srednjih veličina rotirajućega stroja. Kada su važni prolaz rotora kraj statora, pulsacije ili akustika, potreban je odgovarajući nestacionarni model. Računski trošak i potrebna razlučivost ovise o geometriji, mreži, vremenskom koraku i traženoj izlaznoj veličini.
-
-> *Nije gradivo MF1. Paraboloidna slobodna površina iz centrifuge ovdje, u CFD-u javlja se kao polje koje solver sam izračuna.*
-:::
+Model pretpostavlja da su prolazne oscilacije, valjanje, prskanje i relativno strujanje fluida zanemarivi. Pri promjenjivom ubrzanju ili značajnom relativnom gibanju potrebna je nestacionarna analiza.

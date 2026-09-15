@@ -1,10 +1,8 @@
 ![Pregled poglavlja: Uzgon, plivanje i stabilnost](../assets/print/u07_fig_uvod_pregled.svg){#fig-uvod-u07 fig-align="center" fig-alt="Pregled poglavlja: Uzgon, plivanje i stabilnost"}
 
-## Uzgon kao spoj istisnine, težine i geometrije urona
+## Uzgon, plivanje i početni stabilitet
 
-Arhimedov zakon sam po sebi nije dovoljan za čitanje plivajućeg tijela.
-
-Zato se već na početku razdvajaju tri stvari: ukupna težina, istisnuti volumen i momentni raspored tih sila.
+Analiza plivajućega tijela obuhvaća ukupnu težinu, istisnuti volumen te položaj i momente sila uzgona i težine.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -12,27 +10,7 @@ Zato se već na početku razdvajaju tri stvari: ukupna težina, istisnuti volume
 U brodogradnji, lučnim pontonima i plutajućim radnim platformama nije dovoljno znati samo koliko je vode istisnuto; jednako je važno gdje su težište i centar uzgona te kakav moment nastaje kad se teret pomakne. Zato ovo poglavlje izravno ulazi u stabilnost plovila, raspored opreme na pontonu, sigurnost plutajuće dizalice i svaku tehničku situaciju u kojoj mali bočni pomak tereta može otvoriti veliki nagib.
 :::
 
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje koje se pretpostavlja:**
-
-- hidrostatička raspodjela tlaka iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>;
-- sile na plohe iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 5</span><span class="mf1-ch-title">Hidrostatske sile na plohe</span></span>;
-- osnovni pojmovi statike krutog tijela: ravnoteža sila, ravnoteža momenata, položaj težišta;
-- integralni račun više varijabli (težište volumena).
-
-**Ishodi učenja:**
-
-- primijeniti Arhimedov zakon na potpuno i djelomično uronjeno tijelo;
-- razlikovati uvjet plovnosti od uvjeta stabilnosti plivajućeg tijela;
-- izračunati gaz pravokutnog ili nepravilno oblikovanog plivajućeg tijela;
-- procijeniti početnu stabilnost preko metacentarske visine i prepoznati granične slučajeve.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
-:::
-
-## Fizikalni uvod i matematički izvod
+## Sila uzgona
 
 Za tijelo koje miruje u fluidu vrijedi da je sila uzgona jednaka težini istisnutog fluida:
 
@@ -78,14 +56,6 @@ $$ {#eq-uzgon-stabilitet-matematicki-izvod-04}
 U jednolikom gravitacijskom polju uzgon ovisi o istisnutom volumenu i gustoći fluida, a ne izravno o materijalu tijela. Dva potpuno uronjena tijela jednakoga vanjskog volumena imaju jednak uzgon; njihove se težine mogu razlikovati, pa jedno može tonuti, a drugo se dizati. Jedan kilogram čelika i jedan kilogram pluta nemaju jednak volumen, pa nisu primjer jednakoga uzgona. Uzgon je suprotan gravitaciji i prolazi kroz težište istisnutoga volumena, a ne nužno kroz težište tijela.
 :::
 
-::: {.callout-note collapse="true" icon="false"}
-## Kako računalo prati plutanje
-
-Za proračun plutanja računalo mora razlikovati vodu od zraka i pratiti gdje se nalazi njihova granica. Jedan je postupak podijeliti prostor na male dijelove, zvane ćelije, i u svakoj pratiti koliki dio zauzima voda.
-
-Iz raspodjele tlaka na uronjenoj površini dobiva se sila uzgona. Ako se tijelo smije gibati, njegove sile i momenti određuju podizanje, spuštanje i nagib. Prva je provjera jednostavna: miran ponton treba imati isti gaz kao u ručnom računu i ostati u ravnoteži. Tek nakon toga ima smisla dodati valove.
-:::
-
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Gaz plivajućeg tijela</p>
 
@@ -97,9 +67,6 @@ Interaktivni prikaz omogućuje mijenjanje mase tijela i gustoće fluida uz nepos
 <img class="mf1-interaktivno-qr" src="../assets/qr/u07_gaz_plivajuceg_tijela.svg" alt="QR kod za interaktivni prikaz gaza plivajućeg tijela"/>
 </div>
 
-<div class="mf1-interaktivno-pitanja">
-**Pitanja za samostalno istraživanje:** (a) Kako se gaz mijenja kada isti blok prelazi iz slatke u slanu vodu? (b) Pri kojoj masi tijelo upravo počinje tonuti? (c) Što bi se dogodilo s gazom istog tijela u ulju gustoće $800$ kg/m³, a što u glicerinu gustoće $1260$ kg/m³?
-</div>
 :::
 
 Isti rezultat vrijedi i za proizvoljan oblik tijela: neto hidrostatska sila jednaka je težini fluida koji bi ispunio istisnuti volumen. Pravac djelovanja te sile prolazi kroz centar uzgona, tj. kroz težište istisnutoga volumena.

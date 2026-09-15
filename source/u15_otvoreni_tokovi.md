@@ -1,6 +1,6 @@
 ![Otvoreni tok prelazi iz mirnog u kritični i siloviti režim te kroz hidraulički skok ponovno u dublji tok.](../assets/print/u15_fig_uvod_otvoreni_tok.svg){#fig-otvoreni-tok-pregled fig-align="center" fig-alt="Otvoreni tok prelazi iz mirnog u kritični i siloviti režim te kroz hidraulički skok ponovno u dublji tok."}
 
-## Tok kojemu tlak ne zatvara gornju granicu {#sec-otvoreni-tok-motivacija}
+## Otvoreni tokovi {#sec-otvoreni-tok-motivacija}
 
 U punoj cijevi geometrija presjeka zadaje cijelu granicu toka. U otvorenom kanalu gornja je granica slobodna površina čiji se položaj mora odrediti zajedno s brzinom. Gravitacija tada ne daje samo potencijalnu energiju: ona određuje brzinu površinskih valova i razdvaja dva bitno različita režima [@chow1959].
 
@@ -8,22 +8,6 @@ U punoj cijevi geometrija presjeka zadaje cijelu granicu toka. U otvorenom kanal
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
 Otvoreni tokovi pojavljuju se u urbanim odvodnim kanalima, preljevima brana, navodnjavanju, brodograđevnim ispitnim bazenima, palubnoj odvodnji i tankim filmovima procesnih postrojenja. Klimatski otpornom gradu nije dovoljan samo „projektni protok”: treba znati može li poremećaj putovati uzvodno, gdje nastaje kritični presjek i koliko energije disipira hidraulički skok.
-:::
-
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje:** hidrostatička raspodjela, kontinuitet, energijska i količinska bilanca, Froudeov broj i geometrija ravninskih presjeka.
-
-**Ishodi učenja:**
-
-- izračunati srednju brzinu, hidrauličku dubinu i Froudeov broj;
-- razlikovati mirni, kritični i siloviti tok;
-- izvesti kritičnu dubinu pravokutnog kanala iz minimuma specifične energije;
-- primijeniti bilancu količine gibanja na hidraulički skok;
-- procijeniti uniformni tok i jasno ograničiti empirijsku primjenu Manningove jednadžbe.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
 :::
 
 ## Geometrija presjeka i hidraulička dubina {#sec-geometrija-kanala}

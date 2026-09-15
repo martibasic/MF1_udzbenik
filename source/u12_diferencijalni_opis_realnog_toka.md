@@ -1,6 +1,6 @@
 ![Diferencijalni opis povezuje lokalnu bilancu količine gibanja, rast graničnog sloja i turbulentne fluktuacije.](../assets/print/u12_fig_uvod_realni_tok.svg){#fig-realni-tok-pregled fig-align="center" fig-alt="Diferencijalni opis povezuje lokalnu bilancu količine gibanja, rast graničnog sloja i turbulentne fluktuacije."}
 
-## Od bilance cijelog uređaja do polja u svakoj točki {#sec-realni-tok-motivacija}
+## Diferencijalni opis realnog toka {#sec-realni-tok-motivacija}
 
 Integralne bilance odgovaraju na pitanje kolika je ukupna sila, protok ili snaga sustava. Ne govore izravno gdje nastaje najveće naprezanje, kada se tok odvaja od stijenke ni kako se brzina mijenja unutar graničnog sloja. Za ta pitanja bilancu treba primijeniti na proizvoljno malen element fluida.
 
@@ -10,23 +10,7 @@ Integralne bilance odgovaraju na pitanje kolika je ukupna sila, protok ili snaga
 Isti diferencijalni model opisuje uljni film ležaja, razvoj profila u rashladnom kanalu, otpor trupa, odvajanje iza lopatice i polje brzine koje računa CFD solver. Razlika između analitičkog rješenja i simulacije nije u temeljnim zakonima: analitički račun uvodi snažne simetrije, a numerički alat iste lokalne bilance primjenjuje na mnogo ćelija [@schlichting2017; @pope2000].
 :::
 
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje:** polje brzine, materijalna derivacija, Reynoldsov transportni teorem, količina gibanja, Newtonov konstitutivni zakon i bezdimenzioniranje.
-
-**Ishodi učenja:**
-
-- razlikovati lokalno i konvektivno ubrzanje;
-- protumačiti svaki član Navier–Stokesove jednadžbe i navesti njezine pretpostavke;
-- izvesti stacionarni laminarni tok između ploča i u kružnoj cijevi;
-- procijeniti debljinu graničnog sloja, smično naprezanje i mogućnost odvajanja;
-- razlikovati srednju brzinu, fluktuaciju, intenzitet turbulencije i Reynoldsovo naprezanje.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
-:::
-
-## Materijalna derivacija: ubrzanje čestice iz Eulerova polja {#sec-materijalna-derivacija}
+## Materijalna derivacija {#sec-materijalna-derivacija}
 
 Brzina je polje $\mathbf u(\mathbf x,t)$. Čestica koja se giba kroz to polje osjeća promjenu zbog vremena i zbog prelaska u područje druge brzine. Lančano pravilo daje
 

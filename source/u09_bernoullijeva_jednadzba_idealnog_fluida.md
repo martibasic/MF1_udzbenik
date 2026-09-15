@@ -1,12 +1,8 @@
 ![Pregled poglavlja: energijska jednadžba i Bernoulli.](../assets/print/u09_fig_uvod_pregled.svg){#fig-uvod-u09 fig-align="center" fig-alt="Pregled poglavlja: energijska jednadžba i Bernoulli."}
 
-## Bernoullijeva jednadžba kao bilanca mehaničke energije po strujnici
+## Energijska jednadžba i Bernoullijeva jednadžba
 
-Kad brzina raste, tlak ili visina moraju to platiti.
-
-<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Kinematika, kontrolni volumen i kontinuitet</span></span> zatvorio je bilancu mase i izbor kontrolnog volumena. <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> dodaje energetsku sliku strujanja: u idealiziranom toku mehanička energija ne nestaje, nego se preraspodjeljuje između tlaka, brzine i geodetske visine.
-
-Zato u Venturijevoj cijevi, slobodnom mlazu ili Pitotovoj sondi više nije dovoljno pitati samo koliki je protok. Jednako je važno vidjeti u kojem se obliku u promatranoj točki nalazi energija fluida.
+Bernoullijeva jednadžba opisuje preraspodjelu mehaničke energije između tlaka, brzine i geodetske visine duž strujnice idealiziranoga toka. Uz bilancu mase omogućuje analizu Venturijeve cijevi, slobodnoga mlaza i Pitotove sonde.
 
 Povijesni prijelaz od Torricellijeva tumačenja istjecanja do Bernoullijeve opće energetske slike može se čitati kao ista fizikalna nit. Torricelli, Galileijev učenik, pokazao je da brzina istjecanja raste s korijenom iz visine stupca iznad otvora, a Bernoulli je približno stoljeće poslije tu fiziku ugradio u opću sliku preraspodjele tlaka, brzine i visine duž strujnice.
 
@@ -16,27 +12,7 @@ Povijesni prijelaz od Torricellijeva tumačenja istjecanja do Bernoullijeve opć
 Idealni Bernoulli vidi se u Venturijevoj cijevi, Pitotovoj sondi, mlaznici za čišćenje, privremenom sifonu na gradilištu i svakom sklopu u kojem se tlak pretvara u brzinu ili obrnuto bez značajnih gubitaka. U autoindustriji, strojarstvu i brodogradnji ta logika stoji iza mjerenja protoka, tumačenja pada statičkog tlaka u suženju i čitanja energetske slike toka duž jedne strujnice.
 :::
 
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje koje se pretpostavlja:**
-
-- jednadžba kontinuiteta iz poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Kinematika, kontrolni volumen i kontinuitet</span></span>;
-- pojam rada i energije iz Fizike I; kinetička, potencijalna i tlačna energija;
-- diferencijalni račun jedne varijable i osnove integriranja;
-- pojam strujnice, trajektorije i polja brzine iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Kinematika, kontrolni volumen i kontinuitet</span></span>.
-
-**Ishodi učenja:**
-
-- izvesti Bernoullijevu jednadžbu integracijom Eulerove jednadžbe duž strujnice;
-- prepoznati uvjete pod kojima ona vrijedi (stacionarno, nestlačivo, idealno strujanje, ista strujnica);
-- primijeniti Bernoulli zajedno s kontinuitetom na Venturijevu cijev, Pitotovu sondu i istjecanje;
-- pravilno čitati energetsku liniju EGL i hidrauličku liniju HGL duž strujanja.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
-:::
-
-## Fizikalni uvod i matematički izvod
+## Mehanička energija idealnoga toka
 
 Bernoullijeva jednadžba u ovom poglavlju predstavlja bilancu mehaničke energije po jedinici težine u idealiziranom strujanju. Tri osnovna člana su:
 
@@ -56,14 +32,6 @@ $$
 \frac{p_1}{\rho g} + \frac{v_1^2}{2g} + z_1 = \frac{p_2}{\rho g} + \frac{v_2^2}{2g} + z_2
 $$ {#eq-energijska-bilanca-fizikalni-uvod-i-matematicki-izvod-02}
 
-::: {.callout-note collapse="true" icon="false"}
-## Ručni račun kao provjera simulacije
-
-U Venturijevoj cijevi voda ubrzava u suženju, a statički tlak pada. Ako zanemarimo gubitke, promjenu tlaka možemo izračunati Bernoullijevom jednadžbom. To daje jednostavnu provjeru računalnog proračuna: uz iste pretpostavke i na istim presjecima rezultati trebaju biti bliski.
-
-Prostor se u računalnom modelu dijeli na male dijelove. Ponovimo li račun sa sitnijom podjelom, možemo provjeriti približava li se rezultat ručnom računu. Ako uključimo viskoznost, pojavit će se i stvarni gubitci energije, pa razlika prema idealnom računu ne mora značiti pogrešku. Takav model dodatno uspoređujemo s mjerenjem [@nasa-cfd-vv; @asme-vv20-2009].
-:::
-
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Venturijeva cijev</p>
 
@@ -75,9 +43,6 @@ Interaktivni prikaz omogućuje mijenjanje promjera ulaza $D_1$, promjera grla $D
 <img class="mf1-interaktivno-qr" src="../assets/qr/u09_venturi.svg" alt="QR kod za interaktivni prikaz Venturijeve cijevi"/>
 </div>
 
-<div class="mf1-interaktivno-pitanja">
-**Pitanja za samostalno istraživanje:** (a) Kako se ponaša tlak u grlu kada se $D_2$ smanjuje prema 10 mm? (b) Daju li svi parovi $(D_1, D_2)$ s istim omjerom 4:1 isti pad tlaka pri istoj $v_1$? (c) Zašto EGL u idealnom modelu ostaje konstantna, a HGL pada u grlu?
-</div>
 :::
 
 Ako jedan član raste, barem jedan od preostala dva mora pasti. Upravo je to fizikalna srž Venturija, Pitota, mlaza i sifona bez gubitaka.

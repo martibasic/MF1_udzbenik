@@ -1,6 +1,6 @@
 ![Kompresibilni tok povezuje širenje tlačnog vala, prigušenje u sapnici i skok veličina kroz udarni val.](../assets/print/u09_fig_uvod_kompresibilni_tok.svg){#fig-kompresibilni-pregled fig-align="center" fig-alt="Kompresibilni tok povezuje širenje tlačnog vala, prigušenje u sapnici i skok veličina kroz udarni val."}
 
-## Zašto gustoća više ne može ostati konstanta {#sec-kompresibilni-motivacija}
+## Kompresibilnost fluida {#sec-kompresibilni-motivacija}
 
 U sporom toku kapljevine promjena tlaka gotovo ne mijenja gustoću, pa je model konstantne gustoće izvrstan. Kod plina pri velikoj brzini ili velikoj promjeni tlaka isti korak više nije dopušten: dio energije toka pohranjuje se u stlačivanje i zagrijavanje plina. Tada uz masu, količinu gibanja i energiju treba pratiti i vezu između tlaka, gustoće i temperature [@anderson2021].
 
@@ -10,23 +10,7 @@ U sporom toku kapljevine promjena tlaka gotovo ne mijenja gustoću, pa je model 
 Kompresibilnost određuje odziv pneumatskog aktuatora, protok kroz sigurnosni ventil, rad mlaznice plinske turbine, ventilaciju tunela i širenje tlačnog vala kroz plinovod. U brodogradnji se pojavljuje u dovodu zraka motoru, ispušnom sustavu, podvodnoj akustici i kavitacijskim impulsima. Cilj poglavlja nije potpuna plinska dinamika, nego pouzdano prepoznati kada nestlačivi model prestaje vrijediti i postaviti temeljni jednodimenzijski račun.
 :::
 
-::: {.mf1-priprema}
-<p class="mf1-box-label">Prije čitanja poglavlja</p>
-
-**Predznanje:** bilance mase i energije, idealni plin, specifični toplinski kapaciteti i osnovni diferencijalni račun.
-
-**Ishodi učenja:**
-
-- izvesti i protumačiti brzinu zvuka te Machov broj;
-- odlučiti kada je prihvatljiv model konstantne gustoće;
-- povezati statičke i stagnacijske veličine u izentropskom toku idealnog plina;
-- objasniti prigušenje protoka u sapnici;
-- postaviti bilance mase, količine gibanja i energije preko normalnoga udarnog vala.
-
-**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
-:::
-
-## Brzina zvuka: mali poremećaj, konačno vrijeme {#sec-brzina-zvuka}
+## Brzina zvuka {#sec-brzina-zvuka}
 
 Promatra se vrlo malen tlačni poremećaj koji se kroz fluid širi bez značajne izmjene topline s okolinom. Za takav brzi, gotovo reverzibilni poremećaj vrijedi lokalna izentropska veza
 
@@ -227,7 +211,7 @@ $$ {#eq-kompresibilni-tok-rijeseni-primjer-udarni-val-u-ispitnoj-sapnici-02}
 **Provjera:** $Ma_2<1$ i $p_2>p_1$, što odgovara fizičkom smjeru. Obrnuti skok smanjio bi entropiju i nije fizički dopušten u ovom adijabatskom modelu. To ne isključuje postupno ubrzavanje iz podzvučnog u nadzvučni tok kroz prikladno oblikovanu sapnicu.
 :::
 
-## Radni ritual za kompresibilni problem {#sec-kompresibilni-ritual}
+## Postupak analize kompresibilnoga toka {#sec-kompresibilni-ritual}
 
 1. Odredi apsolutne tlakove i temperaturno stanje.
 2. Procijeni lokalni najveći $Ma$, ne samo ulaznu srednju vrijednost.
