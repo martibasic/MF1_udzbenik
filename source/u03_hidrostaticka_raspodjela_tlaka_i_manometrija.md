@@ -10,6 +10,8 @@ Hidrostatika proučava raspodjelu tlaka u fluidu u mirovanju. Njezine se relacij
 Piezometri, U-manometri i diferencijalni manometri primjenjuju hidrostatsku ravnotežu za mjerenje tlaka. Isti se princip koristi za određivanje opterećenja vode po dubini u spremnicima, kesonima i balastnim tankovima.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+
 ### Diferencijalna jednadžba hidrostatike
 
 Fluid u mirovanju ne može nositi smična naprezanja povezana sa strujanjem, ali i dalje nosi raspodjelu normalnog naprezanja, odnosno tlaka. Svaki sloj fluida mora držati težinu slojeva iznad sebe, pa tlak raste s dubinom.
@@ -697,6 +699,31 @@ Hidrostatička razlika tlakova od $372\ \text{kPa}$ između čvorova razmaknutih
 **Tipičan scenarij.** Mirna posuda poznate gustoće dobar je verifikacijski test: rekonstruirani tlak mora slijediti zadanu hidrostatsku raspodjelu unutar očekivane diskretizacijske i iteracijske pogreške. Tek nakon toga ima smisla tumačiti dinamičko odstupanje od hidrostatike.
 
 > *Nije gradivo MF1. Ključna veza jest razlika između hidrostatskoga referentnog polja i dodatne dinamike koju rješava numerički model.*
+:::
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">Provjeri sebe</p>
+
+1. Zašto je u spojenom mirujućem fluidu tlak na istoj dubini jednak?
+2. Zašto je opasno miješati manometarski i apsolutni tlak u istom računu?
+3. Kada se relacija $p=p_0+\rho gh$ ne smije primijeniti s jednom konstantnom gustoćom?
+4. Zašto iz hidrostatičkoga računa ne slijedi automatski tlak u strujajućem sustavu?
+
+::: {.callout-note collapse="true"}
+### Odgovori
+
+Kad bi tlakovi na istoj dubini bili različiti, mirujući fluid ne bi bio u ravnoteži. Referenca tlaka mora biti ista na svim članovima jer se inače unosi lažna razlika. Pri promjenjivoj gustoći ili više fluida gustoća ostaje unutar odgovarajućeg integrala ili segmentnog zapisa. Strujanje uvodi brzinske, gubitne i eventualno nestacionarne doprinose koji nisu sadržani u čistoj hidrostatici.
+:::
+:::
+
+::: {.mf1-zavrsni-okvir}
+<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
+
+- Hidrostatički gradijent tlaka uravnotežuje težinu fluida u mirovanju.
+- U homogenom mirujućem fluidu tlak raste s dubinom za približno $\rho g$ po jedinici visine.
+- Manometarski i apsolutni tlak moraju se kroz cijeli račun voditi s istom referencom.
+- Složeni manometarski sustavi rješavaju se praćenjem tlaka po segmentima i fluidima.
+- Hidrostatski rezultat nije zamjena za energijsku bilancu u strujajućem sustavu.
 :::
 
 ## Zadaci za vježbu

@@ -10,6 +10,8 @@ Relativno mirovanje nastupa kada se fluid u odnosu na stijenke spremnika smiri, 
 Relativno mirovanje javlja se pri kočenju autocisterne, u gorivnom spremniku vozila, u procesnoj kadi na ubrzanoj platformi te pri rotaciji centrifuga i separatora. Slobodna površina i tlak tada ovise o efektivnom polju sila, a ne samo o gravitaciji.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 8 sati.
+
 ### Translatorno ubrzanje
 
 Ako se spremnik giba stalnim translatornim ubrzanjem i ako se nakon prolaznih oscilacija fluid smiri u odnosu na stijenke, onda se problem može čitati kao hidrostatika u neinercijskom sustavu. U tom sustavu na fluid djeluje efektivno polje sila koje je rezultat gravitacije i inercijske sile.
@@ -639,6 +641,31 @@ $$ {#eq-relativno-mirovanje-rijeseni-primjer-laboratorijska-centrifuga-za-od-07}
 **Provjera i komentar**
 
 Izračunano ubrzanje na dnu iznosi oko $1700\,g$, a razlika tlakova u homogenom stupcu oko $7{,}8\ \text{bar}$. Gravitacijski doprinos preko iste radijalne duljine bio bi oko $0{,}73\ \text{kPa}$, pa je njegovo zanemarivanje konzistentno s redom veličine. Ovaj račun ne predviđa vrijeme separacije ni dopušteno opterećenje cijevi i rotora; za njih su potrebni model čestica, stvarna geometrija te upute i dopuštenja proizvođača.
+:::
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">Provjeri sebe</p>
+
+1. Zašto fluid može mirovati u odnosu na spremnik koji se ubrzava?
+2. Zašto slobodna površina ostaje okomita na efektivno polje sila?
+3. Zašto tlak u rotirajućem fluidu raste s radijusom?
+4. Zašto rezultat relativnoga mirovanja nije dovoljan za procjenu prolaznog zalijevanja spremnika?
+
+::: {.callout-note collapse="true"}
+### Odgovori
+
+U neinercijskom opisu ravnotežu daje zbroj gravitacije i inercijske volumenske sile pa profil brzine može nestati. Slobodna površina se namješta tako da je tangencijalna komponenta efektivnog polja po njoj nula. Veći radijus nosi veće centrifugalno ubrzanje pa zato treba veći gradijent tlaka. Prolazno zalijevanje ovisi o vremenskom odzivu, valovima i prigušenju, a ne samo o konačnom statičkom položaju površine.
+:::
+:::
+
+::: {.mf1-zavrsni-okvir}
+<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
+
+- Relativno mirovanje prevodi ubrzani problem u hidrostatiku s efektivnim poljem sila.
+- Slobodna površina i tlak određuju se iz smjera i iznosa $\vec g_{eff}$.
+- Pri translatornom ubrzanju nagib slobodne površine raste s $a/g$ i duljinom spremnika.
+- Pri rotaciji tlak raste s radijusom jer centrifugalni doprinos raste s $r$.
+- Ovaj statički model ne opisuje prolazne valove, prskanje ni dinamičko zalijevanje.
 :::
 
 ## Zadaci za vježbu

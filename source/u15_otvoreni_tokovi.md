@@ -10,6 +10,8 @@ U punoj cijevi geometrija presjeka zadaje cijelu granicu toka. U otvorenom kanal
 Otvoreni tokovi pojavljuju se u urbanim odvodnim kanalima, preljevima brana, navodnjavanju, brodograđevnim ispitnim bazenima, palubnoj odvodnji i tankim filmovima procesnih postrojenja. Klimatski otpornom gradu nije dovoljan samo „projektni protok”: treba znati može li poremećaj putovati uzvodno, gdje nastaje kritični presjek i koliko energije disipira hidraulički skok.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+
 ## Geometrija presjeka i hidraulička dubina {#sec-geometrija-kanala}
 
 Za presjek protoka definiraju se površina $A$, širina slobodne površine $T$, omočen opseg $P$ i hidraulički polumjer

@@ -10,6 +10,8 @@ Analiza turbostrojeva i propulzijskih sustava temelji se na promjeni količine g
 Pokretne lopatice i potisak nisu školski dodatak, nego jezgra rada Peltonova kola, vodomlaznog pogona, mlaznih čistača i svake ispitne glave koja skreće mlaz radi sile ili momenta. U strojarstvu i brodogradnji isti račun odlučuje koliko snage rotor stvarno prima, koliki potisak ostaje na nosaču i kako izbor izlaznog kuta mijenja korisni učinak stroja.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+
 ## Zakon količine gibanja za lopatice i vodilice
 
 Kad mlaz promijeni smjer ili iznos brzine, mora postojati sila koja je uzrokovala tu promjenu količine gibanja. Za nepomični kontrolni volumen, stacionaran tok te jedan ulaz i izlaz osnovni zapis je

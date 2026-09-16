@@ -10,6 +10,8 @@ Analiza plivajućega tijela obuhvaća ukupnu težinu, istisnuti volumen te polo�
 U brodogradnji, lučnim pontonima i plutajućim radnim platformama nije dovoljno znati samo koliko je vode istisnuto; jednako je važno gdje su težište i centar uzgona te kakav moment nastaje kad se teret pomakne. Zato ovo poglavlje izravno ulazi u stabilnost plovila, raspored opreme na pontonu, sigurnost plutajuće dizalice i svaku tehničku situaciju u kojoj mali bočni pomak tereta može otvoriti veliki nagib.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
+
 ## Sila uzgona
 
 Za tijelo koje miruje u fluidu vrijedi da je sila uzgona jednaka težini istisnutog fluida:

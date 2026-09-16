@@ -10,6 +10,8 @@ Mehanika fluida polazi od pojma fluida, kontinuumskog modela te veličina kojima
 Hidraulične dizalice, preše za oblikovanje lima i brodski kormilarski pogoni temelje se na prijenosu tlaka zatvorenim fluidom. U takvim sustavima tlak povezuje ulaznu silu, geometriju cilindara i radnu silu aktuatora.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 8 sati.
+
 ### Kontinuumski model
 
 Fluid je tvar koja se pri djelovanju bilo kojega, pa i vrlo malog, tangencijalnog naprezanja neprekidno deformira. U inženjerskoj se analizi njegova molekularna građa obično ne promatra izravno. Umjesto toga primjenjuje se kontinuumski model, prema kojem su veličine kao što su gustoća, tlak i brzina definirane u svakoj točki prostora i vremenu.
@@ -608,6 +610,31 @@ Omjer sile jednoga idealnog cilindra i sile pumpnoga klipa iznosi $F_s/F_p = 168
 > *Nije gradivo MF1. U kasnijim kolegijima posvećenima računalnoj dinamici fluida opisani sadržaj postat će poznat teren.*
 :::
 
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">Provjeri sebe</p>
+
+1. Zašto tlak u fluidu u mirovanju u točki ne ovisi o orijentaciji zamišljene plohe kroz tu točku?
+2. Zašto veća sila na radnom klipu hidraulične preše ne znači stvaranje rada iz ničega?
+3. Kada je razumno uzeti da je ulje u ovim zadatcima praktično nestlačivo?
+4. Zašto se u Pascalovu zakonu uspoređuju tlakovi, a ne samo sile?
+
+::: {.callout-note collapse="true"}
+### Odgovori
+
+U fluidu u mirovanju tlak je izotropan jer bi inače nastao tangencijalni rezultant koji bi pokrenuo tok. Povećanje sile prati manji pomak pa se idealni rad ne stvara nego prenosi. Aproksimacija nestlačivosti vrijedi kada su promjene gustoće u odnosu na traženu točnost zanemarive. Sile same nisu dovoljne jer ovise i o površini na kojoj djeluju.
+:::
+:::
+
+::: {.mf1-zavrsni-okvir}
+<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
+
+- Kontinuumski model omogućuje da gustoću i tlak promatramo kao polja pogodna za inženjerski račun.
+- Tlak je normalna sila po jedinici površine i u fluidu u mirovanju djeluje izotropno.
+- Pascalov zakon prenosi promjenu tlaka kroz zatvoren fluid u mirovanju.
+- Veći izlazni učinak hidrauličkog sustava prati odgovarajući kompromis u pomaku ili hodu.
+- Idealizirani model ne uključuje stlačivost, propuštanje, trenje ni dinamičke valove.
+:::
+
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
@@ -618,7 +645,7 @@ U servisnoj hidrauličnoj preši mali klip promjera $d_1 = 28\ \text{mm}$ potisk
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 Primjenjuju se $p = F_1/A_1$, $F_2 = pA_2$ te volumna bilanca $A_1 s_1 = A_2 s_2$.
 :::
 ::::
@@ -638,7 +665,7 @@ Na kružni klip promjera $d = 24\ \text{mm}$ djeluje sila $F = 95\ \text{N}$. Od
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 Površina se određuje iz $A = \pi d^2/4$, tlak iz $p = F/A$, a sila na većem klipu iz $F_2 = pA_2$.
 :::
 ::::
@@ -658,7 +685,7 @@ U zatvorenoj hidrauličnoj stezi tlak ulja iznosi $p = 2{,}4\ \text{MPa}$, a rad
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 Primjenjuje se $F = pA$. Iz zahtijevane sile slijedi površina $A = F/p$, a promjer se određuje iz $A = \pi d^2/4$.
 :::
 ::::
@@ -678,7 +705,7 @@ Hidraulični stol nosi teret mase $m = 1350\ \text{kg}$ preko dvaju jednakih rad
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 Teret se raspodjeljuje na dva cilindra. Iz $p = G/(2A_D)$ slijedi $F_p = pA_d$, a broj hodova određuje se iz $nA_d s = 2A_D \Delta z$.
 :::
 ::::
@@ -698,7 +725,7 @@ Ručna pumpa s klipom promjera $d = 25\ \text{mm}$ razvija silu $F_p = 420\ \tex
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 Tlak se određuje iz $p = F_p/A_d$, ukupno opterećenje iz $G = 2pA_D$, a ukupan hod pumpe iz volumne bilance $A_d s_p = 2A_D \Delta z$.
 :::
 ::::
@@ -718,7 +745,7 @@ Hidraulični radni stol podupiru tri jednaka cilindra, svaki površine $A_L = 95
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 Površina $A_p$ i tlak određuju se iz $p = F_p/A_p$, idealno opterećenje iz $G = 3pA_L$, a idealni hod pumpe iz volumne bilance $A_p s_p = 3A_L \Delta z$. Za stvarni sustav vrijedi $G_{kor}=\eta_FG$ i $s_{p,st}=s_p/\eta_V$. Konzervativna se odluka temelji na vrijednostima $\eta_{F,min}$ i $\eta_{V,min}$, a ne na srednjim vrijednostima.
 :::
 ::::

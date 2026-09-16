@@ -10,6 +10,8 @@ U sporom toku kapljevine promjena tlaka gotovo ne mijenja gustoću, pa je model 
 Kompresibilnost određuje odziv pneumatskog aktuatora, protok kroz sigurnosni ventil, rad mlaznice plinske turbine, ventilaciju tunela i širenje tlačnog vala kroz plinovod. U brodogradnji se pojavljuje u dovodu zraka motoru, ispušnom sustavu, podvodnoj akustici i kavitacijskim impulsima. Cilj poglavlja nije potpuna plinska dinamika, nego pouzdano prepoznati kada nestlačivi model prestaje vrijediti i postaviti temeljni jednodimenzijski račun.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+
 ## Brzina zvuka {#sec-brzina-zvuka}
 
 Promatra se vrlo malen tlačni poremećaj koji se kroz fluid širi bez značajne izmjene topline s okolinom. Za takav brzi, gotovo reverzibilni poremećaj vrijedi lokalna izentropska veza

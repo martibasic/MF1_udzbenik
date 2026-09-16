@@ -12,6 +12,8 @@ Povijesni prijelaz od Torricellijeva tumačenja istjecanja do Bernoullijeve opć
 Idealni Bernoulli vidi se u Venturijevoj cijevi, Pitotovoj sondi, mlaznici za čišćenje, privremenom sifonu na gradilištu i svakom sklopu u kojem se tlak pretvara u brzinu ili obrnuto bez značajnih gubitaka. U autoindustriji, strojarstvu i brodogradnji ta logika stoji iza mjerenja protoka, tumačenja pada statičkog tlaka u suženju i čitanja energetske slike toka duž jedne strujnice.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
+
 ## Mehanička energija idealnoga toka
 
 Bernoullijeva jednadžba u ovom poglavlju predstavlja bilancu mehaničke energije po jedinici težine u idealiziranom strujanju. Tri osnovna člana su:

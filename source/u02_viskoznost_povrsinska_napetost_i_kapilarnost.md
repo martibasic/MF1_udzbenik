@@ -10,6 +10,8 @@ Uz tlak, opisan u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 1</spa
 Viskoznost određuje uvjete podmazivanja ležajeva i kliznih vodilica te radno područje motornih i hidrauličnih ulja pri različitim temperaturama. Površinska napetost i kapilarnost važne su u raspršivačima, premazima, zavarivačkim kupkama i prijenosu vlage kroz porozne materijale.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+
 ## Viskoznost
 
 Kad se slojevi fluida gibaju relativno jedan prema drugom, pojavljuje se smično naprezanje i otpor gibanju. U Newtonskom fluidu vrijedi
@@ -689,6 +691,31 @@ Ravnotežna visina od oko $33{,}5\ \text{cm}$ pokazuje da je za zadanu idealnu k
 > *Nije gradivo MF1. Ovo poglavlje otvara vrata u svijet multifaznih simulacija.*
 :::
 
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">Provjeri sebe</p>
+
+1. Zašto dinamička viskoznost nije isto što i gustoća fluida?
+2. Zašto Newtonov zakon viskoznosti nije univerzalan za svaki fluid i svaki režim?
+3. Zašto kapilarni uspon ovisi o kontaktnom kutu, a ne samo o promjeru kapilare?
+4. Zašto površinska napetost nije dovoljna za predviđanje brzine punjenja kanala?
+
+::: {.callout-note collapse="true"}
+### Odgovori
+
+Gustoća mjeri masu po volumenu, a viskoznost otpor smicanju. Newtonski model vrijedi samo kada je smično naprezanje proporcionalno gradijentu brzine za promatrani fluid i raspon uvjeta. Kontaktni kut određuje kvasi li stijenka fluid pa zato mijenja predznak i iznos kapilarnog učinka. Brzina punjenja dodatno ovisi o viskoznom otporu, geometriji, zarobljenom plinu i dinamici meniskusa.
+:::
+:::
+
+::: {.mf1-zavrsni-okvir}
+<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
+
+- Viskoznost povezuje smično naprezanje i gradijent brzine samo unutar odabranoga konstitutivnog modela.
+- Površinska napetost djeluje na međupovršini i određuje zakrivljenost, tlakni skok i kapilarne učinke.
+- Kontaktni kut određuje kvasi li stijenka fluid i zato mijenja kapilarni odziv.
+- Dimenzije i vrijeme mikrofluidičkog punjenja ne proizlaze iz jedne formule bez otpora i graničnih uvjeta.
+- Višefazni i nenewtonovski problemi traže dodatne modele i provjeru njihovih pretpostavki.
+:::
+
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
@@ -699,7 +726,7 @@ Između dviju paralelnih ploča nalazi se glicerin debljine $\delta = 2{,}4\ \te
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 $dv/dy = v/\delta$, zatim $\tau = \mu dv/dy$ i na kraju $F = \tau A$.
 :::
 ::::
@@ -719,7 +746,7 @@ Klizna ploča površine $A = 0{,}14\ \text{m}^2$ giba se brzinom $v = 0{,}80\ \t
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 iz $F = \tau A$ dobij $\tau$, a zatim iz $\tau = \mu v/\delta$ vrati $\mu$.
 :::
 ::::
@@ -739,7 +766,7 @@ Vratilo promjera $D = 70\ \text{mm}$ i duljine $L = 0{,}24\ \text{m}$ vrti se ta
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 koristi aproksimaciju ravnih slojeva: $\tau = \mu v/\delta$ i $F = \tau A$ uz $A = \pi DL$.
 :::
 ::::
@@ -759,7 +786,7 @@ Kapilara promjera $d = 0{,}60\ \text{mm}$ uronjena je u etanol za koji vrijedi $
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 $h = 4\sigma \cos\theta /(\rho g d)$; drugi slučaj računa se istom formulom samo s novim promjerom.
 :::
 ::::
@@ -779,7 +806,7 @@ Staklena kapilara promjera $d = 0{,}90\ \text{mm}$ uronjena je u vodu za koju vr
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 najprije kapilarni uspon iz $h = 4\sigma \cos\theta /(\rho g d)$, a zatim tlak skoka kapljice iz $\Delta p = 4\sigma/d_k$.
 :::
 ::::
@@ -799,7 +826,7 @@ Kapilarna igla unutarnjeg promjera $d = 0{,}50\ \text{mm}$ spojena je na spremni
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
-### Smjernica
+### Naputak
 prvo izračunaj $h_{cap} = 4\sigma /(\rho g d)$, zatim tlakovni skok kapljice $\Delta p = 4\sigma/D$, a preostali pretlak u idealizaciji kapilarnog uspona zatvori iz $p_M = \rho g(H-h_{cap}) + \Delta p$, uz donju granicu $p_M\ge0$. U alternativnom stanju više nema konkavnoga meniskusa koji daje $h_{cap}$, pa regulator mora svladati i visinsku razliku i pozitivni Laplaceov skok: $p_{M,konz}=\rho gH+4\sigma/D$.
 :::
 ::::

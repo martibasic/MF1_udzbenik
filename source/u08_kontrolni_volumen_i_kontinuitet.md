@@ -10,6 +10,8 @@ Kinematika strujanja može se opisati praćenjem pojedine čestice fluida ili pr
 Kontrolni volumen je radni alat za sve sustave u kojima je važnije što ulazi, izlazi i ostaje u prostoru nego pratiti putanju svake pojedine čestice fluida: mješalice, ventilacijske komore, rashladne razdjelnike, izjednačne spremnike i građevinske retencijske komore. U strojarstvu i procesnoj tehnici upravo taj pogled zatvara masu kroz T-račve, difuzore, usisne komore i spremnike tijekom punjenja ili pražnjenja.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
+
 ## Kinematika strujanja
 
 Gibanje pojedine čestice može se pratiti njezinim položajem tijekom vremena. Za opis strujanja koriste se dva komplementarna pristupa:

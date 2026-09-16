@@ -10,6 +10,8 @@ Zakon količine gibanja povezuje protok, tlak i reakciju konstrukcije. Pri struj
 Svako koljeno, T-račva, mlaznica ili završetak cjevovoda koji mijenja smjer ili brzinu toka prenosi silu na prirubnicu, vijčani spoj, konzolu ili temelj. Zato se ovo poglavlje izravno čita u pumpnim stanicama, brodskim strojarnicama, protupožarnim monitorima i vodenim mlaznicama, gdje konstrukcija ne nosi "protok", nego vektorsku razliku tlačnih i impulsnih doprinosa.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
+
 ## Integralni zakon količine gibanja
 
 Za stacionarni tok osnovni zapis ostaje

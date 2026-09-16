@@ -10,6 +10,8 @@ Integralne bilance odgovaraju na pitanje kolika je ukupna sila, protok ili snaga
 Isti diferencijalni model opisuje uljni film ležaja, razvoj profila u rashladnom kanalu, otpor trupa, odvajanje iza lopatice i polje brzine koje računa CFD solver. Razlika između analitičkog rješenja i simulacije nije u temeljnim zakonima: analitički račun uvodi snažne simetrije, a numerički alat iste lokalne bilance primjenjuje na mnogo ćelija [@schlichting2017; @pope2000].
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
+
 ## Materijalna derivacija {#sec-materijalna-derivacija}
 
 Brzina je polje $\mathbf u(\mathbf x,t)$. Čestica koja se giba kroz to polje osjeća promjenu zbog vremena i zbog prelaska u područje druge brzine. Lančano pravilo daje
@@ -136,19 +138,19 @@ Protok slijedi iz integracije dobivenoga parabolnog profila po presjeku:
 $$
 Q=\int_0^R u(r)\,2\pi r\,dr
 =-\frac{\pi R^4}{8\mu}\frac{dp}{dx}.
-$$
+$$ {#eq-realni-tok-hagen-poiseuilleov-tok-i-linearni-gubitak-sec-02}
 
 Uz $\bar u=Q/(\pi R^2)$ i $D=2R$ slijedi $\Delta p=-L\,dp/dx=32\mu L\bar u/D^2$ te $u_{max}=2\bar u$. Izjednačavanjem s Darcyjevim zapisom
 
 $$
 \Delta p=\lambda\frac{L}{D}\frac{\rho\bar u^2}{2}
-$$
+$$ {#eq-realni-tok-izvod-od-profila-brzine-do-lambda-64-re-01}
 
 dobiva se
 
 $$
 \lambda=\frac{64\mu}{\rho\bar uD}=\frac{64}{Re}.
-$$
+$$ {#eq-realni-tok-izvod-od-profila-brzine-do-lambda-64-re-02}
 
 Faktor $64$ zato nije empirijska konstanta, nego posljedica stacionarnog, potpuno razvijenog laminarnog toka Newtonskoga fluida u kružnoj cijevi. Izvan tih pretpostavki ovaj se rezultat ne prenosi bez provjere.
 :::
