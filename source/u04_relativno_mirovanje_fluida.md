@@ -769,16 +769,6 @@ $\omega_{max} \approx 7{,}83\ \text{rad/s}$; pri $\omega = 0{,}80\,\omega_{max}$
 
 ![Skice uz zadatke za vježbu — ubrzani i rotirajući spremnici s fluidom (poglavlje 4).](../assets/print/u04_vjezbe_skice.svg){#fig-u04-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — ubrzani i rotirajući spremnici s fluidom (poglavlje 4)."}
 
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most — rotirajuća domena i prolazni odziv</p>
-
-**Gdje ovo živi u numerici.** Promjena referentnog okvira temelj je modeliranja pumpa, ventilatora, turbina i centrifuga. U rotirajućem se okviru u jednadžbu količine gibanja uvode centrifugalni i Coriolisov član; u inercijskom okviru kretanje se može opisati pokretnom mrežom.
-
-**Što numerički alat radi s tim.** MRF daje stacionarnu aproksimaciju srednjega toka u rotirajućoj zoni. Klizajuća mreža ili drugi nestacionarni pristup potrebni su kada prolazak lopatica kraj nepokretnoga dijela, pulsacije ili akustika utječu na promatrani odziv.
-
-**Tipičan scenarij.** Paraboloid slobodne površine pri vrtnji krutoga tijela i ravna površina pri stalnom ubrzanju provjerljivi su referentni slučajevi. Tek nakon njih ima smisla tumačiti valove, zalijevanje stijenki, trodimenzijsku raspodjelu tlaka ili učinak promjene vremenskoga koraka i mreže.
-:::
-
 ## Sažetak
 
 Fluid se nalazi u relativnom mirovanju kada se u odnosu na ubrzani ili rotirajući spremnik ne giba. Raspodjela tlaka tada se određuje iz efektivnog polja sila $\vec g_{eff}=\vec g-\vec a$. U translatorno ubrzanom spremniku slobodna je površina ravnina okomita na efektivno polje sila, a pri vodoravnom ubrzanju razlika razina iznosi $\Delta h=aL/g$.
@@ -786,3 +776,15 @@ Fluid se nalazi u relativnom mirovanju kada se u odnosu na ubrzani ili rotiraju�
 U spremniku koji rotira stalnom kutnom brzinom tlak raste s radijalnom udaljenošću, a slobodna površina poprima paraboloidni oblik $h(r)=h_C+\omega^2r^2/(2g)$. Očuvanje volumena određuje visine u središtu i uz stijenku, dok se granice primjene osnovnog modela određuju uvjetima prelijevanja i ogoljavanja dna.
 
 Model pretpostavlja da su prolazne oscilacije, valjanje, prskanje i relativno strujanje fluida zanemarivi. Pri promjenjivom ubrzanju ili značajnom relativnom gibanju potrebna je nestacionarna analiza.
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički most</p>
+
+**Gdje ovo živi u numerici.** Promjena referentnog okvira iz ovog poglavlja je upravo *jezgra* numeričkih pristupa rotirajućim domenama: pumpe, ventilatori, vodne i plinske turbine, centrifuge. Umjesto da mreža fizički rotira (skupo!), CFD solver dodaje **prividne sile** — centrifugalnu i Coriolisovu — točno onako kako se u zadacima dodavalo $a_{cf} = \omega^2 r$.
+
+**Što numerički alat radi s tim.** **MRF (Moving Reference Frame)** definira zonu u mreži koja se "vrti" matematički — rješavanjem Navier-Stokesa u rotirajućem sustavu s dopisanim Coriolisovim i centrifugalnim članom. Za pune nestacionarne simulacije postoji i **klizajuća mreža (engl. sliding mesh)** u kojoj se rotor i stator fizički kližu jedan uz drugog.
+
+**Tipičan scenarij.** Stacionarni MRF model može dati početnu procjenu srednjih veličina rotirajućega stroja. Kada su važni prolaz rotora kraj statora, pulsacije ili akustika, potreban je odgovarajući nestacionarni model. Računski trošak i potrebna razlučivost ovise o geometriji, mreži, vremenskom koraku i traženoj izlaznoj veličini.
+
+> *Nije gradivo MF1. Paraboloidna slobodna površina iz centrifuge ovdje, u CFD-u javlja se kao polje koje solver sam izračuna.*
+:::

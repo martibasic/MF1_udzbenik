@@ -160,6 +160,14 @@ $$ {#eq-reologija-newtonov-zakon-viskoznosti-02}
 
 gdje je $\delta$ razmak među pločama.
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Kako se računa viskozna sila</p>
+
+Zamislimo sloj ulja između nepomične i pokretne ploče. Susjedni slojevi ulja gibaju se različitim brzinama i pritom se međusobno povlače. Što se brzina više promijeni na maloj udaljenosti, veće je smično naprezanje. To opisuje Newtonov zakon viskoznosti $\tau=\mu\,dv/dy$.
+
+Računalo iz razlika brzina procjenjuje viskozne sile u fluidu i na stijenkama. Za vodu ili uobičajeno ulje često je dovoljna poznata viskoznost pri radnoj temperaturi. Kod svježeg betona ili isplake odnos sile i gibanja slojeva može biti drukčiji, pa ga treba zadati prema mjerenjima.
+:::
+
 ::: {.mf1-dublje}
 <p class="mf1-box-label">Tenzor viskoznih naprezanja u trodimenzijskom strujanju</p>
 
@@ -669,6 +677,18 @@ Negativna vrijednost znači kapilarnu depresiju u vertikalnoj cijevi. Ako tekuć
 Ravnotežna visina od oko $33{,}5\ \text{cm}$ pokazuje da je za zadanu idealnu kapilaru gravitacijska granica mnogo veća od centimetarske duljine uređaja. Time još nije dokazana pouzdanost ili brzina punjenja: za to treba uključiti viskozni otpor, zarobljeni plin, geometrijske prijelaze i dinamički kontaktni kut. Tlačni skok od $3{,}3\ \text{kPa}$ karakterizira meniskus; dimenzioniranje spojnica i pasivnih ventila zahtijeva puni raspon tlakova i stvarne uvjete kvašenja.
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički most</p>
+
+**Gdje ovo živi u numerici.** Površinska napetost i kontaktni kut ulaze u modele višefaznog strujanja kada su važni kapljice, mjehurići, menisci ili tanki filmovi. Njihovo izostavljanje opravdano je samo nakon procjene mjerodavnih skala i bezdimenzijskih brojeva.
+
+**Što numerički alat radi s tim.** U jednom čestom pristupu, metodi VOF (*Volume of Fluid*), polje volumnoga udjela $\alpha\in[0,1]$ prati raspodjelu faza, a model površinske sile prenosi učinak zakrivljenosti u jednadžbu količine gibanja. To je model diskretizirane međupovršine, ne nova fizikalna bilanca.
+
+**Tipičan scenarij.** Mikrofluidika i procesna industrija često razmatraju fluide kojima viskoznost ovisi o stopi smicanja, pa konstitutivni model treba odabrati i provjeriti prema odgovarajućim podatcima. Pri simulaciji kapljice na stijenci kontaktni je kut zaseban rubni podatak i ne proizlazi iz nenewtonskoga modela viskoznosti.
+
+> *Nije gradivo MF1. Ovo poglavlje otvara vrata u svijet multifaznih simulacija.*
+:::
+
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
@@ -796,16 +816,6 @@ $h_{cap} \approx 58{,}8\ \text{mm}$; u idealizaciji kapilarnog uspona dobiva se 
 :::::
 
 ![Skice uz zadatke za vježbu — viskozni procjepi, kapilare i kapljice (poglavlje 2).](../assets/print/u02_vjezbe_skice.svg){#fig-u02-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — viskozni procjepi, kapilare i kapljice (poglavlje 2)."}
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most — konstitutivni i međufazni modeli</p>
-
-**Gdje ovo živi u numerici.** Površinska napetost i kontaktni kut ulaze u višefazne modele kada su važne kapljice, mjehurići, menisci ili tanki filmovi. Njihovo izostavljanje opravdano je tek nakon procjene mjerodavnih duljina, bezdimenzijskih brojeva i tražene izlazne veličine.
-
-**Što numerički alat radi s tim.** U metodi VOF polje volumnoga udjela između nule i jedan prati raspodjelu faza, a međufazni model prenosi učinak zakrivljenosti u jednadžbu količine gibanja. To je način diskretizacije međupovršine, ne nova fizikalna bilanca; kontaktni kut ostaje zaseban rubni podatak.
-
-**Tipičan scenarij.** U mikrofluidici, premazivanju i procesnoj tehnici viskoznost može ovisiti o stopi smicanja, pa se konstitutivni model i njegovi parametri provjeravaju prema mjerenju. Simulacija kapljice na stijenci ne postaje vjerodostojna samo finijom mrežom ako su kontaktni kut, histereza ili svojstva međupovršine pogrešno zadani.
-:::
 
 ## Sažetak
 

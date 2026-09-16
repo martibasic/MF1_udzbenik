@@ -100,9 +100,11 @@ Relativna gustoća je bezdimenzijska veličina, a specifična težina ima jedini
 :::
 
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — kontinuum prije mreže</p>
+<p class="mf1-box-label">Kako računalo pomaže pri proračunu strujanja</p>
 
-U numeričkom modelu ćelija mreže ne predstavlja molekulu, nego prosječnu vrijednost polja u malom dijelu kontinuuma. Mreža mora biti dovoljno fina za gradijente tlaka i brzine koji određuju traženi rezultat, ali njezino usitnjavanje ne može popraviti pogrešan kontinuumski, stlačivi ili višefazni model.
+Računalo može procijeniti brzinu i tlak i ondje gdje je ručni račun previše složen, primjerice unutar cijevnog koljena ili između lopatica crpke. Pritom koristi iste zakone očuvanja mase, količine gibanja i energije koje učimo u ovom udžbeniku. Takav pristup naziva se **računalna dinamika fluida (CFD)**.
+
+Kratke napomene uz jednadžbe objašnjavaju tu vezu na primjerima. Završni osvrti povezuju poglavlja sa složenijim proračunima. To je dodatno čitanje za znatiželjne; za osnovno gradivo nije potrebno poznavati računalne postupke.
 :::
 
 ## Pascalov zakon
@@ -222,13 +224,11 @@ $$ {#eq-svojstva-tlak-dublje-izotropnost-tlaka-cauchyjev-tetraedar-03}
 :::
 
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — tlak kao polje</p>
+<p class="mf1-box-label">Kako računalo povezuje tlak i protok</p>
 
-U nestlačivom CFD-u tlak nije sila ni lokalna tablična vrijednost, nego polje koje u svakom vremenskom koraku spreže brzinu s očuvanjem mase. Pascalov zakon zato ostaje granični test: u mirujućem zatvorenom fluidu numeričko rješenje mora vratiti jednaku promjenu tlaka bez izmišljene disipacije ili promjene volumena.
+Kada pritisnemo klip hidraulične preše, promjena tlaka širi se kroz ulje velikom, ali konačnom brzinom. U sporom radu preše to je širenje mnogo brže od pomicanja klipa, pa ga u proračunu obično ne pratimo zasebno. Ulje tada promatramo kao nestlačivo: volumen koji jedan klip potisne mora se pojaviti drugdje u sustavu.
 
-Za provjeru se zasebno prate promjena tlaka na više mjesta, ukupna masa u domeni i brzina koja u stanju mirovanja mora iščeznuti. Tek kada taj jednostavni slučaj prolazi, tlakni odziv ventila, klipa ili uskog kanala može se tumačiti kao posljedica strujanja, a ne kao numerički artefakt.
-
-Ručni omjer sila i površina pritom ne daje gubitke, elastičnost vodova ni vrijeme širenja tlačnoga poremećaja. Model treba proširiti čim je izlazna veličina brzina odziva, tlakni val ili područje moguće kavitacije.
+Računalo usklađuje tlakove i brzine tako da se ta bilanca zadovolji u cijelom sustavu. Time se pojednostavljuje račun. Ne tvrdi se da se tlak u stvarnom ulju prenosi trenutačno.
 :::
 
 ## Riješeni primjeri
@@ -596,6 +596,18 @@ Sila jedne stege $F_s \approx 1{,}68\ \text{kN}$ manja je od zadane granice $F_{
 Omjer sile jednoga idealnog cilindra i sile pumpnoga klipa iznosi $F_s/F_p = 1680/420 = 4$, što odgovara omjeru površina $(d_s/d_p)^2 = (28/14)^2 = 4$. Omjer $F_{uk}/F_p = 24$ jest zbroj sila šest paralelnih aktuatora prema jednoj ulaznoj sili; za njihov zajednički hod pumpa mora isporučiti zbroj svih istisnutih volumena. Omjer zadane granice i nominalne sile, $F_{dop}/F_s \approx 2{,}1$, predstavlja razinu rezerve prema jednome kriteriju. Stvarna procjena zahtijeva tolerancije tlaka i površina, raspodjelu kontakta, prijelazne vršne sile, otkazne slučajeve te zasebnu analizu sigurnosti stroja i baterijskog modula.
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički most</p>
+
+**Gdje ovo živi u numerici.** Tlak kao skalarno polje $p(x,y,z)$ — temeljni objekt koji svaki CFD solver mora prije svega *postaviti*. Pojam tlaka u kontinuumu i Pascalov zakon su upravo razlog zašto se u nestlačivom CFD-u tlak ne marsira u vremenu, nego se rješava globalno po cijeloj domeni.
+
+**Što numerički alat radi s tim.** Na početku simulacije postavlja se *inicijalni uvjet tlaka* — najčešće jednoliko polje ili hidrostatska raspodjela iz idućeg poglavlja. Promjene na rubu (klip, ulaz crpke, ventil) propagiraju se kroz mrežu kontrolnih volumena unutar jedne iteracije sprege tlaka i brzine.
+
+**Tipičan scenarij.** U industrijskom hidrauličkom sustavu CFD se rijetko primjenjuje na samu Pascalovu prijenosnu silu — ona je analitički rješiva. Vrijednost numerike pojavljuje se onda kad fluid prolazi uskim kanalima, kroz ventile ili kada se promatra dinamika tlačnog vala (vodeni udar pri naglom zatvaranju ventila): tada lokalna polja brzine, tlaka i mogućih kavitacijskih zona postaju netrivijalna, a analitička procjena prestaje biti dovoljna.
+
+> *Nije gradivo MF1. U kasnijim kolegijima posvećenima računalnoj dinamici fluida opisani sadržaj postat će poznat teren.*
+:::
+
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
@@ -723,16 +735,6 @@ $p \approx 947\ \text{kPa}$; $G \approx 27{,}0\ \text{kN}$; $s_p \approx 1{,}35\
 :::::
 
 ![Skice uz zadatke za vježbu — hidraulične preše, klipovi i radni cilindri (poglavlje 1).](../assets/print/u01_vjezbe_skice.svg){#fig-u01-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — hidraulične preše, klipovi i radni cilindri (poglavlje 1)."}
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most — tlačno polje i hidraulički sustav</p>
-
-**Gdje ovo živi u numerici.** Tlak je skalarno polje $p(x,y,z)$ koje u nestlačivom numeričkom modelu osigurava podudarnost brzinskog polja s očuvanjem mase. Pascalov zakon daje njegov mirni granični slučaj, a nije zamjena za jednadžbe strujanja.
-
-**Što numerički alat radi s tim.** Početni tlak može biti jednolik ili hidrostatski. Promjene na granici, primjerice pomak klipa, rad ventila ili ulaz crpke, spajaju tlak i brzinu kroz diskretizirane kontrolne volumene; pritom se mora kontrolirati masena bilanca i odabrati fizikalno dosljedna referenca tlaka.
-
-**Tipičan scenarij.** Prijenos sile samim Pascalovim zakonom najčešće je analitički rješiv. Numerički model postaje opravdan pri uskim kanalima, ventilima, prolaznim tlačnim valovima ili procjeni područja niskoga tlaka u kojima je moguća kavitacija. Tada lokalna polja tlaka i brzine više ne slijede iz jednoga omjera površina.
-:::
 
 ## Sažetak
 

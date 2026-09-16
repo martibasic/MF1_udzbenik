@@ -13,13 +13,15 @@ pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 - Numerički tragovi sada se u tijeku teksta prikazuju kao sadržajni blokovi s
   vlastitom ljubičastom naslovnom bojom i lijevom vodilicom, jednako čitljivo
   kao fizikalno značenje i inženjerski kontekst.
-- Svako od 15 javnih poglavlja sada ima dva proširena numerička traga: prvi je
-  uz ključni fizikalni model, a drugi sintetizira provjere, mjerodavne izlaze
-  i granicu ručnog modela na kraju poglavlja.
-- Prošireni numerički mostovi, provjere i pokusi ostaju nakon zadataka i
-  neposredno prije sažetka. Drugi numerički trag premješten je u teorijski
-  tijek, prije riješenih primjera odnosno zadataka, pa sažetak i dalje ostaje
-  posljednji sadržaj svakoga javnog poglavlja.
+- Poglavlja U02–U15 imaju dva proširena numerička traga: prvi je uz ključni
+  fizikalni model, a drugi sintetizira provjere, mjerodavne izlaze i granicu
+  ručnog modela u teorijskom tijeku prije riješenih primjera odnosno zadataka.
+- U01 je pilot-novo uređenje bez oznake „Numerički trag”: sadržaj je ugrađen u
+  dva odjeljka „Kako računalo pomaže pri proračunu strujanja” i „Kako računalo
+  povezuje tlak i protok”. Zaključni numerički most dolazi prije zadataka;
+  sažetak ostaje posljednji sadržaj poglavlja.
+- Prošireni numerički mostovi, provjere i pokusi u poglavljima U02–U15 ostaju
+  nakon zadataka i neposredno prije sažetka.
 - U primjerima su uklonjene oznake „Primjer za …”, a iz zadataka 60 internih
   redaka „Skica: da …”; objedinjene skice za vježbu ostaju prikazane pri dnu
   odgovarajućih poglavlja.

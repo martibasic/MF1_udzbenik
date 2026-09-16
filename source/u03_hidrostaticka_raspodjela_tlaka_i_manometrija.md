@@ -36,6 +36,14 @@ $$p = p_0 + \rho g h$$ {#eq-hidrostatika-fizikalno-znacenje-02}
 Ovo je radna jednadžba hidrostatike: poznati tlak na slobodnoj površini ($p_0$), a zatim dodamo "težinski porast" $\rho g h$ za svaki metar dubine. Za vodu ($\rho \approx 1000\ \text{kg/m}^3$) svaki metar dubine donosi oko $9{,}81\ \text{kPa}$. Za živu ($\rho \approx 13600\ \text{kg/m}^3$) isti metar daje $\approx 133\ \text{kPa}$. Ista jednadžba vrijedi i unazad: iz poznatog tlaka u jednoj točki računa se tlak na svakoj drugoj visini u istom spojenom fluidu.
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Mirna voda kao provjera proračuna</p>
+
+Prije proračuna valova u spremniku korisno je provjeriti može li računalni model opisati vodu koja miruje. Na većoj dubini tlak mora biti veći jer nosi težinu višeg stupca vode: $p=p_0+\rho gh$, pri čemu je $h$ dubina ispod površine.
+
+Ako se voda u takvoj provjeri počne sama gibati, treba provjeriti jesu li tlak i težina vode pravilno uravnoteženi. Ta jednostavna provjera može otkriti pogrešan smjer gravitacije, početnu raspodjelu tlaka ili postavke proračuna.
+:::
+
 U nižim slojevima tlak je veći jer oni nose težinu slojeva iznad sebe. Pri primjeni jednadžbe određuju se poznati tlak, referentna točka i put kroz promatrani fluid.
 
 ## Matematički izvod
@@ -679,6 +687,18 @@ Očitano odstupanje od $50\ \text{kPa}$ ekvivalentno je približno $5{,}11\ \tex
 Hidrostatička razlika tlakova od $372\ \text{kPa}$ između čvorova razmaknutih $38\ \text{m}$ po visini odgovara promjeni oko $9{,}8\ \text{kPa}$ po metru vodenog stupca. Dobivenih $1{,}48\ \text{bar}$ u točki `B` rezultat je zadanoga kvazistatičkog modela, a ne provjera uslužnog tlaka mreže. Alarmni prag mora proizaći iz mjerne nesigurnosti, prirodne varijabilnosti pogona i procjene posljedica, ne iz univerzalne vrijednosti $50\ \text{kPa}$.
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički most</p>
+
+**Gdje ovo živi u numerici.** Hidrostatsko stanje prirodan je referentni slučaj za numerički model s gravitacijom. Zakon $dp/dz=-\rho g$ vrijedi kada je vertikalna bilanca doista hidrostatska; u strujajućem fluidu lokalna ubrzanja i naprezanja općenito mijenjaju gradijent tlaka.
+
+**Što numerički alat radi s tim.** Može se rješavati puni tlak ili modificirani tlak iz kojega je izdvojen gravitacijski potencijal. Pri povratku na apsolutni ili manometarski tlak treba dosljedno vratiti referencu, predznak gravitacije i, kod promjenjive gustoće, odgovarajuću gustoću po domeni.
+
+**Tipičan scenarij.** Mirna posuda poznate gustoće dobar je verifikacijski test: rekonstruirani tlak mora slijediti zadanu hidrostatsku raspodjelu unutar očekivane diskretizacijske i iteracijske pogreške. Tek nakon toga ima smisla tumačiti dinamičko odstupanje od hidrostatike.
+
+> *Nije gradivo MF1. Ključna veza jest razlika između hidrostatskoga referentnog polja i dodatne dinamike koju rješava numerički model.*
+:::
+
 ## Zadaci za vježbu
 
 ::::: {.mf1-vjezbe-list}
@@ -806,16 +826,6 @@ $p_{gas} \approx 122{,}6\ \text{kPa}$ (aps.); na dubini $1{,}30\ \text{m}$: $p \
 :::::
 
 ![Skice uz zadatke za vježbu — otvoreni i zatvoreni spremnici te U-manometri (poglavlje 3).](../assets/print/u03_vjezbe_skice.svg){#fig-u03-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — otvoreni i zatvoreni spremnici te U-manometri (poglavlje 3)."}
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most — gravitacija, referenca tlaka i ravnoteža</p>
-
-**Gdje ovo živi u numerici.** Hidrostatsko stanje prirodan je referentni slučaj za numerički model s gravitacijom. Zakon $dp/dz=-\rho g$ vrijedi samo kada vertikalnu bilancu ne mijenjaju lokalna ubrzanja, viskozna naprezanja ili promjene gustoće.
-
-**Što numerički alat radi s tim.** Solver može voditi puni tlak ili tlak iz kojega je izdvojen gravitacijski potencijal. Pri izvještavanju apsolutnoga ili manometarskoga tlaka treba dosljedno vratiti referencu, predznak gravitacije i lokalnu gustoću; pogrešna referenca može dati uredan oblik polja, ali pogrešne mjerne veličine.
-
-**Tipičan scenarij.** Mirna posuda poznate gustoće služi kao verifikacijski test: tlak mora slijediti zadanu raspodjelu bez parazitskoga strujanja, u granicama diskretizacijske i iteracijske pogreške. Tek nakon toga može se tumačiti dinamičko odstupanje od hidrostatike.
-:::
 
 ## Sažetak
 

@@ -133,7 +133,7 @@ Za $\theta=90^\circ$ dobiva se vertikalna ploha. Kada $\theta\to0$ tlak po vodor
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Numerički pokus — ravna ploha</p>
 
-Prije pokretanja predvidite kako se mijenjaju $F$ i razlika $h_{CP}-h_C$ kada se cijela ploha spusti dublje te kada se, pri istoj dubini težišta, promijeni nagib. Zatim usporedite numeričke vrijednosti s izrazima za silu i moment iste raspodjele tlaka.
+Prije pokretanja predvidite kako će se promijeniti $F$ i razlika $h_{CP}-h_C$ kada se cijela ploha spusti dublje, a kako kada se pri istoj dubini težišta promijeni nagib.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u05_sila_na_ravnu_plohu.ipynb">Pokreni u pregledniku</a>
@@ -349,7 +349,7 @@ Funkcija $\operatorname{atan2}$ zadržava kvadrant; obični $\arctan(F_V/F_H)$ m
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Numerički pokus — zakrivljena ploha</p>
 
-Prije pokretanja odredite smjer $F_V$ samo iz stvarne okupane strane. Zatim mijenjajte dubinu i polumjer te usporedite rast $F_H$ i $F_V$ s geometrijskim izrazima i predznakom koji slijedi iz normale fluida na stijenci.
+Prije pokretanja odredite smjer $F_V$ samo iz okupane strane. Zatim mijenjajte dubinu i polumjer te usporedite numerički rast $F_H$ i $F_V$ s njihovim geometrijskim izrazima.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u06_zakrivljena_ploha.ipynb">Pokreni u pregledniku</a>
