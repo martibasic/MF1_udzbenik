@@ -1,33 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="u06zdj_title u06zdj_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u06zdj_title">Sile na zaobljeno dno retencijskog jezerca</title>
-  <desc id="u06zdj_desc">Poprecni presjek retencijskog jezerca sirine b=4,00 m s cetvrtkruznim zaobljenjem R=1,00 m izmedju vertikalne stijenke i dna. Slobodna povrsina vode je h1=2,50 m iznad vrha segmenta. Voda kvasi konkavnu stranu odozgo, pa su F_H=117,6 kN prema stijenci i F_V=128,6 kN prema dolje. Rezultanta F_R priblizno 174,0 kN djeluje 47,6 stupnjeva ispod horizontale.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="u06fzdj_u06zdj_title u06fzdj_u06zdj_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+  <title id="u06fzdj_u06zdj_title">Sile na zaobljeno dno retencijskog jezerca</title>
+  <desc id="u06fzdj_u06zdj_desc">Poprecni presjek retencijskog jezerca sirine b=4,00 m s cetvrtkruznim zaobljenjem R=1,00 m izmedju vertikalne stijenke i dna. Slobodna povrsina vode je h1=2,50 m iznad vrha segmenta. Voda kvasi konkavnu stranu odozgo, pa su F_H=117,6 kN prema stijenci i F_V=128,6 kN prema dolje. Rezultanta F_R priblizno 174,0 kN djeluje 47,6 stupnjeva ispod horizontale.</desc>
 
   <defs>
-    <linearGradient id="u06zdj_voda" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u06fzdj_u06zdj_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#aed6f1" />
       <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <pattern id="u06zdj_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u06fzdj_u06zdj_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-    <pattern id="u06zdj_tlo" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u06fzdj_u06zdj_tlo" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="9" height="9" fill="#ede4d3" />
       <line x1="0" y1="0" x2="0" y2="9" stroke="#b89968" stroke-width="1.2" />
     </pattern>
-    <marker id="u06zdj_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+    <marker id="u06fzdj_u06zdj_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u06zdj_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+    <marker id="u06fzdj_u06zdj_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u06zdj_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+    <marker id="u06fzdj_u06zdj_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
       <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u06zdj_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+    <marker id="u06fzdj_u06zdj_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u06zdj_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+    <marker id="u06fzdj_u06zdj_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
@@ -54,21 +54,21 @@
 
   <!-- naslov panela -->
   <!-- TLO (okolno) - lijevi i desni dio okolnog terena -->
-  <rect x="20" y="100" width="70" height="340" fill="url(#u06zdj_hatch)" stroke="#3a4a56" stroke-width="0" />
-  <rect x="440" y="100" width="80" height="340" fill="url(#u06zdj_hatch)" stroke="#3a4a56" stroke-width="0" />
-  <rect x="20" y="370" width="500" height="70" fill="url(#u06zdj_hatch)" stroke="#3a4a56" stroke-width="0" />
+  <rect x="20" y="100" width="70" height="340" fill="url(#u06fzdj_u06zdj_hatch)" stroke="#3a4a56" stroke-width="0" />
+  <rect x="440" y="100" width="80" height="340" fill="url(#u06fzdj_u06zdj_hatch)" stroke="#3a4a56" stroke-width="0" />
+  <rect x="20" y="370" width="500" height="70" fill="url(#u06fzdj_u06zdj_hatch)" stroke="#3a4a56" stroke-width="0" />
 
   <!-- VODA - osnovni pravokutnik unutar jezerca -->
-  <rect x="90" y="100" width="350" height="210" fill="url(#u06zdj_voda)" />
+  <rect x="90" y="100" width="350" height="210" fill="url(#u06fzdj_u06zdj_voda)" />
   <!-- VODA u podrucju lukova: ispuna izmedju arc-a i bounding-box-a -->
   <!-- Lijevi kut: voda popunjava lijevu donju zonu osim kvadrant ispod luka -->
   <!-- Zona: rect (90,250) - (150,310) MINUS quarter circle ostavlja "mjesec" iznad luka -->
-  <path d="M 90,250 L 150,250 L 150,310 L 90,310 Z" fill="url(#u06zdj_voda)" />
+  <path d="M 90,250 L 150,250 L 150,310 L 90,310 Z" fill="url(#u06fzdj_u06zdj_voda)" />
   <!-- Sad uklanjamo donji-lijevi kvadrant ispod luka pomocu path-a u boji tla -->
-  <path d="M 90,310 L 90,250 A 60,60 0 0,0 150,310 Z" fill="url(#u06zdj_hatch)" />
+  <path d="M 90,310 L 90,250 A 60,60 0 0,0 150,310 Z" fill="url(#u06fzdj_u06zdj_hatch)" />
   <!-- Desni kut analogno -->
-  <path d="M 380,250 L 440,250 L 440,310 L 380,310 Z" fill="url(#u06zdj_voda)" />
-  <path d="M 440,250 L 440,310 L 380,310 A 60,60 0 0,1 440,250 Z" fill="url(#u06zdj_hatch)" />
+  <path d="M 380,250 L 440,250 L 440,310 L 380,310 Z" fill="url(#u06fzdj_u06zdj_voda)" />
+  <path d="M 440,250 L 440,310 L 380,310 A 60,60 0 0,1 440,250 Z" fill="url(#u06fzdj_u06zdj_hatch)" />
 
   <!-- IMAGINARNI VOLUMEN V* iznad zaobljenog segmenta DESNO (zelena isprekidana zona) -->
   <!-- Zona: od (380,100) do (440,100) do (440,250)→ duz arc-a do (380,310) → vertikalno gore do (380,100) -->
@@ -106,15 +106,15 @@
        Pricakanjska tocka: centroid imaginarnog volumena, otprilike (415, 240).
     ============================================================ -->
   <!-- F_H: na vertikalnoj projekciji, akcija na strukturu = u desno; duljina 70 px za citljivost -->
-  <line x1="440" y1="280" x2="510" y2="280" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u06zdj_aR)" />
+  <line x1="440" y1="280" x2="510" y2="280" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u06fzdj_u06zdj_aR)" />
   <!-- F_V: prema dolje, od segmenta prema temeljnoj konstrukciji -->
-  <line x1="415" y1="303" x2="415" y2="378" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u06zdj_aR)" />
+  <line x1="415" y1="303" x2="415" y2="378" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u06fzdj_u06zdj_aR)" />
   <!-- Indikator dubine centroida h_Cx - tanka isprekidana linija samo do desne stijenke -->
   <line x1="150" y1="280" x2="380" y2="280" stroke="#1565c0" stroke-width="0.7" stroke-dasharray="4,4" opacity="0.55" />
   <!-- Rezultanta F_R - dijagonala prema dolje-desno pod ~47,6° -->
   <!-- Skala ~0,53 px/kN: F_R=174 kN -> ~92 px. cos47,6=0,674; sin47,6=0,739 -->
   <!-- kraj: (440+62, 280+68) = (502, 348) -->
-  <line x1="440" y1="280" x2="502" y2="348" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u06zdj_aG)" />
+  <line x1="440" y1="280" x2="502" y2="348" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u06fzdj_u06zdj_aG)" />
   <!-- Napomena na dnu lijevog panela -->
   <!-- =====================================================
        DESNI PANEL - FORMULE I REZULTATI
@@ -138,12 +138,12 @@
   <rect x="580" y="446" width="308" height="50" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.5" />
   <line x1="90" y1="100" x2="56" y2="100" stroke="#b7600c" stroke-width="0.7" />
   <line x1="90" y1="250" x2="56" y2="250" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="60" y1="100" x2="60" y2="250" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u06zdj_aDimL)" marker-end="url(#u06zdj_aDim)" />
+  <line x1="60" y1="100" x2="60" y2="250" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u06fzdj_u06zdj_aDimL)" marker-end="url(#u06fzdj_u06zdj_aDim)" />
   <line x1="380" y1="250" x2="440" y2="250" stroke="#b7600c" stroke-width="1.3" stroke-dasharray="3,3" />
   <line x1="380" y1="252" x2="380" y2="248" stroke="#b7600c" stroke-width="1.4" />
   <circle cx="380" cy="250" r="2" fill="#b7600c" />
-  <line x1="200" y1="395" x2="230" y2="395" stroke="#b7600c" stroke-width="1.2" marker-end="url(#u06zdj_aDim)" />
-  <line x1="330" y1="395" x2="300" y2="395" stroke="#b7600c" stroke-width="1.2" marker-end="url(#u06zdj_aDim)" />
+  <line x1="200" y1="395" x2="230" y2="395" stroke="#b7600c" stroke-width="1.2" marker-end="url(#u06fzdj_u06zdj_aDim)" />
+  <line x1="330" y1="395" x2="300" y2="395" stroke="#b7600c" stroke-width="1.2" marker-end="url(#u06fzdj_u06zdj_aDim)" />
 
   <text x="36" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Poprecni presjek retencijskog jezerca</text>
   <text x="36" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">zaobljeni segment (cetvrtina kruga) izmedju stijenke i dna</text>

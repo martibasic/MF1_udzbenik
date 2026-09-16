@@ -160,6 +160,12 @@ $$ {#eq-hidrostatika-matematicki-izvod-izotermalna-atmosfera-i-karakt-05}
 U ovom izotermalnom modelu tlak pada za faktor $e\approx2{,}72$ nakon porasta visine za jednu skalnu visinu, ovdje oko $8{,}4\ \text{km}$. Na $z\approx8{,}8\ \text{km}$ model daje oko $35\ \text{kPa}$, odnosno približno trećinu tlaka na razini mora. Stvarna atmosfera nije izotermalna: za pouzdan atmosferski podatak koristi se odgovarajući standardni ili izmjereni profil temperature i tlaka, dok je ovaj izvod samo model reda veličine [@anderson2021].
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — gravitacija u diskretnoj ravnoteži</p>
+
+Mirni spremnik s gravitacijom provjerava uravnotežuje li diskretni gradijent tlaka volumensku silu. Ako se u takvu slučaju pojavi brzina, promijeni razina ili tlak ne slijedi zadanu dubinu, prije složenoga proračuna treba popraviti model gustoće, tlaknu referencu, mrežu ili diskretizaciju.
+:::
+
 ## Otvoreni i zatvoreni spremnici
 
 Kod otvorenog spremnika tlak na slobodnoj površini jednak je atmosferskom tlaku. Zato je često praktično prijeći na manometarski tlak i atmosferu uzeti kao nultu razinu.
@@ -216,6 +222,16 @@ pa za podtlak vrijedi i relacija
 $$p_{vak} = p_{atm} - p_{aps} = -p_M \qquad (p_M<0)$$ {#eq-hidrostatika-fizikalno-znacenje-03}
 
 Ako je $p_M < 0$, to ne znači da je tlak "negativan" u apsolutnom smislu, nego da je sustav pod podtlakom u odnosu na okolinu.
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — hidrostatska ravnoteža</p>
+
+U numeričkom modelu gravitacijski član i gradijent tlaka moraju se uravnotežiti i kada je brzina nula. To hidrostatsko stanje služi kao osnovna verifikacija diskretizacije: pojava parazitskoga strujanja ili pomaka slobodne površine u mirnom spremniku pokazuje da diskretna bilanca nije dovoljno dobro zatvorena.
+
+Provjera se vodi po tlakovima na više dubina, položaju slobodne površine i najvećoj preostaloj brzini. Ti se rezultati uspoređuju s istom gustoćom, referencom tlaka i smjerom gravitacije kao u analitičkom modelu; podudarnost samo jedne tlačne točke nije dostatna.
+
+Čim fluid stvarno struji, mijenja gustoću ili se spremnik ubrzava, hidrostatski profil više nije samostalno rješenje. Tada se njegova uloga mijenja iz predviđanja u početni ili referentni slučaj širega modela.
+:::
 
 ## Riješeni primjeri
 
@@ -463,7 +479,6 @@ Kao prijelaz prema <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 4</sp
 ::: {#ex-u03-tlak-na-usisu-pumpe-za-cirkulaciju-ulja .mf1-we}
 <p class="mf1-box-label">P4. Tlak na usisu pumpe za cirkulaciju ulja &nbsp;<span class="mf1-level">T2</span></p>
 
-**Primjer za strojare**
 
 **Kontekst:** U hidrauličnom sustavu preše pumpa za cirkulaciju ulja smještena je 2,4 m iznad razine ulja u otvorenom spremniku. Pumpa aspirira ulje podtlakom na svom usisu.
 
@@ -518,7 +533,6 @@ U idealnoj statičkoj slici točka na visini $2{,}4\ \text{m}$ ima apsolutni tla
 ::: {#ex-u03-balastni-tank-broda-tlak-iznutra-i-izvana .mf1-we}
 <p class="mf1-box-label">P5. Balastni tank broda: tlak iznutra i izvana &nbsp;<span class="mf1-level">T2</span></p>
 
-**Primjer za strojare**
 
 **Kontekst:** Brod nosi balastne tankove pri dnu trupa, koji se za prazno povratno putovanje pune slatkom (ili morskom) vodom radi stabilnosti, a pri teretnom putovanju se prazne. Stijenka tanka istovremeno odvaja **vanjsku** morsku vodu (koja pritišće prema unutra) od **unutarnje** balastne vode (koja pritišće prema van). Brodski strojar dimenzionira stijenku tanka prema **neto tlaku** – razlici dvaju hidrostatskih tlakova na istoj dubini – jer ona definira u koju stranu stijenka biva opterećena i koje je opterećenje veće (prazan vs pun tank).
 
@@ -686,7 +700,6 @@ manometarski tlak je $p_M = \rho gh$, a apsolutni $p_{aps} = p_{atm} + p_M$.
 $p_M \approx 23{,}5\ \text{kPa}$; $p_{aps} \approx 124{,}3\ \text{kPa}$.
 :::
 ::::
-**Skica:** da - otvoreni spremnik, slobodna površina i jedna točka na dubini $h$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -707,7 +720,6 @@ najprije tlak na slobodnoj površini, zatim kroz isti fluid dodaj $\rho gh$; tek
 $p_M \approx 43{,}6\ \text{kPa}$; $p_{aps} \approx 142{,}8\ \text{kPa}$.
 :::
 ::::
-**Skica:** da - zatvoreni spremnik, plinski prostor iznad vode i priključak na dubini $h$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -728,7 +740,6 @@ kreni od slobodne površine otvorenog kraka; niz stupce piši promjene tlaka kao
 $p_M \approx 23{,}7\ \text{kPa}$.
 :::
 ::::
-**Skica:** da - U-manometar s uljem i živom, razlika razina $\Delta h$ i priključna točka.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -749,7 +760,6 @@ napravi jednu zatvorenu putanju od `A` do `B`; kroz vodu i živu piši odvojene 
 $p_A - p_B \approx 20{,}9\ \text{kPa}$.
 :::
 ::::
-**Skica:** da - dvije točke spojene diferencijalnim manometrom s označenim visinskim pomakom.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -770,7 +780,6 @@ iz manometra najprije vrati tlak plina, a zatim u istom spremniku kroz vodu doda
 $p_{gas} \approx 67{,}9\ \text{kPa}$ (aps.); na dubini $0{,}90\ \text{m}$: $p \approx 76{,}7\ \text{kPa}$.
 :::
 ::::
-**Skica:** da - vakuumski spremnik, otvoreni živin manometar i unutarnja točka na dubini $h$.
 
 [Razina: T3]{.mf1-task-level}
 
@@ -791,13 +800,22 @@ iz otvorenog manometra najprije vrati tlak u priključku, zatim se penjanjem kro
 $p_{gas} \approx 122{,}6\ \text{kPa}$ (aps.); na dubini $1{,}30\ \text{m}$: $p \approx 135{,}3\ \text{kPa}$. Konzervativna gornja granica iznosi $p_{max}\approx136{,}05\ \text{kPa}$, pa uz rezervu od $5\ \%$ treba puna skala od najmanje $142{,}9\ \text{kPa}$. Pretvornik $0$--$140\ \text{kPa}$ nije dostatan; bira se područje $0$--$160\ \text{kPa}$.
 :::
 ::::
-**Skica:** da - zatvoreni vodeni spremnik, priključak na dubini $h_1$, otvoreni U-manometar sa živom i dublja unutarnja točka.
 
 [Razina: T4]{.mf1-task-level}
 
 :::::
 
 ![Skice uz zadatke za vježbu — otvoreni i zatvoreni spremnici te U-manometri (poglavlje 3).](../assets/print/u03_vjezbe_skice.svg){#fig-u03-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — otvoreni i zatvoreni spremnici te U-manometri (poglavlje 3)."}
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerički most — gravitacija, referenca tlaka i ravnoteža</p>
+
+**Gdje ovo živi u numerici.** Hidrostatsko stanje prirodan je referentni slučaj za numerički model s gravitacijom. Zakon $dp/dz=-\rho g$ vrijedi samo kada vertikalnu bilancu ne mijenjaju lokalna ubrzanja, viskozna naprezanja ili promjene gustoće.
+
+**Što numerički alat radi s tim.** Solver može voditi puni tlak ili tlak iz kojega je izdvojen gravitacijski potencijal. Pri izvještavanju apsolutnoga ili manometarskoga tlaka treba dosljedno vratiti referencu, predznak gravitacije i lokalnu gustoću; pogrešna referenca može dati uredan oblik polja, ali pogrešne mjerne veličine.
+
+**Tipičan scenarij.** Mirna posuda poznate gustoće služi kao verifikacijski test: tlak mora slijediti zadanu raspodjelu bez parazitskoga strujanja, u granicama diskretizacijske i iteracijske pogreške. Tek nakon toga može se tumačiti dinamičko odstupanje od hidrostatike.
+:::
 
 ## Sažetak
 

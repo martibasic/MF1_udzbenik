@@ -1,6 +1,6 @@
 # Status izrade udžbenika MF1
 
-**Presjek:** 1. kolovoza 2026.
+**Presjek:** 16. rujna 2026.
 
 **Cilj izdanja:** tehničko stanje **spremno je za `1.0-rc1`**; `v1.0` dolazi tek
 nakon dviju neovisnih stručnih recenzija i studentskog pilota.
@@ -34,15 +34,15 @@ ljudski kriteriji provedeni ili da je kandidat javno deployan.
 | Stabilna javna sučelja | **Implementirano** | Inventar sadrži 1.185 stabilnih ID-jeva i 789 prikazanih jednadžbi. Unutarnje veze, 11 prijelaznih preusmjerenja i zabrana kopiranja kanonskog `source/` u javni izlaz provjeravaju se automatizirano. |
 | Skice i izvorna pristupačnost | **Tehnički RC spremno** | 143/143 SVG datoteke prošle su izvorni audit; završni HTML sadrži 210 renderiranih slika, a PDF i A4 prikaz uključeni su u izlazni vizualni QA. |
 | Hrvatska lokalizacija | **Tehnički RC spremno** | Hrvatski UI, tipkovnički fokus, smanjeno gibanje, mobilno prelamanje i kontrast provjereni su u 72 prikaza na 320, 768 i 1.440 px te u zasebnom A4 prikazu. |
-| HTML izdanje | **Tehnički RC spremno** | Sekvencijski izgrađen artefakt prolazi audit: 24 stranice, 210 slika, 2.081 veza, 472 sklopiva bloka i 11 preusmjerenja. |
-| Nativni PDF | **Tehnički RC spremno** | Quarto/Typst PDF ima 299 A4 stranica i 7.045.244 B; audit ekstrahira 536.983 znaka. Autorski blokovi i primjeri nativno su stilizirani, prvi red odlomka nema uvlaku, a razmak između odlomaka iznosi `0.72em`. |
+| HTML izdanje | **Tehnički RC spremno** | Sekvencijski izgrađen artefakt prolazi audit: 24 stranice, 210 slika, 1.916 veza, 420 sklopivih blokova i 11 preusmjerenja. |
+| Nativni PDF | **Tehnički RC spremno** | Quarto/Typst PDF ima 285 A4 stranica i 6.670.911 B; audit ekstrahira 507.553 znaka. Autorski blokovi i primjeri nativno su stilizirani, prvi red odlomka nema uvlaku, a razmak između odlomaka iznosi `0.72em`. |
 | JupyterLite | **Tehnički RC spremno** | Završni paket s Pyodide kernelom i svih 17 notebookova izgrađen je; strukturni audit i preglednički smoke-test kernela prolaze. Colab ostaje pričuvni put. |
 | Citati i normativne tvrdnje | **Implementirano u rukopisu** | Lokalni citati povezuju promjenjive i normativne tvrdnje s primarnim izvorima, a konstrukcijska i sigurnosna značenja ograničena su na stvarno provedeni model. Vanjski recenzenti provjeravaju konačnu stručnu dostatnost. |
 | Errata i dnevnik izmjena | **Implementirano** | Postoje javni issue obrazac, evidencija po stabilnom ID-ju i `CHANGELOG.md`; tablica errate ostaje prazna dok nema potvrđene pogreške objavljenoga izdanja. |
 
 ## Aktualna QA snimka
 
-Provjere su pokrenute iz korijena repozitorija 1. kolovoza 2026. nad kanonskim
+Provjere su pokrenute iz korijena repozitorija 16. rujna 2026. nad kanonskim
 izvorima i sekvencijski izgrađenim RC artefaktima.
 
 | Provjera | Rezultat | Tumačenje |
@@ -53,10 +53,19 @@ izvorima i sekvencijski izgrađenim RC artefaktima.
 | `python tools/execute_notebooks.py` | **PASS**, 17/17 | Svaki notebook izvršen je od početka u zasebnom čistom kernelu bez spremljenih izlaza. |
 | `python tools/validate_cfd_vv.py` | **PASS**, 2 spremna + 1 referentni | Validator čuva eksplicitne arhivske praznine NACA skupa i ne proizvodi sintetičke dokaze za njih. |
 | `python tools/audit_publication.py` | **PASS** | Potvrđuje 15 poglavlja, 87 primjera, 90 zadataka, šest dodataka, 145 sati, 1.185 stabilnih ID-jeva, 789 jednadžbi i 17 JupyterLite ulaza. |
-| `python tools/audit_rendered_site.py _site` | **PASS** | HTML ima 24 stranice, 210 slika, 2.081 vezu, 472 sklopiva bloka i 11 preusmjerenja; kanonski Markdown nije javni resurs. |
-| `python tools/audit_pdf.py` | **PASS** | Nativni PDF ima 299 A4 stranica, 7.045.244 B i 536.983 tekstualno ekstrahirana znaka; metapodatci, kazalo, poglavlja i reprezentativni rasteri prolaze. |
+| `python tools/audit_rendered_site.py _site` | **PASS** | HTML ima 24 stranice, 210 slika, 1.916 veza, 420 sklopivih blokova i 11 preusmjerenja; kanonski Markdown nije javni resurs. |
+| `python tools/audit_pdf.py` | **PASS** | Nativni PDF ima 285 A4 stranica, 6.670.911 B i 507.553 tekstualno ekstrahirana znaka; metapodatci, kazalo, poglavlja i reprezentativni rasteri prolaze. |
 | `python tools/audit_jupyterlite.py _site/jlite` | **PASS**, 17 notebookova | Završni JupyterLite paket i Pyodide runtime strukturno su potpuni; preglednički kernel doseže stanje `Idle`. |
 | `npm run audit:viewports -- _site` | **PASS**, 72 prikaza + A4 | Provjerene su širine 320, 768 i 1.440 px, WCAG pravila, tipkovnica, overflow i zasebni A4 prikaz. |
+
+### Poznato ograničenje alata
+
+Quartoov trenutačni Pandoc/Typst izlaz pri trima pojavama standardnog LaTeX
+operatora `\otimes` rabi Typstov zastarjeli alias `times.circle`, umjesto
+njegove izravne zamjene `times.o`. Upozorenja ne mijenjaju znak, numeriranje,
+unakrsne veze ni sadržaj PDF-a, a izgradnja i PDF audit prolaze. Izvor ostaje
+na standardnoj i semantički ispravnoj oznaci tenzorskog produkta; zamjena se
+ne provodi lokalnim zaobilaznim rješenjem koje bi narušilo prenosivost izvora.
 
 ### Struktura numeričkih provjera
 
@@ -110,6 +119,11 @@ promjenom repozitorija:
   brodogradnje;
 - pilot s 8–12 stvarnih studenata provjerava izbor modela i pretpostavki prije
   algebre, uz cilj najmanje 80 % točnih izbora.
+
+Posebno se u stručnoj recenziji potvrđuje napredni dvofluidni model stabiliteta
+u javnom poglavlju U06: pretpostavke o ekvivalentnoj uzgonskoj masi, momentu
+vodne linije i valjanosti linearnoga nagiba moraju biti prihvaćene prije
+oznake `v1.0`.
 
 Nalazi se evidentiraju po stabilnim ID-jevima, ispravljaju i ponovno
 provjeravaju prije oznake `v1.0`.

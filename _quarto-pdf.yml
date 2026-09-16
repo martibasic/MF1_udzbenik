@@ -89,8 +89,6 @@ format:
       - assets/typst/mf1-author-blocks.typ
     keep-typ: false
 
-filters:
-  - filters/mf1-typst-author-blocks.lua
-
 execute:
   enabled: false
+  freeze: false

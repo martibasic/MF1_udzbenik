@@ -125,6 +125,12 @@ $$ {#eq-kompresibilni-tok-rijeseni-primjer-pitotova-sonda-u-brzom-strujanj-02}
 Nestlačivi izraz $p_0-p=\rho v^2/2$ više nije zadani model. **Granična provjera:** kada $Ma\to0$, binomni razvoj kompresibilne relacije vraća nestlačivu dinamičku tlačnu skalu.
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — valovi, mreža i vremenski korak</p>
+
+U stlačivom računu promjene tlaka prenose se konačnom brzinom zvuka, pa prostorna i vremenska razlučivost moraju pratiti valne pojave. Premekana diskretizacija može razmazati skokove i gubitak ukupnoga tlaka, a prevelik vremenski korak može dati prividno mirno, ali nefizikalno rješenje.
+:::
+
 ## Sapnica i prigušenje protoka {#sec-sapnica-prigusenje}
 
 Za stacionarni kvazijednodimenzijski tok vrijedi $\rho Av=\text{konst.}$, pa diferenciranjem
@@ -233,6 +239,16 @@ Poremećaj putuje konačnom brzinom zvuka. Da; snažno grijanje ili velika promj
 :::
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — gustoća, energija i Machov broj</p>
+
+Za stlačivi CFD istodobno se rješavaju očuvanje mase, količine gibanja i energije, pa se gustoća i temperatura mijenjaju zajedno s tlakom i brzinom. Izentropska sapnica i normalni udarni val daju referentne odnose za provjeru solvera, dok stvarni gubitci ukupnog tlaka, turbulencija i prijenos topline traže širi model.
+
+Za sapnicu se prate maseni protok, Machov broj, stagnacijske veličine i položaj mogućega vala. Rezidual energije ili lijep prikaz tlaka nije dovoljan ako se maseni protok mijenja s mrežom ili se skok ukupnoga tlaka ne slaže s referentnim odnosom.
+
+Diskretizacija val mora prikazati u konačnom broju ćelija, ali širina razmazanoga skoka ne smije se tumačiti kao fizička debljina udarnoga vala. Tražena razlučivost određuje se osjetljivošću masenoga protoka i tlačnih odnosa, ne samo oštrinom slike.
+:::
+
 ## Zadaci za vježbu {#sec-kompresibilni-zadaci}
 
 ::::: {.mf1-vjezbe-list}
@@ -335,16 +351,6 @@ $p_2/p_1=4{,}500$, $M_1=2{,}000\pm0{,}007$; teorijski $p_{02}/p_{01}=0{,}7209\pm
 
 :::::
 
-::: {.mf1-zavrsni-okvir}
-<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
-
-- Brzina zvuka mjeri termodinamičku krutost fluida i postavlja konačnu brzinu prijenosa informacije.
-- Machov broj je prvi filtar modela, ali ne zamjenjuje provjeru grijanja i ukupne promjene tlaka.
-- Izentropske stagnacijske relacije vrijede samo bez ireverzibilnih gubitaka.
-- Prigušenje ograničuje maseni protok; snižavanje nizvodnog tlaka nakon toga ne povećava protok.
-- Udarni val čuva masu, količinu gibanja i ukupnu entalpiju, ali povećava entropiju i smanjuje ukupni tlak.
-:::
-
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički pokus — od nestlačivog do prigušenog toka</p>
 
@@ -355,4 +361,14 @@ Notebook `u09_kompresibilna_sapnica.ipynb` uspoređuje nestlačivu i izentropsku
 <a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u09_kompresibilna_sapnica.ipynb" target="_blank" rel="noopener">Pričuvno: otvori u Colabu</a>
 <img class="mf1-interaktivno-qr" src="../assets/qr/u09_kompresibilna_sapnica_jlite.svg" alt="QR kod za numerički pokus kompresibilne sapnice u pregledniku"/>
 </div>
+:::
+
+::: {.mf1-zavrsni-okvir}
+<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
+
+- Brzina zvuka mjeri termodinamičku krutost fluida i postavlja konačnu brzinu prijenosa informacije.
+- Machov broj je prvi filtar modela, ali ne zamjenjuje provjeru grijanja i ukupne promjene tlaka.
+- Izentropske stagnacijske relacije vrijede samo bez ireverzibilnih gubitaka.
+- Prigušenje ograničuje maseni protok; snižavanje nizvodnog tlaka nakon toga ne povećava protok.
+- Udarni val čuva masu, količinu gibanja i ukupnu entalpiju, ali povećava entropiju i smanjuje ukupni tlak.
 :::

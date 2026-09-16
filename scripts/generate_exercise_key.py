@@ -1,4 +1,4 @@
-"""Generiraj tiskani kljuc naputaka i kontrolnih rezultata iz zadataka.
+"""Generiraj tiskani kljuc smjernica i kontrolnih rezultata iz zadataka.
 
 Web prikazuje isti rezultat tek nakon otvaranja sklopivog bloka. Typst skriva
 rezultat uz zadatak, a ovaj dodatak ga okuplja na jednome mjestu. Bez
@@ -44,7 +44,7 @@ TASK_LEVEL_RE = re.compile(
 TASK_ANCHOR_RE = re.compile(r"(?m)^.*\{#task-[A-Za-z0-9-]+\b[^}]*\}.*$")
 HINT_RE = re.compile(
     r"(?ms)^[ \t]*::: \{\.callout-(?:note|tip)[^\n]*data-hint-key=\"true\"[^\n]*\}\s*\n"
-    r"[ \t]*### Naputak\s*\n\s*(?P<hint>.*?)\n[ \t]*:::\s*$"
+    r"[ \t]*### (?:Naputak|Smjernica)\s*\n\s*(?P<hint>.*?)\n[ \t]*:::\s*$"
 )
 ANSWER_RE = re.compile(
     r"(?ms)^[ \t]*::: \{\.callout-(?:note|tip)[^\n]*data-answer-key=\"true\"[^\n]*\}\s*\n"
@@ -114,9 +114,9 @@ def build() -> str:
     lines = [
         "<!-- Generirano skriptom scripts/generate_exercise_key.py; ne uređivati ručno. -->",
         "",
-        "## Ključ naputaka i kontrolnih rezultata",
+        "## Ključ smjernica i kontrolnih rezultata",
         "",
-        "Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom tekstu. Ovaj dodatak sadrži naputke i kontrolne rezultate za tiskano izdanje. Ne zamjenjuje postupak: prije provjere treba zapisati model, pretpostavke, jedinice i barem jednu neovisnu fizikalnu provjeru. Otvoreni zadatci razina T3 i T4 mogu imati više prihvatljivih odgovora.",
+        "Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom tekstu. Ovaj dodatak sadrži sažete smjernice postupka i kontrolne rezultate za tiskano izdanje. Ne zamjenjuje cjelovito rješenje: provjera uključuje model, pretpostavke, jedinice i barem jednu neovisnu fizikalnu provjeru. Otvoreni zadatci razina T3 i T4 mogu imati više prihvatljivih odgovora.",
         "",
     ]
     seen: set[str] = set()
@@ -150,7 +150,7 @@ def build() -> str:
                     f"**Sažetak.** {prompt}",
                     "",
                     *(
-                        [f"**Naputak.** {hint}", ""]
+                        [f"**Smjernica postupka.** {hint}", ""]
                         if hint
                         else []
                     ),

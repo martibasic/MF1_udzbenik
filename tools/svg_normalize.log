@@ -1,7 +1,8 @@
-svg_normalize: 117 files scanned, 0 changed.
+svg_normalize: 143 files scanned, 0 would change.
 
   ok        u01_ch1_dvostruka_platforma_manometar.svg
   ok        u01_fig_gustoca_sr.svg
+  ok        u01_fig_kocnica_vozila.svg
   ok        u01_fig_most_podizanje.svg
   ok        u01_fig_presa_savijanje.svg
   ok        u01_fig_uvod_pregled.svg
@@ -14,12 +15,14 @@ svg_normalize: 117 files scanned, 0 changed.
   ok        u02_fig_kapilarni_uspon_etanol.svg
   ok        u02_fig_kinematicka_viskoznost.svg
   ok        u02_fig_klizni_lezaj.svg
+  ok        u02_fig_lezaj_temperatura.svg
   ok        u02_fig_uvod_pregled.svg
   ok        u02_val2_viskoznost_kapilarnost.svg
   ok        u02_val3_tlacni_skok_kapljica.svg
   ok        u02_vjezbe_skice.svg
   ok        u03_balans_tlaka_i_geff.svg
   ok        u03_ch1_zatvoreni_spremnik_ulje_ziva.svg
+  ok        u03_fig_balastni_tank.svg
   ok        u03_fig_pumpa_usis.svg
   ok        u03_fig_uvod_pregled.svg
   ok        u03_fig_vodotoranj_distribucija.svg
@@ -40,12 +43,14 @@ svg_normalize: 117 files scanned, 0 changed.
   ok        u05_ch1_pregrada_ulje_voda.svg
   ok        u05_fig_brodska_vrata_brane.svg
   ok        u05_fig_inspekcijski_poklopac.svg
+  ok        u05_fig_tri_sloja.svg
   ok        u05_fig_uvod_pregled.svg
   ok        u05_val1_pravokutna_zaklopka.svg
   ok        u05_val2_ukrute_stijenke.svg
   ok        u05_val3_kosi_poklopac.svg
   ok        u05_vjezbe_skice.svg
   ok        u06_ch1_poklopac_spojnica.svg
+  ok        u06_fig_plinski_jastuk.svg
   ok        u06_fig_uvod_pregled.svg
   ok        u06_fig_zaobljeni_poklopac_kotla.svg
   ok        u06_fig_zaobljeno_dno_jezerca.svg
@@ -54,6 +59,7 @@ svg_normalize: 117 files scanned, 0 changed.
   ok        u06_val3_cetvrtcilindricni_poklopac.svg
   ok        u06_vjezbe_skice.svg
   ok        u07_ch1_platforma_ulje_voda_ormar.svg
+  ok        u07_ch2_poplavljen_tank.svg
   ok        u07_fig_bocni_pomak.svg
   ok        u07_fig_ponton_nagib.svg
   ok        u07_fig_pumpno_kuciste.svg
@@ -63,6 +69,7 @@ svg_normalize: 117 files scanned, 0 changed.
   ok        u07_val3_dva_fluida_modul.svg
   ok        u07_vjezbe_skice.svg
   ok        u08_ch1_mijesajuci_spremnik.svg
+  ok        u08_fig_kinematika.svg
   ok        u08_fig_retencijski_bazen.svg
   ok        u08_fig_t_komad_hidraulika.svg
   ok        u08_fig_uvod_pregled.svg
@@ -73,7 +80,9 @@ svg_normalize: 117 files scanned, 0 changed.
   ok        u08_vjezbe_skice.svg
   ok        u09_ch1_bypass_sifon_suzenje_mlaz.svg
   ok        u09_egl_hgl_schema.svg
+  ok        u09_fig_difuzor.svg
   ok        u09_fig_propust_brana.svg
+  ok        u09_fig_uvod_kompresibilni_tok.svg
   ok        u09_fig_uvod_pregled.svg
   ok        u09_fig_venturijeva_cijev.svg
   ok        u09_val2_slobodni_mlaz.svg
@@ -84,6 +93,7 @@ svg_normalize: 117 files scanned, 0 changed.
   ok        u10_fig_crpka_usisni_tlak.svg
   ok        u10_fig_odvodnja_zgrade.svg
   ok        u10_fig_rashladni_cjevovod.svg
+  ok        u10_fig_starenje_cijevi.svg
   ok        u10_fig_uvod_pregled.svg
   ok        u10_val1_realni_bernoulli_gubici.svg
   ok        u10_val2_pitot_prandtl.svg
@@ -91,6 +101,7 @@ svg_normalize: 117 files scanned, 0 changed.
   ok        u10_vjezbe_skice.svg
   ok        u11_ch1_t_racva_konzola.svg
   ok        u11_ch2_y_racva_reakcija.svg
+  ok        u11_ch3_vodeni_udar.svg
   ok        u11_fig_rashladni_koljeno.svg
   ok        u11_fig_uvod_pregled.svg
   ok        u11_fig_vatrogasni_monitor.svg
@@ -101,15 +112,18 @@ svg_normalize: 117 files scanned, 0 changed.
   ok        u12_ch1_pokretna_zakrivljena_lopatica.svg
   ok        u12_ch2_pelton_rotor_moment.svg
   ok        u12_ch3_flyboard_potisak.svg
+  ok        u12_ch4_krivulja_snage.svg
   ok        u12_fig_hidromlazni_pogon.svg
   ok        u12_fig_pelton_lopatica.svg
   ok        u12_fig_relativni_dotok.svg
   ok        u12_fig_uvod_pregled.svg
+  ok        u12_fig_uvod_realni_tok.svg
   ok        u12_val1_vodilica_mlaza.svg
   ok        u12_val2_ukljestena_lopatica.svg
   ok        u12_val3_pokretna_lopatica.svg
   ok        u12_vjezbe_skice.svg
   ok        u13_ch1_serijsko_paralelna_mreza.svg
+  ok        u13_ch2_radna_tocka.svg
   ok        u13_fig_paralelne_grane_vodovod.svg
   ok        u13_fig_rashladni_cjevovod_peci.svg
   ok        u13_fig_uvod_pregled.svg
@@ -117,3 +131,15 @@ svg_normalize: 117 files scanned, 0 changed.
   ok        u13_val2_paralelne_grane.svg
   ok        u13_val3_servisni_ispust.svg
   ok        u13_vjezbe_skice.svg
+  ok        u14_ch1_kugla_struja.svg
+  ok        u14_fig_odluka.svg
+  ok        u14_fig_omjer_sila.svg
+  ok        u14_fig_pi_buckingham.svg
+  ok        u14_fig_uvod_pregled.svg
+  ok        u14_val1_reynolds_kanal.svg
+  ok        u14_val2_brod_bazen.svg
+  ok        u14_val3_venturi_kavitacija.svg
+  ok        u14_val4_kap_raspad.svg
+  ok        u14_val5_mach_strouhal.svg
+  ok        u14_vjezbe_skice.svg
+  ok        u15_fig_uvod_otvoreni_tok.svg

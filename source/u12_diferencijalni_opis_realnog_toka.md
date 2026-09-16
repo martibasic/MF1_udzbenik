@@ -67,6 +67,12 @@ $$ {#eq-navier-stokes-nestlacivi}
 Jednadžba [-@eq-navier-stokes-nestlacivi] pretpostavlja Newtonski fluid, konstantnu viskoznost i gustoću te odsutnost dodatnih konstitutivnih učinaka. Nenewtonovski fluid ne zahtijeva novi zakon količine gibanja, nego drukčiju vezu $\boldsymbol\tau(\mathbf D)$.
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — tlak i brzina u istom koraku</p>
+
+U nestlačivom CFD-u tlak i brzina ne određuju se nezavisno: tlak korigira brzinsko polje tako da se lokalno sačuva masa. Mali reziduali zato nisu dovoljni ako se protoci na granicama ne zatvaraju ili se rezultat mijenja pri usitnjavanju mreže.
+:::
+
 ## Rubni uvjeti i fizikalno zatvaranje problema {#sec-rubni-uvjeti}
 
 Jednadžbe bez rubnih i početnih uvjeta ne određuju jedinstveno polje. Na nepomičnoj nepropusnoj stijenci za viskozni tok vrijedi
@@ -121,6 +127,31 @@ Q=-\frac{\pi R^4}{8\mu}\frac{dp}{dx},
 $$ {#eq-hagen-poiseuille}
 
 Ovo je važan granični test cijelog modela gubitaka: pri laminarnom potpuno razvijenom toku pad tlaka raste **linearno** s $Q$. U Darcyjevu zapisu isti rezultat daje $\lambda=64/Re$; zato tvrdnja da su svi gubitci nužno proporcionalni $v^2$ nije točna.
+
+::: {.mf1-izvod}
+<p class="mf1-box-label">Izvod — od profila brzine do $\lambda=64/Re$</p>
+
+Protok slijedi iz integracije dobivenoga parabolnog profila po presjeku:
+
+$$
+Q=\int_0^R u(r)\,2\pi r\,dr
+=-\frac{\pi R^4}{8\mu}\frac{dp}{dx}.
+$$
+
+Uz $\bar u=Q/(\pi R^2)$ i $D=2R$ slijedi $\Delta p=-L\,dp/dx=32\mu L\bar u/D^2$ te $u_{max}=2\bar u$. Izjednačavanjem s Darcyjevim zapisom
+
+$$
+\Delta p=\lambda\frac{L}{D}\frac{\rho\bar u^2}{2}
+$$
+
+dobiva se
+
+$$
+\lambda=\frac{64\mu}{\rho\bar uD}=\frac{64}{Re}.
+$$
+
+Faktor $64$ zato nije empirijska konstanta, nego posljedica stacionarnog, potpuno razvijenog laminarnog toka Newtonskoga fluida u kružnoj cijevi. Izvan tih pretpostavki ovaj se rezultat ne prenosi bez provjere.
+:::
 
 ::: {#ex-laminarni-mikrokanal .mf1-we}
 <p class="mf1-box-label">P3. Pad tlaka u dijagnostičkom mikrokanalu <span class="mf1-level">T2</span></p>
@@ -233,6 +264,16 @@ Za vježbu su u `data/cfd/` pripremljeni Poiseuilleov analitički slučaj, sinte
 ### Odgovori
 Zbog konvektivnog ubrzanja. Potrebni su Newtonski fluid, konstantna viskoznost i nestlačivost. On daje točan laminarni granični slučaj $\Delta p\propto Q$. Promjena znaka označuje lokalni povratni tok i odvajanje. Rezidual mjeri zadovoljenje diskretiziranog sustava, ne prikladnost modela ni veličinu diskretizacijske pogreške.
 :::
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — lokalne jednadžbe</p>
+
+Navier–Stokesove jednadžbe iz ovoga poglavlja numerički se diskretiziraju po ćelijama, čvorovima ili funkcijskim bazama, ovisno o metodi. Provjera reziduala nije sama po sebi dokaz točnosti: prati se i očuvanje mase, mrežna konvergencija te osjetljivost rezultata na model turbulencije i rubne uvjete.
+
+Za svaku izlaznu veličinu, primjerice pad tlaka, silu, profil brzine ili položaj odvajanja, treba pokazati zasebnu konvergenciju. Mreža koja dobro daje ukupni protok može biti preslaba za smično naprezanje na stijenci ili za lokalni gradijent tlaka.
+
+Verifikacija pita rješava li diskretni model pravilno zadane jednadžbe, a validacija odgovara predstavlja li taj model stvarni sustav. Nijedna se od te dvije provjere ne može zamijeniti samo malim rezidualom.
 :::
 
 ## Zadaci za vježbu {#sec-realni-tok-zadaci}
@@ -349,17 +390,6 @@ $p\approx2{,}000$, $Q_{ext}\approx7{,}85398\cdot10^{-6}\ \text{m}^3/\text{s}$, $
 
 :::::
 
-::: {.mf1-zavrsni-okvir}
-<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
-
-- Materijalna derivacija povezuje Eulerov opis polja s ubrzanjem čestice.
-- Navier–Stokes je lokalna bilanca količine gibanja zatvorena konstitutivnim zakonom.
-- Analitička rješenja nastaju iz jasno navedenih simetrija i rubnih uvjeta.
-- Laminarni tok u cijevi daje $\Delta p\propto Q$ i zato je obvezan granični test.
-- Granični sloj prenosi utjecaj no-slip uvjeta; nepovoljan gradijent tlaka može izazvati odvajanje.
-- Turbulencijski model zatvara korelacije fluktuacija; numerička konvergencija i fizikalna validacija nisu isto.
-:::
-
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički pokus — profil, mreža i pogreška</p>
 
@@ -370,4 +400,15 @@ Notebook `u12_poiseuille_konvergencija.ipynb` numerički integrira brzinski prof
 <a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u12_poiseuille_konvergencija.ipynb" target="_blank" rel="noopener">Pričuvno: otvori u Colabu</a>
 <img class="mf1-interaktivno-qr" src="../assets/qr/u12_poiseuille_konvergencija_jlite.svg" alt="QR kod za Poiseuilleov pokus konvergencije u pregledniku"/>
 </div>
+:::
+
+::: {.mf1-zavrsni-okvir}
+<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
+
+- Materijalna derivacija povezuje Eulerov opis polja s ubrzanjem čestice.
+- Navier–Stokes je lokalna bilanca količine gibanja zatvorena konstitutivnim zakonom.
+- Analitička rješenja nastaju iz jasno navedenih simetrija i rubnih uvjeta.
+- Laminarni tok u cijevi daje $\Delta p\propto Q$ i zato je obvezan granični test.
+- Granični sloj prenosi utjecaj no-slip uvjeta; nepovoljan gradijent tlaka može izazvati odvajanje.
+- Turbulencijski model zatvara korelacije fluktuacija; numerička konvergencija i fizikalna validacija nisu isto.
 :::

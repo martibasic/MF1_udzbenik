@@ -99,6 +99,12 @@ $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-04}
 Relativna gustoća je bezdimenzijska veličina, a specifična težina ima jedinicu sile po volumenu. Razlikovanje $\rho$, $\gamma$ i $s_r$ nužno je pri proračunu hidrostatskoga tlaka i uzgona.
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — kontinuum prije mreže</p>
+
+U numeričkom modelu ćelija mreže ne predstavlja molekulu, nego prosječnu vrijednost polja u malom dijelu kontinuuma. Mreža mora biti dovoljno fina za gradijente tlaka i brzine koji određuju traženi rezultat, ali njezino usitnjavanje ne može popraviti pogrešan kontinuumski, stlačivi ili višefazni model.
+:::
+
 ## Pascalov zakon
 
 Pascalov zakon navodi da se promjena tlaka nametnuta zatvorenom fluidu u mirovanju prenosi neumanjena na sve dijelove fluida i na stijenke spremnika. Pri primjeni na sustav s dva klipa pretpostavljaju se kvazistatičko stanje, približno jednake visine klipova te zanemarivi gubici i stlačivost. Ako klipovi nisu na istoj visini, u analizu se uključuje hidrostatska razlika tlaka. U navedenim uvjetima vrijedi
@@ -213,6 +219,16 @@ p_x = p_y = p_z = p_n,
 $$ {#eq-svojstva-tlak-dublje-izotropnost-tlaka-cauchyjev-tetraedar-03}
 
 što znači da je tlak u jednoj točki mirujućeg fluida **neovisan o orijentaciji plohe** na kojoj se mjeri. Tlak je dakle skalarna veličina, što opravdava njegov zapis kao polje $p(x, y, z)$ koje će se koristiti u svim daljnjim poglavljima. I u fluidu koji se giba tlak ostaje skalarni, izotropni dio tenzora naprezanja; ukupno naprezanje tada uz tlak sadrži i viskozni, devijatorski dio, pa ukupna kontaktna sila općenito nije samo normalna na plohu.
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — tlak kao polje</p>
+
+U nestlačivom CFD-u tlak nije sila ni lokalna tablična vrijednost, nego polje koje u svakom vremenskom koraku spreže brzinu s očuvanjem mase. Pascalov zakon zato ostaje granični test: u mirujućem zatvorenom fluidu numeričko rješenje mora vratiti jednaku promjenu tlaka bez izmišljene disipacije ili promjene volumena.
+
+Za provjeru se zasebno prate promjena tlaka na više mjesta, ukupna masa u domeni i brzina koja u stanju mirovanja mora iščeznuti. Tek kada taj jednostavni slučaj prolazi, tlakni odziv ventila, klipa ili uskog kanala može se tumačiti kao posljedica strujanja, a ne kao numerički artefakt.
+
+Ručni omjer sila i površina pritom ne daje gubitke, elastičnost vodova ni vrijeme širenja tlačnoga poremećaja. Model treba proširiti čim je izlazna veličina brzina odziva, tlakni val ili područje moguće kavitacije.
 :::
 
 ## Riješeni primjeri
@@ -428,7 +444,6 @@ Ukupna idealizirana podizna sila veća je od sile na pumpnom klipu zbog veće uk
 ::: {#ex-u01-hidraulicna-kocnica-vozila-s-razdiobom-na-vise .mf1-we}
 <p class="mf1-box-label">P5. Hidraulična kočnica vozila s razdiobom na više kočnih cilindara &nbsp;<span class="mf1-level">T2</span></p>
 
-**Primjer za strojare**
 
 **Kontekst:** U hidrauličnom kočnom sustavu osobnog vozila operater pritiska kočnu papučicu, a poluga papučice mehanički povećava silu prije nego se ona prenese na klip glavnog kočnog cilindra. Tlak koji se u glavnom cilindru razvije isti se prenosi do **četiri** kočna cilindra (po jedan u svakom kotaču), ali kočna kliješta na prednjoj osovini imaju veći promjer od onih na stražnjoj. Time se s **jednim** ulazom (papučicom) dobivaju **četiri različite** kočne sile prilagođene podjeli kočne težine između prednje i stražnje osovine.
 
@@ -602,7 +617,6 @@ Primjenjuju se $p = F_1/A_1$, $F_2 = pA_2$ te volumna bilanca $A_1 s_1 = A_2 s_2
 $p \approx 292\ \text{kPa}$; $F_2 = 4{,}5\ \text{kN}$; $s_2 = 4{,}8\ \text{mm}$.
 :::
 ::::
-**Skica:** da - dva klipa spojena istim fluidom, kote $d_1$, $d_2$, $s_1$, $s_2$ i sile $F_1$, $F_2$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -623,7 +637,6 @@ Površina se određuje iz $A = \pi d^2/4$, tlak iz $p = F/A$, a sila na većem k
 $p \approx 210\ \text{kPa}$; $F_2 = 855\ \text{N}$.
 :::
 ::::
-**Skica:** da - dva kružna klipa različitih promjera u istoj hidrauličnoj grani.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -644,7 +657,6 @@ Primjenjuje se $F = pA$. Iz zahtijevane sile slijedi površina $A = F/p$, a prom
 $F \approx 5{,}1\ \text{kN}$; $d_{min} \approx 65\ \text{mm}$.
 :::
 ::::
-**Skica:** da - hidraulična stega s jednim radnim klipom i označenom silom stezanja.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -665,7 +677,6 @@ Teret se raspodjeljuje na dva cilindra. Iz $p = G/(2A_D)$ slijedi $F_p = pA_d$, 
 $p \approx 0{,}93\ \text{MPa}$; $F_p \approx 238\ \text{N}$; $n = 16$ hodova.
 :::
 ::::
-**Skica:** da - pumpni klip, dva radna cilindra i vertikalni pomak stola $\Delta z$.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -686,7 +697,6 @@ Tlak se određuje iz $p = F_p/A_d$, ukupno opterećenje iz $G = 2pA_D$, a ukupan
 $p \approx 856\ \text{kPa}$; $G \approx 26{,}3\ \text{kN}$; $s_p \approx 1{,}88\ \text{m}$.
 :::
 ::::
-**Skica:** da - pumpni klip, dva radna cilindra na istoj razini i nosiva platforma.
 
 [Razina: T3]{.mf1-task-level}
 
@@ -707,13 +717,22 @@ Površina $A_p$ i tlak određuju se iz $p = F_p/A_p$, idealno opterećenje iz $G
 $p \approx 947\ \text{kPa}$; $G \approx 27{,}0\ \text{kN}$; $s_p \approx 1{,}35\ \text{m}$. Nominalno je $G_{kor}\approx23{,}2\ \text{kN}$ i $s_{p,st}\approx1{,}50\ \text{m}$, a konzervativno $G_{kor,min}\approx22{,}1\ \text{kN}$ i $s_{p,st,max}\approx1{,}55\ \text{m}$. Oba zadana brojčana kriterija jesu zadovoljena, ali s malim rezervama, približno $0{,}1\ \text{kN}$ i $0{,}05\ \text{m}$; to nije potpuna provjera stroja ni odobrenje za puštanje u rad.
 :::
 ::::
-**Skica:** da - pumpni klip, tri jednaka radna cilindra i vertikalni pomak radnog stola.
 
 [Razina: T4]{.mf1-task-level}
 
 :::::
 
 ![Skice uz zadatke za vježbu — hidraulične preše, klipovi i radni cilindri (poglavlje 1).](../assets/print/u01_vjezbe_skice.svg){#fig-u01-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — hidraulične preše, klipovi i radni cilindri (poglavlje 1)."}
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerički most — tlačno polje i hidraulički sustav</p>
+
+**Gdje ovo živi u numerici.** Tlak je skalarno polje $p(x,y,z)$ koje u nestlačivom numeričkom modelu osigurava podudarnost brzinskog polja s očuvanjem mase. Pascalov zakon daje njegov mirni granični slučaj, a nije zamjena za jednadžbe strujanja.
+
+**Što numerički alat radi s tim.** Početni tlak može biti jednolik ili hidrostatski. Promjene na granici, primjerice pomak klipa, rad ventila ili ulaz crpke, spajaju tlak i brzinu kroz diskretizirane kontrolne volumene; pritom se mora kontrolirati masena bilanca i odabrati fizikalno dosljedna referenca tlaka.
+
+**Tipičan scenarij.** Prijenos sile samim Pascalovim zakonom najčešće je analitički rješiv. Numerički model postaje opravdan pri uskim kanalima, ventilima, prolaznim tlačnim valovima ili procjeni područja niskoga tlaka u kojima je moguća kavitacija. Tada lokalna polja tlaka i brzine više ne slijede iz jednoga omjera površina.
+:::
 
 ## Sažetak
 

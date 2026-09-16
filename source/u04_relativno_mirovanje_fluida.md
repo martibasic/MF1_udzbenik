@@ -26,6 +26,16 @@ gdje je $\Delta h$ razlika razina slobodne površine na krajevima spremnika.
 
 Za razliku od hidrostatike u mirujućem spremniku, tlak ne raste samo s okomitom dubinom. Smjer efektivnog polja sila određuje geometriju slobodne površine, lokalnu dubinu i raspodjelu tlaka.
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — gibanje spremnika</p>
+
+Numerički opis ubrzanoga ili rotirajućeg spremnika uvodi odgovarajuće neinercijske volumenske članove ili rješava gibanje u inercijskom okviru s pokretnom mrežom. Mirna slobodna površina u stalnom ubrzanju, odnosno paraboloid pri vrtnji krutoga tijela, ostaju provjerljivi referentni slučajevi prije proračuna prolaznih valova i zalijevanja stijenki.
+
+U toj se provjeri uspoređuju visina slobodne površine, tlak na stijenci i očuvani volumen, a ne samo izgled prikazane površine. Stacionarni rezultat pri zadanom ubrzanju može biti ispravan i kada nije prikladan za naglo pokretanje ili zaustavljanje spremnika.
+
+Za prolazni problem dodatno se prati vremenska konvergencija nagiba, sile na stijenci i eventualnoga prelijevanja. Potrebna duljina simulacije određuje se fizikalnim vremenom odziva, ne samo time što su reziduali pali ispod zadanog broja.
+:::
+
 ## Matematički izvod
 
 Promatra se spremnik koji se giba stalnim translatornim ubrzanjem $\vec a$ te sustav koordinata vezan uz spremnik. U tom neinercijskom sustavu mirujući fluid mora zadovoljavati ravnotežu između gradijenta tlaka, gravitacije i inercijskoga člana. Po jedinici volumena vrijedi
@@ -147,6 +157,12 @@ $$
 $$ {#eq-relativno-mirovanje-matematicki-izvod-volumno-ocuvanje-paraboloida-e-07}
 
 Prva se javlja pojava s manjom kritičnom kutnom brzinom. Budući da se uspoređuju $h_0$ i $H-h_0$, vrijedi: za $h_0<H/2$ prvo se ogoljava dno, za $h_0>H/2$ prvo nastupa prelijevanje, a za $h_0=H/2$ pragovi se podudaraju. Nakon prvoga praga mijenja se domena fluida ili volumen u spremniku, pa gornje formule za puni paraboloid više ne vrijede bez nove geometrijske bilance.
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — slobodna površina kao provjera</p>
+
+Ravnina slobodne površine pri stalnom ubrzanju i paraboloid pri stalnoj vrtnji poznata su rješenja koja se mogu usporediti s poljem iz simulacije. Time se odvojeno provjeravaju gravitacija, ubrzanje, tlak i geometrijsko praćenje površine prije modeliranja prolaznoga valjanja, prskanja ili punjenja spremnika.
 :::
 
 ## Riješeni primjeri
@@ -416,7 +432,7 @@ Interaktivni prikaz omogućuje mijenjanje kutne brzine $\omega$, polumjera sprem
 :::
 
 ::: {.callout-note}
-## Razrada koraka
+## Postupak rješenja
 Korak: $\partial p/\partial r = \rho\omega^2 r$ i $\partial p/\partial z = -\rho g$ $\;\Rightarrow\;$ $h(r) = h_C + \omega^2 r^2/(2g)$
 
 Na slobodnoj površini vrijedi $dp = 0$, pa:
@@ -503,7 +519,6 @@ Pri radnoj brzini vrtnje slobodna površina podigne se uz stijenku za oko $22{,}
 ::: {#ex-u04-nagib-goriva-u-spremniku-autocisterne-pri-kocenju .mf1-we}
 <p class="mf1-box-label">P5. Nagib goriva u spremniku autocisterne pri kočenju &nbsp;<span class="mf1-level">T2</span></p>
 
-**Primjer za strojare**
 
 **Kontekst:** Autocisterna za gorivo s pravokutnim spremnikom kočenjem usporava. Posuje li gorivo na gornji rubnik stijenke i hoće li se pumpa za pražnjenje na stražnjoj stijenci izložiti zraku?
 
@@ -647,7 +662,6 @@ $\Delta h = aL/g$; zatim $h_{str} = h_0 + \Delta h/2$ i $h_{pred} = h_0 - \Delta
 $\Delta h \approx 0{,}22\ \text{m}$; $h_{str} \approx 0{,}45\ \text{m}$, $h_{pred} \approx 0{,}23\ \text{m}$; nema prelijevanja jer je $h_{str} < H$.
 :::
 ::::
-**Skica:** da - pravokutni spremnik, vektor $a$, kosa slobodna ploha, kote $L$, $h_0$ i $H$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -668,7 +682,6 @@ u graničnom stanju vrijedi $h_{str} = H$ i $\Delta h = 2(H-h_0)$; nakon toga $a
 $a_{max} \approx 1{,}68\ \text{m/s}^2$.
 :::
 ::::
-**Skica:** da - spremnik s rubom prelijevanja, kosa slobodna ploha i kote $L$, $h_0$, $H$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -689,7 +702,6 @@ koristi efektivnu težinu fluida: $\Delta p = \rho (g+a_z)h$; za usporedbu u mir
 $\Delta p \approx 7{,}90\ \text{kPa}$; u mirovanju $\Delta p_0 \approx 6{,}40\ \text{kPa}$ — oko 23 % više.
 :::
 ::::
-**Skica:** da - vertikalni cilindar, smjer $a_z$, kote $h$ te tlakovi na vrhu i dnu.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -710,7 +722,6 @@ iz sile vrati lokalnu dubinu preko $F = \rho g b h_{str}^2/2$; zatim $h_{str} = 
 $h_{str} \approx 0{,}47\ \text{m}$; $a \approx 1{,}38\ \text{m/s}^2$.
 :::
 ::::
-**Skica:** da - spremnik, stražnja stijena s rezultantom $F$, slobodna ploha i vektor $a$.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -731,7 +742,6 @@ razlika razina je $\Delta h = \omega^2 R^2/(2g)$; uz očuvanje volumena vrijedi 
 $\Delta h \approx 0{,}12\ \text{m}$; $h_{rub} \approx 0{,}28\ \text{m}$, $h_{osa} \approx 0{,}16\ \text{m}$ — dno u osi ostaje pokriveno.
 :::
 ::::
-**Skica:** da - aksijalni presjek posude, parabolična slobodna ploha, kote $R$, $h_0$, $h_{rub}$ i $h_{osa}$.
 
 [Razina: T3]{.mf1-task-level}
 
@@ -752,13 +762,22 @@ u graničnom stanju vrijedi $h_{rub} = H = h_0 + \omega_{max}^2 R^2/(4g)$; za ra
 $\omega_{max} \approx 7{,}83\ \text{rad/s}$; pri $\omega = 0{,}80\,\omega_{max}$: $h_{osa} \approx 0{,}36\ \text{m}$, $h_{rub} \approx 0{,}56\ \text{m}$; $p_{M,osa} \approx 3{,}51\ \text{kPa}$, $p_{M,rub} \approx 5{,}52\ \text{kPa}$. U nepovoljnoj toleranciji stvarni je omjer $0{,}84$, pa je $h_{osa}\approx0{,}347\ \text{m}$, a $h_{rub}\approx0{,}573\ \text{m}$: nema prelijevanja, ali usis nije dovoljno prekriven. Iz uvjeta dubine slijedi $\alpha_{max}\approx0{,}790$; razumna je postavka $\alpha=0{,}78$ ili manja, koja zadržava mjerljivu rezervu.
 :::
 ::::
-**Skica:** da - aksijalni presjek cilindra, paraboloidna slobodna ploha, točke na osi i uz stijenu te kote $R$, $H$ i $h_0$.
 
 [Razina: T4]{.mf1-task-level}
 
 :::::
 
 ![Skice uz zadatke za vježbu — ubrzani i rotirajući spremnici s fluidom (poglavlje 4).](../assets/print/u04_vjezbe_skice.svg){#fig-u04-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — ubrzani i rotirajući spremnici s fluidom (poglavlje 4)."}
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerički most — rotirajuća domena i prolazni odziv</p>
+
+**Gdje ovo živi u numerici.** Promjena referentnog okvira temelj je modeliranja pumpa, ventilatora, turbina i centrifuga. U rotirajućem se okviru u jednadžbu količine gibanja uvode centrifugalni i Coriolisov član; u inercijskom okviru kretanje se može opisati pokretnom mrežom.
+
+**Što numerički alat radi s tim.** MRF daje stacionarnu aproksimaciju srednjega toka u rotirajućoj zoni. Klizajuća mreža ili drugi nestacionarni pristup potrebni su kada prolazak lopatica kraj nepokretnoga dijela, pulsacije ili akustika utječu na promatrani odziv.
+
+**Tipičan scenarij.** Paraboloid slobodne površine pri vrtnji krutoga tijela i ravna površina pri stalnom ubrzanju provjerljivi su referentni slučajevi. Tek nakon njih ima smisla tumačiti valove, zalijevanje stijenki, trodimenzijsku raspodjelu tlaka ili učinak promjene vremenskoga koraka i mreže.
+:::
 
 ## Sažetak
 

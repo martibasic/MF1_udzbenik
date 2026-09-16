@@ -5,6 +5,30 @@ pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
 ## Unreleased — tehnički spremno za `1.0-rc1`
 
+### Numeričke poveznice — 16. rujna 2026.
+
+- Numerički mostovi ponovno su prikazani u HTML-u i nativnom PDF-u. Kratki
+  numerički trag vraćen je u svih 15 javnih poglavlja kao izravna poveznica
+  između ručnoga fizikalnog modela, diskretizacije i odgovarajuće CFD provjere.
+- Numerički tragovi sada se u tijeku teksta prikazuju kao sadržajni blokovi s
+  vlastitom ljubičastom naslovnom bojom i lijevom vodilicom, jednako čitljivo
+  kao fizikalno značenje i inženjerski kontekst.
+- Svako od 15 javnih poglavlja sada ima dva proširena numerička traga: prvi je
+  uz ključni fizikalni model, a drugi sintetizira provjere, mjerodavne izlaze
+  i granicu ručnog modela na kraju poglavlja.
+- Prošireni numerički mostovi, provjere i pokusi ostaju nakon zadataka i
+  neposredno prije sažetka. Drugi numerički trag premješten je u teorijski
+  tijek, prije riješenih primjera odnosno zadataka, pa sažetak i dalje ostaje
+  posljednji sadržaj svakoga javnog poglavlja.
+- U primjerima su uklonjene oznake „Primjer za …”, a iz zadataka 60 internih
+  redaka „Skica: da …”; objedinjene skice za vježbu ostaju prikazane pri dnu
+  odgovarajućih poglavlja.
+- Revizija refaktora vratila je pune CFD mostove u U01–U04, pitanja prije
+  numeričkih pokusa u U05, izvod $\lambda=64/Re$ u U12 te fizikalni temelj
+  viskozne disipacije u U13. Dimenzijski izvod Darcyjeva oblika, energijske
+  crte i korekcija kinetičke energije ostali su u kanonskom sadržaju pa nisu
+  ponovno umetani.
+
 ### Urednička dorada — 9. rujna 2026.
 
 - Riješeni primjeri dobili su oznake P1, P2, … unutar svakog poglavlja.
@@ -20,11 +44,11 @@ pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
   naslov problema. Razina T1–T4 sitna je oznaka na kraju, desno; uklonjeno je
   miješanje popisne i odjeljačne numeracije. Ključ rezultata preuzima isti
   broj i naslov te provjerava redoslijed. Usklađene su i oznake na skicama.
-- Svih 15 kratkih napomena s naslovom „Numerički trag” (11 u javnom toku)
-  dobilo je opisne naslove i pristupačnije objašnjenje preko fizikalnog
-  sustava. Divergencija je objašnjena kao lokalno širenje ili sabijanje
-  fluida; uklonjeni su preuranjeni nazivi algoritama i neobjašnjeni stručni
-  izrazi. Uvod u CFD usklađen je s tim pristupom.
+- Svih 15 kratkih napomena s naslovom „Numerički trag” dobilo je opisne
+  naslove i pristupačnije objašnjenje preko fizikalnog sustava. Divergencija
+  je objašnjena kao lokalno širenje ili sabijanje fluida; uklonjeni su
+  preuranjeni nazivi algoritama i neobjašnjeni stručni izrazi. Uvod u CFD
+  usklađen je s tim pristupom.
 - Skraćene studentske upute i početna stranica: jasnije je odakle početi,
   kako koristiti razine T1–T4 te što se može ostaviti za dodatno čitanje.
   Uklonjena su ponavljanja u sažetku formula i tehnički detalji iz studentskog uvoda.

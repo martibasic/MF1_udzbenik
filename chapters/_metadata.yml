@@ -1,0 +1,5 @@
+filters:
+  - at: post-quarto
+    path: ../filters/mf1-editorial-normalization.lua
+  - at: post-quarto
+    path: ../filters/mf1-typst-author-blocks.lua

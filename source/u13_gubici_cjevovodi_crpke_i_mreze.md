@@ -38,6 +38,26 @@ uzima u obzir nejednolik profil. Za potpuno razvijen laminarni tok u kružnoj ci
 Energijska crta (EGL) prikazuje $H=p/(\rho g)+z+\alpha v^2/(2g)$, a piezometrijska crta (HGL) prikazuje $p/(\rho g)+z$. U dionici bez stroja EGL pada u smjeru toka za $h_w$; preko crpke skače naviše za $h_p$. Razmak EGL–HGL jednak je korigiranoj brzinskoj visini. Zato skica tih crta često otkrije pogrešan predznak prije računa.
 :::
 
+::: {.mf1-dublje}
+<p class="mf1-box-label">Fizikalni temelj — disipacija nije proizvoljan dodatak</p>
+
+Za stacionaran, nestlačiv Newtonski tok u kojem promatrani kontrolni volumen obuhvaća cijelo područje gubitka, lokalna viskozna disipacija po jedinici volumena jest
+
+$$
+\Phi=2\mu S_{ij}S_{ij}\geq0,
+\qquad
+S_{ij}=\frac12\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right).
+$$
+
+Kada se energetski tokovi na ulaznom i izlaznom presjeku vrednuju dosljedno, dio mehaničke energije označen s $h_w$ povezan je s tom nepovratnom pretvorbom:
+
+$$
+\rho gQh_w=\int_V\Phi\,dV.
+$$
+
+Zato je doprinos $h_w$ nenegativan, a u idealnom graničnom slučaju $\mu=0$ nestaje. U jednodimenzijskom računu Darcyjev i lokalni koeficijent gubitka sažimaju ovaj učinak; u RANS proračunu dio prijenosa i disipacije predstavlja turbulencijski model. Ta interpretacija ne uklanja potrebu za mrežnom konvergencijom, validacijom i fizikalno odgovarajućim rubnim uvjetima.
+:::
+
 ![U realnom toku energijska crta pada zbog linijskih i lokalnih gubitaka; lokalni element daje nagliji pad.](../assets/print/u10_fig_uvod_pregled.svg){#fig-energijska-crta-gubitci fig-align="center" fig-alt="U realnom toku energijska crta pada zbog linijskih i lokalnih gubitaka; lokalni element daje nagliji pad."}
 
 ::: {.mf1-granica-modela}
@@ -150,6 +170,12 @@ Prije pokretanja predvidi kako promjena $Re$ i $\varepsilon/D$ pomiče $\lambda$
 <a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u10_moody_dijagram.ipynb" target="_blank" rel="noopener">Pričuvno: Google Colab</a>
 <img class="mf1-interaktivno-qr" src="../assets/qr/u10_moody_dijagram.svg" alt="QR kod za numerički pokus s Moodyjevim dijagramom"/>
 </div>
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — lokalni gubitak kao model</p>
+
+Koeficijent lokalnoga gubitka sažima djelovanje ventila, koljena ili grananja u jednodimenzijskoj mreži. CFD može odrediti pad tlaka za točno zadanu lokalnu geometriju, ali taj rezultat postaje prenosiv koeficijent tek uz isti režim, hrapavost, rubne uvjete i dokazanu mrežnu konvergenciju.
 :::
 
 ## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
@@ -280,6 +306,16 @@ Proizvođač određuje potrebni $NPSH_r(Q,n)$ prema deklariranom kriteriju i isp
 <p class="mf1-box-label">Granica modela — što $NPSH_a$ ne jamči</p>
 
 $NPSH_a$ opisuje sustav do dogovorenoga usisnog presjeka. Ne zamjenjuje proizvođačevu krivulju $NPSH_r$, ne opisuje lokalne mjehuriće u svakoj točki impelera i nije samostalna potvrda sigurnosti. Tlak pare mora odgovarati temperaturi i sastavu stvarnog fluida, a atmosferski tlak nadmorskoj visini i radnom stanju.
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — od mreže do lokalne geometrije</p>
+
+Mrežni proračun zatvara kontinuitet u čvorovima i energijsku bilancu po putovima, dok se CFD primjenjuje na lokalne dijelove za koje je koeficijent lokalnoga gubitka nepouzdan. Izračun lokalnoga strujanja može dati novu procjenu toga koeficijenta, ali tek nakon provjere očuvanja mase, mrežne konvergencije i usporedbe s prikladnim referentnim slučajem.
+
+Pouzdan radni slijed je od cijele mreže prema lokalnoj geometriji i natrag: mrežni model daje protok i radnu točku, lokalni proračun daje otpor elementa, a ažurirani koeficijent vraća se u mrežu. Tako se ne zamjenjuje jeftina sistemska bilanca skupim trodimenzijskim proračunom cijele instalacije bez jasne koristi.
+
+Pri usisu crpke ili pojavi kavitacije samo predviđanje tlaka nije dovoljno za odluku. Treba provjeriti apsolutnu tlačnu rezervu, temperaturu, model promjene faze i osjetljivost rezultata na rubni uvjet na usisu.
 :::
 
 ## Riješeni primjeri {#sec-u13-rijeseni-primjeri}
@@ -528,8 +564,6 @@ $$ {#eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-04}
 **Neovisna provjera:** izravni zapis [-@eq-npsha-spremnik] daje $10{,}296-2{,}600-1{,}453-0{,}239=6{,}00\ \mathrm{m}$. Rezultat je raspoloživa vrijednost sustava, a ne presuda o kavitaciji. Za zaključak treba $NPSH_r$ pri istom protoku i brzini te kriterij margine proizvođača.
 :::
 
-## Provjeri sebe {#sec-u13-samoprovjera}
-
 ::: {.mf1-samoprovjera}
 <p class="mf1-box-label">Konceptualna provjera</p>
 
@@ -690,7 +724,13 @@ Prigušeno: $q=19{,}12\ \mathrm{L/s}$, $H=19{,}62\ \mathrm{m}$ i $P_{el}=5{,}11\
 
 :::::
 
-## Za ponijeti {#sec-u13-zakljucak}
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerički most — mrežni model prije 3D CFD-a</p>
+
+Jednodimenzijski mrežni solver iterira $\lambda(Re,\varepsilon/D)$ i protoke dok ne zatvori kontinuitet u svakom čvoru i energijsku bilancu po nezavisnim putovima. To je pravi alat za cijelu instalaciju. CFD se zatim primjenjuje na lokalnu geometriju za koju je tablični $\xi$ nepouzdan — primjerice razdjelnik, kratki difuzor ili ulaz u crpku. Rezultat CFD-a može se svesti na $\xi$ i vratiti u mrežni model, ali tek nakon provjere očuvanja mase, mrežne konvergencije i usporedbe s odgovarajućim referentnim slučajem. Viša razlučivost ne popravlja pogrešno zadanu hrapavost, rubni uvjet ili geometriju.
+:::
+
+## Sažetak {#sec-u13-zakljucak}
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Sažeta mapa modela</p>
@@ -704,10 +744,4 @@ Prigušeno: $q=19{,}12\ \mathrm{L/s}$, $H=19{,}62\ \mathrm{m}$ i $P_{el}=5{,}11\
 7. Na usisu koristi apsolutni tlak i usporedi $NPSH_a$ s odgovarajućim $NPSH_r$ i kriterijem proizvođača.
 
 Najbrža provjera rezultata jest kombinacija četiri pitanja: jesu li svi gubitci pozitivni, zatvara li se bilanca protoka, vraća li zbroj gubitaka raspoloživu visinu i je li promjena radne točke fizikalno u očekivanom smjeru?
-:::
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most — mrežni model prije 3D CFD-a</p>
-
-Jednodimenzijski mrežni solver iterira $\lambda(Re,\varepsilon/D)$ i protoke dok ne zatvori kontinuitet u svakom čvoru i energijsku bilancu po nezavisnim putovima. To je pravi alat za cijelu instalaciju. CFD se zatim primjenjuje na lokalnu geometriju za koju je tablični $\xi$ nepouzdan — primjerice razdjelnik, kratki difuzor ili ulaz u crpku. Rezultat CFD-a može se svesti na $\xi$ i vratiti u mrežni model, ali tek nakon provjere očuvanja mase, mrežne konvergencije i usporedbe s odgovarajućim referentnim slučajem. Viša razlučivost ne popravlja pogrešno zadanu hrapavost, rubni uvjet ili geometriju.
 :::

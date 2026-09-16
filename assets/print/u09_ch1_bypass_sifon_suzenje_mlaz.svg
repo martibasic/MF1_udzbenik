@@ -1,32 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 620" role="img" aria-labelledby="u09c1bss_title u09c1bss_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:1100px;height:auto;">
-  <title id="u09c1bss_title">Idealni bypass-sifon sa suzenjem u vrhu i mlaznim ispustom</title>
-  <desc id="u09c1bss_desc">Lijevo: bazen A na visini 4,2 m, sifonska cijev D=100 mm prelazi preko ruba na vrh C (1,5 m iznad A) sa suzenjem d_C=80 mm, spusta se do vodoravnog izlaza B na visini 1,4 m, te mlaz pada parabolicno do tla na vodoravnoj udaljenosti 3,96 m. Desno: pet koraka rjesenja - Bernoulli A-B, kontinuitet, Bernoulli A-C, sigurnost do pare i domet mlaza.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 620" role="img" aria-labelledby="u09c1bssm_u09c1bss_title u09c1bssm_u09c1bss_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:1100px;height:auto;">
+  <title id="u09c1bssm_u09c1bss_title">Idealni bypass-sifon sa suzenjem u vrhu i mlaznim ispustom</title>
+  <desc id="u09c1bssm_u09c1bss_desc">Lijevo: bazen A na visini 4,2 m, sifonska cijev D=100 mm prelazi preko ruba na vrh C (1,5 m iznad A) sa suzenjem d_C=80 mm, spusta se do vodoravnog izlaza B na visini 1,4 m, te mlaz pada parabolicno do tla na vodoravnoj udaljenosti 3,96 m. Desno: pet koraka rjesenja - Bernoulli A-B, kontinuitet, Bernoulli A-C, sigurnost do pare i domet mlaza.</desc>
 
   <defs>
-    <linearGradient id="u09c1bss_voda" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u09c1bssm_u09c1bss_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#aed6f1" />
       <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <pattern id="u09c1bss_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u09c1bssm_u09c1bss_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-    <pattern id="u09c1bss_ground" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="u09c1bssm_u09c1bss_ground" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="9" stroke="#7a8a96" stroke-width="1.3" />
     </pattern>
     <!-- Brzina protoka (zelena) -->
-    <marker id="u09c1bss_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+    <marker id="u09c1bssm_u09c1bss_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
     <!-- Tlak / mlaz (plava) -->
-    <marker id="u09c1bss_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+    <marker id="u09c1bssm_u09c1bss_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
       <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
     <!-- Kote (smedja) -->
-    <marker id="u09c1bss_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+    <marker id="u09c1bssm_u09c1bss_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u09c1bss_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+    <marker id="u09c1bssm_u09c1bss_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
@@ -48,18 +48,18 @@
 
   <!-- Tlo -->
   <line x1="40" y1="530" x2="790" y2="530" stroke="#3a4a56" stroke-width="2" />
-  <rect x="40" y="530" width="750" height="14" fill="url(#u09c1bss_ground)" />
+  <rect x="40" y="530" width="750" height="14" fill="url(#u09c1bssm_u09c1bss_ground)" />
   <!-- ===== Bazen A =====
        Bazen unutar: x=110..250, voda y=295..530
   ============================================== -->
-  <rect x="110" y="295" width="140" height="235" fill="url(#u09c1bss_voda)" />
-  <rect x="94" y="225" width="16" height="305" fill="url(#u09c1bss_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="250" y="225" width="16" height="305" fill="url(#u09c1bss_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <rect x="110" y="295" width="140" height="235" fill="url(#u09c1bssm_u09c1bss_voda)" />
+  <rect x="94" y="225" width="16" height="305" fill="url(#u09c1bssm_u09c1bss_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+  <rect x="250" y="225" width="16" height="305" fill="url(#u09c1bssm_u09c1bss_hatch)" stroke="#3a4a56" stroke-width="1.3" />
   <line x1="110" y1="295" x2="250" y2="295" stroke="#1565c0" stroke-width="2.2" />
   <circle cx="180" cy="295" r="4.5" fill="#c0392b" />
   <!-- p_atm strelice -->
-  <line x1="140" y1="258" x2="140" y2="291" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09c1bss_aB)" />
-  <line x1="220" y1="258" x2="220" y2="291" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09c1bss_aB)" />
+  <line x1="140" y1="258" x2="140" y2="291" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09c1bssm_u09c1bss_aB)" />
+  <line x1="220" y1="258" x2="220" y2="291" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09c1bssm_u09c1bss_aB)" />
   <!-- voda oznake -->
   <!-- ===== SIFONSKA CIJEV =====
        Centerline tocke:
@@ -92,16 +92,16 @@
   <rect x="250" y="506" width="16" height="4" fill="#3a4a56" />
 
   <!-- Strelice smjera strujanja (zelene) -->
-  <line x1="278" y1="430" x2="282" y2="398" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bss_aG)" />
-  <line x1="312" y1="340" x2="322" y2="310" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bss_aG)" />
-  <line x1="380" y1="234" x2="406" y2="222" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bss_aG)" />
+  <line x1="278" y1="430" x2="282" y2="398" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
+  <line x1="312" y1="340" x2="322" y2="310" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
+  <line x1="380" y1="234" x2="406" y2="222" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
   <!-- Preko suzenja - vidno duza (veca brzina v_C) -->
-  <line x1="458" y1="211" x2="492" y2="211" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u09c1bss_aG)" />
+  <line x1="458" y1="211" x2="492" y2="211" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
   <!-- Silazni krak -->
-  <line x1="578" y1="266" x2="592" y2="296" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bss_aG)" />
-  <line x1="610" y1="370" x2="612" y2="402" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bss_aG)" />
+  <line x1="578" y1="266" x2="592" y2="296" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
+  <line x1="610" y1="370" x2="612" y2="402" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
   <!-- Izlaz vodoravan -->
-  <line x1="625" y1="452" x2="672" y2="452" stroke="#1e8449" stroke-width="2.8" marker-end="url(#u09c1bss_aG)" />
+  <line x1="625" y1="452" x2="672" y2="452" stroke="#1e8449" stroke-width="2.8" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
 
   <!-- ===== Tocke C, B ===== -->
   <circle cx="475" cy="211" r="4.5" fill="#c0392b" />
@@ -128,7 +128,7 @@
   <polyline points="680,452 702,455 724,463 747,477 769,496 791,520 799,530" fill="none" stroke="#1565c0" stroke-width="2.6" stroke-dasharray="7,4" />
 
   <!-- Strelica smjera mlaza (tangencijalna) -->
-  <line x1="745" y1="476" x2="765" y2="492" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u09c1bss_aB)" />
+  <line x1="745" y1="476" x2="765" y2="492" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u09c1bssm_u09c1bss_aB)" />
 
   <!-- Tocka pada mlaza -->
   <circle cx="799" cy="530" r="4.5" fill="#1565c0" />
@@ -173,19 +173,19 @@
   <rect x="820" y="564" width="296" height="38" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
   <line x1="94" y1="295" x2="60" y2="295" stroke="#b7600c" stroke-width="0.7" />
   <line x1="94" y1="530" x2="60" y2="530" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="64" y1="298" x2="64" y2="527" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bss_aDimL)" marker-end="url(#u09c1bss_aDim)" />
-  <line x1="400" y1="211" x2="400" y2="295" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bss_aDimL)" marker-end="url(#u09c1bss_aDim)" />
+  <line x1="64" y1="298" x2="64" y2="527" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bssm_u09c1bss_aDimL)" marker-end="url(#u09c1bssm_u09c1bss_aDim)" />
+  <line x1="400" y1="211" x2="400" y2="295" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bssm_u09c1bss_aDimL)" marker-end="url(#u09c1bssm_u09c1bss_aDim)" />
   <line x1="400" y1="211" x2="440" y2="211" stroke="#b7600c" stroke-width="0.7" />
   <line x1="545" y1="295" x2="605" y2="295" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
   <line x1="545" y1="452" x2="615" y2="452" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="555" y1="298" x2="555" y2="449" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bss_aDimL)" marker-end="url(#u09c1bss_aDim)" />
+  <line x1="555" y1="298" x2="555" y2="449" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bssm_u09c1bss_aDimL)" marker-end="url(#u09c1bssm_u09c1bss_aDim)" />
   <line x1="625" y1="452" x2="625" y2="530" stroke="#b7600c" stroke-width="0" />
   <line x1="615" y1="452" x2="638" y2="452" stroke="#b7600c" stroke-width="0.7" />
   <line x1="615" y1="530" x2="638" y2="530" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="635" y1="455" x2="635" y2="527" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bss_aDimL)" marker-end="url(#u09c1bss_aDim)" />
+  <line x1="635" y1="455" x2="635" y2="527" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bssm_u09c1bss_aDimL)" marker-end="url(#u09c1bssm_u09c1bss_aDim)" />
   <line x1="680" y1="530" x2="680" y2="586" stroke="#b7600c" stroke-width="0.7" />
   <line x1="799" y1="530" x2="799" y2="586" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="683" y1="580" x2="796" y2="580" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bss_aDimL)" marker-end="url(#u09c1bss_aDim)" />
+  <line x1="683" y1="580" x2="796" y2="580" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bssm_u09c1bss_aDimL)" marker-end="url(#u09c1bssm_u09c1bss_aDim)" />
   <rect x="820" y="258" width="6" height="110" rx="3" fill="#b7600c" />
   <text x="50" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Shema sifona s parabolicnim mlazom</text>
   <text x="50" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">vertikalna skala 1 m ≈ 56 px  ·  vodoravna skala mlaza 1 m ≈ 30 px</text>

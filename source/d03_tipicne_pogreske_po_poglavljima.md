@@ -36,23 +36,23 @@ Ovaj dodatak nije pasivni prilog, nego radni sloj za provjeru modela prije raču
 | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Turbostrojevi i propulzija</span></span> | <span class="mf1-signal-chip">c / w / u</span> <span class="mf1-signal-chip">M / P / F_p</span> | Korištenje apsolutne brzine gdje treba relativna; zamjena relativnog dotoka jedne lopatice punim sapničkim protokom rotora; poistovjećivanje maksimuma sile s maksimumom snage ili idealnog potiska s certificiranom nosivošću. | Potrebno je jasno odabrati nepomični ili gibajući kontrolni volumen, razlikovati $\vec c$, $\vec w$ i $\vec u$, utvrditi obrađuje li se jedna lopatica ili cijelo kolo te odvojiti hidraulički izlaz od mehaničkih, električnih i konstrukcijskih provjera. |
 | <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 15</span><span class="mf1-ch-title">Otvoreni tokovi</span></span> | <span class="mf1-signal-chip">Fr / D_h</span> <span class="mf1-signal-chip">E / M</span> <span class="mf1-signal-chip">n</span> | Zamjena hidrauličke dubine hidrauličkim promjerom; uporaba energijske bilance bez gubitaka kroz hidraulički skok; tretiranje Manningova $n$ kao svojstva fluida. | Potrebno je odrediti $A$, širinu slobodne površine i omočen opseg, razlikovati energijsku od količinske funkcije te Manningov koeficijent vezati uz izvor, stanje kanala i područje valjanosti. |
 
-## Kako koristiti ovu tablicu bez lutanja
+## Namjena tablice
 
-Najkorisnija je u tri trenutka:
+Tablica služi provjeri modela, računa i tumačenja rezultata u tri faze rješavanja:
 
-1. prije početka zadatka, da potvrdiš da si u pravom modelu
-2. usred računa, kad broj ili predznak počnu izgledati šumnjivo
-3. na kraju, kao kratka samoprovjera prije zaključivanja rješenja
+1. prije postavljanja početne jednadžbe, radi odabira odgovarajućeg modela;
+2. tijekom računa, kada broj ili predznak odstupaju od očekivanoga reda veličine;
+3. pri tumačenju rezultata, kao provjera fizikalnog smisla i granica modela.
 
-Ako se rezultat raspadne već na ovoj tablici, bolje je vratiti se na početnu skicu nego produžavati algebarski lanac.
+Nesklad s ovim kriterijima upućuje na potrebu ponovnoga razmatranja skice, geometrije, referentnih veličina i pretpostavki prije nastavka algebarskog postupka.
 
-## Brza završna provjera prije predaje rješenja
+## Kriteriji provjere rješenja
 
 ::: {.mf1-decision-grid}
 ::: {.mf1-decision-step}
 <span class="mf1-step-index">1</span>
 
-<p class="mf1-box-label">Provjeri model</p>
+<p class="mf1-box-label">Model i pretpostavke</p>
 
 Hidrostatika nije Bernoulli, a cjevovod nije samo jedan Darcy-Weisbachov zapis bez geometrije i režima strujanja.
 :::
@@ -60,7 +60,7 @@ Hidrostatika nije Bernoulli, a cjevovod nije samo jedan Darcy-Weisbachov zapis b
 ::: {.mf1-decision-step}
 <span class="mf1-step-index">2</span>
 
-<p class="mf1-box-label">Provjeri što je zadano</p>
+<p class="mf1-box-label">Zadane veličine</p>
 
 Velik broj pogrešaka nastaje jer se miješaju tlak i sila, maseni i volumenski protok ili apsolutni i manometarski tlak.
 :::
@@ -68,7 +68,7 @@ Velik broj pogrešaka nastaje jer se miješaju tlak i sila, maseni i volumenski 
 ::: {.mf1-decision-step}
 <span class="mf1-step-index">3</span>
 
-<p class="mf1-box-label">Provjeri smjer i geometriju</p>
+<p class="mf1-box-label">Smjer i geometrija</p>
 
 Predznači, projekcije, vektorske komponente, istisnuti volumen i odabir točaka često odlučuju više od same numerike.
 :::
@@ -76,7 +76,7 @@ Predznači, projekcije, vektorske komponente, istisnuti volumen i odabir točaka
 ::: {.mf1-decision-step}
 <span class="mf1-step-index">4</span>
 
-<p class="mf1-box-label">Tek onda vjeruj rezultatu</p>
+<p class="mf1-box-label">Fizikalni smisao rezultata</p>
 
 Ako broj nema fizikalni smisao, uredna algebra ne spašava pogrešan model.
 :::
@@ -85,7 +85,7 @@ Ako broj nema fizikalni smisao, uredna algebra ne spašava pogrešan model.
 ::: {.mf1-warning}
 <p class="mf1-box-label">Najčešća pogreška</p>
 
-Najčešća završna pogreška jest preskočiti samoprovjeru zato što račun "izgleda uredno". U MF1 uredan broj bez fizikalnog smisla obično znači da je model, geometrija ili referentni tlak bio krivo postavljen mnogo prije zadnjeg retka.
+Najčešća završna pogreška nastaje kada se račun prihvati samo zato što je algebra uredna. Broj bez fizikalnog smisla obično pokazuje da su model, geometrija ili referentni tlak pogrešno postavljeni prije završnog retka.
 :::
 
 ::: {.mf1-mini-summary}

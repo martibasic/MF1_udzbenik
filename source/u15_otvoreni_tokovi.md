@@ -60,6 +60,12 @@ $$ {#eq-otvoreni-tokovi-rijeseni-primjer-rezim-u-retencijskom-kanalu-t1-02}
 Tok je miran i promjena nizvodnog vodostaja može utjecati uzvodno. **Provjera:** $Fr$ je bezdimenzijski, a $v<c=2{,}80\ \text{m/s}$.
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — izbor modela slobodne površine</p>
+
+Jednadžbe plitke vode prikladne su kada je vertikalna struktura toka sporedna prema promjeni dubine i protoka. Trodimenzijski višefazni model potreban je kada lokalna geometrija, zakrivljenost površine, prskanje ili miješanje zraka mijenjaju traženu veličinu, uz znatno veći zahtjev za mrežom i vremenskim korakom.
+:::
+
 ## Specifična energija i kritična dubina {#sec-specificna-energija}
 
 Za blag nagib, približno hidrostatičku raspodjelu i korekcijski faktor kinetičke energije $\alpha\approx1$, energijska visina u odnosu na dno jest
@@ -203,13 +209,13 @@ $$ {#eq-otvoreni-tokovi-rijeseni-primjer-osjetljivost-klimatskog-kanala-01}
 Ako vegetacija i nanos povećaju $n$ na $0{,}025$, ista geometrija i nagib daju $Q=2{,}70\ \text{m}^3/\text{s}$. **Interpretacija:** kapacitet je pao 40 %, ali brojke nisu projektna jamstva bez lokalno kalibriranog $n$ i sigurnosne analize.
 :::
 
-## Radni ritual otvorenog toka {#sec-otvoreni-tok-ritual}
+## Postupak analize otvorenog toka {#sec-otvoreni-tok-ritual}
 
-1. Nacrtaj dno, slobodnu površinu, presjek i smjer toka.
-2. Odredi $A$, $T$, $P$, $D_h$ i $R_h$; ne zamjenjuj njihove uloge.
-3. Izračunaj $v$ i $Fr$ prije odabira uzvodnog ili nizvodnog rubnog uvjeta.
-4. Za glatku promjenu koristi energiju; za skok koristi količinu gibanja i zatim izračunaj gubitak energije.
-5. Empirijske koeficijente navedi s izvorom, rasponom i osjetljivošću rezultata.
+1. Skica obuhvaća dno, slobodnu površinu, presjek i smjer toka.
+2. Određuju se $A$, $T$, $P$, $D_h$ i $R_h$, uz razdvajanje njihovih fizikalnih uloga.
+3. Srednja brzina $v$ i $Fr$ određuju se prije izbora uzvodnog ili nizvodnog rubnog uvjeta.
+4. Za glatku promjenu primjenjuje se energijska bilanca, a za hidraulički skok bilanca količine gibanja i gubitak energije.
+5. Empirijski koeficijenti navode se s izvorom, rasponom valjanosti i analizom osjetljivosti rezultata.
 
 ::: {.mf1-samoprovjera}
 <p class="mf1-box-label">Provjeri sebe</p>
@@ -223,6 +229,16 @@ Ako vegetacija i nanos povećaju $n$ na $0{,}025$, ista geometrija i nagib daju 
 ### Odgovori
 Brzina uzvodnog gravitacijskog vala tada nadmašuje srednju brzinu toka. U minimumu je $dE/dy=0$, što vodi na $Fr=1$. Skok je snažno ireverzibilan i disipira energiju, dok bilanca količine gibanja ostaje odgovarajući integralni zakon. Nije; $n$ je empirijski opis cijelog stanja kanala i mora biti lokalno opravdan.
 :::
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — slobodna površina i hidraulički skok</p>
+
+Jednadžbe plitke vode diskretiziraju očuvanje mase i količine gibanja kada je vertikalna struktura toka sekundarna. Za složenu trodimenzijsku geometriju, izraženu zakrivljenost slobodne površine ili miješanje zraka uvodi se višefazni CFD, uz provjeru volumne bilance, konvergencije mreže i osjetljivosti na vremenski korak.
+
+Za proračun kanala prate se vodostaj, protok, Froudeov broj i energijska ili količinska bilanca na istim presjecima kao u ručnom modelu. U području hidrauličkoga skoka skok se mora očuvati preko diskretnoga prijelaza, dok se pad energije tumači kao fizikalna disipacija, a ne samo kao brojčana pogreška.
+
+Višefazni model dodatno traži provjeru očuvanja vode i zraka te osjetljivosti položaja slobodne površine na vremenski korak. Izgled uvjerljive površine nije dovoljan ako se mijenja volumni debalans ili maksimalna dubina koja je projektna izlazna veličina.
 :::
 
 ## Zadaci za vježbu {#sec-otvoreni-tok-zadaci}
@@ -347,16 +363,6 @@ Za A/B/C kapaciteti pri $y=1{,}20\ \text{m}$ iznose $11{,}759/8{,}141/6{,}047\ \
 
 :::::
 
-::: {.mf1-zavrsni-okvir}
-<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
-
-- Slobodna površina uvodi gravitacijske valove i hidrauličku dubinu kao novu karakterističnu skalu.
-- $Fr$ određuje smjer prijenosa informacije; $Fr=1$ označuje kritični presjek u plitkovodnom modelu.
-- Pri zadanom protoku kritična dubina minimizira specifičnu energiju.
-- Hidraulički skok zatvara se količinom gibanja i pritom disipira energiju.
-- Empirijski koeficijent hrapavosti mora imati izvor, raspon i analizu osjetljivosti.
-:::
-
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički pokus — grane energije i hidraulički skok</p>
 
@@ -367,4 +373,14 @@ Notebook `u15_otvoreni_tokovi.ipynb` rješava nelinearnu jednadžbu alternativni
 <a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u15_otvoreni_tokovi.ipynb" target="_blank" rel="noopener">Pričuvno: otvori u Colabu</a>
 <img class="mf1-interaktivno-qr" src="../assets/qr/u15_otvoreni_tokovi_jlite.svg" alt="QR kod za pokus otvorenih tokova u pregledniku"/>
 </div>
+:::
+
+::: {.mf1-zavrsni-okvir}
+<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
+
+- Slobodna površina uvodi gravitacijske valove i hidrauličku dubinu kao novu karakterističnu skalu.
+- $Fr$ određuje smjer prijenosa informacije; $Fr=1$ označuje kritični presjek u plitkovodnom modelu.
+- Pri zadanom protoku kritična dubina minimizira specifičnu energiju.
+- Hidraulički skok zatvara se količinom gibanja i pritom disipira energiju.
+- Empirijski koeficijent hrapavosti mora imati izvor, raspon i analizu osjetljivosti.
 :::

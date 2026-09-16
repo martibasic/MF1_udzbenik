@@ -91,7 +91,13 @@ Ova jednadžba kaže da plivajuće tijelo potapa se točno toliko da istisne svo
 :::
 
 ::: {.callout-note}
-## Razrada koraka
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — tijelo, istisnina i gibanje</p>
+
+U spregnutom proračunu slobodna površina određuje istisninu i tlakne sile, a gibanje tijela mijenja položaj površine. Statična ravnoteža uzgona i težine najprije se provjerava bez valova; tek se zatim uvode dinamika, više stupnjeva slobode i vremenska konvergencija odziva tijela.
+:::
+
+## Postupak rješenja
 Korak: od tlakova na gornju i donju plohu → $F_U = \rho g V_{ist}$
 
 Na gornjoj plohi prizma na dubini $h_1$: $F_1 = (p_0 + \rho g h_1)A$ prema dolje.
@@ -265,6 +271,16 @@ $$ {#eq-uzgon-stabilitet-matematicki-izvod-krivulja-stabilnosti-i-finitni-04}
 Za brodove na koje se primjenjuju opći kriteriji IMO-ova *2008 Intact Stability Codea* provjerava se skup uvjeta, među ostalim: površina najmanje $0{,}055\ \text{m rad}$ do $30^\circ$; najmanje $0{,}09\ \text{m rad}$ do $40^\circ$ ili kuta naplavljivanja ako je manji; najmanje $0{,}03\ \text{m rad}$ između $30^\circ$ i te gornje granice; $GZ\ge0{,}20\ \text{m}$ pri kutu od najmanje $30^\circ$; maksimum $GZ$ pri kutu ne manjem od $25^\circ$; te početni $GM_0\ge0{,}15\ \text{m}$ [@imo-is-code-2008]. Primjenjivost, dodatni kriteriji i iznimke ovise o vrsti broda i mjerodavnoj administraciji, pa dvije površine same ne dokazuju usklađenost.
 
 Metacentarska teorija opisuje samo početni odziv oko uspravnoga položaja. Stabilnost pri konačnom nagibu, na valovima ili nakon oštećenja zahtijeva odgovarajuću krivulju $GZ$, otvore i kut naplavljivanja, dinamičke utjecaje te posebne neoštećene ili oštećene kriterije [@imo-damage-stability].
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — istisnina i slobodna površina</p>
+
+Višefazni numerički model prati granicu voda–zrak i iz dobivenog tlačnog polja integrira uzgon i moment. Statički gaz, očuvanje mase obje faze i mali nagib s poznatim $GM$ pružaju odvojene provjere prije tumačenja dinamičkih opterećenja u valu ili pri naplavljivanju.
+
+Prati se promjena istisnine, položaj težišta i centra uzgona te moment koji vraća ili povećava nagib. Očuvanje ukupne mase nije dovoljno ako se međupovršina postupno gubi ili dobiva volumen zbog pogreške njezina numeričkog praćenja.
+
+Početni metacentarski rezultat vrijedi za mali kut i zadanu raspodjelu mase. Za veće nagibe, slobodnu površinu u spremniku ili nelinearne valove treba promatrati cijelu krivulju povratnoga momenta i dinamički odziv, ne samo jednu vrijednost $GM$.
 :::
 
 ## Riješeni primjeri
@@ -778,7 +794,6 @@ Vrijednost $37{,}1^\circ$ samo je geometrijska ekstrapolacija krutoga pravokutni
 ::: {#ex-u07-uzgon-na-potonulo-pumpno-kuciste-pri-ispitivanju .mf1-we}
 <p class="mf1-box-label">P5. Uzgon na potonulo pumpno kućište pri ispitivanju &nbsp;<span class="mf1-level">T2</span></p>
 
-**Primjer za strojare**
 
 **Kontekst:** Pumpa u podvodnom prihvatnom bazenu ima čelično kućište koje se ispravlja ronjenjem. Serviseri trebaju znati koliku tegežu (lančanu vezu prema dnu) trebaju koristiti da kućište ostane na dnu dok se montira priključak.
 
@@ -938,7 +953,6 @@ uzgon je $F_U = \rho gV$; potom usporedi $F_U$ i težinu $G = mg$ da dobiješ po
 $F_U \approx 832\ \text{N}$; kako je $F_U > G = 608\ \text{N}$, treba dodatna sila prema dolje $\approx 224\ \text{N}$.
 :::
 ::::
-**Skica:** da - potpuno uronjeni blok, volumen $V$, smjerovi $F_U$, $G$ i dodatne sile držanja.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -959,7 +973,6 @@ iz vertikalne ravnoteže vrijedi $\rho gV_{ist} = (m_p + m_t)g$; srednji gaz sli
 $V_{ist} \approx 0{,}73\ \text{m}^3$; srednji gaz $h \approx 0{,}20\ \text{m}$; dodatna masa do ruba $\approx 650\ \text{kg}$.
 :::
 ::::
-**Skica:** da - ponton pravokutnog presjeka, srednji gaz $h$ i slobodni bok $H-h$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -980,7 +993,6 @@ srednji gaz dolazi iz ukupne težine. Zatim upotrijebi $KB=h_m/2$, $BM=B^2/(12h_
 $h_m\approx0{,}255\ \text{m}$; $KB\approx0{,}128\ \text{m}$; $BM\approx0{,}327\ \text{m}$; $GM\approx0{,}274\ \text{m}$; $|h_L-h_D|\approx0{,}133\ \text{m}$, pri čemu je desni rub dublje uronjen.
 :::
 ::::
-**Skica:** da - platforma, pomaknuti kompresor, lijevi i desni uron te širina $B$.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -1001,7 +1013,6 @@ u oba fluida vrijedi $\rho gV_{ist} = mg$; razlika je samo u uronjenom volumenu 
 $\rho_{ulje} \approx 990\ \text{kg/m}^3$; uron je veći jer je ulje rjeđe pa je za istu težinu potreban veći istisnuti volumen.
 :::
 ::::
-**Skica:** da - areometar s cilindričnim vratom i dvije razine urona $h_1$, $h_2$.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -1022,7 +1033,6 @@ deplasman je $\Delta = \rho gV_{ist}$, a za male nagibe povratni moment je $M_r 
 $\Delta \approx 6{,}07\ \text{kN}$; $M_r \approx 133\ \text{N·m}$; $GM > 0$ pa je ravnoteža stabilna.
 :::
 ::::
-**Skica:** da - presjek tijela s težištem, metacentrom, nagibom $\varphi$ i ramenom povratnog momenta.
 
 [Razina: T3]{.mf1-task-level}
 
@@ -1043,13 +1053,24 @@ najprije uzmi $h_m=(h_L+h_D)/2$ i $m_\Delta=\rho_oV_o+\rho_wV_w$. Za položaje u
 $h_m=0{,}220\ \text{m}$; $V_o\approx0{,}269\ \text{m}^3$; $V_w\approx0{,}470\ \text{m}^3$; $m_\Delta\approx689{,}9\ \text{kg}$. Geometrijski su $y_{B,w}\approx0{,}0571\ \text{m}$ i $y_B\approx0{,}0389\ \text{m}$, ali $y_B$ nije $GZ$. Dobiva se $KB_{eq}\approx0{,}105\ \text{m}$, $BM_{eq}\approx0{,}583\ \text{m}$, $GM_{eq}\approx0{,}488\ \text{m}$ i $e\approx0{,}321\ \text{m}$. Najveća rubna vrijednost nastaje za $h_L=0{,}263\ \text{m}$, $h_D=0{,}177\ \text{m}$, $\rho_w=1001\ \text{kg/m}^3$, $m_a=69\ \text{kg}$ i $KG=0{,}195\ \text{m}$ te iznosi $e_{max}\approx0{,}354\ \text{m}$. Nominalni račun prolazi, ali raspored se uz zadanu nesigurnost ne prihvaća za koridor od $0{,}34\ \text{m}$ bez preciznijega mjerenja ili pomicanja akumulatora prema osi. To je odluka unutar zadanoga početnog modela, ne normativna provjera stabiliteta.
 :::
 ::::
-**Skica:** da - platforma na granici ulja i vode, rubni uroni $h_L$ i $h_D$, granica fluida i bočni pomak akumulatora.
 
 [Razina: T4]{.mf1-task-level}
 
 :::::
 
 ![Skice uz zadatke za vježbu — pontoni, areometri i plutajuće platforme.](../assets/print/u07_vjezbe_skice.svg){#fig-u07-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — pontoni, areometri i plutajuće platforme."}
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerički most</p>
+
+**Gdje ovo živi u numerici.** Slobodna površina može se opisivati metodom hvatanja međupovršine poput VOF-a, ali i drugim modelima, primjerice potencijalnim ili plitkovodnim, ovisno o skali i pitanju. Nije svaki problem otvorenoga toka nužno VOF simulacija.
+
+**Što numerički alat radi s tim.** Kod potpuno spregnutoga modela polje strujanja daje tlakne i viskozne sile, a jednadžbe gibanja tijela vraćaju novi položaj i nagib. Očuvanje mase faza, hidrostatska ravnoteža, položaj slobodne površine i bilanca sila moraju se provjeravati odvojeno.
+
+**Tipičan scenarij.** Numerički valni bazen može procjenjivati dinamički gaz, nagib i opterećenja u zadanom valnom polju. Takav rezultat ne predstavlja automatski „stvarno more” i ne zamjenjuje propisanu stabilitetnu provjeru; traži mrežnu i vremensku konvergenciju te validaciju za ciljane odzive [@nasa-cfd-vv; @asme-vv20-2009]. Početni $GM$ ostaje koristan mali-kutni referentni test, ne kriterij cijele dinamičke stabilnosti.
+
+> *Nije gradivo MF1. Ručna ravnoteža uzgona i težine daje osnovni test kojem se složeniji numerički model mora vratiti u mirnom graničnom slučaju.*
+:::
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -1082,16 +1103,4 @@ Ponton, plutajuća dizalica ili radna platforma mogu zadovoljiti uvjet uzgona, a
 Ovdje se promatra statička ravnoteža ili mala odstupanja od nje. U valovima, pri slobodnoj površini unutar spremnika ili pri većim kutovima nagiba stvarna stabilnost može biti bitno drukčija od slike dobivene iz jednostavne ravnoteže sila i momenata.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Uzgon, plivanje i početni stabilitet</span></span> lomi se na dvije stabilne navike: uzgon uvijek dolazi iz istisnine, a nagib iz momenta. Miješanje te dvije stvari gotovo sigurno ruši fizikalni smisao zadatka.
-:::
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Gdje ovo živi u numerici.** Slobodna površina može se opisivati metodom hvatanja međupovršine poput VOF-a, ali i drugim modelima, primjerice potencijalnim ili plitkovodnim, ovisno o skali i pitanju. Nije svaki problem otvorenoga toka nužno VOF simulacija.
-
-**Što numerički alat radi s tim.** Kod potpuno spregnutoga modela polje strujanja daje tlakne i viskozne sile, a jednadžbe gibanja tijela vraćaju novi položaj i nagib. Očuvanje mase faza, hidrostatska ravnoteža, položaj slobodne površine i bilanca sila moraju se provjeravati odvojeno.
-
-**Tipičan scenarij.** Numerički valni bazen može procjenjivati dinamički gaz, nagib i opterećenja u zadanom valnom polju. Takav rezultat ne predstavlja automatski „stvarno more” i ne zamjenjuje propisanu stabilitetnu provjeru; traži mrežnu i vremensku konvergenciju te validaciju za ciljane odzive [@nasa-cfd-vv; @asme-vv20-2009]. Početni $GM$ ostaje koristan mali-kutni referentni test, ne kriterij cijele dinamičke stabilnosti.
-
-> *Nije gradivo MF1. Ručna ravnoteža uzgona i težine daje osnovni test kojem se složeniji numerički model mora vratiti u mirnom graničnom slučaju.*
 :::

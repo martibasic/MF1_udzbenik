@@ -113,6 +113,13 @@ local function render_author_block(div)
     return div
   end
 
+  -- Pripremni i samoprovjerni sadržaj namijenjeni su mrežnom radu.
+  -- Numerički mostovi ostaju u PDF-u kao prijelaz prema CFD-u.
+  if div.classes:includes("mf1-priprema")
+    or div.classes:includes("mf1-samoprovjera") then
+    return pandoc.List()
+  end
+
   local style = style_for(div)
   if style == nil then
     return nil
@@ -120,6 +127,9 @@ local function render_author_block(div)
 
   local content = pandoc.List(div.content)
   local label = extract_label(content, style.label)
+  if div.classes:includes("mf1-zavrsni-okvir") then
+    label = pandoc.Plain({ pandoc.Str("Sažetak") })
+  end
   local result = pandoc.List()
 
   result:insert(pandoc.RawBlock(
@@ -201,6 +211,11 @@ local function render_minor_heading(para)
 end
 
 local function render_step_heading(header)
+  if pandoc.utils.stringify(header.content):match("Razrada koraka") then
+    header.content = { pandoc.Str("Postupak"), pandoc.Space(), pandoc.Str("rješenja") }
+    return header
+  end
+
   if not header.classes:includes("mf1-step") then
     return nil
   end

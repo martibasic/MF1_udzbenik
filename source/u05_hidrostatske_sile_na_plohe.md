@@ -39,6 +39,16 @@ $$ {#eq-sile-plohe-referentni-tlak-i-smjer-sile-02}
 
 Jednoliki član mijenja i silu i položaj njezina hvatišta. Zbog toga formula za centar tlaka izvedena samo za $p=\rho gh$ ne smije biti automatski primijenjena na zatvoren spremnik s plinskim nadtlakom.
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — tlak na stijenci</p>
+
+U CFD-u se hidrostatska sila na plohu dobiva integracijom diskretnog tlačnog polja po stijenci. Rješenje u mirnom spremniku mora zato vratiti istu rezultantu i isto hvatište kao analitička integracija; odstupanje se najprije tumači mrežom uz rubove i ravnotežom gradijenta tlaka s gravitacijom.
+
+U izvještaju treba navesti referencu tlaka, obuhvaćenu stijenku i točku oko koje se računa moment. Sila može izgledati točno, a hvatište biti pogrešno ako je raspodjela tlaka u području ruba nedovoljno razlučena.
+
+Pri valovima, strujnom udaru ili pomičnoj zaklopki hidrostatički rezultat ostaje početna provjera, ali više nije konačno opterećenje konstrukcije. Tada se uz tlaknu silu ocjenjuju vremenski vrhovi, inercija konstrukcije i odgovarajuće sigurnosne kombinacije.
+:::
+
 ## Ravna ploha: rezultanta i centar tlaka
 
 Na ravnoj plohi normala je stalna. Zato se vektorska integracija svodi na određivanje iznosa
@@ -121,15 +131,21 @@ $$ {#eq-u05-centar-tlaka-nagnuta}
 Za $\theta=90^\circ$ dobiva se vertikalna ploha. Kada $\theta\to0$ tlak po vodoravnoj plohi postaje jednolik i $h_{CP}\to h_C$. To je važan granični slučaj izvoda.
 
 ::: {.mf1-interaktivno}
-<p class="mf1-box-label">Interaktivni prikaz — ravna ploha</p>
+<p class="mf1-box-label">Numerički pokus — ravna ploha</p>
 
-Prikaz povezuje dubinu i nagib plohe s rezultantnom silom $F$ te razlikom $h_{CP}-h_C$.
+Prije pokretanja predvidite kako se mijenjaju $F$ i razlika $h_{CP}-h_C$ kada se cijela ploha spusti dublje te kada se, pri istoj dubini težišta, promijeni nagib. Zatim usporedite numeričke vrijednosti s izrazima za silu i moment iste raspodjele tlaka.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u05_sila_na_ravnu_plohu.ipynb">Pokreni u pregledniku</a>
 <a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u05_sila_na_ravnu_plohu.ipynb" target="_blank" rel="noopener">Pričuvno: otvori u Colabu</a>
 <img class="mf1-interaktivno-qr" src="../assets/qr/u05_sila_na_ravnu_plohu.svg" alt="QR kod za numerički pokus hidrostatske sile na ravnu plohu"/>
 </div>
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — integracija opterećenja po stijenci</p>
+
+Numerički tlak na stijenci sam po sebi nije projektna sila. Rezultanta i moment dobivaju se integracijom tlaka po cijeloj plohi, pri čemu mreža mora dovoljno razlučiti rubove, zakrivljenost i promjenu dubine; zatim se integrirana sila uspoređuje s hidrostatskim rješenjem istoga slučaja.
 :::
 
 ## Riješeni primjeri: ravne plohe
@@ -331,9 +347,9 @@ $$ {#eq-sile-plohe-vertikalna-komponenta-i-njezin-smjer-02}
 Funkcija $\operatorname{atan2}$ zadržava kvadrant; obični $\arctan(F_V/F_H)$ može sakriti pogrešan predznak. Na kružnom luku u ravninskom presjeku sve lokalne tlačne sile prolaze središtem zakrivljenosti, pa kroz njega prolazi i rezultanta. To geometrijsko svojstvo ne vrijedi za proizvoljnu zakrivljenu plohu.
 
 ::: {.mf1-interaktivno}
-<p class="mf1-box-label">Interaktivni prikaz — zakrivljena ploha</p>
+<p class="mf1-box-label">Numerički pokus — zakrivljena ploha</p>
 
-Prikaz povezuje dubinu i polumjer zakrivljene plohe s komponentama $F_H$ i $F_V$.
+Prije pokretanja odredite smjer $F_V$ samo iz stvarne okupane strane. Zatim mijenjajte dubinu i polumjer te usporedite rast $F_H$ i $F_V$ s geometrijskim izrazima i predznakom koji slijedi iz normale fluida na stijenci.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u06_zakrivljena_ploha.ipynb">Pokreni u pregledniku</a>

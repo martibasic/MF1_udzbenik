@@ -305,6 +305,22 @@ Primjeri niže samo redom variraju tri osnovne situacije: suženje ili difuzor, 
 
 Ako taj redoslijed nije zatvoren, gotovo je sigurno da će zadatak biti krivo pojednostavljen.
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — granice računskog volumena</p>
+
+Ulaz, izlaz, stijenka i pokretna granica u simulaciji imaju istu ulogu kao granica ručnog kontrolnog volumena: određuju što preko nje može prijeći. Maseni protok zato se ne provjerava samo na jednom presjeku, nego na svim otvorenim granicama i zajedno s mogućom akumulacijom u domeni.
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — ćelija mreže</p>
+
+Kontrolni volumen ručnoga računa u metodi konačnih volumena postaje jedna ćelija mreže. Zbroj tokova kroz njezine plohe i promjena mase u ćeliji moraju se zatvoriti lokalno, a zbroj preko cijele domene mora odgovarati svim otvorenim granicama.
+
+Za stacionaran slučaj promatra se razlika ukupnih ulaznih i izlaznih masenih tokova, a za nestacionaran i promjena mase u domeni. Taj se debalans izvještava uz mjerilo protoka i promatranu izlaznu veličinu; univerzalni postotak prihvatljivosti nema fizikalni smisao.
+
+Lokalno zatvaranje ćelija omogućuje otkrivanje izvora pogreške, ali ne jamči točnost vrtloga, pada tlaka ili slobodne površine. Zato se bilanca mase kombinira s mrežnom konvergencijom i neovisnom analitičkom ili mjernom usporedbom.
+:::
+
 ## Riješeni primjeri
 
 ::: {#ex-u08-voda-struji-kroz-difuzor-t2 .mf1-we}
@@ -568,7 +584,6 @@ Kao sažetak poglavlja korisno je držati zajedno tri reprezentativne scene: su�
 ::: {#ex-u08-kontinuitet-kroz-razvodni-t-komad-hidraulicnog-sustava .mf1-we}
 <p class="mf1-box-label">P5. Kontinuitet kroz razvodni T-komad hidrauličnog sustava &nbsp;<span class="mf1-level">T2</span></p>
 
-**Primjer za strojare**
 
 **Kontekst:** U hidrauličnom sustavu strojnice T-komad dijeli ulazni tok ulja iz crpke u dva ogranka: jedan za radni cilindar, drugi za hladnjak ulja. Projektant provjerava brzine u ograncima.
 
@@ -745,7 +760,6 @@ najprije $Q = A_1 v_1$, zatim $v_2 = Q/A_2$ i na kraju $\dot m = \rho Q$.
 $Q \approx 37{,}7\ \text{L/s}$; $v_2 \approx 1{,}88\ \text{m/s}$; $\dot m \approx 37{,}6\ \text{kg/s}$.
 :::
 ::::
-**Skica:** da - cijev s ulaznim i izlaznim presjekom, oznake $D_1$, $D_2$, $v_1$, $v_2$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -766,7 +780,6 @@ za nestlačivu vodu vrijedi isti $Q$ kroz oba presjeka; iz $Q = A_1 v_1$ vrati $
 $Q \approx 35{,}1\ \text{L/s}$; $v_2 \approx 17{,}9\ \text{m/s}$; $\dot m \approx 35{,}0\ \text{kg/s}$.
 :::
 ::::
-**Skica:** da - sapnica s jednim ulazom i jednim izlazom, oba presjeka jasno označena.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -787,7 +800,6 @@ za stacionarnu mješalicu vrijedi $\dot m_1 + \dot m_2 = \dot m_3$; za vodu je d
 $Q_3 = 20\ \text{L/s}$; $v_3 \approx 1{,}77\ \text{m/s}$.
 :::
 ::::
-**Skica:** da - komora s dva ulaza i jednim izlazom, označeni protoci i presjeci.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -808,7 +820,6 @@ postavi $Q = Q_2 + Q_3$ i vezu brzina $v_2 = 2v_3$; preko $Q = Av$ zatvori susta
 $v_3 \approx 1{,}81\ \text{m/s}$, $v_2 \approx 3{,}62\ \text{m/s}$; $Q_2 \approx 23{,}0\ \text{L/s}$, $Q_3 \approx 7{,}0\ \text{L/s}$.
 :::
 ::::
-**Skica:** da - jedna ulazna i dvije izlazne grane s označenim promjerima i odnosom brzina.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -829,7 +840,6 @@ akumulacija je $Q_{in} - Q_{out}$; zatim vrijedi $A\,dh/dt = Q_{in} - Q_{out}$ i
 $dh/dt \approx 2{,}49\ \text{mm/s}$; $t \approx 322\ \text{s} \approx 5{,}4\ \text{min}$.
 :::
 ::::
-**Skica:** da - spremnik s dotokom, odvodom i rastom razine $h(t)$.
 
 [Razina: T3]{.mf1-task-level}
 
@@ -850,13 +860,24 @@ najprije izračunaj $Q_3 = A_3 v_3$, zatim gustoću mješavine iz masene bilance
 $Q_3 \approx 8{,}0\ \text{L/s}$; $\rho_{mix} \approx 1020\ \text{kg/m}^3$; $dh/dt \approx 1{,}45\ \text{mm/s}$; akumulirana masa za 6 min $\approx 2{,}55 \cdot 10^3\ \text{kg}$. U nepovoljnoj kombinaciji granica $(dh/dt)_{max}\approx1{,}60\ \text{mm/s}$, pa bi razina za $6\ \text{min}$ porasla približno $0{,}577\ \text{m}$ i premašila slobodni bok za oko $17\ \text{mm}$. Zadani geometrijski kriterij nije zadovoljen; idealizirano vrijeme do ruba iznosi približno $349\ \text{s}$, odnosno $5{,}8\ \text{min}$, i nije opća sigurnosna granica rada.
 :::
 ::::
-**Skica:** da - miješajući spremnik s dva ulaza, jednim izlazom i rastom razine.
 
 [Razina: T4]{.mf1-task-level}
 
 :::::
 
 ![Skice uz zadatke za vježbu — cijevi, mješalice i razdjelnici protoka.](../assets/print/u08_vjezbe_skice.svg){#fig-u08-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — cijevi, mješalice i razdjelnici protoka."}
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerički most</p>
+
+**Gdje ovo živi u numerici.** U metodi konačnih volumena kontrolni volumen koji se ovdje rabi za jedan spremnik postaje ćelija mreže. Diskretizirani tokovi kroz plohe moraju zatvoriti lokalnu i globalnu bilancu mase; druge numeričke metode istu fizikalnu bilancu mogu diskretizirati drukčije.
+
+**Što numerički alat radi s tim.** Diskretizirani kontinuitet spreže tlak i brzinu. Maseni debalans zato se prati zajedno s rezidualima i monitoriranim izlaznim veličinama; prihvatljiv rezultat mora pokazati očuvanje razmjerno mjerilu protoka i svrsi računa.
+
+**Tipičan scenarij.** Protok se integrira na svim otvorenim granicama i uspoređuje s akumulacijom u domeni. Ne postoji univerzalna prihvatna granica od $1\,\%$: tolerancija ovisi o zatvorenosti bilance, diskretizaciji, vremenskoj statistici i potrebnoj nesigurnosti izlaza. Provjera jednadžbi i numeričke konvergencije prethodi validaciji prema podatcima [@nasa-cfd-vv; @asme-vv20-2009].
+
+> *Nije gradivo MF1. Ovo poglavlje stoji kao mostovni stup između ručnog kontrolnog volumena i milijunske mreže koju gradi generator mreže.*
+:::
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -888,16 +909,4 @@ Mješalica, ventilacijska komora, razdjelnik rashladne vode ili spremnik koji se
 Pojednostavljeni zapis $A_1 v_1 = A_2 v_2$ vrijedi samo za vrlo poseban slučaj jedne ulazne i jedne izlazne grane nestlačivoga fluida. Čim sustav ima više grana, stlačivost ili akumulaciju, treba se vratiti punoj bilanci mase.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Kinematika, kontrolni volumen i kontinuitet</span></span> treba ostaviti jednu pouzdanu radnu naviku: prije svake jednadžbe prvo se crta kontrolni volumen, a tek zatim se piše bilanca mase.
-:::
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Gdje ovo živi u numerici.** U metodi konačnih volumena kontrolni volumen koji se ovdje rabi za jedan spremnik postaje ćelija mreže. Diskretizirani tokovi kroz plohe moraju zatvoriti lokalnu i globalnu bilancu mase; druge numeričke metode istu fizikalnu bilancu mogu diskretizirati drukčije.
-
-**Što numerički alat radi s tim.** Diskretizirani kontinuitet spreže tlak i brzinu. Maseni debalans zato se prati zajedno s rezidualima i monitoriranim izlaznim veličinama; prihvatljiv rezultat mora pokazati očuvanje razmjerno mjerilu protoka i svrsi računa.
-
-**Tipičan scenarij.** Protok se integrira na svim otvorenim granicama i uspoređuje s akumulacijom u domeni. Ne postoji univerzalna prihvatna granica od $1\,\%$: tolerancija ovisi o zatvorenosti bilance, diskretizaciji, vremenskoj statistici i potrebnoj nesigurnosti izlaza. Provjera jednadžbi i numeričke konvergencije prethodi validaciji prema podatcima [@nasa-cfd-vv; @asme-vv20-2009].
-
-> *Nije gradivo MF1. Ovo poglavlje stoji kao mostovni stup između ručnog kontrolnog volumena i milijunske mreže koju gradi generator mreže.*
 :::

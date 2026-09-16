@@ -2,6 +2,26 @@
 (() => {
   "use strict";
 
+  const normalizeEditorialMeta = () => {
+    document.querySelectorAll(".callout-title-container").forEach((title) => {
+      const text = title.textContent.replace(/\s+/g, " ").trim();
+      if (text === "Naputak") {
+        title.textContent = "Smjernica";
+      } else if (text.includes("Razrada koraka")) {
+        title.textContent = "Postupak rješenja";
+      }
+    });
+
+    document
+      .querySelectorAll(".mf1-priprema, .mf1-samoprovjera")
+      .forEach((block) => {
+        const heading = block.previousElementSibling;
+        if (heading?.matches("h1, h2, h3, h4, h5, h6")) {
+          heading.hidden = true;
+        }
+      });
+  };
+
   const enhanceCollapsibleCallouts = () => {
     const headers = document.querySelectorAll(
       '.callout-header[data-bs-toggle="collapse"]'
@@ -36,10 +56,16 @@
   };
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", enhanceCollapsibleCallouts, {
-      once: true,
-    });
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+        normalizeEditorialMeta();
+        enhanceCollapsibleCallouts();
+      },
+      { once: true }
+    );
   } else {
+    normalizeEditorialMeta();
     enhanceCollapsibleCallouts();
   }
 })();

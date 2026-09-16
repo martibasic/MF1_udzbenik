@@ -1,37 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u07c1pluvo_title u07c1pluvo_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u07c1pluvo_title">Plutajuca platforma na granici ulja i vode s ormarom</title>
-  <desc id="u07c1pluvo_desc">Poprecni presjek hermeticke pravokutne platforme sirine B = 1,20 m koja pluta na stratificiranom mediju ulje-voda. Lijevi rub uronjen h_L = 0,30 m, desni h_D = 0,20 m. Uljni sloj debljine 0,10 m presjeca cijeli tlocrt. Ormar mase 180 kg postavljen je na udaljenosti e = 0,164 m lijevo od osi simetrije. Desni panel razlikuje geometrijski pomak centra uzgona od kraka stabilnosti te prikazuje ekvivalentne KB, BM, KG i GM.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u07c1puvo_u07c1pluvo_title u07c1puvo_u07c1pluvo_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u07c1puvo_u07c1pluvo_title">Plutajuca platforma na granici ulja i vode s ormarom</title>
+  <desc id="u07c1puvo_u07c1pluvo_desc">Poprecni presjek hermeticke pravokutne platforme sirine B = 1,20 m koja pluta na stratificiranom mediju ulje-voda. Lijevi rub uronjen h_L = 0,30 m, desni h_D = 0,20 m. Uljni sloj debljine 0,10 m presjeca cijeli tlocrt. Ormar mase 180 kg postavljen je na udaljenosti e = 0,164 m lijevo od osi simetrije. Desni panel razlikuje geometrijski pomak centra uzgona od kraka stabilnosti te prikazuje ekvivalentne KB, BM, KG i GM.</desc>
 
   <defs>
-    <linearGradient id="u07c1pluvo_voda" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u07c1puvo_u07c1pluvo_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#aed6f1" />
       <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u07c1pluvo_ulje" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u07c1puvo_u07c1pluvo_ulje" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fde68a" />
       <stop offset="100%" stop-color="#c8a000" />
     </linearGradient>
-    <linearGradient id="u07c1pluvo_platf" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u07c1puvo_u07c1pluvo_platf" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#909fa8" />
       <stop offset="100%" stop-color="#5d6d7e" />
     </linearGradient>
-    <linearGradient id="u07c1pluvo_orm" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u07c1puvo_u07c1pluvo_orm" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#d8b377" />
       <stop offset="100%" stop-color="#8a5a2a" />
     </linearGradient>
-    <marker id="u07c1pluvo_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+    <marker id="u07c1puvo_u07c1pluvo_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <marker id="u07c1pluvo_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+    <marker id="u07c1puvo_u07c1pluvo_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <marker id="u07c1pluvo_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+    <marker id="u07c1puvo_u07c1pluvo_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
       <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <marker id="u07c1pluvo_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+    <marker id="u07c1puvo_u07c1pluvo_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <marker id="u07c1pluvo_aDimR" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+    <marker id="u07c1puvo_u07c1pluvo_aDimR" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
@@ -57,9 +57,9 @@
 
   <!-- ====== FLUIDI (kontinuirani, ispod platforme se presijecaju s polygonom) ====== -->
   <!-- Sloj ulja od y=230 do y=258 preko cijele scene -->
-  <rect x="30" y="230" width="544" height="28" fill="url(#u07c1pluvo_ulje)" opacity="0.85" />
+  <rect x="30" y="230" width="544" height="28" fill="url(#u07c1puvo_u07c1pluvo_ulje)" opacity="0.85" />
   <!-- Sloj vode od y=258 do y=460 preko cijele scene -->
-  <rect x="30" y="258" width="544" height="202" fill="url(#u07c1pluvo_voda)" opacity="0.9" />
+  <rect x="30" y="258" width="544" height="202" fill="url(#u07c1puvo_u07c1pluvo_voda)" opacity="0.9" />
   <!-- Linija slobodne povrsine ulja -->
   <line x1="30" y1="230" x2="574" y2="230" stroke="#1565c0" stroke-width="2" />
   <!-- Linija granice ulje/voda -->
@@ -71,7 +71,7 @@
   <!-- ====== PLATFORMA (nagnuti pravokutnik s thicknessom) ======
        Donja stranica: (122,314) - (458,286)
        Gornja stranica: (122,219) - (458,191) -->
-  <polygon points="122,219 458,191 458,286 122,314" fill="url(#u07c1pluvo_platf)" stroke="#3a4a56" stroke-width="1.8" />
+  <polygon points="122,219 458,191 458,286 122,314" fill="url(#u07c1puvo_u07c1pluvo_platf)" stroke="#3a4a56" stroke-width="1.8" />
 
   <!-- Bocne stjenke s laganom debljinom (tamniji rub) - vec ukljuceno u polygon stroke -->
 
@@ -85,7 +85,7 @@
        Za x = 244-35 = 209: y_top = 211,75
        Za x = 244+35 = 279: y_top = 205,92
        -->
-  <polygon points="209,211.8 279,205.9 279,149.9 209,155.8" fill="url(#u07c1pluvo_orm)" stroke="#5a3a14" stroke-width="1.6" />
+  <polygon points="209,211.8 279,205.9 279,149.9 209,155.8" fill="url(#u07c1puvo_u07c1pluvo_orm)" stroke="#5a3a14" stroke-width="1.6" />
   <!-- Detalji ormara: vrata -->
   <line x1="244" y1="154.7" x2="244" y2="210" stroke="#5a3a14" stroke-width="1" opacity="0.7" />
   <rect x="233" y="177" width="6" height="3" fill="#3a2410" />
@@ -97,14 +97,14 @@
   <!-- p.p. oznaka -->
   <!-- ====== SILE ====== -->
   <!-- G_p (tezina platforme) na osi simetrije - krece ispod e-kote da ne presijeca dimenziju -->
-  <line x1="290" y1="160" x2="290" y2="205" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u07c1pluvo_aR)" />
+  <line x1="290" y1="160" x2="290" y2="205" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u07c1puvo_u07c1pluvo_aR)" />
   <!-- G_k (tezina ormara) iznad ormara -->
-  <line x1="244" y1="105" x2="244" y2="149" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u07c1pluvo_aR)" />
+  <line x1="244" y1="105" x2="244" y2="149" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u07c1puvo_u07c1pluvo_aR)" />
   <!-- F_U (uzgon, prema gore) iz tezista uzgona -->
   <!-- Teziste uzgona pomaknuto za y_B = 0,0435 m = 12,2 px desno od osi (dublja strana = lijeva pa pomak je prema lijevoj strani) -->
   <!-- Prema tekstu: y_B prema dubljoj strani, a dublje je lijevo (h_L=0,30 > h_D=0,20) -->
   <!-- Dakle B pomaknut LIJEVO od osi za 12,2 px -> x_B = 290 - 12 = 278 -->
-  <line x1="278" y1="400" x2="278" y2="340" stroke="#1e8449" stroke-width="3.2" marker-end="url(#u07c1pluvo_aG)" />
+  <line x1="278" y1="400" x2="278" y2="340" stroke="#1e8449" stroke-width="3.2" marker-end="url(#u07c1puvo_u07c1pluvo_aG)" />
   <!-- B (centar uzgona) tocka -->
   <circle cx="278" cy="340" r="3.5" fill="#1e8449" stroke="#ffffff" stroke-width="1" />
   <!-- ====== KOTE ======
@@ -153,29 +153,29 @@
   <line x1="30" y1="230" x2="76" y2="230" stroke="#b7600c" stroke-width="0.7" />
   <line x1="82" y1="230" x2="82" y2="240" stroke="#b7600c" stroke-width="1.2" />
   <line x1="82" y1="314" x2="82" y2="304" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="82" y1="233" x2="82" y2="311" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="82" y1="233" x2="82" y2="311" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1puvo_u07c1pluvo_aDimR)" marker-end="url(#u07c1puvo_u07c1pluvo_aDim)" />
   <line x1="458" y1="286" x2="514" y2="286" stroke="#b7600c" stroke-width="0.7" />
   <line x1="458" y1="230" x2="514" y2="230" stroke="#b7600c" stroke-width="0.7" />
   <line x1="508" y1="230" x2="508" y2="240" stroke="#b7600c" stroke-width="1.2" />
   <line x1="508" y1="286" x2="508" y2="276" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="508" y1="233" x2="508" y2="283" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="508" y1="233" x2="508" y2="283" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1puvo_u07c1pluvo_aDimR)" marker-end="url(#u07c1puvo_u07c1pluvo_aDim)" />
   <line x1="30" y1="258" x2="46" y2="258" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="40" y1="230" x2="40" y2="258" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="40" y1="230" x2="40" y2="258" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1puvo_u07c1pluvo_aDimR)" marker-end="url(#u07c1puvo_u07c1pluvo_aDim)" />
   <line x1="122" y1="314" x2="122" y2="440" stroke="#b7600c" stroke-width="0.7" />
   <line x1="458" y1="286" x2="458" y2="440" stroke="#b7600c" stroke-width="0.7" />
   <line x1="122" y1="430" x2="122" y2="446" stroke="#b7600c" stroke-width="1.2" />
   <line x1="458" y1="430" x2="458" y2="446" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="125" y1="438" x2="455" y2="438" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="125" y1="438" x2="455" y2="438" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1puvo_u07c1pluvo_aDimR)" marker-end="url(#u07c1puvo_u07c1pluvo_aDim)" />
   <line x1="244" y1="155" x2="244" y2="139" stroke="#b7600c" stroke-width="0.7" />
   <line x1="290" y1="149" x2="290" y2="139" stroke="#b7600c" stroke-width="0.7" />
   <line x1="244" y1="140" x2="244" y2="148" stroke="#b7600c" stroke-width="1.2" />
   <line x1="290" y1="140" x2="290" y2="148" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="247" y1="144" x2="287" y2="144" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="247" y1="144" x2="287" y2="144" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1puvo_u07c1pluvo_aDimR)" marker-end="url(#u07c1puvo_u07c1pluvo_aDim)" />
   <line x1="278" y1="345" x2="278" y2="412" stroke="#b7600c" stroke-width="0.7" />
   <line x1="290" y1="345" x2="290" y2="412" stroke="#b7600c" stroke-width="0.7" />
   <line x1="278" y1="410" x2="278" y2="418" stroke="#b7600c" stroke-width="1.2" />
   <line x1="290" y1="410" x2="290" y2="418" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="279" y1="414" x2="289" y2="414" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1pluvo_aDimR)" marker-end="url(#u07c1pluvo_aDim)" />
+  <line x1="279" y1="414" x2="289" y2="414" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07c1puvo_u07c1pluvo_aDimR)" marker-end="url(#u07c1puvo_u07c1pluvo_aDim)" />
   <text x="244" y="189" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">ormar</text>
   <text x="244" y="201" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#ffffff">mₖ = 180 kg</text>
 

@@ -114,6 +114,12 @@ $$ {#eq-slicnost-bezdimenzijske-grupe-kao-omjeri-mehanizama-09}
 Darcyjev $\lambda$ i koeficijent otpora $C_d$ jesu bezdimenzijski odzivi. Jedna izmjerena krivulja može se prenositi samo unutar iste bezdimenzijske geometrije, rubnih uvjeta i skupa relevantnih grupa; primjerice $C_d$ osim o $Re$ može ovisiti o hrapavosti, $Ma$, slobodnoj turbulenciji i blizini stijenke.
 
 ::: {.callout-note collapse="true" icon="false"}
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — bezdimenzijski rubni uvjeti</p>
+
+Numerička simulacija ne prenosi rezultat na drugi sustav samo zato što je geometrija slična. Materijalna svojstva, brzina, gravitacija, površinska napetost i stlačivost moraju dati isti skup mjerodavnih omjera, a rubni uvjeti moraju predstavljati iste fizikalne mehanizme.
+:::
+
 ## Kada se rezultat može prenijeti na drugi sustav
 
 Zamislimo dva geometrijski slična cjevovoda različitih veličina. Za nestlačivi tok istog tipa jednaki Reynoldsovi brojevi mogu omogućiti usporedbu raspodjela brzine i tlaka, izraženih u odnosu na odabranu brzinu i tlak. Pritom moraju odgovarati i ostali uvjeti, poput relativne hrapavosti i načina ulaska fluida.
@@ -176,7 +182,7 @@ $$
 $$ {#eq-slicnost-matematicki-izvod-dimenzijska-analiza-pada-tlaka-02}
 
 ::: {.callout-note}
-## Razrada koraka
+## Postupak rješenja
 Korak: traženje eksponenata za $\Pi_1 = \Delta p\, \rho^a v^b D^c$.
 
 Dimenzije: $[\Delta p] = \mathsf{M}\mathsf{L}^{-1}\mathsf{T}^{-2}$, $[\rho] = \mathsf{M}\mathsf{L}^{-3}$, $[v] = \mathsf{L}\mathsf{T}^{-1}$, $[D] = \mathsf{L}$. Da $\Pi_1$ bude bezdimenzijski:
@@ -304,6 +310,16 @@ Ako se $v$ približava brzini zvuka → provjeri **Machov broj** $Ma$. Za $Ma<0{
 
 Otpor tijela → **koeficijent otpora** $C_d$; pad tlaka u cijevi → **koeficijent trenja** $\lambda$; raspodjela tlaka po plohi → **koeficijent tlaka** $C_p$.
 :::
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — sličnost prije mreže</p>
+
+Bezdimenzijski brojevi određuju koju fiziku numerički model mora zadržati: uz $Re$ se, prema pojavi, pojavljuju $Fr$, $Ma$, $We$ ili druge skupine. Mreža i solver ne mogu nadomjestiti pogrešno odabran omjer mehanizama, geometriju ili bezdimenzijske rubne uvjete.
+
+Prije izrade mreže zato se zapisuje izlazna veličina i procjenjuju se mjerodavne skale duljine, brzine, vremena i tlaka. Tek tada se može opravdati nestlačivi, jednofazni, stacionarni ili dvodimenzijski model; račun koji ne sadrži bitan mehanizam ne postaje ispravan usitnjavanjem mreže.
+
+Usporedba modela i prototipa zahtijeva više od jednakoga Reynoldsova broja kada su prisutne gravitacija, površinska napetost ili stlačivost. Ako se važne grupe ne mogu sve uskladiti, navodi se prioritetna sličnost i procjenjuje posljedica preostaloga neslaganja.
 :::
 
 ## Riješeni primjeri
@@ -722,7 +738,6 @@ $Re = vD/\nu$; za kružnu cijev usporedi s orijentacijskim područjima režima, 
 $Re_{krv} \approx 0{,}45$ — viskoznost dominira; $Re_{voda} \approx 4{,}5 \cdot 10^5$ — inercija dominira.
 :::
 ::::
-**Skica:** da - dva presjeka cijevi vrlo različitih veličina s označenim $D$, $v$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -743,7 +758,6 @@ $v=Q/A$, $Ma=v/a$; vrijednost $0{,}3$ uzmi kao orijentacijski prag.
 $v\approx63{,}7\ \text{m/s}$, $Ma\approx0{,}19$; prema zadanom kriteriju nestlačiva je aproksimacija razumna uz navedene dodatne pretpostavke.
 :::
 ::::
-**Skica:** da - vod zraka s presjekom, oznake $D$, $Q$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -764,7 +778,6 @@ koristi iste referentne veličine kao u definiciji kritične vrijednosti.
 $\sigma_{kav}\approx9{,}7>\sigma_{kr}=3{,}0$; prema zadanoj karakteristici crpka ima rezervu u toj radnoj točki.
 :::
 ::::
-**Skica:** da - usisni vod crpke s označenim $p$, $v$ i razinom $p_v$.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -785,7 +798,6 @@ izračunaj $We=\rho_{zr}v^2d/\sigma$ i usporedi ga sa zadanim pragom, ali odvoji
 $We\approx46>12$; pojednostavljeni kriterij predviđa raspad, ali bez viskoznosti, omjera gustoća i modela sekundarnog raspada ne određuje raspodjelu veličina kapljica.
 :::
 ::::
-**Skica:** da - mlaznica s kapi u struji zraka, oznake $d$, $v$.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -806,7 +818,6 @@ u popis uključi i zavisnu varijablu $f$; tek potom primijeni $n-k$. Nemoj unapr
 $n=5$, $k=3$, pa nastaju dvije grupe; izborom ponavljajućih varijabli dobivaju se $\Pi_1=fD/v=St$ i $\Pi_2=\rho vD/\mu=Re$, odnosno $St=\Phi(Re)$. Za zadani slučaj $Re=4{,}00\cdot10^4$ i $f=St\,v/D=45{,}6\ \text{Hz}$. Dimenzijska analiza određuje oblik ovisnosti, ali broj $St=0{,}190$ dolazi iz mjerenja ili odgovarajućega modela, ne iz samog Buckinghamova postupka.
 :::
 ::::
-**Skica:** da - tijelo u struji, karakteristična duljina $D$, brzina $v$ i periodična vrtložna staza frekvencije $f$.
 
 [Razina: T3]{.mf1-task-level}
 
@@ -827,13 +838,24 @@ Preljev brane ispituje se vodenim modelom u mjerilu $\lambda_L=30$, pri istom gr
 $v_m\approx1{,}10\ \text{m/s}$; $Q_m\approx97{,}4\ \text{L/s}$; $F_m\approx8{,}15\ \text{N}$; $Re_m\approx2{,}7\cdot10^5$. Model je vjerojatno turbulentan, ali veličina viskozne mjerilne pogreške mora se provjeriti korekcijom otpora, nizom modelskih mjerila ili podatcima — ne slijedi samo iz oznake „turbulentno”.
 :::
 ::::
-**Skica:** da - preljev brane s modelom i prototipom, slobodna površina, mjerilo $\lambda_L$ i kote $v$, $h_m$.
 
 [Razina: T4]{.mf1-task-level}
 
 :::::
 
 ![Skice uz zadatke za vježbu — modelska ispitivanja i bezdimenzijski brojevi.](../assets/print/u14_vjezbe_skice.svg){#fig-u14-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — modelska ispitivanja i bezdimenzijski brojevi."}
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerički most</p>
+
+**Gdje ovo živi u numerici.** Bezdimenzioniranje pokazuje koje parametre numerički model mora očuvati. U najjednostavnijem jednofaznom, nestlačivom toku Newtonova fluida konstantnih svojstava pojavljuje se $Re$; dodatna fizika i rubni uvjeti uvode dodatne grupe. Jednaki brojevi daju jednako bezdimenzijsko polje samo uz jednaku bezdimenzijsku geometriju te iste početne i rubne uvjete.
+
+**Što numerički alat radi s tim.** $Re$ je jedan od ulaza u odluku o laminarnom, RANS, LES ili drugom pristupu, zajedno s geometrijom, nestacionarnošću i traženim rezultatom. Veličina $y^+$ provjerava usklađenost prve ćelije sa zidnom obradom; nije samostalna mjera kvalitete cijele mreže. Koeficijenti $C_d$, $C_p$ i $\lambda$ mogu se izračunati iz numeričkog rješenja kao normirani izlazi.
+
+**Tipičan scenarij.** Pri slobodnoj površini (brod, preljev) dodaje se Froudeov broj i metoda VOF za praćenje granice voda–zrak; kod kapljica i mlaza ulazi Weberov broj. Izbor relevantnih brojeva prije simulacije izravno određuje koja se fizika uopće razrješava.
+
+> *Nije gradivo MF1. U kasnijim kolegijima posvećenima računalnoj dinamici fluida opisani sadržaj postat će poznat teren.*
+:::
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -874,16 +896,4 @@ Ovaj kolegij namjerno ostaje u području **integralne** analize nestlačivog str
 - **diferencijalna i računalna dinamika fluida** — Navier-Stokesove jednadžbe po točkama i njihovo numeričko rješavanje (najavljeno kroz oznake *Numerički most* i sažeto u <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>).
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 11</span><span class="mf1-ch-title">Dimenzijska analiza i sličnost</span></span> zatvara kolegij zajedničkim jezikom omjera mehanizama i normiranih odziva. Ispravno bezdimenzioniranje ne počinje pogađanjem jednoga broja, nego jasnim popisom varijabli, jednadžbi i rubnih uvjeta te obrazloženim izborom relevantnih grupa.
-:::
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Gdje ovo živi u numerici.** Bezdimenzioniranje pokazuje koje parametre numerički model mora očuvati. U najjednostavnijem jednofaznom, nestlačivom toku Newtonova fluida konstantnih svojstava pojavljuje se $Re$; dodatna fizika i rubni uvjeti uvode dodatne grupe. Jednaki brojevi daju jednako bezdimenzijsko polje samo uz jednaku bezdimenzijsku geometriju te iste početne i rubne uvjete.
-
-**Što numerički alat radi s tim.** $Re$ je jedan od ulaza u odluku o laminarnom, RANS, LES ili drugom pristupu, zajedno s geometrijom, nestacionarnošću i traženim rezultatom. Veličina $y^+$ provjerava usklađenost prve ćelije sa zidnom obradom; nije samostalna mjera kvalitete cijele mreže. Koeficijenti $C_d$, $C_p$ i $\lambda$ mogu se izračunati iz numeričkog rješenja kao normirani izlazi.
-
-**Tipičan scenarij.** Pri slobodnoj površini (brod, preljev) dodaje se Froudeov broj i metoda VOF za praćenje granice voda–zrak; kod kapljica i mlaza ulazi Weberov broj. Izbor relevantnih brojeva prije simulacije izravno određuje koja se fizika uopće razrješava.
-
-> *Nije gradivo MF1. U kasnijim kolegijima posvećenima računalnoj dinamici fluida opisani sadržaj postat će poznat teren.*
 :::

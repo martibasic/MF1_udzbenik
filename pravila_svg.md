@@ -57,14 +57,16 @@
 
 **Semantika boja je obavezujuća** — boja označava *fizikalnu funkciju* sile, ne dekoraciju. Ulazna sila s plavom strelicom je **semantička greška** (čita se kao tlak).
 
-### Fluidi (gradient, vertikalan: `x1="0" y1="0" x2="0" y2="1"`)
+### Fluidi (ravna ispuna kao zadano rješenje)
 
 | Fluid | Gornji → Donji stop |
 |---|---|
-| Voda / opći fluid | `#aed6f1` → `#5b9ec9` |
-| Ulje / hidraulično ulje | `#fde68a` → `#c8a000` |
-| Gorivo (dizel, benzin) | `#fde68a` → `#d4a017` |
-| Živa | `#b0b8c0` → `#808890` |
+| Voda / opći fluid | `#aed6f1` |
+| Ulje / hidraulično ulje | `#fde68a` |
+| Gorivo (dizel, benzin) | `#fde68a` |
+| Živa | `#b0b8c0` |
+
+Blagi okomiti gradijent dopušten je samo kada odvaja slojeve istoga fluida bez uvođenja dekorativnog efekta. Ne koristi se za stvaranje privida volumena ni kao zamjena za jasno označenu slobodnu površinu.
 
 ### Stijenke i čvrsti elementi
 
@@ -75,10 +77,10 @@
 | Tamni rub geometrije | `#3a4a56` |
 | Srafura | `#7a8a96` |
 
-### Result box
+### Isticanje rezultata
 
-- Konačni numerički rezultat: `fill="#c0392b"` (crveno) ili `#1e8449` (zeleno), `font-weight="700"`
-- Rubna boja kutije odgovara tematskoj boji odjeljka
+- Konačni numerički rezultat navodi se u pratećem tekstu, ne u dekorativnoj SVG kartici.
+- Ako je broj nužan za razumijevanje fizičkog modela, prikazuje se kao kratka oznaka uz odgovarajuću veličinu, bez pozadine, zaobljenoga okvira ili značke.
 
 ---
 
@@ -151,10 +153,10 @@ Tri konceptualno odvojena panela:
 | Panel | Sadržaj |
 |---|---|
 | **Lijevo** (široki) | Fizikalni model — geometrija, sile, kote, oznake |
-| **Srednji / gornji desni** | Ključne jednadžbe poglavlja (jedna po kutiji) |
+| **Srednji / gornji desni** | Kratka veza među veličinama ili presjek modela, samo ako olakšava čitanje geometrije |
 | **Donji desni** | Primjena u strojarstvu — scena koja se **ne smije ponavljati** u P/CH |
 
-Tamni header bar s naslovom poglavlja na vrhu.
+Naslov poglavlja i pune formule ne pojavljuju se u SVG-u: ulogu naslova ima Markdown caption, a jednadžbe pripadaju glavnom tekstu.
 
 **Pravilo vizualne raznolikosti** (kritično za uvodni blok):
 > Uvodni blok smije prikazivati **isključivo scene kojih nema** u riješenim primjerima istog poglavlja.
@@ -333,46 +335,11 @@ Ako prikaz ima vozilo na platformi (dizalica, podizač): kotači pripadaju **voz
 
 ---
 
-## 14. Format informacijskog panela (formula box)
+## 14. Informacija u tehničkoj skici
 
-### Struktura panela
-1. **Header bar** ispunjen tematskom bojom (plava `#1565c0` za formule, zelena `#1e8449` za rezultate), tekst u bijelom centrirano
-2. **Jednako visoki blokovi** za svaku jednadžbu, svi centrirano (`text-anchor="middle"`)
-3. **Tanke svjetle separator linije** između blokova
-4. **Sažetak italic** na dnu panela
-5. **Zaseban "REZULTATI" badge** ispod glavnog panela (kompaktni prikaz ključnih brojeva)
+Skica objašnjava geometriju, referentne razine, smjerove, sile, brzine i dimenzije. Ne ponavlja tablicu podataka, izvedbu ili završni broj iz teksta.
 
-### Struktura jednog bloka
-```
-Label sive (font-size=11, fill="#5a6a78")      ← što se računa
-Formula bold crna (font-size=14, fill="#1a2530") ← kako se računa
-Rezultat bold u boji (font-size=13)              ← rezultat
-```
-
-Boje rezultata:
-- Plava `#1565c0` za tlak/površinu (procesni rezultati)
-- Zelena `#1e8449` za izlaznu silu (krajnji rezultat)
-- Crvena `#c0392b` za ulazni tlak/silu kad je ključan (npr. u rezultatima badge)
-
-### Što izbjegavati
-- **Lijevo poravnanje** mješano s indented rezultatima → izgleda netjedno
-- **Različite veličine fonta** za iste tipove elemenata kroz panel
-- **Nedostatak header bara** → panel izgleda kao nedovršen
-- **Dvije linije gdje stane jedna** → npr. "Isti tlak · veća površina" + "→ veća sila" mogu biti zajedno na jednoj liniji ako stanu
-
-### Primjer urednog bloka (centriran)
-```xml
-<!-- Blok n: y_top..y_bottom (visina ~70 px) -->
-<text x="CENTER" y="Y_LABEL" font-size="11" text-anchor="middle" fill="#5a6a78">Label</text>
-<text x="CENTER" y="Y_FORMULA" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Formula</text>
-<text x="CENTER" y="Y_RESULT" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ vrijednost</text>
-<line x1="..." y1="Y_SEP" x2="..." y2="Y_SEP" stroke="#c8d6e4" stroke-width="1"/>
-```
-
-### Result badge format
-```xml
-<rect x="..." y="..." width="..." height="44" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4"/>
-<text x="CENTER" y="Y_TITLE" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
-<text x="X_LEFT" y="Y_VAL" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">prvi rezultat</text>
-<text x="X_RIGHT" y="Y_VAL" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">drugi rezultat</text>
-```
+- Puna jednadžba smije se dodati jedino ako je sastavni dio same skice i ne može se nedvosmisleno izraziti oznakama veličina.
+- Informacijski paneli, zaglavne trake, zaobljene kartice i značke rezultata ne dodaju se u novu skicu.
+- Kada je za razdvajanje dviju funkcionalnih cjelina potrebna vizualna podloga, rabi se tanka ravna crta ili vrlo blaga neutralna podloga bez sjene i zaobljenja.
+- Uvijek prednost imaju caption, oznake uz geometriju i glavni tekst; SVG ostaje sažeta tehnička crtežna ploha.

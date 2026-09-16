@@ -70,7 +70,7 @@ $$ {#eq-turbostrojevi-matematicki-izvod-06}
 Za pojedinačnu lopaticu koja se pravocrtno giba stalnom brzinom to je izravan radni model. Za cijeli rotor sigurnije je primijeniti moment količine gibanja na nepomični prstenasti kontrolni volumen; ako se prati pojedinačni rotirajući volumen, član akumulacije odnosno članovi neinercijskoga okvira ne smiju se prešutjeti.
 
 ::: {.callout-note}
-## Razrada koraka
+## Postupak rješenja
 Korak: od relativne brzine ($\vec{w}$) → apsolutna sila na pokretnu lopaticu
 
 **1. Relativni ulaz:** Lopatica se giba brzinom $u$, pa mlaz „vidi" lopaticu s relativnom brzinom $w_1 = c_1 - u$ (u 1D slučaju u smjeru mlaza). Maseni protok koji zaista prolazi kroz lopaticu:
@@ -319,6 +319,22 @@ Ova relacija pokazuje da je inducirana brzina kroz idealni rotor proporcionalna 
 Isti zakon zato vodi i Peltonov rotor i potisni sustav: u prvom slučaju fluid gubi korisnu tangencijalnu količinu gibanja i stroj prima rad, a u drugom slučaju fluid dobiva izlazni impuls i platforma prima uzgon ili pogon. Nova fizika nije u drugoj formuli, nego u tome tko preuzima reakciju i u kojem se referentnom okviru čita tok.
 
 To je pravi strojarski smisao <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Turbostrojevi i propulzija</span></span>. Na Peltonovu kolu loš odabir obodne brzine odmah smanjuje moment i snagu generatora. Na vodilici ili ispitnoj glavi pogrešno pročitan izlazni vektor znači pogrešnu reakciju nosača. Na propeleru ili vodomlaznome pogonu ista matematika povezuje ubrzanje fluida s potiskom sustava.
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — referentni okvir rotora</p>
+
+Brzina koju vidi lopatica razlikuje se od brzine u nepokretnom sustavu, pa se i numerički rezultat mora čitati u jasno navedenom okviru. Trokuti brzina, moment i snaga trebaju se provjeriti istim konvencijama na ulazu i izlazu; inače se može dobiti brojčano uredan, ali pogrešno protumačen rad stroja.
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — rotor i relativna brzina</p>
+
+Numerički model turbostroja računa apsolutne i relativne brzine, tlak te moment na rotoru. MRF opisuje stacionarnu aproksimaciju u rotirajućem okviru, dok su klizajuća mreža ili drugi nestacionarni pristupi potrebni kada interakcija rotora i statora mijenja traženi odziv.
+
+Moment, snaga, protok i promjena vrtložne komponente brzine čitaju se u dosljedno odabranom referentnom okviru. Korisna je neovisna provjera Eulerovom jednadžbom turbostroja pri istim presjecima, predznacima i obodnoj brzini lopatice.
+
+Stacionarni model može dobro opisati srednju radnu točku, ali ne i pulsacije, prolaz lopatica ili nestacionarnu kavitaciju. Za takve pojave provjeravaju se vremenski korak, broj okretaja potrebnih za statistiku i osjetljivost momenta na mrežu uz lopatice.
+:::
 
 ## Riješeni primjeri
 
@@ -842,7 +858,6 @@ $\dot m = \rho Av$, a za potpuno kočenje komponente brzine na ploči vrijedi $F
 $\dot m \approx 9{,}1\ \text{kg/s}$; $F \approx 219\ \text{N}$.
 :::
 ::::
-**Skica:** da - sapnica, ravna ploča i os mlaza sa silom reakcije.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -863,7 +878,6 @@ iz presjeka dobij $\dot m$, a zatim razliku ulazne i izlazne komponente brzine u
 $\dot m \approx 12{,}5\ \text{kg/s}$; $F_x \approx 435\ \text{N}$, $F_y \approx -304\ \text{N}$; reakcija nosača $\approx 531\ \text{N}$.
 :::
 ::::
-**Skica:** da - zakrenuta nepomična vodilica, ulazni i izlazni vektor brzine.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -884,7 +898,6 @@ prijeđi na relativne brzine, zatim vrati apsolutnu izlaznu brzinu i iz tangenci
 $w_1 = 20\ \text{m/s}$; $F_t \approx 672\ \text{N}$; $P \approx 8{,}06\ \text{kW}$.
 :::
 ::::
-**Skica:** da - pokretna lopatica, brzina lopatice $u$, ulazni i izlazni trokut brzina.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -905,7 +918,6 @@ tangencijalna sila slijedi iz $F_t = \dot m (v_{u1} - v_{u2})$, a moment je $M =
 $F_t = 528\ \text{N}$; $M \approx 222\ \text{N·m}$.
 :::
 ::::
-**Skica:** da - rotor, polumjer $R$, mlaz i tangencijalne komponente brzine na ulazu i izlazu.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -926,7 +938,6 @@ za jednu sapnicu vrijedi $F = \dot m v$ i $P = \dot m v^2/2$; ukupni rezultat je
 ukupni potisak $\approx 3{,}73\ \text{kN}$; hidraulička snaga $\approx 78{,}4\ \text{kW}$.
 :::
 ::::
-**Skica:** da - platforma s tri sapnice, smjer mlaza i rezultantni potisak.
 
 [Razina: T3]{.mf1-task-level}
 
@@ -947,13 +958,24 @@ najprije zbroji izlazne površine svih sapnica; zatim koristi $F_p = \rho A v^2$
 $F_p \approx 3{,}19\ \text{kN}$; najveća masa lebdenja $\approx 325\ \text{kg}$; pri $m = 110\ \text{kg}$ ubrzanje $a \approx 19{,}2\ \text{m/s}^2$. Za $d_{min}=27{,}7\ \text{mm}$ i $v_{min}=34{,}5\ \text{m/s}$ najmanji je potisak približno $2{,}86\ \text{kN}$, pa zadani kriterij daje $m_{krit}\approx265\ \text{kg}$. To je rezultat idealiziranoga statičkog modela, ne certificirana nosivost; nedostaju dinamika, stabilnost, konstrukcija, upravljanje i mjerodavni propisi.
 :::
 ::::
-**Skica:** da - platforma s četiri sapnice, smjerovi mlazova, ukupni potisak i težina sustava.
 
 [Razina: T4]{.mf1-task-level}
 
 :::::
 
 ![Skice uz zadatke za vježbu — ploče, pokretne lopatice i sapnice.](../assets/print/u12_vjezbe_skice.svg){#fig-u12-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — ploče, pokretne lopatice i sapnice."}
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerički most</p>
+
+**Gdje ovo živi u numerici.** Numerički modeli turbostrojeva računaju apsolutnu i relativnu brzinu, tlak te moment na rotoru. MRF je stacionarna aproksimacija u rotirajućem okviru; klizajuća mreža ili drugi nestacionarni pristupi potrebni su kada je važna vremenska interakcija rotora i statora.
+
+**Što numerički alat radi s tim.** Iz polja tlaka i viskoznih naprezanja integriraju se sila, moment i snaga. Rezultat ovisi o domeni, mreži, vremenskom koraku, rubnim uvjetima i odabranim modelima turbulencije ili višefaznosti.
+
+**Tipičan scenarij.** Simulacija može pokazati zone niskog tlaka i, uz izričito odabran višefazni model, procijeniti opseg parne faze. Sama po sebi ne dokazuje kavitacijsku otpornost ni vijek bez erozije; za takve zaključke trebaju verifikacija, odgovarajući eksperimentalni podatci i zaseban materijalni model [@nasa-cfd-vv; @asme-vv20-2009].
+
+> *Nije gradivo MF1. Veza s ručnim računom ostaje bilanca momenta i snage, ali složeniji numerički model uvodi dodatne pretpostavke koje treba zasebno provjeriti.*
+:::
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -985,16 +1007,4 @@ Peltonovo kolo, vodomlazni pogon i mlazna ispitna glava rade dobro samo ako je i
 Maksimalna sila nije isto što i maksimalna snaga, a idealizirana promjena vektora brzine nije dovoljna ako su važni gubici u lopatici, neujednačen profil brzine ili složenija geometrija mlaza. U stvarnom stroju izbor kuta i brzine uvijek treba čitati zajedno s učinkovitošću, a ne samo sa silom.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Turbostrojevi i propulzija</span></span> počinje kontrolnim volumenom, ne turbinom. Jasno čitanje promjene količine gibanja na mirnoj vodilici daje stabilnu osnovu i za reakcije nosača i za kasnije pokretne lopatice.
-:::
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Gdje ovo živi u numerici.** Numerički modeli turbostrojeva računaju apsolutnu i relativnu brzinu, tlak te moment na rotoru. MRF je stacionarna aproksimacija u rotirajućem okviru; klizajuća mreža ili drugi nestacionarni pristupi potrebni su kada je važna vremenska interakcija rotora i statora.
-
-**Što numerički alat radi s tim.** Iz polja tlaka i viskoznih naprezanja integriraju se sila, moment i snaga. Rezultat ovisi o domeni, mreži, vremenskom koraku, rubnim uvjetima i odabranim modelima turbulencije ili višefaznosti.
-
-**Tipičan scenarij.** Simulacija može pokazati zone niskog tlaka i, uz izričito odabran višefazni model, procijeniti opseg parne faze. Sama po sebi ne dokazuje kavitacijsku otpornost ni vijek bez erozije; za takve zaključke trebaju verifikacija, odgovarajući eksperimentalni podatci i zaseban materijalni model [@nasa-cfd-vv; @asme-vv20-2009].
-
-> *Nije gradivo MF1. Veza s ručnim računom ostaje bilanca momenta i snage, ali složeniji numerički model uvodi dodatne pretpostavke koje treba zasebno provjeriti.*
 :::

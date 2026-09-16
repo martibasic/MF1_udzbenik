@@ -186,6 +186,12 @@ $$ {#eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-02}
 Skalarni jednodimenzijski oblik $\tau = \mu\,dv/dy$ koristi se kao radna verzija u svim $1$D problemima ovog poglavlja. Tenzorski zakon i njegov ulazak u Navier–Stokesovu jednadžbu sustavno se obrađuju u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span>.
 :::
 
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — gradijent brzine uz stijenku</p>
+
+Viskozna sila u CFD-u dolazi iz gradijenta brzine koji se računa uz stijenku. Ako prvi dio mreže uz stijenku i zidni model ne predstavljaju stvarni profil, pad tlaka i sila trenja mogu biti pogrešni i uz male reziduale; zato se provjeravaju zidna razlučivost, svojstva fluida i duljina razvoja toka.
+:::
+
 ## Površinska napetost i kontaktni kut
 
 Na granici fluida i druge faze molekule nemaju jednaku okolinu kao u unutrašnjosti fluida. Zbog toga međupovršina ima dodatnu energiju. Taj se učinak opisuje površinskom napetošću $\sigma$.
@@ -298,6 +304,16 @@ Pri tome je ovdje $\Delta p=p_{unutra}-p_{vani}$, a zakrivljenosti su pozitivne 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
 Zakrivljena površina zahtijeva tlačni skok koji uravnotežuje površinsku napetost. Što je manji promjer, to je veća zakrivljenost i veći potreban skok tlaka. Faktor 4 za kapljicu nastaje jer sfera ima jednu granicu faza i polumjer $r=d/2$; faktor 8 za sapunasti mjehur dolazi od dviju površina opne. Pri kavitaciji mjehuri pare mogu nastati i rasti kada lokalni **apsolutni** tlak dovoljno padne u odnosu na tlak pare. Stvarni prag ovisi i o prisutnim jezgrama, otopljenim plinovima te Laplaceovu nadtlaku $2\sigma/r$; površinska napetost zato otežava rast vrlo malih jezgara, a ne daje jednostavan kriterij „tlaka koji zatvara mikrokapljicu”.
+:::
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — konstitutivni model</p>
+
+Newtonov zakon viskoznosti zatvara viskozni član jednadžbe količine gibanja u CFD-u. Za nenewtonski fluid, slobodnu površinu ili pokretnu kontaktnu liniju sama mreža nije dovoljna: odabiru se odgovarajući konstitutivni i međufazni modeli, a njihovi parametri provjeravaju se prema mjerenju.
+
+Najprije se određuje je li ključan pad tlaka, položaj međupovršine, sila na stijenci ili brzina kapilarnoga prodiranja. Za svaku od tih veličina treba odabrati vlastitu mrežnu i vremensku provjeru: stabilan ukupni protok ne dokazuje da su zakrivljenost meniska ili lokalno smično naprezanje dovoljno razlučeni.
+
+Usporedba s mjerenjem treba koristiti istu temperaturu, čistoću stijenke i definiciju kontaktnoga kuta. Bez toga se razlika ne smije automatski pripisati solveru ni gustoći mreže.
 :::
 
 ## Riješeni primjeri
@@ -492,7 +508,6 @@ Kapilarnost sama podiže vodu za oko $36{,}8\ \text{mm}$, dok izlaz mikrodozator
 ::: {#ex-u02-hladni-start-i-radna-temperatura-koliko-kosta .mf1-we}
 <p class="mf1-box-label">P5. Utjecaj temperature na viskozni otpor kliznog ležaja &nbsp;<span class="mf1-level">T2</span></p>
 
-**Primjer za strojare**
 
 **Kontekst:** U ovoj kontroliranoj usporedbi isti idealizirani klizni ležaj promatra se pri dvjema zadanim temperaturama i dvjema zadanim dinamičkim viskoznostima. Cilj je izdvojiti samo linearnu ovisnost Couetteova smičnog otpora o $\mu$; primjer ne predstavlja radnu kartu određenoga motora niti uputu za njegovo rukovanje.
 
@@ -675,7 +690,6 @@ $dv/dy = v/\delta$, zatim $\tau = \mu dv/dy$ i na kraju $F = \tau A$.
 $dv/dy \approx 271\ \text{s}^{-1}$; $\tau \approx 228\ \text{Pa}$; $F \approx 50\ \text{N}$.
 :::
 ::::
-**Skica:** da - dvije ploče, razmak $\delta$, gornja brzina $v$ i aktivna površina $A$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -696,7 +710,6 @@ iz $F = \tau A$ dobij $\tau$, a zatim iz $\tau = \mu v/\delta$ vrati $\mu$.
 $\tau = 150\ \text{Pa}$; $\mu \approx 0{,}34\ \text{Pa s}$.
 :::
 ::::
-**Skica:** da - ploča u procjepu s označenim $F$, $v$, $A$ i $\delta$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -717,7 +730,6 @@ koristi aproksimaciju ravnih slojeva: $\tau = \mu v/\delta$ i $F = \tau A$ uz $A
 $\tau = 960\ \text{Pa}$; $F \approx 51\ \text{N}$.
 :::
 ::::
-**Skica:** da - vratilo u ležajnom procjepu, oznake $D$, $L$, $\delta$ i smjer gibanja.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -738,7 +750,6 @@ $h = 4\sigma \cos\theta /(\rho g d)$; drugi slučaj računa se istom formulom sa
 $h \approx 18{,}0\ \text{mm}$; kod $d = 1{,}2\ \text{mm}$ upola manje, $h \approx 9{,}0\ \text{mm}$.
 :::
 ::::
-**Skica:** da - dvije tanke kapilare, meniskus, kontaktni kut $\theta$ i različiti promjeri.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -759,7 +770,6 @@ najprije kapilarni uspon iz $h = 4\sigma \cos\theta /(\rho g d)$, a zatim tlak s
 $h \approx 32{,}2\ \text{mm}$; $\Delta p \approx 240\ \text{Pa}$.
 :::
 ::::
-**Skica:** da - kapilara s meniskusom i zasebno kapljica raspršivača s označenim promjerom $d_k$.
 
 [Razina: T3]{.mf1-task-level}
 
@@ -780,13 +790,22 @@ prvo izračunaj $h_{cap} = 4\sigma /(\rho g d)$, zatim tlakovni skok kapljice $\
 $h_{cap} \approx 58{,}8\ \text{mm}$; u idealizaciji kapilarnog uspona dobiva se zanemariv dodatni pretlak, $p_M \approx 0$. Kada je na izlazu već formirana sferna kapljica, konzervativni model daje $p_{M,konz}\approx0{,}571\ \text{kPa}$. Regulator od $0{,}50\ \text{kPa}$ stoga nije dovoljan za oba stanja: prvi model opisuje uspon s meniskusom u igli, ali izbor regulatora mora pokriti drugi model ili se mora provjeriti prijelaz između njih.
 :::
 ::::
-**Skica:** da - spremnik, kapilarna igla, visina $H$ i izlazna kapljica promjera $D$.
 
 [Razina: T4]{.mf1-task-level}
 
 :::::
 
 ![Skice uz zadatke za vježbu — viskozni procjepi, kapilare i kapljice (poglavlje 2).](../assets/print/u02_vjezbe_skice.svg){#fig-u02-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — viskozni procjepi, kapilare i kapljice (poglavlje 2)."}
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerički most — konstitutivni i međufazni modeli</p>
+
+**Gdje ovo živi u numerici.** Površinska napetost i kontaktni kut ulaze u višefazne modele kada su važne kapljice, mjehurići, menisci ili tanki filmovi. Njihovo izostavljanje opravdano je tek nakon procjene mjerodavnih duljina, bezdimenzijskih brojeva i tražene izlazne veličine.
+
+**Što numerički alat radi s tim.** U metodi VOF polje volumnoga udjela između nule i jedan prati raspodjelu faza, a međufazni model prenosi učinak zakrivljenosti u jednadžbu količine gibanja. To je način diskretizacije međupovršine, ne nova fizikalna bilanca; kontaktni kut ostaje zaseban rubni podatak.
+
+**Tipičan scenarij.** U mikrofluidici, premazivanju i procesnoj tehnici viskoznost može ovisiti o stopi smicanja, pa se konstitutivni model i njegovi parametri provjeravaju prema mjerenju. Simulacija kapljice na stijenci ne postaje vjerodostojna samo finijom mrežom ako su kontaktni kut, histereza ili svojstva međupovršine pogrešno zadani.
+:::
 
 ## Sažetak
 

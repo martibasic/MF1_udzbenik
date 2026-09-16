@@ -126,6 +126,12 @@ $$
 $$ {#eq-energijska-bilanca-matematicki-izvod-bernoullijeva-jednadzba-iz-eul-01}
 
 ::: {.callout-note collapse="true" icon="false"}
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — energija po usklađenim presjecima</p>
+
+U idealiziranom proračunu energijska se bilanca ne uspoređuje proizvoljno po cijeloj domeni, nego između presjeka ili duž iste strujnice. Ako se mijenjaju ulazni profil, referenca tlaka ili presjek, prije usporedbe s Bernoullijem treba uskladiti srednje brzine, tlakove i geodetske kote.
+:::
+
 ## Kada se trenje može zanemariti
 
 Eulerove jednadžbe opisuju tok u kojem zanemarujemo viskozne sile. Računalo tada može procijeniti, primjerice, kako se brzina i tlak mijenjaju u glatkom suženju ako su gubitci mali.
@@ -140,7 +146,7 @@ v\,dv + \frac{dp}{\rho} + g\,dz = 0.
 $$ {#eq-energijska-bilanca-numericki-trag-01}
 
 ::: {.callout-note}
-## Razrada koraka
+## Postupak rješenja
 Korak: od Eulerove jednadžbe gibanja → Bernoullijeva jednadžba integriranjem
 
 Eulerova jednadžba: $\rho v\frac{dv}{ds} = -\frac{dp}{ds} - \rho g\frac{dz}{ds}$.
@@ -262,6 +268,16 @@ Odmah ispod izvoda treba zatvoriti i pretpostavke modela. U <span class="mf1-ch-
 To nije formalnost. Najčešći kvar u Bernoulliju nastaje onda kada se vide tlak i brzina pa se automatski zapisuje jednadžba, a da prije toga nije provjeren model.
 
 Riješeni primjeri i zadaci za vježbu zato samo redom pokazuju kako isti Bernoullijev zapis čita pad statičkog tlaka u suženju, brzinu slobodnog mlaza, tlak u sifonu i Pitotovo lokalno mjerenje.
+
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički trag — energetska provjera</p>
+
+Bernoullijev rezultat nije opći CFD model, ali jest analitička referenca za Eulerov slučaj koji dijeli njegove pretpostavke. Usporedba se vodi na istoj strujnici, s istom referencom energije i uz odvojenu provjeru mrežne te iteracijske konvergencije; u viskoznom računu dio pada energije predstavlja fizički gubitak.
+
+Najprije se uspoređuju tlak, brzina i ukupna visina na istim presjecima, a zatim osjetljivost tih veličina na mrežu i iteracijski postupak. Pad energijske crte u Eulerovu testu upozorava na numeričku disipaciju ili rubni uvjet koji ne predstavlja idealni slučaj.
+
+U viskoznom proračunu razlika prema idealnom Bernoulliju nije automatski pogreška. Ona može biti stvarna disipacija, pa se model gubitaka provjerava zasebno prema mjerenju ili primjenjivoj korelaciji.
+:::
 
 ## Riješeni primjeri
 
@@ -602,7 +618,6 @@ U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="m
 ::: {#ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2 .mf1-we}
 <p class="mf1-box-label">P5. Venturijeva cijev za mjerenje protoka ulja &nbsp;<span class="mf1-level">T2</span></p>
 
-**Primjer za strojare**
 
 **Kontekst:** U industrijskom maznom sustavu Venturijeva cijev mjeri protok ulja. Diferencijalnim manometrom (živa u U-cijevi) mjeri se razlika tlakova između ulaza i grla. Iz te razlike se računa protok.
 
@@ -779,7 +794,6 @@ između slobodne površine i izlaza vrijedi Torricelli: $v = \sqrt{2gH}$; nakon 
 $v \approx 7{,}92\ \text{m/s}$; $Q \approx 4{,}21\ \text{L/s}$; $\dot m \approx 4{,}20\ \text{kg/s}$.
 :::
 ::::
-**Skica:** da - veliki spremnik, slobodna površina, izlazna sapnica i geodetska visina $H$.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -800,7 +814,6 @@ iz kontinuiteta dobij $v_1$ i $v_2$, a za horizontalni kanal bez gubitaka vrijed
 $v_1 = 7{,}0\ \text{m/s}$, $v_2 = 21{,}0\ \text{m/s}$; $\Delta p \approx 235\ \text{Pa}$.
 :::
 ::::
-**Skica:** da - horizontalni konfuzor s dva presjeka, brzinama i tlakovima.
 
 [Razina: T1]{.mf1-task-level}
 
@@ -821,7 +834,6 @@ spoji kontinuitet $A_1 v_1 = A_2 v_2$ s Bernoullijem između ulaza i grla, pa ri
 $v_2 \approx 7{,}38\ \text{m/s}$; $Q \approx 28{,}4\ \text{L/s}$.
 :::
 ::::
-**Skica:** da - Venturi s ulazom, grlom i označenom razlikom tlakova $\Delta p$.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -842,7 +854,6 @@ u Pitotu vrijedi $\Delta p = \rho v^2/2$, pa brzina slijedi iz $v = \sqrt{2\Delt
 $v \approx 4{,}13\ \text{m/s}$.
 :::
 ::::
-**Skica:** da - strujna cijev s Pitot otvorom, stagnacijska i statička točka.
 
 [Razina: T2]{.mf1-task-level}
 
@@ -863,7 +874,6 @@ brzinu dobij iz Bernoullija između slobodne površine i izlaza, a tlak u vrhu i
 $v \approx 7{,}41\ \text{m/s}$; $p_C \approx 62{,}8\ \text{kPa}$ (aps.); $HGL_C=-2{,}8\ \text{m}$ u odnosu na slobodnu površinu; $p_C-p_v\approx60{,}5\ \text{kPa}$, pa idealni račun pokazuje pozitivnu rezervu.
 :::
 ::::
-**Skica:** da - spremnik, sifonska cijev, vrh sifona, izlaz i visinske kote.
 
 [Razina: T3]{.mf1-task-level}
 
@@ -884,13 +894,30 @@ Bernoullijem između slobodne površine i izlaza vrati idealni $v$, između slob
 Idealni model daje $v \approx 7{,}14\ \text{m/s}$; $Q \approx 27{,}5\ \text{L/s}$; $p_C \approx 59{,}2\ \text{kPa}$ (aps.); domet $x \approx 3{,}53\ \text{m}$. Za $K_\Sigma=2{,}0$ stvarni je protok približno $15{,}9\ \text{L/s}$, a za interval $K_\Sigma=1{,}5$--$2{,}5$ iznosi približno $17{,}4$--$14{,}7\ \text{L/s}$. Konzervativni tlak u vrhu ostaje oko $59{,}2\ \text{kPa}$ apsolutno, pa je tlačni zahtjev zadovoljen, ali se zahtjev protoka ne može zajamčiti. Potrebno je smanjiti gubitke, povećati promjer ili potvrditi $K_\Sigma$ mjerenjem.
 :::
 ::::
-**Skica:** da - spremnik, sifonska cijev s vrhom $C$, vodoravni izlaz i domet mlaza do tla.
 
 [Razina: T4]{.mf1-task-level}
 
 :::::
 
 ![Skice uz zadatke za vježbu — sapnice, Venturijeve cijevi, Pitot i sifoni.](../assets/print/u09_vjezbe_skice.svg){#fig-u09-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — sapnice, Venturijeve cijevi, Pitot i sifoni."}
+
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerički most</p>
+
+**Gdje ovo živi u numerici.** Bernoullijeva jednadžba ima u CFD-u dvije različite uloge. Prva: Eulerove jednadžbe, iz kojih se pod odgovarajućim pretpostavkama izvodi Bernoulli, čine neviskozni model toka. Druga: Bernoullijev rezultat služi kao analitička referenca za **verifikaciju** idealiziranog slučaja i kao provjera reda veličine u presjecima gdje su gubitci mali. Validacija realnoga modela ipak traži podatke stvarnog sustava.
+
+**Što numerički alat radi s tim.** Duž odabrane strujnice ili kroz usklađene presjeke iz polja $p$ i $v$ izračunavaju se `EGL` i `HGL`. U numeričkom Eulerovu slučaju koji dijeli Bernoullijeve pretpostavke, neželjeni pad `EGL` može otkriti diskretizacijsku disipaciju, nedovoljnu konvergenciju ili neusklađene rubne uvjete; usporedba mora koristiti istu strujnicu i istu referencu energije.
+
+**Tipičan scenarij.** Eulerov model može poslužiti kao jeftiniji predprojektni model kada su viskozni učinci sekundarni, a zatim se odabrane geometrije provjeravaju viskoznim modelom. Koliko je takav račun brži i koliko je točan nije univerzalno: ovisi o mreži, solveru, geometriji i traženoj izlaznoj veličini.
+
+> *Nije gradivo MF1. Bernoulli koji se ovdje piše za dvije točke, u CFD-u postaje provjera koja vrijedi za čitavu domenu.*
+:::
+
+::: {.callout-tip collapse="true" icon="false"}
+## Provjera CFD-a analitičkim rješenjem
+
+Bernoullijeva jednadžba može biti **referentno analitičko rješenje** za numerički model koji dijeli njezine pretpostavke. U idealiziranom Eulerovu modelu Venturija uspoređuju se isti presjeci, primjerice ulaz i grlo, te se provjerava smanjuje li se razlika prema Bernoulliju pri iteracijskoj i mrežnoj konvergenciji. Ne postoji univerzalna dopuštena razlika od $5\,\%$. U viskoznom CFD modelu dio razlike prema idealnom Bernoulliju predstavlja stvaran gubitak energije, pa se takav model validira mjerenjem ili odgovarajućim koreliranim modelom gubitaka. Razliku između verifikacije i validacije sustavno obrađuje dodatak D04.
+:::
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -923,22 +950,4 @@ Venturijeve cijevi, Pitotove sonde i mlaznice rade upravo zato što se ista meha
 Idealni Bernoulli prestaje biti dovoljan čim trenje, vrtloženje ili lokalni otpori daju mjerljiv gubitak, odnosno kad se predviđeni apsolutni tlak približi području promjene faze. Tada problem traži modele iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span>.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> zatvara idealnu energetsku sliku strujanja: brzina ne raste niotkuda, nego na račun tlaka ili geodetske visine. Kad se to učvrsti, prijelaz prema <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span> postaje prirodan.
-:::
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Gdje ovo živi u numerici.** Bernoullijeva jednadžba ima u CFD-u dvije različite uloge. Prva: Eulerove jednadžbe, iz kojih se pod odgovarajućim pretpostavkama izvodi Bernoulli, čine neviskozni model toka. Druga: Bernoullijev rezultat služi kao analitička referenca za **verifikaciju** idealiziranog slučaja i kao provjera reda veličine u presjecima gdje su gubitci mali. Validacija realnoga modela ipak traži podatke stvarnog sustava.
-
-**Što numerički alat radi s tim.** Duž odabrane strujnice ili kroz usklađene presjeke iz polja $p$ i $v$ izračunavaju se `EGL` i `HGL`. U numeričkom Eulerovu slučaju koji dijeli Bernoullijeve pretpostavke, neželjeni pad `EGL` može otkriti diskretizacijsku disipaciju, nedovoljnu konvergenciju ili neusklađene rubne uvjete; usporedba mora koristiti istu strujnicu i istu referencu energije.
-
-**Tipičan scenarij.** Eulerov model može poslužiti kao jeftiniji predprojektni model kada su viskozni učinci sekundarni, a zatim se odabrane geometrije provjeravaju viskoznim modelom. Koliko je takav račun brži i koliko je točan nije univerzalno: ovisi o mreži, solveru, geometriji i traženoj izlaznoj veličini.
-
-> *Nije gradivo MF1. Bernoulli koji se ovdje piše za dvije točke, u CFD-u postaje provjera koja vrijedi za čitavu domenu.*
-:::
-
-::: {.callout-tip collapse="true" icon="false"}
-## Provjera CFD-a analitičkim rješenjem
-
-Bernoullijeva jednadžba može biti **referentno analitičko rješenje** za numerički model koji dijeli njezine pretpostavke. U idealiziranom Eulerovu modelu Venturija uspoređuju se isti presjeci, primjerice ulaz i grlo, te se provjerava smanjuje li se razlika prema Bernoulliju pri iteracijskoj i mrežnoj konvergenciji. Ne postoji univerzalna dopuštena razlika od $5\,\%$. U viskoznom CFD modelu dio razlike prema idealnom Bernoulliju predstavlja stvaran gubitak energije, pa se takav model validira mjerenjem ili odgovarajućim koreliranim modelom gubitaka. Razliku između verifikacije i validacije sustavno obrađuje dodatak D04.
 :::

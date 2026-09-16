@@ -1,22 +1,22 @@
-## Dobrodošli u Mehaniku fluida 1
+## O udžbeniku
 
 Udžbenik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. Petnaest poglavlja vodi od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i otvorenim kanalima.
 
-Za prvo čitanje prati glavni tekst i riješene primjere, zatim samostalno pokušaj početne zadatke. Blokove *Dublje* i napomene o računalnim proračunima možeš ostaviti za kasnije; nisu preduvjet za razumijevanje osnovnog gradiva.
+Osnovni tok izlaganja čine glavni tekst i riješeni primjeri, nakon kojih slijede zadatci za samostalan rad. Blokovi *Dublje* i napomene o računalnim proračunima nisu preduvjet za razumijevanje osnovnog gradiva.
 
 ## Predznanje
 
-Potrebni su osnove mehanike, rad i energija te račun s jedinicama i vektorima. Diferencijalni i integralni račun koriste se u izvodima, a vektorska analiza osobito je važna za diferencijalni opis toka. Okvir *Prije čitanja poglavlja* navodi konkretno predznanje i ishode koje trebaš usvojiti.
+Pretpostavljaju se osnove mehanike, rada i energije te račun s jedinicama i vektorima. Diferencijalni i integralni račun primjenjuju se u izvodima, a vektorska analiza osobito je važna za diferencijalni opis toka. Zahtijevano predznanje pojedinoga poglavlja naznačeno je uz njegov uvodni dio.
 
 Procijenjeno vrijeme uz poglavlja služi planiranju samostalnog rada. Ukupno je predviđeno približno **145 sati rada uz udžbenik**, uključujući zadatke i numeričke pokuse; to nije cjelokupno ECTS opterećenje kolegija.
 
-## Kako raditi s poglavljem
+## Struktura rada s poglavljem
 
-1. Pročitaj uvod i odredi koje fizikalno pitanje poglavlje rješava.
-2. Uz izvod prati skicu, pretpostavke i značenje svakog člana jednadžbe.
-3. U riješenom primjeru pokušaj sam napisati početnu jednadžbu prije čitanja rješenja.
-4. Riješi zadatke za vježbu. U mrežnom izdanju otvori naputak ili kontrolni rezultat tek nakon vlastitog pokušaja; u PDF-u ih pronađi u dodatku F.
-5. Odgovori na pitanja *Provjeri sebe* i pročitaj završni sažetak.
+1. Uvod određuje fizikalno pitanje i opseg modela poglavlja.
+2. Izvodi povezuju skicu, pretpostavke i značenje pojedinih članova jednadžbe.
+3. Riješeni primjeri uspostavljaju početnu jednadžbu i slijed proračuna.
+4. Zadatci za vježbu razvrstani su po razini samostalnog izbora modela; mrežno izdanje sadrži sklopive smjernice i kontrolne rezultate, a PDF izdanje odgovarajući dodatak F.
+5. Sažetak poglavlja okuplja osnovne modele, granice njihove primjene i inženjersko značenje rezultata.
 
 Kratki primjeri uvode pojedinu relaciju, a cjeloviti zadatci povezuju više koraka. Okviri *Fizikalno značenje* tumače rezultat, dok *Granica modela* objašnjava kada odabrane pretpostavke prestaju vrijediti.
 
@@ -24,7 +24,7 @@ Kratki primjeri uvode pojedinu relaciju, a cjeloviti zadatci povezuju više kora
 
 Riješeni primjeri označeni su **P1, P2, … unutar svakog poglavlja**. Oznaka stoji lijevo ispred naslova. Koraci unutar rješenja imaju vlastiti redoslijed 1., 2., 3., bez dodatne numeracije odjeljka.
 
-Zadatci za vježbu označeni su **Z1–Z6 unutar svakog poglavlja**, uz kratak naslov problema. Iste oznake i naslove koristi ključ rezultata u dodatku F. Pri upućivanju navedi i poglavlje, primjerice „poglavlje 3, Z2”.
+Zadatci za vježbu označeni su **Z1–Z6 unutar svakog poglavlja**, uz kratak naslov problema. Iste oznake i naslove koristi ključ rezultata u dodatku F. Upućivanje na zadatak uključuje i oznaku poglavlja, primjerice „poglavlje 3, Z2”.
 
 Razine T1–T4, sitno navedene na kraju zadatka, pokazuju koliko samostalnog izbora zadatak traži, a ne samo koliko je račun dug.
 
@@ -35,13 +35,13 @@ Razine T1–T4, sitno navedene na kraju zadatka, pokazuju koliko samostalnog izb
 | **T3** | Izbor ili povezivanje modela uz obrazloženje pretpostavki. |
 | **T4** | Procjenu nesigurnosti, rad s nepotpunim podatcima ili obrazloženu inženjersku odluku. |
 
-U svakom poglavlju šest je samostalnih zadataka, od T1 do T4. Kreni redom; ako zapneš na T1 ili T2, vrati se pripadnom riješenom primjeru. Za T3 i T4 uz rezultat napiši i obrazloženje odabranog postupka.
+U svakom je poglavlju šest zadataka, od T1 do T4. Niže razine oslanjaju se na neposredno primijenjene modele, dok T3 i T4 zahtijevaju obrazloženje odabranoga postupka, pretpostavki i zaključka.
 
 ## Numerički pokusi i izdanja
 
-Numerički pokusi pomažu istražiti kako promjena podataka utječe na rezultat. Prije pokretanja predvidi što će se promijeniti, zatim izračunaj i usporedi s predviđanjem. Bilježnice (*Jupyter notebooks*) otvaraju se preko poveznica ili QR kodova, bez prijave u JupyterLiteu; dostupna je i poveznica za Google Colab.
+Numerički pokusi služe istraživanju utjecaja promjene podataka na rezultat. Bilježnice (*Jupyter notebooks*) dostupne su preko poveznica ili QR kodova, bez prijave u JupyterLiteu; dostupna je i poveznica za Google Colab.
 
-**Za čitanje i rješavanje zadataka dovoljan je tekst udžbenika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. Za ispis preuzmi PDF.
+**Za čitanje i rješavanje zadataka dovoljan je tekst udžbenika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. PDF izdanje namijenjeno je ispisu i radu bez mrežne veze.
 
 ## Dodaci za brzo snalaženje
 
@@ -50,10 +50,4 @@ Numerički pokusi pomažu istražiti kako promjena podataka utječe na rezultat.
 - **C — Tipične pogreške:** pomoć pri traženju pogreške u vlastitom postupku.
 - **D — Numerička mehanika fluida:** dodatno čitanje o numeričkim metodama i provjeri simulacija.
 - **E — Literatura i izvori:** izvori i preporučeno čitanje.
-- **F — Ključ kontrolnih rezultata:** naputci, rezultati i kriteriji za otvorene zadatke.
-
-::: {.mf1-checklist}
-<p class="mf1-box-label">Prije završetka zadatka</p>
-
-Provjeri skicu, pretpostavke, jedinice i predznak rezultata. Zatim odaberi još jednu provjeru primjerenu zadatku: bilancu, granični slučaj ili očekivani red veličine. Zapiši što rezultat znači za promatrani sustav.
-:::
+- **F — Ključ kontrolnih rezultata:** smjernice, rezultati i kriteriji za otvorene zadatke.
