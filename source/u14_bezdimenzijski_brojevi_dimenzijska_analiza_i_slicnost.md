@@ -10,6 +10,8 @@ Dimenzijska analiza povezuje tlačne, viskozne, gravitacijske, inercijske i međ
 Brod se prije gradnje ispituje kao model u vučnom bazenu, automobil i zrakoplovno krilo u aerotunelu, a brodski vijak i centrifugalna crpka provjeravaju se na kavitaciju. Model i prototip ponašaju se jednako u bezdimenzijskom smislu samo ako su im jednaki **svi mjerodavni** brojevi te bezdimenzijski rubni i početni uvjeti. Kad to nije moguće, bira se prioritetna sličnost i kvantificira učinak neusklađenih grupa. Isti jezik povezuje vrtložno otpuštanje, raspad mlaza, stlačivost i prijenos rezultata iz laboratorija u pogon.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+
 ## Dimenzije, jedinice i sila inercije kao referenca
 
 Mehaničke veličine u ovom poglavlju izražavaju se preko tri **primarne dimenzije**: mase $\mathsf{M}$, duljine $\mathsf{L}$ i vremena $\mathsf{T}$. Tako brzina ima dimenziju $\mathsf{L}\,\mathsf{T}^{-1}$, gustoća $\mathsf{M}\,\mathsf{L}^{-3}$, a tlak i naprezanje $\mathsf{M}\,\mathsf{L}^{-1}\,\mathsf{T}^{-2}$. Kada problem uključuje toplinske veličine, potrebna je i dimenzija temperature $\Theta$. Načelo **dimenzijske homogenosti** kaže da svaki ispravan fizikalni izraz mora s obje strane imati istu dimenziju — to je ujedno prva i najjeftinija provjera svake jednadžbe.

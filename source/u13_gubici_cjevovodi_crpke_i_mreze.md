@@ -10,6 +10,8 @@ Cjevovod nije popis formula za cijevi, koljena i ventile. To je sustav kroz koji
 Isti graf modela opisuje balastni vod broda, rashladni krug podatkovnog centra, protupožarnu mrežu, sustav centralnog grijanja i tlačni vod vodnoga grada. Razlikuju se fluid, geometrija i kriterij odluke; bilance ostaju iste. U modernom projektu račun se ne završava promjerom cijevi: provjeravaju se radna točka, godišnja električna energija, osjetljivost na hrapavost i usisno ograničenje crpke.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 12 sati.
+
 ## Realna energijska bilanca sustava {#sec-realna-energijska-bilanca}
 
 Promatrajmo stacionarni tok nestlačivog fluida kroz kontrolni volumen s jednim ulaznim presjekom 1 i jednim izlaznim presjekom 2. Pozitivni smjer protoka ide od 1 prema 2. Crpka fluidu dodaje visinu $h_p$, turbina je oduzima za $h_t$, a disipacija se zapisuje pozitivnim članom $h_w\ge0$. Bilanca mehaničke energije po jedinici težine glasi
@@ -47,13 +49,13 @@ $$
 \Phi=2\mu S_{ij}S_{ij}\geq0,
 \qquad
 S_{ij}=\frac12\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right).
-$$
+$$ {#eq-cjevovodi-disipacija-kao-izvor-gubitka-01}
 
 Kada se energetski tokovi na ulaznom i izlaznom presjeku vrednuju dosljedno, dio mehaničke energije označen s $h_w$ povezan je s tom nepovratnom pretvorbom:
 
 $$
 \rho gQh_w=\int_V\Phi\,dV.
-$$
+$$ {#eq-cjevovodi-disipacija-kao-izvor-gubitka-02}
 
 Zato je doprinos $h_w$ nenegativan, a u idealnom graničnom slučaju $\mu=0$ nestaje. U jednodimenzijskom računu Darcyjev i lokalni koeficijent gubitka sažimaju ovaj učinak; u RANS proračunu dio prijenosa i disipacije predstavlja turbulencijski model. Ta interpretacija ne uklanja potrebu za mrežnom konvergencijom, validacijom i fizikalno odgovarajućim rubnim uvjetima.
 :::

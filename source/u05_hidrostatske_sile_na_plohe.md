@@ -21,6 +21,8 @@ gdje je $\mathbf n_f$ jedinična normala usmjerena **iz stvarnog fluida prema st
 Isti se račun pojavljuje na brodskim i procesnim poklopcima, ustavama retencijskih bazena, stijenkama rashladnih spremnika i zakrivljenim prijelazima vodnih građevina. Hidrostatika daje opterećenje fluida za zadanu geometriju i stanje. Ne provjerava sama po sebi čvrstoću, zamor, brtvljenje, stabilnost cijele konstrukcije ni normativnu prihvatljivost.
 :::
 
+**Procijenjeno vrijeme rada uz udžbenik:** 11 sati.
+
 U osnovnom modelu fluid miruje, gustoća svakog homogenog sloja je stalna, gravitacijsko polje je jednoliko, a kapilarni učinci zanemarivi.
 
 ## Referentni tlak i smjer sile
@@ -527,6 +529,21 @@ F_Vx_V=\rho gbR^3\left(\frac\pi4-\frac13\right).
 $$ {#eq-sile-plohe-rijeseni-primjer-zglobni-poklopac-s-vertikalnom-08}
 
 Zbroj je $\rho gb\pi R^3/4=F_VR$, pa identitet daje $T=F_V=13{,}026\ \mathrm{kN}$. Jednakost je geometrijska provjera ovog slučaja, a ne opće pravilo za zakrivljene poklopce.
+:::
+
+::: {.mf1-samoprovjera}
+<p class="mf1-box-label">Provjeri sebe</p>
+
+1. Zašto je u hidrostatskoj sili važno razlikovati neto tlak od apsolutnog tlaka?
+2. Zašto je centar tlaka na uronjenoj ravnoj plohi niže od težišta plohe kada tlak raste s dubinom?
+3. Zašto je za zakrivljenu plohu često sigurnije rastaviti silu na vodoravnu i okomitu komponentu?
+4. Zašto izračunana hidrostatska sila nije potpuna provjera sigurnosti poklopca ili ustave?
+
+::: {.callout-note collapse="true"}
+### Odgovori
+
+Jednoliki referentni tlak može se poništiti samo ako djeluje s obje strane na isti način; u suprotnom mijenja i silu i hvatište. Dublji dijelovi nose veći tlak pa povlače rezultantu prema dolje. Na zakrivljenoj plohi normale mijenjaju smjer, a komponente se lakše vežu uz projekciju i težinu zamišljenog stupca fluida. Konstrukcijska sigurnost dodatno traži čvrstoću, rubne uvjete, dinamička opterećenja i odgovarajuće sigurnosne kriterije.
+:::
 :::
 
 ## Zadaci za samostalan rad
