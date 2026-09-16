@@ -1639,7 +1639,7 @@
       "level": "T1",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 684,
+        "line": 615,
         "anchor": "#task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera"
       },
       "statement": {
@@ -1719,7 +1719,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 696
+          "line": 627
         }
       },
       "tolerance": {
@@ -1842,7 +1842,7 @@
       "level": "T1",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 705,
+        "line": 635,
         "anchor": "#task-u01-na-kruzni-klip-promjera-djeluje-sila-odredi"
       },
       "statement": {
@@ -1909,7 +1909,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 717
+          "line": 647
         }
       },
       "tolerance": {
@@ -2002,7 +2002,7 @@
       "level": "T2",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 726,
+        "line": 655,
         "anchor": "#task-u01-u-zatvorenoj-hidraulicnoj-stezi-tlak-ulja-iznosi"
       },
       "statement": {
@@ -2069,7 +2069,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 738
+          "line": 667
         }
       },
       "tolerance": {
@@ -2162,7 +2162,7 @@
       "level": "T2",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 747,
+        "line": 675,
         "anchor": "#task-u01-hidraulicni-stol-nosi-teret-mase-preko-dvaju"
       },
       "statement": {
@@ -2255,7 +2255,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 759
+          "line": 687
         }
       },
       "tolerance": {
@@ -2378,7 +2378,7 @@
       "level": "T3",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 768,
+        "line": 695,
         "anchor": "#task-u01-rucna-pumpa-s-klipom-promjera-razvija-silu"
       },
       "statement": {
@@ -2458,7 +2458,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 780
+          "line": 707
         }
       },
       "tolerance": {
@@ -2581,7 +2581,7 @@
       "level": "T4",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 789,
+        "line": 715,
         "anchor": "#task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra"
       },
       "statement": {
@@ -2712,21 +2712,14 @@
             "text": "Odredi tlak u ulju, ukupno idealno opterećenje koje stol može nositi i ukupan idealni hod pumpnog klipa potreban da se stol podigne za $\\Delta z = 18\\ \\text{mm}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 789
+              "line": 715
             }
           },
           {
             "text": "Za odluku o puštanju u rad uzmi da su izmjereni faktor prijenosa sile $\\eta_F=0{,}86\\pm0{,}04$ i volumetrijska učinkovitost $\\eta_V=0{,}90\\pm0{,}03$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 789
-            }
-          },
-          {
-            "text": "zatim idealno opterećenje iz $G = 3pA_L$, a idealni hod pumpe iz volumne bilance $A_p s_p = 3A_L \\Delta z$.",
-            "provenance": {
-              "kind": "task_hint",
-              "line": 795
+              "line": 715
             }
           }
         ],
@@ -2741,7 +2734,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 801
+          "line": 727
         }
       },
       "tolerance": {
@@ -2963,7 +2956,7 @@
       "level": "T1",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 740,
+        "line": 696,
         "anchor": "#task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se"
       },
       "statement": {
@@ -3043,7 +3036,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 752
+          "line": 708
         }
       },
       "tolerance": {
@@ -3166,7 +3159,7 @@
       "level": "T1",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 761,
+        "line": 716,
         "anchor": "#task-u02-klizna-ploca-povrsine-giba-se-brzinom-kroz"
       },
       "statement": {
@@ -3246,7 +3239,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 773
+          "line": 728
         }
       },
       "tolerance": {
@@ -3339,7 +3332,7 @@
       "level": "T2",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 782,
+        "line": 736,
         "anchor": "#task-u02-vratilo-promjera-i-duljine-vrti-se-tako"
       },
       "statement": {
@@ -3432,7 +3425,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 794
+          "line": 748
         }
       },
       "tolerance": {
@@ -3525,7 +3518,7 @@
       "level": "T2",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 803,
+        "line": 756,
         "anchor": "#task-u02-kapilara-promjera-uronjena-je-u-etanol-za"
       },
       "statement": {
@@ -3618,7 +3611,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 815
+          "line": 768
         }
       },
       "tolerance": {
@@ -3711,7 +3704,7 @@
       "level": "T3",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 824,
+        "line": 776,
         "anchor": "#task-u02-staklena-kapilara-promjera-uronjena-je-u-vodu"
       },
       "statement": {
@@ -3804,7 +3797,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 836
+          "line": 788
         }
       },
       "tolerance": {
@@ -3897,7 +3890,7 @@
       "level": "T4",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 845,
+        "line": 796,
         "anchor": "#task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na"
       },
       "statement": {
@@ -4016,7 +4009,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 857
+          "line": 808
         }
       },
       "tolerance": {
@@ -4138,7 +4131,7 @@
       "level": "T1",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 742,
+        "line": 706,
         "anchor": "#task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu"
       },
       "statement": {
@@ -4198,7 +4191,7 @@
             "text": "Otvoreni spremnik s vodom ima slobodnu površinu na atmosferskom tlaku.",
             "provenance": {
               "kind": "task_statement",
-              "line": 742
+              "line": 706
             }
           }
         ],
@@ -4213,7 +4206,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 754
+          "line": 718
         }
       },
       "tolerance": {
@@ -4306,7 +4299,7 @@
       "level": "T1",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 763,
+        "line": 726,
         "anchor": "#task-u03-u-zatvorenom-spremniku-iznad-vode-vlada-manometarski"
       },
       "statement": {
@@ -4379,7 +4372,7 @@
             "text": "Odredi apsolutni i manometarski tlak u priključku koji se nalazi $1{,}80\\ \\text{m}$ ispod slobodne površine ako je lokalni atmosferski tlak $p_{atm} = 99{,}2\\ \\text{kPa}$, a gustoća vode $\\rho = 998\\ \\text{kg/m}^3$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 763
+              "line": 726
             }
           }
         ],
@@ -4394,7 +4387,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 775
+          "line": 738
         }
       },
       "tolerance": {
@@ -4487,7 +4480,7 @@
       "level": "T2",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 784,
+        "line": 746,
         "anchor": "#task-u03-cjevovod-s-uljem-gustoce-spojen-je-na"
       },
       "statement": {
@@ -4567,7 +4560,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 796
+          "line": 758
         }
       },
       "tolerance": {
@@ -4630,7 +4623,7 @@
       "level": "T2",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 805,
+        "line": 766,
         "anchor": "#task-u03-diferencijalni-manometar-ispunjen-zivom-spaja-dvije-tocke"
       },
       "statement": {
@@ -4684,7 +4677,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 817
+          "line": 778
         }
       },
       "tolerance": {
@@ -4747,7 +4740,7 @@
       "level": "T3",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 826,
+        "line": 786,
         "anchor": "#task-u03-vakuumski-spremnik-spojen-je-na-otvoreni-zivin"
       },
       "statement": {
@@ -4807,7 +4800,7 @@
             "text": "Ako je lokalni atmosferski tlak $p_{atm} = 98{,}6\\ \\text{kPa}$, odredi apsolutni tlak plina u spremniku.",
             "provenance": {
               "kind": "task_statement",
-              "line": 826
+              "line": 786
             }
           }
         ],
@@ -4822,7 +4815,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 838
+          "line": 798
         }
       },
       "tolerance": {
@@ -4915,7 +4908,7 @@
       "level": "T4",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 847,
+        "line": 806,
         "anchor": "#task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor"
       },
       "statement": {
@@ -5059,21 +5052,21 @@
             "text": "Uzmite $\\rho_w = 998\\ \\text{kg/m}^3$ i $p_{atm} = 100{,}9\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 847
+              "line": 806
             }
           },
           {
             "text": "Za izbor apsolutnoga pretvornika tlaka uzmi tolerancije $\\Delta h\\pm2\\ \\text{mm}$, $h_1\\pm5\\ \\text{mm}$, $h_2\\pm5\\ \\text{mm}$ i $p_{atm}\\pm0{,}4\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 847
+              "line": 806
             }
           },
           {
             "text": "Za konzervativnu gornju granicu istodobno uzmi najveće $p_{atm}$, $\\Delta h$ i $h_2$, a najmanje $h_1$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 853
+              "line": 812
             }
           }
         ],
@@ -5088,7 +5081,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 859
+          "line": 818
         }
       },
       "tolerance": {
@@ -5235,7 +5228,7 @@
       "level": "T1",
       "source": {
         "path": "source/u04_relativno_mirovanje_fluida.md",
-        "line": 697,
+        "line": 648,
         "anchor": "#task-u04-otvoreni-pravokutni-spremnik-duljine-i-pocetne-dubine"
       },
       "statement": {
@@ -5315,7 +5308,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u04_relativno_mirovanje_fluida.md",
-          "line": 709
+          "line": 660
         }
       },
       "tolerance": {
@@ -5438,7 +5431,7 @@
       "level": "T1",
       "source": {
         "path": "source/u04_relativno_mirovanje_fluida.md",
-        "line": 718,
+        "line": 668,
         "anchor": "#task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine"
       },
       "statement": {
@@ -5505,7 +5498,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u04_relativno_mirovanje_fluida.md",
-          "line": 730
+          "line": 680
         }
       },
       "tolerance": {
@@ -5568,7 +5561,7 @@
       "level": "T2",
       "source": {
         "path": "source/u04_relativno_mirovanje_fluida.md",
-        "line": 739,
+        "line": 688,
         "anchor": "#task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce"
       },
       "statement": {
@@ -5628,7 +5621,7 @@
             "text": "za usporedbu u mirovanju uzmi $\\Delta p_0 = \\rho gh$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 745
+              "line": 694
             }
           }
         ],
@@ -5643,7 +5636,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u04_relativno_mirovanje_fluida.md",
-          "line": 751
+          "line": 700
         }
       },
       "tolerance": {
@@ -5766,7 +5759,7 @@
       "level": "T2",
       "source": {
         "path": "source/u04_relativno_mirovanje_fluida.md",
-        "line": 760,
+        "line": 708,
         "anchor": "#task-u04-ubrzani-otvoreni-spremnik-sirine-stijenke-i-duljine"
       },
       "statement": {
@@ -5846,7 +5839,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u04_relativno_mirovanje_fluida.md",
-          "line": 772
+          "line": 720
         }
       },
       "tolerance": {
@@ -5939,7 +5932,7 @@
       "level": "T3",
       "source": {
         "path": "source/u04_relativno_mirovanje_fluida.md",
-        "line": 781,
+        "line": 728,
         "anchor": "#task-u04-cilindricna-posuda-radijusa-s-pocetnom-dubinom-vode"
       },
       "statement": {
@@ -6006,7 +5999,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u04_relativno_mirovanje_fluida.md",
-          "line": 793
+          "line": 740
         }
       },
       "tolerance": {
@@ -6129,7 +6122,7 @@
       "level": "T4",
       "source": {
         "path": "source/u04_relativno_mirovanje_fluida.md",
-        "line": 802,
+        "line": 748,
         "anchor": "#task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen"
       },
       "statement": {
@@ -6224,7 +6217,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u04_relativno_mirovanje_fluida.md",
-          "line": 814
+          "line": 760
         }
       },
       "tolerance": {
@@ -6496,7 +6489,7 @@
       "level": "T1",
       "source": {
         "path": "source/u05_hidrostatske_sile_na_plohe.md",
-        "line": 557,
+        "line": 538,
         "anchor": "#task-u05-ravna-pravokutna-zaklopka"
       },
       "statement": {
@@ -6558,14 +6551,14 @@
             "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           },
           {
             "text": "Ako nije drukčije navedeno, voda ima $\\rho=998\\ \\mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           }
         ],
@@ -6578,7 +6571,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u05_hidrostatske_sile_na_plohe.md",
-          "line": 572
+          "line": 553
         }
       },
       "tolerance": {
@@ -6701,7 +6694,7 @@
       "level": "T1",
       "source": {
         "path": "source/u05_hidrostatske_sile_na_plohe.md",
-        "line": 580,
+        "line": 561,
         "anchor": "#task-u05-zakrivljeni-poklopac-cetvrtine-kruga"
       },
       "statement": {
@@ -6763,14 +6756,14 @@
             "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           },
           {
             "text": "Ako nije drukčije navedeno, voda ima $\\rho=998\\ \\mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           }
         ],
@@ -6783,7 +6776,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u05_hidrostatske_sile_na_plohe.md",
-          "line": 595
+          "line": 576
         }
       },
       "tolerance": {
@@ -6906,7 +6899,7 @@
       "level": "T2",
       "source": {
         "path": "source/u05_hidrostatske_sile_na_plohe.md",
-        "line": 603,
+        "line": 584,
         "anchor": "#task-u05-kosi-poklopac-sa-zglobom"
       },
       "statement": {
@@ -6981,14 +6974,14 @@
             "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           },
           {
             "text": "Ako nije drukčije navedeno, voda ima $\\rho=998\\ \\mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           }
         ],
@@ -7001,7 +6994,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u05_hidrostatske_sile_na_plohe.md",
-          "line": 618
+          "line": 599
         }
       },
       "tolerance": {
@@ -7124,7 +7117,7 @@
       "level": "T2",
       "source": {
         "path": "source/u05_hidrostatske_sile_na_plohe.md",
-        "line": 626,
+        "line": 607,
         "anchor": "#task-u05-dvoslojna-vertikalna-stijena"
       },
       "statement": {
@@ -7212,14 +7205,14 @@
             "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           },
           {
             "text": "Ako nije drukčije navedeno, voda ima $\\rho=998\\ \\mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           }
         ],
@@ -7232,7 +7225,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u05_hidrostatske_sile_na_plohe.md",
-          "line": 641
+          "line": 622
         }
       },
       "tolerance": {
@@ -7325,7 +7318,7 @@
       "level": "T3",
       "source": {
         "path": "source/u05_hidrostatske_sile_na_plohe.md",
-        "line": 649,
+        "line": 630,
         "anchor": "#task-u05-zglobni-zakrivljeni-poklopac-model"
       },
       "statement": {
@@ -7387,14 +7380,14 @@
             "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           },
           {
             "text": "Ako nije drukčije navedeno, voda ima $\\rho=998\\ \\mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           }
         ],
@@ -7407,7 +7400,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u05_hidrostatske_sile_na_plohe.md",
-          "line": 664
+          "line": 645
         }
       },
       "tolerance": {
@@ -7650,7 +7643,7 @@
       "level": "T4",
       "source": {
         "path": "source/u05_hidrostatske_sile_na_plohe.md",
-        "line": 672,
+        "line": 653,
         "anchor": "#task-u05-nesigurnost-modela-i-mjerenja"
       },
       "statement": {
@@ -7778,14 +7771,14 @@
             "text": "Neovisna mjerna ćelija daje $F_m=11{,}60\\ \\mathrm{kN}$ uz $u(F_m)=0{,}30\\ \\mathrm{kN}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 672
+              "line": 653
             }
           },
           {
             "text": "Pretpostavite nezavisne ulaze i primijenite linearnu propagaciju nesigurnosti.",
             "provenance": {
               "kind": "task_statement",
-              "line": 672
+              "line": 653
             }
           }
         ],
@@ -7795,14 +7788,14 @@
             "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           },
           {
             "text": "Ako nije drukčije navedeno, voda ima $\\rho=998\\ \\mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 551
+              "line": 532
             }
           }
         ],
@@ -7815,7 +7808,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u05_hidrostatske_sile_na_plohe.md",
-          "line": 687
+          "line": 668
         }
       },
       "tolerance": {
@@ -7962,7 +7955,7 @@
       "level": "T1",
       "source": {
         "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-        "line": 957,
+        "line": 939,
         "anchor": "#task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno"
       },
       "statement": {
@@ -8029,7 +8022,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-          "line": 969
+          "line": 951
         }
       },
       "tolerance": {
@@ -8152,7 +8145,7 @@
       "level": "T1",
       "source": {
         "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-        "line": 978,
+        "line": 959,
         "anchor": "#task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine"
       },
       "statement": {
@@ -8258,7 +8251,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-          "line": 990
+          "line": 971
         }
       },
       "tolerance": {
@@ -8381,7 +8374,7 @@
       "level": "T2",
       "source": {
         "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-        "line": 999,
+        "line": 979,
         "anchor": "#task-u07-plutajuca-servisna-platforma-duljine-i-sirine-ima"
       },
       "statement": {
@@ -8500,7 +8493,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-          "line": 1011
+          "line": 991
         }
       },
       "tolerance": {
@@ -8683,7 +8676,7 @@
       "level": "T2",
       "source": {
         "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-        "line": 1020,
+        "line": 999,
         "anchor": "#task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta"
       },
       "statement": {
@@ -8763,7 +8756,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-          "line": 1032
+          "line": 1011
         }
       },
       "tolerance": {
@@ -8826,7 +8819,7 @@
       "level": "T3",
       "source": {
         "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-        "line": 1041,
+        "line": 1019,
         "anchor": "#task-u07-plutajuci-modul-istiskuje-volumen-vode-i-ima"
       },
       "statement": {
@@ -8893,7 +8886,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-          "line": 1053
+          "line": 1031
         }
       },
       "tolerance": {
@@ -8986,7 +8979,7 @@
       "level": "T4",
       "source": {
         "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-        "line": 1062,
+        "line": 1039,
         "anchor": "#task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta"
       },
       "statement": {
@@ -9209,14 +9202,14 @@
             "text": "ostale podatke uzmi kao točne.",
             "provenance": {
               "kind": "task_statement",
-              "line": 1062
+              "line": 1039
             }
           },
           {
             "text": "najprije uzmi $h_m=(h_L+h_D)/2$ i $m_\\Delta=\\rho_oV_o+\\rho_wV_w$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 1068
+              "line": 1045
             }
           }
         ],
@@ -9231,7 +9224,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u07_uzgon_plivanje_i_stabilnost.md",
-          "line": 1074
+          "line": 1051
         }
       },
       "tolerance": {
@@ -9553,7 +9546,7 @@
       "level": "T1",
       "source": {
         "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-        "line": 791,
+        "line": 746,
         "anchor": "#task-u08-voda-struji-kroz-cijev-koja-se-siri"
       },
       "statement": {
@@ -9633,7 +9626,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-          "line": 803
+          "line": 758
         }
       },
       "tolerance": {
@@ -9756,7 +9749,7 @@
       "level": "T1",
       "source": {
         "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-        "line": 812,
+        "line": 766,
         "anchor": "#task-u08-voda-ulazi-u-sapnicu-promjera-srednjom-brzinom"
       },
       "statement": {
@@ -9823,7 +9816,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-          "line": 824
+          "line": 778
         }
       },
       "tolerance": {
@@ -9916,7 +9909,7 @@
       "level": "T2",
       "source": {
         "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-        "line": 833,
+        "line": 786,
         "anchor": "#task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene"
       },
       "statement": {
@@ -10002,7 +9995,7 @@
             "text": "za stacionarnu mješalicu vrijedi $\\dot m_1 + \\dot m_2 = \\dot m_3$;",
             "provenance": {
               "kind": "task_hint",
-              "line": 839
+              "line": 792
             }
           }
         ],
@@ -10017,7 +10010,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-          "line": 845
+          "line": 798
         }
       },
       "tolerance": {
@@ -10110,7 +10103,7 @@
       "level": "T2",
       "source": {
         "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-        "line": 854,
+        "line": 806,
         "anchor": "#task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz"
       },
       "statement": {
@@ -10190,7 +10183,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-          "line": 866
+          "line": 818
         }
       },
       "tolerance": {
@@ -10343,7 +10336,7 @@
       "level": "T3",
       "source": {
         "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-        "line": 875,
+        "line": 826,
         "anchor": "#task-u08-cilindricni-spremnik-promjera-puni-se-dotokom-dok"
       },
       "statement": {
@@ -10423,7 +10416,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-          "line": 887
+          "line": 838
         }
       },
       "tolerance": {
@@ -10516,7 +10509,7 @@
       "level": "T4",
       "source": {
         "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-        "line": 896,
+        "line": 846,
         "anchor": "#task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce"
       },
       "statement": {
@@ -10672,14 +10665,14 @@
             "text": "Pretpostavi savršeno miješanje i da je spremnik na početku već napunjen mješavinom istog sastava kao spojeni dotoci;",
             "provenance": {
               "kind": "task_statement",
-              "line": 896
+              "line": 846
             }
           },
           {
             "text": "Za najveći porast razine uzmi oba ulazna protoka na gornjoj, a izlaznu brzinu na donjoj granici.",
             "provenance": {
               "kind": "task_hint",
-              "line": 902
+              "line": 852
             }
           }
         ],
@@ -10694,7 +10687,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_kontrolni_volumen_i_kontinuitet.md",
-          "line": 908
+          "line": 858
         }
       },
       "tolerance": {
@@ -10937,7 +10930,7 @@
       "level": "T1",
       "source": {
         "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-        "line": 800,
+        "line": 780,
         "anchor": "#task-u09-veliki-otvoreni-spremnik-sadrzi-vodu-do-visine"
       },
       "statement": {
@@ -10984,7 +10977,7 @@
             "text": "Zanemari gubitke i odredi izlaznu brzinu mlaza, volumenski protok i maseni protok vode.",
             "provenance": {
               "kind": "task_statement",
-              "line": 800
+              "line": 780
             }
           }
         ],
@@ -10999,7 +10992,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-          "line": 812
+          "line": 792
         }
       },
       "tolerance": {
@@ -11122,7 +11115,7 @@
       "level": "T1",
       "source": {
         "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-        "line": 821,
+        "line": 800,
         "anchor": "#task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s"
       },
       "statement": {
@@ -11195,7 +11188,7 @@
             "text": "iz kontinuiteta dobij $v_1$ i $v_2$, a za horizontalni kanal bez gubitaka vrijedi $p_1 + \\rho v_1^2/2 = p_2 + \\rho v_2^2/2$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 827
+              "line": 806
             }
           }
         ],
@@ -11210,7 +11203,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-          "line": 833
+          "line": 812
         }
       },
       "tolerance": {
@@ -11273,7 +11266,7 @@
       "level": "T2",
       "source": {
         "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-        "line": 842,
+        "line": 820,
         "anchor": "#task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni"
       },
       "statement": {
@@ -11333,7 +11326,7 @@
             "text": "Idealna Venturijeva cijev za vodu ima ulazni promjer $D_1 = 120\\ \\text{mm}$ i promjer grla $D_2 = 70\\ \\text{mm}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 842
+              "line": 820
             }
           }
         ],
@@ -11348,7 +11341,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-          "line": 854
+          "line": 832
         }
       },
       "tolerance": {
@@ -11441,7 +11434,7 @@
       "level": "T2",
       "source": {
         "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-        "line": 863,
+        "line": 840,
         "anchor": "#task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok"
       },
       "statement": {
@@ -11482,7 +11475,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-          "line": 875
+          "line": 852
         }
       },
       "tolerance": {
@@ -11545,7 +11538,7 @@
       "level": "T3",
       "source": {
         "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-        "line": 884,
+        "line": 860,
         "anchor": "#task-u09-idealni-sifon-prazni-otvoreni-spremnik-razlika-razina"
       },
       "statement": {
@@ -11618,14 +11611,14 @@
             "text": "Idealni sifon prazni otvoreni spremnik.",
             "provenance": {
               "kind": "task_statement",
-              "line": 884
+              "line": 860
             }
           },
           {
             "text": "Ako je $p_{atm} = 101\\ \\text{kPa}$ i tlak zasićene pare $p_v=2{,}34\\ \\text{kPa}$, procijeni postoji li u idealnom radnom stanju kavitacijska rezerva.",
             "provenance": {
               "kind": "task_statement",
-              "line": 884
+              "line": 860
             }
           }
         ],
@@ -11640,7 +11633,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-          "line": 896
+          "line": 872
         }
       },
       "tolerance": {
@@ -11793,7 +11786,7 @@
       "level": "T4",
       "source": {
         "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-        "line": 905,
+        "line": 880,
         "anchor": "#task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako"
       },
       "statement": {
@@ -11914,21 +11907,21 @@
             "text": "Idealni sifon promjera $D = 70\\ \\text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\\Delta z = 2{,}6\\ \\text{m}$ ispod slobodne površine.",
             "provenance": {
               "kind": "task_statement",
-              "line": 905
+              "line": 880
             }
           },
           {
             "text": "Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza ako je $p_{atm} = 101{,}3\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 905
+              "line": 880
             }
           },
           {
             "text": "Bernoullijem između slobodne površine i izlaza vrati idealni $v$, između slobodne površine i vrha sifona vrati tlak, a domet mlaza zatvori kao vodoravno izbačeno tijelo s visine $1{,}2\\ \\text{m}$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 911
+              "line": 886
             }
           }
         ],
@@ -11943,7 +11936,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-          "line": 917
+          "line": 892
         }
       },
       "tolerance": {
@@ -13413,7 +13406,7 @@
       "level": "T1",
       "source": {
         "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-        "line": 845,
+        "line": 837,
         "anchor": "#task-u11-vodeni-mlaz-promjera-izlazi-iz-sapnice-brzinom"
       },
       "statement": {
@@ -13467,7 +13460,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-          "line": 857
+          "line": 849
         }
       },
       "tolerance": {
@@ -13560,7 +13553,7 @@
       "level": "T1",
       "source": {
         "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-        "line": 866,
+        "line": 857,
         "anchor": "#task-u11-mlaz-vode-udara-okomito-na-nepomicnu-plocu"
       },
       "statement": {
@@ -13614,7 +13607,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-          "line": 878
+          "line": 869
         }
       },
       "tolerance": {
@@ -13707,7 +13700,7 @@
       "level": "T2",
       "source": {
         "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-        "line": 887,
+        "line": 877,
         "anchor": "#task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez"
       },
       "statement": {
@@ -13800,7 +13793,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-          "line": 899
+          "line": 889
         }
       },
       "tolerance": {
@@ -13953,7 +13946,7 @@
       "level": "T2",
       "source": {
         "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-        "line": 908,
+        "line": 897,
         "anchor": "#task-u11-t-racva-prima-vodu-kroz-ulaz-promjera"
       },
       "statement": {
@@ -14052,7 +14045,7 @@
             "text": "Odredi komponente reakcije nosača ako su tlakovi na izlazima atmosferski.",
             "provenance": {
               "kind": "task_statement",
-              "line": 908
+              "line": 897
             }
           }
         ],
@@ -14067,7 +14060,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-          "line": 920
+          "line": 909
         }
       },
       "tolerance": {
@@ -14220,7 +14213,7 @@
       "level": "T3",
       "source": {
         "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-        "line": 929,
+        "line": 917,
         "anchor": "#task-u11-konvergentna-mlaznica-ima-ulazni-promjer-izlazni-promjer"
       },
       "statement": {
@@ -14300,7 +14293,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-          "line": 941
+          "line": 929
         }
       },
       "tolerance": {
@@ -14423,7 +14416,7 @@
       "level": "T4",
       "source": {
         "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-        "line": 950,
+        "line": 937,
         "anchor": "#task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz"
       },
       "statement": {
@@ -14572,7 +14565,7 @@
             "text": "Oba izlaza su na atmosferskom tlaku.",
             "provenance": {
               "kind": "task_statement",
-              "line": 950
+              "line": 937
             }
           }
         ],
@@ -14587,7 +14580,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_kolicina_gibanja_i_sile_strujanja.md",
-          "line": 962
+          "line": 949
         }
       },
       "tolerance": {
@@ -14830,7 +14823,7 @@
       "level": "T1",
       "source": {
         "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-        "line": 731,
+        "line": 724,
         "anchor": "#task-u14-krv-tece-arteriolom-promjera-brzinom-a-voda"
       },
       "statement": {
@@ -14936,7 +14929,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-          "line": 743
+          "line": 736
         }
       },
       "tolerance": {
@@ -15029,7 +15022,7 @@
       "level": "T1",
       "source": {
         "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-        "line": 752,
+        "line": 744,
         "anchor": "#task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom"
       },
       "statement": {
@@ -15089,7 +15082,7 @@
             "text": "vrijednost $0{,}3$ uzmi kao orijentacijski prag.",
             "provenance": {
               "kind": "task_hint",
-              "line": 758
+              "line": 750
             }
           }
         ],
@@ -15104,7 +15097,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-          "line": 764
+          "line": 756
         }
       },
       "tolerance": {
@@ -15197,7 +15190,7 @@
       "level": "T2",
       "source": {
         "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-        "line": 773,
+        "line": 764,
         "anchor": "#task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak"
       },
       "statement": {
@@ -15290,7 +15283,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-          "line": 785
+          "line": 776
         }
       },
       "tolerance": {
@@ -15353,7 +15346,7 @@
       "level": "T2",
       "source": {
         "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-        "line": 794,
+        "line": 784,
         "anchor": "#task-u14-kap-goriva-promjera-izlozena-je-relativnoj-struji"
       },
       "statement": {
@@ -15439,7 +15432,7 @@
             "text": "Za ovaj pojednostavljeni slučaj zanemari viskozne učinke i kao orijentacijski prag početka aerodinamičkog raspada uzmi $We_{kr}=12$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 794
+              "line": 784
             }
           }
         ],
@@ -15454,7 +15447,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-          "line": 806
+          "line": 796
         }
       },
       "tolerance": {
@@ -15517,7 +15510,7 @@
       "level": "T3",
       "source": {
         "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-        "line": 815,
+        "line": 804,
         "anchor": "#task-u14-frekvencija-otpustanja-vrtloga-iza-geometrijski-slicnog-tijela"
       },
       "statement": {
@@ -15610,7 +15603,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-          "line": 827
+          "line": 816
         }
       },
       "tolerance": {
@@ -15721,7 +15714,7 @@
       "level": "T4",
       "source": {
         "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-        "line": 836,
+        "line": 824,
         "anchor": "#task-u14-preljev-brane-ispituje-se-vodenim-modelom-u"
       },
       "statement": {
@@ -15827,7 +15820,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md",
-          "line": 848
+          "line": 836
         }
       },
       "tolerance": {
@@ -15980,7 +15973,7 @@
       "level": "T1",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 258,
+        "line": 283,
         "anchor": "#task-materijalna-derivacija"
       },
       "statement": {
@@ -16036,7 +16029,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 264
+          "line": 289
         }
       },
       "tolerance": {
@@ -16189,7 +16182,7 @@
       "level": "T1",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 272,
+        "line": 297,
         "anchor": "#task-viskozna-difuzija"
       },
       "statement": {
@@ -16258,7 +16251,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 278
+          "line": 303
         }
       },
       "tolerance": {
@@ -16321,7 +16314,7 @@
       "level": "T2",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 286,
+        "line": 311,
         "anchor": "#task-poiseuille-inverzni"
       },
       "statement": {
@@ -16428,14 +16421,14 @@
             "text": "Odredi dinamičku viskoznost i $Re$, a standardnu nesigurnost $u(\\mu)$ procijeni neovisnom RSS-propagacijom.",
             "provenance": {
               "kind": "task_statement",
-              "line": 286
+              "line": 311
             }
           },
           {
             "text": "Za neovisne ulaze vrijedi $[u(\\mu)/\\mu]^2=[4u(D)/D]^2+[u(\\Delta p)/\\Delta p]^2+[u(L)/L]^2+[u(Q)/Q]^2$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 292
+              "line": 317
             }
           }
         ],
@@ -16450,7 +16443,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 298
+          "line": 323
         }
       },
       "tolerance": {
@@ -16586,7 +16579,7 @@
       "level": "T2",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 306,
+        "line": 331,
         "anchor": "#task-couette-povrat"
       },
       "statement": {
@@ -16657,7 +16650,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 318
+          "line": 343
         }
       },
       "tolerance": {
@@ -16779,7 +16772,7 @@
       "level": "T3",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 326,
+        "line": 351,
         "anchor": "#task-granicni-sloj-model"
       },
       "statement": {
@@ -16890,7 +16883,7 @@
             "text": "Odluči je li Blasiusov model ovdje opravdan i navedi koje su njegove pretpostavke prekršene;",
             "provenance": {
               "kind": "task_statement",
-              "line": 326
+              "line": 351
             }
           }
         ],
@@ -16905,7 +16898,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 338
+          "line": 363
         }
       },
       "tolerance": {
@@ -17052,7 +17045,7 @@
       "level": "T4",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 346,
+        "line": 371,
         "anchor": "#task-cfd-tri-mreze"
       },
       "statement": {
@@ -17107,7 +17100,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 358
+          "line": 383
         }
       },
       "tolerance": {
@@ -17282,7 +17275,7 @@
       "level": "T1",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 590,
+        "line": 607,
         "anchor": "#task-gubitci-ravne-dionice"
       },
       "statement": {
@@ -17388,7 +17381,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 602
+          "line": 619
         }
       },
       "tolerance": {
@@ -17571,7 +17564,7 @@
       "level": "T1",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 609,
+        "line": 626,
         "anchor": "#task-laminarna-cijev-smjese"
       },
       "statement": {
@@ -17657,7 +17650,7 @@
             "text": "Zanemari lokalne gubitke.",
             "provenance": {
               "kind": "task_statement",
-              "line": 609
+              "line": 626
             }
           }
         ],
@@ -17672,7 +17665,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 621
+          "line": 638
         }
       },
       "tolerance": {
@@ -17819,7 +17812,7 @@
       "level": "T2",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 628,
+        "line": 645,
         "anchor": "#task-raspodjela-paralelnih-grana"
       },
       "statement": {
@@ -17865,7 +17858,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 640
+          "line": 657
         }
       },
       "tolerance": {
@@ -17987,7 +17980,7 @@
       "level": "T2",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 647,
+        "line": 664,
         "anchor": "#task-radna-tocka-tri-snage"
       },
       "statement": {
@@ -18051,14 +18044,14 @@
             "text": "Za vodu uzmi $\\rho=1000\\ \\mathrm{kg/m^3}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 647
+              "line": 664
             }
           },
           {
             "text": "gubitke pretvarača zanemari.",
             "provenance": {
               "kind": "task_statement",
-              "line": 647
+              "line": 664
             }
           }
         ],
@@ -18073,7 +18066,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 659
+          "line": 676
         }
       },
       "tolerance": {
@@ -18245,7 +18238,7 @@
       "level": "T3",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 666,
+        "line": 683,
         "anchor": "#task-robustan-izbor-promjera"
       },
       "statement": {
@@ -18302,7 +18295,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 678
+          "line": 695
         }
       },
       "tolerance": {
@@ -18524,7 +18517,7 @@
       "level": "T4",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 685,
+        "line": 702,
         "anchor": "#task-regulacija-energija-npsh"
       },
       "statement": {
@@ -18620,7 +18613,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 701
+          "line": 718
         }
       },
       "tolerance": {
@@ -18953,7 +18946,7 @@
       "level": "T1",
       "source": {
         "path": "source/u12_pokretne_lopatice_i_potisak.md",
-        "line": 852,
+        "line": 844,
         "anchor": "#task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice"
       },
       "statement": {
@@ -19007,7 +19000,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_pokretne_lopatice_i_potisak.md",
-          "line": 864
+          "line": 856
         }
       },
       "tolerance": {
@@ -19070,7 +19063,7 @@
       "level": "T1",
       "source": {
         "path": "source/u12_pokretne_lopatice_i_potisak.md",
-        "line": 873,
+        "line": 864,
         "anchor": "#task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice"
       },
       "statement": {
@@ -19150,7 +19143,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_pokretne_lopatice_i_potisak.md",
-          "line": 885
+          "line": 876
         }
       },
       "tolerance": {
@@ -19273,7 +19266,7 @@
       "level": "T2",
       "source": {
         "path": "source/u12_pokretne_lopatice_i_potisak.md",
-        "line": 894,
+        "line": 884,
         "anchor": "#task-u12-na-pokretnu-lopaticu-dolazi-mlaz-vode-apsolutnom"
       },
       "statement": {
@@ -19346,7 +19339,7 @@
             "text": "Pretpostavi da je relativna izlazna brzina po iznosu jednaka ulaznoj i zakrenuta za $150^\\circ$ u odnosu na ulazni relativni smjer.",
             "provenance": {
               "kind": "task_statement",
-              "line": 894
+              "line": 884
             }
           }
         ],
@@ -19361,7 +19354,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_pokretne_lopatice_i_potisak.md",
-          "line": 906
+          "line": 896
         }
       },
       "tolerance": {
@@ -19454,7 +19447,7 @@
       "level": "T2",
       "source": {
         "path": "source/u12_pokretne_lopatice_i_potisak.md",
-        "line": 915,
+        "line": 904,
         "anchor": "#task-u12-peltonova-lopatica-na-rotoru-radijusa-prima-mlaz"
       },
       "statement": {
@@ -19534,7 +19527,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_pokretne_lopatice_i_potisak.md",
-          "line": 927
+          "line": 916
         }
       },
       "tolerance": {
@@ -19627,7 +19620,7 @@
       "level": "T3",
       "source": {
         "path": "source/u12_pokretne_lopatice_i_potisak.md",
-        "line": 936,
+        "line": 924,
         "anchor": "#task-u12-potisni-modul-ima-tri-jednake-sapnice-promjera"
       },
       "statement": {
@@ -19694,7 +19687,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_pokretne_lopatice_i_potisak.md",
-          "line": 948
+          "line": 936
         }
       },
       "tolerance": {
@@ -19787,7 +19780,7 @@
       "level": "T4",
       "source": {
         "path": "source/u12_pokretne_lopatice_i_potisak.md",
-        "line": 957,
+        "line": 944,
         "anchor": "#task-u12-mlazna-platforma-ukupne-mase-ima-cetiri-jednake"
       },
       "statement": {
@@ -19906,7 +19899,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_pokretne_lopatice_i_potisak.md",
-          "line": 969
+          "line": 956
         }
       },
       "tolerance": {
