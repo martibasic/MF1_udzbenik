@@ -70,6 +70,8 @@ book:
 
 format:
   typst:
+    filters:
+      - filters/mf1-typst-author-blocks.lua
     toc: true
     toc-depth: 2
     number-sections: true

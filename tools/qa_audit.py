@@ -500,15 +500,11 @@ def audit_static(manifest: dict[str, Any]) -> dict[str, Any]:
         module_path = REPO_ROOT / "tools" / f"{chapter['module']}.py"
         if not source.is_file():
             issues.append(f"{chapter['id']}: nedostaje izvor {chapter['source']}")
-        else:
-            source_text = source.read_text(encoding="utf-8")
-            actual_anchors = TASK_ANCHOR_RE.findall(source_text)
-            expected_anchors = chapter["exercise_anchors"]
-            if actual_anchors != expected_anchors:
-                issues.append(
-                    f"{chapter['id']}: task anchori izvora ne odgovaraju manifestu; "
-                    f"ocekivano {expected_anchors}, pronadeno {actual_anchors}."
-                )
+        # Popis ``chapters`` inventarizira izvršne, djelomično povijesne
+        # verifier-module. Nakon normalizacije broj poglavlja i broj modula
+        # nisu nužno isti, pa se njihovi task-* anchor-i ne smiju uspoređivati
+        # s kanonskim izvorom. Aktualne anchor-e strogo provjerava
+        # ``canonical_tasks`` izgrađen iz CANONICAL_CHAPTERS iznad.
         if not module_path.is_file():
             issues.append(f"{chapter['id']}: nedostaje modul {module_path.name}")
             continue

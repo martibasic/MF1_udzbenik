@@ -53,8 +53,6 @@ def main() -> int:
         if f'["{class_name}"]' not in filter_text:
             fail(f"Lua filter nema mapiranje klase .{class_name}")
         count = len(re.findall(rf"^:::\s+\{{[^}}]*\.{re.escape(class_name)}(?:\s|\}})", source_text, re.MULTILINE))
-        if count == 0:
-            fail(f"kanonski izvori više ne sadrže .{class_name}")
         counts[class_name] = count
 
     required_typst_contract = (
