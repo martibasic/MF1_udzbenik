@@ -461,8 +461,9 @@ try {
         },
       );
       await settlePage(page);
+      // Skrivena samoprovjera također sadrži calloute, ali ne prima fokus.
       const calloutHeader = page
-        .locator('.callout-header[data-bs-toggle="collapse"]')
+        .locator('.callout-header[data-bs-toggle="collapse"]:visible')
         .first();
       if (await calloutHeader.count()) {
         const role = await calloutHeader.getAttribute("role");
@@ -485,6 +486,10 @@ try {
             `U13 @ ${width}px: sklopivi callout nije potpuno dostupan tipkovnicom`,
           );
         }
+      } else {
+        issues.push(
+          `U13 @ ${width}px: nema vidljivog sklopivog callouta za provjeru tipkovnice`,
+        );
       }
       mkdirSync(snapshotRoot, { recursive: true });
       await page.screenshot({
