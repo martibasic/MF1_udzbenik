@@ -92,6 +92,16 @@ $$ {#eq-uzgon-stabilitet-interaktivni-prikaz-gaz-plivajuceg-tijela-02}
 Ova jednadžba kaže da plivajuće tijelo potapa se točno toliko da istisne svoju vlastitu masu fluida. Ako se teret doda, tijelo se potapa dublje; ako se teret ukloni, izroni. Volumen istisnine $V_{ist}$ nije fizička veličina tijela — on ovisi o gustoći fluida: isti brod u slanoj vodi (gustoća ~1025 kg/m³) istisne manji volumen nego u slatkoj vodi (~998 kg/m³), pa u slanoj vodi plovi nešto više.
 :::
 
+<!-- [RESTAURACIJA] Doslovno preuzeto iz revizije c417e9f. -->
+::: {.callout-note collapse="true" icon="false"}
+## Kako računalo prati plutanje
+
+Za proračun plutanja računalo mora razlikovati vodu od zraka i pratiti gdje se nalazi njihova granica. Jedan je postupak podijeliti prostor na male dijelove, zvane ćelije, i u svakoj pratiti koliki dio zauzima voda.
+
+Iz raspodjele tlaka na uronjenoj površini dobiva se sila uzgona. Ako se tijelo smije gibati, njegove sile i momenti određuju podizanje, spuštanje i nagib. Prva je provjera jednostavna: miran ponton treba imati isti gaz kao u ručnom računu i ostati u ravnoteži. Tek nakon toga ima smisla dodati valove.
+:::
+
+<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
 ::: {.callout-note}
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — tijelo, istisnina i gibanje</p>
@@ -283,6 +293,21 @@ Višefazni numerički model prati granicu voda–zrak i iz dobivenog tlačnog po
 Prati se promjena istisnine, položaj težišta i centra uzgona te moment koji vraća ili povećava nagib. Očuvanje ukupne mase nije dovoljno ako se međupovršina postupno gubi ili dobiva volumen zbog pogreške njezina numeričkog praćenja.
 
 Početni metacentarski rezultat vrijedi za mali kut i zadanu raspodjelu mase. Za veće nagibe, slobodnu površinu u spremniku ili nelinearne valove treba promatrati cijelu krivulju povratnoga momenta i dinamički odziv, ne samo jednu vrijednost $GM$.
+:::
+
+<!-- [NOVA PEDAGOŠKA DOPUNA] -->
+::: {.mf1-numerika}
+<p class="mf1-box-label">Numerička poveznica — od uzgona do proračuna</p>
+
+**Što je zadano, a što se traži.** Za miran ponton poznati su geometrija tijela, njegova masa i položaj težišta, gustoće vode i zraka te gravitacija. Traže se položaj slobodne površine, uronjeni volumen $V_{ist}$, tlak po uronjenoj plohi, rezultantna sila i moment te, ako je tijelo slobodno, njegov gaz i nagib. Računalo zato ne „traži uzgon” kao izdvojenu brojku: traži polja i položaj iz kojih se uzgon dobiva.
+
+**Zašto tlak daje uzgon.** U mirnoj vodi gradijent tlaka uravnotežuje težinu fluida; zato je tlak na donjim dijelovima tijela veći nego na gornjima. Na kontinuiranoj plohi sila je zbroj lokalnih tlaknih doprinosa. U mreži se ploha tijela zamjenjuje konačnim brojem plošnih elemenata: za element površine $\Delta A_i$ s normalom $\vec n_i$ usmjerenom iz tijela u fluid alat pribraja približno $-p_i\vec n_i\Delta A_i$; u viskoznom modelu dodaje i viskoznu trakciju. Vrijednost $p_i$ predstavlja tlak na tom malom elementu, odnosno njegovu plošno reprezentativnu vrijednost, a ne „srednji tlak cijelog broda”. Zbroj svih elemenata numerički je ekvivalent rezultantne sile; u hidrostatskoj ravnoteži daje isti rezultat kao $F_U=\rho gV_{ist}$, Arhimedov zakon. Ta se relacija ne koristi sama za ubrzano tijelo ili valove: tada se rješava vremenski ovisno polje strujanja i gibanje tijela.
+
+**Voda, zrak i slobodna površina.** Slobodna površina jest granica na kojoj se voda susreće sa zrakom. U višefaznom modelu ćelija može nositi udio vode $\alpha$: $\alpha=1$ znači voda, $\alpha=0$ zrak, a međuvrijednost označuje da granica prolazi kroz ćeliju. To je volumenski udio unutar ćelije, ne nova fizikalna tvar. Kako se tijelo podigne, spusti ili nagne, mijenja se raspored $\alpha$, a time i istisnina, tlak i uzgon.
+
+**Granica tijela i mreža.** Na nepropusnoj plohi tijela fluid ne prolazi kroz stijenku; u viskoznom modelu uobičajeno se zadaje i prianjanje fluida uz gibajuću ili nepomičnu plohu. Ti uvjeti određuju gdje se izračunava sila koja djeluje na tijelo. Mreža mora imati dovoljno malene elemente uz vodnu liniju, zakrivljenosti i područja većih promjena tlaka; zgušnjavanje se provjerava usporedbom rezultantne sile, momenta i gaza na više mreža.
+
+**Ravnoteža nije samo konvergencija.** Za statični slučaj provjerava se $F_U=mg$, ravnoteža momenata, očekivani smjer sile, očuvanje mase vode i zraka te podudaranje gaza s ručnim proračunom. Mali reziduali pokazuju da je numerički postupak dosegnuo vlastiti kriterij zaustavljanja, ali ne dokazuju sami po sebi fizičku točnost. Tek kad prolazi taj mirni referentni slučaj, ima smisla tumačiti valove, naplavljivanje ili odziv slobodnoga tijela. Detalji rubnih uvjeta, diskretizacije i verifikacije obrađuju se u poglavlju 12 i dodatku D04.
 :::
 
 ## Riješeni primjeri

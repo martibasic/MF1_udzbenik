@@ -143,7 +143,6 @@ def _audit_quarto_contract() -> tuple[dict[str, object], list[str]]:
         *(f"chapters/{name}" for name in CANONICAL_WRAPPERS),
         *(f"chapters/{name}" for name in APPENDIX_WRAPPERS),
         "chapters/za_ispis.qmd",
-        "za_ispis.qmd",
     ]
     for expected in expected_inputs:
         if not any(fnmatch.fnmatchcase(expected, pattern) for pattern in render_patterns):

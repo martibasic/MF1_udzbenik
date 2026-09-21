@@ -3,4 +3,4 @@ title: "Kinematika, kontrolni volumen i kontinuitet"
 page-layout: article
 ---
 
-{{< include ../source/u08_kontrolni_volumen_i_kontinuitet.md >}}
+{{< include ../source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md >}}

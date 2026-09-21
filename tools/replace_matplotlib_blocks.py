@@ -77,13 +77,13 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = ROOT / "source"
 
 CHAPTER_TO_FILE = {
-    "u07": "u07_uzgon_plivanje_i_stabilnost.md",
-    "u08": "u08_kontrolni_volumen_i_kontinuitet.md",
-    "u09": "u09_bernoullijeva_jednadzba_idealnog_fluida.md",
-    "u10": "u10_realni_bernoulli_i_gubici.md",
-    "u11": "u11_kolicina_gibanja_i_sile_strujanja.md",
-    "u12": "u12_pokretne_lopatice_i_potisak.md",
-    "u13": "u13_cjevovodi.md",
+    "u07": "u06_uzgon_plivanje_i_stabilnost.md",
+    "u08": "u07_kinematika_kontrolni_volumen_i_kontinuitet.md",
+    "u09": "u08_energijska_jednadzba_i_bernoulli.md",
+    "u10": "u13_gubici_cjevovodi_crpke_i_mreze.md",
+    "u11": "u10_kolicina_i_moment_kolicine_gibanja.md",
+    "u12": "u14_turbostrojevi_i_propulzija.md",
+    "u13": "u13_gubici_cjevovodi_crpke_i_mreze.md",
 }
 
 

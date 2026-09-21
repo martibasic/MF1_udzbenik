@@ -19,17 +19,6 @@ project:
     - chapters/u13_gubici_cjevovodi_crpke_i_mreze.qmd
     - chapters/u14_turbostrojevi_i_propulzija.qmd
     - chapters/u15_otvoreni_tokovi.qmd
-    # Kompatibilne adrese starijih izdanja; svaka je samo preusmjerenje.
-    - chapters/u05_hidrostatske_sile_na_ravne_plohe.qmd
-    - chapters/u06_zakrivljene_plohe_i_rastav_sila.qmd
-    - chapters/u07_uzgon_plivanje_i_stabilnost.qmd
-    - chapters/u08_kontrolni_volumen_i_kontinuitet.qmd
-    - chapters/u09_bernoullijeva_jednadzba_idealnog_fluida.qmd
-    - chapters/u10_realni_bernoulli_i_gubici.qmd
-    - chapters/u11_kolicina_gibanja_i_sile_strujanja.qmd
-    - chapters/u12_pokretne_lopatice_i_potisak.qmd
-    - chapters/u13_cjevovodi.qmd
-    - chapters/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.qmd
     - chapters/d01_sazetak_formula_i_oznaka.qmd
     - chapters/d02_pojmovnik.qmd
     - chapters/d03_tipicne_pogreske_po_poglavljima.qmd
@@ -37,7 +26,6 @@ project:
     - chapters/d05_literatura.qmd
     - chapters/d06_kljuc_kontrolnih_rezultata.qmd
     - chapters/za_ispis.qmd
-    - za_ispis.qmd
   resources:
     - assets/**
     - data/cfd/**

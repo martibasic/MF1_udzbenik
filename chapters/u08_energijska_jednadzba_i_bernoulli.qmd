@@ -3,4 +3,4 @@ title: "Energijska jednadžba i Bernoulli"
 page-layout: article
 ---
 
-{{< include ../source/u09_bernoullijeva_jednadzba_idealnog_fluida.md >}}
+{{< include ../source/u08_energijska_jednadzba_i_bernoulli.md >}}

@@ -36,41 +36,6 @@ CANONICAL_HTML = [
     "chapters/d06_kljuc_kontrolnih_rezultata.html",
     "chapters/za_ispis.html",
 ]
-COMPATIBILITY_REDIRECTS = {
-    "za_ispis.html": "chapters/za_ispis.html",
-    "chapters/u05_hidrostatske_sile_na_ravne_plohe.html": (
-        "chapters/u05_hidrostatske_sile_na_plohe.html"
-    ),
-    "chapters/u06_zakrivljene_plohe_i_rastav_sila.html": (
-        "chapters/u05_hidrostatske_sile_na_plohe.html"
-    ),
-    "chapters/u07_uzgon_plivanje_i_stabilnost.html": (
-        "chapters/u06_uzgon_plivanje_i_stabilnost.html"
-    ),
-    "chapters/u08_kontrolni_volumen_i_kontinuitet.html": (
-        "chapters/u07_kinematika_kontrolni_volumen_i_kontinuitet.html"
-    ),
-    "chapters/u09_bernoullijeva_jednadzba_idealnog_fluida.html": (
-        "chapters/u08_energijska_jednadzba_i_bernoulli.html"
-    ),
-    "chapters/u10_realni_bernoulli_i_gubici.html": (
-        "chapters/u13_gubici_cjevovodi_crpke_i_mreze.html"
-    ),
-    "chapters/u11_kolicina_gibanja_i_sile_strujanja.html": (
-        "chapters/u10_kolicina_i_moment_kolicine_gibanja.html"
-    ),
-    "chapters/u12_pokretne_lopatice_i_potisak.html": (
-        "chapters/u14_turbostrojevi_i_propulzija.html"
-    ),
-    "chapters/u13_cjevovodi.html": (
-        "chapters/u13_gubici_cjevovodi_crpke_i_mreze.html"
-    ),
-    "chapters/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.html": (
-        "chapters/u11_dimenzijska_analiza_i_slicnost.html"
-    ),
-}
-
-
 class PageParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
@@ -242,6 +207,8 @@ def main() -> int:
             issues.append(f"nedostaje kanonska stranica {relative}")
             continue
         parsed = _parse_page(page, parsed_pages)
+        if parsed.refresh_urls:
+            issues.append(f"{relative}: kanonska stranica ne smije biti preusmjerenje")
         if parsed.lang.lower() not in {"hr", "hr-hr"}:
             issues.append(f"{relative}: html lang nije hrvatski ({parsed.lang!r})")
         duplicates = sorted(
@@ -283,46 +250,6 @@ def main() -> int:
                 f"{parsed.collapsible_callouts} sklopivih blokova)"
             )
 
-    for relative, expected_relative in COMPATIBILITY_REDIRECTS.items():
-        page = root / relative
-        expected = (root / expected_relative).resolve()
-        if not page.is_file() or page.stat().st_size == 0:
-            issues.append(f"nedostaje kompatibilno preusmjerenje {relative}")
-            continue
-        parsed = _parse_page(page, parsed_pages)
-        for _tag, raw_url in parsed.links:
-            issues.extend(_link_issues(root, page, relative, raw_url, parsed_pages))
-        resolved_refreshes: list[Path] = []
-        for raw_url in parsed.refresh_urls:
-            local = _target(root, page, raw_url)
-            if local is None:
-                continue
-            target, _ = local
-            if target.is_dir():
-                target /= "index.html"
-            resolved_refreshes.append(target.resolve())
-        if expected not in resolved_refreshes:
-            issues.append(
-                f"{relative}: meta-refresh ne cilja {expected_relative!r}"
-            )
-        resolved_canonicals: list[Path] = []
-        for raw_url in parsed.canonical_urls:
-            local = _target(root, page, raw_url)
-            if local is None:
-                continue
-            target, _ = local
-            if target.is_dir():
-                target /= "index.html"
-            resolved_canonicals.append(target.resolve())
-        if expected not in resolved_canonicals:
-            issues.append(
-                f"{relative}: canonical link ne cilja {expected_relative!r}"
-            )
-        if not expected.is_file() or expected.stat().st_size == 0:
-            issues.append(
-                f"{relative}: cilj preusmjerenja ne postoji ({expected_relative})"
-            )
-
     if issues:
         print("Rendered-site audit FAIL:")
         for issue in dict.fromkeys(issues):
@@ -332,7 +259,7 @@ def main() -> int:
         "Rendered-site audit PASS: "
         f"stranice={len(CANONICAL_HTML)}, slike={total_images}, "
         f"veze={total_links}, sklopivi_blokovi={total_details}, "
-        f"preusmjerenja={len(COMPATIBILITY_REDIRECTS)}"
+        "preusmjerenja=0"
     )
     return 0
 

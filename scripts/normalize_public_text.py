@@ -127,24 +127,22 @@ JUPYTERLITE_ROOT = (
     "https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path="
 )
 
-# Kanonski broj poglavlja nije uvijek jednak starom prefiksu izvornog
-# dokumenta: npr. nekadasnji U07 danas je javni U06. Ova je karta zato javno
-# autorsko sucelje, a ne pomocna pretpostavka izvedena iz imena datoteke.
+# Naziv svakog kanonskog izvora počinje brojem njegova javnog poglavlja.
 CANONICAL_SOURCE_CHAPTER = {
     "u01_osnove_fluida_i_pascalov_zakon.md": "u01",
     "u02_viskoznost_povrsinska_napetost_i_kapilarnost.md": "u02",
     "u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md": "u03",
     "u04_relativno_mirovanje_fluida.md": "u04",
     "u05_hidrostatske_sile_na_plohe.md": "u05",
-    "u07_uzgon_plivanje_i_stabilnost.md": "u06",
-    "u08_kontrolni_volumen_i_kontinuitet.md": "u07",
-    "u09_bernoullijeva_jednadzba_idealnog_fluida.md": "u08",
+    "u06_uzgon_plivanje_i_stabilnost.md": "u06",
+    "u07_kinematika_kontrolni_volumen_i_kontinuitet.md": "u07",
+    "u08_energijska_jednadzba_i_bernoulli.md": "u08",
     "u09_kompresibilni_idealni_tok.md": "u09",
-    "u11_kolicina_gibanja_i_sile_strujanja.md": "u10",
-    "u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md": "u11",
+    "u10_kolicina_i_moment_kolicine_gibanja.md": "u10",
+    "u11_dimenzijska_analiza_i_slicnost.md": "u11",
     "u12_diferencijalni_opis_realnog_toka.md": "u12",
     "u13_gubici_cjevovodi_crpke_i_mreze.md": "u13",
-    "u12_pokretne_lopatice_i_potisak.md": "u14",
+    "u14_turbostrojevi_i_propulzija.md": "u14",
     "u15_otvoreni_tokovi.md": "u15",
 }
 CANONICAL_SOURCE_TOPIC = {
@@ -153,15 +151,15 @@ CANONICAL_SOURCE_TOPIC = {
     "u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md": "hidrostatika",
     "u04_relativno_mirovanje_fluida.md": "relativno-mirovanje",
     "u05_hidrostatske_sile_na_plohe.md": "sile-plohe",
-    "u07_uzgon_plivanje_i_stabilnost.md": "uzgon-stabilitet",
-    "u08_kontrolni_volumen_i_kontinuitet.md": "kinematika-kv",
-    "u09_bernoullijeva_jednadzba_idealnog_fluida.md": "energijska-bilanca",
+    "u06_uzgon_plivanje_i_stabilnost.md": "uzgon-stabilitet",
+    "u07_kinematika_kontrolni_volumen_i_kontinuitet.md": "kinematika-kv",
+    "u08_energijska_jednadzba_i_bernoulli.md": "energijska-bilanca",
     "u09_kompresibilni_idealni_tok.md": "kompresibilni-tok",
-    "u11_kolicina_gibanja_i_sile_strujanja.md": "momentum",
-    "u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md": "slicnost",
+    "u10_kolicina_i_moment_kolicine_gibanja.md": "momentum",
+    "u11_dimenzijska_analiza_i_slicnost.md": "slicnost",
     "u12_diferencijalni_opis_realnog_toka.md": "realni-tok",
     "u13_gubici_cjevovodi_crpke_i_mreze.md": "cjevovodi",
-    "u12_pokretne_lopatice_i_potisak.md": "turbostrojevi",
+    "u14_turbostrojevi_i_propulzija.md": "turbostrojevi",
     "u15_otvoreni_tokovi.md": "otvoreni-tokovi",
 }
 PUBLIC_APPENDIX_TOPIC = {

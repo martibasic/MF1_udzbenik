@@ -55,19 +55,19 @@ Za stabilan prijelom, sadržaj, paginaciju i bibliografiju preuzmi [nativni PDF]
 
 # 6. Uzgon, plivanje i početni stabilitet
 
-{{< include ../source/u07_uzgon_plivanje_i_stabilnost.md >}}
+{{< include ../source/u06_uzgon_plivanje_i_stabilnost.md >}}
 
 <div class="page-break"></div>
 
 # 7. Kinematika, kontrolni volumen i kontinuitet
 
-{{< include ../source/u08_kontrolni_volumen_i_kontinuitet.md >}}
+{{< include ../source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md >}}
 
 <div class="page-break"></div>
 
 # 8. Energijska jednadžba i Bernoulli
 
-{{< include ../source/u09_bernoullijeva_jednadzba_idealnog_fluida.md >}}
+{{< include ../source/u08_energijska_jednadzba_i_bernoulli.md >}}
 
 <div class="page-break"></div>
 
@@ -79,13 +79,13 @@ Za stabilan prijelom, sadržaj, paginaciju i bibliografiju preuzmi [nativni PDF]
 
 # 10. Količina i moment količine gibanja
 
-{{< include ../source/u11_kolicina_gibanja_i_sile_strujanja.md >}}
+{{< include ../source/u10_kolicina_i_moment_kolicine_gibanja.md >}}
 
 <div class="page-break"></div>
 
 # 11. Dimenzijska analiza i sličnost
 
-{{< include ../source/u14_bezdimenzijski_brojevi_dimenzijska_analiza_i_slicnost.md >}}
+{{< include ../source/u11_dimenzijska_analiza_i_slicnost.md >}}
 
 <div class="page-break"></div>
 
@@ -103,7 +103,7 @@ Za stabilan prijelom, sadržaj, paginaciju i bibliografiju preuzmi [nativni PDF]
 
 # 14. Turbostrojevi i propulzija
 
-{{< include ../source/u12_pokretne_lopatice_i_potisak.md >}}
+{{< include ../source/u14_turbostrojevi_i_propulzija.md >}}
 
 <div class="page-break"></div>
 

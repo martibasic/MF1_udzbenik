@@ -28,6 +28,7 @@ gdje je $\Delta h$ razlika razina slobodne površine na krajevima spremnika.
 
 Za razliku od hidrostatike u mirujućem spremniku, tlak ne raste samo s okomitom dubinom. Smjer efektivnog polja sila određuje geometriju slobodne površine, lokalnu dubinu i raspodjelu tlaka.
 
+<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — gibanje spremnika</p>
 
@@ -161,6 +162,7 @@ $$ {#eq-relativno-mirovanje-matematicki-izvod-volumno-ocuvanje-paraboloida-e-07}
 Prva se javlja pojava s manjom kritičnom kutnom brzinom. Budući da se uspoređuju $h_0$ i $H-h_0$, vrijedi: za $h_0<H/2$ prvo se ogoljava dno, za $h_0>H/2$ prvo nastupa prelijevanje, a za $h_0=H/2$ pragovi se podudaraju. Nakon prvoga praga mijenja se domena fluida ili volumen u spremniku, pa gornje formule za puni paraboloid više ne vrijede bez nove geometrijske bilance.
 :::
 
+<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — slobodna površina kao provjera</p>
 
@@ -804,6 +806,7 @@ U spremniku koji rotira stalnom kutnom brzinom tlak raste s radijalnom udaljeno�
 
 Model pretpostavlja da su prolazne oscilacije, valjanje, prskanje i relativno strujanje fluida zanemarivi. Pri promjenjivom ubrzanju ili značajnom relativnom gibanju potrebna je nestacionarna analiza.
 
+<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u04_relativno_mirovanje_fluida.md -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički most</p>
 
@@ -814,4 +817,17 @@ Model pretpostavlja da su prolazne oscilacije, valjanje, prskanje i relativno st
 **Tipičan scenarij.** Stacionarni MRF model može dati početnu procjenu srednjih veličina rotirajućega stroja. Kada su važni prolaz rotora kraj statora, pulsacije ili akustika, potreban je odgovarajući nestacionarni model. Računski trošak i potrebna razlučivost ovise o geometriji, mreži, vremenskom koraku i traženoj izlaznoj veličini.
 
 > *Nije gradivo MF1. Paraboloidna slobodna površina iz centrifuge ovdje, u CFD-u javlja se kao polje koje solver sam izračuna.*
+:::
+
+<!-- [NOVA PEDAGOŠKA DOPUNA] -->
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerička poveznica — od gibanja spremnika do provjere</p>
+
+**Što je zadano, a što se traži.** Za relativno miran fluid poznati su geometrija i početni volumen tekućine, gustoća, gravitacija i stalno ubrzanje spremnika ili kutna brzina. Traže se položaj slobodne površine, raspodjela tlaka i opterećenje stijenki. U okviru vezanom uz spremnik zadano se gibanje pojavljuje kao efektivno polje $\vec g_{eff}=\vec g-\vec a$; u inercijskom okviru isti se problem može opisati gibajućim stijenkama. Oba zapisa predstavljaju istu fiziku, ali model relativnog mirovanja vrijedi tek nakon što su prolazni valovi zanemarivi.
+
+**Slobodna površina i granice.** Slobodna površina je granica tekućine i plina na kojoj je za otvoreni spremnik tlak jednak atmosferskom, odnosno zadanom referentnom tlaku. U računalnom modelu može se voditi kao poznata mirna granica u referentnom slučaju ili pratiti pokazateljem faze kada se njezin položaj mijenja. Na stijenkama tekućina ne prolazi kroz spremnik; u inercijskom zapisu brzina fluida na stijenci prati zadano gibanje stijenke, a u okviru spremnika stijenka je mirna. Te granice i početni volumen određuju gdje se može nalaziti površina, pa nagib nije slobodno odabrana geometrija.
+
+**Diskretni račun i kontrola.** Domena se dijeli u ćelije u kojima se predstavljaju tlak i faza, a susjedne vrijednosti povezuju diskretnu bilancu tlaknih, gravitacijskih i inercijskih doprinosa. Za stalno translatorno ubrzanje provjeravaju se ravnina i nagib slobodne površine, a za vrtnju paraboloid; dodatno se uspoređuju očuvani volumen i tlak na stijenkama s analitičkim referentnim slučajem. Pad reziduala pokazuje samo da je numerički postupak dosegnuo svoj kriterij, dok fizičku ispravnost pokazuju ta podudarnost, zanemariva relativna brzina i stabilnost rezultata pri profinjenju mreže. Tek nakon toga mogu se tumačiti valjanje, prskanje ili prelijevanje.
+
+Detalji praćenja međupovršine, rubnih uvjeta, vremenske diskretizacije i verifikacije obrađuju se u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span> i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
 :::

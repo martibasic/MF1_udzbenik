@@ -13,7 +13,7 @@ Ovo je prvi stvarni izlaz nakon `protokol_prerade_zadataka_i_skica.md`. Dokument
 - namjena: zakljucati prvi kucni prag `P2/P3` prerade i prvi standard briefa za skicu
 - povezana puna rjesenja: `val1_puna_rjesenja_zadataka.md`
 - izvedene radne skice: `assets/print/u04_val1_procesna_kada.svg`, `assets/print/u07_val1_platforma_kompresor.svg`, `assets/print/u12_val1_vodilica_mlaza.svg`
-- migrirano u source: `source/u04_relativno_mirovanje_fluida.md`, `source/u07_uzgon_plivanje_i_stabilnost.md`, `source/u12_pokretne_lopatice_i_potisak.md`
+- migrirano u source: `source/u04_relativno_mirovanje_fluida.md`, `source/u06_uzgon_plivanje_i_stabilnost.md`, `source/u14_turbostrojevi_i_propulzija.md`
 
 ---
 

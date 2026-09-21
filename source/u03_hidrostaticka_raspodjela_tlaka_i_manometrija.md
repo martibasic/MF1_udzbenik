@@ -38,6 +38,7 @@ $$p = p_0 + \rho g h$$ {#eq-hidrostatika-fizikalno-znacenje-02}
 Ovo je radna jednadžba hidrostatike: poznati tlak na slobodnoj površini ($p_0$), a zatim dodamo "težinski porast" $\rho g h$ za svaki metar dubine. Za vodu ($\rho \approx 1000\ \text{kg/m}^3$) svaki metar dubine donosi oko $9{,}81\ \text{kPa}$. Za živu ($\rho \approx 13600\ \text{kg/m}^3$) isti metar daje $\approx 133\ \text{kPa}$. Ista jednadžba vrijedi i unazad: iz poznatog tlaka u jednoj točki računa se tlak na svakoj drugoj visini u istom spojenom fluidu.
 :::
 
+<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Mirna voda kao provjera proračuna</p>
 
@@ -170,6 +171,7 @@ $$ {#eq-hidrostatika-matematicki-izvod-izotermalna-atmosfera-i-karakt-05}
 U ovom izotermalnom modelu tlak pada za faktor $e\approx2{,}72$ nakon porasta visine za jednu skalnu visinu, ovdje oko $8{,}4\ \text{km}$. Na $z\approx8{,}8\ \text{km}$ model daje oko $35\ \text{kPa}$, odnosno približno trećinu tlaka na razini mora. Stvarna atmosfera nije izotermalna: za pouzdan atmosferski podatak koristi se odgovarajući standardni ili izmjereni profil temperature i tlaka, dok je ovaj izvod samo model reda veličine [@anderson2021].
 :::
 
+<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — gravitacija u diskretnoj ravnoteži</p>
 
@@ -233,6 +235,7 @@ $$p_{vak} = p_{atm} - p_{aps} = -p_M \qquad (p_M<0)$$ {#eq-hidrostatika-fizikaln
 
 Ako je $p_M < 0$, to ne znači da je tlak "negativan" u apsolutnom smislu, nego da je sustav pod podtlakom u odnosu na okolinu.
 
+<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — hidrostatska ravnoteža</p>
 
@@ -689,6 +692,7 @@ Očitano odstupanje od $50\ \text{kPa}$ ekvivalentno je približno $5{,}11\ \tex
 Hidrostatička razlika tlakova od $372\ \text{kPa}$ između čvorova razmaknutih $38\ \text{m}$ po visini odgovara promjeni oko $9{,}8\ \text{kPa}$ po metru vodenog stupca. Dobivenih $1{,}48\ \text{bar}$ u točki `B` rezultat je zadanoga kvazistatičkog modela, a ne provjera uslužnog tlaka mreže. Alarmni prag mora proizaći iz mjerne nesigurnosti, prirodne varijabilnosti pogona i procjene posljedica, ne iz univerzalne vrijednosti $50\ \text{kPa}$.
 :::
 
+<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički most</p>
 
@@ -724,6 +728,19 @@ Kad bi tlakovi na istoj dubini bili različiti, mirujući fluid ne bi bio u ravn
 - Manometarski i apsolutni tlak moraju se kroz cijeli račun voditi s istom referencom.
 - Složeni manometarski sustavi rješavaju se praćenjem tlaka po segmentima i fluidima.
 - Hidrostatski rezultat nije zamjena za energijsku bilancu u strujajućem sustavu.
+:::
+
+<!-- [NOVA PEDAGOŠKA DOPUNA] -->
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerička poveznica — od hidrostatike do provjere</p>
+
+**Fizikalni model.** U mirnom spremniku težina svakoga malog volumena vode uravnotežena je razlikom tlaknih sila, zato vrijedi $dp/dz=-\rho g$. Za tekućinu stalne gustoće poznati su $\rho$, $g$, geometrija i referentni tlak $p_0$; traži se tlak po dubini, dok brzina mora ostati nula. Zakon se koristi upravo zato što nema strujanja ni ubrzanja; nije samostalno rješenje kada se fluid giba, gustoća se bitno mijenja ili se spremnik ubrzava.
+
+**Granice i diskretni zapis.** Stijenka je fizička granica domene kroz koju u ovom modelu voda ne prolazi, pa se na njoj zadaje nulta normalna brzina. Na slobodnoj površini zadaje se referentni tlak $p_0$ — atmosferski za otvoren spremnik, a tlak plinskoga prostora za zatvoren spremnik — jer ta granica zatvara hidrostatski profil. Računalo domenu dijeli u ćelije i susjedne tlakne vrijednosti povezuje diskretnom bilancom tlaknih i gravitacijskih doprinosa. Vrijednost pridružena ćeliji lokalna je reprezentacija polja; u volumenski integralnom čitanju predstavlja prosjek tlaka preko maloga volumena ćelije, koristan jer se iz njega može sastaviti bilanca sila toga volumena.
+
+**Što znači uspješan proračun.** Numerička konvergencija samo pokazuje da je postupak dosegnuo vlastiti kriterij zaustavljanja. Fizička provjera zahtijeva još da je najveća preostala brzina zanemariva, da tlak na više dubina prati $p=p_0+\rho gh$, da slobodna površina ostane na zadanom položaju i da su tlakne sile i težina u ravnoteži. Te se provjere ponavljaju s finijom mrežom: ako se tlakni profil ili preostala brzina još bitno mijenjaju, diskretna ravnoteža nije dovoljno dobro razlučena.
+
+Detalji diskretizacije, rubnih uvjeta, reziduala i verifikacije obrađuju se u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span> i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
 :::
 
 ## Zadaci za vježbu

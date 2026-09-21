@@ -101,6 +101,7 @@ $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-04}
 Relativna gustoća je bezdimenzijska veličina, a specifična težina ima jedinicu sile po volumenu. Razlikovanje $\rho$, $\gamma$ i $s_r$ nužno je pri proračunu hidrostatskoga tlaka i uzgona.
 :::
 
+<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u01_osnove_fluida_i_pascalov_zakon.md -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Kako računalo pomaže pri proračunu strujanja</p>
 
@@ -225,6 +226,7 @@ $$ {#eq-svojstva-tlak-dublje-izotropnost-tlaka-cauchyjev-tetraedar-03}
 što znači da je tlak u jednoj točki mirujućeg fluida **neovisan o orijentaciji plohe** na kojoj se mjeri. Tlak je dakle skalarna veličina, što opravdava njegov zapis kao polje $p(x, y, z)$ koje će se koristiti u svim daljnjim poglavljima. I u fluidu koji se giba tlak ostaje skalarni, izotropni dio tenzora naprezanja; ukupno naprezanje tada uz tlak sadrži i viskozni, devijatorski dio, pa ukupna kontaktna sila općenito nije samo normalna na plohu.
 :::
 
+<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u01_osnove_fluida_i_pascalov_zakon.md -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Kako računalo povezuje tlak i protok</p>
 
@@ -598,6 +600,7 @@ Sila jedne stege $F_s \approx 1{,}68\ \text{kN}$ manja je od zadane granice $F_{
 Omjer sile jednoga idealnog cilindra i sile pumpnoga klipa iznosi $F_s/F_p = 1680/420 = 4$, što odgovara omjeru površina $(d_s/d_p)^2 = (28/14)^2 = 4$. Omjer $F_{uk}/F_p = 24$ jest zbroj sila šest paralelnih aktuatora prema jednoj ulaznoj sili; za njihov zajednički hod pumpa mora isporučiti zbroj svih istisnutih volumena. Omjer zadane granice i nominalne sile, $F_{dop}/F_s \approx 2{,}1$, predstavlja razinu rezerve prema jednome kriteriju. Stvarna procjena zahtijeva tolerancije tlaka i površina, raspodjelu kontakta, prijelazne vršne sile, otkazne slučajeve te zasebnu analizu sigurnosti stroja i baterijskog modula.
 :::
 
+<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u01_osnove_fluida_i_pascalov_zakon.md -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički most</p>
 
@@ -633,6 +636,19 @@ U fluidu u mirovanju tlak je izotropan jer bi inače nastao tangencijalni rezult
 - Pascalov zakon prenosi promjenu tlaka kroz zatvoren fluid u mirovanju.
 - Veći izlazni učinak hidrauličkog sustava prati odgovarajući kompromis u pomaku ili hodu.
 - Idealizirani model ne uključuje stlačivost, propuštanje, trenje ni dinamičke valove.
+:::
+
+<!-- [NOVA PEDAGOŠKA DOPUNA] -->
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerička poveznica — od Pascalova zakona do proračuna</p>
+
+**Fizikalni model.** U idealiziranoj hidrauličnoj preši želimo odrediti tlak u ulju i silu na drugom klipu. Poznati su ulazna sila $F_1$, površine klipova $A_1$ i $A_2$ te pretpostavke zatvorenoga, mirujućeg i približno nestlačivog fluida bez značajnih gubitaka. Nepoznati su porast tlaka $\Delta p$ i izlazna sila $F_2$. Zato se primjenjuje Pascalov zakon: isti porast tlaka djeluje na obje plohe. Izraz $p=F/A$ vrijedi kada je tlak na ravnoj plohi jednolik, kao na idealiziranom klipu; ako tlak po plohi nije jednolik, rezultantna se sila dobiva zbrajanjem lokalnih tlaknih doprinosa, odnosno integriranjem po površini.
+
+**Od kontinuuma do mreže.** Polje tlaka $p(x,y,z)$ u stvarnom se fluidu smatra kontinuiranim. Računalo domenu podijeli u ćelije, ali ćelija nije molekula: njezina vrijednost predstavlja lokalnu, reprezentativnu vrijednost polja u malom dijelu kontinuuma. Iz vrijednosti tlaka u ćelijama i na plohama između njih računa se kako se zadane promjene na klipu, ventilu ili otvoru usklađuju s protokom. Mreža mora razlučiti područja u kojima se tlak ili brzina brzo mijenjaju; provjera osjetljivosti na mrežu znači ponoviti račun s postupno finijom mrežom i provjeriti mijenjaju li se traženi tlak, sila ili pad tlaka još bitno.
+
+**Uvjeti i provjera.** Modelu se zadaju geometrija i svojstva fluida, početno stanje te fizikalni uvjeti na granicama: nepropusne stijenke, zadano gibanje ili sila klipa te, gdje postoje, tlak ili protok na otvorima. Za mirni hidraulični slučaj rezultat se provjerava usporedbom s ručnim odnosima $\Delta p=F_1/A_1=F_2/A_2$ i $A_1s_1=A_2s_2$. U složenijem slučaju dodatno se prati bilanca mase, promjena tlaka na važnim mjestima i stabilnost rezultata pri profinjenju mreže. Završene iteracije same po sebi nisu dokaz fizičke točnosti: rezultat mora zadovoljiti te bilance i pretpostavke modela.
+
+Za uske kanale, ventile, elastične vodove, tlačne valove ili kavitaciju idealizirani Pascalov model više nije dovoljan. Tada su rubni uvjeti, diskretizacija i provjera računa predmet <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span> i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
 :::
 
 ## Zadaci za vježbu

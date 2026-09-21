@@ -20,7 +20,7 @@ Cilj faze: sekvencijalni QA prolaz kroz U01–U13 (riješeni primjeri + zadaci z
 ### A3: Orphan SVG analiza — `riješeno (ne briše se)`
 
 - [assets/print/u07_val3_dva_fluida_modul.svg](assets/print/u07_val3_dva_fluida_modul.svg) inicijalno označen kao orphan jer nije referenciran u nijednom `source/*.md`.
-- Stvarno stanje: SVG je pripremljena zamjena za matplotlib blok `fig-u07-kalibracijski-modul` u [source/u07_uzgon_plivanje_i_stabilnost.md](source/u07_uzgon_plivanje_i_stabilnost.md):518–593.
+- Stvarno stanje: SVG je pripremljena zamjena za matplotlib blok `fig-u07-kalibracijski-modul` u [source/u06_uzgon_plivanje_i_stabilnost.md](source/u06_uzgon_plivanje_i_stabilnost.md):518–593.
 - Akcija: ostaviti datoteku; spojiti je s primjerom u Phase B-U07.
 
 ### A4: Statusni dokument ažuriran — `zatvoreno`
@@ -371,7 +371,7 @@ Pokriva: P1 (F_H=66,7 kN, h_FH=3,09, V*=7,587 m³, F_V=74,3 kN, x_FV=0,584 m, F_
 Sve primjere i 6 zadataka prolaze protokolne provjere. CH1 (Plutajuća platforma na granici ulja i vode) je posebno snažan T4 — kombinira 5 računa (srednji uron, podjela istisnine na dva fluida, težinjenje centra uzgona, momentna ravnoteža s pomaknutim teretom, povećanje gaza u odnosu na simetrično stanje).
 
 #### Orphan SVG spojen — `gotovo`
-[u07_val3_dva_fluida_modul.svg](assets/print/u07_val3_dva_fluida_modul.svg) (do sada nereferenciran) zamijenio je matplotlib blok `fig-u07-kalibracijski-modul` na redu 518–593 [source/u07_*.md](source/u07_uzgon_plivanje_i_stabilnost.md). Obrisano je 2810 znakova matplotlib koda.
+[u07_val3_dva_fluida_modul.svg](assets/print/u07_val3_dva_fluida_modul.svg) (do sada nereferenciran) zamijenio je matplotlib blok `fig-u07-kalibracijski-modul` na redu 518–593 [source/u06_*.md](source/u06_uzgon_plivanje_i_stabilnost.md). Obrisano je 2810 znakova matplotlib koda.
 
 #### SVG popravci — `gotovo`
 5 postojećih SVG-eva: naslovi uklonjeni (val1, val2, val3, ch1, vjezbe_skice).
@@ -432,7 +432,7 @@ Pokriva: P1 konfuzor (Q=0,567, v_2=30,63, Δp=523 Pa), P2 mlaz (x_max=H za h=H/2
 
 #### Tekst — `prolaze nakon popravka` · SVG naslovi — `gotovo` · Verify — `OK 38/38` ([tools/verify_u10.py](tools/verify_u10.py))
 
-**Bitan nalaz**: verify otkrio **matematičku grešku u izvoru** ([source/u10_*.md:1161](source/u10_realni_bernoulli_i_gubici.md)) u Primjeru "Rashladni cjevovod motora":
+**Bitan nalaz**: verify otkrio **matematičku grešku u izvoru** ([source/u13_*.md](source/u13_gubici_cjevovodi_crpke_i_mreze.md)) u Primjeru "Rashladni cjevovod motora":
 - Pisalo: $\lambda \cdot L/D = 0{,}028 \cdot 1{,}20/0{,}028 = 1{,}00$ (POGREŠNO — daje $h_l = 0{,}399$ m, $h_w = 2{,}075$ m, $\Delta p = 21{,}57$ kPa)
 - Točno: $0{,}028 \cdot 1{,}20/0{,}028 = 1{,}20$ (daje $h_l = 0{,}480$ m, $h_w = 2{,}158$ m, $\Delta p = 22{,}44$ kPa)
 - Tekst popravljen: $h_l \to 0{,}480$, $h_{loc} \to 1{,}678$, $h_w \to 2{,}158$, $\Delta p \to 22{,}44$ kPa.
@@ -495,7 +495,7 @@ Pokriva: P1 Reynolds (v=2,83, Re=2,55e5, h_w=7,26 m), P2 paralelne (v_1=3,29, v_
 - [ ] Puni `quarto render` čist — `quarto` CLI nije pronađen na sustavu; ostaje za autoricu.
 - [x] Puni `py tools/verify_all.py` — 427 OK + 1 zaokruženje (U01 most.p_p_MPa: tekst kaže `1,3 MPa`, točno je `1,316 MPa`; **preporuka**: ažurirati tekst na `1,32 MPa`).
 - [x] **Pronađene i ispravljene matematičke greške u izvoru**:
-  - U10 Primjer "Rashladni cjevovod motora" — λ·L/D bio krivo izračunat (1,00 umjesto 1,20), čime su h_l, h_w i Δp bili podcijenjeni za ~4%. Tekst popravljen ([source/u10_*.md:1161](source/u10_realni_bernoulli_i_gubici.md)).
+  - U13 Primjer "Rashladni cjevovod motora" — λ·L/D bio krivo izračunat (1,00 umjesto 1,20), čime su h_l, h_w i Δp bili podcijenjeni za ~4%. Tekst popravljen ([source/u13_*.md](source/u13_gubici_cjevovodi_crpke_i_mreze.md)).
 - [ ] Vizualni walkthrough chapter-po-chapter (autor + ja) — preview server radi na http://localhost:8765/preview.html za autorov pregled.
 - [ ] D01–D03 finalna integracija — D01–D03 ostaju za zasebnu polishing fazu nakon završetka matplotlib→SVG konverzije.
 - [ ] Statusni dokument zatvara Fazu 1 — bit će ažuriran nakon autorove potvrde.

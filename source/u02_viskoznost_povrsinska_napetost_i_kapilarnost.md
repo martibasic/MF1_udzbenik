@@ -162,6 +162,7 @@ $$ {#eq-reologija-newtonov-zakon-viskoznosti-02}
 
 gdje je $\delta$ razmak među pločama.
 
+<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Kako se računa viskozna sila</p>
 
@@ -196,6 +197,7 @@ $$ {#eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-02}
 Skalarni jednodimenzijski oblik $\tau = \mu\,dv/dy$ koristi se kao radna verzija u svim $1$D problemima ovog poglavlja. Tenzorski zakon i njegov ulazak u Navier–Stokesovu jednadžbu sustavno se obrađuju u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span>.
 :::
 
+<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — gradijent brzine uz stijenku</p>
 
@@ -316,6 +318,7 @@ Pri tome je ovdje $\Delta p=p_{unutra}-p_{vani}$, a zakrivljenosti su pozitivne 
 Zakrivljena površina zahtijeva tlačni skok koji uravnotežuje površinsku napetost. Što je manji promjer, to je veća zakrivljenost i veći potreban skok tlaka. Faktor 4 za kapljicu nastaje jer sfera ima jednu granicu faza i polumjer $r=d/2$; faktor 8 za sapunasti mjehur dolazi od dviju površina opne. Pri kavitaciji mjehuri pare mogu nastati i rasti kada lokalni **apsolutni** tlak dovoljno padne u odnosu na tlak pare. Stvarni prag ovisi i o prisutnim jezgrama, otopljenim plinovima te Laplaceovu nadtlaku $2\sigma/r$; površinska napetost zato otežava rast vrlo malih jezgara, a ne daje jednostavan kriterij „tlaka koji zatvara mikrokapljicu”.
 :::
 
+<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — konstitutivni model</p>
 
@@ -679,6 +682,7 @@ Negativna vrijednost znači kapilarnu depresiju u vertikalnoj cijevi. Ako tekuć
 Ravnotežna visina od oko $33{,}5\ \text{cm}$ pokazuje da je za zadanu idealnu kapilaru gravitacijska granica mnogo veća od centimetarske duljine uređaja. Time još nije dokazana pouzdanost ili brzina punjenja: za to treba uključiti viskozni otpor, zarobljeni plin, geometrijske prijelaze i dinamički kontaktni kut. Tlačni skok od $3{,}3\ \text{kPa}$ karakterizira meniskus; dimenzioniranje spojnica i pasivnih ventila zahtijeva puni raspon tlakova i stvarne uvjete kvašenja.
 :::
 
+<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički most</p>
 
@@ -714,6 +718,19 @@ Gustoća mjeri masu po volumenu, a viskoznost otpor smicanju. Newtonski model vr
 - Kontaktni kut određuje kvasi li stijenka fluid i zato mijenja kapilarni odziv.
 - Dimenzije i vrijeme mikrofluidičkog punjenja ne proizlaze iz jedne formule bez otpora i graničnih uvjeta.
 - Višefazni i nenewtonovski problemi traže dodatne modele i provjeru njihovih pretpostavki.
+:::
+
+<!-- [NOVA PEDAGOŠKA DOPUNA] -->
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerička poveznica — od smicanja do proračuna</p>
+
+**Fizikalni model i nepoznanica.** Za Newtonski fluid smično naprezanje nije veličina koju program stvara sam od sebe: zadaje se konstitutivni model $\tau=\mu\,dv/dy$ i svojstvo fluida $\mu$ pri odgovarajućoj temperaturi. Za sloj između nepomične i pokretne ploče poznati su geometrija, brzine ploča i $\mu$; traže se profil brzine, njegov gradijent, smično naprezanje i sila na stijenci. Taj se zakon koristi kada je veza između smičnog naprezanja i gradijenta brzine približno linearna; za nenewtonski fluid mora se zadati drugi, mjerenjima potkrijepljen model.
+
+**Stijenka, ćelije i gradijent.** Na nepomičnoj čvrstoj stijenci za običan viskozni fluid u makroskopskom mjerilu zadaje se prianjanje: brzina fluida na stijenci jednaka je brzini stijenke, dakle nula za mirnu stijenku. To je rubni uvjet, a ne posljedica numeričke mreže. Računalo potom određuje brzinu u susjednim ćelijama; vrijednost u ćeliji predstavlja lokalnu, reprezentativnu vrijednost polja, a razlika brzina kroz poznati razmak susjednih ćelija daje numeričku aproksimaciju gradijenta. Zato prvi red ćelija uz stijenku mora biti dovoljno fin ondje gdje se brzina mijenja brzo.
+
+**Što se provjerava.** U jednostavnom Couetteovu sloju očekuju se linearan profil brzine, stalan gradijent $U/\delta$ i jednako smično naprezanje kroz sloj. Rezultat se provjerava usporedbom s tim ručnim rješenjem, očekivanim smjerom viskozne sile — ona se suprotstavlja relativnom gibanju — i ponavljanjem računa s finijom mrežom. Mali rezidual ne dokazuje sam da su gradijent uz stijenku i sila trenja fizički točni; ako se oni još bitno mijenjaju pri profinjenju mreže, zidno područje nije dovoljno razlučeno.
+
+Detalji diskretizacije, zidnih modela, rubnih uvjeta i verifikacije obrađuju se u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span> i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
 :::
 
 ## Zadaci za vježbu
