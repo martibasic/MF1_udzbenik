@@ -6,7 +6,17 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 ## Osnove fluida i Pascalov zakon
 
-### Z1. Servisna hidraulična preša {#key-task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera .unnumbered .unlisted}
+### Z1. Gustoća ulja iz vaganja {#key-task-gustoca-ulja-iz-vaganja .unnumbered .unlisted}
+
+[Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-gustoca-ulja-iz-vaganja)
+
+**Sažetak.** Prazna posuda ima masu $m_0 = 42{,}6\ \text{g}$. S volumenom ulja $V_1 = 50{,}0\ \text{cm}^3$ njezina ukupna masa iznosi $m_1 = 85{,}5\ \text{g}$, a s volumenom $V_2 = 100{,}0\ \text{cm}^3$ ukupna masa iznosi $m_2 = 128{,}7\ \text{g}$.…
+
+**Smjernica postupka.** Najprije odvoji masu ulja od mase posude. Gustoće računaj u SI jedinicama; za preostale dvije veličine upotrijebi srednju gustoću. Bez podataka o točnosti instrumenata ne možeš razliku pripisati samo svojstvu ulja.
+
+**Kontrolni rezultat ili kriterij.** $\rho_1=858\ \text{kg/m}^3$, $\rho_2=861\ \text{kg/m}^3$, $\bar\rho=859{,}5\ \text{kg/m}^3$; $\bar\gamma\approx8{,}432\ \text{kN/m}^3$, $s_r=0{,}8595$. Masa ulja jest razlika ukupne mase i mase posude. Sama razlika gustoća ne dokazuje nehomogenost: nedostaju podatci o mjernoj točnosti.
+
+### Z2. Servisna hidraulična preša {#key-task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera .unnumbered .unlisted}
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera)
 
@@ -16,45 +26,35 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Kontrolni rezultat ili kriterij.** $p \approx 292\ \text{kPa}$; $F_2 = 4{,}5\ \text{kN}$; $s_2 = 4{,}8\ \text{mm}$.
 
-### Z2. Dva klipa pod istim tlakom {#key-task-u01-na-kruzni-klip-promjera-djeluje-sila-odredi .unnumbered .unlisted}
+### Z3. Provjera pogrešnog proračuna preše {#key-task-pogreske-omjera-sile-i-pomaka .unnumbered .unlisted}
 
-[Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-na-kruzni-klip-promjera-djeluje-sila-odredi)
+[Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-pogreske-omjera-sile-i-pomaka)
 
-**Sažetak.** Na kružni klip promjera $d = 24\ \text{mm}$ djeluje sila $F = 95\ \text{N}$. Odredi tlak u ulju i silu koju isti tlak daje na drugi klip promjera $D = 72\ \text{mm}$.
+**Sažetak.** Na maloj nastavnoj preši promjeri klipova iznose $d_1 = 20\ \text{mm}$ i $d_2 = 60\ \text{mm}$. Stalna ulazna sila jest $F_1 = 100\ \text{N}$, a ulazni pomak $s_1 = 90\ \text{mm}$. Student predlaže: „Promjer radnog klipa triput je veći…
 
-**Smjernica postupka.** Površina se određuje iz $A = \pi d^2/4$, tlak iz $p = F/A$, a sila na većem klipu iz $F_2 = pA_2$.
+**Smjernica postupka.** Usporedi površine, ne promjere. Provjeri istisnute volumene. Za stalnu silu rad je umnožak sile i puta u njezinu smjeru; u računu rada pretvori milimetre u metre.
 
-**Kontrolni rezultat ili kriterij.** $p \approx 210\ \text{kPa}$; $F_2 = 855\ \text{N}$.
+**Kontrolni rezultat ili kriterij.** $A_2/A_1=9$, $F_2=900\ \text{N}$, $s_2=10\ \text{mm}$; $W_1=W_2=9\ \text{J}$. Pogrešni izlazni rad bio bi $81\ \text{J}$. Površina raste s kvadratom promjera, a povećanje sile prati smanjenje pomaka. Predloženi izlazni rad devet je puta veći od raspoloživog ulaznog rada.
 
-### Z3. Dimenzioniranje hidraulične stege {#key-task-u01-u-zatvorenoj-hidraulicnoj-stezi-tlak-ulja-iznosi .unnumbered .unlisted}
+### Z4. Promjer cilindra iz mjerenja pomaka {#key-task-promjer-cilindra-iz-volumena .unnumbered .unlisted}
 
-[Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-u-zatvorenoj-hidraulicnoj-stezi-tlak-ulja-iznosi)
+[Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-promjer-cilindra-iz-volumena)
 
-**Sažetak.** U zatvorenoj hidrauličnoj stezi tlak ulja iznosi $p = 2{,}4\ \text{MPa}$, a radni klip ima promjer $d = 52\ \text{mm}$. Odredi silu stezanja i procijeni koliki bi promjer morao imati novi klip ako se pri istom tlaku traži sila stezanja od…
+**Sažetak.** Laboratorijski cilindar prije mjerenja potpuno je napunjen tekućinom i odzračen. Dovedeni dodatni volumeni, mjereni od istoga početnog položaja, i pomaci klipa pri malom opterećenju prikazani su u tablici. U zasebnom pokusu s blokiranim…
 
-**Smjernica postupka.** Primjenjuje se $F = pA$. Iz zahtijevane sile slijedi površina $A = F/p$, a promjer se određuje iz $A = \pi d^2/4$.
+**Smjernica postupka.** Usporedi omjere dodatnog volumena i pomaka. Iz dobivene površine izračunaj promjer, zatim silu u drugom pokusu. Podudaranje pri malom opterećenju podupire model samo u ispitanim uvjetima; odstupanje pri većem tlaku zahtijeva dodatne podatke.
 
-**Kontrolni rezultat ili kriterij.** $F \approx 5{,}1\ \text{kN}$; $d_{min} \approx 65\ \text{mm}$.
+**Kontrolni rezultat ili kriterij.** Sva tri para daju $A=500\ \text{mm}^2$ i $d\approx25{,}23\ \text{mm}$; idealno $F=200\ \text{N}$. Tablica je usklađena s modelom u ispitanim uvjetima. Manji pomak pri većem tlaku opravdava provjeru stlačivosti, elastičnosti i propuštanja; ne dokazuje jedan određeni uzrok.
 
-### Z4. Podizanje hidrauličnog stola {#key-task-u01-hidraulicni-stol-nosi-teret-mase-preko-dvaju .unnumbered .unlisted}
+### Z5. Izbor pumpe uz ograničenje sile i hoda {#key-task-izbor-pumpe-sila-i-hod .unnumbered .unlisted}
 
-[Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-hidraulicni-stol-nosi-teret-mase-preko-dvaju)
+[Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-izbor-pumpe-sila-i-hod)
 
-**Sažetak.** Hidraulični stol nosi teret mase $m = 1350\ \text{kg}$ preko dvaju jednakih radnih cilindara promjera $D = 95\ \text{mm}$. Ulje se dovodi ručnom pumpom čiji klip ima promjer $d = 18\ \text{mm}$ i hod $s = 160\ \text{mm}$. Odredi minimalnu…
+**Sažetak.** Radni klip površine $A_L = 30\ \text{cm}^2$ mora svladati stalnu silu $F_L = 6{,}0\ \text{kN}$ i prijeći put $s_L = 10\ \text{mm}$. Najveća dopuštena sila neposredno na pumpnom klipu iznosi $F_{p,max} = 150\ \text{N}$, a zbroj njegovih…
 
-**Smjernica postupka.** Teret se raspodjeljuje na dva cilindra. Iz $p = G/(2A_D)$ slijedi $F_p = pA_d$, a broj hodova određuje se iz $nA_d s = 2A_D \Delta z$.
+**Smjernica postupka.** Kreni od opterećenja radnog klipa. Jedan zahtjev postavlja gornju, a drugi donju granicu površine pumpe. Računaj s nezaokruženim površinama i provjeri obje granice prije odabira.
 
-**Kontrolni rezultat ili kriterij.** $p \approx 0{,}93\ \text{MPa}$; $F_p \approx 238\ \text{N}$; $n = 16$ hodova.
-
-### Z5. Ručna pumpa i podizna platforma {#key-task-u01-rucna-pumpa-s-klipom-promjera-razvija-silu .unnumbered .unlisted}
-
-[Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-rucna-pumpa-s-klipom-promjera-razvija-silu)
-
-**Sažetak.** Ručna pumpa s klipom promjera $d = 25\ \text{mm}$ razvija silu $F_p = 420\ \text{N}$. Dva radna cilindra promjera $D = 140\ \text{mm}$ nalaze se na istoj razini i podižu platformu. Odredi tlak u ulju, ukupno nosivo opterećenje platforme i…
-
-**Smjernica postupka.** Tlak se određuje iz $p = F_p/A_d$, ukupno opterećenje iz $G = 2pA_D$, a ukupan hod pumpe iz volumne bilance $A_d s_p = 2A_D \Delta z$.
-
-**Kontrolni rezultat ili kriterij.** $p \approx 856\ \text{kPa}$; $G \approx 26{,}3\ \text{kN}$; $s_p \approx 1{,}88\ \text{m}$.
+**Kontrolni rezultat ili kriterij.** $p=2{,}00\ \text{MPa}$. Za promjere 8, 9 i 10 mm parovi $(F_p,s_p)$ jesu približno $(100{,}5\ \text{N},0{,}5968\ \text{m})$, $(127{,}2\ \text{N},0{,}4716\ \text{m})$ i $(157{,}1\ \text{N},0{,}3820\ \text{m})$. Odabire se 9 mm; 8 mm ne zadovoljava hod, a 10 mm silu. Za odabranu pumpu $W_p=W_L=60\ \text{J}$.
 
 ### Z6. Nosivost stola uz nesigurnu učinkovitost {#key-task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra .unnumbered .unlisted}
 

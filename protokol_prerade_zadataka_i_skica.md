@@ -4,6 +4,176 @@
 
 Ovaj dokument ostaje aktivni operativni protokol za svaku novu ozbiljnu preradu zadatka ili skice u `MF1_udzbenik`. Ne sluzi vise za masovni migracijski val, nego za selektivne buduce dopune i za kvalitetno preoblikovanje pojedinih jacih zadataka.
 
+## Sustavna didaktička revizija bez promjene strukture
+
+Ovaj odjeljak primjenjuje se i na prijedloge u razgovoru, prije uređivanja
+datoteka. Dopunjuje postojeća pravila autorske prerade; ne otvara novu masovnu
+migraciju. Projektni [AGENTS.md](AGENTS.md) upućuje asistenta na ovaj protokol.
+Izričit korisnikov zahtjev određuje opseg rada i ima prednost nad ovim zadanim
+postupkom. Ako je provedba već dogovorena, ne traži se ponovno odobrenje po koraku.
+
+### 1. Opseg i izvori pravila
+
+- Radi jedno poglavlje po jedno, osim ako korisnik zatraži širi zahvat.
+- Najprije pročitaj njegov kanonski izvor, riješene primjere, samostalne zadatke
+  i pripadni red [kurikularne matrice](docs/kurikularna_matrica.md).
+- [Autorski ugovor](docs/autorski_ugovor.md) određuje oblik i stabilne ID-jeve;
+  [kanonska struktura](docs/kanonska-struktura-sadrzaja.md) određuje izvore.
+  Uređuje se `source/`, dok `.qmd` omotači čuvaju javne URL-ove i navigaciju.
+- Provjeri stvarne uvjete u `tools/audit_publication.py`, `tools/qa_audit.py`
+  i generatorima. Starije brojčane snimke u statusnim dokumentima nisu nove kvote.
+- Analiza i provedba različiti su zahtjevi. Kod pregleda isporuči nalaze i
+  izvediv raspored; kod odobrene provedbe dovrši cijelu povezanu izmjenu.
+
+### 2. Didaktički kriterij zamjene
+
+Za svaki P/Z zabilježi temu, principe i jednadžbe, matematički postupak, težinu,
+kontekst, stvarnu studentsku aktivnost i sličnost s drugima. Usporedi zadatke
+međusobno i s već riješenim primjerima. Različita imena uređaja ne skrivaju isti
+algoritam. Razlog za zamjenu mora biti određena didaktička korist.
+
+Čuvaj temeljnu računsku tehniku, ali po potrebi kombiniraj izravni i obrnuti
+račun, izbor komponente, konceptualno obrazlaganje, pronalaženje pogreške,
+interpretaciju mjerenja, dijagnostiku, procjenu izvedivosti i integraciju pojmova.
+Nije obvezno uključiti sve vrste u svako poglavlje. Ne uvodi kasnije gradivo
+bez oznake dodatnog sadržaja i alternative koja koristi uvedene pojmove.
+
+Primijeni postojeći prag prerade 3 od 5 elemenata kada se radi o značajnoj
+rekonstrukciji zadatka. Uz to provjeri mijenja li se stvarno prvi korak ili
+odluka studenta; nova scena sama nije dostatan dokaz didaktičke raznolikosti.
+Taj prag nije obveza za sitni ispravak računa, jedinice ili formulacije.
+
+### 3. Strukturne granice i razine
+
+- Svako glavno poglavlje zadržava točno šest samostalnih zadataka Z1–Z6,
+  raspodjele 2×T1, 2×T2, T3 i T4; knjiga ih ima 90.
+- Svako poglavlje ima 5–7 riješenih primjera, a knjiga ukupno 80–90.
+  Primjeri se označavaju P1, P2, … bez prekida.
+- Spajanje ili uklanjanje zadatka oslobađa mjesto za zamjenu. Premještanje
+  jedinog T4 u dodatni sadržaj bez novog T4 nije prihvatljiv završni raspored.
+- T1: primjena već odabranog zakona; T2: standardan problem uz geometrijsku,
+  jediničnu ili manju modelsku odluku; T3: izbor ili povezivanje modela uz
+  obrazloženje; T4: podatci, nesigurnost, kompromis ili obrazložena odluka.
+  Dulji račun, više cilindara ili nova oznaka nisu sami razlog za višu razinu.
+- Čuvaj obvezne ishode, vidljivu konceptualnu provjeru, granice modela i
+  predviđeno vrijeme rada. Za U01 obvezna je procjena opravdanosti modela stlačivosti.
+- Neodabrane ideje ostaju u internoj banci. Dodatni `task-*` ID-jevi u izvoru
+  ulaze u prebrojavanje čak i kada ih autor nazove dodatnim zadatcima.
+
+### 4. Matrica zamjena prije provedbe
+
+Za odobrenu reviziju vodi kratku evidenciju u `docs/radno/revizija_uNN.md`.
+Postojeću evidenciju dopuni umjesto stvaranja paralelnog popisa. Sama analiza
+u razgovoru ne zahtijeva stvaranje datoteke.
+
+| Mjesto P/Z | Postojeći ID i uloga | Odluka i nova didaktička korist | Nova razina | Novi/zadržani ID | Povezane datoteke i provjere | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+
+Odluke su: ZADRŽATI, PREPRAVITI, SPOJITI S DRUGIM, ZAMIJENITI ili OSTAVITI KAO
+IZAZOVNI/DODATNI ZADATAK. Posljednja odluka ne smije narušiti šest kanonskih mjesta.
+Uz matricu evidentiraj `rewrite_status`, `rewrite_level`, `sketch_requirement`,
+izvor ideje, neovisnu provjeru te rezultate izvršenih provjera. Stare izvore i
+`legacy_ref` čuvaj interno; autorsku ideju ne pripisuj izmišljenom vanjskom izvoru.
+
+### 5. Brojčani i kvalitativni ugovor
+
+Riješi novi problem od nule prije konačnog teksta. Provjeri realističnost,
+jedinice, dovoljnost podataka, skrivene pretpostavke i dopušteni zaključak.
+Razlikuj zaokružen broj od graničnog zahtjeva, puni od djelomičnog poteza i
+standardnu nesigurnost od zadanih zajamčenih intervala. Sintetičke nastavne
+mjerne podatke označi kao takve; ne predstavljaj ih kao stvarni pokus ili
+specifikaciju proizvođača. Za otvoreni dio napiši kriterije prihvatljivog odgovora.
+
+Pri provjeri 21. rujna 2026. utvrđena je razlika između autorskog ugovora, koji
+spominje `golden` ili `invariant`, i strožeg `qa_audit.py`: svaki kanonski zadatak
+traži barem jedan parsirani brojčani ulaz i neovisnu usporedbu s objavljenim
+fiksnim rezultatom (`golden`). Prije svake provedbe provjeri aktualni kod.
+Dok taj uvjet vrijedi, kvalitativni cilj poveži sa smislenim brojčanim slučajem
+ili pitanje smjesti u konceptualnu provjeru izvan Z1–Z6. Ne izmišljaj brojčane
+odgovore niti tautološke testove kako bi čisto kvalitativni zadatak prošao.
+
+Parser manifesta djelomično čita skalarne ulaze iz inline matematike. Nizovi,
+tablice i intervali ostaju i u autoritativnom Markdownu: autor mora provjeriti
+da ih računska funkcija doista koristi. Regeneracija nije semantička provjera
+podudarnosti teksta i računa. Tolerancija mora odgovarati objavljenoj preciznosti;
+zadatak s minimumom ili maksimumom zahtijeva i provjeru odgovarajuće nejednakosti.
+
+### 6. Povezane izmjene
+
+Prije pisanja utvrdi veze između iskaza, naputka, kontrolnog rezultata,
+verifikatora, skice, notebooka, ključa D06, dodataka D01–D03 i drugih upućivanja.
+Mijenjaj samo ovisnosti koje zahvaća novi problem, ali provjeri ih sve.
+
+- Stvarni verifikator i njegov namespace uzmi iz `CANONICAL_CHAPTERS` u
+  `tools/generate_verification_manifest.py`; nazivi modula nisu svugdje jednaki
+  brojevima javnih poglavlja. Preslagivanje Z mjesta traži i provjeru result-ID-jeva.
+- Premještanje istog sadržaja ne mijenja stabilni ID. Novi ID opisuje sadržaj
+  bez broja poglavlja. Potpuna zamjena zahtijeva evidenciju staro→novo i provjeru
+  unutarnjih i postojećih javnih poveznica; dodatni stari `task-*` anchor nije
+  automatski siguran alias jer ga generatori mogu prebrojiti kao novi zadatak.
+- Skice moraju slijediti nove oznake Z i podatke, uključujući zajedničke slike
+  zadataka. Kad skica nije potrebna, to obrazloži; ne dodaj dekorativnu sliku.
+- Naputak i kontrolni rezultat ostaju u predviđenim HTML blokovima za odvojeni
+  ispis. D06 i generirana polja manifesta ne uređuj ručno. Ručno održavani
+  metapodatci primjera također se moraju provjeriti pri njihovoj zamjeni.
+- Provjeri da konceptualna pitanja nisu samo prisutna u izvoru nego i vidljiva
+  studentu. Globalno CSS pravilo ne mijenjaj bez pregleda učinka na druga poglavlja.
+
+### 7. Redoslijed provjera
+
+Nakon usklađivanja teksta, stvarnih računa i povezanih izvora pokreni iz korijena:
+
+```powershell
+python scripts/normalize_public_text.py --write
+python scripts/generate_exercise_key.py --write
+python tools/generate_verification_manifest.py --write
+```
+
+Pregledaj diff: neočekivane promjene drugih poglavlja nisu automatski dio revizije.
+Zatim provjeri:
+
+```powershell
+python tools/verify_all.py
+python tools/audit_publication.py
+python tools/generate_verification_manifest.py
+python scripts/generate_exercise_key.py
+python scripts/normalize_public_text.py
+python tools/audit_typst.py
+git diff --check
+```
+
+Nakon sadržajnih izmjena provjeri renderirani HTML, generirani D06 i nativni PDF:
+čitljivost zadatka, skice, prijelome, vidljivost pitanja i potpunost odgovora.
+Generator ključa sažima tekst; automatski prolaz ne jamči da je sačuvao svaki
+kriterij otvorenog zadatka. HTML i PDF render izvodi redom jer dijele predmemoriju.
+Prije objave provedi korake aktualnog `.github/workflows/publish.yml`, uključujući
+notebookove, PDF audit, JupyterLite, poveznice te viewport/WCAG provjeru.
+Ne ponavljaj cijeli build samo zbog izmjene internih uredničkih uputa.
+
+Zabilježi što je stvarno prošlo, što nije pokrenuto i zašto. Ne smanjuj broj
+provjera, pragove ni ugovore samo da bi promjena prošla. Namjerna promjena
+strukture knjige traži usklađivanje dokumentacije, generatora i provjera, uz
+jasno naveden utjecaj; nije sporedni dio zamjene jednog zadatka.
+
+### 8. Format didaktičke analize u razgovoru
+
+Kad korisnik traži cjelovitu reviziju poglavlja, odgovori ovim redom:
+
+1. Kratka dijagnoza: prednosti, ponavljanja i nedostajuće aktivnosti.
+2. Analiza postojećih zadataka: tablica Zadatak / Tema / Tip / Razina /
+   Sličnost s drugima / Preporuka / Obrazloženje; dodaj mapu raznolikosti i
+   nalaze o riješenim primjerima.
+3. Promjene strukture unutar postojećih šest mjesta i propisanih razina.
+4. Osam do dvanaest konkretnih alternativnih ideja: naslov, kontekst, zadano,
+   traženo, koncept, tip, razina i didaktička vrijednost; navedi model i ograničenja.
+5. Pet komplementarnih prijedloga bez rangiranja od najboljeg prema najlošijem.
+6. Konačna preporuka s mapiranjem što ostaje, što se mijenja i što nova verzija
+   provjerava. Prijedlog mora biti strukturno izvediv i prije ugradnje.
+
+Za uži upit ili već odobrenu provedbu prilagodi opseg; ne ponavljaj cijelu analizu.
+Ne tvrdi da su CI, autorska revizija, neovisna stručna recenzija i studentski
+pilot ista provjera. Uspješan CI ne dokazuje odsutnost monotonije.
+
 ## Kada se ovaj protokol koristi
 
 1. Kad se u poglavlje uvodi novi zadatak iz internog ili vanjskog donor-izvora.

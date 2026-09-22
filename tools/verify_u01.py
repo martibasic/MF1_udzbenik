@@ -130,7 +130,17 @@ def primjer_robot_stega(d_p: float = 0.014, F_p: float = 420.0,
 
 
 # ------------ Zadaci za vjezbu ----------------
-def zadatak_1(d_1: float = 0.028, d_2: float = 0.140, F_1: float = 180.0, s_1: float = 0.120):
+def zadatak_1(m0: float = 0.0426, m1: float = 0.0855, m2: float = 0.1287,
+              V1: float = 50e-6, V2: float = 100e-6, g: float = 9.81,
+              rho_v: float = 1000.0):
+    rho1 = (m1 - m0) / V1
+    rho2 = (m2 - m0) / V2
+    rho = (rho1 + rho2) / 2
+    return {"rho1": rho1, "rho2": rho2, "rho": rho,
+            "gamma": rho * g, "sr": rho / rho_v}
+
+
+def zadatak_2(d_1: float = 0.028, d_2: float = 0.140, F_1: float = 180.0, s_1: float = 0.120):
     A_1 = math.pi * d_1**2 / 4
     A_2 = math.pi * d_2**2 / 4
     p = F_1 / A_1
@@ -139,42 +149,34 @@ def zadatak_1(d_1: float = 0.028, d_2: float = 0.140, F_1: float = 180.0, s_1: f
     return {"p": p, "F_2": F_2, "s_2": s_2}
 
 
-def zadatak_2(d: float = 0.024, F: float = 95.0, D: float = 0.072):
-    A_1 = math.pi * d**2 / 4
-    A_2 = math.pi * D**2 / 4
-    p = F / A_1
-    F_2 = p * A_2
-    return {"p": p, "F_2": F_2}
+def zadatak_3(d1: float = 0.020, d2: float = 0.060, F1: float = 100.0,
+              s1: float = 0.090, wrong_F: float = 300.0, wrong_s: float = 0.270):
+    ratio = (d2 / d1) ** 2
+    F2 = F1 * ratio
+    s2 = s1 / ratio
+    return {"ratio": ratio, "F2": F2, "s2": s2,
+            "W1": F1 * s1, "W2": F2 * s2, "wrong_W": wrong_F * wrong_s}
 
 
-def zadatak_3(p: float = 2.4e6, d: float = 0.052, F_target: float = 8000.0):
-    A = math.pi * d**2 / 4
-    F = p * A
-    A_new = F_target / p
-    d_new = math.sqrt(4 * A_new / math.pi)
-    return {"F": F, "d_new": d_new}
+def zadatak_4(volumes: tuple = (5e-6, 10e-6, 15e-6),
+              strokes: tuple = (0.010, 0.020, 0.030), p: float = 0.40e6):
+    areas = [v / s for v, s in zip(volumes, strokes, strict=True)]
+    diameters = [math.sqrt(4 * a / math.pi) for a in areas]
+    return {"areas": areas, "diameters": diameters, "F": p * areas[0]}
 
 
-def zadatak_4(m: float = 1350.0, D: float = 0.095, d: float = 0.018, s: float = 0.160,
-              Delta_z: float = 0.045, g: float = 9.81):
-    G = m * g
-    A_D = math.pi * D**2 / 4
-    A_d = math.pi * d**2 / 4
-    p = G / (2 * A_D)
-    F_p = p * A_d
-    n_continuous = 2 * A_D * Delta_z / (A_d * s)
-    n_full = math.ceil(n_continuous)
-    return {"p": p, "F_p": F_p, "n": n_full,
-            "n_continuous": n_continuous}
-
-
-def zadatak_5(d: float = 0.025, F_p: float = 420.0, D: float = 0.140, Delta_z: float = 0.030):
-    A_d = math.pi * d**2 / 4
-    A_D = math.pi * D**2 / 4
-    p = F_p / A_d
-    G = 2 * p * A_D
-    s_p = 2 * A_D * Delta_z / A_d
-    return {"p": p, "G": G, "s_p": s_p}
+def zadatak_5(A_L: float = 30e-4, F_L: float = 6000.0, s_L: float = 0.010,
+              diameters: tuple = (0.008, 0.009, 0.010),
+              F_max: float = 150.0, s_max: float = 0.50):
+    p = F_L / A_L
+    areas = [math.pi * d**2 / 4 for d in diameters]
+    forces = [p * a for a in areas]
+    strokes = [A_L * s_L / a for a in areas]
+    feasible = [d for d, f, s in zip(diameters, forces, strokes, strict=True)
+                if f <= F_max and s <= s_max]
+    return {"p": p, "forces": forces, "strokes": strokes, "feasible": feasible,
+            "works": [f * s for f, s in zip(forces, strokes, strict=True)],
+            "output_work": F_L * s_L}
 
 
 def zadatak_6(A_L_cm2: float = 95.0, d: float = 0.022, F_p: float = 360.0,
@@ -242,26 +244,71 @@ def verify() -> list[dict]:
     _check(out, "U01.CH1.s_p_total_m", r["s_p_total"], 1.5, "m")
     _check(out, "U01.CH1.n", r["n"], 9, "hodova")
 
-    # Zadaci 1-6: svaki actual ponovno se racuna iz objavljenih ulaza, a target
-    # je broj objavljen u rjesenju zadatka.
+    # Aktualni javni Z1-Z6; fiksni ciljevi ne izvode se iz provjeravanog izlaza.
     z1 = zadatak_1()
-    _check(out, "U01.Z1.p_kPa", z1["p"] / 1000, 292.0, "kPa")
-    _check(out, "U01.Z1.F_2_kN", z1["F_2"] / 1000, 4.5, "kN")
-    _check(out, "U01.Z1.s_2_mm", z1["s_2"] * 1000, 4.8, "mm")
+    _check(out, "U01.Z1.rho1", z1["rho1"], 858, "kg/m^3", rel=1e-6)
+    _check(out, "U01.Z1.rho2", z1["rho2"], 861, "kg/m^3", rel=1e-6)
+    _check(out, "U01.Z1.rho_mean", z1["rho"], 859.5, "kg/m^3", rel=1e-6)
+    _check(out, "U01.Z1.gamma", z1["gamma"] / 1000, 8.432, "kN/m^3", rel=0.0001)
+    _check(out, "U01.Z1.sr", z1["sr"], 0.8595, "1", rel=1e-6)
+    shifted = zadatak_1(m0=0.1426, m1=0.1855, m2=0.2287)
+    _invariant(out, "U01.Z1.tare_invariance",
+               abs(shifted["rho"] - z1["rho"]) < 1e-9,
+               "Promjena mase posude uz iste mase ulja mijenja gustocu.")
+
     z2 = zadatak_2()
-    _check(out, "U01.Z2.p_kPa", z2["p"] / 1000, 210.0, "kPa")
-    _check(out, "U01.Z2.F_2", z2["F_2"], 855.0, "N")
+    _check(out, "U01.Z2.p_kPa", z2["p"] / 1000, 292.0, "kPa")
+    _check(out, "U01.Z2.F_2_kN", z2["F_2"] / 1000, 4.5, "kN")
+    _check(out, "U01.Z2.s_2_mm", z2["s_2"] * 1000, 4.8, "mm")
+    _invariant(out, "U01.Z2.volume_balance",
+               abs(0.028**2 * 0.120 - 0.140**2 * z2["s_2"]) < 1e-12,
+               "Klipovi ne istiskuju jednake volumene.")
+
     z3 = zadatak_3()
-    _check(out, "U01.Z3.F_kN", z3["F"] / 1000, 5.1, "kN")
-    _check(out, "U01.Z3.d_min_mm", z3["d_new"] * 1000, 65.0, "mm")
+    _check(out, "U01.Z3.area_ratio", z3["ratio"], 9.0, "1", rel=1e-9)
+    _check(out, "U01.Z3.F2", z3["F2"], 900.0, "N", rel=1e-9)
+    _check(out, "U01.Z3.s2", z3["s2"] * 1000, 10.0, "mm", rel=1e-9)
+    _check(out, "U01.Z3.W1", z3["W1"], 9.0, "J", rel=1e-9)
+    _check(out, "U01.Z3.W2", z3["W2"], 9.0, "J", rel=1e-9)
+    _check(out, "U01.Z3.wrong_work", z3["wrong_W"], 81.0, "J", rel=1e-9)
+    _invariant(out, "U01.Z3.work_balance",
+               abs(z3["W1"] - z3["W2"]) < 1e-12 and z3["wrong_W"] > z3["W1"],
+               "Ispravni racun ne cuva rad ili pogresni nije prepoznat kao neizvediv.")
+
     z4 = zadatak_4()
-    _check(out, "U01.Z4.p_MPa", z4["p"] / 1e6, 0.93, "MPa")
-    _check(out, "U01.Z4.F_p", z4["F_p"], 238.0, "N")
-    _check(out, "U01.Z4.n", z4["n"], 16.0, "hodova")
+    _check(out, "U01.Z4.A1", z4["areas"][0] * 1e6, 500, "mm^2", rel=1e-9)
+    _check(out, "U01.Z4.A2", z4["areas"][1] * 1e6, 500, "mm^2", rel=1e-9)
+    _check(out, "U01.Z4.A3", z4["areas"][2] * 1e6, 500, "mm^2", rel=1e-9)
+    _check(out, "U01.Z4.d1", z4["diameters"][0] * 1000, 25.23, "mm", rel=0.0001)
+    _check(out, "U01.Z4.d2", z4["diameters"][1] * 1000, 25.23, "mm", rel=0.0001)
+    _check(out, "U01.Z4.d3", z4["diameters"][2] * 1000, 25.23, "mm", rel=0.0001)
+    _check(out, "U01.Z4.force", z4["F"], 200, "N", rel=1e-9)
+    altered = zadatak_4(volumes=(5e-6, 10e-6, 16e-6))
+    _invariant(out, "U01.Z4.consistency_sensitivity",
+               max(z4["areas"]) - min(z4["areas"]) < 1e-12
+               and max(altered["areas"]) - min(altered["areas"]) > 1e-6,
+               "Izmjena treceg mjerenja nije prepoznata u provjeri stalne povrsine.")
+
     z5 = zadatak_5()
-    _check(out, "U01.Z5.p_kPa", z5["p"] / 1000, 856.0, "kPa")
-    _check(out, "U01.Z5.G_kN", z5["G"] / 1000, 26.3, "kN")
-    _check(out, "U01.Z5.s_p", z5["s_p"], 1.88, "m")
+    _check(out, "U01.Z5.p_MPa", z5["p"] / 1e6, 2.0, "MPa", rel=1e-9)
+    _check(out, "U01.Z5.F8", z5["forces"][0], 100.5, "N", rel=0.0005)
+    _check(out, "U01.Z5.F9", z5["forces"][1], 127.2, "N", rel=0.0005)
+    _check(out, "U01.Z5.F10", z5["forces"][2], 157.1, "N", rel=0.0005)
+    _check(out, "U01.Z5.s8", z5["strokes"][0], 0.5968, "m", rel=0.0005)
+    _check(out, "U01.Z5.s9", z5["strokes"][1], 0.4716, "m", rel=0.0005)
+    _check(out, "U01.Z5.s10", z5["strokes"][2], 0.3820, "m", rel=0.0005)
+    _check(out, "U01.Z5.selected_mm", z5["feasible"][0] * 1000, 9, "mm", rel=1e-9)
+    _check(out, "U01.Z5.pump_work", z5["works"][1], 60, "J", rel=1e-9)
+    _check(out, "U01.Z5.load_work", z5["output_work"], 60, "J", rel=1e-9)
+    _invariant(out, "U01.Z5.two_constraints",
+               z5["feasible"] == [0.009] and z5["strokes"][0] > 0.50
+               and z5["forces"][2] > 150.0
+               and not zadatak_5(F_max=120)["feasible"],
+               "Odabir ne postuje oba ogranicenja ili je fiksiran neovisno o zahtjevima.")
+    _invariant(out, "U01.Z5.work_balance",
+               all(abs(w - z5["output_work"]) < 1e-9 for w in z5["works"]),
+               "Promjena povrsine pumpe stvara ili unistava idealni rad.")
+
     z6 = zadatak_6()
     _check(out, "U01.Z6.p_kPa", z6["p"] / 1000, 947.0, "kPa")
     _check(out, "U01.Z6.G_kN", z6["G"] / 1000, 27.0, "kN")
@@ -270,36 +317,13 @@ def verify() -> list[dict]:
     _check(out, "U01.Z6.G_useful_min_kN", z6["G_useful_min"] / 1000, 22.1, "kN")
     _check(out, "U01.Z6.s_actual", z6["s_actual"], 1.50, "m")
     _check(out, "U01.Z6.s_actual_max", z6["s_actual_max"], 1.55, "m")
-    _invariant(
-        out,
-        "U01.Z6.both_requirements",
-        z6["G_useful_min"] >= 22e3 and z6["s_actual_max"] <= 1.60,
-        "Konzervativni omotac ne zadovoljava oba zahtjeva.",
-    )
-
-    area_ratio = (0.140 / 0.028) ** 2
-    _invariant(
-        out,
-        "U01.INV.pascal_force_ratio",
-        abs(z1["F_2"] / 180.0 - area_ratio) < 1e-12,
-        "F2/F1 nije jednak A2/A1.",
-    )
-    volume_residual = (
-        math.pi * 0.028**2 / 4 * 0.120
-        - math.pi * 0.140**2 / 4 * z1["s_2"]
-    )
-    _invariant(
-        out,
-        "U01.INV.volume_balance",
-        abs(volume_residual) < 1e-15,
-        f"Volumna bilanca klipova ima ostatak {volume_residual:.6g} m^3.",
-    )
-    _invariant(
-        out,
-        "U01.INV.full_stroke_ceiling",
-        z4["n"] - 1 < z4["n_continuous"] <= z4["n"],
-        "Broj punih hodova nije strop kontinuiranog broja hodova.",
-    )
+    _invariant(out, "U01.Z6.both_requirements",
+               z6["G_useful_min"] >= 22e3 and z6["s_actual_max"] <= 1.60,
+               "Konzervativni omotac ne zadovoljava oba zahtjeva.")
+    _invariant(out, "U01.Z6.interval_bounds",
+               z6["G_useful_min"] <= z6["G_useful"] <= z6["G"]
+               and z6["s_p"] <= z6["s_actual"] <= z6["s_actual_max"],
+               "Krajnje ucinkovitosti ne daju konzervativne granice.")
 
     # Faza 1.5: Hidraulicna kocnica vozila
     r = primjer_kocnica()

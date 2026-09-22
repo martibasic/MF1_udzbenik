@@ -64,19 +64,37 @@
         "U01.CH1.G",
         "U01.CH1.s_p_total_m",
         "U01.CH1.n",
-        "U01.Z1.p_kPa",
-        "U01.Z1.F_2_kN",
-        "U01.Z1.s_2_mm",
+        "U01.Z1.rho1",
+        "U01.Z1.rho2",
+        "U01.Z1.rho_mean",
+        "U01.Z1.gamma",
+        "U01.Z1.sr",
         "U01.Z2.p_kPa",
-        "U01.Z2.F_2",
-        "U01.Z3.F_kN",
-        "U01.Z3.d_min_mm",
-        "U01.Z4.p_MPa",
-        "U01.Z4.F_p",
-        "U01.Z4.n",
-        "U01.Z5.p_kPa",
-        "U01.Z5.G_kN",
-        "U01.Z5.s_p",
+        "U01.Z2.F_2_kN",
+        "U01.Z2.s_2_mm",
+        "U01.Z3.area_ratio",
+        "U01.Z3.F2",
+        "U01.Z3.s2",
+        "U01.Z3.W1",
+        "U01.Z3.W2",
+        "U01.Z3.wrong_work",
+        "U01.Z4.A1",
+        "U01.Z4.A2",
+        "U01.Z4.A3",
+        "U01.Z4.d1",
+        "U01.Z4.d2",
+        "U01.Z4.d3",
+        "U01.Z4.force",
+        "U01.Z5.p_MPa",
+        "U01.Z5.F8",
+        "U01.Z5.F9",
+        "U01.Z5.F10",
+        "U01.Z5.s8",
+        "U01.Z5.s9",
+        "U01.Z5.s10",
+        "U01.Z5.selected_mm",
+        "U01.Z5.pump_work",
+        "U01.Z5.load_work",
         "U01.Z6.p_kPa",
         "U01.Z6.G_kN",
         "U01.Z6.s_p",
@@ -1633,13 +1651,321 @@
   ],
   "canonical_tasks": [
     {
-      "id": "task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera",
+      "id": "task-gustoca-ulja-iz-vaganja",
       "chapter": "U01",
       "ordinal": 1,
       "level": "T1",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 658,
+        "line": 662,
+        "anchor": "#task-gustoca-ulja-iz-vaganja"
+      },
+      "statement": {
+        "markdown": "Prazna posuda ima masu $m_0 = 42{,}6\\ \\text{g}$. S volumenom ulja $V_1 = 50{,}0\\ \\text{cm}^3$ njezina ukupna masa iznosi $m_1 = 85{,}5\\ \\text{g}$, a s volumenom $V_2 = 100{,}0\\ \\text{cm}^3$ ukupna masa iznosi $m_2 = 128{,}7\\ \\text{g}$. Oba mjerenja odnose se na isto homogeno ulje pri istoj temperaturi. Uzmi $g = 9{,}81\\ \\text{m/s}^2$ i referentnu gustoću vode $\\rho_v = 1000\\ \\text{kg/m}^3$. Odredi gustoću iz svakog mjerenja, njihovu aritmetičku sredinu te pripadne specifičnu težinu i relativnu gustoću. Objasni zašto se masa pune posude ne smije izravno podijeliti volumenom ulja. Je li mala razlika dobivenih gustoća dovoljan dokaz da ulje nije homogeno?",
+        "sha256": "740130c10579887df86245a2bc005540e9ba7223de0b9175ec5e081adf72be52",
+        "authoritative": true
+      },
+      "input_data": {
+        "scalars": [
+          {
+            "symbol": "m_0",
+            "relation": "=",
+            "value_text": "42{,}6",
+            "value": 42.6,
+            "unit_text": "\\ \\text{g}",
+            "normalized_unit": "g",
+            "provenance": "task_statement_inline_math",
+            "si": null,
+            "si_note": "Jedinica nije na konzervativnoj bijeloj listi; izvorni zapis ostaje autoritativan."
+          },
+          {
+            "symbol": "V_1",
+            "relation": "=",
+            "value_text": "50{,}0",
+            "value": 50.0,
+            "unit_text": "\\ \\text{cm}^3",
+            "normalized_unit": "cm^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 4.9999999999999996e-05,
+              "unit": "m^3"
+            }
+          },
+          {
+            "symbol": "m_1",
+            "relation": "=",
+            "value_text": "85{,}5",
+            "value": 85.5,
+            "unit_text": "\\ \\text{g}",
+            "normalized_unit": "g",
+            "provenance": "task_statement_inline_math",
+            "si": null,
+            "si_note": "Jedinica nije na konzervativnoj bijeloj listi; izvorni zapis ostaje autoritativan."
+          },
+          {
+            "symbol": "V_2",
+            "relation": "=",
+            "value_text": "100{,}0",
+            "value": 100.0,
+            "unit_text": "\\ \\text{cm}^3",
+            "normalized_unit": "cm^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 9.999999999999999e-05,
+              "unit": "m^3"
+            }
+          },
+          {
+            "symbol": "m_2",
+            "relation": "=",
+            "value_text": "128{,}7",
+            "value": 128.7,
+            "unit_text": "\\ \\text{g}",
+            "normalized_unit": "g",
+            "provenance": "task_statement_inline_math",
+            "si": null,
+            "si_note": "Jedinica nije na konzervativnoj bijeloj listi; izvorni zapis ostaje autoritativan."
+          },
+          {
+            "symbol": "g",
+            "relation": "=",
+            "value_text": "9{,}81",
+            "value": 9.81,
+            "unit_text": "\\ \\text{m/s}^2",
+            "normalized_unit": "m/s^2",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 9.81,
+              "unit": "m/s^2"
+            }
+          },
+          {
+            "symbol": "\\rho_v",
+            "relation": "=",
+            "value_text": "1000",
+            "value": 1000.0,
+            "unit_text": "\\ \\text{kg/m}^3",
+            "normalized_unit": "kg/m^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1000.0,
+              "unit": "kg/m^3"
+            }
+          }
+        ],
+        "unparsed_numeric_math": [],
+        "parse_status": "conservative_partial",
+        "authoritative_fallback": "statement.markdown"
+      },
+      "assumptions": {
+        "explicit": [
+          {
+            "text": "Uzmi $g = 9{,}81\\ \\text{m/s}^2$ i referentnu gustoću vode $\\rho_v = 1000\\ \\text{kg/m}^3$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 662
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
+        "defaults": [
+          {
+            "text": "Pretpostavljaju se kvazistatički rad, približno jednake visine klipova i kruti vodovi.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          },
+          {
+            "text": "Zanemaruju se trenje, propuštanje i stlačivost tekućine, osim gdje Z6 izričito uvodi faktore odstupanja od idealnog prijenosa.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
+        "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
+      },
+      "published_control": {
+        "kind": "numeric",
+        "markdown": "$\\rho_1=858\\ \\text{kg/m}^3$, $\\rho_2=861\\ \\text{kg/m}^3$, $\\bar\\rho=859{,}5\\ \\text{kg/m}^3$; $\\bar\\gamma\\approx8{,}432\\ \\text{kN/m}^3$, $s_r=0{,}8595$. Masa ulja jest razlika ukupne mase i mase posude. Sama razlika gustoća ne dokazuje nehomogenost: nedostaju podatci o mjernoj točnosti.",
+        "reason_if_absent": null,
+        "provenance": {
+          "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
+          "line": 676
+        }
+      },
+      "tolerance": {
+        "kind": "per_result",
+        "contracts": [
+          {
+            "result_id": "U01.Z1.rho1",
+            "kind": "relative",
+            "value": 1e-06,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z1.rho2",
+            "kind": "relative",
+            "value": 1e-06,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z1.rho_mean",
+            "kind": "relative",
+            "value": 1e-06,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z1.gamma",
+            "kind": "relative",
+            "value": 0.0001,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z1.sr",
+            "kind": "relative",
+            "value": 1e-06,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          }
+        ]
+      },
+      "independent_check": {
+        "kind": "executed_invariant",
+        "criterion": [
+          "abs(shifted['rho'] - z1['rho']) < 1e-09"
+        ],
+        "verifier_result_ids": [
+          "U01.Z1.tare_invariance"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
+      },
+      "verifier": {
+        "module": "verify_u01",
+        "exercise_id": "U01.Z1",
+        "classification": "golden",
+        "result_ids": [
+          "U01.Z1.rho1",
+          "U01.Z1.rho2",
+          "U01.Z1.rho_mean",
+          "U01.Z1.gamma",
+          "U01.Z1.sr",
+          "U01.Z1.tare_invariance"
+        ],
+        "result_contracts": [
+          {
+            "result_id": "U01.Z1.rho1",
+            "verification": "golden",
+            "target": 858,
+            "target_kind": "literal",
+            "unit": "kg/m^3",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-06,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 249
+            }
+          },
+          {
+            "result_id": "U01.Z1.rho2",
+            "verification": "golden",
+            "target": 861,
+            "target_kind": "literal",
+            "unit": "kg/m^3",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-06,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 250
+            }
+          },
+          {
+            "result_id": "U01.Z1.rho_mean",
+            "verification": "golden",
+            "target": 859.5,
+            "target_kind": "literal",
+            "unit": "kg/m^3",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-06,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 251
+            }
+          },
+          {
+            "result_id": "U01.Z1.gamma",
+            "verification": "golden",
+            "target": 8.432,
+            "target_kind": "literal",
+            "unit": "kN/m^3",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0001,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 252
+            }
+          },
+          {
+            "result_id": "U01.Z1.sr",
+            "verification": "golden",
+            "target": 0.8595,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-06,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 253
+            }
+          },
+          {
+            "result_id": "U01.Z1.tare_invariance",
+            "verification": "invariant",
+            "criterion_expression": "abs(shifted['rho'] - z1['rho']) < 1e-09",
+            "failure_message": "Promjena mase posude uz iste mase ulja mijenja gustocu.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 255
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera",
+      "chapter": "U01",
+      "ordinal": 2,
+      "level": "T1",
+      "source": {
+        "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
+        "line": 683,
         "anchor": "#task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera"
       },
       "statement": {
@@ -1709,8 +2035,23 @@
       "assumptions": {
         "explicit": [],
         "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "defaults": [
+          {
+            "text": "Pretpostavljaju se kvazistatički rad, približno jednake visine klipova i kruti vodovi.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          },
+          {
+            "text": "Zanemaruju se trenje, propuštanje i stlačivost tekućine, osim gdje Z6 izričito uvodi faktore odstupanja od idealnog prijenosa.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
@@ -1719,28 +2060,28 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 670
+          "line": 695
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U01.Z1.p_kPa",
+            "result_id": "U01.Z2.p_kPa",
             "kind": "relative",
             "value": 0.01,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
-            "result_id": "U01.Z1.F_2_kN",
+            "result_id": "U01.Z2.F_2_kN",
             "kind": "relative",
             "value": 0.01,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
-            "result_id": "U01.Z1.s_2_mm",
+            "result_id": "U01.Z2.s_2_mm",
             "kind": "relative",
             "value": 0.01,
             "value_kind": "literal",
@@ -1749,40 +2090,28 @@
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U01.Z1.p_kPa",
-          "U01.Z1.F_2_kN",
-          "U01.Z1.s_2_mm"
+        "kind": "executed_invariant",
+        "criterion": [
+          "abs(0.028 ** 2 * 0.12 - 0.14 ** 2 * z2['s_2']) < 1e-12"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U01.Z1.p_kPa",
-            "unit": "kPa"
-          },
-          {
-            "result_id": "U01.Z1.F_2_kN",
-            "unit": "kN"
-          },
-          {
-            "result_id": "U01.Z1.s_2_mm",
-            "unit": "mm"
-          }
-        ]
+        "verifier_result_ids": [
+          "U01.Z2.volume_balance"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u01",
-        "exercise_id": "U01.Z1",
+        "exercise_id": "U01.Z2",
         "classification": "golden",
         "result_ids": [
-          "U01.Z1.p_kPa",
-          "U01.Z1.F_2_kN",
-          "U01.Z1.s_2_mm"
+          "U01.Z2.p_kPa",
+          "U01.Z2.F_2_kN",
+          "U01.Z2.s_2_mm",
+          "U01.Z2.volume_balance"
         ],
         "result_contracts": [
           {
-            "result_id": "U01.Z1.p_kPa",
+            "result_id": "U01.Z2.p_kPa",
             "verification": "golden",
             "target": 292.0,
             "target_kind": "literal",
@@ -1795,11 +2124,11 @@
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 248
+              "line": 260
             }
           },
           {
-            "result_id": "U01.Z1.F_2_kN",
+            "result_id": "U01.Z2.F_2_kN",
             "verification": "golden",
             "target": 4.5,
             "target_kind": "literal",
@@ -1812,11 +2141,11 @@
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 249
+              "line": 261
             }
           },
           {
-            "result_id": "U01.Z1.s_2_mm",
+            "result_id": "U01.Z2.s_2_mm",
             "verification": "golden",
             "target": 4.8,
             "target_kind": "literal",
@@ -1829,65 +2158,89 @@
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 250
+              "line": 262
+            }
+          },
+          {
+            "result_id": "U01.Z2.volume_balance",
+            "verification": "invariant",
+            "criterion_expression": "abs(0.028 ** 2 * 0.12 - 0.14 ** 2 * z2['s_2']) < 1e-12",
+            "failure_message": "Klipovi ne istiskuju jednake volumene.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 263
             }
           }
         ]
       }
     },
     {
-      "id": "task-u01-na-kruzni-klip-promjera-djeluje-sila-odredi",
+      "id": "task-pogreske-omjera-sile-i-pomaka",
       "chapter": "U01",
-      "ordinal": 2,
-      "level": "T1",
+      "ordinal": 3,
+      "level": "T2",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 678,
-        "anchor": "#task-u01-na-kruzni-klip-promjera-djeluje-sila-odredi"
+        "line": 704,
+        "anchor": "#task-pogreske-omjera-sile-i-pomaka"
       },
       "statement": {
-        "markdown": "Na kružni klip promjera $d = 24\\ \\text{mm}$ djeluje sila $F = 95\\ \\text{N}$. Odredi tlak u ulju i silu koju isti tlak daje na drugi klip promjera $D = 72\\ \\text{mm}$.",
-        "sha256": "066557e5eb72e1a743dbeeee115047c1aededbf66919ded11684a37e34a35238",
+        "markdown": "Na maloj nastavnoj preši promjeri klipova iznose $d_1 = 20\\ \\text{mm}$ i $d_2 = 60\\ \\text{mm}$. Stalna ulazna sila jest $F_1 = 100\\ \\text{N}$, a ulazni pomak $s_1 = 90\\ \\text{mm}$. Student predlaže: „Promjer radnog klipa triput je veći, pa je izlazna sila 300 N. Izlazni je pomak zato triput veći i iznosi 270 mm.” Pronađi dvije pogreške u zaključivanju, odredi ispravnu izlaznu silu i pomak te neovisno provjeri rezultat usporedbom ulaznog i izlaznog rada. Izračunaj i izlazni rad koji bi slijedio iz pogrešnog rješenja; objasni zašto ga ovaj sustav ne može ostvariti.",
+        "sha256": "1f39e905bebe89a44c4c0ecccb4801baa85b00eb05aa74cfea8dab12f3179d12",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "d",
+            "symbol": "d_1",
             "relation": "=",
-            "value_text": "24",
-            "value": 24.0,
+            "value_text": "20",
+            "value": 20.0,
             "unit_text": "\\ \\text{mm}",
             "normalized_unit": "mm",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.024,
+              "value": 0.02,
               "unit": "m"
             }
           },
           {
-            "symbol": "F",
+            "symbol": "d_2",
             "relation": "=",
-            "value_text": "95",
-            "value": 95.0,
-            "unit_text": "\\ \\text{N}",
-            "normalized_unit": "N",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 95.0,
-              "unit": "N"
-            }
-          },
-          {
-            "symbol": "D",
-            "relation": "=",
-            "value_text": "72",
-            "value": 72.0,
+            "value_text": "60",
+            "value": 60.0,
             "unit_text": "\\ \\text{mm}",
             "normalized_unit": "mm",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.07200000000000001,
+              "value": 0.06,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "F_1",
+            "relation": "=",
+            "value_text": "100",
+            "value": 100.0,
+            "unit_text": "\\ \\text{N}",
+            "normalized_unit": "N",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 100.0,
+              "unit": "N"
+            }
+          },
+          {
+            "symbol": "s_1",
+            "relation": "=",
+            "value_text": "90",
+            "value": 90.0,
+            "unit_text": "\\ \\text{mm}",
+            "normalized_unit": "mm",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.09,
               "unit": "m"
             }
           }
@@ -1897,117 +2250,244 @@
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "explicit": [
+          {
+            "text": "Izlazni je pomak zato triput veći i iznosi 270 mm.” Pronađi dvije pogreške u zaključivanju, odredi ispravnu izlaznu silu i pomak te neovisno provjeri rezultat usporedbom ulaznog i izlaznog rada.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 704
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
+        "defaults": [
+          {
+            "text": "Pretpostavljaju se kvazistatički rad, približno jednake visine klipova i kruti vodovi.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          },
+          {
+            "text": "Zanemaruju se trenje, propuštanje i stlačivost tekućine, osim gdje Z6 izričito uvodi faktore odstupanja od idealnog prijenosa.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$p \\approx 210\\ \\text{kPa}$; $F_2 = 855\\ \\text{N}$.",
+        "markdown": "$A_2/A_1=9$, $F_2=900\\ \\text{N}$, $s_2=10\\ \\text{mm}$; $W_1=W_2=9\\ \\text{J}$. Pogrešni izlazni rad bio bi $81\\ \\text{J}$. Površina raste s kvadratom promjera, a povećanje sile prati smanjenje pomaka. Predloženi izlazni rad devet je puta veći od raspoloživog ulaznog rada.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 690
+          "line": 718
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U01.Z2.p_kPa",
+            "result_id": "U01.Z3.area_ratio",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U01.Z2.F_2",
+            "result_id": "U01.Z3.F2",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z3.s2",
+            "kind": "relative",
+            "value": 1e-09,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z3.W1",
+            "kind": "relative",
+            "value": 1e-09,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z3.W2",
+            "kind": "relative",
+            "value": 1e-09,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z3.wrong_work",
+            "kind": "relative",
+            "value": 1e-09,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U01.Z2.p_kPa",
-          "U01.Z2.F_2"
+        "kind": "executed_invariant",
+        "criterion": [
+          "abs(z3['W1'] - z3['W2']) < 1e-12 and z3['wrong_W'] > z3['W1']"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U01.Z2.p_kPa",
-            "unit": "kPa"
-          },
-          {
-            "result_id": "U01.Z2.F_2",
-            "unit": "N"
-          }
-        ]
+        "verifier_result_ids": [
+          "U01.Z3.work_balance"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u01",
-        "exercise_id": "U01.Z2",
+        "exercise_id": "U01.Z3",
         "classification": "golden",
         "result_ids": [
-          "U01.Z2.p_kPa",
-          "U01.Z2.F_2"
+          "U01.Z3.area_ratio",
+          "U01.Z3.F2",
+          "U01.Z3.s2",
+          "U01.Z3.W1",
+          "U01.Z3.W2",
+          "U01.Z3.wrong_work",
+          "U01.Z3.work_balance"
         ],
         "result_contracts": [
           {
-            "result_id": "U01.Z2.p_kPa",
+            "result_id": "U01.Z3.area_ratio",
             "verification": "golden",
-            "target": 210.0,
+            "target": 9.0,
             "target_kind": "literal",
-            "unit": "kPa",
+            "unit": "1",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 252
+              "line": 268
             }
           },
           {
-            "result_id": "U01.Z2.F_2",
+            "result_id": "U01.Z3.F2",
             "verification": "golden",
-            "target": 855.0,
+            "target": 900.0,
             "target_kind": "literal",
             "unit": "N",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 253
+              "line": 269
+            }
+          },
+          {
+            "result_id": "U01.Z3.s2",
+            "verification": "golden",
+            "target": 10.0,
+            "target_kind": "literal",
+            "unit": "mm",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-09,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 270
+            }
+          },
+          {
+            "result_id": "U01.Z3.W1",
+            "verification": "golden",
+            "target": 9.0,
+            "target_kind": "literal",
+            "unit": "J",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-09,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 271
+            }
+          },
+          {
+            "result_id": "U01.Z3.W2",
+            "verification": "golden",
+            "target": 9.0,
+            "target_kind": "literal",
+            "unit": "J",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-09,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 272
+            }
+          },
+          {
+            "result_id": "U01.Z3.wrong_work",
+            "verification": "golden",
+            "target": 81.0,
+            "target_kind": "literal",
+            "unit": "J",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-09,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 273
+            }
+          },
+          {
+            "result_id": "U01.Z3.work_balance",
+            "verification": "invariant",
+            "criterion_expression": "abs(z3['W1'] - z3['W2']) < 1e-12 and z3['wrong_W'] > z3['W1']",
+            "failure_message": "Ispravni racun ne cuva rad ili pogresni nije prepoznat kao neizvediv.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 274
             }
           }
         ]
       }
     },
     {
-      "id": "task-u01-u-zatvorenoj-hidraulicnoj-stezi-tlak-ulja-iznosi",
+      "id": "task-promjer-cilindra-iz-volumena",
       "chapter": "U01",
-      "ordinal": 3,
+      "ordinal": 4,
       "level": "T2",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 698,
-        "anchor": "#task-u01-u-zatvorenoj-hidraulicnoj-stezi-tlak-ulja-iznosi"
+        "line": 727,
+        "anchor": "#task-promjer-cilindra-iz-volumena"
       },
       "statement": {
-        "markdown": "U zatvorenoj hidrauličnoj stezi tlak ulja iznosi $p = 2{,}4\\ \\text{MPa}$, a radni klip ima promjer $d = 52\\ \\text{mm}$. Odredi silu stezanja i procijeni koliki bi promjer morao imati novi klip ako se pri istom tlaku traži sila stezanja od najmanje $8{,}0\\ \\text{kN}$.",
-        "sha256": "6514ec596ef5c4ed0adb189609183cacc9987f6130f1ab4521eab539b9ae2a3d",
+        "markdown": "Laboratorijski cilindar prije mjerenja potpuno je napunjen tekućinom i odzračen. Dovedeni dodatni volumeni, mjereni od istoga početnog položaja, i pomaci klipa pri malom opterećenju prikazani su u tablici. U zasebnom pokusu s blokiranim klipom razlika tlakova preko klipa iznosi $p = 0{,}40\\ \\text{MPa}$. | Dodatni volumen $\\Delta V$ (cm³) | Pomak $s$ (mm) | | ---: | ---: | | 5,0 | 10,0 | | 10,0 | 20,0 | | 15,0 | 30,0 | Odredi efektivnu površinu i promjer klipa iz svakog para podataka. Jesu li rezultati usklađeni s pretpostavkom stalne površine i nestlačive tekućine? Predvidi idealnu silu u pokusu s blokiranim klipom. Bi li sustavno manji pomaci pri većem tlaku bili razlog za provjeru stlačivosti tekućine ili elastičnosti vodova? Objasni zašto početna tablica sama ne jamči valjanost modela pri svakom tlaku.",
+        "sha256": "63d521ead6ba3277090d5e2ae9c1f20fae0ded1fe952227d994915a066b9ace7",
         "authoritative": true
       },
       "input_data": {
@@ -2015,41 +2495,15 @@
           {
             "symbol": "p",
             "relation": "=",
-            "value_text": "2{,}4",
-            "value": 2.4,
+            "value_text": "0{,}40",
+            "value": 0.4,
             "unit_text": "\\ \\text{MPa}",
             "normalized_unit": "MPa",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 2400000.0,
+              "value": 400000.0,
               "unit": "Pa"
             }
-          },
-          {
-            "symbol": "d",
-            "relation": "=",
-            "value_text": "52",
-            "value": 52.0,
-            "unit_text": "\\ \\text{mm}",
-            "normalized_unit": "mm",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.052000000000000005,
-              "unit": "m"
-            }
-          },
-          {
-            "symbol": null,
-            "relation": "context_value",
-            "value_text": "8{,}0",
-            "value": 8.0,
-            "unit_text": "\\ \\text{kN}",
-            "normalized_unit": "kN",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 8000.0,
-              "unit": "N"
-            }
           }
         ],
         "unparsed_numeric_math": [],
@@ -2057,386 +2511,381 @@
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "explicit": [
+          {
+            "text": "Jesu li rezultati usklađeni s pretpostavkom stalne površine i nestlačive tekućine?",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 727
+            }
+          },
+          {
+            "text": "Predvidi idealnu silu u pokusu s blokiranim klipom.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 727
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
+        "defaults": [
+          {
+            "text": "Pretpostavljaju se kvazistatički rad, približno jednake visine klipova i kruti vodovi.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          },
+          {
+            "text": "Zanemaruju se trenje, propuštanje i stlačivost tekućine, osim gdje Z6 izričito uvodi faktore odstupanja od idealnog prijenosa.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$F \\approx 5{,}1\\ \\text{kN}$; $d_{min} \\approx 65\\ \\text{mm}$.",
+        "markdown": "Sva tri para daju $A=500\\ \\text{mm}^2$ i $d\\approx25{,}23\\ \\text{mm}$; idealno $F=200\\ \\text{N}$. Tablica je usklađena s modelom u ispitanim uvjetima. Manji pomak pri većem tlaku opravdava provjeru stlačivosti, elastičnosti i propuštanja; ne dokazuje jedan određeni uzrok.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 710
+          "line": 747
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U01.Z3.F_kN",
+            "result_id": "U01.Z4.A1",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U01.Z3.d_min_mm",
+            "result_id": "U01.Z4.A2",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z4.A3",
+            "kind": "relative",
+            "value": 1e-09,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z4.d1",
+            "kind": "relative",
+            "value": 0.0001,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z4.d2",
+            "kind": "relative",
+            "value": 0.0001,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z4.d3",
+            "kind": "relative",
+            "value": 0.0001,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z4.force",
+            "kind": "relative",
+            "value": 1e-09,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
+        "kind": "executed_invariant",
+        "criterion": [
+          "max(z4['areas']) - min(z4['areas']) < 1e-12 and max(altered['areas']) - min(altered['areas']) > 1e-06"
+        ],
         "verifier_result_ids": [
-          "U01.Z3.F_kN",
-          "U01.Z3.d_min_mm"
+          "U01.Z4.consistency_sensitivity"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U01.Z3.F_kN",
-            "unit": "kN"
-          },
-          {
-            "result_id": "U01.Z3.d_min_mm",
-            "unit": "mm"
-          }
-        ]
-      },
-      "verifier": {
-        "module": "verify_u01",
-        "exercise_id": "U01.Z3",
-        "classification": "golden",
-        "result_ids": [
-          "U01.Z3.F_kN",
-          "U01.Z3.d_min_mm"
-        ],
-        "result_contracts": [
-          {
-            "result_id": "U01.Z3.F_kN",
-            "verification": "golden",
-            "target": 5.1,
-            "target_kind": "literal",
-            "unit": "kN",
-            "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
-              "value_kind": "literal",
-              "provenance": "verifier_check_default"
-            },
-            "provenance": {
-              "path": "tools/verify_u01.py",
-              "line": 255
-            }
-          },
-          {
-            "result_id": "U01.Z3.d_min_mm",
-            "verification": "golden",
-            "target": 65.0,
-            "target_kind": "literal",
-            "unit": "mm",
-            "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
-              "value_kind": "literal",
-              "provenance": "verifier_check_default"
-            },
-            "provenance": {
-              "path": "tools/verify_u01.py",
-              "line": 256
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "task-u01-hidraulicni-stol-nosi-teret-mase-preko-dvaju",
-      "chapter": "U01",
-      "ordinal": 4,
-      "level": "T2",
-      "source": {
-        "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 718,
-        "anchor": "#task-u01-hidraulicni-stol-nosi-teret-mase-preko-dvaju"
-      },
-      "statement": {
-        "markdown": "Hidraulični stol nosi teret mase $m = 1350\\ \\text{kg}$ preko dvaju jednakih radnih cilindara promjera $D = 95\\ \\text{mm}$. Ulje se dovodi ručnom pumpom čiji klip ima promjer $d = 18\\ \\text{mm}$ i hod $s = 160\\ \\text{mm}$. Odredi minimalnu silu na pumpnom klipu potrebnu za podizanje tereta i broj punih pumpnih hodova potreban da se stol podigne za $\\Delta z = 45\\ \\text{mm}$.",
-        "sha256": "d76bc59f278f2452ea6a2e4b91a6af17a60ff1a903e34b2dbce8cb112cb2e167",
-        "authoritative": true
-      },
-      "input_data": {
-        "scalars": [
-          {
-            "symbol": "m",
-            "relation": "=",
-            "value_text": "1350",
-            "value": 1350.0,
-            "unit_text": "\\ \\text{kg}",
-            "normalized_unit": "kg",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 1350.0,
-              "unit": "kg"
-            }
-          },
-          {
-            "symbol": "D",
-            "relation": "=",
-            "value_text": "95",
-            "value": 95.0,
-            "unit_text": "\\ \\text{mm}",
-            "normalized_unit": "mm",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.095,
-              "unit": "m"
-            }
-          },
-          {
-            "symbol": "d",
-            "relation": "=",
-            "value_text": "18",
-            "value": 18.0,
-            "unit_text": "\\ \\text{mm}",
-            "normalized_unit": "mm",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.018000000000000002,
-              "unit": "m"
-            }
-          },
-          {
-            "symbol": "s",
-            "relation": "=",
-            "value_text": "160",
-            "value": 160.0,
-            "unit_text": "\\ \\text{mm}",
-            "normalized_unit": "mm",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.16,
-              "unit": "m"
-            }
-          },
-          {
-            "symbol": "\\Delta z",
-            "relation": "=",
-            "value_text": "45",
-            "value": 45.0,
-            "unit_text": "\\ \\text{mm}",
-            "normalized_unit": "mm",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.045,
-              "unit": "m"
-            }
-          }
-        ],
-        "unparsed_numeric_math": [],
-        "parse_status": "conservative_partial",
-        "authoritative_fallback": "statement.markdown"
-      },
-      "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
-        "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
-      },
-      "published_control": {
-        "kind": "numeric",
-        "markdown": "$p \\approx 0{,}93\\ \\text{MPa}$; $F_p \\approx 238\\ \\text{N}$; $n = 16$ hodova.",
-        "reason_if_absent": null,
-        "provenance": {
-          "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 730
-        }
-      },
-      "tolerance": {
-        "kind": "per_result",
-        "contracts": [
-          {
-            "result_id": "U01.Z4.p_MPa",
-            "kind": "relative",
-            "value": 0.01,
-            "value_kind": "literal",
-            "provenance": "verifier_check_default"
-          },
-          {
-            "result_id": "U01.Z4.F_p",
-            "kind": "relative",
-            "value": 0.01,
-            "value_kind": "literal",
-            "provenance": "verifier_check_default"
-          },
-          {
-            "result_id": "U01.Z4.n",
-            "kind": "relative",
-            "value": 0.01,
-            "value_kind": "literal",
-            "provenance": "verifier_check_default"
-          }
-        ]
-      },
-      "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U01.Z4.p_MPa",
-          "U01.Z4.F_p",
-          "U01.Z4.n"
-        ],
-        "unit_contract": [
-          {
-            "result_id": "U01.Z4.p_MPa",
-            "unit": "MPa"
-          },
-          {
-            "result_id": "U01.Z4.F_p",
-            "unit": "N"
-          },
-          {
-            "result_id": "U01.Z4.n",
-            "unit": "hodova"
-          }
-        ]
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u01",
         "exercise_id": "U01.Z4",
         "classification": "golden",
         "result_ids": [
-          "U01.Z4.p_MPa",
-          "U01.Z4.F_p",
-          "U01.Z4.n"
+          "U01.Z4.A1",
+          "U01.Z4.A2",
+          "U01.Z4.A3",
+          "U01.Z4.d1",
+          "U01.Z4.d2",
+          "U01.Z4.d3",
+          "U01.Z4.force",
+          "U01.Z4.consistency_sensitivity"
         ],
         "result_contracts": [
           {
-            "result_id": "U01.Z4.p_MPa",
+            "result_id": "U01.Z4.A1",
             "verification": "golden",
-            "target": 0.93,
+            "target": 500,
             "target_kind": "literal",
-            "unit": "MPa",
+            "unit": "mm^2",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 258
+              "line": 279
             }
           },
           {
-            "result_id": "U01.Z4.F_p",
+            "result_id": "U01.Z4.A2",
             "verification": "golden",
-            "target": 238.0,
+            "target": 500,
+            "target_kind": "literal",
+            "unit": "mm^2",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-09,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 280
+            }
+          },
+          {
+            "result_id": "U01.Z4.A3",
+            "verification": "golden",
+            "target": 500,
+            "target_kind": "literal",
+            "unit": "mm^2",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-09,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 281
+            }
+          },
+          {
+            "result_id": "U01.Z4.d1",
+            "verification": "golden",
+            "target": 25.23,
+            "target_kind": "literal",
+            "unit": "mm",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0001,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 282
+            }
+          },
+          {
+            "result_id": "U01.Z4.d2",
+            "verification": "golden",
+            "target": 25.23,
+            "target_kind": "literal",
+            "unit": "mm",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0001,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 283
+            }
+          },
+          {
+            "result_id": "U01.Z4.d3",
+            "verification": "golden",
+            "target": 25.23,
+            "target_kind": "literal",
+            "unit": "mm",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0001,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 284
+            }
+          },
+          {
+            "result_id": "U01.Z4.force",
+            "verification": "golden",
+            "target": 200,
             "target_kind": "literal",
             "unit": "N",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 259
+              "line": 285
             }
           },
           {
-            "result_id": "U01.Z4.n",
-            "verification": "golden",
-            "target": 16.0,
-            "target_kind": "literal",
-            "unit": "hodova",
-            "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
-              "value_kind": "literal",
-              "provenance": "verifier_check_default"
-            },
+            "result_id": "U01.Z4.consistency_sensitivity",
+            "verification": "invariant",
+            "criterion_expression": "max(z4['areas']) - min(z4['areas']) < 1e-12 and max(altered['areas']) - min(altered['areas']) > 1e-06",
+            "failure_message": "Izmjena treceg mjerenja nije prepoznata u provjeri stalne povrsine.",
+            "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 260
+              "line": 287
             }
           }
         ]
       }
     },
     {
-      "id": "task-u01-rucna-pumpa-s-klipom-promjera-razvija-silu",
+      "id": "task-izbor-pumpe-sila-i-hod",
       "chapter": "U01",
       "ordinal": 5,
       "level": "T3",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 738,
-        "anchor": "#task-u01-rucna-pumpa-s-klipom-promjera-razvija-silu"
+        "line": 756,
+        "anchor": "#task-izbor-pumpe-sila-i-hod"
       },
       "statement": {
-        "markdown": "Ručna pumpa s klipom promjera $d = 25\\ \\text{mm}$ razvija silu $F_p = 420\\ \\text{N}$. Dva radna cilindra promjera $D = 140\\ \\text{mm}$ nalaze se na istoj razini i podižu platformu. Odredi tlak u ulju, ukupno nosivo opterećenje platforme i ukupni hod pumpnog klipa potreban da se platforma podigne za $\\Delta z = 30\\ \\text{mm}$.",
-        "sha256": "7f32e4d34a77c8464fa94a6e40df10f57780a4d2380d6ef4c21ad7c5609acfdf",
+        "markdown": "Radni klip površine $A_L = 30\\ \\text{cm}^2$ mora svladati stalnu silu $F_L = 6{,}0\\ \\text{kN}$ i prijeći put $s_L = 10\\ \\text{mm}$. Najveća dopuštena sila neposredno na pumpnom klipu iznosi $F_{p,max} = 150\\ \\text{N}$, a zbroj njegovih tlačnih hodova smije biti najviše $s_{p,max} = 0{,}50\\ \\text{m}$. Povratni potezi ne ulaze u taj zbroj. Ponuđeni promjeri pumpnog klipa su $d_a = 8\\ \\text{mm}$, $d_b = 9\\ \\text{mm}$ i $d_c = 10\\ \\text{mm}$. Odredi potrebni tlak te za svaku varijantu silu i zbroj tlačnih hodova. Odaberi varijantu koja zadovoljava oba zahtjeva i objasni zašto najmanji klip nije automatski najbolji izbor. Provjeri za odabranu varijantu jednakost ulaznog i izlaznog rada.",
+        "sha256": "3f1ce17aea0a0300778acad0124efc26e11dc648ef001b12e4f6958a1fff4499",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "d",
+            "symbol": "A_L",
             "relation": "=",
-            "value_text": "25",
-            "value": 25.0,
-            "unit_text": "\\ \\text{mm}",
-            "normalized_unit": "mm",
+            "value_text": "30",
+            "value": 30.0,
+            "unit_text": "\\ \\text{cm}^2",
+            "normalized_unit": "cm^2",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.025,
-              "unit": "m"
+              "value": 0.003,
+              "unit": "m^2"
             }
           },
           {
-            "symbol": "F_p",
+            "symbol": "F_L",
             "relation": "=",
-            "value_text": "420",
-            "value": 420.0,
-            "unit_text": "\\ \\text{N}",
-            "normalized_unit": "N",
+            "value_text": "6{,}0",
+            "value": 6.0,
+            "unit_text": "\\ \\text{kN}",
+            "normalized_unit": "kN",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 420.0,
+              "value": 6000.0,
               "unit": "N"
             }
           },
           {
-            "symbol": "D",
+            "symbol": "s_L",
             "relation": "=",
-            "value_text": "140",
-            "value": 140.0,
+            "value_text": "10",
+            "value": 10.0,
             "unit_text": "\\ \\text{mm}",
             "normalized_unit": "mm",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.14,
+              "value": 0.01,
               "unit": "m"
             }
           },
           {
-            "symbol": "\\Delta z",
+            "symbol": "F_{p,max}",
             "relation": "=",
-            "value_text": "30",
-            "value": 30.0,
+            "value_text": "150",
+            "value": 150.0,
+            "unit_text": "\\ \\text{N}",
+            "normalized_unit": "N",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 150.0,
+              "unit": "N"
+            }
+          },
+          {
+            "symbol": "s_{p,max}",
+            "relation": "=",
+            "value_text": "0{,}50",
+            "value": 0.5,
+            "unit_text": "\\ \\text{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.5,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "d_a",
+            "relation": "=",
+            "value_text": "8",
+            "value": 8.0,
             "unit_text": "\\ \\text{mm}",
             "normalized_unit": "mm",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.03,
+              "value": 0.008,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "d_b",
+            "relation": "=",
+            "value_text": "9",
+            "value": 9.0,
+            "unit_text": "\\ \\text{mm}",
+            "normalized_unit": "mm",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.009000000000000001,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "d_c",
+            "relation": "=",
+            "value_text": "10",
+            "value": 10.0,
+            "unit_text": "\\ \\text{mm}",
+            "normalized_unit": "mm",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.01,
               "unit": "m"
             }
           }
@@ -2448,127 +2897,330 @@
       "assumptions": {
         "explicit": [],
         "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "defaults": [
+          {
+            "text": "Pretpostavljaju se kvazistatički rad, približno jednake visine klipova i kruti vodovi.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          },
+          {
+            "text": "Zanemaruju se trenje, propuštanje i stlačivost tekućine, osim gdje Z6 izričito uvodi faktore odstupanja od idealnog prijenosa.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$p \\approx 856\\ \\text{kPa}$; $G \\approx 26{,}3\\ \\text{kN}$; $s_p \\approx 1{,}88\\ \\text{m}$.",
+        "markdown": "$p=2{,}00\\ \\text{MPa}$. Za promjere 8, 9 i 10 mm parovi $(F_p,s_p)$ jesu približno $(100{,}5\\ \\text{N},0{,}5968\\ \\text{m})$, $(127{,}2\\ \\text{N},0{,}4716\\ \\text{m})$ i $(157{,}1\\ \\text{N},0{,}3820\\ \\text{m})$. Odabire se 9 mm; 8 mm ne zadovoljava hod, a 10 mm silu. Za odabranu pumpu $W_p=W_L=60\\ \\text{J}$.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 750
+          "line": 770
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U01.Z5.p_kPa",
+            "result_id": "U01.Z5.p_MPa",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U01.Z5.G_kN",
+            "result_id": "U01.Z5.F8",
             "kind": "relative",
-            "value": 0.01,
+            "value": 0.0005,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U01.Z5.s_p",
+            "result_id": "U01.Z5.F9",
             "kind": "relative",
-            "value": 0.01,
+            "value": 0.0005,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z5.F10",
+            "kind": "relative",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z5.s8",
+            "kind": "relative",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z5.s9",
+            "kind": "relative",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z5.s10",
+            "kind": "relative",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z5.selected_mm",
+            "kind": "relative",
+            "value": 1e-09,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z5.pump_work",
+            "kind": "relative",
+            "value": 1e-09,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U01.Z5.load_work",
+            "kind": "relative",
+            "value": 1e-09,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U01.Z5.p_kPa",
-          "U01.Z5.G_kN",
-          "U01.Z5.s_p"
+        "kind": "executed_invariant",
+        "criterion": [
+          "z5['feasible'] == [0.009] and z5['strokes'][0] > 0.5 and (z5['forces'][2] > 150.0) and (not zadatak_5(F_max=120)['feasible'])",
+          "all((abs(w - z5['output_work']) < 1e-09 for w in z5['works']))"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U01.Z5.p_kPa",
-            "unit": "kPa"
-          },
-          {
-            "result_id": "U01.Z5.G_kN",
-            "unit": "kN"
-          },
-          {
-            "result_id": "U01.Z5.s_p",
-            "unit": "m"
-          }
-        ]
+        "verifier_result_ids": [
+          "U01.Z5.two_constraints",
+          "U01.Z5.work_balance"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u01",
         "exercise_id": "U01.Z5",
         "classification": "golden",
         "result_ids": [
-          "U01.Z5.p_kPa",
-          "U01.Z5.G_kN",
-          "U01.Z5.s_p"
+          "U01.Z5.p_MPa",
+          "U01.Z5.F8",
+          "U01.Z5.F9",
+          "U01.Z5.F10",
+          "U01.Z5.s8",
+          "U01.Z5.s9",
+          "U01.Z5.s10",
+          "U01.Z5.selected_mm",
+          "U01.Z5.pump_work",
+          "U01.Z5.load_work",
+          "U01.Z5.two_constraints",
+          "U01.Z5.work_balance"
         ],
         "result_contracts": [
           {
-            "result_id": "U01.Z5.p_kPa",
+            "result_id": "U01.Z5.p_MPa",
             "verification": "golden",
-            "target": 856.0,
+            "target": 2.0,
             "target_kind": "literal",
-            "unit": "kPa",
+            "unit": "MPa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 262
+              "line": 293
             }
           },
           {
-            "result_id": "U01.Z5.G_kN",
+            "result_id": "U01.Z5.F8",
             "verification": "golden",
-            "target": 26.3,
+            "target": 100.5,
             "target_kind": "literal",
-            "unit": "kN",
+            "unit": "N",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 0.0005,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 263
+              "line": 294
             }
           },
           {
-            "result_id": "U01.Z5.s_p",
+            "result_id": "U01.Z5.F9",
             "verification": "golden",
-            "target": 1.88,
+            "target": 127.2,
+            "target_kind": "literal",
+            "unit": "N",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 295
+            }
+          },
+          {
+            "result_id": "U01.Z5.F10",
+            "verification": "golden",
+            "target": 157.1,
+            "target_kind": "literal",
+            "unit": "N",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 296
+            }
+          },
+          {
+            "result_id": "U01.Z5.s8",
+            "verification": "golden",
+            "target": 0.5968,
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 0.0005,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 264
+              "line": 297
+            }
+          },
+          {
+            "result_id": "U01.Z5.s9",
+            "verification": "golden",
+            "target": 0.4716,
+            "target_kind": "literal",
+            "unit": "m",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 298
+            }
+          },
+          {
+            "result_id": "U01.Z5.s10",
+            "verification": "golden",
+            "target": 0.382,
+            "target_kind": "literal",
+            "unit": "m",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 299
+            }
+          },
+          {
+            "result_id": "U01.Z5.selected_mm",
+            "verification": "golden",
+            "target": 9,
+            "target_kind": "literal",
+            "unit": "mm",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-09,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 300
+            }
+          },
+          {
+            "result_id": "U01.Z5.pump_work",
+            "verification": "golden",
+            "target": 60,
+            "target_kind": "literal",
+            "unit": "J",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-09,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 301
+            }
+          },
+          {
+            "result_id": "U01.Z5.load_work",
+            "verification": "golden",
+            "target": 60,
+            "target_kind": "literal",
+            "unit": "J",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-09,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 302
+            }
+          },
+          {
+            "result_id": "U01.Z5.two_constraints",
+            "verification": "invariant",
+            "criterion_expression": "z5['feasible'] == [0.009] and z5['strokes'][0] > 0.5 and (z5['forces'][2] > 150.0) and (not zadatak_5(F_max=120)['feasible'])",
+            "failure_message": "Odabir ne postuje oba ogranicenja ili je fiksiran neovisno o zahtjevima.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 303
+            }
+          },
+          {
+            "result_id": "U01.Z5.work_balance",
+            "verification": "invariant",
+            "criterion_expression": "all((abs(w - z5['output_work']) < 1e-09 for w in z5['works']))",
+            "failure_message": "Promjena povrsine pumpe stvara ili unistava idealni rad.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 308
             }
           }
         ]
@@ -2581,12 +3233,12 @@
       "level": "T4",
       "source": {
         "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-        "line": 758,
+        "line": 777,
         "anchor": "#task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra"
       },
       "statement": {
-        "markdown": "Hidraulični radni stol podupiru tri jednaka cilindra, svaki površine $A_L = 95\\ \\text{cm}^2$. Ulje dovodi pumpni klip promjera $d = 22\\ \\text{mm}$ na koji djeluje sila $F_p = 360\\ \\text{N}$. Odredi tlak u ulju, ukupno idealno opterećenje koje stol može nositi i ukupan idealni hod pumpnog klipa potreban da se stol podigne za $\\Delta z = 18\\ \\text{mm}$. Za odluku o puštanju u rad uzmi da su izmjereni faktor prijenosa sile $\\eta_F=0{,}86\\pm0{,}04$ i volumetrijska učinkovitost $\\eta_V=0{,}90\\pm0{,}03$. Stol mora nositi najmanje $22{,}0\\ \\text{kN}$, a raspoloživi hod pumpe iznosi $1{,}60\\ \\text{m}$. Izračunaj nominalno i konzervativno korisno opterećenje i potreban hod te obrazloži zadovoljava li sustav oba zahtjeva u cijelom zadanom rasponu učinkovitosti.",
-        "sha256": "7ea1c0f07dfe80b8bdfc1abbfba2db94ea364d8f38eba01d7ff7b4bac922dd07",
+        "markdown": "Hidraulični radni stol podupiru tri jednaka cilindra, svaki površine $A_L = 95\\ \\text{cm}^2$. Ulje dovodi pumpni klip promjera $d = 22\\ \\text{mm}$ na koji djeluje sila $F_p = 360\\ \\text{N}$. Odredi tlak u ulju, ukupno idealno opterećenje koje stol može nositi i ukupan idealni hod pumpnog klipa potreban da se stol podigne za $\\Delta z = 18\\ \\text{mm}$. U pojednostavljenom modelu uzmi da su zadani faktor prijenosa sile $\\eta_F=0{,}86\\pm0{,}04$ i volumetrijska učinkovitost $\\eta_V=0{,}90\\pm0{,}03$. Zapis ± označuje zajamčene granične intervale, a ne standardnu mjernu nesigurnost; svaka kombinacija dopuštenih vrijednosti smatra se mogućom. Faktor prijenosa sile jest omjer korisnog i idealnog opterećenja, a volumetrijska učinkovitost omjer volumena koji dolazi u radne cilindre i volumena istisnutog pumpom. Cilindri jednoliko nose ukupno opterećenje i mehanički su vođeni tako da imaju isti pomak. Stol mora nositi najmanje $22{,}0\\ \\text{kN}$, a raspoloživi hod pumpe iznosi $1{,}60\\ \\text{m}$. Izračunaj nominalno i konzervativno korisno opterećenje i potreban hod te obrazloži zadovoljava li sustav oba zahtjeva u cijelom zadanom rasponu učinkovitosti.",
+        "sha256": "7ea8347a5ff743b8ff964ea54788832933ffb32a25689573d6f903b1f905cb73",
         "authoritative": true
       },
       "input_data": {
@@ -2712,27 +3364,56 @@
             "text": "Odredi tlak u ulju, ukupno idealno opterećenje koje stol može nositi i ukupan idealni hod pumpnog klipa potreban da se stol podigne za $\\Delta z = 18\\ \\text{mm}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 758
+              "line": 777
             }
           },
           {
-            "text": "Za odluku o puštanju u rad uzmi da su izmjereni faktor prijenosa sile $\\eta_F=0{,}86\\pm0{,}04$ i volumetrijska učinkovitost $\\eta_V=0{,}90\\pm0{,}03$.",
+            "text": "U pojednostavljenom modelu uzmi da su zadani faktor prijenosa sile $\\eta_F=0{,}86\\pm0{,}04$ i volumetrijska učinkovitost $\\eta_V=0{,}90\\pm0{,}03$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 758
+              "line": 777
+            }
+          },
+          {
+            "text": "svaka kombinacija dopuštenih vrijednosti smatra se mogućom.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 777
+            }
+          },
+          {
+            "text": "Faktor prijenosa sile jest omjer korisnog i idealnog opterećenja, a volumetrijska učinkovitost omjer volumena koji dolazi u radne cilindre i volumena istisnutog pumpom.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 777
             }
           },
           {
             "text": "Površina $A_p$ i tlak određuju se iz $p = F_p/A_p$, idealno opterećenje iz $G = 3pA_L$, a idealni hod pumpe iz volumne bilance $A_p s_p = 3A_L \\Delta z$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 764
+              "line": 783
             }
           }
         ],
         "explicit_status": "declared_and_extracted",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "defaults": [
+          {
+            "text": "Pretpostavljaju se kvazistatički rad, približno jednake visine klipova i kruti vodovi.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          },
+          {
+            "text": "Zanemaruju se trenje, propuštanje i stlačivost tekućine, osim gdje Z6 izričito uvodi faktore odstupanja od idealnog prijenosa.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 654
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
@@ -2741,7 +3422,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 770
+          "line": 789
         }
       },
       "tolerance": {
@@ -2801,10 +3482,12 @@
       "independent_check": {
         "kind": "executed_invariant",
         "criterion": [
-          "z6['G_useful_min'] >= 22000.0 and z6['s_actual_max'] <= 1.6"
+          "z6['G_useful_min'] >= 22000.0 and z6['s_actual_max'] <= 1.6",
+          "z6['G_useful_min'] <= z6['G_useful'] <= z6['G'] and z6['s_p'] <= z6['s_actual'] <= z6['s_actual_max']"
         ],
         "verifier_result_ids": [
-          "U01.Z6.both_requirements"
+          "U01.Z6.both_requirements",
+          "U01.Z6.interval_bounds"
         ],
         "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
@@ -2820,7 +3503,8 @@
           "U01.Z6.G_useful_min_kN",
           "U01.Z6.s_actual",
           "U01.Z6.s_actual_max",
-          "U01.Z6.both_requirements"
+          "U01.Z6.both_requirements",
+          "U01.Z6.interval_bounds"
         ],
         "result_contracts": [
           {
@@ -2837,7 +3521,7 @@
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 266
+              "line": 313
             }
           },
           {
@@ -2854,7 +3538,7 @@
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 267
+              "line": 314
             }
           },
           {
@@ -2871,7 +3555,7 @@
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 268
+              "line": 315
             }
           },
           {
@@ -2888,7 +3572,7 @@
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 269
+              "line": 316
             }
           },
           {
@@ -2905,7 +3589,7 @@
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 270
+              "line": 317
             }
           },
           {
@@ -2922,7 +3606,7 @@
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 271
+              "line": 318
             }
           },
           {
@@ -2939,7 +3623,7 @@
             },
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 272
+              "line": 319
             }
           },
           {
@@ -2950,7 +3634,18 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u01.py",
-              "line": 273
+              "line": 320
+            }
+          },
+          {
+            "result_id": "U01.Z6.interval_bounds",
+            "verification": "invariant",
+            "criterion_expression": "z6['G_useful_min'] <= z6['G_useful'] <= z6['G'] and z6['s_p'] <= z6['s_actual'] <= z6['s_actual_max']",
+            "failure_message": "Krajnje ucinkovitosti ne daju konzervativne granice.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u01.py",
+              "line": 323
             }
           }
         ]
