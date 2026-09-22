@@ -165,7 +165,7 @@ dok se dvije uzastopne vrijednosti ne razlikuju manje od zadane tolerancije. Tre
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Numerički pokus — od predviđanja do reziduala</p>
 
-Prije pokretanja predvidi kako promjena $Re$ i $\varepsilon/D$ pomiče $\lambda$. Zatim usporedi iterativno rješenje, aproksimaciju i očitanje s dijagrama te provjeri rezidual Colebrookove jednadžbe.
+Prije pokretanja predvidi kako promjena $Re$ i $\varepsilon/D$ pomiče $\lambda$. Zatim usporedi iterativno rješenje, aproksimaciju i očitanje s dijagrama te provjeri rezidual Colebrookove jednadžbe. Nastavak istog notebooka rješava radnu točku iz Z4 uz promjenjiv faktor trenja i provjerava energijsku bilancu.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u10_moody_dijagram.ipynb" target="_blank" rel="noopener">Pokreni u JupyterLiteu</a>
@@ -201,7 +201,7 @@ Za serijski spoj tada vrijedi $R_{eq}=\sum R_i$. Za paralelne grane između čvo
 $$
 Q=\sum_iQ_i,
 \qquad
-RQ_i^2=h_{AB},
+R_iQ_i^2=h_{AB},
 \qquad
 \frac{1}{\sqrt{R_{eq}}}=\sum_i\frac{1}{\sqrt{R_i}}.
 $$ {#eq-paralelni-otpor}
@@ -217,7 +217,7 @@ Dvije paralelne grane počinju u istom čvoru i završavaju u istom čvoru. Zato
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Numerički pokus — paralelne grane</p>
 
-Najprije procijeni koja će grana ponijeti veći protok. Zatim mijenjaj promjer, duljinu i ukupni protok te provjeri kontinuitet i jednakost gubitaka između čvorova.
+Najprije procijeni koja će grana ponijeti veći protok. Zatim mijenjaj promjer, duljinu i ukupni protok te provjeri kontinuitet i jednakost gubitaka između čvorova. Pokus radi u turbulentnom području, bez proizvoljne interpolacije prijelaznog režima. Zasebni nastavci obrađuju uravnoteženje grana iz Z3 i godišnju energiju regulacije iz Z6.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u13_paralelne_grane.ipynb" target="_blank" rel="noopener">Pokreni u JupyterLiteu</a>
@@ -256,7 +256,7 @@ $$
 P_h=\rho gQH_p.
 $$ {#eq-hidraulicka-snaga-crpke}
 
-Ako je hidraulička učinkovitost crpke $\eta_p$, vratilna snaga jest
+Ako je ukupna učinkovitost crpke $\eta_p$ (omjer hidrauličke i vratilne snage), vratilna snaga jest
 
 $$
 P_{vr}=\frac{P_h}{\eta_p}.
@@ -604,16 +604,18 @@ Nedostaju proizvođačev $NPSH_r$ pri radnoj točki i zahtijevana margina. $NPSH
 
 ## Zadaci za samostalan rad {#sec-u13-zadatci}
 
+![Skice šest vježbi: vodoravne dionice, uravnoteženje paralelnih grana, radna točka uz promjenjivo trenje, izbor unutarnjeg promjera i napunjen usis crpke.](../assets/print/u13_mreze_vjezbe_skice.svg){#fig-cjevovodne-vjezbe fig-align="center" fig-alt="D je unutarnji promjer, L povezuje referentne presjeke, a kota usisnog uspona polazi od slobodne površine i završava na visini usisnog presjeka crpke. Cijevi imaju otvorene krajeve i uronjen usis; krivulje radne točke izračunane su iz podataka zadatka."}
+
 ::::: {.mf1-vjezbe-list}
 
 ### Z1. Gubitci ravne dionice {#task-gubitci-ravne-dionice .unnumbered .unlisted}
 
-Voda gustoće $998\ \mathrm{kg/m^3}$ protječe cijevi $D=0{,}10\ \mathrm{m}$, $L=50\ \mathrm{m}$ protokom $Q=0{,}012\ \mathrm{m^3/s}$. Zadano je $\lambda=0{,}025$ i $\sum\xi=4{,}0$. Odredi brzinu, linijski i lokalni gubitak, ukupni gubitak i pad tlaka.
+Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ stacionarno protječe vodoravnom cijevi stalnog unutarnjeg promjera $D=0{,}10\ \mathrm{m}$ i duljine $L=50\ \mathrm{m}$, protokom $Q=0{,}012\ \mathrm{m^3/s}$. Zadani su Darcyjev faktor $\lambda=0{,}025$ i $\sum\xi=4{,}0$ za armaturu između promatranih presjeka, svi prema brzini u toj cijevi. U oba presjeka uzmi isti profil brzine. Odredi brzinu, linijski, lokalni i ukupni gubitak te pad tlaka.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
 ### Naputak
-Najprije izračunaj $A$ i $v=Q/A$. Tek zatim zajedničku brzinsku visinu pomnoži s $\lambda L/D$ odnosno $\sum\xi$.
+Najprije izračunaj $A$ i $v=Q/A$. Tek zatim zajedničku brzinsku visinu pomnoži s $\lambda L/D$ odnosno $\sum\xi$. Za jednake visine i profile presjeka tlak pada zbog gubitaka.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -627,7 +629,7 @@ $v=1{,}528\ \mathrm{m/s}$, $h_l=1{,}487\ \mathrm{m}$, $h_{loc}=0{,}476\ \mathrm{
 
 ### Z2. Laminarni tok viskozne smjese {#task-laminarna-cijev-smjese .unnumbered .unlisted}
 
-Smjesa gustoće $1100\ \mathrm{kg/m^3}$ i $\nu=3{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ protječe kružnom cijevi $D=6{,}0\ \mathrm{mm}$, $L=5{,}0\ \mathrm{m}$ protokom $Q=6{,}0\cdot10^{-6}\ \mathrm{m^3/s}$. Zanemari lokalne gubitke. Odredi $Re$, $\lambda$ i $\Delta p$.
+Newtonska smjesa gustoće $\rho=1100\ \mathrm{kg/m^3}$ i kinematičke viskoznosti $\nu=3{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ stacionarno protječe kružnom vodoravnom cijevi $D=6{,}0\ \mathrm{mm}$, protokom $Q=6{,}0\cdot10^{-6}\ \mathrm{m^3/s}$. Promatrani razmak $L=5{,}0\ \mathrm{m}$ nalazi se u potpuno razvijenom toku uz prianjanje na stijenku; ulazno područje i lokalne gubitke izostavi. Odredi $Re$, Darcyjev faktor $\lambda$ i $\Delta p$. Kako se pad tlaka promijeni ako udvostručiš protok dok tok ostaje laminaran?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
@@ -644,39 +646,49 @@ $v=0{,}212\ \mathrm{m/s}$, $Re=424$, $\lambda=0{,}1508$ i $\Delta p=3{,}11\ \mat
 
 [Razina: T1]{.mf1-task-level}
 
-### Z3. Raspodjela kroz dvije paralelne grane {#task-raspodjela-paralelnih-grana .unnumbered .unlisted}
+<span id="task-raspodjela-paralelnih-grana"></span>
 
-Između istih čvorova spojene su grane s približno konstantnim otporima $R_1=12\,000\ \mathrm{s^2/m^5}$ i $R_2=48\,000\ \mathrm{s^2/m^5}$. Ukupni protok iznosi $Q=0{,}020\ \mathrm{m^3/s}$. Odredi $Q_1$, $Q_2$ i zajednički pad energije.
+### Z3. Uravnoteženje paralelnih grana {#task-uravnotezenje-paralelnih-grana .unnumbered .unlisted}
+
+Dva rashladna ogranka između istih čvorova trebaju dobivati jednak protok. Ugradnjom prigušnog ventila u samo jedan ogranak odredi gdje ga treba postaviti i koliki dodatni otpor mora imati. Zatim zatvori kontinuitet i usporedi gubitke na oba puta.
+
+Zadani približno konstantni otpori grana bez novoga ventila jesu $R_1=12\,000\ \mathrm{s^2/m^5}$ i $R_2=48\,000\ \mathrm{s^2/m^5}$. Regulacija održava ukupni protok $Q=0{,}020\ \mathrm{m^3/s}$ i može osigurati potrebnu visinu. U svakom ogranku vrijedi kvadratni model $h_i=R_iQ_i^2$; novi ventil dodaje $h_v=R_vQ_i^2$ s $R_v\ge0$. Odredi granu za ventil, $R_v$, oba protoka, zajednički gubitak $h_{AB}$ i doprinos samog ventila. Lokalni otpori postojećih spojeva već su uključeni u zadane $R_i$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
 ### Naputak
-Postavi $R_1Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$. Prije računa predvidi koja grana nosi veći protok.
+Cilj je $Q_1=Q_2=Q/2$. Izjednači ukupne gubitke između istih čvorova uz dodatak ventila. Prigušenje može povećati otpor, pa ne smiješ dobiti negativan $R_v$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-note collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$Q_1=13{,}33\ \mathrm{L/s}$, $Q_2=6{,}67\ \mathrm{L/s}$ i $h_{AB}=2{,}13\ \mathrm{m}$. Obje grane moraju vratiti isti $h_{AB}$.
+Ventil ide u granu 1: $R_v=36\,000\ \mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\ \mathrm{L/s}$, $h_{AB}=4{,}80\ \mathrm{m}$ i $h_v=3{,}60\ \mathrm{m}$. Provjera: $(R_1+R_v)Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$.
 :::
 ::::
 
 [Razina: T2]{.mf1-task-level}
 
-### Z4. Radna točka i snaga crpke {#task-radna-tocka-tri-snage .unnumbered .unlisted}
+<span id="task-radna-tocka-tri-snage"></span>
 
-Za $Q$ u $\mathrm{m^3/s}$ zadane su krivulje $H_p=30-30\,000Q^2$ i $H_s=8+20\,000Q^2$. Za vodu uzmi $\rho=1000\ \mathrm{kg/m^3}$. U radnoj točki vrijede $\eta_p=0{,}76$ i $\eta_m=0{,}92$; gubitke pretvarača zanemari. Odredi $Q_{op}$, $H_{op}$, $P_h$, $P_{vr}$ i $P_{el}$.
+### Z4. Radna točka hrapavog voda {#task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
+
+Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Odredi radnu točku kad otpor cijevi ovisi o Reynoldsovu broju, pa zatim odvojeno izračunaj hidrauličku, vratilnu i električnu snagu. U svakoj iteraciji ponovno provjeri trenje u cijevi.
+
+Sintetička karakteristika crpke zadana je brojevnim vrijednostima $H_p=30-30\,000Q^2$, uz $Q$ u $\mathrm{m^3/s}$ i $H_p$ u metrima. Razlika slobodnih površina je $\Delta z=8{,}0\ \mathrm{m}$. Vod ima $D=0{,}100\ \mathrm{m}$, $L=150\ \mathrm{m}$, ekvivalentnu hrapavost $\varepsilon=0{,}100\ \mathrm{mm}$ i $\sum\xi=6{,}0$, uključujući ulaz i izlaz, prema brzini u tom vodu. Za vodu uzmi $\rho=1000\ \mathrm{kg/m^3}$ i $\nu=1{,}00\cdot10^{-6}\ \mathrm{m^2/s}$. Upotrijebi Darcy–Weisbachov model i Colebrookovu jednadžbu; konačno provjeri turbulentni režim.
+
+Numerički riješi radnu točku u intervalu $0{,}005\le Q\le0{,}030\ \mathrm{m^3/s}$, uz pomoć notebooka ili drugog računskog alata. Izvijesti $Q_{op}$, $H_{op}$, $Re$ i $\lambda$ te provjeri energijski rezidual manji od $10^{-6}\ \mathrm{m}$ i apsolutni Colebrookov rezidual manji od $10^{-6}$. Za zadane ukupnu učinkovitost crpke $\eta_p=0{,}76$ i učinkovitost motora $\eta_m=0{,}92$ odredi $P_h$, $P_{vr}$ i $P_{el}$; gubitke pretvarača zanemari.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
 ### Naputak
-Najprije izjednači krivulje. Zatim slijedi pretvorbeni lanac $P_h=\rho gQH$, $P_{vr}=P_h/\eta_p$, $P_{el}=P_{vr}/\eta_m$.
+Za probni $Q$ odredi $v$, $Re$ i $\lambda$, pa $H_s=\Delta z+(\lambda L/D+\sum\xi)v^2/(2g)$. Mijenjaj $Q$ dok $H_p-H_s$ ne iščezne. Provjeri i izvorni Colebrookov rezidual. Zatim $P_h=\rho gQH_p$, $P_{vr}=P_h/\eta_p$ i $P_{el}=P_{vr}/\eta_m$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-note collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$Q_{op}=20{,}98\ \mathrm{L/s}$, $H_{op}=16{,}8\ \mathrm{m}$, $P_h=3{,}46\ \mathrm{kW}$, $P_{vr}=4{,}55\ \mathrm{kW}$ i $P_{el}=4{,}94\ \mathrm{kW}$. Provjeri da snage rastu prema električnom ulazu.
+$Q_{op}\approx19{,}030\ \mathrm{L/s}$, $H_{op}\approx19{,}136\ \mathrm{m}$, $Re\approx2{,}423\cdot10^5$ i $\lambda\approx0{,}020812$. Snage su $P_h\approx3{,}572\ \mathrm{kW}$, $P_{vr}\approx4{,}700\ \mathrm{kW}$ i $P_{el}\approx5{,}109\ \mathrm{kW}$. Oba reziduala provjeravaju se s nezaokruženim rješenjem; vrijedi $P_h<P_{vr}<P_{el}$.
 :::
 ::::
 
@@ -684,18 +696,18 @@ $Q_{op}=20{,}98\ \mathrm{L/s}$, $H_{op}=16{,}8\ \mathrm{m}$, $P_h=3{,}46\ \mathr
 
 ### Z5. Izbor promjera uz nesiguran otpor {#task-robustan-izbor-promjera .unnumbered .unlisted}
 
-Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $6{,}0$, a zbog starenja je $\lambda$ između 0,020 i 0,028. Dostupni su promjeri 80, 100 i 125 mm. Odaberi najmanji promjer koji i u nepovoljnom slučaju zadovoljava $h_w\le15\ \mathrm{m}$. Objasni zašto račun samo sa svježom cijevi nije robustan.
+Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $\sum\xi=6{,}0$, prema brzini u odabranom vodu. Za svaki ponuđeni promjer zadana granica Darcyjeva faktora zbog nepoznatog stanja cijevi jest $0{,}020\le\lambda\le0{,}028$; to je interval mogućih vrijednosti, a ne standardna nesigurnost. Dostupni unutarnji promjeri su 80, 100 i 125 mm. Odaberi najmanji koji u cijelom zadanom intervalu zadovoljava $h_w\le15\ \mathrm{m}$. Objasni zašto nije dovoljan račun samo s donjom granicom otpora.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
 ### Naputak
-Za svaki kandidat izračunaj brzinu, a zatim raspon $h_w$ za obje granice $\lambda$. Odluku donesi prema najvećem, ne srednjem gubitku.
+Za svaki kandidat izračunaj brzinu, a zatim raspon $h_w$ za obje granice $\lambda$. Odluku donesi prema najvećem gubitku. Pri fiksnom protoku i promjeru gubitak raste s $\lambda$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-note collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3,29–4,34 m za 125 mm. Najmanji robustan izbor jest 100 mm. Provjera odluke jest gornja granica $12{,}85<15\ \mathrm{m}$.
+Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3,29–4,34 m za 125 mm. Najmanji izbor koji zadovoljava cijeli interval jest 100 mm: gornja granica $12{,}85<15\ \mathrm{m}$. Promjer 80 mm ne zadovoljava ni uz najmanji zadani otpor.
 :::
 ::::
 
@@ -703,22 +715,24 @@ Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3
 
 ### Z6. Regulacija crpke, energija i usisna rezerva {#task-regulacija-energija-npsh .unnumbered .unlisted}
 
-Crpka pri nazivnoj brzini ima $H_p(q)=24-0{,}012q^2$, gdje je $q$ u $\mathrm{L/s}$. Izvorni sustav ima $H_s(q)=5+0{,}025q^2$. Prigušivanje ventila mijenja ga u $H_{s,V}(q)=5+0{,}040q^2$. Ukupna učinkovitost pretvorbe električna $\to$ hidraulička iznosi 0,72, a pogon radi $5000\ \mathrm{h/god}$.
+Usporedi prigušenje ventilom i regulaciju brzine za jednak traženi protok. Odredi godišnju energiju obiju mogućnosti i uštedu, a zatim provjeri što zadani usisni podatci dopuštaju zaključiti o radu pri nazivnoj i sniženoj brzini vrtnje.
 
-1. Odredi radnu točku prigušenog sustava i godišnju električnu energiju.
-2. Za isti protok odredi omjer brzina $s$ ako se ventil ponovno otvori i protok regulira promjenom brzine. Odredi godišnju uštedu uz istu učinkovitost.
-3. Za taj protok sustav ima $H_{atm}=10{,}2\ \mathrm{m}$, usisni geodetski uspon $2{,}0\ \mathrm{m}$, usisne gubitke $1{,}2\ \mathrm{m}$ i visinu tlaka pare $0{,}35\ \mathrm{m}$. Proizvođač daje $NPSH_r=2+0{,}003q^2$ u metrima. Izračunaj $NPSH_a$ i numeričku razliku $NPSH_a-NPSH_r$, ali jasno navedi zašto ta razlika sama nije univerzalna prihvatna margina.
+Sintetičke nastavne karakteristike zadane su brojevnim vrijednostima: pri nazivnoj brzini $H_p(q)=24-0{,}012q^2$, izvorni sustav $H_s(q)=5+0{,}025q^2$, a prigušeni $H_{s,V}(q)=5+0{,}040q^2$. Ovdje je $q$ u $\mathrm{L/s}$, a sve visine u metrima. Fluid je voda gustoće $\rho=1000\ \mathrm{kg/m^3}$. Ukupna učinkovitost električna–hidraulička pretpostavlja se jednakom $\eta=0{,}72$ u obje uspoređene točke; pogon radi $t=5000\ \mathrm{h/god}$.
+
+1. Odredi radnu točku prigušenog sustava, $q$, $H_V$ i godišnju električnu energiju $E_V$.
+2. Za isti protok, uz ponovno otvoren ventil, odredi omjer brzina $s=n_2/n_1$, potrebnu visinu $H_s$, godišnju energiju $E_s$ i uštedu $\Delta E$. Primijeni afinitetno skaliranje iste crpke, uz zadanu stalnu učinkovitost.
+3. Pri tom protoku zadani su $H_{atm}=10{,}2\ \mathrm{m}$, usisni geodetski uspon $z_s=2{,}0\ \mathrm{m}$, usisni gubitak $h_{w,s}=1{,}2\ \mathrm{m}$ i visina tlaka pare $H_v=0{,}35\ \mathrm{m}$. Sintetički model potrebnog NPSH-a **pri nazivnoj brzini** jest $NPSH_r=2+0{,}003q^2$ u metrima. Odredi $NPSH_a$ i razliku $NPSH_a-NPSH_r$ za prigušeni slučaj. Navedi koji podatci nedostaju za konačnu odluku o usisu obaju načina regulacije; dani $NPSH_r$ nemoj nekritički prenijeti na sniženu brzinu.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
 ### Naputak
-Prigušenu radnu točku dobiješ iz $H_p=H_{s,V}$. Za otvoren sustav pri istom $q$ vrijedi $H_{p,s}(q)=24s^2-0{,}012q^2=H_s(q)$. Energiju računaj iz $P_{el}=\rho gQH/0{,}72$. Za usis upotrijebi [-@eq-npsha-spremnik].
+Prigušenu točku dobiješ iz $H_p=H_{s,V}$. Za isti $q$ bez prigušenja vrijedi $H_{p,s}(q)=24s^2-0{,}012q^2=H_s(q)$. Energiju računaj s $Q=10^{-3}q$ iz $P_{el}=\rho gQH/\eta$. Za usis upotrijebi [-@eq-npsha-spremnik]; zadani potrebni NPSH vrijedi samo pri nazivnoj brzini.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-note collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-Prigušeno: $q=19{,}12\ \mathrm{L/s}$, $H=19{,}62\ \mathrm{m}$ i $P_{el}=5{,}11\ \mathrm{kW}$. Regulacija brzinom: otvoren sustav traži $H=14{,}13\ \mathrm{m}$, $s=0{,}878$, $P_{el}=3{,}68\ \mathrm{kW}$ i idealizirana godišnja ušteda je $7{,}14\ \mathrm{MWh}$. Za usis su $NPSH_a=6{,}65\ \mathrm{m}$, $NPSH_r=3{,}10\ \mathrm{m}$ i numerička razlika $3{,}55\ \mathrm{m}$. Prihvatljivost ipak zahtijeva proizvođačev kriterij margine, dopušteno radno područje i stvarne temperaturne/atmosferske uvjete.
+$q\approx19{,}12\ \mathrm{L/s}$; $(H_V,H_s)\approx(19{,}62;14{,}13)\ \mathrm{m}$ i $s\approx0{,}878$. $(E_V,E_s,\Delta E)\approx(25{,}54;18{,}41;7{,}14)\ \mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a,NPSH_r,NPSH_a-NPSH_r)\approx(6{,}65;3{,}10;3{,}55)\ \mathrm{m}$. Nedostaju kriterij margine i dopušteno radno područje, a za sniženu brzinu i odgovarajući $NPSH_r(q,n_2)$.
 :::
 ::::
 

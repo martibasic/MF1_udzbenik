@@ -1442,13 +1442,16 @@
         "U12.REAL.Z4.dpdx_critical",
         "U12.REAL.Z4.tau_90",
         "U12.REAL.Z4.tau_110",
+        "U12.REAL.Z4.reverse_height_ratio",
         "U12.REAL.Z5.Re_x",
         "U12.REAL.Z5.delta99_mm",
         "U12.REAL.Z5.ks_delta",
         "U12.REAL.Z5.gradient_parameter",
+        "U12.REAL.Z5.dpdx",
         "U12.REAL.Z6.p",
         "U12.REAL.Z6.Q_ext",
         "U12.REAL.Z6.GCI_fine_percent",
+        "U12.REAL.Z6.GCI_medium_percent",
         "U12.REAL.Z6.mass_imbalance_percent"
       ],
       "exercise_anchors": [
@@ -1537,8 +1540,13 @@
         "U13.CANON.Z3.Q1_Ls",
         "U13.CANON.Z3.Q2_Ls",
         "U13.CANON.Z3.h_AB",
+        "U13.CANON.Z3.Rv",
+        "U13.CANON.Z3.h_valve",
+        "U13.CANON.Z3.valve_branch",
         "U13.CANON.Z4.Q_Ls",
         "U13.CANON.Z4.H",
+        "U13.CANON.Z4.Re",
+        "U13.CANON.Z4.lambda",
         "U13.CANON.Z4.P_h_kW",
         "U13.CANON.Z4.P_shaft_kW",
         "U13.CANON.Z4.P_el_kW",
@@ -1551,10 +1559,10 @@
         "U13.CANON.Z5.selected_mm",
         "U13.CANON.Z6.q_Ls",
         "U13.CANON.Z6.H_throttled",
-        "U13.CANON.Z6.P_el_throttled_kW",
+        "U13.CANON.Z6.E_throttled_MWh",
         "U13.CANON.Z6.H_open",
         "U13.CANON.Z6.speed_ratio",
-        "U13.CANON.Z6.P_el_vfd_kW",
+        "U13.CANON.Z6.E_vfd_MWh",
         "U13.CANON.Z6.saving_MWh",
         "U13.CANON.Z6.NPSH_a",
         "U13.CANON.Z6.NPSH_r",
@@ -22032,16 +22040,40 @@
       "level": "T1",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 285,
+        "line": 287,
         "anchor": "#task-materijalna-derivacija"
       },
       "statement": {
-        "markdown": "Za $u(x,t)=2t+x^2$ odredi lokalno, konvektivno i ukupno ubrzanje u $x=1\\ \\text{m}$, $t=2\\ \\text{s}$ uz konzistentne SI jedinice koeficijenata.",
-        "sha256": "f79161f1a292592a4cafbd064daabcd4c05c56f81536eb3073f48385d5786c79",
+        "markdown": "Zadano je jednodimenzijsko kinematičko polje $u(x,t)=at+bx^2$, gdje su $a=2\\ \\text{m/s}^2$ i $b=1\\ \\text{m}^{-1}\\text{s}^{-1}$. Odredi brzinu, lokalno, konvektivno i ukupno ubrzanje čestice u $x=1\\ \\text{m}$, $t=2\\ \\text{s}$. Polje služi vježbi materijalne derivacije; nije zadano kao potpuno nestlačivo strujanje u cijevi.",
+        "sha256": "b5b9e7d38112c2a886f50f7f660152441122a75f7615b28979eef36350f6e16e",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
+          {
+            "symbol": "a",
+            "relation": "=",
+            "value_text": "2",
+            "value": 2.0,
+            "unit_text": "\\ \\text{m/s}^2",
+            "normalized_unit": "m/s^2",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 2.0,
+              "unit": "m/s^2"
+            }
+          },
+          {
+            "symbol": "b",
+            "relation": "=",
+            "value_text": "1",
+            "value": 1.0,
+            "unit_text": "\\ \\text{m}^{-1}\\text{s}^{-1}",
+            "normalized_unit": "m^-1s^-1",
+            "provenance": "task_statement_inline_math",
+            "si": null,
+            "si_note": "Jedinica nije na konzervativnoj bijeloj listi; izvorni zapis ostaje autoritativan."
+          },
           {
             "symbol": "x",
             "relation": "=",
@@ -22070,7 +22102,7 @@
           }
         ],
         "unparsed_numeric_math": [
-          "u(x,t)=2t+x^2"
+          "u(x,t)=at+bx^2"
         ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
@@ -22084,11 +22116,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$u=5\\ \\text{m/s}$, $a_{lok}=2$, $a_{kon}=10$, $a=12\\ \\text{m/s}^2$.",
+        "markdown": "$u=5\\ \\text{m/s}$; $a_{lok}=2\\ \\text{m/s}^2$, $a_{kon}=10\\ \\text{m/s}^2$ i $a=12\\ \\text{m/s}^2$.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 291
+          "line": 300
         }
       },
       "tolerance": {
@@ -22177,7 +22209,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 317
+              "line": 328
             }
           },
           {
@@ -22194,7 +22226,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 318
+              "line": 329
             }
           },
           {
@@ -22211,7 +22243,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 319
+              "line": 330
             }
           },
           {
@@ -22228,7 +22260,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 320
+              "line": 331
             }
           }
         ]
@@ -22241,12 +22273,12 @@
       "level": "T1",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 299,
+        "line": 308,
         "anchor": "#task-viskozna-difuzija"
       },
       "statement": {
-        "markdown": "Procijeni vrijeme viskozne difuzije $t_\\nu\\sim H^2/\\nu$ kroz sloj vode $H=10\\ \\text{mm}$ pri $20\\ ^\\circ\\text{C}$, za $\\nu=1{,}00\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$. Obrazloži red veličine.",
-        "sha256": "95e170422d84bf3489f6035ebfdfbf71e874f3d2724909377c09782ece8e14f5",
+        "markdown": "Gornja ploča počinje kliziti iznad mirujućeg sloja vode, a donja ostaje nepomična. Razmak ploča je $H=10\\ \\text{mm}$, a kinematička viskoznost $\\nu=1{,}00\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$. Procijeni vremensko mjerilo prijenosa količine gibanja viskoznom difuzijom kroz cijeli razmak. Znači li ono točan trenutak uspostave stacionarnog profila?",
+        "sha256": "2d06f449b3d23a90886e8c9084dd04ce20de5893f08bcedeee73ecfbeb8a9681",
         "authoritative": true
       },
       "input_data": {
@@ -22265,19 +22297,6 @@
             }
           },
           {
-            "symbol": null,
-            "relation": "context_value",
-            "value_text": "20",
-            "value": 20.0,
-            "unit_text": "\\ ^\\circ\\text{C}",
-            "normalized_unit": "°C",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 293.15,
-              "unit": "K"
-            }
-          },
-          {
             "symbol": "\\nu",
             "relation": "=",
             "value_text": "1{,}00\\cdot10^{-6}",
@@ -22291,26 +22310,32 @@
             }
           }
         ],
-        "unparsed_numeric_math": [
-          "t_\\nu\\sim H^2/\\nu"
-        ],
+        "unparsed_numeric_math": [],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
+        "explicit": [
+          {
+            "text": "Znači li ono točan trenutak uspostave stacionarnog profila?",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 308
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
         "defaults": [],
         "default_status": "none_declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$t_\\nu\\sim100\\ \\text{s}$.",
+        "markdown": "$t_\\nu\\sim H^2/\\nu=100\\ \\text{s}$. To je karakteristično vremensko mjerilo; vrijeme približavanja stacionarnom profilu ovisi o zadanoj toleranciji odstupanja.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 305
+          "line": 321
         }
       },
       "tolerance": {
@@ -22360,7 +22385,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 321
+              "line": 332
             }
           }
         ]
@@ -22373,12 +22398,12 @@
       "level": "T2",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 313,
+        "line": 329,
         "anchor": "#task-poiseuille-inverzni"
       },
       "statement": {
-        "markdown": "U kapilari su izmjereni $Q=0{,}300\\pm0{,}003\\ \\text{mL/min}$, $\\Delta p=652\\pm5\\ \\text{Pa}$, $L=0{,}200\\pm0{,}001\\ \\text{m}$ i $D=0{,}500\\pm0{,}005\\ \\text{mm}$. Fluid je Newtonski, gustoće $\\rho=998\\ \\text{kg/m}^3$. Odredi dinamičku viskoznost i $Re$, a standardnu nesigurnost $u(\\mu)$ procijeni neovisnom RSS-propagacijom. Posebno pokaži doprinos promjera, jer se u izrazu pojavljuje kao $D^4$.",
-        "sha256": "48f9e2d93fcafc2766870c989d07c96bd2113f4206eca7180dc9848c30cd29e5",
+        "markdown": "Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Obrnutim Poiseuilleovim računom procijeni viskoznost i Reynoldsov broj te utvrdi koji mjerni podatak najviše pridonosi nesigurnosti. Sintetički nastavni podatci su $Q=0{,}300\\pm0{,}003\\ \\text{mL/min}$, $\\Delta p=p_1-p_2=652\\pm5\\ \\text{Pa}$, $L=0{,}200\\pm0{,}001\\ \\text{m}$ i $D=0{,}500\\pm0{,}005\\ \\text{mm}$. Znakovi $\\pm$ označuju neovisne standardne nesigurnosti. Newtonski fluid ima gustoću $\\rho=998\\ \\text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini. U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje na stijenku, a ulazne učinke izvan mjernog razmaka. Procijeni $u(\\mu)$ linearnom RSS-propagacijom i posebno pokaži doprinos promjera.",
+        "sha256": "3fe2eb27c11cf26d16e462eeaa45636adaa0018a4d38bb2cce30c712335d6908",
         "authoritative": true
       },
       "input_data": {
@@ -22396,25 +22421,6 @@
             "uncertainty_text": "0{,}003",
             "uncertainty": 0.003,
             "si_uncertainty": null
-          },
-          {
-            "symbol": "\\Delta p",
-            "relation": "=",
-            "value_text": "652",
-            "value": 652.0,
-            "unit_text": "\\ \\text{Pa}",
-            "normalized_unit": "Pa",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 652.0,
-              "unit": "Pa"
-            },
-            "uncertainty_text": "5",
-            "uncertainty": 5.0,
-            "si_uncertainty": {
-              "value": 5.0,
-              "unit": "Pa"
-            }
           },
           {
             "symbol": "L",
@@ -22469,7 +22475,7 @@
           }
         ],
         "unparsed_numeric_math": [
-          "D^4"
+          "\\Delta p=p_1-p_2=652\\pm5\\ \\text{Pa}"
         ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
@@ -22477,17 +22483,31 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Odredi dinamičku viskoznost i $Re$, a standardnu nesigurnost $u(\\mu)$ procijeni neovisnom RSS-propagacijom.",
+            "text": "Znakovi $\\pm$ označuju neovisne standardne nesigurnosti.",
             "provenance": {
               "kind": "task_statement",
-              "line": 313
+              "line": 329
             }
           },
           {
-            "text": "Za neovisne ulaze vrijedi $[u(\\mu)/\\mu]^2=[4u(D)/D]^2+[u(\\Delta p)/\\Delta p]^2+[u(L)/L]^2+[u(Q)/Q]^2$.",
+            "text": "njezinu nesigurnost zanemari.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 329
+            }
+          },
+          {
+            "text": "U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje na stijenku, a ulazne učinke izvan mjernog razmaka.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 329
+            }
+          },
+          {
+            "text": "Za neovisne standardne nesigurnosti vrijedi $[u(\\mu)/\\mu]^2=[4u(D)/D]^2+[u(\\Delta p)/\\Delta p]^2+[u(L)/L]^2+[u(Q)/Q]^2$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 319
+              "line": 337
             }
           }
         ],
@@ -22498,11 +22518,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$\\mu\\approx1{,}000\\ \\text{mPa s}$, $u(\\mu)\\approx0{,}042\\ \\text{mPa s}$ i $Re\\approx12{,}7$. Sam promjer doprinosi relativnoj nesigurnosti od $4\\,\\%$, pa dominira zadanim mjernim budžetom.",
+        "markdown": "$\\mu\\approx1{,}000\\ \\text{mPa s}$, $u(\\mu)\\approx0{,}042\\ \\text{mPa s}$ i $Re\\approx12{,}7$. Sam promjer doprinosi relativnoj standardnoj nesigurnosti od $4\\,\\%$, pa dominira zadanim mjernim budžetom.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 325
+          "line": 344
         }
       },
       "tolerance": {
@@ -22569,7 +22589,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 331
+              "line": 342
             }
           },
           {
@@ -22586,7 +22606,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 339
+              "line": 350
             }
           },
           {
@@ -22603,7 +22623,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 347
+              "line": 358
             }
           },
           {
@@ -22614,7 +22634,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 525
+              "line": 547
             }
           },
           {
@@ -22625,7 +22645,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 531
+              "line": 553
             }
           }
         ]
@@ -22638,12 +22658,12 @@
       "level": "T2",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 333,
+        "line": 352,
         "anchor": "#task-couette-povrat"
       },
       "statement": {
-        "markdown": "Newtonski fluid viskoznosti $\\mu=0{,}100\\ \\text{Pa s}$ nalazi se između nepomične donje i gornje ploče koja se giba brzinom $U=2{,}00\\ \\text{m/s}$; razmak je $H=1{,}00\\ \\text{mm}$. Za potpuno razvijeni profil $u(y)=Uy/H+[({dp}/{dx})/(2\\mu)](y^2-Hy)$ odredi pozitivan gradijent tlaka pri kojem smično naprezanje na donjoj stijenci mijenja znak. Izračunaj to naprezanje pri $0{,}90$ i $1{,}10$ kritičnog gradijenta te skiciraj oba profila.",
-        "sha256": "5fa5953018b67259b1b791febaca671c527173d800fe82cab234064c4d6cabdd",
+        "markdown": "Gibanje gornje ploče i nepovoljan gradijent tlaka suprotno pokreću ulje u uskom procjepu. Odredi granični gradijent, smično naprezanje za dva zadana pogona i skiciraj pripadne profile brzine. Razlikuj povratni tok uz ploču od prolaza kroz nju. Newtonski fluid ima $\\mu=0{,}100\\ \\text{Pa s}$; donja ploča na $y=0$ miruje, a gornja na $y=H$ klizi u pozitivnom smjeru osi $x$ brzinom $U=2{,}00\\ \\text{m/s}$. Razmak je $H=1{,}00\\ \\text{mm}$. Za potpuno razvijeni laminarni tok i konstantan $G=dp/dx>0$ vrijedi $u(y)=Uy/H+G(y^2-Hy)/(2\\mu)$. Odredi $G_{krit}$ pri kojem $\\tau_0=\\mu u'(0)$ mijenja znak, zatim $\\tau_0$ pri $G=0{,}90G_{krit}$ i $G=1{,}10G_{krit}$. Ovdje je $\\tau_0$ komponenta sile fluida na donju ploču po jedinici površine u smjeru osi $x$. Obje ploče su nepropusne, uz njih nema klizanja.",
+        "sha256": "0235c4bb092385ca8b42eee5f6e160d4fefb3e279968452942373fb80b9e1cf8",
         "authoritative": true
       },
       "input_data": {
@@ -22659,6 +22679,19 @@
             "si": {
               "value": 0.1,
               "unit": "Pa s"
+            }
+          },
+          {
+            "symbol": "y",
+            "relation": "=",
+            "value_text": "0",
+            "value": 0.0,
+            "unit_text": "1",
+            "normalized_unit": "1",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.0,
+              "unit": "1"
             }
           },
           {
@@ -22689,9 +22722,12 @@
           }
         ],
         "unparsed_numeric_math": [
-          "u(y)=Uy/H+[({dp}/{dx})/(2\\mu)](y^2-Hy)",
-          "0{,}90",
-          "1{,}10"
+          "G=dp/dx>0",
+          "u(y)=Uy/H+G(y^2-Hy)/(2\\mu)",
+          "\\tau_0=\\mu u'(0)",
+          "\\tau_0",
+          "G=0{,}90G_{krit}",
+          "G=1{,}10G_{krit}"
         ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
@@ -22705,11 +22741,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$(dp/dx)_{krit}=4{,}00\\cdot10^5\\ \\text{Pa/m}$; pri $0{,}90$ te vrijednosti $\\tau_0=+20{,}0\\ \\text{Pa}$, a pri $1{,}10$ vrijedi $\\tau_0=-20{,}0\\ \\text{Pa}$. Promjena predznaka zidnog naprezanja označuje početak lokalnog povratnog toka na donjoj stijenci.",
+        "markdown": "$G_{krit}=4{,}00\\cdot10^5\\ \\text{Pa/m}$. Pri $0{,}90G_{krit}$ vrijedi $\\tau_0=+20{,}0\\ \\text{Pa}$ i $u(y)>0$ za $0<y\\le H$; pri $1{,}10G_{krit}$ vrijedi $\\tau_0=-20{,}0\\ \\text{Pa}$ i povratni tok u $0<y<H/11$. U oba profila $u(0)=0$ i $u(H)=U$; fluid ne prolazi kroz ploče.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 345
+          "line": 367
         }
       },
       "tolerance": {
@@ -22735,16 +22771,25 @@
             "value": 0.05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U12.REAL.Z4.reverse_height_ratio",
+            "kind": "absolute",
+            "value": 1e-12,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
       "independent_check": {
         "kind": "executed_invariant",
         "criterion": [
-          "critical_gradient > 0 and tau_below > 0 > tau_above"
+          "critical_gradient > 0 and tau_below > 0 > tau_above",
+          "all((abs(adverse_profile(0, factor)) < 1e-14 and abs(adverse_profile(H, factor) - U) < 1e-14 for factor in (0.9, 1.1))) and all((adverse_profile(H * j / 100, 0.9) > 0 for j in range(1, 101))) and (adverse_profile(H / 22, 1.1) < 0) and (abs(adverse_profile(H / 11, 1.1)) < 1e-14) and (adverse_profile(H / 2, 1.1) > 0)"
         ],
         "verifier_result_ids": [
-          "U12.REAL.Z4.wall_shear_sign_change"
+          "U12.REAL.Z4.wall_shear_sign_change",
+          "U12.REAL.Z4.no_slip_and_local_reversal"
         ],
         "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
@@ -22756,7 +22801,9 @@
           "U12.REAL.Z4.dpdx_critical",
           "U12.REAL.Z4.tau_90",
           "U12.REAL.Z4.tau_110",
-          "U12.REAL.Z4.wall_shear_sign_change"
+          "U12.REAL.Z4.reverse_height_ratio",
+          "U12.REAL.Z4.wall_shear_sign_change",
+          "U12.REAL.Z4.no_slip_and_local_reversal"
         ],
         "result_contracts": [
           {
@@ -22773,7 +22820,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 357
+              "line": 368
             }
           },
           {
@@ -22790,7 +22837,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 365
+              "line": 376
             }
           },
           {
@@ -22807,7 +22854,24 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 366
+              "line": 377
+            }
+          },
+          {
+            "result_id": "U12.REAL.Z4.reverse_height_ratio",
+            "verification": "golden",
+            "target": "1.0 / 11.0",
+            "target_kind": "expression",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-12,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u12_real_flow.py",
+              "line": 378
             }
           },
           {
@@ -22818,7 +22882,18 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 544
+              "line": 566
+            }
+          },
+          {
+            "result_id": "U12.REAL.Z4.no_slip_and_local_reversal",
+            "verification": "invariant",
+            "criterion_expression": "all((abs(adverse_profile(0, factor)) < 1e-14 and abs(adverse_profile(H, factor) - U) < 1e-14 for factor in (0.9, 1.1))) and all((adverse_profile(H * j / 100, 0.9) > 0 for j in range(1, 101))) and (adverse_profile(H / 22, 1.1) < 0) and (abs(adverse_profile(H / 11, 1.1)) < 1e-14) and (adverse_profile(H / 2, 1.1) > 0)",
+            "failure_message": "Povratni profil krsi prianjanje ili nema objavljenu lokalnu zonu povrata.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u12_real_flow.py",
+              "line": 575
             }
           }
         ]
@@ -22831,29 +22906,16 @@
       "level": "T3",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 353,
+        "line": 375,
         "anchor": "#task-granicni-sloj-model"
       },
       "statement": {
-        "markdown": "Voda pri $20\\ ^\\circ\\text{C}$ ($\\nu=1{,}00\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$, $\\rho=998\\ \\text{kg/m}^3$) struji uz nominalno ravnu plohu. U presjeku $x=0{,}400\\ \\text{m}$ izmjereno je $U_e=1{,}50\\ \\text{m/s}$ i $dU_e/dx=-0{,}250\\ \\text{s}^{-1}$, a ekvivalentna hrapavost iznosi $k_s=5{,}0\\ \\mu\\text{m}$. Izračunaj $Re_x$, Blasiusovu procjenu $\\delta_{99}\\approx5x/\\sqrt{Re_x}$, $k_s/\\delta_{99}$ i bezdimenzijski pokazatelj promjene vanjske brzine $(x/U_e)dU_e/dx$. Odluči je li Blasiusov model ovdje opravdan i navedi koje su njegove pretpostavke prekršene; prijelaz nemoj proglasiti samo iz jednoga univerzalnog praga $Re_x$.",
-        "sha256": "6fd12ecf4959b5c665686fc73b6704eb9b18d364a92b0ade2eeb103545657cf6",
+        "markdown": "Na temelju lokalne vanjske brzine, njezina gradijenta i hrapavosti odluči može li Blasiusov model predvidjeti debljinu sloja uz ravnu plohu. Razdvoji uvjetnu referentnu procjenu od potvrđenog modela te obrazloži koje bi dodatne provjere trebale prethoditi njegovoj uporabi. Sintetički nastavni podatci za vodu su $\\nu=1{,}00\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$, $\\rho=998\\ \\text{kg/m}^3$, $x=0{,}400\\ \\text{m}$, $U_e=1{,}50\\ \\text{m/s}$ i $dU_e/dx=-0{,}250\\ \\text{s}^{-1}$. Ekvivalentna hrapavost iznosi $k_s=5{,}0\\ \\mu\\text{m}$. Vanjski tok smatraj stacionarnim, nestlačivim i približno neviskoznim, uz stalnu visinu. Izračunaj $Re_x$, Blasiusovu referentnu debljinu $\\delta_B=5x/\\sqrt{Re_x}$, $k_s/\\delta_B$, pokazatelj $K=(x/U_e)dU_e/dx$ te $dp_e/dx$. Odluči je li Blasiusov model opravdan. Mali $k_s/\\delta_B$ nemoj poistovjetiti s dokazanom hidrauličkom glatkoćom niti prijelaz proglasiti iz jednoga univerzalnog praga $Re_x$.",
+        "sha256": "4a46229328df595c1eb4e8eba9728953ad38e31d550c4d5a13394da0d2d40623",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
-          {
-            "symbol": null,
-            "relation": "context_value",
-            "value_text": "20",
-            "value": 20.0,
-            "unit_text": "\\ ^\\circ\\text{C}",
-            "normalized_unit": "°C",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 293.15,
-              "unit": "K"
-            }
-          },
           {
             "symbol": "\\nu",
             "relation": "=",
@@ -22930,8 +22992,7 @@
           }
         ],
         "unparsed_numeric_math": [
-          "\\delta_{99}\\approx5x/\\sqrt{Re_x}",
-          "k_s/\\delta_{99}"
+          "\\delta_B=5x/\\sqrt{Re_x}"
         ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
@@ -22939,10 +23000,17 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Odluči je li Blasiusov model ovdje opravdan i navedi koje su njegove pretpostavke prekršene;",
+            "text": "Vanjski tok smatraj stacionarnim, nestlačivim i približno neviskoznim, uz stalnu visinu.",
             "provenance": {
               "kind": "task_statement",
-              "line": 353
+              "line": 375
+            }
+          },
+          {
+            "text": "Odvoji dokazano prekršen uvjet od pretpostavke koju podatci još ne potvrđuju.",
+            "provenance": {
+              "kind": "task_hint",
+              "line": 383
             }
           }
         ],
@@ -22953,11 +23021,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$Re_x=6{,}00\\cdot10^5$, $\\delta_{99}\\approx2{,}58\\ \\text{mm}$, $k_s/\\delta_{99}\\approx1{,}94\\cdot10^{-3}$ i $(x/U_e)dU_e/dx=-0{,}0667$. Hrapavost je mala prema procijenjenoj debljini, ali mjerljiva promjena $U_e$ krši pretpostavku nultoga gradijenta tlaka, a stanje laminarnosti pri tom $Re_x$ nije dokazano; Blasius zato nije opravdan bez dodatne provjere profila i prijelaza.",
+        "markdown": "$Re_x=6{,}00\\cdot10^5$, $\\delta_B\\approx2{,}58\\ \\text{mm}$, $k_s/\\delta_B\\approx1{,}94\\cdot10^{-3}$, $K=-0{,}0667$ i $dp_e/dx\\approx+374\\ \\text{Pa/m}$. Nulti gradijent tlaka prekršen je; laminarnost i hidraulička glatkoća nisu dokazane. Blasius nije opravdan kao predikcija: $\\delta_B$ je samo referenca. Potrebno je provjeriti profil brzine i prijelaz.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 365
+          "line": 390
         }
       },
       "tolerance": {
@@ -22990,13 +23058,20 @@
             "value": 5e-05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U12.REAL.Z5.dpdx",
+            "kind": "absolute",
+            "value": 0.5,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
       "independent_check": {
         "kind": "executed_invariant",
         "criterion": [
-          "len(required_blasius_inputs) == 5 and relative_delta_high < relative_delta_low"
+          "z5['pressure_gradient'] > 0 and z5['velocity_gradient_parameter'] < 0 and (abs(relative_delta_high / relative_delta_low - 0.5) < 1e-14)"
         ],
         "verifier_result_ids": [
           "U12.REAL.Z5.required_inputs_and_limit"
@@ -23012,6 +23087,7 @@
           "U12.REAL.Z5.delta99_mm",
           "U12.REAL.Z5.ks_delta",
           "U12.REAL.Z5.gradient_parameter",
+          "U12.REAL.Z5.dpdx",
           "U12.REAL.Z5.required_inputs_and_limit"
         ],
         "result_contracts": [
@@ -23029,7 +23105,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 369
+              "line": 382
             }
           },
           {
@@ -23046,7 +23122,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 370
+              "line": 383
             }
           },
           {
@@ -23063,7 +23139,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 371
+              "line": 384
             }
           },
           {
@@ -23080,18 +23156,35 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 379
+              "line": 392
+            }
+          },
+          {
+            "result_id": "U12.REAL.Z5.dpdx",
+            "verification": "golden",
+            "target": 374.0,
+            "target_kind": "literal",
+            "unit": "Pa/m",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.5,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u12_real_flow.py",
+              "line": 402
             }
           },
           {
             "result_id": "U12.REAL.Z5.required_inputs_and_limit",
             "verification": "invariant",
-            "criterion_expression": "len(required_blasius_inputs) == 5 and relative_delta_high < relative_delta_low",
-            "failure_message": "Blasiusova provjera nema potpune ulaze ili pogresan Re trend.",
+            "criterion_expression": "z5['pressure_gradient'] > 0 and z5['velocity_gradient_parameter'] < 0 and (abs(relative_delta_high / relative_delta_low - 0.5) < 1e-14)",
+            "failure_message": "Vanjski tok nema nepovoljan gradijent ili je pogresan Blasiusov Re trend.",
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 558
+              "line": 594
             }
           }
         ]
@@ -23104,26 +23197,28 @@
       "level": "T4",
       "source": {
         "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-        "line": 373,
+        "line": 398,
         "anchor": "#task-cfd-tri-mreze"
       },
       "statement": {
-        "markdown": "Za Poiseuilleov paket iz `data/cfd/poiseuille_laminar` tri mreže imaju omjer koraka $h/h_f=4,2,1$, protoke $Q=(8{,}16814;\\ 7{,}93252;\\ 7{,}87362)\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$ i masene debalanse $(0{,}040;\\ 0{,}010;\\ 0{,}0025)\\,\\%$. Odredi opaženi red $p$, Richardsonovu ekstrapolaciju $Q_{ext}$ i fini $GCI$ uz faktor sigurnosti $F_s=1{,}25$. Zasebno izvijesti fini maseni debalans. Zatim u paketu `hydrofoil_experiment` provjeri postoje li reziduali, povijesti sila, masena bilanca i mjerna nesigurnost te obrazloži zašto se bez njih ne smije donijeti konačna validacijska presuda.",
-        "sha256": "8726e36d85a514af03259206da3a825cf2bfff7dedee6e4b1b06b3ca346c142e",
+        "markdown": "Odaberi najgrublju mrežu koja zadovoljava oba kriterija: dovoljno malu procjenu diskretizacijske pogreške protoka i dopušten maseni debalans. Zatim razdvoji taj numerički zaključak od validacije modela prema neovisnim eksperimentalnim podatcima. Sintetički Poiseuilleov skup iz `data/cfd/poiseuille_laminar` prikazan je zaokruženo. Tri sustavno pročišćene mreže imaju $h/h_f=(4;\\ 2;\\ 1)$, protoke $Q=(8{,}16814;\\ 7{,}93252;\\ 7{,}87362)\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$ i masene debalanse $(0{,}040;\\ 0{,}010;\\ 0{,}0025)\\,\\%$, redom od grube do fine. Računaj s ovdje ispisanim brojevima. Odredi opaženi red $p$, Richardsonovu ekstrapolaciju $Q_{ext}$ te $GCI_m$ i $GCI_f$ srednje i fine mreže uz $r=2$ i $F_s=1{,}25$. Za ovaj nastavni izbor zahtijeva se $GCI\\le0{,}50\\,\\%$ i maseni debalans najviše $0{,}0050\\,\\%$. Zasebno u paketu `hydrofoil_experiment` provjeri postoje li reziduali, povijesti sila, masena bilanca i potpuna mjerna nesigurnost. Obrazloži zašto numerička konvergencija protoka u prvom slučaju ne zatvara validacijsku presudu za drugi.",
+        "sha256": "105e2f68e19e4db08e05f9468412a19c31452c72abd40f81a7542f59131ad198",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "h/h_f",
+            "symbol": "r",
             "relation": "=",
-            "value_text": "4,2",
-            "value": 4.2,
-            "unit_text": ",1",
-            "normalized_unit": ",1",
+            "value_text": "2",
+            "value": 2.0,
+            "unit_text": "1",
+            "normalized_unit": "1",
             "provenance": "task_statement_inline_math",
-            "si": null,
-            "si_note": "Jedinica nije na konzervativnoj bijeloj listi; izvorni zapis ostaje autoritativan."
+            "si": {
+              "value": 2.0,
+              "unit": "1"
+            }
           },
           {
             "symbol": "F_s",
@@ -23137,29 +23232,52 @@
               "value": 1.25,
               "unit": "1"
             }
+          },
+          {
+            "symbol": null,
+            "relation": "context_value",
+            "value_text": "0{,}0050",
+            "value": 0.005,
+            "unit_text": "\\,\\%",
+            "normalized_unit": "%",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 5e-05,
+              "unit": "1"
+            }
           }
         ],
         "unparsed_numeric_math": [
+          "h/h_f=(4;\\ 2;\\ 1)",
           "Q=(8{,}16814;\\ 7{,}93252;\\ 7{,}87362)\\cdot10^{-6}\\ \\text{m}^3/\\text{s}",
-          "(0{,}040;\\ 0{,}010;\\ 0{,}0025)\\,\\%"
+          "(0{,}040;\\ 0{,}010;\\ 0{,}0025)\\,\\%",
+          "GCI\\le0{,}50\\,\\%"
         ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
+        "explicit": [
+          {
+            "text": "Zatim razdvoji taj numerički zaključak od validacije modela prema neovisnim eksperimentalnim podatcima.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 398
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
         "defaults": [],
         "default_status": "none_declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$p\\approx2{,}000$, $Q_{ext}\\approx7{,}85398\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$, $GCI_f\\approx0{,}312\\,\\%$ i fini maseni debalans iznosi $0{,}0025\\,\\%$. Arhiva profila ne sadrži reziduale, povijesti monitoriranih sila, masenu bilancu ni potpuni mjerni budžet nesigurnosti; zato je korisna za usporedbu integralnih koeficijenata i mrežnog trenda, ali ne zatvara validacijsku presudu.",
+        "markdown": "$p\\approx2{,}000$, $Q_{ext}\\approx7{,}8540\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$, $GCI_m\\approx1{,}237\\,\\%$ i $GCI_f\\approx0{,}312\\,\\%$. Odabire se fina mreža: debalans je $0{,}0025\\,\\%$; srednja krši oba uvjeta, gruba maseni uvjet. Arhivi profila nedostaju reziduali, povijesti sila, masena bilanca i potpuni mjerni budžet nesigurnosti, pa konačna validacijska presuda nije moguća.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
-          "line": 385
+          "line": 415
         }
       },
       "tolerance": {
@@ -23175,12 +23293,19 @@
           {
             "result_id": "U12.REAL.Z6.Q_ext",
             "kind": "absolute",
-            "value": 5e-12,
+            "value": 5e-11,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U12.REAL.Z6.GCI_fine_percent",
+            "kind": "absolute",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U12.REAL.Z6.GCI_medium_percent",
             "kind": "absolute",
             "value": 0.0005,
             "value_kind": "literal",
@@ -23198,11 +23323,15 @@
       "independent_check": {
         "kind": "executed_invariant",
         "criterion": [
+          "z6['gci_fine_percent'] <= 0.5 and z6['fine_mass_imbalance_percent'] <= 0.005 and (z6['gci_medium_percent'] > 0.5) and (z6['medium_mass_imbalance_percent'] > 0.005) and (z6['coarse_mass_imbalance_percent'] > 0.005)",
+          "len(pipe_rows) == 3 and all((abs(float(row['q_volume_m3_s']) - printed) <= 5e-12 for row, printed in zip(pipe_rows, printed_flows))) and (pipe_imbalances == [0.04, 0.01, 0.0025])",
           "len(pipe_rows) == 3 and abs(observed_order - 2.0) < 1e-12 and (pipe_imbalances[0] > pipe_imbalances[1] > pipe_imbalances[2] >= 0.0)",
           "cd_values[0] > cd_values[1] > cd_values[2] and cl_values[0] < cl_values[1] < cl_values[2]",
           "not {'residuals.csv', 'force_monitors.csv', 'mass_balance.csv'}.intersection(hydrofoil_files)"
         ],
         "verifier_result_ids": [
+          "U12.REAL.Z6.mesh_acceptance",
+          "U12.REAL.Z6.printed_data_match_archive",
           "U12.REAL.Z6.three_grid_order_and_mass",
           "U12.REAL.Z6.naca_scalar_monotonicity",
           "U12.REAL.Z6.missing_validation_diagnostics"
@@ -23217,7 +23346,10 @@
           "U12.REAL.Z6.p",
           "U12.REAL.Z6.Q_ext",
           "U12.REAL.Z6.GCI_fine_percent",
+          "U12.REAL.Z6.GCI_medium_percent",
           "U12.REAL.Z6.mass_imbalance_percent",
+          "U12.REAL.Z6.mesh_acceptance",
+          "U12.REAL.Z6.printed_data_match_archive",
           "U12.REAL.Z6.three_grid_order_and_mass",
           "U12.REAL.Z6.naca_scalar_monotonicity",
           "U12.REAL.Z6.missing_validation_diagnostics"
@@ -23237,24 +23369,24 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 389
+              "line": 403
             }
           },
           {
             "result_id": "U12.REAL.Z6.Q_ext",
             "verification": "golden",
-            "target": 7.85398e-06,
+            "target": 7.854e-06,
             "target_kind": "literal",
             "unit": "m^3/s",
             "tolerance": {
               "kind": "absolute",
-              "value": 5e-12,
+              "value": 5e-11,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 390
+              "line": 404
             }
           },
           {
@@ -23271,7 +23403,24 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 398
+              "line": 412
+            }
+          },
+          {
+            "result_id": "U12.REAL.Z6.GCI_medium_percent",
+            "verification": "golden",
+            "target": 1.237,
+            "target_kind": "literal",
+            "unit": "%",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u12_real_flow.py",
+              "line": 420
             }
           },
           {
@@ -23288,7 +23437,29 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 406
+              "line": 428
+            }
+          },
+          {
+            "result_id": "U12.REAL.Z6.mesh_acceptance",
+            "verification": "invariant",
+            "criterion_expression": "z6['gci_fine_percent'] <= 0.5 and z6['fine_mass_imbalance_percent'] <= 0.005 and (z6['gci_medium_percent'] > 0.5) and (z6['medium_mass_imbalance_percent'] > 0.005) and (z6['coarse_mass_imbalance_percent'] > 0.005)",
+            "failure_message": "Fina mreza nije najgrublji ponudjeni izbor koji zadovoljava oba uvjeta.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u12_real_flow.py",
+              "line": 602
+            }
+          },
+          {
+            "result_id": "U12.REAL.Z6.printed_data_match_archive",
+            "verification": "invariant",
+            "criterion_expression": "len(pipe_rows) == 3 and all((abs(float(row['q_volume_m3_s']) - printed) <= 5e-12 for row, printed in zip(pipe_rows, printed_flows))) and (pipe_imbalances == [0.04, 0.01, 0.0025])",
+            "failure_message": "Ispisani protoci ili debalansi vise ne odgovaraju zaokruzenom arhivskom skupu.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u12_real_flow.py",
+              "line": 623
             }
           },
           {
@@ -23299,7 +23470,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 582
+              "line": 639
             }
           },
           {
@@ -23310,7 +23481,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 590
+              "line": 647
             }
           },
           {
@@ -23321,7 +23492,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 602
+              "line": 659
             }
           }
         ]
@@ -23334,19 +23505,19 @@
       "level": "T1",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 609,
+        "line": 611,
         "anchor": "#task-gubitci-ravne-dionice"
       },
       "statement": {
-        "markdown": "Voda gustoće $998\\ \\mathrm{kg/m^3}$ protječe cijevi $D=0{,}10\\ \\mathrm{m}$, $L=50\\ \\mathrm{m}$ protokom $Q=0{,}012\\ \\mathrm{m^3/s}$. Zadano je $\\lambda=0{,}025$ i $\\sum\\xi=4{,}0$. Odredi brzinu, linijski i lokalni gubitak, ukupni gubitak i pad tlaka.",
-        "sha256": "69714339cff4f3bac6a57597c446e7b5a67edcc114ad50fabced5eecf1bf5e87",
+        "markdown": "Voda gustoće $\\rho=998\\ \\mathrm{kg/m^3}$ stacionarno protječe vodoravnom cijevi stalnog unutarnjeg promjera $D=0{,}10\\ \\mathrm{m}$ i duljine $L=50\\ \\mathrm{m}$, protokom $Q=0{,}012\\ \\mathrm{m^3/s}$. Zadani su Darcyjev faktor $\\lambda=0{,}025$ i $\\sum\\xi=4{,}0$ za armaturu između promatranih presjeka, svi prema brzini u toj cijevi. U oba presjeka uzmi isti profil brzine. Odredi brzinu, linijski, lokalni i ukupni gubitak te pad tlaka.",
+        "sha256": "a1a4fcb31c0fa3048d74586547765e48c9a1909c9195c5e8bcb5a9dbb29e16b3",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": null,
-            "relation": "context_value",
+            "symbol": "\\rho",
+            "relation": "=",
             "value_text": "998",
             "value": 998.0,
             "unit_text": "\\ \\mathrm{kg/m^3}",
@@ -23428,8 +23599,23 @@
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
+        "explicit": [
+          {
+            "text": "Voda gustoće $\\rho=998\\ \\mathrm{kg/m^3}$ stacionarno protječe vodoravnom cijevi stalnog unutarnjeg promjera $D=0{,}10\\ \\mathrm{m}$ i duljine $L=50\\ \\mathrm{m}$, protokom $Q=0{,}012\\ \\mathrm{m^3/s}$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 611
+            }
+          },
+          {
+            "text": "U oba presjeka uzmi isti profil brzine.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 611
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
         "defaults": [],
         "default_status": "none_declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
@@ -23440,7 +23626,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 621
+          "line": 623
         }
       },
       "tolerance": {
@@ -23448,36 +23634,36 @@
         "contracts": [
           {
             "result_id": "U13.CANON.Z1.v",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z1.h_l",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z1.h_loc",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z1.h_w",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z1.dp_kPa",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
@@ -23535,14 +23721,14 @@
             "target_kind": "literal",
             "unit": "m/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 314
+              "line": 367
             }
           },
           {
@@ -23552,14 +23738,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 315
+              "line": 368
             }
           },
           {
@@ -23569,14 +23755,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 316
+              "line": 369
             }
           },
           {
@@ -23586,14 +23772,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 317
+              "line": 370
             }
           },
           {
@@ -23603,14 +23789,14 @@
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.05,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 318
+              "line": 371
             }
           }
         ]
@@ -23623,19 +23809,19 @@
       "level": "T1",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 628,
+        "line": 630,
         "anchor": "#task-laminarna-cijev-smjese"
       },
       "statement": {
-        "markdown": "Smjesa gustoće $1100\\ \\mathrm{kg/m^3}$ i $\\nu=3{,}0\\cdot10^{-6}\\ \\mathrm{m^2/s}$ protječe kružnom cijevi $D=6{,}0\\ \\mathrm{mm}$, $L=5{,}0\\ \\mathrm{m}$ protokom $Q=6{,}0\\cdot10^{-6}\\ \\mathrm{m^3/s}$. Zanemari lokalne gubitke. Odredi $Re$, $\\lambda$ i $\\Delta p$.",
-        "sha256": "48fae5f1c08c09eab119910aaa56d9d01b05c7e1a21bfc95b844bdbd21b1f9ac",
+        "markdown": "Newtonska smjesa gustoće $\\rho=1100\\ \\mathrm{kg/m^3}$ i kinematičke viskoznosti $\\nu=3{,}0\\cdot10^{-6}\\ \\mathrm{m^2/s}$ stacionarno protječe kružnom vodoravnom cijevi $D=6{,}0\\ \\mathrm{mm}$, protokom $Q=6{,}0\\cdot10^{-6}\\ \\mathrm{m^3/s}$. Promatrani razmak $L=5{,}0\\ \\mathrm{m}$ nalazi se u potpuno razvijenom toku uz prianjanje na stijenku; ulazno područje i lokalne gubitke izostavi. Odredi $Re$, Darcyjev faktor $\\lambda$ i $\\Delta p$. Kako se pad tlaka promijeni ako udvostručiš protok dok tok ostaje laminaran?",
+        "sha256": "31488ed49a2d458b662d39f4e348a50cc598aee9995d14deb35978b9241f24e5",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": null,
-            "relation": "context_value",
+            "symbol": "\\rho",
+            "relation": "=",
             "value_text": "1100",
             "value": 1100.0,
             "unit_text": "\\ \\mathrm{kg/m^3}",
@@ -23673,19 +23859,6 @@
             }
           },
           {
-            "symbol": "L",
-            "relation": "=",
-            "value_text": "5{,}0",
-            "value": 5.0,
-            "unit_text": "\\ \\mathrm{m}",
-            "normalized_unit": "m",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 5.0,
-              "unit": "m"
-            }
-          },
-          {
             "symbol": "Q",
             "relation": "=",
             "value_text": "6{,}0\\cdot10^{-6}",
@@ -23697,6 +23870,19 @@
               "value": 6e-06,
               "unit": "m^3/s"
             }
+          },
+          {
+            "symbol": "L",
+            "relation": "=",
+            "value_text": "5{,}0",
+            "value": 5.0,
+            "unit_text": "\\ \\mathrm{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 5.0,
+              "unit": "m"
+            }
           }
         ],
         "unparsed_numeric_math": [],
@@ -23706,10 +23892,10 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Zanemari lokalne gubitke.",
+            "text": "Newtonska smjesa gustoće $\\rho=1100\\ \\mathrm{kg/m^3}$ i kinematičke viskoznosti $\\nu=3{,}0\\cdot10^{-6}\\ \\mathrm{m^2/s}$ stacionarno protječe kružnom vodoravnom cijevi $D=6{,}0\\ \\mathrm{mm}$, protokom $Q=6{,}0\\cdot10^{-6}\\ \\mathrm{m^3/s}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 628
+              "line": 630
             }
           }
         ],
@@ -23724,7 +23910,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 640
+          "line": 642
         }
       },
       "tolerance": {
@@ -23732,29 +23918,29 @@
         "contracts": [
           {
             "result_id": "U13.CANON.Z2.v",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z2.Re",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.5,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z2.lam",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 5e-05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z2.dp_kPa",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
@@ -23789,14 +23975,14 @@
             "target_kind": "literal",
             "unit": "m/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 321
+              "line": 374
             }
           },
           {
@@ -23806,14 +23992,14 @@
             "target_kind": "literal",
             "unit": "1",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.5,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 322
+              "line": 375
             }
           },
           {
@@ -23823,14 +24009,14 @@
             "target_kind": "literal",
             "unit": "1",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 5e-05,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 323
+              "line": 376
             }
           },
           {
@@ -23840,14 +24026,14 @@
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 324
+              "line": 377
             }
           },
           {
@@ -23858,25 +24044,25 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 326
+              "line": 379
             }
           }
         ]
       }
     },
     {
-      "id": "task-raspodjela-paralelnih-grana",
+      "id": "task-uravnotezenje-paralelnih-grana",
       "chapter": "U13",
       "ordinal": 3,
       "level": "T2",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 647,
-        "anchor": "#task-raspodjela-paralelnih-grana"
+        "line": 651,
+        "anchor": "#task-uravnotezenje-paralelnih-grana"
       },
       "statement": {
-        "markdown": "Između istih čvorova spojene su grane s približno konstantnim otporima $R_1=12\\,000\\ \\mathrm{s^2/m^5}$ i $R_2=48\\,000\\ \\mathrm{s^2/m^5}$. Ukupni protok iznosi $Q=0{,}020\\ \\mathrm{m^3/s}$. Odredi $Q_1$, $Q_2$ i zajednički pad energije.",
-        "sha256": "870451cb4d668d2429c46f06cbd730362e905db9c74a2e900fc889ef05ee5ebf",
+        "markdown": "Dva rashladna ogranka između istih čvorova trebaju dobivati jednak protok. Ugradnjom prigušnog ventila u samo jedan ogranak odredi gdje ga treba postaviti i koliki dodatni otpor mora imati. Zatim zatvori kontinuitet i usporedi gubitke na oba puta. Zadani približno konstantni otpori grana bez novoga ventila jesu $R_1=12\\,000\\ \\mathrm{s^2/m^5}$ i $R_2=48\\,000\\ \\mathrm{s^2/m^5}$. Regulacija održava ukupni protok $Q=0{,}020\\ \\mathrm{m^3/s}$ i može osigurati potrebnu visinu. U svakom ogranku vrijedi kvadratni model $h_i=R_iQ_i^2$; novi ventil dodaje $h_v=R_vQ_i^2$ s $R_v\\ge0$. Odredi granu za ventil, $R_v$, oba protoka, zajednički gubitak $h_{AB}$ i doprinos samog ventila. Lokalni otpori postojećih spojeva već su uključeni u zadane $R_i$.",
+        "sha256": "4eed97100f6b87f5c1a4c840915290aa25bc638930691c54a127da51268aa6f5",
         "authoritative": true
       },
       "input_data": {
@@ -23898,8 +24084,9 @@
         "unparsed_numeric_math": [
           "R_1=12\\,000\\ \\mathrm{s^2/m^5}",
           "R_2=48\\,000\\ \\mathrm{s^2/m^5}",
-          "Q_1",
-          "Q_2"
+          "h_i=R_iQ_i^2",
+          "h_v=R_vQ_i^2",
+          "R_v\\ge0"
         ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
@@ -23913,11 +24100,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$Q_1=13{,}33\\ \\mathrm{L/s}$, $Q_2=6{,}67\\ \\mathrm{L/s}$ i $h_{AB}=2{,}13\\ \\mathrm{m}$. Obje grane moraju vratiti isti $h_{AB}$.",
+        "markdown": "Ventil ide u granu 1: $R_v=36\\,000\\ \\mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\\ \\mathrm{L/s}$, $h_{AB}=4{,}80\\ \\mathrm{m}$ i $h_v=3{,}60\\ \\mathrm{m}$. Provjera: $(R_1+R_v)Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 659
+          "line": 665
         }
       },
       "tolerance": {
@@ -23925,22 +24112,43 @@
         "contracts": [
           {
             "result_id": "U13.CANON.Z3.Q1_Ls",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z3.Q2_Ls",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z3.h_AB",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U13.CANON.Z3.Rv",
+            "kind": "absolute",
+            "value": 1e-08,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U13.CANON.Z3.h_valve",
+            "kind": "absolute",
+            "value": 0.005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U13.CANON.Z3.valve_branch",
+            "kind": "absolute",
+            "value": 0,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
@@ -23949,10 +24157,12 @@
       "independent_check": {
         "kind": "executed_invariant",
         "criterion": [
-          "_close(r['h1'], r['h2'], 1e-10)"
+          "_close(r['h1'], r['h2'], 1e-10)",
+          "abs(r['Q1'] + r['Q2'] - 0.02) < 1e-14 and r['Rv'] >= 0 and (r['h_valve'] > 0) and (balanced_branches(R1=48000, R2=12000)['valve_branch'] == 2)"
         ],
         "verifier_result_ids": [
-          "U13.CANON.Z3.equal_head"
+          "U13.CANON.Z3.equal_head",
+          "U13.CANON.Z3.passive_balance_and_continuity"
         ],
         "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
@@ -23964,58 +24174,113 @@
           "U13.CANON.Z3.Q1_Ls",
           "U13.CANON.Z3.Q2_Ls",
           "U13.CANON.Z3.h_AB",
-          "U13.CANON.Z3.equal_head"
+          "U13.CANON.Z3.Rv",
+          "U13.CANON.Z3.h_valve",
+          "U13.CANON.Z3.valve_branch",
+          "U13.CANON.Z3.equal_head",
+          "U13.CANON.Z3.passive_balance_and_continuity"
         ],
         "result_contracts": [
           {
             "result_id": "U13.CANON.Z3.Q1_Ls",
             "verification": "golden",
-            "target": 13.33,
+            "target": 10.0,
             "target_kind": "literal",
             "unit": "L/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 329
+              "line": 382
             }
           },
           {
             "result_id": "U13.CANON.Z3.Q2_Ls",
             "verification": "golden",
-            "target": 6.67,
+            "target": 10.0,
             "target_kind": "literal",
             "unit": "L/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 330
+              "line": 383
             }
           },
           {
             "result_id": "U13.CANON.Z3.h_AB",
             "verification": "golden",
-            "target": 2.13,
+            "target": 4.8,
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 331
+              "line": 384
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z3.Rv",
+            "verification": "golden",
+            "target": 36000.0,
+            "target_kind": "literal",
+            "unit": "s2/m5",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-08,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 385
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z3.h_valve",
+            "verification": "golden",
+            "target": 3.6,
+            "target_kind": "literal",
+            "unit": "m",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 386
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z3.valve_branch",
+            "verification": "golden",
+            "target": 1,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 387
             }
           },
           {
@@ -24026,29 +24291,105 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 332
+              "line": 388
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z3.passive_balance_and_continuity",
+            "verification": "invariant",
+            "criterion_expression": "abs(r['Q1'] + r['Q2'] - 0.02) < 1e-14 and r['Rv'] >= 0 and (r['h_valve'] > 0) and (balanced_branches(R1=48000, R2=12000)['valve_branch'] == 2)",
+            "failure_message": "Ventil mora dodavati nenegativni otpor grani manjeg otpora i zatvoriti cvor.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 389
             }
           }
         ]
       }
     },
     {
-      "id": "task-radna-tocka-tri-snage",
+      "id": "task-radna-tocka-hrapavog-voda",
       "chapter": "U13",
       "ordinal": 4,
       "level": "T2",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 666,
-        "anchor": "#task-radna-tocka-tri-snage"
+        "line": 674,
+        "anchor": "#task-radna-tocka-hrapavog-voda"
       },
       "statement": {
-        "markdown": "Za $Q$ u $\\mathrm{m^3/s}$ zadane su krivulje $H_p=30-30\\,000Q^2$ i $H_s=8+20\\,000Q^2$. Za vodu uzmi $\\rho=1000\\ \\mathrm{kg/m^3}$. U radnoj točki vrijede $\\eta_p=0{,}76$ i $\\eta_m=0{,}92$; gubitke pretvarača zanemari. Odredi $Q_{op}$, $H_{op}$, $P_h$, $P_{vr}$ i $P_{el}$.",
-        "sha256": "8a5676151c81e75843b93f4ff3c7074b12044f99128205dc7ab3314dfad45f62",
+        "markdown": "Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Odredi radnu točku kad otpor cijevi ovisi o Reynoldsovu broju, pa zatim odvojeno izračunaj hidrauličku, vratilnu i električnu snagu. U svakoj iteraciji ponovno provjeri trenje u cijevi. Sintetička karakteristika crpke zadana je brojevnim vrijednostima $H_p=30-30\\,000Q^2$, uz $Q$ u $\\mathrm{m^3/s}$ i $H_p$ u metrima. Razlika slobodnih površina je $\\Delta z=8{,}0\\ \\mathrm{m}$. Vod ima $D=0{,}100\\ \\mathrm{m}$, $L=150\\ \\mathrm{m}$, ekvivalentnu hrapavost $\\varepsilon=0{,}100\\ \\mathrm{mm}$ i $\\sum\\xi=6{,}0$, uključujući ulaz i izlaz, prema brzini u tom vodu. Za vodu uzmi $\\rho=1000\\ \\mathrm{kg/m^3}$ i $\\nu=1{,}00\\cdot10^{-6}\\ \\mathrm{m^2/s}$. Upotrijebi Darcy–Weisbachov model i Colebrookovu jednadžbu; konačno provjeri turbulentni režim. Numerički riješi radnu točku u intervalu $0{,}005\\le Q\\le0{,}030\\ \\mathrm{m^3/s}$, uz pomoć notebooka ili drugog računskog alata. Izvijesti $Q_{op}$, $H_{op}$, $Re$ i $\\lambda$ te provjeri energijski rezidual manji od $10^{-6}\\ \\mathrm{m}$ i apsolutni Colebrookov rezidual manji od $10^{-6}$. Za zadane ukupnu učinkovitost crpke $\\eta_p=0{,}76$ i učinkovitost motora $\\eta_m=0{,}92$ odredi $P_h$, $P_{vr}$ i $P_{el}$; gubitke pretvarača zanemari.",
+        "sha256": "d90c46dd8ed6107526343b195e4a4e35755edbb7437b48ec6e27cb9598fcddf3",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
+          {
+            "symbol": "\\Delta z",
+            "relation": "=",
+            "value_text": "8{,}0",
+            "value": 8.0,
+            "unit_text": "\\ \\mathrm{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 8.0,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "D",
+            "relation": "=",
+            "value_text": "0{,}100",
+            "value": 0.1,
+            "unit_text": "\\ \\mathrm{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.1,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "L",
+            "relation": "=",
+            "value_text": "150",
+            "value": 150.0,
+            "unit_text": "\\ \\mathrm{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 150.0,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "\\varepsilon",
+            "relation": "=",
+            "value_text": "0{,}100",
+            "value": 0.1,
+            "unit_text": "\\ \\mathrm{mm}",
+            "normalized_unit": "mm",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.0001,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "\\sum\\xi",
+            "relation": "=",
+            "value_text": "6{,}0",
+            "value": 6.0,
+            "unit_text": "1",
+            "normalized_unit": "1",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 6.0,
+              "unit": "1"
+            }
+          },
           {
             "symbol": "\\rho",
             "relation": "=",
@@ -24061,6 +24402,52 @@
               "value": 1000.0,
               "unit": "kg/m^3"
             }
+          },
+          {
+            "symbol": "\\nu",
+            "relation": "=",
+            "value_text": "1{,}00\\cdot10^{-6}",
+            "value": 1e-06,
+            "unit_text": "\\ \\mathrm{m^2/s}",
+            "normalized_unit": "m^2/s",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1e-06,
+              "unit": "m^2/s"
+            }
+          },
+          {
+            "symbol": null,
+            "relation": "context_value",
+            "value_text": "0{,}005",
+            "value": 0.005,
+            "unit_text": "\\le Q\\le0{,}030\\ \\mathrm{m^3/s}",
+            "normalized_unit": "le Qle0,030 m^3/s",
+            "provenance": "task_statement_inline_math",
+            "si": null,
+            "si_note": "Jedinica nije na konzervativnoj bijeloj listi; izvorni zapis ostaje autoritativan."
+          },
+          {
+            "symbol": null,
+            "relation": "context_value",
+            "value_text": "10",
+            "value": 10.0,
+            "unit_text": "^{-6}\\ \\mathrm{m}",
+            "normalized_unit": "^-6 m",
+            "provenance": "task_statement_inline_math",
+            "si": null,
+            "si_note": "Jedinica nije na konzervativnoj bijeloj listi; izvorni zapis ostaje autoritativan."
+          },
+          {
+            "symbol": null,
+            "relation": "context_value",
+            "value_text": "10",
+            "value": 10.0,
+            "unit_text": "^{-6}",
+            "normalized_unit": "^-6",
+            "provenance": "task_statement_inline_math",
+            "si": null,
+            "si_note": "Jedinica nije na konzervativnoj bijeloj listi; izvorni zapis ostaje autoritativan."
           },
           {
             "symbol": "\\eta_p",
@@ -24090,9 +24477,8 @@
           }
         ],
         "unparsed_numeric_math": [
-          "\\mathrm{m^3/s}",
           "H_p=30-30\\,000Q^2",
-          "H_s=8+20\\,000Q^2"
+          "\\mathrm{m^3/s}"
         ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
@@ -24100,17 +24486,17 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Za vodu uzmi $\\rho=1000\\ \\mathrm{kg/m^3}$.",
+            "text": "Za vodu uzmi $\\rho=1000\\ \\mathrm{kg/m^3}$ i $\\nu=1{,}00\\cdot10^{-6}\\ \\mathrm{m^2/s}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 666
+              "line": 674
             }
           },
           {
             "text": "gubitke pretvarača zanemari.",
             "provenance": {
               "kind": "task_statement",
-              "line": 666
+              "line": 674
             }
           }
         ],
@@ -24121,11 +24507,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$Q_{op}=20{,}98\\ \\mathrm{L/s}$, $H_{op}=16{,}8\\ \\mathrm{m}$, $P_h=3{,}46\\ \\mathrm{kW}$, $P_{vr}=4{,}55\\ \\mathrm{kW}$ i $P_{el}=4{,}94\\ \\mathrm{kW}$. Provjeri da snage rastu prema električnom ulazu.",
+        "markdown": "$Q_{op}\\approx19{,}030\\ \\mathrm{L/s}$, $H_{op}\\approx19{,}136\\ \\mathrm{m}$, $Re\\approx2{,}423\\cdot10^5$ i $\\lambda\\approx0{,}020812$. Snage su $P_h\\approx3{,}572\\ \\mathrm{kW}$, $P_{vr}\\approx4{,}700\\ \\mathrm{kW}$ i $P_{el}\\approx5{,}109\\ \\mathrm{kW}$. Oba reziduala provjeravaju se s nezaokruženim rješenjem; vrijedi $P_h<P_{vr}<P_{el}$.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 678
+          "line": 690
         }
       },
       "tolerance": {
@@ -24133,36 +24519,50 @@
         "contracts": [
           {
             "result_id": "U13.CANON.Z4.Q_Ls",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z4.H",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U13.CANON.Z4.Re",
+            "kind": "absolute",
+            "value": 50,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U13.CANON.Z4.lambda",
+            "kind": "absolute",
+            "value": 5e-07,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z4.P_h_kW",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z4.P_shaft_kW",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z4.P_el_kW",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
@@ -24171,10 +24571,14 @@
       "independent_check": {
         "kind": "executed_invariant",
         "criterion": [
-          "r['P_h'] < r['P_shaft'] < r['P_el']"
+          "r['P_h'] < r['P_shaft'] < r['P_el']",
+          "r['Re'] > 4000 and abs(r['energy_residual']) < 1e-06 and (abs(r['colebrook_residual']) < 1e-06)",
+          "rougher['Q'] < r['Q'] and rougher['lam'] > r['lam'] and (rougher['H'] > r['H'])"
         ],
         "verifier_result_ids": [
-          "U13.CANON.Z4.power_order"
+          "U13.CANON.Z4.power_order",
+          "U13.CANON.Z4.coupled_residuals",
+          "U13.CANON.Z4.roughness_moves_operating_point"
         ],
         "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
@@ -24185,95 +24589,133 @@
         "result_ids": [
           "U13.CANON.Z4.Q_Ls",
           "U13.CANON.Z4.H",
+          "U13.CANON.Z4.Re",
+          "U13.CANON.Z4.lambda",
           "U13.CANON.Z4.P_h_kW",
           "U13.CANON.Z4.P_shaft_kW",
           "U13.CANON.Z4.P_el_kW",
-          "U13.CANON.Z4.power_order"
+          "U13.CANON.Z4.power_order",
+          "U13.CANON.Z4.coupled_residuals",
+          "U13.CANON.Z4.roughness_moves_operating_point"
         ],
         "result_contracts": [
           {
             "result_id": "U13.CANON.Z4.Q_Ls",
             "verification": "golden",
-            "target": 20.98,
+            "target": 19.03,
             "target_kind": "literal",
             "unit": "L/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 335
+              "line": 396
             }
           },
           {
             "result_id": "U13.CANON.Z4.H",
             "verification": "golden",
-            "target": 16.8,
+            "target": 19.136,
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 336
+              "line": 397
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z4.Re",
+            "verification": "golden",
+            "target": 242300.0,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 50,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 398
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z4.lambda",
+            "verification": "golden",
+            "target": 0.020812,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 5e-07,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 399
             }
           },
           {
             "result_id": "U13.CANON.Z4.P_h_kW",
             "verification": "golden",
-            "target": 3.46,
+            "target": 3.572,
             "target_kind": "literal",
             "unit": "kW",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 337
+              "line": 400
             }
           },
           {
             "result_id": "U13.CANON.Z4.P_shaft_kW",
             "verification": "golden",
-            "target": 4.55,
+            "target": 4.7,
             "target_kind": "literal",
             "unit": "kW",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 338
+              "line": 401
             }
           },
           {
             "result_id": "U13.CANON.Z4.P_el_kW",
             "verification": "golden",
-            "target": 4.94,
+            "target": 5.109,
             "target_kind": "literal",
             "unit": "kW",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 339
+              "line": 402
             }
           },
           {
@@ -24284,7 +24726,29 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 340
+              "line": 403
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z4.coupled_residuals",
+            "verification": "invariant",
+            "criterion_expression": "r['Re'] > 4000 and abs(r['energy_residual']) < 1e-06 and (abs(r['colebrook_residual']) < 1e-06)",
+            "failure_message": "Radna tocka mora zatvoriti obje implicitne jednadzbe u turbulentnom podrucju.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 404
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z4.roughness_moves_operating_point",
+            "verification": "invariant",
+            "criterion_expression": "rougher['Q'] < r['Q'] and rougher['lam'] > r['lam'] and (rougher['H'] > r['H'])",
+            "failure_message": "Veca hrapavost mora smanjiti protok na zadanoj padajucoj crpkinoj krivulji.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 409
             }
           }
         ]
@@ -24297,12 +24761,12 @@
       "level": "T3",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 685,
+        "line": 697,
         "anchor": "#task-robustan-izbor-promjera"
       },
       "statement": {
-        "markdown": "Vod duljine $L=150\\ \\mathrm{m}$ mora prenositi $Q=0{,}018\\ \\mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $6{,}0$, a zbog starenja je $\\lambda$ između 0,020 i 0,028. Dostupni su promjeri 80, 100 i 125 mm. Odaberi najmanji promjer koji i u nepovoljnom slučaju zadovoljava $h_w\\le15\\ \\mathrm{m}$. Objasni zašto račun samo sa svježom cijevi nije robustan.",
-        "sha256": "7d9edb7e2cb8149feeda678855611d042325437e6603d541927e25a4a5dc57d9",
+        "markdown": "Vod duljine $L=150\\ \\mathrm{m}$ mora prenositi $Q=0{,}018\\ \\mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $\\sum\\xi=6{,}0$, prema brzini u odabranom vodu. Za svaki ponuđeni promjer zadana granica Darcyjeva faktora zbog nepoznatog stanja cijevi jest $0{,}020\\le\\lambda\\le0{,}028$; to je interval mogućih vrijednosti, a ne standardna nesigurnost. Dostupni unutarnji promjeri su 80, 100 i 125 mm. Odaberi najmanji koji u cijelom zadanom intervalu zadovoljava $h_w\\le15\\ \\mathrm{m}$. Objasni zašto nije dovoljan račun samo s donjom granicom otpora.",
+        "sha256": "d7350547311cf6815b54a680c150efce0e219269647ddb76e48e7614a62b7f6b",
         "authoritative": true
       },
       "input_data": {
@@ -24332,10 +24796,23 @@
               "value": 0.018,
               "unit": "m^3/s"
             }
+          },
+          {
+            "symbol": "\\sum\\xi",
+            "relation": "=",
+            "value_text": "6{,}0",
+            "value": 6.0,
+            "unit_text": "1",
+            "normalized_unit": "1",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 6.0,
+              "unit": "1"
+            }
           }
         ],
         "unparsed_numeric_math": [
-          "6{,}0",
+          "0{,}020\\le\\lambda\\le0{,}028",
           "h_w\\le15\\ \\mathrm{m}"
         ],
         "parse_status": "conservative_partial",
@@ -24350,11 +24827,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3,29–4,34 m za 125 mm. Najmanji robustan izbor jest 100 mm. Provjera odluke jest gornja granica $12{,}85<15\\ \\mathrm{m}$.",
+        "markdown": "Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3,29–4,34 m za 125 mm. Najmanji izbor koji zadovoljava cijeli interval jest 100 mm: gornja granica $12{,}85<15\\ \\mathrm{m}$. Promjer 80 mm ne zadovoljava ni uz najmanji zadani otpor.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 697
+          "line": 709
         }
       },
       "tolerance": {
@@ -24362,52 +24839,52 @@
         "contracts": [
           {
             "result_id": "U13.CANON.Z5.D080_low",
-            "kind": "relative",
-            "value": 0.03,
+            "kind": "absolute",
+            "value": 0.05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z5.D080_high",
-            "kind": "relative",
-            "value": 0.03,
+            "kind": "absolute",
+            "value": 0.05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z5.D100_low",
-            "kind": "relative",
-            "value": 0.03,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z5.D100_high",
-            "kind": "relative",
-            "value": 0.03,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z5.D125_low",
-            "kind": "relative",
-            "value": 0.03,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z5.D125_high",
-            "kind": "relative",
-            "value": 0.03,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z5.selected_mm",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
@@ -24443,14 +24920,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.03,
+              "kind": "absolute",
+              "value": 0.05,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 343
+              "line": 414
             }
           },
           {
@@ -24460,14 +24937,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.03,
+              "kind": "absolute",
+              "value": 0.05,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 344
+              "line": 415
             }
           },
           {
@@ -24477,14 +24954,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.03,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 345
+              "line": 416
             }
           },
           {
@@ -24494,14 +24971,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.03,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 346
+              "line": 417
             }
           },
           {
@@ -24511,14 +24988,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.03,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 347
+              "line": 418
             }
           },
           {
@@ -24528,14 +25005,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.03,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 348
+              "line": 419
             }
           },
           {
@@ -24545,14 +25022,14 @@
             "target_kind": "literal",
             "unit": "mm",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 349
+              "line": 420
             }
           },
           {
@@ -24563,7 +25040,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 350
+              "line": 421
             }
           }
         ]
@@ -24576,19 +25053,45 @@
       "level": "T4",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 704,
+        "line": 716,
         "anchor": "#task-regulacija-energija-npsh"
       },
       "statement": {
-        "markdown": "Crpka pri nazivnoj brzini ima $H_p(q)=24-0{,}012q^2$, gdje je $q$ u $\\mathrm{L/s}$. Izvorni sustav ima $H_s(q)=5+0{,}025q^2$. Prigušivanje ventila mijenja ga u $H_{s,V}(q)=5+0{,}040q^2$. Ukupna učinkovitost pretvorbe električna $\\to$ hidraulička iznosi 0,72, a pogon radi $5000\\ \\mathrm{h/god}$. 1. Odredi radnu točku prigušenog sustava i godišnju električnu energiju. 2. Za isti protok odredi omjer brzina $s$ ako se ventil ponovno otvori i protok regulira promjenom brzine. Odredi godišnju uštedu uz istu učinkovitost. 3. Za taj protok sustav ima $H_{atm}=10{,}2\\ \\mathrm{m}$, usisni geodetski uspon $2{,}0\\ \\mathrm{m}$, usisne gubitke $1{,}2\\ \\mathrm{m}$ i visinu tlaka pare $0{,}35\\ \\mathrm{m}$. Proizvođač daje $NPSH_r=2+0{,}003q^2$ u metrima. Izračunaj $NPSH_a$ i numeričku razliku $NPSH_a-NPSH_r$, ali jasno navedi zašto ta razlika sama nije univerzalna prihvatna margina.",
-        "sha256": "460d2f66878c8b2a266a39fea66743cce2cd1f23fe458cdfef9b19c76b78ccf5",
+        "markdown": "Usporedi prigušenje ventilom i regulaciju brzine za jednak traženi protok. Odredi godišnju energiju obiju mogućnosti i uštedu, a zatim provjeri što zadani usisni podatci dopuštaju zaključiti o radu pri nazivnoj i sniženoj brzini vrtnje. Sintetičke nastavne karakteristike zadane su brojevnim vrijednostima: pri nazivnoj brzini $H_p(q)=24-0{,}012q^2$, izvorni sustav $H_s(q)=5+0{,}025q^2$, a prigušeni $H_{s,V}(q)=5+0{,}040q^2$. Ovdje je $q$ u $\\mathrm{L/s}$, a sve visine u metrima. Fluid je voda gustoće $\\rho=1000\\ \\mathrm{kg/m^3}$. Ukupna učinkovitost električna–hidraulička pretpostavlja se jednakom $\\eta=0{,}72$ u obje uspoređene točke; pogon radi $t=5000\\ \\mathrm{h/god}$. 1. Odredi radnu točku prigušenog sustava, $q$, $H_V$ i godišnju električnu energiju $E_V$. 2. Za isti protok, uz ponovno otvoren ventil, odredi omjer brzina $s=n_2/n_1$, potrebnu visinu $H_s$, godišnju energiju $E_s$ i uštedu $\\Delta E$. Primijeni afinitetno skaliranje iste crpke, uz zadanu stalnu učinkovitost. 3. Pri tom protoku zadani su $H_{atm}=10{,}2\\ \\mathrm{m}$, usisni geodetski uspon $z_s=2{,}0\\ \\mathrm{m}$, usisni gubitak $h_{w,s}=1{,}2\\ \\mathrm{m}$ i visina tlaka pare $H_v=0{,}35\\ \\mathrm{m}$. Sintetički model potrebnog NPSH-a **pri nazivnoj brzini** jest $NPSH_r=2+0{,}003q^2$ u metrima. Odredi $NPSH_a$ i razliku $NPSH_a-NPSH_r$ za prigušeni slučaj. Navedi koji podatci nedostaju za konačnu odluku o usisu obaju načina regulacije; dani $NPSH_r$ nemoj nekritički prenijeti na sniženu brzinu.",
+        "sha256": "00ce0769705fa0605007ad5362c82e68e52dd44e51f53d0b85803bfda9fa07c0",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": null,
-            "relation": "context_value",
+            "symbol": "\\rho",
+            "relation": "=",
+            "value_text": "1000",
+            "value": 1000.0,
+            "unit_text": "\\ \\mathrm{kg/m^3}",
+            "normalized_unit": "kg/m^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1000.0,
+              "unit": "kg/m^3"
+            }
+          },
+          {
+            "symbol": "\\eta",
+            "relation": "=",
+            "value_text": "0{,}72",
+            "value": 0.72,
+            "unit_text": "1",
+            "normalized_unit": "1",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.72,
+              "unit": "1"
+            }
+          },
+          {
+            "symbol": "t",
+            "relation": "=",
             "value_text": "5000",
             "value": 5000.0,
             "unit_text": "\\ \\mathrm{h/god}",
@@ -24611,8 +25114,8 @@
             }
           },
           {
-            "symbol": null,
-            "relation": "context_value",
+            "symbol": "z_s",
+            "relation": "=",
             "value_text": "2{,}0",
             "value": 2.0,
             "unit_text": "\\ \\mathrm{m}",
@@ -24624,8 +25127,8 @@
             }
           },
           {
-            "symbol": null,
-            "relation": "context_value",
+            "symbol": "h_{w,s}",
+            "relation": "=",
             "value_text": "1{,}2",
             "value": 1.2,
             "unit_text": "\\ \\mathrm{m}",
@@ -24637,8 +25140,8 @@
             }
           },
           {
-            "symbol": null,
-            "relation": "context_value",
+            "symbol": "H_v",
+            "relation": "=",
             "value_text": "0{,}35",
             "value": 0.35,
             "unit_text": "\\ \\mathrm{m}",
@@ -24654,25 +25157,34 @@
           "H_p(q)=24-0{,}012q^2",
           "H_s(q)=5+0{,}025q^2",
           "H_{s,V}(q)=5+0{,}040q^2",
+          "s=n_2/n_1",
           "NPSH_r=2+0{,}003q^2"
         ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
+        "explicit": [
+          {
+            "text": "Ukupna učinkovitost električna–hidraulička pretpostavlja se jednakom $\\eta=0{,}72$ u obje uspoređene točke;",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 716
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
         "defaults": [],
         "default_status": "none_declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "Prigušeno: $q=19{,}12\\ \\mathrm{L/s}$, $H=19{,}62\\ \\mathrm{m}$ i $P_{el}=5{,}11\\ \\mathrm{kW}$. Regulacija brzinom: otvoren sustav traži $H=14{,}13\\ \\mathrm{m}$, $s=0{,}878$, $P_{el}=3{,}68\\ \\mathrm{kW}$ i idealizirana godišnja ušteda je $7{,}14\\ \\mathrm{MWh}$. Za usis su $NPSH_a=6{,}65\\ \\mathrm{m}$, $NPSH_r=3{,}10\\ \\mathrm{m}$ i numerička razlika $3{,}55\\ \\mathrm{m}$. Prihvatljivost ipak zahtijeva proizvođačev kriterij margine, dopušteno radno područje i stvarne temperaturne/atmosferske uvjete.",
+        "markdown": "$q\\approx19{,}12\\ \\mathrm{L/s}$; $(H_V,H_s)\\approx(19{,}62;14{,}13)\\ \\mathrm{m}$ i $s\\approx0{,}878$. $(E_V,E_s,\\Delta E)\\approx(25{,}54;18{,}41;7{,}14)\\ \\mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a,NPSH_r,NPSH_a-NPSH_r)\\approx(6{,}65;3{,}10;3{,}55)\\ \\mathrm{m}$. Nedostaju kriterij margine i dopušteno radno područje, a za sniženu brzinu i odgovarajući $NPSH_r(q,n_2)$.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 720
+          "line": 734
         }
       },
       "tolerance": {
@@ -24680,133 +25192,85 @@
         "contracts": [
           {
             "result_id": "U13.CANON.Z6.q_Ls",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z6.H_throttled",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U13.CANON.Z6.P_el_throttled_kW",
-            "kind": "relative",
-            "value": 0.02,
+            "result_id": "U13.CANON.Z6.E_throttled_MWh",
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z6.H_open",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z6.speed_ratio",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U13.CANON.Z6.P_el_vfd_kW",
-            "kind": "relative",
-            "value": 0.02,
+            "result_id": "U13.CANON.Z6.E_vfd_MWh",
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z6.saving_MWh",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z6.NPSH_a",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z6.NPSH_r",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U13.CANON.Z6.NPSH_difference",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U13.CANON.Z6.q_Ls",
-          "U13.CANON.Z6.H_throttled",
-          "U13.CANON.Z6.P_el_throttled_kW",
-          "U13.CANON.Z6.H_open",
-          "U13.CANON.Z6.speed_ratio",
-          "U13.CANON.Z6.P_el_vfd_kW",
-          "U13.CANON.Z6.saving_MWh",
-          "U13.CANON.Z6.NPSH_a",
-          "U13.CANON.Z6.NPSH_r",
-          "U13.CANON.Z6.NPSH_difference"
+        "kind": "executed_invariant",
+        "criterion": [
+          "abs(24 * r['speed_ratio'] ** 2 - 0.012 * r['q'] ** 2 - r['H_open']) < 1e-12 and 0 < r['speed_ratio'] < 1 and (abs(r['E_throttled_MWh'] - r['E_vfd_MWh'] - r['saving_MWh']) < 1e-12) and (r['saving_MWh'] > 0)"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U13.CANON.Z6.q_Ls",
-            "unit": "L/s"
-          },
-          {
-            "result_id": "U13.CANON.Z6.H_throttled",
-            "unit": "m"
-          },
-          {
-            "result_id": "U13.CANON.Z6.P_el_throttled_kW",
-            "unit": "kW"
-          },
-          {
-            "result_id": "U13.CANON.Z6.H_open",
-            "unit": "m"
-          },
-          {
-            "result_id": "U13.CANON.Z6.speed_ratio",
-            "unit": "1"
-          },
-          {
-            "result_id": "U13.CANON.Z6.P_el_vfd_kW",
-            "unit": "kW"
-          },
-          {
-            "result_id": "U13.CANON.Z6.saving_MWh",
-            "unit": "MWh"
-          },
-          {
-            "result_id": "U13.CANON.Z6.NPSH_a",
-            "unit": "m"
-          },
-          {
-            "result_id": "U13.CANON.Z6.NPSH_r",
-            "unit": "m"
-          },
-          {
-            "result_id": "U13.CANON.Z6.NPSH_difference",
-            "unit": "m"
-          }
-        ]
+        "verifier_result_ids": [
+          "U13.CANON.Z6.regulation_and_energy_balance"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u13_integrated",
@@ -24815,14 +25279,15 @@
         "result_ids": [
           "U13.CANON.Z6.q_Ls",
           "U13.CANON.Z6.H_throttled",
-          "U13.CANON.Z6.P_el_throttled_kW",
+          "U13.CANON.Z6.E_throttled_MWh",
           "U13.CANON.Z6.H_open",
           "U13.CANON.Z6.speed_ratio",
-          "U13.CANON.Z6.P_el_vfd_kW",
+          "U13.CANON.Z6.E_vfd_MWh",
           "U13.CANON.Z6.saving_MWh",
           "U13.CANON.Z6.NPSH_a",
           "U13.CANON.Z6.NPSH_r",
-          "U13.CANON.Z6.NPSH_difference"
+          "U13.CANON.Z6.NPSH_difference",
+          "U13.CANON.Z6.regulation_and_energy_balance"
         ],
         "result_contracts": [
           {
@@ -24832,14 +25297,14 @@
             "target_kind": "literal",
             "unit": "L/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 353
+              "line": 424
             }
           },
           {
@@ -24849,31 +25314,31 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 354
+              "line": 425
             }
           },
           {
-            "result_id": "U13.CANON.Z6.P_el_throttled_kW",
+            "result_id": "U13.CANON.Z6.E_throttled_MWh",
             "verification": "golden",
-            "target": 5.11,
+            "target": 25.54,
             "target_kind": "literal",
-            "unit": "kW",
+            "unit": "MWh/god",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 355
+              "line": 426
             }
           },
           {
@@ -24883,14 +25348,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 356
+              "line": 427
             }
           },
           {
@@ -24900,31 +25365,31 @@
             "target_kind": "literal",
             "unit": "1",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 357
+              "line": 428
             }
           },
           {
-            "result_id": "U13.CANON.Z6.P_el_vfd_kW",
+            "result_id": "U13.CANON.Z6.E_vfd_MWh",
             "verification": "golden",
-            "target": 3.68,
+            "target": 18.41,
             "target_kind": "literal",
-            "unit": "kW",
+            "unit": "MWh/god",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 358
+              "line": 429
             }
           },
           {
@@ -24934,14 +25399,14 @@
             "target_kind": "literal",
             "unit": "MWh",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 359
+              "line": 430
             }
           },
           {
@@ -24951,14 +25416,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 360
+              "line": 431
             }
           },
           {
@@ -24968,14 +25433,14 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 361
+              "line": 432
             }
           },
           {
@@ -24985,14 +25450,25 @@
             "target_kind": "literal",
             "unit": "m",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 362
+              "line": 433
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z6.regulation_and_energy_balance",
+            "verification": "invariant",
+            "criterion_expression": "abs(24 * r['speed_ratio'] ** 2 - 0.012 * r['q'] ** 2 - r['H_open']) < 1e-12 and 0 < r['speed_ratio'] < 1 and (abs(r['E_throttled_MWh'] - r['E_vfd_MWh'] - r['saving_MWh']) < 1e-12) and (r['saving_MWh'] > 0)",
+            "failure_message": "Nova brzina mora zatvoriti radnu tocku, a usteda razliku godisnjih energija.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 434
             }
           }
         ]

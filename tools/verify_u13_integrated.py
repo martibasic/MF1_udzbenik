@@ -21,8 +21,10 @@ def _close(value: float, target: float, rel: float = TOL) -> bool:
     return abs(value - target) / abs(target) <= rel
 
 
-def _check(out, rid, value, target, unit="", rel=TOL):
-    ok = _close(value, target, rel)
+def _check(out, rid, value, target, unit="", rel=TOL, *, abs_tol=None):
+    ok = math.isfinite(value) and (
+        abs(value-target) <= abs_tol if abs_tol is not None else _close(value, target, rel)
+    )
     out.append(
         {
             "id": rid,
@@ -198,13 +200,62 @@ def parallel_branches(R1=12000.0, R2=48000.0, Q=0.020):
     return {"Q1": Q1, "Q2": Q2, "h1": R1 * Q1**2, "h2": R2 * Q2**2}
 
 
-def pump_operating_point():
-    Q = math.sqrt((30 - 8) / (30000 + 20000))
-    H = 30 - 30000 * Q**2
-    P_h = 1000 * G * Q * H
-    P_shaft = P_h / 0.76
-    P_el = P_shaft / 0.92
-    return {"Q": Q, "H": H, "P_h": P_h, "P_shaft": P_shaft, "P_el": P_el}
+def balanced_branches(R1=12000.0, R2=48000.0, Q=0.020):
+    flow = Q/2
+    target_resistance = max(R1,R2)
+    valve_resistance = abs(R2-R1)
+    return {
+        "valve_branch": 1 if R1<R2 else 2,
+        "Rv": valve_resistance,
+        "Q1": flow, "Q2": flow,
+        "h_AB": target_resistance*flow**2,
+        "h_valve": valve_resistance*flow**2,
+        "h1": (R1+max(R2-R1,0))*flow**2,
+        "h2": (R2+max(R1-R2,0))*flow**2,
+    }
+
+
+def colebrook_factor(Re, relative_roughness):
+    """Neovisna bisekcija u x=1/sqrt(lambda), samo turbulentni model."""
+    if Re <= 4000 or relative_roughness < 0:
+        raise ValueError("Zadani Colebrookov model zahtijeva Re>4000 i eps/D>=0.")
+    def residual(x):
+        return x+2*math.log10(relative_roughness/3.7+2.51*x/Re)
+    lo,hi=1.0,20.0
+    if not residual(lo)<0<residual(hi):
+        raise ValueError("Colebrookov korijen izvan zadanog intervala.")
+    for _ in range(70):
+        mid=(lo+hi)/2
+        if residual(mid)<0:lo=mid
+        else:hi=mid
+    x=(lo+hi)/2
+    return 1/x**2,residual(x)
+
+
+def pump_operating_point(
+    D=0.100, L=150.0, epsilon=0.100e-3, sum_xi=6.0,
+    nu=1.0e-6, rho=1000.0, static_head=8.0,
+    pump_a=30.0, pump_b=30000.0, eta_p=0.76, eta_m=0.92,
+):
+    def state(Q):
+        v=4*Q/(math.pi*D**2)
+        Re=v*D/nu
+        lam,residual=colebrook_factor(Re,epsilon/D)
+        Hp=pump_a-pump_b*Q**2
+        Hs=static_head+(lam*L/D+sum_xi)*v**2/(2*G)
+        return {"Q":Q,"v":v,"Re":Re,"lam":lam,"H":Hp,"Hs":Hs,
+                "energy_residual":Hp-Hs,"colebrook_residual":residual}
+    lo,hi=0.005,0.030
+    if not state(lo)["energy_residual"]>0>state(hi)["energy_residual"]:
+        raise ValueError("Radna tocka nije obuhvacena zadanim intervalom.")
+    for _ in range(70):
+        mid=(lo+hi)/2
+        if state(mid)["energy_residual"]>0:lo=mid
+        else:hi=mid
+    result=state((lo+hi)/2)
+    P_h=rho*G*result["Q"]*result["H"]
+    result.update(P_h=P_h, P_shaft=P_h/eta_p, P_el=P_h/(eta_p*eta_m))
+    return result
 
 
 def diameter_robustness(
@@ -244,6 +295,8 @@ def regulation_task():
         "H_open": H_open,
         "speed_ratio": speed_ratio,
         "P_el_vfd": P_el_vfd,
+        "E_throttled_MWh": P_el_throttled*5000/1e6,
+        "E_vfd_MWh": P_el_vfd*5000/1e6,
         "saving_MWh": saving_MWh,
         "NPSH_a": NPSH_a,
         "NPSH_r": NPSH_r,
@@ -311,55 +364,79 @@ def verify():
     Q = 0.012
     A = math.pi * 0.10**2 / 4
     r = section_losses(0.10, 50.0, Q / A, 0.025, 4.0, rho=998.0)
-    _check(out, "U13.CANON.Z1.v", Q / A, 1.528, "m/s", rel=0.02)
-    _check(out, "U13.CANON.Z1.h_l", r["h_l"], 1.487, "m", rel=0.02)
-    _check(out, "U13.CANON.Z1.h_loc", r["h_loc"], 0.476, "m", rel=0.02)
-    _check(out, "U13.CANON.Z1.h_w", r["h_w"], 1.963, "m", rel=0.02)
-    _check(out, "U13.CANON.Z1.dp_kPa", r["dp"] / 1000, 19.2, "kPa", rel=0.02)
+    _check(out, "U13.CANON.Z1.v", Q / A, 1.528, "m/s", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z1.h_l", r["h_l"], 1.487, "m", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z1.h_loc", r["h_loc"], 0.476, "m", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z1.h_w", r["h_w"], 1.963, "m", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z1.dp_kPa", r["dp"] / 1000, 19.2, "kPa", abs_tol=0.05)
 
     r = laminar_pipe(1100.0, 3.0e-6, 0.006, 5.0, 6.0e-6)
-    _check(out, "U13.CANON.Z2.v", r["v"], 0.212, "m/s", rel=0.02)
-    _check(out, "U13.CANON.Z2.Re", r["Re"], 424.0, "", rel=0.02)
-    _check(out, "U13.CANON.Z2.lam", r["lam"], 0.1508, "", rel=0.02)
-    _check(out, "U13.CANON.Z2.dp_kPa", r["dp"] / 1000, 3.11, "kPa", rel=0.02)
+    _check(out, "U13.CANON.Z2.v", r["v"], 0.212, "m/s", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z2.Re", r["Re"], 424.0, "", abs_tol=0.5)
+    _check(out, "U13.CANON.Z2.lam", r["lam"], 0.1508, "", abs_tol=0.00005)
+    _check(out, "U13.CANON.Z2.dp_kPa", r["dp"] / 1000, 3.11, "kPa", abs_tol=0.005)
     r_double = laminar_pipe(1100.0, 3.0e-6, 0.006, 5.0, 12.0e-6)
     _invariant(out, "U13.CANON.Z2.linear_Q_scaling", _close(r_double["dp"] / r["dp"], 2.0, 1e-10), "Laminarni dp mora se udvostručiti s Q.")
 
-    r = parallel_branches()
-    _check(out, "U13.CANON.Z3.Q1_Ls", r["Q1"] * 1000, 13.33, "L/s", rel=0.02)
-    _check(out, "U13.CANON.Z3.Q2_Ls", r["Q2"] * 1000, 6.67, "L/s", rel=0.02)
-    _check(out, "U13.CANON.Z3.h_AB", r["h1"], 2.13, "m", rel=0.02)
+    r = balanced_branches()
+    _check(out, "U13.CANON.Z3.Q1_Ls", r["Q1"] * 1000, 10.00, "L/s", abs_tol=0.005)
+    _check(out, "U13.CANON.Z3.Q2_Ls", r["Q2"] * 1000, 10.00, "L/s", abs_tol=0.005)
+    _check(out, "U13.CANON.Z3.h_AB", r["h_AB"], 4.80, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z3.Rv", r["Rv"], 36000.0, "s2/m5", abs_tol=1e-8)
+    _check(out, "U13.CANON.Z3.h_valve", r["h_valve"], 3.60, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z3.valve_branch", r["valve_branch"], 1, "", abs_tol=0)
     _invariant(out, "U13.CANON.Z3.equal_head", _close(r["h1"], r["h2"], 1e-10), "Paralelne grane moraju imati jednak pad.")
+    _invariant(out, "U13.CANON.Z3.passive_balance_and_continuity",
+               abs(r["Q1"]+r["Q2"]-0.020)<1e-14
+               and r["Rv"]>=0 and r["h_valve"]>0
+               and balanced_branches(R1=48000,R2=12000)["valve_branch"]==2,
+               "Ventil mora dodavati nenegativni otpor grani manjeg otpora i zatvoriti cvor.")
 
     r = pump_operating_point()
-    _check(out, "U13.CANON.Z4.Q_Ls", r["Q"] * 1000, 20.98, "L/s", rel=0.02)
-    _check(out, "U13.CANON.Z4.H", r["H"], 16.8, "m", rel=0.02)
-    _check(out, "U13.CANON.Z4.P_h_kW", r["P_h"] / 1000, 3.46, "kW", rel=0.02)
-    _check(out, "U13.CANON.Z4.P_shaft_kW", r["P_shaft"] / 1000, 4.55, "kW", rel=0.02)
-    _check(out, "U13.CANON.Z4.P_el_kW", r["P_el"] / 1000, 4.94, "kW", rel=0.02)
+    _check(out, "U13.CANON.Z4.Q_Ls", r["Q"] * 1000, 19.030, "L/s", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z4.H", r["H"], 19.136, "m", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z4.Re", r["Re"], 2.423e5, "", abs_tol=50)
+    _check(out, "U13.CANON.Z4.lambda", r["lam"], 0.020812, "", abs_tol=0.0000005)
+    _check(out, "U13.CANON.Z4.P_h_kW", r["P_h"] / 1000, 3.572, "kW", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z4.P_shaft_kW", r["P_shaft"] / 1000, 4.700, "kW", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z4.P_el_kW", r["P_el"] / 1000, 5.109, "kW", abs_tol=0.0005)
     _invariant(out, "U13.CANON.Z4.power_order", r["P_h"] < r["P_shaft"] < r["P_el"], "Mora vrijediti Ph<Pvr<Pel.")
+    _invariant(out, "U13.CANON.Z4.coupled_residuals",
+               r["Re"]>4000 and abs(r["energy_residual"])<1e-6
+               and abs(r["colebrook_residual"])<1e-6,
+               "Radna tocka mora zatvoriti obje implicitne jednadzbe u turbulentnom podrucju.")
+    rougher=pump_operating_point(epsilon=0.200e-3)
+    _invariant(out, "U13.CANON.Z4.roughness_moves_operating_point",
+               rougher["Q"]<r["Q"] and rougher["lam"]>r["lam"] and rougher["H"]>r["H"],
+               "Veca hrapavost mora smanjiti protok na zadanoj padajucoj crpkinoj krivulji.")
 
     r = diameter_robustness()
-    _check(out, "U13.CANON.Z5.D080_low", r["ranges"][0.080][0], 28.4, "m", rel=0.03)
-    _check(out, "U13.CANON.Z5.D080_high", r["ranges"][0.080][1], 38.2, "m", rel=0.03)
-    _check(out, "U13.CANON.Z5.D100_low", r["ranges"][0.100][0], 9.64, "m", rel=0.03)
-    _check(out, "U13.CANON.Z5.D100_high", r["ranges"][0.100][1], 12.85, "m", rel=0.03)
-    _check(out, "U13.CANON.Z5.D125_low", r["ranges"][0.125][0], 3.29, "m", rel=0.03)
-    _check(out, "U13.CANON.Z5.D125_high", r["ranges"][0.125][1], 4.34, "m", rel=0.03)
-    _check(out, "U13.CANON.Z5.selected_mm", r["selected"] * 1000, 100.0, "mm")
+    _check(out, "U13.CANON.Z5.D080_low", r["ranges"][0.080][0], 28.4, "m", abs_tol=0.05)
+    _check(out, "U13.CANON.Z5.D080_high", r["ranges"][0.080][1], 38.2, "m", abs_tol=0.05)
+    _check(out, "U13.CANON.Z5.D100_low", r["ranges"][0.100][0], 9.64, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z5.D100_high", r["ranges"][0.100][1], 12.85, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z5.D125_low", r["ranges"][0.125][0], 3.29, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z5.D125_high", r["ranges"][0.125][1], 4.34, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z5.selected_mm", r["selected"] * 1000, 100.0, "mm", abs_tol=0)
     _invariant(out, "U13.CANON.Z5.robust_limit", max(r["ranges"][r["selected"]]) < 15.0, "Odabrani promjer mora zadovoljiti najgori slučaj.")
 
     r = regulation_task()
-    _check(out, "U13.CANON.Z6.q_Ls", r["q"], 19.12, "L/s", rel=0.02)
-    _check(out, "U13.CANON.Z6.H_throttled", r["H_throttled"], 19.62, "m", rel=0.02)
-    _check(out, "U13.CANON.Z6.P_el_throttled_kW", r["P_el_throttled"] / 1000, 5.11, "kW", rel=0.02)
-    _check(out, "U13.CANON.Z6.H_open", r["H_open"], 14.13, "m", rel=0.02)
-    _check(out, "U13.CANON.Z6.speed_ratio", r["speed_ratio"], 0.878, "", rel=0.02)
-    _check(out, "U13.CANON.Z6.P_el_vfd_kW", r["P_el_vfd"] / 1000, 3.68, "kW", rel=0.02)
-    _check(out, "U13.CANON.Z6.saving_MWh", r["saving_MWh"], 7.14, "MWh", rel=0.02)
-    _check(out, "U13.CANON.Z6.NPSH_a", r["NPSH_a"], 6.65, "m", rel=0.02)
-    _check(out, "U13.CANON.Z6.NPSH_r", r["NPSH_r"], 3.10, "m", rel=0.02)
-    _check(out, "U13.CANON.Z6.NPSH_difference", r["NPSH_difference"], 3.55, "m", rel=0.02)
+    _check(out, "U13.CANON.Z6.q_Ls", r["q"], 19.12, "L/s", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.H_throttled", r["H_throttled"], 19.62, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.E_throttled_MWh", r["E_throttled_MWh"], 25.54, "MWh/god", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.H_open", r["H_open"], 14.13, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.speed_ratio", r["speed_ratio"], 0.878, "", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z6.E_vfd_MWh", r["E_vfd_MWh"], 18.41, "MWh/god", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.saving_MWh", r["saving_MWh"], 7.14, "MWh", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.NPSH_a", r["NPSH_a"], 6.65, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.NPSH_r", r["NPSH_r"], 3.10, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.NPSH_difference", r["NPSH_difference"], 3.55, "m", abs_tol=0.005)
+    _invariant(out, "U13.CANON.Z6.regulation_and_energy_balance",
+               abs(24*r["speed_ratio"]**2-0.012*r["q"]**2-r["H_open"])<1e-12
+               and 0<r["speed_ratio"]<1
+               and abs(r["E_throttled_MWh"]-r["E_vfd_MWh"]-r["saving_MWh"])<1e-12
+               and r["saving_MWh"]>0,
+               "Nova brzina mora zatvoriti radnu tocku, a usteda razliku godisnjih energija.")
 
     return out
 
@@ -371,3 +448,4 @@ if __name__ == "__main__":
         print(f"  [{marker}] {result['id']:48s} {result.get('details', '')}")
     print(f"Total: ok={sum(r['status'] == 'OK' for r in results)}, "
           f"fail={sum(r['status'] != 'OK' for r in results)}")
+    raise SystemExit(1 if any(r['status'] != 'OK' for r in results) else 0)

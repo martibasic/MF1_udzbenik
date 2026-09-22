@@ -692,57 +692,61 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-materijalna-derivacija)
 
-**Sažetak.** Za $u(x,t)=2t+x^2$ odredi lokalno, konvektivno i ukupno ubrzanje u $x=1\ \text{m}$, $t=2\ \text{s}$ uz konzistentne SI jedinice koeficijenata.
+**Sažetak.** Zadano je jednodimenzijsko kinematičko polje $u(x,t)=at+bx^2$, gdje su $a=2\ \text{m/s}^2$ i $b=1\ \text{m}^{-1}\text{s}^{-1}$. Odredi brzinu, lokalno, konvektivno i ukupno ubrzanje čestice u $x=1\ \text{m}$, $t=2\ \text{s}$. Polje služi…
 
-**Kontrolni rezultat ili kriterij.** $u=5\ \text{m/s}$, $a_{lok}=2$, $a_{kon}=10$, $a=12\ \text{m/s}^2$.
+**Smjernica postupka.** Najprije izračunaj lokalnu brzinu. U lokalnom članu deriviraj po vremenu uz stalan položaj; u konvektivnom pomnoži brzinu s prostornom derivacijom polja.
+
+**Kontrolni rezultat ili kriterij.** $u=5\ \text{m/s}$; $a_{lok}=2\ \text{m/s}^2$, $a_{kon}=10\ \text{m/s}^2$ i $a=12\ \text{m/s}^2$.
 
 ### Z2. Vrijeme viskozne difuzije {#key-task-viskozna-difuzija .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-viskozna-difuzija)
 
-**Sažetak.** Procijeni vrijeme viskozne difuzije $t_\nu\sim H^2/\nu$ kroz sloj vode $H=10\ \text{mm}$ pri $20\ ^\circ\text{C}$, za $\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$. Obrazloži red veličine.
+**Sažetak.** Gornja ploča počinje kliziti iznad mirujućeg sloja vode, a donja ostaje nepomična. Razmak ploča je $H=10\ \text{mm}$, a kinematička viskoznost $\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$. Procijeni vremensko mjerilo prijenosa količine…
 
-**Kontrolni rezultat ili kriterij.** $t_\nu\sim100\ \text{s}$.
+**Smjernica postupka.** Usporedi redove veličine vremenskog i viskoznog člana: $U/t_\nu\sim\nu U/H^2$. Prije računa pretvori milimetre u metre.
+
+**Kontrolni rezultat ili kriterij.** $t_\nu\sim H^2/\nu=100\ \text{s}$. To je karakteristično vremensko mjerilo; vrijeme približavanja stacionarnom profilu ovisi o zadanoj toleranciji odstupanja.
 
 ### Z3. Viskoznost iz mjerenja u kapilari {#key-task-poiseuille-inverzni .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-poiseuille-inverzni)
 
-**Sažetak.** U kapilari su izmjereni $Q=0{,}300\pm0{,}003\ \text{mL/min}$, $\Delta p=652\pm5\ \text{Pa}$, $L=0{,}200\pm0{,}001\ \text{m}$ i $D=0{,}500\pm0{,}005\ \text{mm}$. Fluid je Newtonski, gustoće $\rho=998\ \text{kg/m}^3$. Odredi dinamičku…
+**Sažetak.** Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Obrnutim Poiseuilleovim računom procijeni viskoznost i Reynoldsov broj te utvrdi koji mjerni podatak najviše pridonosi…
 
-**Smjernica postupka.** invertiraj $Q=\pi D^4\Delta p/(128\mu L)$. Za neovisne ulaze vrijedi $[u(\mu)/\mu]^2=[4u(D)/D]^2+[u(\Delta p)/\Delta p]^2+[u(L)/L]^2+[u(Q)/Q]^2$.
+**Smjernica postupka.** Invertiraj $Q=\pi D^4\Delta p/(128\mu L)$. Za neovisne standardne nesigurnosti vrijedi $[u(\mu)/\mu]^2=[4u(D)/D]^2+[u(\Delta p)/\Delta p]^2+[u(L)/L]^2+[u(Q)/Q]^2$.
 
-**Kontrolni rezultat ili kriterij.** $\mu\approx1{,}000\ \text{mPa s}$, $u(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Sam promjer doprinosi relativnoj nesigurnosti od $4\,\%$, pa dominira zadanim mjernim budžetom.
+**Kontrolni rezultat ili kriterij.** $\mu\approx1{,}000\ \text{mPa s}$, $u(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Sam promjer doprinosi relativnoj standardnoj nesigurnosti od $4\,\%$, pa dominira zadanim mjernim budžetom.
 
 ### Z4. Povratni tok između ploča {#key-task-couette-povrat .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-couette-povrat)
 
-**Sažetak.** Newtonski fluid viskoznosti $\mu=0{,}100\ \text{Pa s}$ nalazi se između nepomične donje i gornje ploče koja se giba brzinom $U=2{,}00\ \text{m/s}$; razmak je $H=1{,}00\ \text{mm}$. Za potpuno razvijeni profil…
+**Sažetak.** Gibanje gornje ploče i nepovoljan gradijent tlaka suprotno pokreću ulje u uskom procjepu. Odredi granični gradijent, smično naprezanje za dva zadana pogona i skiciraj pripadne profile brzine. Razlikuj povratni tok uz ploču od prolaza kroz…
 
-**Smjernica postupka.** deriviraj profil i postavi $\tau_0=\mu(du/dy)_{y=0}=0$; predznak gradijenta mora odgovarati nepovoljnom porastu tlaka u smjeru gibanja gornje ploče.
+**Smjernica postupka.** Deriviraj profil i postavi $\tau_0=0$. Provjeri $u(0)=0$ i $u(H)=U$. Negativna brzina može nastati neposredno uz donju ploču; na samoj ploči ostaje nula.
 
-**Kontrolni rezultat ili kriterij.** $(dp/dx)_{krit}=4{,}00\cdot10^5\ \text{Pa/m}$; pri $0{,}90$ te vrijednosti $\tau_0=+20{,}0\ \text{Pa}$, a pri $1{,}10$ vrijedi $\tau_0=-20{,}0\ \text{Pa}$. Promjena predznaka zidnog naprezanja označuje početak lokalnog povratnog toka na donjoj stijenci.
+**Kontrolni rezultat ili kriterij.** $G_{krit}=4{,}00\cdot10^5\ \text{Pa/m}$. Pri $0{,}90G_{krit}$ vrijedi $\tau_0=+20{,}0\ \text{Pa}$ i $u(y)>0$ za $0<y\le H$; pri $1{,}10G_{krit}$ vrijedi $\tau_0=-20{,}0\ \text{Pa}$ i povratni tok u $0<y<H/11$. U oba profila $u(0)=0$ i $u(H)=U$; fluid ne prolazi kroz ploče.
 
 ### Z5. Izbor modela graničnog sloja {#key-task-granicni-sloj-model .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-granicni-sloj-model)
 
-**Sažetak.** Voda pri $20\ ^\circ\text{C}$ ($\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$, $\rho=998\ \text{kg/m}^3$) struji uz nominalno ravnu plohu. U presjeku $x=0{,}400\ \text{m}$ izmjereno je $U_e=1{,}50\ \text{m/s}$ i $dU_e/dx=-0{,}250\…
+**Sažetak.** Na temelju lokalne vanjske brzine, njezina gradijenta i hrapavosti odluči može li Blasiusov model predvidjeti debljinu sloja uz ravnu plohu. Razdvoji uvjetnu referentnu procjenu od potvrđenog modela te obrazloži koje bi dodatne provjere…
 
-**Smjernica postupka.** Blasius zahtijeva glatku plohu, laminaran tok i praktično nulti gradijent tlaka odnosno stalnu $U_e$. Negativan $dU_e/dx$ odgovara nepovoljnom gradijentu tlaka; procijeni i njegovu važnost prije odluke.
+**Smjernica postupka.** Blasius zahtijeva glatku plohu, laminaran tok i nulti gradijent tlaka. U zadanom vanjskom toku vrijedi $dp_e/dx=-\rho U_e\,dU_e/dx$. Odvoji dokazano prekršen uvjet od pretpostavke koju podatci još ne potvrđuju.
 
-**Kontrolni rezultat ili kriterij.** $Re_x=6{,}00\cdot10^5$, $\delta_{99}\approx2{,}58\ \text{mm}$, $k_s/\delta_{99}\approx1{,}94\cdot10^{-3}$ i $(x/U_e)dU_e/dx=-0{,}0667$. Hrapavost je mala prema procijenjenoj debljini, ali mjerljiva promjena $U_e$ krši pretpostavku nultoga gradijenta tlaka, a stanje laminarnosti pri tom $Re_x$ nije dokazano; Blasius zato nije opravdan bez dodatne provjere profila i prijelaza.
+**Kontrolni rezultat ili kriterij.** $Re_x=6{,}00\cdot10^5$, $\delta_B\approx2{,}58\ \text{mm}$, $k_s/\delta_B\approx1{,}94\cdot10^{-3}$, $K=-0{,}0667$ i $dp_e/dx\approx+374\ \text{Pa/m}$. Nulti gradijent tlaka prekršen je; laminarnost i hidraulička glatkoća nisu dokazane. Blasius nije opravdan kao predikcija: $\delta_B$ je samo referenca. Potrebno je provjeriti profil brzine i prijelaz.
 
-### Z6. Konvergencija rješenja na trima mrežama {#key-task-cfd-tri-mreze .unnumbered .unlisted}
+### Z6. Konvergencija i izbor mreže {#key-task-cfd-tri-mreze .unnumbered .unlisted}
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-cfd-tri-mreze)
 
-**Sažetak.** Za Poiseuilleov paket iz `data/cfd/poiseuille_laminar` tri mreže imaju omjer koraka $h/h_f=4,2,1$, protoke $Q=(8{,}16814;\ 7{,}93252;\ 7{,}87362)\cdot10^{-6}\ \text{m}^3/\text{s}$ i masene debalanse $(0{,}040;\ 0{,}010;\ 0{,}0025)\,\%$.…
+**Sažetak.** Odaberi najgrublju mrežu koja zadovoljava oba kriterija: dovoljno malu procjenu diskretizacijske pogreške protoka i dopušten maseni debalans. Zatim razdvoji taj numerički zaključak od validacije modela prema neovisnim eksperimentalnim…
 
-**Smjernica postupka.** za $r=2$ koristi $p=\ln[(Q_c-Q_m)/(Q_m-Q_f)]/\ln r$, zatim $Q_{ext}=Q_f+(Q_f-Q_m)/(r^p-1)$ i $GCI_f=F_s|(Q_f-Q_m)/Q_f|/(r^p-1)$.
+**Smjernica postupka.** Za monotoni niz koristi $p=\ln[(Q_c-Q_m)/(Q_m-Q_f)]/\ln r$ i $Q_{ext}=Q_f+(Q_f-Q_m)/(r^p-1)$. Zatim $GCI_f=F_s|(Q_f-Q_m)/Q_f|/(r^p-1)$; za $GCI_m$ zamijeni par $(Q_f,Q_m)$ parom $(Q_m,Q_c)$. Razlomke pretvori u postotke i provjeri oba uvjeta.
 
-**Kontrolni rezultat ili kriterij.** $p\approx2{,}000$, $Q_{ext}\approx7{,}85398\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_f\approx0{,}312\,\%$ i fini maseni debalans iznosi $0{,}0025\,\%$. Arhiva profila ne sadrži reziduale, povijesti monitoriranih sila, masenu bilancu ni potpuni mjerni budžet nesigurnosti; zato je korisna za usporedbu integralnih koeficijenata i mrežnog trenda, ali ne zatvara validacijsku presudu.
+**Kontrolni rezultat ili kriterij.** $p\approx2{,}000$, $Q_{ext}\approx7{,}8540\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_m\approx1{,}237\,\%$ i $GCI_f\approx0{,}312\,\%$. Odabire se fina mreža: debalans je $0{,}0025\,\%$; srednja krši oba uvjeta, gruba maseni uvjet. Arhivi profila nedostaju reziduali, povijesti sila, masena bilanca i potpuni mjerni budžet nesigurnosti, pa konačna validacijska presuda nije moguća.
 
 ## Gubitci, cjevovodi, crpke i mreže
 
@@ -750,9 +754,9 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-gubitci-ravne-dionice)
 
-**Sažetak.** Voda gustoće $998\ \mathrm{kg/m^3}$ protječe cijevi $D=0{,}10\ \mathrm{m}$, $L=50\ \mathrm{m}$ protokom $Q=0{,}012\ \mathrm{m^3/s}$. Zadano je $\lambda=0{,}025$ i $\sum\xi=4{,}0$. Odredi brzinu, linijski i lokalni gubitak, ukupni gubitak…
+**Sažetak.** Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ stacionarno protječe vodoravnom cijevi stalnog unutarnjeg promjera $D=0{,}10\ \mathrm{m}$ i duljine $L=50\ \mathrm{m}$, protokom $Q=0{,}012\ \mathrm{m^3/s}$. Zadani su Darcyjev faktor…
 
-**Smjernica postupka.** Najprije izračunaj $A$ i $v=Q/A$. Tek zatim zajedničku brzinsku visinu pomnoži s $\lambda L/D$ odnosno $\sum\xi$.
+**Smjernica postupka.** Najprije izračunaj $A$ i $v=Q/A$. Tek zatim zajedničku brzinsku visinu pomnoži s $\lambda L/D$ odnosno $\sum\xi$. Za jednake visine i profile presjeka tlak pada zbog gubitaka.
 
 **Kontrolni rezultat ili kriterij.** $v=1{,}528\ \mathrm{m/s}$, $h_l=1{,}487\ \mathrm{m}$, $h_{loc}=0{,}476\ \mathrm{m}$, $h_w=1{,}963\ \mathrm{m}$ i $\Delta p=19{,}2\ \mathrm{kPa}$. Provjeri da je $\Delta p/(\rho g)=h_w$.
 
@@ -760,51 +764,51 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-laminarna-cijev-smjese)
 
-**Sažetak.** Smjesa gustoće $1100\ \mathrm{kg/m^3}$ i $\nu=3{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ protječe kružnom cijevi $D=6{,}0\ \mathrm{mm}$, $L=5{,}0\ \mathrm{m}$ protokom $Q=6{,}0\cdot10^{-6}\ \mathrm{m^3/s}$. Zanemari lokalne gubitke. Odredi $Re$…
+**Sažetak.** Newtonska smjesa gustoće $\rho=1100\ \mathrm{kg/m^3}$ i kinematičke viskoznosti $\nu=3{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ stacionarno protječe kružnom vodoravnom cijevi $D=6{,}0\ \mathrm{mm}$, protokom $Q=6{,}0\cdot10^{-6}\ \mathrm{m^3/s}$.…
 
 **Smjernica postupka.** Izračunaj režim prije izbora korelacije. Ako je tok laminaran, upotrijebi $\lambda=64/Re$; rezultat zatim provjeri Poiseuilleovim zakonom.
 
 **Kontrolni rezultat ili kriterij.** $v=0{,}212\ \mathrm{m/s}$, $Re=424$, $\lambda=0{,}1508$ i $\Delta p=3{,}11\ \mathrm{kPa}$. Udvostručenje $Q$ uz ostale iste podatke udvostručuje $\Delta p$ dok tok ostaje laminaran.
 
-### Z3. Raspodjela kroz dvije paralelne grane {#key-task-raspodjela-paralelnih-grana .unnumbered .unlisted}
+### Z3. Uravnoteženje paralelnih grana {#key-task-uravnotezenje-paralelnih-grana .unnumbered .unlisted}
 
-[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-raspodjela-paralelnih-grana)
+[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-uravnotezenje-paralelnih-grana)
 
-**Sažetak.** Između istih čvorova spojene su grane s približno konstantnim otporima $R_1=12\,000\ \mathrm{s^2/m^5}$ i $R_2=48\,000\ \mathrm{s^2/m^5}$. Ukupni protok iznosi $Q=0{,}020\ \mathrm{m^3/s}$. Odredi $Q_1$, $Q_2$ i zajednički pad energije.
+**Sažetak.** Dva rashladna ogranka između istih čvorova trebaju dobivati jednak protok. Ugradnjom prigušnog ventila u samo jedan ogranak odredi gdje ga treba postaviti i koliki dodatni otpor mora imati. Zatim zatvori kontinuitet i usporedi gubitke na…
 
-**Smjernica postupka.** Postavi $R_1Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$. Prije računa predvidi koja grana nosi veći protok.
+**Smjernica postupka.** Cilj je $Q_1=Q_2=Q/2$. Izjednači ukupne gubitke između istih čvorova uz dodatak ventila. Prigušenje može povećati otpor, pa ne smiješ dobiti negativan $R_v$.
 
-**Kontrolni rezultat ili kriterij.** $Q_1=13{,}33\ \mathrm{L/s}$, $Q_2=6{,}67\ \mathrm{L/s}$ i $h_{AB}=2{,}13\ \mathrm{m}$. Obje grane moraju vratiti isti $h_{AB}$.
+**Kontrolni rezultat ili kriterij.** Ventil ide u granu 1: $R_v=36\,000\ \mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\ \mathrm{L/s}$, $h_{AB}=4{,}80\ \mathrm{m}$ i $h_v=3{,}60\ \mathrm{m}$. Provjera: $(R_1+R_v)Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$.
 
-### Z4. Radna točka i snaga crpke {#key-task-radna-tocka-tri-snage .unnumbered .unlisted}
+### Z4. Radna točka hrapavog voda {#key-task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
 
-[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-radna-tocka-tri-snage)
+[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-radna-tocka-hrapavog-voda)
 
-**Sažetak.** Za $Q$ u $\mathrm{m^3/s}$ zadane su krivulje $H_p=30-30\,000Q^2$ i $H_s=8+20\,000Q^2$. Za vodu uzmi $\rho=1000\ \mathrm{kg/m^3}$. U radnoj točki vrijede $\eta_p=0{,}76$ i $\eta_m=0{,}92$; gubitke pretvarača zanemari. Odredi $Q_{op}$…
+**Sažetak.** Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Odredi radnu točku kad otpor cijevi ovisi o Reynoldsovu broju, pa zatim odvojeno izračunaj hidrauličku, vratilnu i električnu snagu. U svakoj iteraciji ponovno provjeri trenje…
 
-**Smjernica postupka.** Najprije izjednači krivulje. Zatim slijedi pretvorbeni lanac $P_h=\rho gQH$, $P_{vr}=P_h/\eta_p$, $P_{el}=P_{vr}/\eta_m$.
+**Smjernica postupka.** Za probni $Q$ odredi $v$, $Re$ i $\lambda$, pa $H_s=\Delta z+(\lambda L/D+\sum\xi)v^2/(2g)$. Mijenjaj $Q$ dok $H_p-H_s$ ne iščezne. Provjeri i izvorni Colebrookov rezidual. Zatim $P_h=\rho gQH_p$, $P_{vr}=P_h/\eta_p$ i $P_{el}=P_{vr}/\eta_m$.
 
-**Kontrolni rezultat ili kriterij.** $Q_{op}=20{,}98\ \mathrm{L/s}$, $H_{op}=16{,}8\ \mathrm{m}$, $P_h=3{,}46\ \mathrm{kW}$, $P_{vr}=4{,}55\ \mathrm{kW}$ i $P_{el}=4{,}94\ \mathrm{kW}$. Provjeri da snage rastu prema električnom ulazu.
+**Kontrolni rezultat ili kriterij.** $Q_{op}\approx19{,}030\ \mathrm{L/s}$, $H_{op}\approx19{,}136\ \mathrm{m}$, $Re\approx2{,}423\cdot10^5$ i $\lambda\approx0{,}020812$. Snage su $P_h\approx3{,}572\ \mathrm{kW}$, $P_{vr}\approx4{,}700\ \mathrm{kW}$ i $P_{el}\approx5{,}109\ \mathrm{kW}$. Oba reziduala provjeravaju se s nezaokruženim rješenjem; vrijedi $P_h<P_{vr}<P_{el}$.
 
 ### Z5. Izbor promjera uz nesiguran otpor {#key-task-robustan-izbor-promjera .unnumbered .unlisted}
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-robustan-izbor-promjera)
 
-**Sažetak.** Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $6{,}0$, a zbog starenja je $\lambda$ između 0,020 i 0,028. Dostupni su promjeri 80, 100 i 125 mm. Odaberi najmanji promjer…
+**Sažetak.** Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $\sum\xi=6{,}0$, prema brzini u odabranom vodu. Za svaki ponuđeni promjer zadana granica Darcyjeva faktora zbog nepoznatog…
 
-**Smjernica postupka.** Za svaki kandidat izračunaj brzinu, a zatim raspon $h_w$ za obje granice $\lambda$. Odluku donesi prema najvećem, ne srednjem gubitku.
+**Smjernica postupka.** Za svaki kandidat izračunaj brzinu, a zatim raspon $h_w$ za obje granice $\lambda$. Odluku donesi prema najvećem gubitku. Pri fiksnom protoku i promjeru gubitak raste s $\lambda$.
 
-**Kontrolni rezultat ili kriterij.** Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3,29–4,34 m za 125 mm. Najmanji robustan izbor jest 100 mm. Provjera odluke jest gornja granica $12{,}85<15\ \mathrm{m}$.
+**Kontrolni rezultat ili kriterij.** Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3,29–4,34 m za 125 mm. Najmanji izbor koji zadovoljava cijeli interval jest 100 mm: gornja granica $12{,}85<15\ \mathrm{m}$. Promjer 80 mm ne zadovoljava ni uz najmanji zadani otpor.
 
 ### Z6. Regulacija crpke, energija i usisna rezerva {#key-task-regulacija-energija-npsh .unnumbered .unlisted}
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-regulacija-energija-npsh)
 
-**Sažetak.** Crpka pri nazivnoj brzini ima $H_p(q)=24-0{,}012q^2$, gdje je $q$ u $\mathrm{L/s}$. Izvorni sustav ima $H_s(q)=5+0{,}025q^2$. Prigušivanje ventila mijenja ga u $H_{s,V}(q)=5+0{,}040q^2$. Ukupna učinkovitost pretvorbe električna $\to$…
+**Sažetak.** Usporedi prigušenje ventilom i regulaciju brzine za jednak traženi protok. Odredi godišnju energiju obiju mogućnosti i uštedu, a zatim provjeri što zadani usisni podatci dopuštaju zaključiti o radu pri nazivnoj i sniženoj brzini vrtnje.…
 
-**Smjernica postupka.** Prigušenu radnu točku dobiješ iz $H_p=H_{s,V}$. Za otvoren sustav pri istom $q$ vrijedi $H_{p,s}(q)=24s^2-0{,}012q^2=H_s(q)$. Energiju računaj iz $P_{el}=\rho gQH/0{,}72$. Za usis upotrijebi [odgovarajući izraz](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-npsha-spremnik).
+**Smjernica postupka.** Prigušenu točku dobiješ iz $H_p=H_{s,V}$. Za isti $q$ bez prigušenja vrijedi $H_{p,s}(q)=24s^2-0{,}012q^2=H_s(q)$. Energiju računaj s $Q=10^{-3}q$ iz $P_{el}=\rho gQH/\eta$. Za usis upotrijebi [odgovarajući izraz](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-npsha-spremnik); zadani potrebni NPSH vrijedi samo pri nazivnoj brzini.
 
-**Kontrolni rezultat ili kriterij.** Prigušeno: $q=19{,}12\ \mathrm{L/s}$, $H=19{,}62\ \mathrm{m}$ i $P_{el}=5{,}11\ \mathrm{kW}$. Regulacija brzinom: otvoren sustav traži $H=14{,}13\ \mathrm{m}$, $s=0{,}878$, $P_{el}=3{,}68\ \mathrm{kW}$ i idealizirana godišnja ušteda je $7{,}14\ \mathrm{MWh}$. Za usis su $NPSH_a=6{,}65\ \mathrm{m}$, $NPSH_r=3{,}10\ \mathrm{m}$ i numerička razlika $3{,}55\ \mathrm{m}$. Prihvatljivost ipak zahtijeva proizvođačev kriterij margine, dopušteno radno područje i stvarne temperaturne/atmosferske uvjete.
+**Kontrolni rezultat ili kriterij.** $q\approx19{,}12\ \mathrm{L/s}$; $(H_V,H_s)\approx(19{,}62;14{,}13)\ \mathrm{m}$ i $s\approx0{,}878$. $(E_V,E_s,\Delta E)\approx(25{,}54;18{,}41;7{,}14)\ \mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a,NPSH_r,NPSH_a-NPSH_r)\approx(6{,}65;3{,}10;3{,}55)\ \mathrm{m}$. Nedostaju kriterij margine i dopušteno radno područje, a za sniženu brzinu i odgovarajući $NPSH_r(q,n_2)$.
 
 ## Turbostrojevi i propulzija
 

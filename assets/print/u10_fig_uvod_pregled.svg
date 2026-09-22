@@ -1,283 +1,119 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-labelledby="u10fup_title u10fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u10fup_title">Pregled poglavlja 10 - Realni Bernoulli i gubici</title>
-  <desc id="u10fup_desc">Tri panela uvodnog pregleda. Lijevo: shema realnog cjevovoda izmedju dvaju spremnika s padom energetske (EGL) i piezometarske (HGL) linije zbog gubitaka h_w. Sredina: panel kljucnih jednadzbi - prosirena Bernoullijeva jednadzba s clanom h_w, rastav h_w = h_l + sum h_loc, Darcy-Weisbach za linijski gubitak i izraz za lokalni gubitak. Desno: dvije konceptualne crtice. Gore: linijski gubitak kao trenje uz stjenku ravne cijevi s razvijenim brzinskim profilom. Dolje: lokalni gubitak kao vrtlozni mehurovi iza koljena i naglog suzenja.</desc>
-
-  <defs>
-    <linearGradient id="u10fup_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
-    <pattern id="u10fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
-    </pattern>
-    <marker id="u10fup_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
-    </marker>
-    <marker id="u10fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
-    </marker>
-    <marker id="u10fup_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
-    </marker>
-    <marker id="u10fup_aFlow" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1a5f86" />
-    </marker>
-    <marker id="u10fup_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
-    </marker>
-    <marker id="u10fup_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
-    </marker>
-    <marker id="u10fup_aEddy" markerWidth="6" markerHeight="5" refX="5.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#c8a000" />
-    </marker>
-  </defs>
-
-  <!-- Pozadina i okvir -->
-  <rect width="980" height="500" fill="#ffffff" />
-  <!-- Separatori panela -->
-  <line x1="370" y1="34" x2="370" y2="466" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
-  <line x1="690" y1="34" x2="690" y2="466" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
-
-  <!-- ============================================================
-       PANEL 1 (LIJEVO): EGL/HGL padaju duz horizontalnog cjevovoda
-       Layout: horizontalna cijev u donjem dijelu (y=300..330),
-       EGL i HGL graf iznad (y=90..280) - klasicni udzbenicki prikaz.
-       x = 24 .. 360
-  ============================================================ -->
-
-  <!-- Spremnik s vodom (otvoreni, lijevo) - presjek 1 -->
-  <!-- stjenke -->
-  <rect x="42" y="90" width="8" height="240" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <rect x="100" y="90" width="8" height="240" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <rect x="42" y="322" width="66" height="8" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- voda u spremniku -->
-  <rect x="50" y="118" width="50" height="204" fill="url(#u10fup_water)" />
-  <!-- slobodna povrsina -->
-  <line x1="50" y1="118" x2="100" y2="118" stroke="#1565c0" stroke-width="2" />
-
-  <!-- Horizontalna cijev: od spremnika do izlaza u atmosferu (presjek 2) -->
-  <!-- gornja stjenka -->
-  <rect x="108" y="296" width="232" height="6" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- donja stjenka -->
-  <rect x="108" y="328" width="232" height="6" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- voda u cijevi (kontinuirani fluid sa spremnikom) -->
-  <rect x="108" y="302" width="232" height="26" fill="url(#u10fup_water)" />
-  <!-- port overlay preko desne stjenke spremnika (kontinuirani fluid) -->
-  <rect x="100" y="302" width="8" height="26" fill="url(#u10fup_water)" />
-
-  <!-- Ventil na cijevi (lokalni gubitak) - x oko 175 -->
-  <polygon points="165,288 185,288 175,302" fill="#c8a000" stroke="#7a4d10" stroke-width="1.2" />
-  <polygon points="165,342 185,342 175,328" fill="#c8a000" stroke="#7a4d10" stroke-width="1.2" />
-  <rect x="171" y="280" width="8" height="10" fill="#7a4d10" />
-
-  <!-- Koljeno - mali oznaka (zaobljena polovica kruga koja predstavlja lokalni element) - x oko 245 -->
-  <path d="M 235,302 Q 245,290 255,302" fill="none" stroke="#c8a000" stroke-width="2" />
-  <path d="M 235,328 Q 245,316 255,328" fill="none" stroke="#c8a000" stroke-width="2" stroke-dasharray="2,2" />
-
-  <!-- Strelica toka unutar cijevi -->
-  <line x1="290" y1="315" x2="324" y2="315" stroke="#1a5f86" stroke-width="2.4" marker-end="url(#u10fup_aFlow)" />
-
-  <!-- Izlaz cijevi (otvoreno u atmosferu, presjek 2) - mala vertikalna crtica na x=340 -->
-  <line x1="340" y1="296" x2="340" y2="334" stroke="#3a4a56" stroke-width="1.4" stroke-dasharray="2,2" />
-
-  <!-- Referentna razina z (dno cijevi) -->
-  <line x1="40" y1="338" x2="354" y2="338" stroke="#7a8a96" stroke-width="0.9" stroke-dasharray="5,3" />
-  <!-- ================== EGL i HGL ================== -->
-  <!-- Idealni EGL = vodoravna siva crtkana linija na razini slobodne povrsine 1 -->
-  <line x1="50" y1="118" x2="350" y2="118" stroke="#5d6d7e" stroke-width="1.1" stroke-dasharray="4,3" />
-  <!-- Realna EGL crvena: pocne na slobodnoj povrsini, blago pada u cijevi, skacu kod ventila i koljena -->
-  <!-- key points: pocetak (108,140) - ulaz u cijev odmah pada za v^2/2g (od idealne EGL 118 na realnu EGL 140) -->
-  <!-- Realna EGL na x=108..340: blagi linearni pad + skokovi na ventilu (x=175) i koljenu (x=245) -->
-  <polyline points="108,140 165,156 165,176 235,196 235,210 290,222 340,232" fill="none" stroke="#c0392b" stroke-width="2.4" />
-  <!-- HGL ljubicasta (crtkana): ispod EGL za v^2/2g (~14 px) -->
-  <polyline points="108,154 165,170 165,190 235,210 235,224 290,236 340,246" fill="none" stroke="#8e44ad" stroke-width="1.8" stroke-dasharray="6,3" />
-  <!-- Oznake skoka - ventil i koljeno -->
-  <!-- Brzinska visina v^2/2g - mala kota izmedju EGL i HGL na ravnoj dionici (x=205) -->
-  <line x1="205" y1="187" x2="205" y2="203" stroke="#5d6d7e" stroke-width="0.9" marker-start="url(#u10fup_aDimR)" marker-end="url(#u10fup_aDim)" />
-  <!-- Ukupni gubitak h_w: kota desno, izmedju idealne EGL i realne EGL na izlazu -->
-  <!-- extension lines -->
-  <!-- tik-crte -->
-  <!-- dim line -->
-  <!-- Presjek 1 i 2 oznake -->
-  <circle cx="75" cy="118" r="9" fill="#ffffff" stroke="#1a2530" stroke-width="1.4" />
-  <circle cx="340" cy="262" r="9" fill="#ffffff" stroke="#1a2530" stroke-width="1.4" />
-  <!-- Sazetak ispod panela -->
-  <!-- ============================================================
-       PANEL 2 (SREDINA): Kljucne jednadzbe - formula box
-       x = 380 .. 680
-  ============================================================ -->
-
-  <!-- Vanjski okvir panela -->
-  <rect x="380" y="44" width="300" height="412" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.4" />
-  <!-- Header bar -->
-  <rect x="380" y="44" width="300" height="32" rx="10" fill="#1565c0" />
-  <rect x="380" y="66" width="300" height="10" fill="#1565c0" />
-  <!-- Blok 1: Prosireni Bernoulli (y=84..168) -->
-  <line x1="396" y1="178" x2="664" y2="178" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 2: Rastav h_w (y=178..238) -->
-  <line x1="396" y1="246" x2="664" y2="246" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 3: Linijski gubitak (Darcy-Weisbach) (y=246..316) -->
-  <line x1="396" y1="324" x2="664" y2="324" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 4: Lokalni gubitak (y=324..390) -->
-  <!-- Sazetak (italic) -->
-  <!-- ============================================================
-       PANEL 3 (DESNO): Dva mehanizma gubitaka
-       x = 700 .. 960
-  ============================================================ -->
-
-  <!-- ===== Sub-panel 3a: linijski (trenje uz stjenku) ===== -->
-  <!-- ravna cijev -->
-  <rect x="710" y="98" width="240" height="10" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <rect x="710" y="172" width="240" height="10" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <rect x="710" y="108" width="240" height="64" fill="url(#u10fup_water)" />
-
-  <!-- razvijeni brzinski profil (parabola u-profil) -->
-  <path d="M 740,108 C 720,128 720,152 740,172" fill="none" stroke="#1a5f86" stroke-width="1.8" />
-  <!-- horizontalne strelice brzina (vise sredinom, manje uz stjenke) -->
-  <line x1="722" y1="116" x2="734" y2="116" stroke="#1a5f86" stroke-width="1.4" marker-end="url(#u10fup_aFlow)" />
-  <line x1="722" y1="128" x2="740" y2="128" stroke="#1a5f86" stroke-width="1.5" marker-end="url(#u10fup_aFlow)" />
-  <line x1="722" y1="140" x2="746" y2="140" stroke="#1a5f86" stroke-width="1.6" marker-end="url(#u10fup_aFlow)" />
-  <line x1="722" y1="152" x2="740" y2="152" stroke="#1a5f86" stroke-width="1.5" marker-end="url(#u10fup_aFlow)" />
-  <line x1="722" y1="164" x2="734" y2="164" stroke="#1a5f86" stroke-width="1.4" marker-end="url(#u10fup_aFlow)" />
-
-  <!-- smicna naprezanja tau na stjenkama (male strelice usmjerene od stjenke u fluid) -->
-  <line x1="780" y1="98" x2="780" y2="108" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u10fup_aR)" />
-  <line x1="820" y1="98" x2="820" y2="108" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u10fup_aR)" />
-  <line x1="860" y1="98" x2="860" y2="108" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u10fup_aR)" />
-  <line x1="900" y1="98" x2="900" y2="108" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u10fup_aR)" />
-  <line x1="780" y1="182" x2="780" y2="172" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u10fup_aR)" />
-  <line x1="820" y1="182" x2="820" y2="172" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u10fup_aR)" />
-  <line x1="860" y1="182" x2="860" y2="172" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u10fup_aR)" />
-  <line x1="900" y1="182" x2="900" y2="172" stroke="#c0392b" stroke-width="1.6" marker-end="url(#u10fup_aR)" />
-
-  <!-- D i L kote -->
-  <!-- L kota ispod cijevi -->
-  <!-- ===== Sub-panel 3b: lokalni (vrtloznost iza koljena) ===== -->
-  <!-- L-koljeno: horizontalna ulazna dionica (y=300..348) + vertikalna izlazna (x=830..878) -->
-  <!-- VODA: jedan kompozitni oblik (kontinuirani fluid) -->
-  <!-- gornji dio: pravokutnik horizontalne dionice -->
-  <path d="M 710,310 L 830,310 L 830,400 L 878,400 L 878,310 Q 878,310 878,310 L 830,310" fill="none" />
-  <rect x="710" y="310" width="168" height="28" fill="url(#u10fup_water)" />
-  <rect x="830" y="310" width="48" height="90" fill="url(#u10fup_water)" />
-
-  <!-- STJENKE (hatched) - gornja horizontalna stjenka prije koljena -->
-  <rect x="710" y="300" width="168" height="10" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- donja horizontalna stjenka (samo do unutrasnjeg ruba koljena x=830) -->
-  <rect x="710" y="338" width="120" height="10" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- desna vertikalna vanjska stjenka koljena (od y=300 do y=400) -->
-  <rect x="878" y="300" width="10" height="100" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- lijeva vertikalna unutarnja stjenka koljena (od y=348 do y=400) -->
-  <rect x="820" y="348" width="10" height="52" fill="url(#u10fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-
-  <!-- ulazna struja -->
-  <line x1="720" y1="324" x2="758" y2="324" stroke="#1a5f86" stroke-width="2" marker-end="url(#u10fup_aFlow)" />
-  <!-- izlazna struja (dolje) -->
-  <line x1="854" y1="358" x2="854" y2="394" stroke="#1a5f86" stroke-width="2" marker-end="url(#u10fup_aFlow)" />
-
-  <!-- separacijska zona / vrtlozi iza koljena -->
-  <!-- vrtlog 1: u kutu uz lijevu stjenku odmah iza skretanja -->
-  <path d="M 838,360 c -6,-2 -8,-10 0,-12 c 8,-2 12,8 4,12" fill="none" stroke="#c8a000" stroke-width="1.6" marker-end="url(#u10fup_aEddy)" />
-  <!-- vrtlog 2: nize, vise centriran -->
-  <path d="M 845,385 c -6,-2 -8,-10 0,-12 c 8,-2 12,8 4,12" fill="none" stroke="#c8a000" stroke-width="1.6" marker-end="url(#u10fup_aEddy)" />
-
-  <!-- &xi; oznaka (vanjski indikator) -->
-  <line x1="903" y1="358" x2="872" y2="372" stroke="#c8a000" stroke-width="1.1" stroke-dasharray="3,2" />
-
-  <!-- ============================================================
-       FOOTER LEGENDA (donji rub)
-  ============================================================ -->
-  <line x1="24" y1="464" x2="370" y2="464" stroke="#dde3ea" stroke-width="1" />
-  <rect x="32" y="472" width="12" height="3" fill="#c0392b" />
-  <rect x="172" y="471" width="12" height="3" fill="#8e44ad" />
-  <line x1="172" y1="473" x2="184" y2="473" stroke="#8e44ad" stroke-width="2" stroke-dasharray="3,2" />
-  <line x1="340" y1="118" x2="360" y2="118" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="340" y1="232" x2="360" y2="232" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="355" y1="118" x2="365" y2="118" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="355" y1="232" x2="365" y2="232" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="360" y1="121" x2="360" y2="229" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10fup_aDimR)" marker-end="url(#u10fup_aDim)" />
-  <line x1="700" y1="108" x2="700" y2="172" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10fup_aDimR)" marker-end="url(#u10fup_aDim)" />
-  <line x1="710" y1="200" x2="710" y2="190" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="950" y1="200" x2="950" y2="190" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="713" y1="195" x2="947" y2="195" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u10fup_aDimR)" marker-end="url(#u10fup_aDim)" />
-  <rect x="298" y="471" width="12" height="4" fill="#b7600c" />
-  <text x="192" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Pad energetske linije u realnom toku</text>
-
-  <text x="352" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#5a6a78"><tspan font-style="italic">z</tspan> = 0</text>
-
-  <text x="240" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#5d6d7e">EGL idealna (konstantna)</text>
-
-  <text x="132" y="151" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b">EGL</text>
-
-  <text x="132" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#8e44ad">HGL</text>
-
-  <text x="175" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#7a4d10">ventil</text>
-  <text x="245" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#7a4d10">koljeno</text>
-
-  <text x="210" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#5d6d7e"><tspan font-style="italic">v</tspan>²/2<tspan font-style="italic">g</tspan></text>
-
-  <text x="75" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1a2530">1</text>
-  <text x="340" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1a2530">2</text>
-
-  <text x="192" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">Idealni Bernoulli: EGL = konstantna (sivo).</text>
-  <text x="192" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">Realni tok: EGL pada za <tspan font-style="italic" font-weight="700" fill="#c0392b">h<tspan baseline-shift="sub" font-size="0.75em">w</tspan></tspan> izmedju 1 i 2.</text>
-  <text x="192" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">HGL je nize od EGL za <tspan font-style="italic">v</tspan>²/2<tspan font-style="italic">g</tspan>; skace na lokalnim elementima.</text>
-
-  <text x="530" y="66" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Kljucne jednadzbe poglavlja</text>
-
-  <text x="530" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Prosirena Bernoullijeva jednadzba</text>
-  <text x="530" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
-    <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>/(ρ<tspan font-style="italic">g</tspan>) + <tspan font-style="italic">v</tspan><tspan baseline-shift="super" font-size="0.7em">2</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>/(2<tspan font-style="italic">g</tspan>) + <tspan font-style="italic">z</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>
-  </text>
-  <text x="530" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
-    = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>/(ρ<tspan font-style="italic">g</tspan>) + <tspan font-style="italic">v</tspan><tspan baseline-shift="super" font-size="0.7em">2</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>/(2<tspan font-style="italic">g</tspan>) + <tspan font-style="italic">z</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> + <tspan font-style="italic" fill="#c0392b">h<tspan baseline-shift="sub" font-size="0.7em">w</tspan></tspan>
-  </text>
-  <text x="530" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">gubitak <tspan font-weight="700" fill="#c0392b">h<tspan baseline-shift="sub" font-size="0.75em">w</tspan></tspan> uvijek ≥ 0, raste u smjeru toka</text>
-  <text x="530" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Ukupni gubitak = linijski + lokalni</text>
-  <text x="530" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#1a2530">
-    <tspan font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">w</tspan></tspan> = <tspan font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">l</tspan></tspan> + ∑ <tspan font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">loc</tspan></tspan>
-  </text>
-  <text x="530" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Linijski gubitak (Darcy-Weisbach)</text>
-  <text x="530" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#1a2530">
-    <tspan font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">l</tspan></tspan> = λ · <tspan font-style="italic">L</tspan>/<tspan font-style="italic">D</tspan> · <tspan font-style="italic">v</tspan><tspan baseline-shift="super" font-size="0.7em">2</tspan>/(2<tspan font-style="italic">g</tspan>)
-  </text>
-  <text x="530" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">λ iz Moodyjevog dijagrama (<tspan font-style="italic">Re</tspan>, ε/<tspan font-style="italic">D</tspan>)</text>
-  <text x="530" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Lokalni gubitak (ventil, koljeno, ulaz...)</text>
-  <text x="530" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#1a2530">
-    <tspan font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">loc</tspan></tspan> = ξ · <tspan font-style="italic">v</tspan><tspan baseline-shift="super" font-size="0.7em">2</tspan>/(2<tspan font-style="italic">g</tspan>)
-  </text>
-  <text x="530" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">ξ je tablicni koeficijent geometrije</text>
-
-  <text x="530" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Idealni je granicni slucaj μ = 0,</text>
-  <text x="530" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">tada je <tspan font-weight="700" fill="#c0392b">h<tspan baseline-shift="sub" font-size="0.75em">w</tspan></tspan> = 0 i EGL = konst.</text>
-
-  <text x="830" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Dva mehanizma gubitaka</text>
-
-  <text x="830" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">Linijski gubitak <tspan font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">l</tspan></tspan></text>
-
-  <text x="840" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#c0392b">trenje τ<tspan baseline-shift="sub" font-size="0.75em">w</tspan> uz stjenku</text>
-
-  <text x="830" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">trenje uz stjenku → λ, <tspan font-style="italic">L</tspan>/<tspan font-style="italic">D</tspan></text>
-
-  <text x="830" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c8a000">Lokalni gubitak <tspan font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">loc</tspan></tspan></text>
-
-  <text x="770" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#c8a000">vrtlozi iza skretanja</text>
-
-  <text x="908" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#c8a000">ξ</text>
-  <text x="830" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">nagla promjena smjera → vrtlozi</text>
-  <text x="830" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">disipacija lokalno (koeficijent ξ)</text>
-
-  <text x="48" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56">EGL (energetska linija)</text>
-  <text x="188" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56">HGL (piezometarska)</text>
-  <text x="314" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56">kote</text>
-
-<text x="362" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
-
-  <text x="694" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#b7600c">D</text>
-
-  <text x="830" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">L</text>
-
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 510" role="img" aria-labelledby="u13loss_title u13loss_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+<title id="u13loss_title">Gubitci i pad energijske crte</title><desc id="u13loss_desc">Lijevo otvoreni spremnik hrani vodoravnu cijev s otvorenim izlazom. Energijska crta pada i završava za brzinsku visinu iznad osi izlaza; piezometrijska završava na osi jer je izlazni manometarski tlak nula. Ventil je prikazan izdvojenim simbolom, ne krutom preprekom u fluidu. Desno laminarni parabolični profil zadovoljava prianjanje; sile stijenke na fluid su tangencijalne suprotno toku. Lokalno koljeno ima neprekinut otvor. Prikaz je shematski, bez brojčanog mjerila.</desc>
+<defs>
+<linearGradient id="u13loss_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u13loss_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u13loss_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u13loss_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u13loss_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u13loss_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u13loss_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="980" height="510" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
+Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
+Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
+<defs>
+<marker id="u13loss_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
+<marker id="u13loss_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
+<marker id="u13loss_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u13loss_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
+</defs>
+<text x="187" y="42" font-size="15" fill="#1a2530" text-anchor="middle" font-weight="700">Pad energijske crte u realnom toku</text>
+<text x="826" y="42" font-size="15" fill="#1a2530" text-anchor="middle" font-weight="700">Dva mehanizma gubitka</text>
+<path id="u13loss_pipeouter0" d="M50 89 V326 H108 V316 H340" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M50 89 V326 H108 V316 H340" fill="none" stroke="url(#u13loss_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u13loss_pipeouter1" d="M108 89 V284 H340" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M108 89 V284 H340" fill="none" stroke="url(#u13loss_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+<defs><linearGradient id="u13loss_pipefield" gradientUnits="userSpaceOnUse" x1="0" y1="108" x2="0" y2="326"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u13loss_pipefluid" d="M50 108 H108 V284 H340 V316 H108 V326 H50 Z" fill="url(#u13loss_pipefield)" stroke="none" stroke-width="1.8" />
+<path id="u13loss_pipewall0" d="M50 89 V326 H108 V316 H340" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u13loss_pipewall1" d="M108 89 V284 H340" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<line id="u13loss_surface" x1="50" y1="108" x2="108" y2="108" stroke="#1565c0" stroke-width="1.6"/>
+<circle cx="75" cy="108" r="3" fill="#1565c0"/>
+<text x="75" y="92" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">1</text>
+<path id="u13loss_velocity" d="M251 300 L321 300" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13loss_v)"/>
+<text x="286.0" y="291" font-size="12" fill="#1e8449" text-anchor="middle">v</text>
+<text x="338" y="341" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">2</text>
+<text x="255" y="370" font-size="12" fill="#1565c0" text-anchor="start">p₂,man = 0</text>
+<line id="u13loss_axis" x1="109" y1="300" x2="352" y2="300" stroke="#7a8a96" stroke-width="1" stroke-dasharray="4 4"/>
+<path id="u13loss_egl" d="M108.000000 108.000000 L116.000000 126.000000 L182.000000 169.000000 L182.000000 197.000000 L340.000000 260.000000" fill="none" stroke="#c0392b" stroke-width="2" />
+<path id="u13loss_hgl" d="M116.000000 166.000000 L182.000000 209.000000 L182.000000 237.000000 L340.000000 300.000000" fill="none" stroke="#8e44ad" stroke-width="1.7" stroke-dasharray="5 3"/>
+<text x="120" y="125" font-size="12" fill="#c0392b" text-anchor="start">EGL</text>
+<text x="117" y="187" font-size="12" fill="#8e44ad" text-anchor="start">HGL</text>
+<line x1="109" y1="108" x2="362" y2="108" stroke="#7a8a96" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="340" y1="260" x2="362" y2="260" stroke="#b7600c" stroke-width="1"/>
+<line x1="355" y1="108" x2="365" y2="108" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="355" y1="260" x2="365" y2="260" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u13loss_lossHead" d="M360 108 L360 260" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13loss_dim)" marker-end="url(#u13loss_dim)"/>
+<text x="343" y="193" font-size="12" fill="#b7600c" text-anchor="end">hw</text>
+<line x1="275" y1="236.0759493670886" x2="285" y2="236.0759493670886" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="275" y1="276.0759493670886" x2="285" y2="276.0759493670886" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u13loss_velocityHead" d="M280 236.0759493670886 L280 276.0759493670886" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13loss_dim)" marker-end="url(#u13loss_dim)"/>
+<text x="263" y="256.0759493670886" font-size="11" fill="#b7600c" text-anchor="end">v²/(2g)</text>
+<path id="u13loss_valveSymbol" d="M169 256 L195 272 V256 L169 272 Z" fill="#f5f9fc" stroke="#3a4a56" stroke-width="1.3" />
+<line x1="182" y1="256" x2="182" y2="244" stroke="#3a4a56" stroke-width="1.3"/>
+<line x1="174" y1="244" x2="190" y2="244" stroke="#3a4a56" stroke-width="1.3"/>
+<line x1="182" y1="272" x2="182" y2="282" stroke="#3a4a56" stroke-width="1"/>
+<text x="182" y="354" font-size="10" fill="#b7600c" text-anchor="middle">ventil (simbol)</text>
+<text x="32" y="409" font-size="12" fill="#c0392b" text-anchor="start">EGL: ukupna energijska visina.</text>
+<text x="32" y="432" font-size="12" fill="#8e44ad" text-anchor="start">HGL: tlak + geodetska visina.</text>
+<text x="32" y="455" font-size="11" fill="#1a2530" text-anchor="start">U jednolikom vodu: EGL − HGL = v²/(2g).</text>
+<text x="32" y="478" font-size="10" fill="#1a2530" text-anchor="start">Shematski prikaz; α = 1 u referentnim presjecima.</text>
+<rect x="386" y="46" width="301" height="409" rx="9" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="386" y="46" width="301" height="33" rx="9" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="536" y="69" font-size="15" fill="white" text-anchor="middle" font-weight="700">Ključne jednadžbe poglavlja</text>
+<text x="536" y="103" font-size="12" fill="#1565c0" text-anchor="middle">Proširena Bernoullijeva jednadžba</text>
+<text x="536" y="132" font-size="17" fill="#1a2530" text-anchor="middle" font-weight="700">H₁ = H₂ + hw</text>
+<text x="536" y="154" font-size="11" fill="#1a2530" text-anchor="middle">bez stroja; hw ≥ 0</text>
+<text x="536" y="175" font-size="12" fill="#1565c0" text-anchor="middle">Ukupni gubitak</text>
+<text x="536" y="204" font-size="17" fill="#1a2530" text-anchor="middle" font-weight="700">hw = hl + Σhloc</text>
+<text x="536" y="226" font-size="11" fill="#1a2530" text-anchor="middle">linijski + lokalni doprinosi</text>
+<text x="536" y="248" font-size="12" fill="#1565c0" text-anchor="middle">Linijski gubitak</text>
+<text x="536" y="277" font-size="17" fill="#1a2530" text-anchor="middle" font-weight="700">hl = λ (L/D) v²/(2g)</text>
+<text x="536" y="299" font-size="11" fill="#1a2530" text-anchor="middle">Darcyjev faktor λ(Re, ε/D)</text>
+<text x="536" y="321" font-size="12" fill="#1565c0" text-anchor="middle">Lokalni gubitak</text>
+<text x="536" y="350" font-size="17" fill="#1a2530" text-anchor="middle" font-weight="700">hloc = ξ vref²/(2g)</text>
+<text x="536" y="372" font-size="11" fill="#1a2530" text-anchor="middle">svaki ξ ima referentnu brzinu</text>
+<text x="536" y="414" font-size="12" fill="#1a2530" text-anchor="middle">Referentni presjeci: α = 1.</text>
+<text x="536" y="436" font-size="11" fill="#1a2530" text-anchor="middle">Različiti profili zahtijevaju njihove α.</text>
+<text x="832" y="77" font-size="14" fill="#c0392b" text-anchor="middle" font-weight="700">Linijski gubitak hl</text>
+<defs><linearGradient id="u13loss_laminarField" gradientUnits="userSpaceOnUse" x1="0" y1="112" x2="0" y2="186"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<rect id="u13loss_laminarFluid" x="716" y="112" width="235" height="74" rx="0" fill="url(#u13loss_laminarField)" stroke="none" stroke-width="1.2"/>
+<rect id="u13loss_laminarTop" x="716" y="102" width="235" height="10" rx="0" fill="url(#u13loss_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u13loss_laminarBottom" x="716" y="186" width="235" height="10" rx="0" fill="url(#u13loss_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<path id="u13loss_laminarProfile" d="M741.000000 112.000000 L743.772827 113.000000 L746.469686 114.000000 L749.090577 115.000000 L751.635500 116.000000 L754.104456 117.000000 L756.497443 118.000000 L758.814463 119.000000 L761.055515 120.000000 L763.220599 121.000000 L765.309715 122.000000 L767.322863 123.000000 L769.260044 124.000000 L771.121256 125.000000 L772.906501 126.000000 L774.615778 127.000000 L776.249087 128.000000 L777.806428 129.000000 L779.287801 130.000000 L780.693207 131.000000 L782.022644 132.000000 L783.276114 133.000000 L784.453616 134.000000 L785.555150 135.000000 L786.580716 136.000000 L787.530314 137.000000 L788.403944 138.000000 L789.201607 139.000000 L789.923302 140.000000 L790.569028 141.000000 L791.138787 142.000000 L791.632579 143.000000 L792.050402 144.000000 L792.392257 145.000000 L792.658145 146.000000 L792.848064 147.000000 L792.962016 148.000000 L793.000000 149.000000 L792.962016 150.000000 L792.848064 151.000000 L792.658145 152.000000 L792.392257 153.000000 L792.050402 154.000000 L791.632579 155.000000 L791.138787 156.000000 L790.569028 157.000000 L789.923302 158.000000 L789.201607 159.000000 L788.403944 160.000000 L787.530314 161.000000 L786.580716 162.000000 L785.555150 163.000000 L784.453616 164.000000 L783.276114 165.000000 L782.022644 166.000000 L780.693207 167.000000 L779.287801 168.000000 L777.806428 169.000000 L776.249087 170.000000 L774.615778 171.000000 L772.906501 172.000000 L771.121256 173.000000 L769.260044 174.000000 L767.322863 175.000000 L765.309715 176.000000 L763.220599 177.000000 L761.055515 178.000000 L758.814463 179.000000 L756.497443 180.000000 L754.104456 181.000000 L751.635500 182.000000 L749.090577 183.000000 L746.469686 184.000000 L743.772827 185.000000 L741.000000 186.000000" fill="none" stroke="#1565c0" stroke-width="1.7" />
+<path id="u13loss_laminarVelocity0" d="M741 121 L763.2205989773557 121" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13loss_v)"/>
+<path id="u13loss_laminarVelocity1" d="M741 135 L785.5551497443389 135" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13loss_v)"/>
+<path id="u13loss_laminarVelocity2" d="M741 149 L793.0 149" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13loss_v)"/>
+<path id="u13loss_laminarVelocity3" d="M741 163 L785.5551497443389 163" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13loss_v)"/>
+<path id="u13loss_laminarVelocity4" d="M741 177 L763.2205989773557 177" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13loss_v)"/>
+<path id="u13loss_shearTop" d="M919 113 L867 113" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u13loss_forceMarker)"/>
+<path id="u13loss_shearBottom" d="M919 185 L867 185" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u13loss_forceMarker)"/>
+<text x="867" y="95" font-size="11" fill="#c0392b" text-anchor="middle">stijenka → fluid</text>
+<line x1="698" y1="112" x2="708" y2="112" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="698" y1="186" x2="708" y2="186" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u13loss_D" d="M703 112 L703 186" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13loss_dim)" marker-end="url(#u13loss_dim)"/>
+<text x="694" y="153" font-size="12" fill="#b7600c" text-anchor="end">D</text>
+<line x1="716" y1="211" x2="716" y2="221" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="951" y1="211" x2="951" y2="221" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u13loss_L" d="M716 216 L951 216" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13loss_dim)" marker-end="url(#u13loss_dim)"/>
+<text x="833.5" y="233" font-size="11" fill="#b7600c" text-anchor="middle">L</text>
+<text x="831" y="259" font-size="11" fill="#1a2530" text-anchor="middle">Laminarni profil: u = 0 na stijenkama.</text>
+<text x="831" y="297" font-size="14" fill="#b7600c" text-anchor="middle" font-weight="700">Lokalni gubitak u koljenu</text>
+<path id="u13loss_elbowouter0" d="M716 325 H822 L822.000000 325.000000 L822.802811 325.007006 L823.605377 325.028022 L824.407454 325.063041 L825.208798 325.112054 L826.009164 325.175044 L826.808309 325.251993 L827.605990 325.342877 L828.401963 325.447669 L829.195985 325.566336 L829.987816 325.698843 L830.777214 325.845150 L831.563938 326.005210 L832.347748 326.178977 L833.128407 326.366397 L833.905676 326.567412 L834.679318 326.781962 L835.449098 327.009981 L836.214782 327.251400 L836.976135 327.506146 L837.732927 327.774139 L838.484926 328.055300 L839.231903 328.349543 L839.973632 328.656777 L840.709886 328.976909 L841.440440 329.309842 L842.165073 329.655474 L842.883563 330.013700 L843.595692 330.384411 L844.301243 330.767493 L845.000000 331.162831 L845.691751 331.570304 L846.376286 331.989788 L847.053396 332.421154 L847.722874 332.864272 L848.384516 333.319006 L849.038122 333.785218 L849.683491 334.262767 L850.320428 334.751505 L850.948738 335.251286 L851.568230 335.761956 L852.178715 336.283359 L852.780008 336.815338 L853.371925 337.357730 L853.954285 337.910369 L854.526912 338.473088 L855.089631 339.045715 L855.642270 339.628075 L856.184662 340.219992 L856.716641 340.821285 L857.238044 341.431770 L857.748714 342.051262 L858.248495 342.679572 L858.737233 343.316509 L859.214782 343.961878 L859.680994 344.615484 L860.135728 345.277126 L860.578846 345.946604 L861.010212 346.623714 L861.429696 347.308249 L861.837169 348.000000 L862.232507 348.698757 L862.615589 349.404308 L862.986300 350.116437 L863.344526 350.834927 L863.690158 351.559560 L864.023091 352.290114 L864.343223 353.026368 L864.650457 353.768097 L864.944700 354.515074 L865.225861 355.267073 L865.493854 356.023865 L865.748600 356.785218 L865.990019 357.550902 L866.218038 358.320682 L866.432588 359.094324 L866.633603 359.871593 L866.821023 360.652252 L866.994790 361.436062 L867.154850 362.222786 L867.301157 363.012184 L867.433664 363.804015 L867.552331 364.598037 L867.657123 365.394010 L867.748007 366.191691 L867.824956 366.990836 L867.887946 367.791202 L867.936959 368.592546 L867.971978 369.394623 L867.992994 370.197189 L868.000000 371.000000 V424" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M716 325 H822 L822.000000 325.000000 L822.802811 325.007006 L823.605377 325.028022 L824.407454 325.063041 L825.208798 325.112054 L826.009164 325.175044 L826.808309 325.251993 L827.605990 325.342877 L828.401963 325.447669 L829.195985 325.566336 L829.987816 325.698843 L830.777214 325.845150 L831.563938 326.005210 L832.347748 326.178977 L833.128407 326.366397 L833.905676 326.567412 L834.679318 326.781962 L835.449098 327.009981 L836.214782 327.251400 L836.976135 327.506146 L837.732927 327.774139 L838.484926 328.055300 L839.231903 328.349543 L839.973632 328.656777 L840.709886 328.976909 L841.440440 329.309842 L842.165073 329.655474 L842.883563 330.013700 L843.595692 330.384411 L844.301243 330.767493 L845.000000 331.162831 L845.691751 331.570304 L846.376286 331.989788 L847.053396 332.421154 L847.722874 332.864272 L848.384516 333.319006 L849.038122 333.785218 L849.683491 334.262767 L850.320428 334.751505 L850.948738 335.251286 L851.568230 335.761956 L852.178715 336.283359 L852.780008 336.815338 L853.371925 337.357730 L853.954285 337.910369 L854.526912 338.473088 L855.089631 339.045715 L855.642270 339.628075 L856.184662 340.219992 L856.716641 340.821285 L857.238044 341.431770 L857.748714 342.051262 L858.248495 342.679572 L858.737233 343.316509 L859.214782 343.961878 L859.680994 344.615484 L860.135728 345.277126 L860.578846 345.946604 L861.010212 346.623714 L861.429696 347.308249 L861.837169 348.000000 L862.232507 348.698757 L862.615589 349.404308 L862.986300 350.116437 L863.344526 350.834927 L863.690158 351.559560 L864.023091 352.290114 L864.343223 353.026368 L864.650457 353.768097 L864.944700 354.515074 L865.225861 355.267073 L865.493854 356.023865 L865.748600 356.785218 L865.990019 357.550902 L866.218038 358.320682 L866.432588 359.094324 L866.633603 359.871593 L866.821023 360.652252 L866.994790 361.436062 L867.154850 362.222786 L867.301157 363.012184 L867.433664 363.804015 L867.552331 364.598037 L867.657123 365.394010 L867.748007 366.191691 L867.824956 366.990836 L867.887946 367.791202 L867.936959 368.592546 L867.971978 369.394623 L867.992994 370.197189 L868.000000 371.000000 V424" fill="none" stroke="url(#u13loss_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u13loss_elbowouter1" d="M716 353 H822 L822.000000 353.000000 L822.314143 353.002741 L822.628191 353.010965 L822.942047 353.024668 L823.255617 353.043847 L823.568803 353.068495 L823.881512 353.098606 L824.193648 353.134169 L824.505116 353.175175 L824.815820 353.221610 L825.125667 353.273460 L825.434562 353.330711 L825.742410 353.393343 L826.049119 353.461339 L826.354594 353.534677 L826.658743 353.613335 L826.961472 353.697289 L827.262691 353.786514 L827.562306 353.880983 L827.860227 353.980666 L828.156363 354.085533 L828.450623 354.195552 L828.742919 354.310691 L829.033160 354.430913 L829.321260 354.556182 L829.607129 354.686460 L829.890681 354.821707 L830.171829 354.961883 L830.450488 355.106943 L830.726573 355.256845 L831.000000 355.411543 L831.270685 355.570989 L831.538547 355.735134 L831.803503 355.903930 L832.065472 356.077324 L832.324376 356.255263 L832.580135 356.437694 L832.832670 356.624561 L833.081907 356.815806 L833.327767 357.011373 L833.570177 357.211200 L833.809063 357.415228 L834.044351 357.623393 L834.275970 357.835633 L834.503851 358.051884 L834.727922 358.272078 L834.948116 358.496149 L835.164367 358.724030 L835.376607 358.955649 L835.584772 359.190937 L835.788800 359.429823 L835.988627 359.672233 L836.184194 359.918093 L836.375439 360.167330 L836.562306 360.419865 L836.744737 360.675624 L836.922676 360.934528 L837.096070 361.196497 L837.264866 361.461453 L837.429011 361.729315 L837.588457 362.000000 L837.743155 362.273427 L837.893057 362.549512 L838.038117 362.828171 L838.178293 363.109319 L838.313540 363.392871 L838.443818 363.678740 L838.569087 363.966840 L838.689309 364.257081 L838.804448 364.549377 L838.914467 364.843637 L839.019334 365.139773 L839.119017 365.437694 L839.213486 365.737309 L839.302711 366.038528 L839.386665 366.341257 L839.465323 366.645406 L839.538661 366.950881 L839.606657 367.257590 L839.669289 367.565438 L839.726540 367.874333 L839.778390 368.184180 L839.824825 368.494884 L839.865831 368.806352 L839.901394 369.118488 L839.931505 369.431197 L839.956153 369.744383 L839.975332 370.057953 L839.989035 370.371809 L839.997259 370.685857 L840.000000 371.000000 V424" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M716 353 H822 L822.000000 353.000000 L822.314143 353.002741 L822.628191 353.010965 L822.942047 353.024668 L823.255617 353.043847 L823.568803 353.068495 L823.881512 353.098606 L824.193648 353.134169 L824.505116 353.175175 L824.815820 353.221610 L825.125667 353.273460 L825.434562 353.330711 L825.742410 353.393343 L826.049119 353.461339 L826.354594 353.534677 L826.658743 353.613335 L826.961472 353.697289 L827.262691 353.786514 L827.562306 353.880983 L827.860227 353.980666 L828.156363 354.085533 L828.450623 354.195552 L828.742919 354.310691 L829.033160 354.430913 L829.321260 354.556182 L829.607129 354.686460 L829.890681 354.821707 L830.171829 354.961883 L830.450488 355.106943 L830.726573 355.256845 L831.000000 355.411543 L831.270685 355.570989 L831.538547 355.735134 L831.803503 355.903930 L832.065472 356.077324 L832.324376 356.255263 L832.580135 356.437694 L832.832670 356.624561 L833.081907 356.815806 L833.327767 357.011373 L833.570177 357.211200 L833.809063 357.415228 L834.044351 357.623393 L834.275970 357.835633 L834.503851 358.051884 L834.727922 358.272078 L834.948116 358.496149 L835.164367 358.724030 L835.376607 358.955649 L835.584772 359.190937 L835.788800 359.429823 L835.988627 359.672233 L836.184194 359.918093 L836.375439 360.167330 L836.562306 360.419865 L836.744737 360.675624 L836.922676 360.934528 L837.096070 361.196497 L837.264866 361.461453 L837.429011 361.729315 L837.588457 362.000000 L837.743155 362.273427 L837.893057 362.549512 L838.038117 362.828171 L838.178293 363.109319 L838.313540 363.392871 L838.443818 363.678740 L838.569087 363.966840 L838.689309 364.257081 L838.804448 364.549377 L838.914467 364.843637 L839.019334 365.139773 L839.119017 365.437694 L839.213486 365.737309 L839.302711 366.038528 L839.386665 366.341257 L839.465323 366.645406 L839.538661 366.950881 L839.606657 367.257590 L839.669289 367.565438 L839.726540 367.874333 L839.778390 368.184180 L839.824825 368.494884 L839.865831 368.806352 L839.901394 369.118488 L839.931505 369.431197 L839.956153 369.744383 L839.975332 370.057953 L839.989035 370.371809 L839.997259 370.685857 L840.000000 371.000000 V424" fill="none" stroke="url(#u13loss_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+<defs><linearGradient id="u13loss_elbowfield" gradientUnits="userSpaceOnUse" x1="0" y1="325" x2="0" y2="424"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u13loss_elbowfluid" d="M716 325 H822 L822.000000 325.000000 L822.802811 325.007006 L823.605377 325.028022 L824.407454 325.063041 L825.208798 325.112054 L826.009164 325.175044 L826.808309 325.251993 L827.605990 325.342877 L828.401963 325.447669 L829.195985 325.566336 L829.987816 325.698843 L830.777214 325.845150 L831.563938 326.005210 L832.347748 326.178977 L833.128407 326.366397 L833.905676 326.567412 L834.679318 326.781962 L835.449098 327.009981 L836.214782 327.251400 L836.976135 327.506146 L837.732927 327.774139 L838.484926 328.055300 L839.231903 328.349543 L839.973632 328.656777 L840.709886 328.976909 L841.440440 329.309842 L842.165073 329.655474 L842.883563 330.013700 L843.595692 330.384411 L844.301243 330.767493 L845.000000 331.162831 L845.691751 331.570304 L846.376286 331.989788 L847.053396 332.421154 L847.722874 332.864272 L848.384516 333.319006 L849.038122 333.785218 L849.683491 334.262767 L850.320428 334.751505 L850.948738 335.251286 L851.568230 335.761956 L852.178715 336.283359 L852.780008 336.815338 L853.371925 337.357730 L853.954285 337.910369 L854.526912 338.473088 L855.089631 339.045715 L855.642270 339.628075 L856.184662 340.219992 L856.716641 340.821285 L857.238044 341.431770 L857.748714 342.051262 L858.248495 342.679572 L858.737233 343.316509 L859.214782 343.961878 L859.680994 344.615484 L860.135728 345.277126 L860.578846 345.946604 L861.010212 346.623714 L861.429696 347.308249 L861.837169 348.000000 L862.232507 348.698757 L862.615589 349.404308 L862.986300 350.116437 L863.344526 350.834927 L863.690158 351.559560 L864.023091 352.290114 L864.343223 353.026368 L864.650457 353.768097 L864.944700 354.515074 L865.225861 355.267073 L865.493854 356.023865 L865.748600 356.785218 L865.990019 357.550902 L866.218038 358.320682 L866.432588 359.094324 L866.633603 359.871593 L866.821023 360.652252 L866.994790 361.436062 L867.154850 362.222786 L867.301157 363.012184 L867.433664 363.804015 L867.552331 364.598037 L867.657123 365.394010 L867.748007 366.191691 L867.824956 366.990836 L867.887946 367.791202 L867.936959 368.592546 L867.971978 369.394623 L867.992994 370.197189 L868.000000 371.000000 V424 H840 V371 L840.000000 371.000000 L839.997259 370.685857 L839.989035 370.371809 L839.975332 370.057953 L839.956153 369.744383 L839.931505 369.431197 L839.901394 369.118488 L839.865831 368.806352 L839.824825 368.494884 L839.778390 368.184180 L839.726540 367.874333 L839.669289 367.565438 L839.606657 367.257590 L839.538661 366.950881 L839.465323 366.645406 L839.386665 366.341257 L839.302711 366.038528 L839.213486 365.737309 L839.119017 365.437694 L839.019334 365.139773 L838.914467 364.843637 L838.804448 364.549377 L838.689309 364.257081 L838.569087 363.966840 L838.443818 363.678740 L838.313540 363.392871 L838.178293 363.109319 L838.038117 362.828171 L837.893057 362.549512 L837.743155 362.273427 L837.588457 362.000000 L837.429011 361.729315 L837.264866 361.461453 L837.096070 361.196497 L836.922676 360.934528 L836.744737 360.675624 L836.562306 360.419865 L836.375439 360.167330 L836.184194 359.918093 L835.988627 359.672233 L835.788800 359.429823 L835.584772 359.190937 L835.376607 358.955649 L835.164367 358.724030 L834.948116 358.496149 L834.727922 358.272078 L834.503851 358.051884 L834.275970 357.835633 L834.044351 357.623393 L833.809063 357.415228 L833.570177 357.211200 L833.327767 357.011373 L833.081907 356.815806 L832.832670 356.624561 L832.580135 356.437694 L832.324376 356.255263 L832.065472 356.077324 L831.803503 355.903930 L831.538547 355.735134 L831.270685 355.570989 L831.000000 355.411543 L830.726573 355.256845 L830.450488 355.106943 L830.171829 354.961883 L829.890681 354.821707 L829.607129 354.686460 L829.321260 354.556182 L829.033160 354.430913 L828.742919 354.310691 L828.450623 354.195552 L828.156363 354.085533 L827.860227 353.980666 L827.562306 353.880983 L827.262691 353.786514 L826.961472 353.697289 L826.658743 353.613335 L826.354594 353.534677 L826.049119 353.461339 L825.742410 353.393343 L825.434562 353.330711 L825.125667 353.273460 L824.815820 353.221610 L824.505116 353.175175 L824.193648 353.134169 L823.881512 353.098606 L823.568803 353.068495 L823.255617 353.043847 L822.942047 353.024668 L822.628191 353.010965 L822.314143 353.002741 L822.000000 353.000000 H716 Z" fill="url(#u13loss_elbowfield)" stroke="none" stroke-width="1.8" />
+<path id="u13loss_elbowwall0" d="M716 325 H822 L822.000000 325.000000 L822.802811 325.007006 L823.605377 325.028022 L824.407454 325.063041 L825.208798 325.112054 L826.009164 325.175044 L826.808309 325.251993 L827.605990 325.342877 L828.401963 325.447669 L829.195985 325.566336 L829.987816 325.698843 L830.777214 325.845150 L831.563938 326.005210 L832.347748 326.178977 L833.128407 326.366397 L833.905676 326.567412 L834.679318 326.781962 L835.449098 327.009981 L836.214782 327.251400 L836.976135 327.506146 L837.732927 327.774139 L838.484926 328.055300 L839.231903 328.349543 L839.973632 328.656777 L840.709886 328.976909 L841.440440 329.309842 L842.165073 329.655474 L842.883563 330.013700 L843.595692 330.384411 L844.301243 330.767493 L845.000000 331.162831 L845.691751 331.570304 L846.376286 331.989788 L847.053396 332.421154 L847.722874 332.864272 L848.384516 333.319006 L849.038122 333.785218 L849.683491 334.262767 L850.320428 334.751505 L850.948738 335.251286 L851.568230 335.761956 L852.178715 336.283359 L852.780008 336.815338 L853.371925 337.357730 L853.954285 337.910369 L854.526912 338.473088 L855.089631 339.045715 L855.642270 339.628075 L856.184662 340.219992 L856.716641 340.821285 L857.238044 341.431770 L857.748714 342.051262 L858.248495 342.679572 L858.737233 343.316509 L859.214782 343.961878 L859.680994 344.615484 L860.135728 345.277126 L860.578846 345.946604 L861.010212 346.623714 L861.429696 347.308249 L861.837169 348.000000 L862.232507 348.698757 L862.615589 349.404308 L862.986300 350.116437 L863.344526 350.834927 L863.690158 351.559560 L864.023091 352.290114 L864.343223 353.026368 L864.650457 353.768097 L864.944700 354.515074 L865.225861 355.267073 L865.493854 356.023865 L865.748600 356.785218 L865.990019 357.550902 L866.218038 358.320682 L866.432588 359.094324 L866.633603 359.871593 L866.821023 360.652252 L866.994790 361.436062 L867.154850 362.222786 L867.301157 363.012184 L867.433664 363.804015 L867.552331 364.598037 L867.657123 365.394010 L867.748007 366.191691 L867.824956 366.990836 L867.887946 367.791202 L867.936959 368.592546 L867.971978 369.394623 L867.992994 370.197189 L868.000000 371.000000 V424" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u13loss_elbowwall1" d="M716 353 H822 L822.000000 353.000000 L822.314143 353.002741 L822.628191 353.010965 L822.942047 353.024668 L823.255617 353.043847 L823.568803 353.068495 L823.881512 353.098606 L824.193648 353.134169 L824.505116 353.175175 L824.815820 353.221610 L825.125667 353.273460 L825.434562 353.330711 L825.742410 353.393343 L826.049119 353.461339 L826.354594 353.534677 L826.658743 353.613335 L826.961472 353.697289 L827.262691 353.786514 L827.562306 353.880983 L827.860227 353.980666 L828.156363 354.085533 L828.450623 354.195552 L828.742919 354.310691 L829.033160 354.430913 L829.321260 354.556182 L829.607129 354.686460 L829.890681 354.821707 L830.171829 354.961883 L830.450488 355.106943 L830.726573 355.256845 L831.000000 355.411543 L831.270685 355.570989 L831.538547 355.735134 L831.803503 355.903930 L832.065472 356.077324 L832.324376 356.255263 L832.580135 356.437694 L832.832670 356.624561 L833.081907 356.815806 L833.327767 357.011373 L833.570177 357.211200 L833.809063 357.415228 L834.044351 357.623393 L834.275970 357.835633 L834.503851 358.051884 L834.727922 358.272078 L834.948116 358.496149 L835.164367 358.724030 L835.376607 358.955649 L835.584772 359.190937 L835.788800 359.429823 L835.988627 359.672233 L836.184194 359.918093 L836.375439 360.167330 L836.562306 360.419865 L836.744737 360.675624 L836.922676 360.934528 L837.096070 361.196497 L837.264866 361.461453 L837.429011 361.729315 L837.588457 362.000000 L837.743155 362.273427 L837.893057 362.549512 L838.038117 362.828171 L838.178293 363.109319 L838.313540 363.392871 L838.443818 363.678740 L838.569087 363.966840 L838.689309 364.257081 L838.804448 364.549377 L838.914467 364.843637 L839.019334 365.139773 L839.119017 365.437694 L839.213486 365.737309 L839.302711 366.038528 L839.386665 366.341257 L839.465323 366.645406 L839.538661 366.950881 L839.606657 367.257590 L839.669289 367.565438 L839.726540 367.874333 L839.778390 368.184180 L839.824825 368.494884 L839.865831 368.806352 L839.901394 369.118488 L839.931505 369.431197 L839.956153 369.744383 L839.975332 370.057953 L839.989035 370.371809 L839.997259 370.685857 L840.000000 371.000000 V424" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u13loss_elbowIn" d="M735 339 L798 339" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13loss_v)"/>
+<text x="766.5" y="330" font-size="12" fill="#1e8449" text-anchor="middle">v</text>
+<path id="u13loss_elbowOut" d="M854 376 L854 414" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13loss_v)"/>
+<text x="716" y="464" font-size="11" fill="#1a2530" text-anchor="start">Promjena smjera; model gubitka ξ.</text>
+<text x="716" y="483" font-size="11" fill="#1a2530" text-anchor="start">Nema pregrade ni prekida protoka.</text>
+</g>
+</svg>

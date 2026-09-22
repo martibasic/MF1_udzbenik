@@ -143,10 +143,12 @@ def turbulence_intensity(
     return {"intensity": intensity, "percent": 100.0 * intensity}
 
 
-def exercise_material_derivative(x: float = 1.0, time: float = 2.0) -> dict[str, float]:
-    velocity = 2.0 * time + x**2
-    local = 2.0
-    convective = velocity * (2.0 * x)
+def exercise_material_derivative(
+    x: float = 1.0, time: float = 2.0, a: float = 2.0, b: float = 1.0
+) -> dict[str, float]:
+    velocity = a * time + b * x**2
+    local = a
+    convective = velocity * (2.0 * b * x)
     return {
         "velocity": velocity,
         "local": local,
@@ -210,6 +212,9 @@ def exercise_couette_shear_change(
         "critical_gradient": critical_gradient,
         "tau_90": lower_wall_shear(0.90),
         "tau_110": lower_wall_shear(1.10),
+        "reverse_height_ratio": (
+            height - 2.0 * viscosity * plate_velocity / (1.10 * critical_gradient * height)
+        ) / height,
     }
 
 
@@ -236,15 +241,15 @@ def exercise_blasius_assessment(
     }
 
 
-def exercise_grid_convergence() -> dict[str, float]:
-    with (REPO_ROOT / "data/cfd/poiseuille_laminar/grids.csv").open(
-        encoding="utf-8", newline=""
-    ) as handle:
-        rows = list(csv.DictReader(handle))
-    q_coarse, q_medium, q_fine = [
-        float(row["q_volume_m3_s"]) for row in rows
-    ]
-    refinement_ratio = 2.0
+def exercise_grid_convergence(
+    flows: tuple[float, float, float] = (8.16814e-6, 7.93252e-6, 7.87362e-6),
+    mass_imbalances: tuple[float, float, float] = (0.040, 0.010, 0.0025),
+    refinement_ratio: float = 2.0,
+    safety_factor: float = 1.25,
+) -> dict[str, float]:
+    # Autoritativni su zaokruženi ulazi ispisani studentu u Z6.
+    # Izvorni CSV provjerava se zasebno, bez tihe zamjene tih ulaza.
+    q_coarse, q_medium, q_fine = flows
     observed_order = math.log(
         (q_coarse - q_medium) / (q_medium - q_fine)
     ) / math.log(refinement_ratio)
@@ -252,7 +257,7 @@ def exercise_grid_convergence() -> dict[str, float]:
         refinement_ratio**observed_order - 1.0
     )
     gci_fine_percent = (
-        1.25
+        safety_factor
         * abs((q_fine - q_medium) / q_fine)
         / (refinement_ratio**observed_order - 1.0)
         * 100.0
@@ -261,7 +266,13 @@ def exercise_grid_convergence() -> dict[str, float]:
         "observed_order": observed_order,
         "extrapolated_flow": extrapolated,
         "gci_fine_percent": gci_fine_percent,
-        "fine_mass_imbalance_percent": float(rows[-1]["mass_imbalance_percent"]),
+        "gci_medium_percent": (
+            safety_factor * abs((q_medium - q_coarse) / q_medium)
+            / (refinement_ratio**observed_order - 1.0) * 100.0
+        ),
+        "fine_mass_imbalance_percent": mass_imbalances[-1],
+        "medium_mass_imbalance_percent": mass_imbalances[1],
+        "coarse_mass_imbalance_percent": mass_imbalances[0],
     }
 
 
@@ -364,6 +375,8 @@ def verify() -> list[dict[str, str]]:
     )
     _check(out, "U12.REAL.Z4.tau_90", z4["tau_90"], 20.0, "Pa", abs_tol=0.05)
     _check(out, "U12.REAL.Z4.tau_110", z4["tau_110"], -20.0, "Pa", abs_tol=0.05)
+    _check(out, "U12.REAL.Z4.reverse_height_ratio", z4["reverse_height_ratio"],
+           1.0 / 11.0, "", abs_tol=1.0e-12)
 
     z5 = exercise_blasius_assessment()
     _check(out, "U12.REAL.Z5.Re_x", z5["reynolds_x"], 6.00e5, "", abs_tol=500.0)
@@ -386,20 +399,29 @@ def verify() -> list[dict[str, str]]:
     )
 
     z6 = exercise_grid_convergence()
+    _check(out, "U12.REAL.Z5.dpdx", z5["pressure_gradient"], 374.0, "Pa/m", abs_tol=0.5)
     _check(out, "U12.REAL.Z6.p", z6["observed_order"], 2.000, "", abs_tol=0.0005)
     _check(
         out,
         "U12.REAL.Z6.Q_ext",
         z6["extrapolated_flow"],
-        7.85398e-6,
+        7.8540e-6,
         "m^3/s",
-        abs_tol=0.000005e-6,
+        abs_tol=0.00005e-6,
     )
     _check(
         out,
         "U12.REAL.Z6.GCI_fine_percent",
         z6["gci_fine_percent"],
         0.312,
+        "%",
+        abs_tol=0.0005,
+    )
+    _check(
+        out,
+        "U12.REAL.Z6.GCI_medium_percent",
+        z6["gci_medium_percent"],
+        1.237,
         "%",
         abs_tol=0.0005,
     )
@@ -547,6 +569,21 @@ def verify() -> list[dict[str, str]]:
         critical_gradient > 0 and tau_below > 0 > tau_above,
         "Donje smicno naprezanje ne mijenja predznak oko kriticnog gradijenta.",
     )
+    def adverse_profile(y: float, factor: float) -> float:
+        return U * y / H + factor * critical_gradient * (y**2 - H*y) / (2*mu)
+
+    _invariant(
+        out,
+        "U12.REAL.Z4.no_slip_and_local_reversal",
+        all(abs(adverse_profile(0, factor)) < 1e-14
+            and abs(adverse_profile(H, factor) - U) < 1e-14
+            for factor in (0.9, 1.1))
+        and all(adverse_profile(H*j/100, 0.9) > 0 for j in range(1, 101))
+        and adverse_profile(H/22, 1.1) < 0
+        and abs(adverse_profile(H/11, 1.1)) < 1e-14
+        and adverse_profile(H/2, 1.1) > 0,
+        "Povratni profil krsi prianjanje ili nema objavljenu lokalnu zonu povrata.",
+    )
 
     # Blasiusov model zahtijeva stacionaran, nestlačiv tok uz glatku ravnu
     # plohu, nulti gradijent tlaka i laminarni raspon; debljina mora padati kao
@@ -554,13 +591,23 @@ def verify() -> list[dict[str, str]]:
     re_low, re_high = 1.0e5, 4.0e5
     relative_delta_low = 5.0 / math.sqrt(re_low)
     relative_delta_high = 5.0 / math.sqrt(re_high)
-    required_blasius_inputs = {"U", "x", "nu", "pressure_gradient", "roughness"}
     _invariant(
         out,
         "U12.REAL.Z5.required_inputs_and_limit",
-        len(required_blasius_inputs) == 5
-        and relative_delta_high < relative_delta_low,
-        "Blasiusova provjera nema potpune ulaze ili pogresan Re trend.",
+        z5["pressure_gradient"] > 0
+        and z5["velocity_gradient_parameter"] < 0
+        and abs(relative_delta_high / relative_delta_low - 0.5) < 1e-14,
+        "Vanjski tok nema nepovoljan gradijent ili je pogresan Blasiusov Re trend.",
+    )
+    _invariant(
+        out,
+        "U12.REAL.Z6.mesh_acceptance",
+        z6["gci_fine_percent"] <= 0.50
+        and z6["fine_mass_imbalance_percent"] <= 0.0050
+        and z6["gci_medium_percent"] > 0.50
+        and z6["medium_mass_imbalance_percent"] > 0.0050
+        and z6["coarse_mass_imbalance_percent"] > 0.0050,
+        "Fina mreza nije najgrublji ponudjeni izbor koji zadovoljava oba uvjeta.",
     )
 
     # Stvarni podatkovni paket mora sadržavati tri mreže. Poiseuilleov niz
@@ -572,6 +619,16 @@ def verify() -> list[dict[str, str]]:
         pipe_rows = list(csv.DictReader(handle))
     pipe_errors = [abs(float(row["q_rel_error_percent"])) for row in pipe_rows]
     pipe_imbalances = [float(row["mass_imbalance_percent"]) for row in pipe_rows]
+    printed_flows = (8.16814e-6, 7.93252e-6, 7.87362e-6)
+    _invariant(
+        out,
+        "U12.REAL.Z6.printed_data_match_archive",
+        len(pipe_rows) == 3
+        and all(abs(float(row["q_volume_m3_s"]) - printed) <= 0.000005e-6
+                for row, printed in zip(pipe_rows, printed_flows))
+        and pipe_imbalances == [0.040, 0.010, 0.0025],
+        "Ispisani protoci ili debalansi vise ne odgovaraju zaokruzenom arhivskom skupu.",
+    )
     observed_order = math.log(pipe_errors[0] / pipe_errors[1]) / math.log(2.0)
     with (REPO_ROOT / "data/cfd/hydrofoil_experiment/grids.csv").open(
         encoding="utf-8", newline=""

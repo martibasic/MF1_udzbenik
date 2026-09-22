@@ -186,7 +186,7 @@ $$ {#eq-blasius-procjene}
 
 To nisu univerzalne formule: vrijede za glatku ravnu plohu, približno nulti gradijent tlaka i laminarni sloj.
 
-Nepovoljan gradijent tlaka, $dp/dx>0$ u smjeru toka, usporava fluid uz stijenku. Kad $\tau_w$ padne na nulu i potom promijeni znak, tok se odvaja. Odvajanje mijenja tlak i otpor mnogo više nego sama lokalna viskozna sila; zato geometrijski blaga promjena difuzora može odlučiti radi li uređaj učinkovito.
+Nepovoljan gradijent tlaka, $dp/dx>0$ u smjeru toka, usporava fluid uz stijenku. U stacionarnom dvodimenzijskom graničnom sloju nulto smično naprezanje može označiti početak odvajanja, uz pojavu lokalnog povratnog toka. Sama promjena znaka u drugoj geometriji, primjerice potpuno razvijenom toku između ploča u Z4, ne dokazuje odvajanje strujnica od plohe. Odvajanje mijenja tlak i otpor mnogo više nego sama lokalna viskozna sila; zato geometrijski blaga promjena difuzora može odlučiti radi li uređaj učinkovito.
 
 ::: {#ex-granicni-sloj .mf1-we}
 <p class="mf1-box-label">P4. Debljina sloja na oplati modela <span class="mf1-level">T2</span></p>
@@ -264,7 +264,7 @@ Za vježbu su u `data/cfd/` pripremljeni Poiseuilleov analitički slučaj, sinte
 
 ::: {.callout-note collapse="true"}
 ### Odgovori
-Zbog konvektivnog ubrzanja. Potrebni su Newtonski fluid, konstantna viskoznost i nestlačivost. On daje točan laminarni granični slučaj $\Delta p\propto Q$. Promjena znaka označuje lokalni povratni tok i odvajanje. Rezidual mjeri zadovoljenje diskretiziranog sustava, ne prikladnost modela ni veličinu diskretizacijske pogreške.
+Zbog konvektivnog ubrzanja. Potrebni su Newtonski fluid, konstantna viskoznost i nestlačivost. On daje točan laminarni granični slučaj $\Delta p\propto Q$. Promjena znaka označuje promjenu smjera smicanja i lokalni povratni tok; zaključak o odvajanju zahtijeva odgovarajuću geometriju i uvjete graničnog sloja. Rezidual mjeri zadovoljenje diskretiziranog sustava, ne prikladnost modela ni veličinu diskretizacijske pogreške.
 :::
 :::
 
@@ -280,17 +280,26 @@ Verifikacija pita rješava li diskretni model pravilno zadane jednadžbe, a vali
 
 ## Zadaci za vježbu {#sec-realni-tok-zadaci}
 
+![Skice šest vježbi: kinematičko polje, prijenos količine gibanja između ploča, kapilara s tlačnim priključcima, suprotni pogoni uljnog filma, vanjski tok uz plohu i pročišćenje iste računske domene.](../assets/print/u12_realni_tok_vjezbe_skice.svg){#fig-realni-tok-vjezbe fig-align="center" fig-alt="Kote H i D mjere razmak stijenki i unutarnji promjer, L je razmak tlačnih priključaka; ploče su nepropusne, a mrežne crte nisu stijenke."}
+
 ::::: {.mf1-vjezbe-list}
 
 ### Z1. Lokalno i konvektivno ubrzanje {#task-materijalna-derivacija .unnumbered .unlisted}
 
-Za $u(x,t)=2t+x^2$ odredi lokalno, konvektivno i ukupno ubrzanje u $x=1\ \text{m}$, $t=2\ \text{s}$ uz konzistentne SI jedinice koeficijenata.
+Zadano je jednodimenzijsko kinematičko polje $u(x,t)=at+bx^2$, gdje su $a=2\ \text{m/s}^2$ i $b=1\ \text{m}^{-1}\text{s}^{-1}$. Odredi brzinu, lokalno, konvektivno i ukupno ubrzanje čestice u $x=1\ \text{m}$, $t=2\ \text{s}$. Polje služi vježbi materijalne derivacije; nije zadano kao potpuno nestlačivo strujanje u cijevi.
 
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+
+Najprije izračunaj lokalnu brzinu. U lokalnom članu deriviraj po vremenu uz stalan položaj; u konvektivnom pomnoži brzinu s prostornom derivacijom polja.
+:::
+::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$u=5\ \text{m/s}$, $a_{lok}=2$, $a_{kon}=10$, $a=12\ \text{m/s}^2$.
+$u=5\ \text{m/s}$; $a_{lok}=2\ \text{m/s}^2$, $a_{kon}=10\ \text{m/s}^2$ i $a=12\ \text{m/s}^2$.
 :::
 ::::
 
@@ -298,13 +307,20 @@ $u=5\ \text{m/s}$, $a_{lok}=2$, $a_{kon}=10$, $a=12\ \text{m/s}^2$.
 
 ### Z2. Vrijeme viskozne difuzije {#task-viskozna-difuzija .unnumbered .unlisted}
 
-Procijeni vrijeme viskozne difuzije $t_\nu\sim H^2/\nu$ kroz sloj vode $H=10\ \text{mm}$ pri $20\ ^\circ\text{C}$, za $\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$. Obrazloži red veličine.
+Gornja ploča počinje kliziti iznad mirujućeg sloja vode, a donja ostaje nepomična. Razmak ploča je $H=10\ \text{mm}$, a kinematička viskoznost $\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$. Procijeni vremensko mjerilo prijenosa količine gibanja viskoznom difuzijom kroz cijeli razmak. Znači li ono točan trenutak uspostave stacionarnog profila?
 
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+
+Usporedi redove veličine vremenskog i viskoznog člana: $U/t_\nu\sim\nu U/H^2$. Prije računa pretvori milimetre u metre.
+:::
+::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$t_\nu\sim100\ \text{s}$.
+$t_\nu\sim H^2/\nu=100\ \text{s}$. To je karakteristično vremensko mjerilo; vrijeme približavanja stacionarnom profilu ovisi o zadanoj toleranciji odstupanja.
 :::
 ::::
 
@@ -312,19 +328,22 @@ $t_\nu\sim100\ \text{s}$.
 
 ### Z3. Viskoznost iz mjerenja u kapilari {#task-poiseuille-inverzni .unnumbered .unlisted}
 
-U kapilari su izmjereni $Q=0{,}300\pm0{,}003\ \text{mL/min}$, $\Delta p=652\pm5\ \text{Pa}$, $L=0{,}200\pm0{,}001\ \text{m}$ i $D=0{,}500\pm0{,}005\ \text{mm}$. Fluid je Newtonski, gustoće $\rho=998\ \text{kg/m}^3$. Odredi dinamičku viskoznost i $Re$, a standardnu nesigurnost $u(\mu)$ procijeni neovisnom RSS-propagacijom. Posebno pokaži doprinos promjera, jer se u izrazu pojavljuje kao $D^4$.
+Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Obrnutim Poiseuilleovim računom procijeni viskoznost i Reynoldsov broj te utvrdi koji mjerni podatak najviše pridonosi nesigurnosti.
+
+Sintetički nastavni podatci su $Q=0{,}300\pm0{,}003\ \text{mL/min}$, $\Delta p=p_1-p_2=652\pm5\ \text{Pa}$, $L=0{,}200\pm0{,}001\ \text{m}$ i $D=0{,}500\pm0{,}005\ \text{mm}$. Znakovi $\pm$ označuju neovisne standardne nesigurnosti. Newtonski fluid ima gustoću $\rho=998\ \text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini. U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje na stijenku, a ulazne učinke izvan mjernog razmaka. Procijeni $u(\mu)$ linearnom RSS-propagacijom i posebno pokaži doprinos promjera.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-invertiraj $Q=\pi D^4\Delta p/(128\mu L)$. Za neovisne ulaze vrijedi $[u(\mu)/\mu]^2=[4u(D)/D]^2+[u(\Delta p)/\Delta p]^2+[u(L)/L]^2+[u(Q)/Q]^2$.
+
+Invertiraj $Q=\pi D^4\Delta p/(128\mu L)$. Za neovisne standardne nesigurnosti vrijedi $[u(\mu)/\mu]^2=[4u(D)/D]^2+[u(\Delta p)/\Delta p]^2+[u(L)/L]^2+[u(Q)/Q]^2$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$\mu\approx1{,}000\ \text{mPa s}$, $u(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Sam promjer doprinosi relativnoj nesigurnosti od $4\,\%$, pa dominira zadanim mjernim budžetom.
+$\mu\approx1{,}000\ \text{mPa s}$, $u(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Sam promjer doprinosi relativnoj standardnoj nesigurnosti od $4\,\%$, pa dominira zadanim mjernim budžetom.
 :::
 ::::
 
@@ -332,19 +351,22 @@ $\mu\approx1{,}000\ \text{mPa s}$, $u(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\ap
 
 ### Z4. Povratni tok između ploča {#task-couette-povrat .unnumbered .unlisted}
 
-Newtonski fluid viskoznosti $\mu=0{,}100\ \text{Pa s}$ nalazi se između nepomične donje i gornje ploče koja se giba brzinom $U=2{,}00\ \text{m/s}$; razmak je $H=1{,}00\ \text{mm}$. Za potpuno razvijeni profil $u(y)=Uy/H+[({dp}/{dx})/(2\mu)](y^2-Hy)$ odredi pozitivan gradijent tlaka pri kojem smično naprezanje na donjoj stijenci mijenja znak. Izračunaj to naprezanje pri $0{,}90$ i $1{,}10$ kritičnog gradijenta te skiciraj oba profila.
+Gibanje gornje ploče i nepovoljan gradijent tlaka suprotno pokreću ulje u uskom procjepu. Odredi granični gradijent, smično naprezanje za dva zadana pogona i skiciraj pripadne profile brzine. Razlikuj povratni tok uz ploču od prolaza kroz nju.
+
+Newtonski fluid ima $\mu=0{,}100\ \text{Pa s}$; donja ploča na $y=0$ miruje, a gornja na $y=H$ klizi u pozitivnom smjeru osi $x$ brzinom $U=2{,}00\ \text{m/s}$. Razmak je $H=1{,}00\ \text{mm}$. Za potpuno razvijeni laminarni tok i konstantan $G=dp/dx>0$ vrijedi $u(y)=Uy/H+G(y^2-Hy)/(2\mu)$. Odredi $G_{krit}$ pri kojem $\tau_0=\mu u'(0)$ mijenja znak, zatim $\tau_0$ pri $G=0{,}90G_{krit}$ i $G=1{,}10G_{krit}$. Ovdje je $\tau_0$ komponenta sile fluida na donju ploču po jedinici površine u smjeru osi $x$. Obje ploče su nepropusne, uz njih nema klizanja.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-deriviraj profil i postavi $\tau_0=\mu(du/dy)_{y=0}=0$; predznak gradijenta mora odgovarati nepovoljnom porastu tlaka u smjeru gibanja gornje ploče.
+
+Deriviraj profil i postavi $\tau_0=0$. Provjeri $u(0)=0$ i $u(H)=U$. Negativna brzina može nastati neposredno uz donju ploču; na samoj ploči ostaje nula.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$(dp/dx)_{krit}=4{,}00\cdot10^5\ \text{Pa/m}$; pri $0{,}90$ te vrijednosti $\tau_0=+20{,}0\ \text{Pa}$, a pri $1{,}10$ vrijedi $\tau_0=-20{,}0\ \text{Pa}$. Promjena predznaka zidnog naprezanja označuje početak lokalnog povratnog toka na donjoj stijenci.
+$G_{krit}=4{,}00\cdot10^5\ \text{Pa/m}$. Pri $0{,}90G_{krit}$ vrijedi $\tau_0=+20{,}0\ \text{Pa}$ i $u(y)>0$ za $0<y\le H$; pri $1{,}10G_{krit}$ vrijedi $\tau_0=-20{,}0\ \text{Pa}$ i povratni tok u $0<y<H/11$. U oba profila $u(0)=0$ i $u(H)=U$; fluid ne prolazi kroz ploče.
 :::
 ::::
 
@@ -352,39 +374,47 @@ $(dp/dx)_{krit}=4{,}00\cdot10^5\ \text{Pa/m}$; pri $0{,}90$ te vrijednosti $\tau
 
 ### Z5. Izbor modela graničnog sloja {#task-granicni-sloj-model .unnumbered .unlisted}
 
-Voda pri $20\ ^\circ\text{C}$ ($\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$, $\rho=998\ \text{kg/m}^3$) struji uz nominalno ravnu plohu. U presjeku $x=0{,}400\ \text{m}$ izmjereno je $U_e=1{,}50\ \text{m/s}$ i $dU_e/dx=-0{,}250\ \text{s}^{-1}$, a ekvivalentna hrapavost iznosi $k_s=5{,}0\ \mu\text{m}$. Izračunaj $Re_x$, Blasiusovu procjenu $\delta_{99}\approx5x/\sqrt{Re_x}$, $k_s/\delta_{99}$ i bezdimenzijski pokazatelj promjene vanjske brzine $(x/U_e)dU_e/dx$. Odluči je li Blasiusov model ovdje opravdan i navedi koje su njegove pretpostavke prekršene; prijelaz nemoj proglasiti samo iz jednoga univerzalnog praga $Re_x$.
+Na temelju lokalne vanjske brzine, njezina gradijenta i hrapavosti odluči može li Blasiusov model predvidjeti debljinu sloja uz ravnu plohu. Razdvoji uvjetnu referentnu procjenu od potvrđenog modela te obrazloži koje bi dodatne provjere trebale prethoditi njegovoj uporabi.
+
+Sintetički nastavni podatci za vodu su $\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$, $\rho=998\ \text{kg/m}^3$, $x=0{,}400\ \text{m}$, $U_e=1{,}50\ \text{m/s}$ i $dU_e/dx=-0{,}250\ \text{s}^{-1}$. Ekvivalentna hrapavost iznosi $k_s=5{,}0\ \mu\text{m}$. Vanjski tok smatraj stacionarnim, nestlačivim i približno neviskoznim, uz stalnu visinu. Izračunaj $Re_x$, Blasiusovu referentnu debljinu $\delta_B=5x/\sqrt{Re_x}$, $k_s/\delta_B$, pokazatelj $K=(x/U_e)dU_e/dx$ te $dp_e/dx$. Odluči je li Blasiusov model opravdan. Mali $k_s/\delta_B$ nemoj poistovjetiti s dokazanom hidrauličkom glatkoćom niti prijelaz proglasiti iz jednoga univerzalnog praga $Re_x$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Blasius zahtijeva glatku plohu, laminaran tok i praktično nulti gradijent tlaka odnosno stalnu $U_e$. Negativan $dU_e/dx$ odgovara nepovoljnom gradijentu tlaka; procijeni i njegovu važnost prije odluke.
+
+Blasius zahtijeva glatku plohu, laminaran tok i nulti gradijent tlaka. U zadanom vanjskom toku vrijedi $dp_e/dx=-\rho U_e\,dU_e/dx$. Odvoji dokazano prekršen uvjet od pretpostavke koju podatci još ne potvrđuju.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$Re_x=6{,}00\cdot10^5$, $\delta_{99}\approx2{,}58\ \text{mm}$, $k_s/\delta_{99}\approx1{,}94\cdot10^{-3}$ i $(x/U_e)dU_e/dx=-0{,}0667$. Hrapavost je mala prema procijenjenoj debljini, ali mjerljiva promjena $U_e$ krši pretpostavku nultoga gradijenta tlaka, a stanje laminarnosti pri tom $Re_x$ nije dokazano; Blasius zato nije opravdan bez dodatne provjere profila i prijelaza.
+$Re_x=6{,}00\cdot10^5$, $\delta_B\approx2{,}58\ \text{mm}$, $k_s/\delta_B\approx1{,}94\cdot10^{-3}$, $K=-0{,}0667$ i $dp_e/dx\approx+374\ \text{Pa/m}$. Nulti gradijent tlaka prekršen je; laminarnost i hidraulička glatkoća nisu dokazane. Blasius nije opravdan kao predikcija: $\delta_B$ je samo referenca. Potrebno je provjeriti profil brzine i prijelaz.
 :::
 ::::
 
 [Razina: T3]{.mf1-task-level}
 
-### Z6. Konvergencija rješenja na trima mrežama {#task-cfd-tri-mreze .unnumbered .unlisted}
+### Z6. Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
 
-Za Poiseuilleov paket iz `data/cfd/poiseuille_laminar` tri mreže imaju omjer koraka $h/h_f=4,2,1$, protoke $Q=(8{,}16814;\ 7{,}93252;\ 7{,}87362)\cdot10^{-6}\ \text{m}^3/\text{s}$ i masene debalanse $(0{,}040;\ 0{,}010;\ 0{,}0025)\,\%$. Odredi opaženi red $p$, Richardsonovu ekstrapolaciju $Q_{ext}$ i fini $GCI$ uz faktor sigurnosti $F_s=1{,}25$. Zasebno izvijesti fini maseni debalans. Zatim u paketu `hydrofoil_experiment` provjeri postoje li reziduali, povijesti sila, masena bilanca i mjerna nesigurnost te obrazloži zašto se bez njih ne smije donijeti konačna validacijska presuda.
+Odaberi najgrublju mrežu koja zadovoljava oba kriterija: dovoljno malu procjenu diskretizacijske pogreške protoka i dopušten maseni debalans. Zatim razdvoji taj numerički zaključak od validacije modela prema neovisnim eksperimentalnim podatcima.
+
+Sintetički Poiseuilleov skup iz `data/cfd/poiseuille_laminar` prikazan je zaokruženo. Tri sustavno pročišćene mreže imaju $h/h_f=(4;\ 2;\ 1)$, protoke $Q=(8{,}16814;\ 7{,}93252;\ 7{,}87362)\cdot10^{-6}\ \text{m}^3/\text{s}$ i masene debalanse $(0{,}040;\ 0{,}010;\ 0{,}0025)\,\%$, redom od grube do fine. Računaj s ovdje ispisanim brojevima. Odredi opaženi red $p$, Richardsonovu ekstrapolaciju $Q_{ext}$ te $GCI_m$ i $GCI_f$ srednje i fine mreže uz $r=2$ i $F_s=1{,}25$. Za ovaj nastavni izbor zahtijeva se $GCI\le0{,}50\,\%$ i maseni debalans najviše $0{,}0050\,\%$.
+
+Zasebno u paketu `hydrofoil_experiment` provjeri postoje li reziduali, povijesti sila, masena bilanca i potpuna mjerna nesigurnost. Obrazloži zašto numerička konvergencija protoka u prvom slučaju ne zatvara validacijsku presudu za drugi.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-za $r=2$ koristi $p=\ln[(Q_c-Q_m)/(Q_m-Q_f)]/\ln r$, zatim $Q_{ext}=Q_f+(Q_f-Q_m)/(r^p-1)$ i $GCI_f=F_s|(Q_f-Q_m)/Q_f|/(r^p-1)$.
+
+Za monotoni niz koristi $p=\ln[(Q_c-Q_m)/(Q_m-Q_f)]/\ln r$ i $Q_{ext}=Q_f+(Q_f-Q_m)/(r^p-1)$. Zatim $GCI_f=F_s|(Q_f-Q_m)/Q_f|/(r^p-1)$; za $GCI_m$ zamijeni par $(Q_f,Q_m)$ parom $(Q_m,Q_c)$. Razlomke pretvori u postotke i provjeri oba uvjeta.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$p\approx2{,}000$, $Q_{ext}\approx7{,}85398\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_f\approx0{,}312\,\%$ i fini maseni debalans iznosi $0{,}0025\,\%$. Arhiva profila ne sadrži reziduale, povijesti monitoriranih sila, masenu bilancu ni potpuni mjerni budžet nesigurnosti; zato je korisna za usporedbu integralnih koeficijenata i mrežnog trenda, ali ne zatvara validacijsku presudu.
+$p\approx2{,}000$, $Q_{ext}\approx7{,}8540\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_m\approx1{,}237\,\%$ i $GCI_f\approx0{,}312\,\%$. Odabire se fina mreža: debalans je $0{,}0025\,\%$; srednja krši oba uvjeta, gruba maseni uvjet. Arhivi profila nedostaju reziduali, povijesti sila, masena bilanca i potpuni mjerni budžet nesigurnosti, pa konačna validacijska presuda nije moguća.
 :::
 ::::
 
@@ -395,7 +425,7 @@ $p\approx2{,}000$, $Q_{ext}\approx7{,}85398\cdot10^{-6}\ \text{m}^3/\text{s}$, $
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički pokus — profil, mreža i pogreška</p>
 
-Notebook `u12_poiseuille_konvergencija.ipynb` numerički integrira brzinski profil, uspoređuje ga s analitičkim protokom te na tri diskretizacije procjenjuje opaženu konvergenciju. Student prije računa predviđa znak pogreške, a poslije odvojeno izvještava modelnu i diskretizacijsku pogrešku.
+Notebook `u12_poiseuille_konvergencija.ipynb` provjerava laminarni režim i prianjanje, numerički integrira profil te uspoređuje protok s analitičkim rezultatom. Zasebno obrađuje mjerne nesigurnosti iz Z3, profile iz Z4 i izbor mreže prema podatcima iz Z6. Student prije računa predviđa trendove, a poslije razlikuje mjernu nesigurnost, diskretizacijsku pogrešku i valjanost modela.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u12_poiseuille_konvergencija.ipynb">Pokreni u pregledniku</a>

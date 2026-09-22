@@ -3,16 +3,16 @@
 Korisnikov cilj: redom urediti U12, U13, U14 i U15, zatim ponovno pregledati
 i urediti U01 i U02 prema pravilima primijenjenima do U11. Polazište je
 commit `0a4a0ac`; njegova GitHub objava potvrđena je kao uspješna.
-Zahtjev obuhvaća uređivanje i provjeru. Naknadnim zahtjevom za commit i push
-odobreno je spremanje trenutačnih radnih evidencija; time se revizija U12
-ni preostali koraci ne označavaju dovršenima.
+Zahtjev obuhvaća uređivanje i provjeru. Naknadnim zahtjevima za commit i push
+odobreno je spremanje trenutačnih izmjena i evidencija. Objavljivanje U12/U13
+ne označava dovršenima preostale korake.
 
 ## Redoslijed i dokaz dovršenosti
 
 | Korak | Kanonski izvor | Stvarni verifier | Status | Evidencija |
 | --- | --- | --- | --- | --- |
-| 1 | `source/u12_diferencijalni_opis_realnog_toka.md` | `verify_u12_real_flow.py` / U12.REAL | u tijeku | `revizija_u12.md` |
-| 2 | `source/u13_gubici_cjevovodi_crpke_i_mreze.md` | `verify_u13_integrated.py` / U13.CANON | slijedi | `revizija_u13.md` |
+| 1 | `source/u12_diferencijalni_opis_realnog_toka.md` | `verify_u12_real_flow.py` / U12.REAL | dovršeno; zajednički završni build slijedi | `revizija_u12.md` |
+| 2 | `source/u13_gubici_cjevovodi_crpke_i_mreze.md` | `verify_u13_integrated.py` / U13.CANON | dovršeno; zajednički završni build slijedi | `revizija_u13.md` |
 | 3 | `source/u14_turbostrojevi_i_propulzija.md` | `verify_u12.py` / U12 | slijedi | `revizija_u14.md` |
 | 4 | `source/u15_otvoreni_tokovi.md` | `verify_u15_open_channels.py` / U15 | slijedi | `revizija_u15.md` |
 | 5 | `source/u01_osnove_fluida_i_pascalov_zakon.md` | `verify_u01.py` / U01 | slijedi nakon U15 | dopuna `revizija_u01.md` |
@@ -34,3 +34,24 @@ provjera. Konačni zajednički HTML/PDF, D06 i JupyterLite moraju sadržavati
 sve završne izmjene; provjere strukture, numerike, notebookova, geometrije,
 poveznica i prikaza obuhvaćaju završno stanje cijele knjige. Djelomično
 dovršeno poglavlje ne znači dovršenost ovog cilja.
+
+## Provjera objave U12/U13 — 22. rujna 2026.
+
+Prije novoga commita i pusha provedena je provjera cijeloga trenutačnog
+izdanja prema koracima `publish.yml`:
+
+- numerika i manifest: 1257 rezultata, od toga 1062 golden i 195 invarijanti,
+  uz 22 dodatne fizikalne provjere i 90/90 ugovora zadataka; PASS;
+- struktura, Typst, normalizacija, generirani QR i D06 te CFD podatci: PASS;
+- svih 17 notebookova izvršeno od početka u čistim kernelima: PASS;
+- cijeli HTML (24 stranice) i nativni PDF (315 A4 stranica) obnovljeni;
+  PDF audit: PASS; aktualni PDF kopiran je u direktorij za preuzimanje;
+- JupyterLite obnovljen s aktualnim notebookovima, audit 17 notebookova
+  i četiri ekstenzije: PASS;
+- audit renderirane stranice: 220 slika, 1930 poveznica i 446 sklopivih
+  blokova; PASS;
+- preglednik: 72 prikaza na 320/768/1440 px, A4 ispis, WCAG i pokretanje
+  Pythona u JupyterLiteu do stanja Idle: PASS.
+
+Ovo je provjera objave trenutačnih izmjena U12/U13. Završna provjera cijeloga
+cilja ponovit će se nakon preostalih revizija U14, U15, U01 i U02.
