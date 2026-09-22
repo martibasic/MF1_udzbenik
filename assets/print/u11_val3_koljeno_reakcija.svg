@@ -1,201 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 520" role="img" aria-labelledby="u11v3kr_title u11v3kr_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u11v3kr_title">Horizontalno koljeno 90 stupnjeva i reakcija sidrenog nosaca</title>
-  <desc id="u11v3kr_desc">Tlocrt horizontalnog koljena: ulaz D1 180 mm s pretlakom 52 kPa i brzinom 1,77 m/s, izlaz D2 120 mm s pretlakom 18 kPa i brzinom 3,98 m/s. Sila fluida na koljeno: Fx = 1402 N udesno, Fy = 383 N prema dolje, rezultanta 1,45 kN. Desno panel s jednadzbama kolicine gibanja.</desc>
-
-  <defs>
-    <linearGradient id="u11v3kr_voda_h" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
-    <linearGradient id="u11v3kr_voda_v" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
-
-    <!-- Marker: sila (crvena) -->
-    <marker id="u11v3kr_fmark" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
-    </marker>
-    <!-- Marker: rezultanta (ljubicasta) -->
-    <marker id="u11v3kr_rmark" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#6c3082" />
-    </marker>
-    <!-- Marker: brzina (zelena) -->
-    <marker id="u11v3kr_vmark" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
-    </marker>
-    <!-- Marker: tlak (plava) -->
-    <marker id="u11v3kr_pmark" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
-    </marker>
-    <!-- Marker: kota -->
-    <marker id="u11v3kr_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-    <marker id="u11v3kr_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-    <!-- Marker: os (siva) -->
-    <marker id="u11v3kr_axis" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#5a6a78" />
-    </marker>
-  </defs>
-
-  <!-- pozadina -->
-  <rect x="0" y="0" width="940" height="520" fill="#ffffff" />
-
-  <!-- ===================== LIJEVI PANEL: TLOCRT KOLJENA ===================== -->
-  <rect x="16" y="20" width="500" height="484" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-  <!-- =====================
-       GEOMETRIJA KOLJENA (pomaknuta nize radi naslova)
-       Ulazni cjevovod (D1 = 180 mm => 80 px): horizontalno, centar y = 300
-         vanjske stijenke: y = 260 i y = 340; unutarnji fluid od y = 260..340
-         x: od 60 do 320 (zatim koljeno)
-       Izlazni cjevovod (D2 = 120 mm => 54 px): vertikalno, centar x = 346
-         vanjske stijenke: x = 319 i x = 373; unutarnji fluid od x = 319..373
-         y: od 110 do 340 (preklapa kut)
-       ===================== -->
-
-  <!-- Fluid plava: dvije rect koje zajedno tvore "L" kontinuitet -->
-  <rect x="60" y="260" width="263" height="80" fill="url(#u11v3kr_voda_h)" />
-  <rect x="319" y="110" width="54" height="232" fill="url(#u11v3kr_voda_v)" />
-
-  <!-- Vanjske stijenke -->
-  <!-- Gornja stijenka ulaza (proteze se do unutarnjeg ruba izlazne cijevi x=319) -->
-  <line x1="60" y1="260" x2="319" y2="260" stroke="#3a4a56" stroke-width="2.4" />
-  <!-- Donja stijenka ulaza (proteze se do desnog vanjskog ruba izlazne cijevi x=373 - to je vanjski kut) -->
-  <line x1="60" y1="340" x2="373" y2="340" stroke="#3a4a56" stroke-width="2.4" />
-  <!-- Lijeva stijenka izlazne cijevi: x=319, od y=260 (unutarnji kut) prema gore do y=110 -->
-  <line x1="319" y1="260" x2="319" y2="110" stroke="#3a4a56" stroke-width="2.4" />
-  <!-- Desna stijenka izlazne cijevi: x=373, od y=340 (vanjski kut) prema gore do y=110 -->
-  <line x1="373" y1="340" x2="373" y2="110" stroke="#3a4a56" stroke-width="2.4" />
-
-  <!-- Otvoreni krajevi (presjeci) - tankim isprekidanim -->
-  <line x1="60" y1="260" x2="60" y2="340" stroke="#3a4a56" stroke-width="2.0" stroke-dasharray="2,3" />
-  <line x1="319" y1="110" x2="373" y2="110" stroke="#3a4a56" stroke-width="2.0" stroke-dasharray="2,3" />
-
-  <!-- ===== KONTROLNI VOLUMEN (isprekidana siva) ===== -->
-  <path d="M 60 250 L 309 250 L 309 110 L 383 110 L 383 350 L 60 350 Z" fill="none" stroke="#7a8a96" stroke-width="1.4" stroke-dasharray="8,5" />
-  <!-- ===== PRESJEK 1 (ulaz, lijevo) ===== -->
-  <line x1="86" y1="252" x2="86" y2="348" stroke="#1a2530" stroke-width="1.4" stroke-dasharray="4,3" />
-  <circle cx="86" cy="300" r="3" fill="#1a2530" />
-  <!-- ===== PRESJEK 2 (izlaz, gore) ===== -->
-  <line x1="312" y1="140" x2="380" y2="140" stroke="#1a2530" stroke-width="1.4" stroke-dasharray="4,3" />
-  <circle cx="346" cy="140" r="3" fill="#1a2530" />
-  <!-- ===== STRELICE BRZINA (zelena) ===== -->
-  <!-- v1: udesno -->
-  <line x1="106" y1="300" x2="194" y2="300" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u11v3kr_vmark)" />
-  <!-- v2: prema gore -->
-  <line x1="346" y1="226" x2="346" y2="156" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u11v3kr_vmark)" />
-  <!-- ===== STRELICE PRETLAKA (plava) ===== -->
-  <!-- p_M1 na presjeku 1: dvije strelice prema +x -->
-  <line x1="62" y1="278" x2="80" y2="278" stroke="#1565c0" stroke-width="2" marker-end="url(#u11v3kr_pmark)" />
-  <line x1="62" y1="322" x2="80" y2="322" stroke="#1565c0" stroke-width="2" marker-end="url(#u11v3kr_pmark)" />
-  <!-- p_M2 na presjeku 2: dvije strelice prema dolje (na izlaz) -->
-  <line x1="328" y1="120" x2="328" y2="138" stroke="#1565c0" stroke-width="2" marker-end="url(#u11v3kr_pmark)" />
-  <line x1="364" y1="120" x2="364" y2="138" stroke="#1565c0" stroke-width="2" marker-end="url(#u11v3kr_pmark)" />
-  <!-- ===== KOTE PROMJERA ===== -->
-  <!-- D1 (vertikalna kota lijevo od ulaza) -->
-  <!-- D2 (horizontalna kota iznad izlaza) -->
-  <!-- ===== KOORDINATNI SUSTAV (x, y) ===== -->
-  <line x1="410" y1="450" x2="470" y2="450" stroke="#5a6a78" stroke-width="1.8" marker-end="url(#u11v3kr_axis)" />
-  <line x1="410" y1="450" x2="410" y2="390" stroke="#5a6a78" stroke-width="1.8" marker-end="url(#u11v3kr_axis)" />
-  <circle cx="410" cy="450" r="2.5" fill="#5a6a78" />
-  <!-- ===== SILE FLUIDA NA KOLJENO (od cvora u unutarnjem kutu/centru elbow-a) ===== -->
-  <circle cx="346" cy="300" r="3.5" fill="#1a2530" />
-
-  <!-- F_x = 1402 N: prema desno - duza -->
-  <line x1="346" y1="300" x2="474" y2="300" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u11v3kr_fmark)" />
-  <!-- F_y = 383 N: prema dolje, kraca (proporcionalno) -->
-  <line x1="346" y1="300" x2="346" y2="370" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u11v3kr_fmark)" />
-  <!-- F_R rezultanta: kut ~15.3 deg (atan(383/1402)) - dijagonala -->
-  <line x1="346" y1="300" x2="474" y2="335" stroke="#6c3082" stroke-width="2.6" marker-end="url(#u11v3kr_rmark)" />
-  <!-- ===== TEKSTUALNI BLOK NA DNU LIJEVOG PANELA ===== -->
-  <!-- Podaci -->
-  <line x1="36" y1="478" x2="496" y2="478" stroke="#d4e3f0" stroke-width="1" />
-  <!-- ===================== DESNI PANEL: JEDNADZBE ===================== -->
-  <rect x="528" y="20" width="396" height="484" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
-  <!-- header bar -->
-  <rect x="528" y="20" width="396" height="34" rx="12" fill="#1565c0" />
-  <rect x="528" y="40" width="396" height="14" fill="#1565c0" />
-  <!-- KORAK 1: povrsine i brzine -->
-  <rect x="544" y="68" width="364" height="76" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1" />
-  <rect x="544" y="68" width="5" height="76" rx="2" fill="#1565c0" />
-  <!-- KORAK 2: maseni protok -->
-  <rect x="544" y="152" width="364" height="58" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1" />
-  <rect x="544" y="152" width="5" height="58" rx="2" fill="#1565c0" />
-  <!-- KORAK 3: Smjer x -->
-  <rect x="544" y="218" width="364" height="84" rx="8" fill="#fdeff0" stroke="#e7b9bd" stroke-width="1" />
-  <rect x="544" y="218" width="5" height="84" rx="2" fill="#c0392b" />
-  <!-- KORAK 4: Smjer y -->
-  <rect x="544" y="310" width="364" height="84" rx="8" fill="#fdeff0" stroke="#e7b9bd" stroke-width="1" />
-  <rect x="544" y="310" width="5" height="84" rx="2" fill="#c0392b" />
-  <!-- KORAK 5: rezultanta -->
-  <rect x="544" y="402" width="364" height="58" rx="8" fill="#f3ecf6" stroke="#c9b3d4" stroke-width="1" />
-  <rect x="544" y="402" width="5" height="58" rx="2" fill="#6c3082" />
-  <!-- Sazetak (italic) -->
-  <line x1="60" y1="260" x2="36" y2="260" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="60" y1="340" x2="36" y2="340" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="42" y1="260" x2="42" y2="340" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u11v3kr_dimL)" marker-end="url(#u11v3kr_dim)" />
-  <line x1="319" y1="110" x2="319" y2="86" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="373" y1="110" x2="373" y2="86" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="319" y1="94" x2="373" y2="94" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u11v3kr_dimL)" marker-end="url(#u11v3kr_dim)" />
-  <text x="36" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Tlocrt koljena 90° (horizontalna ravnina)</text>
-
-  <text x="100" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">granica kontrolnog volumena (KV)</text>
-
-  <text x="80" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">1</text>
-
-  <text x="386" y="145" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">2</text>
-
-  <text x="116" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e8449"><tspan font-style="italic" font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1,77 m/s</text>
-
-  <text x="252" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e8449"><tspan font-style="italic" font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 3,98 m/s</text>
-
-  <text x="106" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="start" fill="#1565c0"><tspan font-style="italic" font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M1</tspan> = 52 kPa</text>
-
-  <text x="396" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0"><tspan font-style="italic" font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M2</tspan> = 18 kPa</text>
-
-  <text x="476" y="454" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#5a6a78">x</text>
-  <text x="398" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#5a6a78">y</text>
-  <text x="416" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(horizontalna ravnina)</text>
-
-  <text x="390" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#c0392b"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = 1402 N</text>
-
-  <text x="352" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#c0392b"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = 383 N</text>
-
-  <text x="478" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#6c3082" text-anchor="end"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 1,45 kN</text>
-
-  <text x="40" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Sila fluida na koljeno: <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> udesno (+<tspan font-style="italic">x</tspan>) i <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> prema dolje (−<tspan font-style="italic">y</tspan>).</text>
-  <text x="40" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Sidreni nosač preuzima jednaku i suprotnu silu (ulijevo i prema gore).</text>
-
-  <text x="40" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-weight="700">Zadano:</tspan>  ρ = 998 kg/m³,  <tspan font-style="italic">Q</tspan> = 0,045 m³/s,  <tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 180 mm,  <tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 120 mm</text>
-
-  <text x="726" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Jednadžba količine gibanja po osima</text>
-
-  <text x="558" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">1. Površine i brzine iz kontinuiteta</text>
-  <text x="726" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = π<tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>²/4 = 2,545·10⁻² m²,  <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 1,131·10⁻² m²</text>
-  <text x="726" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = <tspan font-style="italic">Q</tspan>/<tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1,77 m/s,  <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = <tspan font-style="italic">Q</tspan>/<tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 3,98 m/s</text>
-
-  <text x="558" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">2. Maseni protok</text>
-  <text x="726" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">m</tspan>̇ = ρ<tspan font-style="italic">Q</tspan> = 998·0,045 = 44,9 kg/s</text>
-
-  <text x="558" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">3. Smjer x — izlaz nema komponentu po x</text>
-  <text x="726" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M1</tspan>·<tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> + <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">st,x</tspan> = <tspan font-style="italic">m</tspan>̇(0 − <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>)</text>
-  <text x="726" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = +1402 N  (fluid → koljeno, udesno)</text>
-
-  <text x="558" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">4. Smjer y — ulaz nema komponentu po y</text>
-  <text x="726" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530">−<tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M2</tspan>·<tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> + <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">st,y</tspan> = <tspan font-style="italic">m</tspan>̇(<tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> − 0)</text>
-  <text x="726" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = −383 N  (fluid → koljeno, prema dolje)</text>
-
-  <text x="558" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#6c3082">5. Rezultanta sile fluida na koljeno</text>
-  <text x="726" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#6c3082"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = √(1402² + 383²) ≈ 1453 N ≈ 1,45 kN</text>
-
-  <text x="726" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">Nosač preuzima istu silu u suprotnom smjeru (ulijevo i prema gore).</text>
-<text x="42" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-  <text x="42.0" y="374.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#b7600c">= 180 mm</text>
-
-  <text x="346" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 120 mm</text>
-
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 520" role="img" aria-labelledby="u11v3_title u11v3_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<title id="u11v3_title">Sila vode na sidreno koljeno</title><desc id="u11v3_desc">Tlocrt: tok dolazi iz pozitivnog smjera x i skreće prema pozitivnom y. Promjeri 180 i 120 milimetara nacrtani su u istom mjerilu. Tlak na izlazu djeluje prema unutra, suprotno izlaznoj brzini. Izdvojeni crveni dijagram prikazuje komponente sile fluida na koljeno, bez određivanja hvatišta.</desc>
+<defs>
+<linearGradient id="u11v3_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u11v3_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u11v3_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u11v3_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u11v3_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u11v3_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u11v3_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="940" height="520" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
+Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
+Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
+<defs>
+<marker id="u11v3_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
+<marker id="u11v3_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
+<marker id="u11v3_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u11v3_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
+</defs>
+<text x="28" y="49" font-size="17" fill="#1a2530" text-anchor="start" font-weight="700">Koljeno 90° · tlocrt</text>
+<path id="u11v3_pipeouter0" d="M54 238.0 L225.000000 238.000000 L225.857495 238.125850 L226.719382 238.236655 L227.585396 238.332299 L228.455271 238.412673 L229.328735 238.477670 L230.205517 238.527190 L231.085343 238.561138 L231.967933 238.579421 L232.853010 238.581955 L233.740292 238.568657 L234.629494 238.539452 L235.520332 238.494269 L236.412517 238.433041 L237.305760 238.355709 L238.199771 238.262217 L239.094257 238.152515 L239.988923 238.026557 L240.883474 237.884305 L241.777612 237.725724 L242.671041 237.550785 L243.563460 237.359466 L244.454569 237.151748 L245.344067 236.927619 L246.231653 236.687073 L247.117022 236.430108 L247.999873 236.156728 L248.879900 235.866943 L249.756800 235.560770 L250.630269 235.238229 L251.500000 234.899346 L252.365690 234.544156 L253.227033 234.172695 L254.083724 233.785008 L254.935460 233.381145 L255.781935 232.961160 L256.622847 232.525114 L257.457890 232.073075 L258.286764 231.605115 L259.109165 231.121311 L259.924793 230.621748 L260.733348 230.106515 L261.534531 229.575707 L262.328044 229.029426 L263.113589 228.467777 L263.890873 227.890873 L264.659601 227.298831 L265.419481 226.691776 L266.170223 226.069836 L266.911539 225.433145 L267.643141 224.781844 L268.364745 224.116078 L269.076068 223.435999 L269.776831 222.741762 L270.466755 222.033531 L271.145565 221.311473 L271.812988 220.575759 L272.468754 219.826569 L273.112595 219.064086 L273.744247 218.288499 L274.363448 217.500000 L274.969939 216.698790 L275.563465 215.885071 L276.143774 215.059055 L276.710617 214.220953 L277.263749 213.370986 L277.802927 212.509378 L278.327915 211.636357 L278.838476 210.752156 L279.334381 209.857015 L279.815403 208.951175 L280.281319 208.034885 L280.731912 207.108396 L281.166966 206.171965 L281.586272 205.225852 L281.989624 204.270324 L282.376821 203.305648 L282.747666 202.332099 L283.101967 201.349954 L283.439538 200.359496 L283.760196 199.361008 L284.063763 198.354781 L284.350066 197.341108 L284.618939 196.320285 L284.870218 195.292613 L285.103747 194.258396 L285.319373 193.217941 L285.516950 192.171559 L285.696336 191.119563 L285.857396 190.062270 L286.000000 189.000000 V101" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M54 238.0 L225.000000 238.000000 L225.857495 238.125850 L226.719382 238.236655 L227.585396 238.332299 L228.455271 238.412673 L229.328735 238.477670 L230.205517 238.527190 L231.085343 238.561138 L231.967933 238.579421 L232.853010 238.581955 L233.740292 238.568657 L234.629494 238.539452 L235.520332 238.494269 L236.412517 238.433041 L237.305760 238.355709 L238.199771 238.262217 L239.094257 238.152515 L239.988923 238.026557 L240.883474 237.884305 L241.777612 237.725724 L242.671041 237.550785 L243.563460 237.359466 L244.454569 237.151748 L245.344067 236.927619 L246.231653 236.687073 L247.117022 236.430108 L247.999873 236.156728 L248.879900 235.866943 L249.756800 235.560770 L250.630269 235.238229 L251.500000 234.899346 L252.365690 234.544156 L253.227033 234.172695 L254.083724 233.785008 L254.935460 233.381145 L255.781935 232.961160 L256.622847 232.525114 L257.457890 232.073075 L258.286764 231.605115 L259.109165 231.121311 L259.924793 230.621748 L260.733348 230.106515 L261.534531 229.575707 L262.328044 229.029426 L263.113589 228.467777 L263.890873 227.890873 L264.659601 227.298831 L265.419481 226.691776 L266.170223 226.069836 L266.911539 225.433145 L267.643141 224.781844 L268.364745 224.116078 L269.076068 223.435999 L269.776831 222.741762 L270.466755 222.033531 L271.145565 221.311473 L271.812988 220.575759 L272.468754 219.826569 L273.112595 219.064086 L273.744247 218.288499 L274.363448 217.500000 L274.969939 216.698790 L275.563465 215.885071 L276.143774 215.059055 L276.710617 214.220953 L277.263749 213.370986 L277.802927 212.509378 L278.327915 211.636357 L278.838476 210.752156 L279.334381 209.857015 L279.815403 208.951175 L280.281319 208.034885 L280.731912 207.108396 L281.166966 206.171965 L281.586272 205.225852 L281.989624 204.270324 L282.376821 203.305648 L282.747666 202.332099 L283.101967 201.349954 L283.439538 200.359496 L283.760196 199.361008 L284.063763 198.354781 L284.350066 197.341108 L284.618939 196.320285 L284.870218 195.292613 L285.103747 194.258396 L285.319373 193.217941 L285.516950 192.171559 L285.696336 191.119563 L285.857396 190.062270 L286.000000 189.000000 V101" fill="none" stroke="url(#u11v3_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u11v3_pipeouter1" d="M334.0 101 L334.000000 189.000000 L334.116712 190.904639 L334.200104 192.813352 L334.250071 194.725554 L334.266516 196.640659 L334.249352 198.558080 L334.198504 200.477225 L334.113907 202.397503 L333.995505 204.318319 L333.843255 206.239078 L333.657122 208.159182 L333.437083 210.078034 L333.183125 211.995033 L332.895245 213.909580 L332.573453 215.821074 L332.217767 217.728914 L331.828216 219.632498 L331.404843 221.531225 L330.947696 223.424493 L330.456838 225.311701 L329.932343 227.192249 L329.374292 229.065537 L328.782779 230.930965 L328.157911 232.787935 L327.499800 234.635851 L326.808575 236.474118 L326.084370 238.302142 L325.327335 240.119330 L324.537625 241.925094 L323.715411 243.718846 L322.860871 245.500000 L321.974194 247.267974 L321.055581 249.022189 L320.105242 250.762067 L319.123399 252.487034 L318.110282 254.196522 L317.066134 255.889962 L315.991206 257.566792 L314.885760 259.226452 L313.750069 260.868389 L312.584415 262.492050 L311.389090 264.096890 L310.164397 265.682367 L308.910648 267.247945 L307.628165 268.793091 L306.317280 270.317280 L304.978334 271.819989 L303.611678 273.300703 L302.217672 274.758913 L300.796686 276.194114 L299.349100 277.605807 L297.875301 278.993502 L296.375687 280.356713 L294.850664 281.694962 L293.300646 283.007775 L291.726059 284.294688 L290.127333 285.555243 L288.504911 286.788988 L286.859242 287.995481 L285.190783 289.174285 L283.500000 290.324972 L281.787367 291.447122 L280.053365 292.540321 L278.298485 293.604166 L276.523222 294.638260 L274.728082 295.642216 L272.913577 296.615655 L271.080224 297.558206 L269.228552 298.469507 L267.359092 299.349206 L265.472384 300.196960 L263.568974 301.012434 L261.649416 301.795303 L259.714267 302.545251 L257.764094 303.261974 L255.799466 303.945173 L253.820962 304.594564 L251.829162 305.209870 L249.824656 305.790824 L247.808035 306.337169 L245.779899 306.848661 L243.740849 307.325063 L241.691494 307.766150 L239.632446 308.171708 L237.564321 308.541532 L235.487741 308.875429 L233.403330 309.173216 L231.311716 309.434722 L229.213533 309.659786 L227.109414 309.848258 L225.000000 310.000000 H54" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M334.0 101 L334.000000 189.000000 L334.116712 190.904639 L334.200104 192.813352 L334.250071 194.725554 L334.266516 196.640659 L334.249352 198.558080 L334.198504 200.477225 L334.113907 202.397503 L333.995505 204.318319 L333.843255 206.239078 L333.657122 208.159182 L333.437083 210.078034 L333.183125 211.995033 L332.895245 213.909580 L332.573453 215.821074 L332.217767 217.728914 L331.828216 219.632498 L331.404843 221.531225 L330.947696 223.424493 L330.456838 225.311701 L329.932343 227.192249 L329.374292 229.065537 L328.782779 230.930965 L328.157911 232.787935 L327.499800 234.635851 L326.808575 236.474118 L326.084370 238.302142 L325.327335 240.119330 L324.537625 241.925094 L323.715411 243.718846 L322.860871 245.500000 L321.974194 247.267974 L321.055581 249.022189 L320.105242 250.762067 L319.123399 252.487034 L318.110282 254.196522 L317.066134 255.889962 L315.991206 257.566792 L314.885760 259.226452 L313.750069 260.868389 L312.584415 262.492050 L311.389090 264.096890 L310.164397 265.682367 L308.910648 267.247945 L307.628165 268.793091 L306.317280 270.317280 L304.978334 271.819989 L303.611678 273.300703 L302.217672 274.758913 L300.796686 276.194114 L299.349100 277.605807 L297.875301 278.993502 L296.375687 280.356713 L294.850664 281.694962 L293.300646 283.007775 L291.726059 284.294688 L290.127333 285.555243 L288.504911 286.788988 L286.859242 287.995481 L285.190783 289.174285 L283.500000 290.324972 L281.787367 291.447122 L280.053365 292.540321 L278.298485 293.604166 L276.523222 294.638260 L274.728082 295.642216 L272.913577 296.615655 L271.080224 297.558206 L269.228552 298.469507 L267.359092 299.349206 L265.472384 300.196960 L263.568974 301.012434 L261.649416 301.795303 L259.714267 302.545251 L257.764094 303.261974 L255.799466 303.945173 L253.820962 304.594564 L251.829162 305.209870 L249.824656 305.790824 L247.808035 306.337169 L245.779899 306.848661 L243.740849 307.325063 L241.691494 307.766150 L239.632446 308.171708 L237.564321 308.541532 L235.487741 308.875429 L233.403330 309.173216 L231.311716 309.434722 L229.213533 309.659786 L227.109414 309.848258 L225.000000 310.000000 H54" fill="none" stroke="url(#u11v3_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+<defs><linearGradient id="u11v3_pipefield" gradientUnits="userSpaceOnUse" x1="0" y1="101" x2="0" y2="310.0"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u11v3_pipefluid" d="M54 238.0 L225.000000 238.000000 L225.857495 238.125850 L226.719382 238.236655 L227.585396 238.332299 L228.455271 238.412673 L229.328735 238.477670 L230.205517 238.527190 L231.085343 238.561138 L231.967933 238.579421 L232.853010 238.581955 L233.740292 238.568657 L234.629494 238.539452 L235.520332 238.494269 L236.412517 238.433041 L237.305760 238.355709 L238.199771 238.262217 L239.094257 238.152515 L239.988923 238.026557 L240.883474 237.884305 L241.777612 237.725724 L242.671041 237.550785 L243.563460 237.359466 L244.454569 237.151748 L245.344067 236.927619 L246.231653 236.687073 L247.117022 236.430108 L247.999873 236.156728 L248.879900 235.866943 L249.756800 235.560770 L250.630269 235.238229 L251.500000 234.899346 L252.365690 234.544156 L253.227033 234.172695 L254.083724 233.785008 L254.935460 233.381145 L255.781935 232.961160 L256.622847 232.525114 L257.457890 232.073075 L258.286764 231.605115 L259.109165 231.121311 L259.924793 230.621748 L260.733348 230.106515 L261.534531 229.575707 L262.328044 229.029426 L263.113589 228.467777 L263.890873 227.890873 L264.659601 227.298831 L265.419481 226.691776 L266.170223 226.069836 L266.911539 225.433145 L267.643141 224.781844 L268.364745 224.116078 L269.076068 223.435999 L269.776831 222.741762 L270.466755 222.033531 L271.145565 221.311473 L271.812988 220.575759 L272.468754 219.826569 L273.112595 219.064086 L273.744247 218.288499 L274.363448 217.500000 L274.969939 216.698790 L275.563465 215.885071 L276.143774 215.059055 L276.710617 214.220953 L277.263749 213.370986 L277.802927 212.509378 L278.327915 211.636357 L278.838476 210.752156 L279.334381 209.857015 L279.815403 208.951175 L280.281319 208.034885 L280.731912 207.108396 L281.166966 206.171965 L281.586272 205.225852 L281.989624 204.270324 L282.376821 203.305648 L282.747666 202.332099 L283.101967 201.349954 L283.439538 200.359496 L283.760196 199.361008 L284.063763 198.354781 L284.350066 197.341108 L284.618939 196.320285 L284.870218 195.292613 L285.103747 194.258396 L285.319373 193.217941 L285.516950 192.171559 L285.696336 191.119563 L285.857396 190.062270 L286.000000 189.000000 V101 H334.0 L334.000000 189.000000 L334.116712 190.904639 L334.200104 192.813352 L334.250071 194.725554 L334.266516 196.640659 L334.249352 198.558080 L334.198504 200.477225 L334.113907 202.397503 L333.995505 204.318319 L333.843255 206.239078 L333.657122 208.159182 L333.437083 210.078034 L333.183125 211.995033 L332.895245 213.909580 L332.573453 215.821074 L332.217767 217.728914 L331.828216 219.632498 L331.404843 221.531225 L330.947696 223.424493 L330.456838 225.311701 L329.932343 227.192249 L329.374292 229.065537 L328.782779 230.930965 L328.157911 232.787935 L327.499800 234.635851 L326.808575 236.474118 L326.084370 238.302142 L325.327335 240.119330 L324.537625 241.925094 L323.715411 243.718846 L322.860871 245.500000 L321.974194 247.267974 L321.055581 249.022189 L320.105242 250.762067 L319.123399 252.487034 L318.110282 254.196522 L317.066134 255.889962 L315.991206 257.566792 L314.885760 259.226452 L313.750069 260.868389 L312.584415 262.492050 L311.389090 264.096890 L310.164397 265.682367 L308.910648 267.247945 L307.628165 268.793091 L306.317280 270.317280 L304.978334 271.819989 L303.611678 273.300703 L302.217672 274.758913 L300.796686 276.194114 L299.349100 277.605807 L297.875301 278.993502 L296.375687 280.356713 L294.850664 281.694962 L293.300646 283.007775 L291.726059 284.294688 L290.127333 285.555243 L288.504911 286.788988 L286.859242 287.995481 L285.190783 289.174285 L283.500000 290.324972 L281.787367 291.447122 L280.053365 292.540321 L278.298485 293.604166 L276.523222 294.638260 L274.728082 295.642216 L272.913577 296.615655 L271.080224 297.558206 L269.228552 298.469507 L267.359092 299.349206 L265.472384 300.196960 L263.568974 301.012434 L261.649416 301.795303 L259.714267 302.545251 L257.764094 303.261974 L255.799466 303.945173 L253.820962 304.594564 L251.829162 305.209870 L249.824656 305.790824 L247.808035 306.337169 L245.779899 306.848661 L243.740849 307.325063 L241.691494 307.766150 L239.632446 308.171708 L237.564321 308.541532 L235.487741 308.875429 L233.403330 309.173216 L231.311716 309.434722 L229.213533 309.659786 L227.109414 309.848258 L225.000000 310.000000 H54 Z" fill="url(#u11v3_pipefield)" stroke="none" stroke-width="1.8" />
+<path id="u11v3_pipewall0" d="M54 238.0 L225.000000 238.000000 L225.857495 238.125850 L226.719382 238.236655 L227.585396 238.332299 L228.455271 238.412673 L229.328735 238.477670 L230.205517 238.527190 L231.085343 238.561138 L231.967933 238.579421 L232.853010 238.581955 L233.740292 238.568657 L234.629494 238.539452 L235.520332 238.494269 L236.412517 238.433041 L237.305760 238.355709 L238.199771 238.262217 L239.094257 238.152515 L239.988923 238.026557 L240.883474 237.884305 L241.777612 237.725724 L242.671041 237.550785 L243.563460 237.359466 L244.454569 237.151748 L245.344067 236.927619 L246.231653 236.687073 L247.117022 236.430108 L247.999873 236.156728 L248.879900 235.866943 L249.756800 235.560770 L250.630269 235.238229 L251.500000 234.899346 L252.365690 234.544156 L253.227033 234.172695 L254.083724 233.785008 L254.935460 233.381145 L255.781935 232.961160 L256.622847 232.525114 L257.457890 232.073075 L258.286764 231.605115 L259.109165 231.121311 L259.924793 230.621748 L260.733348 230.106515 L261.534531 229.575707 L262.328044 229.029426 L263.113589 228.467777 L263.890873 227.890873 L264.659601 227.298831 L265.419481 226.691776 L266.170223 226.069836 L266.911539 225.433145 L267.643141 224.781844 L268.364745 224.116078 L269.076068 223.435999 L269.776831 222.741762 L270.466755 222.033531 L271.145565 221.311473 L271.812988 220.575759 L272.468754 219.826569 L273.112595 219.064086 L273.744247 218.288499 L274.363448 217.500000 L274.969939 216.698790 L275.563465 215.885071 L276.143774 215.059055 L276.710617 214.220953 L277.263749 213.370986 L277.802927 212.509378 L278.327915 211.636357 L278.838476 210.752156 L279.334381 209.857015 L279.815403 208.951175 L280.281319 208.034885 L280.731912 207.108396 L281.166966 206.171965 L281.586272 205.225852 L281.989624 204.270324 L282.376821 203.305648 L282.747666 202.332099 L283.101967 201.349954 L283.439538 200.359496 L283.760196 199.361008 L284.063763 198.354781 L284.350066 197.341108 L284.618939 196.320285 L284.870218 195.292613 L285.103747 194.258396 L285.319373 193.217941 L285.516950 192.171559 L285.696336 191.119563 L285.857396 190.062270 L286.000000 189.000000 V101" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u11v3_pipewall1" d="M334.0 101 L334.000000 189.000000 L334.116712 190.904639 L334.200104 192.813352 L334.250071 194.725554 L334.266516 196.640659 L334.249352 198.558080 L334.198504 200.477225 L334.113907 202.397503 L333.995505 204.318319 L333.843255 206.239078 L333.657122 208.159182 L333.437083 210.078034 L333.183125 211.995033 L332.895245 213.909580 L332.573453 215.821074 L332.217767 217.728914 L331.828216 219.632498 L331.404843 221.531225 L330.947696 223.424493 L330.456838 225.311701 L329.932343 227.192249 L329.374292 229.065537 L328.782779 230.930965 L328.157911 232.787935 L327.499800 234.635851 L326.808575 236.474118 L326.084370 238.302142 L325.327335 240.119330 L324.537625 241.925094 L323.715411 243.718846 L322.860871 245.500000 L321.974194 247.267974 L321.055581 249.022189 L320.105242 250.762067 L319.123399 252.487034 L318.110282 254.196522 L317.066134 255.889962 L315.991206 257.566792 L314.885760 259.226452 L313.750069 260.868389 L312.584415 262.492050 L311.389090 264.096890 L310.164397 265.682367 L308.910648 267.247945 L307.628165 268.793091 L306.317280 270.317280 L304.978334 271.819989 L303.611678 273.300703 L302.217672 274.758913 L300.796686 276.194114 L299.349100 277.605807 L297.875301 278.993502 L296.375687 280.356713 L294.850664 281.694962 L293.300646 283.007775 L291.726059 284.294688 L290.127333 285.555243 L288.504911 286.788988 L286.859242 287.995481 L285.190783 289.174285 L283.500000 290.324972 L281.787367 291.447122 L280.053365 292.540321 L278.298485 293.604166 L276.523222 294.638260 L274.728082 295.642216 L272.913577 296.615655 L271.080224 297.558206 L269.228552 298.469507 L267.359092 299.349206 L265.472384 300.196960 L263.568974 301.012434 L261.649416 301.795303 L259.714267 302.545251 L257.764094 303.261974 L255.799466 303.945173 L253.820962 304.594564 L251.829162 305.209870 L249.824656 305.790824 L247.808035 306.337169 L245.779899 306.848661 L243.740849 307.325063 L241.691494 307.766150 L239.632446 308.171708 L237.564321 308.541532 L235.487741 308.875429 L233.403330 309.173216 L231.311716 309.434722 L229.213533 309.659786 L227.109414 309.848258 L225.000000 310.000000 H54" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<line id="u11v3_section1" x1="54" y1="231" x2="54" y2="317" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="68" y="225" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">1</text>
+<line id="u11v3_section2" x1="280" y1="101" x2="340" y2="101" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="354" y="106" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">2</text>
+<path d="M96 274 L184 274" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u11v3_v)"/>
+<text x="140.0" y="265" font-size="12" fill="#1e8449" text-anchor="middle">v₁ = 1,77 m/s</text>
+<path d="M305 205 L305 129" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u11v3_v)"/>
+<text x="305.0" y="120" font-size="12" fill="#1e8449" text-anchor="middle">v₂</text>
+<path id="u11v3_pressure1" d="M65 294 L103 294" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u11v3_pressureMarker)"/>
+<path id="u11v3_pressure2" d="M323 109 L323 143" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u11v3_pressureMarker)"/>
+<text x="67" y="205" font-size="13" fill="#1565c0" text-anchor="start">pM1 = 52 kPa</text>
+<text x="348" y="144" font-size="13" fill="#1565c0" text-anchor="start">pM2 = 18 kPa</text>
+<line x1="25" y1="238" x2="35" y2="238" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="25" y1="310" x2="35" y2="310" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u11v3_D1" d="M30 238 L30 310" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u11v3_dim)" marker-end="url(#u11v3_dim)"/>
+<text x="59" y="337" font-size="13" fill="#b7600c" text-anchor="start">D₁ = 180 mm</text>
+<line x1="286" y1="73" x2="286" y2="83" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="334" y1="73" x2="334" y2="83" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u11v3_D2" d="M286 78 L334 78" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u11v3_dim)" marker-end="url(#u11v3_dim)"/>
+<text x="310.0" y="95" font-size="11" fill="#b7600c" text-anchor="middle"></text>
+<text x="345" y="77" font-size="13" fill="#b7600c" text-anchor="start">D₂ = 120 mm</text>
+<path d="M446 285 L478 285" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u11v3_axisMarker)"/>
+<text x="486" y="289" font-size="13" fill="#3a4a56" text-anchor="middle">x</text>
+<path d="M446 285 L446 253" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u11v3_axisMarker)"/>
+<text x="446" y="244" font-size="13" fill="#3a4a56" text-anchor="middle">y</text>
+<path id="u11v3_forcex" d="M78 410 L181.748 410" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u11v3_forceMarker)"/>
+<path id="u11v3_forcey" d="M78 410 L78 438.342" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u11v3_forceMarker)"/>
+<path id="u11v3_forceresultant" d="M78 410 L181.748 438.342" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u11v3_forceMarker)"/>
+<text x="74" y="393" font-size="12" fill="#c0392b" text-anchor="start">Fluid → koljeno</text>
+<text x="222" y="420" font-size="13" fill="#c0392b" text-anchor="start">Fₓ &gt; 0, Fᵧ &lt; 0</text>
+<text x="222" y="443" font-size="13" fill="#1e8449" text-anchor="start">Reakcija nosača: R = −F</text>
+<text x="48" y="484" font-size="13" fill="#1a2530" text-anchor="start">Q = 45 L/s; tlakovi su neovisni zadani podatci.</text>
+<rect x="542" y="28" width="370" height="34" rx="7" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="727.0" y="51" font-size="15" fill="white" text-anchor="middle" font-weight="700">Bilanca za vodu u koljenu</text>
+<rect x="542" y="77" width="370" height="58" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="542" y="77" width="4" height="58" rx="0" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+<text x="557" y="98" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">Brzine iz kontinuiteta</text>
+<text x="557" y="122" font-size="13" fill="#1a2530" text-anchor="start">v₁ ≈ 1,77 m/s; v₂ ≈ 3,98 m/s</text>
+<rect x="542" y="147" width="370" height="80" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="542" y="147" width="4" height="80" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="557" y="168" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Sila fluida na koljeno</text>
+<text x="557" y="192" font-size="13" fill="#1a2530" text-anchor="start">Fₓ = pM1 A₁ + ρ Q v₁</text>
+<text x="557" y="214" font-size="13" fill="#1a2530" text-anchor="start">Fᵧ = −pM2 A₂ − ρ Q v₂</text>
+<rect x="542" y="239" width="370" height="80" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="542" y="239" width="4" height="80" rx="0" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+<text x="557" y="260" font-size="13" fill="#c0392b" text-anchor="start" font-weight="700">Rezultat i smjerovi</text>
+<text x="557" y="284" font-size="13" fill="#1a2530" text-anchor="start">Fₓ ≈ +1402 N; Fᵧ ≈ −383 N</text>
+<text x="557" y="306" font-size="13" fill="#1a2530" text-anchor="start">|F| ≈ 1453 N</text>
+<rect x="542" y="331" width="370" height="58" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="542" y="331" width="4" height="58" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="557" y="352" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Energetska dosljednost</text>
+<text x="557" y="376" font-size="13" fill="#1a2530" text-anchor="start">Zadani podatci daju hL ≈ 2,825 m.</text>
+</g>
+</svg>

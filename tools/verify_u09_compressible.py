@@ -193,12 +193,25 @@ def exercise_ventilation_mach(
     return velocity / math.sqrt(gamma * gas_constant * temperature)
 
 
-def exercise_stagnation_temperature(
-    temperature: float = 240.0,
-    mach: float = 1.5,
+def exercise_acoustic_measurement(
+    length: float = 1.20,
+    downstream_time: float = 0.003,
+    upstream_time: float = 0.004,
     gamma: float = GAMMA_AIR,
-) -> float:
-    return temperature * (1.0 + (gamma - 1.0) * mach**2 / 2.0)
+    gas_constant: float = R_AIR,
+) -> dict[str, float]:
+    downstream_speed = length / downstream_time
+    upstream_speed = -length / upstream_time
+    sound_speed = (downstream_speed - upstream_speed) / 2.0
+    velocity = (downstream_speed + upstream_speed) / 2.0
+    return {
+        "sound_speed": sound_speed,
+        "velocity": velocity,
+        "temperature": sound_speed**2 / (gamma * gas_constant),
+        "mach": velocity / sound_speed,
+        "downstream_speed": downstream_speed,
+        "upstream_speed": upstream_speed,
+    }
 
 
 def exercise_critical_pressure_bar(
@@ -209,15 +222,48 @@ def exercise_critical_pressure_bar(
     )
 
 
+def convergent_exit(
+    back_pressure_bar: float,
+    reservoir_pressure_bar: float = 8.0,
+    gamma: float = GAMMA_AIR,
+) -> dict[str, float]:
+    critical = exercise_critical_pressure_bar(reservoir_pressure_bar, gamma)
+    exit_pressure = max(back_pressure_bar, critical)
+    mach = math.sqrt(2.0 / (gamma - 1.0) * (
+        (reservoir_pressure_bar / exit_pressure) ** ((gamma - 1.0) / gamma) - 1.0
+    ))
+    return {"exit_pressure_bar": exit_pressure, "mach": mach}
+
+
+def exercise_back_pressure_settings(
+    reservoir_gauge_bar: float = 7.0,
+    atmosphere_bar: float = 1.0,
+    back_gauge_i_bar: float = 4.0,
+    back_gauge_ii_bar: float = 3.0,
+) -> dict[str, float]:
+    reservoir_abs = reservoir_gauge_bar + atmosphere_bar
+    back_i = back_gauge_i_bar + atmosphere_bar
+    back_ii = back_gauge_ii_bar + atmosphere_bar
+    case_i = convergent_exit(back_i, reservoir_abs)
+    case_ii = convergent_exit(back_ii, reservoir_abs)
+    return {
+        "reservoir_abs_bar": reservoir_abs,
+        "critical_bar": exercise_critical_pressure_bar(reservoir_abs),
+        "back_i_bar": back_i,
+        "back_ii_bar": back_ii,
+        "exit_i_bar": case_i["exit_pressure_bar"],
+        "exit_ii_bar": case_ii["exit_pressure_bar"],
+        "mach_i": case_i["mach"],
+        "mach_ii": case_ii["mach"],
+    }
+
+
 def exercise_nozzle_identification(
     reservoir_pressure: float = 600_000.0,
     reservoir_temperature: float = 300.0,
     measured_mass_flow: float = 0.0595,
-    effective_area: float = 48.0e-6,
-    mass_flow_uncertainty: float = 0.0006,
-    pressure_uncertainty: float = 3_000.0,
-    temperature_uncertainty: float = 1.0,
-    area_uncertainty: float = 0.5e-6,
+    measured_area: float = 48.0e-6,
+    back_pressure: float = 100_000.0,
     gamma: float = GAMMA_AIR,
     gas_constant: float = R_AIR,
 ) -> dict[str, float]:
@@ -229,17 +275,12 @@ def exercise_nozzle_identification(
         ** ((gamma + 1.0) / (2.0 * (gamma - 1.0)))
     )
     discharge_area = measured_mass_flow / flow_factor
-    discharge_coefficient = discharge_area / effective_area
-    relative_uncertainty = math.sqrt(
-        (mass_flow_uncertainty / measured_mass_flow) ** 2
-        + (area_uncertainty / effective_area) ** 2
-        + (pressure_uncertainty / reservoir_pressure) ** 2
-        + (0.5 * temperature_uncertainty / reservoir_temperature) ** 2
-    )
+    discharge_coefficient = discharge_area / measured_area
     return {
         "discharge_area_mm2": discharge_area * 1.0e6,
         "discharge_coefficient": discharge_coefficient,
-        "coefficient_uncertainty": discharge_coefficient * relative_uncertainty,
+        "ideal_mass_flow": measured_area * flow_factor,
+        "back_pressure_ratio": back_pressure / reservoir_pressure,
     }
 
 
@@ -362,22 +403,26 @@ def verify() -> list[dict[str, str]]:
         "",
         abs_tol=0.0006,
     )
-    _check(
-        out,
-        "U09.COMP.Z3.T0",
-        exercise_stagnation_temperature(),
-        348.0,
-        "K",
-        abs_tol=0.5,
-    )
-    _check(
-        out,
-        "U09.COMP.Z4.pstar",
-        exercise_critical_pressure_bar(),
-        4.23,
-        "bar(abs)",
-        abs_tol=0.005,
-    )
+    z2_velocity = 2.0 / (math.pi * 0.20**2 / 4.0)
+    _check(out, "U09.COMP.Z2.v", z2_velocity, 63.66, "m/s", abs_tol=0.005)
+
+    z3 = exercise_acoustic_measurement()
+    _check(out, "U09.COMP.Z3.a", z3["sound_speed"], 350.0, "m/s", abs_tol=0.5)
+    _check(out, "U09.COMP.Z3.v", z3["velocity"], 50.0, "m/s", abs_tol=0.05)
+    _check(out, "U09.COMP.Z3.T", z3["temperature"], 304.9, "K", abs_tol=0.05)
+    _check(out, "U09.COMP.Z3.Ma", z3["mach"], 0.143, "", abs_tol=0.0005)
+    _check(out, "U09.COMP.Z3.c_AB", z3["downstream_speed"], 400.0, "m/s", abs_tol=0.5)
+    _check(out, "U09.COMP.Z3.c_BA", z3["upstream_speed"], -300.0, "m/s", abs_tol=0.5)
+
+    z4 = exercise_back_pressure_settings()
+    _check(out, "U09.COMP.Z4.p0", z4["reservoir_abs_bar"], 8.00, "bar(abs)", abs_tol=0.005)
+    _check(out, "U09.COMP.Z4.pstar", z4["critical_bar"], 4.226, "bar(abs)", abs_tol=0.0005)
+    _check(out, "U09.COMP.Z4.pb_I", z4["back_i_bar"], 5.00, "bar(abs)", abs_tol=0.005)
+    _check(out, "U09.COMP.Z4.pb_II", z4["back_ii_bar"], 4.00, "bar(abs)", abs_tol=0.005)
+    _check(out, "U09.COMP.Z4.pe_I", z4["exit_i_bar"], 5.00, "bar(abs)", abs_tol=0.005)
+    _check(out, "U09.COMP.Z4.pe_II", z4["exit_ii_bar"], 4.226, "bar(abs)", abs_tol=0.0005)
+    _check(out, "U09.COMP.Z4.Ma_I", z4["mach_i"], 0.848, "", abs_tol=0.0005)
+    _check(out, "U09.COMP.Z4.Ma_II", z4["mach_ii"], 1.0, "", abs_tol=1e-12)
 
     z5 = exercise_nozzle_identification()
     _check(
@@ -398,12 +443,13 @@ def verify() -> list[dict[str, str]]:
     )
     _check(
         out,
-        "U09.COMP.Z5.u_Cd",
-        z5["coefficient_uncertainty"],
-        0.014,
-        "",
-        abs_tol=0.0005,
+        "U09.COMP.Z5.mdot_ideal",
+        z5["ideal_mass_flow"],
+        0.0672,
+        "kg/s",
+        abs_tol=0.00005,
     )
+    _check(out, "U09.COMP.Z5.pb_p0", z5["back_pressure_ratio"], 0.167, "", abs_tol=0.0005)
 
     z6 = exercise_shock_measurements()
     _check(out, "U09.COMP.Z6.p2_p1", z6["static_ratio"], 4.500, "", abs_tol=0.0005)
@@ -524,8 +570,36 @@ def verify() -> list[dict[str, str]]:
         "normalni val nije dao M2<1, p2/p1>1 i p02/p01<1",
     )
 
-    # Z5 i dalje mora pokazati identifikacijsku degeneraciju: samo mjerenje
-    # masenog protoka određuje umnožak C_d A_eff, ne oba faktora.
+    _invariant(out, "U09.COMP.Z3.upstream_propagation",
+               0.0 < z3["velocity"] < z3["sound_speed"] and z3["upstream_speed"] < 0.0,
+               "Signal mora stizati uzvodno jer je v<a.")
+    quiet = exercise_acoustic_measurement(downstream_time=0.004, upstream_time=0.004)
+    _invariant(out, "U09.COMP.Z3.equal_times_at_rest",
+               abs(quiet["velocity"]) < 1e-12 and abs(quiet["sound_speed"] - 300.0) < 1e-12,
+               "Jednaka vremena u oba smjera moraju dati v=0 i a=L/t.")
+    reversed_flow = exercise_acoustic_measurement(downstream_time=0.004, upstream_time=0.003)
+    _invariant(out, "U09.COMP.Z3.reverse_flow",
+               abs(reversed_flow["temperature"] - z3["temperature"]) < 1e-10
+               and abs(reversed_flow["velocity"] + z3["velocity"]) < 1e-10,
+               "Zamjena smjerova mjerenja mora promijeniti predznak v, ali ne T.")
+
+    _invariant(out, "U09.COMP.Z4.regime_selection",
+               z4["back_i_bar"] > z4["critical_bar"] > z4["back_ii_bar"]
+               and z4["mach_i"] < 1.0 and z4["exit_ii_bar"] > z4["back_ii_bar"],
+               "I mora ostati podzvučan, a u II izlazni tlak nadmašiti protutlak.")
+    # Independent rho*v evaluation at the exit checks the plateau, not just M.
+    def exit_flux(back: float) -> float:
+        state = convergent_exit(back)
+        t = 300.0 / (1.0 + 0.2 * state["mach"]**2)
+        density = state["exit_pressure_bar"] * 1e5 / (R_AIR * t)
+        return density * state["mach"] * math.sqrt(GAMMA_AIR * R_AIR * t)
+    max_flux = choked_orifice(reservoir_pressure=8e5, throat_area=1.0)["mass_flow"]
+    _invariant(out, "U09.COMP.Z4.mass_flux_plateau",
+               exit_flux(5.0) < max_flux
+               and all(abs(exit_flux(back) / max_flux - 1.0) < 1e-12 for back in (4.0, 2.0, 0.1)),
+               "rho_e v_e mora prije prigušenja biti manji, a potom ostati na maksimumu.")
+
+    # Z5: samo mjerenje protoka određuje umnožak C_d A_g, ne oba faktora.
     area_1, discharge_1 = 1.0e-4, 0.80
     area_2, discharge_2 = 0.8e-4, 1.00
     mass_proxy_1 = area_1 * discharge_1
@@ -536,20 +610,15 @@ def verify() -> list[dict[str, str]]:
         abs(mass_proxy_1 - mass_proxy_2) < 1.0e-16
         and area_1 != area_2
         and discharge_1 != discharge_2,
-        "Jedno mjerenje mora ostaviti degeneraciju C_d*A_eff.",
+        "Jedno mjerenje mora ostaviti degeneraciju C_d*A_g.",
     )
-    required_independent_inputs = {
-        "geometry_or_area_calibration",
-        "mass_flow_uncertainty",
-        "p0_uncertainty",
-        "T0_uncertainty",
-    }
     _invariant(
         out,
-        "U09.COMP.Z5.required_inputs",
-        len(required_independent_inputs) == 4
-        and "geometry_or_area_calibration" in required_independent_inputs,
-        "Postupak mora zahtijevati neovisnu geometriju/kalibraciju i nesigurnosti.",
+        "U09.COMP.Z5.geometry_not_sufficient",
+        z5["back_pressure_ratio"] < critical_ratio
+        and z5["ideal_mass_flow"] > 0.0595
+        and 0.0 < z5["discharge_coefficient"] < 1.0,
+        "Izmjereni otvor sam ne smije objasniti izmjereni manji prigušeni protok.",
     )
 
     # Neovisne granične provjere Z6: p2/p1 monotono određuje M1>1, a ukupni
@@ -568,14 +637,33 @@ def verify() -> list[dict[str, str]]:
         0.0 < shock_20["total_pressure_ratio"] < shock_15["total_pressure_ratio"] < 1.0,
         "Normalni val mora smanjiti ukupni tlak, sve više pri većem M1.",
     )
-    required_shock_measurements = {"p1", "p2", "sensor_uncertainty", "p01", "p02"}
+    # Independent Rankine-Hugoniot form of the total-pressure ratio (NACA 1135).
+    m, g = z6["upstream_mach"], GAMMA_AIR
+    density_ratio = (g + 1.0) * m**2 / ((g - 1.0) * m**2 + 2.0)
+    direct_total_ratio = density_ratio ** (g / (g - 1.0)) * (
+        (g + 1.0) / (2.0 * g * m**2 - (g - 1.0))
+    ) ** (1.0 / (g - 1.0))
     _invariant(
         out,
-        "U09.COMP.Z6.required_measurements",
-        {"p1", "p2", "sensor_uncertainty"}.issubset(required_shock_measurements)
-        and {"p01", "p02"}.issubset(required_shock_measurements),
-        "Za broj i provjeru ukupnog tlaka nedostaju tlakovi i njihove nesigurnosti.",
+        "U09.COMP.Z6.independent_total_pressure_relation",
+        abs(direct_total_ratio - z6["theoretical_total_ratio"]) < 1e-12,
+        "Dva neovisna oblika relacije ukupnog tlaka moraju se slagati.",
     )
+    temperature_ratio = shock["pressure_ratio"] / density_ratio
+    speed_ratio = 1.0 / density_ratio
+    energy_before = 1.0 / (g - 1.0) + m**2 / 2.0
+    energy_after = temperature_ratio / (g - 1.0) + (m * speed_ratio)**2 / 2.0
+    _invariant(out, "U09.COMP.Z6.mass_momentum_energy",
+               abs((shock["pressure_ratio"] + g*m*m/density_ratio) - (1.0+g*m*m)) < 1e-12
+               and abs(energy_after - energy_before) < 1e-12,
+               "Skok mora očuvati tok količine gibanja i ukupnu entalpiju uz isti maseni protok.")
+    weak = normal_shock(1.0)
+    _invariant(out, "U09.COMP.Z6.vanishing_shock",
+               all(abs(value-1.0) < 1e-12 for value in weak.values()),
+               "Pri M1=1 skok nestaje: M2 i oba omjera tlakova moraju biti 1.")
+    _invariant(out, "U09.COMP.Z6.measurement_decision",
+               z6["normalized_difference"] < 1.0,
+               "Zadani podatci moraju zadovoljiti objavljeni kriterij kombinirane standardne nesigurnosti.")
 
     return out
 

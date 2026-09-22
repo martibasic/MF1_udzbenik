@@ -12,12 +12,17 @@ def _close(value, target, rel=TOL):
     return abs(value - target) / abs(target) <= rel
 
 
-def _check(out, rid, value, target, unit="", rel=TOL):
-    ok = _close(value, target, rel)
+def _check(out, rid, value, target, unit="", rel=TOL, abs_tol=None):
+    ok = math.isfinite(value) and (abs(value-target) <= abs_tol if abs_tol is not None else _close(value, target, rel))
     out.append({
         "id": rid, "status": "OK" if ok else "FAIL",
         "details": "" if ok else f"{value:.4g} vs {target:.4g} {unit}".strip(),
     })
+
+
+def _invariant(out, rid, condition, message):
+    out.append({"id": rid, "status": "OK" if condition else "FAIL",
+                "verification": "invariant", "details": "" if condition else message})
 
 
 def primjer_1_mlaz(m_dot=10.0, v=20.0):
@@ -166,29 +171,23 @@ def zadatak_3(D=0.100, Q=0.026, p_1=180e3, p_2=150e3, rho=998.0):
     return {"v": v, "F_x": F_x, "F_y": F_y, "F_R": F_R}
 
 
-def zadatak_4(D_1=0.120, D_2=0.080, D_3=0.070, Q_1=0.030,
-              Q_2=0.018, p_1=210e3, rho=998.0):
-    Q_3 = Q_1 - Q_2
-    A_1 = math.pi * D_1**2 / 4
-    A_2 = math.pi * D_2**2 / 4
-    A_3 = math.pi * D_3**2 / 4
-    v_1 = Q_1 / A_1
-    v_2 = Q_2 / A_2
-    v_3 = Q_3 / A_3
-    F_x = p_1 * A_1 + rho * Q_1 * v_1 - rho * Q_2 * v_2
-    F_y = -rho * Q_3 * v_3
-    F_R = math.hypot(F_x, F_y)
-    return {"Q_3": Q_3, "F_x": F_x, "F_y": F_y, "F_R": F_R}
+def zadatak_4(Q=0.016, v=18.0, b=0.20, e=0.35, rho=998.0):
+    F_x = rho * Q * v
+    F_y = 0.0
+    moment = b * F_y - e * F_x
+    return {"F_x": F_x, "F_y": F_y, "M_z": moment,
+            "R_x": -F_x, "R_y": -F_y, "M_Rz": -moment}
 
 
-def zadatak_5(D_1=0.110, D_2=0.045, Q=0.018, p_1=240e3,
-              rho=998.0):
-    A_1 = math.pi * D_1**2 / 4
-    A_2 = math.pi * D_2**2 / 4
-    v_1 = Q / A_1
-    v_2 = Q / A_2
-    F_bolts = p_1 * A_1 - rho * Q * (v_2 - v_1)
-    return {"v_1": v_1, "v_2": v_2, "F_bolts": F_bolts}
+def zadatak_5(d=0.040, v=20.0, u=8.0, rho=998.0):
+    A = math.pi * d**2 / 4
+    mdot = rho * A * (v-u)
+    F_x = mdot * (v-u)
+    v_2 = math.hypot(u, v-u)
+    optimum = v/3.0
+    return {"mdot_rel": mdot, "F_x": F_x, "power": F_x*u,
+            "v_2": v_2, "energy_power": mdot*(v*v-v_2*v_2)/2,
+            "u_opt": optimum, "power_max": rho*A*(v-optimum)**2*optimum}
 
 
 def zadatak_6(D_1=0.140, D_2=0.090, D_3=0.080, Q_1=0.040,
@@ -218,8 +217,8 @@ def zadatak_6(D_1=0.140, D_2=0.090, D_3=0.080, Q_1=0.040,
     for p_value in (p_1 - dp, p_1 + dp):
         for Q_value in (Q_1 * (1 - rel_Q), Q_1 * (1 + rel_Q)):
             for split_value in (split - dsplit, split + dsplit):
-                corner_forces.append(force(p_value, Q_value, split_value)[-1])
-    F_max = max(corner_forces)
+                corner_forces.append((force(p_value, Q_value, split_value)[-1],p_value,Q_value,split_value))
+    F_max, p_max, Q_max, split_max = max(corner_forces)
     required_rating = design_factor * F_max
     return {
         "Q_2": Q_2,
@@ -229,6 +228,9 @@ def zadatak_6(D_1=0.140, D_2=0.090, D_3=0.080, Q_1=0.040,
         "F_R": F_R,
         "F_max": F_max,
         "required_rating": required_rating,
+        "p_at_max": p_max,
+        "Q_at_max": Q_max,
+        "split_at_max": split_max,
     }
 
 
@@ -295,38 +297,88 @@ def verify():
     _check(out, "U11.P6.phi", r["phi"], 60.0, "deg", rel=0.01)
 
     r = zadatak_1()
-    _check(out, "U11.Z1.m_dot", r["m_dot"], 24.9, "kg/s", rel=0.02)
-    _check(out, "U11.Z1.F", r["F"], 548.0, "N", rel=0.02)
+    _check(out, "U11.Z1.m_dot", r["m_dot"], 24.90, "kg/s", abs_tol=0.005)
+    _check(out, "U11.Z1.F", r["F"], 547.8, "N", abs_tol=0.05)
+    _check(out, "U11.Z1.R_x", -r["F"], -547.8, "N", abs_tol=0.05)
 
     r = zadatak_2()
-    _check(out, "U11.Z2.v", r["v"], 15.0, "m/s", rel=0.02)
-    _check(out, "U11.Z2.Q_Ls", r["Q"] * 1000, 20.7, "L/s", rel=0.02)
+    _check(out, "U11.Z2.v", r["v"], 14.97, "m/s", abs_tol=0.005)
+    _check(out, "U11.Z2.Q_Ls", r["Q"] * 1000, 20.74, "L/s", abs_tol=0.005)
 
     r = zadatak_3()
-    _check(out, "U11.Z3.v", r["v"], 3.31, "m/s", rel=0.02)
-    _check(out, "U11.Z3.F_x_kN", r["F_x"] / 1000, 1.50, "kN", rel=0.02)
-    _check(out, "U11.Z3.F_y_kN", r["F_y"] / 1000, -1.26, "kN", rel=0.02)
-    _check(out, "U11.Z3.F_R_kN", r["F_R"] / 1000, 1.96, "kN", rel=0.02)
+    _check(out, "U11.Z3.v", r["v"], 3.310, "m/s", abs_tol=0.0005)
+    _check(out, "U11.Z3.F_x_kN", r["F_x"] / 1000, 1.500, "kN", abs_tol=0.0005)
+    _check(out, "U11.Z3.F_y_kN", r["F_y"] / 1000, -1.264, "kN", abs_tol=0.0005)
+    _check(out, "U11.Z3.F_R_kN", r["F_R"] / 1000, 1.961, "kN", abs_tol=0.0005)
 
     r = zadatak_4()
-    _check(out, "U11.Z4.Q_3_Ls", r["Q_3"] * 1000, 12.0, "L/s")
-    _check(out, "U11.Z4.F_x_kN", r["F_x"] / 1000, 2.39, "kN", rel=0.02)
-    _check(out, "U11.Z4.F_y", r["F_y"], -37.0, "N", rel=0.05)
-    _check(out, "U11.Z4.F_R_kN", r["F_R"] / 1000, 2.39, "kN", rel=0.02)
+    _check(out, "U11.Z4.F_x", r["F_x"], 287.4, "N", abs_tol=0.05)
+    _check(out, "U11.Z4.F_y", r["F_y"], 0.0, "N", abs_tol=1e-12)
+    _check(out, "U11.Z4.M_z", r["M_z"], -100.6, "N m", abs_tol=0.05)
+    _check(out, "U11.Z4.R_x", r["R_x"], -287.4, "N", abs_tol=0.05)
+    _check(out, "U11.Z4.M_Rz", r["M_Rz"], 100.6, "N m", abs_tol=0.05)
 
     r = zadatak_5()
-    _check(out, "U11.Z5.v_1", r["v_1"], 1.89, "m/s", rel=0.02)
-    _check(out, "U11.Z5.v_2", r["v_2"], 11.3, "m/s", rel=0.02)
-    _check(out, "U11.Z5.F_bolts_kN", r["F_bolts"] / 1000, 2.11, "kN", rel=0.02)
+    _check(out, "U11.Z5.mdot_rel", r["mdot_rel"], 15.05, "kg/s", abs_tol=0.005)
+    _check(out, "U11.Z5.F_x", r["F_x"], 180.6, "N", abs_tol=0.05)
+    _check(out, "U11.Z5.power_kW", r["power"] / 1000, 1.445, "kW", abs_tol=0.0005)
+    _check(out, "U11.Z5.v_2", r["v_2"], 14.42, "m/s", abs_tol=0.005)
+    _check(out, "U11.Z5.u_opt", r["u_opt"], 6.667, "m/s", abs_tol=0.0005)
+    _check(out, "U11.Z5.power_max_kW", r["power_max"] / 1000, 1.486, "kW", abs_tol=0.0005)
 
     r = zadatak_6()
     _check(out, "U11.Z6.Q_2_Ls", r["Q_2"] * 1000, 24.0, "L/s")
     _check(out, "U11.Z6.Q_3_Ls", r["Q_3"] * 1000, 16.0, "L/s")
-    _check(out, "U11.Z6.F_x_kN", r["F_x"] / 1000, 2.84, "kN", rel=0.02)
-    _check(out, "U11.Z6.F_y", r["F_y"], -44.0, "N", rel=0.05)
-    _check(out, "U11.Z6.F_R_kN", r["F_R"] / 1000, 2.84, "kN", rel=0.02)
-    _check(out, "U11.Z6.F_max_kN", r["F_max"] / 1000, 2.92, "kN", rel=0.02)
-    _check(out, "U11.Z6.required_rating_kN", r["required_rating"] / 1000, 3.36, "kN", rel=0.02)
+    _check(out, "U11.Z6.F_x", r["F_x"], 2835.8, "N", abs_tol=0.05)
+    _check(out, "U11.Z6.F_y", r["F_y"], -44.0, "N", abs_tol=0.05)
+    _check(out, "U11.Z6.F_R", r["F_R"], 2836.2, "N", abs_tol=0.05)
+    _check(out, "U11.Z6.F_max", r["F_max"], 2918.3, "N", abs_tol=0.05)
+    _check(out, "U11.Z6.required_rating", r["required_rating"], 3356.1, "N", abs_tol=0.05)
+    _check(out, "U11.Z6.p_at_max_kPa", r["p_at_max"] / 1000, 190.0, "kPa", abs_tol=1e-10)
+    _check(out, "U11.Z6.Q_at_max_Ls", r["Q_at_max"] * 1000, 39.2, "L/s", abs_tol=1e-10)
+    _check(out, "U11.Z6.split_at_max", r["split_at_max"], 0.57, "", abs_tol=1e-12)
+
+    z4 = zadatak_4()
+    _invariant(out, "U11.Z4.moment_equilibrium", abs(z4["M_z"]+z4["M_Rz"])<1e-12
+               and abs(z4["F_x"]+z4["R_x"])<1e-12,"Uklještenje mora zatvoriti i silu i moment.")
+    _invariant(out, "U11.Z4.perpendicular_arm", zadatak_4(e=0)["M_z"]==0
+               and zadatak_4(b=0.8)["M_z"]==z4["M_z"],"Moment ovisi o e, ne o b.")
+    for u in (0.0,4.0,8.0,12.0,19.0,20.0):
+        z5 = zadatak_5(u=u)
+        _invariant(out, f"U11.Z5.energy_u{u:g}",abs(z5["power"]-z5["energy_power"])<1e-9,
+                   "Apsolutni tok kinetičke energije kroz pomični KV mora dati F*u.")
+    z5 = zadatak_5()
+    opt=z5["u_opt"]
+    _invariant(out, "U11.Z5.maximum", zadatak_5(u=0)["power"]==0
+               and zadatak_5(u=20)["power"]==0
+               and zadatak_5(u=opt-0.01)["power"]<z5["power_max"]
+               and zadatak_5(u=opt+0.01)["power"]<z5["power_max"]
+               and abs((20-opt)*(20-3*opt))<1e-12,
+               "Unutarnji maksimum i rubovi moraju odgovarati jednoj pomičnoj ploči.")
+    _invariant(out, "U11.Z5.relative_mass_balance",
+               abs(z5["mdot_rel"]+998*math.pi*.04**2/4*8-998*math.pi*.04**2/4*20)<1e-12,
+               "Razlika protoka sapnice i dotoka ploči mora odgovarati produljenju slobodnog mlaza.")
+
+    # A global sign proof over the complete independent parameter box.
+    # Fx=p*A1+rho*Q²*f(s), Fy=rho*Q²*g(s). F² grows with p and decreases
+    # with s (f'<0, g'>0, Fx>0, Fy<0). Bound its Q derivative from above.
+    A1,A2,A3=(math.pi*d*d/4 for d in (.14,.09,.08))
+    slo,shi=.57,.63
+    f=lambda s: 1/A1-s*s/A2-.5*(1-s)**2/A3
+    g=lambda s: -math.sin(math.pi/3)*(1-s)**2/A3
+    fprime=lambda s: -2*s/A2+(1-s)/A3
+    fx_min=180e3*A1+998*.0408**2*f(shi)
+    fy_abs_max=998*.0408**2*abs(g(slo))
+    q_derivative_upper=fx_min*f(slo)+fy_abs_max*abs(g(slo))
+    _invariant(out,"U11.Z6.global_monotonicity",fx_min>0 and f(slo)<0
+               and fprime(slo)<0 and fprime(shi)<0 and q_derivative_upper<0,
+               "Maksimum nad cijelim intervalima zahtijeva dokazane predznake promjene rezultante.")
+    _invariant(out,"U11.Z6.rating_selection",3000<r["required_rating"]<=3500,
+               "Samo veća ponuđena nosivost zadovoljava zadani statički kriterij.")
+    p3=primjer_3_koljeno()
+    h_loss=(52e3-18e3)/(998*9.81)+(p3["v_1"]**2-p3["v_2"]**2)/(2*9.81)
+    _check(out,"U11.P3.h_loss",h_loss,2.825,"m",abs_tol=0.0005)
+    _invariant(out,"U11.P3.positive_loss",h_loss>0,"Zadani tlakovi P3 zahtijevaju pozitivan energijski gubitak.")
 
     return out
 

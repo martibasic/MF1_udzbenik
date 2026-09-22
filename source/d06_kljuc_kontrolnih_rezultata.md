@@ -506,53 +506,61 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-brzina-zvuka-helium)
 
-**Sažetak.** Izračunaj brzinu zvuka u heliju pri $300\ \text{K}$ za $\gamma=1{,}667$ i $R=2077\ \text{J/(kg K)}$. Nacrtaj smjer širenja poremećaja.
+**Sažetak.** Helij miruje pri $T=300\ \text{K}$. Za $\gamma=1{,}667$ i $R=2077\ \text{J/(kg K)}$ izračunaj brzinu zvuka. Vrlo malen tlačni poremećaj nastaje u točki O: označi oba uzdužna smjera njegova širenja i predznake brzina prema osi $x$ sa skice.
 
-**Kontrolni rezultat ili kriterij.** $a\approx1019\ \text{m/s}$.
+**Smjernica postupka.** Temperatura u relaciji za brzinu zvuka mora biti apsolutna. Plin miruje, pa je laboratorij ujedno sustav mirovanja plina; smjer širenja nije zadan smjerom nekoga srednjeg toka.
+
+**Kontrolni rezultat ili kriterij.** $a\approx1019\ \text{m/s}$; desno je brzina $+a$, lijevo $-a$. Srednja brzina helija ostaje $v=0$; strelice prikazuju širenje poremećaja.
 
 ### Z2. Machov broj u ventilacijskom vodu {#key-task-mach-ventilacija .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-mach-ventilacija)
 
-**Sažetak.** Zrak pri $20\ ^\circ\text{C}$ struji vodom $D=0{,}20\ \text{m}$ protokom $2{,}0\ \text{m}^3/\text{s}$. Odredi $Ma$ i obrazloži izbor modela.
+**Sažetak.** Zrak pri $T=20\ ^\circ\text{C}$ struji ravnim kružnim vodom promjera $D=0{,}20\ \text{m}$. Lokalni volumenski protok pri tom stanju jest $Q=2{,}0\ \text{m}^3/\text{s}$, a ne protok preračunat na standardne uvjete. Uz $\gamma=1{,}4$ i…
 
-**Kontrolni rezultat ili kriterij.** $Ma\approx0{,}186$.
+**Smjernica postupka.** Iz promjera odredi površinu kružnoga presjeka, zatim primijeni $v=Q/A$ i definiciju Machova broja. Za brzinu zvuka pretvori temperaturu u kelvine.
 
-### Z3. Stagnacijska temperatura zraka {#key-task-stagnacijska-temperatura .unnumbered .unlisted}
+**Kontrolni rezultat ili kriterij.** $v\approx63{,}66\ \text{m/s}$ i $Ma\approx0{,}186$. Početna procjena konstantne gustoće zadovoljava zadani kriterij uz navedene pretpostavke; sam mali $Ma$ ne isključuje promjenu gustoće zbog grijanja ili velike promjene tlaka.
 
-[Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-stagnacijska-temperatura)
+### Z3. Akustičko mjerenje brzine i temperature {#key-task-akusticko-mjerenje-toka .unnumbered .unlisted}
 
-**Sažetak.** Za zrak pri $T=240\ \text{K}$ i $Ma=1{,}5$ izračunaj $T_0$. Zatim procijeni rezultat preko $v^2/(2c_p)$.
+[Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-akusticko-mjerenje-toka)
 
-**Kontrolni rezultat ili kriterij.** $T_0=348\ \text{K}$.
+**Sažetak.** U ravnom vodu zrak stacionarno i jednoliko struji od A prema B. Nepomične akustičke mjerne točke udaljene su $L=1{,}20\ \text{m}$. Malen signal putuje iz A u B za $t_{AB}=3{,}00\ \text{ms}$, a iz B u A za $t_{BA}=4{,}00\ \text{ms}$. To su…
 
-### Z4. Kritični tlak pri prigušenju protoka {#key-task-priguseni-protok .unnumbered .unlisted}
+**Smjernica postupka.** U laboratoriju nizvodni signal ima brzinu $v+a$, a uzvodni $v-a<0$. Zato je $L/t_{AB}=a+v$ i $L/t_{BA}=a-v$. Zbrajanjem i oduzimanjem razdvoji $a$ i $v$, pa tek onda iz zvučne brzine odredi temperaturu.
+
+**Kontrolni rezultat ili kriterij.** $v=50{,}0\ \text{m/s}$, $a=350\ \text{m/s}$, $T\approx304{,}9\ \text{K}$ i $Ma\approx0{,}143$. Laboratorijske brzine signala jesu $+400$ i $-300\ \text{m/s}$. Uzvodni signal stiže jer je $v<a$; nizvodno ga tok prenosi zajedno sa širenjem relativno prema plinu.
+
+### Z4. Protutlak i prigušenje konvergentne sapnice {#key-task-priguseni-protok .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-priguseni-protok)
 
-**Sažetak.** Odredi kritični nizvodni tlak za zrak iz spremnika pri $p_0=8\ \text{bar(abs)}$. Ne računaj kapacitet ventila.
+**Sažetak.** Velika mirna komora napaja konvergentnu sapnicu fiksne geometrije. Manometarski tlak komore jest $p_{0,M}=7{,}00\ \text{bar}$, a atmosferski $p_{atm}=1{,}00\ \text{bar(abs)}$. Razmotri dva stacionarna namještanja manometarskog protutlaka…
 
-**Kontrolni rezultat ili kriterij.** $p^*\approx4{,}23\ \text{bar(abs)}$.
+**Smjernica postupka.** Omjere tvori iz apsolutnih tlakova. Najmanji presjek konvergentne sapnice jest izlaz. Ako je $p_b>p^*$, vrijedi $p_e=p_b$ i Mach slijedi iz izentropskog omjera $p_0/p_e$. Pri prigušenju izlaz ima $Ma_e=1$ i $p_e=p^*$; daljnja prilagodba protutlaku odvija se izvan sapnice.
 
-### Z5. Model protoka kroz konvergentnu sapnicu {#key-task-sapnica-model .unnumbered .unlisted}
+**Kontrolni rezultat ili kriterij.** $p_0=8{,}00\ \text{bar(abs)}$, $p^*\approx4{,}226\ \text{bar(abs)}$. I: $p_b=p_e=5{,}00\ \text{bar(abs)}$, $Ma_e\approx0{,}848$, neprigušen tok. II: $p_b=4{,}00\ \text{bar(abs)}$, $p_e=p^*$, $Ma_e=1$, prigušen tok. Dodatno snižavanje $p_b$ u II ne povećava protok pri istim $p_0,T_0$ i geometriji.
+
+### Z5. Geometrija ili koeficijent protoka? {#key-task-sapnica-model .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-sapnica-model)
 
-**Sažetak.** U konvergentnoj sapnici za zrak izmjereni su $p_0=600\pm3\ \text{kPa(abs)}$, $T_0=300\pm1\ \text{K}$ i prigušeni maseni protok $\dot m=0{,}0595\pm0{,}0006\ \text{kg/s}$. Geometrijski otvor ima površinu $A_g=50{,}0\ \text{mm}^2$, a…
+**Sažetak.** Za nastavnu provjeru konvergentne sapnice zadani su sintetički podatci: $p_0=600\ \text{kPa(abs)}$, $T_0=300\ \text{K}$, $p_b=100\ \text{kPa(abs)}$ i $\dot m=0{,}0595\ \text{kg/s}$. Nazivna površina izlaza jest $A_n=50{,}0\ \text{mm}^2$…
 
-**Smjernica postupka.** napiši prigušeni protok kao $\dot m=C_dA_{eff}K(p_0,T_0)$ i najprije iz mjerenja odredi samo produkt $C_dA_{eff}$. Za propagaciju upotrijebi relativne osjetljivosti $+1$ na $\dot m$, $-1$ na $A_{eff}$, $-1$ na $p_0$ i $+1/2$ na $T_0$.
+**Smjernica postupka.** Najprije usporedi $p_b/p_0$ s kritičnim omjerom. Napiši prigušeni protok kao $\dot m=C_dA_gK(p_0,T_0)$. Protok određuje produkt; odvojeno mjerenje stvarne površine omogućuje procjenu koeficijenta. Nazivna površina nije mjerenje stvarnog prolaza.
 
-**Kontrolni rezultat ili kriterij.** $C_dA_{eff}\approx42{,}50\ \text{mm}^2$; uz neovisno kalibrirano $A_{eff}$ slijedi $C_d\approx0{,}885$ i $u(C_d)\approx0{,}014$. Bez neovisne geometrijske ili protokovne kalibracije mjerenje određuje samo produkt, pa su $A_{eff}$ i $C_d$ neidentifikabilni zasebno.
+**Kontrolni rezultat ili kriterij.** $p_b/p_0=0{,}167<0{,}528$; $C_dA_g\approx42{,}50\ \text{mm}^2$. Za $A_g=48{,}0\ \text{mm}^2$: $\dot m_{ideal}\approx0{,}0672\ \text{kg/s}$ i $C_d\approx0{,}885$. Sama razlika površine ne objašnjava manji protok. Bez optike poznat je samo produkt, ne svaki faktor. Veći otvor sam ne jamči $C_d=1$.
 
 ### Z6. Provjera podataka o udarnom valu {#key-task-udarni-val-podaci .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-udarni-val-podaci)
 
-**Sažetak.** U zračnom kanalu mjereni su apsolutni statički tlakovi neposredno prije i poslije približno normalnoga vala: $p_1=80{,}0\pm0{,}4\ \text{kPa}$ i $p_2=360{,}0\pm1{,}8\ \text{kPa}$. Pitot-mjerenja daju ukupne tlakove $p_{01}=626\pm4\…
+**Sažetak.** U nastavnom skupu sintetičkih podataka za stacionarni normalni val u zračnom kanalu statički priključci prije i poslije vala daju $p_1=80{,}0\pm0{,}4\ \text{kPa(abs)}$ i $p_2=360{,}0\pm1{,}8\ \text{kPa(abs)}$. Ukupni tlak prije vala…
 
-**Smjernica postupka.** iz $p_2/p_1=1+2\gamma(M_1^2-1)/(\gamma+1)$ najprije izoliraj $M_1$. Nesigurnost omjera statičkih tlakova propagiraj iz oba senzora; izmjereni omjer ukupnih tlakova usporedi s normalno-udarnom relacijom pri dobivenom $M_1$.
+**Smjernica postupka.** Izoliraj $M_1$ iz statičkog omjera. Za $r=p_2/p_1$ vrijedi $u(r)/r=\sqrt{(u(p_1)/p_1)^2+(u(p_2)/p_2)^2}$. Analogno računaj $u(r_0)$. Relaciju za $M_2$ poveži s lokalnim stagnacijskim omjerima i dobij $G(M_1)$. Primijeni $u(G)=|G'(M_1)|u(M_1)$ te $u(G-r_0)=\sqrt{u(G)^2+u(r_0)^2}$; derivaciju smiješ procijeniti središnjom razlikom.
 
-**Kontrolni rezultat ili kriterij.** $p_2/p_1=4{,}500$, $M_1=2{,}000\pm0{,}007$; teorijski $p_{02}/p_{01}=0{,}7209\pm0{,}0032$, a izmjereni omjer je $0{,}7204\pm0{,}0079$. Kombinirana standardna nesigurnost razlike iznosi $0{,}0085$, pa je normirana razlika samo oko $0{,}050$ i podaci su konzistentni s modelom normalnoga vala. Bez $p_{01}$ i $p_{02}$ statička mjerenja određuju $M_1$, ali ne mjere izravno pad ukupnog tlaka.
+**Kontrolni rezultat ili kriterij.** $M_1=2{,}000\pm0{,}007$; $G=0{,}7209\pm0{,}0032$; $r_0=0{,}7204\pm0{,}0079$; $u(G-r_0)=0{,}0085$. Normirana razlika $0{,}050<1$: podatci su konzistentni. Statički tlakovi sami daju modelsku procjenu, ne neovisno mjerenje gubitka ukupnog tlaka. Nadzvučna Pitotova sonda stvara vlastiti val i bez korekcije ne daje $p_{01}$.
 
 ## Količina i moment količine gibanja
 
@@ -560,61 +568,61 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-vodeni-mlaz-promjera-izlazi-iz-sapnice-brzinom)
 
-**Sažetak.** Vodeni mlaz promjera $d = 38\ \text{mm}$ izlazi iz sapnice brzinom $v = 22\ \text{m/s}$ i udara okomito na nepomičnu ravnu ploču. Odredi maseni protok i silu koju mlaz prenosi na ploču.
+**Sažetak.** Vodeni mlaz promjera $d=38\ \text{mm}$ i brzine $v=22\ \text{m/s}$ udara okomito na dovoljno veliku nepomičnu ploču. Sav se mlaz razlijeva uz ploču, pa je izlazna komponenta brzine u osi $x$ jednaka nuli. Tlak na slobodnim presjecima jest…
 
-**Smjernica postupka.** $\dot m = \rho Av$; za ravnu ploču izlazna komponenta u osi mlaza je nula pa je $F = \dot m v$.
+**Smjernica postupka.** Najprije $\dot m=\rho Av$. Bilanca $\dot m(v_{x,izl}-v_{x,ul})$ daje silu ploče na fluid. Za silu fluida na ploču primijeni treći Newtonov zakon, a za oslonac ravnotežu ploče.
 
-**Kontrolni rezultat ili kriterij.** $\dot m \approx 24{,}9\ \text{kg/s}$; $F \approx 548\ \text{N}$.
+**Kontrolni rezultat ili kriterij.** $\dot m\approx24{,}90\ \text{kg/s}$; $F_x\approx+547{,}8\ \text{N}$, $R_x\approx-547{,}8\ \text{N}$. Sila na ploču prati dolazni mlaz, a oslonac djeluje suprotno.
 
 ### Z2. Brzina mlaza iz izmjerene sile {#key-task-u11-mlaz-vode-udara-okomito-na-nepomicnu-plocu .unnumbered .unlisted}
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-mlaz-vode-udara-okomito-na-nepomicnu-plocu)
 
-**Sažetak.** Mlaz vode udara okomito na nepomičnu ploču i sila na ploču iznosi $F = 310\ \text{N}$. Promjer mlaza je $d = 42\ \text{mm}$. Odredi brzinu mlaza i volumenski protok.
+**Sažetak.** Mlaz vode promjera $d=42\ \text{mm}$ udara okomito na nepomičnu ploču. Zadana sila fluida na ploču jest $F_x=310\ \text{N}$; to je opterećenje od mlaza nakon oduzimanja ostalih opterećenja mjernog sklopa. Sav se mlaz razlijeva uz ploču i…
 
-**Smjernica postupka.** iz relacije $F = \rho A v^2$ vrati $v$, a zatim $Q = Av$.
+**Smjernica postupka.** Iz $F_x=\rho Av^2$ odredi pozitivni iznos brzine, a zatim $Q=Av$. Promjer se odnosi na slobodni mlaz koji udara u ploču.
 
-**Kontrolni rezultat ili kriterij.** $v \approx 15{,}0\ \text{m/s}$; $Q \approx 20{,}7\ \text{L/s}$.
+**Kontrolni rezultat ili kriterij.** $v\approx14{,}97\ \text{m/s}$; $Q\approx20{,}74\ \text{L/s}$.
 
 ### Z3. Sile na cijevno koljeno {#key-task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez .unnumbered .unlisted}
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez)
 
-**Sažetak.** Horizontalno koljeno zakreće tok vode za $90^\circ$ bez promjene promjera. Cijev ima promjer $D = 100\ \text{mm}$, protok je $Q = 0{,}026\ \text{m}^3/\text{s}$, ulazni manometarski tlak $p_1 = 180\ \text{kPa}$, a izlazni $p_2 = 150\…
+**Sažetak.** Horizontalno koljeno zakreće tok iz $+x$ u $+y$ za $90^\circ$, uz stalni promjer $D=100\ \text{mm}$. Protok jest $Q=0{,}026\ \text{m}^3/\text{s}$, a zadani tlakovi su $p_{M1}=180\ \text{kPa}$ i $p_{M2}=150\ \text{kPa}$. Ne pretpostavljaj…
 
-**Smjernica postupka.** iz $Q$ prvo dobij brzinu; zatim u x i y smjeru zbroji tlakove na presjecima i promjenu količine gibanja.
+**Smjernica postupka.** Brzina izlaza nema komponentu $x$, a brzina ulaza nema komponentu $y$. Tlačne sile na fluid usmjerene su prema unutrašnjosti kontrolnog volumena: u $+x$ na ulazu i u $-y$ na izlazu. Reakcija nosača na koljeno suprotna je sili fluida na koljeno.
 
-**Kontrolni rezultat ili kriterij.** $v \approx 3{,}31\ \text{m/s}$; komponente sile fluida na koljeno $F_x \approx 1{,}50\ \text{kN}$, $F_y \approx -1{,}26\ \text{kN}$; rezultanta $\approx 1{,}96\ \text{kN}$.
+**Kontrolni rezultat ili kriterij.** $v\approx3{,}310\ \text{m/s}$; $(F_x,F_y)\approx(+1{,}500,-1{,}264)\ \text{kN}$, $|\vec F|\approx1{,}961\ \text{kN}$. Reakcija nosača je $(R_x,R_y)\approx(-1{,}500,+1{,}264)\ \text{kN}$.
 
-### Z4. Sile na T-račvu {#key-task-u11-t-racva-prima-vodu-kroz-ulaz-promjera .unnumbered .unlisted}
+### Z4. Moment ekscentričnog mlaza {#key-task-moment-ekscentricnog-mlaza .unnumbered .unlisted}
 
-[Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-t-racva-prima-vodu-kroz-ulaz-promjera)
+[Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-moment-ekscentricnog-mlaza)
 
-**Sažetak.** T-račva prima vodu kroz ulaz promjera $D_1 = 120\ \text{mm}$ s protokom $Q_1 = 0{,}030\ \text{m}^3/\text{s}$. U vodoravni izlaz promjera $D_2 = 80\ \text{mm}$ odlazi $Q_2 = 0{,}018\ \text{m}^3/\text{s}$, a ostatak izlazi okomito prema…
+**Sažetak.** U horizontalnoj ravnini slobodni vodeni mlaz protoka $Q=16{,}0\ \text{L/s}$ i brzine $v=18{,}0\ \text{m/s}$ udara u nepomičnu ploču okomito na os $x$. Razlijevanje je simetrično oko osi mlaza i uklanja izlaznu komponentu brzine $x$…
 
-**Smjernica postupka.** kontinuitetom zatvori $Q_3$, zatim u svakoj osi napiši jednadžbu količine gibanja za cijelu račvu.
+**Smjernica postupka.** Količina gibanja daje $F_x=\rho Qv$, $F_y=0$. Za kruti sklop ploče i nosača upotrijebi $M_{O,z}=bF_y-eF_x$. Uklještenje prenosi i silu i moment; krak je okomita udaljenost od O do pravca djelovanja sile.
 
-**Kontrolni rezultat ili kriterij.** $Q_3 = 12\ \text{L/s}$; reakcija nosača $\approx 2{,}39\ \text{kN}$ (pretežno u osi ulaza), okomita komponenta $\approx 37\ \text{N}$.
+**Kontrolni rezultat ili kriterij.** $F_x\approx+287{,}4\ \text{N}$, $F_y=0$; $M_{O,z}\approx-100{,}6\ \text{N m}$ (u smjeru kazaljke). Oslonac daje $R_x\approx-287{,}4\ \text{N}$, $R_y=0$ i $M_{R,z}\approx+100{,}6\ \text{N m}$. Krak je $e=0{,}35\ \text{m}$, a ne $\sqrt{b^2+e^2}$. Promjena $b$ sama ne mijenja moment jer je $F_y=0$.
 
-### Z5. Sila na konvergentnu mlaznicu {#key-task-u11-konvergentna-mlaznica-ima-ulazni-promjer-izlazni-promjer .unnumbered .unlisted}
+### Z5. Mlaz na ploču koja se udaljava {#key-task-mlaz-na-pomicnu-plocu .unnumbered .unlisted}
 
-[Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-konvergentna-mlaznica-ima-ulazni-promjer-izlazni-promjer)
+[Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-mlaz-na-pomicnu-plocu)
 
-**Sažetak.** Konvergentna mlaznica ima ulazni promjer $D_1 = 110\ \text{mm}$, izlazni promjer $D_2 = 45\ \text{mm}$ i protok vode $Q = 0{,}018\ \text{m}^3/\text{s}$. Ulazni manometarski tlak iznosi $p_1 = 240\ \text{kPa}$, a mlaz izlazi u atmosferu.…
+**Sažetak.** Nepomična sapnica daje vodeni mlaz promjera $d=40\ \text{mm}$ i laboratorijske brzine $v=20{,}0\ \text{m/s}$. Jedna dovoljno velika ravna ploča, okomita na mlaz, jednoliko se udaljava brzinom $u=8{,}00\ \text{m/s}$ u smjeru $+x$.…
 
-**Smjernica postupka.** iz kontinuiteta dobij brzine u oba presjeka; zatim za unutarnji kontrolni volumen spoji tlak na ulazu i promjenu količine gibanja.
+**Smjernica postupka.** Dotok kroz pomičnu granicu određuje $v-u$. Apsolutna izlazna komponenta $x$ jest $u$, a relativni izlaz je tangencijalan i iznosa $v-u$. Snagu računaj kao $P=F_xu$ i kao $\dot m_{rel}(v^2-v_2^2)/2$. Maksimiziraj $u(v-u)^2$ na zadanom intervalu; provjeri i njegove rubove.
 
-**Kontrolni rezultat ili kriterij.** $v_1 \approx 1{,}89\ \text{m/s}$, $v_2 \approx 11{,}3\ \text{m/s}$; sila u vijcima prirubnice $\approx 2{,}11\ \text{kN}$.
+**Kontrolni rezultat ili kriterij.** $\dot m_{rel}\approx15{,}05\ \text{kg/s}$, $F_x\approx180{,}6\ \text{N}$, $P\approx1{,}445\ \text{kW}$. $v_2=\sqrt{u^2+(v-u)^2}\approx14{,}42\ \text{m/s}$ daje istu snagu iz energije. Maksimum: $u=v/3\approx6{,}667\ \text{m/s}$, $P_{max}\approx1{,}486\ \text{kW}$. Relativni dotok je manji od protoka sapnice jer se slobodni mlaz između sapnice i ploče produljuje.
 
 ### Z6. Sile na Y-račvu {#key-task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz .unnumbered .unlisted}
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz)
 
-**Sažetak.** Vodoravna Y-račva prima vodu kroz ulaz promjera $D_1 = 140\ \text{mm}$ pri protoku $Q_1 = 0{,}040\ \text{m}^3/\text{s}$ i ulaznom manometarskom tlaku $p_1 = 185\ \text{kPa}$. Šezdeset posto protoka odlazi ravno kroz izlaz promjera $D_2 =…
+**Sažetak.** Vodoravna Y-račva prima vodu u smjeru $+x$ kroz promjer $D_1=140\ \text{mm}$. Nominalni protok jest $Q_1=0{,}040\ \text{m}^3/\text{s}$, a manometarski tlak $p_{M1}=185\ \text{kPa}$. Udio $s=0{,}60$ odlazi ravno kroz $D_2=90\ \text{mm}$, a…
 
-**Smjernica postupka.** najprije iz zadanog udjela vrati $Q_2$ i $Q_3$, zatim preko presjeka dobij brzine u svim granama, a na kraju po osima $x$ i $y$ napiši jednadžbu količine gibanja uz ulaznu tlaknu silu. Za omotač nesigurnosti izračunaj rezultantu u rubnim kombinacijama $p_1$, $Q_1$ i udjela protoka; zbog kvadratne ovisnosti članova količine gibanja nije dovoljno samo uvećati nominalnu rezultantu za jedan postotak.
+**Smjernica postupka.** Iz $Q_2=sQ_1$ i $Q_3=(1-s)Q_1$ odredi brzine pa projiciraj izlaz 3 s $\cos60^\circ$ i $\sin60^\circ$. Provjeri smjer promjene rezultante s $p_{M1}$, $Q_1$ i $s$ u zadanim intervalima prije uporabe samo rubnih kombinacija. Traži maksimum sile, zatim primijeni zadani faktor; reakcija nosača ima suprotne komponente.
 
-**Kontrolni rezultat ili kriterij.** $Q_2 = 24\ \text{L/s}$, $Q_3 = 16\ \text{L/s}$; $F_x \approx 2{,}84\ \text{kN}$, $F_y \approx -44\ \text{N}$; rezultanta $\approx 2{,}84\ \text{kN}$. Rubne kombinacije daju najveću očekivanu rezultantu približno $2{,}92\ \text{kN}$. Zadani faktor daje kriterij od oko $3{,}36\ \text{kN}$, pa deklariranih $3{,}0\ \text{kN}$ ne zadovoljava taj pojedinačni kriterij, dok bi $3{,}5\ \text{kN}$ zadovoljilo samo tu usporedbu. Potpuni odabir traži zasebnu provjeru nosača, spojeva i svih kombinacija…
+**Kontrolni rezultat ili kriterij.** $(Q_2,Q_3)=(24,16)\ \text{L/s}$; $(F_x,F_y)\approx(2835{,}8,-44{,}0)\ \text{N}$, $|\vec F|\approx2836{,}2\ \text{N}$; $\vec R=-\vec F$. Maksimum $2918{,}3\ \text{N}$ nastaje pri $p_{M1}=190\ \text{kPa}$, $Q_1=39{,}2\ \text{L/s}$, $s=0{,}57$. Zahtjev $1{,}15F_{max}=3356{,}1\ \text{N}$: odabire se $3{,}5\ \text{kN}$; $3{,}0\ \text{kN}$ ne zadovoljava. Provjeren je samo zadani statički kriterij.
 
 ## Dimenzijska analiza i sličnost
 

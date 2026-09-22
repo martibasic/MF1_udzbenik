@@ -253,17 +253,28 @@ Diskretizacija val mora prikazati u konačnom broju ćelija, ali širina razmaza
 
 ## Zadaci za vježbu {#sec-kompresibilni-zadaci}
 
+![Skice za Z1–Z6: smjerovi zvučnog poremećaja, lokalni presjek voda, akustička mjerna duljina, izlaz konvergentne sapnice, stvarna površina otvora i mjerni presjeci oko udarnog vala.](../assets/print/u09_kompresibilni_vjezbe_skice.svg){#fig-vjezbe-kompresibilni-tok fig-align="center" fig-alt="Šest skica s otvorenim prolazima. Z3 razlikuje prijenos zvuka uzvodno i nizvodno. Z4 označuje izlaz sapnice i zaseban protutlak. Z6 prikazuje normalni val u otvorenom kanalu, statičke priključke i podzvučnu Pitotovu sondu."}
+
+U zadatcima plin promatraj kao kalorijski idealan. Brzina zvuka odnosi se na plin, a brzine i vremena prijelaza između nepomičnih točaka na laboratorij. Skice su shematske; veličina strelice sama ne zadaje iznos brzine. Šrafura označuje krutu stijenku, a isprekidana crta označeni presjek ili val, prema oznaci.
+
 ::::: {.mf1-vjezbe-list}
 
 ### Z1. Brzina zvuka u heliju {#task-brzina-zvuka-helium .unnumbered .unlisted}
 
-Izračunaj brzinu zvuka u heliju pri $300\ \text{K}$ za $\gamma=1{,}667$ i $R=2077\ \text{J/(kg K)}$. Nacrtaj smjer širenja poremećaja.
+Helij miruje pri $T=300\ \text{K}$. Za $\gamma=1{,}667$ i $R=2077\ \text{J/(kg K)}$ izračunaj brzinu zvuka. Vrlo malen tlačni poremećaj nastaje u točki O: označi oba uzdužna smjera njegova širenja i predznake brzina prema osi $x$ sa skice.
 
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+
+Temperatura u relaciji za brzinu zvuka mora biti apsolutna. Plin miruje, pa je laboratorij ujedno sustav mirovanja plina; smjer širenja nije zadan smjerom nekoga srednjeg toka.
+:::
+::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$a\approx1019\ \text{m/s}$.
+$a\approx1019\ \text{m/s}$; desno je brzina $+a$, lijevo $-a$. Srednja brzina helija ostaje $v=0$; strelice prikazuju širenje poremećaja.
 :::
 ::::
 
@@ -271,61 +282,87 @@ $a\approx1019\ \text{m/s}$.
 
 ### Z2. Machov broj u ventilacijskom vodu {#task-mach-ventilacija .unnumbered .unlisted}
 
-Zrak pri $20\ ^\circ\text{C}$ struji vodom $D=0{,}20\ \text{m}$ protokom $2{,}0\ \text{m}^3/\text{s}$. Odredi $Ma$ i obrazloži izbor modela.
+Zrak pri $T=20\ ^\circ\text{C}$ struji ravnim kružnim vodom promjera $D=0{,}20\ \text{m}$. Lokalni volumenski protok pri tom stanju jest $Q=2{,}0\ \text{m}^3/\text{s}$, a ne protok preračunat na standardne uvjete. Uz $\gamma=1{,}4$ i $R=287\ \text{J/(kg K)}$ odredi srednju brzinu i $Ma$. Za približno jednoliko strujanje, malo zagrijavanje i malu promjenu tlaka provjeri zadovoljava li početna procjena konstantne gustoće kriterij $Ma<0{,}3$.
 
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+
+Iz promjera odredi površinu kružnoga presjeka, zatim primijeni $v=Q/A$ i definiciju Machova broja. Za brzinu zvuka pretvori temperaturu u kelvine.
+:::
+::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$Ma\approx0{,}186$.
+$v\approx63{,}66\ \text{m/s}$ i $Ma\approx0{,}186$. Početna procjena konstantne gustoće zadovoljava zadani kriterij uz navedene pretpostavke; sam mali $Ma$ ne isključuje promjenu gustoće zbog grijanja ili velike promjene tlaka.
 :::
 ::::
 
 [Razina: T1]{.mf1-task-level}
 
-### Z3. Stagnacijska temperatura zraka {#task-stagnacijska-temperatura .unnumbered .unlisted}
+<span id="task-stagnacijska-temperatura"></span>
 
-Za zrak pri $T=240\ \text{K}$ i $Ma=1{,}5$ izračunaj $T_0$. Zatim procijeni rezultat preko $v^2/(2c_p)$.
+### Z3. Akustičko mjerenje brzine i temperature {#task-akusticko-mjerenje-toka .unnumbered .unlisted}
 
-:::: {.content-visible .mf1-answer-online when-format="html"}
-::: {.callout-tip collapse="true" data-answer-key="true"}
-### Kontrolni rezultat
-
-$T_0=348\ \text{K}$.
-:::
-::::
-
-[Razina: T2]{.mf1-task-level}
-
-### Z4. Kritični tlak pri prigušenju protoka {#task-priguseni-protok .unnumbered .unlisted}
-
-Odredi kritični nizvodni tlak za zrak iz spremnika pri $p_0=8\ \text{bar(abs)}$. Ne računaj kapacitet ventila.
-
-:::: {.content-visible .mf1-answer-online when-format="html"}
-::: {.callout-tip collapse="true" data-answer-key="true"}
-### Kontrolni rezultat
-
-$p^*\approx4{,}23\ \text{bar(abs)}$.
-:::
-::::
-
-[Razina: T2]{.mf1-task-level}
-
-### Z5. Model protoka kroz konvergentnu sapnicu {#task-sapnica-model .unnumbered .unlisted}
-
-U konvergentnoj sapnici za zrak izmjereni su $p_0=600\pm3\ \text{kPa(abs)}$, $T_0=300\pm1\ \text{K}$ i prigušeni maseni protok $\dot m=0{,}0595\pm0{,}0006\ \text{kg/s}$. Geometrijski otvor ima površinu $A_g=50{,}0\ \text{mm}^2$, a neovisna optička kalibracija efektivne površine daje $A_{eff}=48{,}0\pm0{,}5\ \text{mm}^2$. Za $\gamma=1{,}4$ i $R=287\ \text{J/(kg K)}$ odredi izmjereni umnožak $C_dA_{eff}$ i $C_d$, procijeni standardnu nesigurnost $u(C_d)$ neovisnom RSS-propagacijom te objasni zašto samo mjerenje $\dot m,p_0,T_0$ ne može razdvojiti premalu efektivnu površinu od $C_d<1$.
+U ravnom vodu zrak stacionarno i jednoliko struji od A prema B. Nepomične akustičke mjerne točke udaljene su $L=1{,}20\ \text{m}$. Malen signal putuje iz A u B za $t_{AB}=3{,}00\ \text{ms}$, a iz B u A za $t_{BA}=4{,}00\ \text{ms}$. To su vremena samog putovanja nakon korekcije kašnjenja elektronike. Zanemari refleksije i raspršenje te uzmi $\gamma=1{,}4$ i $R=287\ \text{J/(kg K)}$. Odredi brzinu toka $v$, brzinu zvuka $a$, statičku temperaturu $T$ i $Ma$. Objasni zašto je uzvodni prijenos moguć i zašto $L/t_{AB}$ nije sama brzina zvuka.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-napiši prigušeni protok kao $\dot m=C_dA_{eff}K(p_0,T_0)$ i najprije iz mjerenja odredi samo produkt $C_dA_{eff}$. Za propagaciju upotrijebi relativne osjetljivosti $+1$ na $\dot m$, $-1$ na $A_{eff}$, $-1$ na $p_0$ i $+1/2$ na $T_0$.
+
+U laboratoriju nizvodni signal ima brzinu $v+a$, a uzvodni $v-a<0$. Zato je $L/t_{AB}=a+v$ i $L/t_{BA}=a-v$. Zbrajanjem i oduzimanjem razdvoji $a$ i $v$, pa tek onda iz zvučne brzine odredi temperaturu.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$C_dA_{eff}\approx42{,}50\ \text{mm}^2$; uz neovisno kalibrirano $A_{eff}$ slijedi $C_d\approx0{,}885$ i $u(C_d)\approx0{,}014$. Bez neovisne geometrijske ili protokovne kalibracije mjerenje određuje samo produkt, pa su $A_{eff}$ i $C_d$ neidentifikabilni zasebno.
+$v=50{,}0\ \text{m/s}$, $a=350\ \text{m/s}$, $T\approx304{,}9\ \text{K}$ i $Ma\approx0{,}143$. Laboratorijske brzine signala jesu $+400$ i $-300\ \text{m/s}$. Uzvodni signal stiže jer je $v<a$; nizvodno ga tok prenosi zajedno sa širenjem relativno prema plinu.
+:::
+::::
+
+[Razina: T2]{.mf1-task-level}
+
+### Z4. Protutlak i prigušenje konvergentne sapnice {#task-priguseni-protok .unnumbered .unlisted}
+
+Velika mirna komora napaja konvergentnu sapnicu fiksne geometrije. Manometarski tlak komore jest $p_{0,M}=7{,}00\ \text{bar}$, a atmosferski $p_{atm}=1{,}00\ \text{bar(abs)}$. Razmotri dva stacionarna namještanja manometarskog protutlaka: $p_{b,M}^{(I)}=4{,}00\ \text{bar}$ i $p_{b,M}^{(II)}=3{,}00\ \text{bar}$. Za zrak uz $\gamma=1{,}4$ i izentropski tok do izlaza odredi kritični apsolutni tlak $p^*$, režim u oba slučaja te izlazne $p_e$ i $Ma_e$. Objasni može li se protok dalje povećavati snižavanjem protutlaka u slučaju II uz iste stagnacijske uvjete. Kapacitet se ne traži.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+
+Omjere tvori iz apsolutnih tlakova. Najmanji presjek konvergentne sapnice jest izlaz. Ako je $p_b>p^*$, vrijedi $p_e=p_b$ i Mach slijedi iz izentropskog omjera $p_0/p_e$. Pri prigušenju izlaz ima $Ma_e=1$ i $p_e=p^*$; daljnja prilagodba protutlaku odvija se izvan sapnice.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$p_0=8{,}00\ \text{bar(abs)}$, $p^*\approx4{,}226\ \text{bar(abs)}$. I: $p_b=p_e=5{,}00\ \text{bar(abs)}$, $Ma_e\approx0{,}848$, neprigušen tok. II: $p_b=4{,}00\ \text{bar(abs)}$, $p_e=p^*$, $Ma_e=1$, prigušen tok. Dodatno snižavanje $p_b$ u II ne povećava protok pri istim $p_0,T_0$ i geometriji.
+:::
+::::
+
+[Razina: T2]{.mf1-task-level}
+
+### Z5. Geometrija ili koeficijent protoka? {#task-sapnica-model .unnumbered .unlisted}
+
+Za nastavnu provjeru konvergentne sapnice zadani su sintetički podatci: $p_0=600\ \text{kPa(abs)}$, $T_0=300\ \text{K}$, $p_b=100\ \text{kPa(abs)}$ i $\dot m=0{,}0595\ \text{kg/s}$. Nazivna površina izlaza jest $A_n=50{,}0\ \text{mm}^2$, a neovisno optičko mjerenje stvarnog slobodnog presjeka daje $A_g=48{,}0\ \text{mm}^2$. U ovom zadatku zanemari mjerne nesigurnosti. Za zrak uz $\gamma=1{,}4$ i $R=287\ \text{J/(kg K)}$ koristi model $\dot m=C_d\dot m_{ideal}(A_g,p_0,T_0)$.
+
+Provjeri uvjet prigušenja i odredi produkt $C_dA_g$ koji slijedi iz protoka. Bi li samo manji stvarni otvor uz $C_d=1$ objasnio podatke? Izračunaj idealni protok kroz izmjereni otvor i pripadajući $C_d$. Objasni što bi se moglo zaključiti bez optičkog mjerenja i zašto zamjena nazivnim otvorom sama ne jamči idealni protok.
+
+:::: {.content-visible .mf1-hint-online when-format="html"}
+::: {.callout-note collapse="true" data-hint-key="true"}
+### Naputak
+
+Najprije usporedi $p_b/p_0$ s kritičnim omjerom. Napiši prigušeni protok kao $\dot m=C_dA_gK(p_0,T_0)$. Protok određuje produkt; odvojeno mjerenje stvarne površine omogućuje procjenu koeficijenta. Nazivna površina nije mjerenje stvarnog prolaza.
+:::
+::::
+:::: {.content-visible .mf1-answer-online when-format="html"}
+::: {.callout-tip collapse="true" data-answer-key="true"}
+### Kontrolni rezultat
+
+$p_b/p_0=0{,}167<0{,}528$; $C_dA_g\approx42{,}50\ \text{mm}^2$. Za $A_g=48{,}0\ \text{mm}^2$: $\dot m_{ideal}\approx0{,}0672\ \text{kg/s}$ i $C_d\approx0{,}885$. Sama razlika površine ne objašnjava manji protok. Bez optike poznat je samo produkt, ne svaki faktor. Veći otvor sam ne jamči $C_d=1$.
 :::
 ::::
 
@@ -333,25 +370,29 @@ $C_dA_{eff}\approx42{,}50\ \text{mm}^2$; uz neovisno kalibrirano $A_{eff}$ slije
 
 ### Z6. Provjera podataka o udarnom valu {#task-udarni-val-podaci .unnumbered .unlisted}
 
-U zračnom kanalu mjereni su apsolutni statički tlakovi neposredno prije i poslije približno normalnoga vala: $p_1=80{,}0\pm0{,}4\ \text{kPa}$ i $p_2=360{,}0\pm1{,}8\ \text{kPa}$. Pitot-mjerenja daju ukupne tlakove $p_{01}=626\pm4\ \text{kPa}$ i $p_{02}=451\pm4\ \text{kPa}$. Za $\gamma=1{,}4$ iz omjera $p_2/p_1$ procijeni $M_1$ i njegovu standardnu nesigurnost linearnom RSS-propagacijom. Zatim izračunaj teorijski $p_{02}/p_{01}$, usporedi ga s mjerenim omjerom i odluči jesu li podaci konzistentni unutar kombinirane standardne nesigurnosti. Navedi zašto se iz samih statičkih tlakova ne može eksperimentalno potvrditi gubitak ukupnog tlaka.
+U nastavnom skupu sintetičkih podataka za stacionarni normalni val u zračnom kanalu statički priključci prije i poslije vala daju $p_1=80{,}0\pm0{,}4\ \text{kPa(abs)}$ i $p_2=360{,}0\pm1{,}8\ \text{kPa(abs)}$. Ukupni tlak prije vala dobiva se neovisnim mjerenjem u velikoj mirnoj napojnoj komori: $p_{01}=626\pm4\ \text{kPa(abs)}$. Pretpostavi izentropski put od komore do presjeka 1, bez ranijeg vala. Podzvučna Pitotova sonda u presjeku 2, otvorom okrenuta uzvodno, daje $p_{02}=451\pm4\ \text{kPa(abs)}$. Zanemari poremećaj glavnog toka sondom i gubitke u mjernim vodovima. Sve oznake $\pm$ označuju male, međusobno neovisne standardne nesigurnosti mjerenja; $\gamma=1{,}4$ smatraj točnim.
+
+Iz omjera $p_2/p_1$ odredi $M_1$ i njegovu standardnu nesigurnost linearnom RSS-propagacijom. Izračunaj teorijski omjer $G=p_{02}/p_{01}$ i njegovu nesigurnost, usporedi ga s izravno mjerenim omjerom $r_0$ te odluči jesu li konzistentni prema kriteriju $|G-r_0|\leq u(G-r_0)$. Izračunaj normiranu razliku. Objasni zašto sami statički tlakovi ne predstavljaju neovisnu mjernu potvrdu pada ukupnog tlaka i zašto obična nekorigirana Pitotova sonda ispred vala ne bi izravno dala $p_{01}$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-iz $p_2/p_1=1+2\gamma(M_1^2-1)/(\gamma+1)$ najprije izoliraj $M_1$. Nesigurnost omjera statičkih tlakova propagiraj iz oba senzora; izmjereni omjer ukupnih tlakova usporedi s normalno-udarnom relacijom pri dobivenom $M_1$.
+
+Izoliraj $M_1$ iz statičkog omjera. Za $r=p_2/p_1$ vrijedi $u(r)/r=\sqrt{(u(p_1)/p_1)^2+(u(p_2)/p_2)^2}$. Analogno računaj $u(r_0)$. Relaciju za $M_2$ poveži s lokalnim stagnacijskim omjerima i dobij $G(M_1)$. Primijeni $u(G)=|G'(M_1)|u(M_1)$ te $u(G-r_0)=\sqrt{u(G)^2+u(r_0)^2}$; derivaciju smiješ procijeniti središnjom razlikom.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$p_2/p_1=4{,}500$, $M_1=2{,}000\pm0{,}007$; teorijski $p_{02}/p_{01}=0{,}7209\pm0{,}0032$, a izmjereni omjer je $0{,}7204\pm0{,}0079$. Kombinirana standardna nesigurnost razlike iznosi $0{,}0085$, pa je normirana razlika samo oko $0{,}050$ i podaci su konzistentni s modelom normalnoga vala. Bez $p_{01}$ i $p_{02}$ statička mjerenja određuju $M_1$, ali ne mjere izravno pad ukupnog tlaka.
+$M_1=2{,}000\pm0{,}007$; $G=0{,}7209\pm0{,}0032$; $r_0=0{,}7204\pm0{,}0079$; $u(G-r_0)=0{,}0085$. Normirana razlika $0{,}050<1$: podatci su konzistentni. Statički tlakovi sami daju modelsku procjenu, ne neovisno mjerenje gubitka ukupnog tlaka. Nadzvučna Pitotova sonda stvara vlastiti val i bez korekcije ne daje $p_{01}$.
 :::
 ::::
 
 [Razina: T4]{.mf1-task-level}
 
 :::::
+
 
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički pokus — od nestlačivog do prigušenog toka</p>

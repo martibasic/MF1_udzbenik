@@ -380,7 +380,7 @@ pa vijci u presjeku `A-A` rade na vlak.
 - Pretlak u ulaznom presjeku: $p_{M1} = 52\ \text{kPa}$
 - Pretlak u izlaznom presjeku: $p_{M2} = 18\ \text{kPa}$
 
-Zanemari težinu fluida u koljenu i gubitke.
+Računaj komponente u horizontalnoj ravnini; težina djeluje okomito na nju. Tlakovi i protok zadani su neovisno, pa ne pretpostavljaj nulte gubitke. Uz jednolike profile energijska bilanca tih podataka daje pozitivan gubitak visine $h_L\approx2{,}825\ \text{m}$; za traženu silu primjenjuje se bilanca količine gibanja.
 
 **Traženo**
 
@@ -392,7 +392,7 @@ Zanemari težinu fluida u koljenu i gubitke.
 
 **Pretpostavke i model**
 
-Promatra se stacionarni kontrolni volumen koji obuhvaća cijelo koljeno. Kako je tok u horizontalnoj ravnini, težina se ovdje zanemaruje, a u jednadžbi količine gibanja ostaju tlakovi na presjecima i sila stijenke na fluid po osima $x$ i $y$.
+Promatra se stacionarni kontrolni volumen koji obuhvaća cijelo koljeno. U projekciji na horizontalnu ravninu težina nema komponentu, pa ostaju tlakovi na presjecima i sila stijenke na fluid po osima $x$ i $y$.
 
 **Rješenje**
 
@@ -595,7 +595,7 @@ Ovo je prvi stvarni integrativni zadatak poglavlja <span class="mf1-ch-ref"><spa
 ::: {#ex-u11-y-racva-s-mjerenom-reakcijom-konzole-t4 .mf1-ch}
 <p class="mf1-box-label">P5. Y-račva s mjerenom reakcijom konzole&nbsp;<span class="mf1-level">T4</span></p>
 
-**Kontekst:** U pogonu se Y-račva s dva izlaza pod različitim kutovima oslanja na konzolu opremljenu mjernom ćelijom za vertikalnu reakciju. Iz izmjerene reakcije obrnutim putem se rekonstruira cijeli radni režim — brzine, protoci i ulazni tlak — te se provjerava nosivost konzole.
+**Kontekst:** U pogonu se Y-račva s dva izlaza pod različitim kutovima oslanja na konzolu opremljenu mjernom ćelijom za poprečnu reakciju. Iz izmjerene reakcije obrnutim putem se rekonstruira cijeli radni režim — brzine, protoci i ulazni tlak — te se provjerava nosivost konzole.
 
 **Zadano**
 
@@ -603,9 +603,11 @@ Ovo je prvi stvarni integrativni zadatak poglavlja <span class="mf1-ch-ref"><spa
 - Promjer ulaznog presjeka `1` (u smjeru osi $x$): $D_1 = 170\ \text{mm}$
 - Promjer ravnog izlaza `2` (smjer osi $x$): $D_2 = 100\ \text{mm}$
 - Promjer izlaza `3`: $D_3 = 80\ \text{mm}$ (zatvara kut $60^\circ$ iznad pozitivnog smjera osi $x$)
-- Izmjerena vertikalna reakcija konzole (prema gore): $R_y = 625\ \text{N}$
+- Izmjerena poprečna reakcija konzole (prema gore): $R_y = 625\ \text{N}$
 
 Oba izlaza otvorena su prema atmosferi, nalaze se na istoj geodetskoj razini kao ulaz i gubici se zanemaruju.
+
+Skica je tlocrt horizontalne ravnine: „prema gore” znači smjer $+y$ na crtežu. $R_x$ u ovom primjeru označuje pozitivan iznos reakcije ulijevo, pa je komponenta u osi $x$ jednaka $-R_x$; $R_y$ djeluje prema $+y$.
 
 **Traženo**
 
@@ -619,7 +621,7 @@ Oba izlaza otvorena su prema atmosferi, nalaze se na istoj geodetskoj razini kao
 
 **Pretpostavke i model**
 
-Kako su presjeci `2` i `3` otvoreni prema atmosferi i na istoj visini, Bernoulli između `1-2` i `1-3` daje istu izlaznu brzinu u obje grane. Mjerena vertikalna reakcija konzole tada postaje ulaz u račun količine gibanja po osi $y$, iz kojeg se najprije vraća izlazna brzina. Tek nakon toga kontinuitet daje protoke, Bernoulli vraća ulazni tlak, a zakon količine gibanja po osi $x$ zatvara drugu komponentu reakcije.
+Kako su presjeci `2` i `3` otvoreni prema atmosferi i na istoj visini, Bernoulli između `1-2` i `1-3` daje istu izlaznu brzinu u obje grane. Mjerena poprečna reakcija konzole tada postaje ulaz u račun količine gibanja po osi $y$, iz kojeg se najprije vraća izlazna brzina. Tek nakon toga kontinuitet daje protoke, Bernoulli vraća ulazni tlak, a zakon količine gibanja po osi $x$ zatvara drugu komponentu reakcije.
 
 **Rješenje**
 
@@ -637,7 +639,7 @@ $$
 A_3 = \frac{\pi D_3^2}{4} = \frac{\pi \cdot 0{,}08^2}{4} = 5{,}027 \cdot 10^{-3}\ \text{m}^2
 $$ {#eq-momentum-cjeloviti-zadatak-y-racva-s-mjerenom-reakcijom-03}
 
-Konzola na račvu djeluje vertikalnom reakcijom prema gore, pa fluid na račvu djeluje jednakom silom prema dolje. Zato je sila stijenke na fluid po osi $y$ jednaka $F_{st,y} = 625\ \text{N}$. Budući da samo izlaz `3` nosi komponentu brzine u osi $y$, iz zakona količine gibanja slijedi
+Konzola na račvu djeluje poprečnom reakcijom prema $+y$, pa fluid na račvu djeluje jednakom silom prema $-y$. Zato je sila stijenke na fluid po osi $y$ jednaka $F_{st,y} = 625\ \text{N}$. Budući da samo izlaz `3` nosi komponentu brzine u osi $y$, iz zakona količine gibanja slijedi
 
 $$
 F_{st,y} = \dot{m}_3 v_3 \sin 60^\circ = \rho A_3 v^2 \sin 60^\circ,
@@ -695,7 +697,7 @@ $$
 48600 \cdot 2{,}270 \cdot 10^{-2} + F_{st,x} = 94{,}0 \cdot 11{,}99 + 60{,}2 \cdot 11{,}99 \cdot 0{,}5 - 154{,}2 \cdot 6{,}81 \quad\Rightarrow\quad 1103 + F_{st,x} = 439,
 $$ {#eq-momentum-cjeloviti-zadatak-y-racva-s-mjerenom-reakcijom-13}
 
-pa slijedi $F_{st,x} = -664\ \text{N}$. To je sila stijenke na fluid. Zato fluid na račvu djeluje silom $F_{f \to r,x} = +664\ \text{N}$ prema desno, pa konzola mora preuzeti horizontalnu reakciju $R_x = 664\ \text{N}$ prema lijevo. Vertikalna reakcija je već izmjerena: $R_y = 625\ \text{N}$ prema gore.
+pa slijedi $F_{st,x} = -664\ \text{N}$. To je sila stijenke na fluid. Zato fluid na račvu djeluje silom $F_{f \to r,x} = +664\ \text{N}$ prema desno, pa konzola mora preuzeti horizontalnu reakciju $R_x = 664\ \text{N}$ prema lijevo. Poprečna reakcija je već izmjerena: $R_y = 625\ \text{N}$ prema gore.
 
 Ukupna rezultanta koju mora preuzeti nosač zato iznosi
 
@@ -713,9 +715,9 @@ iznad negativnog smjera osi $x$. Usporedba sa zadanim statičkim kriterijem rezu
 
 **Provjera i komentar**
 
-Ovaj `T4` zadatak pokazuje inverzni postupak: umjesto da se iz protoka i tlaka računa sila, iz mjerene reakcije konzole rekonstruira se idealizirani radni režim račve. Iz vertikalne sile od $625\ \text{N}$ proizlazi izlazna brzina od oko $12\ \text{m/s}$, ukupni protok od oko $155\ \text{L/s}$ i potreban ulazni pretlak od oko $48{,}6\ \text{kPa}$. Rezultanta od oko $0{,}913\ \text{kN}$ manja je od zadanoga statičkog kriterija od $1{,}0\ \text{kN}$; čvrstoća, zamor, spojevi i prolazna opterećenja nisu ovim modelom provjereni.
+Ovaj `T4` zadatak pokazuje inverzni postupak: umjesto da se iz protoka i tlaka računa sila, iz mjerene reakcije konzole rekonstruira se idealizirani radni režim račve. Iz poprečne sile od $625\ \text{N}$ proizlazi izlazna brzina od oko $12\ \text{m/s}$, ukupni protok od oko $155\ \text{L/s}$ i potreban ulazni pretlak od oko $48{,}6\ \text{kPa}$. Rezultanta od oko $0{,}913\ \text{kN}$ manja je od zadanoga statičkog kriterija od $1{,}0\ \text{kN}$; čvrstoća, zamor, spojevi i prolazna opterećenja nisu ovim modelom provjereni.
 
-1. Ako mjerena vertikalna reakcija poraste, mora porasti i izlazna brzina u kosoj grani jer je upravo ona jedini izvor pozitivnog toka količine gibanja u osi $y$.
+1. Ako mjerena poprečna reakcija poraste, mora porasti i izlazna brzina u kosoj grani jer je upravo ona jedini izvor pozitivnog toka količine gibanja u osi $y$.
 2. Ulazna brzina mora ostati manja od izlazne jer se jedan veći ulazni presjek dijeli na dva manja izlaza.
 3. Ako se iz izmjerene sile odmah pokuša vratiti $p_{M1}$ bez kontinuiteta i Bernoullija, preskače se veza između reakcije i stvarne kinematike u granama.
 :::
@@ -729,13 +731,15 @@ Nakon inverznog problema grananja, završni primjer vraća se koljenu kako bi se
 
 **Zadano**
 
-- Kut zakretanja koljena: $\beta = 60^\circ$
+- Iznos zakretanja koljena: $\beta = 60^\circ$; u tlocrtu izlaz skreće od $+x$ prema $-y$, pa je njegova komponenta brzine $y$ negativna.
 - Promjer tlačnog voda: $D = 200\ \text{mm}$
 - Volumenski protok: $Q = 0{,}18\ \text{m}^3/\text{s}$
 - Manometarski tlak ispred koljena: $p_{M} = 280\ \text{kPa}$ (izračunat iz raspoložive visine umanjene za gubitke u prethodnom dijelu voda)
 - Gustoća vode: $\rho = 998\ \text{kg/m}^3$
 - Pretpostavlja se zanemariv gubitak u samom koljenu (kratko, glatko zaobljeno)
 - Koljeno je u horizontalnoj ravnini
+
+![Tlocrt hidroenergetskog koljena: izlaz skreće prema negativnoj osi y, a sila fluida na koljeno ima pozitivne komponente x i y.](../assets/print/u10_fig_hidroenergetsko_koljeno.svg){#fig-hidroenergetsko-koljeno fig-align="center" fig-alt="Otvoreno koljeno stalnog unutarnjeg promjera 200 mm zakreće tok 60 stupnjeva prema minus y. Tlak na izlaznom presjeku djeluje prema kontrolnom volumenu. Rezultanta sile fluida ide prema plus x i plus y; reakcija oslonca ima suprotan smjer."}
 
 **Traženo**
 
@@ -745,7 +749,7 @@ Nakon inverznog problema grananja, završni primjer vraća se koljenu kako bi se
 
 **Pretpostavke i model**
 
-Kontrolni volumen obuhvaća cijelo koljeno. Strujanje je stacionarno i nestlačivo, tlakovi na ulazu i izlazu koljena približno su jednaki ($p_2 \approx p_1$) jer su gubici zanemarivi, a promjer je nepromijenjen. Težina vode u koljenu zanemaruje se jer je kontrolni volumen u horizontalnoj ravnini. Profili brzina aproksimiraju se jednodimenzijskim srednjim vrijednostima. Atmosferski tlak djeluje izvana na vanjsku stijenku koljena i ne utječe na izračun unutrašnjih sila.
+Kontrolni volumen obuhvaća cijelo koljeno. Strujanje je stacionarno i nestlačivo, tlakovi na ulazu i izlazu koljena približno su jednaki ($p_2 \approx p_1$) jer su gubici zanemarivi, a promjer je nepromijenjen. Razmatraju se samo horizontalne komponente; težina vode i vertikalno oslanjanje nisu dio te projekcije. Profili brzina aproksimiraju se jednodimenzijskim srednjim vrijednostima. Atmosferski tlak djeluje izvana na vanjsku stijenku koljena i ne utječe na izračun unutrašnjih sila.
 
 **Rješenje**
 
@@ -834,23 +838,28 @@ Vrijedi i tada, jer zakon količine gibanja proizlazi iz Newtonovih zakona i ne 
 
 ## Zadaci za vježbu
 
+Za sve zadatke uzmi $\rho=998\ \text{kg/m}^3$ i jednolike profile brzine. Tlakovi označeni s $p_M$ su manometarski. Za cijevne elemente promatraju se samo komponente u horizontalnoj ravnini $xy$; težina i oslanjanje okomito na tu ravninu nisu dio traženog opterećenja. Osi i presjeci prikazani su na @fig-u11-vjezbe. Sila fluida na element označena je s $\vec F$, a reakcija nosača na element s $\vec R$.
+
 ::::: {.mf1-vjezbe-list}
 
 ### Z1. Sila mlaza na nepomičnu ploču {#task-u11-vodeni-mlaz-promjera-izlazi-iz-sapnice-brzinom .unnumbered .unlisted}
 
-Vodeni mlaz promjera $d = 38\ \text{mm}$ izlazi iz sapnice brzinom $v = 22\ \text{m/s}$ i udara okomito na nepomičnu ravnu ploču. Odredi maseni protok i silu koju mlaz prenosi na ploču.
+Vodeni mlaz promjera $d=38\ \text{mm}$ i brzine $v=22\ \text{m/s}$ udara okomito na dovoljno veliku nepomičnu ploču.
+
+Sav se mlaz razlijeva uz ploču, pa je izlazna komponenta brzine u osi $x$ jednaka nuli. Tlak na slobodnim presjecima jest atmosferski; zanemari težinu u zoni udara. Odredi maseni protok, silu fluida na ploču $F_x$ i reakciju oslonca $R_x$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-$\dot m = \rho Av$; za ravnu ploču izlazna komponenta u osi mlaza je nula pa je $F = \dot m v$.
+
+Najprije $\dot m=\rho Av$. Bilanca $\dot m(v_{x,izl}-v_{x,ul})$ daje silu ploče na fluid. Za silu fluida na ploču primijeni treći Newtonov zakon, a za oslonac ravnotežu ploče.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$\dot m \approx 24{,}9\ \text{kg/s}$; $F \approx 548\ \text{N}$.
+$\dot m\approx24{,}90\ \text{kg/s}$; $F_x\approx+547{,}8\ \text{N}$, $R_x\approx-547{,}8\ \text{N}$. Sila na ploču prati dolazni mlaz, a oslonac djeluje suprotno.
 :::
 ::::
 
@@ -858,19 +867,24 @@ $\dot m \approx 24{,}9\ \text{kg/s}$; $F \approx 548\ \text{N}$.
 
 ### Z2. Brzina mlaza iz izmjerene sile {#task-u11-mlaz-vode-udara-okomito-na-nepomicnu-plocu .unnumbered .unlisted}
 
-Mlaz vode udara okomito na nepomičnu ploču i sila na ploču iznosi $F = 310\ \text{N}$. Promjer mlaza je $d = 42\ \text{mm}$. Odredi brzinu mlaza i volumenski protok.
+Mlaz vode promjera $d=42\ \text{mm}$ udara okomito na nepomičnu ploču.
+
+Zadana sila fluida na ploču jest $F_x=310\ \text{N}$; to je opterećenje od mlaza nakon oduzimanja ostalih opterećenja mjernog sklopa.
+
+Sav se mlaz razlijeva uz ploču i izlazna aksijalna komponenta brzine nestaje. Uz atmosferski tlak na slobodnim presjecima odredi brzinu mlaza i volumenski protok.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-iz relacije $F = \rho A v^2$ vrati $v$, a zatim $Q = Av$.
+
+Iz $F_x=\rho Av^2$ odredi pozitivni iznos brzine, a zatim $Q=Av$. Promjer se odnosi na slobodni mlaz koji udara u ploču.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$v \approx 15{,}0\ \text{m/s}$; $Q \approx 20{,}7\ \text{L/s}$.
+$v\approx14{,}97\ \text{m/s}$; $Q\approx20{,}74\ \text{L/s}$.
 :::
 ::::
 
@@ -878,59 +892,74 @@ $v \approx 15{,}0\ \text{m/s}$; $Q \approx 20{,}7\ \text{L/s}$.
 
 ### Z3. Sile na cijevno koljeno {#task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez .unnumbered .unlisted}
 
-Horizontalno koljeno zakreće tok vode za $90^\circ$ bez promjene promjera. Cijev ima promjer $D = 100\ \text{mm}$, protok je $Q = 0{,}026\ \text{m}^3/\text{s}$, ulazni manometarski tlak $p_1 = 180\ \text{kPa}$, a izlazni $p_2 = 150\ \text{kPa}$. Odredi komponente sile fluida na koljeno.
+Horizontalno koljeno zakreće tok iz $+x$ u $+y$ za $90^\circ$, uz stalni promjer $D=100\ \text{mm}$.
+
+Protok jest $Q=0{,}026\ \text{m}^3/\text{s}$, a zadani tlakovi su $p_{M1}=180\ \text{kPa}$ i $p_{M2}=150\ \text{kPa}$. Ne pretpostavljaj tok bez gubitaka: tlakovi su neovisno zadani. Odredi brzinu, komponente i rezultantu sile fluida na koljeno te komponente reakcije nosača. Vanjski tlak jest atmosferski.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-iz $Q$ prvo dobij brzinu; zatim u x i y smjeru zbroji tlakove na presjecima i promjenu količine gibanja.
+
+Brzina izlaza nema komponentu $x$, a brzina ulaza nema komponentu $y$. Tlačne sile na fluid usmjerene su prema unutrašnjosti kontrolnog volumena: u $+x$ na ulazu i u $-y$ na izlazu. Reakcija nosača na koljeno suprotna je sili fluida na koljeno.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$v \approx 3{,}31\ \text{m/s}$; komponente sile fluida na koljeno $F_x \approx 1{,}50\ \text{kN}$, $F_y \approx -1{,}26\ \text{kN}$; rezultanta $\approx 1{,}96\ \text{kN}$.
+$v\approx3{,}310\ \text{m/s}$; $(F_x,F_y)\approx(+1{,}500,-1{,}264)\ \text{kN}$, $|\vec F|\approx1{,}961\ \text{kN}$. Reakcija nosača je $(R_x,R_y)\approx(-1{,}500,+1{,}264)\ \text{kN}$.
 :::
 ::::
 
 [Razina: T2]{.mf1-task-level}
 
-### Z4. Sile na T-račvu {#task-u11-t-racva-prima-vodu-kroz-ulaz-promjera .unnumbered .unlisted}
+<span id="task-u11-t-racva-prima-vodu-kroz-ulaz-promjera"></span>
 
-T-račva prima vodu kroz ulaz promjera $D_1 = 120\ \text{mm}$ s protokom $Q_1 = 0{,}030\ \text{m}^3/\text{s}$. U vodoravni izlaz promjera $D_2 = 80\ \text{mm}$ odlazi $Q_2 = 0{,}018\ \text{m}^3/\text{s}$, a ostatak izlazi okomito prema gore kroz granu promjera $D_3 = 70\ \text{mm}$. Ulazni manometarski tlak je $p_1 = 210\ \text{kPa}$. Odredi komponente reakcije nosača ako su tlakovi na izlazima atmosferski.
+### Z4. Moment ekscentričnog mlaza {#task-moment-ekscentricnog-mlaza .unnumbered .unlisted}
+
+U horizontalnoj ravnini slobodni vodeni mlaz protoka $Q=16{,}0\ \text{L/s}$ i brzine $v=18{,}0\ \text{m/s}$ udara u nepomičnu ploču okomito na os $x$.
+
+Razlijevanje je simetrično oko osi mlaza i uklanja izlaznu komponentu brzine $x$; rezultantna sila prolazi središtem udara C. Kruti nosač ploče ukliješten je u O. Koordinate C u odnosu na O jesu $b=0{,}20\ \text{m}$ u smjeru $+x$ i $e=0{,}35\ \text{m}$ u smjeru $+y$. Tlak slobodnog mlaza jest atmosferski; zanemari težinu sklopa i vode u zoni udara. Odredi silu fluida na ploču i njezin moment $M_{O,z}$ te reakcijsku silu i moment uklještenja potrebne za mirovanje. Pozitivan moment vrti suprotno kazaljci na satu u tlocrtu. Objasni koji je krak relevantan i zašto pomicanje ploče samo u smjeru $x$ ne mijenja moment pri istom mlazu.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-kontinuitetom zatvori $Q_3$, zatim u svakoj osi napiši jednadžbu količine gibanja za cijelu račvu.
+
+Količina gibanja daje $F_x=\rho Qv$, $F_y=0$. Za kruti sklop ploče i nosača upotrijebi $M_{O,z}=bF_y-eF_x$. Uklještenje prenosi i silu i moment; krak je okomita udaljenost od O do pravca djelovanja sile.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$Q_3 = 12\ \text{L/s}$; reakcija nosača $\approx 2{,}39\ \text{kN}$ (pretežno u osi ulaza), okomita komponenta $\approx 37\ \text{N}$.
+$F_x\approx+287{,}4\ \text{N}$, $F_y=0$; $M_{O,z}\approx-100{,}6\ \text{N m}$ (u smjeru kazaljke). Oslonac daje $R_x\approx-287{,}4\ \text{N}$, $R_y=0$ i $M_{R,z}\approx+100{,}6\ \text{N m}$. Krak je $e=0{,}35\ \text{m}$, a ne $\sqrt{b^2+e^2}$. Promjena $b$ sama ne mijenja moment jer je $F_y=0$.
 :::
 ::::
 
 [Razina: T2]{.mf1-task-level}
 
-### Z5. Sila na konvergentnu mlaznicu {#task-u11-konvergentna-mlaznica-ima-ulazni-promjer-izlazni-promjer .unnumbered .unlisted}
+<span id="task-u11-konvergentna-mlaznica-ima-ulazni-promjer-izlazni-promjer"></span>
 
-Konvergentna mlaznica ima ulazni promjer $D_1 = 110\ \text{mm}$, izlazni promjer $D_2 = 45\ \text{mm}$ i protok vode $Q = 0{,}018\ \text{m}^3/\text{s}$. Ulazni manometarski tlak iznosi $p_1 = 240\ \text{kPa}$, a mlaz izlazi u atmosferu. Odredi silu koju moraju preuzeti vijci na prirubnici mlaznice.
+### Z5. Mlaz na ploču koja se udaljava {#task-mlaz-na-pomicnu-plocu .unnumbered .unlisted}
+
+Nepomična sapnica daje vodeni mlaz promjera $d=40\ \text{mm}$ i laboratorijske brzine $v=20{,}0\ \text{m/s}$.
+
+Jedna dovoljno velika ravna ploča, okomita na mlaz, jednoliko se udaljava brzinom $u=8{,}00\ \text{m/s}$ u smjeru $+x$. Promatraj razdoblje dok mlaz neprekidno doseže ploču. U sustavu ploče idealiziraj razlijevanje bez gubitka relativne brzine: voda izlazi tangencijalno uz ploču, simetrično u poprečnim smjerovima. Zanemari gravitaciju u kratkoj zoni udara; slobodni presjeci su na atmosferskom tlaku.
+
+Odaberi kontrolni volumen koji prati ploču. Odredi maseni protok koji zaista doseže ploču, silu fluida na nju i predanu mehaničku snagu. Odredi laboratorijski iznos izlazne brzine vode i neovisno provjeri snagu promjenom toka kinetičke energije kroz taj pomični volumen. Za isti mlaz pronađi brzinu $0<u<v$ pri kojoj je snaga predana toj jednoj ploči najveća. Obrazloži zašto u bilanci kroz pomičnu granicu ne smiješ jednostavno uzeti sav maseni protok nepomične sapnice.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-iz kontinuiteta dobij brzine u oba presjeka; zatim za unutarnji kontrolni volumen spoji tlak na ulazu i promjenu količine gibanja.
+
+Dotok kroz pomičnu granicu određuje $v-u$. Apsolutna izlazna komponenta $x$ jest $u$, a relativni izlaz je tangencijalan i iznosa $v-u$. Snagu računaj kao $P=F_xu$ i kao $\dot m_{rel}(v^2-v_2^2)/2$. Maksimiziraj $u(v-u)^2$ na zadanom intervalu; provjeri i njegove rubove.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$v_1 \approx 1{,}89\ \text{m/s}$, $v_2 \approx 11{,}3\ \text{m/s}$; sila u vijcima prirubnice $\approx 2{,}11\ \text{kN}$.
+$\dot m_{rel}\approx15{,}05\ \text{kg/s}$, $F_x\approx180{,}6\ \text{N}$, $P\approx1{,}445\ \text{kW}$. $v_2=\sqrt{u^2+(v-u)^2}\approx14{,}42\ \text{m/s}$ daje istu snagu iz energije. Maksimum: $u=v/3\approx6{,}667\ \text{m/s}$, $P_{max}\approx1{,}486\ \text{kW}$. Relativni dotok je manji od protoka sapnice jer se slobodni mlaz između sapnice i ploče produljuje.
 :::
 ::::
 
@@ -938,19 +967,24 @@ $v_1 \approx 1{,}89\ \text{m/s}$, $v_2 \approx 11{,}3\ \text{m/s}$; sila u vijci
 
 ### Z6. Sile na Y-račvu {#task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz .unnumbered .unlisted}
 
-Vodoravna Y-račva prima vodu kroz ulaz promjera $D_1 = 140\ \text{mm}$ pri protoku $Q_1 = 0{,}040\ \text{m}^3/\text{s}$ i ulaznom manometarskom tlaku $p_1 = 185\ \text{kPa}$. Šezdeset posto protoka odlazi ravno kroz izlaz promjera $D_2 = 90\ \text{mm}$, a ostatak kroz granu promjera $D_3 = 80\ \text{mm}$ koja zatvara kut od $60^\circ$ iznad osi $x$. Oba izlaza su na atmosferskom tlaku. Odredi komponente sile fluida na račvu i iznos rezultantne sile koju mora preuzeti nosač. U pogonu vrijedi $p_1=185\pm5\ \text{kPa}$, $Q_1$ ima granicu $\pm2\ \%$, a udio protoka ravnim izlazom iznosi $0{,}60\pm0{,}03$. Odredi konzervativnu najveću rezultantu i izaberi nosač nazivne nosivosti $3{,}0\ \text{kN}$ ili $3{,}5\ \text{kN}$ ako se na najveću očekivanu silu primjenjuje projektni faktor $1{,}15$.
+Vodoravna Y-račva prima vodu u smjeru $+x$ kroz promjer $D_1=140\ \text{mm}$.
+
+Nominalni protok jest $Q_1=0{,}040\ \text{m}^3/\text{s}$, a manometarski tlak $p_{M1}=185\ \text{kPa}$. Udio $s=0{,}60$ odlazi ravno kroz $D_2=90\ \text{mm}$, a ostatak kroz $D_3=80\ \text{mm}$ pod $60^\circ$ prema $+y$ u horizontalnoj ravnini. Oba izlaza su na atmosferskom tlaku. Izlazni udio je zadan radnim režimom; ne pretpostavljaj jednaku brzinu u granama niti tok bez gubitaka.
+
+Odredi nominalne protoke, komponente sile fluida na račvu i reakciju nosača. U sintetičkom pogonskom scenariju zadane su neovisne zajamčene granice: $p_{M1}=185\pm5\ \text{kPa}$, $Q_1=0{,}040\ \text{m}^3/\text{s}\pm2\ \%$ te $s=0{,}60\pm0{,}03$. To nisu standardne nesigurnosti za RSS. Odredi najveću rezultantu u cijelom zadanom području i provjeri gdje nastaje. Odaberi između zadanih nosivosti $3{,}0\ \text{kN}$ i $3{,}5\ \text{kN}$ prema kriteriju $R_{naz}\geq1{,}15F_{max}$. Ocjenjuje se samo taj statički kriterij rezultante u ravnini.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-najprije iz zadanog udjela vrati $Q_2$ i $Q_3$, zatim preko presjeka dobij brzine u svim granama, a na kraju po osima $x$ i $y$ napiši jednadžbu količine gibanja uz ulaznu tlaknu silu. Za omotač nesigurnosti izračunaj rezultantu u rubnim kombinacijama $p_1$, $Q_1$ i udjela protoka; zbog kvadratne ovisnosti članova količine gibanja nije dovoljno samo uvećati nominalnu rezultantu za jedan postotak.
+
+Iz $Q_2=sQ_1$ i $Q_3=(1-s)Q_1$ odredi brzine pa projiciraj izlaz 3 s $\cos60^\circ$ i $\sin60^\circ$. Provjeri smjer promjene rezultante s $p_{M1}$, $Q_1$ i $s$ u zadanim intervalima prije uporabe samo rubnih kombinacija. Traži maksimum sile, zatim primijeni zadani faktor; reakcija nosača ima suprotne komponente.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$Q_2 = 24\ \text{L/s}$, $Q_3 = 16\ \text{L/s}$; $F_x \approx 2{,}84\ \text{kN}$, $F_y \approx -44\ \text{N}$; rezultanta $\approx 2{,}84\ \text{kN}$. Rubne kombinacije daju najveću očekivanu rezultantu približno $2{,}92\ \text{kN}$. Zadani faktor daje kriterij od oko $3{,}36\ \text{kN}$, pa deklariranih $3{,}0\ \text{kN}$ ne zadovoljava taj pojedinačni kriterij, dok bi $3{,}5\ \text{kN}$ zadovoljilo samo tu usporedbu. Potpuni odabir traži zasebnu provjeru nosača, spojeva i svih kombinacija opterećenja.
+$(Q_2,Q_3)=(24,16)\ \text{L/s}$; $(F_x,F_y)\approx(2835{,}8,-44{,}0)\ \text{N}$, $|\vec F|\approx2836{,}2\ \text{N}$; $\vec R=-\vec F$. Maksimum $2918{,}3\ \text{N}$ nastaje pri $p_{M1}=190\ \text{kPa}$, $Q_1=39{,}2\ \text{L/s}$, $s=0{,}57$. Zahtjev $1{,}15F_{max}=3356{,}1\ \text{N}$: odabire se $3{,}5\ \text{kN}$; $3{,}0\ \text{kN}$ ne zadovoljava. Provjeren je samo zadani statički kriterij.
 :::
 ::::
 
@@ -958,7 +992,8 @@ $Q_2 = 24\ \text{L/s}$, $Q_3 = 16\ \text{L/s}$; $F_x \approx 2{,}84\ \text{kN}$,
 
 :::::
 
-![Skice uz zadatke za vježbu — mlazovi na plohe, koljena i račve.](../assets/print/u11_vjezbe_skice.svg){#fig-u11-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — mlazovi na plohe, koljena i račve."}
+![Skice vježbi: sila i reakcija ploče, koljeno, moment ekscentričnog mlaza, pomični kontrolni volumen i Y-račva. Kote označuju unutarnje promjere ili okomite krakove; nacrtane strelice same ne zadaju iznose.](../assets/print/u11_vjezbe_skice.svg){#fig-u11-vjezbe fig-align="center" fig-alt="Šest skica s otvorenim presjecima i neprekinutim fluidom. Z4 odvaja okomiti krak momenta od udaljenosti po x. Z5 razlikuje brzinu mlaza, gibanje ploče i apsolutni izlaz. Z6 prikazuje tlocrt račve s pravom granom od 60 stupnjeva."}
+
 
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički most</p>
