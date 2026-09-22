@@ -1,4 +1,4 @@
-"""Numericka verifikacija U12: Pokretne lopatice i potisak."""
+"""Numerička verifikacija kanonskoga U14; naslijeđeni namespace U12."""
 from __future__ import annotations
 
 import math
@@ -12,12 +12,19 @@ def _close(value, target, rel=TOL):
     return abs(value - target) / abs(target) <= rel
 
 
-def _check(out, rid, value, target, unit="", rel=TOL):
-    ok = _close(value, target, rel)
+def _check(out, rid, value, target, unit="", rel=TOL, *, abs_tol=None):
+    ok = math.isfinite(value) and (
+        abs(value-target) <= abs_tol if abs_tol is not None else _close(value, target, rel)
+    )
     out.append({
-        "id": rid, "status": "OK" if ok else "FAIL",
+        "id": rid, "status": "OK" if ok else "FAIL", "verification": "golden",
         "details": "" if ok else f"{value:.4g} vs {target:.4g} {unit}".strip(),
     })
+
+
+def _invariant(out, rid, condition, details=""):
+    out.append({"id": rid, "status": "OK" if condition else "FAIL",
+                "verification": "invariant", "details": "" if condition else details})
 
 
 def primjer_1_vodilica(b=0.036, h=0.014, v_1=24.0, v_2=19.0, beta_deg=120.0,
@@ -167,67 +174,72 @@ def primjer_kvadrokopter(m=2.4, rotor_count=4, D=0.280, rho=1.045,
 
 
 def zadatak_1(d=0.022, v=24.0, rho=998.0):
-    A = math.pi * d**2 / 4
-    m_dot = rho * A * v
-    F = m_dot * v
-    return {"F": F}
+    A = math.pi*d*d/4
+    m_dot = rho*A*v
+    return {"m_dot": m_dot, "F": m_dot*v, "P": 0.0}
 
 
 def zadatak_2(v=26.0, b=0.030, h=0.016, beta_deg=110.0, rho=998.0):
-    A = b * h
-    m_dot = rho * A * v
+    m_dot = rho*b*h*v
     beta = math.radians(beta_deg)
-    v_2x = v * math.cos(beta)
-    v_2y = v * math.sin(beta)
-    F_x = m_dot * (v - v_2x)
-    F_y = m_dot * (0 - v_2y)
-    return {"F_x": F_x, "F_y": F_y}
+    c2x,c2y = v*math.cos(beta),v*math.sin(beta)
+    Fx,Fy = m_dot*(v-c2x),-m_dot*c2y
+    return {"m_dot":m_dot,"F_x":Fx,"F_y":Fy,"R_x":-Fx,"R_y":-Fy,
+            "R":math.hypot(Fx,Fy),"c2x":c2x,"c2y":c2y}
 
 
-def zadatak_3(v_1=32.0, u=12.0, m_dot=18.0, beta_deg=150.0):
-    w_1 = v_1 - u
-    beta = math.radians(beta_deg)
-    c_2x = u + w_1 * math.cos(beta)
-    F = m_dot * (v_1 - c_2x)
-    P = F * u
-    return {"F": F, "P": P}
+def zadatak_3(c1=32.0, u=12.0, m_rel=18.0, Fx=625.0, Fy=-153.0):
+    """Reconstruct the flow from the given force of fluid on the moving blade."""
+    if c1 <= u or m_rel <= 0:
+        raise ValueError("Potreban je pozitivan relativni dotok.")
+    c2x,c2y = c1-Fx/m_rel,-Fy/m_rel
+    w1 = c1-u
+    w2x,w2y = c2x-u,c2y
+    w2 = math.hypot(w2x,w2y)
+    P = Fx*u
+    loss = .5*m_rel*(w1*w1-w2*w2)
+    return {"c2x":c2x,"c2y":c2y,"w2x":w2x,"w2y":w2y,
+            "w1":w1,"w2":w2,"k":w2/w1,
+            "beta_deg":math.degrees(math.atan2(w2y,w2x)),"P":P,"loss":loss,
+            "absolute_kinetic_drop":.5*m_rel*(c1*c1-c2x*c2x-c2y*c2y)}
 
 
-def zadatak_4(R=0.42, m_dot=24.0, v_u1=28.0, v_u2=6.0):
-    F_t = m_dot * (v_u1 - v_u2)
-    M = F_t * R
-    return {"F_t": F_t, "M": M}
+def zadatak_4(r1=.060, r2=.140, omega=200.0, m_dot=3.00,
+              c1t=5.0, c1r=4.0, c2t=20.0, c2r=6.0):
+    """Steady rotor control volume; signs are rotor-to-fluid."""
+    u1,u2 = omega*r1,omega*r2
+    M = m_dot*(r2*c2t-r1*c1t)
+    specific_work = u2*c2t-u1*c1t
+    return {"u1":u1,"u2":u2,"w1t":c1t-u1,"w1r":c1r,
+            "w2t":c2t-u2,"w2r":c2r,"M":M,"M_reaction":-M,
+            "P":m_dot*specific_work,"e":specific_work}
 
 
-def zadatak_5(d=0.030, v=42.0, n_sapnica=3, rho=998.0):
-    A_1 = math.pi * d**2 / 4
-    A = n_sapnica * A_1
-    m_dot = rho * A * v
-    F = m_dot * v
-    P = 0.5 * m_dot * v**2
-    return {"F": F, "P": P}
+def zadatak_5(T=2000.0, U=8.0, rho=1000.0, eta=.80,
+              jet_speeds=(20.0,30.0), electric_limit=40000.0):
+    candidates=[]
+    for Vj in jet_speeds:
+        if Vj <= U or U < 0 or T <= 0 or not 0 < eta <= 1:
+            raise ValueError("Model zahtijeva Vj>U>=0, T>0 i 0<eta<=1.")
+        m_dot = T/(Vj-U)
+        Q = m_dot/rho
+        d = math.sqrt(4*Q/(math.pi*Vj))
+        Ph = .5*m_dot*(Vj*Vj-U*U)
+        candidates.append({"Vj":Vj,"m_dot":m_dot,"Q":Q,"d":d,
+                           "Ph":Ph,"Pel":Ph/eta,"useful":T*U,
+                           "eta_prop":T*U/Ph,"wake":.5*m_dot*(Vj-U)**2})
+    feasible=[i+1 for i,r in enumerate(candidates) if r["Pel"]<=electric_limit]
+    return {"candidates":candidates,"feasible":feasible}
 
 
 def zadatak_6(m=110.0, d=0.028, n_sapnica=4, v=36.0, rho=998.0,
               g=9.81, dd=0.0003, dv=1.5, reserve=0.10):
-    A_1 = math.pi * d**2 / 4
-    A = n_sapnica * A_1
-    F_p = rho * A * v**2
-    m_max = F_p / g
-    G = m * g
-    a = (F_p - G) / m
-    d_min = d - dd
-    v_min = v - dv
-    A_min = n_sapnica * math.pi * d_min**2 / 4
-    F_min = rho * A_min * v_min**2
-    m_cert = F_min / ((1 + reserve) * g)
-    return {
-        "F_p": F_p,
-        "m_max": m_max,
-        "a": a,
-        "F_min": F_min,
-        "m_cert": m_cert,
-    }
+    A = n_sapnica*math.pi*d*d/4
+    F_p = rho*A*v*v
+    A_min = n_sapnica*math.pi*(d-dd)**2/4
+    F_min = rho*A_min*(v-dv)**2
+    return {"F_p":F_p,"m_max":F_p/g,"a":F_p/m-g,
+            "F_min":F_min,"m_limit":F_min/((1+reserve)*g)}
 
 
 # ------------ Faza 1.5 dodatak: Krivulja snage P(u) i optimum (CH T3) ----------------
@@ -269,25 +281,25 @@ def verify():
     r = primjer_3_relativni()
     _check(out, "U12.P2.w_1", r["w_1"], 14.0, "m/s")
     _check(out, "U12.P2.m_rel", r["m_rel"], 15.85, "kg/s", rel=0.02)
-    _check(out, "U12.P2.ratio", r["ratio"], 0.637, "", rel=0.02)
+    _check(out, "U12.P2.ratio", r["ratio"], 0.636, "", rel=0.02)
 
     r = primjer_4_pokretna_ravna()
-    _check(out, "U12.P3.m_rel", r["m_rel"], 18.82, "kg/s", rel=0.02)
+    _check(out, "U12.P3.m_rel", r["m_rel"], 18.81, "kg/s", rel=0.02)
     _check(out, "U12.P3.F", r["F"], 282.0, "N", rel=0.02)
-    _check(out, "U12.P3.P", r["P"], 2541.0, "W", rel=0.02)
+    _check(out, "U12.P3.P", r["P"], 2540.0, "W", rel=0.02)
 
     r = cjeloviti_1_zakrivljena()
     _check(out, "U12.P4.m_rel", r["m_rel"], 25.4, "kg/s", rel=0.02)
     _check(out, "U12.P4.c_2x", r["c_2x"], -2.47, "m/s", rel=0.05)
     _check(out, "U12.P4.F_f_x", r["F_f_x"], 723.0, "N", rel=0.02)
     _check(out, "U12.P4.F", r["F"], 746.0, "N", rel=0.02)
-    _check(out, "U12.P4.P", r["P"], 7233.0, "W", rel=0.02)
+    _check(out, "U12.P4.P", r["P"], 7230.0, "W", rel=0.02)
 
     r = cjeloviti_2_pelton()
     _check(out, "U12.P5.u", r["u"], 15.41, "m/s", rel=0.02)
     _check(out, "U12.P5.w_1", r["w_1"], 15.59, "m/s", rel=0.02)
     _check(out, "U12.P5.m_rel", r["m_rel"], 23.65, "kg/s", rel=0.02)
-    _check(out, "U12.P5.F_f_x", r["F_f_x"], 680.4, "N", rel=0.02)
+    _check(out, "U12.P5.F_f_x", r["F_f_x"], 680.3, "N", rel=0.02)
     _check(out, "U12.P5.M", r["M"], 313.0, "Nm", rel=0.02)
     _check(out, "U12.P5.P_kW", r["P"] / 1000, 10.49, "kW", rel=0.02)
 
@@ -297,34 +309,102 @@ def verify():
     _check(out, "U12.P6.P_ideal", r["P_ideal"], 39.8, "W", rel=0.02)
     _check(out, "U12.P6.P_shaft", r["P_shaft"], 56.9, "W", rel=0.02)
     _check(out, "U12.P6.P_total", r["P_total"], 227.0, "W", rel=0.02)
-    _check(out, "U12.P6.duration_min", r["duration_min"], 19.6, "min", rel=0.02)
+    _check(out, "U12.P6.duration_min", r["duration_min"], 19.5, "min", rel=0.02)
 
     r = zadatak_1()
-    _check(out, "U12.Z1.F", r["F"], 219.0, "N", rel=0.02)
+    _check(out, "U12.Z1.m_dot", r["m_dot"], 9.10, "kg/s", abs_tol=.005)
+    _check(out, "U12.Z1.F", r["F"], 219.0, "N", abs_tol=.5)
+    _check(out, "U12.Z1.P", r["P"], 0.0, "W", abs_tol=1e-12)
+    faster = zadatak_1(v=48.0)
+    _invariant(out, "U12.Z1.quadratic_velocity", abs(faster["F"]/r["F"]-4)<1e-12,
+               "Sila na nepomicnu plocu raste kvadratom brzine pri istom presjeku.")
 
     r = zadatak_2()
-    _check(out, "U12.Z2.F_x", r["F_x"], 435.0, "N", rel=0.02)
-    _check(out, "U12.Z2.F_y", r["F_y"], -304.0, "N", rel=0.02)
-    _check(out, "U12.Z2.R", math.hypot(r["F_x"], r["F_y"]), 531.0, "N", rel=0.02)
+    _check(out, "U12.Z2.m_dot", r["m_dot"], 12.46, "kg/s", abs_tol=.005)
+    _check(out, "U12.Z2.F_x", r["F_x"], 435.0, "N", abs_tol=.5)
+    _check(out, "U12.Z2.F_y", r["F_y"], -304.0, "N", abs_tol=.5)
+    _check(out, "U12.Z2.R_x", r["R_x"], -435.0, "N", abs_tol=.5)
+    _check(out, "U12.Z2.R_y", r["R_y"], 304.0, "N", abs_tol=.5)
+    _check(out, "U12.Z2.R", r["R"], 531.0, "N", abs_tol=.5)
+    _invariant(out, "U12.Z2.energy_and_direction",
+               abs(r["c2x"]**2+r["c2y"]**2-26**2)<1e-10
+               and r["F_x"]>0>r["F_y"] and r["R_x"]<0<r["R_y"],
+               "Mirna idealna vodilica ne mijenja kineticku energiju, ali mijenja impuls.")
 
     r = zadatak_3()
-    _check(out, "U12.Z3.F", r["F"], 672.0, "N", rel=0.02)
-    _check(out, "U12.Z3.P_kW", r["P"] / 1000, 8.06, "kW", rel=0.02)
+    _check(out, "U12.Z3.c2x", r["c2x"], -2.722, "m/s", abs_tol=.0005)
+    _check(out, "U12.Z3.c2y", r["c2y"], 8.500, "m/s", abs_tol=.0005)
+    _check(out, "U12.Z3.w2x", r["w2x"], -14.722, "m/s", abs_tol=.0005)
+    _check(out, "U12.Z3.w2y", r["w2y"], 8.500, "m/s", abs_tol=.0005)
+    _check(out, "U12.Z3.k", r["k"], .850, "", abs_tol=.0005)
+    _check(out, "U12.Z3.beta", r["beta_deg"], 150.00, "degree", abs_tol=.005)
+    _check(out, "U12.Z3.P_kW", r["P"]/1000, 7.500, "kW", abs_tol=.0005)
+    _check(out, "U12.Z3.loss_kW", r["loss"]/1000, .999, "kW", abs_tol=.0005)
+    _invariant(out, "U12.Z3.momentum_and_energy",
+               abs(18*(32-r["c2x"])-625)<1e-10
+               and abs(-18*r["c2y"]+153)<1e-10
+               and abs(r["absolute_kinetic_drop"]-r["P"]-r["loss"])<1e-9
+               and 0<r["k"]<1 and r["loss"]>0,
+               "Rekonstruirani tok zatvara obje sile i energiju pasivne lopatice.")
+    active = zadatak_3(Fx=800.0)
+    _invariant(out, "U12.Z3.reject_active_blade", active["k"]>1 and active["loss"]<0,
+               "Nedopusteni mjerni skup mora otkriti potrebu dodatnog energetskog ulaza.")
 
     r = zadatak_4()
-    _check(out, "U12.Z4.F_t", r["F_t"], 528.0, "N", rel=0.02)
-    _check(out, "U12.Z4.M", r["M"], 222.0, "Nm", rel=0.02)
+    _check(out, "U12.Z4.u1", r["u1"], 12.0, "m/s", abs_tol=1e-10)
+    _check(out, "U12.Z4.u2", r["u2"], 28.0, "m/s", abs_tol=1e-10)
+    _check(out, "U12.Z4.w1t", r["w1t"], -7.0, "m/s", abs_tol=1e-10)
+    _check(out, "U12.Z4.w1r", r["w1r"], 4.0, "m/s", abs_tol=1e-10)
+    _check(out, "U12.Z4.w2t", r["w2t"], -8.0, "m/s", abs_tol=1e-10)
+    _check(out, "U12.Z4.w2r", r["w2r"], 6.0, "m/s", abs_tol=1e-10)
+    _check(out, "U12.Z4.M", r["M"], 7.50, "Nm", abs_tol=.005)
+    _check(out, "U12.Z4.M_reaction", r["M_reaction"], -7.50, "Nm", abs_tol=.005)
+    _check(out, "U12.Z4.P_kW", r["P"]/1000, 1.500, "kW", abs_tol=.0005)
+    _check(out, "U12.Z4.e", r["e"], 500.0, "J/kg", abs_tol=.5)
+    _invariant(out, "U12.Z4.euler_and_torque", abs(r["P"]-200*r["M"])<1e-10
+               and r["M"]>0 and r["M_reaction"]<0,
+               "Crpni rotor predaje fluidu rad; reakcijski moment je suprotan.")
+    reverse=zadatak_4(c2t=-2.0)
+    radial=zadatak_4(c2r=10.0)
+    _invariant(out, "U12.Z4.swirl_controls_work", reverse["P"]<0
+               and abs(radial["P"]-r["P"])<1e-10,
+               "Radijalna komponenta ne doprinosi osnom momentu, vrtlog moze promijeniti znak rada.")
 
-    r = zadatak_5()
-    _check(out, "U12.Z5.F_kN", r["F"] / 1000, 3.73, "kN", rel=0.02)
-    _check(out, "U12.Z5.P_kW", r["P"] / 1000, 78.4, "kW", rel=0.02)
+    r = zadatak_5();a,b=r["candidates"]
+    _check(out, "U12.Z5.Q_A_Ls", a["Q"]*1000, 166.67, "L/s", abs_tol=.005)
+    _check(out, "U12.Z5.Q_B_Ls", b["Q"]*1000, 90.91, "L/s", abs_tol=.005)
+    _check(out, "U12.Z5.d_A_mm", a["d"]*1000, 103.01, "mm", abs_tol=.005)
+    _check(out, "U12.Z5.d_B_mm", b["d"]*1000, 62.12, "mm", abs_tol=.005)
+    _check(out, "U12.Z5.Ph_A_kW", a["Ph"]/1000, 28.0, "kW", abs_tol=1e-9)
+    _check(out, "U12.Z5.Ph_B_kW", b["Ph"]/1000, 38.0, "kW", abs_tol=1e-9)
+    _check(out, "U12.Z5.Pel_A_kW", a["Pel"]/1000, 35.0, "kW", abs_tol=1e-9)
+    _check(out, "U12.Z5.Pel_B_kW", b["Pel"]/1000, 47.5, "kW", abs_tol=1e-9)
+    _check(out, "U12.Z5.eta_A", a["eta_prop"], .571, "", abs_tol=.0005)
+    _check(out, "U12.Z5.eta_B", b["eta_prop"], .421, "", abs_tol=.0005)
+    _check(out, "U12.Z5.useful_kW", a["useful"]/1000, 16.0, "kW", abs_tol=1e-9)
+    _check(out, "U12.Z5.wake_A_kW", a["wake"]/1000, 12.0, "kW", abs_tol=1e-9)
+    _check(out, "U12.Z5.wake_B_kW", b["wake"]/1000, 22.0, "kW", abs_tol=1e-9)
+    _invariant(out, "U12.Z5.energy_and_selection", r["feasible"]==[1]
+               and all(abs(c["Ph"]-c["useful"]-c["wake"])<1e-8 for c in (a,b))
+               and a["Q"]>b["Q"] and a["eta_prop"]>b["eta_prop"],
+               "Oba toka daju isti potisak, ali samo A zadovoljava elektricnu granicu.")
+    static=zadatak_5(U=0.0)["candidates"][0]
+    _invariant(out, "U12.Z5.static_limit", static["Ph"]>0 and static["useful"]==0
+               and static["eta_prop"]==0,
+               "Statički potisak ne daje korisnu translacijsku snagu TU.")
 
     r = zadatak_6()
-    _check(out, "U12.Z6.F_p_kN", r["F_p"] / 1000, 3.19, "kN", rel=0.02)
-    _check(out, "U12.Z6.m_max", r["m_max"], 325.0, "kg", rel=0.02)
-    _check(out, "U12.Z6.a", r["a"], 19.2, "m/s2", rel=0.02)
-    _check(out, "U12.Z6.F_min_kN", r["F_min"] / 1000, 2.86, "kN", rel=0.02)
-    _check(out, "U12.Z6.m_cert", r["m_cert"], 265.0, "kg", rel=0.02)
+    _check(out, "U12.Z6.F_p_kN", r["F_p"]/1000, 3.186, "kN", abs_tol=.0005)
+    _check(out, "U12.Z6.m_max", r["m_max"], 324.7, "kg", abs_tol=.05)
+    _check(out, "U12.Z6.a", r["a"], 19.15, "m/s2", abs_tol=.005)
+    _check(out, "U12.Z6.F_min_kN", r["F_min"]/1000, 2.863, "kN", abs_tol=.0005)
+    _check(out, "U12.Z6.m_limit", r["m_limit"], 265.3, "kg", abs_tol=.05)
+    _invariant(out, "U12.Z6.force_and_worst_case",
+               abs(110*(r["a"]+9.81)-r["F_p"])<1e-9
+               and r["F_min"]<r["F_p"] and r["m_limit"]<r["m_max"]
+               and abs(r["F_min"]-1.1*r["m_limit"]*9.81)<1e-9
+               and r["F_min"]<1.1*(r["m_limit"]+.1)*9.81,
+               "Nazivna sila zatvara Newtonov zakon, a granicna masa cijeli interval i rezervu.")
 
     return out
 
@@ -338,3 +418,4 @@ if __name__ == "__main__":
         print(f"  [{marker}] {r['id']:30s}  {r.get('details', '')}")
     print()
     print(f"Total: ok={ok}, fail={fail}")
+    raise SystemExit(1 if fail else 0)

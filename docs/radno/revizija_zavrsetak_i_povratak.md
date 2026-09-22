@@ -13,7 +13,7 @@ ne označava dovršenima preostale korake.
 | --- | --- | --- | --- | --- |
 | 1 | `source/u12_diferencijalni_opis_realnog_toka.md` | `verify_u12_real_flow.py` / U12.REAL | dovršeno; zajednički završni build slijedi | `revizija_u12.md` |
 | 2 | `source/u13_gubici_cjevovodi_crpke_i_mreze.md` | `verify_u13_integrated.py` / U13.CANON | dovršeno; zajednički završni build slijedi | `revizija_u13.md` |
-| 3 | `source/u14_turbostrojevi_i_propulzija.md` | `verify_u12.py` / U12 | slijedi | `revizija_u14.md` |
+| 3 | `source/u14_turbostrojevi_i_propulzija.md` | `verify_u12.py` / U12 | dovršeno; zajednički završni build slijedi | `revizija_u14.md` |
 | 4 | `source/u15_otvoreni_tokovi.md` | `verify_u15_open_channels.py` / U15 | slijedi | `revizija_u15.md` |
 | 5 | `source/u01_osnove_fluida_i_pascalov_zakon.md` | `verify_u01.py` / U01 | slijedi nakon U15 | dopuna `revizija_u01.md` |
 | 6 | `source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md` | `verify_u02.py` / U02 | slijedi nakon U01 | dopuna `revizija_u02.md` |
@@ -55,3 +55,16 @@ izdanja prema koracima `publish.yml`:
 
 Ovo je provjera objave trenutačnih izmjena U12/U13. Završna provjera cijeloga
 cilja ponovit će se nakon preostalih revizija U14, U15, U01 i U02.
+
+## Provjera objave U14 — 22. rujna 2026.
+
+Naknadni zahtjev za commit i push obuhvaća izmjene U14. Dovršeni su
+zadaci i sedam skica, povezani notebook, D03, D06 i numerički manifest.
+Provjere stvarne SVG geometrije, 1296 numeričkih rezultata, strukture,
+izmijenjenog notebooka, HTML-a U14 u tri širine, povratnih poveznica D06,
+nativnog PDF-a i obnovljenog JupyterLitea prolaze. Detalji i granice provjere
+navedeni su u `revizija_u14.md`. Prethodna objava U12/U13, GitHub Actions
+run `35775620655`, završila je uspješno.
+
+Sljedeći korak ostaje U15, zatim ponovni pregled U01 i U02. Ovaj commit
+ne označava dovršenim cijeli korisnikov cilj.

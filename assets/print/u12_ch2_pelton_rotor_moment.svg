@@ -1,281 +1,112 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u12c2prm_title u12c2prm_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
-  <title id="u12c2prm_title">Peltonov rotor s jednim mlazom — sila, moment i snaga</title>
-  <desc id="u12c2prm_desc">Lijevo: shema Peltonova rotora polumjera r=0,46 m s jednom reprezentativnom lopaticom na vrhu i mlazom iz sapnice promjera d=44 mm; ucrtane su apsolutna brzina mlaza c1=31 m/s, obodna brzina u=15,41 m/s, izlazni relativni vektor w2 pod kutom beta=20 stupnjeva i sila fluida na lopaticu Fx=680 N, Fy=-114 N. Desno: kinematika rotora, maseni protok, sila po komponentama, moment i snaga, te usporedba s traženom snagom generatora P_G=9,5 kW.</desc>
-
-  <defs>
-    <linearGradient id="u12c2prm_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
-    <pattern id="u12c2prm_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
-    </pattern>
-    <!-- Force arrows -->
-    <marker id="u12c2prm_fred" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
-    </marker>
-    <marker id="u12c2prm_fgrn" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
-    </marker>
-    <marker id="u12c2prm_fblu" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
-    </marker>
-    <marker id="u12c2prm_fpur" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
-    </marker>
-    <marker id="u12c2prm_fgry" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#5a6a78" />
-    </marker>
-    <!-- Kota markers -->
-    <marker id="u12c2prm_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-    <marker id="u12c2prm_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-  </defs>
-
-  <!-- panel okviri -->
-  <rect x="16" y="16" width="468" height="528" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-  <rect x="500" y="16" width="464" height="528" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
-  <!-- ============== LIJEVO: ROTOR + JET + SILA ============== -->
-
-  <!-- Panel naslov (mali, neutralno) -->
-  <!-- Os rotora: centar (250, 340), r = 0,46 m -> 130 px (skala 1 m = 283 px) -->
-  <!-- Sapnica lijevo: mlaz dolazi vodoravno na obodnu visinu (y=210) -->
-
-  <!-- Rotor disk -->
-  <circle cx="250" cy="340" r="130" fill="none" stroke="#5d6d7e" stroke-width="1.8" stroke-dasharray="4,4" />
-  <!-- Glavcina -->
-  <circle cx="250" cy="340" r="20" fill="url(#u12c2prm_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <circle cx="250" cy="340" r="6" fill="#3a4a56" />
-  <!-- Os (krizic) -->
-  <line x1="244" y1="340" x2="256" y2="340" stroke="#ffffff" stroke-width="0.9" />
-  <line x1="250" y1="334" x2="250" y2="346" stroke="#ffffff" stroke-width="0.9" />
-
-  <!-- Pomocne lopatice na obodu (sijete krugom) - 6 polozaja, slabo -->
-  <g opacity="0.35">
-    <path d="M226,464 L274,464 L268,478 L232,478 z" fill="url(#u12c2prm_hatch)" stroke="#3a4a56" stroke-width="1" />
-    <path d="M380,420 L416,388 L426,402 L390,432 z" fill="url(#u12c2prm_hatch)" stroke="#3a4a56" stroke-width="1" />
-    <path d="M120,420 L84,388 L74,402 L110,432 z" fill="url(#u12c2prm_hatch)" stroke="#3a4a56" stroke-width="1" />
-    <path d="M380,260 L416,292 L426,278 L390,248 z" fill="url(#u12c2prm_hatch)" stroke="#3a4a56" stroke-width="1" />
-    <path d="M120,260 L84,292 L74,278 L110,248 z" fill="url(#u12c2prm_hatch)" stroke="#3a4a56" stroke-width="1" />
-  </g>
-  <!-- Spojnice (zracne paoke) - vrlo slabo -->
-  <g stroke="#5d6d7e" stroke-width="0.6" opacity="0.45">
-    <line x1="250" y1="320" x2="250" y2="212" />
-    <line x1="270" y1="340" x2="378" y2="340" />
-    <line x1="230" y1="340" x2="122" y2="340" />
-    <line x1="250" y1="360" x2="250" y2="468" />
-  </g>
-
-  <!-- AKTIVNA LOPATICA na vrhu (12 h) - reprezentativna, kontrolni volumen -->
-  <!-- Lopatica: U-oblik otvoren prema lijevo (prema mlazu) -->
-  <path d="M236,196 L264,196 Q278,196 278,212 L278,230 Q278,242 264,242 L236,242 Q222,242 222,230 L222,212 Q222,196 236,196 Z" fill="url(#u12c2prm_hatch)" stroke="#3a4a56" stroke-width="1.6" />
-  <!-- Unutarnja konkavna ploha (povrsina koja prima mlaz) -->
-  <path d="M240,200 L260,200 Q272,200 272,212 L272,228 Q272,238 260,238 L240,238 Q228,238 228,228 L228,212 Q228,200 240,200 Z" fill="#eaf1f6" stroke="#1565c0" stroke-width="1" />
-  <!-- Centralni greben Pelton lopatice (split ridge) -->
-  <line x1="250" y1="200" x2="250" y2="238" stroke="#3a4a56" stroke-width="1.2" />
-
-  <!-- Sapnica (nozzle) - lijevo, mlaz horizontalno udara u lopaticu na visini y=219 -->
-  <!-- Nozzle housing: trapez -->
-  <path d="M50,194 L50,244 L120,232 L120,206 Z" fill="url(#u12c2prm_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <!-- Nozzle exit lip -->
-  <rect x="118" y="206" width="6" height="26" fill="#3a4a56" />
-
-  <!-- Vodeni mlaz (jet) od sapnice prema lopatici -->
-  <rect x="124" y="208" width="100" height="22" fill="url(#u12c2prm_voda)" stroke="#5b9ec9" stroke-width="0.8" />
-  <!-- Jet free-surface highlight -->
-  <line x1="124" y1="208" x2="224" y2="208" stroke="#1565c0" stroke-width="0.7" opacity="0.6" />
-  <line x1="124" y1="230" x2="224" y2="230" stroke="#1565c0" stroke-width="0.7" opacity="0.6" />
-
-  <!-- Sapnica labela -->
-  <!-- d kota - vertikalna na izlazu sapnice -->
-  <!-- ===== VEKTORI BRZINA na lopatici ===== -->
-
-  <!-- c1 (zelena/plava? - apsolutna brzina mlaza = ulazni TOK; semantika: izvor energije).
-       Po pravilima: brzina mlaza nije sila, koristim plavu (tlak/protok), izlazni vektor sile zelena.
-       Bolje: kinematicki vektori dobivaju neutralnu boju. Koristim: c plava, u smedja-zlata (oboda), w siva (relativno),
-       a F bit ce u boji sila (crvena za ulaz/akciju fluida prema lopatici - rezultat).
-       Sigurnije po pravilima: c i w = plavi tonovi (tlak/dinamika fluida), u = ljubicasta (efektivni okvir/rotacija).
-       Konacno: c=plava #1565c0, u=ljubicasta #8e44ad, w=tirkizna dasn linija (smjer dotoka u relativnom okviru).
-       Fx,Fy crvena za silu fluida na lopaticu (rezultat impulsa).  -->
-
-  <!-- c1: apsolutna brzina mlaza na ulazu u lopaticu. Vodoravno udesno, na sredinu mlaza y=219. -->
-  <!-- Skala vektora brzina: 1 m/s = 2,4 px -> c1=31 -> 74 px. Strelica unutar mlaza. -->
-  <line x1="138" y1="219" x2="212" y2="219" stroke="#1565c0" stroke-width="2.6" marker-end="url(#u12c2prm_fblu)" />
-  <!-- u: obodna brzina lopatice (tangencijalna). Lopatica na 12h -> u smjer = vodoravno udesno.
-       u=15,41 -> 37 px. Crtam IZNAD lopatice. -->
-  <line x1="250" y1="178" x2="287" y2="178" stroke="#8e44ad" stroke-width="2.6" marker-end="url(#u12c2prm_fpur)" />
-  <!-- c2: apsolutni izlazni vektor = (2,23 ; 4,80) m/s.
-       SVG: x raste desno, y raste dolje. Komponenta y u zadatku je "iznad neg. x" = okomito prema gore.
-       Ali izlaz mlaza prosipa se prema dolje/u stranu od lopatice; smjer ne presudan za skicu, vazno proporcije.
-       Skala 2,4 px/(m/s): cx=2,23*2,4=5,4 px, cy=4,80*2,4=11,5 px.
-       Polaziste c2 - sa donje strane lopatice (gdje voda izlazi). Iz tocke (250, 246) prema (255, 258) - kratko.
-       Crtanje tako kratke strelice se ne vidi - povecavam VIZUALNO za citljivost, vidi napomenu u panelu.
-       Skaliram x 6, y 6 -> dx=33 px, dy=69 px (po smjeru). Predugo za prostor.
-       Bolje: ostavim na realnoj skali 2,4 i postavim posebnu strelicu u info panelu.
-       U skici cu nacrtati c2 kao MALU strelicu polazeci ispod lopatice. -->
-  <!-- Stvarni smjer c2: dx=+2,23 m/s (udesno), dy=+4,80 m/s (prema GORE u fizikalnom smislu).
-       U SVG y rasti dolje -> "gore" = manji y. Pa dy_svg = -11,5.
-       Ali izlaz iz lopatice u Peltonu ide DOLJE (water deflected downward off bucket).
-       Citam zadatak: "Kut relativnog izlaza iznad negativnog smjera osi x". Os x = tangencijalna (smjer u).
-       To znaci w2 ima komponente (-w2 cos beta, +w2 sin beta) - znak + jer "iznad osi x" je +y u fizikalnom okviru.
-       U mojoj skici, "gore" = manji y SVG. Sto su +y vrijednosti u zadatku, to je -y u SVG.
-       Pa c2 ide udesno (+5 px) i prema gore-u-svg (-11 px). Polaziste: ispod lopatice (250, 246).
-       Vizualno predug skok prema gore preklapao bi se s u. Skratim na 2x = (11, -23). Pomak vidljiv. -->
-  <!-- c2 simbolicna strelica - voda iz lopatice izlazi gore-desno (apsolutni okvir): cx=+2,23, cy=+4,80 phys = SVG (+, -)
-       Skaliram 5x za citljivost: (+11, -24). Polaziste tik iznad gornjeg ruba lopatice. -->
-  <line x1="232" y1="192" x2="243" y2="168" stroke="#1565c0" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#u12c2prm_fblu)" />
-  <!-- leader od arrow tip do label-a (lijevo) -->
-  <line x1="243" y1="168" x2="220" y2="152" stroke="#5a6a78" stroke-width="0.5" />
-  <!-- ===== SILE NA LOPATICU (fluid na lopaticu) ===== -->
-  <!-- Hvataliste: centar lopatice (250, 219).
-       Fx = 680 N udesno (smjer u, tangencijalno).
-       Fy = -114 N, u zadatku "y" os je okomita na x: F_y = -113,5 (prema dolje u fizikalnom smislu = dolje?
-       Pretpostavka: y os je okomita na obodnu tangentu, smjer iz osi rotora prema obodu (radijalno van).
-       F_y = -114 N znaci sila djeluje prema osi (radijalno unutra).
-       U skici je 12h, "y van" = prema gore (manji y SVG).
-       F_y < 0 -> prema osi, znaci prema dolje u SVG (+y SVG).
-       Skala sile: 1 N = 0,12 px. Fx 680 -> 82 px. Fy 114 -> 14 px. Predmali Fy.
-       Koristim stupnjevanu: Fx vidno 90 px, Fy 25 px za citljivost. -->
-
-  <!-- Tocka hvatista -->
-  <circle cx="250" cy="219" r="2.4" fill="#c0392b" />
-
-  <!-- Fx -->
-  <line x1="250" y1="219" x2="340" y2="219" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u12c2prm_fred)" />
-  <!-- Fy: prema dolje (SVG +y) - skala 0,12 px/N * 114 = 14 px, povecavam na 25 px za citljivost -->
-  <line x1="252" y1="244" x2="252" y2="269" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u12c2prm_fred)" />
-  <!-- ===== Polumjer r kota ===== -->
-  <!-- Vodoravna kota od osi rotora (250,340) do oboda (380,340), ispod osi -->
-  <!-- ===== n - smjer vrtnje, CW oko osi (lopatice idu udesno na 12h -> CW gledano s ove strane) ===== -->
-  <!-- Mali CW luk dolje ispod glavcine -->
-  <path d="M 224,360 A 30,30 0 0,0 276,360" fill="none" stroke="#1e8449" stroke-width="1.8" marker-end="url(#u12c2prm_fgrn)" />
-  <!-- ===== TROKUT BRZINA - dva mala dijagrama na dnu lijevog panela ===== -->
-  <rect x="36" y="448" width="432" height="92" rx="8" fill="#f4f9fd" stroke="#bcd5ea" stroke-width="1.2" />
-  <!-- INLET: c1 = u + w1, kolinearno (u i w1 oba u smjer +x).
-       Skala 1 m/s = 4,5 px -> c1=140 px, u=69 px, w1=70 px. -->
-  <!-- Subtitle ulaz -->
-  <!-- u: from (48,510) ide udesno 69px -> (117,510) -->
-  <line x1="48" y1="510" x2="117" y2="510" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u12c2prm_fpur)" />
-  <!-- w1: (117,510) -> (187,510) -->
-  <line x1="117" y1="510" x2="187" y2="510" stroke="#5a6a78" stroke-width="2.2" marker-end="url(#u12c2prm_fgry)" />
-  <!-- c1: ispod (kolinearna ali ofset za citljivost) (48,528)->(188,528) -->
-  <line x1="48" y1="528" x2="188" y2="528" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u12c2prm_fblu)" />
-  <!-- separator vertikalan -->
-  <line x1="232" y1="476" x2="232" y2="536" stroke="#bcd5ea" stroke-width="1" stroke-dasharray="3,3" />
-
-  <!-- OUTLET (right side):
-       Skala 1 m/s = 4,5 px.
-       u = +15,41 -> +69 px (vodoravno desno)
-       w2 = (-13,18; +4,80) phys = SVG (-59; -22)
-       c2 = (+2,23; +4,80) phys = SVG (+10; -22)
-       Ishodiste: (270, 520).
-       u: (270,520) -> (339,520)
-       w2: (339,520) -> (280,498)
-       c2: (270,520) -> (280,498). c2 = u + w2. -->
-  <line x1="270" y1="520" x2="339" y2="520" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u12c2prm_fpur)" />
-  <line x1="339" y1="520" x2="280" y2="498" stroke="#5a6a78" stroke-width="2.2" marker-end="url(#u12c2prm_fgry)" />
-  <line x1="270" y1="520" x2="280" y2="498" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u12c2prm_fblu)" />
-  <!-- Beta angle marker (between u and w2, opens to upper-left) -->
-  <path d="M 320,520 A 19,19 0 0,0 326,514" fill="none" stroke="#1a2530" stroke-width="0.9" />
-  <!-- Brojcani saZetak desno -->
-  <!-- ================ DESNO: FORMULE I REZULTATI ================ -->
-
-  <!-- Header bar -->
-  <rect x="500" y="16" width="464" height="38" rx="14" fill="#1565c0" />
-  <rect x="500" y="40" width="464" height="14" fill="#1565c0" />
-  <!-- Blok 1: Kinematika -->
-  <line x1="520" y1="134" x2="944" y2="134" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 2: Relativne brzine -->
-  <line x1="520" y1="206" x2="944" y2="206" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 3: Maseni protok -->
-  <line x1="520" y1="278" x2="944" y2="278" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 4: Apsolutni izlazni vektor i sila -->
-  <line x1="520" y1="384" x2="944" y2="384" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 5: Moment i snaga -->
-  <!-- Italic footer -->
-  <!-- Result badge -->
-  <rect x="520" y="482" width="424" height="50" rx="9" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.6" />
-  <line x1="124" y1="208" x2="76" y2="208" stroke="#b7600c" stroke-width="0.6" />
-  <line x1="124" y1="230" x2="76" y2="230" stroke="#b7600c" stroke-width="0.6" />
-  <line x1="80" y1="208" x2="80" y2="230" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u12c2prm_dimL)" marker-end="url(#u12c2prm_dim)" />
-
-  <line x1="250" y1="340" x2="250" y2="412" stroke="#b7600c" stroke-width="0.6" />
-  <line x1="380" y1="340" x2="380" y2="412" stroke="#b7600c" stroke-width="0.6" />
-  <line x1="250" y1="412" x2="380" y2="412" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u12c2prm_dimL)" marker-end="url(#u12c2prm_dim)" />
-  <text x="36" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Shema rotora s reprezentativnom lopaticom</text>
-  <text x="36" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">tangencijalni rez: rotor → jedna lopatica na 12 h s mlazom</text>
-
-  <text x="84" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">sapnica</text>
-  <text x="138" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1565c0"><tspan font-style="italic" font-weight="700">c</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 31 m/s</text>
-
-  <text x="252" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#8e44ad"><tspan font-style="italic" font-weight="700">u</tspan> = 15,41 m/s</text>
-
-  <text x="216" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="end" fill="#1565c0"><tspan font-style="italic" font-weight="700">c</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = (2,23; 4,80) m/s</text>
-
-  <text x="346" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#c0392b"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = 680 N</text>
-  <text x="346" y="229" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#7a4a30">(tangencijalna, daje moment)</text>
-
-  <text x="258" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> = −114 N</text>
-
-  <text x="148" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449"><tspan font-style="italic" font-weight="700">n</tspan> = 320 min⁻¹</text>
-  <text x="148" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449"><tspan font-style="italic" font-weight="700">ω</tspan> = 33,51 rad/s</text>
-
-  <text x="48" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1a2530">Trokuti brzina — ulaz i izlaz iz lopatice</text>
-  <text x="462" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="end" fill="#5a6a78">plava <tspan font-style="italic">c</tspan>, ljubičasta <tspan font-style="italic">u</tspan>, siva <tspan font-style="italic">w</tspan></text>
-
-  <text x="68" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#1a2530">Ulaz (1):  <tspan font-style="italic" font-weight="700">c</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = <tspan font-style="italic" font-weight="700">u</tspan> + <tspan font-style="italic" font-weight="700">w</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-  <text x="78" y="504" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#8e44ad"><tspan font-style="italic" font-weight="700">u</tspan></text>
-  <text x="152" y="504" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic" font-weight="700">w</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-  <text x="118" y="525" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#1565c0"><tspan font-style="italic" font-weight="700">c</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 31</text>
-
-  <text x="320" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#1a2530">Izlaz (2):  <tspan font-style="italic" font-weight="700">c</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = <tspan font-style="italic" font-weight="700">u</tspan> + <tspan font-style="italic" font-weight="700">w</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>,  β = 20°</text>
-  <text x="304" y="534" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#8e44ad"><tspan font-style="italic" font-weight="700">u</tspan></text>
-  <text x="320" y="502" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78"><tspan font-style="italic" font-weight="700">w</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
-  <text x="264" y="502" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#1565c0"><tspan font-style="italic" font-weight="700">c</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
-  <text x="316" y="514" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#1a2530">β</text>
-
-  <text x="362" y="496" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78"><tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 15,59 m/s</text>
-  <text x="362" y="510" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78"><tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 14,03 m/s</text>
-  <text x="362" y="524" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78"><tspan font-style="italic">c</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 5,29 m/s</text>
-
-  <text x="732" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Postupak rješavanja — Peltonov rotor</text>
-
-  <text x="520" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">1. Kinematika rotora i obodna brzina</text>
-  <text x="732" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">ω</tspan> = 2π<tspan font-style="italic">n</tspan>/60 = 2π·320/60 ≈ 33,51 rad/s</text>
-  <text x="732" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">u</tspan> = <tspan font-style="italic">ω</tspan>·<tspan font-style="italic">r</tspan> = 33,51·0,46 = <tspan fill="#8e44ad">15,41 m/s</tspan></text>
-  <text x="520" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">2. Relativne brzine u pokretnom kontrolnom volumenu</text>
-  <text x="732" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = <tspan font-style="italic">c</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> − <tspan font-style="italic">u</tspan> = 31 − 15,41 = 15,59 m/s</text>
-  <text x="732" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = <tspan font-style="italic">k</tspan>·<tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 0,90·15,59 ≈ 14,03 m/s</text>
-  <text x="520" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">3. Površina mlaza i relativni maseni protok</text>
-  <text x="732" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">A</tspan> = π<tspan font-style="italic">d</tspan>²/4 = π·0,044²/4 ≈ 1,521·10⁻³ m²</text>
-  <text x="732" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">rel</tspan> = <tspan font-style="italic">ρ</tspan>·<tspan font-style="italic">A</tspan>·<tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 998·1,521·10⁻³·15,59 ≈ <tspan fill="#1565c0">23,65 kg/s</tspan></text>
-  <text x="520" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">4. Apsolutni izlazni vektor i sila fluida na lopaticu</text>
-  <text x="732" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = (−<tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>cosβ,  <tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>sinβ) = (−13,18;  4,80) m/s</text>
-  <text x="732" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">c</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = (<tspan font-style="italic">u</tspan>, 0) + <tspan font-style="italic">w</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = (2,23;  4,80) m/s</text>
-  <text x="732" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">f→l</tspan> = −<tspan font-style="italic">ṁ</tspan><tspan baseline-shift="sub" font-size="0.7em">rel</tspan>(<tspan font-style="italic">c</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> − <tspan font-style="italic">c</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>) = 23,65·(28,77; −4,80)</text>
-  <text x="732" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> ≈ <tspan fill="#c0392b">680 N</tspan>,  <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">y</tspan> ≈ <tspan fill="#c0392b">−114 N</tspan>,  <tspan font-style="italic">F</tspan> ≈ <tspan fill="#c0392b">690 N</tspan></text>
-  <text x="520" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">5. Moment na obodu i snaga predana rotoru</text>
-  <text x="732" y="424" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">M</tspan> = <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan>·<tspan font-style="italic">r</tspan> = 680,4·0,46 ≈ <tspan fill="#1e8449">313 N·m</tspan></text>
-  <text x="732" y="444" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">P</tspan> = <tspan font-style="italic">M</tspan>·<tspan font-style="italic">ω</tspan> = 312,98·33,51 ≈ <tspan fill="#1e8449">10,49 kW</tspan></text>
-
-  <text x="732" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#5a6a78">Ekvivalentno: <tspan font-style="italic" font-weight="700">P</tspan> = <tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan>·<tspan font-style="italic" font-weight="700">u</tspan> = 680,4·15,41 ≈ 10,49 kW</text>
-
-  <text x="732" y="500" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTAT — usporedba s traženom snagom</text>
-  <text x="612" y="522" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">P</tspan> ≈ 10,49 kW</text>
-  <text x="732" y="522" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#5a6a78">−</text>
-  <text x="852" y="522" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">P</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan> = 9,50 kW</text>
-  <text x="732" y="538" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#1e8449">→ jedan mlaz dovoljan (rezerva ΔP ≈ 0,99 kW)</text>
-
-<text x="84" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">d</tspan> = 44 mm</text>
-  <text x="315" y="428" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">r</tspan> = 0,46 m</text>
-
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u14p5_title u14p5_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+<title id="u14p5_title">Reprezentativna lopatica na Peltonovu rotoru</title><desc id="u14p5_desc">Lokalni kvazistacionarni prikaz jedne lopatice na vrhu kružne putanje. Obodna brzina je udesno, a vrtnja u smjeru kazaljke na satu. Fluid prolazi otvorenom vodilicom i izlazi prema gornjoj lijevoj strani u relativnom okviru. Apsolutni izlaz ima pozitivne komponente 2,234 i 4,797 m/s. Radijus spaja os i točku na obodu. Lokalni doprinos snazi nije dokaz trajnog pogona generatora.</desc>
+<defs>
+<linearGradient id="u14p5_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u14p5_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u14p5_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u14p5_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u14p5_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u14p5_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u14p5_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="980" height="560" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
+Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
+Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
+<defs>
+<marker id="u14p5_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
+<marker id="u14p5_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
+<marker id="u14p5_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u14p5_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
+</defs>
+<defs><marker id="u14p5_motionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#b7600c"/></marker></defs>
+<rect x="16" y="17" width="462" height="526" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<text x="35" y="44" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Jedna lopatica: lokalni doprinos rotoru</text>
+<text x="35" y="65" font-size="11" fill="#1a2530" text-anchor="start">Kratak prolaz; zanemarena rotacijska akumulacija.</text>
+<circle id="u14p5_orbit" cx="242" cy="334" r="125" fill="none" stroke="#7a8a96" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line id="u14p5_spoke" x1="242" y1="334" x2="242" y2="213.5" stroke="#909fa8" stroke-width="6"/>
+<path id="u14p5_flowouter0" d="M53 185.0 H95" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M53 185.0 H95" fill="none" stroke="url(#u14p5_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u14p5_flowouter1" d="M53 209.0 H95" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M53 209.0 H95" fill="none" stroke="url(#u14p5_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u14p5_flowouter2" d="M242.0000000 209.0000000 L243.2797990 208.9853844 L244.5589433 208.9415387 L245.8367775 208.8684751 L247.1126463 208.7662204 L248.3858941 208.6348156 L249.6558659 208.4743164 L250.9219073 208.2847929 L252.1833651 208.0663297 L253.4395871 207.8190259 L254.6899230 207.5429953 L255.9337244 207.2383659 L257.1703450 206.9052804 L258.3991415 206.5438959 L259.6194732 206.1543840 L260.8307028 205.7369307 L262.0321965 205.2917363 L263.2233244 204.8190156 L264.4034610 204.3189974 L265.5719852 203.7919248 L266.7282808 203.2380552 L267.8717367 202.6576599 L269.0017475 202.0510241 L270.1177137 201.4184469 L271.2190417 200.7602413 L272.3051445 200.0767338 L273.3754421 199.3682644 L274.4293614 198.6351867 L275.4663368 197.8778675 L276.4858105 197.0966866 L277.4872326 196.2920370 L278.4700619 195.4643243 L279.4337656 194.6139670 L280.3778199 193.7413959 L281.3017106 192.8470543 L282.2049326 191.9313976 L283.0869911 190.9948930 L283.9474013 190.0380195 L284.7856888 189.0612677 L285.6013902 188.0651394 L286.3940528 187.0501477 L287.1632353 186.0168164 L287.9085083 184.9656798 L288.6294537 183.8972829 L289.3256660 182.8121805 L289.9967517 181.7109375 L290.6423301 180.5941283 L291.2620333 179.4623366 L291.8555066 178.3161553 L292.4224084 177.1561858 L292.9624109 175.9830382 L293.4752001 174.7973308 L293.9604757 173.5996896 L294.4179520 172.3907481 L294.8473574 171.1711473 L295.2484352 169.9415350 L295.6209432 168.7025655 L295.9646544 167.4548995 L296.2793569 166.1992035 L296.5648541 164.9361496 L296.8209649 163.6664152 L297.0475239 162.3906825 L297.2443813 161.1096382 L297.4114035 159.8239732 L297.5484727 158.5343821 L297.6554872 157.2415630 L297.7323620 155.9462170 L297.7790280 154.6490478 L297.7954327 153.3507614 L297.7815403 152.0520657 L297.7373316 150.7536701 L297.6628038 149.4562851 L297.5579712 148.1606219 L297.4228646 146.8673920 L297.2575319 145.5773068 L297.0620376 144.2910771 L296.8364633 143.0094132 L296.5809073 141.7330235 L296.2954848 140.4626152 L295.9803280 139.1988932 L295.6355857 137.9425597 L295.2614237 136.6943144 L294.8580245 135.4548532 L294.4255874 134.2248686 L293.9643282 133.0050486 L293.4744794 131.7960770 L292.9562899 130.5986324 L292.4100250 129.4133880 L291.8359665 128.2410114 L291.2344121 127.0821638 L290.6056758 125.9375000 L289.9500873 124.8076676 L289.2679922 123.6933071 L288.5597518 122.5950508 L287.8257428 121.5135233 L287.0663570 120.4493403 L286.2820016 119.4031086 L285.4730986 118.3754258 L284.6400846 117.3668797 L283.7834107 116.3780480 L282.9035424 115.4094980 L282.0009592 114.4617862 L281.0761542 113.5354578 L280.1296342 112.6310466 L279.1619193 111.7490744 L278.1735423 110.8900510 L277.1650491 110.0544734 L276.1369978 109.2428258 L275.0899586 108.4555793 L274.0245136 107.6931912 L272.9412563 106.9561053 L271.8407915 106.2447509 L270.7237348 105.5595433 L269.5907122 104.9008825 L268.4423598 104.2691541 L267.2793237 103.6647280 L266.1022593 103.0879587 L264.9118310 102.5391850 L263.7087119 102.0187295 L262.4935834 101.5268987 L261.2671347 101.0639824" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M242.0000000 209.0000000 L243.2797990 208.9853844 L244.5589433 208.9415387 L245.8367775 208.8684751 L247.1126463 208.7662204 L248.3858941 208.6348156 L249.6558659 208.4743164 L250.9219073 208.2847929 L252.1833651 208.0663297 L253.4395871 207.8190259 L254.6899230 207.5429953 L255.9337244 207.2383659 L257.1703450 206.9052804 L258.3991415 206.5438959 L259.6194732 206.1543840 L260.8307028 205.7369307 L262.0321965 205.2917363 L263.2233244 204.8190156 L264.4034610 204.3189974 L265.5719852 203.7919248 L266.7282808 203.2380552 L267.8717367 202.6576599 L269.0017475 202.0510241 L270.1177137 201.4184469 L271.2190417 200.7602413 L272.3051445 200.0767338 L273.3754421 199.3682644 L274.4293614 198.6351867 L275.4663368 197.8778675 L276.4858105 197.0966866 L277.4872326 196.2920370 L278.4700619 195.4643243 L279.4337656 194.6139670 L280.3778199 193.7413959 L281.3017106 192.8470543 L282.2049326 191.9313976 L283.0869911 190.9948930 L283.9474013 190.0380195 L284.7856888 189.0612677 L285.6013902 188.0651394 L286.3940528 187.0501477 L287.1632353 186.0168164 L287.9085083 184.9656798 L288.6294537 183.8972829 L289.3256660 182.8121805 L289.9967517 181.7109375 L290.6423301 180.5941283 L291.2620333 179.4623366 L291.8555066 178.3161553 L292.4224084 177.1561858 L292.9624109 175.9830382 L293.4752001 174.7973308 L293.9604757 173.5996896 L294.4179520 172.3907481 L294.8473574 171.1711473 L295.2484352 169.9415350 L295.6209432 168.7025655 L295.9646544 167.4548995 L296.2793569 166.1992035 L296.5648541 164.9361496 L296.8209649 163.6664152 L297.0475239 162.3906825 L297.2443813 161.1096382 L297.4114035 159.8239732 L297.5484727 158.5343821 L297.6554872 157.2415630 L297.7323620 155.9462170 L297.7790280 154.6490478 L297.7954327 153.3507614 L297.7815403 152.0520657 L297.7373316 150.7536701 L297.6628038 149.4562851 L297.5579712 148.1606219 L297.4228646 146.8673920 L297.2575319 145.5773068 L297.0620376 144.2910771 L296.8364633 143.0094132 L296.5809073 141.7330235 L296.2954848 140.4626152 L295.9803280 139.1988932 L295.6355857 137.9425597 L295.2614237 136.6943144 L294.8580245 135.4548532 L294.4255874 134.2248686 L293.9643282 133.0050486 L293.4744794 131.7960770 L292.9562899 130.5986324 L292.4100250 129.4133880 L291.8359665 128.2410114 L291.2344121 127.0821638 L290.6056758 125.9375000 L289.9500873 124.8076676 L289.2679922 123.6933071 L288.5597518 122.5950508 L287.8257428 121.5135233 L287.0663570 120.4493403 L286.2820016 119.4031086 L285.4730986 118.3754258 L284.6400846 117.3668797 L283.7834107 116.3780480 L282.9035424 115.4094980 L282.0009592 114.4617862 L281.0761542 113.5354578 L280.1296342 112.6310466 L279.1619193 111.7490744 L278.1735423 110.8900510 L277.1650491 110.0544734 L276.1369978 109.2428258 L275.0899586 108.4555793 L274.0245136 107.6931912 L272.9412563 106.9561053 L271.8407915 106.2447509 L270.7237348 105.5595433 L269.5907122 104.9008825 L268.4423598 104.2691541 L267.2793237 103.6647280 L266.1022593 103.0879587 L264.9118310 102.5391850 L263.7087119 102.0187295 L262.4935834 101.5268987 L261.2671347 101.0639824" fill="none" stroke="url(#u14p5_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+<defs><linearGradient id="u14p5_flowfield" gradientUnits="userSpaceOnUse" x1="0" y1="94.56559963920613" x2="0" y2="209.0"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u14p5_flowfluid" d="M53.0000000 185.0000000 L242.0000000 185.0000000 L242.7213312 184.9913303 L243.4422336 184.9653329 L244.1622792 184.9220332 L244.8810418 184.8614676 L245.5980965 184.7836832 L246.3130208 184.6887375 L247.0253940 184.5766989 L247.7347983 184.4476459 L248.4408183 184.3016677 L249.1430419 184.1388636 L249.8410601 183.9593430 L250.5344676 183.7632255 L251.2228627 183.5506405 L251.9058478 183.3217272 L252.5830295 183.0766347 L253.2540191 182.8155212 L253.9184325 182.5385546 L254.5758903 182.2459120 L255.2260186 181.9377794 L255.8684487 181.6143518 L256.5028177 181.2758331 L257.1287682 180.9224355 L257.7459490 180.5543798 L258.3540151 180.1718950 L258.9526276 179.7752180 L259.5414545 179.3645938 L260.1201703 178.9402748 L260.6884565 178.5025210 L261.2460018 178.0515997 L261.7925018 177.5877851 L262.3276598 177.1113586 L262.8511864 176.6226077 L263.3627999 176.1218269 L263.8622266 175.6093166 L264.3492006 175.0853833 L264.8234639 174.5503392 L265.2847669 174.0045022 L265.7328681 173.4481955 L266.1675346 172.8817474 L266.5885418 172.3054912 L266.9956737 171.7197645 L267.3887230 171.1249099 L267.7674910 170.5212737 L268.1317880 169.9092065 L268.4814331 169.2890625 L268.8162541 168.6611995 L269.1360883 168.0259784 L269.4407814 167.3837634 L269.7301887 166.7349213 L270.0041743 166.0798216 L270.2626114 165.4188362 L270.5053826 164.7523390 L270.7323795 164.0807058 L270.9435030 163.4043142 L271.1386629 162.7235430 L271.3177784 162.0387724 L271.4807781 161.3503835 L271.6275992 160.6587582 L271.7581885 159.9642788 L271.8725018 159.2673281 L271.9705040 158.5682887 L272.0521689 157.8675435 L272.1174795 157.1654747 L272.1664277 156.4624639 L272.1990144 155.7588923 L272.2152491 155.0551398 L272.2151505 154.3515851 L272.1987458 153.6486058 L272.1660708 152.9465776 L272.1171700 152.2458746 L272.0520966 151.5468688 L271.9709118 150.8499302 L271.8736856 150.1554263 L271.7604960 149.4637220 L271.6314291 148.7751796 L271.4865793 148.0901584 L271.3260488 147.4090148 L271.1499476 146.7321018 L270.9583937 146.0597689 L270.7515124 145.3923622 L270.5294367 144.7302241 L270.2923070 144.0736928 L270.0402710 143.4231029 L269.7734833 142.7787844 L269.4921058 142.1410631 L269.1963072 141.5102605 L268.8862630 140.8866934 L268.5621551 140.2706736 L268.2241721 139.6625084 L267.8725089 139.0625000 L267.5073667 138.4709454 L267.1289525 137.8881363 L266.7374794 137.3143595 L266.3331663 136.7498958 L265.9162376 136.1950208 L265.4869232 135.6500045 L265.0454584 135.1151110 L264.5920836 134.5905986 L264.1270443 134.0767198 L263.6505907 133.5737211 L263.1629780 133.0818429 L262.6644657 132.6013194 L262.1553177 132.1323787 L261.6358024 131.6752427 L261.1061921 131.2301269 L260.5667632 130.7972403 L260.0177956 130.3767857 L259.4595731 129.9689592 L258.8923830 129.5739506 L258.3165158 129.1919429 L257.7322652 128.8231128 L257.1399279 128.4676300 L256.5398036 128.1256579 L255.9321946 127.7973529 L255.3174058 127.4828649 L254.6957445 127.1823371 L254.0675203 126.8959056 L253.4330450 126.6237003 L252.7926322 126.3658438 L252.1465976 126.1224523 L234.2924378 119.6240695 L243.4129749 94.5655996 L261.2671347 101.0639824 L262.4935834 101.5268987 L263.7087119 102.0187295 L264.9118310 102.5391850 L266.1022593 103.0879587 L267.2793237 103.6647280 L268.4423598 104.2691541 L269.5907122 104.9008825 L270.7237348 105.5595433 L271.8407915 106.2447509 L272.9412563 106.9561053 L274.0245136 107.6931912 L275.0899586 108.4555793 L276.1369978 109.2428258 L277.1650491 110.0544734 L278.1735423 110.8900510 L279.1619193 111.7490744 L280.1296342 112.6310466 L281.0761542 113.5354578 L282.0009592 114.4617862 L282.9035424 115.4094980 L283.7834107 116.3780480 L284.6400846 117.3668797 L285.4730986 118.3754258 L286.2820016 119.4031086 L287.0663570 120.4493403 L287.8257428 121.5135233 L288.5597518 122.5950508 L289.2679922 123.6933071 L289.9500873 124.8076676 L290.6056758 125.9375000 L291.2344121 127.0821638 L291.8359665 128.2410114 L292.4100250 129.4133880 L292.9562899 130.5986324 L293.4744794 131.7960770 L293.9643282 133.0050486 L294.4255874 134.2248686 L294.8580245 135.4548532 L295.2614237 136.6943144 L295.6355857 137.9425597 L295.9803280 139.1988932 L296.2954848 140.4626152 L296.5809073 141.7330235 L296.8364633 143.0094132 L297.0620376 144.2910771 L297.2575319 145.5773068 L297.4228646 146.8673920 L297.5579712 148.1606219 L297.6628038 149.4562851 L297.7373316 150.7536701 L297.7815403 152.0520657 L297.7954327 153.3507614 L297.7790280 154.6490478 L297.7323620 155.9462170 L297.6554872 157.2415630 L297.5484727 158.5343821 L297.4114035 159.8239732 L297.2443813 161.1096382 L297.0475239 162.3906825 L296.8209649 163.6664152 L296.5648541 164.9361496 L296.2793569 166.1992035 L295.9646544 167.4548995 L295.6209432 168.7025655 L295.2484352 169.9415350 L294.8473574 171.1711473 L294.4179520 172.3907481 L293.9604757 173.5996896 L293.4752001 174.7973308 L292.9624109 175.9830382 L292.4224084 177.1561858 L291.8555066 178.3161553 L291.2620333 179.4623366 L290.6423301 180.5941283 L289.9967517 181.7109375 L289.3256660 182.8121805 L288.6294537 183.8972829 L287.9085083 184.9656798 L287.1632353 186.0168164 L286.3940528 187.0501477 L285.6013902 188.0651394 L284.7856888 189.0612677 L283.9474013 190.0380195 L283.0869911 190.9948930 L282.2049326 191.9313976 L281.3017106 192.8470543 L280.3778199 193.7413959 L279.4337656 194.6139670 L278.4700619 195.4643243 L277.4872326 196.2920370 L276.4858105 197.0966866 L275.4663368 197.8778675 L274.4293614 198.6351867 L273.3754421 199.3682644 L272.3051445 200.0767338 L271.2190417 200.7602413 L270.1177137 201.4184469 L269.0017475 202.0510241 L267.8717367 202.6576599 L266.7282808 203.2380552 L265.5719852 203.7919248 L264.4034610 204.3189974 L263.2233244 204.8190156 L262.0321965 205.2917363 L260.8307028 205.7369307 L259.6194732 206.1543840 L258.3991415 206.5438959 L257.1703450 206.9052804 L255.9337244 207.2383659 L254.6899230 207.5429953 L253.4395871 207.8190259 L252.1833651 208.0663297 L250.9219073 208.2847929 L249.6558659 208.4743164 L248.3858941 208.6348156 L247.1126463 208.7662204 L245.8367775 208.8684751 L244.5589433 208.9415387 L243.2797990 208.9853844 L242.0000000 209.0000000 L53.0000000 209.0000000 Z" fill="url(#u14p5_flowfield)" stroke="none" stroke-width="1.8" />
+<path id="u14p5_flowwall0" d="M53 185.0 H95" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u14p5_flowwall1" d="M53 209.0 H95" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u14p5_flowwall2" d="M242.0000000 209.0000000 L243.2797990 208.9853844 L244.5589433 208.9415387 L245.8367775 208.8684751 L247.1126463 208.7662204 L248.3858941 208.6348156 L249.6558659 208.4743164 L250.9219073 208.2847929 L252.1833651 208.0663297 L253.4395871 207.8190259 L254.6899230 207.5429953 L255.9337244 207.2383659 L257.1703450 206.9052804 L258.3991415 206.5438959 L259.6194732 206.1543840 L260.8307028 205.7369307 L262.0321965 205.2917363 L263.2233244 204.8190156 L264.4034610 204.3189974 L265.5719852 203.7919248 L266.7282808 203.2380552 L267.8717367 202.6576599 L269.0017475 202.0510241 L270.1177137 201.4184469 L271.2190417 200.7602413 L272.3051445 200.0767338 L273.3754421 199.3682644 L274.4293614 198.6351867 L275.4663368 197.8778675 L276.4858105 197.0966866 L277.4872326 196.2920370 L278.4700619 195.4643243 L279.4337656 194.6139670 L280.3778199 193.7413959 L281.3017106 192.8470543 L282.2049326 191.9313976 L283.0869911 190.9948930 L283.9474013 190.0380195 L284.7856888 189.0612677 L285.6013902 188.0651394 L286.3940528 187.0501477 L287.1632353 186.0168164 L287.9085083 184.9656798 L288.6294537 183.8972829 L289.3256660 182.8121805 L289.9967517 181.7109375 L290.6423301 180.5941283 L291.2620333 179.4623366 L291.8555066 178.3161553 L292.4224084 177.1561858 L292.9624109 175.9830382 L293.4752001 174.7973308 L293.9604757 173.5996896 L294.4179520 172.3907481 L294.8473574 171.1711473 L295.2484352 169.9415350 L295.6209432 168.7025655 L295.9646544 167.4548995 L296.2793569 166.1992035 L296.5648541 164.9361496 L296.8209649 163.6664152 L297.0475239 162.3906825 L297.2443813 161.1096382 L297.4114035 159.8239732 L297.5484727 158.5343821 L297.6554872 157.2415630 L297.7323620 155.9462170 L297.7790280 154.6490478 L297.7954327 153.3507614 L297.7815403 152.0520657 L297.7373316 150.7536701 L297.6628038 149.4562851 L297.5579712 148.1606219 L297.4228646 146.8673920 L297.2575319 145.5773068 L297.0620376 144.2910771 L296.8364633 143.0094132 L296.5809073 141.7330235 L296.2954848 140.4626152 L295.9803280 139.1988932 L295.6355857 137.9425597 L295.2614237 136.6943144 L294.8580245 135.4548532 L294.4255874 134.2248686 L293.9643282 133.0050486 L293.4744794 131.7960770 L292.9562899 130.5986324 L292.4100250 129.4133880 L291.8359665 128.2410114 L291.2344121 127.0821638 L290.6056758 125.9375000 L289.9500873 124.8076676 L289.2679922 123.6933071 L288.5597518 122.5950508 L287.8257428 121.5135233 L287.0663570 120.4493403 L286.2820016 119.4031086 L285.4730986 118.3754258 L284.6400846 117.3668797 L283.7834107 116.3780480 L282.9035424 115.4094980 L282.0009592 114.4617862 L281.0761542 113.5354578 L280.1296342 112.6310466 L279.1619193 111.7490744 L278.1735423 110.8900510 L277.1650491 110.0544734 L276.1369978 109.2428258 L275.0899586 108.4555793 L274.0245136 107.6931912 L272.9412563 106.9561053 L271.8407915 106.2447509 L270.7237348 105.5595433 L269.5907122 104.9008825 L268.4423598 104.2691541 L267.2793237 103.6647280 L266.1022593 103.0879587 L264.9118310 102.5391850 L263.7087119 102.0187295 L262.4935834 101.5268987 L261.2671347 101.0639824" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u14p5_flowfreeEdge" d="M242.0000000 185.0000000 L242.7213312 184.9913303 L243.4422336 184.9653329 L244.1622792 184.9220332 L244.8810418 184.8614676 L245.5980965 184.7836832 L246.3130208 184.6887375 L247.0253940 184.5766989 L247.7347983 184.4476459 L248.4408183 184.3016677 L249.1430419 184.1388636 L249.8410601 183.9593430 L250.5344676 183.7632255 L251.2228627 183.5506405 L251.9058478 183.3217272 L252.5830295 183.0766347 L253.2540191 182.8155212 L253.9184325 182.5385546 L254.5758903 182.2459120 L255.2260186 181.9377794 L255.8684487 181.6143518 L256.5028177 181.2758331 L257.1287682 180.9224355 L257.7459490 180.5543798 L258.3540151 180.1718950 L258.9526276 179.7752180 L259.5414545 179.3645938 L260.1201703 178.9402748 L260.6884565 178.5025210 L261.2460018 178.0515997 L261.7925018 177.5877851 L262.3276598 177.1113586 L262.8511864 176.6226077 L263.3627999 176.1218269 L263.8622266 175.6093166 L264.3492006 175.0853833 L264.8234639 174.5503392 L265.2847669 174.0045022 L265.7328681 173.4481955 L266.1675346 172.8817474 L266.5885418 172.3054912 L266.9956737 171.7197645 L267.3887230 171.1249099 L267.7674910 170.5212737 L268.1317880 169.9092065 L268.4814331 169.2890625 L268.8162541 168.6611995 L269.1360883 168.0259784 L269.4407814 167.3837634 L269.7301887 166.7349213 L270.0041743 166.0798216 L270.2626114 165.4188362 L270.5053826 164.7523390 L270.7323795 164.0807058 L270.9435030 163.4043142 L271.1386629 162.7235430 L271.3177784 162.0387724 L271.4807781 161.3503835 L271.6275992 160.6587582 L271.7581885 159.9642788 L271.8725018 159.2673281 L271.9705040 158.5682887 L272.0521689 157.8675435 L272.1174795 157.1654747 L272.1664277 156.4624639 L272.1990144 155.7588923 L272.2152491 155.0551398 L272.2151505 154.3515851 L272.1987458 153.6486058 L272.1660708 152.9465776 L272.1171700 152.2458746 L272.0520966 151.5468688 L271.9709118 150.8499302 L271.8736856 150.1554263 L271.7604960 149.4637220 L271.6314291 148.7751796 L271.4865793 148.0901584 L271.3260488 147.4090148 L271.1499476 146.7321018 L270.9583937 146.0597689 L270.7515124 145.3923622 L270.5294367 144.7302241 L270.2923070 144.0736928 L270.0402710 143.4231029 L269.7734833 142.7787844 L269.4921058 142.1410631 L269.1963072 141.5102605 L268.8862630 140.8866934 L268.5621551 140.2706736 L268.2241721 139.6625084 L267.8725089 139.0625000 L267.5073667 138.4709454 L267.1289525 137.8881363 L266.7374794 137.3143595 L266.3331663 136.7498958 L265.9162376 136.1950208 L265.4869232 135.6500045 L265.0454584 135.1151110 L264.5920836 134.5905986 L264.1270443 134.0767198 L263.6505907 133.5737211 L263.1629780 133.0818429 L262.6644657 132.6013194 L262.1553177 132.1323787 L261.6358024 131.6752427 L261.1061921 131.2301269 L260.5667632 130.7972403 L260.0177956 130.3767857 L259.4595731 129.9689592 L258.8923830 129.5739506 L258.3165158 129.1919429 L257.7322652 128.8231128 L257.1399279 128.4676300 L256.5398036 128.1256579 L255.9321946 127.7973529 L255.3174058 127.4828649 L254.6957445 127.1823371 L254.0675203 126.8959056 L253.4330450 126.6237003 L252.7926322 126.3658438 L252.1465976 126.1224523 L234.2924378 119.6240695" fill="none" stroke="#1565c0" stroke-width="0.8" />
+<path id="u14p5_flowouterEdge" d="M242.0000000 209.0000000 L243.2797990 208.9853844 L244.5589433 208.9415387 L245.8367775 208.8684751 L247.1126463 208.7662204 L248.3858941 208.6348156 L249.6558659 208.4743164 L250.9219073 208.2847929 L252.1833651 208.0663297 L253.4395871 207.8190259 L254.6899230 207.5429953 L255.9337244 207.2383659 L257.1703450 206.9052804 L258.3991415 206.5438959 L259.6194732 206.1543840 L260.8307028 205.7369307 L262.0321965 205.2917363 L263.2233244 204.8190156 L264.4034610 204.3189974 L265.5719852 203.7919248 L266.7282808 203.2380552 L267.8717367 202.6576599 L269.0017475 202.0510241 L270.1177137 201.4184469 L271.2190417 200.7602413 L272.3051445 200.0767338 L273.3754421 199.3682644 L274.4293614 198.6351867 L275.4663368 197.8778675 L276.4858105 197.0966866 L277.4872326 196.2920370 L278.4700619 195.4643243 L279.4337656 194.6139670 L280.3778199 193.7413959 L281.3017106 192.8470543 L282.2049326 191.9313976 L283.0869911 190.9948930 L283.9474013 190.0380195 L284.7856888 189.0612677 L285.6013902 188.0651394 L286.3940528 187.0501477 L287.1632353 186.0168164 L287.9085083 184.9656798 L288.6294537 183.8972829 L289.3256660 182.8121805 L289.9967517 181.7109375 L290.6423301 180.5941283 L291.2620333 179.4623366 L291.8555066 178.3161553 L292.4224084 177.1561858 L292.9624109 175.9830382 L293.4752001 174.7973308 L293.9604757 173.5996896 L294.4179520 172.3907481 L294.8473574 171.1711473 L295.2484352 169.9415350 L295.6209432 168.7025655 L295.9646544 167.4548995 L296.2793569 166.1992035 L296.5648541 164.9361496 L296.8209649 163.6664152 L297.0475239 162.3906825 L297.2443813 161.1096382 L297.4114035 159.8239732 L297.5484727 158.5343821 L297.6554872 157.2415630 L297.7323620 155.9462170 L297.7790280 154.6490478 L297.7954327 153.3507614 L297.7815403 152.0520657 L297.7373316 150.7536701 L297.6628038 149.4562851 L297.5579712 148.1606219 L297.4228646 146.8673920 L297.2575319 145.5773068 L297.0620376 144.2910771 L296.8364633 143.0094132 L296.5809073 141.7330235 L296.2954848 140.4626152 L295.9803280 139.1988932 L295.6355857 137.9425597 L295.2614237 136.6943144 L294.8580245 135.4548532 L294.4255874 134.2248686 L293.9643282 133.0050486 L293.4744794 131.7960770 L292.9562899 130.5986324 L292.4100250 129.4133880 L291.8359665 128.2410114 L291.2344121 127.0821638 L290.6056758 125.9375000 L289.9500873 124.8076676 L289.2679922 123.6933071 L288.5597518 122.5950508 L287.8257428 121.5135233 L287.0663570 120.4493403 L286.2820016 119.4031086 L285.4730986 118.3754258 L284.6400846 117.3668797 L283.7834107 116.3780480 L282.9035424 115.4094980 L282.0009592 114.4617862 L281.0761542 113.5354578 L280.1296342 112.6310466 L279.1619193 111.7490744 L278.1735423 110.8900510 L277.1650491 110.0544734 L276.1369978 109.2428258 L275.0899586 108.4555793 L274.0245136 107.6931912 L272.9412563 106.9561053 L271.8407915 106.2447509 L270.7237348 105.5595433 L269.5907122 104.9008825 L268.4423598 104.2691541 L267.2793237 103.6647280 L266.1022593 103.0879587 L264.9118310 102.5391850 L263.7087119 102.0187295 L262.4935834 101.5268987 L261.2671347 101.0639824 L243.4129749 94.5655996" fill="none" stroke="#1565c0" stroke-width="0.8" />
+<path id="u14p5_flowcenterline" d="M242.0000000 197.0000000 L243.0005651 196.9883574 L244.0005884 196.9534358 L244.9995284 196.8952542 L245.9968440 196.8138440 L246.9919953 196.7092494 L247.9844433 196.5815270 L248.9736507 196.4307459 L249.9590817 196.2569878 L250.9402027 196.0603468 L251.9164824 195.8409294 L252.8873922 195.5988544 L253.8524063 195.3342529 L254.8110021 195.0472682 L255.7626605 194.7380556 L256.7068662 194.4067827 L257.6431078 194.0536288 L258.5708784 193.6787851 L259.4896757 193.2824547 L260.3990019 192.8648521 L261.2983647 192.4262035 L262.1872772 191.9667465 L263.0652579 191.4867298 L263.9318314 190.9864134 L264.7865284 190.4660681 L265.6288861 189.9259759 L266.4584483 189.3664291 L267.2747658 188.7877308 L268.0773967 188.1901942 L268.8659061 187.5741431 L269.6398672 186.9399111 L270.3988608 186.2878414 L271.1424760 185.6182873 L271.8703099 184.9316114 L272.5819686 184.2281855 L273.2770666 183.5083904 L273.9552275 182.7726161 L274.6160841 182.0212608 L275.2592785 181.2547316 L275.8844624 180.4734434 L276.4912973 179.6778194 L277.0794545 178.8682905 L277.6486156 178.0452948 L278.1984724 177.2092783 L278.7287270 176.3606935 L279.2390924 175.5000000 L279.7292921 174.6276639 L280.1990608 173.7441575 L280.6481440 172.8499593 L281.0762985 171.9455535 L281.4832926 171.0314299 L281.8689057 170.1080835 L282.2329292 169.1760143 L282.5751658 168.2357270 L282.8954302 167.2877308 L283.1935490 166.3325390 L283.4693608 165.3706690 L283.7227162 164.4026415 L283.9534780 163.4289808 L284.1615213 162.4502142 L284.3467334 161.4668716 L284.5090139 160.4794856 L284.6482751 159.4885909 L284.7644415 158.4947239 L284.8574502 157.4984230 L284.9272508 156.5002276 L284.9738056 155.5006784 L284.9970892 154.5003164 L284.9970892 153.4996836 L284.9738056 152.4993216 L284.9272508 151.4997724 L284.8574502 150.5015770 L284.7644415 149.5052761 L284.6482751 148.5114091 L284.5090139 147.5205144 L284.3467334 146.5331284 L284.1615213 145.5497858 L283.9534780 144.5710192 L283.7227162 143.5973585 L283.4693608 142.6293310 L283.1935490 141.6674610 L282.8954302 140.7122692 L282.5751658 139.7642730 L282.2329292 138.8239857 L281.8689057 137.8919165 L281.4832926 136.9685701 L281.0762985 136.0544465 L280.6481440 135.1500407 L280.1990608 134.2558425 L279.7292921 133.3723361 L279.2390924 132.5000000 L278.7287270 131.6393065 L278.1984724 130.7907217 L277.6486156 129.9547052 L277.0794545 129.1317095 L276.4912973 128.3221806 L275.8844624 127.5265566 L275.2592785 126.7452684 L274.6160841 125.9787392 L273.9552275 125.2273839 L273.2770666 124.4916096 L272.5819686 123.7718145 L271.8703099 123.0683886 L271.1424760 122.3817127 L270.3988608 121.7121586 L269.6398672 121.0600889 L268.8659061 120.4258569 L268.0773967 119.8098058 L267.2747658 119.2122692 L266.4584483 118.6335709 L265.6288861 118.0740241 L264.7865284 117.5339319 L263.9318314 117.0135866 L263.0652579 116.5132702 L262.1872772 116.0332535 L261.2983647 115.5737965 L260.3990019 115.1351479 L259.4896757 114.7175453 L258.5708784 114.3212149 L257.6431078 113.9463712 L256.7068662 113.5932173" fill="none" stroke="#7a8a96" stroke-width="0.55" />
+<path id="u14p5_flowoutletSection" d="M252.1465976 126.1224523 L261.2671347 101.0639824" fill="none" stroke="#1565c0" stroke-width="0.8" />
+<path id="u14p5_inflow" d="M105.0000000 197.0000000 L189.0000000 197.0000000" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u14p5_pressureMarker)"/>
+<text x="147.0" y="178" font-size="12" fill="#1565c0" text-anchor="middle">c₁ = 31 m/s</text>
+<path id="u14p5_relativeExit" d="M256.7068662 113.5932173 L224.7573171 101.9645324" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14p5_reactionMarker)"/>
+<text x="218.70686616300378" y="94.59321730620594" font-size="12" fill="#1e8449" text-anchor="middle">w₂</text>
+<path id="u14p5_motion" d="M301.0000000 178.0000000 L370.0000000 178.0000000" fill="none" stroke="#b7600c" stroke-width="2.3" marker-end="url(#u14p5_motionMarker)"/>
+<text x="335.5" y="163" font-size="12" fill="#b7600c" text-anchor="middle">u = 15,41 m/s</text>
+<path id="u14p5_forceX" d="M360 226 L420 226" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u14p5_forceMarker)"/>
+<text x="396" y="248" font-size="13" fill="#c0392b" text-anchor="middle">Fₓ ≈ 680 N</text>
+<path id="u14p5_forceY" d="M360 226 L360 236.0102895781273" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u14p5_forceMarker)"/>
+<text x="403" y="277" font-size="13" fill="#c0392b" text-anchor="middle">Fᵧ ≈ −114 N</text>
+<circle id="u14p5_axisCenter" cx="242" cy="334" r="3" fill="#c0392b"/>
+<text x="242" y="358" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">O</text>
+<circle cx="242" cy="334" r="15" fill="url(#u14p5_hatch)" stroke="#3a4a56"/>
+<circle id="u14p5_rimPoint" cx="242" cy="209" r="3" fill="#c0392b"/>
+<text x="226" y="210" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">B</text>
+<line x1="443" y1="209" x2="453" y2="209" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="443" y1="334" x2="453" y2="334" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u14p5_radius" d="M448 209 L448 334" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u14p5_dim)" marker-end="url(#u14p5_dim)"/>
+<line x1="242" y1="209" x2="448" y2="209" stroke="#b7600c" stroke-width="0.8" stroke-dasharray="3 3"/>
+<line x1="242" y1="334" x2="448" y2="334" stroke="#b7600c" stroke-width="0.8" stroke-dasharray="3 3"/>
+<text x="405" y="315" font-size="11" fill="#b7600c" text-anchor="middle">r = 0,46 m</text>
+<path id="u14p5_rotation" d="M198.7741394438482 349.7329265929808 L198.50614552243144 348.9761351050292 L198.25140025042293 348.2147817412476 L198.00998122570036 347.44909841724586 L197.78196198683733 346.67931836758197 L197.56741199070285 345.905676074716 L197.36639659130415 345.1284071975847 L197.1789770198792 344.3477484998178 L197.00521036624494 343.56393777761696 L196.84514956140745 342.77721378732105 L196.69884336143843 341.9878161726788 L196.56633633262368 341.1959853918506 L196.44766883788776 340.401962644163 L196.3428770244992 339.6059897966368 L196.25199281305942 338.8083093103121 L196.1750438877797 338.0091641663923 L196.1120536880481 337.2087977922298 L196.0630414012896 336.4074539871754 L196.0280219571216 335.6053768483151 L196.007006022806 334.80281069611505 L196.0 334.0 L196.007006022806 333.19718930388495 L196.0280219571216 332.394623151685 L196.0630414012896 331.5925460128246 L196.1120536880481 330.79120220777025 L196.1750438877797 329.9908358336077 L196.25199281305942 329.19169068968796 L196.3428770244992 328.3940102033632 L196.44766883788776 327.598037355837 L196.56633633262368 326.8040146081494 L196.69884336143843 326.0121838273212 L196.84514956140745 325.22278621267895 L197.00521036624494 324.43606222238304 L197.17897701987917 323.6522515001822 L197.36639659130415 322.8715928024153 L197.56741199070285 322.094323925284 L197.78196198683733 321.32068163241803 L198.00998122570036 320.55090158275414 L198.25140025042293 319.7852182587524 L198.50614552243144 319.0238648949708 L198.7741394438482 318.26707340701927 L199.05530038112872 317.5150743209162 L199.34954268992777 316.76809670286804 L199.65677674118774 316.0263680894934 L199.97690894844035 315.2901144185132 L200.3098417963141 314.5595599599278 L200.65547387023832 313.83492724770247 L201.01369988733506 313.11643701198085 L201.38441072848937 312.404308111849 L201.76749347158778 311.6987574686685 L202.16283142591584 311.0 L202.57030416770283 310.3082485541375 L202.98978757680442 309.62371384527256 L203.42115387451048 308.94660438930873 L203.86427166246807 308.2771264403457 L204.31900596270637 307.61548392785187 L204.78521825875242 306.96187839454626 L205.26276653782452 306.3165089350058 L205.75150533409078 305.6795721350197 L206.25128577297934 305.0512620117075 L206.76195561652702 304.4317699544192 L207.28335930975248 303.82128466643667 L207.81533802803986 303.21999210749254 L208.35772972551814 302.62807543712506 L208.91036918442205 302.04571495888615 L209.4730880654188 301.47308806541884 L210.04571495888612 300.91036918442205 L210.62807543712506 300.35772972551814 L211.21999210749252 299.81533802803983 L211.82128466643667 299.2833593097525 L212.4317699544192 298.761955616527 L213.05126201170745 298.2512857729794 L213.67957213501973 297.7515053340908 L214.31650893500577 297.2627665378245 L214.96187839454623 296.7852182587524 L215.61548392785187 296.3190059627064 L216.27712644034565 295.86427166246807 L216.94660438930876 295.4211538745105 L217.62371384527256 294.9897875768044 L218.3082485541375 294.57030416770283 L218.99999999999997 294.16283142591584" fill="none" stroke="#1e8449" stroke-width="2" marker-end="url(#u14p5_reactionMarker)"/>
+<text x="43" y="322" font-size="11" fill="#1e8449" text-anchor="start">n = 320 min⁻¹</text>
+<text x="43" y="344" font-size="11" fill="#1e8449" text-anchor="start">ω = 33,51 rad/s</text>
+<line x1="37" y1="185" x2="47" y2="185" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="37" y1="209" x2="47" y2="209" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u14p5_d" d="M42 185 L42 209" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u14p5_dim)" marker-end="url(#u14p5_dim)"/>
+<text x="36" y="241" font-size="11" fill="#b7600c" text-anchor="start">d = 44 mm</text>
+<rect x="28" y="422" width="438" height="112" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<text x="40" y="441" font-size="11" fill="#1a2530" text-anchor="start" font-weight="700">Trokuti: iste jedinice, skala 4 px/(m/s)</text>
+<path id="u14p5_inletTriangleu" d="M47.0000000 470.0000000 L108.6589918 470.0000000" fill="none" stroke="#b7600c" stroke-width="2.3" marker-end="url(#u14p5_motionMarker)"/>
+<text x="77.82949590722784" y="461" font-size="12" fill="#b7600c" text-anchor="middle">u₁</text>
+<path id="u14p5_inletTrianglew" d="M108.6589918 470.0000000 L171.0000000 470.0000000" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14p5_reactionMarker)"/>
+<text x="139.82949590722785" y="461" font-size="12" fill="#1e8449" text-anchor="middle">w₁</text>
+<path id="u14p5_inletTrianglec" d="M47.0000000 500.0000000 L171.0000000 500.0000000" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u14p5_pressureMarker)"/>
+<text x="109.0" y="518" font-size="12" fill="#1565c0" text-anchor="middle">c₁</text>
+<line x1="47" y1="464" x2="47" y2="504" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="3 3"/>
+<line x1="171.0" y1="464" x2="171.0" y2="504" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="3 3"/>
+<path id="u14p5_outletTriangleu" d="M282.0000000 500.0000000 L343.6589918 500.0000000" fill="none" stroke="#b7600c" stroke-width="2.3" marker-end="url(#u14p5_motionMarker)"/>
+<text x="312.82949590722785" y="521" font-size="12" fill="#b7600c" text-anchor="middle">u₂</text>
+<path id="u14p5_outletTrianglew" d="M343.6589918 500.0000000 L290.9357450 480.8103075" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14p5_reactionMarker)"/>
+<text x="331.29736840051623" y="482.40515375039104" font-size="12" fill="#1e8449" text-anchor="middle">w₂</text>
+<path id="u14p5_outletTrianglec" d="M282.0000000 500.0000000 L290.9357450 480.8103075" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u14p5_pressureMarker)"/>
+<text x="270.4678724932884" y="484.40515375039104" font-size="12" fill="#1565c0" text-anchor="middle">c₂</text>
+<rect x="497" y="20" width="462" height="34" rx="8" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="728.0" y="43" font-size="15" fill="white" text-anchor="middle" font-weight="700">Postupak — lokalna lopatica</text>
+<rect x="497" y="68" width="462" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="497" y="68" width="4" height="73" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="511" y="88" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Kinematika</text>
+<text x="512" y="110" font-size="13" fill="#1a2530" text-anchor="start">u = ωr ≈ 15,415 m/s; w₁ ≈ 15,585 m/s</text>
+<text x="512" y="131" font-size="13" fill="#1a2530" text-anchor="start">w₂ = 0,90w₁; β = 20° iznad −x</text>
+<rect x="497" y="151" width="462" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="497" y="151" width="4" height="73" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="511" y="171" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Relativni protok i apsolutni izlaz</text>
+<text x="512" y="193" font-size="13" fill="#1a2530" text-anchor="start">ṁrel = ρA(c₁ − u) ≈ 23,65 kg/s</text>
+<text x="512" y="214" font-size="13" fill="#1a2530" text-anchor="start">c₂ ≈ (2,234; 4,797) m/s</text>
+<rect x="497" y="234" width="462" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="497" y="234" width="4" height="73" rx="0" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+<text x="511" y="254" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">Sila i trenutačni moment</text>
+<text x="512" y="276" font-size="13" fill="#1a2530" text-anchor="start">Fₓ ≈ 680,3 N; Fᵧ ≈ −113,5 N</text>
+<text x="512" y="297" font-size="13" fill="#1a2530" text-anchor="start">M = Fₓr ≈ 313 N m</text>
+<rect x="497" y="317" width="462" height="94" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="497" y="317" width="4" height="94" rx="0" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+<text x="511" y="337" font-size="12" fill="#1e8449" text-anchor="start" font-weight="700">Snaga i granica zaključka</text>
+<text x="512" y="359" font-size="13" fill="#1a2530" text-anchor="start">P = Mω = Fₓu ≈ 10,49 kW</text>
+<text x="512" y="380" font-size="13" fill="#1a2530" text-anchor="start">PG = 9,50 kW; razlika ≈ 0,99 kW</text>
+<text x="512" y="401" font-size="13" fill="#1a2530" text-anchor="start">To nije dokaz trajnog pogona generatora.</text>
+</g>
+</svg>

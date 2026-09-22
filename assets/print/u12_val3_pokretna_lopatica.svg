@@ -1,199 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" role="img" aria-labelledby="u12v3pl_title u12v3pl_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u12v3pl_title">Pokretna ravna lopatica u mlazu vode</title>
-  <desc id="u12v3pl_desc">Ravna lopatica giba se brzinom u = 9 m/s u smjeru mlaza apsolutne brzine c1 = 24 m/s iz sapnice promjera d = 40 mm. Relativna brzina dotoka c_r = c1 - u = 15 m/s ulazi u pokretni kontrolni volumen i daje maseni protok m_rel = 18,82 kg/s. Voda se na lopatici skreće okomito u dva radijalna lista. Sila fluida na lopaticu F = 282 N (crveno), reakcija lopatice F = 282 N na nosač zelena. Snaga lopatice P = F u = 2,54 kW. Formula panel desno prikazuje izvod u četiri bloka.</desc>
-
-  <defs>
-    <marker id="u12v3pl_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
-    </marker>
-    <marker id="u12v3pl_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
-    </marker>
-    <marker id="u12v3pl_aB" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
-    </marker>
-    <marker id="u12v3pl_aP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
-    </marker>
-    <marker id="u12v3pl_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
-    </marker>
-    <marker id="u12v3pl_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
-    </marker>
-    <linearGradient id="u12v3pl_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
-    <linearGradient id="u12v3pl_plate" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#909fa8" />
-      <stop offset="100%" stop-color="#5d6d7e" />
-    </linearGradient>
-    <pattern id="u12v3pl_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8" />
-    </pattern>
-  </defs>
-
-  <!-- Pozadina i okviri panela -->
-  <rect width="980" height="540" fill="#ffffff" />
-  <rect x="14" y="14" width="540" height="512" rx="12" fill="#fbfdff" stroke="#dde3ea" stroke-width="1.5" />
-  <rect x="566" y="14" width="400" height="512" rx="12" fill="#fbfdff" stroke="#dde3ea" stroke-width="1.5" />
-
-  <!-- ===================== LIJEVI PANEL: FIZIKALNA SCENA ===================== -->
-  <!-- ============================================================
-       SAPNICA (lijevo) - tijelo i izlaz
-       Centar mlaza: y = 240 (sredina canvasa)
-       Promjer mlaza: 40 px (1 mm = 1 px; d=40 mm → 40 px)
-       Mlaz: y = 220..260 (visina 40)
-  ============================================================ -->
-  <!-- Sapnica - konusno tijelo -->
-  <path d="M40,160 L120,200 L120,280 L40,320 Z" fill="url(#u12v3pl_hatch)" stroke="#3a4a56" stroke-width="1.5" />
-  <!-- Izlazna ploha sapnice -->
-  <rect x="118" y="200" width="4" height="80" fill="#3a4a56" />
-  <!-- ============================================================
-       MLAZ VODE (kontinuiran) od sapnice do lopatice
-       Pravi mlaz: x = 122..380 (do prednje plohe lopatice)
-  ============================================================ -->
-  <rect x="122" y="220" width="258" height="40" fill="url(#u12v3pl_voda)" />
-  <!-- Slobodne plohe mlaza (gornja i donja crta) -->
-  <line x1="122" y1="220" x2="380" y2="220" stroke="#1565c0" stroke-width="1.3" />
-  <line x1="122" y1="260" x2="380" y2="260" stroke="#1565c0" stroke-width="1.3" />
-
-  <!-- ============================================================
-       LOPATICA (ravna ploča, vertikalna)
-       x = 380..400, y = 120..360 (visina 240, debljina 20)
-  ============================================================ -->
-  <rect x="380" y="120" width="20" height="240" fill="url(#u12v3pl_plate)" stroke="#3a4a56" stroke-width="1.6" />
-  <!-- ============================================================
-       RADIJALNI LISTOVI (voda se širi gore/dolje uz lopaticu)
-       Apsolutna izlazna brzina u smjeru u; relativna w_r u rel. okviru.
-       Gore: rect na desnoj strani lopatice koji raste od 220 prema
-       gore + lagani luk koji simulira skretanje. Crta se s pathom.
-  ============================================================ -->
-  <!-- Gornji list (zakrivljena tranzicija od mlaza do okomitog tijela na lopatici) -->
-  <path d="M375,220 Q372,196 376,168 L376,140 L398,140 L398,168 Q394,200 380,220 Z" fill="url(#u12v3pl_voda)" stroke="#1565c0" stroke-width="1.2" />
-  <!-- Donji list -->
-  <path d="M375,260 Q372,284 376,312 L376,340 L398,340 L398,312 Q394,280 380,260 Z" fill="url(#u12v3pl_voda)" stroke="#1565c0" stroke-width="1.2" />
-
-  <!-- ============================================================
-       BRZINE - apsolutne i relativne
-       Skala: 1 m/s = 4 px
-       c1 = 24 m/s → 96 px (u = 9 m/s → 36 px, c_r = 15 m/s → 60 px)
-  ============================================================ -->
-  <!-- c1 (apsolutna brzina mlaza) - zelena strelica iznad mlaza, smjer +x -->
-  <line x1="160" y1="200" x2="256" y2="200" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u12v3pl_aG)" />
-  <!-- u (brzina lopatice) - ljubicasta strelica desno od lopatice, smjer +x -->
-  <line x1="402" y1="240" x2="438" y2="240" stroke="#8e44ad" stroke-width="2.6" marker-end="url(#u12v3pl_aP)" />
-  <!-- c_r (relativna ulazna brzina, dashed plava ispod mlaza) - smjer +x -->
-  <line x1="160" y1="280" x2="220" y2="280" stroke="#1565c0" stroke-width="2.2" stroke-dasharray="6,3" marker-end="url(#u12v3pl_aB)" />
-  <!-- ============================================================
-       SILA F na lopaticu (od fluida) - crvena, smjer +x (gura lopaticu naprijed)
-       Modul F = 282 N. Strelica ide od lijeve plohe lopatice prema desno,
-       ali smjer fizikalno je +x (fluid GURA lopaticu). Crtamo iz centra
-       prednje plohe prema desno - dovoljno dugačka da bude vidljiva.
-       Skala: ~0,2 px/N: F=282 → 56 px (slično val1).
-       Položaj: y = 320 (ispod osi mlaza, da ne preklapa s u).
-  ============================================================ -->
-  <line x1="380" y1="328" x2="436" y2="328" stroke="#c0392b" stroke-width="3" marker-end="url(#u12v3pl_aR)" />
-  <!-- ============================================================
-       KOTA d = 40 mm (promjer mlaza)
-       Vertikalna kota lijevo od izlaza sapnice.
-       Mlaz: y = 220..260, x = 122
-  ============================================================ -->
-  <!-- ============================================================
-       KOTA A (površina mlaza) - leader sa strane mlaza
-  ============================================================ -->
-  <!-- ============================================================
-       KONTROLNI VOLUMEN (KV) - isprekidana granica oko lopatice
-  ============================================================ -->
-  <rect x="350" y="100" width="100" height="280" fill="none" stroke="#5a6a78" stroke-width="1.1" stroke-dasharray="5,4" />
-  <!-- ============================================================
-       OZNAKA SMJERA OSI x (orijentacija)
-  ============================================================ -->
-  <line x1="40" y1="490" x2="80" y2="490" stroke="#1a2530" stroke-width="1.4" marker-end="url(#u12v3pl_aB)" />
-  <!-- ============================================================
-       LEGENDA boja
-  ============================================================ -->
-  <rect x="40" y="450" width="11" height="11" fill="#1e8449" rx="2" />
-  <rect x="180" y="450" width="11" height="11" fill="#8e44ad" rx="2" />
-  <rect x="306" y="450" width="11" height="11" fill="#1565c0" rx="2" />
-  <rect x="450" y="450" width="11" height="11" fill="#c0392b" rx="2" />
-  <!-- ===================== DESNI PANEL: FORMULE I REZULTATI ===================== -->
-  <!-- Header bar -->
-  <rect x="566" y="14" width="400" height="36" rx="12" fill="#1565c0" />
-  <rect x="566" y="36" width="400" height="14" fill="#1565c0" />
-  <!-- Blok 1: Površina mlaza (y=58..138) -->
-  <rect x="582" y="62" width="368" height="76" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="582" y="62" width="6" height="76" rx="3" fill="#1565c0" />
-  <!-- Blok 2: Relativna brzina i maseni protok (y=148..236) -->
-  <rect x="582" y="148" width="368" height="88" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="582" y="148" width="6" height="88" rx="3" fill="#1565c0" />
-  <!-- Blok 3: Sila na lopaticu (y=246..334) -->
-  <rect x="582" y="246" width="368" height="88" rx="9" fill="#fdf3f1" stroke="#eccac2" stroke-width="1.2" />
-  <rect x="582" y="246" width="6" height="88" rx="3" fill="#c0392b" />
-  <!-- Blok 4: Snaga (y=344..432) -->
-  <rect x="582" y="344" width="368" height="88" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
-  <rect x="582" y="344" width="6" height="88" rx="3" fill="#1e8449" />
-  <!-- REZULTATI badge -->
-  <rect x="582" y="446" width="368" height="48" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <!-- Napomena ispod -->
-  <line x1="122" y1="220" x2="92" y2="220" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="122" y1="260" x2="92" y2="260" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="95" y1="222" x2="95" y2="258" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u12v3pl_aDimR)" marker-end="url(#u12v3pl_aDim)" />
-  <line x1="240" y1="240" x2="240" y2="120" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <text x="40" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Mlaz iz sapnice udara u pokretnu ravnu lopaticu</text>
-  <text x="40" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">Apsolutni sustav: mlaz c₁, lopatica se giba brzinom u u smjeru mlaza</text>
-
-  <text x="76" y="245" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700">sapnica</text>
-
-  <text x="390" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56" font-weight="700">lopatica</text>
-
-  <text x="208" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1e8449"><tspan font-weight="700">c₁</tspan> = 24 m/s</text>
-
-  <text x="408" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#8e44ad"><tspan font-weight="700">u</tspan> = 9 m/s</text>
-
-  <text x="190" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1565c0"><tspan font-weight="700">c<tspan baseline-shift="sub" font-size="0.7em">r</tspan></tspan> = c<tspan baseline-shift="sub" font-size="0.7em">1</tspan> − u = 15 m/s</text>
-
-  <text x="408" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b"><tspan font-weight="700">F</tspan> = 282 N</text>
-
-  <text x="400" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78" font-style="italic">pokretni kontrolni volumen (giba se s lopaticom)</text>
-
-  <text x="86" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1a2530">x</text>
-
-  <text x="56" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">apsolutna brzina c₁</text>
-  <text x="196" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">brzina lopatice u</text>
-  <text x="322" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">relativna c<tspan baseline-shift="sub" font-size="0.7em">r</tspan> = c₁ − u</text>
-  <text x="466" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">sila F na lopaticu</text>
-
-  <text x="766" y="37" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Rješenje – pokretna ravna lopatica</text>
-
-  <text x="600" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">1. Površina mlaza</text>
-  <text x="766" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">A = π d² / 4 = π · 0,04² / 4</text>
-  <text x="766" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">A ≈ 1,257 · 10⁻³ m²</text>
-
-  <text x="600" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">2. Relativna ulazna brzina i maseni protok kroz KV</text>
-  <text x="766" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">c<tspan baseline-shift="sub" font-size="0.7em">r</tspan> = c<tspan baseline-shift="sub" font-size="0.7em">1</tspan> − u = 24 − 9 = 15 m/s</text>
-  <text x="766" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">ṁ<tspan baseline-shift="sub" font-size="0.7em">rel</tspan> = ρ A c<tspan baseline-shift="sub" font-size="0.7em">r</tspan> = 998 · 1,257·10⁻³ · 15</text>
-  <text x="766" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 18,82 kg/s</text>
-
-  <text x="600" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">3. Sila mlaza na lopaticu (zakon količine gibanja)</text>
-  <text x="766" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">F = ṁ<tspan baseline-shift="sub" font-size="0.7em">rel</tspan> · (c<tspan baseline-shift="sub" font-size="0.7em">1</tspan> − u) = ṁ<tspan baseline-shift="sub" font-size="0.7em">rel</tspan> · c<tspan baseline-shift="sub" font-size="0.7em">r</tspan></text>
-  <text x="766" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">F = 18,82 · 15</text>
-  <text x="766" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">F ≈ 282,3 N ≈ 282 N</text>
-
-  <text x="600" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">4. Snaga predana lopatici</text>
-  <text x="766" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">P = F · u = 282,3 · 9</text>
-  <text x="766" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">= 2541 W</text>
-  <text x="766" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">P ≈ 2,54 kW</text>
-
-  <text x="766" y="463" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
-  <text x="638" y="483" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0">ṁ<tspan baseline-shift="sub" font-size="0.7em">rel</tspan> ≈ 18,82 kg/s</text>
-  <text x="766" y="483" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c0392b">F ≈ 282 N</text>
-  <text x="894" y="483" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449">P ≈ 2,54 kW</text>
-
-  <text x="766" y="512" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">U pokretni KV ulazi samo relativni dotok c<tspan baseline-shift="sub" font-size="0.7em">r</tspan> = c<tspan baseline-shift="sub" font-size="0.7em">1</tspan> − u, ne puni c<tspan baseline-shift="sub" font-size="0.7em">1</tspan>.</text>
-<text x="58" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c">d = 40 mm</text>
-
-  <text x="240" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c">A = πd²/4 = 1,257·10⁻³ m²</text>
-
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" role="img" aria-labelledby="u14p3_title u14p3_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
+<title id="u14p3_title">Relativni dotok i pokretna ploča</title><desc id="u14p3_desc">Otvorena sapnica dovodi slobodni mlaz do prednje strane nepropusne ploče. Voda se razlijeva prema dva otvorena ruba i ne prolazi kroz ploču. Ploča se giba u smjeru mlaza; relativni dotok c1 minus u ulazi u pokretni kontrolni volumen. Izlazne apsolutne strelice sadrže komponentu u. Kota d poprečna je mjera mlaza.</desc>
+<defs>
+<linearGradient id="u14p3_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u14p3_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u14p3_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u14p3_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u14p3_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u14p3_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u14p3_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="980" height="540" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
+Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
+Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
+<defs>
+<marker id="u14p3_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
+<marker id="u14p3_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
+<marker id="u14p3_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u14p3_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
+</defs>
+<defs><marker id="u14p3_motionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#b7600c"/></marker></defs>
+<rect x="20" y="20" width="480" height="490" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<text x="39" y="47" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Fiksna sapnica → mlaz → jedna pokretna ploča</text>
+<text x="39" y="70" font-size="11" fill="#1a2530" text-anchor="start">KV prati ploču; presudna je relativna ulazna brzina.</text>
+<path id="u14p3_inletTriangleu" d="M92.0000000 111.0000000 L137.0000000 111.0000000" fill="none" stroke="#b7600c" stroke-width="2.3" marker-end="url(#u14p3_motionMarker)"/>
+<text x="114.5" y="102" font-size="12" fill="#b7600c" text-anchor="middle">u</text>
+<path id="u14p3_inletTrianglew" d="M137.0000000 111.0000000 L212.0000000 111.0000000" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14p3_reactionMarker)"/>
+<text x="174.5" y="102" font-size="12" fill="#1e8449" text-anchor="middle">w</text>
+<path id="u14p3_inletTrianglec" d="M92.0000000 141.0000000 L212.0000000 141.0000000" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u14p3_pressureMarker)"/>
+<text x="152.0" y="159" font-size="12" fill="#1565c0" text-anchor="middle">c</text>
+<line x1="92" y1="105" x2="92" y2="145" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="3 3"/>
+<line x1="212" y1="105" x2="212" y2="145" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="3 3"/>
+<text x="318" y="115" font-size="11" fill="#1a2530" text-anchor="start">c₁ = 24; u = 9; w₁ = 15 m/s</text>
+<defs><linearGradient id="u14p3_jetfield" gradientUnits="userSpaceOnUse" x1="0" y1="187" x2="0" y2="369"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u14p3_jetfluid" d="M71 257.0 H295 Q314 257.0 314 238.0 V187 H321 V369 H314 V318.0 Q314 299.0 295 299.0 H71 Z" fill="url(#u14p3_jetfield)" stroke="none" stroke-width="1.8" />
+<line id="u14p3_jettop" x1="71" y1="257.0" x2="123" y2="257.0" stroke="#3a4a56" stroke-width="2"/>
+<line id="u14p3_jetbottom" x1="71" y1="299.0" x2="123" y2="299.0" stroke="#3a4a56" stroke-width="2"/>
+<rect id="u14p3_jetplate" x="321" y="195" width="12" height="166" rx="0" fill="url(#u14p3_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<path id="u14p3_movingCV" d="M274 184 H345 V373 H274 Z" fill="none" stroke="#b7600c" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path id="u14p3_inflow" d="M135.0000000 278.0000000 L230.0000000 278.0000000" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u14p3_pressureMarker)"/>
+<text x="182.5" y="263" font-size="12" fill="#1565c0" text-anchor="middle">c₁ = 24 m/s</text>
+<line x1="54" y1="257.0" x2="64" y2="257.0" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="54" y1="299.0" x2="64" y2="299.0" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u14p3_d" d="M59 257.0 L59 299.0" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u14p3_dim)" marker-end="url(#u14p3_dim)"/>
+<text x="46" y="245" font-size="11" fill="#b7600c" text-anchor="start">d = 40 mm</text>
+<path id="u14p3_outTop" d="M317.5000000 187.0000000 L344.5000000 142.0000000" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u14p3_pressureMarker)"/>
+<text x="372" y="168" font-size="12" fill="#1565c0" text-anchor="middle">c₂</text>
+<path id="u14p3_outBottom" d="M317.5000000 369.0000000 L344.5000000 414.0000000" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u14p3_pressureMarker)"/>
+<text x="372" y="413" font-size="12" fill="#1565c0" text-anchor="middle">c₂</text>
+<path id="u14p3_motion" d="M347.0000000 278.0000000 L427.0000000 278.0000000" fill="none" stroke="#b7600c" stroke-width="2.3" marker-end="url(#u14p3_motionMarker)"/>
+<text x="387.0" y="263" font-size="12" fill="#b7600c" text-anchor="middle">u = 9 m/s</text>
+<path id="u14p3_forceX" d="M347 329 L427 329" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u14p3_forceMarker)"/>
+<text x="394" y="351" font-size="13" fill="#c0392b" text-anchor="middle">Fₓ ≈ 282 N</text>
+<text x="45" y="427" font-size="11" fill="#1a2530" text-anchor="start">c₂x = u; relativni izlaz prati prednju stranu ploče.</text>
+<text x="45" y="449" font-size="11" fill="#1a2530" text-anchor="start">Debljina razlijevanja je shematska.</text>
+<text x="45" y="477" font-size="11" fill="#1a2530" text-anchor="start">c: apsolutna; w: relativna; u: brzina ploče.</text>
+<text x="45" y="496" font-size="10" fill="#1a2530" text-anchor="start">Trokut ulaza: 5 px za 1 m/s.</text>
+<rect x="526" y="31" width="427" height="34" rx="8" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="739.5" y="54" font-size="15" fill="white" text-anchor="middle" font-weight="700">Rješenje — pokretni kontrolni volumen</text>
+<rect x="526" y="79" width="427" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="526" y="79" width="4" height="73" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="540" y="99" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Ulazni presjek</text>
+<text x="541" y="121" font-size="13" fill="#1a2530" text-anchor="start">d = 40 mm; ρ = 998 kg/m³</text>
+<text x="541" y="142" font-size="13" fill="#1a2530" text-anchor="start">A = πd²/4</text>
+<rect x="526" y="162" width="427" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="526" y="162" width="4" height="73" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="540" y="182" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Relativni ulaz</text>
+<text x="541" y="204" font-size="13" fill="#1a2530" text-anchor="start">w₁ = c₁ − u = 15 m/s</text>
+<text x="541" y="225" font-size="13" fill="#1a2530" text-anchor="start">ṁrel = ρA(c₁ − u)</text>
+<rect x="526" y="245" width="427" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="526" y="245" width="4" height="73" rx="0" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+<text x="540" y="265" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">Sila fluida i snaga</text>
+<text x="541" y="287" font-size="13" fill="#1a2530" text-anchor="start">ṁrel ≈ 18,81 kg/s</text>
+<text x="541" y="308" font-size="13" fill="#1a2530" text-anchor="start">Fₓ = ṁrel(c₁ − u) ≈ 282 N</text>
+<rect x="526" y="328" width="427" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="526" y="328" width="4" height="73" rx="0" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+<text x="540" y="348" font-size="12" fill="#1e8449" text-anchor="start" font-weight="700">Rad samo u smjeru gibanja</text>
+<text x="541" y="370" font-size="13" fill="#1a2530" text-anchor="start">P = Fₓu ≈ 2,540 kW</text>
+<text x="541" y="391" font-size="13" fill="#1a2530" text-anchor="start">Usporedi granice u = 0 i u = c₁.</text>
+</g>
+</svg>
