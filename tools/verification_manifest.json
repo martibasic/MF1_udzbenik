@@ -154,17 +154,40 @@
         "U02.Z1.dvdy",
         "U02.Z1.tau",
         "U02.Z1.F",
-        "U02.Z2.tau",
-        "U02.Z2.mu",
-        "U02.Z3.tau",
+        "U02.Z2.dp_drop",
+        "U02.Z2.dp_bubble",
+        "U02.Z2.ratio",
+        "U02.Z3.tau_1",
+        "U02.Z3.tau_2",
+        "U02.Z3.F_1",
+        "U02.Z3.F_2",
         "U02.Z3.F",
+        "U02.Z3.F_wrong",
         "U02.Z4.h1_mm",
         "U02.Z4.h2_mm",
-        "U02.Z5.h_mm",
-        "U02.Z5.dp",
+        "U02.Z5.gradient_1",
+        "U02.Z5.gradient_2",
+        "U02.Z5.gradient_3",
+        "U02.Z5.tau_a1",
+        "U02.Z5.tau_a2",
+        "U02.Z5.tau_a3",
+        "U02.Z5.tau_b1",
+        "U02.Z5.tau_b2",
+        "U02.Z5.tau_b3",
+        "U02.Z5.mu_a1",
+        "U02.Z5.mu_a2",
+        "U02.Z5.mu_a3",
+        "U02.Z5.mu_b1",
+        "U02.Z5.mu_b2",
+        "U02.Z5.mu_b3",
+        "U02.Z5.F_star",
+        "U02.Z5.F_b_wrong",
         "U02.Z6.h_cap_mm",
-        "U02.Z6.p_M",
-        "U02.Z6.p_M_conservative_kPa",
+        "U02.Z6.p_start",
+        "U02.Z6.p_drop_kPa",
+        "U02.Z6.p_min_kPa",
+        "U02.Z6.p_max_kPa",
+        "U02.Z6.reserve_Pa",
         "U02.lezaj_temp.v",
         "U02.lezaj_temp.tau_c",
         "U02.lezaj_temp.tau_h",
@@ -3658,7 +3681,7 @@
       "level": "T1",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 740,
+        "line": 742,
         "anchor": "#task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se"
       },
       "statement": {
@@ -3728,8 +3751,30 @@
       "assumptions": {
         "explicit": [],
         "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "defaults": [
+          {
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
@@ -3738,7 +3783,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 752
+          "line": 754
         }
       },
       "tolerance": {
@@ -3768,27 +3813,14 @@
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U02.Z1.dvdy",
-          "U02.Z1.tau",
-          "U02.Z1.F"
+        "kind": "executed_invariant",
+        "criterion": [
+          "abs(z1['F'] * 0.0024 - 0.84 * 0.65 * 0.22) < 1e-12"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U02.Z1.dvdy",
-            "unit": "1/s"
-          },
-          {
-            "result_id": "U02.Z1.tau",
-            "unit": "Pa"
-          },
-          {
-            "result_id": "U02.Z1.F",
-            "unit": "N"
-          }
-        ]
+        "verifier_result_ids": [
+          "U02.Z1.force_balance"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u02",
@@ -3797,7 +3829,8 @@
         "result_ids": [
           "U02.Z1.dvdy",
           "U02.Z1.tau",
-          "U02.Z1.F"
+          "U02.Z1.F",
+          "U02.Z1.force_balance"
         ],
         "result_contracts": [
           {
@@ -3814,7 +3847,7 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 186
+              "line": 201
             }
           },
           {
@@ -3831,7 +3864,7 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 187
+              "line": 202
             }
           },
           {
@@ -3848,79 +3881,64 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 188
+              "line": 203
+            }
+          },
+          {
+            "result_id": "U02.Z1.force_balance",
+            "verification": "invariant",
+            "criterion_expression": "abs(z1['F'] * 0.0024 - 0.84 * 0.65 * 0.22) < 1e-12",
+            "failure_message": "Newtonova bilanca sile nije zadovoljena.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 204
             }
           }
         ]
       }
     },
     {
-      "id": "task-u02-klizna-ploca-povrsine-giba-se-brzinom-kroz",
+      "id": "task-kapljica-i-sapunasti-mjehur",
       "chapter": "U02",
       "ordinal": 2,
       "level": "T1",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 760,
-        "anchor": "#task-u02-klizna-ploca-povrsine-giba-se-brzinom-kroz"
+        "line": 764,
+        "anchor": "#task-kapljica-i-sapunasti-mjehur"
       },
       "statement": {
-        "markdown": "Klizna ploča površine $A = 0{,}14\\ \\text{m}^2$ giba se brzinom $v = 0{,}80\\ \\text{m/s}$ kroz uljni procjep debljine $\\delta = 1{,}8\\ \\text{mm}$. Ako je mjerena vučna sila $F = 21\\ \\text{N}$, odredi dinamičku viskoznost ulja.",
-        "sha256": "da95a4d7b43dd8da6bc3925cda7c3c62a9538ed1c5901e8adcb198efe7c3dc92",
+        "markdown": "Sferna kapljica i tankostijeni sapunasti mjehur imaju isti promjer $d = 1{,}20\\ \\text{mm}$. Za obje idealizirane tvorevine uzmi površinsku napetost $\\sigma = 0{,}030\\ \\text{N/m}$. Kapljica ima jednu međupovršinu tekućina–zrak, a sapunasti film dvije, približno jednakog promjera. Zanemari deformaciju zbog težine i debljinu filma. Izračunaj razliku unutarnjeg i vanjskog tlaka za kapljicu i mjehur te njihov omjer. Objasni zašto isti promjer i ista površinska napetost ne daju isti tlačni skok.",
+        "sha256": "82b3f1508894cedab810f27fc6fb8b1ddf492eb0f76ea2315103dd2bc26a18f4",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "A",
+            "symbol": "d",
             "relation": "=",
-            "value_text": "0{,}14",
-            "value": 0.14,
-            "unit_text": "\\ \\text{m}^2",
-            "normalized_unit": "m^2",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.14,
-              "unit": "m^2"
-            }
-          },
-          {
-            "symbol": "v",
-            "relation": "=",
-            "value_text": "0{,}80",
-            "value": 0.8,
-            "unit_text": "\\ \\text{m/s}",
-            "normalized_unit": "m/s",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.8,
-              "unit": "m/s"
-            }
-          },
-          {
-            "symbol": "\\delta",
-            "relation": "=",
-            "value_text": "1{,}8",
-            "value": 1.8,
+            "value_text": "1{,}20",
+            "value": 1.2,
             "unit_text": "\\ \\text{mm}",
             "normalized_unit": "mm",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.0018000000000000002,
+              "value": 0.0012,
               "unit": "m"
             }
           },
           {
-            "symbol": "F",
+            "symbol": "\\sigma",
             "relation": "=",
-            "value_text": "21",
-            "value": 21.0,
-            "unit_text": "\\ \\text{N}",
-            "normalized_unit": "N",
+            "value_text": "0{,}030",
+            "value": 0.03,
+            "unit_text": "\\ \\text{N/m}",
+            "normalized_unit": "N/m",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 21.0,
-              "unit": "N"
+              "value": 0.03,
+              "unit": "N/m"
             }
           }
         ],
@@ -3929,33 +3947,77 @@
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "explicit": [
+          {
+            "text": "Za obje idealizirane tvorevine uzmi površinsku napetost $\\sigma = 0{,}030\\ \\text{N/m}$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 764
+            }
+          },
+          {
+            "text": "Zanemari deformaciju zbog težine i debljinu filma.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 764
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
+        "defaults": [
+          {
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$\\tau = 150\\ \\text{Pa}$; $\\mu \\approx 0{,}34\\ \\text{Pa s}$.",
+        "markdown": "$\\Delta p_k=100\\ \\text{Pa}$; $\\Delta p_m=200\\ \\text{Pa}$; $\\Delta p_m/\\Delta p_k=2$. U oba slučaja unutarnji je tlak viši, a mjehur ima dva doprinosa površinske napetosti.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 772
+          "line": 778
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U02.Z2.tau",
+            "result_id": "U02.Z2.dp_drop",
             "kind": "relative",
             "value": 0.01,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
-            "result_id": "U02.Z2.mu",
+            "result_id": "U02.Z2.dp_bubble",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z2.ratio",
             "kind": "relative",
             "value": 0.01,
             "value_kind": "literal",
@@ -3964,36 +4026,30 @@
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U02.Z2.tau",
-          "U02.Z2.mu"
+        "kind": "executed_invariant",
+        "criterion": [
+          "abs(doubled_drop['dp_drop'] * 2 - z2['dp_drop']) < 1e-12 and abs(doubled_drop['dp_bubble'] * 2 - z2['dp_bubble']) < 1e-12"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U02.Z2.tau",
-            "unit": "Pa"
-          },
-          {
-            "result_id": "U02.Z2.mu",
-            "unit": "Pa s"
-          }
-        ]
+        "verifier_result_ids": [
+          "U02.Z2.diameter_scaling"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u02",
         "exercise_id": "U02.Z2",
         "classification": "golden",
         "result_ids": [
-          "U02.Z2.tau",
-          "U02.Z2.mu"
+          "U02.Z2.dp_drop",
+          "U02.Z2.dp_bubble",
+          "U02.Z2.ratio",
+          "U02.Z2.diameter_scaling"
         ],
         "result_contracts": [
           {
-            "result_id": "U02.Z2.tau",
+            "result_id": "U02.Z2.dp_drop",
             "verification": "golden",
-            "target": 150.0,
+            "target": 100.0,
             "target_kind": "literal",
             "unit": "Pa",
             "tolerance": {
@@ -4004,15 +4060,15 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 190
+              "line": 208
             }
           },
           {
-            "result_id": "U02.Z2.mu",
+            "result_id": "U02.Z2.dp_bubble",
             "verification": "golden",
-            "target": 0.34,
+            "target": 200.0,
             "target_kind": "literal",
-            "unit": "Pa s",
+            "unit": "Pa",
             "tolerance": {
               "kind": "relative",
               "value": 0.01,
@@ -4021,120 +4077,202 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 191
+              "line": 209
+            }
+          },
+          {
+            "result_id": "U02.Z2.ratio",
+            "verification": "golden",
+            "target": 2.0,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 210
+            }
+          },
+          {
+            "result_id": "U02.Z2.diameter_scaling",
+            "verification": "invariant",
+            "criterion_expression": "abs(doubled_drop['dp_drop'] * 2 - z2['dp_drop']) < 1e-12 and abs(doubled_drop['dp_bubble'] * 2 - z2['dp_bubble']) < 1e-12",
+            "failure_message": "Dvostruki promjer mora prepoloviti oba skoka tlaka.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 212
             }
           }
         ]
       }
     },
     {
-      "id": "task-u02-vratilo-promjera-i-duljine-vrti-se-tako",
+      "id": "task-ploca-izmedu-dva-procjepa",
       "chapter": "U02",
       "ordinal": 3,
       "level": "T2",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 780,
-        "anchor": "#task-u02-vratilo-promjera-i-duljine-vrti-se-tako"
+        "line": 787,
+        "anchor": "#task-ploca-izmedu-dva-procjepa"
       },
       "statement": {
-        "markdown": "Vratilo promjera $D = 70\\ \\text{mm}$ i duljine $L = 0{,}24\\ \\text{m}$ vrti se tako da je obodna brzina $v = 1{,}6\\ \\text{m/s}$ u uljnom procjepu debljine $\\delta = 0{,}60\\ \\text{mm}$. Dinamička viskoznost ulja je $\\mu = 0{,}36\\ \\text{Pa s}$. Odredi smično naprezanje i silu smicanja na vratilu.",
-        "sha256": "f83851646113c0c6f950e779da28278a6e62c7d4d5598de69feac12ded5967dc",
+        "markdown": "Tanka ploča klizi udesno brzinom $v = 0{,}30\\ \\text{m/s}$ između dviju nepomičnih paralelnih stijenki. Površina svake strane ploče u dodiru s uljem iznosi $A = 0{,}020\\ \\text{m}^2$. U oba procjepa nalazi se isto ulje. Gornji procjep ima debljinu $\\delta_1 = 1{,}0\\ \\text{mm}$, donji $\\delta_2 = 2{,}0\\ \\text{mm}$, a ulje u oba procjepa dinamičku viskoznost $\\mu = 0{,}12\\ \\text{Pa s}$. Student zamjenjuje dva procjepa jednim razmakom $\\delta_1+\\delta_2$ i piše $F=\\mu Av/(\\delta_1+\\delta_2)$. Izračunaj iznose smičnih naprezanja i sila na objema stranama te potrebnu ukupnu vučnu silu. Odredi smjer svakog otpora i objasni pogrešku predloženog postupka. Što bi se dogodilo s doprinosom donje strane kad bi donji procjep postao vrlo velik uz ostale pretpostavke modela?",
+        "sha256": "0bee526f19ce8e8c28f0dc55b4e72a1654f5bc9cfbefd214e1c06d1c01b1e533",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "D",
-            "relation": "=",
-            "value_text": "70",
-            "value": 70.0,
-            "unit_text": "\\ \\text{mm}",
-            "normalized_unit": "mm",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.07,
-              "unit": "m"
-            }
-          },
-          {
-            "symbol": "L",
-            "relation": "=",
-            "value_text": "0{,}24",
-            "value": 0.24,
-            "unit_text": "\\ \\text{m}",
-            "normalized_unit": "m",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.24,
-              "unit": "m"
-            }
-          },
-          {
             "symbol": "v",
             "relation": "=",
-            "value_text": "1{,}6",
-            "value": 1.6,
+            "value_text": "0{,}30",
+            "value": 0.3,
             "unit_text": "\\ \\text{m/s}",
             "normalized_unit": "m/s",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 1.6,
+              "value": 0.3,
               "unit": "m/s"
             }
           },
           {
-            "symbol": "\\delta",
+            "symbol": "A",
             "relation": "=",
-            "value_text": "0{,}60",
-            "value": 0.6,
+            "value_text": "0{,}020",
+            "value": 0.02,
+            "unit_text": "\\ \\text{m}^2",
+            "normalized_unit": "m^2",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.02,
+              "unit": "m^2"
+            }
+          },
+          {
+            "symbol": "\\delta_1",
+            "relation": "=",
+            "value_text": "1{,}0",
+            "value": 1.0,
             "unit_text": "\\ \\text{mm}",
             "normalized_unit": "mm",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.0006,
+              "value": 0.001,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "\\delta_2",
+            "relation": "=",
+            "value_text": "2{,}0",
+            "value": 2.0,
+            "unit_text": "\\ \\text{mm}",
+            "normalized_unit": "mm",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.002,
               "unit": "m"
             }
           },
           {
             "symbol": "\\mu",
             "relation": "=",
-            "value_text": "0{,}36",
-            "value": 0.36,
+            "value_text": "0{,}12",
+            "value": 0.12,
             "unit_text": "\\ \\text{Pa s}",
             "normalized_unit": "Pa s",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.36,
+              "value": 0.12,
               "unit": "Pa s"
             }
           }
         ],
-        "unparsed_numeric_math": [],
+        "unparsed_numeric_math": [
+          "\\delta_1+\\delta_2",
+          "F=\\mu Av/(\\delta_1+\\delta_2)"
+        ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "explicit": [
+          {
+            "text": "Što bi se dogodilo s doprinosom donje strane kad bi donji procjep postao vrlo velik uz ostale pretpostavke modela?",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 787
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
+        "defaults": [
+          {
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$\\tau = 960\\ \\text{Pa}$; $F \\approx 51\\ \\text{N}$.",
+        "markdown": "$|\\tau_1|=36\\ \\text{Pa}$, $|\\tau_2|=18\\ \\text{Pa}$; $F_1=0{,}72\\ \\text{N}$, $F_2=0{,}36\\ \\text{N}$, $F=1{,}08\\ \\text{N}$. Oba otpora djeluju ulijevo, vučna sila udesno. Pogrešan postupak daje $0{,}24\\ \\text{N}$: ploča dijeli dva zasebna sloja. Za vrlo velik donji procjep njegov doprinos teži nuli unutar tog modela.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 792
+          "line": 801
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U02.Z3.tau",
+            "result_id": "U02.Z3.tau_1",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z3.tau_2",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z3.F_1",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z3.F_2",
             "kind": "relative",
             "value": 0.01,
             "value_kind": "literal",
@@ -4142,6 +4280,13 @@
           },
           {
             "result_id": "U02.Z3.F",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z3.F_wrong",
             "kind": "relative",
             "value": 0.01,
             "value_kind": "literal",
@@ -4150,36 +4295,39 @@
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U02.Z3.tau",
-          "U02.Z3.F"
+        "kind": "executed_invariant",
+        "criterion": [
+          "abs(equal_gaps['F'] - 2 * z3['F_1']) < 1e-12",
+          "abs(far_wall['F'] - z3['F_1']) < 1e-08",
+          "abs(zadatak_3(v=-0.3)['F'] + z3['F']) < 1e-12"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U02.Z3.tau",
-            "unit": "Pa"
-          },
-          {
-            "result_id": "U02.Z3.F",
-            "unit": "N"
-          }
-        ]
+        "verifier_result_ids": [
+          "U02.Z3.equal_gaps",
+          "U02.Z3.far_wall_limit",
+          "U02.Z3.reverse_motion"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u02",
         "exercise_id": "U02.Z3",
         "classification": "golden",
         "result_ids": [
-          "U02.Z3.tau",
-          "U02.Z3.F"
+          "U02.Z3.tau_1",
+          "U02.Z3.tau_2",
+          "U02.Z3.F_1",
+          "U02.Z3.F_2",
+          "U02.Z3.F",
+          "U02.Z3.F_wrong",
+          "U02.Z3.equal_gaps",
+          "U02.Z3.far_wall_limit",
+          "U02.Z3.reverse_motion"
         ],
         "result_contracts": [
           {
-            "result_id": "U02.Z3.tau",
+            "result_id": "U02.Z3.tau_1",
             "verification": "golden",
-            "target": 960.0,
+            "target": 36.0,
             "target_kind": "literal",
             "unit": "Pa",
             "tolerance": {
@@ -4190,13 +4338,30 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 193
+              "line": 218
             }
           },
           {
-            "result_id": "U02.Z3.F",
+            "result_id": "U02.Z3.tau_2",
             "verification": "golden",
-            "target": 51.0,
+            "target": 18.0,
+            "target_kind": "literal",
+            "unit": "Pa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 219
+            }
+          },
+          {
+            "result_id": "U02.Z3.F_1",
+            "verification": "golden",
+            "target": 0.72,
             "target_kind": "literal",
             "unit": "N",
             "tolerance": {
@@ -4207,7 +4372,91 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 194
+              "line": 220
+            }
+          },
+          {
+            "result_id": "U02.Z3.F_2",
+            "verification": "golden",
+            "target": 0.36,
+            "target_kind": "literal",
+            "unit": "N",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 221
+            }
+          },
+          {
+            "result_id": "U02.Z3.F",
+            "verification": "golden",
+            "target": 1.08,
+            "target_kind": "literal",
+            "unit": "N",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 222
+            }
+          },
+          {
+            "result_id": "U02.Z3.F_wrong",
+            "verification": "golden",
+            "target": 0.24,
+            "target_kind": "literal",
+            "unit": "N",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 223
+            }
+          },
+          {
+            "result_id": "U02.Z3.equal_gaps",
+            "verification": "invariant",
+            "criterion_expression": "abs(equal_gaps['F'] - 2 * z3['F_1']) < 1e-12",
+            "failure_message": "Jednaki procjepi moraju dati dva jednaka doprinosa.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 225
+            }
+          },
+          {
+            "result_id": "U02.Z3.far_wall_limit",
+            "verification": "invariant",
+            "criterion_expression": "abs(far_wall['F'] - z3['F_1']) < 1e-08",
+            "failure_message": "Udaljena donja stijenka mora dati zanemariv doprinos unutar modela.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 228
+            }
+          },
+          {
+            "result_id": "U02.Z3.reverse_motion",
+            "verification": "invariant",
+            "criterion_expression": "abs(zadatak_3(v=-0.3)['F'] + z3['F']) < 1e-12",
+            "failure_message": "Promjena smjera brzine mora promijeniti smjer potrebne vucne sile.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 230
             }
           }
         ]
@@ -4220,7 +4469,7 @@
       "level": "T2",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 800,
+        "line": 808,
         "anchor": "#task-u02-kapilara-promjera-uronjena-je-u-etanol-za"
       },
       "statement": {
@@ -4303,8 +4552,30 @@
       "assumptions": {
         "explicit": [],
         "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "defaults": [
+          {
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
@@ -4313,7 +4584,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 812
+          "line": 820
         }
       },
       "tolerance": {
@@ -4336,22 +4607,14 @@
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U02.Z4.h1_mm",
-          "U02.Z4.h2_mm"
+        "kind": "executed_invariant",
+        "criterion": [
+          "abs(z4['h1'] / z4['h2'] - 2.0) < 1e-12"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U02.Z4.h1_mm",
-            "unit": "mm"
-          },
-          {
-            "result_id": "U02.Z4.h2_mm",
-            "unit": "mm"
-          }
-        ]
+        "verifier_result_ids": [
+          "U02.Z4.inverse_diameter"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u02",
@@ -4359,7 +4622,8 @@
         "classification": "golden",
         "result_ids": [
           "U02.Z4.h1_mm",
-          "U02.Z4.h2_mm"
+          "U02.Z4.h2_mm",
+          "U02.Z4.inverse_diameter"
         ],
         "result_contracts": [
           {
@@ -4376,7 +4640,7 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 196
+              "line": 234
             }
           },
           {
@@ -4393,92 +4657,77 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 197
+              "line": 235
+            }
+          },
+          {
+            "result_id": "U02.Z4.inverse_diameter",
+            "verification": "invariant",
+            "criterion_expression": "abs(z4['h1'] / z4['h2'] - 2.0) < 1e-12",
+            "failure_message": "Udvostrucenje promjera nije prepolovilo kapilarni uspon.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 236
             }
           }
         ]
       }
     },
     {
-      "id": "task-u02-staklena-kapilara-promjera-uronjena-je-u-vodu",
+      "id": "task-newtonski-model-iz-mjerenja",
       "chapter": "U02",
       "ordinal": 5,
       "level": "T3",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 820,
-        "anchor": "#task-u02-staklena-kapilara-promjera-uronjena-je-u-vodu"
+        "line": 830,
+        "anchor": "#task-newtonski-model-iz-mjerenja"
       },
       "statement": {
-        "markdown": "Staklena kapilara promjera $d = 0{,}90\\ \\text{mm}$ uronjena je u vodu za koju vrijedi $\\sigma = 0{,}072\\ \\text{N/m}$, $\\theta = 10^\\circ$ i $\\rho = 998\\ \\text{kg/m}^3$. Odredi kapilarni uspon. Zatim odredi tlak skoka u kapljici vode promjera $d_k = 1{,}2\\ \\text{mm}$ nastaloj na izlazu raspršivača istog sustava.",
-        "sha256": "95edc3a3f0dfab81f674a8bbad1eaf28fb7622046bae1a6c6ebabd0aac06c8d8",
+        "markdown": "U nastavnom pokusu ispituju se uzorci A i B između nepomične i pokretne ploče. Samo jedna strana pokretne ploče površine $S = 0{,}010\\ \\text{m}^2$ dodiruje uzorak; razmak ploča je $\\delta = 1{,}0\\ \\text{mm}$. Pri stalnoj temperaturi dobiveni su sljedeći sintetički podatci. Za ovu idealiziranu usporedbu zanemari mjernu nesigurnost, trenje mehanizma, klizanje uz stijenku i rubne učinke. Smični je profil u svakom stacionarnom pokusu linearan; Newtonsko ponašanje tek treba provjeriti. | Brzina $v$ (m/s) | Vučna sila uzorka A (N) | Vučna sila uzorka B (N) | | ---: | ---: | ---: | | 0,10 | 0,20 | 0,30 | | 0,20 | 0,40 | 0,45 | | 0,40 | 0,80 | 0,60 | Za svaki red odredi iznos gradijenta brzine, naprezanja i omjer naprezanja prema gradijentu. Za koji je uzorak prihvatljiv Newtonski model sa stalnom viskoznošću u ispitanom rasponu? Tim modelom predvidi silu pri brzini $v_* = 0{,}30\\ \\text{m/s}$. Za drugi uzorak pokaži koliko bi na najvećoj mjerenoj brzini pogriješio račun sa stalnom viskoznošću određenom samo iz prvog retka. Jesu li tri retka dovoljna za jedinstven izbor nenewtonskog zakona ili za zaključak o ponašanju izvan ispitanog raspona?",
+        "sha256": "5b8ff5a34157e1b9d6ccb43f691235c08dc6cbe09c90ac07e18fb32fc73eaa65",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "d",
+            "symbol": "S",
             "relation": "=",
-            "value_text": "0{,}90",
-            "value": 0.9,
+            "value_text": "0{,}010",
+            "value": 0.01,
+            "unit_text": "\\ \\text{m}^2",
+            "normalized_unit": "m^2",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.01,
+              "unit": "m^2"
+            }
+          },
+          {
+            "symbol": "\\delta",
+            "relation": "=",
+            "value_text": "1{,}0",
+            "value": 1.0,
             "unit_text": "\\ \\text{mm}",
             "normalized_unit": "mm",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.0009000000000000001,
+              "value": 0.001,
               "unit": "m"
             }
           },
           {
-            "symbol": "\\sigma",
+            "symbol": "v_*",
             "relation": "=",
-            "value_text": "0{,}072",
-            "value": 0.072,
-            "unit_text": "\\ \\text{N/m}",
-            "normalized_unit": "N/m",
+            "value_text": "0{,}30",
+            "value": 0.3,
+            "unit_text": "\\ \\text{m/s}",
+            "normalized_unit": "m/s",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.072,
-              "unit": "N/m"
-            }
-          },
-          {
-            "symbol": "\\theta",
-            "relation": "=",
-            "value_text": "10",
-            "value": 10.0,
-            "unit_text": "^\\circ",
-            "normalized_unit": "°",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.17453292519943295,
-              "unit": "rad"
-            }
-          },
-          {
-            "symbol": "\\rho",
-            "relation": "=",
-            "value_text": "998",
-            "value": 998.0,
-            "unit_text": "\\ \\text{kg/m}^3",
-            "normalized_unit": "kg/m^3",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 998.0,
-              "unit": "kg/m^3"
-            }
-          },
-          {
-            "symbol": "d_k",
-            "relation": "=",
-            "value_text": "1{,}2",
-            "value": 1.2,
-            "unit_text": "\\ \\text{mm}",
-            "normalized_unit": "mm",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.0012,
-              "unit": "m"
+              "value": 0.3,
+              "unit": "m/s"
             }
           }
         ],
@@ -4487,33 +4736,175 @@
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "explicit": [
+          {
+            "text": "Za ovu idealiziranu usporedbu zanemari mjernu nesigurnost, trenje mehanizma, klizanje uz stijenku i rubne učinke.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 830
+            }
+          },
+          {
+            "text": "Smični je profil u svakom stacionarnom pokusu linearan;",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 830
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
+        "defaults": [
+          {
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$h \\approx 32{,}2\\ \\text{mm}$; $\\Delta p \\approx 240\\ \\text{Pa}$.",
+        "markdown": "Gradijenti su $100$, $200$, $400\\ \\text{s}^{-1}$. A: $\\tau=20,40,80\\ \\text{Pa}$, $\\mu=0{,}20\\ \\text{Pa s}$ i $F_*=0{,}60\\ \\text{N}$. B: $\\tau=30,45,60\\ \\text{Pa}$, prividne viskoznosti $0{,}30$, $0{,}225$, $0{,}15\\ \\text{Pa s}$. Prva točka B predviđa $1{,}20\\ \\text{N}$ umjesto $0{,}60\\ \\text{N}$. A je usklađen s Newtonskim modelom u ispitanom rasponu; B nije. Podatci ne određuju jedinstven novi zakon ni ekstrapolaciju.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 832
+          "line": 850
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U02.Z5.h_mm",
+            "result_id": "U02.Z5.gradient_1",
             "kind": "relative",
             "value": 0.01,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
-            "result_id": "U02.Z5.dp",
+            "result_id": "U02.Z5.gradient_2",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.gradient_3",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.tau_a1",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.tau_a2",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.tau_a3",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.tau_b1",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.tau_b2",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.tau_b3",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.mu_a1",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.mu_a2",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.mu_a3",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.mu_b1",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.mu_b2",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.mu_b3",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.F_star",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z5.F_b_wrong",
             "kind": "relative",
             "value": 0.01,
             "value_kind": "literal",
@@ -4522,38 +4913,52 @@
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U02.Z5.h_mm",
-          "U02.Z5.dp"
+        "kind": "executed_invariant",
+        "criterion": [
+          "z5['newton_a'] and (not z5['newton_b'])",
+          "not perturbed['newton_a']",
+          "swapped['newton_b'] and (not swapped['newton_a'])"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U02.Z5.h_mm",
-            "unit": "mm"
-          },
-          {
-            "result_id": "U02.Z5.dp",
-            "unit": "Pa"
-          }
-        ]
+        "verifier_result_ids": [
+          "U02.Z5.model_selection",
+          "U02.Z5.use_all_measurements",
+          "U02.Z5.selection_follows_data"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u02",
         "exercise_id": "U02.Z5",
         "classification": "golden",
         "result_ids": [
-          "U02.Z5.h_mm",
-          "U02.Z5.dp"
+          "U02.Z5.gradient_1",
+          "U02.Z5.gradient_2",
+          "U02.Z5.gradient_3",
+          "U02.Z5.tau_a1",
+          "U02.Z5.tau_a2",
+          "U02.Z5.tau_a3",
+          "U02.Z5.tau_b1",
+          "U02.Z5.tau_b2",
+          "U02.Z5.tau_b3",
+          "U02.Z5.mu_a1",
+          "U02.Z5.mu_a2",
+          "U02.Z5.mu_a3",
+          "U02.Z5.mu_b1",
+          "U02.Z5.mu_b2",
+          "U02.Z5.mu_b3",
+          "U02.Z5.F_star",
+          "U02.Z5.F_b_wrong",
+          "U02.Z5.model_selection",
+          "U02.Z5.use_all_measurements",
+          "U02.Z5.selection_follows_data"
         ],
         "result_contracts": [
           {
-            "result_id": "U02.Z5.h_mm",
+            "result_id": "U02.Z5.gradient_1",
             "verification": "golden",
-            "target": 32.2,
+            "target": 100.0,
             "target_kind": "literal",
-            "unit": "mm",
+            "unit": "1/s",
             "tolerance": {
               "kind": "relative",
               "value": 0.01,
@@ -4562,13 +4967,47 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 199
+              "line": 240
             }
           },
           {
-            "result_id": "U02.Z5.dp",
+            "result_id": "U02.Z5.gradient_2",
             "verification": "golden",
-            "target": 240.0,
+            "target": 200.0,
+            "target_kind": "literal",
+            "unit": "1/s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 241
+            }
+          },
+          {
+            "result_id": "U02.Z5.gradient_3",
+            "verification": "golden",
+            "target": 400.0,
+            "target_kind": "literal",
+            "unit": "1/s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 242
+            }
+          },
+          {
+            "result_id": "U02.Z5.tau_a1",
+            "verification": "golden",
+            "target": 20.0,
             "target_kind": "literal",
             "unit": "Pa",
             "tolerance": {
@@ -4579,7 +5018,261 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 200
+              "line": 243
+            }
+          },
+          {
+            "result_id": "U02.Z5.tau_a2",
+            "verification": "golden",
+            "target": 40.0,
+            "target_kind": "literal",
+            "unit": "Pa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 244
+            }
+          },
+          {
+            "result_id": "U02.Z5.tau_a3",
+            "verification": "golden",
+            "target": 80.0,
+            "target_kind": "literal",
+            "unit": "Pa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 245
+            }
+          },
+          {
+            "result_id": "U02.Z5.tau_b1",
+            "verification": "golden",
+            "target": 30.0,
+            "target_kind": "literal",
+            "unit": "Pa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 246
+            }
+          },
+          {
+            "result_id": "U02.Z5.tau_b2",
+            "verification": "golden",
+            "target": 45.0,
+            "target_kind": "literal",
+            "unit": "Pa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 247
+            }
+          },
+          {
+            "result_id": "U02.Z5.tau_b3",
+            "verification": "golden",
+            "target": 60.0,
+            "target_kind": "literal",
+            "unit": "Pa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 248
+            }
+          },
+          {
+            "result_id": "U02.Z5.mu_a1",
+            "verification": "golden",
+            "target": 0.2,
+            "target_kind": "literal",
+            "unit": "Pa s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 249
+            }
+          },
+          {
+            "result_id": "U02.Z5.mu_a2",
+            "verification": "golden",
+            "target": 0.2,
+            "target_kind": "literal",
+            "unit": "Pa s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 250
+            }
+          },
+          {
+            "result_id": "U02.Z5.mu_a3",
+            "verification": "golden",
+            "target": 0.2,
+            "target_kind": "literal",
+            "unit": "Pa s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 251
+            }
+          },
+          {
+            "result_id": "U02.Z5.mu_b1",
+            "verification": "golden",
+            "target": 0.3,
+            "target_kind": "literal",
+            "unit": "Pa s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 252
+            }
+          },
+          {
+            "result_id": "U02.Z5.mu_b2",
+            "verification": "golden",
+            "target": 0.225,
+            "target_kind": "literal",
+            "unit": "Pa s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 253
+            }
+          },
+          {
+            "result_id": "U02.Z5.mu_b3",
+            "verification": "golden",
+            "target": 0.15,
+            "target_kind": "literal",
+            "unit": "Pa s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 254
+            }
+          },
+          {
+            "result_id": "U02.Z5.F_star",
+            "verification": "golden",
+            "target": 0.6,
+            "target_kind": "literal",
+            "unit": "N",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 255
+            }
+          },
+          {
+            "result_id": "U02.Z5.F_b_wrong",
+            "verification": "golden",
+            "target": 1.2,
+            "target_kind": "literal",
+            "unit": "N",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 256
+            }
+          },
+          {
+            "result_id": "U02.Z5.model_selection",
+            "verification": "invariant",
+            "criterion_expression": "z5['newton_a'] and (not z5['newton_b'])",
+            "failure_message": "Samo uzorak A dopusta stalan omjer naprezanja i gradijenta.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 257
+            }
+          },
+          {
+            "result_id": "U02.Z5.use_all_measurements",
+            "verification": "invariant",
+            "criterion_expression": "not perturbed['newton_a']",
+            "failure_message": "Odluka o modelu mora uzeti u obzir i trece mjerenje.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 260
+            }
+          },
+          {
+            "result_id": "U02.Z5.selection_follows_data",
+            "verification": "invariant",
+            "criterion_expression": "swapped['newton_b'] and (not swapped['newton_a'])",
+            "failure_message": "Izbor modela mora slijediti podatke, ne ime uzorka.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 263
             }
           }
         ]
@@ -4592,12 +5285,12 @@
       "level": "T4",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 840,
+        "line": 857,
         "anchor": "#task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na"
       },
       "statement": {
-        "markdown": "Kapilarna igla unutarnjeg promjera $d = 0{,}50\\ \\text{mm}$ spojena je na spremnik vode za koju vrijedi $\\sigma = 0{,}072\\ \\text{N/m}$, $\\rho = 998\\ \\text{kg/m}^3$ i $\\theta = 0^\\circ$. Izlaz igle nalazi se na visini $H = 42\\ \\text{mm}$ iznad slobodne površine, a na izlazu se treba održati kapljica promjera $D = 1{,}8\\ \\text{mm}$. Odredi kapilarni uspon i najmanji dodatni manometarski pretlak u spremniku prema idealizaciji kapilarnog uspona. Za izbor regulatora usporedi taj rezultat s konzervativnim alternativnim stanjem u kojem je meniskus već izašao iz igle pa nema kapilarne depresije tlaka u cijevi, a na izlazu ostaje sferna kapljica. Pokriva li najveći pretlak regulatora od $0{,}50\\ \\text{kPa}$ statički zahtjev obaju modela? Obrazloži koji je model mjerodavan pri pokretanju, a koji nakon nastanka kapljice.",
-        "sha256": "2f9859df3a271c08899716f42acd3b34ce0eca950368b6e2794d300f1f158299",
+        "markdown": "Kapilarna igla unutarnjeg promjera $d = 0{,}50\\ \\text{mm}$ spojena je na spremnik vode za koju vrijedi $\\sigma = 0{,}072\\ \\text{N/m}$, $\\rho = 998\\ \\text{kg/m}^3$ i $\\theta = 0^\\circ$. Izlaz je na visini $H = 42\\ \\text{mm}$ iznad široke slobodne površine spremnika. Okolni zrak je na atmosferskom tlaku. Promatraju se dva **odvojena** kvazistatička stanja: 1. Igla se puni, a konkavni meniskus još je u cijevi; izlazne kapljice nema. Odredi prirodni kapilarni uspon i najmanji nenegativni manometarski pretlak spremnika potreban da meniskus dosegne izlaz. 2. Igla je potpuno ispunjena vodom, a na izlazu je gotovo sferna kapljica nominalnog promjera $D = 1{,}8\\ \\text{mm}$; u igli više nema zasebnog meniskusa ni zarobljenog zraka. Odredi potreban pretlak spremnika. U ovom modelu uzmi da je tlak neposredno ispod kapljice $4\\sigma/D$ viši od okolnog; zanemari visinsku promjenu tlaka unutar same kapljice. U drugom stanju promjer kapljice može biti bilo gdje od $D_{min}=1{,}6\\ \\text{mm}$ do $D_{max}=2{,}0\\ \\text{mm}$; to su zadane granice, ne standardna nesigurnost. Usporedi regulatore raspona $0$–$0{,}50\\ \\text{kPa}$ i $0$–$0{,}60\\ \\text{kPa}$: koji pokriva zahtjeve obaju zadanih stanja i cijeli raspon promjera? Izračunaj najmanju tlačnu rezervu. Obrazloži zašto se pri formiranoj kapljici ne smije dodatno oduzeti tlak konkavnoga meniskusa. Zanemari gubitke pri protoku; zaključak ograniči na ova dva stanja, bez tvrdnje o tlaku tijekom prijelaznog oblikovanja kapljice.",
+        "sha256": "260b38a8709493db3a7b38f244dd526fb76e82d7f2cd6da6852dd1eaceda1374",
         "authoritative": true
       },
       "input_data": {
@@ -4681,6 +5374,32 @@
             }
           },
           {
+            "symbol": "D_{min}",
+            "relation": "=",
+            "value_text": "1{,}6",
+            "value": 1.6,
+            "unit_text": "\\ \\text{mm}",
+            "normalized_unit": "mm",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.0016,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "D_{max}",
+            "relation": "=",
+            "value_text": "2{,}0",
+            "value": 2.0,
+            "unit_text": "\\ \\text{mm}",
+            "normalized_unit": "mm",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.002,
+              "unit": "m"
+            }
+          },
+          {
             "symbol": null,
             "relation": "context_value",
             "value_text": "0{,}50",
@@ -4692,26 +5411,93 @@
               "value": 500.0,
               "unit": "Pa"
             }
+          },
+          {
+            "symbol": null,
+            "relation": "context_value",
+            "value_text": "0{,}60",
+            "value": 0.6,
+            "unit_text": "\\ \\text{kPa}",
+            "normalized_unit": "kPa",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 600.0,
+              "unit": "Pa"
+            }
           }
         ],
-        "unparsed_numeric_math": [],
+        "unparsed_numeric_math": [
+          "4\\sigma/D",
+          "0"
+        ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "explicit": [
+          {
+            "text": "Okolni zrak je na atmosferskom tlaku.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 857
+            }
+          },
+          {
+            "text": "U ovom modelu uzmi da je tlak neposredno ispod kapljice $4\\sigma/D$ viši od okolnog;",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 857
+            }
+          },
+          {
+            "text": "zanemari visinsku promjenu tlaka unutar same kapljice.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 857
+            }
+          },
+          {
+            "text": "Zanemari gubitke pri protoku;",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 857
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
+        "defaults": [
+          {
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          },
+          {
+            "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 736
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$h_{cap} \\approx 58{,}8\\ \\text{mm}$; u idealizaciji kapilarnog uspona dobiva se zanemariv dodatni pretlak, $p_M \\approx 0$. Kada je na izlazu već formirana sferna kapljica, konzervativni model daje $p_{M,konz}\\approx0{,}571\\ \\text{kPa}$. Regulator od $0{,}50\\ \\text{kPa}$ stoga nije dovoljan za oba stanja: prvi model opisuje uspon s meniskusom u igli, ali izbor regulatora mora pokriti drugi model ili se mora provjeriti prijelaz između njih.",
+        "markdown": "$h_{cap}\\approx58{,}8\\ \\text{mm}$; $p_{M,1}=0\\ \\text{Pa}$. Nominalno $p_{M,2}\\approx0{,}571\\ \\text{kPa}$; interval je $0{,}555$–$0{,}591\\ \\text{kPa}$, s maksimumom pri $D_{min}$. Raspon do $0{,}50\\ \\text{kPa}$ nije dovoljan; do $0{,}60\\ \\text{kPa}$ pokriva zadana stanja uz najmanju rezervu $8{,}8\\ \\text{Pa}$. Formirana kapljica nema dodatni konkavni meniskus čiji bi tlak smanjio zahtjev. Prijelaz i protočni gubitci nisu provjereni.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 852
+          "line": 874
         }
       },
       "tolerance": {
@@ -4725,28 +5511,55 @@
             "provenance": "verifier_check_default"
           },
           {
-            "result_id": "U02.Z6.p_M",
+            "result_id": "U02.Z6.p_start",
             "kind": "relative",
             "value": 0.01,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
-            "result_id": "U02.Z6.p_M_conservative_kPa",
+            "result_id": "U02.Z6.p_drop_kPa",
             "kind": "relative",
-            "value": 0.02,
+            "value": 0.01,
             "value_kind": "literal",
-            "provenance": "verifier_call_keyword"
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z6.p_min_kPa",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z6.p_max_kPa",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
+          },
+          {
+            "result_id": "U02.Z6.reserve_Pa",
+            "kind": "relative",
+            "value": 0.01,
+            "value_kind": "literal",
+            "provenance": "verifier_check_default"
           }
         ]
       },
       "independent_check": {
         "kind": "executed_invariant",
         "criterion": [
-          "z6['p_M_conservative'] > 500.0"
+          "not z6['low_sufficient'] and z6['high_sufficient']",
+          "wider_needle['p_start'] > 0 and abs(wider_needle['p_drop'] - z6['p_drop']) < 1e-12",
+          "abs(small_drop['p_drop'] - z6['p_max']) < 1e-12 and abs(large_drop['p_drop'] - z6['p_min']) < 1e-12 and (z6['p_min'] < z6['p_drop'] < z6['p_max'])",
+          "not zadatak_6(regulator_high=580.0)['high_sufficient']"
         ],
         "verifier_result_ids": [
-          "U02.Z6.regulator_insufficient"
+          "U02.Z6.regulator_selection",
+          "U02.Z6.separate_interfaces",
+          "U02.Z6.diameter_bounds",
+          "U02.Z6.insufficient_range"
         ],
         "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
@@ -4756,9 +5569,15 @@
         "classification": "golden",
         "result_ids": [
           "U02.Z6.h_cap_mm",
-          "U02.Z6.p_M",
-          "U02.Z6.p_M_conservative_kPa",
-          "U02.Z6.regulator_insufficient"
+          "U02.Z6.p_start",
+          "U02.Z6.p_drop_kPa",
+          "U02.Z6.p_min_kPa",
+          "U02.Z6.p_max_kPa",
+          "U02.Z6.reserve_Pa",
+          "U02.Z6.regulator_selection",
+          "U02.Z6.separate_interfaces",
+          "U02.Z6.diameter_bounds",
+          "U02.Z6.insufficient_range"
         ],
         "result_contracts": [
           {
@@ -4775,11 +5594,11 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 202
+              "line": 267
             }
           },
           {
-            "result_id": "U02.Z6.p_M",
+            "result_id": "U02.Z6.p_start",
             "verification": "golden",
             "target": 0.0,
             "target_kind": "literal",
@@ -4792,35 +5611,119 @@
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 203
+              "line": 268
             }
           },
           {
-            "result_id": "U02.Z6.p_M_conservative_kPa",
+            "result_id": "U02.Z6.p_drop_kPa",
             "verification": "golden",
             "target": 0.571,
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.02,
+              "value": 0.01,
               "value_kind": "literal",
-              "provenance": "verifier_call_keyword"
+              "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 204
+              "line": 269
             }
           },
           {
-            "result_id": "U02.Z6.regulator_insufficient",
+            "result_id": "U02.Z6.p_min_kPa",
+            "verification": "golden",
+            "target": 0.555,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 270
+            }
+          },
+          {
+            "result_id": "U02.Z6.p_max_kPa",
+            "verification": "golden",
+            "target": 0.591,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 271
+            }
+          },
+          {
+            "result_id": "U02.Z6.reserve_Pa",
+            "verification": "golden",
+            "target": 8.8,
+            "target_kind": "literal",
+            "unit": "Pa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.01,
+              "value_kind": "literal",
+              "provenance": "verifier_check_default"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 272
+            }
+          },
+          {
+            "result_id": "U02.Z6.regulator_selection",
             "verification": "invariant",
-            "criterion_expression": "z6['p_M_conservative'] > 500.0",
-            "failure_message": "Regulator 0.50 kPa pogresno je oznacen dostatnim za oba modela.",
+            "criterion_expression": "not z6['low_sufficient'] and z6['high_sufficient']",
+            "failure_message": "Samo regulator do 0.60 kPa pokriva oba zadana staticka stanja.",
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 205
+              "line": 273
+            }
+          },
+          {
+            "result_id": "U02.Z6.separate_interfaces",
+            "verification": "invariant",
+            "criterion_expression": "wider_needle['p_start'] > 0 and abs(wider_needle['p_drop'] - z6['p_drop']) < 1e-12",
+            "failure_message": "Promjer igle utjece na punjenje, ali ne na tlak vec formirane kapljice zadanog D.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 276
+            }
+          },
+          {
+            "result_id": "U02.Z6.diameter_bounds",
+            "verification": "invariant",
+            "criterion_expression": "abs(small_drop['p_drop'] - z6['p_max']) < 1e-12 and abs(large_drop['p_drop'] - z6['p_min']) < 1e-12 and (z6['p_min'] < z6['p_drop'] < z6['p_max'])",
+            "failure_message": "Manja kapljica mora odrediti vecu potrebnu vrijednost tlaka.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 280
+            }
+          },
+          {
+            "result_id": "U02.Z6.insufficient_range",
+            "verification": "invariant",
+            "criterion_expression": "not zadatak_6(regulator_high=580.0)['high_sufficient']",
+            "failure_message": "Regulator koji pokriva nominalno stanje ne mora pokriti najmanju kapljicu.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 285
             }
           }
         ]

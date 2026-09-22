@@ -41,6 +41,14 @@ Za skice primijeni SVG standard iz protokola. Evidencije starih migracija u
   potvrđivanja svakog koraka. Ne širi posao na druga poglavlja bez razloga iz zadatka.
 - Tekst, odgovor, skica, povezani notebook i verifikator moraju opisivati isti
   problem i podatke. Regeneracija manifesta sama ne dokazuje tu podudarnost.
+- Pri prilagodbi skica zadrži postojeći vizualni stil udžbenika (raspored panela,
+  paletu, šrafure, gradijente i tipografiju). Zamjena zadatka sama po sebi ne znači
+  odobrenje za vizualni redizajn; prilagodi prizor i oznake novom sadržaju.
+- U skicama provjeri fizikalnu povezanost: krute stijenke ne smiju zatvarati
+  predviđeni prolaz, otvor cijevi mora biti stvarno otvoren i prikladno uronjen,
+  a fluid ne smije prolaziti kroz krutu plohu. Razlikuj brzine, sile i kote;
+  navedi na koje tijelo sila djeluje. Profili brzine moraju odgovarati prianjanju
+  uz stijenke, a crte profila ne smiju prolaziti kroz kruto tijelo kao kroz fluid.
 - Ne pretpostavljaj da broj poglavlja odgovara imenu `verify_uNN.py`: provjeri
   `CANONICAL_CHAPTERS` u `tools/generate_verification_manifest.py`.
 - Čuvaj stabilne ID-jeve postojećeg sadržaja; za novu fizikalnu cjelinu primijeni

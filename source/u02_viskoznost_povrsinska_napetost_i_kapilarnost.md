@@ -737,6 +737,8 @@ Detalji diskretizacije, zidnih modela, rubnih uvjeta i verifikacije obrađuju se
 
 ::::: {.mf1-vjezbe-list}
 
+U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli. U Z5 svojstvo Newtonskog fluida tek se ispituje. U kapilarnim računima uzmi $g=9{,}81\ \text{m/s}^2$; svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.
+
 ### Z1. Viskozna sila između ploča {#task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se .unnumbered .unlisted}
 
 Između dviju paralelnih ploča nalazi se glicerin debljine $\delta = 2{,}4\ \text{mm}$. Gornja ploča površine $A = 0{,}22\ \text{m}^2$ giba se stalnom brzinom $v = 0{,}65\ \text{m/s}$, donja ploča miruje, a dinamička viskoznost glicerina iznosi $\mu = 0{,}84\ \text{Pa s}$. Odredi gradijent brzine, smično naprezanje i silu potrebnu za gibanje ploče.
@@ -757,41 +759,47 @@ $dv/dy \approx 271\ \text{s}^{-1}$; $\tau \approx 228\ \text{Pa}$; $F \approx 50
 
 [Razina: T1]{.mf1-task-level}
 
-### Z2. Mjerenje viskoznosti ulja {#task-u02-klizna-ploca-povrsine-giba-se-brzinom-kroz .unnumbered .unlisted}
+<span id="task-u02-klizna-ploca-povrsine-giba-se-brzinom-kroz"></span>
 
-Klizna ploča površine $A = 0{,}14\ \text{m}^2$ giba se brzinom $v = 0{,}80\ \text{m/s}$ kroz uljni procjep debljine $\delta = 1{,}8\ \text{mm}$. Ako je mjerena vučna sila $F = 21\ \text{N}$, odredi dinamičku viskoznost ulja.
+### Z2. Kapljica i sapunasti mjehur {#task-kapljica-i-sapunasti-mjehur .unnumbered .unlisted}
+
+Sferna kapljica i tankostijeni sapunasti mjehur imaju isti promjer $d = 1{,}20\ \text{mm}$. Za obje idealizirane tvorevine uzmi površinsku napetost $\sigma = 0{,}030\ \text{N/m}$. Kapljica ima jednu međupovršinu tekućina–zrak, a sapunasti film dvije, približno jednakog promjera. Zanemari deformaciju zbog težine i debljinu filma.
+
+Izračunaj razliku unutarnjeg i vanjskog tlaka za kapljicu i mjehur te njihov omjer. Objasni zašto isti promjer i ista površinska napetost ne daju isti tlačni skok.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-iz $F = \tau A$ dobij $\tau$, a zatim iz $\tau = \mu v/\delta$ vrati $\mu$.
+Za kapljicu vrijedi $\Delta p=4\sigma/d$, a za tanki sapunasti mjehur $\Delta p=8\sigma/d$. Broj međupovršina razlikuje ta dva slučaja; promjer nije polumjer.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-
-$\tau = 150\ \text{Pa}$; $\mu \approx 0{,}34\ \text{Pa s}$.
+$\Delta p_k=100\ \text{Pa}$; $\Delta p_m=200\ \text{Pa}$; $\Delta p_m/\Delta p_k=2$. U oba slučaja unutarnji je tlak viši, a mjehur ima dva doprinosa površinske napetosti.
 :::
 ::::
 
 [Razina: T1]{.mf1-task-level}
 
-### Z3. Otpor vrtnji vratila {#task-u02-vratilo-promjera-i-duljine-vrti-se-tako .unnumbered .unlisted}
+<span id="task-u02-vratilo-promjera-i-duljine-vrti-se-tako"></span>
 
-Vratilo promjera $D = 70\ \text{mm}$ i duljine $L = 0{,}24\ \text{m}$ vrti se tako da je obodna brzina $v = 1{,}6\ \text{m/s}$ u uljnom procjepu debljine $\delta = 0{,}60\ \text{mm}$. Dinamička viskoznost ulja je $\mu = 0{,}36\ \text{Pa s}$. Odredi smično naprezanje i silu smicanja na vratilu.
+### Z3. Ploča između dva uljna procjepa {#task-ploca-izmedu-dva-procjepa .unnumbered .unlisted}
+
+Tanka ploča klizi udesno brzinom $v = 0{,}30\ \text{m/s}$ između dviju nepomičnih paralelnih stijenki. Površina svake strane ploče u dodiru s uljem iznosi $A = 0{,}020\ \text{m}^2$. U oba procjepa nalazi se isto ulje. Gornji procjep ima debljinu $\delta_1 = 1{,}0\ \text{mm}$, donji $\delta_2 = 2{,}0\ \text{mm}$, a ulje u oba procjepa dinamičku viskoznost $\mu = 0{,}12\ \text{Pa s}$.
+
+Student zamjenjuje dva procjepa jednim razmakom $\delta_1+\delta_2$ i piše $F=\mu Av/(\delta_1+\delta_2)$. Izračunaj iznose smičnih naprezanja i sila na objema stranama te potrebnu ukupnu vučnu silu. Odredi smjer svakog otpora i objasni pogrešku predloženog postupka. Što bi se dogodilo s doprinosom donje strane kad bi donji procjep postao vrlo velik uz ostale pretpostavke modela?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-koristi aproksimaciju ravnih slojeva: $\tau = \mu v/\delta$ i $F = \tau A$ uz $A = \pi DL$.
+Svaki procjep ima vlastitu promjenu brzine od nule do $v$. Izračunaj oba iznosa gradijenta zasebno. Sile ulja na pokretnoj ploči obje se suprotstavljaju njezinu gibanju pa se njihovi iznosi zbrajaju.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-
-$\tau = 960\ \text{Pa}$; $F \approx 51\ \text{N}$.
+$|\tau_1|=36\ \text{Pa}$, $|\tau_2|=18\ \text{Pa}$; $F_1=0{,}72\ \text{N}$, $F_2=0{,}36\ \text{N}$, $F=1{,}08\ \text{N}$. Oba otpora djeluju ulijevo, vučna sila udesno. Pogrešan postupak daje $0{,}24\ \text{N}$: ploča dijeli dva zasebna sloja. Za vrlo velik donji procjep njegov doprinos teži nuli unutar tog modela.
 :::
 ::::
 
@@ -817,21 +825,30 @@ $h \approx 18{,}0\ \text{mm}$; kod $d = 1{,}2\ \text{mm}$ upola manje, $h \appro
 
 [Razina: T2]{.mf1-task-level}
 
-### Z5. Kapilarni uspon i tlak u kapljici {#task-u02-staklena-kapilara-promjera-uronjena-je-u-vodu .unnumbered .unlisted}
+<span id="task-u02-staklena-kapilara-promjera-uronjena-je-u-vodu"></span>
 
-Staklena kapilara promjera $d = 0{,}90\ \text{mm}$ uronjena je u vodu za koju vrijedi $\sigma = 0{,}072\ \text{N/m}$, $\theta = 10^\circ$ i $\rho = 998\ \text{kg/m}^3$. Odredi kapilarni uspon. Zatim odredi tlak skoka u kapljici vode promjera $d_k = 1{,}2\ \text{mm}$ nastaloj na izlazu raspršivača istog sustava.
+### Z5. Može li se pretpostaviti stalna viskoznost? {#task-newtonski-model-iz-mjerenja .unnumbered .unlisted}
+
+U nastavnom pokusu ispituju se uzorci A i B između nepomične i pokretne ploče. Samo jedna strana pokretne ploče površine $S = 0{,}010\ \text{m}^2$ dodiruje uzorak; razmak ploča je $\delta = 1{,}0\ \text{mm}$. Pri stalnoj temperaturi dobiveni su sljedeći sintetički podatci. Za ovu idealiziranu usporedbu zanemari mjernu nesigurnost, trenje mehanizma, klizanje uz stijenku i rubne učinke. Smični je profil u svakom stacionarnom pokusu linearan; Newtonsko ponašanje tek treba provjeriti.
+
+| Brzina $v$ (m/s) | Vučna sila uzorka A (N) | Vučna sila uzorka B (N) |
+| ---: | ---: | ---: |
+| 0,10 | 0,20 | 0,30 |
+| 0,20 | 0,40 | 0,45 |
+| 0,40 | 0,80 | 0,60 |
+
+Za svaki red odredi iznos gradijenta brzine, naprezanja i omjer naprezanja prema gradijentu. Za koji je uzorak prihvatljiv Newtonski model sa stalnom viskoznošću u ispitanom rasponu? Tim modelom predvidi silu pri brzini $v_* = 0{,}30\ \text{m/s}$. Za drugi uzorak pokaži koliko bi na najvećoj mjerenoj brzini pogriješio račun sa stalnom viskoznošću određenom samo iz prvog retka. Jesu li tri retka dovoljna za jedinstven izbor nenewtonskog zakona ili za zaključak o ponašanju izvan ispitanog raspona?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-najprije kapilarni uspon iz $h = 4\sigma \cos\theta /(\rho g d)$, a zatim tlak skoka kapljice iz $\Delta p = 4\sigma/d_k$.
+Iz sile i površine izračunaj naprezanje, a iz brzine i razmaka gradijent. Njihov omjer jest prividna viskoznost. Newtonski model traži isti omjer u svim redcima pri istoj temperaturi; samo jedna točka to ne provjerava.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-
-$h \approx 32{,}2\ \text{mm}$; $\Delta p \approx 240\ \text{Pa}$.
+Gradijenti su $100$, $200$, $400\ \text{s}^{-1}$. A: $\tau=20,40,80\ \text{Pa}$, $\mu=0{,}20\ \text{Pa s}$ i $F_*=0{,}60\ \text{N}$. B: $\tau=30,45,60\ \text{Pa}$, prividne viskoznosti $0{,}30$, $0{,}225$, $0{,}15\ \text{Pa s}$. Prva točka B predviđa $1{,}20\ \text{N}$ umjesto $0{,}60\ \text{N}$. A je usklađen s Newtonskim modelom u ispitanom rasponu; B nije. Podatci ne određuju jedinstven novi zakon ni ekstrapolaciju.
 :::
 ::::
 
@@ -839,27 +856,32 @@ $h \approx 32{,}2\ \text{mm}$; $\Delta p \approx 240\ \text{Pa}$.
 
 ### Z6. Kapilarna igla pod tlakom {#task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na .unnumbered .unlisted}
 
-Kapilarna igla unutarnjeg promjera $d = 0{,}50\ \text{mm}$ spojena je na spremnik vode za koju vrijedi $\sigma = 0{,}072\ \text{N/m}$, $\rho = 998\ \text{kg/m}^3$ i $\theta = 0^\circ$. Izlaz igle nalazi se na visini $H = 42\ \text{mm}$ iznad slobodne površine, a na izlazu se treba održati kapljica promjera $D = 1{,}8\ \text{mm}$. Odredi kapilarni uspon i najmanji dodatni manometarski pretlak u spremniku prema idealizaciji kapilarnog uspona. Za izbor regulatora usporedi taj rezultat s konzervativnim alternativnim stanjem u kojem je meniskus već izašao iz igle pa nema kapilarne depresije tlaka u cijevi, a na izlazu ostaje sferna kapljica. Pokriva li najveći pretlak regulatora od $0{,}50\ \text{kPa}$ statički zahtjev obaju modela? Obrazloži koji je model mjerodavan pri pokretanju, a koji nakon nastanka kapljice.
+Kapilarna igla unutarnjeg promjera $d = 0{,}50\ \text{mm}$ spojena je na spremnik vode za koju vrijedi $\sigma = 0{,}072\ \text{N/m}$, $\rho = 998\ \text{kg/m}^3$ i $\theta = 0^\circ$. Izlaz je na visini $H = 42\ \text{mm}$ iznad široke slobodne površine spremnika. Okolni zrak je na atmosferskom tlaku. Promatraju se dva **odvojena** kvazistatička stanja:
+
+1. Igla se puni, a konkavni meniskus još je u cijevi; izlazne kapljice nema. Odredi prirodni kapilarni uspon i najmanji nenegativni manometarski pretlak spremnika potreban da meniskus dosegne izlaz.
+2. Igla je potpuno ispunjena vodom, a na izlazu je gotovo sferna kapljica nominalnog promjera $D = 1{,}8\ \text{mm}$; u igli više nema zasebnog meniskusa ni zarobljenog zraka. Odredi potreban pretlak spremnika. U ovom modelu uzmi da je tlak neposredno ispod kapljice $4\sigma/D$ viši od okolnog; zanemari visinsku promjenu tlaka unutar same kapljice.
+
+U drugom stanju promjer kapljice može biti bilo gdje od $D_{min}=1{,}6\ \text{mm}$ do $D_{max}=2{,}0\ \text{mm}$; to su zadane granice, ne standardna nesigurnost. Usporedi regulatore raspona $0$–$0{,}50\ \text{kPa}$ i $0$–$0{,}60\ \text{kPa}$: koji pokriva zahtjeve obaju zadanih stanja i cijeli raspon promjera? Izračunaj najmanju tlačnu rezervu. Obrazloži zašto se pri formiranoj kapljici ne smije dodatno oduzeti tlak konkavnoga meniskusa. Zanemari gubitke pri protoku; zaključak ograniči na ova dva stanja, bez tvrdnje o tlaku tijekom prijelaznog oblikovanja kapljice.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-prvo izračunaj $h_{cap} = 4\sigma /(\rho g d)$, zatim tlakovni skok kapljice $\Delta p = 4\sigma/D$, a preostali pretlak u idealizaciji kapilarnog uspona zatvori iz $p_M = \rho g(H-h_{cap}) + \Delta p$, uz donju granicu $p_M\ge0$. U alternativnom stanju više nema konkavnoga meniskusa koji daje $h_{cap}$, pa regulator mora svladati i visinsku razliku i pozitivni Laplaceov skok: $p_{M,konz}=\rho gH+4\sigma/D$.
+Prvo stanje: $h_{cap}=4\sigma\cos\theta/(\rho gd)$ i $p_{M,1}=\max(0,\rho gH-4\sigma\cos\theta/d)$. Drugo stanje: $p_{M,2}=\rho gH+4\sigma/D$. Te relacije opisuju različite oblike jedne međupovršine. Za izbor regulatora provjeri oba kraja intervala promjera.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-
-$h_{cap} \approx 58{,}8\ \text{mm}$; u idealizaciji kapilarnog uspona dobiva se zanemariv dodatni pretlak, $p_M \approx 0$. Kada je na izlazu već formirana sferna kapljica, konzervativni model daje $p_{M,konz}\approx0{,}571\ \text{kPa}$. Regulator od $0{,}50\ \text{kPa}$ stoga nije dovoljan za oba stanja: prvi model opisuje uspon s meniskusom u igli, ali izbor regulatora mora pokriti drugi model ili se mora provjeriti prijelaz između njih.
+$h_{cap}\approx58{,}8\ \text{mm}$; $p_{M,1}=0\ \text{Pa}$. Nominalno $p_{M,2}\approx0{,}571\ \text{kPa}$; interval je $0{,}555$–$0{,}591\ \text{kPa}$, s maksimumom pri $D_{min}$. Raspon do $0{,}50\ \text{kPa}$ nije dovoljan; do $0{,}60\ \text{kPa}$ pokriva zadana stanja uz najmanju rezervu $8{,}8\ \text{Pa}$. Formirana kapljica nema dodatni konkavni meniskus čiji bi tlak smanjio zahtjev. Prijelaz i protočni gubitci nisu provjereni.
 :::
 ::::
 
 [Razina: T4]{.mf1-task-level}
 
+
 :::::
 
-![Skice uz zadatke za vježbu — viskozni procjepi, kapilare i kapljice (poglavlje 2).](../assets/print/u02_vjezbe_skice.svg){#fig-u02-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — viskozni procjepi, kapilare i kapljice (poglavlje 2)."}
+![Skice uz Z1–Z6: smicanje između ploča, kapljica i sapunasti mjehur, dva uljna procjepa, kapilarni uspon, mjerenje viskoznog otpora te igla s izlaznom kapljicom.](../assets/print/u02_vjezbe_skice.svg){#fig-u02-vjezbe fig-align="center" fig-alt="Skice uz Z1–Z6: smicanje između ploča, kapljica i sapunasti mjehur, dva uljna procjepa, kapilarni uspon, mjerenje viskoznog otpora te igla s izlaznom kapljicom."}
 
 ## Sažetak
 

@@ -796,7 +796,7 @@ $p \approx 947\ \text{kPa}$; $G \approx 27{,}0\ \text{kN}$; $s_p \approx 1{,}35\
 
 :::::
 
-![Sheme uz zadatke: prijenos sile i pomaka dvama klipovima (Z2, Z3 i Z5), mjerenje pomaka cilindra (Z4) te zajedničko podizanje stola (Z6). Skice nisu u mjerilu.](../assets/print/u01_vjezbe_skice.svg){#fig-u01-vjezbe fig-align="center" fig-alt="Tri sheme razlikuju ulaznu i izlaznu silu hidrauličnog prijenosa, dovedeni volumen i pomak mjernog cilindra te zajedničko opterećenje triju cilindara stola."}
+![Skice uz zadatke Z1–Z6: vaganje posude i ulja, servisna preša, provjera proračuna preše, mjerni cilindar, izbor pumpe i stol s tri cilindra. Skice nisu u mjerilu.](../assets/print/u01_vjezbe_skice.svg){#fig-u01-vjezbe fig-align="center" fig-alt="Šest panela prikazuje praznu i napunjenu posudu na vagi u Z1, ulaznu i izlaznu silu preša u Z2 i Z3, dovedeni volumen i pomak klipa u Z4, pumpu s jednim radnim cilindrom u Z5 te stol s tri jednaka cilindra u Z6."}
 
 ## Sažetak
 

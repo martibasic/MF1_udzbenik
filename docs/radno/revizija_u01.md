@@ -118,3 +118,57 @@ Ovo je lokalna provjera sadržaja i rendera, ne potvrda cijeloga objavnog CI-ja:
 JupyterLite i puni audit objavljenog weba nisu ponovno pokrenuti. Notebooki
 nisu mijenjani. Nije napravljen commit ni push ove revizije. Lokalni Quarto je
 1.9.32, a CI koristi 1.9.37.
+
+## Povratak vizualnog stila — 22. rujna 2026.
+
+Na zahtjev korisnice vraćen je izgled skice iz verzije `8622219`: šest manjih
+panela u dva reda, plave naslovne trake, svijetle podloge, šrafirane stijenke,
+gradijenti tekućine i metalnih klipova. Zadržana je tadašnja plava konvencija
+prikaza tekućine, što je obrazloženo i komentarom u SVG-u. Prizori i podatci
+odgovaraju aktualnim zadatcima: Z1 prikazuje taru i dva punjenja, Z2/Z3 preše,
+Z4 mjerni cilindar, Z5 jednu pumpu i jedan radni cilindar, a Z6 tri cilindra.
+Time ova dopuna zamjenjuje raniju odluku o zajedničkoj skici s tri scene.
+Tekstovi zadataka, odgovori i numerički računi nisu mijenjani; usklađeni su
+samo opis slike i alternativni tekst. Pravilo očuvanja stila zapisano je u AGENTS.md.
+
+Provjere ove dopune: pregled stare i prilagođene skice u Edgeu, bez izlaska
+teksta iz kadra; HTML render U01 i puni Typst render prolaze. Vizualno pregledana
+slika na stranici 30 PDF-a; `audit_pdf.py` prolazi (297 A4 stranica). Prolaze i
+`audit_publication.py`, normalizacija javnog teksta, provjera aktualnosti manifesta
+i ključa te `git diff --check`. Računski testovi nisu ponavljani jer se numerički
+sadržaj nije promijenio.
+
+## Fizikalna dorada skica Z1–Z6 — 22. rujna 2026.
+
+Na zahtjev korisnice primijenjena su pravila fizikalne dorade korištena u U02.
+Sačuvani su raspored šest panela, plave naslovne trake i tekućina, šrafure,
+gradijenti i tipografija. Ova dorada mijenja samo SVG i ovu evidenciju.
+
+- Z1: posuda dodiruje plohu vage, tekućina doseže dno, a otvoreni vrh i debljina
+  stijenki jasno su prikazani u sva tri stanja vaganja.
+- Z2 i Z3: komore i donji spoj čine jednu neprekinutu fluidnu domenu. Brtve su
+  na klipovima uz stijenke; uklonjeni su nepovezani dijelovi uz klipnjače.
+  Ulazna sila djeluje prema dolje, sila ulja na veliki klip prema gore.
+  Posebne tamne strelice označuju smjerove pomaka.
+- Z4: dovod ima otvoreno ušće i stijenke spojene s tekućom komorom. Cilindar
+  se nastavlja iza klipa, a zračna strana ostaje otvorena. Početna ploha
+  označena je isprekidano samo unutar provrta; kota prati pomak iste plohe.
+  Zadržana je razlika između mjerenja pomaka i zasebnoga pokusa blokiranja.
+- Z5: vanjsko opterećenje radnog klipa djeluje prema dolje, nasuprot njegovu
+  podizanju. Označeni su tlačni hod pumpe, radni pomak i površina radnog klipa;
+  napomena izričito navodi da ventili nisu prikazani.
+- Z6: zajednički vod stvarno spaja sve komore. Stol je povezan s trima jednakim
+  klipovima i bočnom vodilicom; odvojeno su označeni opterećenje prema dolje,
+  zajednički pomak prema gore i tlačni hod pumpnog klipa.
+
+Opis pristupačnosti i vidljiva legenda razlikuju sile, smjerove pomaka i
+geometrijske veličine te navode da skice i duljine strelica nisu u mjerilu.
+Tekstovi zadataka, podatci, odgovori, teorija i riješeni primjeri nisu mijenjani.
+
+Provjere: vizualni pregled SVG-a u Edgeu i slike na stranici 30 konačnog PDF-a;
+tekst ne izlazi iz kadra. HTML render U01 i puni Typst render prolaze.
+`audit_pdf.py` prolazi za 299 A4 stranica; `audit_publication.py` potvrđuje
+87 primjera i 90 zadataka. Prolaze provjere normalizacije javnog teksta,
+aktualnosti manifesta i ključa te `git diff --check`. Računski testovi nisu
+ponavljani jer nema numeričkih promjena. Typst i dalje javlja postojeća
+upozorenja za `times.circle` u U10. Objava, commit i push nisu dio ove dorade.

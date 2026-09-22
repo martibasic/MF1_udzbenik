@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="u02vs_title u02vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u02vs_title">Skice za vjezbu uz poglavlje 2 — viskoznost, povrsinska napetost i kapilarnost</title>
-  <desc id="u02vs_desc">Sest minimalnih grayscale skica za zadatke Z1 do Z6. Z1 dvije paralelne ploce s linearnim profilom brzine, debljinom delta i vucnom silom F. Z2 vucena ploca u uljnom procjepu izmedu dvije nepomicne plohe s mjerenom silom F i dinamometrom. Z3 klizni lezaj — poprecni presjek vratila u kucistu, uljni procjep delta, promjer D, duljina L. Z4 dvije staklene kapilare razlicitog promjera u tekucini s meniscima i visinama uspona h1 i h2. Z5 staklena kapilara s konkavnim meniskusom uz zasebnu sfernu kapljicu raspisivaca promjera d-k. Z6 zatvoreni spremnik vode s manometarskim pretlakom p-M, kapilarna igla, visina H do izlaza i kapljica promjera D na vrhu.</desc>
-
+  <title id="u02vs_title">Skice uz Z1–Z6: smicanje i povezane fluidne domene</title>
+  <desc id="u02vs_desc">Šest panela s krutim stijenkama, otvorenim fluidnim spojevima i označenim silama. Z1 i Z5: brzina i vučna sila udesno, sila fluida na ploču ulijevo; brzina fluida na donjoj stijenci jednaka je nuli. Z2 razlikuje tekuću kapljicu i dvije međupovršine sapunastoga mjehura. Z3 ima dva odvojena linearna profila brzine, s nulom na objema nepomičnim stijenkama i brzinom ploče na objema njezinim stranama; oba otpora djeluju ulijevo. Z4 prikazuje dvije kapilare otvorene na oba kraja, s donjim otvorima uronjenima iznad dna posude. Z6 prikazuje neprekinutu vodu od uronjenog otvorenog ulaza kroz zabrtvljeni otvor poklopca do kapljice, bez meniskusa u igli. Tlak je označen skalarnim oznakama. Skice nisu u mjerilu.</desc>
   <defs>
     <linearGradient id="u02vs_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#aed6f1" />
@@ -19,23 +18,18 @@
       <rect width="7" height="7" fill="#d7dee3" />
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-
-    <!-- markeri sile (crvena ulaz, zelena izlaz) -->
     <marker id="u02vs_fR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
     <marker id="u02vs_fG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <!-- marker tlaka/sigme (plavi) -->
     <marker id="u02vs_pr" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
       <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
-    <!-- marker brzine/smicanja (tamni) -->
     <marker id="u02vs_vk" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#2c3e50" />
     </marker>
-    <!-- marker kote (smeda) -->
     <marker id="u02vs_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
@@ -43,329 +37,232 @@
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
-
-  <!-- pozadina -->
   <rect width="960" height="720" fill="#fbfdff" />
-  <!-- ===========================================================
-       Z1 — Dvije paralelne ploce, profil brzine
-       Panel: x=22..324, y=28..360
-  =========================================================== -->
-  <rect x="22" y="28" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
-  <rect x="22" y="28" width="302" height="26" rx="10" fill="#1565c0" />
-  <rect x="22" y="44" width="302" height="10" fill="#1565c0" />
-  <!-- donja plocka (nepomicna): y=270..286 -->
-  <rect x="80" y="270" width="220" height="16" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1.5" />
-  <!-- gornja ploca (klizna): y=156..172 -->
-  <rect x="80" y="156" width="220" height="16" fill="#909fa8" stroke="#3a4a56" stroke-width="1.5" />
-  <!-- glicerin u procjepu -->
-  <rect x="80" y="172" width="220" height="98" fill="url(#u02vs_voda)" opacity="0.85" />
-  <!-- linearni profil brzine: trokut -->
-  <polygon points="80,172 80,270 200,172" fill="#7fa9c8" opacity="0.4" />
-  <line x1="80" y1="270" x2="200" y2="172" stroke="#2c3e50" stroke-width="1.4" stroke-dasharray="4,3" />
-  <!-- 4 vektora brzine u sloju -->
-  <line x1="82" y1="256" x2="115" y2="256" stroke="#2c3e50" stroke-width="1.6" marker-end="url(#u02vs_vk)" />
-  <line x1="82" y1="232" x2="143" y2="232" stroke="#2c3e50" stroke-width="1.6" marker-end="url(#u02vs_vk)" />
-  <line x1="82" y1="208" x2="170" y2="208" stroke="#2c3e50" stroke-width="1.6" marker-end="url(#u02vs_vk)" />
-  <line x1="82" y1="184" x2="195" y2="184" stroke="#2c3e50" stroke-width="1.6" marker-end="url(#u02vs_vk)" />
-
-  <!-- v strelica iznad gornje ploce (ulazna brzina) -->
-  <line x1="140" y1="138" x2="240" y2="138" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u02vs_fR)" />
-  <!-- kota delta (procjep): lijevo, s pomocnim linijama od ploca -->
-  <!-- gornja ploca: oznaka A -->
-  <!-- legend block dolje -->
-  <!-- ===========================================================
-       Z2 — Vucena ploca, mjerena F, odredi mu
-       Panel: x=331..633, y=28..360
-  =========================================================== -->
-  <rect x="331" y="28" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
-  <rect x="331" y="28" width="302" height="26" rx="10" fill="#1565c0" />
-  <rect x="331" y="44" width="302" height="10" fill="#1565c0" />
-  <!-- donja nepomicna ploca: y=270..286 -->
-  <rect x="358" y="270" width="232" height="16" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1.5" />
-  <!-- ulje u procjepu izmedu klizne ploce i dna -->
-  <rect x="358" y="200" width="232" height="70" fill="url(#u02vs_ulje)" opacity="0.85" />
-  <!-- klizna (vucena) ploca: y=184..200 -->
-  <rect x="358" y="184" width="232" height="16" fill="#909fa8" stroke="#3a4a56" stroke-width="1.5" />
-
-  <!-- v strelica iznad klizne ploce -->
-  <line x1="400" y1="164" x2="500" y2="164" stroke="#2c3e50" stroke-width="2" marker-end="url(#u02vs_vk)" />
-  <!-- vodoravna veza klizne ploce do dinamometra (vucna sipka) -->
-  <line x1="590" y1="192" x2="603" y2="192" stroke="#3a4a56" stroke-width="2" />
-  <!-- dinamometar (kruzic) -->
-  <circle cx="615" cy="192" r="11" fill="#f5f5f5" stroke="#3a4a56" stroke-width="1.5" />
-  <line x1="610" y1="187" x2="620" y2="197" stroke="#3a4a56" stroke-width="1" />
-  <line x1="620" y1="187" x2="610" y2="197" stroke="#3a4a56" stroke-width="1" />
-  <!-- F (vucna sila, mjerena) — crvena, povlaci dinamometar udesno -->
-  <line x1="568" y1="146" x2="618" y2="146" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u02vs_fR)" />
-  <!-- kota delta procjepa: lijevo, izmedu klizne ploce (donji rub) i donje ploce (gornji rub) -->
-  <!-- ploca oznaka A na klizoj ploci -->
-  <!-- ===========================================================
-       Z3 — Klizni lezaj (poprecni presjek vratila u kucistu)
-       Panel: x=640..942, y=28..360
-  =========================================================== -->
-  <rect x="640" y="28" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
-  <rect x="640" y="28" width="302" height="26" rx="10" fill="#1565c0" />
-  <rect x="640" y="44" width="302" height="10" fill="#1565c0" />
-  <!-- kuciste (vanjski prsten, srafura) -->
-  <circle cx="763" cy="190" r="74" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="2" />
-  <!-- uljni film (zuti prsten) -->
-  <circle cx="763" cy="190" r="62" fill="url(#u02vs_ulje)" opacity="0.9" stroke="#9a7a00" stroke-width="0.8" />
-  <!-- vratilo (unutarnji krug) -->
-  <circle cx="763" cy="190" r="56" fill="#8a9aa4" stroke="#3a4a56" stroke-width="2" />
-
-  <!-- rotacijska strelica (smjer v na vratilu) -->
-  <path d="M 763 138 A 52 52 0 0 1 815 190" fill="none" stroke="#2c3e50" stroke-width="2.2" marker-end="url(#u02vs_vk)" />
-  <!-- ulje labela u prstenu -->
-  <!-- D kota (promjer vratila): horizontalno preko vratila ispod -->
-  <!-- delta (uljni film): leader od prstena, oznaka desno -->
-  <!-- ===========================================================
-       Z4 — Dvije kapilare u etanolu
-       Panel: x=22..324, y=370..702
-  =========================================================== -->
-  <rect x="22" y="370" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
-  <rect x="22" y="370" width="302" height="26" rx="10" fill="#1565c0" />
-  <rect x="22" y="386" width="302" height="10" fill="#1565c0" />
-  <!-- posuda s etanolom: x=40..306, y=580..650 -->
-  <rect x="40" y="580" width="266" height="70" fill="url(#u02vs_voda)" opacity="0.85" />
-  <rect x="40" y="650" width="266" height="6" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <rect x="34" y="580" width="6" height="76" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <rect x="306" y="580" width="6" height="76" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <line x1="40" y1="580" x2="306" y2="580" stroke="#1565c0" stroke-width="1.8" />
-
-  <!-- kapilara 1 (uza): vanjski rub x=104..126, unutar x=107..123, vrh y=440 -->
-  <rect x="104" y="440" width="22" height="210" fill="#eaf1f6" stroke="#9fb3c0" stroke-width="1.1" />
-  <rect x="107" y="500" width="16" height="150" fill="url(#u02vs_voda)" />
-  <path d="M107,502 Q115,512 123,502" fill="none" stroke="#0d47a1" stroke-width="1.3" />
-
-  <!-- h1 kota: desno od kapilare 1, od meniskusa do razine -->
-  <!-- d1 kota gore -->
-  <!-- kapilara 2 (sira): vanjski rub x=222..258, unutar x=226..254, vrh y=440 -->
-  <rect x="220" y="440" width="38" height="210" fill="#eaf1f6" stroke="#9fb3c0" stroke-width="1.1" />
-  <rect x="225" y="544" width="28" height="106" fill="url(#u02vs_voda)" />
-  <path d="M225,546 Q239,556 253,546" fill="none" stroke="#0d47a1" stroke-width="1.3" />
-
-  <!-- h2 kota: desno (krace) -->
-  <!-- d2 kota gore -->
-  <!-- etanol labela u posudi -->
-  <!-- ===========================================================
-       Z5 — Kapilara s meniskusom + zasebna kapljica
-       Panel: x=331..633, y=370..702
-  =========================================================== -->
-  <rect x="331" y="370" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
-  <rect x="331" y="370" width="302" height="26" rx="10" fill="#1565c0" />
-  <rect x="331" y="386" width="302" height="10" fill="#1565c0" />
-  <!-- LIJEVO: kapilara s meniskusom u posudi vode -->
-  <!-- posuda x=345..490, y=600..650 -->
-  <rect x="345" y="600" width="145" height="50" fill="url(#u02vs_voda)" opacity="0.85" />
-  <rect x="345" y="650" width="145" height="6" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <rect x="339" y="600" width="6" height="56" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <rect x="490" y="600" width="6" height="56" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <line x1="345" y1="600" x2="490" y2="600" stroke="#1565c0" stroke-width="1.8" />
-
-  <!-- kapilara: x=400..422, y=470..650 -->
-  <rect x="400" y="470" width="22" height="180" fill="#eaf1f6" stroke="#9fb3c0" stroke-width="1.1" />
-  <rect x="403" y="520" width="16" height="130" fill="url(#u02vs_voda)" />
-  <path d="M403,522 Q411,532 419,522" fill="none" stroke="#0d47a1" stroke-width="1.3" />
-
-  <!-- h kota: desno od kapilare -->
-  <!-- d kota: gore -->
-  <!-- DESNO: kapljica raspisivaca -->
-  <!-- separator -->
-  <line x1="500" y1="430" x2="500" y2="660" stroke="#dce7f0" stroke-width="1" stroke-dasharray="4,4" />
-
-  <!-- kapljica: cx=565, cy=540, r=34 -->
-  <circle cx="565" cy="540" r="34" fill="url(#u02vs_kap)" stroke="#1565c0" stroke-width="2" />
-
-  <!-- vanjski tlak strelice (4 prema unutra) -->
-  <line x1="615" y1="540" x2="603" y2="540" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u02vs_pr)" />
-  <line x1="515" y1="540" x2="527" y2="540" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u02vs_pr)" />
-  <line x1="565" y1="492" x2="565" y2="504" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u02vs_pr)" />
-  <line x1="565" y1="588" x2="565" y2="576" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u02vs_pr)" />
-
-  <!-- d_k kota: ispod kapljice -->
-  <!-- Delta p label za kapljicu -->
-  <!-- ===========================================================
-       Z6 — Kapilarna igla, spremnik s pretlakom p_M
-       Panel: x=640..942, y=370..702
-  =========================================================== -->
-  <rect x="640" y="370" width="302" height="332" rx="10" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" />
-  <rect x="640" y="370" width="302" height="26" rx="10" fill="#1565c0" />
-  <rect x="640" y="386" width="302" height="10" fill="#1565c0" />
-  <!-- spremnik (zatvoren) x=662..820, y=560..672 -->
-  <!-- voda u spremniku -->
-  <rect x="668" y="600" width="146" height="66" fill="url(#u02vs_voda)" />
-  <!-- stijenke spremnika (top, lijevo, desno, dno) -->
-  <rect x="662" y="560" width="158" height="6" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <rect x="662" y="566" width="6" height="106" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <rect x="814" y="566" width="6" height="106" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <rect x="662" y="666" width="158" height="6" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <!-- slobodna povrsina -->
-  <line x1="668" y1="600" x2="814" y2="600" stroke="#1565c0" stroke-width="1.8" />
-
-  <!-- p_M oznaka unutar spremnika iznad razine -->
-  <line x1="720" y1="582" x2="720" y2="596" stroke="#1565c0" stroke-width="2" marker-end="url(#u02vs_pr)" />
-  <!-- voda labela u spremniku -->
-  <!-- kapilarna igla: x=802..818 (port through top wall), gore prema y=438 -->
-  <!-- port overlay vode preko top wall (na izlazu igle iz spremnika) -->
-  <rect x="805" y="560" width="10" height="6" fill="url(#u02vs_voda)" />
-  <!-- igla (vanjske stijenke, tanke) -->
-  <rect x="803" y="438" width="2" height="124" fill="#7a8a96" />
-  <rect x="815" y="438" width="2" height="124" fill="#7a8a96" />
-  <!-- voda u igli (uzak stupac) -->
-  <rect x="805" y="458" width="10" height="104" fill="url(#u02vs_voda)" />
-  <!-- meniskus u igli (na visini h_cap iznad razine vode u spremniku) -->
-  <path d="M805,460 Q810,466 815,460" fill="none" stroke="#0d47a1" stroke-width="1.3" />
-
-  <!-- kapljica D na vrhu igle -->
-  <circle cx="810" cy="426" r="16" fill="url(#u02vs_kap)" stroke="#1565c0" stroke-width="2" />
-
-  <!-- isprekidana referentna linija razine vode -->
-  <line x1="668" y1="600" x2="820" y2="600" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-  <!-- isprekidana razina izlaza igle -->
-  <line x1="820" y1="438" x2="900" y2="438" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-  <line x1="820" y1="600" x2="900" y2="600" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-  <!-- H kota: desno, od razine do izlaza igle -->
-  <!-- D kota za kapljicu, lijevo -->
-  <!-- d (igla) leader -->
-  <line x1="803" y1="442" x2="745" y2="448" stroke="#5a6a78" stroke-width="0.7" />
-  <line x1="80" y1="172" x2="56" y2="172" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="80" y1="270" x2="56" y2="270" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="62" y1="172" x2="62" y2="270" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="358" y1="200" x2="342" y2="200" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="358" y1="270" x2="342" y2="270" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="348" y1="200" x2="348" y2="270" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="707" y1="190" x2="707" y2="284" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="819" y1="190" x2="819" y2="284" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="707" y1="270" x2="707" y2="282" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="819" y1="270" x2="819" y2="282" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="710" y1="276" x2="816" y2="276" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="819" y1="190" x2="850" y2="190" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="831" y1="190" x2="831" y2="178" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="844" y1="190" x2="844" y2="178" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="831" y1="184" x2="844" y2="184" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="123" y1="502" x2="172" y2="502" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="123" y1="580" x2="172" y2="580" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="166" y1="502" x2="166" y2="580" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="104" y1="440" x2="104" y2="424" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="126" y1="440" x2="126" y2="424" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="107" y1="430" x2="123" y2="430" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="253" y1="544" x2="290" y2="544" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="253" y1="580" x2="290" y2="580" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="284" y1="544" x2="284" y2="580" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="220" y1="440" x2="220" y2="424" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="258" y1="440" x2="258" y2="424" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="225" y1="430" x2="253" y2="430" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="419" y1="522" x2="450" y2="522" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="419" y1="600" x2="450" y2="600" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="444" y1="522" x2="444" y2="600" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="400" y1="470" x2="400" y2="454" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="422" y1="470" x2="422" y2="454" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="403" y1="460" x2="419" y2="460" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="531" y1="574" x2="531" y2="616" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="599" y1="574" x2="599" y2="616" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="531" y1="619" x2="531" y2="603" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="599" y1="619" x2="599" y2="603" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="534" y1="611" x2="596" y2="611" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="884" y1="438" x2="884" y2="600" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <line x1="876" y1="438" x2="892" y2="438" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="876" y1="600" x2="892" y2="600" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="794" y1="410" x2="772" y2="410" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="794" y1="442" x2="772" y2="442" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="778" y1="410" x2="778" y2="442" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
-  <text x="36" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z1</text>
-  <text x="60" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Paralelne ploče — linearni profil v(y)</text>
-
-  <text x="247" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b">v</text>
-
-  <text x="190" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#ffffff">A</text>
-
-  <text x="40" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">glicerin: μ = 0,84 Pa·s</text>
-  <text x="40" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">v</tspan> = 0,65 m/s,  δ = 2,4 mm</text>
-  <text x="40" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">A</tspan> = 0,22 m²  →  F = τA</text>
-
-  <text x="345" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z2</text>
-  <text x="369" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Vučena ploča u uljnom procjepu — mjeri F</text>
-
-  <text x="393" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#2c3e50">v</text>
-
-  <text x="624" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b">F</text>
-
-  <text x="450" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#ffffff">A</text>
-
-  <text x="349" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">ulje: <tspan font-style="italic">A</tspan> = 0,14 m²,  δ = 1,8 mm</text>
-  <text x="349" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">v</tspan> = 0,80 m/s,  mjereno <tspan font-style="italic">F</tspan> = 21 N</text>
-  <text x="349" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">odredi μ iz τ = μ<tspan font-style="italic">v</tspan>/δ</text>
-
-  <text x="654" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z3</text>
-  <text x="678" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Klizni ležaj — poprecni presjek</text>
-
-  <text x="820" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#2c3e50">v</text>
-
-  <text x="763" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a4a00">ulje</text>
-  <text x="763" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#ffffff">vratilo</text>
-
-  <text x="656" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">L</tspan> = 0,24 m,  δ = 0,60 mm,  μ = 0,36 Pa·s</text>
-  <text x="656" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">v</tspan> = 1,6 m/s,  <tspan font-style="italic">A</tspan> = π<tspan font-style="italic">DL</tspan>,  <tspan font-style="italic">F</tspan> = τ<tspan font-style="italic">A</tspan></text>
-
-  <text x="36" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z4</text>
-  <text x="60" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Dvije kapilare u etanolu — h ∝ 1/d</text>
-
-  <text x="56" y="614" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#0d47a1">etanol</text>
-
-  <text x="40" y="678" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 0,6 mm,  <tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 1,2 mm,  θ = 18°</text>
-  <text x="40" y="694" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">h</tspan> = 4σcosθ/(ρg<tspan font-style="italic">d</tspan>)</text>
-
-  <text x="345" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z5</text>
-  <text x="369" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Kapilara + kapljica raspršivača</text>
-
-  <text x="345" y="676" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">d</tspan> = 0,9 mm</text>
-  <text x="345" y="692" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">h</tspan> = 4σcosθ/(ρg<tspan font-style="italic">d</tspan>)</text>
-
-  <text x="565" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1565c0">Δp = 4σ/<tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">k</tspan></text>
-
-  <text x="500" y="676" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">σ=0,072 N/m, θ=10°</text>
-  <text x="500" y="692" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Δp = 4σ/<tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">k</tspan></text>
-
-  <text x="654" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Z6</text>
-  <text x="678" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#ffffff">Kapilarna igla — potrebni pretlak <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M</tspan></text>
-
-  <text x="730" y="588" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">M</tspan></text>
-  <text x="685" y="588" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(zrak)</text>
-
-  <text x="691" y="640" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#0d47a1">voda</text>
-
-  <text x="836" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">izlaz</text>
-  <text x="836" y="614" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">razina</text>
-
-  <text x="742" y="452" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#1a2530"><tspan font-style="italic">d</tspan>=0,5 mm</text>
-
-  <text x="656" y="686" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">cap</tspan>=4σ/(ρg<tspan font-style="italic">d</tspan>),  Δp=4σ/<tspan font-style="italic">D</tspan>,  <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M</tspan>=ρg(<tspan font-style="italic">H</tspan>−<tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">cap</tspan>)+Δp</text>
-
-<text x="44" y="225" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#b7600c">δ</text>
-
-  <text x="335" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#b7600c">δ</text>
-
-  <text x="763" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">D</tspan> = 70 mm</text>
-
-  <text x="864" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b7600c">δ</text>
-
-  <text x="174" y="546" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-
-  <text x="115" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-
-  <text x="292" y="566" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
-
-  <text x="239" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
-
-  <text x="454" y="565" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b7600c"><tspan font-style="italic">h</tspan></text>
-
-  <text x="411" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">d</tspan></text>
-
-  <text x="565" y="638" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">k</tspan> = 1,2 mm</text>
-
-  <text x="900" y="522" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b7600c"><tspan font-style="italic">H</tspan></text>
-  <text x="900.0" y="538.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 42 mm</text>
-
-  <text x="772" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" fill="#b7600c"><tspan font-style="italic">D</tspan>=1,8 mm</text>
-
-  </svg>
+  <g id="u02vs_z1" font-family="'Segoe UI',Arial,sans-serif">
+    <rect x="22" y="28" width="302" height="332" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
+    <rect x="22" y="28" width="302" height="26" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="10" />
+    <rect x="22" y="44" width="302" height="10" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="0" />
+    <text x="36" y="46" font-size="13" fill="#ffffff" text-anchor="start" font-weight="700">Z1</text>
+    <text x="60" y="46" font-size="12.5" fill="#ffffff" text-anchor="start">Ploča: brzina i sile</text>
+    <rect x="80" y="156" width="206" height="100" fill="url(#u02vs_voda)" stroke="none" stroke-width="1" rx="0" />
+    <rect x="80" y="140" width="206" height="16" fill="#909fa8" stroke="#3a4a56" stroke-width="1.5" rx="0" />
+    <rect x="80" y="256" width="206" height="14" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <line x1="111" y1="156" x2="111" y2="256" stroke="#7a8a96" stroke-width="1" stroke-dasharray="3,3" />
+    <line x1="111" y1="256" x2="206" y2="156" stroke="#2c3e50" stroke-width="1.3" stroke-dasharray="5,3" />
+    <line x1="111" y1="236" x2="130.0" y2="236" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#u02vs_vk)" />
+    <line x1="111" y1="216" x2="149.0" y2="216" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#u02vs_vk)" />
+    <line x1="111" y1="196" x2="168.0" y2="196" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#u02vs_vk)" />
+    <line x1="111" y1="176" x2="187.0" y2="176" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#u02vs_vk)" />
+    <text x="211" y="222" font-size="12" fill="#2c3e50" text-anchor="middle">u(y)</text>
+    <text x="179" y="286" font-size="10" fill="#3a4a56" text-anchor="middle">nepomična stijenka: u = 0</text>
+    <line x1="136" y1="104" x2="218" y2="104" stroke="#2c3e50" stroke-width="2" marker-end="url(#u02vs_vk)" />
+    <text x="228" y="108" font-size="13" fill="#2c3e50" text-anchor="middle">v</text>
+    <line x1="246" y1="148" x2="303" y2="148" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u02vs_fR)" />
+    <text x="299" y="133" font-size="13" fill="#c0392b" text-anchor="middle">F</text>
+    <line x1="148" y1="156" x2="91" y2="156" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u02vs_fG)" />
+    <text x="120" y="181" font-size="12" fill="#1e8449" text-anchor="middle">Fᵥ</text>
+    <text x="215" y="152" font-size="11" fill="#ffffff" text-anchor="middle">A</text>
+    <line x1="62" y1="156" x2="62" y2="256" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="57" y1="156" x2="67" y2="156" stroke="#b7600c" stroke-width="1" />
+    <line x1="57" y1="256" x2="67" y2="256" stroke="#b7600c" stroke-width="1" />
+    <text x="45" y="210.0" font-size="12" fill="#b7600c" text-anchor="middle">δ</text>
+    <line x1="66" y1="156" x2="78" y2="156" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="66" y1="256" x2="78" y2="256" stroke="#b7600c" stroke-width="0.8" />
+    <text x="39" y="308" font-size="11" fill="#3a4a56" text-anchor="start">Sile su prikazane na pokretnoj ploči.</text>
+    <text x="39" y="325" font-size="11" fill="#3a4a56" text-anchor="start">v = 0,65 m/s; δ = 2,4 mm</text>
+    <text x="39" y="342" font-size="11" fill="#3a4a56" text-anchor="start">A = 0,22 m²; μ = 0,84 Pa·s</text>
+  </g>
+  <g id="u02vs_z2" font-family="'Segoe UI',Arial,sans-serif">
+    <rect x="331" y="28" width="302" height="332" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
+    <rect x="331" y="28" width="302" height="26" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="10" />
+    <rect x="331" y="44" width="302" height="10" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="0" />
+    <text x="345" y="46" font-size="13" fill="#ffffff" text-anchor="start" font-weight="700">Z2</text>
+    <text x="369" y="46" font-size="12.5" fill="#ffffff" text-anchor="start">Kapljica i sapunasti mjehur</text>
+    <circle cx="411" cy="185" r="46" fill="url(#u02vs_kap)" stroke="#1565c0" stroke-width="2" />
+    <circle cx="552" cy="185" r="46" fill="url(#u02vs_voda)" stroke="#1565c0" stroke-width="2" />
+    <circle cx="552" cy="185" r="40" fill="#fbfdff" stroke="#1565c0" stroke-width="1.4" />
+    <text x="411" y="98" font-size="12" fill="#3a4a56" text-anchor="middle">kapljica</text>
+    <text x="552" y="98" font-size="12" fill="#3a4a56" text-anchor="middle">sapunasti mjehur</text>
+    <text x="411" y="117" font-size="11" fill="#3a4a56" text-anchor="middle">jedna međupovršina</text>
+    <text x="552" y="117" font-size="11" fill="#3a4a56" text-anchor="middle">dvije međupovršine</text>
+    <text x="411" y="179" font-size="11" fill="#3a4a56" text-anchor="middle">tekućina</text>
+    <text x="411" y="196" font-size="12" fill="#1565c0" text-anchor="middle">pᵤₙ</text>
+    <text x="552" y="179" font-size="11" fill="#3a4a56" text-anchor="middle">zrak</text>
+    <text x="552" y="196" font-size="12" fill="#1565c0" text-anchor="middle">pᵤₙ</text>
+    <text x="480" y="272" font-size="11" fill="#1565c0" text-anchor="middle">okolni zrak: pᵥₐₙ</text>
+    <line x1="365" y1="243" x2="457" y2="243" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="365" y1="237" x2="365" y2="249" stroke="#b7600c" stroke-width="1" />
+    <line x1="457" y1="237" x2="457" y2="249" stroke="#b7600c" stroke-width="1" />
+    <text x="411.0" y="262" font-size="12" fill="#b7600c" text-anchor="middle">d</text>
+    <line x1="506" y1="243" x2="598" y2="243" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="506" y1="237" x2="506" y2="249" stroke="#b7600c" stroke-width="1" />
+    <line x1="598" y1="237" x2="598" y2="249" stroke="#b7600c" stroke-width="1" />
+    <text x="552.0" y="262" font-size="12" fill="#b7600c" text-anchor="middle">d</text>
+    <text x="349" y="307" font-size="11" fill="#3a4a56" text-anchor="start">d = 1,20 mm; σ = 0,030 N/m</text>
+    <text x="349" y="325" font-size="11" fill="#3a4a56" text-anchor="start">Δp = pᵤₙ − pᵥₐₙ; tlak nije vektor.</text>
+    <text x="349" y="343" font-size="11" fill="#3a4a56" text-anchor="start">Debljina tekućeg filma je uvećana.</text>
+  </g>
+  <g id="u02vs_z3" font-family="'Segoe UI',Arial,sans-serif">
+    <rect x="640" y="28" width="302" height="332" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
+    <rect x="640" y="28" width="302" height="26" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="10" />
+    <rect x="640" y="44" width="302" height="10" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="0" />
+    <text x="654" y="46" font-size="13" fill="#ffffff" text-anchor="start" font-weight="700">Z3</text>
+    <text x="678" y="46" font-size="12.5" fill="#ffffff" text-anchor="start">Dva procjepa, dva otpora</text>
+    <rect x="682" y="102" width="218" height="12" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="682" y="114" width="218" height="50" fill="url(#u02vs_ulje)" stroke="none" stroke-width="1" rx="0" />
+    <rect x="682" y="164" width="218" height="16" fill="#909fa8" stroke="#3a4a56" stroke-width="1.5" rx="0" />
+    <rect x="682" y="180" width="218" height="100" fill="url(#u02vs_ulje)" stroke="none" stroke-width="1" rx="0" />
+    <rect x="682" y="280" width="218" height="12" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <text x="791" y="96" font-size="10" fill="#3a4a56" text-anchor="middle">nepomična stijenka: u = 0</text>
+    <text x="791" y="306" font-size="10" fill="#3a4a56" text-anchor="middle">nepomična stijenka: u = 0</text>
+    <line x1="805" y1="114" x2="862" y2="164" stroke="#2c3e50" stroke-width="1.2" stroke-dasharray="4,3" />
+    <line x1="862" y1="180" x2="805" y2="280" stroke="#2c3e50" stroke-width="1.2" stroke-dasharray="4,3" />
+    <line x1="805" y1="129" x2="822.1" y2="129" stroke="#2c3e50" stroke-width="1.4" marker-end="url(#u02vs_vk)" />
+    <line x1="805" y1="149" x2="844.9" y2="149" stroke="#2c3e50" stroke-width="1.4" marker-end="url(#u02vs_vk)" />
+    <line x1="805" y1="204" x2="848.32" y2="204" stroke="#2c3e50" stroke-width="1.4" marker-end="url(#u02vs_vk)" />
+    <line x1="805" y1="230" x2="833.5" y2="230" stroke="#2c3e50" stroke-width="1.4" marker-end="url(#u02vs_vk)" />
+    <line x1="805" y1="256" x2="818.68" y2="256" stroke="#2c3e50" stroke-width="1.4" marker-end="url(#u02vs_vk)" />
+    <line x1="772" y1="164" x2="724" y2="164" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u02vs_fG)" />
+    <text x="742" y="151" font-size="12" fill="#1e8449" text-anchor="middle">F₁</text>
+    <line x1="772" y1="180" x2="748" y2="180" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u02vs_fG)" />
+    <text x="744" y="202" font-size="12" fill="#1e8449" text-anchor="middle">F₂</text>
+    <line x1="772" y1="74" x2="854" y2="74" stroke="#2c3e50" stroke-width="2" marker-end="url(#u02vs_vk)" />
+    <text x="865" y="78" font-size="13" fill="#2c3e50" text-anchor="middle">v</text>
+    <line x1="858" y1="172" x2="930" y2="172" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u02vs_fR)" />
+    <text x="919" y="157" font-size="12" fill="#c0392b" text-anchor="middle">F</text>
+    <line x1="666" y1="114" x2="666" y2="164" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="661" y1="114" x2="671" y2="114" stroke="#b7600c" stroke-width="1" />
+    <line x1="661" y1="164" x2="671" y2="164" stroke="#b7600c" stroke-width="1" />
+    <text x="654" y="143.0" font-size="12" fill="#b7600c" text-anchor="middle">δ₁</text>
+    <line x1="918" y1="180" x2="918" y2="280" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="913" y1="180" x2="923" y2="180" stroke="#b7600c" stroke-width="1" />
+    <line x1="913" y1="280" x2="923" y2="280" stroke="#b7600c" stroke-width="1" />
+    <text x="931" y="234.0" font-size="12" fill="#b7600c" text-anchor="middle">δ₂</text>
+    <text x="654" y="326" font-size="11" fill="#3a4a56" text-anchor="start">δ₁ = 1 mm; δ₂ = 2 mm; v = 0,30 m/s</text>
+    <text x="654" y="344" font-size="11" fill="#3a4a56" text-anchor="start">F₁ i F₂: sile ulja na pokretnu ploču.</text>
+  </g>
+  <g id="u02vs_z4" font-family="'Segoe UI',Arial,sans-serif">
+    <rect x="22" y="370" width="302" height="332" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
+    <rect x="22" y="370" width="302" height="26" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="10" />
+    <rect x="22" y="386" width="302" height="10" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="0" />
+    <text x="36" y="388" font-size="13" fill="#ffffff" text-anchor="start" font-weight="700">Z4</text>
+    <text x="60" y="388" font-size="12.5" fill="#ffffff" text-anchor="start">Kapilare otvorene na oba kraja</text>
+    <rect x="40" y="580" width="266" height="70" fill="url(#u02vs_voda)" stroke="none" stroke-width="1" rx="0" />
+    <rect x="34" y="565" width="6" height="91" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="306" y="565" width="6" height="91" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="40" y="650" width="266" height="6" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <line x1="40" y1="580" x2="101" y2="580" stroke="#1565c0" stroke-width="1.6" />
+    <line x1="129" y1="580" x2="223" y2="580" stroke="#1565c0" stroke-width="1.6" />
+    <line x1="267" y1="580" x2="306" y2="580" stroke="#1565c0" stroke-width="1.6" />
+    <rect x="107" y="442" width="16" height="138" fill="#fbfdff" stroke="none" stroke-width="1" rx="0" />
+    <path d="M107,484 Q115,496 123,484 V628 H107 Z" fill="url(#u02vs_voda)" stroke="none" stroke-width="1.4" />
+    <rect x="101" y="442" width="6" height="186" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="123" y="442" width="6" height="186" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <path d="M107,484 Q115,496 123,484" fill="none" stroke="#1565c0" stroke-width="1.5" />
+    <line x1="107" y1="428" x2="123" y2="428" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="107" y1="422" x2="107" y2="434" stroke="#b7600c" stroke-width="1" />
+    <line x1="123" y1="422" x2="123" y2="434" stroke="#b7600c" stroke-width="1" />
+    <text x="115.0" y="447" font-size="12" fill="#b7600c" text-anchor="middle">d₁</text>
+    <rect x="229" y="442" width="32" height="138" fill="#fbfdff" stroke="none" stroke-width="1" rx="0" />
+    <path d="M229,529 Q245,541 261,529 V628 H229 Z" fill="url(#u02vs_voda)" stroke="none" stroke-width="1.4" />
+    <rect x="223" y="442" width="6" height="186" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="261" y="442" width="6" height="186" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <path d="M229,529 Q245,541 261,529" fill="none" stroke="#1565c0" stroke-width="1.5" />
+    <line x1="229" y1="428" x2="261" y2="428" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="229" y1="422" x2="229" y2="434" stroke="#b7600c" stroke-width="1" />
+    <line x1="261" y1="422" x2="261" y2="434" stroke="#b7600c" stroke-width="1" />
+    <text x="245.0" y="447" font-size="12" fill="#b7600c" text-anchor="middle">d₂</text>
+    <line x1="165" y1="490" x2="165" y2="580" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="160" y1="490" x2="170" y2="490" stroke="#b7600c" stroke-width="1" />
+    <line x1="160" y1="580" x2="170" y2="580" stroke="#b7600c" stroke-width="1" />
+    <text x="180" y="539.0" font-size="12" fill="#b7600c" text-anchor="middle">h₁</text>
+    <line x1="285" y1="535" x2="285" y2="580" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="280" y1="535" x2="290" y2="535" stroke="#b7600c" stroke-width="1" />
+    <line x1="280" y1="580" x2="290" y2="580" stroke="#b7600c" stroke-width="1" />
+    <text x="298" y="561.5" font-size="12" fill="#b7600c" text-anchor="middle">h₂</text>
+    <line x1="124" y1="490" x2="160" y2="490" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="129" y1="580" x2="160" y2="580" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="262" y1="535" x2="280" y2="535" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="267" y1="580" x2="280" y2="580" stroke="#b7600c" stroke-width="0.8" />
+    <text x="178" y="607" font-size="11" fill="#3a4a56" text-anchor="middle">otvoreni ulazi</text>
+    <line x1="157" y1="613" x2="115" y2="633" stroke="#7a8a96" stroke-width="0.9" />
+    <line x1="201" y1="613" x2="245" y2="633" stroke="#7a8a96" stroke-width="0.9" />
+    <text x="43" y="676" font-size="11" fill="#3a4a56" text-anchor="start">d₁ = 0,6 mm; d₂ = 1,2 mm; θ = 18°</text>
+    <text x="43" y="694" font-size="11" fill="#3a4a56" text-anchor="start">Etanol ulazi ispod uronjenih rubova cijevi.</text>
+  </g>
+  <g id="u02vs_z5" font-family="'Segoe UI',Arial,sans-serif">
+    <rect x="331" y="370" width="302" height="332" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
+    <rect x="331" y="370" width="302" height="26" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="10" />
+    <rect x="331" y="386" width="302" height="10" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="0" />
+    <text x="345" y="388" font-size="13" fill="#ffffff" text-anchor="start" font-weight="700">Z5</text>
+    <text x="369" y="388" font-size="12.5" fill="#ffffff" text-anchor="start">Mjerenje vučne sile</text>
+    <rect x="373" y="526" width="176" height="90" fill="url(#u02vs_ulje)" stroke="none" stroke-width="1" rx="0" />
+    <rect x="373" y="510" width="176" height="16" fill="#909fa8" stroke="#3a4a56" stroke-width="1.5" rx="0" />
+    <rect x="373" y="616" width="176" height="14" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <text x="461" y="523" font-size="11" fill="#ffffff" text-anchor="middle">S</text>
+    <line x1="410" y1="616" x2="492" y2="526" stroke="#2c3e50" stroke-width="1.2" stroke-dasharray="4,3" />
+    <line x1="410" y1="593" x2="430.9555555555556" y2="593" stroke="#2c3e50" stroke-width="1.4" marker-end="url(#u02vs_vk)" />
+    <line x1="410" y1="570" x2="451.9111111111111" y2="570" stroke="#2c3e50" stroke-width="1.4" marker-end="url(#u02vs_vk)" />
+    <line x1="410" y1="547" x2="472.8666666666667" y2="547" stroke="#2c3e50" stroke-width="1.4" marker-end="url(#u02vs_vk)" />
+    <line x1="406" y1="472" x2="484" y2="472" stroke="#2c3e50" stroke-width="2" marker-end="url(#u02vs_vk)" />
+    <text x="496" y="476" font-size="13" fill="#2c3e50" text-anchor="middle">v</text>
+    <line x1="549" y1="518" x2="563" y2="518" stroke="#3a4a56" stroke-width="2" />
+    <circle cx="575" cy="518" r="12" fill="#fbfdff" stroke="#3a4a56" stroke-width="1.5" />
+    <line x1="575" y1="518" x2="581" y2="511" stroke="#3a4a56" stroke-width="1.3" />
+    <line x1="587" y1="518" x2="619" y2="518" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u02vs_fR)" />
+    <text x="605" y="503" font-size="13" fill="#c0392b" text-anchor="middle">F</text>
+    <text x="575" y="545" font-size="10" fill="#3a4a56" text-anchor="middle">dinamometar</text>
+    <line x1="432" y1="526" x2="400" y2="526" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u02vs_fG)" />
+    <text x="389" y="552" font-size="12" fill="#1e8449" text-anchor="middle">Fᵥ</text>
+    <line x1="356" y1="526" x2="356" y2="616" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="351" y1="526" x2="361" y2="526" stroke="#b7600c" stroke-width="1" />
+    <line x1="351" y1="616" x2="361" y2="616" stroke="#b7600c" stroke-width="1" />
+    <text x="343" y="575.0" font-size="12" fill="#b7600c" text-anchor="middle">δ</text>
+    <text x="460" y="644" font-size="10" fill="#3a4a56" text-anchor="middle">nepomična stijenka: u = 0</text>
+    <text x="347" y="671" font-size="11" fill="#3a4a56" text-anchor="start">S = 0,010 m²; δ = 1 mm; uzorci A i B</text>
+    <text x="347" y="689" font-size="11" fill="#3a4a56" text-anchor="start">Samo donja strana ploče dodiruje uzorak.</text>
+  </g>
+  <g id="u02vs_z6" font-family="'Segoe UI',Arial,sans-serif">
+    <rect x="640" y="370" width="302" height="332" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
+    <rect x="640" y="370" width="302" height="26" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="10" />
+    <rect x="640" y="386" width="302" height="10" fill="#1565c0" stroke="#1565c0" stroke-width="0" rx="0" />
+    <text x="654" y="388" font-size="13" fill="#ffffff" text-anchor="start" font-weight="700">Z6</text>
+    <text x="678" y="388" font-size="12.5" fill="#ffffff" text-anchor="start">Neprekinuta voda do kapljice</text>
+    <rect x="670" y="603" width="178" height="59" fill="url(#u02vs_voda)" stroke="none" stroke-width="1" rx="0" />
+    <rect x="664" y="560" width="6" height="108" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="848" y="560" width="6" height="108" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="670" y="662" width="178" height="6" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="670" y="560" width="122" height="7" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="816" y="560" width="32" height="7" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="792" y="451" width="6" height="185" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <rect x="810" y="451" width="6" height="185" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1" rx="0" />
+    <path d="M798,451 A18,18 0 1 1 810,451 L810,636 H798 Z" fill="url(#u02vs_voda)" stroke="none" stroke-width="1.4" />
+    <path d="M798,451 A18,18 0 1 1 810,451" fill="none" stroke="#1565c0" stroke-width="1.7" />
+    <line x1="670" y1="603" x2="792" y2="603" stroke="#1565c0" stroke-width="1.6" />
+    <line x1="816" y1="603" x2="848" y2="603" stroke="#1565c0" stroke-width="1.6" />
+    <text x="730" y="585" font-size="11" fill="#1565c0" text-anchor="middle">zrak: p₀ + pₘ</text>
+    <text x="876" y="476" font-size="11" fill="#1565c0" text-anchor="middle">zrak: p₀</text>
+    <text x="715" y="638" font-size="11" fill="#1565c0" text-anchor="middle">voda</text>
+    <text x="704" y="474" font-size="11" fill="#3a4a56" text-anchor="middle">puna igla</text>
+    <text x="704" y="490" font-size="11" fill="#3a4a56" text-anchor="middle">bez meniskusa</text>
+    <line x1="744" y1="480" x2="802" y2="489" stroke="#7a8a96" stroke-width="0.8" />
+    <text x="711" y="520" font-size="10" fill="#3a4a56" text-anchor="middle">zabrtvljen prolaz</text>
+    <line x1="754" y1="523" x2="792" y2="563" stroke="#7a8a96" stroke-width="0.8" />
+    <text x="759" y="651" font-size="10" fill="#3a4a56" text-anchor="middle">otvoren, uronjen ulaz</text>
+    <line x1="804" y1="638" x2="792" y2="641" stroke="#7a8a96" stroke-width="0.8" />
+    <line x1="899" y1="451" x2="899" y2="603" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="894" y1="451" x2="904" y2="451" stroke="#b7600c" stroke-width="1" />
+    <line x1="894" y1="603" x2="904" y2="603" stroke="#b7600c" stroke-width="1" />
+    <text x="916" y="531.0" font-size="12" fill="#b7600c" text-anchor="middle">H</text>
+    <text x="917" y="548" font-size="10" fill="#b7600c" text-anchor="middle">42 mm</text>
+    <line x1="819" y1="451" x2="905" y2="451" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,3" />
+    <line x1="855" y1="603" x2="905" y2="603" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,3" />
+    <line x1="766" y1="416" x2="766" y2="452" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02vs_dimL)" marker-end="url(#u02vs_dim)" />
+    <line x1="761" y1="416" x2="771" y2="416" stroke="#b7600c" stroke-width="1" />
+    <line x1="761" y1="452" x2="771" y2="452" stroke="#b7600c" stroke-width="1" />
+    <text x="751" y="438.0" font-size="12" fill="#b7600c" text-anchor="middle">D</text>
+    <text x="845" y="507" font-size="12" fill="#b7600c" text-anchor="middle">d</text>
+    <line x1="836" y1="505" x2="804" y2="513" stroke="#b7600c" stroke-width="0.8" />
+    <text x="656" y="686" font-size="11" fill="#3a4a56" text-anchor="start">Prikaz stanja s kapljicom; nema protoka.</text>
+  </g>
+</svg>
