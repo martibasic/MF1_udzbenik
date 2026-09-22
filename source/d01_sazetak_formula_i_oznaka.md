@@ -13,6 +13,7 @@ Sažetak služi za brzo pronalaženje oznaka, jedinica i radnih relacija. Prije 
 | $\nu$ | kinematička viskoznost, $\mu/\rho$ | m$^2$/s |
 | $\sigma$ | površinska napetost | N/m |
 | $p$ | tlak | Pa |
+| $K$ (pog. 1) | volumni modul elastičnosti tekućine, uz zadane toplinske uvjete | Pa |
 | $\Delta p$ | razlika tlakova ili tlakovni skok | Pa |
 | $p_0$ | stagnacijski tlak ili poznati referentni tlak | Pa |
 | $p_M$ | manometarski (pretlak) tlak, $p_M = p_{aps} - p_{atm}$ | Pa |
@@ -62,6 +63,7 @@ Sažetak služi za brzo pronalaženje oznaka, jedinica i radnih relacija. Prije 
 | $p = F_n / A$ (jednolik tlak na ravnoj plohi) | $F = 100\,\text{N}$ na $A = 10\,\text{cm}^2$ → $p = 10^5\,\text{Pa} = 100\,\text{kPa}$. |
 | $\Delta p = F_1/A_1 = F_2/A_2$ (Pascalova preša) | $F_1 = 50\,\text{N}$ na $A_1 = 5\,\text{cm}^2$ daje istu $\Delta p$ kao $F_2 = 500\,\text{N}$ na $A_2 = 50\,\text{cm}^2$. |
 | $A_p s_p = \sum_i A_i s_i$ (Pascalova bilanca pomaka) | Malim klipom $A_1 = 1\,\text{cm}^2$ pomaknutim za $s_1 = 10\,\text{cm}$ veliki klip $A_2 = 10\,\text{cm}^2$ pomakne se za $s_2 = 1\,\text{cm}$. |
+| $\Delta V_c\approx V_0\Delta p/K$, $As\approx\Delta V_p-\Delta V_c$ | Z4 u pog. 1: zatvorena količina tekućine od 250 cm³, porast tlaka 0,40 MPa i $K=1{,}00$ GPa daju smanjenje volumena 0,100 cm³. To je 2 % istisnutih 5,00 cm³. Stalna temperatura, kruti vodovi, bez zraka i propuštanja. |
 | $\tau = \mu\,dv/dy$ | Maslinovo ulje $\mu \approx 0{,}08\,\text{Pa s}$, $dv/dy = 100\,\text{s}^{-1}$ → $\tau = 8\,\text{Pa}$. |
 | $\nu = \mu / \rho$ | Voda na $20\,^\circ\text{C}$: $\nu \approx 10^{-6}\,\text{m}^2/\text{s}$; zrak: $\nu \approx 1{,}5 \cdot 10^{-5}\,\text{m}^2/\text{s}$. |
 | $h = 4\sigma\cos\theta / (\rho g d)$ | Voda u staklenoj kapilari $d = 1\,\text{mm}$, $\theta \approx 0$: $h \approx 30\,\text{mm}$. |

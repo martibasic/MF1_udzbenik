@@ -1,250 +1,295 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" role="img" aria-labelledby="u01vs_title u01vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u01vs_title">Skice uz zadatke Z1–Z6</title>
-  <desc id="u01vs_desc">Šest panela u dva reda. Z1 prikazuje istu otvorenu posudu u tri stanja na vagi. Z2 i Z3: ulazna sila i pomak malog klipa prema dolje, sila ulja na veliki klip i njegov pomak prema gore. Komore su spojene otvorenim donjim vodom, a klipovi brtve uz stijenke. Z4: otvoreni bočni dovod ulja, početni i pomaknuti položaj klipa unutar cilindra s otvorenom zračnom stranom; kota s mjeri pomak iste plohe klipa. Z5: tlačni hod pumpe prema dolje, podizanje radnog klipa prema gore i vanjsko opterećenje prema dolje; ventili nisu prikazani. Z6: tri jednaka cilindra pod mehanički vođenim stolom, opterećenje stola prema dolje i zajednički pomak prema gore. Plavo je ulje, šrafura kruta stijenka; sile su crvene ili zelene, smjerovi pomaka tamni, kote smeđe. Geometrija i duljine strelica nisu u mjerilu.</desc>
-  <!-- Zadržani raspored, tipografija, šrafure i plava konvencija hidraulične tekućine iz izdanja 8622219 prema zahtjevu korisnice. -->
-  <defs>
-    <marker id="u01vs_aR" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#c0392b" />
-    </marker>
-    <marker id="u01vs_aG" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1e8449" />
-    </marker>
-    <linearGradient id="u01vs_fluid" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
-    <linearGradient id="u01vs_piston" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#909fa8" />
-      <stop offset="100%" stop-color="#5d6d7e" />
-    </linearGradient>
-    <pattern id="u01vs_hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="5" stroke="#7a8a96" stroke-width="1.2" />
-    </pattern>
-    <marker id="u01vs_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
-    </marker>
-    <marker id="u01vs_dim" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L6,3 L0,6 Z" fill="#b7600c" />
-    </marker>
-    <marker id="u01vs_aK" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 Z" fill="#2c3e50" />
-    </marker>
-  </defs>
-  <rect width="980" height="660" fill="#ffffff" />
-  <g font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56">
-    <g id="u01vs_z1" transform="translate(25 25)">
-      <rect x="0" y="0" width="300" height="290" fill="#fafcff" stroke="#c8d6e4" stroke-width="1" rx="8" />
-      <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="8" />
-      <rect x="0" y="20" width="300" height="8" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="0" />
-      <text x="150" y="19" fill="#ffffff" font-size="14" text-anchor="middle" font-weight="700">Z1 — Gustoća iz vaganja</text>
-      <path d="M26 78 H30 V169 H78 V78 H82 V174 H26 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <line x1="68" y1="98" x2="78" y2="98" stroke="#7a8a96" stroke-width="1" />
-      <line x1="68" y1="119" x2="78" y2="119" stroke="#7a8a96" stroke-width="1" />
-      <line x1="68" y1="140" x2="78" y2="140" stroke="#7a8a96" stroke-width="1" />
-      <rect x="21" y="174" width="66" height="8" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="18" y="182" width="72" height="40" fill="#909fa8" stroke="#5d6d7e" stroke-width="1" rx="4" />
-      <rect x="25" y="193" width="58" height="21" fill="#fafcff" stroke="#5d6d7e" stroke-width="1" rx="2" />
-      <text x="54" y="208" fill="#3a4a56" font-size="12" text-anchor="middle">42,6 g</text>
-      <text x="54" y="62" fill="#3a4a56" font-size="12" text-anchor="middle">prazna</text>
-      <text x="54" y="246" fill="#3a4a56" font-size="14" text-anchor="middle">m₀</text>
-      <rect x="126" y="138" width="48" height="31" fill="url(#u01vs_fluid)" stroke="none" stroke-width="1" rx="0" />
-      <line x1="126" y1="138" x2="174" y2="138" stroke="#1565c0" stroke-width="1.4" />
-      <path d="M122 78 H126 V169 H174 V78 H178 V174 H122 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <line x1="164" y1="98" x2="174" y2="98" stroke="#7a8a96" stroke-width="1" />
-      <line x1="164" y1="119" x2="174" y2="119" stroke="#7a8a96" stroke-width="1" />
-      <line x1="164" y1="140" x2="174" y2="140" stroke="#7a8a96" stroke-width="1" />
-      <rect x="117" y="174" width="66" height="8" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="114" y="182" width="72" height="40" fill="#909fa8" stroke="#5d6d7e" stroke-width="1" rx="4" />
-      <rect x="121" y="193" width="58" height="21" fill="#fafcff" stroke="#5d6d7e" stroke-width="1" rx="2" />
-      <text x="150" y="208" fill="#3a4a56" font-size="12" text-anchor="middle">85,5 g</text>
-      <text x="150" y="62" fill="#3a4a56" font-size="12" text-anchor="middle">50,0 cm³</text>
-      <text x="150" y="246" fill="#3a4a56" font-size="14" text-anchor="middle">m₁</text>
-      <rect x="222" y="107" width="48" height="62" fill="url(#u01vs_fluid)" stroke="none" stroke-width="1" rx="0" />
-      <line x1="222" y1="107" x2="270" y2="107" stroke="#1565c0" stroke-width="1.4" />
-      <path d="M218 78 H222 V169 H270 V78 H274 V174 H218 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <line x1="260" y1="98" x2="270" y2="98" stroke="#7a8a96" stroke-width="1" />
-      <line x1="260" y1="119" x2="270" y2="119" stroke="#7a8a96" stroke-width="1" />
-      <line x1="260" y1="140" x2="270" y2="140" stroke="#7a8a96" stroke-width="1" />
-      <rect x="213" y="174" width="66" height="8" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="210" y="182" width="72" height="40" fill="#909fa8" stroke="#5d6d7e" stroke-width="1" rx="4" />
-      <rect x="217" y="193" width="58" height="21" fill="#fafcff" stroke="#5d6d7e" stroke-width="1" rx="2" />
-      <text x="246" y="208" fill="#3a4a56" font-size="12" text-anchor="middle">128,7 g</text>
-      <text x="246" y="62" fill="#3a4a56" font-size="12" text-anchor="middle">100,0 cm³</text>
-      <text x="246" y="246" fill="#3a4a56" font-size="14" text-anchor="middle">m₂</text>
-      <text x="150" y="276" fill="#3a4a56" font-size="11" text-anchor="middle">Vaga očitava posudu i ulje zajedno.</text>
-    </g>
-    <g id="u01vs_z2" transform="translate(340 25)">
-      <rect x="0" y="0" width="300" height="290" fill="#fafcff" stroke="#c8d6e4" stroke-width="1" rx="8" />
-      <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="8" />
-      <rect x="0" y="20" width="300" height="8" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="0" />
-      <text x="150" y="19" fill="#ffffff" font-size="14" text-anchor="middle" font-weight="700">Z2 — Servisna preša</text>
-      <path d="M40 152 H76 V226 H208 V152 H268 V240 H40 Z" fill="url(#u01vs_fluid)" stroke="none" stroke-width="1.2" />
-      <path d="M32 104 H40 V240 H268 V104 H276 V250 H32 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <path d="M76 104 H84 V218 H200 V104 H208 V226 H76 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <rect x="40" y="138" width="36" height="14" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="53.0" y="74" width="10" height="64" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="40" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="73" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="208" y="138" width="60" height="14" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="233.0" y="74" width="10" height="64" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="208" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="265" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <line x1="58" y1="44" x2="58" y2="72" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u01vs_aR)" />
-      <line x1="18" y1="162" x2="18" y2="192" stroke="#2c3e50" stroke-width="1.8" marker-end="url(#u01vs_aK)" />
-      <line x1="287" y1="192" x2="287" y2="162" stroke="#2c3e50" stroke-width="1.8" marker-end="url(#u01vs_aK)" />
-      <text x="18" y="150" fill="#2c3e50" font-size="11" text-anchor="middle">s₁</text>
-      <text x="285" y="150" fill="#2c3e50" font-size="11" text-anchor="middle">s₂</text>
-      <line x1="238" y1="193" x2="238" y2="154" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u01vs_aG)" />
-      <text x="238" y="212" fill="#1e8449" font-size="12" text-anchor="middle">F₂ = ?</text>
-      <text x="140" y="143" fill="#1e8449" font-size="10" text-anchor="middle">F₂: sila ulja</text>
-      <text x="140" y="157" fill="#1e8449" font-size="10" text-anchor="middle">na veliki klip</text>
-      <text x="78" y="57" fill="#c0392b" font-size="12" text-anchor="start">F₁ = 180 N</text>
-      <text x="58" y="267" fill="#b7600c" font-size="11" text-anchor="middle">d₁ = 28 mm</text>
-      <text x="238" y="267" fill="#b7600c" font-size="11" text-anchor="middle">d₂ = 140 mm</text>
-      <text x="150" y="283" fill="#3a4a56" font-size="11" text-anchor="middle">s₁ = 120 mm; s₂ = ?</text>
-    </g>
-    <g id="u01vs_z3" transform="translate(655 25)">
-      <rect x="0" y="0" width="300" height="290" fill="#fafcff" stroke="#c8d6e4" stroke-width="1" rx="8" />
-      <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="8" />
-      <rect x="0" y="20" width="300" height="8" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="0" />
-      <text x="150" y="19" fill="#ffffff" font-size="14" text-anchor="middle" font-weight="700">Z3 — Provjera proračuna</text>
-      <path d="M40 152 H76 V226 H208 V152 H268 V240 H40 Z" fill="url(#u01vs_fluid)" stroke="none" stroke-width="1.2" />
-      <path d="M32 104 H40 V240 H268 V104 H276 V250 H32 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <path d="M76 104 H84 V218 H200 V104 H208 V226 H76 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <rect x="40" y="138" width="36" height="14" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="53.0" y="74" width="10" height="64" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="40" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="73" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="208" y="138" width="60" height="14" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="233.0" y="74" width="10" height="64" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="208" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="265" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <line x1="58" y1="44" x2="58" y2="72" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u01vs_aR)" />
-      <line x1="18" y1="162" x2="18" y2="192" stroke="#2c3e50" stroke-width="1.8" marker-end="url(#u01vs_aK)" />
-      <line x1="287" y1="192" x2="287" y2="162" stroke="#2c3e50" stroke-width="1.8" marker-end="url(#u01vs_aK)" />
-      <text x="18" y="150" fill="#2c3e50" font-size="11" text-anchor="middle">s₁</text>
-      <text x="285" y="150" fill="#2c3e50" font-size="11" text-anchor="middle">s₂</text>
-      <line x1="238" y1="193" x2="238" y2="154" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u01vs_aG)" />
-      <text x="238" y="212" fill="#1e8449" font-size="12" text-anchor="middle">F₂ = ?</text>
-      <text x="140" y="143" fill="#1e8449" font-size="10" text-anchor="middle">F₂: sila ulja</text>
-      <text x="140" y="157" fill="#1e8449" font-size="10" text-anchor="middle">na veliki klip</text>
-      <text x="78" y="57" fill="#c0392b" font-size="12" text-anchor="start">F₁ = 100 N</text>
-      <text x="58" y="267" fill="#b7600c" font-size="11" text-anchor="middle">d₁ = 20 mm</text>
-      <text x="238" y="267" fill="#b7600c" font-size="11" text-anchor="middle">d₂ = 60 mm</text>
-      <text x="150" y="283" fill="#3a4a56" font-size="11" text-anchor="middle">s₁ = 90 mm; usporedi radove.</text>
-    </g>
-    <g id="u01vs_z4" transform="translate(25 340)">
-      <rect x="0" y="0" width="300" height="290" fill="#fafcff" stroke="#c8d6e4" stroke-width="1" rx="8" />
-      <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="8" />
-      <rect x="0" y="20" width="300" height="8" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="0" />
-      <text x="150" y="19" fill="#ffffff" font-size="14" text-anchor="middle" font-weight="700">Z4 — Mjerni cilindar</text>
-      <path d="M14 154 H60 V130 H204 V200 H60 V176 H14 Z" fill="url(#u01vs_fluid)" stroke="none" stroke-width="1.2" />
-      <path d="M14 148 H52 V122 H264 V130 H60 V154 H14 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <path d="M14 176 H60 V200 H264 V208 H52 V182 H14 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <rect x="204" y="130" width="12" height="70" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="216" y="160" width="64" height="10" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="207" y="130" width="6" height="3" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="207" y="197" width="6" height="3" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <line x1="18" y1="165" x2="87" y2="165" stroke="#1565c0" stroke-width="2.0" marker-end="url(#u01vs_aB)" />
-      <text x="29" y="136" fill="#1565c0" font-size="14" text-anchor="middle">ΔV</text>
-      <line x1="138" y1="131" x2="138" y2="199" stroke="#526979" stroke-width="1.3" stroke-dasharray="5,4" />
-      <line x1="138" y1="91" x2="138" y2="115" stroke="#b7600c" stroke-width="1.4" />
-      <line x1="204" y1="91" x2="204" y2="115" stroke="#b7600c" stroke-width="1.4" />
-      <line x1="140" y1="101" x2="202" y2="101" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u01vs_dim)" marker-end="url(#u01vs_dim)" />
-      <text x="171" y="85" fill="#b7600c" font-size="14" text-anchor="middle">s</text>
-      <text x="178" y="179" fill="#3a4a56" font-size="13" text-anchor="middle">A = ?</text>
-      <line x1="222" y1="104" x2="259" y2="104" stroke="#2c3e50" stroke-width="1.8" marker-end="url(#u01vs_aK)" />
-      <text x="239" y="91" fill="#2c3e50" font-size="10" text-anchor="middle">pomak</text>
-      <text x="245" y="147" fill="#3a4a56" font-size="11" text-anchor="middle">zrak</text>
-      <text x="150" y="53" fill="#3a4a56" font-size="11" text-anchor="middle">Tekuća komora potpuno ispunjena.</text>
-      <text x="108" y="237" fill="#3a4a56" font-size="11" text-anchor="middle">početna ploha klipa</text>
-      <line x1="134" y1="222" x2="138" y2="213" stroke="#7a8a96" stroke-width="1" />
-      <text x="150" y="264" fill="#3a4a56" font-size="11" text-anchor="middle">Mjerenje pomaka pri malom opterećenju.</text>
-      <text x="150" y="281" fill="#3a4a56" font-size="11" text-anchor="middle">Zasebno: blokiran klip, p = 0,40 MPa.</text>
-    </g>
-    <g id="u01vs_z5" transform="translate(340 340)">
-      <rect x="0" y="0" width="300" height="290" fill="#fafcff" stroke="#c8d6e4" stroke-width="1" rx="8" />
-      <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="8" />
-      <rect x="0" y="20" width="300" height="8" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="0" />
-      <text x="150" y="19" fill="#ffffff" font-size="14" text-anchor="middle" font-weight="700">Z5 — Izbor pumpe</text>
-      <path d="M40 152 H76 V226 H208 V152 H268 V240 H40 Z" fill="url(#u01vs_fluid)" stroke="none" stroke-width="1.2" />
-      <path d="M32 104 H40 V240 H268 V104 H276 V250 H32 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <path d="M76 104 H84 V218 H200 V104 H208 V226 H76 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <rect x="40" y="138" width="36" height="14" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="53.0" y="74" width="10" height="64" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="40" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="73" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="208" y="138" width="60" height="14" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="233.0" y="74" width="10" height="64" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="208" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="265" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <line x1="58" y1="44" x2="58" y2="72" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u01vs_aR)" />
-      <line x1="18" y1="162" x2="18" y2="192" stroke="#2c3e50" stroke-width="1.8" marker-end="url(#u01vs_aK)" />
-      <line x1="287" y1="192" x2="287" y2="162" stroke="#2c3e50" stroke-width="1.8" marker-end="url(#u01vs_aK)" />
-      <text x="18" y="150" fill="#2c3e50" font-size="11" text-anchor="middle">sₚ</text>
-      <text x="285" y="150" fill="#2c3e50" font-size="11" text-anchor="middle">s<tspan baseline-shift="sub" font-size="0.75em">L</tspan>
-      </text>
-      <line x1="238" y1="44" x2="238" y2="72" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u01vs_aR)" />
-      <text x="78" y="57" fill="#c0392b" font-size="12" text-anchor="start">Fₚ</text>
-      <text x="218" y="57" fill="#c0392b" font-size="12" text-anchor="end">F<tspan baseline-shift="sub" font-size="0.75em">L</tspan> = 6 kN</text>
-      <text x="150" y="92" fill="#b7600c" font-size="12" text-anchor="middle">dₚ: 8 / 9 / 10 mm</text>
-      <text x="140" y="177" fill="#b7600c" font-size="11" text-anchor="middle">A<tspan baseline-shift="sub" font-size="0.75em">L</tspan> = 30 cm²</text>
-      <line x1="177" y1="174" x2="217" y2="147" stroke="#b7600c" stroke-width="1" />
-      <text x="140" y="199" fill="#b7600c" font-size="11" text-anchor="middle">s<tspan baseline-shift="sub" font-size="0.75em">L</tspan> = 10 mm</text>
-      <text x="150" y="266" fill="#3a4a56" font-size="12" text-anchor="middle">Fₚ ≤ 150 N; Σsₚ ≤ 0,50 m</text>
-      <text x="150" y="282" fill="#3a4a56" font-size="11" text-anchor="middle">Tlačni hod; ventili nisu prikazani.</text>
-    </g>
-    <g id="u01vs_z6" transform="translate(655 340)">
-      <rect x="0" y="0" width="300" height="290" fill="#fafcff" stroke="#c8d6e4" stroke-width="1" rx="8" />
-      <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="8" />
-      <rect x="0" y="20" width="300" height="8" fill="#1565c0" stroke="#1565c0" stroke-width="1" rx="0" />
-      <text x="150" y="19" fill="#ffffff" font-size="14" text-anchor="middle" font-weight="700">Z6 — Stol s tri cilindra</text>
-      <path d="M24 152 H62 V226 H99 V152 H137 V226 H174 V152 H212 V226 H250 V152 H274 V240 H24 Z" fill="url(#u01vs_fluid)" stroke="none" stroke-width="1.2" />
-      <path d="M16 104 H24 V240 H274 V104 H282 V250 H16 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <path d="M62 104 H70 V218 H91 V104 H99 V226 H62 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <path d="M137 104 H145 V218 H166 V104 H174 V226 H137 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <path d="M212 104 H220 V218 H242 V104 H250 V226 H212 Z" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1.2" />
-      <rect x="24" y="138" width="38" height="14" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="38.0" y="98" width="10" height="40" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="24" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="59" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <text x="43.0" y="181" fill="#b7600c" font-size="12" text-anchor="middle">A<tspan baseline-shift="sub" font-size="0.75em">L</tspan>
-      </text>
-      <rect x="99" y="138" width="38" height="14" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="113.0" y="98" width="10" height="40" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="99" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="134" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <text x="118.0" y="181" fill="#b7600c" font-size="12" text-anchor="middle">A<tspan baseline-shift="sub" font-size="0.75em">L</tspan>
-      </text>
-      <rect x="174" y="138" width="38" height="14" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="188.0" y="98" width="10" height="40" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="174" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="209" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <text x="193.0" y="181" fill="#b7600c" font-size="12" text-anchor="middle">A<tspan baseline-shift="sub" font-size="0.75em">L</tspan>
-      </text>
-      <rect x="250" y="138" width="24" height="14" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="257.0" y="93" width="10" height="45" fill="#9aaab4" stroke="#5b6770" stroke-width="1" rx="0" />
-      <rect x="250" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="271" y="141" width="3" height="8" fill="#3a4a56" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <rect x="7" y="66" width="6" height="151" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" rx="0" />
-      <rect x="2" y="217" width="13" height="9" fill="url(#u01vs_hatch)" stroke="#4a6070" stroke-width="1" rx="0" />
-      <rect x="4" y="83" width="14" height="20" fill="url(#u01vs_piston)" stroke="#3a4a56" stroke-width="1" rx="0" />
-      <line x1="8" y1="86" x2="8" y2="100" stroke="#5b6770" stroke-width="1" />
-      <line x1="14" y1="86" x2="14" y2="100" stroke="#5b6770" stroke-width="1" />
-      <rect x="18" y="86" width="200" height="12" fill="#a9cce3" stroke="#3a6a88" stroke-width="1" rx="2" />
-      <line x1="118" y1="48" x2="118" y2="84" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u01vs_aR)" />
-      <text x="132" y="63" fill="#c0392b" font-size="12" text-anchor="start">G = ?</text>
-      <line x1="229" y1="84" x2="229" y2="49" stroke="#2c3e50" stroke-width="1.8" marker-end="url(#u01vs_aK)" />
-      <text x="218" y="43" fill="#2c3e50" font-size="11" text-anchor="middle">Δz</text>
-      <line x1="262" y1="61" x2="262" y2="91" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u01vs_aR)" />
-      <text x="262" y="49" fill="#c0392b" font-size="13" text-anchor="middle">Fₚ</text>
-      <text x="69" y="55" fill="#3a4a56" font-size="10" text-anchor="middle">vodilica</text>
-      <line x1="42" y1="57" x2="13" y2="74" stroke="#7a8a96" stroke-width="1" />
-      <line x1="290" y1="164" x2="290" y2="194" stroke="#2c3e50" stroke-width="1.8" marker-end="url(#u01vs_aK)" />
-      <text x="288" y="153" fill="#2c3e50" font-size="11" text-anchor="middle">sₚ</text>
-      <text x="150" y="266" fill="#b7600c" font-size="11" text-anchor="middle">A<tspan baseline-shift="sub" font-size="0.75em">L</tspan> = 95 cm² (svaki); dₚ = 22 mm</text>
-      <text x="150" y="283" fill="#3a4a56" font-size="11" text-anchor="middle">Fₚ = 360 N; Δz = 18 mm</text>
-    </g>
-    <text x="490" y="650" fill="#3a4a56" font-size="11" text-anchor="middle">Crveno/zeleno: sile na klipove ili stol · Tamno: smjer pomaka · Smeđe: geometrijske veličine · Skice i strelice nisu u mjerilu.</text>
-  </g>
+<title id="u01vs_title">Skice šest vježbi Pascalova zakona</title><desc id="u01vs_desc">Očuvan raspored šest panela u dva reda. Promjeri preša u Z2 i Z3 imaju omjere 5 i 3, a kota u Z4 prati istu tlačnu plohu klipa. Jedna ispuna po povezanom fluidu. Z5 i Z6 prikazuju tlačni potez pumpe, bez sheme ventila.</desc>
+<defs>
+<linearGradient id="u01vs_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u01vs_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u01vs_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u01vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u01vs_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u01vs_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u01vs_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="980" height="660" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
+Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
+Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
+<defs>
+<marker id="u01vs_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
+<marker id="u01vs_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
+<marker id="u01vs_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u01vs_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
+</defs>
+<defs><linearGradient id="u01vs_metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient></defs>
+<!-- Plava tekućina, plavi naslovi i raspored 3×2 zadržani su na izričit zahtjev korisnice. -->
+<g id="u01vs_z1" transform="translate(25 25)">
+<rect x="0" y="0" width="300" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
+<rect x="0" y="0" width="300" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="0" y="21" width="300" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="150.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z1 — Gustoća iz vaganja</text>
+<text x="54" y="64" font-size="12" fill="#3a4a56" text-anchor="middle">prazna</text>
+<defs><linearGradient id="u01vs_z10field" gradientUnits="userSpaceOnUse" x1="0" y1="169" x2="0" y2="169"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u01vs_z1wall0" d="M30 78 V169 H78 V78" fill="none" stroke="#3a4a56" stroke-width="1.3" />
+<rect x="26" y="78" width="4" height="96" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="78" y="78" width="4" height="96" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="26" y="169" width="56" height="5" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="22" y="174" width="64" height="8" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="18" y="182" width="72" height="40" rx="4" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="27" y="191" width="54" height="22" rx="3" fill="white" stroke="#3a4a56" stroke-width="1.2"/>
+<text x="54" y="207" font-size="12" fill="#1565c0" text-anchor="middle">42,6 g</text>
+<text x="54" y="246" font-size="14" fill="#3a4a56" text-anchor="middle">m₀</text>
+<text x="150" y="64" font-size="12" fill="#3a4a56" text-anchor="middle">50,0 cm³</text>
+<defs><linearGradient id="u01vs_z11field" gradientUnits="userSpaceOnUse" x1="0" y1="137" x2="0" y2="169"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<rect id="u01vs_z1fluid1" x="126" y="137" width="48" height="32" rx="0" fill="url(#u01vs_z11field)" stroke="none" stroke-width="1.2"/>
+<line x1="126" y1="137" x2="174" y2="137" stroke="#1565c0" stroke-width="1.8"/>
+<path id="u01vs_z1wall1" d="M126 78 V169 H174 V78" fill="none" stroke="#3a4a56" stroke-width="1.3" />
+<rect x="122" y="78" width="4" height="96" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="174" y="78" width="4" height="96" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="122" y="169" width="56" height="5" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="118" y="174" width="64" height="8" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="114" y="182" width="72" height="40" rx="4" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="123" y="191" width="54" height="22" rx="3" fill="white" stroke="#3a4a56" stroke-width="1.2"/>
+<text x="150" y="207" font-size="12" fill="#1565c0" text-anchor="middle">85,5 g</text>
+<text x="150" y="246" font-size="14" fill="#3a4a56" text-anchor="middle">m₁</text>
+<text x="246" y="64" font-size="12" fill="#3a4a56" text-anchor="middle">100,0 cm³</text>
+<defs><linearGradient id="u01vs_z12field" gradientUnits="userSpaceOnUse" x1="0" y1="105" x2="0" y2="169"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<rect id="u01vs_z1fluid2" x="222" y="105" width="48" height="64" rx="0" fill="url(#u01vs_z12field)" stroke="none" stroke-width="1.2"/>
+<line x1="222" y1="105" x2="270" y2="105" stroke="#1565c0" stroke-width="1.8"/>
+<path id="u01vs_z1wall2" d="M222 78 V169 H270 V78" fill="none" stroke="#3a4a56" stroke-width="1.3" />
+<rect x="218" y="78" width="4" height="96" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="270" y="78" width="4" height="96" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="218" y="169" width="56" height="5" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="214" y="174" width="64" height="8" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="210" y="182" width="72" height="40" rx="4" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="219" y="191" width="54" height="22" rx="3" fill="white" stroke="#3a4a56" stroke-width="1.2"/>
+<text x="246" y="207" font-size="12" fill="#1565c0" text-anchor="middle">128,7 g</text>
+<text x="246" y="246" font-size="14" fill="#3a4a56" text-anchor="middle">m₂</text>
+<text x="150" y="276" font-size="11" fill="#3a4a56" text-anchor="middle">Vaga očitava posudu i ulje zajedno.</text>
+</g>
+<g id="u01vs_z2" transform="translate(340 25)">
+<rect x="0" y="0" width="300" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
+<rect x="0" y="0" width="300" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="0" y="21" width="300" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="150.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z2 — Servisna preša</text>
+<path id="u01vs_z2systemouter0" d="M49.0 105 V240 H273.0 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M49.0 105 V240 H273.0 V105" fill="none" stroke="white" stroke-width="9" />
+<path d="M49.0 105 V240 H273.0 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<path id="u01vs_z2systemouter1" d="M67.0 105 V224 H183.0 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M67.0 105 V224 H183.0 V105" fill="none" stroke="white" stroke-width="9" />
+<path d="M67.0 105 V224 H183.0 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<defs><linearGradient id="u01vs_z2systemfield" gradientUnits="userSpaceOnUse" x1="0" y1="152" x2="0" y2="240"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u01vs_z2systemfluid" d="M49.0 152 H67.0 V224 H183.0 V152 H273.0 V240 H49.0 Z" fill="url(#u01vs_z2systemfield)" stroke="none" stroke-width="1.8" />
+<path id="u01vs_z2systemwall0" d="M49.0 105 V240 H273.0 V105" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u01vs_z2systemwall1" d="M67.0 105 V224 H183.0 V105" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<rect id="u01vs_z2systempiston0" x="49.0" y="138" width="18" height="14" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u01vs_z2systemrod0" x="55.3" y="74" width="5.3999999999999995" height="64" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="49.0" y="141" width="1.8" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="65.2" y="141" width="1.8" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect id="u01vs_z2systempiston1" x="183.0" y="138" width="90" height="14" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u01vs_z2systemrod1" x="218.0" y="74" width="20" height="64" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="183.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="270.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<path id="u01vs_z2input" d="M58 44 L58 72" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01vs_forceMarker)"/>
+<path id="u01vs_z2output" d="M228 198 L228 154" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u01vs_reactionMarker)"/>
+<text x="228" y="217" font-size="12" fill="#1e8449" text-anchor="middle">F₂ = ?</text>
+<text x="137" y="161" font-size="10" fill="#1e8449" text-anchor="middle">F₂: ulje</text>
+<text x="137" y="177" font-size="10" fill="#1e8449" text-anchor="middle">na veliki klip</text>
+<text x="79" y="57" font-size="12" fill="#c0392b" text-anchor="start">F₁ = 180 N</text>
+<line x1="49.0" y1="254" x2="49.0" y2="264" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="67.0" y1="254" x2="67.0" y2="264" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u01vs_z2d1" d="M49.0 259 L67.0 259" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u01vs_dimSmall)" marker-end="url(#u01vs_dimSmall)"/>
+<text x="58.0" y="276" font-size="11" fill="#b7600c" text-anchor="middle"></text>
+<line x1="183.0" y1="254" x2="183.0" y2="264" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="273.0" y1="254" x2="273.0" y2="264" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u01vs_z2d2" d="M183.0 259 L273.0 259" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u01vs_dim)" marker-end="url(#u01vs_dim)"/>
+<text x="228.0" y="276" font-size="11" fill="#b7600c" text-anchor="middle"></text>
+<text x="58" y="281" font-size="11" fill="#b7600c" text-anchor="middle">d₁ = 28 mm</text>
+<text x="228" y="281" font-size="11" fill="#b7600c" text-anchor="middle">d₂ = 140 mm</text>
+<text x="137" y="215" font-size="11" fill="#3a4a56" text-anchor="middle">s₁ = 120 mm</text>
+<path id="u01vs_z2motion0" d="M22 162 L22 192" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u01vs_axisMarker)"/>
+<text x="22" y="150" font-size="11" fill="#3a4a56" text-anchor="middle">s₁</text>
+<path id="u01vs_z2motion1" d="M285 192 L285 162" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u01vs_axisMarker)"/>
+<text x="285" y="150" font-size="11" fill="#3a4a56" text-anchor="middle">s₂</text>
+</g>
+<g id="u01vs_z3" transform="translate(655 25)">
+<rect x="0" y="0" width="300" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
+<rect x="0" y="0" width="300" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="0" y="21" width="300" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="150.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z3 — Provjera proračuna</text>
+<path id="u01vs_z3systemouter0" d="M43.0 105 V240 H273.0 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M43.0 105 V240 H273.0 V105" fill="none" stroke="white" stroke-width="9" />
+<path d="M43.0 105 V240 H273.0 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<path id="u01vs_z3systemouter1" d="M73.0 105 V224 H183.0 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M73.0 105 V224 H183.0 V105" fill="none" stroke="white" stroke-width="9" />
+<path d="M73.0 105 V224 H183.0 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<defs><linearGradient id="u01vs_z3systemfield" gradientUnits="userSpaceOnUse" x1="0" y1="152" x2="0" y2="240"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u01vs_z3systemfluid" d="M43.0 152 H73.0 V224 H183.0 V152 H273.0 V240 H43.0 Z" fill="url(#u01vs_z3systemfield)" stroke="none" stroke-width="1.8" />
+<path id="u01vs_z3systemwall0" d="M43.0 105 V240 H273.0 V105" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u01vs_z3systemwall1" d="M73.0 105 V224 H183.0 V105" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<rect id="u01vs_z3systempiston0" x="43.0" y="138" width="30" height="14" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u01vs_z3systemrod0" x="53.5" y="74" width="9.0" height="64" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="43.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="70.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect id="u01vs_z3systempiston1" x="183.0" y="138" width="90" height="14" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u01vs_z3systemrod1" x="218.0" y="74" width="20" height="64" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="183.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="270.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<path id="u01vs_z3input" d="M58 44 L58 72" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01vs_forceMarker)"/>
+<path id="u01vs_z3output" d="M228 198 L228 154" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u01vs_reactionMarker)"/>
+<text x="228" y="217" font-size="12" fill="#1e8449" text-anchor="middle">F₂ = ?</text>
+<text x="137" y="161" font-size="10" fill="#1e8449" text-anchor="middle">F₂: ulje</text>
+<text x="137" y="177" font-size="10" fill="#1e8449" text-anchor="middle">na veliki klip</text>
+<text x="79" y="57" font-size="12" fill="#c0392b" text-anchor="start">F₁ = 100 N</text>
+<line x1="43.0" y1="254" x2="43.0" y2="264" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="73.0" y1="254" x2="73.0" y2="264" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u01vs_z3d1" d="M43.0 259 L73.0 259" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u01vs_dim)" marker-end="url(#u01vs_dim)"/>
+<text x="58.0" y="276" font-size="11" fill="#b7600c" text-anchor="middle"></text>
+<line x1="183.0" y1="254" x2="183.0" y2="264" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="273.0" y1="254" x2="273.0" y2="264" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u01vs_z3d2" d="M183.0 259 L273.0 259" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u01vs_dim)" marker-end="url(#u01vs_dim)"/>
+<text x="228.0" y="276" font-size="11" fill="#b7600c" text-anchor="middle"></text>
+<text x="58" y="281" font-size="11" fill="#b7600c" text-anchor="middle">d₁ = 20 mm</text>
+<text x="228" y="281" font-size="11" fill="#b7600c" text-anchor="middle">d₂ = 60 mm</text>
+<text x="137" y="215" font-size="11" fill="#3a4a56" text-anchor="middle">s₁ = 90 mm</text>
+<path id="u01vs_z3motion0" d="M22 162 L22 192" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u01vs_axisMarker)"/>
+<text x="22" y="150" font-size="11" fill="#3a4a56" text-anchor="middle">s₁</text>
+<path id="u01vs_z3motion1" d="M285 192 L285 162" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u01vs_axisMarker)"/>
+<text x="285" y="150" font-size="11" fill="#3a4a56" text-anchor="middle">s₂</text>
+</g>
+<g id="u01vs_z4" transform="translate(25 340)">
+<rect x="0" y="0" width="300" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
+<rect x="0" y="0" width="300" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="0" y="21" width="300" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="150.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z4 — Mjerni cilindar</text>
+<path id="u01vs_z4systemouter0" d="M14 154 H60 V130 H264" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M14 154 H60 V130 H264" fill="none" stroke="white" stroke-width="9" />
+<path d="M14 154 H60 V130 H264" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<path id="u01vs_z4systemouter1" d="M14 176 H60 V200 H264" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M14 176 H60 V200 H264" fill="none" stroke="white" stroke-width="9" />
+<path d="M14 176 H60 V200 H264" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<defs><linearGradient id="u01vs_z4systemfield" gradientUnits="userSpaceOnUse" x1="0" y1="130" x2="0" y2="200"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u01vs_z4systemfluid" d="M14 154 H60 V130 H204 V200 H60 V176 H14 Z" fill="url(#u01vs_z4systemfield)" stroke="none" stroke-width="1.8" />
+<path id="u01vs_z4systemwall0" d="M14 154 H60 V130 H264" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u01vs_z4systemwall1" d="M14 176 H60 V200 H264" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<rect id="u01vs_z4piston" x="204" y="130" width="12" height="70" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="216" y="160" width="64" height="10" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="207" y="131" width="6" height="3" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="207" y="196" width="6" height="3" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<path id="u01vs_z4inflow" d="M18 165 L84 165" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u01vs_pressureMarker)"/>
+<text x="30" y="139" font-size="13" fill="#1565c0" text-anchor="middle">ΔV</text>
+<line id="u01vs_z4initial" x1="138" y1="130" x2="138" y2="200" stroke="#3a4a56" stroke-width="1.3" stroke-dasharray="4 3"/>
+<line x1="138" y1="90" x2="138" y2="120" stroke="#b7600c" stroke-width="1"/>
+<line x1="204" y1="90" x2="204" y2="120" stroke="#b7600c" stroke-width="1"/>
+<line x1="138" y1="96" x2="138" y2="106" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="204" y1="96" x2="204" y2="106" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u01vs_z4stroke" d="M138 101 L204 101" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u01vs_dim)" marker-end="url(#u01vs_dim)"/>
+<text x="171.0" y="118" font-size="11" fill="#b7600c" text-anchor="middle"></text>
+<text x="171" y="85" font-size="14" fill="#b7600c" text-anchor="middle">s</text>
+<path id="u01vs_z4motion" d="M225 106 L263 106" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u01vs_axisMarker)"/>
+<text x="243" y="92" font-size="10" fill="#3a4a56" text-anchor="middle">pomak</text>
+<text x="150" y="54" font-size="11" fill="#3a4a56" text-anchor="middle">Ista ploha klipa: početno → konačno</text>
+<text x="242" y="148" font-size="11" fill="#3a4a56" text-anchor="middle">zrak</text>
+<text x="175" y="181" font-size="13" fill="#3a4a56" text-anchor="middle">A = ?</text>
+<text x="150" y="230" font-size="11" fill="#3a4a56" text-anchor="middle">Mjerni niz i zaseban blokirani pokus.</text>
+<text x="150" y="253" font-size="11" fill="#3a4a56" text-anchor="middle">Treći pokus: V₀ = 250 cm³; K = 1 GPa</text>
+<text x="150" y="273" font-size="11" fill="#3a4a56" text-anchor="middle">ΔVₚ = 5 cm³; Δp = 0,40 MPa; s = ?</text>
+</g>
+<g id="u01vs_z5" transform="translate(340 340)">
+<rect x="0" y="0" width="300" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
+<rect x="0" y="0" width="300" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="0" y="21" width="300" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="150.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z5 — Izbor pumpe</text>
+<path id="u01vs_z5systemouter0" d="M51.447012545124515 105 V240 H273.0 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M51.447012545124515 105 V240 H273.0 V105" fill="none" stroke="white" stroke-width="9" />
+<path d="M51.447012545124515 105 V240 H273.0 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<path id="u01vs_z5systemouter1" d="M64.55298745487548 105 V224 H183.0 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M64.55298745487548 105 V224 H183.0 V105" fill="none" stroke="white" stroke-width="9" />
+<path d="M64.55298745487548 105 V224 H183.0 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<defs><linearGradient id="u01vs_z5systemfield" gradientUnits="userSpaceOnUse" x1="0" y1="152" x2="0" y2="240"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u01vs_z5systemfluid" d="M51.447012545124515 152 H64.55298745487548 V224 H183.0 V152 H273.0 V240 H51.447012545124515 Z" fill="url(#u01vs_z5systemfield)" stroke="none" stroke-width="1.8" />
+<path id="u01vs_z5systemwall0" d="M51.447012545124515 105 V240 H273.0 V105" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u01vs_z5systemwall1" d="M64.55298745487548 105 V224 H183.0 V105" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<rect id="u01vs_z5systempiston0" x="51.447012545124515" y="138" width="13.10597490975097" height="14" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u01vs_z5systemrod0" x="56.03410376353735" y="74" width="3.9317924729252907" height="64" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="51.447012545124515" y="141" width="1.310597490975097" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="63.24238996390038" y="141" width="1.310597490975097" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect id="u01vs_z5systempiston1" x="183.0" y="138" width="90" height="14" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u01vs_z5systemrod1" x="218.0" y="74" width="20" height="64" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="183.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="270.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<path id="u01vs_z5input" d="M58 44 L58 72" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01vs_forceMarker)"/>
+<path id="u01vs_z5load" d="M228 44 L228 72" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01vs_forceMarker)"/>
+<text x="198" y="57" font-size="11" fill="#c0392b" text-anchor="end">F<tspan baseline-shift="-2.42" font-size="9">L</tspan> = 6 kN</text>
+<text x="84" y="58" font-size="12" fill="#c0392b" text-anchor="start">Fₚ</text>
+<text x="146" y="92" font-size="11" fill="#b7600c" text-anchor="middle">dₚ: 8 / 9 / 10 mm</text>
+<text x="131" y="177" font-size="11" fill="#b7600c" text-anchor="middle">A<tspan baseline-shift="-2.42" font-size="9">L</tspan> = 30 cm²</text>
+<line x1="167" y1="179" x2="190" y2="147" stroke="#b7600c" stroke-width="1"/>
+<text x="131" y="196" font-size="11" fill="#b7600c" text-anchor="middle">s<tspan baseline-shift="-2.42" font-size="9">L</tspan> = 10 mm</text>
+<text x="150" y="265" font-size="11" fill="#3a4a56" text-anchor="middle">Fₚ ≤ 150 N; Σsₚ ≤ 0,50 m</text>
+<text x="150" y="282" font-size="10" fill="#3a4a56" text-anchor="middle">Prikazan dₚ = 9 mm; ventili izostavljeni.</text>
+<path id="u01vs_z5motion0" d="M22 162 L22 192" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u01vs_axisMarker)"/>
+<text x="22" y="150" font-size="11" fill="#3a4a56" text-anchor="middle">sₚ</text>
+<path id="u01vs_z5motion1" d="M285 192 L285 162" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u01vs_axisMarker)"/>
+<text x="285" y="150" font-size="11" fill="#3a4a56" text-anchor="middle">s<tspan baseline-shift="-2.42" font-size="9">L</tspan></text>
+</g>
+<g id="u01vs_z6" transform="translate(655 340)">
+<rect x="0" y="0" width="300" height="290" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
+<rect x="0" y="0" width="300" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="0" y="21" width="300" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="150.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z6 — Stol s tri cilindra</text>
+<path id="u01vs_z6systemouter0" d="M22.0 105 V240 H267.00069841841787 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M22.0 105 V240 H267.00069841841787 V105" fill="none" stroke="white" stroke-width="9" />
+<path d="M22.0 105 V240 H267.00069841841787 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<path id="u01vs_z6systemouter1" d="M62.0 105 V224 H96.0 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M62.0 105 V224 H96.0 V105" fill="none" stroke="white" stroke-width="9" />
+<path d="M62.0 105 V224 H96.0 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<path id="u01vs_z6systemouter2" d="M136.0 105 V224 H170.0 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M136.0 105 V224 H170.0 V105" fill="none" stroke="white" stroke-width="9" />
+<path d="M136.0 105 V224 H170.0 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<path id="u01vs_z6systemouter3" d="M210.0 105 V224 H258.99930158158213 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M210.0 105 V224 H258.99930158158213 V105" fill="none" stroke="white" stroke-width="9" />
+<path d="M210.0 105 V224 H258.99930158158213 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
+<defs><linearGradient id="u01vs_z6systemfield" gradientUnits="userSpaceOnUse" x1="0" y1="152" x2="0" y2="240"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u01vs_z6systemfluid" d="M22.0 152 H62.0 V224 H96.0 V152 H136.0 V224 H170.0 V152 H210.0 V224 H258.99930158158213 V152 H267.00069841841787 V240 H22.0 Z" fill="url(#u01vs_z6systemfield)" stroke="none" stroke-width="1.8" />
+<path id="u01vs_z6systemwall0" d="M22.0 105 V240 H267.00069841841787 V105" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u01vs_z6systemwall1" d="M62.0 105 V224 H96.0 V105" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u01vs_z6systemwall2" d="M136.0 105 V224 H170.0 V105" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<path id="u01vs_z6systemwall3" d="M210.0 105 V224 H258.99930158158213 V105" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+<rect id="u01vs_z6systempiston0" x="22.0" y="138" width="40" height="14" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u01vs_z6systemrod0" x="36.0" y="97" width="12.0" height="41" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="22.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="59.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect id="u01vs_z6systempiston1" x="96.0" y="138" width="40" height="14" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u01vs_z6systemrod1" x="110.0" y="97" width="12.0" height="41" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="96.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="133.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect id="u01vs_z6systempiston2" x="170.0" y="138" width="40" height="14" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u01vs_z6systemrod2" x="184.0" y="97" width="12.0" height="41" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="170.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="207.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect id="u01vs_z6systempiston3" x="258.99930158158213" y="138" width="8.001396836835717" height="14" rx="0" fill="url(#u01vs_metal)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u01vs_z6systemrod3" x="261.79979047447466" y="104" width="2.400419051050715" height="34" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="258.99930158158213" y="141" width="0.8001396836835717" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect x="266.2005587347343" y="141" width="0.8001396836835717" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
+<rect id="u01vs_z6platform" x="20" y="85" width="194" height="12" rx="0" fill="#bcd6e5" stroke="#1565c0" stroke-width="1.2"/>
+<rect id="u01vs_z6guide" x="7" y="67" width="6" height="150" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="4" y="84" width="16" height="15" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
+<text x="59" y="63" font-size="10" fill="#3a4a56" text-anchor="start">vodilica</text>
+<line x1="43" y1="66" x2="13" y2="83" stroke="#7a8a96" stroke-width="1"/>
+<path id="u01vs_z6load" d="M117 49 L117 83" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01vs_forceMarker)"/>
+<text x="140" y="69" font-size="12" fill="#c0392b" text-anchor="start">G = ?</text>
+<path id="u01vs_z6pumpForce" d="M263 74 L263 102" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01vs_forceMarker)"/>
+<text x="262" y="61" font-size="12" fill="#c0392b" text-anchor="middle">Fₚ</text>
+<path id="u01vs_z6lift" d="M230 87 L230 52" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u01vs_axisMarker)"/>
+<text x="230" y="45" font-size="11" fill="#3a4a56" text-anchor="middle">Δz</text>
+<path id="u01vs_z6pumpMotion" d="M287 170 L287 197" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u01vs_axisMarker)"/>
+<text x="286" y="156" font-size="11" fill="#3a4a56" text-anchor="middle">sₚ</text>
+<text x="42" y="192" font-size="12" fill="#b7600c" text-anchor="middle">A<tspan baseline-shift="-2.64" font-size="9.0">L</tspan></text>
+<text x="116" y="192" font-size="12" fill="#b7600c" text-anchor="middle">A<tspan baseline-shift="-2.64" font-size="9.0">L</tspan></text>
+<text x="190" y="192" font-size="12" fill="#b7600c" text-anchor="middle">A<tspan baseline-shift="-2.64" font-size="9.0">L</tspan></text>
+<text x="150" y="263" font-size="11" fill="#b7600c" text-anchor="middle">A<tspan baseline-shift="-2.42" font-size="9">L</tspan> = 95 cm² svaki; dₚ = 22 mm</text>
+<text x="150" y="281" font-size="11" fill="#3a4a56" text-anchor="middle">Fₚ = 360 N; Δz = 18 mm; isti pomak</text>
+</g>
+<text x="490" y="650" font-size="11" fill="#3a4a56" text-anchor="middle">Sile i smjerovi pomaka nisu u mjerilu. Promjeri u Z2/Z3/Z5/Z6 imaju zajedničku skalu unutar panela.</text>
+</g>
 </svg>

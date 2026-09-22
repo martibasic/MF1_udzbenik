@@ -42,9 +42,9 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Sažetak.** Laboratorijski cilindar prije mjerenja potpuno je napunjen tekućinom i odzračen. Dovedeni dodatni volumeni, mjereni od istoga početnog položaja, i pomaci klipa pri malom opterećenju prikazani su u tablici. U zasebnom pokusu s blokiranim…
 
-**Smjernica postupka.** Usporedi omjere dodatnog volumena i pomaka. Iz dobivene površine izračunaj promjer, zatim silu u drugom pokusu. Podudaranje pri malom opterećenju podupire model samo u ispitanim uvjetima; odstupanje pri većem tlaku zahtijeva dodatne podatke.
+**Smjernica postupka.** Usporedi omjere volumena i pomaka, zatim izračunaj promjer i silu. U trećem pokusu razdvoji volumen istisnut pumpom i smanjenje volumena iste tekućine: samo ostatak pomiče radni klip. Pogrešku usporedi s nestlačivim pomakom; podudaranje početnih mjerenja vrijedi samo za ispitane uvjete.
 
-**Kontrolni rezultat ili kriterij.** Sva tri para daju $A=500\ \text{mm}^2$ i $d\approx25{,}23\ \text{mm}$; idealno $F=200\ \text{N}$. Tablica je usklađena s modelom u ispitanim uvjetima. Manji pomak pri većem tlaku opravdava provjeru stlačivosti, elastičnosti i propuštanja; ne dokazuje jedan određeni uzrok.
+**Kontrolni rezultat ili kriterij.** Sva tri para daju $A=500\ \mathrm{mm^2}$ i $d\approx25{,}23\ \mathrm{mm}$; blokirani klip daje $F=200\ \mathrm{N}$. U trećem pokusu $\Delta V_c\approx0{,}100\ \mathrm{cm^3}$, $s\approx9{,}80\ \mathrm{mm}$ umjesto $s_0=10{,}0\ \mathrm{mm}$. Odstupanje je $2{,}0\,\%>1{,}0\,\%$: nestlačivi model ne prolazi. Početna tablica ne potvrđuje sve tlakove; stvarno odstupanje samo ne razlikuje stlačivost, elastičnost i propuštanje.
 
 ### Z5. Izbor pumpe uz ograničenje sile i hoda {#key-task-izbor-pumpe-sila-i-hod .unnumbered .unlisted}
 

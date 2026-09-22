@@ -1,106 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" role="img" aria-labelledby="u01fgs_title u01fgs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u01fgs_title">U01 - Gustoca, specificna tezina i relativna gustoca ulja</title>
-  <desc id="u01fgs_desc">Hidraulicno ulje gustoce 860 kg/m^3 ima specificnu tezinu γ=ρg=8,44 kN/m^3 i relativnu gustocu s_r=ρ/ρ_voda=0,86. Usporedba s vodom pri istom volumenu 1 L pokazuje da ulje tezi 14% manje od vode (8,44 N vs 9,81 N).</desc>
-  <defs>
-    <marker id="u01fgs_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
-    </marker>
-    <marker id="u01fgs_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
-    </marker>
-    <marker id="u01fgs_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
-    </marker>
-    <linearGradient id="u01fgs_oil" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fde68a" />
-      <stop offset="100%" stop-color="#c8a000" />
-    </linearGradient>
-    <linearGradient id="u01fgs_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
-    <pattern id="u01fgs_hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="6" stroke="#7a8a96" stroke-width="1.5" />
-    </pattern>
-  </defs>
-
-  <rect width="980" height="440" fill="#ffffff" />
-  <!-- ============================================================
-       PANEL LIJEVI: Ulje u posudi (osnovne velicine)
-  ============================================================ -->
-  <rect x="30" y="30" width="430" height="380" rx="8" fill="#fffbef" stroke="#c8a000" stroke-width="1.4" />
-  <rect x="30" y="30" width="430" height="30" rx="8" fill="#c8a000" />
-  <rect x="30" y="52" width="430" height="8" fill="#c8a000" />
-  <!-- Posuda s uljem (presjek) -->
-  <rect x="160" y="100" width="14" height="220" fill="url(#u01fgs_hatch)" stroke="#4a6070" stroke-width="1.4" />
-  <rect x="320" y="100" width="14" height="220" fill="url(#u01fgs_hatch)" stroke="#4a6070" stroke-width="1.4" />
-  <rect x="160" y="320" width="174" height="14" fill="url(#u01fgs_hatch)" stroke="#4a6070" stroke-width="1.4" />
-  <!-- Ulje (žuto-zlatno) -->
-  <rect x="174" y="140" width="146" height="180" fill="url(#u01fgs_oil)" />
-  <!-- Slobodna povrsina (isprekidana, oznaceno) -->
-  <line x1="174" y1="140" x2="320" y2="140" stroke="#7a4d10" stroke-width="2" />
-  <!-- Oznake u ulju -->
-  <!-- G strelica (težina) -->
-  <line x1="247" y1="328" x2="247" y2="362" stroke="#c0392b" stroke-width="3" marker-end="url(#u01fgs_aR)" />
-  <!-- h kota (visina ulja) -->
-  <!-- Formule ispod -->
-  <rect x="48" y="372" width="395" height="28" rx="6" fill="#fef7e0" stroke="#c8a000" stroke-width="1" />
-  <!-- ============================================================
-       PANEL DESNI: Usporedba ulje vs voda, isti V = 1 L
-  ============================================================ -->
-  <rect x="490" y="30" width="460" height="380" rx="8" fill="#f8fbff" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="490" y="30" width="460" height="30" rx="8" fill="#1565c0" />
-  <rect x="490" y="52" width="460" height="8" fill="#1565c0" />
-  <!-- Ulje spremnik -->
-  <rect x="540" y="120" width="12" height="200" fill="url(#u01fgs_hatch)" stroke="#4a6070" stroke-width="1.3" />
-  <rect x="640" y="120" width="12" height="200" fill="url(#u01fgs_hatch)" stroke="#4a6070" stroke-width="1.3" />
-  <rect x="540" y="320" width="112" height="14" fill="url(#u01fgs_hatch)" stroke="#4a6070" stroke-width="1.3" />
-  <rect x="552" y="140" width="88" height="180" fill="url(#u01fgs_oil)" />
-  <line x1="552" y1="140" x2="640" y2="140" stroke="#7a4d10" stroke-width="2" />
-  <!-- Voda spremnik -->
-  <rect x="780" y="120" width="12" height="200" fill="url(#u01fgs_hatch)" stroke="#4a6070" stroke-width="1.3" />
-  <rect x="880" y="120" width="12" height="200" fill="url(#u01fgs_hatch)" stroke="#4a6070" stroke-width="1.3" />
-  <rect x="780" y="320" width="112" height="14" fill="url(#u01fgs_hatch)" stroke="#4a6070" stroke-width="1.3" />
-  <rect x="792" y="140" width="88" height="180" fill="url(#u01fgs_water)" />
-  <line x1="792" y1="140" x2="880" y2="140" stroke="#1565c0" stroke-width="2" />
-  <!-- ΔG indicator (cervena strelica izmedu posuda) -->
-  <rect x="668" y="160" width="94" height="38" rx="6" fill="#fdedec" stroke="#c0392b" stroke-width="1.2" />
-  <!-- Zakljucak -->
-  <rect x="508" y="372" width="424" height="28" rx="6" fill="#f3eafa" stroke="#7d3c98" stroke-width="1" />
-  <line x1="135" y1="140" x2="135" y2="320" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u01fgs_aDimR)" marker-end="url(#u01fgs_aDim)" />
-  <line x1="685" y1="140" x2="745" y2="140" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u01fgs_aDimR)" marker-end="url(#u01fgs_aDim)" />
-  <text x="245" y="51" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Ulje u posudi</text>
-
-  <text x="338" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#7a4d10">slobodna površina</text>
-
-  <text x="247" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-style="italic" font-weight="700" text-anchor="middle" fill="#7a4d10">V</text>
-  <text x="247" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#7a4d10">m, ρ</text>
-
-  <text x="263" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b"><tspan font-weight="700">G</tspan> = mg</text>
-
-  <text x="60" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56"><tspan font-weight="700">ρ</tspan> = m/V = </text>
-  <text x="135" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#7a4d10">860 kg/m³</text>
-  <text x="225" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56"><tspan font-weight="700">γ</tspan> = ρg ≈ </text>
-  <text x="285" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449">8,44 kN/m³</text>
-  <text x="370" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56"><tspan font-weight="700">s<tspan baseline-shift="sub" font-size="0.75em">r</tspan></tspan> = <tspan font-weight="700" fill="#7d3c98">0,86</tspan></text>
-
-  <text x="720" y="51" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Usporedba pri istom volumenu V = 1 L</text>
-  <text x="720" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Različita gustoća → različita masa → različita težina</text>
-
-  <text x="596" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#7a4d10">ulje</text>
-  <text x="596" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#7a4d10">m = 860 g</text>
-  <text x="596" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#7a4d10">G ≈ 8,44 N</text>
-  <text x="596" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">ρ = 860 kg/m³</text>
-
-  <text x="836" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#1565c0">voda</text>
-  <text x="836" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1565c0">m = 1000 g</text>
-  <text x="836" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1565c0">G ≈ 9,81 N</text>
-  <text x="836" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">ρ = 1000 kg/m³</text>
-
-  <text x="715" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#c0392b">ΔG ≈ 1,37 N</text>
-  <text x="715" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#c0392b">ulje 14% lakše</text>
-
-  <text x="720" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56"><tspan font-weight="700">s<tspan baseline-shift="sub" font-size="0.75em">r</tspan></tspan> = ρ<tspan baseline-shift="sub" font-size="0.75em">ulje</tspan> / ρ<tspan baseline-shift="sub" font-size="0.75em">H₂O</tspan> = 0,86 → ulje pluta na vodi (s<tspan baseline-shift="sub" font-size="0.75em">r</tspan> &lt; 1)</text>
-<text x="120" y="235" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="end" fill="#b7600c">h</text>
-
-  </svg>
+<title id="u01fgs_title">Gustoća i specifična težina ulja</title><desc id="u01fgs_desc">Isti volumen ulja i vode ima različitu masu i težinu. Težina ulja nacrtana je kroz njegovo težište; nije sila na dno posude. Kota dubine završava na unutarnjem dnu i slobodnoj površini.</desc>
+<defs>
+<linearGradient id="u01fgs_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u01fgs_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u01fgs_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u01fgs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u01fgs_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u01fgs_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u01fgs_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="980" height="440" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
+Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
+Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
+<defs>
+<marker id="u01fgs_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
+<marker id="u01fgs_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
+<marker id="u01fgs_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u01fgs_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
+</defs>
+<defs><linearGradient id="u01fgs_metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient></defs>
+<g id="u01fgs_oilPanel" transform="translate(30 30)">
+<rect x="0" y="0" width="430" height="380" rx="8" fill="#fffbee" stroke="#c8d6e4" stroke-width="1.2"/>
+<rect x="0" y="0" width="430" height="30" rx="8" fill="#c8a000" stroke="#c8a000" stroke-width="1.2"/>
+<rect x="0" y="21" width="430" height="9" rx="0" fill="#c8a000" stroke="none" stroke-width="1.2"/>
+<text x="215.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Ulje u posudi</text>
+<defs><linearGradient id="u01fgs_largeOil" gradientUnits="userSpaceOnUse" x1="0" y1="110" x2="0" y2="290"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
+<rect x="144" y="110" width="146" height="180" rx="0" fill="url(#u01fgs_largeOil)" stroke="none" stroke-width="1.2"/>
+<line x1="144" y1="110" x2="290" y2="110" stroke="#1565c0" stroke-width="2"/>
+<rect x="136" y="70" width="8" height="228" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="290" y="70" width="8" height="228" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="136" y="290" width="162" height="8" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<line x1="106" y1="110" x2="116" y2="110" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="106" y1="290" x2="116" y2="290" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u01fgs_h" d="M111 110 L111 290" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u01fgs_dim)" marker-end="url(#u01fgs_dim)"/>
+<text x="88" y="206" font-size="14" fill="#b7600c" text-anchor="middle">h</text>
+<line x1="111" y1="110" x2="137" y2="110" stroke="#b7600c" stroke-width="1"/>
+<line x1="111" y1="290" x2="137" y2="290" stroke="#b7600c" stroke-width="1"/>
+<text x="217" y="151" font-size="20" fill="#b7600c" text-anchor="middle" font-weight="700">V</text>
+<text x="217" y="176" font-size="14" fill="#b7600c" text-anchor="middle">m, ρ</text>
+<circle id="u01fgs_centerOfMass" cx="217" cy="200" r="3" fill="#c0392b"/>
+<text x="217" y="188" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700"></text>
+<path id="u01fgs_weight" d="M217 200 L217 264" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01fgs_forceMarker)"/>
+<text x="233" y="240" font-size="13" fill="#c0392b" text-anchor="start">G = mg</text>
+<text x="217" y="318" font-size="11" fill="#3a4a56" text-anchor="middle">G: težina samo ulja</text>
+<rect x="18" y="342" width="394" height="28" rx="5" fill="#fffdf3" stroke="#b7600c" stroke-width="1.2"/>
+<text x="215" y="361" font-size="12" fill="#b7600c" text-anchor="middle">ρ = 860 kg/m³; γ ≈ 8,44 kN/m³; sᵣ = 0,86</text>
+</g>
+<g id="u01fgs_comparison" transform="translate(490 30)">
+<rect x="0" y="0" width="460" height="380" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
+<rect x="0" y="0" width="460" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="0" y="21" width="460" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="230.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Usporedba pri istom volumenu V = 1 L</text>
+<text x="230" y="51" font-size="11" fill="#1565c0" text-anchor="middle">Različita gustoća → različita masa i težina</text>
+<defs><linearGradient id="u01fgs_small0" gradientUnits="userSpaceOnUse" x1="0" y1="110" x2="0" y2="290"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
+<rect x="62" y="110" width="88" height="180" rx="0" fill="url(#u01fgs_small0)" stroke="none" stroke-width="1.2"/>
+<line x1="62" y1="110" x2="150" y2="110" stroke="#1565c0" stroke-width="2"/>
+<rect x="54" y="90" width="8" height="208" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="150" y="90" width="8" height="208" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="54" y="290" width="104" height="8" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<text x="106" y="174" font-size="14" fill="#b7600c" text-anchor="middle">ulje</text>
+<text x="106" y="215" font-size="12" fill="#3a4a56" text-anchor="middle" font-weight="700">m = 860 g</text>
+<text x="106" y="239" font-size="12" fill="#3a4a56" text-anchor="middle">G ≈ 8,44 N</text>
+<text x="106" y="318" font-size="11" fill="#3a4a56" text-anchor="middle">ρ = 860 kg/m³</text>
+<defs><linearGradient id="u01fgs_small1" gradientUnits="userSpaceOnUse" x1="0" y1="110" x2="0" y2="290"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<rect x="302" y="110" width="88" height="180" rx="0" fill="url(#u01fgs_small1)" stroke="none" stroke-width="1.2"/>
+<line x1="302" y1="110" x2="390" y2="110" stroke="#1565c0" stroke-width="2"/>
+<rect x="294" y="90" width="8" height="208" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="390" y="90" width="8" height="208" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="294" y="290" width="104" height="8" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<text x="346" y="174" font-size="14" fill="#1565c0" text-anchor="middle">voda</text>
+<text x="346" y="215" font-size="12" fill="#3a4a56" text-anchor="middle" font-weight="700">m = 1000 g</text>
+<text x="346" y="239" font-size="12" fill="#3a4a56" text-anchor="middle">G ≈ 9,81 N</text>
+<text x="346" y="318" font-size="11" fill="#3a4a56" text-anchor="middle">ρ = 1000 kg/m³</text>
+<rect x="178" y="140" width="105" height="56" rx="5" fill="#fff0ed" stroke="#c0392b" stroke-width="1.2"/>
+<text x="230" y="160" font-size="12" fill="#c0392b" text-anchor="middle">ΔG ≈ 1,37 N</text>
+<text x="230" y="181" font-size="11" fill="#c0392b" text-anchor="middle">ulje je 14 % lakše</text>
+<rect x="18" y="342" width="424" height="28" rx="5" fill="#faf3ff" stroke="#8e44ad" stroke-width="1.2"/>
+<text x="230" y="361" font-size="13" fill="#8e44ad" text-anchor="middle" font-weight="700">sᵣ = ρᵤₗⱼₑ / ρᵥ = 0,86</text>
+</g>
+</g>
+</svg>

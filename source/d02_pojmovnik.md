@@ -73,6 +73,7 @@ Pojmovnik daje kratke **radne definicije**. One služe za prisjećanje, a ne zam
 | Verifikacija | Provjera rješavaju li kod i numerički postupak zadane jednadžbe dovoljno točno; uključuje provjeru koda, iteracijsku i diskretizacijsku pogrešku te očuvanje. | U12, D04 |
 | Vertikalna komponenta sile na zakrivljenu plohu | Dobiva se integralom tlaka ili metodom zamišljenog fluida; iznos je povezan s njegovom težinom, a smjer se mora odrediti iz normale i strane na kojoj je fluid. | U05 |
 | Volumenski protok | Neto tok volumena kroz plohu, $Q=\int_A\mathbf v\!\cdot\!\mathbf n\,dA$ za nepomičnu plohu; za stlačiv tok općenito nije očuvana veličina. | U07 |
+| Volumni modul elastičnosti | $K=-V\,dp/dV$ za istu količinu fluida uz zadane toplinske uvjete. Za mali porast tlaka i približno stalni $K$ smanjenje volumena iznosi $\Delta V_c\approx V_0\Delta p/K$. Pogreška pomaka ovisi i o omjeru tog smanjenja i istisnutog volumena. | U01 |
 | Weberov broj | $We=\rho V^2L/\sigma$; uspoređuje inercijski i kapilarni učinak. | U02, U11 |
 | Young–Laplaceova relacija | Skok normalnog naprezanja preko mirnog zakrivljenog sučelja razmjeran je površinskoj napetosti i zbroju glavnih zakrivljenosti, uz dosljednu konvenciju normale. | U02 |
 

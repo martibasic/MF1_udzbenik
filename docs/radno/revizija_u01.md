@@ -172,3 +172,95 @@ tekst ne izlazi iz kadra. HTML render U01 i puni Typst render prolaze.
 aktualnosti manifesta i ključa te `git diff --check`. Računski testovi nisu
 ponavljani jer nema numeričkih promjena. Typst i dalje javlja postojeća
 upozorenja za `times.circle` u U10. Objava, commit i push nisu dio ove dorade.
+
+## Ponovni pregled nakon U15 — 22. rujna 2026.
+
+Korisnikov prošireni cilj traži novu provjeru U01 i U02 nakon završnih
+poglavlja. Ponovno su pročitani cijeli izvor U01, svih šest P/Z, stvarni
+verifier i notebook te vizualno pregledano svih sedam referenciranih SVG-ova.
+Polazište je `a7573d1`; izvorne radne kopije spremljene su radi usporedbe.
+Ovaj pregled dopunjuje prethodne evidencije i ne pretpostavlja da stare
+provjere dokazuju točnost sadašnjeg prikaza.
+
+### Matrica odluka prije provedbe
+
+| Mjesto | Postojeći ID / uloga | Odluka i korist | Razina | ID nakon dorade | Veze i provjere | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| P1 | `ex-u01-gustoca-specificna-tezina-i-relativna-gustoca-ulja`; svojstva iz gustoće | ZADRŽATI; precizirati zaokruživanje i hvatište težine ulja na skici | T1 | isti | SVG, verifier | provedeno |
+| P2 | `ex-u01-optereceni-klip-i-tlak-u-zatvorenom-cilindru`; sila–tlak–sila | ZADRŽATI; otvoreni spojni vodovi i jasne sile na klipove | T2 | isti | SVG, verifier | provedeno |
+| P3 | `ex-u01-servisna-hidraulicna-dizalica-t2`; sila, volumen i rad | ZADRŽATI; popraviti kote hoda, odnos promjera i dodati kratku procjenu utjecaja stlačivosti | T2 | isti | SVG, verifier | provedeno |
+| P4 | `ex-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom-t3`; broj poteza | PREPRAVITI razliku između najmanje zadanog podizaja i točno 25 mm; kotirati jedan potez, ne zbroj kao geometrijsku duljinu | T3 | isti | SVG, verifier | provedeno |
+| P5 | `ex-u01-hidraulicna-kocnica-vozila-s-razdiobom-na-vise`; poluga i četiri cilindra | ZADRŽATI; stvarni krakovi 5:1, kote provrta, otvoreni priključci, dvije jednake sile po osovini | T2 | isti | SVG, verifier | provedeno |
+| P6 | `ex-u01-hidraulicka-stezna-naprava-na-robotskoj-liniji-za`; paralelne stege | ZADRŽATI; razjasniti prijenos sile na ćeliju i skalarni zbroj iznosa sila | T2 | isti | verifier | provedeno |
+| Z1 | `task-gustoca-ulja-iz-vaganja`; tara i mjerna razlika | ZADRŽATI; razlikuje se od P1 po određivanju neto mase i tumačenju mjerenja | T1 | isti | SVG, verifier, D06 | provedeno |
+| Z2 | `task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera`; osnovni Pascal | ZADRŽATI temeljnu tehniku; nacrtati točan omjer promjera i kote | T1 | isti | SVG, notebook, verifier | provedeno |
+| Z3 | `task-pogreske-omjera-sile-i-pomaka`; dijagnostika pogreške | ZADRŽATI; ispraviti geometrijski omjer, ne mijenjati dobru aktivnost | T2 | isti | SVG, verifier | provedeno |
+| Z4 | `task-promjer-cilindra-iz-volumena`; obratni mjerni račun | PREPRAVITI dopunom brojčane procjene stlačivosti i pogreške pomaka, uz jasnu bilancu zatvorene količine fluida | T2 | isti | SVG, notebook, verifier, D03/D06 | provedeno |
+| Z5 | `task-izbor-pumpe-sila-i-hod`; izbor iz dvaju ograničenja | ZADRŽATI; provjeriti granične nejednakosti i prikaz radnog promjera | T3 | isti | SVG, notebook, verifier | provedeno |
+| Z6 | `task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra`; intervalna odluka | ZADRŽATI; jasno odvojiti ukupno opterećenje od dodatnog tereta i ukupan tlačni hod od jednog poteza | T4 | isti | SVG, notebook, verifier | provedeno |
+
+`rewrite_status=complete`; `rewrite_level=selective`;
+`sketch_requirement=provjera i ciljana dorada svih sedam postojećih slika`.
+Nema nove rekonstrukcije samo radi novosti: šest vježbi već razdvaja izravni
+račun, pogrešku, obratni račun, izbor i intervalnu odluku. Novi podatci za
+stlačivost autorski su nastavni dodatak, a ne mjerenja ili specifikacija uređaja.
+
+### Početni nalazi ponovnog pregleda
+
+- P2–P4 skrivaju pune stijenke priključaka dodatnim obojenim pravokutnicima.
+  Zasebni gradijenti komora i spojeva stvaraju pruge u istom fluidu.
+- P3 kotira hod između različitih dijelova klipa; P4 prikazuje zbroj svih
+  poteza kao jednu geometrijsku duljinu. U tekstu devet punih poteza daje
+  27 mm, a za točno 25 mm treba osam punih i posljednji djelomični potez.
+- P5 kota glavnog promjera stoji preko uskog voda. Krak papučice označen
+  kao 5a ne mjeri se od zgloba, pa nacrtana poluga ne daje omjer 5:1.
+  Priključci četiriju radnih cilindara prolaze preko njihovih stijenki.
+- Z2/Z3 koriste iste nacrtane širine iako su omjeri promjera 5 i 3;
+  Z5 također treba geometriju povezanu s promjerima. Z6 je valjana shema,
+  ali spojeni fluid treba jednak prostorni gradijent i jasne oznake površina.
+- Stlačivost je samo kvalitativno pitanje; nema računa kojim student
+  uspoređuje promjenu volumena s dopuštenom pogreškom pomaka.
+- Notebook ima korisnu jezgru, ali završava tvrdnjom umjesto pitanjima,
+  a njegove brojke nisu povezane s aktualnim vježbama. Verifier još dopušta
+  1–2 % kod mnogih objavljenih rezultata; tolerancije treba vezati uz ispis.
+
+### Provedene dorade i provjere prije commita
+
+Zadržano je šest riješenih primjera i šest vježbi, njihove razine i postojeći
+ID-jevi. Z4 dopunjen je brojčanom provjerom stlačivosti: gubitak volumena
+0,100 cm³ smanjuje pomak s 10,0 na 9,80 mm, pa pogreška od 2 % ne prolazi
+zadani kriterij od 1 %. P3 s drugim početnim volumenom daje odstupanje
+0,0463 %. U tekstu su izričito razdvojeni ti pokusi, zatvorena količina
+tekućine i pretpostavke modela. Usklađeni su D01–D03, generirani D06,
+notebook i manifest. Novi podatci služe nastavnoj procjeni.
+
+U P4 razdvojeno je devet punih poteza (27 mm) od osam punih i posljednjeg
+poteza od 60 mm (točno 25 mm). U P5 stvarni krakovi poluge daju 5:1,
+a četiri radna cilindra imaju prikazane odgovarajuće provrte i sile.
+Svih sedam SVG-ova zadržava format i raspored panela; popravljeni su
+povezani fluidni prostori, priključci, klipovi, omjeri promjera i kote.
+Provjera prije commita otkrila je pet indeksa od 8,25 jedinica na skici
+vježbi; povećani su na dopuštenih 9 jedinica, bez slabljenja audita.
+
+Provedene provjere:
+
+- `verify_all.py`: PASS, 1321 rezultat (1106 usporedbi s ciljnim
+  vrijednostima i 215 invarijanti), 22 dodatne fizikalne provjere i 90/90
+  ugovora zadataka; U01 ima 83 provjere.
+- `check_u01_sketch_geometry.py`: PASS za svih sedam stvarnih SVG-ova;
+  provjerava fluidne prolaze, stijenke, klipove, sile, promjere i kote.
+- Strukturni i Typst audit, normalizacija, aktualnost D06 i manifesta:
+  PASS; struktura knjige ostaje 87 primjera i 90 vježbi.
+- Notebook izvršen od početka u čistom kernelu: PASS, 5,27 s.
+- Obnovljeni HTML U01: PASS na 320, 768 i 1440 px, svih šest vježbi,
+  stare poveznice, 12 blokova dostupnih tipkovnicom, bez prelijevanja;
+  automatizirana WCAG A/AA provjera i povratne poveznice D06: PASS.
+- Obnovljen puni nativni PDF: 319 A4 stranica, `audit_pdf.py` PASS.
+  Vizualno pregledane sve slike U01 na stranicama 15, 17, 20, 21, 23,
+  25 i 30 te nastavak odgovora Z4 u ključu na stranici 300.
+
+Računske i geometrijske provjere dopunjuju autorski i vizualni pregled;
+ne dokazuju same didaktičku kvalitetu. Postojeća Typst upozorenja za
+`times.circle` u U10 ostaju. Ponovni pregled U02 i završna zajednička
+provjera cijele knjige ostaju dio šireg cilja. GitHub će nakon pusha
+izvršiti puni postupak objave iz `publish.yml`.

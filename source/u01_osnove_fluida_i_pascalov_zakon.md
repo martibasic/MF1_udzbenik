@@ -1,4 +1,4 @@
-![Pregled poglavlja: fizikalni sustav (Pascalov zakon s dva klipa), ključna jednadžba p = F₁/A₁ = F₂/A₂ i primjena u praksi (hidraulična dizalica)](../assets/print/u01_fig_uvod_pregled.svg){#fig-uvod-u01 fig-align="center" fig-alt="Pregled poglavlja: fizikalni sustav (Pascalov zakon s dva klipa), ključna jednadžba p = F₁/A₁ = F₂/A₂ i primjena u praksi (hidraulična dizalica)"}
+![Kontinuum i tlačne sile na mali element, svojstva ulja i vode te Pascalov prijenos između povezanih klipova](../assets/print/u01_fig_uvod_pregled.svg){#fig-uvod-u01 fig-align="center" fig-alt="Kontinuum i tlačne sile na mali element, svojstva ulja i vode te Pascalov prijenos između povezanih klipova"}
 
 ## Fluid kao kontinuum
 
@@ -87,7 +87,7 @@ $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-02}
 Specifična težina ulja iznosi
 
 $$
-\gamma = \rho g = 860 \cdot 9{,}81 = 8437\ \text{N/m}^3\approx 8{,}44\ \text{kN/m}^3.
+\gamma = \rho g = 860 \cdot 9{,}81 = 8436{,}6\ \text{N/m}^3\approx 8{,}44\ \text{kN/m}^3.
 $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-03}
 
 Relativna gustoća dobiva se omjerom prema vodi:
@@ -148,6 +148,28 @@ $$ {#eq-svojstva-tlak-interaktivni-prikaz-hidraulicna-presa-01}
 Jednakost je posljedica nestlačivosti fluida: volumen koji jedan klip istisne jednak je volumenu kojim se pomiče drugi klip. Manji klip zato mora prijeći dulji put. Sustav s omjerom površina 35 zahtijeva da mali klip prijeđe 35 puta dulji put od radnog klipa. Volumna bilanca ne ovisi o razini tlaka, nego o pretpostavci nestlačivosti fluida.
 
 Veća izlazna sila zato dolazi uz manji izlazni pomak.
+
+::: {.mf1-granica-modela}
+<p class="mf1-box-label">Kada stlačivost utječe na pomak klipa?</p>
+
+Volumni modul elastičnosti $K$ povezuje porast tlaka i smanjenje volumena
+iste količine tekućine. Za mali porast tlaka pri stalnoj temperaturi i
+približno stalnom $K$ vrijedi
+
+$$
+K=-V\frac{dp}{dV},\qquad
+\Delta V_c\approx V_0\frac{\Delta p}{K}>0.
+$$ {#eq-modul-stlacivosti-volumna-promjena}
+
+Ovdje je $V_0$ početni ukupni volumen zatvorene tekućine, a $\Delta V_c$
+pozitivan iznos njegova smanjenja. Ako pumpni klip smanji svoju komoru za
+$\Delta V_p$, dio tog volumena nadoknađuje stlačivanje, pa radni klip
+dobiva $A_Ls_L\approx\Delta V_p-\Delta V_c$. To vrijedi bez propuštanja,
+zraka i rastezanja vodova. Ne uspoređuje se samo $\Delta p/K$ s malim
+brojem: za točnost pomaka važan je omjer $\Delta V_c/\Delta V_p$.
+Mala promjena gustoće može biti važna kada je istisnuti volumen malen.
+:::
+
 
 U osnovnom hidrauličnom prijenosu tlak se promatra u zatvorenom fluidu u mirovanju, pri čemu se zanemaruje razlika visina. Sustavi čije se radne točke nalaze na različitim visinama analiziraju se zajedno s hidrostatskom raspodjelom tlaka, obrađenom u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 3</span><span class="mf1-ch-title">Hidrostatička raspodjela tlaka i manometrija</span></span>.
 
@@ -258,7 +280,7 @@ Računalo usklađuje tlakove i brzine tako da se ta bilanca zadovolji u cijelom 
 
 **Pretpostavke i model**
 
-Na istoj razini mirujućeg ulja tlak se čita izravno iz odnosa sile i površine. Tek nakon što se odredi tlak pod opterećenim klipom, isti se tlak smije prenijeti na drugi klip i pretvoriti u novu silu.
+Na istoj razini mirujućeg ulja tlak se čita izravno iz odnosa sile i površine. Obje vanjske strane klipova su na atmosferskom tlaku, a trenje i razlike visina zanemaruju se. Tek nakon što se odredi tlak pod opterećenim klipom, isti se tlak smije prenijeti na drugi klip i pretvoriti u novu silu.
 
 **Rješenje**
 
@@ -309,13 +331,13 @@ Veća ukupna sila na istom klipu daje veći tlak u ulju. Pri istome tlaku veća 
 2. silu na velikom klipu.
 3. pomak velikog klipa.
 
-Gubici i stlačivost ulja zanemaruju se.
+Osnovni račun zanemaruje gubitke i stlačivost ulja. Vanjske strane klipova su na atmosferskom tlaku, a hidrostatske razlike tlaka zanemarive.
 
 ![servisna hidraulična dizalica](../assets/print/u01_val2_hidraulicna_dizalica.svg){#fig-u01-servisna-hidraulicna-dizalica fig-alt="servisna hidraulična dizalica"}
 
 **Pretpostavke i model**
 
-Promatra se fluid u mirovanju u zatvorenom hidrauličnom sustavu. Tlak se određuje iz sile i površine maloga klipa, na drugome se klipu pretvara u silu, a pomak se određuje iz jednakosti istisnutoga volumena.
+Promatra se kvazistatički rad zatvorenoga hidrauličnog sustava; za tlak se primjenjuje ravnoteža sila. Tlak se određuje iz sile i površine maloga klipa, na drugome se klipu pretvara u silu, a pomak se određuje iz jednakosti istisnutoga volumena.
 
 **Rješenje**
 
@@ -358,6 +380,18 @@ $$ {#eq-svojstva-tlak-rijeseni-primjer-servisna-hidraulicna-dizalica-t-06}
 **Tumačenje rezultata**
 
 Kako je $A_2/A_1=35$, izlazna sila 35 je puta veća, a izlazni pomak 35 puta manji od pripadnih ulaznih veličina. Istodobno veliko povećanje sile i pomaka bilo bi protivno volumnoj bilanci i očuvanju rada.
+
+**Procjena stlačivosti.** Za zasebnu nastavnu provjeru uzmi početni ukupni
+volumen zatvorenog ulja $V_0=300\ \mathrm{cm^3}$ i $K=1{,}50\ \mathrm{GPa}$.
+U toj odvojenoj provjeri sila i vanjsko opterećenje polako rastu. Tijekom tlačenja od nultog pretlaka do $250\ \mathrm{kPa}$ pumpni klip
+istisne $\Delta V_p=A_1s_1=108\ \mathrm{cm^3}$. Pri stalnoj temperaturi,
+bez zraka, propuštanja i elastičnosti vodova, stlačivanje iznosi
+$\Delta V_c\approx0{,}0500\ \mathrm{cm^3}$. Za radni pomak preostaje
+$107{,}95\ \mathrm{cm^3}$, odnosno $s_{2,c}\approx5{,}1405\ \mathrm{mm}$.
+Odstupanje prema idealnom pomaku iz nezaokruženih podataka iznosi
+$0{,}0463\,\%$, manje od nastavnog kriterija $1\,\%$. U ovom pokusu
+nestlačivi model dovoljno je točan za pomak; zaključak se ne prenosi
+automatski na sustav većeg volumena ili manji pumpni hod.
 :::
 
 ::: {#ex-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom-t3 .mf1-ch}
@@ -373,20 +407,20 @@ Kako je $A_2/A_1=35$, izlazna sila 35 je puta veća, a izlazni pomak 35 puta man
 - Visina podizanja platforme: $s_L = 25\ \text{mm}$
 - Puni hod pumpnog klipa: $s_h = 180\ \text{mm}$
 
-Gubici i stlačivost ulja zanemaruju se, a oba se radna cilindra smatraju jednako opterećenima.
+Gubici, hidrostatske razlike i stlačivost ulja zanemaruju se. Oba radna cilindra jednako su opterećena i mehanički vođena na isti pomak. Idealni nepovratni ventili zadržavaju platformu tijekom povratnog poteza i dopuštaju ponovno punjenje pumpe; povratni potezi ne ulaze u zbroj tlačnih hodova. Vanjske strane klipova su na atmosferskom tlaku.
 
 **Traženo**
 
 1. tlak $p$ u ulju.
 2. silu jednoga radnog cilindra i ukupnu idealiziranu podiznu silu $G$.
 3. ukupni zbroj hodova pumpnog klipa potreban da se platforma podigne za $s_L$.
-4. najmanji broj punih pumpnih hodova potreban za taj podizaj.
+4. najmanji broj punih tlačnih hodova za podizaj od barem zadane visine te zadnji djelomični hod za točno zadanu visinu.
 
 ![dvostruka hidraulična platforma s ručnom pumpom](../assets/print/u01_ch1_dvostruka_platforma_manometar.svg){#fig-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom fig-alt="dvostruka hidraulična platforma s ručnom pumpom"}
 
 **Pretpostavke i model**
 
-U zatvorenom ulju u mirovanju tlak koji stvara mali pumpni klip prenosi se jednako na oba radna cilindra. Iz sile i površine pumpnog klipa određuje se tlak, iz njega sila na radnim cilindrima te iz volumne bilance ukupni hod i broj pumpnih poteza.
+Tijekom sporoga tlačnog poteza zanemaruju se razlike tlaka zbog strujanja, pa mali pumpni klip nameće isti pretlak na oba radna cilindra. Iz sile i površine pumpnog klipa određuje se tlak, iz njega sila na radnim cilindrima te iz volumne bilance ukupni hod i broj pumpnih poteza.
 
 **Rješenje**
 
@@ -433,14 +467,18 @@ $$ {#eq-svojstva-tlak-3-zbroj-hodova-pumpnog-klipa-02}
 Uz $s_h = 180\ \text{mm} = 0{,}180\ \text{m}$ najmanji potreban broj punih hodova je
 
 $$
-n = \frac{s_p}{s_h} = \frac{1{,}5}{0{,}180} = 8{,}33,
+\frac{s_p}{s_h} = \frac{1{,}5}{0{,}180} \approx 8{,}33,
 $$ {#eq-svojstva-tlak-4-broj-punih-pumpnih-hodova-01}
 
-pa je potreban najmanje $n = 9$ punih pumpnih hodova.
+pa je za podizaj **barem** 25 mm potreban najmanje $n=9$ punih tlačnih
+hodova. Oni daju podizaj $s_{L,9}=27{,}0\ \mathrm{mm}$. Za **točno**
+25 mm dovoljno je osam punih hodova i posljednji djelomični hod
+$s_{zad}=1{,}50-8\cdot0{,}180=0{,}060\ \mathrm{m}=60\ \mathrm{mm}$.
+Zbroj hodova nije duljina jednoga pumpnog cilindra.
 
 **Tumačenje rezultata**
 
-Pumpni klip površine $5\ \text{cm}^2$ pod silom $460\ \text{N}$ u idealnom modelu stvara tlak od $0{,}92\ \text{MPa}$. Na toj tlačnoj razini svaki radni cilindar daje oko $13{,}8\ \text{kN}$, odnosno zajedno oko $27{,}6\ \text{kN}$. To nije dopuštena nosivost platforme: nedostaju vlastita težina, trenje, razdioba opterećenja, čvrstoća, stabilnost, sigurnosni uređaji i mjerodavni propisi. Za podizanje za $25\ \text{mm}$ potreban je ukupni zbroj hodova pumpnog klipa od $1{,}5\ \text{m}$, odnosno najmanje devet punih pumpnih poteza.
+Pumpni klip površine $5\ \text{cm}^2$ pod silom $460\ \text{N}$ u idealnom modelu stvara tlak od $0{,}92\ \text{MPa}$. Na toj tlačnoj razini svaki radni cilindar daje oko $13{,}8\ \text{kN}$, odnosno zajedno oko $27{,}6\ \text{kN}$. To nije dopuštena nosivost platforme: nedostaju vlastita težina, trenje, razdioba opterećenja, čvrstoća, stabilnost, sigurnosni uređaji i mjerodavni propisi. Za podizanje za $25\ \text{mm}$ potreban je ukupni zbroj hodova pumpnog klipa od $1{,}5\ \text{m}$, odnosno osam punih poteza i posljednji potez od 60 mm. Devet punih poteza doseže 27 mm.
 
 Ukupna idealizirana podizna sila veća je od sile na pumpnom klipu zbog veće ukupne radne površine. Ukupni hod pumpe ostaje velik jer mali klip volumenski puni dva velika cilindra. Broj potrebnih punih hodova zaokružuje se na prvi veći cijeli broj.
 ::: 
@@ -449,7 +487,7 @@ Ukupna idealizirana podizna sila veća je od sile na pumpnom klipu zbog veće uk
 <p class="mf1-box-label">P5. Hidraulična kočnica vozila s razdiobom na više kočnih cilindara &nbsp;<span class="mf1-level">T2</span></p>
 
 
-**Kontekst:** U hidrauličnom kočnom sustavu osobnog vozila operater pritiska kočnu papučicu, a poluga papučice mehanički povećava silu prije nego se ona prenese na klip glavnog kočnog cilindra. Tlak koji se u glavnom cilindru razvije isti se prenosi do **četiri** kočna cilindra (po jedan u svakom kotaču), ali kočna kliješta na prednjoj osovini imaju veći promjer od onih na stražnjoj. Time se s **jednim** ulazom (papučicom) dobivaju **četiri različite** kočne sile prilagođene podjeli kočne težine između prednje i stražnje osovine.
+**Kontekst:** U hidrauličnom kočnom sustavu osobnog vozila operater pritiska kočnu papučicu, a poluga papučice mehanički povećava silu prije nego se ona prenese na klip glavnog kočnog cilindra. Tlak koji se u glavnom cilindru razvije isti se prenosi do **četiri** kočna cilindra (po jedan u svakom kotaču), ali kočna kliješta na prednjoj osovini imaju veći promjer od onih na stražnjoj. Time se s **jednim** ulazom (papučicom) dobivaju četiri sile klipova: dvije jednake veće sile sprijeda i dvije jednake manje straga. Time se uspoređuje hidraulički prijenos; razdioba stvarnih sila kočenja traži i model kliješta, diskova i dodira gume s podlogom.
 
 **Zadano**
 
@@ -465,9 +503,9 @@ Ukupna idealizirana podizna sila veća je od sile na pumpnom klipu zbog veće uk
 2. Manometarski tlak u kočnoj tekućini.
 3. Sila koju razvija klip svakoga **prednjeg** kočnog cilindra.
 4. Sila koju razvija klip svakoga **stražnjeg** kočnog cilindra.
-5. Zbroj sila svih klipova i omjer toga zbroja prema sili vozača na papučicu.
+5. Skalarni zbroj iznosa sila svih klipova i omjer toga zbroja prema sili vozača na papučicu.
 
-![Hidraulična kočnica vozila: papučica s polugom $i = 5$, glavni cilindar $d_M = 20$ mm i četiri kočna cilindra (prednji $d_f = 35$ mm, stražnji $d_r = 30$ mm). Isti tlak u kočnoj tekućini daje različite sile na kočna kliješta.](../assets/print/u01_fig_kocnica_vozila.svg){#fig-u01-kocnica-vozila fig-align="center" fig-alt="Hidraulična kočnica vozila: papučica s polugom $i = 5$, glavni cilindar $d_M = 20$ mm i četiri kočna cilindra (prednji $d_f = 35$ mm, stražnji $d_r = 30$ mm). Isti tlak u kočnoj tekućini daje različite sile na kočna kliješta."}
+![Hidraulična kočnica vozila: papučica s polugom $i = 5$, glavni cilindar $d_M = 20$ mm i četiri kočna cilindra (prednji $d_f = 35$ mm, stražnji $d_r = 30$ mm). Isti tlak daje dvije jednake prednje i dvije jednake stražnje sile klipova. Krakovi poluge mjere se od istog zgloba; diskovi i kontakti nisu prikazani.](../assets/print/u01_fig_kocnica_vozila.svg){#fig-u01-kocnica-vozila fig-align="center" fig-alt="Hidraulična kočnica vozila: papučica s polugom $i = 5$, glavni cilindar $d_M = 20$ mm i četiri kočna cilindra (prednji $d_f = 35$ mm, stražnji $d_r = 30$ mm). Isti tlak daje dvije jednake prednje i dvije jednake stražnje sile klipova. Krakovi poluge mjere se od istog zgloba; diskovi i kontakti nisu prikazani."}
 
 **Pretpostavke i model**
 
@@ -515,7 +553,7 @@ $$
 F_r = p \cdot A_r = 4{,}77 \cdot 10^6 \cdot 7{,}069 \cdot 10^{-4} \approx 3{,}38\ \text{kN}
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-07}
 
-Zbroj sila svih klipova (dva prednja + dva stražnja):
+Skalarni zbroj iznosa sila klipova (dva prednja + dva stražnja; nije rezultantni vektor):
 
 $$
 F_{uk} = 2 F_f + 2 F_r = 2 \cdot 4{,}59 + 2 \cdot 3{,}38 = 15{,}94\ \text{kN}
@@ -546,18 +584,18 @@ $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-09}
 - Sila pogonskog motora na pumpni klip: $F_p = 420\ \text{N}$
 - Promjer svakog steznog cilindra: $d_s = 28\ \text{mm}$
 - Broj paralelnih stega: $n = 6$
-- Najveća dopuštena sila na jednoj baterijskoj ćeliji (radi sprječavanja oštećenja): $F_{dop} = 3{,}5\ \text{kN}$
+- Zadana nastavna granica sile na jednoj ćeliji (nije specifikacija proizvođača): $F_{dop} = 3{,}5\ \text{kN}$
 
 **Traženo**
 
 1. manometarski tlak u sustavu;
 2. sila stezanja jednog cilindra;
-3. ukupna sila stezanja na modulu;
+3. skalarni zbroj iznosa sila šest stega;
 4. ostaje li sila po jednoj stezi unutar dopuštene vrijednosti $F_{dop}$.
 
 **Pretpostavke i model**
 
-Hidrauličko ulje smatra se nestlačivim, gubici u vodovima zanemarivi, svi cilindri leže približno na istoj razini. Sustav radi u kvazistatičkom stanju nakon što su sve stege dosegle radni položaj. Tlak se tada uzima jednakim u svim paralelnim steznim cilindrima.
+Hidrauličko ulje smatra se nestlačivim, gubici u vodovima zanemarivi, svi cilindri leže približno na istoj razini. Sustav radi u kvazistatičkom stanju nakon što su sve stege dosegle radni položaj. Tlak se tada uzima jednakim u svim paralelnim steznim cilindrima. Za usporedbu s granicom pretpostavi izravan prijenos sile jedne stege na jednu ćeliju; ostale stege ne opterećuju tu istu ćeliju. Zbroj iznosa sila nije rezultantna sila na cijeli modul.
 
 **Rješenje**
 
@@ -585,7 +623,7 @@ $$
 F_s = p \cdot A_s = 2{,}729 \cdot 10^6 \cdot 6{,}158 \cdot 10^{-4} \approx 1{,}680\ \text{kN}.
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-04}
 
-Kako sustav ima $n = 6$ paralelnih stega, ukupna sila stezanja na modulu iznosi
+Kako sustav ima $n = 6$ paralelnih stega, skalarni zbroj iznosa njihovih sila iznosi
 
 $$
 F_{uk} = n \cdot F_s = 6 \cdot 1{,}680 \approx 10{,}08\ \text{kN}.
@@ -593,7 +631,7 @@ $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-05}
 
 Sila jedne stege $F_s \approx 1{,}68\ \text{kN}$ manja je od zadane granice $F_{dop} = 3{,}5\ \text{kN}$. Time se provjerava idealizirano opterećenje jedne stege, a ne potpuna sigurnost ćelije ili proizvodne linije.
 
-**Pitanje za stručnu provjeru.** Usporedba $F_s$ s dopuštenom silom na jednoj ćeliji vrijedi samo ako konstrukcija stege prenosi silu jednog cilindra na jednu ćeliju bez dodatne raspodjele opterećenja. U stvarnoj napravi odnos sile stege i sile na pojedinoj ćeliji zahtijeva model kontakta i geometrije modula.
+**Granica modela.** Usporedba $F_s$ s dopuštenom silom na jednoj ćeliji vrijedi samo ako konstrukcija stege prenosi silu jednog cilindra na jednu ćeliju bez dodatne raspodjele opterećenja. U stvarnoj napravi odnos sile stege i sile na pojedinoj ćeliji zahtijeva model kontakta i geometrije modula.
 
 **Tumačenje rezultata**
 
@@ -604,9 +642,9 @@ Omjer sile jednoga idealnog cilindra i sile pumpnoga klipa iznosi $F_s/F_p = 168
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički most</p>
 
-**Gdje ovo živi u numerici.** Tlak kao skalarno polje $p(x,y,z)$ — temeljni objekt koji svaki CFD solver mora prije svega *postaviti*. Pojam tlaka u kontinuumu i Pascalov zakon su upravo razlog zašto se u nestlačivom CFD-u tlak ne marsira u vremenu, nego se rješava globalno po cijeloj domeni.
+**Gdje ovo živi u numerici.** Tlak kao skalarno polje $p(x,y,z)$ — temeljni objekt koji svaki CFD solver mora prije svega *postaviti*. U uobičajenim metodama za nestlačivi tok tlak se određuje iz sprege jednadžbi gibanja i kontinuiteta u cijeloj domeni. To ne znači da tlak ne ovisi o vremenu niti da Pascalov zakon sam određuje tlak u strujanju.
 
-**Što numerički alat radi s tim.** Na početku simulacije postavlja se *inicijalni uvjet tlaka* — najčešće jednoliko polje ili hidrostatska raspodjela iz idućeg poglavlja. Promjene na rubu (klip, ulaz crpke, ventil) propagiraju se kroz mrežu kontrolnih volumena unutar jedne iteracije sprege tlaka i brzine.
+**Što numerički alat radi s tim.** Na početku simulacije postavlja se *inicijalni uvjet tlaka* — najčešće jednoliko polje ili hidrostatska raspodjela iz poglavlja o hidrostatici. Promjene na rubu (klip, ulaz crpke, ventil) utječu na povezani sustav jednadžbi; do usklađenog rješenja obično treba više iteracija. Numerička iteracija nije fizikalno vrijeme putovanja tlačnog vala.
 
 **Tipičan scenarij.** U industrijskom hidrauličkom sustavu CFD se rijetko primjenjuje na samu Pascalovu prijenosnu silu — ona je analitički rješiva. Vrijednost numerike pojavljuje se onda kad fluid prolazi uskim kanalima, kroz ventile ili kada se promatra dinamika tlačnog vala (vodeni udar pri naglom zatvaranju ventila): tada lokalna polja brzine, tlaka i mogućih kavitacijskih zona postaju netrivijalna, a analitička procjena prestaje biti dovoljna.
 
@@ -618,13 +656,13 @@ Omjer sile jednoga idealnog cilindra i sile pumpnoga klipa iznosi $F_s/F_p = 168
 
 1. Zašto tlak u fluidu u mirovanju u točki ne ovisi o orijentaciji zamišljene plohe kroz tu točku?
 2. Zašto veća sila na radnom klipu hidraulične preše ne znači stvaranje rada iz ničega?
-3. Kada je razumno uzeti da je ulje u ovim zadatcima praktično nestlačivo?
+3. Zašto mala promjena gustoće još ne jamči točan pomak klipa? Koja dva volumena treba usporediti?
 4. Zašto se u Pascalovu zakonu uspoređuju tlakovi, a ne samo sile?
 
 ::: {.callout-note collapse="true"}
 ### Odgovori
 
-U fluidu u mirovanju tlak je izotropan jer bi inače nastao tangencijalni rezultant koji bi pokrenuo tok. Povećanje sile prati manji pomak pa se idealni rad ne stvara nego prenosi. Aproksimacija nestlačivosti vrijedi kada su promjene gustoće u odnosu na traženu točnost zanemarive. Sile same nisu dovoljne jer ovise i o površini na kojoj djeluju.
+Izotropnost tlaka slijedi iz ravnoteže sila na malom elementu fluida bez smičnih naprezanja, kako pokazuje izvod s tetraedrom. Povećanje sile prati manji pomak pa se idealni rad ne stvara nego prenosi. Za pomak klipa treba usporediti volumen stlačivanja s istisnutim volumenom pumpe: mali omjer $\Delta p/K$ sam nije dovoljan ako je $V_0$ velik. Sile same nisu dovoljne jer ovise i o površini na kojoj djeluju.
 :::
 :::
 
@@ -655,7 +693,7 @@ Za uske kanale, ventile, elastične vodove, tlačne valove ili kavitaciju ideali
 
 ::::: {.mf1-vjezbe-list}
 
-U hidrauličnim zadatcima tlak $p$ označuje razliku tlakova preko radnog klipa. Pretpostavljaju se kvazistatički rad, približno jednake visine klipova i kruti vodovi. Zanemaruju se trenje, propuštanje i stlačivost tekućine, osim gdje Z6 izričito uvodi faktore odstupanja od idealnog prijenosa. Sile djeluju izravno na klipove, bez dodatnog prijenosa polugom. Svi su brojčani podatci nastavni; mjerni nizovi u Z1 i Z4 sintetički su podatci, a ne zapis stvarnog pokusa.
+U hidrauličnim zadatcima tlak $p$ označuje razliku tlakova preko radnog klipa. Pretpostavljaju se kvazistatički rad, približno jednake visine klipova i kruti vodovi. Zanemaruju se trenje, propuštanje i stlačivost tekućine, osim u dopunskom pokusu stlačivosti u Z4 i modelu učinkovitosti u Z6. Sile djeluju izravno na klipove, bez dodatnog prijenosa polugom. Svi su brojčani podatci nastavni; mjerni nizovi u Z1 i Z4 sintetički su podatci, a ne zapis stvarnog pokusa.
 
 <span id="task-u01-na-kruzni-klip-promjera-djeluje-sila-odredi"></span>
 
@@ -734,18 +772,33 @@ Laboratorijski cilindar prije mjerenja potpuno je napunjen tekućinom i odzrače
 | 10,0 | 20,0 |
 | 15,0 | 30,0 |
 
-Odredi efektivnu površinu i promjer klipa iz svakog para podataka. Jesu li rezultati usklađeni s pretpostavkom stalne površine i nestlačive tekućine? Predvidi idealnu silu u pokusu s blokiranim klipom. Bi li sustavno manji pomaci pri većem tlaku bili razlog za provjeru stlačivosti tekućine ili elastičnosti vodova? Objasni zašto početna tablica sama ne jamči valjanost modela pri svakom tlaku.
+Odredi efektivnu površinu i promjer klipa iz svakog para podataka, provjeri
+njihovu usklađenost i predvidi idealnu silu u pokusu s blokiranim klipom.
+
+U trećem pokusu cilindar i pumpa čine zatvoren sustav s početnim ukupnim
+volumenom tekućine $V_0=250\ \mathrm{cm^3}$. Pumpni klip smanji svoju
+komoru za $\Delta V_p=5{,}00\ \mathrm{cm^3}$, a tlak polako naraste za
+$\Delta p=0{,}40\ \mathrm{MPa}$. Radni klip sada je slobodan za pomak;
+vanjsko opterećenje prilagođava se kvazistatički. Za zadani
+$K=1{,}00\ \mathrm{GPa}$ i stalnu temperaturu procijeni volumen
+stlačivanja i konačni pomak. Nema zraka, propuštanja ni rastezanja vodova.
+Ukupna masa tekućine, uključujući tekućinu u pumpi, ostaje ista.
+
+Zanemarivanje stlačivosti prihvatljivo je ako promjena pomaka prema
+nestlačivom proračunu ne prelazi $1{,}0\,\%$. Odluči prolazi li taj
+kriterij. Objasni zašto početna tablica sama ne jamči valjanost modela
+pri svakom tlaku niti otkriva uzrok mogućeg odstupanja u stvarnom uređaju.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Usporedi omjere dodatnog volumena i pomaka. Iz dobivene površine izračunaj promjer, zatim silu u drugom pokusu. Podudaranje pri malom opterećenju podupire model samo u ispitanim uvjetima; odstupanje pri većem tlaku zahtijeva dodatne podatke.
+Usporedi omjere volumena i pomaka, zatim izračunaj promjer i silu. U trećem pokusu razdvoji volumen istisnut pumpom i smanjenje volumena iste tekućine: samo ostatak pomiče radni klip. Pogrešku usporedi s nestlačivim pomakom; podudaranje početnih mjerenja vrijedi samo za ispitane uvjete.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-Sva tri para daju $A=500\ \text{mm}^2$ i $d\approx25{,}23\ \text{mm}$; idealno $F=200\ \text{N}$. Tablica je usklađena s modelom u ispitanim uvjetima. Manji pomak pri većem tlaku opravdava provjeru stlačivosti, elastičnosti i propuštanja; ne dokazuje jedan određeni uzrok.
+Sva tri para daju $A=500\ \mathrm{mm^2}$ i $d\approx25{,}23\ \mathrm{mm}$; blokirani klip daje $F=200\ \mathrm{N}$. U trećem pokusu $\Delta V_c\approx0{,}100\ \mathrm{cm^3}$, $s\approx9{,}80\ \mathrm{mm}$ umjesto $s_0=10{,}0\ \mathrm{mm}$. Odstupanje je $2{,}0\,\%>1{,}0\,\%$: nestlačivi model ne prolazi. Početna tablica ne potvrđuje sve tlakove; stvarno odstupanje samo ne razlikuje stlačivost, elastičnost i propuštanje.
 :::
 ::::
 
@@ -776,7 +829,7 @@ $p=2{,}00\ \text{MPa}$. Za promjere 8, 9 i 10 mm parovi $(F_p,s_p)$ jesu pribli�
 
 ### Z6. Nosivost stola uz nesigurnu učinkovitost {#task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra .unnumbered .unlisted}
 
-Hidraulični radni stol podupiru tri jednaka cilindra, svaki površine $A_L = 95\ \text{cm}^2$. Ulje dovodi pumpni klip promjera $d = 22\ \text{mm}$ na koji djeluje sila $F_p = 360\ \text{N}$. Odredi tlak u ulju, ukupno idealno opterećenje koje stol može nositi i ukupan idealni hod pumpnog klipa potreban da se stol podigne za $\Delta z = 18\ \text{mm}$. U pojednostavljenom modelu uzmi da su zadani faktor prijenosa sile $\eta_F=0{,}86\pm0{,}04$ i volumetrijska učinkovitost $\eta_V=0{,}90\pm0{,}03$. Zapis ± označuje zajamčene granične intervale, a ne standardnu mjernu nesigurnost; svaka kombinacija dopuštenih vrijednosti smatra se mogućom. Faktor prijenosa sile jest omjer korisnog i idealnog opterećenja, a volumetrijska učinkovitost omjer volumena koji dolazi u radne cilindre i volumena istisnutog pumpom. Cilindri jednoliko nose ukupno opterećenje i mehanički su vođeni tako da imaju isti pomak. Stol mora nositi najmanje $22{,}0\ \text{kN}$, a raspoloživi hod pumpe iznosi $1{,}60\ \text{m}$. Izračunaj nominalno i konzervativno korisno opterećenje i potreban hod te obrazloži zadovoljava li sustav oba zahtjeva u cijelom zadanom rasponu učinkovitosti.
+Hidraulični radni stol podupiru tri jednaka cilindra, svaki površine $A_L = 95\ \text{cm}^2$. Ulje dovodi pumpni klip promjera $d = 22\ \text{mm}$ na koji djeluje sila $F_p = 360\ \text{N}$. Odredi tlak u ulju, ukupno idealno opterećenje koje stol može nositi i ukupan idealni hod pumpnog klipa potreban da se stol podigne za $\Delta z = 18\ \text{mm}$. U pojednostavljenom modelu uzmi da su zadani faktor prijenosa sile $\eta_F=0{,}86\pm0{,}04$ i volumetrijska učinkovitost $\eta_V=0{,}90\pm0{,}03$. Zapis ± označuje zajamčene granične intervale, a ne standardnu mjernu nesigurnost; svaka kombinacija dopuštenih vrijednosti smatra se mogućom. Faktor prijenosa sile jest omjer korisnog i idealnog opterećenja, a volumetrijska učinkovitost omjer volumena koji dolazi u radne cilindre i volumena istisnutog pumpom. Cilindri jednoliko nose ukupno opterećenje i mehanički su vođeni tako da imaju isti pomak. Stol mora nositi najmanje $22{,}0\ \text{kN}$, a raspoloživi zbroj tlačnih hodova pumpe iznosi $1{,}60\ \text{m}$. Povratni potezi ne ulaze u zbroj. Opterećenje uključuje težinu pomičnog stola i tereta; nema zasebnog dodatka za njihovu težinu. Izračunaj nominalno i konzervativno korisno opterećenje i potreban hod te obrazloži zadovoljava li sustav oba zahtjeva u cijelom zadanom rasponu učinkovitosti.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}

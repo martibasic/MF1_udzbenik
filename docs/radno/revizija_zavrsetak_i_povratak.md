@@ -15,7 +15,7 @@ ne označava dovršenima preostale korake.
 | 2 | `source/u13_gubici_cjevovodi_crpke_i_mreze.md` | `verify_u13_integrated.py` / U13.CANON | dovršeno; zajednički završni build slijedi | `revizija_u13.md` |
 | 3 | `source/u14_turbostrojevi_i_propulzija.md` | `verify_u12.py` / U12 | dovršeno; zajednički završni build slijedi | `revizija_u14.md` |
 | 4 | `source/u15_otvoreni_tokovi.md` | `verify_u15_open_channels.py` / U15 | dovršeno; zajednički završni build slijedi | `revizija_u15.md` |
-| 5 | `source/u01_osnove_fluida_i_pascalov_zakon.md` | `verify_u01.py` / U01 | slijedi nakon U15 | dopuna `revizija_u01.md` |
+| 5 | `source/u01_osnove_fluida_i_pascalov_zakon.md` | `verify_u01.py` / U01 | dovršeno; zajednički završni build slijedi | dopuna `revizija_u01.md` |
 | 6 | `source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md` | `verify_u02.py` / U02 | slijedi nakon U01 | dopuna `revizija_u02.md` |
 
 Za svaki korak potrebni su pregled svih postojećih P/Z i skica, matrica
@@ -79,3 +79,16 @@ manifest su aktualni. Pojedinosti su u `revizija_u15.md`.
 
 Slijedi ponovni pregled U01 i U02 te zajednički završni build; ovaj commit
 čuva trenutačni napredak i ne označava dovršenim cijeli cilj.
+
+## Provjera prije objave ponovnog pregleda U01 — 22. rujna 2026.
+
+Naknadni zahtjev za commit i push obuhvaća dorade U01, sedam skica,
+notebook, dodatke i pripadne provjere. Numerički i strukturni audit,
+provjera SVG geometrije, izvršenje notebooka, HTML u tri širine, poveznice
+D06 i obnovljeni nativni PDF od 319 A4 stranica prolaze. Prije commita
+ispravljeno je pet premalih indeksa na skici vježbi. Pojedinosti su u
+`revizija_u01.md`. Prethodna GitHub objava U15, run `35783099525`,
+završila je uspješno.
+
+Preostaju ponovni pregled U02 i zajednička završna provjera knjige.
+Ovaj commit ne označava dovršenim cijeli korisnikov cilj.

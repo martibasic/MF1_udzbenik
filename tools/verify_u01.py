@@ -16,7 +16,7 @@ from __future__ import annotations
 import math
 from typing import Any
 
-TOLERANCIJA = 0.01  # 1% relativno odstupanje zbog zaokruzivanja u tekstu
+TOLERANCIJA = 1e-9  # Približni ispisi imaju vlastitu apsolutnu toleranciju.
 
 
 def _close(value: float, target: float, rel: float = TOLERANCIJA) -> bool:
@@ -32,8 +32,10 @@ def _check(
     target: float,
     unit: str = "",
     rel: float = TOLERANCIJA,
+    abs_tol: float = 0.0,
 ) -> None:
-    ok = _close(value, target, rel)
+    roundoff = 8 * math.ulp(max(abs(value), abs(target), 1.0))
+    ok = abs(value - target) <= max(abs_tol, rel * abs(target)) + roundoff
     status = "OK" if ok else "FAIL"
     details = f"{value:.4g} vs {target:.4g} {unit}".strip()
     results.append({"id": rid, "status": status, "details": "" if ok else details})
@@ -95,7 +97,10 @@ def cjeloviti_1(F_p: float = 460.0, A_p_cm2: float = 5.0, A_L_cm2: float = 150.0
     Delta_V = 2 * A_L * s_L
     s_p_total = Delta_V / A_p
     n = math.ceil(s_p_total / s_h)
-    return {"p": p, "F_L": F_L, "G": G, "s_p_total": s_p_total, "n": n}
+    partial = s_p_total - (n - 1) * s_h
+    full_lift = n * A_p * s_h / (2 * A_L)
+    return {"p": p, "F_L": F_L, "G": G, "s_p_total": s_p_total, "n": n,
+            "last_stroke": partial, "full_lift": full_lift}
 
 
 # ------------ Primjer Presa za savijanje cijevi ----------------
@@ -165,6 +170,21 @@ def zadatak_4(volumes: tuple = (5e-6, 10e-6, 15e-6),
     return {"areas": areas, "diameters": diameters, "F": p * areas[0]}
 
 
+def compression_stroke(area: float = 500e-6, initial_volume: float = 250e-6,
+                       swept_volume: float = 5e-6, pressure_rise: float = .40e6,
+                       bulk_modulus: float = 1e9):
+    """Closed liquid mass, rigid walls; first-order isothermal compression."""
+    if min(area, initial_volume, swept_volume, bulk_modulus) <= 0 or pressure_rise < 0:
+        raise ValueError("Potrebne su pozitivne veličine i nenegativan porast tlaka.")
+    contraction = initial_volume * pressure_rise / bulk_modulus
+    if contraction > swept_volume:
+        raise ValueError("Istisnuti volumen nije dovoljan za pretpostavljeni izlazni pomak.")
+    ideal = swept_volume / area
+    stroke = (swept_volume - contraction) / area
+    return {"contraction": contraction, "ideal_stroke": ideal, "stroke": stroke,
+            "relative_error": contraction / swept_volume}
+
+
 def zadatak_5(A_L: float = 30e-4, F_L: float = 6000.0, s_L: float = 0.010,
               diameters: tuple = (0.008, 0.009, 0.010),
               F_max: float = 150.0, s_max: float = 0.50):
@@ -221,20 +241,20 @@ def verify() -> list[dict]:
 
     # Kratki primjer
     r = primjer_kratki()
-    _check(out, "U01.kratki.gamma", r["gamma"], 8437, "N/m^3")
+    _check(out, "U01.kratki.gamma", r["gamma"], 8436.6, "N/m^3", abs_tol=0.05)
     _check(out, "U01.kratki.s_r", r["s_r"], 0.86)
 
     # Primjer 1
     r = primjer_1()
-    _check(out, "U01.P1.A_k", r["A_k"], 0.0201, "m^2")
-    _check(out, "U01.P1.p_Pa", r["p"], 1.79e5, "Pa")
-    _check(out, "U01.P1.F_2", r["F_2"], 8060, "N")
+    _check(out, "U01.P1.A_k", r["A_k"], 0.0201, "m^2", abs_tol=5e-05)
+    _check(out, "U01.P1.p_Pa", r["p"], 1.79e5, "Pa", abs_tol=500)
+    _check(out, "U01.P1.F_2", r["F_2"], 8060, "N", abs_tol=5)
 
     # Primjer 2
     r = primjer_2()
     _check(out, "U01.P2.p_kPa", r["p"] / 1000, 250.0, "kPa")
     _check(out, "U01.P2.F_2", r["F_2"], 5250, "N")
-    _check(out, "U01.P2.s_2_mm", r["s_2"] * 1000, 5.1, "mm")
+    _check(out, "U01.P2.s_2_mm", r["s_2"] * 1000, 5.1, "mm", abs_tol=0.05)
 
     # Cjeloviti zadatak
     r = cjeloviti_1()
@@ -244,12 +264,26 @@ def verify() -> list[dict]:
     _check(out, "U01.CH1.s_p_total_m", r["s_p_total"], 1.5, "m")
     _check(out, "U01.CH1.n", r["n"], 9, "hodova")
 
+    _check(out, "U01.CH1.full_lift_mm", r["full_lift"]*1000, 27.0, "mm")
+    _check(out, "U01.CH1.last_stroke_mm", r["last_stroke"]*1000, 60.0, "mm")
+    _invariant(out, "U01.CH1.full_vs_partial", 8*5e-4*.18/(2*.015)<.025
+               and r['full_lift']>.025
+               and abs(5e-4*(8*.18+r['last_stroke'])-2*.015*.025)<1e-12,
+               "Osmim punim potezom cilj nije dosegnut; deveti puni prelazi cilj, djelomični zatvara volumen.")
+    small = compression_stroke(area=.021, initial_volume=300e-6,
+                               swept_volume=108e-6, pressure_rise=250e3, bulk_modulus=1.5e9)
+    _check(out, "U01.P2.compression_cm3", small['contraction']*1e6, .0500, "cm3", abs_tol=.00005)
+    _check(out, "U01.P2.compressed_stroke_mm", small['stroke']*1e3, 5.1405, "mm", abs_tol=.00005)
+    _check(out, "U01.P2.compression_error_percent", small['relative_error']*100, .0463, "%", abs_tol=.00005)
+    _invariant(out, "U01.P2.compression_criterion", small['relative_error']<.01,
+               "Nastavna provjera P3 mora zadovoljiti kriterij pomaka od 1 posto.")
+
     # Aktualni javni Z1-Z6; fiksni ciljevi ne izvode se iz provjeravanog izlaza.
     z1 = zadatak_1()
     _check(out, "U01.Z1.rho1", z1["rho1"], 858, "kg/m^3", rel=1e-6)
     _check(out, "U01.Z1.rho2", z1["rho2"], 861, "kg/m^3", rel=1e-6)
     _check(out, "U01.Z1.rho_mean", z1["rho"], 859.5, "kg/m^3", rel=1e-6)
-    _check(out, "U01.Z1.gamma", z1["gamma"] / 1000, 8.432, "kN/m^3", rel=0.0001)
+    _check(out, "U01.Z1.gamma", z1["gamma"] / 1000, 8.432, "kN/m^3", abs_tol=0.0005)
     _check(out, "U01.Z1.sr", z1["sr"], 0.8595, "1", rel=1e-6)
     shifted = zadatak_1(m0=0.1426, m1=0.1855, m2=0.2287)
     _invariant(out, "U01.Z1.tare_invariance",
@@ -257,7 +291,7 @@ def verify() -> list[dict]:
                "Promjena mase posude uz iste mase ulja mijenja gustocu.")
 
     z2 = zadatak_2()
-    _check(out, "U01.Z2.p_kPa", z2["p"] / 1000, 292.0, "kPa")
+    _check(out, "U01.Z2.p_kPa", z2["p"] / 1000, 292.0, "kPa", abs_tol=0.5)
     _check(out, "U01.Z2.F_2_kN", z2["F_2"] / 1000, 4.5, "kN")
     _check(out, "U01.Z2.s_2_mm", z2["s_2"] * 1000, 4.8, "mm")
     _invariant(out, "U01.Z2.volume_balance",
@@ -279,9 +313,9 @@ def verify() -> list[dict]:
     _check(out, "U01.Z4.A1", z4["areas"][0] * 1e6, 500, "mm^2", rel=1e-9)
     _check(out, "U01.Z4.A2", z4["areas"][1] * 1e6, 500, "mm^2", rel=1e-9)
     _check(out, "U01.Z4.A3", z4["areas"][2] * 1e6, 500, "mm^2", rel=1e-9)
-    _check(out, "U01.Z4.d1", z4["diameters"][0] * 1000, 25.23, "mm", rel=0.0001)
-    _check(out, "U01.Z4.d2", z4["diameters"][1] * 1000, 25.23, "mm", rel=0.0001)
-    _check(out, "U01.Z4.d3", z4["diameters"][2] * 1000, 25.23, "mm", rel=0.0001)
+    _check(out, "U01.Z4.d1", z4["diameters"][0] * 1000, 25.23, "mm", abs_tol=0.005)
+    _check(out, "U01.Z4.d2", z4["diameters"][1] * 1000, 25.23, "mm", abs_tol=0.005)
+    _check(out, "U01.Z4.d3", z4["diameters"][2] * 1000, 25.23, "mm", abs_tol=0.005)
     _check(out, "U01.Z4.force", z4["F"], 200, "N", rel=1e-9)
     altered = zadatak_4(volumes=(5e-6, 10e-6, 16e-6))
     _invariant(out, "U01.Z4.consistency_sensitivity",
@@ -289,14 +323,29 @@ def verify() -> list[dict]:
                and max(altered["areas"]) - min(altered["areas"]) > 1e-6,
                "Izmjena treceg mjerenja nije prepoznata u provjeri stalne povrsine.")
 
+    c = compression_stroke()
+    _check(out, "U01.Z4.compression_cm3", c['contraction']*1e6, .100, "cm3", abs_tol=.0005)
+    _check(out, "U01.Z4.compressed_stroke_mm", c['stroke']*1e3, 9.80, "mm", abs_tol=.005)
+    _check(out, "U01.Z4.ideal_stroke_mm", c['ideal_stroke']*1e3, 10.0, "mm", abs_tol=.05)
+    _check(out, "U01.Z4.error_percent", c['relative_error']*100, 2.0, "%", abs_tol=.05)
+    exact_contraction = -250e-6 * math.expm1(-.40e6/1e9)
+    zero = compression_stroke(pressure_rise=0)
+    stiff = compression_stroke(bulk_modulus=1e12)
+    _invariant(out, "U01.Z4.compression_balance_and_limit",
+               abs(500e-6*c['stroke']+c['contraction']-5e-6)<1e-15
+               and c['relative_error']>.01 and zero['stroke']==zero['ideal_stroke']
+               and stiff['relative_error']<c['relative_error']
+               and abs(exact_contraction/c['contraction']-1)<.00021,
+               "Stlačivanje zatvara volumen, krši 1 %, nestaje pri nultom tlaku i slaže se s integriranim konstantnim K.")
+
     z5 = zadatak_5()
     _check(out, "U01.Z5.p_MPa", z5["p"] / 1e6, 2.0, "MPa", rel=1e-9)
-    _check(out, "U01.Z5.F8", z5["forces"][0], 100.5, "N", rel=0.0005)
-    _check(out, "U01.Z5.F9", z5["forces"][1], 127.2, "N", rel=0.0005)
-    _check(out, "U01.Z5.F10", z5["forces"][2], 157.1, "N", rel=0.0005)
-    _check(out, "U01.Z5.s8", z5["strokes"][0], 0.5968, "m", rel=0.0005)
-    _check(out, "U01.Z5.s9", z5["strokes"][1], 0.4716, "m", rel=0.0005)
-    _check(out, "U01.Z5.s10", z5["strokes"][2], 0.3820, "m", rel=0.0005)
+    _check(out, "U01.Z5.F8", z5["forces"][0], 100.5, "N", abs_tol=0.05)
+    _check(out, "U01.Z5.F9", z5["forces"][1], 127.2, "N", abs_tol=0.05)
+    _check(out, "U01.Z5.F10", z5["forces"][2], 157.1, "N", abs_tol=0.05)
+    _check(out, "U01.Z5.s8", z5["strokes"][0], 0.5968, "m", abs_tol=5e-05)
+    _check(out, "U01.Z5.s9", z5["strokes"][1], 0.4716, "m", abs_tol=5e-05)
+    _check(out, "U01.Z5.s10", z5["strokes"][2], 0.3820, "m", abs_tol=5e-05)
     _check(out, "U01.Z5.selected_mm", z5["feasible"][0] * 1000, 9, "mm", rel=1e-9)
     _check(out, "U01.Z5.pump_work", z5["works"][1], 60, "J", rel=1e-9)
     _check(out, "U01.Z5.load_work", z5["output_work"], 60, "J", rel=1e-9)
@@ -310,13 +359,13 @@ def verify() -> list[dict]:
                "Promjena povrsine pumpe stvara ili unistava idealni rad.")
 
     z6 = zadatak_6()
-    _check(out, "U01.Z6.p_kPa", z6["p"] / 1000, 947.0, "kPa")
-    _check(out, "U01.Z6.G_kN", z6["G"] / 1000, 27.0, "kN")
-    _check(out, "U01.Z6.s_p", z6["s_p"], 1.35, "m")
-    _check(out, "U01.Z6.G_useful_kN", z6["G_useful"] / 1000, 23.2, "kN")
-    _check(out, "U01.Z6.G_useful_min_kN", z6["G_useful_min"] / 1000, 22.1, "kN")
-    _check(out, "U01.Z6.s_actual", z6["s_actual"], 1.50, "m")
-    _check(out, "U01.Z6.s_actual_max", z6["s_actual_max"], 1.55, "m")
+    _check(out, "U01.Z6.p_kPa", z6["p"] / 1000, 947.0, "kPa", abs_tol=0.5)
+    _check(out, "U01.Z6.G_kN", z6["G"] / 1000, 27.0, "kN", abs_tol=0.05)
+    _check(out, "U01.Z6.s_p", z6["s_p"], 1.35, "m", abs_tol=0.005)
+    _check(out, "U01.Z6.G_useful_kN", z6["G_useful"] / 1000, 23.2, "kN", abs_tol=0.05)
+    _check(out, "U01.Z6.G_useful_min_kN", z6["G_useful_min"] / 1000, 22.1, "kN", abs_tol=0.05)
+    _check(out, "U01.Z6.s_actual", z6["s_actual"], 1.50, "m", abs_tol=0.005)
+    _check(out, "U01.Z6.s_actual_max", z6["s_actual_max"], 1.55, "m", abs_tol=0.005)
     _invariant(out, "U01.Z6.both_requirements",
                z6["G_useful_min"] >= 22e3 and z6["s_actual_max"] <= 1.60,
                "Konzervativni omotac ne zadovoljava oba zahtjeva.")
@@ -328,17 +377,20 @@ def verify() -> list[dict]:
     # Faza 1.5: Hidraulicna kocnica vozila
     r = primjer_kocnica()
     _check(out, "U01.kocnica.F_M", r["F_M"], 1500, "N")
-    _check(out, "U01.kocnica.p_MPa", r["p"] / 1e6, 4.77, "MPa")
-    _check(out, "U01.kocnica.F_f_kN", r["F_f"] / 1000, 4.590, "kN")
-    _check(out, "U01.kocnica.F_r_kN", r["F_r"] / 1000, 3.375, "kN")
-    _check(out, "U01.kocnica.k", r["k"], 53.1)
+    _check(out, "U01.kocnica.p_MPa", r["p"] / 1e6, 4.77, "MPa", abs_tol=0.005)
+    _check(out, "U01.kocnica.F_f_kN", r["F_f"] / 1000, 4.59, "kN", abs_tol=0.005)
+    _check(out, "U01.kocnica.F_r_kN", r["F_r"] / 1000, 3.38, "kN", abs_tol=0.005)
+    _check(out, "U01.kocnica.F_total_kN", r['F_uk']/1000, 15.94, "kN", abs_tol=.005)
+    _invariant(out, "U01.kocnica.geometry_ratio", abs(r['F_f']/r['F_r']-(35/30)**2)<1e-12,
+               "Sile po kotaču moraju slijediti omjer površina.")
+    _check(out, "U01.kocnica.k", r["k"], 53, abs_tol=0.5)
 
     r = primjer_robot_stega()
-    _check(out, "U01.robot.A_p", r["A_p"], 1.539e-4, "m2", rel=0.02)
-    _check(out, "U01.robot.p_MPa", r["p"] / 1e6, 2.73, "MPa", rel=0.02)
-    _check(out, "U01.robot.A_s", r["A_s"], 6.158e-4, "m2", rel=0.02)
-    _check(out, "U01.robot.F_s_kN", r["F_s"] / 1000, 1.680, "kN", rel=0.02)
-    _check(out, "U01.robot.F_total_kN", r["F_total"] / 1000, 10.08, "kN", rel=0.02)
+    _check(out, "U01.robot.A_p", r["A_p"], 1.539e-4, "m2", abs_tol=5e-08)
+    _check(out, "U01.robot.p_MPa", r["p"] / 1e6, 2.73, "MPa", abs_tol=0.005)
+    _check(out, "U01.robot.A_s", r["A_s"], 6.158e-4, "m2", abs_tol=5e-08)
+    _check(out, "U01.robot.F_s_kN", r["F_s"] / 1000, 1.680, "kN", abs_tol=0.0005)
+    _check(out, "U01.robot.F_total_kN", r["F_total"] / 1000, 10.08, "kN", abs_tol=0.005)
 
     return out
 
@@ -352,3 +404,4 @@ if __name__ == "__main__":
         print(f"  [{marker}] {r['id']:25s}  {r.get('details', '')}")
     print()
     print(f"Total: ok={ok}, fail={fail}")
+    raise SystemExit(1 if fail else 0)
