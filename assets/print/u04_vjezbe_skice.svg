@@ -1,403 +1,256 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 740" role="img" aria-labelledby="u04vs_title u04vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u04vs_title">Vjezbe poglavlja 4 - sest minimalnih skica za zadatke Z1-Z6</title>
-  <desc id="u04vs_desc">Mreza 2x3 sa sest mini-skica: Z1 horizontalno ubrzani spremnik s kosom slobodnom plohom, Z2 granica prelijevanja pri ubrzanju, Z3 zatvoreni vertikalni cilindar s ubrzanjem prema gore, Z4 sila na straznjoj stijenci ubrzanog spremnika, Z5 rotirajuca posuda s parabolom slobodne plohe, Z6 otvoreni rotirajuci cilindar s graficnom i radnom parabolom.</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" role="img" aria-labelledby="u04vs_title u04vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+  <title id="u04vs_title">Skice uz zadatke Z1–Z6 iz relativnog mirovanja</title>
+  <desc id="u04vs_desc">Dva stupca i tri reda zadržavaju postojeći stil. Z1: ubrzanje udesno, voda viša lijevo, ispod ruba. Z2: prvi dodir lijevog ruba, desno je dno pokriveno. Z3: zatvoreni cilindar potpuno ispunjen uljem; brzina prema gore u oba zasebna stanja, ubrzanje prema gore u stanju I i prema dolje pri kočenju II. Z4: zatvorena posuda potpuno ispunjena vodom, točke A i B na istoj visini i različitim polumjerima; smjer vrtnje nije zadan. Z5: referentni ravni profil nakon smirivanja, uz zaseban graf točkastih očitanja stražnje razine kroz vrijeme; graf ne predstavlja oblik prolaznog vala. Z6: parabole nominalnog i graničnog stanja, zatvoren usis u osi bez protoka. Crveno je ubrzanje, tamno brzina, zeleno vrtnja, smeđe kote, a tlak skalar. Skice i strelice nisu u mjerilu.</desc>
   <defs>
-    <!-- Voda gradient (kanon) -->
     <linearGradient id="u04vs_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#aed6f1" />
       <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <!-- Ulje gradient za Z3 -->
     <linearGradient id="u04vs_ulje" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fde68a" />
       <stop offset="100%" stop-color="#c8a000" />
     </linearGradient>
-    <!-- Srafura 7x7 px -->
     <pattern id="u04vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
-
-    <!-- Marker sila (crvena - ulazna) 7x5 -->
     <marker id="u04vs_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <!-- Marker omega (zelena) -->
     <marker id="u04vs_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <!-- Marker kote (smeđa) - desni -->
     <marker id="u04vs_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <!-- Marker kote (smeđa) - lijevi (auto-start-reverse) -->
     <marker id="u04vs_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
-    <!-- Marker tlaka (plava) -->
     <marker id="u04vs_pr" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
       <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
+    <marker id="u04vs_aK" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 Z" fill="#2c3e50" />
+    </marker>
+    <marker id="u04ex_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u04ex_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
   </defs>
-
-  <!-- Pozadina -->
-  <rect width="960" height="740" fill="#ffffff" />
-  <!-- ======================================================================
-       PANEL Z1: x=28, y=30, w=448, h=224
-       Horizontalno ubrzani otvoreni spremnik
-       L=1,80 m, h0=0,34 m, H=0,46 m, a=1,20 m/s2
-       Skala: 180 px / 1,80 m = 100 px/m
-       Stražnja stijenka LIJEVO (x=110), prednja DESNO (x=290)
-       Dno y=220, vrh y=120 (H=100 px... pa H stane u 100=46 px ako 100=100 px/m)
-       Recompute: 100 px = 1,0 m. H=0,46m -> 46 px. h0=0,34m -> 34 px.
-       Dno y=220. Vrh kutije y=220-50=170 (50 px nešto iznad H=46 da bude vidljiv prostor).
-       Razina mirno: y=220-34=186.
-       Delta h = aL/g = 1,2*1,8/9,81 = 0,2202 m -> 22 px
-       Razina stražnja: y=186-11=175. Prednja: y=186+11=197.
-  ====================================================================== -->
-  <rect x="28" y="30" width="448" height="224" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- Z1 stijenke (otvoreni odozgo) -->
-  <!-- Lijeva stražnja stijenka -->
-  <rect x="100" y="120" width="10" height="100" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- Desna prednja stijenka -->
-  <rect x="290" y="120" width="10" height="100" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- Dno -->
-  <rect x="100" y="220" width="200" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- Z1 voda - polygon s kosom slobodnom plohom -->
-  <path d="M110,175 L290,197 L290,220 L110,220 Z" fill="url(#u04vs_voda)" />
-  <!-- Slobodna ploha -->
-  <line x1="110" y1="175" x2="290" y2="197" stroke="#1565c0" stroke-width="2" />
-  <!-- Mirna razina (referenca) -->
-  <line x1="110" y1="186" x2="290" y2="186" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-
-  <!-- Z1 strelica a (crvena, desno na razini iznad spremnika) -->
-  <line x1="200" y1="100" x2="260" y2="100" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04vs_aR)" />
-  <!-- Z1 kota L (ispod dna) -->
-  <!-- Z1 oznaka stražnje / prednje stijenke -->
-  <!-- Z1 podatkovni blok desno -->
-  <line x1="320" y1="138" x2="468" y2="138" stroke="#c8d6e4" stroke-width="1" />
-  <!-- ======================================================================
-       PANEL Z2: x=484, y=30, w=448, h=224
-       Granicno ubrzanje (rub prelijevanja)
-       L=1,40 m, h0=0,30 m, H=0,42 m
-       Stražnja stijenka tocno do ruba (h_str = H)
-       Skala 100 px / 1,0 m. L=1,40 -> 140 px. H=0,42 -> 42 px. h0=0,30 -> 30 px.
-       Stražnja x=130, prednja x=270. Dno y=220. Vrh kutije y=120.
-       Mirna razina y=220-30=190. h_str=H=42 -> y=178. Delta h = 2*(H-h0) = 0,24 m = 24 px.
-       Prednja razina = h0 - dh/2 = 30 - 12 = 18 -> y=202.
-       Provjera: stražnja = h0 + dh/2 = 30 + 12 = 42 -> y=178. Tocno H. Match.
-  ====================================================================== -->
-  <rect x="484" y="30" width="448" height="224" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- Z2 stijenke -->
-  <rect x="560" y="178" width="10" height="42" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="700" y="178" width="10" height="42" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="560" y="220" width="150" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- Z2 voda -->
-  <path d="M570,178 L700,202 L700,220 L570,220 Z" fill="url(#u04vs_voda)" />
-  <!-- Slobodna ploha tocno do ruba straznje stijenke -->
-  <line x1="570" y1="178" x2="700" y2="202" stroke="#1565c0" stroke-width="2" />
-  <!-- Mirna razina -->
-  <line x1="570" y1="190" x2="700" y2="190" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-
-  <!-- Z2 oznaka "rub prelijevanja" na gornjem rubu straznje stijenke -->
-  <circle cx="570" cy="178" r="3.6" fill="#c0392b" />
-  <line x1="570" y1="178" x2="538" y2="158" stroke="#c0392b" stroke-width="0.9" />
-  <!-- Z2 strelica a_max -->
-  <line x1="610" y1="150" x2="676" y2="150" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04vs_aR)" />
-  <!-- Z2 kota L (ispod dna) -->
-  <!-- Z2 podatkovni blok desno -->
-  <line x1="740" y1="120" x2="924" y2="120" stroke="#c8d6e4" stroke-width="1" />
-  <!-- ======================================================================
-       PANEL Z3: x=28, y=268, w=448, h=224
-       Zatvoreni vertikalni cilindar napunjen uljem, ubrzanje navise
-       rho=870 kg/m3, h=0,75 m, a_z=2,3 m/s2 navise
-       Cilindar uzak: x=170-230 (60 px wide), y_dno=470, y_vrh=320 (h=150 px za 0,75m)
-       Skala 200 px/m
-  ====================================================================== -->
-  <rect x="28" y="268" width="448" height="224" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- Z3 cilindar stjenke (zatvoren: top + bot + bocne) -->
-  <!-- Top cap -->
-  <rect x="160" y="310" width="80" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- Bottom cap -->
-  <rect x="160" y="470" width="80" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- Lijeva stjenka -->
-  <rect x="160" y="320" width="10" height="150" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- Desna stjenka -->
-  <rect x="230" y="320" width="10" height="150" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- Ulje (pun cilindar) -->
-  <rect x="170" y="320" width="60" height="150" fill="url(#u04vs_ulje)" />
-
-  <!-- Z3 oznaka ulje -->
-  <!-- Z3 strelica a_z (zelena ne, crvena = ulazno ubrzanje), prema gore lijevo od cilindra -->
-  <line x1="118" y1="430" x2="118" y2="350" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04vs_aR)" />
-  <!-- Z3 kota h (desno od cilindra) -->
-  <!-- Z3 oznake tocaka A (vrh) i B (dno) - za delta p -->
-  <circle cx="200" cy="320" r="2.6" fill="#1565c0" />
-  <circle cx="200" cy="470" r="2.6" fill="#1565c0" />
-  <!-- Z3 podatkovni blok desno -->
-  <line x1="320" y1="362" x2="468" y2="362" stroke="#c8d6e4" stroke-width="1" />
-  <!-- ======================================================================
-       PANEL Z4: x=484, y=268, w=448, h=224
-       Hidrostatska sila F=820N na straznjoj stijenci ubrzanog spremnika
-       L=1,60 m, h0=0,36 m, b=0,75 m
-       Skala 100 px / 1 m. L=160 px. h0=36 px.
-       Stražnja stijenka LIJEVO x=560, prednja x=720. Dno y=470.
-       Mirna razina y=434. Trazimo a, ne znamo dh. Pretpostavi pretpostavljeno: za prikaz uzmi dh=15 px.
-       Stražnja razina y=434-15=419 (visa). Prednja y=434+15=449.
-  ====================================================================== -->
-  <rect x="484" y="268" width="448" height="224" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- Z4 stijenke -->
-  <rect x="560" y="380" width="10" height="90" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="720" y="380" width="10" height="90" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="560" y="470" width="170" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- Z4 voda (kosa povrsina) -->
-  <path d="M570,419 L720,449 L720,470 L570,470 Z" fill="url(#u04vs_voda)" />
-  <!-- Slobodna ploha -->
-  <line x1="570" y1="419" x2="720" y2="449" stroke="#1565c0" stroke-width="2" />
-  <!-- Mirna razina -->
-  <line x1="570" y1="434" x2="720" y2="434" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-
-  <!-- Z4 trokut tlaka na straznjoj stijenci (samo kontura) -->
-  <polygon points="570,419 590,470 570,470" fill="#1565c0" opacity="0.22" />
-  <line x1="570" y1="419" x2="590" y2="470" stroke="#1565c0" stroke-width="1.4" />
-
-  <!-- Z4 strelica F (zelena - rezultantna izlazna sila iz hidrostatike) -->
-  <line x1="600" y1="455" x2="650" y2="455" stroke="#1e8449" stroke-width="2.8" marker-end="url(#u04vs_aG)" />
-  <!-- Z4 strelica a (crvena, iznad spremnika) -->
-  <line x1="630" y1="358" x2="690" y2="358" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04vs_aR)" />
-  <!-- Z4 oznaka b (sirina) - mali tag na bocnoj strani -->
-  <!-- Z4 podatkovni blok desno -->
-  <line x1="750" y1="380" x2="924" y2="380" stroke="#c8d6e4" stroke-width="1" />
-  <!-- ======================================================================
-       PANEL Z5: x=28, y=506, w=448, h=220
-       Rotirajuca posuda R=0,28 m, h0=0,22 m, omega=5,5 rad/s
-       Trazi h_rub, h_os, provjera dna
-       Skala 200 px/m. R=0,28 -> 56 px. h0=0,22 -> 44 px.
-       Os simetrije na x=200. x_l=144, x_r=256. Dno y=700. Vrh kutije y=550.
-       h0 razina y=700-44=656.
-       Delta h = omega^2 R^2 / (2g) = 30,25*0,0784/19,62 = 0,1209 m -> 24,2 px
-       h_rub = h0 + dh/2 = 22 + 6 = 28 -> 56 px, y=644 (gore)
-       h_os = h0 - dh/2 = 22 - 6 = 16 -> 32 px, y=668 (dolje)
-       Parabola: x=144,y=644; x=200,y=668; x=256,y=644
-  ====================================================================== -->
-  <rect x="28" y="506" width="448" height="220" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- Z5 stjenke (otvorena posuda) -->
-  <rect x="134" y="566" width="10" height="134" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="256" y="566" width="10" height="134" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="134" y="700" width="132" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- Z5 voda - paraboloid -->
-  <path d="M144,644 Q200,692 256,644 L256,700 L144,700 Z" fill="url(#u04vs_voda)" />
-  <!-- Slobodna ploha (parabola) -->
-  <path d="M144,644 Q200,692 256,644" fill="none" stroke="#1565c0" stroke-width="2" />
-
-  <!-- Z5 os rotacije (isprekidana) -->
-  <line x1="200" y1="552" x2="200" y2="716" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-
-  <!-- Z5 mirna razina h0 -->
-  <line x1="144" y1="656" x2="256" y2="656" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-
-  <!-- Z5 omega strelica zakrivljena iznad posude (zelena) -->
-  <path d="M178,562 A18,10 0 0 1 222,562" fill="none" stroke="#1e8449" stroke-width="2" />
-  <polygon points="222,562 215,558 215,567" fill="#1e8449" />
-  <!-- Z5 oznake tocaka -->
-  <circle cx="200" cy="668" r="2.6" fill="#1565c0" />
-  <line x1="252" y1="644" x2="285" y2="640" stroke="#1565c0" stroke-width="0.8" />
-  <!-- Z5 kota R (od osi do desne stjenke, ispod) -->
-  <!-- Z5 kota h0 (lijevo, mali tag) -->
-  <!-- Z5 podatkovni blok desno -->
-  <line x1="320" y1="598" x2="468" y2="598" stroke="#c8d6e4" stroke-width="1" />
-  <!-- ======================================================================
-       PANEL Z6: x=484, y=506, w=448, h=220
-       Otvoreni cilindar R=0,32 m, H=0,62 m, h0=0,46 m
-       Trazi omega_max, te za omega=0,80*omega_max: h_osa, h_rub, p_M
-       Skala 200 px/m. R=0,32 -> 64 px. H=0,62 -> 124 px. h0=0,46 -> 92 px.
-       Os simetrije x=620. x_l=556, x_r=684. Dno y=700. Vrh stjenke y=576 (H=124).
-       h0 razina y=700-92=608.
-       Granicna: h_rub_max = H=0,62 -> y=576 (tocno do vrha). Dh_max = 2(H-h0)=0,32 m=64px. h_osa_max=608+32=640.
-       Radno: omega=0,80*omega_max -> Dh=0,64*Dh_max=0,2048m=41 px.
-       h_rub_op = h0 + Dh/2 = 46+10,24 = 56,24 cm -> y=700-112,5=587,5
-       h_osa_op = h0 - Dh/2 = 46-10,24 = 35,76 cm -> y=700-71,5=628,5
-  ====================================================================== -->
-  <rect x="484" y="506" width="448" height="220" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" />
-  <!-- Z6 stjenke -->
-  <rect x="546" y="572" width="10" height="128" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="684" y="572" width="10" height="128" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="546" y="700" width="148" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- Z6 voda (radni rezim) -->
-  <path d="M556,588 Q620,669 684,588 L684,700 L556,700 Z" fill="url(#u04vs_voda)" />
-  <!-- Parabola RADNA (puna plava) -->
-  <path d="M556,588 Q620,669 684,588" fill="none" stroke="#1565c0" stroke-width="2.2" />
-  <!-- Parabola GRANIČNA (crvena isprekidana) -->
-  <path d="M556,572 Q620,704 684,572" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="6,3" />
-
-  <!-- Z6 os rotacije -->
-  <line x1="620" y1="558" x2="620" y2="716" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-
-  <!-- Z6 mirna razina h0 -->
-  <line x1="556" y1="608" x2="684" y2="608" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-
-  <!-- Z6 omega strelica iznad (zelena) -->
-  <path d="M598,568 A18,10 0 0 1 642,568" fill="none" stroke="#1e8449" stroke-width="2" />
-  <polygon points="642,568 635,564 635,573" fill="#1e8449" />
-  <!-- Z6 tocke -->
-  <circle cx="620" cy="628.5" r="2.6" fill="#1565c0" />
-  <circle cx="684" cy="588" r="2.6" fill="#1565c0" />
-
-  <!-- Z6 kota H (lijevo izvan posude) -->
-  <!-- Z6 kota R (ispod, od osi do desne stjenke) -->
-  <!-- Z6 legenda parabola (dva mala uzorka iznad podatkovnog bloka) -->
-  <line x1="746" y1="552" x2="772" y2="552" stroke="#1565c0" stroke-width="2.2" />
-  <line x1="746" y1="568" x2="772" y2="568" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="6,3" />
-  <!-- Z6 podatkovni blok desno -->
-  <line x1="742" y1="642" x2="924" y2="642" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="110" y1="230" x2="110" y2="246" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="290" y1="230" x2="290" y2="246" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="110" y1="249" x2="110" y2="237" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="290" y1="249" x2="290" y2="237" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="113" y1="243" x2="287" y2="243" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-  <line x1="560" y1="230" x2="560" y2="246" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="710" y1="230" x2="710" y2="246" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="560" y1="249" x2="560" y2="237" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="710" y1="249" x2="710" y2="237" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="563" y1="243" x2="707" y2="243" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-  <line x1="240" y1="320" x2="280" y2="320" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="240" y1="470" x2="280" y2="470" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="270" y1="320" x2="270" y2="470" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-  <line x1="264" y1="320" x2="276" y2="320" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="264" y1="470" x2="276" y2="470" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="200" y1="710" x2="200" y2="726" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="256" y1="710" x2="256" y2="726" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="200" y1="722" x2="200" y2="714" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="256" y1="722" x2="256" y2="714" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="203" y1="718" x2="253" y2="718" stroke="#b7600c" stroke-width="1.3" marker-end="url(#u04vs_dim)" />
-  <line x1="546" y1="572" x2="516" y2="572" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="546" y1="700" x2="516" y2="700" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="520" y1="575" x2="520" y2="697" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-  <line x1="514" y1="572" x2="526" y2="572" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="514" y1="700" x2="526" y2="700" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="620" y1="710" x2="620" y2="722" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="684" y1="710" x2="684" y2="722" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="620" y1="718" x2="620" y2="714" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="684" y1="718" x2="684" y2="714" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="623" y1="717" x2="681" y2="717" stroke="#b7600c" stroke-width="1.3" marker-end="url(#u04vs_dim)" />
-  <text x="42" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z1</text>
-  <text x="62" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Horizontalno ubrzani otvoreni spremnik</text>
-
-  <text x="225" y="93" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#c0392b" text-anchor="middle">a</text>
-
-  <text x="138" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#52606d">str.</text>
-  <text x="262" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#52606d">pred.</text>
-
-  <text x="324" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">L</tspan> = 1,80 m</text>
-  <text x="324" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">H</tspan> = 0,46 m</text>
-  <text x="324" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">h</tspan>₀ = 0,34 m</text>
-  <text x="324" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b"><tspan font-style="italic">a</tspan> = 1,20 m/s²</text>
-  <text x="324" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#52606d">Naći:</text>
-  <text x="324" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Δ<tspan font-style="italic">h</tspan>, <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">str</tspan>, <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">pred</tspan></text>
-  <text x="324" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">+ provjera prelijevanja.</text>
-  <text x="324" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d">Δ<tspan font-style="italic">h</tspan> = <tspan font-style="italic">aL</tspan>/<tspan font-style="italic">g</tspan></text>
-
-  <text x="498" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z2</text>
-  <text x="518" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Granica prelijevanja - naći <tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan></text>
-
-  <text x="534" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#c0392b" text-anchor="end">rub prelijevanja</text>
-
-  <text x="643" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#c0392b" text-anchor="middle">a<tspan baseline-shift="sub" font-size="0.7em">max</tspan></text>
-
-  <text x="744" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">L</tspan> = 1,40 m</text>
-  <text x="744" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">H</tspan> = 0,42 m</text>
-  <text x="744" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">h</tspan>₀ = 0,30 m</text>
-  <text x="744" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#52606d">Naći:</text>
-  <text x="744" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> tako da <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">str</tspan> = <tspan font-style="italic">H</tspan></text>
-  <text x="744" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d">Δ<tspan font-style="italic">h</tspan> = 2(<tspan font-style="italic">H</tspan>−<tspan font-style="italic">h</tspan>₀)</text>
-  <text x="744" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d"><tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> = <tspan font-style="italic">g</tspan>Δ<tspan font-style="italic">h</tspan>/<tspan font-style="italic">L</tspan></text>
-
-  <text x="42" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z3</text>
-  <text x="62" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Zatvoreni vertikalni cilindar - ubrzanje naviše</text>
-
-  <text x="200" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#7a5500" text-anchor="middle">ulje</text>
-
-  <text x="118" y="343" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#c0392b" text-anchor="middle">a<tspan baseline-shift="sub" font-size="0.7em">z</tspan></text>
-
-  <text x="200" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan></text>
-  <text x="200" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">B</tspan></text>
-
-  <text x="324" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">ρ = 870 kg/m³</text>
-  <text x="324" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">h</tspan> = 0,75 m</text>
-  <text x="324" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b"><tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">z</tspan> = 2,3 m/s² ↑</text>
-  <text x="324" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#52606d">Naći:</text>
-  <text x="324" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Δ<tspan font-style="italic">p</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">B</tspan> − <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan></text>
-  <text x="324" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d">Δ<tspan font-style="italic">p</tspan> = ρ(<tspan font-style="italic">g</tspan>+<tspan font-style="italic">a</tspan><tspan baseline-shift="sub" font-size="0.7em">z</tspan>)<tspan font-style="italic">h</tspan></text>
-  <text x="324" y="454" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d">usporedi s Δ<tspan font-style="italic">p</tspan>₀ = ρ<tspan font-style="italic">gh</tspan></text>
-
-  <text x="498" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z4</text>
-  <text x="518" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Sila na stražnjoj stijenci ubrzanog spremnika</text>
-
-  <text x="654" y="459" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#1e8449">F</text>
-
-  <text x="660" y="351" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#c0392b" text-anchor="middle">a</text>
-
-  <text x="645" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#52606d" text-anchor="middle"><tspan font-style="italic">b</tspan> → iza papira</text>
-
-  <text x="754" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">L</tspan> = 1,60 m</text>
-  <text x="754" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">h</tspan>₀ = 0,36 m</text>
-  <text x="754" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">b</tspan> = 0,75 m</text>
-  <text x="754" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449"><tspan font-style="italic">F</tspan> = 820 N</text>
-  <text x="754" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#52606d">Naći:</text>
-  <text x="754" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">a</tspan> [m/s²]</text>
-  <text x="754" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d"><tspan font-style="italic">F</tspan> = ½ ρ<tspan font-style="italic">gb h</tspan><tspan baseline-shift="sub" font-size="0.7em">str</tspan>²</text>
-  <text x="754" y="456" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">str</tspan> → Δ<tspan font-style="italic">h</tspan> → <tspan font-style="italic">a</tspan></text>
-
-  <text x="42" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z5</text>
-  <text x="62" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Rotirajuća posuda - naći <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">rub</tspan> i <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">osa</tspan></text>
-
-  <text x="200" y="555" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#1e8449" text-anchor="middle">ω</text>
-
-  <text x="207" y="678" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1565c0"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">osa</tspan></text>
-  <text x="288" y="643" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#1565c0"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">rub</tspan></text>
-
-  <text x="324" y="552" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">R</tspan> = 0,28 m</text>
-  <text x="324" y="570" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">h</tspan>₀ = 0,22 m</text>
-  <text x="324" y="588" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449">ω = 5,5 rad/s</text>
-  <text x="324" y="616" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#52606d">Naći:</text>
-  <text x="324" y="632" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">rub</tspan>, <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">osa</tspan></text>
-  <text x="324" y="648" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">+ provjera dna (<tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">osa</tspan> &gt; 0?)</text>
-  <text x="324" y="678" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d">Δ<tspan font-style="italic">h</tspan> = ω²<tspan font-style="italic">R</tspan>²/(2<tspan font-style="italic">g</tspan>)</text>
-  <text x="324" y="696" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">rub/osa</tspan> = <tspan font-style="italic">h</tspan>₀ ± Δ<tspan font-style="italic">h</tspan>/2</text>
-
-  <text x="498" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Z6</text>
-  <text x="518" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#52606d">Otvoreni cilindar - granica i radni režim (ω = 0,80 ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan>)</text>
-
-  <text x="620" y="561" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#1e8449" text-anchor="middle">ω</text>
-
-  <text x="778" y="556" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530">radni: ω = 0,80 ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan></text>
-  <text x="778" y="572" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530">granica: ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan></text>
-
-  <text x="746" y="596" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">R</tspan> = 0,32 m</text>
-  <text x="746" y="614" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">H</tspan> = 0,62 m</text>
-  <text x="746" y="632" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">h</tspan>₀ = 0,46 m</text>
-  <text x="746" y="660" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#52606d">Naći:</text>
-  <text x="746" y="676" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan>, <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">osa</tspan>, <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">rub</tspan>, <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M</tspan></text>
-  <text x="746" y="706" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#52606d"><tspan font-style="italic">H</tspan> = <tspan font-style="italic">h</tspan>₀ + ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan>²<tspan font-style="italic">R</tspan>²/(4<tspan font-style="italic">g</tspan>)</text>
-
-<text x="200" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">L</tspan> = 1,80 m</text>
-
-  <text x="635" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">L</tspan> = 1,40 m</text>
-
-  <text x="284" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">h</tspan></text>
-
-  <text x="228" y="713" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">R</tspan></text>
-
-  <text x="120" y="660" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#b7600c"><tspan font-style="italic">h</tspan>₀</text>
-
-  <text x="510" y="638" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="end" fill="#b7600c"><tspan font-style="italic">H</tspan></text>
-
-  <text x="652" y="713" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">R</tspan></text>
-
-  </svg>
+  <rect width="960" height="760" fill="white" />
+  <g font-family="'Segoe UI',Arial,sans-serif" fill="#3a4a56">
+    <g id="u04vs_z1" transform="translate(28 30)">
+      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z1</text>
+      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Slobodna površina pri ubrzanju</text>
+      <path d="M50 83.98165137614679 L244 128.0183486238532 V174 H50 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
+      <path d="M42 82.0 H50 V174 H244 V82.0 H252 V182 H42 Z" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="50" y1="83.98165137614679" x2="244" y2="128.0183486238532" stroke="#1565c0" stroke-width="2" />
+      <line x1="50" y1="106.0" x2="244" y2="106.0" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
+      <line x1="105" y1="53" x2="166" y2="53" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u04vs_aR)" />
+      <text x="174" y="57" font-size="13" fill="#c0392b" text-anchor="start">a</text>
+      <text x="56" y="75" font-size="10" fill="#3a4a56" text-anchor="start">stražnja</text>
+      <text x="197" y="75" font-size="10" fill="#3a4a56" text-anchor="start">prednja</text>
+      <line x1="24" y1="82.0" x2="34" y2="82.0" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="24" y1="174" x2="34" y2="174" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="29" y1="82.0" x2="29" y2="174" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="21" y="132.0" font-size="11" fill="#b7600c" text-anchor="end">H</text>
+      <line x1="50" y1="194" x2="50" y2="204" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="244" y1="194" x2="244" y2="204" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="50" y1="199" x2="244" y2="199" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="147.0" y="214" font-size="11" fill="#b7600c" text-anchor="middle">L = 1,8 m</text>
+      <text x="276" y="48" font-size="12" fill="#3a4a56" text-anchor="start">h₀ = 0,34 m</text>
+      <text x="276" y="68" font-size="12" fill="#3a4a56" text-anchor="start">H = 0,46 m</text>
+      <text x="276" y="88" font-size="12" fill="#c0392b" text-anchor="start">a = 1,20 m/s²</text>
+      <line x1="272" y1="102" x2="432" y2="102" stroke="#cbd9e7" stroke-width="1" />
+      <text x="276" y="125" font-size="11" fill="#3a4a56" text-anchor="start" font-weight="700">Naći:</text>
+      <text x="276" y="143" font-size="11" fill="#3a4a56" text-anchor="start">Δh, h<tspan baseline-shift="sub" font-size="0.75em">str</tspan>, h<tspan baseline-shift="sub" font-size="0.75em">pred</tspan>
+      </text>
+      <text x="276" y="165" font-size="10.5" fill="#3a4a56" text-anchor="start">Provjeriti prelijevanje.</text>
+      <text x="276" y="197" font-size="10.5" fill="#52606d" text-anchor="start">– –  početna razina h₀</text>
+    </g>
+    <g id="u04vs_z2" transform="translate(484 30)">
+      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z2</text>
+      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Ubrzanje na granici prelijevanja</text>
+      <path d="M50 90.0 L244 138.0 V174 H50 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
+      <path d="M42 90.0 H50 V174 H244 V90.0 H252 V182 H42 Z" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="50" y1="90.0" x2="244" y2="138.0" stroke="#1565c0" stroke-width="2" />
+      <line x1="50" y1="114.0" x2="244" y2="114.0" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
+      <line x1="105" y1="53" x2="166" y2="53" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u04vs_aR)" />
+      <text x="174" y="57" font-size="13" fill="#c0392b" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">max</tspan>
+      </text>
+      <circle cx="50" cy="90.0" r="3" fill="#c0392b" />
+      <text x="51" y="77" font-size="10" fill="#c0392b" text-anchor="start">prvi dodir ruba</text>
+      <text x="197" y="75" font-size="10" fill="#3a4a56" text-anchor="start">prednja</text>
+      <line x1="24" y1="90.0" x2="34" y2="90.0" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="24" y1="174" x2="34" y2="174" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="29" y1="90.0" x2="29" y2="174" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="21" y="136.0" font-size="11" fill="#b7600c" text-anchor="end">H</text>
+      <line x1="50" y1="194" x2="50" y2="204" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="244" y1="194" x2="244" y2="204" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="50" y1="199" x2="244" y2="199" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="147.0" y="214" font-size="11" fill="#b7600c" text-anchor="middle">L = 1,4 m</text>
+      <text x="276" y="48" font-size="12" fill="#3a4a56" text-anchor="start">h₀ = 0,30 m</text>
+      <text x="276" y="68" font-size="12" fill="#3a4a56" text-anchor="start">H = 0,42 m</text>
+      <text x="276" y="88" font-size="12" fill="#c0392b" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">max</tspan> = ?</text>
+      <line x1="272" y1="102" x2="432" y2="102" stroke="#cbd9e7" stroke-width="1" />
+      <text x="276" y="125" font-size="11" fill="#3a4a56" text-anchor="start" font-weight="700">Naći:</text>
+      <text x="276" y="143" font-size="11" fill="#3a4a56" text-anchor="start">najveće ubrzanje</text>
+      <text x="276" y="165" font-size="10.5" fill="#3a4a56" text-anchor="start">Dno još ostaje pokriveno.</text>
+      <text x="276" y="197" font-size="10.5" fill="#52606d" text-anchor="start">– –  početna razina h₀</text>
+    </g>
+    <g id="u04vs_z3" transform="translate(28 268)">
+      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z3</text>
+      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Vertikalno ubrzavanje i kočenje</text>
+      <rect x="115" y="80" width="60" height="100" fill="url(#u04vs_ulje)" stroke="none" stroke-width="1.1" rx="0" />
+      <rect x="105" y="70" width="80" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
+      <rect x="105" y="80" width="10" height="100" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
+      <rect x="175" y="80" width="10" height="100" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
+      <rect x="105" y="180" width="80" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
+      <circle cx="145" cy="80" r="3" fill="#c0392b" />
+      <text x="154" y="96" font-size="11" fill="#c0392b" text-anchor="start">A</text>
+      <circle cx="145" cy="180" r="3" fill="#c0392b" />
+      <text x="154" y="172" font-size="11" fill="#c0392b" text-anchor="start">B</text>
+      <text x="132" y="133" font-size="11" fill="#7a5a00" text-anchor="start">ulje</text>
+      <line x1="197" y1="80" x2="207" y2="80" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="197" y1="180" x2="207" y2="180" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="202" y1="80" x2="202" y2="180" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="211" y="134.0" font-size="11" fill="#b7600c" text-anchor="start">h</text>
+      <line x1="63" y1="167" x2="63" y2="104" stroke="#2c3e50" stroke-width="2" marker-end="url(#u04vs_aK)" />
+      <text x="56" y="94" font-size="13" fill="#2c3e50" text-anchor="start">v</text>
+      <text x="63" y="207" font-size="10.5" fill="#2c3e50" text-anchor="middle">v prema gore</text>
+      <text x="268" y="48" font-size="12" fill="#3a4a56" text-anchor="start">ρ = 870 kg/m³</text>
+      <text x="268" y="67" font-size="12" fill="#3a4a56" text-anchor="start">h = 0,75 m</text>
+      <text x="291" y="101" font-size="12" fill="#c0392b" text-anchor="middle">I</text>
+      <text x="376" y="101" font-size="12" fill="#c0392b" text-anchor="middle">II</text>
+      <line x1="291" y1="162" x2="291" y2="118" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u04vs_aR)" />
+      <line x1="376" y1="118" x2="376" y2="162" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u04vs_aR)" />
+      <text x="313" y="138" font-size="12" fill="#c0392b" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">z</tspan>
+      </text>
+      <text x="335" y="185" font-size="11" fill="#3a4a56" text-anchor="middle">Usporedi p<tspan baseline-shift="sub" font-size="0.75em">B</tspan> − p<tspan baseline-shift="sub" font-size="0.75em">A</tspan>.</text>
+      <text x="335" y="208" font-size="10.5" fill="#3a4a56" text-anchor="middle">I: ubrzavanje · II: kočenje</text>
+    </g>
+    <g id="u04vs_z4" transform="translate(484 268)">
+      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z4</text>
+      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Brzina vrtnje iz razlike tlakova</text>
+      <rect x="48" y="80" width="189" height="88" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.1" rx="0" />
+      <rect x="40" y="72" width="205" height="8" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
+      <rect x="40" y="80" width="8" height="88" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
+      <rect x="237" y="80" width="8" height="88" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
+      <rect x="40" y="168" width="205" height="8" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
+      <line x1="142.5" y1="59" x2="142.5" y2="179" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
+      <text x="152.5" y="53" font-size="12" fill="#1e8449" text-anchor="start">os vrtnje; |ω| = ?</text>
+      <line x1="145.5" y1="120" x2="232" y2="120" stroke="#7a8a96" stroke-width="1" stroke-dasharray="4,3" />
+      <circle cx="169.5" cy="120" r="3" fill="#c0392b" />
+      <text x="165.5" y="140" font-size="11" fill="#c0392b" text-anchor="start">A</text>
+      <circle cx="223.5" cy="120" r="3" fill="#c0392b" />
+      <text x="219.5" y="140" font-size="11" fill="#c0392b" text-anchor="start">B</text>
+      <line x1="142.5" y1="87" x2="142.5" y2="97" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="169.5" y1="87" x2="169.5" y2="97" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="142.5" y1="92" x2="169.5" y2="92" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="156.0" y="107" font-size="11" fill="#b7600c" text-anchor="middle">r<tspan baseline-shift="sub" font-size="0.75em">A</tspan>
+      </text>
+      <line x1="142.5" y1="193" x2="142.5" y2="203" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="223.5" y1="193" x2="223.5" y2="203" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="142.5" y1="198" x2="223.5" y2="198" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="183.0" y="213" font-size="11" fill="#b7600c" text-anchor="middle">r<tspan baseline-shift="sub" font-size="0.75em">B</tspan>
+      </text>
+      <text x="267" y="47" font-size="12" fill="#3a4a56" text-anchor="start">ρ = 1000 kg/m³</text>
+      <text x="267" y="67" font-size="12" fill="#3a4a56" text-anchor="start">r<tspan baseline-shift="sub" font-size="0.75em">A</tspan> = 80 mm</text>
+      <text x="267" y="87" font-size="12" fill="#3a4a56" text-anchor="start">r<tspan baseline-shift="sub" font-size="0.75em">B</tspan> = 240 mm</text>
+      <text x="267" y="110" font-size="11" fill="#1565c0" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M,A</tspan> = 12,40 kPa</text>
+      <text x="267" y="131" font-size="11" fill="#1565c0" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M,B</tspan> = 14,00 kPa</text>
+      <text x="267" y="159" font-size="11" fill="#3a4a56" text-anchor="start">A i B na istoj visini.</text>
+      <text x="267" y="180" font-size="11" fill="#3a4a56" text-anchor="start">Smjer vrtnje nije zadan.</text>
+      <text x="267" y="208" font-size="10.5" fill="#3a4a56" text-anchor="start">Posuda potpuno ispunjena.</text>
+    </g>
+    <g id="u04vs_z5" transform="translate(28 506)">
+      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z5</text>
+      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Provjera smirivanja iz podataka</text>
+      <path d="M43 112.32874617737004 L211 156.67125382262998 V178 H43 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
+      <path d="M35 98.25 H43 V178 H211 V98.25 H219 V186 H35 Z" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="43" y1="112.32874617737004" x2="211" y2="156.67125382262998" stroke="#1565c0" stroke-width="2" />
+      <line x1="43" y1="134.5" x2="211" y2="134.5" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
+      <line x1="82" y1="61" x2="140" y2="61" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u04vs_aR)" />
+      <text x="73" y="46" font-size="11" fill="#c0392b" text-anchor="start">a = 2,00 m/s²</text>
+      <circle cx="43" cy="112.32874617737004" r="3" fill="#c0392b" />
+      <circle cx="211" cy="156.67125382262998" r="3" fill="#c0392b" />
+      <text x="49" y="93" font-size="10" fill="#3a4a56" text-anchor="start">str.</text>
+      <text x="191" y="93" font-size="10" fill="#3a4a56" text-anchor="start">pred.</text>
+      <text x="127" y="201" font-size="10.5" fill="#1565c0" text-anchor="middle">referentni profil nakon smirivanja</text>
+      <text x="127" y="218" font-size="10.5" fill="#b7600c" text-anchor="middle">L = 1,50 m; h₀ = 0,300 m</text>
+      <text x="269" y="51" font-size="11" fill="#3a4a56" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.75em">str</tspan> (m)</text>
+      <line x1="273" y1="72" x2="273" y2="170" stroke="#3a4a56" stroke-width="1" />
+      <line x1="273" y1="170" x2="425" y2="170" stroke="#3a4a56" stroke-width="1" />
+      <line x1="269" y1="148.0" x2="273" y2="148.0" stroke="#3a4a56" stroke-width="1" />
+      <text x="265" y="152.0" font-size="10" fill="#3a4a56" text-anchor="end">0,38</text>
+      <line x1="269" y1="91.99999999999999" x2="273" y2="91.99999999999999" stroke="#3a4a56" stroke-width="1" />
+      <text x="265" y="95.99999999999999" font-size="10" fill="#3a4a56" text-anchor="end">0,52</text>
+      <line x1="273.0" y1="170" x2="273.0" y2="174" stroke="#3a4a56" stroke-width="1" />
+      <text x="273.0" y="187" font-size="10" fill="#3a4a56" text-anchor="middle">0</text>
+      <line x1="337.8888888888889" y1="170" x2="337.8888888888889" y2="174" stroke="#3a4a56" stroke-width="1" />
+      <text x="337.8888888888889" y="187" font-size="10" fill="#3a4a56" text-anchor="middle">4</text>
+      <line x1="402.77777777777777" y1="170" x2="402.77777777777777" y2="174" stroke="#3a4a56" stroke-width="1" />
+      <text x="402.77777777777777" y="187" font-size="10" fill="#3a4a56" text-anchor="middle">8</text>
+      <line x1="273" y1="118.83792048929664" x2="425" y2="118.83792048929664" stroke="#1565c0" stroke-width="1" stroke-dasharray="4,3" />
+      <circle cx="281.1111111111111" cy="91.99999999999999" r="3" fill="#c0392b" />
+      <circle cx="289.22222222222223" cy="148.0" r="3" fill="#c0392b" />
+      <circle cx="297.3333333333333" cy="100.0" r="3" fill="#c0392b" />
+      <circle cx="402.77777777777777" cy="118.39999999999998" r="3" fill="#c0392b" />
+      <circle cx="410.8888888888889" cy="119.19999999999999" r="3" fill="#c0392b" />
+      <circle cx="419.0" cy="118.79999999999998" r="3" fill="#c0392b" />
+      <text x="306" y="80" font-size="11" fill="#c0392b" text-anchor="start">I</text>
+      <text x="408" y="103" font-size="11" fill="#c0392b" text-anchor="start">II</text>
+      <text x="419" y="204" font-size="10" fill="#3a4a56" text-anchor="end">t (s)</text>
+      <text x="333" y="220" font-size="10.5" fill="#3a4a56" text-anchor="middle">Točke: očitanja; crta: model.</text>
+    </g>
+    <g id="u04vs_z6" transform="translate(484 506)">
+      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z6</text>
+      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Rotacijski spremnik: granice radnog režima</text>
+      <path d="M60 84.392 Q148 154.024 236 84.392 V180 H60 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
+      <path d="M52 74.6 H60 V180 H236 V74.6 H244 V188 H52 Z" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="148" y1="48" x2="148" y2="180" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
+      <line x1="60" y1="101.8" x2="236" y2="101.8" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
+      <path d="M60 84.392 Q148 154.024 236 84.392" fill="none" stroke="#1565c0" stroke-width="2" />
+      <path d="M60 74.6 Q148 183.4 236 74.6" fill="none" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4,3" />
+      <path d="M129 62 C125 43 166 43 170 60" fill="none" stroke="#1e8449" stroke-width="2" marker-end="url(#u04vs_aG)" />
+      <text x="148" y="43" font-size="13" fill="#1e8449" text-anchor="middle">ω</text>
+      <line x1="30" y1="74.6" x2="40" y2="74.6" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="30" y1="180" x2="40" y2="180" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="35" y1="74.6" x2="35" y2="180" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="27" y="131.3" font-size="11" fill="#b7600c" text-anchor="end">H</text>
+      <line x1="148" y1="193" x2="148" y2="203" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="236" y1="193" x2="236" y2="203" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="148" y1="198" x2="236" y2="198" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="192.0" y="213" font-size="11" fill="#b7600c" text-anchor="middle">R</text>
+      <rect x="141" y="180" width="14" height="6" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1.1" rx="0" />
+      <text x="267" y="46" font-size="12" fill="#3a4a56" text-anchor="start">R = 0,32 m</text>
+      <text x="267" y="64" font-size="12" fill="#3a4a56" text-anchor="start">H = 0,62 m</text>
+      <text x="267" y="82" font-size="12" fill="#3a4a56" text-anchor="start">h₀ = 0,46 m</text>
+      <line x1="267" y1="102" x2="292" y2="102" stroke="#1565c0" stroke-width="2" />
+      <text x="300" y="106" font-size="10.5" fill="#3a4a56" text-anchor="start">α = 0,80</text>
+      <line x1="267" y1="120" x2="292" y2="120" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4,3" />
+      <text x="300" y="124" font-size="10.5" fill="#3a4a56" text-anchor="start">granica ω<tspan baseline-shift="sub" font-size="0.75em">max</tspan>
+      </text>
+      <text x="267" y="149" font-size="10.5" fill="#3a4a56" text-anchor="start">stvarna ω ≤ 1,05 ω<tspan baseline-shift="sub" font-size="0.75em">zad</tspan>
+      </text>
+      <text x="267" y="172" font-size="10.5" fill="#3a4a56" text-anchor="start">zahtjev: h<tspan baseline-shift="sub" font-size="0.75em">osa</tspan> ≥ 0,350 m</text>
+      <text x="267" y="204" font-size="10.5" fill="#3a4a56" text-anchor="start">Usis zatvoren; nema protoka.</text>
+      <line x1="160" y1="119.208" x2="170" y2="119.208" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="160" y1="180" x2="170" y2="180" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="165" y1="119.208" x2="165" y2="180" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u04ex_dimL)" marker-end="url(#u04ex_dim)" />
+      <text x="176" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">osa</tspan>
+      </text>
+      <line x1="148" y1="119.208" x2="170" y2="119.208" stroke="#b7600c" stroke-width="0.7" />
+      <line x1="148" y1="180" x2="170" y2="180" stroke="#b7600c" stroke-width="0.7" />
+    </g>
+  </g>
+  <text x="480" y="752" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Visine u pojedinom panelu imaju zajedničko mjerilo; vodoravne širine presjeka su shematske.</text>
+</svg>

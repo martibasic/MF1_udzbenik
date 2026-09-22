@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import math
+from itertools import product
 
 TOL = 0.01
 
@@ -105,9 +106,9 @@ def zadatak_1(h=2.40, rho=998.0, p_atm=100.8e3, g=9.81):
     return {"p_m": p_m, "p_aps": p_atm + p_m}
 
 
-def zadatak_2(p_m=26e3, h=1.80, rho=998.0, p_atm=99.2e3, g=9.81):
-    p_priklj = p_m + rho * g * h
-    return {"p_priklj_m": p_priklj, "p_priklj_aps": p_priklj + p_atm}
+def zadatak_2(dp=17.62e3, rho=998.0, gas_change=5e3, g=9.81):
+    h = dp / (rho * g)
+    return {"h": h, "dp_after": (dp + gas_change) - gas_change}
 
 
 def zadatak_3(rho_u=860.0, rho_Hg=13600.0, dh=0.185, a=0.12, g=9.81):
@@ -116,23 +117,29 @@ def zadatak_3(rho_u=860.0, rho_Hg=13600.0, dh=0.185, a=0.12, g=9.81):
     return {"p_m": p_m}
 
 
-def zadatak_4(rho_w=998.0, rho_Hg=13600.0, dh=0.145, dz_AB=0.30, g=9.81):
-    # Standardna zatvorena putanja: zivin stupac daje kontrast gustoca, a A je
-    # dz_AB ispod B pa vodeni visinski clan povecava p_A-p_B.
-    p_diff = (rho_Hg - rho_w) * g * dh + rho_w * g * dz_AB
-    return {"p_A_minus_p_B": p_diff}
+def zadatak_4(rho_u=850.0, rho_w=1000.0, H=1.50, p_bottom=13.83e3, g=9.81):
+    h_u = (rho_w * g * H - p_bottom) / ((rho_w - rho_u) * g)
+    h_w = H - h_u
+    return {"h_u": h_u, "h_w": h_w, "p_interface": rho_u * g * h_u,
+            "p_oil_only": rho_u * g * H, "p_water_only": rho_w * g * H,
+            "gradient_oil": rho_u * g, "gradient_water": rho_w * g}
 
 
-def zadatak_5(rho_Hg=13600.0, dh=0.230, p_atm=98.6e3, h_voda=0.90,
-              rho_w=998.0, g=9.81):
-    p_g_aps = p_atm - rho_Hg * g * dh
-    p_tocka = p_g_aps + rho_w * g * h_voda
-    return {"p_g_aps": p_g_aps, "p_tocka": p_tocka}
+def zadatak_5(p_vac=6e3, p_atm=98.6e3, rho_u=860.0, rho_w=998.0,
+              rho_Hg=13600.0, dh_max=0.650, h_error=0.001, p_error_max=20.0, g=9.81):
+    densities = (rho_u, rho_w, rho_Hg)
+    heights = tuple(p_vac / (rho * g) for rho in densities)
+    errors = tuple(rho * g * h_error for rho in densities)
+    feasible = tuple(h <= dh_max and error <= p_error_max
+                     for h, error in zip(heights, errors))
+    return {"heights": heights, "errors": errors, "feasible": feasible,
+            "p_g_aps": p_atm - p_vac}
 
 
 def zadatak_6(h1=0.65, dh=0.210, h_tocka=1.30, rho_w=998.0, rho_Hg=13600.0,
               p_atm=100.9e3, dh_tol=0.002, h_tol=0.005,
               p_atm_tol=0.4e3, scale_margin=0.05, g=9.81):
+    # Granica vode i zive je na visini prikljucka u svim dopustenim stanjima.
     p_priklj = p_atm + rho_Hg * g * dh
     p_G = p_priklj - rho_w * g * h1
     p_tocka = p_G + rho_w * g * h_tocka
@@ -162,6 +169,8 @@ def primjer_balastni(T_g=8.5, H_t=5.0, h_p=2.0, rho_m=1025.0, rho_b=1000.0, g=9.
     delta_proz_A = p_ext_proz - p_int_proz_A
     return {
         "p_ext_dno": p_ext_dno,
+        "p_ext_proz": p_ext_proz,
+        "p_int_proz_A": p_int_proz_A,
         "delta_dno_A": delta_dno_A,
         "delta_dno_B": delta_dno_B,
         "delta_proz_A": delta_proz_A,
@@ -173,12 +182,12 @@ def verify():
 
     r = primjer_1()
     _check(out, "U03.P1.p_G_kPa", r["p_G"] / 1000, 118.8, "kPa")
-    _check(out, "U03.P1.p_A_kPa", r["p_A"] / 1000, 132.5, "kPa")
-    _check(out, "U03.P1.p_A_m_kPa", r["p_A_m"] / 1000, 31.7, "kPa")
+    _check(out, "U03.P1.p_A_kPa", r["p_A"] / 1000, 132.506532, "kPa", rel=1e-9)
+    _check(out, "U03.P1.p_A_m_kPa", r["p_A_m"] / 1000, 31.706532, "kPa", rel=1e-9)
 
     r = primjer_3()
-    _check(out, "U03.P3.dp_bez_zraka_Pa", r["dp_bez_zraka"], 3394.0, "Pa")
-    _check(out, "U03.P3.dp_sa_zrakom_Pa", r["dp_sa_zrakom"], 3402.0, "Pa")
+    _check(out, "U03.P3.dp_bez_zraka_Pa", r["dp_bez_zraka"], 3394.26, "Pa", rel=1e-9)
+    _check(out, "U03.P3.dp_sa_zrakom_Pa", r["dp_sa_zrakom"], 3402.50, "Pa", rel=2e-7)
 
     r = cjeloviti_1()
     _check(out, "U03.CH1.p_2_kPa", r["p_2"] / 1000, 105.9, "kPa")
@@ -189,28 +198,74 @@ def verify():
     _check(out, "U03.CH1.p_C_m_kPa", r["p_C_m"] / 1000, 31.7, "kPa")
 
     r = primjer_pumpa()
-    _check(out, "U03.pumpa.p_man_kPa", r["p_man"] / 1000, -20.5, "kPa")
-    _check(out, "U03.pumpa.p_aps_kPa", r["p_aps"] / 1000, 80.8, "kPa")
+    _check(out, "U03.pumpa.p_man_kPa", r["p_man"] / 1000, -20.48328, "kPa", rel=1e-9)
+    _check(out, "U03.pumpa.p_aps_kPa", r["p_aps"] / 1000, 80.81672, "kPa", rel=1e-9)
     _check(out, "U03.pumpa.H_max_m", r["H_max"], 11.8, "m")
 
     z1 = zadatak_1()
     _check(out, "U03.Z1.p_m_kPa", z1["p_m"] / 1000, 23.5, "kPa")
     _check(out, "U03.Z1.p_aps_kPa", z1["p_aps"] / 1000, 124.3, "kPa")
     z2 = zadatak_2()
-    _check(out, "U03.Z2.p_m_kPa", z2["p_priklj_m"] / 1000, 43.6, "kPa")
-    _check(out, "U03.Z2.p_aps_kPa", z2["p_priklj_aps"] / 1000, 142.8, "kPa")
+    _check(out, "U03.Z2.h_m", z2["h"], 1.80, "m", rel=0.0005)
+    _check(out, "U03.Z2.dp_after_kPa", z2["dp_after"] / 1000, 17.62, "kPa", rel=1e-9)
+    _invariant(out, "U03.Z2.depth_balance",
+               abs(998 * 9.81 * z2["h"] - 17620) < 1e-8,
+               "Rekonstruirana visina ne daje zadanu razliku tlakova.")
+    _invariant(out, "U03.Z2.common_pressure_shift",
+               abs(zadatak_2(gas_change=-20e3)["dp_after"] - z2["dp_after"]) < 1e-8,
+               "Zajednicka promjena tlaka ne smije promijeniti diferencijalno ocitanje.")
     z3 = zadatak_3()
     _check(out, "U03.Z3.p_m_kPa", z3["p_m"] / 1000, 23.7, "kPa")
+    _invariant(out, "U03.Z3.manometer_walk",
+               abs(z3["p_m"] + 860 * 9.81 * .12 - 13600 * 9.81 * .185) < 1e-8,
+               "Hod od prikljucka niz ulje pa uz zivu mora zavrsiti na atmosferi.")
     z4 = zadatak_4()
-    _check(out, "U03.Z4.p_diff_kPa", z4["p_A_minus_p_B"] / 1000, 20.9, "kPa")
+    _check(out, "U03.Z4.h_oil_m", z4["h_u"], .601, "m", rel=.001)
+    _check(out, "U03.Z4.h_water_m", z4["h_w"], .899, "m", rel=.001)
+    _check(out, "U03.Z4.p_interface_kPa", z4["p_interface"] / 1000, 5.015, "kPa", rel=1e-8)
+    _check(out, "U03.Z4.p_oil_only_kPa", z4["p_oil_only"] / 1000, 12.508, "kPa", rel=.0001)
+    _check(out, "U03.Z4.p_water_only_kPa", z4["p_water_only"] / 1000, 14.715, "kPa", rel=1e-8)
+    _check(out, "U03.Z4.gradient_oil_kPa_m", z4["gradient_oil"] / 1000, 8.339, "kPa/m", rel=.0001)
+    _check(out, "U03.Z4.gradient_water_kPa_m", z4["gradient_water"] / 1000, 9.810, "kPa/m", rel=1e-8)
+    _invariant(out, "U03.Z4.layer_balances",
+               abs(z4["h_u"] + z4["h_w"] - 1.5) < 1e-12
+               and abs(9.81 * (850*z4["h_u"] + 1000*z4["h_w"]) - 13830) < 1e-8
+               and 0 < z4["h_u"] < 1.5 and 0 < z4["h_w"] < 1.5,
+               "Slojevi ne zatvaraju geometriju i hidrostatski tlak.")
+    _invariant(out, "U03.Z4.pure_fluid_limits",
+               abs(zadatak_4(p_bottom=14715)["h_u"]) < 1e-12
+               and abs(zadatak_4(p_bottom=12507.75)["h_w"]) < 1e-12,
+               "Granice ciste vode i ulja moraju ukloniti drugi sloj.")
     z5 = zadatak_5()
-    _check(out, "U03.Z5.p_g_aps_kPa", z5["p_g_aps"] / 1000, 67.9, "kPa")
-    _check(out, "U03.Z5.p_tocka_kPa", z5["p_tocka"] / 1000, 76.7, "kPa")
+    _check(out, "U03.Z5.h_oil_m", z5["heights"][0], .711, "m", rel=.001)
+    _check(out, "U03.Z5.h_water_m", z5["heights"][1], .613, "m", rel=.001)
+    _check(out, "U03.Z5.h_Hg_m", z5["heights"][2], .04497, "m", rel=.0001)
+    _check(out, "U03.Z5.error_oil_Pa", z5["errors"][0], 8.44, "Pa", rel=.001)
+    _check(out, "U03.Z5.error_water_Pa", z5["errors"][1], 9.79, "Pa", rel=.001)
+    _check(out, "U03.Z5.error_Hg_Pa", z5["errors"][2], 133.42, "Pa", rel=.0001)
+    _check(out, "U03.Z5.p_g_aps_kPa", z5["p_g_aps"] / 1000, 92.6, "kPa", rel=1e-9)
+    _invariant(out, "U03.Z5.both_constraints", z5["feasible"] == (False, True, False),
+               "Samo voda zadovoljava visinu i pogresku.")
+    _invariant(out, "U03.Z5.constraint_sensitivity",
+               zadatak_5(dh_max=.8)["feasible"] == (True, True, False)
+               and zadatak_5(p_error_max=150)["feasible"] == (False, True, True),
+               "Izbor mora reagirati na oba mjerna ogranicenja.")
+    _invariant(out, "U03.Z5.pressure_reconstruction",
+               all(abs(z5["p_g_aps"] + rho*9.81*h - 98600) < 1e-8
+                   for rho,h in zip((860,998,13600), z5["heights"])),
+               "Uspon od atmosfere do vise razine mora dati isti podtlak za sve fluide.")
     z6 = zadatak_6()
     _check(out, "U03.Z6.p_G_kPa", z6["p_G"] / 1000, 122.6, "kPa")
     _check(out, "U03.Z6.p_tocka_kPa", z6["p_tocka"] / 1000, 135.3, "kPa")
-    _check(out, "U03.Z6.p_max_kPa", z6["p_max"] / 1000, 136.05, "kPa", rel=0.02)
-    _check(out, "U03.Z6.required_full_scale_kPa", z6["required_full_scale"] / 1000, 142.9, "kPa", rel=0.02)
+    _check(out, "U03.Z6.p_max_kPa", z6["p_max"] / 1000, 136.05, "kPa", rel=0.00005)
+    _check(out, "U03.Z6.required_full_scale_kPa", z6["required_full_scale"] / 1000, 142.85, "kPa", rel=0.00005)
+    corners = [pa + 13600*9.81*dh + 998*9.81*(h2-h1)
+               for pa,dh,h1,h2 in product((100500,101300),(.208,.212),(.645,.655),(1.295,1.305))]
+    _invariant(out, "U03.Z6.interval_corners", abs(max(corners)-z6["p_max"]) < 1e-8,
+               "Analiticka granica mora odgovarati najvecem tlaku svih rubnih kombinacija.")
+    _invariant(out, "U03.Z6.manometer_walk",
+               abs(z6["p_G"] + 998*9.81*.65 - 13600*9.81*.210 - 100900) < 1e-8,
+               "Hod preko razdjelnice na visini prikljucka ne zatvara tlak.")
     _invariant(
         out,
         "U03.Z6.sensor_range_choice",
@@ -227,7 +282,7 @@ def verify():
     _invariant(
         out,
         "U03.INV.pressure_increases_with_depth",
-        z5["p_tocka"] > z5["p_g_aps"] and z6["p_tocka"] > z6["p_G"],
+        z1["p_aps"] > 100.8e3 and z6["p_tocka"] > z6["p_G"],
         "Tlak u istom mirnom fluidu nije porastao s dubinom.",
     )
     _invariant(
@@ -239,6 +294,8 @@ def verify():
 
     # Faza 1.5: Balastni tank broda
     r = primjer_balastni()
+    _check(out, "U03.balastni.p_ext_proz_kPa", r["p_ext_proz"] / 1000, 65.36, "kPa", rel=0.00002)
+    _check(out, "U03.balastni.p_int_proz_kPa", r["p_int_proz_A"] / 1000, 29.43, "kPa", rel=1e-9)
     _check(out, "U03.balastni.p_ext_dno_kPa", r["p_ext_dno"] / 1000, 85.5, "kPa")
     _check(out, "U03.balastni.delta_dno_A_kPa", r["delta_dno_A"] / 1000, 36.4, "kPa")
     _check(out, "U03.balastni.delta_dno_B_kPa", r["delta_dno_B"] / 1000, 85.5, "kPa")

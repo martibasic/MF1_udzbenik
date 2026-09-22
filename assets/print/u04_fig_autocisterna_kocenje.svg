@@ -1,76 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="u04fak_title u04fak_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
   <title id="u04fak_title">Nagib goriva u autocisterni pri kočenju</title>
-  <desc id="u04fak_desc">Bočni presjek pravokutnog spremnika autocisterne (L=1,20 m, H=0,80 m) s mirnom razinom goriva h0=0,45 m. Pri kočenju ubrzanjem a=3,8 m/s^2 (vektor a usmjeren unatrag, suprotno smjeru vožnje) slobodna površina goriva nagne se tako da je razina uz prednju stijenku h_pred=0,683 m, a uz stražnju h_straž=0,217 m. Razlika razina Δh=aL/g=0,465 m. Vrh prednje razine ostaje ispod ruba H, dno stražnje strane se ne ogoljava. Desno: panel s formulama i rezultatima.</desc>
-
+  <desc id="u04fak_desc">Idealizirani otvoreni pravokutni spremnik na vozilu koje se giba udesno i koči ubrzanjem ulijevo. Gorivo je više uz prednju stijenku. Sve dubine, duljina i nagib u istom su mjerilu; granice modela su prelijevanje i ogoljavanje dna.</desc>
   <defs>
-    <!-- Strelice za sile/ubrzanje (crvena, 7x5) -->
     <marker id="u04fak_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <!-- Strelice za kote (sme&#273;a) -->
     <marker id="u04fak_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
     <marker id="u04fak_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
       <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
-    <!-- Strelica za &#916;h naran&#269;asta (semantika "razlika") -->
     <marker id="u04fak_aOr" markerWidth="6" markerHeight="5" refX="5.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L6,2.5 z" fill="#e67e22" />
     </marker>
     <marker id="u04fak_aOrR" markerWidth="6" markerHeight="5" refX="0.5" refY="2.5" orient="auto-start-reverse">
       <path d="M0,0 L0,5 L6,2.5 z" fill="#e67e22" />
     </marker>
-    <!-- Strelica smjera vo&#382;nje (siva) -->
     <marker id="u04fak_aV" markerWidth="7" markerHeight="5" refX="6.5" referenceY="2.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#5a6a78" />
     </marker>
-
-    <!-- Gradient goriva (&#382;uto-zlatni) -->
     <linearGradient id="u04fak_fuel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fde68a" />
       <stop offset="100%" stop-color="#d4a017" />
     </linearGradient>
-    <!-- Gradient karoserije (sivo-srebrno) -->
     <linearGradient id="u04fak_body" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#cfd8df" />
       <stop offset="100%" stop-color="#8a99a4" />
     </linearGradient>
-    <!-- Srafura stjenki spremnika -->
     <pattern id="u04fak_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8" />
     </pattern>
+    <marker id="u04truck_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u04truck_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
   </defs>
-
-  <!-- Pozadina -->
   <rect width="960" height="520" fill="#ffffff" />
-  <!-- ============================================================
-       LIJEVI PANEL: bo&#269;ni presjek autocisterne pri ko&#269;enju
-       Spremnik unutarnji: x = 90 .. 530 (interior &#353;irina 440 px = L)
-       y_dno (unutarnja) = 380, y_vrh (unutarnja) = 140  -> H = 240 px
-       Skala y: 240 px / 0,80 m = 300 px/m
-       h0  = 0,45 m -> 135 px -> y_h0    = 380 - 135 = 245
-       h_pred = 0,683 m -> 204,9 px -> y_pred = 380 - 205 = 175 (prednja = desna)
-       h_stra&#382; = 0,217 m -> 65,1 px -> y_stra&#382;= 380 - 65  = 315 (stra&#382;nja = lijeva)
-       &#916;h = 0,465 m -> 139,5 px (od y=175 do y=315 = 140 px)
-  ============================================================ -->
-
-  <!-- ===== KAROSERIJA VOZILA (oko spremnika, ne preko njega) ===== -->
-  <!-- &#352;asija ispod spremnika -->
   <rect x="60" y="395" width="500" height="14" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- Kabina (desno = prednja strana) -->
   <path d="M540,395 L540,360 L568,330 L612,330 L612,395 Z" fill="url(#u04fak_body)" stroke="#3a4a56" stroke-width="1.4" />
-  <!-- Prozor kabine -->
   <path d="M548,360 L568,338 L604,338 L604,360 Z" fill="#aed6f1" stroke="#3a4a56" stroke-width="1" />
-  <!-- Maska/branik kabine -->
   <rect x="606" y="380" width="10" height="15" fill="#3a4a56" />
-  <!-- Far -->
   <rect x="606" y="368" width="8" height="8" rx="1" fill="#fde68a" stroke="#3a4a56" stroke-width="0.8" />
-
-  <!-- Koprice spremnika (omota&#269; preko sasije) - tanji okvir spremnika -->
-  <rect x="78" y="120" width="464" height="288" fill="none" stroke="#5d6d7e" stroke-width="1" stroke-dasharray="3,3" opacity="0.5" />
-
-  <!-- Kota&#269;i vozila -->
   <circle cx="130" cy="418" r="22" fill="#2c3e50" stroke="#1a2530" stroke-width="1.5" />
   <circle cx="130" cy="418" r="8" fill="#7a8a96" stroke="#1a2530" stroke-width="1" />
   <circle cx="430" cy="418" r="22" fill="#2c3e50" stroke="#1a2530" stroke-width="1.5" />
@@ -79,164 +52,96 @@
   <circle cx="478" cy="418" r="8" fill="#7a8a96" stroke="#1a2530" stroke-width="1" />
   <circle cx="582" cy="418" r="22" fill="#2c3e50" stroke="#1a2530" stroke-width="1.5" />
   <circle cx="582" cy="418" r="8" fill="#7a8a96" stroke="#1a2530" stroke-width="1" />
-
-  <!-- ===== SPREMNIK STJENKE (pune visine, zatvoreni tank) ===== -->
-  <!-- Stra&#382;nja stjenka (lijeva u prikazu) -->
-  <rect x="78" y="128" width="12" height="260" fill="url(#u04fak_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <!-- Prednja stjenka (desna u prikazu) -->
-  <rect x="530" y="128" width="12" height="260" fill="url(#u04fak_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <!-- Vrh -->
-  <rect x="78" y="128" width="464" height="12" fill="url(#u04fak_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <!-- Dno -->
-  <rect x="78" y="380" width="464" height="12" fill="url(#u04fak_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-
-  <!-- ===== GORIVO: trapez s nagnutom slobodnom povr&#353;inom ===== -->
-  <!-- Interior: x = 90..530, y_dno=380. Stra&#382;nja (lijevo, x=90) y=315; prednja (desno, x=530) y=175 -->
-  <polygon points="90,315 530,175 530,380 90,380" fill="url(#u04fak_fuel)" />
-  <!-- Slobodna povr&#353;ina goriva (deblja crta) -->
-  <line x1="90" y1="315" x2="530" y2="175" stroke="#a87a00" stroke-width="2.4" />
-
-  <!-- ===== MIRNA RAZINA h0 (referentna isprekidana) ===== -->
-  <line x1="90" y1="245" x2="530" y2="245" stroke="#7a8a96" stroke-width="1.4" stroke-dasharray="9,6" />
-  <!-- ===== &#920; KUT NAGIBA - na stra&#382;njem (lijevom) kraju slobodne povr&#353;ine ===== -->
-  <!-- Po&#269;etak slobodne povr&#353;ine: (90, 315). Horizontala kroz tu to&#269;ku ide udesno. -->
-  <line x1="90" y1="315" x2="170" y2="315" stroke="#5a6a78" stroke-width="0.8" stroke-dasharray="3,3" />
-  <!-- Luk: od horizontale (x>90) do slobodne povr&#353;ine. Slope dy/dx = -140/440 = -0.318 -->
-  <!-- Na duljini 30 px po horizontali (x=120): povr&#353;ina y = 315 - 140*30/440 = 305,5 -->
-  <path d="M120,315 A30,30 0 0,0 119,305.5" fill="none" stroke="#1a2530" stroke-width="1.3" />
-  <!-- ===== UBRZANJE a (crveno, prema NAZAD - suprotno smjeru vo&#382;nje) ===== -->
-  <!-- Vozilo se kre&#263;e nadesno. Ko&#269;enje: a usmjeren ulijevo (deceleracija). -->
-  <line x1="385" y1="92" x2="285" y2="92" stroke="#c0392b" stroke-width="3" marker-end="url(#u04fak_aR)" />
-  <!-- ===== SMJER VO&#381;NJE (sivo, manja oznaka) ===== -->
-  <line x1="120" y1="92" x2="220" y2="92" stroke="#5a6a78" stroke-width="1.6" marker-end="url(#u04fak_aV)" />
-  <!-- ===== OZNAKE STIJENKI ===== -->
-  <!-- ===== OZNAKA "gorivo" ===== -->
-  <!-- ============================================================
-       KOTE
-  ============================================================ -->
-
-  <!-- ===== Kota L (donja, ispod &#353;asije) ===== -->
-  <!-- ===== Kota H (visina spremnika, krajnje desno - izvan voza&#269;ke kabine; postavi je na lijevu stranu kabine da ne smeta) ===== -->
-  <!-- Stavi H kotu izvan glavnog spremnika, ne preklapaj s ostalim kotama -->
-  <!-- H ide od y=140 (vrh) do y=380 (dno) na lijevoj strani, x_dim oko 30 -->
-  <!-- ===== Kota h_stra&#382; (desno od stra&#382;nje stjenke, unutar spremnika - od y=315 do y=380) ===== -->
-  <!-- Ne smije se preklapati s gorivom; stavi kotu sa LIJEVE strane stra&#382;nje stjenke (vani) -->
-  <!-- ===== Kota h_pred (desno od prednje stjenke, od y=175 do y=380) ===== -->
-  <!-- ===== Kota &#916;h (sredina spremnika, naran&#269;asta) ===== -->
-  <!-- &#916;h vertikalna razlika izme&#273;u dvaju krajeva slobodne povr&#353;ine: y=175 (prednja) i y=315 (stra&#382;nja) -->
-  <!-- Postavi je u sredini spremnika gdje nije pretrpano -->
-  <!-- Horizontalne pomocne linije od povrsine fluida do dim. osi -->
-  <line x1="200" y1="251" x2="265" y2="251" stroke="#e67e22" stroke-width="0.7" stroke-dasharray="2,2" />
-  <line x1="420" y1="181" x2="265" y2="181" stroke="#e67e22" stroke-width="0.7" stroke-dasharray="2,2" />
-  <!-- Mali tikovi -->
-  <line x1="258" y1="251" x2="272" y2="251" stroke="#e67e22" stroke-width="1.2" />
-  <line x1="258" y1="181" x2="272" y2="181" stroke="#e67e22" stroke-width="1.2" />
-  <!-- Dim linija &#916;h/2 do mirne razine -->
-  <line x1="265" y1="248" x2="265" y2="184" stroke="#e67e22" stroke-width="1.3" marker-start="url(#u04fak_aOrR)" marker-end="url(#u04fak_aOr)" />
-  <!-- Donja polovica &#916;h/2 -->
-  <line x1="200" y1="251" x2="200" y2="245" stroke="#e67e22" stroke-width="0.7" stroke-dasharray="2,2" />
-  <line x1="200" y1="245" x2="200" y2="316" stroke="#e67e22" stroke-width="1.3" marker-start="url(#u04fak_aOrR)" marker-end="url(#u04fak_aOr)" />
-  <line x1="193" y1="316" x2="207" y2="316" stroke="#e67e22" stroke-width="1.2" />
-  <!-- ============================================================
-       DESNI PANEL: formule i rezultati
-       x: 640..930  (sirina 290)
-  ============================================================ -->
   <rect x="640" y="100" width="290" height="320" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.4" />
-  <!-- Header bar -->
   <rect x="640" y="100" width="290" height="34" rx="10" fill="#1565c0" />
   <rect x="640" y="124" width="290" height="10" fill="#1565c0" />
-  <!-- Blok 1: Razlika razina (y=134..216) -->
   <line x1="664" y1="232" x2="906" y2="232" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 2: Visina uz prednju stjenku (y=232..296) -->
   <line x1="664" y1="306" x2="906" y2="306" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 3: Visina uz stra&#382;nju stjenku (y=306..370) -->
   <line x1="664" y1="380" x2="906" y2="380" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Sa&#382;etak (y=380..420) -->
-  <!-- ===== REZULTATI badge ===== -->
   <rect x="640" y="432" width="290" height="56" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <!-- ============================================================
-       LEGENDA (dno)
-  ============================================================ -->
-  <rect x="40" y="497" width="12" height="12" fill="#c0392b" rx="2" />
-  <rect x="200" y="497" width="12" height="12" fill="url(#u04fak_fuel)" stroke="#a87a00" stroke-width="0.8" rx="2" />
-  <rect x="380" y="497" width="12" height="12" fill="#e67e22" rx="2" />
-  <line x1="90" y1="392" x2="90" y2="465" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="530" y1="392" x2="530" y2="465" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="90" y1="468" x2="90" y2="454" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="530" y1="468" x2="530" y2="454" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="93" y1="461" x2="527" y2="461" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04fak_aDimR)" marker-end="url(#u04fak_aDim)" />
-  <line x1="78" y1="140" x2="42" y2="140" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="78" y1="380" x2="42" y2="380" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="32" y1="140" x2="46" y2="140" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="32" y1="380" x2="46" y2="380" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="39" y1="143" x2="39" y2="377" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04fak_aDimR)" marker-end="url(#u04fak_aDim)" />
-  <line x1="78" y1="315" x2="62" y2="315" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="78" y1="380" x2="62" y2="380" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="55" y1="315" x2="69" y2="315" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="55" y1="380" x2="69" y2="380" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="62" y1="317" x2="62" y2="378" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04fak_aDimR)" marker-end="url(#u04fak_aDim)" />
-  <line x1="542" y1="175" x2="558" y2="175" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="542" y1="380" x2="558" y2="380" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="551" y1="175" x2="565" y2="175" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="551" y1="380" x2="565" y2="380" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="558" y1="177" x2="558" y2="378" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04fak_aDimR)" marker-end="url(#u04fak_aDim)" />
-  <rect x="540" y="497" width="12" height="12" fill="#b7600c" rx="2" />
-  <text x="135" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">mirna razina (h₀ = 0,45 m)</text>
-
-  <text x="128" y="312" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1a2530">θ</text>
-
-  <text x="390" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#c0392b"><tspan font-weight="700">a</tspan> = 3,8 m/s² (kočenje)</text>
-
-  <text x="170" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">smjer vožnje</text>
-
-  <text x="84" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#3a4a56">stražnja</text>
-  <text x="536" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#3a4a56">prednja</text>
-
-  <text x="310" y="355" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#7a5400">gorivo  ρ = 750 kg/m³</text>
-
-  <text x="278" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#e67e22"><tspan font-weight="700">Δh</tspan>/2</text>
-  <text x="213" y="285" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#e67e22"><tspan font-weight="700">Δh</tspan>/2</text>
-
   <text x="785" y="123" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Ključne jednadžbe</text>
-
   <text x="785" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Razlika razina (nagib površine)</text>
   <text x="785" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530">Δh = a·L / g</text>
   <text x="785" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#5a6a78">= 3,8 · 1,20 / 9,81</text>
   <text x="785" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#e67e22">≈ 0,465 m</text>
   <text x="785" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Visina uz prednju stjenku</text>
-  <text x="785" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">pr</tspan> = h₀ + Δh/2</text>
-  <text x="785" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 0,683 m</text>
+  <text x="785" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+    <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">pr</tspan> = h₀ + Δh/2</text>
+  <text x="785" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 0,682 m</text>
   <text x="785" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Visina uz stražnju stjenku</text>
-  <text x="785" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">str</tspan> = h₀ − Δh/2</text>
-  <text x="785" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 0,217 m</text>
+  <text x="785" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+    <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">str</tspan> = h₀ − Δh/2</text>
+  <text x="785" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">= 0,218 m</text>
   <text x="785" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">tanθ = a/g ≈ 0,387  →  θ ≈ 21,2°</text>
   <text x="785" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">srednja razina h₀ ostaje sačuvana</text>
-
   <text x="785" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">PROVJERA GRANICA</text>
-  <text x="710" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">pr</tspan> &lt; H</text>
-  <text x="860" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">str</tspan> &gt; 0</text>
+  <text x="710" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">
+    <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">pr</tspan> &lt; H</text>
+  <text x="860" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">
+    <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">str</tspan> &gt; 0</text>
   <text x="710" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">nema prelijevanja</text>
   <text x="860" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">nema ogoljavanja</text>
-
-  <text x="58" y="507" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">ubrzanje a (kočenje)</text>
-
-  <text x="218" y="507" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">gorivo (nagnuta površina)</text>
-
-  <text x="398" y="507" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">razlika Δh/2 (asimetrija)</text>
-
-  <text x="558" y="507" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">kote (L, H, h)</text>
-
-<text x="310" y="482" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c"><tspan font-weight="700">L</tspan> = 1,20 m</text>
-
-  <text x="22" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c" transform="rotate(-90 22 258)"><tspan font-weight="700">H</tspan> = 0,80 m</text>
-
-  <text x="62" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#b7600c"><tspan font-weight="700">h</tspan><tspan baseline-shift="sub" font-size="0.75em">str</tspan></text>
-  <text x="62.0" y="354.0" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#b7600c">= 0,217 m</text>
-
-  <text x="558" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#b7600c"><tspan font-weight="700">h</tspan><tspan baseline-shift="sub" font-size="0.75em">pr</tspan></text>
-  <text x="558.0" y="286.0" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#b7600c">= 0,683 m</text>
-
-  </svg>
+  <g>
+    <path d="M130 314.7247706422018 L490 175.27522935779814 V380 H130 Z" fill="url(#u04fak_fuel)" stroke="none" stroke-width="1.2" />
+    <rect x="118" y="140" width="12" height="252" fill="url(#u04fak_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="490" y="140" width="12" height="252" fill="url(#u04fak_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="118" y="380" width="384" height="12" fill="url(#u04fak_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="130" y1="314.7247706422018" x2="490" y2="175.27522935779814" stroke="#a87a00" stroke-width="2.4" />
+    <line x1="130" y1="245" x2="490" y2="245" stroke="#7a8a96" stroke-width="1.2" stroke-dasharray="7,5" />
+    <text x="310" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="middle">otvoreni pravokutni model spremnika</text>
+    <text x="130" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">stražnja</text>
+    <text x="490" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">prednja</text>
+    <line x1="380" y1="70" x2="280" y2="70" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04fak_aR)" />
+    <text x="390" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start">a = 3,8 m/s² (kočenje)</text>
+    <line x1="130" y1="70" x2="220" y2="70" stroke="#3a4a56" stroke-width="1.6" marker-end="url(#u04fak_aV)" />
+    <text x="175" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">v: smjer vožnje</text>
+    <line x1="54" y1="140" x2="118" y2="140" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="54" y1="380" x2="118" y2="380" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="49" y1="140" x2="59" y2="140" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="49" y1="380" x2="59" y2="380" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="54" y1="140" x2="54" y2="380" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+    <text x="66" y="264.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start" />
+    <text x="36" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c" text-anchor="middle" transform="rotate(-90 36 260)">H = 0,80 m</text>
+    <line x1="88" y1="314.7247706422018" x2="118" y2="314.7247706422018" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="88" y1="380" x2="118" y2="380" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="83" y1="314.7247706422018" x2="93" y2="314.7247706422018" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="83" y1="380" x2="93" y2="380" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="88" y1="314.7247706422018" x2="88" y2="380" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+    <text x="100" y="351.3623853211009" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start" />
+    <text x="75" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle" transform="rotate(-90 75 350)">h<tspan baseline-shift="sub" font-size="0.7em">str</tspan> = 0,218 m</text>
+    <line x1="502" y1="175.27522935779814" x2="522" y2="175.27522935779814" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="502" y1="380" x2="522" y2="380" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="517" y1="175.27522935779814" x2="527" y2="175.27522935779814" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="517" y1="380" x2="527" y2="380" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="522" y1="175.27522935779814" x2="522" y2="380" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+    <text x="534" y="281.63761467889907" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start" />
+    <text x="546" y="255" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle" transform="rotate(-90 546 255)">h<tspan baseline-shift="sub" font-size="0.7em">pred</tspan> = 0,682 m</text>
+    <line x1="130" y1="456" x2="130" y2="466" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="490" y1="456" x2="490" y2="466" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="130" y1="461" x2="490" y2="461" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+    <text x="310.0" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">L = 1,20 m</text>
+    <line x1="130" y1="392" x2="130" y2="466" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="490" y1="392" x2="490" y2="466" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="240" y1="175.27522935779814" x2="330" y2="175.27522935779814" stroke="#e67e22" stroke-width="0.7" stroke-dasharray="3,3" />
+    <line x1="240" y1="245" x2="330" y2="245" stroke="#e67e22" stroke-width="0.7" stroke-dasharray="3,3" />
+    <line x1="240" y1="314.7247706422018" x2="330" y2="314.7247706422018" stroke="#e67e22" stroke-width="0.7" stroke-dasharray="3,3" />
+    <line x1="275" y1="175.27522935779814" x2="285" y2="175.27522935779814" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="275" y1="245" x2="285" y2="245" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="280" y1="175.27522935779814" x2="280" y2="245" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+    <text x="294" y="214.13761467889907" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">Δh/2</text>
+    <line x1="275" y1="245" x2="285" y2="245" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="275" y1="314.7247706422018" x2="285" y2="314.7247706422018" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="280" y1="245" x2="280" y2="314.7247706422018" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+    <text x="294" y="283.8623853211009" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">Δh/2</text>
+    <text x="205" y="237" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">h₀ = 0,45 m</text>
+    <text x="310" y="357" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#7a5400" text-anchor="middle">gorivo, ρ = 750 kg/m³</text>
+    <line x1="130" y1="314.7247706422018" x2="205" y2="314.7247706422018" stroke="#3a4a56" stroke-width="0.8" stroke-dasharray="3,3" />
+    <path d="M160 314.7247706422018 A30 30 0 0 0 157.97456477537753 303.8885477934317" fill="none" stroke="#3a4a56" stroke-width="1.2" />
+    <text x="181" y="304.7247706422018" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="middle">θ</text>
+    <text x="310" y="505" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Ustaljeno relativno mirovanje; presjek u jedinstvenom mjerilu.</text>
+  </g>
+</svg>

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 540" role="img" aria-labelledby="u04v3ks_title u04v3ks_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
   <title id="u04v3ks_title">Zatvoreni servisni modul s kosom inspekcijskom stijenkom</title>
-  <desc id="u04v3ks_desc">Zatvoreni modul ubrzava se vodoravno udesno s a = 3,4 m/s2. Slobodna povrsina se naginje pod kutom theta priblizno 19,1 stupnjeva tako da je visa na lijevoj strani modula. Inspekcijska stijenka AB postavljena je okomito na slobodnu povrsinu pa s vodoravnicom zatvara kut alfa priblizno 70,9 stupnjeva. Vertikalna projekcija H = 0,55 m, duljina stijenke s priblizno 0,582 m. Inspekcijski prostor je suhi prostor desno od AB. Rezultanta tlaka fluida F_R priblizno 11,0 kN/m s hvatistem y_R priblizno 0,31 m od A mjereno po stijenci.</desc>
+  <desc id="u04v3ks_desc">Zatvoreni modul s plinskim pretlakom i nepropusnom kosom vanjskom stijenkom AB. S druge strane stijenke je atmosferski tlak. Slobodna površina završava u A; rezultanta neto tlaka djeluje okomito na AB, u točki određenoj udaljenošću y_R od A.</desc>
   <defs>
     <linearGradient id="u04v3ks_fluid" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#aed6f1" />
@@ -33,267 +33,139 @@
     <clipPath id="u04v3ks_modClip">
       <rect x="80" y="120" width="360" height="240" />
     </clipPath>
+    <marker id="u04fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u04fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u04v3ks_red" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 8 L12 4 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+    </marker>
   </defs>
-
-  <!-- Background + outer frame -->
-  <rect width="940" height="540" fill="#ffffff" />
-  <!-- ===================== HORIZONTAL ACCELERATION ARROW (above module) ===================== -->
-  <!-- Module accelerates to the RIGHT. Arrow drawn above the module. -->
-  <line x1="160" y1="80" x2="360" y2="80" stroke="#8e44ad" stroke-width="3" marker-end="url(#u04v3ks_aV)" />
-  <!-- Reference vertical (gravity) marker on the upper-left, small -->
-  <line x1="100" y1="60" x2="100" y2="98" stroke="#3a4a56" stroke-width="2" marker-end="url(#u04v3ks_aBlk)" />
-  <!-- ===================== MODULE (closed tank) ===================== -->
-  <!-- Interior: x=80..440, y=120..360 (scale 200 px/m -> 1,8 m x 1,2 m) -->
-  <!-- Top wall -->
-  <rect x="66" y="106" width="388" height="14" fill="url(#u04v3ks_hatch)" stroke="#4a6070" stroke-width="1.4" />
-  <!-- Bottom wall -->
-  <rect x="66" y="360" width="388" height="14" fill="url(#u04v3ks_hatch)" stroke="#4a6070" stroke-width="1.4" />
-  <!-- Left wall -->
-  <rect x="66" y="120" width="14" height="240" fill="url(#u04v3ks_hatch)" stroke="#4a6070" stroke-width="1.4" />
-  <!-- Right wall -->
-  <rect x="440" y="120" width="14" height="240" fill="url(#u04v3ks_hatch)" stroke="#4a6070" stroke-width="1.4" />
-
-  <!-- ===================== FLUID + GAS (clipped to module interior) ===================== -->
-  <!-- Surface drops to the right (high on left, low on right) because tank accelerates RIGHT -->
-  <!-- Surface line endpoints: at x=80, y=175 (high - low y); at x=440, y=175+360*0,347=299,9 -->
-  <g clip-path="url(#u04v3ks_modClip)">
-    <!-- Gas region: above surface -->
-    <path d="M80,120 L440,120 L440,299.9 L80,175 Z" fill="#fff8e1" opacity="0.92" />
-    <!-- Fluid region (main, LEFT of wall AB): polygon = left wall + floor + AB + surface -->
-    <!-- A=(296,250) on surface, B=(258,360) on floor -->
-    <path d="M80,175 L296,250 L258,360 L80,360 Z" fill="url(#u04v3ks_fluid)" />
-    <!-- Inspection chamber (gas, RIGHT of wall AB): wedge bounded by AB, floor, right wall, surface -->
-    <path d="M296,250 L440,299.9 L440,360 L258,360 Z" fill="#fff8e1" opacity="0.92" />
-    <!-- Free surface line (solid blue) - full span: -->
-    <line x1="80" y1="175" x2="440" y2="299.9" stroke="#1565c0" stroke-width="2.4" />
-  </g>
-
-  <!-- ===================== INSPECTION WALL AB ===================== -->
-  <!-- A=(296,250) on surface, B=(258,360) on floor -->
-  <!-- AB direction (A->B): (-0,327, 0,945). Length s = 116,4 px = 0,582 m. -->
-  <line x1="296" y1="250" x2="258" y2="360" stroke="#3a4a56" stroke-width="5" stroke-linecap="round" />
-
-  <!-- Right-angle marker at A: between surface direction (cos t, sin t)=(0,945, 0,327) (going right along surface) and wall direction (-sin t, cos t)=(-0,327, 0,945) (going down-left along AB) -->
-  <!-- Two short segments of length 10 from A in those directions, plus the closing segment -->
-  <!-- P1 = A + 10*(0,945, 0,327) = (305,45, 253,27) - along surface to right -->
-  <!-- P2 = A + 10*(-0,327, 0,945) = (292,73, 259,45) - along wall down -->
-  <!-- corner = A + 10*(0,945, 0,327) + 10*(-0,327, 0,945) = (302,18, 262,72) -->
-  <path d="M305.45,253.27 L302.18,262.72 L292.73,259.45" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-
-  <!-- Point A (circle + label) -->
-  <circle cx="296" cy="250" r="4.5" fill="#3a4a56" />
-  <!-- Point B (circle + label) -->
-  <circle cx="258" cy="360" r="4.5" fill="#3a4a56" />
-  <!-- ===================== ANGLE theta (between surface and horizontal) ===================== -->
-  <!-- Use upper-mid-left area as anchor, where surface y is below the dashed -->
-  <!-- Surface at x=170: y = 175 + (170-80)*0,347 = 175 + 31,23 = 206,23 -->
-  <!-- Horizontal dashed reference at y=206,23 from x=110 to x=200 -->
-  <line x1="110" y1="206.23" x2="205" y2="206.23" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-  <!-- Arc at (170,206,23) from horizontal-right to surface-down-right, radius 26 -->
-  <!-- Horizontal endpoint: (170+26, 206,23)=(196, 206,23) -->
-  <!-- Surface endpoint: (170+26*0,945, 206,23+26*0,327)=(194,57, 214,73) -->
-  <path d="M196,206.23 A26,26 0 0,1 194.57,214.73" fill="none" stroke="#7a8a96" stroke-width="1.2" />
-  <!-- ===================== ANGLE alpha (between wall and horizontal floor at B) ===================== -->
-  <!-- At B=(258,360), wall goes from B toward A in direction (0,327, -0,945). Floor goes right in direction (1,0). -->
-  <!-- Angle alpha = 90 - theta = 70,9 deg, between floor-right and wall-up -->
-  <!-- Arc radius 26, from floor-right endpoint to wall-up endpoint -->
-  <!-- Floor-right endpoint: B + 26*(1, 0) = (284, 360) -->
-  <!-- Wall-up endpoint: B + 26*(0,327, -0,945) = (266,50, 335,43) -->
-  <path d="M284,360 A26,26 0 0,0 266.50,335.43" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-  <!-- ===================== PRESSURE ARROWS ALONG WALL (from FLUID side, LEFT of wall) ===================== -->
-  <!-- Pressure pushes from fluid (LEFT of AB) toward wall, direction = (0,945, 0,327) - down-right -->
-  <!-- Wait: pressure pushes the WALL. Fluid is LEFT of AB. Pressure acts ON wall from fluid. Force direction on wall: from fluid side toward wall, i.e., direction normal to wall pointing toward gas chamber (right of wall). Normal to AB pointing right: rotate AB direction (-0,327, 0,945) by -90 deg = (0,945, 0,327) -->
-  <!-- Arrows start in fluid (offset to upper-left of wall) and point toward wall (arrowhead at wall) -->
-  <!-- Sample 5 points along AB from A (t=0) to B (t=1) -->
-  <!-- P(t) = A + t*(B-A) = (296 - 38t, 250 + 110t) -->
-  <!-- Arrow length L: uniform p_M0 component + hydrostatic linear: L(t) = 20 + 22*t -->
-  <!-- Arrow start = P(t) + L*(-0,945, -0,327) (offset to upper-left, on fluid side); arrow end = P(t) -->
-  <!-- t=0,1: P=(292,2, 261), L=22,2, start=(271,22, 253,74) -->
-  <line x1="271.22" y1="253.74" x2="292.2" y2="261" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
-  <!-- t=0,3: P=(284,6, 283), L=26,6, start=(259,46, 274,3) -->
-  <line x1="259.46" y1="274.3" x2="284.6" y2="283" stroke="#1565c0" stroke-width="1.7" marker-end="url(#u04v3ks_aP)" />
-  <!-- t=0,5: P=(277, 305), L=31, start=(247,71, 294,86) -->
-  <line x1="247.71" y1="294.86" x2="277" y2="305" stroke="#1565c0" stroke-width="2" marker-end="url(#u04v3ks_aP)" />
-  <!-- t=0,7: P=(269,4, 327), L=35,4, start=(235,95, 315,42) -->
-  <line x1="235.95" y1="315.42" x2="269.4" y2="327" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u04v3ks_aP)" />
-  <!-- t=0,9: P=(261,8, 349), L=39,8, start=(224,19, 335,99) -->
-  <line x1="224.19" y1="335.99" x2="261.8" y2="349" stroke="#1565c0" stroke-width="2.5" marker-end="url(#u04v3ks_aP)" />
-
-  <!-- Linear pressure profile envelope: connects arrow tails (dashed) -->
-  <line x1="269.34" y1="251.46" x2="222.30" y2="337.71" stroke="#1565c0" stroke-width="0.9" stroke-dasharray="4,3" opacity="0.65" />
-
-  <!-- (Pressure formula moved into the formula panel; growing arrows show the linear distribution.) -->
-
-  <!-- ===================== RESULTANT F_R ===================== -->
-  <!-- Apply at y_R = 0,306 m along AB from A: t_R = 0,306/0,582 = 0,526 -->
-  <!-- P_R = (296 - 0,526*38, 250 + 0,526*110) = (276, 307,9) -->
-  <!-- F_R direction same as pressure = (0,945, 0,327), length 58 px -->
-  <!-- Start = P_R (point of application), end = P_R + 58*(0,945, 0,327) = (330,81, 326,87) -->
-  <line x1="276" y1="307.9" x2="330.81" y2="326.87" stroke="#1e8449" stroke-width="3" marker-end="url(#u04v3ks_aG)" />
-  <!-- Centre of pressure marker (small green dot at P_R on the wall) -->
-  <circle cx="276" cy="307.9" r="3" fill="#1e8449" />
-
-  <!-- ===================== p_M0 in gas region ===================== -->
-  <!-- Small gas-pressure arrows pushing down on free surface (3 arrows in gas region) -->
-  <line x1="200" y1="138" x2="200" y2="158" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u04v3ks_aP)" />
-  <line x1="235" y1="138" x2="235" y2="160" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u04v3ks_aP)" />
-  <line x1="270" y1="138" x2="270" y2="162" stroke="#1565c0" stroke-width="1.4" marker-end="url(#u04v3ks_aP)" />
-
-  <!-- Inspection chamber label -->
-  <!-- Fluid label - lower-LEFT area of fluid, clear of dim lines and pressure arrows -->
-  <!-- ===================== DIMENSION H (vertical, on LEFT side outside module) ===================== -->
-  <!-- From A_y=250 down to B_y=360. Vertical dim line at x=44 -->
-  <!-- ===================== DIMENSION s (along wall, offset to LEFT-DOWN in fluid region) ===================== -->
-  <!-- Offset direction = (-0,945, -0,327) by 18 px from wall (toward fluid, upper-left from wall) - but we already have pressure arrows there. Use the other side then. -->
-  <!-- Actually use the offset on the FLUID side LEFT-UP, distance further out than pressure arrows -->
-  <!-- Better: use offset to LOWER-LEFT, at distance 56 px so doesn't overlap pressure arrows -->
-  <!-- offset vec = 56*(-0,945, -0,327) = (-52,92, -18,32). A_off = (296-52,92, 250-18,32) = (243,08, 231,68). B_off = (258-52,92, 360-18,32) = (205,08, 341,68) -->
-  <!-- That puts dim line in the gas region; not ideal. Use opposite side: lower-right offset 50 px past wall, INTO inspection chamber. -->
-  <!-- offset vec = 50*(0,945, 0,327) = (47,25, 16,35). A_off=(343,25, 266,35). B_off=(305,25, 376,35) - B_off below floor! No good. -->
-  <!-- Try smaller offset 26: A_off=(296+24,57, 250+8,50)=(320,57, 258,50). B_off=(258+24,57, 360+8,50)=(282,57, 368,50) - B_off below floor at y=360. -->
-  <!-- Place s label in gas chamber wedge, with a small leader to wall midpoint -->
-  <!-- Wall midpoint M = (277, 305) -->
-  <!-- Label centre at (370, 305) - inside inspection chamber -->
-  <!-- ===================== y_R from A along wall ===================== -->
-  <!-- Offset to the LEFT side of wall (fluid side), distance 70 px - past pressure arrows -->
-  <!-- offset vec = 70*(-0,945, -0,327) = (-66,15, -22,89) -->
-  <!-- A_off = (296-66,15, 250-22,89) = (229,85, 227,11) -->
-  <!-- P_R_off = (276-66,15, 307,9-22,89) = (209,85, 285,01) -->
-  <!-- Extension lines from A and P_R to their offsets (perpendicular to wall) -->
-  <!-- Tik perpendicular to dim line (= along wall direction) -->
-  <!-- Wall direction is (-0,327, 0,945); tik length 8 -->
-  <!-- Dim line between offsets (parallel to wall) -->
-  <!-- y_R label: horizontal label placed BELOW the dim line midpoint, leader up to mid-dim -->
-  <!-- Dim midpoint approx (220, 256). Place label below-left at (140, 305). -->
-  <!-- ===================== g_eff INSET ===================== -->
   <rect x="40" y="404" width="190" height="118" rx="8" fill="#faf6fd" stroke="#8e44ad" stroke-width="1.3" />
-  <!-- Origin -->
   <circle cx="105" cy="438" r="2.5" fill="#3a4a56" />
-  <!-- g vector: down, 45 px -->
-  <line x1="105" y1="440" x2="105" y2="490" stroke="#3a4a56" stroke-width="2.4" marker-end="url(#u04v3ks_aBlk)" />
-  <!-- pseudo-force (-a): LEFT, 16 px (a/g * 45 = 15,6) -->
-  <line x1="105" y1="438" x2="89" y2="438" stroke="#8e44ad" stroke-width="2.2" marker-end="url(#u04v3ks_aV)" />
-  <!-- g_eff vector: down-LEFT, sum of (0, 45) and (-16, 0) -->
-  <line x1="105" y1="438" x2="89" y2="485.7" stroke="#8e44ad" stroke-width="2.6" marker-end="url(#u04v3ks_aV)" />
-  <!-- theta arc between g (down) and g_eff (down-left) -->
-  <path d="M105,468 A30,30 0 0,1 94.94,466.32" fill="none" stroke="#7a8a96" stroke-width="1" />
-  <!-- formulas in inset -->
-  <!-- ===================== RIGHT PANEL: Formula box with 4 ordered steps ===================== -->
+  <line x1="105" y1="438" x2="105" y2="488" stroke="#3a4a56" stroke-width="2.4" marker-end="url(#u04v3ks_aBlk)" />
+  <line x1="105" y1="438" x2="87.67074413863405" y2="438" stroke="#8e44ad" stroke-width="2.2" marker-end="url(#u04v3ks_aV)" />
+  <line x1="105" y1="438" x2="87.67074413863405" y2="488" stroke="#8e44ad" stroke-width="2.6" marker-end="url(#u04v3ks_aV)" />
   <rect x="490" y="100" width="430" height="340" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.4" />
   <rect x="490" y="100" width="430" height="32" rx="10" fill="#1565c0" />
   <rect x="490" y="124" width="430" height="8" fill="#1565c0" />
-  <!-- Step 1: alpha -->
   <rect x="500" y="142" width="6" height="60" rx="3" fill="#8e44ad" />
   <line x1="500" y1="212" x2="910" y2="212" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Step 2: s -->
   <line x1="500" y1="276" x2="910" y2="276" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Step 3: F_R -->
   <rect x="500" y="286" width="6" height="68" rx="3" fill="#1e8449" />
   <line x1="500" y1="368" x2="910" y2="368" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Step 4: y_R -->
   <rect x="500" y="378" width="6" height="40" rx="3" fill="#c0392b" />
-  <!-- Result badge -->
   <rect x="490" y="452" width="430" height="58" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <!-- ===================== LEGEND ===================== -->
   <rect x="248" y="404" width="232" height="118" rx="8" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
   <rect x="258" y="434" width="12" height="10" fill="#aed6f1" stroke="#1565c0" stroke-width="0.7" />
   <rect x="258" y="450" width="12" height="10" fill="#fff8e1" stroke="#c0a060" stroke-width="0.7" />
   <line x1="258" y1="471" x2="270" y2="471" stroke="#1565c0" stroke-width="2" />
   <line x1="258" y1="486" x2="270" y2="486" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u04v3ks_aG)" />
   <line x1="378" y1="471" x2="390" y2="471" stroke="#8e44ad" stroke-width="2.5" marker-end="url(#u04v3ks_aV)" />
-  <line x1="296" y1="250" x2="40" y2="250" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="258" y1="360" x2="40" y2="360" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="38" y1="250" x2="52" y2="250" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="38" y1="360" x2="52" y2="360" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="45" y1="253" x2="45" y2="357" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04v3ks_aDimL)" marker-end="url(#u04v3ks_aDim)" />
-  <line x1="346" y1="304" x2="332" y2="304" stroke="#b7600c" stroke-width="0.8" marker-end="url(#u04v3ks_aDim)" />
-  <line x1="296" y1="250" x2="229.85" y2="227.11" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="276" y1="307.9" x2="209.85" y2="285.01" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="226.54" y1="223.33" x2="233.16" y2="230.89" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="206.54" y1="281.23" x2="213.16" y2="288.79" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="229.40" y1="230.30" x2="210.30" y2="281.81" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04v3ks_aDimL)" marker-end="url(#u04v3ks_aDim)" />
-  <line x1="156" y1="297" x2="218" y2="260" stroke="#b7600c" stroke-width="0.7" />
-
   <rect x="500" y="222" width="6" height="46" rx="3" fill="#b7600c" />
   <line x1="378" y1="486" x2="390" y2="486" stroke="#b7600c" stroke-width="1.4" />
-  <text x="260" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#8e44ad" text-anchor="middle"><tspan font-weight="700">a</tspan> = 3,4 m/s²</text>
-
-  <text x="92" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#3a4a56"><tspan font-weight="700">g</tspan></text>
-
-  <text x="298" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#3a4a56">A</text>
-
-  <text x="244" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#3a4a56" text-anchor="end">B</text>
-
-  <text x="204" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#7a8a96"><tspan font-style="italic">θ</tspan> ≈ 19,1°</text>
-
-  <text x="290" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56"><tspan font-style="italic">α</tspan> ≈ 70,9°</text>
-
-  <text x="338" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1e8449"><tspan font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 11,0 kN/m</text>
-
-  <text x="92" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#0d47a1"><tspan font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M0</tspan> = 16 kPa</text>
-  <text x="92" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">(jednoliki pretlak plina)</text>
-
-  <text x="395" y="345" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#8a6d3b" text-anchor="middle">inspekcijski</text>
-  <text x="395" y="355" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#8a6d3b" text-anchor="middle">prostor</text>
-
-  <text x="100" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#0d47a1">tekućina, ρ = 960 kg/m³</text>
-
   <text x="135" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#8e44ad">Efektivno polje sila</text>
-
-  <text x="93" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#3a4a56"><tspan font-weight="700">g</tspan></text>
-  <text x="82" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#8e44ad">−<tspan font-weight="700">a</tspan></text>
-  <text x="68" y="495" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad"><tspan font-weight="700">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
-
+  <text x="93" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#3a4a56">
+    <tspan font-weight="700">g</tspan>
+  </text>
+  <text x="82" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#8e44ad">−<tspan font-weight="700">a</tspan>
+  </text>
+  <text x="68" y="495" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad">
+    <tspan font-weight="700">g</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
+  </text>
   <text x="111" y="465" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#7a8a96">θ</text>
-
   <text x="155" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">tan θ = a/g</text>
   <text x="155" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">θ ≈ 19,1°</text>
-  <text x="155" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">|<tspan font-style="italic">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan>| ≈</text>
+  <text x="155" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">|<tspan font-style="italic">g</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">eff</tspan>| ≈</text>
   <text x="155" y="495" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">10,38 m/s²</text>
-
   <text x="705" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Rješenje u četiri koraka</text>
-
   <text x="516" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#8e44ad">1.  Kut stijenke α</text>
   <text x="516" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530">tan θ = a/g = 3,4/9,81 = 0,347   →   θ ≈ 19,1°</text>
   <text x="516" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#8e44ad">α = 90° − θ ≈ 70,9°</text>
-  <text x="516" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic">s</tspan> = H / sin α = 0,55 / sin 70,9°   →   <tspan font-weight="700" fill="#b7600c">s ≈ 0,582 m</tspan></text>
+  <text x="516" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530">
+    <tspan font-style="italic">s</tspan> = H / sin α = 0,55 / sin 70,9°   →   <tspan font-weight="700" fill="#b7600c">s ≈ 0,582 m</tspan>
+  </text>
   <text x="516" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449">3.  Rezultanta sile fluida po jediničnoj širini</text>
-  <text x="516" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">M0</tspan> · s = 16 000 · 0,582 ≈ 9 312 N/m</text>
-  <text x="516" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">h</tspan> = ½ ρ g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan> s² ≈ 1 688 N/m</text>
-  <text x="516" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = F<tspan baseline-shift="sub" font-size="0.7em">0</tspan> + F<tspan baseline-shift="sub" font-size="0.7em">h</tspan> ≈ 11,0 kN/m</text>
+  <text x="516" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">F₀/b = p<tspan baseline-shift="sub" font-size="0.7em">M0</tspan> · s ≈ 9314 N/m</text>
+  <text x="516" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">h</tspan>/b = ½ ρ g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan> s² ≈ 1689 N/m</text>
+  <text x="516" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>/b ≈ 11,00 kN/m</text>
   <text x="516" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b">4.  Hvatište od ruba A (mjereno po stijenci)</text>
-  <text x="516" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530"><tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> = [F<tspan baseline-shift="sub" font-size="0.7em">0</tspan>(s/2) + F<tspan baseline-shift="sub" font-size="0.7em">h</tspan>(2s/3)] / F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>   →   <tspan font-weight="700" fill="#c0392b">y<tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 0,31 m</tspan></text>
-
+  <text x="516" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530">
+    <tspan font-style="italic">y</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">R</tspan> = [F<tspan baseline-shift="sub" font-size="0.7em">0</tspan>(s/2) + F<tspan baseline-shift="sub" font-size="0.7em">h</tspan>(2s/3)] / F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>   →   <tspan font-weight="700" fill="#c0392b">y<tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 0,31 m</tspan>
+  </text>
   <text x="705" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">stijenka okomita na slobodnu površinu → jednolika + trokutasta raspodjela tlaka</text>
-
   <text x="705" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
   <text x="553" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#8e44ad">α ≈ 70,9°</text>
-  <text x="765" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 11,0 kN/m</text>
+  <text x="765" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>/b ≈ 11,0 kN/m</text>
   <text x="870" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">y<tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 0,31 m</text>
-
   <text x="364" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">Legenda</text>
-
   <text x="276" y="443" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">tekućina (ρ = 960 kg/m³)</text>
-
-  <text x="276" y="459" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">plin s pretlakom p<tspan baseline-shift="sub" font-size="0.7em">M0</tspan></text>
-
+  <text x="276" y="459" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">plin s pretlakom p<tspan baseline-shift="sub" font-size="0.7em">M0</tspan>
+  </text>
   <text x="276" y="475" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">tlak na stijenku</text>
-
-  <text x="280" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">rezultanta F<tspan baseline-shift="sub" font-size="0.7em">R</tspan></text>
-
-  <text x="396" y="475" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">ubrzanje a / g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
-
+  <text x="280" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">rezultanta F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>
+  </text>
+  <text x="396" y="475" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">ubrzanje a / g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
+  </text>
   <text x="396" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">kote</text>
-
   <text x="364" y="510" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">b = 1 m (jedinična širina modula)</text>
-<text x="32" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c" transform="rotate(-90 32 308)"><tspan font-weight="700">H</tspan> = 0,55 m</text>
-
-  <text x="380" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="middle"><tspan font-weight="700">s</tspan> ≈ 0,582 m</text>
-
-  <text x="140" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="middle"><tspan font-weight="700">y</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 0,31 m</text>
   <text x="516" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#b7600c">2.  Duljina stijenke AB</text>
   <text x="655" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c">s ≈ 0,582 m</text>
-  </svg>
+  <g>
+    <rect x="80" y="120" width="261.05606523955146" height="240" fill="none" stroke="none" stroke-width="1.2" />
+    <path d="M80 120 H341.05606523955146 L296 250 L80 175.13761467889907 Z" fill="#fff8e1" stroke="none" stroke-width="1.2" />
+    <path d="M80 175.13761467889907 L296 250 L257.8756371049949 360 H80 Z" fill="url(#u04v3ks_fluid)" stroke="none" stroke-width="1.2" />
+    <rect x="66" y="106" width="288.05606523955146" height="14" fill="url(#u04v3ks_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="66" y="120" width="14" height="240" fill="url(#u04v3ks_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="66" y="360" width="204.8756371049949" height="14" fill="url(#u04v3ks_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <path d="M341.05606523955146 120 L257.8756371049949 360 L270.8756371049949 360 L354.05606523955146 120 Z" fill="url(#u04v3ks_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="80" y1="175.13761467889907" x2="296" y2="250" stroke="#1565c0" stroke-width="2.4" />
+    <line x1="296" y1="250" x2="257.8756371049949" y2="360" stroke="#3a4a56" stroke-width="3" />
+    <circle cx="296" cy="250" r="3.5" fill="#c0392b" />
+    <text x="308" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">A</text>
+    <circle cx="257.8756371049949" cy="360" r="3.5" fill="#c0392b" />
+    <text x="237.8756371049949" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">B</text>
+    <text x="92" y="141" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.7em">M0</tspan> = 16 kPa</text>
+    <text x="92" y="157" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="start">jednoliki pretlak plina</text>
+    <text x="405" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">vanjski prostor</text>
+    <text x="405" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle">p = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
+    </text>
+    <text x="158" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1565c0" text-anchor="middle">tekućina, ρ = 960 kg/m³</text>
+    <line x1="160" y1="80" x2="360" y2="80" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04v3ks_red)" />
+    <text x="260" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#c0392b" text-anchor="middle">a = 3,4 m/s²</text>
+    <line x1="261.8458353759526" y1="252.94827526395522" x2="291.4250764525994" y2="263.2" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+    <line x1="253.1332903248381" y1="272.1070374370392" x2="284.56269113149847" y2="283.0" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+    <line x1="243.45268471248863" y1="293.3945509626881" x2="276.93781855249745" y2="305.0" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+    <line x1="233.77207910013917" y1="314.68206448833695" x2="269.3129459734964" y2="327.0" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+    <line x1="225.05953404902465" y1="333.8408266614209" x2="262.4505606523955" y2="346.8" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+    <line x1="275.9625908520362" y1="307.8138187475072" x2="330.76447328153574" y2="326.80733559361306" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u04v3ks_aG)" />
+    <text x="365" y="347" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>/b ≈ 11,0 kN/m</text>
+    <line x1="40" y1="250" x2="80" y2="250" stroke="#b7600c" stroke-width="0.8" stroke-dasharray="3,3" />
+    <line x1="40" y1="360" x2="80" y2="360" stroke="#b7600c" stroke-width="0.8" stroke-dasharray="3,3" />
+    <line x1="39" y1="250" x2="49" y2="250" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="39" y1="360" x2="49" y2="360" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="44" y1="250" x2="44" y2="360" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u04fix_dimL)" marker-end="url(#u04fix_dim)" />
+    <text x="56" y="309.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start" />
+    <text x="27" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c" text-anchor="middle" transform="rotate(-90 27 305)">H = 0,55 m</text>
+    <line x1="296" y1="250" x2="225.13549685840576" y2="225.43941787141483" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="275.9625908520362" y1="307.8138187475072" x2="205.09808771044197" y2="283.253236618922" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="225.13549685840576" y1="225.43941787141483" x2="205.09808771044197" y2="283.253236618922" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u04fix_dimL)" marker-end="url(#u04fix_dim)" />
+    <line x1="221.35605669085407" y1="224.12952015789028" x2="228.91493702595744" y2="226.74931558493938" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="201.3186475428903" y1="281.94333890539747" x2="208.87752787799366" y2="284.56313433244657" stroke="#b7600c" stroke-width="0.8" />
+    <text x="151" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">y<tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 0,306 m</text>
+    <line x1="185" y1="288" x2="215.11679228442387" y2="254.34632724516842" stroke="#b7600c" stroke-width="0.7" />
+    <text x="397" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">s ≈ 0,582 m</text>
+    <line x1="349" y1="261" x2="290" y2="280" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="257.8756371049949" y1="360" x2="299.8756371049949" y2="360" stroke="#3a4a56" stroke-width="0.8" />
+    <path d="M287.8756371049949 360 A30 30 0 0 0 267.699869956429 331.6541987433623" fill="none" stroke="#3a4a56" stroke-width="1" />
+    <text x="370" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="middle">α ≈ 70,9°</text>
+    <line x1="80" y1="175.13761467889907" x2="148" y2="175.13761467889907" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="3,3" />
+    <path d="M130 175.13761467889907 A50 50 0 0 1 127.24300209439618 191.51133609795585" fill="none" stroke="#8e44ad" stroke-width="1.2" />
+    <text x="170" y="183.13761467889907" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle">θ ≈ 19,1°</text>
+  </g>
+</svg>

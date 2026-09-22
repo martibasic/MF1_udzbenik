@@ -140,45 +140,45 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Kontrolni rezultat ili kriterij.** $p_M \approx 23{,}5\ \text{kPa}$; $p_{aps} \approx 124{,}3\ \text{kPa}$.
 
-### Z2. Tlak u zatvorenom spremniku {#key-task-u03-u-zatvorenom-spremniku-iznad-vode-vlada-manometarski .unnumbered .unlisted}
+### Z2. Razina vode iz razlike tlakova {#key-task-razina-vode-iz-razlike-tlakova .unnumbered .unlisted}
 
-[Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-u-zatvorenom-spremniku-iznad-vode-vlada-manometarski)
+[Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-razina-vode-iz-razlike-tlakova)
 
-**Sažetak.** U zatvorenom spremniku iznad vode vlada manometarski tlak $p_m = 26\ \text{kPa}$. Odredi apsolutni i manometarski tlak u priključku koji se nalazi $1{,}80\ \text{m}$ ispod slobodne površine ako je lokalni atmosferski tlak $p_{atm} =…
+**Sažetak.** U zatvorenom spremniku s vodom gustoće $\rho = 998\ \text{kg/m}^3$ tlak se mjeri u točki `A` uz dno i u plinskom prostoru `G`. Razlika tlakova iznosi $\Delta p = p_A-p_G = 17{,}62\ \text{kPa}$. Oba se tlaka odnose izravno na označene…
 
-**Smjernica postupka.** najprije tlak na slobodnoj površini, zatim kroz isti fluid dodaj $\rho gh$; tek na kraju razdvoji apsolutni i manometarski tlak.
+**Smjernica postupka.** Zapiši tlak u `A` polazeći od tlaka plina. Oduzmi $p_G$ pa iz preostale hidrostatičke razlike odredi visinu.
 
-**Kontrolni rezultat ili kriterij.** $p_M \approx 43{,}6\ \text{kPa}$; $p_{aps} \approx 142{,}8\ \text{kPa}$.
+**Kontrolni rezultat ili kriterij.** $h \approx 1{,}80\ \text{m}$. Pri zadanoj promjeni tlaka plina oba tlaka porastu za $5{,}0\ \text{kPa}$, pa $\Delta p$ ostaje $17{,}62\ \text{kPa}$.
 
 ### Z3. U-manometar s uljem i živom {#key-task-u03-cjevovod-s-uljem-gustoce-spojen-je-na .unnumbered .unlisted}
 
 [Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-cjevovod-s-uljem-gustoce-spojen-je-na)
 
-**Sažetak.** Cjevovod s uljem gustoće $\rho_u = 860\ \text{kg/m}^3$ spojen je na otvoreni U-manometar sa živom gustoće $\rho_{Hg} = 13600\ \text{kg/m}^3$. Razlika razina žive iznosi $\Delta h = 0{,}185\ \text{m}$, a priključna točka u kraku s uljem…
+**Sažetak.** Cjevovod s uljem gustoće $\rho_u = 860\ \text{kg/m}^3$ spojen je na otvoreni U-manometar sa živom gustoće $\rho_{Hg} = 13600\ \text{kg/m}^3$. Razlika razina žive iznosi $\Delta h = 0{,}185\ \text{m}$; razina u otvorenom kraku viša je od…
 
 **Smjernica postupka.** kreni od slobodne površine otvorenog kraka; niz stupce piši promjene tlaka kao $\rho g\Delta h$ uz točan znak.
 
 **Kontrolni rezultat ili kriterij.** $p_M \approx 23{,}7\ \text{kPa}$.
 
-### Z4. Diferencijalni manometar {#key-task-u03-diferencijalni-manometar-ispunjen-zivom-spaja-dvije-tocke .unnumbered .unlisted}
+### Z4. Debljina sloja ulja iz tlaka {#key-task-debljina-sloja-ulja-iz-tlaka .unnumbered .unlisted}
 
-[Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-diferencijalni-manometar-ispunjen-zivom-spaja-dvije-tocke)
+[Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-debljina-sloja-ulja-iz-tlaka)
 
-**Sažetak.** Diferencijalni manometar ispunjen živom spaja dvije točke u vodi, pri čemu je razlika razina žive $\Delta h = 0{,}145\ \text{m}$. Točka `A` nalazi se $0{,}30\ \text{m}$ ispod točke `B`. Odredi razliku tlakova $p_A - p_B$.
+**Sažetak.** U otvorenom spremniku miruju dva nemješljiva sloja: ulje gustoće $\rho_u = 850\ \text{kg/m}^3$ iznad vode gustoće $\rho_w = 1000\ \text{kg/m}^3$. Ukupna visina tekućine iznad dna iznosi $H = 1{,}50\ \text{m}$, a manometarski tlak na dnu…
 
-**Smjernica postupka.** napravi jednu zatvorenu putanju od `A` do `B`; kroz vodu i živu piši odvojene doprinose $\rho g\Delta h$ i tek na kraju zbroji.
+**Smjernica postupka.** Debljine slojeva moraju dati ukupnu visinu. Tlak na dnu dobiva se zbrajanjem dvaju hidrostatičkih doprinosa. Kao provjeru usporedi zadani tlak s tlakovima koje bi dala ista ukupna visina čistog ulja i čiste vode.
 
-**Kontrolni rezultat ili kriterij.** $p_A - p_B \approx 20{,}9\ \text{kPa}$.
+**Kontrolni rezultat ili kriterij.** $h_u \approx 0{,}601\ \text{m}$; $h_w \approx 0{,}899\ \text{m}$; $p_{M,granica} \approx 5{,}015\ \text{kPa}$. Obje su debljine pozitivne, a $12{,}508 < 13{,}830 < 14{,}715\ \text{kPa}$. Tlak je na ravnoj granici kontinuiran; nagib $dp/dh$ raste s $8{,}339$ na $9{,}810\ \text{kPa/m}$ pri ulasku iz ulja u vodu.
 
-### Z5. Vakuumski spremnik {#key-task-u03-vakuumski-spremnik-spojen-je-na-otvoreni-zivin .unnumbered .unlisted}
+### Z5. Izbor manometra za podtlak {#key-task-izbor-manometra-za-podtlak .unnumbered .unlisted}
 
-[Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-vakuumski-spremnik-spojen-je-na-otvoreni-zivin)
+[Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-izbor-manometra-za-podtlak)
 
-**Sažetak.** Vakuumski spremnik spojen je na otvoreni živin manometar koji pokazuje razliku razina $\Delta h = 0{,}230\ \text{m}$. Ako je lokalni atmosferski tlak $p_{atm} = 98{,}6\ \text{kPa}$, odredi apsolutni tlak plina u spremniku. Zatim odredi…
+**Sažetak.** U-manometrom otvorenim prema atmosferi treba mjeriti podtlak plina od nule do $p_{vak,max} = 6{,}00\ \text{kPa}$. Lokalni atmosferski tlak iznosi $p_{atm} = 98{,}6\ \text{kPa}$. Razmatraju se tri odvojene izvedbe ispunjene uljem gustoće…
 
-**Smjernica postupka.** iz manometra najprije vrati tlak plina, a zatim u istom spremniku kroz vodu dodaj $\rho gh$ do tražene točke.
+**Smjernica postupka.** Kreni od atmosferskog tlaka i penjanja kroz manometarsku tekućinu prema strani podtlaka. Ista gustoća određuje i potrebnu visinu za zadani tlak i promjenu tlaka pri pogrešci visine. Provjeri oba ograničenja za svaki fluid.
 
-**Kontrolni rezultat ili kriterij.** $p_{gas} \approx 67{,}9\ \text{kPa}$ (aps.); na dubini $0{,}90\ \text{m}$: $p \approx 76{,}7\ \text{kPa}$.
+**Kontrolni rezultat ili kriterij.** Za ulje, vodu i živu redom: $\Delta h \approx 0{,}711$; $0{,}613$; $0{,}04497\ \text{m}$, a granice tlačne pogreške su $8{,}44$; $9{,}79$; $133{,}42\ \text{Pa}$. Bira se **voda**: ulje traži preveliku razliku razina, a živa daje preveliku tlačnu pogrešku. Razina je viša u kraku spojenom s plinom; $p_{gas,aps} = 92{,}6\ \text{kPa}$. Veća gustoća skraćuje stupac, ali pri istoj pogrešci očitanja povećava tlačnu pogrešku.
 
 ### Z6. Tlak plina iz manometarskog mjerenja {#key-task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor .unnumbered .unlisted}
 
@@ -188,7 +188,7 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Smjernica postupka.** iz otvorenog manometra najprije vrati tlak u priključku, zatim se penjanjem kroz vodu vrati na plinski prostor, a silaskom na dubinu $h_2$ dobije tlak u traženoj točki. Za konzervativnu gornju granicu istodobno uzmi najveće $p_{atm}$, $\Delta h$ i $h_2$, a najmanje $h_1$. Nakon toga primijeni zahtijevanu rezervu na mjerno područje; nominalna vrijednost sama nije dovoljna za izbor senzora.
 
-**Kontrolni rezultat ili kriterij.** $p_{gas} \approx 122{,}6\ \text{kPa}$ (aps.); na dubini $1{,}30\ \text{m}$: $p \approx 135{,}3\ \text{kPa}$. Konzervativna gornja granica iznosi $p_{max}\approx136{,}05\ \text{kPa}$, pa uz rezervu od $5\ \%$ treba puna skala od najmanje $142{,}9\ \text{kPa}$. Pretvornik $0$--$140\ \text{kPa}$ nije dostatan; bira se područje $0$--$160\ \text{kPa}$.
+**Kontrolni rezultat ili kriterij.** $p_{gas} \approx 122{,}6\ \text{kPa}$ (aps.); na dubini $1{,}30\ \text{m}$: $p \approx 135{,}3\ \text{kPa}$. Konzervativna gornja granica iznosi $p_{max}\approx136{,}05\ \text{kPa}$, pa uz rezervu od $5\ \%$ treba puna skala od najmanje $142{,}85\ \text{kPa}$. Pretvornik $0$--$140\ \text{kPa}$ nije dostatan; bira se područje $0$--$160\ \text{kPa}$.
 
 ## Relativno mirovanje fluida
 
@@ -206,7 +206,7 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine)
 
-**Sažetak.** Otvoreni spremnik duljine $L = 1{,}40\ \text{m}$ napunjen je do visine $h_0 = 0{,}30\ \text{m}$, a visina boka je $H = 0{,}42\ \text{m}$. Odredi najveće vodoravno ubrzanje prije početka prelijevanja.
+**Sažetak.** Otvoreni pravokutni spremnik duljine $L = 1{,}40\ \text{m}$ napunjen je do visine $h_0 = 0{,}30\ \text{m}$, a visina boka je $H = 0{,}42\ \text{m}$. Odredi najveće vodoravno ubrzanje prije početka prelijevanja.
 
 **Smjernica postupka.** u graničnom stanju vrijedi $h_{str} = H$ i $\Delta h = 2(H-h_0)$; nakon toga $a = g\Delta h/L$.
 
@@ -216,31 +216,31 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce)
 
-**Sažetak.** Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. Sustav se giba prema gore ubrzanjem $a_z = 2{,}3\ \text{m/s}^2$. Odredi razliku tlaka između dna i…
+**Sažetak.** Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. Sustav ubrzava prema gore s $a_z = 2{,}3\ \text{m/s}^2$. Odredi razliku tlaka između dna i vrha…
 
-**Smjernica postupka.** koristi efektivnu težinu fluida: $\Delta p = \rho (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho gh$.
+**Smjernica postupka.** koristi efektivnu težinu fluida: $\Delta p = \rho (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho gh$. Os $z$ usmjeri prema gore; pri kočenju je $a_z<0$ iako je brzina još pozitivna.
 
-**Kontrolni rezultat ili kriterij.** $\Delta p \approx 7{,}90\ \text{kPa}$; u mirovanju $\Delta p_0 \approx 6{,}40\ \text{kPa}$ — oko 23 % više.
+**Kontrolni rezultat ili kriterij.** $\Delta p \approx 7{,}90\ \text{kPa}$; u mirovanju $\Delta p_0 \approx 6{,}40\ \text{kPa}$ — oko 23 % više. Pri gibanju prema gore uz kočenje $a_z=-2{,}3\ \text{m/s}^2$ dobiva se $\Delta p \approx 4{,}90\ \text{kPa}$. Gradijent određuje ubrzanje, a ne smjer brzine.
 
-### Z4. Ubrzanje iz sile na stijenku {#key-task-u04-ubrzani-otvoreni-spremnik-sirine-stijenke-i-duljine .unnumbered .unlisted}
+### Z4. Brzina vrtnje iz razlike tlakova {#key-task-vrtnja-iz-radijalne-razlike-tlakova .unnumbered .unlisted}
 
-[Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-ubrzani-otvoreni-spremnik-sirine-stijenke-i-duljine)
+[Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-vrtnja-iz-radijalne-razlike-tlakova)
 
-**Sažetak.** Ubrzani otvoreni spremnik širine stijenke $b = 0{,}75\ \text{m}$ i duljine $L = 1{,}60\ \text{m}$ s početnom dubinom $h_0 = 0{,}36\ \text{m}$ nosi na stražnjoj stijenci hidrostatsku silu $F = 820\ \text{N}$. Odredi ubrzanje spremnika ako…
+**Sažetak.** Zatvorena cilindrična posuda potpuno je ispunjena vodom gustoće $\rho = 1000\ \text{kg/m}^3$ i vrti se stalnom brzinom oko okomite osi. Voda je dosegnula vrtnju krutoga tijela. Dva senzora u točkama `A` i `B` nalaze se na istoj visini, na…
 
-**Smjernica postupka.** iz sile vrati lokalnu dubinu preko $F = \rho g b h_{str}^2/2$; zatim $h_{str} = h_0 + \Delta h/2$ i $a = g\Delta h/L$.
+**Smjernica postupka.** Na istoj visini poništava se gravitacijski doprinos. Integriraj radijalni gradijent tlaka između $r_A$ i $r_B$, vodeći računa o kvadratu polumjera i pretvorbi milimetara u metre.
 
-**Kontrolni rezultat ili kriterij.** $h_{str} \approx 0{,}47\ \text{m}$; $a \approx 1{,}38\ \text{m/s}^2$.
+**Kontrolni rezultat ili kriterij.** $p_B-p_A = 1{,}60\ \text{kPa}$; $|\omega| \approx 7{,}91\ \text{rad/s}$; $n \approx 75{,}5\ \text{okr/min}$. Zajednički pomak reference ne mijenja razliku tlakova ni rezultat. Smjer vrtnje nije odrediv jer tlak ovisi o $\omega^2$.
 
-### Z5. Slobodna površina pri rotaciji {#key-task-u04-cilindricna-posuda-radijusa-s-pocetnom-dubinom-vode .unnumbered .unlisted}
+### Z5. Je li se fluid smirio nakon ubrzanja? {#key-task-provjera-smirivanja-ubrzanog-fluida .unnumbered .unlisted}
 
-[Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-cilindricna-posuda-radijusa-s-pocetnom-dubinom-vode)
+[Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-provjera-smirivanja-ubrzanog-fluida)
 
-**Sažetak.** Cilindrična posuda radijusa $R = 0{,}28\ \text{m}$ s početnom dubinom vode $h_0 = 0{,}22\ \text{m}$ vrti se stalnom kutnom brzinom $\omega = 5{,}5\ \text{rad/s}$. Odredi porast razine uz stijenku, spuštanje razine u osi i procijeni ostaje…
+**Sažetak.** Otvoreni pravokutni spremnik na vozilu ima duljinu $L = 1{,}50\ \text{m}$, početnu dubinu vode $h_0 = 0{,}300\ \text{m}$ i visinu boka $H = 0{,}550\ \text{m}$. Vozilo nakon pokretanja ubrzava stalno udesno s $a = 2{,}00\ \text{m/s}^2$. Za…
 
-**Smjernica postupka.** razlika razina je $\Delta h = \omega^2 R^2/(2g)$; uz očuvanje volumena vrijedi $h_{rub} = h_0 + \Delta h/2$ i $h_{osa} = h_0 - \Delta h/2$.
+**Smjernica postupka.** Najprije upotrijebi nagib slobodne površine i očuvanje volumena. Zatim odvojeno provjeri blizinu predviđenim razinama i promjenjivost kroz vrijeme; jedna podudarna točka ili prosjek nisu dovoljni.
 
-**Kontrolni rezultat ili kriterij.** $\Delta h \approx 0{,}12\ \text{m}$; $h_{rub} \approx 0{,}28\ \text{m}$, $h_{osa} \approx 0{,}16\ \text{m}$ — dno u osi ostaje pokriveno.
+**Kontrolni rezultat ili kriterij.** Referentne dubine: $h_{str}\approx0{,}45291$ m, $h_{pred}\approx0{,}14709$ m. Niz I: najveće odstupanje 72,91 mm, raspon 140 mm; ne prolazi. Niz II: odstupanje 1,095 mm, raspon 2,0 mm; prolazi oba kriterija. Referentni profil je ispod boka. Očitanja ipak ne dokazuju mirovanje cijelog fluida ni izostanak prolaznog prelijevanja; treba pratiti slobodnu površinu i relativno gibanje kroz vrijeme.
 
 ### Z6. Rotirajući spremnik i prelijevanje {#key-task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen .unnumbered .unlisted}
 
@@ -250,7 +250,7 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Smjernica postupka.** u graničnom stanju vrijedi $h_{rub} = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim $h_{osa}$ i $h_{rub}$, a tlakove iz $p_M = \rho gh$. U provjeri tolerancije koristi $\omega=1{,}05\alpha\omega_{max}$ i iz uvjeta $h_{osa}\ge0{,}350\ \text{m}$ riješi gornju granicu za $\alpha$.
 
-**Kontrolni rezultat ili kriterij.** $\omega_{max} \approx 7{,}83\ \text{rad/s}$; pri $\omega = 0{,}80\,\omega_{max}$: $h_{osa} \approx 0{,}36\ \text{m}$, $h_{rub} \approx 0{,}56\ \text{m}$; $p_{M,osa} \approx 3{,}51\ \text{kPa}$, $p_{M,rub} \approx 5{,}52\ \text{kPa}$. U nepovoljnoj toleranciji stvarni je omjer $0{,}84$, pa je $h_{osa}\approx0{,}347\ \text{m}$, a $h_{rub}\approx0{,}573\ \text{m}$: nema prelijevanja, ali usis nije dovoljno prekriven. Iz uvjeta dubine slijedi $\alpha_{max}\approx0{,}790$; razumna je postavka…
+**Kontrolni rezultat ili kriterij.** $\omega_{max}\approx7{,}83$ rad/s. Za $\alpha=0{,}80$: dubine (os, rub) ≈ (0,3576; 0,5624) m, tlakovi ≈ (3,51; 5,52) kPa. Uz +5 % brzine: omjer 0,84, dubine ≈ (0,3471; 0,5729) m; nema prelijevanja, ali dubina u osi nije dovoljna. $\alpha_{max}\approx0{,}790$. Preporuka $\alpha=0{,}78$: pri najvećem odstupanju dubine ≈ (0,35268; 0,56732) m, rezerva 2,68 mm. Vrijedi za ustaljeni model sa zatvorenim usisom.
 
 ## Hidrostatske sile na ravne i zakrivljene plohe
 

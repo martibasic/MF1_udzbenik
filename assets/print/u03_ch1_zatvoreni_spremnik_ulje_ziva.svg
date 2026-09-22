@@ -1,18 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u03c1zsuz_title u03c1zsuz_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
   <title id="u03c1zsuz_title">Zatvoreni vodeni spremnik s referentnim uljnim spremnikom i živinim U-manometrom</title>
-  <desc id="u03c1zsuz_desc">Zatvoreni spremnik A s plinskim prostorom p_G iznad vode, povezan diferencijalnim živinim U-manometrom (a=0,30 m vode u lijevom kraku, b=0,25 m ulja u desnom kraku, Δh=0,18 m razlika razina žive, lijeva niža) s otvorenim referentnim uljnim spremnikom B (p_0 atmosferski, h_2=0,55 m). Točka C u vodi A na dubini h_C=1,20 m. Hod tlaka: p_2 ≈ 105,9 kPa, p_1 ≈ 129,1 kPa, p_G ≈ 121,2 kPa, p_C ≈ 133,0 kPa.</desc>
-
+  <desc id="u03c1zsuz_desc">Zatvoreni vodeni i otvoreni uljni spremnik povezani su prohodnim živinim U-manometrom. Točka 2 je 0,13 m iznad točke 1, a površina ulja 0,12 m ispod površine vode. Sve vertikalne kote imaju zajedničko mjerilo. Spojevi su bez poprečnih stijenki i promjene unutarnjeg promjera.</desc>
   <defs>
-    <!-- Fluid gradients -->
-    <linearGradient id="u03c1zsuz_voda" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03c1zsuz_voda" x1="0" y1="120" x2="0" y2="380" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#aed6f1" />
       <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <linearGradient id="u03c1zsuz_ulje" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03c1zsuz_ulje" x1="0" y1="141.6" x2="0" y2="380" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#fde68a" />
       <stop offset="100%" stop-color="#c8a000" />
     </linearGradient>
-    <linearGradient id="u03c1zsuz_ziva" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03c1zsuz_ziva" x1="0" y1="285.6" x2="0" y2="440" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#b0b8c0" />
       <stop offset="100%" stop-color="#808890" />
     </linearGradient>
@@ -20,14 +18,10 @@
       <stop offset="0%" stop-color="#fbf3e0" />
       <stop offset="100%" stop-color="#f0e4c2" />
     </linearGradient>
-
-    <!-- Hatch pattern for tank walls -->
     <pattern id="u03c1zsuz_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.2" />
     </pattern>
-
-    <!-- Markers -->
     <marker id="u03c1zsuz_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
@@ -37,302 +31,25 @@
     <marker id="u03c1zsuz_aBlue" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
       <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
+    <marker id="u03p3_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u03p3_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
   </defs>
-
-  <!-- Background and outer frame -->
-  <rect width="980" height="560" fill="#ffffff" />
-  <!-- ==========================================================================
-       LAYOUT REFERENCE
-       Left panel (diagram): x 30..620
-       Right panel (formulas): x 640..950
-
-       Free surfaces (water in A, oil in B) at common y = 130
-       Connecting pipe to manometer at y = 230 (point 1 in A, point 2 in B)
-       Mercury reference: left meniscus y=420 (lower), right meniscus y=384 (higher)
-       Common bottom of U-tube y = 470
-       Point C in A at y = 350 (h_C deep)
-  ========================================================================== -->
-
-  <!-- =============== ZATVORENI SPREMNIK A (LIJEVO) ============================ -->
-
-  <!-- Tank A interior bounds: x 50..220, y 90..380 (closed) -->
-  <!-- Water free surface y=160, gas above (90..160), water (160..380) -->
-
-  <!-- Gas space fill (yellowish for "plin") -->
-  <rect x="50" y="90" width="170" height="70" fill="url(#u03c1zsuz_plin)" />
-  <!-- Water fill in tank A (continuous to point 1 level y=230) -->
-  <rect x="50" y="160" width="170" height="220" fill="url(#u03c1zsuz_voda)" />
-
-  <!-- Tank walls FULL HEIGHT (closed tank). Top cap, bottom cap, side walls. -->
-  <!-- Top cap -->
-  <rect x="36" y="76" width="198" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <!-- Bottom cap -->
-  <rect x="36" y="380" width="198" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <!-- Left wall -->
-  <rect x="36" y="90" width="14" height="290" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <!-- Right wall FULL height -->
-  <rect x="220" y="90" width="14" height="290" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-
-  <!-- Free surface of water in A (solid blue line) -->
-  <line x1="50" y1="160" x2="220" y2="160" stroke="#1565c0" stroke-width="2" />
-
-  <!-- Gas label p_G -->
-  <!-- Water label -->
-  <!-- Tank A title above -->
-  <!-- Point 1 (where pipe meets tank A at pipe centre y=246) -->
-  <circle cx="220" cy="246" r="4.5" fill="#1a2530" />
-  <rect x="192" y="252" width="20" height="18" rx="4" fill="#ffffff" stroke="#c9d2d8" stroke-width="1" />
-  <!-- Point C inside tank A (deeper, y=350 → h_C = 1,20 m from surface) -->
-  <circle cx="100" cy="350" r="4.5" fill="#1a2530" />
-  <rect x="64" y="340" width="22" height="20" rx="4" fill="#ffffff" stroke="#c9d2d8" stroke-width="1" />
-  <!-- =============== OTVORENI ULJNI SPREMNIK B (DESNO) ======================== -->
-
-  <!-- Tank B interior bounds: x 480..600, y 110..380 (open top!) -->
-  <!-- Oil free surface y=160 (same as water — both connect to manometer arms via point 1 / point 2) -->
-
-  <!-- Oil fill -->
-  <rect x="480" y="160" width="120" height="220" fill="url(#u03c1zsuz_ulje)" />
-
-  <!-- Tank B walls: left, right, bottom only (open top!) -->
-  <rect x="466" y="110" width="14" height="270" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <rect x="600" y="110" width="14" height="270" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <rect x="466" y="380" width="148" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-
-  <!-- Free surface of oil in B -->
-  <line x1="480" y1="160" x2="600" y2="160" stroke="#b7791f" stroke-width="2" />
-
-  <!-- p_0 (atmospheric) label and arrow pushing down on oil surface -->
-  <line x1="540" y1="118" x2="540" y2="155" stroke="#1565c0" stroke-width="2" marker-end="url(#u03c1zsuz_aBlue)" />
-  <!-- Oil label -->
-  <!-- Tank B title above -->
-  <!-- Point 2 (where pipe meets tank B at pipe centre y=215) -->
-  <circle cx="480" cy="215" r="4.5" fill="#1a2530" />
-  <rect x="486" y="222" width="20" height="18" rx="4" fill="#ffffff" stroke="#c9d2d8" stroke-width="1" />
-  <!-- =============== U-MANOMETER (CENTRE) ==================================== -->
-  <!--
-       Pipe walls (outer): glass-like grey #9fb3c0 stroke around fluid.
-       Left arm centred at x=270 (interior 262..278, width 16 px), height y=224..470
-       Right arm centred at x=440 (interior 432..448, width 16 px), height y=224..470
-       U-bottom (horizontal): y=466..482 interior, spans x=262..448
-
-       From point 1: pipe runs horizontal at y=230 from tank A right wall to left arm top
-       From point 2: pipe runs horizontal at y=230 from tank B left wall to right arm top
-
-       Fluid heights in arms:
-       - Left arm: water from point 1 (y=224 top) DOWN to mercury meniscus at y=224 + a*scale
-       - Right arm: oil from point 2 (y=224 top) DOWN to mercury meniscus at y=224 + b*scale
-       - Mercury fills both arms from meniscus down + U-bottom
-
-       Scale: 1 m → 240 px (so a=0,30m → 72 px, b=0,25m → 60 px, Δh=0,18m → 43 px)
-       Left water column: y=224 to y=296 (72 px)
-       Right oil column:  y=224 to y=284 (60 px)
-       Mercury menisci:
-         Left lower:  y_HgL = 296 + something. We need left mercury LOWER than right by Δh=43 px.
-         Right meniscus y_HgR. Set right meniscus at y=300, left at y=343 (left lower by 43 px).
-       But left arm: water occupies y=224..296 (72 px = a). Then between water bottom (296) and Hg meniscus (343) is gap?
-       NO — water sits directly on top of mercury in left arm. So a is the height of WATER ABOVE the left Hg meniscus.
-       That means y_HgL = 224 + 72 = 296. Then right meniscus at y_HgR = 296 - 43 = 253. But oil column b=60 → y=224..284. That means in right arm there is gas/oil between oil bottom (284) and Hg meniscus (253)? No, oil sits ON TOP of mercury too.
-       So in right arm: oil is from y=224 (top, point 2 level) DOWN to Hg meniscus. Oil column = b = 60 px → Hg meniscus right at y=284.
-       Left arm: water column a=72 px → Hg meniscus left at y=296.
-       Then left lower than right by (296-284) = 12 px → that's Δh = 0,05 m. Wrong.
-       We want left LOWER (Hg pushed down on left side) by 43 px.
-       That means left meniscus DEEPER. To get left lower by 43 px AND water column = 72 px above it AND oil column = 60 px above right meniscus, point 1 elevation and point 2 elevation must DIFFER.
-
-       Actually point 1 (in A) and point 2 (in B) are NOT at the same physical elevation in this problem. The text just says point 1 is at depth h_1 in tank A and point 2 is at depth h_2 in tank B. The connection through manometer can be at any geometry.
-
-       Choose: point 1 at y=224, point 2 at y=224-12=212 (slightly higher → that way left Hg pushed down more).
-       Actually simpler: have horizontal pipe legs at different y to make geometry consistent.
-       Point 1 pipe at y=224 (water column a=72 px down → left Hg meniscus at y=296)
-       Point 2 pipe at y=212 (oil column b=60 px down → right Hg meniscus at y=272)
-       Then left lower by 296-272 = 24 px. We want 43 px. So point 2 even higher.
-       Set y_pt2 = 224 - 19 = 205. Then oil column 60 px → right meniscus 265. Left 296, right 265, diff = 31 px. Still not.
-       Need: y_HgL - y_HgR = 43. With y_HgL = y_pt1 + 72, y_HgR = y_pt2 + 60. So y_pt1 - y_pt2 = 43 - 12 = 31 px.
-
-       Set y_pt1 = 230, y_pt2 = 199. Then:
-       y_HgL = 230 + 72 = 302
-       y_HgR = 199 + 60 = 259
-       Diff = 43 px = Δh ✓
-
-       Point 1 (in A) at depth h_1=0,80m = 192 px below water surface (y=160). 160+192=352. But pipe pt 1 at y=230 means h_1 in figure ≈ 70px ≈ 0,29m. NOT to scale — but figure is schematic. The h_1 dimension we just label.
-
-       For consistency I will keep point 1 at y=240 and point 2 at y=209 so vertical offset works.
-       Actually let me redo with clean numbers:
-        scale 1 m = 200 px? No, then a=0.30 → 60px, b=0.25 → 50, Δh=36. Possibly tight.
-        Use 1 m = 220 px: a=66, b=55, Δh=40. OK.
-        y_pt1=240, y_HgL = 240+66=306
-        y_pt2 = 240-(40-(66-55)) = 240-29=211, y_HgR = 211+55=266
-        Diff = 306-266=40 ✓
-
-       Use this geometry.
-  -->
-
-  <!-- ==== PIPE FROM TANK A TO MANOMETER LEFT ARM (y=246 centre, top y=240) === -->
-  <!-- Pipe spans y=240..252 (top edge = left-arm interior top). Water fluid inside. -->
-  <rect x="220" y="240" width="62" height="12" fill="url(#u03c1zsuz_voda)" />
-  <line x1="220" y1="240" x2="282" y2="240" stroke="#3a4a56" stroke-width="1.4" />
-  <line x1="220" y1="252" x2="282" y2="252" stroke="#3a4a56" stroke-width="1.4" />
-
-  <!-- Port fluid overlay over A right wall (x=220..234) -->
-  <rect x="220" y="240" width="14" height="12" fill="url(#u03c1zsuz_voda)" />
-
-  <!-- ==== PIPE FROM TANK B TO MANOMETER RIGHT ARM (y=215 centre, top y=209) == -->
-  <!-- Pipe spans y=209..221. Oil inside. -->
-  <rect x="428" y="209" width="52" height="12" fill="url(#u03c1zsuz_ulje)" />
-  <line x1="428" y1="209" x2="480" y2="209" stroke="#3a4a56" stroke-width="1.4" />
-  <line x1="428" y1="221" x2="480" y2="221" stroke="#3a4a56" stroke-width="1.4" />
-
-  <!-- Port fluid overlay over B left wall (x=466..480) -->
-  <rect x="466" y="209" width="14" height="12" fill="url(#u03c1zsuz_ulje)" />
-
-  <!-- ==== U-MANOMETER GLASS WALLS =========================================== -->
-  <!-- Left arm: interior x=258..282 (width 24), top y=240, bottom y=420 -->
-  <rect x="254" y="240" width="4" height="180" fill="#9fb3c0" />
-  <rect x="282" y="240" width="4" height="180" fill="#9fb3c0" />
-
-  <!-- Right arm: interior x=428..452 (width 24), top y=209, bottom y=420 -->
-  <rect x="424" y="209" width="4" height="211" fill="#9fb3c0" />
-  <rect x="452" y="209" width="4" height="211" fill="#9fb3c0" />
-
-  <!-- U bottom (horizontal connecting pipe): y=416..436 interior, walls 4 px each -->
-  <rect x="254" y="416" width="202" height="4" fill="#9fb3c0" />
-  <rect x="254" y="436" width="202" height="4" fill="#9fb3c0" />
-
-  <!-- ==== MERCURY FILL ======================================================= -->
-  <!-- Left arm Hg: from y=306 (meniscus) down to y=420. Interior x=258..282 -->
-  <rect x="258" y="306" width="24" height="114" fill="url(#u03c1zsuz_ziva)" />
-  <!-- Right arm Hg: from y=266 down to y=420. Interior x=428..452 -->
-  <rect x="428" y="266" width="24" height="154" fill="url(#u03c1zsuz_ziva)" />
-  <!-- U-bottom Hg interior: y=420..436, x=258..452 -->
-  <rect x="258" y="420" width="194" height="16" fill="url(#u03c1zsuz_ziva)" />
-
-  <!-- ==== WATER COLUMN (left arm above Hg) ================================== -->
-  <!-- From y=240 down to y=306 (Hg meniscus). Interior x=258..282 -->
-  <rect x="258" y="240" width="24" height="66" fill="url(#u03c1zsuz_voda)" />
-
-  <!-- ==== OIL COLUMN (right arm above Hg) =================================== -->
-  <!-- From y=209 down to y=266 (Hg meniscus). Interior x=428..452 -->
-  <rect x="428" y="209" width="24" height="57" fill="url(#u03c1zsuz_ulje)" />
-
-  <!-- Meniscus highlights (thin dark line at fluid interface) -->
-  <line x1="258" y1="306" x2="282" y2="306" stroke="#3a4a56" stroke-width="1" />
-  <line x1="428" y1="266" x2="452" y2="266" stroke="#3a4a56" stroke-width="1" />
-
-  <!-- =============== DASHED REFERENCE LINES FOR Hg LEVELS ==================== -->
-  <!-- Left Hg level (y=306) extended to centre, then up to right Hg level (y=266) -->
-  <line x1="282" y1="306" x2="424" y2="306" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-  <line x1="282" y1="266" x2="424" y2="266" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-
-  <!-- =============== KOTE (DIMENSION LINES) ================================== -->
-
-  <!-- a = 0,30 m (water column in left arm) — LEFT of left arm -->
-  <!-- Extension lines from y=240 (top, pt 1) and y=306 (Hg meniscus left) to x=200 -->
-  <!-- Tik-crte -->
-  <!-- Dim line -->
-  <!-- Label (italicized 'a') -->
-  <!-- b = 0,25 m (oil column in right arm) — RIGHT of right arm -->
-  <!-- Δh = 0,18 m — between Hg menisci (right at 266, left at 306) -->
-  <!-- Place dim line in central column area between the two arms, x=380 -->
-  <!-- Extension lines from menisci (left at x=278, right at x=432) to dim line at x=380 (already covered by dashed Hg refs) -->
-  <!-- Tik-crte at x=380 on both reference y values -->
-  <!-- Vertical dim line -->
-  <!-- Label -->
-  <rect x="320" y="278" width="56" height="18" rx="4" fill="#ffffff" stroke="#e8d5b8" stroke-width="0.8" />
-  <!-- h_2 = 0,55 m (oil depth from B surface to point 2) — RIGHT of tank B -->
-  <!-- h_1 = 0,80 m (water depth from A surface to point 1) — top of tank A, INSIDE on right -->
-  <!-- Extension lines from y=160 (water surface) and y=240 (pt 1 pipe centre approx) to x=240 (inside tank) -->
-  <!-- Actually point 1 is shown at y=230 (the tank wall hit) and pipe centre at y=240. Use y=230 for consistency. -->
-  <!-- h_1 kota INSIDE tank A at x=160 -->
-  <!-- h_C = 1,20 m (depth of point C in A from water surface) — LEFT outside tank -->
-  <!-- =============== ŽIVA LABEL (below U-bottom) ============================ -->
-  <!-- =============== MANOMETER CAPTION ======================================= -->
-  <!-- =============== FORMULA PANEL (DESNO) =================================== -->
-  <!-- Panel x=700..950, y=40..520 -->
   <rect x="700" y="40" width="250" height="470" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
-  <!-- Header bar -->
   <rect x="700" y="40" width="250" height="32" rx="10" fill="#1565c0" />
   <rect x="700" y="62" width="250" height="10" fill="#1565c0" />
-  <!-- Blok 1: p_2 (oil reference) -->
   <line x1="715" y1="146" x2="935" y2="146" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 2: p_1 (through manometer) -->
   <line x1="715" y1="218" x2="935" y2="218" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 3: Razlika -->
   <line x1="715" y1="270" x2="935" y2="270" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 4: p_G (gas space) -->
   <line x1="715" y1="358" x2="935" y2="358" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 5: p_C -->
-  <!-- Italic footer -->
-  <!-- Rezultati badge -->
   <rect x="700" y="486" width="250" height="22" rx="6" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.2" />
-  <!-- =============== LEGENDA (bottom of diagram) ============================ -->
-  <rect x="30" y="530" width="660" height="20" rx="4" fill="#fbfcfd" stroke="#dde3ea" stroke-width="0.8" />
-  <rect x="40" y="535" width="12" height="10" fill="url(#u03c1zsuz_voda)" stroke="#1565c0" stroke-width="0.7" />
-  <rect x="100" y="535" width="12" height="10" fill="url(#u03c1zsuz_ulje)" stroke="#b7791f" stroke-width="0.7" />
-  <rect x="156" y="535" width="12" height="10" fill="url(#u03c1zsuz_ziva)" stroke="#5d6d7e" stroke-width="0.7" />
-  <rect x="212" y="535" width="12" height="10" fill="url(#u03c1zsuz_plin)" stroke="#c49a0a" stroke-width="0.7" />
-  <rect x="402" y="535" width="12" height="10" fill="#1565c0" />
-  <line x1="258" y1="240" x2="200" y2="240" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="258" y1="306" x2="200" y2="306" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="200" y1="240" x2="208" y2="240" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="200" y1="306" x2="208" y2="306" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="204" y1="243" x2="204" y2="303" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03c1zsuz_aDimL)" marker-end="url(#u03c1zsuz_aDim)" />
-  <line x1="452" y1="209" x2="510" y2="209" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="452" y1="266" x2="510" y2="266" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="502" y1="209" x2="510" y2="209" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="502" y1="266" x2="510" y2="266" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="506" y1="212" x2="506" y2="263" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03c1zsuz_aDimL)" marker-end="url(#u03c1zsuz_aDim)" />
-  <line x1="372" y1="266" x2="388" y2="266" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="372" y1="306" x2="388" y2="306" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="380" y1="269" x2="380" y2="303" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03c1zsuz_aDimL)" marker-end="url(#u03c1zsuz_aDim)" />
-  <line x1="614" y1="160" x2="660" y2="160" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="480" y1="215" x2="660" y2="215" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="652" y1="160" x2="660" y2="160" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="652" y1="215" x2="660" y2="215" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="656" y1="163" x2="656" y2="212" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03c1zsuz_aDimL)" marker-end="url(#u03c1zsuz_aDim)" />
-  <line x1="160" y1="160" x2="160" y2="246" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03c1zsuz_aDimL)" marker-end="url(#u03c1zsuz_aDim)" />
-  <line x1="155" y1="160" x2="165" y2="160" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="155" y1="246" x2="165" y2="246" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="36" y1="160" x2="10" y2="160" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="100" y1="350" x2="22" y2="350" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="22" y1="158" x2="22" y2="162" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="22" y1="348" x2="22" y2="352" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="22" y1="163" x2="22" y2="347" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03c1zsuz_aDimL)" marker-end="url(#u03c1zsuz_aDim)" />
-  <rect x="350" y="535" width="12" height="10" fill="#b7600c" />
-  <text x="135" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#5c4a1e">plin</text>
-  <text x="135" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-style="italic" font-weight="700" text-anchor="middle" fill="#5c4a1e">p<tspan baseline-shift="sub" font-size="0.65em">G</tspan></text>
-
-  <text x="80" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0d47a1">voda</text>
-  <text x="80" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#0d47a1">ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1000 kg/m³</text>
-
-  <text x="135" y="66" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Spremnik A (zatvoren)</text>
-
-  <text x="202" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">1</text>
-
-  <text x="75" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">C</text>
-
-  <text x="540" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="middle" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
-  <text x="540" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">(atm.)</text>
-
-  <text x="540" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#7d5a00">ulje</text>
-  <text x="540" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#7d5a00">ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 850 kg/m³</text>
-
-  <text x="540" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Spremnik B (otvoren)</text>
-
-  <text x="496" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">2</text>
-
-  <text x="355" y="455" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="middle" fill="#3a4a56">živa</text>
-  <text x="355" y="471" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#3a4a56">ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> = 13 600 kg/m³</text>
-
-  <text x="355" y="500" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Diferencijalni živin U-manometar</text>
-  <text x="355" y="515" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78">lijevi krak niži → tlak u A &gt; tlak iznad ulja u B</text>
-
   <text x="825" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Hod tlaka kroz manometar</text>
-
   <text x="825" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1) Tlak u točki 2 (ulje, otvoreni)</text>
-  <text x="825" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> + ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan>·g·h<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+  <text x="825" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> + ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan>·g·h<tspan baseline-shift="sub" font-size="0.7em">2</tspan>
+  </text>
   <text x="825" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 105,9 kPa</text>
   <text x="825" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2) Hod 2 → 1 kroz živu</text>
   <text x="825" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">2</tspan> − ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan>g a + ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan>g Δh + ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan>g b</text>
@@ -340,40 +57,102 @@
   <text x="825" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Razlika</text>
   <text x="825" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">1</tspan> − p<tspan baseline-shift="sub" font-size="0.7em">2</tspan> ≈ 23,16 kPa</text>
   <text x="825" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3) Plinski prostor (uspon kroz vodu)</text>
-  <text x="825" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">G</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">1</tspan> − ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan>·g·h<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="825" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">G</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">1</tspan> − ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan>·g·h<tspan baseline-shift="sub" font-size="0.7em">1</tspan>
+  </text>
   <text x="825" y="327" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 121,2 kPa (apsolutni)</text>
   <text x="825" y="345" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">p<tspan baseline-shift="sub" font-size="0.7em">G,m</tspan> ≈ +19,9 kPa (pretlak)</text>
   <text x="825" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4) Točka C (silazak kroz vodu)</text>
-  <text x="825" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">C</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">G</tspan> + ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan>·g·h<tspan baseline-shift="sub" font-size="0.7em">C</tspan></text>
+  <text x="825" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">C</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">G</tspan> + ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan>·g·h<tspan baseline-shift="sub" font-size="0.7em">C</tspan>
+  </text>
   <text x="825" y="415" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 133,0 kPa (apsolutni)</text>
   <text x="825" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">p<tspan baseline-shift="sub" font-size="0.7em">C,m</tspan> ≈ +31,7 kPa (pretlak)</text>
-
   <text x="825" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Oba mjesta su pod pretlakom (p<tspan baseline-shift="sub" font-size="0.7em">m</tspan> &gt; 0):</text>
   <text x="825" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">točka C dublje → veći pretlak.</text>
-
   <text x="825" y="501" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1e8449">REZULTAT: p<tspan baseline-shift="sub" font-size="0.7em">G,m</tspan> = +19,9 kPa  |  p<tspan baseline-shift="sub" font-size="0.7em">C,m</tspan> = +31,7 kPa</text>
-
-  <text x="56" y="544" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">voda</text>
-  <text x="116" y="544" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">ulje</text>
-  <text x="172" y="544" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">živa</text>
-  <text x="228" y="544" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">plinski prostor (p<tspan baseline-shift="sub" font-size="0.7em">G</tspan>)</text>
-  <text x="366" y="544" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">kote</text>
-  <text x="418" y="544" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56">tlak (atmosferski p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> na ulje u B)</text>
-<text x="184" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="middle" fill="#b7600c">a</text>
-  <text x="184.0" y="292.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c">= 0,30 m</text>
-
-  <text x="526" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="middle" fill="#b7600c">b</text>
-  <text x="526.0" y="256.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c">= 0,25 m</text>
-
-  <text x="348" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" font-weight="700" text-anchor="middle" fill="#b7600c">Δh</text>
-  <text x="348.0" y="307.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c">= 0,18 m</text>
-
-  <text x="678" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
-  <text x="678.0" y="200.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">= 0,55 m</text>
-
-  <text x="172" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-  <text x="172.0" y="216.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">= 0,80 m</text>
-
-  <text x="14" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#b7600c" transform="rotate(-90 14 252)">h<tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 1,20 m</text>
-
-  </svg>
+  <g font-family="'Segoe UI',Arial,sans-serif">
+    <rect x="50" y="70" width="170" height="50" fill="url(#u03c1zsuz_plin)" stroke="none" stroke-width="1.2" />
+    <rect x="50" y="120" width="170" height="260" fill="url(#u03c1zsuz_voda)" stroke="none" stroke-width="1.2" />
+    <rect x="36" y="56" width="198" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="36" y="70" width="14" height="310" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="36" y="380" width="198" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="220" y="70" width="14" height="180" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="220" y="278" width="14" height="102" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="480" y="141.6" width="120" height="238.4" fill="url(#u03c1zsuz_ulje)" stroke="none" stroke-width="1.2" />
+    <rect x="466" y="100" width="14" height="126.6" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="466" y="254.6" width="14" height="125.4" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="600" y="100" width="14" height="280" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="466" y="380" width="148" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <path d="M220 264 H285 V430 H420 V240.6 H480" fill="none" stroke="#3a4a56" stroke-width="29" stroke-linejoin="round" />
+    <path d="M220 264 H285 V430 H420 V240.6 H480" fill="none" stroke="#d7dee3" stroke-width="28" stroke-linejoin="round" />
+    <path d="M220 264 H285 V430 H420 V240.6 H480" fill="none" stroke="url(#u03c1zsuz_hatch)" stroke-width="28" stroke-linejoin="round" />
+    <path d="M220 264 H285 V318" fill="none" stroke="url(#u03c1zsuz_voda)" stroke-width="20" stroke-linejoin="round" />
+    <path d="M285 318 V430 H420 V285.6" fill="none" stroke="url(#u03c1zsuz_ziva)" stroke-width="20" stroke-linejoin="round" />
+    <path d="M420 285.6 V240.6 H480" fill="none" stroke="url(#u03c1zsuz_ulje)" stroke-width="20" stroke-linejoin="round" />
+    <line x1="50" y1="120" x2="220" y2="120" stroke="#1565c0" stroke-width="2" />
+    <line x1="480" y1="141.6" x2="600" y2="141.6" stroke="#b7791f" stroke-width="2" />
+    <line x1="275" y1="318" x2="295" y2="318" stroke="#3a4a56" stroke-width="1.2" />
+    <line x1="410" y1="285.6" x2="430" y2="285.6" stroke="#3a4a56" stroke-width="1.2" />
+    <circle cx="220" cy="264" r="3.5" fill="#c0392b" />
+    <text x="201" y="283" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">1</text>
+    <circle cx="480" cy="240.6" r="3.5" fill="#c0392b" />
+    <text x="492" y="258.6" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">2</text>
+    <circle cx="95" cy="336" r="3.5" fill="#c0392b" />
+    <text x="105" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">C</text>
+    <text x="135" y="43" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Spremnik A (zatvoren)</text>
+    <text x="135" y="94" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#5c4a1e" text-anchor="middle">plin, p<tspan baseline-shift="sub" font-size="0.7em">G</tspan>
+    </text>
+    <text x="95" y="202" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1565c0" text-anchor="middle">voda</text>
+    <text x="110" y="219" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1000 kg/m³</text>
+    <text x="540" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Spremnik B (otvoren)</text>
+    <text x="540" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
+    </text>
+    <text x="540" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#7d5a00" text-anchor="middle">ulje</text>
+    <text x="540" y="319" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#7d5a00" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 850 kg/m³</text>
+    <line x1="220" y1="264" x2="252" y2="264" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="245" y1="318" x2="275" y2="318" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="241" y1="264" x2="251" y2="264" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="241" y1="318" x2="251" y2="318" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="246" y1="264" x2="246" y2="318" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+    <text x="254" y="301" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">a</text>
+    <text x="253" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle">0,30 m</text>
+    <line x1="430" y1="285.6" x2="461" y2="285.6" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="449" y1="240.6" x2="461" y2="240.6" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="452" y1="240.6" x2="462" y2="240.6" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="452" y1="285.6" x2="462" y2="285.6" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="457" y1="240.6" x2="457" y2="285.6" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+    <text x="440" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">b</text>
+    <text x="456" y="309" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle">0,25 m</text>
+    <line x1="299" y1="285.6" x2="405" y2="285.6" stroke="#909fa8" stroke-width="0.8" stroke-dasharray="4,3" />
+    <line x1="299" y1="318" x2="405" y2="318" stroke="#909fa8" stroke-width="0.8" stroke-dasharray="4,3" />
+    <line x1="346" y1="285.6" x2="356" y2="285.6" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="346" y1="318" x2="356" y2="318" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="351" y1="285.6" x2="351" y2="318" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+    <text x="363" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">Δh</text>
+    <text x="356" y="343" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle">0,18 m</text>
+    <line x1="176" y1="120" x2="186" y2="120" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="176" y1="264" x2="186" y2="264" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="181" y1="120" x2="181" y2="264" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+    <text x="189" y="173" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">1</tspan>
+    </text>
+    <text x="189" y="189" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="start">0,80 m</text>
+    <line x1="19" y1="120" x2="29" y2="120" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="19" y1="336" x2="29" y2="336" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="24" y1="120" x2="24" y2="336" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+    <text x="36" y="232.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start" />
+    <text x="13" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle" transform="rotate(-90 13 228)">h<tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 1,20 m</text>
+    <line x1="24" y1="120" x2="50" y2="120" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="24" y1="336" x2="90" y2="336" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="645" y1="141.6" x2="655" y2="141.6" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="645" y1="240.6" x2="655" y2="240.6" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="650" y1="141.6" x2="650" y2="240.6" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+    <text x="660" y="185" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">2</tspan>
+    </text>
+    <text x="660" y="203" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="start">0,55 m</text>
+    <line x1="614" y1="141.6" x2="656" y2="141.6" stroke="#b7600c" stroke-width="0.7" />
+    <line x1="485" y1="240.6" x2="656" y2="240.6" stroke="#b7600c" stroke-width="0.7" />
+    <text x="352" y="464" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="middle">živa, ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> = 13 600 kg/m³</text>
+    <text x="352" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Otvoreni spojevi; jedinstvena ispuna svakoga fluida.</text>
+    <text x="352" y="513" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Kote se mjere od tlačnih točaka do površina i razdjelnica.</text>
+    <text x="352" y="538" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">Vertikalno mjerilo: 180 jedinica/m; širine posuda su shematske.</text>
+  </g>
+</svg>

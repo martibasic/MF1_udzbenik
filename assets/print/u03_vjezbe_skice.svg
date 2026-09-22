@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 760" role="img" aria-labelledby="u03vs_title u03vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-  <title id="u03vs_title">Skice za vjezbe poglavlja 3 - sest zadataka manometrije</title>
-  <desc id="u03vs_desc">Sest minimalnih grayscale skica uz zadatke za vjezbu: (1) otvoreni spremnik vode, (2) zatvoreni spremnik s plinom iznad vode, (3) U-manometar s uljem i zivom, (4) diferencijalni manometar izmedju dvije tocke u vodi, (5) vakuumski spremnik s otvorenim zivinim manometrom, (6) zatvoreni vodeni spremnik s otvorenim U-manometrom i unutarnjom tockom.</desc>
-
+  <title id="u03vs_title">Skice uz zadatke Z1–Z6 iz hidrostatike i manometrije</title>
+  <desc id="u03vs_desc">Šest panela zadržava postojeće okvire, oznake, šrafure i gradijente. Z1: otvoreni spremnik i dubina točke A. Z2: tlakovi u plinu G i uz dno A određuju visinu vode. Z3: ulje je povezano s nižom granicom ulja i žive, otvorena površina žive desno je viša. Z4: ulje iznad vode bez krute pregrade; zbroj nepoznatih debljina jednak je ukupnoj visini. Z5: jedan otvoreni U-manometar s jednom od triju mogućih tekućina; viša je površina na strani podtlaka. Z6: spojni vod potpuno ispunjen vodom vodi do granice vode i žive na istoj visini kao priključak A. Točka C je dublje; živa u otvorenom kraku je viša. Svi su donji spojevi prohodni. Tlakovi su skalarne oznake, smeđe strelice su kote, ne sile niti tok. Skice nisu u mjerilu.</desc>
   <defs>
     <linearGradient id="u03vs_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#aed6f1" />
@@ -27,417 +26,195 @@
     <marker id="u03vs_pr" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
       <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
     </marker>
+    <linearGradient id="u03vs_voda6" x1="0" y1="125" x2="0" y2="278" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
   </defs>
-
-  <rect width="980" height="760" fill="#ffffff" />
-  <!-- =====================================================================
-       PANEL 1 — Otvoreni spremnik vode, tocka A na dubini h=2,40 m
-       Box: x=28..328, y=34..374
-       ===================================================================== -->
-  <rect x="28" y="34" width="300" height="340" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
-  <circle cx="48" cy="54" r="11" fill="#1565c0" />
-  <!-- Walls (full height closed sides + bottom) - hatched -->
-  <rect x="100" y="100" width="14" height="240" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="246" y="100" width="14" height="240" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="100" y="328" width="160" height="12" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-
-  <!-- Water -->
-  <rect x="114" y="170" width="132" height="158" fill="url(#u03vs_voda)" />
-  <!-- Free surface (solid blue) -->
-  <line x1="114" y1="170" x2="246" y2="170" stroke="#1565c0" stroke-width="2" />
-
-  <!-- Atmosphere label above surface -->
-  <!-- Small downward arrow from atm to surface -->
-  <line x1="180" y1="146" x2="180" y2="167" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u03vs_pr)" />
-
-  <!-- Point A (red dot) -->
-  <circle cx="170" cy="280" r="4.5" fill="#c0392b" />
-  <!-- Kota h (right side) extension lines + dim -->
-  <!-- voda label inside -->
-  <!-- Tasks footer -->
-  <!-- =====================================================================
-       PANEL 2 — Zatvoreni spremnik, plin p_m = 26 kPa nad vodom
-       Box: x=340..640, y=34..374
-       ===================================================================== -->
-  <rect x="340" y="34" width="300" height="340" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
-  <circle cx="360" cy="54" r="11" fill="#1565c0" />
-  <!-- Closed tank: 4 walls + top -->
-  <rect x="412" y="100" width="146" height="12" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="412" y="100" width="14" height="240" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="544" y="100" width="14" height="240" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="412" y="328" width="146" height="12" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-
-  <!-- Gas space (light neutral) -->
-  <rect x="426" y="112" width="118" height="76" fill="#f4f0e6" />
-  <!-- Water -->
-  <rect x="426" y="188" width="118" height="140" fill="url(#u03vs_voda)" />
-  <!-- Free surface -->
-  <line x1="426" y1="188" x2="544" y2="188" stroke="#1565c0" stroke-width="2" />
-
-  <!-- Point A at depth 1,80 m -->
-  <circle cx="478" cy="278" r="4.5" fill="#c0392b" />
-  <!-- Kota h on right -->
-  <!-- =====================================================================
-       PANEL 3 — U-manometar s uljem i zivom, dh = 0,185 m
-       Box: x=652..952, y=34..374
-       ===================================================================== -->
-  <rect x="652" y="34" width="300" height="340" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
-  <circle cx="672" cy="54" r="11" fill="#1565c0" />
-  <!-- LEFT arm (closed to oil pipe at top) - bore from x=706..738, height y=120..318 -->
-  <!-- Left wall left arm -->
-  <rect x="700" y="120" width="6" height="198" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- Right wall left arm -->
-  <rect x="738" y="120" width="6" height="198" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- Oil pipe connection at top of left arm -->
-  <rect x="690" y="108" width="68" height="12" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="690" y="120" width="10" height="14" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="744" y="120" width="14" height="14" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- RIGHT arm OPEN, bore x=860..892 -->
-  <rect x="854" y="100" width="6" height="218" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="892" y="100" width="6" height="218" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- U bottom -->
-  <rect x="700" y="318" width="198" height="6" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="700" y="324" width="198" height="14" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- Cijevni vod: ravna cijev koja sjedi na lijevoj cijevi s uljem -->
-  <!-- Oil column in left arm: oil from y=148 down to y=250 (oil-mercury interface) -->
-  <rect x="706" y="148" width="32" height="102" fill="url(#u03vs_ulje)" />
-  <!-- Oil also in pipe at top - fills the elbow -->
-  <rect x="690" y="120" width="68" height="14" fill="url(#u03vs_ulje)" />
-  <!-- Oil surface in left arm (top) -->
-  <line x1="706" y1="148" x2="738" y2="148" stroke="#c8a000" stroke-width="1.5" />
-
-  <!-- Mercury (Hg) - continuous through U-bottom -->
-  <rect x="706" y="250" width="32" height="68" fill="url(#u03vs_ziva)" />
-  <rect x="706" y="318" width="192" height="6" fill="url(#u03vs_ziva)" />
-  <rect x="860" y="218" width="32" height="100" fill="url(#u03vs_ziva)" />
-
-  <!-- Mercury surface (top) - in left arm at y=250, in right arm at y=218 -->
-  <line x1="706" y1="250" x2="738" y2="250" stroke="#5d6d7e" stroke-width="1.4" />
-  <line x1="860" y1="218" x2="892" y2="218" stroke="#5d6d7e" stroke-width="1.4" />
-
-  <!-- Reference dashed lines for dh -->
-  <line x1="744" y1="250" x2="860" y2="250" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,3" />
-  <line x1="744" y1="218" x2="860" y2="218" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,3" />
-
-  <!-- Kota dh between mercury levels - center between arms -->
-  <!-- Kota - oil column 0,12 m above oil-mercury interface (left), drawn INSIDE panel -->
-  <!-- Labels -->
-  <!-- p0 above open arm -->
-  <!-- Pipe label -->
-  <!-- =====================================================================
-       PANEL 4 — Diferencijalni manometar voda-voda, dh = 0,145 m
-       Box: x=28..328, y=386..726
-       ===================================================================== -->
-  <rect x="28" y="386" width="300" height="340" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
-  <circle cx="48" cy="406" r="11" fill="#1565c0" />
-  <!-- Pipe A (left, lower) - water filled circular pipe cross-section -->
-  <!-- Pipe B (right, higher by 0,30 m) -->
-  <!-- A at center y=460, B at center y=430. Each pipe drawn as a circle -->
-  <circle cx="80" cy="460" r="22" fill="url(#u03vs_voda)" stroke="#3a4a56" stroke-width="1.5" />
-  <circle cx="276" cy="430" r="22" fill="url(#u03vs_voda)" stroke="#3a4a56" stroke-width="1.5" />
-  <!-- U-tube manometer below, between the two pipes -->
-  <!-- Left arm bore x=130..150, top y=482 (connects to A bottom), bottom y=664 -->
-  <!-- Right arm bore x=206..226, top y=452 (connects to B bottom), bottom y=664 -->
-  <!-- Connection tubes from pipe to manometer -->
-  <rect x="124" y="482" width="32" height="6" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <rect x="200" y="452" width="32" height="6" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-
-  <!-- Manometer walls -->
-  <rect x="124" y="488" width="6" height="176" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="150" y="488" width="6" height="176" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="200" y="458" width="6" height="206" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="226" y="458" width="6" height="206" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="124" y="664" width="108" height="6" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="124" y="670" width="108" height="12" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- Water above mercury in left arm: from y=488 to y=600 -->
-  <rect x="130" y="488" width="20" height="112" fill="url(#u03vs_voda)" />
-  <!-- Water above mercury in right arm: from y=458 to y=540 -->
-  <rect x="206" y="458" width="20" height="82" fill="url(#u03vs_voda)" />
-
-  <!-- Mercury - left arm (taller, since A side has higher pressure → mercury pushed up RIGHT, lower LEFT)
-       Actually for diff manometer with mercury: heavier side pushes mercury down on its side.
-       If A is below B by 0,30 m and we want a manifest dh, let's place left mercury TOP at y=600,
-       right mercury TOP at y=540 (Δh=60 px corresponding to 0,145 m). Mercury on LEFT (A side) is LOWER.
-       That implies pressure at left junction > pressure at right junction. -->
-  <rect x="130" y="600" width="20" height="64" fill="url(#u03vs_ziva)" />
-  <rect x="206" y="540" width="20" height="124" fill="url(#u03vs_ziva)" />
-  <rect x="130" y="664" width="102" height="6" fill="url(#u03vs_ziva)" />
-
-  <!-- Mercury top lines -->
-  <line x1="130" y1="600" x2="150" y2="600" stroke="#5d6d7e" stroke-width="1.4" />
-  <line x1="206" y1="540" x2="226" y2="540" stroke="#5d6d7e" stroke-width="1.4" />
-  <!-- Dashed extension for dh between mercury levels -->
-  <line x1="156" y1="600" x2="206" y2="600" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,3" />
-  <line x1="156" y1="540" x2="206" y2="540" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,3" />
-
-  <!-- dh kota between mercury levels (centered between arms) -->
-  <!-- Kota za vertical pomak izmedju A i B (0,30 m) - desno od pipe A, izmedju cijevi -->
-  <!-- Hg label -->
-  <!-- =====================================================================
-       PANEL 5 — Vakuumski spremnik + otvoreni zivin manometar, dh=0,230 m
-       Box: x=340..640, y=386..726
-       ===================================================================== -->
-  <rect x="340" y="386" width="300" height="340" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
-  <circle cx="360" cy="406" r="11" fill="#1565c0" />
-  <!-- Closed tank: x=358..488, y=448..680 -->
-  <rect x="358" y="448" width="130" height="10" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="358" y="458" width="10" height="222" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="478" y="458" width="10" height="222" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="358" y="680" width="130" height="10" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-
-  <!-- Gas (vacuum) space -->
-  <rect x="368" y="458" width="110" height="68" fill="#f4f0e6" />
-  <!-- Water in tank -->
-  <rect x="368" y="526" width="110" height="154" fill="url(#u03vs_voda)" />
-  <line x1="368" y1="526" x2="478" y2="526" stroke="#1565c0" stroke-width="2" />
-
-  <!-- Point A inside tank, h=0,90 m below surface -->
-  <circle cx="408" cy="608" r="4.5" fill="#c0392b" />
-  <!-- Connection pipe from tank top gas-space to manometer left arm -->
-  <!-- Tank wall at x=488, manometer left bore at x=524 -->
-  <rect x="488" y="478" width="36" height="6" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-
-  <!-- Manometer (U-tube) -->
-  <!-- Left arm bore x=524..544 -->
-  <rect x="518" y="478" width="6" height="186" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="544" y="478" width="6" height="186" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- Right arm bore x=590..610 OPEN (higher) -->
-  <rect x="584" y="430" width="6" height="234" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="610" y="430" width="6" height="234" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- U bottom -->
-  <rect x="518" y="664" width="98" height="6" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="518" y="670" width="98" height="10" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- Mercury in manometer
-       Vacuum tank → atmospheric side mercury HIGHER on tank side (because atm pushes mercury up
-       into tank side). So LEFT arm (tank side) mercury TOP HIGHER (smaller y), RIGHT arm LOWER.
-       But wait - for VACUUM with p_aps < p_atm, the open arm mercury is pushed DOWN by atm and
-       sucked UP on tank side. So tank-side mercury TOP at smaller y (higher), right at larger y. -->
-  <rect x="524" y="528" width="20" height="136" fill="url(#u03vs_ziva)" />
-  <rect x="590" y="574" width="20" height="90" fill="url(#u03vs_ziva)" />
-  <rect x="518" y="664" width="98" height="6" fill="url(#u03vs_ziva)" />
-
-  <!-- Mercury surface lines -->
-  <line x1="524" y1="528" x2="544" y2="528" stroke="#5d6d7e" stroke-width="1.4" />
-  <line x1="590" y1="574" x2="610" y2="574" stroke="#5d6d7e" stroke-width="1.4" />
-  <!-- Dashed extension for dh -->
-  <line x1="550" y1="528" x2="590" y2="528" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,3" />
-  <line x1="550" y1="574" x2="590" y2="574" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,3" />
-
-  <!-- dh kota between mercury levels (centered between arms) -->
-  <!-- Kota za h=0,90 m - INSIDE panel margin (between left edge and tank wall) -->
-  <!-- Hg label -->
-  <!-- p_atm above open arm -->
-  <!-- voda label -->
-  <!-- =====================================================================
-       PANEL 6 — Zatvoreni spremnik + U-manometar (tank side LOWER mercury)
-       dh=0,210 m, h1=0,65 m (manometer junction), tocka C na 1,30 m
-       Box: x=652..952, y=386..726
-       ===================================================================== -->
-  <rect x="652" y="386" width="300" height="340" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
-  <circle cx="672" cy="406" r="11" fill="#1565c0" />
-  <!-- Closed tank: x=662..808, y=438..690 -->
-  <rect x="662" y="438" width="146" height="10" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="662" y="448" width="10" height="232" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="798" y="448" width="10" height="232" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="662" y="680" width="146" height="10" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-
-  <!-- Gas (plin) space inside tank -->
-  <rect x="672" y="448" width="126" height="60" fill="#f4f0e6" />
-  <!-- Water in tank: surface at y=508 -->
-  <rect x="672" y="508" width="126" height="172" fill="url(#u03vs_voda)" />
-  <line x1="672" y1="508" x2="798" y2="508" stroke="#1565c0" stroke-width="2" />
-
-  <!-- Junction on side wall (manometer connection) at depth h1=0,65 m → y=508+50=558 -->
-  <!-- Bocni prikljucak: small black dot on right wall -->
-  <circle cx="798" cy="558" r="3" fill="#3a4a56" />
-
-  <!-- Point C inside tank at depth 1,30 m below surface → y=508+100=608 -->
-  <circle cx="725" cy="608" r="4.5" fill="#c0392b" />
-  <!-- Kota 1,30 m label - on right of dim line, in water -->
-  <!-- Kota 1,30 m from surface to point C - in LEFT tank margin (inside panel) -->
-  <!-- Connection pipe from tank wall (y=558) horizontally to manometer left arm -->
-  <rect x="808" y="555" width="14" height="6" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1" />
-
-  <!-- Kota h1 = 0,65 m: depth of side junction below free surface, drawn INSIDE water on tank's right side -->
-  <!-- U-manometer (open on right) -->
-  <!-- Left arm bore x=826..842 -->
-  <rect x="820" y="555" width="6" height="115" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="842" y="555" width="6" height="115" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- Right arm OPEN, taller, bore x=894..910 -->
-  <rect x="888" y="500" width="6" height="170" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="910" y="500" width="6" height="170" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <!-- U bottom -->
-  <rect x="820" y="670" width="96" height="6" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-  <rect x="820" y="676" width="96" height="10" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- Source spec: razina zive na strani spremnika NIZA → tank-side mercury TOP at LARGER y.
-       Tank-side (left) mercury top at y=636. Open-side (right) at y=586. Δh=50 px → 0,210 m.
-       Above left-arm mercury (between y=561 and y=636): water from tank.
-       Above right-arm mercury (between y=586 and y=500): open air. -->
-  <!-- Water in left arm (above mercury, below connection pipe) -->
-  <rect x="826" y="561" width="16" height="75" fill="url(#u03vs_voda)" />
-  <!-- Mercury -->
-  <rect x="826" y="636" width="16" height="34" fill="url(#u03vs_ziva)" />
-  <rect x="820" y="670" width="96" height="6" fill="url(#u03vs_ziva)" />
-  <rect x="894" y="586" width="16" height="84" fill="url(#u03vs_ziva)" />
-
-  <!-- Mercury surfaces -->
-  <line x1="826" y1="636" x2="842" y2="636" stroke="#5d6d7e" stroke-width="1.4" />
-  <line x1="894" y1="586" x2="910" y2="586" stroke="#5d6d7e" stroke-width="1.4" />
-
-  <!-- Dashed extension lines for dh -->
-  <line x1="848" y1="636" x2="894" y2="636" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,3" />
-  <line x1="848" y1="586" x2="894" y2="586" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,3" />
-
-  <!-- dh kota -->
-  <!-- Hg label -->
-  <!-- p_atm above open arm -->
-  <line x1="246" y1="170" x2="282" y2="170" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="170" y1="280" x2="282" y2="280" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="272" y1="170" x2="272" y2="280" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-  <line x1="558" y1="188" x2="594" y2="188" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="478" y1="278" x2="594" y2="278" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="584" y1="188" x2="584" y2="278" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-  <line x1="798" y1="218" x2="798" y2="250" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-  <line x1="700" y1="148" x2="684" y2="148" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="700" y1="250" x2="684" y2="250" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="690" y1="148" x2="690" y2="250" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-  <line x1="178" y1="540" x2="178" y2="600" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-  <line x1="80" y1="460" x2="160" y2="460" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="276" y1="430" x2="160" y2="430" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="116" y1="430" x2="116" y2="460" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-  <line x1="567" y1="528" x2="567" y2="574" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-  <line x1="368" y1="526" x2="358" y2="526" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="408" y1="608" x2="358" y2="608" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="364" y1="526" x2="364" y2="608" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-  <line x1="672" y1="508" x2="660" y2="508" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="725" y1="608" x2="660" y2="608" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="666" y1="508" x2="666" y2="608" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-
-  <line x1="798" y1="508" x2="784" y2="508" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="798" y1="558" x2="784" y2="558" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="790" y1="508" x2="790" y2="558" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-  <line x1="870" y1="586" x2="870" y2="636" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-  <text x="48" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1</text>
-  <text x="66" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a2530">Otvoreni spremnik</text>
-
-  <text x="180" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#5a6a78">zrak, <tspan font-style="italic" fill="#1565c0">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1565c0">atm</tspan></text>
-  <text x="178" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">A</text>
-
-  <text x="130" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#0d47a1">voda</text>
-
-  <text x="178" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">Trazi se <tspan font-style="italic" fill="#1a2530">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1a2530">aps</tspan> i <tspan font-style="italic" fill="#1a2530">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1a2530">m</tspan> u A</text>
-
-
-  <text x="360" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">2</text>
-  <text x="378" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a2530">Zatvoreni spremnik, plin iznad vode</text>
-
-  <text x="485" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#5a4d2a">plin</text>
-  <text x="485" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1565c0">
-    <tspan font-style="italic" font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 26 kPa</text>
-
-  <text x="486" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">A</text>
-
-  <text x="436" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#0d47a1">voda</text>
-
-  <text x="490" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">Trazi se <tspan font-style="italic" fill="#1a2530">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1a2530">aps</tspan> i <tspan font-style="italic" fill="#1a2530">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1a2530">m</tspan> u A</text>
-
-
-  <text x="672" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">3</text>
-  <text x="690" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a2530">U-manometar: ulje + ziva</text>
-
-  <text x="722" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#7a5a00">ulje</text>
-  <text x="876" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#3a4a56">Hg</text>
-  <text x="876" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1565c0">
-    <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
-  <text x="724" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">cjevovod (ulje)</text>
-
-  <text x="802" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">Trazi se <tspan font-style="italic" fill="#1a2530">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1a2530">m</tspan> u cjevovodu</text>
-
-
-  <text x="48" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">4</text>
-  <text x="66" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a2530">Diferencijalni manometar (voda)</text>
-
-  <text x="80" y="464" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">A</text>
-  <text x="276" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">B</text>
-
-  <text x="178" y="640" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#3a4a56">Hg</text>
-
-  <text x="178" y="714" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">Trazi se <tspan font-style="italic" fill="#1a2530">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1a2530">A</tspan> − <tspan font-style="italic" fill="#1a2530">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1a2530">B</tspan></text>
-
-
-  <text x="360" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">5</text>
-  <text x="378" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a2530">Vakuumski spremnik + zivin manometar</text>
-
-  <text x="423" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#5a4d2a">plin</text>
-  <text x="423" y="510" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1565c0">
-    <tspan font-style="italic" font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">aps</tspan> &lt; <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
-
-  <text x="416" y="612" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">A</text>
-
-  <text x="566" y="650" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#3a4a56">Hg</text>
-  <text x="600" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1565c0">
-    <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
-  <text x="388" y="558" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#0d47a1">voda</text>
-
-  <text x="490" y="714" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">Trazi se <tspan font-style="italic" fill="#1a2530">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1a2530">aps</tspan> plina i <tspan font-style="italic" fill="#1a2530">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1a2530">aps</tspan> u A</text>
-
-
-  <text x="672" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">6</text>
-  <text x="690" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a2530">Zatvoreni spremnik + U-manometar</text>
-
-  <text x="735" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#5a4d2a">plin</text>
-  <text x="735" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#1565c0">
-    <tspan font-style="italic" font-weight="700">p</tspan><tspan baseline-shift="sub" font-size="0.7em">aps</tspan> = ?</text>
-
-  <text x="734" y="612" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">C</text>
-
-  <text x="868" y="660" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#3a4a56">Hg</text>
-  <text x="902" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1565c0">
-    <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
-
-  <text x="802" y="714" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">Trazi se <tspan font-style="italic" fill="#1a2530">p</tspan><tspan baseline-shift="sub" font-size="0.7em" fill="#1a2530">aps</tspan> plina i u tocki C</text>
-
-<text x="278" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">
-    <tspan font-style="italic">h</tspan> = 2,40</text>
-  <text x="278" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">m</text>
-
-  <text x="590" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">
-    <tspan font-style="italic">h</tspan> = 1,80</text>
-  <text x="590" y="242" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">m</text>
-
-  <text x="804" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">
-    <tspan font-style="italic">Δh</tspan></text>
-  <text x="804.0" y="254.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c">= 0,185 m</text>
-
-  <text x="687" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="end" fill="#b7600c">0,12</text>
-  <text x="687" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="end" fill="#b7600c">m</text>
-
-  <text x="183" y="566" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">
-    <tspan font-style="italic">Δh</tspan></text>
-  <text x="183.0" y="582.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c">= 0,145 m</text>
-
-  <text x="122" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c">0,30 m</text>
-
-  <text x="572" y="548" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">
-    <tspan font-style="italic">Δh</tspan></text>
-  <text x="572.0" y="564.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c">= 0,230 m</text>
-
-  <text x="361" y="563" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#b7600c">0,90</text>
-  <text x="361" y="575" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#b7600c">m</text>
-
-  <text x="675" y="575.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 1,30 m</text>
-
-  <text x="781" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="end" fill="#b7600c">
-    <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-  <text x="781.0" y="544.0" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="end" fill="#b7600c">= 0,65 m</text>
-
-  <text x="876" y="608" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">
-    <tspan font-style="italic">Δh</tspan></text>
-  <text x="876.0" y="624.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c">= 0,210 m</text>
-
-  </svg>
+  <rect width="980" height="760" fill="white" />
+  <g font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56">
+    <g id="u03vs_z1" transform="translate(28 34)">
+      <rect x="0" y="0" width="300" height="340" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" rx="10" />
+      <circle cx="20" cy="20" r="11" fill="#1565c0" />
+      <text x="20" y="24" font-size="10" fill="white" text-anchor="middle" font-weight="700">Z1</text>
+      <text x="38" y="24" font-size="12.5" fill="#1a2530" text-anchor="start" font-weight="600">Otvoreni spremnik</text>
+      <rect x="86" y="136" width="132" height="156" fill="url(#u03vs_voda)" stroke="none" stroke-width="1.2" rx="0" />
+      <path d="M72 66 H86 V292 H218 V66 H232 V306 H72 Z" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="86" y1="136" x2="218" y2="136" stroke="#1565c0" stroke-width="2" />
+      <text x="152" y="108" font-size="12" fill="#1565c0" text-anchor="middle">zrak, pₐₜₘ</text>
+      <text x="118" y="204" font-size="11" fill="#1565c0" text-anchor="middle">voda</text>
+      <circle cx="142" cy="246" r="3.5" fill="#c0392b" />
+      <text x="152" y="250" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">A</text>
+      <line x1="245" y1="136" x2="257" y2="136" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="245" y1="246" x2="257" y2="246" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="251" y1="136" x2="251" y2="246" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="260" y="180" font-size="11" fill="#b7600c" text-anchor="start">h =</text>
+      <text x="254" y="198" font-size="10.5" fill="#b7600c" text-anchor="start">2,40 m</text>
+      <line x1="232" y1="136" x2="257" y2="136" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="149" y1="246" x2="257" y2="246" stroke="#b7600c" stroke-width="0.8" />
+      <text x="150" y="328" font-size="11" fill="#3a4a56" text-anchor="middle">Traže se pₐₚₛ i pₘ u A.</text>
+    </g>
+    <g id="u03vs_z2" transform="translate(340 34)">
+      <rect x="0" y="0" width="300" height="340" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" rx="10" />
+      <circle cx="20" cy="20" r="11" fill="#1565c0" />
+      <text x="20" y="24" font-size="10" fill="white" text-anchor="middle" font-weight="700">Z2</text>
+      <text x="38" y="24" font-size="12.5" fill="#1a2530" text-anchor="start" font-weight="600">Razina iz razlike tlakova</text>
+      <rect x="52" y="82" width="120" height="56" fill="#f4f0e6" stroke="none" stroke-width="1.2" rx="0" />
+      <rect x="52" y="138" width="120" height="128" fill="url(#u03vs_voda)" stroke="none" stroke-width="1.2" rx="0" />
+      <path d="M40 70 H52 V266 H172 V70 H184 V278 H40 Z" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="40" y="70" width="144" height="12" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" rx="0" />
+      <line x1="52" y1="138" x2="172" y2="138" stroke="#1565c0" stroke-width="2" />
+      <circle cx="100" cy="107" r="3.5" fill="#c0392b" />
+      <text x="110" y="111" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">G</text>
+      <text x="142" y="112" font-size="11" fill="#3a4a56" text-anchor="middle">plin</text>
+      <circle cx="100" cy="252" r="3.5" fill="#c0392b" />
+      <text x="110" y="256" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">A</text>
+      <text x="130" y="191" font-size="11" fill="#1565c0" text-anchor="middle">voda</text>
+      <line x1="184" y1="138" x2="225" y2="138" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="107" y1="252" x2="225" y2="252" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="212" y1="138" x2="224" y2="138" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="212" y1="252" x2="224" y2="252" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="218" y1="138" x2="218" y2="252" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="234" y="195.0" font-size="11" fill="#b7600c" text-anchor="start">h = ?</text>
+      <text x="150" y="304" font-size="12" fill="#1565c0" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">A</tspan> − p<tspan baseline-shift="sub" font-size="0.75em">G</tspan> = 17,62 kPa</text>
+      <text x="150" y="327" font-size="10.5" fill="#3a4a56" text-anchor="middle">Tlakovi se odnose na označene točke.</text>
+    </g>
+    <g id="u03vs_z3" transform="translate(652 34)">
+      <rect x="0" y="0" width="300" height="340" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" rx="10" />
+      <circle cx="20" cy="20" r="11" fill="#1565c0" />
+      <text x="20" y="24" font-size="10" fill="white" text-anchor="middle" font-weight="700">Z3</text>
+      <text x="38" y="24" font-size="12.5" fill="#1a2530" text-anchor="start" font-weight="600">U-manometar: ulje i živa</text>
+      <path d="M20 148 H78 V210 H58 V168 H20 Z" fill="url(#u03vs_ulje)" stroke="none" stroke-width="1.2" />
+      <path d="M58 210 H78 V266 H228 V130 H248 V286 H58 Z" fill="url(#u03vs_ziva)" stroke="none" stroke-width="1.2" />
+      <path d="M20 142 H84 V260 H222 V76 H228 V266 H78 V148 H20 Z" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <path d="M20 168 H58 V286 H248 V76 H254 V292 H52 V174 H20 Z" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="58" y1="210" x2="78" y2="210" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="228" y1="130" x2="248" y2="130" stroke="#3a4a56" stroke-width="1.2" />
+      <circle cx="33" cy="158" r="3.5" fill="#c0392b" />
+      <text x="27" y="137" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">A</text>
+      <text x="67" y="191" font-size="10" fill="#7a5a00" text-anchor="middle">ulje</text>
+      <text x="238" y="238" font-size="11" fill="#3a4a56" text-anchor="middle">Hg</text>
+      <text x="239" y="65" font-size="12" fill="#1565c0" text-anchor="middle">pₐₜₘ</text>
+      <line x1="85" y1="130" x2="206" y2="130" stroke="#7a8a96" stroke-width="1" stroke-dasharray="4,3" />
+      <line x1="85" y1="210" x2="206" y2="210" stroke="#7a8a96" stroke-width="1" stroke-dasharray="4,3" />
+      <line x1="158" y1="130" x2="170" y2="130" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="158" y1="210" x2="170" y2="210" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="164" y1="130" x2="164" y2="210" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="178" y="177" font-size="11" fill="#b7600c" text-anchor="start">Δh</text>
+      <line x1="30" y1="158" x2="42" y2="158" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="30" y1="210" x2="42" y2="210" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="36" y1="158" x2="36" y2="210" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="17" y="191" font-size="11" fill="#b7600c" text-anchor="start">a</text>
+      <text x="150" y="312" font-size="11" fill="#b7600c" text-anchor="middle">Δh = 0,185 m; a = 0,12 m</text>
+      <text x="150" y="329" font-size="10.5" fill="#3a4a56" text-anchor="middle">Otvoreni krak viši; traži se pₘ u A.</text>
+    </g>
+    <g id="u03vs_z4" transform="translate(28 386)">
+      <rect x="0" y="0" width="300" height="340" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" rx="10" />
+      <circle cx="20" cy="20" r="11" fill="#1565c0" />
+      <text x="20" y="24" font-size="10" fill="white" text-anchor="middle" font-weight="700">Z4</text>
+      <text x="38" y="24" font-size="12.5" fill="#1a2530" text-anchor="start" font-weight="600">Debljina sloja ulja</text>
+      <rect x="70" y="105" width="102" height="62" fill="url(#u03vs_ulje)" stroke="none" stroke-width="1.2" rx="0" />
+      <rect x="70" y="167" width="102" height="93" fill="url(#u03vs_voda)" stroke="none" stroke-width="1.2" rx="0" />
+      <path d="M60 66 H70 V260 H172 V66 H182 V270 H60 Z" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="70" y1="105" x2="172" y2="105" stroke="#1565c0" stroke-width="2" />
+      <line x1="70" y1="167" x2="172" y2="167" stroke="#3a4a56" stroke-width="1.4" />
+      <text x="121" y="88" font-size="12" fill="#1565c0" text-anchor="middle">pₐₜₘ</text>
+      <text x="121" y="141" font-size="12" fill="#7a5a00" text-anchor="middle">ulje</text>
+      <text x="121" y="219" font-size="12" fill="#1565c0" text-anchor="middle">voda</text>
+      <circle cx="121" cy="260" r="3.5" fill="#c0392b" />
+      <text x="131" y="252" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">A</text>
+      <line x1="30" y1="105" x2="42" y2="105" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="30" y1="260" x2="42" y2="260" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="36" y1="105" x2="36" y2="260" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="20" y="174" font-size="12" fill="#b7600c" text-anchor="middle">H</text>
+      <text x="20" y="191" font-size="10" fill="#b7600c" text-anchor="middle">1,50 m</text>
+      <line x1="42" y1="105" x2="60" y2="105" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="42" y1="260" x2="60" y2="260" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="208" y1="105" x2="220" y2="105" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="208" y1="167" x2="220" y2="167" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="214" y1="105" x2="214" y2="167" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="230" y="140" font-size="11" fill="#b7600c" text-anchor="start">hᵤ = ?</text>
+      <line x1="208" y1="167" x2="220" y2="167" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="208" y1="260" x2="220" y2="260" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="214" y1="167" x2="214" y2="260" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="230" y="217" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.75em">w</tspan> = ?</text>
+      <line x1="182" y1="105" x2="220" y2="105" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="182" y1="167" x2="220" y2="167" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="182" y1="260" x2="220" y2="260" stroke="#b7600c" stroke-width="0.8" />
+      <text x="150" y="302" font-size="12" fill="#1565c0" text-anchor="middle">pₘ na dnu = 13,83 kPa</text>
+      <text x="150" y="326" font-size="10.5" fill="#3a4a56" text-anchor="middle">Na granici slojeva nema krute pregrade.</text>
+    </g>
+    <g id="u03vs_z5" transform="translate(340 386)">
+      <rect x="0" y="0" width="300" height="340" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" rx="10" />
+      <circle cx="20" cy="20" r="11" fill="#1565c0" />
+      <text x="20" y="24" font-size="10" fill="white" text-anchor="middle" font-weight="700">Z5</text>
+      <text x="38" y="24" font-size="12.5" fill="#1a2530" text-anchor="start" font-weight="600">Izbor manometra za podtlak</text>
+      <path d="M75 141 H95 V262 H215 V216 H235 V282 H75 Z" fill="#cbd5df" stroke="none" stroke-width="1.2" />
+      <path d="M20 74 H101 V256 H209 V72 H215 V262 H95 V80 H20 Z" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <path d="M20 100 H75 V282 H235 V72 H241 V288 H69 V106 H20 Z" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="75" y1="141" x2="95" y2="141" stroke="#3a4a56" stroke-width="1.4" />
+      <line x1="215" y1="216" x2="235" y2="216" stroke="#3a4a56" stroke-width="1.4" />
+      <text x="60" y="59" font-size="11" fill="#3a4a56" text-anchor="middle">spoj s plinom</text>
+      <text x="39" y="122" font-size="12" fill="#1565c0" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">G</tspan>
+      </text>
+      <text x="225" y="59" font-size="12" fill="#1565c0" text-anchor="middle">pₐₜₘ</text>
+      <line x1="105" y1="141" x2="203" y2="141" stroke="#7a8a96" stroke-width="1" stroke-dasharray="4,3" />
+      <line x1="105" y1="216" x2="203" y2="216" stroke="#7a8a96" stroke-width="1" stroke-dasharray="4,3" />
+      <line x1="149" y1="141" x2="161" y2="141" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="149" y1="216" x2="161" y2="216" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="155" y1="141" x2="155" y2="216" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="170" y="181" font-size="11" fill="#b7600c" text-anchor="start">Δh</text>
+      <text x="154" y="246" font-size="11" fill="#3a4a56" text-anchor="middle">jedna tekućina</text>
+      <text x="150" y="307" font-size="11" fill="#3a4a56" text-anchor="middle">Ulje / voda / Hg — odvojene izvedbe</text>
+      <text x="150" y="327" font-size="11" fill="#b7600c" text-anchor="middle">Δh ≤ 0,650 m; εh = 1,0 mm</text>
+    </g>
+    <g id="u03vs_z6" transform="translate(652 386)">
+      <rect x="0" y="0" width="300" height="340" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" rx="10" />
+      <circle cx="20" cy="20" r="11" fill="#1565c0" />
+      <text x="20" y="24" font-size="10" fill="white" text-anchor="middle" font-weight="700">Z6</text>
+      <text x="38" y="24" font-size="12.5" fill="#1a2530" text-anchor="start" font-weight="600">Manometar i apsolutni senzor</text>
+      <rect x="28" y="80" width="100" height="45" fill="#f4f0e6" stroke="none" stroke-width="1.2" rx="0" />
+      <rect x="28" y="125" width="100" height="153" fill="url(#u03vs_voda6)" stroke="none" stroke-width="1.2" rx="0" />
+      <rect x="18" y="70" width="120" height="10" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" rx="0" />
+      <rect x="18" y="80" width="10" height="198" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" rx="0" />
+      <rect x="18" y="278" width="120" height="10" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" rx="0" />
+      <rect x="128" y="80" width="10" height="101" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" rx="0" />
+      <rect x="128" y="199" width="10" height="79" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" rx="0" />
+      <line x1="28" y1="125" x2="128" y2="125" stroke="#1565c0" stroke-width="2" />
+      <g id="u03vs_z6_pipe">
+        <path d="M128 190 H151 V165 H175 V280 H251 V130" fill="none" stroke="#3a4a56" stroke-width="19" stroke-linejoin="round" />
+        <path d="M128 190 H151 V165 H175 V280 H251 V130" fill="none" stroke="#d7dee3" stroke-width="18" stroke-linejoin="round" />
+        <path d="M128 190 H151 V165 H175 V280 H251 V130" fill="none" stroke="url(#u03vs_hatch)" stroke-width="18" stroke-linejoin="round" />
+        <path d="M128 190 H151 V165 H175 V190" fill="none" stroke="url(#u03vs_voda6)" stroke-width="12" stroke-linejoin="round" />
+        <path d="M175 190 V280 H251 V169" fill="none" stroke="url(#u03vs_ziva)" stroke-width="12" stroke-linejoin="round" />
+        <path d="M251 169 V130" fill="none" stroke="#fbfdff" stroke-width="12" stroke-linejoin="round" />
+      </g>
+      <line x1="169" y1="190" x2="181" y2="190" stroke="#3a4a56" stroke-width="1.4" />
+      <line x1="245" y1="169" x2="257" y2="169" stroke="#3a4a56" stroke-width="1.4" />
+      <text x="78" y="105" font-size="11" fill="#1565c0" text-anchor="middle">plin, p<tspan baseline-shift="sub" font-size="0.75em">G</tspan> = ?</text>
+      <circle cx="128" cy="190" r="3.5" fill="#c0392b" />
+      <text x="109" y="184" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">A</text>
+      <circle cx="65" cy="255" r="3.5" fill="#c0392b" />
+      <text x="74" y="259" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">C</text>
+      <text x="251" y="118" font-size="12" fill="#1565c0" text-anchor="middle">pₐₜₘ</text>
+      <text x="214" y="260" font-size="11" fill="#3a4a56" text-anchor="middle">Hg</text>
+      <line x1="137" y1="190" x2="238" y2="190" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="3,3" />
+      <line x1="191" y1="169" x2="238" y2="169" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="3,3" />
+      <line x1="212" y1="169" x2="224" y2="169" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="212" y1="190" x2="224" y2="190" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="218" y1="169" x2="218" y2="190" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="203" y="212" font-size="11" fill="#b7600c" text-anchor="start">Δh</text>
+      <line x1="38" y1="125" x2="50" y2="125" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="38" y1="190" x2="50" y2="190" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="44" y1="125" x2="44" y2="190" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="55" y="161" font-size="11" fill="#b7600c" text-anchor="start">h₁</text>
+      <line x1="92" y1="125" x2="104" y2="125" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="92" y1="255" x2="104" y2="255" stroke="#b7600c" stroke-width="0.8" />
+      <line x1="98" y1="125" x2="98" y2="255" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+      <text x="76" y="227" font-size="11" fill="#b7600c" text-anchor="start">h₂</text>
+      <text x="150" y="308" font-size="10.5" fill="#b7600c" text-anchor="middle">h₁ = 0,65 m; h₂ = 1,30 m; Δh = 0,210 m</text>
+      <text x="150" y="328" font-size="10.5" fill="#3a4a56" text-anchor="middle">A i granica voda–Hg na istoj visini.</text>
+    </g>
+    <text x="490" y="749" font-size="11" fill="#3a4a56" text-anchor="middle">Tlakovi su skalarne oznake; smeđe strelice su kote. Skice nisu u mjerilu.</text>
+  </g>
+</svg>

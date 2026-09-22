@@ -138,22 +138,33 @@ def zadatak_3(rho=870.0, h=0.75, a_z=2.3, g=9.81):
     dp_0 = rho * g * h
     increase_percent = 100 * (dp / dp_0 - 1)
     return {"dp": dp, "dp_0": dp_0,
-            "increase_percent": increase_percent}
+            "increase_percent": increase_percent,
+            "dp_braking": rho * (g - a_z) * h}
 
 
-def zadatak_4(b=0.75, L=1.60, h_0=0.36, F=820.0, rho=1000.0, g=9.81):
-    h_str = math.sqrt(2 * F / (rho * g * b))
-    dh = 2 * (h_str - h_0)
-    a = g * dh / L
-    return {"h_str": h_str, "a": a}
+def zadatak_4(r_A=.080, r_B=.240, p_A=12.40e3, p_B=14.00e3, rho=1000.0):
+    dp = p_B - p_A
+    omega = math.sqrt(2 * dp / (rho * (r_B**2 - r_A**2)))
+    return {"dp": dp, "omega": omega, "rpm": 30 * omega / math.pi}
 
 
-def zadatak_5(R=0.28, h_0=0.22, omega=5.5, g=9.81):
-    dh = omega**2 * R**2 / (2 * g)
-    h_rub = h_0 + dh / 2
-    h_osa = h_0 - dh / 2
-    return {"dh": dh, "h_rub": h_rub, "h_osa": h_osa,
-            "axis_covered": h_osa > 0.0}
+def zadatak_5(L=1.50, h_0=.300, H=.550, a=2.00, g=9.81,
+              error_limit=.005, spread_limit=.004,
+              samples_i=((.5,.520,.080),(1.0,.380,.220),(1.5,.500,.100)),
+              samples_ii=((8.0,.454,.146),(8.5,.452,.148),(9.0,.453,.147))):
+    h_str = h_0 + a * L / (2 * g)
+    h_pred = h_0 - a * L / (2 * g)
+    errors, spreads, accepted = [], [], []
+    for samples in (samples_i, samples_ii):
+        error = max(max(abs(hs-h_str), abs(hp-h_pred)) for _,hs,hp in samples)
+        spread = max(max(row[col] for row in samples)-min(row[col] for row in samples)
+                     for col in (1,2))
+        errors.append(error)
+        spreads.append(spread)
+        accepted.append(error <= error_limit and spread <= spread_limit)
+    return {"h_str": h_str, "h_pred": h_pred, "errors": errors,
+            "spreads": spreads, "accepted": accepted,
+            "reference_fits": 0 < h_pred <= h_str < H}
 
 
 def zadatak_6(R=0.32, H=0.62, h_0=0.46, rho=1000.0, g=9.81,
@@ -166,7 +177,7 @@ def zadatak_6(R=0.32, H=0.62, h_0=0.46, rho=1000.0, g=9.81,
     actual_ratio = alpha * (1 + overspeed)
     h_axis_worst = h_0 - actual_ratio**2 * (H - h_0)
     h_rim_worst = h_0 + actual_ratio**2 * (H - h_0)
-    alpha_max = math.sqrt((h_0 - h_axis_min) / (H - h_0)) / (1 + overspeed)
+    alpha_max = min(1.0, math.sqrt((h_0 - h_axis_min) / (H - h_0))) / (1 + overspeed)
     return {"omega_max": omega_max, "dh": dh,
             "h_osa": h_osa, "h_rub": h_rub,
             "p_M_osa": rho * g * h_osa,
@@ -191,15 +202,15 @@ def verify():
     _check(out, "U04.P3.alpha_deg", r["alpha_deg"], 70.9, "deg", rel=0.02)
     _check(out, "U04.P3.s", r["s"], 0.582, "m")
     _check(out, "U04.P3.g_eff", r["g_eff"], 10.38, "m/s^2")
-    _check(out, "U04.P3.F_0", r["F_0"], 9312.0, "N")
-    _check(out, "U04.P3.F_h", r["F_h"], 1688.0, "N", rel=0.02)
-    _check(out, "U04.P3.F_R", r["F_R"], 11000.0, "N", rel=0.02)
-    _check(out, "U04.P3.y_R", r["y_R"], 0.306, "m", rel=0.02)
+    _check(out, "U04.P3.F_0", r["F_0"], 9313.55, "N", rel=1e-6)
+    _check(out, "U04.P3.F_h", r["F_h"], 1688.62, "N", rel=5e-6)
+    _check(out, "U04.P3.F_R", r["F_R"], 11002.17, "N", rel=1e-6)
+    _check(out, "U04.P3.y_R", r["y_R"], 0.30594, "m", rel=1e-5)
 
     r = primjer_4_rotacija()
     _check(out, "U04.P4.dh", r["dh"], 0.225, "m")
-    _check(out, "U04.P4.h_rub", r["h_rub"], 0.393, "m")
-    _check(out, "U04.P4.h_osa", r["h_osa"], 0.168, "m")
+    _check(out, "U04.P4.h_rub", r["h_rub"], 0.392385, "m", rel=2e-6)
+    _check(out, "U04.P4.h_osa", r["h_osa"], 0.167615, "m", rel=3e-6)
 
     r = cjeloviti_1_rotacija()
     _check(out, "U04.CH1.dh", r["dh"], 0.2205, "m")
@@ -212,8 +223,8 @@ def verify():
 
     r = primjer_5_autocisterna()
     _check(out, "U04.P5.dh", r["dh"], 0.465, "m")
-    _check(out, "U04.P5.h_pred", r["h_pred"], 0.683, "m")
-    _check(out, "U04.P5.h_str", r["h_str"], 0.217, "m")
+    _check(out, "U04.P5.h_pred", r["h_pred"], 0.682416, "m", rel=1e-6)
+    _check(out, "U04.P5.h_str", r["h_str"], 0.217584, "m", rel=1e-6)
     _check(out, "U04.P5.a_overflow", r["a_overflow"], 5.72, "m/s2", rel=0.02)
     _check(out, "U04.P5.a_dry", r["a_dry"], 7.36, "m/s2", rel=0.02)
 
@@ -230,20 +241,60 @@ def verify():
 
     z2 = zadatak_2()
     _check(out, "U04.Z2.a_max", z2["a_max"], 1.68, "m/s^2")
+    h_back_limit = .30 + z2["a_max"] * 1.40 / (2 * 9.81)
+    _invariant(out, "U04.Z2.spill_before_dry",
+               abs(h_back_limit-.42) < 1e-12 and 2*.30-h_back_limit > 0,
+               "Pri prvom dodiru ruba prednji dio dna mora ostati pokriven.")
 
     z3 = zadatak_3()
     _check(out, "U04.Z3.dp_kPa", z3["dp"] / 1000, 7.90, "kPa")
     _check(out, "U04.Z3.dp_0_kPa", z3["dp_0"] / 1000, 6.40, "kPa")
     _check(out, "U04.Z3.increase_percent", z3["increase_percent"], 23.0, "%", rel=0.03)
+    _check(out, "U04.Z3.dp_braking_kPa", z3["dp_braking"] / 1000, 4.90, "kPa", rel=.001)
+    _invariant(out, "U04.Z3.acceleration_not_velocity",
+               0 < z3["dp_braking"] < z3["dp_0"] < z3["dp"]
+               and abs(z3["dp"] + z3["dp_braking"] - 2*z3["dp_0"]) < 1e-8,
+               "Suprotna ubrzanja moraju dati suprotne promjene hidrostatskog gradijenta.")
+    _invariant(out, "U04.Z3.zero_and_free_fall",
+               abs(zadatak_3(a_z=0)["dp"]-z3["dp_0"]) < 1e-8
+               and abs(zadatak_3(a_z=-9.81)["dp"]) < 1e-8,
+               "Mirni slucaj i slobodni pad nemaju ocekivane gradijente.")
 
     z4 = zadatak_4()
-    _check(out, "U04.Z4.h_str", z4["h_str"], 0.47, "m")
-    _check(out, "U04.Z4.a", z4["a"], 1.38, "m/s^2")
+    _check(out, "U04.Z4.dp_kPa", z4["dp"] / 1000, 1.60, "kPa", rel=1e-9)
+    _check(out, "U04.Z4.omega", z4["omega"], 7.91, "rad/s", rel=.001)
+    _check(out, "U04.Z4.rpm", z4["rpm"], 75.5, "okr/min", rel=.001)
+    # The linear radial gradient integrates exactly by the trapezoid rule.
+    reconstructed = 1000*z4["omega"]**2 * (.080+.240)/2 * (.240-.080)
+    _invariant(out, "U04.Z4.radial_integral", abs(reconstructed-1600) < 1e-8,
+               "Integrirani radijalni gradijent ne vraca izmjerenu razliku tlakova.")
+    shifted = zadatak_4(p_A=15.40e3,p_B=17.00e3)
+    swapped = zadatak_4(r_A=.240,r_B=.080,p_A=14e3,p_B=12.4e3)
+    _invariant(out, "U04.Z4.reference_and_point_order",
+               abs(shifted["omega"]-z4["omega"]) < 1e-12
+               and abs(swapped["omega"]-z4["omega"]) < 1e-12,
+               "Iznos vrtnje mora ostati isti nakon pomaka reference ili zamjene tocaka.")
 
     z5 = zadatak_5()
-    _check(out, "U04.Z5.dh", z5["dh"], 0.12, "m")
-    _check(out, "U04.Z5.h_rub", z5["h_rub"], 0.28, "m")
-    _check(out, "U04.Z5.h_osa", z5["h_osa"], 0.16, "m")
+    _check(out, "U04.Z5.h_back_m", z5["h_str"], .45291, "m", rel=.00002)
+    _check(out, "U04.Z5.h_front_m", z5["h_pred"], .14709, "m", rel=.00004)
+    _check(out, "U04.Z5.error_i_mm", z5["errors"][0]*1000, 72.91, "mm", rel=.0001)
+    _check(out, "U04.Z5.error_ii_mm", z5["errors"][1]*1000, 1.095, "mm", rel=.0002)
+    _check(out, "U04.Z5.spread_i_mm", z5["spreads"][0]*1000, 140, "mm", rel=1e-9)
+    _check(out, "U04.Z5.spread_ii_mm", z5["spreads"][1]*1000, 2, "mm", rel=1e-9)
+    _invariant(out, "U04.Z5.series_selection",
+               z5["accepted"] == [False, True] and z5["reference_fits"],
+               "Samo drugi niz mora zadovoljiti oba kriterija.")
+    stable_wrong = zadatak_5(samples_i=((1,.460,.140),(2,.460,.140),(3,.460,.140)))
+    near_oscillating = zadatak_5(samples_ii=((1,.450,.150),(2,.456,.144),(3,.450,.150)))
+    _invariant(out, "U04.Z5.both_tests_needed",
+               stable_wrong["spreads"][0] == 0 and not stable_wrong["accepted"][0]
+               and near_oscillating["errors"][1] < .005 and not near_oscillating["accepted"][1],
+               "Stabilan pogresan niz i oscilacije blizu modela moraju pasti razlicite kriterije.")
+    _invariant(out, "U04.Z5.reference_balance",
+               abs((z5["h_str"]+z5["h_pred"])/2-.300) < 1e-12
+               and abs(9.81*(z5["h_str"]-z5["h_pred"])-2*1.5) < 1e-12,
+               "Referentni profil ne zatvara volumen i nagib.")
 
     z6 = zadatak_6()
     _check(out, "U04.Z6.omega_max", z6["omega_max"], 7.83, "rad/s")
@@ -254,7 +305,23 @@ def verify():
     _check(out, "U04.Z6.actual_ratio", z6["actual_ratio"], 0.84, "")
     _check(out, "U04.Z6.h_axis_worst", z6["h_axis_worst"], 0.347, "m", rel=0.02)
     _check(out, "U04.Z6.h_rim_worst", z6["h_rim_worst"], 0.573, "m", rel=0.02)
-    _check(out, "U04.Z6.alpha_max", z6["alpha_max"], 0.790, "", rel=0.02)
+    _check(out, "U04.Z6.alpha_max", z6["alpha_max"], 0.790, "", rel=0.001)
+    recommended = zadatak_6(alpha=.78)
+    _check(out, "U04.Z6.recommended_axis_m", recommended["h_axis_worst"], .35268, "m", rel=.00002)
+    _check(out, "U04.Z6.recommended_rim_m", recommended["h_rim_worst"], .56732, "m", rel=.00002)
+    _check(out, "U04.Z6.depth_margin_mm", (recommended["h_axis_worst"]-.350)*1000, 2.68, "mm", rel=.001)
+    limiting = zadatak_6(alpha=z6["alpha_max"])
+    above_limit = zadatak_6(alpha=z6["alpha_max"]+.0001)
+    _invariant(out, "U04.Z6.recommendation_and_active_limit",
+               recommended["h_axis_worst"] > .350 and recommended["h_rim_worst"] < .62
+               and abs(limiting["h_axis_worst"]-.350) < 1e-12
+               and limiting["h_rim_worst"] < .62 and above_limit["h_axis_worst"] < .350,
+               "Preporucena postavka i aktivna granica dubine nisu uskladene.")
+    _invariant(out, "U04.Z6.bounded_speed",
+               all(zadatak_6(alpha=.78,overspeed=e)["h_axis_worst"] >= .350
+                   and zadatak_6(alpha=.78,overspeed=e)["h_rim_worst"] <= .62
+                   for e in (0,.01,.025,.04,.05)),
+               "Preporuka mora zadovoljiti cijeli zadani raspon brzine; dubina je monotona u omega².")
     _invariant(
         out,
         "U04.Z6.coverage_not_met_at_alpha_080",
@@ -271,7 +338,7 @@ def verify():
     _invariant(
         out,
         "U04.INV.no_overflow_and_axis_covered",
-        not z1["overflow"] and z5["axis_covered"],
+        not z1["overflow"] and z6["h_osa"] > 0,
         "Objavljeni granicni zakljucak o preljevu/pokrivenosti osi nije ispunjen.",
     )
     _invariant(

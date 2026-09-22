@@ -1,9 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" role="img" aria-labelledby="u03btig_u03btg_title u03btig_u03btg_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
   <title id="u03btig_u03btg_title">Balans tlaka u spojenim posudama i efektivno polje sila</title>
   <desc id="u03btig_u03btg_desc">Lijevo: statika spojenih U-posuda s istim fluidom, jednaka razina slobodne povrsine implicira jednake tlakove na istoj dubini (p u tocki A jednak p u tocki B). Desno: prijelaz prema poglavlju 4 - ubrzani zatvoreni spremnik s nagnutom slobodnom povrsinom okomitom na efektivno polje sila g_eff, koje je vektorski zbroj g i minus a.</desc>
-
   <defs>
-    <linearGradient id="u03btig_u03btg_voda" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="u03btig_u03btg_voda" x1="0" y1="200" x2="0" y2="390" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#aed6f1" />
       <stop offset="1" stop-color="#5b9ec9" />
     </linearGradient>
@@ -30,110 +29,50 @@
       <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
   </defs>
-
-  <!-- pozadina i okvirni paneli -->
   <line x1="466" y1="38" x2="466" y2="432" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
-
-  <!-- ===================== LIJEVI PANEL: spojene posude (statika) ===================== -->
-  <!-- LIJEVA POSUDA (siri cilindar) -->
-  <!-- stijenke pune visine (zatvoren oblik), srafura -->
   <rect x="72" y="120" width="10" height="270" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <rect x="186" y="120" width="10" height="270" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- DESNA POSUDA (uzi cilindar) -->
-  <rect x="290" y="160" width="10" height="230" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="186" y="120" width="10" height="250" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+  <rect x="290" y="160" width="10" height="210" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="394" y="160" width="10" height="230" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- zajednicko DNO preko cijelog sustava -->
   <rect x="72" y="390" width="332" height="10" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-
-  <!-- VODA u sustavu (kontinuirana): lijevi cilindar, spojni vod NA DNU, desni cilindar -->
-  <!-- isti gornji rub: y=240 (slobodna povrsina); voda u cilindrima do y=390 (dno) -->
   <rect x="82" y="240" width="104" height="150" fill="url(#u03btig_u03btg_voda)" />
   <rect x="300" y="240" width="94" height="150" fill="url(#u03btig_u03btg_voda)" />
-  <!-- spojni vod (kontinuirana voda) na samom dnu izmedu cilindara -->
   <rect x="186" y="370" width="114" height="20" fill="url(#u03btig_u03btg_voda)" />
-  <!-- port fluid overlay preko unutarnjih stijenki na visini voda -->
   <rect x="186" y="370" width="10" height="20" fill="url(#u03btig_u03btg_voda)" />
   <rect x="290" y="370" width="10" height="20" fill="url(#u03btig_u03btg_voda)" />
-  <!-- gornji rub voda (tanka linija da naznaci spoj) -->
   <line x1="196" y1="370" x2="290" y2="370" stroke="#3a4a56" stroke-width="1.1" />
-
-  <!-- slobodna povrsina (deblja plava puna) -->
   <line x1="82" y1="240" x2="186" y2="240" stroke="#1565c0" stroke-width="2.2" />
   <line x1="300" y1="240" x2="394" y2="240" stroke="#1565c0" stroke-width="2.2" />
-
-  <!-- oznaka fluida (voda) -->
-  <!-- p0 oznake iznad slobodne povrsine -->
-  <!-- ISTA RAZINA referentna linija (siva, isprekidana, prolazi kroz obje povrsine) -->
   <line x1="56" y1="240" x2="420" y2="240" stroke="#7a8a96" stroke-width="1.1" stroke-dasharray="9,6" />
-
-  <!-- DUBINA h - kota od slobodne povrsine do tocaka A i B -->
-  <!-- pomocne linije -->
-  <!-- tik-crte i dim linija -->
-  <!-- TOCKE A i B na istoj dubini (na referentnoj liniji isto-tlakovnoj) -->
-  <!-- isto-tlakovna razina h ispod povrsine -->
-  <!-- tocka A u lijevoj posudi -->
   <circle cx="134" cy="320" r="4.5" fill="#1a2530" />
-  <!-- tocka B u desnoj posudi -->
   <circle cx="347" cy="320" r="4.5" fill="#1a2530" />
-  <!-- tlacne strelice u tockama A i B (plave, jednake, prema unutra) -->
   <line x1="158" y1="320" x2="142" y2="320" stroke="#1565c0" stroke-width="2" marker-end="url(#u03btig_u03btg_pr)" />
   <line x1="110" y1="320" x2="126" y2="320" stroke="#1565c0" stroke-width="2" marker-end="url(#u03btig_u03btg_pr)" />
   <line x1="370" y1="320" x2="355" y2="320" stroke="#1565c0" stroke-width="2" marker-end="url(#u03btig_u03btg_pr)" />
   <line x1="324" y1="320" x2="339" y2="320" stroke="#1565c0" stroke-width="2" marker-end="url(#u03btig_u03btg_pr)" />
-
-  <!-- jednadzba balansa tlaka -->
   <rect x="100" y="408" width="240" height="36" rx="8" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.3" />
-  <!-- usporedba s CH1 (referenca na rijeseni primjer) -->
-  <!-- ===================== DESNI PANEL: ubrzani spremnik (pog. 4) ===================== -->
-  <!-- TANK zatvoren, srafurane stijenke -->
-  <!-- vanjski srafurani omotac (top, bottom, sides) -->
   <rect x="500" y="120" width="290" height="10" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="500" y="370" width="290" height="10" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="500" y="120" width="10" height="260" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="780" y="120" width="10" height="260" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-
-  <!-- unutrasnjost tanka (pozadina) -->
   <rect x="510" y="130" width="270" height="240" fill="#ffffff" />
-
-  <!-- NAGNUTA voda: lijevo gore (y=200), desno dolje (y=300); dno y=370 -->
   <polygon points="510,200 780,300 780,370 510,370" fill="url(#u03btig_u03btg_voda)" />
-  <!-- slobodna povrsina (deblja nagnuta plava linija) -->
   <line x1="510" y1="200" x2="780" y2="300" stroke="#1565c0" stroke-width="2.6" />
-
-  <!-- p0 u plinskom prostoru (gore desno) -->
-  <!-- KOTACI / podloga koja predstavlja ubrzanje (mala ikona ispod tanka) -->
-  <!-- horizontalna podloga -->
   <line x1="494" y1="396" x2="796" y2="396" stroke="#5d6d7e" stroke-width="2" />
-  <!-- dva kotaca -->
   <circle cx="540" cy="392" r="10" fill="#909fa8" stroke="#3a4a56" stroke-width="1.4" />
   <circle cx="750" cy="392" r="10" fill="#909fa8" stroke="#3a4a56" stroke-width="1.4" />
   <circle cx="540" cy="392" r="2" fill="#3a4a56" />
   <circle cx="750" cy="392" r="2" fill="#3a4a56" />
-
-  <!-- ubrzanje a vozila (crvena strelica prema desno, izvan tanka) -->
-  <line x1="612" y1="416" x2="678" y2="416" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u03btig_u03btg_a)" />
-  <!-- referentna horizontala kroz lijevu tocku slobodne povrsine (svjetla isprekidana) -->
+  <line x1="612" y1="94" x2="678" y2="94" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u03btig_u03btg_a)" />
   <line x1="510" y1="200" x2="620" y2="200" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-  <!-- KUT NAGIBA alpha na lijevom rubu vode (luk) -->
-  <path d="M 552 200 A 42 42 0 0 1 568 216" fill="none" stroke="#8e44ad" stroke-width="1.8" />
-  <!-- ===== VEKTORSKI DIJAGRAM (unutar tanka, donji desni kut) ===== -->
-  <!-- ishodiste u (640, 240) - element fluida -->
-  <!-- malo "element" oznaka (mala iscrtkana kvadratica) -->
-  <rect x="634" y="234" width="12" height="12" fill="none" stroke="#1a2530" stroke-width="1" stroke-dasharray="2,2" />
-
-  <!-- g: prema dolje (crna/tamno-siva, gravitacija) -->
-  <line x1="640" y1="240" x2="640" y2="306" stroke="#1a2530" stroke-width="2.4" marker-end="url(#u03btig_u03btg_g)" />
-  <!-- -a: prema lijevo (crveno - inercijalna sila, suprotno od a) -->
-  <line x1="640" y1="240" x2="588" y2="240" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u03btig_u03btg_a)" />
-  <!-- g_eff: rezultanta od (640,240) do (588, 306) (dijagonala) - ljubicasta -->
-  <line x1="640" y1="240" x2="588" y2="306" stroke="#8e44ad" stroke-width="3" marker-end="url(#u03btig_u03btg_geff)" />
-  <!-- isprekidane pomocne linije paralelograma -->
-  <line x1="588" y1="240" x2="588" y2="306" stroke="#bda0d0" stroke-width="0.8" stroke-dasharray="3,3" />
-  <line x1="640" y1="306" x2="588" y2="306" stroke="#bda0d0" stroke-width="0.8" stroke-dasharray="3,3" />
-
-  <!-- kut alpha kod ishodista (izmedu g i g_eff) -->
-  <path d="M 640 270 A 30 30 0 0 1 622 282" fill="none" stroke="#8e44ad" stroke-width="1.2" />
-  <!-- formula box ispod tanka -->
+  <path d="M552 200 A42 42 0 0 1 549.389 214.589" fill="none" stroke="#8e44ad" stroke-width="1.8" />
+  <rect x="634" y="259" width="12" height="12" fill="none" stroke="#1a2530" stroke-width="1" stroke-dasharray="2,2" />
+  <line x1="640" y1="265" x2="640" y2="346" stroke="#1a2530" stroke-width="2.4" marker-end="url(#u03btig_u03btg_g)" />
+  <line x1="640" y1="265" x2="610" y2="265" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u03btig_u03btg_a)" />
+  <line x1="640" y1="265" x2="610" y2="346" stroke="#8e44ad" stroke-width="3" marker-end="url(#u03btig_u03btg_geff)" />
+  <line x1="610" y1="265" x2="610" y2="346" stroke="#bda0d0" stroke-width="0.8" stroke-dasharray="3,3" />
+  <line x1="640" y1="346" x2="610" y2="346" stroke="#bda0d0" stroke-width="0.8" stroke-dasharray="3,3" />
+  <path d="M640 310 A45 45 0 0 1 624.373 307.193" fill="none" stroke="#8e44ad" stroke-width="1.2" />
   <rect x="500" y="408" width="290" height="36" rx="8" fill="#f4ecf7" stroke="#8e44ad" stroke-width="1.3" />
   <line x1="50" y1="240" x2="76" y2="240" stroke="#b7600c" stroke-width="0.7" />
   <line x1="50" y1="320" x2="76" y2="320" stroke="#b7600c" stroke-width="0.7" />
@@ -141,42 +80,32 @@
   <line x1="44" y1="320" x2="56" y2="320" stroke="#b7600c" stroke-width="1.2" />
   <line x1="50" y1="243" x2="50" y2="317" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03btig_u03btg_dimL)" marker-end="url(#u03btig_u03btg_dim)" />
   <line x1="82" y1="320" x2="394" y2="320" stroke="#b7600c" stroke-width="0.9" stroke-dasharray="4,4" />
-
   <text x="40" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Spojene posude – statika</text>
   <text x="40" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">isti fluid, ista razina → isti tlak na istoj dubini</text>
-
   <text x="134" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#0d47a1">voda</text>
   <text x="347" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#0d47a1">voda</text>
-
   <text x="134" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#5a6a78">p₀</text>
   <text x="347" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#5a6a78">p₀</text>
-
   <text x="134" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">A</text>
   <text x="347" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">B</text>
-
   <text x="220" y="431" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = p₀ + ρ g h</text>
-
-  <text x="40" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">Usp. CH1: u zatvorenom spremniku p<tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 133,0 kPa (manom. ≈ 31,7 kPa).</text>
-
+  <text x="40" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">Usp. P3: u zatvorenom spremniku p<tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 133,0 kPa (manom. ≈ 31,7 kPa).</text>
   <text x="492" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#8e44ad">Efektivno polje sila – prijelaz prema pog. 4</text>
-  <text x="492" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">ubrzani spremnik: slobodna površina ⊥ g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
-
+  <text x="492" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">ubrzani spremnik: slobodna površina ⊥ g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
+  </text>
   <text x="680" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#5a6a78">p₀</text>
-
-  <text x="645" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#c0392b"><tspan font-weight="700">a</tspan> → (ubrzanje)</text>
-
-  <text x="564" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" font-weight="700" fill="#8e44ad">α</text>
-
-  <text x="648" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#1a2530">g</text>
-
-  <text x="610" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#c0392b"><tspan font-weight="700">−a</tspan></text>
-
-  <text x="568" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#8e44ad"><tspan font-weight="700">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
-
-  <text x="630" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad">α</text>
-
+  <text x="710" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#c0392b">
+    <tspan font-weight="700">a</tspan> → (ubrzanje)</text>
+  <text x="562" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" font-weight="700" fill="#8e44ad">α</text>
+  <text x="650" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#1a2530">g</text>
+  <text x="624" y="255" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#c0392b">
+    <tspan font-weight="700">−a</tspan>
+  </text>
+  <text x="603" y="347" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#8e44ad">
+    <tspan font-weight="700">g</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
+  </text>
+  <text x="632" y="321" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad">α</text>
   <text x="645" y="431" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#8e44ad">tan α = a / g  ,  g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan> = √(g² + a²)</text>
-
-<text x="36" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#b7600c">h</text>
-
-  </svg>
+  <text x="36" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#b7600c">h</text>
+</svg>
