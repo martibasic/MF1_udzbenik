@@ -127,14 +127,40 @@ def example_hinged_quarter(R=1.10, b=1.40, rho=RHO_WATER, g=G):
     return {**r, "x_from_hinge": x_from_hinge, "T": T}
 
 
-def task_hinged_quarter(R=0.75, b=1.10, h1=0.45, rho=RHO_WATER, g=G):
-    r = quarter_cylinder(R, b, h1, vertical_sign=-1, rho=rho, g=g)
-    horizontal_arm = r["h_H"] - h1
-    # Težište pomoćnoga volumena mjereno od lijevoga vertikalnog zatvaranja;
-    # krak prema zglobu u gornjoj desnoj točki jest R-x.
-    vertical_arm = R - r["x_from_wall"]
-    T = (r["F_H"] * horizontal_arm + abs(r["F_V"]) * vertical_arm) / R
-    return {**r, "horizontal_arm": horizontal_arm, "vertical_arm": vertical_arm, "T": T}
+def integrate(f, lo, hi, n=800):
+    """Složeno Simpsonovo pravilo; koristi se neovisno od formula težišta."""
+    step = (hi - lo) / n
+    return step / 3 * (f(lo) + f(hi) + sum(
+        (4 if i % 2 else 2) * f(lo + i * step) for i in range(1, n)))
+
+
+def task_two_levels(b=1.20, H=3.0, h_left=2.40, h_right=1.20):
+    # Moment sile udesno na y>0 je negativan za pozitivnu rotaciju CCW.
+    F = RHO_WATER * G * b * (h_left**2 - h_right**2) / 2
+    M = -RHO_WATER * G * b * (h_left**3 - h_right**3) / 6
+    return {"F": F, "M": M, "y_R": -M / F if F else None, "T": -M / H}
+
+
+def task_triangle(H=1.50, h0=0.40, limit=12e3, offered=1.20):
+    h_c = h0 + 2 * H / 3
+    b_max = limit / (RHO_WATER * G * H / 2 * h_c)
+    h_cp = h_c + H**2 / (18 * h_c)
+    F_offered = RHO_WATER * G * offered * H / 2 * h_c
+    return {"b_max": b_max, "h_cp": h_cp, "F_offered": F_offered}
+
+
+def task_radial_gate(R=0.85, b=1.30, h1=0.60, W=2.40e3, x_g=-0.32):
+    # Stvarna lokalna normala od vody na poklopac: (cos(phi), sin(phi)).
+    def df(phi):
+        return RHO_WATER * G * (h1 + R * math.sin(phi)) * b * R
+    F_x = integrate(lambda phi: df(phi) * math.cos(phi), 0, math.pi / 2)
+    F_y = integrate(lambda phi: df(phi) * math.sin(phi), 0, math.pi / 2)
+    M_water = integrate(lambda phi:
+        (-R * math.cos(phi)) * df(phi) * math.sin(phi)
+        - (-R * math.sin(phi)) * df(phi) * math.cos(phi), 0, math.pi / 2)
+    T = (-x_g * W + M_water) / R
+    return {"F_x": F_x, "F_y": F_y, "M_water": M_water,
+            "T": T, "R_x": T - F_x, "R_y": W - F_y}
 
 
 def task_uncertainty(
@@ -227,23 +253,49 @@ def verify():
     _check(out, "U05.CANON.Z2.F_V_kN", r["F_V"] / 1000, 12.30, "kN", rel=0.02)
     _check(out, "U05.CANON.Z2.F_R_kN", r["F_R"] / 1000, 16.42, "kN", rel=0.02)
 
-    r = inclined_gate(0.80, 1.00, 0.90, 40.0)
-    _check(out, "U05.CANON.Z3.F_kN", r["F"] / 1000, 9.566, "kN", rel=0.02)
-    _check(out, "U05.CANON.Z3.s_cp", r["s_cp"], 0.5439, "m", rel=0.02)
-    _check(out, "U05.CANON.Z3.T_kN", r["T"] / 1000, 5.203, "kN", rel=0.02)
+    r = task_two_levels()
+    _check(out, "U05.CANON.Z3.F_kN", r["F"] / 1000, 25.377, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z3.y_R", r["y_R"], 0.9333, "m", rel=0.001)
+    _check(out, "U05.CANON.Z3.M_kNm", r["M"] / 1000, -23.685, "kNm", rel=0.001)
+    _check(out, "U05.CANON.Z3.T_kN", r["T"] / 1000, 7.895, "kN", rel=0.001)
+    q = lambda y: RHO_WATER * G * 1.2 * (max(2.4-y, 0)-max(1.2-y, 0))
+    f_num = sum(integrate(q, lo, hi) for lo, hi in [(0,1.2),(1.2,2.4),(2.4,3)])
+    m_num = sum(integrate(lambda y: -y*q(y), lo, hi)
+                for lo, hi in [(0,1.2),(1.2,2.4),(2.4,3)])
+    _invariant(out, "U05.CANON.Z3.pressure_integration", abs(f_num-r["F"]) < 1e-6)
+    _invariant(out, "U05.CANON.Z3.moment_balance", abs(m_num+3*r["T"]) < 1e-6)
+    equal = task_two_levels(h_left=1.2, h_right=1.2)
+    reverse = task_two_levels(h_left=1.2, h_right=2.4)
+    _invariant(out, "U05.CANON.Z3.equal_levels", equal["F"] == equal["M"] == equal["T"] == 0)
+    _invariant(out, "U05.CANON.Z3.reversed_levels", reverse["F"] == -r["F"] and reverse["T"] == -r["T"])
 
-    r = layered_wall(1.80, 820.0, 0.90, 998.0, 1.50)
-    _check(out, "U05.CANON.Z4.F_kN", r["F"] / 1000, 45.24, "kN", rel=0.02)
-    _check(out, "U05.CANON.Z4.h_cp", r["h_cp"], 1.623, "m", rel=0.02)
+    r = task_triangle()
+    _check(out, "U05.CANON.Z4.b_max", r["b_max"], 1.1673, "m", rel=0.001)
+    _check(out, "U05.CANON.Z4.h_cp", r["h_cp"], 1.4893, "m", rel=0.001)
+    _check(out, "U05.CANON.Z4.F_offered_kN", r["F_offered"] / 1000, 12.336, "kN", rel=0.001)
+    q = lambda depth: RHO_WATER * G * depth * r["b_max"] * (depth-0.4)/1.5
+    f_num = integrate(q, 0.4, 1.9)
+    h_num = integrate(lambda depth: depth*q(depth), 0.4, 1.9)/f_num
+    _invariant(out, "U05.CANON.Z4.triangular_strip_integral", abs(f_num-12000) < 1e-6 and abs(h_num-r["h_cp"]) < 1e-10)
+    _invariant(out, "U05.CANON.Z4.offered_rejected", r["F_offered"] > 12000 and r["b_max"] < 1.2)
+    _invariant(out, "U05.CANON.Z4.width_scaling", abs(task_triangle(limit=24000)["b_max"]-2*r["b_max"]) < 1e-12 and task_triangle(limit=24000)["h_cp"] == r["h_cp"])
+    _invariant(out, "U05.CANON.Z4.surface_limit", abs(task_triangle(h0=0)["h_cp"]-3*1.5/4) < 1e-12)
 
-    r = task_hinged_quarter()
-    _check(out, "U05.CANON.Z5.F_H_kN", r["F_H"] / 1000, 6.664, "kN", rel=0.02)
-    _check(out, "U05.CANON.Z5.h_H", r["h_H"], 0.8818, "m", rel=0.02)
-    _check(out, "U05.CANON.Z5.horizontal_arm", r["horizontal_arm"], 0.4318, "m", rel=0.02)
-    _check(out, "U05.CANON.Z5.F_V_kN", r["F_V"] / 1000, -8.392, "kN", rel=0.02)
-    _check(out, "U05.CANON.Z5.vertical_arm", r["vertical_arm"], 0.4071, "m", rel=0.02)
-    _check(out, "U05.CANON.Z5.F_R_kN", r["F_R"] / 1000, 10.72, "kN", rel=0.02)
-    _check(out, "U05.CANON.Z5.T_kN", r["T"] / 1000, 8.392, "kN", rel=0.02)
+    r = task_radial_gate()
+    _check(out, "U05.CANON.Z5.F_x_kN", r["F_x"] / 1000, 11.089, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z5.F_y_kN", r["F_y"] / 1000, 13.713, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z5.M_water_kNm", r["M_water"] / 1000, 0, "kNm", rel=1e-9)
+    _check(out, "U05.CANON.Z5.T_kN", r["T"] / 1000, 0.904, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z5.R_x_kN", r["R_x"] / 1000, -10.185, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z5.R_y_kN", r["R_y"] / 1000, -11.313, "kN", rel=0.001)
+    analytic = quarter_cylinder(.85, 1.3, .6, 1)
+    _invariant(out, "U05.CANON.Z5.projection_and_volume", abs(r["F_x"]-analytic["F_H"]) < 1e-6 and abs(r["F_y"]-analytic["F_V"]) < 1e-6)
+    _invariant(out, "U05.CANON.Z5.component_moments_cancel", abs(analytic["F_H"]*(analytic["h_H"]-.6)-analytic["F_V"]*analytic["x_from_wall"]) < 1e-7)
+    _invariant(out, "U05.CANON.Z5.support_balances", abs(r["F_x"]+r["R_x"]-r["T"]) < 1e-7 and abs(r["F_y"]+r["R_y"]-2400) < 1e-7 and abs(2400*.32-r["T"]*.85) < 1e-7)
+    _invariant(out, "U05.CANON.Z5.tie_capacity", 0 < r["T"] < 1000)
+    deeper = task_radial_gate(h1=1.2)
+    _invariant(out, "U05.CANON.Z5.depth_changes_support_not_tie", deeper["F_x"] > r["F_x"] and deeper["F_y"] > r["F_y"] and abs(deeper["T"]-r["T"]) < 1e-7)
+    _invariant(out, "U05.CANON.Z5.weightless_limit", abs(task_radial_gate(W=0)["T"]) < 1e-7)
 
     r = task_uncertainty()
     _check(out, "U05.CANON.Z6.F_kN", r["F"] / 1000, 12.218, "kN", rel=0.02)

@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" role="img" aria-labelledby="u05v1pz_title u05v1pz_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
   <title id="u05v1pz_title">Vertikalna pravokutna zaklopka ispod slobodne povrsine</title>
-  <desc id="u05v1pz_desc">Lijevo: bocni presjek spremnika s vodom, vertikalna pravokutna zaklopka sirine b=2,0 m i visine h=3,0 m s gornjim rubom na dubini h1=2,0 m. Linearno rastuca tlacna raspodjela na zaklopki, tezisce plohe C na dubini h_C=3,5 m, centar tlaka CP na dubini h_CP=3,71 m i rezultantna sila F=205,5 kN. Desno: formule i numericki rezultati.</desc>
-
+  <desc id="u05v1pz_desc">Lijevo: bocni presjek spremnika s vodom, vertikalna pravokutna zaklopka sirine b=2,0 m i visine h=3,0 m s gornjim rubom na dubini h1=2,0 m. Linearno rastuca tlacna raspodjela na zaklopki, tezisce plohe C na dubini h_C=3,5 m, centar tlaka CP na dubini h_CP=3,71 m i rezultantna sila F=205,6 kN. Desno: formule i numericki rezultati.</desc>
   <defs>
     <linearGradient id="u05v1pz_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#aed6f1" />
@@ -28,94 +27,36 @@
       <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
     </marker>
   </defs>
-
-  <!-- pozadina + razdjelnik -->
   <line x1="438" y1="38" x2="438" y2="436" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
-
-  <!-- ===================== LIJEVI PANEL: bocni presjek ===================== -->
-  <!-- mjerilo: 1 m = 40 px vertikalno; slobodna povrsina y=110, gornji rub zaklopke y=190, donji y=310, dno y=370 -->
-
-  <!-- voda u spremniku (lijevo od zaklopke) -->
   <rect x="60" y="110" width="280" height="260" fill="url(#u05v1pz_voda)" />
-
-  <!-- desna stijenka spremnika (gdje je zaklopka ugradjena) -->
-  <!-- gornji dio stijenke iznad zaklopke: y=60..190 -->
   <rect x="340" y="60" width="14" height="130" fill="url(#u05v1pz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- donji dio stijenke ispod zaklopke: y=310..380 -->
   <rect x="340" y="310" width="14" height="70" fill="url(#u05v1pz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- zaklopka u stijenki: y=190..310, gornji rub stijenke debljinom -->
   <rect x="340" y="190" width="14" height="120" fill="#4a5568" stroke="#2d3748" stroke-width="1.6" />
-
-  <!-- lijeva stijenka spremnika -->
   <rect x="48" y="60" width="14" height="320" fill="url(#u05v1pz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- dno spremnika -->
   <rect x="48" y="370" width="306" height="14" fill="url(#u05v1pz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-
-  <!-- slobodna povrsina -->
   <line x1="62" y1="110" x2="340" y2="110" stroke="#1565c0" stroke-width="2.2" />
-  <!-- oznaka voda -->
-  <!-- ===================== TLACNA RASPODJELA NA ZAKLOPKI =====================
-       p(y) = rho * g * h_dubine; raste linearno od gornjeg ruba (h1=2) do donjeg (h1+h=5)
-       Skala: p_max = ~50 kPa odgovara duzina strelice = 75 px
-       Skala 1 kPa = 1,5 px; p_top = 19,6 kPa -> 29 px; p_bot = 49 kPa -> 73 px
-       Trapezoid se proteze lijevo od stijenke (x=340) prema unutra.
-       Top width 50 px (od x=290 do x=340), Bottom width 122 px (od x=218 do x=340) -->
   <polygon points="340,190 290,190 218,310 340,310" fill="url(#u05v1pz_press)" stroke="#1565c0" stroke-width="1.2" />
   <line x1="290" y1="190" x2="218" y2="310" stroke="#1565c0" stroke-width="1.4" />
-
-  <!-- tlacne strelice (manje, plave, perpendikularno na zaklopku) -->
   <line x1="313" y1="200" x2="338" y2="200" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u05v1pz_pr)" />
   <line x1="296" y1="230" x2="338" y2="230" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u05v1pz_pr)" />
   <line x1="278" y1="260" x2="338" y2="260" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u05v1pz_pr)" />
   <line x1="259" y1="290" x2="338" y2="290" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u05v1pz_pr)" />
   <line x1="241" y1="306" x2="338" y2="306" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u05v1pz_pr)" />
-
-  <!-- oznake p1 i p2 -->
-  <!-- ===================== ZAKLOPKA OZNAKA + TOCKE C i CP =====================
-       y_top = 190 (h=2,0 m); y_bot = 310 (h=5,0 m)
-       h_C = 3,5 m -> y_C = 110 + 3,5*40 = 250
-       h_CP = 3,714 m -> y_CP = 110 + 3,714*40 = 258,6
-       Razmak C-CP = 0,214 m = 8,6 px -->
-
-  <!-- tezisce C -->
   <circle cx="347" cy="250" r="3.5" fill="#1a2530" stroke="white" stroke-width="1.3" />
-
-  <!-- centar tlaka CP -->
   <circle cx="347" cy="259" r="3.5" fill="#c0392b" stroke="white" stroke-width="1.3" />
-
-  <!-- F = rezultantna sila iz CP, perpendikularno na zaklopku, prema desno (van iz vode) -->
   <line x1="354" y1="259" x2="436" y2="259" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u05v1pz_force)" />
-  <!-- callout za C (gore desno od tocke) -->
   <line x1="350" y1="250" x2="378" y2="232" stroke="#1a2530" stroke-width="0.7" stroke-dasharray="2,2" />
-  <!-- callout za CP (dolje desno od tocke) -->
   <line x1="350" y1="259" x2="378" y2="288" stroke="#c0392b" stroke-width="0.7" stroke-dasharray="2,2" />
-  <!-- mini legenda ispod tanka -->
   <g>
     <circle cx="248" cy="406" r="3.5" fill="#1a2530" />
     <circle cx="318" cy="406" r="3.5" fill="#c0392b" />
-    <text x="256" y="409" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530"><tspan font-style="italic">C</tspan> težište</text>
-    <text x="326" y="409" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b"><tspan font-style="italic">CP</tspan> centar tlaka</text>
+    <text x="256" y="409" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530">
+      <tspan font-style="italic">C</tspan> težište</text>
+    <text x="326" y="409" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#c0392b">
+      <tspan font-style="italic">CP</tspan> centar tlaka</text>
   </g>
-
-  <!-- ===================== KOTE =====================
-       sve smedje; pomocne linije + tik-crte + dim marker
-       1) h1 = 2,0 m, vertikalna kota lijevo (x ~ 22), od slobodne povrsine y=110 do gornjeg ruba zaklopke y=190
-       2) h = 3,0 m, vertikalna kota lijevo (x ~ 22), od y=190 do y=310
-       3) z = 1,71 m, vertikalna kota desno (x ~ 86 from stijenki) od y=190 do y=259 (od gornjeg ruba do CP)
-       4) b = 2,0 m: skica je u presjeku pa b ne moze biti kota - dodat cemo malu skicu "front-view" iznad zaklopke za b
-  -->
-
-  <!-- KOTA h1 (lijevo) -->
-  <!-- KOTA h (lijevo) -->
-  <!-- KOTA z = h_CP - h1 = 1,71 m (desno, ali unutar stijenke - bolje desno od stijenke) -->
-  <!-- pomocne od gornjeg ruba zaklopke i od CP do dim line -->
-  <!-- mini front-view skica zaklopke (za b) -->
-  <!-- okvir b x h (proporcionalno, malo, u lijevom donjem kutu) -->
   <g>
     <rect x="78" y="394" width="56" height="42" fill="#4a5568" stroke="#2d3748" stroke-width="1.2" opacity="0.85" />
-    <!-- kota b (horizontalno iznad) -->
-    <!-- kota h (vertikalno desno) -->
-    <!-- label -->
     <line x1="78" y1="394" x2="78" y2="384" stroke="#b7600c" stroke-width="0.6" />
     <line x1="134" y1="394" x2="134" y2="384" stroke="#b7600c" stroke-width="0.6" />
     <line x1="81" y1="388" x2="131" y2="388" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u05v1pz_dimL)" marker-end="url(#u05v1pz_dim)" />
@@ -126,35 +67,20 @@
     <text x="178" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">pravokutna zaklopka</text>
     <text x="178" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">(pogled prema</text>
     <text x="178" y="429" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">stijenki)</text>
-  <text x="106" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle"><tspan font-style="italic">b</tspan> = 2,0 m</text>
-    <text x="148" y="419" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c"><tspan font-style="italic">h</tspan></text>
-    </g>
-
-  <!-- mala napomena dolje -->
-  <!-- ===================== DESNI PANEL: FORMULE ===================== -->
-
-  <!-- glavni okvir panela -->
+    <text x="106" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle">
+      <tspan font-style="italic">b</tspan> = 2,0 m</text>
+    <text x="148" y="419" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">
+      <tspan font-style="italic">h</tspan>
+    </text>
+  </g>
   <rect x="458" y="50" width="412" height="328" rx="10" fill="#ffffff" stroke="#1565c0" stroke-width="1.4" />
-  <!-- header bar -->
   <rect x="458" y="50" width="412" height="30" rx="10" fill="#1565c0" />
   <rect x="458" y="66" width="412" height="14" fill="#1565c0" />
-  <!-- Blok 1: Povrsina A (y 90..132) -->
   <line x1="478" y1="140" x2="850" y2="140" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 2: Dubina tezista h_C (y 142..184) -->
   <line x1="478" y1="193" x2="850" y2="193" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 3: Rezultantna sila F (istaknut) (y 195..244) -->
   <line x1="478" y1="263" x2="850" y2="263" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 4: Moment povrsine I_G (y 265..298) -->
   <line x1="478" y1="311" x2="850" y2="311" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 5: h_CP (y 313..348) -->
-  <!-- italic summary -->
-  <!-- REZULTATI BADGE (y 388..436) -->
   <rect x="458" y="388" width="412" height="48" rx="9" fill="#eaf6ee" stroke="#1e8449" stroke-width="1.5" />
-  <!-- napomena ispod badge -->
   <line x1="62" y1="110" x2="24" y2="110" stroke="#b7600c" stroke-width="0.6" />
   <line x1="340" y1="190" x2="24" y2="190" stroke="#b7600c" stroke-width="0.6" stroke-dasharray="3,3" />
   <line x1="24" y1="113" x2="24" y2="187" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u05v1pz_dimL)" marker-end="url(#u05v1pz_dim)" />
@@ -164,51 +90,66 @@
   <line x1="354" y1="259" x2="368" y2="259" stroke="#b7600c" stroke-width="0.6" />
   <line x1="365" y1="193" x2="365" y2="256" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u05v1pz_dimL)" marker-end="url(#u05v1pz_dim)" />
   <text x="76" y="40" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Bočni presjek spremnika sa zaklopkom</text>
-
   <text x="74" y="103" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1565c0">slobodna površina (p = p₀)</text>
-
   <text x="140" y="245" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#0d47a1">voda</text>
   <text x="140" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">ρ = 998 kg/m³</text>
-
-  <text x="286" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="end" font-style="italic">p<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = ρ g h<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="286" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="end" font-style="italic">p<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = ρ g h<tspan baseline-shift="sub" font-size="0.7em">1</tspan>
+  </text>
   <text x="214" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="end" font-style="italic">p<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = ρ g (h<tspan baseline-shift="sub" font-size="0.7em">1</tspan>+h)</text>
-
-  <text x="370" y="251" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#c0392b"><tspan font-weight="700" font-style="italic">F</tspan> = 205,5 kN</text>
-
-  <text x="382" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">C</tspan></text>
-
-  <text x="382" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c0392b"><tspan font-style="italic">CP</tspan></text>
-
+  <text x="370" y="251" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#c0392b">
+    <tspan font-weight="700" font-style="italic">F</tspan> = 205,6 kN</text>
+  <text x="382" y="230" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">
+    <tspan font-style="italic">C</tspan>
+  </text>
+  <text x="382" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c0392b">
+    <tspan font-style="italic">CP</tspan>
+  </text>
   <text x="44" y="455" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">Tlak raste linearno s dubinom; rezultanta <tspan font-style="italic">F</tspan> djeluje u centru tlaka <tspan font-style="italic">CP</tspan>, ispod težišta <tspan font-style="italic">C</tspan>.</text>
-
   <text x="664" y="71" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Rezultantna sila i centar tlaka</text>
-
   <text x="664" y="103" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">površina plohe</text>
-  <text x="664" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">A</tspan> = <tspan font-style="italic">b h</tspan> = 2,0 · 3,0 = 6,0 m²</text>
+  <text x="664" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+    <tspan font-style="italic">A</tspan> = <tspan font-style="italic">b h</tspan> = 2,0 · 3,0 = 6,0 m²</text>
   <text x="664" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">dubina težišta plohe</text>
-  <text x="664" y="177" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> + <tspan font-style="italic">h</tspan>/2 = 2,0 + 1,5 = 3,50 m</text>
+  <text x="664" y="177" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+    <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">C</tspan> = <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">1</tspan> + <tspan font-style="italic">h</tspan>/2 = 2,0 + 1,5 = 3,50 m</text>
   <text x="664" y="209" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">rezultantna hidrostatska sila</text>
-  <text x="664" y="231" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">F</tspan> = ρ g <tspan font-style="italic">A h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 998 · 9,81 · 6,0 · 3,5</text>
-  <text x="664" y="251" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">F</tspan> ≈ 205,5 kN</text>
+  <text x="664" y="231" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+    <tspan font-style="italic">F</tspan> = ρ g <tspan font-style="italic">A h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 998 · 9,81 · 6,0 · 3,5</text>
+  <text x="664" y="251" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">
+    <tspan font-style="italic">F</tspan> ≈ 205,6 kN</text>
   <text x="664" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">centralni moment površine</text>
-  <text x="664" y="299" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">I</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan> = <tspan font-style="italic">b h</tspan><tspan baseline-shift="super" font-size="0.7em">3</tspan>/12 = 2,0 · 27 / 12 = 4,50 m⁴</text>
+  <text x="664" y="299" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+    <tspan font-style="italic">I</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">G</tspan> = <tspan font-style="italic">b h</tspan>
+    <tspan baseline-shift="super" font-size="0.7em">3</tspan>/12 = 2,0 · 27 / 12 = 4,50 m⁴</text>
   <text x="664" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">dubina centra tlaka</text>
-  <text x="664" y="347" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">CP</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> + <tspan font-style="italic">I</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan>/(<tspan font-style="italic">A h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>) = 3,50 + 0,214</text>
-
+  <text x="664" y="347" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+    <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">CP</tspan> = <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">C</tspan> + <tspan font-style="italic">I</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">G</tspan>/(<tspan font-style="italic">A h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">C</tspan>) = 3,50 + 0,214</text>
   <text x="664" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">centar tlaka uvijek ispod težišta (tlak raste s dubinom)</text>
-
   <text x="664" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
-  <text x="540" y="425" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">F</tspan> ≈ 205,5 kN</text>
-  <text x="690" y="425" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">CP</tspan> ≈ 3,71 m</text>
-  <text x="820" y="425" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">z</tspan> ≈ 1,71 m</text>
-
-  <text x="664" y="453" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">z</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">CP</tspan> − <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> – udaljenost centra tlaka od gornjeg ruba zaklopke</text>
-<text x="30" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+  <text x="540" y="425" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">
+    <tspan font-style="italic">F</tspan> ≈ 205,6 kN</text>
+  <text x="690" y="425" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">
+    <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">CP</tspan> ≈ 3,71 m</text>
+  <text x="820" y="425" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449">
+    <tspan font-style="italic">z</tspan> ≈ 1,71 m</text>
+  <text x="664" y="453" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">
+    <tspan font-style="italic">z</tspan> = <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">CP</tspan> − <tspan font-style="italic">h</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">1</tspan> – udaljenost centra tlaka od gornjeg ruba zaklopke</text>
+  <text x="30" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">1</tspan>
+  </text>
   <text x="30.0" y="169.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 2,0 m</text>
-
   <text x="30" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c">h</text>
   <text x="30.0" y="262.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 3,0 m</text>
-
-  <text x="362" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle"><tspan font-style="italic">z</tspan> = 1,71 m</text>
-
-  </svg>
+  <text x="362" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle">
+    <tspan font-style="italic">z</tspan> = 1,71 m</text>
+</svg>

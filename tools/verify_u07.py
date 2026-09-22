@@ -170,19 +170,17 @@ def zadatak_2(L=2.60, B=1.40, H=0.38, m_p=510.0, m_t=220.0, rho=998.0):
     return {"V": V, "h": h, "dm": dm}
 
 
-def zadatak_3(L=2.20, B=1.00, m=560.0, m_kompresor=85.0, e=0.24,
-              rho=998.0, KG=0.18):
+def zadatak_3(L=3.0, B=1.40, H=0.50, m=1200.0, m_s=120.0,
+              e=0.30, phi_deg=3.0, rho=998.0):
     h_m = m / (rho * L * B)
+    tan_theta = math.tan(math.radians(phi_deg))
+    GM = m_s * e / (m * tan_theta)
     KB = h_m / 2
     BM = B**2 / (12 * h_m)
-    GM = KB + BM - KG
-    tan_theta = m_kompresor * e / (m * GM)
-    dh = B * tan_theta
-    y_B = BM * tan_theta
-    return {
-        "h_m": h_m, "KB": KB, "BM": BM, "KG": KG, "GM": GM,
-        "tan_theta": tan_theta, "y_B": y_B, "dh": dh,
-    }
+    KG = KB + BM - GM
+    return {"h_m": h_m, "KB": KB, "BM": BM, "GM": GM, "KG": KG,
+            "tan_theta": tan_theta, "h_L": h_m-B*tan_theta/2,
+            "h_D": h_m+B*tan_theta/2, "phi_deg": phi_deg}
 
 
 def zadatak_4(m=0.085, d=0.008, h_1=0.082, h_2=0.095, rho_water=1000.0):
@@ -198,14 +196,23 @@ def zadatak_4(m=0.085, d=0.008, h_1=0.082, h_2=0.095, rho_water=1000.0):
             "V_uron_ulje": V_uron_ulje}
 
 
-def zadatak_5(V_ist=0.62, GM=0.18, phi_deg=7.0, rho=998.0, g=9.81):
-    Delta = rho * g * V_ist
-    M_r = Delta * GM * math.sin(math.radians(phi_deg))
-    return {"Delta": Delta, "M_r": M_r, "stable": GM > 0.0}
+def zadatak_5(L=3.0, B=1.50, H=0.60, m0=1000.0, KG0=0.80,
+              equipment=150.0, z_old=1.10, z_new=0.30,
+              ballast=600.0, z_ballast=0.05, rho=998.0):
+    def state(m, moment):
+        h = m/(rho*L*B)
+        KB, BM, KG = h/2, B**2/(12*h), moment/m
+        GM = KB+BM-KG
+        return {"m": m, "h": h, "freeboard": H-h, "KG": KG,
+                "KB": KB, "BM": BM, "GM": GM,
+                "accepted": GM >= .20 and H-h >= .25}
+    return {"initial": state(m0, m0*KG0),
+            "A": state(m0, m0*KG0+equipment*(z_new-z_old)),
+            "B": state(m0+ballast, m0*KG0+ballast*z_ballast)}
 
 
 def zadatak_6(L=2.80, B=1.20, rho_o=820.0, delta=0.08, rho_w=998.0,
-               h_L=0.26, h_D=0.18, m=690.0, m_akumulator=70.0,
+               h_L=0.26, h_D=0.18, m_akumulator=70.0,
                KG=0.200, h_tol=0.003, rho_w_tol=3.0,
                m_akumulator_tol=1.0, KG_tol=0.005, g=9.81):
     def state(h_left, h_right, rho_water, accumulator_mass, kg):
@@ -227,7 +234,7 @@ def zadatak_6(L=2.80, B=1.20, rho_o=820.0, delta=0.08, rho_w=998.0,
         BM_eq = rho_water * I_T / equivalent_mass
         GM_eq = KB_eq + BM_eq - kg
         tan_theta = (h_left - h_right) / B
-        e = m / accumulator_mass * GM_eq * tan_theta
+        e = equivalent_mass / accumulator_mass * GM_eq * tan_theta
         return {
             "h_m": h_m, "V_o": V_o, "V_w": V_w,
             "equivalent_mass": equivalent_mass, "y_B_w": y_B_w,
@@ -254,6 +261,7 @@ def zadatak_6(L=2.80, B=1.20, rho_o=820.0, delta=0.08, rho_w=998.0,
     nominal["e_max"] = worst["e"]
     nominal["worst"] = worst
     nominal["corner_count"] = len(corners)
+    nominal["corners"] = corners
     return nominal
 
 
@@ -338,18 +346,40 @@ def verify():
     _check(out, "U07.Z2.dm", z2["dm"], 650.0, "kg")
 
     z3 = zadatak_3()
-    _check(out, "U07.Z3.h_m", z3["h_m"], 0.25, "m", rel=0.03)
-    _check(out, "U07.Z3.KB", z3["KB"], 0.1275, "m")
-    _check(out, "U07.Z3.BM", z3["BM"], 0.3267, "m")
-    _check(out, "U07.Z3.GM", z3["GM"], 0.2743, "m")
-    _check(out, "U07.Z3.dh", z3["dh"], 0.1328, "m", rel=0.02)
+    _check(out, "U07.Z3.h_m", z3["h_m"], .2863, "m", rel=.001)
+    _check(out, "U07.Z3.GM", z3["GM"], .5724, "m", rel=.001)
+    _check(out, "U07.Z3.KG", z3["KG"], .1412, "m", rel=.001)
+    _check(out, "U07.Z3.h_L", z3["h_L"], .2496, "m", rel=.001)
+    _check(out, "U07.Z3.h_D", z3["h_D"], .3230, "m", rel=.001)
+    _invariant(out, "U07.Z3.model_bounds", 0 < z3["h_L"] < z3["h_D"] < .5 and z3["phi_deg"] <= 5,
+               "Pokus izlazi iz zadanih geometrijskih ili kutnih granica.")
+    reverse = zadatak_3(e=-.3, phi_deg=-3)
+    _invariant(out, "U07.Z3.reversed_shift", abs(reverse["GM"]-z3["GM"]) < 1e-12 and abs(reverse["h_L"]-z3["h_D"]) < 1e-12,
+               "Obrnuti pomak mora zamijeniti gazove i zadrzati GM.")
 
     z4 = zadatak_4()
-    _check(out, "U07.Z4.rho_ulje", z4["rho_ulje"], 990.0, "kg/m^3")
+    _check(out, "U07.Z4.rho_ulje", z4["rho_ulje"], 992.4, "kg/m^3")
 
     z5 = zadatak_5()
-    _check(out, "U07.Z5.Delta_kN", z5["Delta"] / 1000, 6.07, "kN")
-    _check(out, "U07.Z5.M_r", z5["M_r"], 133.0, "N m")
+    _check(out, "U07.Z5.initial_h", z5["initial"]["h"], .2227, "m", rel=.001)
+    _check(out, "U07.Z5.initial_freeboard", z5["initial"]["freeboard"], .3773, "m", rel=.001)
+    _check(out, "U07.Z5.initial_GM", z5["initial"]["GM"], .1534, "m", rel=.001)
+    _check(out, "U07.Z5.A_KG", z5["A"]["KG"], .6800, "m", rel=.001)
+    _check(out, "U07.Z5.A_GM", z5["A"]["GM"], .2734, "m", rel=.001)
+    _check(out, "U07.Z5.B_h", z5["B"]["h"], .3563, "m", rel=.001)
+    _check(out, "U07.Z5.B_freeboard", z5["B"]["freeboard"], .2437, "m", rel=.001)
+    _check(out, "U07.Z5.B_KG", z5["B"]["KG"], .5188, "m", rel=.001)
+    _check(out, "U07.Z5.B_GM", z5["B"]["GM"], .1857, "m", rel=.001)
+    _invariant(out, "U07.Z5.choice", z5["A"]["accepted"] and not z5["B"]["accepted"]
+               and z5["B"]["GM"] < .2 and z5["B"]["freeboard"] < .25, "Uvjeti ne daju izbor plana A.")
+    _invariant(out, "U07.Z5.mass_and_moment", abs(z5["A"]["m"]*z5["A"]["KG"]-680) < 1e-9
+               and abs(z5["B"]["m"]*z5["B"]["KG"]-830) < 1e-9, "Vertikalni momenti masa nisu zatvoreni.")
+    _invariant(out, "U07.Z5.equal_mass_draft", z5["initial"]["h"] == z5["A"]["h"]
+               and z5["initial"]["BM"] == z5["A"]["BM"], "Premjestanje iste opreme ne mijenja istisninu.")
+    _invariant(out, "U07.Z5.ballast_tradeoff", z5["B"]["KG"] < z5["A"]["KG"] and z5["B"]["GM"] < z5["A"]["GM"],
+               "Nizi KG nije dovoljan za usporedbu planova.")
+    no_ballast = zadatak_5(ballast=0)
+    _invariant(out, "U07.Z5.zero_ballast", no_ballast["B"] == no_ballast["initial"], "Granica bez balasta nije pocetno stanje.")
 
     z6 = zadatak_6()
     _check(out, "U07.Z6.h_m", z6["h_m"], 0.22, "m")
@@ -362,13 +392,28 @@ def verify():
     _check(out, "U07.Z6.BM_eq", z6["BM_eq"], 0.5833, "m")
     _check(out, "U07.Z6.GM_eq", z6["GM_eq"], 0.4884, "m")
     _check(out, "U07.Z6.e", z6["e"], 0.3209, "m", rel=0.02)
-    _check(out, "U07.Z6.e_max", z6["e_max"], 0.3540, "m", rel=0.02)
+    _check(out, "U07.Z6.e_max", z6["e_max"], 0.3546, "m", rel=0.001)
     _invariant(
         out,
         "U07.Z6.corridor_rejected",
         z6["e"] < 0.34 < z6["e_max"],
         "Nominalni i konzervativni omotac ne daju deklariranu odluku.",
     )
+
+    _invariant(out, "U07.Z6.model_bounds", all(.08 < c["h_D"] < c["h_L"] < .36
+               and abs(math.degrees(math.atan(c["tan_theta"]))) < 5 for c in z6["corners"]),
+               "Intervali izlaze iz geometrijskih ili kutnih granica modela.")
+    _invariant(out, "U07.Z6.mass_consistency", all(abs(2.8*1.2*(820*.08+c["rho_w"]*(c["h_m"]-.08))-c["equivalent_mass"]) < 1e-9
+               and abs(c["m_akumulator"]*c["e"]-c["equivalent_mass"]*c["GM_eq"]*c["tan_theta"]) < 1e-9 for c in z6["corners"]),
+               "Masa iz istisnine i moment moraju biti uskladjeni u svakom kutu intervala.")
+    # Independent stiffness from vertical pressure-column first moments.
+    stiffness_residuals = []
+    for c in z6["corners"]:
+        hm, rw, kg = c["h_m"], c["rho_w"], c["KG"]
+        stiffness_mass = 2.8*1.2*(820*.08*(hm-.04)+rw*(hm-.08)**2/2) + rw*2.8*1.2**3/12 - c["equivalent_mass"]*kg
+        stiffness_residuals.append(stiffness_mass*c["tan_theta"]-c["m_akumulator"]*c["e"])
+    _invariant(out, "U07.Z6.independent_stiffness", max(map(abs, stiffness_residuals)) < 1e-9,
+               "Prvi moment uzgonskih doprinosa ne zatvara moment tereta.")
 
     p3_balance = primjer_3_kompresor()
     _invariant(
@@ -402,9 +447,9 @@ def verify():
     _invariant(
         out,
         "U07.INV.z3_uses_gm",
-        abs(85.0 * 0.24 - 560.0 * z3["GM"] * z3["tan_theta"])
+        abs(120.0 * 0.30 - 1200.0 * z3["GM"] * z3["tan_theta"])
         < 1e-12
-        and abs(z3["dh"] - 1.00 * z3["tan_theta"]) < 1e-12,
+        and abs(z3["h_D"] - z3["h_L"] - 1.40 * z3["tan_theta"]) < 1e-12,
         "Z3 ne zatvara mali-nagibni moment preko GM.",
     )
 
@@ -442,7 +487,7 @@ def verify():
     _invariant(
         out,
         "U07.INV.metacentric_restoring_sign",
-        z5["stable"] and z5["M_r"] > 0.0,
+        z5["A"]["GM"] > 0 and 1000*9.81*z5["A"]["GM"]*math.sin(math.radians(3)) > 0,
         "Pozitivan GM nije dao pozitivan povratni moment.",
     )
     _invariant(
@@ -452,7 +497,7 @@ def verify():
         and 0.0 < z6["y_B"] < z6["y_B_w"]
         and abs(z6["y_B"] - z6["BM_eq"] * z6["tan_theta"]) < 1e-12
         and abs(
-            70.0 * z6["e"] - 690.0 * z6["GM_eq"] * z6["tan_theta"]
+            70.0 * z6["e"] - z6["equivalent_mass"] * z6["GM_eq"] * z6["tan_theta"]
         ) < 1e-12,
         "Dvofluidna istisnina ne zatvara masu ili rezultantni centar nije izmedu komponenti.",
     )

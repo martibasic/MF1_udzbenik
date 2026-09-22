@@ -608,6 +608,8 @@ Jednoliki referentni tlak može se poništiti samo ako djeluje s obje strane na 
 
 U svim zadatcima uzmite $g=9{,}81\ \mathrm{m/s^2}$. Ako nije drukčije navedeno, voda ima $\rho=998\ \mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak. Skica s okupanom stranom, normalom i pozitivnim smjerovima dio je postavljanja modela.
 
+![Skice zadataka Z1–Z6: ravne plohe, dvije razine vode, trokutasti poklopac i radijalni poklopac s osi u središtu kružnice](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe-skice fig-align="center" fig-alt="Šest skica s dimenzijama, stvarnom vodom i silama na poklopce; u Z5 os je u središtu kružnice O"}
+
 ::::: {.mf1-vjezbe-list}
 
 ### Z1. Sila na pravokutni poklopac {#task-u05-ravna-pravokutna-zaklopka .unnumbered .unlisted}
@@ -656,15 +658,17 @@ $F_H=10{,}88\ \mathrm{kN}$; $F_V=+12{,}30\ \mathrm{kN}$ prema gore; $F_R=16{,}42
 
 [Razina: T1]{.mf1-task-level}
 
-### Z3. Kosi poklopac sa zglobom {#task-u05-kosi-poklopac-sa-zglobom .unnumbered .unlisted}
+<span id="task-u05-kosi-poklopac-sa-zglobom"></span>
 
-Kosi pravokutni poklopac širine $b=0{,}80\ \mathrm{m}$ i duljine $L=1{,}00\ \mathrm{m}$ zatvara kut $\theta=40^\circ$ prema vodoravnici. Gornji rub na dubini je $h_1=0{,}90\ \mathrm{m}$ i spojen je zglobom. Na donjem rubu djeluje sila držanja okomita na plohu. Odredite rezultantu, položaj centra tlaka od zgloba i silu držanja.
+### Z3. Pregrada između dviju razina vode {#task-pregrada-izmedu-dviju-razina-vode .unnumbered .unlisted}
+
+Vertikalna nepropusna pregrada širine $b=1{,}20\ \mathrm{m}$ i visine $H=3{,}00\ \mathrm{m}$ dijeli dva otvorena spremnika. Dubina vode iznad zajedničkog dna lijevo je $h_L=2{,}40\ \mathrm{m}$, a desno $h_D=1{,}20\ \mathrm{m}$. Pregrada je zglobno oslonjena u dnu $A$; u gornjoj točki $B$ pridržava je vodoravna spojnica. Zanemarite trenje i moment težine pregrade. Odredite neto silu vode i visinu njezina pravca djelovanja iznad dna, moment vode oko $A$ te iznos i smjer sile spojnice. Uzmite $+x$ udesno, $+y$ prema gore i pozitivan moment suprotno kazaljci na satu.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Postavite $h(s)=h_1+s\sin\theta$ i uporabite omjer prvog momenta sile i ukupne sile. Zatim zatvorite moment oko zgloba.
+Odvojeno nacrtajte dva trokutasta dijagrama manometarskog tlaka. Svaki daje silu na visini $h/3$ iznad dna. Sile i njihove momente oduzmite uz odgovarajuće predznake; krak spojnice jest $H$.
 :::
 ::::
 ::::
@@ -673,21 +677,23 @@ Postavite $h(s)=h_1+s\sin\theta$ i uporabite omjer prvog momenta sile i ukupne s
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$F=9{,}566\ \mathrm{kN}$; $s_{CP}=0{,}5439\ \mathrm{m}$; $T=5{,}203\ \mathrm{kN}$.
+$F_x=+25{,}377\ \mathrm{kN}$; $y_R=0{,}9333\ \mathrm{m}$ iznad dna; $M_A=-23{,}685\ \mathrm{kN\,m}$; $T=7{,}895\ \mathrm{kN}$ ulijevo u $B$. Provjera: pri jednakim razinama neto sila i moment su nula; zamjena lijeve i desne razine obrće njihove predznake.
 :::
 ::::
 
 [Razina: T2]{.mf1-task-level}
 
-### Z4. Stijena uz dva sloja fluida {#task-u05-dvoslojna-vertikalna-stijena .unnumbered .unlisted}
+<span id="task-u05-dvoslojna-vertikalna-stijena"></span>
 
-Vertikalna stijena širine $b=1{,}80\ \mathrm{m}$ zadržava gornji sloj ulja gustoće $820\ \mathrm{kg/m^3}$ i visine $0{,}90\ \mathrm{m}$ te donji sloj vode gustoće $998\ \mathrm{kg/m^3}$ i visine $1{,}50\ \mathrm{m}$. Slobodna površina ulja je na atmosferi. Odredite ukupnu silu i dubinu njezina hvatišta od slobodne površine.
+### Z4. Širina trokutastog poklopca {#task-sirina-trokutastog-poklopca .unnumbered .unlisted}
+
+Vertikalni poklopac ima oblik jednakokračnog trokuta s vrhom gore, visinom $H=1{,}50\ \mathrm{m}$ i vodoravnom osnovicom širine $b$. Vrh je na dubini $h_0=0{,}40\ \mathrm{m}$ ispod slobodne površine vode; s druge strane je zrak na atmosferskom tlaku. Dopuštena rezultantna sila jest $F_{\max}=12{,}00\ \mathrm{kN}$. Odredite najveću širinu $b_{\max}$ i dubinu centra tlaka. Zadovoljava li ponuđeni poklopac širine $1{,}20\ \mathrm{m}$ ovaj uvjet? Visina i dubina vrha ostaju zadane pri promjeni širine; provjerava se samo navedeni uvjet sile, ne čvrstoća konstrukcije.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Dijagram tlaka rastavite na uljni trokut, pravokutni doprinos uljnog stupca u vodi i vodeni trokut. Svaki dio ima svoje hvatište.
+Za trokut s vrhom gore vrijedi $A=bH/2$, $h_C=h_0+2H/3$ i $I_G=bH^3/36$ oko vodoravne težišne osi. Uporabite $F\le F_{\max}$; zatim provjerite ovisi li $h_{CP}$ o širini.
 :::
 ::::
 ::::
@@ -696,21 +702,27 @@ Dijagram tlaka rastavite na uljni trokut, pravokutni doprinos uljnog stupca u vo
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$F=45{,}24\ \mathrm{kN}$; $h_{CP}=1{,}623\ \mathrm{m}$.
+$b_{\max}=1{,}1673\ \mathrm{m}$; $h_{CP}=1{,}4893\ \mathrm{m}$. Za $b=1{,}20\ \mathrm{m}$ sila je $F=12{,}336\ \mathrm{kN}>F_{\max}$, pa ponuđena širina ne zadovoljava. Pri zadanim $H$ i $h_0$, $h_{CP}$ ne ovisi o $b$.
 :::
 ::::
 
 [Razina: T2]{.mf1-task-level}
 
-### Z5. Model zglobnog zakrivljenog poklopca {#task-u05-zglobni-zakrivljeni-poklopac-model .unnumbered .unlisted}
+<span id="task-u05-zglobni-zakrivljeni-poklopac-model"></span>
 
-Četvrtcilindrični poklopac ima $R=0{,}75\ \mathrm{m}$, $b=1{,}10\ \mathrm{m}$ i gornju točku na dubini $h_1=0{,}45\ \mathrm{m}$. Voda kvasi konkavnu stranu odozgo, pa lokalne normale imaju vertikalnu komponentu prema dolje. Poklopac je zglobno vezan u gornjoj točki, a donji rub pridržava vodoravna spojnica. Sami odaberite potreban skup modela te odredite $F_H$, pravac $F_H$, $F_V$, $F_R$ i silu spojnice.
+### Z5. Radijalni poklopac s težinom {#task-radijalni-poklopac-s-tezinom .unnumbered .unlisted}
+
+Kruti sklop četvrtcilindričnog poklopca i njegovih krakova okreće se oko osi kroz središte kružnice $O$, a ne oko kraja luka. Voda kvasi konveksnu lijevu i donju stranu, a s druge strane je zrak na atmosferskom tlaku.
+
+U presjeku s ishodištem u $O$, $+x$ udesno i $+y$ prema gore, krajevi su $A=(-R,0)$ i $B=(0,-R)$; $R=0{,}85\ \mathrm{m}$ i širina $b=1{,}30\ \mathrm{m}$. Os $O$ nalazi se $h_1=0{,}60\ \mathrm{m}$ ispod slobodne površine. Težina cijelog sklopa je $W=2{,}40\ \mathrm{kN}$ i djeluje na pravcu $x_G=-0{,}32\ \mathrm{m}$. Vodoravna spojnica u $B$ može samo vlačiti ulijevo, do $T_{\max}=1{,}00\ \mathrm{kN}$. Krakovi i spojnica su na suhoj strani ili izvan širine presjeka; njihovo dodatno hidrostatsko opterećenje zanemarite.
+
+Odaberite potreban model i odredite predznačene komponente sile vode, njezin moment oko $O$, silu spojnice i komponente reakcije osi na sklop. Može li spojnica održati ravnotežu? Obrazložite mijenja li porast $h_1$ potrebnu silu spojnice dok cijeli luk ostaje uronjen. Zanemarite trenje osi; pozitivan moment je suprotno kazaljci na satu.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-$F_H$ dolazi iz vertikalne projekcije. Za $F_V$ pomoćni volumen ima pravokutni dio i četvrtinu valjka. U momentu oko zgloba rabite zasebne krakove obiju komponenti.
+Nacrtajte jednu lokalnu tlačnu normalu i provjerite njezin pravac prema $O$. Za ravnotežu izdvojite cijeli kruti sklop; tek nakon momentne jednadžbe zatvorite ravnotežu sila. Zasebno provjerite predznak i kapacitet spojnice.
 :::
 ::::
 ::::
@@ -719,7 +731,7 @@ $F_H$ dolazi iz vertikalne projekcije. Za $F_V$ pomoćni volumen ima pravokutni 
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$F_H=6{,}664\ \mathrm{kN}$; $h_H=0{,}8818\ \mathrm{m}$ ispod slobodne površine, odnosno krak $0{,}4318\ \mathrm{m}$ prema zglobu; $F_V=8{,}392\ \mathrm{kN}$ prema dolje s krakom $0{,}4071\ \mathrm{m}$; $F_R=10{,}72\ \mathrm{kN}$; $T=8{,}392\ \mathrm{kN}$.
+$F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}=0$. $T=0{,}904\ \mathrm{kN}$ ulijevo, manje od $T_{\max}$; $R_{Ox}=-10{,}185\ \mathrm{kN}$, $R_{Oy}=-11{,}313\ \mathrm{kN}$. Sve tlačne normale prolaze kroz $O$; $T=W|x_G|/R$ ne ovisi o $h_1$ u zadanom modelu.
 :::
 ::::
 

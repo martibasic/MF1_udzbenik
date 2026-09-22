@@ -1,476 +1,417 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" role="img" aria-labelledby="u07vs_title u07vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u07vs_title">Vjezbe U07 - sest minimalnih skica za zadatke Z1 do Z6 (uzgon, plivanje, stabilnost)</title>
-  <desc id="u07vs_desc">Sest mini grayscale skica plivajucih i uronjenih tijela: Z1 hermeticki blok potpuno uronjen, Z2 ponton sa srednjim gazom h, Z3 platforma s pomaknutim kompresorom, Z4 areometar u vodi i ulju, Z5 metacentarska visina GM kod nagnutog modula, Z6 platforma na granici ulja i vode s pomaknutim akumulatorom. Sile crveno (G), uzgon zeleno (F_U), kote smedje (h, L, B, e, delta), tlak/dubina plavo.</desc>
-
+  <title id="u07vs_title">Zadaci Z1–Z6: uzgon i početni stabilitet</title>
+  <desc id="u07vs_desc">Šest panela u izvornom rasporedu tri stupca i dva reda. Z1 zatvoreni uronjeni blok, uzgon gore i težina te dodatna sila dolje. Z2 uspravan opterećeni ponton. Z3 uteg pomaknut desno i desni rub dublje uronjen. Z4 identični areometri s kotama uronjenog dijela vrata od spoja s tijelom. Z5 usporedba simetričnog spuštanja opreme i dodavanja čvrstog balasta. Z6 nagnuta nepropusna platforma presijeca dva vodoravna fluida; akumulator je lijevo. Fluidi ne prodiru u zatvorena tijela. Strelice su sile ili kote, ne brzine; veličine vektora nisu u mjerilu.</desc>
   <defs>
-    <!-- Voda gradient -->
     <linearGradient id="u07vs_water" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#aed6f1" />
       <stop offset="100%" stop-color="#5b9ec9" />
     </linearGradient>
-    <!-- Ulje gradient -->
     <linearGradient id="u07vs_oil" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fde68a" />
       <stop offset="100%" stop-color="#c8a000" />
     </linearGradient>
-    <!-- Trup pontona / platforme -->
     <linearGradient id="u07vs_hull" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9aaab4" />
       <stop offset="100%" stop-color="#5d6d7e" />
     </linearGradient>
-
-    <!-- Marker - sila ulaz (crveno) -->
     <marker id="u07vs_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
     </marker>
-    <!-- Marker - sila izlaz / uzgon (zeleno) -->
     <marker id="u07vs_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
     </marker>
-    <!-- Marker - sila pomocna / drzanje (plavo) -->
     <marker id="u07vs_aB" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
     </marker>
-    <!-- Marker za kotu - smedji desni -->
     <marker id="u07vs_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
-    <!-- Marker za kotu - smedji lijevi -->
     <marker id="u07vs_aDimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
       <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
     </marker>
-    <!-- Marker za nagib / pomocni vektor (sivo) -->
     <marker id="u07vs_aT" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
       <path d="M0,0 L0,4 L6,2 z" fill="#5a6a78" />
     </marker>
+    <marker id="u07vs_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <linearGradient id="u07vs_fix_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u07vs_fix_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u07vs_fix_z1_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z1_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z1_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z1_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z1_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z1_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <linearGradient id="u07vs_fix_z1_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u07vs_fix_z1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u07vs_fix_z2_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z2_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z2_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z2_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z2_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z2_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <linearGradient id="u07vs_fix_z2_water" x1="0" y1="96" x2="0" y2="195" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u07vs_fix_z2_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u07vs_fix_z3_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z3_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z3_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z3_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z3_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z3_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <linearGradient id="u07vs_fix_z3_water" x1="0" y1="110" x2="0" y2="192" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u07vs_fix_z3_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u07vs_fix_z4_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z4_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z4_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z4_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z4_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z4_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <linearGradient id="u07vs_fix_z4_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u07vs_fix_z4_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u07vs_fix_z5_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z5_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z5_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z5_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z5_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z5_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <linearGradient id="u07vs_fix_z5_water" x1="0" y1="124" x2="0" y2="183" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u07vs_fix_z5_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u07vs_fix_z5_b_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z5_b_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z5_b_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z5_b_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z5_b_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z5_b_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <linearGradient id="u07vs_fix_z5_b_water" x1="0" y1="124" x2="0" y2="183" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u07vs_fix_z5_b_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <marker id="u07vs_fix_z6_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z6_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z6_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z6_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z6_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <marker id="u07vs_fix_z6_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+    </marker>
+    <linearGradient id="u07vs_fix_z6_water" x1="0" y1="106.56" x2="0" y2="191" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#aed6f1" />
+      <stop offset="100%" stop-color="#5b9ec9" />
+    </linearGradient>
+    <pattern id="u07vs_fix_z6_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    </pattern>
+    <linearGradient id="u07vs_fix_z6_oil" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="94" y2="106.56">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#c8a000" />
+    </linearGradient>
   </defs>
-
-  <!-- Pozadina + okvir -->
-  <rect width="960" height="760" fill="#ffffff" />
-  <!-- ============================================================
-       Z1 - Hermeticki zatvoreno tijelo, potpuno uronjeno (gornji lijevo)
-       V = 0,085 m^3, m = 62 kg, rho = 998 kg/m^3
-       F_U > G  =>  potrebna sila drzanja prema DOLJE
-       Panel: x 30..330, y 36..264
-  ============================================================ -->
-  <g>
-    <!-- Panel okvir -->
-    <rect x="30" y="36" width="300" height="228" rx="10" fill="#ffffff" stroke="#c8d6e4" stroke-width="1.2" />
-    <!-- Header bar -->
-    <rect x="30" y="36" width="300" height="28" rx="10" fill="#1565c0" />
-    <rect x="30" y="56" width="300" height="8" fill="#1565c0" />
-    <!-- Voda - cijelo polje ispod povrsine -->
-    <rect x="38" y="92" width="284" height="156" fill="url(#u07vs_water)" opacity="0.85" />
-    <!-- Slobodna povrsina -->
-    <line x1="38" y1="92" x2="322" y2="92" stroke="#1565c0" stroke-width="1.8" />
-    <!-- Blok (potpuno uronjen) - centar x=180, y srednji 175 -->
-    <rect x="146" y="140" width="68" height="60" rx="2" fill="#7a8a96" stroke="#3a4a56" stroke-width="1.6" />
-    <!-- Uze koje drzi tijelo dolje (jer F_U > G) -->
-    <line x1="180" y1="140" x2="180" y2="108" stroke="#3a4a56" stroke-width="1.2" stroke-dasharray="3,2" />
-    <!-- Sidro / fiksna tocka simbol -->
-    <line x1="172" y1="108" x2="188" y2="108" stroke="#3a4a56" stroke-width="2" />
-    <line x1="174" y1="108" x2="170" y2="100" stroke="#3a4a56" stroke-width="1" />
-    <line x1="180" y1="108" x2="180" y2="100" stroke="#3a4a56" stroke-width="1" />
-    <line x1="186" y1="108" x2="190" y2="100" stroke="#3a4a56" stroke-width="1" />
-
-    <!-- F_U - uzgon prema GORE (zeleno) - duljina ~36 -->
-    <line x1="164" y1="158" x2="164" y2="122" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u07vs_aG)" />
-    <!-- G - tezina prema DOLJE (crveno) - duljina ~26 -->
-    <line x1="196" y1="200" x2="196" y2="226" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u07vs_aR)" />
-    <!-- F_drz - sila drzanja prema DOLJE (plavo, vuce tijelo prema dnu) - duljina ~22 -->
-    <line x1="180" y1="118" x2="180" y2="140" stroke="#1565c0" stroke-width="2.5" marker-end="url(#u07vs_aB)" />
-    <!-- Footer - zadano -->
-    <text x="180" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Z1 — Potpuno uronjen blok</text>
-
-    <text x="44" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1565c0">p.p.</text>
-
-    <text x="180" y="175" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#ffffff">V, m</text>
-
-    <text x="92" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan></tspan> = ρgV</text>
-
-    <text x="232" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c0392b"><tspan font-weight="700">G</tspan> = mg</text>
-
-    <text x="188" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">d</tspan></tspan></text>
-
-    <text x="180" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">V</tspan> = 0,085 m³ · <tspan font-style="italic">m</tspan> = 62 kg</text>
+  <rect x="0" y="0" width="960" height="760" fill="white" stroke="none" stroke-width="1.2" />
+  <g id="u07vs_fix_z1" transform="translate(30 36)">
+    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
+    <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z1 — Potpuno uronjeno tijelo</text>
+    <rect x="9" y="55" width="282" height="147" fill="url(#u07vs_fix_z1_water)" stroke="none" stroke-width="1.2" />
+    <line x1="9" y1="55" x2="291" y2="55" stroke="#1565c0" stroke-width="2" />
+    <rect x="100" y="109" width="100" height="77" fill="#909fa8" stroke="#3a4a56" stroke-width="1.5" />
+    <circle cx="150" cy="147.5" r="3.2" fill="#1e8449" />
+    <line x1="150" y1="147.5" x2="150" y2="117" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u07vs_fix_z1_green)" />
+    <line x1="150" y1="147.5" x2="150" y2="184" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u07vs_fix_z1_force)" />
+    <line x1="150" y1="73" x2="150" y2="106" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u07vs_fix_z1_normal)" />
+    <text x="166" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">d</tspan> ↓</text>
+    <text x="166" y="125" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan> ↑</text>
+    <text x="166" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c0392b" text-anchor="start">G ↓</text>
+    <text x="150" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56" text-anchor="middle">V = 0,085 m³; m = 62 kg</text>
   </g>
-
-  <!-- ============================================================
-       Z2 - Pravokutni ponton (gornji sredina)
-       L=2,60, B=1,40, H=0,38, m_p=510, m_t=220
-       Panel: x 346..646
-  ============================================================ -->
-  <g>
-    <rect x="346" y="36" width="300" height="228" rx="10" fill="#ffffff" stroke="#c8d6e4" stroke-width="1.2" />
-    <rect x="346" y="36" width="300" height="28" rx="10" fill="#1565c0" />
-    <rect x="346" y="56" width="300" height="8" fill="#1565c0" />
-    <!-- Slobodna povrsina na y=140 -->
-    <rect x="354" y="140" width="284" height="108" fill="url(#u07vs_water)" opacity="0.85" />
-    <line x1="354" y1="140" x2="638" y2="140" stroke="#1565c0" stroke-width="1.8" />
-    <!-- Ponton: presjek pravokutni; H ukupno = 60 px (predstavlja 0,38 m); gaz h ~ 36 px (predstavlja 0,229 m)
-         Centar x = 496; sirina B = 200 px (predstavlja 1,40 m)
-         Top boka y = 116, dno y = 176, waterline y = 140 (gaz = 36 px) -->
-    <rect x="396" y="116" width="200" height="60" rx="2" fill="url(#u07vs_hull)" stroke="#3a4a56" stroke-width="1.6" />
-    <!-- Slobodni bok (H - h) iznad vode oznacen svjetlije -->
-    <rect x="396" y="116" width="200" height="24" fill="#b8c5cf" opacity="0.6" />
-
-    <!-- G prema dolje, na vrhu pontona -->
-    <line x1="496" y1="84" x2="496" y2="112" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u07vs_aR)" />
-    <!-- F_U prema gore -->
-    <line x1="464" y1="180" x2="464" y2="148" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u07vs_aG)" />
-    <!-- Kota h (gaz) - lijevo, vertikalna, od y=140 do y=176 -->
-    <!-- Kota H - desno, vertikalna, od y=116 do y=176 -->
-    <!-- Kota B - ispod (horizontalna), od x=396 do x=596 -->
-    <line x1="380" y1="140" x2="358" y2="140" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="380" y1="176" x2="358" y2="176" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="362" y1="140" x2="372" y2="140" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="362" y1="176" x2="372" y2="176" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="367" y1="143" x2="367" y2="173" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <line x1="612" y1="116" x2="634" y2="116" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="612" y1="176" x2="634" y2="176" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="624" y1="116" x2="614" y2="116" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="624" y1="176" x2="614" y2="176" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="619" y1="119" x2="619" y2="173" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <line x1="396" y1="180" x2="396" y2="222" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="596" y1="180" x2="596" y2="222" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="396" y1="218" x2="396" y2="208" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="596" y1="218" x2="596" y2="208" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="399" y1="213" x2="593" y2="213" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <text x="496" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Z2 — Ponton, srednji gaz</text>
-
-    <text x="360" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1565c0">p.p.</text>
-
-    <text x="504" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c0392b"><tspan font-weight="700">G</tspan></text>
-
-    <text x="436" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#1e8449"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan></tspan></text>
-
-    <text x="496" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">L</tspan> = 2,60 m · <tspan font-style="italic">B</tspan> = 1,40 m · <tspan font-style="italic">H</tspan> = 0,38 m</text>
-  <text x="361" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#b7600c">h</text>
-
-    <text x="625" y="149" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">H</text>
-
-    <text x="496" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">L × B</text>
-
-    </g>
-
-  <!-- ============================================================
-       Z3 - Plutajuca platforma s pomaknutim kompresorom (gornji desno)
-       L=2,20, B=1,00, m=560, m_k=85 kg, e=0,24 m
-       Linearni mali nagib - razlika urona lijevoga i desnoga ruba
-       Panel: x 662..962 (zapravo 662..946)
-  ============================================================ -->
-  <g>
-    <rect x="662" y="36" width="284" height="228" rx="10" fill="#ffffff" stroke="#c8d6e4" stroke-width="1.2" />
-    <rect x="662" y="36" width="284" height="28" rx="10" fill="#1565c0" />
-    <rect x="662" y="56" width="284" height="8" fill="#1565c0" />
-    <!-- Slobodna povrsina na y=130 -->
-    <rect x="670" y="130" width="268" height="118" fill="url(#u07vs_water)" opacity="0.85" />
-    <line x1="670" y1="130" x2="938" y2="130" stroke="#1565c0" stroke-width="1.8" />
-    <!-- Tilted platforma: centar x=804, sirina 200 (B=1,00 m); thickness 14 px
-         lijevi rub uronjen dublje (h_L > h_D)
-         lijevi bottom: x=704, y=130+38=168; desni bottom: x=904, y=130+22=152
-         lijevi top:    x=704, y=154; desni top:    x=904, y=138 -->
-    <polygon points="704,154 904,138 904,152 704,168" fill="url(#u07vs_hull)" stroke="#3a4a56" stroke-width="1.6" />
-
-    <!-- Kompresor (zute kutije) pomaknut udesno za e od centra -->
-    <!-- centar platforme top sredina pribl. x=804, y=146
-         kompresor s donjom ivicom na platformi, pomaknut udesno e_px = 40 -->
-    <!-- Os simetrije platforme (isprekidana svijetla) -->
-    <line x1="804" y1="80" x2="804" y2="180" stroke="#7a8a96" stroke-width="0.9" stroke-dasharray="4,3" />
-
-    <!-- Kota e - pomak kompresora od osi -->
-    <!-- Kota h_L lijevo (od y=130 do y=168) -->
-    <!-- Kota h_D desno (od y=130 do y=152) -->
-    <!-- Kota B (ispod platforme) -->
-    <rect x="828" y="110" width="44" height="28" rx="3" fill="url(#u07vs_oil)" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="804" y1="100" x2="804" y2="80" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="850" y1="105" x2="850" y2="80" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="804" y1="84" x2="804" y2="92" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="850" y1="84" x2="850" y2="92" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="807" y1="88" x2="847" y2="88" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <line x1="700" y1="130" x2="676" y2="130" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="700" y1="168" x2="676" y2="168" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="680" y1="130" x2="690" y2="130" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="680" y1="168" x2="690" y2="168" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="685" y1="133" x2="685" y2="165" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <line x1="908" y1="130" x2="932" y2="130" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="908" y1="152" x2="932" y2="152" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="922" y1="130" x2="912" y2="130" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="922" y1="152" x2="912" y2="152" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="917" y1="133" x2="917" y2="149" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <line x1="704" y1="170" x2="704" y2="222" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="904" y1="156" x2="904" y2="222" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="704" y1="218" x2="704" y2="208" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="904" y1="218" x2="904" y2="208" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="707" y1="213" x2="901" y2="213" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <text x="804" y="55" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Z3 — Platforma s pomaknutim kompresorom</text>
-
-    <text x="676" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1565c0">p.p.</text>
-
-    <text x="850" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#5a3a00">k</text>
-
-    <text x="804" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">m<tspan baseline-shift="sub" font-size="0.7em">k</tspan></tspan> = 85 kg · <tspan font-style="italic">e</tspan> = 0,24 m</text>
-  <text x="827" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">e</text>
-
-    <text x="678" y="153" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
-
-    <text x="925" y="145" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">D</tspan></text>
-
-    <text x="804" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">B</text>
-
-    </g>
-
-  <!-- ============================================================
-       Z4 - Areometar u vodi i u ulju (donji lijevo)
-       m=0,085 kg, d=8 mm (vrat), h_1 = 82 mm voda, h_2 = 95 mm ulje
-       Panel: x 30..330, y 286..514
-  ============================================================ -->
-  <g>
-    <rect x="30" y="286" width="300" height="228" rx="10" fill="#ffffff" stroke="#c8d6e4" stroke-width="1.2" />
-    <rect x="30" y="286" width="300" height="28" rx="10" fill="#1565c0" />
-    <rect x="30" y="306" width="300" height="8" fill="#1565c0" />
-    <!-- Lijevi spremnik (voda) -->
-    <rect x="46" y="346" width="124" height="138" fill="url(#u07vs_water)" opacity="0.85" />
-    <rect x="46" y="346" width="124" height="138" fill="none" stroke="#3a4a56" stroke-width="1.5" />
-    <line x1="46" y1="346" x2="170" y2="346" stroke="#1565c0" stroke-width="1.8" />
-    <!-- Areometar lijevi: vrat (cilindar) iznad vode, bulge donji
-         centar x=132; vrat x=128..136 (sirina 8 px); povrsina na y=346
-         vrat top y=326, bulge y=378..414 (ellipse cy=396, ry=18)
-         uronjeno: cijela bulge + dio vrata ispod y=346 do bulge top (y=378), tj 32 px = h_1 -->
-    <rect x="128" y="326" width="8" height="52" fill="#e8edf0" stroke="#3a4a56" stroke-width="1.2" />
-    <ellipse cx="132" cy="396" rx="18" ry="22" fill="#e8edf0" stroke="#3a4a56" stroke-width="1.5" />
-
-    <!-- Kota h_1 - vertikalna lijevo od povrsine (y=346) do dna bulge (y=418) -->
-    <!-- Desni spremnik (ulje) -->
-    <rect x="190" y="346" width="124" height="138" fill="url(#u07vs_oil)" opacity="0.75" />
-    <rect x="190" y="346" width="124" height="138" fill="none" stroke="#3a4a56" stroke-width="1.5" />
-    <!-- Areometar desni: dublje uronjen (h_2 > h_1)
-         centar x=252; isti oblik; vrat krati iznad vode (manje stori), bulge ista dubina
-         vrat top y=326, bulge cy=396, ry=22; ali povrsina sad presjeca vrat na y=346 i uron je vidno veci.
-         Da prikaze h_2 > h_1: pomicemo cijeli areometar prema dolje za 8 px? Bolje: ostavi bulge na istoj y poziciji, ali kota h_2 ide od y=346 do y=426 (uron 80 px ~ veci).
-         Tehnicki: bulge ima ry=22, dno na y=418 isto. Trebao bi prikazati POMAK od 8 px nadolje sireg.
-         Realnije: areometar pomaknut nize, vrat manje istureno, dno bulge dublje. -->
-    <rect x="248" y="338" width="8" height="58" fill="#e8edf0" stroke="#3a4a56" stroke-width="1.2" />
-    <ellipse cx="252" cy="418" rx="18" ry="22" fill="#e8edf0" stroke="#3a4a56" stroke-width="1.5" />
-
-    <!-- Kota h_2 - vertikalna desno od povrsine (y=346) do dna bulge (y=440) -->
-    <!-- Vrat - oznaka d -->
-    <line x1="114" y1="346" x2="92" y2="346" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="114" y1="418" x2="92" y2="418" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="96" y1="346" x2="106" y2="346" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="96" y1="418" x2="106" y2="418" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="101" y1="349" x2="101" y2="415" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <line x1="190" y1="346" x2="314" y2="346" stroke="#b7600c" stroke-width="1.8" />
-    <line x1="270" y1="346" x2="294" y2="346" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="270" y1="440" x2="294" y2="440" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="284" y1="346" x2="274" y2="346" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="284" y1="440" x2="274" y2="440" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="279" y1="349" x2="279" y2="437" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <text x="180" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Z4 — Areometar u vodi i ulju</text>
-
-    <text x="52" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1565c0">voda ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
-
-    <text x="196" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#8a5a00">ulje ρ<tspan baseline-shift="sub" font-size="0.7em">u</tspan></text>
-
-    <text x="180" y="475" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">d</tspan> = 8 mm · <tspan font-style="italic">m</tspan> = 0,085 kg</text>
-    <text x="180" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">u ulju veci uron: ρ<tspan baseline-shift="sub" font-size="0.7em">u</tspan> &lt; ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> → veci V<tspan baseline-shift="sub" font-size="0.7em">ist</tspan></text>
-  <text x="94" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-
-    <text x="286" y="397" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
-
-    </g>
-
-  <!-- ============================================================
-       Z5 - Metacentarska visina GM (donji sredina)
-       V_ist=0,62, GM=0,18, phi=7 deg
-       Prikaz: nagnut presjek + tezistve G_T, centar uzgona B, metacentar M
-       Panel: x 346..646, y 286..514
-  ============================================================ -->
-  <g>
-    <rect x="346" y="286" width="300" height="228" rx="10" fill="#ffffff" stroke="#c8d6e4" stroke-width="1.2" />
-    <rect x="346" y="286" width="300" height="28" rx="10" fill="#1565c0" />
-    <rect x="346" y="306" width="300" height="8" fill="#1565c0" />
-    <!-- Slobodna povrsina na y=400 -->
-    <rect x="354" y="400" width="284" height="100" fill="url(#u07vs_water)" opacity="0.85" />
-    <line x1="354" y1="400" x2="638" y2="400" stroke="#1565c0" stroke-width="1.8" />
-    <!-- Nagnuti ponton presjek
-         Centar pontona x=496, sirina 200 px (B=fizicki ne bitno za skicu)
-         Nagib phi=7 deg: tan(7)=0,1228 => na sirini 100 px je delta=12,3 px
-         Lijevi bottom y=400+24=424, lijevi top y=408; desni bottom y=400+0=400, desni top y=384
-         Bolje simetricni: ponton centriran na (496, 408), nagnut tako da je lijevi rub uronjen
-         Centar uzgona se pomice udesno (suprotno od nagiba? za pravostrani nagib lijevi rub gori. Ali nagib koji se vidi: desni rub vise, lijevi rub dublje => pomak B prema lijevoj/dublje strani? Da, B se pomice prema vise uronjenoj strani.
-         Lakse: nagib s LIJEVE strane uronjen dublje (lijevi rub dolje). 7 deg nagib na 200 px = dh~24 px
-         Lijevi bottom (704, 424), desni bottom (904, 400); debljina 16 -> lijevi top (704, 408), desni top (904, 384)
-         Pomak prosjeka: (804, 404) -->
-    <polygon points="396,408 596,384 596,400 396,424" fill="url(#u07vs_hull)" stroke="#3a4a56" stroke-width="1.6" />
-
-    <!-- Vertikala kroz B (smjer uzgona, prema gore) - prolazi kroz metacentar M -->
-    <line x1="488" y1="446" x2="488" y2="338" stroke="#1565c0" stroke-width="1" stroke-dasharray="4,3" />
-
-    <!-- Tilted body axis (kroz G_T i M, smjer normalan na palubu)
-         Normala na liniju palube koja ide od (396,408) do (596,384) -> dy/dx = -24/200 = -0.12
-         Normala ide u smjeru perpendicular: dx_n = +0.12*L, dy_n = +L (prema dolje)
-         Pocetak: vrh M na (482, 344) - blago lijevo od vertikale (jer body axis tilted desno od vertical pri lijevom-uronjenom nagibu)
-         Krenuti od (482, 344) do (498, 454) (smjer dolje-blago-desno) -->
-    <line x1="482" y1="344" x2="498" y2="454" stroke="#7a8a96" stroke-width="0.9" stroke-dasharray="4,3" />
-
-    <!-- B - centar uzgona, ispod waterline (na vertikali)
-         Pomak B prema strani vise uronjenoj (lijevo) -> ali drzimo na vertikali za jasnocu kuta
-         x=488, y na sredini istisnine ~ 420 -->
-    <circle cx="488" cy="420" r="5" fill="#1e8449" stroke="#fff" stroke-width="1" />
-    <!-- G_T - teziste tijela, na nagnutoj osi iznad palube
-         Na tilted body axis: izmedu M (482,344) i (498,454), G_T pribl. na (490,390) -->
-    <circle cx="490" cy="390" r="5" fill="#c0392b" stroke="#fff" stroke-width="1" />
-    <!-- M - metacentar, na presjeku vertikale kroz B i tilted body axis -->
-    <polygon points="486,336 492,346 486,356 480,346" fill="#1565c0" stroke="#fff" stroke-width="1" />
-    <!-- GM oznaka - kota izmedu G_T (490,390) i M (486,346) - desno od tilted axis -->
-    <!-- Kut phi - mali luk kod M izmedu vertikale i osi tijela -->
-    <path d="M 486 368 A 24 24 0 0 0 489 367" fill="none" stroke="#5a6a78" stroke-width="1.2" />
-    <!-- Strelica povratnog momenta (zakrivljena strelica) - desno od pontona, unutar panela -->
-    <path d="M 608 388 A 26 26 0 0 1 608 432" fill="none" stroke="#1e8449" stroke-width="1.8" marker-end="url(#u07vs_aG)" />
-    <line x1="500" y1="390" x2="528" y2="384" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="494" y1="346" x2="528" y2="340" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="520" y1="384" x2="530" y2="384" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="520" y1="340" x2="530" y2="340" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="525" y1="343" x2="525" y2="381" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <text x="496" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Z5 — Metacentar M i nagib φ</text>
-
-    <text x="360" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1565c0">p.p.</text>
-
-    <text x="478" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#1e8449">B</text>
-
-    <text x="500" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">G<tspan baseline-shift="sub" font-size="0.7em">T</tspan></text>
-
-    <text x="476" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#1565c0">M</text>
-
-    <text x="478" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">φ</text>
-
-    <text x="616" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1e8449"><tspan font-weight="700">M<tspan baseline-shift="sub" font-size="0.7em">r</tspan></tspan></text>
-
-    <text x="496" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">V<tspan baseline-shift="sub" font-size="0.7em">ist</tspan></tspan> = 0,62 m³ · <tspan font-style="italic">GM</tspan> = 0,18 m · φ = 7°</text>
-    <text x="496" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">M<tspan baseline-shift="sub" font-size="0.7em">r</tspan> = ρgV<tspan baseline-shift="sub" font-size="0.7em">ist</tspan>·GM·sinφ</text>
-  <text x="538" y="365" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">GM</text>
-
-    </g>
-
-  <!-- ============================================================
-       Z6 - Platforma na granici ulja i vode s pomaknutim akumulatorom
-       L=2,80, B=1,20, rho_o=820, delta=0,08, rho_w=998
-       h_L=0,26, h_D=0,18, m_uk=690, m_akum=70
-       Panel: x 662..946, y 286..514
-  ============================================================ -->
-  <g>
-    <rect x="662" y="286" width="284" height="228" rx="10" fill="#ffffff" stroke="#c8d6e4" stroke-width="1.2" />
-    <rect x="662" y="286" width="284" height="28" rx="10" fill="#1565c0" />
-    <rect x="662" y="306" width="284" height="8" fill="#1565c0" />
-    <!-- Sloj ulja: y=346..364 (18 px za delta=0,08 m) -->
-    <rect x="670" y="346" width="268" height="18" fill="url(#u07vs_oil)" opacity="0.85" />
-    <!-- Sloj vode: y=364..496 -->
-    <rect x="670" y="364" width="268" height="132" fill="url(#u07vs_water)" opacity="0.85" />
-    <!-- Slobodna povrsina ulja -->
-    <line x1="670" y1="346" x2="938" y2="346" stroke="#1565c0" stroke-width="1.8" />
-    <!-- Granica ulje/voda (isprekidana smedja) -->
-    <line x1="670" y1="364" x2="938" y2="364" stroke="#8a5a00" stroke-width="1.2" stroke-dasharray="6,4" />
-
-    <!-- Tilted platforma: lijevi rub uronjen dublje (h_L=0,26 m), desni manje (h_D=0,18 m)
-         Skala: 1 m ~ 145 px? Lakse: pikseliziramo zasebno. Centar x=804, sirina 200 px (B=1,20)
-         h_L = 0,26 m -> 48 px (od y=346)
-         h_D = 0,18 m -> 33 px
-         Debljina platforme 14 px
-         Lijevi bottom: x=704, y=346+48=394; desni bottom: x=904, y=346+33=379
-         Lijevi top:    x=704, y=380;       desni top:    x=904, y=365 -->
-    <polygon points="704,380 904,365 904,379 704,394" fill="url(#u07vs_hull)" stroke="#3a4a56" stroke-width="1.6" />
-
-    <!-- Akumulator (zute kutije) - pomaknut prema LIJEVO (jer lijevi rub je dublje) -->
-    <!-- Os simetrije platforme: x=804; akum lijevo od osi za e_px=36 -->
-    <!-- Os simetrije platforme (isprekidana) -->
-    <line x1="804" y1="320" x2="804" y2="410" stroke="#7a8a96" stroke-width="0.9" stroke-dasharray="4,3" />
-
-    <!-- Kota e - od osi do centra akum (kratko, gore) -->
-    <!-- Kota h_L (lijevo, od slobodne povrsine y=346 do donjeg lijevog ruba y=394) -->
-    <!-- Kota h_D (desno) -->
-    <!-- Kota delta (debljina sloja ulja) - vanjska lijevo -->
-    <line x1="664" y1="346" x2="652" y2="346" stroke="#8a5a00" stroke-width="0.7" />
-    <line x1="664" y1="364" x2="652" y2="364" stroke="#8a5a00" stroke-width="0.7" />
-    <!-- Oznake ulje / voda (unutar slojeva, lijevo od centra) -->
-    <!-- Kota B - ispod platforme -->
-    <rect x="748" y="346" width="40" height="22" rx="3" fill="url(#u07vs_oil)" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="768" y1="338" x2="768" y2="318" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="804" y1="320" x2="804" y2="316" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="768" y1="318" x2="768" y2="326" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="804" y1="318" x2="804" y2="326" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="771" y1="322" x2="801" y2="322" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <line x1="700" y1="346" x2="676" y2="346" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="700" y1="394" x2="676" y2="394" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="680" y1="346" x2="690" y2="346" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="680" y1="394" x2="690" y2="394" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="685" y1="349" x2="685" y2="391" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <line x1="908" y1="346" x2="932" y2="346" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="908" y1="379" x2="932" y2="379" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="922" y1="346" x2="912" y2="346" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="922" y1="379" x2="912" y2="379" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="917" y1="349" x2="917" y2="376" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <line x1="704" y1="396" x2="704" y2="478" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="904" y1="381" x2="904" y2="478" stroke="#b7600c" stroke-width="0.7" />
-    <line x1="704" y1="474" x2="704" y2="464" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="904" y1="474" x2="904" y2="464" stroke="#b7600c" stroke-width="1.2" />
-    <line x1="707" y1="469" x2="901" y2="469" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u07vs_aDimL)" marker-end="url(#u07vs_aDim)" />
-    <text x="804" y="305" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Z6 — Platforma: ulje + voda</text>
-
-    <text x="676" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1565c0">p.p.</text>
-    <text x="768" y="361" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#5a3a00">akum</text>
-
-    <text x="658" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="end" fill="#8a5a00">δ</text>
-
-    <text x="888" y="359" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="end" fill="#8a5a00">ulje ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan></text>
-    <text x="888" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-style="italic" text-anchor="end" fill="#1565c0">voda ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
-
-    <text x="804" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">L</tspan></tspan>=0,26 m · <tspan font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">D</tspan></tspan>=0,18 m · <tspan font-style="italic">δ</tspan>=0,08 m · <tspan font-style="italic">m<tspan baseline-shift="sub" font-size="0.7em">a</tspan></tspan>=70 kg</text>
-  <text x="786" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">e</text>
-
-    <text x="678" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
-
-    <text x="925" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c">h<tspan baseline-shift="sub" font-size="0.7em">D</tspan></text>
-
-    <text x="804" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#b7600c">B</text>
-
-    </g>
-
-  <!-- ============================================================
-       LEGENDA - dno (jedna linija)
-  ============================================================ -->
-  <g transform="translate(30,540)">
-    <rect x="0" y="0" width="900" height="190" rx="10" fill="#f6faff" stroke="#c8d6e4" stroke-width="1" />
-    <!-- Leg simboli -->
-    <line x1="30" y1="44" x2="60" y2="44" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u07vs_aR)" />
-    <line x1="30" y1="68" x2="60" y2="68" stroke="#1e8449" stroke-width="2.5" marker-end="url(#u07vs_aG)" />
-    <line x1="30" y1="92" x2="60" y2="92" stroke="#1565c0" stroke-width="2.5" marker-end="url(#u07vs_aB)" />
-    <rect x="30" y="135" width="30" height="12" fill="url(#u07vs_water)" />
-    <rect x="30" y="156" width="30" height="12" fill="url(#u07vs_oil)" />
-    <!-- Desni stupac - metodicke note -->
-    <line x1="30" y1="116" x2="60" y2="116" stroke="#b7600c" stroke-width="1.4" marker-end="url(#u07vs_aDim)" marker-start="url(#u07vs_aDimL)" />
-    <text x="450" y="22" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">Legenda i metodicki tragovi</text>
-
-    <text x="68" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56"><tspan font-style="italic">G</tspan> = mg - tezina (ulazna sila prema dolje)</text>
-
-    <text x="68" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56"><tspan font-style="italic">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan></tspan> = ρgV<tspan baseline-shift="sub" font-size="0.7em">ist</tspan> - sila uzgona (Arhimed)</text>
-
-    <text x="68" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56"><tspan font-style="italic">F<tspan baseline-shift="sub" font-size="0.7em">d</tspan></tspan> - sila drzanja (kad <tspan font-style="italic">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan></tspan> &gt; <tspan font-style="italic">G</tspan>)</text>
-
-    <text x="68" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">kote (<tspan font-style="italic">h</tspan>, <tspan font-style="italic">L</tspan>, <tspan font-style="italic">B</tspan>, <tspan font-style="italic">e</tspan>, δ) - dimenzijske linije</text>
-
-    <text x="68" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">voda (ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> ≈ 998 kg/m³)</text>
-
-    <text x="68" y="167" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">ulje (ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> ≈ 820 kg/m³)</text>
-
-    <text x="490" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1a2530">Dvije ravnoteze (ne mijesati!):</text>
-    <text x="490" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">1. <tspan font-style="italic">vertikalna</tspan>: ΣF = 0  → srednji gaz <tspan font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em">m</tspan></tspan>, ukupna istisnina <tspan font-style="italic">V<tspan baseline-shift="sub" font-size="0.7em">ist</tspan></tspan></text>
-    <text x="490" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56">2. <tspan font-style="italic">momentna</tspan>: ΣM = 0  → razlika urona, pomak tereta <tspan font-style="italic">e</tspan>, polozaj <tspan font-style="italic">B</tspan></text>
-
-    <text x="490" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1a2530">Stabilnost (Z5):</text>
-    <text x="490" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56"><tspan font-style="italic">GM</tspan> &gt; 0 → metacentar iznad tezista → povratni moment <tspan font-style="italic">M<tspan baseline-shift="sub" font-size="0.7em">r</tspan></tspan> ispravlja nagib.</text>
-
-    <text x="490" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1a2530">Slojeviti fluid (Z6):</text>
-    <text x="490" y="173" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56"><tspan font-style="italic">V<tspan baseline-shift="sub" font-size="0.7em">ist</tspan></tspan> = <tspan font-style="italic">V<tspan baseline-shift="sub" font-size="0.7em">u</tspan></tspan> + <tspan font-style="italic">V<tspan baseline-shift="sub" font-size="0.7em">w</tspan></tspan>; granica ulje/voda na dubini δ ispod p.p.</text>
+  <g id="u07vs_fix_z2" transform="translate(346 36)">
+    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
+    <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z2 — Gaz opterećenog pontona</text>
+    <rect x="9" y="96" width="282" height="99" fill="url(#u07vs_fix_z2_water)" stroke="none" stroke-width="1.2" />
+    <line x1="9" y1="96" x2="291" y2="96" stroke="#1565c0" stroke-width="2" id="u07vs_fix_z2_free-surface" />
+    <polygon points="48.500000,125.137946 251.500000,125.137946 251.500000,70.037946 48.500000,70.037946" fill="#e9eef2" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z2_hull" />
+    <polygon points="50.675000,122.962946 249.325000,122.962946 249.325000,72.212946 50.675000,72.212946" fill="white" stroke="#909fa8" stroke-width="0.8" />
+    <circle cx="150.00000000000003" cy="110.56897311105729" r="3.7" fill="#1e8449" id="u07vs_fix_z2_buoyancy-center" />
+    <text x="160.00000000000003" y="114.56897311105729" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="start">B</text>
+    <polygon points="123.900000,70.037946 176.100000,70.037946 176.100000,54.087946 123.900000,54.087946" fill="#cba46b" stroke="#8b5e00" stroke-width="1.5" />
+    <line x1="150.00000000000003" y1="110.56897311105729" x2="150.00000000000003" y2="88.56897311105729" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u07vs_fix_z2_green)" />
+    <line x1="150.00000000000003" y1="39" x2="150.00000000000003" y2="59" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u07vs_fix_z2_force)" />
+    <line x1="22" y1="96" x2="32" y2="96" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="22" y1="125.13794622211455" x2="32" y2="125.13794622211455" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="27" y1="96" x2="27" y2="125.13794622211455" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_z2_dimL)" marker-end="url(#u07vs_fix_z2_dim)" />
+    <text x="10" y="114.56897311105728" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h</text>
+    <line x1="265" y1="70.03794622211456" x2="275" y2="70.03794622211456" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="265" y1="125.13794622211455" x2="275" y2="125.13794622211455" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="270" y1="70.03794622211456" x2="270" y2="125.13794622211455" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_z2_dimL)" marker-end="url(#u07vs_fix_z2_dim)" />
+    <text x="278" y="101.58794622211455" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">H</text>
+    <line x1="48.5" y1="168" x2="48.5" y2="178" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="251.5" y1="168" x2="251.5" y2="178" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="48.5" y1="173" x2="251.5" y2="173" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_z2_dimL)" marker-end="url(#u07vs_fix_z2_dim)" />
+    <text x="150.0" y="191" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">B = 1,40 m</text>
+    <text x="150" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">L = 2,60 m; H = 0,38 m; m = 730 kg</text>
+  </g>
+  <g id="u07vs_fix_z3" transform="translate(662 36)">
+    <rect x="0" y="0" width="284" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
+    <rect x="0" y="0" width="284" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="142.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z3 — Pokus nagibanja</text>
+    <rect x="9" y="110" width="266" height="82" fill="url(#u07vs_fix_z3_water)" stroke="none" stroke-width="1.2" />
+    <line x1="9" y1="110" x2="275" y2="110" stroke="#1565c0" stroke-width="2" id="u07vs_fix_z3_free-surface" />
+    <polygon points="48.532387,144.451933 241.467613,154.563240 245.078794,85.657802 52.143568,75.546495" fill="#e9eef2" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z3_hull" />
+    <polygon points="50.707886,142.493106 239.508785,152.387741 242.903295,87.616630 54.102396,77.721994" fill="white" stroke="#909fa8" stroke-width="0.8" />
+    <circle cx="150.1557823349904" cy="129.86161913564956" r="3.7" fill="#1e8449" id="u07vs_fix_z3_buoyancy-center" />
+    <text x="160.1557823349904" y="133.86161913564956" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="start">B</text>
+    <polygon points="140.342528,80.168807 156.879834,81.035490 157.602070,67.254403 141.064765,66.387719" fill="none" stroke="#8b5e00" stroke-width="1.1" stroke-dasharray="3,3" />
+    <polygon points="181.685791,82.335516 198.223096,83.202199 198.945332,69.421111 182.408027,68.554428" fill="#fde68a" stroke="#8b5e00" stroke-width="1.1" />
+    <line x1="150.05565337306837" y1="53.03997354448317" x2="191.39891611190774" y2="55.20668213294104" stroke="#b7600c" stroke-width="1.1" marker-start="url(#u07vs_fix_z3_dimL)" marker-end="url(#u07vs_fix_z3_dim)" />
+    <text x="170.72728474248805" y="43" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle">e = 0,30 m</text>
+    <line x1="19" y1="110" x2="29" y2="110" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="19" y1="144.45193322870662" x2="29" y2="144.45193322870662" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="24" y1="110" x2="24" y2="144.45193322870662" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_z3_dimL)" marker-end="url(#u07vs_fix_z3_dim)" />
+    <text x="3" y="131.2259666143533" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">L</tspan>
+    </text>
+    <line x1="258" y1="110" x2="268" y2="110" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="258" y1="154.56323997484336" x2="268" y2="154.56323997484336" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="263" y1="110" x2="263" y2="154.56323997484336" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_z3_dimL)" marker-end="url(#u07vs_fix_z3_dim)" />
+    <text x="241" y="171" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">D</tspan>
+    </text>
+    <text x="145" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">φ = 3°; desni rub dublje</text>
+    <text x="145" y="209" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">m = 1200 kg uključuje uteg 120 kg</text>
+  </g>
+  <g id="u07vs_fix_z4" transform="translate(30 286)">
+    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
+    <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z4 — Uron vrata areometra</text>
+    <rect x="16" y="65" width="121" height="133" fill="url(#u07vs_fix_z4_water)" stroke="#3a4a56" stroke-width="1" />
+    <line x1="16" y1="65" x2="137" y2="65" stroke="#1565c0" stroke-width="1.6" />
+    <ellipse cx="90" cy="149.5" rx="18" ry="23" fill="#e9eef2" stroke="#3a4a56" stroke-width="1.5" />
+    <path d="M87 128.5 V45 H93 V128.5" fill="#e9eef2" stroke="#3a4a56" stroke-width="1.5" />
+    <line x1="50" y1="65" x2="60" y2="65" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="50" y1="126.5" x2="60" y2="126.5" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="55" y1="65" x2="55" y2="126.5" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_z4_dimL)" marker-end="url(#u07vs_fix_z4_dim)" />
+    <text x="40" y="99.75" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h₁</text>
+    <line x1="66" y1="126.5" x2="114" y2="126.5" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
+    <text x="90" y="57" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">voda</text>
+    <rect x="163" y="65" width="121" height="133" fill="#fde68a" stroke="#3a4a56" stroke-width="1" />
+    <line x1="163" y1="65" x2="284" y2="65" stroke="#8b5e00" stroke-width="1.6" />
+    <ellipse cx="216" cy="159.25" rx="18" ry="23" fill="#e9eef2" stroke="#3a4a56" stroke-width="1.5" />
+    <path d="M213 138.25 V45 H219 V138.25" fill="#e9eef2" stroke="#3a4a56" stroke-width="1.5" />
+    <line x1="247" y1="65" x2="257" y2="65" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="247" y1="136.25" x2="257" y2="136.25" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="252" y1="65" x2="252" y2="136.25" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_z4_dimL)" marker-end="url(#u07vs_fix_z4_dim)" />
+    <text x="260" y="104.625" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h₂</text>
+    <line x1="192" y1="136.25" x2="240" y2="136.25" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
+    <text x="216" y="57" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8b5e00" text-anchor="middle">ulje</text>
+    <text x="150" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">h₁ = 82 mm; h₂ = 95 mm; d = 8 mm</text>
+  </g>
+  <g id="u07vs_fix_z5" transform="translate(346 286)">
+    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
+    <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z5 — Oprema ili balast</text>
+    <rect x="15" y="124" width="130" height="59" fill="url(#u07vs_fix_z5_water)" stroke="none" stroke-width="1.2" />
+    <line x1="15" y1="124" x2="145" y2="124" stroke="#1565c0" stroke-width="2" id="u07vs_fix_z5_free-surface" />
+    <polygon points="27.500000,139.586729 132.500000,139.586729 132.500000,97.586729 27.500000,97.586729" fill="#e9eef2" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z5_hull" />
+    <polygon points="28.550000,138.536729 131.450000,138.536729 131.450000,98.636729 28.550000,98.636729" fill="white" stroke="#909fa8" stroke-width="0.8" />
+    <circle cx="80.00000000000004" cy="131.79336450679133" r="3.7" fill="#1e8449" id="u07vs_fix_z5_buoyancy-center" />
+    <text x="90.00000000000004" y="135.79336450679133" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="start">B</text>
+    <polygon points="70.900000,125.586729 89.100000,125.586729 89.100000,111.586729 70.900000,111.586729" fill="#cba46b" stroke="#8b5e00" stroke-width="1.2" />
+    <text x="80" y="201" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">A: spuštena oprema</text>
+    <rect x="155" y="124" width="130" height="59" fill="url(#u07vs_fix_z5_b_water)" stroke="none" stroke-width="1.2" />
+    <line x1="155" y1="124" x2="285" y2="124" stroke="#1565c0" stroke-width="2" id="u07vs_fix_z5_b_free-surface" />
+    <polygon points="167.500000,148.938766 272.500000,148.938766 272.500000,106.938766 167.500000,106.938766" fill="#e9eef2" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z5_b_hull" />
+    <polygon points="168.550000,147.888766 271.450000,147.888766 271.450000,107.988766 168.550000,107.988766" fill="white" stroke="#909fa8" stroke-width="0.8" />
+    <circle cx="219.99999999999997" cy="136.46938321086617" r="3.7" fill="#1e8449" id="u07vs_fix_z5_b_buoyancy-center" />
+    <text x="229.99999999999997" y="140.46938321086617" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="start">B</text>
+    <line x1="220.0" y1="106.93876642173235" x2="220.0" y2="78.93876642173235" stroke="#3a4a56" stroke-width="2" />
+    <polygon points="210.900000,78.938766 229.100000,78.938766 229.100000,64.938766 210.900000,64.938766" fill="#cba46b" stroke="#8b5e00" stroke-width="1.2" />
+    <polygon points="178.000000,147.888766 262.000000,147.888766 262.000000,142.988766 178.000000,142.988766" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1" />
+    <text x="220" y="201" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">B: čvrsti balast</text>
+    <text x="150" y="219" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Provjeriti i GM i slobodni bok f.</text>
+  </g>
+  <g id="u07vs_fix_z6" transform="translate(662 286)">
+    <rect x="0" y="0" width="284" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
+    <rect x="0" y="0" width="284" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="142.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z6 — Dva fluida i intervali</text>
+    <rect x="9" y="106.56" width="266" height="84.44" fill="url(#u07vs_fix_z6_water)" stroke="none" stroke-width="1.2" />
+    <rect x="9" y="94" width="266" height="12.56" fill="url(#u07vs_fix_z6_oil)" stroke="none" stroke-width="1.2" />
+    <line x1="9" y1="106.56" x2="275" y2="106.56" stroke="#3a4a56" stroke-width="1" stroke-dasharray="5,3" id="u07vs_fix_z6_interface" />
+    <line x1="9" y1="94" x2="275" y2="94" stroke="#1565c0" stroke-width="2" id="u07vs_fix_z6_free-surface" />
+    <polygon points="51.008638,134.806091 238.991362,122.273909 235.231707,65.879092 47.248984,78.411274" fill="#e9eef2" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z6_hull" />
+    <polygon points="53.201770,132.299654 236.484926,120.080777 233.038576,68.385528 49.755420,80.604405" fill="white" stroke="#909fa8" stroke-width="0.8" />
+    <circle cx="137.80794183164406" cy="112.23481420756545" r="3.7" fill="#1e8449" id="u07vs_fix_z6_buoyancy-center" />
+    <text x="147.80794183164406" y="116.23481420756545" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="start">B</text>
+    <polygon points="80.003394,76.227646 101.934712,74.765558 100.785929,57.533809 78.854611,58.995897" fill="#fde68a" stroke="#8b5e00" stroke-width="1.2" />
+    <text x="94" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">70 kg</text>
+    <line x1="24" y1="94" x2="34" y2="94" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="24" y1="134.8060907913395" x2="34" y2="134.8060907913395" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="29" y1="94" x2="29" y2="134.8060907913395" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_z6_dimL)" marker-end="url(#u07vs_fix_z6_dim)" />
+    <text x="8" y="118.40304539566975" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">L</tspan>
+    </text>
+    <line x1="249" y1="94" x2="259" y2="94" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="249" y1="122.2739092086605" x2="259" y2="122.2739092086605" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="254" y1="94" x2="254" y2="122.2739092086605" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_z6_dimL)" marker-end="url(#u07vs_fix_z6_dim)" />
+    <text x="257" y="112.13695460433024" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">D</tspan>
+    </text>
+    <line x1="246" y1="94" x2="256" y2="94" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="246" y1="106.56" x2="256" y2="106.56" stroke="#b7600c" stroke-width="0.8" />
+    <line x1="251" y1="94" x2="251" y2="106.56" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_z6_dimL)" marker-end="url(#u07vs_fix_z6_dim)" />
+    <text x="249" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">δ</text>
+    <text x="145" y="177" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">h<tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 0,26 m; h<tspan baseline-shift="sub" font-size="0.7em">D</tspan> = 0,18 m</text>
+    <text x="145" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">δ = 0,08 m; H = 0,36 m; e ulijevo</text>
+  </g>
+  <g transform="translate(30 540)">
+    <rect x="0" y="0" width="900" height="190" fill="#f6faff" stroke="#c8d6e4" stroke-width="1" rx="10" />
+    <text x="450" y="22" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a4a56" text-anchor="middle" font-weight="700">Legenda i provjera modela</text>
+    <line x1="30" y1="48" x2="60" y2="48" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u07vs_fix_force)" />
+    <text x="76" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">G: težina tijela ili cijelog sklopa</text>
+    <line x1="30" y1="76" x2="60" y2="76" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u07vs_fix_green)" />
+    <text x="76" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan>: uzgon kroz centar istisnutog volumena</text>
+    <line x1="30" y1="104" x2="60" y2="104" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u07vs_fix_normal)" />
+    <text x="76" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">d</tspan>: dodatna sila držanja u Z1</text>
+    <line x1="30" y1="132" x2="60" y2="132" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07vs_fix_dimL)" marker-end="url(#u07vs_fix_dim)" />
+    <text x="76" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Smeđe linije: kote; strelice nisu tok vode.</text>
+    <text x="490" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Z3: uteg je već uključen u ukupnu masu.</text>
+    <text x="490" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Z4: h₁/h₂ od spoja vrata s tijelom, ne od dna.</text>
+    <text x="490" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Z5: A čuva masu; B mijenja i gaz i BM.</text>
+    <text x="490" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Z6: svaka kombinacija urona daje svoju istisninu.</text>
+    <text x="450" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Za početni stabilitet provjeriti mali kut, uron dna i slobodni bok; GM nije cijela krivulja GZ.</text>
   </g>
 </svg>

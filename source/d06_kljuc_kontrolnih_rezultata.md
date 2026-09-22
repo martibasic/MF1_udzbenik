@@ -274,35 +274,35 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Kontrolni rezultat ili kriterij.** $F_H=10{,}88\ \mathrm{kN}$; $F_V=+12{,}30\ \mathrm{kN}$ prema gore; $F_R=16{,}42\ \mathrm{kN}$.
 
-### Z3. Kosi poklopac sa zglobom {#key-task-u05-kosi-poklopac-sa-zglobom .unnumbered .unlisted}
+### Z3. Pregrada između dviju razina vode {#key-task-pregrada-izmedu-dviju-razina-vode .unnumbered .unlisted}
 
-[Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-kosi-poklopac-sa-zglobom)
+[Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-pregrada-izmedu-dviju-razina-vode)
 
-**Sažetak.** Kosi pravokutni poklopac širine $b=0{,}80\ \mathrm{m}$ i duljine $L=1{,}00\ \mathrm{m}$ zatvara kut $\theta=40^\circ$ prema vodoravnici. Gornji rub na dubini je $h_1=0{,}90\ \mathrm{m}$ i spojen je zglobom. Na donjem rubu djeluje sila…
+**Sažetak.** Vertikalna nepropusna pregrada širine $b=1{,}20\ \mathrm{m}$ i visine $H=3{,}00\ \mathrm{m}$ dijeli dva otvorena spremnika. Dubina vode iznad zajedničkog dna lijevo je $h_L=2{,}40\ \mathrm{m}$, a desno $h_D=1{,}20\ \mathrm{m}$. Pregrada…
 
-**Smjernica postupka.** Postavite $h(s)=h_1+s\sin\theta$ i uporabite omjer prvog momenta sile i ukupne sile. Zatim zatvorite moment oko zgloba.
+**Smjernica postupka.** Odvojeno nacrtajte dva trokutasta dijagrama manometarskog tlaka. Svaki daje silu na visini $h/3$ iznad dna. Sile i njihove momente oduzmite uz odgovarajuće predznake; krak spojnice jest $H$.
 
-**Kontrolni rezultat ili kriterij.** $F=9{,}566\ \mathrm{kN}$; $s_{CP}=0{,}5439\ \mathrm{m}$; $T=5{,}203\ \mathrm{kN}$.
+**Kontrolni rezultat ili kriterij.** $F_x=+25{,}377\ \mathrm{kN}$; $y_R=0{,}9333\ \mathrm{m}$ iznad dna; $M_A=-23{,}685\ \mathrm{kN\,m}$; $T=7{,}895\ \mathrm{kN}$ ulijevo u $B$. Provjera: pri jednakim razinama neto sila i moment su nula; zamjena lijeve i desne razine obrće njihove predznake.
 
-### Z4. Stijena uz dva sloja fluida {#key-task-u05-dvoslojna-vertikalna-stijena .unnumbered .unlisted}
+### Z4. Širina trokutastog poklopca {#key-task-sirina-trokutastog-poklopca .unnumbered .unlisted}
 
-[Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-dvoslojna-vertikalna-stijena)
+[Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-sirina-trokutastog-poklopca)
 
-**Sažetak.** Vertikalna stijena širine $b=1{,}80\ \mathrm{m}$ zadržava gornji sloj ulja gustoće $820\ \mathrm{kg/m^3}$ i visine $0{,}90\ \mathrm{m}$ te donji sloj vode gustoće $998\ \mathrm{kg/m^3}$ i visine $1{,}50\ \mathrm{m}$. Slobodna površina…
+**Sažetak.** Vertikalni poklopac ima oblik jednakokračnog trokuta s vrhom gore, visinom $H=1{,}50\ \mathrm{m}$ i vodoravnom osnovicom širine $b$. Vrh je na dubini $h_0=0{,}40\ \mathrm{m}$ ispod slobodne površine vode; s druge strane je zrak na…
 
-**Smjernica postupka.** Dijagram tlaka rastavite na uljni trokut, pravokutni doprinos uljnog stupca u vodi i vodeni trokut. Svaki dio ima svoje hvatište.
+**Smjernica postupka.** Za trokut s vrhom gore vrijedi $A=bH/2$, $h_C=h_0+2H/3$ i $I_G=bH^3/36$ oko vodoravne težišne osi. Uporabite $F\le F_{\max}$; zatim provjerite ovisi li $h_{CP}$ o širini.
 
-**Kontrolni rezultat ili kriterij.** $F=45{,}24\ \mathrm{kN}$; $h_{CP}=1{,}623\ \mathrm{m}$.
+**Kontrolni rezultat ili kriterij.** $b_{\max}=1{,}1673\ \mathrm{m}$; $h_{CP}=1{,}4893\ \mathrm{m}$. Za $b=1{,}20\ \mathrm{m}$ sila je $F=12{,}336\ \mathrm{kN}>F_{\max}$, pa ponuđena širina ne zadovoljava. Pri zadanim $H$ i $h_0$, $h_{CP}$ ne ovisi o $b$.
 
-### Z5. Model zglobnog zakrivljenog poklopca {#key-task-u05-zglobni-zakrivljeni-poklopac-model .unnumbered .unlisted}
+### Z5. Radijalni poklopac s težinom {#key-task-radijalni-poklopac-s-tezinom .unnumbered .unlisted}
 
-[Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-zglobni-zakrivljeni-poklopac-model)
+[Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-radijalni-poklopac-s-tezinom)
 
-**Sažetak.** Četvrtcilindrični poklopac ima $R=0{,}75\ \mathrm{m}$, $b=1{,}10\ \mathrm{m}$ i gornju točku na dubini $h_1=0{,}45\ \mathrm{m}$. Voda kvasi konkavnu stranu odozgo, pa lokalne normale imaju vertikalnu komponentu prema dolje. Poklopac je…
+**Sažetak.** Kruti sklop četvrtcilindričnog poklopca i njegovih krakova okreće se oko osi kroz središte kružnice $O$, a ne oko kraja luka. Voda kvasi konveksnu lijevu i donju stranu, a s druge strane je zrak na atmosferskom tlaku. U presjeku s…
 
-**Smjernica postupka.** $F_H$ dolazi iz vertikalne projekcije. Za $F_V$ pomoćni volumen ima pravokutni dio i četvrtinu valjka. U momentu oko zgloba rabite zasebne krakove obiju komponenti.
+**Smjernica postupka.** Nacrtajte jednu lokalnu tlačnu normalu i provjerite njezin pravac prema $O$. Za ravnotežu izdvojite cijeli kruti sklop; tek nakon momentne jednadžbe zatvorite ravnotežu sila. Zasebno provjerite predznak i kapacitet spojnice.
 
-**Kontrolni rezultat ili kriterij.** $F_H=6{,}664\ \mathrm{kN}$; $h_H=0{,}8818\ \mathrm{m}$ ispod slobodne površine, odnosno krak $0{,}4318\ \mathrm{m}$ prema zglobu; $F_V=8{,}392\ \mathrm{kN}$ prema dolje s krakom $0{,}4071\ \mathrm{m}$; $F_R=10{,}72\ \mathrm{kN}$; $T=8{,}392\ \mathrm{kN}$.
+**Kontrolni rezultat ili kriterij.** $F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}=0$. $T=0{,}904\ \mathrm{kN}$ ulijevo, manje od $T_{\max}$; $R_{Ox}=-10{,}185\ \mathrm{kN}$, $R_{Oy}=-11{,}313\ \mathrm{kN}$. Sve tlačne normale prolaze kroz $O$; $T=W|x_G|/R$ ne ovisi o $h_1$ u zadanom modelu.
 
 ### Z6. Nesigurnost sile na mjerni panel {#key-task-u05-nesigurnost-modela-i-mjerenja .unnumbered .unlisted}
 
@@ -336,35 +336,35 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Kontrolni rezultat ili kriterij.** $V_{ist} \approx 0{,}73\ \text{m}^3$; srednji gaz $h \approx 0{,}20\ \text{m}$; dodatna masa do ruba $\approx 650\ \text{kg}$.
 
-### Z3. Nagib platforme pri pomaku tereta {#key-task-u07-plutajuca-servisna-platforma-duljine-i-sirine-ima .unnumbered .unlisted}
+### Z3. Metacentarska visina iz pokusa nagibanja {#key-task-metacentarska-visina-iz-pokusa-nagibanja .unnumbered .unlisted}
 
-[Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-plutajuca-servisna-platforma-duljine-i-sirine-ima)
+[Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-metacentarska-visina-iz-pokusa-nagibanja)
 
-**Sažetak.** Plutajuća servisna platforma duljine $L = 2{,}20\ \text{m}$ i širine $B = 1{,}00\ \text{m}$ ima ukupnu masu s opremom $m = 560\ \text{kg}$ i ukupno težište na visini $KG=0{,}18\ \text{m}$ iznad dna. Kompresor mase $85\ \text{kg}$ pomakne…
+**Sažetak.** Pri nastavnom pokusu na zatvorenom pravokutnom pontonu pomicanjem utega određuje se početna metacentarska visina. Ponton u mirnoj vodi najprije stoji uspravno, a teret je na osi simetrije. Duljina je $L=3{,}00\ \text{m}$, širina…
 
-**Smjernica postupka.** srednji gaz dolazi iz ukupne težine. Zatim upotrijebi $KB=h_m/2$, $BM=B^2/(12h_m)$, $GM=KB+BM-KG$ i $m_k e=mGM\tan\theta$, uz $|h_L-h_D|=B\tan\theta$; nemoj izjednačiti geometrijski $y_B$ s krakom $GZ$.
+**Smjernica postupka.** Iz momentne ravnoteže $m_s e=mGM\tan\varphi$ najprije odredi izmjereni $GM$. Zatim primijeni $KG=KB+BM-GM$, uz $KB=h_m/2$ i $BM=B^2/(12h_m)$. U linearnom modelu rubni gazovi su $h_m\pm(B/2)\tan\varphi$.
 
-**Kontrolni rezultat ili kriterij.** $h_m\approx0{,}255\ \text{m}$; $KB\approx0{,}128\ \text{m}$; $BM\approx0{,}327\ \text{m}$; $GM\approx0{,}274\ \text{m}$; $|h_L-h_D|\approx0{,}133\ \text{m}$, pri čemu je desni rub dublje uronjen.
+**Kontrolni rezultat ili kriterij.** $h_m=0{,}2863\ \text{m}$; $GM=0{,}5724\ \text{m}$; $KG=0{,}1412\ \text{m}$. Gazovi su $h_L=0{,}2496\ \text{m}$ i $h_D=0{,}3230\ \text{m}$: oba su između $0$ i $H$. Kut $3^\circ<5^\circ$ zadovoljava zadani kriterij; pozitivan $GM$ dokazuje samo početni stabilitet.
 
 ### Z4. Gustoća ulja iz očitanja areometra {#key-task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta .unnumbered .unlisted}
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta)
 
-**Sažetak.** Areometar mase $m = 0{,}085\ \text{kg}$ s cilindričnim vratom promjera $d = 8\ \text{mm}$ pluta tako da mu je u vodi uronjena duljina $h_1 = 82\ \text{mm}$, a u nepoznatom ulju $h_2 = 95\ \text{mm}$. Odredi gustoću ulja i protumači zašto…
+**Sažetak.** Areometar mase $m = 0{,}085\ \text{kg}$ s cilindričnim vratom promjera $d = 8\ \text{mm}$ pluta u referentnoj vodi gustoće $\rho_w=1000\ \text{kg/m}^3$ tako da je uronjena duljina cilindričnog vrata $h_1 = 82\ \text{mm}$, a u nepoznatom…
 
 **Smjernica postupka.** u oba fluida vrijedi $\rho gV_{ist} = mg$; razlika je samo u uronjenom volumenu vrata i tijela areometra.
 
-**Kontrolni rezultat ili kriterij.** $\rho_{ulje} \approx 990\ \text{kg/m}^3$; uron je veći jer je ulje rjeđe pa je za istu težinu potreban veći istisnuti volumen.
+**Kontrolni rezultat ili kriterij.** $\rho_{ulje} \approx 992{,}4\ \text{kg/m}^3$; uron je veći jer je ulje rjeđe pa je za istu težinu potreban veći istisnuti volumen.
 
-### Z5. Povratni moment stabilnosti {#key-task-u07-plutajuci-modul-istiskuje-volumen-vode-i-ima .unnumbered .unlisted}
+### Z5. Spuštanje opreme ili dodavanje balasta {#key-task-spustanje-opreme-ili-dodavanje-balasta .unnumbered .unlisted}
 
-[Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-plutajuci-modul-istiskuje-volumen-vode-i-ima)
+[Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-spustanje-opreme-ili-dodavanje-balasta)
 
-**Sažetak.** Plutajući modul istiskuje volumen vode $V_{ist} = 0{,}62\ \text{m}^3$ i ima metacentarsku visinu $GM = 0{,}18\ \text{m}$. Ako se pri malom nagibu zakrene za $\varphi = 7^\circ$, odredi povratni moment stabilnosti i procijeni je li…
+**Sažetak.** Na zatvorenom pravokutnom pontonu razmatraju se dvije odvojene preinake radi povećanja početnog stabiliteta. Sva oprema i balast postavljaju se simetrično, pa se računa uspravno stanje u mirnoj vodi. Ponton ima $L=3{,}00\ \text{m}$…
 
-**Smjernica postupka.** deplasman je $\Delta = \rho gV_{ist}$, a za male nagibe povratni moment je $M_r = \Delta GM\sin\varphi$; znak $GM$ odlučuje o stabilnosti.
+**Smjernica postupka.** Za svaki plan ponovno zatvori ukupnu masu i njezin vertikalni moment. Spuštanje opreme čuva masu; dodani balast mijenja i istisninu, $KB$ i $BM$. Dva uvjeta provjeri zasebno.
 
-**Kontrolni rezultat ili kriterij.** $\Delta \approx 6{,}07\ \text{kN}$; $M_r \approx 133\ \text{N·m}$; $GM > 0$ pa je ravnoteža stabilna.
+**Kontrolni rezultat ili kriterij.** Početno: $(h,f,KG,GM)=(0{,}2227;0{,}3773;0{,}8000;0{,}1534)\ \text{m}$. Plan A: $(0{,}2227;0{,}3773;0{,}6800;0{,}2734)\ \text{m}$, prihvatljiv. Plan B: $(0{,}3563;0{,}2437;0{,}5188;0{,}1857)\ \text{m}$, ne zadovoljava oba uvjeta. Balast snižava $KG$, ali smanjuje i $BM$ te slobodni bok $f=H-h$.
 
 ### Z6. Platforma na granici ulja i vode {#key-task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta .unnumbered .unlisted}
 
@@ -372,9 +372,9 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Sažetak.** Pravokutna servisna platforma duljine $L = 2{,}80\ \text{m}$ i širine $B = 1{,}20\ \text{m}$ pluta na granici ulja gustoće $\rho_o = 820\ \text{kg/m}^3$ debljine $\delta = 0{,}08\ \text{m}$ i vode gustoće $\rho_w = 998\ \text{kg/m}^3$.…
 
-**Smjernica postupka.** najprije uzmi $h_m=(h_L+h_D)/2$ i $m_\Delta=\rho_oV_o+\rho_wV_w$. Za položaje uzgonskih doprinosa vrijedi $z_{B,o}=h_m-\delta/2$ i $z_{B,w}=(h_m-\delta)/2$, pa izračunaj $KB_{eq}$ njihovim uzgonskim težinjenjem. U ovom modelu $BM_{eq}=\rho_w I_T/m_\Delta$, gdje je $I_T=LB^3/12$, a $GM_{eq}=KB_{eq}+BM_{eq}-KG$. Tek zatim primijeni $m_a e=mGM_{eq}\tan\theta$ i $\tan\theta=(h_L-h_D)/B$. Za konzervativni omotač izračunaj svih $2^5=32$ rubnih kombinacija pet nesigurnih skalarnih ulaza.
+**Smjernica postupka.** najprije uzmi $h_m=(h_L+h_D)/2$ i $m_\Delta=\rho_oV_o+\rho_wV_w$. Za položaje uzgonskih doprinosa vrijedi $z_{B,o}=h_m-\delta/2$ i $z_{B,w}=(h_m-\delta)/2$, pa izračunaj $KB_{eq}$ njihovim uzgonskim težinjenjem. U ovom modelu $BM_{eq}=\rho_w I_T/m_\Delta$, gdje je $I_T=LB^3/12$, a $GM_{eq}=KB_{eq}+BM_{eq}-KG$. Tek zatim primijeni $m_a e=m_\Delta GM_{eq}\tan\theta$ i $\tan\theta=(h_L-h_D)/B$. Za konzervativni omotač izračunaj svih $2^5=32$ rubnih kombinacija pet nesigurnih skalarnih ulaza.
 
-**Kontrolni rezultat ili kriterij.** $h_m=0{,}220\ \text{m}$; $V_o\approx0{,}269\ \text{m}^3$; $V_w\approx0{,}470\ \text{m}^3$; $m_\Delta\approx689{,}9\ \text{kg}$. Geometrijski su $y_{B,w}\approx0{,}0571\ \text{m}$ i $y_B\approx0{,}0389\ \text{m}$, ali $y_B$ nije $GZ$. Dobiva se $KB_{eq}\approx0{,}105\ \text{m}$, $BM_{eq}\approx0{,}583\ \text{m}$, $GM_{eq}\approx0{,}488\ \text{m}$ i $e\approx0{,}321\ \text{m}$. Najveća rubna vrijednost nastaje za $h_L=0{,}263\ \text{m}$, $h_D=0{,}177\ \text{m}$, $\rho_w=1001\ \text{kg/m}^3$…
+**Kontrolni rezultat ili kriterij.** $h_m=0{,}220\ \text{m}$; $(V_o,V_w)=(0{,}269;0{,}470)\ \text{m}^3$; $m_\Delta=689{,}9\ \text{kg}$; $y_B=0{,}0389\ \text{m}$. $(KB_{eq},BM_{eq},GM_{eq})=(0{,}105;0{,}583;0{,}488)\ \text{m}$. $e=0{,}321\ \text{m}$ ulijevo; $e_{max}=0{,}3546\ \text{m}>0{,}34\ \text{m}$: raspored se ne prihvaća. Sve rubne kombinacije imaju $\delta<h_L,h_D<H$ i $|\theta|<5^\circ$.
 
 ## Kinematika, kontrolni volumen i kontinuitet
 
@@ -388,21 +388,21 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Kontrolni rezultat ili kriterij.** $Q \approx 37{,}7\ \text{L/s}$; $v_2 \approx 1{,}88\ \text{m/s}$; $\dot m \approx 37{,}6\ \text{kg/s}$.
 
-### Z2. Brzina na izlazu sapnice {#key-task-u08-voda-ulazi-u-sapnicu-promjera-srednjom-brzinom .unnumbered .unlisted}
+### Z2. Protok kroz kosu kontrolnu plohu {#key-task-protok-kroz-kosu-kontrolnu-plohu .unnumbered .unlisted}
 
-[Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-voda-ulazi-u-sapnicu-promjera-srednjom-brzinom)
+[Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-protok-kroz-kosu-kontrolnu-plohu)
 
-**Sažetak.** Voda ulazi u sapnicu promjera $D_1 = 120\ \text{mm}$ srednjom brzinom $v_1 = 3{,}1\ \text{m/s}$ i izlazi kroz otvor promjera $D_2 = 50\ \text{mm}$. Odredi izlaznu brzinu i maseni protok.
+**Sažetak.** U širokom toku vode odabrana je nepomična zamišljena ravna ploha površine $A=0{,}0040\ \text{m}^2$. Brzina vode jednolika je na toj plohi i iznosi $v=3{,}0\ \text{m/s}$. Kut između brzine i odabrane jedinične normale $\vec n$ iznosi…
 
-**Smjernica postupka.** za nestlačivu vodu vrijedi isti $Q$ kroz oba presjeka; iz $Q = A_1 v_1$ vrati $v_2$ i $\dot m$.
+**Smjernica postupka.** Protok određuje normalna komponenta brzine: $Q=Av\cos\alpha$. Kut je zadan prema normali, a ne prema samoj plohi.
 
-**Kontrolni rezultat ili kriterij.** $Q \approx 35{,}1\ \text{L/s}$; $v_2 \approx 17{,}9\ \text{m/s}$; $\dot m \approx 35{,}0\ \text{kg/s}$.
+**Kontrolni rezultat ili kriterij.** $v_n=1{,}50\ \text{m/s}$; $Q=+6{,}00\ \text{L/s}$; $\dot m=+5{,}988\ \text{kg/s}$. Za suprotnu normalu protoci su $-6{,}00\ \text{L/s}$ i $-5{,}988\ \text{kg/s}$; fizički tok ostaje isti.
 
 ### Z3. Bilanca komore za miješanje {#key-task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene .unnumbered .unlisted}
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene)
 
-**Sažetak.** U komoru za miješanje ulaze dvije vodene struje: prva s protokom $Q_1 = 0{,}012\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 90\ \text{mm}$, a druga s protokom $Q_2 = 0{,}008\ \text{m}^3/\text{s}$ kroz cijev promjera $D_2 = 70\…
+**Sažetak.** U stacionarnu komoru ulaze dvije vodene struje protoka $Q_1=12\ \text{L/s}$ i $Q_2=8\ \text{L/s}$. Jedini izlaz ima promjer $D_3=120\ \text{mm}$. Odredi izlaznu srednju brzinu i napiši masenu bilancu; nema akumulacije ni drugih priključaka.
 
 **Smjernica postupka.** za stacionarnu mješalicu vrijedi $\dot m_1 + \dot m_2 = \dot m_3$; za vodu je dovoljno računati preko volumenskih protoka.
 
@@ -412,31 +412,31 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz)
 
-**Sažetak.** U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 140\ \text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\ \text{mm}$ i $D_3 = 70\ \text{mm}$, pri čemu je brzina u drugoj grani…
+**Sažetak.** U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 140\ \text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\ \text{mm}$ i $D_3 = 70\ \text{mm}$, pri čemu je zadano da je brzina u…
 
 **Smjernica postupka.** postavi $Q = Q_2 + Q_3$ i vezu brzina $v_2 = 2v_3$; preko $Q = Av$ zatvori sustav za dvije nepoznanice.
 
 **Kontrolni rezultat ili kriterij.** $v_3 \approx 1{,}81\ \text{m/s}$, $v_2 \approx 3{,}62\ \text{m/s}$; $Q_2 \approx 23{,}0\ \text{L/s}$, $Q_3 \approx 7{,}0\ \text{L/s}$.
 
-### Z5. Porast razine u spremniku {#key-task-u08-cilindricni-spremnik-promjera-puni-se-dotokom-dok .unnumbered .unlisted}
+### Z5. Klip s protočnim otvorom {#key-task-klip-s-protocnim-otvorom .unnumbered .unlisted}
 
-[Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-cilindricni-spremnik-promjera-puni-se-dotokom-dok)
+[Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-klip-s-protocnim-otvorom)
 
-**Sažetak.** Cilindrični spremnik promjera $D = 1{,}60\ \text{m}$ puni se dotokom $Q_{in} = 0{,}014\ \text{m}^3/\text{s}$, dok kroz odvod stalno izlazi $Q_{out} = 0{,}009\ \text{m}^3/\text{s}$. Odredi brzinu porasta razine u spremniku i vrijeme…
+**Sažetak.** Vodom ispunjena vodoravna dozirna komora ima nepomični cilindar i klip koji se pomiče udesno. Voda ulazi kroz nepomični lijevi priključak, a izlazi kroz središnji otvor u klipu. Klip brtvi uz cilindar; nema drugih tokova ni zračnog džepa.…
 
-**Smjernica postupka.** akumulacija je $Q_{in} - Q_{out}$; zatim vrijedi $A\,dh/dt = Q_{in} - Q_{out}$ i iz toga slijedi vrijeme za zadani porast razine.
+**Smjernica postupka.** Promjenjivi volumen komore je $V=A_p\ell(t)$, gdje je $A_p=\pi D^2/4$. Kroz izlaznu plohu vezanu uz klip prolazi $Q_{out,rel}=A_o w$, uz $A_o=\pi d^2/4$. Zatvori akumulaciju mase u komori; zatim poveži apsolutnu i relativnu brzinu. Za zaustavljeni klip akumulacija mora nestati.
 
-**Kontrolni rezultat ili kriterij.** $dh/dt \approx 2{,}49\ \text{mm/s}$; $t \approx 322\ \text{s} \approx 5{,}4\ \text{min}$.
+**Kontrolni rezultat ili kriterij.** $Q_{out,rel}=0{,}4712\ \text{L/s}$; $u=0{,}06732\ \text{m/s}$ udesno; $v_{out}=1{,}5673\ \text{m/s}$. Vrijeme hoda $t=1{,}7824\ \text{s}$; porast mase $\Delta m=0{,}9406\ \text{kg}$. Za $u=0$ nužno je $w=3{,}1831\ \text{m/s}$; isti dotok i prvotna vrijednost $w$ ne mogu se zadržati bez promjene modela.
 
 ### Z6. Bilanca spremnika s dvama fluidima {#key-task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce .unnumbered .unlisted}
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce)
 
-**Sažetak.** Miješajući spremnik tlocrtne površine $A_T = 4{,}8\ \text{m}^2$ prima vodu gustoće $\rho_A=1000\ \text{kg/m}^3$ protokom $Q_A = 0{,}011\ \text{m}^3/\text{s}$ i slanu otopinu gustoće $\rho_B = 1080\ \text{kg/m}^3$ protokom $Q_B = 0{,}004\…
+**Sažetak.** U spremniku za pripremu slane otopine dva dotoka ulaze u homogenu mješavinu. Izlazni je protok manji od ukupnog dotoka pa razina raste. Treba provjeriti koliko se tekućine zadrži u spremniku i dopušta li raspoloživi slobodni bok šest…
 
 **Smjernica postupka.** najprije izračunaj $Q_3 = A_3 v_3$, zatim gustoću mješavine iz masene bilance ulaza, a član akumulacije zatvori preko $Q_A + Q_B - Q_3 = A_T\,dh/dt$. Za najveći porast razine uzmi oba ulazna protoka na gornjoj, a izlaznu brzinu na donjoj granici. Najdulje trajanje slijedi iz $t_{max}=h_{slob}/(dh/dt)_{max}$.
 
-**Kontrolni rezultat ili kriterij.** $Q_3 \approx 8{,}0\ \text{L/s}$; $\rho_{mix} \approx 1020\ \text{kg/m}^3$; $dh/dt \approx 1{,}45\ \text{mm/s}$; akumulirana masa za 6 min $\approx 2{,}55 \cdot 10^3\ \text{kg}$. U nepovoljnoj kombinaciji granica $(dh/dt)_{max}\approx1{,}60\ \text{mm/s}$, pa bi razina za $6\ \text{min}$ porasla približno $0{,}577\ \text{m}$ i premašila slobodni bok za oko $17\ \text{mm}$. Zadani geometrijski kriterij nije zadovoljen; idealizirano vrijeme do ruba iznosi približno $349\ \text{s}$, odnosno $5{,}8\…
+**Kontrolni rezultat ili kriterij.** $Q_3=8{,}042\ \text{L/s}$; $\rho_{mix}=1021{,}3\ \text{kg/m}^3$; $dh/dt=1{,}450\ \text{mm/s}$; $\Delta m\approx2558\ \text{kg}$ za 6 min nominalno. Najveći rast prije ruba je $1{,}604\ \text{mm/s}$, a vrijeme do ruba $349{,}0\ \text{s}$. Šest minuta ne zadovoljava kriterij. Ekstrapoliranih $0{,}5774\ \text{m}>0{,}560\ \text{m}$ pokazuje manjak boka $17{,}4\ \text{mm}$; nakon ruba voda se prelijeva.
 
 ## Energijska jednadžba i Bernoulli
 

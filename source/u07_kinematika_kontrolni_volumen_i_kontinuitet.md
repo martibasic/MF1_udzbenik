@@ -743,6 +743,8 @@ Bez jasno definiranog kontrolnog volumena nije moguće odrediti što su ulazi, �
 
 ## Zadaci za vježbu
 
+U cijevima i nepomičnim komorama Z1, Z3 i Z4 tok je stacionaran, voda nestlačiva i gustoće $\rho=998\ \text{kg/m}^3$, a brzine su srednje po presjeku.
+
 ::::: {.mf1-vjezbe-list}
 
 ### Z1. Protok kroz proširenje cijevi {#task-u08-voda-struji-kroz-cijev-koja-se-siri .unnumbered .unlisted}
@@ -765,21 +767,25 @@ $Q \approx 37{,}7\ \text{L/s}$; $v_2 \approx 1{,}88\ \text{m/s}$; $\dot m \appro
 
 [Razina: T1]{.mf1-task-level}
 
-### Z2. Brzina na izlazu sapnice {#task-u08-voda-ulazi-u-sapnicu-promjera-srednjom-brzinom .unnumbered .unlisted}
+<span id="task-u08-voda-ulazi-u-sapnicu-promjera-srednjom-brzinom"></span>
 
-Voda ulazi u sapnicu promjera $D_1 = 120\ \text{mm}$ srednjom brzinom $v_1 = 3{,}1\ \text{m/s}$ i izlazi kroz otvor promjera $D_2 = 50\ \text{mm}$. Odredi izlaznu brzinu i maseni protok.
+### Z2. Protok kroz kosu kontrolnu plohu {#task-protok-kroz-kosu-kontrolnu-plohu .unnumbered .unlisted}
+
+U širokom toku vode odabrana je nepomična zamišljena ravna ploha površine $A=0{,}0040\ \text{m}^2$. Brzina vode jednolika je na toj plohi i iznosi $v=3{,}0\ \text{m/s}$. Kut između brzine i odabrane jedinične normale $\vec n$ iznosi $\alpha=60^\circ$, a gustoća vode je $\rho=998\ \text{kg/m}^3$. Ploha nije kruta stijenka i ne ometa strujanje.
+
+Odredi predznačeni volumenski i maseni protok kroz plohu. Što se mijenja ako istu plohu orijentiramo suprotnom normalom?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-za nestlačivu vodu vrijedi isti $Q$ kroz oba presjeka; iz $Q = A_1 v_1$ vrati $v_2$ i $\dot m$.
+Protok određuje normalna komponenta brzine: $Q=Av\cos\alpha$. Kut je zadan prema normali, a ne prema samoj plohi.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$Q \approx 35{,}1\ \text{L/s}$; $v_2 \approx 17{,}9\ \text{m/s}$; $\dot m \approx 35{,}0\ \text{kg/s}$.
+$v_n=1{,}50\ \text{m/s}$; $Q=+6{,}00\ \text{L/s}$; $\dot m=+5{,}988\ \text{kg/s}$. Za suprotnu normalu protoci su $-6{,}00\ \text{L/s}$ i $-5{,}988\ \text{kg/s}$; fizički tok ostaje isti.
 :::
 ::::
 
@@ -787,7 +793,7 @@ $Q \approx 35{,}1\ \text{L/s}$; $v_2 \approx 17{,}9\ \text{m/s}$; $\dot m \appro
 
 ### Z3. Bilanca komore za miješanje {#task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene .unnumbered .unlisted}
 
-U komoru za miješanje ulaze dvije vodene struje: prva s protokom $Q_1 = 0{,}012\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 90\ \text{mm}$, a druga s protokom $Q_2 = 0{,}008\ \text{m}^3/\text{s}$ kroz cijev promjera $D_2 = 70\ \text{mm}$. Iz komore izlazi jedna struja kroz cijev promjera $D_3 = 120\ \text{mm}$. Odredi izlaznu brzinu i napiši masenu bilancu sustava.
+U stacionarnu komoru ulaze dvije vodene struje protoka $Q_1=12\ \text{L/s}$ i $Q_2=8\ \text{L/s}$. Jedini izlaz ima promjer $D_3=120\ \text{mm}$. Odredi izlaznu srednju brzinu i napiši masenu bilancu; nema akumulacije ni drugih priključaka.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -807,7 +813,7 @@ $Q_3 = 20\ \text{L/s}$; $v_3 \approx 1{,}77\ \text{m/s}$.
 
 ### Z4. Raspodjela protoka u dvije grane {#task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz .unnumbered .unlisted}
 
-U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 140\ \text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\ \text{mm}$ i $D_3 = 70\ \text{mm}$, pri čemu je brzina u drugoj grani dvostruko veća od brzine u trećoj. Odredi protoke u granama.
+U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 140\ \text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\ \text{mm}$ i $D_3 = 70\ \text{mm}$, pri čemu je zadano da je brzina u drugoj grani dvostruko veća od brzine u trećoj. Taj omjer određuje radni režim, a ne slijedi samo iz promjera. Odredi protoke u granama.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -825,21 +831,27 @@ $v_3 \approx 1{,}81\ \text{m/s}$, $v_2 \approx 3{,}62\ \text{m/s}$; $Q_2 \approx
 
 [Razina: T2]{.mf1-task-level}
 
-### Z5. Porast razine u spremniku {#task-u08-cilindricni-spremnik-promjera-puni-se-dotokom-dok .unnumbered .unlisted}
+<span id="task-u08-cilindricni-spremnik-promjera-puni-se-dotokom-dok"></span>
 
-Cilindrični spremnik promjera $D = 1{,}60\ \text{m}$ puni se dotokom $Q_{in} = 0{,}014\ \text{m}^3/\text{s}$, dok kroz odvod stalno izlazi $Q_{out} = 0{,}009\ \text{m}^3/\text{s}$. Odredi brzinu porasta razine u spremniku i vrijeme potrebno da se razina poveća za $0{,}80\ \text{m}$.
+### Z5. Klip s protočnim otvorom {#task-klip-s-protocnim-otvorom .unnumbered .unlisted}
+
+Vodom ispunjena vodoravna dozirna komora ima nepomični cilindar i klip koji se pomiče udesno. Voda ulazi kroz nepomični lijevi priključak, a izlazi kroz središnji otvor u klipu. Klip brtvi uz cilindar; nema drugih tokova ni zračnog džepa.
+
+Unutarnji promjer cilindra je $D=100\ \text{mm}$, promjer otvora $d=20\ \text{mm}$, stalni dotok $Q_{in}=1{,}00\ \text{L/s}$ i gustoća vode $\rho=998\ \text{kg/m}^3$. Srednja izlazna brzina vode u odnosu na klip održava se na $w=1{,}50\ \text{m/s}$ udesno. Početna duljina vodene komore je $\ell_0=0{,}20\ \text{m}$, a raspoloživi hod klipa $s=0{,}12\ \text{m}$. Model je jednodimenzijski, voda nestlačiva, a debljina klipa zanemariva za volumen komore.
+
+Odaberi kontrolni volumen omeđen nepomičnim cilindrom i gibajućim klipom. Iz bilance mase odredi brzinu klipa $u$, apsolutnu izlaznu brzinu, vrijeme do kraja hoda i porast mase u komori. Objasni zašto se na izlazu koristi brzina relativna prema klipu. Ako klip zaustavimo uz isti dotok, kolika bi morala postati relativna izlazna brzina da se nestlačivi model i dalje može održati? Ne računaju se sile potrebne za gibanje ili zaustavljanje.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-akumulacija je $Q_{in} - Q_{out}$; zatim vrijedi $A\,dh/dt = Q_{in} - Q_{out}$ i iz toga slijedi vrijeme za zadani porast razine.
+Promjenjivi volumen komore je $V=A_p\ell(t)$, gdje je $A_p=\pi D^2/4$. Kroz izlaznu plohu vezanu uz klip prolazi $Q_{out,rel}=A_o w$, uz $A_o=\pi d^2/4$. Zatvori akumulaciju mase u komori; zatim poveži apsolutnu i relativnu brzinu. Za zaustavljeni klip akumulacija mora nestati.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$dh/dt \approx 2{,}49\ \text{mm/s}$; $t \approx 322\ \text{s} \approx 5{,}4\ \text{min}$.
+$Q_{out,rel}=0{,}4712\ \text{L/s}$; $u=0{,}06732\ \text{m/s}$ udesno; $v_{out}=1{,}5673\ \text{m/s}$. Vrijeme hoda $t=1{,}7824\ \text{s}$; porast mase $\Delta m=0{,}9406\ \text{kg}$. Za $u=0$ nužno je $w=3{,}1831\ \text{m/s}$; isti dotok i prvotna vrijednost $w$ ne mogu se zadržati bez promjene modela.
 :::
 ::::
 
@@ -847,7 +859,9 @@ $dh/dt \approx 2{,}49\ \text{mm/s}$; $t \approx 322\ \text{s} \approx 5{,}4\ \te
 
 ### Z6. Bilanca spremnika s dvama fluidima {#task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce .unnumbered .unlisted}
 
-Miješajući spremnik tlocrtne površine $A_T = 4{,}8\ \text{m}^2$ prima vodu gustoće $\rho_A=1000\ \text{kg/m}^3$ protokom $Q_A = 0{,}011\ \text{m}^3/\text{s}$ i slanu otopinu gustoće $\rho_B = 1080\ \text{kg/m}^3$ protokom $Q_B = 0{,}004\ \text{m}^3/\text{s}$. Homogena mješavina izlazi kroz cijev promjera $D = 80\ \text{mm}$ srednjom brzinom $v_3 = 1{,}6\ \text{m/s}$. Pretpostavi savršeno miješanje i da je spremnik na početku već napunjen mješavinom istog sastava kao spojeni dotoci; gustoća sadržaja i izlaza zato tijekom promatranih $6\ \text{min}$ ostaje jednaka omjeru ukupnoga ulaznog masenog i volumnog protoka. Odredi izlazni volumenski protok, gustoću mješavine, brzinu porasta razine i masu akumuliranu u spremniku tijekom $6\ \text{min}$. Mjerila ulaznih protoka imaju granice $\pm2\ \%$ za $Q_A$ i $\pm3\ \%$ za $Q_B$, a izlazna brzina $v_3$ granicu $\pm0{,}08\ \text{m/s}$. Početni slobodni bok iznosi $0{,}560\ \text{m}$. Konzervativno procijeni najveći porast razine, provjeri ostaje li šestominutni rad unutar geometrijskog kriterija slobodnog boka i odredi najdulje trajanje prije idealiziranog prelijevanja bez regulatora razine.
+U spremniku za pripremu slane otopine dva dotoka ulaze u homogenu mješavinu. Izlazni je protok manji od ukupnog dotoka pa razina raste. Treba provjeriti koliko se tekućine zadrži u spremniku i dopušta li raspoloživi slobodni bok šest minuta rada uz zadane granice mjerenja.
+
+Miješajući spremnik tlocrtne površine $A_T = 4{,}8\ \text{m}^2$ prima vodu gustoće $\rho_A=1000\ \text{kg/m}^3$ protokom $Q_A = 0{,}011\ \text{m}^3/\text{s}$ i slanu otopinu gustoće $\rho_B = 1080\ \text{kg/m}^3$ protokom $Q_B = 0{,}004\ \text{m}^3/\text{s}$. Homogena mješavina izlazi kroz cijev promjera $D = 80\ \text{mm}$ srednjom brzinom $v_3 = 1{,}6\ \text{m/s}$. Pretpostavi aditivnost volumena, savršeno miješanje i da je spremnik na početku već napunjen mješavinom istog sastava kao spojeni dotoci; gustoća sadržaja i izlaza zato tijekom promatranih $6\ \text{min}$ ostaje jednaka omjeru ukupnoga ulaznog masenog i volumnog protoka. Odredi izlazni volumenski protok, gustoću mješavine, brzinu porasta razine i masu akumuliranu u spremniku tijekom $6\ \text{min}$. Za intervalnu procjenu protoci su stalni unutar svake promatrane kombinacije, a navedene granice zajamčeni su intervali, ne standardne nesigurnosti. Mjerila ulaznih protoka imaju granice $\pm2\ \%$ za $Q_A$ i $\pm3\ \%$ za $Q_B$, a izlazna brzina $v_3$ granicu $\pm0{,}08\ \text{m/s}$. Početni slobodni bok iznosi $0{,}560\ \text{m}$. Konzervativno procijeni najveći porast razine, provjeri ostaje li šestominutni rad unutar geometrijskog kriterija slobodnog boka i odredi najdulje trajanje prije idealiziranog prelijevanja bez regulatora razine. Nakon dosezanja ruba prelijevanje je dodatni izlaz: linearni porast razine više ne vrijedi.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -859,7 +873,7 @@ najprije izračunaj $Q_3 = A_3 v_3$, zatim gustoću mješavine iz masene bilance
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$Q_3 \approx 8{,}0\ \text{L/s}$; $\rho_{mix} \approx 1020\ \text{kg/m}^3$; $dh/dt \approx 1{,}45\ \text{mm/s}$; akumulirana masa za 6 min $\approx 2{,}55 \cdot 10^3\ \text{kg}$. U nepovoljnoj kombinaciji granica $(dh/dt)_{max}\approx1{,}60\ \text{mm/s}$, pa bi razina za $6\ \text{min}$ porasla približno $0{,}577\ \text{m}$ i premašila slobodni bok za oko $17\ \text{mm}$. Zadani geometrijski kriterij nije zadovoljen; idealizirano vrijeme do ruba iznosi približno $349\ \text{s}$, odnosno $5{,}8\ \text{min}$, i nije opća sigurnosna granica rada.
+$Q_3=8{,}042\ \text{L/s}$; $\rho_{mix}=1021{,}3\ \text{kg/m}^3$; $dh/dt=1{,}450\ \text{mm/s}$; $\Delta m\approx2558\ \text{kg}$ za 6 min nominalno. Najveći rast prije ruba je $1{,}604\ \text{mm/s}$, a vrijeme do ruba $349{,}0\ \text{s}$. Šest minuta ne zadovoljava kriterij. Ekstrapoliranih $0{,}5774\ \text{m}>0{,}560\ \text{m}$ pokazuje manjak boka $17{,}4\ \text{mm}$; nakon ruba voda se prelijeva.
 :::
 ::::
 

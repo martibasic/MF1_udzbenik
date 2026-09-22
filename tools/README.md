@@ -24,6 +24,9 @@ pinani `PyMuPDF` iz korijenskog `requirements.txt`.
 | `audit_pdf.py` | Nakon PDF rendera otvara stvarni `_book/mehanika-fluida-1.pdf`: provjerava A4 MediaBox svih stranica, ugovoreni raspon opsega, naslov i autora, tekstualnu ekstrakciju kazala i U01–U15 te u memoriji rasterizira početne stranice U01, U08 i U15 i odbija prazne izlaze. Ne ostavlja rastere u repozitoriju. |
 | `verify_physics.py` | Neovisni golden testovi temeljnih bilanci i kritičnih pretvorbi: Pascal, hidrostatika, kontinuitet, gubici, paralelne grane, smjer sile na simetričnom koljenu, Wh→s, dvofluidni uzgon i Froudeovo skaliranje. |
 | `execute_notebooks.py` | Validira i izvršava svih 17 obveznih notebooka u čistim kernelima bez prepisivanja izvora. `--validate-only` radi samo strukturnu i sintaksnu provjeru. |
+| `check_u05_sketch_geometry.py` | Dodatna ručna provjera nakon izmjena skica U05: čita stvarne SVG putanje, provjerava četvrtkružne lukove, lokalne normale i krakove komponenti sile. Pokreće se zasebno; vizualni pregled ostaje potreban. |
+| `check_u06_sketch_geometry.py` | Zasebno provjerava krute pravokutne trupove, vodoravne površine, centre uzgona neovisnom integracijom stvarnih SVG poligona, puni tank i razmak kućišta od dna. Dopunjuje vizualni pregled U06. |
+| `check_u07_sketch_geometry.py` | Zasebno provjerava normalu kose plohe, tangente strujnice, stvarni otvor klipa, otvorene priključke i omjere kota/promjera u SVG skicama U07. Dopunjuje vizualni pregled. |
 | `validate_cfd_vv.py` | Read-only validator za `data/cfd/`: provjerava tri mreže, maseni debalans, reziduale i monitore, tro-mrežni GCI, analitičke/reference vrijednosti, provenancu te da eksperimentalni placeholder ne sadrži izmišljena mjerenja. |
 
 ### Kako čitati rezultat

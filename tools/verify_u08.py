@@ -21,6 +21,12 @@ def _check(out, rid, value, target, unit="", rel=TOL):
     })
 
 
+def _invariant(out, rid, condition, details):
+    out.append({"id": rid, "status": "OK" if condition else "FAIL",
+                "verification": "invariant",
+                "details": "" if condition else details})
+
+
 def primjer_1_difuzor(D_1=0.120, D_2=0.180, v_2=16.0, rho=998.0):
     A_1 = math.pi * D_1**2 / 4
     A_2 = math.pi * D_2**2 / 4
@@ -119,13 +125,10 @@ def zadatak_1(D_1=0.10, D_2=0.16, v_1=4.8, rho=998.0):
     return {"v_2": v_2, "Q": Q, "m_dot": m_dot}
 
 
-def zadatak_2(D_1=0.120, v_1=3.1, D_2=0.050, rho=998.0):
-    A_1 = math.pi * D_1**2 / 4
-    A_2 = math.pi * D_2**2 / 4
-    Q = A_1 * v_1
-    v_2 = Q / A_2
-    m_dot = rho * Q
-    return {"v_2": v_2, "m_dot": m_dot}
+def zadatak_2(A=0.004, v=3.0, alpha_deg=60.0, rho=998.0):
+    v_n = v * math.cos(math.radians(alpha_deg))
+    Q = A * v_n
+    return {"v_n": v_n, "Q": Q, "m_dot": rho*Q}
 
 
 def zadatak_3(Q_1=0.012, Q_2=0.008, D_3=0.120):
@@ -146,11 +149,15 @@ def zadatak_4(Q=0.030, D_2=0.090, D_3=0.070):
     return {"Q_2": Q_2, "Q_3": Q_3, "v_2": v_2, "v_3": v_3}
 
 
-def zadatak_5(D=1.60, Q_in=0.014, Q_out=0.009, dh_target=0.80):
-    A = math.pi * D**2 / 4
-    dhdt = (Q_in - Q_out) / A
-    t = dh_target / dhdt
-    return {"dhdt": dhdt, "t": t}
+def zadatak_5(D=0.100, d=0.020, Q_in=0.001, w=1.50,
+              stroke=0.12, rho=998.0):
+    A_p = math.pi*D**2/4
+    A_o = math.pi*d**2/4
+    Q_out_rel = A_o*w
+    u = (Q_in-Q_out_rel)/A_p
+    return {"A_p": A_p, "A_o": A_o, "Q_out_rel": Q_out_rel,
+            "u": u, "v_out": w+u, "t": stroke/u if u > 0 else math.inf,
+            "dm": rho*A_p*stroke, "w_stopped": Q_in/A_o}
 
 
 def zadatak_6(A_T=4.8, Q_A=0.011, Q_B=0.004, rho_B=1080.0, D=0.080,
@@ -231,8 +238,10 @@ def verify():
     _check(out, "U08.Z1.m_dot", r["m_dot"], 37.62, "kg/s", rel=0.02)
 
     r = zadatak_2()
-    _check(out, "U08.Z2.v_2", r["v_2"], 17.86, "m/s", rel=0.02)
-    _check(out, "U08.Z2.m_dot", r["m_dot"], 35.00, "kg/s", rel=0.02)
+    _check(out, "U08.Z2.v_n", r["v_n"], 1.50, "m/s", rel=0.001)
+    _check(out, "U08.Z2.Q_Ls", r["Q"]*1000, 6.00, "L/s", rel=0.001)
+    _check(out, "U08.Z2.m_dot", r["m_dot"], 5.988, "kg/s", rel=0.001)
+    _check(out, "U08.Z2.reverse_Q_Ls", zadatak_2(alpha_deg=120)["Q"]*1000, -6.00, "L/s", rel=0.001)
 
     r = zadatak_3()
     _check(out, "U08.Z3.Q_3_Ls", r["Q_3"] * 1000, 20.0, "L/s")
@@ -245,17 +254,57 @@ def verify():
     _check(out, "U08.Z4.v_3", r["v_3"], 1.81, "m/s", rel=0.02)
 
     r = zadatak_5()
-    _check(out, "U08.Z5.dhdt_mm_s", r["dhdt"] * 1000, 2.487, "mm/s", rel=0.02)
-    _check(out, "U08.Z5.t", r["t"], 322.0, "s", rel=0.02)
+    _check(out, "U08.Z5.Q_out_rel_Ls", r["Q_out_rel"]*1000, 0.4712, "L/s", rel=0.001)
+    _check(out, "U08.Z5.u", r["u"], 0.06732, "m/s", rel=0.001)
+    _check(out, "U08.Z5.v_out", r["v_out"], 1.5673, "m/s", rel=0.001)
+    _check(out, "U08.Z5.t", r["t"], 1.7824, "s", rel=0.001)
+    _check(out, "U08.Z5.dm", r["dm"], 0.9406, "kg", rel=0.001)
+    _check(out, "U08.Z5.w_stopped", r["w_stopped"], 3.1831, "m/s", rel=0.001)
 
     r = zadatak_6()
     _check(out, "U08.Z6.Q_3_Ls", r["Q_3"] * 1000, 8.04, "L/s", rel=0.02)
-    _check(out, "U08.Z6.rho_mix", r["rho_mix"], 1020.0, "kg/m^3", rel=0.02)
+    _check(out, "U08.Z6.rho_mix", r["rho_mix"], 1021.3, "kg/m^3", rel=0.001)
     _check(out, "U08.Z6.dhdt_mm_s", r["dhdt"] * 1000, 1.45, "mm/s", rel=0.02)
-    _check(out, "U08.Z6.dm", r["dm"], 2.55e3, "kg", rel=0.02)
+    _check(out, "U08.Z6.dm", r["dm"], 2558.0, "kg", rel=0.001)
     _check(out, "U08.Z6.dhdt_max_mm_s", r["dhdt_max"] * 1000, 1.604, "mm/s", rel=0.02)
     _check(out, "U08.Z6.rise_max", r["rise_max"], 0.577, "m", rel=0.02)
     _check(out, "U08.Z6.safe_time", r["safe_time"], 349.0, "s", rel=0.02)
+
+    z1,z2,z3,z4,z5,z6 = (zadatak_1(),zadatak_2(),zadatak_3(),
+                         zadatak_4(),zadatak_5(),zadatak_6())
+    _invariant(out, "U08.INV.z1_flux", abs(math.pi*.16**2/4*z1["v_2"]-z1["Q"]) < 1e-14
+               and z1["v_2"] < 4.8, "Prosirenje ne zatvara protok ili ubrzava vodu.")
+    _invariant(out, "U08.INV.z2_orientation", abs(zadatak_2(alpha_deg=90)["Q"]) < 1e-14
+               and abs(zadatak_2(alpha_deg=0)["Q"]-.012) < 1e-14
+               and abs(zadatak_2(alpha_deg=120)["Q"]+z2["Q"]) < 1e-14,
+               "Predznak ili normalna komponenta protoka nisu konzistentni.")
+    _invariant(out, "U08.INV.z3_mass", abs(998*.020-998*math.pi*.12**2/4*z3["v_3"]) < 1e-12,
+               "Mjesalica ne zatvara masenu bilancu.")
+    _invariant(out, "U08.INV.z4_partition", abs(z4["Q_2"]+z4["Q_3"]-.030) < 1e-14
+               and abs(z4["v_2"]-2*z4["v_3"]) < 1e-14,
+               "Razdjelnik ne zadovoljava i bilancu i zadani omjer.")
+    _invariant(out, "U08.INV.z5_moving_mass", abs(998*.001-998*z5["A_o"]*(z5["v_out"]-z5["u"])
+               -z5["dm"]/z5["t"]) < 1e-12,
+               "RTT na pomicanom izlazu ne zatvara akumulaciju.")
+    _invariant(out, "U08.INV.z5_swept_volume", abs(z5["u"]*z5["t"]-.12) < 1e-14
+               and abs(z5["dm"]-998*(.001-z5["Q_out_rel"])*z5["t"]) < 1e-12,
+               "Hod i integrirana masena bilanca daju razlicitu akumulaciju.")
+    _invariant(out, "U08.INV.z5_impermeable_limit", abs(zadatak_5(w=0)["u"]-4*.001/(math.pi*.1**2)) < 1e-14,
+               "Zatvoreni izlaz ne daje pomak klipa iz cijelog dotoka.")
+    _invariant(out, "U08.INV.z5_stopped_limit", abs(zadatak_5(w=z5["w_stopped"])["u"]) < 1e-14
+               and z5["w_stopped"] > 1.5,
+               "Zaustavljeni klip uz zadani dotok ne zatvara izlaz.")
+    _invariant(out, "U08.INV.z6_mass", 1000 < z6["rho_mix"] < 1080
+               and abs(z6["dm"]/360-(1000*.011+1080*.004-z6["rho_mix"]*z6["Q_3"])) < 1e-12,
+               "Mijesanje i akumulacija nisu maseno konzistentni.")
+    from itertools import product
+    rises = [(qa+qb-math.pi*.08**2/4*v)*360/4.8 for qa,qb,v in product(
+             (.011*.98,.011*1.02),(.004*.97,.004*1.03),(1.52,1.68))]
+    _invariant(out, "U08.INV.z6_interval_and_rim", abs(max(rises)-z6["rise_max"]) < 1e-14
+               and z6["dhdt"]*360 < .560 < z6["rise_max"]
+               and abs(z6["safe_time"]*z6["dhdt_max"]-.560) < 1e-14
+               and z6["safe_time"] < 360,
+               "Nominalni i intervalni geometrijski kriterij nisu ispravno razdvojeni.")
 
     return out
 
