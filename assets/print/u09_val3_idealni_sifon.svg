@@ -1,212 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 500" role="img" aria-labelledby="u09v3is_title u09v3is_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u09v3is_title">Idealni sifon izmedju dviju razina</title>
-  <desc id="u09v3is_desc">Sifon promjera D=80 mm crpi vodu iz gornjeg bazena A i ispusta je u donji kanal B koji je 3,6 m nize. Najvisa tocka sifona C je 2,2 m iznad slobodne povrsine bazena A. Bernoulli A-B daje izlaznu brzinu v=8,40 m/s i protok Q=42,2 L/s; Bernoulli A-C daje manometarsku tlacnu visinu u vrhu p_C/gamma=-5,8 m, sto je sigurno iznad naponske visine pare (0,25 m).</desc>
-
-  <defs>
-    <linearGradient id="u09v3is_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
-    <pattern id="u09v3is_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
-    </pattern>
-    <!-- strelica protoka (zelena = izlazna velicina) -->
-    <marker id="u09v3is_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
-    </marker>
-    <!-- strelica tlaka (plava) -->
-    <marker id="u09v3is_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
-    </marker>
-    <!-- kote (smedje) -->
-    <marker id="u09v3is_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-    <marker id="u09v3is_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-  </defs>
-
-  <!-- pozadina -->
-  <rect x="0" y="0" width="940" height="500" fill="#ffffff" />
-  <line x1="546" y1="32" x2="546" y2="468" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
-
-  <!-- ================================================================
-       LIJEVI PANEL: SIFON
-       Vertikalna skala: 1 m = 40 px
-         y(A_surface) = 170     (z = 0)
-         y(C peak)    = 82      (z = +2,2 m, dakle 88 px iznad A)
-         y(B_surface) = 314     (z = -3,6 m, dakle 144 px ispod A)
-         y(ground)    = 430
-       Horizontalno:
-         bazen A interior: x = 60 .. 220
-         bazen B interior: x = 380 .. 520
-  ================================================================ -->
-
-  <!-- ===== GORNJI BAZEN A ===== -->
-  <!-- voda u bazenu A: od slobodne povrsine y=170 do dna y=380 -->
-  <rect x="60" y="170" width="160" height="210" fill="url(#u09v3is_voda)" />
-  <!-- stijenke bazena A (pune visine; zatvoreni spremnik) -->
-  <rect x="40" y="150" width="20" height="240" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <rect x="220" y="150" width="20" height="240" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- dno bazena A -->
-  <rect x="40" y="380" width="200" height="14" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- slobodna povrsina A -->
-  <line x1="60" y1="170" x2="220" y2="170" stroke="#1565c0" stroke-width="2.2" />
-  <!-- atmosfera nad A (dvije male plave strelice tlaka prema povrsini) -->
-  <line x1="100" y1="148" x2="100" y2="165" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09v3is_aB)" />
-  <line x1="170" y1="148" x2="170" y2="165" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09v3is_aB)" />
-  <!-- tocka A i oznaka -->
-  <circle cx="140" cy="170" r="3.5" fill="#1a2530" />
-  <!-- ===== DONJI KANAL B ===== -->
-  <!-- voda u kanalu B: od y=314 do dna y=380 -->
-  <rect x="380" y="314" width="140" height="66" fill="url(#u09v3is_voda)" />
-  <!-- stijenke kanala B (pune visine) -->
-  <rect x="360" y="296" width="20" height="94" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <rect x="520" y="296" width="20" height="94" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- dno kanala B -->
-  <rect x="360" y="380" width="180" height="14" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- slobodna povrsina B -->
-  <line x1="380" y1="314" x2="520" y2="314" stroke="#1565c0" stroke-width="2.2" />
-  <!-- atmosfera nad B (jedna plava strelica) -->
-  <line x1="450" y1="290" x2="450" y2="309" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09v3is_aB)" />
-  <!-- tocka B -->
-  <circle cx="450" cy="314" r="3.5" fill="#1a2530" />
-  <!-- ===== SIFONSKA CIJEV =====
-       Putanja kroz srednju liniju:
-         ulaz dolje u bazenu A:   (180, 330)
-         okomito gore:            (180, 100)
-         vodoravno (vrh C):       (180, 82) -> (400, 82)   pri y=82 (= +2,2 m iznad A)
-         okomito dolje:           (400, 100) -> (400, 340)
-         ulaz u kanal B:          (400, 340)
-       Cijev je sirina 24 px (po 12 px sa svake strane od center-linije).
-       Stjenke cijevi crtam kao dvije paralelne sive trake oko fluida.
-  -->
-  <!-- vanjski obris cijevi (popunjena traka) -->
-  <path d="       M 168 330       L 168 100       A 12 12 0 0 1 180 88       L 400 88       A 12 12 0 0 1 412 100       L 412 340       L 388 340       L 388 100       A 0 0 0 0 0 388 100       L 192 100       L 192 330       Z" fill="#cfd8df" stroke="#3a4a56" stroke-width="1.4" stroke-linejoin="round" />
-  <!-- unutarnji fluid u cijevi (kontinuiran sa fluidima u bazenima) -->
-  <path d="       M 172 330       L 172 100       A 8 8 0 0 1 180 92       L 400 92       A 8 8 0 0 1 408 100       L 408 340       L 392 340       L 392 100       L 188 100       L 188 330       Z" fill="url(#u09v3is_voda)" />
-
-  <!-- prirubnice na izlazu cijevi u oba bazena (vizualni "uron") -->
-  <rect x="166" y="328" width="28" height="6" fill="#3a4a56" />
-  <rect x="386" y="338" width="28" height="6" fill="#3a4a56" />
-
-  <!-- ===== TOCKA C (vrh sifona) ===== -->
-  <circle cx="290" cy="88" r="4.5" fill="#c0392b" />
-  <!-- ===== STRELICE PROTOKA (zelene = korisna izlazna velicina) ===== -->
-  <!-- ulazni krak: strujanje gore (od A prema C); strelica u gornjoj polovini cijevi -->
-  <line x1="180" y1="220" x2="180" y2="130" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u09v3is_aG)" />
-  <!-- vrh: vodoravno udesno -->
-  <line x1="230" y1="88" x2="360" y2="88" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u09v3is_aG)" />
-  <!-- izlazni krak: strujanje dolje (od C prema B) -->
-  <line x1="400" y1="180" x2="400" y2="300" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u09v3is_aG)" />
-  <!-- v oznaka na izlaznom kraku -->
-  <!-- ===== KOTE =====
-       z_C  : okomita, lijevo od ulaznog kraka (od y=170 do y=88)
-       delta_z: okomita, na desnoj strani (od y=170 do y=314)
-       D    : promjer cijevi, malo iznad vrha
-  -->
-
-  <!-- z_C kota (lijevo od ulaznog kraka): pomocne linije od povrsine A i od C horizontalno do dim-osi na x=110 -->
-  <!-- tik-crte -->
-  <!-- dim os -->
-  <!-- labela z_C -->
-  <!-- delta_z kota (desno, izvan kanala B): od y=170 (povrsina A) do y=314 (povrsina B) na x=496
-       Pomocna na vrhu A ide po istoj razini ali izbjegava cijev (preskace x=388..412) -->
-  <!-- tik-crte -->
-  <!-- dim os -->
-  <!-- D promjer cijevi (vodoravna kota iznad vrha sifona) -->
-  <!-- HGL referenca: isprekidana linija na razini povrsine A (samo desno od bazena, ne presjeca z_C kotu) -->
-  <line x1="240" y1="170" x2="540" y2="170" stroke="#7a8a96" stroke-width="0.9" stroke-dasharray="2,4" opacity="0.7" />
-  <!-- callout za p_C/gamma kod tocke C: smjesten u prazan prostor desno od tocke C, iznad basin A i lijevo od desnog kraka cijevi -->
-  <line x1="294" y1="86" x2="312" y2="40" stroke="#c0392b" stroke-width="0.8" />
-  <rect x="208" y="14" width="172" height="42" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.3" />
-  <!-- mali naziv lijevog panela (legenda, ne naslov figure) -->
-  <!-- ================================================================
-       DESNI PANEL: KORACI + REZULTATI
-  ================================================================ -->
-
-  <!-- okvir formula panela -->
-  <rect x="566" y="58" width="346" height="312" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
-  <!-- header bar -->
-  <rect x="566" y="58" width="346" height="30" rx="10" fill="#1565c0" />
-  <rect x="566" y="74" width="346" height="14" fill="#1565c0" />
-  <!-- Blok 1: brzina iz Bernoullija A-B -->
-  <line x1="582" y1="166" x2="896" y2="166" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 2: protok Q -->
-  <line x1="582" y1="238" x2="896" y2="238" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 3: tlak u vrhu C -->
-  <line x1="582" y1="310" x2="896" y2="310" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 4: provjera kavitacije -->
-  <!-- ===== REZULTATI BADGE ===== -->
-  <rect x="566" y="384" width="346" height="80" rx="9" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <line x1="140" y1="170" x2="106" y2="170" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="180" y1="88" x2="106" y2="88" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="100" y1="170" x2="116" y2="170" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="100" y1="88" x2="116" y2="88" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="110" y1="92" x2="110" y2="166" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09v3is_dimL)" marker-end="url(#u09v3is_dim)" />
-  <line x1="240" y1="170" x2="388" y2="170" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="412" y1="170" x2="500" y2="170" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="520" y1="314" x2="500" y2="314" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="490" y1="170" x2="506" y2="170" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="490" y1="314" x2="506" y2="314" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="498" y1="174" x2="498" y2="310" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09v3is_dimL)" marker-end="url(#u09v3is_dim)" />
-  <line x1="388" y1="88" x2="388" y2="62" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="412" y1="88" x2="412" y2="62" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="388" y1="58" x2="388" y2="68" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="412" y1="58" x2="412" y2="68" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="389" y1="62" x2="411" y2="62" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09v3is_dimL)" marker-end="url(#u09v3is_dim)" />
-  <text x="135" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" font-style="italic" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
-  <text x="140" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">A</text>
-  <text x="60" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#0d47a1">bazen</text>
-  <text x="60" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">v<tspan baseline-shift="sub" font-size="0.7em">A</tspan> ≈ 0</text>
-
-  <text x="464" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
-  <text x="450" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">B</text>
-  <text x="380" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#0d47a1">ispustni</text>
-  <text x="380" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#0d47a1">kanal</text>
-
-  <text x="290" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">C</text>
-
-  <text x="418" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1e8449"><tspan font-weight="700">v</tspan> = 8,40 m/s</text>
-
-  <text x="244" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#7a8a96">referentna razina  z = 0</text>
-
-  <text x="294" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ = −5,8 m  (man.)</text>
-  <text x="294" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#c0392b">(p<tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ)<tspan baseline-shift="sub" font-size="0.7em">abs</tspan> = 4,4 m</text>
-
-  <text x="40" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Strelice: <tspan fill="#1e8449" font-weight="700">zelene</tspan> = smjer strujanja,  <tspan fill="#1565c0" font-weight="700">plave</tspan> = atmosferski tlak,  <tspan fill="#b7600c" font-weight="700">smedje</tspan> = kote.</text>
-
-  <text x="739" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Bernoulli  za  idealni  sifon</text>
-
-  <text x="739" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1.  Bernoulli  A → B  (p<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>,  v<tspan baseline-shift="sub" font-size="0.7em">A</tspan> ≈ v<tspan baseline-shift="sub" font-size="0.7em">B</tspan> ≈ 0)</text>
-  <text x="739" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">v</tspan> = √(2<tspan font-style="italic">g</tspan>Δ<tspan font-style="italic">z</tspan>) = √(2·9,81·3,6)</text>
-  <text x="739" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 8,40 m/s</text>
-  <text x="739" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2.  Povrsina presjeka  i  volumenski  protok</text>
-  <text x="739" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">A</tspan> = π<tspan font-style="italic">D</tspan>²/4 ≈ 5,03·10⁻³ m²,   <tspan font-style="italic">Q</tspan> = <tspan font-style="italic">A v</tspan></text>
-  <text x="739" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 4,22·10⁻² m³/s ≈ 42,2 L/s</text>
-  <text x="739" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3.  Bernoulli  A → C  (z<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = 0)</text>
-  <text x="739" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ = −(<tspan font-style="italic">v</tspan>²/2<tspan font-style="italic">g</tspan>) − <tspan font-style="italic">z</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = −3,6 − 2,2</text>
-  <text x="739" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">≈ −5,8 m  (manometarski)</text>
-  <text x="739" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4.  Provjera  isparavanja  (apsolutni  tlak  u  C)</text>
-  <text x="739" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">(<tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ)<tspan baseline-shift="sub" font-size="0.7em">abs</tspan> = 10,2 − 5,8 = 4,4 m  &gt;  <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan>/γ = 0,25 m</text>
-  <text x="739" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#5a6a78">razlika 4,15 m → sifon ne kavitira</text>
-
-  <text x="739" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
-  <text x="650" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">v</tspan> = 8,40 m/s</text>
-  <text x="830" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">Q</tspan> = 42,2 L/s</text>
-  <text x="650" y="452" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ = −5,8 m</text>
-  <text x="830" y="452" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0">(p<tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ)<tspan baseline-shift="sub" font-size="0.7em">abs</tspan> = 4,4 m</text>
-<text x="84" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">z</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan></text>
-  <text x="84.0" y="144.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#b7600c">= 2,2 m</text>
-
-  <text x="516" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b7600c">Δ<tspan font-style="italic">z</tspan></text>
-  <text x="516.0" y="256.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c">= 3,6 m</text>
-
-  <text x="432" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">D</tspan> = 80 mm</text>
-
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 500" role="img" aria-labelledby="u09v3is_title u09v3is_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
+<title id="u09v3is_title">Sifon s otvorenim izlazom</title><desc id="u09v3is_desc">Voda iz velikog bazena A prolazi kroz prethodno napunjen sifon stalnog promjera i izlazi slobodnim mlazom u B iznad prihvatnog kanala. B je 3,6 m ispod A, a os vrha C 2,2 m iznad A. HGL u cijevi je 3,6 m ispod A. Promjer cijevi uvećan je za čitljivost.</desc>
+<defs>
+<linearGradient id="u09v3is_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u09v3is_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u09v3is_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u09v3is_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u09v3is_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u09v3is_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u09v3is_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="940" height="500" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<line x1="545" y1="30" x2="545" y2="474" stroke="#dce7f0" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="36" y="33" font-size="15" fill="#1a2530" text-anchor="start" font-weight="700">Napunjen sifon: A → C → B</text>
+<defs><linearGradient id="u09v3is_field" gradientUnits="userSpaceOnUse" x1="0" y1="82" x2="0" y2="422"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<rect x="70" y="170" width="151" height="210" rx="0" fill="url(#u09v3is_field)" stroke="none" stroke-width="1.2"/>
+<line x1="70" y1="170" x2="221" y2="170" stroke="#1565c0" stroke-width="2"/>
+<rect x="62" y="149" width="8" height="239" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="221" y="149" width="8" height="239" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="62" y="380" width="167" height="8" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<path id="u09v3is_pipewall" d="M172 325 V100 Q172 82 190 82 H352 Q370 82 370 100 V314" fill="none" stroke="#3a4a56" stroke-width="18" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u09v3is_pipewater" d="M172 325 V100 Q172 82 190 82 H352 Q370 82 370 100 V314" fill="none" stroke="url(#u09v3is_field)" stroke-width="14" stroke-linecap="butt" stroke-linejoin="round"/>
+<circle id="u09v3is_A" cx="111" cy="170" r="3" fill="#c0392b"/>
+<text x="111" y="190" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">A</text>
+<circle id="u09v3is_C" cx="270" cy="82" r="3" fill="#c0392b"/>
+<text x="270" y="67" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">C</text>
+<circle id="u09v3is_B" cx="370" cy="314" r="3" fill="#c0392b"/>
+<text x="392" y="319" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">B</text>
+<path d="M172 283 L172 228" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09v3is_v)"/>
+<path d="M248 82 L307 82" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09v3is_v)"/>
+<path d="M370 206 L370 261" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09v3is_v)"/>
+<path id="u09v3is_jet" d="M363.00000 314 L363.02410 316 L363.04778 318 L363.07108 320 L363.09398 322 L363.11651 324 L363.13868 326 L363.16050 328 L363.18197 330 L363.20312 332 L363.22393 334 L363.24444 336 L363.26463 338 L363.28453 340 L363.30414 342 L363.32346 344 L363.34251 346 L363.36129 348 L363.37981 350 L363.39807 352 L363.41609 354 L363.43386 356 L363.45139 358 L363.46869 360 L363.48577 362 L363.50262 364 L363.51926 366 L363.53569 368 L363.55191 370 L363.56793 372 L363.58375 374 L363.59938 376 L363.61482 378 L363.63008 380 L363.64516 382 L363.66006 384 L363.67479 386 L363.68934 388 L363.70374 390 L363.71796 392 L363.73203 394 L363.74595 396 L376.25405 396 L376.26797 394 L376.28204 392 L376.29626 390 L376.31066 388 L376.32521 386 L376.33994 384 L376.35484 382 L376.36992 380 L376.38518 378 L376.40062 376 L376.41625 374 L376.43207 372 L376.44809 370 L376.46431 368 L376.48074 366 L376.49738 364 L376.51423 362 L376.53131 360 L376.54861 358 L376.56614 356 L376.58391 354 L376.60193 352 L376.62019 350 L376.63871 348 L376.65749 346 L376.67654 344 L376.69586 342 L376.71547 340 L376.73537 338 L376.75556 336 L376.77607 334 L376.79688 332 L376.81803 330 L376.83950 328 L376.86132 326 L376.88349 324 L376.90602 322 L376.92892 320 L376.95222 318 L376.97590 316 L377.00000 314 Z" fill="url(#u09v3is_field)" stroke="none" stroke-width="1.8" />
+<rect x="320" y="396" width="164" height="32" rx="0" fill="url(#u09v3is_field)" stroke="none" stroke-width="1.2"/>
+<line x1="320" y1="396" x2="484" y2="396" stroke="#1565c0" stroke-width="2"/>
+<rect x="312" y="370" width="8" height="66" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="484" y="370" width="8" height="66" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="312" y="428" width="180" height="8" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<text x="70" y="405" font-size="12" fill="#1a2530" text-anchor="start">bazen A; vA ≈ 0</text>
+<text x="325" y="454" font-size="11" fill="#1a2530" text-anchor="start">prihvatni kanal</text>
+<text x="396" y="339" font-size="11" fill="#1565c0" text-anchor="start">pB = pₐₜₘ</text>
+<text x="396" y="357" font-size="11" fill="#1565c0" text-anchor="start">vB = v</text>
+<text x="86" y="155" font-size="11" fill="#1565c0" text-anchor="start">pₐₜₘ</text>
+<line x1="234" y1="170" x2="498" y2="170" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="238" y="190" font-size="11" fill="#1a2530" text-anchor="start">zA = 0</text>
+<line x1="380" y1="314" x2="498" y2="314" stroke="#b7600c" stroke-width="1"/>
+<line x1="491" y1="170" x2="501" y2="170" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="491" y1="314" x2="501" y2="314" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09v3is_dz" d="M496 170 L496 314" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v3is_dim)" marker-end="url(#u09v3is_dim)"/>
+<text x="433" y="229" font-size="12" fill="#b7600c" text-anchor="start">Δz =</text>
+<text x="431" y="247" font-size="12" fill="#b7600c" text-anchor="start">3,6 m</text>
+<line x1="44" y1="82" x2="158" y2="82" stroke="#b7600c" stroke-width="1"/>
+<line x1="44" y1="170" x2="62" y2="170" stroke="#b7600c" stroke-width="1"/>
+<line x1="40" y1="82" x2="50" y2="82" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="40" y1="170" x2="50" y2="170" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09v3is_zc" d="M45 82 L45 170" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v3is_dim)" marker-end="url(#u09v3is_dim)"/>
+<text x="57" y="108" font-size="11" fill="#b7600c" text-anchor="start">zC =</text>
+<text x="57" y="124" font-size="11" fill="#b7600c" text-anchor="start">2,2 m</text>
+<line x1="363" y1="120" x2="363" y2="130" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="377" y1="120" x2="377" y2="130" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09v3is_diameter" d="M363 125 L377 125" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v3is_dimSmall)" marker-end="url(#u09v3is_dimSmall)"/>
+<text x="370.0" y="142" font-size="11" fill="#b7600c" text-anchor="middle"></text>
+<line x1="379" y1="125" x2="402" y2="115" stroke="#b7600c" stroke-width="1"/>
+<text x="407" y="113" font-size="11" fill="#b7600c" text-anchor="start">D = 80 mm</text>
+<text x="34" y="481" font-size="10" fill="#1a2530" text-anchor="start">Visine: 40 px/m; promjer cijevi uvećan. Kote se odnose na os.</text>
+<rect x="570" y="48" width="345" height="92" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<text x="582" y="68" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">1. Bernoulli A → B</text>
+<text x="582" y="91" font-size="12" fill="#1a2530" text-anchor="start">pA = pB = pₐₜₘ; vA ≈ 0, vB = v</text>
+<text x="582" y="110" font-size="12" fill="#1a2530" text-anchor="start">v²/(2g) = Δz = 3,6 m</text>
+<text x="582" y="129" font-size="12" fill="#1a2530" text-anchor="start">v = 8,40 m/s; Q = 42,2 L/s</text>
+<rect x="570" y="158" width="345" height="92" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<text x="582" y="178" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">2. Bernoulli A → C</text>
+<text x="582" y="201" font-size="12" fill="#1a2530" text-anchor="start">pC,man/(ρg) = −zC − v²/(2g)</text>
+<text x="582" y="220" font-size="12" fill="#1a2530" text-anchor="start">= −2,2 − 3,6 = −5,8 m</text>
+<text x="582" y="239" font-size="12" fill="#1a2530" text-anchor="start">HGLC = 2,2 − 5,8 = −3,6 m</text>
+<rect x="570" y="268" width="345" height="92" rx="7" fill="#f4f9fd" stroke="#1e8449" stroke-width="1.2"/>
+<text x="582" y="288" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">3. Apsolutna tlačna visina</text>
+<text x="582" y="311" font-size="12" fill="#1a2530" text-anchor="start">pC,abs/(ρg) = 10,2 − 5,8 = 4,4 m</text>
+<text x="582" y="330" font-size="12" fill="#1a2530" text-anchor="start">pC,abs = 43,2 kPa</text>
+<text x="582" y="349" font-size="12" fill="#1a2530" text-anchor="start">Razlika prema tlaku pare: 4,15 m</text>
+<text x="585" y="394" font-size="11" fill="#1a2530" text-anchor="start">Pozitivna razlika vrijedi u idealnom modelu.</text>
+<text x="585" y="413" font-size="11" fill="#1a2530" text-anchor="start">Gubitci i prolazne pojave traže zasebnu provjeru.</text>
+<text x="585" y="453" font-size="12" fill="#1565c0" text-anchor="start">B je otvoreni izlaz, s nezanemarivom brzinom.</text>
+</g>
+</svg>

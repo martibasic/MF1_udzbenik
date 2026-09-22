@@ -444,7 +444,7 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-veliki-otvoreni-spremnik-sadrzi-vodu-do-visine)
 
-**Sažetak.** Veliki otvoreni spremnik sadrži vodu do visine $H = 3{,}20\ \text{m}$ iznad osi male bočne sapnice promjera $d = 26\ \text{mm}$. Zanemari gubitke i odredi izlaznu brzinu mlaza, volumenski protok i maseni protok vode.
+**Sažetak.** Veliki otvoreni spremnik sadrži vodu do visine $H = 3{,}20\ \text{m}$ iznad osi male bočne sapnice promjera $d = 26\ \text{mm}$. Za vodu uzmi $\rho=998\ \text{kg/m}^3$. Promatraj kvazistacionarni trenutak dok se razina velikog spremnika…
 
 **Smjernica postupka.** između slobodne površine i izlaza vrijedi Torricelli: $v = \sqrt{2gH}$; nakon toga $Q = Av$ i $\dot m = \rho Q$.
 
@@ -460,45 +460,45 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Kontrolni rezultat ili kriterij.** $v_1 = 7{,}0\ \text{m/s}$, $v_2 = 21{,}0\ \text{m/s}$; $\Delta p \approx 235\ \text{Pa}$.
 
-### Z3. Protok kroz Venturijevu cijev {#key-task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni .unnumbered .unlisted}
+### Z3. Tlak u silaznom suženju {#key-task-tlak-u-silaznom-suzenju .unnumbered .unlisted}
 
-[Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni)
+[Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-tlak-u-silaznom-suzenju)
 
-**Sažetak.** Idealna Venturijeva cijev za vodu ima ulazni promjer $D_1 = 120\ \text{mm}$ i promjer grla $D_2 = 70\ \text{mm}$. Razlika statičkih tlakova između ulaza i grla iznosi $\Delta p = 24\ \text{kPa}$. Odredi brzinu u grlu i volumenski protok…
+**Sažetak.** Voda gustoće $\rho=1000\ \text{kg/m}^3$ stacionarno teče kroz glatko silazno suženje. U vodoravnom ulaznom presjeku 1 promjer je $D_1=120\ \text{mm}$, a u vodoravnom izlaznom presjeku 2 $D_2=70\ \text{mm}$. Os presjeka 1 nalazi se…
 
-**Smjernica postupka.** spoji kontinuitet $A_1 v_1 = A_2 v_2$ s Bernoullijem između ulaza i grla, pa riješi dvije nepoznate brzine.
+**Smjernica postupka.** Najprije iz protoka odredi obje brzine. U Bernoulliju zadrži razliku geodetskih visina. Usporedi doprinos spuštanja s doprinosom ubrzanja; tlak i HGL nisu ista veličina.
 
-**Kontrolni rezultat ili kriterij.** $v_2 \approx 7{,}38\ \text{m/s}$; $Q \approx 28{,}4\ \text{L/s}$.
+**Kontrolni rezultat ili kriterij.** $v_1\approx1{,}768\ \text{m/s}$; $v_2\approx5{,}197\ \text{m/s}$; $p_2-p_1\approx+7{,}680\ \text{kPa}$. Tlak raste jer doprinos spuštanja $19{,}620\ \text{kPa}$ nadmašuje doprinos ubrzanja $11{,}940\ \text{kPa}$. Tvrdnja nije općenito točna: u ovom idealnom toku pada HGL, dok statički tlak raste.
 
-### Z4. Brzina iz Pitotova mjerenja {#key-task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok .unnumbered .unlisted}
+### Z4. Pitot s izdignutim senzorom {#key-task-pitot-s-izdignutim-senzorom .unnumbered .unlisted}
 
-[Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok)
+[Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-pitot-s-izdignutim-senzorom)
 
-**Sažetak.** Pitotova cijev uronjena je u vodeni tok. Razlika između stagnacijskog i statičkog tlaka iznosi $\Delta p = 8{,}5\ \text{kPa}$. Odredi lokalnu brzinu strujanja.
+**Sažetak.** Pitotova sonda okrenuta je otvorom prema jednolikoj struji vode gustoće $\rho=1000\ \text{kg/m}^3$. U neporemećenoj struji A, na visini otvora sonde, statički manometarski tlak iznosi $p_{M,A}=16{,}0\ \text{kPa}$. Sonda je potpuno…
 
-**Smjernica postupka.** u Pitotu vrijedi $\Delta p = \rho v^2/2$, pa brzina slijedi iz $v = \sqrt{2\Delta p/\rho}$.
+**Smjernica postupka.** Očitanje u S prvo hidrostatički prenesi na visinu otvora sonde. Tek tada oduzmi statički tlak u A i primijeni Bernoullija između neporemećene struje i stagnacijske točke.
 
-**Kontrolni rezultat ili kriterij.** $v \approx 4{,}13\ \text{m/s}$.
+**Kontrolni rezultat ili kriterij.** Stagnacijski manometarski tlak je $p_{M,st}=35{,}772\ \text{kPa}$, a razlika prema statičkom tlaku $19{,}772\ \text{kPa}$. Lokalna brzina je $v\approx6{,}288\ \text{m/s}$. Zanemarivanje visine senzora dalo bi $v_{pog}=4{,}000\ \text{m/s}$, odnosno podcijenjenu brzinu.
 
-### Z5. Tlak u vrhu sifona {#key-task-u09-idealni-sifon-prazni-otvoreni-spremnik-razlika-razina .unnumbered .unlisted}
+### Z5. Odabir grla prema tlaku i mjernom signalu {#key-task-odabir-grla-prema-tlaku .unnumbered .unlisted}
 
-[Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-idealni-sifon-prazni-otvoreni-spremnik-razlika-razina)
+[Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-odabir-grla-prema-tlaku)
 
-**Sažetak.** Idealni sifon prazni otvoreni spremnik. Razlika razina između slobodne površine u spremniku i izlaza sifona iznosi $\Delta z = 2{,}8\ \text{m}$, a vrh sifona nalazi se $1{,}1\ \text{m}$ iznad slobodne površine. Odredi brzinu strujanja…
+**Sažetak.** Kroz vodoravni mjerni sklop prolazi zadani stalni protok vode $Q=20{,}0\ \text{L/s}$ pri gustoći $\rho=1000\ \text{kg/m}^3$. Ulazni promjer je $D_1=100\ \text{mm}$, a apsolutni ulazni tlak $p_{1,abs}=150\ \text{kPa}$. Glatki zamjenjivi…
 
-**Smjernica postupka.** brzinu dobij iz Bernoullija između slobodne površine i izlaza, a tlak u vrhu iz Bernoullija između slobodne površine i vrha sifona. Uz manometarski tlak vrijedi $HGL_C=z_C+p_{M,C}/(\rho g)$, dok se kavitacija provjerava apsolutnim tlakom.
+**Smjernica postupka.** Iz kontinuiteta izrazom za brzinu u grlu prijeđi s promjera na pad tlaka. Minimalni apsolutni tlak ograničava najveći dopušteni pad, a minimalni mjerni signal najmanji pad. Tek nakon određivanja obaju rubova intervala usporedi ponuđene promjere.
 
-**Kontrolni rezultat ili kriterij.** $v \approx 7{,}41\ \text{m/s}$; $p_C \approx 62{,}8\ \text{kPa}$ (aps.); $HGL_C=-2{,}8\ \text{m}$ u odnosu na slobodnu površinu; $p_C-p_v\approx60{,}5\ \text{kPa}$, pa idealni račun pokazuje pozitivnu rezervu.
+**Kontrolni rezultat ili kriterij.** Dopušteno je $43{,}183\ \text{mm}\le d\le52{,}328\ \text{mm}$, pa odgovara uložak od $50\ \text{mm}$. Za promjere $40$, $50$ i $60\ \text{mm}$ apsolutni tlakovi u grlu redom su $26{,}591$, $101{,}366$ i $128{,}225\ \text{kPa}$, a padovi tlaka $123{,}409$, $48{,}634$ i $21{,}775\ \text{kPa}$. Uložak od 40 mm krši tlačni prag, a onaj od 60 mm nema dovoljan mjerni signal. Granice su zaokružene; odluka se provjerava izvornim nejednakostima.
 
 ### Z6. Sifon i putanja izlaznog mlaza {#key-task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako .unnumbered .unlisted}
 
 [Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako)
 
-**Sažetak.** Idealni sifon promjera $D = 70\ \text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\Delta z = 2{,}6\ \text{m}$ ispod slobodne površine. Vrh sifona je $z_C = 1{,}7\ \text{m}$ iznad slobodne površine, a izlaz se…
+**Sažetak.** Sifon je prethodno napunjen vodom, a ulaz je uronjen. U kvazistacionarnom trenutku uzmi gustoću vode $\rho=1000\ \text{kg/m}^3$. Idealni sifon promjera $D = 70\ \text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se…
 
 **Smjernica postupka.** Bernoullijem između slobodne površine i izlaza vrati idealni $v$, između slobodne površine i vrha sifona vrati tlak, a domet mlaza zatvori kao vodoravno izbačeno tijelo s visine $1{,}2\ \text{m}$. Za izvedeni sustav koristi $v=\sqrt{2g\Delta z/(1+K_\Sigma)}$ i $p_C=p_{atm}-\rho g[z_C+(1+K_C)v^2/(2g)]$. Najmanji protok daje najveći $K_\Sigma$; najmanji tlak u vrhu provjeri konzervativnim kutovima zadanih intervala, ne samo nominalnim koeficijentima.
 
-**Kontrolni rezultat ili kriterij.** Idealni model daje $v \approx 7{,}14\ \text{m/s}$; $Q \approx 27{,}5\ \text{L/s}$; $p_C \approx 59{,}2\ \text{kPa}$ (aps.); domet $x \approx 3{,}53\ \text{m}$. Za $K_\Sigma=2{,}0$ stvarni je protok približno $15{,}9\ \text{L/s}$, a za interval $K_\Sigma=1{,}5$--$2{,}5$ iznosi približno $17{,}4$--$14{,}7\ \text{L/s}$. Konzervativni tlak u vrhu ostaje oko $59{,}2\ \text{kPa}$ apsolutno, pa je tlačni zahtjev zadovoljen, ali se zahtjev protoka ne može zajamčiti. Potrebno je smanjiti gubitke…
+**Kontrolni rezultat ili kriterij.** Idealno: $v\approx7{,}14$ m/s, $Q\approx27{,}5$ L/s, $p_{C,abs}\approx59{,}1$ kPa, $x\approx3{,}53$ m. Uz gubitke nominalno je $Q\approx15{,}9$ L/s i $p_{C,abs}\approx65{,}9$ kPa; intervali su $Q\in[14{,}7;17{,}4]$ L/s i $p_{C,abs}\in[59{,}1;70{,}8]$ kPa. Tlačni zahtjev prolazi, ali protok od 15,0 L/s nije zajamčen. Smanjiti gubitke, povećati promjer ili suziti interval mjerenjem.
 
 ## Kompresibilni idealni tok
 

@@ -1,264 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 620" role="img" aria-labelledby="u09c1bssm_u09c1bss_title u09c1bssm_u09c1bss_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:1100px;height:auto;">
-  <title id="u09c1bssm_u09c1bss_title">Idealni bypass-sifon sa suzenjem u vrhu i mlaznim ispustom</title>
-  <desc id="u09c1bssm_u09c1bss_desc">Lijevo: bazen A na visini 4,2 m, sifonska cijev D=100 mm prelazi preko ruba na vrh C (1,5 m iznad A) sa suzenjem d_C=80 mm, spusta se do vodoravnog izlaza B na visini 1,4 m, te mlaz pada parabolicno do tla na vodoravnoj udaljenosti 3,96 m. Desno: pet koraka rjesenja - Bernoulli A-B, kontinuitet, Bernoulli A-C, sigurnost do pare i domet mlaza.</desc>
-
-  <defs>
-    <linearGradient id="u09c1bssm_u09c1bss_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
-    <pattern id="u09c1bssm_u09c1bss_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
-    </pattern>
-    <pattern id="u09c1bssm_u09c1bss_ground" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="9" stroke="#7a8a96" stroke-width="1.3" />
-    </pattern>
-    <!-- Brzina protoka (zelena) -->
-    <marker id="u09c1bssm_u09c1bss_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
-    </marker>
-    <!-- Tlak / mlaz (plava) -->
-    <marker id="u09c1bssm_u09c1bss_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
-    </marker>
-    <!-- Kote (smedja) -->
-    <marker id="u09c1bssm_u09c1bss_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-    <marker id="u09c1bssm_u09c1bss_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-  </defs>
-
-  <!-- Pozadina -->
-  <rect width="1140" height="620" fill="#ffffff" />
-  <line x1="800" y1="34" x2="800" y2="586" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
-
-  <!-- ==================================================
-       LIJEVI PANEL - shema bypass-sifona
-       Vertikalna skala: 1 m = 56 px
-       Tlo y = 530
-       z_A = 4,2 m -> A povrsina y = 530 - 235 = 295
-       z_B = 1,4 m -> B izlaz y = 530 - 78 = 452
-       z_C = 1,5 m iznad A -> C vrh y = 295 - 84 = 211
-       Δz_AB = 157 px
-       Vodoravna skala mlaza: 1 m = 30 px (domet 3,96 m = 119 px)
-  ================================================== -->
-
-  <!-- Tlo -->
-  <line x1="40" y1="530" x2="790" y2="530" stroke="#3a4a56" stroke-width="2" />
-  <rect x="40" y="530" width="750" height="14" fill="url(#u09c1bssm_u09c1bss_ground)" />
-  <!-- ===== Bazen A =====
-       Bazen unutar: x=110..250, voda y=295..530
-  ============================================== -->
-  <rect x="110" y="295" width="140" height="235" fill="url(#u09c1bssm_u09c1bss_voda)" />
-  <rect x="94" y="225" width="16" height="305" fill="url(#u09c1bssm_u09c1bss_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="250" y="225" width="16" height="305" fill="url(#u09c1bssm_u09c1bss_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <line x1="110" y1="295" x2="250" y2="295" stroke="#1565c0" stroke-width="2.2" />
-  <circle cx="180" cy="295" r="4.5" fill="#c0392b" />
-  <!-- p_atm strelice -->
-  <line x1="140" y1="258" x2="140" y2="291" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09c1bssm_u09c1bss_aB)" />
-  <line x1="220" y1="258" x2="220" y2="291" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09c1bssm_u09c1bss_aB)" />
-  <!-- voda oznake -->
-  <!-- ===== SIFONSKA CIJEV =====
-       Centerline tocke:
-       Ulaz iz bazena (port kroz desnu stjenku, blizu dna): (266, 495)
-       Uzlazni krak prema vrhu (luk preko ruba) do (450, 211)
-       Suzenje C: (450, 211) -> (500, 211)
-       Silazni krak do izlaza B: (500, 211) krivulja prema (620, 452)
-       Vodoravni izlazni dio: (620, 452) -> (680, 452)
-       Tocka B na kraju: (680, 452)
-  ============================================== -->
-
-  <!-- VANJSKI OBRIS CIJEVI -->
-  <path d="M 266,495            C 266,440 290,360 330,290            C 360,235 400,215 450,211" fill="none" stroke="#3a4a56" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
-  <!-- Suzenje -->
-  <line x1="450" y1="211" x2="500" y2="211" stroke="#3a4a56" stroke-width="18" stroke-linecap="butt" />
-  <!-- Konusni prijelazi -->
-  <polygon points="446,200 456,200 456,222 446,222" fill="#3a4a56" />
-  <polygon points="494,200 504,200 504,222 494,222" fill="#3a4a56" />
-  <!-- Silazni krak -->
-  <path d="M 500,211            C 550,221 590,256 605,320            C 614,380 615,425 615,452            L 680,452" fill="none" stroke="#3a4a56" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- UNUTARNJI FLUID (kontinuiran) -->
-  <path d="M 266,495            C 266,440 290,360 330,290            C 360,235 400,215 450,211" fill="none" stroke="#5b9ec9" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
-  <line x1="450" y1="211" x2="500" y2="211" stroke="#5b9ec9" stroke-width="10" stroke-linecap="butt" />
-  <path d="M 500,211            C 550,221 590,256 605,320            C 614,380 615,425 615,452            L 680,452" fill="none" stroke="#5b9ec9" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
-
-  <!-- PORT FLUID OVERLAY (preko desne stjenke bazena na visini cijevi) -->
-  <rect x="250" y="486" width="16" height="20" fill="#5b9ec9" />
-  <rect x="250" y="482" width="16" height="4" fill="#3a4a56" />
-  <rect x="250" y="506" width="16" height="4" fill="#3a4a56" />
-
-  <!-- Strelice smjera strujanja (zelene) -->
-  <line x1="278" y1="430" x2="282" y2="398" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
-  <line x1="312" y1="340" x2="322" y2="310" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
-  <line x1="380" y1="234" x2="406" y2="222" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
-  <!-- Preko suzenja - vidno duza (veca brzina v_C) -->
-  <line x1="458" y1="211" x2="492" y2="211" stroke="#1e8449" stroke-width="2.6" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
-  <!-- Silazni krak -->
-  <line x1="578" y1="266" x2="592" y2="296" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
-  <line x1="610" y1="370" x2="612" y2="402" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
-  <!-- Izlaz vodoravan -->
-  <line x1="625" y1="452" x2="672" y2="452" stroke="#1e8449" stroke-width="2.8" marker-end="url(#u09c1bssm_u09c1bss_aG)" />
-
-  <!-- ===== Tocke C, B ===== -->
-  <circle cx="475" cy="211" r="4.5" fill="#c0392b" />
-  <circle cx="680" cy="452" r="4.5" fill="#c0392b" />
-  <!-- v_C, v_B oznake (postavljene iznad/lijevo od cijevi, izvan geometrije) -->
-  <!-- ===== MLAZ - parabolicna putanja od B (680, 452) do (799, 530) =====
-       Vodoravna skala mlaza: 1 m = 30 px (domet 3,96 m = 119 px)
-       Polyline po tockama:
-       t=0:     x=0    -> (680, 452)
-       t=0,1:   x=0,741 -> 22 px -> (702, 455)
-       t=0,2:   x=1,482 -> 44 px -> (724, 464)
-       t=0,3:   x=2,223 -> 67 px -> (747, 480)
-       t=0,4:   x=2,964 -> 89 px -> (769, 502)
-       t=0,5:   x=3,705 -> 111 px -> (791, 521)
-       t=0,534: x=3,960 -> 119 px -> (799, 530)
-       y(t) = 452 + 56*0.5*9.81*t^2
-       t=0,1: y=452+2,7=454,7
-       t=0,2: y=452+11=463
-       t=0,3: y=452+24,7=476,7
-       t=0,4: y=452+43,9=495,9
-       t=0,5: y=452+68,6=520,6
-       t=0,534: y=452+78=530
-  ============================================== -->
-  <polyline points="680,452 702,455 724,463 747,477 769,496 791,520 799,530" fill="none" stroke="#1565c0" stroke-width="2.6" stroke-dasharray="7,4" />
-
-  <!-- Strelica smjera mlaza (tangencijalna) -->
-  <line x1="745" y1="476" x2="765" y2="492" stroke="#1565c0" stroke-width="1.8" marker-end="url(#u09c1bssm_u09c1bss_aB)" />
-
-  <!-- Tocka pada mlaza -->
-  <circle cx="799" cy="530" r="4.5" fill="#1565c0" />
-  <!-- Oznaka "mlaz" -->
-  <!-- ===== Referentne razine ===== -->
-  <line x1="266" y1="295" x2="400" y2="295" stroke="#7a8a96" stroke-width="0.9" stroke-dasharray="5,4" />
-  <line x1="380" y1="452" x2="604" y2="452" stroke="#7a8a96" stroke-width="0.9" stroke-dasharray="5,4" />
-  <!-- ===== KOTE ===== -->
-
-  <!-- z_A = 4,2 m (lijevo od bazena) -->
-  <!-- z_C = 1,5 m iznad A (lijevo od luka, izmedju razine A y=295 i C y=211) -->
-  <!-- Δz_AB = 2,8 m (na razini A do B, lijevo od silaznog kraka) -->
-  <!-- z_B = 1,4 m kota: na lijevoj strani izlaznog dijela cijevi (NE u podrucju mlaza) -->
-  <!-- pomocne: vodoravna od B-razine prema lijevo do x=625 (vec postoji razina B), pomocna od tla -->
-  <!-- vertikalna kota smjestena na x=635 izmedju silazne cijevi i izlaza B -->
-  <!-- Domet mlaza x = 3,96 m (ispod tla) -->
-  <!-- ===== Promjeri D i d_C ===== -->
-  <!-- D = 100 mm (leader iz vertikalnog silaznog dijela cijevi prema desno-gore) -->
-  <line x1="625" y1="380" x2="660" y2="358" stroke="#5a6a78" stroke-width="0.7" />
-  <!-- d_C = 80 mm (na suzenju) -->
-  <line x1="475" y1="200" x2="475" y2="172" stroke="#5a6a78" stroke-width="0.7" />
-  <!-- ==================================================
-       DESNI PANEL - 5 koraka rjesenja
-       Pocetak panela x = 820
-  ================================================== -->
-  <!-- Korak 1: Bernoulli A-B -->
-  <rect x="820" y="62" width="296" height="88" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="820" y="62" width="6" height="88" rx="3" fill="#1565c0" />
-  <!-- Korak 2: Kontinuitet -->
-  <rect x="820" y="160" width="296" height="88" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="820" y="160" width="6" height="88" rx="3" fill="#1565c0" />
-  <!-- Korak 3: Bernoulli A-C -->
-  <rect x="820" y="258" width="296" height="110" rx="8" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
-  <line x1="838" y1="334" x2="1106" y2="334" stroke="#ecd9c2" stroke-width="1" />
-  <!-- Korak 4: Sigurnost do pare -->
-  <rect x="820" y="378" width="296" height="76" rx="8" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
-  <rect x="820" y="378" width="6" height="76" rx="3" fill="#1e8449" />
-  <!-- Korak 5: Domet mlaza -->
-  <rect x="820" y="464" width="296" height="90" rx="8" fill="#eaf3fb" stroke="#a9c9e3" stroke-width="1.2" />
-  <rect x="820" y="464" width="6" height="90" rx="3" fill="#1565c0" />
-  <!-- REZULTATI badge -->
-  <rect x="820" y="564" width="296" height="38" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <line x1="94" y1="295" x2="60" y2="295" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="94" y1="530" x2="60" y2="530" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="64" y1="298" x2="64" y2="527" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bssm_u09c1bss_aDimL)" marker-end="url(#u09c1bssm_u09c1bss_aDim)" />
-  <line x1="400" y1="211" x2="400" y2="295" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bssm_u09c1bss_aDimL)" marker-end="url(#u09c1bssm_u09c1bss_aDim)" />
-  <line x1="400" y1="211" x2="440" y2="211" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="545" y1="295" x2="605" y2="295" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="545" y1="452" x2="615" y2="452" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="555" y1="298" x2="555" y2="449" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bssm_u09c1bss_aDimL)" marker-end="url(#u09c1bssm_u09c1bss_aDim)" />
-  <line x1="625" y1="452" x2="625" y2="530" stroke="#b7600c" stroke-width="0" />
-  <line x1="615" y1="452" x2="638" y2="452" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="615" y1="530" x2="638" y2="530" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="635" y1="455" x2="635" y2="527" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bssm_u09c1bss_aDimL)" marker-end="url(#u09c1bssm_u09c1bss_aDim)" />
-  <line x1="680" y1="530" x2="680" y2="586" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="799" y1="530" x2="799" y2="586" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="683" y1="580" x2="796" y2="580" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09c1bssm_u09c1bss_aDimL)" marker-end="url(#u09c1bssm_u09c1bss_aDim)" />
-  <rect x="820" y="258" width="6" height="110" rx="3" fill="#b7600c" />
-  <text x="50" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Shema sifona s parabolicnim mlazom</text>
-  <text x="50" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">vertikalna skala 1 m ≈ 56 px  ·  vodoravna skala mlaza 1 m ≈ 30 px</text>
-
-  <text x="46" y="558" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">tlo (z = 0)</text>
-
-  <text x="160" y="289" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">A</text>
-  <text x="116" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1565c0">slobodna povrsina</text>
-
-  <text x="180" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
-
-  <text x="124" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#0d47a1">voda</text>
-  <text x="124" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530">v<tspan baseline-shift="sub" font-size="0.7em">A</tspan> ≈ 0</text>
-  <text x="124" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
-
-  <text x="468" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#c0392b">C</text>
-
-  <text x="676" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#c0392b">B</text>
-
-  <text x="520" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1e8449">v<tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 11,58 m/s</text>
-  <text x="648" y="478" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#1e8449">v<tspan baseline-shift="sub" font-size="0.7em">B</tspan> ≈ 7,41 m/s</text>
-
-  <text x="800" y="524" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0">pad mlaza</text>
-
-  <text x="722" y="510" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#1565c0">mlaz</text>
-
-  <text x="270" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">razina A</text>
-  <text x="384" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">razina B</text>
-
-  <text x="664" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-style="italic">D</tspan> = 100 mm</text>
-
-  <text x="475" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 80 mm (suzenje)</text>
-
-  <text x="820" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Rjesenje – pet koraka</text>
-
-  <text x="836" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">1. Bernoulli A→B → brzina i protok</text>
-  <text x="836" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">v<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = √(2g·Δz<tspan baseline-shift="sub" font-size="0.7em">AB</tspan>) = √(2·9,81·2,8)</text>
-  <text x="836" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449">v<tspan baseline-shift="sub" font-size="0.7em">B</tspan> ≈ 7,41 m/s,  Q = A·v<tspan baseline-shift="sub" font-size="0.7em">B</tspan> ≈ 58,2 L/s</text>
-  <text x="836" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">(A = πD²/4 ≈ 7,854·10⁻³ m²)</text>
-
-  <text x="836" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">2. Kontinuitet → brzina u suzenju C</text>
-  <text x="836" y="202" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">A·v<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = A<tspan baseline-shift="sub" font-size="0.7em">C</tspan>·v<tspan baseline-shift="sub" font-size="0.7em">C</tspan> → v<tspan baseline-shift="sub" font-size="0.7em">C</tspan> = v<tspan baseline-shift="sub" font-size="0.7em">B</tspan>·(D/d<tspan baseline-shift="sub" font-size="0.7em">C</tspan>)²</text>
-  <text x="836" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">= 7,41·(100/80)² = 7,41·1,5625</text>
-  <text x="836" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449">v<tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 11,58 m/s  (uzi presjek → veca brzina)</text>
-
-  <text x="836" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ = −(v<tspan baseline-shift="sub" font-size="0.7em">C</tspan>²/2g + z<tspan baseline-shift="sub" font-size="0.7em">C</tspan>) = −(6,84 + 1,5)</text>
-  <text x="836" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">p<tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ ≈ −8,34 m  →  p<tspan baseline-shift="sub" font-size="0.7em">C,man</tspan> ≈ −56,9 kPa</text>
-  <text x="836" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">(p<tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ)<tspan baseline-shift="sub" font-size="0.7em">abs</tspan> = 10,2 − 8,34 ≈ 1,86 m</text>
-  <text x="836" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">C,abs</tspan> ≈ 18,2 kPa</text>
-
-  <text x="836" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">4. Sigurnost do naponske visine pare</text>
-  <text x="836" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">Δ<tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">sig</tspan> = (p<tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ)<tspan baseline-shift="sub" font-size="0.7em">abs</tspan> − p<tspan baseline-shift="sub" font-size="0.7em">v</tspan>/γ = 1,86 − 0,25</text>
-  <text x="836" y="444" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449">Δ<tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">sig</tspan> ≈ 1,61 m  → iznad granice isparavanja</text>
-
-  <text x="836" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">5. Vodoravni domet mlaza iz B</text>
-  <text x="836" y="506" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">t = √(2h<tspan baseline-shift="sub" font-size="0.7em">B</tspan>/g) = √(2·1,4/9,81) ≈ 0,534 s</text>
-  <text x="836" y="526" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">x = v<tspan baseline-shift="sub" font-size="0.7em">B</tspan>·t = 7,41·0,534</text>
-  <text x="836" y="548" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">x ≈ 3,96 m</text>
-
-  <text x="968" y="578" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI</text>
-  <text x="860" y="594" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1e8449">Q ≈ 58,2 L/s</text>
-  <text x="930" y="594" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1e8449">v<tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 11,58</text>
-  <text x="1010" y="594" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#c0392b">p<tspan baseline-shift="sub" font-size="0.7em">C</tspan>/γ = −8,34</text>
-  <text x="1082" y="594" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1565c0">x ≈ 3,96 m</text>
-<text x="55" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c" transform="rotate(-90,55,412)">z<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = 4,2 m</text>
-
-  <text x="408" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">z<tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 1,5 m</text>
-
-  <text x="549" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#b7600c">Δz<tspan baseline-shift="sub" font-size="0.7em">AB</tspan> = 2,8 m</text>
-
-  <text x="641" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#b7600c">z<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = 1,4 m</text>
-
-  <text x="739" y="600" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c">x = 3,96 m</text>
-
-  <text x="836" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">3. Bernoulli A→C → tlacna visina u vrhu</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 620" role="img" aria-labelledby="u09ch1_title u09ch1_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:1140px;height:auto;">
+<title id="u09ch1_title">Sifon sa suženjem i slobodnim mlazom</title><desc id="u09ch1_desc">Uronjeni otvor nalazi se unutar bazena; sifon prolazi iznad njegova ruba. Glavna cijev i grlo imaju promjere u omjeru 100:80. Vrh C je 1,5 m iznad površine A; izlaz B 2,8 m ispod A i 1,4 m iznad tla. Putanja ima vodoravnu početnu tangentu i isti prostorni omjer kao kote visina.</desc>
+<defs>
+<linearGradient id="u09ch1_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u09ch1_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u09ch1_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u09ch1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u09ch1_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u09ch1_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u09ch1_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="1140" height="620" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<text x="35" y="38" font-size="16" fill="#1a2530" text-anchor="start" font-weight="700">Sifon sa suženjem i slobodnim izlazom</text>
+<text x="35" y="58" font-size="11" fill="#1a2530" text-anchor="start">Visine i domet: 55 px/m; promjeri cijevi zajednički uvećani.</text>
+<line x1="800" y1="30" x2="800" y2="599" stroke="#dce7f0" stroke-width="1" stroke-dasharray="4 5"/>
+<defs><linearGradient id="u09ch1_field" gradientUnits="userSpaceOnUse" x1="0" y1="191.5" x2="0" y2="505"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<rect x="95" y="274" width="125" height="231" rx="0" fill="url(#u09ch1_field)" stroke="none" stroke-width="1.2"/>
+<line x1="95" y1="274" x2="220" y2="274" stroke="#1565c0" stroke-width="2"/>
+<rect x="87" y="251" width="8" height="262" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="220" y="251" width="8" height="262" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="87" y="505" width="141" height="8" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<path id="u09ch1_leftwall" d="M166 426 V209.5 Q166 191.5 184 191.5 H260" fill="none" stroke="#3a4a56" stroke-width="24" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u09ch1_leftwater" d="M166 426 V209.5 Q166 191.5 184 191.5 H260" fill="none" stroke="url(#u09ch1_field)" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u09ch1_rightwall" d="M364 191.5 H420 Q438 191.5 438 209.5 V410 Q438 428 456 428 H530" fill="none" stroke="#3a4a56" stroke-width="24" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u09ch1_rightwater" d="M364 191.5 H420 Q438 191.5 438 209.5 V410 Q438 428 456 428 H530" fill="none" stroke="url(#u09ch1_field)" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u09ch1_neckfluid" d="M260 181.5 H264 L286 183.5 H342 L360 181.5 H364 V201.5 H360 L342 199.5 H286 L264 201.5 H260 Z" fill="url(#u09ch1_field)" stroke="none" stroke-width="1.8" />
+<path id="u09ch1_necktop" d="M260 180.5 H264 L286 182.5 H342 L360 180.5 H364" fill="none" stroke="#3a4a56" stroke-width="2" />
+<path id="u09ch1_neckbottom" d="M260 202.5 H264 L286 200.5 H342 L360 202.5 H364" fill="none" stroke="#3a4a56" stroke-width="2" />
+<circle id="u09ch1_A" cx="128" cy="274" r="3" fill="#c0392b"/>
+<text x="128" y="259" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">A</text>
+<circle id="u09ch1_C" cx="311" cy="191.5" r="3" fill="#c0392b"/>
+<text x="311" y="168.5" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">C</text>
+<circle id="u09ch1_B" cx="530" cy="428" r="3" fill="#c0392b"/>
+<text x="530" y="410" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">B</text>
+<path d="M166 379 L166 343" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09ch1_v)"/>
+<path d="M288 191.5 L336 191.5" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09ch1_v)"/>
+<path d="M474 428 L506 428" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09ch1_v)"/>
+<text x="108" y="305" font-size="11" fill="#1a2530" text-anchor="start">vA ≈ 0</text>
+<text x="107" y="325" font-size="11" fill="#1565c0" text-anchor="start">pA = pₐₜₘ</text>
+<line x1="229" y1="274" x2="768" y2="274" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5 5"/>
+<text x="615" y="264" font-size="11" fill="#1a2530" text-anchor="start">referenca zA = 0</text>
+<line x1="228" y1="428" x2="522" y2="428" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5 5"/>
+<line x1="58" y1="274" x2="68" y2="274" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="58" y1="505" x2="68" y2="505" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09ch1_heightA" d="M63 274 L63 505" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)"/>
+<text x="21" y="378" font-size="11" fill="#b7600c" text-anchor="start">4,2 m</text>
+<line x1="365" y1="191.5" x2="375" y2="191.5" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="365" y1="274" x2="375" y2="274" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09ch1_heightC" d="M370 191.5 L370 274" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)"/>
+<text x="293" y="251" font-size="11" fill="#b7600c" text-anchor="start">zC = 1,5 m</text>
+<line x1="351" y1="191.5" x2="375" y2="191.5" stroke="#b7600c" stroke-width="1"/>
+<line x1="689" y1="274" x2="699" y2="274" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="689" y1="428" x2="699" y2="428" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09ch1_dropAB" d="M694 274 L694 428" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)"/>
+<text x="708" y="354" font-size="11" fill="#b7600c" text-anchor="start">Δz = 2,8 m</text>
+<line x1="488" y1="428" x2="498" y2="428" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="488" y1="505" x2="498" y2="505" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09ch1_heightB" d="M493 428 L493 505" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)"/>
+<text x="505" y="481" font-size="11" fill="#b7600c" text-anchor="start">1,4 m</text>
+<line x1="276" y1="183.5" x2="286" y2="183.5" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="276" y1="199.5" x2="286" y2="199.5" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09ch1_dC" d="M281 183.5 L281 199.5" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dimSmall)" marker-end="url(#u09ch1_dimSmall)"/>
+<line x1="279" y1="179" x2="260" y2="144" stroke="#b7600c" stroke-width="1"/>
+<text x="213" y="133" font-size="12" fill="#b7600c" text-anchor="start">dC = 80 mm</text>
+<line x1="428" y1="329" x2="428" y2="339" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="448" y1="329" x2="448" y2="339" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09ch1_D" d="M428 334 L448 334" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dimSmall)" marker-end="url(#u09ch1_dimSmall)"/>
+<text x="438.0" y="351" font-size="11" fill="#b7600c" text-anchor="middle"></text>
+<line x1="451" y1="334" x2="488" y2="315" stroke="#b7600c" stroke-width="1"/>
+<text x="497" y="314" font-size="11" fill="#b7600c" text-anchor="start">D = 100 mm</text>
+<path id="u09ch1_jet" d="M530 428 Q638.8944443027283 428 747.7888886054566 505" fill="none" stroke="#1565c0" stroke-width="2.5" />
+<line x1="40" y1="505" x2="782" y2="505" stroke="#3a4a56" stroke-width="1.5"/>
+<rect x="40" y="505" width="742" height="9" rx="0" fill="url(#u09ch1_hatch)" stroke="none" stroke-width="1.2"/>
+<line x1="530" y1="516" x2="530" y2="559" stroke="#b7600c" stroke-width="1"/>
+<line x1="747.7888886054566" y1="516" x2="747.7888886054566" y2="559" stroke="#b7600c" stroke-width="1"/>
+<line x1="530" y1="546" x2="530" y2="556" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="747.7888886054566" y1="546" x2="747.7888886054566" y2="556" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09ch1_range" d="M530 551 L747.7888886054566 551" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)"/>
+<text x="638.8944443027283" y="568" font-size="11" fill="#b7600c" text-anchor="middle">x = 3,96 m</text>
+<text x="553" y="414" font-size="11" fill="#1e8449" text-anchor="start">vB = 7,41 m/s</text>
+<text x="381" y="155" font-size="11" fill="#1e8449" text-anchor="start">vC = 11,58 m/s</text>
+<text x="561" y="468" font-size="11" fill="#1565c0" text-anchor="start">putanja osi mlaza</text>
+<rect x="824" y="60" width="288" height="87" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<text x="836" y="80" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">1. A → B: brzina i protok</text>
+<text x="836" y="103" font-size="12" fill="#1a2530" text-anchor="start">vB²/(2g) = 4,2 − 1,4 = 2,8 m</text>
+<text x="836" y="122" font-size="12" fill="#1a2530" text-anchor="start">vB = 7,41 m/s; Q = 58,2 L/s</text>
+<rect x="824" y="159" width="288" height="87" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<text x="836" y="179" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">2. Kontinuitet u suženju</text>
+<text x="836" y="202" font-size="12" fill="#1a2530" text-anchor="start">vC = vB(D/dC)² = 11,58 m/s</text>
+<text x="836" y="221" font-size="12" fill="#1a2530" text-anchor="start">vC²/(2g) = 6,836 m</text>
+<rect x="824" y="258" width="288" height="106" rx="7" fill="#f4f9fd" stroke="#c0392b" stroke-width="1.2"/>
+<text x="836" y="278" font-size="13" fill="#c0392b" text-anchor="start" font-weight="700">3. A → C: tlak u vrhu</text>
+<text x="836" y="301" font-size="12" fill="#1a2530" text-anchor="start">pC,man/(ρg) = −1,5 − 6,836</text>
+<text x="836" y="320" font-size="12" fill="#1a2530" text-anchor="start">pC,man ≈ −81,78 kPa</text>
+<text x="836" y="339" font-size="12" fill="#1a2530" text-anchor="start">pC,abs/(ρg) = 1,864 m</text>
+<rect x="824" y="376" width="288" height="87" rx="7" fill="#f4f9fd" stroke="#1e8449" stroke-width="1.2"/>
+<text x="836" y="396" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">4. Idealni kriterij tlaka pare</text>
+<text x="836" y="419" font-size="12" fill="#1a2530" text-anchor="start">1,864 − 0,25 = 1,614 m</text>
+<text x="836" y="438" font-size="12" fill="#1a2530" text-anchor="start">Nije potvrda rada stvarnog sifona.</text>
+<rect x="824" y="475" width="288" height="88" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<text x="836" y="495" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">5. Mlaz nakon izlaza B</text>
+<text x="836" y="518" font-size="12" fill="#1a2530" text-anchor="start">t = √(2·1,4/g) = 0,534 s</text>
+<text x="836" y="537" font-size="12" fill="#1a2530" text-anchor="start">x = vB t = 3,96 m</text>
+</g>
+</svg>

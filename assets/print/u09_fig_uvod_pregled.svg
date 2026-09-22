@@ -1,208 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="u09fup_title u09fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
-  <title id="u09fup_title">Pregled poglavlja 9 - Bernoullijeva jednadzba kao bilanca mehanicke energije po strujnici</title>
-  <desc id="u09fup_desc">Lijevo: stupcasti dijagram tri energetska clana u dva presjeka iste strujnice. Geodetska visina z (smedi), tlacna visina p kroz ro g (plavi) i brzinska visina v na kvadrat kroz 2g (zeleni) zbrajaju se do iste razine EGL (crvena crtkana linija konstantna u idealnom toku). HGL prolazi vrhom plavog stupca. Iz presjeka 1 u presjek 2 raste z i v, a tlacni clan pada. Desno: tri ekvivalentna oblika Bernoullijeve jednadzbe u formula panelu i uvjeti primjene.</desc>
-
-  <defs>
-    <marker id="u09fup_arrV" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#1e8449" />
-    </marker>
-    <marker id="u09fup_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-    <marker id="u09fup_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-    <linearGradient id="u09fup_bar_z" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e9b984" />
-      <stop offset="1" stop-color="#b7600c" />
-    </linearGradient>
-    <linearGradient id="u09fup_bar_p" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#9bc4e8" />
-      <stop offset="1" stop-color="#1565c0" />
-    </linearGradient>
-    <linearGradient id="u09fup_bar_v" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#88c8a3" />
-      <stop offset="1" stop-color="#1e8449" />
-    </linearGradient>
-  </defs>
-
-  <!-- pozadina i okvir -->
-  <rect x="0" y="0" width="960" height="500" fill="#ffffff" />
-  <!-- separator izmedju panela -->
-  <line x1="560" y1="34" x2="560" y2="466" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
-
-  <!-- ======================================================== -->
-  <!-- LIJEVI PANEL: ENERGETSKI BILJEZ TRIJU CLANOVA            -->
-  <!-- ======================================================== -->
-
-  <!--
-    Geometrija (lokalne y koordinate):
-      EGL (vrh)                   : y = 100
-      vrh plavog stupca presjek 1 : y = 248  (HGL u 1)
-      vrh smedjeg stupca presjek 1: y = 372  (visina z1)
-      vrh plavog stupca presjek 2 : y = 270  (HGL u 2)
-      vrh smedjeg stupca presjek 2: y = 332  (visina z2)
-      referentna razina z=0       : y = 420
-
-    Presjeki 1 i 2 prikazani kao vertikalne tanke crtkane linije s krugom-noterom na
-    visini z1, z2. Stupci stoje ZA noterom (offset 30 px udesno) tako da ne pokrivaju
-    nodes-tekst i jasno se vidi razina HGL i EGL.
-  -->
-
-  <!-- Referentna razina z=0 -->
-  <line x1="30" y1="420" x2="540" y2="420" stroke="#7a8a96" stroke-width="1.2" stroke-dasharray="6,4" />
-  <!-- EGL (crvena crtkana vodoravna na vrhu) -->
-  <line x1="30" y1="100" x2="540" y2="100" stroke="#c0392b" stroke-width="2" stroke-dasharray="9,5" />
-  <!-- HGL (plava crtkana, prolazi vrhom plavog stupca; pada od 1 do 2) -->
-  <line x1="30" y1="248" x2="170" y2="248" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="6,4" />
-  <line x1="170" y1="248" x2="380" y2="270" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="6,4" />
-  <line x1="380" y1="270" x2="540" y2="270" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="6,4" />
-  <!-- ======================================================== -->
-  <!-- PRESJEK 1                                                 -->
-  <!--   x_section = 130 (vertikalna crtkana linija)             -->
-  <!--   noter (krug) na z1 = 372                                -->
-  <!--   stupac: x = 158..198 (sirina 40)                        -->
-  <!--     z1 (smedi)  y=372..420  (h=48)                        -->
-  <!--     p1 (plavi)  y=248..372  (h=124)                       -->
-  <!--     v1 (zeleni) y=100..248  (h=148)                       -->
-  <!-- ======================================================== -->
-
-  <!-- Vertikalna crtkana linija presjeka 1 -->
-  <line x1="130" y1="100" x2="130" y2="420" stroke="#5a6a78" stroke-width="0.9" stroke-dasharray="3,3" />
-
-  <!-- Noter (kruzic s brojem) na strujnici (visina z1) -->
-  <circle cx="130" cy="372" r="6" fill="#ffffff" stroke="#1a2530" stroke-width="1.6" />
-  <!-- Vektor brzine v1 (zeleni, kratak, ulijevo od presjeka) -->
-  <line x1="68" y1="372" x2="122" y2="372" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u09fup_arrV)" />
-  <!-- Stupac 1 -->
-  <rect x="158" y="372" width="40" height="48" fill="url(#u09fup_bar_z)" stroke="#8a4a08" stroke-width="0.9" />
-  <rect x="158" y="248" width="40" height="124" fill="url(#u09fup_bar_p)" stroke="#0d47a1" stroke-width="0.9" />
-  <rect x="158" y="100" width="40" height="148" fill="url(#u09fup_bar_v)" stroke="#0d5a32" stroke-width="0.9" />
-
-  <!-- Labele stupaca 1 — bijele unutar stupaca -->
-  <!-- Naslov presjeka iznad stupca 1 -->
-  <!-- ======================================================== -->
-  <!-- PRESJEK 2                                                 -->
-  <!--   x_section = 348                                         -->
-  <!--   noter na z2 = 332                                       -->
-  <!--   stupac: x = 376..416                                    -->
-  <!--     z2 (smedi)  y=332..420  (h=88)                        -->
-  <!--     p2 (plavi)  y=270..332  (h=62)                        -->
-  <!--     v2 (zeleni) y=100..270  (h=170)                       -->
-  <!-- ======================================================== -->
-
-  <line x1="348" y1="100" x2="348" y2="420" stroke="#5a6a78" stroke-width="0.9" stroke-dasharray="3,3" />
-  <circle cx="348" cy="332" r="6" fill="#ffffff" stroke="#1a2530" stroke-width="1.6" />
-  <!-- Vektor brzine v2 (duzi, sugerira v2 > v1) -->
-  <line x1="262" y1="332" x2="340" y2="332" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u09fup_arrV)" />
-  <!-- Stupac 2 -->
-  <rect x="376" y="332" width="40" height="88" fill="url(#u09fup_bar_z)" stroke="#8a4a08" stroke-width="0.9" />
-  <rect x="376" y="270" width="40" height="62" fill="url(#u09fup_bar_p)" stroke="#0d47a1" stroke-width="0.9" />
-  <rect x="376" y="100" width="40" height="170" fill="url(#u09fup_bar_v)" stroke="#0d5a32" stroke-width="0.9" />
-
-  <!-- Labele stupaca 2 -->
-  <!-- ======================================================== -->
-  <!-- ANOTACIJE PRERASPODJELE (srednji prostor x=210..366)      -->
-  <!-- ======================================================== -->
-  <!-- ======================================================== -->
-  <!-- KOTA: ukupna visina H = EGL razina (desno od stupca 2)    -->
-  <!-- ======================================================== -->
-  <!-- ======================================================== -->
-  <!-- LEGENDA / FOOTER                                          -->
-  <!-- ======================================================== -->
-  <rect x="30" y="442" width="516" height="32" rx="6" fill="#f4f9fd" stroke="#cfe0ee" stroke-width="1" />
-  <rect x="40" y="453" width="10" height="10" fill="url(#u09fup_bar_z)" stroke="#8a4a08" stroke-width="0.6" />
-  <rect x="148" y="453" width="10" height="10" fill="url(#u09fup_bar_p)" stroke="#0d47a1" stroke-width="0.6" />
-  <rect x="290" y="453" width="10" height="10" fill="url(#u09fup_bar_v)" stroke="#0d5a32" stroke-width="0.6" />
-  <!-- ======================================================== -->
-  <!-- DESNI PANEL: BERNOULLIJEVA JEDNADZBA — TRI OBLIKA         -->
-  <!-- ======================================================== -->
-
-  <!-- Header bar -->
-  <rect x="580" y="44" width="350" height="36" rx="8" fill="#1565c0" />
-  <!-- Glavni panel -->
-  <rect x="580" y="80" width="350" height="262" rx="0" fill="#f4f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-
-  <!-- Blok 1: oblik u metrima fluida -->
-  <line x1="600" y1="148" x2="910" y2="148" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 2: oblik u paskalima -->
-  <line x1="600" y1="212" x2="910" y2="212" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 3: dvije tocke iste strujnice -->
-  <line x1="600" y1="278" x2="910" y2="278" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Sazetak italic + EGL/HGL definicija -->
-  <!-- Uvjeti primjene -->
-  <rect x="580" y="354" width="350" height="112" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.3" />
-  <line x1="755" y1="386" x2="755" y2="458" stroke="#ecd9c2" stroke-width="1" />
-  <line x1="416" y1="100" x2="478" y2="100" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="416" y1="420" x2="478" y2="420" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="470" y1="100" x2="470" y2="420" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09fup_dimL)" marker-end="url(#u09fup_dim)" />
-  <text x="34" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1a2530">Tri energetska člana po strujnici (idealni tok)</text>
-
-  <text x="538" y="434" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="end" fill="#5a6a78"><tspan font-style="italic">z</tspan> = 0   (referentna razina)</text>
-
-  <text x="36" y="93" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#c0392b">EGL = konst. (idealni tok)</text>
-
-  <text x="36" y="241" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1565c0">HGL</text>
-
-  <text x="130" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1a2530">1</text>
-
-  <text x="76" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449"><tspan font-weight="700">v</tspan>₁</text>
-
-  <text x="178" y="402" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff"><tspan font-style="italic">z</tspan>₁</text>
-  <text x="178" y="313" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff"><tspan font-style="italic">p</tspan>₁/ρg</text>
-  <text x="178" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff"><tspan font-style="italic">v</tspan>₁²/2g</text>
-
-  <text x="178" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1a2530">presjek 1</text>
-
-  <text x="348" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1a2530">2</text>
-
-  <text x="270" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1e8449"><tspan font-weight="700">v</tspan>₂</text>
-
-  <text x="396" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff"><tspan font-style="italic">z</tspan>₂</text>
-  <text x="396" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff"><tspan font-style="italic">p</tspan>₂/ρg</text>
-  <text x="396" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff"><tspan font-style="italic">v</tspan>₂²/2g</text>
-
-  <text x="396" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1a2530">presjek 2</text>
-
-  <text x="288" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1e8449"><tspan font-style="italic" font-weight="700">v</tspan> raste ↑</text>
-  <text x="288" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1565c0"><tspan font-style="italic" font-weight="700">p</tspan> pada ↓</text>
-  <text x="56" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">geodetska <tspan font-style="italic" font-weight="700">z</tspan></text>
-  <text x="164" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">tlačna <tspan font-style="italic" font-weight="700">p</tspan>/(ρg)</text>
-  <text x="56" y="473" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">visina položaja</text>
-  <text x="164" y="473" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">visina ekvivalentnog stupca</text>
-  <text x="306" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">brzinska <tspan font-style="italic" font-weight="700">v</tspan>²/(2g)</text>
-  <text x="306" y="473" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">kinetička visina</text>
-  <text x="430" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1a2530">Zbroj ≡ H</text>
-  <text x="430" y="473" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#5a6a78">isti u oba presjeka</text>
-
-  <text x="755" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#ffffff">Bernoullijeva jednadžba (idealni fluid)</text>
-
-  <text x="755" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">U metrima fluida (visine)</text>
-  <text x="755" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">p</tspan>/(ρg) + <tspan font-style="italic">v</tspan>²/(2g) + <tspan font-style="italic">z</tspan> = konst.</text>
-  <text x="755" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">U paskalima (energija po jedinici volumena)</text>
-  <text x="755" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">p</tspan> + ½ρ<tspan font-style="italic">v</tspan>² + ρg<tspan font-style="italic">z</tspan> = konst.</text>
-  <text x="755" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">Dvije točke iste strujnice (presjek 1 → presjek 2)</text>
-  <text x="755" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">p</tspan>₁/(ρg) + <tspan font-style="italic">v</tspan>₁²/(2g) + <tspan font-style="italic">z</tspan>₁  =  <tspan font-style="italic">p</tspan>₂/(ρg) + <tspan font-style="italic">v</tspan>₂²/(2g) + <tspan font-style="italic">z</tspan>₂</text>
-  <text x="755" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#1a2530">Tlačna + brzinska + geodetska visina = konstanta duž iste strujnice.</text>
-  <text x="755" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1565c0">EGL = <tspan font-style="italic">p</tspan>/(ρg) + <tspan font-style="italic">v</tspan>²/(2g) + <tspan font-style="italic">z</tspan>    HGL = <tspan font-style="italic">p</tspan>/(ρg) + <tspan font-style="italic">z</tspan></text>
-
-  <text x="595" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">• stacionarno strujanje (∂<tspan font-style="italic">v</tspan>/∂<tspan font-style="italic">t</tspan> = 0)</text>
-  <text x="595" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">• nestlačivi fluid (ρ = konst.)</text>
-  <text x="595" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">• idealni fluid (bez viskoznih gubitaka)</text>
-  <text x="595" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">• gravitacijsko polje konstantno</text>
-  <text x="770" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">• ista strujnica (točke 1 i 2)</text>
-  <text x="770" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">• bez dovoda/odvoda energije</text>
-  <text x="770" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">→ EGL ostaje</text>
-  <text x="770" y="452" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">  vodoravna</text>
-<text x="288" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#b7600c"><tspan font-style="italic" font-weight="700">z</tspan> raste ↑</text>
-
-  <text x="485" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b7600c">H</text>
-  <text x="485" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#b7600c">ukupna</text>
-  <text x="485" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#b7600c">energetska</text>
-  <text x="485" y="219" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#b7600c">visina</text>
-
-  <text x="755" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#b7600c">UVJETI PRIMJENE</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="u09intro_title u09intro_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
+<title id="u09intro_title">Energijska jednadžba i Bernoulli</title><desc id="u09intro_desc">Lijevo su dva energetska stupca iste ukupne visine: geodetska, tlačna i brzinska visina. Gornji desni panel daje jednadžbe, a donji uzlazni vod stalnog presjeka u kojem tlak pada zbog porasta geodetske visine. Stupci energije nisu slojevi različitih fluida.</desc>
+<defs>
+<linearGradient id="u09intro_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u09intro_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u09intro_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u09intro_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u09intro_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u09intro_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u09intro_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="960" height="500" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<rect x="0" y="0" width="960" height="48" rx="0" fill="url(#u09intro_hdr)" stroke="none" stroke-width="1.2"/>
+<text x="480" y="22" font-size="18" fill="white" text-anchor="middle" font-weight="700">Energijska jednadžba i Bernoulli</text>
+<text x="480" y="40" font-size="12" fill="#8aaccc" text-anchor="middle">tlak · brzina · geodetska visina · pretpostavke modela</text>
+<rect x="18" y="62" width="527" height="417" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<text x="35" y="87" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Tri energijska člana po istoj strujnici</text>
+<rect x="145" y="384" width="46" height="36" rx="0" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+<text x="168" y="406" font-size="10" fill="white" text-anchor="middle" font-weight="700">z</text>
+<rect x="145" y="204" width="46" height="180" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="168" y="298" font-size="10" fill="white" text-anchor="middle" font-weight="700">p/(ρg)</text>
+<rect x="145" y="132" width="46" height="72" rx="0" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+<text x="168" y="172" font-size="10" fill="white" text-anchor="middle" font-weight="700">v²/(2g)</text>
+<rect x="362" y="348" width="46" height="72" rx="0" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+<text x="385" y="388" font-size="10" fill="white" text-anchor="middle" font-weight="700">z</text>
+<rect x="362" y="240" width="46" height="108" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="385" y="298" font-size="10" fill="white" text-anchor="middle" font-weight="700">p/(ρg)</text>
+<rect x="362" y="132" width="46" height="108" rx="0" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+<text x="385" y="190" font-size="10" fill="white" text-anchor="middle" font-weight="700">v²/(2g)</text>
+<line x1="32" y1="132" x2="515" y2="132" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="38" y="120" font-size="11" fill="#c0392b" text-anchor="start">EGL = 8 m</text>
+<line x1="33" y1="420" x2="515" y2="420" stroke="#7a8a96" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="420" y="439" font-size="11" fill="#1a2530" text-anchor="start">z = 0</text>
+<path id="u09intro_hgl" d="M32 204 H191 L362 240 H515" fill="none" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="5 4"/>
+<text x="41" y="195" font-size="10" fill="#1565c0" text-anchor="start">HGL₁ = 6 m</text>
+<text x="416" y="258" font-size="10" fill="#1565c0" text-anchor="start">HGL₂ = 5 m</text>
+<text x="168" y="105" font-size="11" fill="#1a2530" text-anchor="middle">presjek 1</text>
+<text x="385" y="105" font-size="11" fill="#1a2530" text-anchor="middle">presjek 2</text>
+<text x="48" y="458" font-size="10" fill="#1a2530" text-anchor="start">Stupci energije; nisu slojevi fluida. Jednaka skala: 36 px/m.</text>
+<rect x="563" y="62" width="378" height="180" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<text x="575" y="82" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Bernoulli duž strujnice</text>
+<text x="575" y="105" font-size="12" fill="#1a2530" text-anchor="start">p/(ρg) + v²/(2g) + z = konst.</text>
+<text x="575" y="124" font-size="12" fill="#1a2530" text-anchor="start">HGL = z + p/(ρg)</text>
+<text x="575" y="143" font-size="12" fill="#1a2530" text-anchor="start">EGL = HGL + v²/(2g)</text>
+<text x="575" y="162" font-size="12" fill="#1a2530" text-anchor="start">Stacionaran, nestlačiv tok; zanemarivi gubitci.</text>
+<text x="575" y="181" font-size="12" fill="#1a2530" text-anchor="start">Između presjeka nema strojnog rada.</text>
+<rect x="563" y="257" width="378" height="222" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<text x="578" y="280" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Primjena: uzlazni tlačni dovod</text>
+<defs><linearGradient id="u09intro_field" gradientUnits="userSpaceOnUse" x1="0" y1="321" x2="0" y2="405"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u09intro_riserwall" d="M592 390 H646 Q660 390 672 378 L714 336 Q724 326 740 326 H878" fill="none" stroke="#3a4a56" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path id="u09intro_riserwater" d="M592 390 H646 Q660 390 672 378 L714 336 Q724 326 740 326 H878" fill="none" stroke="url(#u09intro_field)" stroke-width="16" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M596 390 L629 390" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09intro_v)"/>
+<text x="612.5" y="381" font-size="12" fill="#1e8449" text-anchor="middle">v</text>
+<path d="M798 326 L831 326" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09intro_v)"/>
+<text x="814.5" y="317" font-size="12" fill="#1e8449" text-anchor="middle">v</text>
+<line x1="903" y1="326" x2="913" y2="326" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="903" y1="390" x2="913" y2="390" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09intro_rise" d="M908 326 L908 390" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09intro_dim)" marker-end="url(#u09intro_dim)"/>
+<text x="919" y="362.0" font-size="11" fill="#b7600c" text-anchor="start">Δz</text>
+<text x="580" y="431" font-size="12" fill="#1a2530" text-anchor="start">Stalan presjek: v₁ = v₂;  p₂ − p₁ = −ρgΔz.</text>
+<text x="580" y="454" font-size="11" fill="#1a2530" text-anchor="start">Dio tlačne energije prelazi u geodetsku visinu.</text>
+</g>
+</svg>

@@ -1,232 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" role="img" aria-labelledby="u09v2sm_title u09v2sm_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
-  <title id="u09v2sm_title">Domet slobodnog mlaza iz velikog otvorenog spremnika</title>
-  <desc id="u09v2sm_desc">Lijevo: veliki otvoreni spremnik s vodom visine H=4,0 m i tri male rupice na bocnoj stijenci na visinama h=1,0, 2,0 i 3,0 m iznad tla. Iz svake rupice istjece slobodni mlaz koji pada na tlo po paraboli; mlaz iz srednjeg otvora (h=2,0 m) daje najveci domet x=4,0 m. Desno: Torricellijeva izlazna brzina, vrijeme leta, izraz dometa i numericki rezultati za sve tri visine.</desc>
-
-  <defs>
-    <linearGradient id="u09v2sm_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
-    <pattern id="u09v2sm_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
-    </pattern>
-    <pattern id="u09v2sm_tlo" width="10" height="6" patternUnits="userSpaceOnUse">
-      <rect width="10" height="6" fill="#efe9d8" />
-      <line x1="0" y1="6" x2="10" y2="0" stroke="#b8a778" stroke-width="0.9" />
-    </pattern>
-    <marker id="u09v2sm_v" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
-    </marker>
-    <marker id="u09v2sm_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-    <marker id="u09v2sm_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-  </defs>
-
-  <!-- panel okviri -->
-  <rect x="14" y="14" width="478" height="442" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-  <rect x="504" y="14" width="382" height="442" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-
-  <!-- ========================= LIJEVI PANEL: scena ========================= -->
-  <!-- referentne x-tocke (skala 1 m = 50 px), tlo y=320 -->
-  <!-- tank interior: x = 90..220, izvor mlaza pri x=222 (vanjski rub stijenke) -->
-
-  <!-- ZRAK pozadina ispod neba (subtilno) -->
-  <rect x="30" y="56" width="450" height="264" fill="#f4f9fd" opacity="0.55" />
-
-  <!-- SPREMNIK: stijenke pune visine, otvoren odozgo -->
-  <!-- lijeva stijenka -->
-  <rect x="80" y="120" width="10" height="200" fill="url(#u09v2sm_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- desna stijenka -->
-  <rect x="220" y="120" width="10" height="200" fill="url(#u09v2sm_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- dno -->
-  <rect x="80" y="320" width="150" height="10" fill="url(#u09v2sm_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-
-  <!-- VODA u spremniku (od slobodne povrsine y=120 do dna y=320) -->
-  <rect x="90" y="120" width="130" height="200" fill="url(#u09v2sm_voda)" />
-
-  <!-- slobodna povrsina (puna plava linija) -->
-  <line x1="90" y1="120" x2="220" y2="120" stroke="#1565c0" stroke-width="2" />
-  <!-- TLO: hatched strip + kontura -->
-  <rect x="30" y="320" width="450" height="14" fill="url(#u09v2sm_tlo)" />
-  <line x1="30" y1="320" x2="480" y2="320" stroke="#7a6630" stroke-width="1.6" />
-  <!-- RUPICE I MLAZOVI (port overlay preko desne stijenke) -->
-  <!-- h=3 m: y=170. Mlaz lijepo izlazi vodoravno, fluid overlay 8 px visok preko stjenke -->
-  <rect x="220" y="166" width="10" height="8" fill="url(#u09v2sm_voda)" />
-  <!-- h=2 m: y=220 -->
-  <rect x="220" y="216" width="10" height="8" fill="url(#u09v2sm_voda)" />
-  <!-- h=1 m: y=270 -->
-  <rect x="220" y="266" width="10" height="8" fill="url(#u09v2sm_voda)" />
-
-  <!-- parabolicne putanje (kvadraticni Bezier; control = ((x0+x1)/2, y0)) -->
-  <!-- Tlo y=320, skala 50 px/m. Sve tri putanje pocinju na x=230 (vanjski rub stjenke) -->
-
-  <!-- Trajektorija h=3 m: y0=170, x1=395, control (312.5, 170) -->
-  <path d="M230,170 Q312.5,170 395,320" fill="none" stroke="#5b9ec9" stroke-width="2" stroke-dasharray="6,4" opacity="0.95" />
-
-  <!-- Trajektorija h=1 m: y0=270, x1=395, control (312.5, 270) -->
-  <path d="M230,270 Q312.5,270 395,320" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="6,4" opacity="0.95" />
-
-  <!-- Trajektorija h=2 m: y0=220, x1=422, control (326, 220) - MAKSIMUM, deblja puna linija -->
-  <path d="M230,220 Q326,220 422,320" fill="none" stroke="#1e8449" stroke-width="2.8" />
-
-  <!-- tocke izlaza (male tamno-plave) -->
-  <circle cx="230" cy="170" r="2.8" fill="#0d47a1" />
-  <circle cx="230" cy="220" r="3.2" fill="#0d47a1" />
-  <circle cx="230" cy="270" r="2.8" fill="#0d47a1" />
-
-  <!-- izlazne brzine v_0 (plave strelice proporcionalne iznosu: 5 px/(m/s)) -->
-  <!-- v_0 h=3 = 4,43 m/s -> 22 px, h=2 = 6,26 -> 31 px, h=1 = 7,67 -> 38 px -->
-  <line x1="230" y1="170" x2="252" y2="170" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09v2sm_v)" />
-  <line x1="230" y1="220" x2="261" y2="220" stroke="#1565c0" stroke-width="2" marker-end="url(#u09v2sm_v)" />
-  <line x1="230" y1="270" x2="268" y2="270" stroke="#1565c0" stroke-width="1.6" marker-end="url(#u09v2sm_v)" />
-
-  <!-- v0 labele kraj strelica -->
-  <!-- Tocke pada na tlo + male oznake -->
-  <circle cx="395" cy="320" r="3.5" fill="#1565c0" />
-  <circle cx="422" cy="320" r="4.5" fill="#1e8449" />
-
-  <!-- ===== KOTE ===== -->
-
-  <!-- Kota H (vertikalna, lijevo od spremnika) -->
-  <!-- Kote h: tri pomocne horizontalne reference linije od svakog otvora prema lijevo (u vodu),
-       svaka oznacena h_n = N,0 m u vodi. Jedna kratka vertikalna kota uz unutarnju stranu desne stjenke
-       koja jasno spaja otvor s tlom. -->
-
-  <!-- Kote h: tri vertikalne kote stupnjevito unutar vode, blizu desne stjenke,
-       svaka mjeri od svog otvora do tla. Razmaknute horizontalno radi izbjegavanja preklapanja. -->
-
-  <!-- h_3 = 3,0 m: najduza, najlijevija na x=174 -->
-  <!-- extension linija od kote do otvora -->
-  <rect x="103" y="240" width="63" height="15" rx="2" fill="#ffffff" opacity="0.85" />
-  <!-- h_2 = 2,0 m: srednja kota na x=196 -->
-  <rect x="125" y="266" width="63" height="15" rx="2" fill="#ffffff" opacity="0.85" />
-  <!-- h_1 = 1,0 m: najkraca kota na x=216, uz desnu stjenku -->
-  <rect x="145" y="292" width="63" height="15" rx="2" fill="#ffffff" opacity="0.85" />
-  <!-- Kote dometa x (vodoravne, ispod tla) -->
-  <!-- x1 = 3,46 m (od stjenke x=230 do x=395) - boja crvena (h=1) -->
-  <!-- x2 = 4,00 m (max) -->
-  <line x1="233" y1="397" x2="419" y2="397" stroke="#1e8449" stroke-width="1.4" marker-start="url(#u09v2sm_dimL)" marker-end="url(#u09v2sm_dim)" />
-  <!-- Legend (donji rub lijevog panela) -->
-  <g font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">
-    <line x1="38" y1="430" x2="62" y2="430" stroke="#1565c0" stroke-width="2" stroke-dasharray="6,4" />
-    <line x1="160" y1="430" x2="184" y2="430" stroke="#1e8449" stroke-width="2.8" />
-    <line x1="350" y1="430" x2="374" y2="430" stroke="#5b9ec9" stroke-width="2" stroke-dasharray="6,4" />
-    <text x="68" y="433"><tspan font-style="italic">h</tspan>₁ = 1,0 m</text>
-
-    <text x="190" y="433" font-weight="700" fill="#1e8449"><tspan font-style="italic">h</tspan>₂ = 2,0 m  (maks)</text>
-
-    <text x="380" y="433"><tspan font-style="italic">h</tspan>₃ = 3,0 m</text>
-  </g>
-
-  <!-- ========================= DESNI PANEL: formule + rezultati ========================= -->
-  <!-- Panel: formule -->
-  <rect x="524" y="58" width="342" height="184" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="524" y="58" width="342" height="26" rx="10" fill="#1565c0" />
-  <rect x="524" y="74" width="342" height="10" fill="#1565c0" />
-  <!-- Blok 1: v0 -->
-  <line x1="540" y1="142" x2="850" y2="142" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 2: t -->
-  <line x1="540" y1="196" x2="850" y2="196" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Blok 3: x -->
-  <!-- Panel: numericki rezultati -->
-  <rect x="524" y="256" width="342" height="138" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="524" y="256" width="342" height="26" rx="10" fill="#5a6a78" />
-  <rect x="524" y="272" width="342" height="10" fill="#5a6a78" />
-  <!-- Tablica: zaglavlje -->
-  <line x1="540" y1="308" x2="850" y2="308" stroke="#c8d6e4" stroke-width="1" />
-
-  <!-- Red 1: h=1,0 -->
-  <!-- Red 2: h=2,0 (MAKS) -->
-  <rect x="540" y="332" width="310" height="22" fill="#eaf6ee" />
-  <!-- Red 3: h=3,0 -->
-  <line x1="540" y1="378" x2="850" y2="378" stroke="#c8d6e4" stroke-width="1" />
-  <!-- Badge: maksimum -->
-  <rect x="524" y="406" width="342" height="40" rx="9" fill="#eaf6ee" stroke="#1e8449" stroke-width="1.5" />
-  <line x1="80" y1="120" x2="56" y2="120" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="80" y1="320" x2="56" y2="320" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="60" y1="120" x2="60" y2="320" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09v2sm_dimL)" marker-end="url(#u09v2sm_dim)" />
-  <line x1="170" y1="170" x2="178" y2="170" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="170" y1="320" x2="178" y2="320" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="174" y1="172" x2="174" y2="318" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09v2sm_dimL)" marker-end="url(#u09v2sm_dim)" />
-  <line x1="178" y1="170" x2="220" y2="170" stroke="#b7600c" stroke-width="0.6" stroke-dasharray="2,3" opacity="0.7" />
-  <line x1="192" y1="220" x2="200" y2="220" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="192" y1="320" x2="200" y2="320" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="196" y1="222" x2="196" y2="318" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09v2sm_dimL)" marker-end="url(#u09v2sm_dim)" />
-  <line x1="200" y1="220" x2="220" y2="220" stroke="#b7600c" stroke-width="0.6" stroke-dasharray="2,3" opacity="0.7" />
-  <line x1="212" y1="270" x2="220" y2="270" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="212" y1="320" x2="220" y2="320" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="216" y1="272" x2="216" y2="318" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09v2sm_dimL)" marker-end="url(#u09v2sm_dim)" />
-  <line x1="230" y1="320" x2="230" y2="372" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="395" y1="320" x2="395" y2="372" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="230" y1="375" x2="230" y2="359" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="395" y1="375" x2="395" y2="359" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="233" y1="367" x2="392" y2="367" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u09v2sm_dimL)" marker-end="url(#u09v2sm_dim)" />
-  <line x1="422" y1="320" x2="422" y2="402" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="230" y1="372" x2="230" y2="402" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="230" y1="405" x2="230" y2="389" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="422" y1="405" x2="422" y2="389" stroke="#b7600c" stroke-width="1.2" />
-  <text x="38" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Spremnik i parabolicne putanje mlazova</text>
-
-  <text x="100" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1565c0">slobodna površina (p₀)</text>
-
-  <text x="470" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#7a6630">tlo (z = 0)</text>
-
-  <text x="256" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1565c0"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 4,43 m/s</text>
-  <text x="265" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1565c0"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 6,26 m/s</text>
-  <text x="272" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1565c0"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 7,67 m/s</text>
-
-  <text x="326" y="391" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">x</tspan>₂ = 4,00 m  (MAKS)</text>
-
-  <text x="528" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1a2530">Torricelli + horizontalno izbacivanje</text>
-
-  <text x="695" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">jednadžbe</text>
-
-  <text x="538" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">izlazna brzina (Torricelli)</text>
-  <text x="695" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">v</tspan>₀ = √[ 2<tspan font-style="italic">g</tspan>(<tspan font-style="italic">H</tspan> − <tspan font-style="italic">h</tspan>) ]</text>
-  <text x="538" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">vrijeme leta s visine <tspan font-style="italic">h</tspan></text>
-  <text x="695" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">t</tspan> = √( 2<tspan font-style="italic">h</tspan> / <tspan font-style="italic">g</tspan> )</text>
-  <text x="538" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">vodoravni domet</text>
-  <text x="695" y="236" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">x</tspan> = <tspan font-style="italic">v</tspan>₀ <tspan font-style="italic">t</tspan> = 2√[ <tspan font-style="italic">h</tspan>(<tspan font-style="italic">H</tspan> − <tspan font-style="italic">h</tspan>) ]</text>
-
-  <text x="695" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">rezultati za H = 4,0 m</text>
-
-  <text x="556" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#5a6a78"><tspan font-style="italic">h</tspan> [m]</text>
-  <text x="630" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#5a6a78"><tspan font-style="italic">v</tspan>₀ [m/s]</text>
-  <text x="724" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#5a6a78"><tspan font-style="italic">t</tspan> [s]</text>
-  <text x="800" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#5a6a78"><tspan font-style="italic">x</tspan> [m]</text>
-  <text x="556" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">1,0</text>
-  <text x="630" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">7,67</text>
-  <text x="724" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">0,452</text>
-  <text x="800" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">3,46</text>
-
-  <text x="556" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">2,0</text>
-  <text x="630" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">6,26</text>
-  <text x="724" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">0,639</text>
-  <text x="800" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">4,00</text>
-
-  <text x="556" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">3,0</text>
-  <text x="630" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">4,43</text>
-  <text x="724" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">0,782</text>
-  <text x="800" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">3,46</text>
-
-  <text x="695" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">simetrija: <tspan font-style="italic">h</tspan> i <tspan font-style="italic">H</tspan> − <tspan font-style="italic">h</tspan> daju isti domet</text>
-
-  <text x="540" y="423" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#5a6a78">MAKSIMUM</text>
-  <text x="695" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> = <tspan font-style="italic">H</tspan> = 4,00 m  pri  <tspan font-style="italic">h</tspan> = <tspan font-style="italic">H</tspan>/2 = 2,0 m</text>
-<text x="50" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c" transform="rotate(-90 50 216)"><tspan font-style="italic">H</tspan> = 4,0 m</text>
-
-  <text x="166" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="600" text-anchor="end" fill="#b7600c"><tspan font-style="italic">h</tspan>₃ = 3,0 m</text>
-
-  <text x="188" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="600" text-anchor="end" fill="#b7600c"><tspan font-style="italic">h</tspan>₂ = 2,0 m</text>
-
-  <text x="208" y="304" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="600" text-anchor="end" fill="#b7600c"><tspan font-style="italic">h</tspan>₁ = 1,0 m</text>
-
-  <text x="312" y="361" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">x</tspan>₁ = <tspan font-style="italic">x</tspan>₃ ≈ 3,46 m</text>
-
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" role="img" aria-labelledby="u09v2_title u09v2_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+<title id="u09v2_title">Domet mlaza za tri položaja otvora</title><desc id="u09v2_desc">Tri alternativna položaja malog otvora na stijenci spremnika. Otvori su stvarno prekinuti u stijenci. Putanje počinju vodoravno i slijede y = g x²/(2 v₀²); visine i dometi imaju jednaku skalu. Otvori na 1 i 3 m imaju isti domet, a onaj na 2 m najveći.</desc>
+<defs>
+<linearGradient id="u09v2_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u09v2_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u09v2_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u09v2_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u09v2_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u09v2_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u09v2_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="900" height="470" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<rect x="14" y="14" width="476" height="442" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="504" y="14" width="382" height="442" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<text x="38" y="42" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Tri alternativna položaja malog otvora</text>
+<defs><linearGradient id="u09v2_field" gradientUnits="userSpaceOnUse" x1="0" y1="110" x2="0" y2="310"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<rect x="90" y="110" width="130" height="200" rx="0" fill="url(#u09v2_field)" stroke="none" stroke-width="1.2"/>
+<line x1="90" y1="110" x2="220" y2="110" stroke="#1565c0" stroke-width="2"/>
+<rect x="82" y="87" width="8" height="223" rx="0" fill="url(#u09v2_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="220" y="87" width="8" height="69" rx="0" fill="url(#u09v2_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="220" y="164" width="8" height="42" rx="0" fill="url(#u09v2_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="220" y="214" width="8" height="42" rx="0" fill="url(#u09v2_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect x="220" y="264" width="8" height="46" rx="0" fill="url(#u09v2_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<line x1="36" y1="310" x2="468" y2="310" stroke="#3a4a56" stroke-width="1.5"/>
+<rect x="36" y="310" width="432" height="10" rx="0" fill="url(#u09v2_hatch)" stroke="none" stroke-width="1.2"/>
+<line x1="57" y1="110" x2="67" y2="110" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="57" y1="310" x2="67" y2="310" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09v2_H" d="M62 110 L62 310" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v2_dim)" marker-end="url(#u09v2_dim)"/>
+<text x="30" y="206" font-size="12" fill="#b7600c" text-anchor="start">H</text>
+<text x="28" y="222" font-size="11" fill="#b7600c" text-anchor="start">4,0 m</text>
+<text x="107" y="99" font-size="11" fill="#1565c0" text-anchor="start">p = pₐₜₘ</text>
+<rect x="220" y="256" width="8" height="8" rx="0" fill="url(#u09v2_field)" stroke="none" stroke-width="1.2"/>
+<path id="u09v2_jet1" d="M228 260 Q314.60254037844385 260 401.2050807568877 310" fill="none" stroke="#1565c0" stroke-width="2.3" stroke-dasharray="5 4"/>
+<path d="M229 260 L267.36013555763327 260" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09v2_v)"/>
+<text x="268" y="248" font-size="11" fill="#1565c0" text-anchor="start">h = 1,0 m</text>
+<line x1="151" y1="260" x2="161" y2="260" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="151" y1="310" x2="161" y2="310" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09v2_h1" d="M156 260 L156 310" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v2_dim)" marker-end="url(#u09v2_dim)"/>
+<text x="104" y="280" font-size="11" fill="#b7600c" text-anchor="start">h1</text>
+<circle id="u09v2_impact1" cx="401.2050807568877" cy="310" r="3" fill="#c0392b"/>
+<text x="401.2050807568877" y="298" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700"></text>
+<rect x="220" y="206" width="8" height="8" rx="0" fill="url(#u09v2_field)" stroke="none" stroke-width="1.2"/>
+<path id="u09v2_jet2" d="M228 210 Q328.0 210 428.0 310" fill="none" stroke="#1e8449" stroke-width="2.3" />
+<path d="M229 210 L260.32091952673164 210" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09v2_v)"/>
+<text x="268" y="198" font-size="11" fill="#1e8449" text-anchor="start">h = 2,0 m</text>
+<line x1="169" y1="210" x2="179" y2="210" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="169" y1="310" x2="179" y2="310" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09v2_h2" d="M174 210 L174 310" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v2_dim)" marker-end="url(#u09v2_dim)"/>
+<text x="104" y="256" font-size="11" fill="#b7600c" text-anchor="start">h2</text>
+<circle id="u09v2_impact2" cx="428.0" cy="310" r="3" fill="#c0392b"/>
+<text x="428.0" y="298" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700"></text>
+<rect x="220" y="156" width="8" height="8" rx="0" fill="url(#u09v2_field)" stroke="none" stroke-width="1.2"/>
+<path id="u09v2_jet3" d="M228 160 Q314.60254037844385 160 401.2050807568877 310" fill="none" stroke="#5b9ec9" stroke-width="2.3" stroke-dasharray="5 4"/>
+<path d="M229 160 L251.1472345903501 160" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09v2_v)"/>
+<text x="268" y="148" font-size="11" fill="#5b9ec9" text-anchor="start">h = 3,0 m</text>
+<line x1="187" y1="160" x2="197" y2="160" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="187" y1="310" x2="197" y2="310" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09v2_h3" d="M192 160 L192 310" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v2_dim)" marker-end="url(#u09v2_dim)"/>
+<text x="104" y="232" font-size="11" fill="#b7600c" text-anchor="start">h3</text>
+<circle id="u09v2_impact3" cx="401.2050807568877" cy="310" r="3" fill="#c0392b"/>
+<text x="401.2050807568877" y="298" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700"></text>
+<line x1="228" y1="322" x2="228" y2="397" stroke="#b7600c" stroke-width="1"/>
+<line x1="401.2050807568877" y1="320" x2="401.2050807568877" y2="357" stroke="#b7600c" stroke-width="1"/>
+<line x1="428" y1="320" x2="428" y2="394" stroke="#b7600c" stroke-width="1"/>
+<line x1="228" y1="343" x2="228" y2="353" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="401.2050807568877" y1="343" x2="401.2050807568877" y2="353" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09v2_equalrange" d="M228 348 L401.2050807568877 348" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v2_dim)" marker-end="url(#u09v2_dim)"/>
+<text x="314.60254037844385" y="365" font-size="11" fill="#b7600c" text-anchor="middle">x₁ = x₃ = 3,46 m</text>
+<line x1="228" y1="380" x2="228" y2="390" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="428" y1="380" x2="428" y2="390" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u09v2_maxrange" d="M228 385 L428 385" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v2_dim)" marker-end="url(#u09v2_dim)"/>
+<text x="328.0" y="402" font-size="11" fill="#b7600c" text-anchor="middle">x₂ = 4,00 m</text>
+<text x="40" y="435" font-size="11" fill="#1a2530" text-anchor="start">Jednaka skala visina i dometa; otvori uvećani.</text>
+<rect x="524" y="57" width="342" height="133" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<text x="536" y="77" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Torricelli i vodoravni hitac</text>
+<text x="536" y="100" font-size="12" fill="#1a2530" text-anchor="start">v₀ = √[2g(H − h)]</text>
+<text x="536" y="119" font-size="12" fill="#1a2530" text-anchor="start">t = √(2h/g)</text>
+<text x="536" y="138" font-size="12" fill="#1a2530" text-anchor="start">x = v₀t = 2√[h(H − h)]</text>
+<text x="536" y="157" font-size="12" fill="#1a2530" text-anchor="start">h i H − h daju isti domet.</text>
+<rect x="524" y="211" width="342" height="128" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<text x="536" y="231" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Rezultati za H = 4,0 m</text>
+<text x="548" y="256" font-size="12" fill="#1a2530" text-anchor="start">h [m]</text>
+<text x="625" y="256" font-size="12" fill="#1a2530" text-anchor="start">v₀ [m/s]</text>
+<text x="712" y="256" font-size="12" fill="#1a2530" text-anchor="start">t [s]</text>
+<text x="798" y="256" font-size="12" fill="#1a2530" text-anchor="start">x [m]</text>
+<text x="548" y="277" font-size="12" fill="#1a2530" text-anchor="start">1,0</text>
+<text x="625" y="277" font-size="12" fill="#1a2530" text-anchor="start">7,67</text>
+<text x="712" y="277" font-size="12" fill="#1a2530" text-anchor="start">0,452</text>
+<text x="798" y="277" font-size="12" fill="#1a2530" text-anchor="start">3,46</text>
+<text x="548" y="298" font-size="12" fill="#1a2530" text-anchor="start">2,0</text>
+<text x="625" y="298" font-size="12" fill="#1a2530" text-anchor="start">6,26</text>
+<text x="712" y="298" font-size="12" fill="#1a2530" text-anchor="start">0,639</text>
+<text x="798" y="298" font-size="12" fill="#1a2530" text-anchor="start">4,00</text>
+<text x="548" y="319" font-size="12" fill="#1a2530" text-anchor="start">3,0</text>
+<text x="625" y="319" font-size="12" fill="#1a2530" text-anchor="start">4,43</text>
+<text x="712" y="319" font-size="12" fill="#1a2530" text-anchor="start">0,782</text>
+<text x="798" y="319" font-size="12" fill="#1a2530" text-anchor="start">3,46</text>
+<rect x="524" y="364" width="342" height="70" rx="7" fill="#f4f9fd" stroke="#1e8449" stroke-width="1.2"/>
+<text x="536" y="384" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">Najveći domet</text>
+<text x="536" y="407" font-size="12" fill="#1a2530" text-anchor="start">h = H/2 = 2,0 m; xₘₐₓ = H = 4,0 m</text>
+</g>
+</svg>

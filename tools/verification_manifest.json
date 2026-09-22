@@ -750,6 +750,7 @@
         "U09.P3.v",
         "U09.P3.Q_Ls",
         "U09.P3.p_C_g",
+        "U09.P3.HGL_C",
         "U09.CH1.v_B",
         "U09.CH1.Q_Ls",
         "U09.CH1.v_C",
@@ -767,13 +768,21 @@
         "U09.Z1.Q_Ls",
         "U09.Z1.m_dot",
         "U09.Z2.dp",
+        "U09.Z3.v_1",
         "U09.Z3.v_2",
-        "U09.Z3.Q_Ls",
+        "U09.Z3.dp_kPa",
         "U09.Z4.v",
-        "U09.Z5.v",
-        "U09.Z5.p_C_abs_kPa",
-        "U09.Z5.HGL_C",
-        "U09.Z5.vapor_margin_kPa",
+        "U09.Z4.v_wrong",
+        "U09.Z4.p_st_kPa",
+        "U09.Z4.dp_kPa",
+        "U09.Z5.d_min_mm",
+        "U09.Z5.d_max_mm",
+        "U09.Z5.p40_kPa",
+        "U09.Z5.p50_kPa",
+        "U09.Z5.p60_kPa",
+        "U09.Z5.dp40_kPa",
+        "U09.Z5.dp50_kPa",
+        "U09.Z5.dp60_kPa",
         "U09.Z6.v_ideal",
         "U09.Z6.Q_ideal_Ls",
         "U09.Z6.p_C_ideal_kPa",
@@ -781,7 +790,9 @@
         "U09.Z6.Q_real_Ls",
         "U09.Z6.Q_min_Ls",
         "U09.Z6.Q_max_Ls",
-        "U09.Z6.p_C_min_kPa"
+        "U09.Z6.p_C_min_kPa",
+        "U09.Z6.p_C_max_kPa",
+        "U09.Z6.p_C_real_kPa"
       ]
     },
     {
@@ -14669,12 +14680,12 @@
       "level": "T1",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 782,
+        "line": 784,
         "anchor": "#task-u09-veliki-otvoreni-spremnik-sadrzi-vodu-do-visine"
       },
       "statement": {
-        "markdown": "Veliki otvoreni spremnik sadrži vodu do visine $H = 3{,}20\\ \\text{m}$ iznad osi male bočne sapnice promjera $d = 26\\ \\text{mm}$. Zanemari gubitke i odredi izlaznu brzinu mlaza, volumenski protok i maseni protok vode.",
-        "sha256": "6f15eaee1422ef966edebb0a10a7665c8264df209c04e76d861b03862d01b1fd",
+        "markdown": "Veliki otvoreni spremnik sadrži vodu do visine $H = 3{,}20\\ \\text{m}$ iznad osi male bočne sapnice promjera $d = 26\\ \\text{mm}$. Za vodu uzmi $\\rho=998\\ \\text{kg/m}^3$. Promatraj kvazistacionarni trenutak dok se razina velikog spremnika zanemarivo mijenja. Zanemari gubitke i odredi izlaznu brzinu mlaza, volumenski protok i maseni protok vode.",
+        "sha256": "b25683e23e5eef88d5cb3edb2d5e76114bcd5e239c4076aff0a4d5cb0b6a23a8",
         "authoritative": true
       },
       "input_data": {
@@ -14704,6 +14715,19 @@
               "value": 0.026000000000000002,
               "unit": "m"
             }
+          },
+          {
+            "symbol": "\\rho",
+            "relation": "=",
+            "value_text": "998",
+            "value": 998.0,
+            "unit_text": "\\ \\text{kg/m}^3",
+            "normalized_unit": "kg/m^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 998.0,
+              "unit": "kg/m^3"
+            }
           }
         ],
         "unparsed_numeric_math": [],
@@ -14713,16 +14737,38 @@
       "assumptions": {
         "explicit": [
           {
+            "text": "Za vodu uzmi $\\rho=998\\ \\text{kg/m}^3$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 784
+            }
+          },
+          {
+            "text": "Promatraj kvazistacionarni trenutak dok se razina velikog spremnika zanemarivo mijenja.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 784
+            }
+          },
+          {
             "text": "Zanemari gubitke i odredi izlaznu brzinu mlaza, volumenski protok i maseni protok vode.",
             "provenance": {
               "kind": "task_statement",
-              "line": 782
+              "line": 784
             }
           }
         ],
         "explicit_status": "declared_and_extracted",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "defaults": [
+          {
+            "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 778
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
@@ -14731,7 +14777,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 794
+          "line": 796
         }
       },
       "tolerance": {
@@ -14807,7 +14853,7 @@
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 226
+              "line": 237
             }
           },
           {
@@ -14824,7 +14870,7 @@
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 227
+              "line": 238
             }
           },
           {
@@ -14841,7 +14887,7 @@
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 228
+              "line": 239
             }
           }
         ]
@@ -14854,12 +14900,12 @@
       "level": "T1",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 802,
+        "line": 804,
         "anchor": "#task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s"
       },
       "statement": {
-        "markdown": "Horizontalnim ventilacijskim kanalom smanjuje se presjek s $A_1 = 0{,}060\\ \\text{m}^2$ na $A_2 = 0{,}020\\ \\text{m}^2$. Volumenski protok zraka iznosi $Q = 0{,}42\\ \\text{m}^3/\\text{s}$, a gustoća zraka je $\\rho = 1{,}20\\ \\text{kg/m}^3$. Odredi pad statičkog tlaka.",
-        "sha256": "753388ec79468c81f0e332d4125c406786ace84af7b0eeca54ce87eede0fd673",
+        "markdown": "Horizontalnim ventilacijskim kanalom smanjuje se presjek s $A_1 = 0{,}060\\ \\text{m}^2$ na $A_2 = 0{,}020\\ \\text{m}^2$. Volumenski protok zraka iznosi $Q = 0{,}42\\ \\text{m}^3/\\text{s}$, a gustoća zraka je $\\rho = 1{,}20\\ \\text{kg/m}^3$. Pretpostavi stacionarni nestlačivi tok bez gubitaka i bez strojnog rada. Odredi pad statičkog tlaka.",
+        "sha256": "ee4edf329740b42458eef905a48d46c10a7a29d93925ff9815563100b28e099d",
         "authoritative": true
       },
       "input_data": {
@@ -14924,16 +14970,31 @@
       "assumptions": {
         "explicit": [
           {
+            "text": "Pretpostavi stacionarni nestlačivi tok bez gubitaka i bez strojnog rada.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 804
+            }
+          },
+          {
             "text": "iz kontinuiteta dobij $v_1$ i $v_2$, a za horizontalni kanal bez gubitaka vrijedi $p_1 + \\rho v_1^2/2 = p_2 + \\rho v_2^2/2$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 808
+              "line": 810
             }
           }
         ],
         "explicit_status": "declared_and_extracted",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "defaults": [
+          {
+            "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 778
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
@@ -14942,7 +15003,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 814
+          "line": 816
         }
       },
       "tolerance": {
@@ -14992,29 +15053,42 @@
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 231
+              "line": 242
             }
           }
         ]
       }
     },
     {
-      "id": "task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni",
+      "id": "task-tlak-u-silaznom-suzenju",
       "chapter": "U08",
       "ordinal": 3,
       "level": "T2",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 822,
-        "anchor": "#task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni"
+        "line": 826,
+        "anchor": "#task-tlak-u-silaznom-suzenju"
       },
       "statement": {
-        "markdown": "Idealna Venturijeva cijev za vodu ima ulazni promjer $D_1 = 120\\ \\text{mm}$ i promjer grla $D_2 = 70\\ \\text{mm}$. Razlika statičkih tlakova između ulaza i grla iznosi $\\Delta p = 24\\ \\text{kPa}$. Odredi brzinu u grlu i volumenski protok kroz Venturi.",
-        "sha256": "4d491bba29eaf766d4e45d96177845051de59df83d16b873afc58456c74de23b",
+        "markdown": "Voda gustoće $\\rho=1000\\ \\text{kg/m}^3$ stacionarno teče kroz glatko silazno suženje. U vodoravnom ulaznom presjeku 1 promjer je $D_1=120\\ \\text{mm}$, a u vodoravnom izlaznom presjeku 2 $D_2=70\\ \\text{mm}$. Os presjeka 1 nalazi se $z_1-z_2=2{,}00\\ \\text{m}$ iznad osi presjeka 2. Volumenski protok je $Q=20{,}0\\ \\text{L/s}$. Zanemari gubitke, pretpostavi jednolike brzine u referentnim presjecima i odredi obje brzine te razliku $p_2-p_1$. Provjeri tvrdnju: „U svakom suženju tlak mora pasti.”",
+        "sha256": "6a48e7041b4b2d73274e35ae0f10764ea1dbdcf6082e4ad58de8076adc4fd3b1",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
+          {
+            "symbol": "\\rho",
+            "relation": "=",
+            "value_text": "1000",
+            "value": 1000.0,
+            "unit_text": "\\ \\text{kg/m}^3",
+            "normalized_unit": "kg/m^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1000.0,
+              "unit": "kg/m^3"
+            }
+          },
           {
             "symbol": "D_1",
             "relation": "=",
@@ -15042,9 +15116,250 @@
             }
           },
           {
-            "symbol": "\\Delta p",
+            "symbol": "z_1-z_2",
             "relation": "=",
-            "value_text": "24",
+            "value_text": "2{,}00",
+            "value": 2.0,
+            "unit_text": "\\ \\text{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 2.0,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "Q",
+            "relation": "=",
+            "value_text": "20{,}0",
+            "value": 20.0,
+            "unit_text": "\\ \\text{L/s}",
+            "normalized_unit": "L/s",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.02,
+              "unit": "m^3/s"
+            }
+          }
+        ],
+        "unparsed_numeric_math": [
+          "p_2-p_1"
+        ],
+        "parse_status": "conservative_partial",
+        "authoritative_fallback": "statement.markdown"
+      },
+      "assumptions": {
+        "explicit": [
+          {
+            "text": "Voda gustoće $\\rho=1000\\ \\text{kg/m}^3$ stacionarno teče kroz glatko silazno suženje.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 826
+            }
+          },
+          {
+            "text": "Zanemari gubitke, pretpostavi jednolike brzine u referentnim presjecima i odredi obje brzine te razliku $p_2-p_1$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 826
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
+        "defaults": [
+          {
+            "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 778
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
+        "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
+      },
+      "published_control": {
+        "kind": "numeric",
+        "markdown": "$v_1\\approx1{,}768\\ \\text{m/s}$; $v_2\\approx5{,}197\\ \\text{m/s}$; $p_2-p_1\\approx+7{,}680\\ \\text{kPa}$. Tlak raste jer doprinos spuštanja $19{,}620\\ \\text{kPa}$ nadmašuje doprinos ubrzanja $11{,}940\\ \\text{kPa}$. Tvrdnja nije općenito točna: u ovom idealnom toku pada HGL, dok statički tlak raste.",
+        "reason_if_absent": null,
+        "provenance": {
+          "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
+          "line": 838
+        }
+      },
+      "tolerance": {
+        "kind": "per_result",
+        "contracts": [
+          {
+            "result_id": "U09.Z3.v_1",
+            "kind": "relative",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U09.Z3.v_2",
+            "kind": "relative",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U09.Z3.dp_kPa",
+            "kind": "relative",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          }
+        ]
+      },
+      "independent_check": {
+        "kind": "independent_recalculation_with_unit_contract",
+        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
+        "verifier_result_ids": [
+          "U09.Z3.v_1",
+          "U09.Z3.v_2",
+          "U09.Z3.dp_kPa"
+        ],
+        "unit_contract": [
+          {
+            "result_id": "U09.Z3.v_1",
+            "unit": "m/s"
+          },
+          {
+            "result_id": "U09.Z3.v_2",
+            "unit": "m/s"
+          },
+          {
+            "result_id": "U09.Z3.dp_kPa",
+            "unit": "kPa"
+          }
+        ]
+      },
+      "verifier": {
+        "module": "verify_u09",
+        "exercise_id": "U09.Z3",
+        "classification": "golden",
+        "result_ids": [
+          "U09.Z3.v_1",
+          "U09.Z3.v_2",
+          "U09.Z3.dp_kPa"
+        ],
+        "result_contracts": [
+          {
+            "result_id": "U09.Z3.v_1",
+            "verification": "golden",
+            "target": 1.768,
+            "target_kind": "literal",
+            "unit": "m/s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 245
+            }
+          },
+          {
+            "result_id": "U09.Z3.v_2",
+            "verification": "golden",
+            "target": 5.197,
+            "target_kind": "literal",
+            "unit": "m/s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 246
+            }
+          },
+          {
+            "result_id": "U09.Z3.dp_kPa",
+            "verification": "golden",
+            "target": 7.68,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 247
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "task-pitot-s-izdignutim-senzorom",
+      "chapter": "U08",
+      "ordinal": 4,
+      "level": "T2",
+      "source": {
+        "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
+        "line": 848,
+        "anchor": "#task-pitot-s-izdignutim-senzorom"
+      },
+      "statement": {
+        "markdown": "Pitotova sonda okrenuta je otvorom prema jednolikoj struji vode gustoće $\\rho=1000\\ \\text{kg/m}^3$. U neporemećenoj struji A, na visini otvora sonde, statički manometarski tlak iznosi $p_{M,A}=16{,}0\\ \\text{kPa}$. Sonda je potpuno ispunjena mirujućom vodom i spojena na senzor S koji se nalazi $\\Delta z_S=1{,}20\\ \\text{m}$ iznad njezina otvora. Senzor očitava $p_{M,S}=24{,}0\\ \\text{kPa}$ prema istoj atmosferskoj referenci. Odredi stagnacijski tlak na otvoru i lokalnu brzinu neporemećene struje. Koliku bi brzinu dao račun koji zanemari visinsku razliku senzora? Zanemari gubitke pri zaustavljanju struje i kapilarne učinke; u mjernom vodu nema zraka ni protoka.",
+        "sha256": "9841764a982fa0c1ce395dd14fdc3435699418b8a4f6a59ae2c622215753a5e1",
+        "authoritative": true
+      },
+      "input_data": {
+        "scalars": [
+          {
+            "symbol": "\\rho",
+            "relation": "=",
+            "value_text": "1000",
+            "value": 1000.0,
+            "unit_text": "\\ \\text{kg/m}^3",
+            "normalized_unit": "kg/m^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1000.0,
+              "unit": "kg/m^3"
+            }
+          },
+          {
+            "symbol": "p_{M,A}",
+            "relation": "=",
+            "value_text": "16{,}0",
+            "value": 16.0,
+            "unit_text": "\\ \\text{kPa}",
+            "normalized_unit": "kPa",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 16000.0,
+              "unit": "Pa"
+            }
+          },
+          {
+            "symbol": "\\Delta z_S",
+            "relation": "=",
+            "value_text": "1{,}20",
+            "value": 1.2,
+            "unit_text": "\\ \\text{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1.2,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "p_{M,S}",
+            "relation": "=",
+            "value_text": "24{,}0",
             "value": 24.0,
             "unit_text": "\\ \\text{kPa}",
             "normalized_unit": "kPa",
@@ -15062,41 +15377,77 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Idealna Venturijeva cijev za vodu ima ulazni promjer $D_1 = 120\\ \\text{mm}$ i promjer grla $D_2 = 70\\ \\text{mm}$.",
+            "text": "Senzor očitava $p_{M,S}=24{,}0\\ \\text{kPa}$ prema istoj atmosferskoj referenci.",
             "provenance": {
               "kind": "task_statement",
-              "line": 822
+              "line": 848
+            }
+          },
+          {
+            "text": "Koliku bi brzinu dao račun koji zanemari visinsku razliku senzora?",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 848
+            }
+          },
+          {
+            "text": "Zanemari gubitke pri zaustavljanju struje i kapilarne učinke;",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 848
             }
           }
         ],
         "explicit_status": "declared_and_extracted",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "defaults": [
+          {
+            "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 778
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$v_2 \\approx 7{,}38\\ \\text{m/s}$; $Q \\approx 28{,}4\\ \\text{L/s}$.",
+        "markdown": "Stagnacijski manometarski tlak je $p_{M,st}=35{,}772\\ \\text{kPa}$, a razlika prema statičkom tlaku $19{,}772\\ \\text{kPa}$. Lokalna brzina je $v\\approx6{,}288\\ \\text{m/s}$. Zanemarivanje visine senzora dalo bi $v_{pog}=4{,}000\\ \\text{m/s}$, odnosno podcijenjenu brzinu.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 834
+          "line": 860
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U09.Z3.v_2",
+            "result_id": "U09.Z4.v",
             "kind": "relative",
-            "value": 0.02,
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U09.Z3.Q_Ls",
+            "result_id": "U09.Z4.v_wrong",
             "kind": "relative",
-            "value": 0.02,
+            "value": 1e-10,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U09.Z4.p_st_kPa",
+            "kind": "relative",
+            "value": 1e-10,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U09.Z4.dp_kPa",
+            "kind": "relative",
+            "value": 1e-10,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
@@ -15106,139 +15457,27 @@
         "kind": "independent_recalculation_with_unit_contract",
         "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
         "verifier_result_ids": [
-          "U09.Z3.v_2",
-          "U09.Z3.Q_Ls"
-        ],
-        "unit_contract": [
-          {
-            "result_id": "U09.Z3.v_2",
-            "unit": "m/s"
-          },
-          {
-            "result_id": "U09.Z3.Q_Ls",
-            "unit": "L/s"
-          }
-        ]
-      },
-      "verifier": {
-        "module": "verify_u09",
-        "exercise_id": "U09.Z3",
-        "classification": "golden",
-        "result_ids": [
-          "U09.Z3.v_2",
-          "U09.Z3.Q_Ls"
-        ],
-        "result_contracts": [
-          {
-            "result_id": "U09.Z3.v_2",
-            "verification": "golden",
-            "target": 7.38,
-            "target_kind": "literal",
-            "unit": "m/s",
-            "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
-              "value_kind": "literal",
-              "provenance": "verifier_call_keyword"
-            },
-            "provenance": {
-              "path": "tools/verify_u09.py",
-              "line": 234
-            }
-          },
-          {
-            "result_id": "U09.Z3.Q_Ls",
-            "verification": "golden",
-            "target": 28.4,
-            "target_kind": "literal",
-            "unit": "L/s",
-            "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
-              "value_kind": "literal",
-              "provenance": "verifier_call_keyword"
-            },
-            "provenance": {
-              "path": "tools/verify_u09.py",
-              "line": 235
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok",
-      "chapter": "U08",
-      "ordinal": 4,
-      "level": "T2",
-      "source": {
-        "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 842,
-        "anchor": "#task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok"
-      },
-      "statement": {
-        "markdown": "Pitotova cijev uronjena je u vodeni tok. Razlika između stagnacijskog i statičkog tlaka iznosi $\\Delta p = 8{,}5\\ \\text{kPa}$. Odredi lokalnu brzinu strujanja.",
-        "sha256": "bbf584b5f8b5303c0342e88dd6ae4b026548a5faa28c604bc544541c78c5dcea",
-        "authoritative": true
-      },
-      "input_data": {
-        "scalars": [
-          {
-            "symbol": "\\Delta p",
-            "relation": "=",
-            "value_text": "8{,}5",
-            "value": 8.5,
-            "unit_text": "\\ \\text{kPa}",
-            "normalized_unit": "kPa",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 8500.0,
-              "unit": "Pa"
-            }
-          }
-        ],
-        "unparsed_numeric_math": [],
-        "parse_status": "conservative_partial",
-        "authoritative_fallback": "statement.markdown"
-      },
-      "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
-        "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
-      },
-      "published_control": {
-        "kind": "numeric",
-        "markdown": "$v \\approx 4{,}13\\ \\text{m/s}$.",
-        "reason_if_absent": null,
-        "provenance": {
-          "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 854
-        }
-      },
-      "tolerance": {
-        "kind": "per_result",
-        "contracts": [
-          {
-            "result_id": "U09.Z4.v",
-            "kind": "relative",
-            "value": 0.02,
-            "value_kind": "literal",
-            "provenance": "verifier_call_keyword"
-          }
-        ]
-      },
-      "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U09.Z4.v"
+          "U09.Z4.v",
+          "U09.Z4.v_wrong",
+          "U09.Z4.p_st_kPa",
+          "U09.Z4.dp_kPa"
         ],
         "unit_contract": [
           {
             "result_id": "U09.Z4.v",
             "unit": "m/s"
+          },
+          {
+            "result_id": "U09.Z4.v_wrong",
+            "unit": "m/s"
+          },
+          {
+            "result_id": "U09.Z4.p_st_kPa",
+            "unit": "kPa"
+          },
+          {
+            "result_id": "U09.Z4.dp_kPa",
+            "unit": "kPa"
           }
         ]
       },
@@ -15247,162 +15486,282 @@
         "exercise_id": "U09.Z4",
         "classification": "golden",
         "result_ids": [
-          "U09.Z4.v"
+          "U09.Z4.v",
+          "U09.Z4.v_wrong",
+          "U09.Z4.p_st_kPa",
+          "U09.Z4.dp_kPa"
         ],
         "result_contracts": [
           {
             "result_id": "U09.Z4.v",
             "verification": "golden",
-            "target": 4.13,
+            "target": 6.288,
             "target_kind": "literal",
             "unit": "m/s",
             "tolerance": {
               "kind": "relative",
-              "value": 0.02,
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 238
+              "line": 250
+            }
+          },
+          {
+            "result_id": "U09.Z4.v_wrong",
+            "verification": "golden",
+            "target": 4.0,
+            "target_kind": "literal",
+            "unit": "m/s",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 251
+            }
+          },
+          {
+            "result_id": "U09.Z4.p_st_kPa",
+            "verification": "golden",
+            "target": 35.772,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 252
+            }
+          },
+          {
+            "result_id": "U09.Z4.dp_kPa",
+            "verification": "golden",
+            "target": 19.772,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 253
             }
           }
         ]
       }
     },
     {
-      "id": "task-u09-idealni-sifon-prazni-otvoreni-spremnik-razlika-razina",
+      "id": "task-odabir-grla-prema-tlaku",
       "chapter": "U08",
       "ordinal": 5,
       "level": "T3",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 862,
-        "anchor": "#task-u09-idealni-sifon-prazni-otvoreni-spremnik-razlika-razina"
+        "line": 870,
+        "anchor": "#task-odabir-grla-prema-tlaku"
       },
       "statement": {
-        "markdown": "Idealni sifon prazni otvoreni spremnik. Razlika razina između slobodne površine u spremniku i izlaza sifona iznosi $\\Delta z = 2{,}8\\ \\text{m}$, a vrh sifona nalazi se $1{,}1\\ \\text{m}$ iznad slobodne površine. Odredi brzinu strujanja, apsolutni tlak u vrhu sifona te položaj HGL-a u vrhu u odnosu na slobodnu površinu. Ako je $p_{atm} = 101\\ \\text{kPa}$ i tlak zasićene pare $p_v=2{,}34\\ \\text{kPa}$, procijeni postoji li u idealnom radnom stanju kavitacijska rezerva.",
-        "sha256": "5f0ad2bad73d5f69d2a0fcaf68d8861a56075a076490e7f432dbc845b7da80e7",
+        "markdown": "Kroz vodoravni mjerni sklop prolazi zadani stalni protok vode $Q=20{,}0\\ \\text{L/s}$ pri gustoći $\\rho=1000\\ \\text{kg/m}^3$. Ulazni promjer je $D_1=100\\ \\text{mm}$, a apsolutni ulazni tlak $p_{1,abs}=150\\ \\text{kPa}$. Glatki zamjenjivi ulošci imaju promjere grla $d=40$, $50$ ili $60\\ \\text{mm}$. U idealnom modelu bez gubitaka potrebno je istodobno ostvariti apsolutni tlak u grlu $p_{C,abs}\\ge60\\ \\text{kPa}$ i razliku statičkih tlakova za mjerenje $p_1-p_C\\ge40\\ \\text{kPa}$. Izvedi dopušteni interval promjera grla, odaberi uložak i provjeri oba uvjeta za sve tri ponuđene izvedbe. Pretpostavi jednolike brzine u referentnim presjecima; zadani protok i ulazni tlak održavaju se za svaki uložak. Tlačni prag je zadani pogonski kriterij, a ne tlak pare vode.",
+        "sha256": "5d3c4be169da2a5dc54614c9c4dfafbc4955fca6c09fec38b16c32bb46f5a599",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "\\Delta z",
+            "symbol": "Q",
             "relation": "=",
-            "value_text": "2{,}8",
-            "value": 2.8,
-            "unit_text": "\\ \\text{m}",
-            "normalized_unit": "m",
+            "value_text": "20{,}0",
+            "value": 20.0,
+            "unit_text": "\\ \\text{L/s}",
+            "normalized_unit": "L/s",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 2.8,
+              "value": 0.02,
+              "unit": "m^3/s"
+            }
+          },
+          {
+            "symbol": "\\rho",
+            "relation": "=",
+            "value_text": "1000",
+            "value": 1000.0,
+            "unit_text": "\\ \\text{kg/m}^3",
+            "normalized_unit": "kg/m^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1000.0,
+              "unit": "kg/m^3"
+            }
+          },
+          {
+            "symbol": "D_1",
+            "relation": "=",
+            "value_text": "100",
+            "value": 100.0,
+            "unit_text": "\\ \\text{mm}",
+            "normalized_unit": "mm",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.1,
               "unit": "m"
+            }
+          },
+          {
+            "symbol": "p_{1,abs}",
+            "relation": "=",
+            "value_text": "150",
+            "value": 150.0,
+            "unit_text": "\\ \\text{kPa}",
+            "normalized_unit": "kPa",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 150000.0,
+              "unit": "Pa"
+            }
+          },
+          {
+            "symbol": "d",
+            "relation": "=",
+            "value_text": "40",
+            "value": 40.0,
+            "unit_text": "1",
+            "normalized_unit": "1",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 40.0,
+              "unit": "1"
             }
           },
           {
             "symbol": null,
             "relation": "context_value",
-            "value_text": "1{,}1",
-            "value": 1.1,
-            "unit_text": "\\ \\text{m}",
-            "normalized_unit": "m",
+            "value_text": "60",
+            "value": 60.0,
+            "unit_text": "\\ \\text{mm}",
+            "normalized_unit": "mm",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 1.1,
+              "value": 0.06,
               "unit": "m"
-            }
-          },
-          {
-            "symbol": "p_{atm}",
-            "relation": "=",
-            "value_text": "101",
-            "value": 101.0,
-            "unit_text": "\\ \\text{kPa}",
-            "normalized_unit": "kPa",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 101000.0,
-              "unit": "Pa"
-            }
-          },
-          {
-            "symbol": "p_v",
-            "relation": "=",
-            "value_text": "2{,}34",
-            "value": 2.34,
-            "unit_text": "\\ \\text{kPa}",
-            "normalized_unit": "kPa",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 2340.0,
-              "unit": "Pa"
             }
           }
         ],
-        "unparsed_numeric_math": [],
+        "unparsed_numeric_math": [
+          "50",
+          "p_{C,abs}\\ge60\\ \\text{kPa}",
+          "p_1-p_C\\ge40\\ \\text{kPa}"
+        ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
         "explicit": [
           {
-            "text": "Idealni sifon prazni otvoreni spremnik.",
+            "text": "U idealnom modelu bez gubitaka potrebno je istodobno ostvariti apsolutni tlak u grlu $p_{C,abs}\\ge60\\ \\text{kPa}$ i razliku statičkih tlakova za mjerenje $p_1-p_C\\ge40\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 862
+              "line": 870
             }
           },
           {
-            "text": "Ako je $p_{atm} = 101\\ \\text{kPa}$ i tlak zasićene pare $p_v=2{,}34\\ \\text{kPa}$, procijeni postoji li u idealnom radnom stanju kavitacijska rezerva.",
+            "text": "Pretpostavi jednolike brzine u referentnim presjecima;",
             "provenance": {
               "kind": "task_statement",
-              "line": 862
+              "line": 870
             }
           }
         ],
         "explicit_status": "declared_and_extracted",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "defaults": [
+          {
+            "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 778
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$v \\approx 7{,}41\\ \\text{m/s}$; $p_C \\approx 62{,}8\\ \\text{kPa}$ (aps.); $HGL_C=-2{,}8\\ \\text{m}$ u odnosu na slobodnu površinu; $p_C-p_v\\approx60{,}5\\ \\text{kPa}$, pa idealni račun pokazuje pozitivnu rezervu.",
+        "markdown": "Dopušteno je $43{,}183\\ \\text{mm}\\le d\\le52{,}328\\ \\text{mm}$, pa odgovara uložak od $50\\ \\text{mm}$. Za promjere $40$, $50$ i $60\\ \\text{mm}$ apsolutni tlakovi u grlu redom su $26{,}591$, $101{,}366$ i $128{,}225\\ \\text{kPa}$, a padovi tlaka $123{,}409$, $48{,}634$ i $21{,}775\\ \\text{kPa}$. Uložak od 40 mm krši tlačni prag, a onaj od 60 mm nema dovoljan mjerni signal. Granice su zaokružene; odluka se provjerava izvornim nejednakostima.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 874
+          "line": 882
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U09.Z5.v",
+            "result_id": "U09.Z5.d_min_mm",
             "kind": "relative",
-            "value": 0.02,
+            "value": 5e-05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U09.Z5.p_C_abs_kPa",
+            "result_id": "U09.Z5.d_max_mm",
             "kind": "relative",
-            "value": 0.02,
+            "value": 5e-05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U09.Z5.HGL_C",
+            "result_id": "U09.Z5.p40_kPa",
             "kind": "relative",
-            "value": 0.01,
+            "value": 5e-05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U09.Z5.vapor_margin_kPa",
+            "result_id": "U09.Z5.p50_kPa",
             "kind": "relative",
-            "value": 0.02,
+            "value": 5e-05,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U09.Z5.p60_kPa",
+            "kind": "relative",
+            "value": 5e-05,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U09.Z5.dp40_kPa",
+            "kind": "relative",
+            "value": 5e-05,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U09.Z5.dp50_kPa",
+            "kind": "relative",
+            "value": 5e-05,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U09.Z5.dp60_kPa",
+            "kind": "relative",
+            "value": 5e-05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
@@ -15412,26 +15771,46 @@
         "kind": "independent_recalculation_with_unit_contract",
         "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
         "verifier_result_ids": [
-          "U09.Z5.v",
-          "U09.Z5.p_C_abs_kPa",
-          "U09.Z5.HGL_C",
-          "U09.Z5.vapor_margin_kPa"
+          "U09.Z5.d_min_mm",
+          "U09.Z5.d_max_mm",
+          "U09.Z5.p40_kPa",
+          "U09.Z5.p50_kPa",
+          "U09.Z5.p60_kPa",
+          "U09.Z5.dp40_kPa",
+          "U09.Z5.dp50_kPa",
+          "U09.Z5.dp60_kPa"
         ],
         "unit_contract": [
           {
-            "result_id": "U09.Z5.v",
-            "unit": "m/s"
+            "result_id": "U09.Z5.d_min_mm",
+            "unit": "mm"
           },
           {
-            "result_id": "U09.Z5.p_C_abs_kPa",
+            "result_id": "U09.Z5.d_max_mm",
+            "unit": "mm"
+          },
+          {
+            "result_id": "U09.Z5.p40_kPa",
             "unit": "kPa"
           },
           {
-            "result_id": "U09.Z5.HGL_C",
-            "unit": "m"
+            "result_id": "U09.Z5.p50_kPa",
+            "unit": "kPa"
           },
           {
-            "result_id": "U09.Z5.vapor_margin_kPa",
+            "result_id": "U09.Z5.p60_kPa",
+            "unit": "kPa"
+          },
+          {
+            "result_id": "U09.Z5.dp40_kPa",
+            "unit": "kPa"
+          },
+          {
+            "result_id": "U09.Z5.dp50_kPa",
+            "unit": "kPa"
+          },
+          {
+            "result_id": "U09.Z5.dp60_kPa",
             "unit": "kPa"
           }
         ]
@@ -15441,78 +15820,150 @@
         "exercise_id": "U09.Z5",
         "classification": "golden",
         "result_ids": [
-          "U09.Z5.v",
-          "U09.Z5.p_C_abs_kPa",
-          "U09.Z5.HGL_C",
-          "U09.Z5.vapor_margin_kPa"
+          "U09.Z5.d_min_mm",
+          "U09.Z5.d_max_mm",
+          "U09.Z5.p40_kPa",
+          "U09.Z5.p50_kPa",
+          "U09.Z5.p60_kPa",
+          "U09.Z5.dp40_kPa",
+          "U09.Z5.dp50_kPa",
+          "U09.Z5.dp60_kPa"
         ],
         "result_contracts": [
           {
-            "result_id": "U09.Z5.v",
+            "result_id": "U09.Z5.d_min_mm",
             "verification": "golden",
-            "target": 7.41,
+            "target": 43.183,
             "target_kind": "literal",
-            "unit": "m/s",
+            "unit": "mm",
             "tolerance": {
               "kind": "relative",
-              "value": 0.02,
+              "value": 5e-05,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 241
+              "line": 256
             }
           },
           {
-            "result_id": "U09.Z5.p_C_abs_kPa",
+            "result_id": "U09.Z5.d_max_mm",
             "verification": "golden",
-            "target": 62.8,
+            "target": 52.328,
+            "target_kind": "literal",
+            "unit": "mm",
+            "tolerance": {
+              "kind": "relative",
+              "value": 5e-05,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 257
+            }
+          },
+          {
+            "result_id": "U09.Z5.p40_kPa",
+            "verification": "golden",
+            "target": 26.591,
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.02,
+              "value": 5e-05,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 242
+              "line": 258
             }
           },
           {
-            "result_id": "U09.Z5.HGL_C",
+            "result_id": "U09.Z5.p50_kPa",
             "verification": "golden",
-            "target": -2.8,
-            "target_kind": "literal",
-            "unit": "m",
-            "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
-              "value_kind": "literal",
-              "provenance": "verifier_call_keyword"
-            },
-            "provenance": {
-              "path": "tools/verify_u09.py",
-              "line": 243
-            }
-          },
-          {
-            "result_id": "U09.Z5.vapor_margin_kPa",
-            "verification": "golden",
-            "target": 60.5,
+            "target": 101.366,
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.02,
+              "value": 5e-05,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 244
+              "line": 259
+            }
+          },
+          {
+            "result_id": "U09.Z5.p60_kPa",
+            "verification": "golden",
+            "target": 128.225,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 5e-05,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 260
+            }
+          },
+          {
+            "result_id": "U09.Z5.dp40_kPa",
+            "verification": "golden",
+            "target": 123.409,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 5e-05,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 261
+            }
+          },
+          {
+            "result_id": "U09.Z5.dp50_kPa",
+            "verification": "golden",
+            "target": 48.634,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 5e-05,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 262
+            }
+          },
+          {
+            "result_id": "U09.Z5.dp60_kPa",
+            "verification": "golden",
+            "target": 21.775,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 5e-05,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 263
             }
           }
         ]
@@ -15525,16 +15976,29 @@
       "level": "T4",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 882,
+        "line": 890,
         "anchor": "#task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako"
       },
       "statement": {
-        "markdown": "Idealni sifon promjera $D = 70\\ \\text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\\Delta z = 2{,}6\\ \\text{m}$ ispod slobodne površine. Vrh sifona je $z_C = 1{,}7\\ \\text{m}$ iznad slobodne površine, a izlaz se nalazi $1{,}2\\ \\text{m}$ iznad tla. Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza ako je $p_{atm} = 101{,}3\\ \\text{kPa}$. Zatim razmotri izvedeni sustav: ukupni koeficijent gubitaka od spremnika do izlaza iznosi $K_\\Sigma=2{,}0\\pm0{,}5$, a do vrha sifona $K_C=1{,}2\\pm0{,}3$; oba su definirana uz brzinu u sifonu. Odredi nominalni stvarni protok i konzervativne granice protoka i tlaka u vrhu. Može li se zajamčiti zahtjev $Q\\ge15{,}0\\ \\text{L/s}$ i $p_C\\ge30\\ \\text{kPa}$ apsolutno?",
-        "sha256": "a1ccf2ebc3b336c67bf355b366fd72932a95a669f5f3f673c43a77a38fb799c8",
+        "markdown": "Sifon je prethodno napunjen vodom, a ulaz je uronjen. U kvazistacionarnom trenutku uzmi gustoću vode $\\rho=1000\\ \\text{kg/m}^3$. Idealni sifon promjera $D = 70\\ \\text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\\Delta z = 2{,}6\\ \\text{m}$ ispod slobodne površine. Vrh sifona je $z_C = 1{,}7\\ \\text{m}$ iznad slobodne površine, a izlaz se nalazi $1{,}2\\ \\text{m}$ iznad tla. Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza ako je $p_{atm} = 101{,}3\\ \\text{kPa}$. Zatim primijeni zadano proširenje energijske bilance: gubitak visine modelira se s $h_L=K v^2/(2g)$. Za izvedeni sustav ukupni koeficijent gubitaka od spremnika do izlaza iznosi $K_\\Sigma=2{,}0\\pm0{,}5$, a do vrha sifona $K_C=1{,}2\\pm0{,}3$; oba su definirana uz brzinu u sifonu. Oznake ± ovdje daju zajamčene intervale, ne standardne nesigurnosti; dopuštene su sve njihove kombinacije. Primijeni bilance $\\Delta z=(1+K_\\Sigma)v^2/(2g)$ i $p_{C,abs}=p_{atm}-\\rho g[z_C+(1+K_C)v^2/(2g)]$. Odredi nominalni stvarni protok i konzervativne granice protoka i tlaka u vrhu. Može li se zajamčiti zahtjev $Q\\ge15{,}0\\ \\text{L/s}$ i $p_C\\ge30\\ \\text{kPa}$ apsolutno?",
+        "sha256": "4af0ce37af6970c8f7b2a902d2f038ed4fcfadb5f1f6635714bb1304a943fc52",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
+          {
+            "symbol": "\\rho",
+            "relation": "=",
+            "value_text": "1000",
+            "value": 1000.0,
+            "unit_text": "\\ \\text{kg/m}^3",
+            "normalized_unit": "kg/m^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1000.0,
+              "unit": "kg/m^3"
+            }
+          },
           {
             "symbol": "D",
             "relation": "=",
@@ -15634,6 +16098,9 @@
           }
         ],
         "unparsed_numeric_math": [
+          "h_L=K v^2/(2g)",
+          "\\Delta z=(1+K_\\Sigma)v^2/(2g)",
+          "p_{C,abs}=p_{atm}-\\rho g[z_C+(1+K_C)v^2/(2g)]",
           "Q\\ge15{,}0\\ \\text{L/s}",
           "p_C\\ge30\\ \\text{kPa}"
         ],
@@ -15643,39 +16110,54 @@
       "assumptions": {
         "explicit": [
           {
+            "text": "U kvazistacionarnom trenutku uzmi gustoću vode $\\rho=1000\\ \\text{kg/m}^3$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 890
+            }
+          },
+          {
             "text": "Idealni sifon promjera $D = 70\\ \\text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\\Delta z = 2{,}6\\ \\text{m}$ ispod slobodne površine.",
             "provenance": {
               "kind": "task_statement",
-              "line": 882
+              "line": 890
             }
           },
           {
             "text": "Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza ako je $p_{atm} = 101{,}3\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 882
+              "line": 890
             }
           },
           {
             "text": "Bernoullijem između slobodne površine i izlaza vrati idealni $v$, između slobodne površine i vrha sifona vrati tlak, a domet mlaza zatvori kao vodoravno izbačeno tijelo s visine $1{,}2\\ \\text{m}$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 888
+              "line": 896
             }
           }
         ],
         "explicit_status": "declared_and_extracted",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "defaults": [
+          {
+            "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
+            "provenance": {
+              "kind": "chapter_exercise_preamble",
+              "line": 778
+            }
+          }
+        ],
+        "default_status": "declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "Idealni model daje $v \\approx 7{,}14\\ \\text{m/s}$; $Q \\approx 27{,}5\\ \\text{L/s}$; $p_C \\approx 59{,}2\\ \\text{kPa}$ (aps.); domet $x \\approx 3{,}53\\ \\text{m}$. Za $K_\\Sigma=2{,}0$ stvarni je protok približno $15{,}9\\ \\text{L/s}$, a za interval $K_\\Sigma=1{,}5$--$2{,}5$ iznosi približno $17{,}4$--$14{,}7\\ \\text{L/s}$. Konzervativni tlak u vrhu ostaje oko $59{,}2\\ \\text{kPa}$ apsolutno, pa je tlačni zahtjev zadovoljen, ali se zahtjev protoka ne može zajamčiti. Potrebno je smanjiti gubitke, povećati promjer ili potvrditi $K_\\Sigma$ mjerenjem.",
+        "markdown": "Idealno: $v\\approx7{,}14$ m/s, $Q\\approx27{,}5$ L/s, $p_{C,abs}\\approx59{,}1$ kPa, $x\\approx3{,}53$ m. Uz gubitke nominalno je $Q\\approx15{,}9$ L/s i $p_{C,abs}\\approx65{,}9$ kPa; intervali su $Q\\in[14{,}7;17{,}4]$ L/s i $p_{C,abs}\\in[59{,}1;70{,}8]$ kPa. Tlačni zahtjev prolazi, ali protok od 15,0 L/s nije zajamčen. Smanjiti gubitke, povećati promjer ili suziti interval mjerenjem.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 894
+          "line": 902
         }
       },
       "tolerance": {
@@ -15698,7 +16180,7 @@
           {
             "result_id": "U09.Z6.p_C_ideal_kPa",
             "kind": "relative",
-            "value": 0.02,
+            "value": 0.001,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
@@ -15733,7 +16215,21 @@
           {
             "result_id": "U09.Z6.p_C_min_kPa",
             "kind": "relative",
-            "value": 0.02,
+            "value": 0.001,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U09.Z6.p_C_max_kPa",
+            "kind": "relative",
+            "value": 0.002,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U09.Z6.p_C_real_kPa",
+            "kind": "relative",
+            "value": 0.002,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
@@ -15750,7 +16246,9 @@
           "U09.Z6.Q_real_Ls",
           "U09.Z6.Q_min_Ls",
           "U09.Z6.Q_max_Ls",
-          "U09.Z6.p_C_min_kPa"
+          "U09.Z6.p_C_min_kPa",
+          "U09.Z6.p_C_max_kPa",
+          "U09.Z6.p_C_real_kPa"
         ],
         "unit_contract": [
           {
@@ -15784,6 +16282,14 @@
           {
             "result_id": "U09.Z6.p_C_min_kPa",
             "unit": "kPa"
+          },
+          {
+            "result_id": "U09.Z6.p_C_max_kPa",
+            "unit": "kPa"
+          },
+          {
+            "result_id": "U09.Z6.p_C_real_kPa",
+            "unit": "kPa"
           }
         ]
       },
@@ -15799,7 +16305,9 @@
           "U09.Z6.Q_real_Ls",
           "U09.Z6.Q_min_Ls",
           "U09.Z6.Q_max_Ls",
-          "U09.Z6.p_C_min_kPa"
+          "U09.Z6.p_C_min_kPa",
+          "U09.Z6.p_C_max_kPa",
+          "U09.Z6.p_C_real_kPa"
         ],
         "result_contracts": [
           {
@@ -15816,7 +16324,7 @@
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 247
+              "line": 266
             }
           },
           {
@@ -15833,24 +16341,24 @@
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 248
+              "line": 267
             }
           },
           {
             "result_id": "U09.Z6.p_C_ideal_kPa",
             "verification": "golden",
-            "target": 59.2,
+            "target": 59.1,
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.02,
+              "value": 0.001,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 249
+              "line": 268
             }
           },
           {
@@ -15867,7 +16375,7 @@
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 250
+              "line": 269
             }
           },
           {
@@ -15884,7 +16392,7 @@
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 251
+              "line": 270
             }
           },
           {
@@ -15901,7 +16409,7 @@
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 252
+              "line": 271
             }
           },
           {
@@ -15918,24 +16426,58 @@
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 253
+              "line": 272
             }
           },
           {
             "result_id": "U09.Z6.p_C_min_kPa",
             "verification": "golden",
-            "target": 59.2,
+            "target": 59.1,
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.02,
+              "value": 0.001,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u09.py",
-              "line": 254
+              "line": 273
+            }
+          },
+          {
+            "result_id": "U09.Z6.p_C_max_kPa",
+            "verification": "golden",
+            "target": 70.8,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.002,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 274
+            }
+          },
+          {
+            "result_id": "U09.Z6.p_C_real_kPa",
+            "verification": "golden",
+            "target": 65.9,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 0.002,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u09.py",
+              "line": 275
             }
           }
         ]

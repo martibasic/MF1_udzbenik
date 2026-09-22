@@ -1,4 +1,4 @@
-"""Numericka verifikacija U09: Bernoullijeva jednadzba idealnog fluida."""
+"""Kanonski U08 (naslijeđeni namespace U09): energija i Bernoulli."""
 from __future__ import annotations
 
 import math
@@ -41,7 +41,7 @@ def primjer_3_sifon(D=0.080, dz=3.6, z_C=2.2, g=9.81, rho=1000.0):
     A = math.pi * D**2 / 4
     Q = A * v
     p_C_g = -(dz + z_C)  # manometarska tlačna visina
-    return {"v": v, "Q": Q, "p_C_g": p_C_g}
+    return {"v": v, "Q": Q, "p_C_g": p_C_g, "HGL_C": z_C+p_C_g}
 
 
 def cjeloviti_1_bypass(D=0.100, d_C=0.080, dz_AB=2.8, z_C=1.5, h_B=1.4,
@@ -110,35 +110,36 @@ def zadatak_2(A_1=0.060, A_2=0.020, Q=0.42, rho=1.20):
     return {"dp": dp}
 
 
-def zadatak_3(D_1=0.120, D_2=0.070, dp=24e3, rho=1000.0, g=9.81):
+def zadatak_3(D_1=0.120, D_2=0.070, Q=0.020, dz=2.0, rho=1000.0, g=9.81):
     A_1 = math.pi * D_1**2 / 4
     A_2 = math.pi * D_2**2 / 4
-    ratio = (D_1 / D_2)**2
-    v_1 = math.sqrt(2 * dp / (rho * (ratio**2 - 1)))
-    v_2 = ratio * v_1
-    Q = A_1 * v_1
-    return {"v_2": v_2, "Q": Q}
+    v_1, v_2 = Q/A_1, Q/A_2
+    dp = rho*g*dz + rho/2*(v_1**2-v_2**2)
+    return {"v_1": v_1, "v_2": v_2, "dp": dp,
+            "dHGL": dp/(rho*g)-dz}
 
 
-def zadatak_4(dp=8.5e3, rho=1000.0):
-    v = math.sqrt(2 * dp / rho)
-    return {"v": v}
+def zadatak_4(p_S=24e3, p_A=16e3, dz=1.2, rho=1000.0, g=9.81):
+    p_st = p_S + rho*g*dz
+    dp = p_st-p_A
+    return {"p_st": p_st, "dp": dp, "v": math.sqrt(2*dp/rho),
+            "v_wrong": math.sqrt(2*(p_S-p_A)/rho)}
 
 
-def zadatak_5(dz=2.8, z_C=1.1, g=9.81, p_atm=101e3, rho=1000.0):
-    v = math.sqrt(2 * g * dz)
-    # p_C(man) = -(v²/2g + z_C)
-    p_C_g = -(v**2 / (2 * g) + z_C)
-    p_C_abs = p_atm + rho * g * p_C_g
-    HGL_C = p_C_g + z_C
-    p_v = 2.34e3
-    vapor_margin = p_C_abs - p_v
-    return {
-        "v": v,
-        "p_C_abs": p_C_abs,
-        "HGL_C": HGL_C,
-        "vapor_margin": vapor_margin,
-    }
+def zadatak_5(Q=.020, D_1=.100, p_1=150e3, p_min=60e3,
+              dp_min=40e3, rho=1000.0, candidates=(.040,.050,.060)):
+    v_1 = 4*Q/(math.pi*D_1**2)
+    v_max = math.sqrt(v_1**2+2*(p_1-p_min)/rho)
+    v_min = math.sqrt(v_1**2+2*dp_min/rho)
+    d_min = math.sqrt(4*Q/(math.pi*v_max))
+    d_max = math.sqrt(4*Q/(math.pi*v_min))
+    velocities = [4*Q/(math.pi*d**2) for d in candidates]
+    pressures = [p_1+rho/2*(v_1**2-v**2) for v in velocities]
+    drops = [p_1-p for p in pressures]
+    accepted = [d for d,p,dp in zip(candidates,pressures,drops)
+                if p >= p_min and dp >= dp_min]
+    return {"d_min": d_min, "d_max": d_max, "velocities": velocities,
+            "pressures": pressures, "drops": drops, "accepted": accepted}
 
 
 def zadatak_6(D=0.070, dz=2.6, z_C=1.7, h_exit=1.2, g=9.81,
@@ -160,6 +161,8 @@ def zadatak_6(D=0.070, dz=2.6, z_C=1.7, h_exit=1.2, g=9.81,
     p_C_abs_min = p_atm - rho * g * (
         z_C + (1 + K_C + dK_C) * vh_at_p_min
     )
+    p_C_abs_max = p_atm-rho*g*(z_C+(1+K_C-dK_C)*dz/(1+K_sum+dK_sum))
+    p_C_abs_real = p_atm-rho*g*(z_C+(1+K_C)*dz/(1+K_sum))
     return {
         "v": v,
         "Q": Q,
@@ -169,6 +172,8 @@ def zadatak_6(D=0.070, dz=2.6, z_C=1.7, h_exit=1.2, g=9.81,
         "Q_min": Q_min,
         "Q_max": Q_max,
         "p_C_abs_min": p_C_abs_min,
+        "p_C_abs_max": p_C_abs_max,
+        "p_C_abs_real": p_C_abs_real,
     }
 
 
@@ -183,6 +188,11 @@ def primjer_difuzor(A_1=0.010, A_2=0.035, v_1=15.0, rho=1000.0, eta_dif=0.80):
             "dp_real": dp_real, "P_gub": P_gub}
 
 
+def _invariant(out, rid, condition, message):
+    out.append({"id":rid,"status":"OK" if condition else "FAIL",
+                "details":"" if condition else message,"verification":"invariant"})
+
+
 def verify():
     out = []
 
@@ -190,7 +200,7 @@ def verify():
     _check(out, "U09.P1.Q", r["Q"], 0.5667, "m^3/s", rel=0.02)
     _check(out, "U09.P1.v_1", r["v_1"], 8.10, "m/s", rel=0.02)
     _check(out, "U09.P1.v_2", r["v_2"], 30.63, "m/s", rel=0.02)
-    _check(out, "U09.P1.dp", r["dp"], 523.0, "Pa", rel=0.02)
+    _check(out, "U09.P1.dp", r["dp"], 523.62, "Pa", rel=.00005)
 
     r = primjer_2_mlaz()
     _check(out, "U09.P2.x_1", r["x_1"], 3.46, "m", rel=0.02)
@@ -202,6 +212,7 @@ def verify():
     _check(out, "U09.P3.v", r["v"], 8.40, "m/s")
     _check(out, "U09.P3.Q_Ls", r["Q"] * 1000, 42.2, "L/s", rel=0.02)
     _check(out, "U09.P3.p_C_g", r["p_C_g"], -5.8, "m")
+    _check(out, "U09.P3.HGL_C", r["HGL_C"], -3.6, "m", rel=1e-10)
 
     r = cjeloviti_1_bypass()
     _check(out, "U09.CH1.v_B", r["v_B"], 7.41, "m/s")
@@ -212,9 +223,9 @@ def verify():
     _check(out, "U09.CH1.x", r["x"], 3.96, "m", rel=0.02)
 
     r = primjer_venturi()
-    _check(out, "U09.venturi.dp", r["dp"], 22740.0, "Pa", rel=0.02)
-    _check(out, "U09.venturi.v_1", r["v_1"], 1.866, "m/s", rel=0.02)
-    _check(out, "U09.venturi.Q_Ls", r["Q"] * 1000, 5.27, "L/s", rel=0.02)
+    _check(out, "U09.venturi.dp", r["dp"], 22478.634, "Pa", rel=1e-10)
+    _check(out, "U09.venturi.v_1", r["v_1"], 1.856, "m/s", rel=.00005)
+    _check(out, "U09.venturi.Q_Ls", r["Q"] * 1000, 5.248, "L/s", rel=.00005)
 
     r = primjer_pitot_uav()
     _check(out, "U09.P6.v", r["v"], 26.1, "m/s", rel=0.02)
@@ -231,27 +242,73 @@ def verify():
     _check(out, "U09.Z2.dp", r["dp"], 235.0, "Pa", rel=0.02)
 
     r = zadatak_3()
-    _check(out, "U09.Z3.v_2", r["v_2"], 7.38, "m/s", rel=0.02)
-    _check(out, "U09.Z3.Q_Ls", r["Q"] * 1000, 28.4, "L/s", rel=0.02)
+    _check(out, "U09.Z3.v_1", r["v_1"], 1.768, "m/s", rel=.0005)
+    _check(out, "U09.Z3.v_2", r["v_2"], 5.197, "m/s", rel=.0005)
+    _check(out, "U09.Z3.dp_kPa", r["dp"]/1000, 7.680, "kPa", rel=.0005)
 
     r = zadatak_4()
-    _check(out, "U09.Z4.v", r["v"], 4.13, "m/s", rel=0.02)
+    _check(out, "U09.Z4.v", r["v"], 6.288, "m/s", rel=.0005)
+    _check(out, "U09.Z4.v_wrong", r["v_wrong"], 4.000, "m/s", rel=1e-10)
+    _check(out, "U09.Z4.p_st_kPa", r["p_st"]/1000, 35.772, "kPa", rel=1e-10)
+    _check(out, "U09.Z4.dp_kPa", r["dp"]/1000, 19.772, "kPa", rel=1e-10)
 
     r = zadatak_5()
-    _check(out, "U09.Z5.v", r["v"], 7.41, "m/s", rel=0.02)
-    _check(out, "U09.Z5.p_C_abs_kPa", r["p_C_abs"] / 1000, 62.8, "kPa", rel=0.02)
-    _check(out, "U09.Z5.HGL_C", r["HGL_C"], -2.8, "m", rel=0.01)
-    _check(out, "U09.Z5.vapor_margin_kPa", r["vapor_margin"] / 1000, 60.5, "kPa", rel=0.02)
+    _check(out, "U09.Z5.d_min_mm", r["d_min"]*1000, 43.183, "mm", rel=.00005)
+    _check(out, "U09.Z5.d_max_mm", r["d_max"]*1000, 52.328, "mm", rel=.00005)
+    _check(out, "U09.Z5.p40_kPa", r["pressures"][0]/1000, 26.591, "kPa", rel=.00005)
+    _check(out, "U09.Z5.p50_kPa", r["pressures"][1]/1000, 101.366, "kPa", rel=.00005)
+    _check(out, "U09.Z5.p60_kPa", r["pressures"][2]/1000, 128.225, "kPa", rel=.00005)
+    _check(out, "U09.Z5.dp40_kPa", r["drops"][0]/1000, 123.409, "kPa", rel=.00005)
+    _check(out, "U09.Z5.dp50_kPa", r["drops"][1]/1000, 48.634, "kPa", rel=.00005)
+    _check(out, "U09.Z5.dp60_kPa", r["drops"][2]/1000, 21.775, "kPa", rel=.00005)
 
     r = zadatak_6()
     _check(out, "U09.Z6.v_ideal", r["v"], 7.14, "m/s", rel=0.02)
     _check(out, "U09.Z6.Q_ideal_Ls", r["Q"] * 1000, 27.5, "L/s", rel=0.02)
-    _check(out, "U09.Z6.p_C_ideal_kPa", r["p_C_abs"] / 1000, 59.2, "kPa", rel=0.02)
+    _check(out, "U09.Z6.p_C_ideal_kPa", r["p_C_abs"] / 1000, 59.1, "kPa", rel=.001)
     _check(out, "U09.Z6.x", r["x"], 3.53, "m", rel=0.02)
     _check(out, "U09.Z6.Q_real_Ls", r["Q_real"] * 1000, 15.9, "L/s", rel=0.02)
     _check(out, "U09.Z6.Q_min_Ls", r["Q_min"] * 1000, 14.7, "L/s", rel=0.02)
     _check(out, "U09.Z6.Q_max_Ls", r["Q_max"] * 1000, 17.4, "L/s", rel=0.02)
-    _check(out, "U09.Z6.p_C_min_kPa", r["p_C_abs_min"] / 1000, 59.2, "kPa", rel=0.02)
+    _check(out, "U09.Z6.p_C_min_kPa", r["p_C_abs_min"] / 1000, 59.1, "kPa", rel=.001)
+    _check(out, "U09.Z6.p_C_max_kPa", r["p_C_abs_max"]/1000, 70.8, "kPa", rel=.002)
+    _check(out, "U09.Z6.p_C_real_kPa", r["p_C_abs_real"]/1000, 65.9, "kPa", rel=.002)
+
+    a,b,c,d,e,f=(zadatak_1(),zadatak_2(),zadatak_3(),zadatak_4(),zadatak_5(),zadatak_6())
+    _invariant(out, "U09.INV.z1_energy_mass", abs(a['v']**2/2-9.81*3.2)<1e-12
+              and abs(a['m_dot']-998*a['Q'])<1e-12, "Istjecanje ne zatvara energiju i masu.")
+    _invariant(out, "U09.INV.z2_energy", abs(b['dp']-.6*((.42/.02)**2-(.42/.06)**2))<1e-10,
+              "Konfuzor ne zatvara energiju.")
+    _invariant(out, "U09.INV.z3_bernoulli", abs(c['dp']/1000+c['v_2']**2/2-c['v_1']**2/2-9.81*2)<1e-12
+              and c['dp']>0 and c['dHGL']<0, "Silazno suzenje ne zatvara predznake i energiju.")
+    _invariant(out, "U09.INV.z3_horizontal_limit", zadatak_3(dz=0)['dp']<0
+              and abs(zadatak_3(Q=0)['dp']-19620)<1e-10, "Horizontalna ili hidrostaticka granica ne prolazi.")
+    _invariant(out, "U09.INV.z4_hydrostatic", abs(d['p_st']-1000*d['v']**2/2-16000)<1e-10
+              and abs(zadatak_4(p_S=35772,dz=0)['v']-d['v'])<1e-12,
+              "Premjestanje senzora uz odgovarajuce ocitanje mijenja brzinu.")
+    def drop(diameter):
+        return 8*1000*.020**2/math.pi**2*(diameter**-4-.100**-4)
+    _invariant(out, "U09.INV.z5_bounds", abs(drop(e['d_min'])-90000)<1e-8
+              and abs(drop(e['d_max'])-40000)<1e-8
+              and drop(e['d_min']*.999)>90000 and drop(e['d_max']*1.001)<40000,
+              "Rubovi promjera ne zatvaraju zadane nejednakosti.")
+    _invariant(out, "U09.INV.z5_selection", e['accepted']==[.050], "Odabir ne zadovoljava oba tlacna uvjeta.")
+    from itertools import product
+    corners=[zadatak_6(K_sum=ks,dK_sum=0,K_C=kc,dK_C=0)
+             for ks,kc in product((1.5,2.5),(.9,1.5))]
+    _invariant(out, "U09.INV.z6_corners", abs(min(r['p_C_abs_real'] for r in corners)-f['p_C_abs_min'])<1e-8
+              and abs(max(r['p_C_abs_real'] for r in corners)-f['p_C_abs_max'])<1e-8
+              and min(r['Q_real'] for r in corners)<.015<max(r['Q_real'] for r in corners)
+              and f['p_C_abs_min']>30000, "Intervalni rubovi i odluka nisu konzistentni.")
+    no_loss=zadatak_6(K_sum=0,dK_sum=0,K_C=0,dK_C=0)
+    _invariant(out, "U09.INV.z6_ideal_limit", abs(no_loss['Q_real']-f['Q'])<1e-12
+              and abs(no_loss['p_C_abs_real']-f['p_C_abs'])<1e-8,
+              "Nulti gubitci ne vracaju idealni sifon.")
+    _invariant(out, "U09.INV.z6_trajectory", abs(9.81/2*(f['x']/f['v'])**2-1.2)<1e-12,
+              "Mlaz ne doseze tlo u objavljenom dometu.")
+    p3=primjer_3_sifon()
+    _invariant(out, "U09.INV.p3_reference", abs(p3['HGL_C']+p3['v']**2/(2*9.81))<1e-12,
+              "HGL u sifonu i brzinska visina ne vracaju EGL povrsine A.")
 
     return out
 

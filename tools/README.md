@@ -27,6 +27,7 @@ pinani `PyMuPDF` iz korijenskog `requirements.txt`.
 | `check_u05_sketch_geometry.py` | Dodatna ručna provjera nakon izmjena skica U05: čita stvarne SVG putanje, provjerava četvrtkružne lukove, lokalne normale i krakove komponenti sile. Pokreće se zasebno; vizualni pregled ostaje potreban. |
 | `check_u06_sketch_geometry.py` | Zasebno provjerava krute pravokutne trupove, vodoravne površine, centre uzgona neovisnom integracijom stvarnih SVG poligona, puni tank i razmak kućišta od dna. Dopunjuje vizualni pregled U06. |
 | `check_u07_sketch_geometry.py` | Zasebno provjerava normalu kose plohe, tangente strujnice, stvarni otvor klipa, otvorene priključke i omjere kota/promjera u SVG skicama U07. Dopunjuje vizualni pregled. |
+| `check_u08_sketch_geometry.py` | Zasebno provjerava stvarne SVG kote visina i promjera, otvorene sifone i mjerne priključke, balističke parabole, sučelja manometra te skalu EGL/HGL-a. Dopunjuje vizualni pregled U08. |
 | `validate_cfd_vv.py` | Read-only validator za `data/cfd/`: provjerava tri mreže, maseni debalans, reziduale i monitore, tro-mrežni GCI, analitičke/reference vrijednosti, provenancu te da eksperimentalni placeholder ne sadrži izmišljena mjerenja. |
 
 ### Kako čitati rezultat
