@@ -25,7 +25,7 @@
   <text x="44" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56">inercija ↔ gravitacija</text>
   <rect x="44" y="194" width="133" height="24" fill="#fadbd8" stroke="#c0392b" stroke-width="1" />
   <rect x="177" y="194" width="133" height="24" fill="#f3eafa" stroke="#8e44ad" stroke-width="1" />
-  <text x="177" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#8e44ad">Fr = v / √(gL)</text>
+  <text x="177" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#8e44ad">Fr² = v² / (gL)</text>
 
   <!-- vaga 3: inercija vs napetost -->
   <text x="44" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56">inercija ↔ napetost</text>
@@ -33,8 +33,8 @@
   <rect x="177" y="288" width="133" height="24" fill="#eaf3fb" stroke="#1565c0" stroke-width="1" />
   <text x="177" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#1565c0">We = ρv²L / σ</text>
 
-  <text x="177" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">Omjer pokazuje relativnu</text>
-  <text x="177" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">važnost dvaju mehanizama</text>
+  <text x="177" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">Parovi su shematski prikaz,</text>
+  <text x="177" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">bez numeričkog mjerila.</text>
 
   <!-- ===================== PANEL 2: kljucni brojevi ===================== -->
   <rect x="342" y="28" width="306" height="404" rx="10" fill="#fcfdff" stroke="#1565c0" stroke-width="1.3" />
@@ -69,7 +69,8 @@
   <text x="808" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Model ↔ prototip (aerotunel)</text>
 
   <!-- aerotunel kanal -->
-  <rect x="680" y="150" width="256" height="150" rx="4" fill="#eef6f1" stroke="#3a4a56" stroke-width="1.4" />
+  <rect x="680" y="150" width="256" height="140" fill="#eef6f1"/>
+  <path id="u14fup_tunnelwalls" d="M680 150 H936 M680 290 H936" fill="none" stroke="#3a4a56" stroke-width="2"/>
   <!-- strujanje -->
   <line x1="690" y1="180" x2="740" y2="180" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
   <line x1="690" y1="210" x2="740" y2="210" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u14fup_aR)" />

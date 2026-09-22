@@ -1172,14 +1172,34 @@
         "U14.Z1.Re_voda",
         "U14.Z2.v",
         "U14.Z2.Ma",
-        "U14.Z3.sigma",
-        "U14.Z4.We",
+        "U14.Z3.p_abs_kPa",
+        "U14.Z3.sigma1",
+        "U14.Z3.sigma2",
+        "U14.Z3.p_min_kPa",
+        "U14.Z3.p_M_min_kPa",
+        "U14.Z4.Re",
+        "U14.Z4.vm",
+        "U14.Z4.Ma",
+        "U14.Z4.Am",
+        "U14.Z4.Ap",
+        "U14.Z4.Cd",
+        "U14.Z4.Fp",
         "U14.Z5.Re",
         "U14.Z5.f",
-        "U14.Z6.v_m",
-        "U14.Z6.Q_m_Ls",
-        "U14.Z6.F_m",
-        "U14.Z6.Re_m"
+        "U14.Z5.rank",
+        "U14.Z5.group_count",
+        "U14.Z6.v20",
+        "U14.Z6.v30",
+        "U14.Z6.Q20_Ls",
+        "U14.Z6.Q30_Ls",
+        "U14.Z6.Re20",
+        "U14.Z6.Re30",
+        "U14.Z6.Fp20_kN",
+        "U14.Z6.dFp20_kN",
+        "U14.Z6.Fp30_kN",
+        "U14.Z6.dFp30_kN",
+        "U14.Z6.overlap_lower_kN",
+        "U14.Z6.overlap_upper_kN"
       ]
     }
   ],
@@ -20123,18 +20143,18 @@
       "level": "T1",
       "source": {
         "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-        "line": 726,
+        "line": 730,
         "anchor": "#task-u14-krv-tece-arteriolom-promjera-brzinom-a-voda"
       },
       "statement": {
-        "markdown": "Krv teče arteriolom promjera $D = 0{,}3\\ \\text{mm}$ brzinom $v = 5\\ \\text{mm/s}$ ($\\nu = 3{,}3 \\cdot 10^{-6}\\ \\text{m}^2/\\text{s}$), a voda gradskim vodom promjera $D = 0{,}3\\ \\text{m}$ brzinom $v = 1{,}5\\ \\text{m/s}$ ($\\nu = 1{,}0 \\cdot 10^{-6}\\ \\text{m}^2/\\text{s}$). Odredi Reynoldsov broj u oba slučaja i prosudi koja sila dominira.",
-        "sha256": "4c94419c52e9af3b4bc7507040bf6c0d08151ff2177d272d141b39c8b4fccae5",
+        "markdown": "Krv teče arteriolom promjera $D_a=0{,}3\\ \\text{mm}$ srednjom brzinom $v_a=5\\ \\text{mm/s}$; za ovaj proračun uzmi zadanu efektivnu kinematičku viskoznost $\\nu_a=3{,}3\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$. Voda teče gradskim vodom promjera $D_v=0{,}3\\ \\text{m}$ pri $v_v=1{,}5\\ \\text{m/s}$ i $\\nu_v=1{,}0\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$. Izračunaj Reynoldsove brojeve i usporedi relativnu važnost inercije i viskoznosti. Iz toga ne izvodi potpun reološki model krvi.",
+        "sha256": "de1708e565634c0ff9f4354fcc7e995a880f82720d74f4e8d5cba913b69612d6",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "D",
+            "symbol": "D_a",
             "relation": "=",
             "value_text": "0{,}3",
             "value": 0.3,
@@ -20147,7 +20167,7 @@
             }
           },
           {
-            "symbol": "v",
+            "symbol": "v_a",
             "relation": "=",
             "value_text": "5",
             "value": 5.0,
@@ -20160,9 +20180,9 @@
             }
           },
           {
-            "symbol": "\\nu",
+            "symbol": "\\nu_a",
             "relation": "=",
-            "value_text": "3{,}3 \\cdot 10^{-6}",
+            "value_text": "3{,}3\\cdot10^{-6}",
             "value": 3.2999999999999997e-06,
             "unit_text": "\\ \\text{m}^2/\\text{s}",
             "normalized_unit": "m^2/s",
@@ -20173,7 +20193,7 @@
             }
           },
           {
-            "symbol": "D",
+            "symbol": "D_v",
             "relation": "=",
             "value_text": "0{,}3",
             "value": 0.3,
@@ -20186,7 +20206,7 @@
             }
           },
           {
-            "symbol": "v",
+            "symbol": "v_v",
             "relation": "=",
             "value_text": "1{,}5",
             "value": 1.5,
@@ -20199,9 +20219,9 @@
             }
           },
           {
-            "symbol": "\\nu",
+            "symbol": "\\nu_v",
             "relation": "=",
-            "value_text": "1{,}0 \\cdot 10^{-6}",
+            "value_text": "1{,}0\\cdot10^{-6}",
             "value": 1e-06,
             "unit_text": "\\ \\text{m}^2/\\text{s}",
             "normalized_unit": "m^2/s",
@@ -20217,19 +20237,27 @@
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
+        "explicit": [
+          {
+            "text": "za ovaj proračun uzmi zadanu efektivnu kinematičku viskoznost $\\nu_a=3{,}3\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 730
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
         "defaults": [],
         "default_status": "none_declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$Re_{krv} \\approx 0{,}45$ — viskoznost dominira; $Re_{voda} \\approx 4{,}5 \\cdot 10^5$ — inercija dominira.",
+        "markdown": "$Re_a\\approx0{,}455$; $Re_v=4{,}50\\cdot10^5$. U zadanom modelu arteriole prevladavaju viskozni učinci, a u vodovodu inercijski. Reynoldsov broj sam ne određuje sva svojstva krvi niti prijelaz u svakoj geometriji.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-          "line": 738
+          "line": 744
         }
       },
       "tolerance": {
@@ -20237,15 +20265,15 @@
         "contracts": [
           {
             "result_id": "U14.Z1.Re_krv",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U14.Z1.Re_voda",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 1e-07,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
@@ -20281,18 +20309,18 @@
           {
             "result_id": "U14.Z1.Re_krv",
             "verification": "golden",
-            "target": 0.4545,
+            "target": 0.455,
             "target_kind": "literal",
             "unit": "1",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 206
+              "line": 250
             }
           },
           {
@@ -20302,14 +20330,14 @@
             "target_kind": "literal",
             "unit": "1",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 1e-07,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 207
+              "line": 251
             }
           }
         ]
@@ -20322,12 +20350,12 @@
       "level": "T1",
       "source": {
         "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-        "line": 746,
+        "line": 752,
         "anchor": "#task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom"
       },
       "statement": {
-        "markdown": "Zrak struji vodom promjera $D = 100\\ \\text{mm}$ lokalnim volumenskim protokom $Q = 0{,}5\\ \\text{m}^3/\\text{s}$; brzina zvuka $a = 340\\ \\text{m/s}$. Odredi brzinu i Machov broj te prosudi je li, bez velikih toplinskih i tlačnih promjena, aproksimacija konstantne gustoće razumna.",
-        "sha256": "ca0c476347068941edb6147ab12e45bd2e731b609ec0fb952aa4b55ff5d9267c",
+        "markdown": "Zrak struji vodom unutarnjeg promjera $D=100\\ \\text{mm}$ lokalnim volumenskim protokom $Q=0{,}5\\ \\text{m}^3/\\text{s}$; brzina zvuka je $a=340\\ \\text{m/s}$. Odredi srednju brzinu i Machov broj. Prosudi je li, bez velikih toplinskih i tlačnih promjena, aproksimacija konstantne gustoće razumna. Zadani protok vrijedi na promatranom presjeku i nije sveden na standardno stanje.",
+        "sha256": "94d9d953a73877dad4e7aad0a3a87d6be9fb4a5fc064afbe3e205c08179e7284",
         "authoritative": true
       },
       "input_data": {
@@ -20379,10 +20407,10 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "vrijednost $0{,}3$ uzmi kao orijentacijski prag.",
+            "text": "Vrijednost $Ma=0{,}3$ služi kao orijentacijski prag uz navedene pretpostavke.",
             "provenance": {
               "kind": "task_hint",
-              "line": 752
+              "line": 758
             }
           }
         ],
@@ -20393,11 +20421,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$v\\approx63{,}7\\ \\text{m/s}$, $Ma\\approx0{,}19$; prema zadanom kriteriju nestlačiva je aproksimacija razumna uz navedene dodatne pretpostavke.",
+        "markdown": "$v\\approx63{,}66\\ \\text{m/s}$, $Ma\\approx0{,}187$. Prema zadanom kriteriju aproksimacija konstantne gustoće razumna je uz navedene dodatne pretpostavke.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-          "line": 758
+          "line": 766
         }
       },
       "tolerance": {
@@ -20405,15 +20433,15 @@
         "contracts": [
           {
             "result_id": "U14.Z2.v",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U14.Z2.Ma",
-            "kind": "relative",
-            "value": 0.02,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
@@ -20449,18 +20477,18 @@
           {
             "result_id": "U14.Z2.v",
             "verification": "golden",
-            "target": 63.7,
+            "target": 63.66,
             "target_kind": "literal",
             "unit": "m/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 210
+              "line": 254
             }
           },
           {
@@ -20470,14 +20498,14 @@
             "target_kind": "literal",
             "unit": "1",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 211
+              "line": 255
             }
           }
         ]
@@ -20490,40 +20518,40 @@
       "level": "T2",
       "source": {
         "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-        "line": 766,
+        "line": 774,
         "anchor": "#task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak"
       },
       "statement": {
-        "markdown": "Na referentnom presjeku usisa crpke apsolutni tlak iznosi $p_{ref}=80\\ \\text{kPa}$, brzina $v_{ref}=4\\ \\text{m/s}$, gustoća vode $\\rho=1000\\ \\text{kg/m}^3$, a tlak zasićene pare $p_v=2340\\ \\text{Pa}$. Ispitivanje iste crpke, pri istoj definiciji referentnog presjeka, daje početak kavitacije pri $\\sigma_{kr}=3{,}0$. Odredi kavitacijski broj i usporedi ga s kritičnim.",
-        "sha256": "a5c02b49af424d0e41741343bfba377dc8615058bc4a3ab4f5714723e06835d4",
+        "markdown": "Na referentnom presjeku usisa crpke senzor pokazuje $p_M=-20{,}0\\ \\text{kPa}$ pri atmosferskom tlaku $p_{atm}=100{,}0\\ \\text{kPa}$. Voda ima $\\rho=1000\\ \\text{kg/m}^3$ i tlak pare $p_v=2340\\ \\text{Pa}$. U zadanom nastavnom modelu karakteristike za oba razmatrana režima početak kavitacije odgovara $\\sigma_{kr}=3{,}0$, uz iste referentne veličine. Najprije odredi apsolutni tlak i kavitacijski broj za $v_1=4{,}00\\ \\text{m/s}$. Zatim prosudi režim s $v_2=8{,}00\\ \\text{m/s}$ pri istom očitanju tlaka. Koliki bi minimalni pretlak senzor morao pokazivati pri $v_2$ da zadovolji zadani kriterij $\\sigma_{kav}\\geq\\sigma_{kr}$? Ocjenjuje se samo taj kriterij; granična jednakost ne daje dodatnu pogonsku rezervu.",
+        "sha256": "af23ab16b4db786e193257609df68f03f2c2be184cae4032084eba3e08df6068",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "p_{ref}",
+            "symbol": "p_M",
             "relation": "=",
-            "value_text": "80",
-            "value": 80.0,
+            "value_text": "-20{,}0",
+            "value": -20.0,
             "unit_text": "\\ \\text{kPa}",
             "normalized_unit": "kPa",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 80000.0,
+              "value": -20000.0,
               "unit": "Pa"
             }
           },
           {
-            "symbol": "v_{ref}",
+            "symbol": "p_{atm}",
             "relation": "=",
-            "value_text": "4",
-            "value": 4.0,
-            "unit_text": "\\ \\text{m/s}",
-            "normalized_unit": "m/s",
+            "value_text": "100{,}0",
+            "value": 100.0,
+            "unit_text": "\\ \\text{kPa}",
+            "normalized_unit": "kPa",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 4.0,
-              "unit": "m/s"
+              "value": 100000.0,
+              "unit": "Pa"
             }
           },
           {
@@ -20564,175 +20592,47 @@
               "value": 3.0,
               "unit": "1"
             }
-          }
-        ],
-        "unparsed_numeric_math": [],
-        "parse_status": "conservative_partial",
-        "authoritative_fallback": "statement.markdown"
-      },
-      "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
-        "defaults": [],
-        "default_status": "none_declared_in_chapter_exercise_preamble",
-        "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
-      },
-      "published_control": {
-        "kind": "numeric",
-        "markdown": "$\\sigma_{kav}\\approx9{,}7>\\sigma_{kr}=3{,}0$; prema zadanoj karakteristici crpka ima rezervu u toj radnoj točki.",
-        "reason_if_absent": null,
-        "provenance": {
-          "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-          "line": 778
-        }
-      },
-      "tolerance": {
-        "kind": "per_result",
-        "contracts": [
-          {
-            "result_id": "U14.Z3.sigma",
-            "kind": "relative",
-            "value": 0.02,
-            "value_kind": "literal",
-            "provenance": "verifier_call_keyword"
-          }
-        ]
-      },
-      "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U14.Z3.sigma"
-        ],
-        "unit_contract": [
-          {
-            "result_id": "U14.Z3.sigma",
-            "unit": "1"
-          }
-        ]
-      },
-      "verifier": {
-        "module": "verify_u14",
-        "exercise_id": "U14.Z3",
-        "classification": "golden",
-        "result_ids": [
-          "U14.Z3.sigma"
-        ],
-        "result_contracts": [
-          {
-            "result_id": "U14.Z3.sigma",
-            "verification": "golden",
-            "target": 9.707,
-            "target_kind": "literal",
-            "unit": "1",
-            "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
-              "value_kind": "literal",
-              "provenance": "verifier_call_keyword"
-            },
-            "provenance": {
-              "path": "tools/verify_u14.py",
-              "line": 214
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "task-u14-kap-goriva-promjera-izlozena-je-relativnoj-struji",
-      "chapter": "U11",
-      "ordinal": 4,
-      "level": "T2",
-      "source": {
-        "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-        "line": 786,
-        "anchor": "#task-u14-kap-goriva-promjera-izlozena-je-relativnoj-struji"
-      },
-      "statement": {
-        "markdown": "Kap goriva promjera $d=0{,}15\\ \\text{mm}$ izložena je relativnoj struji zraka brzine $v=80\\ \\text{m/s}$ ($\\rho_{zr}=1{,}2\\ \\text{kg/m}^3$, $\\sigma=0{,}025\\ \\text{N/m}$). Za ovaj pojednostavljeni slučaj zanemari viskozne učinke i kao orijentacijski prag početka aerodinamičkog raspada uzmi $We_{kr}=12$. Odredi Weberov broj i prosudi predviđa li taj kriterij početak raspada. Objasni zašto iz toga još ne slijedi veličina nastalih kapljica.",
-        "sha256": "6d926b35a4bfe4e374d94e980468a7ebffcb12193e3ac957c7ea0b181567edbe",
-        "authoritative": true
-      },
-      "input_data": {
-        "scalars": [
-          {
-            "symbol": "d",
-            "relation": "=",
-            "value_text": "0{,}15",
-            "value": 0.15,
-            "unit_text": "\\ \\text{mm}",
-            "normalized_unit": "mm",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.00015,
-              "unit": "m"
-            }
           },
           {
-            "symbol": "v",
+            "symbol": "v_1",
             "relation": "=",
-            "value_text": "80",
-            "value": 80.0,
+            "value_text": "4{,}00",
+            "value": 4.0,
             "unit_text": "\\ \\text{m/s}",
             "normalized_unit": "m/s",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 80.0,
+              "value": 4.0,
               "unit": "m/s"
             }
           },
           {
-            "symbol": "\\rho_{zr}",
+            "symbol": "v_2",
             "relation": "=",
-            "value_text": "1{,}2",
-            "value": 1.2,
-            "unit_text": "\\ \\text{kg/m}^3",
-            "normalized_unit": "kg/m^3",
+            "value_text": "8{,}00",
+            "value": 8.0,
+            "unit_text": "\\ \\text{m/s}",
+            "normalized_unit": "m/s",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 1.2,
-              "unit": "kg/m^3"
-            }
-          },
-          {
-            "symbol": "\\sigma",
-            "relation": "=",
-            "value_text": "0{,}025",
-            "value": 0.025,
-            "unit_text": "\\ \\text{N/m}",
-            "normalized_unit": "N/m",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.025,
-              "unit": "N/m"
-            }
-          },
-          {
-            "symbol": "We_{kr}",
-            "relation": "=",
-            "value_text": "12",
-            "value": 12.0,
-            "unit_text": "1",
-            "normalized_unit": "1",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 12.0,
-              "unit": "1"
+              "value": 8.0,
+              "unit": "m/s"
             }
           }
         ],
-        "unparsed_numeric_math": [],
+        "unparsed_numeric_math": [
+          "v_2"
+        ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
         "explicit": [
           {
-            "text": "Za ovaj pojednostavljeni slučaj zanemari viskozne učinke i kao orijentacijski prag početka aerodinamičkog raspada uzmi $We_{kr}=12$.",
+            "text": "Na referentnom presjeku usisa crpke senzor pokazuje $p_M=-20{,}0\\ \\text{kPa}$ pri atmosferskom tlaku $p_{atm}=100{,}0\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 786
+              "line": 774
             }
           }
         ],
@@ -20743,61 +20643,629 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$We\\approx46>12$; pojednostavljeni kriterij predviđa raspad, ali bez viskoznosti, omjera gustoća i modela sekundarnog raspada ne određuje raspodjelu veličina kapljica.",
+        "markdown": "$p_{abs}=80{,}0\\ \\text{kPa}$; $\\sigma_1\\approx9{,}708>3$, a $\\sigma_2\\approx2{,}427<3$. Prvi režim zadovoljava, drugi ne zadovoljava zadani kriterij. Pri $v_2$ treba $p_{abs,min}=98{,}34\\ \\text{kPa}$, odnosno $p_{M,min}=-1{,}660\\ \\text{kPa}$. To je granica kriterija bez dodatne rezerve.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-          "line": 798
+          "line": 790
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U14.Z4.We",
-            "kind": "relative",
-            "value": 0.02,
+            "result_id": "U14.Z3.p_abs_kPa",
+            "kind": "absolute",
+            "value": 1e-10,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z3.sigma1",
+            "kind": "absolute",
+            "value": 0.000500001,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z3.sigma2",
+            "kind": "absolute",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z3.p_min_kPa",
+            "kind": "absolute",
+            "value": 0.005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z3.p_M_min_kPa",
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U14.Z4.We"
+        "kind": "executed_invariant",
+        "criterion": [
+          "r['sigma1'] > 3 > r['sigma2']",
+          "abs(zadatak_3(p_M=r['p_M_min'])['sigma2'] - 3) < 1e-12 and zadatak_3(p_M=r['p_M_min'] - 1)['sigma2'] < 3"
         ],
-        "unit_contract": [
+        "verifier_result_ids": [
+          "U14.Z3.criterion",
+          "U14.Z3.threshold"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
+      },
+      "verifier": {
+        "module": "verify_u14",
+        "exercise_id": "U14.Z3",
+        "classification": "golden",
+        "result_ids": [
+          "U14.Z3.p_abs_kPa",
+          "U14.Z3.sigma1",
+          "U14.Z3.sigma2",
+          "U14.Z3.p_min_kPa",
+          "U14.Z3.p_M_min_kPa",
+          "U14.Z3.criterion",
+          "U14.Z3.threshold"
+        ],
+        "result_contracts": [
           {
-            "result_id": "U14.Z4.We",
-            "unit": "1"
+            "result_id": "U14.Z3.p_abs_kPa",
+            "verification": "golden",
+            "target": 80.0,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 258
+            }
+          },
+          {
+            "result_id": "U14.Z3.sigma1",
+            "verification": "golden",
+            "target": 9.708,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.000500001,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 259
+            }
+          },
+          {
+            "result_id": "U14.Z3.sigma2",
+            "verification": "golden",
+            "target": 2.427,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 260
+            }
+          },
+          {
+            "result_id": "U14.Z3.p_min_kPa",
+            "verification": "golden",
+            "target": 98.34,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 261
+            }
+          },
+          {
+            "result_id": "U14.Z3.p_M_min_kPa",
+            "verification": "golden",
+            "target": -1.66,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 262
+            }
+          },
+          {
+            "result_id": "U14.Z3.criterion",
+            "verification": "invariant",
+            "criterion_expression": "r['sigma1'] > 3 > r['sigma2']",
+            "failure_message": "Dva režima moraju biti s različitih strana zadanog kriterija.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 263
+            }
+          },
+          {
+            "result_id": "U14.Z3.threshold",
+            "verification": "invariant",
+            "criterion_expression": "abs(zadatak_3(p_M=r['p_M_min'])['sigma2'] - 3) < 1e-12 and zadatak_3(p_M=r['p_M_min'] - 1)['sigma2'] < 3",
+            "failure_message": "Granični pretlak i neposredno niži tlak moraju dati granicu i kršenje kriterija.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 264
+            }
           }
         ]
+      }
+    },
+    {
+      "id": "task-reynoldsova-slicnost-hidroprofila",
+      "chapter": "U11",
+      "ordinal": 4,
+      "level": "T2",
+      "source": {
+        "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
+        "line": 800,
+        "anchor": "#task-reynoldsova-slicnost-hidroprofila"
+      },
+      "statement": {
+        "markdown": "Geometrijski sličan hidroprofil u vodi i njegov model u zraku služe za prijenos izmjerene sile otpora. Odredi brzinu modela za Reynoldsovu sličnost, provjeri Machov broj i iz jednakosti koeficijenata otpora izračunaj silu na prototipu. Simetričan hidroprofil tetive $c_p=0{,}300\\ \\text{m}$ i raspona $b_p=0{,}600\\ \\text{m}$ nalazi se u vodi brzine $v_p=1{,}00\\ \\text{m/s}$, gustoće $\\rho_p=1000\\ \\text{kg/m}^3$ i kinematičke viskoznosti $\\nu_p=1{,}00\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$. Geometrijski sličan model tetive $c_m=0{,}100\\ \\text{m}$ i raspona $b_m=0{,}200\\ \\text{m}$ ispituje se u zraku s $\\rho_m=1{,}20\\ \\text{kg/m}^3$, $\\nu_m=1{,}50\\cdot10^{-5}\\ \\text{m}^2/\\text{s}$ i $a_m=340\\ \\text{m/s}$. Oba profila imaju nulti napadni kut, jednaku relativnu hrapavost i usporedive bezdimenzijske uvjete dolazne struje. Voda je daleko od slobodne površine i stijenki, bez kavitacije; utjecaj stijenki tunela zanemariv je. U tim pretpostavkama za prijenos koeficijenta otpora traži se $Re_m=Re_p$, uz provjeru maloga $Ma_m$. U sintetičkom nastavnom pokusu pri traženoj brzini izmjerena je samo komponenta otpora usporedna sa strujom, $F_{D,m}=0{,}405\\ \\text{N}$. Za $C_D$ upotrijebi referentnu površinu $A=bc$. Objasni zašto faktor $\\lambda_L^3$ iz Froudeova modela nije primjenjiv na ovaj pokus.",
+        "sha256": "a0538e7eaca7b221acb11e87581ff7d34ff1283e01d34948132824540f5432d4",
+        "authoritative": true
+      },
+      "input_data": {
+        "scalars": [
+          {
+            "symbol": "c_p",
+            "relation": "=",
+            "value_text": "0{,}300",
+            "value": 0.3,
+            "unit_text": "\\ \\text{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.3,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "b_p",
+            "relation": "=",
+            "value_text": "0{,}600",
+            "value": 0.6,
+            "unit_text": "\\ \\text{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.6,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "v_p",
+            "relation": "=",
+            "value_text": "1{,}00",
+            "value": 1.0,
+            "unit_text": "\\ \\text{m/s}",
+            "normalized_unit": "m/s",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1.0,
+              "unit": "m/s"
+            }
+          },
+          {
+            "symbol": "\\rho_p",
+            "relation": "=",
+            "value_text": "1000",
+            "value": 1000.0,
+            "unit_text": "\\ \\text{kg/m}^3",
+            "normalized_unit": "kg/m^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1000.0,
+              "unit": "kg/m^3"
+            }
+          },
+          {
+            "symbol": "\\nu_p",
+            "relation": "=",
+            "value_text": "1{,}00\\cdot10^{-6}",
+            "value": 1e-06,
+            "unit_text": "\\ \\text{m}^2/\\text{s}",
+            "normalized_unit": "m^2/s",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1e-06,
+              "unit": "m^2/s"
+            }
+          },
+          {
+            "symbol": "c_m",
+            "relation": "=",
+            "value_text": "0{,}100",
+            "value": 0.1,
+            "unit_text": "\\ \\text{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.1,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "b_m",
+            "relation": "=",
+            "value_text": "0{,}200",
+            "value": 0.2,
+            "unit_text": "\\ \\text{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.2,
+              "unit": "m"
+            }
+          },
+          {
+            "symbol": "\\rho_m",
+            "relation": "=",
+            "value_text": "1{,}20",
+            "value": 1.2,
+            "unit_text": "\\ \\text{kg/m}^3",
+            "normalized_unit": "kg/m^3",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1.2,
+              "unit": "kg/m^3"
+            }
+          },
+          {
+            "symbol": "\\nu_m",
+            "relation": "=",
+            "value_text": "1{,}50\\cdot10^{-5}",
+            "value": 1.5000000000000002e-05,
+            "unit_text": "\\ \\text{m}^2/\\text{s}",
+            "normalized_unit": "m^2/s",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 1.5000000000000002e-05,
+              "unit": "m^2/s"
+            }
+          },
+          {
+            "symbol": "a_m",
+            "relation": "=",
+            "value_text": "340",
+            "value": 340.0,
+            "unit_text": "\\ \\text{m/s}",
+            "normalized_unit": "m/s",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 340.0,
+              "unit": "m/s"
+            }
+          },
+          {
+            "symbol": "F_{D,m}",
+            "relation": "=",
+            "value_text": "0{,}405",
+            "value": 0.405,
+            "unit_text": "\\ \\text{N}",
+            "normalized_unit": "N",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.405,
+              "unit": "N"
+            }
+          }
+        ],
+        "unparsed_numeric_math": [
+          "\\lambda_L^3"
+        ],
+        "parse_status": "conservative_partial",
+        "authoritative_fallback": "statement.markdown"
+      },
+      "assumptions": {
+        "explicit": [
+          {
+            "text": "utjecaj stijenki tunela zanemariv je.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 800
+            }
+          },
+          {
+            "text": "U tim pretpostavkama za prijenos koeficijenta otpora traži se $Re_m=Re_p$, uz provjeru maloga $Ma_m$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 800
+            }
+          },
+          {
+            "text": "Za karakterističnu duljinu uzmi tetivu.",
+            "provenance": {
+              "kind": "task_hint",
+              "line": 812
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
+        "defaults": [],
+        "default_status": "none_declared_in_chapter_exercise_preamble",
+        "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
+      },
+      "published_control": {
+        "kind": "numeric",
+        "markdown": "$Re_p=Re_m=3{,}00\\cdot10^5$; $v_m=45{,}0\\ \\text{m/s}$, $Ma_m\\approx0{,}132$. Površine su $A_m=0{,}0200\\ \\text{m}^2$ i $A_p=0{,}180\\ \\text{m}^2$; $C_D\\approx0{,}01667$, $F_{D,p}=1{,}500\\ \\text{N}$. Omjer sila jest $(\\rho_p/\\rho_m)(v_p/v_m)^2(A_p/A_m)$; faktor $\\lambda_L^3$ ne vrijedi za ovaj izbor fluida i sličnosti.",
+        "reason_if_absent": null,
+        "provenance": {
+          "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
+          "line": 820
+        }
+      },
+      "tolerance": {
+        "kind": "per_result",
+        "contracts": [
+          {
+            "result_id": "U14.Z4.Re",
+            "kind": "absolute",
+            "value": 1e-07,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z4.vm",
+            "kind": "absolute",
+            "value": 1e-10,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z4.Ma",
+            "kind": "absolute",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z4.Am",
+            "kind": "absolute",
+            "value": 1e-12,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z4.Ap",
+            "kind": "absolute",
+            "value": 1e-12,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z4.Cd",
+            "kind": "absolute",
+            "value": 5e-06,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z4.Fp",
+            "kind": "absolute",
+            "value": 0.0005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          }
+        ]
+      },
+      "independent_check": {
+        "kind": "executed_invariant",
+        "criterion": [
+          "abs(r['vm'] * 0.1 / 1.5e-05 - 1 * 0.3 / 1e-06) < 1e-07 and r['Ma'] < 0.3",
+          "abs(r['Fp'] - 0.405 * (1000 / 1.2) * (1 / r['vm']) ** 2 * 9) < 1e-12",
+          "abs(identity['Fp'] - 0.405) < 1e-12"
+        ],
+        "verifier_result_ids": [
+          "U14.Z4.similarity",
+          "U14.Z4.force_transfer",
+          "U14.Z4.identity_limit"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u14",
         "exercise_id": "U14.Z4",
         "classification": "golden",
         "result_ids": [
-          "U14.Z4.We"
+          "U14.Z4.Re",
+          "U14.Z4.vm",
+          "U14.Z4.Ma",
+          "U14.Z4.Am",
+          "U14.Z4.Ap",
+          "U14.Z4.Cd",
+          "U14.Z4.Fp",
+          "U14.Z4.similarity",
+          "U14.Z4.force_transfer",
+          "U14.Z4.identity_limit"
         ],
         "result_contracts": [
           {
-            "result_id": "U14.Z4.We",
+            "result_id": "U14.Z4.Re",
             "verification": "golden",
-            "target": 46.08,
+            "target": 300000.0,
             "target_kind": "literal",
             "unit": "1",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 1e-07,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 217
+              "line": 269
+            }
+          },
+          {
+            "result_id": "U14.Z4.vm",
+            "verification": "golden",
+            "target": 45.0,
+            "target_kind": "literal",
+            "unit": "m/s",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 270
+            }
+          },
+          {
+            "result_id": "U14.Z4.Ma",
+            "verification": "golden",
+            "target": 0.132,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 271
+            }
+          },
+          {
+            "result_id": "U14.Z4.Am",
+            "verification": "golden",
+            "target": 0.02,
+            "target_kind": "literal",
+            "unit": "m^2",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-12,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 272
+            }
+          },
+          {
+            "result_id": "U14.Z4.Ap",
+            "verification": "golden",
+            "target": 0.18,
+            "target_kind": "literal",
+            "unit": "m^2",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-12,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 273
+            }
+          },
+          {
+            "result_id": "U14.Z4.Cd",
+            "verification": "golden",
+            "target": 0.01667,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 5e-06,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 274
+            }
+          },
+          {
+            "result_id": "U14.Z4.Fp",
+            "verification": "golden",
+            "target": 1.5,
+            "target_kind": "literal",
+            "unit": "N",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 275
+            }
+          },
+          {
+            "result_id": "U14.Z4.similarity",
+            "verification": "invariant",
+            "criterion_expression": "abs(r['vm'] * 0.1 / 1.5e-05 - 1 * 0.3 / 1e-06) < 1e-07 and r['Ma'] < 0.3",
+            "failure_message": "Reynoldsovi brojevi moraju biti jednaki, uz malu stlačivost modela.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 276
+            }
+          },
+          {
+            "result_id": "U14.Z4.force_transfer",
+            "verification": "invariant",
+            "criterion_expression": "abs(r['Fp'] - 0.405 * (1000 / 1.2) * (1 / r['vm']) ** 2 * 9) < 1e-12",
+            "failure_message": "Prijenos iz jednakosti Cd mora odgovarati omjeru gustoće, brzina i površina.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 278
+            }
+          },
+          {
+            "result_id": "U14.Z4.identity_limit",
+            "verification": "invariant",
+            "criterion_expression": "abs(identity['Fp'] - 0.405) < 1e-12",
+            "failure_message": "Jednake geometrije i jednaki fluidi pri istom Re daju istu silu.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 281
             }
           }
         ]
@@ -20810,12 +21278,12 @@
       "level": "T3",
       "source": {
         "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-        "line": 806,
+        "line": 828,
         "anchor": "#task-u14-frekvencija-otpustanja-vrtloga-iza-geometrijski-slicnog-tijela"
       },
       "statement": {
-        "markdown": "Frekvencija otpuštanja vrtloga $f$ iza geometrijski sličnog tijela ovisi o brzini neporemećene struje $v$, karakterističnoj duljini $D$, gustoći $\\rho$ i dinamičkoj viskoznosti $\\mu$. Buckinghamovim postupkom, uz ponavljajuće varijable $\\rho$, $v$ i $D$, odredi broj $\\Pi$-grupa i pokaži da se rezultat može zapisati kao $St=\\Phi(Re)$. Zatim za cilindar promjera $D=0{,}050\\ \\text{m}$ u zraku gustoće $\\rho=1{,}20\\ \\text{kg/m}^3$ i viskoznosti $\\mu=1{,}80\\cdot10^{-5}\\ \\text{Pa s}$ pri $v=12{,}0\\ \\text{m/s}$ izračunaj $Re$ i frekvenciju ako mjerenje za geometrijski sličan slučaj pri tom režimu daje $St=0{,}190$. Objasni zašto vrijednost $St$ nije izvedena samo dimenzijskom analizom.",
-        "sha256": "d8a148593d40ca207243e5cdaaf6a235a17b3d3d2bad0574bb34eb3e859f8e7d",
+        "markdown": "Frekvencija otpuštanja vrtloga $f$ iza geometrijski sličnog tijela ovisi o brzini neporemećene struje $v$, karakterističnoj duljini $D$, gustoći $\\rho$ i dinamičkoj viskoznosti $\\mu$. Buckinghamovim postupkom, uz ponavljajuće varijable $\\rho$, $v$ i $D$, odredi broj $\\Pi$-grupa i pokaži da se rezultat može zapisati kao $St=\\Phi(Re)$. Popiši dimenzije i izračunaj eksponente; nemoj početi uvrštavanjem gotovih definicija. Za izolirani kružni cilindar promjera $D=0{,}050\\ \\text{m}$ u zraku gustoće $\\rho=1{,}20\\ \\text{kg/m}^3$ i viskoznosti $\\mu=1{,}80\\cdot10^{-5}\\ \\text{Pa s}$ pri $v=12{,}0\\ \\text{m/s}$ odredi $Re$ i frekvenciju. Zadani nastavni podatak za isti režim, geometriju i bezdimenzijske rubne uvjete jest $St=0{,}190$. Objasni zašto ta brojčana vrijednost nije izvedena samom dimenzijskom analizom.",
+        "sha256": "ee0f17fd54ed868aa1d10a8b6ceeb6d02fbf1b52101e3fa42dd4afe757fb5c38",
         "authoritative": true
       },
       "input_data": {
@@ -20899,11 +21367,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$n=5$, $k=3$, pa nastaju dvije grupe; izborom ponavljajućih varijabli dobivaju se $\\Pi_1=fD/v=St$ i $\\Pi_2=\\rho vD/\\mu=Re$, odnosno $St=\\Phi(Re)$. Za zadani slučaj $Re=4{,}00\\cdot10^4$ i $f=St\\,v/D=45{,}6\\ \\text{Hz}$. Dimenzijska analiza određuje oblik ovisnosti, ali broj $St=0{,}190$ dolazi iz mjerenja ili odgovarajućega modela, ne iz samog Buckinghamova postupka.",
+        "markdown": "$n=5$, $k=3$: dvije grupe. Dobiva se $\\Pi_1=fD/v=St$ i $\\Pi_2=\\mu/(\\rho vD)=1/Re$, ili njezina recipročna vrijednost $Re$. Za zadani slučaj $Re=4{,}00\\cdot10^4$ i $f=45{,}6\\ \\text{Hz}$. Dimenzijska analiza određuje oblik $St=\\Phi(Re)$; broj $St=0{,}190$ dolazi iz zadanoga podatka ili odgovarajućeg modela.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-          "line": 818
+          "line": 844
         }
       },
       "tolerance": {
@@ -20922,18 +21390,32 @@
             "value": 0.01,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z5.rank",
+            "kind": "absolute",
+            "value": 0,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z5.group_count",
+            "kind": "absolute",
+            "value": 0,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
       "independent_check": {
         "kind": "executed_invariant",
         "criterion": [
-          "n_variables - k_dimensions == 2",
-          "dim_St == (0, 0, 0) and dim_Re == (0, 0, 0)"
+          "exponents == [(0, -1, 1), (-1, -1, -1)] and repeating_rank == 3",
+          "bad_rank < 3"
         ],
         "verifier_result_ids": [
-          "U14.Z5.group_count",
-          "U14.Z5.group_dimensions"
+          "U14.Z5.exponents",
+          "U14.Z5.invalid_repeating_set"
         ],
         "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
@@ -20944,8 +21426,10 @@
         "result_ids": [
           "U14.Z5.Re",
           "U14.Z5.f",
+          "U14.Z5.rank",
           "U14.Z5.group_count",
-          "U14.Z5.group_dimensions"
+          "U14.Z5.exponents",
+          "U14.Z5.invalid_repeating_set"
         ],
         "result_contracts": [
           {
@@ -20962,7 +21446,7 @@
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 220
+              "line": 285
             }
           },
           {
@@ -20979,29 +21463,63 @@
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 221
+              "line": 286
+            }
+          },
+          {
+            "result_id": "U14.Z5.rank",
+            "verification": "golden",
+            "target": 3,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 289
             }
           },
           {
             "result_id": "U14.Z5.group_count",
-            "verification": "invariant",
-            "criterion_expression": "n_variables - k_dimensions == 2",
-            "failure_message": "Pet veličina i tri neovisne dimenzije moraju dati dvije Pi-grupe.",
-            "failure_message_kind": "literal",
+            "verification": "golden",
+            "target": 2,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 226
+              "line": 290
             }
           },
           {
-            "result_id": "U14.Z5.group_dimensions",
+            "result_id": "U14.Z5.exponents",
             "verification": "invariant",
-            "criterion_expression": "dim_St == (0, 0, 0) and dim_Re == (0, 0, 0)",
-            "failure_message": "St=fD/v i Re=rho*v*D/mu moraju biti bezdimenzijski.",
+            "criterion_expression": "exponents == [(0, -1, 1), (-1, -1, -1)] and repeating_rank == 3",
+            "failure_message": "Rješavanje dimenzijskog sustava mora dati St i 1/Re uz odabrane ponavljajuće varijable.",
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 241
+              "line": 291
+            }
+          },
+          {
+            "result_id": "U14.Z5.invalid_repeating_set",
+            "verification": "invariant",
+            "criterion_expression": "bad_rank < 3",
+            "failure_message": "Skup f,v,D ne obuhvaća dimenziju mase.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 294
             }
           }
         ]
@@ -21014,33 +21532,20 @@
       "level": "T4",
       "source": {
         "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-        "line": 826,
+        "line": 852,
         "anchor": "#task-u14-preljev-brane-ispituje-se-vodenim-modelom-u"
       },
       "statement": {
-        "markdown": "Preljev brane ispituje se vodenim modelom u mjerilu $\\lambda_L=30$, pri istom gravitacijskom ubrzanju i gustoći kao prototip. Prototip pri projektnom protoku ima brzinu preljeva $v_p=6{,}0\\ \\text{m/s}$ i protok $Q_p=480\\ \\text{m}^3/\\text{s}$, a odgovarajuća vodoravna sila iznosi $F_p=220\\ \\text{kN}$. (a) Iz Froudeove sličnosti odredi brzinu i protok modela. (b) Odredi silu na modelu. (c) Za dubinu na modelu $h_m=0{,}25\\ \\text{m}$ i $\\nu=1{,}0\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$ izračunaj $Re_m$. Navedi što velik $Re_m$ sugerira, ali i zašto ne dokazuje da je mjerilna pogreška zbog nejednakog $Re$ mala.",
-        "sha256": "49cb391f3bc5b8ba2dce21a59bb5bc2dd1923ea03168583aa84f27617ed96b46",
+        "markdown": "Preljev brane ispituje se geometrijski sličnim vodenim modelima u mjerilima $\\lambda_L=L_p/L_m=20$ i $30$. Gustoća i gravitacijsko ubrzanje jednaki su na modelima i prototipu. U referentnom pravokutnom presjeku prototipa zadani su $v_p=6{,}00\\ \\text{m/s}$, $h_p=7{,}50\\ \\text{m}$ i $Q_p=480\\ \\text{m}^3/\\text{s}$. Za vodu uzmi $\\nu=1{,}00\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$. Modelske brzine odabiru se po Froudeovoj sličnosti. Sintetički podatci pokusa daju vodoravnu silu vode na preljev, nakon tariranja ostalih opterećenja: | Mjerilo $\\lambda_L$ | Sila na modelu $F_m$ | Zajamčena granica pogreške | | --- | ---: | ---: | | 20 | $28{,}0\\ \\text{N}$ | $\\pm0{,}6\\ \\text{N}$ | | 30 | $8{,}00\\ \\text{N}$ | $\\pm0{,}20\\ \\text{N}$ | Granice su neovisne i ne predstavljaju standardne nesigurnosti. Odredi $v_m$, $Q_m$ i $Re_m=v_mh_m/\\nu$ za oba modela. Uz idealizirani zakon $F_p=\\lambda_L^3F_m$ prenesi izmjerene intervale na prototip i utvrdi imaju li presjek. Za ponavljanje pokusa laboratorij dopušta najviše $Q_{lim}=300\\ \\text{L/s}$ i zahtijeva da cijeli zajamčeni interval sile na odabranom modelu bude iznad $F_{min}=10{,}0\\ \\text{N}$. Koje mjerilo zadovoljava oba uvjeta? Objasni zašto eventualno preklapanje prenesenih intervala i veliki $Re_m$ još ne dokazuju malu pogrešku zbog nepotpune dinamičke sličnosti.",
+        "sha256": "f689dc4843cb43c1d1b8714bec566b3db9f50743c1a7e9e63ec9ec0311980a8f",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "\\lambda_L",
-            "relation": "=",
-            "value_text": "30",
-            "value": 30.0,
-            "unit_text": "1",
-            "normalized_unit": "1",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 30.0,
-              "unit": "1"
-            }
-          },
-          {
             "symbol": "v_p",
             "relation": "=",
-            "value_text": "6{,}0",
+            "value_text": "6{,}00",
             "value": 6.0,
             "unit_text": "\\ \\text{m/s}",
             "normalized_unit": "m/s",
@@ -21048,6 +21553,19 @@
             "si": {
               "value": 6.0,
               "unit": "m/s"
+            }
+          },
+          {
+            "symbol": "h_p",
+            "relation": "=",
+            "value_text": "7{,}50",
+            "value": 7.5,
+            "unit_text": "\\ \\text{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 7.5,
+              "unit": "m"
             }
           },
           {
@@ -21064,35 +21582,9 @@
             }
           },
           {
-            "symbol": "F_p",
-            "relation": "=",
-            "value_text": "220",
-            "value": 220.0,
-            "unit_text": "\\ \\text{kN}",
-            "normalized_unit": "kN",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 220000.0,
-              "unit": "N"
-            }
-          },
-          {
-            "symbol": "h_m",
-            "relation": "=",
-            "value_text": "0{,}25",
-            "value": 0.25,
-            "unit_text": "\\ \\text{m}",
-            "normalized_unit": "m",
-            "provenance": "task_statement_inline_math",
-            "si": {
-              "value": 0.25,
-              "unit": "m"
-            }
-          },
-          {
             "symbol": "\\nu",
             "relation": "=",
-            "value_text": "1{,}0\\cdot10^{-6}",
+            "value_text": "1{,}00\\cdot10^{-6}",
             "value": 1e-06,
             "unit_text": "\\ \\text{m}^2/\\text{s}",
             "normalized_unit": "m^2/s",
@@ -21101,166 +21593,433 @@
               "value": 1e-06,
               "unit": "m^2/s"
             }
+          },
+          {
+            "symbol": null,
+            "relation": "context_value",
+            "value_text": "28{,}0",
+            "value": 28.0,
+            "unit_text": "\\ \\text{N}",
+            "normalized_unit": "N",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 28.0,
+              "unit": "N"
+            }
+          },
+          {
+            "symbol": null,
+            "relation": "context_value",
+            "value_text": "8{,}00",
+            "value": 8.0,
+            "unit_text": "\\ \\text{N}",
+            "normalized_unit": "N",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 8.0,
+              "unit": "N"
+            }
+          },
+          {
+            "symbol": "Q_{lim}",
+            "relation": "=",
+            "value_text": "300",
+            "value": 300.0,
+            "unit_text": "\\ \\text{L/s}",
+            "normalized_unit": "L/s",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 0.3,
+              "unit": "m^3/s"
+            }
+          },
+          {
+            "symbol": "F_{min}",
+            "relation": "=",
+            "value_text": "10{,}0",
+            "value": 10.0,
+            "unit_text": "\\ \\text{N}",
+            "normalized_unit": "N",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 10.0,
+              "unit": "N"
+            }
           }
         ],
-        "unparsed_numeric_math": [],
+        "unparsed_numeric_math": [
+          "\\lambda_L=L_p/L_m=20",
+          "30",
+          "\\pm0{,}6\\ \\text{N}",
+          "\\pm0{,}20\\ \\text{N}",
+          "F_p=\\lambda_L^3F_m"
+        ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
       },
       "assumptions": {
-        "explicit": [],
-        "explicit_status": "none_identified_in_statement_or_hint",
+        "explicit": [
+          {
+            "text": "Za vodu uzmi $\\nu=1{,}00\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 852
+            }
+          },
+          {
+            "text": "Sintetički podatci pokusa daju vodoravnu silu vode na preljev, nakon tariranja ostalih opterećenja: | Mjerilo $\\lambda_L$ | Sila na modelu $F_m$ | Zajamčena granica pogreške | | --- | ---: | ---: | | 20 | $28{,}0\\ \\text{N}$ | $\\pm0{,}6\\ \\text{N}$ | | 30 | $8{,}00\\ \\text{N}$ | $\\pm0{,}20\\ \\text{N}$ | Granice su neovisne i ne predstavljaju standardne nesigurnosti.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 852
+            }
+          }
+        ],
+        "explicit_status": "declared_and_extracted",
         "defaults": [],
         "default_status": "none_declared_in_chapter_exercise_preamble",
         "provenance_policy": "Popisi sadrže samo rečenice pronađene u tekstu zadatka, naputku ili uvodu liste; ništa se ne izvodi iz domenskoga znanja."
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$v_m\\approx1{,}10\\ \\text{m/s}$; $Q_m\\approx97{,}4\\ \\text{L/s}$; $F_m\\approx8{,}15\\ \\text{N}$; $Re_m\\approx2{,}7\\cdot10^5$. Model je vjerojatno turbulentan, ali veličina viskozne mjerilne pogreške mora se provjeriti korekcijom otpora, nizom modelskih mjerila ili podatcima — ne slijedi samo iz oznake „turbulentno”.",
+        "markdown": "Redom za $\\lambda_L=20,30$: $v_m\\approx(1{,}342;1{,}095)\\ \\text{m/s}$, $Q_m\\approx(268{,}3;97{,}37)\\ \\text{L/s}$, $Re_m\\approx(5{,}03;2{,}74)\\cdot10^5$. Sile su $(224\\pm4{,}8)\\ \\text{kN}$ i $(216\\pm5{,}4)\\ \\text{kN}$; presjek $[219{,}2;221{,}4]\\ \\text{kN}$. Odabire se 20: oba protoka su dopuštena, ali za 30 i gornja granica sile iznosi samo $8{,}20\\ \\text{N}<10\\ \\text{N}$. Slaganje intervala ne dokazuje malu mjerilnu pogrešku.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
-          "line": 838
+          "line": 877
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
           {
-            "result_id": "U14.Z6.v_m",
-            "kind": "relative",
-            "value": 0.02,
+            "result_id": "U14.Z6.v20",
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U14.Z6.Q_m_Ls",
-            "kind": "relative",
-            "value": 0.02,
+            "result_id": "U14.Z6.v30",
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U14.Z6.F_m",
-            "kind": "relative",
-            "value": 0.02,
+            "result_id": "U14.Z6.Q20_Ls",
+            "kind": "absolute",
+            "value": 0.05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
           {
-            "result_id": "U14.Z6.Re_m",
-            "kind": "relative",
-            "value": 0.03,
+            "result_id": "U14.Z6.Q30_Ls",
+            "kind": "absolute",
+            "value": 0.005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z6.Re20",
+            "kind": "absolute",
+            "value": 500,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z6.Re30",
+            "kind": "absolute",
+            "value": 500,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z6.Fp20_kN",
+            "kind": "absolute",
+            "value": 1e-10,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z6.dFp20_kN",
+            "kind": "absolute",
+            "value": 1e-10,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z6.Fp30_kN",
+            "kind": "absolute",
+            "value": 1e-10,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z6.dFp30_kN",
+            "kind": "absolute",
+            "value": 1e-10,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z6.overlap_lower_kN",
+            "kind": "absolute",
+            "value": 1e-10,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U14.Z6.overlap_upper_kN",
+            "kind": "absolute",
+            "value": 1e-10,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           }
         ]
       },
       "independent_check": {
-        "kind": "independent_recalculation_with_unit_contract",
-        "criterion": "Verifier ponovno računa izlaze iz objavljenih ulaza, uspoređuje ih s fiksnim ciljevima i za svaki rezultat deklarira izlaznu SI ili SI-kompatibilnu jedinicu; '1' označuje bezdimenzijsku veličinu.",
-        "verifier_result_ids": [
-          "U14.Z6.v_m",
-          "U14.Z6.Q_m_Ls",
-          "U14.Z6.F_m",
-          "U14.Z6.Re_m"
+        "kind": "executed_invariant",
+        "criterion": [
+          "r['eligible'] and (not r30['eligible']) and (8 + 0.2 < 10)"
         ],
-        "unit_contract": [
-          {
-            "result_id": "U14.Z6.v_m",
-            "unit": "m/s"
-          },
-          {
-            "result_id": "U14.Z6.Q_m_Ls",
-            "unit": "L/s"
-          },
-          {
-            "result_id": "U14.Z6.F_m",
-            "unit": "N"
-          },
-          {
-            "result_id": "U14.Z6.Re_m",
-            "unit": "1"
-          }
-        ]
+        "verifier_result_ids": [
+          "U14.Z6.lab_selection"
+        ],
+        "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
       "verifier": {
         "module": "verify_u14",
         "exercise_id": "U14.Z6",
         "classification": "golden",
         "result_ids": [
-          "U14.Z6.v_m",
-          "U14.Z6.Q_m_Ls",
-          "U14.Z6.F_m",
-          "U14.Z6.Re_m"
+          "U14.Z6.v20",
+          "U14.Z6.v30",
+          "U14.Z6.Q20_Ls",
+          "U14.Z6.Q30_Ls",
+          "U14.Z6.Re20",
+          "U14.Z6.Re30",
+          "U14.Z6.Fp20_kN",
+          "U14.Z6.dFp20_kN",
+          "U14.Z6.Fp30_kN",
+          "U14.Z6.dFp30_kN",
+          "U14.Z6.overlap_lower_kN",
+          "U14.Z6.overlap_upper_kN",
+          "U14.Z6.lab_selection"
         ],
         "result_contracts": [
           {
-            "result_id": "U14.Z6.v_m",
+            "result_id": "U14.Z6.v20",
             "verification": "golden",
-            "target": 1.1,
+            "target": 1.342,
             "target_kind": "literal",
             "unit": "m/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 249
+              "line": 298
             }
           },
           {
-            "result_id": "U14.Z6.Q_m_Ls",
+            "result_id": "U14.Z6.v30",
             "verification": "golden",
-            "target": 97.4,
+            "target": 1.095,
+            "target_kind": "literal",
+            "unit": "m/s",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.0005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 299
+            }
+          },
+          {
+            "result_id": "U14.Z6.Q20_Ls",
+            "verification": "golden",
+            "target": 268.3,
             "target_kind": "literal",
             "unit": "L/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.05,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 250
+              "line": 300
             }
           },
           {
-            "result_id": "U14.Z6.F_m",
+            "result_id": "U14.Z6.Q30_Ls",
             "verification": "golden",
-            "target": 8.15,
+            "target": 97.37,
             "target_kind": "literal",
-            "unit": "N",
+            "unit": "L/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.02,
+              "kind": "absolute",
+              "value": 0.005,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 251
+              "line": 301
             }
           },
           {
-            "result_id": "U14.Z6.Re_m",
+            "result_id": "U14.Z6.Re20",
             "verification": "golden",
-            "target": 270000.0,
+            "target": 503000.0,
             "target_kind": "literal",
             "unit": "1",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.03,
+              "kind": "absolute",
+              "value": 500,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u14.py",
-              "line": 252
+              "line": 302
+            }
+          },
+          {
+            "result_id": "U14.Z6.Re30",
+            "verification": "golden",
+            "target": 274000.0,
+            "target_kind": "literal",
+            "unit": "1",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 500,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 303
+            }
+          },
+          {
+            "result_id": "U14.Z6.Fp20_kN",
+            "verification": "golden",
+            "target": 224.0,
+            "target_kind": "literal",
+            "unit": "kN",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 304
+            }
+          },
+          {
+            "result_id": "U14.Z6.dFp20_kN",
+            "verification": "golden",
+            "target": 4.8,
+            "target_kind": "literal",
+            "unit": "kN",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 305
+            }
+          },
+          {
+            "result_id": "U14.Z6.Fp30_kN",
+            "verification": "golden",
+            "target": 216.0,
+            "target_kind": "literal",
+            "unit": "kN",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 306
+            }
+          },
+          {
+            "result_id": "U14.Z6.dFp30_kN",
+            "verification": "golden",
+            "target": 5.4,
+            "target_kind": "literal",
+            "unit": "kN",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 307
+            }
+          },
+          {
+            "result_id": "U14.Z6.overlap_lower_kN",
+            "verification": "golden",
+            "target": 219.2,
+            "target_kind": "literal",
+            "unit": "kN",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 308
+            }
+          },
+          {
+            "result_id": "U14.Z6.overlap_upper_kN",
+            "verification": "golden",
+            "target": 221.4,
+            "target_kind": "literal",
+            "unit": "kN",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 1e-10,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 309
+            }
+          },
+          {
+            "result_id": "U14.Z6.lab_selection",
+            "verification": "invariant",
+            "criterion_expression": "r['eligible'] and (not r30['eligible']) and (8 + 0.2 < 10)",
+            "failure_message": "Samo model 1:20 zadovoljava oba laboratorijska uvjeta za cijeli mjerni interval.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u14.py",
+              "line": 310
             }
           }
         ]

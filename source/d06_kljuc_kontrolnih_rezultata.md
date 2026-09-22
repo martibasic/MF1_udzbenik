@@ -630,41 +630,41 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-krv-tece-arteriolom-promjera-brzinom-a-voda)
 
-**Sažetak.** Krv teče arteriolom promjera $D = 0{,}3\ \text{mm}$ brzinom $v = 5\ \text{mm/s}$ ($\nu = 3{,}3 \cdot 10^{-6}\ \text{m}^2/\text{s}$), a voda gradskim vodom promjera $D = 0{,}3\ \text{m}$ brzinom $v = 1{,}5\ \text{m/s}$ ($\nu = 1{,}0 \cdot…
+**Sažetak.** Krv teče arteriolom promjera $D_a=0{,}3\ \text{mm}$ srednjom brzinom $v_a=5\ \text{mm/s}$; za ovaj proračun uzmi zadanu efektivnu kinematičku viskoznost $\nu_a=3{,}3\cdot10^{-6}\ \text{m}^2/\text{s}$. Voda teče gradskim vodom promjera…
 
-**Smjernica postupka.** $Re = vD/\nu$; za kružnu cijev usporedi s orijentacijskim područjima režima, bez prijenosa praga $2300$ na geometriju arteriole.
+**Smjernica postupka.** Pretvori i promjer i brzinu u SI jedinice, pa primijeni $Re=vD/\nu$. Za razvijen tok u kružnoj cijevi postoje orijentacijska područja režima; njihov prag ne prenosi automatski na arteriolu.
 
-**Kontrolni rezultat ili kriterij.** $Re_{krv} \approx 0{,}45$ — viskoznost dominira; $Re_{voda} \approx 4{,}5 \cdot 10^5$ — inercija dominira.
+**Kontrolni rezultat ili kriterij.** $Re_a\approx0{,}455$; $Re_v=4{,}50\cdot10^5$. U zadanom modelu arteriole prevladavaju viskozni učinci, a u vodovodu inercijski. Reynoldsov broj sam ne određuje sva svojstva krvi niti prijelaz u svakoj geometriji.
 
 ### Z2. Machov broj i izbor modela {#key-task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom .unnumbered .unlisted}
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom)
 
-**Sažetak.** Zrak struji vodom promjera $D = 100\ \text{mm}$ lokalnim volumenskim protokom $Q = 0{,}5\ \text{m}^3/\text{s}$; brzina zvuka $a = 340\ \text{m/s}$. Odredi brzinu i Machov broj te prosudi je li, bez velikih toplinskih i tlačnih promjena…
+**Sažetak.** Zrak struji vodom unutarnjeg promjera $D=100\ \text{mm}$ lokalnim volumenskim protokom $Q=0{,}5\ \text{m}^3/\text{s}$; brzina zvuka je $a=340\ \text{m/s}$. Odredi srednju brzinu i Machov broj. Prosudi je li, bez velikih toplinskih i…
 
-**Smjernica postupka.** $v=Q/A$, $Ma=v/a$; vrijednost $0{,}3$ uzmi kao orijentacijski prag.
+**Smjernica postupka.** Iz unutarnjeg promjera odredi $A=\pi D^2/4$, zatim $v=Q/A$ i $Ma=v/a$. Vrijednost $Ma=0{,}3$ služi kao orijentacijski prag uz navedene pretpostavke.
 
-**Kontrolni rezultat ili kriterij.** $v\approx63{,}7\ \text{m/s}$, $Ma\approx0{,}19$; prema zadanom kriteriju nestlačiva je aproksimacija razumna uz navedene dodatne pretpostavke.
+**Kontrolni rezultat ili kriterij.** $v\approx63{,}66\ \text{m/s}$, $Ma\approx0{,}187$. Prema zadanom kriteriju aproksimacija konstantne gustoće razumna je uz navedene dodatne pretpostavke.
 
-### Z3. Kavitacijski broj na usisu crpke {#key-task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak .unnumbered .unlisted}
+### Z3. Pretlak senzora i kavitacijski kriterij {#key-task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak .unnumbered .unlisted}
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak)
 
-**Sažetak.** Na referentnom presjeku usisa crpke apsolutni tlak iznosi $p_{ref}=80\ \text{kPa}$, brzina $v_{ref}=4\ \text{m/s}$, gustoća vode $\rho=1000\ \text{kg/m}^3$, a tlak zasićene pare $p_v=2340\ \text{Pa}$. Ispitivanje iste crpke, pri istoj…
+**Sažetak.** Na referentnom presjeku usisa crpke senzor pokazuje $p_M=-20{,}0\ \text{kPa}$ pri atmosferskom tlaku $p_{atm}=100{,}0\ \text{kPa}$. Voda ima $\rho=1000\ \text{kg/m}^3$ i tlak pare $p_v=2340\ \text{Pa}$. U zadanom nastavnom modelu…
 
-**Smjernica postupka.** koristi iste referentne veličine kao u definiciji kritične vrijednosti.
+**Smjernica postupka.** U brojnik kavitacijskog broja ulazi $p_{abs}-p_v$, pri čemu je $p_{abs}=p_{atm}+p_M$. Za drugu brzinu provjeri novu vrijednost nazivnika. Za granični pretlak riješi $p_{atm}+p_{M,min}-p_v=\sigma_{kr}\rho v_2^2/2$.
 
-**Kontrolni rezultat ili kriterij.** $\sigma_{kav}\approx9{,}7>\sigma_{kr}=3{,}0$; prema zadanoj karakteristici crpka ima rezervu u toj radnoj točki.
+**Kontrolni rezultat ili kriterij.** $p_{abs}=80{,}0\ \text{kPa}$; $\sigma_1\approx9{,}708>3$, a $\sigma_2\approx2{,}427<3$. Prvi režim zadovoljava, drugi ne zadovoljava zadani kriterij. Pri $v_2$ treba $p_{abs,min}=98{,}34\ \text{kPa}$, odnosno $p_{M,min}=-1{,}660\ \text{kPa}$. To je granica kriterija bez dodatne rezerve.
 
-### Z4. Weberov broj i raspad kapi {#key-task-u14-kap-goriva-promjera-izlozena-je-relativnoj-struji .unnumbered .unlisted}
+### Z4. Hidroprofil u vodi i model u zraku {#key-task-reynoldsova-slicnost-hidroprofila .unnumbered .unlisted}
 
-[Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-kap-goriva-promjera-izlozena-je-relativnoj-struji)
+[Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-reynoldsova-slicnost-hidroprofila)
 
-**Sažetak.** Kap goriva promjera $d=0{,}15\ \text{mm}$ izložena je relativnoj struji zraka brzine $v=80\ \text{m/s}$ ($\rho_{zr}=1{,}2\ \text{kg/m}^3$, $\sigma=0{,}025\ \text{N/m}$). Za ovaj pojednostavljeni slučaj zanemari viskozne učinke i kao…
+**Sažetak.** Geometrijski sličan hidroprofil u vodi i njegov model u zraku služe za prijenos izmjerene sile otpora. Odredi brzinu modela za Reynoldsovu sličnost, provjeri Machov broj i iz jednakosti koeficijenata otpora izračunaj silu na prototipu.…
 
-**Smjernica postupka.** izračunaj $We=\rho_{zr}v^2d/\sigma$ i usporedi ga sa zadanim pragom, ali odvoji „početak raspada” od „kvalitete atomizacije”.
+**Smjernica postupka.** Za karakterističnu duljinu uzmi tetivu. Najprije izjednači $v_mc_m/\nu_m=v_pc_p/\nu_p$. Jednak je $C_D=F_D/(\rho v^2bc/2)$, pa omjer sila mora uključiti gustoću, kvadrat brzine i omjer površina. Ovdje se ne nameće Froudeova sličnost.
 
-**Kontrolni rezultat ili kriterij.** $We\approx46>12$; pojednostavljeni kriterij predviđa raspad, ali bez viskoznosti, omjera gustoća i modela sekundarnog raspada ne određuje raspodjelu veličina kapljica.
+**Kontrolni rezultat ili kriterij.** $Re_p=Re_m=3{,}00\cdot10^5$; $v_m=45{,}0\ \text{m/s}$, $Ma_m\approx0{,}132$. Površine su $A_m=0{,}0200\ \text{m}^2$ i $A_p=0{,}180\ \text{m}^2$; $C_D\approx0{,}01667$, $F_{D,p}=1{,}500\ \text{N}$. Omjer sila jest $(\rho_p/\rho_m)(v_p/v_m)^2(A_p/A_m)$; faktor $\lambda_L^3$ ne vrijedi za ovaj izbor fluida i sličnosti.
 
 ### Z5. Dimenzijska analiza otpuštanja vrtloga {#key-task-u14-frekvencija-otpustanja-vrtloga-iza-geometrijski-slicnog-tijela .unnumbered .unlisted}
 
@@ -672,19 +672,19 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Sažetak.** Frekvencija otpuštanja vrtloga $f$ iza geometrijski sličnog tijela ovisi o brzini neporemećene struje $v$, karakterističnoj duljini $D$, gustoći $\rho$ i dinamičkoj viskoznosti $\mu$. Buckinghamovim postupkom, uz ponavljajuće varijable…
 
-**Smjernica postupka.** u popis uključi i zavisnu varijablu $f$; tek potom primijeni $n-k$. Nemoj unaprijed uvrstiti gotove definicije $St$ i $Re$.
+**Smjernica postupka.** U popis uključi i zavisnu varijablu $f$. Dimenzijska matrica treba dati rang $k$, pa tek potom primijeni $n-k$. Za svaku neponavljajuću varijablu napiši umnožak s nepoznatim eksponentima uz $\rho$, $v$ i $D$. Recipročna grupa $1/Re$ valjan je alternativni izbor.
 
-**Kontrolni rezultat ili kriterij.** $n=5$, $k=3$, pa nastaju dvije grupe; izborom ponavljajućih varijabli dobivaju se $\Pi_1=fD/v=St$ i $\Pi_2=\rho vD/\mu=Re$, odnosno $St=\Phi(Re)$. Za zadani slučaj $Re=4{,}00\cdot10^4$ i $f=St\,v/D=45{,}6\ \text{Hz}$. Dimenzijska analiza određuje oblik ovisnosti, ali broj $St=0{,}190$ dolazi iz mjerenja ili odgovarajućega modela, ne iz samog Buckinghamova postupka.
+**Kontrolni rezultat ili kriterij.** $n=5$, $k=3$: dvije grupe. Dobiva se $\Pi_1=fD/v=St$ i $\Pi_2=\mu/(\rho vD)=1/Re$, ili njezina recipročna vrijednost $Re$. Za zadani slučaj $Re=4{,}00\cdot10^4$ i $f=45{,}6\ \text{Hz}$. Dimenzijska analiza određuje oblik $St=\Phi(Re)$; broj $St=0{,}190$ dolazi iz zadanoga podatka ili odgovarajućeg modela.
 
-### Z6. Sličnost modela preljeva brane {#key-task-u14-preljev-brane-ispituje-se-vodenim-modelom-u .unnumbered .unlisted}
+### Z6. Dva mjerila modela preljeva {#key-task-u14-preljev-brane-ispituje-se-vodenim-modelom-u .unnumbered .unlisted}
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-preljev-brane-ispituje-se-vodenim-modelom-u)
 
-**Sažetak.** Preljev brane ispituje se vodenim modelom u mjerilu $\lambda_L=30$, pri istom gravitacijskom ubrzanju i gustoći kao prototip. Prototip pri projektnom protoku ima brzinu preljeva $v_p=6{,}0\ \text{m/s}$ i protok $Q_p=480\…
+**Sažetak.** Preljev brane ispituje se geometrijski sličnim vodenim modelima u mjerilima $\lambda_L=L_p/L_m=20$ i $30$. Gustoća i gravitacijsko ubrzanje jednaki su na modelima i prototipu. U referentnom pravokutnom presjeku prototipa zadani su…
 
-**Smjernica postupka.** čuvaj $Fr$ te koristi $v_m=v_p/\sqrt{\lambda_L}$, $Q_m=Q_p/\lambda_L^{5/2}$ i, zbog jednake gustoće, $F_m=F_p/\lambda_L^3$. Zatim izračunaj $Re_m=v_mh_m/\nu$.
+**Smjernica postupka.** Iz $Fr_m=Fr_p$ slijedi omjer brzina; kontinuitet i geometrijska sličnost daju omjer protoka. Interval sile množi se istim faktorom kao nominalna sila. Provjeri donju granicu očitanja, a ne samo sredinu. $Re_p/Re_m=\lambda_L^{3/2}$ pokazuje zašto Froudeov prijenos ostaje uvjetan.
 
-**Kontrolni rezultat ili kriterij.** $v_m\approx1{,}10\ \text{m/s}$; $Q_m\approx97{,}4\ \text{L/s}$; $F_m\approx8{,}15\ \text{N}$; $Re_m\approx2{,}7\cdot10^5$. Model je vjerojatno turbulentan, ali veličina viskozne mjerilne pogreške mora se provjeriti korekcijom otpora, nizom modelskih mjerila ili podatcima — ne slijedi samo iz oznake „turbulentno”.
+**Kontrolni rezultat ili kriterij.** Redom za $\lambda_L=20,30$: $v_m\approx(1{,}342;1{,}095)\ \text{m/s}$, $Q_m\approx(268{,}3;97{,}37)\ \text{L/s}$, $Re_m\approx(5{,}03;2{,}74)\cdot10^5$. Sile su $(224\pm4{,}8)\ \text{kN}$ i $(216\pm5{,}4)\ \text{kN}$; presjek $[219{,}2;221{,}4]\ \text{kN}$. Odabire se 20: oba protoka su dopuštena, ali za 30 i gornja granica sile iznosi samo $8{,}20\ \text{N}<10\ \text{N}$. Slaganje intervala ne dokazuje malu mjerilnu pogrešku.
 
 ## Diferencijalni opis realnog toka
 
