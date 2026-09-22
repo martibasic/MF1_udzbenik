@@ -14,7 +14,7 @@ ne označava dovršenima preostale korake.
 | 1 | `source/u12_diferencijalni_opis_realnog_toka.md` | `verify_u12_real_flow.py` / U12.REAL | dovršeno; zajednički završni build slijedi | `revizija_u12.md` |
 | 2 | `source/u13_gubici_cjevovodi_crpke_i_mreze.md` | `verify_u13_integrated.py` / U13.CANON | dovršeno; zajednički završni build slijedi | `revizija_u13.md` |
 | 3 | `source/u14_turbostrojevi_i_propulzija.md` | `verify_u12.py` / U12 | dovršeno; zajednički završni build slijedi | `revizija_u14.md` |
-| 4 | `source/u15_otvoreni_tokovi.md` | `verify_u15_open_channels.py` / U15 | slijedi | `revizija_u15.md` |
+| 4 | `source/u15_otvoreni_tokovi.md` | `verify_u15_open_channels.py` / U15 | dovršeno; zajednički završni build slijedi | `revizija_u15.md` |
 | 5 | `source/u01_osnove_fluida_i_pascalov_zakon.md` | `verify_u01.py` / U01 | slijedi nakon U15 | dopuna `revizija_u01.md` |
 | 6 | `source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md` | `verify_u02.py` / U02 | slijedi nakon U01 | dopuna `revizija_u02.md` |
 
@@ -68,3 +68,14 @@ run `35775620655`, završila je uspješno.
 
 Sljedeći korak ostaje U15, zatim ponovni pregled U01 i U02. Ovaj commit
 ne označava dovršenim cijeli korisnikov cilj.
+
+## Provjera prije objave U15 — 22. rujna 2026.
+
+Novi zahtjev za commit i push obuhvaća dovršene izmjene U15. Prolaze
+1307 numeričkih rezultata, 22 dodatne fizikalne provjere, 90/90 ugovora,
+strukturni i Typst audit, provjera dviju SVG skica, izvršenje izmijenjenog
+notebooka, HTML u tri širine i nativni PDF od 317 A4 stranica. D06 i
+manifest su aktualni. Pojedinosti su u `revizija_u15.md`.
+
+Slijedi ponovni pregled U01 i U02 te zajednički završni build; ovaj commit
+čuva trenutačni napredak i ne označava dovršenim cijeli cilj.

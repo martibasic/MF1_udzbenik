@@ -208,7 +208,10 @@ def exercise_froude(
     gravity: float = G,
 ) -> dict[str, float]:
     velocity = discharge / (width * depth)
-    return {"velocity": velocity, "froude": velocity / math.sqrt(gravity * depth)}
+    wave_speed = math.sqrt(gravity * depth)
+    return {"velocity": velocity, "froude": velocity / wave_speed,
+            "wave_speed": wave_speed, "upstream_wave": velocity-wave_speed,
+            "downstream_wave": velocity+wave_speed}
 
 
 def exercise_critical_depth(
@@ -216,6 +219,34 @@ def exercise_critical_depth(
 ) -> dict[str, float]:
     critical_depth = (unit_discharge**2 / gravity) ** (1.0 / 3.0)
     return {"critical_depth": critical_depth, "minimum_energy": 1.5 * critical_depth}
+
+
+def exercise_raised_bed(
+    unit_discharge: float = 2.20, upstream_depth: float = 1.200,
+    bed_rise: float = 0.120, gravity: float = G,
+) -> dict[str, float]:
+    """Lossless broad hump; preserve the upstream subcritical branch."""
+    if unit_discharge <= 0 or upstream_depth <= 0 or bed_rise < 0:
+        raise ValueError("Potreban je pozitivan protok/dubina i nenegativan prag.")
+    yc = (unit_discharge**2/gravity)**(1/3)
+    if upstream_depth <= yc:
+        raise ValueError("Ulaz mora biti podkritičan.")
+    upstream_energy = specific_energy(upstream_depth, unit_discharge, gravity)
+    crest_energy = upstream_energy-bed_rise
+    minimum_energy = 1.5*yc
+    if crest_energy < minimum_energy-1e-12:
+        raise ValueError("Zadana uzvodna dubina i protok ne omogućuju prolaz preko praga.")
+    if abs(crest_energy-minimum_energy) < 1e-12:
+        shallow = deep = yc
+    else:
+        roots = alternative_depths(unit_discharge, crest_energy, gravity)
+        shallow, deep = roots['shallow_depth'], roots['deep_depth']
+    return {'critical_depth': yc, 'minimum_energy': minimum_energy,
+            'upstream_energy': upstream_energy, 'crest_energy': crest_energy,
+            'max_bed_rise': upstream_energy-minimum_energy,
+            'shallow_depth': shallow, 'crest_depth': deep,
+            'crest_froude': froude_rectangular(deep, unit_discharge, gravity),
+            'energy_residual': bed_rise+specific_energy(deep, unit_discharge, gravity)-upstream_energy}
 
 
 def exercise_trapezoidal_section(
@@ -370,12 +401,14 @@ def exercise_climate_channel(
         capacity(allowable_depth, n) for n in conservative_roughness
     )
     normal_depths = tuple(normal_depth(n) for n in roughness)
+    conservative_depths = tuple(normal_depth(n) for n in conservative_roughness)
     freeboards = tuple(structural_depth - depth for depth in normal_depths)
     capacity_jump_depths = tuple(jump_depth(flow) for flow in mean_capacities)
     return {
         "mean_capacities": mean_capacities,
         "conservative_capacities": conservative_capacities,
         "normal_depths": normal_depths,
+        "conservative_depths": conservative_depths,
         "freeboards": freeboards,
         "design_jump_depth": jump_depth(design_discharge),
         "capacity_jump_depths": capacity_jump_depths,
@@ -399,8 +432,7 @@ def verify() -> list[dict[str, str]]:
     r = critical_section()
     _check(out, "U15.P2.q", r["unit_discharge"], 2.0, "m^2/s", abs_tol=0.05)
     _check(out, "U15.P2.yc", r["critical_depth"], 0.742, "m", abs_tol=0.0005)
-    # E_min je u tekstu izracunat iz prethodno zaokruzenog y_c=0.742 m.
-    _check(out, "U15.P2.Emin", r["minimum_energy"], 1.113, "m", abs_tol=0.001)
+    _check(out, "U15.P2.Emin", r["minimum_energy"], 1.112, "m", abs_tol=0.0005)
     _check(out, "U15.P2.vc", r["critical_velocity"], 2.70, "m/s", abs_tol=0.005)
     _check(out, "U15.P2.Fr", r["froude"], 1.00, "", abs_tol=0.005)
 
@@ -439,12 +471,24 @@ def verify() -> list[dict[str, str]]:
     )
 
     r = exercise_froude()
-    _check(out, "U15.Z1.v", r["velocity"], 1.33, "m/s", abs_tol=0.005)
-    _check(out, "U15.Z1.Fr", r["froude"], 0.55, "", abs_tol=0.005)
+    _check(out, "U15.Z1.v", r["velocity"], 1.333, "m/s", abs_tol=0.0005)
+    _check(out, "U15.Z1.Fr", r["froude"], 0.550, "", abs_tol=0.0005)
+    _check(out, "U15.Z1.c", r["wave_speed"], 2.426, "m/s", abs_tol=0.0005)
+    _check(out, "U15.Z1.upstream_wave", r["upstream_wave"], -1.093, "m/s", abs_tol=0.0005)
+    _check(out, "U15.Z1.downstream_wave", r["downstream_wave"], 3.759, "m/s", abs_tol=0.0005)
+    fast = exercise_froude(discharge=3.6)
+    _invariant(out, "U15.Z1.information_direction", r['upstream_wave']<0<r['downstream_wave']
+               and fast['froude']>1 and fast['upstream_wave']>0,
+               "Podkritični tok propušta informaciju uzvodno; nadkritični odnosi oba vala nizvodno.")
 
     r = exercise_critical_depth()
     _check(out, "U15.Z2.yc", r["critical_depth"], 0.972, "m", abs_tol=0.0005)
     _check(out, "U15.Z2.Emin", r["minimum_energy"], 1.46, "m", abs_tol=0.005)
+    yc = r['critical_depth']
+    _invariant(out, "U15.Z2.energy_minimum", abs(froude_rectangular(yc,3)-1)<1e-12
+               and specific_energy(yc*.9,3)>r['minimum_energy']
+               and specific_energy(yc*1.1,3)>r['minimum_energy'],
+               "Kritična dubina daje Fr=1 i minimum na objema stranama.")
 
     r = exercise_trapezoidal_section()
     _check(out, "U15.Z3.A", r["area"], 3.375, "m^2", abs_tol=0.0005)
@@ -454,14 +498,35 @@ def verify() -> list[dict[str, str]]:
     _check(out, "U15.Z3.Rh", r["hydraulic_radius"], 0.5979, "m", abs_tol=0.00005)
     _check(out, "U15.Z3.v", r["velocity"], 1.0667, "m/s", abs_tol=0.00005)
     _check(out, "U15.Z3.Fr", r["froude"], 0.4186, "1", abs_tol=0.00005)
+    rectangular = exercise_trapezoidal_section(side_slope=0)
+    _invariant(out, "U15.Z3.rectangular_limit", abs(rectangular['hydraulic_depth']-.9)<1e-12
+               and abs(rectangular['wetted_perimeter']-(2.4+2*.9))<1e-12
+               and abs(rectangular['area']-2.4*.9)<1e-12,
+               "Pokos nula mora vratiti pravokutni presjek i isključiti slobodnu površinu iz P.")
 
-    r = alternative_depths(unit_discharge=2.20, energy=1.600)
-    _check(out, "U15.Z4.yc", r["critical_depth"], 0.7902, "m", abs_tol=0.00005)
-    _check(out, "U15.Z4.Emin", r["minimum_energy"], 1.1853, "m", abs_tol=0.00005)
-    _check(out, "U15.Z4.y_shallow", r["shallow_depth"], 0.4665, "m", abs_tol=0.00005)
-    _check(out, "U15.Z4.Fr_shallow", r["shallow_froude"], 2.204, "1", abs_tol=0.0005)
-    _check(out, "U15.Z4.y_deep", r["deep_depth"], 1.4887, "m", abs_tol=0.00005)
-    _check(out, "U15.Z4.Fr_deep", r["deep_froude"], 0.3867, "1", abs_tol=0.00005)
+    r = exercise_raised_bed()
+    _check(out, "U15.Z4.yc", r["critical_depth"], 0.790179, "m", abs_tol=0.0000005)
+    _check(out, "U15.Z4.Emin", r["minimum_energy"], 1.185268, "m", abs_tol=0.0000005)
+    _check(out, "U15.Z4.dz_max", r["max_bed_rise"], 0.186042, "m", abs_tol=0.0000005)
+    _check(out, "U15.Z4.E_crest", r["crest_energy"], 1.251310, "m", abs_tol=0.0000005)
+    _check(out, "U15.Z4.y_shallow", r["shallow_depth"], 0.630231, "m", abs_tol=0.0000005)
+    _check(out, "U15.Z4.y_crest", r["crest_depth"], 1.009009, "m", abs_tol=0.0000005)
+    _check(out, "U15.Z4.Fr_crest", r["crest_froude"], 0.6930, "1", abs_tol=0.00005)
+    _invariant(out, "U15.Z4.energy_and_branch", abs(r['energy_residual'])<1e-6
+               and r['crest_depth']>r['critical_depth']>r['shallow_depth']
+               and r['crest_froude']<1
+               and abs(.12+specific_energy(1.009009,2.2)-specific_energy(1.2,2.2))<1e-6,
+               "Izabrana grana i objavljeno zaokruživanje zatvaraju traženi energijski rezidual.")
+    zero = exercise_raised_bed(bed_rise=0)
+    limit = exercise_raised_bed(bed_rise=r['max_bed_rise'])
+    rejected = False
+    try:
+        exercise_raised_bed(bed_rise=r['max_bed_rise']+.001)
+    except ValueError:
+        rejected = True
+    _invariant(out, "U15.Z4.choking_limit", abs(zero['crest_depth']-1.2)<1e-12
+               and abs(limit['crest_froude']-1)<1e-12 and rejected,
+               "Nulti prag zadržava dubinu; granični daje kritičnost; viši odbija prvotno stanje.")
 
     r = exercise_measured_jump()
     _check(out, "U15.Z5.q", r["unit_discharge"], 1.5000, "m^2/s", abs_tol=0.00005)
@@ -498,6 +563,19 @@ def verify() -> list[dict[str, str]]:
         "m",
         abs_tol=0.00005,
     )
+    # Independent finite differences in all four measured inputs preserve
+    # the fact that the same Q/b enters both control sections.
+    variances = []
+    for key, value, uncertainty in [('discharge',1.8,.018), ('width',1.2,.003),
+                                   ('upstream_depth',.25,.003), ('downstream_depth',1.22,.008)]:
+        step = value*1e-5
+        plus = exercise_measured_jump(**{key:value+step})['residual']
+        minus = exercise_measured_jump(**{key:value-step})['residual']
+        variances.append(((plus-minus)/(2*step)*uncertainty)**2)
+    bad = exercise_measured_jump(downstream_depth=1.1)
+    _invariant(out, "U15.Z5.uncertainty_and_diagnosis", abs(math.sqrt(sum(variances))/r['residual_uncertainty']-1)<1e-8
+               and r['normalized_residual']<2 and bad['normalized_residual']>2,
+               "Analitička nesigurnost slaže se s četiri diferencije; kriterij razlikuje sukladan i nesukladan skup.")
 
     r = exercise_climate_channel()
     mean_capacities = r["mean_capacities"]
@@ -591,6 +669,14 @@ def verify() -> list[dict[str, str]]:
         "1",
         abs_tol=0.05,
     )
+    _invariant(out, "U15.Z6.capacity_freeboard_and_basin",
+               all(a>b for a,b in zip(mean_capacities,conservative_capacities))
+               and all(a<b for a,b in zip(normal_depths,r['conservative_depths']))
+               and r['conservative_depths'][0]<1.2<r['conservative_depths'][1]
+               and all(abs(_manning_trapezoid_discharge(y,n,3,2,.0015)-8)<1e-10
+                       for y,n in zip(normal_depths,(.018,.026,.035)))
+               and capacity_jump_depths[0]>1.4>r['design_jump_depth'],
+               "Veća hrapavost smanjuje rezervu; korijeni zatvaraju Manning; kapacitet A prelazi granicu bazena.")
 
     froude_dimension = _dim_product(
         VELOCITY,
