@@ -4,12 +4,12 @@
 
 Bernoullijeva jednadžba opisuje preraspodjelu mehaničke energije između tlaka, brzine i geodetske visine duž strujnice idealiziranoga toka. Uz bilancu mase omogućuje analizu Venturijeve cijevi, slobodnoga mlaza i Pitotove sonde.
 
-Povijesni prijelaz od Torricellijeva tumačenja istjecanja do Bernoullijeve opće energetske slike može se čitati kao ista fizikalna nit. Torricelli, Galileijev učenik, pokazao je da brzina istjecanja raste s korijenom iz visine stupca iznad otvora, a Bernoulli je približno stoljeće poslije tu fiziku ugradio u opću sliku preraspodjele tlaka, brzine i visine duž strujnice.
+Torricellijev zakon istjecanja povezuje brzinu mlaza s visinom stupca tekućine. Bernoullijeva jednadžba proširuje tu sliku uključivanjem tlačne energije.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Idealni Bernoulli vidi se u Venturijevoj cijevi, Pitotovoj sondi, mlaznici za čišćenje, privremenom sifonu na gradilištu i svakom sklopu u kojem se tlak pretvara u brzinu ili obrnuto bez značajnih gubitaka. U autoindustriji, strojarstvu i brodogradnji ta logika stoji iza mjerenja protoka, tumačenja pada statičkog tlaka u suženju i čitanja energetske slike toka duž jedne strujnice.
+Bernoullijeva jednadžba povezuje tlak i brzinu u Venturijevoj cijevi, Pitotovoj sondi, mlaznici i sifonu. Za svaki primjer najprije odabiremo presjeke i provjeravamo mogu li se gubitci zanemariti.
 :::
 
 **Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
@@ -68,7 +68,7 @@ $$ {#eq-energijska-bilanca-interaktivni-prikaz-venturijeva-cijev-02}
 
 U idealnom toku `EGL` ostaje konstantna duž iste strujnice, a `HGL` je od nje niže upravo za brzinsku visinu $v^2/(2g)$. Zato su Venturijeva cijev i Pitotova sonda već u ovom poglavlju prirodni vizualni modeli preraspodjele energije.
 
-Tu vrijedi zatvoriti i praktičnu pretvorbu jedinica. Tlak se često zadaje u paskalima ili kilopaskalima, a Bernoulli se vrlo često piše u metrima fluida. Zato treba stalno čitati dvije ekvivalentne slike iste stvari:
+Tlak zadan u paskalima ili kilopaskalima u Bernoullijevoj se jednadžbi često izražava tlačnom visinom, u metrima fluida:
 
 $$
 \frac{p}{\gamma} = \frac{p}{\rho g}.
@@ -78,7 +78,7 @@ Za vodu to znači da je približno $1\ \text{m}$ tlačne visine oko $9{,}81\ \te
 
 Ista logika vrijedi i obrnuto: tlačna se visina množenjem s $\rho g$ pretvara u tlak, ali prije toga mora biti jasno je li visina apsolutna ili manometarska. Atmosferski se tlak dodaje samo pri prijelazu iz manometarske u apsolutnu referencu.
 
-Matematika ovdje nije ukras oko fizike, nego njezin sažeti jezik. Član $p/(\rho g)$ govori koliku bi visinu fluida dao tlak, član $v^2/(2g)$ koliki je udio energije vezan uz gibanje, a član $z$ koliko energije dolazi iz samoga položaja u gravitacijskom polju. Bernoullijeva jednadžba zato stalno prevodi jednu istu mehaničku energiju iz jednoga oblika u drugi.
+Svaki član ima izravno fizikalno značenje. Član $p/(\rho g)$ govori koliku bi visinu fluida dao tlak, član $v^2/(2g)$ koliki je udio energije vezan uz gibanje, a član $z$ koliko energije dolazi iz samoga položaja u gravitacijskom polju. Bernoullijeva jednadžba zato stalno prevodi jednu istu mehaničku energiju iz jednoga oblika u drugi.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Eulerova jednadžba duž strujnice iz Newtonova zakona</p>
@@ -889,7 +889,15 @@ Dopušteno je $43{,}183\ \text{mm}\le d\le52{,}328\ \text{mm}$, pa odgovara ulo�
 
 ### Z6. Sifon i putanja izlaznog mlaza {#task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako .unnumbered .unlisted}
 
-Sifon je prethodno napunjen vodom, a ulaz je uronjen. U kvazistacionarnom trenutku uzmi gustoću vode $\rho=1000\ \text{kg/m}^3$. Idealni sifon promjera $D = 70\ \text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\Delta z = 2{,}6\ \text{m}$ ispod slobodne površine. Vrh sifona je $z_C = 1{,}7\ \text{m}$ iznad slobodne površine, a izlaz se nalazi $1{,}2\ \text{m}$ iznad tla. Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza ako je $p_{atm} = 101{,}3\ \text{kPa}$. Zatim primijeni zadano proširenje energijske bilance: gubitak visine modelira se s $h_L=K v^2/(2g)$. Za izvedeni sustav ukupni koeficijent gubitaka od spremnika do izlaza iznosi $K_\Sigma=2{,}0\pm0{,}5$, a do vrha sifona $K_C=1{,}2\pm0{,}3$; oba su definirana uz brzinu u sifonu. Oznake ± ovdje daju zajamčene intervale, ne standardne nesigurnosti; dopuštene su sve njihove kombinacije. Primijeni bilance $\Delta z=(1+K_\Sigma)v^2/(2g)$ i $p_{C,abs}=p_{atm}-\rho g[z_C+(1+K_C)v^2/(2g)]$. Odredi nominalni stvarni protok i konzervativne granice protoka i tlaka u vrhu. Može li se zajamčiti zahtjev $Q\ge15{,}0\ \text{L/s}$ i $p_C\ge30\ \text{kPa}$ apsolutno?
+Sifon je prethodno napunjen vodom, a ulaz je uronjen. U kvazistacionarnom trenutku uzmi gustoću vode $\rho=1000\ \text{kg/m}^3$. Idealni sifon promjera $D = 70\ \text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\Delta z = 2{,}6\ \text{m}$ ispod slobodne površine. Vrh sifona je $z_C = 1{,}7\ \text{m}$ iznad slobodne površine, a izlaz se nalazi $1{,}2\ \text{m}$ iznad tla.
+
+Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza ako je $p_{atm} = 101{,}3\ \text{kPa}$.
+
+Zatim primijeni zadano proširenje energijske bilance: gubitak visine modelira se s $h_L=K v^2/(2g)$. Za izvedeni sustav ukupni koeficijent gubitaka od spremnika do izlaza iznosi $K_\Sigma=2{,}0\pm0{,}5$, a do vrha sifona $K_C=1{,}2\pm0{,}3$; oba su definirana uz brzinu u sifonu.
+
+Oznake ± ovdje daju zajamčene intervale, ne standardne nesigurnosti; dopuštene su sve njihove kombinacije. Primijeni bilance $\Delta z=(1+K_\Sigma)v^2/(2g)$ i $p_{C,abs}=p_{atm}-\rho g[z_C+(1+K_C)v^2/(2g)]$.
+
+Odredi nominalni stvarni protok i konzervativne granice protoka i tlaka u vrhu. Može li se zajamčiti zahtjev $Q\ge15{,}0\ \text{L/s}$ i $p_C\ge30\ \text{kPa}$ apsolutno?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}

@@ -2,7 +2,9 @@
 
 ## Ključ smjernica i kontrolnih rezultata
 
-Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom tekstu. Ovaj dodatak sadrži sažete smjernice postupka i kontrolne rezultate za tiskano izdanje. Ne zamjenjuje cjelovito rješenje: provjera uključuje model, pretpostavke, jedinice i barem jednu neovisnu fizikalnu provjeru. Otvoreni zadatci razina T3 i T4 mogu imati više prihvatljivih odgovora.
+Pronađi poglavlje i oznaku zadatka Z1–Z6. Uz svaki zadatak nalaze se kratka smjernica, kontrolni rezultat ili kriterij te poveznica na puni iskaz.
+
+Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke, jedinice te barem jednu neovisnu fizikalnu vezu. Otvoreni dijelovi zadataka T3 i T4 mogu imati više prihvatljivih odgovora.
 
 ## Osnove fluida i Pascalov zakon
 
@@ -258,9 +260,9 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-ravna-pravokutna-zaklopka)
 
-**Sažetak.** Vertikalni pravokutni poklopac širine $b=1{,}40\ \mathrm{m}$ i visine $H=1{,}80\ \mathrm{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1=1{,}10\ \mathrm{m}$. Odredite rezultantnu silu, dubinu centra tlaka i njegovu udaljenost…
+**Sažetak.** Vertikalni pravokutni poklopac širine $b=1{,}40\ \mathrm{m}$ i visine $H=1{,}80\ \mathrm{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1=1{,}10\ \mathrm{m}$. Odredi rezultantnu silu, dubinu centra tlaka i njegovu udaljenost…
 
-**Smjernica postupka.** Najprije izračunajte $A$ i $h_C$. Za centar tlaka treba $I_G=bH^3/12$.
+**Smjernica postupka.** Najprije izračunaj $A$ i $h_C$. Za centar tlaka treba $I_G=bH^3/12$.
 
 **Kontrolni rezultat ili kriterij.** $F=49{,}34\ \mathrm{kN}$; $h_{CP}=2{,}135\ \mathrm{m}$; udaljenost od gornjeg ruba $1{,}035\ \mathrm{m}$.
 
@@ -268,7 +270,7 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 [Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-zakrivljeni-poklopac-cetvrtine-kruga)
 
-**Sažetak.** Zakrivljeni poklopac presjeka četvrtine kruga ima $R=0{,}65\ \mathrm{m}$ i širinu $b=1{,}20\ \mathrm{m}$. Gornja mu je točka na dubini $h_1=1{,}10\ \mathrm{m}$. Voda kvasi konveksnu vanjsku i donju stranu. Odredite $F_H$, predznačeni…
+**Sažetak.** Zakrivljeni poklopac presjeka četvrtine kruga ima $R=0{,}65\ \mathrm{m}$ i širinu $b=1{,}20\ \mathrm{m}$. Gornja mu je točka na dubini $h_1=1{,}10\ \mathrm{m}$. Voda kvasi konveksnu vanjsku i donju stranu. Odredi $F_H$, predznačeni $F_V$…
 
 **Smjernica postupka.** Za $F_H$ rabite vertikalnu projekciju $Rb$ na dubini $h_1+R/2$. Pomoćni volumen čine pravokutni dio $h_1Rb$ i četvrtina valjka.
 
@@ -280,7 +282,7 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Sažetak.** Vertikalna nepropusna pregrada širine $b=1{,}20\ \mathrm{m}$ i visine $H=3{,}00\ \mathrm{m}$ dijeli dva otvorena spremnika. Dubina vode iznad zajedničkog dna lijevo je $h_L=2{,}40\ \mathrm{m}$, a desno $h_D=1{,}20\ \mathrm{m}$. Pregrada…
 
-**Smjernica postupka.** Odvojeno nacrtajte dva trokutasta dijagrama manometarskog tlaka. Svaki daje silu na visini $h/3$ iznad dna. Sile i njihove momente oduzmite uz odgovarajuće predznake; krak spojnice jest $H$.
+**Smjernica postupka.** Odvojeno nacrtaj dva trokutasta dijagrama manometarskog tlaka. Svaki daje silu na visini $h/3$ iznad dna. Sile i njihove momente oduzmite uz odgovarajuće predznake; krak spojnice jest $H$.
 
 **Kontrolni rezultat ili kriterij.** $F_x=+25{,}377\ \mathrm{kN}$; $y_R=0{,}9333\ \mathrm{m}$ iznad dna; $M_A=-23{,}685\ \mathrm{kN\,m}$; $T=7{,}895\ \mathrm{kN}$ ulijevo u $B$. Provjera: pri jednakim razinama neto sila i moment su nula; zamjena lijeve i desne razine obrće njihove predznake.
 
@@ -290,7 +292,7 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Sažetak.** Vertikalni poklopac ima oblik jednakokračnog trokuta s vrhom gore, visinom $H=1{,}50\ \mathrm{m}$ i vodoravnom osnovicom širine $b$. Vrh je na dubini $h_0=0{,}40\ \mathrm{m}$ ispod slobodne površine vode; s druge strane je zrak na…
 
-**Smjernica postupka.** Za trokut s vrhom gore vrijedi $A=bH/2$, $h_C=h_0+2H/3$ i $I_G=bH^3/36$ oko vodoravne težišne osi. Uporabite $F\le F_{\max}$; zatim provjerite ovisi li $h_{CP}$ o širini.
+**Smjernica postupka.** Za trokut s vrhom gore vrijedi $A=bH/2$, $h_C=h_0+2H/3$ i $I_G=bH^3/36$ oko vodoravne težišne osi. Uporabite $F\le F_{\max}$; zatim provjeri ovisi li $h_{CP}$ o širini.
 
 **Kontrolni rezultat ili kriterij.** $b_{\max}=1{,}1673\ \mathrm{m}$; $h_{CP}=1{,}4893\ \mathrm{m}$. Za $b=1{,}20\ \mathrm{m}$ sila je $F=12{,}336\ \mathrm{kN}>F_{\max}$, pa ponuđena širina ne zadovoljava. Pri zadanim $H$ i $h_0$, $h_{CP}$ ne ovisi o $b$.
 
@@ -300,7 +302,7 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 
 **Sažetak.** Kruti sklop četvrtcilindričnog poklopca i njegovih krakova okreće se oko osi kroz središte kružnice $O$, a ne oko kraja luka. Voda kvasi konveksnu lijevu i donju stranu, a s druge strane je zrak na atmosferskom tlaku. U presjeku s…
 
-**Smjernica postupka.** Nacrtajte jednu lokalnu tlačnu normalu i provjerite njezin pravac prema $O$. Za ravnotežu izdvojite cijeli kruti sklop; tek nakon momentne jednadžbe zatvorite ravnotežu sila. Zasebno provjerite predznak i kapacitet spojnice.
+**Smjernica postupka.** Nacrtaj jednu lokalnu tlačnu normalu i provjeri njezin pravac prema $O$. Za ravnotežu izdvoji cijeli kruti sklop; tek nakon momentne jednadžbe zatvori ravnotežu sila. Zasebno provjeri predznak i kapacitet spojnice.
 
 **Kontrolni rezultat ili kriterij.** $F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}=0$. $T=0{,}904\ \mathrm{kN}$ ulijevo, manje od $T_{\max}$; $R_{Ox}=-10{,}185\ \mathrm{kN}$, $R_{Oy}=-11{,}313\ \mathrm{kN}$. Sve tlačne normale prolaze kroz $O$; $T=W|x_G|/R$ ne ovisi o $h_1$ u zadanom modelu.
 
@@ -937,5 +939,5 @@ Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom teks
 ::: {.mf1-mini-summary}
 <p class="mf1-box-label">Opseg ključa</p>
 
-Ključ obuhvaća 90 zadataka iz javnog toka U01–U15. Pogrešku u rezultatu prijavite prema stabilnom ID-ju zadatka kroz errata obrazac.
+Ključ obuhvaća 90 zadataka iz poglavlja 1–15. Pri prijavi pogreške navedi poglavlje, oznaku zadatka i poveznicu na njega.
 :::

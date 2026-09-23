@@ -1,6 +1,6 @@
 ## Pojmovnik
 
-Pojmovnik daje kratke **radne definicije**. One služe za prisjećanje, a ne zamjenjuju pretpostavke, izvode i granice modela iz glavnih poglavlja. Oznaka u zadnjem stupcu upućuje na poglavlje u kojem se pojam uvodi ili sustavno primjenjuje.
+Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke, izvode i granice modela potraži u poglavlju navedenom u zadnjem stupcu.
 
 | Pojam | Kratka radna definicija | Poglavlje |
 |---|---|---|
@@ -76,6 +76,8 @@ Pojmovnik daje kratke **radne definicije**. One služe za prisjećanje, a ne zam
 | Volumni modul elastičnosti | $K=-V\,dp/dV$ za istu količinu fluida uz zadane toplinske uvjete. Za mali porast tlaka i približno stalni $K$ smanjenje volumena iznosi $\Delta V_c\approx V_0\Delta p/K$. Pogreška pomaka ovisi i o omjeru tog smanjenja i istisnutog volumena. | U01 |
 | Weberov broj | $We=\rho V^2L/\sigma$; uspoređuje inercijski i kapilarni učinak. | U02, U11 |
 | Young–Laplaceova relacija | Skok normalnog naprezanja preko mirnog zakrivljenog sučelja razmjeran je površinskoj napetosti i zbroju glavnih zakrivljenosti, uz dosljednu konvenciju normale. | U02 |
+
+: {.mf1-reference-table tbl-colwidths="[24,60,16]"}
 
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Kako čitati pragove</p>

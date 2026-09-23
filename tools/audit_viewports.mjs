@@ -372,6 +372,22 @@ try {
               !["auto", "scroll"].includes(style.overflowX)
             );
           }).length,
+          inaccessibleWideTables: [...document.querySelectorAll("main table")]
+            .filter((table) => {
+              const region = table.closest(".mf1-table-scroll");
+              return region && region.scrollWidth > region.clientWidth + 1 &&
+                (region.tabIndex !== 0 || !region.getAttribute("aria-label"));
+            }).length,
+          chapterTools: document.querySelector("main .mf1-vjezbe-list") &&
+            /\/u\d{2}_[^/]+\.html$/.test(location.pathname)
+            ? [...document.querySelectorAll(".mf1-chapter-tools a")].map(a => a.href)
+            : null,
+          unexpandableSketches: [...document.querySelectorAll('main figure img[src*="/print/"]')]
+            .filter((img) => {
+              const link = img.closest("a");
+              return !link || link.href !== img.src || link.target !== "_blank" ||
+                !link.rel.split(/\s+/).includes("noopener") || !link.getAttribute("aria-label");
+            }).length,
         }));
         if (metrics.scroll > metrics.client + 1) {
           issues.push(
@@ -387,6 +403,26 @@ try {
           issues.push(
             `${relative} @ ${width}px: ${metrics.uncontainedDisplayMath} širokih jednadžbi nema lokalni horizontalni pomak`,
           );
+        }
+        if (metrics.inaccessibleWideTables > 0) {
+          issues.push(`${relative} @ ${width}px: široka tablica nema imenovano područje dostupno tipkovnicom`);
+        }
+        if (metrics.unexpandableSketches > 0) {
+          issues.push(`${relative} @ ${width}px: skica nema pristupačnu poveznicu za povećanje`);
+        }
+        if (metrics.chapterTools) {
+          if (metrics.chapterTools.length !== 3) {
+            issues.push(`${relative} @ ${width}px: nedostaju poveznice za rad s poglavljem`);
+          }
+          for (const href of metrics.chapterTools) {
+            const url = new URL(href);
+            const target = join(siteRoot, decodeURIComponent(url.pathname));
+            const anchor = decodeURIComponent(url.hash.slice(1));
+            if (!existsSync(target) ||
+                (anchor && !readFileSync(target, "utf8").includes(`id="${anchor}"`))) {
+              issues.push(`${relative}: nepostojeće odredište poveznice ${url.pathname}${url.hash}`);
+            }
+          }
         }
         if (width === 1440) {
           await page.addScriptTag({ path: axePath });

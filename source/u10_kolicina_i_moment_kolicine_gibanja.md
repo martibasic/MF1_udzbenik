@@ -7,7 +7,7 @@ Zakon količine gibanja povezuje protok, tlak i reakciju konstrukcije. Pri struj
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Svako koljeno, T-račva, mlaznica ili završetak cjevovoda koji mijenja smjer ili brzinu toka prenosi silu na prirubnicu, vijčani spoj, konzolu ili temelj. Zato se ovo poglavlje izravno čita u pumpnim stanicama, brodskim strojarnicama, protupožarnim monitorima i vodenim mlaznicama, gdje konstrukcija ne nosi "protok", nego vektorsku razliku tlačnih i impulsnih doprinosa.
+Koljeno, T-račva ili mlaznica prenosi silu na prirubnicu i nosač. U pumpnim stanicama, brodskim strojarnicama i protupožarnim monitorima to opterećenje određujemo iz tlačnih sila i promjene količine gibanja fluida.
 :::
 
 **Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
@@ -298,7 +298,7 @@ Kod slobodnog mlaza koji se na ploči zaustavlja u osi udara sila se dobiva izra
 2. Odrediti pretlak $p_{M1}$ u presjeku 1 neposredno uz prirubnicu.
 3. Odrediti koliku vlačnu silu $R$ moraju preuzeti vijci u presjeku `A-A`.
 
-Pretpostavite jednolike profile brzine u presjecima 1 i 2, zanemarite gubitke i promatrajte horizontalnu ravninu.
+Pretpostavi jednolike profile brzine u presjecima 1 i 2, zanemari gubitke i promatraj horizontalnu ravninu.
 
 ![kalibracijska mlaznica na prirubnici](../assets/print/u11_val2_mlaznica_prirubnica.svg){#fig-u11-kalibracijska-mlaznica-na-prirubnici fig-alt="kalibracijska mlaznica na prirubnici"}
 

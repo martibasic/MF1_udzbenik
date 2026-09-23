@@ -7,7 +7,7 @@ U sporom toku kapljevine promjena tlaka gotovo ne mijenja gustoću, pa je model 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Kompresibilnost određuje odziv pneumatskog aktuatora, protok kroz sigurnosni ventil, rad mlaznice plinske turbine, ventilaciju tunela i širenje tlačnog vala kroz plinovod. U brodogradnji se pojavljuje u dovodu zraka motoru, ispušnom sustavu, podvodnoj akustici i kavitacijskim impulsima. Cilj poglavlja nije potpuna plinska dinamika, nego pouzdano prepoznati kada nestlačivi model prestaje vrijediti i postaviti temeljni jednodimenzijski račun.
+Kompresibilnost je važna za odziv pneumatskog aktuatora, protok kroz sigurnosni ventil i širenje tlačnog vala kroz plinovod. U ovom poglavlju naučit ćeš prepoznati granicu nestlačivog modela i postaviti temeljni jednodimenzijski račun kompresibilnog toka.
 :::
 
 **Procijenjeno vrijeme rada uz udžbenik:** 9 sati.

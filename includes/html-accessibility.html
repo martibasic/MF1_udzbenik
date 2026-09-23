@@ -55,18 +55,91 @@
     }
   };
 
+  const enhanceReading = () => {
+    const main = document.querySelector("main");
+    if (!main) return;
+
+    main.querySelectorAll('figure img[src*="/print/"]').forEach((img) => {
+      if (img.closest("a")) return;
+      const figure = img.closest("figure");
+      const link = document.createElement("a");
+      link.className = "mf1-figure-link";
+      link.href = img.src;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.setAttribute("aria-label", `Povećaj skicu: ${img.alt} (nova kartica)`);
+      img.before(link);
+      link.append(img);
+      const caption = figure.querySelector("figcaption");
+      if (caption) {
+        const action = link.cloneNode(false);
+        action.className = "mf1-figure-expand";
+        action.textContent = "Povećaj skicu ↗";
+        caption.append(action);
+      }
+    });
+
+    // A table keeps its native layout; its own region scrolls on narrow screens.
+    main.querySelectorAll("table").forEach((table, index) => {
+      const region = document.createElement("div");
+      region.className = "mf1-table-scroll";
+      region.setAttribute("role", "region");
+      region.setAttribute("aria-label", table.caption?.textContent.trim() || `Tablica ${index + 1}`);
+      table.before(region);
+      region.append(table);
+      const hint = document.createElement("p");
+      hint.className = "mf1-table-hint";
+      hint.textContent = "Tablicu možeš pomicati vodoravno.";
+      hint.hidden = true;
+      region.after(hint);
+      const update = () => {
+        const wide = region.scrollWidth > region.clientWidth + 1;
+        hint.hidden = !wide;
+        if (wide) region.tabIndex = 0;
+        else region.removeAttribute("tabindex");
+      };
+      new ResizeObserver(update).observe(region);
+      update();
+    });
+
+    // Links reuse existing destinations, including the generated answer key.
+    if (!/\/u\d{2}_[^/]+\.html$/.test(location.pathname)) return;
+    const exercises = main.querySelector(".mf1-vjezbe-list");
+    // Empty spans preserve earlier URLs; the answer key uses the current heading.
+    const firstTask = exercises?.querySelector('section.level3[id^="task-"]');
+    const section = exercises?.closest("section[id]");
+    const title = main.querySelector("#title-block-header");
+    if (!firstTask || !section || !title) return;
+    const nav = document.createElement("nav");
+    nav.className = "mf1-chapter-tools";
+    nav.setAttribute("aria-label", "Rad s poglavljem");
+    for (const [label, href] of [
+      ["Zadatci za vježbu", `#${section.id}`],
+      ["Formule i oznake", "d01_sazetak_formula_i_oznaka.html"],
+      ["Kontrolni rezultati", `d06_kljuc_kontrolnih_rezultata.html#key-${firstTask.id}`],
+    ]) {
+      const link = document.createElement("a");
+      link.textContent = label;
+      link.href = href;
+      nav.append(link);
+    }
+    title.after(nav);
+  };
+
   if (document.readyState === "loading") {
     document.addEventListener(
       "DOMContentLoaded",
       () => {
         normalizeEditorialMeta();
         enhanceCollapsibleCallouts();
+        enhanceReading();
       },
       { once: true }
     );
   } else {
     normalizeEditorialMeta();
     enhanceCollapsibleCallouts();
+    enhanceReading();
   }
 })();
 </script>

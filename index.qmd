@@ -3,6 +3,10 @@ page-layout: article
 toc: false
 ---
 
+```{=html}
+<p class="mf1-eyebrow">Sveučilišni udžbenik · Martina Bašić</p>
+```
+
 # Mehanika fluida 1 {.unnumbered .mf1-home-title}
 
 ::: {.content-visible when-format="typst"}
@@ -11,17 +15,27 @@ Ovaj udžbenik vodi od fizikalnog modela i bilance do analitičkog rješenja, mj
 Uz izvode i riješene primjere nalaze se zadatci za samostalan rad. Dodatni numerički pokusi omogućuju istraživanje utjecaja podataka i pretpostavki na rezultat.
 :::
 
-::: {.mf1-hero .content-visible when-format="html"}
-Od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i otvorenim kanalima: objašnjenja, izvodi, riješeni primjeri i zadatci za samostalan rad u petnaest poglavlja.
+:::: {.content-visible when-format="html"}
+::: {.mf1-hero}
+Razumjeti fluid. Postaviti model. Provjeriti rezultat.
+
+Od tlaka i hidrostatike do cjevovoda, turbostrojeva i otvorenih tokova — kroz objašnjenja, skice i riješene primjere.
 :::
+::::
 
 ```{=html}
 <div class="mf1-print-toolbar">
-  <a class="mf1-print-button" href="downloads/mehanika-fluida-1.pdf">PDF izdanje</a>
-  <a class="mf1-print-button secondary" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html">Numerički pokusi</a>
+  <a class="mf1-print-button primary" href="chapters/u01_osnove_fluida_i_pascalov_zakon.html">Počni s osnovama <span aria-hidden="true">→</span></a>
+  <a class="mf1-print-button secondary" href="downloads/mehanika-fluida-1.pdf">Preuzmi PDF</a>
 </div>
 
-<p class="mf1-section-title">Uvod</p>
+<nav class="mf1-quick-links" aria-label="Brzi pristup">
+  <a href="chapters/d01_sazetak_formula_i_oznaka.html">Formule i oznake</a>
+  <a href="chapters/d06_kljuc_kontrolnih_rezultata.html">Rezultati zadataka</a>
+  <a href="jlite/lab/index.html">Numerički pokusi</a>
+</nav>
+
+<h2 class="mf1-section-title unnumbered">Prije početka</h2>
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u00_kako_koristiti_udzbenik.html">
     <span class="mf1-card-code">0</span><span class="mf1-card-title">Kako koristiti udžbenik</span>
@@ -29,7 +43,7 @@ Od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i ot
   </a>
 </div>
 
-<p class="mf1-section-title">Temelji</p>
+<h2 class="mf1-section-title unnumbered">Temelji</h2>
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u01_osnove_fluida_i_pascalov_zakon.html">
     <span class="mf1-card-code">1</span><span class="mf1-card-title">Fluid, svojstva i tlak</span>
@@ -41,7 +55,7 @@ Od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i ot
   </a>
 </div>
 
-<p class="mf1-section-title">Statika fluida</p>
+<h2 class="mf1-section-title unnumbered">Statika fluida</h2>
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.html">
     <span class="mf1-card-code">3</span><span class="mf1-card-title">Hidrostatika i manometrija</span>
@@ -61,7 +75,7 @@ Od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i ot
   </a>
 </div>
 
-<p class="mf1-section-title">Integralna dinamika</p>
+<h2 class="mf1-section-title unnumbered">Integralna dinamika</h2>
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u07_kinematika_kontrolni_volumen_i_kontinuitet.html">
     <span class="mf1-card-code">7</span><span class="mf1-card-title">Kinematika i kontrolni volumen</span>
@@ -81,7 +95,7 @@ Od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i ot
   </a>
 </div>
 
-<p class="mf1-section-title">Sličnost i realni tok</p>
+<h2 class="mf1-section-title unnumbered">Sličnost i realni tok</h2>
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u11_dimenzijska_analiza_i_slicnost.html">
     <span class="mf1-card-code">11</span><span class="mf1-card-title">Dimenzijska analiza</span>
@@ -93,7 +107,7 @@ Od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i ot
   </a>
 </div>
 
-<p class="mf1-section-title">Inženjerski sustavi</p>
+<h2 class="mf1-section-title unnumbered">Inženjerski sustavi</h2>
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u13_gubici_cjevovodi_crpke_i_mreze.html">
     <span class="mf1-card-code">13</span><span class="mf1-card-title">Cjevovodi, crpke i mreže</span>
@@ -109,7 +123,7 @@ Od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i ot
   </a>
 </div>
 
-<p class="mf1-section-title">Dodaci</p>
+<h2 class="mf1-section-title unnumbered">Dodaci</h2>
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/d01_sazetak_formula_i_oznaka.html"><span class="mf1-card-code">A</span><span class="mf1-card-title">Sažetak formula</span><span class="mf1-card-hint">Formule, oznake, pretpostavke i granice.</span></a>
   <a class="mf1-card" href="chapters/d02_pojmovnik.html"><span class="mf1-card-code">B</span><span class="mf1-card-title">Pojmovnik</span><span class="mf1-card-hint">Radne definicije temeljnih pojmova.</span></a>

@@ -1,12 +1,12 @@
 ## O udžbeniku
 
-Udžbenik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. Petnaest poglavlja vodi od svojstava fluida i hidrostatike do strujanja u cijevima, turbostrojevima i otvorenim kanalima.
+Udžbenik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. Kroz petnaest poglavlja upoznat ćeš svojstva fluida, hidrostatiku i strujanje u cijevima, turbostrojevima i otvorenim kanalima.
 
-Osnovni tok izlaganja čine glavni tekst i riješeni primjeri, nakon kojih slijede zadatci za samostalan rad. Blokovi *Dublje* i napomene o računalnim proračunima nisu preduvjet za razumijevanje osnovnog gradiva.
+Pri prvom čitanju slijedi glavni tekst i riješene primjere, a zatim pokušaj samostalno riješiti zadatke. Blokovima *Dublje* i napomenama o računalnim proračunima možeš se vratiti kada usvojiš osnovni model.
 
 ## Predznanje
 
-Pretpostavljaju se osnove mehanike, rada i energije te račun s jedinicama i vektorima. Diferencijalni i integralni račun primjenjuju se u izvodima, a vektorska analiza osobito je važna za diferencijalni opis toka. Zahtijevano predznanje pojedinoga poglavlja naznačeno je uz njegov uvodni dio.
+Pretpostavljaju se osnove mehanike, rada i energije te račun s jedinicama i vektorima. Diferencijalni i integralni račun primjenjuju se u izvodima, a vektorska analiza osobito je važna za diferencijalni opis toka. Ako preskačeš poglavlja, provjeri poznaješ li veličine i bilance na koje se novo gradivo poziva.
 
 Procijenjeno vrijeme uz poglavlja služi planiranju samostalnog rada. Ukupno je predviđeno približno **145 sati rada uz udžbenik**, uključujući zadatke i numeričke pokuse; to nije cjelokupno ECTS opterećenje kolegija.
 

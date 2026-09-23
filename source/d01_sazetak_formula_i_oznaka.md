@@ -53,6 +53,8 @@ Sažetak služi za brzo pronalaženje oznaka, jedinica i radnih relacija. Prije 
 | $St$ | Strouhalov broj, $fL/v$ | - |
 | $Ma$ | Machov broj, $v/a$ | - |
 
+: {.mf1-reference-table tbl-colwidths="[17,60,23]"}
+
 ## pog. 1–2: Osnovne veličine, tlak, viskoznost i kapilarnost
 
 | Formula | Konkretan brojčani primjer |

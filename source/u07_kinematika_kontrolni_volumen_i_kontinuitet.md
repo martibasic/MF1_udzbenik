@@ -7,7 +7,7 @@ Kinematika strujanja može se opisati praćenjem pojedine čestice fluida ili pr
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Kontrolni volumen je radni alat za sve sustave u kojima je važnije što ulazi, izlazi i ostaje u prostoru nego pratiti putanju svake pojedine čestice fluida: mješalice, ventilacijske komore, rashladne razdjelnike, izjednačne spremnike i građevinske retencijske komore. U strojarstvu i procesnoj tehnici upravo taj pogled zatvara masu kroz T-račve, difuzore, usisne komore i spremnike tijekom punjenja ili pražnjenja.
+Kontrolni volumen omogućuje praćenje mase koja ulazi, izlazi i ostaje u odabranom prostoru. Tako se analiziraju rashladni razdjelnici, ventilacijske komore i spremnici tijekom punjenja ili pražnjenja. Granicu biramo tako da obuhvati sve relevantne ulaze i izlaze.
 :::
 
 **Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
@@ -389,7 +389,7 @@ U užem ulaznom presjeku brzina mora biti veća nego na izlazu, jer isti protok 
 :::
 
 
-Difuzor zatvara stacionarni jednovodni slučaj. Sljedeća jezgrena scena <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 7</span><span class="mf1-ch-title">Kinematika, kontrolni volumen i kontinuitet</span></span> ide jedan korak dalje: protoci više nisu uravnoteženi, pa razlika ulaza i izlaza ne nestaje nego se pretvara u porast volumena unutar kontrolnog volumena.
+U prethodnom primjeru difuzora ulazni i izlazni protok bili su jednaki. U spremniku iz sljedećeg primjera njihova razlika mijenja količinu fluida u kontrolnom volumenu.
 
 ::: {#ex-u08-izjednacni-spremnik-tijekom-ispiranja-filtra-t2 .mf1-we}
 <p class="mf1-box-label">P3. Izjednačni spremnik tijekom ispiranja filtra&nbsp;<span class="mf1-level">T2</span></p>
@@ -737,7 +737,7 @@ Predstavlja brzinu promjene ukupne mase fluida unutar kontrolnog volumena. Ako j
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Bez jasno definiranog kontrolnog volumena nije moguće odrediti što su ulazi, što izlazi i postoji li akumulacija. Mnogi krivo pojednostavljeni rezultati nastaju upravo zato što se napreduje s bilanca prije nego što je kontrolni volumen u potpunosti zatvoren — bilo da se ne uzima u obzir dodatna grana, bilo da se akumulacija u nestacionarnoj situaciji previdi.
+Najprije zatvori kontrolnu plohu i označi sve ulaze i izlaze. Zatim provjeri postoji li akumulacija. Izostavljena grana ili zanemarena promjena mase u spremniku dovodi do pogrešne bilance i kad je račun algebarski točan.
 :::
 :::
 
@@ -861,7 +861,15 @@ $Q_{out,rel}=0{,}4712\ \text{L/s}$; $u=0{,}06732\ \text{m/s}$ udesno; $v_{out}=1
 
 U spremniku za pripremu slane otopine dva dotoka ulaze u homogenu mješavinu. Izlazni je protok manji od ukupnog dotoka pa razina raste. Treba provjeriti koliko se tekućine zadrži u spremniku i dopušta li raspoloživi slobodni bok šest minuta rada uz zadane granice mjerenja.
 
-Miješajući spremnik tlocrtne površine $A_T = 4{,}8\ \text{m}^2$ prima vodu gustoće $\rho_A=1000\ \text{kg/m}^3$ protokom $Q_A = 0{,}011\ \text{m}^3/\text{s}$ i slanu otopinu gustoće $\rho_B = 1080\ \text{kg/m}^3$ protokom $Q_B = 0{,}004\ \text{m}^3/\text{s}$. Homogena mješavina izlazi kroz cijev promjera $D = 80\ \text{mm}$ srednjom brzinom $v_3 = 1{,}6\ \text{m/s}$. Pretpostavi aditivnost volumena, savršeno miješanje i da je spremnik na početku već napunjen mješavinom istog sastava kao spojeni dotoci; gustoća sadržaja i izlaza zato tijekom promatranih $6\ \text{min}$ ostaje jednaka omjeru ukupnoga ulaznog masenog i volumnog protoka. Odredi izlazni volumenski protok, gustoću mješavine, brzinu porasta razine i masu akumuliranu u spremniku tijekom $6\ \text{min}$. Za intervalnu procjenu protoci su stalni unutar svake promatrane kombinacije, a navedene granice zajamčeni su intervali, ne standardne nesigurnosti. Mjerila ulaznih protoka imaju granice $\pm2\ \%$ za $Q_A$ i $\pm3\ \%$ za $Q_B$, a izlazna brzina $v_3$ granicu $\pm0{,}08\ \text{m/s}$. Početni slobodni bok iznosi $0{,}560\ \text{m}$. Konzervativno procijeni najveći porast razine, provjeri ostaje li šestominutni rad unutar geometrijskog kriterija slobodnog boka i odredi najdulje trajanje prije idealiziranog prelijevanja bez regulatora razine. Nakon dosezanja ruba prelijevanje je dodatni izlaz: linearni porast razine više ne vrijedi.
+Miješajući spremnik tlocrtne površine $A_T = 4{,}8\ \text{m}^2$ prima vodu gustoće $\rho_A=1000\ \text{kg/m}^3$ protokom $Q_A = 0{,}011\ \text{m}^3/\text{s}$ i slanu otopinu gustoće $\rho_B = 1080\ \text{kg/m}^3$ protokom $Q_B = 0{,}004\ \text{m}^3/\text{s}$. Homogena mješavina izlazi kroz cijev promjera $D = 80\ \text{mm}$ srednjom brzinom $v_3 = 1{,}6\ \text{m/s}$.
+
+Pretpostavi aditivnost volumena, savršeno miješanje i da je spremnik na početku već napunjen mješavinom istog sastava kao spojeni dotoci; gustoća sadržaja i izlaza zato tijekom promatranih $6\ \text{min}$ ostaje jednaka omjeru ukupnoga ulaznog masenog i volumnog protoka.
+
+Odredi izlazni volumenski protok, gustoću mješavine, brzinu porasta razine i masu akumuliranu u spremniku tijekom $6\ \text{min}$.
+
+Za intervalnu procjenu protoci su stalni unutar svake promatrane kombinacije, a navedene granice zajamčeni su intervali, ne standardne nesigurnosti. Mjerila ulaznih protoka imaju granice $\pm2\ \%$ za $Q_A$ i $\pm3\ \%$ za $Q_B$, a izlazna brzina $v_3$ granicu $\pm0{,}08\ \text{m/s}$. Početni slobodni bok iznosi $0{,}560\ \text{m}$.
+
+Konzervativno procijeni najveći porast razine, provjeri ostaje li šestominutni rad unutar geometrijskog kriterija slobodnog boka i odredi najdulje trajanje prije idealiziranog prelijevanja bez regulatora razine. Nakon dosezanja ruba prelijevanje je dodatni izlaz: linearni porast razine više ne vrijedi.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}

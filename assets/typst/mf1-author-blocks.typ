@@ -55,10 +55,10 @@
     #set par(first-line-indent: 0pt, spacing: 0.62em)
     #block(below: 0.48em, sticky: true)[
       #set text(
-        size: 8.7pt,
+        size: if mode == "example" { 11.5pt } else { 8.7pt },
         weight: "bold",
-        tracking: 0.035em,
-        fill: accent,
+        tracking: if mode == "example" { 0em } else { 0.015em },
+        fill: if mode == "example" { rgb("#11202e") } else { accent },
       )
       #title
     ]

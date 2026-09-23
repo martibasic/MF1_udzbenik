@@ -3740,7 +3740,7 @@
             "text": "Površina $A_p$ i tlak određuju se iz $p = F_p/A_p$, idealno opterećenje iz $G = 3pA_L$, a idealni hod pumpe iz volumne bilance $A_p s_p = 3A_L \\Delta z$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 836
+              "line": 840
             }
           }
         ],
@@ -3770,7 +3770,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-          "line": 842
+          "line": 846
         }
       },
       "tolerance": {
@@ -7435,8 +7435,8 @@
         "anchor": "#task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor"
       },
       "statement": {
-        "markdown": "Zatvoreni spremnik s vodom ima plinski prostor nepoznatog apsolutnog tlaka. Bočni priključak na dubini $h_1 = 0{,}65\\ \\text{m}$ spojen je na otvoreni U-manometar sa živom gustoće $\\rho_{Hg} = 13600\\ \\text{kg/m}^3$, pri čemu je razlika razina žive $\\Delta h = 0{,}210\\ \\text{m}$, a razina žive na strani spremnika niža. Spojni vod od priključka do žive potpuno je ispunjen vodom; granica vode i žive nalazi se **na istoj visini kao priključak**. Odredi apsolutni tlak plina u spremniku i apsolutni tlak u točki koja leži $h_2=1{,}30\\ \\text{m}$ ispod slobodne površine vode. Uzmite $\\rho_w = 998\\ \\text{kg/m}^3$ i $p_{atm} = 100{,}9\\ \\text{kPa}$. Za izbor apsolutnoga pretvornika tlaka uzmi tolerancije $\\Delta h\\pm2\\ \\text{mm}$, $h_1\\pm5\\ \\text{mm}$, $h_2\\pm5\\ \\text{mm}$ i $p_{atm}\\pm0{,}4\\ \\text{kPa}$. Tolerancije su zajamčeni granični intervali, ne standardne nesigurnosti; dopuštena je svaka kombinacija njihovih vrijednosti. Geometrijski uvjet jednake visine priključka i granice vode i žive vrijedi u svim tim kombinacijama. Odredi konzervativni najveći očekivani tlak u dubljoj točki i izaberi mjerno područje $0$--$140\\ \\text{kPa}$ ili $0$--$160\\ \\text{kPa}$ ako puna skala mora biti barem $5\\ \\%$ veća od najvećega očekivanog tlaka.",
-        "sha256": "615067ced9a54ad7a92c7642a28e612b6934e32a4b858e65b9f7fff71d6151d8",
+        "markdown": "Zatvoreni spremnik s vodom ima plinski prostor nepoznatog apsolutnog tlaka. Bočni priključak na dubini $h_1 = 0{,}65\\ \\text{m}$ spojen je na otvoreni U-manometar sa živom gustoće $\\rho_{Hg} = 13600\\ \\text{kg/m}^3$, pri čemu je razlika razina žive $\\Delta h = 0{,}210\\ \\text{m}$, a razina žive na strani spremnika niža. Spojni vod od priključka do žive potpuno je ispunjen vodom; granica vode i žive nalazi se **na istoj visini kao priključak**. Odredi apsolutni tlak plina u spremniku i apsolutni tlak u točki koja leži $h_2=1{,}30\\ \\text{m}$ ispod slobodne površine vode. Uzmi $\\rho_w = 998\\ \\text{kg/m}^3$ i $p_{atm} = 100{,}9\\ \\text{kPa}$. Za izbor apsolutnoga pretvornika tlaka uzmi tolerancije $\\Delta h\\pm2\\ \\text{mm}$, $h_1\\pm5\\ \\text{mm}$, $h_2\\pm5\\ \\text{mm}$ i $p_{atm}\\pm0{,}4\\ \\text{kPa}$. Tolerancije su zajamčeni granični intervali, ne standardne nesigurnosti; dopuštena je svaka kombinacija njihovih vrijednosti. Geometrijski uvjet jednake visine priključka i granice vode i žive vrijedi u svim tim kombinacijama. Odredi konzervativni najveći očekivani tlak u dubljoj točki i izaberi mjerno područje $0$--$140\\ \\text{kPa}$ ili $0$--$160\\ \\text{kPa}$ ako puna skala mora biti barem $5\\ \\%$ veća od najvećega očekivanog tlaka.",
+        "sha256": "f0f7931d2a1b297bfdcf44e530c535894837dfcbd9b6fb1ca49c07c50cd32986",
         "authoritative": true
       },
       "input_data": {
@@ -7572,7 +7572,7 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Uzmite $\\rho_w = 998\\ \\text{kg/m}^3$ i $p_{atm} = 100{,}9\\ \\text{kPa}$.",
+            "text": "Uzmi $\\rho_w = 998\\ \\text{kg/m}^3$ i $p_{atm} = 100{,}9\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
               "line": 874
@@ -7589,7 +7589,7 @@
             "text": "Za konzervativnu gornju granicu istodobno uzmi najveće $p_{atm}$, $\\Delta h$ i $h_2$, a najmanje $h_1$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 880
+              "line": 886
             }
           }
         ],
@@ -7626,7 +7626,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 886
+          "line": 892
         }
       },
       "tolerance": {
@@ -9207,7 +9207,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u04_relativno_mirovanje_fluida.md",
-          "line": 818
+          "line": 824
         }
       },
       "tolerance": {
@@ -9586,8 +9586,8 @@
         "anchor": "#task-u05-ravna-pravokutna-zaklopka"
       },
       "statement": {
-        "markdown": "Vertikalni pravokutni poklopac širine $b=1{,}40\\ \\mathrm{m}$ i visine $H=1{,}80\\ \\mathrm{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1=1{,}10\\ \\mathrm{m}$. Odredite rezultantnu silu, dubinu centra tlaka i njegovu udaljenost od gornjeg ruba.",
-        "sha256": "9887e23b97b6da6962799acc1ee3942ee3b72636c376f1be72fff2156c47299f",
+        "markdown": "Vertikalni pravokutni poklopac širine $b=1{,}40\\ \\mathrm{m}$ i visine $H=1{,}80\\ \\mathrm{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1=1{,}10\\ \\mathrm{m}$. Odredi rezultantnu silu, dubinu centra tlaka i njegovu udaljenost od gornjeg ruba.",
+        "sha256": "f8257687f37af0217fc0700b5ca2c4f1342710127022b2a2ad4f03bc4b143243",
         "authoritative": true
       },
       "input_data": {
@@ -9641,7 +9641,7 @@
         "explicit_status": "none_identified_in_statement_or_hint",
         "defaults": [
           {
-            "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
+            "text": "U svim zadatcima uzmi $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 607
@@ -9791,8 +9791,8 @@
         "anchor": "#task-u05-zakrivljeni-poklopac-cetvrtine-kruga"
       },
       "statement": {
-        "markdown": "Zakrivljeni poklopac presjeka četvrtine kruga ima $R=0{,}65\\ \\mathrm{m}$ i širinu $b=1{,}20\\ \\mathrm{m}$. Gornja mu je točka na dubini $h_1=1{,}10\\ \\mathrm{m}$. Voda kvasi konveksnu vanjsku i donju stranu. Odredite $F_H$, predznačeni $F_V$ i $F_R$.",
-        "sha256": "1a10e6e4107d35595c603577c55a26df2886c73a284ba7a739c58da588452d4b",
+        "markdown": "Zakrivljeni poklopac presjeka četvrtine kruga ima $R=0{,}65\\ \\mathrm{m}$ i širinu $b=1{,}20\\ \\mathrm{m}$. Gornja mu je točka na dubini $h_1=1{,}10\\ \\mathrm{m}$. Voda kvasi konveksnu vanjsku i donju stranu. Odredi $F_H$, predznačeni $F_V$ i $F_R$.",
+        "sha256": "96dc5c48d6fe30c0edec249492cd05f3ce39d0a60d1c80c1829336cb60ddac1d",
         "authoritative": true
       },
       "input_data": {
@@ -9846,7 +9846,7 @@
         "explicit_status": "none_identified_in_statement_or_hint",
         "defaults": [
           {
-            "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
+            "text": "U svim zadatcima uzmi $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 607
@@ -9996,8 +9996,8 @@
         "anchor": "#task-pregrada-izmedu-dviju-razina-vode"
       },
       "statement": {
-        "markdown": "Vertikalna nepropusna pregrada širine $b=1{,}20\\ \\mathrm{m}$ i visine $H=3{,}00\\ \\mathrm{m}$ dijeli dva otvorena spremnika. Dubina vode iznad zajedničkog dna lijevo je $h_L=2{,}40\\ \\mathrm{m}$, a desno $h_D=1{,}20\\ \\mathrm{m}$. Pregrada je zglobno oslonjena u dnu $A$; u gornjoj točki $B$ pridržava je vodoravna spojnica. Zanemarite trenje i moment težine pregrade. Odredite neto silu vode i visinu njezina pravca djelovanja iznad dna, moment vode oko $A$ te iznos i smjer sile spojnice. Uzmite $+x$ udesno, $+y$ prema gore i pozitivan moment suprotno kazaljci na satu.",
-        "sha256": "70aac8b1a5dbd1496b990ae59dfd70f786eb6712798721f3ad27893c3574140f",
+        "markdown": "Vertikalna nepropusna pregrada širine $b=1{,}20\\ \\mathrm{m}$ i visine $H=3{,}00\\ \\mathrm{m}$ dijeli dva otvorena spremnika. Dubina vode iznad zajedničkog dna lijevo je $h_L=2{,}40\\ \\mathrm{m}$, a desno $h_D=1{,}20\\ \\mathrm{m}$. Pregrada je zglobno oslonjena u dnu $A$; u gornjoj točki $B$ pridržava je vodoravna spojnica. Zanemari trenje i moment težine pregrade. Odredi neto silu vode i visinu njezina pravca djelovanja iznad dna, moment vode oko $A$ te iznos i smjer sile spojnice. Uzmi $+x$ udesno, $+y$ prema gore i pozitivan moment suprotno kazaljci na satu.",
+        "sha256": "8627400ea1c3e147a3d5b98e7d81bf8d4d15ebebc4b183700a2c4bb543b638ae",
         "authoritative": true
       },
       "input_data": {
@@ -10062,14 +10062,14 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Zanemarite trenje i moment težine pregrade.",
+            "text": "Zanemari trenje i moment težine pregrade.",
             "provenance": {
               "kind": "task_statement",
               "line": 663
             }
           },
           {
-            "text": "Uzmite $+x$ udesno, $+y$ prema gore i pozitivan moment suprotno kazaljci na satu.",
+            "text": "Uzmi $+x$ udesno, $+y$ prema gore i pozitivan moment suprotno kazaljci na satu.",
             "provenance": {
               "kind": "task_statement",
               "line": 663
@@ -10079,7 +10079,7 @@
         "explicit_status": "declared_and_extracted",
         "defaults": [
           {
-            "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
+            "text": "U svim zadatcima uzmi $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 607
@@ -10295,8 +10295,8 @@
         "anchor": "#task-sirina-trokutastog-poklopca"
       },
       "statement": {
-        "markdown": "Vertikalni poklopac ima oblik jednakokračnog trokuta s vrhom gore, visinom $H=1{,}50\\ \\mathrm{m}$ i vodoravnom osnovicom širine $b$. Vrh je na dubini $h_0=0{,}40\\ \\mathrm{m}$ ispod slobodne površine vode; s druge strane je zrak na atmosferskom tlaku. Dopuštena rezultantna sila jest $F_{\\max}=12{,}00\\ \\mathrm{kN}$. Odredite najveću širinu $b_{\\max}$ i dubinu centra tlaka. Zadovoljava li ponuđeni poklopac širine $1{,}20\\ \\mathrm{m}$ ovaj uvjet? Visina i dubina vrha ostaju zadane pri promjeni širine; provjerava se samo navedeni uvjet sile, ne čvrstoća konstrukcije.",
-        "sha256": "728724d5e336f5c3c67e6de415976a8f21717d5a9b02272b0cab6b797d772454",
+        "markdown": "Vertikalni poklopac ima oblik jednakokračnog trokuta s vrhom gore, visinom $H=1{,}50\\ \\mathrm{m}$ i vodoravnom osnovicom širine $b$. Vrh je na dubini $h_0=0{,}40\\ \\mathrm{m}$ ispod slobodne površine vode; s druge strane je zrak na atmosferskom tlaku. Dopuštena rezultantna sila jest $F_{\\max}=12{,}00\\ \\mathrm{kN}$. Odredi najveću širinu $b_{\\max}$ i dubinu centra tlaka. Zadovoljava li ponuđeni poklopac širine $1{,}20\\ \\mathrm{m}$ ovaj uvjet? Visina i dubina vrha ostaju zadane pri promjeni širine; provjerava se samo navedeni uvjet sile, ne čvrstoća konstrukcije.",
+        "sha256": "9a90fd5f9cfe2c364dd6810928fdfceb659c6c7c07a4c69ac1d9ed1a0a7d7c49",
         "authoritative": true
       },
       "input_data": {
@@ -10371,7 +10371,7 @@
         "explicit_status": "declared_and_extracted",
         "defaults": [
           {
-            "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
+            "text": "U svim zadatcima uzmi $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 607
@@ -10562,8 +10562,8 @@
         "anchor": "#task-radijalni-poklopac-s-tezinom"
       },
       "statement": {
-        "markdown": "Kruti sklop četvrtcilindričnog poklopca i njegovih krakova okreće se oko osi kroz središte kružnice $O$, a ne oko kraja luka. Voda kvasi konveksnu lijevu i donju stranu, a s druge strane je zrak na atmosferskom tlaku. U presjeku s ishodištem u $O$, $+x$ udesno i $+y$ prema gore, krajevi su $A=(-R,0)$ i $B=(0,-R)$; $R=0{,}85\\ \\mathrm{m}$ i širina $b=1{,}30\\ \\mathrm{m}$. Os $O$ nalazi se $h_1=0{,}60\\ \\mathrm{m}$ ispod slobodne površine. Težina cijelog sklopa je $W=2{,}40\\ \\mathrm{kN}$ i djeluje na pravcu $x_G=-0{,}32\\ \\mathrm{m}$. Vodoravna spojnica u $B$ može samo vlačiti ulijevo, do $T_{\\max}=1{,}00\\ \\mathrm{kN}$. Krakovi i spojnica su na suhoj strani ili izvan širine presjeka; njihovo dodatno hidrostatsko opterećenje zanemarite. Odaberite potreban model i odredite predznačene komponente sile vode, njezin moment oko $O$, silu spojnice i komponente reakcije osi na sklop. Može li spojnica održati ravnotežu? Obrazložite mijenja li porast $h_1$ potrebnu silu spojnice dok cijeli luk ostaje uronjen. Zanemarite trenje osi; pozitivan moment je suprotno kazaljci na satu.",
-        "sha256": "f6525747bce7f65e2ac493a9827abd13bfb0f80d0758c7390eb97efca8b966c6",
+        "markdown": "Kruti sklop četvrtcilindričnog poklopca i njegovih krakova okreće se oko osi kroz središte kružnice $O$, a ne oko kraja luka. Voda kvasi konveksnu lijevu i donju stranu, a s druge strane je zrak na atmosferskom tlaku. U presjeku s ishodištem u $O$, $+x$ udesno i $+y$ prema gore, krajevi su $A=(-R,0)$ i $B=(0,-R)$; $R=0{,}85\\ \\mathrm{m}$ i širina $b=1{,}30\\ \\mathrm{m}$. Os $O$ nalazi se $h_1=0{,}60\\ \\mathrm{m}$ ispod slobodne površine. Težina cijelog sklopa je $W=2{,}40\\ \\mathrm{kN}$ i djeluje na pravcu $x_G=-0{,}32\\ \\mathrm{m}$. Vodoravna spojnica u $B$ može samo vlačiti ulijevo, do $T_{\\max}=1{,}00\\ \\mathrm{kN}$. Krakovi i spojnica su na suhoj strani ili izvan širine presjeka; njihovo dodatno hidrostatsko opterećenje zanemari. Odaberi potreban model i odredi predznačene komponente sile vode, njezin moment oko $O$, silu spojnice i komponente reakcije osi na sklop. Može li spojnica održati ravnotežu? Obrazloži mijenja li porast $h_1$ potrebnu silu spojnice dok cijeli luk ostaje uronjen. Zanemari trenje osi; pozitivan moment je suprotno kazaljci na satu.",
+        "sha256": "40bf7f4d7e7ef9159bf6ed0ebee04db23a9151a1c195cff9eb392e5f8101aeb6",
         "authoritative": true
       },
       "input_data": {
@@ -10665,14 +10665,14 @@
             }
           },
           {
-            "text": "njihovo dodatno hidrostatsko opterećenje zanemarite.",
+            "text": "njihovo dodatno hidrostatsko opterećenje zanemari.",
             "provenance": {
               "kind": "task_statement",
               "line": 713
             }
           },
           {
-            "text": "Zanemarite trenje osi;",
+            "text": "Zanemari trenje osi;",
             "provenance": {
               "kind": "task_statement",
               "line": 713
@@ -10682,7 +10682,7 @@
         "explicit_status": "declared_and_extracted",
         "defaults": [
           {
-            "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
+            "text": "U svim zadatcima uzmi $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 607
@@ -10976,8 +10976,8 @@
         "anchor": "#task-u05-nesigurnost-modela-i-mjerenja"
       },
       "statement": {
-        "markdown": "Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\\ \\mathrm{m}$ i $H=0{,}80\\ \\mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\\ \\mathrm{m}$ sa standardnom nesigurnošću $u(h_1)=0{,}020\\ \\mathrm{m}$, a gustoća je $\\rho=998\\ \\mathrm{kg/m^3}$ uz $u(\\rho)=3\\ \\mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\\ \\mathrm{kN}$ uz $u(F_m)=0{,}30\\ \\mathrm{kN}$. Pretpostavite nezavisne ulaze i primijenite linearnu propagaciju nesigurnosti. Izračunajte predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\\sqrt{u(F)^2+u(F_m)^2}$. Obrazložite podržavaju li podaci tvrdnju o neslaganju na razini $2u$.",
-        "sha256": "56fca7c3fa56aaef48c55128c2441504cd0d471d7d40c9bb7555d78a1284c030",
+        "markdown": "Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\\ \\mathrm{m}$ i $H=0{,}80\\ \\mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\\ \\mathrm{m}$ sa standardnom nesigurnošću $u(h_1)=0{,}020\\ \\mathrm{m}$, a gustoća je $\\rho=998\\ \\mathrm{kg/m^3}$ uz $u(\\rho)=3\\ \\mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\\ \\mathrm{kN}$ uz $u(F_m)=0{,}30\\ \\mathrm{kN}$. Pretpostavi nezavisne ulaze i primijeni linearnu propagaciju nesigurnosti. Izračunaj predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\\sqrt{u(F)^2+u(F_m)^2}$. Obrazloži podržavaju li podaci tvrdnju o neslaganju na razini $2u$.",
+        "sha256": "86051be161db0f63f9ab5fda4d54b2144b99ddd2946a22fd531ba9e771e092f7",
         "authoritative": true
       },
       "input_data": {
@@ -11104,7 +11104,7 @@
             }
           },
           {
-            "text": "Pretpostavite nezavisne ulaze i primijenite linearnu propagaciju nesigurnosti.",
+            "text": "Pretpostavi nezavisne ulaze i primijeni linearnu propagaciju nesigurnosti.",
             "provenance": {
               "kind": "task_statement",
               "line": 740
@@ -11114,7 +11114,7 @@
         "explicit_status": "declared_and_extracted",
         "defaults": [
           {
-            "text": "U svim zadatcima uzmite $g=9{,}81\\ \\mathrm{m/s^2}$.",
+            "text": "U svim zadatcima uzmi $g=9{,}81\\ \\mathrm{m/s^2}$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 607
@@ -12972,7 +12972,7 @@
             "text": "najprije uzmi $h_m=(h_L+h_D)/2$ i $m_\\Delta=\\rho_oV_o+\\rho_wV_w$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 1086
+              "line": 1092
             }
           }
         ],
@@ -12995,7 +12995,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u06_uzgon_plivanje_i_stabilnost.md",
-          "line": 1092
+          "line": 1098
         }
       },
       "tolerance": {
@@ -14746,7 +14746,7 @@
             "text": "Za najveći porast razine uzmi oba ulazna protoka na gornjoj, a izlaznu brzinu na donjoj granici.",
             "provenance": {
               "kind": "task_hint",
-              "line": 868
+              "line": 876
             }
           }
         ],
@@ -14769,7 +14769,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md",
-          "line": 874
+          "line": 882
         }
       },
       "tolerance": {
@@ -16466,7 +16466,7 @@
             "text": "Bernoullijem između slobodne površine i izlaza vrati idealni $v$, između slobodne površine i vrha sifona vrati tlak, a domet mlaza zatvori kao vodoravno izbačeno tijelo s visine $1{,}2\\ \\text{m}$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 896
+              "line": 904
             }
           }
         ],
@@ -16489,7 +16489,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 902
+          "line": 910
         }
       },
       "tolerance": {

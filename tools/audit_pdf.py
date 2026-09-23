@@ -125,6 +125,34 @@ def _chapter_destinations(document: pymupdf.Document) -> tuple[dict[str, int], l
     return selected, issues
 
 
+def _figure_numbering_issues(page_texts: list[str]) -> list[str]:
+    """Check actual caption sequences against the canonical chapter figures.
+
+    A custom heading can accidentally bypass Quarto's counter reset while
+    leaving the book's outline and links intact. Captions are checked across
+    line breaks because long captions may put the number on its own line.
+    """
+    numbers: dict[int, list[int]] = {}
+    for text in page_texts:
+        for chapter, number in re.findall(r"Slika\s+(\d+)\.(\d+)\s*:", text):
+            numbers.setdefault(int(chapter), []).append(int(number))
+    issues = []
+    for chapter in range(1, 16):
+        sources = list((REPO_ROOT / "source").glob(f"u{chapter:02d}_*.md"))
+        if len(sources) != 1:
+            issues.append(f"nejasan izvor za provjeru slika poglavlja {chapter}")
+            continue
+        source = sources[0].read_text(encoding="utf-8")
+        count = len(re.findall(r"\{#fig-[^\s}]+", source))
+        expected = list(range(1, count + 1))
+        if numbers.get(chapter, []) != expected:
+            issues.append(
+                f"poglavlje {chapter}: oznake slika {numbers.get(chapter, [])}; "
+                f"očekuje se neprekinuto 1–{count} prema izvoru"
+            )
+    return issues
+
+
 def _raster_issues(
     document: pymupdf.Document, destinations: dict[str, int]
 ) -> tuple[list[dict[str, object]], list[str]]:
@@ -213,6 +241,7 @@ def audit(pdf_path: Path) -> tuple[dict[str, object], list[str]]:
         issues.extend(_a4_issues(document))
 
         page_texts = [page.get_text("text") for page in document]
+        issues.extend(_figure_numbering_issues(page_texts))
         full_text = _normalise("\n".join(page_texts))
         toc_text = _normalise("\n".join(page_texts[: min(8, page_count)]))
         text_character_count = len(re.sub(r"\s+", "", full_text))

@@ -116,7 +116,9 @@ def build() -> str:
         "",
         "## Ključ smjernica i kontrolnih rezultata",
         "",
-        "Zadatci su označeni Z1–Z6 unutar svakog poglavlja, jednako kao u glavnom tekstu. Ovaj dodatak sadrži sažete smjernice postupka i kontrolne rezultate za tiskano izdanje. Ne zamjenjuje cjelovito rješenje: provjera uključuje model, pretpostavke, jedinice i barem jednu neovisnu fizikalnu provjeru. Otvoreni zadatci razina T3 i T4 mogu imati više prihvatljivih odgovora.",
+        "Pronađi poglavlje i oznaku zadatka Z1–Z6. Uz svaki zadatak nalaze se kratka smjernica, kontrolni rezultat ili kriterij te poveznica na puni iskaz.",
+        "",
+        "Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke, jedinice te barem jednu neovisnu fizikalnu vezu. Otvoreni dijelovi zadataka T3 i T4 mogu imati više prihvatljivih odgovora.",
         "",
     ]
     seen: set[str] = set()
@@ -163,7 +165,7 @@ def build() -> str:
             "::: {.mf1-mini-summary}",
             '<p class="mf1-box-label">Opseg ključa</p>',
             "",
-            f"Ključ obuhvaća {total} zadataka iz javnog toka U01–U15. Pogrešku u rezultatu prijavite prema stabilnom ID-ju zadatka kroz errata obrazac.",
+            f"Ključ obuhvaća {total} zadataka iz poglavlja 1–15. Pri prijavi pogreške navedi poglavlje, oznaku zadatka i poveznicu na njega.",
             ":::",
             "",
         ]

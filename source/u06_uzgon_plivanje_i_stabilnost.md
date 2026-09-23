@@ -7,7 +7,7 @@ Analiza plivajućega tijela obuhvaća ukupnu težinu, istisnuti volumen te polo�
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-U brodogradnji, lučnim pontonima i plutajućim radnim platformama nije dovoljno znati samo koliko je vode istisnuto; jednako je važno gdje su težište i centar uzgona te kakav moment nastaje kad se teret pomakne. Zato ovo poglavlje izravno ulazi u stabilnost plovila, raspored opreme na pontonu, sigurnost plutajuće dizalice i svaku tehničku situaciju u kojoj mali bočni pomak tereta može otvoriti veliki nagib.
+Za plovilo ili plutajuću platformu uz istisnuti volumen treba poznavati položaj težišta i centra uzgona. Pomak tereta mijenja moment tih sila i nagib tijela. Taj se račun primjenjuje pri rasporedu opreme na pontonu, provjeri početnog stabiliteta plovila i analizi plutajuće dizalice.
 :::
 
 **Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
@@ -407,9 +407,9 @@ $$ {#eq-uzgon-stabilitet-rijeseni-primjer-koliki-gaz-ima-radni-ponton-06}
 
 **Traženo**
 
-1. Odredite ukupni istisnuti volumen vode u ravnoteznom položaju.
-2. Odredite $KB$, $BM$, $KG$ i početni $GM$ sustava te udaljenost $e$ težišta kompresora od uzdužne osi simetrije platforme.
-3. Odredite za koliko je srednja uronjenost platforme veća nego prije postavljanja kompresora.
+1. Odredi ukupni istisnuti volumen vode u ravnoteznom položaju.
+2. Odredi $KB$, $BM$, $KG$ i početni $GM$ sustava te udaljenost $e$ težišta kompresora od uzdužne osi simetrije platforme.
+3. Odredi za koliko je srednja uronjenost platforme veća nego prije postavljanja kompresora.
 
 ![plutajuća platforma s pomaknutim kompresorom](../assets/print/u07_val1_platforma_kompresor.svg){#fig-u07-plutajuca-platforma-s-pomaknutim-kompresorom fig-alt="plutajuća platforma s pomaknutim kompresorom"}
 
@@ -1079,7 +1079,13 @@ Početno: $(h,f,KG,GM)=(0{,}2227;0{,}3773;0{,}8000;0{,}1534)\ \text{m}$. Plan A:
 
 ### Z6. Platforma na granici ulja i vode {#task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta .unnumbered .unlisted}
 
-Pravokutna servisna platforma duljine $L = 2{,}80\ \text{m}$ i širine $B = 1{,}20\ \text{m}$ pluta na granici ulja gustoće $\rho_o = 820\ \text{kg/m}^3$ debljine $\delta = 0{,}08\ \text{m}$ i vode gustoće $\rho_w = 998\ \text{kg/m}^3$. Nakon pomaka akumulatora lijevi rub uronjen je $h_L = 0{,}26\ \text{m}$, a desni $h_D = 0{,}18\ \text{m}$. Ukupnu masu platforme s opremom procijeni iz izmjerene istisnine u svakom računu; akumulator ima $m_a=70\ \text{kg}$, a ukupno težište nalazi se na $KG=0{,}200\ \text{m}$ iznad dna. Odredi srednji uron, volumene istisnine u ulju i vodi, bočni pomak rezultantnoga centra uzgona, ekvivalentne $KB$, $BM$ i $GM$ te udaljenost akumulatora od osi simetrije. Rubni uroni imaju zadane granice pogreške $\pm3\ \text{mm}$, vrijedi $\rho_w=998\pm3\ \text{kg/m}^3$, $m_a=70\pm1\ \text{kg}$ i $KG=0{,}200\pm0{,}005\ \text{m}$; navedeni intervali su zajamčene granice, ne standardne nesigurnosti. Visina boka je $H=0{,}36\ \text{m}$; ostale podatke uzmi kao točne. Provjeri da oba ruba presijecaju cijeli sloj ulja i ostaju ispod palube te da je $|\theta|\le5^\circ$, što je ovdje zadana granica modela. Konzervativno procijeni najveću moguću udaljenost akumulatora provjerom rubnih kombinacija ulaza i odluči smije li se raspored prihvatiti ako montažni koridor dopušta najviše $0{,}34\ \text{m}$ od osi.
+Pravokutna servisna platforma duljine $L = 2{,}80\ \text{m}$ i širine $B = 1{,}20\ \text{m}$ pluta na granici ulja gustoće $\rho_o = 820\ \text{kg/m}^3$ debljine $\delta = 0{,}08\ \text{m}$ i vode gustoće $\rho_w = 998\ \text{kg/m}^3$. Nakon pomaka akumulatora lijevi rub uronjen je $h_L = 0{,}26\ \text{m}$, a desni $h_D = 0{,}18\ \text{m}$. Ukupnu masu platforme s opremom procijeni iz izmjerene istisnine u svakom računu; akumulator ima $m_a=70\ \text{kg}$, a ukupno težište nalazi se na $KG=0{,}200\ \text{m}$ iznad dna.
+
+Odredi srednji uron, volumene istisnine u ulju i vodi, bočni pomak rezultantnoga centra uzgona, ekvivalentne $KB$, $BM$ i $GM$ te udaljenost akumulatora od osi simetrije.
+
+Rubni uroni imaju zadane granice pogreške $\pm3\ \text{mm}$, vrijedi $\rho_w=998\pm3\ \text{kg/m}^3$, $m_a=70\pm1\ \text{kg}$ i $KG=0{,}200\pm0{,}005\ \text{m}$; navedeni intervali su zajamčene granice, ne standardne nesigurnosti. Visina boka je $H=0{,}36\ \text{m}$; ostale podatke uzmi kao točne. Provjeri da oba ruba presijecaju cijeli sloj ulja i ostaju ispod palube te da je $|\theta|\le5^\circ$, što je ovdje zadana granica modela.
+
+Konzervativno procijeni najveću moguću udaljenost akumulatora provjerom rubnih kombinacija ulaza i odluči smije li se raspored prihvatiti ako montažni koridor dopušta najviše $0{,}34\ \text{m}$ od osi.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}

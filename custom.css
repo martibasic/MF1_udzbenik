@@ -49,27 +49,27 @@ html {
 body {
   font-family: var(--mf1-serif);
   font-size: 1rem;
-  line-height: 1.72;
+  line-height: 1.68;
   color: var(--mf1-ink);
   background: var(--mf1-bg);
-  font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+  font-feature-settings: 'kern' 1, 'liga' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Širina glavnog stupca (oko 85 znakova).
+/* Širina glavnog stupca za tekst, formule i postojeće široke skice.
    Širina se zadaje samo stvarnom sadržaju, a ne Quarto gridu sa sidebarom. */
 main,
 #quarto-document-content {
   width: 100%;
-  max-width: 880px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
-main { padding: 1rem 1.5rem 4rem; }
+main { padding: 1rem 0.75rem 4rem; }
 
 p { margin: 0 0 1rem; hyphens: auto; }
-p + p { margin-top: -0.2rem; }
+p + p { margin-top: 0; }
 
 strong { color: var(--mf1-ink); font-weight: 600; }
 em { font-style: italic; }
@@ -109,53 +109,59 @@ p, li, td, th, figcaption, .mf1-ch-title,
   hyphens: none;
 }
 
-table {
-  display: block;
+.mf1-table-scroll {
   max-width: 100%;
   overflow-x: auto;
+  margin: 1.5rem 0;
   -webkit-overflow-scrolling: touch;
 }
+.mf1-table-scroll table { margin: 0; display: table; }
+.mf1-table-scroll .mf1-reference-table { min-width: 32rem; }
+.mf1-table-hint { font-family: var(--mf1-sans); font-size: 0.74rem; color: var(--mf1-muted); margin: -0.8rem 0 1.5rem; }
+main table { display: block; max-width: 100%; overflow-x: auto; }
 
-/* Naslovi — serif s blago akademskim ritmom */
+/* Sans naslovi olakšavaju listanje; osnovni tekst ostaje serifni. */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--mf1-serif);
+  font-family: var(--mf1-sans);
   color: var(--mf1-ink);
   font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
 h1 {
   font-weight: 600;
-  font-size: 2.35rem;
-  line-height: 1.18;
-  letter-spacing: -0.015em;
+  font-size: clamp(1.9rem, 2.5vw, 2.45rem);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
   margin: 0.4rem 0 1.4rem;
 }
 
 h2 {
   font-weight: 600;
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   line-height: 1.3;
   letter-spacing: -0.005em;
-  margin: 3rem 0 0.9rem;
-  padding-top: 1.6rem;
+  margin: 2.6rem 0 1rem;
+  padding-top: 1.3rem;
   border-top: 1px solid var(--mf1-line);
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 h3 {
   font-weight: 600;
-  font-size: 1.18rem;
+  font-size: 1.1rem;
   line-height: 1.35;
   margin: 2rem 0 0.6rem;
   color: var(--mf1-soft-ink);
-  font-style: italic;
+  font-style: normal;
 }
 
 h4 {
   font-family: var(--mf1-sans);
   font-weight: 700;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  text-transform: none;
+  letter-spacing: 0;
   color: var(--mf1-muted);
   margin: 1.6rem 0 0.4rem;
 }
@@ -169,6 +175,13 @@ h4 {
   margin-bottom: 2rem;
 }
 .quarto-title-banner .title { color: var(--mf1-ink) !important; }
+#title-block-header .quarto-title-meta { display: none !important; }
+#title-block-header { margin-bottom: 1.3rem; }
+.quarto-page-breadcrumbs {
+  font-family: var(--mf1-sans);
+  font-size: 0.78rem;
+  margin-bottom: 1.1rem;
+}
 .quarto-title-banner .subtitle {
   color: var(--mf1-muted) !important;
   font-style: italic;
@@ -198,6 +211,11 @@ h4 {
 #TOC .nav-link .header-section-number {
   color: inherit !important;
 }
+#TOC { font-family: var(--mf1-sans); font-size: 0.76rem; line-height: 1.45; }
+#TOC h2 { font-size: 0.76rem; font-weight: 600; border: 0; padding: 0; margin-bottom: 0.75rem; }
+#TOC .nav-link { padding-top: 0.3rem; padding-bottom: 0.3rem; border-bottom: 0; }
+#TOC .nav-link.active { border-left-color: var(--mf1-accent); }
+:where(h1, h2, h3, h4, section[id]) { scroll-margin-top: 5rem; }
 
 /* Slike */
 figure { margin: 1.6rem 0; }
@@ -208,8 +226,8 @@ figcaption {
   color: var(--mf1-muted);
   line-height: 1.45;
   margin-top: 0.5rem;
-  text-align: center;
-  font-style: italic;
+  text-align: left;
+  font-style: normal;
 }
 
 /* Math */
@@ -251,9 +269,11 @@ pre code { background: transparent; padding: 0; }
 table {
   border-collapse: collapse;
   margin: 1.6rem 0;
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   width: 100%;
   font-family: var(--mf1-sans);
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1.5;
 }
 th, td {
   padding: 0.55rem 0.7rem;
@@ -263,14 +283,15 @@ th, td {
   vertical-align: top;
 }
 th {
-  background: transparent;
-  font-weight: 700;
+  background: var(--mf1-bg-paper);
+  font-weight: 600;
   color: var(--mf1-ink);
-  border-bottom: 2px solid var(--mf1-ink);
+  border-bottom: 1px solid var(--mf1-muted);
   text-transform: none;
   letter-spacing: 0;
 }
-tbody tr:last-child td { border-bottom: 1px solid var(--mf1-ink); }
+tbody tr:last-child td { border-bottom: 1px solid var(--mf1-line); }
+tbody tr:nth-child(even) { background: #fafbf9; }
 
 /* Liste */
 ul, ol { padding-left: 1.4rem; margin: 0 0 1rem; }
@@ -300,10 +321,10 @@ blockquote em { font-style: normal; }
 .callout-header, .callout-title {
   font-family: var(--mf1-sans) !important;
   background: transparent !important;
-  font-weight: 700 !important;
-  font-size: 0.78rem !important;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  text-transform: none;
+  letter-spacing: 0;
   color: var(--mf1-muted) !important;
   opacity: 1 !important;
   padding: 0 !important;
@@ -314,6 +335,7 @@ blockquote em { font-style: normal; }
   background: transparent !important;
 }
 .callout-icon-container { display: none !important; }
+.callout-header[data-bs-toggle="collapse"] { min-height: 2rem; align-items: center; cursor: pointer; }
 .callout-note { border-left-color: var(--mf1-c-gp) !important; }
 .callout-note .callout-title,
 .callout-note .callout-header,
@@ -341,9 +363,9 @@ blockquote em { font-style: normal; }
 #quarto-sidebar .sidebar-title,
 .sidebar-title {
   font-family: var(--mf1-serif);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
-  padding: 1.2rem 1.1rem 0.7rem;
+  padding: 1.2rem 0.4rem 0.7rem;
   letter-spacing: -0.005em;
   color: var(--mf1-ink);
   border-bottom: 1px solid var(--mf1-line-soft);
@@ -372,7 +394,7 @@ blockquote em { font-style: normal; }
 /* Naslov grupe — uppercase ssm caps */
 #quarto-sidebar .sidebar-item-section > .sidebar-item-container {
   padding: 0 !important;
-  margin: 1.2rem 0 0.2rem;
+  margin: 0.8rem 0 0.15rem;
   background: transparent !important;
 }
 #quarto-sidebar .sidebar-item-section:first-of-type > .sidebar-item-container {
@@ -382,10 +404,10 @@ blockquote em { font-style: normal; }
 #quarto-sidebar .sidebar-item-section > .sidebar-item-container > a.sidebar-item-text {
   display: block;
   padding: 0.5rem 1.1rem 0.3rem !important;
-  font-size: 0.7rem !important;
-  font-weight: 800 !important;
+  font-size: 0.64rem !important;
+  font-weight: 600 !important;
   text-transform: uppercase;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.07em;
   color: var(--mf1-faint) !important;
   background: transparent !important;
   border: 0 !important;
@@ -401,7 +423,7 @@ blockquote em { font-style: normal; }
   display: block;
   padding: 0.36rem 1.1rem 0.36rem 1.1rem;
   color: var(--mf1-soft-ink);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 400;
   text-decoration: none !important;
   border: 0 !important;
@@ -473,10 +495,10 @@ blockquote em { font-style: normal; }
 .mf1-box-label {
   margin: 0 0 0.55rem !important;
   font-family: var(--mf1-sans);
-  font-size: 0.74rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.11em;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.01em;
   color: var(--mf1-soft-ink);
   line-height: 1.3;
 }
@@ -485,6 +507,13 @@ blockquote em { font-style: normal; }
 .mf1-gp          .mf1-box-label { color: var(--mf1-c-gp); }
 .mf1-po          .mf1-box-label { color: var(--mf1-c-po); }
 .mf1-ch          .mf1-box-label { color: var(--mf1-c-ch); }
+.mf1-we > .mf1-box-label, .mf1-gp > .mf1-box-label,
+.mf1-po > .mf1-box-label, .mf1-ch > .mf1-box-label {
+  color: var(--mf1-ink);
+  font-size: 1.13rem;
+  line-height: 1.4;
+  margin-bottom: 1rem !important;
+}
 .mf1-izvod       .mf1-box-label { color: var(--mf1-c-izvod); }
 .mf1-application .mf1-box-label { color: var(--mf1-accent-d); }
 .mf1-temelj .mf1-box-label { color: var(--mf1-c-gp); }
@@ -558,8 +587,9 @@ blockquote em { font-style: normal; }
   padding-left: 0.2rem;
 }
 .mf1-vjezbe-list h3 {
-  margin-top: 1.8rem;
+  margin-top: 2.3rem;
   margin-bottom: 0.6rem;
+  color: var(--mf1-ink);
 }
 
 /* Koraci rješenja nisu dodatna razina numeracije poglavlja. */
@@ -578,6 +608,7 @@ h3.mf1-step {
   font-size: 0.75rem;
   font-weight: 400;
   color: var(--mf1-muted);
+  font-family: var(--mf1-sans);
 }
 
 /* Pripremni blokovi i samoprovjera nisu dio linearnog glavnog izlaganja.
@@ -730,8 +761,9 @@ h3.mf1-step {
   padding: 0 0 1.6rem;
   margin: 0 0 2.2rem;
 }
-.mf1-home-title {
-  font-size: 2.7rem;
+h1.mf1-home-title {
+  font-family: var(--mf1-serif);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
   font-weight: 600;
   letter-spacing: -0.018em;
   margin: 0.5rem 0 0.7rem;
@@ -743,42 +775,59 @@ h3.mf1-step {
   margin: 0.5rem 0 0.7rem;
 }
 .mf1-hero p {
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   color: var(--mf1-soft-ink);
   max-width: 58ch;
-  font-style: italic;
+  font-style: normal;
   margin: 0;
+}
+.mf1-hero p:first-child {
+  font-family: var(--mf1-sans);
+  font-size: 1.13rem;
+  font-weight: 500;
+  color: var(--mf1-ink);
+  margin: 1.2rem 0 0.8rem;
+}
+.mf1-eyebrow {
+  font-family: var(--mf1-sans);
+  color: var(--mf1-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.025em;
+  margin: 0.4rem 0 1.1rem;
 }
 
 .mf1-section-title {
   font-family: var(--mf1-sans);
-  font-size: 0.72rem;
-  font-weight: 800;
+  font-size: 0.78rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   color: var(--mf1-faint);
   margin: 2.4rem 0 1rem !important;
-  padding-bottom: 0.5rem;
+  padding: 0 0 0.5rem;
+  border-top: 0;
   border-bottom: 1px solid var(--mf1-line);
 }
 
 .mf1-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
   margin: 0 0 1.5rem;
-  border-top: 1px solid var(--mf1-line-soft);
+  border-top: 0;
 }
+.mf1-grid > .mf1-card:only-child { grid-column: 1 / -1; }
 
 a.mf1-card,
 .mf1-card {
-  display: block;
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  column-gap: 0.7rem;
   background: transparent !important;
   border: 0 !important;
   border-bottom: 1px solid var(--mf1-line-soft) !important;
-  border-right: 1px solid var(--mf1-line-soft) !important;
   border-radius: 0 !important;
-  padding: 0.9rem 1.1rem 1rem;
+  padding: 1.15rem 0.25rem;
   margin: 0;
   box-shadow: none !important;
   transition: background 0.15s, color 0.15s;
@@ -786,30 +835,29 @@ a.mf1-card,
   color: inherit !important;
 }
 a.mf1-card:hover {
-  background: var(--mf1-accent-l);
+  background: var(--mf1-accent-l) !important;
 }
 a.mf1-card:hover .mf1-card-title { color: var(--mf1-accent-d); }
-
-/* Skraćuj posljednji desni rub u svakom redu — tehnički teško kroz CSS bez JS,
-   pa ostavljamo lagani borders koje grid prirodno trči */
 
 a.mf1-card .mf1-card-code,
 .mf1-card .mf1-card-code {
   display: block;
   font-family: var(--mf1-sans);
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--mf1-faint);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--mf1-accent-d);
   text-transform: uppercase;
-  margin-bottom: 0.6rem;
-  line-height: 1;
+  margin: 0.17rem 0 0;
+  line-height: 1.4;
+  grid-row: 1 / 3;
+  font-variant-numeric: tabular-nums;
 }
 a.mf1-card .mf1-card-title,
 .mf1-card .mf1-card-title {
   display: block;
-  font-family: var(--mf1-serif);
-  font-size: 1.08rem;
+  font-family: var(--mf1-sans);
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--mf1-ink);
   line-height: 1.3;
@@ -824,7 +872,7 @@ a.mf1-card .mf1-card-hint,
   color: var(--mf1-muted);
   line-height: 1.45;
   margin: 0;
-  font-style: italic;
+  font-style: normal;
 }
 
 /* =================================================================
@@ -920,16 +968,24 @@ a.mf1-card .mf1-card-hint,
   font-weight: 800;
 }
 
+/* Dodatak C: pogreška i pripadna provjera čitaju se kao par. */
+.mf1-error-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 0.7rem 0 2rem; }
+.mf1-error-column { min-width: 0; }
+.mf1-error-column > p:first-child { font-family: var(--mf1-sans); font-size: 0.8rem; margin-bottom: 0.6rem; }
+.mf1-error-column > p:first-child strong { color: var(--mf1-muted); }
+.mf1-error-column p { font-size: 0.95rem; }
+
 /* Ispisne tipke */
 .mf1-print-toolbar {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.6rem;
   margin: 1rem 0 1.5rem;
 }
 .mf1-print-button {
   display: inline-block;
   padding: 0.5rem 0.9rem;
-  border-radius: 0;
+  border-radius: 4px;
   background: transparent;
   color: var(--mf1-ink) !important;
   text-decoration: none !important;
@@ -940,6 +996,21 @@ a.mf1-card .mf1-card-hint,
 }
 .mf1-print-button.secondary { color: var(--mf1-accent-d) !important; }
 .mf1-print-button:hover { background: var(--mf1-accent-l); }
+.mf1-print-button.primary { background: var(--mf1-ink); color: white !important; border-color: var(--mf1-ink) !important; }
+.mf1-print-button.primary:hover { background: var(--mf1-soft-ink); }
+.mf1-quick-links, .mf1-chapter-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.3rem;
+  font-family: var(--mf1-sans);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+.mf1-quick-links { margin: 0 0 2.5rem; }
+.mf1-chapter-tools { margin: 0 0 1.7rem; padding: 0 0 1rem; border-bottom: 1px solid var(--mf1-line); }
+.mf1-quick-links a, .mf1-chapter-tools a { padding: 0.15rem 0; }
+.mf1-figure-link { display: block; border: 0; cursor: zoom-in; }
+.mf1-figure-expand { display: inline-block; font-size: 0.74rem; margin-left: 0.75rem; white-space: nowrap; }
 
 .page-break {
   break-after: page;
@@ -971,7 +1042,7 @@ a.mf1-card .mf1-card-hint,
   h3 { font-size: 1.08rem; }
 
   .mf1-hero h1 { font-size: 2.1rem; }
-  .mf1-home-title { font-size: 2.1rem; }
+  h1.mf1-home-title { font-size: 2.4rem; }
 
   main, .quarto-container, .page-columns, .page-layout-article,
   #quarto-content, .content {
@@ -1008,8 +1079,9 @@ a.mf1-card .mf1-card-hint,
 
   .mf1-grid {
     grid-template-columns: 1fr;
-    border-top: 1px solid var(--mf1-line);
+    border-top: 0;
   }
+  .mf1-error-pair { grid-template-columns: 1fr; gap: 0.5rem; }
   a.mf1-card, .mf1-card {
     border-right: 0 !important;
   }
@@ -1037,6 +1109,11 @@ a.mf1-card .mf1-card-hint,
 @media print {
   body { background: white; font-size: 11pt; }
   .no-print, .sidebar, #quarto-sidebar, .navbar, .page-navigation { display: none !important; }
+  .mf1-chapter-tools, .mf1-quick-links, .mf1-figure-expand, #quarto-margin-sidebar { display: none !important; }
+  .mf1-table-scroll { overflow: visible; }
+  .mf1-table-scroll .mf1-reference-table { min-width: 0; }
+  .mf1-table-hint { display: none; }
+  .mf1-error-pair { display: block; }
 
   /* Naputci i kontrolni rezultati uz zadatak pripadaju interaktivnom izdanju.
      Tiskani ih dodatak D06 okuplja odvojeno od teksta zadatka. */

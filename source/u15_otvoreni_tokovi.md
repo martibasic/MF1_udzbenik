@@ -7,7 +7,7 @@ U punoj cijevi geometrija presjeka zadaje cijelu granicu toka. U otvorenom kanal
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Otvoreni tokovi pojavljuju se u urbanim odvodnim kanalima, preljevima brana, navodnjavanju, brodograđevnim ispitnim bazenima, palubnoj odvodnji i tankim filmovima procesnih postrojenja. Klimatski otpornom gradu nije dovoljan samo „projektni protok”: treba znati može li poremećaj putovati uzvodno, gdje nastaje kritični presjek i koliko energije disipira hidraulički skok.
+Otvoreni tokovi pojavljuju se u odvodnim kanalima, preljevima brana, navodnjavanju i ispitnim bazenima. Uz kapacitet kanala treba odrediti smjer širenja poremećaja, položaj kritičnog presjeka i gubitak energije u hidrauličkom skoku.
 :::
 
 **Procijenjeno vrijeme rada uz udžbenik:** 9 sati.

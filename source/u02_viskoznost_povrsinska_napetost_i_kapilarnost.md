@@ -1,4 +1,4 @@
-![Pregled poglavlja pog. 2: Viskoznost, površinska napetost i kapilarnost](../assets/print/u02_fig_uvod_pregled.svg){#fig-uvod-u02 fig-align="center" fig-alt="Pregled poglavlja pog. 2: Viskoznost, površinska napetost i kapilarnost"}
+![Pregled poglavlja: Viskoznost, površinska napetost i kapilarnost](../assets/print/u02_fig_uvod_pregled.svg){#fig-uvod-u02 fig-align="center" fig-alt="Pregled poglavlja: Viskoznost, površinska napetost i kapilarnost"}
 
 ## Viskoznost i međupovršinske pojave
 

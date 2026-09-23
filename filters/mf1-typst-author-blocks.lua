@@ -45,6 +45,8 @@ local minor_heading_labels = {
   ["Ishodi učenja"] = true,
   ["Sažeta provjera prije računa"] = true,
   ["Najčešća pogreška"] = true,
+  ["Česta pogreška"] = true,
+  ["Što provjeriti"] = true,
   ["Nakon ovoga poglavlja mora biti moguće"] = true,
   ["U tehnici to znači"] = true,
   ["Granica modela"] = true,
@@ -236,7 +238,7 @@ local function configure_document(doc)
   -- orange-book's numbering (which otherwise doubles numbers and counters).
   doc.blocks:insert(1, pandoc.RawBlock(
     "typst",
-    [[#set par(first-line-indent: 0pt, spacing: 0.72em)
+    [[#show: mf1-reading
 #show math.equation: it => {
   set math.equation(numbering: none)
   it
@@ -245,7 +247,16 @@ local function configure_document(doc)
   return doc
 end
 
+local function render_math(expression)
+  -- Pandoc bundled with Quarto 1.9.37 writes TeX's negative thin space (\!)
+  -- as #h(-1em), which can reorder or overlap adjacent symbols. Keep Typst's
+  -- normal math spacing instead; the canonical expression stays unchanged.
+  expression.text = expression.text:gsub("\\!", "")
+  return expression
+end
+
 return {
+  { Math = render_math },
   { Span = render_span },
   { Header = render_step_heading },
   { Para = render_minor_heading },

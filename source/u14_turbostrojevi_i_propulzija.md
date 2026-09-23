@@ -7,7 +7,7 @@ Analiza turbostrojeva i propulzijskih sustava temelji se na promjeni količine g
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Pokretne lopatice i potisak nisu školski dodatak, nego jezgra rada Peltonova kola, vodomlaznog pogona, mlaznih čistača i svake ispitne glave koja skreće mlaz radi sile ili momenta. U strojarstvu i brodogradnji isti račun odlučuje koliko snage rotor stvarno prima, koliki potisak ostaje na nosaču i kako izbor izlaznog kuta mijenja korisni učinak stroja.
+Na Peltonovu kolu, vodomlaznom pogonu i mlaznici koja skreće tok isti zakoni povezuju silu, moment i snagu. Račun pokazuje koliko snage rotor prima, koliki je potisak i kako izlazni kut mijenja korisni učinak.
 :::
 
 **Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
@@ -358,9 +358,9 @@ Međurezultati u prikazu zaokruženi su radi čitljivosti. Završne sile, moment
 
 **Traženo**
 
-1. Odredite maseni protok vode kroz sapnicu.
-2. Odredite horizontalne komponente sile koju fluid vrši na vodilicu.
-3. Odredite iznos i smjer reakcije koju mora preuzeti nosač vodilice.
+1. Odredi maseni protok vode kroz sapnicu.
+2. Odredi horizontalne komponente sile koju fluid vrši na vodilicu.
+3. Odredi iznos i smjer reakcije koju mora preuzeti nosač vodilice.
 
 ![vodilica mlaza na ispitnom stolu](../assets/print/u12_val1_vodilica_mlaza.svg){#fig-u12-vodilica-mlaza-na-ispitnom-stolu fig-alt="vodilica mlaza na ispitnom stolu"}
 

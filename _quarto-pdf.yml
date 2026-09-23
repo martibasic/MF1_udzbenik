@@ -78,9 +78,9 @@ format:
     section-numbering: "1.1"
     papersize: a4
     margin:
-      x: 22mm
-      y: 20mm
-    fontsize: 10.5pt
+      x: 26mm
+      y: 22mm
+    fontsize: 11pt
     linestretch: 1.08
     colorlinks: true
     linkcolor: "#8e4519"
@@ -89,6 +89,9 @@ format:
     theorem-appearance: simple
     include-in-header:
       - assets/typst/mf1-author-blocks.typ
+      - assets/typst/mf1-reading.typ
+    template-partials:
+      - assets/typst/typst-show.typ
     keep-typ: false
 
 execute:

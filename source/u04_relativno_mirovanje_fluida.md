@@ -1,4 +1,4 @@
-![Pregled poglavlja pog. 4: Relativno mirovanje fluida](../assets/print/u04_fig_uvod_pregled.svg){#fig-uvod-u04 fig-align="center" fig-alt="Pregled poglavlja pog. 4: Relativno mirovanje fluida"}
+![Pregled poglavlja: Relativno mirovanje fluida](../assets/print/u04_fig_uvod_pregled.svg){#fig-uvod-u04 fig-align="center" fig-alt="Pregled poglavlja: Relativno mirovanje fluida"}
 
 ## Relativno mirovanje fluida
 
@@ -805,7 +805,13 @@ Referentne dubine: $h_{str}\approx0{,}45291$ m, $h_{pred}\approx0{,}14709$ m. Ni
 
 ### Z6. Rotirajući spremnik i prelijevanje {#task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen .unnumbered .unlisted}
 
-Otvoreni cilindrični spremnik polumjera $R = 0{,}32\ \text{m}$ i visine $H = 0{,}62\ \text{m}$ ispunjen je vodom do početne srednje visine $h_0 = 0{,}46\ \text{m}$. Odredi najveću kutnu brzinu pri kojoj još nema prelijevanja. Zatim za radni režim $\omega = 0{,}80\,\omega_{max}$ odredi dubinu vode u osi i uz stijenu te manometarske tlakove na dnu u tim dvjema točkama. Za ovu geometrijsku provjeru središnji je usis zatvoren, pa nema protoka. Pretvarač frekvencije može stvarnu brzinu vrtnje povisiti do $5\ \%$ iznad zadane, a zahtijevana dubina iznad usisa u osi u ustaljenom stanju iznosi najmanje $0{,}350\ \text{m}$. Tih 5 % zadana je gornja granica odstupanja brzine, ne standardna nesigurnost. Provjeri zadani režim u nepovoljnoj toleranciji, odredi najveći dopušteni zadani omjer $\alpha=\omega_{zad}/\omega_{max}$ i preporuči radnu postavku za taj model. Zaključak ne proširuj na usis tijekom protoka ili prijelaznog zavrtavanja.
+Otvoreni cilindrični spremnik polumjera $R = 0{,}32\ \text{m}$ i visine $H = 0{,}62\ \text{m}$ ispunjen je vodom do početne srednje visine $h_0 = 0{,}46\ \text{m}$. Odredi najveću kutnu brzinu pri kojoj još nema prelijevanja.
+
+Zatim za radni režim $\omega = 0{,}80\,\omega_{max}$ odredi dubinu vode u osi i uz stijenu te manometarske tlakove na dnu u tim dvjema točkama. Za ovu geometrijsku provjeru središnji je usis zatvoren, pa nema protoka.
+
+Pretvarač frekvencije može stvarnu brzinu vrtnje povisiti do $5\ \%$ iznad zadane, a zahtijevana dubina iznad usisa u osi u ustaljenom stanju iznosi najmanje $0{,}350\ \text{m}$. Tih 5 % zadana je gornja granica odstupanja brzine, ne standardna nesigurnost.
+
+Provjeri zadani režim u nepovoljnoj toleranciji, odredi najveći dopušteni zadani omjer $\alpha=\omega_{zad}/\omega_{max}$ i preporuči radnu postavku za taj model. Zaključak ne proširuj na usis tijekom protoka ili prijelaznog zavrtavanja.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}

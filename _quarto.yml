@@ -123,12 +123,19 @@ format:
     theme: flatly
     css: custom.css
     include-after-body: includes/html-accessibility.html
-    toc: false
+    toc: true
+    toc-depth: 2
+    toc-title: "Na ovoj stranici"
+    grid:
+      sidebar-width: 240px
+      body-width: 800px
+      margin-width: 180px
+      gutter-width: 1.5rem
     number-sections: true
     code-fold: false
     anchor-sections: true
-    link-external-icon: true
-    link-external-newwindow: true
+    link-external-icon: false
+    link-external-newwindow: false
     fig-responsive: true
 
 editor: visual

@@ -2,7 +2,7 @@
 
 ## Fluid kao kontinuum
 
-Mehanika fluida polazi od pojma fluida, kontinuumskog modela te veličina kojima se fluid opisuje. Gustoća, tlak i Pascalov zakon čine osnovu za analizu hidrostatskih i strujnih pojava te za proračun hidrauličnih sustava.
+Za opis fluida najprije treba odabrati model i definirati veličine koje mjerimo. Ovo poglavlje uvodi kontinuum, gustoću i tlak te Pascalov zakon primjenjuje na prijenos sile u hidrauličnim sustavima.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -829,7 +829,11 @@ $p=2{,}00\ \text{MPa}$. Za promjere 8, 9 i 10 mm parovi $(F_p,s_p)$ jesu pribli�
 
 ### Z6. Nosivost stola uz nesigurnu učinkovitost {#task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra .unnumbered .unlisted}
 
-Hidraulični radni stol podupiru tri jednaka cilindra, svaki površine $A_L = 95\ \text{cm}^2$. Ulje dovodi pumpni klip promjera $d = 22\ \text{mm}$ na koji djeluje sila $F_p = 360\ \text{N}$. Odredi tlak u ulju, ukupno idealno opterećenje koje stol može nositi i ukupan idealni hod pumpnog klipa potreban da se stol podigne za $\Delta z = 18\ \text{mm}$. U pojednostavljenom modelu uzmi da su zadani faktor prijenosa sile $\eta_F=0{,}86\pm0{,}04$ i volumetrijska učinkovitost $\eta_V=0{,}90\pm0{,}03$. Zapis ± označuje zajamčene granične intervale, a ne standardnu mjernu nesigurnost; svaka kombinacija dopuštenih vrijednosti smatra se mogućom. Faktor prijenosa sile jest omjer korisnog i idealnog opterećenja, a volumetrijska učinkovitost omjer volumena koji dolazi u radne cilindre i volumena istisnutog pumpom. Cilindri jednoliko nose ukupno opterećenje i mehanički su vođeni tako da imaju isti pomak. Stol mora nositi najmanje $22{,}0\ \text{kN}$, a raspoloživi zbroj tlačnih hodova pumpe iznosi $1{,}60\ \text{m}$. Povratni potezi ne ulaze u zbroj. Opterećenje uključuje težinu pomičnog stola i tereta; nema zasebnog dodatka za njihovu težinu. Izračunaj nominalno i konzervativno korisno opterećenje i potreban hod te obrazloži zadovoljava li sustav oba zahtjeva u cijelom zadanom rasponu učinkovitosti.
+Hidraulični radni stol podupiru tri jednaka cilindra, svaki površine $A_L = 95\ \text{cm}^2$. Ulje dovodi pumpni klip promjera $d = 22\ \text{mm}$ na koji djeluje sila $F_p = 360\ \text{N}$. Odredi tlak u ulju, ukupno idealno opterećenje koje stol može nositi i ukupan idealni hod pumpnog klipa potreban da se stol podigne za $\Delta z = 18\ \text{mm}$.
+
+U pojednostavljenom modelu uzmi da su zadani faktor prijenosa sile $\eta_F=0{,}86\pm0{,}04$ i volumetrijska učinkovitost $\eta_V=0{,}90\pm0{,}03$. Zapis ± označuje zajamčene granične intervale, a ne standardnu mjernu nesigurnost; svaka kombinacija dopuštenih vrijednosti smatra se mogućom. Faktor prijenosa sile jest omjer korisnog i idealnog opterećenja, a volumetrijska učinkovitost omjer volumena koji dolazi u radne cilindre i volumena istisnutog pumpom. Cilindri jednoliko nose ukupno opterećenje i mehanički su vođeni tako da imaju isti pomak.
+
+Stol mora nositi najmanje $22{,}0\ \text{kN}$, a raspoloživi zbroj tlačnih hodova pumpe iznosi $1{,}60\ \text{m}$. Povratni potezi ne ulaze u zbroj. Opterećenje uključuje težinu pomičnog stola i tereta; nema zasebnog dodatka za njihovu težinu. Izračunaj nominalno i konzervativno korisno opterećenje i potreban hod te obrazloži zadovoljava li sustav oba zahtjeva u cijelom zadanom rasponu učinkovitosti.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}

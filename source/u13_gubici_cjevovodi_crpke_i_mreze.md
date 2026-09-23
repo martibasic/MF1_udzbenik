@@ -2,12 +2,12 @@
 
 ## Gubitci, cjevovodi, crpke i mreže {#sec-cjevovodi-motivacija}
 
-Cjevovod nije popis formula za cijevi, koljena i ventile. To je sustav kroz koji se prenose masa i mehanička energija. Kontinuitet određuje kako se protok dijeli, energijska bilanca govori koliko je visine potrebno, a konstitutivni i empirijski modeli određuju koliko se te visine nepovratno disipira. Crpka pritom ne nameće proizvoljan protok: stvarni se režim uspostavlja ondje gdje se podudaraju mogućnosti crpke i zahtjev sustava.
+U cjevovodnom sustavu kontinuitet određuje raspodjelu protoka, a energijska bilanca povezuje visinsku razliku, rad crpke i gubitke. Radna točka nastaje ondje gdje crpka daje upravo onu energijsku visinu koju sustav zahtijeva pri tom protoku.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Isti graf modela opisuje balastni vod broda, rashladni krug podatkovnog centra, protupožarnu mrežu, sustav centralnog grijanja i tlačni vod vodnoga grada. Razlikuju se fluid, geometrija i kriterij odluke; bilance ostaju iste. U modernom projektu račun se ne završava promjerom cijevi: provjeravaju se radna točka, godišnja električna energija, osjetljivost na hrapavost i usisno ograničenje crpke.
+Iste bilance opisuju balastni vod broda, rashladni krug, protupožarnu mrežu i sustav grijanja. Uz protok i promjer cijevi provjeravamo radnu točku, godišnju potrošnju električne energije, osjetljivost na hrapavost i usisne uvjete crpke.
 :::
 
 **Procijenjeno vrijeme rada uz udžbenik:** 12 sati.

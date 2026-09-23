@@ -1,17 +1,17 @@
 ## Mehanika fluida i numerika — pregled
 
-Ovaj dodatak nije samostalan uvod u računalnu dinamiku fluida. On služi kao **mostovni pregled**: sažima numeričke pojmove iz poglavlja 1–15 i uvodi minimalni jezik kojim se rezultat simulacije provjerava prije inženjerske uporabe.
+Ovaj dodatak povezuje numeričke pojmove iz poglavlja 1–15 i pokazuje kako provjeriti rezultat simulacije prije inženjerske uporabe.
 
-Cilj nije osposobiti čitatelja za pokretanje CFD simulacije, nego pokazati gdje jednadžbe MF1 ulaze u numerički model i zašto slika obojenog polja još nije dokaz točnosti.
+Naglasak je na vezi između fizikalne jednadžbe, numeričkog modela i provjere rezultata. Za samostalno postavljanje CFD simulacija potrebno je dodatno gradivo.
 
 ::: {.callout-tip icon="false"}
-## Što se ovdje neće dogoditi
+## Opseg dodatka {#što-se-ovdje-neće-dogoditi}
 
-- **Neće biti izvoda diskretizacijskih shema** — nema formula po ćelijama ni rješavanja linearnih sustava.
-- **Neće biti koda** — nema OpenFOAM kontrolnih datoteka ni Python skripti.
-- **Bit će osnovne provjere rezultata** — bilanca mase, iteracijska konvergencija, usporedba mreža te razlika između verifikacije i validacije.
+- **Očuvanje:** provjera bilance mase i drugih relevantnih veličina.
+- **Konvergencija:** praćenje iteracija i usporedba rezultata na različitim mrežama.
+- **Vjerodostojnost:** razlikovanje verifikacije numeričkog postupka i validacije fizikalnog modela.
 
-To je gradivo posebnih kolegija.
+Izvodi diskretizacijskih shema, rješavanje linearnih sustava i programske upute pripadaju posebnim kolegijima.
 :::
 
 ## Pojmovnik numeričkih metoda
