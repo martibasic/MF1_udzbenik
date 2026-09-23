@@ -555,16 +555,23 @@ Pravila:
 
 #### Menisk (kapilarnost)
 
-Konkavni menisk crta se Bezier krivuljom:
+U SVG koordinatama y raste prema dolje. Za tekućinu ispod sučelja konkavni
+menisk ima sredinu niže od krajeva: za ilustrativnu kvadratnu Bézierovu
+krivulju s krajevima na istoj visini kontrolna točka mora biti **ispod**
+krajeva (veći y). Konveksni menisk ima sredinu više i kontrolnu točku iznad.
 
 ```xml
-<path d="M x1,y1 Q xc,yc_gore x2,y2" fill="none" stroke="#1565c0" stroke-width="2.2"/>
+<path d="M x1,y1 Q xc,yc_dolje x2,y1" fill="none" stroke="#1565c0" stroke-width="2.2"/>
 ```
 
-gdje je `yc_gore` kontrolna točka **iznad** y1 i y2 (dižući sredinu prema gore za konkavni menisk).  
-Konveksni menisk: kontrolna točka **ispod** (spuštajuća sredina).
-
-Kut θ crta se lukom `<path d="M ... A r,r 0 0 0 ..." stroke="#8e44ad"/>` s tekstom `θ` u istoj boji.
+Ako je kontaktni kut zadan brojem, sam oblik slova U nije dovoljan. Koristi
+kružni luk ili krivulju sa stvarno provjerenim tangentama na dodiru sa
+stijenkom. Kut θ mjeri se **kroz tekućinu**, između stijenke i tangente
+međupovršine; luk i oznaku po potrebi prikaži u povećanom detalju.
+Vektori površinske sile na tekućinu dodiruju kontaktnu liniju i slijede
+tangente prema stijenci. Kapilara mora imati stvarno otvoren, uronjen ulaz;
+ne prekrivaj stijenke fluidnom zakrpom. Formirana izlazna kapljica i puna
+kapilara čine neprekinut fluid, bez dodatnog unutarnjeg meniskusa.
 
 #### Slobodna površina (nagnuta, ubrzanje)
 

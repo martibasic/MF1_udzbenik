@@ -161,6 +161,8 @@
         "U02.CH1.dp",
         "U02.CH1.p_in_Pa",
         "U02.CH1.p_M_min",
+        "U02.CH1.p_start",
+        "U02.CH1.drop_head_scale",
         "U02.Z1.dvdy",
         "U02.Z1.tau",
         "U02.Z1.F",
@@ -198,12 +200,17 @@
         "U02.Z6.p_min_kPa",
         "U02.Z6.p_max_kPa",
         "U02.Z6.reserve_Pa",
+        "U02.Z6.drop_head_scale",
         "U02.lezaj_temp.v",
         "U02.lezaj_temp.tau_c",
         "U02.lezaj_temp.tau_h",
         "U02.lezaj_temp.P_c",
         "U02.lezaj_temp.P_h",
         "U02.lezaj_temp.ratio",
+        "U02.lezaj_temp.F_c",
+        "U02.lezaj_temp.F_h",
+        "U02.lezaj_temp.M_c",
+        "U02.lezaj_temp.M_h",
         "U02.lab_chip.h_cm",
         "U02.lab_chip.dp_kPa",
         "U02.lab_chip.h_hydrophobic"
@@ -3999,7 +4006,7 @@
       "level": "T1",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 742,
+        "line": 747,
         "anchor": "#task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se"
       },
       "statement": {
@@ -4074,21 +4081,21 @@
             "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           }
         ],
@@ -4101,7 +4108,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 754
+          "line": 759
         }
       },
       "tolerance": {
@@ -4109,24 +4116,24 @@
         "contracts": [
           {
             "result_id": "U02.Z1.dvdy",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0.5,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U02.Z1.tau",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0.5,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U02.Z1.F",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0.5,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
@@ -4158,14 +4165,14 @@
             "target_kind": "literal",
             "unit": "1/s",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0.5,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 201
+              "line": 214
             }
           },
           {
@@ -4175,14 +4182,14 @@
             "target_kind": "literal",
             "unit": "Pa",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0.5,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 202
+              "line": 215
             }
           },
           {
@@ -4192,14 +4199,14 @@
             "target_kind": "literal",
             "unit": "N",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0.5,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 203
+              "line": 216
             }
           },
           {
@@ -4210,7 +4217,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 204
+              "line": 217
             }
           }
         ]
@@ -4223,7 +4230,7 @@
       "level": "T1",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 764,
+        "line": 769,
         "anchor": "#task-kapljica-i-sapunasti-mjehur"
       },
       "statement": {
@@ -4270,14 +4277,14 @@
             "text": "Za obje idealizirane tvorevine uzmi površinsku napetost $\\sigma = 0{,}030\\ \\text{N/m}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 764
+              "line": 769
             }
           },
           {
             "text": "Zanemari deformaciju zbog težine i debljinu filma.",
             "provenance": {
               "kind": "task_statement",
-              "line": 764
+              "line": 769
             }
           }
         ],
@@ -4287,21 +4294,21 @@
             "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           }
         ],
@@ -4314,7 +4321,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 778
+          "line": 783
         }
       },
       "tolerance": {
@@ -4323,21 +4330,21 @@
           {
             "result_id": "U02.Z2.dp_drop",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z2.dp_bubble",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z2.ratio",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           }
@@ -4372,13 +4379,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 208
+              "line": 221
             }
           },
           {
@@ -4389,13 +4396,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 209
+              "line": 222
             }
           },
           {
@@ -4406,13 +4413,13 @@
             "unit": "1",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 210
+              "line": 223
             }
           },
           {
@@ -4423,7 +4430,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 212
+              "line": 225
             }
           }
         ]
@@ -4436,7 +4443,7 @@
       "level": "T2",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 787,
+        "line": 792,
         "anchor": "#task-ploca-izmedu-dva-procjepa"
       },
       "statement": {
@@ -4525,7 +4532,7 @@
             "text": "Što bi se dogodilo s doprinosom donje strane kad bi donji procjep postao vrlo velik uz ostale pretpostavke modela?",
             "provenance": {
               "kind": "task_statement",
-              "line": 787
+              "line": 792
             }
           }
         ],
@@ -4535,21 +4542,21 @@
             "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           }
         ],
@@ -4562,7 +4569,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 801
+          "line": 806
         }
       },
       "tolerance": {
@@ -4571,42 +4578,42 @@
           {
             "result_id": "U02.Z3.tau_1",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z3.tau_2",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z3.F_1",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z3.F_2",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z3.F",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z3.F_wrong",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           }
@@ -4650,13 +4657,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 218
+              "line": 231
             }
           },
           {
@@ -4667,13 +4674,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 219
+              "line": 232
             }
           },
           {
@@ -4684,13 +4691,13 @@
             "unit": "N",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 220
+              "line": 233
             }
           },
           {
@@ -4701,13 +4708,13 @@
             "unit": "N",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 221
+              "line": 234
             }
           },
           {
@@ -4718,13 +4725,13 @@
             "unit": "N",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 222
+              "line": 235
             }
           },
           {
@@ -4735,13 +4742,13 @@
             "unit": "N",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 223
+              "line": 236
             }
           },
           {
@@ -4752,7 +4759,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 225
+              "line": 238
             }
           },
           {
@@ -4763,7 +4770,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 228
+              "line": 241
             }
           },
           {
@@ -4774,7 +4781,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 230
+              "line": 243
             }
           }
         ]
@@ -4787,7 +4794,7 @@
       "level": "T2",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 808,
+        "line": 813,
         "anchor": "#task-u02-kapilara-promjera-uronjena-je-u-etanol-za"
       },
       "statement": {
@@ -4875,21 +4882,21 @@
             "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           }
         ],
@@ -4902,7 +4909,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 820
+          "line": 825
         }
       },
       "tolerance": {
@@ -4910,17 +4917,17 @@
         "contracts": [
           {
             "result_id": "U02.Z4.h1_mm",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0.05,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U02.Z4.h2_mm",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0.05,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
@@ -4951,14 +4958,14 @@
             "target_kind": "literal",
             "unit": "mm",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0.05,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 234
+              "line": 247
             }
           },
           {
@@ -4968,14 +4975,14 @@
             "target_kind": "literal",
             "unit": "mm",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0.05,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 235
+              "line": 248
             }
           },
           {
@@ -4986,7 +4993,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 236
+              "line": 249
             }
           }
         ]
@@ -4999,7 +5006,7 @@
       "level": "T3",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 830,
+        "line": 835,
         "anchor": "#task-newtonski-model-iz-mjerenja"
       },
       "statement": {
@@ -5059,14 +5066,14 @@
             "text": "Za ovu idealiziranu usporedbu zanemari mjernu nesigurnost, trenje mehanizma, klizanje uz stijenku i rubne učinke.",
             "provenance": {
               "kind": "task_statement",
-              "line": 830
+              "line": 835
             }
           },
           {
             "text": "Smični je profil u svakom stacionarnom pokusu linearan;",
             "provenance": {
               "kind": "task_statement",
-              "line": 830
+              "line": 835
             }
           }
         ],
@@ -5076,21 +5083,21 @@
             "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           }
         ],
@@ -5103,7 +5110,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 850
+          "line": 855
         }
       },
       "tolerance": {
@@ -5112,119 +5119,119 @@
           {
             "result_id": "U02.Z5.gradient_1",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.gradient_2",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.gradient_3",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.tau_a1",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.tau_a2",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.tau_a3",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.tau_b1",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.tau_b2",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.tau_b3",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.mu_a1",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.mu_a2",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.mu_a3",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.mu_b1",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.mu_b2",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.mu_b3",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.F_star",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z5.F_b_wrong",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           }
@@ -5279,13 +5286,13 @@
             "unit": "1/s",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 240
+              "line": 253
             }
           },
           {
@@ -5296,13 +5303,13 @@
             "unit": "1/s",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 241
+              "line": 254
             }
           },
           {
@@ -5313,13 +5320,13 @@
             "unit": "1/s",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 242
+              "line": 255
             }
           },
           {
@@ -5330,13 +5337,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 243
+              "line": 256
             }
           },
           {
@@ -5347,13 +5354,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 244
+              "line": 257
             }
           },
           {
@@ -5364,13 +5371,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 245
+              "line": 258
             }
           },
           {
@@ -5381,13 +5388,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 246
+              "line": 259
             }
           },
           {
@@ -5398,13 +5405,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 247
+              "line": 260
             }
           },
           {
@@ -5415,13 +5422,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 248
+              "line": 261
             }
           },
           {
@@ -5432,13 +5439,13 @@
             "unit": "Pa s",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 249
+              "line": 262
             }
           },
           {
@@ -5449,13 +5456,13 @@
             "unit": "Pa s",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 250
+              "line": 263
             }
           },
           {
@@ -5466,13 +5473,13 @@
             "unit": "Pa s",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 251
+              "line": 264
             }
           },
           {
@@ -5483,13 +5490,13 @@
             "unit": "Pa s",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 252
+              "line": 265
             }
           },
           {
@@ -5500,13 +5507,13 @@
             "unit": "Pa s",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 253
+              "line": 266
             }
           },
           {
@@ -5517,13 +5524,13 @@
             "unit": "Pa s",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 254
+              "line": 267
             }
           },
           {
@@ -5534,13 +5541,13 @@
             "unit": "N",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 255
+              "line": 268
             }
           },
           {
@@ -5551,13 +5558,13 @@
             "unit": "N",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 256
+              "line": 269
             }
           },
           {
@@ -5568,7 +5575,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 257
+              "line": 270
             }
           },
           {
@@ -5579,7 +5586,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 260
+              "line": 273
             }
           },
           {
@@ -5590,7 +5597,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 263
+              "line": 276
             }
           }
         ]
@@ -5603,12 +5610,12 @@
       "level": "T4",
       "source": {
         "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-        "line": 857,
+        "line": 862,
         "anchor": "#task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na"
       },
       "statement": {
-        "markdown": "Kapilarna igla unutarnjeg promjera $d = 0{,}50\\ \\text{mm}$ spojena je na spremnik vode za koju vrijedi $\\sigma = 0{,}072\\ \\text{N/m}$, $\\rho = 998\\ \\text{kg/m}^3$ i $\\theta = 0^\\circ$. Izlaz je na visini $H = 42\\ \\text{mm}$ iznad široke slobodne površine spremnika. Okolni zrak je na atmosferskom tlaku. Promatraju se dva **odvojena** kvazistatička stanja: 1. Igla se puni, a konkavni meniskus još je u cijevi; izlazne kapljice nema. Odredi prirodni kapilarni uspon i najmanji nenegativni manometarski pretlak spremnika potreban da meniskus dosegne izlaz. 2. Igla je potpuno ispunjena vodom, a na izlazu je gotovo sferna kapljica nominalnog promjera $D = 1{,}8\\ \\text{mm}$; u igli više nema zasebnog meniskusa ni zarobljenog zraka. Odredi potreban pretlak spremnika. U ovom modelu uzmi da je tlak neposredno ispod kapljice $4\\sigma/D$ viši od okolnog; zanemari visinsku promjenu tlaka unutar same kapljice. U drugom stanju promjer kapljice može biti bilo gdje od $D_{min}=1{,}6\\ \\text{mm}$ do $D_{max}=2{,}0\\ \\text{mm}$; to su zadane granice, ne standardna nesigurnost. Usporedi regulatore raspona $0$–$0{,}50\\ \\text{kPa}$ i $0$–$0{,}60\\ \\text{kPa}$: koji pokriva zahtjeve obaju zadanih stanja i cijeli raspon promjera? Izračunaj najmanju tlačnu rezervu. Obrazloži zašto se pri formiranoj kapljici ne smije dodatno oduzeti tlak konkavnoga meniskusa. Zanemari gubitke pri protoku; zaključak ograniči na ova dva stanja, bez tvrdnje o tlaku tijekom prijelaznog oblikovanja kapljice.",
-        "sha256": "260b38a8709493db3a7b38f244dd526fb76e82d7f2cd6da6852dd1eaceda1374",
+        "markdown": "Kapilarna igla unutarnjeg promjera $d = 0{,}50\\ \\text{mm}$ spojena je na spremnik vode za koju vrijedi $\\sigma = 0{,}072\\ \\text{N/m}$, $\\rho = 998\\ \\text{kg/m}^3$ i $\\theta = 0^\\circ$. Izlaz je na visini $H = 42\\ \\text{mm}$ iznad široke slobodne površine spremnika. Okolni zrak je na atmosferskom tlaku. Promatraju se dva **odvojena** kvazistatička stanja: 1. Igla se puni, a konkavni meniskus još je u cijevi; izlazne kapljice nema. Odredi prirodni kapilarni uspon i najmanji nenegativni manometarski pretlak spremnika potreban da meniskus dosegne izlaz. 2. Igla je potpuno ispunjena vodom, a na izlazu je gotovo sferna kapljica nominalnog promjera $D = 1{,}8\\ \\text{mm}$; u igli više nema zasebnog meniskusa ni zarobljenog zraka. Kontaktna linija kapljice smatra se zadržanom na rubu izlaza. Odredi potreban pretlak spremnika. U ovom modelu uzmi da je tlak neposredno ispod kapljice $4\\sigma/D$ viši od okolnog; zanemari visinsku promjenu tlaka unutar same kapljice. U drugom stanju promjer kapljice može biti bilo gdje od $D_{min}=1{,}6\\ \\text{mm}$ do $D_{max}=2{,}0\\ \\text{mm}$; to su zadane granice, ne standardna nesigurnost. Usporedi regulatore raspona $0$–$0{,}50\\ \\text{kPa}$ i $0$–$0{,}60\\ \\text{kPa}$: koji pokriva zahtjeve obaju zadanih stanja i cijeli raspon promjera? Izračunaj najmanju tlačnu rezervu. Obrazloži zašto se pri formiranoj kapljici ne smije dodatno oduzeti tlak konkavnoga meniskusa. Zanemari gubitke pri protoku; zaključak ograniči na ova dva stanja, bez tvrdnje o tlaku tijekom prijelaznog oblikovanja kapljice. Dodatno procijeni red veličine zanemarene hidrostatičke promjene kroz kapljicu, $\\rho gD_{max}$. Usporedi ga s najmanjom rezervom i objasni opravdava li idealizirani račun odabir za stvaran uređaj.",
+        "sha256": "418fee46259b2eca71f6a80ca88840e86838549204e27f7632dd7eea89fd2aa0",
         "authoritative": true
       },
       "input_data": {
@@ -5757,28 +5764,42 @@
             "text": "Okolni zrak je na atmosferskom tlaku.",
             "provenance": {
               "kind": "task_statement",
-              "line": 857
+              "line": 862
+            }
+          },
+          {
+            "text": "Kontaktna linija kapljice smatra se zadržanom na rubu izlaza.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 862
             }
           },
           {
             "text": "U ovom modelu uzmi da je tlak neposredno ispod kapljice $4\\sigma/D$ viši od okolnog;",
             "provenance": {
               "kind": "task_statement",
-              "line": 857
+              "line": 862
             }
           },
           {
             "text": "zanemari visinsku promjenu tlaka unutar same kapljice.",
             "provenance": {
               "kind": "task_statement",
-              "line": 857
+              "line": 862
             }
           },
           {
             "text": "Zanemari gubitke pri protoku;",
             "provenance": {
               "kind": "task_statement",
-              "line": 857
+              "line": 862
+            }
+          },
+          {
+            "text": "Dodatno procijeni red veličine zanemarene hidrostatičke promjene kroz kapljicu, $\\rho gD_{max}$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 862
             }
           }
         ],
@@ -5788,21 +5809,21 @@
             "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "U kapilarnim računima uzmi $g=9{,}81\\ \\text{m/s}^2$;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           },
           {
             "text": "svojstva fluida i kontaktni kut smatraju se stalnima u zadanim uvjetima.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 736
+              "line": 741
             }
           }
         ],
@@ -5811,11 +5832,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$h_{cap}\\approx58{,}8\\ \\text{mm}$; $p_{M,1}=0\\ \\text{Pa}$. Nominalno $p_{M,2}\\approx0{,}571\\ \\text{kPa}$; interval je $0{,}555$–$0{,}591\\ \\text{kPa}$, s maksimumom pri $D_{min}$. Raspon do $0{,}50\\ \\text{kPa}$ nije dovoljan; do $0{,}60\\ \\text{kPa}$ pokriva zadana stanja uz najmanju rezervu $8{,}8\\ \\text{Pa}$. Formirana kapljica nema dodatni konkavni meniskus čiji bi tlak smanjio zahtjev. Prijelaz i protočni gubitci nisu provjereni.",
+        "markdown": "$h_{cap}\\approx58{,}8\\ \\mathrm{mm}$; $p_{M,1}=0$. Nominalno $p_{M,2}\\approx0{,}571\\ \\mathrm{kPa}$, raspon $0{,}555$–$0{,}591\\ \\mathrm{kPa}$ (maksimum pri $D_{min}$). Samo regulator do $0{,}60\\ \\mathrm{kPa}$ pokriva model, uz rezervu $8{,}8\\ \\mathrm{Pa}$. Procjena $\\rho gD_{max}\\approx19{,}6\\ \\mathrm{Pa}$ veća je od rezerve: stvarni uređaj treba precizniji model. Nema dodatnog konkavnog meniskusa; prijelaz i protočni gubitci nisu provjereni.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-          "line": 874
+          "line": 879
         }
       },
       "tolerance": {
@@ -5823,45 +5844,52 @@
         "contracts": [
           {
             "result_id": "U02.Z6.h_cap_mm",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0.05,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U02.Z6.p_start",
             "kind": "relative",
-            "value": 0.01,
+            "value": 1e-09,
             "value_kind": "literal",
             "provenance": "verifier_check_default"
           },
           {
             "result_id": "U02.Z6.p_drop_kPa",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U02.Z6.p_min_kPa",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U02.Z6.p_max_kPa",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0.0005,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
           },
           {
             "result_id": "U02.Z6.reserve_Pa",
-            "kind": "relative",
-            "value": 0.01,
+            "kind": "absolute",
+            "value": 0.05,
             "value_kind": "literal",
-            "provenance": "verifier_check_default"
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U02.Z6.drop_head_scale",
+            "kind": "absolute",
+            "value": 0.05,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
@@ -5871,13 +5899,15 @@
           "not z6['low_sufficient'] and z6['high_sufficient']",
           "wider_needle['p_start'] > 0 and abs(wider_needle['p_drop'] - z6['p_drop']) < 1e-12",
           "abs(small_drop['p_drop'] - z6['p_max']) < 1e-12 and abs(large_drop['p_drop'] - z6['p_min']) < 1e-12 and (z6['p_min'] < z6['p_drop'] < z6['p_max'])",
-          "not zadatak_6(regulator_high=580.0)['high_sufficient']"
+          "not zadatak_6(regulator_high=580.0)['high_sufficient']",
+          "z6['model_margin_small'] and z6['drop_head_scale'] > z6['reserve'] and (not zadatak_6(regulator_high=650)['model_margin_small'])"
         ],
         "verifier_result_ids": [
           "U02.Z6.regulator_selection",
           "U02.Z6.separate_interfaces",
           "U02.Z6.diameter_bounds",
-          "U02.Z6.insufficient_range"
+          "U02.Z6.insufficient_range",
+          "U02.Z6.model_limit"
         ],
         "note": "Izvršava se modelska, bilančna, granična ili dimenzijska tvrdnja bez izmišljanja ciljnoga broja."
       },
@@ -5895,7 +5925,9 @@
           "U02.Z6.regulator_selection",
           "U02.Z6.separate_interfaces",
           "U02.Z6.diameter_bounds",
-          "U02.Z6.insufficient_range"
+          "U02.Z6.insufficient_range",
+          "U02.Z6.drop_head_scale",
+          "U02.Z6.model_limit"
         ],
         "result_contracts": [
           {
@@ -5905,14 +5937,14 @@
             "target_kind": "literal",
             "unit": "mm",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0.05,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 267
+              "line": 280
             }
           },
           {
@@ -5923,13 +5955,13 @@
             "unit": "Pa",
             "tolerance": {
               "kind": "relative",
-              "value": 0.01,
+              "value": 1e-09,
               "value_kind": "literal",
               "provenance": "verifier_check_default"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 268
+              "line": 281
             }
           },
           {
@@ -5939,14 +5971,14 @@
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 269
+              "line": 282
             }
           },
           {
@@ -5956,14 +5988,14 @@
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 270
+              "line": 283
             }
           },
           {
@@ -5973,14 +6005,14 @@
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0.0005,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 271
+              "line": 284
             }
           },
           {
@@ -5990,14 +6022,14 @@
             "target_kind": "literal",
             "unit": "Pa",
             "tolerance": {
-              "kind": "relative",
-              "value": 0.01,
+              "kind": "absolute",
+              "value": 0.05,
               "value_kind": "literal",
-              "provenance": "verifier_check_default"
+              "provenance": "verifier_call_keyword"
             },
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 272
+              "line": 285
             }
           },
           {
@@ -6008,7 +6040,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 273
+              "line": 286
             }
           },
           {
@@ -6019,7 +6051,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 276
+              "line": 289
             }
           },
           {
@@ -6030,7 +6062,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 280
+              "line": 293
             }
           },
           {
@@ -6041,7 +6073,35 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u02.py",
-              "line": 285
+              "line": 298
+            }
+          },
+          {
+            "result_id": "U02.Z6.drop_head_scale",
+            "verification": "golden",
+            "target": 19.6,
+            "target_kind": "literal",
+            "unit": "Pa",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.05,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 303
+            }
+          },
+          {
+            "result_id": "U02.Z6.model_limit",
+            "verification": "invariant",
+            "criterion_expression": "z6['model_margin_small'] and z6['drop_head_scale'] > z6['reserve'] and (not zadatak_6(regulator_high=650)['model_margin_small'])",
+            "failure_message": "Rezerva idealiziranog modela manja je od skale zanemarene gravitacije kapljice.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u02.py",
+              "line": 304
             }
           }
         ]

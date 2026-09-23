@@ -3,22 +3,16 @@ from __future__ import annotations
 
 import math
 
-TOL = 0.01
+TOL = 1e-9
 
 
-def _close(value: float, target: float, rel: float = TOL) -> bool:
-    if target == 0:
-        return abs(value) < rel
-    return abs(value - target) / abs(target) <= rel
-
-
-def _check(out: list, rid: str, value: float, target: float, unit: str = "", rel: float = TOL):
-    ok = _close(value, target, rel)
-    out.append({
-        "id": rid,
-        "status": "OK" if ok else "FAIL",
-        "details": "" if ok else f"{value:.4g} vs {target:.4g} {unit}".strip(),
-    })
+def _check(out: list, rid: str, value: float, target: float, unit: str = "",
+           rel: float = TOL, abs_tol: float = 0.0):
+    tolerance = max(abs_tol, rel * abs(target))
+    roundoff = 8 * math.ulp(max(abs(value), abs(target), 1.0))
+    ok = abs(value - target) <= tolerance + roundoff
+    out.append({"id": rid, "status": "OK" if ok else "FAIL",
+                "details": "" if ok else f"{value:.8g} vs {target:.8g} {unit}".strip()})
 
 
 def _invariant(out: list, rid: str, condition: bool, details: str):
@@ -63,8 +57,10 @@ def cjeloviti_mikrodozator(d=0.80e-3, D=2.4e-3, H=0.060,
     dp = 4 * sigma / D
     p_in = p0 + dp
     p_H = rho * g * max(H - h_cap, 0.0)
-    p_M_min = p_H + dp
-    return {"h_cap": h_cap, "dp": dp, "p_in": p_in, "p_M_min": p_M_min}
+    p_M_min = rho * g * H + dp
+    # Legacy p_M_min key now refers only to the prescribed formed-drop state.
+    return {"h_cap": h_cap, "dp": dp, "p_in": p_in, "p_start": p_H,
+            "p_M_min": p_M_min, "drop_head_scale": rho * g * D}
 
 
 def primjer_lezaj(D=0.060, L=0.080, delta=0.50e-3, mu=0.25, n=1450.0):
@@ -154,7 +150,9 @@ def zadatak_6(d=0.50e-3, sigma=0.072, rho=998.0, g=9.81, theta_deg=0.0,
     return {"h_cap": h_cap, "dp": dp, "p_start": p_start, "p_drop": p_drop,
             "p_min": p_min, "p_max": p_max, "reserve": regulator_high - required,
             "low_sufficient": regulator_low >= required,
-            "high_sufficient": regulator_high >= required}
+            "high_sufficient": regulator_high >= required,
+            "drop_head_scale": rho * g * D_max,
+            "model_margin_small": regulator_high - required < rho * g * D_max}
 
 
 # ------------ Faza 1.5 dodatak: Klizni lezaj pri hladnoj/toploj temperaturi ----------------
@@ -173,7 +171,9 @@ def primjer_lezaj_temp(D=0.050, L=0.070, delta=0.30e-3, n=2400.0,
     P_c = M_c * omega
     P_h = M_h * omega
     return {"v": v, "tau_c": tau_c, "tau_h": tau_h,
-            "P_c": P_c, "P_h": P_h, "ratio": P_c / P_h}
+            "P_c": P_c, "P_h": P_h, "ratio": mu_cold / mu_hot,
+            "F_c": F_c, "F_h": F_h, "M_c": M_c, "M_h": M_h,
+            "omega": omega, "A": A, "dvdy": dvdy}
 
 
 def verify() -> list:
@@ -185,22 +185,35 @@ def verify() -> list:
     r = primjer_smicanje()
     _check(out, "U02.P1.dvdy", r["dvdy"], 300.0, "1/s")
     _check(out, "U02.P1.tau", r["tau"], 126.0, "Pa")
-    _check(out, "U02.P1.F", r["F"], 22.7, "N")
-    _check(out, "U02.P1.nu", r["nu"], 4.83e-4, "m^2/s")
+    _check(out, "U02.P1.F", r["F"], 22.7, "N", abs_tol=0.05)
+    _check(out, "U02.P1.nu", r["nu"], 4.83e-4, "m^2/s", abs_tol=5e-07)
 
     r = primjer_etanol()
-    _check(out, "U02.P2.h_mm", r["h"] * 1000, 10.8, "mm")
+    _check(out, "U02.P2.h_mm", r["h"] * 1000, 10.8, "mm", abs_tol=0.05)
 
     r = cjeloviti_mikrodozator()
-    _check(out, "U02.CH1.h_cap_mm", r["h_cap"] * 1000, 36.8, "mm")
+    _check(out, "U02.CH1.h_cap_mm", r["h_cap"] * 1000, 36.8, "mm", abs_tol=0.05)
     _check(out, "U02.CH1.dp", r["dp"], 120.0, "Pa")
     _check(out, "U02.CH1.p_in_Pa", r["p_in"], 101445.0, "Pa")
-    _check(out, "U02.CH1.p_M_min", r["p_M_min"], 347.0, "Pa", rel=0.03)
+    _check(out, "U02.CH1.p_M_min", r["p_M_min"], 707.0, "Pa", abs_tol=0.5)
+
+    _check(out, "U02.CH1.p_start", r["p_start"], 227.0, "Pa", abs_tol=.5)
+    _check(out, "U02.CH1.drop_head_scale", r["drop_head_scale"], 23.5, "Pa", abs_tol=.05)
+    wide = cjeloviti_mikrodozator(d=1.6e-3)
+    _invariant(out, "U02.CH1.separate_interfaces",
+               abs(r["p_M_min"] - 998*9.81*.060 - r["dp"]) < 1e-10
+               and abs(wide["p_M_min"]-r["p_M_min"]) < 1e-10
+               and wide["p_start"]>r["p_start"],
+               "Punjenje i puna igla imaju različite tlakove; kapljici se ne oduzima konkavni meniskus.")
+    _invariant(out, "U02.capillary.angle_signs",
+               abs(primjer_etanol(theta_deg=90)["h"])<1e-14
+               and primjer_etanol(theta_deg=110)["h"]<0,
+               "Kontaktni kut mora određivati nulti uspon i depresiju.")
 
     z1 = zadatak_1()
-    _check(out, "U02.Z1.dvdy", z1["dvdy"], 271.0, "1/s")
-    _check(out, "U02.Z1.tau", z1["tau"], 228.0, "Pa")
-    _check(out, "U02.Z1.F", z1["F"], 50.0, "N")
+    _check(out, "U02.Z1.dvdy", z1["dvdy"], 271.0, "1/s", abs_tol=0.5)
+    _check(out, "U02.Z1.tau", z1["tau"], 228.0, "Pa", abs_tol=0.5)
+    _check(out, "U02.Z1.F", z1["F"], 50.0, "N", abs_tol=0.5)
     _invariant(out, "U02.Z1.force_balance", abs(z1["F"] * 0.0024 - 0.84 * 0.65 * 0.22) < 1e-12,
                "Newtonova bilanca sile nije zadovoljena.")
 
@@ -231,8 +244,8 @@ def verify() -> list:
                "Promjena smjera brzine mora promijeniti smjer potrebne vucne sile.")
 
     z4 = zadatak_4()
-    _check(out, "U02.Z4.h1_mm", z4["h1"] * 1000, 18.0, "mm")
-    _check(out, "U02.Z4.h2_mm", z4["h2"] * 1000, 9.0, "mm")
+    _check(out, "U02.Z4.h1_mm", z4["h1"] * 1000, 18.0, "mm", abs_tol=0.05)
+    _check(out, "U02.Z4.h2_mm", z4["h2"] * 1000, 9.0, "mm", abs_tol=0.05)
     _invariant(out, "U02.Z4.inverse_diameter", abs(z4["h1"] / z4["h2"] - 2.0) < 1e-12,
                "Udvostrucenje promjera nije prepolovilo kapilarni uspon.")
 
@@ -264,12 +277,12 @@ def verify() -> list:
                "Izbor modela mora slijediti podatke, ne ime uzorka.")
 
     z6 = zadatak_6()
-    _check(out, "U02.Z6.h_cap_mm", z6["h_cap"] * 1000, 58.8, "mm")
+    _check(out, "U02.Z6.h_cap_mm", z6["h_cap"] * 1000, 58.8, "mm", abs_tol=0.05)
     _check(out, "U02.Z6.p_start", z6["p_start"], 0.0, "Pa")
-    _check(out, "U02.Z6.p_drop_kPa", z6["p_drop"] / 1000, 0.571, "kPa")
-    _check(out, "U02.Z6.p_min_kPa", z6["p_min"] / 1000, 0.555, "kPa")
-    _check(out, "U02.Z6.p_max_kPa", z6["p_max"] / 1000, 0.591, "kPa")
-    _check(out, "U02.Z6.reserve_Pa", z6["reserve"], 8.8, "Pa")
+    _check(out, "U02.Z6.p_drop_kPa", z6["p_drop"] / 1000, 0.571, "kPa", abs_tol=0.0005)
+    _check(out, "U02.Z6.p_min_kPa", z6["p_min"] / 1000, 0.555, "kPa", abs_tol=0.0005)
+    _check(out, "U02.Z6.p_max_kPa", z6["p_max"] / 1000, 0.591, "kPa", abs_tol=0.0005)
+    _check(out, "U02.Z6.reserve_Pa", z6["reserve"], 8.8, "Pa", abs_tol=0.05)
     _invariant(out, "U02.Z6.regulator_selection", not z6["low_sufficient"] and z6["high_sufficient"],
                "Samo regulator do 0.60 kPa pokriva oba zadana staticka stanja.")
     wider_needle = zadatak_6(d=1.0e-3)
@@ -287,19 +300,35 @@ def verify() -> list:
                "Regulator koji pokriva nominalno stanje ne mora pokriti najmanju kapljicu.")
 
 
+    _check(out, "U02.Z6.drop_head_scale", z6["drop_head_scale"], 19.6, "Pa", abs_tol=.05)
+    _invariant(out, "U02.Z6.model_limit",
+               z6["model_margin_small"] and z6["drop_head_scale"] > z6["reserve"]
+               and not zadatak_6(regulator_high=650)["model_margin_small"],
+               "Rezerva idealiziranog modela manja je od skale zanemarene gravitacije kapljice.")
+
     # Faza 1.5: Klizni lezaj pri hladnom startu i radnoj temperaturi
     r = primjer_lezaj_temp()
-    _check(out, "U02.lezaj_temp.v", r["v"], 6.28, "m/s")
-    _check(out, "U02.lezaj_temp.tau_c", r["tau_c"], 8378, "Pa")
-    _check(out, "U02.lezaj_temp.tau_h", r["tau_h"], 837.8, "Pa")
-    _check(out, "U02.lezaj_temp.P_c", r["P_c"], 578, "W")
-    _check(out, "U02.lezaj_temp.P_h", r["P_h"], 58.0, "W")
+    _check(out, "U02.lezaj_temp.v", r["v"], 6.28, "m/s", abs_tol=0.005)
+    _check(out, "U02.lezaj_temp.tau_c", r["tau_c"], 8380, "Pa", abs_tol=5.0)
+    _check(out, "U02.lezaj_temp.tau_h", r["tau_h"], 838, "Pa", abs_tol=0.5)
+    _check(out, "U02.lezaj_temp.P_c", r["P_c"], 579, "W", abs_tol=0.5)
+    _check(out, "U02.lezaj_temp.P_h", r["P_h"], 57.9, "W", abs_tol=0.05)
     _check(out, "U02.lezaj_temp.ratio", r["ratio"], 10.0)
 
+    _check(out, "U02.lezaj_temp.F_c", r["F_c"], 92.1, "N", abs_tol=.05)
+    _check(out, "U02.lezaj_temp.F_h", r["F_h"], 9.21, "N", abs_tol=.005)
+    _check(out, "U02.lezaj_temp.M_c", r["M_c"], 2.30, "N m", abs_tol=.005)
+    _check(out, "U02.lezaj_temp.M_h", r["M_h"], .230, "N m", abs_tol=.0005)
+    _invariant(out, "U02.lezaj_temp.work_and_scaling",
+               abs(r["P_c"]-r["F_c"]*r["v"])<1e-10
+               and abs(primjer_lezaj_temp(n=4800)["P_c"]-4*r["P_c"])<1e-10
+               and primjer_lezaj_temp(n=0)["P_c"]==0,
+               "Snaga je Fv=Mω, raste s kvadratom brzine i nestaje pri mirovanju.")
+
     r = primjer_lab_on_chip()
-    _check(out, "U02.lab_chip.h_cm", r["h"] * 100, 33.5, "cm", rel=0.02)
-    _check(out, "U02.lab_chip.dp_kPa", r["dp"] / 1000, 3.32, "kPa", rel=0.02)
-    _check(out, "U02.lab_chip.h_hydrophobic", r["h_hydrophobic"], -0.127, "m", rel=0.02)
+    _check(out, "U02.lab_chip.h_cm", r["h"] * 100, 33.5, "cm", abs_tol=0.05)
+    _check(out, "U02.lab_chip.dp_kPa", r["dp"] / 1000, 3.32, "kPa", abs_tol=0.005)
+    _check(out, "U02.lab_chip.h_hydrophobic", r["h_hydrophobic"], -0.127, "m", abs_tol=0.0005)
 
     return out
 
@@ -313,3 +342,4 @@ if __name__ == "__main__":
         print(f"  [{marker}] {r['id']:25s}  {r.get('details', '')}")
     print()
     print(f"Total: ok={ok}, fail={fail}")
+    raise SystemExit(1 if fail else 0)

@@ -264,3 +264,11 @@ ne dokazuju same didaktičku kvalitetu. Postojeća Typst upozorenja za
 `times.circle` u U10 ostaju. Ponovni pregled U02 i završna zajednička
 provjera cijele knjige ostaju dio šireg cilja. GitHub će nakon pusha
 izvršiti puni postupak objave iz `publish.yml`.
+
+### Dopuna zajedničkog završnog prolaza
+
+Razjašnjeno je da 8,33 predstavlja omjer potrebnog zbroja hodova i jednog
+punog hoda, prije odluke o devet cijelih poteza. U P6 uklonjeno je rano
+zaokruživanje površina pri računu tlaka i sile: sila se provjerava izravno
+omjerom kvadrata promjera. Konačni rezultati, podatci i ID-jevi ostaju isti.
+Obnovljeni su HTML U01, cjeloviti HTML za ispis i zajednički nativni PDF.

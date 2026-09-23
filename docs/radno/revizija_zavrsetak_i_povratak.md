@@ -11,12 +11,12 @@ ne označava dovršenima preostale korake.
 
 | Korak | Kanonski izvor | Stvarni verifier | Status | Evidencija |
 | --- | --- | --- | --- | --- |
-| 1 | `source/u12_diferencijalni_opis_realnog_toka.md` | `verify_u12_real_flow.py` / U12.REAL | dovršeno; zajednički završni build slijedi | `revizija_u12.md` |
-| 2 | `source/u13_gubici_cjevovodi_crpke_i_mreze.md` | `verify_u13_integrated.py` / U13.CANON | dovršeno; zajednički završni build slijedi | `revizija_u13.md` |
-| 3 | `source/u14_turbostrojevi_i_propulzija.md` | `verify_u12.py` / U12 | dovršeno; zajednički završni build slijedi | `revizija_u14.md` |
-| 4 | `source/u15_otvoreni_tokovi.md` | `verify_u15_open_channels.py` / U15 | dovršeno; zajednički završni build slijedi | `revizija_u15.md` |
-| 5 | `source/u01_osnove_fluida_i_pascalov_zakon.md` | `verify_u01.py` / U01 | dovršeno; zajednički završni build slijedi | dopuna `revizija_u01.md` |
-| 6 | `source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md` | `verify_u02.py` / U02 | slijedi nakon U01 | dopuna `revizija_u02.md` |
+| 1 | `source/u12_diferencijalni_opis_realnog_toka.md` | `verify_u12_real_flow.py` / U12.REAL | dovršeno; zajednička završna provjera PASS | `revizija_u12.md` |
+| 2 | `source/u13_gubici_cjevovodi_crpke_i_mreze.md` | `verify_u13_integrated.py` / U13.CANON | dovršeno; zajednička završna provjera PASS | `revizija_u13.md` |
+| 3 | `source/u14_turbostrojevi_i_propulzija.md` | `verify_u12.py` / U12 | dovršeno; zajednička završna provjera PASS | `revizija_u14.md` |
+| 4 | `source/u15_otvoreni_tokovi.md` | `verify_u15_open_channels.py` / U15 | dovršeno; zajednička završna provjera PASS | `revizija_u15.md` |
+| 5 | `source/u01_osnove_fluida_i_pascalov_zakon.md` | `verify_u01.py` / U01 | dovršeno; zajednička završna provjera PASS | dopuna `revizija_u01.md` |
+| 6 | `source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md` | `verify_u02.py` / U02 | dovršeno; zajednička završna provjera PASS | dopuna `revizija_u02.md` |
 
 Za svaki korak potrebni su pregled svih postojećih P/Z i skica, matrica
 odluka prije sadržajnih izmjena, selektivna dorada zadataka, fizikalni i
@@ -92,3 +92,43 @@ završila je uspješno.
 
 Preostaju ponovni pregled U02 i zajednička završna provjera knjige.
 Ovaj commit ne označava dovršenim cijeli korisnikov cilj.
+
+## Zajednička završna provjera — 23. rujna 2026.
+
+Obuhvat ostaje cijeli korisnikov cilj: U12 → U13 → U14 → U15 → U01 → U02.
+Sva pojedinačna poglavlja imaju provedenu matricu odluka i zapisnik
+autorskog, računskog i vizualnog pregleda. U02 završava selektivnom doradom
+postojećih vježbi i popravkom primjera; U01 dobiva još precizniji zapis
+računa bez ranog zaokruživanja. Nisu otvorena nova mjesta Z7 niti mijenjani
+kanonski URL-ovi. Završni radni skup još nije novi commit/push.
+
+### Dokazi prema zahtjevima
+
+| Zahtjev | Autoritativna provjera završnog stanja | Rezultat |
+| --- | --- | --- |
+| U12–U15 uređeni do kraja, zatim ponovno pregledani U01/U02 | Izvori i dopune `revizija_u12.md`–`revizija_u15.md`, `revizija_u01.md`, `revizija_u02.md`; slijed počinje na `0a4a0ac` | Provedeno |
+| Selektivna zamjena, zadržavanje dobrih vježbi i broj/razine | Aktualni `audit_publication.py`: U01–U15 imaju Z1–Z6, T1/T1/T2/T2/T3/T4; ukupno 87 P i 90 Z | PASS |
+| Stari primjeri/zadatci i javni URL-ovi ostaju dostupni | Izravna usporedba svih starih P/Z ID-jeva šest poglavlja prema `0a4a0ac`; svaki je aktivan ili ima sačuvan alias; svih šest omotača tekstualno je nepromijenjeno | PASS |
+| Tekst, skice, odgovori, notebook i verifier usklađeni | Autorski pregled uz pojedinačne zapisnike; svih 90 ugovora manifesta; cjelovitost matematičkih izraza svih 90 ključeva D06 | PASS |
+| Fizikalna geometrija i postojeći stil skica | Stvarni SVG-ovi pregledani; svih 13 dostupnih geometrijskih skripti prolazi; za šest ciljanih poglavlja provjereno svih 28 objavljenih SVG kopija prema izvorima | PASS |
+| Numerički rezultati i granice modela | `verify_all.py`: 1332 rezultata = 1113 golden usporedbi + 219 invarijanti; još 22 fizikalne provjere; 0 rupa i 0 tautologija | PASS |
+| Notebookovi se izvršavaju od početka | Svih 17 u čistim kernelima, ukupno 55,53 s; izvori imaju prazne izlaze; pitanja interpretacije i provjere opisani u zapisnicima | PASS |
+| Generirani sadržaj, struktura, reference i CFD paketi | Manifest, D06, QR, normalizacija, publication/Typst audit i `validate_cfd_vv.py` | PASS |
+| Cijeli HTML i PDF odgovaraju završnom tekstu | Puni HTML od 24 stranice; završna mala dopuna U01 prenesena i u HTML za ispis; puni PDF nakon svih sadržajnih izmjena, 319 A4 stranica | PASS |
+| PDF je stvarno dostupan kroz poveznice | `_site/downloads/mehanika-fluida-1.pdf` bajtno jednak nativnom PDF-u; obnovljen direktorij za preuzimanje nakon čišćenja izlaza tijekom renderiranja | PASS |
+| Svi javni lokalni resursi i poveznice | `audit_rendered_site.py`: 24 stranice, 222 slike, 1932 veze, 450 sklopivih blokova | PASS |
+| JupyterLite ima aktualne notebookove i Python | Puni build; audit: 17 notebookova, četiri ekstenzije i Pyodide; kopije uspoređene s izvorima | PASS |
+| Sve stranice na tri širine, A4, WCAG i živi Python u pregledniku | `npm run audit:viewports -- _site`: 72 prikaza na 320/768/1440 px, A4 ispis i WCAG; JupyterLite Python dosegnuo stanje Idle | PASS |
+
+Završni PDF: 7 037 410 bajtova, SHA-256
+`befd2590e1b152672e1e38842e9ee04af18f06ad3ca287d5dd28f353088761cb`.
+Vizualni dokaz za U02: stranice 33, 36, 40–44, 49, 269 i 301; raniji
+pregledi ostalih poglavlja ostaju evidentirani uz njihov sadržaj.
+
+Postojeća Typst upozorenja za `times.circle` u U10 ne prekidaju izgradnju.
+Provjere potvrđuju navedene ugovore i pregledani sadržaj; ne proširuju
+idealizirane modele na stvarne radne uređaje niti zamjenjuju studentski pilot.
+Završni prolaz preglednika dovršen je s izlaznim kodom 0. Svaki zahtjev
+iz tablice ima potvrđen rezultat; cijeli dogovoreni ciklus je dovršen.
+Posljednje izmjene U02, mala dopuna U01 i završna evidencija ostaju lokalne
+do zasebnog zahtjeva za commit i push.

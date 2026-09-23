@@ -51,13 +51,13 @@ $$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-04}
 
 U tom zapisu $\tau$ označuje komponentu smičnoga naprezanja s unaprijed odabranim pozitivnim smjerovima. Promijene li se orijentacija normale ili smjer brzine, mijenja se i predznak te komponente; $|\tau|$ je njezin iznos. Veličina $\mu$ mjeri unutarnji otpor fluida relativnom klizanju slojeva, a $dv/dy$ pokazuje koliko se brzo brzina mijenja po okomici na strujanje.
 
-Za kapilarni uspon promatra se kružna kapilara promjera $d$. Površinska napetost $\sigma$ djeluje duž cijeloga oboda, pa je ukupna sila na kontaktnoj liniji jednaka $\sigma\pi d$. Njezina vertikalna komponenta iznosi
+Za kapilarni uspon promatra se kružna kapilara promjera $d$. Površinska napetost $\sigma$ djeluje duž cijeloga oboda, a vodoravne komponente sila po obodu međusobno se poništavaju. Zbroj njihovih vertikalnih komponenti iznosi
 
 $$
 F_{\sigma,z} = \sigma\pi d\cos\theta,
 $$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-05}
 
-dok je težina podignutoga stupca tekućine
+Pri računu visine zanemaruju se volumen meniskusa i promjena njegove zakrivljenosti zbog težine. Tada je težina podignutoga stupca tekućine
 
 $$
 G = \rho gV = \rho g\frac{\pi d^2}{4}h.
@@ -233,7 +233,7 @@ $$
 \cos\theta = \frac{\sigma_{sv} - \sigma_{sl}}{\sigma_{lv}}.
 $$ {#eq-reologija-matematicki-izvod-youngova-jednadzba-i-podrijetl-02}
 
-Veličina $\sigma$ koja se koristi u kapilarnom usponu i u svim formulama koje slijede zapravo je $\sigma_{lv}$ — napetost između tekućine i pare. Ako krutina kvasi tekućinu (npr. voda na čistom staklu), vrijedi $\sigma_{sv} > \sigma_{sl}$, pa je $\cos\theta > 0$ i $\theta < 90^\circ$. Ako krutina ne kvasi tekućinu (npr. živa na staklu, voda na voštanoj površini), vrijedi $\sigma_{sv} < \sigma_{sl}$, pa je $\cos\theta < 0$ i $\theta > 90^\circ$.
+Veličina $\sigma$ koja se koristi u kapilarnom usponu i u svim formulama koje slijede zapravo je $\sigma_{lv}$ — napetost između tekućine i pare. Ako tekućina kvasi krutinu (npr. voda na čistom staklu), vrijedi $\sigma_{sv} > \sigma_{sl}$, pa je $\cos\theta > 0$ i $\theta < 90^\circ$. Ako tekućina ne kvasi krutinu (npr. živa na staklu, voda na voštanoj površini), vrijedi $\sigma_{sv} < \sigma_{sl}$, pa je $\cos\theta < 0$ i $\theta > 90^\circ$.
 
 Kvašenje i nekvašenje time prestaju biti svojstvo same tekućine — postaju **svojstvo para tekućina–krutina**. Ista voda u staklenoj kapilari kvasi ($\theta \approx 0$), u teflonskoj ne kvasi ($\theta > 90^\circ$), a kapilarni uspon ili pad mijenja predznak.
 :::
@@ -386,7 +386,7 @@ $$ {#eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-04}
 kinematička viskoznost glasi
 
 $$
-\nu = \frac{\mu}{\rho} = \frac{0{,}42}{870} = 4{,}83 \cdot 10^{-4}\ \text{m}^2/\text{s}.
+\nu = \frac{\mu}{\rho} = \frac{0{,}42}{870} \approx 4{,}83 \cdot 10^{-4}\ \text{m}^2/\text{s}.
 $$ {#eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-05}
 
 **Tumačenje rezultata**
@@ -437,86 +437,91 @@ $$ {#eq-reologija-rijeseni-primjer-kapilarni-uspon-etanola-u-stakl-01}
 ::: {#ex-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom-t3 .mf1-ch}
 <p class="mf1-box-label">P4. Kapilarni mikrodozator s izlaznom kapljicom&nbsp;<span class="mf1-level">T3</span></p>
 
-**Kontekst:** U laboratorijskom mikrodozatoru voda iz spremnika diže se tankom staklenom kapilarom do izlaza na kojem nastaje gotovo sferna kapljica. Treba odrediti kapilarni uspon, Laplaceov skok tlaka na kapljici i najmanji potreban pretlak u spremniku da uređaj pouzdano dozira.
+**Kontekst:** Voda iz spremnika puni staklenu kapilaru, a zatim na njezinu izlazu može nastati kapljica. Treba odvojiti punjenje s konkavnim meniskusom od stanja s formiranom kapljicom i za svako napisati tlačnu bilancu.
 
 **Zadano**
 
-- Unutarnji promjer vertikalne staklene kapilare: $d = 0{,}80\ \text{mm}$
-- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
-- Površinska napetost vode: $\sigma = 0{,}072\ \text{N/m}$
-- Kontaktni kut voda-staklo (potpuno kvašenje): $\theta = 0^\circ$
-- Visina izlaza kapilare iznad slobodne površine u spremniku: $H = 60\ \text{mm}$
-- Promjer gotovo sferne izlazne kapljice: $D = 2{,}4\ \text{mm}$
+- Unutarnji promjer vertikalne kapilare: $d=0{,}80\ \mathrm{mm}$
+- Gustoća vode: $\rho=998\ \mathrm{kg/m^3}$
+- Površinska napetost: $\sigma=0{,}072\ \mathrm{N/m}$
+- Kontaktni kut pri punjenju cijevi: $\theta=0^\circ$
+- Visina izlaza iznad široke slobodne površine spremnika: $H=60\ \mathrm{mm}$
+- Promjer idealizirane sferne izlazne kapljice: $D=2{,}4\ \mathrm{mm}$
+- Okolni atmosferski tlak: $p_0=101325\ \mathrm{Pa}$; $g=9{,}81\ \mathrm{m/s^2}$
 
-Iznad vode u spremniku može se po potrebi zadati mali manometarski pretlak $p_M$.
+Iznad vode u spremniku može se zadati manometarski pretlak $p_M$.
 
 **Traženo**
 
-1. kapilarni uspon $h_{cap}$ kada je spremnik otvoren prema atmosferi.
-2. tlakovni skok $\Delta p$ na izlaznoj kapljici i apsolutni tlak unutar kapljice.
-3. najmanji manometarski pretlak $p_{M,min}$ koji treba zadati spremniku da voda dosegne izlaz i održi kapljicu promjera $D$.
-4. je li kapilarnost sama dovoljna da voda dosegne izlaz bez dodatnog pretlaka.
+1. Prirodni kapilarni uspon $h_{cap}$ kada je spremnik otvoren.
+2. Tlačni skok i apsolutni tlak u idealiziranoj kapljici.
+3. Pretlak potreban da konkavni meniskus dosegne izlaz i, zasebno, pretlak za zadanu formiranu kapljicu.
+4. Može li sama kapilarnost dosegnuti izlaz i što ovaj račun govori o doziranju.
 
-Pretpostavi da je kapljica kvazistacionarna, da je gubitak u kapilari zanemariv i da se kapilarni uspon može čitati iz standardne relacije za potpunu vlažnost.
-
-![kapilarni mikrodozator s izlaznom kapljicom](../assets/print/u02_ch1_kapilarni_mikrodozator_kapljica.svg){#fig-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom fig-alt="kapilarni mikrodozator s izlaznom kapljicom"}
+![Dva odvojena stanja mikrodozatora: prirodni uspon s konkavnim meniskusom i puna kapilara s izlaznom kapljicom.](../assets/print/u02_ch1_kapilarni_mikrodozator_kapljica.svg){#fig-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom fig-alt="Dva odvojena stanja mikrodozatora: prirodni uspon s konkavnim meniskusom i puna kapilara s izlaznom kapljicom."}
 
 **Pretpostavke i model**
 
-Kapilarnost i Laplaceov skok ovdje djeluju u istom uređaju, ali ih treba čitati odvojeno. Kapilarnost sama daje koliko se voda može podići u tankoj cjevčici bez dodatnog pogona. Ako izlaz leži više od tog uspona, ostatak visine mora se savladati dodatnim pretlakom u spremniku. Na samom izlazu zatim treba još zatvoriti skok tlaka preko zakrivljene površine kapljice.
+Promatraju se dva odvojena kvazistatička stanja. Pri punjenju zrak iznad meniskusa izlazi kroz otvoreni vrh. Nakon punjenja igla i kapljica čine jednu povezanu količinu vode, bez unutarnjega meniskusa ili zarobljenog zraka. Kontaktna linija kapljice smatra se zadržanom na rubu izlaza; kut pri punjenju ne nameće se njezinu obliku na tom rubu.
+
+U idealizaciji formirane kapljice tlak na izlazu uzima se $4\sigma/D$ viši od okolnoga. Zanemaruju se težina same kapljice, promjena oblika, viskozni gubitci i promjena razine širokog spremnika. Tlak je hidrostatski promjenjiv duž kapilare. Ne računa se prijelazni rast kapljice ni prag njezina odvajanja.
 
 **Rješenje**
 
 ### 1. Kapilarni uspon {.unnumbered .unlisted .mf1-step}
 
-Za vodu u staklenoj kapilari pri $\theta = 0^\circ$ ($\cos 0^\circ = 1$) vrijedi
+Pri otvorenom spremniku i potpunom kvašenju vrijedi
 
 $$
-h_{cap} = \frac{4\sigma \cos\theta}{\rho g d} = \frac{4 \cdot 0{,}072}{998 \cdot 9{,}81 \cdot 0{,}80 \cdot 10^{-3}} = 0{,}0368\ \text{m} \approx 36{,}8\ \text{mm}.
+h_{cap}=\frac{4\sigma\cos\theta}{\rho gd}
+=\frac{4\cdot0{,}072}{998\cdot9{,}81\cdot0{,}80\cdot10^{-3}}
+\approx36{,}8\ \mathrm{mm}.
 $$ {#eq-reologija-1-kapilarni-uspon-01}
 
 ### 2. Tlakovni skok na kapljici {.unnumbered .unlisted .mf1-step}
 
-Za gotovo sfernu kapljicu, uz $D = 2{,}4\ \text{mm} = 2{,}4 \cdot 10^{-3}\ \text{m}$, relacija Young-Laplace daje
+Za zadanu sfernu idealizaciju vrijedi
 
 $$
-\Delta p = \frac{4\sigma}{D} = \frac{4 \cdot 0{,}072}{2{,}4 \cdot 10^{-3}} = 120\ \text{Pa}.
+\Delta p=\frac{4\sigma}{D}
+=\frac{4\cdot0{,}072}{2{,}4\cdot10^{-3}}=120\ \mathrm{Pa}.
 $$ {#eq-reologija-2-tlakovni-skok-na-kapljici-01}
 
-Ako je vanjski tlak atmosferski,
+Apsolutni tlak prema tome iznosi
 
 $$
-p_{in} = p_0 + \Delta p = 101325 + 120 = 101445\ \text{Pa} \approx 101{,}45\ \text{kPa}.
+p_{in}=p_0+\Delta p=101325+120=101445\ \mathrm{Pa}
+\approx101{,}45\ \mathrm{kPa}.
 $$ {#eq-reologija-2-tlakovni-skok-na-kapljici-02}
 
-### 3. Najmanji potreban pretlak u spremniku {.unnumbered .unlisted .mf1-step}
+### 3. Pretlak za dva odvojena stanja {.unnumbered .unlisted .mf1-step}
 
-Izlaz kapilare nalazi se na visini $H = 60\ \text{mm}$, a kapilarnost sama može podići vodu samo do $h_{cap}$. Preostala hidrostatička razlika $H - h_{cap} = 60 - 36{,}8 = 23{,}2\ \text{mm}$ odgovara dodatnom tlaku
+Dok je konkavni meniskus u cijevi, tlak vode ispod njega niži je od okolnoga za $4\sigma/d=360\ \mathrm{Pa}$. Za dosezanje izlaza zato treba
 
 $$
-p_H = \rho g (H - h_{cap}) = 998 \cdot 9{,}81 \cdot (0{,}060 - 0{,}0368) = 227\ \text{Pa}.
+p_{M,1}=\max\!\left(0,\rho gH-\frac{4\sigma}{d}\right)
+=\max(0,587{,}4228-360)\ \mathrm{Pa}
+\approx227\ \mathrm{Pa}.
 $$ {#eq-reologija-3-najmanji-potreban-pretlak-u-spremniku-01}
 
-Na izlazu treba još savladati i tlačni skok na kapljici, pa je najmanji potreban manometarski pretlak
+Pri formiranoj kapljici tlak vode na izlazu viši je od okolnoga. Od slobodne površine spremnika do izlaza vrijedi $p_{izlaz}-p_0=p_M-\rho gH$. Stoga
 
 $$
-p_{M,min} = p_H + \Delta p = 227 + 120 = 347\ \text{Pa} \approx 0{,}347\ \text{kPa}.
+p_{M,2}=\rho gH+\Delta p
+=(587{,}4228+120)\ \mathrm{Pa}
+\approx707\ \mathrm{Pa}=0{,}707\ \mathrm{kPa}.
 $$ {#eq-reologija-3-najmanji-potreban-pretlak-u-spremniku-02}
+
+U drugom stanju nema konkavnoga meniskusa koji bi dodatno smanjio potreban tlak. Zbroj $227+120=347\ \mathrm{Pa}$ zato bi dvaput iskoristio različite oblike iste međupovršine.
 
 ### 4. Je li kapilarnost sama dovoljna? {.unnumbered .unlisted .mf1-step}
 
-Kapilarnost sama bila bi dovoljna kada bi vrijedilo $h_{cap} \geq H$. Ovdje je, međutim, $36{,}8\ \text{mm} < 60\ \text{mm}$, pa sama kapilarnost nije dovoljna da voda dosegne izlaz. Potreban je mali dodatni pretlak u spremniku.
+Budući da je $h_{cap}\approx36{,}8\ \mathrm{mm}<H=60\ \mathrm{mm}$, za dosezanje izlaza potreban je pozitivan dodatni pretlak. Za zadanu formiranu kapljicu statički model traži oko $0{,}707\ \mathrm{kPa}$. Ta vrijednost ne određuje najveći tlak tijekom oblikovanja kapljice i ne dokazuje pouzdano doziranje.
 
-**Tumačenje rezultata**
+**Tumačenje rezultata i granica modela**
 
-Kapilarnost sama podiže vodu za oko $36{,}8\ \text{mm}$, dok izlaz mikrodozatora leži na $60\ \text{mm}$ iznad spremnika. Zato je za dosezanje izlaza potreban dodatni tlak od oko $227\ \text{Pa}$, a za zadržavanje kapljice promjera $2{,}4\ \text{mm}$ treba još oko $120\ \text{Pa}$ Laplaceova skoka. Ukupno je potreban minimalni manometarski pretlak od oko $347\ \text{Pa}$, a apsolutni tlak unutar kapljice iznosi oko $101{,}45\ \text{kPa}$.
-
-**Pitanje za stručnu provjeru.** Zbrajanje kapilarnoga uspona i Laplaceova skoka na izlaznoj kapljici valja potvrditi za stvarnu geometriju uređaja. Meniskus u kapilari i izlazna kapljica nisu neovisne međupovršine ako čine jedinstvenu slobodnu površinu; tada je potreban jednoznačno definiran oblik međupovršine i pripadna tlačna bilanca.
-
-1. Manja kapilarna cjevčica mora davati veći kapilarni uspon, pa bi smanjenje promjera olakšalo doseg izlaza.
-2. Manja kapljica mora tražiti veći tlačni skok, pa bi smanjenje promjera kapljice povećalo potrebni pretlak.
-3. Kako je $h_{cap} < H$, dodatni pogonski tlak mora biti pozitivan; negativan rezultat ovdje bi odmah značilo da je negdje izgubljen znak ili pretvorba jedinica.
-::: 
+Manji promjer cijevi olakšava kapilarno punjenje; pri već formiranoj kapljici zadanog $D$ taj promjer ne ulazi u ovu statičku tlačnu bilancu. Manji $D$ povećava Laplaceov skok. Zanemarena hidrostatička promjena kroz duljinu $D$ reda je $\rho gD\approx23{,}5\ \mathrm{Pa}$: za finiju procjenu tlaka treba uključiti težinu i stvarnu zakrivljenost kapljice. Ovdje objavljene vrijednosti služe provjeri jasno zadanoga idealiziranog modela.
+:::
 
 ::: {#ex-u02-hladni-start-i-radna-temperatura-koliko-kosta .mf1-we}
 <p class="mf1-box-label">P5. Utjecaj temperature na viskozni otpor kliznog ležaja &nbsp;<span class="mf1-level">T2</span></p>
@@ -546,7 +551,7 @@ Isti klizni ležaj radi pri dvjema temperaturama:
 
 **Pretpostavke i model**
 
-Primjenjuje se idealni Couetteov model tankoga uljnog procjepa: vratilo i čahura su koncentrični, profil je linearan, $dv/dy=v/\delta$, a $\mu$ je u svakom stanju zadana i jednolika. Geometrija i broj okretaja ne mijenjaju se. Zanemaruju se hidrodinamički klin, ekscentricitet, opterećenje, rubni tok, lokalno zagrijavanje smicanjem i spregnuta toplinska bilanca. Zato se sve razlike u rezultatu namjerno pripisuju samo zadanoj promjeni viskoznosti.
+Primjenjuje se idealni Couetteov model tankoga uljnog procjepa (prianjanje uz obje stijenke; $y$ raste od čahure prema vratilu): vratilo i čahura su koncentrični, profil je linearan, $dv/dy=v/\delta$, a $\mu$ je u svakom stanju zadana i jednolika. Geometrija i broj okretaja ne mijenjaju se. Zanemaruju se hidrodinamički klin, ekscentricitet, opterećenje, rubni tok, lokalno zagrijavanje smicanjem i spregnuta toplinska bilanca. Zato se sve razlike u rezultatu namjerno pripisuju samo zadanoj promjeni viskoznosti.
 
 **Rješenje**
 
@@ -565,31 +570,31 @@ $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-02}
 Smično naprezanje pri hladnom startu:
 
 $$
-\tau_1 = \mu_1 \frac{v}{\delta} = 0{,}40 \cdot 2{,}09 \cdot 10^4 \approx 8{,}38 \cdot 10^3\ \text{Pa}
+\tau_1 = \mu_1 \frac{v}{\delta} \approx 8{,}38 \cdot 10^3\ \text{Pa}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-03}
 
 Smično naprezanje pri radnoj temperaturi:
 
 $$
-\tau_2 = \mu_2 \frac{v}{\delta} = 0{,}040 \cdot 2{,}09 \cdot 10^4 \approx 838\ \text{Pa}
+\tau_2 = \mu_2 \frac{v}{\delta} \approx 838\ \text{Pa}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-04}
 
-Kontaktna površina ležaja:
+Omočena površina vratila:
 
 $$
-A = \pi D L = \pi \cdot 0{,}050 \cdot 0{,}070 = 1{,}10 \cdot 10^{-2}\ \text{m}^2
+A = \pi D L = \pi \cdot 0{,}050 \cdot 0{,}070 \approx 1{,}10 \cdot 10^{-2}\ \text{m}^2
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-05}
 
 Sila viskoznog trenja i zakretni moment pri hladnom startu:
 
 $$
-F_1 = \tau_1 A \approx 92{,}2\ \text{N}, \qquad M_1 = F_1 \cdot \frac{D}{2} \approx 2{,}30\ \text{N m}
+F_1 = \tau_1 A \approx 92{,}1\ \text{N}, \qquad M_1 = F_1 \cdot \frac{D}{2} \approx 2{,}30\ \text{N m}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-06}
 
 Sila viskoznog trenja i zakretni moment pri radnoj temperaturi:
 
 $$
-F_2 = \tau_2 A \approx 9{,}22\ \text{N}, \qquad M_2 = F_2 \cdot \frac{D}{2} \approx 0{,}231\ \text{N m}
+F_2 = \tau_2 A \approx 9{,}21\ \text{N}, \qquad M_2 = F_2 \cdot \frac{D}{2} \approx 0{,}230\ \text{N m}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-07}
 
 Kutna brzina rotacije:
@@ -598,14 +603,14 @@ $$
 \omega = \frac{2\pi n}{60} \approx 251{,}3\ \text{rad/s}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-08}
 
-Snaga koju motor mora trošiti samo zbog viskoznog trenja:
+Snaga koju motor mora trošiti samo zbog viskoznog trenja, izračunana iz nezaokruženih veličina:
 
 $$
-P_1 = M_1 \omega \approx 2{,}30 \cdot 251{,}3 \approx 578\ \text{W}
+P_1 = M_1 \omega \approx 579\ \text{W}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-09}
 
 $$
-P_2 = M_2 \omega \approx 0{,}231 \cdot 251{,}3 \approx 58{,}0\ \text{W}
+P_2 = M_2 \omega \approx 57{,}9\ \text{W}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-10}
 
 Omjer snage hladnog starta prema snazi pri radnoj temperaturi:
@@ -617,7 +622,7 @@ $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-11}
 **Tumačenje rezultata**
 
 1. U ovom namjerno ograničenom modelu smično naprezanje, sila trenja, moment i snaga linearno se mijenjaju s viskoznošću. Zato faktor 10 u zadanoj $\mu$ daje faktor 10 u tim izlaznim veličinama.
-2. Dobivenih $578\ \text{W}$ nije prognoza stvarnoga gubitka određenoga motora: rezultat snažno ovisi o idealiziranom procjepu i izostavljenim hidrodinamičkim i toplinskim učincima.
+2. Dobivenih $579\ \text{W}$ nije prognoza stvarnoga gubitka određenoga motora: rezultat snažno ovisi o idealiziranom procjepu i izostavljenim hidrodinamičkim i toplinskim učincima.
 3. Omjer $P_1/P_2=\mu_1/\mu_2$ vrijedi jer su u usporedbi geometrija i brzina umjetno zadržane jednakima. U konstrukciji se istodobno biraju geometrija ležaja, dovod maziva, režim rada i odgovarajuće reološko-temperaturno svojstvo ulja; nijedan od tih čimbenika sam nije potpuna mjera.
 :::
 
@@ -663,7 +668,7 @@ $$
 h \approx 33{,}5\ \text{cm}.
 $$ {#eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-03}
 
-Razlika tlakova na meniskusu prema Young-Laplaceovu zakonu za kružni presjek:
+Za konkavni meniskus definiraj $\Delta p=p_{zrak}-p_{tekućina}$. Prema Young–Laplaceovu zakonu za kružni presjek:
 
 $$
 \Delta p = \frac{4\sigma\cos\theta}{d} = \frac{4 \cdot 0{,}055 \cdot 0{,}906}{60 \cdot 10^{-6}} \approx 3{,}32 \cdot 10^3\ \text{Pa} \approx 3{,}32\ \text{kPa}.
@@ -706,7 +711,7 @@ Ravnotežna visina od oko $33{,}5\ \text{cm}$ pokazuje da je za zadanu idealnu k
 ::: {.callout-note collapse="true"}
 ### Odgovori
 
-Gustoća mjeri masu po volumenu, a viskoznost otpor smicanju. Newtonski model vrijedi samo kada je smično naprezanje proporcionalno gradijentu brzine za promatrani fluid i raspon uvjeta. Kontaktni kut određuje kvasi li stijenka fluid pa zato mijenja predznak i iznos kapilarnog učinka. Brzina punjenja dodatno ovisi o viskoznom otporu, geometriji, zarobljenom plinu i dinamici meniskusa.
+Gustoća mjeri masu po volumenu, a viskoznost otpor smicanju. Newtonski model traži stalan omjer smičnoga naprezanja i gradijenta brzine pri istoj temperaturi u cijelom promatranom rasponu; to se provjerava na više mjernih točaka. Kontaktni kut određuje kvasi li tekućina stijenku pa zato mijenja predznak i iznos kapilarnog učinka. Brzina punjenja dodatno ovisi o viskoznom otporu, geometriji, zarobljenom plinu i dinamici meniskusa.
 :::
 :::
 
@@ -715,7 +720,7 @@ Gustoća mjeri masu po volumenu, a viskoznost otpor smicanju. Newtonski model vr
 
 - Viskoznost povezuje smično naprezanje i gradijent brzine samo unutar odabranoga konstitutivnog modela.
 - Površinska napetost djeluje na međupovršini i određuje zakrivljenost, tlakni skok i kapilarne učinke.
-- Kontaktni kut određuje kvasi li stijenka fluid i zato mijenja kapilarni odziv.
+- Kontaktni kut određuje kvasi li tekućina stijenku i zato mijenja kapilarni odziv.
 - Dimenzije i vrijeme mikrofluidičkog punjenja ne proizlaze iz jedne formule bez otpora i graničnih uvjeta.
 - Višefazni i nenewtonovski problemi traže dodatne modele i provjeru njihovih pretpostavki.
 :::
@@ -859,20 +864,20 @@ Gradijenti su $100$, $200$, $400\ \text{s}^{-1}$. A: $\tau=20,40,80\ \text{Pa}$,
 Kapilarna igla unutarnjeg promjera $d = 0{,}50\ \text{mm}$ spojena je na spremnik vode za koju vrijedi $\sigma = 0{,}072\ \text{N/m}$, $\rho = 998\ \text{kg/m}^3$ i $\theta = 0^\circ$. Izlaz je na visini $H = 42\ \text{mm}$ iznad široke slobodne površine spremnika. Okolni zrak je na atmosferskom tlaku. Promatraju se dva **odvojena** kvazistatička stanja:
 
 1. Igla se puni, a konkavni meniskus još je u cijevi; izlazne kapljice nema. Odredi prirodni kapilarni uspon i najmanji nenegativni manometarski pretlak spremnika potreban da meniskus dosegne izlaz.
-2. Igla je potpuno ispunjena vodom, a na izlazu je gotovo sferna kapljica nominalnog promjera $D = 1{,}8\ \text{mm}$; u igli više nema zasebnog meniskusa ni zarobljenog zraka. Odredi potreban pretlak spremnika. U ovom modelu uzmi da je tlak neposredno ispod kapljice $4\sigma/D$ viši od okolnog; zanemari visinsku promjenu tlaka unutar same kapljice.
+2. Igla je potpuno ispunjena vodom, a na izlazu je gotovo sferna kapljica nominalnog promjera $D = 1{,}8\ \text{mm}$; u igli više nema zasebnog meniskusa ni zarobljenog zraka. Kontaktna linija kapljice smatra se zadržanom na rubu izlaza. Odredi potreban pretlak spremnika. U ovom modelu uzmi da je tlak neposredno ispod kapljice $4\sigma/D$ viši od okolnog; zanemari visinsku promjenu tlaka unutar same kapljice.
 
-U drugom stanju promjer kapljice može biti bilo gdje od $D_{min}=1{,}6\ \text{mm}$ do $D_{max}=2{,}0\ \text{mm}$; to su zadane granice, ne standardna nesigurnost. Usporedi regulatore raspona $0$–$0{,}50\ \text{kPa}$ i $0$–$0{,}60\ \text{kPa}$: koji pokriva zahtjeve obaju zadanih stanja i cijeli raspon promjera? Izračunaj najmanju tlačnu rezervu. Obrazloži zašto se pri formiranoj kapljici ne smije dodatno oduzeti tlak konkavnoga meniskusa. Zanemari gubitke pri protoku; zaključak ograniči na ova dva stanja, bez tvrdnje o tlaku tijekom prijelaznog oblikovanja kapljice.
+U drugom stanju promjer kapljice može biti bilo gdje od $D_{min}=1{,}6\ \text{mm}$ do $D_{max}=2{,}0\ \text{mm}$; to su zadane granice, ne standardna nesigurnost. Usporedi regulatore raspona $0$–$0{,}50\ \text{kPa}$ i $0$–$0{,}60\ \text{kPa}$: koji pokriva zahtjeve obaju zadanih stanja i cijeli raspon promjera? Izračunaj najmanju tlačnu rezervu. Obrazloži zašto se pri formiranoj kapljici ne smije dodatno oduzeti tlak konkavnoga meniskusa. Zanemari gubitke pri protoku; zaključak ograniči na ova dva stanja, bez tvrdnje o tlaku tijekom prijelaznog oblikovanja kapljice. Dodatno procijeni red veličine zanemarene hidrostatičke promjene kroz kapljicu, $\rho gD_{max}$. Usporedi ga s najmanjom rezervom i objasni opravdava li idealizirani račun odabir za stvaran uređaj.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Prvo stanje: $h_{cap}=4\sigma\cos\theta/(\rho gd)$ i $p_{M,1}=\max(0,\rho gH-4\sigma\cos\theta/d)$. Drugo stanje: $p_{M,2}=\rho gH+4\sigma/D$. Te relacije opisuju različite oblike jedne međupovršine. Za izbor regulatora provjeri oba kraja intervala promjera.
+Prvo stanje: $h_{cap}=4\sigma\cos\theta/(\rho gd)$ i $p_{M,1}=\max(0,\rho gH-4\sigma\cos\theta/d)$. Drugo stanje: $p_{M,2}=\rho gH+4\sigma/D$. Te relacije opisuju različite oblike jedne međupovršine. Za izbor regulatora provjeri oba kraja intervala promjera; tlak kroz visinu kapljice usporedi s rezervom modela.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$h_{cap}\approx58{,}8\ \text{mm}$; $p_{M,1}=0\ \text{Pa}$. Nominalno $p_{M,2}\approx0{,}571\ \text{kPa}$; interval je $0{,}555$–$0{,}591\ \text{kPa}$, s maksimumom pri $D_{min}$. Raspon do $0{,}50\ \text{kPa}$ nije dovoljan; do $0{,}60\ \text{kPa}$ pokriva zadana stanja uz najmanju rezervu $8{,}8\ \text{Pa}$. Formirana kapljica nema dodatni konkavni meniskus čiji bi tlak smanjio zahtjev. Prijelaz i protočni gubitci nisu provjereni.
+$h_{cap}\approx58{,}8\ \mathrm{mm}$; $p_{M,1}=0$. Nominalno $p_{M,2}\approx0{,}571\ \mathrm{kPa}$, raspon $0{,}555$–$0{,}591\ \mathrm{kPa}$ (maksimum pri $D_{min}$). Samo regulator do $0{,}60\ \mathrm{kPa}$ pokriva model, uz rezervu $8{,}8\ \mathrm{Pa}$. Procjena $\rho gD_{max}\approx19{,}6\ \mathrm{Pa}$ veća je od rezerve: stvarni uređaj treba precizniji model. Nema dodatnog konkavnog meniskusa; prijelaz i protočni gubitci nisu provjereni.
 :::
 ::::
 

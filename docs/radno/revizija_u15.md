@@ -9,17 +9,17 @@ presjek, granice 1D modela i numerički pokus.
 
 | Mjesto | Postojeći ID i uloga | Odluka i didaktička korist | Razina | Završni ID | Povezane datoteke/provjere | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| P1 | `ex-rezim-retencijski-kanal`; v i Fr pravokutnog kanala | ZADRŽATI osnovni izravni račun i vezu s prijenosom poremećaja | T1 | isti | verifier | planirano |
-| P2 | `ex-kriticni-preljev`; minimum energije | ZADRŽATI; provjeriti zaokruživanje minimalne energije | T2 | isti | verifier | planirano |
-| P3 | `ex-dvije-dubine`; numerički korijeni E(y) | ZADRŽATI kao vođeni postupak dviju grana | T2 | isti | notebook, verifier | planirano |
-| P4 | `ex-hidraulicki-skok-bazen`; spregnute dubine i disipacija | ZADRŽATI; bilanca količine gibanja i ograničenje duljine bazena jasno su navedeni | T3 | isti | verifier | planirano |
-| P5 | `ex-manning-osjetljivost`; kapacitet i hrapavost | ZADRŽATI kao jednostavan uvod u osjetljivost n | T3 | isti | verifier | planirano |
-| Z1 | `task-otvoreni-fr`; v i Fr | ZADRŽATI osnovnu tehniku; dopuniti smjer i brzine obaju valova te naputak | T1 | isti | SVG, verifier, D06 | planirano |
-| Z2 | `task-kriticna-dubina`; yc i Emin | ZADRŽATI jednostavnu primjenu minimuma, jasno navesti pravokutni kanal i model | T1 | isti | SVG, verifier, D06 | planirano |
-| Z3 | `task-trapezni-presjek`; geometrija A/T/P i Fr | ZADRŽATI: razlikovanje Dh i Rh nije ponavljanje pravokutnih primjera; dodati stvarno kotiran trapez | T2 | isti | SVG, verifier, D06 | planirano |
-| Z4 | `task-alternativne-dubine`; ponovno dva korijena E(y) | ZAMIJENITI: podkritični dotok preko povišenog dna, dopuštena visina i izbor ostvarene grane | T2 | `task-kontrolni-presjek-na-pragu` | stari alias, SVG, notebook, verifier, D06 | planirano |
-| Z5 | `task-skok-mjerenje`; sintetička mjerenja, R i uR | ZADRŽATI dijagnostiku; naglasiti zajednički q u oba presjeka, sintetičke podatke i ograničenje zaključka | T3 | isti | SVG, notebook, verifier, D06 | planirano |
-| Z6 | `task-klimatski-kanal`; tri stanja održavanja, kapacitet i bazen | ZADRŽATI integraciju i kompromis; razjasniti kriterij n+2un, zadano ulazno stanje bazena i potpunost D06 | T4 | isti | SVG, notebook, verifier, D06 | planirano |
+| P1 | `ex-rezim-retencijski-kanal`; v i Fr pravokutnog kanala | ZADRŽATI osnovni izravni račun i vezu s prijenosom poremećaja | T1 | isti | verifier | provedeno |
+| P2 | `ex-kriticni-preljev`; minimum energije | ZADRŽATI; provjeriti zaokruživanje minimalne energije | T2 | isti | verifier | provedeno |
+| P3 | `ex-dvije-dubine`; numerički korijeni E(y) | ZADRŽATI kao vođeni postupak dviju grana | T2 | isti | notebook, verifier | provedeno |
+| P4 | `ex-hidraulicki-skok-bazen`; spregnute dubine i disipacija | ZADRŽATI; bilanca količine gibanja i ograničenje duljine bazena jasno su navedeni | T3 | isti | verifier | provedeno |
+| P5 | `ex-manning-osjetljivost`; kapacitet i hrapavost | ZADRŽATI kao jednostavan uvod u osjetljivost n | T3 | isti | verifier | provedeno |
+| Z1 | `task-otvoreni-fr`; v i Fr | ZADRŽATI osnovnu tehniku; dopuniti smjer i brzine obaju valova te naputak | T1 | isti | SVG, verifier, D06 | provedeno |
+| Z2 | `task-kriticna-dubina`; yc i Emin | ZADRŽATI jednostavnu primjenu minimuma, jasno navesti pravokutni kanal i model | T1 | isti | SVG, verifier, D06 | provedeno |
+| Z3 | `task-trapezni-presjek`; geometrija A/T/P i Fr | ZADRŽATI: razlikovanje Dh i Rh nije ponavljanje pravokutnih primjera; dodati stvarno kotiran trapez | T2 | isti | SVG, verifier, D06 | provedeno |
+| Z4 | `task-alternativne-dubine`; ponovno dva korijena E(y) | ZAMIJENITI: podkritični dotok preko povišenog dna, dopuštena visina i izbor ostvarene grane | T2 | `task-kontrolni-presjek-na-pragu` | stari alias, SVG, notebook, verifier, D06 | provedeno |
+| Z5 | `task-skok-mjerenje`; sintetička mjerenja, R i uR | ZADRŽATI dijagnostiku; naglasiti zajednički q u oba presjeka, sintetičke podatke i ograničenje zaključka | T3 | isti | SVG, notebook, verifier, D06 | provedeno |
+| Z6 | `task-klimatski-kanal`; tri stanja održavanja, kapacitet i bazen | ZADRŽATI integraciju i kompromis; razjasniti kriterij n+2un, zadano ulazno stanje bazena i potpunost D06 | T4 | isti | SVG, notebook, verifier, D06 | provedeno |
 
 Matrica iznad čuva odluke zapisane prije provedbe; sve su provedene i
 provjerene kako je navedeno u rezultatima ispod.

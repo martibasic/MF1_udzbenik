@@ -1,122 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" role="img" aria-labelledby="u02fkue_title u02fkue_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:800px;height:auto;">
-  <title id="u02fkue_title">Kapilarni uspon etanola u staklenoj kapilari</title>
-  <desc id="u02fkue_desc">Lijevo: staklena kapilara promjera 1,0 mm uronjena u etanol, s konkavnim meniskusom, kontaktnim kutom 18 stupnjeva, povrsinskom napetoscu sigma prema gore uz stijenke na meniskusu i tezinom stupca G prema dolje, te kapilarnim usponom h. Desno: panel s izvodom h iz ravnoteze i rezultatom 1,08 cm.</desc>
-
-  <defs>
-    <linearGradient id="u02fkue_eta" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#d6eef7" />
-      <stop offset="1" stop-color="#8fc0d6" />
-    </linearGradient>
-    <pattern id="u02fkue_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
-    </pattern>
-    <marker id="u02fkue_sig" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0" />
-    </marker>
-    <marker id="u02fkue_g" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
-    </marker>
-    <marker id="u02fkue_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-    <marker id="u02fkue_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-  </defs>
-
-  <line x1="430" y1="40" x2="430" y2="420" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
-
-  <!-- ===================== LIJEVO: kapilara u etanolu ===================== -->
-  <!-- posuda (dno + bocne stijenke, otvorena) -->
-  <rect x="70" y="316" width="8" height="92" fill="url(#u02fkue_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <rect x="352" y="316" width="8" height="92" fill="url(#u02fkue_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <rect x="70" y="400" width="290" height="8" fill="url(#u02fkue_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- etanol u posudi -->
-  <rect x="78" y="320" width="274" height="80" fill="url(#u02fkue_eta)" />
-  <!-- slobodna povrsina u posudi -->
-  <line x1="78" y1="320" x2="352" y2="320" stroke="#1565c0" stroke-width="1.8" />
-
-  <!-- kapilara: staklene stijenke (vanjski 204..226) + etanol (unutarnji 207..223) -->
-  <rect x="204" y="120" width="22" height="270" fill="#eaf1f6" stroke="#9fb3c0" stroke-width="1.2" />
-  <rect x="207" y="200" width="16" height="190" fill="url(#u02fkue_eta)" />
-  <!-- konkavni meniskus: kontaktne tocke (207,202) i (223,202), sredina spustena na 214 -->
-  <path d="M207,202 Q215,214 223,202" fill="none" stroke="#0d47a1" stroke-width="1.6" />
-
-  <!-- povrsinska napetost sigma: strelice TOCNO na meniskusu, uz stijenke (kontaktne tocke), prema gore -->
-  <line x1="207" y1="202" x2="207" y2="174" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u02fkue_sig)" />
-  <line x1="223" y1="202" x2="223" y2="174" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u02fkue_sig)" />
-
-  <!-- kontaktni kut theta na lijevoj kontaktnoj tocki -->
-  <path d="M207,202 A11,11 0 0,1 213,212" fill="none" stroke="#b7600c" stroke-width="1.2" />
-
-  <!-- tezina stupca G (crvena, prema dolje) -->
-  <line x1="215" y1="244" x2="215" y2="304" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u02fkue_g)" />
-
-  <!-- ===== KOTE ===== -->
-  <!-- kota d (promjer): premali raspon -> strelice IZVANA prema unutra (tehnicko crtanje) -->
-  <line x1="207" y1="200" x2="207" y2="96" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="223" y1="200" x2="223" y2="96" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="183" y1="104" x2="207" y2="104" stroke="#b7600c" stroke-width="1.3" marker-end="url(#u02fkue_dim)" />
-  <line x1="247" y1="104" x2="223" y2="104" stroke="#b7600c" stroke-width="1.3" marker-end="url(#u02fkue_dim)" />
-
-  <!-- kota h (uspon): od slobodne povrsine (y=320) do meniskusa (y=202), desno -->
-  <line x1="223" y1="202" x2="306" y2="202" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="226" y1="320" x2="306" y2="320" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="306" y1="202" x2="306" y2="320" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u02fkue_dimL)" marker-end="url(#u02fkue_dim)" />
-
-  <!-- ===================== DESNO: PANEL S IZVODOM ===================== -->
-  <rect x="448" y="70" width="392" height="360" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="448" y="70" width="392" height="30" rx="10" fill="#1565c0" />
-  <rect x="448" y="86" width="392" height="14" fill="#1565c0" />
-  <!-- glavna formula (highlight) -->
-  <rect x="470" y="170" width="348" height="42" rx="8" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.3" />
-  <!-- rezultat badge -->
-  <rect x="470" y="272" width="348" height="44" rx="9" fill="#eaf6ee" stroke="#1e8449" stroke-width="1.6" />
-  <!-- separatori -->
-  <line x1="470" y1="158" x2="818" y2="158" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="470" y1="334" x2="818" y2="334" stroke="#e2e8ee" stroke-width="1" />
-
-  <!-- ===== TEKST (na vrhu) ===== -->
-  <text x="44" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Kapilara u etanolu</text>
-
-  <!-- sigma labela -->
-  <text x="238" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#1565c0">σ</text>
-  <line x1="236" y1="184" x2="225" y2="184" stroke="#1565c0" stroke-width="0.7" />
-
-  <!-- theta labela -->
-  <text x="150" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c">θ = 18°</text>
-  <line x1="178" y1="210" x2="206" y2="206" stroke="#b7600c" stroke-width="0.8" />
-
-  <!-- G labela -->
-  <text x="186" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#c0392b"><tspan font-weight="700">G</tspan></text>
-  <text x="186" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="end" fill="#a04030">težina stupca</text>
-
-  <!-- d labela -->
-  <text x="215" y="90" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">d</tspan> = 1,0 mm</text>
-
-  <!-- h labela -->
-  <text x="314" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#b7600c"><tspan font-style="italic">h</tspan> ≈ 10,8 mm</text>
-
-  <!-- etanol oznake -->
-  <text x="110" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#0d47a1">etanol</text>
-  <text x="110" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530">ρ = 790 kg/m³</text>
-  <text x="110" y="387" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530">σ = 0,022 N/m</text>
-
-  <!-- ===== DESNI PANEL TEKST ===== -->
-  <text x="644" y="91" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Izvod kapilarnog uspona</text>
-
-  <text x="644" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Ravnoteža: površinska sila (gore) = težina stupca (dolje)</text>
-  <text x="644" y="147" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">π d σ cosθ = ρ g (π d² / 4) h</text>
-
-  <text x="644" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#1565c0">h = 4σ cosθ / (ρ g d)</text>
-
-  <text x="644" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">h = 4·0,022·0,951 / (790·9,81·1,0·10⁻³)</text>
-  <text x="644" y="258" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">(cos 18° = 0,951)</text>
-
-  <text x="644" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#1e8449">h ≈ 0,0108 m ≈ 1,08 cm</text>
-
-  <text x="470" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">• θ &lt; 90° (cosθ &gt; 0) → razina raste</text>
-  <text x="470" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">• tanja kapilara → veći uspon (h ∝ 1/d)</text>
-  <text x="470" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">• cosθ &lt; 1 → manje od potpunog kvašenja</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" role="img" aria-labelledby="u02fku_title u02fku_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
+<title id="u02fku_title">Kapilarni uspon etanola uz kontaktni kut 18 stupnjeva</title><desc id="u02fku_desc">Jedna povezana količina etanola u spremniku i otvorenoj uronjenoj kapilari. Konkavni meniskus, tangentne površinske sile, kota uspona od slobodne površine i uvećani detalj stvarnog kontaktnog kuta kroz tekućinu.</desc>
+<defs>
+<linearGradient id="u02fku_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
+<linearGradient id="u02fku_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
+<linearGradient id="u02fku_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
+<pattern id="u02fku_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
+<marker id="u02fku_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u02fku_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
+<marker id="u02fku_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
+</defs>
+<rect width="880" height="460" fill="white"/>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
+<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
+Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
+Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
+<defs>
+<marker id="u02fku_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
+<marker id="u02fku_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
+<marker id="u02fku_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
+<marker id="u02fku_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
+</defs>
+<defs><linearGradient id="u02fku_metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient></defs>
+<!-- Fluidna ispuna nije mapa tlaka, brzine ili temperature. Debljine stijenki uvećane su radi čitljivosti. -->
+<text x="208" y="38" font-size="16" fill="#1a2530" text-anchor="middle" font-weight="700">Kapilara u etanolu</text>
+<defs><linearGradient id="u02fku_capfield" gradientUnits="userSpaceOnUse" x1="0" y1="188.10186207991958" x2="0" y2="412"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path id="u02fku_capfluid" d="M49.00000000 331.00000000 L247.00000000 331.00000000 L247.00000000 391.00000000 L252.00000000 391.00000000 L252.00000000 188.10186208 L252.08734403 188.36290587 L252.17923060 188.62238555 L252.27563172 188.88022206 L252.37651803 189.13633687 L252.48185879 189.39065196 L252.59162192 189.64308987 L252.70577398 189.89357370 L252.82428019 190.14202715 L252.94710447 190.38837455 L253.07420940 190.63254084 L253.20555626 190.87445166 L253.34110504 191.11403332 L253.48081445 191.35121283 L253.62464194 191.58591796 L253.77254369 191.81807720 L253.92447465 192.04761985 L254.08038854 192.27447597 L254.24023787 192.49857647 L254.40397395 192.71985308 L254.57154690 192.93823840 L254.74290568 193.15366591 L254.91799809 193.36606998 L255.09677079 193.57538592 L255.27916933 193.78154997 L255.46513815 193.98449933 L255.65462060 194.18417217 L255.84755897 194.38050767 L256.04389447 194.57344603 L256.24356731 194.76292848 L256.44651666 194.94889730 L256.65268071 195.13129584 L256.86199665 195.31006855 L257.07440073 195.48516095 L257.28982824 195.65651973 L257.50821356 195.82409268 L257.72949017 195.98782876 L257.95359067 196.14767809 L258.18044679 196.30359199 L258.40998943 196.45552295 L258.64214868 196.60342470 L258.87685380 196.74725218 L259.11403332 196.88696160 L259.35361498 197.02251038 L259.59552580 197.15385723 L259.83969209 197.28096216 L260.08603948 197.40378644 L260.33449294 197.52229266 L260.58497677 197.63644472 L260.83741468 197.74620785 L261.09172977 197.85154861 L261.34784458 197.95243491 L261.60568109 198.04883603 L261.86516076 198.14072260 L262.12620456 198.22806664 L262.38873296 198.31084152 L262.65266599 198.38902205 L262.91792327 198.46258440 L263.18442398 198.53150617 L263.45208696 198.59576637 L263.72083067 198.65534541 L263.99057324 198.71022516 L264.26123251 198.76038889 L264.53272604 198.80582133 L264.80497113 198.84650863 L265.07788484 198.88243840 L265.35138404 198.91359970 L265.62538543 198.93998303 L265.89980554 198.96158036 L266.17456079 198.97838511 L266.44956746 198.99039216 L266.72474181 198.99759786 L267.00000000 199.00000000 L267.27525819 198.99759786 L267.55043254 198.99039216 L267.82543921 198.97838511 L268.10019446 198.96158036 L268.37461457 198.93998303 L268.64861596 198.91359970 L268.92211516 198.88243840 L269.19502887 198.84650863 L269.46727396 198.80582133 L269.73876749 198.76038889 L270.00942676 198.71022516 L270.27916933 198.65534541 L270.54791304 198.59576637 L270.81557602 198.53150617 L271.08207673 198.46258440 L271.34733401 198.38902205 L271.61126704 198.31084152 L271.87379544 198.22806664 L272.13483924 198.14072260 L272.39431891 198.04883603 L272.65215542 197.95243491 L272.90827023 197.85154861 L273.16258532 197.74620785 L273.41502323 197.63644472 L273.66550706 197.52229266 L273.91396052 197.40378644 L274.16030791 197.28096216 L274.40447420 197.15385723 L274.64638502 197.02251038 L274.88596668 196.88696160 L275.12314620 196.74725218 L275.35785132 196.60342470 L275.59001057 196.45552295 L275.81955321 196.30359199 L276.04640933 196.14767809 L276.27050983 195.98782876 L276.49178644 195.82409268 L276.71017176 195.65651973 L276.92559927 195.48516095 L277.13800335 195.31006855 L277.34731929 195.13129584 L277.55348334 194.94889730 L277.75643269 194.76292848 L277.95610553 194.57344603 L278.15244103 194.38050767 L278.34537940 194.18417217 L278.53486185 193.98449933 L278.72083067 193.78154997 L278.90322921 193.57538592 L279.08200191 193.36606998 L279.25709432 193.15366591 L279.42845310 192.93823840 L279.59602605 192.71985308 L279.75976213 192.49857647 L279.91961146 192.27447597 L280.07552535 192.04761985 L280.22745631 191.81807720 L280.37535806 191.58591796 L280.51918555 191.35121283 L280.65889496 191.11403332 L280.79444374 190.87445166 L280.92579060 190.63254084 L281.05289553 190.38837455 L281.17571981 190.14202715 L281.29422602 189.89357370 L281.40837808 189.64308987 L281.51814121 189.39065196 L281.62348197 189.13633687 L281.72436828 188.88022206 L281.82076940 188.62238555 L281.91265597 188.36290587 L282.00000000 188.10186208 L282.00000000 391.00000000 L287.00000000 391.00000000 L287.00000000 331.00000000 L365.00000000 331.00000000 L365.00000000 412.00000000 L49.00000000 412.00000000 L49.00000000 331.00000000 Z" fill="url(#u02fku_capfield)" stroke="none" stroke-width="1.8" />
+<rect id="u02fku_captankleftbase" x="42" y="311" width="7" height="108" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<rect id="u02fku_captankleft" x="42" y="311" width="7" height="108" rx="0" fill="url(#u02fku_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u02fku_captankrightbase" x="365" y="311" width="7" height="108" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<rect id="u02fku_captankright" x="365" y="311" width="7" height="108" rx="0" fill="url(#u02fku_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u02fku_captankbottombase" x="42" y="412" width="330" height="7" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<rect id="u02fku_captankbottom" x="42" y="412" width="330" height="7" rx="0" fill="url(#u02fku_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<line id="u02fku_capsurface0" x1="49" y1="331" x2="247.0" y2="331" stroke="#1565c0" stroke-width="1.8"/>
+<rect id="u02fku_captube0leftbase" x="247.0" y="110" width="5" height="281" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<rect id="u02fku_captube0left" x="247.0" y="110" width="5" height="281" rx="0" fill="url(#u02fku_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u02fku_captube0rightbase" x="282.0" y="110" width="5" height="281" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<rect id="u02fku_captube0right" x="282.0" y="110" width="5" height="281" rx="0" fill="url(#u02fku_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<path id="u02fku_capinterface0" d="M252.0 188.10186207991958 A15.771933363574009 15.771933363574009 0 0 0 282.0 188.10186207991958" fill="none" stroke="#1565c0" stroke-width="1.8" />
+<line id="u02fku_capsurfaceLast" x1="287.0" y1="331" x2="365" y2="331" stroke="#1565c0" stroke-width="1.8"/>
+<path id="u02fku_capsigma0" d="M252.0 188.10186207991958 L238.4032522475023 146.25537536293282" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u02fku_pressureMarker)"/>
+<path id="u02fku_capsigma1" d="M282.0 188.10186207991958 L295.59674775249766 146.25537536293282" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u02fku_pressureMarker)"/>
+<text x="304" y="153" font-size="14" fill="#1565c0" text-anchor="start">σ</text>
+<line x1="252" y1="82" x2="252" y2="92" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="282" y1="82" x2="282" y2="92" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u02fku_diameter" d="M252 87 L282 87" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u02fku_dim)" marker-end="url(#u02fku_dim)"/>
+<text x="267.0" y="104" font-size="11" fill="#b7600c" text-anchor="middle">d = 1,0 mm</text>
+<line x1="342" y1="199" x2="352" y2="199" stroke="#b7600c" stroke-width="1.2"/>
+<line x1="342" y1="331" x2="352" y2="331" stroke="#b7600c" stroke-width="1.2"/>
+<path id="u02fku_height" d="M347 199 L347 331" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u02fku_dim)" marker-end="url(#u02fku_dim)"/>
+<line x1="282" y1="199" x2="352" y2="199" stroke="#b7600c" stroke-width="1"/>
+<text x="339" y="252" font-size="15" fill="#b7600c" text-anchor="end">h</text>
+<text x="339" y="272" font-size="12" fill="#b7600c" text-anchor="end">10,8 mm</text>
+<text x="68" y="356" font-size="12" fill="#1565c0" text-anchor="start">Etanol: ρ = 790 kg/m³</text>
+<text x="68" y="379" font-size="12" fill="#1565c0" text-anchor="start">σ = 0,022 N/m</text>
+<g id="u02fku_zoom" transform="translate(36 127)">
+<rect x="0" y="0" width="166" height="150" rx="7" fill="#f8fbff" stroke="#cbdce9" stroke-width="1.2"/>
+<text x="83" y="18" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="700">Uvećan kontakt</text>
+<defs><linearGradient id="u02fku_zoomfield" gradientUnits="userSpaceOnUse" x1="0" y1="60" x2="0" y2="128"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
+<path d="M33.00000000 62.67287360 L33.29114677 63.54301958 L33.59743534 64.40795182 L33.91877241 65.26740685 L34.25506010 66.12112288 L34.60619597 66.96883986 L34.97207306 67.81029956 L35.35257992 68.64524566 L35.74760065 69.47342384 L36.15701491 70.29458182 L36.58069801 71.10846947 L37.01852087 71.91483887 L37.47035013 72.71344439 L37.93604817 73.50404278 L38.41547313 74.28639320 L38.90847896 75.06025735 L39.41491550 75.82539949 L39.93462848 76.58158656 L40.46745958 77.32858823 L41.01324651 78.06617693 L41.57182301 78.79412800 L42.14301894 79.51221969 L42.72666030 80.22023328 L43.32256931 80.91795308 L43.93056444 81.60516657 L44.55046051 82.28166442 L45.18206868 82.94724055 L45.82519655 83.60169223 L46.47964824 84.24482011 L47.14522437 84.87642828 L47.82172222 85.49632434 L48.50893571 86.10431948 L49.20665551 86.70022849 L49.91466909 87.28386985 L50.63276079 87.85506577 L51.36071186 88.41364228 L52.09830056 88.95942921 L52.84530222 89.49226031 L53.60148930 90.01197329 L54.36663144 90.51840983 L55.14049559 91.01141566 L55.92284601 91.49084062 L56.71344439 91.95653865 L57.51204992 92.40836792 L58.31841932 92.84619078 L59.13230697 93.26987387 L59.95346495 93.67928814 L60.78164313 94.07430887 L61.61658923 94.45481573 L62.45804893 94.82069282 L63.30576590 95.17182869 L64.15948193 95.50811638 L65.01893697 95.82945345 L65.88386921 96.13574202 L66.75401519 96.42688879 L67.62910985 96.70280508 L68.50888664 96.96340683 L69.39307756 97.20861468 L70.28141328 97.43835391 L71.17362320 97.65255457 L72.06943556 97.85115138 L72.96857747 98.03408387 L73.87077504 98.20129631 L74.77575347 98.35273776 L75.68323709 98.48836210 L76.59294946 98.60812800 L77.50461348 98.71199900 L78.41795144 98.79994344 L79.33268515 98.87193454 L80.24853595 98.92795038 L81.16522488 98.96797388 L82.08247270 98.99199286 L83.00000000 99.00000000 L83.91752730 98.99199286 L84.83477512 98.96797388 L85.75146405 98.92795038 L86.66731485 98.87193454 L87.58204856 98.79994344 L88.49538652 98.71199900 L89.40705054 98.60812800 L90.31676291 98.48836210 L91.22424653 98.35273776 L92.12922496 98.20129631 L93.03142253 98.03408387 L93.93056444 97.85115138 L94.82637680 97.65255457 L95.71858672 97.43835391 L96.60692244 97.20861468 L97.49111336 96.96340683 L98.37089015 96.70280508 L99.24598481 96.42688879 L100.11613079 96.13574202 L100.98106303 95.82945345 L101.84051807 95.50811638 L102.69423410 95.17182869 L103.54195107 94.82069282 L104.38341077 94.45481573 L105.21835687 94.07430887 L106.04653505 93.67928814 L106.86769303 93.26987387 L107.68158068 92.84619078 L108.48795008 92.40836792 L109.28655561 91.95653865 L110.07715399 91.49084062 L110.85950441 91.01141566 L111.63336856 90.51840983 L112.39851070 90.01197329 L113.15469778 89.49226031 L113.90169944 88.95942921 L114.63928814 88.41364228 L115.36723921 87.85506577 L116.08533091 87.28386985 L116.79334449 86.70022849 L117.49106429 86.10431948 L118.17827778 85.49632434 L118.85477563 84.87642828 L119.52035176 84.24482011 L120.17480345 83.60169223 L120.81793132 82.94724055 L121.44953949 82.28166442 L122.06943556 81.60516657 L122.67743069 80.91795308 L123.27333970 80.22023328 L123.85698106 79.51221969 L124.42817699 78.79412800 L124.98675349 78.06617693 L125.53254042 77.32858823 L126.06537152 76.58158656 L126.58508450 75.82539949 L127.09152104 75.06025735 L127.58452687 74.28639320 L128.06395183 73.50404278 L128.52964987 72.71344439 L128.98147913 71.91483887 L129.41930199 71.10846947 L129.84298509 70.29458182 L130.25239935 69.47342384 L130.64742008 68.64524566 L131.02792694 67.81029956 L131.39380403 66.96883986 L131.74493990 66.12112288 L132.08122759 65.26740685 L132.40256466 64.40795182 L132.70885323 63.54301958 L133.00000000 62.67287360 L133.00000000 128.00000000 L33.00000000 128.00000000 Z" fill="url(#u02fku_zoomfield)" stroke="none" stroke-width="1.8" />
+<rect id="u02fku_zoom28base" x="28" y="31" width="5" height="97" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<rect id="u02fku_zoom28" x="28" y="31" width="5" height="97" rx="0" fill="url(#u02fku_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<rect id="u02fku_zoom133base" x="133" y="31" width="5" height="97" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<rect id="u02fku_zoom133" x="133" y="31" width="5" height="97" rx="0" fill="url(#u02fku_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
+<path id="u02fku_zoominterface" d="M33.0 62.67287359973196 A52.573111211913364 52.573111211913364 0 0 0 133.0 62.67287359973195" fill="none" stroke="#1565c0" stroke-width="1.6" />
+<line id="u02fku_zoomtangent" x1="33.0" y1="62.67287359973196" x2="48.45084971874737" y2="110.22569941448964" stroke="#b7600c" stroke-width="1" stroke-dasharray="3 3"/>
+<path id="u02fku_zoomangle" d="M44.43362879 97.86196470 L44.27997906 97.91151819 L44.12611458 97.96040078 L43.97203827 98.00861154 L43.81775307 98.05614957 L43.66326192 98.10301395 L43.50856775 98.14920379 L43.35367352 98.19471821 L43.19858217 98.23955635 L43.04329665 98.28371735 L42.88781991 98.32720037 L42.73215493 98.37000458 L42.57630467 98.41212917 L42.42027208 98.45357334 L42.26406015 98.49433629 L42.10767184 98.53441726 L41.95111014 98.57381547 L41.79437802 98.61253018 L41.63747846 98.65056065 L41.48041446 98.68790616 L41.32318901 98.72456600 L41.16580510 98.76053946 L41.00826572 98.79582586 L40.85057387 98.83042454 L40.69273256 98.86433483 L40.53474479 98.89755608 L40.37661357 98.93008767 L40.21834191 98.96192897 L40.05993283 98.99307939 L39.90138933 99.02353832 L39.74271444 99.05330518 L39.58391118 99.08237941 L39.42498257 99.11076046 L39.26593164 99.13844778 L39.10676142 99.16544086 L38.94747493 99.19173916 L38.78807521 99.21734220 L38.62856529 99.24224949 L38.46894821 99.26646054 L38.30922701 99.28997491 L38.14940474 99.31279214 L37.98948442 99.33491180 L37.82946911 99.35633347 L37.66936186 99.37705674 L37.50916571 99.39708121 L37.34888371 99.41640651 L37.18851891 99.43503226 L37.02807437 99.45295811 L36.86755314 99.47018373 L36.70695828 99.48670878 L36.54629284 99.50253294 L36.38555989 99.51765592 L36.22476248 99.53207743 L36.06390368 99.54579719 L35.90298654 99.55881495 L35.74201414 99.57113045 L35.58098953 99.58274346 L35.41991578 99.59365376 L35.25879596 99.60386114 L35.09763314 99.61336541 L34.93643038 99.62216639 L34.77519076 99.63026390 L34.61391733 99.63765780 L34.45261318 99.64434794 L34.29128138 99.65033420 L34.12992499 99.65561646 L33.96854709 99.66019462 L33.80715075 99.66406860 L33.64573904 99.66723832 L33.48431504 99.66970372 L33.32288181 99.67146475 L33.16144244 99.67252139 L33.00000000 99.67287360" fill="none" stroke="#b7600c" stroke-width="1.6" />
+<text x="73" y="117" font-size="12" fill="#b7600c" text-anchor="start">θ = 18°</text>
+<text x="83" y="143" font-size="10" fill="#1565c0" text-anchor="middle">kut kroz tekućinu</text>
+</g>
+<line x1="200" y1="171" x2="249" y2="188.10186207991958" stroke="#7a8a96" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="448" y="62" width="405" height="342" rx="9" fill="#f8fbff" stroke="#cbdce9" stroke-width="1.2"/>
+<rect x="448" y="62" width="405" height="28" rx="7" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<text x="650.5" y="81" font-size="13" fill="white" text-anchor="middle" font-weight="700">Ravnoteža kapilarnog uspona</text>
+<text x="650" y="125" font-size="12" fill="#1565c0" text-anchor="middle">Vertikalna sila duž oboda = težina stupca</text>
+<text x="650" y="169" font-size="20" fill="#1565c0" text-anchor="middle" font-weight="700">πdσ cosθ = ρg (πd²/4)h</text>
+<text x="650" y="220" font-size="21" fill="#1565c0" text-anchor="middle" font-weight="700">h = 4σ cosθ/(ρgd)</text>
+<text x="650" y="270" font-size="19" fill="#1e8449" text-anchor="middle" font-weight="700">h ≈ 0,0108 m = 1,08 cm</text>
+<text x="650" y="316" font-size="12" fill="#1565c0" text-anchor="middle">θ &lt; 90°: uspon; uža kapilara: veći h</text>
+<text x="650" y="347" font-size="12" fill="#1565c0" text-anchor="middle">Zanemaren volumen meniskusa.</text>
+<text x="650" y="375" font-size="11" fill="#1565c0" text-anchor="middle">Promjer i visina nisu u istom mjerilu.</text>
+</g>
 </svg>

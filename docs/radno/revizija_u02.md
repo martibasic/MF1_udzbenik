@@ -146,3 +146,112 @@ A4 stranica), kao i provjere normalizacije, aktualnosti manifesta/ključa i
 `git diff --check`. Brojčani sadržaj nije mijenjan pa numerički testovi nisu
 ponavljani. Ovim zahvatom mijenjaju se samo SVG i interne uredničke upute;
 nije napravljen commit ni push.
+
+## Ponovni pregled nakon U15 — 22. rujna 2026.
+
+Polazište: `2a447bf`. Pročitani su kanonski P1–P6 i Z1–Z6, verifier i notebook;
+vizualno je pregledano svih sedam referenciranih SVG-ova. Ovaj prošireni
+pregled obuhvaća i stvarne pogreške primjera i objašnjenja.
+
+### Matrica prije provedbe
+
+| Mjesto | Postojeći ID i uloga | Odluka i korist | Razina | ID nakon dorade | Veze | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| P1 | `ex-u02-pretvorba-dinamicke-u-kinematicku-viskoznost-t1`; pretvorba μ/ρ | ZADRŽATI; osnovni račun; sile na skici vezati uz ploču | T1 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| P2 | `ex-u02-smicno-naprezanje-u-tankom-uljnom-sloju-t2`; Couetteov gradijent i sila | ZADRŽATI; prianjanje, sile otpora i odvojen kapilarni prizor | T2 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| P3 | `ex-u02-kapilarni-uspon-etanola-u-staklenoj-cjevcici-t1`; kapilarni uspon s θ | ZADRŽATI; stvarni kut 18°, otvoreni uronjeni ulaz i kota razine | T1 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| P4 | `ex-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom-t3`; punjenje i izlazna kapljica | PREPRAVITI; odvojiti stanja jedne međupovršine, ukloniti dvostruki kapilarni doprinos i ograničiti statički model | T3 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| P5 | `ex-u02-hladni-start-i-radna-temperatura-koliko-kosta`; temperatura i viskozni otpor | ZADRŽATI; popraviti zaokruživanje iz punog računa, sile otpora i prikaz tankog procjepa | T2 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| P6 | `ex-u02-mikrofluidicki-kanal-u-lab-on-chip-ure`; kvašenje mikrokanala | ZADRŽATI; definirati predznak tlačnog skoka i granicu idealnog uspona | T2 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| Z1 | `task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se`; osnovno smicanje | ZADRŽATI; nužna temeljna tehnika, smjer sila i prianjanje | T1 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| Z2 | `task-kapljica-i-sapunasti-mjehur`; kapljica nasuprot filmu | ZADRŽATI; broj međupovršina i stvarna kota promjera | T1 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| Z3 | `task-ploca-izmedu-dva-procjepa`; dvije strane ploče | ZADRŽATI; zasebni gradijenti, omjer procjepa i oba otpora | T2 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| Z4 | `task-u02-kapilara-promjera-uronjena-je-u-etanol-za`; usporedba dviju kapilara | ZADRŽATI; omjeri promjera i uspona 2:1, isti fluid bez zakrpa | T2 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| Z5 | `task-newtonski-model-iz-mjerenja`; izbor konstitutivnog modela iz podataka | ZADRŽATI; obvezni ishod pokriven mjerenjima, uskladiti notebook | T3 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+| Z6 | `task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na`; intervalna odluka o regulatoru | PREPRAVITI dopunom procjene zanemarenog tlaka unutar kapljice; rezerva idealnog modela ne potvrđuje stvarni uređaj | T4 | isti | izvor, SVG, verifier, notebook; D06 za Z | provedeno |
+
+`rewrite_status=complete`; `rewrite_level=selective`;
+`sketch_requirement=provjera i ciljana dorada svih sedam postojećih SVG-ova`.
+
+Ponavljanja su opravdana u Z1/Z4 kao temeljna vježba. Z2 uspoređuje fizikalne
+modele, Z3 dijagnosticira pogrešan račun, Z5 ispituje model iz više podataka,
+a Z6 provjerava interval i granicu modela. Nije potrebna nova banka zamjena.
+
+Početni nalazi: kapilarni prizor u uvodnoj slici nedostaje; neke oznake sila
+nemaju jasno tijelo ili smjer; kut 18° nije geometrijski provjeren. P4 sadrži
+pogrešan rezultat 347 Pa jer pribraja izlaznu kapljicu uz još prisutan
+konkavni meniskus. P5 računa snage iz prerano zaokruženih međurezultata.
+Notebook nije usklađen s aktualnim Z i ne završava pitanjima interpretacije.
+Protokol ima obrnuto pravilo konkavnosti za SVG koordinatu y; ispravak pravila
+spriječit će ponavljanje iste pogreške.
+
+Fizikalne definicije provjerene su prema MIT 2.25 (Young–Laplace, kontaktni
+kut i kapilarni uspon) i MIT NNF (kapilarnost nasuprot gravitaciji):
+https://web.mit.edu/2.25/www/225_sect_11.html i
+https://web.mit.edu/nnf/education/wettability/gravity.html.
+Brojčana procjena tlaka kroz kapljicu autorska je dopuna postojećih podataka,
+a ne novi pokus ili specifikacija proizvođača.
+
+### Provedba i provjere
+
+Zadržani su svih šest primjera, šest vježbi, razine i ID-jevi. Osnovne
+vježbe ostaju kratke. Z5 i dalje provjerava konstitutivni model na svim
+sintetičkim mjernim točkama; Z6 dopunjen je procjenom zanemarenog tlaka
+kroz kapljicu. Za Z6 model daje raspon 555,196–591,196 Pa i rezervu
+8,804 Pa, dok je skala ρgDmax = 19,581 Pa: pozitivna rezerva u tom modelu
+ne potvrđuje stvarni uređaj.
+
+P4 sada odvaja konkavni meniskus pri punjenju od pune igle s formiranom
+kapljicom. Pretlaci su 227,423 i 707,423 Pa; prethodni rezultat 347 Pa
+nepravilno je oduzimao nepostojeći dodatni meniskus. Izričito su zadani
+okolni tlak, zadržavanje kontaktne linije na rubu, zanemarena težina kapljice
+i ograničenje na odvojena statička stanja. P5 računa iz punih međurezultata
+(579 W i 57,9 W), uz suprotan smjer sile ulja i brzine vratila. U definiciji
+površinske sile razdvojene su komponente po obodu; ispravljena je formulacija
+kvašenja i preciziran predznak skoka tlaka na konkavnom meniskusu.
+
+Sedam postojećih SVG datoteka zadržava viewBox i sustav panela, paletu,
+šrafure i tipografiju. Uvod ponovno sadrži stvarni kapilarni prizor.
+Kapilarni fluid ima jednu prostornu ispunu i stvarne uronjene otvore.
+Kružni SVG lukovi i vektori imaju provjerene tangente; detalj kontakta mjeri
+18° kroz tekućinu. Z3 čuva omjer dvaju procjepa 1:2, Z4 omjer promjera 1:2
+i uspona 2:1, a kapljica Z6 spojena je s punom iglom bez unutarnjeg meniskusa.
+Promjeri, hod visine i omjeri označeni su uz navedena mjerila. Protokol je
+ispravljen tako da konkavnost poštuje SVG os y i stvarni kontaktni kut.
+
+Notebook sada koristi etanol iz Z4, zasebno označenu nastavnu propagaciju
+standardne nesigurnosti, Z3, izbor modela Z5 i tlačne bilance P4/Z6.
+Sadrži neovisnu provjeru analitičkih derivacija, inverznog rješenja,
+energetske bilance smicanja, izmijenjene mjerne točke i granica regulatora;
+završava pitanjima interpretacije. Usklađeni su D01, D03, generirani D06,
+verifier i manifest. Pri proširenju nisu dodane nove javne task oznake.
+
+Izvršene provjere:
+
+- `verify_u02.py`: 80 provjera, PASS. Tolerancije zaokruženih rezultata
+  vezane su uz objavljenu preciznost, uz strojnu toleranciju na polovici
+  posljednje znamenke; dodane su provjere predznaka, bilanci i granica.
+- `verify_all.py`: 1332 rezultata (1113 golden usporedbi i 219 invarijanti),
+  22 dodatne fizikalne provjere, 90/90 ugovora i bez rupa ili tautologija.
+- `check_u02_sketch_geometry.py`: PASS za svih sedam stvarnih SVG-ova.
+  Vizualno su pregledane i izvorne i konačne rasterizacije; nema teksta
+  izvan kadra. Provjera geometrije ne ovisi o privremenom generatoru.
+- Notebook izvršen u čistom kernelu: ciljani prolaz 7,05 s; zajednički
+  prolaz svih 17 notebookova također PASS (ukupno 55,53 s).
+- Struktura publikacije, Typst, normalizacija, manifest, D06, QR i CFD
+  paketi: PASS; 87 primjera i 90 vježbi ostaju očuvani.
+- HTML U02 na 320/768/1440 px: šest zadataka, tri stara aliasa, jedinstveni
+  ID-jevi, 12 sklopivih naputaka/odgovora preko tipkovnice i bez prelijevanja;
+  automatizirani WCAG A/AA PASS. D06 ima šest cjelovitih odgovora i povratnih
+  poveznica; formule nisu odrezane generatorom.
+- Puni HTML i nativni PDF obnovljeni. PDF ima 319 A4 stranica; audit PASS.
+  Slike su pregledane na stranicama 33, 36, 40, 41, 42, 44 i 49, tlačna
+  bilanca na stranici 43, formula u D01 na 269 i odgovori Z3–Z6 na 301.
+- JupyterLite obnovljen; audit potvrđuje aktualnih 17 notebookova,
+  četiri ekstenzije i Pyodide. Audit HTML-a: 24 stranice, 222 slike,
+  1932 poveznice i 450 sklopivih blokova, PASS.
+
+Fizikalne aproksimacije ostaju izričito označene; ovo nije tvrdnja da je
+statička kapljica vjeran model cijeloga procesa doziranja. Završni prolaz kroz
+72 prikaza, A4 ispis, WCAG i JupyterLite Python do stanja Idle prošao je
+23. rujna 2026.; zajednička evidencija sadrži dovršeni pregled svih zahtjeva.

@@ -67,6 +67,7 @@ Sažetak služi za brzo pronalaženje oznaka, jedinica i radnih relacija. Prije 
 | $\tau = \mu\,dv/dy$ | Maslinovo ulje $\mu \approx 0{,}08\,\text{Pa s}$, $dv/dy = 100\,\text{s}^{-1}$ → $\tau = 8\,\text{Pa}$. |
 | $\nu = \mu / \rho$ | Voda na $20\,^\circ\text{C}$: $\nu \approx 10^{-6}\,\text{m}^2/\text{s}$; zrak: $\nu \approx 1{,}5 \cdot 10^{-5}\,\text{m}^2/\text{s}$. |
 | $h = 4\sigma\cos\theta / (\rho g d)$ | Voda u staklenoj kapilari $d = 1\,\text{mm}$, $\theta \approx 0$: $h \approx 30\,\text{mm}$. |
+| $p_{M,1}=\max(0,\rho gH-4\sigma\cos\theta/d)$; $p_{M,2}=\rho gH+4\sigma/D$ | Dva odvojena stanja mikrodozatora: konkavni meniskus pri punjenju i zatim puna igla s kapljicom. P4 u pog. 2 daje 227 Pa i 707 Pa. Drugi izraz zanemaruje težinu kapljice i ne određuje tlak tijekom njezina rasta. |
 | $\Delta p = 4\sigma / d$ (sferna kapljica ili mjehurić s jednim sučeljem) | Kapljica vode $d = 1\,\text{mm}$, $\sigma = 0{,}072\,\text{N/m}$: $\Delta p \approx 288\,\text{Pa}$. Tanka sapunica ima dva sučelja i daje $\Delta p\approx8\sigma/d$. |
 
 ## pog. 3–6: Hidrostatika, plohe i uzgon
