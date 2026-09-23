@@ -15,7 +15,7 @@ Procijenjeno vrijeme uz poglavlja služi planiranju samostalnog rada. Ukupno je 
 1. Uvod određuje fizikalno pitanje i opseg modela poglavlja.
 2. Izvodi povezuju skicu, pretpostavke i značenje pojedinih članova jednadžbe.
 3. Riješeni primjeri uspostavljaju početnu jednadžbu i slijed proračuna.
-4. Zadatci za vježbu razvrstani su po razini samostalnog izbora modela; mrežno izdanje sadrži sklopive smjernice i kontrolne rezultate, a PDF izdanje odgovarajući dodatak F.
+4. Zadatci za vježbu razvrstani su po razini samostalnog izbora modela; mrežno izdanje sadrži sklopive smjernice i kontrolne rezultate, a izdanje u PDF-u odgovarajući dodatak F.
 5. Sažetak poglavlja okuplja osnovne modele, granice njihove primjene i inženjersko značenje rezultata.
 
 Kratki primjeri uvode pojedinu relaciju, a cjeloviti zadatci povezuju više koraka. Okviri *Fizikalno značenje* tumače rezultat, dok *Granica modela* objašnjava kada odabrane pretpostavke prestaju vrijediti.
@@ -35,18 +35,18 @@ Razine T1–T4, sitno navedene na kraju zadatka, pokazuju koliko samostalnog izb
 | **T3** | Izbor ili povezivanje modela uz obrazloženje pretpostavki. |
 | **T4** | Procjenu nesigurnosti, rad s nepotpunim podatcima ili obrazloženu inženjersku odluku. |
 
-U svakom je poglavlju šest zadataka, od T1 do T4. Niže razine oslanjaju se na neposredno primijenjene modele, dok T3 i T4 zahtijevaju obrazloženje odabranoga postupka, pretpostavki i zaključka.
+U svakom je poglavlju šest zadataka, od T1 do T4. Zadatci nižih razina oslanjaju se na izravnu primjenu modela, dok T3 i T4 zahtijevaju obrazloženje odabranoga postupka, pretpostavki i zaključka.
 
 ## Numerički pokusi i izdanja
 
 Numerički pokusi služe istraživanju utjecaja promjene podataka na rezultat. Bilježnice (*Jupyter notebooks*) dostupne su preko poveznica ili QR kodova, bez prijave u JupyterLiteu; dostupna je i poveznica za Google Colab.
 
-**Za čitanje i rješavanje zadataka dovoljan je tekst udžbenika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. PDF izdanje namijenjeno je ispisu i radu bez mrežne veze.
+**Za čitanje i rješavanje zadataka dovoljan je tekst udžbenika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. Izdanje u PDF-u namijenjeno je ispisu i radu bez mrežne veze.
 
 ## Dodaci za brzo snalaženje
 
 - **A — Sažetak formula i oznaka:** podsjetnik na relacije, jedinice i uvjete primjene.
-- **B — Pojmovnik:** kratke definicije i upute na pripadno poglavlje.
+- **B — Pojmovnik:** kratke definicije i upućivanja na pripadno poglavlje.
 - **C — Tipične pogreške:** pomoć pri traženju pogreške u vlastitom postupku.
 - **D — Numerička mehanika fluida:** dodatno čitanje o numeričkim metodama i provjeri simulacija.
 - **E — Literatura i izvori:** izvori i preporučeno čitanje.

@@ -1832,8 +1832,8 @@
         "anchor": "#task-gustoca-ulja-iz-vaganja"
       },
       "statement": {
-        "markdown": "Prazna posuda ima masu $m_0 = 42{,}6\\ \\text{g}$. S volumenom ulja $V_1 = 50{,}0\\ \\text{cm}^3$ njezina ukupna masa iznosi $m_1 = 85{,}5\\ \\text{g}$, a s volumenom $V_2 = 100{,}0\\ \\text{cm}^3$ ukupna masa iznosi $m_2 = 128{,}7\\ \\text{g}$. Oba mjerenja odnose se na isto homogeno ulje pri istoj temperaturi. Uzmi $g = 9{,}81\\ \\text{m/s}^2$ i referentnu gustoću vode $\\rho_v = 1000\\ \\text{kg/m}^3$. Odredi gustoću iz svakog mjerenja, njihovu aritmetičku sredinu te pripadne specifičnu težinu i relativnu gustoću. Objasni zašto se masa pune posude ne smije izravno podijeliti volumenom ulja. Je li mala razlika dobivenih gustoća dovoljan dokaz da ulje nije homogeno?",
-        "sha256": "740130c10579887df86245a2bc005540e9ba7223de0b9175ec5e081adf72be52",
+        "markdown": "Prazna posuda ima masu $m_0 = 42{,}6\\ \\text{g}$. S volumenom ulja $V_1 = 50{,}0\\ \\text{cm}^3$ njezina ukupna masa iznosi $m_1 = 85{,}5\\ \\text{g}$, a s volumenom $V_2 = 100{,}0\\ \\text{cm}^3$ ukupna masa iznosi $m_2 = 128{,}7\\ \\text{g}$. Oba mjerenja odnose se na isto homogeno ulje pri istoj temperaturi. Uzmi $g = 9{,}81\\ \\text{m/s}^2$ i referentnu gustoću vode $\\rho_v = 1000\\ \\text{kg/m}^3$. Odredi gustoću iz svakog mjerenja, njihovu aritmetičku sredinu te pripadnu specifičnu težinu i relativnu gustoću. Objasni zašto se masa pune posude ne smije izravno podijeliti volumenom ulja. Je li mala razlika dobivenih gustoća dovoljan dokaz da ulje nije homogeno?",
+        "sha256": "b7a0ce5c4db04989bbb889760987bef019b47d21e867320a8f5b0108b000b5b0",
         "authoritative": true
       },
       "input_data": {
@@ -4078,7 +4078,7 @@
         "explicit_status": "none_identified_in_statement_or_hint",
         "defaults": [
           {
-            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 741
@@ -4291,7 +4291,7 @@
         "explicit_status": "declared_and_extracted",
         "defaults": [
           {
-            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 741
@@ -4539,7 +4539,7 @@
         "explicit_status": "declared_and_extracted",
         "defaults": [
           {
-            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 741
@@ -4879,7 +4879,7 @@
         "explicit_status": "none_identified_in_statement_or_hint",
         "defaults": [
           {
-            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 741
@@ -5010,8 +5010,8 @@
         "anchor": "#task-newtonski-model-iz-mjerenja"
       },
       "statement": {
-        "markdown": "U nastavnom pokusu ispituju se uzorci A i B između nepomične i pokretne ploče. Samo jedna strana pokretne ploče površine $S = 0{,}010\\ \\text{m}^2$ dodiruje uzorak; razmak ploča je $\\delta = 1{,}0\\ \\text{mm}$. Pri stalnoj temperaturi dobiveni su sljedeći sintetički podatci. Za ovu idealiziranu usporedbu zanemari mjernu nesigurnost, trenje mehanizma, klizanje uz stijenku i rubne učinke. Smični je profil u svakom stacionarnom pokusu linearan; Newtonsko ponašanje tek treba provjeriti. | Brzina $v$ (m/s) | Vučna sila uzorka A (N) | Vučna sila uzorka B (N) | | ---: | ---: | ---: | | 0,10 | 0,20 | 0,30 | | 0,20 | 0,40 | 0,45 | | 0,40 | 0,80 | 0,60 | Za svaki red odredi iznos gradijenta brzine, naprezanja i omjer naprezanja prema gradijentu. Za koji je uzorak prihvatljiv Newtonski model sa stalnom viskoznošću u ispitanom rasponu? Tim modelom predvidi silu pri brzini $v_* = 0{,}30\\ \\text{m/s}$. Za drugi uzorak pokaži koliko bi na najvećoj mjerenoj brzini pogriješio račun sa stalnom viskoznošću određenom samo iz prvog retka. Jesu li tri retka dovoljna za jedinstven izbor nenewtonskog zakona ili za zaključak o ponašanju izvan ispitanog raspona?",
-        "sha256": "5b8ff5a34157e1b9d6ccb43f691235c08dc6cbe09c90ac07e18fb32fc73eaa65",
+        "markdown": "U nastavnom pokusu ispituju se uzorci A i B između nepomične i pokretne ploče. Samo jedna strana pokretne ploče površine $S = 0{,}010\\ \\text{m}^2$ dodiruje uzorak; razmak ploča je $\\delta = 1{,}0\\ \\text{mm}$. Pri stalnoj temperaturi dobiveni su sljedeći sintetički podatci. Za ovu idealiziranu usporedbu zanemari mjernu nesigurnost, trenje mehanizma, klizanje uz stijenku i rubne učinke. Smični je profil u svakom stacionarnom pokusu linearan; newtonsko ponašanje tek treba provjeriti. | Brzina $v$ (m/s) | Vučna sila uzorka A (N) | Vučna sila uzorka B (N) | | ---: | ---: | ---: | | 0,10 | 0,20 | 0,30 | | 0,20 | 0,40 | 0,45 | | 0,40 | 0,80 | 0,60 | Za svaki red odredi iznos gradijenta brzine i naprezanja te omjer naprezanja i gradijenta brzine. Za koji je uzorak prihvatljiv newtonski model sa stalnom viskoznošću u ispitanom rasponu? Tim modelom predvidi silu pri brzini $v_* = 0{,}30\\ \\text{m/s}$. Za drugi uzorak pokaži koliko bi na najvećoj mjerenoj brzini pogriješio račun sa stalnom viskoznošću određenom samo iz prvog retka. Jesu li tri retka dovoljna za jedinstven izbor nenewtonskog zakona ili za zaključak o ponašanju izvan ispitanog raspona?",
+        "sha256": "aee084693a6bf5e263b24582598b24012c89faa104236adc1e7d00f71ebaa768",
         "authoritative": true
       },
       "input_data": {
@@ -5080,7 +5080,7 @@
         "explicit_status": "declared_and_extracted",
         "defaults": [
           {
-            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 741
@@ -5106,7 +5106,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "Gradijenti su $100$, $200$, $400\\ \\text{s}^{-1}$. A: $\\tau=20,40,80\\ \\text{Pa}$, $\\mu=0{,}20\\ \\text{Pa s}$ i $F_*=0{,}60\\ \\text{N}$. B: $\\tau=30,45,60\\ \\text{Pa}$, prividne viskoznosti $0{,}30$, $0{,}225$, $0{,}15\\ \\text{Pa s}$. Prva točka B predviđa $1{,}20\\ \\text{N}$ umjesto $0{,}60\\ \\text{N}$. A je usklađen s Newtonskim modelom u ispitanom rasponu; B nije. Podatci ne određuju jedinstven novi zakon ni ekstrapolaciju.",
+        "markdown": "Gradijenti su $100$, $200$, $400\\ \\text{s}^{-1}$. A: $\\tau=20,40,80\\ \\text{Pa}$, $\\mu=0{,}20\\ \\text{Pa s}$ i $F_*=0{,}60\\ \\text{N}$. B: $\\tau=30,45,60\\ \\text{Pa}$, prividne viskoznosti $0{,}30$, $0{,}225$, $0{,}15\\ \\text{Pa s}$. Prva točka B predviđa $1{,}20\\ \\text{N}$ umjesto $0{,}60\\ \\text{N}$. A je usklađen s newtonskim modelom u ispitanom rasponu; B nije. Podatci ne određuju jedinstven novi zakon ni ekstrapolaciju.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
@@ -5614,8 +5614,8 @@
         "anchor": "#task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na"
       },
       "statement": {
-        "markdown": "Kapilarna igla unutarnjeg promjera $d = 0{,}50\\ \\text{mm}$ spojena je na spremnik vode za koju vrijedi $\\sigma = 0{,}072\\ \\text{N/m}$, $\\rho = 998\\ \\text{kg/m}^3$ i $\\theta = 0^\\circ$. Izlaz je na visini $H = 42\\ \\text{mm}$ iznad široke slobodne površine spremnika. Okolni zrak je na atmosferskom tlaku. Promatraju se dva **odvojena** kvazistatička stanja: 1. Igla se puni, a konkavni meniskus još je u cijevi; izlazne kapljice nema. Odredi prirodni kapilarni uspon i najmanji nenegativni manometarski pretlak spremnika potreban da meniskus dosegne izlaz. 2. Igla je potpuno ispunjena vodom, a na izlazu je gotovo sferna kapljica nominalnog promjera $D = 1{,}8\\ \\text{mm}$; u igli više nema zasebnog meniskusa ni zarobljenog zraka. Kontaktna linija kapljice smatra se zadržanom na rubu izlaza. Odredi potreban pretlak spremnika. U ovom modelu uzmi da je tlak neposredno ispod kapljice $4\\sigma/D$ viši od okolnog; zanemari visinsku promjenu tlaka unutar same kapljice. U drugom stanju promjer kapljice može biti bilo gdje od $D_{min}=1{,}6\\ \\text{mm}$ do $D_{max}=2{,}0\\ \\text{mm}$; to su zadane granice, ne standardna nesigurnost. Usporedi regulatore raspona $0$–$0{,}50\\ \\text{kPa}$ i $0$–$0{,}60\\ \\text{kPa}$: koji pokriva zahtjeve obaju zadanih stanja i cijeli raspon promjera? Izračunaj najmanju tlačnu rezervu. Obrazloži zašto se pri formiranoj kapljici ne smije dodatno oduzeti tlak konkavnoga meniskusa. Zanemari gubitke pri protoku; zaključak ograniči na ova dva stanja, bez tvrdnje o tlaku tijekom prijelaznog oblikovanja kapljice. Dodatno procijeni red veličine zanemarene hidrostatičke promjene kroz kapljicu, $\\rho gD_{max}$. Usporedi ga s najmanjom rezervom i objasni opravdava li idealizirani račun odabir za stvaran uređaj.",
-        "sha256": "418fee46259b2eca71f6a80ca88840e86838549204e27f7632dd7eea89fd2aa0",
+        "markdown": "Kapilarna igla unutarnjeg promjera $d = 0{,}50\\ \\text{mm}$ spojena je na spremnik vode za koju vrijedi $\\sigma = 0{,}072\\ \\text{N/m}$, $\\rho = 998\\ \\text{kg/m}^3$ i $\\theta = 0^\\circ$. Izlaz je na visini $H = 42\\ \\text{mm}$ iznad široke slobodne površine spremnika. Okolni zrak je na atmosferskom tlaku. Promatraju se dva **odvojena** kvazistatička stanja: 1. Igla se puni, a konkavni meniskus još je u cijevi; izlazne kapljice nema. Odredi prirodni kapilarni uspon i najmanji nenegativni manometarski pretlak spremnika potreban da meniskus dosegne izlaz. 2. Igla je potpuno ispunjena vodom, a na izlazu je gotovo sferna kapljica nominalnog promjera $D = 1{,}8\\ \\text{mm}$; u igli više nema zasebnog meniskusa ni zarobljenog zraka. Kontaktna linija kapljice smatra se zadržanom na rubu izlaza. Odredi potreban pretlak spremnika. U ovom modelu uzmi da je tlak neposredno ispod kapljice $4\\sigma/D$ viši od okolnog; zanemari visinsku promjenu tlaka unutar same kapljice. U drugom stanju promjer kapljice može biti u rasponu od $D_{min}=1{,}6\\ \\text{mm}$ do $D_{max}=2{,}0\\ \\text{mm}$; to su zadane granice, ne standardna nesigurnost. Usporedi regulatore raspona $0$–$0{,}50\\ \\text{kPa}$ i $0$–$0{,}60\\ \\text{kPa}$: koji pokriva zahtjeve obaju zadanih stanja i cijeli raspon promjera? Izračunaj najmanju tlačnu rezervu. Obrazloži zašto se pri formiranoj kapljici ne smije dodatno oduzeti tlak konkavnoga meniskusa. Zanemari gubitke pri protoku; zaključak ograniči na ova dva stanja, bez tvrdnje o tlaku tijekom prijelaznog oblikovanja kapljice. Dodatno procijeni red veličine zanemarene hidrostatičke promjene kroz kapljicu, $\\rho gD_{max}$. Usporedi ga s najmanjom rezervom i objasni opravdava li idealizirani račun odabir za stvaran uređaj.",
+        "sha256": "7138e8f74289c54b799a980061b8e560e73a29d0c8f5eba28fad1e814cd95a7f",
         "authoritative": true
       },
       "input_data": {
@@ -5806,7 +5806,7 @@
         "explicit_status": "declared_and_extracted",
         "defaults": [
           {
-            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje Newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
+            "text": "U Z1 i Z3 pretpostavi stacionarno laminarno smicanje newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
               "line": 741
@@ -6671,8 +6671,8 @@
         "anchor": "#task-debljina-sloja-ulja-iz-tlaka"
       },
       "statement": {
-        "markdown": "U otvorenom spremniku miruju dva nemješljiva sloja: ulje gustoće $\\rho_u = 850\\ \\text{kg/m}^3$ iznad vode gustoće $\\rho_w = 1000\\ \\text{kg/m}^3$. Ukupna visina tekućine iznad dna iznosi $H = 1{,}50\\ \\text{m}$, a manometarski tlak na dnu $p_{M,A} = 13{,}83\\ \\text{kPa}$. Odredi debljinu sloja ulja $h_u$ i vode $h_w$ te manometarski tlak na njihovoj granici. Provjeri je li dobiven raspored moguć i skiciraj kako tlak raste s dubinom: mijenja li se na granici tlak ili samo njegov nagib?",
-        "sha256": "e56deeb2131721dd6a0777a9d18e2bd08464c4313fc18e407213b29399588e94",
+        "markdown": "U otvorenom spremniku miruju dva nemješljiva sloja: ulje gustoće $\\rho_u = 850\\ \\text{kg/m}^3$ iznad vode gustoće $\\rho_w = 1000\\ \\text{kg/m}^3$. Ukupna visina tekućine iznad dna iznosi $H = 1{,}50\\ \\text{m}$, a manometarski tlak na dnu $p_{M,A} = 13{,}83\\ \\text{kPa}$. Odredi debljine sloja ulja $h_u$ i sloja vode $h_w$ te manometarski tlak na njihovoj granici. Provjeri je li dobiven raspored moguć i skiciraj kako tlak raste s dubinom: mijenja li se na granici tlak ili samo njegov nagib?",
+        "sha256": "cf6969bc191aa9dd579ce636d217809cdf7682799c507dbe7b468afd051dd9a6",
         "authoritative": true
       },
       "input_data": {

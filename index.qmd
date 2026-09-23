@@ -144,7 +144,7 @@ Rješavanje tehničkog zadatka započinje skicom sustava i navođenjem pretposta
 
 Uz odabrana poglavlja dostupne su bilježnice koje se mogu pokrenuti u pregledniku. One omogućuju promjenu ulaznih podataka i usporedbu izračuna s teorijskim očekivanjem. Za razumijevanje glavnog teksta nije potrebno programiranje; dodatak D uvodi numeričke metode i provjeru simulacija.
 
-## Impressum
+## Impresum
 
 - **Autorica:** Martina Bašić
 - **Naslov:** *Mehanika fluida 1 — integrirani udžbenik za strojarstvo i brodogradnju*
@@ -152,4 +152,4 @@ Uz odabrana poglavlja dostupne su bilježnice koje se mogu pokrenuti u pregledni
 - **Licenca:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.hr)
 - **ISBN / DOI:** u pripremi
 
-Znanstvene i numeričke ispravke objavljuju se uz stabilni ID sadržaja i zapis promjene; rukopis ostaje radno izdanje dok ne prođe [neovisnu stručnu recenziju](https://github.com/martibasic/MF1_udzbenik/blob/main/docs/protokol_strucne_recenzije.md) i [studentski pilot](https://github.com/martibasic/MF1_udzbenik/blob/main/docs/protokol_studentskog_pilota.md). Potvrđene pogreške vode se u [javnoj errati](https://github.com/martibasic/MF1_udzbenik/blob/main/docs/errata.md).
+Znanstveni i numerički ispravci objavljuju se uz stabilni ID sadržaja i zapis promjene; rukopis ostaje radno izdanje dok ne prođe [neovisnu stručnu recenziju](https://github.com/martibasic/MF1_udzbenik/blob/main/docs/protokol_strucne_recenzije.md) i [studentski pilot](https://github.com/martibasic/MF1_udzbenik/blob/main/docs/protokol_studentskog_pilota.md). Potvrđene pogreške vode se u [javnoj errati](https://github.com/martibasic/MF1_udzbenik/blob/main/docs/errata.md).

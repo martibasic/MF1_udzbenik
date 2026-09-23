@@ -14,7 +14,7 @@ Hidraulične dizalice, preše za oblikovanje lima i brodski kormilarski pogoni t
 
 ### Kontinuumski model
 
-Fluid je tvar koja se pri djelovanju bilo kojega, pa i vrlo malog, tangencijalnog naprezanja neprekidno deformira. U inženjerskoj se analizi njegova molekularna građa obično ne promatra izravno. Umjesto toga primjenjuje se kontinuumski model, prema kojem su veličine kao što su gustoća, tlak i brzina definirane u svakoj točki prostora i vremenu.
+Fluid je tvar koja se pri djelovanju bilo kojega, pa i vrlo malog, tangencijalnog naprezanja neprekidno deformira. U inženjerskoj se analizi njegova molekularna građa obično ne promatra izravno. Umjesto toga primjenjuje se kontinuumski model, prema kojem su veličine kao što su gustoća, tlak i brzina definirane u svakoj točki prostora i u svakom trenutku.
 
 Polja $p(x,y,z)$ i $\rho(x,y,z)$ matematički opisuju prostornu raspodjelu tlaka i gustoće te omogućuju određivanje sila i gibanja fluida na razini prikladnoj za tehnički proračun.
 
@@ -70,13 +70,13 @@ Izraz $\rho=m/V$ daje gustoću homogenog fluida, odnosno srednju gustoću promat
 
 **Pretpostavke i model**
 
-Usvaja se
+Usvajaju se ubrzanje gravitacije
 
 $$
 g = 9{,}81\ \text{m/s}^2
 $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-01}
 
-i referentnu gustoću vode
+i referentna gustoća vode
 
 $$
 \rho_{voda} = 1000\ \text{kg/m}^3.
@@ -231,15 +231,15 @@ $$
 A_x = n_x A_n, \qquad A_y = n_y A_n, \qquad A_z = n_z A_n.
 $$ {#eq-svojstva-tlak-dublje-izotropnost-tlaka-cauchyjev-tetraedar-01}
 
-Za proizvoljnu orijentaciju geometrijske površine projekcija se piše s $|n_i|$, dok se predznak čuva u vektoru normale i jednadžbi sila. Ovdje odabrani prvi oktant samo pojednostavnjuje zapis i ne ograničava zaključak.
+Za proizvoljnu orijentaciju površine geometrijskih projekcija izražavaju se pomoću $|n_i|$, dok se predznak čuva u vektoru normale i jednadžbi sila. Ovdje odabrani prvi oktant samo pojednostavnjuje zapis i ne ograničava zaključak.
 
-Na svaku plohu djeluje normalna tlačna sila — neka su odgovarajući tlakovi $p_x$, $p_y$, $p_z$ na koordinatnim plohama i $p_n$ na kosoj plohi. Ravnoteža sila po osi $x$ (zanemarujući težinu jer ona ima dimenziju volumena $\propto \ell^3$ koja iščezava brže od površina $\propto \ell^2$ kada $\ell \to 0$):
+Na svaku plohu djeluje normalna tlačna sila — neka su odgovarajući tlakovi $p_x$, $p_y$, $p_z$ na koordinatnim plohama i $p_n$ na kosoj plohi. Ravnoteža sila po osi $x$ (uz zanemarivanje težine, koja je razmjerna volumenu $\propto \ell^3$ i iščezava brže od tlačnih sila razmjernih površinama $\propto \ell^2$ kada $\ell \to 0$):
 
 $$
 p_x A_x - p_n A_n n_x = 0,
 $$ {#eq-svojstva-tlak-dublje-izotropnost-tlaka-cauchyjev-tetraedar-02}
 
-odakle slijedi $p_x = p_n$. Analogno za osi $y$ i $z$ daje $p_y = p_n$ i $p_z = p_n$. Time se izvodi
+odakle slijedi $p_x = p_n$. Analogno se za osi $y$ i $z$ dobiva $p_y = p_n$ i $p_z = p_n$. Time se izvodi
 
 $$
 p_x = p_y = p_z = p_n,
@@ -487,7 +487,7 @@ Ukupna idealizirana podizna sila veća je od sile na pumpnom klipu zbog veće uk
 <p class="mf1-box-label">P5. Hidraulična kočnica vozila s razdiobom na više kočnih cilindara &nbsp;<span class="mf1-level">T2</span></p>
 
 
-**Kontekst:** U hidrauličnom kočnom sustavu osobnog vozila operater pritiska kočnu papučicu, a poluga papučice mehanički povećava silu prije nego se ona prenese na klip glavnog kočnog cilindra. Tlak koji se u glavnom cilindru razvije isti se prenosi do **četiri** kočna cilindra (po jedan u svakom kotaču), ali kočna kliješta na prednjoj osovini imaju veći promjer od onih na stražnjoj. Time se s **jednim** ulazom (papučicom) dobivaju četiri sile klipova: dvije jednake veće sile sprijeda i dvije jednake manje straga. Time se uspoređuje hidraulički prijenos; razdioba stvarnih sila kočenja traži i model kliješta, diskova i dodira gume s podlogom.
+**Kontekst:** U hidrauličnom kočnom sustavu osobnog vozila operater pritiska kočnu papučicu, a poluga papučice mehanički povećava silu prije nego što se ona prenese na klip glavnog kočnog cilindra. Tlak nastao u glavnom cilindru nepromijenjen se prenosi do **četiri** kočna cilindra (po jedan u svakom kotaču), ali kočna kliješta na prednjoj osovini imaju veći promjer od onih na stražnjoj. Time se s **jednim** ulazom (papučicom) dobivaju četiri sile klipova: dvije jednake veće sile sprijeda i dvije jednake manje straga. Time se uspoređuje hidraulički prijenos; razdioba stvarnih sila kočenja traži i model kliješta, diskova i dodira gume s podlogom.
 
 **Zadano**
 
@@ -570,13 +570,13 @@ $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-09}
 1. Broj $k \approx 53$ omjer je zbroja sila četiriju paralelnih aktuatora i jedne ulazne sile; nije pojačanje jedne izlazne sile niti izravno određuje kočni moment vozila. Za kočni moment trebaju još model kliješta, koeficijent trenja obloge, efektivni polumjer diska te veza s gumom i podlogom.
 2. Izračunani $F_f$ i $F_r$ sile su pojedinih klipova. Sila stezanja para pločica ovisi o izvedbi kliješta: kod idealiziranih plutajućih kliješta s jednim klipom može biti približno $2F$, dok se kod kliješta s nasuprotnim klipovima zbrajaju doprinosi aktivnih klipova. Zato se bez zadane izvedbe ne smije $pA$ automatski nazvati silom stezanja.
 3. Stvarni dopušteni radni tlak i izbor kočne tekućine određuju proizvođač sustava i mjerodavne specifikacije; ovaj idealni hidraulički račun nije specifikacija tekućine ni kočnog sklopa.
-4. Ako bi vozač pumpao papučicom dok kočne pločice ne dodirnu disk, ukupni hod papučice morao bi po volumnoj bilanci pokriti hod svih četiriju kočnih cilindara: $A_M s_M = 2 A_f s_f + 2 A_r s_r$. „Mekana" papučica može upućivati na stlačivi plin, propuštanje ili povećanu elastičnost sustava, ali se uzrok ne može dijagnosticirati samo Pascalovim modelom.
+4. Ako bi vozač pumpao papučicom dok kočne pločice ne dodirnu disk, ukupni hod papučice morao bi po volumnoj bilanci pokriti hod svih četiriju kočnih cilindara: $A_M s_M = 2 A_f s_f + 2 A_r s_r$. „Mekana” papučica može upućivati na stlačivi plin, propuštanje ili povećanu elastičnost sustava, ali se uzrok ne može dijagnosticirati samo Pascalovim modelom.
 :::
 
 ::: {#ex-u01-hidraulicka-stezna-naprava-na-robotskoj-liniji-za .mf1-we}
 <p class="mf1-box-label">P6. Hidraulička stezna naprava na robotskoj liniji za montažu baterijskih modula električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
 
-**Kontekst:** U robotskoj proizvodnoj liniji za sklapanje litij-ionskih baterijskih modula električnog vozila, prije zavarivanja kontakata ćelija aktivira se sustav hidrauličkih stega koji točno pozicionira modul. Centralna pumpa u kvazistatičkom stanju održava zajednički tlak u više paralelnih steznih cilindara. Svi stezni cilindri su istog promjera jer moduli zahtijevaju jednoliko opterećenje po obodu radi sprječavanja deformacije ćelija.
+**Kontekst:** U robotskoj proizvodnoj liniji za sklapanje litij-ionskih baterijskih modula električnog vozila, prije zavarivanja kontakata ćelija aktivira se sustav hidrauličkih stega koji točno pozicionira modul. Središnja pumpa u kvazistatičkom stanju održava zajednički tlak u više paralelnih steznih cilindara. Svi su stezni cilindri istog promjera jer moduli zahtijevaju jednoliko opterećenje po obodu radi sprječavanja deformacije ćelija.
 
 **Zadano**
 
@@ -589,13 +589,13 @@ $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-09}
 **Traženo**
 
 1. manometarski tlak u sustavu;
-2. sila stezanja jednog cilindra;
+2. silu stezanja jednog cilindra;
 3. skalarni zbroj iznosa sila šest stega;
 4. ostaje li sila po jednoj stezi unutar dopuštene vrijednosti $F_{dop}$.
 
 **Pretpostavke i model**
 
-Hidrauličko ulje smatra se nestlačivim, gubici u vodovima zanemarivi, svi cilindri leže približno na istoj razini. Sustav radi u kvazistatičkom stanju nakon što su sve stege dosegle radni položaj. Tlak se tada uzima jednakim u svim paralelnim steznim cilindrima. Za usporedbu s granicom pretpostavi izravan prijenos sile jedne stege na jednu ćeliju; ostale stege ne opterećuju tu istu ćeliju. Zbroj iznosa sila nije rezultantna sila na cijeli modul.
+Hidrauličko ulje smatra se nestlačivim, gubitci u vodovima zanemaruju se, a svi cilindri leže približno na istoj razini. Sustav radi u kvazistatičkom stanju nakon što su sve stege dosegle radni položaj. Tlak se tada uzima jednakim u svim paralelnim steznim cilindrima. Za usporedbu s granicom pretpostavi izravan prijenos sile jedne stege na jednu ćeliju; ostale stege ne opterećuju tu istu ćeliju. Zbroj iznosa sila nije rezultantna sila na cijeli modul.
 
 **Rješenje**
 
@@ -642,9 +642,9 @@ Omjer sile jednoga idealnog cilindra i sile pumpnoga klipa iznosi $F_s/F_p = 168
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički most</p>
 
-**Gdje ovo živi u numerici.** Tlak kao skalarno polje $p(x,y,z)$ — temeljni objekt koji svaki CFD solver mora prije svega *postaviti*. U uobičajenim metodama za nestlačivi tok tlak se određuje iz sprege jednadžbi gibanja i kontinuiteta u cijeloj domeni. To ne znači da tlak ne ovisi o vremenu niti da Pascalov zakon sam određuje tlak u strujanju.
+**Veza s numeričkim proračunom.** Tlak kao skalarno polje $p(x,y,z)$ — temeljni objekt koji svaki program za CFD mora prije svega *postaviti*. U uobičajenim metodama za nestlačivi tok tlak se određuje iz sprege jednadžbi gibanja i kontinuiteta u cijeloj domeni. To ne znači da tlak ne ovisi o vremenu niti da Pascalov zakon sam određuje tlak u strujanju.
 
-**Što numerički alat radi s tim.** Na početku simulacije postavlja se *inicijalni uvjet tlaka* — najčešće jednoliko polje ili hidrostatska raspodjela iz poglavlja o hidrostatici. Promjene na rubu (klip, ulaz crpke, ventil) utječu na povezani sustav jednadžbi; do usklađenog rješenja obično treba više iteracija. Numerička iteracija nije fizikalno vrijeme putovanja tlačnog vala.
+**Postupak numeričkog proračuna.** Na početku simulacije postavlja se *početni uvjet tlaka* — najčešće jednoliko polje ili hidrostatska raspodjela iz poglavlja o hidrostatici. Promjene na rubu (klip, ulaz crpke, ventil) utječu na povezani sustav jednadžbi; do usklađenog rješenja obično treba više iteracija. Numerička iteracija nije fizikalno vrijeme putovanja tlačnog vala.
 
 **Tipičan scenarij.** U industrijskom hidrauličkom sustavu CFD se rijetko primjenjuje na samu Pascalovu prijenosnu silu — ona je analitički rješiva. Vrijednost numerike pojavljuje se onda kad fluid prolazi uskim kanalima, kroz ventile ili kada se promatra dinamika tlačnog vala (vodeni udar pri naglom zatvaranju ventila): tada lokalna polja brzine, tlaka i mogućih kavitacijskih zona postaju netrivijalna, a analitička procjena prestaje biti dovoljna.
 
@@ -662,7 +662,7 @@ Omjer sile jednoga idealnog cilindra i sile pumpnoga klipa iznosi $F_s/F_p = 168
 ::: {.callout-note collapse="true"}
 ### Odgovori
 
-Izotropnost tlaka slijedi iz ravnoteže sila na malom elementu fluida bez smičnih naprezanja, kako pokazuje izvod s tetraedrom. Povećanje sile prati manji pomak pa se idealni rad ne stvara nego prenosi. Za pomak klipa treba usporediti volumen stlačivanja s istisnutim volumenom pumpe: mali omjer $\Delta p/K$ sam nije dovoljan ako je $V_0$ velik. Sile same nisu dovoljne jer ovise i o površini na kojoj djeluju.
+Izotropnost tlaka slijedi iz ravnoteže sila na malom elementu fluida bez smičnih naprezanja, kako pokazuje izvod s tetraedrom. Povećanje sile prati manji pomak pa se idealni rad ne stvara, nego prenosi. Za pomak klipa treba usporediti volumen stlačivanja s istisnutim volumenom pumpe: mali omjer $\Delta p/K$ sam nije dovoljan ako je $V_0$ velik. Sile same nisu dovoljne jer ovise i o površini na kojoj djeluju.
 :::
 :::
 
@@ -680,11 +680,11 @@ Izotropnost tlaka slijedi iz ravnoteže sila na malom elementu fluida bez smičn
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerička poveznica — od Pascalova zakona do proračuna</p>
 
-**Fizikalni model.** U idealiziranoj hidrauličnoj preši želimo odrediti tlak u ulju i silu na drugom klipu. Poznati su ulazna sila $F_1$, površine klipova $A_1$ i $A_2$ te pretpostavke zatvorenoga, mirujućeg i približno nestlačivog fluida bez značajnih gubitaka. Nepoznati su porast tlaka $\Delta p$ i izlazna sila $F_2$. Zato se primjenjuje Pascalov zakon: isti porast tlaka djeluje na obje plohe. Izraz $p=F/A$ vrijedi kada je tlak na ravnoj plohi jednolik, kao na idealiziranom klipu; ako tlak po plohi nije jednolik, rezultantna se sila dobiva zbrajanjem lokalnih tlaknih doprinosa, odnosno integriranjem po površini.
+**Fizikalni model.** U idealiziranoj hidrauličnoj preši želimo odrediti tlak u ulju i silu na drugom klipu. Poznati su ulazna sila $F_1$, površine klipova $A_1$ i $A_2$ te pretpostavke zatvorenoga, mirujućeg i približno nestlačivog fluida bez značajnih gubitaka. Nepoznati su porast tlaka $\Delta p$ i izlazna sila $F_2$. Zato se primjenjuje Pascalov zakon: isti porast tlaka djeluje na obje plohe. Izraz $p=F/A$ vrijedi kada je tlak na ravnoj plohi jednolik, kao na idealiziranom klipu; ako tlak po plohi nije jednolik, rezultantna se sila dobiva zbrajanjem lokalnih tlačnih doprinosa, odnosno integriranjem po površini.
 
 **Od kontinuuma do mreže.** Polje tlaka $p(x,y,z)$ u stvarnom se fluidu smatra kontinuiranim. Računalo domenu podijeli u ćelije, ali ćelija nije molekula: njezina vrijednost predstavlja lokalnu, reprezentativnu vrijednost polja u malom dijelu kontinuuma. Iz vrijednosti tlaka u ćelijama i na plohama između njih računa se kako se zadane promjene na klipu, ventilu ili otvoru usklađuju s protokom. Mreža mora razlučiti područja u kojima se tlak ili brzina brzo mijenjaju; provjera osjetljivosti na mrežu znači ponoviti račun s postupno finijom mrežom i provjeriti mijenjaju li se traženi tlak, sila ili pad tlaka još bitno.
 
-**Uvjeti i provjera.** Modelu se zadaju geometrija i svojstva fluida, početno stanje te fizikalni uvjeti na granicama: nepropusne stijenke, zadano gibanje ili sila klipa te, gdje postoje, tlak ili protok na otvorima. Za mirni hidraulični slučaj rezultat se provjerava usporedbom s ručnim odnosima $\Delta p=F_1/A_1=F_2/A_2$ i $A_1s_1=A_2s_2$. U složenijem slučaju dodatno se prati bilanca mase, promjena tlaka na važnim mjestima i stabilnost rezultata pri profinjenju mreže. Završene iteracije same po sebi nisu dokaz fizičke točnosti: rezultat mora zadovoljiti te bilance i pretpostavke modela.
+**Uvjeti i provjera.** Modelu se zadaju geometrija i svojstva fluida, početno stanje te fizikalni uvjeti na granicama: nepropusne stijenke, zadano gibanje ili sila klipa te, gdje postoje, tlak ili protok na otvorima. Za mirni hidraulični slučaj rezultat se provjerava usporedbom s ručnim odnosima $\Delta p=F_1/A_1=F_2/A_2$ i $A_1s_1=A_2s_2$. U složenijem slučaju dodatno se prati bilanca mase, promjena tlaka na važnim mjestima i stabilnost rezultata pri profinjenju mreže. Završene iteracije same po sebi nisu dokaz fizikalne točnosti: rezultat mora zadovoljiti te bilance i pretpostavke modela.
 
 Za uske kanale, ventile, elastične vodove, tlačne valove ili kavitaciju idealizirani Pascalov model više nije dovoljan. Tada su rubni uvjeti, diskretizacija i provjera računa predmet <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span> i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
 :::
@@ -701,7 +701,7 @@ U hidrauličnim zadatcima tlak $p$ označuje razliku tlakova preko radnog klipa.
 
 Prazna posuda ima masu $m_0 = 42{,}6\ \text{g}$. S volumenom ulja $V_1 = 50{,}0\ \text{cm}^3$ njezina ukupna masa iznosi $m_1 = 85{,}5\ \text{g}$, a s volumenom $V_2 = 100{,}0\ \text{cm}^3$ ukupna masa iznosi $m_2 = 128{,}7\ \text{g}$. Oba mjerenja odnose se na isto homogeno ulje pri istoj temperaturi. Uzmi $g = 9{,}81\ \text{m/s}^2$ i referentnu gustoću vode $\rho_v = 1000\ \text{kg/m}^3$.
 
-Odredi gustoću iz svakog mjerenja, njihovu aritmetičku sredinu te pripadne specifičnu težinu i relativnu gustoću. Objasni zašto se masa pune posude ne smije izravno podijeliti volumenom ulja. Je li mala razlika dobivenih gustoća dovoljan dokaz da ulje nije homogeno?
+Odredi gustoću iz svakog mjerenja, njihovu aritmetičku sredinu te pripadnu specifičnu težinu i relativnu gustoću. Objasni zašto se masa pune posude ne smije izravno podijeliti volumenom ulja. Je li mala razlika dobivenih gustoća dovoljan dokaz da ulje nije homogeno?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
