@@ -8191,8 +8191,8 @@
         "anchor": "#task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce"
       },
       "statement": {
-        "markdown": "Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\\rho = 870\\ \\text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\\ \\text{m}$. Sustav ubrzava prema gore s $a_z = 2{,}3\\ \\text{m/s}^2$. Odredi razliku tlaka između dna i vrha cilindra te usporedi rezultat s mirovnim stanjem. Zatim razmotri zasebno stanje u kojem se cilindar još giba prema gore, ali usporava uz ubrzanje iznosa $2{,}3\\ \\text{m/s}^2$ prema dolje. Kolika je tada razlika tlakova? Objasni određuje li je smjer brzine ili smjer ubrzanja.",
-        "sha256": "d9a45f943c47abbd923e60698421e61132e376b3f0f963cebec453261c0d069e",
+        "markdown": "Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\\rho = 870\\ \\text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\\ \\text{m}$. Sustav ubrzava prema gore s $a_z = 2{,}3\\ \\text{m/s}^2$. Odredi razliku tlakova između dna i vrha cilindra te usporedi rezultat s mirovnim stanjem. Zatim razmotri zasebno stanje u kojem se cilindar još giba prema gore, ali usporava uz ubrzanje iznosa $2{,}3\\ \\text{m/s}^2$ prema dolje. Kolika je tada razlika tlakova? Objasni određuje li je smjer brzine ili smjer ubrzanja.",
+        "sha256": "ba983a62fdade9f6ad8e7722a792dce325771bd0890cb2abe1adf091499f83a2",
         "authoritative": true
       },
       "input_data": {
@@ -9094,8 +9094,8 @@
         "anchor": "#task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen"
       },
       "statement": {
-        "markdown": "Otvoreni cilindrični spremnik polumjera $R = 0{,}32\\ \\text{m}$ i visine $H = 0{,}62\\ \\text{m}$ ispunjen je vodom do početne srednje visine $h_0 = 0{,}46\\ \\text{m}$. Odredi najveću kutnu brzinu pri kojoj još nema prelijevanja. Zatim za radni režim $\\omega = 0{,}80\\,\\omega_{max}$ odredi dubinu vode u osi i uz stijenu te manometarske tlakove na dnu u tim dvjema točkama. Za ovu geometrijsku provjeru središnji je usis zatvoren, pa nema protoka. Pretvarač frekvencije može stvarnu brzinu vrtnje povisiti do $5\\ \\%$ iznad zadane, a zahtijevana dubina iznad usisa u osi u ustaljenom stanju iznosi najmanje $0{,}350\\ \\text{m}$. Tih 5 % zadana je gornja granica odstupanja brzine, ne standardna nesigurnost. Provjeri zadani režim u nepovoljnoj toleranciji, odredi najveći dopušteni zadani omjer $\\alpha=\\omega_{zad}/\\omega_{max}$ i preporuči radnu postavku za taj model. Zaključak ne proširuj na usis tijekom protoka ili prijelaznog zavrtavanja.",
-        "sha256": "6f95df00d5049e48a676246b1f887bfc6a9b9f1094c7b7d7ea615aef88a3eaa5",
+        "markdown": "Otvoreni cilindrični spremnik polumjera $R = 0{,}32\\ \\text{m}$ i visine $H = 0{,}62\\ \\text{m}$ ispunjen je vodom do početne srednje visine $h_0 = 0{,}46\\ \\text{m}$. Odredi najveću kutnu brzinu pri kojoj još nema prelijevanja. Zatim za radni režim $\\omega = 0{,}80\\,\\omega_{max}$ odredi dubinu vode u osi i uz stijenku te manometarske tlakove na dnu u tim dvjema točkama. Za ovu geometrijsku provjeru središnji je usis zatvoren, pa nema protoka. Pretvarač frekvencije može stvarnu brzinu vrtnje povisiti do $5\\ \\%$ iznad zadane, a zahtijevana dubina iznad usisa u osi u ustaljenom stanju iznosi najmanje $0{,}350\\ \\text{m}$. Tih 5 % zadana je gornja granica odstupanja brzine, ne standardna nesigurnost. Provjeri zadani režim pri najnepovoljnijem dopuštenom odstupanju, odredi najveći dopušteni zadani omjer $\\alpha=\\omega_{zad}/\\omega_{max}$ i preporuči radnu postavku za taj model. Zaključak ne proširuj na usis tijekom protoka ili prijelaznog zavrtavanja.",
+        "sha256": "4a90d80cdb2340831027a333b33c0a4459e37272f5e2cacccf4836c191880802",
         "authoritative": true
       },
       "input_data": {
@@ -10976,8 +10976,8 @@
         "anchor": "#task-u05-nesigurnost-modela-i-mjerenja"
       },
       "statement": {
-        "markdown": "Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\\ \\mathrm{m}$ i $H=0{,}80\\ \\mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\\ \\mathrm{m}$ sa standardnom nesigurnošću $u(h_1)=0{,}020\\ \\mathrm{m}$, a gustoća je $\\rho=998\\ \\mathrm{kg/m^3}$ uz $u(\\rho)=3\\ \\mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\\ \\mathrm{kN}$ uz $u(F_m)=0{,}30\\ \\mathrm{kN}$. Pretpostavi nezavisne ulaze i primijeni linearnu propagaciju nesigurnosti. Izračunaj predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\\sqrt{u(F)^2+u(F_m)^2}$. Obrazloži podržavaju li podaci tvrdnju o neslaganju na razini $2u$.",
-        "sha256": "86051be161db0f63f9ab5fda4d54b2144b99ddd2946a22fd531ba9e771e092f7",
+        "markdown": "Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\\ \\mathrm{m}$ i $H=0{,}80\\ \\mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\\ \\mathrm{m}$ sa standardnom nesigurnošću $u(h_1)=0{,}020\\ \\mathrm{m}$, a gustoća je $\\rho=998\\ \\mathrm{kg/m^3}$ uz $u(\\rho)=3\\ \\mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\\ \\mathrm{kN}$ uz $u(F_m)=0{,}30\\ \\mathrm{kN}$. Pretpostavi neovisne ulaze i primijeni linearnu propagaciju nesigurnosti. Izračunaj predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\\sqrt{u(F)^2+u(F_m)^2}$. Obrazloži podupiru li podatci tvrdnju o neslaganju na razini $2u$.",
+        "sha256": "8ba548f504cb77db0f0ff734ce71e972988d736ab42901a1023341c906e46b3b",
         "authoritative": true
       },
       "input_data": {
@@ -11104,7 +11104,7 @@
             }
           },
           {
-            "text": "Pretpostavi nezavisne ulaze i primijeni linearnu propagaciju nesigurnosti.",
+            "text": "Pretpostavi neovisne ulaze i primijeni linearnu propagaciju nesigurnosti.",
             "provenance": {
               "kind": "task_statement",
               "line": 740
@@ -12152,7 +12152,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$\\rho_{ulje} \\approx 992{,}4\\ \\text{kg/m}^3$; uron je veći jer je ulje rjeđe pa je za istu težinu potreban veći istisnuti volumen.",
+        "markdown": "$\\rho_{ulje} \\approx 992{,}4\\ \\text{kg/m}^3$; uron je veći jer ulje ima manju gustoću pa je za istu težinu potreban veći istisnuti volumen.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u06_uzgon_plivanje_i_stabilnost.md",
@@ -12969,7 +12969,7 @@
             }
           },
           {
-            "text": "najprije uzmi $h_m=(h_L+h_D)/2$ i $m_\\Delta=\\rho_oV_o+\\rho_wV_w$.",
+            "text": "Najprije uzmi $h_m=(h_L+h_D)/2$ i $m_\\Delta=\\rho_oV_o+\\rho_wV_w$.",
             "provenance": {
               "kind": "task_hint",
               "line": 1092
@@ -13875,7 +13875,7 @@
             }
           },
           {
-            "text": "za stacionarnu mješalicu vrijedi $\\dot m_1 + \\dot m_2 = \\dot m_3$;",
+            "text": "Za stacionarnu komoru za miješanje vrijedi $\\dot m_1 + \\dot m_2 = \\dot m_3$;",
             "provenance": {
               "kind": "task_hint",
               "line": 800
@@ -13998,8 +13998,8 @@
         "anchor": "#task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz"
       },
       "statement": {
-        "markdown": "U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\\ \\text{m}^3/\\text{s}$ kroz cijev promjera $D_1 = 140\\ \\text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\\ \\text{mm}$ i $D_3 = 70\\ \\text{mm}$, pri čemu je zadano da je brzina u drugoj grani dvostruko veća od brzine u trećoj. Taj omjer određuje radni režim, a ne slijedi samo iz promjera. Odredi protoke u granama.",
-        "sha256": "87186b8d318f943d6de6e3cb4cae696e4e310231c617ef312f3adffa2eb13fff",
+        "markdown": "U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\\ \\text{m}^3/\\text{s}$ kroz cijev promjera $D_1 = 140\\ \\text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\\ \\text{mm}$ i $D_3 = 70\\ \\text{mm}$, pri čemu je zadano da je brzina u izlaznoj grani 2 dvostruko veća od brzine u izlaznoj grani 3. Taj omjer određuje radni režim, a ne slijedi samo iz promjera. Odredi protoke u granama.",
+        "sha256": "803829822a9d28a4373a0c06a43f7f1b0605959c783d71f10cd8cea9ab1bfebd",
         "authoritative": true
       },
       "input_data": {
@@ -15236,8 +15236,8 @@
         "anchor": "#task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s"
       },
       "statement": {
-        "markdown": "Horizontalnim ventilacijskim kanalom smanjuje se presjek s $A_1 = 0{,}060\\ \\text{m}^2$ na $A_2 = 0{,}020\\ \\text{m}^2$. Volumenski protok zraka iznosi $Q = 0{,}42\\ \\text{m}^3/\\text{s}$, a gustoća zraka je $\\rho = 1{,}20\\ \\text{kg/m}^3$. Pretpostavi stacionarni nestlačivi tok bez gubitaka i bez strojnog rada. Odredi pad statičkog tlaka.",
-        "sha256": "ee4edf329740b42458eef905a48d46c10a7a29d93925ff9815563100b28e099d",
+        "markdown": "U horizontalnom ventilacijskom kanalu presjek se smanjuje s $A_1 = 0{,}060\\ \\text{m}^2$ na $A_2 = 0{,}020\\ \\text{m}^2$. Volumenski protok zraka iznosi $Q = 0{,}42\\ \\text{m}^3/\\text{s}$, a gustoća zraka je $\\rho = 1{,}20\\ \\text{kg/m}^3$. Pretpostavi stacionarni nestlačivi tok bez gubitaka i bez strojnog rada. Odredi pad statičkog tlaka.",
+        "sha256": "a5166024829ae120d18cdb9ed71cd963d660101ae08bb34a1df3151799591e1a",
         "authoritative": true
       },
       "input_data": {
@@ -15309,7 +15309,7 @@
             }
           },
           {
-            "text": "iz kontinuiteta dobij $v_1$ i $v_2$, a za horizontalni kanal bez gubitaka vrijedi $p_1 + \\rho v_1^2/2 = p_2 + \\rho v_2^2/2$.",
+            "text": "Iz kontinuiteta dobij $v_1$ i $v_2$, a za horizontalni kanal bez gubitaka vrijedi $p_1 + \\rho v_1^2/2 = p_2 + \\rho v_2^2/2$.",
             "provenance": {
               "kind": "task_hint",
               "line": 810
@@ -16312,8 +16312,8 @@
         "anchor": "#task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako"
       },
       "statement": {
-        "markdown": "Sifon je prethodno napunjen vodom, a ulaz je uronjen. U kvazistacionarnom trenutku uzmi gustoću vode $\\rho=1000\\ \\text{kg/m}^3$. Idealni sifon promjera $D = 70\\ \\text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\\Delta z = 2{,}6\\ \\text{m}$ ispod slobodne površine. Vrh sifona je $z_C = 1{,}7\\ \\text{m}$ iznad slobodne površine, a izlaz se nalazi $1{,}2\\ \\text{m}$ iznad tla. Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza ako je $p_{atm} = 101{,}3\\ \\text{kPa}$. Zatim primijeni zadano proširenje energijske bilance: gubitak visine modelira se s $h_L=K v^2/(2g)$. Za izvedeni sustav ukupni koeficijent gubitaka od spremnika do izlaza iznosi $K_\\Sigma=2{,}0\\pm0{,}5$, a do vrha sifona $K_C=1{,}2\\pm0{,}3$; oba su definirana uz brzinu u sifonu. Oznake ± ovdje daju zajamčene intervale, ne standardne nesigurnosti; dopuštene su sve njihove kombinacije. Primijeni bilance $\\Delta z=(1+K_\\Sigma)v^2/(2g)$ i $p_{C,abs}=p_{atm}-\\rho g[z_C+(1+K_C)v^2/(2g)]$. Odredi nominalni stvarni protok i konzervativne granice protoka i tlaka u vrhu. Može li se zajamčiti zahtjev $Q\\ge15{,}0\\ \\text{L/s}$ i $p_C\\ge30\\ \\text{kPa}$ apsolutno?",
-        "sha256": "4af0ce37af6970c8f7b2a902d2f038ed4fcfadb5f1f6635714bb1304a943fc52",
+        "markdown": "Sifon je prethodno napunjen vodom, a ulaz je uronjen. U kvazistacionarnom trenutku uzmi gustoću vode $\\rho=1000\\ \\text{kg/m}^3$. Idealni sifon promjera $D = 70\\ \\text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\\Delta z = 2{,}6\\ \\text{m}$ ispod slobodne površine. Vrh sifona je $z_C = 1{,}7\\ \\text{m}$ iznad slobodne površine, a izlaz se nalazi $1{,}2\\ \\text{m}$ iznad tla. Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza ako je $p_{atm} = 101{,}3\\ \\text{kPa}$. Zatim primijeni zadano proširenje energijske bilance: gubitak visine modelira se s $h_L=K v^2/(2g)$. Za izvedeni sustav ukupni koeficijent gubitaka od spremnika do izlaza iznosi $K_\\Sigma=2{,}0\\pm0{,}5$, a do vrha sifona $K_C=1{,}2\\pm0{,}3$; oba su definirana uz brzinu u sifonu. Oznake ± ovdje daju zajamčene intervale, ne standardne nesigurnosti; dopuštene su sve njihove kombinacije. Primijeni bilance $\\Delta z=(1+K_\\Sigma)v^2/(2g)$ i $p_{C,abs}=p_{atm}-\\rho g[z_C+(1+K_C)v^2/(2g)]$. Odredi nominalni protok prema modelu s gubitcima i konzervativne granice protoka i tlaka u vrhu. Može li se zajamčiti zahtjev $Q\\ge15{,}0\\ \\text{L/s}$ i $p_C\\ge30\\ \\text{kPa}$ apsolutno?",
+        "sha256": "dd8dcf35c36f638669cf7e51237dbf7f74487c64d932d7bc8222c17ca4f34e8f",
         "authoritative": true
       },
       "input_data": {
@@ -16463,7 +16463,7 @@
             }
           },
           {
-            "text": "Bernoullijem između slobodne površine i izlaza vrati idealni $v$, između slobodne površine i vrha sifona vrati tlak, a domet mlaza zatvori kao vodoravno izbačeno tijelo s visine $1{,}2\\ \\text{m}$.",
+            "text": "Bernoullijevom jednadžbom između slobodne površine i izlaza odredi idealni $v$, a između slobodne površine i vrha sifona odredi tlak.",
             "provenance": {
               "kind": "task_hint",
               "line": 904
@@ -17473,8 +17473,8 @@
         "anchor": "#task-priguseni-protok"
       },
       "statement": {
-        "markdown": "Velika mirna komora napaja konvergentnu sapnicu fiksne geometrije. Manometarski tlak komore jest $p_{0,M}=7{,}00\\ \\text{bar}$, a atmosferski $p_{atm}=1{,}00\\ \\text{bar(abs)}$. Razmotri dva stacionarna namještanja manometarskog protutlaka: $p_{b,M}^{(I)}=4{,}00\\ \\text{bar}$ i $p_{b,M}^{(II)}=3{,}00\\ \\text{bar}$. Za zrak uz $\\gamma=1{,}4$ i izentropski tok do izlaza odredi kritični apsolutni tlak $p^*$, režim u oba slučaja te izlazne $p_e$ i $Ma_e$. Objasni može li se protok dalje povećavati snižavanjem protutlaka u slučaju II uz iste stagnacijske uvjete. Kapacitet se ne traži.",
-        "sha256": "9a154570df34cd0850a160dac949afb915f3bc61d646d89b0c1ba86964e460f2",
+        "markdown": "Velika mirna komora napaja konvergentnu sapnicu fiksne geometrije. Manometarski tlak komore jest $p_{0,M}=7{,}00\\ \\text{bar}$, a atmosferski $p_{atm}=1{,}00\\ \\text{bar(abs)}$. Razmotri dvije stacionarne postavke manometarskog protutlaka: $p_{b,M}^{(I)}=4{,}00\\ \\text{bar}$ i $p_{b,M}^{(II)}=3{,}00\\ \\text{bar}$. Za zrak uz $\\gamma=1{,}4$ i izentropski tok do izlaza odredi kritični apsolutni tlak $p^*$, režim u oba slučaja te izlazne $p_e$ i $Ma_e$. Objasni može li se protok dalje povećavati snižavanjem protutlaka u slučaju II uz iste stagnacijske uvjete. Kapacitet se ne traži.",
+        "sha256": "e1f41a672372d9805a5c2285f334e2c8ecce6f3f3e2cd0654a2c509861c6f773",
         "authoritative": true
       },
       "input_data": {
@@ -17559,7 +17559,7 @@
             }
           },
           {
-            "text": "Razmotri dva stacionarna namještanja manometarskog protutlaka: $p_{b,M}^{(I)}=4{,}00\\ \\text{bar}$ i $p_{b,M}^{(II)}=3{,}00\\ \\text{bar}$.",
+            "text": "Razmotri dvije stacionarne postavke manometarskog protutlaka: $p_{b,M}^{(I)}=4{,}00\\ \\text{bar}$ i $p_{b,M}^{(II)}=3{,}00\\ \\text{bar}$.",
             "provenance": {
               "kind": "task_statement",
               "line": 327
@@ -18175,8 +18175,8 @@
         "anchor": "#task-udarni-val-podaci"
       },
       "statement": {
-        "markdown": "U nastavnom skupu sintetičkih podataka za stacionarni normalni val u zračnom kanalu statički priključci prije i poslije vala daju $p_1=80{,}0\\pm0{,}4\\ \\text{kPa(abs)}$ i $p_2=360{,}0\\pm1{,}8\\ \\text{kPa(abs)}$. Ukupni tlak prije vala dobiva se neovisnim mjerenjem u velikoj mirnoj napojnoj komori: $p_{01}=626\\pm4\\ \\text{kPa(abs)}$. Pretpostavi izentropski put od komore do presjeka 1, bez ranijeg vala. Podzvučna Pitotova sonda u presjeku 2, otvorom okrenuta uzvodno, daje $p_{02}=451\\pm4\\ \\text{kPa(abs)}$. Zanemari poremećaj glavnog toka sondom i gubitke u mjernim vodovima. Sve oznake $\\pm$ označuju male, međusobno neovisne standardne nesigurnosti mjerenja; $\\gamma=1{,}4$ smatraj točnim. Iz omjera $p_2/p_1$ odredi $M_1$ i njegovu standardnu nesigurnost linearnom RSS-propagacijom. Izračunaj teorijski omjer $G=p_{02}/p_{01}$ i njegovu nesigurnost, usporedi ga s izravno mjerenim omjerom $r_0$ te odluči jesu li konzistentni prema kriteriju $|G-r_0|\\leq u(G-r_0)$. Izračunaj normiranu razliku. Objasni zašto sami statički tlakovi ne predstavljaju neovisnu mjernu potvrdu pada ukupnog tlaka i zašto obična nekorigirana Pitotova sonda ispred vala ne bi izravno dala $p_{01}$.",
-        "sha256": "d1244cca1c00504b0ddc81759918c42279fb8535e6c4339d286b08afaf60db64",
+        "markdown": "U nastavnom skupu sintetičkih podataka za stacionarni normalni val u zračnom kanalu statički priključci prije i poslije vala daju $p_1=80{,}0\\pm0{,}4\\ \\text{kPa(abs)}$ i $p_2=360{,}0\\pm1{,}8\\ \\text{kPa(abs)}$. Ukupni tlak prije vala dobiva se neovisnim mjerenjem u velikoj mirnoj napojnoj komori: $p_{01}=626\\pm4\\ \\text{kPa(abs)}$. Pretpostavi izentropski put od komore do presjeka 1, bez ranijeg vala. Podzvučna Pitotova sonda u presjeku 2, otvorom okrenuta uzvodno, daje $p_{02}=451\\pm4\\ \\text{kPa(abs)}$. Zanemari poremećaj glavnog toka sondom i gubitke u mjernim vodovima. Sve oznake $\\pm$ označuju male, međusobno neovisne standardne nesigurnosti mjerenja; $\\gamma=1{,}4$ smatraj točnim. Iz omjera $p_2/p_1$ odredi $M_1$ i njegovu standardnu nesigurnost linearnom propagacijom nesigurnosti uz korijen zbroja kvadrata doprinosa (RSS). Izračunaj teorijski omjer $G=p_{02}/p_{01}$ i njegovu nesigurnost, usporedi ga s izravno mjerenim omjerom $r_0$ te odluči jesu li konzistentni prema kriteriju $|G-r_0|\\leq u(G-r_0)$. Izračunaj normiranu razliku. Objasni zašto sami statički tlakovi ne predstavljaju neovisnu mjernu potvrdu pada ukupnog tlaka i zašto obična nekorigirana Pitotova sonda ispred vala ne bi izravno dala $p_{01}$.",
+        "sha256": "56f3078f108eeab110c3c170ac6653111859c3497557d1617fdaf4cb9c433a45",
         "authoritative": true
       },
       "input_data": {
@@ -19303,8 +19303,8 @@
         "anchor": "#task-moment-ekscentricnog-mlaza"
       },
       "statement": {
-        "markdown": "U horizontalnoj ravnini slobodni vodeni mlaz protoka $Q=16{,}0\\ \\text{L/s}$ i brzine $v=18{,}0\\ \\text{m/s}$ udara u nepomičnu ploču okomito na os $x$. Razlijevanje je simetrično oko osi mlaza i uklanja izlaznu komponentu brzine $x$; rezultantna sila prolazi središtem udara C. Kruti nosač ploče ukliješten je u O. Koordinate C u odnosu na O jesu $b=0{,}20\\ \\text{m}$ u smjeru $+x$ i $e=0{,}35\\ \\text{m}$ u smjeru $+y$. Tlak slobodnog mlaza jest atmosferski; zanemari težinu sklopa i vode u zoni udara. Odredi silu fluida na ploču i njezin moment $M_{O,z}$ te reakcijsku silu i moment uklještenja potrebne za mirovanje. Pozitivan moment vrti suprotno kazaljci na satu u tlocrtu. Objasni koji je krak relevantan i zašto pomicanje ploče samo u smjeru $x$ ne mijenja moment pri istom mlazu.",
-        "sha256": "1ee44273b1c01b63d6a341cc3553744e0891f462c33beb14d101367da54be144",
+        "markdown": "U horizontalnoj ravnini slobodni vodeni mlaz protoka $Q=16{,}0\\ \\text{L/s}$ i brzine $v=18{,}0\\ \\text{m/s}$ udara u nepomičnu ploču okomito na os $x$. Razlijevanje je simetrično oko osi mlaza i uklanja izlaznu komponentu brzine $x$; rezultantna sila prolazi središtem udara C. Kruti nosač ploče ukliješten je u O. Koordinate C u odnosu na O jesu $b=0{,}20\\ \\text{m}$ u smjeru $+x$ i $e=0{,}35\\ \\text{m}$ u smjeru $+y$. Tlak slobodnog mlaza jest atmosferski; zanemari težinu sklopa i vode u zoni udara. Odredi silu fluida na ploču i njezin moment $M_{O,z}$ te reakcijsku silu i moment uklještenja potrebne za mirovanje. Pozitivan moment djeluje suprotno smjeru kazaljke na satu u tlocrtu. Objasni koji je krak relevantan i zašto pomicanje ploče samo u smjeru $x$ ne mijenja moment pri istom mlazu.",
+        "sha256": "fcb3a07a069282e2534995c2d549030041fdf83191303037662a1fe55b7b64c9",
         "authoritative": true
       },
       "input_data": {
@@ -19902,8 +19902,8 @@
         "anchor": "#task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz"
       },
       "statement": {
-        "markdown": "Vodoravna Y-račva prima vodu u smjeru $+x$ kroz promjer $D_1=140\\ \\text{mm}$. Nominalni protok jest $Q_1=0{,}040\\ \\text{m}^3/\\text{s}$, a manometarski tlak $p_{M1}=185\\ \\text{kPa}$. Udio $s=0{,}60$ odlazi ravno kroz $D_2=90\\ \\text{mm}$, a ostatak kroz $D_3=80\\ \\text{mm}$ pod $60^\\circ$ prema $+y$ u horizontalnoj ravnini. Oba izlaza su na atmosferskom tlaku. Izlazni udio je zadan radnim režimom; ne pretpostavljaj jednaku brzinu u granama niti tok bez gubitaka. Odredi nominalne protoke, komponente sile fluida na račvu i reakciju nosača. U sintetičkom pogonskom scenariju zadane su neovisne zajamčene granice: $p_{M1}=185\\pm5\\ \\text{kPa}$, $Q_1=0{,}040\\ \\text{m}^3/\\text{s}\\pm2\\ \\%$ te $s=0{,}60\\pm0{,}03$. To nisu standardne nesigurnosti za RSS. Odredi najveću rezultantu u cijelom zadanom području i provjeri gdje nastaje. Odaberi između zadanih nosivosti $3{,}0\\ \\text{kN}$ i $3{,}5\\ \\text{kN}$ prema kriteriju $R_{naz}\\geq1{,}15F_{max}$. Ocjenjuje se samo taj statički kriterij rezultante u ravnini.",
-        "sha256": "74fbffb4962177c5f03f1d428ce917e66672a2b6ca4f22f58b8c1c951e5bb5dc",
+        "markdown": "Vodoravna Y-račva prima vodu u smjeru $+x$ kroz ulaznu cijev promjera $D_1=140\\ \\text{mm}$. Nominalni protok jest $Q_1=0{,}040\\ \\text{m}^3/\\text{s}$, a manometarski tlak $p_{M1}=185\\ \\text{kPa}$. Udio $s=0{,}60$ odlazi ravno kroz $D_2=90\\ \\text{mm}$, a ostatak kroz $D_3=80\\ \\text{mm}$ pod $60^\\circ$ prema $+y$ u horizontalnoj ravnini. Oba izlaza su na atmosferskom tlaku. Izlazni udio je zadan radnim režimom; ne pretpostavljaj jednaku brzinu u granama niti tok bez gubitaka. Odredi nominalne protoke, komponente sile fluida na račvu i reakciju nosača. U sintetičkom pogonskom scenariju zadane su neovisne zajamčene granice: $p_{M1}=185\\pm5\\ \\text{kPa}$, $Q_1=0{,}040\\ \\text{m}^3/\\text{s}\\pm2\\ \\%$ te $s=0{,}60\\pm0{,}03$. To nisu standardne nesigurnosti za RSS. Odredi najveću rezultantu u cijelom zadanom području i provjeri gdje nastaje. Odaberi između zadanih nosivosti $3{,}0\\ \\text{kN}$ i $3{,}5\\ \\text{kN}$ prema kriteriju $R_{naz}\\geq1{,}15F_{max}$. Ocjenjuje se samo taj statički kriterij rezultante u ravnini.",
+        "sha256": "f43bae5accbbc8ea6e5a6ddbf1020fce85d2ac781e612800cadb6ed8140eed3d",
         "authoritative": true
       },
       "input_data": {
@@ -21126,8 +21126,8 @@
         "anchor": "#task-reynoldsova-slicnost-hidroprofila"
       },
       "statement": {
-        "markdown": "Geometrijski sličan hidroprofil u vodi i njegov model u zraku služe za prijenos izmjerene sile otpora. Odredi brzinu modela za Reynoldsovu sličnost, provjeri Machov broj i iz jednakosti koeficijenata otpora izračunaj silu na prototipu. Simetričan hidroprofil tetive $c_p=0{,}300\\ \\text{m}$ i raspona $b_p=0{,}600\\ \\text{m}$ nalazi se u vodi brzine $v_p=1{,}00\\ \\text{m/s}$, gustoće $\\rho_p=1000\\ \\text{kg/m}^3$ i kinematičke viskoznosti $\\nu_p=1{,}00\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$. Geometrijski sličan model tetive $c_m=0{,}100\\ \\text{m}$ i raspona $b_m=0{,}200\\ \\text{m}$ ispituje se u zraku s $\\rho_m=1{,}20\\ \\text{kg/m}^3$, $\\nu_m=1{,}50\\cdot10^{-5}\\ \\text{m}^2/\\text{s}$ i $a_m=340\\ \\text{m/s}$. Oba profila imaju nulti napadni kut, jednaku relativnu hrapavost i usporedive bezdimenzijske uvjete dolazne struje. Voda je daleko od slobodne površine i stijenki, bez kavitacije; utjecaj stijenki tunela zanemariv je. U tim pretpostavkama za prijenos koeficijenta otpora traži se $Re_m=Re_p$, uz provjeru maloga $Ma_m$. U sintetičkom nastavnom pokusu pri traženoj brzini izmjerena je samo komponenta otpora usporedna sa strujom, $F_{D,m}=0{,}405\\ \\text{N}$. Za $C_D$ upotrijebi referentnu površinu $A=bc$. Objasni zašto faktor $\\lambda_L^3$ iz Froudeova modela nije primjenjiv na ovaj pokus.",
-        "sha256": "a0538e7eaca7b221acb11e87581ff7d34ff1283e01d34948132824540f5432d4",
+        "markdown": "Geometrijski sličan hidroprofil u vodi i njegov model u zraku služe za prijenos izmjerene sile otpora. Odredi brzinu modela za Reynoldsovu sličnost, provjeri Machov broj i iz jednakosti koeficijenata otpora izračunaj silu na prototipu. Simetričan hidroprofil tetive $c_p=0{,}300\\ \\text{m}$ i raspona $b_p=0{,}600\\ \\text{m}$ nalazi se u vodi brzine $v_p=1{,}00\\ \\text{m/s}$, gustoće $\\rho_p=1000\\ \\text{kg/m}^3$ i kinematičke viskoznosti $\\nu_p=1{,}00\\cdot10^{-6}\\ \\text{m}^2/\\text{s}$. Geometrijski sličan model tetive $c_m=0{,}100\\ \\text{m}$ i raspona $b_m=0{,}200\\ \\text{m}$ ispituje se u zraku s $\\rho_m=1{,}20\\ \\text{kg/m}^3$, $\\nu_m=1{,}50\\cdot10^{-5}\\ \\text{m}^2/\\text{s}$ i $a_m=340\\ \\text{m/s}$. Oba profila imaju nulti napadni kut, jednaku relativnu hrapavost i usporedive bezdimenzijske uvjete dolazne struje. Hidroprofil u vodi nalazi se daleko od slobodne površine i stijenki, a kavitacije nema; utjecaj stijenki tunela zanemariv je. U tim pretpostavkama za prijenos koeficijenta otpora traži se $Re_m=Re_p$, uz provjeru maloga $Ma_m$. U sintetičkom nastavnom pokusu pri traženoj brzini izmjerena je samo komponenta otpora usporedna sa strujom, $F_{D,m}=0{,}405\\ \\text{N}$. Za $C_D$ upotrijebi referentnu površinu $A=bc$. Objasni zašto faktor $\\lambda_L^3$ iz Froudeova modela nije primjenjiv na ovaj pokus.",
+        "sha256": "0f593adb2230fffb34748d8e80e908cf4ddfdca3463b282ea4916ec42d751730",
         "authoritative": true
       },
       "input_data": {
@@ -22683,8 +22683,8 @@
         "anchor": "#task-poiseuille-inverzni"
       },
       "statement": {
-        "markdown": "Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Obrnutim Poiseuilleovim računom procijeni viskoznost i Reynoldsov broj te utvrdi koji mjerni podatak najviše pridonosi nesigurnosti. Sintetički nastavni podatci su $Q=0{,}300\\pm0{,}003\\ \\text{mL/min}$, $\\Delta p=p_1-p_2=652\\pm5\\ \\text{Pa}$, $L=0{,}200\\pm0{,}001\\ \\text{m}$ i $D=0{,}500\\pm0{,}005\\ \\text{mm}$. Znakovi $\\pm$ označuju neovisne standardne nesigurnosti. Newtonski fluid ima gustoću $\\rho=998\\ \\text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini. U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje na stijenku, a ulazne učinke izvan mjernog razmaka. Procijeni $u(\\mu)$ linearnom RSS-propagacijom i posebno pokaži doprinos promjera.",
-        "sha256": "3fe2eb27c11cf26d16e462eeaa45636adaa0018a4d38bb2cce30c712335d6908",
+        "markdown": "Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Obrnutim Poiseuilleovim računom procijeni viskoznost i Reynoldsov broj te utvrdi koji mjerni podatak najviše pridonosi nesigurnosti. Sintetički nastavni podatci su $Q=0{,}300\\pm0{,}003\\ \\text{mL/min}$, $\\Delta p=p_1-p_2=652\\pm5\\ \\text{Pa}$, $L=0{,}200\\pm0{,}001\\ \\text{m}$ i $D=0{,}500\\pm0{,}005\\ \\text{mm}$. Znakovi $\\pm$ označuju neovisne standardne nesigurnosti. Newtonski fluid ima gustoću $\\rho=998\\ \\text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini. U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje na stijenku; pretpostavi da su ulazni učinci ograničeni na dio ispred mjernog razmaka. Procijeni $u(\\mu)$ linearnom propagacijom nesigurnosti uz korijen zbroja kvadrata doprinosa (RSS) i posebno pokaži doprinos promjera.",
+        "sha256": "23492fa30072ddf8f15fcdc8d05b44716a5098f642884835cb43459c7df73152",
         "authoritative": true
       },
       "input_data": {
@@ -22778,7 +22778,14 @@
             }
           },
           {
-            "text": "U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje na stijenku, a ulazne učinke izvan mjernog razmaka.",
+            "text": "U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje na stijenku;",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 329
+            }
+          },
+          {
+            "text": "pretpostavi da su ulazni učinci ograničeni na dio ispred mjernog razmaka.",
             "provenance": {
               "kind": "task_statement",
               "line": 329
@@ -22799,7 +22806,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$\\mu\\approx1{,}000\\ \\text{mPa s}$, $u(\\mu)\\approx0{,}042\\ \\text{mPa s}$ i $Re\\approx12{,}7$. Sam promjer doprinosi relativnoj standardnoj nesigurnosti od $4\\,\\%$, pa dominira zadanim mjernim budžetom.",
+        "markdown": "$\\mu\\approx1{,}000\\ \\text{mPa s}$, $u(\\mu)\\approx0{,}042\\ \\text{mPa s}$ i $Re\\approx12{,}7$. Sam promjer doprinosi relativnoj standardnoj nesigurnosti od $4\\,\\%$, pa ima najveći doprinos ukupnoj mjernoj nesigurnosti.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
@@ -22943,8 +22950,8 @@
         "anchor": "#task-couette-povrat"
       },
       "statement": {
-        "markdown": "Gibanje gornje ploče i nepovoljan gradijent tlaka suprotno pokreću ulje u uskom procjepu. Odredi granični gradijent, smično naprezanje za dva zadana pogona i skiciraj pripadne profile brzine. Razlikuj povratni tok uz ploču od prolaza kroz nju. Newtonski fluid ima $\\mu=0{,}100\\ \\text{Pa s}$; donja ploča na $y=0$ miruje, a gornja na $y=H$ klizi u pozitivnom smjeru osi $x$ brzinom $U=2{,}00\\ \\text{m/s}$. Razmak je $H=1{,}00\\ \\text{mm}$. Za potpuno razvijeni laminarni tok i konstantan $G=dp/dx>0$ vrijedi $u(y)=Uy/H+G(y^2-Hy)/(2\\mu)$. Odredi $G_{krit}$ pri kojem $\\tau_0=\\mu u'(0)$ mijenja znak, zatim $\\tau_0$ pri $G=0{,}90G_{krit}$ i $G=1{,}10G_{krit}$. Ovdje je $\\tau_0$ komponenta sile fluida na donju ploču po jedinici površine u smjeru osi $x$. Obje ploče su nepropusne, uz njih nema klizanja.",
-        "sha256": "0235c4bb092385ca8b42eee5f6e160d4fefb3e279968452942373fb80b9e1cf8",
+        "markdown": "Gibanje gornje ploče i nepovoljan gradijent tlaka pokreću ulje u suprotnim smjerovima u uskom procjepu. Odredi granični gradijent, smično naprezanje za dva zadana pogona i skiciraj pripadne profile brzine. Razlikuj povratni tok uz ploču od prolaza kroz nju. Newtonski fluid ima $\\mu=0{,}100\\ \\text{Pa s}$; donja ploča na $y=0$ miruje, a gornja na $y=H$ klizi u pozitivnom smjeru osi $x$ brzinom $U=2{,}00\\ \\text{m/s}$. Razmak je $H=1{,}00\\ \\text{mm}$. Za potpuno razvijeni laminarni tok i konstantan $G=dp/dx>0$ vrijedi $u(y)=Uy/H+G(y^2-Hy)/(2\\mu)$. Odredi $G_{krit}$ pri kojem $\\tau_0=\\mu u'(0)$ mijenja znak, zatim $\\tau_0$ pri $G=0{,}90G_{krit}$ i $G=1{,}10G_{krit}$. Ovdje je $\\tau_0$ komponenta sile fluida na donju ploču po jedinici površine u smjeru osi $x$. Obje ploče su nepropusne, uz njih nema klizanja.",
+        "sha256": "40861eb37c966055f518eb827c158d5aeb2da7b98681319d2f3c143d8f01b3d6",
         "authoritative": true
       },
       "input_data": {
@@ -23302,7 +23309,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$Re_x=6{,}00\\cdot10^5$, $\\delta_B\\approx2{,}58\\ \\text{mm}$, $k_s/\\delta_B\\approx1{,}94\\cdot10^{-3}$, $K=-0{,}0667$ i $dp_e/dx\\approx+374\\ \\text{Pa/m}$. Nulti gradijent tlaka prekršen je; laminarnost i hidraulička glatkoća nisu dokazane. Blasius nije opravdan kao predikcija: $\\delta_B$ je samo referenca. Potrebno je provjeriti profil brzine i prijelaz.",
+        "markdown": "$Re_x=6{,}00\\cdot10^5$, $\\delta_B\\approx2{,}58\\ \\text{mm}$, $k_s/\\delta_B\\approx1{,}94\\cdot10^{-3}$, $K=-0{,}0667$ i $dp_e/dx\\approx+374\\ \\text{Pa/m}$. Uvjet nultoga gradijenta tlaka nije zadovoljen; laminarnost i hidraulička glatkoća nisu dokazane. Blasiusov model nije opravdan za predviđanje debljine sloja: $\\delta_B$ je samo referenca. Potrebno je provjeriti profil brzine i prijelaz.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
@@ -23482,8 +23489,8 @@
         "anchor": "#task-cfd-tri-mreze"
       },
       "statement": {
-        "markdown": "Odaberi najgrublju mrežu koja zadovoljava oba kriterija: dovoljno malu procjenu diskretizacijske pogreške protoka i dopušten maseni debalans. Zatim razdvoji taj numerički zaključak od validacije modela prema neovisnim eksperimentalnim podatcima. Sintetički Poiseuilleov skup iz `data/cfd/poiseuille_laminar` prikazan je zaokruženo. Tri sustavno pročišćene mreže imaju $h/h_f=(4;\\ 2;\\ 1)$, protoke $Q=(8{,}16814;\\ 7{,}93252;\\ 7{,}87362)\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$ i masene debalanse $(0{,}040;\\ 0{,}010;\\ 0{,}0025)\\,\\%$, redom od grube do fine. Računaj s ovdje ispisanim brojevima. Odredi opaženi red $p$, Richardsonovu ekstrapolaciju $Q_{ext}$ te $GCI_m$ i $GCI_f$ srednje i fine mreže uz $r=2$ i $F_s=1{,}25$. Za ovaj nastavni izbor zahtijeva se $GCI\\le0{,}50\\,\\%$ i maseni debalans najviše $0{,}0050\\,\\%$. Zasebno u paketu `hydrofoil_experiment` provjeri postoje li reziduali, povijesti sila, masena bilanca i potpuna mjerna nesigurnost. Obrazloži zašto numerička konvergencija protoka u prvom slučaju ne zatvara validacijsku presudu za drugi.",
-        "sha256": "105e2f68e19e4db08e05f9468412a19c31452c72abd40f81a7542f59131ad198",
+        "markdown": "Odaberi najgrublju mrežu koja zadovoljava oba kriterija: dovoljno malu procjenu diskretizacijske pogreške protoka i dopušten maseni debalans. Zatim razdvoji taj numerički zaključak od validacije modela prema neovisnim eksperimentalnim podatcima. Sintetički Poiseuilleov skup iz `data/cfd/poiseuille_laminar` prikazan je zaokruženo. Tri sustavno profinjene mreže imaju $h/h_f=(4;\\ 2;\\ 1)$, protoke $Q=(8{,}16814;\\ 7{,}93252;\\ 7{,}87362)\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$ i masene debalanse $(0{,}040;\\ 0{,}010;\\ 0{,}0025)\\,\\%$, redom od grube do fine. Računaj s ovdje ispisanim brojevima. Odredi opaženi red $p$, Richardsonovu ekstrapolaciju $Q_{ext}$ te $GCI_m$ i $GCI_f$ srednje i fine mreže uz $r=2$ i $F_s=1{,}25$. Za ovaj nastavni izbor zahtijeva se $GCI\\le0{,}50\\,\\%$ i maseni debalans najviše $0{,}0050\\,\\%$. Zasebno u paketu `hydrofoil_experiment` provjeri postoje li reziduali, povijesti sila, masena bilanca i potpuna mjerna nesigurnost. Obrazloži zašto numerička konvergencija protoka u prvom slučaju ne potvrđuje valjanost modela u drugom slučaju.",
+        "sha256": "5834a265d30bf5529b3fe19e05fb5f38a8b1293efa2d55ba36306ce4646beb70",
         "authoritative": true
       },
       "input_data": {
@@ -23554,7 +23561,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$p\\approx2{,}000$, $Q_{ext}\\approx7{,}8540\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$, $GCI_m\\approx1{,}237\\,\\%$ i $GCI_f\\approx0{,}312\\,\\%$. Odabire se fina mreža: debalans je $0{,}0025\\,\\%$; srednja krši oba uvjeta, gruba maseni uvjet. Arhivi profila nedostaju reziduali, povijesti sila, masena bilanca i potpuni mjerni budžet nesigurnosti, pa konačna validacijska presuda nije moguća.",
+        "markdown": "$p\\approx2{,}000$, $Q_{ext}\\approx7{,}8540\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$, $GCI_m\\approx1{,}237\\,\\%$ i $GCI_f\\approx0{,}312\\,\\%$. Odabire se fina mreža: debalans je $0{,}0025\\,\\%$; srednja krši oba uvjeta, gruba maseni uvjet. Arhivi profila nedostaju reziduali, povijesti sila, masena bilanca i potpun popis doprinosa mjernoj nesigurnosti, pa konačna ocjena valjanosti modela nije moguća.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
@@ -24342,8 +24349,8 @@
         "anchor": "#task-uravnotezenje-paralelnih-grana"
       },
       "statement": {
-        "markdown": "Dva rashladna ogranka između istih čvorova trebaju dobivati jednak protok. Ugradnjom prigušnog ventila u samo jedan ogranak odredi gdje ga treba postaviti i koliki dodatni otpor mora imati. Zatim zatvori kontinuitet i usporedi gubitke na oba puta. Zadani približno konstantni otpori grana bez novoga ventila jesu $R_1=12\\,000\\ \\mathrm{s^2/m^5}$ i $R_2=48\\,000\\ \\mathrm{s^2/m^5}$. Regulacija održava ukupni protok $Q=0{,}020\\ \\mathrm{m^3/s}$ i može osigurati potrebnu visinu. U svakom ogranku vrijedi kvadratni model $h_i=R_iQ_i^2$; novi ventil dodaje $h_v=R_vQ_i^2$ s $R_v\\ge0$. Odredi granu za ventil, $R_v$, oba protoka, zajednički gubitak $h_{AB}$ i doprinos samog ventila. Lokalni otpori postojećih spojeva već su uključeni u zadane $R_i$.",
-        "sha256": "4eed97100f6b87f5c1a4c840915290aa25bc638930691c54a127da51268aa6f5",
+        "markdown": "Dva rashladna ogranka između istih čvorova trebaju dobivati jednak protok. Odredi u koji ogranak treba ugraditi prigušni ventil i koliki dodatni otpor ventil mora imati. Zatim zatvori kontinuitet i usporedi gubitke na oba puta. Zadani približno konstantni otpori grana bez novoga ventila jesu $R_1=12\\,000\\ \\mathrm{s^2/m^5}$ i $R_2=48\\,000\\ \\mathrm{s^2/m^5}$. Regulacija održava ukupni protok $Q=0{,}020\\ \\mathrm{m^3/s}$ i može osigurati potrebnu visinu. U svakom ogranku vrijedi kvadratni model $h_i=R_iQ_i^2$; novi ventil dodaje $h_v=R_vQ_i^2$ s $R_v\\ge0$. Odredi granu za ventil, $R_v$, oba protoka, zajednički gubitak $h_{AB}$ i doprinos samog ventila. Lokalni otpori postojećih spojeva već su uključeni u zadane $R_i$.",
+        "sha256": "13665cf747c5941b5d8b533f6544de1e4fb16f4dc1e8c1456975fcab99a56142",
         "authoritative": true
       },
       "input_data": {
@@ -24600,8 +24607,8 @@
         "anchor": "#task-radna-tocka-hrapavog-voda"
       },
       "statement": {
-        "markdown": "Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Odredi radnu točku kad otpor cijevi ovisi o Reynoldsovu broju, pa zatim odvojeno izračunaj hidrauličku, vratilnu i električnu snagu. U svakoj iteraciji ponovno provjeri trenje u cijevi. Sintetička karakteristika crpke zadana je brojevnim vrijednostima $H_p=30-30\\,000Q^2$, uz $Q$ u $\\mathrm{m^3/s}$ i $H_p$ u metrima. Razlika slobodnih površina je $\\Delta z=8{,}0\\ \\mathrm{m}$. Vod ima $D=0{,}100\\ \\mathrm{m}$, $L=150\\ \\mathrm{m}$, ekvivalentnu hrapavost $\\varepsilon=0{,}100\\ \\mathrm{mm}$ i $\\sum\\xi=6{,}0$, uključujući ulaz i izlaz, prema brzini u tom vodu. Za vodu uzmi $\\rho=1000\\ \\mathrm{kg/m^3}$ i $\\nu=1{,}00\\cdot10^{-6}\\ \\mathrm{m^2/s}$. Upotrijebi Darcy–Weisbachov model i Colebrookovu jednadžbu; konačno provjeri turbulentni režim. Numerički riješi radnu točku u intervalu $0{,}005\\le Q\\le0{,}030\\ \\mathrm{m^3/s}$, uz pomoć notebooka ili drugog računskog alata. Izvijesti $Q_{op}$, $H_{op}$, $Re$ i $\\lambda$ te provjeri energijski rezidual manji od $10^{-6}\\ \\mathrm{m}$ i apsolutni Colebrookov rezidual manji od $10^{-6}$. Za zadane ukupnu učinkovitost crpke $\\eta_p=0{,}76$ i učinkovitost motora $\\eta_m=0{,}92$ odredi $P_h$, $P_{vr}$ i $P_{el}$; gubitke pretvarača zanemari.",
-        "sha256": "d90c46dd8ed6107526343b195e4a4e35755edbb7437b48ec6e27cb9598fcddf3",
+        "markdown": "Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Odredi radnu točku kad otpor cijevi ovisi o Reynoldsovu broju, pa zatim odvojeno izračunaj hidrauličku, vratilnu i električnu snagu. U svakoj iteraciji ponovno provjeri trenje u cijevi. Sintetička karakteristika crpke zadana je brojevnim vrijednostima $H_p=30-30\\,000Q^2$, uz $Q$ u $\\mathrm{m^3/s}$ i $H_p$ u metrima. Razlika visina slobodnih površina je $\\Delta z=8{,}0\\ \\mathrm{m}$. Vod ima $D=0{,}100\\ \\mathrm{m}$, $L=150\\ \\mathrm{m}$, ekvivalentnu hrapavost $\\varepsilon=0{,}100\\ \\mathrm{mm}$ i $\\sum\\xi=6{,}0$, uključujući ulaz i izlaz, prema brzini u tom vodu. Za vodu uzmi $\\rho=1000\\ \\mathrm{kg/m^3}$ i $\\nu=1{,}00\\cdot10^{-6}\\ \\mathrm{m^2/s}$. Upotrijebi Darcy–Weisbachov model i Colebrookovu jednadžbu; konačno provjeri turbulentni režim. Numerički riješi radnu točku u intervalu $0{,}005\\le Q\\le0{,}030\\ \\mathrm{m^3/s}$, uz pomoć bilježnice ili drugog računskog alata. Izvijesti $Q_{op}$, $H_{op}$, $Re$ i $\\lambda$ te provjeri energijski rezidual manji od $10^{-6}\\ \\mathrm{m}$ i apsolutni Colebrookov rezidual manji od $10^{-6}$. Za zadanu ukupnu učinkovitost crpke $\\eta_p=0{,}76$ i učinkovitost motora $\\eta_m=0{,}92$ odredi $P_h$, $P_{vr}$ i $P_{el}$; gubitke pretvarača zanemari.",
+        "sha256": "bd14e458ff93cc8d0b1d3cc039fac9a83d799a2b9c786c648bd65a30bf19caa9",
         "authoritative": true
       },
       "input_data": {

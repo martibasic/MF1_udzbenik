@@ -4,8 +4,8 @@
 
 Tlak je lokalna veličina, dok je opterećenje poklopca, vrata ili stijenke određeno njegovom raspodjelom po cijeloj plohi. Za hidrostatsku analizu određuju se:
 
-1. koliki je vektor rezultantne sile;
-2. kojim pravcem taj vektor djeluje.
+1. koliki su iznos i smjer rezultantne sile;
+2. kojim pravcem ta sila djeluje.
 
 Na ravnoj plohi sve lokalne tlačne sile imaju isti smjer, pa se integracijom traže iznos i centar tlaka. Na zakrivljenoj plohi lokalne normale mijenjaju smjer, pa je pouzdanije najprije odrediti horizontalnu i vertikalnu komponentu. Oba slučaja proizlaze iz istoga temeljnog zapisa
 
@@ -49,7 +49,7 @@ U CFD-u se hidrostatska sila na plohu dobiva integracijom diskretnog tlačnog po
 
 U izvještaju treba navesti referencu tlaka, obuhvaćenu stijenku i točku oko koje se računa moment. Sila može izgledati točno, a hvatište biti pogrešno ako je raspodjela tlaka u području ruba nedovoljno razlučena.
 
-Pri valovima, strujnom udaru ili pomičnoj zaklopki hidrostatički rezultat ostaje početna provjera, ali više nije konačno opterećenje konstrukcije. Tada se uz tlaknu silu ocjenjuju vremenski vrhovi, inercija konstrukcije i odgovarajuće sigurnosne kombinacije.
+Pri valovima, strujnom udaru ili pomičnoj zaklopki hidrostatički rezultat ostaje početna provjera, ali više nije konačno opterećenje konstrukcije. Tada se uz tlačnu silu ocjenjuju vremenski vrhovi, inercija konstrukcije i odgovarajuće sigurnosne kombinacije.
 :::
 
 ## Ravna ploha: rezultanta i centar tlaka
@@ -101,7 +101,7 @@ h_R=\frac{\int_A h\,(p_0+\rho gh)\,dA}
 {(p_0+\rho gh_C)A}.
 $$ {#eq-sile-plohe-centar-tlaka-02}
 
-Taj oblik je sigurniji od pamćenja posebnih korekcija jer prisiljava da sila i moment potječu iz istoga tlaka.
+Taj je oblik pouzdaniji od pamćenja posebnih korekcija jer zahtijeva da se sila i moment računaju iz iste raspodjele tlaka.
 
 ### Nagnuta ploha i jasno definiran kut
 
@@ -137,7 +137,7 @@ Za $\theta=90^\circ$ dobiva se vertikalna ploha. Kada $\theta\to0$ tlak po vodor
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Numerički pokus — ravna ploha</p>
 
-Prije pokretanja predvidite kako će se promijeniti $F$ i razlika $h_{CP}-h_C$ kada se cijela ploha spusti dublje, a kako kada se pri istoj dubini težišta promijeni nagib.
+Prije pokretanja predvidi kako će se promijeniti $F$ i razlika $h_{CP}-h_C$ kada se cijela ploha spusti dublje, a kako kada se pri istoj dubini težišta promijeni nagib.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u05_sila_na_ravnu_plohu.ipynb">Pokreni u pregledniku</a>
@@ -157,21 +157,21 @@ Numerički tlak na stijenci sam po sebi nije projektna sila. Rezultanta i moment
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički most</p>
 
-**Gdje ovo živi u numerici.** Integral $F = \int_A p\,dA$ i položaj hvatišta sile su **standardni izlazi svake CFD analize** opterećenja na zidu — bilo da govorimo o vratima brane, krilu zrakoplova, lopatici turbine ili rebru cijevi pod vanjskim tlakom. Razlika u odnosu na ovo poglavlje: $p$ nije više linearan po dubini, nego je puno polje koje solver izračuna.
+**Veza s numeričkim proračunom.** Za ravnu plohu integral $F = \int_A p\,dA$ daje iznos tlačne sile, a moment određuje njezin pravac djelovanja. **Sila i moment standardni su rezultati CFD analize** opterećenja stijenke, primjerice vrata brane, krila zrakoplova ili lopatice turbine. U općem strujanju tlak $p$ ne mora biti linearan po dubini, nego se dobiva numeričkim proračunom polja.
 
-**Što numerički alat radi s tim.** Mreža uz zid mora razlučiti raspodjelu tlaka — premruba mreža daje točno toliko grubu silu. Funkcionalni objekti (`forces`, `forceCoeffs`, *Surface Reports*) tijekom simulacije zapisuju silu, moment i hvatište u svakom koraku, što služi i kao konvergencijski indikator: kad sila prestaje migati, rješenje je konvergiralo.
+**Postupak numeričkog proračuna.** Mreža uz stijenku mora dovoljno razlučiti raspodjelu tlaka; pregruba mreža može dati netočnu silu i moment. Alati za praćenje sila i momenata (`forces`, `forceCoeffs`, *Surface Reports*) zapisuju te veličine ili njihove koeficijente u zadanim koracima proračuna. Stabilizacija tih zapisa jedan je pokazatelj iteracijske konvergencije; treba provjeriti i reziduale, bilance te osjetljivost na profinjenje mreže.
 
-**Tipičan scenarij.** U projektiranju brana i ustava CFD se ne primjenjuje na samu hidrostatsku silu (jer je analitička), nego na **dinamičke** uvjete: udar vala na branu, prelijevanje preko krune, lokalno pojačanje tlaka u kanalima za ispuštanje. Vremenska serija sile na patchu vrata pokazuje pikove u prolaznom stanju koje statički proračun ne otkriva, a koji se izravno koriste za dimenzioniranje zglobnih oslonaca i vijčanih spojeva.
+**Tipičan scenarij.** U projektiranju brana i ustava CFD se ne primjenjuje na samu hidrostatsku silu (jer je analitička), nego na **dinamičke** uvjete: udar vala na branu, prelijevanje preko krune, lokalno pojačanje tlaka u kanalima za ispuštanje. Vremenski niz sile na površini vrata pokazuje vršna opterećenja u prolaznom stanju koja statički proračun ne otkriva. Nakon provjere proračuna ta se opterećenja mogu koristiti pri dimenzioniranju zglobnih oslonaca i vijčanih spojeva.
 
 **Alati u kojima se to susreće:** `OpenFOAM` (`forces`, `forceCoeffs`) · `ANSYS Fluent` (*Force Report*, *Moment Report*) · `ParaView` (*Integrate Variables*).
 
-> *Nije gradivo MF1. Hvatište sile koje se ovdje izvodi ručno za pravokutnu plohu, u CFD-u izračuna se za bilo kakvu zakrivljenu geometriju jednako lako.*
+> *Nije gradivo MF1. Sila i moment koji se ovdje određuju ručno u CFD-u računaju se integracijom po diskretiziranoj plohi; točnost ovisi i o prikazu geometrije i polja tlaka.*
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
-## Validacija CFD-a ručnim računom
+## Verifikacija CFD-a ručnim računom
 
-Pri CFD simulaciji potopljene ravne plohe (vrata brane, inspekcijski poklopac, stijenka spremnika), funkcijski objekt `forces` integrira raspodjelu tlaka po patchu i daje rezultantnu silu. Ručna provjera iz ovog poglavlja glasi: $F = \rho g z_T A$ za poznato $z_T$ (dubina težišta) i $A$ (površina plohe). Za mirnu vodu razlika između CFD rezultata i analitičke vrijednosti trebala bi biti manja od $2\%$; veće odstupanje signalizira pogrešno postavljen rubni uvjet tlaka ili nepravilnu raspodjelu hidrostatike u domeni. Bez ove provjere CFD rezultat nije pouzdan za projektnu odluku.
+Pri CFD simulaciji uronjene ravne plohe (vrata brane, inspekcijskog poklopca ili stijenke spremnika) funkcijski objekt `forces` integrira tlačne i viskozne doprinose po odabranoj rubnoj plohi. Za miran fluid viskozni doprinos iščezava, pa se provjerava tlačna sila. Ručna provjera iz ovog poglavlja glasi: $F = \rho g z_T A$ za poznato $z_T$ (dubina težišta) i $A$ (površina plohe). Za ovu nastavnu usporedbu može se zadati dopušteno relativno odstupanje od $2\%$; to nije univerzalni kriterij točnosti. Veće odstupanje zahtijeva provjeru reference i rubnih uvjeta tlaka, hidrostatske ravnoteže, integracije te iteracijske i mrežne konvergencije. Slaganje s analitičkim rješenjem provjerava numerički proračun; samo po sebi nije validacija modela mjerenjem niti dovoljna osnova za projektnu odluku.
 :::
 
 <!-- [NOVA PEDAGOŠKA DOPUNA] -->
@@ -180,7 +180,7 @@ Pri CFD simulaciji potopljene ravne plohe (vrata brane, inspekcijski poklopac, s
 
 **Što se zbraja.** Za zadanu geometriju, gustoću, gravitaciju i referencu tlaka traže se raspodjela tlaka, sila i položaj njezina hvatišta. Ako tlak nije jednolik, ploha se u numeričkom opisu dijeli na male elemente. Vrijednost $p_i$ predstavlja lokalni tlak na elementu površine $A_i$, pa je njegov doprinos sili približno $p_iA_i$; zbroj tih doprinosa približava integral $\int_Ap\,dA$. Umnožak jednoga tlaka i cijele površine opravdan je samo za jednolik tlak ili za jasno određen površinski prosjek, koji ovdje za linearno hidrostatsko polje odgovara tlaku u težištu.
 
-**Sila i moment nisu ista provjera.** Za hvatište se uz svaki doprinos sili zbraja i njegov moment prema odabranoj osi; omjer ukupnoga momenta i ukupne sile daje položaj rezultante. Zato mreža može dati prihvatljiv ukupni $F$, a pogrešan centar tlaka ako ne razlučuje rubove ili promjenu tlaka. Fizička provjera je usporedba s poznatim linearnim hidrostatskim poljem, jednolikim slučajem $F=pA$ ili očekivanom simetrijom; mirna vremenska serija sile pokazuje numeričku stabilnost, ali sama nije dovoljna verifikacija.
+**Sila i moment nisu ista provjera.** Za hvatište se uz svaki doprinos sili zbraja i njegov moment prema odabranoj osi; omjer ukupnoga momenta i ukupne sile daje položaj rezultante. Zato mreža može dati prihvatljiv ukupni $F$, a pogrešan centar tlaka ako ne razlučuje rubove ili promjenu tlaka. Fizikalna provjera jest usporedba s poznatim linearnim hidrostatskim poljem, jednolikim slučajem $F=pA$ ili očekivanom simetrijom; mirna vremenska serija sile pokazuje numeričku stabilnost, ali sama nije dovoljna verifikacija.
 :::
 
 ## Riješeni primjeri: ravne plohe
@@ -264,7 +264,7 @@ $$
 T=\frac{M_A}{L}=7{,}89\ \mathrm{kN}.
 $$ {#eq-sile-plohe-rijeseni-primjer-kosi-poklopac-sa-spojnicom-t2-04}
 
-**Neovisna provjera.** Težište poklopca je $0{,}600\ \mathrm{m}$ od zgloba, a centar tlaka mora biti dalje niz plohu jer tlak raste: $0{,}600<s_{CP}<1{,}200\ \mathrm{m}$. Momentna bilanca izravno vraća $TL=Fs_{CP}$; usporedba samih magnituda $T$ i $F$ ne bi bila dovoljna.
+**Neovisna provjera.** Težište poklopca je $0{,}600\ \mathrm{m}$ od zgloba, a centar tlaka mora biti dalje niz plohu jer tlak raste: $0{,}600<s_{CP}<1{,}200\ \mathrm{m}$. Momentna bilanca izravno vraća $TL=Fs_{CP}$; usporedba samih iznosa $T$ i $F$ ne bi bila dovoljna.
 :::
 
 ::: {#ex-u05-pregrada-ulje-voda .mf1-we}
@@ -340,7 +340,7 @@ $$
 F_x=\int_A p\,n_{f,x}\,dA.
 $$ {#eq-sile-plohe-horizontalna-komponenta-01}
 
-Predznačeni element $n_{f,x}dA$ jednak je projekciji na ravninu okomitu na $x$. Ako se predznak normale ne mijenja i projekcija je jednoznačna, magnituda horizontalne komponente jednaka je sili na **vertikalnu projekciju** zakrivljene plohe:
+Predznačeni element $n_{f,x}dA$ jednak je projekciji na ravninu okomitu na $x$. Ako se predznak normale ne mijenja i projekcija je jednoznačna, iznos horizontalne komponente jednaka je sili na **vertikalnu projekciju** zakrivljene plohe:
 
 $$
 |F_H|=\rho gA_xh_{Cx}.
@@ -356,13 +356,13 @@ $$
 F_V=\int_A p\,n_{f,z}\,dA.
 $$ {#eq-sile-plohe-vertikalna-komponenta-i-njezin-smjer-01}
 
-U otvorenom spremniku, s manometarskim tlakom jednakim nuli na slobodnoj površini, magnituda se može dobiti ravnotežom pomoćnog volumena $V^*$ omeđenog zakrivljenom plohom, okomitim bočnim plohama i vodoravnom zatvarajućom plohom:
+U otvorenom spremniku, s manometarskim tlakom jednakim nuli na slobodnoj površini, iznos se može dobiti ravnotežom pomoćnog volumena $V^*$ omeđenog zakrivljenom plohom, okomitim bočnim plohama i vodoravnom zatvarajućom plohom:
 
 $$
 |F_V|=\rho gV^*.
 $$ {#eq-u05-zakrivljena-vertikalna}
 
-Pravac djelovanja prolazi težištem toga volumena. Formula daje **magnitudu**, ne automatski smjer. Smjer se određuje ovim redoslijedom:
+Pravac djelovanja prolazi težištem toga volumena. Formula daje **iznos**, ne automatski smjer. Smjer se određuje ovim redoslijedom:
 
 1. označi stvarnu stranu na kojoj fluid dodiruje plohu;
 2. nacrtaj lokalnu strelicu $p\mathbf n_f$ od fluida prema stijenci;
@@ -385,7 +385,7 @@ Funkcija $\operatorname{atan2}$ zadržava kvadrant; obični $\arctan(F_V/F_H)$ m
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Numerički pokus — zakrivljena ploha</p>
 
-Prije pokretanja odredi smjer $F_V$ samo iz okupane strane. Zatim mijenjajte dubinu i polumjer te usporedi numerički rast $F_H$ i $F_V$ s njihovim geometrijskim izrazima.
+Prije pokretanja odredi smjer $F_V$ samo iz strane koju fluid kvasi. Zatim mijenjaj dubinu i polumjer te usporedi numerički rast $F_H$ i $F_V$ s njihovim geometrijskim izrazima.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u06_zakrivljena_ploha.ipynb">Pokreni u pregledniku</a>
@@ -398,22 +398,22 @@ Prije pokretanja odredi smjer $F_V$ samo iz okupane strane. Zatim mijenjajte dub
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički most</p>
 
-**Gdje ovo živi u numerici.** Za analitički nedostupne geometrije — segmentnu ustavu, turbinsku lopaticu, krilo ili brodski trup — sila se dobiva vektorskom integracijom trakcije. Ako je $\vec A_i$ vanjski vektor površine **fluidnoga** kontrolnog volumena, tlakova sila stijenke na fluid jest približno $-\sum_i p_i\vec A_i$, uz dodatak viskozne trakcije; sila fluida na stijenku ima suprotan predznak. Znak zato ovisi o tome izvještava li alat silu na fluid ili na zid i kako je orijentirana normala.
+**Veza s numeričkim proračunom.** Za analitički nedostupne geometrije — segmentnu ustavu, turbinsku lopaticu, krilo ili brodski trup — sila se dobiva vektorskom integracijom trakcije. Ako je $\vec A_i$ vanjski vektor površine **fluidnoga** kontrolnog volumena, tlačna sila stijenke na fluid jest približno $-\sum_i p_i\vec A_i$, uz dodatak viskozne trakcije; sila fluida na stijenku ima suprotan predznak. Znak zato ovisi o tome izvještava li alat silu na fluid ili na zid i kako je orijentirana normala.
 
-**Što numerički alat radi s tim.** Mreža mora dobro razlučiti zakrivljenost — to je zadatak generatora mreže (`snappyHexMesh`, *Fluent meshing*). Što je veća krivina lokalno, to gušća mreža mora biti uz zid. Rezultati izlaze kao horizontalna, vertikalna i ukupna sila *izravno*, bez ručnog rastavljanja.
+**Postupak numeričkog proračuna.** Mreža mora dobro razlučiti zakrivljenost — to je zadatak generatora mreže (`snappyHexMesh`, *Fluent meshing*). Što je veća lokalna zakrivljenost, to finija mreža treba biti uz stijenku. Rezultati izlaze kao horizontalna, vertikalna i ukupna sila *izravno*, bez ručnog rastavljanja.
 
-**Tipičan scenarij.** Krilo zrakoplova, lopatica turbine, propeler ili brodski trup imaju zakrivljenu mokru plohu na kojoj se ne može unaprijed napisati raspodjela tlaka. CFD daje cjelovito trodimenzijsko polje $p(x,y,z)$ na zidu, a integracijom po patchu istovremeno se dobivaju uzgon, otpor i moment — sve tri komponente bez ručnog rastavljanja na projekcije i imaginarne volumene.
+**Tipičan scenarij.** Krilo zrakoplova, lopatica turbine, propeler ili brodski trup imaju zakrivljenu mokru plohu na kojoj se ne može unaprijed napisati raspodjela tlaka. CFD daje trodimenzijsko polje tlaka $p(x,y,z)$, a integracijom po odabranoj rubnoj plohi dobivaju se tlačni doprinosi uzgonu, otporu i momentu. Za ukupno opterećenje dodaju se viskozni doprinosi. Pritom nije potrebno ručno rastavljanje na projekcije i pomoćne volumene.
 
 **Alati u kojima se to susreće:** `OpenFOAM` (`snappyHexMesh`, `forces`, `forceCoeffs`) · `ANSYS Fluent` (*Fluent Meshing*, *Force Report*) · `Star-CCM+` (*Surface Wrapper*, *Force Reports*).
 
-> *Nije gradivo MF1. Ono što se ovdje radi mukotrpno za segmentnu ustavu, CFD radi za bilo koju trodimenzijsku geometriju u istom potezu.*
+> *Nije gradivo MF1. Vektorska integracija primjenjuje se i na složene trodimenzijske plohe, uz provjeru mreže i izračunanog polja.*
 :::
 
 <!-- [NOVA PEDAGOŠKA DOPUNA] -->
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerička poveznica — zakrivljena ploha: normala i predznak</p>
 
-**Zašto je doprinos vektor.** Na elementu zakrivljene plohe tlak $p_i$ djeluje okomito na njegovu lokalnu površinu. Element $A_i$ daje vektorski doprinos $p_i\mathbf n_{f,i}A_i$, pa se ne zbrajaju samo iznosi, nego njegove predznačene vodoravne i okomite komponente. Geometrija stoga mora dati i veličinu elementa i normalu $\mathbf n_{f,i}$; pogrešno okrenuta normala mijenja predznak sile, iako iznos tlaka ostaje isti.
+**Zašto je doprinos vektor.** Na elementu zakrivljene plohe tlak $p_i$ djeluje okomito na njegovu lokalnu površinu. Element $A_i$ daje vektorski doprinos $p_i\mathbf n_{f,i}A_i$, pa se ne zbrajaju samo iznosi, nego i predznačene vodoravne i okomite komponente svakog doprinosa. Geometrija stoga mora dati i veličinu elementa i normalu $\mathbf n_{f,i}$; pogrešno okrenuta normala mijenja predznak sile, iako iznos tlaka ostaje isti.
 
 **Što se provjerava.** Nakon zbrajanja lokalnih doprinosa provjeravaju se očekivani smjer rezultante, simetrija kada je geometrija simetrična te slaganje komponenti s vertikalnom projekcijom i pomoćnim volumenom u slučajevima za koje su ti hidrostatski postupci dopušteni. Konvergiran zbroj na jednoj mreži nije sam dokaz ispravnog smjera; rezultat se mora provjeriti i pri profinjenju područja veće zakrivljenosti. Detalji površinske diskretizacije, rubnih uvjeta i verifikacije nalaze se u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span> i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
 :::
@@ -455,7 +455,7 @@ V^*=h_1Rb+\frac{\pi R^2}{4}b
 =5{,}448+2{,}139=7{,}587\ \mathrm{m^3}.
 $$ {#eq-sile-plohe-rijeseni-primjer-potopljena-cetvrtina-kruga-sila-04}
 
-Magnituda vertikalne komponente je
+Iznos vertikalne komponente je
 
 $$
 |F_V|=\rho gV^*=74{,}28\ \mathrm{kN}.
@@ -476,7 +476,7 @@ $$ {#eq-sile-plohe-rijeseni-primjer-potopljena-cetvrtina-kruga-sila-07}
 
 pod kutom $48{,}1^\circ$ iznad horizontale.
 
-**Neovisna provjera.** Rezultanta mora biti između veće komponente i njihova zbroja: $74{,}28<99{,}81<140{,}95\ \mathrm{kN}$. Smjer se dodatno provjerava jednom lokalnom normalom na donjoj okupanoj strani; ona ima pozitivnu vertikalnu komponentu neovisno o tome gdje je nacrtan $V^*$.
+**Neovisna provjera.** Rezultanta mora biti između veće komponente i njihova zbroja: $74{,}28<99{,}81<140{,}95\ \mathrm{kN}$. Smjer se dodatno provjerava jednom lokalnom normalom na donjoj strani koju voda kvasi; ona ima pozitivnu vertikalnu komponentu neovisno o tome gdje je nacrtan $V^*$.
 :::
 
 ::: {#ex-u05-cetvrtcilindar-prema-dolje .mf1-we}
@@ -551,7 +551,7 @@ $$
 V^*=\frac{\pi R^2}{4}b=1{,}3305\ \mathrm{m^3},
 $$ {#eq-sile-plohe-rijeseni-primjer-zglobni-poklopac-s-vertikalnom-02}
 
-pa je magnituda vertikalne komponente
+pa je iznos vertikalne komponente
 
 $$
 |F_V|=\rho gV^*=13{,}026\ \mathrm{kN}.
@@ -606,7 +606,7 @@ Jednoliki referentni tlak može se poništiti samo ako djeluje s obje strane na 
 
 ## Zadaci za samostalan rad
 
-U svim zadatcima uzmi $g=9{,}81\ \mathrm{m/s^2}$. Ako nije drukčije navedeno, voda ima $\rho=998\ \mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak. Skica s okupanom stranom, normalom i pozitivnim smjerovima dio je postavljanja modela.
+U svim zadatcima uzmi $g=9{,}81\ \mathrm{m/s^2}$. Ako nije drukčije navedeno, voda ima $\rho=998\ \mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak. Skica sa stranom koju fluid kvasi, normalom i pozitivnim smjerovima dio je postavljanja modela.
 
 ![Skice zadataka Z1–Z6: ravne plohe, dvije razine vode, trokutasti poklopac i radijalni poklopac s osi u središtu kružnice](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe-skice fig-align="center" fig-alt="Šest skica s dimenzijama, stvarnom vodom i silama na poklopce; u Z5 os je u središtu kružnice O"}
 
@@ -643,7 +643,7 @@ Zakrivljeni poklopac presjeka četvrtine kruga ima $R=0{,}65\ \mathrm{m}$ i šir
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Za $F_H$ rabite vertikalnu projekciju $Rb$ na dubini $h_1+R/2$. Pomoćni volumen čine pravokutni dio $h_1Rb$ i četvrtina valjka.
+Za $F_H$ rabi vertikalnu projekciju $Rb$ na dubini $h_1+R/2$. Pomoćni volumen čine pravokutni dio $h_1Rb$ i četvrtina valjka.
 :::
 ::::
 ::::
@@ -668,7 +668,7 @@ Vertikalna nepropusna pregrada širine $b=1{,}20\ \mathrm{m}$ i visine $H=3{,}00
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Odvojeno nacrtaj dva trokutasta dijagrama manometarskog tlaka. Svaki daje silu na visini $h/3$ iznad dna. Sile i njihove momente oduzmite uz odgovarajuće predznake; krak spojnice jest $H$.
+Odvojeno nacrtaj dva trokutasta dijagrama manometarskog tlaka. Svaki daje silu na visini $h/3$ iznad dna. Sile i njihove momente oduzmi uz odgovarajuće predznake; krak spojnice jest $H$.
 :::
 ::::
 ::::
@@ -693,7 +693,7 @@ Vertikalni poklopac ima oblik jednakokračnog trokuta s vrhom gore, visinom $H=1
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Za trokut s vrhom gore vrijedi $A=bH/2$, $h_C=h_0+2H/3$ i $I_G=bH^3/36$ oko vodoravne težišne osi. Uporabite $F\le F_{\max}$; zatim provjeri ovisi li $h_{CP}$ o širini.
+Za trokut s vrhom gore vrijedi $A=bH/2$, $h_C=h_0+2H/3$ i $I_G=bH^3/36$ oko vodoravne težišne osi. Upotrijebi $F\le F_{\max}$; zatim provjeri ovisi li $h_{CP}$ o širini.
 :::
 ::::
 ::::
@@ -739,7 +739,7 @@ $F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}
 
 ### Z6. Nesigurnost sile na mjerni panel {#task-u05-nesigurnost-modela-i-mjerenja .unnumbered .unlisted}
 
-Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\ \mathrm{m}$ i $H=0{,}80\ \mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\ \mathrm{m}$ sa standardnom nesigurnošću $u(h_1)=0{,}020\ \mathrm{m}$, a gustoća je $\rho=998\ \mathrm{kg/m^3}$ uz $u(\rho)=3\ \mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\ \mathrm{kN}$ uz $u(F_m)=0{,}30\ \mathrm{kN}$. Pretpostavi nezavisne ulaze i primijeni linearnu propagaciju nesigurnosti. Izračunaj predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\sqrt{u(F)^2+u(F_m)^2}$. Obrazloži podržavaju li podaci tvrdnju o neslaganju na razini $2u$.
+Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\ \mathrm{m}$ i $H=0{,}80\ \mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\ \mathrm{m}$ sa standardnom nesigurnošću $u(h_1)=0{,}020\ \mathrm{m}$, a gustoća je $\rho=998\ \mathrm{kg/m^3}$ uz $u(\rho)=3\ \mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\ \mathrm{kN}$ uz $u(F_m)=0{,}30\ \mathrm{kN}$. Pretpostavi neovisne ulaze i primijeni linearnu propagaciju nesigurnosti. Izračunaj predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\sqrt{u(F)^2+u(F_m)^2}$. Obrazloži podupiru li podatci tvrdnju o neslaganju na razini $2u$.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
@@ -771,6 +771,6 @@ $F=12{,}218\ \mathrm{kN}$; $u(F)=0{,}192\ \mathrm{kN}$; kombinirana nesigurnost 
 - Centar tlaka dolazi iz momenta **iste** raspodjele. Formula $h_C+I_G/(Ah_C)$ nije opća za nenulti jednoliki dodatak tlaka.
 - Kut nagnute plohe ovdje je kut prema vodoravnici; geometrija dubina ulazi preko $\sin\theta$.
 - Za zakrivljenu plohu $F_H$ se dobiva iz sile na vertikalnu projekciju, a $|F_V|$ iz težine odgovarajućega pomoćnog volumena kada su ispunjene pretpostavke otvorenog manometarskog slučaja.
-- Smjer $F_V$ određuje stvarna okupana strana i normala $\mathbf n_f$. Vertikalna komponenta može biti prema gore ili prema dolje.
+- Smjer $F_V$ određuje stvarna strana koju fluid kvasi i normala $\mathbf n_f$. Vertikalna komponenta može biti prema gore ili prema dolje.
 - Hidrostatički račun ne uključuje strujne udare, valove, inerciju poklopca, deformaciju, zamor, brtvljenje ni normativnu provjeru konstrukcije.
 :::

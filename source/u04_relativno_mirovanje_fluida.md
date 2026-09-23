@@ -14,9 +14,9 @@ Relativno mirovanje javlja se pri kočenju autocisterne, u gorivnom spremniku vo
 
 ### Translatorno ubrzanje
 
-Ako se spremnik giba stalnim translatornim ubrzanjem i ako se nakon prolaznih oscilacija fluid smiri u odnosu na stijenke, onda se problem može čitati kao hidrostatika u neinercijskom sustavu. U tom sustavu na fluid djeluje efektivno polje sila koje je rezultat gravitacije i inercijske sile.
+Ako se spremnik giba stalnim translatornim ubrzanjem i ako se nakon prolaznih oscilacija fluid smiri u odnosu na stijenke, onda se problem može promatrati kao hidrostatika u neinercijskom sustavu. U tom sustavu na fluid djeluje efektivno polje sila koje je rezultat gravitacije i inercijske sile.
 
-U tom stanju fluid se prema spremniku giba kao kruto tijelo: nema relativnog klizanja slojeva ni smičnih naprezanja koja bi nastajala zbog deformacije profila brzine. Upravo zato relativno mirovanje nije nastavak strujanja s gradijentom brzine, nego novi statički problem u promijenjenom polju sila.
+U tom stanju fluid se giba zajedno sa spremnikom kao kruto tijelo: nema relativnog klizanja slojeva ni smičnih naprezanja koja bi nastajala zbog deformacije profila brzine. Upravo zato relativno mirovanje nije nastavak strujanja s gradijentom brzine, nego novi statički problem u promijenjenom polju sila.
 
 Za gibanje spremnika ubrzanjem $a$ udesno, slobodna površina ostaje okomita na $\vec{g}_{eff}$, pa za bočni presjek pravokutnog spremnika vrijedi radna relacija
 
@@ -24,7 +24,7 @@ $$\Delta h = \frac{aL}{g}$$ {#eq-relativno-mirovanje-fizikalni-uvod-i-matematick
 
 Razlika razina $\Delta h$ povećava se s ubrzanjem i duljinom spremnika, a smanjuje s gravitacijskim ubrzanjem $g$. Relacija vrijedi dok nema prelijevanja ni ogoljavanja dna, kada je slobodna površina ravna.
 
-gdje je $\Delta h$ razlika razina slobodne površine na krajevima spremnika.
+Pritom je $\Delta h$ razlika razina slobodne površine na krajevima spremnika.
 
 Za razliku od hidrostatike u mirujućem spremniku, tlak ne raste samo s okomitom dubinom. Smjer efektivnog polja sila određuje geometriju slobodne površine, lokalnu dubinu i raspodjelu tlaka.
 
@@ -58,7 +58,7 @@ $$ {#eq-relativno-mirovanje-matematicki-izvod-02}
 Efektivno polje sila $\vec{g}_{eff}$ vektorski je zbroj gravitacijskog i inercijskog člana. Slobodna je površina u ubrzanom spremniku okomita na $\vec{g}_{eff}$. U slobodnom padu, kada je $\vec{a}=\vec{g}$, vrijedi $\vec{g}_{eff}=0$ te nestaje hidrostatski gradijent tlaka.
 :::
 
-Time se uvodi efektivno polje sila $\vec g_{eff}$: fluid se u akceleriranom spremniku ponaša kao da se nalazi u novom gravitacijskom polju koje je vektorski zbroj stvarne gravitacije i suprotno usmjerene inercijske akceleracije. Za translatorno gibanje spremnika s komponentama ubrzanja $a_x$ i $a_z$, uz os $x$ vodoravno i os $z$ prema gore, slijede komponente
+Time se uvodi efektivno polje sila $\vec g_{eff}$: fluid se u ubrzanom spremniku ponaša kao da se nalazi u novom gravitacijskom polju koje je vektorski zbroj stvarne gravitacije i suprotno usmjerenog inercijskog ubrzanja. Za translatorno gibanje spremnika s komponentama ubrzanja $a_x$ i $a_z$, uz os $x$ vodoravno i os $z$ prema gore, slijede komponente
 
 $$\frac{\partial p}{\partial x} = -\rho a_x, \qquad \frac{\partial p}{\partial z} = -\rho(g+a_z)$$ {#eq-relativno-mirovanje-fizikalno-znacenje-01}
 
@@ -93,7 +93,7 @@ Fizikalno značenje relacije jest neposredno: što je spremnik dulji i što je u
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Coriolisova sila u relativnom mirovanju — zašto nestaje</p>
 
-Pri rotirajućem spremniku puni oblik prividnih sila u neinercijalnom (rotirajućem) okviru sadrži tri člana: centrifugalnu silu $-\rho\vec{\omega}\times(\vec{\omega}\times\vec{r})$, Eulerovu silu $-\rho\dot{\vec{\omega}}\times\vec{r}$ (koja iščezava pri konstantnoj kutnoj brzini) i **Coriolisovu silu** $-2\rho\vec{\omega}\times\vec{v}_{rel}$, koja djeluje samo kad fluid ima brzinu u rotirajućem okviru.
+Pri rotirajućem spremniku puni oblik prividnih sila u neinercijskom (rotirajućem) okviru sadrži tri člana: centrifugalnu silu $-\rho\vec{\omega}\times(\vec{\omega}\times\vec{r})$, Eulerovu silu $-\rho\dot{\vec{\omega}}\times\vec{r}$ (koja iščezava pri konstantnoj kutnoj brzini) i **Coriolisovu silu** $-2\rho\vec{\omega}\times\vec{v}_{rel}$, koja djeluje samo kad fluid ima brzinu u rotirajućem okviru.
 
 U stanju relativnog mirovanja $\vec{v}_{rel} = 0$, pa Coriolisov član automatski iščezava
 
@@ -111,9 +111,9 @@ a centrifugalni član u cilindričnim koordinatama (kutna brzina $\vec{\omega} =
 :::
 
 ::: {.mf1-izvod}
-<p class="mf1-box-label">Matematički izvod — Volumno očuvanje paraboloida — eksplicitan izvod</p>
+<p class="mf1-box-label">Matematički izvod — Očuvanje volumena u rotirajućem spremniku — eksplicitan izvod</p>
 
-Za rotirajući cilindrični spremnik s vodom radijusa $R$ i početne mirne visine $h_0$ pretpostavlja se da je nakon dovoljno dugoga vremena fluid dosegnuo vrtnju krutoga tijela s konstantnom kutnom brzinom $\omega$. Zanemaruju se prijelazno zavrtavanje, valovi i utjecaj meniska. Dok još nema prelijevanja ni ogoljavanja dna, slobodna površina poprima oblik paraboloida $h(r)=h_C+\omega^2r^2/(2g)$, gdje je $h_C$ visina u središtu. Vrijednosti $h_C$ i $h_R$ (uz stijenku) povezuju se zakonom očuvanja volumena vode prije i poslije početka vrtnje.
+Za rotirajući cilindrični spremnik polumjera $R$, ispunjen vodom do početne visine $h_0$, pretpostavlja se da je nakon dovoljno dugoga vremena fluid dosegnuo vrtnju krutoga tijela s konstantnom kutnom brzinom $\omega$. Zanemaruju se prijelazno zavrtavanje, valovi i utjecaj meniska. Dok još nema prelijevanja ni ogoljavanja dna, slobodna površina poprima oblik paraboloida $h(r)=h_C+\omega^2r^2/(2g)$, gdje je $h_C$ visina u središtu. Vrijednosti $h_C$ i $h_R$ (uz stijenku) povezuju se zakonom očuvanja volumena vode prije i poslije početka vrtnje.
 
 Volumen vode u rotirajućem spremniku računa se integralom
 
@@ -145,7 +145,7 @@ $$
 h_R = h_0 + \frac{\omega^2 R^2}{4g}.
 $$ {#eq-relativno-mirovanje-matematicki-izvod-volumno-ocuvanje-paraboloida-e-05}
 
-Zbroj i srednja vrijednost daju karakterističnu jednakost $(h_C + h_R)/2 = h_0$ — visina rasta uz stijenku jednaka je padu visine u središtu, što je geometrijska posljedica simetrije paraboloida i očuvanja mase.
+Zbroj i srednja vrijednost daju karakterističnu jednakost $(h_C + h_R)/2 = h_0$ — porast razine uz stijenku jednak je padu razine u središtu, što je geometrijska posljedica simetrije paraboloida i očuvanja mase.
 
 Granični uvjet **ogoljavanja dna** dolazi iz $h_C = 0$:
 
@@ -203,7 +203,7 @@ $$
 \Delta h = \frac{aL}{g} = \frac{1{,}35 \cdot 1{,}60}{9{,}81} = 0{,}220\ \text{m} \approx 22{,}0\ \text{cm}.
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-01}
 
-Kako nema gubitka volumena, srednja visina ostaje $(h_{stražnja} + h_{prednja})/2 = h_0 = 0{,}42\ \text{m}$ a razlika visina je $h_{stražnja} - h_{prednja} = \Delta h = 0{,}220\ \text{m}$. Rješavanjem tog sustava slijedi
+Kako nema gubitka volumena, srednja visina ostaje $(h_{stražnja} + h_{prednja})/2 = h_0 = 0{,}42\ \text{m}$, a razlika visina je $h_{stražnja} - h_{prednja} = \Delta h = 0{,}220\ \text{m}$. Rješavanjem tog sustava slijedi
 
 $$
 h_{stražnja} = h_0 + \frac{\Delta h}{2} = 0{,}42 + 0{,}110 = 0{,}530\ \text{m},
@@ -213,7 +213,7 @@ $$
 h_{prednja} = h_0 - \frac{\Delta h}{2} = 0{,}42 - 0{,}110 = 0{,}310\ \text{m}.
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-03}
 
-Kut nagiba slobodne površine dobiva se iz efektnog polja sila:
+Kut nagiba slobodne površine dobiva se iz efektivnog polja sila:
 
 $$
 {}\tan\theta = \frac{a}{g} = \frac{1{,}35}{9{,}81} = 0{,}138 \quad \Longrightarrow \quad {}\theta = \arctan(0{,}138) \approx 7{,}9^\circ.
@@ -287,7 +287,7 @@ Na stijenci `AB` djeluju dvije komponente sile po jediničnoj širini modula:
 1. jednolika komponenta zbog plinskog pretlaka.
 2. linearno rastuća komponenta zbog raspodjele tlaka u tekućini uz $g_{eff}$.
 
-Ploha stijenke po jediničnoj širini modula iznosi $A_{AB} = s \cdot 1 = 0{,}582\ \text{m}^2$. Jednolika komponenta sile zato glasi
+Površina stijenke po jediničnoj širini modula iznosi $A_{AB} = s \cdot 1 = 0{,}582\ \text{m}^2$. Jednolika komponenta sile zato glasi
 
 $$
 F_0 = p_{M0} s b \approx 9313{,}55\ \text{N}, \qquad b=1\ \text{m}.
@@ -317,7 +317,7 @@ ispod ruba `A`, mjereno uzduž stijenke. U računu sila i hvatišta koriste se n
 
 1. Budući da je $a < g$, kut ${}\alpha$ mora ostati veći od $45^\circ$, što je ovdje zadovoljeno.
 2. Da nema plinskog pretlaka, hvatište bi bilo dublje prema $2s/3$; ovdje ga jednolika komponenta vraća bliže sredini stijenke.
-3. Ukupna sila mora biti veća od same hidrostatske komponente, a razumna je i to da pretlak ovdje nosi veći dio opterećenja.
+3. Ukupna sila mora biti veća od same hidrostatske komponente, a razumno je i to da pretlak ovdje nosi veći dio opterećenja.
 :::
 
 ::: {#ex-u04-rotirajuci-cilindricni-spremnik-bez-prelijevanja-t2 .mf1-we}
@@ -373,9 +373,9 @@ $$ {#eq-relativno-mirovanje-rijeseni-primjer-rotirajuci-cilindricni-spremnik-03}
 :::
 
 ::: {#ex-u04-rotirajuci-cilindricni-spremnik-s-granicom-prelijevanja-t3 .mf1-ch}
-<p class="mf1-box-label">P4. rotirajući cilindrični spremnik s granicom prelijevanja&nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P4. Rotirajući cilindrični spremnik s granicom prelijevanja&nbsp;<span class="mf1-level">T3</span></p>
 
-**Kontekst:** U procesnom postrojenju otvoreni cilindrični spremnik s vodom vrti se oko vertikalne osi konstantnom kutnom brzinom. Treba odrediti oblik paraboloidne slobodne površine, dubinske tlakove na dnu te granični broj okretaja prije prelijevanja preko ruba.
+**Kontekst:** U procesnom postrojenju otvoreni cilindrični spremnik s vodom vrti se oko vertikalne osi konstantnom kutnom brzinom. Treba odrediti oblik paraboloidne slobodne površine, dubinske tlakove na dnu te graničnu brzinu vrtnje prije prelijevanja preko ruba.
 
 **Zadano**
 
@@ -392,7 +392,7 @@ Nakon prolaznog razdoblja voda se postavi u relativno mirovanje kao kruto rotira
 1. razliku razina slobodne površine između stijenke i osi spremnika $\Delta h$.
 2. dubinu vode na osi spremnika $h_C$ i uz stijenku $h_R$.
 3. manometarski tlak na dnu u središnjoj točki `C` i u rubnoj točki `D`.
-4. granični broj okretaja pri kojem prema geometrijskom modelu počinje prelijevanje, izražen kao $\omega_{max}$ i $n_{max}$ u okr/min.
+4. graničnu kutnu brzinu pri kojoj prema geometrijskom modelu počinje prelijevanje, $\omega_{max}$, te pripadnu brzinu vrtnje $n_{max}$ u okr/min.
 
 Zanemari površinsku napetost, valjanje i otpor zraka.
 
@@ -408,7 +408,7 @@ $$ {#eq-relativno-mirovanje-cjeloviti-zadatak-rotirajuci-cilindricni-spremni-01}
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Prva jednadžba kaže da tlak radijalno raste prema stjenci jer centrifugalna pseudo-sila gura fluid prema van: više $r$, više tlaka. Druga jednadžba je ista stara hidrostatika po visini. Zajedno definiraju "dvosmjerni" tlak u rotirajućem spremniku: po radijusu raste, po visini pada. Zato na slobodnoj površini mora postojati parabolični kompromis između tih dviju tendencija.
+Prva jednadžba pokazuje da tlak raste prema stijenci s porastom $r$, zbog centrifugalne pseudosile. Druga opisuje hidrostatsku raspodjelu po visini. Zajedno određuju raspodjelu tlaka u dvama smjerovima: tlak raste s radijusom, a pada s visinom. Slobodna površina zato u aksijalnom presjeku poprima paraboličan oblik.
 :::
 
 Iz toga slijedi da slobodna površina i druge plohe stalnog tlaka više nisu ravnine nego paraboloidi revolucije. U aksijalnom presjeku zato vrijedi parabola
@@ -419,13 +419,13 @@ $$ {#eq-relativno-mirovanje-fizikalno-znacenje-08}
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Parabola $h(r) = h_C + \omega^2 r^2/(2g)$ opisuje oblik slobodne površine: na osi vrtnje površina je najniža ($h_C$), a prema stjenci raste kvadratno. Veća kutna brzina $\omega$ ili veći polumjer $R$ daju strmiji paraboloid. Faktor $2g$ u nazivniku dolazi od integracije centrifugalnog ubrzanja $\omega^2 r$ po radijusu – isti tip kao $v^2/(2g)$ u Bernoullijevoj jednadžbi koja slijedi u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span>.
+Parabola $h(r) = h_C + \omega^2 r^2/(2g)$ opisuje oblik slobodne površine: na osi vrtnje površina je najniža ($h_C$), a prema stijenci raste kvadratno. Veća kutna brzina $\omega$ ili veći polumjer $R$ daju strmiji paraboloid. Faktor $2g$ u nazivniku dolazi od integracije centrifugalnog ubrzanja $\omega^2 r$ po radijusu – isti tip kao $v^2/(2g)$ u Bernoullijevoj jednadžbi koja slijedi u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span>.
 :::
 
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Paraboloidna slobodna površina</p>
 
-Interaktivni prikaz omogućuje mijenjanje kutne brzine $\omega$, polumjera spremnika $R$ i početne visine $h_0$ uz neposredno praćenje paraboloidne slobodne površine. Visina u središtu i na rubu spremnika ažuriraju se u realnom vremenu.
+Interaktivni prikaz omogućuje mijenjanje kutne brzine $\omega$, polumjera spremnika $R$ i početne visine $h_0$ uz neposredno praćenje paraboloidne slobodne površine. Visine u središtu i na rubu spremnika prikazuju se u stvarnom vremenu.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u04_paraboloidna_povrsina.ipynb">Pokreni u pregledniku</a>
@@ -505,7 +505,7 @@ $$
 \omega_{max} = \sqrt{\frac{4g(H-h_0)}{R^2}} = \sqrt{\frac{4 \cdot 9{,}81 \cdot (0{,}78-0{,}60)}{0{,}40^2}} = 6{,}64\ \text{rad/s}.
 $$ {#eq-relativno-mirovanje-4-granica-prelijevanja-02}
 
-Broj okretaja tada iznosi
+Brzina vrtnje tada iznosi
 
 $$
 n_{max} = \frac{60\omega_{max}}{2\pi} = \frac{60 \cdot 6{,}64}{2\pi} = 63{,}4\ \text{okr/min}.
@@ -513,7 +513,7 @@ $$ {#eq-relativno-mirovanje-4-granica-prelijevanja-03}
 
 **Provjera i komentar**
 
-Pri radnoj brzini vrtnje slobodna površina podigne se uz stijenku za oko $22{,}1\ \text{cm}$ u odnosu na os spremnika. Time dubina u osi padne na oko $0{,}490\ \text{m}$, a uz stijenku naraste na oko $0{,}710\ \text{m}$. Zato je manometarski tlak na dnu u središtu oko $4{,}80\ \text{kPa}$, a uz stijenu oko $6{,}97\ \text{kPa}$. Granica prelijevanja nastupa tek pri oko $6{,}64\ \text{rad/s}$, odnosno oko $63{,}4\ \text{okr/min}$.
+Pri radnoj brzini vrtnje slobodna površina podigne se uz stijenku za oko $22{,}1\ \text{cm}$ u odnosu na os spremnika. Time dubina u osi padne na oko $0{,}490\ \text{m}$, a uz stijenku naraste na oko $0{,}710\ \text{m}$. Zato je manometarski tlak na dnu u središtu oko $4{,}80\ \text{kPa}$, a uz stijenku oko $6{,}97\ \text{kPa}$. Granica prelijevanja nastupa tek pri oko $6{,}64\ \text{rad/s}$, odnosno oko $63{,}4\ \text{okr/min}$.
 
 1. Uz stijenku dubina mora biti veća nego na osi, jer se slobodna površina pri vrtnji podiže prema rubu.
 2. Ako je $\omega = 0$, paraboloid se mora vratiti na ravnu slobodnu površinu i opet vrijedi $h_C = h_R = h_0$.
@@ -548,19 +548,19 @@ Kočenje je jednoliko usporavanje (a = konst.). Promatra se ustaljena relativna 
 
 **Rješenje**
 
-Razlika razina (gorivo se pri kočenju giba prema naprijed, tj. prema prednjoj stijenci):
+Razlika razina (pri kočenju razina goriva viša je uz prednju stijenku):
 
 $$
 \Delta h = \frac{aL}{g} = \frac{3{,}8 \cdot 1{,}20}{9{,}81} = 0{,}465\ \text{m}
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-nagib-goriva-u-spremniku-autoci-01}
 
-Visina uz prednju stijenku (podignut nivo):
+Visina uz prednju stijenku (povišena razina):
 
 $$
 h_{prednja} = h_0 + \frac{aL}{2g} \approx 0{,}682416\ \text{m} \approx 0{,}682\ \text{m}
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-nagib-goriva-u-spremniku-autoci-02}
 
-Visina uz stražnju stijenku (snižen nivo):
+Visina uz stražnju stijenku (snižena razina):
 
 $$
 h_{stražnja} = h_0 - \frac{aL}{2g} \approx 0{,}217584\ \text{m} \approx 0{,}218\ \text{m}
@@ -568,7 +568,7 @@ $$ {#eq-relativno-mirovanje-rijeseni-primjer-nagib-goriva-u-spremniku-autoci-03}
 
 **Provjera i komentar**
 
-Prednja stijenka dostiže $h\approx0{,}682\ \text{m}$, što je ispod vrha ($H=0{,}80\ \text{m}$), pa u zadanom stacionarnom modelu nema prelijevanja. Stražnja stijenka zadržava približno $0{,}218\ \text{m}$ te dno ondje nije ogoljeno. Iz uvjeta $h_{pred}=H$ slijedi početak prelijevanja pri $a\approx5{,}72\ \text{m/s}^2$, a iz $h_{str}=0$ formalni prag ogoljavanja bez gubitka volumena bio bi $a\approx7{,}36\ \text{m/s}^2$. Prvo nastupa prelijevanje; nakon njega za ogoljavanje treba novi račun s promijenjenim volumenom. To su geometrijski pragovi relativnog mirovanja, ne operativna ograničenja autocisterne pri prolaznom kočenju.
+Razina goriva uz prednju stijenku doseže $h\approx0{,}682\ \text{m}$, što je ispod vrha ($H=0{,}80\ \text{m}$), pa u zadanom stacionarnom modelu nema prelijevanja. Uz stražnju stijenku dubina goriva iznosi približno $0{,}218\ \text{m}$ te dno ondje nije ogoljeno. Iz uvjeta $h_{pred}=H$ slijedi početak prelijevanja pri $a\approx5{,}72\ \text{m/s}^2$, a iz $h_{str}=0$ formalni prag ogoljavanja bez gubitka volumena bio bi $a\approx7{,}36\ \text{m/s}^2$. Prvo nastupa prelijevanje; nakon njega za ogoljavanje treba novi račun s promijenjenim volumenom. To su geometrijski pragovi relativnog mirovanja, ne operativna ograničenja autocisterne pri prolaznom kočenju.
 
 :::
 
@@ -579,7 +579,7 @@ Prednja stijenka dostiže $h\approx0{,}682\ \text{m}$, što je ispod vrha ($H=0{
 
 **Zadano**
 
-- Broj okretaja rotora: $n = 4000$ o/min
+- Brzina vrtnje rotora: $n = 4000$ okr/min
 - Polumjer dna cijevi od osi rotacije: $r_d = 95\ \text{mm}$
 - Polumjer vrha cijevi od osi rotacije: $r_v = 25\ \text{mm}$
 - Gustoća uzorka pune krvi: $\rho = 1060\ \text{kg/m}^3$
@@ -592,7 +592,7 @@ Prednja stijenka dostiže $h\approx0{,}682\ \text{m}$, što je ispod vrha ($H=0{
 
 **Pretpostavke i model**
 
-U rotirajućem okviru fluid se nalazi u stanju relativnog mirovanja. Efektivno ubrzanje u radijalnom smjeru iznosi $a_{cf}(r) = \omega^2 r$, pa se hidrostatički zakon primjenjuje s tom radijalnom akceleracijom umjesto gravitacije. Gravitacijski doprinos zanemaruje se jer je centrifugalno ubrzanje za nekoliko redova veličine veće. Uzorak se promatra kao homogen u trenutku početka centrifugiranja (još nije došlo do potpunog razdvajanja).
+U rotirajućem okviru fluid se nalazi u stanju relativnog mirovanja. Efektivno ubrzanje u radijalnom smjeru iznosi $a_{cf}(r) = \omega^2 r$, pa se hidrostatički zakon primjenjuje s tim radijalnim ubrzanjem umjesto gravitacije. Gravitacijski doprinos zanemaruje se jer je centrifugalno ubrzanje za nekoliko redova veličine veće. Uzorak se promatra kao homogen u trenutku početka centrifugiranja (još nije došlo do potpunog razdvajanja).
 
 **Rješenje**
 
@@ -608,13 +608,13 @@ $$
 a_{cf} = \omega^2 r_d = 418{,}9^2 \cdot 0{,}095 \approx 1{,}666 \cdot 10^4\ \text{m/s}^2.
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-laboratorijska-centrifuga-za-od-02}
 
-Izraženo u jedinicama gravitacije:
+Izraženo u jedinicama gravitacijskog ubrzanja:
 
 $$
 \frac{a_{cf}}{g} = \frac{1{,}666 \cdot 10^4}{9{,}81} \approx 1{,}699 \cdot 10^3,
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-laboratorijska-centrifuga-za-od-03}
 
-dakle približno $1{,}70 \cdot 10^3\ g$ (oko 1700 puta veće od zemljine gravitacije).
+dakle približno $1{,}70 \cdot 10^3\ g$ (oko 1700 puta veće od Zemljina gravitacijskog ubrzanja).
 
 Razlika tlakova između dna i vrha cijevi u rotirajućem fluidu jednaka je integralu radijalnog tlačnog gradijenta:
 
@@ -656,7 +656,7 @@ Izračunano ubrzanje na dnu iznosi oko $1700\,g$, a razlika tlakova u homogenom 
 ::: {.callout-note collapse="true"}
 ### Odgovori
 
-U neinercijskom opisu ravnotežu daje zbroj gravitacije i inercijske volumenske sile pa profil brzine može nestati. Slobodna površina se namješta tako da je tangencijalna komponenta efektivnog polja po njoj nula. Veći radijus nosi veće centrifugalno ubrzanje pa zato treba veći gradijent tlaka. Prolazno zalijevanje ovisi o vremenskom odzivu, valovima i prigušenju, a ne samo o konačnom statičkom položaju površine.
+U neinercijskom opisu ravnotežu daje zbroj gravitacije i inercijske volumenske sile pa fluid može mirovati u odnosu na spremnik. Slobodna se površina postavlja tako da je tangencijalna komponenta efektivnog polja po njoj nula. Veći radijus nosi veće centrifugalno ubrzanje pa zato treba veći gradijent tlaka. Prolazno zalijevanje ovisi o vremenskom odzivu, valovima i prigušenju, a ne samo o konačnom statičkom položaju površine.
 :::
 :::
 
@@ -665,7 +665,7 @@ U neinercijskom opisu ravnotežu daje zbroj gravitacije i inercijske volumenske 
 
 - Relativno mirovanje prevodi ubrzani problem u hidrostatiku s efektivnim poljem sila.
 - Slobodna površina i tlak određuju se iz smjera i iznosa $\vec g_{eff}$.
-- Pri translatornom ubrzanju nagib slobodne površine raste s $a/g$ i duljinom spremnika.
+- Pri translatornom ubrzanju razlika razina slobodne površine raste s $a/g$ i duljinom spremnika.
 - Pri rotaciji tlak raste s radijusom jer centrifugalni doprinos raste s $r$.
 - Ovaj statički model ne opisuje prolazne valove, prskanje ni dinamičko zalijevanje.
 :::
@@ -703,7 +703,7 @@ Otvoreni pravokutni spremnik duljine $L = 1{,}40\ \text{m}$ napunjen je do visin
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-u graničnom stanju vrijedi $h_{str} = H$ i $\Delta h = 2(H-h_0)$; nakon toga $a = g\Delta h/L$.
+U graničnom stanju vrijedi $h_{str} = H$ i $\Delta h = 2(H-h_0)$; nakon toga $a = g\Delta h/L$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -718,12 +718,12 @@ $a_{max} \approx 1{,}68\ \text{m/s}^2$.
 
 ### Z3. Tlak pri vertikalnom ubrzanju {#task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce .unnumbered .unlisted}
 
-Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. Sustav ubrzava prema gore s $a_z = 2{,}3\ \text{m/s}^2$. Odredi razliku tlaka između dna i vrha cilindra te usporedi rezultat s mirovnim stanjem. Zatim razmotri zasebno stanje u kojem se cilindar još giba prema gore, ali usporava uz ubrzanje iznosa $2{,}3\ \text{m/s}^2$ prema dolje. Kolika je tada razlika tlakova? Objasni određuje li je smjer brzine ili smjer ubrzanja.
+Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. Sustav ubrzava prema gore s $a_z = 2{,}3\ \text{m/s}^2$. Odredi razliku tlakova između dna i vrha cilindra te usporedi rezultat s mirovnim stanjem. Zatim razmotri zasebno stanje u kojem se cilindar još giba prema gore, ali usporava uz ubrzanje iznosa $2{,}3\ \text{m/s}^2$ prema dolje. Kolika je tada razlika tlakova? Objasni određuje li je smjer brzine ili smjer ubrzanja.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-koristi efektivnu težinu fluida: $\Delta p = \rho (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho gh$. Os $z$ usmjeri prema gore; pri kočenju je $a_z<0$ iako je brzina još pozitivna.
+Koristi efektivnu težinu fluida: $\Delta p = \rho (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho gh$. Os $z$ usmjeri prema gore; pri kočenju je $a_z<0$ iako je brzina još pozitivna.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -807,16 +807,16 @@ Referentne dubine: $h_{str}\approx0{,}45291$ m, $h_{pred}\approx0{,}14709$ m. Ni
 
 Otvoreni cilindrični spremnik polumjera $R = 0{,}32\ \text{m}$ i visine $H = 0{,}62\ \text{m}$ ispunjen je vodom do početne srednje visine $h_0 = 0{,}46\ \text{m}$. Odredi najveću kutnu brzinu pri kojoj još nema prelijevanja.
 
-Zatim za radni režim $\omega = 0{,}80\,\omega_{max}$ odredi dubinu vode u osi i uz stijenu te manometarske tlakove na dnu u tim dvjema točkama. Za ovu geometrijsku provjeru središnji je usis zatvoren, pa nema protoka.
+Zatim za radni režim $\omega = 0{,}80\,\omega_{max}$ odredi dubinu vode u osi i uz stijenku te manometarske tlakove na dnu u tim dvjema točkama. Za ovu geometrijsku provjeru središnji je usis zatvoren, pa nema protoka.
 
 Pretvarač frekvencije može stvarnu brzinu vrtnje povisiti do $5\ \%$ iznad zadane, a zahtijevana dubina iznad usisa u osi u ustaljenom stanju iznosi najmanje $0{,}350\ \text{m}$. Tih 5 % zadana je gornja granica odstupanja brzine, ne standardna nesigurnost.
 
-Provjeri zadani režim u nepovoljnoj toleranciji, odredi najveći dopušteni zadani omjer $\alpha=\omega_{zad}/\omega_{max}$ i preporuči radnu postavku za taj model. Zaključak ne proširuj na usis tijekom protoka ili prijelaznog zavrtavanja.
+Provjeri zadani režim pri najnepovoljnijem dopuštenom odstupanju, odredi najveći dopušteni zadani omjer $\alpha=\omega_{zad}/\omega_{max}$ i preporuči radnu postavku za taj model. Zaključak ne proširuj na usis tijekom protoka ili prijelaznog zavrtavanja.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-u graničnom stanju vrijedi $h_{rub} = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim $h_{osa}$ i $h_{rub}$, a tlakove iz $p_M = \rho gh$. U provjeri tolerancije koristi $\omega=1{,}05\alpha\omega_{max}$ i iz uvjeta $h_{osa}\ge0{,}350\ \text{m}$ riješi gornju granicu za $\alpha$.
+U graničnom stanju vrijedi $h_{rub} = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim $h_{osa}$ i $h_{rub}$, a tlakove iz $p_M = \rho gh$. U provjeri tolerancije koristi $\omega=1{,}05\alpha\omega_{max}$ i iz uvjeta $h_{osa}\ge0{,}350\ \text{m}$ riješi gornju granicu za $\alpha$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -845,13 +845,13 @@ Model pretpostavlja da su prolazne oscilacije, valjanje, prskanje i relativno st
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički most</p>
 
-**Gdje ovo živi u numerici.** Promjena referentnog okvira iz ovog poglavlja je upravo *jezgra* numeričkih pristupa rotirajućim domenama: pumpe, ventilatori, vodne i plinske turbine, centrifuge. Umjesto da mreža fizički rotira (skupo!), CFD solver dodaje **prividne sile** — centrifugalnu i Coriolisovu — točno onako kako se u zadacima dodavalo $a_{cf} = \omega^2 r$.
+**Veza s numeričkim proračunom.** Promjena referentnog okvira iz ovog poglavlja temelj je numeričkih pristupa rotirajućim domenama u pumpama, ventilatorima, vodnim i plinskim turbinama te centrifugama. Umjesto računski zahtjevne rotacije mreže, program za CFD dodaje **prividne sile** — centrifugalnu i Coriolisovu — točno onako kako se u zadacima dodavalo $a_{cf} = \omega^2 r$.
 
-**Što numerički alat radi s tim.** **MRF (Moving Reference Frame)** definira zonu u mreži koja se "vrti" matematički — rješavanjem Navier-Stokesa u rotirajućem sustavu s dopisanim Coriolisovim i centrifugalnim članom. Za pune nestacionarne simulacije postoji i **klizajuća mreža (engl. sliding mesh)** u kojoj se rotor i stator fizički kližu jedan uz drugog.
+**Postupak numeričkog proračuna.** **MRF (Moving Reference Frame)** definira zonu u mreži koja se "vrti" matematički — rješavanjem Navier–Stokesovih jednadžbi u rotirajućem sustavu s dodatnim Coriolisovim i centrifugalnim članom. Za pune nestacionarne simulacije postoji i **klizajuća mreža (engl. sliding mesh)** u kojoj se dijelovi mreže vezani uz rotor i stator gibaju relativno jedan prema drugome.
 
 **Tipičan scenarij.** Stacionarni MRF model može dati početnu procjenu srednjih veličina rotirajućega stroja. Kada su važni prolaz rotora kraj statora, pulsacije ili akustika, potreban je odgovarajući nestacionarni model. Računski trošak i potrebna razlučivost ovise o geometriji, mreži, vremenskom koraku i traženoj izlaznoj veličini.
 
-> *Nije gradivo MF1. Paraboloidna slobodna površina iz centrifuge ovdje, u CFD-u javlja se kao polje koje solver sam izračuna.*
+> *Nije gradivo MF1. Paraboloidna slobodna površina iz ovoga poglavlja u CFD-u dobiva se numeričkim proračunom.*
 :::
 
 <!-- [NOVA PEDAGOŠKA DOPUNA] -->
@@ -860,9 +860,9 @@ Model pretpostavlja da su prolazne oscilacije, valjanje, prskanje i relativno st
 
 **Što je zadano, a što se traži.** Za relativno miran fluid poznati su geometrija i početni volumen tekućine, gustoća, gravitacija i stalno ubrzanje spremnika ili kutna brzina. Traže se položaj slobodne površine, raspodjela tlaka i opterećenje stijenki. U okviru vezanom uz spremnik zadano se gibanje pojavljuje kao efektivno polje $\vec g_{eff}=\vec g-\vec a$; u inercijskom okviru isti se problem može opisati gibajućim stijenkama. Oba zapisa predstavljaju istu fiziku, ali model relativnog mirovanja vrijedi tek nakon što su prolazni valovi zanemarivi.
 
-**Slobodna površina i granice.** Slobodna površina je granica tekućine i plina na kojoj je za otvoreni spremnik tlak jednak atmosferskom, odnosno zadanom referentnom tlaku. U računalnom modelu može se voditi kao poznata mirna granica u referentnom slučaju ili pratiti pokazateljem faze kada se njezin položaj mijenja. Na stijenkama tekućina ne prolazi kroz spremnik; u inercijskom zapisu brzina fluida na stijenci prati zadano gibanje stijenke, a u okviru spremnika stijenka je mirna. Te granice i početni volumen određuju gdje se može nalaziti površina, pa nagib nije slobodno odabrana geometrija.
+**Slobodna površina i granice.** Slobodna površina je granica tekućine i plina na kojoj je za otvoreni spremnik tlak jednak atmosferskom, odnosno zadanom referentnom tlaku. U računalnom modelu može se voditi kao poznata mirna granica u referentnom slučaju ili pratiti pokazateljem faze kada se njezin položaj mijenja. Tekućina ne prolazi kroz stijenke spremnika; u inercijskom zapisu brzina fluida na stijenci prati zadano gibanje stijenke, a u okviru spremnika stijenka je mirna. Te granice i početni volumen određuju gdje se može nalaziti površina, pa nagib nije slobodno odabrana geometrija.
 
-**Diskretni račun i kontrola.** Domena se dijeli u ćelije u kojima se predstavljaju tlak i faza, a susjedne vrijednosti povezuju diskretnu bilancu tlaknih, gravitacijskih i inercijskih doprinosa. Za stalno translatorno ubrzanje provjeravaju se ravnina i nagib slobodne površine, a za vrtnju paraboloid; dodatno se uspoređuju očuvani volumen i tlak na stijenkama s analitičkim referentnim slučajem. Pad reziduala pokazuje samo da je numerički postupak dosegnuo svoj kriterij, dok fizičku ispravnost pokazuju ta podudarnost, zanemariva relativna brzina i stabilnost rezultata pri profinjenju mreže. Tek nakon toga mogu se tumačiti valjanje, prskanje ili prelijevanje.
+**Diskretni račun i kontrola.** Domena se dijeli u ćelije u kojima se predstavljaju tlak i faza, a susjedne vrijednosti povezuju se diskretnom bilancom tlačnih, gravitacijskih i inercijskih doprinosa. Za stalno translatorno ubrzanje provjeravaju se ravnina i nagib slobodne površine, a za vrtnju paraboloid; dodatno se uspoređuju očuvani volumen i tlak na stijenkama s analitičkim referentnim slučajem. Pad reziduala pokazuje samo da je numerički postupak dosegnuo svoj kriterij, dok fizikalnu ispravnost pokazuju ta podudarnost, zanemariva relativna brzina i stabilnost rezultata pri profinjenju mreže. Tek nakon toga mogu se tumačiti valjanje, prskanje ili prelijevanje.
 
 Detalji praćenja međupovršine, rubnih uvjeta, vremenske diskretizacije i verifikacije obrađuju se u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span> i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
 :::

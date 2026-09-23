@@ -37,7 +37,7 @@ $$ {#eq-energijska-bilanca-fizikalni-uvod-i-matematicki-izvod-02}
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Venturijeva cijev</p>
 
-Notebook prvo neovisno provjerava idealni Venturijev primjer s uljem iz ovoga poglavlja. Zatim na zasebnom nastavnom slučaju s vodom pokazuje kako nesigurnosti promjera, razlike tlakova, gustoće i zadanoga koeficijenta istjecanja utječu na procijenjeni protok. Parametre mijenjaj u ćeliji `base`, a njihove standardne nesigurnosti u ćeliji `sigma`; ponovno izvođenje daje usporedbu linearne procjene i uzorkovanja.
+Bilježnica najprije neovisno provjerava idealni Venturijev primjer s uljem iz ovoga poglavlja. Zatim na zasebnom nastavnom slučaju s vodom pokazuje kako nesigurnosti promjera, razlike tlakova, gustoće i zadanoga koeficijenta istjecanja utječu na procijenjeni protok. Parametre mijenjaj u ćeliji `base`, a njihove standardne nesigurnosti u ćeliji `sigma`; ponovno izvođenje daje usporedbu linearne procjene i uzorkovanja.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u09_venturi.ipynb">Pokreni u pregledniku</a>
@@ -49,7 +49,7 @@ Notebook prvo neovisno provjerava idealni Venturijev primjer s uljem iz ovoga po
 
 Ako jedan član raste, barem jedan od preostala dva mora pasti. Upravo je to fizikalna srž Venturija, Pitota, mlaza i sifona bez gubitaka.
 
-Iz istih članova odmah proizlaze i dvije korisne linije čitanja toka. Hidraulička linija ili `HGL` jednaka je zbroju tlačne i geodetske visine,
+Iz istih članova odmah proizlaze i dvije korisne linije za prikaz energije toka. Hidraulička linija ili `HGL` jednaka je zbroju tlačne i geodetske visine,
 
 $$
 HGL = \frac{p}{\rho g} + z,
@@ -91,7 +91,7 @@ Promatra se element strujne cijevi duljine $ds$ i poprečnog presjeka $A$ koji s
 - sila tlaka na izlaznoj plohi: $-(p + dp) A$ u smjeru $+s$ (predznak: tlak gura natrag);
 - komponenta težine duž osi $s$: $-\rho g A\,ds \cdot \sin\theta$, gdje je $\theta$ kut između strujnice i horizontalne ravnine. Korištenjem $\sin\theta = dz/ds$ (porast visine po duljini strujnice) komponenta se zapisuje kao $-\rho g A\,ds \cdot dz/ds$.
 
-Suma sila na element je
+Zbroj sila na element iznosi
 
 $$
 dF_s = pA - (p + dp)A - \rho g A\,ds\,\frac{dz}{ds} = -A\,dp - \rho g A\,dz.
@@ -115,7 +115,7 @@ $$
 \rho\,v\,dv + dp + \rho g\,dz = 0.
 $$ {#eq-energijska-bilanca-matematicki-izvod-eulerova-jednadzba-duz-strujni-04}
 
-Integriranje ove diferencijalne forme uz pretpostavku konstantne gustoće dat će Bernoullijevu jednadžbu — što je tema izvoda koji slijedi.
+Integriranje ovoga diferencijalnog oblika uz pretpostavku konstantne gustoće dat će Bernoullijevu jednadžbu — što je tema izvoda koji slijedi.
 :::
 
 ::: {.mf1-izvod}
@@ -161,7 +161,7 @@ Korak 2 – prepoznaj integrabilne oblike: $v\,dv = d(v^2/2)$, $dp/\rho = dp/\rh
 Korak 3 – integriraj od točke 1 do točke 2:
 $$\frac{v_2^2 - v_1^2}{2} + \frac{p_2 - p_1}{\rho} + g(z_2 - z_1) = 0.$$ {#eq-energijska-bilanca-razrada-koraka-02}
 
-Korak 4 – presloži: premjesti sve s indeksom 2 na desno i s indeksom 1 na lijevo:
+Korak 4 – presloži: premjesti sve s indeksom 2 nadesno i s indeksom 1 nalijevo:
 $$\frac{p_1}{\rho} + \frac{v_1^2}{2} + gz_1 = \frac{p_2}{\rho} + \frac{v_2^2}{2} + gz_2.$$ {#eq-energijska-bilanca-razrada-koraka-03}
 
 Korak 5 – podijeli s $g$ da dobiješ metre fluida: $\frac{p}{\rho g} + \frac{v^2}{2g} + z = \text{const.}$
@@ -202,7 +202,7 @@ Svaki član ima jasno fizikalno značenje: $p/(\rho g)$ je tlačna visina, tj. m
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Alternativni izvod Bernoullija iz rada i energije</p>
 
-Bernoullijeva jednadžba može se izvesti i izravno iz **energetskog principa**, ne polazeći od Eulerove jednadžbe. Ukupna mehanička energija fluidnog elementa duž strujnice ostaje konstantna ako nema disipativnih sila ni rada vanjskih sila izvan sile teže — što je tvrdnja zakona očuvanja mehaničke energije.
+Bernoullijeva jednadžba može se izvesti i iz **teorema rada i energije**. U stacionarnom, nestlačivom i neviskoznom strujanju rad sila tlaka i sile teže povezuje se s promjenom kinetičke energije elementa fluida. Pretpostavlja se da između promatranih točaka nema strojnog rada.
 
 Promatra se cilindrični element strujne cijevi duljine $ds$, poprečnog presjeka $A$ i mase $dm = \rho A\,ds$ koji se duž strujnice giba brzinom $v$. Tijekom diferencijalnog vremena $dt$ element prelazi udaljenost $ds = v\,dt$, podignuvši se za visinski element $dz = \sin\theta\,ds$.
 
@@ -232,13 +232,13 @@ $$
 -\frac{dp}{\rho}\,dm - dm\,g\,dz = dm\,v\,dv,
 $$ {#eq-energijska-bilanca-matematicki-izvod-alternativni-izvod-bernoullija-04}
 
-odakle se nakon dijeljenja s $dm$ dobiva diferencijalna forma
+odakle se nakon dijeljenja s $dm$ dobiva diferencijalni oblik
 
 $$
 \frac{dp}{\rho} + g\,dz + v\,dv = 0.
 $$ {#eq-energijska-bilanca-matematicki-izvod-alternativni-izvod-bernoullija-05}
 
-Za nestlačivi fluid ($\rho$ = konst.) ova se jednadžba integrira između dvije točke duž iste strujnice:
+Za nestlačivi fluid ($\rho$ = konst.) ova se jednadžba integrira između dviju točaka duž iste strujnice:
 
 $$
 \frac{p_1 - p_2}{\rho} + g(z_1 - z_2) + \frac{v_1^2 - v_2^2}{2} = 0,
@@ -252,14 +252,14 @@ $$ {#eq-energijska-bilanca-matematicki-izvod-alternativni-izvod-bernoullija-07}
 
 Ovaj izvod izravno potvrđuje da je **Bernoullijeva jednadžba zakon očuvanja mehaničke energije po jediničnoj težini fluida**. Tri člana sada se čitaju iz energetske perspektive:
 
-- $p/(\rho g)$ je **tlačna visina** — potencijalna energija fluidnog elementa zbog tlačnog rada okolnog fluida;
+- $p/(\rho g)$ je **tlačna visina** — doprinos tlačnog rada okolnog fluida po jedinici težine;
 - $v^2/(2g)$ je **brzinska visina** — kinetička energija po jediničnoj težini;
 - $z$ je **geodetska visina** — gravitacijska potencijalna energija po jediničnoj težini.
 
-Time se dobiva dvostruki uvid u istu jednadžbu: izvod iz Eulerove jednadžbe pokazuje **mehaničko** podrijetlo (Newton II na elementu strujne cijevi), a izvod iz rada i energije pokazuje **termodinamičko** podrijetlo (očuvanje mehaničke energije). U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span> bilanci se dodaje pozitivan gubitak mehaničke energije $h_w$ zbog ireverzibilnih procesa.
+Time se dobiva dvostruki uvid u istu jednadžbu: prvi izvod polazi od **bilance sila** na elementu strujne cijevi, a drugi od **bilance rada i kinetičke energije**. Oba su izvoda utemeljena na istom mehaničkom modelu. U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 13</span><span class="mf1-ch-title">Gubitci, cjevovodi, crpke i mreže</span></span> bilanci se dodaje pozitivan gubitak mehaničke energije $h_w$ zbog ireverzibilnih procesa.
 :::
 
-Odmah ispod izvoda treba zatvoriti i pretpostavke modela. U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> Bernoulli vrijedi samo kad su dovoljno dobro opravdane sljedeće pretpostavke:
+Uz izvod treba jasno navesti i pretpostavke modela. U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> Bernoulli vrijedi samo kad su dovoljno dobro opravdane sljedeće pretpostavke:
 
 - strujanje je stacionarno
 - fluid se može uzeti nestlačivim
@@ -267,9 +267,9 @@ Odmah ispod izvoda treba zatvoriti i pretpostavke modela. U <span class="mf1-ch-
 - između promatranih točaka nema strojnog rada ni druge vanjske mehaničke dobave energije
 - dvije točke leže na istoj strujnici ili na aproksimaciji gdje je takva primjena dopuštena
 
-To nije formalnost. Najčešći kvar u Bernoulliju nastaje onda kada se vide tlak i brzina pa se automatski zapisuje jednadžba, a da prije toga nije provjeren model.
+To nije formalnost. Česta pogreška nastaje kada se Bernoullijeva jednadžba automatski zapiše samo zato što su zadani tlak i brzina, bez prethodne provjere modela.
 
-Riješeni primjeri i zadaci za vježbu zato samo redom pokazuju kako isti Bernoullijev zapis čita pad statičkog tlaka u suženju, brzinu slobodnog mlaza, tlak u sifonu i Pitotovo lokalno mjerenje.
+Riješeni primjeri i zadatci za vježbu pokazuju kako isti Bernoullijev zapis opisuje pad statičkog tlaka u suženju, brzinu slobodnog mlaza, tlak u sifonu i Pitotovo lokalno mjerenje.
 
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — energetska provjera</p>
@@ -298,13 +298,13 @@ U viskoznom proračunu razlika prema idealnom Bernoulliju nije automatski pogre�
 
 **Traženo**
 
-1. Odrediti pad statičkog tlaka $\Delta p$ između presjeka 1 i 2.
+1. Odredi pad statičkog tlaka $\Delta p$ između presjeka 1 i 2.
 
 ![Kontinuitet i energijske visine u horizontalnom konfuzoru](../assets/print/u09_egl_hgl_schema.svg){#fig-u09-staticka-zamjena-za-egl-i-hgl fig-alt="Horizontalni konfuzor: otvoreni presjeci, stalni EGL i pad HGL-a pri ubrzanju zraka."}
 
 **Pretpostavke i model**
 
-Promatra se horizontalni kanal bez gubitaka. Zato najprije iz kontinuiteta treba odrediti brzine u oba presjeka, a zatim iz idealnog Bernoullija procijeniti koliki pad statičkog tlaka mora platiti to ubrzanje.
+Promatra se horizontalni kanal bez gubitaka. Zato najprije iz kontinuiteta treba odrediti brzine u oba presjeka, a zatim iz idealnog Bernoullija procijeniti koliki pad statičkog tlaka odgovara tom ubrzanju.
 
 **Rješenje**
 
@@ -330,7 +330,7 @@ $$
 \frac{p_1}{\rho g} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + \frac{v_2^2}{2g} \quad \Rightarrow \quad p_1 - p_2 = \frac{\rho}{2}(v_2^2 - v_1^2).
 $$ {#eq-energijska-bilanca-rijeseni-primjer-pad-statickog-tlaka-u-konfuzoru-04}
 
-Uvrstavanjem brojeva dobiva se
+Uvrštavanjem brojeva dobiva se
 
 $$
 \Delta p = \frac{1{,}2}{2}(30{,}63063^2 - 8{,}09524^2) \approx 523{,}62\ \text{Pa} \approx 0{,}524\ \text{kPa}.
@@ -358,8 +358,8 @@ U suženju se kinetički i tlačni član razmjenjuju unutar voda. Kod slobodnog 
 
 **Traženo**
 
-1. Izračunati domet mlaza za sva tri zadana položaja otvora.
-2. Odrediti položaj otvora koji daje najveći domet.
+1. Izračunaj domet mlaza za sva tri zadana položaja otvora.
+2. Odredi položaj otvora koji daje najveći domet.
 
 ![domet slobodnog mlaza](../assets/print/u09_val2_slobodni_mlaz.svg){#fig-u09-domet-slobodnog-mlaza fig-alt="domet slobodnog mlaza"}
 
@@ -395,7 +395,7 @@ $$
 x = 2\sqrt{3{,}0(4{,}0 - 3{,}0)} = 2\sqrt{3} \approx 3{,}46\ \text{m}.
 $$ {#eq-energijska-bilanca-rijeseni-primjer-domet-slobodnog-mlaza-iz-veliko-04}
 
-Vidimo da je domet najveći kad je otvor postavljen na polovicu ukupne visine stupca vode, odnosno za $h = H/2$. Tada vrijedi $x_{max} = H$, pa je u ovom primjeru maksimalni domet jednak
+Vidimo da je domet najveći kad je otvor postavljen na polovicu visine slobodne površine iznad tla, odnosno za $h = H/2$. Tada vrijedi $x_{max} = H$, pa je u ovom primjeru maksimalni domet jednak
 
 $$
 x_{max} = 4{,}0\ \text{m}.
@@ -411,9 +411,9 @@ Slobodni mlaz ne dobiva najveći domet ni iz najviše ni iz najniže postavljeno
 :::
 
 ::: {#ex-u09-privremeni-sifon-za-praznjenje-servisnog-bazena-t2 .mf1-we}
-<p class="mf1-box-label">P3. Privremeni sifon za praznjenje servisnog bazena&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">P3. Privremeni sifon za pražnjenje servisnog bazena&nbsp;<span class="mf1-level">T2</span></p>
 
-**Kontekst:** Pri privremenom praznjenju servisnog bazena postavlja se sifon koji premošćuje rub bazena i odvodi vodu u niži ispustni kanal. Operater iz visinske razlike određuje brzinu i protok sifona te provjerava tlak u njegovoj najvišoj točki kako bi se isključila opasnost od isparavanja.
+**Kontekst:** Pri privremenom pražnjenju servisnog bazena postavlja se sifon koji premošćuje rub bazena i odvodi vodu u niži ispustni kanal. Operater iz visinske razlike određuje brzinu i protok sifona te provjerava tlak u njegovoj najvišoj točki kako bi se isključila opasnost od isparavanja.
 
 **Zadano**
 
@@ -421,7 +421,7 @@ Slobodni mlaz ne dobiva najveći domet ni iz najviše ni iz najniže postavljeno
 - Visinska razlika od slobodne površine bazena A do otvorenog izlaznog presjeka cijevi B: $\Delta z = 3{,}6\ \text{m}$
 - Visina najviše točke sifona `C` iznad slobodne površine bazena: $z_C = 2{,}2\ \text{m}$
 - Atmosferska tlačna visina: $10{,}2\ \text{m}$ vodenog stupca
-- Naponska visina pare: $0{,}25\ \text{m}$ vodenog stupca
+- Tlačna visina zasićene pare: $0{,}25\ \text{m}$ vodenog stupca
 - Gubici u sifonu se zanemaruju; bazen je velik i otvoren, a cijev B završava slobodnim mlazom u zraku iznad ispustnog kanala. Sifon je napunjen vodom i ulaz je uronjen; promatra se kvazistacionarni trenutak.
 
 **Traženo**
@@ -502,13 +502,13 @@ Idealni sifon daje brzinu od oko $8{,}4\ \text{m/s}$ i protok od oko $42\ \text{
 
 1. Što je donja razina dublje ispod gornje, to idealna brzina sifona mora biti veća.
 2. Tlak u vrhu sifona mora biti manji od atmosferskog jer se dio ukupne energije troši na visinu vrha i na brzinski član.
-3. Ako bi izračun apsolutnog tlaka pao ispod naponske visine pare, čisti idealni model više ne bi bio dovoljan za fizikalno uvjerljiv odgovor.
+3. Ako bi izračunana apsolutna tlačna visina pala ispod tlačne visine zasićene pare, čisti idealni model više ne bi bio dovoljan za fizikalno uvjerljiv odgovor.
 :::
 
 ::: {#ex-u09-idealni-bypass-sifon-sa-suzenjem-u-vrhu .mf1-ch}
-<p class="mf1-box-label">P4. Idealni bypass-sifon sa suženjem u vrhu i mlaznim ispuštom&nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P4. Idealni obilazni sifon sa suženjem u vrhu i mlaznim ispustom&nbsp;<span class="mf1-level">T3</span></p>
 
-**Kontekst:** Idealizirani bypass-sifon premošćuje rub bazena, ima suženje u najvišoj točki i završava slobodnim vodoravnim mlazom iznad podloge. Traže se protok, brzina i tlak u suženju, modelska razlika prema tlaku pare te vodoravni domet mlaza.
+**Kontekst:** Idealizirani obilazni sifon premošćuje rub bazena, ima suženje u najvišoj točki i završava slobodnim vodoravnim mlazom iznad podloge. Traže se protok, brzina i tlak u suženju, modelska razlika prema tlaku pare te vodoravni domet mlaza.
 
 **Zadano**
 
@@ -519,7 +519,7 @@ Idealni sifon daje brzinu od oko $8{,}4\ \text{m/s}$ i protok od oko $42\ \text{
 - Visina najviše točke sifona `C` iznad slobodne površine bazena: $z_C = 1{,}5\ \text{m}$
 - Tlak na slobodnoj površini i na izlazu je atmosferski; brzina na slobodnoj površini je zanemariva
 - Atmosferska tlačna visina: $10{,}2\ \text{m}$ vodenog stupca
-- Naponska visina pare: $0{,}25\ \text{m}$ vodenog stupca
+- Tlačna visina zasićene pare: $0{,}25\ \text{m}$ vodenog stupca
 - Gubici se zanemaruju
 
 **Traženo**
@@ -530,11 +530,11 @@ Idealni sifon daje brzinu od oko $8{,}4\ \text{m/s}$ i protok od oko $42\ \text{
 4. razliku apsolutne tlačne visine prema visini tlaka pare ako je atmosferska visina $10{,}2\ \text{m}$ vodenog stupca, a visina tlaka pare $0{,}25\ \text{m}$ vodenog stupca.
 5. vodoravni domet mlaza nakon izlaza iz točke `B`.
 
-![idealni bypass-sifon sa suženjem](../assets/print/u09_ch1_bypass_sifon_suzenje_mlaz.svg){#fig-u09-idealni-bypass-sifon-sa-suzenjem fig-alt="idealni bypass-sifon sa suženjem"}
+![Idealni obilazni sifon sa suženjem](../assets/print/u09_ch1_bypass_sifon_suzenje_mlaz.svg){#fig-u09-idealni-bypass-sifon-sa-suzenjem fig-alt="Idealni obilazni sifon sa suženjem"}
 
 **Pretpostavke i model**
 
-Ovdje isti idealni tok treba čitati u tri različita reza. Bernoulli između slobodne površine `A` i izlaza `B` daje glavnu izlaznu brzinu. Kontinuitet zatim iz te iste vrijednosti vraća veću brzinu u suženju `C`, a Bernoulli između `A` i `C` pokazuje koliko pritom mora pasti statički tlak. Nakon izlaza iz `B` mlaz više ne pripada unutarnjem strujanju cijevi nego gibanju vodoravno izbačenog tijela.
+Ovdje se isti idealni tok analizira u trima referentnim presjecima. Bernoulli između slobodne površine `A` i izlaza `B` daje glavnu izlaznu brzinu. Kontinuitet zatim iz te iste vrijednosti vraća veću brzinu u suženju `C`, a Bernoulli između `A` i `C` pokazuje koliko pritom mora pasti statički tlak. Nakon izlaza iz `B` mlaz više ne pripada unutarnjem strujanju cijevi nego gibanju vodoravno izbačenog tijela.
 
 **Rješenje**
 
@@ -608,14 +608,14 @@ $$ {#eq-energijska-bilanca-cjeloviti-zadatak-idealni-bypass-sifon-sa-suzenj-11}
 
 **Provjera i komentar**
 
-Ovaj cjeloviti zadatak zatvara puni idealni luk poglavlja <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> u jednom sustavu: Bernoulli između slobodne površine i izlaza daje brzinu oko $7{,}41\ \text{m/s}$ i protok oko $58{,}2\ \text{L/s}$, kontinuitet povećava brzinu u suženju vrha na oko $11{,}58\ \text{m/s}$, a tlak u točki `C` pada na oko $-8{,}34\ \text{m}$ manometarske visine. Ipak, apsolutna tlačna visina ostaje oko $1{,}86\ \text{m}$ vode, što je još oko $1{,}61\ \text{m}$ iznad naponske visine pare. Nakon izlaza mlaz doseže vodoravni domet od oko $3{,}96\ \text{m}$.
+Ovaj zadatak povezuje postupke idealnog modela iz <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> u jednom sustavu: Bernoulli između slobodne površine i izlaza daje brzinu oko $7{,}41\ \text{m/s}$ i protok oko $58{,}2\ \text{L/s}$, kontinuitet povećava brzinu u suženju vrha na oko $11{,}58\ \text{m/s}$, a tlak u točki `C` pada na oko $-8{,}34\ \text{m}$ manometarske visine. Ipak, apsolutna tlačna visina ostaje oko $1{,}86\ \text{m}$ vode, što je još oko $1{,}61\ \text{m}$ iznad tlačne visine zasićene pare. Nakon izlaza mlaz doseže vodoravni domet od oko $3{,}96\ \text{m}$.
 
 1. U suženju mora biti $v_C > v_B$ jer isti protok prolazi kroz manji presjek.
 2. Tlak u vrhu sifona mora biti manji od atmosferskog, a u suženju pada još više zbog veće brzine.
 3. Ako se pri računu dometa koristi $v_C$ umjesto izlazne brzine $v_B$, pomiješani su unutarnji presjek sifona i stvarni izlazni mlaz.
 :::
 
-U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> još ne treba crtati komplicirane energetske sheme, ali treba razumjeti osnovnu logiku: `EGL` prati ukupnu mehaničku energiju po jedinici težine, `HGL` zbroj tlačne i geodetske visine, a u idealnom toku `EGL` ostaje vodoravna dok se `HGL` spušta kad raste brzinski član. Upravo to u Venturiju i Pitotu odmah vizualizira što je plaćeno tlakom, a što dobiveno u brzini.
+U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> još ne treba crtati komplicirane energetske sheme, ali treba razumjeti osnovnu logiku: `EGL` prati ukupnu mehaničku energiju po jedinici težine, `HGL` zbroj tlačne i geodetske visine, a u idealnom toku `EGL` ostaje vodoravna dok se `HGL` spušta kad raste brzinski član. Takav prikaz u Venturijevoj cijevi i Pitotovoj sondi pokazuje odnos promjene tlaka i brzine.
 
 ::: {#ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2 .mf1-we}
 <p class="mf1-box-label">P5. Venturijeva cijev za mjerenje protoka ulja &nbsp;<span class="mf1-level">T2</span></p>
@@ -627,7 +627,7 @@ U <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="m
 
 - Promjer ulaza: $D_1 = 60\ \text{mm}$
 - Promjer grla: $D_2 = 30\ \text{mm}$
-- Razlika očitanja diferencialnog manometra: $\Delta h_m = 0{,}18\ \text{m}$ žive ($\rho_{Hg} = 13600\ \text{kg/m}^3$)
+- Razlika očitanja diferencijalnog manometra: $\Delta h_m = 0{,}18\ \text{m}$ žive ($\rho_{Hg} = 13600\ \text{kg/m}^3$)
 - Gustoća ulja: $\rho_{ul} = 870\ \text{kg/m}^3$
 - Cijev je horizontalna; zanemari gubitke
 
@@ -639,7 +639,7 @@ Volumenski protok ulja $Q$.
 
 **Rješenje**
 
-Razlika tlakova između presjeka 1 i 2 iz diferencialnog manometra:
+Razlika tlakova između presjeka 1 i 2 iz diferencijalnog manometra:
 $$
 \Delta p = (\rho_{Hg} - \rho_{ul})\,g\,\Delta h_m = (13600 - 870) \cdot 9{,}81 \cdot 0{,}18 \approx 22{,}479\ \text{kPa}
 $$ {#eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-01}
@@ -670,12 +670,12 @@ Brzina u grlu iznosi $v_2=7{,}424\ \text{m/s}$, a `HGL` je ondje za $\Delta p/(\
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerička perspektiva</p>
 
-Ista Venturijeva cijev u CFD-u daje polje brzine i tlaka, ne samo dvije točke. Za **verifikaciju proračuna** treba pratiti maseni debalans, reziduale i promjenu $\Delta p$ na najmanje trima sustavno pročišćenim mrežama. Razlika prema idealnom Bernoulliju u viskoznom modelu nije sama po sebi numerička pogreška; može sadržavati stvarne gubitke i razliku modela. Validacija zato traži odgovarajuće mjerenje i njegove nesigurnosti [@nasa-cfd-vv; @asme-vv20-2009].
+Ista Venturijeva cijev u CFD-u daje polje brzine i tlaka, ne samo dvije točke. Za **verifikaciju proračuna** treba pratiti maseni debalans, reziduale i promjenu $\Delta p$ na najmanje trima sustavno profinjenim mrežama. Razlika prema idealnom Bernoulliju u viskoznom modelu nije sama po sebi numerička pogreška; može sadržavati stvarne gubitke i razliku modela. Validacija zato traži odgovarajuće mjerenje i njegove nesigurnosti [@nasa-cfd-vv; @asme-vv20-2009].
 :::
 
 :::
 
-Venturi protok zaključuje iz razlike statičkih tlakova; Pitotova sonda sljedeća zaključuje brzinu iz razlike stagnacijskog i statičkog tlaka.
+Venturijevom cijevi protok se određuje iz razlike statičkih tlakova. U sljedećem se primjeru Pitotovom sondom brzina određuje iz razlike stagnacijskog i statičkog tlaka.
 
 ::: {#ex-u09-pitot-staticka-sonda-na-bespilotnoj-letjelici-za .mf1-we}
 <p class="mf1-box-label">P6. Pitot-statička sonda na bespilotnoj letjelici za mjerenje brzine leta &nbsp;<span class="mf1-level">T2</span></p>
@@ -698,11 +698,11 @@ Venturi protok zaključuje iz razlike statičkih tlakova; Pitotova sonda sljede�
 
 **Pretpostavke i model**
 
-Strujanje zraka oko sonde smatra se stacionarnim i nestlačivim (Machov broj $\ll 0{,}3$). Zanemaruje se viskozni efekt na samoj sondi, kao i utjecaj smjera vjetra koji nije paralelan s osi letjelice. Točka 1 odgovara nepotečenom strujanju daleko od sonde, a točka 2 stagnacijskoj točki na čelu sonde u kojoj se zrak zaustavlja ($v_2 = 0$). Leti se na konstantnoj visini, pa članovi geodetske visine otpadaju.
+Strujanje zraka oko sonde smatra se stacionarnim i nestlačivim (Machov broj $\ll 0{,}3$). Zanemaruje se viskozni efekt na samoj sondi, kao i utjecaj smjera vjetra koji nije paralelan s osi letjelice. Točka 1 odgovara neporemećenom strujanju daleko od sonde, a točka 2 stagnacijskoj točki na čelu sonde u kojoj se zrak zaustavlja ($v_2 = 0$). Leti se na konstantnoj visini, pa članovi geodetske visine otpadaju.
 
 **Rješenje**
 
-Bernoullijeva jednadžba između nepotečene struje i stagnacijske točke daje:
+Bernoullijeva jednadžba između neporemećene struje i stagnacijske točke daje:
 
 $$
 p_{\infty} + \frac{\rho v^2}{2} = p_{st}.
@@ -734,7 +734,7 @@ $$
 Re_s = \frac{v\,D_s}{\nu} = \frac{26{,}1 \cdot 0{,}005}{1{,}5 \cdot 10^{-5}} \approx 8\,700.
 $$ {#eq-energijska-bilanca-rijeseni-primjer-pitot-staticka-sonda-na-bespilo-05}
 
-Vrijednost $Re_s$ reda $10^4$ samo određuje omjer inercijskih i viskoznih učinaka za odabranu karakterističnu duljinu. Granice $2300/4000$ vrijede za razvijeno strujanje u kružnoj cijevi i ne smiju se prenijeti na vanjsko strujanje oko Pitotove sonde. Sam $Re_s$ zato ne dokazuje ni „turbulentnost sonde" ni točnost mjerenja; za to su potrebni geometrija, kut nastrujavanja i kalibracijska karakteristika sonde.
+Vrijednost $Re_s$ reda $10^4$ samo određuje omjer inercijskih i viskoznih učinaka za odabranu karakterističnu duljinu. Granice $2300/4000$ vrijede za razvijeno strujanje u kružnoj cijevi i ne smiju se prenijeti na vanjsko strujanje oko Pitotove sonde. Sam $Re_s$ zato ne dokazuje ni „turbulentnost sonde” ni točnost mjerenja; za to su potrebni geometrija, kut nastrujavanja i kalibracijska karakteristika sonde.
 
 **Provjera i komentar**
 
@@ -750,7 +750,7 @@ Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na 
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Vrijedi za stacionarno strujanje, nestlačivi fluid (gustoća konstantna), neviskozno strujanje (bez disipacije), bez vanjskog rada (bez pumpe ni turbine) i između točaka na istoj strujnici. Ako bilo koji od ovih uvjeta nije zadovoljen, treba prijeći na prošireni oblik koji se uvodi u sljedećem poglavlju.
+Vrijedi za stacionarno strujanje, nestlačivi fluid (gustoća konstantna), neviskozno strujanje (bez disipacije), bez strojnog rada (bez pumpe ili turbine) i između točaka na istoj strujnici. Ako neki od tih uvjeta nije zadovoljen, treba primijeniti model koji uključuje relevantne učinke. Gubitci i strojni rad obrađuju se u poglavlju 13.
 :::
 
 2. Po čemu se razlikuju energetska linija (EGL) i hidraulička linija (HGL) i kako se one ponašaju u idealnom strujanju?
@@ -764,14 +764,14 @@ EGL je zbroj tlačne, brzinske i geodetske visine, a HGL samo tlačne i geodetsk
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Postavljanjem Bernoullija između slobodne površine velikog spremnika (brzina nula, tlak atmosferski, visina $H$) i izlaznog presjeka male sapnice (tlak atmosferski, visina nula) pokraćuju se tlačni i geodetski članovi i ostaje $v^2/(2g) = H$, odakle slijedi $v = \sqrt{2gH}$.
+Postavljanjem Bernoullija između slobodne površine velikog spremnika (brzina nula, tlak atmosferski, visina $H$) i izlaznog presjeka male sapnice (tlak atmosferski, visina nula) poništavaju se jednaki tlačni članovi, a ostaje razlika geodetskih visina i ostaje $v^2/(2g) = H$, odakle slijedi $v = \sqrt{2gH}$.
 :::
 
 4. Kada se Bernoulli koristi za istjecanje, je li dobiveni rezultat za $v$ pretežno gornja ili donja granica stvarne brzine?
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Gornja granica. Stvarna brzina je manja jer u idealnom modelu nisu uračunati gubici trenja, lokalne disipacije na ulazu u sapnicu i mogući viskozni profil brzina. Razlika se uračunava preko koeficijenta isticanja $C_d < 1$ koji se uvodi u realnim primjenama.
+Gornja granica. Stvarna brzina je manja jer u idealnom modelu nisu uračunati gubici trenja, lokalne disipacije na ulazu u sapnicu i mogući viskozni profil brzina. Pri računanju protoka primjenjuje se koeficijent istjecanja $C_d < 1$, koji obuhvaća i smanjenje brzine i kontrakciju mlaza. Zato taj koeficijent ne treba automatski tumačiti kao omjer stvarne i idealne brzine.
 :::
 :::
 
@@ -788,7 +788,7 @@ Veliki otvoreni spremnik sadrži vodu do visine $H = 3{,}20\ \text{m}$ iznad osi
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-između slobodne površine i izlaza vrijedi Torricelli: $v = \sqrt{2gH}$; nakon toga $Q = Av$ i $\dot m = \rho Q$.
+Između slobodne površine i izlaza vrijedi Torricelli: $v = \sqrt{2gH}$; nakon toga $Q = Av$ i $\dot m = \rho Q$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -803,12 +803,12 @@ $v \approx 7{,}92\ \text{m/s}$; $Q \approx 4{,}21\ \text{L/s}$; $\dot m \approx 
 
 ### Z2. Tlak u suženju ventilacijskog kanala {#task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s .unnumbered .unlisted}
 
-Horizontalnim ventilacijskim kanalom smanjuje se presjek s $A_1 = 0{,}060\ \text{m}^2$ na $A_2 = 0{,}020\ \text{m}^2$. Volumenski protok zraka iznosi $Q = 0{,}42\ \text{m}^3/\text{s}$, a gustoća zraka je $\rho = 1{,}20\ \text{kg/m}^3$. Pretpostavi stacionarni nestlačivi tok bez gubitaka i bez strojnog rada. Odredi pad statičkog tlaka.
+U horizontalnom ventilacijskom kanalu presjek se smanjuje s $A_1 = 0{,}060\ \text{m}^2$ na $A_2 = 0{,}020\ \text{m}^2$. Volumenski protok zraka iznosi $Q = 0{,}42\ \text{m}^3/\text{s}$, a gustoća zraka je $\rho = 1{,}20\ \text{kg/m}^3$. Pretpostavi stacionarni nestlačivi tok bez gubitaka i bez strojnog rada. Odredi pad statičkog tlaka.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-iz kontinuiteta dobij $v_1$ i $v_2$, a za horizontalni kanal bez gubitaka vrijedi $p_1 + \rho v_1^2/2 = p_2 + \rho v_2^2/2$.
+Iz kontinuiteta dobij $v_1$ i $v_2$, a za horizontalni kanal bez gubitaka vrijedi $p_1 + \rho v_1^2/2 = p_2 + \rho v_2^2/2$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -897,12 +897,12 @@ Zatim primijeni zadano proširenje energijske bilance: gubitak visine modelira s
 
 Oznake ± ovdje daju zajamčene intervale, ne standardne nesigurnosti; dopuštene su sve njihove kombinacije. Primijeni bilance $\Delta z=(1+K_\Sigma)v^2/(2g)$ i $p_{C,abs}=p_{atm}-\rho g[z_C+(1+K_C)v^2/(2g)]$.
 
-Odredi nominalni stvarni protok i konzervativne granice protoka i tlaka u vrhu. Može li se zajamčiti zahtjev $Q\ge15{,}0\ \text{L/s}$ i $p_C\ge30\ \text{kPa}$ apsolutno?
+Odredi nominalni protok prema modelu s gubitcima i konzervativne granice protoka i tlaka u vrhu. Može li se zajamčiti zahtjev $Q\ge15{,}0\ \text{L/s}$ i $p_C\ge30\ \text{kPa}$ apsolutno?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Bernoullijem između slobodne površine i izlaza vrati idealni $v$, između slobodne površine i vrha sifona vrati tlak, a domet mlaza zatvori kao vodoravno izbačeno tijelo s visine $1{,}2\ \text{m}$. Za izvedeni sustav koristi $v=\sqrt{2g\Delta z/(1+K_\Sigma)}$ i $p_C=p_{atm}-\rho g[z_C+(1+K_C)v^2/(2g)]$. Najmanji protok daje najveći $K_\Sigma$; najmanji tlak u vrhu provjeri konzervativnim kutovima zadanih intervala, ne samo nominalnim koeficijentima.
+Bernoullijevom jednadžbom između slobodne površine i izlaza odredi idealni $v$, a između slobodne površine i vrha sifona odredi tlak. Domet mlaza izračunaj prema modelu vodoravnog hica s visine $1{,}2\ \text{m}$. Za izvedeni sustav koristi $v=\sqrt{2g\Delta z/(1+K_\Sigma)}$ i $p_C=p_{atm}-\rho g[z_C+(1+K_C)v^2/(2g)]$. Najmanji protok daje najveći $K_\Sigma$; najmanji tlak u vrhu provjeri rubnim kombinacijama zadanih intervala, ne samo nominalnim koeficijentima.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -922,19 +922,19 @@ Idealno: $v\approx7{,}14$ m/s, $Q\approx27{,}5$ L/s, $p_{C,abs}\approx59{,}1$ kP
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički most</p>
 
-**Gdje ovo živi u numerici.** Bernoullijeva jednadžba ima u CFD-u dvije različite uloge. Prva: Eulerove jednadžbe, iz kojih se pod odgovarajućim pretpostavkama izvodi Bernoulli, čine neviskozni model toka. Druga: Bernoullijev rezultat služi kao analitička referenca za **verifikaciju** idealiziranog slučaja i kao provjera reda veličine u presjecima gdje su gubitci mali. Validacija realnoga modela ipak traži podatke stvarnog sustava.
+**Veza s numeričkim proračunom.** Bernoullijeva jednadžba ima u CFD-u dvije različite uloge. Prva: Eulerove jednadžbe, iz kojih se pod odgovarajućim pretpostavkama izvodi Bernoulli, čine neviskozni model toka. Druga: Bernoullijev rezultat služi kao analitička referenca za **verifikaciju** idealiziranog slučaja i kao provjera reda veličine u presjecima gdje su gubitci mali. Validacija realnoga modela ipak traži podatke stvarnog sustava.
 
-**Što numerički alat radi s tim.** Duž odabrane strujnice ili kroz usklađene presjeke iz polja $p$ i $v$ izračunavaju se `EGL` i `HGL`. U numeričkom Eulerovu slučaju koji dijeli Bernoullijeve pretpostavke, neželjeni pad `EGL` može otkriti diskretizacijsku disipaciju, nedovoljnu konvergenciju ili neusklađene rubne uvjete; usporedba mora koristiti istu strujnicu i istu referencu energije.
+**Postupak numeričkog proračuna.** Duž odabrane strujnice ili kroz usklađene presjeke iz polja $p$ i $v$ izračunavaju se `EGL` i `HGL`. U numeričkom Eulerovu slučaju koji dijeli Bernoullijeve pretpostavke, neželjeni pad `EGL` može otkriti diskretizacijsku disipaciju, nedovoljnu konvergenciju ili neusklađene rubne uvjete; usporedba mora koristiti istu strujnicu i istu referencu energije.
 
-**Tipičan scenarij.** Eulerov model može poslužiti kao jeftiniji predprojektni model kada su viskozni učinci sekundarni, a zatim se odabrane geometrije provjeravaju viskoznim modelom. Koliko je takav račun brži i koliko je točan nije univerzalno: ovisi o mreži, solveru, geometriji i traženoj izlaznoj veličini.
+**Tipičan scenarij.** Eulerov model može poslužiti kao jeftiniji predprojektni model kada su viskozni učinci sekundarni, a zatim se odabrane geometrije provjeravaju viskoznim modelom. Koliko je takav račun brži i koliko je točan nije univerzalno: ovisi o mreži, računalnom rješavaču, geometriji i traženoj izlaznoj veličini.
 
-> *Nije gradivo MF1. Bernoulli koji se ovdje piše za dvije točke, u CFD-u postaje provjera koja vrijedi za čitavu domenu.*
+> *Nije gradivo MF1. Bernoullijeva jednadžba u CFD-u služi za provjeru duž odabranih strujnica na kojima vrijede njezine pretpostavke.*
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Provjera CFD-a analitičkim rješenjem
 
-Bernoullijeva jednadžba može biti **referentno analitičko rješenje** za numerički model koji dijeli njezine pretpostavke. U idealiziranom Eulerovu modelu Venturija uspoređuju se isti presjeci, primjerice ulaz i grlo, te se provjerava smanjuje li se razlika prema Bernoulliju pri iteracijskoj i mrežnoj konvergenciji. Ne postoji univerzalna dopuštena razlika od $5\,\%$. U viskoznom CFD modelu dio razlike prema idealnom Bernoulliju predstavlja stvaran gubitak energije, pa se takav model validira mjerenjem ili odgovarajućim koreliranim modelom gubitaka. Razliku između verifikacije i validacije sustavno obrađuje dodatak D04.
+Bernoullijeva jednadžba može biti **referentno analitičko rješenje** za numerički model koji dijeli njezine pretpostavke. U idealiziranom Eulerovu modelu Venturija uspoređuju se isti presjeci, primjerice ulaz i grlo, te se provjerava smanjuje li se razlika prema Bernoulliju pri iteracijskoj i mrežnoj konvergenciji. Ne postoji univerzalna dopuštena razlika od $5\,\%$. U viskoznom CFD modelu dio razlike prema idealnom Bernoulliju predstavlja stvaran gubitak energije, pa se takav model validira mjerenjem ili odgovarajućim koreliranim modelom gubitaka. Razliku između verifikacije i validacije sustavno obrađuje dodatak D.
 :::
 
 ::: {.mf1-zavrsni-okvir}
@@ -950,11 +950,11 @@ Bernoullijeva jednadžba može biti **referentno analitičko rješenje** za nume
 
 **Najčešća pogreška**
 
-Najčešća greška u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> nije algebra nego mehaničko prepisivanje Bernoullija bez provjere pretpostavki. Drugi klasični kvar je zaboraviti da porast brzine u pravilu ne donosi novu energiju, nego je plaćen padom tlaka ili visine.
+Najčešća pogreška u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 8</span><span class="mf1-ch-title">Energijska jednadžba i Bernoulli</span></span> nije algebra nego mehaničko prepisivanje Bernoullija bez provjere pretpostavki. Često se zaboravlja i da porast brzine ne stvara novu energiju, nego je u promatranom idealnom modelu praćen padom tlačne ili geodetske visine.
 
 **Nakon ovoga poglavlja mora biti moguće**
 
-1. provjeriti jesu li uvjeti idealnog modela stvarno zatvoreni.
+1. provjeriti jesu li pretpostavke idealnog modela zadovoljene.
 2. čitati tlak, brzinu i visinu kao tri oblika iste mehaničke energije.
 3. spojiti kontinuitet i Bernoulli u jednostavnom problemu promjene presjeka.
 4. prepoznati kada zadatak više ne pripada idealnom nego realnom modelu.

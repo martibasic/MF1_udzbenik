@@ -2,7 +2,7 @@
 
 ## Gubitci, cjevovodi, crpke i mreže {#sec-cjevovodi-motivacija}
 
-U cjevovodnom sustavu kontinuitet određuje raspodjelu protoka, a energijska bilanca povezuje visinsku razliku, rad crpke i gubitke. Radna točka nastaje ondje gdje crpka daje upravo onu energijsku visinu koju sustav zahtijeva pri tom protoku.
+U cjevovodnom sustavu kontinuitet povezuje ulazne i izlazne protoke, a energijska bilanca povezuje visinsku razliku, rad crpke i gubitke. Radna točka nastaje ondje gdje crpka daje upravo onu energijsku visinu koju sustav zahtijeva pri tom protoku.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -14,7 +14,7 @@ Iste bilance opisuju balastni vod broda, rashladni krug, protupožarnu mrežu i 
 
 ## Realna energijska bilanca sustava {#sec-realna-energijska-bilanca}
 
-Promatrajmo stacionarni tok nestlačivog fluida kroz kontrolni volumen s jednim ulaznim presjekom 1 i jednim izlaznim presjekom 2. Pozitivni smjer protoka ide od 1 prema 2. Crpka fluidu dodaje visinu $h_p$, turbina je oduzima za $h_t$, a disipacija se zapisuje pozitivnim članom $h_w\ge0$. Bilanca mehaničke energije po jedinici težine glasi
+Promatrajmo stacionarni tok nestlačivog fluida kroz kontrolni volumen s jednim ulaznim presjekom 1 i jednim izlaznim presjekom 2. Pozitivni smjer protoka ide od 1 prema 2. Crpka fluidu dodaje visinu $h_p$, turbina oduzima visinu $h_t$, a disipacija se zapisuje pozitivnim članom $h_w\ge0$. Bilanca mehaničke energije po jedinici težine glasi
 
 $$
 \underbrace{\frac{p_1}{\rho g}+z_1+\alpha_1\frac{v_1^2}{2g}}_{H_1}
@@ -43,7 +43,7 @@ Energijska crta (EGL) prikazuje $H=p/(\rho g)+z+\alpha v^2/(2g)$, a piezometrijs
 ::: {.mf1-dublje}
 <p class="mf1-box-label">Fizikalni temelj — disipacija nije proizvoljan dodatak</p>
 
-Za stacionaran, nestlačiv Newtonski tok u kojem promatrani kontrolni volumen obuhvaća cijelo područje gubitka, lokalna viskozna disipacija po jedinici volumena jest
+Za stacionaran, nestlačiv newtonski tok u kojem promatrani kontrolni volumen obuhvaća cijelo područje gubitka, lokalna viskozna disipacija po jedinici volumena jest
 
 $$
 \Phi=2\mu S_{ij}S_{ij}\geq0,
@@ -65,7 +65,7 @@ Zato je doprinos $h_w$ nenegativan, a u idealnom graničnom slučaju $\mu=0$ nes
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Granica modela</p>
 
-Jednadžba [-@eq-realna-energijska-bilanca] jest jednodimenzijska stacionarna bilanca. Brze promjene ventila, vodni udar, elastičnost cijevi, plinoviti džepovi, izražena izmjena topline i snažno stlačivi tok traže proširen model. Koeficijenti gubitaka također vrijede samo za geometriju i režim za koje su određeni.
+Jednadžba [-@eq-realna-energijska-bilanca] jest jednodimenzijska stacionarna bilanca. Brze promjene ventila, vodeni udar, elastičnost cijevi, plinoviti džepovi, izražena izmjena topline i snažno stlačivi tok traže proširen model. Koeficijenti gubitaka također vrijede samo za geometriju i režim za koje su određeni.
 :::
 
 ## Linijski i lokalni gubitci {#sec-linijski-lokalni-gubitci}
@@ -82,7 +82,7 @@ $$
 h_{loc}=\xi\frac{v_{ref}^2}{2g}.
 $$ {#eq-lokalni-gubitak}
 
-Darcyjev koeficijent trenja $\lambda$ i lokalni koeficijent $\xi$ bezdimenzijski su. U izrazu za lokalni element mora se znati na koji se presjek odnosi $v_{ref}$. Kod nagloga proširenja, redukcijskog ventila ili grananja brzine s dvije strane nisu jednake, pa slijepo zbrajanje svih $\xi$ uz jednu zajedničku brzinu može biti pogrešno.
+Darcyjev koeficijent trenja $\lambda$ i lokalni koeficijent $\xi$ bezdimenzijski su. U izrazu za lokalni element mora se znati na koji se presjek odnosi $v_{ref}$. Kod nagloga proširenja, redukcijskog ventila ili grananja brzine s dviju strana nisu jednake, pa slijepo zbrajanje svih $\xi$ uz jednu zajedničku brzinu može biti pogrešno.
 
 Za dionicu stalnog promjera praktičan je zapis
 
@@ -100,7 +100,7 @@ $$
 h_l=\frac{8\lambda L}{\pi^2g}\frac{Q^2}{D^5}.
 $$ {#eq-linijski-gubitak-protok}
 
-Ako su $Q$, $L$ i **$\lambda$ fiksni**, udvostručenje promjera smanjuje linijski gubitak za $2^5=32$ puta. Lokalni gubitak s fiksnim $\xi$ tada se smanjuje 16 puta jer nema dodatni faktor $L/D$. U stvarnom redizajnu treba ponovno odrediti $Re$, $\varepsilon/D$ i $\lambda$, pa konačni omjer nije nužno točno 32. Ova analiza pokazuje zašto nekoliko milimetara promjera može vrijediti više od mnogih sitnih optimiranja armature.
+Ako su $Q$, $L$ i **$\lambda$ fiksni**, udvostručenje promjera smanjuje linijski gubitak za $2^5=32$ puta. Lokalni gubitak s fiksnim $\xi$ tada se smanjuje 16 puta jer nema dodatni faktor $L/D$. Pri stvarnoj promjeni izvedbe treba ponovno odrediti $Re$, $\varepsilon/D$ i $\lambda$, pa konačni omjer nije nužno točno 32. Ova analiza pokazuje zašto nekoliko milimetara promjera može vrijediti više od niza manjih prilagodbi armature.
 
 ## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
 
@@ -113,7 +113,7 @@ Q\longrightarrow v=\frac{Q}{A}
 \longrightarrow h_w.
 $$ {#eq-cjevovodi-3-od-reynoldsova-broja-do-koeficijenta-trenja-01}
 
-Za potpuno razvijen laminarni tok Newtonskog fluida u kružnoj cijevi vrijedi
+Za potpuno razvijen laminarni tok newtonskog fluida u kružnoj cijevi vrijedi
 
 $$
 \lambda=\frac{64}{Re}.
@@ -142,7 +142,7 @@ Jednadžba se rješava iterativno ili se $\lambda$ očitava iz Moodyjeva dijagra
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Izvod — zašto je Colebrookov račun iterativan</p>
 
-**Fizičko pitanje.** Za zadane $Q,D,\nu$ i $\varepsilon$ traži se otpor turbulentne dionice.
+**Fizikalno pitanje.** Za zadane $Q,D,\nu$ i $\varepsilon$ traži se otpor turbulentne dionice.
 
 **Postavljanje.** Iz protoka se izračunaju $v$, $Re$ i $\varepsilon/D$. U [-@eq-colebrook-white] nepoznata $\lambda$ pojavljuje se izvan i unutar logaritma.
 
@@ -157,7 +157,7 @@ $$
 \right]^{-2}
 $$ {#eq-cjevovodi-izvod-zasto-je-colebrookov-racun-iterativan-01}
 
-dok se dvije uzastopne vrijednosti ne razlikuju manje od zadane tolerancije. Treba provjeriti i rezidual izvorne jednadžbe, ne samo promjenu iterata.
+dok razlika dviju uzastopnih vrijednosti ne postane manja od zadane tolerancije. Treba provjeriti i rezidual izvorne jednadžbe, ne samo promjenu iterata.
 
 **Granice.** Kad $\varepsilon/D\to0$, hrapavost nestaje iz dominantnog člana; pri vrlo velikom $Re$ i konačnoj hrapavosti viskozni član postaje malen pa $\lambda$ teži vrijednosti određenoj uglavnom s $\varepsilon/D$.
 :::
@@ -165,7 +165,7 @@ dok se dvije uzastopne vrijednosti ne razlikuju manje od zadane tolerancije. Tre
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Numerički pokus — od predviđanja do reziduala</p>
 
-Prije pokretanja predvidi kako promjena $Re$ i $\varepsilon/D$ pomiče $\lambda$. Zatim usporedi iterativno rješenje, aproksimaciju i očitanje s dijagrama te provjeri rezidual Colebrookove jednadžbe. Nastavak istog notebooka rješava radnu točku iz Z4 uz promjenjiv faktor trenja i provjerava energijsku bilancu.
+Prije pokretanja predvidi kako promjena $Re$ i $\varepsilon/D$ pomiče $\lambda$. Zatim usporedi iterativno rješenje, aproksimaciju i očitanje s dijagrama te provjeri rezidual Colebrookove jednadžbe. Nastavak iste bilježnice rješava radnu točku iz Z4 uz promjenjiv faktor trenja i provjerava energijsku bilancu.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u10_moody_dijagram.ipynb" target="_blank" rel="noopener">Pokreni u JupyterLiteu</a>
@@ -206,7 +206,7 @@ R_iQ_i^2=h_{AB},
 \frac{1}{\sqrt{R_{eq}}}=\sum_i\frac{1}{\sqrt{R_i}}.
 $$ {#eq-paralelni-otpor}
 
-Analogija s električnim otporom korisna je samo do određene granice: hidraulički je odnos ovdje kvadratan, a $R$ se mijenja s protokom ako se mijenja $\lambda$. Za opću mrežu zato se jednadžbe kontinuiteta u čvorovima i energijske jednadžbe po nezavisnim putovima rješavaju zajedno i iterativno.
+Analogija s električnim otporom korisna je samo do određene granice: hidraulički je odnos ovdje kvadratan, a $R$ se mijenja s protokom ako se mijenja $\lambda$. Za opću mrežu zato se jednadžbe kontinuiteta u čvorovima i energijske jednadžbe po neovisnim putovima rješavaju zajedno i iterativno.
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje — što se izjednačuje?</p>
@@ -240,7 +240,7 @@ $$
 H_s(Q)=H_{stat}+RQ^2.
 $$ {#eq-cjevovodi-5-crpka-karakteristika-sustava-i-radna-tocka-01}
 
-Crpka ima vlastitu karakteristiku $H_p(Q)$ za zadanu brzinu vrtnje, impeler i fluid. Radna točka nije proizvoljno odabrana kataloška točka, nego rješenje
+Crpka ima vlastitu karakteristiku $H_p(Q)$ za zadanu brzinu vrtnje, radno kolo (impeler) i fluid. Radna točka nije proizvoljno odabrana kataloška točka, nego rješenje
 
 $$
 H_p(Q_{op})=H_s(Q_{op}).
@@ -315,7 +315,7 @@ $NPSH_a$ opisuje sustav do dogovorenoga usisnog presjeka. Ne zamjenjuje proizvo�
 
 Mrežni proračun zatvara kontinuitet u čvorovima i energijsku bilancu po putovima, dok se CFD primjenjuje na lokalne dijelove za koje je koeficijent lokalnoga gubitka nepouzdan. Izračun lokalnoga strujanja može dati novu procjenu toga koeficijenta, ali tek nakon provjere očuvanja mase, mrežne konvergencije i usporedbe s prikladnim referentnim slučajem.
 
-Pouzdan radni slijed je od cijele mreže prema lokalnoj geometriji i natrag: mrežni model daje protok i radnu točku, lokalni proračun daje otpor elementa, a ažurirani koeficijent vraća se u mrežu. Tako se ne zamjenjuje jeftina sistemska bilanca skupim trodimenzijskim proračunom cijele instalacije bez jasne koristi.
+Pouzdan radni slijed je od cijele mreže prema lokalnoj geometriji i natrag: mrežni model daje protok i radnu točku, lokalni proračun daje otpor elementa, a ažurirani koeficijent vraća se u mrežu. Tako se zadržava računski jednostavna bilanca cijelog sustava, a zahtjevniji trodimenzijski proračun koristi se ondje gdje donosi potrebne lokalne podatke.
 
 Pri usisu crpke ili pojavi kavitacije samo predviđanje tlaka nije dovoljno za odluku. Treba provjeriti apsolutnu tlačnu rezervu, temperaturu, model promjene faze i osjetljivost rezultata na rubni uvjet na usisu.
 :::
@@ -376,7 +376,7 @@ Re=\frac{vD}{\nu}=509,
 \lambda=\frac{64}{Re}=0{,}1257.
 $$ {#eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-02}
 
-Darcy–Weisbach daje
+Darcy–Weisbachova jednadžba daje
 
 $$
 h_l=0{,}1257\frac{2}{0{,}004}
@@ -386,13 +386,13 @@ $$ {#eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-03}
 
 odnosno $\Delta p=\rho gh_l=13{,}37\ \mathrm{kPa}$.
 
-**Neovisna provjera drugim modelom:** $\mu=\rho\nu=5{,}25\cdot10^{-3}\ \mathrm{Pa\,s}$, pa [-@eq-poiseuille-u13] daje
+**Provjera drugim zapisom:** $\mu=\rho\nu=5{,}25\cdot10^{-3}\ \mathrm{Pa\,s}$, pa [-@eq-poiseuille-u13] daje
 
 $$
 \Delta p=\frac{128\mu LQ}{\pi D^4}=13{,}37\ \mathrm{kPa}.
 $$ {#eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-04}
 
-Jednak rezultat iz dva neovisna zapisa provjerava i faktor 64 i pretvorbu protoka. Pri udvostručenju $Q$ ovaj laminarni pad tlaka udvostručio bi se.
+Jednak rezultat iz dvaju ekvivalentnih zapisa provjerava i faktor 64 i pretvorbu protoka. Pri udvostručenju $Q$ ovaj laminarni pad tlaka udvostručio bi se.
 :::
 
 ::: {#ex-serijsko-paralelna-mreza .mf1-we}
@@ -494,7 +494,7 @@ $$
 \qquad s=0{,}899.
 $$ {#eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-06}
 
-**Neovisna provjera i granica:** omjer brzina nije jednak omjeru radnih protoka $17{,}24/19{,}94=0{,}865$ jer statičkih $6\ \mathrm{m}$ ne skalira se s $n^2$. Da je $H_{stat}=0$ i da su obje radne točke slične, jednostavan afinitetni omjer bio bi mnogo bliži. U stvarnom odabiru treba provjeriti učinkovitost, dopušteno područje rada i proizvođačeve krivulje.
+**Neovisna provjera i granica:** omjer brzina nije jednak omjeru radnih protoka $17{,}24/19{,}94=0{,}865$ jer se statičkih $6\ \mathrm{m}$ ne skalira s $n^2$. Da je $H_{stat}=0$ i da su obje radne točke slične, jednostavan afinitetni omjer bio bi mnogo bliži. U stvarnom odabiru treba provjeriti učinkovitost, dopušteno područje rada i proizvođačeve krivulje.
 :::
 
 ::: {#ex-energijski-ledger-hladenja .mf1-we}
@@ -529,7 +529,7 @@ $$ {#eq-cjevovodi-rijeseni-primjer-godisnja-energija-rashladnog-kr-04}
 
 Ako čišćenje izmjenjivača pri istom protoku smanji potrebnu visinu na $10\ \mathrm{m}$ i učinkovitosti ostanu iste, potrošnja pada na $5{,}92\ \mathrm{MWh/god}$, odnosno štedi se oko $1{,}18\ \mathrm{MWh/god}$.
 
-**Neovisna provjera:** ukupna učinkovitost iznosi $\eta_p\eta_m\eta_f=0{,}696$. Omjer $P_h/P_{el}=0{,}706/1{,}015=0{,}696$ zatvara ledger. Ušteda je razmjerna promjeni visine samo zato što su $Q$ i sve učinkovitosti ovdje izričito zadržani konstantnima.
+**Neovisna provjera:** ukupna učinkovitost iznosi $\eta_p\eta_m\eta_f=0{,}696$. Omjer $P_h/P_{el}=0{,}706/1{,}015=0{,}696$ potvrđuje bilancu pretvorbe energije. Ušteda je razmjerna promjeni visine samo zato što su $Q$ i sve učinkovitosti ovdje izričito zadržani konstantnima.
 :::
 
 ::: {#ex-npsha-usisne-crpke .mf1-we}
@@ -650,7 +650,7 @@ $v=0{,}212\ \mathrm{m/s}$, $Re=424$, $\lambda=0{,}1508$ i $\Delta p=3{,}11\ \mat
 
 ### Z3. Uravnoteženje paralelnih grana {#task-uravnotezenje-paralelnih-grana .unnumbered .unlisted}
 
-Dva rashladna ogranka između istih čvorova trebaju dobivati jednak protok. Ugradnjom prigušnog ventila u samo jedan ogranak odredi gdje ga treba postaviti i koliki dodatni otpor mora imati. Zatim zatvori kontinuitet i usporedi gubitke na oba puta.
+Dva rashladna ogranka između istih čvorova trebaju dobivati jednak protok. Odredi u koji ogranak treba ugraditi prigušni ventil i koliki dodatni otpor ventil mora imati. Zatim zatvori kontinuitet i usporedi gubitke na oba puta.
 
 Zadani približno konstantni otpori grana bez novoga ventila jesu $R_1=12\,000\ \mathrm{s^2/m^5}$ i $R_2=48\,000\ \mathrm{s^2/m^5}$. Regulacija održava ukupni protok $Q=0{,}020\ \mathrm{m^3/s}$ i može osigurati potrebnu visinu. U svakom ogranku vrijedi kvadratni model $h_i=R_iQ_i^2$; novi ventil dodaje $h_v=R_vQ_i^2$ s $R_v\ge0$. Odredi granu za ventil, $R_v$, oba protoka, zajednički gubitak $h_{AB}$ i doprinos samog ventila. Lokalni otpori postojećih spojeva već su uključeni u zadane $R_i$.
 
@@ -675,9 +675,9 @@ Ventil ide u granu 1: $R_v=36\,000\ \mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\
 
 Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Odredi radnu točku kad otpor cijevi ovisi o Reynoldsovu broju, pa zatim odvojeno izračunaj hidrauličku, vratilnu i električnu snagu. U svakoj iteraciji ponovno provjeri trenje u cijevi.
 
-Sintetička karakteristika crpke zadana je brojevnim vrijednostima $H_p=30-30\,000Q^2$, uz $Q$ u $\mathrm{m^3/s}$ i $H_p$ u metrima. Razlika slobodnih površina je $\Delta z=8{,}0\ \mathrm{m}$. Vod ima $D=0{,}100\ \mathrm{m}$, $L=150\ \mathrm{m}$, ekvivalentnu hrapavost $\varepsilon=0{,}100\ \mathrm{mm}$ i $\sum\xi=6{,}0$, uključujući ulaz i izlaz, prema brzini u tom vodu. Za vodu uzmi $\rho=1000\ \mathrm{kg/m^3}$ i $\nu=1{,}00\cdot10^{-6}\ \mathrm{m^2/s}$. Upotrijebi Darcy–Weisbachov model i Colebrookovu jednadžbu; konačno provjeri turbulentni režim.
+Sintetička karakteristika crpke zadana je brojevnim vrijednostima $H_p=30-30\,000Q^2$, uz $Q$ u $\mathrm{m^3/s}$ i $H_p$ u metrima. Razlika visina slobodnih površina je $\Delta z=8{,}0\ \mathrm{m}$. Vod ima $D=0{,}100\ \mathrm{m}$, $L=150\ \mathrm{m}$, ekvivalentnu hrapavost $\varepsilon=0{,}100\ \mathrm{mm}$ i $\sum\xi=6{,}0$, uključujući ulaz i izlaz, prema brzini u tom vodu. Za vodu uzmi $\rho=1000\ \mathrm{kg/m^3}$ i $\nu=1{,}00\cdot10^{-6}\ \mathrm{m^2/s}$. Upotrijebi Darcy–Weisbachov model i Colebrookovu jednadžbu; konačno provjeri turbulentni režim.
 
-Numerički riješi radnu točku u intervalu $0{,}005\le Q\le0{,}030\ \mathrm{m^3/s}$, uz pomoć notebooka ili drugog računskog alata. Izvijesti $Q_{op}$, $H_{op}$, $Re$ i $\lambda$ te provjeri energijski rezidual manji od $10^{-6}\ \mathrm{m}$ i apsolutni Colebrookov rezidual manji od $10^{-6}$. Za zadane ukupnu učinkovitost crpke $\eta_p=0{,}76$ i učinkovitost motora $\eta_m=0{,}92$ odredi $P_h$, $P_{vr}$ i $P_{el}$; gubitke pretvarača zanemari.
+Numerički riješi radnu točku u intervalu $0{,}005\le Q\le0{,}030\ \mathrm{m^3/s}$, uz pomoć bilježnice ili drugog računskog alata. Izvijesti $Q_{op}$, $H_{op}$, $Re$ i $\lambda$ te provjeri energijski rezidual manji od $10^{-6}\ \mathrm{m}$ i apsolutni Colebrookov rezidual manji od $10^{-6}$. Za zadanu ukupnu učinkovitost crpke $\eta_p=0{,}76$ i učinkovitost motora $\eta_m=0{,}92$ odredi $P_h$, $P_{vr}$ i $P_{el}$; gubitke pretvarača zanemari.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
@@ -701,7 +701,7 @@ Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbro
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
 ### Naputak
-Za svaki kandidat izračunaj brzinu, a zatim raspon $h_w$ za obje granice $\lambda$. Odluku donesi prema najvećem gubitku. Pri fiksnom protoku i promjeru gubitak raste s $\lambda$.
+Za svaki ponuđeni promjer izračunaj brzinu, a zatim raspon $h_w$ za obje granice $\lambda$. Odluku donesi prema najvećem gubitku. Pri fiksnom protoku i promjeru gubitak raste s $\lambda$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -743,7 +743,7 @@ $q\approx19{,}12\ \mathrm{L/s}$; $(H_V,H_s)\approx(19{,}62;14{,}13)\ \mathrm{m}$
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički most — mrežni model prije 3D CFD-a</p>
 
-Jednodimenzijski mrežni solver iterira $\lambda(Re,\varepsilon/D)$ i protoke dok ne zatvori kontinuitet u svakom čvoru i energijsku bilancu po nezavisnim putovima. To je pravi alat za cijelu instalaciju. CFD se zatim primjenjuje na lokalnu geometriju za koju je tablični $\xi$ nepouzdan — primjerice razdjelnik, kratki difuzor ili ulaz u crpku. Rezultat CFD-a može se svesti na $\xi$ i vratiti u mrežni model, ali tek nakon provjere očuvanja mase, mrežne konvergencije i usporedbe s odgovarajućim referentnim slučajem. Viša razlučivost ne popravlja pogrešno zadanu hrapavost, rubni uvjet ili geometriju.
+Jednodimenzijski računalni model mreže iterativno određuje $\lambda(Re,\varepsilon/D)$ i protoke dok ne zatvori kontinuitet u svakom čvoru i energijsku bilancu po neovisnim putovima. To je pravi alat za cijelu instalaciju. CFD se zatim primjenjuje na lokalnu geometriju za koju je tablični $\xi$ nepouzdan — primjerice razdjelnik, kratki difuzor ili ulaz u crpku. Rezultat CFD-a može se svesti na $\xi$ i vratiti u mrežni model, ali tek nakon provjere očuvanja mase, mrežne konvergencije i usporedbe s odgovarajućim referentnim slučajem. Viša razlučivost ne popravlja pogrešno zadanu hrapavost, rubni uvjet ili geometriju.
 :::
 
 ## Sažetak {#sec-u13-zakljucak}
@@ -755,9 +755,9 @@ Jednodimenzijski mrežni solver iterira $\lambda(Re,\varepsilon/D)$ i protoke do
 2. Napiši kontinuitet i realnu energijsku bilancu prije korelacija.
 3. Za svaku dionicu idi redom $Q\to v\to Re\to\lambda\to h_w$.
 4. U seriji zbrajaj gubitke pri istom $Q$; u paraleli izjednači pad energije i zatvori čvor.
-5. Radnu točku odredi presjekom crpke i sustava; statička visina ne slijedi afinitetne zakone.
+5. Radnu točku odredi presjecištem karakteristika crpke i sustava; statička visina ne slijedi afinitetne zakone.
 6. Odvojeno vodi $P_h$, $P_{vr}$ i $P_{el}$ te godišnju energiju.
 7. Na usisu koristi apsolutni tlak i usporedi $NPSH_a$ s odgovarajućim $NPSH_r$ i kriterijem proizvođača.
 
-Najbrža provjera rezultata jest kombinacija četiri pitanja: jesu li svi gubitci pozitivni, zatvara li se bilanca protoka, vraća li zbroj gubitaka raspoloživu visinu i je li promjena radne točke fizikalno u očekivanom smjeru?
+Najbrža provjera rezultata jest kombinacija četiriju pitanja: jesu li svi gubitci pozitivni, zatvara li se bilanca protoka, vraća li zbroj gubitaka raspoloživu visinu i je li promjena radne točke fizikalno u očekivanom smjeru?
 :::

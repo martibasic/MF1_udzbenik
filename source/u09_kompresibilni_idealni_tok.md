@@ -20,7 +20,7 @@ $$
 a^2=\left(\frac{\partial p}{\partial \rho}\right)_s,
 $$ {#eq-brzina-zvuka-opca}
 
-gdje je $a$ brzina zvuka, a indeks $s$ označuje konstantnu entropiju. Jednadžba kaže da je brzina vala veća što fluid jače poraste u tlaku pri malom povećanju gustoće.
+gdje je $a$ brzina zvuka, a indeks $s$ označuje konstantnu entropiju. Jednadžba kaže da je brzina vala veća što tlak snažnije raste pri malom povećanju gustoće.
 
 Za kalorijski idealan plin vrijedi $p=\rho RT$ i $p/\rho^\gamma=\text{konst.}$ duž izentrope. Ovdje je $R$ specifična plinska konstanta, a $\gamma=c_p/c_v$ bezdimenzijski omjer specifičnih toplinskih kapaciteta, koji se uzima konstantnim. Ta oznaka $\gamma$ u ovom poglavlju ne označuje specifičnu težinu $\rho g$. Diferenciranjem slijedi
 
@@ -81,7 +81,7 @@ Model konstantne gustoće može biti početna procjena ako su zagrijavanje i pad
 
 ## Stagnacijske veličine u izentropskom toku {#sec-stagnacijske-velicine}
 
-Za stacionarni, adijabatski tok idealnog plina bez rada vratila i zanemarive promjene potencijalne energije energijska jednadžba po jedinici mase glasi
+Za stacionarni, adijabatski tok idealnog plina bez rada vratila i uz zanemarivu promjenu potencijalne energije energijska jednadžba po jedinici mase glasi
 
 $$
 h+\frac{v^2}{2}=h_0=\text{konst.}
@@ -130,7 +130,7 @@ Nestlačivi izraz $p_0-p=\rho v^2/2$ više nije zadani model. **Granična provje
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — valovi, mreža i vremenski korak</p>
 
-U stlačivom računu promjene tlaka prenose se konačnom brzinom zvuka, pa prostorna i vremenska razlučivost moraju pratiti valne pojave. Premekana diskretizacija može razmazati skokove i gubitak ukupnoga tlaka, a prevelik vremenski korak može dati prividno mirno, ali nefizikalno rješenje.
+U stlačivom računu promjene tlaka prenose se konačnom brzinom zvuka, pa prostorna i vremenska razlučivost moraju pratiti valne pojave. Previše disipativna diskretizacija može razmazati skokove i gubitak ukupnoga tlaka, a prevelik vremenski korak može dati prividno mirno, ali nefizikalno rješenje.
 :::
 
 ## Sapnica i prigušenje protoka {#sec-sapnica-prigusenje}
@@ -201,7 +201,7 @@ Ma_2^2=\frac{1+\tfrac{\gamma-1}{2}Ma_1^2}{\gamma Ma_1^2-\tfrac{\gamma-1}{2}},
 \frac{p_2}{p_1}=1+\frac{2\gamma}{\gamma+1}(Ma_1^2-1).
 $$ {#eq-normalni-skok}
 
-Fizički dopušten adijabatski udarni val povećava entropiju: nadzvučni ulaz postaje podzvučni, statički tlak i temperatura rastu, a ukupni tlak pada.
+Fizikalno dopušten adijabatski normalni udarni val povećava entropiju: nadzvučni ulaz postaje podzvučni, statički tlak i temperatura rastu, a ukupni tlak pada.
 
 ::: {#ex-normalni-udar .mf1-we}
 <p class="mf1-box-label">P5. Udarni val u ispitnoj sapnici <span class="mf1-level">T3</span></p>
@@ -216,13 +216,13 @@ $$
 \frac{p_2}{p_1}=1+\frac{2\cdot1{,}4}{2{,}4}(4-1)=4{,}50.
 $$ {#eq-kompresibilni-tok-rijeseni-primjer-udarni-val-u-ispitnoj-sapnici-02}
 
-**Provjera:** $Ma_2<1$ i $p_2>p_1$, što odgovara fizičkom smjeru. Obrnuti skok smanjio bi entropiju i nije fizički dopušten u ovom adijabatskom modelu. To ne isključuje postupno ubrzavanje iz podzvučnog u nadzvučni tok kroz prikladno oblikovanu sapnicu.
+**Provjera:** $Ma_2<1$ i $p_2>p_1$, što odgovara fizikalno dopuštenom smjeru promjene. Obrnuti skok smanjio bi entropiju i nije fizikalno dopušten u ovom adijabatskom modelu. To ne isključuje postupno ubrzavanje iz podzvučnog u nadzvučni tok kroz prikladno oblikovanu sapnicu.
 :::
 
 ## Postupak analize kompresibilnoga toka {#sec-kompresibilni-ritual}
 
 1. Odredi apsolutne tlakove i temperaturno stanje.
-2. Procijeni lokalni najveći $Ma$, ne samo ulaznu srednju vrijednost.
+2. Procijeni lokalni najveći Machov broj $Ma$, ne samo ulaznu srednju vrijednost.
 3. Odluči je li proces približno izentropski, adijabatski s gubitcima ili s izmjenom topline.
 4. Napiši kontinuitet, energiju i jednadžbu stanja; količinu gibanja dodaj kad postoji sila ili udarni val.
 5. Provjeri prigušenje, smjer porasta entropije i granični slučaj $Ma\to0$.
@@ -233,7 +233,7 @@ $$ {#eq-kompresibilni-tok-rijeseni-primjer-udarni-val-u-ispitnoj-sapnici-02}
 1. Zašto Pascalov zakon ne znači trenutačan prijenos poremećaja?
 2. Može li tok s $Ma=0{,}1$ ipak imati važnu promjenu gustoće? Navedi mehanizam.
 3. Zašto se nadzvučni tok ubrzava u divergentnom dijelu sapnice?
-4. Koja veličina ostaje, a koja ne ostaje konstantna kroz adijabatski udarni val: $T_0$ ili $p_0$?
+4. Koja veličina ostaje konstantna, a koja se mijenja kroz adijabatski udarni val: $T_0$ ili $p_0$?
 
 ::: {.callout-note collapse="true"}
 ### Odgovori
@@ -244,9 +244,9 @@ Poremećaj putuje konačnom brzinom zvuka. Da; snažno grijanje ili velika promj
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — gustoća, energija i Machov broj</p>
 
-Za stlačivi CFD istodobno se rješavaju očuvanje mase, količine gibanja i energije, pa se gustoća i temperatura mijenjaju zajedno s tlakom i brzinom. Izentropska sapnica i normalni udarni val daju referentne odnose za provjeru solvera, dok stvarni gubitci ukupnog tlaka, turbulencija i prijenos topline traže širi model.
+Za stlačivi CFD istodobno se rješavaju jednadžbe očuvanja mase, količine gibanja i energije, pa se gustoća i temperatura mijenjaju zajedno s tlakom i brzinom. Izentropska sapnica i normalni udarni val daju referentne odnose za provjeru računalnog rješavača, dok stvarni gubitci ukupnog tlaka, turbulencija i prijenos topline traže širi model.
 
-Za sapnicu se prate maseni protok, Machov broj, stagnacijske veličine i položaj mogućega vala. Rezidual energije ili lijep prikaz tlaka nije dovoljan ako se maseni protok mijenja s mrežom ili se skok ukupnoga tlaka ne slaže s referentnim odnosom.
+Za sapnicu se prate maseni protok, Machov broj, stagnacijske veličine i položaj mogućega vala. Malen rezidual energije ili pregledan prikaz tlaka nije dovoljan ako se maseni protok mijenja s mrežom ili se skok ukupnoga tlaka ne slaže s referentnim odnosom.
 
 Diskretizacija val mora prikazati u konačnom broju ćelija, ali širina razmazanoga skoka ne smije se tumačiti kao fizička debljina udarnoga vala. Tražena razlučivost određuje se osjetljivošću masenoga protoka i tlačnih odnosa, ne samo oštrinom slike.
 :::
@@ -326,13 +326,13 @@ $v=50{,}0\ \text{m/s}$, $a=350\ \text{m/s}$, $T\approx304{,}9\ \text{K}$ i $Ma\a
 
 ### Z4. Protutlak i prigušenje konvergentne sapnice {#task-priguseni-protok .unnumbered .unlisted}
 
-Velika mirna komora napaja konvergentnu sapnicu fiksne geometrije. Manometarski tlak komore jest $p_{0,M}=7{,}00\ \text{bar}$, a atmosferski $p_{atm}=1{,}00\ \text{bar(abs)}$. Razmotri dva stacionarna namještanja manometarskog protutlaka: $p_{b,M}^{(I)}=4{,}00\ \text{bar}$ i $p_{b,M}^{(II)}=3{,}00\ \text{bar}$. Za zrak uz $\gamma=1{,}4$ i izentropski tok do izlaza odredi kritični apsolutni tlak $p^*$, režim u oba slučaja te izlazne $p_e$ i $Ma_e$. Objasni može li se protok dalje povećavati snižavanjem protutlaka u slučaju II uz iste stagnacijske uvjete. Kapacitet se ne traži.
+Velika mirna komora napaja konvergentnu sapnicu fiksne geometrije. Manometarski tlak komore jest $p_{0,M}=7{,}00\ \text{bar}$, a atmosferski $p_{atm}=1{,}00\ \text{bar(abs)}$. Razmotri dvije stacionarne postavke manometarskog protutlaka: $p_{b,M}^{(I)}=4{,}00\ \text{bar}$ i $p_{b,M}^{(II)}=3{,}00\ \text{bar}$. Za zrak uz $\gamma=1{,}4$ i izentropski tok do izlaza odredi kritični apsolutni tlak $p^*$, režim u oba slučaja te izlazne $p_e$ i $Ma_e$. Objasni može li se protok dalje povećavati snižavanjem protutlaka u slučaju II uz iste stagnacijske uvjete. Kapacitet se ne traži.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Omjere tvori iz apsolutnih tlakova. Najmanji presjek konvergentne sapnice jest izlaz. Ako je $p_b>p^*$, vrijedi $p_e=p_b$ i Mach slijedi iz izentropskog omjera $p_0/p_e$. Pri prigušenju izlaz ima $Ma_e=1$ i $p_e=p^*$; daljnja prilagodba protutlaku odvija se izvan sapnice.
+Omjere tvori iz apsolutnih tlakova. Najmanji presjek konvergentne sapnice jest izlaz. Ako je $p_b>p^*$, vrijedi $p_e=p_b$ i Machov broj slijedi iz izentropskog omjera $p_0/p_e$. Pri prigušenju izlaz ima $Ma_e=1$ i $p_e=p^*$; daljnja prilagodba protutlaku odvija se izvan sapnice.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -372,7 +372,7 @@ $p_b/p_0=0{,}167<0{,}528$; $C_dA_g\approx42{,}50\ \text{mm}^2$. Za $A_g=48{,}0\ 
 
 U nastavnom skupu sintetičkih podataka za stacionarni normalni val u zračnom kanalu statički priključci prije i poslije vala daju $p_1=80{,}0\pm0{,}4\ \text{kPa(abs)}$ i $p_2=360{,}0\pm1{,}8\ \text{kPa(abs)}$. Ukupni tlak prije vala dobiva se neovisnim mjerenjem u velikoj mirnoj napojnoj komori: $p_{01}=626\pm4\ \text{kPa(abs)}$. Pretpostavi izentropski put od komore do presjeka 1, bez ranijeg vala. Podzvučna Pitotova sonda u presjeku 2, otvorom okrenuta uzvodno, daje $p_{02}=451\pm4\ \text{kPa(abs)}$. Zanemari poremećaj glavnog toka sondom i gubitke u mjernim vodovima. Sve oznake $\pm$ označuju male, međusobno neovisne standardne nesigurnosti mjerenja; $\gamma=1{,}4$ smatraj točnim.
 
-Iz omjera $p_2/p_1$ odredi $M_1$ i njegovu standardnu nesigurnost linearnom RSS-propagacijom. Izračunaj teorijski omjer $G=p_{02}/p_{01}$ i njegovu nesigurnost, usporedi ga s izravno mjerenim omjerom $r_0$ te odluči jesu li konzistentni prema kriteriju $|G-r_0|\leq u(G-r_0)$. Izračunaj normiranu razliku. Objasni zašto sami statički tlakovi ne predstavljaju neovisnu mjernu potvrdu pada ukupnog tlaka i zašto obična nekorigirana Pitotova sonda ispred vala ne bi izravno dala $p_{01}$.
+Iz omjera $p_2/p_1$ odredi $M_1$ i njegovu standardnu nesigurnost linearnom propagacijom nesigurnosti uz korijen zbroja kvadrata doprinosa (RSS). Izračunaj teorijski omjer $G=p_{02}/p_{01}$ i njegovu nesigurnost, usporedi ga s izravno mjerenim omjerom $r_0$ te odluči jesu li konzistentni prema kriteriju $|G-r_0|\leq u(G-r_0)$. Izračunaj normiranu razliku. Objasni zašto sami statički tlakovi ne predstavljaju neovisnu mjernu potvrdu pada ukupnog tlaka i zašto obična nekorigirana Pitotova sonda ispred vala ne bi izravno dala $p_{01}$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -397,7 +397,7 @@ $M_1=2{,}000\pm0{,}007$; $G=0{,}7209\pm0{,}0032$; $r_0=0{,}7204\pm0{,}0079$; $u(
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički pokus — od nestlačivog do prigušenog toka</p>
 
-Notebook `u09_kompresibilna_sapnica.ipynb` uspoređuje nestlačivu i izentropsku procjenu, izračunava kritični omjer tlakova te prikazuje maseni protok pri postupnom snižavanju protutlaka. Student najprije predviđa oblik krivulje, zatim provjerava granični slučaj $Ma\to0$ i numerički potvrđuje plato prigušenog protoka.
+Bilježnica `u09_kompresibilna_sapnica.ipynb` uspoređuje nestlačivu i izentropsku procjenu, izračunava kritični omjer tlakova te prikazuje maseni protok pri postupnom snižavanju protutlaka. Najprije predvidi oblik krivulje, zatim provjeri granični slučaj $Ma\to0$ i numerički potvrdi područje stalnoga prigušenog protoka.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u09_kompresibilna_sapnica.ipynb">Pokreni u pregledniku</a>
@@ -410,7 +410,7 @@ Notebook `u09_kompresibilna_sapnica.ipynb` uspoređuje nestlačivu i izentropsku
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
 
 - Brzina zvuka mjeri termodinamičku krutost fluida i postavlja konačnu brzinu prijenosa informacije.
-- Machov broj je prvi filtar modela, ali ne zamjenjuje provjeru grijanja i ukupne promjene tlaka.
+- Machov broj služi početnom odabiru modela, ali ne zamjenjuje provjeru grijanja i ukupne promjene tlaka.
 - Izentropske stagnacijske relacije vrijede samo bez ireverzibilnih gubitaka.
 - Prigušenje ograničuje maseni protok; snižavanje nizvodnog tlaka nakon toga ne povećava protok.
 - Udarni val čuva masu, količinu gibanja i ukupnu entalpiju, ali povećava entropiju i smanjuje ukupni tlak.

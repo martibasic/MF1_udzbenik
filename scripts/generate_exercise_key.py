@@ -57,7 +57,17 @@ def compact(text: str, limit: int = 240) -> str:
     if len(value) <= limit:
         return value
     cut = value.rfind(" ", 0, limit - 1)
-    return value[: max(cut, 1)].rstrip(" ,;:") + "…"
+    if cut < 0:
+        cut = value.find(" ")
+        if cut < 0:
+            return value
+    # Finish any formula crossing the summary boundary, even if it exceeds
+    # the preferred length. Cutting TeX leaves broken math in HTML and PDF.
+    for formula in re.finditer(r"(?<!\\)\$(?:\\.|[^\\$])*\$", value):
+        if formula.start() < cut < formula.end():
+            cut = formula.end()
+            break
+    return value[:cut].rstrip(" ,;:") + ("…" if cut < len(value) else "")
 
 
 def portable_xrefs(text: str, wrapper_name: str) -> str:
