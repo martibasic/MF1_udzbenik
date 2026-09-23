@@ -64,20 +64,20 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="554" y="469" font-size="13" fill="#3a4a56" text-anchor="middle">x</text>
 <path d="M514 465 L514 433" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u11v2_axisMarker)"/>
 <text x="514" y="424" font-size="13" fill="#3a4a56" text-anchor="middle">y</text>
-<rect x="625" y="28" width="305" height="34" rx="7" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="777.5" y="51" font-size="15" fill="white" text-anchor="middle" font-weight="700">Od sile ploče do prirubnice</text>
-<rect x="625" y="77" width="305" height="80" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="625" y="77" width="4" height="80" rx="0" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+<rect x="625" y="28" width="305" height="34" rx="7" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="777.5" y="51" font-size="15" fill="#1565c0" text-anchor="middle" font-weight="700">Od sile ploče do prirubnice</text>
+<rect x="625" y="77" width="305" height="80" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="625" y="77" width="2" height="80" rx="1" fill="#1e8449" stroke="none" stroke-width="1.2"/>
 <text x="640" y="98" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">1 · Izmjerena sila na ploču</text>
 <text x="640" y="122" font-size="13" fill="#1a2530" text-anchor="start">F = ρ A₂ v₂² = 215 N</text>
 <text x="640" y="144" font-size="13" fill="#1a2530" text-anchor="start">v₂ ≈ 5,82 m/s; Q ≈ 37,0 L/s</text>
-<rect x="625" y="169" width="305" height="80" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="625" y="169" width="4" height="80" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<rect x="625" y="169" width="305" height="80" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="625" y="169" width="2" height="80" rx="1" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="640" y="190" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">2 · Kontinuitet i energija</text>
 <text x="640" y="214" font-size="13" fill="#1a2530" text-anchor="start">v₁ ≈ 0,974 m/s</text>
 <text x="640" y="236" font-size="13" fill="#1a2530" text-anchor="start">pM1 ≈ 16,4 kPa</text>
-<rect x="625" y="261" width="305" height="80" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="625" y="261" width="4" height="80" rx="0" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+<rect x="625" y="261" width="305" height="80" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="625" y="261" width="2" height="80" rx="1" fill="#c0392b" stroke="none" stroke-width="1.2"/>
 <text x="640" y="282" font-size="13" fill="#c0392b" text-anchor="start" font-weight="700">3 · Aksijalna sila prirubnice</text>
 <text x="640" y="306" font-size="13" fill="#1a2530" text-anchor="start">R = pM1 A₁ − ρ Q (v₂ − v₁)</text>
 <text x="640" y="328" font-size="13" fill="#1a2530" text-anchor="start">R ≈ 445 N (vlačno opterećenje)</text>

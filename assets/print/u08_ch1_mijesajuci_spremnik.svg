@@ -66,16 +66,16 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="662" y="14" width="324" height="492" rx="12" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="662" y="14" width="324" height="34" rx="12" fill="#1565c0" />
-  <rect x="662" y="32" width="324" height="16" fill="#1565c0" />
+  <rect x="662" y="14" width="324" height="492" rx="12" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="662" y="14" width="324" height="34" rx="12" fill="white" stroke="none" />
+  <rect x="662" y="32" width="324" height="16" fill="white" stroke="none" />
   <line x1="682" y1="124" x2="966" y2="124" stroke="#c8d6e4" stroke-width="1" />
   <line x1="682" y1="196" x2="966" y2="196" stroke="#c8d6e4" stroke-width="1" />
   <line x1="682" y1="268" x2="966" y2="268" stroke="#c8d6e4" stroke-width="1" />
   <line x1="682" y1="340" x2="966" y2="340" stroke="#c8d6e4" stroke-width="1" />
   <line x1="682" y1="412" x2="966" y2="412" stroke="#c8d6e4" stroke-width="1" />
-  <rect x="672" y="446" width="304" height="46" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <text x="824" y="36" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#ffffff">Ključne jednadžbe (KV)</text>
+  <rect x="672" y="446" width="304" height="46" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
+  <text x="824" y="36" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1565c0">Ključne jednadžbe (KV)</text>
   <text x="824" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Izlazni volumni protok</text>
   <text x="824" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">Q<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = A<tspan baseline-shift="sub" font-size="0.7em">3</tspan> · v<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = (π D<tspan baseline-shift="sub" font-size="0.7em">3</tspan>² / 4) · v<tspan baseline-shift="sub" font-size="0.7em">3</tspan>
   </text>
@@ -100,7 +100,7 @@
   <text x="824" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0">ρ<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 1025 kg/m³</text>
   <text x="918" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b">Δm ≈ 2,58 t</text>
   <g font-family="'Segoe UI',Arial,sans-serif" />
-  <rect x="14" y="14" width="636" height="492" rx="12" fill="#fbfdff" stroke="#dde3ea" stroke-width="1.4" />
+  <rect x="14" y="14" width="636" height="492" rx="12" fill="white" stroke="#dde3ea" stroke-width="1" stroke-opacity="0.65" />
   <g id="u08c1ms_fix_scene">
     <rect x="210" y="300" width="320" height="120" fill="url(#u08c1ms_fix_water)" stroke="none" stroke-width="1.2" id="u08c1ms_fix_fluid" />
     <rect x="201" y="115" width="9" height="207.0" fill="url(#u08c1ms_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />

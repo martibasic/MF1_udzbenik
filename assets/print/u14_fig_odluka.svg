@@ -11,47 +11,47 @@
   </defs>
 
   <rect width="900" height="560" fill="#ffffff" />
-  <rect x="20" y="20" width="860" height="34" rx="8" fill="#34495e" />
-  <text x="450" y="43" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">Koje grupe treba pratiti? Provjeri sve aktivne mehanizme.</text>
+  <rect x="20" y="20" width="860" height="34" rx="8" fill="white" stroke="none" />
+  <text x="450" y="43" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#34495e">Koje grupe treba pratiti? Provjeri sve aktivne mehanizme.</text>
 
   <!-- Pitanja (lijevo) i ishodi (desno) -->
   <!-- Red 1 -->
-  <rect x="36" y="72" width="430" height="50" rx="8" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="36" y="72" width="430" height="50" rx="8" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
   <line x1="466" y1="97" x2="516" y2="97" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u14fo_aG)" />
-  <rect x="522" y="72" width="344" height="50" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.4" />
+  <rect x="522" y="72" width="344" height="50" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
   <line x1="251" y1="122" x2="251" y2="138" stroke="#5d6d7e" stroke-width="1.8" marker-end="url(#u14fo_aDown)" />
 
   <!-- Red 2 -->
-  <rect x="36" y="140" width="430" height="50" rx="8" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="36" y="140" width="430" height="50" rx="8" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
   <line x1="466" y1="165" x2="516" y2="165" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u14fo_aG)" />
-  <rect x="522" y="140" width="344" height="50" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.4" />
+  <rect x="522" y="140" width="344" height="50" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
   <line x1="251" y1="190" x2="251" y2="206" stroke="#5d6d7e" stroke-width="1.8" marker-end="url(#u14fo_aDown)" />
 
   <!-- Red 3 -->
-  <rect x="36" y="208" width="430" height="50" rx="8" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="36" y="208" width="430" height="50" rx="8" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
   <line x1="466" y1="233" x2="516" y2="233" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u14fo_aG)" />
-  <rect x="522" y="208" width="344" height="50" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.4" />
+  <rect x="522" y="208" width="344" height="50" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
   <line x1="251" y1="258" x2="251" y2="274" stroke="#5d6d7e" stroke-width="1.8" marker-end="url(#u14fo_aDown)" />
 
   <!-- Red 4 -->
-  <rect x="36" y="276" width="430" height="50" rx="8" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="36" y="276" width="430" height="50" rx="8" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
   <line x1="466" y1="301" x2="516" y2="301" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u14fo_aG)" />
-  <rect x="522" y="276" width="344" height="50" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.4" />
+  <rect x="522" y="276" width="344" height="50" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
   <line x1="251" y1="326" x2="251" y2="342" stroke="#5d6d7e" stroke-width="1.8" marker-end="url(#u14fo_aDown)" />
 
   <!-- Red 5 -->
-  <rect x="36" y="344" width="430" height="50" rx="8" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="36" y="344" width="430" height="50" rx="8" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
   <line x1="466" y1="369" x2="516" y2="369" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u14fo_aG)" />
-  <rect x="522" y="344" width="344" height="50" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.4" />
+  <rect x="522" y="344" width="344" height="50" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
   <line x1="251" y1="394" x2="251" y2="410" stroke="#5d6d7e" stroke-width="1.8" marker-end="url(#u14fo_aDown)" />
 
   <!-- Red 6 -->
-  <rect x="36" y="412" width="430" height="50" rx="8" fill="#eaf3fb" stroke="#1565c0" stroke-width="1.4" />
+  <rect x="36" y="412" width="430" height="50" rx="8" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
   <line x1="466" y1="437" x2="516" y2="437" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u14fo_aG)" />
-  <rect x="522" y="412" width="344" height="50" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.4" />
+  <rect x="522" y="412" width="344" height="50" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
 
   <!-- Izlaz -->
-  <rect x="36" y="486" width="830" height="56" rx="8" fill="#fdf6ec" stroke="#b7600c" stroke-width="1.4" />
+  <rect x="36" y="486" width="830" height="56" rx="8" fill="white" stroke="#b7600c" stroke-width="1" stroke-opacity="0.55" />
 
   <!-- Tekst pitanja -->
   <text x="52" y="103" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#163b57">1. Postoji li slobodna površina ili valovi?</text>

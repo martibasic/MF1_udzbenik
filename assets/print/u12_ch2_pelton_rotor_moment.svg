@@ -21,7 +21,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <marker id="u14p5_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
 </defs>
 <defs><marker id="u14p5_motionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#b7600c"/></marker></defs>
-<rect x="16" y="17" width="462" height="526" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="16" y="17" width="462" height="526" rx="12" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
 <text x="35" y="44" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Jedna lopatica: lokalni doprinos rotoru</text>
 <text x="35" y="65" font-size="11" fill="#1a2530" text-anchor="start">Kratak prolaz; zanemarena rotacijska akumulacija.</text>
 <circle id="u14p5_orbit" cx="242" cy="334" r="125" fill="none" stroke="#7a8a96" stroke-width="1.5" stroke-dasharray="5 4"/>
@@ -69,7 +69,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <line x1="37" y1="209" x2="47" y2="209" stroke="#b7600c" stroke-width="1.2"/>
 <path id="u14p5_d" d="M42 185 L42 209" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u14p5_dim)" marker-end="url(#u14p5_dim)"/>
 <text x="36" y="241" font-size="11" fill="#b7600c" text-anchor="start">d = 44 mm</text>
-<rect x="28" y="422" width="438" height="112" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="28" y="422" width="438" height="112" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
 <text x="40" y="441" font-size="11" fill="#1a2530" text-anchor="start" font-weight="700">Trokuti: iste jedinice, skala 4 px/(m/s)</text>
 <path id="u14p5_inletTriangleu" d="M47.0000000 470.0000000 L108.6589918 470.0000000" fill="none" stroke="#b7600c" stroke-width="2.3" marker-end="url(#u14p5_motionMarker)"/>
 <text x="77.82949590722784" y="461" font-size="12" fill="#b7600c" text-anchor="middle">u₁</text>
@@ -85,25 +85,25 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="331.29736840051623" y="482.40515375039104" font-size="12" fill="#1e8449" text-anchor="middle">w₂</text>
 <path id="u14p5_outletTrianglec" d="M282.0000000 500.0000000 L290.9357450 480.8103075" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u14p5_pressureMarker)"/>
 <text x="270.4678724932884" y="484.40515375039104" font-size="12" fill="#1565c0" text-anchor="middle">c₂</text>
-<rect x="497" y="20" width="462" height="34" rx="8" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="728.0" y="43" font-size="15" fill="white" text-anchor="middle" font-weight="700">Postupak — lokalna lopatica</text>
-<rect x="497" y="68" width="462" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="497" y="68" width="4" height="73" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<rect x="497" y="20" width="462" height="34" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="728.0" y="43" font-size="15" fill="#1565c0" text-anchor="middle" font-weight="700">Postupak — lokalna lopatica</text>
+<rect x="497" y="68" width="462" height="73" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="497" y="68" width="2" height="73" rx="1" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="511" y="88" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Kinematika</text>
 <text x="512" y="110" font-size="13" fill="#1a2530" text-anchor="start">u = ωr ≈ 15,415 m/s; w₁ ≈ 15,585 m/s</text>
 <text x="512" y="131" font-size="13" fill="#1a2530" text-anchor="start">w₂ = 0,90w₁; β = 20° iznad −x</text>
-<rect x="497" y="151" width="462" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="497" y="151" width="4" height="73" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<rect x="497" y="151" width="462" height="73" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="497" y="151" width="2" height="73" rx="1" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="511" y="171" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Relativni protok i apsolutni izlaz</text>
 <text x="512" y="193" font-size="13" fill="#1a2530" text-anchor="start">ṁrel = ρA(c₁ − u) ≈ 23,65 kg/s</text>
 <text x="512" y="214" font-size="13" fill="#1a2530" text-anchor="start">c₂ ≈ (2,234; 4,797) m/s</text>
-<rect x="497" y="234" width="462" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="497" y="234" width="4" height="73" rx="0" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+<rect x="497" y="234" width="462" height="73" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="497" y="234" width="2" height="73" rx="1" fill="#c0392b" stroke="none" stroke-width="1.2"/>
 <text x="511" y="254" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">Sila i trenutačni moment</text>
 <text x="512" y="276" font-size="13" fill="#1a2530" text-anchor="start">Fₓ ≈ 680,3 N; Fᵧ ≈ −113,5 N</text>
 <text x="512" y="297" font-size="13" fill="#1a2530" text-anchor="start">M = Fₓr ≈ 313 N m</text>
-<rect x="497" y="317" width="462" height="94" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="497" y="317" width="4" height="94" rx="0" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+<rect x="497" y="317" width="462" height="94" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="497" y="317" width="2" height="94" rx="1" fill="#1e8449" stroke="none" stroke-width="1.2"/>
 <text x="511" y="337" font-size="12" fill="#1e8449" text-anchor="start" font-weight="700">Snaga i granica zaključka</text>
 <text x="512" y="359" font-size="13" fill="#1a2530" text-anchor="start">P = Mω = Fₓu ≈ 10,49 kW</text>
 <text x="512" y="380" font-size="13" fill="#1a2530" text-anchor="start">PG = 9,50 kW; razlika ≈ 0,99 kW</text>

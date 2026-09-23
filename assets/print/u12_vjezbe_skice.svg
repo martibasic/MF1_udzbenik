@@ -22,11 +22,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 </defs>
 <defs><marker id="u14ex_motionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#b7600c"/></marker></defs>
 <g id="u14ex_z1" transform="translate(24 24)">
-<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="442" height="27" rx="8" fill="#1a2e42" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="442" height="8" rx="0" fill="#1a2e42" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z1</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Mlaz na nepomičnu ploču</text>
+<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="442" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="442" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#1a2e42" text-anchor="start" font-weight="700">Z1</text>
+<text x="52" y="19" font-size="13" fill="#1a2e42" text-anchor="start" font-weight="700">Mlaz na nepomičnu ploču</text>
 <defs><linearGradient id="u14ex_z1field" gradientUnits="userSpaceOnUse" x1="0" y1="75" x2="0" y2="224"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
 <path id="u14ex_z1fluid" d="M48 137.0 H254 Q273 137.0 273 118.0 V75 H280 V224 H273 V182.0 Q273 163.0 254 163.0 H48 Z" fill="url(#u14ex_z1field)" stroke="none" stroke-width="1.8" />
 <line id="u14ex_z1top" x1="48" y1="137.0" x2="100" y2="137.0" stroke="#3a4a56" stroke-width="2"/>
@@ -45,11 +45,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="40" y="276" font-size="11" fill="#1a2530" text-anchor="start">ρ = 998 kg/m³; izlazna normalna brzina nula.</text>
 </g>
 <g id="u14ex_z2" transform="translate(474 24)">
-<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="442" height="27" rx="8" fill="#1a2e42" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="442" height="8" rx="0" fill="#1a2e42" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z2</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Vodilica: zakretanje za 110°</text>
+<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="442" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="442" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#1a2e42" text-anchor="start" font-weight="700">Z2</text>
+<text x="52" y="19" font-size="13" fill="#1a2e42" text-anchor="start" font-weight="700">Vodilica: zakretanje za 110°</text>
 <path id="u14ex_z2outer0" d="M47 171.0 H89" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
 <path d="M47 171.0 H89" fill="none" stroke="url(#u14ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
 <path id="u14ex_z2outer1" d="M47 201.0 H89" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -87,11 +87,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="42" y="278" font-size="11" fill="#1a2530" text-anchor="start">Horizontalna ravnina; ulaz +x, izlaz prema +y.</text>
 </g>
 <g id="u14ex_z3" transform="translate(24 340)">
-<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="442" height="27" rx="8" fill="#216a80" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="442" height="8" rx="0" fill="#216a80" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z3</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Izlaz iz sile na pokretnu lopaticu</text>
+<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="442" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="442" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#216a80" text-anchor="start" font-weight="700">Z3</text>
+<text x="52" y="19" font-size="13" fill="#216a80" text-anchor="start" font-weight="700">Izlaz iz sile na pokretnu lopaticu</text>
 <path id="u14ex_z3outer0" d="M48 173.0 H90" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
 <path d="M48 173.0 H90" fill="none" stroke="url(#u14ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
 <path id="u14ex_z3outer1" d="M48 199.0 H90" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -121,11 +121,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="38" y="280" font-size="11" fill="#1a2530" text-anchor="start">ṁrel = 18 kg/s; izlaz i koeficijent k treba odrediti.</text>
 </g>
 <g id="u14ex_z4" transform="translate(474 340)">
-<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="442" height="27" rx="8" fill="#216a80" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="442" height="8" rx="0" fill="#216a80" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z4</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Dva radijusa: c = u + w</text>
+<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="442" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="442" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#216a80" text-anchor="start" font-weight="700">Z4</text>
+<text x="52" y="19" font-size="13" fill="#216a80" text-anchor="start" font-weight="700">Dva radijusa: c = u + w</text>
 <text x="27" y="61" font-size="11" fill="#1a2530" text-anchor="start">ω = 200 rad/s; ṁ = 3,00 kg/s</text>
 <text x="99" y="92" font-size="12" fill="#b7600c" text-anchor="middle">r₁ = 0,060 m</text>
 <text x="303" y="92" font-size="12" fill="#b7600c" text-anchor="middle">r₂ = 0,140 m</text>
@@ -146,11 +146,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="26" y="282" font-size="10" fill="#1a2530" text-anchor="start">Lokalne osi: t udesno, r gore; oba trokuta 5 px/(m/s).</text>
 </g>
 <g id="u14ex_z5" transform="translate(24 656)">
-<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="442" height="27" rx="8" fill="#7b4428" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="442" height="8" rx="0" fill="#7b4428" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z5</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Izbor vodomlaznog pogona</text>
+<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="442" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="442" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#7b4428" text-anchor="start" font-weight="700">Z5</text>
+<text x="52" y="19" font-size="13" fill="#7b4428" text-anchor="start" font-weight="700">Izbor vodomlaznog pogona</text>
 <text x="25" y="53" font-size="11" fill="#1a2530" text-anchor="start">Brodski okvir; voda prema krmi, V₀ = U = 8 m/s.</text>
 <path id="u14ex_z5duct0outer0" d="M47 87.1985494445304 H163.89999999999998 L287.48 95.57909645780092 H381" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
 <path d="M47 87.1985494445304 H163.89999999999998 L287.48 95.57909645780092 H381" fill="none" stroke="url(#u14ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -193,11 +193,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="26" y="291" font-size="10" fill="#1a2530" text-anchor="start">Krug je simbol stroja; duljine su shematske.</text>
 </g>
 <g id="u14ex_z6" transform="translate(474 656)">
-<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="442" height="27" rx="8" fill="#7b4428" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="442" height="8" rx="0" fill="#7b4428" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z6</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Četiri mlaza i statička rezerva</text>
+<rect x="0" y="0" width="442" height="302" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="442" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="442" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#7b4428" text-anchor="start" font-weight="700">Z6</text>
+<text x="52" y="19" font-size="13" fill="#7b4428" text-anchor="start" font-weight="700">Četiri mlaza i statička rezerva</text>
 <defs><linearGradient id="u14ex_z6field" gradientUnits="userSpaceOnUse" x1="0" y1="92" x2="0" y2="238"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
 <rect id="u14ex_z6platform" x="84" y="57" width="270" height="20" rx="4" fill="#cbd6dc" stroke="#3a4a56" stroke-width="1.2"/>
 <text x="219" y="71" font-size="11" fill="#1a2530" text-anchor="middle">platforma: m = 110 kg</text>

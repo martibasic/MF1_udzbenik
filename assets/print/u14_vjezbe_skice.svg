@@ -21,7 +21,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <marker id="u14vs_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
 </defs>
 <g id="u14vs_z1" transform="translate(24 28)">
-<rect x="0" y="0" width="292" height="292" rx="9" fill="#fbfdff" stroke="#cfd8df" stroke-width="1.2"/>
+<rect x="0" y="0" width="292" height="292" rx="9" fill="white" stroke="#cfd8df" stroke-width="1" stroke-opacity="0.65" />
 <rect x="12" y="12" width="34" height="24" rx="5" fill="#5d6d7e" stroke="none" stroke-width="1.2"/>
 <text x="29" y="29" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z1</text>
 <text x="57" y="29" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Re u dvama presjecima</text>
@@ -55,7 +55,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="146" y="277" font-size="10" fill="#3a4a56" text-anchor="middle">Presjeci su u različitim grafičkim mjerilima.</text>
 </g>
 <g id="u14vs_z2" transform="translate(344 28)">
-<rect x="0" y="0" width="292" height="292" rx="9" fill="#fbfdff" stroke="#cfd8df" stroke-width="1.2"/>
+<rect x="0" y="0" width="292" height="292" rx="9" fill="white" stroke="#cfd8df" stroke-width="1" stroke-opacity="0.65" />
 <rect x="12" y="12" width="34" height="24" rx="5" fill="#5d6d7e" stroke="none" stroke-width="1.2"/>
 <text x="29" y="29" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z2</text>
 <text x="57" y="29" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Machov broj iz protoka</text>
@@ -74,7 +74,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="146" y="264" font-size="11" fill="#3a4a56" text-anchor="middle">Ulaz i izlaz voda su otvoreni.</text>
 </g>
 <g id="u14vs_z3" transform="translate(664 28)">
-<rect x="0" y="0" width="292" height="292" rx="9" fill="#fbfdff" stroke="#cfd8df" stroke-width="1.2"/>
+<rect x="0" y="0" width="292" height="292" rx="9" fill="white" stroke="#cfd8df" stroke-width="1" stroke-opacity="0.65" />
 <rect x="12" y="12" width="34" height="24" rx="5" fill="#5d6d7e" stroke="none" stroke-width="1.2"/>
 <text x="29" y="29" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z3</text>
 <text x="57" y="29" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Senzor i kavitacija</text>
@@ -100,7 +100,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="146" y="273" font-size="12" fill="#1565c0" text-anchor="middle">pᵥ = 2340 Pa; σₖᵣ = 3,0</text>
 </g>
 <g id="u14vs_z4" transform="translate(24 340)">
-<rect x="0" y="0" width="292" height="292" rx="9" fill="#fbfdff" stroke="#cfd8df" stroke-width="1.2"/>
+<rect x="0" y="0" width="292" height="292" rx="9" fill="white" stroke="#cfd8df" stroke-width="1" stroke-opacity="0.65" />
 <rect x="12" y="12" width="34" height="24" rx="5" fill="#5d6d7e" stroke="none" stroke-width="1.2"/>
 <text x="29" y="29" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z4</text>
 <text x="57" y="29" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Hidroprofil i model</text>
@@ -128,7 +128,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="146" y="274" font-size="11" fill="#3a4a56" text-anchor="middle">Raspon b okomit je na crtež; A = bc.</text>
 </g>
 <g id="u14vs_z5" transform="translate(344 340)">
-<rect x="0" y="0" width="292" height="292" rx="9" fill="#fbfdff" stroke="#cfd8df" stroke-width="1.2"/>
+<rect x="0" y="0" width="292" height="292" rx="9" fill="white" stroke="#cfd8df" stroke-width="1" stroke-opacity="0.65" />
 <rect x="12" y="12" width="34" height="24" rx="5" fill="#5d6d7e" stroke="none" stroke-width="1.2"/>
 <text x="29" y="29" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z5</text>
 <text x="57" y="29" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Otpuštanje vrtloga</text>
@@ -151,7 +151,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="146" y="274" font-size="10" fill="#3a4a56" text-anchor="middle">Smjerovi vrtnje su suprotni; razmaci shematski.</text>
 </g>
 <g id="u14vs_z6" transform="translate(664 340)">
-<rect x="0" y="0" width="292" height="292" rx="9" fill="#fbfdff" stroke="#cfd8df" stroke-width="1.2"/>
+<rect x="0" y="0" width="292" height="292" rx="9" fill="white" stroke="#cfd8df" stroke-width="1" stroke-opacity="0.65" />
 <rect x="12" y="12" width="34" height="24" rx="5" fill="#5d6d7e" stroke="none" stroke-width="1.2"/>
 <text x="29" y="29" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z6</text>
 <text x="57" y="29" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Dva modela preljeva</text>

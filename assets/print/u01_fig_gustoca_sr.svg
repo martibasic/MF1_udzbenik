@@ -22,10 +22,10 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 </defs>
 <defs><linearGradient id="u01fgs_metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient></defs>
 <g id="u01fgs_oilPanel" transform="translate(30 30)">
-<rect x="0" y="0" width="430" height="380" rx="8" fill="#fffbee" stroke="#c8d6e4" stroke-width="1.2"/>
-<rect x="0" y="0" width="430" height="30" rx="8" fill="#c8a000" stroke="#c8a000" stroke-width="1.2"/>
-<rect x="0" y="21" width="430" height="9" rx="0" fill="#c8a000" stroke="none" stroke-width="1.2"/>
-<text x="215.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Ulje u posudi</text>
+<rect x="0" y="0" width="430" height="380" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="430" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="21" width="430" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="215.0" y="21" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Ulje u posudi</text>
 <defs><linearGradient id="u01fgs_largeOil" gradientUnits="userSpaceOnUse" x1="0" y1="110" x2="0" y2="290"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
 <rect x="144" y="110" width="146" height="180" rx="0" fill="url(#u01fgs_largeOil)" stroke="none" stroke-width="1.2"/>
 <line x1="144" y1="110" x2="290" y2="110" stroke="#1565c0" stroke-width="2"/>
@@ -45,14 +45,14 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <path id="u01fgs_weight" d="M217 200 L217 264" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01fgs_forceMarker)"/>
 <text x="233" y="240" font-size="13" fill="#c0392b" text-anchor="start">G = mg</text>
 <text x="217" y="318" font-size="11" fill="#3a4a56" text-anchor="middle">G: težina samo ulja</text>
-<rect x="18" y="342" width="394" height="28" rx="5" fill="#fffdf3" stroke="#b7600c" stroke-width="1.2"/>
+<rect x="18" y="342" width="394" height="28" rx="5" fill="white" stroke="#b7600c" stroke-width="1" stroke-opacity="0.55" />
 <text x="215" y="361" font-size="12" fill="#b7600c" text-anchor="middle">ρ = 860 kg/m³; γ ≈ 8,44 kN/m³; sᵣ = 0,86</text>
 </g>
 <g id="u01fgs_comparison" transform="translate(490 30)">
-<rect x="0" y="0" width="460" height="380" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
-<rect x="0" y="0" width="460" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="0" y="21" width="460" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="230.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Usporedba pri istom volumenu V = 1 L</text>
+<rect x="0" y="0" width="460" height="380" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="460" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="21" width="460" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="230.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">Usporedba pri istom volumenu V = 1 L</text>
 <text x="230" y="51" font-size="11" fill="#1565c0" text-anchor="middle">Različita gustoća → različita masa i težina</text>
 <defs><linearGradient id="u01fgs_small0" gradientUnits="userSpaceOnUse" x1="0" y1="110" x2="0" y2="290"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
 <rect x="62" y="110" width="88" height="180" rx="0" fill="url(#u01fgs_small0)" stroke="none" stroke-width="1.2"/>
@@ -77,7 +77,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <rect x="178" y="140" width="105" height="56" rx="5" fill="#fff0ed" stroke="#c0392b" stroke-width="1.2"/>
 <text x="230" y="160" font-size="12" fill="#c0392b" text-anchor="middle">ΔG ≈ 1,37 N</text>
 <text x="230" y="181" font-size="11" fill="#c0392b" text-anchor="middle">ulje je 14 % lakše</text>
-<rect x="18" y="342" width="424" height="28" rx="5" fill="#faf3ff" stroke="#8e44ad" stroke-width="1.2"/>
+<rect x="18" y="342" width="424" height="28" rx="5" fill="white" stroke="#8e44ad" stroke-width="1" stroke-opacity="0.55" />
 <text x="230" y="361" font-size="13" fill="#8e44ad" text-anchor="middle" font-weight="700">sᵣ = ρᵤₗⱼₑ / ρᵥ = 0,86</text>
 </g>
 </g>

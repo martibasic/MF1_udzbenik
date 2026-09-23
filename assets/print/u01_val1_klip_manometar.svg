@@ -57,10 +57,10 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="120" y="438" font-size="12" fill="#3a4a56" text-anchor="middle">Aₖ ≈ 201 cm²</text>
 <text x="520" y="438" font-size="12" fill="#3a4a56" text-anchor="middle">A₂/Aₖ ≈ 2,24</text>
 <g id="u01v1km_formulas" transform="translate(680 100)">
-<rect x="0" y="0" width="280" height="310" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
-<rect x="0" y="0" width="280" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="0" y="21" width="280" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="140.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Ključne jednadžbe</text>
+<rect x="0" y="0" width="280" height="310" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="280" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="21" width="280" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="140.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">Ključne jednadžbe</text>
 <text x="140.0" y="55" font-size="11" fill="#5a6a78" text-anchor="middle">Površina prvog klipa</text>
 <text x="140.0" y="79" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">Aₖ = πdₖ² / 4</text>
 <text x="140.0" y="100" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">≈ 201 cm²</text>
@@ -74,7 +74,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="140.0" y="256" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">≈ 8,06 kN</text>
 <line x1="25" y1="274" x2="255" y2="274" stroke="#c8d6e4" stroke-width="1"/>
 </g>
-<rect x="680" y="422" width="280" height="35" rx="7" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.2"/>
+<rect x="680" y="422" width="280" height="35" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
 <text x="820" y="445" font-size="12" fill="#1e8449" text-anchor="middle">Isti tlak · veća površina → veća sila</text>
 <text x="490.0" y="478" font-size="11" fill="#3a4a56" text-anchor="middle">Crveno/zeleno: sile na označeno tijelo · Tamno: smjer pomaka · Smeđe: kote i geometrija.</text>
 <text x="490.0" y="494" font-size="10" fill="#3a4a56" text-anchor="middle">Ispuna označuje isti fluid, ne polje tlaka. Razmaci, hodovi i duljine sila nisu u istom mjerilu.</text>

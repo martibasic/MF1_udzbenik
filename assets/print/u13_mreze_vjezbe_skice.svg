@@ -21,7 +21,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <marker id="u13ex_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
 </defs>
 <g id="u13ex_z1" transform="translate(28 22)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="#fbfdff" stroke="#cfdce6" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
 <rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
 <text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z1</text>
 <text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Gubitci vodoravne dionice</text>
@@ -59,7 +59,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="31" y="284" font-size="11" fill="#1a2530" text-anchor="start">D = 100 mm (uvećano); L je razmak presjeka 1–2.</text>
 </g>
 <g id="u13ex_z2" transform="translate(486 22)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="#fbfdff" stroke="#cfdce6" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
 <rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
 <text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z2</text>
 <text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Potpuno razvijen laminarni tok</text>
@@ -92,7 +92,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="31" y="284" font-size="11" fill="#1a2530" text-anchor="start">D = 6,0 mm (uvećano); L je razmak presjeka 1–2.</text>
 </g>
 <g id="u13ex_z3" transform="translate(28 336)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="#fbfdff" stroke="#cfdce6" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
 <rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
 <text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z3</text>
 <text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Uravnoteženje dvaju ogranaka</text>
@@ -118,7 +118,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="27" y="284" font-size="12" fill="#1a2530" text-anchor="start">U koju granu dodati prigušni ventil?</text>
 </g>
 <g id="u13ex_z4" transform="translate(486 336)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="#fbfdff" stroke="#cfdce6" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
 <rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
 <text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z4</text>
 <text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Radna točka uz promjenjivo trenje</text>
@@ -154,7 +154,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="26" y="287" font-size="11" fill="#1a2530" text-anchor="start">D = 0,100 m; L = 150 m; ε = 0,100 mm; Σξ = 6.</text>
 </g>
 <g id="u13ex_z5" transform="translate(28 650)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="#fbfdff" stroke="#cfdce6" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
 <rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
 <text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z5</text>
 <text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Promjer za cijeli raspon otpora</text>
@@ -191,7 +191,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="30" y="285" font-size="12" fill="#b7600c" text-anchor="start">Uvjet: hw ≤ 15 m za cijeli interval λ.</text>
 </g>
 <g id="u13ex_z6" transform="translate(486 650)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="#fbfdff" stroke="#cfdce6" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
 <rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
 <text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z6</text>
 <text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Usisna visina i referenca NPSH-a</text>

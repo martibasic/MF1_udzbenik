@@ -11,8 +11,8 @@
 </defs>
 <rect width="920" height="520" fill="white"/>
 <g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<rect x="14" y="14" width="546" height="492" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="574" y="14" width="332" height="492" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="14" y="14" width="546" height="492" rx="12" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="574" y="14" width="332" height="492" rx="12" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
 <defs><linearGradient id="u09vent_field" gradientUnits="userSpaceOnUse" x1="0" y1="144" x2="0" y2="420"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
 <path id="u09vent_oilmain" d="M60 144 H160 L240 159 H310 L390 144 H528 V204 H390 L310 189 H240 L160 204 H60 Z" fill="url(#u09vent_field)" stroke="none" stroke-width="1.8" />
 <path id="u09vent_top" d="M60 142 H160 L240 157 H310 L390 142 H528" fill="none" stroke="#3a4a56" stroke-width="4" />
@@ -54,21 +54,21 @@
 <text x="132" y="338" font-size="11" fill="#b7600c" text-anchor="start">0,18 m</text>
 <text x="36" y="485" font-size="11" fill="#1a2530" text-anchor="start">Mjerni vodovi miruju; nema protoka kroz manometar.</text>
 <text x="36" y="500" font-size="10" fill="#1a2530" text-anchor="start">Promjeri i razlika razina žive: jednaka skala, 1 px/mm.</text>
-<rect x="590" y="34" width="299" height="103" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="590" y="34" width="299" height="103" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
 <text x="602" y="54" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">1. Hidrostatička razlika tlakova</text>
 <text x="602" y="77" font-size="12" fill="#1a2530" text-anchor="start">Δp = (ρHg − ρul)g Δhm</text>
 <text x="602" y="96" font-size="12" fill="#1a2530" text-anchor="start">= (13600 − 870)·9,81·0,18</text>
 <text x="602" y="115" font-size="12" fill="#1a2530" text-anchor="start">= 22,479 kPa</text>
-<rect x="590" y="150" width="299" height="89" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="590" y="150" width="299" height="89" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
 <text x="602" y="170" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">2. Kontinuitet</text>
 <text x="602" y="193" font-size="12" fill="#1a2530" text-anchor="start">v₂ = (D₁/D₂)² v₁ = 4v₁</text>
 <text x="602" y="212" font-size="12" fill="#1a2530" text-anchor="start">A₁v₁ = A₂v₂</text>
-<rect x="590" y="252" width="299" height="108" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="590" y="252" width="299" height="108" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
 <text x="602" y="272" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">3. Horizontalni Bernoulli</text>
 <text x="602" y="295" font-size="12" fill="#1a2530" text-anchor="start">Δp = ρul(v₂² − v₁²)/2</text>
 <text x="602" y="314" font-size="12" fill="#1a2530" text-anchor="start">v₁ = 1,856 m/s; v₂ = 7,424 m/s</text>
 <text x="602" y="333" font-size="12" fill="#1a2530" text-anchor="start">Q = 5,248 L/s</text>
-<rect x="590" y="376" width="299" height="75" rx="7" fill="#f4f9fd" stroke="#1e8449" stroke-width="1.2"/>
+<rect x="590" y="376" width="299" height="75" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
 <text x="602" y="396" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">4. Promjena HGL-a</text>
 <text x="602" y="419" font-size="12" fill="#1a2530" text-anchor="start">Δp/(ρul g) = 2,634 m</text>
 <text x="601" y="481" font-size="11" fill="#1a2530" text-anchor="start">Razlika tlakova ne daje apsolutni tlak.</text>

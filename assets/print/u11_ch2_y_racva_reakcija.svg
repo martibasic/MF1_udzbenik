@@ -74,25 +74,25 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="220" y="419" font-size="13" fill="#1e8449" text-anchor="start">Rₓ ≈ 664 N ulijevo (iznos)</text>
 <text x="220" y="445" font-size="13" fill="#1e8449" text-anchor="start">Rᵧ = 625 N prema +y</text>
 <text x="220" y="482" font-size="12" fill="#1a2530" text-anchor="start">Sve brzine u m/s.</text>
-<rect x="610" y="28" width="322" height="34" rx="7" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="771.0" y="51" font-size="15" fill="white" text-anchor="middle" font-weight="700">Od mjerenja do procjene</text>
-<rect x="610" y="77" width="322" height="80" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="610" y="77" width="4" height="80" rx="0" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+<rect x="610" y="28" width="322" height="34" rx="7" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="771.0" y="51" font-size="15" fill="#1565c0" text-anchor="middle" font-weight="700">Od mjerenja do procjene</text>
+<rect x="610" y="77" width="322" height="80" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="610" y="77" width="2" height="80" rx="1" fill="#1e8449" stroke="none" stroke-width="1.2"/>
 <text x="625" y="98" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">Poprečna reakcija → brzina</text>
 <text x="625" y="122" font-size="13" fill="#1a2530" text-anchor="start">Rᵧ = ρ A₃ v₃² sin 60°</text>
 <text x="625" y="144" font-size="13" fill="#1a2530" text-anchor="start">v₂ = v₃ = 12,0 m/s</text>
-<rect x="610" y="169" width="322" height="80" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="610" y="169" width="4" height="80" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<rect x="610" y="169" width="322" height="80" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="610" y="169" width="2" height="80" rx="1" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="625" y="190" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Kontinuitet i tlak</text>
 <text x="625" y="214" font-size="13" fill="#1a2530" text-anchor="start">v₁ ≈ 6,81 m/s; Q₁ ≈ 154,5 L/s</text>
 <text x="625" y="236" font-size="13" fill="#1a2530" text-anchor="start">pM1 ≈ 48,6 kPa</text>
-<rect x="610" y="261" width="322" height="80" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="610" y="261" width="4" height="80" rx="0" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+<rect x="610" y="261" width="322" height="80" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="610" y="261" width="2" height="80" rx="1" fill="#c0392b" stroke="none" stroke-width="1.2"/>
 <text x="625" y="282" font-size="13" fill="#c0392b" text-anchor="start" font-weight="700">Ukupna reakcija</text>
 <text x="625" y="306" font-size="13" fill="#1a2530" text-anchor="start">R ≈ 913 N &lt; 1000 N</text>
 <text x="625" y="328" font-size="13" fill="#1a2530" text-anchor="start">Rezerva do zadane granice ≈ 87 N</text>
-<rect x="610" y="353" width="322" height="58" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="610" y="353" width="4" height="58" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<rect x="610" y="353" width="322" height="58" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="610" y="353" width="2" height="58" rx="1" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="625" y="374" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Zaključak u zadanom modelu</text>
 <text x="625" y="398" font-size="13" fill="#1a2530" text-anchor="start">Zadovoljen zadani statički kriterij.</text>
 </g>

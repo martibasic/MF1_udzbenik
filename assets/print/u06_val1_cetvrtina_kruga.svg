@@ -56,14 +56,14 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="560" y="50" width="320" height="380" rx="10" fill="#ffffff" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="560" y="50" width="320" height="32" rx="10" fill="#1565c0" />
-  <rect x="560" y="66" width="320" height="16" fill="#1565c0" />
+  <rect x="560" y="50" width="320" height="380" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="560" y="50" width="320" height="32" rx="10" fill="white" stroke="none" />
+  <rect x="560" y="66" width="320" height="16" fill="white" stroke="none" />
   <line x1="580" y1="190" x2="860" y2="190" stroke="#c8d6e4" stroke-width="1" />
   <line x1="580" y1="296" x2="860" y2="296" stroke="#c8d6e4" stroke-width="1" />
   <line x1="580" y1="400" x2="860" y2="400" stroke="#c8d6e4" stroke-width="1" />
-  <rect x="560" y="446" width="320" height="44" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <text x="720" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Kljucne jednadzbe rastava sile</text>
+  <rect x="560" y="446" width="320" height="50" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
+  <text x="720" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Kljucne jednadzbe rastava sile</text>
   <text x="720" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Horizontalna komponenta</text>
   <text x="720" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
     <tspan font-style="italic">F</tspan>
@@ -154,7 +154,7 @@
     <line x1="370" y1="245" x2="370" y2="446" stroke="#b7600c" stroke-width="0.6" stroke-dasharray="3,4" />
     <text x="318" y="136" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">V₁ = h₁Rb</text>
     <text x="337" y="273" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">V₂</text>
-    <text x="300" y="473" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">b = 1,83 m; R = 1,22 m</text>
+    <text x="300" y="473" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle" transform="translate(0 8)">b = 1,83 m; R = 1,22 m</text>
     <text x="280" y="493" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">V* je pomoćni volumen, ne druga tekućina.</text>
     <line x1="287.7231859601229" y1="343.05368871922917" x2="305.72123903134604" y2="321.6044443118978" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u05p4_normal)" id="u05p4_normal-vector" />
     <text x="256" y="351" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">dF</text>

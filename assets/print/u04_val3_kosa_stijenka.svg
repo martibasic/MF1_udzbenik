@@ -43,22 +43,22 @@
       <path d="M0 0 L0 8 L12 4 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
     </marker>
   </defs>
-  <rect x="40" y="404" width="190" height="118" rx="8" fill="#faf6fd" stroke="#8e44ad" stroke-width="1.3" />
+  <rect x="40" y="404" width="190" height="118" rx="8" fill="white" stroke="#8e44ad" stroke-width="1" stroke-opacity="0.65" />
   <circle cx="105" cy="438" r="2.5" fill="#3a4a56" />
   <line x1="105" y1="438" x2="105" y2="488" stroke="#3a4a56" stroke-width="2.4" marker-end="url(#u04v3ks_aBlk)" />
   <line x1="105" y1="438" x2="87.67074413863405" y2="438" stroke="#8e44ad" stroke-width="2.2" marker-end="url(#u04v3ks_aV)" />
   <line x1="105" y1="438" x2="87.67074413863405" y2="488" stroke="#8e44ad" stroke-width="2.6" marker-end="url(#u04v3ks_aV)" />
-  <rect x="490" y="100" width="430" height="340" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="490" y="100" width="430" height="32" rx="10" fill="#1565c0" />
-  <rect x="490" y="124" width="430" height="8" fill="#1565c0" />
+  <rect x="490" y="100" width="430" height="340" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="490" y="100" width="430" height="32" rx="10" fill="white" stroke="none" />
+  <rect x="490" y="124" width="430" height="8" fill="white" stroke="none" />
   <rect x="500" y="142" width="6" height="60" rx="3" fill="#8e44ad" />
   <line x1="500" y1="212" x2="910" y2="212" stroke="#c8d6e4" stroke-width="1" />
   <line x1="500" y1="276" x2="910" y2="276" stroke="#c8d6e4" stroke-width="1" />
   <rect x="500" y="286" width="6" height="68" rx="3" fill="#1e8449" />
   <line x1="500" y1="368" x2="910" y2="368" stroke="#c8d6e4" stroke-width="1" />
   <rect x="500" y="378" width="6" height="40" rx="3" fill="#c0392b" />
-  <rect x="490" y="452" width="430" height="58" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <rect x="248" y="404" width="232" height="118" rx="8" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2" />
+  <rect x="490" y="452" width="430" height="58" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
+  <rect x="248" y="404" width="232" height="118" rx="8" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
   <rect x="258" y="434" width="12" height="10" fill="#aed6f1" stroke="#1565c0" stroke-width="0.7" />
   <rect x="258" y="450" width="12" height="10" fill="#fff8e1" stroke="#c0a060" stroke-width="0.7" />
   <line x1="258" y1="471" x2="270" y2="471" stroke="#1565c0" stroke-width="2" />
@@ -81,8 +81,8 @@
   <text x="155" y="461" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">θ ≈ 19,1°</text>
   <text x="155" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">|<tspan font-style="italic">g</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">eff</tspan>| ≈</text>
-  <text x="155" y="495" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">10,38 m/s²</text>
-  <text x="705" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Rješenje u četiri koraka</text>
+  <text x="155" y="495" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78" transform="translate(0 8)">10,38 m/s²</text>
+  <text x="705" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Rješenje u četiri koraka</text>
   <text x="516" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#8e44ad">1.  Kut stijenke α</text>
   <text x="516" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530">tan θ = a/g = 3,4/9,81 = 0,347   →   θ ≈ 19,1°</text>
   <text x="516" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#8e44ad">α = 90° − θ ≈ 70,9°</text>
@@ -92,7 +92,7 @@
   <text x="516" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e8449">3.  Rezultanta sile fluida po jediničnoj širini</text>
   <text x="516" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">F₀/b = p<tspan baseline-shift="sub" font-size="0.7em">M0</tspan> · s ≈ 9314 N/m</text>
   <text x="516" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">F<tspan baseline-shift="sub" font-size="0.7em">h</tspan>/b = ½ ρ g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan> s² ≈ 1689 N/m</text>
-  <text x="516" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>/b ≈ 11,00 kN/m</text>
+  <text x="516" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e8449" transform="translate(0 9)">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>/b ≈ 11,00 kN/m</text>
   <text x="516" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c0392b">4.  Hvatište od ruba A (mjereno po stijenci)</text>
   <text x="516" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530">
     <tspan font-style="italic">y</tspan>

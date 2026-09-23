@@ -247,9 +247,9 @@
   </defs>
   <rect x="0" y="0" width="960" height="760" fill="white" stroke="none" stroke-width="1.2" />
   <g id="u07vs_fix_z1" transform="translate(30 36)">
-    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z1 — Potpuno uronjeno tijelo</text>
+    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="300" height="28" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="700">Z1 — Potpuno uronjeno tijelo</text>
     <rect x="9" y="55" width="282" height="147" fill="url(#u07vs_fix_z1_water)" stroke="none" stroke-width="1.2" />
     <line x1="9" y1="55" x2="291" y2="55" stroke="#1565c0" stroke-width="2" />
     <rect x="100" y="109" width="100" height="77" fill="#909fa8" stroke="#3a4a56" stroke-width="1.5" />
@@ -263,9 +263,9 @@
     <text x="150" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56" text-anchor="middle">V = 0,085 m³; m = 62 kg</text>
   </g>
   <g id="u07vs_fix_z2" transform="translate(346 36)">
-    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z2 — Gaz opterećenog pontona</text>
+    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="300" height="28" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="700">Z2 — Gaz opterećenog pontona</text>
     <rect x="9" y="96" width="282" height="99" fill="url(#u07vs_fix_z2_water)" stroke="none" stroke-width="1.2" />
     <line x1="9" y1="96" x2="291" y2="96" stroke="#1565c0" stroke-width="2" id="u07vs_fix_z2_free-surface" />
     <polygon points="48.500000,125.137946 251.500000,125.137946 251.500000,70.037946 48.500000,70.037946" fill="#e9eef2" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z2_hull" />
@@ -290,9 +290,9 @@
     <text x="150" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">L = 2,60 m; H = 0,38 m; m = 730 kg</text>
   </g>
   <g id="u07vs_fix_z3" transform="translate(662 36)">
-    <rect x="0" y="0" width="284" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="284" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <text x="142.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z3 — Pokus nagibanja</text>
+    <rect x="0" y="0" width="284" height="228" fill="white" stroke="#c8d6e4" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="284" height="28" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="142.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="700">Z3 — Pokus nagibanja</text>
     <rect x="9" y="110" width="266" height="82" fill="url(#u07vs_fix_z3_water)" stroke="none" stroke-width="1.2" />
     <line x1="9" y1="110" x2="275" y2="110" stroke="#1565c0" stroke-width="2" id="u07vs_fix_z3_free-surface" />
     <polygon points="48.532387,144.451933 241.467613,154.563240 245.078794,85.657802 52.143568,75.546495" fill="#e9eef2" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z3_hull" />
@@ -317,9 +317,9 @@
     <text x="145" y="209" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">m = 1200 kg uključuje uteg 120 kg</text>
   </g>
   <g id="u07vs_fix_z4" transform="translate(30 286)">
-    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z4 — Uron vrata areometra</text>
+    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="300" height="28" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="700">Z4 — Uron vrata areometra</text>
     <rect x="16" y="65" width="121" height="133" fill="url(#u07vs_fix_z4_water)" stroke="#3a4a56" stroke-width="1" />
     <line x1="16" y1="65" x2="137" y2="65" stroke="#1565c0" stroke-width="1.6" />
     <ellipse cx="90" cy="149.5" rx="18" ry="23" fill="#e9eef2" stroke="#3a4a56" stroke-width="1.5" />
@@ -343,9 +343,9 @@
     <text x="150" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">h₁ = 82 mm; h₂ = 95 mm; d = 8 mm</text>
   </g>
   <g id="u07vs_fix_z5" transform="translate(346 286)">
-    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="300" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z5 — Oprema ili balast</text>
+    <rect x="0" y="0" width="300" height="228" fill="white" stroke="#c8d6e4" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="300" height="28" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="150.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="700">Z5 — Oprema ili balast</text>
     <rect x="15" y="124" width="130" height="59" fill="url(#u07vs_fix_z5_water)" stroke="none" stroke-width="1.2" />
     <line x1="15" y1="124" x2="145" y2="124" stroke="#1565c0" stroke-width="2" id="u07vs_fix_z5_free-surface" />
     <polygon points="27.500000,139.586729 132.500000,139.586729 132.500000,97.586729 27.500000,97.586729" fill="#e9eef2" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z5_hull" />
@@ -367,9 +367,9 @@
     <text x="150" y="219" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Provjeriti i GM i slobodni bok f.</text>
   </g>
   <g id="u07vs_fix_z6" transform="translate(662 286)">
-    <rect x="0" y="0" width="284" height="228" fill="white" stroke="#c8d6e4" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="284" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <text x="142.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Z6 — Dva fluida i intervali</text>
+    <rect x="0" y="0" width="284" height="228" fill="white" stroke="#c8d6e4" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="284" height="28" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="142.0" y="19" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="700">Z6 — Dva fluida i intervali</text>
     <rect x="9" y="106.56" width="266" height="84.44" fill="url(#u07vs_fix_z6_water)" stroke="none" stroke-width="1.2" />
     <rect x="9" y="94" width="266" height="12.56" fill="url(#u07vs_fix_z6_oil)" stroke="none" stroke-width="1.2" />
     <line x1="9" y1="106.56" x2="275" y2="106.56" stroke="#3a4a56" stroke-width="1" stroke-dasharray="5,3" id="u07vs_fix_z6_interface" />
@@ -398,7 +398,7 @@
     <text x="145" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">δ = 0,08 m; H = 0,36 m; e ulijevo</text>
   </g>
   <g transform="translate(30 540)">
-    <rect x="0" y="0" width="900" height="190" fill="#f6faff" stroke="#c8d6e4" stroke-width="1" rx="10" />
+    <rect x="0" y="0" width="900" height="190" fill="white" stroke="#c8d6e4" stroke-width="1" rx="10" stroke-opacity="0.65" />
     <text x="450" y="22" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a4a56" text-anchor="middle" font-weight="700">Legenda i provjera modela</text>
     <line x1="30" y1="48" x2="60" y2="48" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u07vs_fix_force)" />
     <text x="76" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">G: težina tijela ili cijelog sklopa</text>

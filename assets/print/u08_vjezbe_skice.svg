@@ -215,10 +215,10 @@
   </defs>
   <rect x="0" y="0" width="960" height="720" fill="white" stroke="none" stroke-width="1.2" />
   <g transform="translate(22 24)" id="u08vs_fix_z1">
-    <rect x="0" y="0" width="302" height="228" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="302" height="26" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="302" height="10" fill="#1565c0" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="start" font-weight="700">Z1  Proširenje cijevi</text>
+    <rect x="0" y="0" width="302" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="302" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <rect x="0" y="16" width="302" height="10" fill="white" stroke="none" stroke-width="1.2" />
+    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z1  Proširenje cijevi</text>
     <path d="M38 98.0 H108 L187 86.0 H257 V150.0 H187 L108 138.0 H38 Z" fill="url(#u08vs_fix_z1_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z1_fluid" />
     <polygon points="38.000000,98.000000 108.000000,98.000000 187.000000,86.000000 257.000000,86.000000 257.000000,80.000000 187.000000,80.000000 108.000000,92.000000 38.000000,92.000000" fill="url(#u08vs_fix_z1_hatch)" stroke="none" stroke-width="1.5" />
     <path d="M38 98.0 H108 L187 86.0 H257" fill="none" stroke="#3a4a56" stroke-width="1" />
@@ -242,10 +242,10 @@
     <text x="151" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">v₁ = 4,8 m/s; ρ = 998 kg/m³</text>
   </g>
   <g transform="translate(336 24)" id="u08vs_fix_z2">
-    <rect x="0" y="0" width="302" height="228" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="302" height="26" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="302" height="10" fill="#1565c0" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="start" font-weight="700">Z2  Kosa kontrolna ploha</text>
+    <rect x="0" y="0" width="302" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="302" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <rect x="0" y="16" width="302" height="10" fill="white" stroke="none" stroke-width="1.2" />
+    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z2  Kosa kontrolna ploha</text>
     <line x1="80.9762979464426" y1="98.5" x2="197.0237020535574" y2="165.5" stroke="#8e44ad" stroke-width="3" id="u08vs_fix_z2_plane" />
     <line x1="139" y1="132" x2="215" y2="132" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08vs_fix_z2_normal)" id="u08vs_fix_z2_velocity" />
     <line x1="139" y1="132" x2="173" y2="73.11027254265818" stroke="#3a4a56" stroke-width="2.2" marker-end="url(#u08vs_fix_z2_axis)" id="u08vs_fix_z2_normal-vector" />
@@ -259,10 +259,10 @@
     <text x="151" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Kut je zadan prema normali n.</text>
   </g>
   <g transform="translate(650 24)" id="u08vs_fix_z3">
-    <rect x="0" y="0" width="296" height="228" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="296" height="26" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="296" height="10" fill="#1565c0" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="start" font-weight="700">Z3  Komora za miješanje</text>
+    <rect x="0" y="0" width="296" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="296" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <rect x="0" y="16" width="296" height="10" fill="white" stroke="none" stroke-width="1.2" />
+    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z3  Komora za miješanje</text>
     <path d="M16 79 H104 V65 H210 V112 H280 V132 H210 V171 H104 V147 H16 V131 H104 V95 H16 Z" fill="url(#u08vs_fix_z3_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z3_fluid" />
     <path d="M16 79 H104 V65 H210 V112 H280" fill="none" stroke="#3a4a56" stroke-width="2" />
     <path d="M280 132 H210 V171 H104 V147 H16" fill="none" stroke="#3a4a56" stroke-width="2" />
@@ -279,10 +279,10 @@
     <text x="148" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">D₃ = 120 mm; nema akumulacije</text>
   </g>
   <g transform="translate(22 264)" id="u08vs_fix_z4">
-    <rect x="0" y="0" width="302" height="228" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="302" height="26" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="302" height="10" fill="#1565c0" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="start" font-weight="700">Z4  Razdjelna glava</text>
+    <rect x="0" y="0" width="302" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="302" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <rect x="0" y="16" width="302" height="10" fill="white" stroke="none" stroke-width="1.2" />
+    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z4  Razdjelna glava</text>
     <path d="M28 104 H136 L219 62 H277 V88 H225 L162 123 L225 157 H277 V178 H219 L136 142 H28 Z" fill="url(#u08vs_fix_z4_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z4_fluid" />
     <path d="M28 104 H136 L219 62 H277" fill="none" stroke="#3a4a56" stroke-width="2" />
     <path d="M277 88 H225 L162 123 L225 157 H277" fill="none" stroke="#3a4a56" stroke-width="2" />
@@ -301,10 +301,10 @@
     <text x="233" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#3a4a56" text-anchor="middle">D₃ = 70 mm</text>
   </g>
   <g transform="translate(336 264)" id="u08vs_fix_z5">
-    <rect x="0" y="0" width="302" height="228" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="302" height="26" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="302" height="10" fill="#1565c0" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="start" font-weight="700">Z5  Klip s otvorom</text>
+    <rect x="0" y="0" width="302" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="302" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <rect x="0" y="16" width="302" height="10" fill="white" stroke="none" stroke-width="1.2" />
+    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z5  Klip s otvorom</text>
     <path d="M14 109 H45 V81 H180 V109 H272 V123 H180 V151 H45 V123 H14 Z" fill="url(#u08vs_fix_z5_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z5_fluid" />
     <rect x="40" y="75" width="217" height="6" fill="url(#u08vs_fix_z5_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="40" y="151" width="217" height="6" fill="url(#u08vs_fix_z5_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -321,17 +321,17 @@
     <text x="78" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">in</tspan> = 1,00 L/s</text>
     <text x="228" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1e8449" text-anchor="middle">w = 1,50 m/s</text>
     <rect x="36" y="72" width="149" height="89" fill="none" stroke="#8e44ad" stroke-width="1.2" stroke-dasharray="6,4" id="u08vs_fix_z5_cv" />
-    <text x="110.5" y="63" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle">KV(t)</text>
+    <text x="110.5" y="63" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle" transform="translate(28 -8)">KV(t)</text>
     <text x="111" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">voda</text>
     <text x="153" y="181" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">D = 100 mm; d = 20 mm</text>
     <text x="151" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">ℓ₀ = 0,20 m; s = 0,12 m</text>
     <text x="151" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Izlazna brzina prema klipu: w.</text>
   </g>
   <g transform="translate(650 264)" id="u08vs_fix_z6">
-    <rect x="0" y="0" width="296" height="228" fill="#fbfdff" stroke="#cfdde8" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="296" height="26" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="296" height="10" fill="#1565c0" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="white" text-anchor="start" font-weight="700">Z6  Miješanje i akumulacija</text>
+    <rect x="0" y="0" width="296" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="296" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <rect x="0" y="16" width="296" height="10" fill="white" stroke="none" stroke-width="1.2" />
+    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z6  Miješanje i akumulacija</text>
     <rect x="77" y="114" width="162" height="70" fill="url(#u08vs_fix_z6_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z6_fluid" />
     <rect x="68" y="66" width="9" height="61.0" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="68" y="147.0" width="9" height="6.0" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -369,9 +369,9 @@
     <text x="148" y="221" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">D = 80 mm; v₃ = 1,6 m/s</text>
   </g>
   <g transform="translate(22 504)">
-    <rect x="0" y="0" width="916" height="190" fill="#f5f9fd" stroke="#cfdde8" stroke-width="1.2" rx="10" />
-    <rect x="0" y="0" width="916" height="28" fill="#1565c0" stroke="none" stroke-width="1.2" rx="10" />
-    <text x="458" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="700">Bilanca mase i čitanje skica</text>
+    <rect x="0" y="0" width="916" height="190" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
+    <rect x="0" y="0" width="916" height="28" fill="white" stroke="none" stroke-width="1.2" rx="10" />
+    <text x="458" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">Bilanca mase i čitanje skica</text>
     <text x="458" y="57" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">akumulacija = ulazni maseni protok − izlazni maseni protok</text>
     <text x="25" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start">Nepomična ploha: Q = ∫ v · n dA</text>
     <text x="480" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449" text-anchor="start">Gibajuća ploha: Q<tspan baseline-shift="sub" font-size="0.7em">rel</tspan> = ∫ (v − v<tspan baseline-shift="sub" font-size="0.7em">KP</tspan>) · n dA</text>

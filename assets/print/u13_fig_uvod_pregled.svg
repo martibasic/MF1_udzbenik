@@ -75,9 +75,9 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="43" y="471" font-size="12" fill="#1a2530" text-anchor="start">C i D: zajednički čvorovi; grane imaju isti pad energije.</text>
 <text x="43" y="494" font-size="12" fill="#1a2530" text-anchor="start">Q = Q₁ + Q₂; kroz dovod i odvod prolazi isti ukupni Q.</text>
 <text x="43" y="522" font-size="11" fill="#1a2530" text-anchor="start">Shematski promjeri i EGL; kota H spaja slobodne površine.</text>
-<rect x="621" y="49" width="331" height="291" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="621" y="49" width="331" height="33" rx="9" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="786" y="71" font-size="15" fill="white" text-anchor="middle" font-weight="700">Ključne jednadžbe poglavlja</text>
+<rect x="621" y="49" width="331" height="291" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="621" y="49" width="331" height="33" rx="9" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="786" y="71" font-size="15" fill="#1565c0" text-anchor="middle" font-weight="700">Ključne jednadžbe poglavlja</text>
 <text x="786" y="101" font-size="11" fill="#1565c0" text-anchor="middle">1. Brzina i kontinuitet</text>
 <text x="786" y="123" font-size="15" fill="#1a2530" text-anchor="middle" font-weight="700">v = Q/A = 4Q/(πD²)</text>
 <text x="786" y="140" font-size="10" fill="#1a2530" text-anchor="middle">isti protok samo u seriji</text>
@@ -90,9 +90,9 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="786" y="278" font-size="11" fill="#1565c0" text-anchor="middle">4. Kvadratni model otpora</text>
 <text x="786" y="300" font-size="15" fill="#1a2530" text-anchor="middle" font-weight="700">hi = Ri Qi²</text>
 <text x="786" y="317" font-size="10" fill="#1a2530" text-anchor="middle">Ri približno stalan u promatranom rasponu</text>
-<rect x="621" y="360" width="331" height="171" rx="10" fill="#f2fbf5" stroke="#1e8449" stroke-width="1.2"/>
-<rect x="621" y="360" width="331" height="31" rx="9" fill="#1e8449" stroke="none" stroke-width="1.2"/>
-<text x="786" y="382" font-size="15" fill="white" text-anchor="middle" font-weight="700">Pravila spajanja dionica</text>
+<rect x="621" y="360" width="331" height="171" rx="10" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.65" />
+<rect x="621" y="360" width="331" height="31" rx="9" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="786" y="382" font-size="15" fill="#1e8449" text-anchor="middle" font-weight="700">Pravila spajanja dionica</text>
 <text x="702" y="414" font-size="14" fill="#1a2530" text-anchor="middle" font-weight="700">Serija</text>
 <text x="867" y="414" font-size="14" fill="#1a2530" text-anchor="middle" font-weight="700">Paralela</text>
 <line x1="785" y1="400" x2="785" y2="505" stroke="#cfdce6" stroke-width="1" stroke-dasharray="3 3"/>

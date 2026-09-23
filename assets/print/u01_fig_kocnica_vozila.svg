@@ -113,10 +113,10 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="310" y="548" font-size="11" fill="#3a4a56" text-anchor="middle">Sile su sile tekućine na klipove; tlak nije vektor.</text>
 <text x="310" y="568" font-size="10" fill="#3a4a56" text-anchor="middle">Četiri aktuatora; diskovi i kontakti nisu dio ove hidrauličke sheme.</text>
 <g id="u01fkv_formulas" transform="translate(610 30)">
-<rect x="0" y="0" width="350" height="507" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
-<rect x="0" y="0" width="350" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="0" y="21" width="350" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="175.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Pet koraka rješenja</text>
+<rect x="0" y="0" width="350" height="507" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="350" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="21" width="350" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="175.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">Pet koraka rješenja</text>
 <text x="175.0" y="55" font-size="11" fill="#5a6a78" text-anchor="middle">1. Sila na klip glavnog cilindra</text>
 <text x="175.0" y="79" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">F<tspan baseline-shift="-3.3" font-size="11.25">M</tspan> = iFₙ = 5 · 300</text>
 <text x="175.0" y="100" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">= 1500 N</text>

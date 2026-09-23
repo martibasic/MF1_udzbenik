@@ -64,25 +64,25 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="110" y="391" font-size="11" fill="#1a2530" text-anchor="start">h = 14 mm okomito na tlocrt.</text>
 <text x="110" y="412" font-size="11" fill="#1a2530" text-anchor="start">Isti Q: b₂/b₁ = c₁/c₂ = 24/19.</text>
 <text x="36" y="469" font-size="11" fill="#1a2530" text-anchor="start">Strelice sila izdvojene su radi smjera, ne zadaju hvatište.</text>
-<rect x="505" y="31" width="385" height="34" rx="8" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="697.5" y="54" font-size="15" fill="white" text-anchor="middle" font-weight="700">Jednadžbe i rezultati</text>
-<rect x="505" y="79" width="385" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="505" y="79" width="4" height="73" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<rect x="505" y="31" width="385" height="34" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="697.5" y="54" font-size="15" fill="#1565c0" text-anchor="middle" font-weight="700">Jednadžbe i rezultati</text>
+<rect x="505" y="79" width="385" height="73" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="505" y="79" width="2" height="73" rx="1" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="519" y="99" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Podatci</text>
 <text x="520" y="121" font-size="13" fill="#1a2530" text-anchor="start">b = 36 mm; h = 14 mm; ρ = 998 kg/m³</text>
 <text x="520" y="142" font-size="13" fill="#1a2530" text-anchor="start">c₁ = 24 m/s; c₂ = 19 m/s; β = 120°</text>
-<rect x="505" y="162" width="385" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="505" y="162" width="4" height="73" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+<rect x="505" y="162" width="385" height="73" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="505" y="162" width="2" height="73" rx="1" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="519" y="182" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Protok</text>
 <text x="520" y="204" font-size="13" fill="#1a2530" text-anchor="start">A = bh = 5,04 · 10⁻⁴ m²</text>
 <text x="520" y="225" font-size="13" fill="#1a2530" text-anchor="start">ṁ = ρAc₁ = 12,0718 kg/s</text>
-<rect x="505" y="245" width="385" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="505" y="245" width="4" height="73" rx="0" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+<rect x="505" y="245" width="385" height="73" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="505" y="245" width="2" height="73" rx="1" fill="#c0392b" stroke="none" stroke-width="1.2"/>
 <text x="519" y="265" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">Sila fluida na vodilicu</text>
 <text x="520" y="287" font-size="13" fill="#1a2530" text-anchor="start">c₂ = (−9,50; +16,454) m/s</text>
 <text x="520" y="308" font-size="13" fill="#1a2530" text-anchor="start">F = ṁ(c₁ − c₂) ≈ (404; −199) N</text>
-<rect x="505" y="328" width="385" height="73" rx="7" fill="#f4f9fd" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="505" y="328" width="4" height="73" rx="0" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+<rect x="505" y="328" width="385" height="73" rx="7" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="505" y="328" width="2" height="73" rx="1" fill="#1e8449" stroke="none" stroke-width="1.2"/>
 <text x="519" y="348" font-size="12" fill="#1e8449" text-anchor="start" font-weight="700">Reakcija nosača na vodilicu</text>
 <text x="520" y="370" font-size="13" fill="#1a2530" text-anchor="start">R = −F; |R| ≈ 451 N</text>
 <text x="520" y="391" font-size="13" fill="#1a2530" text-anchor="start">26,2° iznad negativnog smjera x</text>

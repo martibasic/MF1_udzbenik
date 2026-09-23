@@ -22,10 +22,10 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 </defs>
 <defs><linearGradient id="u01fup_metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient></defs>
 <g id="u01fup_continuum" transform="translate(30 30)">
-<rect x="0" y="0" width="290" height="400" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
-<rect x="0" y="0" width="290" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="0" y="21" width="290" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="145.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">1. Kontinuumski model</text>
+<rect x="0" y="0" width="290" height="400" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="290" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="21" width="290" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="145.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">1. Kontinuumski model</text>
 <text x="145" y="56" font-size="11" fill="#1565c0" text-anchor="middle">Fluid kao kontinuirano polje tlaka</text>
 <defs><linearGradient id="u01fup_tankfield" gradientUnits="userSpaceOnUse" x1="0" y1="110" x2="0" y2="270"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
 <rect x="43" y="110" width="204" height="160" rx="0" fill="url(#u01fup_tankfield)" stroke="none" stroke-width="1.2"/>
@@ -43,14 +43,14 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="18" y="313" font-size="11" fill="#3a4a56" text-anchor="start">• tlak u točki jednak je u svim smjerovima</text>
 <text x="18" y="333" font-size="11" fill="#3a4a56" text-anchor="start">• p je skalarno polje p(x, y, z)</text>
 <text x="18" y="353" font-size="11" fill="#3a4a56" text-anchor="start">• izotropnost ne znači jednak tlak svugdje</text>
-<rect x="18" y="370" width="254" height="23" rx="4" fill="#eef6ff" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="18" y="370" width="254" height="23" rx="4" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
 <text x="145" y="386" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="700">Jednolik tlak na plohi: p = Fₙ / A</text>
 </g>
 <g id="u01fup_properties" transform="translate(340 30)">
-<rect x="0" y="0" width="300" height="400" rx="8" fill="#fffbee" stroke="#c8d6e4" stroke-width="1.2"/>
-<rect x="0" y="0" width="300" height="30" rx="8" fill="#c8a000" stroke="#c8a000" stroke-width="1.2"/>
-<rect x="0" y="21" width="300" height="9" rx="0" fill="#c8a000" stroke="none" stroke-width="1.2"/>
-<text x="150.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">2. Osnovne veličine fluida</text>
+<rect x="0" y="0" width="300" height="400" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="300" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="21" width="300" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="150.0" y="21" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">2. Osnovne veličine fluida</text>
 <text x="150" y="56" font-size="11" fill="#3a4a56" text-anchor="middle">Jednak volumen, različita masa i težina</text>
 <defs><linearGradient id="u01fup_property0" gradientUnits="userSpaceOnUse" x1="0" y1="118" x2="0" y2="242"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
 <rect x="48" y="118" width="60" height="124" rx="0" fill="url(#u01fup_property0)" stroke="none" stroke-width="1.2"/>
@@ -73,19 +73,19 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <rect x="121" y="145" width="59" height="53" rx="5" fill="#fff0ed" stroke="#c0392b" stroke-width="1.2"/>
 <text x="150" y="166" font-size="11" fill="#c0392b" text-anchor="middle">ΔG ≈</text>
 <text x="150" y="184" font-size="12" fill="#c0392b" text-anchor="middle" font-weight="700">1,37 N</text>
-<rect x="10" y="296" width="280" height="23" rx="4" fill="#fffdf3" stroke="#b7600c" stroke-width="1.2"/>
+<rect x="10" y="296" width="280" height="23" rx="4" fill="white" stroke="#b7600c" stroke-width="1" stroke-opacity="0.55" />
 <text x="150" y="312" font-size="12" fill="#b7600c" text-anchor="middle" font-weight="700">ρ = m / V (gustoća)</text>
-<rect x="10" y="322" width="280" height="23" rx="4" fill="#fffdf3" stroke="#1e8449" stroke-width="1.2"/>
+<rect x="10" y="322" width="280" height="23" rx="4" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
 <text x="150" y="338" font-size="12" fill="#1e8449" text-anchor="middle" font-weight="700">γ = ρg (specifična težina)</text>
-<rect x="10" y="348" width="280" height="23" rx="4" fill="#fffdf3" stroke="#8e44ad" stroke-width="1.2"/>
+<rect x="10" y="348" width="280" height="23" rx="4" fill="white" stroke="#8e44ad" stroke-width="1" stroke-opacity="0.55" />
 <text x="150" y="364" font-size="12" fill="#8e44ad" text-anchor="middle" font-weight="700">sᵣ = ρ / ρᵥ (relativna gustoća)</text>
 <text x="150" y="388" font-size="10" fill="#3a4a56" text-anchor="middle">sᵣ nema jedinicu; γ ima jedinicu N/m³.</text>
 </g>
 <g id="u01fup_pascal" transform="translate(660 30)">
-<rect x="0" y="0" width="290" height="400" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
-<rect x="0" y="0" width="290" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="0" y="21" width="290" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="145.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">3. Pascalov zakon</text>
+<rect x="0" y="0" width="290" height="400" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="290" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="21" width="290" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="145.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">3. Pascalov zakon</text>
 <text x="145" y="56" font-size="11" fill="#1565c0" text-anchor="middle">Jednak porast tlaka u povezanom fluidu</text>
 <path id="u01fup_pressouter0" d="M40.5 106 V220 H253.0 V106" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
 <path d="M40.5 106 V220 H253.0 V106" fill="none" stroke="white" stroke-width="9" />
@@ -111,13 +111,13 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="224" y="180" font-size="12" fill="#1e8449" text-anchor="start">F₂</text>
 <text x="145" y="210" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="700">p</text>
 <text x="145" y="242" font-size="10" fill="#3a4a56" text-anchor="middle">F₁: na mali klip; F₂: ulje na veliki klip.</text>
-<rect x="10" y="252" width="270" height="23" rx="4" fill="#eef6ff" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="10" y="252" width="270" height="23" rx="4" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
 <text x="145" y="268" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">p = F₁/A₁ = F₂/A₂</text>
-<rect x="10" y="280" width="270" height="23" rx="4" fill="#eef6ff" stroke="#1e8449" stroke-width="1.2"/>
+<rect x="10" y="280" width="270" height="23" rx="4" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
 <text x="145" y="296" font-size="13" fill="#1e8449" text-anchor="middle" font-weight="700">F₂ = (A₂/A₁) F₁</text>
-<rect x="10" y="308" width="270" height="23" rx="4" fill="#eef6ff" stroke="#b7600c" stroke-width="1.2"/>
+<rect x="10" y="308" width="270" height="23" rx="4" fill="white" stroke="#b7600c" stroke-width="1" stroke-opacity="0.55" />
 <text x="145" y="324" font-size="13" fill="#b7600c" text-anchor="middle" font-weight="700">A₁s₁ = A₂s₂</text>
-<rect x="10" y="336" width="270" height="23" rx="4" fill="#eef6ff" stroke="#8e44ad" stroke-width="1.2"/>
+<rect x="10" y="336" width="270" height="23" rx="4" fill="white" stroke="#8e44ad" stroke-width="1" stroke-opacity="0.55" />
 <text x="145" y="352" font-size="13" fill="#8e44ad" text-anchor="middle" font-weight="700">F₁s₁ = F₂s₂</text>
 <text x="145" y="380" font-size="10" fill="#3a4a56" text-anchor="middle">Zanemarene visine, gubici i stlačivost.</text>
 </g>

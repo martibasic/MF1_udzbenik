@@ -89,9 +89,9 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="324" y="526" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">p = 0,92 MPa; isti fluid</text>
 <g id="u01ch1_formulas" transform="translate(816 65)">
 <rect x="0" y="0" width="144" height="445" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
-<rect x="0" y="0" width="144" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="0" y="21" width="144" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="72.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Račun</text>
+<rect x="0" y="0" width="144" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="21" width="144" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="72.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">Račun</text>
 <text x="72.0" y="55" font-size="11" fill="#5a6a78" text-anchor="middle">Tlak</text>
 <text x="72.0" y="79" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">p = Fₚ/Aₚ</text>
 <text x="72.0" y="100" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">= 0,92 MPa</text>

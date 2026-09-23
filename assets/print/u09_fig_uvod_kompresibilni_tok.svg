@@ -15,7 +15,7 @@
 oznaka istog plina, nije karta gustoće ni tlaka. Pozadina/paneli preuzimaju
 neutralne boje postojećih skica. Strelice prikazuju brzine, ne sile. -->
 <defs><marker id="u09fukt_sound" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker></defs>
-<rect x="10" y="10" width="940" height="280" rx="18" fill="#f7fafc" stroke="#c7d4dd" stroke-width="1.2"/>
+<rect x="10" y="10" width="940" height="280" rx="18" fill="white" stroke="#c7d4dd" stroke-width="1" stroke-opacity="0.65" />
 <g id="u09fukt_acoustic" transform="translate(35 35)">
 <text x="120" y="0" font-size="18" fill="#1a2530" text-anchor="middle" font-weight="700">Tlačni poremećaj</text>
 <text x="120" y="42" font-size="13" fill="#1a2530" text-anchor="middle">mirujući plin; v = 0</text>

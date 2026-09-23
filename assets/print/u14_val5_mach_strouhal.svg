@@ -20,14 +20,14 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <marker id="u14ma_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
 <marker id="u14ma_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
 </defs>
-<rect x="24" y="28" width="454" height="404" rx="10" fill="#fbfdff" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="24" y="28" width="454" height="30" rx="10" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<rect x="24" y="50" width="454" height="8" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="251.0" y="49" font-size="14" fill="white" text-anchor="middle" font-weight="700">Plinski vod · lokalni Q</text>
-<rect x="500" y="28" width="456" height="404" rx="10" fill="#fbfdff" stroke="#1e8449" stroke-width="1.2"/>
-<rect x="500" y="28" width="456" height="30" rx="10" fill="#1e8449" stroke="none" stroke-width="1.2"/>
-<rect x="500" y="50" width="456" height="8" rx="0" fill="#1e8449" stroke="none" stroke-width="1.2"/>
-<text x="728.0" y="49" font-size="14" fill="white" text-anchor="middle" font-weight="700">Dimnjak · tlocrt kružnog presjeka</text>
+<rect x="24" y="28" width="454" height="404" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="24" y="28" width="454" height="30" rx="10" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="24" y="50" width="454" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="251.0" y="49" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">Plinski vod · lokalni Q</text>
+<rect x="500" y="28" width="456" height="404" rx="10" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.65" />
+<rect x="500" y="28" width="456" height="30" rx="10" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="500" y="50" width="456" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="728.0" y="49" font-size="14" fill="#1e8449" text-anchor="middle" font-weight="700">Dimnjak · tlocrt kružnog presjeka</text>
 <rect id="u14ma_ducttop" x="70" y="110" width="380" height="9" rx="0" fill="url(#u14ma_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
 <rect id="u14ma_ductbottom" x="70" y="187" width="380" height="9" rx="0" fill="url(#u14ma_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
 <defs><linearGradient id="u14ma_ductfield" gradientUnits="userSpaceOnUse" x1="0" y1="119" x2="0" y2="187"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>

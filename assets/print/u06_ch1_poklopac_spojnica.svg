@@ -53,17 +53,17 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="508" y="40" width="424" height="34" rx="9" fill="#1565c0" />
-  <rect x="508" y="82" width="424" height="86" rx="9" fill="#fdf3f1" stroke="#ecc7c0" stroke-width="1.2" />
-  <rect x="508" y="82" width="6" height="86" rx="3" fill="#c0392b" />
-  <rect x="508" y="178" width="424" height="86" rx="9" fill="#fdf3f1" stroke="#ecc7c0" stroke-width="1.2" />
-  <rect x="508" y="178" width="6" height="86" rx="3" fill="#c0392b" />
-  <rect x="508" y="274" width="424" height="78" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
+  <rect x="508" y="40" width="424" height="34" rx="9" fill="white" stroke="none" />
+  <rect x="508" y="82" width="424" height="86" rx="9" fill="white" stroke="#ecc7c0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="508" y="82" width="2" height="86" rx="1" fill="#c0392b" />
+  <rect x="508" y="178" width="424" height="86" rx="9" fill="white" stroke="#ecc7c0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="508" y="178" width="2" height="86" rx="1" fill="#c0392b" />
+  <rect x="508" y="274" width="424" height="78" rx="9" fill="white" stroke="#ecd9c2" stroke-width="1" stroke-opacity="0.65" />
   <rect x="508" y="362" width="424" height="96" rx="9" fill="#eaf6ee" stroke="#a8d8b9" stroke-width="1.4" />
   <rect x="508" y="362" width="6" height="96" rx="3" fill="#1e8449" />
-  <rect x="508" y="468" width="424" height="44" rx="9" fill="#eaf6ee" stroke="#1e8449" stroke-width="1.4" />
-  <rect x="508" y="274" width="6" height="78" rx="3" fill="#b7600c" />
-  <text x="720" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Postupak (R = 1,10 m, b = 1,40 m, ρ = 998 kg/m³)</text>
+  <rect x="508" y="468" width="424" height="50" rx="9" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
+  <rect x="508" y="274" width="2" height="78" rx="1" fill="#b7600c" />
+  <text x="720" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">Postupak (R = 1,10 m, b = 1,40 m, ρ = 998 kg/m³)</text>
   <text x="524" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">1. Horizontalna komponenta</text>
   <text x="524" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">A<tspan baseline-shift="sub" font-size="0.75em">x</tspan> = R·b = 1,54 m²,  h<tspan baseline-shift="sub" font-size="0.75em">Cx</tspan> = R/2 = 0,55 m</text>
   <text x="524" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530">

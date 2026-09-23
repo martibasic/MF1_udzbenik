@@ -42,7 +42,7 @@
   <rect width="960" height="760" fill="white" />
   <g font-family="'Segoe UI',Arial,sans-serif" fill="#3a4a56">
     <g id="u04vs_z1" transform="translate(28 30)">
-      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
       <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z1</text>
       <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Slobodna površina pri ubrzanju</text>
       <path d="M50 83.98165137614679 L244 128.0183486238532 V174 H50 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
@@ -72,7 +72,7 @@
       <text x="276" y="197" font-size="10.5" fill="#52606d" text-anchor="start">– –  početna razina h₀</text>
     </g>
     <g id="u04vs_z2" transform="translate(484 30)">
-      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
       <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z2</text>
       <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Ubrzanje na granici prelijevanja</text>
       <path d="M50 90.0 L244 138.0 V174 H50 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
@@ -103,7 +103,7 @@
       <text x="276" y="197" font-size="10.5" fill="#52606d" text-anchor="start">– –  početna razina h₀</text>
     </g>
     <g id="u04vs_z3" transform="translate(28 268)">
-      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
       <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z3</text>
       <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Vertikalno ubrzavanje i kočenje</text>
       <rect x="115" y="80" width="60" height="100" fill="url(#u04vs_ulje)" stroke="none" stroke-width="1.1" rx="0" />
@@ -135,7 +135,7 @@
       <text x="335" y="208" font-size="10.5" fill="#3a4a56" text-anchor="middle">I: ubrzavanje · II: kočenje</text>
     </g>
     <g id="u04vs_z4" transform="translate(484 268)">
-      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
       <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z4</text>
       <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Brzina vrtnje iz razlike tlakova</text>
       <rect x="48" y="80" width="189" height="88" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.1" rx="0" />
@@ -170,7 +170,7 @@
       <text x="267" y="208" font-size="10.5" fill="#3a4a56" text-anchor="start">Posuda potpuno ispunjena.</text>
     </g>
     <g id="u04vs_z5" transform="translate(28 506)">
-      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <rect x="0" y="0" width="448" height="230" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
       <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z5</text>
       <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Provjera smirivanja iz podataka</text>
       <path d="M43 112.32874617737004 L211 156.67125382262998 V178 H43 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
@@ -211,7 +211,7 @@
       <text x="333" y="220" font-size="10.5" fill="#3a4a56" text-anchor="middle">Točke: očitanja; crta: model.</text>
     </g>
     <g id="u04vs_z6" transform="translate(484 506)">
-      <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+      <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
       <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z6</text>
       <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Rotacijski spremnik: granice radnog režima</text>
       <path d="M60 84.392 Q148 154.024 236 84.392 V180 H60 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />

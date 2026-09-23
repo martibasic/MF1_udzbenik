@@ -49,9 +49,9 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="215" y="317" font-size="12" fill="#1565c0" text-anchor="middle">τ = μ du/dy; sile su na pokretnoj ploči</text>
 <text x="215" y="341" font-size="12" fill="#3a4a56" text-anchor="middle">Za brojčani τ treba poznavati gradijent.</text>
 <line x1="436" y1="35" x2="436" y2="365" stroke="#cbdce9" stroke-width="1" stroke-dasharray="4 4"/>
-<rect x="457" y="56" width="414" height="292" rx="9" fill="#f8fbff" stroke="#cbdce9" stroke-width="1.2"/>
-<rect x="457" y="56" width="414" height="28" rx="7" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="664.0" y="75" font-size="13" fill="white" text-anchor="middle" font-weight="700">Kinematička viskoznost ν = μ/ρ</text>
+<rect x="457" y="56" width="414" height="292" rx="9" fill="white" stroke="#cbdce9" stroke-width="1" stroke-opacity="0.65" />
+<rect x="457" y="56" width="414" height="28" rx="7" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="664.0" y="75" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">Kinematička viskoznost ν = μ/ρ</text>
 <text x="664" y="120" font-size="17" fill="#b7600c" text-anchor="middle" font-weight="700">μ = 0,18 Pa·s</text>
 <text x="664" y="153" font-size="16" fill="#3a4a56" text-anchor="middle" font-weight="700">ρ = 900 kg/m³</text>
 <text x="664" y="209" font-size="20" fill="#1565c0" text-anchor="middle" font-weight="700">ν = 0,18/900</text>

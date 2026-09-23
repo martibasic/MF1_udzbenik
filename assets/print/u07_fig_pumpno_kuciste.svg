@@ -56,15 +56,15 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="452" y="66" width="396" height="78" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="452" y="66" width="6" height="78" rx="3" fill="#1565c0" />
-  <rect x="452" y="154" width="396" height="78" rx="9" fill="#fdf4f3" stroke="#eccac2" stroke-width="1.2" />
-  <rect x="452" y="154" width="6" height="78" rx="3" fill="#c0392b" />
-  <rect x="452" y="242" width="396" height="78" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
-  <rect x="452" y="330" width="396" height="60" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
-  <rect x="452" y="330" width="6" height="60" rx="3" fill="#1e8449" />
-  <rect x="452" y="402" width="396" height="40" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <rect x="452" y="242" width="6" height="78" rx="3" fill="#b7600c" />
+  <rect x="452" y="66" width="396" height="78" rx="9" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="452" y="66" width="2" height="78" rx="1" fill="#1565c0" />
+  <rect x="452" y="154" width="396" height="78" rx="9" fill="white" stroke="#eccac2" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="452" y="154" width="2" height="78" rx="1" fill="#c0392b" />
+  <rect x="452" y="242" width="396" height="78" rx="9" fill="white" stroke="#ecd9c2" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="452" y="330" width="396" height="60" rx="9" fill="white" stroke="#cce7d4" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="452" y="330" width="2" height="60" rx="1" fill="#1e8449" />
+  <rect x="452" y="402" width="396" height="40" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
+  <rect x="452" y="242" width="2" height="78" rx="1" fill="#b7600c" />
   <text x="452" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Ravnoteža sila na uronjeno kućište</text>
   <text x="472" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">1. Sila uzgona (Arhimed)</text>
   <text x="472" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1a2530">

@@ -47,25 +47,25 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="582" y="18" width="364" height="468" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-  <rect x="582" y="18" width="364" height="38" rx="14" fill="#1565c0" />
-  <rect x="582" y="40" width="364" height="16" fill="#1565c0" />
+  <rect x="582" y="18" width="364" height="468" rx="14" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="582" y="18" width="364" height="38" rx="14" fill="white" stroke="none" />
+  <rect x="582" y="40" width="364" height="16" fill="white" stroke="none" />
   <line x1="600" y1="128" x2="928" y2="128" stroke="#c8d6e4" stroke-width="1" />
   <line x1="600" y1="194" x2="928" y2="194" stroke="#c8d6e4" stroke-width="1" />
   <line x1="600" y1="300" x2="928" y2="300" stroke="#c8d6e4" stroke-width="1" />
   <line x1="600" y1="388" x2="928" y2="388" stroke="#c8d6e4" stroke-width="1" />
-  <rect x="600" y="438" width="328" height="38" rx="8" fill="#fde8e8" stroke="#c0392b" stroke-width="1.4" />
-  <text x="764" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Putanja tlaka p₁ → p₂</text>
+  <rect x="600" y="438" width="328" height="38" rx="8" fill="white" stroke="#c0392b" stroke-width="1" stroke-opacity="0.55" />
+  <text x="764" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">Putanja tlaka p₁ → p₂</text>
   <text x="764" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">GUSTOČE FLUIDA</text>
   <text x="604" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">ρ<tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 1000 kg/m³</text>
   <text x="780" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">ρ<tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 1035 kg/m³</text>
-  <text x="604" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> = 13 600 kg/m³</text>
-  <text x="780" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">ρ<tspan baseline-shift="sub" font-size="0.7em">zr</tspan> = 1,2 kg/m³</text>
+  <text x="604" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530" transform="translate(0 8)">ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> = 13 600 kg/m³</text>
+  <text x="780" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530" transform="translate(0 8)">ρ<tspan baseline-shift="sub" font-size="0.7em">zr</tspan> = 1,2 kg/m³</text>
   <text x="764" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">VISINE STUPACA</text>
   <text x="604" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">h<tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 0,60 m  (slatka voda ↓)</text>
-  <text x="604" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">h<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 0,10 m  (živa ↑)</text>
+  <text x="604" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530" transform="translate(0 8)">h<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 0,10 m  (živa ↑)</text>
   <text x="780" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">h<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 0,70 m  (zrak ↑)</text>
-  <text x="780" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">h<tspan baseline-shift="sub" font-size="0.7em">4</tspan> = 0,40 m  (morska ↓)</text>
+  <text x="780" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530" transform="translate(0 8)">h<tspan baseline-shift="sub" font-size="0.7em">4</tspan> = 0,40 m  (morska ↓)</text>
   <text x="764" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1) BEZ STUPCA ZRAKA</text>
   <text x="764" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-style="italic" text-anchor="middle" fill="#1a2530">p₁ + ρ<tspan baseline-shift="sub" font-size="0.7em">v</tspan>gh₁ − ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan>gh₂ + ρ<tspan baseline-shift="sub" font-size="0.7em">mv</tspan>gh₄ = p₂</text>
   <text x="764" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#1a2530">p₁ − p₂ = g (ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan>h₂ − ρ<tspan baseline-shift="sub" font-size="0.7em">mv</tspan>h₄ − ρ<tspan baseline-shift="sub" font-size="0.7em">v</tspan>h₁)</text>
@@ -83,7 +83,7 @@
   <text x="890" y="455" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#5a6a78">POGREŠKA</text>
   <text x="890" y="469" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 0,24 %</text>
   <g font-family="'Segoe UI',Arial,sans-serif">
-    <rect x="14" y="18" width="556" height="468" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" rx="14" />
+    <rect x="14" y="18" width="556" height="468" fill="white" stroke="#d4e3f0" stroke-width="1" rx="14" stroke-opacity="0.65" />
     <text x="290" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Diferencijalni manometar sa živom i zračnim mostom</text>
     <path d="M60 220 H150 V390 H275 V120 H450 V260 H530" fill="none" stroke="#3a4a56" stroke-width="29" stroke-linejoin="round" />
     <path d="M60 220 H150 V390 H275 V120 H450 V260 H530" fill="none" stroke="#d7dee3" stroke-width="28" stroke-linejoin="round" />
@@ -99,9 +99,9 @@
     <text x="67" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">p<tspan baseline-shift="sub" font-size="0.7em">1</tspan>
     </text>
     <circle cx="520" cy="260" r="3.5" fill="#c0392b" />
-    <text x="515" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">p<tspan baseline-shift="sub" font-size="0.7em">2</tspan>
+    <text x="515" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700" transform="translate(25 26)">p<tspan baseline-shift="sub" font-size="0.7em">2</tspan>
     </text>
-    <text x="95" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">slatka voda</text>
+    <text x="95" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle" transform="translate(0 -12)">slatka voda</text>
     <text x="487" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#2f6f95" text-anchor="middle">morska voda</text>
     <text x="361" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#8b6914" text-anchor="middle">zrak</text>
     <text x="212" y="419" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="middle">živa, ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan>

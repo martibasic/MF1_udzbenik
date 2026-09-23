@@ -47,7 +47,7 @@
   <line x1="354" y1="259" x2="436" y2="259" stroke="#c0392b" stroke-width="2.8" marker-end="url(#u05v1pz_force)" />
   <line x1="350" y1="250" x2="378" y2="232" stroke="#1a2530" stroke-width="0.7" stroke-dasharray="2,2" />
   <line x1="350" y1="259" x2="378" y2="288" stroke="#c0392b" stroke-width="0.7" stroke-dasharray="2,2" />
-  <g>
+  <g transform="translate(0 22)">
     <circle cx="248" cy="406" r="3.5" fill="#1a2530" />
     <circle cx="318" cy="406" r="3.5" fill="#c0392b" />
     <text x="256" y="409" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1a2530">
@@ -73,14 +73,14 @@
       <tspan font-style="italic">h</tspan>
     </text>
   </g>
-  <rect x="458" y="50" width="412" height="328" rx="10" fill="#ffffff" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="458" y="50" width="412" height="30" rx="10" fill="#1565c0" />
-  <rect x="458" y="66" width="412" height="14" fill="#1565c0" />
+  <rect x="458" y="50" width="412" height="328" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="458" y="50" width="412" height="30" rx="10" fill="white" stroke="none" />
+  <rect x="458" y="66" width="412" height="14" fill="white" stroke="none" />
   <line x1="478" y1="140" x2="850" y2="140" stroke="#c8d6e4" stroke-width="1" />
   <line x1="478" y1="193" x2="850" y2="193" stroke="#c8d6e4" stroke-width="1" />
   <line x1="478" y1="263" x2="850" y2="263" stroke="#c8d6e4" stroke-width="1" />
   <line x1="478" y1="311" x2="850" y2="311" stroke="#c8d6e4" stroke-width="1" />
-  <rect x="458" y="388" width="412" height="48" rx="9" fill="#eaf6ee" stroke="#1e8449" stroke-width="1.5" />
+  <rect x="458" y="388" width="412" height="48" rx="9" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
   <line x1="62" y1="110" x2="24" y2="110" stroke="#b7600c" stroke-width="0.6" />
   <line x1="340" y1="190" x2="24" y2="190" stroke="#b7600c" stroke-width="0.6" stroke-dasharray="3,3" />
   <line x1="24" y1="113" x2="24" y2="187" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u05v1pz_dimL)" marker-end="url(#u05v1pz_dim)" />
@@ -105,7 +105,7 @@
     <tspan font-style="italic">CP</tspan>
   </text>
   <text x="44" y="455" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a6a78">Tlak raste linearno s dubinom; rezultanta <tspan font-style="italic">F</tspan> djeluje u centru tlaka <tspan font-style="italic">CP</tspan>, ispod težišta <tspan font-style="italic">C</tspan>.</text>
-  <text x="664" y="71" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Rezultantna sila i centar tlaka</text>
+  <text x="664" y="71" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Rezultantna sila i centar tlaka</text>
   <text x="664" y="103" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">površina plohe</text>
   <text x="664" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
     <tspan font-style="italic">A</tspan> = <tspan font-style="italic">b h</tspan> = 2,0 · 3,0 = 6,0 m²</text>
@@ -118,7 +118,7 @@
   <text x="664" y="231" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
     <tspan font-style="italic">F</tspan> = ρ g <tspan font-style="italic">A h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 998 · 9,81 · 6,0 · 3,5</text>
-  <text x="664" y="251" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">
+  <text x="664" y="251" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b" transform="translate(0 8)">
     <tspan font-style="italic">F</tspan> ≈ 205,6 kN</text>
   <text x="664" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">centralni moment površine</text>
   <text x="664" y="299" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">

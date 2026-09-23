@@ -16,7 +16,7 @@ oznaka istog plina, nije karta gustoće ni tlaka. Pozadina/paneli preuzimaju
 neutralne boje postojećih skica. Strelice prikazuju brzine, ne sile. -->
 <defs><marker id="u09kvs_sound" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker></defs>
 <g id="u09kvs_z1" transform="translate(28 24)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
 <rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z1</text>
 <text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Zvuk u mirujućem heliju</text>
@@ -36,7 +36,7 @@ neutralne boje postojećih skica. Strelice prikazuju brzine, ne sile. -->
 <text x="61" y="219" font-size="14" fill="#1a2530" text-anchor="start">Poremećaj putuje u oba smjera.</text>
 </g>
 <g id="u09kvs_z2" transform="translate(486 24)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
 <rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z2</text>
 <text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Machov broj u kružnom vodu</text>
@@ -55,7 +55,7 @@ neutralne boje postojećih skica. Strelice prikazuju brzine, ne sile. -->
 <text x="194" y="219" font-size="14" fill="#1a2530" text-anchor="middle">Uzdužni presjek; kružni vod.</text>
 </g>
 <g id="u09kvs_z3" transform="translate(28 286)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
 <rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z3</text>
 <text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Dva smjera akustičkog mjerenja</text>
@@ -80,7 +80,7 @@ neutralne boje postojećih skica. Strelice prikazuju brzine, ne sile. -->
 <text x="220.0" y="231" font-size="13" fill="#b7600c" text-anchor="middle">L = 1,20 m</text>
 </g>
 <g id="u09kvs_z4" transform="translate(486 286)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
 <rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z4</text>
 <text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Protutlak i izlazni tlak</text>
@@ -100,7 +100,7 @@ neutralne boje postojećih skica. Strelice prikazuju brzine, ne sile. -->
 <text x="223" y="230" font-size="12" fill="#1a2530" text-anchor="middle">Vanjski tok nije prikazan; izlaz je najmanji presjek.</text>
 </g>
 <g id="u09kvs_z5" transform="translate(28 548)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
 <rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z5</text>
 <text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Provjera stvarnog otvora sapnice</text>
@@ -121,7 +121,7 @@ neutralne boje postojećih skica. Strelice prikazuju brzine, ne sile. -->
 <text x="223" y="235" font-size="12" fill="#1a2530" text-anchor="middle">Ag je izmjereni slobodni otvor; vanjski tok nije prikazan.</text>
 </g>
 <g id="u09kvs_z6" transform="translate(486 548)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
 <rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
 <text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z6</text>
 <text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Mjerenja prije i poslije vala</text>

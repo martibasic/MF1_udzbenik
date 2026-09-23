@@ -65,19 +65,19 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="560" y="16" width="384" height="488" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
-  <rect x="560" y="16" width="384" height="36" rx="14" fill="#1565c0" />
-  <rect x="560" y="38" width="384" height="14" fill="#1565c0" />
-  <rect x="576" y="66" width="352" height="84" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="576" y="66" width="5" height="84" rx="2.5" fill="#1565c0" />
-  <rect x="576" y="160" width="352" height="84" rx="8" fill="#f7f3fb" stroke="#e0d0ec" stroke-width="1.2" />
-  <rect x="576" y="160" width="5" height="84" rx="2.5" fill="#8e44ad" />
-  <rect x="576" y="254" width="352" height="106" rx="8" fill="#fff7ee" stroke="#f0d8b6" stroke-width="1.2" />
-  <rect x="576" y="370" width="352" height="84" rx="8" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
-  <rect x="576" y="370" width="5" height="84" rx="2.5" fill="#1e8449" />
-  <rect x="576" y="464" width="352" height="32" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <rect x="576" y="254" width="5" height="106" rx="2.5" fill="#b7600c" />
-  <text x="752" y="40" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Rjesenje korak po korak</text>
+  <rect x="560" y="16" width="384" height="488" rx="14" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="560" y="16" width="384" height="36" rx="14" fill="white" stroke="none" />
+  <rect x="560" y="38" width="384" height="14" fill="white" stroke="none" />
+  <rect x="576" y="66" width="352" height="84" rx="8" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="576" y="66" width="2" height="84" rx="1" fill="#1565c0" />
+  <rect x="576" y="160" width="352" height="84" rx="8" fill="white" stroke="#e0d0ec" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="576" y="160" width="2" height="84" rx="1" fill="#8e44ad" />
+  <rect x="576" y="254" width="352" height="106" rx="8" fill="white" stroke="#f0d8b6" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="576" y="370" width="352" height="84" rx="8" fill="white" stroke="#cce7d4" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="576" y="370" width="2" height="84" rx="1" fill="#1e8449" />
+  <rect x="576" y="464" width="352" height="32" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
+  <rect x="576" y="254" width="2" height="106" rx="1" fill="#b7600c" />
+  <text x="752" y="40" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">Rjesenje korak po korak</text>
   <text x="752" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1) Srednji gaz i istisnuti volumen</text>
   <text x="752" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">
     <tspan font-style="italic">h</tspan>
@@ -103,7 +103,7 @@
   <text x="808" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c0392b">e ≈ 0,134 m</text>
   <text x="902" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449">Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan> ≈ 6,14 cm</text>
   <g font-family="'Segoe UI',Arial,sans-serif" />
-  <rect x="16" y="16" width="528" height="488" rx="14" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.4" />
+  <rect x="16" y="16" width="528" height="488" rx="14" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
   <g id="u07v1pk_fix_scene">
     <rect x="48" y="210" width="440" height="192" fill="url(#u07v1pk_fix_water)" stroke="none" stroke-width="1.2" />
     <line x1="48" y1="210" x2="488" y2="210" stroke="#1565c0" stroke-width="2" id="u07v1pk_fix_free-surface" />

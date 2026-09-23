@@ -100,19 +100,19 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 </g>
 <text x="217" y="468" font-size="11" fill="#3a4a56" text-anchor="middle">d = 0,80 mm; promjeri i visine imaju zasebna mjerila.</text>
 <text x="217" y="490" font-size="11" fill="#3a4a56" text-anchor="middle">Rub drži kapljicu; ne prikazuje se proces odvajanja.</text>
-<rect x="437" y="29" width="577" height="102" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="437" y="29" width="577" height="102" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
 <text x="449" y="49" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">1. Prirodni kapilarni uspon</text>
 <text x="449" y="72" font-size="12" fill="#1a2530" text-anchor="start">hcap = 4σ/(ρgd) ≈ 36,8 mm &lt; H</text>
 <text x="449" y="91" font-size="12" fill="#1a2530" text-anchor="start">Za dosezanje izlaza: pM,1 = ρgH − 4σ/d ≈ 227 Pa</text>
-<rect x="437" y="143" width="577" height="102" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="437" y="143" width="577" height="102" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
 <text x="449" y="163" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">2. Zadana sferna kapljica</text>
 <text x="449" y="186" font-size="12" fill="#1a2530" text-anchor="start">Δp = 4σ/D = 120 Pa</text>
 <text x="449" y="205" font-size="12" fill="#1a2530" text-anchor="start">pin = p₀ + Δp = 101445 Pa ≈ 101,45 kPa</text>
-<rect x="437" y="257" width="577" height="102" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="437" y="257" width="577" height="102" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
 <text x="449" y="277" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">3. Puna igla — nema unutarnjeg meniskusa</text>
 <text x="449" y="300" font-size="12" fill="#1a2530" text-anchor="start">pM,2 = ρgH + Δp</text>
 <text x="449" y="319" font-size="12" fill="#1a2530" text-anchor="start">≈ 587 + 120 = 707 Pa ≈ 0,707 kPa</text>
-<rect x="437" y="371" width="577" height="102" rx="7" fill="#f4f9fd" stroke="#1e8449" stroke-width="1.2"/>
+<rect x="437" y="371" width="577" height="102" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.65" />
 <text x="449" y="391" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">4. Granica statičkog modela</text>
 <text x="449" y="414" font-size="12" fill="#1a2530" text-anchor="start">Ne određuje najveći tlak tijekom rasta ili odvajanja.</text>
 <text x="449" y="433" font-size="12" fill="#1a2530" text-anchor="start">Težina kapljice zanemarena: skala ρgD ≈ 23,5 Pa.</text>

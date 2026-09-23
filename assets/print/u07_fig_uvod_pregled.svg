@@ -89,14 +89,14 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="28" y="28" width="446" height="404" rx="10" fill="#ffffff" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="490" y="28" width="476" height="186" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="490" y="28" width="476" height="28" rx="10" fill="#1565c0" />
+  <rect x="28" y="28" width="446" height="404" rx="10" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="490" y="28" width="476" height="186" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="490" y="28" width="476" height="28" rx="10" fill="white" stroke="none" />
   <line x1="510" y1="118" x2="946" y2="118" stroke="#c8d6e4" stroke-width="1" />
   <line x1="510" y1="174" x2="946" y2="174" stroke="#c8d6e4" stroke-width="1" />
   <rect x="490" y="228" width="476" height="204" rx="10" fill="#fdf6ec" stroke="#e0c490" stroke-width="1.4" />
-  <rect x="490" y="228" width="476" height="26" rx="10" fill="#b7600c" />
-  <text x="728" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Kljucne jednadzbe poglavlja</text>
+  <rect x="490" y="228" width="476" height="26" rx="10" fill="white" stroke="none" />
+  <text x="728" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Kljucne jednadzbe poglavlja</text>
   <text x="728" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Arhimedov zakon — sila uzgona</text>
   <text x="728" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#1a2530">
     <tspan font-style="italic">F</tspan>
@@ -136,7 +136,7 @@
     <text x="247" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">p₁A ↓</text>
     <text x="248" y="367" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">p₂A ↑; p₂ &gt; p₁</text>
     <text x="246" y="393" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan> je rezultanta tlakova, ne dodatna sila.</text>
-    <text x="728" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="700">Početni stabilitet plivajućeg tijela</text>
+    <text x="728" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Početni stabilitet plivajućeg tijela</text>
   </g>
   <g id="u07fup_fix_stability">
     <rect x="500" y="367" width="456" height="52" fill="url(#u07fup_stab_water)" stroke="none" stroke-width="1.2" />

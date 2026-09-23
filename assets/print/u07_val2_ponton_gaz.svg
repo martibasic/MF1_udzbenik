@@ -49,17 +49,17 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="456" y="50" width="412" height="32" rx="8" fill="#1565c0" />
-  <rect x="456" y="92" width="412" height="72" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="456" y="92" width="6" height="72" rx="3" fill="#1565c0" />
-  <rect x="456" y="172" width="412" height="72" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="456" y="172" width="6" height="72" rx="3" fill="#1565c0" />
-  <rect x="456" y="252" width="412" height="72" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="456" y="252" width="6" height="72" rx="3" fill="#1565c0" />
-  <rect x="456" y="332" width="412" height="72" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
-  <rect x="456" y="436" width="412" height="14" rx="4" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.2" />
-  <rect x="456" y="332" width="6" height="72" rx="3" fill="#b7600c" />
-  <text x="662" y="71" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#ffffff">Vertikalna ravnoteža: <tspan font-style="italic">G</tspan> = <tspan font-style="italic">F</tspan>
+  <rect x="456" y="50" width="412" height="32" rx="8" fill="white" stroke="none" />
+  <rect x="456" y="92" width="412" height="72" rx="9" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="456" y="92" width="2" height="72" rx="1" fill="#1565c0" />
+  <rect x="456" y="172" width="412" height="72" rx="9" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="456" y="172" width="2" height="72" rx="1" fill="#1565c0" />
+  <rect x="456" y="252" width="412" height="72" rx="9" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="456" y="252" width="2" height="72" rx="1" fill="#1565c0" />
+  <rect x="456" y="332" width="412" height="72" rx="9" fill="white" stroke="#ecd9c2" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="456" y="430" width="412" height="26" rx="4" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
+  <rect x="456" y="332" width="2" height="72" rx="1" fill="#b7600c" />
+  <text x="662" y="71" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1565c0">Vertikalna ravnoteža: <tspan font-style="italic">G</tspan> = <tspan font-style="italic">F</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">U</tspan> → ρ<tspan font-style="italic">gV</tspan> = <tspan font-style="italic">mg</tspan>
   </text>
   <text x="662" y="111" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Ukupna masa sustava</text>

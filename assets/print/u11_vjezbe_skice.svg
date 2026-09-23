@@ -21,11 +21,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <marker id="u11vs_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
 </defs>
 <g id="u11vs_z1" transform="translate(30 32)">
-<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="446" height="27" rx="8" fill="#1a2e42" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="446" height="8" rx="0" fill="#1a2e42" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z1</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Sila mlaza na ploču</text>
+<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="446" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="446" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#1a2e42" text-anchor="start" font-weight="700">Z1</text>
+<text x="52" y="19" font-size="13" fill="#1a2e42" text-anchor="start" font-weight="700">Sila mlaza na ploču</text>
 <defs><linearGradient id="u11vs_z1field" gradientUnits="userSpaceOnUse" x1="0" y1="79" x2="0" y2="226"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
 <path id="u11vs_z1fluid" d="M48 133.0 H270 Q289 133.0 289 114.0 V79 H296 V226 H289 V176.0 Q289 157.0 270 157.0 H48 Z" fill="url(#u11vs_z1field)" stroke="none" stroke-width="1.8" />
 <line id="u11vs_z1top" x1="48" y1="133.0" x2="100" y2="133.0" stroke="#3a4a56" stroke-width="2"/>
@@ -50,11 +50,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="374" y="226" font-size="13" fill="#3a4a56" text-anchor="middle">y</text>
 </g>
 <g id="u11vs_z2" transform="translate(484 32)">
-<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="446" height="27" rx="8" fill="#1a2e42" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="446" height="8" rx="0" fill="#1a2e42" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z2</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Brzina iz sile na ploču</text>
+<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="446" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="446" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#1a2e42" text-anchor="start" font-weight="700">Z2</text>
+<text x="52" y="19" font-size="13" fill="#1a2e42" text-anchor="start" font-weight="700">Brzina iz sile na ploču</text>
 <defs><linearGradient id="u11vs_z2field" gradientUnits="userSpaceOnUse" x1="0" y1="79" x2="0" y2="226"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
 <path id="u11vs_z2fluid" d="M48 133.0 H270 Q289 133.0 289 114.0 V79 H296 V226 H289 V176.0 Q289 157.0 270 157.0 H48 Z" fill="url(#u11vs_z2field)" stroke="none" stroke-width="1.8" />
 <line id="u11vs_z2top" x1="48" y1="133.0" x2="100" y2="133.0" stroke="#3a4a56" stroke-width="2"/>
@@ -79,11 +79,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="374" y="226" font-size="13" fill="#3a4a56" text-anchor="middle">y</text>
 </g>
 <g id="u11vs_z3" transform="translate(30 338)">
-<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="446" height="27" rx="8" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="446" height="8" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z3</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Koljeno 90°: sila i reakcija</text>
+<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="446" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="446" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#1565c0" text-anchor="start" font-weight="700">Z3</text>
+<text x="52" y="19" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Koljeno 90°: sila i reakcija</text>
 <path id="u11vs_z3outer0" d="M36 157.0 L145.000000 157.000000 L145.959882 156.991623 L146.919472 156.966495 L147.878478 156.924624 L148.836606 156.866023 L149.793566 156.790708 L150.749065 156.698704 L151.702814 156.590038 L152.654521 156.464744 L153.603896 156.322859 L154.550650 156.164426 L155.494495 155.989495 L156.435143 155.798118 L157.372308 155.590354 L158.305704 155.366265 L159.235047 155.125920 L160.160055 154.869393 L161.080444 154.596762 L161.995935 154.308108 L162.906248 154.003522 L163.811108 153.683094 L164.710237 153.346923 L165.603363 152.995112 L166.490212 152.627767 L167.370515 152.245000 L168.244004 151.846928 L169.110413 151.433673 L169.969477 151.005359 L170.820936 150.562118 L171.664529 150.104084 L172.500000 149.631397 L173.327094 149.144202 L174.145560 148.642645 L174.955147 148.126881 L175.755610 147.597066 L176.546704 147.053362 L177.328189 146.495935 L178.099826 145.924953 L178.861381 145.340591 L179.612622 144.743028 L180.353319 144.132444 L181.083247 143.509027 L181.802183 142.872965 L182.509910 142.224454 L183.206210 141.563689 L183.890873 140.890873 L184.563689 140.206210 L185.224454 139.509910 L185.872965 138.802183 L186.509027 138.083247 L187.132444 137.353319 L187.743028 136.612622 L188.340591 135.861381 L188.924953 135.099826 L189.495935 134.328189 L190.053362 133.546704 L190.597066 132.755610 L191.126881 131.955147 L191.642645 131.145560 L192.144202 130.327094 L192.631397 129.500000 L193.104084 128.664529 L193.562118 127.820936 L194.005359 126.969477 L194.433673 126.110413 L194.846928 125.244004 L195.245000 124.370515 L195.627767 123.490212 L195.995112 122.603363 L196.346923 121.710237 L196.683094 120.811108 L197.003522 119.906248 L197.308108 118.995935 L197.596762 118.080444 L197.869393 117.160055 L198.125920 116.235047 L198.366265 115.305704 L198.590354 114.372308 L198.798118 113.435143 L198.989495 112.494495 L199.164426 111.550650 L199.322859 110.603896 L199.464744 109.654521 L199.590038 108.702814 L199.698704 107.749065 L199.790708 106.793566 L199.866023 105.836606 L199.924624 104.878478 L199.966495 103.919472 L199.991623 102.959882 L200.000000 102.000000 V75" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
 <path d="M36 157.0 L145.000000 157.000000 L145.959882 156.991623 L146.919472 156.966495 L147.878478 156.924624 L148.836606 156.866023 L149.793566 156.790708 L150.749065 156.698704 L151.702814 156.590038 L152.654521 156.464744 L153.603896 156.322859 L154.550650 156.164426 L155.494495 155.989495 L156.435143 155.798118 L157.372308 155.590354 L158.305704 155.366265 L159.235047 155.125920 L160.160055 154.869393 L161.080444 154.596762 L161.995935 154.308108 L162.906248 154.003522 L163.811108 153.683094 L164.710237 153.346923 L165.603363 152.995112 L166.490212 152.627767 L167.370515 152.245000 L168.244004 151.846928 L169.110413 151.433673 L169.969477 151.005359 L170.820936 150.562118 L171.664529 150.104084 L172.500000 149.631397 L173.327094 149.144202 L174.145560 148.642645 L174.955147 148.126881 L175.755610 147.597066 L176.546704 147.053362 L177.328189 146.495935 L178.099826 145.924953 L178.861381 145.340591 L179.612622 144.743028 L180.353319 144.132444 L181.083247 143.509027 L181.802183 142.872965 L182.509910 142.224454 L183.206210 141.563689 L183.890873 140.890873 L184.563689 140.206210 L185.224454 139.509910 L185.872965 138.802183 L186.509027 138.083247 L187.132444 137.353319 L187.743028 136.612622 L188.340591 135.861381 L188.924953 135.099826 L189.495935 134.328189 L190.053362 133.546704 L190.597066 132.755610 L191.126881 131.955147 L191.642645 131.145560 L192.144202 130.327094 L192.631397 129.500000 L193.104084 128.664529 L193.562118 127.820936 L194.005359 126.969477 L194.433673 126.110413 L194.846928 125.244004 L195.245000 124.370515 L195.627767 123.490212 L195.995112 122.603363 L196.346923 121.710237 L196.683094 120.811108 L197.003522 119.906248 L197.308108 118.995935 L197.596762 118.080444 L197.869393 117.160055 L198.125920 116.235047 L198.366265 115.305704 L198.590354 114.372308 L198.798118 113.435143 L198.989495 112.494495 L199.164426 111.550650 L199.322859 110.603896 L199.464744 109.654521 L199.590038 108.702814 L199.698704 107.749065 L199.790708 106.793566 L199.866023 105.836606 L199.924624 104.878478 L199.966495 103.919472 L199.991623 102.959882 L200.000000 102.000000 V75" fill="none" stroke="url(#u11vs_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
 <path id="u11vs_z3outer1" d="M260.0 75 L260.000000 102.000000 L259.982485 104.007027 L259.929945 106.013442 L259.842396 108.018635 L259.719866 110.021994 L259.562390 112.022910 L259.370018 114.020773 L259.142807 116.014974 L258.880828 118.004907 L258.584159 119.989963 L258.252892 121.969540 L257.887126 123.943034 L257.486974 125.909844 L257.052557 127.869371 L256.584009 129.821018 L256.081470 131.764190 L255.545095 133.698296 L254.975047 135.622746 L254.371499 137.536954 L253.734636 139.440338 L253.064651 141.332316 L252.361749 143.212314 L251.626143 145.079758 L250.858058 146.934080 L250.057728 148.774714 L249.225396 150.601100 L248.361315 152.412682 L247.465750 154.208907 L246.538973 155.989230 L245.581266 157.753106 L244.592921 159.500000 L243.574240 161.229379 L242.525531 162.940715 L241.447115 164.633489 L240.339321 166.307184 L239.202485 167.961290 L238.036954 169.595304 L236.843084 171.208728 L235.621237 172.801070 L234.371786 174.371845 L233.095111 175.920575 L231.791602 177.446788 L230.461655 178.950020 L229.105676 180.429811 L227.724077 181.885713 L226.317280 183.317280 L224.885713 184.724077 L223.429811 186.105676 L221.950020 187.461655 L220.446788 188.791602 L218.920575 190.095111 L217.371845 191.371786 L215.801070 192.621237 L214.208728 193.843084 L212.595304 195.036954 L210.961290 196.202485 L209.307184 197.339321 L207.633489 198.447115 L205.940715 199.525531 L204.229379 200.574240 L202.500000 201.592921 L200.753106 202.581266 L198.989230 203.538973 L197.208907 204.465750 L195.412682 205.361315 L193.601100 206.225396 L191.774714 207.057728 L189.934080 207.858058 L188.079758 208.626143 L186.212314 209.361749 L184.332316 210.064651 L182.440338 210.734636 L180.536954 211.371499 L178.622746 211.975047 L176.698296 212.545095 L174.764190 213.081470 L172.821018 213.584009 L170.869371 214.052557 L168.909844 214.486974 L166.943034 214.887126 L164.969540 215.252892 L162.989963 215.584159 L161.004907 215.880828 L159.014974 216.142807 L157.020773 216.370018 L155.022910 216.562390 L153.021994 216.719866 L151.018635 216.842396 L149.013442 216.929945 L147.007027 216.982485 L145.000000 217.000000 H36" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -119,11 +119,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="37" y="270" font-size="13" fill="#1a2530" text-anchor="start">Tlocrt; Q = 26,0 L/s</text>
 </g>
 <g id="u11vs_z4" transform="translate(484 338)">
-<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="446" height="27" rx="8" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="446" height="8" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z4</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Moment ekscentričnog mlaza</text>
+<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="446" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="446" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#1565c0" text-anchor="start" font-weight="700">Z4</text>
+<text x="52" y="19" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Moment ekscentričnog mlaza</text>
 <defs><linearGradient id="u11vs_z4field" gradientUnits="userSpaceOnUse" x1="0" y1="51" x2="0" y2="163"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
 <path id="u11vs_z4fluid" d="M43 90.0 H254 Q273 90.0 273 71.0 V51 H280 V163 H273 V125.0 Q273 106.0 254 106.0 H43 Z" fill="url(#u11vs_z4field)" stroke="none" stroke-width="1.8" />
 <line id="u11vs_z4top" x1="43" y1="90.0" x2="95" y2="90.0" stroke="#3a4a56" stroke-width="2"/>
@@ -161,11 +161,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="138" y="215" font-size="12" fill="#1a2530" text-anchor="start">uklještenje</text>
 </g>
 <g id="u11vs_z5" transform="translate(30 644)">
-<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="446" height="27" rx="8" fill="#633790" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="446" height="8" rx="0" fill="#633790" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z5</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Jedna ploča koja se udaljava</text>
+<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="446" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="446" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#633790" text-anchor="start" font-weight="700">Z5</text>
+<text x="52" y="19" font-size="13" fill="#633790" text-anchor="start" font-weight="700">Jedna ploča koja se udaljava</text>
 <defs><linearGradient id="u11vs_z5field" gradientUnits="userSpaceOnUse" x1="0" y1="81" x2="0" y2="241"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
 <path id="u11vs_z5fluid" d="M43 152.0 H249 Q268 152.0 268 133.0 V81 H275 V241 H268 V195.0 Q268 176.0 249 176.0 H43 Z" fill="url(#u11vs_z5field)" stroke="none" stroke-width="1.8" />
 <line id="u11vs_z5top" x1="43" y1="152.0" x2="95" y2="152.0" stroke="#3a4a56" stroke-width="2"/>
@@ -192,11 +192,11 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="375" y="202" font-size="13" fill="#3a4a56" text-anchor="middle">y</text>
 </g>
 <g id="u11vs_z6" transform="translate(484 644)">
-<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1.2"/>
-<rect x="0" y="0" width="446" height="27" rx="8" fill="#633790" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="19" width="446" height="8" rx="0" fill="#633790" stroke="none" stroke-width="1.2"/>
-<text x="15" y="19" font-size="14" fill="white" text-anchor="start" font-weight="700">Z6</text>
-<text x="52" y="19" font-size="13" fill="white" text-anchor="start" font-weight="700">Y-račva: granice opterećenja</text>
+<rect x="0" y="0" width="446" height="290" rx="9" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="446" height="27" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="19" width="446" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="15" y="19" font-size="14" fill="#633790" text-anchor="start" font-weight="700">Z6</text>
+<text x="52" y="19" font-size="13" fill="#633790" text-anchor="start" font-weight="700">Y-račva: granice opterećenja</text>
 <path id="u11vs_z6outer0" d="M36 171.0 H223.69059892324148 L284.143593539449 66.29234185504085" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
 <path d="M36 171.0 H223.69059892324148 L284.143593539449 66.29234185504085" fill="none" stroke="url(#u11vs_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
 <path id="u11vs_z6outer1" d="M311.856406460551 82.29234185504085 L254.8675134594813 181.0 H412" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -224,7 +224,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="357.5" y="190" font-size="12" fill="#1e8449" text-anchor="middle">v₂</text>
 <path id="u11vs_z6branchvelocity" d="M242 172 L274 116.57437415779593" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u11vs_v)"/>
 <text x="258.0" y="107.57437415779593" font-size="12" fill="#1e8449" text-anchor="middle">v₃</text>
-<text x="44" y="145" font-size="12" fill="#1565c0" text-anchor="start">pM1 = 185 kPa</text>
+<text x="44" y="145" font-size="12" fill="#1565c0" text-anchor="start" transform="translate(0 -12)">pM1 = 185 kPa</text>
 <text x="341" y="168" font-size="12" fill="#1565c0" text-anchor="start">pM2 = 0</text>
 <text x="331" y="88" font-size="12" fill="#1565c0" text-anchor="start">pM3 = 0</text>
 <line x1="15" y1="171" x2="25" y2="171" stroke="#b7600c" stroke-width="1.2"/>

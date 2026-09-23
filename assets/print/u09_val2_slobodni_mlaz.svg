@@ -11,8 +11,8 @@
 </defs>
 <rect width="900" height="470" fill="white"/>
 <g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<rect x="14" y="14" width="476" height="442" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
-<rect x="504" y="14" width="382" height="442" rx="12" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.2"/>
+<rect x="14" y="14" width="476" height="442" rx="12" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="504" y="14" width="382" height="442" rx="12" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
 <text x="38" y="42" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Tri alternativna položaja malog otvora</text>
 <defs><linearGradient id="u09v2_field" gradientUnits="userSpaceOnUse" x1="0" y1="110" x2="0" y2="310"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
 <rect x="90" y="110" width="130" height="200" rx="0" fill="url(#u09v2_field)" stroke="none" stroke-width="1.2"/>
@@ -72,13 +72,13 @@
 <path id="u09v2_maxrange" d="M228 385 L428 385" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v2_dim)" marker-end="url(#u09v2_dim)"/>
 <text x="328.0" y="402" font-size="11" fill="#b7600c" text-anchor="middle">x₂ = 4,00 m</text>
 <text x="40" y="435" font-size="11" fill="#1a2530" text-anchor="start">Jednaka skala visina i dometa; otvori uvećani.</text>
-<rect x="524" y="57" width="342" height="133" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="524" y="57" width="342" height="133" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
 <text x="536" y="77" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Torricelli i vodoravni hitac</text>
 <text x="536" y="100" font-size="12" fill="#1a2530" text-anchor="start">v₀ = √[2g(H − h)]</text>
 <text x="536" y="119" font-size="12" fill="#1a2530" text-anchor="start">t = √(2h/g)</text>
 <text x="536" y="138" font-size="12" fill="#1a2530" text-anchor="start">x = v₀t = 2√[h(H − h)]</text>
 <text x="536" y="157" font-size="12" fill="#1a2530" text-anchor="start">h i H − h daju isti domet.</text>
-<rect x="524" y="211" width="342" height="128" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="524" y="211" width="342" height="128" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
 <text x="536" y="231" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Rezultati za H = 4,0 m</text>
 <text x="548" y="256" font-size="12" fill="#1a2530" text-anchor="start">h [m]</text>
 <text x="625" y="256" font-size="12" fill="#1a2530" text-anchor="start">v₀ [m/s]</text>
@@ -96,7 +96,7 @@
 <text x="625" y="319" font-size="12" fill="#1a2530" text-anchor="start">4,43</text>
 <text x="712" y="319" font-size="12" fill="#1a2530" text-anchor="start">0,782</text>
 <text x="798" y="319" font-size="12" fill="#1a2530" text-anchor="start">3,46</text>
-<rect x="524" y="364" width="342" height="70" rx="7" fill="#f4f9fd" stroke="#1e8449" stroke-width="1.2"/>
+<rect x="524" y="364" width="342" height="70" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
 <text x="536" y="384" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">Najveći domet</text>
 <text x="536" y="407" font-size="12" fill="#1a2530" text-anchor="start">h = H/2 = 2,0 m; xₘₐₓ = H = 4,0 m</text>
 </g>

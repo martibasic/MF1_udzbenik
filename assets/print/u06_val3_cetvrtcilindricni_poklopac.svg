@@ -52,13 +52,13 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="520" y="74" width="392" height="92" rx="9" fill="#fdf3f1" stroke="#e6c3bc" stroke-width="1.2" />
-  <rect x="520" y="74" width="6" height="92" rx="3" fill="#c0392b" />
-  <rect x="520" y="176" width="392" height="92" rx="9" fill="#fdf3f1" stroke="#e6c3bc" stroke-width="1.2" />
-  <rect x="520" y="176" width="6" height="92" rx="3" fill="#c0392b" />
-  <rect x="520" y="278" width="392" height="92" rx="9" fill="#eef7f1" stroke="#bcdcc7" stroke-width="1.2" />
-  <rect x="520" y="278" width="6" height="92" rx="3" fill="#1e8449" />
-  <rect x="520" y="384" width="392" height="34" rx="8" fill="#f1f9f3" stroke="#1e8449" stroke-width="1.4" />
+  <rect x="520" y="74" width="392" height="98" rx="9" fill="white" stroke="#e6c3bc" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="520" y="74" width="2" height="92" rx="1" fill="#c0392b" />
+  <rect x="520" y="176" width="392" height="98" rx="9" fill="white" stroke="#e6c3bc" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="520" y="176" width="2" height="92" rx="1" fill="#c0392b" />
+  <rect x="520" y="278" width="392" height="98" rx="9" fill="white" stroke="#bcdcc7" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="520" y="278" width="2" height="92" rx="1" fill="#1e8449" />
+  <rect x="520" y="384" width="392" height="34" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
   <text x="520" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Rastav i rezultanta sile</text>
   <text x="540" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">1. Horizontalna komponenta</text>
   <text x="540" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">

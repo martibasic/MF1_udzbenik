@@ -52,13 +52,13 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="498" y="96" width="430" height="84" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="498" y="96" width="6" height="84" rx="3" fill="#1565c0" />
-  <rect x="498" y="188" width="430" height="84" rx="9" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.2" />
-  <rect x="498" y="188" width="6" height="84" rx="3" fill="#1565c0" />
-  <rect x="498" y="280" width="430" height="84" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
-  <rect x="498" y="280" width="6" height="84" rx="3" fill="#1e8449" />
-  <rect x="498" y="372" width="430" height="84" rx="9" fill="#fdf5ec" stroke="#ecd2b3" stroke-width="1.2" />
+  <rect x="498" y="96" width="430" height="84" rx="9" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="498" y="96" width="2" height="84" rx="1" fill="#1565c0" />
+  <rect x="498" y="188" width="430" height="84" rx="9" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="498" y="188" width="2" height="84" rx="1" fill="#1565c0" />
+  <rect x="498" y="280" width="430" height="84" rx="9" fill="white" stroke="#cce7d4" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="498" y="280" width="2" height="84" rx="1" fill="#1e8449" />
+  <rect x="498" y="372" width="430" height="84" rx="9" fill="white" stroke="#ecd2b3" stroke-width="1" stroke-opacity="0.65" />
   <rect x="498" y="372" width="6" height="84" rx="3" fill="#e67e22" />
   <text x="500" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Tijek rješenja</text>
   <text x="500" y="78" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">kontinuitet i geometrija presjeka korak po korak</text>

@@ -24,7 +24,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <!-- Fluidna ispuna nije mapa tlaka, brzine ili temperature. Debljine stijenki uvećane su radi čitljivosti. -->
 <text x="338" y="31" font-size="16" fill="#1a2530" text-anchor="middle" font-weight="700">Couetteov model tankog koncentričnog procjepa</text>
 <text x="338" y="53" font-size="12" fill="#1565c0" text-anchor="middle">Ista geometrija i brzina; zadana viskoznost razlikuje se 10 puta.</text>
-<rect x="53" y="75" width="259" height="25" rx="5" fill="#fdf1ef" stroke="#c0392b" stroke-width="1.2"/>
+<rect x="53" y="75" width="259" height="25" rx="5" fill="white" stroke="#c0392b" stroke-width="1" stroke-opacity="0.55" />
 <text x="183" y="92" font-size="12" fill="#c0392b" text-anchor="middle" font-weight="700">0 °C: μ₁ = 0,40 Pa·s</text>
 <rect id="u02flt_b0fixedbase" x="53" y="114" width="240" height="28" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
 <rect id="u02flt_b0fixed" x="53" y="114" width="240" height="28" rx="0" fill="url(#u02flt_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
@@ -42,7 +42,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="112" y="237" font-size="11" fill="white" text-anchor="middle">vratilo</text>
 <path id="u02flt_b0speed" d="M177 233 L237 233" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
 <text x="179" y="273" font-size="12" fill="#1565c0" text-anchor="middle">v ≈ 6,28 m/s</text>
-<rect x="370" y="75" width="259" height="25" rx="5" fill="#edf8ef" stroke="#1e8449" stroke-width="1.2"/>
+<rect x="370" y="75" width="259" height="25" rx="5" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
 <text x="500" y="92" font-size="12" fill="#1e8449" text-anchor="middle" font-weight="700">90 °C: μ₂ = 0,040 Pa·s</text>
 <rect id="u02flt_b1fixedbase" x="370" y="114" width="240" height="28" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
 <rect id="u02flt_b1fixed" x="370" y="114" width="240" height="28" rx="0" fill="url(#u02flt_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
@@ -81,16 +81,16 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="123.0" y="498" font-size="11" fill="#b7600c" text-anchor="middle">D = 50 mm</text>
 <line x1="83" y1="410" x2="83" y2="485" stroke="#b7600c" stroke-width="1"/>
 <line x1="163" y1="410" x2="163" y2="485" stroke="#b7600c" stroke-width="1"/>
-<rect x="273" y="331" width="365" height="172" rx="7" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
+<rect x="273" y="331" width="365" height="172" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
 <text x="285" y="351" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Zajednički podatci</text>
 <text x="285" y="374" font-size="12" fill="#1a2530" text-anchor="start">D = 50 mm; L = 70 mm; δ = 0,30 mm</text>
 <text x="285" y="393" font-size="12" fill="#1a2530" text-anchor="start">n = 2400 min⁻¹; ω ≈ 251,3 rad/s</text>
 <text x="285" y="412" font-size="12" fill="#1a2530" text-anchor="start">A = πDL; M = (τA)D/2; P = Mω</text>
 <text x="285" y="431" font-size="12" fill="#1a2530" text-anchor="start">Procjep je na skici uvećan.</text>
 <text x="285" y="450" font-size="12" fill="#1a2530" text-anchor="start">Vektori sila nisu u zajedničkom mjerilu.</text>
-<rect x="676" y="39" width="218" height="384" rx="9" fill="#f8fbff" stroke="#cbdce9" stroke-width="1.2"/>
-<rect x="676" y="39" width="218" height="28" rx="7" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="785.0" y="58" font-size="13" fill="white" text-anchor="middle" font-weight="700">Usporedba rezultata</text>
+<rect x="676" y="39" width="218" height="384" rx="9" fill="white" stroke="#cbdce9" stroke-width="1" stroke-opacity="0.65" />
+<rect x="676" y="39" width="218" height="28" rx="7" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="785.0" y="58" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">Usporedba rezultata</text>
 <text x="785" y="110" font-size="12" fill="#1565c0" text-anchor="middle">Naprezanje</text>
 <text x="731" y="140" font-size="14" fill="#c0392b" text-anchor="middle" font-weight="700">8,38 kPa</text>
 <text x="840" y="140" font-size="14" fill="#1e8449" text-anchor="middle" font-weight="700">838 Pa</text>
@@ -103,7 +103,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="785" y="335" font-size="12" fill="#1565c0" text-anchor="middle">Snaga</text>
 <text x="731" y="365" font-size="14" fill="#c0392b" text-anchor="middle" font-weight="700">579 W</text>
 <text x="840" y="365" font-size="14" fill="#1e8449" text-anchor="middle" font-weight="700">57,9 W</text>
-<rect x="676" y="440" width="218" height="63" rx="7" fill="#f4f9fd" stroke="#1e8449" stroke-width="1.2"/>
+<rect x="676" y="440" width="218" height="63" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
 <text x="688" y="460" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">P₁/P₂ = μ₁/μ₂ = 10</text>
 <text x="688" y="483" font-size="12" fill="#1a2530" text-anchor="start">Račun bez ranog zaokruživanja.</text>
 </g>

@@ -73,10 +73,10 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <line x1="646" y1="231" x2="655" y2="325" stroke="#b7600c" stroke-width="1"/>
 <text x="325" y="503" font-size="11" fill="#3a4a56" text-anchor="middle">Isprekidano: početna tlačna ploha istoga klipa.</text>
 <g id="u01v2hd_formulas" transform="translate(700 60)">
-<rect x="0" y="0" width="260" height="310" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
-<rect x="0" y="0" width="260" height="30" rx="8" fill="#1565c0" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="0" y="21" width="260" height="9" rx="0" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="130.0" y="21" font-size="14" fill="white" text-anchor="middle" font-weight="700">Ključne jednadžbe</text>
+<rect x="0" y="0" width="260" height="310" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
+<rect x="0" y="0" width="260" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="21" width="260" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="130.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">Ključne jednadžbe</text>
 <text x="130.0" y="55" font-size="11" fill="#5a6a78" text-anchor="middle">Pretlak u ulju</text>
 <text x="130.0" y="79" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">p = F₁ / A₁</text>
 <text x="130.0" y="100" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">= 250 kPa</text>
@@ -90,7 +90,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="130.0" y="256" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">≈ 5,1 mm</text>
 <line x1="25" y1="274" x2="235" y2="274" stroke="#c8d6e4" stroke-width="1"/>
 </g>
-<rect x="700" y="389" width="260" height="65" rx="7" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.2"/>
+<rect x="700" y="389" width="260" height="65" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
 <text x="830" y="412" font-size="14" fill="#1e8449" text-anchor="middle" font-weight="700">W₁ = W₂ = 27 J</text>
 <text x="830" y="435" font-size="10" fill="#3a4a56" text-anchor="middle">Rad izračunan bez ranog zaokruživanja.</text>
 <text x="830" y="482" font-size="10" fill="#3a4a56" text-anchor="middle">Hodovi i promjeri imaju zasebne skale.</text>

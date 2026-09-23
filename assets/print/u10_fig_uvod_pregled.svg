@@ -61,9 +61,9 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="32" y="432" font-size="12" fill="#8e44ad" text-anchor="start">HGL: tlak + geodetska visina.</text>
 <text x="32" y="455" font-size="11" fill="#1a2530" text-anchor="start">U jednolikom vodu: EGL − HGL = v²/(2g).</text>
 <text x="32" y="478" font-size="10" fill="#1a2530" text-anchor="start">Shematski prikaz; α = 1 u referentnim presjecima.</text>
-<rect x="386" y="46" width="301" height="409" rx="9" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="386" y="46" width="301" height="33" rx="9" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="536" y="69" font-size="15" fill="white" text-anchor="middle" font-weight="700">Ključne jednadžbe poglavlja</text>
+<rect x="386" y="46" width="301" height="409" rx="9" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
+<rect x="386" y="46" width="301" height="33" rx="9" fill="white" stroke="none" stroke-width="1.2"/>
+<text x="536" y="69" font-size="15" fill="#1565c0" text-anchor="middle" font-weight="700">Ključne jednadžbe poglavlja</text>
 <text x="536" y="103" font-size="12" fill="#1565c0" text-anchor="middle">Proširena Bernoullijeva jednadžba</text>
 <text x="536" y="132" font-size="17" fill="#1a2530" text-anchor="middle" font-weight="700">H₁ = H₂ + hw</text>
 <text x="536" y="154" font-size="11" fill="#1a2530" text-anchor="middle">bez stroja; hw ≥ 0</text>

@@ -55,15 +55,15 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="712" y="80" width="238" height="392" rx="10" fill="#f0f7ff" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="712" y="80" width="238" height="32" rx="10" fill="#1565c0" />
-  <rect x="712" y="104" width="238" height="8" fill="#1565c0" />
+  <rect x="712" y="80" width="238" height="392" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="712" y="80" width="238" height="32" rx="10" fill="white" stroke="none" />
+  <rect x="712" y="104" width="238" height="8" fill="white" stroke="none" />
   <line x1="730" y1="184" x2="932" y2="184" stroke="#c8d6e4" stroke-width="1" />
   <line x1="730" y1="252" x2="932" y2="252" stroke="#c8d6e4" stroke-width="1" />
   <line x1="730" y1="320" x2="932" y2="320" stroke="#c8d6e4" stroke-width="1" />
   <line x1="730" y1="388" x2="932" y2="388" stroke="#c8d6e4" stroke-width="1" />
-  <rect x="712" y="482" width="238" height="28" rx="7" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <text x="831" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Ključne jednadžbe</text>
+  <rect x="712" y="482" width="238" height="28" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
+  <text x="831" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Ključne jednadžbe</text>
   <text x="831" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Tlocrtna površina</text>
   <text x="831" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">
     <tspan font-style="italic">A</tspan>

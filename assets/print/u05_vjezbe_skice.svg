@@ -31,7 +31,7 @@
   </defs>
   <rect x="0" y="0" width="960" height="760" fill="white" stroke="none" stroke-width="1.2" />
   <g id="u05vs_z1" transform="translate(28 30)">
-    <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+    <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
     <text x="14" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Z1</text>
     <text x="40" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="start">Pravokutni poklopac</text>
     <path d="M48 51 H195 V188 H48 Z" fill="url(#u05vs_water)" stroke="none" stroke-width="1.2" />
@@ -62,7 +62,7 @@
     <text x="267" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">od gornjeg ruba.</text>
   </g>
   <g id="u05vs_z2" transform="translate(484 30)">
-    <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+    <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
     <text x="14" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Z2</text>
     <text x="40" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="start">Zakrivljeni poklopac</text>
     <path d="M48 50 H166 V125 A44 44 0 0 0 210 169 V188 H48 Z" fill="url(#u05vs_water)" stroke="none" stroke-width="1.2" />
@@ -101,7 +101,7 @@
     <text x="267" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Sile vode na poklopac.</text>
   </g>
   <g id="u05vs_z3" transform="translate(28 274)">
-    <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+    <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
     <text x="14" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Z3</text>
     <text x="40" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="start">Dvije razine vode</text>
     <path d="M48 86.8 H139 V190 H48 Z" fill="url(#u05vs_water)" stroke="none" stroke-width="1.2" />
@@ -143,7 +143,7 @@
     <text x="267" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Nema prolaza vode.</text>
   </g>
   <g id="u05vs_z4" transform="translate(484 274)">
-    <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+    <rect x="0" y="0" width="448" height="230" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
     <text x="14" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Z4</text>
     <text x="40" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="start">Trokutasti poklopac</text>
     <line x1="48" y1="48" x2="236" y2="48" stroke="#1565c0" stroke-width="2" />
@@ -171,7 +171,7 @@
     <text x="267" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">provjeriti b = 1,20 m.</text>
   </g>
   <g id="u05vs_z5" transform="translate(28 518)">
-    <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+    <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
     <text x="14" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Z5</text>
     <text x="40" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="start">Radijalni poklopac</text>
     <path d="M48 54 H137 V103 A70 70 0 0 0 207 173 V189 H48 Z" fill="url(#u05vs_water)" stroke="none" stroke-width="1.2" />
@@ -215,7 +215,7 @@
     <text x="267" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Naći sile i moment u O.</text>
   </g>
   <g id="u05vs_z6" transform="translate(484 518)">
-    <rect x="0" y="0" width="448" height="224" fill="#fbfdff" stroke="#d4e3f0" stroke-width="1.3" rx="10" />
+    <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
     <text x="14" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#3a4a56" text-anchor="start" font-weight="700">Z6</text>
     <text x="40" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="start">Mjerni panel</text>
     <path d="M48 51 H195 V188 H48 Z" fill="url(#u05vs_water)" stroke="none" stroke-width="1.2" />

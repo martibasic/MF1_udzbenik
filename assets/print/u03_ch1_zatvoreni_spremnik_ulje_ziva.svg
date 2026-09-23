@@ -38,15 +38,15 @@
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
     </marker>
   </defs>
-  <rect x="700" y="40" width="250" height="470" rx="10" fill="#f4f9fd" stroke="#1565c0" stroke-width="1.4" />
-  <rect x="700" y="40" width="250" height="32" rx="10" fill="#1565c0" />
-  <rect x="700" y="62" width="250" height="10" fill="#1565c0" />
+  <rect x="700" y="40" width="250" height="470" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
+  <rect x="700" y="40" width="250" height="32" rx="10" fill="white" stroke="none" />
+  <rect x="700" y="62" width="250" height="10" fill="white" stroke="none" />
   <line x1="715" y1="146" x2="935" y2="146" stroke="#c8d6e4" stroke-width="1" />
   <line x1="715" y1="218" x2="935" y2="218" stroke="#c8d6e4" stroke-width="1" />
   <line x1="715" y1="270" x2="935" y2="270" stroke="#c8d6e4" stroke-width="1" />
   <line x1="715" y1="358" x2="935" y2="358" stroke="#c8d6e4" stroke-width="1" />
-  <rect x="700" y="486" width="250" height="22" rx="6" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.2" />
-  <text x="825" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Hod tlaka kroz manometar</text>
+  <rect x="700" y="486" width="250" height="22" rx="6" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
+  <text x="825" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Hod tlaka kroz manometar</text>
   <text x="825" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1) Tlak u točki 2 (ulje, otvoreni)</text>
   <text x="825" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> + ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan>·g·h<tspan baseline-shift="sub" font-size="0.7em">2</tspan>
   </text>
