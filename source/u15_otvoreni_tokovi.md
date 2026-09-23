@@ -47,7 +47,7 @@ U jednodimenzijskom modelu plitke vode, uz približno hidrostatičku raspodjelu 
 Ova je interpretacija preciznija od tvrdnje da je $Fr$ sam po sebi omjer sila: $Fr$ je omjer brzine toka i karakteristične brzine gravitacijskog vala, dok je $Fr^2$ omjer inercijske i gravitacijske skale.
 
 ::: {#ex-rezim-retencijski-kanal .mf1-we}
-<p class="mf1-box-label">P1. Režim u retencijskom kanalu <span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">Režim u retencijskom kanalu <span class="mf1-level">T1</span></p>
 
 Pravokutni kanal širine $b=2{,}0\ \text{m}$ vodi $Q=3{,}0\ \text{m}^3/\text{s}$ pri dubini $y=0{,}80\ \text{m}$.
 
@@ -98,7 +98,7 @@ $$ {#eq-kriticna-dubina}
 Uvrštavanjem $q=v y$ dobiva se $v^2=gy$ odnosno $Fr=1$. Za istu energiju veću od minimuma postoje dvije alternativne dubine: dublja mirna i plića silovita.
 
 ::: {#ex-kriticni-preljev .mf1-we}
-<p class="mf1-box-label">P2. Kritični presjek na širokom preljevu <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Kritični presjek na širokom preljevu <span class="mf1-level">T2</span></p>
 
 Za kanal širine $b=4{,}0\ \text{m}$ i protok $Q=8{,}0\ \text{m}^3/\text{s}$ vrijedi $q=2{,}0\ \text{m}^2/\text{s}$. Kritična dubina je
 
@@ -131,7 +131,7 @@ $$ {#eq-postupno-promjenjivi-tok}
 gdje je $S_0$ nagib dna, a $S_f$ nagib energijske linije zbog trenja. Nazivnik pokazuje zašto presjek s kritičnom dubinom može određivati režim toka: pri $Fr\to1$ mala razlika nagiba može proizvesti veliku promjenu dubine, a jednostavna diferencijalna procjena postaje osjetljiva.
 
 ::: {#ex-dvije-dubine .mf1-we}
-<p class="mf1-box-label">P3. Dvije dubine za istu energiju <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Dvije dubine za istu energiju <span class="mf1-level">T2</span></p>
 
 Za $q=1{,}5\ \text{m}^2/\text{s}$ i $E=1{,}20\ \text{m}$ rješava se
 
@@ -169,7 +169,7 @@ $$
 $$ {#eq-gubitak-skoka}
 
 ::: {#ex-hidraulicki-skok-bazen .mf1-we}
-<p class="mf1-box-label">P4. Disipacijski bazen iza ustave <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Disipacijski bazen iza ustave <span class="mf1-level">T3</span></p>
 
 Ispod ustave pravokutnog kanala izmjereni su $y_1=0{,}25\ \text{m}$ i $v_1=6{,}0\ \text{m/s}$. Tada je
 
@@ -202,7 +202,7 @@ $$ {#eq-manning}
 U ovom SI zapisu Manningov koeficijent $n$ ima jedinicu $\text{s}/\text{m}^{1/3}$; nije bezdimenzijski. Nije ni svojstvo fluida: on sažima hrapavost, oblik, vegetaciju, nepravilnost i stanje kanala te mora imati izvor i područje valjanosti [@chow1959]. U primjerima i zadatcima vrijednosti $n$ zadane su u toj jedinici. Jednadžba nije zamjena za lokalnu bilancu pri brzom suženju, preljevu ili hidrauličkom skoku.
 
 ::: {#ex-manning-osjetljivost .mf1-we}
-<p class="mf1-box-label">P5. Osjetljivost propusnosti odvodnog kanala na održavanje <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Osjetljivost propusnosti odvodnog kanala na održavanje <span class="mf1-level">T3</span></p>
 
 Pravokutni kanal ima $b=3{,}0\ \text{m}$, $y=1{,}0\ \text{m}$ i $S_f=0{,}001$. Površina je $A=3{,}0\ \text{m}^2$, omočen opseg $P=5{,}0\ \text{m}$ i $R_h=0{,}60\ \text{m}$. Za čisti kanal $n=0{,}015$:
 
@@ -253,7 +253,7 @@ U svim vježbama koristi $g=9{,}81\ \mathrm{m/s^2}$.
 
 ::::: {.mf1-vjezbe-list}
 
-### Z1. Froudeov broj i širenje poremećaja {#task-otvoreni-fr .unnumbered .unlisted}
+### Froudeov broj i širenje poremećaja {#task-otvoreni-fr .unnumbered .unlisted}
 
 Pravokutni kanal širine $b=1{,}5\ \mathrm{m}$ vodi $Q=1{,}2\ \mathrm{m^3/s}$ pri dubini $y=0{,}60\ \mathrm{m}$. Odredi srednju brzinu, Froudeov broj te smjer i brzinu obaju dugih gravitacijskih poremećaja prema nepomičnoj obali. Pozitivan smjer je nizvodno; primijeni model plitke vode s približno hidrostatičkim tlakom.
 
@@ -275,7 +275,7 @@ $v\approx1{,}333\ \mathrm{m/s}$, $Fr\approx0{,}550$, $c\approx2{,}426\ \mathrm{m
 
 [Razina: T1]{.mf1-task-level}
 
-### Z2. Kritična dubina i minimalna energija {#task-kriticna-dubina .unnumbered .unlisted}
+### Kritična dubina i minimalna energija {#task-kriticna-dubina .unnumbered .unlisted}
 
 U pravokutnom kanalu protok po jedinici širine je $q=3{,}0\ \mathrm{m^2/s}$. Za hidrostatički model i korekcijski faktor kinetičke energije jednak jedinici odredi kritičnu dubinu i minimalnu specifičnu energiju.
 
@@ -297,7 +297,7 @@ $y_c\approx0{,}972\ \mathrm{m}$ i $E_{min}\approx1{,}46\ \mathrm{m}$; u kritičn
 
 [Razina: T1]{.mf1-task-level}
 
-### Z3. Geometrija i tok trapeznog kanala {#task-trapezni-presjek .unnumbered .unlisted}
+### Geometrija i tok trapeznog kanala {#task-trapezni-presjek .unnumbered .unlisted}
 
 U trapeznom kanalu razlikuj površinu poprečnog presjeka toka, širinu slobodne površine i omočen opseg. Iz geometrije odredi obje hidrauličke duljine, a zatim klasificiraj tok. Obrazloži koja duljina ulazi u brzinu gravitacijskog vala i zašto je ne smiješ zamijeniti duljinom za otpor strujanju.
 
@@ -323,7 +323,7 @@ $A=3{,}375\ \mathrm{m^2}$, $T=5{,}100\ \mathrm{m}$, $P\approx5{,}645\ \mathrm{m}
 
 <span id="task-alternativne-dubine"></span>
 
-### Z4. Kontrolni presjek na pragu {#task-kontrolni-presjek-na-pragu .unnumbered .unlisted}
+### Kontrolni presjek na pragu {#task-kontrolni-presjek-na-pragu .unnumbered .unlisted}
 
 Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Provjeri može li voda prijeći preko širokog, blagog praga uz nepromijenjenu uzvodnu dubinu. Odredi graničnu visinu dna i odaberi ostvarivu dubinu na tjemenu prema neprekinutom nastavku uzvodnog režima.
 
@@ -349,7 +349,7 @@ $y_c\approx0{,}790179\ \mathrm{m}$, $E_{min}\approx1{,}185268\ \mathrm{m}$ i $\D
 
 [Razina: T2]{.mf1-task-level}
 
-### Z5. Provjera mjerenja hidrauličkog skoka {#task-skok-mjerenje .unnumbered .unlisted}
+### Provjera mjerenja hidrauličkog skoka {#task-skok-mjerenje .unnumbered .unlisted}
 
 Provjeri zatvara li sintetički mjerni skup bilancu količine gibanja kroz hidraulički skok. Odaberi kontrolni volumen s rubnim presjecima izvan valjka skoka, prikaži vanjske sile i usporedi rezidual s mjernom nesigurnošću. Zaključak ograniči na zadani model i kriterij slaganja mjerenja.
 
@@ -375,7 +375,7 @@ $q=1{,}5000\ \mathrm{m^2/s}$, $u_q\approx0{,}01546\ \mathrm{m^2/s}$, $R\approx-0
 
 [Razina: T3]{.mf1-task-level}
 
-### Z6. Propusnost oborinskog kanala {#task-klimatski-kanal .unnumbered .unlisted}
+### Propusnost oborinskog kanala {#task-klimatski-kanal .unnumbered .unlisted}
 
 Usporedi tri stanja održavanja oborinskog kanala i provjeri slobodni rub pri zadanom protoku. Zatim odvojeno provjeri disipacijski bazen pri projektnom dotoku i pri kapacitetima kanala. Obrazloži odluku uz zadani kriterij nepovoljnije hrapavosti i granice podataka.
 

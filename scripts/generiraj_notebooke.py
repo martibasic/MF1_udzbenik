@@ -1,13 +1,17 @@
-"""Generiranje interaktivnih Jupyter notebooka za udžbenik.
+"""Arhivski predlošci Jupyter bilježnica, izvan aktualnog izdanja.
 
 Svaki notebook prati istu akademsku strukturu (naslov, cilj,
 pretpostavke, računski model, interaktivni prikaz, pitanja, veza
 s teorijom). Definicije pojedinog notebooka nalaze se u rječniku
-NOTEBOOKS na dnu ove datoteke. Skripta iz tih definicija stvara
-gotove .ipynb datoteke u mapi notebooks/.
+NOTEBOOKS na dnu ove datoteke. Predlošci su zastarjeli i služe samo
+za povijesnu usporedbu. Aktualne bilježnice uređuju se izravno u notebooks/.
 
 Pokretanje:
-    python scripts/generiraj_notebooke.py
+    python scripts/generiraj_notebooke.py --archive-output tools/tmp/stari-notebookovi
+
+Bez izričite izlazne mape ništa se ne zapisuje. Izlaz mora biti nova mapa
+izvan repozitorija ili unutar ignorirane mape tools/tmp/. Postojeće datoteke
+i objavljeni izvori nikada se ne prepisuju.
 
 Ovisnosti:
     Samo standardna knjižnica (json).
@@ -15,12 +19,12 @@ Ovisnosti:
 
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 from typing import Any
 
 KORIJEN = Path(__file__).resolve().parent.parent
-MAPA_NOTEBOOKA = KORIJEN / "notebooks"
 
 STANDARDNI_METADATA: dict[str, Any] = {
     "kernelspec": {
@@ -2295,22 +2299,44 @@ NOTEBOOKS["u14_cd_re_kugla"] = dict(
 # Glavna funkcija
 # ============================================================================
 
-def main() -> int:
-    MAPA_NOTEBOOKA.mkdir(parents=True, exist_ok=True)
-    print(f"Mapa za izlaz: {MAPA_NOTEBOOKA}")
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--archive-output",
+        type=Path,
+        required=True,
+        help="Nova arhivska mapa izvan repozitorija ili unutar tools/tmp/.",
+    )
+    args = parser.parse_args(argv)
+    output = args.archive_output.resolve()
+    scratch = (KORIJEN / "tools" / "tmp").resolve()
+    if output.is_relative_to(KORIJEN) and not output.is_relative_to(scratch):
+        parser.error(
+            "Arhivski predlošci ne smiju se zapisivati u izvore ni izdanje. "
+            "Odaberi novu mapu unutar tools/tmp/ ili izvan repozitorija."
+        )
+    if output.exists():
+        parser.error("Izlazna mapa već postoji; odaberi novu mapu. Ništa nije prepisano.")
+
+    # Pripremi sadržaj prije stvaranja izlaza. mkdir i način 'x' dodatno
+    # sprječavaju prepisivanje ako se odredište promijeni nakon provjere.
+    notebooks = {
+        ime: json.dumps(izgradi_notebook(**podaci), indent=1, ensure_ascii=False) + "\n"
+        for ime, podaci in NOTEBOOKS.items()
+    }
+    output.mkdir(parents=True, exist_ok=False)
+    print(f"Arhivska mapa za usporedbu: {output}")
     print(f"Broj notebooka: {len(NOTEBOOKS)}")
     print()
 
-    for ime, podaci in NOTEBOOKS.items():
-        nb = izgradi_notebook(**podaci)
-        put = MAPA_NOTEBOOKA / f"{ime}.ipynb"
-        with put.open("w", encoding="utf-8") as f:
-            json.dump(nb, f, indent=1, ensure_ascii=False)
-            f.write("\n")
+    for ime, content in notebooks.items():
+        put = output / f"{ime}.ipynb"
+        with put.open("x", encoding="utf-8") as f:
+            f.write(content)
         print(f"  [OK] {put.name}")
 
     print()
-    print("Gotovo. Notebooci su spremljeni u notebooks/.")
+    print("Arhivski izvoz dovršen. Aktualne bilježnice nisu mijenjane.")
     return 0
 
 

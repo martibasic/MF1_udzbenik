@@ -1,0 +1,61 @@
+{
+  "project": {
+    "resources": [
+      "assets/**",
+      "data/cfd/**",
+      "web/**",
+      "styles/**"
+    ]
+  },
+  "lang": "hr",
+  "language": "_language.yml",
+  "bibliography": "references.bib",
+  "execute": {
+    "echo": false,
+    "warning": false,
+    "message": false,
+    "enabled": false,
+    "freeze": false
+  },
+  "html": {
+    "theme": [
+      "flatly",
+      "design-system/quarto-theme.scss"
+    ],
+    "include-after-body": "web/includes/behaviour.html",
+    "toc": true,
+    "toc-depth": 2,
+    "toc-title": "Na ovoj stranici",
+    "grid": {
+      "sidebar-width": "240px",
+      "margin-width": "180px",
+      "gutter-width": "1.5rem"
+    },
+    "number-sections": true,
+    "code-fold": false,
+    "anchor-sections": true,
+    "link-external-icon": false,
+    "link-external-newwindow": false,
+    "fig-responsive": true
+  },
+  "typst": {
+    "toc": true,
+    "toc-depth": 2,
+    "number-sections": true,
+    "section-numbering": "1.1",
+    "colorlinks": true,
+    "page-numbering": "1",
+    "theorem-appearance": "simple",
+    "include-in-header": [
+      "assets/typst/mf1-tokens.typ",
+      "assets/typst/mf1-author-blocks.typ",
+      "assets/typst/mf1-figures.typ",
+      "assets/typst/mf1-reading.typ"
+    ],
+    "template-partials": [
+      "assets/typst/typst-show.typ",
+      "assets/typst/biblio.typ"
+    ],
+    "keep-typ": false
+  }
+}

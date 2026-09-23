@@ -1,0 +1,38 @@
+/* Browser print presentation; native PDF uses the matching Typst tokens. */
+@page { size: A4; margin: 22mm 26mm; }
+@media print {
+  :root { font-size: 11pt; }
+  body { background: white; color: black; font-size: 1rem; }
+  .no-print, #quarto-sidebar, .sidebar, .navbar, .page-navigation,
+  #quarto-margin-sidebar, .mf1-chapter-tools, .mf1-quick-links,
+  .mf1-figure-expand, .mf1-table-hint, .mf1-screen-figure,
+  [data-hint-key="true"], [data-answer-key="true"], .mf1-hint-online, .mf1-answer-online {
+    display: none !important; /* Output visibility overrides framework utilities. */
+  }
+  body #quarto-content, body .quarto-container, body main {
+    display: block; width: auto; max-width: none; margin: 0; padding: 0;
+  }
+  main p { orphans: 3; widows: 3; }
+  h1, h2, h3, h4, .mf1-component-title, .mf1-minor-title,
+  .mf1-example-field > p:first-child { break-after: avoid; }
+  article, section, aside, .mf1-vjezbe-list { break-inside: auto; }
+  tr, .mf1-interaktivno-akcija { break-inside: avoid; }
+  .mf1-problem > :first-child { break-after: avoid; }
+  .mf1-task-level { break-before: avoid; }
+  .mf1-table-scroll, .math.display { overflow: visible; }
+  .mf1-table-scroll table { min-width: 0; }
+  thead { display: table-header-group; }
+  figcaption { break-before: avoid; font-size: var(--figure-caption-size); }
+  figure { break-inside: avoid; }
+  figure:has(.mf1-print-figure) { break-inside: auto; }
+  .mf1-print-figure { display: block; }
+  .mf1-print-figure > img {
+    display: block; margin: 4pt auto; max-width: none;
+    border: 0; border-radius: 0; padding: 0; box-shadow: none; break-inside: avoid;
+  }
+  .mf1-print-figure > img.mf1-keep-with-next { break-after: avoid; }
+  .mf1-error-pair { display: block; }
+  a, a:visited { color: inherit; border: 0; }
+  .mf1-interaktivno-veza { border: 0.5pt solid currentColor; }
+  .mf1-level { color: black; border: 0.5pt solid black; background: transparent; }
+}

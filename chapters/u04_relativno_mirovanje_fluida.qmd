@@ -1,6 +1,10 @@
 ---
 title: "Relativno mirovanje fluida"
 page-layout: article
+mf1-document-id: u04
+mf1-document-kind: chapter
+mf1-document-number: "4"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u04_relativno_mirovanje_fluida.md >}}

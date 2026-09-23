@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "components": {
+    "ChapterHeader": {
+      "native": "Header",
+      "html": "header"
+    },
+    "SectionHeader": {
+      "native": "Header",
+      "html": "section"
+    },
+    "Figure": {
+      "native": "Figure",
+      "html": "figure",
+      "variants": [
+        "mini",
+        "small",
+        "standard",
+        "wide",
+        "composite",
+        "comparison"
+      ]
+    },
+    "Equation": {
+      "native": "Math",
+      "html": "span",
+      "numbering": "chapter"
+    },
+    "Example": {
+      "classes": [
+        "mf1-we",
+        "mf1-gp",
+        "mf1-po",
+        "mf1-ch"
+      ],
+      "html": "article",
+      "pdf_mode": "example",
+      "accent": "mf1-c-we",
+      "label": "Riješeni primjer",
+      "numbering": "P"
+    },
+    "Problem": {
+      "classes": [
+        "mf1-problem"
+      ],
+      "html": "article",
+      "numbering": "Z",
+      "levels": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "Solution": {
+      "classes": [
+        "mf1-solution"
+      ],
+      "labels": [
+        "Rješenje",
+        "Postupak rješenja"
+      ],
+      "html": "section"
+    },
+    "Assumptions": {
+      "classes": [
+        "mf1-assumptions"
+      ],
+      "labels": [
+        "Pretpostavke i model"
+      ],
+      "html": "section"
+    },
+    "Given": {
+      "classes": [
+        "mf1-given"
+      ],
+      "labels": [
+        "Zadano"
+      ],
+      "html": "section"
+    },
+    "Required": {
+      "classes": [
+        "mf1-required"
+      ],
+      "labels": [
+        "Traženo",
+        "Traži se"
+      ],
+      "html": "section"
+    },
+    "Interpretation": {
+      "classes": [
+        "mf1-fizikalno-znacenje",
+        "mf1-interpretation"
+      ],
+      "labels": [
+        "Tumačenje rezultata",
+        "Provjera i komentar",
+        "U tehnici to znači"
+      ],
+      "html": "section",
+      "pdf_mode": "rail",
+      "accent": "mf1-c-interpretation",
+      "label": "Fizikalno značenje",
+      "role": "note"
+    },
+    "EngineeringContext": {
+      "classes": [
+        "mf1-application",
+        "mf1-context"
+      ],
+      "labels": [
+        "Kontekst"
+      ],
+      "html": "section",
+      "pdf_mode": "rail",
+      "accent": "mf1-accent-d",
+      "label": "Inženjerski kontekst",
+      "role": "note"
+    },
+    "NumericalBridge": {
+      "classes": [
+        "mf1-numerika"
+      ],
+      "html": "section",
+      "pdf_mode": "rail",
+      "accent": "mf1-c-numerika",
+      "label": "Numerički pokus",
+      "role": "note"
+    },
+    "MathDerivation": {
+      "classes": [
+        "mf1-izvod"
+      ],
+      "html": "section",
+      "pdf_mode": "rail",
+      "accent": "mf1-muted",
+      "label": "Izvod"
+    },
+    "Important": {
+      "classes": [
+        "mf1-temelj"
+      ],
+      "html": "section",
+      "pdf_mode": "rail",
+      "accent": "mf1-c-foundation",
+      "label": "Temelj",
+      "role": "note"
+    },
+    "Warning": {
+      "classes": [
+        "mf1-warning"
+      ],
+      "html": "section",
+      "pdf_mode": "alert",
+      "accent": "mf1-c-warning",
+      "label": "Oprez",
+      "role": "note"
+    },
+    "Summary": {
+      "classes": [
+        "mf1-mini-summary",
+        "mf1-zavrsni-okvir"
+      ],
+      "html": "section",
+      "pdf_mode": "panel",
+      "accent": "mf1-c-foundation",
+      "label": "Sažetak"
+    },
+    "InteractiveFigure": {
+      "classes": [
+        "mf1-interaktivno"
+      ],
+      "html": "section",
+      "pdf_mode": "rail",
+      "accent": "mf1-c-numerika",
+      "label": "Numerički pokus",
+      "fallback": "links-and-qr",
+      "role": "note"
+    },
+    "Table": {
+      "native": "Table",
+      "html": "table"
+    },
+    "GlossaryTerm": {
+      "classes": [
+        "mf1-term"
+      ],
+      "html": "dfn"
+    },
+    "Reference": {
+      "native": "Link",
+      "html": "a"
+    },
+    "Deeper": {
+      "classes": [
+        "mf1-dublje"
+      ],
+      "html": "section",
+      "pdf_mode": "rail",
+      "accent": "mf1-c-deeper",
+      "label": "Dublje",
+      "role": "note"
+    },
+    "Preparation": {
+      "classes": [
+        "mf1-priprema"
+      ],
+      "html": "section",
+      "pdf_mode": "panel",
+      "accent": "mf1-muted",
+      "label": "Prije čitanja poglavlja",
+      "visibility": [],
+      "role": "note"
+    },
+    "SelfCheck": {
+      "classes": [
+        "mf1-samoprovjera"
+      ],
+      "html": "section",
+      "pdf_mode": "panel",
+      "accent": "mf1-muted",
+      "label": "Konceptualna provjera",
+      "visibility": [],
+      "role": "note"
+    },
+    "Checklist": {
+      "classes": [
+        "mf1-checklist"
+      ],
+      "html": "section",
+      "pdf_mode": "panel",
+      "accent": "mf1-muted",
+      "label": "Provjera",
+      "role": "note"
+    },
+    "Note": {
+      "classes": [
+        "mf1-print-note"
+      ],
+      "html": "section",
+      "pdf_mode": "panel",
+      "accent": "mf1-muted",
+      "label": "Napomena",
+      "role": "note"
+    },
+    "Step": {
+      "classes": [
+        "mf1-step"
+      ],
+      "html": "div",
+      "numbering": "local"
+    },
+    "ModelLimit": {
+      "classes": [
+        "mf1-granica-modela"
+      ],
+      "html": "section",
+      "pdf_mode": "rail",
+      "accent": "mf1-c-warning",
+      "label": "Granica modela",
+      "role": "note"
+    }
+  }
+}

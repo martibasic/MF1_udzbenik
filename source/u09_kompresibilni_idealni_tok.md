@@ -43,7 +43,7 @@ Pascalov zakon opisuje novu statičku ravnotežu nestlačivog modela; ne tvrdi d
 :::
 
 ::: {#ex-akusticko-vrijeme .mf1-we}
-<p class="mf1-box-label">P1. Vrijeme odziva pneumatskog voda <span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">Vrijeme odziva pneumatskog voda <span class="mf1-level">T1</span></p>
 
 Zrak pri $T=293\ \text{K}$ nalazi se u vodu duljine $L=85\ \text{m}$. Za $\gamma=1{,}4$ i $R=287\ \text{J/(kg K)}$ procijeni najkraće vrijeme u kojem promjena ventila može biti opažena na drugom kraju.
 
@@ -66,7 +66,7 @@ $$ {#eq-mach}
 Kriterij $Ma<0{,}3$ korisna je inženjerska heuristika, a ne univerzalni zakon. U izentropskom toku idealnog plina relativna promjena gustoće obično je tada nekoliko posto ili manja. I pri malom Machovu broju gustoća može snažno varirati zbog grijanja, kemijske reakcije ili velike hidrostatičke razlike; kriterij se zato uvijek provjerava zajedno s termodinamičkim uvjetima.
 
 ::: {#ex-odabir-modela-kompresibilnosti .mf1-we}
-<p class="mf1-box-label">P2. Dovod zraka baterijskom kompresoru <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Dovod zraka baterijskom kompresoru <span class="mf1-level">T2</span></p>
 
 Zrak pri $20\ ^\circ\text{C}$ teče kroz vod promjera $D=80\ \text{mm}$ protokom $Q=0{,}42\ \text{m}^3/\text{s}$. Površina je $A=\pi D^2/4=5{,}027\cdot10^{-3}\ \text{m}^2$, pa je
 
@@ -110,7 +110,7 @@ $$ {#eq-stagnacijski-omjeri}
 Ukupna temperatura ostaje konstantna i kroz adijabatski udarni val, ali ukupni tlak pada jer je udarni val ireverzibilan.
 
 ::: {#ex-stagnacijski-zrak .mf1-we}
-<p class="mf1-box-label">P3. Pitotova sonda u brzom strujanju zraka <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Pitotova sonda u brzom strujanju zraka <span class="mf1-level">T2</span></p>
 
 Za $T=260\ \text{K}$, $p=55\ \text{kPa}$ i $Ma=0{,}80$ uz $\gamma=1{,}4$:
 
@@ -158,7 +158,7 @@ $$
 $$ {#eq-priguseni-protok}
 
 ::: {#ex-priguseni-ventil .mf1-we}
-<p class="mf1-box-label">P4. Gornja granica protoka sigurnosnog otvora <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Gornja granica protoka sigurnosnog otvora <span class="mf1-level">T3</span></p>
 
 Spremnik zraka ima $p_0=600\ \text{kPa(abs)}$ i $T_0=300\ \text{K}$. Idealizirani otvor ima $A^*=50\ \text{mm}^2$. Za $\gamma=1{,}4$ i $R=287\ \text{J/(kg K)}$:
 
@@ -204,7 +204,7 @@ $$ {#eq-normalni-skok}
 Fizikalno dopušten adijabatski normalni udarni val povećava entropiju: nadzvučni ulaz postaje podzvučni, statički tlak i temperatura rastu, a ukupni tlak pada.
 
 ::: {#ex-normalni-udar .mf1-we}
-<p class="mf1-box-label">P5. Udarni val u ispitnoj sapnici <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Udarni val u ispitnoj sapnici <span class="mf1-level">T3</span></p>
 
 Za zrak s $Ma_1=2{,}0$ i $\gamma=1{,}4$:
 
@@ -259,7 +259,7 @@ U zadatcima plin promatraj kao kalorijski idealan. Brzina zvuka odnosi se na pli
 
 ::::: {.mf1-vjezbe-list}
 
-### Z1. Brzina zvuka u heliju {#task-brzina-zvuka-helium .unnumbered .unlisted}
+### Brzina zvuka u heliju {#task-brzina-zvuka-helium .unnumbered .unlisted}
 
 Helij miruje pri $T=300\ \text{K}$. Za $\gamma=1{,}667$ i $R=2077\ \text{J/(kg K)}$ izračunaj brzinu zvuka. Vrlo malen tlačni poremećaj nastaje u točki O: označi oba uzdužna smjera njegova širenja i predznake brzina prema osi $x$ sa skice.
 
@@ -280,7 +280,7 @@ $a\approx1019\ \text{m/s}$; desno je brzina $+a$, lijevo $-a$. Srednja brzina he
 
 [Razina: T1]{.mf1-task-level}
 
-### Z2. Machov broj u ventilacijskom vodu {#task-mach-ventilacija .unnumbered .unlisted}
+### Machov broj u ventilacijskom vodu {#task-mach-ventilacija .unnumbered .unlisted}
 
 Zrak pri $T=20\ ^\circ\text{C}$ struji ravnim kružnim vodom promjera $D=0{,}20\ \text{m}$. Lokalni volumenski protok pri tom stanju jest $Q=2{,}0\ \text{m}^3/\text{s}$, a ne protok preračunat na standardne uvjete. Uz $\gamma=1{,}4$ i $R=287\ \text{J/(kg K)}$ odredi srednju brzinu i $Ma$. Za približno jednoliko strujanje, malo zagrijavanje i malu promjenu tlaka provjeri zadovoljava li početna procjena konstantne gustoće kriterij $Ma<0{,}3$.
 
@@ -303,7 +303,7 @@ $v\approx63{,}66\ \text{m/s}$ i $Ma\approx0{,}186$. Početna procjena konstantne
 
 <span id="task-stagnacijska-temperatura"></span>
 
-### Z3. Akustičko mjerenje brzine i temperature {#task-akusticko-mjerenje-toka .unnumbered .unlisted}
+### Akustičko mjerenje brzine i temperature {#task-akusticko-mjerenje-toka .unnumbered .unlisted}
 
 U ravnom vodu zrak stacionarno i jednoliko struji od A prema B. Nepomične akustičke mjerne točke udaljene su $L=1{,}20\ \text{m}$. Malen signal putuje iz A u B za $t_{AB}=3{,}00\ \text{ms}$, a iz B u A za $t_{BA}=4{,}00\ \text{ms}$. To su vremena samog putovanja nakon korekcije kašnjenja elektronike. Zanemari refleksije i raspršenje te uzmi $\gamma=1{,}4$ i $R=287\ \text{J/(kg K)}$. Odredi brzinu toka $v$, brzinu zvuka $a$, statičku temperaturu $T$ i $Ma$. Objasni zašto je uzvodni prijenos moguć i zašto $L/t_{AB}$ nije sama brzina zvuka.
 
@@ -324,7 +324,7 @@ $v=50{,}0\ \text{m/s}$, $a=350\ \text{m/s}$, $T\approx304{,}9\ \text{K}$ i $Ma\a
 
 [Razina: T2]{.mf1-task-level}
 
-### Z4. Protutlak i prigušenje konvergentne sapnice {#task-priguseni-protok .unnumbered .unlisted}
+### Protutlak i prigušenje konvergentne sapnice {#task-priguseni-protok .unnumbered .unlisted}
 
 Velika mirna komora napaja konvergentnu sapnicu fiksne geometrije. Manometarski tlak komore jest $p_{0,M}=7{,}00\ \text{bar}$, a atmosferski $p_{atm}=1{,}00\ \text{bar(abs)}$. Razmotri dvije stacionarne postavke manometarskog protutlaka: $p_{b,M}^{(I)}=4{,}00\ \text{bar}$ i $p_{b,M}^{(II)}=3{,}00\ \text{bar}$. Za zrak uz $\gamma=1{,}4$ i izentropski tok do izlaza odredi kritični apsolutni tlak $p^*$, režim u oba slučaja te izlazne $p_e$ i $Ma_e$. Objasni može li se protok dalje povećavati snižavanjem protutlaka u slučaju II uz iste stagnacijske uvjete. Kapacitet se ne traži.
 
@@ -345,7 +345,7 @@ $p_0=8{,}00\ \text{bar(abs)}$, $p^*\approx4{,}226\ \text{bar(abs)}$. I: $p_b=p_e
 
 [Razina: T2]{.mf1-task-level}
 
-### Z5. Geometrija ili koeficijent protoka? {#task-sapnica-model .unnumbered .unlisted}
+### Geometrija ili koeficijent protoka? {#task-sapnica-model .unnumbered .unlisted}
 
 Za nastavnu provjeru konvergentne sapnice zadani su sintetički podatci: $p_0=600\ \text{kPa(abs)}$, $T_0=300\ \text{K}$, $p_b=100\ \text{kPa(abs)}$ i $\dot m=0{,}0595\ \text{kg/s}$. Nazivna površina izlaza jest $A_n=50{,}0\ \text{mm}^2$, a neovisno optičko mjerenje stvarnog slobodnog presjeka daje $A_g=48{,}0\ \text{mm}^2$. U ovom zadatku zanemari mjerne nesigurnosti. Za zrak uz $\gamma=1{,}4$ i $R=287\ \text{J/(kg K)}$ koristi model $\dot m=C_d\dot m_{ideal}(A_g,p_0,T_0)$.
 
@@ -368,7 +368,7 @@ $p_b/p_0=0{,}167<0{,}528$; $C_dA_g\approx42{,}50\ \text{mm}^2$. Za $A_g=48{,}0\ 
 
 [Razina: T3]{.mf1-task-level}
 
-### Z6. Provjera podataka o udarnom valu {#task-udarni-val-podaci .unnumbered .unlisted}
+### Provjera podataka o udarnom valu {#task-udarni-val-podaci .unnumbered .unlisted}
 
 U nastavnom skupu sintetičkih podataka za stacionarni normalni val u zračnom kanalu statički priključci prije i poslije vala daju $p_1=80{,}0\pm0{,}4\ \text{kPa(abs)}$ i $p_2=360{,}0\pm1{,}8\ \text{kPa(abs)}$. Ukupni tlak prije vala dobiva se neovisnim mjerenjem u velikoj mirnoj napojnoj komori: $p_{01}=626\pm4\ \text{kPa(abs)}$. Pretpostavi izentropski put od komore do presjeka 1, bez ranijeg vala. Podzvučna Pitotova sonda u presjeku 2, otvorom okrenuta uzvodno, daje $p_{02}=451\pm4\ \text{kPa(abs)}$. Zanemari poremećaj glavnog toka sondom i gubitke u mjernim vodovima. Sve oznake $\pm$ označuju male, međusobno neovisne standardne nesigurnosti mjerenja; $\gamma=1{,}4$ smatraj točnim.
 

@@ -37,6 +37,12 @@ Profilni referentni paket umjesto sintetičke `solver_history.csv` sadrži
 `experimental_forces.csv`. Nedostupna povijest izvornog rješavača navedena je u
 `case.json` i ne popunjava se izmišljenim rezidualima.
 
+Za dovršen nastavni račun Z6 u 12. poglavlju dodan je
+`hydrofoil_experiment/teaching_comparison.json`: središnji koeficijenti
+izvedeni su iz javnih tablica, a nedostajuće nesigurnosti izričito su
+pretpostavljene i obrazložene. Usporedba i analiza osjetljivosti imaju
+brojčani zaključak, uz očuvan status izvornih arhivskih ograničenja.
+
 Sva polja u CSV-u imaju jedinicu u nazivu. `mass_imbalance_percent` definiran je
 kao `100*abs(m_in-m_out)/max(abs(m_in),abs(m_out))`. Reziduali su
 bezdimenzijski L2 reziduali kako ih definira ovaj nastavni skup, a ne univerzalno

@@ -1,6 +1,10 @@
 ---
 title: "Diferencijalni opis realnog toka"
 page-layout: article
+mf1-document-id: u12
+mf1-document-kind: chapter
+mf1-document-number: "12"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u12_diferencijalni_opis_realnog_toka.md >}}

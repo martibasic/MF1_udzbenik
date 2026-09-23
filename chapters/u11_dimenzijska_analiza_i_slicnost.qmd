@@ -1,6 +1,10 @@
 ---
 title: "Dimenzijska analiza i sličnost"
 page-layout: article
+mf1-document-id: u11
+mf1-document-kind: chapter
+mf1-document-number: "11"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u11_dimenzijska_analiza_i_slicnost.md >}}

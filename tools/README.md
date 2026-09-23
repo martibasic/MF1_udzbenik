@@ -1,5 +1,17 @@
 # `tools/` — pomoćne skripte
 
+Arhitektura i izvođenje svih prikaza opisani su u
+[vodiču](../docs/arhitektura.md). Prije provjera nakon uređivanja pokreni
+`python scripts/build_book.py --write`.
+
+| Provjera arhitekture | Namjena |
+| --- | --- |
+| `test_book_model.py` | Premještanje poglavlja i objekata, očuvanje ID-jeva i formula, odbijanje neispravnih referencija, fizička širina figure iz PDF margine. |
+| `test_render_workspace.py` | Izolacija Quarto predmemorije, očuvanje izlaza nakon neuspjelog rendera ili izmjene izvora, zaključavanje između procesa. |
+| `test_component_visibility.py` | Stvarni HTML/Typst adapteri: promjena samo registra uključuje/skriva stare i nove komponente te povezane naslove za web/PDF/print. |
+| `audit_architecture.py` | Jedna hijerarhija, aktualne izvedenice, semantičke komponente, razine i slojevi stilova. |
+| `audit_rendered_model.py _site` | Stvarni brojevi sekcija, jednadžbi, captiona i P/Z objekata u webu i zbirnom ispisu. |
+
 Skripte za numeričku verifikaciju sadržaja i za obradu SVG skica u `assets/print/`.
 Sve se pokreću iz korijena projekta, npr. `python tools/verify_all.py`.
 Numerička verifikacija i SVG alati koriste standardnu biblioteku Pythona i
@@ -21,7 +33,11 @@ pinani `PyMuPDF` iz korijenskog `requirements.txt`.
 | `qa_audit.py` | AST provjera koja pronalazi `_check(..., x, x)`, potvrđuje točno šest aktualnih task anchora po modulu, strogo validira svih 90 zapisa sheme v2, ponovno ih generira u memoriji te povezuje deklarirane result-ID-jeve sa stvarnim izvršenjem. |
 | `audit_publication.py` | Provjerava novu kanonsku strukturu U01–U15: 5–7 riješenih primjera i šest zadataka ciljane raspodjele po poglavlju, stabilne i jedinstvene ID-jeve, slike i SVG pristupačnost, citate te javne JupyterLite poveznice. |
 | `audit_typst.py` | Provjerava da PDF profil uključuje nativnu Typst komponentu i Lua mapiranje svih standardnih autorskih blokova, da su dugi blokovi označeni kao prelomivi te da komponentu ne skriva `.gitignore`. |
-| `audit_pdf.py` | Nakon PDF rendera otvara stvarni `_book/mehanika-fluida-1.pdf`: provjerava A4 MediaBox svih stranica, ugovoreni raspon opsega, naslov i autora, tekstualnu ekstrakciju kazala i U01–U15 te slijed oznaka slika prema kanonskim izvorima. U memoriji rasterizira početne stranice U01, U08 i U15 i odbija prazne izlaze. Ne ostavlja rastere u repozitoriju. |
+| `audit_pdf.py` | Provjerava stvarni nativni PDF: A4, regresijski raspon 310–380 stranica, metapodatke, kazalo, U01–U15 i slijed oznaka slika. Obrazloženje novog prijeloma: `docs/ispis-skica.md`. |
+| `audit_pdf_layout.py` | Na stvarnom PDF-u uspoređuje svih 17 rasterskih QR uzoraka s izvornim modulima i provjerava obje poveznice, razmak uz brojeve jednadžbi, 18 zapisa literature u E.7 te odvojene opise slika/QR blokova i izlazak teksta izvan stranice. Dopunjuje, ne zamjenjuje vizualni pregled svih stranica. |
+| `build_print_figures.mjs` | Iz kanonskih SVG-ova generira tiskovne izvedenice MINI/STANDARD/WIDE/COMPOSITE, zasebno slaže geometriju i oznake od 9–9,5 pt. Zajednički tokeni su u `assets/figure-tokens.json`; upute i iznimke opisane su u `docs/ispis-skica.md`. |
+| `audit_print_layouts.mjs` | Provjerava pokrivenost svih 94 izvora i 3363 tekstna elementa te poziva `audit_print_figures.mjs`: hashovi ulaza i izvedenica, svih 3338 nepraznih oznaka i indeksa, koordinate zadržane geometrije, font najmanje 9 pt, preklapanja i clipping. Potreban je Chrome/Chromium/Edge i `npm ci`. |
+| `audit_print_site.mjs` | Provjerava da se mrežne skice nisu zamijenile na zaslonu, a ispis prikazuje sve učitane tiskovne retke u zadanim fizičkim veličinama, bez skaliranja fonta i izlaska iz stranice. |
 | `audit_viewports.mjs` | Pregledava 24 HTML stranice na 320, 768 i 1440 px; provjerava prelijevanje sadržaja, WCAG, vidljivost i rad tipkovničkog fokusa, lokalno pomicanje tablica, povećanje skica i odredišta brzih poveznica poglavlja. Provjerava i A4 ispis te učitavanje notebooka i spremnost Python kernela (Idle) u JupyterLiteu. Pokreni nakon rendera i izgradnje JupyterLitea: `npm run audit:viewports -- _site`. |
 | `verify_physics.py` | Neovisni golden testovi temeljnih bilanci i kritičnih pretvorbi: Pascal, hidrostatika, kontinuitet, gubici, paralelne grane, smjer sile na simetričnom koljenu, Wh→s, dvofluidni uzgon i Froudeovo skaliranje. |
 | `execute_notebooks.py` | Validira i izvršava svih 17 obveznih notebooka u čistim kernelima bez prepisivanja izvora. `--validate-only` radi samo strukturnu i sintaksnu provjeru. |
@@ -38,7 +54,7 @@ pinani `PyMuPDF` iz korijenskog `requirements.txt`.
 | `check_u13_sketch_geometry.py` | Provjerava tri slike U13: povezane grane i otvorene priključke, suhe i omočene stijenke spremnika, uronjen usis, unutarnje promjere i kote, parabolični profil, kružno koljeno stalne širine, EGL/HGL te stvarne krivulje crpke i sustava uz Colebrookovu jednadžbu. Dopunjuje vizualni pregled. |
 | `check_u14_sketch_geometry.py` | Čita sedam SVG-ova U14 s naslijeđenim prefiksom u12: otvorene sapnice i vodilice, ploče i krak rotora izvan fluida, poprečne kote i kutove, stvarne trokute brzina, radijus i smjer vrtnje, reakcije te kontinuitet kružnih vodomlaznih vodova i četiriju mlazova. Dopunjuje vizualni pregled. |
 | `check_u15_sketch_geometry.py` | Provjerava dva SVG-a U15: stvarne trapezne površine i opsege, kote i pokose, brzine valova prema obali, krivulju energije, kritičnost i podkritičnu granu na pragu, neprekinuto dno, hidrostatičke sile i bilance rubnih presjeka skoka te granicu dubine bazena. Dopunjuje vizualni pregled. |
-| `validate_cfd_vv.py` | Read-only validator za `data/cfd/`: provjerava tri mreže, maseni debalans, reziduale i monitore, tro-mrežni GCI, analitičke/reference vrijednosti, provenancu te da eksperimentalni placeholder ne sadrži izmišljena mjerenja. |
+| `validate_cfd_vv.py` | Read-only validator za `data/cfd/`: dva sintetička nastavna slučaja provjerava prema analitičkim modelima, bilancama i GCI-ju. Za javni NACA referentni skup uspoređuje sve kopirane brojeve s arhiviranim NASA tablicama, razlikuje točke od ćelija te čuva razliku između djelomičnih objavljenih dokaza i nedostajuće pune validacije. |
 
 ### Kako čitati rezultat
 
@@ -86,6 +102,12 @@ pojedinom rezultatu nije automatsko. Zato promjena brojčanoga odgovora i dalje
 zahtijeva autorski pregled teksta i fiksnoga cilja; generator osigurava da se
 promjena vidi i da nijedan task/result-ID ne nestane tiho.
 
+Za višedijelni kontrolni rezultat čije bi skraćivanje izostavilo odluku ili
+ograničenje može se uz `data-answer-key="true"` dodati `data-key-full="true"`.
+Generator `scripts/generate_exercise_key.py` tada prenosi cijeli odgovor
+u D06. Ostali odgovori zadržavaju postojeće sažimanje; potpunost generiranog
+ključa treba pregledati nakon svake sadržajne izmjene.
+
 ## SVG obrada i QA (trajno)
 
 | Skripta | Namjena |
@@ -108,5 +130,13 @@ Korišteni u prošlim fazama; zadržani radi ponovljivosti, ne pokreću se rutin
 Logovi jednokratnih prolaza: `svg_normalize.log`, `strip_svg_titles.log`.
 Privremeni radni izlazi idu u `tools/tmp/` (git-ignorirano).
 
-> Napomena: generatori interaktivnih notebooka i QR kodova nisu ovdje nego u
-> `scripts/` (`generiraj_notebooke.py`, `generiraj_qr.py`).
+Aktualne bilježnice uređuju se izravno u `notebooks/`; ne obnavljaju se iz
+starih predložaka. `scripts/generiraj_notebooke.py` služi samo arhivskoj
+usporedbi i zahtijeva `--archive-output` s novom mapom izvan repozitorija ili
+unutar `tools/tmp/`. Odbija zapisivanje u izvore i postojeća odredišta.
+Zaštitu provjerava `python tools/test_legacy_notebook_generator.py`.
+
+Aktualni QR generator je `scripts/generate_qr_assets.py`: bez argumenata
+provjerava izlaze, a s `--write` ih obnavlja. `scripts/generiraj_qr.py`
+prosljeđuje poziv istom generatoru radi kompatibilnosti. Postupak uređivanja
+opisan je u [uputama za bilježnice](../notebooks/README.md).

@@ -16,27 +16,26 @@ presjek nalazi se u
 
 ## Sadržaj v2
 
-| Cjelina | Poglavlja |
-|---|---|
-| Temelji | U01 kontinuum, svojstva i tlak; U02 reologija, viskoznost i međupovršine |
-| Statika fluida | U03 hidrostatika i manometrija; U04 relativno mirovanje; U05 sile na plohe; U06 uzgon i početni stabilitet |
-| Integralna dinamika | U07 kinematika, RTT i kontinuitet; U08 energijska jednadžba; U09 kompresibilni idealni tok; U10 količina i moment količine gibanja |
-| Sličnost i realni tok | U11 dimenzijska analiza; U12 diferencijalni opis realnog toka |
-| Inženjerski sustavi | U13 cjevovodi, crpke i mreže; U14 turbostrojevi i propulzija; U15 otvoreni tokovi |
-| Dodaci | D01 formule i oznake; D02 pojmovnik; D03 tipične pogreške; D04 numerička mehanika fluida; D05 literatura; D06 ključ kontrolnih rezultata |
+Aktualni dijelovi, poglavlja i dodaci definirani su u
+[modelu knjige](content/book.json). Njihov se popis automatski prikazuje u
+navigaciji, početnom katalogu i [kartiranju izvora](docs/kanonska-struktura-sadrzaja.md).
 
 Kanonski rukopis trenutačno obuhvaća **15 poglavlja, 87 riješenih primjera, 90
-samostalnih zadataka, šest dodataka, 17 notebookova, 1.185 stabilnih ID-jeva,
-789 prikazanih jednadžbi i 145 sati** planiranoga rada uz udžbenik. Tih 145
+samostalnih zadataka, šest dodataka, 17 notebookova, 1.216 stabilnih ID-jeva,
+795 prikazanih jednadžbi i 145 sati** planiranoga rada uz udžbenik. Tih 145
 sati nije cijelo ECTS opterećenje kolegija. Ishodi, preduvjeti i raspodjela rada
 definirani su u
 [kurikularnoj matrici](docs/kurikularna_matrica.md).
 
 ## Struktura repozitorija
 
+- `content/book.json` je jedini model hijerarhije, naslova i javnih putanja.
 - `source/` je jedini kanonski izvor teksta poglavlja i dodataka.
-- `chapters/` sadrži tanke Quarto omotače i preusmjerenja starih javnih URL-ova;
+- `chapters/` sadrži generirane Quarto omotače i preusmjerenja starih javnih URL-ova;
   generirani HTML u toj mapi ne uređuje se ručno.
+- `components/`, `design-system/`, `styles/` i `web/` odvajaju semantiku,
+  globalne tokene i prikaz. Model, predlošci i postupak proširenja opisani su u
+  [arhitekturi digitalnog udžbenika](docs/arhitektura.md).
 - `assets/print/` sadrži statičke SVG skice, a `assets/qr/` QR kodove.
 - `notebooks/` sadrži 17 nastavnih notebooka.
 - `data/cfd/` sadrži tri mala V&V podatkovna paketa: dva su spremna nastavna
@@ -63,6 +62,7 @@ Potrebni su Quarto s podrškom za Typst, Python 3.12 i Python paketi navedeni u
 
 ```powershell
 python -m pip install -r requirements.txt
+npm ci --ignore-scripts
 ./scripts/izgradi.ps1
 ```
 
@@ -74,7 +74,7 @@ Izlazi su:
 - `_site/jlite/` — JupyterLite s notebookovima koji se izvode u pregledniku.
 
 U nativnom PDF-u autorski su blokovi stilizirani izravno u Typstu. Odlomci
-nemaju uvlaku prvoga retka, nego razmak od `0.72em` između odlomaka.
+nemaju uvlaku prvoga retka; razmak i tipografiju određuju globalni tokeni.
 
 Pojedinačne naredbe za razvoj:
 
@@ -82,8 +82,9 @@ Pojedinačne naredbe za razvoj:
 python tools/verify_all.py
 python tools/execute_notebooks.py --validate-only
 python tools/validate_cfd_vv.py
-quarto render
-quarto render --profile pdf --to typst
+python scripts/build_book.py --write
+python tools/audit_architecture.py
+python scripts/build_book.py --render all
 python -m jupyterlite_core.app build --config=jupyter_lite_config.py --contents notebooks --output-dir _site/jlite
 ```
 
@@ -103,7 +104,7 @@ objave.
 ## Kako se čita QA izvještaj
 
 Aktualni `verify_all.py` obuhvaća svih 15 poglavlja kroz 19 modula i izvještava
-**1.001 stvarnu provjeru: 924 usporedbe s unaprijed zadanim ciljem i 77
+**1.340 stvarnih provjera: 1.119 usporedbi s unaprijed zadanim ciljem i 221
 invarijantnih, dimenzijskih ili graničnih provjera**. Manifest sheme v2 ima
 90/90 zadataka u skupini `golden`, 393 parsirana skalarna ulaza i 312 ugovora
 rezultata. Ne dopušta tautološku usporedbu rezultata sa samim sobom ni zadatak

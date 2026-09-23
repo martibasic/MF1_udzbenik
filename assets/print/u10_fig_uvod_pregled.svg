@@ -95,7 +95,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <line x1="698" y1="112" x2="708" y2="112" stroke="#b7600c" stroke-width="1.2"/>
 <line x1="698" y1="186" x2="708" y2="186" stroke="#b7600c" stroke-width="1.2"/>
 <path id="u13loss_D" d="M703 112 L703 186" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13loss_dim)" marker-end="url(#u13loss_dim)"/>
-<text x="694" y="153" font-size="12" fill="#b7600c" text-anchor="end">D</text>
+<text x="699" y="153" font-size="12" fill="#b7600c" text-anchor="end">D</text>
 <line x1="716" y1="211" x2="716" y2="221" stroke="#b7600c" stroke-width="1.2"/>
 <line x1="951" y1="211" x2="951" y2="221" stroke="#b7600c" stroke-width="1.2"/>
 <path id="u13loss_L" d="M716 216 L951 216" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13loss_dim)" marker-end="url(#u13loss_dim)"/>

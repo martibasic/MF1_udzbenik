@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import re
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -13,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "_quarto-pdf.yml"
 FILTER = ROOT / "filters" / "mf1-typst-author-blocks.lua"
 COMPONENT = ROOT / "assets" / "typst" / "mf1-author-blocks.typ"
+MODEL = ROOT / 'filters/mf1-component-model.lua'
 
 REQUIRED_CLASSES = (
     "mf1-we",
@@ -32,13 +34,18 @@ def fail(message: str) -> None:
 
 
 def main() -> int:
-    for path in (CONFIG, FILTER, COMPONENT):
+    for path in (CONFIG, FILTER, COMPONENT, MODEL):
         if not path.is_file():
             fail(f"nedostaje {path.relative_to(ROOT)}")
 
     config = CONFIG.read_text(encoding="utf-8")
     filter_text = FILTER.read_text(encoding="utf-8")
     component = COMPONENT.read_text(encoding="utf-8")
+    component_model = MODEL.read_text(encoding='utf8')
+    if 'mf1-component-model.lua' not in filter_text or 'components/registry.json' not in component_model:
+        fail('PDF adapter nije povezan sa zajedničkim registrom komponenti')
+    if "components.visible(components.kind(div), 'pdf')" not in filter_text:
+        fail('PDF adapter ne primjenjuje zajedničko pravilo vidljivosti')
 
     if "assets/typst/mf1-author-blocks.typ" not in config:
         fail("Typst komponenta nije uključena u PDF profil")
@@ -49,9 +56,11 @@ def main() -> int:
         path.read_text(encoding="utf-8") for path in sorted((ROOT / "source").glob("*.md"))
     )
     counts: dict[str, int] = {}
+    registry = json.loads((ROOT / 'components/registry.json').read_text(encoding='utf8'))['components']
+    mapped = {name: component for component in registry.values() for name in component.get('classes', [])}
     for class_name in REQUIRED_CLASSES:
-        if f'["{class_name}"]' not in filter_text:
-            fail(f"Lua filter nema mapiranje klase .{class_name}")
+        if class_name not in mapped or not mapped[class_name].get('pdf_mode'):
+            fail(f"Zajednički registar nema PDF mapiranje klase .{class_name}")
         count = len(re.findall(rf"^:::\s+\{{[^}}]*\.{re.escape(class_name)}(?:\s|\}})", source_text, re.MULTILINE))
         counts[class_name] = count
 
@@ -59,7 +68,7 @@ def main() -> int:
         "#let mf1-author-block",
         '#let mf1-level',
         '#let mf1-minor-heading',
-        'mode = "example"',
+        'mode == "example"',
         'Para = render_minor_heading',
         'Span = render_span',
         "breakable: true",

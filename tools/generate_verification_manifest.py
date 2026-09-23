@@ -23,53 +23,23 @@ from pathlib import Path
 import re
 from typing import Any
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from book_model import load_book, documents, verification_chapters
+BOOK = load_book()
+BOOK_CHAPTERS = documents(BOOK, kind="chapter")
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "tools" / "verification_manifest.json"
 
 # Svako javno poglavlje ima izvor s istim brojem. Namespacei verifiera ostaju
 # tehnički identifikatori postojećih provjera, ne alternativni nazivi poglavlja.
-CANONICAL_CHAPTERS: list[dict[str, str]] = [
-    {"id": "U01", "source": "source/u01_osnove_fluida_i_pascalov_zakon.md", "verifier_module": "verify_u01", "verifier_namespace": "U01"},
-    {"id": "U02", "source": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md", "verifier_module": "verify_u02", "verifier_namespace": "U02"},
-    {"id": "U03", "source": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md", "verifier_module": "verify_u03", "verifier_namespace": "U03"},
-    {"id": "U04", "source": "source/u04_relativno_mirovanje_fluida.md", "verifier_module": "verify_u04", "verifier_namespace": "U04"},
-    {"id": "U05", "source": "source/u05_hidrostatske_sile_na_plohe.md", "verifier_module": "verify_u05_integrated", "verifier_namespace": "U05.CANON"},
-    {"id": "U06", "source": "source/u06_uzgon_plivanje_i_stabilnost.md", "verifier_module": "verify_u07", "verifier_namespace": "U07"},
-    {"id": "U07", "source": "source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md", "verifier_module": "verify_u08", "verifier_namespace": "U08"},
-    {"id": "U08", "source": "source/u08_energijska_jednadzba_i_bernoulli.md", "verifier_module": "verify_u09", "verifier_namespace": "U09"},
-    {"id": "U09", "source": "source/u09_kompresibilni_idealni_tok.md", "verifier_module": "verify_u09_compressible", "verifier_namespace": "U09.COMP"},
-    {"id": "U10", "source": "source/u10_kolicina_i_moment_kolicine_gibanja.md", "verifier_module": "verify_u11", "verifier_namespace": "U11"},
-    {"id": "U11", "source": "source/u11_dimenzijska_analiza_i_slicnost.md", "verifier_module": "verify_u14", "verifier_namespace": "U14"},
-    {"id": "U12", "source": "source/u12_diferencijalni_opis_realnog_toka.md", "verifier_module": "verify_u12_real_flow", "verifier_namespace": "U12.REAL"},
-    {"id": "U13", "source": "source/u13_gubici_cjevovodi_crpke_i_mreze.md", "verifier_module": "verify_u13_integrated", "verifier_namespace": "U13.CANON"},
-    {"id": "U14", "source": "source/u14_turbostrojevi_i_propulzija.md", "verifier_module": "verify_u12", "verifier_namespace": "U12"},
-    {"id": "U15", "source": "source/u15_otvoreni_tokovi.md", "verifier_module": "verify_u15_open_channels", "verifier_namespace": "U15"},
-]
+CANONICAL_CHAPTERS = verification_chapters(BOOK)
 
 # Izvršni verifier moduli zadržavaju stabilna tehnička imena, dok se u
 # manifestu svatko veže samo uz postojeći kanonski izvor.
-MODULE_CANONICAL_SOURCE = {
-    "verify_u01": "source/u01_osnove_fluida_i_pascalov_zakon.md",
-    "verify_u02": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
-    "verify_u03": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-    "verify_u04": "source/u04_relativno_mirovanje_fluida.md",
-    "verify_u05": "source/u05_hidrostatske_sile_na_plohe.md",
-    "verify_u05_integrated": "source/u05_hidrostatske_sile_na_plohe.md",
-    "verify_u06": "source/u05_hidrostatske_sile_na_plohe.md",
-    "verify_u07": "source/u06_uzgon_plivanje_i_stabilnost.md",
-    "verify_u08": "source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md",
-    "verify_u09": "source/u08_energijska_jednadzba_i_bernoulli.md",
-    "verify_u09_compressible": "source/u09_kompresibilni_idealni_tok.md",
-    "verify_u10": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-    "verify_u11": "source/u10_kolicina_i_moment_kolicine_gibanja.md",
-    "verify_u12": "source/u14_turbostrojevi_i_propulzija.md",
-    "verify_u12_real_flow": "source/u12_diferencijalni_opis_realnog_toka.md",
-    "verify_u13": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-    "verify_u13_integrated": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-    "verify_u14": "source/u11_dimenzijska_analiza_i_slicnost.md",
-    "verify_u15_open_channels": "source/u15_otvoreni_tokovi.md",
-}
+MODULE_CANONICAL_SOURCE = {module: doc["source"] for doc in BOOK_CHAPTERS for module in doc["verification"]["legacy_modules"]}
 
 TASK_LINE_RE = re.compile(
     r"(?m)^(?P<line>[^\n]*\{#(?P<id>task-[A-Za-z0-9_-]+)\b[^}\n]*\}[^\n]*)$"

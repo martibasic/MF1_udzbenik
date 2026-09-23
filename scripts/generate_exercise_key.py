@@ -11,31 +11,19 @@ import argparse
 import re
 from pathlib import Path
 
+from book_model import load_book, documents
+BOOK = load_book()
+BOOK_CHAPTERS = documents(BOOK, kind="chapter")
+
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "source" / "d06_kljuc_kontrolnih_rezultata.md"
-WRAPPERS = [
-    "u01_osnove_fluida_i_pascalov_zakon.qmd",
-    "u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd",
-    "u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd",
-    "u04_relativno_mirovanje_fluida.qmd",
-    "u05_hidrostatske_sile_na_plohe.qmd",
-    "u06_uzgon_plivanje_i_stabilnost.qmd",
-    "u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd",
-    "u08_energijska_jednadzba_i_bernoulli.qmd",
-    "u09_kompresibilni_idealni_tok.qmd",
-    "u10_kolicina_i_moment_kolicine_gibanja.qmd",
-    "u11_dimenzijska_analiza_i_slicnost.qmd",
-    "u12_diferencijalni_opis_realnog_toka.qmd",
-    "u13_gubici_cjevovodi_crpke_i_mreze.qmd",
-    "u14_turbostrojevi_i_propulzija.qmd",
-    "u15_otvoreni_tokovi.qmd",
-]
+WRAPPERS = [Path(doc["path"]).name for doc in BOOK_CHAPTERS]
 
 INCLUDE_RE = re.compile(r"\{\{<\s*include\s+\.\./source/([^ >]+)\s*>\}\}")
 TITLE_RE = re.compile(r'^title:\s*["\'](?P<title>.+?)["\']\s*$', re.MULTILINE)
 HEADING_TASK_RE = re.compile(
-    r"(?m)^###\s+Z(?P<number>\d+)\.\s+(?P<title>.+?)\s+"
+    r"(?m)^###\s+(?:Z(?P<number>\d+)\.\s+)?(?P<title>.+?)\s+"
     r"\{#(?P<id>task-[A-Za-z0-9-]+)\s+\.unnumbered\s+\.unlisted\}\s*$"
 )
 TASK_LEVEL_RE = re.compile(
@@ -93,9 +81,7 @@ def tasks_from_source(path: Path) -> list[dict[str, str]]:
         heading = HEADING_TASK_RE.fullmatch(anchor_line)
         if not heading:
             raise ValueError(f"Nepodržan zapis zadatka u {path.name}: {anchor_line}")
-        number = heading.group("number")
-        if int(number) != index + 1:
-            raise ValueError(f"{path.name}: očekivan Z{index + 1}, pronađen Z{number}")
+        number = str(index + 1)
         level_match = TASK_LEVEL_RE.search(chunk)
         if not level_match:
             raise ValueError(f"Zadatak {heading.group('id')} nema razinu")
@@ -104,6 +90,10 @@ def tasks_from_source(path: Path) -> list[dict[str, str]]:
         )[0]
         hint_match = HINT_RE.search(chunk)
         answer_match = ANSWER_RE.search(chunk)
+        # Višedijelni odgovor može izričito tražiti cijeli tekst u tiskanom
+        # ključu kako skraćivanje ne bi uklonilo konačnu odluku ili njezin uvjet.
+        complete_answer = bool(answer_match and 'data-key-full="true"'
+                               in answer_match.group(0).splitlines()[0])
         tasks.append(
             {
                 "number": number,
@@ -112,7 +102,8 @@ def tasks_from_source(path: Path) -> list[dict[str, str]]:
                 "id": heading.group("id"),
                 "prompt": compact(prompt),
                 "hint": compact(hint_match.group("hint"), 500) if hint_match else "",
-                "answer": compact(answer_match.group("answer"), 500)
+                "answer": compact(answer_match.group("answer"),
+                                  len(answer_match.group("answer")) if complete_answer else 500)
                 if answer_match
                 else "Nema jednoga kontrolnog broja. Vrednuju se izbor modela i pretpostavki, zatvaranje bilance, provjera valjanosti te jasno iskazana nesigurnost ili podatci koji nedostaju.",
             }
@@ -120,7 +111,7 @@ def tasks_from_source(path: Path) -> list[dict[str, str]]:
     return tasks
 
 
-def build() -> str:
+def build(root=ROOT) -> str:
     lines = [
         "<!-- Generirano skriptom scripts/generate_exercise_key.py; ne uređivati ručno. -->",
         "",
@@ -133,14 +124,10 @@ def build() -> str:
     ]
     seen: set[str] = set()
     total = 0
-    for wrapper_name in WRAPPERS:
-        wrapper = ROOT / "chapters" / wrapper_name
-        wrapper_text = wrapper.read_text(encoding="utf-8")
-        title_match = TITLE_RE.search(wrapper_text)
-        title = title_match.group("title") if title_match else wrapper.stem
-        chapter_tasks: list[dict[str, str]] = []
-        for source_name in INCLUDE_RE.findall(wrapper_text):
-            chapter_tasks.extend(tasks_from_source(ROOT / "source" / source_name))
+    for chapter in documents(load_book(root), kind="chapter"):
+        wrapper_name = Path(chapter["path"]).name
+        title = chapter["title"]
+        chapter_tasks = tasks_from_source(root / chapter["source"])
         if not chapter_tasks:
             raise ValueError(f"Nema zadataka u javnom poglavlju {wrapper_name}")
         lines.extend([f"## {title}", ""])

@@ -186,7 +186,7 @@ Pri CFD simulaciji uronjene ravne plohe (vrata brane, inspekcijskog poklopca ili
 ## Riješeni primjeri: ravne plohe
 
 ::: {#ex-u05-vertikalna-pravokutna-zaklopka .mf1-we}
-<p class="mf1-box-label">P1. Vertikalna pravokutna zaklopka <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Vertikalna pravokutna zaklopka <span class="mf1-level">T2</span></p>
 
 Pravokutna zaklopka širine $b=2{,}0\ \mathrm{m}$ i visine $H=3{,}0\ \mathrm{m}$ potpuno je uronjena u vodu gustoće $\rho=998\ \mathrm{kg/m^3}$. Gornji joj je rub na dubini $h_1=2{,}0\ \mathrm{m}$. Vanjska je strana na atmosferi. Odredi rezultantnu silu i centar tlaka.
 
@@ -228,7 +228,7 @@ Centar tlaka je $1{,}714\ \mathrm{m}$ ispod gornjeg ruba.
 :::
 
 ::: {#ex-u05-kosi-poklopac .mf1-we}
-<p class="mf1-box-label">P2. Kosi poklopac sa spojnicom <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Kosi poklopac sa spojnicom <span class="mf1-level">T2</span></p>
 
 Pravokutni poklopac širine $b=0{,}90\ \mathrm{m}$ i duljine $L=1{,}20\ \mathrm{m}$ zglobno je vezan na gornjem rubu $A$, koji je na dubini $h_A=0{,}80\ \mathrm{m}$. Ploha zatvara kut $\theta=60^\circ$ s vodoravnicom. Spojnica na donjem rubu djeluje okomito na plohu. Odredi hidrostatsku silu, njezin krak prema zglobu i silu spojnice.
 
@@ -268,7 +268,7 @@ $$ {#eq-sile-plohe-rijeseni-primjer-kosi-poklopac-sa-spojnicom-t2-04}
 :::
 
 ::: {#ex-u05-pregrada-ulje-voda .mf1-we}
-<p class="mf1-box-label">P3. Zglobna pregrada s uljem iznad vode <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Zglobna pregrada s uljem iznad vode <span class="mf1-level">T3</span></p>
 
 Vertikalna pregrada širine $b=1{,}40\ \mathrm{m}$ zglobno je vezana na slobodnoj površini. Gornji sloj ulja ima $\rho_o=820\ \mathrm{kg/m^3}$ i visinu $h_o=1{,}00\ \mathrm{m}$, a donji sloj vode $\rho_w=1000\ \mathrm{kg/m^3}$ i visinu $h_w=1{,}80\ \mathrm{m}$. Donji rub pridržava vodoravna spojnica. Odredi silu, centar tlaka i statičke reakcije.
 
@@ -415,13 +415,13 @@ Prije pokretanja odredi smjer $F_V$ samo iz strane koju fluid kvasi. Zatim mijen
 
 **Zašto je doprinos vektor.** Na elementu zakrivljene plohe tlak $p_i$ djeluje okomito na njegovu lokalnu površinu. Element $A_i$ daje vektorski doprinos $p_i\mathbf n_{f,i}A_i$, pa se ne zbrajaju samo iznosi, nego i predznačene vodoravne i okomite komponente svakog doprinosa. Geometrija stoga mora dati i veličinu elementa i normalu $\mathbf n_{f,i}$; pogrešno okrenuta normala mijenja predznak sile, iako iznos tlaka ostaje isti.
 
-**Što se provjerava.** Nakon zbrajanja lokalnih doprinosa provjeravaju se očekivani smjer rezultante, simetrija kada je geometrija simetrična te slaganje komponenti s vertikalnom projekcijom i pomoćnim volumenom u slučajevima za koje su ti hidrostatski postupci dopušteni. Konvergiran zbroj na jednoj mreži nije sam dokaz ispravnog smjera; rezultat se mora provjeriti i pri profinjenju područja veće zakrivljenosti. Detalji površinske diskretizacije, rubnih uvjeta i verifikacije nalaze se u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 12</span><span class="mf1-ch-title">Diferencijalni opis realnog toka</span></span> i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
+**Što se provjerava.** Nakon zbrajanja lokalnih doprinosa provjeravaju se očekivani smjer rezultante, simetrija kada je geometrija simetrična te slaganje komponenti s vertikalnom projekcijom i pomoćnim volumenom u slučajevima za koje su ti hidrostatski postupci dopušteni. Konvergiran zbroj na jednoj mreži nije sam dokaz ispravnog smjera; rezultat se mora provjeriti i pri profinjenju područja veće zakrivljenosti. Detalji površinske diskretizacije, rubnih uvjeta i verifikacije nalaze se u []{.mf1-chapter-ref target="u12"} i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
 :::
 
 ## Riješeni primjeri: zakrivljene plohe
 
 ::: {#ex-u05-potopljena-cetvrtina-kruga .mf1-we}
-<p class="mf1-box-label">P4. Potopljena četvrtina kruga, sila prema gore <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Potopljena četvrtina kruga, sila prema gore <span class="mf1-level">T2</span></p>
 
 Četvrtcilindrična ploha ima polumjer $R=1{,}22\ \mathrm{m}$, širinu $b=1{,}83\ \mathrm{m}$ i gornju točku na dubini $h_1=2{,}44\ \mathrm{m}$. Voda gustoće $998\ \mathrm{kg/m^3}$ kvasi konveksnu vanjsku i donju stranu plohe. Odredi komponente, pravce djelovanja i rezultantu.
 
@@ -480,7 +480,7 @@ pod kutom $48{,}1^\circ$ iznad horizontale.
 :::
 
 ::: {#ex-u05-cetvrtcilindar-prema-dolje .mf1-we}
-<p class="mf1-box-label">P5. Četvrtcilindrični poklopac uz slobodnu površinu <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Četvrtcilindrični poklopac uz slobodnu površinu <span class="mf1-level">T2</span></p>
 
 Poklopac širine $b=1{,}20\ \mathrm{m}$ i polumjera $R=0{,}90\ \mathrm{m}$ počinje na slobodnoj površini. Voda kvasi stranu na kojoj lokalne normale od fluida prema stijenci imaju vertikalne komponente prema dolje. Odredi komponente i rezultantu.
 
@@ -530,7 +530,7 @@ $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-06}
 :::
 
 ::: {#ex-u05-zglobni-cetvrtcilindricni-poklopac .mf1-we}
-<p class="mf1-box-label">P6. Zglobni poklopac s vertikalnom silom prema gore <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Zglobni poklopac s vertikalnom silom prema gore <span class="mf1-level">T3</span></p>
 
 Četvrtcilindrični poklopac širine $b=1{,}40\ \mathrm{m}$ i polumjera $R=1{,}10\ \mathrm{m}$ zglobno je vezan u gornjoj točki $A$ na slobodnoj površini. Donji rub pridržava vodoravna spojnica. Voda kvasi konveksnu donju i lijevu stranu. Odredi komponente i statičku silu spojnice.
 
@@ -612,7 +612,7 @@ U svim zadatcima uzmi $g=9{,}81\ \mathrm{m/s^2}$. Ako nije drukčije navedeno, v
 
 ::::: {.mf1-vjezbe-list}
 
-### Z1. Sila na pravokutni poklopac {#task-u05-ravna-pravokutna-zaklopka .unnumbered .unlisted}
+### Sila na pravokutni poklopac {#task-u05-ravna-pravokutna-zaklopka .unnumbered .unlisted}
 
 Vertikalni pravokutni poklopac širine $b=1{,}40\ \mathrm{m}$ i visine $H=1{,}80\ \mathrm{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1=1{,}10\ \mathrm{m}$. Odredi rezultantnu silu, dubinu centra tlaka i njegovu udaljenost od gornjeg ruba.
 
@@ -635,7 +635,7 @@ $F=49{,}34\ \mathrm{kN}$; $h_{CP}=2{,}135\ \mathrm{m}$; udaljenost od gornjeg ru
 
 [Razina: T1]{.mf1-task-level}
 
-### Z2. Sila na zakrivljeni poklopac {#task-u05-zakrivljeni-poklopac-cetvrtine-kruga .unnumbered .unlisted}
+### Sila na zakrivljeni poklopac {#task-u05-zakrivljeni-poklopac-cetvrtine-kruga .unnumbered .unlisted}
 
 Zakrivljeni poklopac presjeka četvrtine kruga ima $R=0{,}65\ \mathrm{m}$ i širinu $b=1{,}20\ \mathrm{m}$. Gornja mu je točka na dubini $h_1=1{,}10\ \mathrm{m}$. Voda kvasi konveksnu vanjsku i donju stranu. Odredi $F_H$, predznačeni $F_V$ i $F_R$.
 
@@ -660,7 +660,7 @@ $F_H=10{,}88\ \mathrm{kN}$; $F_V=+12{,}30\ \mathrm{kN}$ prema gore; $F_R=16{,}42
 
 <span id="task-u05-kosi-poklopac-sa-zglobom"></span>
 
-### Z3. Pregrada između dviju razina vode {#task-pregrada-izmedu-dviju-razina-vode .unnumbered .unlisted}
+### Pregrada između dviju razina vode {#task-pregrada-izmedu-dviju-razina-vode .unnumbered .unlisted}
 
 Vertikalna nepropusna pregrada širine $b=1{,}20\ \mathrm{m}$ i visine $H=3{,}00\ \mathrm{m}$ dijeli dva otvorena spremnika. Dubina vode iznad zajedničkog dna lijevo je $h_L=2{,}40\ \mathrm{m}$, a desno $h_D=1{,}20\ \mathrm{m}$. Pregrada je zglobno oslonjena u dnu $A$; u gornjoj točki $B$ pridržava je vodoravna spojnica. Zanemari trenje i moment težine pregrade. Odredi neto silu vode i visinu njezina pravca djelovanja iznad dna, moment vode oko $A$ te iznos i smjer sile spojnice. Uzmi $+x$ udesno, $+y$ prema gore i pozitivan moment suprotno kazaljci na satu.
 
@@ -685,7 +685,7 @@ $F_x=+25{,}377\ \mathrm{kN}$; $y_R=0{,}9333\ \mathrm{m}$ iznad dna; $M_A=-23{,}6
 
 <span id="task-u05-dvoslojna-vertikalna-stijena"></span>
 
-### Z4. Širina trokutastog poklopca {#task-sirina-trokutastog-poklopca .unnumbered .unlisted}
+### Širina trokutastog poklopca {#task-sirina-trokutastog-poklopca .unnumbered .unlisted}
 
 Vertikalni poklopac ima oblik jednakokračnog trokuta s vrhom gore, visinom $H=1{,}50\ \mathrm{m}$ i vodoravnom osnovicom širine $b$. Vrh je na dubini $h_0=0{,}40\ \mathrm{m}$ ispod slobodne površine vode; s druge strane je zrak na atmosferskom tlaku. Dopuštena rezultantna sila jest $F_{\max}=12{,}00\ \mathrm{kN}$. Odredi najveću širinu $b_{\max}$ i dubinu centra tlaka. Zadovoljava li ponuđeni poklopac širine $1{,}20\ \mathrm{m}$ ovaj uvjet? Visina i dubina vrha ostaju zadane pri promjeni širine; provjerava se samo navedeni uvjet sile, ne čvrstoća konstrukcije.
 
@@ -710,7 +710,7 @@ $b_{\max}=1{,}1673\ \mathrm{m}$; $h_{CP}=1{,}4893\ \mathrm{m}$. Za $b=1{,}20\ \m
 
 <span id="task-u05-zglobni-zakrivljeni-poklopac-model"></span>
 
-### Z5. Radijalni poklopac s težinom {#task-radijalni-poklopac-s-tezinom .unnumbered .unlisted}
+### Radijalni poklopac s težinom {#task-radijalni-poklopac-s-tezinom .unnumbered .unlisted}
 
 Kruti sklop četvrtcilindričnog poklopca i njegovih krakova okreće se oko osi kroz središte kružnice $O$, a ne oko kraja luka. Voda kvasi konveksnu lijevu i donju stranu, a s druge strane je zrak na atmosferskom tlaku.
 
@@ -737,7 +737,7 @@ $F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}
 
 [Razina: T3]{.mf1-task-level}
 
-### Z6. Nesigurnost sile na mjerni panel {#task-u05-nesigurnost-modela-i-mjerenja .unnumbered .unlisted}
+### Nesigurnost sile na mjerni panel {#task-u05-nesigurnost-modela-i-mjerenja .unnumbered .unlisted}
 
 Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\ \mathrm{m}$ i $H=0{,}80\ \mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\ \mathrm{m}$ sa standardnom nesigurnošću $u(h_1)=0{,}020\ \mathrm{m}$, a gustoća je $\rho=998\ \mathrm{kg/m^3}$ uz $u(\rho)=3\ \mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\ \mathrm{kN}$ uz $u(F_m)=0{,}30\ \mathrm{kN}$. Pretpostavi neovisne ulaze i primijeni linearnu propagaciju nesigurnosti. Izračunaj predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\sqrt{u(F)^2+u(F_m)^2}$. Obrazloži podupiru li podatci tvrdnju o neslaganju na razini $2u$.
 

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "task_id": "task-cfd-tri-mreze",
+  "data_classification": "teaching_estimate_from_public_reference",
+  "archive_validation_completed": false,
+  "purpose": "Complete conditional drag comparison for U12 Z6, using sourced central values and explicitly assumed uncertainties; not reconstructed experimental or solver diagnostics.",
+  "central_values": {
+    "mach": 0.15,
+    "reynolds_chord": 6000000,
+    "target_alpha_deg": 10.0,
+    "cfd_grid_id": "fine",
+    "experimental_trip_grit": 120,
+    "interpolation_alpha_deg": [8.08, 10.1],
+    "interpolation_cd": [0.00995, 0.01175],
+    "method": "linear interpolation in incidence, followed by rounding to five decimal places",
+    "decimal_places": 5,
+    "cd_reference": 0.01166,
+    "cd_cfd": 0.01222,
+    "sources": ["experimental_forces.csv", "grids.csv"]
+  },
+  "uncertainty_assumptions": {
+    "classification": "assumed_for_teaching_not_measured",
+    "independent_components": true,
+    "distribution": "normal_zero_mean_after_corrections",
+    "standard_uncertainties_treated_as_known": true,
+    "units": "absolute_dimensionless_drag_coefficient",
+    "u_measurement": 0.0002,
+    "u_numerical": 0.0001,
+    "u_conditions": 0.0001,
+    "coverage_factor": 2.0,
+    "alternative_u_measurement": 0.0003,
+    "rationale": {
+      "u_measurement": "Teaching assumption of about 1.7 percent of reference CD, not a standard-uncertainty conversion of Ladson's near-zero-incidence repeatability.",
+      "u_numerical": "Teaching allowance of about 0.8 percent of CFD CD for total numerical uncertainty, including spatial and iterative effects. Not inferred from missing solver histories; GCI is not added again.",
+      "u_conditions": "The adjacent-point slope is about 0.000891 per degree; an assumed residual incidence uncertainty of order 0.1 degree gives about 0.00009. Rounded 0.0001 illustrates remaining condition/interpolation uncertainty after the central incidence correction. This is not an established experimental budget."
+    }
+  },
+  "comparison_rule": "abs(cd_cfd - cd_reference) <= coverage_factor * sqrt(u_measurement^2 + u_numerical^2 + u_conditions^2)",
+  "interpretation": "The baseline scenario fails the assigned agreement criterion; the larger measurement uncertainty passes it without improving the CFD central prediction. A complete exercise under stated assumptions, not a validation verdict for the NASA archive."
+}

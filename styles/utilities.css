@@ -1,0 +1,16 @@
+/* Visibility is declared by the semantic model, not by chapter selectors. */
+[hidden] { display: none; }
+@media screen { .mf1-hidden-web { display: none !important; } }
+@media print { .mf1-hidden-print { display: none !important; } }
+.mf1-interaktivno-pitanja { display: none; }
+.page-break { break-after: page; }
+.mf1-collection-chapter { break-before: page; }
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  /* Intentional accessibility override of framework animation utilities. */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

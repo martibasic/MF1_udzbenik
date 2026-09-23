@@ -323,7 +323,7 @@ Pri usisu crpke ili pojavi kavitacije samo predviđanje tlaka nije dovoljno za o
 ## Riješeni primjeri {#sec-u13-rijeseni-primjeri}
 
 ::: {#ex-gubitci-jedne-dionice .mf1-we}
-<p class="mf1-box-label">P1. Linijski i lokalni gubitci jedne dionice <span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">Linijski i lokalni gubitci jedne dionice <span class="mf1-level">T1</span></p>
 
 Voda gustoće $\rho=1000\ \mathrm{kg/m^3}$ struji horizontalnom cijevi promjera $D=0{,}12\ \mathrm{m}$ i duljine $L=36\ \mathrm{m}$ srednjom brzinom $v=2{,}4\ \mathrm{m/s}$. Zadani su $\lambda=0{,}028$ i $\sum\xi=4{,}6$. Odredimo linijski, lokalni i ukupni gubitak te pad tlaka.
 
@@ -356,7 +356,7 @@ $$ {#eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-04}
 :::
 
 ::: {#ex-laminarni-rashladni-vod .mf1-we}
-<p class="mf1-box-label">P2. Laminarni vod rashladnog modula <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Laminarni vod rashladnog modula <span class="mf1-level">T2</span></p>
 
 Rashladna smjesa gustoće $1050\ \mathrm{kg/m^3}$ i kinematičke viskoznosti $\nu=5{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ teče kroz idealiziranu kružnu cijev $D=4{,}0\ \mathrm{mm}$, $L=2{,}0\ \mathrm{m}$ protokom $Q=8{,}0\cdot10^{-6}\ \mathrm{m^3/s}$. Zanemarimo ulazno područje i lokalne gubitke.
 
@@ -396,7 +396,7 @@ Jednak rezultat iz dvaju ekvivalentnih zapisa provjerava i faktor 64 i pretvorbu
 :::
 
 ::: {#ex-serijsko-paralelna-mreza .mf1-we}
-<p class="mf1-box-label">P3. Serijsko-paralelna mreža između spremnika <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Serijsko-paralelna mreža između spremnika <span class="mf1-level">T3</span></p>
 
 Između otvorenih spremnika raspoloživa je razlika visina $H=12{,}0\ \mathrm{m}$. Dovod 0, dvije paralelne grane 1 i 2 te odvod 3 imaju već određene koeficijente $K_i=\lambda_iL_i/D_i+\sum\xi_i$:
 
@@ -454,7 +454,7 @@ $$ {#eq-cjevovodi-rijeseni-primjer-serijsko-paralelna-mreza-izme-u-06}
 :::
 
 ::: {#ex-radna-tocka-vfd .mf1-we}
-<p class="mf1-box-label">P4. Radna točka i promjena brzine vrtnje <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Radna točka i promjena brzine vrtnje <span class="mf1-level">T3</span></p>
 
 Karakteristika crpke pri nazivnoj brzini i karakteristika otvorenoga sustava zadane su s $q$ u $\mathrm{L/s}$:
 
@@ -498,7 +498,7 @@ $$ {#eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-06}
 :::
 
 ::: {#ex-energijski-ledger-hladenja .mf1-we}
-<p class="mf1-box-label">P5. Godišnja energija rashladnog kruga <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Godišnja energija rashladnog kruga <span class="mf1-level">T2</span></p>
 
 Rashladni krug radi $7000\ \mathrm{h/god}$ protokom $Q=6{,}0\ \mathrm{L/s}$ pri potrebnoj visini $H=12{,}0\ \mathrm{m}$. Gustoća je $1000\ \mathrm{kg/m^3}$, a učinkovitosti su $\eta_p=0{,}78$, $\eta_m=0{,}92$ i $\eta_f=0{,}97$.
 
@@ -533,7 +533,7 @@ Ako čišćenje izmjenjivača pri istom protoku smanji potrebnu visinu na $10\ \
 :::
 
 ::: {#ex-npsha-usisne-crpke .mf1-we}
-<p class="mf1-box-label">P6. Raspoloživi NPSH servisne crpke <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Raspoloživi NPSH servisne crpke <span class="mf1-level">T3</span></p>
 
 Crpka je $z_s=2{,}6\ \mathrm{m}$ iznad slobodne površine otvorenog spremnika. Voda protječe usisom $D=80\ \mathrm{mm}$, $L=5{,}0\ \mathrm{m}$ protokom $Q=0{,}014\ \mathrm{m^3/s}$. Zadano je $\lambda=0{,}030$, $\sum\xi=1{,}8$, $p_{atm}=101\ \mathrm{kPa}$, $p_v=2{,}34\ \mathrm{kPa}$ i $\rho=1000\ \mathrm{kg/m^3}$.
 
@@ -608,7 +608,7 @@ Nedostaju proizvođačev $NPSH_r$ pri radnoj točki i zahtijevana margina. $NPSH
 
 ::::: {.mf1-vjezbe-list}
 
-### Z1. Gubitci ravne dionice {#task-gubitci-ravne-dionice .unnumbered .unlisted}
+### Gubitci ravne dionice {#task-gubitci-ravne-dionice .unnumbered .unlisted}
 
 Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ stacionarno protječe vodoravnom cijevi stalnog unutarnjeg promjera $D=0{,}10\ \mathrm{m}$ i duljine $L=50\ \mathrm{m}$, protokom $Q=0{,}012\ \mathrm{m^3/s}$. Zadani su Darcyjev faktor $\lambda=0{,}025$ i $\sum\xi=4{,}0$ za armaturu između promatranih presjeka, svi prema brzini u toj cijevi. U oba presjeka uzmi isti profil brzine. Odredi brzinu, linijski, lokalni i ukupni gubitak te pad tlaka.
 
@@ -627,7 +627,7 @@ $v=1{,}528\ \mathrm{m/s}$, $h_l=1{,}487\ \mathrm{m}$, $h_{loc}=0{,}476\ \mathrm{
 
 [Razina: T1]{.mf1-task-level}
 
-### Z2. Laminarni tok viskozne smjese {#task-laminarna-cijev-smjese .unnumbered .unlisted}
+### Laminarni tok viskozne smjese {#task-laminarna-cijev-smjese .unnumbered .unlisted}
 
 Newtonska smjesa gustoće $\rho=1100\ \mathrm{kg/m^3}$ i kinematičke viskoznosti $\nu=3{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ stacionarno protječe kružnom vodoravnom cijevi $D=6{,}0\ \mathrm{mm}$, protokom $Q=6{,}0\cdot10^{-6}\ \mathrm{m^3/s}$. Promatrani razmak $L=5{,}0\ \mathrm{m}$ nalazi se u potpuno razvijenom toku uz prianjanje na stijenku; ulazno područje i lokalne gubitke izostavi. Odredi $Re$, Darcyjev faktor $\lambda$ i $\Delta p$. Kako se pad tlaka promijeni ako udvostručiš protok dok tok ostaje laminaran?
 
@@ -648,7 +648,7 @@ $v=0{,}212\ \mathrm{m/s}$, $Re=424$, $\lambda=0{,}1508$ i $\Delta p=3{,}11\ \mat
 
 <span id="task-raspodjela-paralelnih-grana"></span>
 
-### Z3. Uravnoteženje paralelnih grana {#task-uravnotezenje-paralelnih-grana .unnumbered .unlisted}
+### Uravnoteženje paralelnih grana {#task-uravnotezenje-paralelnih-grana .unnumbered .unlisted}
 
 Dva rashladna ogranka između istih čvorova trebaju dobivati jednak protok. Odredi u koji ogranak treba ugraditi prigušni ventil i koliki dodatni otpor ventil mora imati. Zatim zatvori kontinuitet i usporedi gubitke na oba puta.
 
@@ -671,7 +671,7 @@ Ventil ide u granu 1: $R_v=36\,000\ \mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\
 
 <span id="task-radna-tocka-tri-snage"></span>
 
-### Z4. Radna točka hrapavog voda {#task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
+### Radna točka hrapavog voda {#task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
 
 Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Odredi radnu točku kad otpor cijevi ovisi o Reynoldsovu broju, pa zatim odvojeno izračunaj hidrauličku, vratilnu i električnu snagu. U svakoj iteraciji ponovno provjeri trenje u cijevi.
 
@@ -694,7 +694,7 @@ $Q_{op}\approx19{,}030\ \mathrm{L/s}$, $H_{op}\approx19{,}136\ \mathrm{m}$, $Re\
 
 [Razina: T2]{.mf1-task-level}
 
-### Z5. Izbor promjera uz nesiguran otpor {#task-robustan-izbor-promjera .unnumbered .unlisted}
+### Izbor promjera uz nesiguran otpor {#task-robustan-izbor-promjera .unnumbered .unlisted}
 
 Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $\sum\xi=6{,}0$, prema brzini u odabranom vodu. Za svaki ponuđeni promjer zadana granica Darcyjeva faktora zbog nepoznatog stanja cijevi jest $0{,}020\le\lambda\le0{,}028$; to je interval mogućih vrijednosti, a ne standardna nesigurnost. Dostupni unutarnji promjeri su 80, 100 i 125 mm. Odaberi najmanji koji u cijelom zadanom intervalu zadovoljava $h_w\le15\ \mathrm{m}$. Objasni zašto nije dovoljan račun samo s donjom granicom otpora.
 
@@ -713,7 +713,7 @@ Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3
 
 [Razina: T3]{.mf1-task-level}
 
-### Z6. Regulacija crpke, energija i usisna rezerva {#task-regulacija-energija-npsh .unnumbered .unlisted}
+### Regulacija crpke, energija i usisna rezerva {#task-regulacija-energija-npsh .unnumbered .unlisted}
 
 Usporedi prigušenje ventilom i regulaciju brzine za jednak traženi protok. Odredi godišnju energiju obiju mogućnosti i uštedu, a zatim provjeri što zadani usisni podatci dopuštaju zaključiti o radu pri nazivnoj i sniženoj brzini vrtnje.
 

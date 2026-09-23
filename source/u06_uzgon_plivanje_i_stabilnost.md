@@ -313,7 +313,7 @@ Početni metacentarski rezultat vrijedi za mali kut i zadanu raspodjelu mase. Za
 ## Riješeni primjeri
 
 ::: {#ex-u07-koliki-gaz-ima-radni-ponton-pri-simetricnom .mf1-we}
-<p class="mf1-box-label">P1. Koliki gaz ima radni ponton pri simetričnom opterećenju&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Koliki gaz ima radni ponton pri simetričnom opterećenju&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Pravokutni radni ponton nosi simetrično postavljenu opremu na mirnoj vodi. Treba odrediti istisnuti volumen, srednji gaz i preostalu nosivost prije nego što razina vode dosegne gornji rub boka.
 
@@ -388,7 +388,7 @@ $$ {#eq-uzgon-stabilitet-rijeseni-primjer-koliki-gaz-ima-radni-ponton-06}
  Kad je taj geometrijski međukorak zatvoren, tek tada ima smisla prijeći na složeniji slučaj u kojem se teret bočno pomiče i uz ravnotežu sila treba zatvoriti i ravnotežu momenata.
 
 ::: {#ex-u07-plutajuca-servisna-platforma-s-pomaknutim-kompresorom-t2 .mf1-we}
-<p class="mf1-box-label">P2. Plutajuća servisna platforma s pomaknutim kompresorom&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Plutajuća servisna platforma s pomaknutim kompresorom&nbsp;<span class="mf1-level">T2</span></p>
 
 **Kontekst:** Na plutajućoj servisnoj platformi prijenosni kompresor postavljen je izvan osi simetrije, što izaziva mjerljiv bočni nagib. Treba odrediti istisnuti volumen, položaj težišta kompresora i porast srednjeg gaza nakon njegova postavljanja.
 
@@ -483,10 +483,10 @@ $$ {#eq-uzgon-stabilitet-rijeseni-primjer-plutajuca-servisna-platforma-s-08}
 4. Dobiveni pomak kompresora manji je od polovice širine platforme, pa je geometrijski moguć, a povećanje srednjeg gaza reda nekoliko centimetara razumno je za dodatnih $190\ \text{kg}$.
 :::
 
-Plutajuća platforma nije jedini tipičan ulaz u <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Uzgon, plivanje i početni stabilitet</span></span>. Jednako je važno znati zatvoriti vertikalnu ravnotežu i za potpuno uronjeno tijelo koje presijeca granicu dvaju fluida, jer se tada ukupni uzgon čita kao zbroj dviju istisnina različitih gustoća.
+Plutajuća platforma nije jedini tipičan ulaz u []{.mf1-chapter-ref target="u06"}. Jednako je važno znati zatvoriti vertikalnu ravnotežu i za potpuno uronjeno tijelo koje presijeca granicu dvaju fluida, jer se tada ukupni uzgon čita kao zbroj dviju istisnina različitih gustoća.
 
 ::: {#ex-u07-plutajuca-servisna-platforma-na-granici-ulja-i .mf1-ch}
-<p class="mf1-box-label">P3. Plutajuća servisna platforma na granici ulja i vode&nbsp;<span class="mf1-level">T4</span></p>
+<p class="mf1-box-label">Plutajuća servisna platforma na granici ulja i vode&nbsp;<span class="mf1-level">T4</span></p>
 
 **Kontekst:** Hermetička servisna platforma pluta na stratificiranom mediju u kojem sloj ulja leži iznad vode, a ormar s instrumentacijom postavljen je na nepoznatoj bočnoj udaljenosti od osi simetrije. Treba podijeliti istisninu po fluidima, odrediti bočni pomak centra uzgona i položaj ormara koji uravnotežuje izmjerene rubne urone.
 
@@ -563,7 +563,10 @@ Dakle, vertikalna ravnoteža je zatvorena.
 Za bočni pomak centra uzgona bitan je samo vodeni dio ispod granice fluida, jer je uljni dio simetričan po širini i ne daje bočni moment. Vodene dubine lijevo i desno iznose
 
 $$
-h_{w,L} = h_L - \delta = 0{,}30 - 0{,}10 = 0{,}20\ \text{m}, \qquad h_{w,D} = h_D - \delta = 0{,}20 - 0{,}10 = 0{,}10\ \text{m},
+\begin{aligned}
+h_{w,L} &= h_L - \delta = 0{,}30 - 0{,}10 = 0{,}20\ \text{m}, \\
+h_{w,D} &= h_D - \delta = 0{,}20 - 0{,}10 = 0{,}10\ \text{m},
+\end{aligned}
 $$ {#eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-07}
 
 pa je srednja vodena dubina
@@ -647,7 +650,7 @@ $$ {#eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-18}
 
 **Provjera i komentar**
 
-Ovaj cjeloviti zadatak zatvara tri jezgre <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Uzgon, plivanje i početni stabilitet</span></span> u jednom zadatku: srednji uron platforme je $0{,}25\ \text{m}$, ukupna istisnina iznosi $0{,}900\ \text{m}^3$, od čega je $0{,}360\ \text{m}^3$ u ulju, a $0{,}540\ \text{m}^3$ u vodi. Rezultantni centar uzgona pomaknut je oko $4{,}35\ \text{cm}$ prema dubljoj strani, ali zbog $KG\ne KB_{eq}$ to nije krak momenta težine i uzgona. Ekvivalentni početni $GM$ iznosi oko $0{,}429\ \text{m}$, pa ormar mora biti postavljen oko $16{,}4\ \text{cm}$ od osi. Njegovo postavljanje povećalo je srednji uron za $5\ \text{cm}$.
+Ovaj cjeloviti zadatak zatvara tri jezgre []{.mf1-chapter-ref target="u06"} u jednom zadatku: srednji uron platforme je $0{,}25\ \text{m}$, ukupna istisnina iznosi $0{,}900\ \text{m}^3$, od čega je $0{,}360\ \text{m}^3$ u ulju, a $0{,}540\ \text{m}^3$ u vodi. Rezultantni centar uzgona pomaknut je oko $4{,}35\ \text{cm}$ prema dubljoj strani, ali zbog $KG\ne KB_{eq}$ to nije krak momenta težine i uzgona. Ekvivalentni početni $GM$ iznosi oko $0{,}429\ \text{m}$, pa ormar mora biti postavljen oko $16{,}4\ \text{cm}$ od osi. Njegovo postavljanje povećalo je srednji uron za $5\ \text{cm}$.
 
 1. Srednji uron mora biti između izmjerenih rubnih urona i manji od visine boka, što ovdje vrijedi.
 2. Dublje uronjena strana mora biti ona na koju je pomaknut ormar, pa znak momenta mora biti fizikalno smislen.
@@ -656,7 +659,7 @@ Ovaj cjeloviti zadatak zatvara tri jezgre <span class="mf1-ch-ref"><span class="
 :::
 
 ::: {#ex-u07-izolirani-puni-bocni-tank-kao-dodana-masa .mf1-ch}
-<p class="mf1-box-label">P4. Izolirani puni bočni tank kao dodana masa: gaz, nagib i početna stabilnost&nbsp;<span class="mf1-level">T4</span></p>
+<p class="mf1-box-label">Izolirani puni bočni tank kao dodana masa: gaz, nagib i početna stabilnost&nbsp;<span class="mf1-level">T4</span></p>
 
 **Kontekst:** Na pojednostavljenom pravokutnom trupu bočni se tank tijekom izvanrednoga događaja napunio morskom vodom, nakon čega je dotok zaustavljen i tank izoliran. Tank je potpuno pun, pa se voda u ovom nastavnom modelu može tretirati kao nepomična dodana masa bez slobodne površine. Treba procijeniti novi gaz, bočni nagib i početni $GM$.
 
@@ -819,7 +822,7 @@ Vrijednost $37{,}1^\circ$ samo je geometrijska ekstrapolacija krutoga pravokutni
 :::
 
 ::: {#ex-u07-uzgon-na-potonulo-pumpno-kuciste-pri-ispitivanju .mf1-we}
-<p class="mf1-box-label">P5. Uzgon na potonulo pumpno kućište pri ispitivanju &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Uzgon na potonulo pumpno kućište pri ispitivanju &nbsp;<span class="mf1-level">T2</span></p>
 
 
 **Kontekst:** Čelično kućište pumpe potpuno je uronjeno u podvodnom prihvatnom bazenu, bez dodira s dnom. Serviseri trebaju odrediti je li potrebna dodatna sila prema dolje da bi kućište ostalo uronjeno tijekom montaže priključka.
@@ -862,7 +865,7 @@ Za zadanu masu i vanjski istisnuti volumen prosječna gustoća kućišta iznosi 
 :::
 
 ::: {#ex-u07-plutajuci-vjetroagregat-tipa-cilindricne-plovne-osnove-t3 .mf1-we}
-<p class="mf1-box-label">P6. Plutajući vjetroagregat tipa cilindrične plovne osnove &nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Plutajući vjetroagregat tipa cilindrične plovne osnove &nbsp;<span class="mf1-level">T3</span></p>
 
 **Kontekst:** Pojednostavljena cilindrična plovna osnova tipa *spar* nosi vjetroagregat. Ovdje se računa samo vertikalna ravnoteža i promjena gaza; stabilnost, gibanje na valovima, sidrenje i položaj rotora ostaju izvan modela.
 
@@ -965,7 +968,7 @@ U svim zadatcima uzmi $g=9{,}81\ \text{m/s}^2$. Plovci su nepropusni, fluidi mir
 
 ::::: {.mf1-vjezbe-list}
 
-### Z1. Uzgon potpuno uronjenog tijela {#task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno .unnumbered .unlisted}
+### Uzgon potpuno uronjenog tijela {#task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno .unnumbered .unlisted}
 
 Hermetički zatvoreno tijelo volumena $V = 0{,}085\ \text{m}^3$ i mase $m = 62\ \text{kg}$ potpuno je uronjeno u vodu gustoće $\rho = 998\ \text{kg/m}^3$. Odredi silu uzgona i silu koju treba primijeniti da tijelo ostane potpuno uronjeno i u mirovanju.
 
@@ -985,7 +988,7 @@ $F_U \approx 832\ \text{N}$; kako je $F_U > G = 608\ \text{N}$, treba dodatna si
 
 [Razina: T1]{.mf1-task-level}
 
-### Z2. Gaz opterećenog pontona {#task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine .unnumbered .unlisted}
+### Gaz opterećenog pontona {#task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine .unnumbered .unlisted}
 
 Pravokutni radni ponton duljine $L = 2{,}60\ \text{m}$, širine $B = 1{,}40\ \text{m}$ i visine boka $H = 0{,}38\ \text{m}$ ima vlastitu masu $m_p = 510\ \text{kg}$. Na njega se simetrično postavlja teret mase $m_t = 220\ \text{kg}$. Ponton pluta u vodi gustoće $\rho = 998\ \text{kg/m}^3$. Odredi istisnuti volumen, srednji gaz i preostalu dodatnu masu koju ponton može primiti prije nego što rub boka dođe do razine vode. To je geometrijska granica uspravnog modela, ne dopuštenje za ukrcaj toga tereta.
 
@@ -1007,7 +1010,7 @@ $V_{ist} \approx 0{,}73\ \text{m}^3$; srednji gaz $h \approx 0{,}20\ \text{m}$; 
 
 <span id="task-u07-plutajuca-servisna-platforma-duljine-i-sirine-ima"></span>
 
-### Z3. Metacentarska visina iz pokusa nagibanja {#task-metacentarska-visina-iz-pokusa-nagibanja .unnumbered .unlisted}
+### Metacentarska visina iz pokusa nagibanja {#task-metacentarska-visina-iz-pokusa-nagibanja .unnumbered .unlisted}
 
 Pri nastavnom pokusu na zatvorenom pravokutnom pontonu pomicanjem utega određuje se početna metacentarska visina. Ponton u mirnoj vodi najprije stoji uspravno, a teret je na osi simetrije.
 
@@ -1031,7 +1034,7 @@ $h_m=0{,}2863\ \text{m}$; $GM=0{,}5724\ \text{m}$; $KG=0{,}1412\ \text{m}$. Gazo
 
 [Razina: T2]{.mf1-task-level}
 
-### Z4. Gustoća ulja iz očitanja areometra {#task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta .unnumbered .unlisted}
+### Gustoća ulja iz očitanja areometra {#task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta .unnumbered .unlisted}
 
 Areometar mase $m = 0{,}085\ \text{kg}$ s cilindričnim vratom promjera $d = 8\ \text{mm}$ pluta u referentnoj vodi gustoće $\rho_w=1000\ \text{kg/m}^3$ tako da je uronjena duljina cilindričnog vrata $h_1 = 82\ \text{mm}$, a u nepoznatom ulju $h_2 = 95\ \text{mm}$. Obje duljine mjere se od istog spoja vrata s potpuno uronjenim tijelom areometra do slobodne površine. Zanemari kapilarne sile. Odredi gustoću ulja i protumači zašto je uron u ulju veći nego u vodi.
 
@@ -1053,7 +1056,7 @@ $\rho_{ulje} \approx 992{,}4\ \text{kg/m}^3$; uron je veći jer ulje ima manju g
 
 <span id="task-u07-plutajuci-modul-istiskuje-volumen-vode-i-ima"></span>
 
-### Z5. Spuštanje opreme ili dodavanje balasta {#task-spustanje-opreme-ili-dodavanje-balasta .unnumbered .unlisted}
+### Spuštanje opreme ili dodavanje balasta {#task-spustanje-opreme-ili-dodavanje-balasta .unnumbered .unlisted}
 
 Na zatvorenom pravokutnom pontonu razmatraju se dvije odvojene preinake radi povećanja početnog stabiliteta. Sva oprema i balast postavljaju se simetrično, pa se računa uspravno stanje u mirnoj vodi.
 
@@ -1077,7 +1080,7 @@ Početno: $(h,f,KG,GM)=(0{,}2227;0{,}3773;0{,}8000;0{,}1534)\ \text{m}$. Plan A:
 
 [Razina: T3]{.mf1-task-level}
 
-### Z6. Platforma na granici ulja i vode {#task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta .unnumbered .unlisted}
+### Platforma na granici ulja i vode {#task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta .unnumbered .unlisted}
 
 Pravokutna servisna platforma duljine $L = 2{,}80\ \text{m}$ i širine $B = 1{,}20\ \text{m}$ pluta na granici ulja gustoće $\rho_o = 820\ \text{kg/m}^3$ debljine $\delta = 0{,}08\ \text{m}$ i vode gustoće $\rho_w = 998\ \text{kg/m}^3$. Nakon pomaka akumulatora lijevi rub uronjen je $h_L = 0{,}26\ \text{m}$, a desni $h_D = 0{,}18\ \text{m}$. Ukupnu masu platforme s opremom procijeni iz izmjerene istisnine u svakom računu; akumulator ima $m_a=70\ \text{kg}$, a ukupno težište nalazi se na $KG=0{,}200\ \text{m}$ iznad dna.
 
@@ -1149,5 +1152,5 @@ Ponton, plutajuća dizalica ili radna platforma mogu zadovoljiti uvjet uzgona, a
 
 Ovdje se promatra statička ravnoteža ili mala odstupanja od nje. U valovima, pri slobodnoj površini unutar spremnika ili pri većim kutovima nagiba stvarna stabilnost može biti bitno drukčija od slike dobivene iz jednostavne ravnoteže sila i momenata.
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 6</span><span class="mf1-ch-title">Uzgon, plivanje i početni stabilitet</span></span> temelji se na dvjema ključnim provjerama: uzgon se određuje iz istisnine, a nagib iz ravnoteže momenata. Miješanje tih pojmova vodi pogrešnom postavljanju zadatka.
+[]{.mf1-chapter-ref target="u06"} temelji se na dvjema ključnim provjerama: uzgon se određuje iz istisnine, a nagib iz ravnoteže momenata. Miješanje tih pojmova vodi pogrešnom postavljanju zadatka.
 :::

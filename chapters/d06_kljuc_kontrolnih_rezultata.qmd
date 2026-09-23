@@ -1,6 +1,10 @@
 ---
 title: "Ključ kontrolnih rezultata"
 page-layout: article
+mf1-document-id: d06
+mf1-document-kind: appendix
+mf1-document-number: "F"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/d06_kljuc_kontrolnih_rezultata.md >}}

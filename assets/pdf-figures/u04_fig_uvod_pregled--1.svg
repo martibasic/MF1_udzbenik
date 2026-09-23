@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="447.874pt" height="23pt" viewBox="0 0 447.874 23" role="img"><title>Pregled poglavlja 4 - Relativno mirovanje fluida</title><defs>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04fup_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04fup_aP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04fup_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04fup_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c"/>
+    </marker>
+    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u04fup_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1"/>
+      <stop offset="100%" stop-color="#5b9ec9"/>
+    </linearGradient>
+    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u04fup_hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a2e42"/>
+      <stop offset="100%" stop-color="#243d54"/>
+    </linearGradient>
+    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u04fup_hull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8dee5"/>
+      <stop offset="100%" stop-color="#8995a3"/>
+    </linearGradient>
+    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u04fup_sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7fb6d8"/>
+      <stop offset="100%" stop-color="#3a6f8f"/>
+    </linearGradient>
+    <pattern xmlns="http://www.w3.org/2000/svg" id="u04fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6"/>
+    </pattern>
+  </defs><g font-family="Arial, Liberation Sans, sans-serif"><g transform="translate(223.937 13.5)"><text data-source-text="1" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3a4a56">Relativno mirovanje fluida — hidrostatika u efektivnom polju sila</text></g></g></svg>

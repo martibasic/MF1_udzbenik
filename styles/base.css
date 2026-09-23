@@ -1,0 +1,84 @@
+/* =================================================================
+   1. Tipografija i osnovni raspored
+   ================================================================= */
+
+:root {
+  font-size: var(--mf1-font-size);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--mf1-serif);
+  font-size: 1rem;
+  line-height: var(--mf1-line-height);
+  color: var(--mf1-ink);
+  background: var(--mf1-bg);
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Širina glavnog stupca za tekst, formule i postojeće široke skice.
+   Širina se zadaje samo stvarnom sadržaju, a ne Quarto gridu sa sidebarom. */
+main,
+#quarto-document-content {
+  width: 100%;
+  max-width: var(--mf1-content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+main { padding: 1rem 0.75rem 4rem; }
+
+p { margin: 0 0 1rem; hyphens: auto; }
+p + p { margin-top: 0; }
+
+strong { color: var(--mf1-ink); font-weight: 600; }
+em { font-style: italic; }
+
+a {
+  color: var(--mf1-accent-d);
+  text-decoration: none;
+  border-bottom: var(--mf1-rule-width) solid color-mix(in srgb, var(--mf1-accent-d) 25%, transparent);
+  transition: border-color 0.15s, color 0.15s;
+}
+a:hover {
+  border-bottom-color: var(--mf1-accent-d);
+  color: var(--mf1-accent-d);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--mf1-focus);
+  outline-offset: 3px;
+  border-radius: var(--mf1-radius);
+}
+
+/* Dugi URL-ovi, oznake i jednadžbe ne smiju proširiti cijelu stranicu. */
+p, li, td, th, figcaption, .mf1-ch-title,
+.csl-entry, .csl-right-inline, .csl-entry a.uri {
+  overflow-wrap: anywhere;
+}
+
+/* Bibliografski URL nije prozna riječ pa je na uskom zaslonu dopušten prijelom
+   u bilo kojoj točki. Min-width: 0 otključava prijelom unutar CSL grida. */
+.csl-entry, .csl-right-inline { min-width: 0; }
+.csl-entry a.uri {
+  word-break: break-all;
+  hyphens: none;
+}
+
+.mf1-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+.mf1-table-scroll table { margin: 0; display: table; }
+.mf1-table-scroll .mf1-reference-table { min-width: 32rem; }
+/* Četiri tekstualna stupca CFD pojmovnika trebaju čitljivu širinu riječi. */
+.mf1-table-hint { font-family: var(--mf1-sans); font-size: 0.74rem; color: var(--mf1-muted); margin: -0.8rem 0 1.5rem; }
+main table { display: block; max-width: 100%; overflow-x: auto; }

@@ -1,6 +1,10 @@
 ---
 title: "Energijska jednadžba i Bernoulli"
 page-layout: article
+mf1-document-id: u08
+mf1-document-kind: chapter
+mf1-document-number: "8"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u08_energijska_jednadzba_i_bernoulli.md >}}

@@ -1,7 +1,11 @@
 ---
 page-layout: article
+mf1-document-id: u00
+mf1-document-kind: frontmatter
+mf1-document-number: "0"
 ---
 
 # 0. Kako koristiti udžbenik {.unnumbered}
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u00_kako_koristiti_udzbenik.md >}}

@@ -1,6 +1,10 @@
 ---
 title: "Kinematika, kontrolni volumen i kontinuitet"
 page-layout: article
+mf1-document-id: u07
+mf1-document-kind: chapter
+mf1-document-number: "7"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md >}}

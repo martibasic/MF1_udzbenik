@@ -4,15 +4,15 @@
 
 #let mf1-author-block(
   title: [],
-  accent: rgb("#536577"),
+  accent: mf1-muted,
   mode: "rail",
   body,
 ) = {
-  let rule = rgb("#c8cdd2")
+  let rule = mf1-rule-print
   let background = if mode == "alert" {
-    rgb("#fff8f3")
+    mf1-bg-alert
   } else if mode == "rail" {
-    rgb("#f8fafb")
+    mf1-bg-rail
   } else {
     none
   }
@@ -55,10 +55,10 @@
     #set par(first-line-indent: 0pt, spacing: 0.62em)
     #block(below: 0.48em, sticky: true)[
       #set text(
-        size: if mode == "example" { 11.5pt } else { 8.7pt },
+        size: if mode == "example" { mf1-example-title-pt * 1pt } else { mf1-block-title-pt * 1pt },
         weight: "bold",
         tracking: if mode == "example" { 0em } else { 0.015em },
-        fill: if mode == "example" { rgb("#11202e") } else { accent },
+        fill: if mode == "example" { mf1-ink } else { accent },
       )
       #title
     ]
@@ -71,16 +71,16 @@
 #let mf1-level(body) = box(
   inset: (x: 4pt, y: 1.2pt),
   radius: 2pt,
-  fill: rgb("#eef1f3"),
-  stroke: 0.35pt + rgb("#c8cdd2"),
+  fill: mf1-bg-level,
+  stroke: 0.35pt + mf1-rule-print,
 )[
-  #set text(size: 7.2pt, weight: "bold", fill: rgb("#4f5963"))
+  #set text(size: mf1-level-pt * 1pt, weight: "bold", fill: mf1-ink-level)
   #body
 ]
 
 // Razina samostalnog zadatka stoji na kraju, odvojena od lijeve numeracije.
 #let mf1-task-level(body) = align(right)[
-  #text(size: 8pt, weight: "regular", fill: rgb("#69727b"), body)
+  #text(size: mf1-task-level-pt * 1pt, weight: "regular", fill: mf1-muted-print, body)
 ]
 
 // Strukturni podnaslov unutar primjera.  Veći razmak iznad odvaja novu fazu
@@ -90,6 +90,6 @@
   below: 0.46em,
   sticky: true,
 )[
-  #set text(size: 9.5pt, weight: "bold", fill: rgb("#303841"))
+  #set text(size: mf1-label-pt * 1pt, weight: "bold", fill: mf1-heading-print)
   #title
 ]

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="277.682pt" height="295pt" viewBox="0 0 277.682 295" role="img"><title>Zatvoreni servisni modul s kosom inspekcijskom stijenkom</title><defs>
+    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u04v3ks_fluid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aed6f1"/>
+      <stop offset="100%" stop-color="#5b9ec9"/>
+    </linearGradient>
+    <pattern xmlns="http://www.w3.org/2000/svg" id="u04v3ks_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+    </pattern>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04v3ks_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04v3ks_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04v3ks_aP" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04v3ks_aV" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04v3ks_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04v3ks_aDimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04v3ks_aBlk" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#3a4a56"/>
+    </marker>
+    <clipPath xmlns="http://www.w3.org/2000/svg" id="u04v3ks_modClip">
+      <rect x="80" y="120" width="360" height="240"/>
+    </clipPath>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u04v3ks_red" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 8 L12 4 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+    </marker>
+  </defs><g font-family="Arial, Liberation Sans, sans-serif"><g transform="translate(138.841 13.5)"><text data-source-text="10" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(21, 101, 192)">Rješenje u četiri koraka</text></g><g transform="translate(138.841 28.5)"><text data-source-text="11" x="0" y="0" text-anchor="middle" font-size="9" font-weight="600" fill="rgb(142, 68, 173)">1. Kut stijenke α</text></g><g transform="translate(138.841 43.5)"><text data-source-text="12" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="400" fill="rgb(26, 37, 48)">tan θ = a/g = 3,4/9,81 = 0,347 → θ ≈ 19,1°</text></g><g transform="translate(138.841 58.5)"><text data-source-text="13" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(142, 68, 173)">α = 90° − θ ≈ 70,9°</text></g><g transform="translate(138.841 73.5)"><text data-source-text="34" x="0" y="0" text-anchor="middle" font-size="9" font-weight="600" fill="rgb(183, 96, 12)">2. Duljina stijenke AB</text></g><g transform="translate(138.841 88.5)"><text data-source-text="14" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="400" fill="rgb(26, 37, 48)"><tspan font-size="9" font-weight="400" font-style="italic" fill="rgb(26, 37, 48)">s</tspan> = H / sin α = 0,55 / sin 70,9° → <tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(183, 96, 12)">s ≈ 0,582 m</tspan></text></g><g transform="translate(138.841 103.5)"><text data-source-text="15" x="0" y="0" text-anchor="middle" font-size="9" font-weight="600" fill="rgb(30, 132, 73)">3. Rezultanta sile fluida po jediničnoj širini</text></g><g transform="translate(138.841 118.5)"><text data-source-text="16" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="400" fill="rgb(26, 37, 48)">F₀/b = p<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(26, 37, 48)" baseline-shift="-2">M0</tspan> · s ≈ 9314 N/m</text></g><g transform="translate(138.841 134.5)"><text data-source-text="17" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="400" fill="rgb(26, 37, 48)">F<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(26, 37, 48)" baseline-shift="-2">h</tspan>/b = ½ ρ g<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(26, 37, 48)" baseline-shift="-2">eff</tspan> s² ≈ 1689 N/m</text></g><g transform="translate(138.841 150.5)"><text data-source-text="18" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(30, 132, 73)">F<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(30, 132, 73)" baseline-shift="-2">R</tspan>/b ≈ 11,00 kN/m</text></g><g transform="translate(138.841 166.5)"><text data-source-text="19" x="0" y="0" text-anchor="middle" font-size="9" font-weight="600" fill="rgb(192, 57, 43)">4. Hvatište od ruba A (mjereno po stijenci)</text></g><g transform="translate(138.841 181.5)"><text data-source-text="20" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="400" fill="rgb(26, 37, 48)"><tspan font-size="9" font-weight="400" font-style="italic" fill="rgb(26, 37, 48)">y</tspan> <tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(26, 37, 48)" baseline-shift="-2">R</tspan> = [F<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(26, 37, 48)" baseline-shift="-2">0</tspan>(s/2) + F<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(26, 37, 48)" baseline-shift="-2">h</tspan>(2s/3)] / F<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(26, 37, 48)" baseline-shift="-2">R</tspan> → <tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(192, 57, 43)">y</tspan><tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(192, 57, 43)" baseline-shift="-2">R</tspan><tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(192, 57, 43)"> ≈ 0,31 m</tspan></text></g><g transform="translate(138.841 197.5)"><text data-source-text="21" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(90, 106, 120)">stijenka okomita na slobodnu površinu → jednolika + trokutasta</text>
+<text data-source-text="21" x="0" y="12" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(90, 106, 120)">raspodjela tlaka</text></g><g transform="translate(138.841 224.5)"><text data-source-text="22" x="0" y="0" text-anchor="middle" font-size="9" font-weight="600" fill="rgb(90, 106, 120)">REZULTATI</text></g><g transform="translate(138.841 239.5)"><text data-source-text="23" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(142, 68, 173)">α ≈ 70,9°</text></g><g transform="translate(138.841 254.5)"><text data-source-text="35" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(183, 96, 12)">s ≈ 0,582 m</text></g><g transform="translate(138.841 269.5)"><text data-source-text="24" x="0" y="0" text-anchor="middle" font-size="9" font-weight="600" fill="rgb(30, 132, 73)">F<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(30, 132, 73)" baseline-shift="-2">R</tspan>/b ≈ 11,0 kN/m</text></g><g transform="translate(138.841 284.5)"><text data-source-text="25" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(192, 57, 43)">y<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(192, 57, 43)" baseline-shift="-2">R</tspan> ≈ 0,31 m</text></g></g></svg>

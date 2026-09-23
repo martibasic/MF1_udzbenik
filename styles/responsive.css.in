@@ -1,0 +1,64 @@
+@media screen and (max-width: ${tablet}px) {
+  :root { font-size: var(--mf1-font-size-tablet); }
+  main { padding: 0.6rem 1rem 3rem; }
+
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.2rem; padding-top: 1.2rem; }
+  h3 { font-size: 1.08rem; }
+
+  .mf1-hero h1 { font-size: 2.1rem; }
+  h1.mf1-home-title { font-size: 2.4rem; }
+
+  main, .quarto-container, .page-columns, .page-layout-article,
+  #quarto-content, .content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  img, svg, video, iframe { max-width: 100%; height: auto; }
+
+  .math.display {
+    max-width: 100%;
+    padding-bottom: 0.4rem;
+  }
+
+  .mf1-we, .mf1-gp, .mf1-po, .mf1-ch, .mf1-izvod, .mf1-application,
+  .mf1-temelj, .mf1-fizikalno-znacenje, .mf1-granica-modela, .mf1-numerika, .mf1-dublje,
+  .mf1-warning {
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .mf1-we, .mf1-gp, .mf1-po, .mf1-ch {
+    padding-left: 0;
+  }
+
+  .mf1-priprema, .mf1-samoprovjera, .mf1-checklist,
+  .mf1-mini-summary, .mf1-zavrsni-okvir,
+  .mf1-vjezbe-list, .mf1-print-note,
+  .mf1-interaktivno, .mf1-numerika {
+    padding: 0.9rem 0;
+    margin: 1.5rem 0;
+  }
+
+  .mf1-grid {
+    grid-template-columns: 1fr;
+    border-top: 0;
+  }
+  .mf1-error-pair { grid-template-columns: 1fr; gap: 0.5rem; }
+  a.mf1-card, .mf1-card {
+    border-right: 0;
+  }
+}
+
+@media screen and (max-width: ${mobile}px) {
+  :root { font-size: var(--mf1-font-size-mobile); }
+  main { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .quarto-title-banner { padding-left: 0.75rem; padding-right: 0.75rem; }
+}
+
+
+@media screen and (max-width: ${tablet}px) {
+  .mf1-table-scroll .mf1-wide-table { min-width: 42rem; }
+}

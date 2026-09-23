@@ -2,6 +2,8 @@
 
 Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke, izvode i granice modela potraži u poglavlju navedenom u zadnjem stupcu.
 
+::: {.mf1-glossary}
+
 | Pojam | Kratka radna definicija | Poglavlje |
 |---|---|---|
 | Apsolutni tlak | Tlak mjeren u odnosu na idealni vakuum; mora se rabiti u jednadžbi stanja, pri provjeri kavitacije i u kompresibilnom toku. | U03, U08–U09 |
@@ -83,4 +85,6 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 <p class="mf1-box-label">Kako čitati pragove</p>
 
 Brojevi poput $Re$, $Ma$ i $Fr$ ne nose univerzalnu granicu primjenjivosti neovisnu o geometriji, rubnim uvjetima i traženoj točnosti. Kada je odluka osjetljiva, u glavnom poglavlju treba provjeriti definiciju karakterističnih veličina i područje valjanosti primijenjene korelacije.
+:::
+
 :::

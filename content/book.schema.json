@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MF1 book hierarchy",
+  "type": "object",
+  "required": ["schema_version", "book", "frontmatter", "parts", "appendices", "documents"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "book": {
+      "type": "object",
+      "required": ["title", "subtitle", "author", "output-file"],
+      "properties": {
+        "title": {"type": "string", "minLength": 1},
+        "subtitle": {"type": "string"},
+        "author": {"type": "string", "minLength": 1},
+        "output-file": {"type": "string", "pattern": "^[a-z0-9-]+$"}
+      }
+    },
+    "site_url": {"type": "string", "format": "uri"},
+    "repo_url": {"type": "string", "format": "uri"},
+    "frontmatter": {"$ref": "#/$defs/ids", "maxItems": 1},
+    "appendices": {"$ref": "#/$defs/ids", "maxItems": 26},
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["id", "title", "chapters"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "title": {"type": "string", "minLength": 1},
+          "chapters": {"$ref": "#/$defs/ids"}
+        }
+      }
+    },
+    "documents": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object", "required": ["title", "path", "source"],
+        "properties": {
+          "title": {"type": "string", "minLength": 1},
+          "path": {"type": "string", "pattern": "^chapters/.+\\.qmd$"},
+          "source": {"type": "string", "pattern": "^source/.+\\.md$"},
+          "title_aliases": {"type": "array", "items": {"type": "string"}},
+          "role": {"type": "string"},
+          "verification": {"type": "object", "required": ["module", "namespace"]}
+        }
+      }
+    }
+  },
+  "$defs": {"ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}}
+}

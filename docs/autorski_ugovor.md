@@ -19,9 +19,10 @@ i bez lijeve uvlake cijelog bloka. Naslov izravno imenuje problem, primjerice
 „Kratki primjer —” ili „Cjeloviti zadatak —”. Semantička klasa, stabilni ID
 i oznaka razine ostaju uz primjer; ovo pravilo vrijedi za HTML i PDF.
 
-Ispred naslova primjera stoji P1, P2, … redom unutar poglavlja. Oznake
-automatski usklađuje `scripts/normalize_public_text.py --write`; broj nije
-dio stabilnog ID-ja. Koraci rješenja imaju istu razinu naslova i klase
+Ispred prikazanog naslova primjera stoji P1, P2, … redom unutar poglavlja.
+Oznake generira zajednički sadržajni model; ne upisuju se u izvorni naslov
+niti su dio stabilnog ID-ja. `scripts/build_book.py --write` obnavlja indeks.
+Koraci rješenja imaju istu razinu naslova i klase
 `.unnumbered .unlisted .mf1-step`, pa zadržavaju samo svoj broj 1., 2., 3.
 i ne mijenjaju numeraciju ni sadržaj poglavlja.
 
@@ -51,12 +52,18 @@ poglavlja ni trenutačni položaj sadržaja.
 Samostalni zadatci nose oznake Z1–Z6 unutar poglavlja i kratak naslov problema.
 Razina T1–T4 navodi se na kraju zadatka, sitno i desno poravnata, odvojeno
 od lijeve numeracije. Naslov se zapisuje kao
-`### Z1. Naslov problema {#task-stabilni-id .unnumbered .unlisted}`,
+`### Naslov problema {#task-stabilni-id .unnumbered .unlisted}`,
 a oznaka razine kao `[Razina: T1]{.mf1-task-level}`. Time zadatak ne dobiva
 dodatni broj odjeljka niti ulazi u sadržaj knjige. Iste oznake i naslovi
-automatski se prenose u ključ rezultata; generator provjerava neprekinuti
-redoslijed brojeva. Skice koriste oznake Z1–Z6. Pri upućivanju na zadatak
+automatski se prenose u ključ rezultata; generator izvodi neprekinuti
+redoslijed Z1–Z6. Skice koriste oznake Z1–Z6. Pri upućivanju na zadatak
 izvan njegova poglavlja navodi se i broj poglavlja.
+
+Nove komponente koriste zajedničke predloške iz
+[arhitekturnog vodiča](arhitektura.md), bez vlastitog HTML-a i CSS-a.
+Razina zadatka ulazi u indeks kao podatak, a sve prikaze oblikuje isti
+adapter. Numeriranje ne zamjenjuje provjeru podudarnosti teksta i skice:
+ako se promijeni redoslijed zadataka, moraju se uskladiti i oznake u SVG-u.
 
 Manifest zadataka koristi **shemu v2**. Kanonski dio reproducibilno se generira
 iz `source/`; ručna izmjena generiranih polja nije dopuštena. Za svaki od 90

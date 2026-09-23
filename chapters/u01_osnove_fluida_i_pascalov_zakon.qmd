@@ -1,6 +1,10 @@
 ---
 title: "Osnove fluida i Pascalov zakon"
 page-layout: article
+mf1-document-id: u01
+mf1-document-kind: chapter
+mf1-document-number: "1"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u01_osnove_fluida_i_pascalov_zakon.md >}}

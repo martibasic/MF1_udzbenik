@@ -1,6 +1,10 @@
 ---
 title: "Numerička mehanika fluida"
 page-layout: article
+mf1-document-id: d04
+mf1-document-kind: appendix
+mf1-document-number: "D"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/d04_numericka_mehanika_fluida.md >}}

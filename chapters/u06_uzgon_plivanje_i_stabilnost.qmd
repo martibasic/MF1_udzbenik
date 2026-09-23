@@ -1,6 +1,10 @@
 ---
 title: "Uzgon, plivanje i početni stabilitet"
 page-layout: article
+mf1-document-id: u06
+mf1-document-kind: chapter
+mf1-document-number: "6"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u06_uzgon_plivanje_i_stabilnost.md >}}

@@ -3,11 +3,11 @@
 #import "@preview/orange-book:0.7.1": part-change
 
 #let mf1-reading(body) = {
-  let ink = rgb("#11202e")
-  let muted = rgb("#536577")
-  let accent = rgb("#8e4519")
-  set text(fill: ink)
-  set par(first-line-indent: 0pt, spacing: 0.68em, leading: 0.56em)
+  let ink = mf1-ink
+  let muted = mf1-muted
+  let accent = mf1-accent-d
+  set text(fill: ink, font: mf1-font-family)
+  set par(first-line-indent: 0pt, spacing: mf1-paragraph-spacing-em * 1em, leading: mf1-leading-em * 1em)
 
   show heading: it => context {
     if it.level == 1 {
@@ -21,14 +21,14 @@
       part-change.update(false)
       block(width: 100%, above: 0pt, below: 1.3em, sticky: true)[
         #set par(justify: false, leading: 0.45em)
-        #set text(size: 23pt, weight: "bold", hyphenate: false)
+        #set text(size: mf1-h1-pt * 1pt, weight: "bold", hyphenate: false)
         #if it.numbering != none [#text(fill: accent)[#counter(heading).display(it.numbering)]#h(0.25em)]
         #it.body
         #v(0.5em)
-        #line(length: 100%, stroke: 0.65pt + rgb("#d8d4cb"))
+        #line(length: 100%, stroke: 0.65pt + mf1-rule-heading)
       ]
     } else {
-      let size = if it.level == 2 { 14pt } else if it.level == 3 { 11.5pt } else { 10.5pt }
+      let size = if it.level == 2 { mf1-h2-pt * 1pt } else if it.level == 3 { mf1-h3-pt * 1pt } else { mf1-h4-pt * 1pt }
       block(above: 1.25em, below: 0.55em, sticky: true)[
         #set par(justify: false)
         #set text(size: size, weight: "bold", hyphenate: false)
@@ -38,9 +38,11 @@
     }
   }
 
-  show figure.caption: set text(size: 9pt, fill: muted)
+  show figure.caption: set text(size: mf1-figure-tokens.at("figure-caption-size") * 1pt, fill: muted)
   show figure.caption: set par(justify: false)
+  show figure: set block(breakable: true)
   show table.cell: set par(justify: false)
+  set table.cell(breakable: false)
   show table.cell.where(y: 0): set text(weight: "semibold")
   body
 }

@@ -11,3 +11,4 @@ jupyterlite-core==0.8.1
 jupyterlite-pyodide-kernel==0.8.1
 qrcode==8.2
 PyMuPDF==1.28.0
+PyYAML==6.0.3

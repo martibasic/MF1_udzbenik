@@ -1,6 +1,10 @@
 ---
 title: "Literatura"
 page-layout: article
+mf1-document-id: d05
+mf1-document-kind: appendix
+mf1-document-number: "E"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/d05_literatura.md >}}

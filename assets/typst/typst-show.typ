@@ -4,10 +4,10 @@
 
 #show: book.with(
 $if(title)$
-  title: [#text(size: 36pt, weight: "semibold", fill: rgb("#11202e"))[$title$]],
+  title: [#text(size: 36pt, weight: "semibold", fill: mf1-ink)[$title$]],
 $endif$
 $if(subtitle)$
-  subtitle: [#text(size: 14pt, fill: rgb("#536577"))[$subtitle$]],
+  subtitle: [#text(size: 14pt, fill: mf1-muted)[$subtitle$]],
 $endif$
 $if(by-author)$
   author: "$for(by-author)$$it.name.literal$$sep$, $endfor$",
@@ -18,13 +18,13 @@ $endif$
   lang: "hr",
   supplement-chapter: "Poglavlje",
   supplement-part: "Dio",
-  main-color: rgb("#8e4519"),
+  main-color: mf1-accent-d,
   cover-background: none,
   cover: block(width: 100%, height: 100%)[
     #place(top + left, dx: 24mm, dy: 35mm)[
-      #line(length: 24mm, stroke: 2pt + rgb("#b35d27"))
+      #line(length: 24mm, stroke: 2pt + mf1-accent)
       #v(5mm)
-      #text(size: 10pt, fill: rgb("#536577"))[SVEUČILIŠNI UDŽBENIK]
+      #text(size: 10pt, fill: mf1-muted)[SVEUČILIŠNI UDŽBENIK]
     ]
   ],
   paper-size: "a4",

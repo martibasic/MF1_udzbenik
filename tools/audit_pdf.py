@@ -14,6 +14,12 @@ import re
 import sys
 import unicodedata
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from book_model import load_book, documents, verification_chapters
+BOOK = load_book()
+BOOK_CHAPTERS = documents(BOOK, kind="chapter")
+
 try:
     import pymupdf
 except ImportError as exc:  # pragma: no cover - poruka služi neispravnom okruženju
@@ -25,9 +31,12 @@ except ImportError as exc:  # pragma: no cover - poruka služi neispravnom okru�
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_PDF = REPO_ROOT / "_book" / "mehanika-fluida-1.pdf"
 
-EXPECTED_TITLE = "Mehanika fluida 1"
-EXPECTED_AUTHOR = "Martina Bašić"
-MIN_PAGES = 240
+EXPECTED_TITLE = BOOK["book"]["title"]
+EXPECTED_AUTHOR = BOOK["book"]["author"]
+# Print compositions keep diagram labels >= 9 pt; the reviewed layout has 340
+# pages. This regression envelope detects missing content or layout inflation;
+# it is not an author-contract limit. See docs/ispis-skica.md.
+MIN_PAGES = 310
 MAX_PAGES = 380
 MIN_FILE_SIZE = 1_000_000
 MIN_TEXT_CHARACTERS = 250_000
@@ -38,23 +47,7 @@ A4_WIDTH_PT = 595.276
 A4_HEIGHT_PT = 841.890
 PAGE_TOLERANCE_PT = 1.0
 
-CHAPTER_TITLES = (
-    "1. Osnove fluida i Pascalov zakon",
-    "2. Viskoznost, površinska napetost i kapilarnost",
-    "3. Hidrostatička raspodjela tlaka i manometrija",
-    "4. Relativno mirovanje fluida",
-    "5. Hidrostatske sile na ravne i zakrivljene plohe",
-    "6. Uzgon, plivanje i početni stabilitet",
-    "7. Kinematika, kontrolni volumen i kontinuitet",
-    "8. Energijska jednadžba i Bernoulli",
-    "9. Kompresibilni idealni tok",
-    "10. Količina i moment količine gibanja",
-    "11. Dimenzijska analiza i sličnost",
-    "12. Diferencijalni opis realnog toka",
-    "13. Gubitci, cjevovodi, crpke i mreže",
-    "14. Turbostrojevi i propulzija",
-    "15. Otvoreni tokovi",
-)
+CHAPTER_TITLES = tuple(doc["number"] + ". " + doc["title"] for doc in BOOK_CHAPTERS)
 TOC_MARKERS = (
     "Sadržaj",
     "Osnove fluida i Pascalov zakon",
@@ -226,7 +219,7 @@ def audit(pdf_path: Path) -> tuple[dict[str, object], list[str]]:
         report["page_count"] = page_count
         if not MIN_PAGES <= page_count <= MAX_PAGES:
             issues.append(
-                f"broj stranica {page_count} nije u ugovorenom rasponu "
+                f"broj stranica {page_count} nije u regresijskom rasponu prijeloma "
                 f"{MIN_PAGES}–{MAX_PAGES}"
             )
 

@@ -43,6 +43,10 @@
     "experimental_forces.csv",
     "uncertainty.json",
     "provenance.json",
-    "README.md"
+    "README.md",
+    "source_review.json",
+    "teaching_comparison.json",
+    "sources/fun3d_results_sa_withN.dat",
+    "sources/CLCD_Ladson_expdata.dat"
   ]
 }

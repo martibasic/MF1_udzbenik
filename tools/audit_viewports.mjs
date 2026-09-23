@@ -49,44 +49,8 @@ const jupyterLiteOnly = cliArguments.includes("--jlite-only");
 const siteRoot = resolve(repoRoot, positionalArguments[0] || "_site");
 const snapshotRoot = resolve(repoRoot, "tools", "tmp", "visual");
 
-const canonicalPages = [
-  "index.html",
-  "chapters/u00_kako_koristiti_udzbenik.html",
-  ...Array.from({ length: 15 }, (_, index) => {
-    const code = String(index + 1).padStart(2, "0");
-    const names = [
-      "osnove_fluida_i_pascalov_zakon",
-      "viskoznost_povrsinska_napetost_i_kapilarnost",
-      "hidrostaticka_raspodjela_tlaka_i_manometrija",
-      "relativno_mirovanje_fluida",
-      "hidrostatske_sile_na_plohe",
-      "uzgon_plivanje_i_stabilnost",
-      "kinematika_kontrolni_volumen_i_kontinuitet",
-      "energijska_jednadzba_i_bernoulli",
-      "kompresibilni_idealni_tok",
-      "kolicina_i_moment_kolicine_gibanja",
-      "dimenzijska_analiza_i_slicnost",
-      "diferencijalni_opis_realnog_toka",
-      "gubici_cjevovodi_crpke_i_mreze",
-      "turbostrojevi_i_propulzija",
-      "otvoreni_tokovi",
-    ];
-    return `chapters/u${code}_${names[index]}.html`;
-  }),
-  ...Array.from({ length: 6 }, (_, index) => {
-    const names = [
-      "sazetak_formula_i_oznaka",
-      "pojmovnik",
-      "tipicne_pogreske_po_poglavljima",
-      "numericka_mehanika_fluida",
-      "literatura",
-      "kljuc_kontrolnih_rezultata",
-    ];
-    const code = String(index + 1).padStart(2, "0");
-    return `chapters/d${code}_${names[index]}.html`;
-  }),
-  "chapters/za_ispis.html",
-];
+const bookModel = JSON.parse(readFileSync(join(repoRoot, "assets/book-model.json"), "utf8"));
+const canonicalPages = ["index.html", ...bookModel.documents.map(doc => doc.path.replace(/\.qmd$/, ".html")), "chapters/za_ispis.html"];
 
 const mime = {
   ".css": "text/css",
@@ -363,6 +327,9 @@ try {
           client: document.documentElement.clientWidth,
           scroll: document.documentElement.scrollWidth,
           motion: getComputedStyle(document.documentElement).scrollBehavior,
+          misplacedNotes: [...document.querySelectorAll('main [data-component][role="note"]')]
+            .filter(element => element.getBoundingClientRect().width > 0 &&
+              element.getBoundingClientRect().width < document.querySelector('main').getBoundingClientRect().width * 0.65).length,
           uncontainedDisplayMath: [
             ...document.querySelectorAll(".math.display"),
           ].filter((element) => {
@@ -426,8 +393,37 @@ try {
         }
         if (width === 1440) {
           await page.addScriptTag({ path: axePath });
-          const result = await page.evaluate(async () =>
-            window.axe.run(document, {
+          // axe builds a virtual tree for the whole DOM even with an include
+          // context. Temporarily detach unrelated chapters while auditing
+          // each collection chapter in its original shell and styles. Restore
+          // the exact nodes afterwards. Full-page geometry was checked above;
+          // IDs, heading structure and links are also checked on the complete
+          // document by audit_rendered_site.py and audit_rendered_model.py.
+          const isCollection = relative === 'chapters/za_ispis.html';
+          const chapterScopes = bookModel.documents.map(doc => [`#print-${doc.id}`]);
+          const scopes = isCollection
+            ? [null, ...chapterScopes.map(selector => ({include: [selector]}))]
+            : [null];
+          if (isCollection) {
+            await page.evaluate(selectors => {
+              window.mf1AuditChapters = selectors.map(([selector]) => {
+                const node = document.querySelector(selector);
+                if (!node) throw new Error(`Missing collection chapter ${selector}`);
+                const slot = document.createComment(`audit ${selector}`);
+                node.replaceWith(slot);
+                return {node, slot};
+              });
+            }, chapterScopes);
+          }
+          const violations = [];
+          for (const [scopeIndex, scope] of scopes.entries()) {
+            if (isCollection && scopeIndex > 0) {
+              await page.evaluate(index => {
+                const {node, slot} = window.mf1AuditChapters[index];
+                slot.replaceWith(node);
+              }, scopeIndex - 1);
+            }
+            const result = await page.evaluate(async scope => window.axe.run(scope || document, {
               runOnly: {
                 type: "tag",
                 values: [
@@ -438,9 +434,23 @@ try {
                   "wcag22aa",
                 ],
               },
-            }),
-          );
-          for (const violation of result.violations) {
+            }), scope);
+            violations.push(...result.violations);
+            if (isCollection && scopeIndex > 0) {
+              await page.evaluate(index => {
+                const {node, slot} = window.mf1AuditChapters[index];
+                node.replaceWith(slot);
+              }, scopeIndex - 1);
+            }
+            if (scopes.length > 1) console.log(`Print accessibility scope ${scopeIndex + 1}/${scopes.length}`);
+          }
+          if (isCollection) {
+            await page.evaluate(() => {
+              for (const {node, slot} of window.mf1AuditChapters) slot.replaceWith(node);
+              delete window.mf1AuditChapters;
+            });
+          }
+          for (const violation of violations) {
             const targets = violation.nodes
               .slice(0, 3)
               .map((node) => node.target.join(" "))
@@ -486,7 +496,23 @@ try {
             );
           }
         }
+        if (width === 1440 && !relative.endsWith('za_ispis.html')) {
+          const chapterName = relative.split('/').pop().replace('.html', '');
+          mkdirSync(snapshotRoot, { recursive: true });
+          await page.screenshot({path: join(snapshotRoot, `${chapterName}-desktop.png`)});
+          for (const [name, selector] of [['example', '[data-component="Example"]'], ['figure', '[data-component="Figure"]']]) {
+            const component = page.locator(selector).first();
+            if (await component.count()) {
+              await component.scrollIntoViewIfNeeded();
+              await page.screenshot({path: join(snapshotRoot, `${chapterName}-${name}.png`)});
+            }
+          }
+        }
+        if (metrics.misplacedNotes > 0) {
+          issues.push(`${relative} @ ${width}px: ${metrics.misplacedNotes} sadržajnih napomena premješteno je u usku marginu`);
+        }
         checked += 1;
+        console.log(`Checked ${relative} @ ${width}px (${checked})`);
       }
 
       await page.goto(

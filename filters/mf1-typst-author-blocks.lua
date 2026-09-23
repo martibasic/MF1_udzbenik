@@ -9,27 +9,22 @@ if not FORMAT:match("typst") then
   return {}
 end
 
-local block_styles = {
-  ["mf1-we"] =                     { accent = "#2c6e2e", mode = "example", label = "Riješeni primjer" },
-  ["mf1-gp"] =                     { accent = "#1b5fa8", mode = "example", label = "Vođeni primjer" },
-  ["mf1-po"] =                     { accent = "#6e4a35", mode = "example", label = "Primjer odluke" },
-  ["mf1-ch"] =                     { accent = "#7c2e92", mode = "example", label = "Cjeloviti zadatak" },
-  ["mf1-temelj"] =                 { accent = "#4f735b", mode = "rail",  label = "Temelj" },
-  ["mf1-izvod"] =                  { accent = "#536577", mode = "rail",  label = "Izvod" },
-  ["mf1-fizikalno-znacenje"] =     { accent = "#14747b", mode = "rail",  label = "Fizikalno značenje" },
-  ["mf1-granica-modela"] =         { accent = "#9a4b2b", mode = "rail",  label = "Granica modela" },
-  ["mf1-numerika"] =               { accent = "#765b91", mode = "rail",  label = "Numerički pokus" },
-  ["mf1-dublje"] =                 { accent = "#6f5a86", mode = "rail",  label = "Dublje" },
-  ["mf1-application"] =            { accent = "#8e4519", mode = "rail",  label = "Inženjerski kontekst" },
-  ["mf1-interaktivno"] =           { accent = "#765b91", mode = "rail",  label = "Numerički pokus" },
-  ["mf1-warning"] =                { accent = "#9a4b2b", mode = "alert", label = "Oprez" },
-  ["mf1-priprema"] =               { accent = "#69727b", mode = "panel", label = "Prije čitanja poglavlja" },
-  ["mf1-samoprovjera"] =           { accent = "#69727b", mode = "panel", label = "Konceptualna provjera" },
-  ["mf1-zavrsni-okvir"] =          { accent = "#4f735b", mode = "panel", label = "Sažeta mapa modela" },
-  ["mf1-checklist"] =              { accent = "#69727b", mode = "panel", label = "Provjera" },
-  ["mf1-mini-summary"] =           { accent = "#4f735b", mode = "panel", label = "Sažetak" },
-  ["mf1-print-note"] =             { accent = "#69727b", mode = "panel", label = "Napomena" },
-}
+local root = pandoc.path.directory(pandoc.path.directory(PANDOC_SCRIPT_FILE))
+local function read_json(path)
+  local file = assert(io.open(pandoc.path.join({root, path}), "r"))
+  local data = pandoc.json.decode(file:read("*a")); file:close(); return data
+end
+local components = dofile(pandoc.path.join({root, 'filters/mf1-component-model.lua'}))(root)
+local registry = components.registry
+local tokens = read_json("design-system/tokens.json").web
+local block_styles = {}
+for _, component in pairs(registry) do
+  if component.pdf_mode then
+    for _, class in ipairs(component.classes or {}) do
+      block_styles[class] = {accent=tokens[component.accent], mode=component.pdf_mode, label=component.label}
+    end
+  end
+end
 
 -- Kratke strukturne oznake u primjerima i završnim okvirima nisu obična
 -- podebljana rečenica.  U PDF-u ih pretvaramo u male, ljepljive podnaslove s
@@ -50,7 +45,11 @@ local minor_heading_labels = {
   ["Nakon ovoga poglavlja mora biti moguće"] = true,
   ["U tehnici to znači"] = true,
   ["Granica modela"] = true,
+  ["Kamo dalje nakon MF1"] = true,
 }
+for _, component in pairs(registry) do
+  for _, label in ipairs(component.labels or {}) do minor_heading_labels[label] = true end
+end
 
 local function style_for(div)
   for _, class_name in ipairs(div.classes) do
@@ -75,6 +74,9 @@ local function is_label_close(block)
 end
 
 local function extract_label(content, fallback)
+  if content[1] and content[1].t == "Div" and content[1].classes:includes("mf1-component-title") then
+    return content:remove(1).content[1]
+  end
   if #content >= 3 and is_label_open(content[1]) and is_label_close(content[3]) then
     local label = content[2]
     content:remove(3)
@@ -87,7 +89,47 @@ local function extract_label(content, fallback)
 end
 
 local function render_author_block(div)
-  if div.classes:includes("mf1-vjezbe-list") then
+  if not components.visible(components.kind(div), 'pdf') then return pandoc.List() end
+  if div.identifier == "refs" then
+    return pandoc.RawBlock("typst", '#bibliography("references.bib", title: none) <refs>')
+  end
+  if div.classes:includes("mf1-interaktivno-akcija") then
+    -- Raw HTML links/images disappear in Typst. Reparse just this HTML
+    -- fragment with Pandoc's HTML reader to retain native links and QR art.
+    local html = pandoc.write(pandoc.Pandoc(div.content), "html")
+    local parsed = pandoc.read(html, "html")
+    local links = pandoc.List()
+    local images = pandoc.List()
+    parsed:walk({ Link = function(link)
+      links:insert(pandoc.Para({link}))
+    end, Image = function(img)
+      img.src = img.src:gsub("^%.%./assets/", "assets/")
+      img.attributes.width = "28mm"
+      images:insert(pandoc.Plain({img}))
+    end })
+    local result = pandoc.List({pandoc.RawBlock("typst", "#grid(columns: (1fr, 28mm), column-gutter: 4mm, align: horizon, [")})
+    result:extend(links)
+    result:insert(pandoc.RawBlock("typst", "], ["))
+    result:extend(images)
+    result:insert(pandoc.RawBlock("typst", "])"))
+    return result
+  end
+
+  if div.classes:includes("mf1-decision-step") then
+    local content = pandoc.List(div.content)
+    local index = pandoc.utils.stringify(content:remove(1))
+    local label = extract_label(content, "Korak")
+    local result = pandoc.List({pandoc.RawBlock("typst", "#block(breakable: false)[#mf1-minor-heading([")})
+    local title = pandoc.List({pandoc.Str(index .. "."), pandoc.Space()})
+    title:extend(label.content)
+    result:insert(pandoc.Plain(title))
+    result:insert(pandoc.RawBlock("typst", "])"))
+    result:extend(content)
+    result:insert(pandoc.RawBlock("typst", "]"))
+    return result
+  end
+
+  if div.classes:includes("mf1-vjezbe-list") or div.classes:includes("mf1-problem") then
     -- Keep the small level label with the task's last visible paragraph.
     -- HTML-only hints/results may occur between that paragraph and the label.
     local content = pandoc.List()
@@ -115,13 +157,17 @@ local function render_author_block(div)
     return div
   end
 
-  -- Pripremni i samoprovjerni sadržaj namijenjeni su mrežnom radu.
-  -- Numerički mostovi ostaju u PDF-u kao prijelaz prema CFD-u.
-  if div.classes:includes("mf1-priprema")
-    or div.classes:includes("mf1-samoprovjera") then
-    return pandoc.List()
+  if div.classes:includes("mf1-example-field") then return div end
+  if div.classes:includes("mf1-minor-title") then
+    if div.content[1] and div.content[1].t == "RawBlock" and tostring(div.content[1].format) == "typst" then
+      if div.identifier ~= "" then div.content:insert(pandoc.RawBlock("typst", '#label(' .. pandoc.json.encode(div.identifier) .. ')')) end
+      return div.content
+    end
+    local title = div.content[1]
+    if title and title.content[1] and title.content[1].t == "Strong" then title = pandoc.Plain(title.content[1].content) end
+    local anchor = div.identifier ~= "" and (' #label(' .. pandoc.json.encode(div.identifier) .. ')') or ""
+    return {pandoc.RawBlock("typst", "#mf1-minor-heading(["), title, pandoc.RawBlock("typst", "])" .. anchor)}
   end
-
   local style = style_for(div)
   if style == nil then
     return nil
@@ -133,6 +179,18 @@ local function render_author_block(div)
     label = pandoc.Plain({ pandoc.Str("Sažetak") })
   end
   local result = pandoc.List()
+
+  local keep_together = div.classes:includes("mf1-interaktivno")
+  -- Only the compact numerical note may contain a QR grid. A solved
+  -- example can contain that note and still needs normal page breaks.
+  if div.classes:includes("mf1-numerika") then
+    div:walk({ Image = function(img)
+      if img.src:match("assets/qr/") then keep_together = true end
+    end })
+  end
+  if keep_together then
+    result:insert(pandoc.RawBlock("typst", "#block(breakable: false)["))
+  end
 
   result:insert(pandoc.RawBlock(
     "typst",
@@ -147,6 +205,12 @@ local function render_author_block(div)
   end
 
   result:insert(pandoc.RawBlock("typst", "]"))
+  if keep_together then
+    result:insert(pandoc.RawBlock("typst", "]"))
+  end
+  if div.identifier ~= "" then
+    result:insert(pandoc.RawBlock("typst", '#label(' .. pandoc.json.encode(div.identifier) .. ')'))
+  end
   return result
 end
 
@@ -255,8 +319,30 @@ local function render_math(expression)
   return expression
 end
 
+local print_layout_file = assert(io.open("assets/pdf-figures/manifest.json", "r"))
+local print_layouts = pandoc.json.decode(print_layout_file:read("*a")).figures
+print_layout_file:close()
+
+local function render_print_image(img)
+  local name = img.src:match("/assets/print/([^/]+)$")
+  local layout = name and print_layouts[name]
+  if not layout then return nil end
+  local source = assert(io.open(img.src, "r"))
+  local svg = source:read("*a")
+  source:close()
+  assert(not layout.source_sha1 or pandoc.utils.sha1(svg:gsub("\r\n", "\n")) == layout.source_sha1,
+    "SVG changed: rebuild and review print derivatives for " .. name)
+  local rows = {}
+  for _, row in ipairs(layout.rows) do
+    table.insert(rows, "(" .. pandoc.json.encode("/assets/pdf-figures/" .. row.file)
+      .. ", " .. tostring(row.width) .. ", " .. tostring(row.keep_with_next) .. ")")
+  end
+  return pandoc.RawInline("typst", '#mf1-print-rows((' .. table.concat(rows, ", ") .. ',))')
+end
+
 return {
   { Math = render_math },
+  { Image = render_print_image },
   { Span = render_span },
   { Header = render_step_heading },
   { Para = render_minor_heading },

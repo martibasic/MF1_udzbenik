@@ -1,6 +1,10 @@
 ---
 title: "Turbostrojevi i propulzija"
 page-layout: article
+mf1-document-id: u14
+mf1-document-kind: chapter
+mf1-document-number: "14"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u14_turbostrojevi_i_propulzija.md >}}

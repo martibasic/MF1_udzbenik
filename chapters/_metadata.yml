@@ -1,5 +1,2 @@
-filters:
-  - at: post-quarto
-    path: ../filters/mf1-editorial-normalization.lua
-  - at: post-quarto
-    path: ../filters/mf1-typst-author-blocks.lua
+# Chapter behaviour is defined once in the project configuration.
+{}

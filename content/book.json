@@ -1,0 +1,393 @@
+{
+  "$schema": "book.schema.json",
+  "schema_version": 1,
+  "book": {
+    "title": "Mehanika fluida 1",
+    "subtitle": "Integrirani udžbenik za strojarstvo i brodogradnju",
+    "author": "Martina Bašić",
+    "output-file": "mehanika-fluida-1"
+  },
+  "site_url": "https://martibasic.github.io/MF1_udzbenik/",
+  "repo_url": "https://github.com/martibasic/MF1_udzbenik",
+  "frontmatter": [
+    "u00"
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "title": "Temelji",
+      "chapters": [
+        "u01",
+        "u02"
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": "Statika fluida",
+      "chapters": [
+        "u03",
+        "u04",
+        "u05",
+        "u06"
+      ]
+    },
+    {
+      "id": "part-3",
+      "title": "Integralna dinamika",
+      "chapters": [
+        "u07",
+        "u08",
+        "u09",
+        "u10"
+      ]
+    },
+    {
+      "id": "part-4",
+      "title": "Sličnost i realni tok",
+      "chapters": [
+        "u11",
+        "u12"
+      ]
+    },
+    {
+      "id": "part-5",
+      "title": "Inženjerski sustavi",
+      "chapters": [
+        "u13",
+        "u14",
+        "u15"
+      ]
+    }
+  ],
+  "appendices": [
+    "d01",
+    "d02",
+    "d03",
+    "d04",
+    "d05",
+    "d06"
+  ],
+  "documents": {
+    "u00": {
+      "title": "Kako koristiti udžbenik",
+      "source": "source/u00_kako_koristiti_udzbenik.md",
+      "path": "chapters/u00_kako_koristiti_udzbenik.qmd",
+      "catalog_title": "Kako koristiti udžbenik",
+      "description": "Odakle početi, kako vježbati i gdje pronaći rezultate."
+    },
+    "u01": {
+      "title": "Osnove fluida i Pascalov zakon",
+      "source": "source/u01_osnove_fluida_i_pascalov_zakon.md",
+      "path": "chapters/u01_osnove_fluida_i_pascalov_zakon.qmd",
+      "catalog_title": "Fluid, svojstva i tlak",
+      "description": "Kontinuum, tlak, stlačivost i Pascalov zakon.",
+      "title_aliases": [],
+      "verification": {
+        "module": "verify_u01",
+        "namespace": "U01",
+        "legacy_modules": [
+          "verify_u01"
+        ]
+      },
+      "equation_topic": "svojstva-tlak"
+    },
+    "u02": {
+      "title": "Viskoznost, površinska napetost i kapilarnost",
+      "source": "source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md",
+      "path": "chapters/u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd",
+      "catalog_title": "Reologija i međupovršine",
+      "description": "Newtonski i nenewtonski fluidi, viskoznost, kapilarnost.",
+      "title_aliases": [
+        "Reologija, viskoznost i međupovršinske pojave"
+      ],
+      "verification": {
+        "module": "verify_u02",
+        "namespace": "U02",
+        "legacy_modules": [
+          "verify_u02"
+        ]
+      },
+      "equation_topic": "reologija"
+    },
+    "u03": {
+      "title": "Hidrostatička raspodjela tlaka i manometrija",
+      "source": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
+      "path": "chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd",
+      "catalog_title": "Hidrostatika i manometrija",
+      "description": "Tlačno polje, promjenjiva gustoća i mjerenje.",
+      "title_aliases": [],
+      "verification": {
+        "module": "verify_u03",
+        "namespace": "U03",
+        "legacy_modules": [
+          "verify_u03"
+        ]
+      },
+      "equation_topic": "hidrostatika"
+    },
+    "u04": {
+      "title": "Relativno mirovanje fluida",
+      "source": "source/u04_relativno_mirovanje_fluida.md",
+      "path": "chapters/u04_relativno_mirovanje_fluida.qmd",
+      "catalog_title": "Relativno mirovanje",
+      "description": "Fluid u ubrzanoj posudi i pri rotaciji.",
+      "title_aliases": [],
+      "verification": {
+        "module": "verify_u04",
+        "namespace": "U04",
+        "legacy_modules": [
+          "verify_u04"
+        ]
+      },
+      "equation_topic": "relativno-mirovanje"
+    },
+    "u05": {
+      "title": "Hidrostatske sile na ravne i zakrivljene plohe",
+      "source": "source/u05_hidrostatske_sile_na_plohe.md",
+      "path": "chapters/u05_hidrostatske_sile_na_plohe.qmd",
+      "catalog_title": "Sile na plohe",
+      "description": "Ravne i zakrivljene plohe, hvatišta, momenti i predznaci.",
+      "title_aliases": [
+        "Hidrostatske sile na ravne plohe",
+        "Zakrivljene plohe i rastav sila"
+      ],
+      "verification": {
+        "module": "verify_u05_integrated",
+        "namespace": "U05.CANON",
+        "legacy_modules": [
+          "verify_u05",
+          "verify_u05_integrated",
+          "verify_u06"
+        ]
+      },
+      "equation_topic": "sile-plohe"
+    },
+    "u06": {
+      "title": "Uzgon, plivanje i početni stabilitet",
+      "source": "source/u06_uzgon_plivanje_i_stabilnost.md",
+      "path": "chapters/u06_uzgon_plivanje_i_stabilnost.qmd",
+      "catalog_title": "Uzgon i stabilitet",
+      "description": "Arhimedov zakon, gaz i jasno ograničen početni stabilitet.",
+      "title_aliases": [
+        "Uzgon, plivanje i stabilnost"
+      ],
+      "verification": {
+        "module": "verify_u07",
+        "namespace": "U07",
+        "legacy_modules": [
+          "verify_u07"
+        ]
+      },
+      "equation_topic": "uzgon-stabilitet"
+    },
+    "u07": {
+      "title": "Kinematika, kontrolni volumen i kontinuitet",
+      "source": "source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md",
+      "path": "chapters/u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd",
+      "catalog_title": "Kinematika i kontrolni volumen",
+      "description": "Polje brzine, RTT i bilanca mase za fiksne i gibajuće granice.",
+      "title_aliases": [
+        "Kontrolni volumen i kontinuitet"
+      ],
+      "verification": {
+        "module": "verify_u08",
+        "namespace": "U08",
+        "legacy_modules": [
+          "verify_u08"
+        ]
+      },
+      "equation_topic": "kinematika-kv"
+    },
+    "u08": {
+      "title": "Energijska jednadžba i Bernoulli",
+      "source": "source/u08_energijska_jednadzba_i_bernoulli.md",
+      "path": "chapters/u08_energijska_jednadzba_i_bernoulli.qmd",
+      "catalog_title": "Energija i Bernoulli",
+      "description": "Statički, dinamički i ukupni tlak; strujnica i granice idealizacije.",
+      "title_aliases": [
+        "Bernoullijeva jednadžba idealnog fluida"
+      ],
+      "verification": {
+        "module": "verify_u09",
+        "namespace": "U09",
+        "legacy_modules": [
+          "verify_u09"
+        ]
+      },
+      "equation_topic": "energijska-bilanca"
+    },
+    "u09": {
+      "title": "Kompresibilni idealni tok",
+      "source": "source/u09_kompresibilni_idealni_tok.md",
+      "path": "chapters/u09_kompresibilni_idealni_tok.qmd",
+      "catalog_title": "Kompresibilni tok",
+      "description": "Brzina zvuka, Machov broj, izentropska sapnica, prigušenje i udarni val.",
+      "title_aliases": [],
+      "verification": {
+        "module": "verify_u09_compressible",
+        "namespace": "U09.COMP",
+        "legacy_modules": [
+          "verify_u09_compressible"
+        ]
+      },
+      "equation_topic": "kompresibilni-tok"
+    },
+    "u10": {
+      "title": "Količina i moment količine gibanja",
+      "source": "source/u10_kolicina_i_moment_kolicine_gibanja.md",
+      "path": "chapters/u10_kolicina_i_moment_kolicine_gibanja.qmd",
+      "catalog_title": "Količina gibanja",
+      "description": "Sile, moment, mlazovi i gibajući kontrolni volumen.",
+      "title_aliases": [
+        "Količina gibanja i sile strujanja"
+      ],
+      "verification": {
+        "module": "verify_u11",
+        "namespace": "U11",
+        "legacy_modules": [
+          "verify_u11"
+        ]
+      },
+      "equation_topic": "momentum"
+    },
+    "u11": {
+      "title": "Dimenzijska analiza i sličnost",
+      "source": "source/u11_dimenzijska_analiza_i_slicnost.md",
+      "path": "chapters/u11_dimenzijska_analiza_i_slicnost.qmd",
+      "catalog_title": "Dimenzijska analiza",
+      "description": "Buckinghamov Π-teorem, relevantne skale i modelna ispitivanja.",
+      "title_aliases": [
+        "Bezdimenzijski brojevi, dimenzijska analiza i sličnost"
+      ],
+      "verification": {
+        "module": "verify_u14",
+        "namespace": "U14",
+        "legacy_modules": [
+          "verify_u14"
+        ]
+      },
+      "equation_topic": "slicnost"
+    },
+    "u12": {
+      "title": "Diferencijalni opis realnog toka",
+      "source": "source/u12_diferencijalni_opis_realnog_toka.md",
+      "path": "chapters/u12_diferencijalni_opis_realnog_toka.qmd",
+      "catalog_title": "Diferencijalni realni tok",
+      "description": "Navier–Stokes, Poiseuille, granični sloj, odvajanje i turbulencija.",
+      "title_aliases": [],
+      "verification": {
+        "module": "verify_u12_real_flow",
+        "namespace": "U12.REAL",
+        "legacy_modules": [
+          "verify_u12_real_flow"
+        ]
+      },
+      "equation_topic": "realni-tok"
+    },
+    "u13": {
+      "title": "Gubitci, cjevovodi, crpke i mreže",
+      "source": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
+      "path": "chapters/u13_gubici_cjevovodi_crpke_i_mreze.qmd",
+      "catalog_title": "Cjevovodi, crpke i mreže",
+      "description": "Režim, trenje, lokalni gubitci, radna točka i nelinearne mreže.",
+      "title_aliases": [
+        "Realni Bernoulli i gubici",
+        "Bernoullijeva jednadžba realnog fluida i gubici",
+        "Cjevovodi",
+        "Strujanje u cjevovodima i proračun mreže"
+      ],
+      "verification": {
+        "module": "verify_u13_integrated",
+        "namespace": "U13.CANON",
+        "legacy_modules": [
+          "verify_u10",
+          "verify_u13",
+          "verify_u13_integrated"
+        ]
+      },
+      "equation_topic": "cjevovodi"
+    },
+    "u14": {
+      "title": "Turbostrojevi i propulzija",
+      "source": "source/u14_turbostrojevi_i_propulzija.md",
+      "path": "chapters/u14_turbostrojevi_i_propulzija.qmd",
+      "catalog_title": "Turbostrojevi i propulzija",
+      "description": "Trokuti brzina, pumpe, turbine, propeleri i aktuatorski disk.",
+      "title_aliases": [
+        "Pokretne lopatice i potisak"
+      ],
+      "verification": {
+        "module": "verify_u12",
+        "namespace": "U12",
+        "legacy_modules": [
+          "verify_u12"
+        ]
+      },
+      "equation_topic": "turbostrojevi"
+    },
+    "u15": {
+      "title": "Otvoreni tokovi",
+      "source": "source/u15_otvoreni_tokovi.md",
+      "path": "chapters/u15_otvoreni_tokovi.qmd",
+      "catalog_title": "Otvoreni tokovi",
+      "description": "Froudeov broj, kritična dubina i hidraulički skok.",
+      "title_aliases": [],
+      "verification": {
+        "module": "verify_u15_open_channels",
+        "namespace": "U15",
+        "legacy_modules": [
+          "verify_u15_open_channels"
+        ]
+      },
+      "equation_topic": "otvoreni-tokovi"
+    },
+    "d01": {
+      "title": "Sažetak formula i oznaka",
+      "source": "source/d01_sazetak_formula_i_oznaka.md",
+      "path": "chapters/d01_sazetak_formula_i_oznaka.qmd",
+      "catalog_title": "Sažetak formula",
+      "description": "Formule, oznake, pretpostavke i granice.",
+      "role": "formulas"
+    },
+    "d02": {
+      "title": "Pojmovnik",
+      "source": "source/d02_pojmovnik.md",
+      "path": "chapters/d02_pojmovnik.qmd",
+      "catalog_title": "Pojmovnik",
+      "description": "Radne definicije temeljnih pojmova.",
+      "role": "glossary"
+    },
+    "d03": {
+      "title": "Tipične pogreške po poglavljima",
+      "source": "source/d03_tipicne_pogreske_po_poglavljima.md",
+      "path": "chapters/d03_tipicne_pogreske_po_poglavljima.qmd",
+      "catalog_title": "Tipične pogreške",
+      "description": "Fizikalni i računski filtar prije predaje.",
+      "role": "common-errors"
+    },
+    "d04": {
+      "title": "Numerička mehanika fluida",
+      "source": "source/d04_numericka_mehanika_fluida.md",
+      "path": "chapters/d04_numericka_mehanika_fluida.qmd",
+      "catalog_title": "Numerika i CFD V&amp;V",
+      "description": "Očuvanje, konvergencija, verifikacija, validacija i nesigurnost.",
+      "role": "numerics"
+    },
+    "d05": {
+      "title": "Literatura",
+      "source": "source/d05_literatura.md",
+      "path": "chapters/d05_literatura.qmd",
+      "catalog_title": "Literatura",
+      "description": "Primarni izvori, standardi i preporučeno čitanje.",
+      "role": "references"
+    },
+    "d06": {
+      "title": "Ključ kontrolnih rezultata",
+      "source": "source/d06_kljuc_kontrolnih_rezultata.md",
+      "path": "chapters/d06_kljuc_kontrolnih_rezultata.qmd",
+      "catalog_title": "Ključ rezultata",
+      "description": "Odvojeni kontrolni rezultati i kriteriji otvorenih zadataka.",
+      "role": "answers"
+    }
+  }
+}

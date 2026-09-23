@@ -14,11 +14,45 @@
       "observed_order": 2.1843808524460377,
       "gci_fine_percent": 0.0007036687354868505,
       "gci_reported": true
-    }
+    },
+    "asymptotic_range_established": false,
+    "interpretation": "Conditional three-grid GCI estimates using nominal r=2; monotonicity alone does not establish the asymptotic range. The underlying study explicitly does not establish an asymptotic order."
   },
   "experimental_uncertainty": {
     "available_in_distributed_force_file": false,
-    "consequence": "No combined numerical-plus-experimental validation interval or pass/fail verdict is reported."
+    "consequence": "Partial instrument and repeatability evidence is recorded separately. No complete measurement budget or combined numerical-plus-experimental validation interval is claimed.",
+    "primary_report_partial_accuracy_available": true,
+    "complete_budget_available": false,
+    "combined_validation_interval": null,
+    "primary_report": {
+      "url": "https://ntrs.nasa.gov/api/citations/19880019495/downloads/19880019495.pdf",
+      "printed_page": 2,
+      "pdf_page": 4,
+      "pressure_transducers": {
+        "model_full_scale_psi": 50,
+        "wake_loss_full_scale_psi": 7.5,
+        "accuracy_percent_of_reading": 0.25,
+        "valid_range_fraction_of_full_scale": [
+          -0.25,
+          1.0
+        ]
+      },
+      "quartz_pressure_transducers": {
+        "stagnation_full_scale_psi": 150,
+        "pressure_difference_full_scale_psi": 15,
+        "accuracy_percent_of_full_scale": [
+          0.01,
+          0.02
+        ]
+      },
+      "repeatability_near_zero_incidence": {
+        "maximum_incidence_difference_deg": 0.01,
+        "maximum_cd_difference": 0.0002,
+        "maximum_cn_difference": 0.004,
+        "maximum_cm_difference": 0.0002
+      },
+      "interpretation": "Instrument accuracy and repeat-point differences are not standard uncertainties at alpha=10.10 deg. The report does not assign them a probability distribution or coverage factor; CN is not CL."
+    }
   },
   "not_included": [
     "iterative error of archived runs",

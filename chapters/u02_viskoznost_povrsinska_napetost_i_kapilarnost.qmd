@@ -1,6 +1,10 @@
 ---
 title: "Viskoznost, površinska napetost i kapilarnost"
 page-layout: article
+mf1-document-id: u02
+mf1-document-kind: chapter
+mf1-document-number: "2"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md >}}

@@ -13,57 +13,16 @@ import re
 import unicodedata
 from pathlib import Path
 
+from book_model import load_book, documents
+BOOK = load_book()
+BOOK_CHAPTERS = documents(BOOK, kind="chapter")
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "source"
 
-CHAPTER_BY_TITLE = {
-    "Osnove fluida i Pascalov zakon": 1,
-    "Viskoznost, površinska napetost i kapilarnost": 2,
-    "Reologija, viskoznost i međupovršinske pojave": 2,
-    "Hidrostatička raspodjela tlaka i manometrija": 3,
-    "Relativno mirovanje fluida": 4,
-    "Hidrostatske sile na ravne plohe": 5,
-    "Zakrivljene plohe i rastav sila": 5,
-    "Hidrostatske sile na ravne i zakrivljene plohe": 5,
-    "Uzgon, plivanje i stabilnost": 6,
-    "Uzgon, plivanje i početni stabilitet": 6,
-    "Kontrolni volumen i kontinuitet": 7,
-    "Kinematika, kontrolni volumen i kontinuitet": 7,
-    "Bernoullijeva jednadžba idealnog fluida": 8,
-    "Energijska jednadžba i Bernoulli": 8,
-    "Kompresibilni idealni tok": 9,
-    "Količina gibanja i sile strujanja": 10,
-    "Količina i moment količine gibanja": 10,
-    "Bezdimenzijski brojevi, dimenzijska analiza i sličnost": 11,
-    "Dimenzijska analiza i sličnost": 11,
-    "Diferencijalni opis realnog toka": 12,
-    "Realni Bernoulli i gubici": 13,
-    "Bernoullijeva jednadžba realnog fluida i gubici": 13,
-    "Cjevovodi": 13,
-    "Strujanje u cjevovodima i proračun mreže": 13,
-    "Gubitci, cjevovodi, crpke i mreže": 13,
-    "Pokretne lopatice i potisak": 14,
-    "Turbostrojevi i propulzija": 14,
-    "Otvoreni tokovi": 15,
-}
-CANONICAL_TITLE_BY_CHAPTER = {
-    1: "Osnove fluida i Pascalov zakon",
-    2: "Reologija, viskoznost i međupovršinske pojave",
-    3: "Hidrostatička raspodjela tlaka i manometrija",
-    4: "Relativno mirovanje fluida",
-    5: "Hidrostatske sile na ravne i zakrivljene plohe",
-    6: "Uzgon, plivanje i početni stabilitet",
-    7: "Kinematika, kontrolni volumen i kontinuitet",
-    8: "Energijska jednadžba i Bernoulli",
-    9: "Kompresibilni idealni tok",
-    10: "Količina i moment količine gibanja",
-    11: "Dimenzijska analiza i sličnost",
-    12: "Diferencijalni opis realnog toka",
-    13: "Gubitci, cjevovodi, crpke i mreže",
-    14: "Turbostrojevi i propulzija",
-    15: "Otvoreni tokovi",
-}
+CHAPTER_BY_TITLE = {title: int(doc["number"]) for doc in BOOK_CHAPTERS for title in [doc["title"], *doc.get("title_aliases", [])]}
+CANONICAL_TITLE_BY_CHAPTER = {int(doc["number"]): doc["title"] for doc in BOOK_CHAPTERS}
 
 REF_RE = re.compile(
     r'(<span class="mf1-ch-ref"><span class="mf1-ch-code">pog\.\s*)'
@@ -128,40 +87,8 @@ JUPYTERLITE_ROOT = (
 )
 
 # Naziv svakog kanonskog izvora počinje brojem njegova javnog poglavlja.
-CANONICAL_SOURCE_CHAPTER = {
-    "u01_osnove_fluida_i_pascalov_zakon.md": "u01",
-    "u02_viskoznost_povrsinska_napetost_i_kapilarnost.md": "u02",
-    "u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md": "u03",
-    "u04_relativno_mirovanje_fluida.md": "u04",
-    "u05_hidrostatske_sile_na_plohe.md": "u05",
-    "u06_uzgon_plivanje_i_stabilnost.md": "u06",
-    "u07_kinematika_kontrolni_volumen_i_kontinuitet.md": "u07",
-    "u08_energijska_jednadzba_i_bernoulli.md": "u08",
-    "u09_kompresibilni_idealni_tok.md": "u09",
-    "u10_kolicina_i_moment_kolicine_gibanja.md": "u10",
-    "u11_dimenzijska_analiza_i_slicnost.md": "u11",
-    "u12_diferencijalni_opis_realnog_toka.md": "u12",
-    "u13_gubici_cjevovodi_crpke_i_mreze.md": "u13",
-    "u14_turbostrojevi_i_propulzija.md": "u14",
-    "u15_otvoreni_tokovi.md": "u15",
-}
-CANONICAL_SOURCE_TOPIC = {
-    "u01_osnove_fluida_i_pascalov_zakon.md": "svojstva-tlak",
-    "u02_viskoznost_povrsinska_napetost_i_kapilarnost.md": "reologija",
-    "u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md": "hidrostatika",
-    "u04_relativno_mirovanje_fluida.md": "relativno-mirovanje",
-    "u05_hidrostatske_sile_na_plohe.md": "sile-plohe",
-    "u06_uzgon_plivanje_i_stabilnost.md": "uzgon-stabilitet",
-    "u07_kinematika_kontrolni_volumen_i_kontinuitet.md": "kinematika-kv",
-    "u08_energijska_jednadzba_i_bernoulli.md": "energijska-bilanca",
-    "u09_kompresibilni_idealni_tok.md": "kompresibilni-tok",
-    "u10_kolicina_i_moment_kolicine_gibanja.md": "momentum",
-    "u11_dimenzijska_analiza_i_slicnost.md": "slicnost",
-    "u12_diferencijalni_opis_realnog_toka.md": "realni-tok",
-    "u13_gubici_cjevovodi_crpke_i_mreze.md": "cjevovodi",
-    "u14_turbostrojevi_i_propulzija.md": "turbostrojevi",
-    "u15_otvoreni_tokovi.md": "otvoreni-tokovi",
-}
+CANONICAL_SOURCE_CHAPTER = {Path(doc["source"]).name: doc["id"] for doc in BOOK_CHAPTERS}
+CANONICAL_SOURCE_TOPIC = {Path(doc["source"]).name: doc["equation_topic"] for doc in BOOK_CHAPTERS}
 PUBLIC_APPENDIX_TOPIC = {
     "d04_numericka_mehanika_fluida.md": "cfd-vv",
 }
@@ -191,14 +118,14 @@ def slugify_example(label: str) -> str:
 
 
 def number_examples(text: str) -> str:
-    """Numeriraj primjere redom unutar poglavlja, uz nepromijenjene ID-jeve."""
+    """Remove legacy presentation counters; the shared model numbers examples."""
     ordinal = 0
 
     def label(match: re.Match[str]) -> str:
         nonlocal ordinal
         ordinal += 1
         title = re.sub(r"^P\d+\.\s*", "", match.group("title"))
-        return f"{match.group('opening')}P{ordinal}. {title}{match.group('closing')}"
+        return f"{match.group('opening')}{title}{match.group('closing')}"
 
     return EXAMPLE_LABEL_RE.sub(label, text)
 

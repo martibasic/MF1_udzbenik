@@ -1,6 +1,10 @@
 ---
 title: "Sažetak formula i oznaka"
 page-layout: article
+mf1-document-id: d01
+mf1-document-kind: appendix
+mf1-document-number: "A"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/d01_sazetak_formula_i_oznaka.md >}}

@@ -11,8 +11,10 @@ from __future__ import annotations
 import argparse
 from collections import defaultdict
 import csv
+import hashlib
 import json
 import math
+import re
 from pathlib import Path
 from typing import Any
 
@@ -608,6 +610,151 @@ def _validate_placeholder(
                 )
 
 
+def _reference_zone(path: Path, title: str, audit: Audit) -> list[list[float]]:
+    """Read only the named Tecplot zone from the preserved primary table."""
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except FileNotFoundError:
+        audit.issues.append(f"Nedostaje izvorna tablica {path}")
+        return []
+    selected = False
+    rows = []
+    for line in lines:
+        stripped = line.strip()
+        if stripped.lower().startswith("zone"):
+            match = re.search(r't\s*=\s*"([^"]+)"', stripped, re.I)
+            selected = bool(match and match[1] == title)
+        elif selected and stripped and not stripped.startswith("#"):
+            try:
+                rows.append([float(value) for value in stripped.split()])
+            except ValueError:
+                audit.issues.append(f"Nevaljan redak izvorne tablice {path.name}")
+    audit.require(bool(rows), f"{path.name}: nema zone {title}")
+    return rows
+
+
+def _validate_reference_evidence(case_dir, grids, measurements, uncertainty, provenance, audit):
+    copies = {}
+    for source in provenance.get("sources", []):
+        if "local_copy" not in source:
+            continue
+        path = case_dir / source["local_copy"]
+        audit.require(path.is_file(), f"Nedostaje arhivirana tablica {path.name}")
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8").replace("\r\n", "\n")
+        audit.require(hashlib.sha256(text.encode()).hexdigest() == source.get("sha256_lf"),
+                      f"{path.name}: hash izvornika nije uskladen")
+        copies[path.name] = path
+    fun3d = copies.get("fun3d_results_sa_withN.dat")
+    ladson = copies.get("CLCD_Ladson_expdata.dat")
+    audit.require(fun3d is not None and ladson is not None, "Trebaju obje izvorne NASA tablice")
+    if fun3d:
+        rows = _reference_zone(fun3d, "FUN3D, Family II, PV AW SA model, 10 deg", audit)
+        raw = {row[0]: row for row in rows if len(row) == 7}
+        fields = ("structured_points", "h_sqrt_inverse_points", "cl", "cd", "cm_quarter_chord",
+                  "cd_pressure", "cd_viscous")
+        for row in grids:
+            count = _float(row, "structured_points", "FUN3D", audit)
+            audit.require(count in raw, f"FUN3D: nema izvornog N={count}")
+            if count in raw:
+                for field, value in zip(fields, raw[count]):
+                    audit.close(_float(row, field, "FUN3D", audit), value,
+                                f"FUN3D/{row['grid_id']}: {field} prema izvorniku", rel=1e-12)
+    if ladson:
+        raw = _reference_zone(ladson, "120 grit", audit)
+        audit.require(len(raw) == len(measurements) == 18, "Ladson: trebaju sve 18 izvornih tocaka")
+        for index, (row, values) in enumerate(zip(measurements, raw), 1):
+            audit.require(len(values) == 3, f"Ladson/{index}: nevaljan broj stupaca")
+            for field, value in zip(("alpha_deg", "cl", "cd"), values):
+                audit.close(_float(row, field, "Ladson", audit), value,
+                            f"Ladson/{index}: {field} prema izvorniku", rel=1e-12)
+            for field, value in (("trip_grit", 120), ("reynolds_chord", 6000000), ("mach", .15)):
+                audit.close(_float(row, field, "Ladson", audit), value, f"Ladson/{index}: {field}")
+    review = _load_json(case_dir / "source_review.json", audit)
+    findings = review.get("findings", {})
+    for key in ("raw_residual_histories_found", "raw_force_histories_found", "mass_balance_records_found",
+                "complete_measurement_uncertainty_at_selected_incidence_found"):
+        audit.require(findings.get(key) is False, f"Arhivske praznine nisu uskladene: {key}")
+    audit.require(findings.get("published_convergence_summary_found") is True
+                  and findings.get("instrument_accuracy_and_repeatability_found") is True,
+                  "Treba razlikovati objavljeni sazetak i djelomicnu tocnost od sirove dijagnostike")
+    exp = uncertainty.get("experimental_uncertainty", {})
+    audit.require(exp.get("complete_budget_available") is False
+                  and exp.get("combined_validation_interval", "missing") is None,
+                  "Djelomicni podatci ne dopustaju kombinirani validacijski interval")
+    report = exp.get("primary_report", {})
+    audit.require(report.get("printed_page") == 2 and report.get("pdf_page") == 4,
+                  "Ladsonova tocnost: treba navesti str. 2 (PDF 4)")
+    audit.close(float(report.get("pressure_transducers", {}).get("accuracy_percent_of_reading", math.nan)),
+                .25, "Ladson: tocnost diferencijalnih pretvornika, % ocitanja")
+    repeat = report.get("repeatability_near_zero_incidence", {})
+    for key, value in (("maximum_incidence_difference_deg", .01), ("maximum_cd_difference", .0002),
+                       ("maximum_cn_difference", .004), ("maximum_cm_difference", .0002)):
+        audit.close(float(repeat.get(key, math.nan)), value, f"Ladson: {key}")
+
+
+def _validate_teaching_comparison(case_dir, grids, measurements, audit):
+    """Provjeri izvedene vrijednosti i sprijeci pripisivanje pretpostavki arhivu."""
+    scenario = _load_json(case_dir / "teaching_comparison.json", audit)
+    audit.require(scenario.get("data_classification") == "teaching_estimate_from_public_reference"
+                  and scenario.get("archive_validation_completed") is False,
+                  "Z6: nastavna procjena ne smije tvrditi da validira izvorni arhiv")
+    central = scenario.get("central_values", {})
+    assumptions = scenario.get("uncertainty_assumptions", {})
+    audit.require(assumptions.get("classification") == "assumed_for_teaching_not_measured"
+                  and assumptions.get("independent_components") is True
+                  and assumptions.get("distribution") == "normal_zero_mean_after_corrections"
+                  and assumptions.get("standard_uncertainties_treated_as_known") is True
+                  and assumptions.get("units") == "absolute_dimensionless_drag_coefficient",
+                  "Z6: treba navesti status, jedinice i statisticke pretpostavke nesigurnosti")
+    for field, expected in (("u_measurement", .00020), ("u_numerical", .00010),
+                            ("u_conditions", .00010), ("coverage_factor", 2.0),
+                            ("alternative_u_measurement", .00030)):
+        audit.close(float(assumptions.get(field, math.nan)), expected, f"Z6: {field}")
+    for field, expected in (("target_alpha_deg", 10.0), ("mach", .15),
+                            ("reynolds_chord", 6000000), ("experimental_trip_grit", 120),
+                            ("decimal_places", 5)):
+        audit.close(float(central.get(field, math.nan)), expected, f"Z6: {field}")
+    audit.require(central.get("cfd_grid_id") == "fine", "Z6: treba najfinija CFD mreza")
+    angles = central.get("interpolation_alpha_deg", [])
+    coefficients = central.get("interpolation_cd", [])
+    audit.require(angles == [8.08, 10.1] and coefficients == [.00995, .01175],
+                  "Z6: interpolacija mora koristiti navedene susjedne mjerne tocke")
+    if len(angles) != 2 or len(coefficients) != 2:
+        return
+    for angle, coefficient in zip(angles, coefficients):
+        matching = [row for row in measurements if float(row["alpha_deg"]) == angle]
+        audit.require(len(matching) == 1, f"Z6: nema jedinstvenog mjerenja na {angle} deg")
+        if matching:
+            audit.close(coefficient, float(matching[0]["cd"]), f"Z6: izvorni CD pri {angle}")
+    alpha = float(central.get("target_alpha_deg", math.nan))
+    weight = (alpha - angles[0]) / (angles[1] - angles[0])
+    audit.require(0 < weight < 1, "Z6: referenca mora biti interpolacija, ne ekstrapolacija")
+    reference = round((1 - weight) * coefficients[0] + weight * coefficients[1], 5)
+    fine = [row for row in grids if row["grid_id"] == "fine"]
+    if not fine:
+        audit.require(False, "Z6: nedostaje najfiniji CFD rezultat")
+        return
+    cfd = round(float(fine[0]["cd"]), 5)
+    audit.close(float(central.get("cd_reference", math.nan)), reference, "Z6: izvedena referenca")
+    audit.close(float(central.get("cd_cfd", math.nan)), cfd, "Z6: zaokruzeni CFD")
+    error = cfd - reference
+    k = float(assumptions.get("coverage_factor", math.nan))
+    un = float(assumptions.get("u_numerical", math.nan))
+    uv = float(assumptions.get("u_conditions", math.nan))
+    um = float(assumptions.get("u_measurement", math.nan))
+    um_alt = float(assumptions.get("alternative_u_measurement", math.nan))
+    expanded = k * math.sqrt(math.fsum([um**2, un**2, uv**2]))
+    alternative = k * math.sqrt(math.fsum([um_alt**2, un**2, uv**2]))
+    audit.require(0 < expanded < error < alternative,
+                  "Z6: osnovni scenarij mora pasti, a siri interval proci kriterij")
+    audit.require(bool(assumptions.get("rationale", {}).get("u_measurement"))
+                  and bool(assumptions.get("rationale", {}).get("u_numerical"))
+                  and bool(assumptions.get("rationale", {}).get("u_conditions")),
+                  "Z6: svaka pretpostavka treba obrazlozenje reda velicine")
+
+
 def _validate_reference_profile(
     case_dir: Path,
     case_id: str,
@@ -648,37 +795,45 @@ def _validate_reference_profile(
     }
     cl_values: list[float] = []
     cd_values: list[float] = []
-    cells_values: list[float] = []
+    point_counts: list[float] = []
+    dimensions = {"coarse": (1793, 513), "medium": (3585, 1025), "fine": (7169, 2049)}
     for grid_id in GRID_ORDER:
         if grid_id not in by_grid:
             continue
         row = by_grid[grid_id]
         where = f"{case_id}/{grid_id}"
-        cells = _float(row, "cells", where, audit)
-        h = _float(row, "h_sqrt_inverse_cells", where, audit)
+        points = _float(row, "structured_points", where, audit)
+        ni = _float(row, "points_i", where, audit)
+        nj = _float(row, "points_j", where, audit)
+        audit.require((ni, nj) == dimensions[grid_id], f"{where}: pogresne strukturirane dimenzije")
+        audit.close(points, ni * nj, f"{where}: N mora brojiti tocke, ne celije")
+        h = _float(row, "h_sqrt_inverse_points", where, audit)
         cl = _float(row, "cl", where, audit)
         cd = _float(row, "cd", where, audit)
         cdp = _float(row, "cd_pressure", where, audit)
         cdv = _float(row, "cd_viscous", where, audit)
-        target_cells, target_cl, target_cd = expected[grid_id]
-        audit.close(cells, target_cells, f"{where}: izvorni broj celija")
+        target_points, target_cl, target_cd = expected[grid_id]
+        audit.close(points, target_points, f"{where}: izvorni broj strukturiranih tocaka")
         audit.close(cl, target_cl, f"{where}: izvorni CL", rel=1e-10)
         audit.close(cd, target_cd, f"{where}: izvorni CD", rel=1e-10)
-        audit.close(h, math.sqrt(1.0 / cells), f"{where}: h=sqrt(1/N)", rel=5e-4)
+        audit.close(h, math.sqrt(1.0 / points), f"{where}: h=sqrt(1/N)", rel=5e-4)
         audit.close(cd, cdp + cdv, f"{where}: CD=CDp+CDv", rel=1e-9)
         audit.require(
             row.get("source_code") == "FUN3D" and row.get("grid_family") == "II",
             f"{where}: ocekivani su FUN3D rezultati obitelji II",
         )
-        cells_values.append(cells)
+        point_counts.append(points)
         cl_values.append(cl)
         cd_values.append(cd)
     audit.require(
-        len(cells_values) == 3 and cells_values[0] < cells_values[1] < cells_values[2],
+        len(point_counts) == 3 and point_counts[0] < point_counts[1] < point_counts[2],
         f"{case_id}: mreze moraju biti sustavno profinjene",
     )
 
     spatial = uncertainty.get("spatial_discretization", {})
+    audit.require(spatial.get("asymptotic_range_established") is False
+                  and bool(spatial.get("interpretation")),
+                  f"{case_id}: tro-mrezni GCI ne dokazuje asimptotsko podrucje")
     if len(cd_values) == 3:
         d32 = cd_values[0] - cd_values[1]
         d21 = cd_values[1] - cd_values[2]
@@ -739,6 +894,8 @@ def _validate_reference_profile(
     measurements = _load_csv(
         case_dir / case["files"]["experimental_forces"], audit
     )
+    _validate_reference_evidence(case_dir, grids, measurements, uncertainty, provenance, audit)
+    _validate_teaching_comparison(case_dir, grids, measurements, audit)
     audit.require(
         len(measurements) == 18,
         f"{case_id}: ocekuje se 18 Ladsonovih tocaka zone 120 grit",

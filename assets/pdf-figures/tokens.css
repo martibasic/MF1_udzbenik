@@ -1,0 +1,17 @@
+/* Generated from assets/figure-tokens.json. */
+@media print {
+  :root {
+    --figure-mini-width: 34%;
+    --figure-standard-width: 62%;
+    --figure-wide-width: 100%;
+    --figure-label-size: 9.5pt;
+    --figure-small-label-size: 9pt;
+    --figure-caption-size: 9.5pt;
+    --figure-stroke: 0.7pt;
+    --figure-arrow-size: 4pt;
+    --figure-gap: 14pt;
+    --figure-padding: 4pt;
+    --figure-line-height: 12pt;
+    --figure-font-family: Arial, Liberation Sans, sans-serif;
+  }
+}

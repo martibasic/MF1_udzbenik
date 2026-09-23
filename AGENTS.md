@@ -22,6 +22,20 @@ Za skice primijeni SVG standard iz protokola. Evidencije starih migracija u
 
 ## Trajna pravila rada
 
+- Arhitekturu cijele knjige određuju `content/book.json`, kanonski `source/`,
+  `components/registry.json` i globalni `design-system/tokens.json`.
+  Prije strukturne izmjene pročitaj [arhitekturu](docs/arhitektura.md).
+  Omotače, Quarto konfiguracije, katalog, indeks objekata i ključ rezultata
+  generiraj s `python scripts/build_book.py --write`; ne uređuj izvedenice.
+  P/Z brojeve ne upisuj u naslove izvora: prikaz ih izvodi iz redoslijeda.
+  Za provjeru koristi `tools/audit_architecture.py`, `tools/test_book_model.py`
+  i nakon rendera `tools/audit_rendered_model.py`.
+  Puni render pokreći kroz `scripts/build_book.py --render web|pdf|all`:
+  automatski koristi izoliranu radnu mapu i čuva previewovu predmemoriju.
+  Vidljivost uređuj samo u registru komponenti (`web`, `pdf`, `print`);
+  ne dodaj zasebne popise skrivenih klasa u adaptere. Regresije su u
+  `tools/test_render_workspace.py` i `tools/test_component_visibility.py`.
+
 - U dogovorenom ciklusu revizije mijenjaj samo samostalne zadatke za vježbu
   Z1–Z6 koji trebaju zamjenu; kvalitetne zadrži. Riješene primjere P1–P6 i teoriju
   koristi za usporedbu ponavljanja, a mijenjaj ih tek ako korisnik proširi opseg.
@@ -44,6 +58,11 @@ Za skice primijeni SVG standard iz protokola. Evidencije starih migracija u
 - Pri prilagodbi skica zadrži postojeći vizualni stil udžbenika (raspored panela,
   paletu, šrafure, gradijente i tipografiju). Zamjena zadatka sama po sebi ne znači
   odobrenje za vizualni redizajn; prilagodi prizor i oznake novom sadržaju.
+- Za PDF i ispis primijeni [sustav tiskovnih figura](docs/ispis-skica.md).
+  Izvedenice generiraj iz kanonskih SVG-ova; ne mijenjaj mrežne skice radi
+  tiskovnog rasporeda. Čuvaj formate MINI/STANDARD/WIDE/COMPOSITE, najmanje
+  9 pt za oznake te odvojeno skaliranje geometrije i tipografije. Nakon izmjene
+  izvora, tokena ili kompozicije obnovi izvedenice i pregledaj konačni PDF.
 - U skicama provjeri fizikalnu povezanost: krute stijenke ne smiju zatvarati
   predviđeni prolaz, otvor cijevi mora biti stvarno otvoren i prikladno uronjen,
   a fluid ne smije prolaziti kroz krutu plohu. Razlikuj brzine, sile i kote;

@@ -1,6 +1,10 @@
 ---
 title: "Hidrostatička raspodjela tlaka i manometrija"
 page-layout: article
+mf1-document-id: u03
+mf1-document-kind: chapter
+mf1-document-number: "3"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md >}}

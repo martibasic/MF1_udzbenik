@@ -1,148 +1,108 @@
 ---
 title: "MF1 — pregled za ispis u pregledniku"
-subtitle: "Brzi ispis iz preglednika; za pripremljen prijelom stranica preuzmi PDF udžbenika"
+subtitle: "Za pripremljen prijelom stranica preuzmi PDF udžbenika"
 page-layout: article
 toc: false
-number-sections: true
+number-sections: false
+mf1-print-collection: true
 ---
 
+<!-- Generated from the shared book hierarchy. -->
 ::: {.mf1-print-note .no-print}
 Za pripremljen prijelom stranica, sadržaj i bibliografiju preuzmi [PDF udžbenika](../downloads/mehanika-fluida-1.pdf). Ova stranica služi brzom ispisu iz preglednika.
 :::
 
 ```{=html}
-<div class="mf1-print-toolbar no-print">
-  <button class="mf1-print-button" onclick="window.print()">Ispiši / Spremi kao PDF</button>
-  <a class="mf1-print-button secondary" href="../index.qmd">Povratak na početnu stranicu</a>
-</div>
+<nav class="mf1-print-toolbar no-print" aria-label="Ispis knjige">
+<button class="mf1-print-button" data-mf1-print-button>Ispiši / Spremi kao PDF</button>
+<a class="mf1-print-button secondary" href="../index.html">Povratak na početnu stranicu</a>
+</nav>
 ```
 
-# 0. Kako koristiti udžbenik
+# Kako koristiti udžbenik {#print-u00 .mf1-collection-chapter .unnumbered data-document="u00"}
 
 {{< include ../source/u00_kako_koristiti_udzbenik.md >}}
 
-<div class="page-break"></div>
-
-# 1. Osnove fluida i Pascalov zakon
+# Osnove fluida i Pascalov zakon {#print-u01 .mf1-collection-chapter .unnumbered data-document="u01"}
 
 {{< include ../source/u01_osnove_fluida_i_pascalov_zakon.md >}}
 
-<div class="page-break"></div>
-
-# 2. Viskoznost, površinska napetost i kapilarnost
+# Viskoznost, površinska napetost i kapilarnost {#print-u02 .mf1-collection-chapter .unnumbered data-document="u02"}
 
 {{< include ../source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md >}}
 
-<div class="page-break"></div>
-
-# 3. Hidrostatička raspodjela tlaka i manometrija
+# Hidrostatička raspodjela tlaka i manometrija {#print-u03 .mf1-collection-chapter .unnumbered data-document="u03"}
 
 {{< include ../source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md >}}
 
-<div class="page-break"></div>
-
-# 4. Relativno mirovanje fluida
+# Relativno mirovanje fluida {#print-u04 .mf1-collection-chapter .unnumbered data-document="u04"}
 
 {{< include ../source/u04_relativno_mirovanje_fluida.md >}}
 
-<div class="page-break"></div>
-
-# 5. Hidrostatske sile na ravne i zakrivljene plohe
+# Hidrostatske sile na ravne i zakrivljene plohe {#print-u05 .mf1-collection-chapter .unnumbered data-document="u05"}
 
 {{< include ../source/u05_hidrostatske_sile_na_plohe.md >}}
 
-<div class="page-break"></div>
-
-# 6. Uzgon, plivanje i početni stabilitet
+# Uzgon, plivanje i početni stabilitet {#print-u06 .mf1-collection-chapter .unnumbered data-document="u06"}
 
 {{< include ../source/u06_uzgon_plivanje_i_stabilnost.md >}}
 
-<div class="page-break"></div>
-
-# 7. Kinematika, kontrolni volumen i kontinuitet
+# Kinematika, kontrolni volumen i kontinuitet {#print-u07 .mf1-collection-chapter .unnumbered data-document="u07"}
 
 {{< include ../source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md >}}
 
-<div class="page-break"></div>
-
-# 8. Energijska jednadžba i Bernoulli
+# Energijska jednadžba i Bernoulli {#print-u08 .mf1-collection-chapter .unnumbered data-document="u08"}
 
 {{< include ../source/u08_energijska_jednadzba_i_bernoulli.md >}}
 
-<div class="page-break"></div>
-
-# 9. Kompresibilni idealni tok
+# Kompresibilni idealni tok {#print-u09 .mf1-collection-chapter .unnumbered data-document="u09"}
 
 {{< include ../source/u09_kompresibilni_idealni_tok.md >}}
 
-<div class="page-break"></div>
-
-# 10. Količina i moment količine gibanja
+# Količina i moment količine gibanja {#print-u10 .mf1-collection-chapter .unnumbered data-document="u10"}
 
 {{< include ../source/u10_kolicina_i_moment_kolicine_gibanja.md >}}
 
-<div class="page-break"></div>
-
-# 11. Dimenzijska analiza i sličnost
+# Dimenzijska analiza i sličnost {#print-u11 .mf1-collection-chapter .unnumbered data-document="u11"}
 
 {{< include ../source/u11_dimenzijska_analiza_i_slicnost.md >}}
 
-<div class="page-break"></div>
-
-# 12. Diferencijalni opis realnog toka
+# Diferencijalni opis realnog toka {#print-u12 .mf1-collection-chapter .unnumbered data-document="u12"}
 
 {{< include ../source/u12_diferencijalni_opis_realnog_toka.md >}}
 
-<div class="page-break"></div>
-
-# 13. Gubitci, cjevovodi, crpke i mreže
+# Gubitci, cjevovodi, crpke i mreže {#print-u13 .mf1-collection-chapter .unnumbered data-document="u13"}
 
 {{< include ../source/u13_gubici_cjevovodi_crpke_i_mreze.md >}}
 
-<div class="page-break"></div>
-
-# 14. Turbostrojevi i propulzija
+# Turbostrojevi i propulzija {#print-u14 .mf1-collection-chapter .unnumbered data-document="u14"}
 
 {{< include ../source/u14_turbostrojevi_i_propulzija.md >}}
 
-<div class="page-break"></div>
-
-# 15. Otvoreni tokovi
+# Otvoreni tokovi {#print-u15 .mf1-collection-chapter .unnumbered data-document="u15"}
 
 {{< include ../source/u15_otvoreni_tokovi.md >}}
 
-<div class="page-break"></div>
-
-# Sažetak formula i oznaka
+# Sažetak formula i oznaka {#print-d01 .mf1-collection-chapter .unnumbered data-document="d01"}
 
 {{< include ../source/d01_sazetak_formula_i_oznaka.md >}}
 
-<div class="page-break"></div>
-
-# Pojmovnik
+# Pojmovnik {#print-d02 .mf1-collection-chapter .unnumbered data-document="d02"}
 
 {{< include ../source/d02_pojmovnik.md >}}
 
-<div class="page-break"></div>
-
-# Tipične pogreške po poglavljima
+# Tipične pogreške po poglavljima {#print-d03 .mf1-collection-chapter .unnumbered data-document="d03"}
 
 {{< include ../source/d03_tipicne_pogreske_po_poglavljima.md >}}
 
-<div class="page-break"></div>
-
-# Numerička mehanika fluida
+# Numerička mehanika fluida {#print-d04 .mf1-collection-chapter .unnumbered data-document="d04"}
 
 {{< include ../source/d04_numericka_mehanika_fluida.md >}}
 
-<div class="page-break"></div>
-
-# Literatura
+# Literatura {#print-d05 .mf1-collection-chapter .unnumbered data-document="d05"}
 
 {{< include ../source/d05_literatura.md >}}
 
-<div class="page-break"></div>
-
-# Ključ kontrolnih rezultata
+# Ključ kontrolnih rezultata {#print-d06 .mf1-collection-chapter .unnumbered data-document="d06"}
 
 {{< include ../source/d06_kljuc_kontrolnih_rezultata.md >}}

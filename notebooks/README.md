@@ -102,9 +102,17 @@ Nova bilježnica treba slijediti opisanu strukturu te biti uključena u inventar
 `tools/verification_manifest.json` i pripadne provjere. U odgovarajućem izvoru
 poglavlja u `source/` dodaje se okvir `.mf1-interaktivno` s poveznicama i QR kodom.
 
-Skripte `scripts/generiraj_notebooke.py` i `scripts/generiraj_qr.py`
-sadrže stare predloške. Ne pokreću se pri redovitom uređivanju: mogu prepisati
-novije bilježnice ili QR kodove starijim sadržajem.
+Skripta `scripts/generiraj_notebooke.py` sadrži stare predloške i nije dio
+redovitog uređivanja. Bez argumenta odbija zapisivanje. Za povijesnu usporedbu
+može izvesti arhivu samo u novu mapu izvan repozitorija ili unutar `tools/tmp/`:
+
+```powershell
+python scripts/generiraj_notebooke.py --archive-output tools/tmp/stari-notebookovi
+```
+
+Postojeća odredišta i izvori udžbenika zaštićeni su od prepisivanja.
+`scripts/generiraj_qr.py` kompatibilna je ulazna točka aktualnog QR generatora:
+bez `--write` samo provjerava izlaze; za novo uređivanje koristi naredbu ispod.
 
 ## QR kodovi
 

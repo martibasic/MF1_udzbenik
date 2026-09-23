@@ -25,21 +25,25 @@
   },
   "comparison_measurement": {
     "source_zone": "Ladson NASA TM 4074, transition tripped, 120 grit",
-    "angle_of_attack_deg": 10.10,
+    "angle_of_attack_deg": 10.1,
     "cl": 1.0775,
     "cd": 0.01175,
-    "angle_mismatch_deg": 0.10
+    "angle_mismatch_deg": 0.1
   },
   "files": {
     "grids": "grids.csv",
     "experimental_forces": "experimental_forces.csv",
     "uncertainty": "uncertainty.json",
-    "provenance": "provenance.json"
+    "provenance": "provenance.json",
+    "source_review": "source_review.json",
+    "teaching_comparison": "teaching_comparison.json"
   },
   "archival_diagnostics": {
     "solver_residual_history_available": false,
     "force_monitor_history_available": false,
     "mass_imbalance_available": false,
-    "consequence": "The package supports a grid trend and comparison with measurements, but cannot certify convergence or conservation of the archived runs. A new solver run must supply these diagnostics."
-  }
+    "consequence": "The associated study reports deep iterative convergence, but no raw histories or mass-balance records for these three archived runs are included. A new run supplies evidence only for that new run.",
+    "published_convergence_summary_available": true
+  },
+  "grid_count_convention": "N=points_i*points_j in the structured NASA table; not quadrilateral cells and not a count of unique nodes after C-grid wake merging."
 }

@@ -1,0 +1,147 @@
+/* Naslov stranice/poglavlja */
+.quarto-title-banner {
+  background: transparent;
+  color: var(--mf1-ink);
+  border-bottom: 1px solid var(--mf1-line);
+  padding: 1rem 1.5rem 1.4rem;
+  margin-bottom: 2rem;
+}
+.quarto-title-banner .title { color: var(--mf1-ink); }
+#title-block-header .quarto-title-meta { display: none; }
+#title-block-header { margin-bottom: 1.3rem; }
+.quarto-page-breadcrumbs {
+  font-family: var(--mf1-sans);
+  font-size: 0.78rem;
+  margin-bottom: 1.1rem;
+}
+.quarto-title-banner .subtitle {
+  color: var(--mf1-muted);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--mf1-h3-size);
+  margin-top: 0.4rem;
+}
+
+/* Numerika sekcija ako je uključena */
+.header-section-number {
+  color: var(--mf1-muted);
+  opacity: 1;
+  font-weight: 400;
+  margin-right: 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Flatlyjeva zelena za poveznice sadržaja nema dovoljan kontrast na bijeloj
+   podlozi. Aktivna stavka ostaje akcentirana tamnijom bojom. */
+#TOC .nav-link {
+  color: var(--mf1-soft-ink);
+}
+#TOC .nav-link.active,
+#TOC .nav-link:hover {
+  color: var(--mf1-accent-d);
+}
+#TOC .nav-link .header-section-number {
+  color: inherit;
+}
+#TOC { font-family: var(--mf1-sans); font-size: 0.76rem; line-height: 1.45; }
+#TOC h2 { font-size: 0.76rem; font-weight: 600; border: 0; padding: 0; margin-bottom: 0.75rem; }
+#TOC .nav-link { padding-top: 0.3rem; padding-bottom: 0.3rem; border-bottom: 0; }
+#TOC .nav-link.active { border-left-color: var(--mf1-accent); }
+:where(h1, h2, h3, h4, section[id]) { scroll-margin-top: 5rem; }
+
+/* =================================================================
+   2. Bočna traka — plosnata, akademska, mirna
+   ================================================================= */
+
+#quarto-sidebar,
+.sidebar.docked {
+  background: var(--mf1-bg-paper);
+  border-right: 1px solid var(--mf1-line);
+  font-family: var(--mf1-sans);
+}
+
+#quarto-sidebar .sidebar-title,
+.sidebar-title {
+  font-family: var(--mf1-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1.2rem 0.4rem 0.7rem;
+  letter-spacing: -0.005em;
+  color: var(--mf1-ink);
+  border-bottom: 1px solid var(--mf1-line-soft);
+  margin-bottom: 0.4rem;
+}
+
+/* Naslov grupe — uppercase ssm caps */
+#quarto-sidebar .sidebar-item-section > .sidebar-item-container {
+  padding: 0;
+  margin: 0.8rem 0 0.15rem;
+  background: transparent;
+}
+#quarto-sidebar .sidebar-item-section:first-of-type > .sidebar-item-container {
+  margin-top: 0.4rem;
+}
+
+#quarto-sidebar .sidebar-item-section > .sidebar-item-container > a.sidebar-item-text {
+  display: block;
+  padding: 0.5rem 1.1rem 0.3rem;
+  font-size: 0.64rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--mf1-faint);
+  background: transparent;
+  border: 0;
+  text-decoration: none;
+}
+#quarto-sidebar .sidebar-item-section > .sidebar-item-container > a.sidebar-item-text:hover {
+  color: var(--mf1-muted);
+}
+
+/* Stavke */
+#quarto-sidebar .sidebar-item-container > a.sidebar-link,
+#quarto-sidebar .sidebar-item-container > a.sidebar-item-text:not([data-bs-toggle]) {
+  display: block;
+  padding: 0.36rem 1.1rem 0.36rem 1.1rem;
+  color: var(--mf1-soft-ink);
+  font-size: 0.82rem;
+  font-weight: 400;
+  text-decoration: none;
+  border: 0;
+  border-left: 2px solid transparent;
+  line-height: 1.4;
+  transition: background 0.12s, color 0.12s;
+}
+#quarto-sidebar .sidebar-item-container > a.sidebar-link:hover {
+  background: var(--mf1-accent-l);
+  color: var(--mf1-ink);
+}
+#quarto-sidebar .sidebar-item-container > a.sidebar-link.active {
+  background: var(--mf1-accent-l);
+  border-left-color: var(--mf1-accent);
+  color: var(--mf1-ink);
+  font-weight: 600;
+}
+
+/* Tražilica u bočnoj traci */
+#quarto-sidebar .aa-DetachedSearchButton,
+#quarto-sidebar input[type="search"] {
+  background: var(--mf1-bg);
+  border: 1px solid var(--mf1-line);
+  border-radius: 3px;
+  font-family: var(--mf1-sans);
+  font-size: 0.85rem;
+  color: var(--mf1-muted);
+}
+
+/* Page navigation — naredno / prethodno poglavlje */
+.page-navigation, .pagination {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--mf1-line);
+  font-family: var(--mf1-sans);
+}
+.page-navigation a, .pagination a {
+  border-bottom: 0;
+  color: var(--mf1-soft-ink);
+}

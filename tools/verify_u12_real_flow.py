@@ -276,6 +276,26 @@ def exercise_grid_convergence(
     }
 
 
+def exercise_profile_comparison(
+    cd_reference: float = 0.01166,
+    cd_cfd: float = 0.01222,
+    u_measurement: float = 0.00020,
+    u_numerical: float = 0.00010,
+    u_conditions: float = 0.00010,
+    coverage_factor: float = 2.0,
+) -> dict[str, float]:
+    difference = cd_cfd - cd_reference
+    expanded_uncertainty = coverage_factor * math.sqrt(
+        u_measurement**2 + u_numerical**2 + u_conditions**2
+    )
+    return {
+        "difference": difference,
+        "relative_difference_percent": 100.0 * difference / cd_reference,
+        "expanded_uncertainty": expanded_uncertainty,
+        "agreement_ratio": abs(difference) / expanded_uncertainty,
+    }
+
+
 def verify() -> list[dict[str, str]]:
     out: list[dict[str, str]] = []
 
@@ -433,6 +453,33 @@ def verify() -> list[dict[str, str]]:
         "%",
         abs_tol=0.00005,
     )
+
+    comparison = exercise_profile_comparison()
+    alternative = exercise_profile_comparison(u_measurement=0.00030)
+    _check(out, "U12.REAL.Z6.drag_difference", comparison["difference"],
+           0.00056, "", abs_tol=5e-9)
+    _check(out, "U12.REAL.Z6.drag_relative_percent", comparison["relative_difference_percent"],
+           4.80, "%", abs_tol=0.005)
+    _check(out, "U12.REAL.Z6.drag_expanded_uncertainty", comparison["expanded_uncertainty"],
+           0.000490, "", abs_tol=0.0000005)
+    _check(out, "U12.REAL.Z6.drag_agreement_ratio", comparison["agreement_ratio"],
+           1.14, "", abs_tol=0.005)
+    _check(out, "U12.REAL.Z6.drag_alternative_uncertainty", alternative["expanded_uncertainty"],
+           0.000663, "", abs_tol=0.0000005)
+    _check(out, "U12.REAL.Z6.drag_alternative_ratio", alternative["agreement_ratio"],
+           0.844, "", abs_tol=0.0005)
+    _invariant(out, "U12.REAL.Z6.drag_decision_sensitivity",
+               comparison["difference"] - comparison["expanded_uncertainty"] > 0
+               and alternative["difference"] - alternative["expanded_uncertainty"] < 0
+               and comparison["difference"] == alternative["difference"],
+               "Siri interval mora promijeniti odluku, ali ne sredisnju CFD razliku.")
+    swapped = exercise_profile_comparison(cd_reference=0.01222, cd_cfd=0.01166)
+    exact = exercise_profile_comparison(cd_cfd=0.01166)
+    _invariant(out, "U12.REAL.Z6.drag_sign_and_zero_limit",
+               swapped["difference"] < 0
+               and abs(swapped["agreement_ratio"] - comparison["agreement_ratio"]) < 1e-12
+               and exact["agreement_ratio"] == 0,
+               "Zamjena predznaka ne smije mijenjati kriterij; jednaki koeficijenti daju E=0.")
 
     convective_dimension = _dim_product(
         VELOCITY, VELOCITY, _dim_power(LENGTH, Fraction(-1))

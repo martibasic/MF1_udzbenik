@@ -9,33 +9,14 @@ from pathlib import Path
 import re
 from urllib.parse import unquote, urlsplit
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from book_model import load_book, documents, verification_chapters
+BOOK = load_book()
+BOOK_CHAPTERS = documents(BOOK, kind="chapter")
 
-CANONICAL_HTML = [
-    "index.html",
-    "chapters/u00_kako_koristiti_udzbenik.html",
-    "chapters/u01_osnove_fluida_i_pascalov_zakon.html",
-    "chapters/u02_viskoznost_povrsinska_napetost_i_kapilarnost.html",
-    "chapters/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.html",
-    "chapters/u04_relativno_mirovanje_fluida.html",
-    "chapters/u05_hidrostatske_sile_na_plohe.html",
-    "chapters/u06_uzgon_plivanje_i_stabilnost.html",
-    "chapters/u07_kinematika_kontrolni_volumen_i_kontinuitet.html",
-    "chapters/u08_energijska_jednadzba_i_bernoulli.html",
-    "chapters/u09_kompresibilni_idealni_tok.html",
-    "chapters/u10_kolicina_i_moment_kolicine_gibanja.html",
-    "chapters/u11_dimenzijska_analiza_i_slicnost.html",
-    "chapters/u12_diferencijalni_opis_realnog_toka.html",
-    "chapters/u13_gubici_cjevovodi_crpke_i_mreze.html",
-    "chapters/u14_turbostrojevi_i_propulzija.html",
-    "chapters/u15_otvoreni_tokovi.html",
-    "chapters/d01_sazetak_formula_i_oznaka.html",
-    "chapters/d02_pojmovnik.html",
-    "chapters/d03_tipicne_pogreske_po_poglavljima.html",
-    "chapters/d04_numericka_mehanika_fluida.html",
-    "chapters/d05_literatura.html",
-    "chapters/d06_kljuc_kontrolnih_rezultata.html",
-    "chapters/za_ispis.html",
-]
+
+CANONICAL_HTML = ["index.html", *[doc["path"].replace(".qmd", ".html") for doc in documents(BOOK)], "chapters/za_ispis.html"]
 class PageParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)

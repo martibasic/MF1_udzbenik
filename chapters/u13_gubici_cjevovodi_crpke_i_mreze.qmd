@@ -1,6 +1,10 @@
 ---
 title: "Gubitci, cjevovodi, crpke i mreže"
 page-layout: article
+mf1-document-id: u13
+mf1-document-kind: chapter
+mf1-document-number: "13"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u13_gubici_cjevovodi_crpke_i_mreze.md >}}

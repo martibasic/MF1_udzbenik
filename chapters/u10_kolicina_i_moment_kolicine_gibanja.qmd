@@ -1,6 +1,10 @@
 ---
 title: "Količina i moment količine gibanja"
 page-layout: article
+mf1-document-id: u10
+mf1-document-kind: chapter
+mf1-document-number: "10"
 ---
 
+<!-- Generated from content/book.json. Edit the canonical source below. -->
 {{< include ../source/u10_kolicina_i_moment_kolicine_gibanja.md >}}

@@ -12,10 +12,17 @@ from __future__ import annotations
 from collections import Counter
 from dataclasses import dataclass
 import fnmatch
+import json
 from pathlib import Path
 import re
 import sys
 import xml.etree.ElementTree as ET
+
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from book_model import load_book, documents, verification_chapters
+BOOK = load_book()
+BOOK_CHAPTERS = documents(BOOK, kind="chapter")
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -23,31 +30,8 @@ CHAPTER_DIR = REPO_ROOT / "chapters"
 SOURCE_DIR = REPO_ROOT / "source"
 QUARTO_CONFIG = REPO_ROOT / "_quarto.yml"
 
-CANONICAL_WRAPPERS = [
-    "u01_osnove_fluida_i_pascalov_zakon.qmd",
-    "u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd",
-    "u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd",
-    "u04_relativno_mirovanje_fluida.qmd",
-    "u05_hidrostatske_sile_na_plohe.qmd",
-    "u06_uzgon_plivanje_i_stabilnost.qmd",
-    "u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd",
-    "u08_energijska_jednadzba_i_bernoulli.qmd",
-    "u09_kompresibilni_idealni_tok.qmd",
-    "u10_kolicina_i_moment_kolicine_gibanja.qmd",
-    "u11_dimenzijska_analiza_i_slicnost.qmd",
-    "u12_diferencijalni_opis_realnog_toka.qmd",
-    "u13_gubici_cjevovodi_crpke_i_mreze.qmd",
-    "u14_turbostrojevi_i_propulzija.qmd",
-    "u15_otvoreni_tokovi.qmd",
-]
-APPENDIX_WRAPPERS = [
-    "d01_sazetak_formula_i_oznaka.qmd",
-    "d02_pojmovnik.qmd",
-    "d03_tipicne_pogreske_po_poglavljima.qmd",
-    "d04_numericka_mehanika_fluida.qmd",
-    "d05_literatura.qmd",
-    "d06_kljuc_kontrolnih_rezultata.qmd",
-]
+CANONICAL_WRAPPERS = [Path(doc["path"]).name for doc in BOOK_CHAPTERS]
+APPENDIX_WRAPPERS = [Path(doc["path"]).name for doc in documents(BOOK, kind="appendix")]
 EXPECTED_HOURS = [8, 9, 9, 8, 11, 10, 10, 10, 9, 10, 9, 10, 12, 9, 9]
 
 EXPECTED_LEVELS = Counter({"T1": 2, "T2": 2, "T3": 1, "T4": 1})
@@ -270,9 +254,10 @@ def audit() -> tuple[dict[str, object], list[str]]:
     for chapter in chapters:
         code = f"U{chapter.number:02}"
         examples = EXAMPLE_RE.findall(chapter.text)
-        example_numbers = re.findall(r'<p class="mf1-box-label">P(\d+)\. ', chapter.text)
+        object_index = json.loads((REPO_ROOT / "assets/content-index.json").read_text(encoding="utf8"))["objects"]
+        example_numbers = [object_index.get(identifier, {}).get("label", "").removeprefix("P") for identifier in examples]
         if example_numbers != [str(number) for number in range(1, len(examples) + 1)]:
-            issues.append(f"{code}: primjeri moraju redom nositi oznake P1–P{len(examples)}")
+            issues.append(f"{code}: generirani primjeri moraju redom nositi oznake P1–P{len(examples)}")
         tasks = TASK_RE.findall(chapter.text)
         levels = LEVEL_RE.findall(chapter.text)
         # Razine u tekstu prije liste zadataka mogu pripadati primjerima; zadnjih

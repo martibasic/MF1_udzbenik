@@ -49,11 +49,21 @@ jobs:
       - name: Verify numerics and coverage manifest
         run: python tools/verify_all.py
 
+      - name: Validate shared book model and movement regressions
+        run: |
+          python tools/test_book_model.py
+          python tools/test_render_workspace.py
+          python tools/test_component_visibility.py
+          python tools/audit_architecture.py
+
       - name: Audit canonical publication structure
         run: python tools/audit_publication.py
 
       - name: Audit native Typst authoring blocks
         run: python tools/audit_typst.py
+
+      - name: Audit canonical SVGs and generated print compositions
+        run: node tools/audit_print_layouts.mjs
 
       - name: Verify public references and alternative text
         run: python scripts/normalize_public_text.py
@@ -67,6 +77,9 @@ jobs:
       - name: Validate CFD V&V data packages
         run: python tools/validate_cfd_vv.py
 
+      - name: Verify legacy notebook export safety
+        run: python tools/test_legacy_notebook_generator.py
+
       - name: Execute teaching notebooks
         timeout-minutes: 15
         env:
@@ -75,14 +88,17 @@ jobs:
 
       - name: Render site
         timeout-minutes: 20
-        run: quarto render
+        run: python scripts/build_book.py --render web
 
       - name: Render native Typst book
         timeout-minutes: 20
-        run: quarto render --profile pdf --to typst
+        run: python scripts/build_book.py --render pdf
 
       - name: Audit native PDF
         run: python tools/audit_pdf.py
+
+      - name: Audit rendered PDF QR codes and layout
+        run: python tools/audit_pdf_layout.py
 
       - name: Publish native PDF
         run: |
@@ -103,6 +119,8 @@ jobs:
           test -s _site/jlite/lab/index.html
           python tools/audit_jupyterlite.py _site/jlite
           python tools/audit_rendered_site.py _site
+          python tools/audit_rendered_model.py _site
+          node tools/audit_print_site.mjs _site
           npm run audit:viewports -- _site
 
       - name: Upload Pages artifact

@@ -25,6 +25,16 @@ $pythonCommand = Resolve-PythonCommand
 
 Push-Location $repoRoot
 try {
+    & $pythonCommand scripts/build_book.py --write
+    Assert-NativeSuccess "generiranje zajednickog modela"
+    & $pythonCommand tools/test_book_model.py
+    Assert-NativeSuccess "regresije strukture i referencija"
+    & $pythonCommand tools/test_render_workspace.py
+    Assert-NativeSuccess "izolacija izgradnje od pretpregleda"
+    & $pythonCommand tools/test_component_visibility.py
+    Assert-NativeSuccess "zajednicka vidljivost komponenti"
+    & $pythonCommand tools/audit_architecture.py
+    Assert-NativeSuccess "audit zajednicke arhitekture"
     # Zbirni runner već uključuje qa_audit i verify_physics.
     & $pythonCommand tools/verify_all.py
     Assert-NativeSuccess "provjera numerike"
@@ -64,12 +74,14 @@ try {
     }
 
     # Quarto renderi dijele radnu predmemoriju i zato se namjerno izvode redom.
-    quarto render
+    & $pythonCommand scripts/build_book.py --render web
     Assert-NativeSuccess "HTML render"
-    quarto render --profile pdf --to typst
+    & $pythonCommand scripts/build_book.py --render pdf
     Assert-NativeSuccess "Typst PDF render"
     & $pythonCommand tools/audit_pdf.py
     Assert-NativeSuccess "audit nativnog PDF-a"
+    & $pythonCommand tools/audit_pdf_layout.py
+    Assert-NativeSuccess "audit prijeloma PDF-a"
 
     $bookDir = Join-Path $repoRoot "_book"
     $pdfSource = Join-Path $bookDir "mehanika-fluida-1.pdf"
@@ -88,6 +100,10 @@ try {
     Assert-NativeSuccess "audit JupyterLitea"
     & $pythonCommand tools/audit_rendered_site.py _site
     Assert-NativeSuccess "audit renderiranog sitea"
+    & $pythonCommand tools/audit_rendered_model.py _site
+    Assert-NativeSuccess "usklađenost numeriranja svih prikaza"
+    node tools/audit_print_site.mjs _site
+    Assert-NativeSuccess "audit tiskovnih figura"
     npm run audit:viewports -- _site
     Assert-NativeSuccess "viewport i WCAG audit"
 

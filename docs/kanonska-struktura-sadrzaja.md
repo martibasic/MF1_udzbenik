@@ -1,10 +1,13 @@
 # Kanonska struktura sadržaja
 
-Svako poglavlje ima jedan kanonski omotač i jedan izvor s jednakim brojem. Pri uređivanju se mijenja isključivo datoteka navedena u stupcu **Izvor**; omotač u stupcu **Kanonski omotač** određuje javni URL, naslov i položaj u navigaciji.
+<!-- Generirano iz content/book.json; ne uređivati ručno. -->
 
-## Poglavlja
+Hijerarhija, naslovi i putanje uređuju se u `content/book.json`, a tekst u
+navedenom izvoru. Omotači nastaju iz zajedničkog predloška. Broj poglavlja
+određuje položaj u modelu; stabilni ID i javna putanja ne mijenjaju se pri
+premještanju. Pravila proširenja opisuje [arhitektura](arhitektura.md).
 
-| Poglavlje | Kanonski omotač | Izvor |
+| Oznaka | Kanonski omotač | Izvor |
 | --- | --- | --- |
 | 0 | `chapters/u00_kako_koristiti_udzbenik.qmd` | `source/u00_kako_koristiti_udzbenik.md` |
 | 1 | `chapters/u01_osnove_fluida_i_pascalov_zakon.qmd` | `source/u01_osnove_fluida_i_pascalov_zakon.md` |
@@ -22,11 +25,6 @@ Svako poglavlje ima jedan kanonski omotač i jedan izvor s jednakim brojem. Pri 
 | 13 | `chapters/u13_gubici_cjevovodi_crpke_i_mreze.qmd` | `source/u13_gubici_cjevovodi_crpke_i_mreze.md` |
 | 14 | `chapters/u14_turbostrojevi_i_propulzija.qmd` | `source/u14_turbostrojevi_i_propulzija.md` |
 | 15 | `chapters/u15_otvoreni_tokovi.qmd` | `source/u15_otvoreni_tokovi.md` |
-
-## Dodaci
-
-| Dodatak | Kanonski omotač | Izvor |
-| --- | --- | --- |
 | A | `chapters/d01_sazetak_formula_i_oznaka.qmd` | `source/d01_sazetak_formula_i_oznaka.md` |
 | B | `chapters/d02_pojmovnik.qmd` | `source/d02_pojmovnik.md` |
 | C | `chapters/d03_tipicne_pogreske_po_poglavljima.qmd` | `source/d03_tipicne_pogreske_po_poglavljima.md` |
@@ -34,4 +32,4 @@ Svako poglavlje ima jedan kanonski omotač i jedan izvor s jednakim brojem. Pri 
 | E | `chapters/d05_literatura.qmd` | `source/d05_literatura.md` |
 | F | `chapters/d06_kljuc_kontrolnih_rezultata.qmd` | `source/d06_kljuc_kontrolnih_rezultata.md` |
 
-Dodatak F generira se naredbom `python scripts/generate_exercise_key.py --write`; njegova se izvorna datoteka ne uređuje ručno.
+Dodatak s kontrolnim rezultatima također se generira iz zadataka. Pokreni `python scripts/build_book.py --write` nakon izmjene izvora ili modela.
