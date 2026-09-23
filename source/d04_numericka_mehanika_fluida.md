@@ -16,25 +16,25 @@ Izvodi diskretizacijskih shema, rješavanje linearnih sustava i programske upute
 
 ## Pojmovnik numeričkih metoda
 
-Sljedeća tablica objedinjuje numeričke metode i alate spomenute kroz udžbenik, s pokazateljem na poglavlje gdje se prvi put pojavljuju.
+Sljedeća tablica objedinjuje numeričke metode i alate spomenute u udžbeniku, s upućivanjem na povezana poglavlja.
 
 | Kratica | Puno ime | Što radi | Gdje se pojavila u MF1 |
 |---|---|---|---|
-| **CFD** | Computational Fluid Dynamics | Računalno rješavanje Navier-Stokesovih jednadžbi | Svuda — kao šira disciplina |
-| **FVM** | Finite Volume Method | Domena se rastavlja na kontrolne volumene; bilanca mase i KG po svakoj ćeliji | pog. 7 (kontinuitet), pog. 10 (KG) |
-| **FEM** | Finite Element Method | Domena se rastavlja na elemente; rješava se varijacijski oblik PDJ | Strukturno-fluidne interakcije |
+| **CFD** | Computational Fluid Dynamics | Računalno rješavanje Navier–Stokesovih jednadžbi | Svuda — kao šira disciplina |
+| **FVM** | Finite Volume Method | Domena se rastavlja na kontrolne volumene; bilance mase i količine gibanja po ćelijama | pog. 7 (kontinuitet), pog. 10 (KG) |
+| **FEM** | Finite Element Method | Domena se rastavlja na elemente; rješava se varijacijski oblik parcijalnih diferencijalnih jednadžbi | Međudjelovanje fluida i konstrukcije |
 | **VOF** | Volume of Fluid | Praćenje slobodne površine preko polja $\alpha \in [0,1]$ | pog. 2 (kapilarnost), pog. 6 (uzgon), pog. 15 (otvoreni tokovi) |
 | **CSF** | Continuum Surface Force | Površinska napetost kao volumna sila u VOF-u | pog. 2 |
 | **DNS** | Direct Numerical Simulation | Bez turbulencijskog modela razrješava sve dinamički relevantne skale, uz dovoljno finu mrežu i vremenski korak | pog. 12 (diferencijalni opis i turbulencija) |
 | **LES** | Large Eddy Simulation | Rješava velike vrtloge, modelira male | pog. 12 |
-| **RANS** | Reynolds-Averaged Navier-Stokes | Računa osrednjeno polje i modelira učinak nerazrijeđenih turbulentnih fluktuacija | pog. 12, pog. 13 |
+| **RANS** | Reynolds-Averaged Navier-Stokes | Računa osrednjeno polje i modelira učinak nerazlučenih turbulentnih fluktuacija | pog. 12, pog. 13 |
 | **k-ε** / **k-ω SST** | turbulentni modeli | Dodatne transportne jednadžbe za veličine kojima se zatvara učinak turbulencije | pog. 12, pog. 13 |
 | **SIMPLE** / **PISO** / **PIMPLE** | algoritmi sprege $p$–$v$ | Iterativno usklađivanje tlaka i brzine da $\nabla\cdot\vec{v}=0$ | pog. 7 (kontinuitet) |
-| **MRF** | Multiple Reference Frame (više referentnih okvira) | Rotacijske domene (pumpe, turbine) bez fizičke rotacije mreže | pog. 4 (rotirajući okvir), pog. 14 (turbostrojevi) |
-| **Klizajuća mreža** *(engl. sliding mesh)* | rotor i stator s međusobnim klizanjem | Rotor i stator fizički kližu jedan uz drugi | pog. 14 |
+| **MRF** | Multiple Reference Frame (više referentnih okvira) | Stacionarna aproksimacija rotirajućih područja (pumpe, turbine) bez gibanja mreže | pog. 4 (rotirajući okvir), pog. 14 (turbostrojevi) |
+| **Klizajuća mreža** *(engl. sliding mesh)* | gibanje dijelova mreže | Rotirajući i nepomični dio mreže razmjenjuju podatke preko klizajućeg sučelja | pog. 14 |
 | **Zidne funkcije** *(engl. wall functions)* | modelska veza između prve ćelije i stijenke | Zatvaraju područje uz zid kada mreža ne razlučuje cijeli viskozni podsloj | pog. 12, pog. 13 |
-| **y+** | $y^+$ kriterij | Bezdimenzijska udaljenost prve ćelije od zida; jedan od kriterija prikladnosti zidne rezolucije | pog. 12, pog. 13 |
-| **Panel metoda** | Panel Method | Potencijalno strujanje + granični sloj na vanjskim oblicima | (vanjska aerodinamika) |
+| **y+** | $y^+$ kriterij | Bezdimenzijska udaljenost prve ćelije od zida; jedan od kriterija prikladnosti razlučivosti uz stijenku | pog. 12, pog. 13 |
+| **Panelna metoda** | Panel Method | Potencijalno strujanje oko tijela; prema potrebi se spaja s modelom graničnog sloja | (vanjska aerodinamika) |
 
 ## Primjeri alata
 
@@ -54,15 +54,15 @@ Sljedeća tablica izravno povezuje pojmove iz ovoga udžbenika s pripadnim pojmo
 | Pojam u MF1 | CFD ekvivalent ili alat |
 |---|---|
 | Kontrolni volumen | Ćelija mreže (engl. *cell*, *control volume*) |
-| Granica kontrolnog volumena | Patch (`boundaryField` u OpenFOAM-u, *Named Selection* u Fluentu) |
-| Rubni uvjet na skici (strelica, hvatišna točka) | Postavka tipa `inlet`, `outlet`, `wall`, `symmetry` na patchu |
-| Pretpostavka nestlačivosti | Izbor nestlačivog solvera (`simpleFoam`, `pisoFoam`) |
-| Slobodna površina | Iso-ploha polja $\alpha = 0{,}5$ u VOF simulaciji |
-| Težište istisnutog volumena (centar uzgona) | Integracija polja $\alpha$ po cijeloj domeni |
-| Hidrostatska raspodjela tlaka | Polje `p_rgh` (tlak umanjen za hidrostatski dio) |
+| Granica kontrolnog volumena | Plohe koje omeđuju ćeliju; vanjske plohe domene grupiraju se u rubna područja (*patches*) |
+| Fizikalni rubni uvjet na granici domene | Postavka tipa `inlet`, `outlet`, `wall`, `symmetry` na patchu |
+| Pretpostavka nestlačivosti | Izbor nestlačivog rješavača (npr. `simpleFoam` ili `pisoFoam` u inačicama koje ih sadrže) |
+| Slobodna površina | Izoploha polja $\alpha = 0{,}5$ u VOF simulaciji |
+| Težište istisnutog volumena (centar uzgona) | Geometrijski momenti istisnutog volumena tijela; polje $\alpha$ pomaže odrediti slobodnu površinu i uronjeni dio |
+| Hidrostatska raspodjela tlaka | Hidrostatski dio fizičkog tlaka; `p_rgh` označuje tlak iz kojega je taj dio izdvojen |
 | Profil brzine $v(r)$ u cijevi | Polje `U` kao funkcija položaja (uzorkovanje po liniji s alatom `sample`) |
-| Sila na zid | Funkcijski objekt `forces` ili `forceCoeffs` |
-| Centar tlaka na plohi | Težište raspodjele tlaka po zidnom patchu |
+| Sila na zid | Integracija tlačnih i viskoznih naprezanja (`forces`); `forceCoeffs` daje njihove bezdimenzijske koeficijente |
+| Centar tlaka na plohi | Omjer momenta i rezultantne tlačne sile na ravnoj plohi, uz zadanu referencu tlaka |
 | Reynoldsov broj | Jedan od kriterija za procjenu režima, razlučivosti i izbora modela; nije dovoljan sam |
 | Froudeov, Weberov i Machov broj (pog. 9, 11 i 15) | Skaliranje stlačivosti, međupovršinskih pojava i slobodne površine |
 | Bezdimenzioniranje jednadžbi, Π teorem (pog. 11) | Popis mjerodavnih parametara modela; samo u najjednostavnijem jednofaznom nestlačivom toku može ostati prvenstveno $Re$ |
@@ -72,8 +72,8 @@ Sljedeća tablica izravno povezuje pojmove iz ovoga udžbenika s pripadnim pojmo
 | Pokretna lopatica | MRF zona (`MRFZone`) ili klizajuća mreža |
 | Trokuti brzina | Polja apsolutne i relativne brzine ($\vec{c} = \vec{w} + \vec{u}$) u MRF zoni |
 | Linijski gubici | Integral disipacije po dionici domene |
-| Lokalni gubici | Razrešavanje strujanja na geometrijskim singularitetima (koljeno, ventil) |
-| Metacentar | 6-DOF rješavač gibanja u VOF simulaciji s brodskim trupom |
+| Lokalni gubici | Razrješavanje strujanja oko lokalnih elemenata (koljeno, ventil) |
+| Metacentar | Hidrostatička referenca početne stabilnosti; 6-DOF rješavač u VOF simulaciji zasebno opisuje gibanje trupa |
 
 ## Kako se MF1 jednadžbe slažu u CFD slici
 
@@ -83,14 +83,14 @@ Ova tablica sažima glavne jednadžbe iz udžbenika i pokazuje njihovu izravnu u
 |---|---|
 | $p = F_n/A$, Pascalov zakon | Tlak kao polje; inicijalni uvjet tlaka |
 | $dp/dz = -\rho g$, $p = p_0 + \rho gh$ | Inicijalni uvjet i temeljna razina polja `p_rgh` |
-| $\tau = \mu\,dv/dy$ | Konstitutivni zakon u solveru (Newtonian model) |
-| Površinska napetost $\sigma$, kontaktni kut | VOF + CSF za multifazno strujanje |
-| $F_U = \rho g V_{ist}$ (uzgon) | VOF metoda; `interFoam` solver |
-| Integracija tlaka $F = \int_A p\,dA$ | Funkcionalni objekti `forces`, *Force Reports* |
+| $\tau = \mu\,dv/dy$ | Konstitutivni zakon u rješavaču (newtonski model) |
+| Površinska napetost $\sigma$, kontaktni kut | VOF + CSF za višefazno strujanje |
+| $F_U = \rho g V_{ist}$ (uzgon) | Referentna hidrostatička provjera numeričkog modela slobodne površine, primjerice VOF-a |
+| Integracija tlaka na ravnoj plohi $F = \int_A p\,dA$ | Funkcijski objekti `forces`, *Force Reports* |
 | $\nabla\cdot\vec{v} = 0$ (kontinuitet) | Sprega tlaka i brzine (SIMPLE/PISO/PIMPLE) |
 | Bernoullijeva jednadžba | Referentno rješenje za verifikaciju idealiziranoga Eulerova modela |
-| Eulerova diferencijalna jednadžba | Euler solver za neviskozno strujanje |
-| Disipacija, $h_l = \lambda(L/D)(v^2/2g)$ | Pad mehaničke energije iz polja tlaka i brzine; turbulentni model i zidna obrada utječu na predviđeni otpor |
+| Eulerova diferencijalna jednadžba | Eulerov rješavač za neviskozno strujanje |
+| Disipacija, $h_l = \lambda(L/D)(v^2/2g)$ | Pad mehaničke energije iz polja tlaka i brzine; turbulentni model i model strujanja uz stijenku utječu na predviđeni otpor |
 | Integralni zakon količine gibanja | Izravna polazna formulacija metode konačnih volumena (FVM) |
 | Moment količine gibanja, $\vec{w} = \vec{c} - \vec{u}$ | MRF metoda, klizajuća mreža (sliding mesh) za rotore |
 | Reynoldsov broj $Re = vD/\nu$ | Procjena relativne važnosti viskoznosti; jedan od ulaza u odabir modela i mreže |
@@ -98,16 +98,16 @@ Ova tablica sažima glavne jednadžbe iz udžbenika i pokazuje njihovu izravnu u
 
 ## Kada CFD ne treba: granice primjenjivosti
 
-Računalna dinamika fluida nije univerzalno sredstvo. U svakom inženjerskom projektu prvo se postavlja pitanje **može li se problem riješiti analitički ili tabličnim podacima** — tek ako odgovor nije zadovoljavajući, primjenjuje se CFD. Sljedeći su tipični slučajevi u kojima CFD ne donosi vrijednost iznad ručnog proračuna:
+Računalna dinamika fluida nije univerzalno sredstvo. U svakom inženjerskom projektu prvo se postavlja pitanje **može li se problem riješiti analitički ili tabličnim podatcima** — tek ako odgovor nije zadovoljavajući, primjenjuje se CFD. U sljedećim idealiziranim slučajevima analitički ili jednodimenzijski račun može biti dovoljan:
 
 ::: {.mf1-warning}
 <p class="mf1-box-label">Slučajevi u kojima analitika dostaje</p>
 
-- **Pascalov prijenos sile u hidrauličnim sustavima** — analitičke formule $\Delta p = F/A$ i $A_1 s_1 = A_2 s_2$ daju cjelovit odgovor; CFD bi numerički reproducirao isti rezultat uz mnogo veći trošak.
-- **Hidrostatika u mirnim spremnicima** — $p = p_0 + \rho g h$ vrijedi egzaktno; CFD donosi vrijednost tek pri dinamičkim uvjetima poput zapljuskivanja ili prelijevanja.
-- **Sila na ravnu plohu pri poznatoj hidrostatici** — integral $F = \rho g z_T A$ je egzaktan za stacionarni slučaj; CFD je potreban tek pri valovima ili turbulentnoj struji uz plohu.
+- **Pascalov prijenos sile u hidrauličnim sustavima** — analitičke formule $\Delta p = F/A$ i $A_1 s_1 = A_2 s_2$ daju odgovor za idealni nestlačivi model bez gubitaka; CFD bi numerički reproducirao isti rezultat uz mnogo veći trošak.
+- **Hidrostatika u mirnim spremnicima** — $p = p_0 + \rho g h$ vrijedi za homogeni fluid u jednolikom gravitacijskom polju; CFD donosi vrijednost tek pri dinamičkim uvjetima poput zapljuskivanja ili prelijevanja.
+- **Sila na ravnu plohu pri poznatoj hidrostatici** — izraz $F = \rho g z_T A$ vrijedi za homogeni fluid, jednoliku gravitaciju i poništene atmosferske doprinose; pri valovima ili strujanju uz plohu može biti potreban složeniji model.
 - **1D proračun cjevovoda u stacionarnom režimu** — Darcy–Weisbach uz dokumentirane koeficijente često daje odgovor primjeren projektnoj odluci. Nesigurnost nije univerzalnih $5{-}15\,\%$, nego ovisi o podatcima o hrapavosti, lokalnim elementima, režimu i mjerenju protoka.
-- **Početna statička stabilnost broda u mirnoj vodi** — metacentarska teorija daje mali-kutni kriterij početne stabilnosti. Konačni kutovi, valna eksitacija, slobodne površine i poplavljivanje traže širi hidrostatički ili hidrodinamički model.
+- **Početna statička stabilnost broda u mirnoj vodi** — metacentarska teorija daje kriterij za male kutove početne stabilnosti. Veći kutovi, valna pobuda, slobodne površine i poplavljivanje traže širi hidrostatički ili hidrodinamički model.
 :::
 
 Pravilo prakse: najprije se bira najjednostavniji model koji odgovara odluci i potrebnoj nesigurnosti. CFD donosi vrijednost kada su prostorna raspodjela, složena geometrija ili nestacionarnost bitne, ali i tada 1D račun ostaje važna neovisna provjera reda veličine.
@@ -121,7 +121,7 @@ Za nastavni i projektni rad koristan je redoslijed:
 1. započeti najjednostavnijim modelom koji može odgovoriti na ciljano pitanje;
 2. procijeniti trošak kratkim probnim izvođenjem na gruboj mreži, bez zaključivanja o konačnom rezultatu;
 3. planirati najmanje tri sustavno profinjene mreže i, za nestacionarni slučaj, provjeru vremenskoga koraka;
-4. tek nakon zatvaranja bilanci i monitora dodavati složeniju geometriju ili fizikalni model.
+4. tek nakon provjere bilanci i konvergencije praćenih veličina dodavati složeniju geometriju ili fizikalni model.
 
 Laminarni referentni slučaj s poznatim rješenjem zato je bolji prvi korak od složene turbulentne simulacije: istodobno provjerava postavke, mrežu, bilance i način izvještavanja pogreške.
 
@@ -131,15 +131,15 @@ Kako bi se konkretno vidjelo što sve CFD analiza obuhvaća, prikazuje se šest 
 
 ### Korak 1 — Geometrija {.unnumbered .unlisted .mf1-step}
 
-Iz CAD modela ili izravno u alatu konstruira se trodimenzijska geometrija cijevi sa suženjem. Za simetrične probleme često je dovoljna polovica geometrije s ravninom simetrije, što prepolavlja troškove simulacije. Ulazni presjek, izlazni presjek, ravnina simetrije i unutarnji zid cijevi označavaju se kao zasebne patcheve.
+Iz CAD modela ili izravno u alatu konstruira se trodimenzijska geometrija cijevi sa suženjem. Za simetrične probleme često je dovoljna polovica geometrije s ravninom simetrije, što smanjuje broj ćelija i računski trošak. Ulazni presjek, izlazni presjek, ravnina simetrije i unutarnja stijenka cijevi označavaju se kao zasebna rubna područja (*patches*).
 
 ### Korak 2 — Mreža {.unnumbered .unlisted .mf1-step}
 
 Geometrija se diskretizira u mrežu kontrolnih volumena. Ključne odluke:
 
 - **Gustoća mreže** — gušće u suženju gdje gradijenti brzine i tlaka rastu;
-- **Sloj uz zid** — prizmatski elementi uz zid radi razrešavanja graničnog sloja;
-- **$y^+$ vrijednost** — cilj mora odgovarati odabranoj zidnoj obradi; razriješeni sloj i zidne funkcije imaju različite zahtjeve, a prijelazno područje treba izbjegavati prema dokumentaciji konkretnog modela.
+- **Sloj uz stijenku** — prizmatski elementi uz stijenku radi razrješavanja graničnog sloja;
+- **$y^+$ vrijednost** — cilj mora odgovarati odabranom modelu strujanja uz stijenku; razriješeni sloj i zidne funkcije imaju različite zahtjeve, a prijelazno područje treba izbjegavati prema dokumentaciji konkretnog modela.
 
 Broj ćelija sam po sebi nije kriterij dostatnosti. Potrebna je najmanje gruba, srednja i fina mreža s usporedivim obrascem profinjenja, a mjerodavne izlazne veličine moraju pokazati konvergenciju.
 
@@ -147,21 +147,21 @@ Broj ćelija sam po sebi nije kriterij dostatnosti. Potrebna je najmanje gruba, 
 
 Svakoj plohi geometrije pridružuje se odgovarajući uvjet:
 
-- **Ulaz i izlaz** — konzistentan par uvjeta, primjerice zadan profil/protok na ulazu i statički tlak na izlazu; ne smiju se istodobno prepisati međusobno nespojivi protok i tlak;
-- **Zid** — klizni zid za idealni Eulerov referentni slučaj ili uvjet ljepljivosti `noSlip` za viskozni model;
+- **Ulaz i izlaz** — konzistentan par uvjeta, primjerice zadan profil/protok na ulazu i statički tlak na izlazu; ne smiju se istodobno propisati međusobno nespojivi protok i tlak;
+- **Stijenka** — nepropusnost uz dopušteno klizanje za idealni Eulerov referentni slučaj ili uvjet prianjanja `noSlip` za viskozni model;
 - **Ravnina simetrije** (ako se koristi) — uvjet `symmetry`.
 
 Rubni uvjeti moraju odgovarati fizičkom eksperimentu i analitičkom modelu s kojim će se rezultat usporediti.
 
-### Korak 4 — Solver i iteracijska konvergencija {.unnumbered .unlisted .mf1-step}
+### Korak 4 — Rješavač i iteracijska konvergencija {.unnumbered .unlisted .mf1-step}
 
-Za nestlačivi stacionarni problem bira se odgovarajući stacionarni solver i sprega tlaka s brzinom. Pad reziduala potreban je, ali nije dovoljan dokaz konvergencije. Istodobno se prate protok kroz svaki otvor, relativna neravnoteža mase, $\Delta p_{12}$, sile i druge izlazne veličine. Kriteriji se zadaju prema namjeni modela; ne postoji univerzalan broj redova veličine koji jamči ispravan rezultat.
+Za nestlačivi stacionarni problem bira se odgovarajući stacionarni rješavač i sprega tlaka s brzinom. Pad reziduala potreban je, ali nije dovoljan dokaz konvergencije. Istodobno se prate protok kroz svaki otvor, relativna neravnoteža mase, $\Delta p_{12}$, sile i druge izlazne veličine. Kriteriji se zadaju prema namjeni modela; ne postoji univerzalan broj redova veličine koji jamči ispravan rezultat.
 
 ### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
 
 **Verifikacija pita: rješavamo li odabrane jednadžbe dovoljno točno?** Najprije se zatvara globalna bilanca mase. Zatim se na najmanje tri sustavno profinjene mreže uspoređuju $\Delta p_{12}$, brzina u grlu i druga projektno važna veličina. Treba izvijestiti relativne promjene među mrežama i, kada je red profinjenja dovoljno uredan, procijeniti diskretizacijsku nesigurnost. Za nestacionarni model analogno se provjerava vremenski korak. Reziduali, bilanca i mrežna/vremenska konvergencija tri su odvojena dokaza.
 
-Za idealni Eulerov slučaj s kliznim zidom dodatna je verifikacijska provjera Bernoullijev rezultat između **ulaza i grla**:
+Za idealni Eulerov slučaj s nepropusnom stijenkom uz dopušteno klizanje dodatna je verifikacijska provjera Bernoullijev rezultat između **ulaza i grla**:
 
 $$
 \Delta p_{12,B}=\frac{\rho}{2}\left(v_2^2-v_1^2\right).
@@ -171,23 +171,23 @@ Razlika bi se trebala smanjivati s konvergencijom rješenja. Ne zadaje se unapri
 
 ### Korak 6 — Validacija fizikalnog modela {.unnumbered .unlisted .mf1-step}
 
-**Validacija pita: opisuju li odabrane jednadžbe stvarni sustav dovoljno dobro?** Viskozni model s uvjetom ljepljivosti validira se prema mjerenom $\Delta p_{12}$, koeficijentu protoka ili drugom eksperimentalnom podatku pri istim geometrijskim i radnim uvjetima. Mjerna i numerička nesigurnost moraju se prikazati uz usporedbu.
+**Validacija pita: opisuju li odabrane jednadžbe stvarni sustav dovoljno dobro?** Viskozni model s uvjetom prianjanja validira se prema mjerenom $\Delta p_{12}$, koeficijentu protoka ili drugom eksperimentalnom podatku pri istim geometrijskim i radnim uvjetima. Mjerna i numerička nesigurnost moraju se prikazati uz usporedbu.
 
-Razlika viskoznog CFD-a prema idealnom Bernoulliju nije automatski pogreška: dio je stvarna disipacija. Posebno, usporedba tlaka između ulaza i izlaza jednake površine s idealnim Bernoullijem dala bi idealno nultu razliku, dok realni tok ima trajan gubitak tlaka. Zato se uvijek uspoređuju iste mjerne stanice i modeli s usklađenim pretpostavkama.
+Razlika viskoznog CFD-a prema idealnom Bernoulliju nije automatski pogreška: dio je stvarna disipacija. Posebno, usporedba tlaka između ulaza i izlaza jednake površine s idealnim Bernoullijem dala bi idealno nultu razliku, dok realni tok ima trajan gubitak tlaka. Zato se uvijek uspoređuju iste mjerni presjeci i modeli s usklađenim pretpostavkama.
 
 Tek kada su dokumentirane i verifikacija i validacija, rezultat može biti temelj za projektnu odluku unutar navedenog područja primjene.
 
 ## Tri pripremljena V&V paketa
 
-Repozitorij sadrži male strojno čitljive pakete u `data/cfd/`. Oni ne zahtijevaju lokalnu instalaciju solvera i služe učenju revizijskog traga: svaka vrijednost ima izvor, jedinicu i ograničenje.
+Repozitorij sadrži male strojno čitljive pakete u `data/cfd/`. Oni ne zahtijevaju lokalnu instalaciju rješavača i služe učenju revizijskog traga: svaka vrijednost ima izvor, jedinicu i ograničenje.
 
 | Paket | Što je stvarno dostupno | Što se smije zaključiti |
 |---|---|---|
-| [`poiseuille_laminar`](../data/cfd/poiseuille_laminar/README.md) | analitičko rješenje, tri sintetičke mreže, reziduali, monitor protoka, masena bilanca i GCI | provjera V&V postupka prema poznatom rješenju; nije test određenog solvera |
+| [`poiseuille_laminar`](../data/cfd/poiseuille_laminar/README.md) | analitičko rješenje, tri sintetičke mreže, reziduali, monitor protoka, masena bilanca i GCI | provjera V&V postupka prema poznatom rješenju; nije test određenog rješavača |
 | [`venturi_diffuser`](../data/cfd/venturi_diffuser/README.md) | tri sintetičke mreže, zadani 1D referentni model, reziduali, monitor gubitka, bilanca i GCI | pedagoška verifikacija obrade rezultata; nije eksperimentalna validacija Venturija |
-| [`hydrofoil_experiment`](../data/cfd/hydrofoil_experiment/README.md) | Ladsonove javne mjerne sile [@ladson1988] i stvarni FUN3D rezultati NASA TMR-a na tri mreže [@nasa-tmr-naca0012] | usporedba $C_L$ i $C_D$ i mrežni trend; bez arhivskih reziduala, masene bilance i mjernog budžeta nema konačne validacijske presude |
+| [`hydrofoil_experiment`](../data/cfd/hydrofoil_experiment/README.md) | Ladsonove javne mjerne sile [@ladson1988] i stvarni FUN3D rezultati NASA TMR-a na tri mreže [@nasa-tmr-naca0012] | usporedba $C_L$ i $C_D$ i mrežni trend; bez arhivskih reziduala, masene bilance i popisa doprinosa mjernoj nesigurnosti nema konačne ocjene valjanosti modela |
 
-Validator `python tools/validate_cfd_vv.py` ne uspoređuje podatke samo s njima samima: ponovno računa analitičke vrijednosti, bilance, rastav otpora, opaženi red i GCI. Za profilni slučaj dodatno mora prepoznati da $C_D$ monotono konvergira, a $C_L$ na odabrane tri mreže oscilira. Nedostupne arhivske dijagnostike namjerno ostaju označene kao praznina umjesto da se popune umjetnim brojevima.
+Validator `python tools/validate_cfd_vv.py` ne uspoređuje podatke samo s njima samima: ponovno računa analitičke vrijednosti, bilance, rastav otpora, opaženi red i GCI. Za profilni slučaj dodatno mora prepoznati da $C_D$ monotono konvergira, a $C_L$ na trima odabranim mrežama oscilira. Nedostupne arhivske dijagnostike namjerno ostaju označene kao praznina umjesto da se popune umjetnim brojevima.
 
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Aeroprofil nije automatski hidroprofil</p>
@@ -197,10 +197,10 @@ Bezdimenzijski koeficijenti profilnog uzgona i otpora prenose istu osnovnu bilan
 
 ## Što čitati dalje
 
-Sljedeći izvori su klasični uvodi u numeričku mehaniku fluida i CFD. Nije ih potrebno čitati prije RDF kolegija, ali su dobri za usmjerenje.
+Sljedeći izvori su klasični uvodi u numeričku mehaniku fluida i CFD. Nisu preduvjet za kolegij Mehanika fluida 1, nego izvori za daljnje učenje.
 
 - **Versteeg, H. K., Malalasekera, W.** — *An Introduction to Computational Fluid Dynamics: The Finite Volume Method*. Pearson. Klasičan udžbenik FVM-a.
-- **Ferziger, J. H., Perić, M., Street, R. L.** — *Computational Methods for Fluid Dynamics*. Springer. Standardna referenca, hrvatski autor.
+- **Ferziger, J. H., Perić, M., Street, R. L.** — *Computational Methods for Fluid Dynamics*. Springer. Referentni udžbenik numeričkih metoda.
 - **Anderson, J. D.** — *Computational Fluid Dynamics: The Basics with Applications*. McGraw-Hill. Pristupačan uvod.
 - **OpenFOAM User Guide** — službena dokumentacija koju treba čitati za konkretnu instaliranu inačicu.
 - **CFD-Online wiki** — zajednička baza znanja s detaljnim opisima turbulentnih modela, rubnih uvjeta i alata.
@@ -208,7 +208,7 @@ Sljedeći izvori su klasični uvodi u numeričku mehaniku fluida i CFD. Nije ih 
 ::: {.callout-note icon="false"}
 ## Sažetak
 
-Mehanika fluida 1 daje **fizikalni jezik**: tlak, brzina, gustoća, kontinuitet, Bernoulli, količina gibanja. Računalna dinamika fluida daje **računalni alat** koji taj jezik rješava na milijunima točaka istovremeno. Numerika nije zamjena za fiziku, niti je viša razina iste discipline — to je drugi rakurs istog problema.
+Mehanika fluida 1 daje **fizikalni jezik**: tlak, brzina, gustoća, kontinuitet, Bernoulli, količina gibanja. Računalna dinamika fluida daje **računalni alat** za približno rješavanje pripadnih jednadžbi na diskretnoj mreži. Fizikalni model i numerički postupak zato treba provjeravati zasebno.
 
-Pri prvim CFD simulacijama prvih nekoliko tjedana protječe u radu s mrežama, rubnim uvjetima i konvergencijom. No svaka jednadžba koja se tamo pojavi — već je upoznata ovdje.
+Pri prvim CFD simulacijama mnogo rada zahtijevaju mreže, rubni uvjeti i konvergencija. Temeljne bilance uvedene u ovom udžbeniku ostaju oslonac, dok dodatni modeli i numerički postupci traže zasebno učenje.
 :::

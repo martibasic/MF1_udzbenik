@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="u14fo_title u14fo_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u14fo_title">U14 - Dijagram za prepoznavanje relevantnih bezdimenzijskih grupa</title>
-  <desc id="u14fo_desc">Niz pitanja prepoznaje moguce relevantne grupe: slobodna povrsina upucuje na Froudeov broj, viskoznost na Reynoldsov, kapljice i mlaz na Weberov i Bondov, kavitacija na kavitacijski broj, periodicnost na Strouhalov, a stlacivost na Machov broj. U istom problemu moze biti vazno vise grupa.</desc>
+  <title id="u14fo_title">Dijagram za prepoznavanje relevantnih bezdimenzijskih grupa</title>
+  <desc id="u14fo_desc">Niz pitanja prepoznaje moguće relevantne grupe: slobodna površina upućuje na Froudeov broj, viskoznost na Reynoldsov, kapljice i mlaz na Weberov i Bondov, kavitacija na kavitacijski broj, periodičnost na Strouhalov, a stlačivost na Machov broj. U istom problemu može biti važno više grupa.</desc>
   <defs>
     <marker id="u14fo_aDown" markerWidth="7" markerHeight="6" refX="3.5" refY="5.5" orient="auto">
       <path d="M0,0 L7,0 L3.5,6 z" fill="#5d6d7e" />
@@ -54,7 +54,7 @@
   <rect x="36" y="486" width="830" height="56" rx="8" fill="white" stroke="#b7600c" stroke-width="1" stroke-opacity="0.55" />
 
   <!-- Tekst pitanja -->
-  <text x="52" y="103" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#163b57">1. Postoji li slobodna površina ili valovi?</text>
+  <text x="52" y="103" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#163b57">1. Ima li slobodne površine ili valova?</text>
   <text x="52" y="171" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#163b57">2. Bitan režim / trenje uz stijenku?</text>
   <text x="52" y="239" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#163b57">3. Ima li kapljica, mlaza ili mjehura?</text>
   <text x="52" y="307" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#163b57">4. Može li tlak pasti do isparavanja?</text>

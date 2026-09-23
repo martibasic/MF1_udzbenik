@@ -97,7 +97,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <rect x="502" y="324" width="460" height="238" rx="9" fill="white" stroke="#cbdce9" stroke-width="1" stroke-opacity="0.65" />
 <rect x="502" y="324" width="460" height="28" rx="7" fill="white" stroke="none" stroke-width="1.2"/>
 <text x="732.0" y="343" font-size="13" fill="#1e8449" text-anchor="middle" font-weight="700">KLJUČNE JEDNADŽBE</text>
-<text x="522" y="378" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">1. Newtonov model</text>
+<text x="522" y="378" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">1. Newtonski model</text>
 <text x="716" y="399" font-size="17" fill="#1565c0" text-anchor="middle" font-weight="700">τ = μ du/dy</text>
 <text x="522" y="429" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">2. Kinematička viskoznost</text>
 <text x="716" y="450" font-size="17" fill="#1565c0" text-anchor="middle" font-weight="700">ν = μ/ρ</text>

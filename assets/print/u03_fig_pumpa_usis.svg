@@ -75,7 +75,7 @@
   <text x="300" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#7d4e00">ulje</text>
   <text x="300" y="507" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#7d4e00">ρ = 870 kg/m³</text>
   <text x="225" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">PUMPA (simbol)</text>
-  <text x="368" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">tlacni vod</text>
+  <text x="368" y="113" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">tlačni vod</text>
   <text x="248" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c0392b">
     <tspan font-weight="700">U</tspan> – usis</text>
   <text x="142" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#1565c0">
@@ -119,12 +119,12 @@
     <tspan font-style="italic">H</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 11,8 m</text>
   <text x="510" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#7a5c00">Kavitacija</text>
-  <text x="510" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Ako p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> padne ispod tlaka pare p<tspan baseline-shift="sub" font-size="0.7em">v</tspan>, ulje isparava u mjehurice (kavitacija).</text>
-  <text x="510" y="510" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Pri Q = 0: p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> = 80,8 kPa ≫ 0,2 kPa; staticka granica nije dosegnuta.</text>
-  <text x="510" y="524" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78" transform="translate(0 8)">U radu ukljuciti brzinu i gubitke te provjeriti NPSH<tspan baseline-shift="sub" font-size="0.7em">A</tspan> &gt; NPSH<tspan baseline-shift="sub" font-size="0.7em">R</tspan>.</text>
+  <text x="510" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Ako p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> padne ispod tlaka pare p<tspan baseline-shift="sub" font-size="0.7em">v</tspan>, ulje isparava u mjehuriće (kavitacija).</text>
+  <text x="510" y="510" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">Pri Q = 0: p<tspan baseline-shift="sub" font-size="0.7em">aps</tspan> = 80,8 kPa ≫ 0,2 kPa; statička granica nije dosegnuta.</text>
+  <text x="510" y="524" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78" transform="translate(0 8)">U radu uključiti brzinu i gubitke te provjeriti NPSH<tspan baseline-shift="sub" font-size="0.7em">A</tspan> &gt; NPSH<tspan baseline-shift="sub" font-size="0.7em">R</tspan>.</text>
   <text x="442" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-style="italic" font-weight="700" fill="#b7600c">H</text>
   <text x="442.0" y="322.0" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#b7600c">= 2,40 m</text>
-  <text x="514" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">3. Staticka gornja granica (Q = 0; p<tspan baseline-shift="sub" font-size="0.7em">v</tspan> ≈ 200 Pa)</text>
+  <text x="514" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">3. Statička gornja granica (Q = 0; p<tspan baseline-shift="sub" font-size="0.7em">v</tspan> ≈ 200 Pa)</text>
   <text x="720" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#b7600c">
     <tspan font-style="italic">H</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 11,8 m</text>

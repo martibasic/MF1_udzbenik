@@ -50,7 +50,7 @@ Miješanje dinamičke i kinematičke viskoznosti i njihovih jedinica; isti tlač
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Utvrditi odgovaraju li pojavi $\mu$, $\nu$ ili $\sigma$. Prebrojiti međupovršine, na objema stranama pokretne ploče odrediti smjer otpora i zbrojiti sile. Newtonski model provjeriti na svim mjernim točkama pri istoj temperaturi. Odvojiti punjenje igle od stanja s kapljicom, provjeriti granice promjera i usporediti rezervu regulatora sa skalom zanemarenog tlaka kroz kapljicu te ograničiti izbor na zadani statički model.
+Utvrdi odgovaraju li pojavi $\mu$, $\nu$ ili $\sigma$. Prebroji međupovršine, na objema stranama pokretne ploče odredi smjer otpora i zbroji sile. Newtonski model provjeri na svim mjernim točkama pri istoj temperaturi. Odvoji punjenje igle od stanja s kapljicom, provjeri granice promjera i usporedi rezervu regulatora sa skalom zanemarenog tlaka kroz kapljicu te ograniči izbor na zadani statički model.
 :::
 ::::
 
@@ -68,7 +68,7 @@ Miješanje apsolutnog, manometarskog i vakuumskog tlaka; pogrešni predznaci i i
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Odrediti referencu i sve visinske razlike, uključujući položaj granice u manometru. Za slojeve zatvoriti i ukupnu visinu i tlak. Pri izboru instrumenta provjeriti visinu stupca, tlačnu pogrešku i rezervu skale; razlikovati zajamčene granice od standardne nesigurnosti. Za usis pumpe u radu trebaju gubici i brzinska visina te usporedba $NPSH_A$ s proizvođačevim $NPSH_R$, a ne samo $p_{atm}/(\rho g)$.
+Odredi referencu i sve visinske razlike, uključujući položaj granice u manometru. Za slojeve zatvori i ukupnu visinu i tlak. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku i rezervu skale; razlikuj zajamčene granice od standardne nesigurnosti. Za usis pumpe u radu trebaju gubici i brzinska visina te usporedba $NPSH_A$ s proizvođačevim $NPSH_R$, a ne samo $p_{atm}/(\rho g)$.
 :::
 ::::
 
@@ -86,7 +86,7 @@ Zamjena smjera ubrzanja smjerom brzine; linearna umjesto kvadratne ovisnosti o p
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Najprije odrediti $\vec g_{eff}$ i provjeriti volumen. Pri vrtnji usporediti oba kritična praga; nakon prvoga mijenja se domena ili volumen. Iz podataka odvojeno provjeriti blizinu referentnim razinama i promjenu kroz vrijeme. Uključiti granično odstupanje brzine; provjera dubine u ustaljenom stanju sa zatvorenim usisom nije provjera rada s protokom.
+Najprije odredi $\vec g_{eff}$ i provjeriti volumen. Pri vrtnji usporedi oba kritična praga; nakon prvoga mijenja se domena ili volumen. Iz podataka odvojeno provjeri blizinu referentnim razinama i promjenu kroz vrijeme. Uključi granično odstupanje brzine; provjera dubine u ustaljenom stanju sa zatvorenim usisom nije provjera rada s protokom.
 :::
 ::::
 
@@ -104,7 +104,7 @@ Uporaba formule centra tlaka bez provjere referentnog tlaka; tretiranje zakrivlj
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Potrebno je zadati orijentaciju plohe i referentni tlak, zasebno zatvoriti silu i moment te za zakrivljenu plohu nacrtati lokalnu normalu od stvarnoga fluida prema stijenci. Projekcija daje $F_H$, pomoćni volumen iznos $|F_V|$, a geometrija stvarnoga fluida njegov smjer. Za dvije razine vode oduzeti sile i njihove momente oko iste točke. Za radijalni poklopac sve normale prolaze kroz središte kružnice; moment težine i kapacitet spojnice provjeravaju se zasebno.
+Potrebno je zadati orijentaciju plohe i referentni tlak, zasebno zatvoriti silu i moment te za zakrivljenu plohu nacrtati lokalnu normalu od stvarnoga fluida prema stijenci. Projekcija daje $F_H$, pomoćni volumen iznos $|F_V|$, a geometrija stvarnoga fluida njegov smjer. Za dvije razine vode oduzmi sile i njihove momente oko iste točke. Za radijalni poklopac sve normale prolaze kroz središte kružnice; moment težine i kapacitet spojnice provjeravaju se zasebno.
 :::
 ::::
 
@@ -122,7 +122,7 @@ Zamjena volumena tijela istisninom; miješanje ravnoteže s početnom stabilnoš
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Potrebno je računati stvarnu istisninu i odvojiti bilancu sila od momenata. Pri pokusu nagibanja uteg ulazi u ukupnu masu. Za dodani balast ponovno računati gaz, $KB$, $BM$ i slobodni bok. U intervalnoj procjeni masa i moment moraju odgovarati istom skupu ulaza. $GM$ vrijedi za početni mali nagib; konačni i oštećeni slučaj traže krivulju $GZ$, otvore, naplavljivanje i mjerodavne kriterije.
+Potrebno je računati stvarnu istisninu i odvojiti bilancu sila od momenata. Pri pokusu nagibanja uteg ulazi u ukupnu masu. Za dodani balast ponovno računaj gaz, $KB$, $BM$ i slobodni bok. U intervalnoj procjeni masa i moment moraju odgovarati istom skupu ulaza. $GM$ vrijedi za početni mali nagib; konačni i oštećeni slučaj traže krivulju $GZ$, otvore, naplavljivanje i mjerodavne kriterije.
 :::
 ::::
 
@@ -140,7 +140,7 @@ Mehaničko pisanje $A_1v_1=A_2v_2$ bez kontrolnog volumena; zamjena kuta prema n
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Označiti vanjsku normalu, ulaze, izlaze i akumulaciju. Za kosu plohu koristiti normalnu komponentu; za gibajući klip tok računati relativno prema otvoru i zasebno zatvoriti promjenu volumena komore. Zadani omjer brzina u granama nije posljedica samih promjera. Razlikovati zajamčene intervale od standardne nesigurnosti; nakon dosezanja ruba dodati preljevni izlaz.
+Označi vanjsku normalu, ulaze, izlaze i akumulaciju. Za kosu plohu koristi normalnu komponentu; za gibajući klip tok računaj relativno prema otvoru i zasebno zatvori promjenu volumena komore. Zadani omjer brzina u granama nije posljedica samih promjera. Razlikuj zajamčene intervale od standardne nesigurnosti; nakon dosezanja ruba dodaj preljevni izlaz.
 :::
 ::::
 
@@ -176,7 +176,7 @@ Miješanje brzine zvuka i brzine signala prema laboratoriju; omjeri manometarski
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Razlikovati a i v±a, koristiti apsolutne tlakove i apsolutnu temperaturu te odabrati režim iz rubnih uvjeta. Kroz normalni val očuvati masu, količinu gibanja i ukupnu entalpiju, uz pad ukupnog tlaka. Za Z6 mjeriti p01 u mirnoj komori uz izentropski dovod, a p02 podzvučnom sondom; usporediti omjere uz kombiniranu standardnu nesigurnost.
+Razlikuj a i v±a, koristi apsolutne tlakove i apsolutnu temperaturu te odaberi režim iz rubnih uvjeta. Kroz normalni udarni val očuvaj masu, količinu gibanja i ukupnu entalpiju, uz pad ukupnog tlaka. Za Z6 mjeri p01 u mirnoj komori uz izentropski dovod, a p02 podzvučnom sondom; usporedi omjere uz kombiniranu standardnu nesigurnost.
 :::
 ::::
 
@@ -194,7 +194,7 @@ Zamjena sile na fluid silom na konstrukciju; neoznačena ravnina skretanja; kosi
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Označiti tlocrt i osi te tlakove usmjeriti prema KV-u. Razlikovati F i R, moment računati iz r×F, a pomični dotok iz v−u uz apsolutne brzine u impulsu i energiji. Provjeriti granice maksimuma i puni zadani kriterij nosača. Tlačne i impulsne doprinose zapiši po komponentama; reakcija na konstrukciju ima suprotan predznak od sile konstrukcije na fluid.
+Označi tlocrt i osi te tlačne sile usmjeri prema KV-u. Razlikuj F i R, moment računaj iz r×F, a dotok kroz pomičnu plohu iz v−u uz apsolutne brzine u bilancama količine gibanja i energije. Provjeri granice maksimuma i puni zadani kriterij nosača. Tlačne i impulsne doprinose zapiši po komponentama; reakcija na konstrukciju ima suprotan predznak od sile konstrukcije na fluid.
 :::
 ::::
 
@@ -224,7 +224,7 @@ Provjeri apsolutni referentni tlak, rang matrice i relevantne grupe. Silu prenes
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Gubitak nestacionarnoga člana; miješanje strujnice i putanje čestice; rješavanje Navier–Stokesa bez početnih i rubnih uvjeta; poistovjećivanje numeričke konvergencije s validacijom; tumačenje vremenskog mjerila kao točnog vremena uspostave profila ili lokalnog povrata kao prolaza kroz stijenku.
+Gubitak nestacionarnoga člana; miješanje strujnice i putanje čestice; rješavanje Navier–Stokesovih jednadžbi bez početnih i rubnih uvjeta; poistovjećivanje numeričke konvergencije s validacijom; tumačenje vremenskog mjerila kao točnog vremena uspostave profila ili lokalnog povrata kao prolaza kroz stijenku.
 :::
 
 ::: {.mf1-error-column}
@@ -260,13 +260,13 @@ Zatvori kontinuitet i gubitke grana. Pri traženju radne točke ponovno računaj
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Zamjena relativnog dotoka jedne lopatice punim protokom kola; prihvaćanje rekonstruiranog izlaza bez provjere gubitka; isti radijus u oba člana momenta; izostavljen ulazni impuls vodomlaznog pogona; poistovjećivanje učinkovitosti pogona i propulzijske učinkovitosti.
+Zamjena relativnog dotoka jedne lopatice punim protokom kola; prihvaćanje rekonstruiranog izlaza bez provjere gubitka; isti radijus u oba člana momenta; izostavljen ulazni tok količine gibanja vodomlaznog pogona; poistovjećivanje učinkovitosti pogona i propulzijske učinkovitosti.
 :::
 
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Odaberi kontrolni volumen i tijelo na koje sila djeluje. Provjeri $\vec c=\vec u+\vec w$, pasivnost lopatice i bilancu energije. Za cijeli rotor koristi oba radijusa i provjeri $M\omega$ Eulerovim radom. U potisku zadrži ulazni impuls; odvoji $TU$, snagu fluida i električnu snagu. Za platformu navedi sile dovoda i granice ulaza; statički kriterij nije certificirana nosivost.
+Odaberi kontrolni volumen i tijelo na koje sila djeluje. Provjeri $\vec c=\vec u+\vec w$, pasivnost lopatice i bilancu energije. Za cijeli rotor koristi oba radijusa i provjeri $M\omega$ Eulerovim radom. U bilanci potiska zadrži ulazni tok količine gibanja; odvoji $TU$, snagu fluida i električnu snagu. Za platformu navedi sile dovoda i granice ulaza; statički kriterij nije certificirana nosivost.
 :::
 ::::
 
@@ -284,7 +284,7 @@ Zamjena $D_h$ s $R_h$; izostavljanje povišenja dna ili proizvoljan izbor korije
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Razdvoji $A$, slobodnu širinu i omočen opseg. Na pragu provjeri raspoloživu energiju, kritičnu granicu i nastavak uzvodne grane. Skok zatvori količinom gibanja uz hidrostatičke sile; nesigurnost propagiraj iz zajedničkog $Q/b$. Kriterij $n+2u_n$ nije zajamčeni interval. Provjeri slobodni rub, ulazno stanje bazena, nizvodni vodostaj i kalibraciju hrapavosti.
+Razdvoji $A$, širinu slobodne površine i omočen opseg. Na pragu provjeri raspoloživu energiju, kritičnu granicu i nastavak uzvodne grane. Skok opiši bilancom količine gibanja uz hidrostatičke sile; nesigurnost propagiraj iz zajedničkog $Q/b$. Kriterij $n+2u_n$ nije zajamčeni interval. Provjeri slobodni rub, ulazno stanje bazena, nizvodni vodostaj i kalibraciju hrapavosti.
 :::
 ::::
 
@@ -306,7 +306,7 @@ Nesklad s ovim kriterijima upućuje na potrebu ponovnoga razmatranja skice, geom
 
 <p class="mf1-box-label">Model i pretpostavke</p>
 
-Hidrostatika nije Bernoulli, a cjevovod nije samo jedan Darcy-Weisbachov zapis bez geometrije i režima strujanja.
+Hidrostatika nije Bernoulli, a cjevovod nije samo jedan Darcy–Weisbachov zapis bez geometrije i režima strujanja.
 :::
 
 ::: {.mf1-decision-step}
@@ -343,7 +343,7 @@ Najčešća završna pogreška nastaje kada se račun prihvati samo zato što je
 ::: {.mf1-mini-summary}
 <p class="mf1-box-label">Operativna namjena dodatka</p>
 
-<span class="mf1-ch-ref"><span class="mf1-ch-code">dod. C</span><span class="mf1-ch-title">Tipične pogreške po poglavljima</span></span> je završni filtar prije povjerenja rezultatu. Služi za brzo prepoznavanje tipičnih kvarova modela, predznaka, geometrije i jedinica prije nego što pogreška postane "uredno" rješenje.
+<span class="mf1-ch-ref"><span class="mf1-ch-code">dod. C</span><span class="mf1-ch-title">Tipične pogreške po poglavljima</span></span> služi završnoj provjeri rezultata. Služi za brzo prepoznavanje tipičnih pogrešaka modela, predznaka, geometrije i jedinica prije nego što pogreška postane „uredno” rješenje.
 :::
 
 

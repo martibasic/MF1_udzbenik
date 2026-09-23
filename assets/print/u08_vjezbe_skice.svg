@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="u08vs_title u08vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
   <title id="u08vs_title">Zadaci Z1–Z6: kinematika i kontinuitet</title>
-  <desc id="u08vs_desc">Izvorni raspored šest panela. Z1 ima otvorene krajeve proširenja. Z2 prikazuje zamišljenu kosu plohu i normalu pod 60 stupnjeva prema brzini; ploha nije stijenka. Z3 dva ulaza i jedan izlaz otvorene komore; Z4 dvije otvorene grane s zadanim omjerom brzina. Z5 klip se giba udesno, a voda prolazi kroz stvaran središnji otvor, uz relativnu izlaznu brzinu w. Z6 homogena mješavina s uronjenim priključcima i slobodnim bokom od sadašnje razine do ruba. Strelice nisu sile. Geometrija je shematska; brojčane oznake određuju zadatak.</desc>
+  <desc id="u08vs_desc">Izvorni raspored šest panela. Z1 ima otvorene krajeve proširenja. Z2 prikazuje zamišljenu kosu plohu i normalu pod 60 stupnjeva prema brzini; ploha nije stijenka. Z3 dva ulaza i jedan izlaz otvorene komore; Z4 dvije otvorene grane sa zadanim omjerom brzina. Z5 klip se giba udesno, a voda prolazi kroz stvaran središnji otvor, uz relativnu izlaznu brzinu w. Z6 homogena mješavina s uronjenim priključcima i slobodnim bokom od sadašnje razine do ruba. Strelice nisu sile. Geometrija je shematska; brojčane oznake određuju zadatak.</desc>
   <defs>
     <linearGradient id="u08vs_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#aed6f1" />

@@ -65,10 +65,10 @@
       <text x="276" y="68" font-size="12" fill="#3a4a56" text-anchor="start">H = 0,46 m</text>
       <text x="276" y="88" font-size="12" fill="#c0392b" text-anchor="start">a = 1,20 m/s²</text>
       <line x1="272" y1="102" x2="432" y2="102" stroke="#cbd9e7" stroke-width="1" />
-      <text x="276" y="125" font-size="11" fill="#3a4a56" text-anchor="start" font-weight="700">Naći:</text>
+      <text x="276" y="125" font-size="11" fill="#3a4a56" text-anchor="start" font-weight="700">Odredi:</text>
       <text x="276" y="143" font-size="11" fill="#3a4a56" text-anchor="start">Δh, h<tspan baseline-shift="sub" font-size="0.75em">str</tspan>, h<tspan baseline-shift="sub" font-size="0.75em">pred</tspan>
       </text>
-      <text x="276" y="165" font-size="10.5" fill="#3a4a56" text-anchor="start">Provjeriti prelijevanje.</text>
+      <text x="276" y="165" font-size="10.5" fill="#3a4a56" text-anchor="start">Provjeri prelijevanje.</text>
       <text x="276" y="197" font-size="10.5" fill="#52606d" text-anchor="start">– –  početna razina h₀</text>
     </g>
     <g id="u04vs_z2" transform="translate(484 30)">
@@ -97,7 +97,7 @@
       <text x="276" y="68" font-size="12" fill="#3a4a56" text-anchor="start">H = 0,42 m</text>
       <text x="276" y="88" font-size="12" fill="#c0392b" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">max</tspan> = ?</text>
       <line x1="272" y1="102" x2="432" y2="102" stroke="#cbd9e7" stroke-width="1" />
-      <text x="276" y="125" font-size="11" fill="#3a4a56" text-anchor="start" font-weight="700">Naći:</text>
+      <text x="276" y="125" font-size="11" fill="#3a4a56" text-anchor="start" font-weight="700">Odredi:</text>
       <text x="276" y="143" font-size="11" fill="#3a4a56" text-anchor="start">najveće ubrzanje</text>
       <text x="276" y="165" font-size="10.5" fill="#3a4a56" text-anchor="start">Dno još ostaje pokriveno.</text>
       <text x="276" y="197" font-size="10.5" fill="#52606d" text-anchor="start">– –  početna razina h₀</text>

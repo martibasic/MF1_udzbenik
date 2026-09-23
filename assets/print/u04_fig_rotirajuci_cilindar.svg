@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 526" role="img" aria-labelledby="u04frc_title u04frc_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:860px;height:auto;">
-  <title id="u04frc_title">Rotirajuci cilindricni spremnik s paraboloidnom slobodnom povrsinom</title>
-  <desc id="u04frc_desc">Aksijalni presjek otvorenog cilindra polumjera R=0,35 m koji rotira kutnom brzinom omega=6,0 rad/s. Slobodna površina je paraboloid: u osi pada za Delta h/2 = 11,25 cm ispod pocetne razine h0=0,28 m, a uz stijenku se uzdize za Delta h/2 iznad nje. Ukupna razlika razina Delta h priblizno 22,5 cm. Desno: stog formula s Delta h, h_rub i h_osa te badge s rezultatima.</desc>
+  <title id="u04frc_title">Rotirajući cilindrični spremnik s paraboloidnom slobodnom površinom</title>
+  <desc id="u04frc_desc">Aksijalni presjek otvorenog cilindra polumjera R=0,35 m koji rotira kutnom brzinom omega=6,0 rad/s. Slobodna površina je paraboloid: u osi pada za Delta h/2 = 11,25 cm ispod početne razine h0=0,28 m, a uz stijenku se uzdiže za Delta h/2 iznad nje. Ukupna razlika razina Delta h približno 22,5 cm. Desno: pregled formula s Delta h, h_rub i h_osa te okvir s rezultatima.</desc>
   <defs>
     <linearGradient id="u04frc_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#aed6f1" />
@@ -109,13 +109,13 @@
     <tspan baseline-shift="sub" font-size="0.7em">rub</tspan> = h₀ + Δh/2</text>
   <text x="681" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#3a4a56" transform="translate(0 8)">= 0,28 + 0,11239</text>
   <text x="681" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0" transform="translate(0 13)">≈ 0,392 m</text>
-  <text x="681" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78" transform="translate(0 13)">Visina u osi (spustanje)</text>
+  <text x="681" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78" transform="translate(0 13)">Visina u osi (spuštanje)</text>
   <text x="681" y="317" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530" transform="translate(0 13)">
     <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">osa</tspan> = h₀ − Δh/2</text>
   <text x="681" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#3a4a56" transform="translate(0 13) translate(0 8)">= 0,28 − 0,11239</text>
   <text x="681" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0" transform="translate(0 26)">≈ 0,168 m</text>
-  <text x="681" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78" transform="translate(0 26)">Simetrija oko h₀: rub se uzdize koliko se osa spusta.</text>
+  <text x="681" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78" transform="translate(0 26)">Simetrija oko h₀: razina uz rub raste koliko u osi pada.</text>
   <text x="681" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78" transform="translate(0 26)">REZULTATI</text>
   <text x="605" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b" transform="translate(0 26)">Δh ≈ 22,5 cm</text>
   <text x="757" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449" transform="translate(0 26)">

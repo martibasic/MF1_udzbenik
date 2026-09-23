@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" role="img" aria-labelledby="u03btig_u03btg_title u03btig_u03btg_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
   <title id="u03btig_u03btg_title">Balans tlaka u spojenim posudama i efektivno polje sila</title>
-  <desc id="u03btig_u03btg_desc">Lijevo: statika spojenih U-posuda s istim fluidom, jednaka razina slobodne povrsine implicira jednake tlakove na istoj dubini (p u tocki A jednak p u tocki B). Desno: prijelaz prema poglavlju 4 - ubrzani zatvoreni spremnik s nagnutom slobodnom povrsinom okomitom na efektivno polje sila g_eff, koje je vektorski zbroj g i minus a.</desc>
+  <desc id="u03btig_u03btg_desc">Lijevo: statika spojenih U-posuda s istim fluidom, jednaka razina slobodne površine implicira jednake tlakove na istoj dubini (p u točki A jednak p u točki B). Desno: prijelaz prema poglavlju 4 - ubrzani zatvoreni spremnik s nagnutom slobodnom površinom okomitom na efektivno polje sila g_eff, koje je vektorski zbroj g i minus a.</desc>
   <defs>
     <linearGradient id="u03btig_u03btg_voda" x1="0" y1="200" x2="0" y2="390" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#aed6f1" />

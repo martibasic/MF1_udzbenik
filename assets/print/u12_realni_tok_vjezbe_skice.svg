@@ -224,7 +224,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <text x="359.0" y="79" font-size="13" fill="#1a2530" text-anchor="middle">fina</text>
 <text x="359.0" y="181" font-size="12" fill="#b7600c" text-anchor="middle">h/hf = 1</text>
 <text x="27" y="215" font-size="12" fill="#1a2530" text-anchor="start">Mrežne crte nisu krute stijenke.</text>
-<text x="27" y="236" font-size="11" fill="#1a2530" text-anchor="start">Shematsko pročišćenje istog područja.</text>
+<text x="27" y="236" font-size="11" fill="#1a2530" text-anchor="start">Profinjenje mreže u istom području.</text>
 <text x="27" y="267" font-size="12" fill="#1a2530" text-anchor="start">GCI ≤ 0,50 %; maseni debalans ≤ 0,0050 %.</text>
 </g>
 </g>

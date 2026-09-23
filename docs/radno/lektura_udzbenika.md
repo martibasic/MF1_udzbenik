@@ -30,11 +30,13 @@ generatorima. Jezični pregled i tehničke provjere evidentiraju se zasebno.
 | U11 | Proveden prvi prolaz | Bezdimenzijske skupine, slaganje, usporedbe, upućivanja i aktualni opseg kolegija |
 | U12 | Proveden prvi prolaz | Nazivi modela, uvjet prianjanja, granični sloj, mrežna konvergencija i opisi nesigurnosti |
 | U13 | Proveden prvi prolaz | Slaganje, bilanca pretvorbe energije, radna točka, opisi grana i upute za bilježnicu |
-| U14 | Predstoji | |
-| U15 | Predstoji | |
-| D01–D05 | Predstoji | |
-| D06 | Predstoji | Generiranje i pregled nakon lekture izvora |
-| Tekst u skicama i čitateljske upute | Predstoji | |
+| U14 | Proveden prvi prolaz | Relativni protok, sile, tok količine gibanja, dijakritici i slaganje |
+| U15 | Proveden prvi prolaz | Nazivi presjeka, rubovi kontrolnog volumena, kritičnost i upute za bilježnicu |
+| D01–D05 | Proveden prvi prolaz | Stručni nazivi, pretpostavke formula, pojmovnik i opisi CFD postupaka |
+| D06 | Obnovljen prema dosadašnjoj lekturi | Pregledana razlika; formule svih 90 kontrolnih odgovora očuvane |
+| Tekst u skicama | Proveden prvi prolaz kroz 94 korištene skice | Jezične izmjene u 46 SVG-ova; geometrija i brojčane oznake očuvane |
+| Markdown u bilježnicama | Proveden prvi prolaz kroz 17 bilježnica | Izmjene u 11 bilježnica; programske ćelije i formule očuvane |
+| Ostale čitateljske upute i programski natpisi bilježnica | U tijeku | Predstoji dovršetak pregleda i zajedničko ujednačavanje |
 
 ## Završne provjere
 
@@ -79,6 +81,28 @@ izvršit će GitHub Actions nakon pusha.
 
 Ovaj međukommit obuhvaća prvi prolaz U04–U13. U14–U15, dodatci,
 tekst u skicama i završni zajednički pregled još predstoje.
+
+### Provjere prije međukommita U14–U15, dodataka i natpisa
+
+Na zahtjev za commit i push obnovljeni su D06 i manifest svih 90 zadataka.
+Prošli su numerički verifieri (1.113 usporedbi s neovisnim ciljevima,
+219 invarijanti i 22 dodatne fizikalne provjere), audit publikacije i Typsta,
+provjere javnog teksta, QR poveznica, ključa i CFD podataka. Svih 17
+bilježnica uspješno je izvršeno u čistim kernelima.
+
+Sačuvano je svih 5.306 matematičkih izraza i eksplicitnih identifikatora
+kanonskih izvora u odnosu na polazište. U odnosu na prethodni commit
+sačuvane su formule ključa D06, uključujući svih 90 kontrolnih odgovora,
+te programske ćelije i formule svih bilježnica. U 46 izmijenjenih SVG-ova
+sačuvani su elementi, atributi, geometrija i brojčane oznake. Provjera
+tekstualnih okvira u pregledniku prije i nakon izmjena nije pronašla
+međusobna preklapanja natpisa ni izlazak teksta iz okvira skice.
+
+Ovo je međukommit prvog prolaza kroz U14–U15, D01–D05, tekst svih
+94 korištenih skica i Markdown svih 17 bilježnica. Završni zajednički
+jezični pregled, preostale čitateljske upute i pregled obnovljenih izdanja
+još predstoje. Izgradnju HTML-a i PDF-a te provjere objave pokreće
+GitHub Actions nakon pusha; prethodni render nije dokaz za ove izmjene.
 
 ## Zajedničke odluke za završni prolaz
 

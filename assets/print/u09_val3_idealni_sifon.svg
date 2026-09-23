@@ -77,7 +77,7 @@
 <text x="582" y="288" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">3. Apsolutna tlačna visina</text>
 <text x="582" y="311" font-size="12" fill="#1a2530" text-anchor="start">pC,abs/(ρg) = 10,2 − 5,8 = 4,4 m</text>
 <text x="582" y="330" font-size="12" fill="#1a2530" text-anchor="start">pC,abs = 43,2 kPa</text>
-<text x="582" y="349" font-size="12" fill="#1a2530" text-anchor="start">Razlika prema tlaku pare: 4,15 m</text>
+<text x="582" y="349" font-size="12" fill="#1a2530" text-anchor="start">Rezerva tlačne visine: 4,15 m</text>
 <text x="585" y="394" font-size="11" fill="#1a2530" text-anchor="start">Pozitivna razlika vrijedi u idealnom modelu.</text>
 <text x="585" y="413" font-size="11" fill="#1a2530" text-anchor="start">Gubitci i prolazne pojave traže zasebnu provjeru.</text>
 <text x="585" y="453" font-size="12" fill="#1565c0" text-anchor="start">B je otvoreni izlaz, s nezanemarivom brzinom.</text>

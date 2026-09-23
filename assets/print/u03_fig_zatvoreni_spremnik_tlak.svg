@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" role="img" aria-labelledby="u03fzst_title u03fzst_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
-  <title id="u03fzst_title">Tlak u prikljucku zatvorenog vodenog spremnika</title>
-  <desc id="u03fzst_desc">Zatvoreni vodeni spremnik s plinskim prostorom pretlaka p-G,m = 18 kPa iznad mirne razine vode i prikljuckom A na dubini h = 1,4 m. Lijevi panel: geometrija spremnika s kotom dubine, oznakom plinskog pretlaka i tlackom kaskadom prema dolje. Desni panel: tri koraka rjesenja - apsolutni tlak plinskog prostora p-G = 118,8 kPa, apsolutni tlak u tocki A = 132,5 kPa, manometarski tlak u A = 31,7 kPa.</desc>
+  <title id="u03fzst_title">Tlak u priključku zatvorenog vodenog spremnika</title>
+  <desc id="u03fzst_desc">Zatvoreni vodeni spremnik s plinskim prostorom pretlaka p-G,m = 18 kPa iznad mirne razine vode i priključkom A na dubini h = 1,4 m. Lijevi panel: geometrija spremnika s kotom dubine, oznakom plinskog pretlaka i tlačnom kaskadom prema dolje. Desni panel: tri koraka rješenja - apsolutni tlak plinskog prostora p-G = 118,8 kPa, apsolutni tlak u točki A = 132,5 kPa, manometarski tlak u A = 31,7 kPa.</desc>
   <defs>
     <linearGradient id="u03fzst_voda" x1="0" y1="170" x2="0" y2="406" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#aed6f1" />

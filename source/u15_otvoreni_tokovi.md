@@ -14,7 +14,7 @@ Otvoreni tokovi pojavljuju se u odvodnim kanalima, preljevima brana, navodnjavan
 
 ## Geometrija presjeka i hidraulička dubina {#sec-geometrija-kanala}
 
-Za presjek protoka definiraju se površina $A$, širina slobodne površine $T$, omočen opseg $P$ i hidraulički polumjer
+Za poprečni presjek toka definiraju se površina $A$, širina slobodne površine $T$, omočen opseg $P$ i hidraulički polumjer
 
 $$
 R_h=\frac{A}{P}.
@@ -42,7 +42,7 @@ U jednodimenzijskom modelu plitke vode, uz približno hidrostatičku raspodjelu 
 
 - $Fr<1$: **mirni** ili podkritični tok; gravitacijski poremećaj može putovati i uzvodno i nizvodno.
 - $Fr=1$: **kritični** tok; uzvodno širenje vala upravo je zaustavljeno.
-- $Fr>1$: **siloviti** ili nadkritični tok; oba karakteristična vala odnosi tok nizvodno.
+- $Fr>1$: **siloviti** ili nadkritični tok; tok odnosi oba karakteristična vala nizvodno.
 
 Ova je interpretacija preciznija od tvrdnje da je $Fr$ sam po sebi omjer sila: $Fr$ je omjer brzine toka i karakteristične brzine gravitacijskog vala, dok je $Fr^2$ omjer inercijske i gravitacijske skale.
 
@@ -76,7 +76,7 @@ $$
 E=y+\frac{v^2}{2g}.
 $$ {#eq-otvoreni-tokovi-specificna-energija-i-kriticna-dubina-sec-specif-01}
 
-Za pravokutni kanal pri zadanom protoku po širini $q=vy$:
+Za pravokutni kanal pri zadanom protoku po jedinici širine $q=vy$:
 
 $$
 E(y)=y+\frac{q^2}{2gy^2}.
@@ -128,7 +128,7 @@ $$
 \frac{dy}{dx}=\frac{S_0-S_f}{1-Fr^2},
 $$ {#eq-postupno-promjenjivi-tok}
 
-gdje je $S_0$ nagib dna, a $S_f$ nagib energijske linije zbog trenja. Nazivnik pokazuje zašto se kritična dubina ponaša kao kontrolni presjek: pri $Fr\to1$ mala razlika nagiba može proizvesti veliku promjenu dubine, a jednostavna diferencijalna procjena postaje osjetljiva.
+gdje je $S_0$ nagib dna, a $S_f$ nagib energijske linije zbog trenja. Nazivnik pokazuje zašto presjek s kritičnom dubinom može određivati režim toka: pri $Fr\to1$ mala razlika nagiba može proizvesti veliku promjenu dubine, a jednostavna diferencijalna procjena postaje osjetljiva.
 
 ::: {#ex-dvije-dubine .mf1-we}
 <p class="mf1-box-label">P3. Dvije dubine za istu energiju <span class="mf1-level">T2</span></p>
@@ -146,7 +146,7 @@ Numerički se dobivaju $y_1\approx1{,}106\ \text{m}$ i $y_2\approx0{,}372\ \text
 
 ## Hidraulički skok: energija se gubi, količina gibanja zatvara prijelaz {#sec-hidraulicki-skok}
 
-Hidraulički skok brz je prijelaz iz silovitog u mirni tok. Raspodjela tlaka dovoljno daleko prije i poslije skoka približno je hidrostatička, ali unutar skoka tok je snažno trodimenzijski i disipativan. Zato se između rubnih presjeka koristi bilanca količine gibanja, a ne Bernoulli bez gubitaka.
+Hidraulički skok brz je prijelaz iz silovitog u mirni tok. Raspodjela tlaka dovoljno daleko prije i poslije skoka približno je hidrostatička, ali unutar skoka tok je snažno trodimenzijski i disipativan. Zato se između rubnih presjeka koristi bilanca količine gibanja, a ne Bernoullijeva jednadžba bez gubitaka.
 
 Za pravokutni kanal po jedinici širine specifična funkcija količine gibanja jest
 
@@ -154,7 +154,7 @@ $$
 M(y)=\frac{y^2}{2}+\frac{q^2}{gy}.
 $$ {#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01}
 
-Za kratak kontrolni volumen u približno vodoravnom pravokutnom kanalu zanemaruju se trenje o dno i stijenke te uzdužna komponenta težine. Hidrostatičke tlačne sile na ulaznom i izlaznom presjeku zadržavaju se; upravo one daju član $y^2/2$. Uz korekcijski faktor toka količine gibanja $\beta\approx1$ slijedi $M(y_1)=M(y_2)$. Eliminacija $q$ daje omjer spregnutih dubina
+Za kratak kontrolni volumen u približno vodoravnom pravokutnom kanalu zanemaruju se trenje o dno i stijenke te uzdužna komponenta težine. Hidrostatičke tlačne sile na ulaznom i izlaznom presjeku zadržavaju se; upravo one daju član $y^2/2$. Uz korekcijski faktor toka količine gibanja $\beta\approx1$ slijedi $M(y_1)=M(y_2)$. Preuređivanjem uz izražavanje $q$ preko uzvodnoga Froudeova broja dobiva se omjer spregnutih dubina
 
 $$
 \boxed{
@@ -193,7 +193,7 @@ U posljednjem računu zadržava se puna preciznost dubine $y_2=1{,}235326\ldots\
 
 ## Uniformni tok i Manningova jednadžba {#sec-uniformni-tok}
 
-U dugom prizmatičnom kanalu može se uspostaviti približno uniformni tok u kojem su dubina i srednja brzina stalne, a nagib energijske linije jednak nagibu dna. U SI sustavu često se koristi empirijska Manningova relacija
+U dugom prizmatičnom kanalu može se uspostaviti približno uniformni tok u kojem su dubina i srednja brzina stalne, a nagib energijske linije jednak nagibu dna. U sustavu SI često se koristi empirijska Manningova relacija
 
 $$
 Q=\frac{1}{n}A R_h^{2/3}S_f^{1/2}.
@@ -202,9 +202,9 @@ $$ {#eq-manning}
 U ovom SI zapisu Manningov koeficijent $n$ ima jedinicu $\text{s}/\text{m}^{1/3}$; nije bezdimenzijski. Nije ni svojstvo fluida: on sažima hrapavost, oblik, vegetaciju, nepravilnost i stanje kanala te mora imati izvor i područje valjanosti [@chow1959]. U primjerima i zadatcima vrijednosti $n$ zadane su u toj jedinici. Jednadžba nije zamjena za lokalnu bilancu pri brzom suženju, preljevu ili hidrauličkom skoku.
 
 ::: {#ex-manning-osjetljivost .mf1-we}
-<p class="mf1-box-label">P5. Osjetljivost klimatskog kanala na održavanje <span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">P5. Osjetljivost propusnosti odvodnog kanala na održavanje <span class="mf1-level">T3</span></p>
 
-Pravokutni kanal ima $b=3{,}0\ \text{m}$, $y=1{,}0\ \text{m}$ i $S_f=0{,}001$. Površina je $A=3{,}0\ \text{m}^2$, omočen opseg $P=5{,}0\ \text{m}$ i $R_h=0{,}60\ \text{m}$. Za čist kanal $n=0{,}015$:
+Pravokutni kanal ima $b=3{,}0\ \text{m}$, $y=1{,}0\ \text{m}$ i $S_f=0{,}001$. Površina je $A=3{,}0\ \text{m}^2$, omočen opseg $P=5{,}0\ \text{m}$ i $R_h=0{,}60\ \text{m}$. Za čisti kanal $n=0{,}015$:
 
 $$
 Q=\frac{1}{0{,}015}(3)(0{,}60)^{2/3}(0{,}001)^{1/2}=4{,}50\ \text{m}^3/\text{s}.
@@ -224,7 +224,7 @@ Ako vegetacija i nanos povećaju $n$ na $0{,}025$, ista geometrija i nagib daju 
 ::: {.mf1-samoprovjera}
 <p class="mf1-box-label">Provjeri sebe</p>
 
-1. Zašto se nizvodni vodostaj može prenijeti uzvodno samo pri $Fr<1$?
+1. Zašto se utjecaj promjene nizvodnog vodostaja može prenijeti uzvodno samo pri $Fr<1$?
 2. Zašto kritična dubina minimizira specifičnu energiju pri zadanom $q$?
 3. Zašto hidraulički skok ne smijemo zatvoriti Bernoullijevom jednadžbom bez gubitaka?
 4. Je li Manningov $n$ univerzalno svojstvo betona?
@@ -238,9 +238,9 @@ Brzina uzvodnog gravitacijskog vala tada nadmašuje srednju brzinu toka. U minim
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički trag — slobodna površina i hidraulički skok</p>
 
-Jednadžbe plitke vode diskretiziraju očuvanje mase i količine gibanja kada je vertikalna struktura toka sekundarna. Za složenu trodimenzijsku geometriju, izraženu zakrivljenost slobodne površine ili miješanje zraka uvodi se višefazni CFD, uz provjeru volumne bilance, konvergencije mreže i osjetljivosti na vremenski korak.
+Numerički modeli plitke vode diskretiziraju jednadžbe očuvanja mase i količine gibanja kada je vertikalna struktura toka sekundarna. Za složenu trodimenzijsku geometriju, izraženu zakrivljenost slobodne površine ili miješanje zraka uvodi se višefazni CFD, uz provjeru volumne bilance, konvergencije mreže i osjetljivosti na vremenski korak.
 
-Za proračun kanala prate se vodostaj, protok, Froudeov broj i energijska ili količinska bilanca na istim presjecima kao u ručnom modelu. U području hidrauličkoga skoka skok se mora očuvati preko diskretnoga prijelaza, dok se pad energije tumači kao fizikalna disipacija, a ne samo kao brojčana pogreška.
+Za proračun kanala prate se vodostaj, protok, Froudeov broj i bilanca energije ili količine gibanja na istim presjecima kao u ručnom modelu. Diskretni prikaz hidrauličkoga skoka mora zadovoljiti bilance mase i količine gibanja. Pad mehaničke energije uključuje fizikalnu disipaciju, pa ga treba razlikovati od dodatnog utjecaja numeričke disipacije.
 
 Višefazni model dodatno traži provjeru očuvanja vode i zraka te osjetljivosti položaja slobodne površine na vremenski korak. Izgled uvjerljive površine nije dovoljan ako se mijenja volumni debalans ili maksimalna dubina koja je projektna izlazna veličina.
 :::
@@ -277,7 +277,7 @@ $v\approx1{,}333\ \mathrm{m/s}$, $Fr\approx0{,}550$, $c\approx2{,}426\ \mathrm{m
 
 ### Z2. Kritična dubina i minimalna energija {#task-kriticna-dubina .unnumbered .unlisted}
 
-U pravokutnom kanalu protok po jedinici širine je $q=3{,}0\ \mathrm{m^2/s}$. Za hidrostatički model i korekcijski faktor kinetičke energije jednak jedan odredi kritičnu dubinu i minimalnu specifičnu energiju.
+U pravokutnom kanalu protok po jedinici širine je $q=3{,}0\ \mathrm{m^2/s}$. Za hidrostatički model i korekcijski faktor kinetičke energije jednak jedinici odredi kritičnu dubinu i minimalnu specifičnu energiju.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -299,7 +299,7 @@ $y_c\approx0{,}972\ \mathrm{m}$ i $E_{min}\approx1{,}46\ \mathrm{m}$; u kritičn
 
 ### Z3. Geometrija i tok trapeznog kanala {#task-trapezni-presjek .unnumbered .unlisted}
 
-U trapeznom kanalu razlikuj površinu toka, slobodnu širinu i omočen opseg. Iz geometrije odredi obje hidrauličke duljine, a zatim klasificiraj tok. Obrazloži koja duljina ulazi u brzinu gravitacijskog vala i zašto je ne smiješ zamijeniti duljinom za otpor strujanju.
+U trapeznom kanalu razlikuj površinu poprečnog presjeka toka, širinu slobodne površine i omočen opseg. Iz geometrije odredi obje hidrauličke duljine, a zatim klasificiraj tok. Obrazloži koja duljina ulazi u brzinu gravitacijskog vala i zašto je ne smiješ zamijeniti duljinom za otpor strujanju.
 
 Simetrični trapezni kanal ima širinu dna $b=2{,}40\ \mathrm{m}$, pokos $z=1{,}50$ vodoravno na jedan okomito, dubinu $y=0{,}900\ \mathrm{m}$ i protok $Q=3{,}60\ \mathrm{m^3/s}$. Izračunaj $A$, $T$, $P$, $D_h$, $R_h$, srednju brzinu i $Fr$. Tok je jednodimenzijski s približno hidrostatičkim tlakom. Slobodna površina nije dio omočenog opsega.
 
@@ -329,7 +329,7 @@ Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Provjeri može l
 
 Pravokutni kanal stalne širine vodi $q=2{,}20\ \mathrm{m^2/s}$ pri podkritičnoj uzvodnoj dubini $y_1=1{,}200\ \mathrm{m}$. Dno na tjemenu je više za $\Delta z=0{,}120\ \mathrm{m}$. Zanemari gubitke; tlak je približno hidrostatički, a $\alpha=1$. Nizvodni uvjet dopušta glatki podkritični nastavak. Promatraj presjeke daleko od lokalne zakrivljenosti prijelaza.
 
-Odredi $y_c$, $E_{min}$ i najveće povišenje $\Delta z_{max}$ bez uzvodnog uspora. Za zadani prag odredi specifičnu energiju na tjemenu, oba pozitivna matematička korijena i fizički odaberi dubinu $y_t$ te njezin $Fr_t$. Za odabrani korijen zahtijevaj energijski rezidual manji od $\varepsilon_E=10^{-6}\ \mathrm{m}$. Objasni što mora promijeniti model ako prag nadvisi izračunatu granicu pri istom protoku.
+Odredi $y_c$, $E_{min}$ i najveće povišenje $\Delta z_{max}$ bez uzvodnog uspora. Za zadani prag odredi specifičnu energiju na tjemenu, oba pozitivna matematička korijena i prema fizikalnim uvjetima odaberi dubinu $y_t$ te njezin $Fr_t$. Za odabrani korijen zahtijevaj energijski rezidual manji od $\varepsilon_E=10^{-6}\ \mathrm{m}$. Objasni što se u modelu mora promijeniti ako prag nadvisi izračunatu granicu pri istom protoku.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -351,7 +351,7 @@ $y_c\approx0{,}790179\ \mathrm{m}$, $E_{min}\approx1{,}185268\ \mathrm{m}$ i $\D
 
 ### Z5. Provjera mjerenja hidrauličkog skoka {#task-skok-mjerenje .unnumbered .unlisted}
 
-Provjeri zatvara li sintetički mjerni skup bilancu količine gibanja kroz hidraulički skok. Odaberi kontrolni volumen izvan valjka, prikaži vanjske sile i usporedi rezidual s mjernom nesigurnošću. Zaključak ograniči na zadani model i kriterij slaganja mjerenja.
+Provjeri zatvara li sintetički mjerni skup bilancu količine gibanja kroz hidraulički skok. Odaberi kontrolni volumen s rubnim presjecima izvan valjka skoka, prikaži vanjske sile i usporedi rezidual s mjernom nesigurnošću. Zaključak ograniči na zadani model i kriterij slaganja mjerenja.
 
 Zadano je $Q=1{,}800\pm0{,}018\ \mathrm{m^3/s}$, $b=1{,}200\pm0{,}003\ \mathrm{m}$, $y_1=0{,}250\pm0{,}003\ \mathrm{m}$ i $y_2=1{,}220\pm0{,}008\ \mathrm{m}$; navedene su neovisne standardne nesigurnosti ($k=1$). Kanal je vodoravan i pravokutan. Na kratkom kontrolnom volumenu zanemari uzdužnu silu dna i stijenki, uz hidrostatički tlak u rubnim presjecima i $\beta_1=\beta_2=1$.
 
@@ -399,7 +399,7 @@ Na dopuštenoj dubini $H-f_{min}$ računaj kapacitet. Pri $Q_d$ numerički rije�
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6{,}047)$; $y_n=(0{,}985;1{,}189;1{,}380)$; $f=(0{,}515;0{,}311;0{,}120)$; $Q_c=(10{,}583;7{,}055;4{,}922)$. Samo A zadovoljava kriterij s $n_c$. Pri $Q_d$: $y_2=1{,}059$; pri kapacitetima: $y_2=(1{,}628;1{,}080;0{,}765)$. Kapacitet A prelazi zadanu granicu bazena. Kalibrirati hrapavost, geometriju, dotok i rubne vodostaje.
+Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6{,}047)$; $y_n=(0{,}985;1{,}189;1{,}380)$; $f=(0{,}515;0{,}311;0{,}120)$; $Q_c=(10{,}583;7{,}055;4{,}922)$. Samo A zadovoljava kriterij s $n_c$. Pri $Q_d$: $y_2=1{,}059$; pri kapacitetima: $y_2=(1{,}628;1{,}080;0{,}765)$. Kapacitet A prelazi zadanu granicu bazena. Kalibriraj hrapavost te provjeri geometriju, dotok i rubne vodostaje.
 :::
 ::::
 
@@ -410,7 +410,7 @@ Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički pokus — grane energije i hidraulički skok</p>
 
-Notebook `u15_otvoreni_tokovi.ipynb` zadržava pokus alternativnih dubina i nesigurnosti spregnute dubine. Nastavci provjeravaju prag iz Z4, zajednički protok u mjernoj bilanci Z5 i odluku o održavanju i bazenu iz Z6. Student najprije crta očekivani oblik $E(y)$, zatim numerički pronalazi korijene i provjerava bilancu energije prije i poslije skoka.
+Bilježnica `u15_otvoreni_tokovi.ipynb` zadržava pokus alternativnih dubina i nesigurnosti spregnute dubine. Nastavci provjeravaju prag iz Z4, zajednički protok u mjernoj bilanci Z5 i odluku o održavanju i bazenu iz Z6. Najprije nacrtaj očekivani oblik $E(y)$, zatim numerički pronađi korijene i provjeri bilancu energije prije i poslije skoka.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u15_otvoreni_tokovi.ipynb">Pokreni u pregledniku</a>
@@ -425,6 +425,6 @@ Notebook `u15_otvoreni_tokovi.ipynb` zadržava pokus alternativnih dubina i nesi
 - Slobodna površina uvodi gravitacijske valove i hidrauličku dubinu kao novu karakterističnu skalu.
 - $Fr$ određuje smjer prijenosa informacije; $Fr=1$ označuje kritični presjek u plitkovodnom modelu.
 - Pri zadanom protoku kritična dubina minimizira specifičnu energiju.
-- Hidraulički skok zatvara se količinom gibanja i pritom disipira energiju.
+- Hidraulički skok opisuje se bilancom količine gibanja, a pritom se disipira mehanička energija.
 - Empirijski koeficijent hrapavosti mora imati izvor, raspon i analizu osjetljivosti.
 :::

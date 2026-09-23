@@ -25977,8 +25977,8 @@
         "anchor": "#task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice"
       },
       "statement": {
-        "markdown": "Nepomična vodilica zakreće pravokutni mlaz u vodoravnoj ravnini. Odredi potpisane komponente sile fluida na vodilicu te suprotnu reakciju nosača i njezin iznos. Voda gustoće $\\rho=998\\ \\mathrm{kg/m^3}$ ulazi brzinom $v=26\\ \\mathrm{m/s}$ kroz presjek širine $b=30\\ \\mathrm{mm}$ u tlocrtu i visine $h=16\\ \\mathrm{mm}$ okomito na njega. Ulaz je u smjeru $+x$, a izlazni kut $\\beta=110^\\circ$ mjeri se od $+x$ prema $+y$. Iznos brzine ostaje jednak. Tlakovi slobodnog mlaza su atmosferski, tok stacionaran, a težina ne doprinosi horizontalnim komponentama.",
-        "sha256": "84d829721c7e238c3bdd9828dcc4cfa099c3038537b7be04af19689037369804",
+        "markdown": "Nepomična vodilica zakreće pravokutni mlaz u vodoravnoj ravnini. Odredi predznačene komponente sile fluida na vodilicu te suprotnu reakciju nosača i njezin iznos. Voda gustoće $\\rho=998\\ \\mathrm{kg/m^3}$ ulazi brzinom $v=26\\ \\mathrm{m/s}$ kroz presjek širine $b=30\\ \\mathrm{mm}$ u tlocrtu i visine $h=16\\ \\mathrm{mm}$ okomito na njega. Ulaz je u smjeru $+x$, a izlazni kut $\\beta=110^\\circ$ mjeri se od $+x$ prema $+y$. Iznos brzine ostaje jednak. Tlakovi slobodnog mlaza su atmosferski, tok stacionaran, a težina ne doprinosi horizontalnim komponentama.",
+        "sha256": "7165e7535fb03a66b1e19498e963bf3da70945cbf1cb89a4cbaa32074502cb67",
         "authoritative": true
       },
       "input_data": {
@@ -27036,8 +27036,8 @@
         "anchor": "#task-vodomlazni-pogon-uz-ogranicenu-snagu"
       },
       "statement": {
-        "markdown": "Usporedi dva nastavna kandidata vodomlaznog pogona za jednak potisak pri zadanoj brzini broda. Izaberi izvediv kandidat prema raspoloživoj električnoj snazi i objasni zašto veća izlazna brzina sama ne znači povoljniji pogon. Brod se jednoliko giba brzinom $U=8{,}0\\ \\mathrm{m/s}$ kroz mirujuću vodu gustoće $\\rho=1000\\ \\mathrm{kg/m^3}$. Potreban potisak je $T=2{,}00\\ \\mathrm{kN}$. U brodskom okviru voda ulazi brzinom $V_0=U$, a kandidati A i B izbacuju je unatrag brzinama $V_{j,A}=20{,}0\\ \\mathrm{m/s}$ i $V_{j,B}=30{,}0\\ \\mathrm{m/s}$. Svaki kandidat ima jednu kružnu izlaznu sapnicu. Zanemari razliku geodetskih visina, vanjske tlačne doprinose potisku, utjecaj traga trupa i gubitke u dovodu i sapnici. Referentne presjeke uzmi s jednakim atmosferskim tlakom. Tok je stacionaran u brodskom okviru, uz jednak ulazni i izlazni maseni protok. Za obje varijante zadana električna–hidraulička učinkovitost pogona jest $\\eta=0{,}80$, a dostupno je najviše $P_{el,max}=40{,}0\\ \\mathrm{kW}$. Odredi potreban $Q$, unutarnji promjer izlaza, snagu predanu fluidu $P_h$, električnu snagu i propulzijsku učinkovitost $\\eta_{prop}=TU/P_h$. Zatvori bilancu korisne snage i kinetičke energije daleke trake te obrazloži izbor. Ne poistovjećuj $\\eta_{prop}$ sa zadanom učinkovitošću pogona.",
-        "sha256": "b9ca7a5533677f6dd08da2b8e576c8831a47d58cf1beb54e11d5c6f9dc6619c3",
+        "markdown": "Usporedi dva nastavna kandidata vodomlaznog pogona za jednak potisak pri zadanoj brzini broda. Izaberi izvedivu varijantu prema raspoloživoj električnoj snazi i objasni zašto veća izlazna brzina sama ne znači povoljniji pogon. Brod se jednoliko giba brzinom $U=8{,}0\\ \\mathrm{m/s}$ kroz mirujuću vodu gustoće $\\rho=1000\\ \\mathrm{kg/m^3}$. Potreban potisak je $T=2{,}00\\ \\mathrm{kN}$. U brodskom okviru voda ulazi brzinom $V_0=U$, a kandidati A i B izbacuju je unatrag brzinama $V_{j,A}=20{,}0\\ \\mathrm{m/s}$ i $V_{j,B}=30{,}0\\ \\mathrm{m/s}$. Svaki kandidat ima jednu kružnu izlaznu sapnicu. Zanemari razliku geodetskih visina, vanjske tlačne doprinose potisku, utjecaj traga trupa i gubitke u dovodu i sapnici. Referentne presjeke uzmi s jednakim atmosferskim tlakom. Tok je stacionaran u brodskom okviru, uz jednak ulazni i izlazni maseni protok. Za obje varijante zadana učinkovitost pretvorbe električne u hidrauličku snagu pogona jest $\\eta=0{,}80$, a dostupno je najviše $P_{el,max}=40{,}0\\ \\mathrm{kW}$. Odredi potreban $Q$, unutarnji promjer izlaza, snagu predanu fluidu $P_h$, električnu snagu i propulzijsku učinkovitost $\\eta_{prop}=TU/P_h$. Zatvori bilancu korisne snage i kinetičke energije daleke trake te obrazloži izbor. Ne poistovjećuj $\\eta_{prop}$ sa zadanom učinkovitošću pogona.",
+        "sha256": "b59c0a173426882c57bd07617fb785a899e826197684f0cc001af6bc48882865",
         "authoritative": true
       },
       "input_data": {
@@ -27572,8 +27572,8 @@
         "anchor": "#task-u12-mlazna-platforma-ukupne-mase-ima-cetiri-jednake"
       },
       "statement": {
-        "markdown": "Procijeni potisak idealizirane mlazne platforme i najveću masu prema zadanom statičkom kriteriju. Odvojeno prikaži nazivni rezultat i najnepovoljniji slučaj dopuštenih ulaza te navedi granice takve procjene. Trenutačna ukupna masa platforme, uključujući zadržani fluid, jest $m=110\\ \\mathrm{kg}$. Četiri jednake sapnice unutarnjeg promjera $d=28\\ \\mathrm{mm}$ izbacuju vodu gustoće $\\rho=998\\ \\mathrm{kg/m^3}$ okomito dolje brzinom $v=36\\ \\mathrm{m/s}$ prema platformi. Vanjski dovodi su simetrični i vodoravni: njihov ulazni vertikalni impuls i ukupna vertikalna sila dovodne instalacije uzimaju se jednakima nuli. Izlazi su na atmosferskom tlaku. Primijeni kvazistacionarni model u trenutku kad platforma miruje, uz zanemarenu akumulaciju relativne količine gibanja u razdjelniku. Odredi ukupni potisak, najveću ukupnu masu lebdenja i trenutačno vertikalno ubrzanje pri zadanoj masi. Stvarni promjer svake sapnice može biti do $0{,}3\\ \\mathrm{mm}$ manji, a brzina do $1{,}5\\ \\mathrm{m/s}$ manja od nazivnih vrijednosti; to su zadane granice, ne standardne nesigurnosti. Za zahtjev najmanje $10\\ \\%$ rezerve potiska iznad težine odredi najveću masu koja zadovoljava cijeli interval ulaza. Objasni zašto rezultat nije certificirana nosivost niti opis kasnijeg ubrzanog gibanja.",
-        "sha256": "0d7ae75dfefe5250f239afc56350508341489a5fc54896bc3dfacb661b26db82",
+        "markdown": "Procijeni potisak idealizirane mlazne platforme i najveću masu prema zadanom statičkom kriteriju. Odvojeno prikaži nazivni rezultat i najnepovoljniji slučaj dopuštenih ulaza te navedi granice takve procjene. Trenutačna ukupna masa platforme, uključujući zadržani fluid, jest $m=110\\ \\mathrm{kg}$. Četiri jednake sapnice unutarnjeg promjera $d=28\\ \\mathrm{mm}$ izbacuju vodu gustoće $\\rho=998\\ \\mathrm{kg/m^3}$ okomito dolje brzinom $v=36\\ \\mathrm{m/s}$ prema platformi. Vanjski dovodi su simetrični i vodoravni: njihov ulazni vertikalni tok količine gibanja i ukupna vertikalna sila dovodne instalacije uzimaju se jednakima nuli. Izlazi su na atmosferskom tlaku. Primijeni kvazistacionarni model u trenutku kad platforma miruje, uz zanemarenu akumulaciju relativne količine gibanja u razdjelniku. Odredi ukupni potisak, najveću ukupnu masu lebdenja i trenutačno vertikalno ubrzanje pri zadanoj masi. Stvarni promjer svake sapnice može biti do $0{,}3\\ \\mathrm{mm}$ manji, a brzina do $1{,}5\\ \\mathrm{m/s}$ manja od nazivnih vrijednosti; to su zadane granice, ne standardne nesigurnosti. Za zahtjev najmanje $10\\ \\%$ rezerve potiska iznad težine odredi najveću masu koja zadovoljava cijeli interval ulaza. Objasni zašto rezultat nije certificirana nosivost niti opis kasnijeg ubrzanog gibanja.",
+        "sha256": "79c859ee2956662627455cf9bf8da984163134bad28de9e9fe63cdda23b1e8ad",
         "authoritative": true
       },
       "input_data": {
@@ -28124,8 +28124,8 @@
         "anchor": "#task-kriticna-dubina"
       },
       "statement": {
-        "markdown": "U pravokutnom kanalu protok po jedinici širine je $q=3{,}0\\ \\mathrm{m^2/s}$. Za hidrostatički model i korekcijski faktor kinetičke energije jednak jedan odredi kritičnu dubinu i minimalnu specifičnu energiju.",
-        "sha256": "e8c43633ffe33b2f89fb32e18ca85f4452177226f6ab47deda137b625fd23d2b",
+        "markdown": "U pravokutnom kanalu protok po jedinici širine je $q=3{,}0\\ \\mathrm{m^2/s}$. Za hidrostatički model i korekcijski faktor kinetičke energije jednak jedinici odredi kritičnu dubinu i minimalnu specifičnu energiju.",
+        "sha256": "aea69f2140295eddb6f26b8d7b5e42a02d2bb81384ab4efd5a093af8f9264512",
         "authoritative": true
       },
       "input_data": {
@@ -28262,8 +28262,8 @@
         "anchor": "#task-trapezni-presjek"
       },
       "statement": {
-        "markdown": "U trapeznom kanalu razlikuj površinu toka, slobodnu širinu i omočen opseg. Iz geometrije odredi obje hidrauličke duljine, a zatim klasificiraj tok. Obrazloži koja duljina ulazi u brzinu gravitacijskog vala i zašto je ne smiješ zamijeniti duljinom za otpor strujanju. Simetrični trapezni kanal ima širinu dna $b=2{,}40\\ \\mathrm{m}$, pokos $z=1{,}50$ vodoravno na jedan okomito, dubinu $y=0{,}900\\ \\mathrm{m}$ i protok $Q=3{,}60\\ \\mathrm{m^3/s}$. Izračunaj $A$, $T$, $P$, $D_h$, $R_h$, srednju brzinu i $Fr$. Tok je jednodimenzijski s približno hidrostatičkim tlakom. Slobodna površina nije dio omočenog opsega.",
-        "sha256": "4b9b6e584d2ce1f63fb68f48fe32a3bbd903b93fcd03e7c5aa6f5f29c6c3e5c8",
+        "markdown": "U trapeznom kanalu razlikuj površinu poprečnog presjeka toka, širinu slobodne površine i omočen opseg. Iz geometrije odredi obje hidrauličke duljine, a zatim klasificiraj tok. Obrazloži koja duljina ulazi u brzinu gravitacijskog vala i zašto je ne smiješ zamijeniti duljinom za otpor strujanju. Simetrični trapezni kanal ima širinu dna $b=2{,}40\\ \\mathrm{m}$, pokos $z=1{,}50$ vodoravno na jedan okomito, dubinu $y=0{,}900\\ \\mathrm{m}$ i protok $Q=3{,}60\\ \\mathrm{m^3/s}$. Izračunaj $A$, $T$, $P$, $D_h$, $R_h$, srednju brzinu i $Fr$. Tok je jednodimenzijski s približno hidrostatičkim tlakom. Slobodna površina nije dio omočenog opsega.",
+        "sha256": "c4b04672f6f684de7ca45adbbf9ef0ef9974153d4c3b109c71f1659080f79b5b",
         "authoritative": true
       },
       "input_data": {
@@ -28564,8 +28564,8 @@
         "anchor": "#task-kontrolni-presjek-na-pragu"
       },
       "statement": {
-        "markdown": "Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Provjeri može li voda prijeći preko širokog, blagog praga uz nepromijenjenu uzvodnu dubinu. Odredi graničnu visinu dna i odaberi ostvarivu dubinu na tjemenu prema neprekinutom nastavku uzvodnog režima. Pravokutni kanal stalne širine vodi $q=2{,}20\\ \\mathrm{m^2/s}$ pri podkritičnoj uzvodnoj dubini $y_1=1{,}200\\ \\mathrm{m}$. Dno na tjemenu je više za $\\Delta z=0{,}120\\ \\mathrm{m}$. Zanemari gubitke; tlak je približno hidrostatički, a $\\alpha=1$. Nizvodni uvjet dopušta glatki podkritični nastavak. Promatraj presjeke daleko od lokalne zakrivljenosti prijelaza. Odredi $y_c$, $E_{min}$ i najveće povišenje $\\Delta z_{max}$ bez uzvodnog uspora. Za zadani prag odredi specifičnu energiju na tjemenu, oba pozitivna matematička korijena i fizički odaberi dubinu $y_t$ te njezin $Fr_t$. Za odabrani korijen zahtijevaj energijski rezidual manji od $\\varepsilon_E=10^{-6}\\ \\mathrm{m}$. Objasni što mora promijeniti model ako prag nadvisi izračunatu granicu pri istom protoku.",
-        "sha256": "0a808791fe40e56dc45c6b3d721422ec7259b5ba654fa9356bbe049048bec3e1",
+        "markdown": "Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Provjeri može li voda prijeći preko širokog, blagog praga uz nepromijenjenu uzvodnu dubinu. Odredi graničnu visinu dna i odaberi ostvarivu dubinu na tjemenu prema neprekinutom nastavku uzvodnog režima. Pravokutni kanal stalne širine vodi $q=2{,}20\\ \\mathrm{m^2/s}$ pri podkritičnoj uzvodnoj dubini $y_1=1{,}200\\ \\mathrm{m}$. Dno na tjemenu je više za $\\Delta z=0{,}120\\ \\mathrm{m}$. Zanemari gubitke; tlak je približno hidrostatički, a $\\alpha=1$. Nizvodni uvjet dopušta glatki podkritični nastavak. Promatraj presjeke daleko od lokalne zakrivljenosti prijelaza. Odredi $y_c$, $E_{min}$ i najveće povišenje $\\Delta z_{max}$ bez uzvodnog uspora. Za zadani prag odredi specifičnu energiju na tjemenu, oba pozitivna matematička korijena i prema fizikalnim uvjetima odaberi dubinu $y_t$ te njezin $Fr_t$. Za odabrani korijen zahtijevaj energijski rezidual manji od $\\varepsilon_E=10^{-6}\\ \\mathrm{m}$. Objasni što se u modelu mora promijeniti ako prag nadvisi izračunatu granicu pri istom protoku.",
+        "sha256": "6e30ac10daf1ee16ff2634c4b7f83632854a02d702fe8b4cc642d558a7966590",
         "authoritative": true
       },
       "input_data": {
@@ -28899,8 +28899,8 @@
         "anchor": "#task-skok-mjerenje"
       },
       "statement": {
-        "markdown": "Provjeri zatvara li sintetički mjerni skup bilancu količine gibanja kroz hidraulički skok. Odaberi kontrolni volumen izvan valjka, prikaži vanjske sile i usporedi rezidual s mjernom nesigurnošću. Zaključak ograniči na zadani model i kriterij slaganja mjerenja. Zadano je $Q=1{,}800\\pm0{,}018\\ \\mathrm{m^3/s}$, $b=1{,}200\\pm0{,}003\\ \\mathrm{m}$, $y_1=0{,}250\\pm0{,}003\\ \\mathrm{m}$ i $y_2=1{,}220\\pm0{,}008\\ \\mathrm{m}$; navedene su neovisne standardne nesigurnosti ($k=1$). Kanal je vodoravan i pravokutan. Na kratkom kontrolnom volumenu zanemari uzdužnu silu dna i stijenki, uz hidrostatički tlak u rubnim presjecima i $\\beta_1=\\beta_2=1$. Izvedi rezidual $R=M_2-M_1$, linearno propagiraj nesigurnost svih četiriju mjerenja i primijeni kriterij $|R|\\le2u_R$. Oba presjeka koriste isti izračunati $q=Q/b$; njihove doprinose nesigurnosti ne smiješ tretirati kao dva neovisna protoka. Odredi i teorijsku spregnutu dubinu iz srednjih uzvodnih ulaza.",
-        "sha256": "44ad4a4ceaee85d197e5384943bf1fa40fcd55064d350f15ea9923aa2d083310",
+        "markdown": "Provjeri zatvara li sintetički mjerni skup bilancu količine gibanja kroz hidraulički skok. Odaberi kontrolni volumen s rubnim presjecima izvan valjka skoka, prikaži vanjske sile i usporedi rezidual s mjernom nesigurnošću. Zaključak ograniči na zadani model i kriterij slaganja mjerenja. Zadano je $Q=1{,}800\\pm0{,}018\\ \\mathrm{m^3/s}$, $b=1{,}200\\pm0{,}003\\ \\mathrm{m}$, $y_1=0{,}250\\pm0{,}003\\ \\mathrm{m}$ i $y_2=1{,}220\\pm0{,}008\\ \\mathrm{m}$; navedene su neovisne standardne nesigurnosti ($k=1$). Kanal je vodoravan i pravokutan. Na kratkom kontrolnom volumenu zanemari uzdužnu silu dna i stijenki, uz hidrostatički tlak u rubnim presjecima i $\\beta_1=\\beta_2=1$. Izvedi rezidual $R=M_2-M_1$, linearno propagiraj nesigurnost svih četiriju mjerenja i primijeni kriterij $|R|\\le2u_R$. Oba presjeka koriste isti izračunati $q=Q/b$; njihove doprinose nesigurnosti ne smiješ tretirati kao dva neovisna protoka. Odredi i teorijsku spregnutu dubinu iz srednjih uzvodnih ulaza.",
+        "sha256": "629e2a822e326945ea7391c4ce667b2bb433809ceb80104abdcbb1dd570c5ade",
         "authoritative": true
       },
       "input_data": {
@@ -29449,7 +29449,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6{,}047)$; $y_n=(0{,}985;1{,}189;1{,}380)$; $f=(0{,}515;0{,}311;0{,}120)$; $Q_c=(10{,}583;7{,}055;4{,}922)$. Samo A zadovoljava kriterij s $n_c$. Pri $Q_d$: $y_2=1{,}059$; pri kapacitetima: $y_2=(1{,}628;1{,}080;0{,}765)$. Kapacitet A prelazi zadanu granicu bazena. Kalibrirati hrapavost, geometriju, dotok i rubne vodostaje.",
+        "markdown": "Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6{,}047)$; $y_n=(0{,}985;1{,}189;1{,}380)$; $f=(0{,}515;0{,}311;0{,}120)$; $Q_c=(10{,}583;7{,}055;4{,}922)$. Samo A zadovoljava kriterij s $n_c$. Pri $Q_d$: $y_2=1{,}059$; pri kapacitetima: $y_2=(1{,}628;1{,}080;0{,}765)$. Kapacitet A prelazi zadanu granicu bazena. Kalibriraj hrapavost te provjeri geometriju, dotok i rubne vodostaje.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u15_otvoreni_tokovi.md",

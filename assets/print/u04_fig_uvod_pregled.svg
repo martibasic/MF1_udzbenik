@@ -133,7 +133,7 @@
   <text x="484" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#3a4a56" text-anchor="middle">Hidrostatika ostaje – mijenja se samo</text>
   <text x="484" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#3a4a56" text-anchor="middle">smjer i iznos efektivnog polja sila.</text>
   <text x="484" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#8b5e00" text-anchor="middle">GRANICE MODELA</text>
-  <text x="484" y="467" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a4a20" text-anchor="middle">prelijevanje površine · ogoljavanje dna</text>
+  <text x="484" y="467" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a4a20" text-anchor="middle">prelijevanje tekućine · ogoljavanje dna</text>
   <text x="790" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#8e44ad" text-anchor="middle">Centrifugalni separator</text>
   <text x="790" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a3a78" text-anchor="middle">paraboloidna slobodna površina pri rotaciji</text>
   <text x="794" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#8e44ad">os rotacije</text>

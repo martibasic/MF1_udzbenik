@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 520" role="img" aria-labelledby="u11v3_title u11v3_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-<title id="u11v3_title">Sila vode na sidreno koljeno</title><desc id="u11v3_desc">Tlocrt: tok dolazi iz pozitivnog smjera x i skreće prema pozitivnom y. Promjeri 180 i 120 milimetara nacrtani su u istom mjerilu. Tlak na izlazu djeluje prema unutra, suprotno izlaznoj brzini. Izdvojeni crveni dijagram prikazuje komponente sile fluida na koljeno, bez određivanja hvatišta.</desc>
+<title id="u11v3_title">Sila vode na sidreno koljeno</title><desc id="u11v3_desc">Tlocrt: ulazni tok ide u pozitivnom smjeru x i skreće prema pozitivnom y. Promjeri 180 i 120 milimetara nacrtani su u istom mjerilu. Tlak na izlazu djeluje prema unutra, suprotno izlaznoj brzini. Izdvojeni crveni dijagram prikazuje komponente sile fluida na koljeno, bez određivanja hvatišta.</desc>
 <defs>
 <linearGradient id="u11v3_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
 <linearGradient id="u11v3_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>

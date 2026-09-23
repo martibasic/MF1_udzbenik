@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u14p4_title u14p4_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-<title id="u14p4_title">Pokretna zakrivljena lopatica</title><desc id="u14p4_desc">Povezani mlaz ulazi kroz otvorenu sapnicu i prati samo prednju vanjsku plohu zakrivljene vodilice. Relativni izlaz čini 30 stupnjeva iznad negativne osi x. Kota d okomita je na ulaz. Oba trokuta brzina zatvaraju c=u+w; na izlazu apsolutna x komponenta iznosi minus 2,471 m/s. Smjerovi sile odnose se na fluid na lopaticu.</desc>
+<title id="u14p4_title">Pokretna zakrivljena lopatica</title><desc id="u14p4_desc">Povezani mlaz ulazi kroz otvorenu sapnicu i prati samo prednju vanjsku plohu zakrivljene vodilice. Relativni izlaz čini 30 stupnjeva iznad negativne osi x. Kota d okomita je na ulaz. Oba trokuta brzina zatvaraju c=u+w; na izlazu apsolutna x komponenta iznosi minus 2,471 m/s. Smjerovi sila odnose se na djelovanje fluida na lopaticu.</desc>
 <defs>
 <linearGradient id="u14p4_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
 <linearGradient id="u14p4_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>

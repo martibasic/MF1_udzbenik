@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-labelledby="u14fpb_title u14fpb_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u14fpb_title">U14 - Buckinghamov Pi postupak na primjeru otpora kugle</title>
+  <title id="u14fpb_title">Buckinghamov Pi postupak na primjeru otpora kugle</title>
   <desc id="u14fpb_desc">Popis varijabli F_D, rho, v, D, mu i njihova dimenzijska matrica u M-L-T. Pet varijabli i tri neovisne dimenzije daju dvije bezdimenzijske grupe: Pi_1 = F/(rho v^2 D^2) i Pi_2 = rho v D / mu = Re. Time se otpor svodi na C_d = f(Re).</desc>
   <defs>
     <marker id="u14fpb_aDn" markerWidth="8" markerHeight="7" refX="4" refY="6.5" orient="auto">

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="u11v1_title u11v1_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
-<title id="u11v1_title">Mirni mlaz na ravnu ploču</title><desc id="u11v1_desc">Slobodan mlaz udara u nepropusnu mirnu ploču i radijalno se razlijeva po prednjoj strani. Aksijalna izlazna brzina je nula. Crveno je sila fluida na ploču, zeleno su brzine. Debljina sloja uz ploču je shematska.</desc>
+<title id="u11v1_title">Mlaz na nepomičnu ravnu ploču</title><desc id="u11v1_desc">Slobodan mlaz udara u nepropusnu mirnu ploču i radijalno se razlijeva po prednjoj strani. Aksijalna izlazna brzina je nula. Crveno je sila fluida na ploču, zeleno su brzine. Debljina sloja uz ploču je shematska.</desc>
 <defs>
 <linearGradient id="u11v1_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
 <linearGradient id="u11v1_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>

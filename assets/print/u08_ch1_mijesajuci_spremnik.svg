@@ -76,7 +76,7 @@
   <line x1="682" y1="412" x2="966" y2="412" stroke="#c8d6e4" stroke-width="1" />
   <rect x="672" y="446" width="304" height="46" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
   <text x="824" y="36" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1565c0">Ključne jednadžbe (KV)</text>
-  <text x="824" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Izlazni volumni protok</text>
+  <text x="824" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Izlazni volumenski protok</text>
   <text x="824" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">Q<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = A<tspan baseline-shift="sub" font-size="0.7em">3</tspan> · v<tspan baseline-shift="sub" font-size="0.7em">3</tspan> = (π D<tspan baseline-shift="sub" font-size="0.7em">3</tspan>² / 4) · v<tspan baseline-shift="sub" font-size="0.7em">3</tspan>
   </text>
   <text x="824" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#0e6e63">≈ 14,1 L/s</text>

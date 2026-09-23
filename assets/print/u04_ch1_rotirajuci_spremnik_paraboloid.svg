@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 520" role="img" aria-labelledby="u04c1rsp_title u04c1rsp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u04c1rsp_title">Rotirajuci cilindricni spremnik s paraboloidnom slobodnom povrsinom</title>
-  <desc id="u04c1rsp_desc">Aksijalni presjek otvorenog cilindricnog spremnika polumjera R=0,40 m i visine H=0,78 m. Pri kutnoj brzini omega=5,20 rad/s slobodna povrsina vode postaje paraboloid revolucije: na osi dubina h_C=0,490 m, uz stijenku h_R=0,710 m, razlika Delta h=0,221 m. Tlakovi na dnu: p_M,C=4,80 kPa u tocki C, p_M,D=6,97 kPa u tocki D. Granica prelijevanja: omega_max=6,64 rad/s odnosno n_max=63,4 okr/min.</desc>
+  <title id="u04c1rsp_title">Rotirajući cilindrični spremnik s paraboloidnom slobodnom površinom</title>
+  <desc id="u04c1rsp_desc">Aksijalni presjek otvorenog cilindričnog spremnika polumjera R=0,40 m i visine H=0,78 m. Pri kutnoj brzini omega=5,20 rad/s slobodna površina vode postaje paraboloid revolucije: na osi dubina h_C=0,490 m, uz stijenku h_R=0,710 m, razlika Delta h=0,221 m. Tlakovi na dnu: p_M,C=4,80 kPa u točki C, p_M,D=6,97 kPa u točki D. Granica prelijevanja: omega_max=6,64 rad/s odnosno n_max=63,4 okr/min.</desc>
   <defs>
     <linearGradient id="u04c1rsp_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#aed6f1" />
@@ -89,10 +89,10 @@
   </text>
   <text x="375" y="209" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#e67e22">Δh</text>
   <text x="375" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#e67e22">≈ 0,221 m</text>
-  <text x="84" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">radni rezim (ω = 5,20 rad/s)</text>
+  <text x="84" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">radni režim (ω = 5,20 rad/s)</text>
   <text x="314" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">granica prelijevanja (ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan>)</text>
-  <text x="714" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#8e44ad">Paraboloidna slobodna povrsina − kljucne jednadzbe</text>
-  <text x="528" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Oblik slobodne povrsine</text>
+  <text x="714" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#8e44ad">Paraboloidna slobodna površina − ključne jednadžbe</text>
+  <text x="528" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Oblik slobodne površine</text>
   <text x="714" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
     <tspan font-style="italic">h</tspan>(<tspan font-style="italic">r</tspan>) = <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">C</tspan> + ω²<tspan font-style="italic">r</tspan>² / (2<tspan font-style="italic">g</tspan>)</text>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="u14ball_title u14ball_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-<title id="u14ball_title">Otpor kugle i jasno zadana korelacija</title><desc id="u14ball_desc">Kugla promjera dvadeset milimetara u zraku trideset metara u sekundi. Sila otpora usmjerena je kao dolazni tok. Desni logaritamski graf prikazuje korelaciju notebooka do Reynoldsova broja dvjesto tisuća i zaseban zadani koeficijent 0,45 pri četrdeset tisuća.</desc>
+<title id="u14ball_title">Otpor kugle i jasno zadana korelacija</title><desc id="u14ball_desc">Kugla promjera dvadeset milimetara u zraku trideset metara u sekundi. Sila otpora usmjerena je kao dolazni tok. Desni logaritamski graf prikazuje korelaciju iz bilježnice do Reynoldsova broja dvjesto tisuća i zaseban zadani koeficijent 0,45 pri četrdeset tisuća.</desc>
 <defs>
 <linearGradient id="u14ball_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
 <linearGradient id="u14ball_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
@@ -71,7 +71,7 @@ Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatišt
 <circle id="u14ball_givenpoint" cx="785.8946691804924" cy="291.34843577808203" r="4" fill="#c0392b" stroke="#c0392b" stroke-width="1.5"/>
 <line x1="785.8946691804924" y1="299.34843577808203" x2="756.8946691804924" y2="331.34843577808203" stroke="#c0392b" stroke-width="1"/>
 <text x="750.8946691804924" y="346.34843577808203" font-size="12" fill="#c0392b" text-anchor="middle">zadano 0,45</text>
-<text x="711" y="424" font-size="12" fill="#1565c0" text-anchor="middle">Plavo: korelacija iz notebooka (Re ≤ 2 · 10⁵)</text>
+<text x="711" y="424" font-size="12" fill="#1565c0" text-anchor="middle">Plavo: korelacija iz bilježnice (Re ≤ 2 · 10⁵)</text>
 <text x="711" y="447" font-size="12" fill="#c0392b" text-anchor="middle">Crveno: zaseban ulazni podatak P5.</text>
 <text x="711" y="470" font-size="11" fill="#3a4a56" text-anchor="middle">Kriza otpora nije modelirana ovom krivuljom.</text>
 </g>

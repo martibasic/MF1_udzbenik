@@ -8,7 +8,7 @@ Za opći prvi kolegij, hidrostatiku, kontrolne volumene, Bernoullijevu jednadžb
 
 ## Kompresibilni, viskozni i turbulentni tok
 
-Kompresibilni idealni tok, sapnice i udarni valovi u U09 slijede standardni prikaz Andersona [@anderson2021]. Granični sloj i odvajanje u U12 mogu se produbiti prema Schlichtingu i Gerstenu [@schlichting2017], a turbulencija prema Popeu [@pope2000].
+Kompresibilni idealni tok, sapnice i udarni valovi u poglavlju 9 slijede standardni prikaz Andersona [@anderson2021]. Granični sloj i odvajanje u poglavlju 12 mogu se produbiti prema Schlichtingu i Gerstenu [@schlichting2017], a turbulencija prema Popeu [@pope2000].
 
 ## Cjevovodi i otvoreni tokovi
 
@@ -16,11 +16,11 @@ Moodyjev dijagram potječe iz rada [@moody1944], a implicitna veza za turbulentn
 
 ## Brodogradnja, stabilitet i modelska ispitivanja
 
-Početna metacentrična analiza u U06 jest obrazovni model, a nije zamjena za obveznu provjeru intaktnog ili oštećenog stabiliteta. Za kriterije intaktnog stabiliteta mjerodavan je IMO-ov IS Code [@imo-is-code-2008], a za aktualni okvir oštećenog stabiliteta i SOLAS zahtjeve IMO-ova dokumentacija [@imo-damage-stability]. Postupke modelskih ispitivanja, analize nesigurnosti i ekstrapolacije treba vezati uz odgovarajući aktualni ITTC postupak [@ittc].
+Početna metacentrična analiza u poglavlju 6 jest obrazovni model, a nije zamjena za obveznu provjeru intaktnog ili oštećenog stabiliteta. Za kriterije intaktnog stabiliteta mjerodavan je IMO-ov IS Code [@imo-is-code-2008], a za aktualni okvir oštećenog stabiliteta i SOLAS zahtjeve IMO-ova dokumentacija [@imo-damage-stability]. Postupke modelskih ispitivanja, analize nesigurnosti i ekstrapolacije treba vezati uz odgovarajući aktualni ITTC postupak [@ittc].
 
 ## Numerička mehanika fluida
 
-U D04 pojmovi verifikacije i validacije slijede NASA-in vodič [@nasa-cfd-vv] i ASME V&V 20 [@asme-vv20-2009]. Profilni nastavni skup povezuje Ladsonov eksperiment [@ladson1988] s kuriranim NASA TMR slučajem [@nasa-tmr-naca0012]. Postotno slaganje bez procjene eksperimentalne, iteracijske, diskretizacijske i modelske nesigurnosti nije opći kriterij valjanosti.
+U dodatku D pojmovi verifikacije i validacije slijede NASA-in vodič [@nasa-cfd-vv] i ASME V&V 20 [@asme-vv20-2009]. Profilni nastavni skup povezuje Ladsonov eksperiment [@ladson1988] s referentnim NASA TMR slučajem [@nasa-tmr-naca0012]. Postotno slaganje bez procjene eksperimentalne, iteracijske, diskretizacijske i modelske nesigurnosti nije opći kriterij valjanosti.
 
 ::: {.mf1-mini-summary}
 <p class="mf1-box-label">Pravilo korištenja izvora</p>

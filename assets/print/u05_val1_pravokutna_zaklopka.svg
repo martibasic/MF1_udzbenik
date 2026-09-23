@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" role="img" aria-labelledby="u05v1pz_title u05v1pz_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
-  <title id="u05v1pz_title">Vertikalna pravokutna zaklopka ispod slobodne povrsine</title>
-  <desc id="u05v1pz_desc">Lijevo: bocni presjek spremnika s vodom, vertikalna pravokutna zaklopka sirine b=2,0 m i visine h=3,0 m s gornjim rubom na dubini h1=2,0 m. Linearno rastuca tlacna raspodjela na zaklopki, tezisce plohe C na dubini h_C=3,5 m, centar tlaka CP na dubini h_CP=3,71 m i rezultantna sila F=205,6 kN. Desno: formule i numericki rezultati.</desc>
+  <title id="u05v1pz_title">Vertikalna pravokutna zaklopka ispod slobodne površine</title>
+  <desc id="u05v1pz_desc">Lijevo: bočni presjek spremnika s vodom, vertikalna pravokutna zaklopka širine b=2,0 m i visine h=3,0 m s gornjim rubom na dubini h1=2,0 m. Linearno rastuća tlačna raspodjela na zaklopki, težište plohe C na dubini h_C=3,5 m, centar tlaka CP na dubini h_CP=3,71 m i rezultantna sila F=205,6 kN. Desno: formule i numerički rezultati.</desc>
   <defs>
     <linearGradient id="u05v1pz_voda" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#aed6f1" />

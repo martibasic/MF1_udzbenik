@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="u06v1ck_title u06v1ck_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u06v1ck_title">Potopljena cetvrtina kruga AB - rastav hidrostatske sile</title>
+  <title id="u06v1ck_title">Potopljena četvrtina kruga AB - rastav hidrostatske sile</title>
   <desc id="u06v1ck_desc">Četvrtcilindrična ploha s pravim kružnim lukom oko O. Voda je lijevo i ispod luka, a sile vode na plohu su desno i gore. Pomoćni volumen V1+V2 na suhoj strani omeđen je isprekidanim linijama. xV se mjeri ulijevo od okomice kroz O; FH djeluje na dubini 3,091 m.</desc>
   <defs>
     <linearGradient id="u06v1ck_voda" x1="0" y1="0" x2="0" y2="1">
@@ -63,7 +63,7 @@
   <line x1="580" y1="296" x2="860" y2="296" stroke="#c8d6e4" stroke-width="1" />
   <line x1="580" y1="400" x2="860" y2="400" stroke="#c8d6e4" stroke-width="1" />
   <rect x="560" y="446" width="320" height="50" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-  <text x="720" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Kljucne jednadzbe rastava sile</text>
+  <text x="720" y="72" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Ključne jednadžbe rastava sile</text>
   <text x="720" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Horizontalna komponenta</text>
   <text x="720" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
     <tspan font-style="italic">F</tspan>

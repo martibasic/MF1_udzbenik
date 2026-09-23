@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="u03v1dm_title u03v1dm_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
-  <title id="u03v1dm_title">Diferencijalni manometar izmedu vodova sa slatkom i morskom vodom</title>
+  <title id="u03v1dm_title">Diferencijalni manometar između vodova sa slatkom i morskom vodom</title>
   <desc id="u03v1dm_desc">Jedan živin U-manometar, zračni most i silazni krak morske vode. Hod p1 prema p2 silazi 0,60 m kroz vodu, penje se 0,10 m kroz živu i neto 0,70 m kroz zrak, pa silazi 0,40 m kroz morsku vodu. Presjek cijevi je ujednačen; nema pregrada na spojevima.</desc>
   <defs>
     <linearGradient id="u03v1dm_voda" x1="0" y1="220" x2="0" y2="340" gradientUnits="userSpaceOnUse">
@@ -56,7 +56,7 @@
   <line x1="600" y1="388" x2="928" y2="388" stroke="#c8d6e4" stroke-width="1" />
   <rect x="600" y="438" width="328" height="38" rx="8" fill="white" stroke="#c0392b" stroke-width="1" stroke-opacity="0.55" />
   <text x="764" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">Putanja tlaka p₁ → p₂</text>
-  <text x="764" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">GUSTOČE FLUIDA</text>
+  <text x="764" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">GUSTOĆE FLUIDA</text>
   <text x="604" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">ρ<tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 1000 kg/m³</text>
   <text x="780" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">ρ<tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 1035 kg/m³</text>
   <text x="604" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530" transform="translate(0 8)">ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> = 13 600 kg/m³</text>

@@ -96,15 +96,15 @@
   <line x1="510" y1="174" x2="946" y2="174" stroke="#c8d6e4" stroke-width="1" />
   <rect x="490" y="228" width="476" height="204" rx="10" fill="#fdf6ec" stroke="#e0c490" stroke-width="1.4" />
   <rect x="490" y="228" width="476" height="26" rx="10" fill="white" stroke="none" />
-  <text x="728" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Kljucne jednadzbe poglavlja</text>
+  <text x="728" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Ključne jednadžbe poglavlja</text>
   <text x="728" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Arhimedov zakon — sila uzgona</text>
   <text x="728" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#1a2530">
     <tspan font-style="italic">F</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">U</tspan> = ρ g V<tspan baseline-shift="sub" font-size="0.7em">ist</tspan>
   </text>
-  <text x="728" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Plivanje — vertikalna ravnoteza i gaz</text>
+  <text x="728" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Plivanje — vertikalna ravnoteža i gaz</text>
   <text x="728" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#1a2530">ρ g V<tspan baseline-shift="sub" font-size="0.7em">ist</tspan> = G = mg   →   V<tspan baseline-shift="sub" font-size="0.7em">ist</tspan> = m / ρ</text>
-  <text x="728" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#5a6a78">Tezina, istisnuti volumen i momentni raspored sila razdvajaju se kao tri stvari.</text>
+  <text x="728" y="195" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#5a6a78">Težina, istisnuti volumen i momentni raspored sila razdvajaju se kao tri stvari.</text>
   <g id="u07fup_fix_submerged">
     <rect x="48" y="100" width="414" height="310" fill="url(#u07fup_fix_water)" stroke="none" stroke-width="1.2" />
     <line x1="48" y1="100" x2="462" y2="100" stroke="#1565c0" stroke-width="2" />

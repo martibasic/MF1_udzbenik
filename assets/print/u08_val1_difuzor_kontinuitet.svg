@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 475" role="img" aria-labelledby="u08v1dk_title u08v1dk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
   <title id="u08v1dk_title">Difuzor i kontinuitet</title>
-  <desc id="u08v1dk_desc">Difuzor s ulaznim promjerom D1 = 120 mm i izlaznim promjerom D2 = 180 mm. Voda ulazi brzinom v1 = 36 m/s, izlazi brzinom v2 = 16 m/s. Kontrolni volumen obuhvaca cijeli difuzor. Desno: izvod kontinuiteta A1 v1 = A2 v2, volumenski protok Q i maseni protok.</desc>
+  <desc id="u08v1dk_desc">Difuzor s ulaznim promjerom D1 = 120 mm i izlaznim promjerom D2 = 180 mm. Voda ulazi brzinom v1 = 36 m/s, izlazi brzinom v2 = 16 m/s. Kontrolni volumen obuhvaća cijeli difuzor. Desno: izvod kontinuiteta A1 v1 = A2 v2, volumenski protok Q i maseni protok.</desc>
 
   <defs>
     <linearGradient id="u08v1dk_voda" x1="0" y1="0" x2="0" y2="1">
