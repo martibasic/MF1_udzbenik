@@ -112,7 +112,7 @@ Kratke napomene uz jednadžbe objašnjavaju tu vezu na primjerima. Završni osvr
 
 ## Pascalov zakon
 
-Pascalov zakon navodi da se promjena tlaka nametnuta zatvorenom fluidu u mirovanju prenosi neumanjena na sve dijelove fluida i na stijenke spremnika. Pri primjeni na sustav s dva klipa pretpostavljaju se kvazistatičko stanje, približno jednake visine klipova te zanemarivi gubici i stlačivost. Ako klipovi nisu na istoj visini, u analizu se uključuje hidrostatska razlika tlaka. U navedenim uvjetima vrijedi
+Pascalov zakon navodi da se promjena tlaka nametnuta zatvorenom fluidu u mirovanju prenosi neumanjena na sve dijelove fluida i na stijenke spremnika. Pri primjeni na sustav s dva klipa pretpostavljaju se kvazistatičko stanje, približno jednake visine klipova te zanemarivi gubitci i stlačivost. Ako klipovi nisu na istoj visini, u analizu se uključuje hidrostatska razlika tlaka. U navedenim uvjetima vrijedi
 
 $$
 \Delta p = \frac{F_1}{A_1} = \frac{F_2}{A_2}
@@ -276,7 +276,7 @@ Računalo usklađuje tlakove i brzine tako da se ta bilanca zadovolji u cijelom 
 2. manometarski tlak u ulju neposredno ispod klipa.
 3. silu na radnom klipu površine $A_2$.
 
-![opterećeni klip i tlak u zatvorenom cilindru](../assets/print/u01_val1_klip_manometar.svg){#fig-u01-optereceni-klip-i-tlak-u-zatvorenom-cilindru fig-alt="opterećeni klip i tlak u zatvorenom cilindru"}
+![Opterećeni klip i tlak u zatvorenom cilindru](../assets/print/u01_val1_klip_manometar.svg){#fig-u01-optereceni-klip-i-tlak-u-zatvorenom-cilindru fig-alt="Opterećeni klip i tlak u zatvorenom cilindru"}
 
 **Pretpostavke i model**
 
@@ -333,7 +333,7 @@ Veća ukupna sila na istom klipu daje veći tlak u ulju. Pri istome tlaku veća 
 
 Osnovni račun zanemaruje gubitke i stlačivost ulja. Vanjske strane klipova su na atmosferskom tlaku, a hidrostatske razlike tlaka zanemarive.
 
-![servisna hidraulična dizalica](../assets/print/u01_val2_hidraulicna_dizalica.svg){#fig-u01-servisna-hidraulicna-dizalica fig-alt="servisna hidraulična dizalica"}
+![Servisna hidraulična dizalica](../assets/print/u01_val2_hidraulicna_dizalica.svg){#fig-u01-servisna-hidraulicna-dizalica fig-alt="Servisna hidraulična dizalica"}
 
 **Pretpostavke i model**
 
@@ -416,7 +416,7 @@ Gubici, hidrostatske razlike i stlačivost ulja zanemaruju se. Oba radna cilindr
 3. ukupni zbroj hodova pumpnog klipa potreban da se platforma podigne za $s_L$.
 4. najmanji broj punih tlačnih hodova za podizaj od barem zadane visine te zadnji djelomični hod za točno zadanu visinu.
 
-![dvostruka hidraulična platforma s ručnom pumpom](../assets/print/u01_ch1_dvostruka_platforma_manometar.svg){#fig-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom fig-alt="dvostruka hidraulična platforma s ručnom pumpom"}
+![Dvostruka hidraulična platforma s ručnom pumpom](../assets/print/u01_ch1_dvostruka_platforma_manometar.svg){#fig-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom fig-alt="Dvostruka hidraulična platforma s ručnom pumpom"}
 
 **Pretpostavke i model**
 

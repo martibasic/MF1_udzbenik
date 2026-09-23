@@ -263,7 +263,7 @@ Uz izvod treba jasno navesti i pretpostavke modela. U <span class="mf1-ch-ref"><
 
 - strujanje je stacionarno
 - fluid se može uzeti nestlačivim
-- viskozni gubici su zanemarivi
+- viskozni gubitci su zanemarivi
 - između promatranih točaka nema strojnog rada ni druge vanjske mehaničke dobave energije
 - dvije točke leže na istoj strujnici ili na aproksimaciji gdje je takva primjena dopuštena
 
@@ -361,7 +361,7 @@ U suženju se kinetički i tlačni član razmjenjuju unutar voda. Kod slobodnog 
 1. Izračunaj domet mlaza za sva tri zadana položaja otvora.
 2. Odredi položaj otvora koji daje najveći domet.
 
-![domet slobodnog mlaza](../assets/print/u09_val2_slobodni_mlaz.svg){#fig-u09-domet-slobodnog-mlaza fig-alt="domet slobodnog mlaza"}
+![Domet slobodnog mlaza](../assets/print/u09_val2_slobodni_mlaz.svg){#fig-u09-domet-slobodnog-mlaza fig-alt="Domet slobodnog mlaza"}
 
 **Pretpostavke i model**
 
@@ -771,7 +771,7 @@ Postavljanjem Bernoullija između slobodne površine velikog spremnika (brzina n
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Gornja granica. Stvarna brzina je manja jer u idealnom modelu nisu uračunati gubici trenja, lokalne disipacije na ulazu u sapnicu i mogući viskozni profil brzina. Pri računanju protoka primjenjuje se koeficijent istjecanja $C_d < 1$, koji obuhvaća i smanjenje brzine i kontrakciju mlaza. Zato taj koeficijent ne treba automatski tumačiti kao omjer stvarne i idealne brzine.
+Gornja granica. Stvarna brzina je manja jer u idealnom modelu nisu uračunati gubitci trenja, lokalne disipacije na ulazu u sapnicu i mogući viskozni profil brzina. Pri računanju protoka primjenjuje se koeficijent istjecanja $C_d < 1$, koji obuhvaća i smanjenje brzine i kontrakciju mlaza. Zato taj koeficijent ne treba automatski tumačiti kao omjer stvarne i idealne brzine.
 :::
 :::
 

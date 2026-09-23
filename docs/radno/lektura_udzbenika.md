@@ -1,7 +1,8 @@
 # Lektura udžbenika
 
 Zahtjev: „Sada kreni na lekturu udžbenika.” Polazište: `521c0ad`,
-23. rujna 2026. Rad je u tijeku.
+23. rujna 2026. Lektura je dovršena; završne dorade i obnovljena izdanja
+spremljeni su lokalno.
 
 Lektura obuhvaća javni tekst početne stranice, U00–U15, dodatke D01–D06,
 opise i tekst korištenih skica te pripadajuće upute čitatelju. Provjeravaju se
@@ -33,15 +34,16 @@ generatorima. Jezični pregled i tehničke provjere evidentiraju se zasebno.
 | U14 | Proveden prvi prolaz | Relativni protok, sile, tok količine gibanja, dijakritici i slaganje |
 | U15 | Proveden prvi prolaz | Nazivi presjeka, rubovi kontrolnog volumena, kritičnost i upute za bilježnicu |
 | D01–D05 | Proveden prvi prolaz | Stručni nazivi, pretpostavke formula, pojmovnik i opisi CFD postupaka |
-| D06 | Obnovljen prema dosadašnjoj lekturi | Pregledana razlika; formule svih 90 kontrolnih odgovora očuvane |
+| D06 | Obnovljen i pregledan | Formule svih 90 kontrolnih odgovora očuvane; provjeren prikaz sažetaka i odgovora |
 | Tekst u skicama | Proveden prvi prolaz kroz 94 korištene skice | Jezične izmjene u 46 SVG-ova; geometrija i brojčane oznake očuvane |
 | Markdown u bilježnicama | Proveden prvi prolaz kroz 17 bilježnica | Izmjene u 11 bilježnica; programske ćelije i formule očuvane |
-| Ostale čitateljske upute i programski natpisi bilježnica | U tijeku | Predstoji dovršetak pregleda i zajedničko ujednačavanje |
+| Ostale čitateljske upute i programski natpisi bilježnica | Pregledano | Omotači, navigacija, ispis, QR opisi, upute za bilježnice i četiri opisa CFD paketa; ispravljeni natpisi u šest bilježnica |
 
 ## Završne provjere
 
-Predstoje usporedba matematičkih izraza i identifikatora s polazištem,
-provjere generatora, numerike i strukture te pregled obnovljenog HTML-a i PDF-a.
+Provedene su usporedbe s polazištem, provjere generatora, numerike i
+strukture te pregled obnovljenog HTML-a i PDF-a. Međuprovjere ispod slijede
+redoslijed rada; završni rezultat naveden je na kraju evidencije.
 
 Međuprovjera nakon U03: svih 5.306 matematičkih izraza i eksplicitni stabilni
 identifikatori kanonskih izvora ostali su jednaki polazištu (generirani D06
@@ -165,3 +167,105 @@ i stručnom nazivlju [Tehničke enciklopedije — mehanika fluida](https://tehni
 
 Međuprovjera nakon U13: svih 5.306 matematičkih izraza i eksplicitni stabilni
 identifikatori kanonskih izvora i dalje su jednaki polazištu.
+
+- U14: razlikuju se relativni protok kroz pomični kontrolni volumen i
+  protok cijelog mlaza kroz rotor. Sile i momenti imaju predznak, a tok
+  količine gibanja razlikuje se od impulsa sile. Nisu mijenjane jednadžbe.
+- U15: rubni presjeci kontrolnog volumena hidrauličkog skoka nalaze se
+  izvan valjka; sam kontrolni volumen obuhvaća skok. Kalibracija hrapavosti
+  odvojena je od provjere geometrije, dotoka i rubnih vodostaja.
+- D04: razjašnjeni su tlak bez hidrostatičkog doprinosa, vanjske granice
+  mreže, MRF i klizajuća mreža te razlika sila i njihovih koeficijenata.
+  Centar uzgona vezan je uz istisnuti volumen tijela. Dokumentacijska podloga:
+  [OpenFOAM — p_rgh](https://doc.openfoam.com/2212/tools/processing/solvers/algorithm-p-rgh/),
+  [granice mreže](https://www.openfoam.com/documentation/user-guide/4-mesh-generation-and-conversion/4.2-boundaries)
+  i [forceCoeffs](https://doc.openfoam.com/2306/tools/post-processing/function-objects/forces/forceCoeffs/).
+
+## Zajednički jezični pregled i obnova izdanja
+
+Pregledani su preostali čitateljski tekstovi u Quarto omotačima, navigaciji,
+HTML alatnoj traci, opisima QR kodova, bibliografskim bilješkama, uputama za
+bilježnice i četiri README opisa CFD paketa. Pregled obuhvaća i tekst u
+sirovim HTML blokovima te jezične oznake unutar matematičkih izraza.
+Ujednačeni su nazivi, obraćanje čitatelju i početna slova 24 opisa slika;
+usklađen je i pripadajući alternativni tekst. Zastarjele upute za generiranje
+bilježnica zamijenjene su postupkom koji čuva aktualne izvore.
+
+Prikaz naslova „Zadatci za vježbu” i „Zadatci za samostalan rad” ujednačen
+je postojećim uredničkim filtrom. Izvorni naslovi zadržavaju oblik „Zadaci”
+da njihove automatski izvedene oznake i postojeće poveznice ostanu iste.
+Oba su oblika pravopisno dopuštena; riječ je o dosljednosti javnog prikaza.
+
+Vidljivi natpisi u 17 bilježnica pregledani su zasebno od Markdown teksta.
+Devet programskih ćelija u šest bilježnica ima izmjene isključivo tekstualnih
+literala (nazivi, padeži i zapis jedinica); usporedba sintaksnih stabala s
+polazištem potvrđuje očuvanje računskih izraza. U kanonskom rukopisu
+sačuvano je svih 5.306 matematičkih izraza i eksplicitnih identifikatora.
+Razlike brojčanih oznaka izvan matematike odnose se samo na nazive i
+upućivanja na poglavlja te preciziranje postojećih oznaka izlaznih grana 2 i 3.
+
+Vizualno su pregledani izmijenjeni natpisi svih 31 SVG-a s razlikom u
+prikazanim pikselima. U ostalih 15 mijenjan je samo pristupačni naslov ili
+opis; prikaz je jednak prethodnom. Mjerenje tekstualnih okvira svih 46
+izmijenjenih skica nije pronašlo međusobna preklapanja natpisa ni izlazak
+iz okvira slike. Geometrija i brojčane oznake ostale su sačuvane.
+
+Pri usporedbi obnovljenog HTML-a vraćene su dvije stare automatske oznake
+naslova (tlačni skok u U02 i korak rješavača u D04). Sada su eksplicitne;
+inačice iz međukommita ostale su kao dodatna odredišta istih naslova.
+Stara i nova poveznica tako vode na isti sadržaj. Urednički filtar dopunjen
+je za numerirana zaglavlja, uz očuvanje njihovih oznaka i brojeva.
+
+Vizualni pregled otkrio je nečitljivo uske stupce CFD pojmovnika na mobitelu.
+Za tu tablicu dodana je minimalna širina samo na uskim zaslonima; postojeća
+regija omogućuje vodoravno pomicanje. PDF i prikaz na širokom zaslonu time
+se ne mijenjaju.
+
+PDF profil sada izričito uključuje isti urednički filtar kao HTML. Time se
+ujednačen oblik naslova zadataka prikazuje i u PDF-u i u njegovu sadržaju.
+Vizualni uzorak obuhvatio je 38 stranica PDF-a: naslovnicu, sadržaj, uvod,
+početke svih 15 poglavlja, zahtjevnije odlomke U14–U15, tablice formula i
+pojmovnika, dodatke C–E te ključ odgovora. Pri tome je naziv uz izraz
+relativne brzine u tablici D04 ispravljen iz „Moment količine gibanja” u
+„Relativna brzina”; formula ostaje ista.
+
+Commit `fc241d0` uspješno je izgrađen i objavljen u
+[GitHub Actions](https://github.com/martibasic/MF1_udzbenik/actions/runs/35842824195).
+To je potvrda prethodnog međukommita; kasnije završne dorade provjeravaju
+se lokalno i nisu uključene u taj rezultat.
+
+Cjelovita lokalna izgradnja pokrenuta je naredbom `scripts/izgradi.ps1`.
+Nakon navedenih nalaza obnovljeni su izlazi i ponovljene relevantne provjere.
+Raniji pregledi prikaza namjerno su prekinuti jer nisu obuhvaćali završne
+ispravke; njihov nepotpun rezultat ne računa se kao prolaz.
+
+## Završni rezultat — 23. rujna 2026.
+
+Lektura javnog rukopisa, opisa i natpisa korištenih skica, bilježnica i
+pripadajućih uputa je dovršena. Prvi prolaz po cjelinama dopunjen je
+zajedničkim pregledom nazivlja, obraćanja, početnih slova, uputa i prikaza.
+
+| Provjera | Rezultat |
+| --- | --- |
+| Numerika i pokrivenost | 19 modula; 1.113 usporedbi s neovisnim ciljevima, 219 invarijanti i 22 dodatne fizikalne provjere; 90/90 ugovora, bez rupa i tautologija |
+| Struktura i resursi | 15 poglavlja, 87 riješenih primjera, 90 zadataka, šest dodataka, 795 prikazanih jednadžbi, 94 skice i 17 bilježnica; audit prolazi |
+| Očuvanje sadržaja | 5.306 matematičkih izraza, formule 90 kontrolnih odgovora, stari identifikatori, računska sintaksna stabla bilježnica te SVG geometrija i brojčane oznake sačuvani |
+| Generirani sadržaj | Ključ, manifest i QR kodovi aktualni; javne reference, alternativni tekst, Typst blokovi i CFD podatkovni paketi prolaze provjere |
+| Bilježnice | Svih 17 uspješno izvršeno u čistim kernelima |
+| HTML | 24 stranice, 222 prikaza slika, 2.091 poveznica i 450 sklopivih blokova; audit prolazi; sačuvana odredišta naslova i ujednačeni naslovi zadataka |
+| Pristupačnost i širine | 72 prikaza na 320/768/1.440 px, A4 ispis, tipkovnica, lokalno pomicanje tablica, povećavanje skica i JupyterLite Python `Idle`: prolaz |
+| PDF | 321 A4 stranica; audit metapodataka, sadržaja i slika prolazi; nijedan tekstualni blok nije izvan stranice; vizualno pregledano 38 odabranih stranica |
+| Završna ispravka D04 | Obnovljeni D04, pregled za ispis i PDF; ponovljeni audit PDF-a, resursa JupyterLitea, HTML-a i očuvanja sadržaja; provjeren naziv relativne brzine i prikaz D04 na 320 i 1.440 px |
+| Datoteke | `git diff --check` prolazi; PDF u `_book/` i njegova kopija u `_site/downloads/` imaju jednak SHA-256 |
+
+Nakon posljednje ispravke u vizualnom uzorku promijenila se samo stranica
+295; ponovno je pregledana. Ostalih 37 rastera ostalo je jednako.
+JupyterLite datoteke pri posljednjoj ciljanoj obnovi nisu ponovno građene;
+njihov je inventar ponovno provjeren, a uspješno pokretanje kernela potvrđeno
+je prethodnim cjelovitim pregledom istih bilježnica.
+
+Završni PDF: `_book/mehanika-fluida-1.pdf`.
+SHA-256: `295fc447a5728124112d8b64d0c902df34a66d5bccdadf98bf7ca148c7b73b2f`.
+Radni logovi i rasteri nalaze se u ignoriranoj mapi `tools/tmp/lektura/`.
+Jezični pregled nije zamjena za zasebnu vanjsku stručnu recenziju modela
+i nastavnu evaluaciju udžbenika.

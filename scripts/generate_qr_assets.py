@@ -51,7 +51,7 @@ ASSETS = {
     ),
     "u09_kompresibilna_sapnica_jlite.svg": (
         "u09_kompresibilna_sapnica.ipynb",
-        "QR kod za numericki pokus kompresibilne sapnice u JupyterLiteu",
+        "QR kod za numerički pokus kompresibilne sapnice u JupyterLiteu",
     ),
     "u09_venturi.svg": (
         "u09_venturi.ipynb",
@@ -83,7 +83,7 @@ ASSETS = {
     ),
     "u15_otvoreni_tokovi_jlite.svg": (
         "u15_otvoreni_tokovi.ipynb",
-        "QR kod za numericki pokus otvorenih tokova u JupyterLiteu",
+        "QR kod za numerički pokus otvorenih tokova u JupyterLiteu",
     ),
 }
 

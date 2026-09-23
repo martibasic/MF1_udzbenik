@@ -362,7 +362,7 @@ Međurezultati u prikazu zaokruženi su radi čitljivosti. Završne sile, moment
 2. Odredi horizontalne komponente sile koju fluid vrši na vodilicu.
 3. Odredi iznos i smjer reakcije koju mora preuzeti nosač vodilice.
 
-![vodilica mlaza na ispitnom stolu](../assets/print/u12_val1_vodilica_mlaza.svg){#fig-u12-vodilica-mlaza-na-ispitnom-stolu fig-alt="vodilica mlaza na ispitnom stolu"}
+![Vodilica mlaza na ispitnom stolu](../assets/print/u12_val1_vodilica_mlaza.svg){#fig-u12-vodilica-mlaza-na-ispitnom-stolu fig-alt="Vodilica mlaza na ispitnom stolu"}
 
 **Pretpostavke i model**
 
@@ -497,7 +497,7 @@ odnosno oko $63{,}6\%$ punog sapničkog protoka.
 - Promjer sapnice: $d = 40\ \text{mm}$
 - Apsolutna brzina mlaza: $c_1 = 24\ \text{m/s}$
 - Brzina lopatice (u istom smjeru kao mlaz): $u = 9\ \text{m/s}$
-- Lopatica zahvaća cijeli mlaz; nakon udara voda u apsolutnom sustavu napušta lopaticu s vodoravnom brzinom jednakom $u$; gubici zanemarivi.
+- Lopatica zahvaća cijeli mlaz; nakon udara voda u apsolutnom sustavu napušta lopaticu s vodoravnom brzinom jednakom $u$; gubitci zanemarivi.
 
 **Traženo**
 
@@ -505,7 +505,7 @@ odnosno oko $63{,}6\%$ punog sapničkog protoka.
 2. silu mlaza na lopaticu.
 3. snagu koju mlaz predaje lopatici.
 
-![pokretna ravna lopatica](../assets/print/u12_val3_pokretna_lopatica.svg){#fig-u12-pokretna-ravna-lopatica fig-alt="pokretna ravna lopatica"}
+![Pokretna ravna lopatica](../assets/print/u12_val3_pokretna_lopatica.svg){#fig-u12-pokretna-ravna-lopatica fig-alt="Pokretna ravna lopatica"}
 
 **Pretpostavke i model**
 
@@ -567,7 +567,7 @@ Pretpostavi da lopatica zahvaća cijeli mlaz, da je tok stacionaran u pokretnom 
 3. komponente i iznos sile mlaza na lopaticu.
 4. snagu koju mlaz predaje lopatici.
 
-![pokretna zakrivljena lopatica](../assets/print/u12_ch1_pokretna_zakrivljena_lopatica.svg){#fig-u12-pokretna-zakrivljena-lopatica fig-alt="pokretna zakrivljena lopatica"}
+![Pokretna zakrivljena lopatica](../assets/print/u12_ch1_pokretna_zakrivljena_lopatica.svg){#fig-u12-pokretna-zakrivljena-lopatica fig-alt="Pokretna zakrivljena lopatica"}
 
 **Pretpostavke i model**
 
@@ -1028,7 +1028,7 @@ Peltonovo kolo, vodomlazni pogon i mlazna ispitna glava rade dobro samo ako je i
 
 **Granica modela**
 
-Maksimalna sila nije isto što i maksimalna snaga, a idealizirana promjena vektora brzine nije dovoljna ako su važni gubici u lopatici, neujednačen profil brzine ili složenija geometrija mlaza. U stvarnom stroju izbor kuta i brzine uvijek treba čitati zajedno s učinkovitošću, a ne samo sa silom.
+Maksimalna sila nije isto što i maksimalna snaga, a idealizirana promjena vektora brzine nije dovoljna ako su važni gubitci u lopatici, neujednačen profil brzine ili složenija geometrija mlaza. U stvarnom stroju izbor kuta i brzine uvijek treba čitati zajedno s učinkovitošću, a ne samo sa silom.
 
 <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 14</span><span class="mf1-ch-title">Turbostrojevi i propulzija</span></span> počinje kontrolnim volumenom, ne turbinom. Jasno čitanje promjene količine gibanja na mirnoj vodilici daje stabilnu osnovu i za reakcije nosača i za kasnije pokretne lopatice.
 :::

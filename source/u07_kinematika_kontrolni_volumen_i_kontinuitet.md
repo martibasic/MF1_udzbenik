@@ -343,7 +343,7 @@ Lokalno zatvaranje ćelija omogućuje otkrivanje izvora pogreške, ali ne jamči
 2. volumenski protok $Q$.
 3. maseni protok $\dot{m}$.
 
-![difuzor i kontinuitet](../assets/print/u08_val1_difuzor_kontinuitet.svg){#fig-u08-difuzor-i-kontinuitet fig-alt="difuzor i kontinuitet"}
+![Difuzor i kontinuitet](../assets/print/u08_val1_difuzor_kontinuitet.svg){#fig-u08-difuzor-i-kontinuitet fig-alt="Difuzor i kontinuitet"}
 
 **Pretpostavke i model**
 
@@ -412,7 +412,7 @@ U prethodnom primjeru difuzora ulazni i izlazni protok bili su jednaki. U spremn
 2. vrijeme potrebno da razina poraste od $h_0$ do $h_1$.
 3. kolika se masa vode akumulira u spremniku do tog trenutka.
 
-![izjednačni spremnik s akumulacijom](../assets/print/u08_val3_izjednacni_spremnik.svg){#fig-u08-izjednacni-spremnik-s-akumulacijom fig-alt="izjednačni spremnik s akumulacijom"}
+![Izjednačni spremnik s akumulacijom](../assets/print/u08_val3_izjednacni_spremnik.svg){#fig-u08-izjednacni-spremnik-s-akumulacijom fig-alt="Izjednačni spremnik s akumulacijom"}
 
 **Pretpostavke i model**
 
@@ -490,7 +490,7 @@ Razina vode u spremniku raste brzinom od oko $0{,}155\ \text{m/min}$, do gornje 
 4. vrijeme potrebno da razina poraste od $h_0$ do $h_1$.
 5. masu tekućine koja se akumulira u spremniku tijekom tog porasta.
 
-![miješajući izjednačni spremnik](../assets/print/u08_ch1_mijesajuci_spremnik.svg){#fig-u08-mijesajuci-izjednacni-spremnik fig-alt="miješajući izjednačni spremnik"}
+![Miješajući izjednačni spremnik](../assets/print/u08_ch1_mijesajuci_spremnik.svg){#fig-u08-mijesajuci-izjednacni-spremnik fig-alt="Miješajući izjednačni spremnik"}
 
 **Pretpostavke i model**
 
@@ -581,7 +581,7 @@ Ovaj zadatak povezuje postupke iz <span class="mf1-ch-ref"><span class="mf1-ch-c
 
 Kao sažetak poglavlja korisno je usporediti tri reprezentativna slučaja: suženje, difuzor i kontrolni volumen s više tokova. Uz njih prirodno stoji i standardna shema bilance mase s označenim ulazima, izlazima i akumulacijom.
 
-![statička zamjena za kontrolni volumen i kontinuitet](../assets/print/u08_kontrolni_volumen_scene.svg){#fig-u08-staticka-zamjena-za-kontrolni-volumen-i-kontinuitet fig-alt="statička zamjena za kontrolni volumen i kontinuitet"}
+![Kontrolni volumen i kontinuitet](../assets/print/u08_kontrolni_volumen_scene.svg){#fig-u08-staticka-zamjena-za-kontrolni-volumen-i-kontinuitet fig-alt="Kontrolni volumen i kontinuitet"}
 
 ::: {#ex-u08-kontinuitet-kroz-razvodni-t-komad-hidraulicnog-sustava .mf1-we}
 <p class="mf1-box-label">P5. Kontinuitet kroz razvodni T-komad hidrauličnog sustava &nbsp;<span class="mf1-level">T2</span></p>

@@ -245,7 +245,7 @@ Sila koja je numerički stabilna pri jednoj mreži nije nužno konvergirana izla
 
 1. Odredi silu potrebnu da ploča ostane u mirovanju.
 
-![mlaz na ploču](../assets/print/u11_val1_mlaz_na_plocu.svg){#fig-u11-mlaz-na-plocu fig-alt="mlaz na ploču"}
+![Mlaz na ploču](../assets/print/u11_val1_mlaz_na_plocu.svg){#fig-u11-mlaz-na-plocu fig-alt="Mlaz na ploču"}
 
 **Pretpostavke i model**
 
@@ -300,7 +300,7 @@ Kod slobodnog mlaza koji se na ploči zaustavlja u osi udara sila se dobiva izra
 
 Pretpostavi jednolike profile brzine u presjecima 1 i 2, zanemari gubitke i promatraj horizontalnu ravninu.
 
-![kalibracijska mlaznica na prirubnici](../assets/print/u11_val2_mlaznica_prirubnica.svg){#fig-u11-kalibracijska-mlaznica-na-prirubnici fig-alt="kalibracijska mlaznica na prirubnici"}
+![Kalibracijska mlaznica na prirubnici](../assets/print/u11_val2_mlaznica_prirubnica.svg){#fig-u11-kalibracijska-mlaznica-na-prirubnici fig-alt="Kalibracijska mlaznica na prirubnici"}
 
 **Pretpostavke i model**
 
@@ -388,7 +388,7 @@ Računaj komponente u horizontalnoj ravnini; težina djeluje okomito na nju. Tla
 2. komponente sile fluida na koljeno.
 3. iznos rezultantne sile koju mora preuzeti sidreni nosač.
 
-![horizontalno koljeno i reakcija nosača](../assets/print/u11_val3_koljeno_reakcija.svg){#fig-u11-horizontalno-koljeno-i-reakcija-nosaca fig-alt="horizontalno koljeno i reakcija nosača"}
+![Horizontalno koljeno i reakcija nosača](../assets/print/u11_val3_koljeno_reakcija.svg){#fig-u11-horizontalno-koljeno-i-reakcija-nosaca fig-alt="Horizontalno koljeno i reakcija nosača"}
 
 **Pretpostavke i model**
 
@@ -605,7 +605,7 @@ Ovaj zadatak povezuje postupke iz <span class="mf1-ch-ref"><span class="mf1-ch-c
 - Promjer izlaza `3`: $D_3 = 80\ \text{mm}$ (zatvara kut $60^\circ$ iznad pozitivnog smjera osi $x$)
 - Izmjerena poprečna reakcija konzole (prema gore): $R_y = 625\ \text{N}$
 
-Oba izlaza otvorena su prema atmosferi, nalaze se na istoj geodetskoj razini kao ulaz i gubici se zanemaruju.
+Oba izlaza otvorena su prema atmosferi, nalaze se na istoj geodetskoj razini kao ulaz i gubitci se zanemaruju.
 
 Skica je tlocrt horizontalne ravnine: „prema gore” znači smjer $+y$ na crtežu. $R_x$ u ovom primjeru označuje pozitivan iznos reakcije ulijevo, pa je komponenta u osi $x$ jednaka $-R_x$; $R_y$ djeluje prema $+y$.
 
@@ -749,7 +749,7 @@ Nakon inverznog problema grananja, završni primjer vraća se koljenu kako bi se
 
 **Pretpostavke i model**
 
-Kontrolni volumen obuhvaća cijelo koljeno. Strujanje je stacionarno i nestlačivo, tlakovi na ulazu i izlazu koljena približno su jednaki ($p_2 \approx p_1$) jer su gubici zanemarivi, a promjer je nepromijenjen. Razmatraju se samo horizontalne komponente; težina vode i vertikalno oslanjanje nisu dio te projekcije. Profili brzina aproksimiraju se jednodimenzijskim srednjim vrijednostima. Atmosferski tlak djeluje i na vanjsku stijenku koljena; njegov doprinos uzima se u obzir uporabom manometarskog tlaka pri računanju neto opterećenja.
+Kontrolni volumen obuhvaća cijelo koljeno. Strujanje je stacionarno i nestlačivo, tlakovi na ulazu i izlazu koljena približno su jednaki ($p_2 \approx p_1$) jer su gubitci zanemarivi, a promjer je nepromijenjen. Razmatraju se samo horizontalne komponente; težina vode i vertikalno oslanjanje nisu dio te projekcije. Profili brzina aproksimiraju se jednodimenzijskim srednjim vrijednostima. Atmosferski tlak djeluje i na vanjsku stijenku koljena; njegov doprinos uzima se u obzir uporabom manometarskog tlaka pri računanju neto opterećenja.
 
 **Rješenje**
 
@@ -828,11 +828,11 @@ Po trećem Newtonovu zakonu, sila fluida na konstrukciju jednaka je po iznosu, a
 Jednadžba količine gibanja sadrži oba doprinosa — tok količine gibanja i sile tlaka na presjecima. Njihov je relativni iznos ovisan o tlaku, brzini, geometriji i odabranim presjecima, pa izostavljanje jednoga nema univerzalan postotak pogreške i može promijeniti i iznos i smjer rezultante.
 :::
 
-4. Vrijedi li primjena zakona količine gibanja i ako su gubici u koljenu nezanemarivi?
+4. Vrijedi li primjena zakona količine gibanja i ako su gubitci u koljenu nezanemarivi?
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Vrijedi i tada, jer zakon količine gibanja proizlazi iz Newtonovih zakona i ne zahtijeva pretpostavku idealnog (bezgubitnog) strujanja. Razlika između idealnog i realnog slučaja ulazi preko različitih tlakova na ulaznom i izlaznom presjeku — gubici energije smanjuju tlak na izlazu, što se mora uračunati preko proširene Bernoullijeve jednadžbe ili izravnog mjerenja.
+Vrijedi i tada, jer zakon količine gibanja proizlazi iz Newtonovih zakona i ne zahtijeva pretpostavku idealnog (bezgubitnog) strujanja. Razlika između idealnog i realnog slučaja ulazi preko različitih tlakova na ulaznom i izlaznom presjeku — gubitci energije smanjuju tlak na izlazu, što se mora uračunati preko proširene Bernoullijeve jednadžbe ili izravnog mjerenja.
 :::
 :::
 

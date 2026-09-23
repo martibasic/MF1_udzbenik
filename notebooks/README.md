@@ -1,17 +1,17 @@
-# Interaktivni prikazi (Jupyter notebookovi)
+# Interaktivni prikazi (Jupyter bilježnice)
 
-Ova mapa sadrži 17 interaktivnih Jupyter notebookova koji nadopunjuju
-kanonska poglavlja U01–U15. Svaki notebook je samostalni numerički pokus:
+Ova mapa sadrži 17 interaktivnih Jupyter bilježnica koje nadopunjuju
+kanonska poglavlja U01–U15. Svaka bilježnica je samostalni numerički pokus:
 student najprije predviđa ishod, zatim izvodi račun i naposljetku provjerava
 bilancu, granični slučaj, pogrešku, konvergenciju, osjetljivost ili nesigurnost.
 
-## Struktura notebooka
+## Struktura bilježnice
 
-Svaki notebook prati istu akademsku strukturu:
+Svaka bilježnica prati istu akademsku strukturu:
 
 1. **Predvidi** — kvalitativni smjer, predznak ili red veličine prije računa.
 2. **Model i pretpostavke** — sustav, jednadžbe i područje valjanosti.
-3. **Izračunaj** — reproducibilni Python račun s pregledničkim ovisnostima.
+3. **Izračunaj** — ponovljiv račun u Pythonu s knjižnicama dostupnima u pregledniku.
 4. **Provjeri** — najmanje dvije neovisne izvršive tvrdnje.
 5. **Numerička kvaliteta** — analiza pogreške, konvergencije, osjetljivosti,
    reziduala ili nesigurnosti.
@@ -21,16 +21,16 @@ Svaki notebook prati istu akademsku strukturu:
 
 ### JupyterLite (primarni mrežni put)
 
-Svako kanonsko poglavlje vodi na odgovarajući notebook u JupyterLiteu, bez
+Svako kanonsko poglavlje vodi na odgovarajuću bilježnicu u JupyterLiteu, bez
 prijave i bez lokalne instalacije. Paket koristi Python/Pyodide u pregledniku i
-gradi se u `_site/jlite`. Konfiguracija, hashovi svih 17 notebookova i pokretanje
+gradi se u `_site/jlite`. Konfiguracija, hashovi svih 17 bilježnica i pokretanje
 kernela provjeravaju se automatizirano; konačni javni artefakt ipak se ne smatra
 spremnim dok ne prođe završni proizvodni build aktualnoga commita.
 
 ### Google Colab (pričuvni put)
 
 Ako preglednik ili mrežna politika ne podržava JupyterLite, poveznica
-*Pričuvno: otvori u Colabu* otvara isti izvorni notebook. Potreban je Google
+*Pričuvno: otvori u Colabu* otvara istu izvornu bilježnicu. Potreban je Google
 račun. Veze imaju oblik:
 
 ```text
@@ -46,10 +46,10 @@ python -m pip install -r requirements.txt
 python -m notebook
 ```
 
-Notebookovi namjerno ovise samo o `numpy` i `matplotlib`, pa isti račun radi u
-lokalnom kernelu, Colabu i pregledničkom Pyodide kernelu.
+Od vanjskih računskih knjižnica bilježnice koriste samo `numpy` i `matplotlib`,
+pa isti račun radi u lokalnom kernelu, Colabu i Pyodide kernelu u pregledniku.
 
-## Popis dostupnih notebooka
+## Popis dostupnih bilježnica
 
 | Oznaka | Tema | Poglavlje |
 |---|---|---|
@@ -57,7 +57,7 @@ lokalnom kernelu, Colabu i pregledničkom Pyodide kernelu.
 | `u02_kapilarni_uspon.ipynb` | Kapilarni uspon u tankoj cijevi | U02 |
 | `u03_diferencijalni_manometar.ipynb` | Diferencijalni manometar s dva fluida | U03 |
 | `u04_paraboloidna_povrsina.ipynb` | Paraboloidna slobodna površina u rotirajućem spremniku | U04 |
-| `u05_sila_na_ravnu_plohu.ipynb` | Sila i hvatište na pravokutnu plohu pod vodom | U05 |
+| `u05_sila_na_ravnu_plohu.ipynb` | Sila na uronjenu pravokutnu plohu i njezino hvatište | U05 |
 | `u06_zakrivljena_ploha.ipynb` | Sila na zakrivljenu plohu — četvrtina kruga | U05 |
 | `u07_gaz_plivajuceg_tijela.ipynb` | Gaz plivajućeg tijela | U06 |
 | `u08_kontinuitet_suzenje.ipynb` | Kontinuitet u suženju cijevi | U07 |
@@ -73,7 +73,7 @@ lokalnom kernelu, Colabu i pregledničkom Pyodide kernelu.
 
 ## Automatska provjera
 
-Kanonski popis svih 17 obveznih notebookova nalazi se u manifestu sheme v2,
+Kanonski popis svih 17 obveznih bilježnica nalazi se u manifestu sheme v2,
 `tools/verification_manifest.json`. Sljedeća naredba provjerava inventar, JSON,
 Python sintaksu, faze `predvidi → izračunaj → provjeri`, najmanje dvije neovisne
 tvrdnje, numeričku analizu i dopuštene pregledničke ovisnosti bez pokretanja
@@ -83,7 +83,7 @@ kernela:
 python tools/execute_notebooks.py --validate-only
 ```
 
-Potpuna provjera pokreće svaki notebook u zasebnom čistom kernelu, u memoriji,
+Potpuna provjera pokreće svaku bilježnicu u zasebnom čistom kernelu, u memoriji,
 bez prepisivanja izvornog `.ipynb` zapisa:
 
 ```
@@ -91,44 +91,38 @@ python tools/execute_notebooks.py
 ```
 
 Ista se potpuna provjera izvršava u Pages CI-ju prije Quarto rendera. Aktualni
-lokalni presjek prolazi 17/17 notebookova u zasebnim čistim kernelima. To
-potvrđuje izvršivost i ugovor notebooka, ali nije zamjena za stručnu validaciju
+lokalni presjek prolazi 17/17 bilježnica u zasebnim čistim kernelima. To
+potvrđuje izvršivost i ugovor bilježnice, ali nije zamjena za stručnu validaciju
 fizikalnoga modela.
 
-## Dodavanje novog notebooka
+## Dodavanje nove bilježnice
 
-Novi se notebooci dodaju u rječnik `NOTEBOOKS` u skripti
-`scripts/generiraj_notebooke.py`. Nakon dodavanja pokreće se:
+Aktualne bilježnice uređuju se izravno u datotekama `.ipynb` u ovoj mapi.
+Nova bilježnica treba slijediti opisanu strukturu te biti uključena u inventar
+`tools/verification_manifest.json` i pripadne provjere. U odgovarajućem izvoru
+poglavlja u `source/` dodaje se okvir `.mf1-interaktivno` s poveznicama i QR kodom.
 
-```
-python scripts/generiraj_notebooke.py
-```
-
-Veze se dopunjuju u rječniku `VEZE` u `scripts/generiraj_qr.py`,
-nakon čega se pokreće:
-
-```
-python scripts/generiraj_qr.py
-```
-
-Završno se u odgovarajućoj `.md` datoteci u mapi `source/` dodaje
-okvir `.mf1-interaktivno` uz središnju jednadžbu poglavlja.
+Skripte `scripts/generiraj_notebooke.py` i `scripts/generiraj_qr.py`
+sadrže stare predloške. Ne pokreću se pri redovitom uređivanju: mogu prepisati
+novije bilježnice ili QR kodove starijim sadržajem.
 
 ## QR kodovi
 
-QR kodovi za tiskanu inačicu udžbenika generiraju se skriptom:
+Aktualni generator je `scripts/generate_qr_assets.py`. Nakon promjene
+popisa `ASSETS` u toj skripti QR kodovi obnavljaju se naredbom:
 
-```
-python scripts/generiraj_qr.py
+```powershell
+python scripts/generate_qr_assets.py --write
 ```
 
-SVG datoteke spremaju se u `assets/qr/`. Kada se doda novi notebook,
-treba dopuniti rječnik `VEZE` u toj skripti i pokrenuti generiranje.
+SVG datoteke spremaju se u `assets/qr/`. Ista naredba bez `--write`
+provjerava jesu li svi izlazi aktualni, bez prepisivanja datoteka.
 
 ## Konvencije
 
-- Sav tekst u notebooku piše se na hrvatskom književnom jeziku,
-  u 3. licu jednine, akademskim stilom.
+- Sav tekst u bilježnici piše se na hrvatskom književnom jeziku,
+  akademskim stilom. Upute čitatelju pišu se u 2. licu jednine
+  (npr. „Predvidi”, „Izračunaj”, „Provjeri”).
 - Komentari u Python kodu također su na hrvatskom.
 - Imena varijabli koriste standardne fizikalne oznake
   (`rho`, `v1`, `D2`, `Re`, `lambda_`) — riječ je o

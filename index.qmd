@@ -51,7 +51,7 @@ Od tlaka i hidrostatike do cjevovoda, turbostrojeva i otvorenih tokova — kroz 
   </a>
   <a class="mf1-card" href="chapters/u02_viskoznost_povrsinska_napetost_i_kapilarnost.html">
     <span class="mf1-card-code">2</span><span class="mf1-card-title">Reologija i međupovršine</span>
-    <span class="mf1-card-hint">Newtonski i nenewtonovski fluidi, viskoznost, kapilarnost.</span>
+    <span class="mf1-card-hint">Newtonski i nenewtonski fluidi, viskoznost, kapilarnost.</span>
   </a>
 </div>
 
@@ -87,7 +87,7 @@ Od tlaka i hidrostatike do cjevovoda, turbostrojeva i otvorenih tokova — kroz 
   </a>
   <a class="mf1-card" href="chapters/u09_kompresibilni_idealni_tok.html">
     <span class="mf1-card-code">9</span><span class="mf1-card-title">Kompresibilni tok</span>
-    <span class="mf1-card-hint">Brzina zvuka, Mach, izentropska sapnica, prigušenje i udarni val.</span>
+    <span class="mf1-card-hint">Brzina zvuka, Machov broj, izentropska sapnica, prigušenje i udarni val.</span>
   </a>
   <a class="mf1-card" href="chapters/u10_kolicina_i_moment_kolicine_gibanja.html">
     <span class="mf1-card-code">10</span><span class="mf1-card-title">Količina gibanja</span>
@@ -99,7 +99,7 @@ Od tlaka i hidrostatike do cjevovoda, turbostrojeva i otvorenih tokova — kroz 
 <div class="mf1-grid">
   <a class="mf1-card" href="chapters/u11_dimenzijska_analiza_i_slicnost.html">
     <span class="mf1-card-code">11</span><span class="mf1-card-title">Dimenzijska analiza</span>
-    <span class="mf1-card-hint">Buckingham Π, relevantne skale i modelna ispitivanja.</span>
+    <span class="mf1-card-hint">Buckinghamov Π-teorem, relevantne skale i modelna ispitivanja.</span>
   </a>
   <a class="mf1-card" href="chapters/u12_diferencijalni_opis_realnog_toka.html">
     <span class="mf1-card-code">12</span><span class="mf1-card-title">Diferencijalni realni tok</span>

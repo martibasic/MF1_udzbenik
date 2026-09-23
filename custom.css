@@ -117,6 +117,10 @@ p, li, td, th, figcaption, .mf1-ch-title,
 }
 .mf1-table-scroll table { margin: 0; display: table; }
 .mf1-table-scroll .mf1-reference-table { min-width: 32rem; }
+/* Četiri tekstualna stupca CFD pojmovnika trebaju čitljivu širinu riječi. */
+@media screen and (max-width: 767px) {
+  #pojmovnik-numeričkih-metoda .mf1-table-scroll table { min-width: 42rem; }
+}
 .mf1-table-hint { font-family: var(--mf1-sans); font-size: 0.74rem; color: var(--mf1-muted); margin: -0.8rem 0 1.5rem; }
 main table { display: block; max-width: 100%; overflow-x: auto; }
 

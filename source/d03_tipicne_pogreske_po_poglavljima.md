@@ -14,7 +14,7 @@ Ovdje možeš provjeriti odabir modela, referentnog tlaka, kontrolnog volumena i
 - Provjeri predznak, jedinicu i red veličine rezultata.
 :::
 
-<p class="mf1-signal-note">Vizualni tragovi za brzo listanje dodatka: <span class="mf1-signal-chip">ρ / γ / p</span> osnovne veličine, <span class="mf1-signal-chip">μ / ν / σ</span> svojstva fluida, <span class="mf1-signal-chip">F / M</span> sile i momenti, <span class="mf1-signal-chip">Q / ṁ / h<sub>w</sub></span> protoci i gubici.</p>
+<p class="mf1-signal-note">Vizualni tragovi za brzo listanje dodatka: <span class="mf1-signal-chip">ρ / γ / p</span> osnovne veličine, <span class="mf1-signal-chip">μ / ν / σ</span> svojstva fluida, <span class="mf1-signal-chip">F / M</span> sile i momenti, <span class="mf1-signal-chip">Q / ṁ / h<sub>w</sub></span> protoci i gubitci.</p>
 
 ## Pregled po poglavljima {#tablica-tipičnih-pogrešaka-po-poglavljima}
 
@@ -68,7 +68,7 @@ Miješanje apsolutnog, manometarskog i vakuumskog tlaka; pogrešni predznaci i i
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Odredi referencu i sve visinske razlike, uključujući položaj granice u manometru. Za slojeve zatvori i ukupnu visinu i tlak. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku i rezervu skale; razlikuj zajamčene granice od standardne nesigurnosti. Za usis pumpe u radu trebaju gubici i brzinska visina te usporedba $NPSH_A$ s proizvođačevim $NPSH_R$, a ne samo $p_{atm}/(\rho g)$.
+Odredi referencu i sve visinske razlike, uključujući položaj granice u manometru. Za slojeve zatvori i ukupnu visinu i tlak. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku i rezervu skale; razlikuj zajamčene granice od standardne nesigurnosti. Za usis pumpe u radu trebaju gubitci i brzinska visina te usporedba $NPSH_A$ s proizvođačevim $NPSH_R$, a ne samo $p_{atm}/(\rho g)$.
 :::
 ::::
 

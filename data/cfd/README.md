@@ -1,15 +1,15 @@
 # CFD V&V podatkovni slučajevi
 
 Ova mapa sadrži male, strojno čitljive nastavne slučajeve za učenje razlike
-između **verifikacije rješenja** i **validacije fizikalnog modela**. Podaci nisu
-izvoz komercijalnog ili otvorenog CFD solvera osim kada to pojedinačna
-provenijenca izričito navodi; profilni slučaj sadrži objavljene FUN3D rezultate.
+između **verifikacije rješenja** i **validacije fizikalnog modela**. Podatci nisu
+izvoz komercijalnog CFD rješavača ili rješavača otvorenog koda, osim kada to
+zapis podrijetla izričito navodi; profilni slučaj sadrži objavljene FUN3D rezultate.
 
-| Slučaj | Status | Uloga | Istina/referenca |
+| Slučaj | Status | Uloga | Referentno rješenje ili podatci |
 |---|---|---|---|
 | `poiseuille_laminar` | spreman | verifikacija rješenja | analitičko Hagen–Poiseuilleovo rješenje |
 | `venturi_diffuser` | spreman | pedagoška verifikacija postupka | sintetički niz prema 1D Bernoulliju i propisanom gubitku |
-| `hydrofoil_experiment` | referentni skup | profilna validacija uz eksplicitne arhivske praznine | Ladsonov eksperiment + NASA TMR FUN3D mreže |
+| `hydrofoil_experiment` | referentni skup | profilna validacija uz eksplicitne nedostatke arhivskih podataka | Ladsonov eksperiment + NASA TMR FUN3D mreže |
 
 ## Važno ograničenje
 
@@ -29,18 +29,18 @@ nedostajuću dijagnostiku, a ne kao dovršenu validacijsku presudu.
 - `case.json` — geometrija, fluid, rubni uvjeti, referentne vrijednosti i pragovi;
 - `grids.csv` — tri mreže i integralne veličine;
 - `solver_history.csv` — reziduali i jedan fizikalni monitor kroz iteracije;
-- `uncertainty.json` — tro-mrežni opaženi red i GCI;
+- `uncertainty.json` — opaženi red na tri mreže i GCI;
 - `provenance.json` — podrijetlo, način konstrukcije i ograničenja;
 - `README.md` — ljudski čitljiv opis.
 
 Profilni referentni paket umjesto sintetičke `solver_history.csv` sadrži
-`experimental_forces.csv`. Nedostupna povijest izvornog solvera navedena je u
+`experimental_forces.csv`. Nedostupna povijest izvornog rješavača navedena je u
 `case.json` i ne popunjava se izmišljenim rezidualima.
 
 Sva polja u CSV-u imaju jedinicu u nazivu. `mass_imbalance_percent` definiran je
 kao `100*abs(m_in-m_out)/max(abs(m_in),abs(m_out))`. Reziduali su
 bezdimenzijski L2 reziduali kako ih definira ovaj nastavni skup, a ne univerzalno
-usporediva metrika među solverima.
+usporediva metrika među rješavačima.
 
 ## Validacija strukture
 
@@ -51,14 +51,14 @@ python tools/validate_cfd_vv.py
 ```
 
 Provjerava inventar, tri mreže, monotono profinjenje, maseni debalans,
-smanjenje reziduala, stabilizaciju monitora, GCI zapis, analitičke/reference
-vrijednosti te obveznu provenancu. Referentni profilni slučaj dodatno provjerava
+smanjenje reziduala, stabilizaciju monitora, GCI zapis, analitičke i referentne
+vrijednosti te obvezni zapis podrijetla. Referentni profilni slučaj dodatno provjerava
 izvornu mrežnu tablicu, rastav otpora te opaženi red i GCI za monotono
 konvergentne $C_L$ i $C_D$ na tri najfinije mreže.
 
 ## Metoda numeričke nesigurnosti
 
-Tro-mrežni zapisi slijede oblik GCI postupka iz rada I. B. Celika i suradnika,
+Zapisi za tri mreže slijede oblik GCI postupka iz rada I. B. Celika i suradnika,
 „Procedure for Estimation and Reporting of Uncertainty Due to Discretization in
 CFD Applications”, *Journal of Fluids Engineering* 130(7), 2008,
 <https://doi.org/10.1115/1.2960953>. Ovaj mali skup koristi jednolik omjer

@@ -1,18 +1,18 @@
 ---
 title: "MF1 — pregled za ispis u pregledniku"
-subtitle: "Pomoćna HTML inačica; nativni PDF ostaje primarni tiskani proizvod"
+subtitle: "Brzi ispis iz preglednika; za pripremljen prijelom stranica preuzmi PDF udžbenika"
 page-layout: article
 toc: false
 number-sections: true
 ---
 
 ::: {.mf1-print-note .no-print}
-Za stabilan prijelom, sadržaj, paginaciju i bibliografiju preuzmi [nativni PDF](../downloads/mehanika-fluida-1.pdf). Ova stranica služi brzom ispisu iz preglednika.
+Za pripremljen prijelom stranica, sadržaj i bibliografiju preuzmi [PDF udžbenika](../downloads/mehanika-fluida-1.pdf). Ova stranica služi brzom ispisu iz preglednika.
 :::
 
 ```{=html}
 <div class="mf1-print-toolbar no-print">
-  <button class="mf1-print-button" onclick="window.print()">Ispis / Spremi kao PDF</button>
+  <button class="mf1-print-button" onclick="window.print()">Ispiši / Spremi kao PDF</button>
   <a class="mf1-print-button secondary" href="../index.qmd">Povratak na početnu stranicu</a>
 </div>
 ```

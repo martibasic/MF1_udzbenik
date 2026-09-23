@@ -351,7 +351,7 @@ Usporedba s mjerenjem treba koristiti istu temperaturu, čistoću stijenke i def
 3. Odredi silu potrebnu za jednoliko gibanje gornje ploče.
 4. Odredi kinematičku viskoznost $\nu$.
 
-![viskoznost i kapilarnost](../assets/print/u02_val2_viskoznost_kapilarnost.svg){#fig-u02-viskoznost-i-kapilarnost fig-alt="viskoznost i kapilarnost"}
+![Viskoznost i kapilarnost](../assets/print/u02_val2_viskoznost_kapilarnost.svg){#fig-u02-viskoznost-i-kapilarnost fig-alt="Viskoznost i kapilarnost"}
 
 **Pretpostavke i model**
 
@@ -478,7 +478,7 @@ h_{cap}=\frac{4\sigma\cos\theta}{\rho gd}
 \approx36{,}8\ \mathrm{mm}.
 $$ {#eq-reologija-1-kapilarni-uspon-01}
 
-### 2. Tlačni skok na kapljici {.unnumbered .unlisted .mf1-step}
+### 2. Tlačni skok na kapljici []{#tlačni-skok-na-kapljici} {#tlakovni-skok-na-kapljici .unnumbered .unlisted .mf1-step}
 
 Za zadanu sfernu idealizaciju vrijedi
 
@@ -894,4 +894,4 @@ Viskoznost opisuje otpor relativnom gibanju slojeva fluida. Za newtonski fluid s
 
 Površinska napetost opisuje energiju međupovršine i silu po jediničnoj duljini kontaktne linije. Zajedno s kontaktnim kutom određuje kapilarni uspon ili pad, prema $h=4\sigma\cos\theta/(\rho gd)$. Zakrivljenost međupovršine uzrokuje tlačni skok opisan Young–Laplaceovim zakonom. Za sfernu kapljicu vrijedi $\Delta p=4\sigma/d$, a za sapunasti mjehur s dvjema međupovršinama $\Delta p=8\sigma/d$.
 
-Prikazani modeli pretpostavljaju definirana svojstva fluida i međupovršine, idealiziranu geometriju te ravnotežno ili kvazistacionarno stanje. Na odstupanja u stvarnim sustavima utječu temperaturna ovisnost viskoznosti, nenewtonsko ponašanje, hrapavost i onečišćenje stijenke, histereza kontaktnoga kuta, viskozni gubici i dinamika međupovršine.
+Prikazani modeli pretpostavljaju definirana svojstva fluida i međupovršine, idealiziranu geometriju te ravnotežno ili kvazistacionarno stanje. Na odstupanja u stvarnim sustavima utječu temperaturna ovisnost viskoznosti, nenewtonsko ponašanje, hrapavost i onečišćenje stijenke, histereza kontaktnoga kuta, viskozni gubitci i dinamika međupovršine.

@@ -1,9 +1,9 @@
 # Venturi i difuzor
 
 Ovaj je slučaj namjerno označen kao **sintetički pedagoški skup**, a ne kao
-eksperimentalna validacija ili stvarni izlaz CFD solvera.
+eksperimentalna validacija ili stvarni izlaz CFD rješavača.
 
-Kontinuitet daje brzine u ulazu i grlu. Idealni pad statičkog tlaka do grla
+Kontinuitet daje brzine na ulazu i grlu. Idealni pad statičkog tlaka do grla
 slijedi iz Bernoullijeve jednadžbe, dok je ukupni gubitak propisan s
 `K_loss=0,2` u odnosu na dinamički tlak u grlu. Tri mreže zatim dobivaju
 kontrolirane pogreške drugoga reda.
@@ -18,4 +18,5 @@ Skup omogućuje provjeru četiri odvojena pitanja:
 
 Vrijednosti se ne smiju citirati kao karakteristike stvarnog Venturija ili
 difuzora. Za validaciju bi bili potrebni mjerena geometrija, uvjeti na ulazu,
-kalibrirani tlakovi/protok i pripadni mjerni budžet nesigurnosti.
+mjerenja tlakova i protoka umjerenim instrumentima te pripadni doprinosi
+mjernoj nesigurnosti.

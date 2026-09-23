@@ -71,8 +71,8 @@ Sljedeća tablica izravno povezuje pojmove iz ovoga udžbenika s pripadnim pojmo
 | Mlaz koji udara o plohu (sila) | Zidni patch s integracijom tlaka i smičnih naprezanja |
 | Pokretna lopatica | MRF zona (`MRFZone`) ili klizajuća mreža |
 | Trokuti brzina | Polja apsolutne i relativne brzine ($\vec{c} = \vec{w} + \vec{u}$) u MRF zoni |
-| Linijski gubici | Integral disipacije po dionici domene |
-| Lokalni gubici | Razrješavanje strujanja oko lokalnih elemenata (koljeno, ventil) |
+| Linijski gubitci | Integral disipacije po dionici domene |
+| Lokalni gubitci | Razrješavanje strujanja oko lokalnih elemenata (koljeno, ventil) |
 | Metacentar | Hidrostatička referenca početne stabilnosti; 6-DOF rješavač u VOF simulaciji zasebno opisuje gibanje trupa |
 
 ## Kako se MF1 jednadžbe slažu u CFD slici
@@ -92,7 +92,7 @@ Ova tablica sažima glavne jednadžbe iz udžbenika i pokazuje njihovu izravnu u
 | Eulerova diferencijalna jednadžba | Eulerov rješavač za neviskozno strujanje |
 | Disipacija, $h_l = \lambda(L/D)(v^2/2g)$ | Pad mehaničke energije iz polja tlaka i brzine; turbulentni model i model strujanja uz stijenku utječu na predviđeni otpor |
 | Integralni zakon količine gibanja | Izravna polazna formulacija metode konačnih volumena (FVM) |
-| Moment količine gibanja, $\vec{w} = \vec{c} - \vec{u}$ | MRF metoda, klizajuća mreža (sliding mesh) za rotore |
+| Relativna brzina, $\vec{w} = \vec{c} - \vec{u}$ | MRF metoda, klizajuća mreža (sliding mesh) za rotore |
 | Reynoldsov broj $Re = vD/\nu$ | Procjena relativne važnosti viskoznosti; jedan od ulaza u odabir modela i mreže |
 | Bezdimenzijski brojevi $Re, Fr, We, Ma$ (pog. 9, 11 i 15) | Bezdimenzionirane jednadžbe; ulazni parametri i kriteriji izbora modela |
 
@@ -153,7 +153,7 @@ Svakoj plohi geometrije pridružuje se odgovarajući uvjet:
 
 Rubni uvjeti moraju odgovarati fizičkom eksperimentu i analitičkom modelu s kojim će se rezultat usporediti.
 
-### Korak 4 — Rješavač i iteracijska konvergencija {.unnumbered .unlisted .mf1-step}
+### Korak 4 — Rješavač i iteracijska konvergencija []{#korak-4-rješavač-i-iteracijska-konvergencija} {#korak-4-solver-i-iteracijska-konvergencija .unnumbered .unlisted .mf1-step}
 
 Za nestlačivi stacionarni problem bira se odgovarajući stacionarni rješavač i sprega tlaka s brzinom. Pad reziduala potreban je, ali nije dovoljan dokaz konvergencije. Istodobno se prate protok kroz svaki otvor, relativna neravnoteža mase, $\Delta p_{12}$, sile i druge izlazne veličine. Kriteriji se zadaju prema namjeni modela; ne postoji univerzalan broj redova veličine koji jamči ispravan rezultat.
 

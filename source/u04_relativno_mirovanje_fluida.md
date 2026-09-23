@@ -189,7 +189,7 @@ Ravnina slobodne površine pri stalnom ubrzanju i paraboloid pri stalnoj vrtnji 
 2. visinu vode uz stražnju i prednju stijenku.
 3. kut nagiba slobodne površine prema vodoravnici.
 
-![otvoreni spremnik na laboratorijskim kolicima](../assets/print/u04_val2_laboratorijska_kolica.svg){#fig-u04-otvoreni-spremnik-na-laboratorijskim-kolicima fig-alt="otvoreni spremnik na laboratorijskim kolicima"}
+![Otvoreni spremnik na laboratorijskim kolicima](../assets/print/u04_val2_laboratorijska_kolica.svg){#fig-u04-otvoreni-spremnik-na-laboratorijskim-kolicima fig-alt="Otvoreni spremnik na laboratorijskim kolicima"}
 
 **Pretpostavke i model**
 
@@ -250,7 +250,7 @@ Pri zadanom ubrzanju slobodna površina povisi se na stražnjoj strani za oko $1
 
 Zanemari prolazne oscilacije i promjenu gustoće plina iznad tekućine.
 
-![zatvoreni servisni modul s kosom inspekcijskom stijenkom](../assets/print/u04_val3_kosa_stijenka.svg){#fig-u04-zatvoreni-servisni-modul-s-kosom-inspekcijskom-stijenkom fig-alt="zatvoreni servisni modul s kosom inspekcijskom stijenkom"}
+![Zatvoreni servisni modul s kosom inspekcijskom stijenkom](../assets/print/u04_val3_kosa_stijenka.svg){#fig-u04-zatvoreni-servisni-modul-s-kosom-inspekcijskom-stijenkom fig-alt="Zatvoreni servisni modul s kosom inspekcijskom stijenkom"}
 
 **Pretpostavke i model**
 
@@ -396,7 +396,7 @@ Nakon prolaznog razdoblja voda se postavi u relativno mirovanje kao kruto rotira
 
 Zanemari površinsku napetost, valjanje i otpor zraka.
 
-![rotirajući cilindrični spremnik](../assets/print/u04_ch1_rotirajuci_spremnik_paraboloid.svg){#fig-u04-rotirajuci-cilindricni-spremnik fig-alt="rotirajući cilindrični spremnik"}
+![Rotirajući cilindrični spremnik](../assets/print/u04_ch1_rotirajuci_spremnik_paraboloid.svg){#fig-u04-rotirajuci-cilindricni-spremnik fig-alt="Rotirajući cilindrični spremnik"}
 
 **Pretpostavke i model**
 

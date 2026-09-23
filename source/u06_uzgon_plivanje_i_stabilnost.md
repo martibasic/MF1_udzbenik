@@ -332,7 +332,7 @@ Početni metacentarski rezultat vrijedi za mali kut i zadanu raspodjelu mase. Za
 2. srednji gaz pontona $h$.
 3. koliku dodatnu masu još može primiti prije nego što gornji rub dođe do razine vode.
 
-![ponton i gaz pri simetričnom opterećenju](../assets/print/u07_val2_ponton_gaz.svg){#fig-u07-ponton-i-gaz-pri-simetricnom-opterecenju fig-alt="ponton i gaz pri simetričnom opterećenju"}
+![Ponton i gaz pri simetričnom opterećenju](../assets/print/u07_val2_ponton_gaz.svg){#fig-u07-ponton-i-gaz-pri-simetricnom-opterecenju fig-alt="Ponton i gaz pri simetričnom opterećenju"}
 
 **Pretpostavke i model**
 
@@ -411,7 +411,7 @@ $$ {#eq-uzgon-stabilitet-rijeseni-primjer-koliki-gaz-ima-radni-ponton-06}
 2. Odredi $KB$, $BM$, $KG$ i početni $GM$ sustava te udaljenost $e$ težišta kompresora od uzdužne osi simetrije platforme.
 3. Odredi za koliko je srednja uronjenost platforme veća nego prije postavljanja kompresora.
 
-![plutajuća platforma s pomaknutim kompresorom](../assets/print/u07_val1_platforma_kompresor.svg){#fig-u07-plutajuca-platforma-s-pomaknutim-kompresorom fig-alt="plutajuća platforma s pomaknutim kompresorom"}
+![Plutajuća platforma s pomaknutim kompresorom](../assets/print/u07_val1_platforma_kompresor.svg){#fig-u07-plutajuca-platforma-s-pomaknutim-kompresorom fig-alt="Plutajuća platforma s pomaknutim kompresorom"}
 
 **Pretpostavke i model**
 
@@ -514,7 +514,7 @@ Plutajuća platforma nije jedini tipičan ulaz u <span class="mf1-ch-ref"><span 
 4. ekvivalentne $KB$, $BM$ i $GM$ za zadani dvofluidni model te udaljenost $e$ težišta ormara od osi simetrije platforme.
 5. za koliko je srednja uronjenost veća nego prije postavljanja ormara.
 
-![plutajuća platforma na granici ulja i vode](../assets/print/u07_ch1_platforma_ulje_voda_ormar.svg){#fig-u07-plutajuca-platforma-na-granici-ulja-i-vode fig-alt="plutajuća platforma na granici ulja i vode"}
+![Plutajuća platforma na granici ulja i vode](../assets/print/u07_ch1_platforma_ulje_voda_ormar.svg){#fig-u07-plutajuca-platforma-na-granici-ulja-i-vode fig-alt="Plutajuća platforma na granici ulja i vode"}
 
 **Pretpostavke i model**
 

@@ -8,7 +8,7 @@ je laminarni model konzistentan.
 Tri sintetičke mreže imaju omjer karakteristične veličine `r=2`. Profilna
 perturbacija konstruirana je tako da nestaje na stijenci i daje urednu
 konvergenciju drugoga reda prema paraboličnom profilu. CSV zapisi nisu nastali
-pokretanjem solvera; točno pravilo konstrukcije nalazi se u `provenance.json`.
+pokretanjem rješavača; točno pravilo konstrukcije nalazi se u `provenance.json`.
 
 Za studentsku provjeru treba odvojeno pokazati:
 

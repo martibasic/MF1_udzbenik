@@ -320,7 +320,7 @@ $$ {#eq-hidrostatika-rijeseni-primjer-tlak-u-prikljucku-zatvorenog-vo-03}
 1. razliku tlakova $p_1 - p_2$.
 2. kolika je pogreška ako se stupac zraka zanemari.
 
-![diferencijalni manometar](../assets/print/u03_val1_diferencijalni_manometar.svg){#fig-u03-diferencijalni-manometar fig-alt="diferencijalni manometar"}
+![Diferencijalni manometar](../assets/print/u03_val1_diferencijalni_manometar.svg){#fig-u03-diferencijalni-manometar fig-alt="Diferencijalni manometar"}
 
 **Pretpostavke i model**
 
@@ -407,7 +407,7 @@ Nakon otvorenih spremnika i diferencijalnog manometra treba razmotriti još jeda
 
 Zanemari gustoće plinova u spojnim cijevima.
 
-![zatvoreni vodeni spremnik i referentni uljni spremnik](../assets/print/u03_ch1_zatvoreni_spremnik_ulje_ziva.svg){#fig-u03-zatvoreni-vodeni-spremnik-i-referentni-uljni-spremnik fig-alt="zatvoreni vodeni spremnik i referentni uljni spremnik"}
+![Zatvoreni vodeni spremnik i referentni uljni spremnik](../assets/print/u03_ch1_zatvoreni_spremnik_ulje_ziva.svg){#fig-u03-zatvoreni-vodeni-spremnik-i-referentni-uljni-spremnik fig-alt="Zatvoreni vodeni spremnik i referentni uljni spremnik"}
 
 **Pretpostavke i model**
 
@@ -495,7 +495,7 @@ Otvoreni uljni spremnik daje u točki `2` tlak oko $105{,}9\ \text{kPa}$, a dife
 
 Kao prijelaz prema <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 4</span><span class="mf1-ch-title">Relativno mirovanje fluida</span></span> korisno je usporediti ravnotežu tlaka u spojenim posudama s idejom efektivnog polja sila.
 
-![statička zamjena za ravnotežu tlaka i efektivno polje sila](../assets/print/u03_balans_tlaka_i_geff.svg){#fig-u03-staticka-zamjena-za-ravnotezu-tlaka-i-efektivno fig-alt="statička zamjena za ravnotežu tlaka i efektivno polje sila"}
+![Ravnoteža tlaka i efektivno polje sila](../assets/print/u03_balans_tlaka_i_geff.svg){#fig-u03-staticka-zamjena-za-ravnotezu-tlaka-i-efektivno fig-alt="Ravnoteža tlaka i efektivno polje sila"}
 
 ::: {#ex-u03-tlak-na-usisu-pumpe-za-cirkulaciju-ulja .mf1-we}
 <p class="mf1-box-label">P4. Tlak na usisu pumpe za cirkulaciju ulja &nbsp;<span class="mf1-level">T2</span></p>
@@ -519,7 +519,7 @@ Kao prijelaz prema <span class="mf1-ch-ref"><span class="mf1-ch-code">pog. 4</sp
 
 **Pretpostavke i model**
 
-Promatra se idealna granica bez protoka: zanemaruju se brzinska visina i svi gubici u usisnom vodu. Slobodna površina ulja u spremniku je na atmosferskom tlaku. Ovaj hidrostatski model nije dovoljan za provjeru usisa pumpe u radu.
+Promatra se idealna granica bez protoka: zanemaruju se brzinska visina i svi gubitci u usisnom vodu. Slobodna površina ulja u spremniku je na atmosferskom tlaku. Ovaj hidrostatski model nije dovoljan za provjeru usisa pumpe u radu.
 
 **Rješenje**
 
@@ -665,7 +665,7 @@ $$ {#eq-hidrostatika-rijeseni-primjer-balastni-tank-broda-tlak-iznutr-08}
 
 **Pretpostavke i model**
 
-Promatra se kvazistatičko stanje mreže u kojem se zanemaruju lokalni gubici trenja jer su brzine strujanja niske (noćno mjerenje). Voda se smatra nestlačivom, gustoća se ne mijenja s visinom. Sav put između čvorova `A` i `B` prolazi kroz istu povezanu vodenu masu bez prijelaza preko atmosfere.
+Promatra se kvazistatičko stanje mreže u kojem se zanemaruju lokalni gubitci trenja jer su brzine strujanja niske (noćno mjerenje). Voda se smatra nestlačivom, gustoća se ne mijenja s visinom. Sav put između čvorova `A` i `B` prolazi kroz istu povezanu vodenu masu bez prijelaza preko atmosfere.
 
 **Rješenje**
 

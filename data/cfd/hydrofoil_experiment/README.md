@@ -16,9 +16,9 @@ iz strojno čitljivih tablica koje NASA TMR izravno distribuira.
 ## Što se ne smije tvrditi
 
 Arhiva integralnih rezultata ne sadrži reziduale, povijest monitora sila ni
-maseni debalans, a distribuirana eksperimentalna tablica nema potpuni budžet
-mjerne nesigurnosti. Zato ovaj paket **nije dovršena validacijska presuda**.
-Student koji pokrene novu simulaciju mora dodati te tri dijagnostike, a tek
+maseni debalans, a distribuirana eksperimentalna tablica nema potpun popis doprinosa
+mjernoj nesigurnosti. Zato ovaj paket **nije dovršena validacijska presuda**.
+Student koji pokrene novu simulaciju mora dodati te tri vrste dijagnostičkih podataka, a tek
 zatim spojiti numeričku i mjernu nesigurnost.
 
 NACA 0012 ovdje služi kao profilni primjer prenosiv na hidrodinamiku preko

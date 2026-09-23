@@ -11,6 +11,16 @@ local function replacement_title(title)
   if text == "Naputak" then
     return { pandoc.Str("Smjernica") }
   end
+  -- Identifikator zaglavlja ostaje isti radi postojećih poveznica.
+  if text:match("Zadaci za vježbu$") or text:match("Zadaci za samostalan rad$") then
+    -- Post-quarto zaglavlje može već sadržavati broj odjeljka u Spanu.
+    for _, inline in ipairs(title) do
+      if inline.t == "Str" and inline.text == "Zadaci" then
+        inline.text = "Zadatci"
+      end
+    end
+    return title
+  end
   if text:find("Razrada koraka", 1, true) then
     return { pandoc.Str("Postupak"), pandoc.Space(), pandoc.Str("rješenja") }
   end
