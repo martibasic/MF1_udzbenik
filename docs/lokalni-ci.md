@@ -105,3 +105,12 @@ Lokalno je reproducirano promjenom MathJaxove veličine na 117 %: skriveni
 jednadžbe i ograničava ga na 1 px, zadržavajući MathML za čitače zaslona.
 Viewport audit provjerava isti rubni slučaj na obje stranice i čuva izvorni
 prag dopuštenog prelijevanja.
+
+[Action 35986240967](https://github.com/martibasic/MF1_udzbenik/actions/runs/35986240967)
+prošao je te provjere prelijevanja, ali je pao na testu tipkovnice za U13
+pri 768 px. Test je između tipki čekao fiksnih 250 ms; Bootstrap ignorira
+novi toggle dok prethodni prijelaz još traje. Provjera sada čeka završetak
+prijelaza, odgovarajući `aria-expanded`, stvarnu vidljivost panela i očuvan
+fokus, uz granicu od 10 s. Neispravna tipkovnička obrada i dalje ruši test.
+Regresija namjerno usporava prijelaz na 800 ms: stari test tada reproducibilno
+pada, a nova provjera provjerava oba dovršena tipkovnička prijelaza.

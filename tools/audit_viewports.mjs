@@ -22,6 +22,7 @@ import {
 import process from "node:process";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright-core";
+import { checkCalloutKeyboard } from './callout_keyboard.mjs';
 
 const require = createRequire(import.meta.url);
 const axePath = require.resolve("axe-core/axe.min.js");
@@ -582,25 +583,17 @@ try {
         .locator('.callout-header[data-bs-toggle="collapse"]:visible')
         .first();
       if (await calloutHeader.count()) {
-        const role = await calloutHeader.getAttribute("role");
-        const tabIndex = await calloutHeader.getAttribute("tabindex");
-        const initial = await calloutHeader.getAttribute("aria-expanded");
-        await calloutHeader.focus();
-        await page.keyboard.press("Enter");
-        await page.waitForTimeout(250);
-        const afterEnter = await calloutHeader.getAttribute("aria-expanded");
-        await page.keyboard.press("Space");
-        await page.waitForTimeout(250);
-        const afterSpace = await calloutHeader.getAttribute("aria-expanded");
-        if (
-          role !== "button" ||
-          tabIndex !== "0" ||
-          afterEnter === initial ||
-          afterSpace !== initial
-        ) {
-          issues.push(
-            `U13 @ ${width}px: sklopivi callout nije potpuno dostupan tipkovnicom`,
-          );
+        try {
+          await checkCalloutKeyboard(page, calloutHeader);
+          if (width === 768) {
+            // Force a transition longer than the former fixed 250 ms wait.
+            // Both keys must still finish toggling the panel and retain focus.
+            const slow = await page.addStyleTag({content:'.collapsing {transition-duration:800ms !important}'});
+            try { await checkCalloutKeyboard(page, calloutHeader); }
+            finally { await slow.evaluate(element => element.remove()); }
+          }
+        } catch (error) {
+          issues.push(`U13 @ ${width}px: sklopivi callout nije potpuno dostupan tipkovnicom: ${error.message}`);
         }
       } else {
         issues.push(
