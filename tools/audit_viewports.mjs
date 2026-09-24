@@ -536,6 +536,32 @@ try {
           await page.setViewportSize({width:320, height:900});
           await page.waitForFunction(() => document.querySelector('.mf1-wide-math'));
         }
+        if (width === 320 && (relative.endsWith('d06_kljuc_kontrolnih_rezultata.html') ||
+                             relative.endsWith('za_ispis.html'))) {
+          // Reproduce the Linux MathJax/font-size boundary on every platform.
+          // The hidden MathML of this long formula used to widen the page by
+          // 3–4 px, although the visible formula itself fitted the paragraph.
+          const sizing = await page.addStyleTag({content:'mjx-container {font-size:117% !important}'});
+          await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+          const assistive = await page.evaluate(() => {
+            const formula = document.querySelector('#key-task-izlaz-lopatice-iz-izmjerene-sile');
+            const nodes = [...formula.querySelectorAll('mjx-assistive-mml')];
+            return {
+              scroll: document.documentElement.scrollWidth,
+              client: document.documentElement.clientWidth,
+              readable: nodes.length > 0 && nodes.every(node => {
+                const style = getComputedStyle(node);
+                return node.querySelector('math') && style.display !== 'none' &&
+                  style.visibility !== 'hidden' && !node.closest('[aria-hidden="true"]');
+              }),
+            };
+          });
+          if (assistive.scroll > assistive.client + 1 || !assistive.readable) {
+            issues.push(`${relative}: MathML za čitače zaslona nije očuvan unutar stranice pri uvećanju jednadžbi`);
+          }
+          await sizing.evaluate(element => element.remove());
+          await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+        }
         if (metrics.misplacedNotes > 0) {
           issues.push(`${relative} @ ${width}px: ${metrics.misplacedNotes} sadržajnih napomena premješteno je u usku marginu`);
         }

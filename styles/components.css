@@ -39,6 +39,15 @@ figcaption {
   padding: 0.2rem 0;
   -webkit-overflow-scrolling: touch;
 }
+/* Keep MathJax's visually clipped MathML at the start of its formula. An
+   automatic static position can place this screen-reader layer after a long
+   inline formula and widen the page despite its visual clipping. */
+mjx-container > mjx-assistive-mml {
+  left: 0;
+  top: 0;
+  max-width: 1px;
+  max-height: 1px;
+}
 
 /* Tablice */
 table {

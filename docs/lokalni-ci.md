@@ -96,3 +96,12 @@ ostavljaju samo logove, a privremena radna mapa uklanja se kao i prije.
 `tools/test_render_process.py` stvarnim procesima provjerava zapis izlaza,
 propagaciju pogreške i prekid potomaka; `tools/test_render_workspace.py`
 provjerava očuvanje starih izlaza i dijagnostike nakon isteka vremena.
+
+U [Actionu 35981808104](https://github.com/martibasic/MF1_udzbenik/actions/runs/35981808104)
+PDF je prošao za 28,7 s, zajedno s oba PDF audita. Završni viewport audit
+otkrio je zasebno prelijevanje od 4 px u D06 i zbirnom ispisu pri 320 px.
+Lokalno je reproducirano promjenom MathJaxove veličine na 117 %: skriveni
+`mjx-assistive-mml` izlazio je izvan stranice. CSS sada sidri taj sloj unutar
+jednadžbe i ograničava ga na 1 px, zadržavajući MathML za čitače zaslona.
+Viewport audit provjerava isti rubni slučaj na obje stranice i čuva izvorni
+prag dopuštenog prelijevanja.
