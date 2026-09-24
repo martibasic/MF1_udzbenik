@@ -192,13 +192,6 @@ Eulerove jednadžbe opisuju tok u kojem zanemarujemo viskozne sile. Računalo ta
 
 Takav proračun nije dovoljan kada nas zanima otpor duge cijevi ili sila trenja na stijenci: izostavili bismo upravo pojavu koju želimo izračunati. Prije odabira modela zato treba odrediti što tražimo i koje sile na taj rezultat najviše utječu.
 
-::: {.callout-note collapse="true" icon="false"}
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — energija po usklađenim presjecima</p>
-
-U idealiziranom proračunu energijska se bilanca ne uspoređuje proizvoljno po cijeloj domeni, nego između presjeka ili duž iste strujnice. Ako se mijenjaju ulazni profil, referenca tlaka ili presjek, prije usporedbe s Bernoullijem treba uskladiti srednje brzine, tlakove i geodetske kote.
-:::
-:::
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Alternativni izvod Bernoullija iz rada i energije</p>
@@ -273,13 +266,15 @@ To nije formalnost. Česta pogreška nastaje kada se Bernoullijeva jednadžba au
 Riješeni primjeri i zadatci za vježbu pokazuju kako isti Bernoullijev zapis opisuje pad statičkog tlaka u suženju, brzinu slobodnog mlaza, tlak u sifonu i Pitotovo lokalno mjerenje.
 
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — energetska provjera</p>
+<p class="mf1-box-label">Numerički most — Bernoulli kao referenca</p>
 
-Bernoullijev rezultat nije opći CFD model, ali jest analitička referenca za Eulerov slučaj koji dijeli njegove pretpostavke. Usporedba se vodi na istoj strujnici, s istom referencom energije i uz odvojenu provjeru mrežne te iteracijske konvergencije; u viskoznom računu dio pada energije predstavlja fizički gubitak.
+**Fizikalna poveznica.** Bernoulli slijedi iz Eulerove jednadžbe uz ovdje navedene pretpostavke. U CFD-u rješavamo lokalne bilance; Bernoulli služi kao analitička referenca, a ne kao zaseban obvezan korak rješavača.
 
-Najprije se uspoređuju tlak, brzina i ukupna visina na istim presjecima, a zatim osjetljivost tih veličina na mrežu i iteracijski postupak. Pad energijske crte u Eulerovu testu upozorava na numeričku disipaciju ili rubni uvjet koji ne predstavlja idealni slučaj.
+**Račun i provjera.** Za Venturi kontinuitet iz []{.mf1-chapter-ref target="u07"} povezuje brzine, a Bernoulli predviđa razliku tlakova ulaza i grla. Numeričko polje provjeravamo duž iste strujnice ili na presjecima s usklađenim profilima i kotama. U idealnom Eulerovu slučaju neželjeni pad ukupne mehaničke visine može biti numerička pogreška. U viskoznom modelu pad uključuje i stvarnu disipaciju; finija mreža ne uklanja fizikalne gubitke.
 
-U viskoznom proračunu razlika prema idealnom Bernoulliju nije automatski pogreška. Ona može biti stvarna disipacija, pa se model gubitaka provjerava zasebno prema mjerenju ili primjenjivoj korelaciji.
+**Primjena.** Za protok često dostaje ručni ili 1D model s gubitcima; mreža cjevovoda slijedi u []{.mf1-chapter-ref target="u13"}. CFD postaje koristan za lokalno polje i odvajanje u difuzoru. Isti Venturi povezuje te razine u @sec-cfd-venturi.
+
+[]{#provjera-cfd-a-analitičkim-rješenjem}
 :::
 
 ## Riješeni primjeri
@@ -669,9 +664,9 @@ $$ {#eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-05}
 Brzina u grlu iznosi $v_2=7{,}424\ \text{m/s}$, a `HGL` je ondje za $\Delta p/(\rho g)=2{,}634\ \text{m}$ niže nego na ulazu. Diferencijalni manometar daje samo razliku tlakova: bez apsolutnog ulaznog tlaka, temperature i tlaka pare ulja iz ovoga se računa ne može zaključiti postoji li kavitacijska rezerva.
 
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerička perspektiva</p>
+<p class="mf1-box-label">Od ručnog Venturija do polja</p>
 
-Ista Venturijeva cijev u CFD-u daje polje brzine i tlaka, ne samo dvije točke. Za **verifikaciju proračuna** treba pratiti maseni debalans, reziduale i promjenu $\Delta p$ na najmanje trima sustavno profinjenim mrežama. Razlika prema idealnom Bernoulliju u viskoznom modelu nije sama po sebi numerička pogreška; može sadržavati stvarne gubitke i razliku modela. Validacija zato traži odgovarajuće mjerenje i njegove nesigurnosti [@nasa-cfd-vv; @asme-vv20-2009].
+Ovaj idealni račun daje referencu za @sec-cfd-venturi. Ondje se isti problem proširuje poljem brzine i tlaka, uz jasno odvajanje fizikalnih gubitaka od numeričke pogreške.
 :::
 
 :::
@@ -920,23 +915,6 @@ Idealno: $v\approx7{,}14$ m/s, $Q\approx27{,}5$ L/s, $p_{C,abs}\approx59{,}1$ kP
 
 ![Skice vježbi: istjecanje, konfuzor, silazno suženje, izdignuti Pitotov senzor, izbor grla i sifon s mlazom.](../assets/print/u09_vjezbe_skice.svg){#fig-u09-vjezbe fig-align="center" fig-alt="Skice vježbi: istjecanje, konfuzor, silazno suženje, izdignuti Pitotov senzor, izbor grla i sifon s mlazom."}
 
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Veza s numeričkim proračunom.** Bernoullijeva jednadžba ima u CFD-u dvije različite uloge. Prva: Eulerove jednadžbe, iz kojih se pod odgovarajućim pretpostavkama izvodi Bernoulli, čine neviskozni model toka. Druga: Bernoullijev rezultat služi kao analitička referenca za **verifikaciju** idealiziranog slučaja i kao provjera reda veličine u presjecima gdje su gubitci mali. Validacija realnoga modela ipak traži podatke stvarnog sustava.
-
-**Postupak numeričkog proračuna.** Duž odabrane strujnice ili kroz usklađene presjeke iz polja $p$ i $v$ izračunavaju se `EGL` i `HGL`. U numeričkom Eulerovu slučaju koji dijeli Bernoullijeve pretpostavke, neželjeni pad `EGL` može otkriti diskretizacijsku disipaciju, nedovoljnu konvergenciju ili neusklađene rubne uvjete; usporedba mora koristiti istu strujnicu i istu referencu energije.
-
-**Tipičan scenarij.** Eulerov model može poslužiti kao jeftiniji predprojektni model kada su viskozni učinci sekundarni, a zatim se odabrane geometrije provjeravaju viskoznim modelom. Koliko je takav račun brži i koliko je točan nije univerzalno: ovisi o mreži, računalnom rješavaču, geometriji i traženoj izlaznoj veličini.
-
-> *Nije gradivo MF1. Bernoullijeva jednadžba u CFD-u služi za provjeru duž odabranih strujnica na kojima vrijede njezine pretpostavke.*
-:::
-
-::: {.callout-tip collapse="true" icon="false"}
-## Provjera CFD-a analitičkim rješenjem
-
-Bernoullijeva jednadžba može biti **referentno analitičko rješenje** za numerički model koji dijeli njezine pretpostavke. U idealiziranom Eulerovu modelu Venturija uspoređuju se isti presjeci, primjerice ulaz i grlo, te se provjerava smanjuje li se razlika prema Bernoulliju pri iteracijskoj i mrežnoj konvergenciji. Ne postoji univerzalna dopuštena razlika od $5\,\%$. U viskoznom CFD modelu dio razlike prema idealnom Bernoulliju predstavlja stvaran gubitak energije, pa se takav model validira mjerenjem ili odgovarajućim koreliranim modelom gubitaka. Razliku između verifikacije i validacije sustavno obrađuje dodatak D.
-:::
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

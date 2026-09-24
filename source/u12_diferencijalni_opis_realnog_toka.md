@@ -69,11 +69,6 @@ $$ {#eq-navier-stokes-nestlacivi}
 Jednadžba [-@eq-navier-stokes-nestlacivi] pretpostavlja newtonski fluid, konstantnu viskoznost i gustoću te odsutnost dodatnih konstitutivnih učinaka. Nenewtonski fluid ne zahtijeva novi zakon količine gibanja, nego drukčiju vezu $\boldsymbol\tau(\mathbf D)$.
 :::
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — tlak i brzina u istom koraku</p>
-
-U nestlačivom CFD-u tlak i brzina ne određuju se neovisno: tlak korigira brzinsko polje tako da se lokalno sačuva masa. Mali reziduali zato nisu dovoljni ako se protoci na granicama ne zatvaraju ili se rezultat mijenja pri usitnjavanju mreže.
-:::
 
 ## Rubni uvjeti i fizikalno zatvaranje problema {#sec-rubni-uvjeti}
 
@@ -221,6 +216,8 @@ $$ {#eq-realni-tok-turbulentni-tok-srednja-vrijednost-nije-cijelo-p-02}
 
 Usrednjavanje Navier–Stokesove jednadžbe uvodi Reynoldsova naprezanja $-\rho\overline{u_i'u_j'}$. Ona nisu nova molekularna naprezanja, nego tok srednje količine gibanja koji nose fluktuacije. Turbulencijski model zatvara te nepoznate korelacije; nije numerička zamjena za Darcyjev faktor trenja.
 
+CFD je način numeričkog rješavanja i laminarnog i turbulentnog modela. RANS rješava osrednjene jednadžbe uz model korelacija; LES razrješava velike vrtloge i modelira učinak manjih; DNS razrješava sve dinamički relevantne turbulentne skale bez turbulencijskog modela. Izbor ovisi o potrebnom srednjem ili vremenskom odzivu i raspoloživoj razlučivosti, ne samo o $Re$ iz prethodnog poglavlja [@pope2000].
+
 Uz stijenku je korisna bezdimenzijska udaljenost
 
 $$
@@ -243,15 +240,15 @@ To je opis izmjerenog signala na određenom mjestu i u određenom frekvencijskom
 
 ## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
 
-Metoda konačnih volumena integrira lokalne bilance po ćelijama i pretvara tokove kroz plohe u algebarski sustav. Tri odvojena pitanja moraju ostati vidljiva:
+U []{.mf1-chapter-ref target="u07"} povezali smo kontrolni volumen s ćelijom, u []{.mf1-chapter-ref target="u10"} sile s tokom količine gibanja, a u []{.mf1-chapter-ref target="u11"} odabrali važne mehanizme. Sada isti zakoni vrijede lokalno: Navier–Stokesove jednadžbe uz kontinuitet, materijalni model i rubne uvjete određuju polje. Jednostavne simetrije dale su Poiseuilleovo rješenje; složen difuzor obično traži numerički račun.
 
-1. **modelna pogreška** — jesu li jednadžbe, konstitutivni model i rubni uvjeti prikladni;
-2. **numerička pogreška** — diskretizacija, iteracije, vremenski korak i mreža;
-3. **validacijska razlika** — nesigurnost eksperimenta i razlika stvarnog sustava od modela.
+**Od jednadžbe do iteracije.** FVM integrira bilance po ćelijama. Tokovi i gradijenti približavaju se pomoću susjednih vrijednosti, a vremenske promjene pomoću odabranih vremenskih razina. Tako kontinuirane jednadžbe postaju spregnut, uglavnom nelinearan algebarski sustav. Računalo ažurira približne vrijednosti polja i rješava pripadne linearizirane sustave. U nestlačivom modelu tlak i brzina usklađuju se s očuvanjem mase. Iteracija nije vrijeme putovanja tlačnog vala; fizički vremenski korak postoji kada pratimo nestacionarni tok.
 
-Reziduali sami ne dokazuju točnost. Minimalni zapis uključuje bilancu mase, praćene integralne veličine i rezultat na najmanje tri sustavno profinjene mreže [@nasa-cfd-vv; @asme-vv20-2009].
+**Od mreže do izlaza.** Na skici graničnog sloja brzina se brzo mijenja uz stijenku: ondje mreža mora razlučiti gradijent potreban za $\tau_w$. U difuzoru su važni i zakrivljenost, odvajanje i trag iza njega. Više ćelija samo po sebi ne jamči bolji rezultat; mreža mora odgovarati geometriji, modelu stijenke i veličini koju tražimo. Iz polja dobivamo profil, protok, pad tlaka ili silu, prema @sec-cfd-polja-izlazi.
 
-Za vježbu su u `data/cfd/` pripremljeni Poiseuilleov analitički slučaj, sintetički Venturi/difuzor i javni NASA TMR profilni skup. Prva dva sadrže puni nastavni trag reziduala, monitora, bilance i GCI-ja. Profilni skup dopunjen je zaokruženim vrijednostima i izričitim nastavnim pretpostavkama o nesigurnosti: omogućuje cjelovit račun usporedbe u Z6, uz razlikovanje takve procjene od dokumentirane validacije izvornog proračuna. Podrijetlo vrijednosti i granice procjene objašnjeni su u dodatku D.
+**Od izlaza do provjere.** Rezidual mjeri koliko trenutačne vrijednosti ne zadovoljavaju diskretne jednadžbe. Njegov pad ne dokazuje malu pogrešku prema kontinuiranom modelu. Zato uz izlaznu veličinu provjeravamo bilance, zasebno prostorno i vremensko profinjenje te prikladnost modela prema mjerenjima. Razliku verifikacije i validacije te cijeli postupak na Venturiju daje @sec-cfd-venturi [@nasa-cfd-vv].
+
+Z6 i [pripremljeni paketi](d04_numericka_mehanika_fluida.qmd#sec-cfd-vv-paketi) omogućuju račun konvergencije i nesigurnosti uz jasno označene sintetičke podatke. MF1 daje zakone, pretpostavke i bilance; CFD proširuje njihovu primjenu kada analitička jednostavnost prestane biti dovoljna.
 
 ::: {.mf1-samoprovjera}
 <p class="mf1-box-label">Provjeri sebe</p>
@@ -268,15 +265,6 @@ Zbog konvektivnog ubrzanja. Potrebni su newtonski fluid, konstantna viskoznost i
 :::
 :::
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — lokalne jednadžbe</p>
-
-Navier–Stokesove jednadžbe iz ovoga poglavlja numerički se diskretiziraju po ćelijama, čvorovima ili funkcijskim bazama, ovisno o metodi. Provjera reziduala nije sama po sebi dokaz točnosti: prati se i očuvanje mase, mrežna konvergencija te osjetljivost rezultata na model turbulencije i rubne uvjete.
-
-Za svaku izlaznu veličinu, primjerice pad tlaka, silu, profil brzine ili položaj odvajanja, treba pokazati zasebnu konvergenciju. Mreža koja dobro daje ukupni protok može biti preslaba za smično naprezanje na stijenci ili za lokalni gradijent tlaka.
-
-Verifikacija pita rješava li diskretni model pravilno zadane jednadžbe, a validacija odgovara predstavlja li taj model stvarni sustav. Nijedna se od te dvije provjere ne može zamijeniti samo malim rezidualom.
-:::
 
 ## Zadaci za vježbu {#sec-realni-tok-zadaci}
 

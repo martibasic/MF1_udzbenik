@@ -41,16 +41,6 @@ $$ {#eq-sile-plohe-referentni-tlak-i-smjer-sile-02}
 
 Jednoliki član mijenja i silu i položaj njezina hvatišta. Zbog toga formula za centar tlaka izvedena samo za $p=\rho gh$ ne smije biti automatski primijenjena na zatvoren spremnik s plinskim nadtlakom.
 
-<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — tlak na stijenci</p>
-
-U CFD-u se hidrostatska sila na plohu dobiva integracijom diskretnog tlačnog polja po stijenci. Rješenje u mirnom spremniku mora zato vratiti istu rezultantu i isto hvatište kao analitička integracija; odstupanje se najprije tumači mrežom uz rubove i ravnotežom gradijenta tlaka s gravitacijom.
-
-U izvještaju treba navesti referencu tlaka, obuhvaćenu stijenku i točku oko koje se računa moment. Sila može izgledati točno, a hvatište biti pogrešno ako je raspodjela tlaka u području ruba nedovoljno razlučena.
-
-Pri valovima, strujnom udaru ili pomičnoj zaklopki hidrostatički rezultat ostaje početna provjera, ali više nije konačno opterećenje konstrukcije. Tada se uz tlačnu silu ocjenjuju vremenski vrhovi, inercija konstrukcije i odgovarajuće sigurnosne kombinacije.
-:::
 
 ## Ravna ploha: rezultanta i centar tlaka
 
@@ -146,42 +136,17 @@ Prije pokretanja predvidi kako će se promijeniti $F$ i razlika $h_{CP}-h_C$ kad
 </div>
 :::
 
-<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
+
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — integracija opterećenja po stijenci</p>
+<p class="mf1-box-label">Numerički most — od tlaka do sile i hvatišta</p>
 
-Numerički tlak na stijenci sam po sebi nije projektna sila. Rezultanta i moment dobivaju se integracijom tlaka po cijeloj plohi, pri čemu mreža mora dovoljno razlučiti rubove, zakrivljenost i promjenu dubine; zatim se integrirana sila uspoređuje s hidrostatskim rješenjem istoga slučaja.
+**Fizikalna poveznica.** Hidrostatsko polje iz []{.mf1-chapter-ref target="u03"} daje silu $F=\int_Ap\,dA$. Podijelimo li ravnu plohu na male dijelove, računalo zbraja približne doprinose $p_iA_i$ i njihove momente oko zadane osi.
+
+**Provjera i primjena.** Za vrata u mirnoj vodi uspoređuju se i sila i hvatište s ručnim računom, uz istu razliku tlakova na dvjema stranama. Točna ukupna sila sama ne jamči točan moment. Pri udaru vala CFD može dati promjenjivo polje tlaka i vršno opterećenje oslonaca, za koje hidrostatika više nije dovoljna. Postupak povratka iz polja u silu nastavlja se u []{.mf1-chapter-ref target="u10"}.
+
+[]{#verifikacija-cfd-a-ručnim-računom}
 :::
 
-<!-- [RESTAURACIJA] Doslovno preuzeto iz c417e9f: staro U05 -->
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Veza s numeričkim proračunom.** Za ravnu plohu integral $F = \int_A p\,dA$ daje iznos tlačne sile, a moment određuje njezin pravac djelovanja. **Sila i moment standardni su rezultati CFD analize** opterećenja stijenke, primjerice vrata brane, krila zrakoplova ili lopatice turbine. U općem strujanju tlak $p$ ne mora biti linearan po dubini, nego se dobiva numeričkim proračunom polja.
-
-**Postupak numeričkog proračuna.** Mreža uz stijenku mora dovoljno razlučiti raspodjelu tlaka; pregruba mreža može dati netočnu silu i moment. Alati za praćenje sila i momenata (`forces`, `forceCoeffs`, *Surface Reports*) zapisuju te veličine ili njihove koeficijente u zadanim koracima proračuna. Stabilizacija tih zapisa jedan je pokazatelj iteracijske konvergencije; treba provjeriti i reziduale, bilance te osjetljivost na profinjenje mreže.
-
-**Tipičan scenarij.** U projektiranju brana i ustava CFD se ne primjenjuje na samu hidrostatsku silu (jer je analitička), nego na **dinamičke** uvjete: udar vala na branu, prelijevanje preko krune, lokalno pojačanje tlaka u kanalima za ispuštanje. Vremenski niz sile na površini vrata pokazuje vršna opterećenja u prolaznom stanju koja statički proračun ne otkriva. Nakon provjere proračuna ta se opterećenja mogu koristiti pri dimenzioniranju zglobnih oslonaca i vijčanih spojeva.
-
-**Alati u kojima se to susreće:** `OpenFOAM` (`forces`, `forceCoeffs`) · `ANSYS Fluent` (*Force Report*, *Moment Report*) · `ParaView` (*Integrate Variables*).
-
-> *Nije gradivo MF1. Sila i moment koji se ovdje određuju ručno u CFD-u računaju se integracijom po diskretiziranoj plohi; točnost ovisi i o prikazu geometrije i polja tlaka.*
-:::
-
-::: {.callout-tip collapse="true" icon="false"}
-## Verifikacija CFD-a ručnim računom
-
-Pri CFD simulaciji uronjene ravne plohe (vrata brane, inspekcijskog poklopca ili stijenke spremnika) funkcijski objekt `forces` integrira tlačne i viskozne doprinose po odabranoj rubnoj plohi. Za miran fluid viskozni doprinos iščezava, pa se provjerava tlačna sila. Ručna provjera iz ovog poglavlja glasi: $F = \rho g z_T A$ za poznato $z_T$ (dubina težišta) i $A$ (površina plohe). Za ovu nastavnu usporedbu može se zadati dopušteno relativno odstupanje od $2\%$; to nije univerzalni kriterij točnosti. Veće odstupanje zahtijeva provjeru reference i rubnih uvjeta tlaka, hidrostatske ravnoteže, integracije te iteracijske i mrežne konvergencije. Slaganje s analitičkim rješenjem provjerava numerički proračun; samo po sebi nije validacija modela mjerenjem niti dovoljna osnova za projektnu odluku.
-:::
-
-<!-- [NOVA PEDAGOŠKA DOPUNA] -->
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerička poveznica — ravna ploha: od tlaka do hvatišta</p>
-
-**Što se zbraja.** Za zadanu geometriju, gustoću, gravitaciju i referencu tlaka traže se raspodjela tlaka, sila i položaj njezina hvatišta. Ako tlak nije jednolik, ploha se u numeričkom opisu dijeli na male elemente. Vrijednost $p_i$ predstavlja lokalni tlak na elementu površine $A_i$, pa je njegov doprinos sili približno $p_iA_i$; zbroj tih doprinosa približava integral $\int_Ap\,dA$. Umnožak jednoga tlaka i cijele površine opravdan je samo za jednolik tlak ili za jasno određen površinski prosjek, koji ovdje za linearno hidrostatsko polje odgovara tlaku u težištu.
-
-**Sila i moment nisu ista provjera.** Za hvatište se uz svaki doprinos sili zbraja i njegov moment prema odabranoj osi; omjer ukupnoga momenta i ukupne sile daje položaj rezultante. Zato mreža može dati prihvatljiv ukupni $F$, a pogrešan centar tlaka ako ne razlučuje rubove ili promjenu tlaka. Fizikalna provjera jest usporedba s poznatim linearnim hidrostatskim poljem, jednolikim slučajem $F=pA$ ili očekivanom simetrijom; mirna vremenska serija sile pokazuje numeričku stabilnost, ali sama nije dovoljna verifikacija.
-:::
 
 ## Riješeni primjeri: ravne plohe
 
@@ -394,29 +359,14 @@ Prije pokretanja odredi smjer $F_V$ samo iz strane koju fluid kvasi. Zatim mijen
 </div>
 :::
 
-<!-- [RESTAURACIJA] Doslovno preuzeto iz c417e9f: staro U06 -->
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Veza s numeričkim proračunom.** Za analitički nedostupne geometrije — segmentnu ustavu, turbinsku lopaticu, krilo ili brodski trup — sila se dobiva vektorskom integracijom trakcije. Ako je $\vec A_i$ vanjski vektor površine **fluidnoga** kontrolnog volumena, tlačna sila stijenke na fluid jest približno $-\sum_i p_i\vec A_i$, uz dodatak viskozne trakcije; sila fluida na stijenku ima suprotan predznak. Znak zato ovisi o tome izvještava li alat silu na fluid ili na zid i kako je orijentirana normala.
-
-**Postupak numeričkog proračuna.** Mreža mora dobro razlučiti zakrivljenost — to je zadatak generatora mreže (`snappyHexMesh`, *Fluent meshing*). Što je veća lokalna zakrivljenost, to finija mreža treba biti uz stijenku. Rezultati izlaze kao horizontalna, vertikalna i ukupna sila *izravno*, bez ručnog rastavljanja.
-
-**Tipičan scenarij.** Krilo zrakoplova, lopatica turbine, propeler ili brodski trup imaju zakrivljenu mokru plohu na kojoj se ne može unaprijed napisati raspodjela tlaka. CFD daje trodimenzijsko polje tlaka $p(x,y,z)$, a integracijom po odabranoj rubnoj plohi dobivaju se tlačni doprinosi uzgonu, otporu i momentu. Za ukupno opterećenje dodaju se viskozni doprinosi. Pritom nije potrebno ručno rastavljanje na projekcije i pomoćne volumene.
-
-**Alati u kojima se to susreće:** `OpenFOAM` (`snappyHexMesh`, `forces`, `forceCoeffs`) · `ANSYS Fluent` (*Fluent Meshing*, *Force Report*) · `Star-CCM+` (*Surface Wrapper*, *Force Reports*).
-
-> *Nije gradivo MF1. Vektorska integracija primjenjuje se i na složene trodimenzijske plohe, uz provjeru mreže i izračunanog polja.*
-:::
-
-<!-- [NOVA PEDAGOŠKA DOPUNA] -->
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerička poveznica — zakrivljena ploha: normala i predznak</p>
+<p class="mf1-box-label">Numerički most — normala određuje smjer sile</p>
 
-**Zašto je doprinos vektor.** Na elementu zakrivljene plohe tlak $p_i$ djeluje okomito na njegovu lokalnu površinu. Element $A_i$ daje vektorski doprinos $p_i\mathbf n_{f,i}A_i$, pa se ne zbrajaju samo iznosi, nego i predznačene vodoravne i okomite komponente svakog doprinosa. Geometrija stoga mora dati i veličinu elementa i normalu $\mathbf n_{f,i}$; pogrešno okrenuta normala mijenja predznak sile, iako iznos tlaka ostaje isti.
+Na zakrivljenoj plohi mijenja se i smjer tlačne sile. Ako $\vec n_{f,i}$ pokazuje iz fluida u stijenku, sila **fluida na stijenku** približno je $\sum_i p_i\vec n_{f,i}A_i$; reakcija na fluid ima suprotan predznak. Za opterećenje s dviju strana uračunaju se oba tlaka.
 
-**Što se provjerava.** Nakon zbrajanja lokalnih doprinosa provjeravaju se očekivani smjer rezultante, simetrija kada je geometrija simetrična te slaganje komponenti s vertikalnom projekcijom i pomoćnim volumenom u slučajevima za koje su ti hidrostatski postupci dopušteni. Konvergiran zbroj na jednoj mreži nije sam dokaz ispravnog smjera; rezultat se mora provjeriti i pri profinjenju područja veće zakrivljenosti. Detalji površinske diskretizacije, rubnih uvjeta i verifikacije nalaze se u []{.mf1-chapter-ref target="u12"} i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
+Računalni prikaz mora razlučiti zakrivljenost i promjenu tlaka. U mirnom slučaju provjeri komponente projekcijom i pomoćnim volumenom iz ovoga poglavlja. Ista integracija primjenjuje se na trup složenog oblika; u strujanju se dodaje viskozno naprezanje (@sec-cfd-polja-izlazi).
 :::
+
 
 ## Riješeni primjeri: zakrivljene plohe
 

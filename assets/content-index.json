@@ -11,7 +11,7 @@
       "kind": "frontmatter",
       "number": "0",
       "part": null,
-      "source_sha256": "f0e8a5fffaffd93eddf94151e35b41252f81bb0a67e4baf72896f414e3b299e6",
+      "source_sha256": "ec262e2e1ecd6fc052ea80e78a555240995a0d6e32632f98079148a247830e21",
       "sections": [
         {
           "id": "o-udžbeniku",
@@ -71,7 +71,7 @@
       "kind": "chapter",
       "number": "1",
       "part": "part-1",
-      "source_sha256": "426e2fb6f9e07223cb4efe662a9fa6335c9b5cb3454fa58ce7f505899963c702",
+      "source_sha256": "9855e5794b07e8f38be055d2b2c03e402c582d2a7a104e164a223ffa60ea6a44",
       "sections": [
         {
           "id": "fluid-kao-kontinuum",
@@ -216,7 +216,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "b09cf4c91cf08e6f4a0467d5052c3ae09cadf3d853a8fc04bca3ee700f26947b",
+      "source_sha256": "381e02e2529d6029a87fbfa0dab4c2a78b072c310fdfa4e9fa1e54ebeb5dfb13",
       "sections": [
         {
           "id": "viskoznost-i-međupovršinske-pojave",
@@ -364,7 +364,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "82566a9287558b2b3d79e00c55842b60067052dd18e7d594f11bf7c1dea2432a",
+      "source_sha256": "407c7288a323d02f47ebb4655b90303a82eec14bbafddeacddafcb2fedac2dcf",
       "sections": [
         {
           "id": "hidrostatička-raspodjela-tlaka",
@@ -507,7 +507,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "1aeb01a0bdf59a364cd19958611fc5280d75b21a0176ab1e5901c60c8677b8e7",
+      "source_sha256": "cecffcd6e60ea9f81c417af8b670ffb2cb6311be5ac4692e7d1f75f1699b2315",
       "sections": [
         {
           "id": "relativno-mirovanje-fluida",
@@ -649,7 +649,7 @@
       "kind": "chapter",
       "number": "5",
       "part": "part-2",
-      "source_sha256": "8a16391450ab36887524cb1c7a0932e5bf82b2e13d72209b1305627d15e7e40c",
+      "source_sha256": "5ade907f73e431f10e4747555537c0cea9e88e9d2041847dfc1d0b4859c84cd5",
       "sections": [
         {
           "id": "hidrostatske-sile-na-plohe",
@@ -823,7 +823,7 @@
       "kind": "chapter",
       "number": "6",
       "part": "part-2",
-      "source_sha256": "181b02096d1b9ffe907b81693eff41ef47b33f4500d8964ffcb0a5641ec393f1",
+      "source_sha256": "9508b957e8742b4f5941c06064a7e8deec7729d73fc78ff221feb96ee6662c50",
       "sections": [
         {
           "id": "uzgon-plivanje-i-početni-stabilitet",
@@ -983,7 +983,7 @@
       "kind": "chapter",
       "number": "7",
       "part": "part-3",
-      "source_sha256": "12764f3bcab24f4eef6acada56b4004d2b7ebc4aa15675fb0511cc7047214131",
+      "source_sha256": "3a8b07c24ce650ced84cbf48d49d102ece056971bea21188e43752a88af2f2b1",
       "sections": [
         {
           "id": "kinematika-kontrolni-volumen-i-kontinuitet",
@@ -1072,6 +1072,7 @@
         "eq-kinematika-kv-matematicki-izvod-diferencijalni-oblik-kontinuit-03",
         "eq-kinematika-kv-matematicki-izvod-diferencijalni-oblik-kontinuit-04",
         "eq-kinematika-kv-matematicki-izvod-diferencijalni-oblik-kontinuit-05",
+        "eq-celijska-bilanca-mase",
         "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-01",
         "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-02",
         "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-03",
@@ -1150,7 +1151,7 @@
       "kind": "chapter",
       "number": "8",
       "part": "part-3",
-      "source_sha256": "c6520ee3bff450ceb6e9448b1daadeb756e048af41480c6897555b3cedbe5814",
+      "source_sha256": "1b336a70bd015b69cb5d63235d75060ab0612e3b587ee1a14fa4f0392f0a4b50",
       "sections": [
         {
           "id": "energijska-jednadžba-i-bernoullijeva-jednadžba",
@@ -1289,7 +1290,7 @@
       "kind": "chapter",
       "number": "9",
       "part": "part-3",
-      "source_sha256": "28ec46a6e6eb3fcdbd6c23fc4f75f318a39529a42456b6e481bd21d933009585",
+      "source_sha256": "3f84731f17e55c8305bc36ef2d7c2c545c6eedd79a9826e3da63d608efead6e1",
       "sections": [
         {
           "id": "sec-kompresibilni-motivacija",
@@ -1400,7 +1401,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "62e903070714792504497a4b8719455c0e0bf658ca6b81c05a1ea27ae5bdfec0",
+      "source_sha256": "fe58067baa44ba4f0e01333a9d1f936e69244921c58206498684b5972d3d32e8",
       "sections": [
         {
           "id": "količina-i-moment-količine-gibanja",
@@ -1551,7 +1552,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "0626f3a4b1f9d9129c1b909607f381b0cad7483d6399de63d6d39ee512a85c1c",
+      "source_sha256": "aa9989a259e981eb59df8f8c1ab5a194e79e47425eaa49ee23210c60c17c4fac",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",
@@ -1695,7 +1696,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "ebbf35666a8cd4bacdf0523ba3e99a4d1c5385ff96937f7b72385fb28a85f43f",
+      "source_sha256": "6e870c8c5c6a3326a83b727561369470c9d9650230c766bbcb95896364cb303f",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1822,7 +1823,7 @@
       "kind": "chapter",
       "number": "13",
       "part": "part-5",
-      "source_sha256": "3041058ada2a39d20df8531a87e28d843f8f13fde5d17f28e2e40649f41a5eb4",
+      "source_sha256": "4b68fd9aebdb23d6fac8fb2f1ef396a66bdc1bc79c70b0f93a06bf2184c42b18",
       "sections": [
         {
           "id": "sec-cjevovodi-motivacija",
@@ -1988,7 +1989,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "d27ee4265528b13281463f812769649d767946cd88a30d9e26363804cd2f2034",
+      "source_sha256": "ec6a06182af41467296906436b9db1a8e0852aed0da9c50049b339ad2ede6cf3",
       "sections": [
         {
           "id": "turbostrojevi-i-propulzija",
@@ -2138,7 +2139,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "737112d4fc79792090fd7f2a1955ecaf53beab8c85641cbdb1de3259b0c56bd8",
+      "source_sha256": "d5a8a50aec3d5a73a5338c0adae84c403e5304fb4abcb2eb50a33613fb1ccd87",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2325,7 +2326,7 @@
       "kind": "appendix",
       "number": "B",
       "part": null,
-      "source_sha256": "76e15da24a651f4f3286bb0b0eabfbd31ef8c400f77dcbfce61af3a17cb80b65",
+      "source_sha256": "17552df57d2e569adf86519834344c89171f117e96adf336d1cdbd16b8ef9153",
       "sections": [
         {
           "id": "pojmovnik",
@@ -2393,7 +2394,7 @@
       "kind": "appendix",
       "number": "D",
       "part": null,
-      "source_sha256": "66ef528a6daa22d41804eb35bb0ac091a990e45d4779fe3f58b9e2596855e56e",
+      "source_sha256": "414502b9131f814fad76641c6ab864ce6623962683695f7dd5ff868f26e7c3b1",
       "sections": [
         {
           "id": "mehanika-fluida-i-numerika-pregled",
@@ -2414,19 +2415,19 @@
           "number": "D.3"
         },
         {
-          "id": "rječnik-mf1-cfd-prijevod-pojmova",
+          "id": "sec-cfd-mapa",
           "level": 2,
           "title": "Rječnik MF1 → CFD: prijevod pojmova",
           "number": "D.4"
         },
         {
-          "id": "kako-se-mf1-jednadžbe-slažu-u-cfd-slici",
+          "id": "sec-cfd-polja-izlazi",
           "level": 2,
           "title": "Kako se MF1 jednadžbe slažu u CFD slici",
           "number": "D.5"
         },
         {
-          "id": "kada-cfd-ne-treba-granice-primjenjivosti",
+          "id": "sec-cfd-kada-ne-treba",
           "level": 2,
           "title": "Kada CFD ne treba: granice primjenjivosti",
           "number": "D.6"
@@ -2438,13 +2439,13 @@
           "number": "D.7"
         },
         {
-          "id": "tipičan-cfd-tijek-na-primjeru-iz-mf1-venturijeva-cijev",
+          "id": "sec-cfd-venturi",
           "level": 2,
           "title": "Tipičan CFD tijek na primjeru iz MF1: Venturijeva cijev",
           "number": "D.8"
         },
         {
-          "id": "tri-pripremljena-vv-paketa",
+          "id": "sec-cfd-vv-paketi",
           "level": 2,
           "title": "Tri pripremljena V&V paketa",
           "number": "D.9"
@@ -6584,249 +6585,256 @@
       "number": "7.25",
       "latex": "\\nabla\\cdot\\vec{v} = 0."
     },
+    "eq-celijska-bilanca-mase": {
+      "id": "eq-celijska-bilanca-mase",
+      "kind": "Equation",
+      "document": "u07",
+      "number": "7.26",
+      "latex": "\\frac{(\\rho V)_i^{n+1}-(\\rho V)_i^n}{\\Delta t}\n+\\sum_{f\\in\\partial i}\\dot m_f^{n+1}=0,\n\\qquad \\dot m_f\\approx\\rho_f(\\vec v_f\\cdot\\vec n_f)A_f."
+    },
     "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-01": {
       "id": "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-01",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.26",
+      "number": "7.27",
       "latex": "A_1 = \\frac{\\pi D_1^2}{4} = \\frac{\\pi \\cdot 0{,}12^2}{4} \\approx 0{,}01131\\ \\text{m}^2,"
     },
     "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-02": {
       "id": "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-02",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.27",
+      "number": "7.28",
       "latex": "A_2 = \\frac{\\pi D_2^2}{4} = \\frac{\\pi \\cdot 0{,}18^2}{4} \\approx 0{,}02545\\ \\text{m}^2."
     },
     "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-03": {
       "id": "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-03",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.28",
+      "number": "7.29",
       "latex": "v_1 = \\frac{A_2}{A_1} v_2 = \\left(\\frac{0{,}18}{0{,}12}\\right)^2 \\cdot 16 = 36\\ \\text{m/s}."
     },
     "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-04": {
       "id": "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-04",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.29",
+      "number": "7.30",
       "latex": "Q = A_2 v_2 = 0{,}02545 \\cdot 16 \\approx 0{,}407\\ \\text{m}^3/\\text{s}."
     },
     "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-05": {
       "id": "eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-05",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.30",
+      "number": "7.31",
       "latex": "\\dot{m} = \\rho Q = 998 \\cdot 0{,}407 \\approx 406\\ \\text{kg/s} \\approx 4{,}06 \\cdot 10^2\\ \\text{kg/s}."
     },
     "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-01": {
       "id": "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-01",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.31",
+      "number": "7.32",
       "latex": "A_T = Lb = 3{,}0 \\cdot 1{,}8 = 5{,}40\\ \\text{m}^2."
     },
     "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-02": {
       "id": "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-02",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.32",
+      "number": "7.33",
       "latex": "\\frac{dh}{dt} = \\frac{Q_{in} - Q_{out}}{A_T} = \\frac{0{,}022 - 0{,}008}{5{,}40} \\approx 2{,}59 \\cdot 10^{-3}\\ \\text{m/s} \\approx 0{,}155\\ \\text{m/min}."
     },
     "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-03": {
       "id": "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-03",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.33",
+      "number": "7.34",
       "latex": "\\Delta h = h_1 - h_0 = 1{,}20 - 0{,}45 = 0{,}75\\ \\text{m},"
     },
     "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-04": {
       "id": "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-04",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.34",
+      "number": "7.35",
       "latex": "\\Delta V = A_T \\Delta h = 5{,}40 \\cdot 0{,}75 = 4{,}05\\ \\text{m}^3."
     },
     "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-05": {
       "id": "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-05",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.35",
+      "number": "7.36",
       "latex": "t = \\frac{\\Delta V}{Q_{in} - Q_{out}} = \\frac{4{,}05}{0{,}014} \\approx 289\\ \\text{s} \\approx 4{,}82\\ \\text{min}."
     },
     "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-06": {
       "id": "eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-06",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.36",
+      "number": "7.37",
       "latex": "\\Delta m = \\rho \\Delta V = 998 \\cdot 4{,}05 \\approx 4{,}04 \\cdot 10^3\\ \\text{kg} \\approx 4040\\ \\text{kg}."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-01": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-01",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.37",
+      "number": "7.38",
       "latex": "\\rho_B = s_B \\rho_A = 1{,}10 \\cdot 1000 = 1100\\ \\text{kg/m}^3."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-02": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-02",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.38",
+      "number": "7.39",
       "latex": "A_3 = \\frac{\\pi D_3^2}{4} = \\frac{\\pi \\cdot 0{,}10^2}{4} \\approx 7{,}854 \\cdot 10^{-3}\\ \\text{m}^2,"
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-03": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-03",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.39",
+      "number": "7.40",
       "latex": "Q_3 = A_3 v_3 = 7{,}854 \\cdot 10^{-3} \\cdot 1{,}80 \\approx 1{,}414 \\cdot 10^{-2}\\ \\text{m}^3/\\text{s} \\approx 14{,}1\\ \\text{L/s}."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-04": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-04",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.40",
+      "number": "7.41",
       "latex": "\\dot{m}_{in} = \\rho_A Q_A + \\rho_B Q_B = 1000 \\cdot 0{,}018 + 1100 \\cdot 0{,}006 = 18 + 6{,}6 = 24{,}6\\ \\text{kg/s}."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-05": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-05",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.41",
+      "number": "7.42",
       "latex": "Q_{in} = Q_A + Q_B = 0{,}018 + 0{,}006 = 0{,}024\\ \\text{m}^3/\\text{s},"
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-06": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-06",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.42",
+      "number": "7.43",
       "latex": "\\rho_3 = \\frac{\\dot{m}_{in}}{Q_{in}} = \\frac{24{,}6}{0{,}024} = 1025\\ \\text{kg/m}^3."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-07": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-07",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.43",
+      "number": "7.44",
       "latex": "A_T = Lb = 4{,}2 \\cdot 1{,}5 = 6{,}30\\ \\text{m}^2."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-08": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-08",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.44",
+      "number": "7.45",
       "latex": "\\frac{dh}{dt} = \\frac{0{,}024 - 0{,}01414}{6{,}30} \\approx 1{,}57 \\cdot 10^{-3}\\ \\text{m/s} \\approx 0{,}094\\ \\text{m/min}."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-09": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-09",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.45",
+      "number": "7.46",
       "latex": "\\Delta h = h_1 - h_0 = 1{,}20 - 0{,}80 = 0{,}40\\ \\text{m},"
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-10": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-10",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.46",
+      "number": "7.47",
       "latex": "\\Delta V = A_T \\Delta h = 6{,}30 \\cdot 0{,}40 = 2{,}52\\ \\text{m}^3."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-11": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-11",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.47",
+      "number": "7.48",
       "latex": "t = \\frac{\\Delta V}{Q_A + Q_B - Q_3} = \\frac{2{,}52}{0{,}024 - 0{,}01414} \\approx 255\\ \\text{s} \\approx 4{,}26\\ \\text{min}."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-12": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-12",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.48",
+      "number": "7.49",
       "latex": "\\Delta m = \\rho_3 \\Delta V = 1025 \\cdot 2{,}52 \\approx 2583\\ \\text{kg} \\approx 2{,}58\\ \\text{t}."
     },
     "eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-01": {
       "id": "eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-01",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.49",
+      "number": "7.50",
       "latex": "A_1 = \\frac{\\pi D_1^2}{4} = \\frac{\\pi \\cdot 0{,}032^2}{4} = 8{,}042 \\cdot 10^{-4}\\ \\text{m}^2"
     },
     "eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-02": {
       "id": "eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-02",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.50",
+      "number": "7.51",
       "latex": "Q_1 = A_1 v_1 = 8{,}042 \\cdot 10^{-4} \\cdot 4{,}5 = 3{,}619 \\cdot 10^{-3}\\ \\text{m}^3/\\text{s} = 3{,}62\\ \\text{L/s}"
     },
     "eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-03": {
       "id": "eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-03",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.51",
+      "number": "7.52",
       "latex": "Q_2 = 0{,}60 \\cdot Q_1 = 2{,}17\\ \\text{L/s}, \\quad Q_3 = 0{,}40 \\cdot Q_1 = 1{,}45\\ \\text{L/s}"
     },
     "eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-04": {
       "id": "eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-04",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.52",
+      "number": "7.53",
       "latex": "A_2 = \\frac{\\pi \\cdot 0{,}020^2}{4} = 3{,}142 \\cdot 10^{-4}\\ \\text{m}^2, \\quad v_2 = \\frac{Q_2}{A_2} = \\frac{2{,}17 \\cdot 10^{-3}}{3{,}142 \\cdot 10^{-4}} = 6{,}9\\ \\text{m/s}"
     },
     "eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-05": {
       "id": "eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-05",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.53",
+      "number": "7.54",
       "latex": "A_3 = \\frac{Q_3}{v_3} = \\frac{1{,}45 \\cdot 10^{-3}}{3{,}0} = 4{,}83 \\cdot 10^{-4}\\ \\text{m}^2 \\Rightarrow D_3 = \\sqrt{\\frac{4 A_3}{\\pi}} = 24{,}8\\ \\text{mm}"
     },
     "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-01": {
       "id": "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-01",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.54",
+      "number": "7.55",
       "latex": "Q = 25\\ \\text{L/min} = \\frac{25 \\cdot 10^{-3}}{60} = 4{,}167 \\cdot 10^{-4}\\ \\text{m}^3/\\text{s}."
     },
     "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-02": {
       "id": "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-02",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.55",
+      "number": "7.56",
       "latex": "A_1 = \\frac{\\pi D_1^2}{4} = \\frac{\\pi \\cdot 0{,}020^2}{4} \\approx 3{,}142 \\cdot 10^{-4}\\ \\text{m}^2."
     },
     "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-03": {
       "id": "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-03",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.56",
+      "number": "7.57",
       "latex": "v_1 = \\frac{Q}{A_1} = \\frac{4{,}167 \\cdot 10^{-4}}{3{,}142 \\cdot 10^{-4}} \\approx 1{,}326\\ \\text{m/s}."
     },
     "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-04": {
       "id": "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-04",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.57",
+      "number": "7.58",
       "latex": "A_d = \\frac{\\pi d^2}{4} = \\frac{\\pi \\cdot 0{,}006^2}{4} \\approx 2{,}827 \\cdot 10^{-5}\\ \\text{m}^2."
     },
     "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-05": {
       "id": "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-05",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.58",
+      "number": "7.59",
       "latex": "A_{n} = n \\cdot A_d = 16 \\cdot 2{,}827 \\cdot 10^{-5} \\approx 4{,}524 \\cdot 10^{-4}\\ \\text{m}^2."
     },
     "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-06": {
       "id": "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-06",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.59",
+      "number": "7.60",
       "latex": "v_d = \\frac{Q}{A_{n}} = \\frac{4{,}167 \\cdot 10^{-4}}{4{,}524 \\cdot 10^{-4}} \\approx 0{,}921\\ \\text{m/s}."
     },
     "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-07": {
       "id": "eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-07",
       "kind": "Equation",
       "document": "u07",
-      "number": "7.60",
+      "number": "7.61",
       "latex": "v_d' = \\frac{Q}{A_{n}'} = \\frac{4{,}167 \\cdot 10^{-4}}{4{,}241 \\cdot 10^{-4}} \\approx 0{,}982\\ \\text{m/s},"
     },
     "fig-uvod-u08": {
@@ -11168,6 +11176,11 @@
       "term": "Dinamička viskoznost",
       "document": "d02"
     },
+    "term-diskretizacija": {
+      "id": "term-diskretizacija",
+      "term": "Diskretizacija",
+      "document": "d02"
+    },
     "term-efektivno-ubrzanje": {
       "id": "term-efektivno-ubrzanje",
       "term": "Efektivno ubrzanje",
@@ -11471,6 +11484,30 @@
   },
   "references": [
     {
+      "document": "u05",
+      "target": "sec-cfd-polja-izlazi"
+    },
+    {
+      "document": "u07",
+      "target": "sec-realni-tok-cfd"
+    },
+    {
+      "document": "u08",
+      "target": "sec-cfd-venturi"
+    },
+    {
+      "document": "u08",
+      "target": "sec-cfd-venturi"
+    },
+    {
+      "document": "u10",
+      "target": "sec-cfd-polja-izlazi"
+    },
+    {
+      "document": "u10",
+      "target": "sec-realni-tok-cfd"
+    },
+    {
       "document": "u10",
       "target": "fig-u11-vjezbe"
     },
@@ -11484,11 +11521,27 @@
     },
     {
       "document": "u11",
+      "target": "sec-cfd-mapa"
+    },
+    {
+      "document": "u11",
       "target": "fig-u14-vjezbe"
+    },
+    {
+      "document": "u11",
+      "target": "sec-cfd-mapa"
     },
     {
       "document": "u12",
       "target": "eq-navier-stokes-nestlacivi"
+    },
+    {
+      "document": "u12",
+      "target": "sec-cfd-polja-izlazi"
+    },
+    {
+      "document": "u12",
+      "target": "sec-cfd-venturi"
     },
     {
       "document": "u13",
@@ -11513,10 +11566,102 @@
     {
       "document": "u13",
       "target": "eq-npsha-spremnik"
+    },
+    {
+      "document": "u13",
+      "target": "sec-cfd-kada-ne-treba"
+    },
+    {
+      "document": "u14",
+      "target": "sec-cfd-venturi"
+    },
+    {
+      "document": "u15",
+      "target": "sec-cfd-kada-ne-treba"
+    },
+    {
+      "document": "d02",
+      "target": "sec-cfd-venturi"
+    },
+    {
+      "document": "d02",
+      "target": "sec-cfd-venturi"
+    },
+    {
+      "document": "d04",
+      "target": "sec-cfd-mapa"
+    },
+    {
+      "document": "d04",
+      "target": "sec-cfd-polja-izlazi"
+    },
+    {
+      "document": "d04",
+      "target": "sec-cfd-venturi"
+    },
+    {
+      "document": "d04",
+      "target": "sec-cfd-vv-paketi"
+    },
+    {
+      "document": "d04",
+      "target": "sec-cfd-kada-ne-treba"
+    },
+    {
+      "document": "d04",
+      "target": "eq-celijska-bilanca-mase"
+    },
+    {
+      "document": "d04",
+      "target": "sec-realni-tok-cfd"
+    },
+    {
+      "document": "d04",
+      "target": "sec-turbulencija"
+    },
+    {
+      "document": "d04",
+      "target": "sec-turbulencija"
+    },
+    {
+      "document": "d04",
+      "target": "sec-realni-tok-cfd"
+    },
+    {
+      "document": "d04",
+      "target": "sec-turbulencija"
+    },
+    {
+      "document": "d04",
+      "target": "sec-cfd-vv-paketi"
+    },
+    {
+      "document": "d04",
+      "target": "eq-lokalna-kontinuitet"
+    },
+    {
+      "document": "d04",
+      "target": "eq-navier-stokes-nestlacivi"
+    },
+    {
+      "document": "d04",
+      "target": "eq-celijska-bilanca-mase"
+    },
+    {
+      "document": "d04",
+      "target": "ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2"
+    },
+    {
+      "document": "d04",
+      "target": "sec-realni-tok-cfd"
+    },
+    {
+      "document": "d04",
+      "target": "sec-cfd-venturi"
     }
   ],
   "counts": {
-    "Equation": 795,
+    "Equation": 796,
     "Figure": 94,
     "Example": 87,
     "Problem": 90

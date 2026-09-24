@@ -117,14 +117,6 @@ $$ {#eq-slicnost-bezdimenzijske-grupe-kao-omjeri-mehanizama-09}
 
 Darcyjev $\lambda$ i koeficijent otpora $C_d$ jesu bezdimenzijski odzivi. Jedna izmjerena krivulja može se prenositi samo unutar iste bezdimenzijske geometrije, rubnih uvjeta i skupa relevantnih grupa; primjerice $C_d$ osim o $Re$ može ovisiti o hrapavosti, $Ma$, slobodnoj turbulenciji i blizini stijenke.
 
-::: {.callout-note collapse="true" icon="false"}
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — bezdimenzijski rubni uvjeti</p>
-
-Numerička simulacija ne prenosi rezultat na drugi sustav samo zato što je geometrija slična. Materijalna svojstva, brzina, gravitacija, površinska napetost i stlačivost moraju dati isti skup mjerodavnih omjera, a rubni uvjeti moraju predstavljati iste fizikalne mehanizme.
-:::
-
-:::
 
 ## Kada se rezultat može prenijeti na drugi sustav
 
@@ -318,13 +310,20 @@ Otpor tijela → **koeficijent otpora** $C_d$; pad tlaka u cijevi → **koeficij
 :::
 
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — sličnost prije mreže</p>
+<p class="mf1-box-label">Numerički most — bezdimenzijski brojevi biraju fiziku</p>
 
-Bezdimenzijski brojevi određuju koju fiziku numerički model mora zadržati: uz $Re$ se, prema pojavi, pojavljuju $Fr$, $Ma$, $We$ ili druge skupine. Mreža i računalni rješavač ne mogu nadomjestiti pogrešno odabran omjer mehanizama, geometriju ili bezdimenzijske rubne uvjete.
+**Prije mreže odaberi fiziku.** Bezdimenzijski brojevi pomažu odlučiti koje članove zadržati, koje pretpostavke provjeriti i koji izlaz pratiti. Računaju se iz procijenjenih skala prije simulacije, a zatim provjeravaju dobivenim poljem.
 
-Prije izrade mreže zato se zapisuje izlazna veličina i procjenjuju se mjerodavne skale duljine, brzine, vremena i tlaka. Tek tada se može opravdati nestlačivi, jednofazni, stacionarni ili dvodimenzijski model; račun koji ne sadrži bitan mehanizam ne postaje ispravan usitnjavanjem mreže.
+| Broj | Odluka o modelu | Primjer ciljanog izlaza |
+|---|---|---|
+| $Re$ | važnost viskoznosti; procjena režima uz geometriju, hrapavost i dotok | otpor, $\lambda$ |
+| $Fr$ | važnost gravitacije i promjene slobodne površine | valna visina, gaz |
+| $Ma$ | može li gustoća ostati stalna ili treba kompresibilni model | maseni protok sapnice |
+| $We$ | treba li zadržati površinsku napetost | oblik ili raspad kapi |
 
-Usporedba modela i prototipa zahtijeva više od jednakoga Reynoldsova broja kada su prisutne gravitacija, površinska napetost ili stlačivost. Ako se važne grupe ne mogu sve uskladiti, navodi se prioritetna sličnost i procjenjuje posljedica preostaloga neslaganja.
+**Račun i provjera.** Slični bezdimenzijski izlazi očekuju se tek uz isti skup važnih grupa, geometriju te početne i rubne uvjete. Za model broda samo jednak $Re$ ne osigurava sličnost valova; ako se $Re$ i $Fr$ ne mogu zajedno uskladiti, treba obrazložiti prioritet i ograničenje prijenosa rezultata.
+
+Finija mreža ne može vratiti izostavljenu fiziku. U []{.mf1-chapter-ref target="u12"} odabrani model postaje sustav lokalnih jednadžbi, a @sec-cfd-mapa povezuje ga s inženjerskim izlazima.
 :::
 
 ## Riješeni primjeri
@@ -891,17 +890,6 @@ Redom za $\lambda_L=20,30$: $v_m\approx(1{,}342;1{,}095)\ \text{m/s}$, $Q_m\appr
 
 ![Skice šest vježbi: Reynoldsov i Machov broj, referentni tlak senzora, hidroprofil i njegov model, vrtložno otpuštanje te presjeci dvaju modela preljeva.](../assets/print/u14_vjezbe_skice.svg){#fig-u14-vjezbe fig-align="center" fig-alt="Šest označenih skica Z1–Z6. Cijevni otvori i mjerni priključak prohodni su; promjeri i tetive mjere stvarne presjeke. Z4 uspoređuje geometrijski slične profile u vodi i zraku. Z6 prikazuje pravokutne presjeke modela 1:20 i 1:30 u istom grafičkom mjerilu."}
 
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Veza s numeričkim proračunom.** Bezdimenzioniranje pokazuje koje parametre numerički model mora očuvati. U najjednostavnijem jednofaznom, nestlačivom toku newtonskog fluida konstantnih svojstava pojavljuje se $Re$; dodatna fizika i rubni uvjeti uvode dodatne grupe. Jednaki brojevi daju jednako bezdimenzijsko polje samo uz jednaku bezdimenzijsku geometriju te iste početne i rubne uvjete.
-
-**Postupak numeričkog proračuna.** $Re$ je jedan od ulaza u odluku o laminarnom, RANS, LES ili drugom pristupu, zajedno s geometrijom, nestacionarnošću i traženim rezultatom. Veličina $y^+$ provjerava usklađenost prve ćelije sa zidnom obradom; nije samostalna mjera kvalitete cijele mreže. Koeficijenti $C_d$, $C_p$ i $\lambda$ mogu se izračunati iz numeričkog rješenja kao normirani izlazi.
-
-**Tipičan scenarij.** Pri slobodnoj površini (brod, preljev) dodaje se Froudeov broj te odabire prikladan opis slobodne površine, primjerice metoda VOF za praćenje granice voda–zrak; kod kapljica i mlaza ulazi Weberov broj. Izbor relevantnih brojeva prije simulacije izravno određuje koja se fizika uopće razrješava.
-
-> *Nije gradivo MF1. U kasnijim kolegijima posvećenima računalnoj dinamici fluida opisani sadržaj postat će poznat teren.*
-:::
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -939,7 +927,7 @@ Udžbenik uz integralnu analizu uvodi i osnove stlačivoga toka, diferencijalnog
 - **granični sloj i otpor tijela** — kako granični sloj, odvajanje i raspodjela tlaka utječu na otpor i uzgon (koeficijent $C_d$, „otporna kriza” iz ovog poglavlja detaljno se obrađuje u aerodinamici i hidrodinamici);
 - **strujanje u otvorenim kanalima** — gdje vlada Froudeov broj, hidraulički skok i preljevi;
 - **stlačivo strujanje** — plinodinamika, mlaznice i udarni valovi; $Ma\approx0{,}3$ samo je čest orijentir za procjenu promjene gustoće zbog brzine, a ne granica područja;
-- **diferencijalna i računalna dinamika fluida** — Navier–Stokesove jednadžbe po točkama i njihovo numeričko rješavanje (najavljeno kroz oznake *Numerički most* i sažeto u <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>).
+- **diferencijalna i računalna dinamika fluida** — lokalne bilance i njihov numerički zapis u []{.mf1-chapter-ref target="u12"}; zajednička mapa nalazi se u @sec-cfd-mapa.
 
 []{.mf1-chapter-ref target="u11"} povezuje teme udžbenika zajedničkim jezikom omjera mehanizama i normiranih odziva. Ispravno bezdimenzioniranje ne počinje pogađanjem jednoga broja, nego jasnim popisom varijabli, jednadžbi i rubnih uvjeta te obrazloženim izborom relevantnih grupa.
 :::

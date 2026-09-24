@@ -18,6 +18,7 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | CFD | Računalna dinamika fluida: približno numeričko rješavanje jednadžbi strujanja uz eksplicitne modele, rubne uvjete, mrežu i procjenu numeričke pogreške. | U12, D04 |
 | Dinamička sličnost | Stanje u kojem model i prototip imaju jednake mjerodavne bezdimenzijske parametre. U praksi sve parametre često nije moguće istodobno izjednačiti. | U11 |
 | Dinamička viskoznost | Koeficijent $\mu$ u Newtonovu zakonu viskoznosti; za jednostavno smicanje newtonskog fluida vrijedi $\tau=\mu\,du/dy$. | U02, U12 |
+| Diskretizacija | Zamjena kontinuiranog opisa konačnim skupom nepoznanica i približnih algebarskih jednadžbi; prostorna podjela i vremenski korak uvode zasebne pogreške. | U07, U12, D04 |
 | Efektivno ubrzanje | Zbroj stvarnih i inercijskih ubrzanja koji u odabranom neinercijskom sustavu određuje gradijent tlaka i oblik slobodne površine pri relativnom mirovanju. | U04 |
 | Energijska linija (EGL) | Linija ukupne mehaničke visine $z+p/(\rho g)+\alpha v^2/(2g)$ duž sustava; pada zbog disipacije, a raste preko crpke. | U08, U13 |
 | Eulerov broj | $Eu=\Delta p/(\rho V^2)$ uz jasno zadanu konvenciju za dinamički tlak; opisuje bezdimenzijsku razliku tlakova. | U11 |
@@ -71,8 +72,8 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Trajektorija čestice | Put jedne označene čestice kroz vrijeme. U stacionarnom toku podudara se sa strujnicom. | U07 |
 | Turbulencija | Trodimenzijsko nestacionarno gibanje širokog raspona skala koje pojačava miješanje i prijenos količine gibanja; statistički model nije svojstvo fluida nego aproksimacija toka. | U12 |
 | Uzgon | Rezultanta hidrostatskog tlaka jednaka težini istisnutog fluida, uz smjer suprotan gravitacijskom ubrzanju u homogenom fluidu i jednolikom gravitacijskom polju. | U06 |
-| Validacija | Procjena koliko matematički i računalni model opisuje stvarnost za namjeravanu uporabu, usporedbom s relevantnim eksperimentom i njegovom nesigurnošću. | U12, D04 |
-| Verifikacija | Provjera rješavaju li kod i numerički postupak zadane jednadžbe dovoljno točno; uključuje provjeru koda, iteracijsku i diskretizacijsku pogrešku te očuvanje. | U12, D04 |
+| Validacija | Procjena opisuje li model stvarni sustav dovoljno dobro za namjeravanu svrhu; usporedba s mjerenjem uz procjenu nesigurnosti. Postupak: @sec-cfd-venturi. | U12, D04 |
+| Verifikacija | Provjera rješava li numerički postupak pravilno zadane jednadžbe; obuhvaća provjere koda i numeričke pogreške konkretnog rješenja. Postupak: @sec-cfd-venturi. | U12, D04 |
 | Vertikalna komponenta sile na zakrivljenu plohu | Dobiva se integralom tlaka ili metodom zamišljenog fluida; iznos je povezan s njegovom težinom, a smjer se mora odrediti iz normale i strane na kojoj je fluid. | U05 |
 | Volumenski protok | Neto tok volumena kroz plohu, $Q=\int_A\mathbf v\!\cdot\!\mathbf n\,dA$ za nepomičnu plohu; za stlačiv tok općenito nije očuvana veličina. | U07 |
 | Volumni modul elastičnosti | $K=-V\,dp/dV$ za istu količinu fluida uz zadane toplinske uvjete. Za mali porast tlaka i približno stalni $K$ smanjenje volumena iznosi $\Delta V_c\approx V_0\Delta p/K$. Pogreška pomaka ovisi i o omjeru tog smanjenja i istisnutog volumena. | U01 |

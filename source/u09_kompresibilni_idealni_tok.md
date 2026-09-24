@@ -127,11 +127,6 @@ $$ {#eq-kompresibilni-tok-rijeseni-primjer-pitotova-sonda-u-brzom-strujanj-02}
 Nestlačivi izraz $p_0-p=\rho v^2/2$ više nije zadani model. **Granična provjera:** kada $Ma\to0$, binomni razvoj kompresibilne relacije vraća nestlačivu dinamičku tlačnu skalu.
 :::
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — valovi, mreža i vremenski korak</p>
-
-U stlačivom računu promjene tlaka prenose se konačnom brzinom zvuka, pa prostorna i vremenska razlučivost moraju pratiti valne pojave. Previše disipativna diskretizacija može razmazati skokove i gubitak ukupnoga tlaka, a prevelik vremenski korak može dati prividno mirno, ali nefizikalno rješenje.
-:::
 
 ## Sapnica i prigušenje protoka {#sec-sapnica-prigusenje}
 
@@ -242,13 +237,13 @@ Poremećaj putuje konačnom brzinom zvuka. Da; snažno grijanje ili velika promj
 :::
 
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — gustoća, energija i Machov broj</p>
+<p class="mf1-box-label">Numerički most — gustoća postaje nepoznato polje</p>
 
-Za stlačivi CFD istodobno se rješavaju jednadžbe očuvanja mase, količine gibanja i energije, pa se gustoća i temperatura mijenjaju zajedno s tlakom i brzinom. Izentropska sapnica i normalni udarni val daju referentne odnose za provjeru računalnog rješavača, dok stvarni gubitci ukupnog tlaka, turbulencija i prijenos topline traže širi model.
+**Fizikalna poveznica.** Kad procjena $Ma$ i termodinamičkih promjena pokaže da gustoću ne možemo smatrati stalnom, numerički model povezuje masu, količinu gibanja, energiju i jednadžbu stanja. Nepoznanice uključuju gustoću i temperaturu, uz tlak i brzinu.
 
-Za sapnicu se prate maseni protok, Machov broj, stagnacijske veličine i položaj mogućega vala. Malen rezidual energije ili pregledan prikaz tlaka nije dovoljan ako se maseni protok mijenja s mrežom ili se skok ukupnoga tlaka ne slaže s referentnim odnosom.
+**Račun i provjera.** Za sapnicu složene geometrije dobivamo polja i maseni protok; 1D izentropsko rješenje ostaje referenca za iste pretpostavke. Udarni val dodatno provjeravamo bilancom i gubitkom ukupnoga tlaka. Njegova širina u nekoliko ćelija ne predstavlja fizičku debljinu vala; prati se konvergencija protoka i tlačnih odnosa, a kod nestacionarnog toka i vremenskog koraka.
 
-Diskretizacija val mora prikazati u konačnom broju ćelija, ali širina razmazanoga skoka ne smije se tumačiti kao fizička debljina udarnoga vala. Tražena razlučivost određuje se osjetljivošću masenoga protoka i tlačnih odnosa, ne samo oštrinom slike.
+Izbor fizike prema $Ma$, zajedno s drugim bezdimenzijskim brojevima, nastavlja se u []{.mf1-chapter-ref target="u11"}.
 :::
 
 ## Zadaci za vježbu {#sec-kompresibilni-zadaci}

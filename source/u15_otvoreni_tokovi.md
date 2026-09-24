@@ -62,11 +62,6 @@ $$ {#eq-otvoreni-tokovi-rijeseni-primjer-rezim-u-retencijskom-kanalu-t1-02}
 Tok je miran i promjena nizvodnog vodostaja može utjecati uzvodno. **Provjera:** $Fr$ je bezdimenzijski, a $v<c=2{,}80\ \text{m/s}$.
 :::
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — izbor modela slobodne površine</p>
-
-Jednadžbe plitke vode prikladne su kada je vertikalna struktura toka sporedna prema promjeni dubine i protoka. Trodimenzijski višefazni model potreban je kada lokalna geometrija, zakrivljenost površine, prskanje ili miješanje zraka mijenjaju traženu veličinu, uz znatno veći zahtjev za mrežom i vremenskim korakom.
-:::
 
 ## Specifična energija i kritična dubina {#sec-specificna-energija}
 
@@ -236,13 +231,13 @@ Brzina uzvodnog gravitacijskog vala tada nadmašuje srednju brzinu toka. U minim
 :::
 
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — slobodna površina i hidraulički skok</p>
+<p class="mf1-box-label">Numerički most — od dubine kanala do slobodne površine</p>
 
-Numerički modeli plitke vode diskretiziraju jednadžbe očuvanja mase i količine gibanja kada je vertikalna struktura toka sekundarna. Za složenu trodimenzijsku geometriju, izraženu zakrivljenost slobodne površine ili miješanje zraka uvodi se višefazni CFD, uz provjeru volumne bilance, konvergencije mreže i osjetljivosti na vremenski korak.
+**Fizikalna poveznica.** Za vodostaj i protok duž dugog kanala često dostaju 1D ili 2D jednadžbe plitke vode: po dubini integrirane bilance mase i količine gibanja uz približno hidrostatski tlak. $Fr$ iz []{.mf1-chapter-ref target="u11"} usmjerava tumačenje režima i rubnih uvjeta.
 
-Za proračun kanala prate se vodostaj, protok, Froudeov broj i bilanca energije ili količine gibanja na istim presjecima kao u ručnom modelu. Diskretni prikaz hidrauličkoga skoka mora zadovoljiti bilance mase i količine gibanja. Pad mehaničke energije uključuje fizikalnu disipaciju, pa ga treba razlikovati od dodatnog utjecaja numeričke disipacije.
+**Račun i primjena.** Ako su cilj lokalna opterećenja i izrazito trodimenzijski valjak skoka, može trebati CFD s opisom granice voda–zrak. VOF (*Volume of Fluid*) prati volumni udio vode u ćeliji: 1 znači vodu, 0 zrak, a međuvrijednost ćeliju presječenu međupovršinom. Za nerazlučene mjehuriće potrebni su dodatni modeli; VOF sam ne jamči opis uvlačenja zraka.
 
-Višefazni model dodatno traži provjeru očuvanja vode i zraka te osjetljivosti položaja slobodne površine na vremenski korak. Izgled uvjerljive površine nije dovoljan ako se mijenja volumni debalans ili maksimalna dubina koja je projektna izlazna veličina.
+**Provjera.** Na presjecima izvan skoka zatvori masu i količinu gibanja kao u ručnom računu. Prati dubinu i gubitak energije pri prostornom i vremenskom profinjenju, uz očuvanje vode. I ovdje mirna ravnoteža iz []{.mf1-chapter-ref target="u06"} prethodi dinamici; @sec-cfd-kada-ne-treba pomaže odabrati dovoljnu razinu modela.
 :::
 
 ## Zadaci za vježbu {#sec-otvoreni-tok-zadaci}

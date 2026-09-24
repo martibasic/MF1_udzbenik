@@ -162,14 +162,6 @@ $$ {#eq-reologija-newtonov-zakon-viskoznosti-02}
 
 gdje je $\delta$ razmak među pločama.
 
-<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md -->
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Kako se računa viskozna sila</p>
-
-Zamislimo sloj ulja između nepomične i pokretne ploče. Susjedni slojevi ulja gibaju se različitim brzinama i pritom se međusobno povlače. Što se brzina više promijeni na maloj udaljenosti, veće je smično naprezanje. To opisuje Newtonov zakon viskoznosti $\tau=\mu\,dv/dy$.
-
-Računalo iz razlika brzina procjenjuje viskozne sile u fluidu i na stijenkama. Za vodu ili uobičajeno ulje često je dovoljna poznata viskoznost pri radnoj temperaturi. Kod svježeg betona ili isplake odnos sile i gibanja slojeva može biti drukčiji, pa ga treba zadati prema mjerenjima.
-:::
 
 ::: {.mf1-dublje}
 <p class="mf1-box-label">Tenzor viskoznih naprezanja u trodimenzijskom strujanju</p>
@@ -197,11 +189,12 @@ $$ {#eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-02}
 Skalarni jednodimenzijski oblik $\tau = \mu\,dv/dy$ koristi se kao radna verzija u svim $1$D problemima ovog poglavlja. Tenzorski zakon i njegov ulazak u Navier–Stokesovu jednadžbu sustavno se obrađuju u []{.mf1-chapter-ref target="u12"}.
 :::
 
-<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — gradijent brzine uz stijenku</p>
+<p class="mf1-box-label">Kako računalo određuje trenje</p>
 
-Viskozna sila u CFD-u dolazi iz gradijenta brzine koji se računa uz stijenku. Ako prvi dio mreže uz stijenku i zidni model ne predstavljaju stvarni profil, pad tlaka i sila trenja mogu biti pogrešni i uz male reziduale; zato se provjeravaju razlučivost mreže uz stijenku, svojstva fluida i duljina razvoja toka.
+Newtonov zakon $\tau=\mu\,dv/dy$ vrijedi i u računalnom modelu. Kada je profil brzine previše složen za ručni račun, računalo procjenjuje njegove promjene između bliskih položaja; iz njih dobiva smično naprezanje i silu trenja. Gdje se brzina brzo mijenja, treba dovoljno bliskih računskih položaja.
+
+Jednostavan sloj između ploča daje provjeru: linearan profil mora vratiti $\tau=\mu U/\delta$. Za kapljicu su dodatno potrebni površinska napetost i kontaktni kut; broj računskih točaka ne može nadomjestiti izostavljenu fiziku. Izbor važnih učinaka nastavlja se u []{.mf1-chapter-ref target="u11"}.
 :::
 
 ## Površinska napetost i kontaktni kut
@@ -318,16 +311,6 @@ Pri tome je ovdje $\Delta p=p_{unutra}-p_{vani}$, a zakrivljenosti su pozitivne 
 Zakrivljena površina zahtijeva tlačni skok koji uravnotežuje površinsku napetost. Što je manji promjer, to je veća zakrivljenost i veći potreban skok tlaka. Faktor 4 za kapljicu nastaje jer sfera ima jednu granicu faza i polumjer $r=d/2$; faktor 8 za sapunasti mjehur dolazi od dviju površina opne. Pri kavitaciji mjehuri pare mogu nastati i rasti kada lokalni **apsolutni** tlak dovoljno padne u odnosu na tlak pare. Stvarni prag ovisi i o prisutnim jezgrama, otopljenim plinovima te Laplaceovu nadtlaku $2\sigma/r$; površinska napetost zato otežava rast vrlo malih jezgara, a ne daje jednostavan kriterij „tlaka koji zatvara mikrokapljicu”.
 :::
 
-<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — konstitutivni model</p>
-
-Newtonov zakon viskoznosti zatvara viskozni član jednadžbe količine gibanja u CFD-u. Za nenewtonski fluid, slobodnu površinu ili pokretnu kontaktnu liniju sama mreža nije dovoljna: odabiru se odgovarajući konstitutivni i međufazni modeli, a njihovi parametri provjeravaju se prema mjerenju.
-
-Najprije se određuje je li ključan pad tlaka, položaj međupovršine, sila na stijenci ili brzina kapilarnoga prodiranja. Za svaku od tih veličina treba odabrati vlastitu mrežnu i vremensku provjeru: stabilan ukupni protok ne dokazuje da su zakrivljenost meniska ili lokalno smično naprezanje dovoljno razlučeni.
-
-Usporedba s mjerenjem treba koristiti istu temperaturu, čistoću stijenke i definiciju kontaktnoga kuta. Bez toga se razlika ne smije automatski pripisati računalnom rješavaču ni gustoći mreže.
-:::
 
 ## Riješeni primjeri
 
@@ -687,18 +670,6 @@ Negativna vrijednost znači kapilarnu depresiju u vertikalnoj cijevi. Ako tekuć
 Ravnotežna visina od oko $33{,}5\ \text{cm}$ pokazuje da je za zadanu idealnu kapilaru gravitacijska granica mnogo veća od centimetarske duljine uređaja. Time još nije dokazana pouzdanost ili brzina punjenja: za to treba uključiti viskozni otpor, zarobljeni plin, geometrijske prijelaze i dinamički kontaktni kut. Tlačni skok od $3{,}3\ \text{kPa}$ karakterizira meniskus; dimenzioniranje spojnica i pasivnih ventila zahtijeva puni raspon tlakova i stvarne uvjete kvašenja.
 :::
 
-<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md -->
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički most</p>
-
-**Veza s numeričkim proračunom.** Površinska napetost i kontaktni kut ulaze u modele višefaznog strujanja kada su važni kapljice, mjehurići, menisci ili tanki filmovi. Njihovo izostavljanje opravdano je samo nakon procjene mjerodavnih skala i bezdimenzijskih brojeva.
-
-**Postupak numeričkog proračuna.** U jednom čestom pristupu, metodi VOF (*Volume of Fluid*), polje volumnoga udjela $\alpha\in[0,1]$ prati raspodjelu faza, a model površinske sile prenosi učinak zakrivljenosti u jednadžbu količine gibanja. To je model diskretizirane međupovršine, ne nova fizikalna bilanca.
-
-**Tipičan scenarij.** Mikrofluidika i procesna industrija često razmatraju fluide kojima viskoznost ovisi o stopi smicanja, pa konstitutivni model treba odabrati i provjeriti prema odgovarajućim podatcima. Pri simulaciji kapljice na stijenci kontaktni je kut zaseban rubni podatak i ne proizlazi iz nenewtonskoga modela viskoznosti.
-
-> *Nije gradivo MF1. Ovo poglavlje otvara vrata u svijet višefaznih simulacija.*
-:::
 
 ::: {.mf1-samoprovjera}
 <p class="mf1-box-label">Provjeri sebe</p>
@@ -725,18 +696,6 @@ Gustoća mjeri masu po volumenu, a viskoznost otpor smicanju. Newtonski model tr
 - Višefazni i nenewtonski problemi traže dodatne modele i provjeru njihovih pretpostavki.
 :::
 
-<!-- [NOVA PEDAGOŠKA DOPUNA] -->
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerička poveznica — od smicanja do proračuna</p>
-
-**Fizikalni model i nepoznanica.** Za newtonski fluid smično naprezanje nije veličina koju program stvara sam od sebe: zadaje se konstitutivni model $\tau=\mu\,dv/dy$ i svojstvo fluida $\mu$ pri odgovarajućoj temperaturi. Za sloj između nepomične i pokretne ploče poznati su geometrija, brzine ploča i $\mu$; traže se profil brzine, njegov gradijent, smično naprezanje i sila na stijenci. Taj se zakon koristi kada je veza između smičnog naprezanja i gradijenta brzine približno linearna; za nenewtonski fluid mora se zadati drugi, mjerenjima potkrijepljen model.
-
-**Stijenka, ćelije i gradijent.** Na nepomičnoj čvrstoj stijenci za običan viskozni fluid u makroskopskom mjerilu zadaje se prianjanje: brzina fluida na stijenci jednaka je brzini stijenke, dakle nula za mirnu stijenku. To je rubni uvjet, a ne posljedica numeričke mreže. Računalo potom određuje brzinu u susjednim ćelijama; vrijednost u ćeliji predstavlja lokalnu, reprezentativnu vrijednost polja, a razlika brzina kroz poznati razmak susjednih ćelija daje numeričku aproksimaciju gradijenta. Zato prvi red ćelija uz stijenku mora biti dovoljno fin ondje gdje se brzina mijenja brzo.
-
-**Što se provjerava.** U jednostavnom Couetteovu sloju očekuju se linearan profil brzine, stalan gradijent $U/\delta$ i jednako smično naprezanje kroz sloj. Rezultat se provjerava usporedbom s tim ručnim rješenjem, očekivanim smjerom viskozne sile — ona se suprotstavlja relativnom gibanju — i ponavljanjem računa s finijom mrežom. Mali rezidual ne dokazuje sam da su gradijent uz stijenku i sila trenja fizikalno točni; ako se oni još bitno mijenjaju pri profinjenju mreže, područje uz stijenku nije dovoljno razlučeno.
-
-Detalji diskretizacije, zidnih modela, rubnih uvjeta i verifikacije obrađuju se u []{.mf1-chapter-ref target="u12"} i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
-:::
 
 ## Zadaci za vježbu
 

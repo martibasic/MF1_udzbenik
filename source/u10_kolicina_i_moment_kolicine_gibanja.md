@@ -95,20 +95,14 @@ Tlačni članovi ne smiju se automatski izbaciti iz zapisa. Oni otpadaju tek kad
 
 Upravo tu leži puni fizikalni smisao poglavlja. Član $\dot m\vec V$ opisuje tok količine gibanja, a tlačni članovi $pA$ sile na zamišljenim ulaznim i izlaznim presjecima kontrolnog volumena. Vijci, prirubnica i nosač ne nose apstraktnu jednadžbu, nego upravo vektorsku razliku tlačnih, težinskih i impulsnih doprinosa.
 
-::: {.callout-note collapse="true" icon="false"}
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — tok količine gibanja i reakcija stijenke</p>
-
-Sila dobivena integracijom tlaka i smičnih naprezanja po stijenci mora biti usklađena s bilancom količine gibanja, koja uključuje i sile na ulaznim i izlaznim presjecima, volumne sile te eventualnu akumulaciju. Ta dvostruka bilanca otkriva neusklađene predznake, nedovoljnu udaljenost izlaza ili pogrešno integriranu stijenku prije nego što se rezultat uporabi za dimenzioniranje nosača.
-:::
-
-:::
 
 ## Provjera sile na cijevno koljeno
 
-Silu na koljeno računalo može dobiti zbrajanjem tlačnih i viskoznih sila po stijenci. Zasebno je možemo provjeriti ručnom bilancom: uzmemo ulazni i izlazni protok, smjerove brzina, tlakove te po potrebi težinu fluida.
+Ručna integralna bilanca zatvara sile i tokove na jednom kontrolnom volumenu. CFD bilancu količine gibanja povezuje s ćelijskom bilancom mase iz []{.mf1-chapter-ref target="u07"} i određuje lokalne tlakove, brzine i viskozna naprezanja. Za složeno koljeno tako dobivamo i raspodjelu opterećenja; integracija po stijenci daje silu na koljeno.
 
-Ako se rezultati razlikuju, najprije provjerimo predznake i jesmo li u oba računa zadali isti sustav. Zatim provjerimo je li pretpostavka jednolike brzine u presjeku dovoljno dobra. Računalni rezultat nije automatski točniji zato što sadrži više detalja; treba provjeriti mijenja li se još pri sitnijoj podjeli prostora i slaže li se s dostupnim mjerenjima.
+**Neovisna provjera** jest ukupna bilanca na granicama domene: uključuje tlakove na otvorima, tokove količine gibanja, težinu i eventualnu akumulaciju. Sila stijenke na fluid suprotna je sili fluida na koljeno. Usporedba s 1D računom traži iste presjeke i odgovarajuće korekcije nejednolikih profila.
+
+Isti postupak daje reakciju mlaznice, silu mlaza i, uz krakove sila, moment rotora. Inženjerski izlaz za nosač jest vektor opterećenja, čija se promjena provjerava pri profinjenju mreže. Izvođenje iz polja sažima @sec-cfd-polja-izlazi.
 
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Sila na koljeno</p>
@@ -209,7 +203,7 @@ $$
 \boxed{\rho\!\left(\frac{\partial\vec{u}}{\partial t} + (\vec{u}\cdot\nabla)\vec{u}\right) = -\nabla p + \rho\,\vec{g} + \mu\nabla^2\vec{u}}.
 $$ {#eq-momentum-dublje-lokalni-oblik-zakona-kolicine-gibanja-08}
 
-Ovaj oblik Navier–Stokesove jednadžbe vrijedi uz navedene pretpostavke konstantne gustoće i viskoznosti newtonskoga fluida. Numerički postupak diskretizira jednadžbu zajedno s kontinuitetom i rubnim uvjetima; konvergencija diskretiziranoga sustava nije sama po sebi validacija fizikalnog modela.
+Ovaj oblik Navier–Stokesove jednadžbe vrijedi uz navedene pretpostavke konstantne gustoće i viskoznosti newtonskoga fluida. Kako se ta jednadžba zajedno s kontinuitetom prevodi u račun razrađuje @sec-realni-tok-cfd.
 
 Skupine članova imaju jasnu fizikalnu interpretaciju:
 
@@ -221,15 +215,6 @@ Skupine članova imaju jasnu fizikalnu interpretaciju:
 Reynoldsov broj $Re=\rho vL/\mu$ proizlazi kao omjer karakterističnih inercijskih i viskoznih članova. Mali $Re$ obično prigušuje poremećaje, dok veliki $Re$ dopušta da inercijski učinci i nestabilnosti postanu važni; prijelaz ovisi i o geometriji te ulaznim poremećajima. Potpuno razvijeni laminarni tok u kružnoj cijevi izvodi se u []{.mf1-chapter-ref target="u12"}.
 :::
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — sila iz polja strujanja</p>
-
-Računalni model daje silu na koljeno, ploču ili vodilicu integracijom tlaka i viskoznih naprezanja po stijenci. Ista se sila mora moći neovisno zatvoriti bilancom količine gibanja na granicama domene, uz dosljedan izbor kontrolnog volumena i predznaka.
-
-Granice domene moraju biti dovoljno udaljene da ulazni i izlazni profili odgovaraju pretpostavljenoj bilanci. Usporedba stijenke i graničnih tokova posebno je korisna jer pokazuje nedostaje li doprinos tlaka, viskoznoga naprezanja ili promjene količine gibanja.
-
-Sila koja je numerički stabilna pri jednoj mreži nije nužno konvergirana izlazna veličina. Prate se njezina povijest, mrežna osjetljivost i masena bilanca, a za stvarni uređaj i mjerni podatci ili druga prikladna referenca.
-:::
 
 ## Riješeni primjeri
 
@@ -467,7 +452,7 @@ U ovom koljenu fluid djeluje na konstrukciju silom od oko $1{,}45\ \text{kN}$, p
 ::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerička perspektiva</p>
 
-Trodimenzijska simulacija istoga koljena može integrirati tlačna i viskozna naprezanja po stijenci te rezultat neovisno usporediti s bilancom količine gibanja na granicama domene. Razlika prema jednodimenzijskom računu nema unaprijed zadan prihvatljiv postotak: treba razdvojiti učinak drukčijih fizikalnih pretpostavki od diskretizacijske i iteracijske pogreške te provjeriti osjetljivost na mrežu i rubne uvjete [@nasa-cfd-vv; @asme-vv20-2009].
+Za računalni proračun istoga koljena ova bilanca daje neovisnu provjeru integrirane sile; postupak je opisan u [provjeri sile na koljeno](#provjera-sile-na-cijevno-koljeno).
 :::
 
 :::
@@ -1025,18 +1010,6 @@ $(Q_2,Q_3)=(24,16)\ \text{L/s}$; $(F_x,F_y)\approx(2835{,}8,-44{,}0)\ \text{N}$,
 
 ![Skice vježbi: sila i reakcija ploče, koljeno, moment ekscentričnog mlaza, pomični kontrolni volumen i Y-račva. Kote označuju unutarnje promjere ili okomite krakove; nacrtane strelice same ne zadaju iznose.](../assets/print/u11_vjezbe_skice.svg){#fig-u11-vjezbe fig-align="center" fig-alt="Šest skica s otvorenim presjecima i neprekinutim fluidom. Z4 odvaja okomiti krak momenta od udaljenosti po x. Z5 razlikuje brzinu mlaza, gibanje ploče i apsolutni izlaz. Z6 prikazuje tlocrt račve s pravom granom od 60 stupnjeva."}
 
-
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Veza s numeričkim proračunom.** Integralni ili lokalni zakon količine gibanja temelj je većine numeričkih modela strujanja. Metoda konačnih volumena izravno bilancira tokove i sile po ćelijama; druge diskretizacije polaze od istih diferencijalnih jednadžbi.
-
-**Postupak numeričkog proračuna.** Diskretiziraju se nestacionarni, konvektivni, tlačni, viskozni i volumenski članovi. Nelinearnost konvektivnoga člana otežava rješavanje, ali sama po sebi nije sinonim za turbulenciju. Točnost ovisi o modelu, mreži, vremenskom koraku, rubnim uvjetima i konvergenciji.
-
-**Tipičan scenarij.** Sila na koljeno dobiva se integracijom tlaka i smičnih naprezanja po stijenci, a može se neovisno provjeriti bilancom količine gibanja na granicama domene. Jednodimenzijski i numerički rezultat ne moraju biti jednaki ako ne predstavljaju isti model; slaganje se ocjenjuje tek nakon verifikacije i, kada postoje odgovarajući mjerni podatci, validacije [@nasa-cfd-vv; @asme-vv20-2009].
-
-> *Nije gradivo MF1. Ključna veza jest ista bilanca: ručni račun je zatvara na jednom kontrolnom volumenu, a numerički model na diskretiziranoj domeni, uz dodatnu obvezu procjene numeričke pogreške.*
-:::
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

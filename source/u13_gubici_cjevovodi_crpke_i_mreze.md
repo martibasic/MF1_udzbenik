@@ -174,11 +174,6 @@ Prije pokretanja predvidi kako promjena $Re$ i $\varepsilon/D$ pomiče $\lambda$
 </div>
 :::
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — lokalni gubitak kao model</p>
-
-Koeficijent lokalnoga gubitka sažima djelovanje ventila, koljena ili grananja u jednodimenzijskoj mreži. CFD može odrediti pad tlaka za točno zadanu lokalnu geometriju, ali taj rezultat postaje prenosiv koeficijent tek uz isti režim, hrapavost, rubne uvjete i dokazanu mrežnu konvergenciju.
-:::
 
 ## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
 
@@ -310,15 +305,6 @@ Proizvođač određuje potrebni $NPSH_r(Q,n)$ prema deklariranom kriteriju i isp
 $NPSH_a$ opisuje sustav do dogovorenoga usisnog presjeka. Ne zamjenjuje proizvođačevu krivulju $NPSH_r$, ne opisuje lokalne mjehuriće u svakoj točki impelera i nije samostalna potvrda sigurnosti. Tlak pare mora odgovarati temperaturi i sastavu stvarnog fluida, a atmosferski tlak nadmorskoj visini i radnom stanju.
 :::
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — od mreže do lokalne geometrije</p>
-
-Mrežni proračun zatvara kontinuitet u čvorovima i energijsku bilancu po putovima, dok se CFD primjenjuje na lokalne dijelove za koje je koeficijent lokalnoga gubitka nepouzdan. Izračun lokalnoga strujanja može dati novu procjenu toga koeficijenta, ali tek nakon provjere očuvanja mase, mrežne konvergencije i usporedbe s prikladnim referentnim slučajem.
-
-Pouzdan radni slijed je od cijele mreže prema lokalnoj geometriji i natrag: mrežni model daje protok i radnu točku, lokalni proračun daje otpor elementa, a ažurirani koeficijent vraća se u mrežu. Tako se zadržava računski jednostavna bilanca cijelog sustava, a zahtjevniji trodimenzijski proračun koristi se ondje gdje donosi potrebne lokalne podatke.
-
-Pri usisu crpke ili pojavi kavitacije samo predviđanje tlaka nije dovoljno za odluku. Treba provjeriti apsolutnu tlačnu rezervu, temperaturu, model promjene faze i osjetljivost rezultata na rubni uvjet na usisu.
-:::
 
 ## Riješeni primjeri {#sec-u13-rijeseni-primjeri}
 
@@ -740,10 +726,14 @@ $q\approx19{,}12\ \mathrm{L/s}$; $(H_V,H_s)\approx(19{,}62;14{,}13)\ \mathrm{m}$
 
 :::::
 
-::: {.mf1-numerika}
+::: {.mf1-numerika .kompakt}
 <p class="mf1-box-label">Numerički most — mrežni model prije 3D CFD-a</p>
 
-Jednodimenzijski računalni model mreže iterativno određuje $\lambda(Re,\varepsilon/D)$ i protoke dok ne zatvori kontinuitet u svakom čvoru i energijsku bilancu po neovisnim putovima. To je pravi alat za cijelu instalaciju. CFD se zatim primjenjuje na lokalnu geometriju za koju je tablični $\xi$ nepouzdan — primjerice razdjelnik, kratki difuzor ili ulaz u crpku. Rezultat CFD-a može se svesti na $\xi$ i vratiti u mrežni model, ali tek nakon provjere očuvanja mase, mrežne konvergencije i usporedbe s odgovarajućim referentnim slučajem. Viša razlučivost ne popravlja pogrešno zadanu hrapavost, rubni uvjet ili geometriju.
+**Fizikalna poveznica.** Numerički račun ne mora biti CFD: Colebrookova iteracija određuje jedan koeficijent, a 1D model mreže protoke i čvorne tlakove zatvaranjem kontinuiteta i energije. Mreža cijevi i čvorova opisuje sustav; CFD mreža ćelija razlučuje prostor unutar fluida.
+
+**Primjena.** Ako tablični $\xi$ ne opisuje složen razdjelnik ili difuzor, mrežni model daje radni protok za lokalni CFD. Iz polja se izračuna gubitak mehaničke energije $h_L$, zatim $\xi=2gh_L/v_{ref}^2$, uz navedenu referentnu brzinu i presjeke. Koeficijent se vraća u sustav i ponovno određuje radna točka.
+
+**Provjera.** Statički pad tlaka nije nužno gubitak ako se mijenjaju brzina ili visina; primijeni energijsku bilancu iz []{.mf1-chapter-ref target="u08"}. Provjeri konvergenciju $h_L$ i valjanost koeficijenta za isti režim i geometriju. Hijerarhiju analitika → 1D → mrežni model → CFD sažima @sec-cfd-kada-ne-treba: veći detalj opravdan je tek ako mijenja potrebnu odluku.
 :::
 
 ## Sažetak {#sec-u13-zakljucak}

@@ -92,25 +92,21 @@ $$ {#eq-uzgon-stabilitet-interaktivni-prikaz-gaz-plivajuceg-tijela-02}
 Ova jednadžba pokazuje da plivajuće tijelo uranja toliko da masa istisnutog fluida bude jednaka masi tijela. Ako se teret doda, tijelo se potapa dublje; ako se teret ukloni, izroni. Volumen istisnine $V_{ist}$ nije stalni geometrijski volumen tijela — on ovisi o gustoći fluida: isti brod u slanoj vodi (gustoća ~1025 kg/m³) istisne manji volumen nego u slatkoj vodi (~998 kg/m³), pa u slanoj vodi plovi nešto više.
 :::
 
-<!-- [RESTAURACIJA] Doslovno preuzeto iz revizije c417e9f. -->
 ::: {.callout-note collapse="true" icon="false"}
 ## Kako računalo prati plutanje
 
-Za proračun plutanja računalo mora razlikovati vodu od zraka i pratiti gdje se nalazi njihova granica. Jedan je postupak podijeliti prostor na male dijelove, zvane ćelije, i u svakoj pratiti koliki dio zauzima voda.
+Uzgon je rezultanta tlaka po uronjenoj površini, pa se računa zbrajanjem sila kao u []{.mf1-chapter-ref target="u05"}. Za miran ponton dovoljan je $F_U=\rho gV_{ist}$; složen oblik može zahtijevati numeričku integraciju geometrije bez CFD-a.
 
-Iz raspodjele tlaka na uronjenoj površini dobiva se sila uzgona. Ako se tijelo smije gibati, njegove sile i momenti određuju podizanje, spuštanje i nagib. Prva je provjera jednostavna: miran ponton treba imati isti gaz kao u ručnom računu i ostati u ravnoteži. Tek nakon toga ima smisla dodati valove.
+Kad valovi mijenjaju uronjeni dio i tlak, model prati slobodnu površinu i polje strujanja. Ako se tijelo slobodno giba, iz sila i momenata računa novi gaz i nagib, koji zauzvrat mijenjaju tok.
+
+Prvo provjeri mirni slučaj: očuvani volumen, $F_U=mg$, ravnotežu momenata i gaz iz ručnog računa. Početni $GM$ provjerava samo mali nagib. Za valni odziv potrebni su zasebna provjera kroz vrijeme i usporedba s mjerenjem; izbor opisa slobodne površine nastavlja se u []{.mf1-chapter-ref target="u15"}.
 :::
 
 <!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
 ::: {.callout-note}
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — tijelo, istisnina i gibanje</p>
-
-U spregnutom proračunu slobodna površina određuje istisninu i tlačne sile, a gibanje tijela mijenja položaj površine. Statična ravnoteža uzgona i težine najprije se provjerava bez valova; tek se zatim uvode dinamika, više stupnjeva slobode i vremenska konvergencija odziva tijela.
-:::
 
 ## Postupak rješenja
-Korak: od tlakova na gornju i donju plohu → $F_U = \rho g V_{ist}$
+Korak: od tlakova na gornju i donju plohu → $F_U = \rho g V_{ist}$[]{#postupak-rješenja}
 
 Na gornjoj plohi prizme na dubini $h_1$: $F_1 = (p_0 + \rho g h_1)A$ prema dolje.
 Na donjoj plohi na dubini $h_2$: $F_2 = (p_0 + \rho g h_2)A$ prema gore.
@@ -285,30 +281,6 @@ Za brodove na koje se primjenjuju opći kriteriji IMO-ova *2008 Intact Stability
 Metacentarska teorija opisuje samo početni odziv oko uspravnoga položaja. Stabilnost pri konačnom nagibu, na valovima ili nakon oštećenja zahtijeva odgovarajuću krivulju $GZ$, otvore i kut naplavljivanja, dinamičke utjecaje te posebne kriterije za neoštećeni ili oštećeni brod [@imo-damage-stability].
 :::
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — istisnina i slobodna površina</p>
-
-Višefazni numerički model prati granicu voda–zrak i iz dobivenog tlačnog polja integrira uzgon i moment. Statički gaz, očuvanje mase obje faze i mali nagib s poznatim $GM$ pružaju odvojene provjere prije tumačenja dinamičkih opterećenja u valu ili pri naplavljivanju.
-
-Prati se promjena istisnine, položaj težišta i centra uzgona te moment koji vraća ili povećava nagib. Očuvanje ukupne mase nije dovoljno ako se volumen pojedine faze postupno smanjuje ili povećava zbog pogreške u praćenju međupovršine.
-
-Početni metacentarski rezultat vrijedi za mali kut i zadanu raspodjelu mase. Za veće nagibe, slobodnu površinu u spremniku ili nelinearne valove treba promatrati cijelu krivulju povratnoga momenta i dinamički odziv, ne samo jednu vrijednost $GM$.
-:::
-
-<!-- [NOVA PEDAGOŠKA DOPUNA] -->
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerička poveznica — od uzgona do proračuna</p>
-
-**Što je zadano, a što se traži.** Za miran ponton poznati su geometrija tijela, njegova masa i položaj težišta, gustoće vode i zraka te gravitacija. Traže se položaj slobodne površine, uronjeni volumen $V_{ist}$, tlak po uronjenoj plohi, rezultantna sila i moment te, ako je tijelo slobodno, njegov gaz i nagib. Računalo zato ne „traži uzgon” kao izdvojenu brojku: traži polja i položaj iz kojih se uzgon dobiva.
-
-**Zašto tlak daje uzgon.** U mirnoj vodi gradijent tlaka uravnotežuje težinu fluida; zato je tlak na donjim dijelovima tijela veći nego na gornjima. Na kontinuiranoj plohi sila se dobiva integriranjem lokalnih tlačnih doprinosa. U mreži se ploha tijela zamjenjuje konačnim brojem plošnih elemenata: za element površine $\Delta A_i$ s normalom $\vec n_i$ usmjerenom iz tijela u fluid alat pribraja približno $-p_i\vec n_i\Delta A_i$; u viskoznom modelu dodaje i viskoznu trakciju. Vrijednost $p_i$ predstavlja tlak na tom malom elementu, odnosno njegovu plošno reprezentativnu vrijednost, a ne „srednji tlak cijelog broda”. Zbroj svih doprinosa daje numeričku aproksimaciju rezultantne sile; u hidrostatskoj ravnoteži daje isti rezultat kao $F_U=\rho gV_{ist}$, Arhimedov zakon. Ta se relacija ne koristi sama za ubrzano tijelo ili valove: tada se rješava vremenski ovisno polje strujanja i gibanje tijela.
-
-**Voda, zrak i slobodna površina.** Slobodna površina jest granica na kojoj se voda susreće sa zrakom. U višefaznom modelu ćelija može nositi udio vode $\alpha$: $\alpha=1$ znači voda, $\alpha=0$ zrak, a međuvrijednost označuje da granica prolazi kroz ćeliju. To je volumenski udio unutar ćelije, ne nova fizikalna tvar. Kako se tijelo podigne, spusti ili nagne, mijenja se raspored $\alpha$, a time i istisnina, tlak i uzgon.
-
-**Granica tijela i mreža.** Na nepropusnoj plohi tijela fluid ne prolazi kroz stijenku; u viskoznom modelu uobičajeno se zadaje i prianjanje fluida uz gibajuću ili nepomičnu plohu. Ti uvjeti određuju gdje se izračunava sila koja djeluje na tijelo. Mreža mora imati dovoljno malene elemente uz vodnu liniju, zakrivljenosti i područja većih promjena tlaka; zgušnjavanje se provjerava usporedbom rezultantne sile, momenta i gaza na više mreža.
-
-**Ravnoteža nije samo konvergencija.** Za statični slučaj provjerava se $F_U=mg$, ravnoteža momenata, očekivani smjer sile, očuvanje mase vode i zraka te podudaranje gaza s ručnim proračunom. Mali reziduali pokazuju da je numerički postupak dosegnuo vlastiti kriterij zaustavljanja, ali ne dokazuju sami po sebi fizikalnu točnost. Tek kad prolazi taj mirni referentni slučaj, ima smisla tumačiti valove, naplavljivanje ili odziv slobodnoga tijela. Detalji rubnih uvjeta, diskretizacije i verifikacije obrađuju se u poglavlju 12 i dodatku D.
-:::
 
 ## Riješeni primjeri
 
@@ -1110,17 +1082,6 @@ $h_m=0{,}220\ \text{m}$; $(V_o,V_w)=(0{,}269;0{,}470)\ \text{m}^3$; $m_\Delta=68
 
 ![Skice uz zadatke za vježbu — pontoni, areometri i plutajuće platforme.](../assets/print/u07_vjezbe_skice.svg){#fig-u07-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — pontoni, areometri i plutajuće platforme."}
 
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Veza s numeričkim proračunom.** Slobodna površina može se opisivati metodom hvatanja međupovršine poput VOF-a, ali i drugim modelima, primjerice potencijalnim ili plitkovodnim, ovisno o skali i pitanju. Nije svaki problem otvorenoga toka nužno VOF simulacija.
-
-**Postupak numeričkog proračuna.** Kod potpuno spregnutoga modela polje strujanja daje tlačne i viskozne sile, a jednadžbe gibanja tijela vraćaju novi položaj i nagib. Očuvanje mase faza, hidrostatska ravnoteža, položaj slobodne površine i bilanca sila moraju se provjeravati odvojeno.
-
-**Tipičan scenarij.** Numerički valni bazen može procjenjivati dinamički gaz, nagib i opterećenja u zadanom valnom polju. Takav rezultat ne predstavlja automatski „stvarno more” i ne zamjenjuje propisanu stabilitetnu provjeru; traži mrežnu i vremensku konvergenciju te validaciju za ciljane odzive [@nasa-cfd-vv; @asme-vv20-2009]. Početni $GM$ ostaje koristan referentni test pri malim kutovima, ne kriterij cijele dinamičke stabilnosti.
-
-> *Nije gradivo MF1. Ručna ravnoteža uzgona i težine daje osnovni test kojem se složeniji numerički model mora vratiti u mirnom graničnom slučaju.*
-:::
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

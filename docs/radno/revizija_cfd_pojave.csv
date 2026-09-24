@@ -1,0 +1,561 @@
+﻿stanje,izvor,redak,pojmovi,odjeljak
+prije,source/d02_pojmovnik.md,18,CFD; Računalna; mrežu,## Pojmovnik
+prije,source/d02_pojmovnik.md,50,Mrežna; mreža; mreže,## Pojmovnik
+prije,source/d02_pojmovnik.md,65,Rezidual; reziduali,## Pojmovnik
+prije,source/d02_pojmovnik.md,66,mreža,## Pojmovnik
+prije,source/d02_pojmovnik.md,74,Validacija; računalni,## Pojmovnik
+prije,source/d02_pojmovnik.md,75,Verifikacija; diskretizacijsku,## Pojmovnik
+poslije,source/d02_pojmovnik.md,18,CFD; Računalna; mrežu,## Pojmovnik
+poslije,source/d02_pojmovnik.md,21,Diskretizacija,## Pojmovnik
+poslije,source/d02_pojmovnik.md,51,Mrežna; mreža; mreže,## Pojmovnik
+poslije,source/d02_pojmovnik.md,66,Rezidual; reziduali,## Pojmovnik
+poslije,source/d02_pojmovnik.md,67,mreža,## Pojmovnik
+poslije,source/d02_pojmovnik.md,75,Validacija; cfd,## Pojmovnik
+poslije,source/d02_pojmovnik.md,76,Verifikacija; cfd,## Pojmovnik
+prije,source/d03_tipicne_pogreske_po_poglavljima.md,227,validacijom,### 12 · Diferencijalni opis realnog toka {#pogreske-realni-tok .unnumbered .unlisted}
+prije,source/d03_tipicne_pogreske_po_poglavljima.md,233,diskretizaciju,### 12 · Diferencijalni opis realnog toka {#pogreske-realni-tok .unnumbered .unlisted}
+prije,source/d03_tipicne_pogreske_po_poglavljima.md,237,mreže,"### 13 · Gubitci, cjevovodi, crpke i mreže {#pogreske-cjevovodi .unnumbered .unlisted}"
+prije,source/d03_tipicne_pogreske_po_poglavljima.md,251,reziduale,"### 13 · Gubitci, cjevovodi, crpke i mreže {#pogreske-cjevovodi .unnumbered .unlisted}"
+poslije,source/d03_tipicne_pogreske_po_poglavljima.md,227,validacijom,### 12 · Diferencijalni opis realnog toka {#pogreske-realni-tok .unnumbered .unlisted}
+poslije,source/d03_tipicne_pogreske_po_poglavljima.md,233,diskretizaciju,### 12 · Diferencijalni opis realnog toka {#pogreske-realni-tok .unnumbered .unlisted}
+poslije,source/d03_tipicne_pogreske_po_poglavljima.md,237,mreže,"### 13 · Gubitci, cjevovodi, crpke i mreže {#pogreske-cjevovodi .unnumbered .unlisted}"
+poslije,source/d03_tipicne_pogreske_po_poglavljima.md,251,reziduale,"### 13 · Gubitci, cjevovodi, crpke i mreže {#pogreske-cjevovodi .unnumbered .unlisted}"
+prije,source/d04_numericka_mehanika_fluida.md,5,CFD,## Mehanika fluida i numerika — pregled
+prije,source/d04_numericka_mehanika_fluida.md,11,mrežama,## Opseg dodatka {#što-se-ovdje-neće-dogoditi}
+prije,source/d04_numericka_mehanika_fluida.md,12,validacije; verifikacije,## Opseg dodatka {#što-se-ovdje-neće-dogoditi}
+prije,source/d04_numericka_mehanika_fluida.md,14,diskretizacijskih,## Opseg dodatka {#što-se-ovdje-neće-dogoditi}
+prije,source/d04_numericka_mehanika_fluida.md,23,CFD; Računalno,## Pojmovnik numeričkih metoda
+prije,source/d04_numericka_mehanika_fluida.md,26,VOF,## Pojmovnik numeričkih metoda
+prije,source/d04_numericka_mehanika_fluida.md,27,VOF,## Pojmovnik numeričkih metoda
+prije,source/d04_numericka_mehanika_fluida.md,28,DNS; mrežu,## Pojmovnik numeričkih metoda
+prije,source/d04_numericka_mehanika_fluida.md,29,LES,## Pojmovnik numeričkih metoda
+prije,source/d04_numericka_mehanika_fluida.md,30,RANS,## Pojmovnik numeričkih metoda
+prije,source/d04_numericka_mehanika_fluida.md,33,MRF; mreže,## Pojmovnik numeričkih metoda
+prije,source/d04_numericka_mehanika_fluida.md,34,mreža; mreže,## Pojmovnik numeričkih metoda
+prije,source/d04_numericka_mehanika_fluida.md,35,mreža,## Pojmovnik numeričkih metoda
+prije,source/d04_numericka_mehanika_fluida.md,36,**y+**; y^+,## Pojmovnik numeričkih metoda
+prije,source/d04_numericka_mehanika_fluida.md,45,Fluent; OpenFOAM; diskretizacija,## Primjeri alata
+prije,source/d04_numericka_mehanika_fluida.md,47,mreža,## Primjeri alata
+prije,source/d04_numericka_mehanika_fluida.md,48,ParaView,## Primjeri alata
+prije,source/d04_numericka_mehanika_fluida.md,50,CFD,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,52,CFD; računalnoj,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,54,CFD,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,56,mreže,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,60,VOF,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,64,forceCoeffs,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,69,RANS,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,70,verifikacijska,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,72,MRF; mreža,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,73,MRF,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,76,VOF,## Rječnik MF1 → CFD: prijevod pojmova
+prije,source/d04_numericka_mehanika_fluida.md,78,CFD,## Kako se MF1 jednadžbe slažu u CFD slici
+prije,source/d04_numericka_mehanika_fluida.md,80,CFD,## Kako se MF1 jednadžbe slažu u CFD slici
+prije,source/d04_numericka_mehanika_fluida.md,87,VOF,## Kako se MF1 jednadžbe slažu u CFD slici
+prije,source/d04_numericka_mehanika_fluida.md,88,VOF,## Kako se MF1 jednadžbe slažu u CFD slici
+prije,source/d04_numericka_mehanika_fluida.md,89,Force Reports,## Kako se MF1 jednadžbe slažu u CFD slici
+prije,source/d04_numericka_mehanika_fluida.md,91,verifikaciju,## Kako se MF1 jednadžbe slažu u CFD slici
+prije,source/d04_numericka_mehanika_fluida.md,95,MRF; mreža,## Kako se MF1 jednadžbe slažu u CFD slici
+prije,source/d04_numericka_mehanika_fluida.md,96,mreže,## Kako se MF1 jednadžbe slažu u CFD slici
+prije,source/d04_numericka_mehanika_fluida.md,99,CFD,## Kada CFD ne treba: granice primjenjivosti
+prije,source/d04_numericka_mehanika_fluida.md,101,CFD; Računalna,## Kada CFD ne treba: granice primjenjivosti
+prije,source/d04_numericka_mehanika_fluida.md,106,CFD,## Kada CFD ne treba: granice primjenjivosti
+prije,source/d04_numericka_mehanika_fluida.md,107,CFD,## Kada CFD ne treba: granice primjenjivosti
+prije,source/d04_numericka_mehanika_fluida.md,113,CFD,## Kada CFD ne treba: granice primjenjivosti
+prije,source/d04_numericka_mehanika_fluida.md,122,mreži,## Kako procijeniti računski trošak
+prije,source/d04_numericka_mehanika_fluida.md,123,mreže,## Kako procijeniti računski trošak
+prije,source/d04_numericka_mehanika_fluida.md,126,mrežu,## Kako procijeniti računski trošak
+prije,source/d04_numericka_mehanika_fluida.md,128,CFD,## Tipičan CFD tijek na primjeru iz MF1: Venturijeva cijev
+prije,source/d04_numericka_mehanika_fluida.md,130,CFD,## Tipičan CFD tijek na primjeru iz MF1: Venturijeva cijev
+prije,source/d04_numericka_mehanika_fluida.md,136,Mreža,### Korak 2 — Mreža {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,138,diskretizira; mrežu,### Korak 2 — Mreža {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,140,mreže,### Korak 2 — Mreža {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,142,y^+,### Korak 2 — Mreža {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,144,mreža,### Korak 2 — Mreža {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,158,reziduala,### Korak 4 — Rješavač i iteracijska konvergencija []{#korak-4-rješavač-i-iteracijska-konvergencija} {#korak-4-solver-i-iteracijska-konvergencija .unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,160,Verifikacija,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,162,Reziduali; Verifikacija; diskretizacijsku; mrežama; mreže; mrežna,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,164,verifikacijska,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,168,cfd; verifikacija,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,172,Validacija,### Korak 6 — Validacija fizikalnog modela {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,174,Validacija; numerička nesigurnost,### Korak 6 — Validacija fizikalnog modela {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,176,CFD,### Korak 6 — Validacija fizikalnog modela {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,178,validacija; verifikacija,### Korak 6 — Validacija fizikalnog modela {.unnumbered .unlisted .mf1-step}
+prije,source/d04_numericka_mehanika_fluida.md,182,cfd,## Tri pripremljena V&V paketa
+prije,source/d04_numericka_mehanika_fluida.md,186,GCI; cfd; mreže; reziduali,## Tri pripremljena V&V paketa
+prije,source/d04_numericka_mehanika_fluida.md,187,GCI; cfd; mreže; reziduali; validacija; verifikacija,## Tri pripremljena V&V paketa
+prije,source/d04_numericka_mehanika_fluida.md,188,cfd; mreže; mrežni; validaciju,## Tri pripremljena V&V paketa
+prije,source/d04_numericka_mehanika_fluida.md,190,GCI; mrežama; mrežnu,## Tri pripremljena V&V paketa
+prije,source/d04_numericka_mehanika_fluida.md,192,CFD; mreža,## Tri pripremljena V&V paketa
+prije,source/d04_numericka_mehanika_fluida.md,194,CFD,## Tri pripremljena V&V paketa
+prije,source/d04_numericka_mehanika_fluida.md,196,CFD; GCI; Numerička nesigurnost; diskretizaciju,## Tri pripremljena V&V paketa
+prije,source/d04_numericka_mehanika_fluida.md,206,CFD,## Što čitati dalje
+prije,source/d04_numericka_mehanika_fluida.md,211,OpenFOAM,## Što čitati dalje
+prije,source/d04_numericka_mehanika_fluida.md,212,CFD,## Što čitati dalje
+prije,source/d04_numericka_mehanika_fluida.md,217,Računalna; mreži; računalni,## Sažetak
+prije,source/d04_numericka_mehanika_fluida.md,219,CFD; mreže,## Sažetak
+poslije,source/d04_numericka_mehanika_fluida.md,3,CFD,## Mehanika fluida i numerika — pregled
+poslije,source/d04_numericka_mehanika_fluida.md,8,Numerički most,## Opseg dodatka {#što-se-ovdje-neće-dogoditi}
+poslije,source/d04_numericka_mehanika_fluida.md,10,cfd,## Opseg dodatka {#što-se-ovdje-neće-dogoditi}
+poslije,source/d04_numericka_mehanika_fluida.md,15,CFD; reziduala,## Pojmovnik numeričkih metoda
+poslije,source/d04_numericka_mehanika_fluida.md,20,cfd; diskretizacije,## Pojmovnik numeričkih metoda
+poslije,source/d04_numericka_mehanika_fluida.md,21,DNS; LES; RANS,## Pojmovnik numeričkih metoda
+poslije,source/d04_numericka_mehanika_fluida.md,23,cfd,## Pojmovnik numeričkih metoda
+poslije,source/d04_numericka_mehanika_fluida.md,24,MRF; mreža; mreže,## Pojmovnik numeričkih metoda
+poslije,source/d04_numericka_mehanika_fluida.md,25,VOF,## Pojmovnik numeričkih metoda
+poslije,source/d04_numericka_mehanika_fluida.md,26,y^+,## Pojmovnik numeričkih metoda
+poslije,source/d04_numericka_mehanika_fluida.md,27,GCI; cfd; diskretizacijske,## Pojmovnik numeričkih metoda
+poslije,source/d04_numericka_mehanika_fluida.md,31,OpenFOAM; ParaView; force report; forceCoeffs; openfoam,## Primjeri alata
+poslije,source/d04_numericka_mehanika_fluida.md,35,CFD; cfd,## Rječnik MF1 → CFD: prijevod pojmova {#sec-cfd-mapa}
+poslije,source/d04_numericka_mehanika_fluida.md,37,cfd,## Rječnik MF1 → CFD: prijevod pojmova {#sec-cfd-mapa}
+poslije,source/d04_numericka_mehanika_fluida.md,39,CFD,## Rječnik MF1 → CFD: prijevod pojmova {#sec-cfd-mapa}
+poslije,source/d04_numericka_mehanika_fluida.md,52,RANS,## Rječnik MF1 → CFD: prijevod pojmova {#sec-cfd-mapa}
+poslije,source/d04_numericka_mehanika_fluida.md,58,CFD; cfd,## Kako se MF1 jednadžbe slažu u CFD slici {#sec-cfd-polja-izlazi}
+poslije,source/d04_numericka_mehanika_fluida.md,60,cfd,## Kako se MF1 jednadžbe slažu u CFD slici {#sec-cfd-polja-izlazi}
+poslije,source/d04_numericka_mehanika_fluida.md,74,CFD; cfd,## Kada CFD ne treba: granice primjenjivosti {#sec-cfd-kada-ne-treba}
+poslije,source/d04_numericka_mehanika_fluida.md,76,CFD; cfd,## Kada CFD ne treba: granice primjenjivosti {#sec-cfd-kada-ne-treba}
+poslije,source/d04_numericka_mehanika_fluida.md,84,mreža,## Kada CFD ne treba: granice primjenjivosti {#sec-cfd-kada-ne-treba}
+poslije,source/d04_numericka_mehanika_fluida.md,85,CFD,## Kada CFD ne treba: granice primjenjivosti {#sec-cfd-kada-ne-treba}
+poslije,source/d04_numericka_mehanika_fluida.md,87,CFD; mrežni,## Kada CFD ne treba: granice primjenjivosti {#sec-cfd-kada-ne-treba}
+poslije,source/d04_numericka_mehanika_fluida.md,93,mreža; mrežu,## Kako procijeniti računski trošak
+poslije,source/d04_numericka_mehanika_fluida.md,95,CFD; cfd,## Tipičan CFD tijek na primjeru iz MF1: Venturijeva cijev {#sec-cfd-venturi}
+poslije,source/d04_numericka_mehanika_fluida.md,97,cfd,## Tipičan CFD tijek na primjeru iz MF1: Venturijeva cijev {#sec-cfd-venturi}
+poslije,source/d04_numericka_mehanika_fluida.md,99,mreža; mreže; validacija,## Tipičan CFD tijek na primjeru iz MF1: Venturijeva cijev {#sec-cfd-venturi}
+poslije,source/d04_numericka_mehanika_fluida.md,105,Mreža,### Korak 2 — Mreža {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,107,y^+,### Korak 2 — Mreža {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,117,cfd; rezidual; reziduale,### Korak 4 — Rješavač i iteracijska konvergencija []{#korak-4-rješavač-i-iteracijska-konvergencija} {#korak-4-solver-i-iteracijska-konvergencija .unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,119,Verifikacija,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,121,Verifikacija; cfd; diskretizacijska,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,125,reziduali,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,127,Mrežna,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,135,cfd; verifikacija,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,137,diskretizaciji,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,139,GCI; mreže; numeričke nesigurnosti,### Korak 5 — Verifikacija numeričkog rješenja {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,141,Validacija,### Korak 6 — Validacija fizikalnog modela {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,143,Validacija; cfd; numeričke nesigurnosti,### Korak 6 — Validacija fizikalnog modela {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,145,mrežna,### Korak 6 — Validacija fizikalnog modela {.unnumbered .unlisted .mf1-step}
+poslije,source/d04_numericka_mehanika_fluida.md,147,cfd,## Tri pripremljena V&V paketa {#sec-cfd-vv-paketi}
+poslije,source/d04_numericka_mehanika_fluida.md,149,cfd; validaciju,## Tri pripremljena V&V paketa {#sec-cfd-vv-paketi}
+poslije,source/d04_numericka_mehanika_fluida.md,153,GCI; cfd; mreže; reziduali,## Tri pripremljena V&V paketa {#sec-cfd-vv-paketi}
+poslije,source/d04_numericka_mehanika_fluida.md,154,CFD; cfd; mreže,## Tri pripremljena V&V paketa {#sec-cfd-vv-paketi}
+poslije,source/d04_numericka_mehanika_fluida.md,155,cfd; mrežni; validaciju,## Tri pripremljena V&V paketa {#sec-cfd-vv-paketi}
+poslije,source/d04_numericka_mehanika_fluida.md,157,cfd,## Tri pripremljena V&V paketa {#sec-cfd-vv-paketi}
+poslije,source/d04_numericka_mehanika_fluida.md,159,GCI; reziduali,## Tri pripremljena V&V paketa {#sec-cfd-vv-paketi}
+poslije,source/d04_numericka_mehanika_fluida.md,163,GCI; numeričku nesigurnost,## Tri pripremljena V&V paketa {#sec-cfd-vv-paketi}
+poslije,source/d04_numericka_mehanika_fluida.md,165,CFD,## Tri pripremljena V&V paketa {#sec-cfd-vv-paketi}
+poslije,source/d04_numericka_mehanika_fluida.md,175,OpenFOAM; cfd; diskretizaciju; openfoam,## Što čitati dalje
+poslije,source/d04_numericka_mehanika_fluida.md,180,CFD,## Sažetak
+prije,source/d05_literatura.md,23,cfd; diskretizacijske; validacije; verifikacije,## Numerička mehanika fluida
+poslije,source/d05_literatura.md,23,cfd; diskretizacijske; validacije; verifikacije,## Numerička mehanika fluida
+prije,source/d06_kljuc_kontrolnih_rezultata.md,743,cfd; mreže,### Z6. Konvergencija i izbor mreže {#key-task-cfd-tri-mreze .unnumbered .unlisted}
+prije,source/d06_kljuc_kontrolnih_rezultata.md,745,cfd,### Z6. Konvergencija i izbor mreže {#key-task-cfd-tri-mreze .unnumbered .unlisted}
+prije,source/d06_kljuc_kontrolnih_rezultata.md,747,CFD; mreže; mrežu,### Z6. Konvergencija i izbor mreže {#key-task-cfd-tri-mreze .unnumbered .unlisted}
+prije,source/d06_kljuc_kontrolnih_rezultata.md,751,CFD; mreža; reziduali; validaciju,### Z6. Konvergencija i izbor mreže {#key-task-cfd-tri-mreze .unnumbered .unlisted}
+prije,source/d06_kljuc_kontrolnih_rezultata.md,753,mreže,"## Gubitci, cjevovodi, crpke i mreže"
+prije,source/d06_kljuc_kontrolnih_rezultata.md,791,rezidual,### Z4. Radna točka hrapavog voda {#key-task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
+prije,source/d06_kljuc_kontrolnih_rezultata.md,793,reziduala,### Z4. Radna točka hrapavog voda {#key-task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
+prije,source/d06_kljuc_kontrolnih_rezultata.md,923,rezidual,### Z5. Provjera mjerenja hidrauličkog skoka {#key-task-skok-mjerenje .unnumbered .unlisted}
+prije,source/d06_kljuc_kontrolnih_rezultata.md,925,rezidual,### Z5. Provjera mjerenja hidrauličkog skoka {#key-task-skok-mjerenje .unnumbered .unlisted}
+poslije,source/d06_kljuc_kontrolnih_rezultata.md,743,cfd; mreže,### Z6. Konvergencija i izbor mreže {#key-task-cfd-tri-mreze .unnumbered .unlisted}
+poslije,source/d06_kljuc_kontrolnih_rezultata.md,745,cfd,### Z6. Konvergencija i izbor mreže {#key-task-cfd-tri-mreze .unnumbered .unlisted}
+poslije,source/d06_kljuc_kontrolnih_rezultata.md,747,CFD; mreže; mrežu,### Z6. Konvergencija i izbor mreže {#key-task-cfd-tri-mreze .unnumbered .unlisted}
+poslije,source/d06_kljuc_kontrolnih_rezultata.md,751,CFD; mreža; reziduali; validaciju,### Z6. Konvergencija i izbor mreže {#key-task-cfd-tri-mreze .unnumbered .unlisted}
+poslije,source/d06_kljuc_kontrolnih_rezultata.md,753,mreže,"## Gubitci, cjevovodi, crpke i mreže"
+poslije,source/d06_kljuc_kontrolnih_rezultata.md,791,rezidual,### Z4. Radna točka hrapavog voda {#key-task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
+poslije,source/d06_kljuc_kontrolnih_rezultata.md,793,reziduala,### Z4. Radna točka hrapavog voda {#key-task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
+poslije,source/d06_kljuc_kontrolnih_rezultata.md,923,rezidual,### Z5. Provjera mjerenja hidrauličkog skoka {#key-task-skok-mjerenje .unnumbered .unlisted}
+poslije,source/d06_kljuc_kontrolnih_rezultata.md,925,rezidual,### Z5. Provjera mjerenja hidrauličkog skoka {#key-task-skok-mjerenje .unnumbered .unlisted}
+prije,source/index.md,8,numerički pokus,
+prije,source/index.md,28,Numerički pokus,## Numerički pokusi {#lajtmotivi-i-numerika}
+poslije,source/index.md,8,numerički pokus,
+poslije,source/index.md,28,Numerički pokus,## Numerički pokusi {#lajtmotivi-i-numerika}
+prije,source/u00_kako_koristiti_udzbenik.md,5,računalnim,## O udžbeniku
+prije,source/u00_kako_koristiti_udzbenik.md,18,mrežno,## Struktura rada s poglavljem
+prije,source/u00_kako_koristiti_udzbenik.md,40,Numerički pokus,## Numerički pokusi i izdanja
+prije,source/u00_kako_koristiti_udzbenik.md,42,Numerički pokus,## Numerički pokusi i izdanja
+prije,source/u00_kako_koristiti_udzbenik.md,44,Mrežno; mrežne,## Numerički pokusi i izdanja
+poslije,source/u00_kako_koristiti_udzbenik.md,5,CFD; numerički most,## O udžbeniku
+poslije,source/u00_kako_koristiti_udzbenik.md,7,CFD; cfd; numerički most,## O udžbeniku
+poslije,source/u00_kako_koristiti_udzbenik.md,20,mrežno,## Struktura rada s poglavljem
+poslije,source/u00_kako_koristiti_udzbenik.md,42,Numerički pokus,## Numerički pokusi i izdanja
+poslije,source/u00_kako_koristiti_udzbenik.md,44,CFD; Numerički pokus,## Numerički pokusi i izdanja
+poslije,source/u00_kako_koristiti_udzbenik.md,46,Mrežno; mrežne,## Numerički pokusi i izdanja
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,106,Kako računalo,## Osnovne veličine
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,108,CFD; Računalo; računalna,## Osnovne veličine
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,110,računalne,## Osnovne veličine
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,253,Kako računalo,## Pascalov zakon
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,257,Računalo,## Pascalov zakon
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,643,Numerički most,### 4. Broj punih pumpnih hodova {.unnumbered .unlisted .mf1-step}
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,645,CFD,### 4. Broj punih pumpnih hodova {.unnumbered .unlisted .mf1-step}
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,649,CFD,### 4. Broj punih pumpnih hodova {.unnumbered .unlisted .mf1-step}
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,651,računalnoj,### 4. Broj punih pumpnih hodova {.unnumbered .unlisted .mf1-step}
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,681,Numerička poveznica,### Odgovori
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,685,Mreža; Računalo; mreže; mrežom; mrežu,### Odgovori
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,687,mreže,### Odgovori
+prije,source/u01_osnove_fluida_i_pascalov_zakon.md,689,diskretizacija,### Odgovori
+poslije,source/u01_osnove_fluida_i_pascalov_zakon.md,105,Kako računalo,## Osnovne veličine
+poslije,source/u01_osnove_fluida_i_pascalov_zakon.md,107,CFD; Računalna,## Osnovne veličine
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,171,Računalo,### Newtonov zakon viskoznosti
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,200,numerički trag,### Newtonov zakon viskoznosti
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,202,Numerički trag,### Newtonov zakon viskoznosti
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,204,CFD; mreže; reziduale,### Newtonov zakon viskoznosti
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,321,numerički trag,## Površinska napetost i kontaktni kut
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,323,Numerički trag,## Površinska napetost i kontaktni kut
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,325,CFD; mreža,## Površinska napetost i kontaktni kut
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,327,mrežnu,## Površinska napetost i kontaktni kut
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,329,mreže; računalnom,## Površinska napetost i kontaktni kut
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,692,Numerički most,### 4. Je li kapilarnost sama dovoljna? {.unnumbered .unlisted .mf1-step}
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,696,VOF; diskretizirane,### 4. Je li kapilarnost sama dovoljna? {.unnumbered .unlisted .mf1-step}
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,730,Numerička poveznica,### Odgovori
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,734,Računalo; mreže,### Odgovori
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,736,mreže; mrežom; rezidual,### Odgovori
+prije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,738,diskretizacije; verifikacije,### Odgovori
+poslije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,193,Kako računalo,### Newtonov zakon viskoznosti
+poslije,source/u02_viskoznost_povrsinska_napetost_i_kapilarnost.md,195,računalnom; računalo,### Newtonov zakon viskoznosti
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,45,računalni,### Diferencijalna jednadžba hidrostatike
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,174,numerički trag,## Matematički izvod
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,176,Numerički trag,## Matematički izvod
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,178,diskretizaciju; mrežu,## Matematički izvod
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,199,mrežama,## Otvoreni i zatvoreni spremnici
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,238,numerički trag,## Otvoreni i zatvoreni spremnici
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,240,Numerički trag,## Otvoreni i zatvoreni spremnici
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,242,diskretizacije; verifikacija,## Otvoreni i zatvoreni spremnici
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,654,mreži,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,656,mreži,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,664,Mreža,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,670,mreže,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,674,mreže,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,706,mreže,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,711,Numerički most,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,717,diskretizacijske; verifikacijski,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,749,Numerička poveznica,### Odgovori
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,753,Računalo,### Odgovori
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,755,mrežom,### Odgovori
+prije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,757,diskretizacije; reziduala; verifikacije,### Odgovori
+poslije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,169,Računalo,## Matematički izvod
+poslije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,192,mrežama,## Otvoreni i zatvoreni spremnici
+poslije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,637,mreži,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+poslije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,639,mreži,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+poslije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,647,Mreža,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+poslije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,653,mreže,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+poslije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,657,mreže,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+poslije,source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md,689,mreže,### 4. Tumačenje stanja {.unnumbered .unlisted .mf1-step}
+prije,source/u04_relativno_mirovanje_fluida.md,31,numerički trag,### Translatorno ubrzanje
+prije,source/u04_relativno_mirovanje_fluida.md,33,Numerički trag,### Translatorno ubrzanje
+prije,source/u04_relativno_mirovanje_fluida.md,35,mrežom,### Translatorno ubrzanje
+prije,source/u04_relativno_mirovanje_fluida.md,39,reziduali,### Translatorno ubrzanje
+prije,source/u04_relativno_mirovanje_fluida.md,165,numerički trag,## Matematički izvod
+prije,source/u04_relativno_mirovanje_fluida.md,167,Numerički trag,## Matematički izvod
+prije,source/u04_relativno_mirovanje_fluida.md,846,Numerički most,## Sažetak
+prije,source/u04_relativno_mirovanje_fluida.md,848,CFD; mreže,## Sažetak
+prije,source/u04_relativno_mirovanje_fluida.md,850,MRF; mreža; mreže; mreži,## Sažetak
+prije,source/u04_relativno_mirovanje_fluida.md,852,MRF; mreži,## Sažetak
+prije,source/u04_relativno_mirovanje_fluida.md,854,CFD,## Sažetak
+prije,source/u04_relativno_mirovanje_fluida.md,859,Numerička poveznica,## Sažetak
+prije,source/u04_relativno_mirovanje_fluida.md,863,računalnom,## Sažetak
+prije,source/u04_relativno_mirovanje_fluida.md,865,mreže; reziduala,## Sažetak
+prije,source/u04_relativno_mirovanje_fluida.md,867,diskretizacije; verifikacije,## Sažetak
+poslije,source/u04_relativno_mirovanje_fluida.md,158,Računalni,## Matematički izvod
+prije,source/u05_hidrostatske_sile_na_plohe.md,44,numerički trag,## Referentni tlak i smjer sile
+prije,source/u05_hidrostatske_sile_na_plohe.md,46,Numerički trag,## Referentni tlak i smjer sile
+prije,source/u05_hidrostatske_sile_na_plohe.md,48,CFD; mrežom,## Referentni tlak i smjer sile
+prije,source/u05_hidrostatske_sile_na_plohe.md,136,numerički pokus,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,138,Numerički pokus,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,145,numerički pokus,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,149,numerički trag,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,151,Numerički trag,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,153,mreža,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,158,Numerički most,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,160,CFD,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,162,Mreža; forceCoeffs; mreža; mreže; reziduale,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,164,CFD,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,166,Fluent; Force Report; OpenFOAM; ParaView; forceCoeffs,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,168,CFD; diskretiziranoj,### Nagnuta ploha i jasno definiran kut
+prije,source/u05_hidrostatske_sile_na_plohe.md,172,CFD; Verifikacija,## Verifikacija CFD-a ručnim računom
+prije,source/u05_hidrostatske_sile_na_plohe.md,174,CFD; mrežne; validacija,## Verifikacija CFD-a ručnim računom
+prije,source/u05_hidrostatske_sile_na_plohe.md,179,Numerička poveznica,## Verifikacija CFD-a ručnim računom
+prije,source/u05_hidrostatske_sile_na_plohe.md,183,mreža; verifikacija,## Verifikacija CFD-a ručnim računom
+prije,source/u05_hidrostatske_sile_na_plohe.md,384,numerički pokus,### Vertikalna komponenta i njezin smjer
+prije,source/u05_hidrostatske_sile_na_plohe.md,386,Numerički pokus,### Vertikalna komponenta i njezin smjer
+prije,source/u05_hidrostatske_sile_na_plohe.md,393,numerički pokus,### Vertikalna komponenta i njezin smjer
+prije,source/u05_hidrostatske_sile_na_plohe.md,399,Numerički most,### Vertikalna komponenta i njezin smjer
+prije,source/u05_hidrostatske_sile_na_plohe.md,403,Fluent; Mreža; mreža; mreže,### Vertikalna komponenta i njezin smjer
+prije,source/u05_hidrostatske_sile_na_plohe.md,405,CFD,### Vertikalna komponenta i njezin smjer
+prije,source/u05_hidrostatske_sile_na_plohe.md,407,Fluent; Force Report; Force Reports; OpenFOAM; forceCoeffs,### Vertikalna komponenta i njezin smjer
+prije,source/u05_hidrostatske_sile_na_plohe.md,409,mreže,### Vertikalna komponenta i njezin smjer
+prije,source/u05_hidrostatske_sile_na_plohe.md,414,Numerička poveznica,### Vertikalna komponenta i njezin smjer
+prije,source/u05_hidrostatske_sile_na_plohe.md,418,diskretizacije; mreži; verifikacije,### Vertikalna komponenta i njezin smjer
+poslije,source/u05_hidrostatske_sile_na_plohe.md,126,numerički pokus,### Nagnuta ploha i jasno definiran kut
+poslije,source/u05_hidrostatske_sile_na_plohe.md,128,Numerički pokus,### Nagnuta ploha i jasno definiran kut
+poslije,source/u05_hidrostatske_sile_na_plohe.md,135,numerički pokus,### Nagnuta ploha i jasno definiran kut
+poslije,source/u05_hidrostatske_sile_na_plohe.md,141,Numerički most,### Nagnuta ploha i jasno definiran kut
+poslije,source/u05_hidrostatske_sile_na_plohe.md,143,računalo,### Nagnuta ploha i jasno definiran kut
+poslije,source/u05_hidrostatske_sile_na_plohe.md,145,CFD,### Nagnuta ploha i jasno definiran kut
+poslije,source/u05_hidrostatske_sile_na_plohe.md,147,cfd; verifikacija,### Nagnuta ploha i jasno definiran kut
+poslije,source/u05_hidrostatske_sile_na_plohe.md,349,numerički pokus,### Vertikalna komponenta i njezin smjer
+poslije,source/u05_hidrostatske_sile_na_plohe.md,351,Numerički pokus,### Vertikalna komponenta i njezin smjer
+poslije,source/u05_hidrostatske_sile_na_plohe.md,358,numerički pokus,### Vertikalna komponenta i njezin smjer
+poslije,source/u05_hidrostatske_sile_na_plohe.md,363,Numerički most,### Vertikalna komponenta i njezin smjer
+poslije,source/u05_hidrostatske_sile_na_plohe.md,367,Računalni; cfd,### Vertikalna komponenta i njezin smjer
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,97,Kako računalo,## Kako računalo prati plutanje
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,99,računalo,## Kako računalo prati plutanje
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,104,numerički trag,## Kako računalo prati plutanje
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,107,Numerički trag,## Kako računalo prati plutanje
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,289,Numerički trag,## Postupak rješenja
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,300,Numerička poveznica,## Postupak rješenja
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,302,Računalo,## Postupak rješenja
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,304,mreži,## Postupak rješenja
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,308,Mreža; mreža,## Postupak rješenja
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,310,diskretizacije; reziduali; verifikacije,## Postupak rješenja
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,1114,Numerički most,### Kontrolni rezultat
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,1116,VOF,### Kontrolni rezultat
+prije,source/u06_uzgon_plivanje_i_stabilnost.md,1120,cfd; mrežnu; validaciju,### Kontrolni rezultat
+poslije,source/u06_uzgon_plivanje_i_stabilnost.md,96,Kako računalo,## Kako računalo prati plutanje
+poslije,source/u06_uzgon_plivanje_i_stabilnost.md,98,CFD,## Kako računalo prati plutanje
+poslije,source/u06_uzgon_plivanje_i_stabilnost.md,105,numerički trag,## Kako računalo prati plutanje
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,271,CFD,## Kontrolni volumen i bilanca mase
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,303,CFD; diskretizacije,## Kontrolni volumen i bilanca mase
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,311,Numerički trag,## Kontrolni volumen i bilanca mase
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,317,Numerički trag; mreže,## Kontrolni volumen i bilanca mase
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,319,mreže,## Kontrolni volumen i bilanca mase
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,323,mrežnom,## Kontrolni volumen i bilanca mase
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,895,Numerički most,### Kontrolni rezultat
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,897,Diskretizirani; diskretizirati; mreže,### Kontrolni rezultat
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,899,Diskretizirani; rezidualima,### Kontrolni rezultat
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,901,cfd; diskretizaciji; validaciji,### Kontrolni rezultat
+prije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,903,mreže,### Kontrolni rezultat
+poslije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,271,CFD,## Kontrolni volumen i bilanca mase
+poslije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,312,Numerički most,## Kontrolni volumen i bilanca mase
+poslije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,314,Diskretizacija,## Kontrolni volumen i bilanca mase
+poslije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,324,Mreža,## Kontrolni volumen i bilanca mase
+poslije,source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md,328,cfd,## Kontrolni volumen i bilanca mase
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,191,Računalo,## Kada se trenje može zanemariti
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,197,Numerički trag,## Kada se trenje može zanemariti
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,276,Numerički trag,## Kada se trenje može zanemariti
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,278,CFD; mrežne,## Kada se trenje može zanemariti
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,280,mrežu,## Kada se trenje može zanemariti
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,674,CFD; Validacija; cfd; mrežama; reziduale; verifikaciju,## Riješeni primjeri
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,724,računala,## Riješeni primjeri
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,924,Numerički most,### Kontrolni rezultat
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,926,CFD; Validacija; verifikaciju,### Kontrolni rezultat
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,928,diskretizacijsku,### Kontrolni rezultat
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,930,mreži; računalnom,### Kontrolni rezultat
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,932,CFD,### Kontrolni rezultat
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,936,CFD,## Provjera CFD-a analitičkim rješenjem
+prije,source/u08_energijska_jednadzba_i_bernoulli.md,938,CFD; mrežnoj; validacije; verifikacije,## Provjera CFD-a analitičkim rješenjem
+poslije,source/u08_energijska_jednadzba_i_bernoulli.md,191,Računalo,## Kada se trenje može zanemariti
+poslije,source/u08_energijska_jednadzba_i_bernoulli.md,269,Numerički most,## Kada se trenje može zanemariti
+poslije,source/u08_energijska_jednadzba_i_bernoulli.md,271,CFD,## Kada se trenje može zanemariti
+poslije,source/u08_energijska_jednadzba_i_bernoulli.md,273,mreža,## Kada se trenje može zanemariti
+poslije,source/u08_energijska_jednadzba_i_bernoulli.md,275,CFD; cfd; mreža,## Kada se trenje može zanemariti
+poslije,source/u08_energijska_jednadzba_i_bernoulli.md,277,cfd,## Kada se trenje može zanemariti
+poslije,source/u08_energijska_jednadzba_i_bernoulli.md,669,cfd,## Riješeni primjeri
+poslije,source/u08_energijska_jednadzba_i_bernoulli.md,719,računala,## Riješeni primjeri
+prije,source/u09_kompresibilni_idealni_tok.md,131,Numerički trag; mreža,## Stagnacijske veličine u izentropskom toku {#sec-stagnacijske-velicine}
+prije,source/u09_kompresibilni_idealni_tok.md,133,diskretizacija,## Stagnacijske veličine u izentropskom toku {#sec-stagnacijske-velicine}
+prije,source/u09_kompresibilni_idealni_tok.md,245,Numerički trag,### Odgovori
+prije,source/u09_kompresibilni_idealni_tok.md,247,CFD; računalnog,### Odgovori
+prije,source/u09_kompresibilni_idealni_tok.md,249,mrežom; rezidual,### Odgovori
+prije,source/u09_kompresibilni_idealni_tok.md,251,Diskretizacija,### Odgovori
+prije,source/u09_kompresibilni_idealni_tok.md,398,Numerički pokus,### Kontrolni rezultat
+prije,source/u09_kompresibilni_idealni_tok.md,405,numerički pokus,### Kontrolni rezultat
+poslije,source/u09_kompresibilni_idealni_tok.md,240,Numerički most,### Odgovori
+poslije,source/u09_kompresibilni_idealni_tok.md,393,Numerički pokus,### Kontrolni rezultat
+poslije,source/u09_kompresibilni_idealni_tok.md,400,numerički pokus,### Kontrolni rezultat
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,49,računalnom,## Ista bilanca za mnogo malih dijelova fluida
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,51,Računalo,## Ista bilanca za mnogo malih dijelova fluida
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,100,Numerički trag,## Ista bilanca za mnogo malih dijelova fluida
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,109,računalo,## Provjera sile na cijevno koljeno
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,111,Računalni,## Provjera sile na cijevno koljeno
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,212,diskretizira; diskretiziranoga; validacija,## Postupak rješenja
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,225,Numerički trag,## Postupak rješenja
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,227,Računalni,## Postupak rješenja
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,231,mreži; mrežna,## Postupak rješenja
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,470,cfd; diskretizacijske; mrežu,## Riješeni primjeri
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,1030,Numerički most,### Kontrolni rezultat
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,1032,diskretizacije,### Kontrolni rezultat
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,1034,Diskretiziraju; mreži,### Kontrolni rezultat
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,1036,cfd; validacije; verifikacije,### Kontrolni rezultat
+prije,source/u10_kolicina_i_moment_kolicine_gibanja.md,1038,diskretiziranoj,### Kontrolni rezultat
+poslije,source/u10_kolicina_i_moment_kolicine_gibanja.md,49,računalnom,## Ista bilanca za mnogo malih dijelova fluida
+poslije,source/u10_kolicina_i_moment_kolicine_gibanja.md,51,Računalo,## Ista bilanca za mnogo malih dijelova fluida
+poslije,source/u10_kolicina_i_moment_kolicine_gibanja.md,101,CFD,## Provjera sile na cijevno koljeno
+poslije,source/u10_kolicina_i_moment_kolicine_gibanja.md,105,cfd; mreže,## Provjera sile na cijevno koljeno
+poslije,source/u10_kolicina_i_moment_kolicine_gibanja.md,206,cfd,## Postupak rješenja
+poslije,source/u10_kolicina_i_moment_kolicine_gibanja.md,455,računalni,## Riješeni primjeri
+prije,source/u11_dimenzijska_analiza_i_slicnost.md,122,Numerički trag,## Bezdimenzijske grupe kao omjeri mehanizama
+prije,source/u11_dimenzijska_analiza_i_slicnost.md,133,računalnog,## Kada se rezultat može prenijeti na drugi sustav
+prije,source/u11_dimenzijska_analiza_i_slicnost.md,321,Numerički trag; mreže,## Kako odlučiti što bezdimenzionirati
+prije,source/u11_dimenzijska_analiza_i_slicnost.md,323,Mreža; računalni,## Kako odlučiti što bezdimenzionirati
+prije,source/u11_dimenzijska_analiza_i_slicnost.md,325,mreže,## Kako odlučiti što bezdimenzionirati
+prije,source/u11_dimenzijska_analiza_i_slicnost.md,895,Numerički most,### Kontrolni rezultat
+prije,source/u11_dimenzijska_analiza_i_slicnost.md,899,LES; RANS; mreže; y^+,### Kontrolni rezultat
+prije,source/u11_dimenzijska_analiza_i_slicnost.md,901,VOF,### Kontrolni rezultat
+prije,source/u11_dimenzijska_analiza_i_slicnost.md,903,računalnoj,### Kontrolni rezultat
+prije,source/u11_dimenzijska_analiza_i_slicnost.md,942,Numerički most; računalna,### Kontrolni rezultat
+poslije,source/u11_dimenzijska_analiza_i_slicnost.md,125,računalnog,## Kada se rezultat može prenijeti na drugi sustav
+poslije,source/u11_dimenzijska_analiza_i_slicnost.md,313,Numerički most,## Kako odlučiti što bezdimenzionirati
+poslije,source/u11_dimenzijska_analiza_i_slicnost.md,315,mreže,## Kako odlučiti što bezdimenzionirati
+poslije,source/u11_dimenzijska_analiza_i_slicnost.md,326,cfd; mreža,## Kako odlučiti što bezdimenzionirati
+poslije,source/u11_dimenzijska_analiza_i_slicnost.md,930,cfd; računalna,### Kontrolni rezultat
+prije,source/u12_diferencijalni_opis_realnog_toka.md,10,CFD,## Diferencijalni opis realnog toka {#sec-realni-tok-motivacija}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,73,Numerički trag,## Lokalna bilanca mase i količine gibanja {#sec-navier-stokes}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,75,CFD; mreže; reziduali,## Lokalna bilanca mase i količine gibanja {#sec-navier-stokes}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,86,reziduale,## Rubni uvjeti i fizikalno zatvaranje problema {#sec-rubni-uvjeti}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,227,y^+,## Turbulentni tok: srednja vrijednost nije cijelo polje {#sec-turbulencija}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,230,y^+,## Turbulentni tok: srednja vrijednost nije cijelo polje {#sec-turbulencija}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,244,CFD; cfd; diskretizacija,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,249,diskretizacija; mreža,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,250,validacijska,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,252,Reziduali; cfd; mreže,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,254,GCI; cfd; reziduala; validacije,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,263,CFD; rezidual,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,267,Rezidual; diskretizacijske; diskretiziranog,### Odgovori
+prije,source/u12_diferencijalni_opis_realnog_toka.md,272,Numerički trag,### Odgovori
+prije,source/u12_diferencijalni_opis_realnog_toka.md,274,diskretiziraju; mrežna; reziduala,### Odgovori
+prije,source/u12_diferencijalni_opis_realnog_toka.md,276,Mreža,### Odgovori
+prije,source/u12_diferencijalni_opis_realnog_toka.md,278,Verifikacija; rezidualom; validacija,### Odgovori
+prije,source/u12_diferencijalni_opis_realnog_toka.md,283,mreže; mrežne,## Zadaci za vježbu {#sec-realni-tok-zadaci}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,398,cfd; mreže,### Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,400,CFD; mrežu,### Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,402,GCI; cfd; mreže,### Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,404,CFD; GCI; mreže; numeričku nesigurnost,### Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,406,CFD,### Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
+prije,source/u12_diferencijalni_opis_realnog_toka.md,421,mreža,### Kontrolni rezultat
+prije,source/u12_diferencijalni_opis_realnog_toka.md,423,CFD; reziduali; validaciju,### Kontrolni rezultat
+prije,source/u12_diferencijalni_opis_realnog_toka.md,432,Numerički pokus; mreža,### Kontrolni rezultat
+prije,source/u12_diferencijalni_opis_realnog_toka.md,434,diskretizacijsku; mreže,### Kontrolni rezultat
+prije,source/u12_diferencijalni_opis_realnog_toka.md,451,validacija,### Kontrolni rezultat
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,10,CFD,## Diferencijalni opis realnog toka {#sec-realni-tok-motivacija}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,81,reziduale,## Rubni uvjeti i fizikalno zatvaranje problema {#sec-rubni-uvjeti}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,219,CFD; DNS; LES; RANS,## Turbulentni tok: srednja vrijednost nije cijelo polje {#sec-turbulencija}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,224,y^+,## Turbulentni tok: srednja vrijednost nije cijelo polje {#sec-turbulencija}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,227,y^+,## Turbulentni tok: srednja vrijednost nije cijelo polje {#sec-turbulencija}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,241,CFD; cfd; diskretizacija,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,245,Računalo,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,247,cfd; mreža; mreže,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,249,Rezidual; cfd; validacije; verifikacije,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,251,CFD; cfd,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,260,CFD; rezidual,## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,264,Rezidual; diskretizacijske; diskretiziranog,### Odgovori
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,271,mreže; mrežne,## Zadaci za vježbu {#sec-realni-tok-zadaci}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,386,cfd; mreže,### Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,388,CFD; mrežu,### Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,390,GCI; cfd; mreže,### Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,392,CFD; GCI; mreže; numeričku nesigurnost,### Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,394,CFD,### Konvergencija i izbor mreže {#task-cfd-tri-mreze .unnumbered .unlisted}
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,409,mreža,### Kontrolni rezultat
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,411,CFD; reziduali; validaciju,### Kontrolni rezultat
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,420,Numerički pokus; mreža,### Kontrolni rezultat
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,422,diskretizacijsku; mreže,### Kontrolni rezultat
+poslije,source/u12_diferencijalni_opis_realnog_toka.md,439,validacija,### Kontrolni rezultat
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,1,mreže,
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,3,mreže,"## Gubitci, cjevovodi, crpke i mreže {#sec-cjevovodi-motivacija}"
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,10,mrežu,"## Gubitci, cjevovodi, crpke i mreže {#sec-cjevovodi-motivacija}"
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,60,RANS; mrežnom; validacijom,## Realna energijska bilanca sustava {#sec-realna-energijska-bilanca}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,160,rezidual,## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,166,Numerički pokus; reziduala,## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,168,rezidual,## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,173,numerički pokus,## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,178,Numerički trag,## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,180,CFD; mreži; mrežnu,## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,183,mreže,## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,185,Mreža,## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,209,mrežu,## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,218,Numerički pokus,## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,225,numerički pokus,## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,265,mreže,### Snaga bez miješanja energijskih razina {#sec-ledger-snage}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,314,Numerički trag; mreže,"## Usis i $NPSH$: nužan, ali ne konačan kriterij {#sec-npsh}"
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,316,CFD; Mrežni; mrežne,"## Usis i $NPSH$: nužan, ali ne konačan kriterij {#sec-npsh}"
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,318,mreže; mrežni; mrežu,"## Usis i $NPSH$: nužan, ali ne konačan kriterij {#sec-npsh}"
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,399,mreža,## Riješeni primjeri {#sec-u13-rijeseni-primjeri}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,680,rezidual,### Radna točka hrapavog voda {#task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,685,rezidual,### Naputak
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,691,reziduala,### Kontrolni rezultat
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,744,CFD; Numerički most; mrežni,### Kontrolni rezultat
+prije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,746,CFD; mreže; mrežne; mrežni; računalni,### Kontrolni rezultat
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,1,mreže,
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,3,mreže,"## Gubitci, cjevovodi, crpke i mreže {#sec-cjevovodi-motivacija}"
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,10,mrežu,"## Gubitci, cjevovodi, crpke i mreže {#sec-cjevovodi-motivacija}"
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,60,RANS; mrežnom; validacijom,## Realna energijska bilanca sustava {#sec-realna-energijska-bilanca}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,160,rezidual,## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,166,Numerički pokus; reziduala,## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,168,rezidual,## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,173,numerički pokus,## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,178,mreže,## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,180,Mreža,## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,204,mrežu,## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,213,Numerički pokus,## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,220,numerički pokus,## Serijske i paralelne mreže {#sec-cjevovodne-mreze}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,260,mreže,### Snaga bez miješanja energijskih razina {#sec-ledger-snage}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,385,mreža,## Riješeni primjeri {#sec-u13-rijeseni-primjeri}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,666,rezidual,### Radna točka hrapavog voda {#task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,671,rezidual,### Naputak
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,677,reziduala,### Kontrolni rezultat
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,730,CFD; Numerički most; mrežni,### Kontrolni rezultat
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,732,CFD; Mreža; mreža; mreže,### Kontrolni rezultat
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,734,CFD; mrežni,### Kontrolni rezultat
+poslije,source/u13_gubici_cjevovodi_crpke_i_mreze.md,736,CFD; cfd; mrežni,### Kontrolni rezultat
+prije,source/u14_turbostrojevi_i_propulzija.md,226,Računalo,## Strujanje gledano s lopatice
+prije,source/u14_turbostrojevi_i_propulzija.md,329,Numerički trag,## Strujanje gledano s lopatice
+prije,source/u14_turbostrojevi_i_propulzija.md,335,Numerički trag,## Strujanje gledano s lopatice
+prije,source/u14_turbostrojevi_i_propulzija.md,337,MRF; mreža,## Strujanje gledano s lopatice
+prije,source/u14_turbostrojevi_i_propulzija.md,341,mrežu,## Strujanje gledano s lopatice
+prije,source/u14_turbostrojevi_i_propulzija.md,1004,Numerički most,### Kontrolni rezultat
+prije,source/u14_turbostrojevi_i_propulzija.md,1006,MRF; mreža,### Kontrolni rezultat
+prije,source/u14_turbostrojevi_i_propulzija.md,1008,mreži,### Kontrolni rezultat
+prije,source/u14_turbostrojevi_i_propulzija.md,1010,cfd; verifikacija,### Kontrolni rezultat
+poslije,source/u14_turbostrojevi_i_propulzija.md,226,Računalo,## Strujanje gledano s lopatice
+poslije,source/u14_turbostrojevi_i_propulzija.md,989,Numerički most,### Kontrolni rezultat
+poslije,source/u14_turbostrojevi_i_propulzija.md,991,CFD,### Kontrolni rezultat
+poslije,source/u14_turbostrojevi_i_propulzija.md,993,MRF; mreža,### Kontrolni rezultat
+poslije,source/u14_turbostrojevi_i_propulzija.md,995,cfd,### Kontrolni rezultat
+prije,source/u15_otvoreni_tokovi.md,66,Numerički trag,## Froudeov broj i prijenos informacije {#sec-froude-kanal}
+prije,source/u15_otvoreni_tokovi.md,68,mrežom,## Froudeov broj i prijenos informacije {#sec-froude-kanal}
+prije,source/u15_otvoreni_tokovi.md,191,CFD; cfd,"## Hidraulički skok: energija se gubi, količina gibanja zatvara prijelaz {#sec-hidraulicki-skok}"
+prije,source/u15_otvoreni_tokovi.md,239,Numerički trag,### Odgovori
+prije,source/u15_otvoreni_tokovi.md,241,CFD; diskretiziraju; mreže,### Odgovori
+prije,source/u15_otvoreni_tokovi.md,332,rezidual,### Kontrolni presjek na pragu {#task-kontrolni-presjek-na-pragu .unnumbered .unlisted}
+prije,source/u15_otvoreni_tokovi.md,354,rezidual,### Provjera mjerenja hidrauličkog skoka {#task-skok-mjerenje .unnumbered .unlisted}
+prije,source/u15_otvoreni_tokovi.md,358,rezidual,### Provjera mjerenja hidrauličkog skoka {#task-skok-mjerenje .unnumbered .unlisted}
+prije,source/u15_otvoreni_tokovi.md,364,rezidual,### Naputak
+prije,source/u15_otvoreni_tokovi.md,411,Numerički pokus,### Kontrolni rezultat
+poslije,source/u15_otvoreni_tokovi.md,186,CFD; cfd,"## Hidraulički skok: energija se gubi, količina gibanja zatvara prijelaz {#sec-hidraulicki-skok}"
+poslije,source/u15_otvoreni_tokovi.md,234,Numerički most,### Odgovori
+poslije,source/u15_otvoreni_tokovi.md,238,CFD; VOF,### Odgovori
+poslije,source/u15_otvoreni_tokovi.md,240,cfd,### Odgovori
+poslije,source/u15_otvoreni_tokovi.md,327,rezidual,### Kontrolni presjek na pragu {#task-kontrolni-presjek-na-pragu .unnumbered .unlisted}
+poslije,source/u15_otvoreni_tokovi.md,349,rezidual,### Provjera mjerenja hidrauličkog skoka {#task-skok-mjerenje .unnumbered .unlisted}
+poslije,source/u15_otvoreni_tokovi.md,353,rezidual,### Provjera mjerenja hidrauličkog skoka {#task-skok-mjerenje .unnumbered .unlisted}
+poslije,source/u15_otvoreni_tokovi.md,359,rezidual,### Naputak
+poslije,source/u15_otvoreni_tokovi.md,406,Numerički pokus,### Kontrolni rezultat
+nepromijenjeno,notebooks/u01_hidraulicna_presa.ipynb,"ćelija 3, redak 4",Mreža,Markdown bilježnice
+nepromijenjeno,notebooks/u05_sila_na_ravnu_plohu.ipynb,"ćelija 3, redak 9",mrežom,Markdown bilježnice
+nepromijenjeno,notebooks/u08_kontinuitet_suzenje.ipynb,"ćelija 5, redak 5",diskretizacija,Markdown bilježnice
+nepromijenjeno,notebooks/u09_kompresibilna_sapnica.ipynb,"ćelija 2, redak 15",numerički pokus,Markdown bilježnice
+nepromijenjeno,notebooks/u09_kompresibilna_sapnica.ipynb,"ćelija 8, redak 3",validaciju,Markdown bilježnice
+nepromijenjeno,notebooks/u10_moody_dijagram.ipynb,"ćelija 2, redak 3",Rezidual,Markdown bilježnice
+nepromijenjeno,notebooks/u10_moody_dijagram.ipynb,"ćelija 6, redak 5",reziduala,Markdown bilježnice
+nepromijenjeno,notebooks/u10_moody_dijagram.ipynb,"ćelija 8, redak 3",reziduala,Markdown bilježnice
+nepromijenjeno,notebooks/u10_moody_dijagram.ipynb,"ćelija 10, redak 4",rezidual,Markdown bilježnice
+nepromijenjeno,notebooks/u11_sila_na_koljeno.ipynb,"ćelija 2, redak 10",Rezidual,Markdown bilježnice
+nepromijenjeno,notebooks/u12_pelton_lopatica.ipynb,"ćelija 2, redak 3",mreže,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 0, redak 3",cfd,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 0, redak 5",CFD; mreže,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 0, redak 10",mreža,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 0, redak 13",GCI; mreža,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 0, redak 14",CFD,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 10, redak 1",GCI; mreži,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 10, redak 3",GCI; diskretizacijsku; validaciju,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 12, redak 3",CFD; mreže,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 12, redak 5",GCI; cfd; numerička nesigurnost,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 12, redak 7",CFD,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 14, redak 6",mreža,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 14, redak 7",mreža; validaciju,Markdown bilježnice
+nepromijenjeno,notebooks/u12_poiseuille_konvergencija.ipynb,"ćelija 14, redak 9",CFD; validaciju,Markdown bilježnice
+nepromijenjeno,notebooks/u13_paralelne_grane.ipynb,"ćelija 0, redak 1",mreža,Markdown bilježnice
+nepromijenjeno,notebooks/u13_paralelne_grane.ipynb,"ćelija 0, redak 9",reziduala,Markdown bilježnice
+nepromijenjeno,notebooks/u13_paralelne_grane.ipynb,"ćelija 0, redak 11",mreže,Markdown bilježnice
+nepromijenjeno,notebooks/u13_paralelne_grane.ipynb,"ćelija 2, redak 3",reziduala,Markdown bilježnice
+nepromijenjeno,notebooks/u13_paralelne_grane.ipynb,"ćelija 2, redak 5",mrežu,Markdown bilježnice
+nepromijenjeno,notebooks/u15_otvoreni_tokovi.ipynb,"ćelija 8, redak 5",reziduala,Markdown bilježnice
+nepromijenjeno,notebooks/u15_otvoreni_tokovi.ipynb,"ćelija 12, redak 8",reziduala,Markdown bilježnice

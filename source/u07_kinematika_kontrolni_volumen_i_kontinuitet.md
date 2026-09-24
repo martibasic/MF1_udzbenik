@@ -300,27 +300,32 @@ $$
 \nabla\cdot\vec{v} = 0.
 $$ {#eq-kinematika-kv-matematicki-izvod-diferencijalni-oblik-kontinuit-05}
 
-Ova lokalna jednadžba čini polaznu točku diskretizacije u programima za CFD: u algoritmima SIMPLE i PISO tlak i brzina korigiraju se kako bi diskretni oblik uvjeta $\nabla\cdot\vec{v} = 0$ bio zadovoljen u svakoj ćeliji do zadane tolerancije.
+Isti zakon sada primijenimo na mnogo povezanih kontrolnih volumena.
 :::
 
 Sljedeći primjeri obuhvaćaju tri osnovne situacije: suženje ili difuzor, miješanje više struja i spremnik s promjenom razine. Zato se prije bilo koje jednadžbe najprije bira kontrolni volumen, pa se provjerava piše li se masena ili volumenska bilanca, radi li se o stacionarnom ili nestacionarnom problemu te postoji li jedna grana ili više ulaza i izlaza.
 
 Preskakanje tih koraka može dovesti do neopravdanog pojednostavnjivanja zadatka.
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — granice računskog volumena</p>
-
-Ulaz, izlaz, stijenka i pokretna granica u simulaciji imaju istu ulogu kao granica ručnog kontrolnog volumena: određuju što preko nje može prijeći. Maseni protok zato se ne provjerava samo na jednom presjeku, nego na svim otvorenim granicama i zajedno s mogućom akumulacijom u domeni.
-:::
 
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — ćelija mreže</p>
+<p class="mf1-box-label">Numerički most — od kontrolnog volumena do ćelije</p>
 
-Kontrolni volumen ručnoga računa u metodi konačnih volumena postaje jedna ćelija mreže. Zbroj tokova kroz njezine plohe i promjena mase u ćeliji moraju se zatvoriti lokalno, a zbroj preko cijele domene mora odgovarati svim otvorenim granicama.
+**Fizikalna poveznica.** Bilanca „akumulacija + neto izlaz = 0” vrijedi za spremnik i za svaku malu ćeliju. **Diskretizacija** kontinuiranu domenu dijeli na konačan broj područja i aproksimira tokove kroz njihove plohe. U metodi konačnih volumena (FVM), za nepomičnu ćeliju $i$ bez izvora mase, jedan zapis glasi
 
-Za stacionaran slučaj promatra se razlika ukupnih ulaznih i izlaznih masenih tokova, a za nestacionaran i promjena mase u domeni. Ta se neravnoteža iskazuje uz mjerilo protoka i promatranu izlaznu veličinu; univerzalni postotak prihvatljivosti nema fizikalni smisao.
+$$
+\frac{(\rho V)_i^{n+1}-(\rho V)_i^n}{\Delta t}
++\sum_{f\in\partial i}\dot m_f^{n+1}=0,
+\qquad \dot m_f\approx\rho_f(\vec v_f\cdot\vec n_f)A_f.
+$$ {#eq-celijska-bilanca-mase}
 
-Lokalno zatvaranje ćelija omogućuje otkrivanje izvora pogreške, ali ne jamči točnost vrtloga, pada tlaka ili slobodne površine. Zato se bilanca mase kombinira s mrežnom konvergencijom i neovisnom analitičkom ili mjernom usporedbom.
+Oznaka $n$ označuje vremensku razinu, a $f$ plohu s vanjskom normalom. Za stacionaran tok prvi član iščezava. Brzine na plohama povezuju susjedne nepoznanice: zajedno s bilancom gibanja dobiva se velik sustav algebarskih jednadžbi.
+
+| Skica kontrolnog volumena | Numerička domena | Mreža | Polje i izlaz |
+|---|---|---|---|
+| ulaz, grlo i stijenka Venturija | fluid unutar cijevi | povezane ćelije i plohe | brzina → protok kroz presjek |
+
+**Provjera i primjena.** Isti tok kroz zajedničku plohu ulazi u dvije ćelije sa suprotnim predznacima. Zbrajanjem lokalnih bilanci unutarnji se tokovi ponište: ostaju granice domene i ukupna akumulacija. Za stacionarni Venturi ulazni i izlazni maseni protok moraju se slagati. Tlak i energiju istoga problema povezuje sljedeće poglavlje, a postupak rješavanja @sec-realni-tok-cfd.
 :::
 
 ## Riješeni primjeri
@@ -891,17 +896,6 @@ $Q_3=8{,}042\ \text{L/s}$; $\rho_{mix}=1021{,}3\ \text{kg/m}^3$; $dh/dt=1{,}450\
 
 ![Skice uz zadatke za vježbu — cijevi, mješalice i razdjelnici protoka.](../assets/print/u08_vjezbe_skice.svg){#fig-u08-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — cijevi, mješalice i razdjelnici protoka."}
 
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
-
-**Veza s numeričkim proračunom.** U metodi konačnih volumena kontrolni volumen koji se ovdje rabi za jedan spremnik postaje ćelija mreže. Diskretizirani tokovi kroz plohe moraju zatvoriti lokalnu i globalnu bilancu mase; druge numeričke metode istu fizikalnu bilancu mogu diskretizirati drukčije.
-
-**Postupak numeričkog proračuna.** Diskretizirani kontinuitet spreže tlak i brzinu. Neravnoteža masenih protoka zato se prati zajedno s rezidualima i odabranim izlaznim veličinama; prihvatljiv rezultat mora pokazati očuvanje razmjerno mjerilu protoka i svrsi računa.
-
-**Tipičan scenarij.** Protok se integrira na svim otvorenim granicama i uspoređuje s akumulacijom u domeni. Ne postoji univerzalna prihvatna granica od $1\,\%$: tolerancija ovisi o zatvorenosti bilance, diskretizaciji, vremenskoj statistici i potrebnoj nesigurnosti izlaza. Provjera jednadžbi i numeričke konvergencije prethodi validaciji prema podatcima [@nasa-cfd-vv; @asme-vv20-2009].
-
-> *Nije gradivo MF1. Bilanca ručno odabranoga kontrolnog volumena primjenjuje se i na pojedine ćelije velike računske mreže.*
-:::
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

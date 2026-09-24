@@ -28,16 +28,6 @@ Pritom je $\Delta h$ razlika razina slobodne površine na krajevima spremnika.
 
 Za razliku od hidrostatike u mirujućem spremniku, tlak ne raste samo s okomitom dubinom. Smjer efektivnog polja sila određuje geometriju slobodne površine, lokalnu dubinu i raspodjelu tlaka.
 
-<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — gibanje spremnika</p>
-
-Numerički opis ubrzanoga ili rotirajućeg spremnika uvodi odgovarajuće neinercijske volumenske članove ili rješava gibanje u inercijskom okviru s pokretnom mrežom. Mirna slobodna površina u stalnom ubrzanju, odnosno paraboloid pri vrtnji krutoga tijela, ostaju provjerljivi referentni slučajevi prije proračuna prolaznih valova i zalijevanja stijenki.
-
-U toj se provjeri uspoređuju visina slobodne površine, tlak na stijenci i očuvani volumen, a ne samo izgled prikazane površine. Stacionarni rezultat pri zadanom ubrzanju može biti ispravan i kada nije prikladan za naglo pokretanje ili zaustavljanje spremnika.
-
-Za prolazni problem dodatno se prati vremenska konvergencija nagiba, sile na stijenci i eventualnoga prelijevanja. Potrebna duljina simulacije određuje se fizikalnim vremenom odziva, ne samo time što su reziduali pali ispod zadanog broja.
-:::
 
 ## Matematički izvod
 
@@ -162,11 +152,12 @@ $$ {#eq-relativno-mirovanje-matematicki-izvod-volumno-ocuvanje-paraboloida-e-07}
 Prva se javlja pojava s manjom kritičnom kutnom brzinom. Budući da se uspoređuju $h_0$ i $H-h_0$, vrijedi: za $h_0<H/2$ prvo se ogoljava dno, za $h_0>H/2$ prvo nastupa prelijevanje, a za $h_0=H/2$ pragovi se podudaraju. Nakon prvoga praga mijenja se domena fluida ili volumen u spremniku, pa gornje formule za puni paraboloid više ne vrijede bez nove geometrijske bilance.
 :::
 
-<!-- [NOVA PEDAGOŠKA DOPUNA] Postojeći numerički trag -->
 ::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — slobodna površina kao provjera</p>
+<p class="mf1-box-label">Slobodna površina kao provjera računa</p>
 
-Ravnina slobodne površine pri stalnom ubrzanju i paraboloid pri stalnoj vrtnji poznata su rješenja koja se mogu usporediti s poljem iz simulacije. Time se odvojeno provjeravaju gravitacija, ubrzanje, tlak i geometrijsko praćenje površine prije modeliranja prolaznoga valjanja, prskanja ili punjenja spremnika.
+Pri stalnom ubrzanju ili vrtnji, nakon smirivanja prolaznih gibanja, ravnoteža određuje poznatu ravninu ili paraboloid slobodne površine. Računalni model mora uz isti volumen vode dati isti oblik i tlak na stijenci.
+
+Pri naglom kočenju cisterne ravnotežni nagib više ne opisuje valove i vršna opterećenja. Tada treba pratiti gibanje vode kroz vrijeme, uz zadano gibanje spremnika. Mirno rješenje ostaje početna provjera; primjena referentnih okvira na rotor slijedi u []{.mf1-chapter-ref target="u14"}.
 :::
 
 ## Riješeni primjeri
@@ -840,29 +831,3 @@ Fluid se nalazi u relativnom mirovanju kada se u odnosu na ubrzani ili rotiraju�
 U spremniku koji rotira stalnom kutnom brzinom tlak raste s radijalnom udaljenošću, a slobodna površina poprima paraboloidni oblik $h(r)=h_C+\omega^2r^2/(2g)$. Očuvanje volumena određuje visine u središtu i uz stijenku, dok se granice primjene osnovnog modela određuju uvjetima prelijevanja i ogoljavanja dna.
 
 Model pretpostavlja da su prolazne oscilacije, valjanje, prskanje i relativno strujanje fluida zanemarivi. Pri promjenjivom ubrzanju ili značajnom relativnom gibanju potrebna je nestacionarna analiza.
-
-<!-- [RESTAURACIJA] Tekst doslovno preuzet iz c417e9f: source/u04_relativno_mirovanje_fluida.md -->
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički most</p>
-
-**Veza s numeričkim proračunom.** Promjena referentnog okvira iz ovog poglavlja temelj je numeričkih pristupa rotirajućim domenama u pumpama, ventilatorima, vodnim i plinskim turbinama te centrifugama. Umjesto računski zahtjevne rotacije mreže, program za CFD dodaje **prividne sile** — centrifugalnu i Coriolisovu — točno onako kako se u zadacima dodavalo $a_{cf} = \omega^2 r$.
-
-**Postupak numeričkog proračuna.** **MRF (Moving Reference Frame)** definira zonu u mreži koja se "vrti" matematički — rješavanjem Navier–Stokesovih jednadžbi u rotirajućem sustavu s dodatnim Coriolisovim i centrifugalnim članom. Za pune nestacionarne simulacije postoji i **klizajuća mreža (engl. sliding mesh)** u kojoj se dijelovi mreže vezani uz rotor i stator gibaju relativno jedan prema drugome.
-
-**Tipičan scenarij.** Stacionarni MRF model može dati početnu procjenu srednjih veličina rotirajućega stroja. Kada su važni prolaz rotora kraj statora, pulsacije ili akustika, potreban je odgovarajući nestacionarni model. Računski trošak i potrebna razlučivost ovise o geometriji, mreži, vremenskom koraku i traženoj izlaznoj veličini.
-
-> *Nije gradivo MF1. Paraboloidna slobodna površina iz ovoga poglavlja u CFD-u dobiva se numeričkim proračunom.*
-:::
-
-<!-- [NOVA PEDAGOŠKA DOPUNA] -->
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerička poveznica — od gibanja spremnika do provjere</p>
-
-**Što je zadano, a što se traži.** Za relativno miran fluid poznati su geometrija i početni volumen tekućine, gustoća, gravitacija i stalno ubrzanje spremnika ili kutna brzina. Traže se položaj slobodne površine, raspodjela tlaka i opterećenje stijenki. U okviru vezanom uz spremnik zadano se gibanje pojavljuje kao efektivno polje $\vec g_{eff}=\vec g-\vec a$; u inercijskom okviru isti se problem može opisati gibajućim stijenkama. Oba zapisa predstavljaju istu fiziku, ali model relativnog mirovanja vrijedi tek nakon što su prolazni valovi zanemarivi.
-
-**Slobodna površina i granice.** Slobodna površina je granica tekućine i plina na kojoj je za otvoreni spremnik tlak jednak atmosferskom, odnosno zadanom referentnom tlaku. U računalnom modelu može se voditi kao poznata mirna granica u referentnom slučaju ili pratiti pokazateljem faze kada se njezin položaj mijenja. Tekućina ne prolazi kroz stijenke spremnika; u inercijskom zapisu brzina fluida na stijenci prati zadano gibanje stijenke, a u okviru spremnika stijenka je mirna. Te granice i početni volumen određuju gdje se može nalaziti površina, pa nagib nije slobodno odabrana geometrija.
-
-**Diskretni račun i kontrola.** Domena se dijeli u ćelije u kojima se predstavljaju tlak i faza, a susjedne vrijednosti povezuju se diskretnom bilancom tlačnih, gravitacijskih i inercijskih doprinosa. Za stalno translatorno ubrzanje provjeravaju se ravnina i nagib slobodne površine, a za vrtnju paraboloid; dodatno se uspoređuju očuvani volumen i tlak na stijenkama s analitičkim referentnim slučajem. Pad reziduala pokazuje samo da je numerički postupak dosegnuo svoj kriterij, dok fizikalnu ispravnost pokazuju ta podudarnost, zanemariva relativna brzina i stabilnost rezultata pri profinjenju mreže. Tek nakon toga mogu se tumačiti valjanje, prskanje ili prelijevanje.
-
-Detalji praćenja međupovršine, rubnih uvjeta, vremenske diskretizacije i verifikacije obrađuju se u []{.mf1-chapter-ref target="u12"} i <span class="mf1-ch-ref"><span class="mf1-ch-code">dod. D</span><span class="mf1-ch-title">Numerička mehanika fluida</span></span>.
-:::

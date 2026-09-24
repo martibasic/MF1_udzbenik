@@ -2,7 +2,9 @@
 
 Udžbenik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. Kroz petnaest poglavlja upoznat ćeš svojstva fluida, hidrostatiku i strujanje u cijevima, turbostrojevima i otvorenim kanalima.
 
-Pri prvom čitanju slijedi glavni tekst i riješene primjere, a zatim pokušaj samostalno riješiti zadatke. Blokovima *Dublje* i napomenama o računalnim proračunima možeš se vratiti kada usvojiš osnovni model.
+Pri prvom čitanju slijedi glavni tekst, riješene primjere i zadatke. *Dublje* i numerički mostovi dodatno su čitanje: osnovni MF1 možeš pratiti bez učenja CFD postupaka.
+
+**CFD put:** fizikalni zakoni → modeli, pretpostavke i bilance → analitička rješenja → kratki numerički mostovi → lokalne jednadžbe u []{.mf1-chapter-ref target="u12"} → model, provjera i odluka u [Venturijevu primjeru](#sec-cfd-venturi). CFD primjenjuje istu fiziku na složeniji prostor i vrijeme.
 
 ## Predznanje
 
@@ -39,7 +41,7 @@ U svakom je poglavlju šest zadataka, od T1 do T4. Zadatci nižih razina oslanja
 
 ## Numerički pokusi i izdanja
 
-Numerički pokusi služe istraživanju utjecaja promjene podataka na rezultat. Bilježnice (*Jupyter notebooks*) dostupne su preko poveznica ili QR kodova, bez prijave u JupyterLiteu; dostupna je i poveznica za Google Colab.
+Numerički pokusi istražuju osjetljivost, bilance i pogrešku jednostavnih modela; nisu automatski CFD simulacije. Bilježnice (*Jupyter notebooks*) dostupne su preko poveznica ili QR kodova, bez prijave u JupyterLiteu, uz pričuvni Google Colab.
 
 **Za čitanje i rješavanje zadataka dovoljan je tekst udžbenika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. Izdanje u PDF-u namijenjeno je ispisu i radu bez mrežne veze.
 

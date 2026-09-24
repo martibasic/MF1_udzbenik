@@ -325,21 +325,6 @@ Isti zakon zato vodi i Peltonov rotor i potisni sustav: u prvom slučaju fluid g
 
 To je pravi strojarski smisao []{.mf1-chapter-ref target="u14"}. Na Peltonovu kolu loš odabir obodne brzine odmah smanjuje moment i snagu generatora. Na vodilici ili ispitnoj glavi pogrešno pročitan izlazni vektor znači pogrešnu reakciju nosača. Na propeleru ili vodomlaznome pogonu ista matematika povezuje ubrzanje fluida s potiskom sustava.
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — referentni okvir rotora</p>
-
-Brzina koju vidi lopatica razlikuje se od brzine u nepokretnom sustavu, pa se i numerički rezultat mora čitati u jasno navedenom okviru. Trokuti brzina, moment i snaga trebaju se provjeriti istim konvencijama na ulazu i izlazu; inače se može dobiti brojčano uredan, ali pogrešno protumačen rad stroja.
-:::
-
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički trag — rotor i relativna brzina</p>
-
-Numerički model turbostroja računa apsolutne i relativne brzine, tlak te moment na rotoru. MRF opisuje stacionarnu aproksimaciju u rotirajućem okviru, dok su klizajuća mreža ili drugi nestacionarni pristupi potrebni kada interakcija rotora i statora mijenja traženi odziv.
-
-Moment, snaga, protok i promjena vrtložne komponente brzine čitaju se u dosljedno odabranom referentnom okviru. Korisna je neovisna provjera Eulerovom jednadžbom turbostroja pri istim presjecima, predznacima i obodnoj brzini lopatice.
-
-Stacionarni model može dobro opisati srednju radnu točku, ali ne i pulsacije, prolaz lopatica ili nestacionarnu kavitaciju. Za takve pojave provjeravaju se vremenski korak, broj okretaja potrebnih za statistiku i osjetljivost momenta na mrežu uz lopatice.
-:::
 
 ## Riješeni primjeri
 
@@ -1000,16 +985,14 @@ $F_p\approx3{,}186\ \mathrm{kN}$, masa lebdenja $324{,}7\ \mathrm{kg}$ i početn
 :::::
 
 
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički most</p>
+::: {.mf1-numerika .kompakt}
+<p class="mf1-box-label">Numerički most — od trokuta brzina do momenta rotora</p>
 
-**Veza s numeričkim proračunom.** Numerički modeli turbostrojeva računaju apsolutnu i relativnu brzinu, tlak te moment na rotoru. MRF je stacionarna aproksimacija u rotirajućem okviru; klizajuća mreža ili drugi nestacionarni pristupi potrebni su kada je važna vremenska interakcija rotora i statora.
+**Fizikalna poveznica.** Referentni okvir iz []{.mf1-chapter-ref target="u04"} i bilanca momenta iz []{.mf1-chapter-ref target="u10"} vrijede i među lopaticama. CFD računa polja tlaka i brzine, a integracijom tlačnih i viskoznih naprezanja moment $M$; snaga slijedi iz $P=M\omega$ uz dosljedan predznak.
 
-**Postupak numeričkog proračuna.** Iz polja tlaka i viskoznih naprezanja integriraju se sila, moment i snaga. Rezultat ovisi o domeni, mreži, vremenskom koraku, rubnim uvjetima i odabranim modelima turbulencije ili višefaznosti.
+**Izbor računa.** Za procjenu srednje radne točke može poslužiti MRF (*Multiple Reference Frames*), stacionarna aproksimacija povezanih rotirajućih i nepomičnih područja. Kada su cilj pulsacije zbog prolaza lopatica kraj statora, klizajuća mreža prati njihovo relativno gibanje kroz vrijeme.
 
-**Tipičan scenarij.** Simulacija može pokazati zone niskog tlaka i, uz izričito odabran višefazni model, procijeniti opseg parne faze. Sama po sebi ne dokazuje kavitacijsku otpornost ni vijek bez erozije; za takve zaključke trebaju verifikacija, odgovarajući eksperimentalni podatci i zaseban materijalni model [@nasa-cfd-vv; @asme-vv20-2009].
-
-> *Nije gradivo MF1. Veza s ručnim računom ostaje bilanca momenta i snage, ali složeniji numerički model uvodi dodatne pretpostavke koje treba zasebno provjeriti.*
+**Provjera i primjena.** Moment i snagu usporedi s Eulerovom bilancom turbostroja na istim presjecima; apsolutnu i relativnu brzinu čitaj prema $\vec c=\vec w+\vec u$. Za pulsacije provjeri i vremenski korak te dostatnost niza okretaja. Nizak apsolutni tlak upozorava na kavitacijski rizik; predviđanje parne faze zahtijeva dodatni model i ne određuje samo po sebi erozijski vijek. Postupak procjene vjerodostojnosti nalazi se u @sec-cfd-venturi.
 :::
 
 ::: {.mf1-zavrsni-okvir}
