@@ -25,13 +25,18 @@ figcaption {
   -webkit-overflow-scrolling: touch;
 }
 .math.inline {
-  display: inline-block;
+  display: inline;
+  overflow: visible;
+  font-size: 1.02em;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+.math.inline.mf1-wide-math {
+  display: block;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  font-size: 1.02em;
-  line-height: 1.35;
-  vertical-align: -0.25em;
+  padding: 0.2rem 0;
   -webkit-overflow-scrolling: touch;
 }
 

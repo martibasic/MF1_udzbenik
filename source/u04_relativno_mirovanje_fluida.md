@@ -416,7 +416,7 @@ Parabola $h(r) = h_C + \omega^2 r^2/(2g)$ opisuje oblik slobodne površine: na o
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Paraboloidna slobodna površina</p>
 
-Interaktivni prikaz omogućuje mijenjanje kutne brzine $\omega$, polumjera spremnika $R$ i početne visine $h_0$ uz neposredno praćenje paraboloidne slobodne površine. Visine u središtu i na rubu spremnika prikazuju se u stvarnom vremenu.
+U bilježnici pokreni sve ćelije, zatim kontrolama mijenjaj kutnu brzinu $\omega$, polumjer $R$, početnu visinu $h_0$ i visinu stijenke. Presjek i graf razina prate promjene do prvog dodira dna ili prelijevanja. Spremi slučaj A za usporedbu; kartica *Provjeri* prikazuje očuvanje volumena i granice modela, a *Pogledaj kod* računske funkcije.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u04_paraboloidna_povrsina.ipynb">Pokreni u pregledniku</a>

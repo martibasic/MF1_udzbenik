@@ -48,6 +48,18 @@ try {
         .filter(e => !e.closest("defs"));
       return {width: v.width, height: v.height, ink: elements.map(e => {
         const b = e.getBBox(), m = inverse.multiply(e.getScreenCTM());
+        // Windows resolves Segoe UI; Linux uses the declared Arial/sans-serif
+        // fallback. Require room for both, even on a Windows developer machine.
+        if (e.tagName === 'text') {
+          const original = e.style.fontFamily;
+          e.style.fontFamily = 'Arial, sans-serif';
+          const fallback = e.getBBox();
+          e.style.fontFamily = original;
+          const right = Math.max(b.x + b.width, fallback.x + fallback.width);
+          const bottom = Math.max(b.y + b.height, fallback.y + fallback.height);
+          b.x = Math.min(b.x, fallback.x); b.y = Math.min(b.y, fallback.y);
+          b.width = right - b.x; b.height = bottom - b.y;
+        }
         const points = [[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]]
           .map(([x,y]) => new DOMPoint(x,y).matrixTransform(m));
         return {tag: e.tagName, id: e.id, text: e.textContent,

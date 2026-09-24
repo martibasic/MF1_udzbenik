@@ -507,7 +507,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "cecffcd6e60ea9f81c417af8b670ffb2cb6311be5ac4692e7d1f75f1699b2315",
+      "source_sha256": "39ad15835d77fe9409e4e84a1b0bd08fa05c905ec886c10bcdde969b6f0a2ac7",
       "sections": [
         {
           "id": "relativno-mirovanje-fluida",
@@ -1151,7 +1151,7 @@
       "kind": "chapter",
       "number": "8",
       "part": "part-3",
-      "source_sha256": "1b336a70bd015b69cb5d63235d75060ab0612e3b587ee1a14fa4f0392f0a4b50",
+      "source_sha256": "7b1ef537ee0b88877063c75107697e1df67a2845bef0b0dc92fa906ef720fc83",
       "sections": [
         {
           "id": "energijska-jednadžba-i-bernoullijeva-jednadžba",
@@ -1696,7 +1696,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "6e870c8c5c6a3326a83b727561369470c9d9650230c766bbcb95896364cb303f",
+      "source_sha256": "5a9cc27249302e11be7c117aa8590af443803f67db8e2021489144cda6bd8ad9",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",

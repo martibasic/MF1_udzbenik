@@ -91,6 +91,21 @@ Notebook mora:
 5. završiti pitanjima interpretacije;
 6. izvršiti se od početka u CI-ju bez ručne intervencije.
 
+Tri ogledna interaktivna laboratorija (rotirajući spremnik, Venturi i
+Poiseuille) dodatno koriste `ipywidgets`, `IPython.display` te standardne
+module `html` i `inspect` za sučelje i prikaz stvarnog izvornog koda.
+Označena početna ćelija smije preko `piplite` asinkrono učitati pinane
+widgete kada nedostaju u Pyodideu; ostale ćelije ostaju običan Python.
+Računski modeli ostaju odvojeni od sučelja, uz postojeće znanstvene ovisnosti
+NumPy/Matplotlib. Bilježnice su samostalne i ne uvoze lokalne pomoćne module
+koji nedostaju pri pojedinačnom otvaranju u Colabu.
+
+Svaki laboratorij sadrži označene ćelije pripreme, modela, zajedničkog sučelja i
+prikaza. Zadržava prethodne računske provjere, jasno razlikuje nevaljan ulaz
+od granice fizikalnog modela te omogućuje usporedbu i resetiranje. Uz
+izvršenje bilježnice CI provjerava stvarnu promjenu kontrola i rezultata u
+JupyterLiteu; sama spremnost kernela nije dokaz interaktivnosti.
+
 ## Ugovor slike
 
 Svaki SVG ima `viewBox`, `role="img"`, povezane `title` i `desc`, stabilan prefiks ID-jeva, relativnu širinu i čitljiv tekst pri konačnoj veličini. Boja nije jedini nositelj značenja, a alternativni opis govori o fizikalnoj poruci umjesto o internim oznakama izrade.

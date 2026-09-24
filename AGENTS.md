@@ -22,6 +22,18 @@ Za skice primijeni SVG standard iz protokola. Evidencije starih migracija u
 
 ## Trajna pravila rada
 
+- Prije svakog pusha obvezno izvrši puni lokalni objavni CI iz
+  `scripts/check_publication.py` nad upravo onim commitom koji se šalje.
+  Aktiviraj verzionirani `.githooks/pre-push` s `python scripts/install_hooks.py`.
+  Ne zaobilazi hook, ne koristi `--no-verify` i ne smatraj djelomične provjere
+  ili stari prolaz zamjenom za aktualni puni prolaz. Ako provjera padne,
+  popravi uzrok i ponovi je prije pusha. Lokalni CI i GitHub Action moraju
+  koristiti isti runner i verzije alata prema `docs/lokalni-ci.md`.
+
+- Uz svako osvježavanje PDF-a obnovi i generirani web, pokreni ili osvježi
+  njegov pregled na localhostu te korisniku daj provjerenu lokalnu adresu.
+  Poslužuj izlaz `_site/` i ostavi lokalni pregled dostupan nakon završetka rada.
+
 - Arhitekturu cijele knjige određuju `content/book.json`, kanonski `source/`,
   `components/registry.json` i globalni `design-system/tokens.json`.
   Prije strukturne izmjene pročitaj [arhitekturu](docs/arhitektura.md).

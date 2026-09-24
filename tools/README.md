@@ -18,6 +18,16 @@ Numerička verifikacija i SVG alati koriste standardnu biblioteku Pythona i
 lokalne datoteke; ne trebaju `numpy`/`sympy`. Audit konačnog PDF-a koristi
 pinani `PyMuPDF` iz korijenskog `requirements.txt`.
 
+## Puni objavni CI i zaštita pusha
+
+`python scripts/check_publication.py` jedini je popis koraka za GitHub Action,
+lokalnu izgradnju i `.githooks/pre-push`. Hook se uključuje jednom po klonu:
+`python scripts/install_hooks.py`. Prije svakog pusha zahtijeva čist HEAD i
+novi puni prolaz; provjerava i stanje nakon testiranja.
+`python tools/test_pre_push.py` provjerava stvarnu blokadu Gitova pusha prema
+privremenom lokalnom repozitoriju. Priprema alata i ograničenja opisani su u
+[lokalnom CI-ju](../docs/lokalni-ci.md).
+
 ## Numerička verifikacija (trajno — koristi CI)
 
 | Skripta | Namjena |
@@ -41,6 +51,8 @@ pinani `PyMuPDF` iz korijenskog `requirements.txt`.
 | `audit_viewports.mjs` | Pregledava 24 HTML stranice na 320, 768 i 1440 px; provjerava prelijevanje sadržaja, WCAG, vidljivost i rad tipkovničkog fokusa, lokalno pomicanje tablica, povećanje skica i odredišta brzih poveznica poglavlja. Provjerava i A4 ispis te učitavanje notebooka i spremnost Python kernela (Idle) u JupyterLiteu. Pokreni nakon rendera i izgradnje JupyterLitea: `npm run audit:viewports -- _site`. |
 | `verify_physics.py` | Neovisni golden testovi temeljnih bilanci i kritičnih pretvorbi: Pascal, hidrostatika, kontinuitet, gubici, paralelne grane, smjer sile na simetričnom koljenu, Wh→s, dvofluidni uzgon i Froudeovo skaliranje. |
 | `execute_notebooks.py` | Validira i izvršava svih 17 obveznih notebooka u čistim kernelima bez prepisivanja izvora. `--validate-only` radi samo strukturnu i sintaksnu provjeru. |
+| `test_interactive_labs.py` | Neovisno provjerava tri ogledna laboratorija: granice rotacije, Venturijev referentni protok i nesigurnost, konvergenciju rješavača konačnih volumena, bilancu sila, kontrolne ulaze, usporedbu i resetiranje. Čuva granicu ovisnosti i jednakost zajedničke ćelije samostalnih bilježnica. |
+| `audit_interactive_labs.mjs _site` | U stvarnom JupyterLiteu izvršava tri bilježnice, mijenja kontrole tipkovnicom i provjerava fizikalni odgovor, usporedbu, resetiranje, dijagnostiku, izvorni kod te raspored na 320/768/1280 px. Za razliku od provjere spremnosti kernela, ispituje stvarne callbackove. |
 | `check_u01_sketch_geometry.py` | Čita sedam SVG-ova U01: provjerava povezane tekuće komore i otvorene priključke, klipove i klipnjače, smjerove sila, stvarne omjere promjera, kote iste početne/konačne plohe, krakove poluge 5:1 i dva punjenja posude. Dopunjuje vizualni pregled. |
 | `check_u02_sketch_geometry.py` | Čita sedam SVG-ova U02: provjerava otvorene uronjene ulaze, povezane fluidne domene, kružne meniskuse i kutove od 18°, tangente površinskih sila, prianjanje, smjerove otpora, promjere, kote uspona i omjere procjepa. Dopunjuje vizualni pregled. |
 | `check_u05_sketch_geometry.py` | Dodatna ručna provjera nakon izmjena skica U05: čita stvarne SVG putanje, provjerava četvrtkružne lukove, lokalne normale i krakove komponenti sile. Pokreće se zasebno; vizualni pregled ostaje potreban. |

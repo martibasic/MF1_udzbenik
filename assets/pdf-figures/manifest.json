@@ -4,7 +4,7 @@
     "tools/build_print_figures.mjs": "851a6653fd71db019efde0f374d691b19d8cab05498482ac508e06ff4a066ad1",
     "assets/figure-tokens.json": "381385ee6cf23325b3db73fd3692124e8859b984da449299639d792ac70a5fba",
     "assets/figure-compositions.json": "7b84ae33d2edb195546d9b788f49b71ce97cbefc39aad30cd9236fbc17d7c4b2",
-    "assets/print-layouts.json": "8ca2ad1a0ec455ba71357deddfffed35f9ea6662fb070bbd9a1e19690636b3c0"
+    "assets/print-layouts.json": "88bcb84d733d5e0b31a15f97b9875a0d8b38a6b1f87ba443a7e5dbfe789bdee0"
   },
   "tokens": {
     "text-width-pt": 447.874,

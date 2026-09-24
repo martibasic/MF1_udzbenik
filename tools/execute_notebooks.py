@@ -23,6 +23,12 @@ import qa_audit
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 NOTEBOOK_DIR = REPO_ROOT / "notebooks"
+INTERACTIVE_LABS = {
+    "u04_paraboloidna_povrsina.ipynb": "rotation",
+    "u09_venturi.ipynb": "venturi",
+    "u12_poiseuille_konvergencija.ipynb": "poiseuille",
+}
+LAB_CELL_TAGS = {"mf1-lab-bootstrap", "mf1-lab-model", "mf1-lab-common", "mf1-lab-ui"}
 
 
 def _source_text(cell: dict[str, Any]) -> str:
@@ -71,7 +77,10 @@ def validate_notebook(path: Path) -> list[str]:
                 # SyntaxWarning, ali nisu sintaksna pogreska notebooka.
                 warnings.simplefilter("ignore", SyntaxWarning)
                 tree = ast.parse(source_text, f"{path.name}#cell-{index}", "exec")
-                compile(tree, f"{path.name}#cell-{index}", "exec")
+                flags = (ast.PyCF_ALLOW_TOP_LEVEL_AWAIT
+                         if path.name in INTERACTIVE_LABS and "mf1-lab-bootstrap" in
+                         cell.get("metadata", {}).get("tags", []) else 0)
+                compile(tree, f"{path.name}#cell-{index}", "exec", flags=flags)
             for node in ast.walk(tree):
                 if isinstance(node, ast.Assert):
                     assert_count += 1
@@ -112,7 +121,21 @@ def validate_notebook(path: Path) -> list[str]:
             f"{path.name}: treba najmanje dvije neovisne assert provjere; "
             f"nađeno {assert_count}."
         )
-    unsupported = sorted(imported_roots - {"numpy", "matplotlib"})
+    allowed_imports = {"numpy", "matplotlib"}
+    if path.name in INTERACTIVE_LABS:
+        # Sučelje dodaje samo widgete, prikaz i čitanje izvornog koda.
+        # Znanstveni račun zadržava postojeće NumPy/Matplotlib ovisnosti.
+        allowed_imports.update({"ipywidgets", "IPython", "html", "inspect", "piplite"})
+        expected = {"schema_version": 1, "id": INTERACTIVE_LABS[path.name]}
+        if notebook.get("metadata", {}).get("mf1_lab") != expected:
+            issues.append(f"{path.name}: nedostaje ugovor interaktivnog laboratorija.")
+        for tag in LAB_CELL_TAGS:
+            tagged = [cell for cell in cells if tag in cell.get("metadata", {}).get("tags", [])]
+            if len(tagged) != 1 or tagged[0].get("cell_type") != "code":
+                issues.append(f"{path.name}: treba točno jednu programsku ćeliju {tag}.")
+        if "ipywidgets" not in imported_roots:
+            issues.append(f"{path.name}: nedostaju interaktivne kontrole.")
+    unsupported = sorted(imported_roots - allowed_imports)
     if unsupported:
         issues.append(
             f"{path.name}: ovisnosti izvan pregledničkog ugovora: {unsupported}"

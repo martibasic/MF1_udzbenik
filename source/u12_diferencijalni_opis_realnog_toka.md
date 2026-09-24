@@ -419,7 +419,7 @@ U dijelu b) sve su nesigurnosti apsolutne i bezdimenzijske, kao $C_D$. Relativno
 ::: {.mf1-numerika}
 <p class="mf1-box-label">Numerički pokus — profil, mreža i pogreška</p>
 
-Bilježnica `u12_poiseuille_konvergencija.ipynb` provjerava laminarni režim i prianjanje, numerički integrira profil te uspoređuje protok s analitičkim rezultatom. Zasebno obrađuje mjerne nesigurnosti iz Z3, profile iz Z4 i izbor mreže prema podatcima iz Z6. Prije računa predvidi trendove, a poslije razluči mjernu nesigurnost, diskretizacijsku pogrešku i valjanost modela.
+U bilježnici `u12_poiseuille_konvergencija.ipynb` pokreni sve ćelije. Interaktivni laboratorij rješava bilancu gibanja po prstenastim ćelijama: mijenjaj mrežu i fizikalne ulaze pa usporedi profil, protok, algebarski rezidual i bilancu sila. Kartice *Provjeri* i *Pogledaj kod* objašnjavaju postupak i granice laminarnog modela. Zasebno ostaju integracija poznatog profila, mjerne nesigurnosti iz Z3, profili iz Z4 i sintetički podatci Z6. Prije računa predvidi trendove; poslije razluči izvore pogreške.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u12_poiseuille_konvergencija.ipynb">Pokreni u pregledniku</a>

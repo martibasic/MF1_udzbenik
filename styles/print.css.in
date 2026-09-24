@@ -20,6 +20,7 @@
   .mf1-problem > :first-child { break-after: avoid; }
   .mf1-task-level { break-before: avoid; }
   .mf1-table-scroll, .math.display { overflow: visible; }
+  .math.inline.mf1-wide-math { display: inline; max-width: none; overflow: visible; }
   .mf1-table-scroll table { min-width: 0; }
   thead { display: table-header-group; }
   figcaption { break-before: avoid; font-size: var(--figure-caption-size); }

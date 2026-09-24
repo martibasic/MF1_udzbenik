@@ -1,2 +1,3 @@
 # Original reference tables retain the spacing of the published archive.
 data/cfd/hydrofoil_experiment/sources/*.dat whitespace=-blank-at-eol
+.githooks/* text eol=lf

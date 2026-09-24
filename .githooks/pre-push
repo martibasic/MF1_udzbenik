@@ -1,0 +1,12 @@
+#!/bin/sh
+# Git invokes this from the repository root and supplies the pushed refs on stdin.
+set -eu
+if [ -x .venv-ci/Scripts/python.exe ]; then
+    exec .venv-ci/Scripts/python.exe scripts/pre_push.py "$@"
+elif [ -x .venv-ci/bin/python ]; then
+    exec .venv-ci/bin/python scripts/pre_push.py "$@"
+elif command -v python >/dev/null 2>&1; then
+    exec python scripts/pre_push.py "$@"
+else
+    exec python3 scripts/pre_push.py "$@"
+fi

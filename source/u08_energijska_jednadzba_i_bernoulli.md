@@ -37,7 +37,7 @@ $$ {#eq-energijska-bilanca-fizikalni-uvod-i-matematicki-izvod-02}
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Venturijeva cijev</p>
 
-Bilježnica najprije neovisno provjerava idealni Venturijev primjer s uljem iz ovoga poglavlja. Zatim na zasebnom nastavnom slučaju s vodom pokazuje kako nesigurnosti promjera, razlike tlakova, gustoće i zadanoga koeficijenta istjecanja utječu na procijenjeni protok. Parametre mijenjaj u ćeliji `base`, a njihove standardne nesigurnosti u ćeliji `sigma`; ponovno izvođenje daje usporedbu linearne procjene i uzorkovanja.
+U bilježnici pokreni sve ćelije, zatim odaberi idealni primjer s uljem ili zasebni nastavni slučaj s vodom. Kontrole povezuju geometriju, brzine, razliku tlakova i procijenjeni protok; slučaj A možeš spremiti za usporedbu. Kartice *Provjeri* i *Pogledaj kod* otkrivaju pretpostavke i račun. Kontrole nesigurnosti prikazuju doprinose promjera grla, razlike tlakova i koeficijenta istjecanja; potpuni budžet pet ulaza te usporedba linearne procjene i uzorkovanja slijede u ćelijama `base` i `sigma`.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u09_venturi.ipynb">Pokreni u pregledniku</a>

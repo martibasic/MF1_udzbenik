@@ -46,8 +46,52 @@ python -m pip install -r requirements.txt
 python -m notebook
 ```
 
-Od vanjskih računskih knjižnica bilježnice koriste samo `numpy` i `matplotlib`,
-pa isti račun radi u lokalnom kernelu, Colabu i Pyodide kernelu u pregledniku.
+Od vanjskih računskih knjižnica bilježnice koriste `numpy` i `matplotlib`.
+Tri ogledna laboratorija dodatno koriste `ipywidgets` i `IPython.display`
+za kontrole i prikaz te standardne module `html` i `inspect` za siguran
+prikaz stvarnih računskih funkcija. Sve ovisnosti već su u `requirements.txt`.
+U Pyodideu početna ćelija po potrebi učitava `ipywidgets==8.1.8` preko
+`piplite`; prvo pokretanje zato zahtijeva mrežu. Lokalni Python koristi
+instalirane pakete i preskače taj korak.
+
+## Ogledni interaktivni laboratoriji
+
+Rotirajući spremnik, Venturi i Poiseuille imaju kartice **Istraži**,
+**Provjeri** i **Pogledaj kod**. Najprije odaberi **Run → Run All Cells**
+(u Colabu **Runtime → Run all**). Potom mijenjaj klizače ili klikni prikazani
+broj za točan unos. **Spremi A** pamti ulaze za usporedbu; **Početno stanje**
+vraća odabrani slučaj i uklanja A. Preseti koji nisu iz knjige označeni su
+kao nastavni pokusi. Izvorne programske ćelije ostaju dostupne za uređivanje.
+
+- **Rotacija:** presjek, razine i volumen vrijede do prve granice modela.
+  Nakon prelijevanja ili dodira dna oblik fluida nije nacrtan kao da model
+  još vrijedi. Visina stijenke dodatni je ulaz pokusa.
+- **Venturi:** uljni primjer i zasebni vodeni slučaj čuvaju različite podatke.
+  Kontrole nesigurnosti pokrivaju D₂, Δp i Cd uz ostale točne ulaze; potpuni
+  budžet pet ulaza i ponovljivo uzorkovanje ostaju ispod laboratorija.
+- **Poiseuille:** novi rješavač konačnih volumena računa brzinu iz bilance,
+  zatim protok, rezidual i silu stijenke. Odvojen je od integracije poznatog
+  profila i od sintetičkih podataka Z6. Izravni rješavač nema iteracijsku
+  povijest; mali rezidual nije dokaz male pogreške mreže.
+
+Priprema, model, zajedničko sučelje i prikaz označeni su ćelijskim oznakama
+`mf1-lab-bootstrap`, `mf1-lab-model`, `mf1-lab-common` i `mf1-lab-ui`. Uređuju se u aktualnim
+`.ipynb` datotekama. Kratka zajednička ćelija namjerno je sadržana u sve tri
+samostalne bilježnice; test uspoređuje njezin sadržaj. Ne generiraju se iz
+arhivskih predložaka i ne trebaju preuzimati dodatne lokalne module.
+
+Uz izvršenje bilježnica provjeri račun i kontrole:
+
+```powershell
+python tools/test_interactive_labs.py
+python -m jupyterlite_core.app build --config=jupyter_lite_config.py --contents notebooks --output-dir _site/jlite
+node tools/audit_interactive_labs.mjs _site
+```
+
+Preglednički audit pokreće sve ćelije, mijenja kontrole tipkovnicom,
+provjerava odgovor, usporedbu, resetiranje i uski prikaz. Njime se provjerava
+JupyterLite; kompatibilnost s Colabom temelji se na samostalnosti bilježnice
+i standardnim widgetima, a prijavljenu Colab sesiju treba zasebno isprobati.
 
 ## Popis dostupnih bilježnica
 

@@ -214,6 +214,8 @@ async function settlePage(page) {
     ]);
   });
   if (!ready) throw new Error("Stranica se nije stabilizirala unutar 60 s.");
+  await page.waitForFunction(() => !document.querySelector('main') ||
+    document.querySelector('main').dataset.mf1MathReady === 'true', null, {timeout: 60_000});
 }
 
 async function auditJupyterLiteRuntime(browser, baseUrl, issues) {
@@ -327,6 +329,16 @@ try {
           client: document.documentElement.clientWidth,
           scroll: document.documentElement.scrollWidth,
           motion: getComputedStyle(document.documentElement).scrollBehavior,
+          unnecessaryMathScrollers: [...document.querySelectorAll('.math.inline')]
+            .filter(element => {
+              const width = element.querySelector('mjx-container')?.getBoundingClientRect().width;
+              const available = element.parentElement.getBoundingClientRect().width;
+              return width > 0 && width < available - 2 &&
+                ['auto', 'scroll'].includes(getComputedStyle(element).overflowX) &&
+                element.scrollWidth > element.clientWidth;
+            }).length,
+          inaccessibleWideMath: [...document.querySelectorAll('.mf1-wide-math')]
+            .filter(element => element.tabIndex !== 0 || !element.getAttribute('aria-label')).length,
           misplacedNotes: [...document.querySelectorAll('main [data-component][role="note"]')]
             .filter(element => element.getBoundingClientRect().width > 0 &&
               element.getBoundingClientRect().width < document.querySelector('main').getBoundingClientRect().width * 0.65).length,
@@ -507,6 +519,22 @@ try {
               await page.screenshot({path: join(snapshotRoot, `${chapterName}-${name}.png`)});
             }
           }
+        }
+        if (metrics.unnecessaryMathScrollers > 0) {
+          issues.push(`${relative} @ ${width}px: ${metrics.unnecessaryMathScrollers} kratkih formula ima nepotreban klizač`);
+        }
+        if (metrics.inaccessibleWideMath > 0) {
+          issues.push(`${relative} @ ${width}px: duga jednadžba nije dostupna tipkovnicom`);
+        }
+        if (width === 320 && relative === 'chapters/u01_osnove_fluida_i_pascalov_zakon.html') {
+          const longFormula = page.locator('.mf1-wide-math').first();
+          await longFormula.focus();
+          await longFormula.press('ArrowRight');
+          await page.waitForFunction(() => document.querySelector('.mf1-wide-math')?.scrollLeft > 0);
+          await page.setViewportSize({width:1440, height:900});
+          await page.waitForFunction(() => !document.querySelector('.mf1-wide-math'));
+          await page.setViewportSize({width:320, height:900});
+          await page.waitForFunction(() => document.querySelector('.mf1-wide-math'));
         }
         if (metrics.misplacedNotes > 0) {
           issues.push(`${relative} @ ${width}px: ${metrics.misplacedNotes} sadržajnih napomena premješteno je u usku marginu`);

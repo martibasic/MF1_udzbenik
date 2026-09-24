@@ -57,16 +57,22 @@ da su recenzija ili pilot provedeni; određuju uzorak, evidenciju i prag prolaza
 
 ## Izgradnja
 
-Potrebni su Quarto s podrškom za Typst, Python 3.12 i Python paketi navedeni u
-`requirements.txt`.
+Potrebni su Quarto 1.9.37, Python 3.12, Node.js 22 i Chrome/Chromium/Edge.
+Lokalna izgradnja, pre-push hook i GitHub Action koriste isti puni runner.
 
 ```powershell
-python -m pip install -r requirements.txt
-npm ci --ignore-scripts
+py -3.12 -m venv .venv-ci
+.venv-ci/Scripts/python.exe -m pip install -r requirements.txt
+python scripts/install_hooks.py
 ./scripts/izgradi.ps1
 ```
 
-Skripta namjerno izvodi Quarto rendere redom jer dijele radnu predmemoriju.
+Hook prije svakog pusha provjerava čist HEAD i izvršava cijeli objavni CI.
+Neuspjeh zaustavlja push. Priprema drugih sustava i granice lokalne provjere
+opisane su u [uputama za lokalni CI](docs/lokalni-ci.md).
+Izvore po potrebi najprije obnovi s `python scripts/build_book.py --write`;
+objavna provjera ne popravlja zastarjele izvedenice.
+Skripta namjerno izvodi Quarto rendere redom u izoliranoj radnoj mapi.
 Izlazi su:
 
 - `_site/` — HTML izdanje;

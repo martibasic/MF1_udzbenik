@@ -1,3 +1,5 @@
+import {enhanceMath} from './math.js';
+
 (() => {
   "use strict";
 
@@ -38,6 +40,7 @@
     document.querySelectorAll("[data-mf1-print-button]").forEach(button => button.addEventListener("click", () => window.print()));
     const main = document.querySelector("main");
     if (!main) return;
+    enhanceMath(main);
 
     main.querySelectorAll('figure img[src*="/print/"]').forEach((img) => {
       if (img.closest("a")) return;
