@@ -27,6 +27,8 @@ project:
     - chapters/d06_kljuc_kontrolnih_rezultata.qmd
 format:
   typst:
+    font-paths:
+      - assets/fonts/liberation-sans
     toc: true
     toc-depth: 2
     number-sections: true

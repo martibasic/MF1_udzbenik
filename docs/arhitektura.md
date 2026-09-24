@@ -70,6 +70,13 @@ transakcija; otvoreni preview može naknadno obnoviti svoju stranicu.
 Privremena radna mapa uklanja se nakon završetka. Pripremna regeneracija
 omotača i indeksa ostaje u glavnom projektu radi IDE-a i provjere izvedenica.
 
+Svaki render ima granicu od 600 s i zapis napretka svakih 30 s. Kod
+neuspjeha se prije čišćenja sprema dijagnostička kopija u
+`tools/tmp/render-diagnostics/`; istek vremena prekida i procese potomke.
+PDF koristi ugrađene Typstove fontove, Quartove ikone i verzionirani
+Liberation Sans 2.1.5, bez pretrage sistemskih fontova. Pojedinosti i
+GitHubov dijagnostički artefakt opisani su u [lokalnom CI-ju](lokalni-ci.md).
+
 Izravni `quarto render` zaobilazi ovu zaštitu. Ispis se renderira eksplicitnom naredbom koju koristi build;
 sam `quarto render --profile print` može prepisati web poglavlja zbog
 Quartova spajanja konfiguracijskih popisa.

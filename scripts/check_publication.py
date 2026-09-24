@@ -11,8 +11,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def run(command):
+    started = time.monotonic()
     print('\n> ' + ' '.join(map(str, command)), flush=True)
     subprocess.run(command, cwd=ROOT, check=True, stdin=subprocess.DEVNULL)
+    print(f'PASS ({time.monotonic() - started:.1f}s): {command[1]}', flush=True)
 
 
 def prepare_environment():
@@ -22,6 +24,7 @@ def prepare_environment():
     os.environ['MPLBACKEND'] = 'Agg'
     os.environ['PYTHONUTF8'] = '1'
     os.environ['PYTHONIOENCODING'] = 'utf-8'
+    os.environ['PYTHONUNBUFFERED'] = '1'
     os.environ['QUARTO_PYTHON'] = sys.executable
     import yaml
     workflow = yaml.safe_load((ROOT / '.github/workflows/publish.yml').read_text(encoding='utf-8'))
@@ -76,6 +79,7 @@ def main():
         [py, 'tools/verify_all.py'],
         [py, 'tools/test_book_model.py'],
         [py, 'tools/test_render_workspace.py'],
+        [py, 'tools/test_render_process.py'],
         [py, 'tools/test_component_visibility.py'],
         [py, 'tools/audit_architecture.py'],
         [py, 'tools/audit_publication.py'],

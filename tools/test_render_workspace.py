@@ -46,6 +46,9 @@ class RenderWorkspaceTests(unittest.TestCase):
         self.assertTrue(work.is_relative_to(self.root / 'tools/tmp'))
         self.assertEqual((work / 'source/chapter.md').read_text(), 'Saved work, including uncommitted changes.')
         self.assertFalse((work / '.quarto/preview-state').exists())
+        self.assertEqual(kwargs['env']['TYPST_IGNORE_SYSTEM_FONTS'], 'true')
+        self.assertEqual(kwargs['env']['TYPST_IGNORE_EMBEDDED_FONTS'], 'false')
+        self.assertNotIn('TYPST_FONT_PATHS', kwargs['env'])
         (work / '.quarto').mkdir(exist_ok=True)
         (work / '.quarto/render-state').write_text('isolated renderer')
         output = work / ('_book' if 'typst' in command else '_site')
@@ -54,7 +57,7 @@ class RenderWorkspaceTests(unittest.TestCase):
         return subprocess.CompletedProcess(command, 0)
 
     def test_success_keeps_preview_cache_and_separate_artifacts(self):
-        with patch('render_workspace.subprocess.run', side_effect=self.fake_quarto):
+        with patch('render_workspace.run_render', side_effect=self.fake_quarto):
             render(self.root, 'all', 'test-quarto')
         self.assertEqual(self.calls, 3)
         self.assertEqual(len(set(self.workspaces)), 1)
@@ -72,10 +75,25 @@ class RenderWorkspaceTests(unittest.TestCase):
             if command[0] == 'test-quarto' and self.calls == 2:
                 raise subprocess.CalledProcessError(1, command)
             return result
-        with patch('render_workspace.subprocess.run', side_effect=fail_second):
-            with self.assertRaises(subprocess.CalledProcessError):
+        with patch('render_workspace.run_render', side_effect=fail_second):
+            with self.assertRaisesRegex(ValueError, 'Logs and workspace preserved'):
                 render(self.root, 'web', 'test-quarto')
         self.assertEqual((self.root / '_site/index.html').read_text(), 'previous successful web')
+        self.assertFalse(self.workspaces[0].exists())
+        saved = list((self.root / 'tools/tmp/render-diagnostics').glob('failed-*'))
+        self.assertEqual(len(saved), 1)
+        self.assertEqual((saved[0] / 'source/chapter.md').read_text(), 'Saved work, including uncommitted changes.')
+
+    def test_timeout_preserves_previous_outputs_and_diagnostic_workspace(self):
+        def timeout(command, **kwargs):
+            self.fake_quarto(command, **kwargs)
+            raise subprocess.TimeoutExpired(command, 600)
+        with patch('render_workspace.run_render', side_effect=timeout):
+            with self.assertRaisesRegex(ValueError, 'timed out'):
+                render(self.root, 'pdf', 'test-quarto')
+        self.assertFalse((self.root / '_book').exists())
+        self.assertEqual((self.root / '_site/index.html').read_text(), 'previous successful web')
+        self.assertTrue(list((self.root / 'tools/tmp/render-diagnostics').glob('failed-*/_book/book.pdf')))
         self.assertFalse(self.workspaces[0].exists())
 
     def test_edit_during_render_prevents_publishing_mixed_versions(self):
@@ -84,7 +102,7 @@ class RenderWorkspaceTests(unittest.TestCase):
             if command[0] == 'test-quarto':
                 self.put('source/chapter.md', 'New edit while render is running')
             return result
-        with patch('render_workspace.subprocess.run', side_effect=edit):
+        with patch('render_workspace.run_render', side_effect=edit):
             with self.assertRaisesRegex(ValueError, 'Inputs changed during rendering'):
                 render(self.root, 'pdf', 'test-quarto')
         self.assertFalse((self.root / '_book').exists())

@@ -52,6 +52,16 @@ jobs:
         with:
           path: _site
 
+      - name: Preserve failed renderer diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: render-diagnostics
+          path: tools/tmp/render-diagnostics/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+
   deploy:
     if: github.event_name != 'pull_request'
     needs: build

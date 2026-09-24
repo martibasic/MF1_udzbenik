@@ -6,6 +6,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import tempfile
+from render_process import run_render
 
 
 @contextmanager
@@ -130,12 +131,31 @@ def publish_outputs(root, work, names):
 def render(root, target, quarto):
     with snapshot(root) as (work, hashes):
         print(f'Isolated Quarto build: {work}', flush=True)
+        diagnostics = root / 'tools/tmp/render-diagnostics'
+        environment = os.environ.copy()
+        # Embedded Libertinus/NewCM, bundled Quarto icons and the repository's
+        # Liberation Sans are identical on a developer PC and a clean runner.
+        environment['TYPST_IGNORE_SYSTEM_FONTS'] = 'true'
+        environment['TYPST_IGNORE_EMBEDDED_FONTS'] = 'false'
+        environment.pop('TYPST_FONT_PATHS', None)
+        stages = []
         if target in ('web', 'all'):
-            subprocess.run([quarto, 'render', '--to', 'html'], cwd=work, check=True)
-            subprocess.run([quarto, 'render', 'chapters/za_ispis.qmd', '--profile', 'print',
-                            '--to', 'html', '--no-clean'], cwd=work, check=True)
+            stages.extend([
+                ('web', ['render', '--to', 'html']),
+                ('print', ['render', 'chapters/za_ispis.qmd', '--profile', 'print', '--to', 'html', '--no-clean']),
+            ])
         if target in ('pdf', 'all'):
-            subprocess.run([quarto, 'render', '--profile', 'pdf', '--to', 'typst'], cwd=work, check=True)
+            stages.append(('pdf', ['render', '--profile', 'pdf', '--to', 'typst', '-M', 'keep-typ:true']))
+        try:
+            for name, arguments in stages:
+                run_render([quarto, *arguments], cwd=work, env=environment,
+                           log_path=diagnostics / f'{name}.log')
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
+            diagnostics.mkdir(parents=True, exist_ok=True)
+            saved = Path(tempfile.mkdtemp(prefix='failed-', dir=diagnostics))
+            shutil.copytree(work, saved, dirs_exist_ok=True)
+            raise ValueError(f'Render failed: {exc}. Logs and workspace preserved in {diagnostics}; '
+                             'previous published outputs were not changed.') from exc
         verify_inputs(root, hashes)
         outputs = ['_site', '_book'] if target == 'all' else ['_site' if target == 'web' else '_book']
         publish_outputs(root, work, outputs)

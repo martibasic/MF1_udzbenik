@@ -62,8 +62,11 @@ ništa na GitHub.
 ## Granice lokalnog dokaza
 
 Isti runner i pinane verzije smanjuju razliku lokalnog rada i Actionsa.
-Windows i Ubuntu i dalje imaju različite sistemske fontove i preglednike;
-audit tiskovnih izreza zato provjerava i zamjenski Arial/sans-serif.
+Windows i Ubuntu i dalje imaju različite preglednike; audit tiskovnih izreza
+zato provjerava i zamjenski Arial/sans-serif. PDF ne pretražuje sistemske
+fontove: koristi ugrađene Typstove fontove, Quartove ikone i verzionirani
+Liberation Sans 2.1.5 iz `assets/fonts/liberation-sans/`. Isti skup koristi
+lokalni render i GitHub runner.
 Lokalni prolaz ne provjerava GitHubove ovlasti, dostupnost udaljenih servisa,
 upload artefakta ni Pages deploy. Poslije odobrenoga pusha treba provjeriti
 i udaljeni Action; lokalni prolaz nije tvrdnja da je deploy već uspio.
@@ -73,3 +76,23 @@ korak `Audit canonical SVGs and generated print compositions`, oznaka
 `0,55 m` u `u03_ch1_zatvoreni_spremnik_ulje_ziva.svg`. Zamjenski font
 prelazio je izrez širine 690 SVG jedinica. Izrez je proširen na 694; provjera
 obaju fontova lokalno reproducira stari pad. Geometrija i tekst skice ostaju isti.
+
+## Zastoj rendera i dijagnostika
+
+[Action 35974645871, prvi pokušaj](https://github.com/martibasic/MF1_udzbenik/actions/runs/35974645871/attempts/1)
+prekinut je nakon 45 minuta tijekom Typst rendera. Prethodne numeričke,
+SVG i notebook provjere te HTML render prošli su. Zapis ne sadrži interni
+uzrok zastoja Typsta; lokalni prolaz zato nije dokaz da je Ubuntu objava uspjela.
+
+Svaki od tri rendera (`web`, `print`, `pdf`) sada ima granicu od 600 s,
+zapis napretka svakih 30 s i vlastiti log. Pri prekoračenju prekida se cijelo
+stablo pokrenutog procesa, uključujući Typst. Izgradnja tada pada;
+provjere se ne preskaču i stari izlazi ostaju sačuvani.
+
+Logovi i snimka neuspješne radne mape, uključujući generirani `index.typ`,
+ostaju u `tools/tmp/render-diagnostics/`. Na GitHubu se nakon neuspjeha
+spremaju kao artefakt `render-diagnostics` na sedam dana. Uspješni renderi
+ostavljaju samo logove, a privremena radna mapa uklanja se kao i prije.
+`tools/test_render_process.py` stvarnim procesima provjerava zapis izlaza,
+propagaciju pogreške i prekid potomaka; `tools/test_render_workspace.py`
+provjerava očuvanje starih izlaza i dijagnostike nakon isteka vremena.

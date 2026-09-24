@@ -39,6 +39,7 @@
     "fig-responsive": true
   },
   "typst": {
+    "font-paths": ["assets/fonts/liberation-sans"],
     "toc": true,
     "toc-depth": 2,
     "number-sections": true,

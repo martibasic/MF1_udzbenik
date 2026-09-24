@@ -8,6 +8,7 @@ Arhitektura i izvođenje svih prikaza opisani su u
 | --- | --- |
 | `test_book_model.py` | Premještanje poglavlja i objekata, očuvanje ID-jeva i formula, odbijanje neispravnih referencija, fizička širina figure iz PDF margine. |
 | `test_render_workspace.py` | Izolacija Quarto predmemorije, očuvanje izlaza nakon neuspjelog rendera ili izmjene izvora, zaključavanje između procesa. |
+| `test_render_process.py` | Stvarni procesi: trajni log, izlaz bez završnog novog retka, propagacija pogreške i prekid cijelog stabla pri zastoju. |
 | `test_component_visibility.py` | Stvarni HTML/Typst adapteri: promjena samo registra uključuje/skriva stare i nove komponente te povezane naslove za web/PDF/print. |
 | `audit_architecture.py` | Jedna hijerarhija, aktualne izvedenice, semantičke komponente, razine i slojevi stilova. |
 | `audit_rendered_model.py _site` | Stvarni brojevi sekcija, jednadžbi, captiona i P/Z objekata u webu i zbirnom ispisu. |
