@@ -2,255 +2,240 @@
   <title id="u04vs_title">Skice uz zadatke Z1–Z6 iz relativnog mirovanja</title>
   <desc id="u04vs_desc">Dva stupca i tri reda zadržavaju postojeći stil. Z1: ubrzanje udesno, voda viša lijevo, ispod ruba. Z2: prvi dodir lijevog ruba, desno je dno pokriveno. Z3: zatvoreni cilindar potpuno ispunjen uljem; brzina prema gore u oba zasebna stanja, ubrzanje prema gore u stanju I i prema dolje pri kočenju II. Z4: zatvorena posuda potpuno ispunjena vodom, točke A i B na istoj visini i različitim polumjerima; smjer vrtnje nije zadan. Z5: referentni ravni profil nakon smirivanja, uz zaseban graf točkastih očitanja stražnje razine kroz vrijeme; graf ne predstavlja oblik prolaznog vala. Z6: parabole nominalnog i graničnog stanja, zatvoren usis u osi bez protoka. Crveno je ubrzanje, tamno brzina, zeleno vrtnja, smeđe kote, a tlak skalar. Skice i strelice nisu u mjerilu.</desc>
   <defs>
-    <linearGradient id="u04vs_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
-    <linearGradient id="u04vs_ulje" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fde68a" />
-      <stop offset="100%" stop-color="#c8a000" />
-    </linearGradient>
     <pattern id="u04vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u04vs_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u04vs_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u04vs_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#657781" />
     </marker>
     <marker id="u04vs_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#657781" />
     </marker>
     <marker id="u04vs_pr" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+      <path d="M0,0 L0,4 L6,2 z" fill="#356b83" />
     </marker>
     <marker id="u04vs_aK" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 Z" fill="#2c3e50" />
+      <path d="M0,0 L0,5 L7,2.5 Z" fill="#3a4a56" />
     </marker>
     <marker id="u04ex_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u04ex_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
   </defs>
-  <rect width="960" height="760" fill="white" />
-  <g font-family="'Segoe UI',Arial,sans-serif" fill="#3a4a56">
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
     <g id="u04vs_z1" transform="translate(28 30)">
-      <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
-      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z1</text>
-      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Slobodna površina pri ubrzanju</text>
-      <path d="M50 83.98165137614679 L244 128.0183486238532 V174 H50 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
+      <text x="14" y="19" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Z1</text>
+      <text x="36" y="19" font-size="12" fill="#263746" text-anchor="start">Slobodna površina pri ubrzanju</text>
+      <path d="M50 83.98165137614679 L244 128.0183486238532 V174 H50 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <path d="M42 82.0 H50 V174 H244 V82.0 H252 V182 H42 Z" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <line x1="50" y1="83.98165137614679" x2="244" y2="128.0183486238532" stroke="#1565c0" stroke-width="2" />
-      <line x1="50" y1="106.0" x2="244" y2="106.0" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
-      <line x1="105" y1="53" x2="166" y2="53" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u04vs_aR)" />
-      <text x="174" y="57" font-size="13" fill="#c0392b" text-anchor="start">a</text>
-      <text x="56" y="75" font-size="10" fill="#3a4a56" text-anchor="start">stražnja</text>
-      <text x="197" y="75" font-size="10" fill="#3a4a56" text-anchor="start">prednja</text>
-      <line x1="24" y1="82.0" x2="34" y2="82.0" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="24" y1="174" x2="34" y2="174" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="29" y1="82.0" x2="29" y2="174" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-      <text x="21" y="132.0" font-size="11" fill="#b7600c" text-anchor="end">H</text>
-      <line x1="50" y1="194" x2="50" y2="204" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="244" y1="194" x2="244" y2="204" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="50" y1="199" x2="244" y2="199" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-      <text x="147.0" y="214" font-size="11" fill="#b7600c" text-anchor="middle">L = 1,8 m</text>
-      <text x="276" y="48" font-size="12" fill="#3a4a56" text-anchor="start">h₀ = 0,34 m</text>
-      <text x="276" y="68" font-size="12" fill="#3a4a56" text-anchor="start">H = 0,46 m</text>
-      <text x="276" y="88" font-size="12" fill="#c0392b" text-anchor="start">a = 1,20 m/s²</text>
-      <line x1="272" y1="102" x2="432" y2="102" stroke="#cbd9e7" stroke-width="1" />
-      <text x="276" y="125" font-size="11" fill="#3a4a56" text-anchor="start" font-weight="700">Odredi:</text>
-      <text x="276" y="143" font-size="11" fill="#3a4a56" text-anchor="start">Δh, h<tspan baseline-shift="sub" font-size="0.75em">str</tspan>, h<tspan baseline-shift="sub" font-size="0.75em">pred</tspan>
+      <line x1="50" y1="83.98165137614679" x2="244" y2="128.0183486238532" stroke="#356b83" stroke-width="2" />
+      <line x1="50" y1="106.0" x2="244" y2="106.0" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
+      <line x1="105" y1="53" x2="166" y2="53" stroke="#356b83" stroke-width="2.5" marker-end="url(#u04vs_aR)" />
+      <text x="174" y="57" font-size="13" fill="#263746" text-anchor="start">a</text>
+      <text x="56" y="75" font-size="10" fill="#263746" text-anchor="start">stražnja</text>
+      <text x="197" y="75" font-size="10" fill="#263746" text-anchor="start">prednja</text>
+      <line x1="24" y1="82.0" x2="34" y2="82.0" stroke="#657781" stroke-width="0.8" />
+      <line x1="24" y1="174" x2="34" y2="174" stroke="#657781" stroke-width="0.8" />
+      <line x1="29" y1="82.0" x2="29" y2="174" stroke="#657781" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="21" y="132.0" font-size="11" fill="#263746" text-anchor="end">H</text>
+      <line x1="50" y1="194" x2="50" y2="204" stroke="#657781" stroke-width="0.8" />
+      <line x1="244" y1="194" x2="244" y2="204" stroke="#657781" stroke-width="0.8" />
+      <line x1="50" y1="199" x2="244" y2="199" stroke="#657781" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="147.0" y="214" font-size="11" fill="#263746" text-anchor="middle">L = 1,8 m</text>
+      <text x="276" y="48" font-size="12" fill="#263746" text-anchor="start">h₀ = 0,34 m</text>
+      <text x="276" y="68" font-size="12" fill="#263746" text-anchor="start">H = 0,46 m</text>
+      <text x="276" y="88" font-size="12" fill="#263746" text-anchor="start">a = 1,20 m/s²</text>
+      <line x1="272" y1="102" x2="432" y2="102" stroke="#c5cdd3" stroke-width="1" />
+      <text x="276" y="125" font-size="11" fill="#263746" text-anchor="start" font-weight="700">Odredi:</text>
+      <text x="276" y="143" font-size="11" fill="#263746" text-anchor="start">Δh, h<tspan baseline-shift="sub" font-size="0.75em">str</tspan>, h<tspan baseline-shift="sub" font-size="0.75em">pred</tspan>
       </text>
-      <text x="276" y="165" font-size="10.5" fill="#3a4a56" text-anchor="start">Provjeri prelijevanje.</text>
-      <text x="276" y="197" font-size="10.5" fill="#52606d" text-anchor="start">– –  početna razina h₀</text>
+      <text x="276" y="165" font-size="10.5" fill="#263746" text-anchor="start">Provjeri prelijevanje.</text>
+      <text x="276" y="197" font-size="10.5" fill="#263746" text-anchor="start">– –  početna razina h₀</text>
     </g>
     <g id="u04vs_z2" transform="translate(484 30)">
-      <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
-      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z2</text>
-      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Ubrzanje na granici prelijevanja</text>
-      <path d="M50 90.0 L244 138.0 V174 H50 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
+      <text x="14" y="19" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Z2</text>
+      <text x="36" y="19" font-size="12" fill="#263746" text-anchor="start">Ubrzanje na granici prelijevanja</text>
+      <path d="M50 90.0 L244 138.0 V174 H50 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <path d="M42 90.0 H50 V174 H244 V90.0 H252 V182 H42 Z" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <line x1="50" y1="90.0" x2="244" y2="138.0" stroke="#1565c0" stroke-width="2" />
-      <line x1="50" y1="114.0" x2="244" y2="114.0" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
-      <line x1="105" y1="53" x2="166" y2="53" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u04vs_aR)" />
-      <text x="174" y="57" font-size="13" fill="#c0392b" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">max</tspan>
+      <line x1="50" y1="90.0" x2="244" y2="138.0" stroke="#356b83" stroke-width="2" />
+      <line x1="50" y1="114.0" x2="244" y2="114.0" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
+      <line x1="105" y1="53" x2="166" y2="53" stroke="#356b83" stroke-width="2.5" marker-end="url(#u04vs_aR)" />
+      <text x="174" y="57" font-size="13" fill="#263746" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">max</tspan>
       </text>
-      <circle cx="50" cy="90.0" r="3" fill="#c0392b" />
-      <text x="51" y="77" font-size="10" fill="#c0392b" text-anchor="start">prvi dodir ruba</text>
-      <text x="197" y="75" font-size="10" fill="#3a4a56" text-anchor="start">prednja</text>
-      <line x1="24" y1="90.0" x2="34" y2="90.0" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="24" y1="174" x2="34" y2="174" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="29" y1="90.0" x2="29" y2="174" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-      <text x="21" y="136.0" font-size="11" fill="#b7600c" text-anchor="end">H</text>
-      <line x1="50" y1="194" x2="50" y2="204" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="244" y1="194" x2="244" y2="204" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="50" y1="199" x2="244" y2="199" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-      <text x="147.0" y="214" font-size="11" fill="#b7600c" text-anchor="middle">L = 1,4 m</text>
-      <text x="276" y="48" font-size="12" fill="#3a4a56" text-anchor="start">h₀ = 0,30 m</text>
-      <text x="276" y="68" font-size="12" fill="#3a4a56" text-anchor="start">H = 0,42 m</text>
-      <text x="276" y="88" font-size="12" fill="#c0392b" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">max</tspan> = ?</text>
-      <line x1="272" y1="102" x2="432" y2="102" stroke="#cbd9e7" stroke-width="1" />
-      <text x="276" y="125" font-size="11" fill="#3a4a56" text-anchor="start" font-weight="700">Odredi:</text>
-      <text x="276" y="143" font-size="11" fill="#3a4a56" text-anchor="start">najveće ubrzanje</text>
-      <text x="276" y="165" font-size="10.5" fill="#3a4a56" text-anchor="start">Dno još ostaje pokriveno.</text>
-      <text x="276" y="197" font-size="10.5" fill="#52606d" text-anchor="start">– –  početna razina h₀</text>
+      <circle cx="50" cy="90.0" r="3" fill="#356b83" />
+      <text x="51" y="77" font-size="10" fill="#263746" text-anchor="start">prvi dodir ruba</text>
+      <text x="197" y="75" font-size="10" fill="#263746" text-anchor="start">prednja</text>
+      <line x1="24" y1="90.0" x2="34" y2="90.0" stroke="#657781" stroke-width="0.8" />
+      <line x1="24" y1="174" x2="34" y2="174" stroke="#657781" stroke-width="0.8" />
+      <line x1="29" y1="90.0" x2="29" y2="174" stroke="#657781" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="21" y="136.0" font-size="11" fill="#263746" text-anchor="end">H</text>
+      <line x1="50" y1="194" x2="50" y2="204" stroke="#657781" stroke-width="0.8" />
+      <line x1="244" y1="194" x2="244" y2="204" stroke="#657781" stroke-width="0.8" />
+      <line x1="50" y1="199" x2="244" y2="199" stroke="#657781" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="147.0" y="214" font-size="11" fill="#263746" text-anchor="middle">L = 1,4 m</text>
+      <text x="276" y="48" font-size="12" fill="#263746" text-anchor="start">h₀ = 0,30 m</text>
+      <text x="276" y="68" font-size="12" fill="#263746" text-anchor="start">H = 0,42 m</text>
+      <text x="276" y="88" font-size="12" fill="#263746" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">max</tspan> = ?</text>
+      <line x1="272" y1="102" x2="432" y2="102" stroke="#c5cdd3" stroke-width="1" />
+      <text x="276" y="125" font-size="11" fill="#263746" text-anchor="start" font-weight="700">Odredi:</text>
+      <text x="276" y="143" font-size="11" fill="#263746" text-anchor="start">najveće ubrzanje</text>
+      <text x="276" y="165" font-size="10.5" fill="#263746" text-anchor="start">Dno još ostaje pokriveno.</text>
+      <text x="276" y="197" font-size="10.5" fill="#263746" text-anchor="start">– –  početna razina h₀</text>
     </g>
     <g id="u04vs_z3" transform="translate(28 268)">
-      <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
-      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z3</text>
-      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Vertikalno ubrzavanje i kočenje</text>
-      <rect x="115" y="80" width="60" height="100" fill="url(#u04vs_ulje)" stroke="none" stroke-width="1.1" rx="0" />
+      <text x="14" y="19" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Z3</text>
+      <text x="36" y="19" font-size="12" fill="#263746" text-anchor="start">Vertikalno ubrzavanje i kočenje</text>
+      <rect x="115" y="80" width="60" height="100" fill="#eadfc5" stroke="none" stroke-width="1.1" rx="0" />
       <rect x="105" y="70" width="80" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
       <rect x="105" y="80" width="10" height="100" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
       <rect x="175" y="80" width="10" height="100" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
       <rect x="105" y="180" width="80" height="10" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
-      <circle cx="145" cy="80" r="3" fill="#c0392b" />
-      <text x="154" y="96" font-size="11" fill="#c0392b" text-anchor="start">A</text>
-      <circle cx="145" cy="180" r="3" fill="#c0392b" />
-      <text x="154" y="172" font-size="11" fill="#c0392b" text-anchor="start">B</text>
-      <text x="132" y="133" font-size="11" fill="#7a5a00" text-anchor="start">ulje</text>
-      <line x1="197" y1="80" x2="207" y2="80" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="197" y1="180" x2="207" y2="180" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="202" y1="80" x2="202" y2="180" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-      <text x="211" y="134.0" font-size="11" fill="#b7600c" text-anchor="start">h</text>
-      <line x1="63" y1="167" x2="63" y2="104" stroke="#2c3e50" stroke-width="2" marker-end="url(#u04vs_aK)" />
-      <text x="56" y="94" font-size="13" fill="#2c3e50" text-anchor="start">v</text>
-      <text x="63" y="207" font-size="10.5" fill="#2c3e50" text-anchor="middle">v prema gore</text>
-      <text x="268" y="48" font-size="12" fill="#3a4a56" text-anchor="start">ρ = 870 kg/m³</text>
-      <text x="268" y="67" font-size="12" fill="#3a4a56" text-anchor="start">h = 0,75 m</text>
-      <text x="291" y="101" font-size="12" fill="#c0392b" text-anchor="middle">I</text>
-      <text x="376" y="101" font-size="12" fill="#c0392b" text-anchor="middle">II</text>
-      <line x1="291" y1="162" x2="291" y2="118" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u04vs_aR)" />
-      <line x1="376" y1="118" x2="376" y2="162" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u04vs_aR)" />
-      <text x="313" y="138" font-size="12" fill="#c0392b" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">z</tspan>
+      <circle cx="145" cy="80" r="3" fill="#356b83" />
+      <text x="154" y="96" font-size="11" fill="#263746" text-anchor="start">A</text>
+      <circle cx="145" cy="180" r="3" fill="#356b83" />
+      <text x="154" y="172" font-size="11" fill="#263746" text-anchor="start">B</text>
+      <text x="132" y="133" font-size="11" fill="#263746" text-anchor="start">ulje</text>
+      <line x1="197" y1="80" x2="207" y2="80" stroke="#657781" stroke-width="0.8" />
+      <line x1="197" y1="180" x2="207" y2="180" stroke="#657781" stroke-width="0.8" />
+      <line x1="202" y1="80" x2="202" y2="180" stroke="#657781" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="211" y="134.0" font-size="11" fill="#263746" text-anchor="start">h</text>
+      <line x1="63" y1="167" x2="63" y2="104" stroke="#3a4a56" stroke-width="2" marker-end="url(#u04vs_aK)" />
+      <text x="56" y="94" font-size="13" fill="#263746" text-anchor="start">v</text>
+      <text x="63" y="207" font-size="10.5" fill="#263746" text-anchor="middle">v prema gore</text>
+      <text x="268" y="48" font-size="12" fill="#263746" text-anchor="start">ρ = 870 kg/m³</text>
+      <text x="268" y="67" font-size="12" fill="#263746" text-anchor="start">h = 0,75 m</text>
+      <text x="291" y="101" font-size="12" fill="#263746" text-anchor="middle">I</text>
+      <text x="376" y="101" font-size="12" fill="#263746" text-anchor="middle">II</text>
+      <line x1="291" y1="162" x2="291" y2="118" stroke="#356b83" stroke-width="2.4" marker-end="url(#u04vs_aR)" />
+      <line x1="376" y1="118" x2="376" y2="162" stroke="#356b83" stroke-width="2.4" marker-end="url(#u04vs_aR)" />
+      <text x="313" y="138" font-size="12" fill="#263746" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">z</tspan>
       </text>
-      <text x="335" y="185" font-size="11" fill="#3a4a56" text-anchor="middle">Usporedi p<tspan baseline-shift="sub" font-size="0.75em">B</tspan> − p<tspan baseline-shift="sub" font-size="0.75em">A</tspan>.</text>
-      <text x="335" y="208" font-size="10.5" fill="#3a4a56" text-anchor="middle">I: ubrzavanje · II: kočenje</text>
+      <text x="335" y="185" font-size="11" fill="#263746" text-anchor="middle">Usporedi p<tspan baseline-shift="sub" font-size="0.75em">B</tspan> − p<tspan baseline-shift="sub" font-size="0.75em">A</tspan>.</text>
+      <text x="335" y="208" font-size="10.5" fill="#263746" text-anchor="middle">I: ubrzavanje · II: kočenje</text>
     </g>
     <g id="u04vs_z4" transform="translate(484 268)">
-      <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
-      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z4</text>
-      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Brzina vrtnje iz razlike tlakova</text>
-      <rect x="48" y="80" width="189" height="88" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.1" rx="0" />
+      <text x="14" y="19" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Z4</text>
+      <text x="36" y="19" font-size="12" fill="#263746" text-anchor="start">Brzina vrtnje iz razlike tlakova</text>
+      <rect x="48" y="80" width="189" height="88" fill="#dcebf1" stroke="none" stroke-width="1.1" rx="0" />
       <rect x="40" y="72" width="205" height="8" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
       <rect x="40" y="80" width="8" height="88" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
       <rect x="237" y="80" width="8" height="88" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
       <rect x="40" y="168" width="205" height="8" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.1" rx="0" />
-      <line x1="142.5" y1="59" x2="142.5" y2="179" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
-      <text x="152.5" y="53" font-size="12" fill="#1e8449" text-anchor="start">os vrtnje; |ω| = ?</text>
-      <line x1="145.5" y1="120" x2="232" y2="120" stroke="#7a8a96" stroke-width="1" stroke-dasharray="4,3" />
-      <circle cx="169.5" cy="120" r="3" fill="#c0392b" />
-      <text x="165.5" y="140" font-size="11" fill="#c0392b" text-anchor="start">A</text>
-      <circle cx="223.5" cy="120" r="3" fill="#c0392b" />
-      <text x="219.5" y="140" font-size="11" fill="#c0392b" text-anchor="start">B</text>
-      <line x1="142.5" y1="87" x2="142.5" y2="97" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="169.5" y1="87" x2="169.5" y2="97" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="142.5" y1="92" x2="169.5" y2="92" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-      <text x="156.0" y="107" font-size="11" fill="#b7600c" text-anchor="middle">r<tspan baseline-shift="sub" font-size="0.75em">A</tspan>
+      <line x1="142.5" y1="59" x2="142.5" y2="179" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
+      <text x="152.5" y="53" font-size="12" fill="#263746" text-anchor="start">os vrtnje; |ω| = ?</text>
+      <line x1="145.5" y1="120" x2="232" y2="120" stroke="#657781" stroke-width="1" stroke-dasharray="4,3" />
+      <circle cx="169.5" cy="120" r="3" fill="#356b83" />
+      <text x="165.5" y="140" font-size="11" fill="#263746" text-anchor="start">A</text>
+      <circle cx="223.5" cy="120" r="3" fill="#356b83" />
+      <text x="219.5" y="140" font-size="11" fill="#263746" text-anchor="start">B</text>
+      <line x1="142.5" y1="87" x2="142.5" y2="97" stroke="#657781" stroke-width="0.8" />
+      <line x1="169.5" y1="87" x2="169.5" y2="97" stroke="#657781" stroke-width="0.8" />
+      <line x1="142.5" y1="92" x2="169.5" y2="92" stroke="#657781" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="156.0" y="107" font-size="11" fill="#263746" text-anchor="middle">r<tspan baseline-shift="sub" font-size="0.75em">A</tspan>
       </text>
-      <line x1="142.5" y1="193" x2="142.5" y2="203" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="223.5" y1="193" x2="223.5" y2="203" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="142.5" y1="198" x2="223.5" y2="198" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-      <text x="183.0" y="213" font-size="11" fill="#b7600c" text-anchor="middle">r<tspan baseline-shift="sub" font-size="0.75em">B</tspan>
+      <line x1="142.5" y1="193" x2="142.5" y2="203" stroke="#657781" stroke-width="0.8" />
+      <line x1="223.5" y1="193" x2="223.5" y2="203" stroke="#657781" stroke-width="0.8" />
+      <line x1="142.5" y1="198" x2="223.5" y2="198" stroke="#657781" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="183.0" y="213" font-size="11" fill="#263746" text-anchor="middle">r<tspan baseline-shift="sub" font-size="0.75em">B</tspan>
       </text>
-      <text x="267" y="47" font-size="12" fill="#3a4a56" text-anchor="start">ρ = 1000 kg/m³</text>
-      <text x="267" y="67" font-size="12" fill="#3a4a56" text-anchor="start">r<tspan baseline-shift="sub" font-size="0.75em">A</tspan> = 80 mm</text>
-      <text x="267" y="87" font-size="12" fill="#3a4a56" text-anchor="start">r<tspan baseline-shift="sub" font-size="0.75em">B</tspan> = 240 mm</text>
-      <text x="267" y="110" font-size="11" fill="#1565c0" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M,A</tspan> = 12,40 kPa</text>
-      <text x="267" y="131" font-size="11" fill="#1565c0" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M,B</tspan> = 14,00 kPa</text>
-      <text x="267" y="159" font-size="11" fill="#3a4a56" text-anchor="start">A i B na istoj visini.</text>
-      <text x="267" y="180" font-size="11" fill="#3a4a56" text-anchor="start">Smjer vrtnje nije zadan.</text>
-      <text x="267" y="208" font-size="10.5" fill="#3a4a56" text-anchor="start">Posuda potpuno ispunjena.</text>
+      <text x="267" y="47" font-size="12" fill="#263746" text-anchor="start">ρ = 1000 kg/m³</text>
+      <text x="267" y="67" font-size="12" fill="#263746" text-anchor="start">r<tspan baseline-shift="sub" font-size="0.75em">A</tspan> = 80 mm</text>
+      <text x="267" y="87" font-size="12" fill="#263746" text-anchor="start">r<tspan baseline-shift="sub" font-size="0.75em">B</tspan> = 240 mm</text>
+      <text x="267" y="110" font-size="11" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M,A</tspan> = 12,40 kPa</text>
+      <text x="267" y="131" font-size="11" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M,B</tspan> = 14,00 kPa</text>
+      <text x="267" y="159" font-size="11" fill="#263746" text-anchor="start">A i B na istoj visini.</text>
+      <text x="267" y="180" font-size="11" fill="#263746" text-anchor="start">Smjer vrtnje nije zadan.</text>
+      <text x="267" y="208" font-size="10.5" fill="#263746" text-anchor="start">Posuda potpuno ispunjena.</text>
     </g>
     <g id="u04vs_z5" transform="translate(28 506)">
-      <rect x="0" y="0" width="448" height="230" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
-      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z5</text>
-      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Provjera smirivanja iz podataka</text>
-      <path d="M43 112.32874617737004 L211 156.67125382262998 V178 H43 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
+      <text x="14" y="19" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Z5</text>
+      <text x="36" y="19" font-size="12" fill="#263746" text-anchor="start">Provjera smirivanja iz podataka</text>
+      <path d="M43 112.32874617737004 L211 156.67125382262998 V178 H43 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <path d="M35 98.25 H43 V178 H211 V98.25 H219 V186 H35 Z" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <line x1="43" y1="112.32874617737004" x2="211" y2="156.67125382262998" stroke="#1565c0" stroke-width="2" />
-      <line x1="43" y1="134.5" x2="211" y2="134.5" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
-      <line x1="82" y1="61" x2="140" y2="61" stroke="#c0392b" stroke-width="2.5" marker-end="url(#u04vs_aR)" />
-      <text x="73" y="46" font-size="11" fill="#c0392b" text-anchor="start">a = 2,00 m/s²</text>
-      <circle cx="43" cy="112.32874617737004" r="3" fill="#c0392b" />
-      <circle cx="211" cy="156.67125382262998" r="3" fill="#c0392b" />
-      <text x="49" y="93" font-size="10" fill="#3a4a56" text-anchor="start">str.</text>
-      <text x="191" y="93" font-size="10" fill="#3a4a56" text-anchor="start">pred.</text>
-      <text x="127" y="201" font-size="10.5" fill="#1565c0" text-anchor="middle">referentni profil nakon smirivanja</text>
-      <text x="127" y="218" font-size="10.5" fill="#b7600c" text-anchor="middle">L = 1,50 m; h₀ = 0,300 m</text>
-      <text x="269" y="51" font-size="11" fill="#3a4a56" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.75em">str</tspan> (m)</text>
+      <line x1="43" y1="112.32874617737004" x2="211" y2="156.67125382262998" stroke="#356b83" stroke-width="2" />
+      <line x1="43" y1="134.5" x2="211" y2="134.5" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
+      <line x1="82" y1="61" x2="140" y2="61" stroke="#356b83" stroke-width="2.5" marker-end="url(#u04vs_aR)" />
+      <text x="73" y="46" font-size="11" fill="#263746" text-anchor="start">a = 2,00 m/s²</text>
+      <circle cx="43" cy="112.32874617737004" r="3" fill="#356b83" />
+      <circle cx="211" cy="156.67125382262998" r="3" fill="#356b83" />
+      <text x="49" y="93" font-size="10" fill="#263746" text-anchor="start">str.</text>
+      <text x="191" y="93" font-size="10" fill="#263746" text-anchor="start">pred.</text>
+      <text x="127" y="201" font-size="10.5" fill="#263746" text-anchor="middle">referentni profil nakon smirivanja</text>
+      <text x="127" y="218" font-size="10.5" fill="#263746" text-anchor="middle">L = 1,50 m; h₀ = 0,300 m</text>
+      <text x="269" y="51" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.75em">str</tspan> (m)</text>
       <line x1="273" y1="72" x2="273" y2="170" stroke="#3a4a56" stroke-width="1" />
       <line x1="273" y1="170" x2="425" y2="170" stroke="#3a4a56" stroke-width="1" />
       <line x1="269" y1="148.0" x2="273" y2="148.0" stroke="#3a4a56" stroke-width="1" />
-      <text x="265" y="152.0" font-size="10" fill="#3a4a56" text-anchor="end">0,38</text>
+      <text x="265" y="152.0" font-size="10" fill="#263746" text-anchor="end">0,38</text>
       <line x1="269" y1="91.99999999999999" x2="273" y2="91.99999999999999" stroke="#3a4a56" stroke-width="1" />
-      <text x="265" y="95.99999999999999" font-size="10" fill="#3a4a56" text-anchor="end">0,52</text>
+      <text x="265" y="95.99999999999999" font-size="10" fill="#263746" text-anchor="end">0,52</text>
       <line x1="273.0" y1="170" x2="273.0" y2="174" stroke="#3a4a56" stroke-width="1" />
-      <text x="273.0" y="187" font-size="10" fill="#3a4a56" text-anchor="middle">0</text>
+      <text x="273.0" y="187" font-size="10" fill="#263746" text-anchor="middle">0</text>
       <line x1="337.8888888888889" y1="170" x2="337.8888888888889" y2="174" stroke="#3a4a56" stroke-width="1" />
-      <text x="337.8888888888889" y="187" font-size="10" fill="#3a4a56" text-anchor="middle">4</text>
+      <text x="337.8888888888889" y="187" font-size="10" fill="#263746" text-anchor="middle">4</text>
       <line x1="402.77777777777777" y1="170" x2="402.77777777777777" y2="174" stroke="#3a4a56" stroke-width="1" />
-      <text x="402.77777777777777" y="187" font-size="10" fill="#3a4a56" text-anchor="middle">8</text>
-      <line x1="273" y1="118.83792048929664" x2="425" y2="118.83792048929664" stroke="#1565c0" stroke-width="1" stroke-dasharray="4,3" />
-      <circle cx="281.1111111111111" cy="91.99999999999999" r="3" fill="#c0392b" />
-      <circle cx="289.22222222222223" cy="148.0" r="3" fill="#c0392b" />
-      <circle cx="297.3333333333333" cy="100.0" r="3" fill="#c0392b" />
-      <circle cx="402.77777777777777" cy="118.39999999999998" r="3" fill="#c0392b" />
-      <circle cx="410.8888888888889" cy="119.19999999999999" r="3" fill="#c0392b" />
-      <circle cx="419.0" cy="118.79999999999998" r="3" fill="#c0392b" />
-      <text x="306" y="80" font-size="11" fill="#c0392b" text-anchor="start">I</text>
-      <text x="408" y="103" font-size="11" fill="#c0392b" text-anchor="start">II</text>
-      <text x="419" y="204" font-size="10" fill="#3a4a56" text-anchor="end">t (s)</text>
-      <text x="333" y="220" font-size="10.5" fill="#3a4a56" text-anchor="middle">Točke: očitanja; crta: model.</text>
+      <text x="402.77777777777777" y="187" font-size="10" fill="#263746" text-anchor="middle">8</text>
+      <line x1="273" y1="118.83792048929664" x2="425" y2="118.83792048929664" stroke="#356b83" stroke-width="1" stroke-dasharray="4,3" />
+      <circle cx="281.1111111111111" cy="91.99999999999999" r="3" fill="#356b83" />
+      <circle cx="289.22222222222223" cy="148.0" r="3" fill="#356b83" />
+      <circle cx="297.3333333333333" cy="100.0" r="3" fill="#356b83" />
+      <circle cx="402.77777777777777" cy="118.39999999999998" r="3" fill="#356b83" />
+      <circle cx="410.8888888888889" cy="119.19999999999999" r="3" fill="#356b83" />
+      <circle cx="419.0" cy="118.79999999999998" r="3" fill="#356b83" />
+      <text x="306" y="80" font-size="11" fill="#263746" text-anchor="start">I</text>
+      <text x="408" y="103" font-size="11" fill="#263746" text-anchor="start">II</text>
+      <text x="419" y="204" font-size="10" fill="#263746" text-anchor="end">t (s)</text>
+      <text x="333" y="220" font-size="10.5" fill="#263746" text-anchor="middle">Točke: očitanja; crta: model.</text>
     </g>
     <g id="u04vs_z6" transform="translate(484 506)">
-      <rect x="0" y="0" width="448" height="224" fill="white" stroke="#d4e3f0" stroke-width="1" rx="10" stroke-opacity="0.65" />
-      <text x="14" y="19" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Z6</text>
-      <text x="36" y="19" font-size="12" fill="#52606d" text-anchor="start">Rotacijski spremnik: granice radnog režima</text>
-      <path d="M60 84.392 Q148 154.024 236 84.392 V180 H60 Z" fill="url(#u04vs_voda)" stroke="none" stroke-width="1.2" />
+      <text x="14" y="19" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Z6</text>
+      <text x="36" y="19" font-size="12" fill="#263746" text-anchor="start">Rotacijski spremnik: granice radnog režima</text>
+      <path d="M60 84.392 Q148 154.024 236 84.392 V180 H60 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <path d="M52 74.6 H60 V180 H236 V74.6 H244 V188 H52 Z" fill="url(#u04vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <line x1="148" y1="48" x2="148" y2="180" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
-      <line x1="60" y1="101.8" x2="236" y2="101.8" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
-      <path d="M60 84.392 Q148 154.024 236 84.392" fill="none" stroke="#1565c0" stroke-width="2" />
-      <path d="M60 74.6 Q148 183.4 236 74.6" fill="none" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4,3" />
-      <path d="M129 62 C125 43 166 43 170 60" fill="none" stroke="#1e8449" stroke-width="2" marker-end="url(#u04vs_aG)" />
-      <text x="148" y="43" font-size="13" fill="#1e8449" text-anchor="middle">ω</text>
-      <line x1="30" y1="74.6" x2="40" y2="74.6" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="30" y1="180" x2="40" y2="180" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="35" y1="74.6" x2="35" y2="180" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-      <text x="27" y="131.3" font-size="11" fill="#b7600c" text-anchor="end">H</text>
-      <line x1="148" y1="193" x2="148" y2="203" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="236" y1="193" x2="236" y2="203" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="148" y1="198" x2="236" y2="198" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
-      <text x="192.0" y="213" font-size="11" fill="#b7600c" text-anchor="middle">R</text>
-      <rect x="141" y="180" width="14" height="6" fill="#5d6d7e" stroke="#3a4a56" stroke-width="1.1" rx="0" />
-      <text x="267" y="46" font-size="12" fill="#3a4a56" text-anchor="start">R = 0,32 m</text>
-      <text x="267" y="64" font-size="12" fill="#3a4a56" text-anchor="start">H = 0,62 m</text>
-      <text x="267" y="82" font-size="12" fill="#3a4a56" text-anchor="start">h₀ = 0,46 m</text>
-      <line x1="267" y1="102" x2="292" y2="102" stroke="#1565c0" stroke-width="2" />
-      <text x="300" y="106" font-size="10.5" fill="#3a4a56" text-anchor="start">α = 0,80</text>
-      <line x1="267" y1="120" x2="292" y2="120" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4,3" />
-      <text x="300" y="124" font-size="10.5" fill="#3a4a56" text-anchor="start">granica ω<tspan baseline-shift="sub" font-size="0.75em">max</tspan>
+      <line x1="148" y1="48" x2="148" y2="180" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
+      <line x1="60" y1="101.8" x2="236" y2="101.8" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
+      <path d="M60 84.392 Q148 154.024 236 84.392" fill="none" stroke="#356b83" stroke-width="2" />
+      <path d="M60 74.6 Q148 183.4 236 74.6" fill="none" stroke="#356b83" stroke-width="1.4" stroke-dasharray="4,3" />
+      <path d="M129 62 C125 43 166 43 170 60" fill="none" stroke="#356b83" stroke-width="2" marker-end="url(#u04vs_aG)" />
+      <text x="148" y="43" font-size="13" fill="#263746" text-anchor="middle">ω</text>
+      <line x1="30" y1="74.6" x2="40" y2="74.6" stroke="#657781" stroke-width="0.8" />
+      <line x1="30" y1="180" x2="40" y2="180" stroke="#657781" stroke-width="0.8" />
+      <line x1="35" y1="74.6" x2="35" y2="180" stroke="#657781" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="27" y="131.3" font-size="11" fill="#263746" text-anchor="end">H</text>
+      <line x1="148" y1="193" x2="148" y2="203" stroke="#657781" stroke-width="0.8" />
+      <line x1="236" y1="193" x2="236" y2="203" stroke="#657781" stroke-width="0.8" />
+      <line x1="148" y1="198" x2="236" y2="198" stroke="#657781" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" />
+      <text x="192.0" y="213" font-size="11" fill="#263746" text-anchor="middle">R</text>
+      <rect x="141" y="180" width="14" height="6" fill="#3a4a56" stroke="#3a4a56" stroke-width="1.1" rx="0" />
+      <text x="267" y="46" font-size="12" fill="#263746" text-anchor="start">R = 0,32 m</text>
+      <text x="267" y="64" font-size="12" fill="#263746" text-anchor="start">H = 0,62 m</text>
+      <text x="267" y="82" font-size="12" fill="#263746" text-anchor="start">h₀ = 0,46 m</text>
+      <line x1="267" y1="102" x2="292" y2="102" stroke="#356b83" stroke-width="2" />
+      <text x="300" y="106" font-size="10.5" fill="#263746" text-anchor="start">α = 0,80</text>
+      <line x1="267" y1="120" x2="292" y2="120" stroke="#356b83" stroke-width="1.4" stroke-dasharray="4,3" />
+      <text x="300" y="124" font-size="10.5" fill="#263746" text-anchor="start">granica ω<tspan baseline-shift="sub" font-size="0.75em">max</tspan>
       </text>
-      <text x="267" y="149" font-size="10.5" fill="#3a4a56" text-anchor="start">stvarna ω ≤ 1,05 ω<tspan baseline-shift="sub" font-size="0.75em">zad</tspan>
+      <text x="267" y="149" font-size="10.5" fill="#263746" text-anchor="start">stvarna ω ≤ 1,05 ω<tspan baseline-shift="sub" font-size="0.75em">zad</tspan>
       </text>
-      <text x="267" y="172" font-size="10.5" fill="#3a4a56" text-anchor="start">zahtjev: h<tspan baseline-shift="sub" font-size="0.75em">osa</tspan> ≥ 0,350 m</text>
-      <text x="267" y="204" font-size="10.5" fill="#3a4a56" text-anchor="start">Usis zatvoren; nema protoka.</text>
-      <line x1="160" y1="119.208" x2="170" y2="119.208" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="160" y1="180" x2="170" y2="180" stroke="#b7600c" stroke-width="0.8" />
-      <line x1="165" y1="119.208" x2="165" y2="180" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u04ex_dimL)" marker-end="url(#u04ex_dim)" />
-      <text x="176" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">osa</tspan>
+      <text x="267" y="172" font-size="10.5" fill="#263746" text-anchor="start">zahtjev: h<tspan baseline-shift="sub" font-size="0.75em">osa</tspan> ≥ 0,350 m</text>
+      <text x="267" y="204" font-size="10.5" fill="#263746" text-anchor="start">Usis zatvoren; nema protoka.</text>
+      <line x1="160" y1="119.208" x2="170" y2="119.208" stroke="#657781" stroke-width="0.8" />
+      <line x1="160" y1="180" x2="170" y2="180" stroke="#657781" stroke-width="0.8" />
+      <line x1="165" y1="119.208" x2="165" y2="180" stroke="#657781" stroke-width="1.2" marker-start="url(#u04ex_dimL)" marker-end="url(#u04ex_dim)" />
+      <text x="176" y="155" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">osa</tspan>
       </text>
-      <line x1="148" y1="119.208" x2="170" y2="119.208" stroke="#b7600c" stroke-width="0.7" />
-      <line x1="148" y1="180" x2="170" y2="180" stroke="#b7600c" stroke-width="0.7" />
+      <line x1="148" y1="119.208" x2="170" y2="119.208" stroke="#657781" stroke-width="0.7" />
+      <line x1="148" y1="180" x2="170" y2="180" stroke="#657781" stroke-width="0.7" />
     </g>
   </g>
-  <text x="480" y="752" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Visine u pojedinom panelu imaju zajedničko mjerilo; vodoravne širine presjeka su shematske.</text>
+  <text x="480" y="752" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Visine u pojedinom panelu imaju zajedničko mjerilo; vodoravne širine presjeka su shematske.</text>
 </svg>

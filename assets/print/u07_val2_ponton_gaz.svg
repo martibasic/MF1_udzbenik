@@ -2,124 +2,106 @@
   <title id="u07v2pg_title">Ponton s opremom: gaz i vertikalna ravnoteža</title>
   <desc id="u07v2pg_desc">Zatvoren ponton pluta u jednom kontinuiranom području vode. Voda je samo izvan nepropusne ovojnice. Uzgon djeluje kroz centroid istisnutog volumena unutar trupa, ukupna težina na istom vertikalnom pravcu. Srednji gaz 0,209 m, visina boka 0,32 m; duljina je okomita na presjek.</desc>
   <defs>
-    <linearGradient id="u07v2pg_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u07v2pg_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u07v2pg_g" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u07v2pg_fu" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u07v2pg_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u07v2pg_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u07v2pg_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u07v2pg_fix_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u07v2pg_fix_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u07v2pg_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u07v2pg_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u07v2pg_fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u07v2pg_fix_water" x1="0" y1="265" x2="0" y2="410" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u07v2pg_fix_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="456" y="50" width="412" height="32" rx="8" fill="white" stroke="none" />
-  <rect x="456" y="92" width="412" height="72" rx="9" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="456" y="92" width="2" height="72" rx="1" fill="#1565c0" />
-  <rect x="456" y="172" width="412" height="72" rx="9" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="456" y="172" width="2" height="72" rx="1" fill="#1565c0" />
-  <rect x="456" y="252" width="412" height="72" rx="9" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="456" y="252" width="2" height="72" rx="1" fill="#1565c0" />
-  <rect x="456" y="332" width="412" height="72" rx="9" fill="white" stroke="#ecd9c2" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="456" y="430" width="412" height="26" rx="4" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-  <rect x="456" y="332" width="2" height="72" rx="1" fill="#b7600c" />
-  <text x="662" y="71" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1565c0">Vertikalna ravnoteža: <tspan font-style="italic">G</tspan> = <tspan font-style="italic">F</tspan>
+  <text x="662" y="71" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">Vertikalna ravnoteža: <tspan font-style="italic">G</tspan> = <tspan font-style="italic">F</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">U</tspan> → ρ<tspan font-style="italic">gV</tspan> = <tspan font-style="italic">mg</tspan>
   </text>
-  <text x="662" y="111" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Ukupna masa sustava</text>
-  <text x="662" y="133" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="662" y="111" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">1. Ukupna masa sustava</text>
+  <text x="662" y="133" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">m</tspan> = <tspan font-style="italic">m</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">p</tspan> + <tspan font-style="italic">m</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 420 + 180</text>
-  <text x="662" y="154" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">
+  <text x="662" y="154" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">m</tspan> = 600 kg</text>
-  <text x="662" y="191" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Istisnuti volumen</text>
-  <text x="662" y="213" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="662" y="191" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">2. Istisnuti volumen</text>
+  <text x="662" y="213" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">V</tspan> = <tspan font-style="italic">m</tspan> / ρ = 600 / 998</text>
-  <text x="662" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">
+  <text x="662" y="234" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">V</tspan> ≈ 0,601 m³</text>
-  <text x="662" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Srednji gaz pontona</text>
-  <text x="662" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="662" y="271" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">3. Srednji gaz pontona</text>
+  <text x="662" y="293" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">h</tspan> = <tspan font-style="italic">V</tspan> / (<tspan font-style="italic">L</tspan>·<tspan font-style="italic">B</tspan>) = 0,601 / (2,40·1,20)</text>
-  <text x="662" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">
+  <text x="662" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">h</tspan> ≈ 0,209 m ≈ 20,9 cm</text>
-  <text x="662" y="351" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Dodatna masa do zalijevanja (uron <tspan font-style="italic">h</tspan> = <tspan font-style="italic">H</tspan>)</text>
-  <text x="662" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">Δ<tspan font-style="italic">m</tspan> = ρ<tspan font-style="italic">LB</tspan>(<tspan font-style="italic">H</tspan>−<tspan font-style="italic">h</tspan>) = 920 − 600</text>
-  <text x="662" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">Δ<tspan font-style="italic">m</tspan> ≈ 320 kg ≈ 3,2·10² kg</text>
-  <text x="662" y="424" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">Simetrično opterećenje → nema nagiba; <tspan font-style="italic">G</tspan> i <tspan font-style="italic">F</tspan>
+  <text x="662" y="351" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">4. Dodatna masa do zalijevanja (uron <tspan font-style="italic">h</tspan> = <tspan font-style="italic">H</tspan>)</text>
+  <text x="662" y="373" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">Δ<tspan font-style="italic">m</tspan> = ρ<tspan font-style="italic">LB</tspan>(<tspan font-style="italic">H</tspan>−<tspan font-style="italic">h</tspan>) = 920 − 600</text>
+  <text x="662" y="394" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">Δ<tspan font-style="italic">m</tspan> ≈ 320 kg ≈ 3,2·10² kg</text>
+  <text x="662" y="424" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746">Simetrično opterećenje → nema nagiba; <tspan font-style="italic">G</tspan> i <tspan font-style="italic">F</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">U</tspan> djeluju na istoj vertikalnoj osi.</text>
-  <text x="492" y="447" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#1e8449">REZULTATI</text>
-  <text x="588" y="447" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1565c0">
+  <text x="492" y="447" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#263746">REZULTATI</text>
+  <text x="588" y="447" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">V</tspan> ≈ 0,601 m³</text>
-  <text x="688" y="447" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1565c0">
+  <text x="688" y="447" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">h</tspan> ≈ 0,209 m</text>
-  <text x="800" y="447" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#c0392b">Δ<tspan font-style="italic">m</tspan> ≈ 320 kg</text>
-  <g font-family="'Segoe UI',Arial,sans-serif" />
+  <text x="800" y="447" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#263746">Δ<tspan font-style="italic">m</tspan> ≈ 320 kg</text>
+  <g font-family="Arial, Liberation Sans, sans-serif" />
   <g id="u07v2pg_fix_scene">
-    <rect x="45" y="265" width="375" height="145" fill="url(#u07v2pg_fix_water)" stroke="none" stroke-width="1.2" />
-    <line x1="45" y1="265" x2="420" y2="265" stroke="#1565c0" stroke-width="2" id="u07v2pg_fix_free-surface" />
-    <polygon points="102.000000,313.012692 378.000000,313.012692 378.000000,239.412692 102.000000,239.412692" fill="#e9eef2" stroke="#3a4a56" stroke-width="2" id="u07v2pg_fix_hull" />
-    <polygon points="105.450000,309.562692 374.550000,309.562692 374.550000,242.862692 105.450000,242.862692" fill="white" stroke="#909fa8" stroke-width="0.8" />
-    <circle cx="240.0" cy="289.00634602538406" r="3.7" fill="#1e8449" id="u07v2pg_fix_buoyancy-center" />
-    <text x="250.0" y="293.00634602538406" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="start">B</text>
-    <polygon points="198.600000,239.412692 281.400000,239.412692 281.400000,209.512692 198.600000,209.512692" fill="#cba46b" stroke="#8b5e00" stroke-width="1.4" />
-    <text x="240" y="227.91269205076821" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">m<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 180 kg</text>
-    <text x="167" y="291" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">m<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 420 kg</text>
-    <line x1="240.0" y1="289.00634602538406" x2="240.0" y2="247.00634602538406" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u07v2pg_fix_green)" />
-    <text x="253.0" y="263.00634602538406" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan>
+    <rect x="45" y="265" width="375" height="145" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <line x1="45" y1="265" x2="420" y2="265" stroke="#356b83" stroke-width="2" id="u07v2pg_fix_free-surface" />
+    <polygon points="102.000000,313.012692 378.000000,313.012692 378.000000,239.412692 102.000000,239.412692" fill="#dcebf1" stroke="#3a4a56" stroke-width="2" id="u07v2pg_fix_hull" />
+    <polygon points="105.450000,309.562692 374.550000,309.562692 374.550000,242.862692 105.450000,242.862692" fill="#ffffff" stroke="#3a4a56" stroke-width="0.8" />
+    <circle cx="240.0" cy="289.00634602538406" r="3.7" fill="#356b83" id="u07v2pg_fix_buoyancy-center" />
+    <text x="250.0" y="293.00634602538406" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">B</text>
+    <polygon points="198.600000,239.412692 281.400000,239.412692 281.400000,209.512692 198.600000,209.512692" fill="#eadfc5" stroke="#356b83" stroke-width="1.4" />
+    <text x="240" y="227.91269205076821" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">m<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 180 kg</text>
+    <text x="167" y="291" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">m<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 420 kg</text>
+    <line x1="240.0" y1="289.00634602538406" x2="240.0" y2="247.00634602538406" stroke="#356b83" stroke-width="2.2" marker-end="url(#u07v2pg_fix_green)" />
+    <text x="253.0" y="263.00634602538406" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan>
     </text>
-    <line x1="240.0" y1="125" x2="240.0" y2="165" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u07v2pg_fix_force)" />
-    <text x="252.0" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start">G<tspan baseline-shift="sub" font-size="0.7em">uk</tspan>
+    <line x1="240.0" y1="125" x2="240.0" y2="165" stroke="#356b83" stroke-width="2.2" marker-end="url(#u07v2pg_fix_force)" />
+    <text x="252.0" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">G<tspan baseline-shift="sub" font-size="0.7em">uk</tspan>
     </text>
-    <line x1="60" y1="239.41269205076821" x2="70" y2="239.41269205076821" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="60" y1="313.0126920507682" x2="70" y2="313.0126920507682" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="65" y1="239.41269205076821" x2="65" y2="313.0126920507682" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07v2pg_fix_dimL)" marker-end="url(#u07v2pg_fix_dim)" />
-    <text x="45" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">H = 0,32 m</text>
-    <line x1="420" y1="265" x2="430" y2="265" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="420" y1="313.0126920507682" x2="430" y2="313.0126920507682" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="425" y1="265" x2="425" y2="313.0126920507682" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07v2pg_fix_dimL)" marker-end="url(#u07v2pg_fix_dim)" />
-    <text x="432" y="293.0063460253841" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h</text>
-    <line x1="102.0" y1="425" x2="102.0" y2="435" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="378.0" y1="425" x2="378.0" y2="435" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="102.0" y1="430" x2="378.0" y2="430" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07v2pg_fix_dimL)" marker-end="url(#u07v2pg_fix_dim)" />
-    <text x="240.0" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">B = 1,20 m</text>
-    <text x="240" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Ponton s opremom; poprečni presjek</text>
-    <text x="240" y="463" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">L = 2,40 m; isti pravac ukupne težine i uzgona.</text>
+    <line x1="60" y1="239.41269205076821" x2="70" y2="239.41269205076821" stroke="#657781" stroke-width="0.8" />
+    <line x1="60" y1="313.0126920507682" x2="70" y2="313.0126920507682" stroke="#657781" stroke-width="0.8" />
+    <line x1="65" y1="239.41269205076821" x2="65" y2="313.0126920507682" stroke="#657781" stroke-width="1.2" marker-start="url(#u07v2pg_fix_dimL)" marker-end="url(#u07v2pg_fix_dim)" />
+    <text x="45" y="354" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">H = 0,32 m</text>
+    <line x1="420" y1="265" x2="430" y2="265" stroke="#657781" stroke-width="0.8" />
+    <line x1="420" y1="313.0126920507682" x2="430" y2="313.0126920507682" stroke="#657781" stroke-width="0.8" />
+    <line x1="425" y1="265" x2="425" y2="313.0126920507682" stroke="#657781" stroke-width="1.2" marker-start="url(#u07v2pg_fix_dimL)" marker-end="url(#u07v2pg_fix_dim)" />
+    <text x="432" y="293.0063460253841" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h</text>
+    <line x1="102.0" y1="425" x2="102.0" y2="435" stroke="#657781" stroke-width="0.8" />
+    <line x1="378.0" y1="425" x2="378.0" y2="435" stroke="#657781" stroke-width="0.8" />
+    <line x1="102.0" y1="430" x2="378.0" y2="430" stroke="#657781" stroke-width="1.2" marker-start="url(#u07v2pg_fix_dimL)" marker-end="url(#u07v2pg_fix_dim)" />
+    <text x="240.0" y="448" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">B = 1,20 m</text>
+    <text x="240" y="50" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Ponton s opremom; poprečni presjek</text>
+    <text x="240" y="463" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">L = 2,40 m; isti pravac ukupne težine i uzgona.</text>
   </g>
 </svg>

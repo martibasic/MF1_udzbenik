@@ -1,106 +1,105 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 620" role="img" aria-labelledby="u09ch1_title u09ch1_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:1140px;height:auto;">
-<title id="u09ch1_title">Sifon sa suženjem i slobodnim mlazom</title><desc id="u09ch1_desc">Uronjeni otvor nalazi se unutar bazena; sifon prolazi iznad njegova ruba. Glavna cijev i grlo imaju promjere u omjeru 100:80. Vrh C je 1,5 m iznad površine A; izlaz B 2,8 m ispod A i 1,4 m iznad tla. Putanja ima vodoravnu početnu tangentu i isti prostorni omjer kao kote visina.</desc>
-<defs>
-<linearGradient id="u09ch1_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u09ch1_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u09ch1_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u09ch1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u09ch1_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u09ch1_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u09ch1_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="1140" height="620" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<text x="35" y="38" font-size="16" fill="#1a2530" text-anchor="start" font-weight="700">Sifon sa suženjem i slobodnim izlazom</text>
-<text x="35" y="58" font-size="11" fill="#1a2530" text-anchor="start">Visine i domet: 55 px/m; promjeri cijevi zajednički uvećani.</text>
-<line x1="800" y1="30" x2="800" y2="599" stroke="#dce7f0" stroke-width="1" stroke-dasharray="4 5"/>
-<defs><linearGradient id="u09ch1_field" gradientUnits="userSpaceOnUse" x1="0" y1="191.5" x2="0" y2="505"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<rect x="95" y="274" width="125" height="231" rx="0" fill="url(#u09ch1_field)" stroke="none" stroke-width="1.2"/>
-<line x1="95" y1="274" x2="220" y2="274" stroke="#1565c0" stroke-width="2"/>
-<rect x="87" y="251" width="8" height="262" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="220" y="251" width="8" height="262" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="87" y="505" width="141" height="8" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<path id="u09ch1_leftwall" d="M166 426 V209.5 Q166 191.5 184 191.5 H260" fill="none" stroke="#3a4a56" stroke-width="24" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09ch1_leftwater" d="M166 426 V209.5 Q166 191.5 184 191.5 H260" fill="none" stroke="url(#u09ch1_field)" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09ch1_rightwall" d="M364 191.5 H420 Q438 191.5 438 209.5 V410 Q438 428 456 428 H530" fill="none" stroke="#3a4a56" stroke-width="24" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09ch1_rightwater" d="M364 191.5 H420 Q438 191.5 438 209.5 V410 Q438 428 456 428 H530" fill="none" stroke="url(#u09ch1_field)" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09ch1_neckfluid" d="M260 181.5 H264 L286 183.5 H342 L360 181.5 H364 V201.5 H360 L342 199.5 H286 L264 201.5 H260 Z" fill="url(#u09ch1_field)" stroke="none" stroke-width="1.8" />
-<path id="u09ch1_necktop" d="M260 180.5 H264 L286 182.5 H342 L360 180.5 H364" fill="none" stroke="#3a4a56" stroke-width="2" />
-<path id="u09ch1_neckbottom" d="M260 202.5 H264 L286 200.5 H342 L360 202.5 H364" fill="none" stroke="#3a4a56" stroke-width="2" />
-<circle id="u09ch1_A" cx="128" cy="274" r="3" fill="#c0392b"/>
-<text x="128" y="259" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">A</text>
-<circle id="u09ch1_C" cx="311" cy="191.5" r="3" fill="#c0392b"/>
-<text x="311" y="168.5" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">C</text>
-<circle id="u09ch1_B" cx="530" cy="428" r="3" fill="#c0392b"/>
-<text x="530" y="410" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">B</text>
-<path d="M166 379 L166 343" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09ch1_v)"/>
-<path d="M288 191.5 L336 191.5" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09ch1_v)"/>
-<path d="M474 428 L506 428" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09ch1_v)"/>
-<text x="108" y="305" font-size="11" fill="#1a2530" text-anchor="start">vA ≈ 0</text>
-<text x="107" y="325" font-size="11" fill="#1565c0" text-anchor="start">pA = pₐₜₘ</text>
-<line x1="229" y1="274" x2="768" y2="274" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5 5"/>
-<text x="615" y="264" font-size="11" fill="#1a2530" text-anchor="start">referenca zA = 0</text>
-<line x1="228" y1="428" x2="522" y2="428" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5 5"/>
-<line x1="58" y1="274" x2="68" y2="274" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="58" y1="505" x2="68" y2="505" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09ch1_heightA" d="M63 274 L63 505" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)"/>
-<text x="21" y="378" font-size="11" fill="#b7600c" text-anchor="start">4,2 m</text>
-<line x1="365" y1="191.5" x2="375" y2="191.5" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="365" y1="274" x2="375" y2="274" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09ch1_heightC" d="M370 191.5 L370 274" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)"/>
-<text x="293" y="251" font-size="11" fill="#b7600c" text-anchor="start">zC = 1,5 m</text>
-<line x1="351" y1="191.5" x2="375" y2="191.5" stroke="#b7600c" stroke-width="1"/>
-<line x1="689" y1="274" x2="699" y2="274" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="689" y1="428" x2="699" y2="428" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09ch1_dropAB" d="M694 274 L694 428" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)"/>
-<text x="708" y="354" font-size="11" fill="#b7600c" text-anchor="start">Δz = 2,8 m</text>
-<line x1="488" y1="428" x2="498" y2="428" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="488" y1="505" x2="498" y2="505" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09ch1_heightB" d="M493 428 L493 505" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)"/>
-<text x="505" y="481" font-size="11" fill="#b7600c" text-anchor="start">1,4 m</text>
-<line x1="276" y1="183.5" x2="286" y2="183.5" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="276" y1="199.5" x2="286" y2="199.5" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09ch1_dC" d="M281 183.5 L281 199.5" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dimSmall)" marker-end="url(#u09ch1_dimSmall)"/>
-<line x1="279" y1="179" x2="260" y2="144" stroke="#b7600c" stroke-width="1"/>
-<text x="213" y="133" font-size="12" fill="#b7600c" text-anchor="start">dC = 80 mm</text>
-<line x1="428" y1="329" x2="428" y2="339" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="448" y1="329" x2="448" y2="339" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09ch1_D" d="M428 334 L448 334" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dimSmall)" marker-end="url(#u09ch1_dimSmall)"/>
-<text x="438.0" y="351" font-size="11" fill="#b7600c" text-anchor="middle"></text>
-<line x1="451" y1="334" x2="488" y2="315" stroke="#b7600c" stroke-width="1"/>
-<text x="497" y="314" font-size="11" fill="#b7600c" text-anchor="start">D = 100 mm</text>
-<path id="u09ch1_jet" d="M530 428 Q638.8944443027283 428 747.7888886054566 505" fill="none" stroke="#1565c0" stroke-width="2.5" />
-<line x1="40" y1="505" x2="782" y2="505" stroke="#3a4a56" stroke-width="1.5"/>
-<rect x="40" y="505" width="742" height="9" rx="0" fill="url(#u09ch1_hatch)" stroke="none" stroke-width="1.2"/>
-<line x1="530" y1="516" x2="530" y2="559" stroke="#b7600c" stroke-width="1"/>
-<line x1="747.7888886054566" y1="516" x2="747.7888886054566" y2="559" stroke="#b7600c" stroke-width="1"/>
-<line x1="530" y1="546" x2="530" y2="556" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="747.7888886054566" y1="546" x2="747.7888886054566" y2="556" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09ch1_range" d="M530 551 L747.7888886054566 551" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)"/>
-<text x="638.8944443027283" y="568" font-size="11" fill="#b7600c" text-anchor="middle">x = 3,96 m</text>
-<text x="553" y="414" font-size="11" fill="#1e8449" text-anchor="start">vB = 7,41 m/s</text>
-<text x="381" y="155" font-size="11" fill="#1e8449" text-anchor="start">vC = 11,58 m/s</text>
-<text x="561" y="468" font-size="11" fill="#1565c0" text-anchor="start">putanja osi mlaza</text>
-<rect x="824" y="60" width="288" height="87" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<text x="836" y="80" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">1. A → B: brzina i protok</text>
-<text x="836" y="103" font-size="12" fill="#1a2530" text-anchor="start">vB²/(2g) = 4,2 − 1,4 = 2,8 m</text>
-<text x="836" y="122" font-size="12" fill="#1a2530" text-anchor="start">vB = 7,41 m/s; Q = 58,2 L/s</text>
-<rect x="824" y="159" width="288" height="87" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<text x="836" y="179" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">2. Kontinuitet u suženju</text>
-<text x="836" y="202" font-size="12" fill="#1a2530" text-anchor="start">vC = vB(D/dC)² = 11,58 m/s</text>
-<text x="836" y="221" font-size="12" fill="#1a2530" text-anchor="start">vC²/(2g) = 6,836 m</text>
-<rect x="824" y="258" width="288" height="106" rx="7" fill="white" stroke="#c0392b" stroke-width="1" stroke-opacity="0.65" />
-<text x="836" y="278" font-size="13" fill="#c0392b" text-anchor="start" font-weight="700">3. A → C: tlak u vrhu</text>
-<text x="836" y="301" font-size="12" fill="#1a2530" text-anchor="start">pC,man/(ρg) = −1,5 − 6,836</text>
-<text x="836" y="320" font-size="12" fill="#1a2530" text-anchor="start">pC,man ≈ −81,78 kPa</text>
-<text x="836" y="339" font-size="12" fill="#1a2530" text-anchor="start">pC,abs/(ρg) = 1,864 m</text>
-<rect x="824" y="376" width="288" height="87" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.65" />
-<text x="836" y="396" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">4. Idealni kriterij tlaka pare</text>
-<text x="836" y="419" font-size="12" fill="#1a2530" text-anchor="start">1,864 − 0,25 = 1,614 m</text>
-<text x="836" y="438" font-size="12" fill="#1a2530" text-anchor="start">Nije potvrda rada stvarnog sifona.</text>
-<rect x="824" y="475" width="288" height="88" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<text x="836" y="495" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">5. Mlaz nakon izlaza B</text>
-<text x="836" y="518" font-size="12" fill="#1a2530" text-anchor="start">t = √(2·1,4/g) = 0,534 s</text>
-<text x="836" y="537" font-size="12" fill="#1a2530" text-anchor="start">x = vB t = 3,96 m</text>
-</g>
+  <title id="u09ch1_title">Sifon sa suženjem i slobodnim mlazom</title>
+  <desc id="u09ch1_desc">Uronjeni otvor nalazi se unutar bazena; sifon prolazi iznad njegova ruba. Glavna cijev i grlo imaju promjere u omjeru 100:80. Vrh C je 1,5 m iznad površine A; izlaz B 2,8 m ispod A i 1,4 m iznad tla. Putanja ima vodoravnu početnu tangentu i isti prostorni omjer kao kote visina.</desc>
+  <defs>
+    <pattern id="u09ch1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u09ch1_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u09ch1_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u09ch1_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#657781" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <text x="35" y="38" font-size="16" fill="#263746" text-anchor="start" font-weight="700">Sifon sa suženjem i slobodnim izlazom</text>
+    <text x="35" y="58" font-size="11" fill="#263746" text-anchor="start">Visine i domet: 55 px/m; promjeri cijevi zajednički uvećani.</text>
+    <defs />
+    <rect x="95" y="274" width="125" height="231" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <line x1="95" y1="274" x2="220" y2="274" stroke="#356b83" stroke-width="2" />
+    <rect x="87" y="251" width="8" height="262" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="220" y="251" width="8" height="262" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="87" y="505" width="141" height="8" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <path id="u09ch1_leftwall" d="M166 426 V209.5 Q166 191.5 184 191.5 H260" fill="none" stroke="#3a4a56" stroke-width="24" stroke-linecap="butt" stroke-linejoin="round" />
+    <path id="u09ch1_leftwater" d="M166 426 V209.5 Q166 191.5 184 191.5 H260" fill="none" stroke="#dcebf1" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round" />
+    <path id="u09ch1_rightwall" d="M364 191.5 H420 Q438 191.5 438 209.5 V410 Q438 428 456 428 H530" fill="none" stroke="#3a4a56" stroke-width="24" stroke-linecap="butt" stroke-linejoin="round" />
+    <path id="u09ch1_rightwater" d="M364 191.5 H420 Q438 191.5 438 209.5 V410 Q438 428 456 428 H530" fill="none" stroke="#dcebf1" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round" />
+    <path id="u09ch1_neckfluid" d="M260 181.5 H264 L286 183.5 H342 L360 181.5 H364 V201.5 H360 L342 199.5 H286 L264 201.5 H260 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+    <path id="u09ch1_necktop" d="M260 180.5 H264 L286 182.5 H342 L360 180.5 H364" fill="none" stroke="#3a4a56" stroke-width="2" />
+    <path id="u09ch1_neckbottom" d="M260 202.5 H264 L286 200.5 H342 L360 202.5 H364" fill="none" stroke="#3a4a56" stroke-width="2" />
+    <circle id="u09ch1_A" cx="128" cy="274" r="3" fill="#356b83" />
+    <text x="128" y="259" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">A</text>
+    <circle id="u09ch1_C" cx="311" cy="191.5" r="3" fill="#356b83" />
+    <text x="311" y="168.5" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">C</text>
+    <circle id="u09ch1_B" cx="530" cy="428" r="3" fill="#356b83" />
+    <text x="530" y="410" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">B</text>
+    <path d="M166 379 L166 343" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09ch1_v)" />
+    <path d="M288 191.5 L336 191.5" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09ch1_v)" />
+    <path d="M474 428 L506 428" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09ch1_v)" />
+    <text x="108" y="305" font-size="11" fill="#263746" text-anchor="start">vA ≈ 0</text>
+    <text x="107" y="325" font-size="11" fill="#263746" text-anchor="start">pA = pₐₜₘ</text>
+    <line x1="229" y1="274" x2="768" y2="274" stroke="#657781" stroke-width="1" stroke-dasharray="5 5" />
+    <text x="615" y="264" font-size="11" fill="#263746" text-anchor="start">referenca zA = 0</text>
+    <line x1="228" y1="428" x2="522" y2="428" stroke="#657781" stroke-width="1" stroke-dasharray="5 5" />
+    <line x1="58" y1="274" x2="68" y2="274" stroke="#657781" stroke-width="1.2" />
+    <line x1="58" y1="505" x2="68" y2="505" stroke="#657781" stroke-width="1.2" />
+    <path id="u09ch1_heightA" d="M63 274 L63 505" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)" />
+    <text x="21" y="378" font-size="11" fill="#263746" text-anchor="start">4,2 m</text>
+    <line x1="365" y1="191.5" x2="375" y2="191.5" stroke="#657781" stroke-width="1.2" />
+    <line x1="365" y1="274" x2="375" y2="274" stroke="#657781" stroke-width="1.2" />
+    <path id="u09ch1_heightC" d="M370 191.5 L370 274" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)" />
+    <text x="293" y="251" font-size="11" fill="#263746" text-anchor="start">zC = 1,5 m</text>
+    <line x1="351" y1="191.5" x2="375" y2="191.5" stroke="#657781" stroke-width="1" />
+    <line x1="689" y1="274" x2="699" y2="274" stroke="#657781" stroke-width="1.2" />
+    <line x1="689" y1="428" x2="699" y2="428" stroke="#657781" stroke-width="1.2" />
+    <path id="u09ch1_dropAB" d="M694 274 L694 428" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)" />
+    <text x="708" y="354" font-size="11" fill="#263746" text-anchor="start">Δz = 2,8 m</text>
+    <line x1="488" y1="428" x2="498" y2="428" stroke="#657781" stroke-width="1.2" />
+    <line x1="488" y1="505" x2="498" y2="505" stroke="#657781" stroke-width="1.2" />
+    <path id="u09ch1_heightB" d="M493 428 L493 505" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)" />
+    <text x="505" y="481" font-size="11" fill="#263746" text-anchor="start">1,4 m</text>
+    <line x1="276" y1="183.5" x2="286" y2="183.5" stroke="#657781" stroke-width="1.2" />
+    <line x1="276" y1="199.5" x2="286" y2="199.5" stroke="#657781" stroke-width="1.2" />
+    <path id="u09ch1_dC" d="M281 183.5 L281 199.5" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dimSmall)" marker-end="url(#u09ch1_dimSmall)" />
+    <line x1="279" y1="179" x2="260" y2="144" stroke="#657781" stroke-width="1" />
+    <text x="213" y="133" font-size="12" fill="#263746" text-anchor="start">dC = 80 mm</text>
+    <line x1="428" y1="329" x2="428" y2="339" stroke="#657781" stroke-width="1.2" />
+    <line x1="448" y1="329" x2="448" y2="339" stroke="#657781" stroke-width="1.2" />
+    <path id="u09ch1_D" d="M428 334 L448 334" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dimSmall)" marker-end="url(#u09ch1_dimSmall)" />
+    <text x="438.0" y="351" font-size="11" fill="#263746" text-anchor="middle" />
+    <line x1="451" y1="334" x2="488" y2="315" stroke="#657781" stroke-width="1" />
+    <text x="497" y="314" font-size="11" fill="#263746" text-anchor="start">D = 100 mm</text>
+    <path id="u09ch1_jet" d="M530 428 Q638.8944443027283 428 747.7888886054566 505" fill="none" stroke="#356b83" stroke-width="2.5" />
+    <line x1="40" y1="505" x2="782" y2="505" stroke="#3a4a56" stroke-width="1.5" />
+    <rect x="40" y="505" width="742" height="9" rx="0" fill="url(#u09ch1_hatch)" stroke="none" stroke-width="1.2" />
+    <line x1="530" y1="516" x2="530" y2="559" stroke="#657781" stroke-width="1" />
+    <line x1="747.7888886054566" y1="516" x2="747.7888886054566" y2="559" stroke="#657781" stroke-width="1" />
+    <line x1="530" y1="546" x2="530" y2="556" stroke="#657781" stroke-width="1.2" />
+    <line x1="747.7888886054566" y1="546" x2="747.7888886054566" y2="556" stroke="#657781" stroke-width="1.2" />
+    <path id="u09ch1_range" d="M530 551 L747.7888886054566 551" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)" />
+    <text x="638.8944443027283" y="568" font-size="11" fill="#263746" text-anchor="middle">x = 3,96 m</text>
+    <text x="553" y="414" font-size="11" fill="#263746" text-anchor="start">vB = 7,41 m/s</text>
+    <text x="381" y="155" font-size="11" fill="#263746" text-anchor="start">vC = 11,58 m/s</text>
+    <text x="561" y="468" font-size="11" fill="#263746" text-anchor="start">putanja osi mlaza</text>
+    <text x="836" y="80" font-size="13" fill="#263746" text-anchor="start" font-weight="700">1. A → B: brzina i protok</text>
+    <text x="836" y="103" font-size="12" fill="#263746" text-anchor="start">vB²/(2g) = 4,2 − 1,4 = 2,8 m</text>
+    <text x="836" y="122" font-size="12" fill="#263746" text-anchor="start">vB = 7,41 m/s; Q = 58,2 L/s</text>
+    <text x="836" y="179" font-size="13" fill="#263746" text-anchor="start" font-weight="700">2. Kontinuitet u suženju</text>
+    <text x="836" y="202" font-size="12" fill="#263746" text-anchor="start">vC = vB(D/dC)² = 11,58 m/s</text>
+    <text x="836" y="221" font-size="12" fill="#263746" text-anchor="start">vC²/(2g) = 6,836 m</text>
+    <text x="836" y="278" font-size="13" fill="#263746" text-anchor="start" font-weight="700">3. A → C: tlak u vrhu</text>
+    <text x="836" y="301" font-size="12" fill="#263746" text-anchor="start">pC,man/(ρg) = −1,5 − 6,836</text>
+    <text x="836" y="320" font-size="12" fill="#263746" text-anchor="start">pC,man ≈ −81,78 kPa</text>
+    <text x="836" y="339" font-size="12" fill="#263746" text-anchor="start">pC,abs/(ρg) = 1,864 m</text>
+    <text x="836" y="396" font-size="13" fill="#263746" text-anchor="start" font-weight="700">4. Idealni kriterij tlaka pare</text>
+    <text x="836" y="419" font-size="12" fill="#263746" text-anchor="start">1,864 − 0,25 = 1,614 m</text>
+    <text x="836" y="438" font-size="12" fill="#263746" text-anchor="start">Nije potvrda rada stvarnog sifona.</text>
+    <text x="836" y="495" font-size="13" fill="#263746" text-anchor="start" font-weight="700">5. Mlaz nakon izlaza B</text>
+    <text x="836" y="518" font-size="12" fill="#263746" text-anchor="start">t = √(2·1,4/g) = 0,534 s</text>
+    <text x="836" y="537" font-size="12" fill="#263746" text-anchor="start">x = vB t = 3,96 m</text>
+  </g>
 </svg>

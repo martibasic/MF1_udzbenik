@@ -2,134 +2,114 @@
   <title id="u08v3is_title">Izjednačni spremnik s porastom razine</title>
   <desc id="u08v3is_desc">Jedinstveno područje vode nalazi se ispod h0. Neispunjeni prostor do isprekidane h1 predstavlja budući porast, ne drugi fluid. Ulazna cijev prolazi kroz stvaran otvor i završava uronjenim otvorenim koljenom; odvod je uronjen i otvoren. Kote h0 i h1 mjere se od istog dna. Isprekidana granica označuje nepomični kontrolni volumen.</desc>
   <defs>
-    <linearGradient id="u08v3is_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
-    <linearGradient id="u08v3is_akum" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.55" />
-      <stop offset="100%" stop-color="#f5c842" stop-opacity="0.55" />
-    </linearGradient>
     <pattern id="u08v3is_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
     </pattern>
     <marker id="u08v3is_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u08v3is_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u08v3is_aO" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#e67e22" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#eadfc5" />
     </marker>
     <marker id="u08v3is_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u08v3is_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u08v3is_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08v3is_fix_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08v3is_fix_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08v3is_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08v3is_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08v3is_fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u08v3is_fix_water" x1="0" y1="350" x2="0" y2="440" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u08v3is_fix_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="712" y="80" width="238" height="392" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="712" y="80" width="238" height="32" rx="10" fill="white" stroke="none" />
-  <rect x="712" y="104" width="238" height="8" fill="white" stroke="none" />
-  <line x1="730" y1="184" x2="932" y2="184" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="730" y1="252" x2="932" y2="252" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="730" y1="320" x2="932" y2="320" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="730" y1="388" x2="932" y2="388" stroke="#c8d6e4" stroke-width="1" />
-  <rect x="712" y="482" width="238" height="28" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-  <text x="831" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Ključne jednadžbe</text>
-  <text x="831" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Tlocrtna površina</text>
-  <text x="831" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="831" y="102" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">Ključne jednadžbe</text>
+  <text x="831" y="132" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Tlocrtna površina</text>
+  <text x="831" y="152" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">A</tspan>
     <tspan baseline-shift="sub" font-size="0.7em" font-style="italic">T</tspan> = L · b = 3,0 · 1,8</text>
-  <text x="831" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0">= 5,40 m²</text>
-  <text x="831" y="202" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Brzina porasta razine</text>
-  <text x="831" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="831" y="170" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746">= 5,40 m²</text>
+  <text x="831" y="202" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Brzina porasta razine</text>
+  <text x="831" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">dh</tspan>/<tspan font-style="italic">dt</tspan> = (Q<tspan baseline-shift="sub" font-size="0.7em">in</tspan> − Q<tspan baseline-shift="sub" font-size="0.7em">out</tspan>) / A<tspan baseline-shift="sub" font-size="0.7em">T</tspan>
   </text>
-  <text x="831" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#e67e22">≈ 2,59 mm/s ≈ 0,155 m/min</text>
-  <text x="831" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Akumulirani volumen</text>
-  <text x="831" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">ΔV = A<tspan baseline-shift="sub" font-size="0.7em" font-style="italic">T</tspan> · Δh = 5,40 · 0,75</text>
-  <text x="831" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0">= 4,05 m³</text>
-  <text x="831" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Vrijeme do <tspan font-style="italic">h</tspan>
+  <text x="831" y="240" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">≈ 2,59 mm/s ≈ 0,155 m/min</text>
+  <text x="831" y="270" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Akumulirani volumen</text>
+  <text x="831" y="290" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">ΔV = A<tspan baseline-shift="sub" font-size="0.7em" font-style="italic">T</tspan> · Δh = 5,40 · 0,75</text>
+  <text x="831" y="308" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746">= 4,05 m³</text>
+  <text x="831" y="338" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Vrijeme do <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">1</tspan>
   </text>
-  <text x="831" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="831" y="358" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">t</tspan> = ΔV / (Q<tspan baseline-shift="sub" font-size="0.7em">in</tspan> − Q<tspan baseline-shift="sub" font-size="0.7em">out</tspan>)</text>
-  <text x="831" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 289 s ≈ 4,82 min</text>
-  <text x="831" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Akumulirana masa</text>
-  <text x="831" y="426" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">Δm = ρ · ΔV = 998 · 4,05</text>
-  <text x="831" y="444" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449">≈ 4 040 kg ≈ 4,04 t</text>
-  <text x="831" y="501" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449">
+  <text x="831" y="376" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746">≈ 289 s ≈ 4,82 min</text>
+  <text x="831" y="406" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Akumulirana masa</text>
+  <text x="831" y="426" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">Δm = ρ · ΔV = 998 · 4,05</text>
+  <text x="831" y="444" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746">≈ 4 040 kg ≈ 4,04 t</text>
+  <text x="831" y="501" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">t</tspan> ≈ 289 s  •  Δm ≈ 4 040 kg</text>
-  <g font-family="'Segoe UI',Arial,sans-serif" />
+  <g font-family="Arial, Liberation Sans, sans-serif" />
   <g id="u08v3is_fix_scene">
-    <rect x="110" y="350" width="380" height="90" fill="url(#u08v3is_fix_water)" stroke="none" stroke-width="1.2" id="u08v3is_fix_fluid" />
+    <rect x="110" y="350" width="380" height="90" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08v3is_fix_fluid" />
     <rect x="101" y="110" width="9" height="25.0" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="101" y="165.0" width="9" height="275.0" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="490" y="110" width="9" height="290.0" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="490" y="430.0" width="9" height="10.0" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="101" y="440" width="398" height="9" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-    <line x1="110" y1="350" x2="490" y2="350" stroke="#1565c0" stroke-width="2" id="u08v3is_fix_surface" />
+    <line x1="110" y1="350" x2="490" y2="350" stroke="#356b83" stroke-width="2" id="u08v3is_fix_surface" />
     <path d="M30 150 H155 V380" fill="none" stroke="#3a4a56" stroke-width="29" stroke-linejoin="round" />
-    <path d="M30 150 H155 V380" fill="none" stroke="#d7dee3" stroke-width="28" stroke-linejoin="round" />
+    <path d="M30 150 H155 V380" fill="none" stroke="#c5cdd3" stroke-width="28" stroke-linejoin="round" />
     <path d="M30 150 H155 V380" fill="none" stroke="url(#u08v3is_fix_hatch)" stroke-width="28" stroke-linejoin="round" />
-    <path d="M30 150 H155 V380" fill="none" stroke="url(#u08v3is_fix_water)" stroke-width="20" stroke-linejoin="round" />
-    <rect x="490" y="405.0" width="120" height="20" fill="url(#u08v3is_fix_water)" stroke="none" stroke-width="1.2" id="u08v3is_fix_pipe-490-415" />
+    <path d="M30 150 H155 V380" fill="none" stroke="#dcebf1" stroke-width="20" stroke-linejoin="round" />
+    <rect x="490" y="405.0" width="120" height="20" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08v3is_fix_pipe-490-415" />
     <rect x="490" y="400.0" width="120" height="5" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="490" y="425.0" width="120" height="5" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-    <line x1="45" y1="150" x2="90" y2="150" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08v3is_fix_normal)" />
-    <line x1="535" y1="415" x2="595" y2="415" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u08v3is_fix_green)" />
-    <text x="69" y="130" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">in</tspan> = 22 L/s</text>
-    <text x="565" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">out</tspan> = 8 L/s</text>
-    <line x1="110" y1="200" x2="490" y2="200" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="6,4" id="u08v3is_fix_target" />
-    <text x="320" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle">ciljana razina h₁</text>
-    <text x="350" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle">početna razina h₀</text>
-    <line x1="315" y1="330" x2="315" y2="220" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u08v3is_fix_green)" />
-    <text x="330" y="265" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449" text-anchor="start">dh/dt &gt; 0</text>
-    <text x="370" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">budući porast ΔV</text>
-    <text x="370" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">iznad sadašnje vode</text>
-    <text x="340" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">voda, ρ = 998 kg/m³</text>
-    <line x1="68" y1="350" x2="78" y2="350" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="68" y1="440" x2="78" y2="440" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="73" y1="350" x2="73" y2="440" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u08v3is_fix_dimL)" marker-end="url(#u08v3is_fix_dim)" />
-    <text x="18" y="467" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h₀ = 0,45 m</text>
-    <line x1="645" y1="200" x2="655" y2="200" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="645" y1="440" x2="655" y2="440" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="650" y1="200" x2="650" y2="440" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u08v3is_fix_dimL)" marker-end="url(#u08v3is_fix_dim)" />
-    <text x="555" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h₁ = 1,20 m</text>
-    <line x1="110" y1="476" x2="110" y2="486" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="490" y1="476" x2="490" y2="486" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="110" y1="481" x2="490" y2="481" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u08v3is_fix_dimL)" marker-end="url(#u08v3is_fix_dim)" />
-    <text x="300.0" y="499" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">L = 3,0 m; b = 1,8 m okomito na skicu</text>
-    <rect x="96" y="95" width="409" height="362" fill="none" stroke="#8e44ad" stroke-width="1.2" stroke-dasharray="6,4" id="u08v3is_fix_cv" />
-    <text x="300.5" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle">nepomični KV; isprekidana granica nije stijenka</text>
-    <text x="370" y="45" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Akumulacija: dotok je veći od odvoda</text>
+    <line x1="45" y1="150" x2="90" y2="150" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08v3is_fix_normal)" />
+    <line x1="535" y1="415" x2="595" y2="415" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08v3is_fix_green)" />
+    <text x="69" y="130" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">in</tspan> = 22 L/s</text>
+    <text x="565" y="388" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">out</tspan> = 8 L/s</text>
+    <line x1="110" y1="200" x2="490" y2="200" stroke="#356b83" stroke-width="1.3" stroke-dasharray="6,4" id="u08v3is_fix_target" />
+    <text x="320" y="192" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">ciljana razina h₁</text>
+    <text x="350" y="342" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">početna razina h₀</text>
+    <line x1="315" y1="330" x2="315" y2="220" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08v3is_fix_green)" />
+    <text x="330" y="265" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">dh/dt &gt; 0</text>
+    <text x="370" y="295" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">budući porast ΔV</text>
+    <text x="370" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">iznad sadašnje vode</text>
+    <text x="340" y="404" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">voda, ρ = 998 kg/m³</text>
+    <line x1="68" y1="350" x2="78" y2="350" stroke="#657781" stroke-width="0.8" />
+    <line x1="68" y1="440" x2="78" y2="440" stroke="#657781" stroke-width="0.8" />
+    <line x1="73" y1="350" x2="73" y2="440" stroke="#657781" stroke-width="1.2" marker-start="url(#u08v3is_fix_dimL)" marker-end="url(#u08v3is_fix_dim)" />
+    <text x="18" y="467" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h₀ = 0,45 m</text>
+    <line x1="645" y1="200" x2="655" y2="200" stroke="#657781" stroke-width="0.8" />
+    <line x1="645" y1="440" x2="655" y2="440" stroke="#657781" stroke-width="0.8" />
+    <line x1="650" y1="200" x2="650" y2="440" stroke="#657781" stroke-width="1.2" marker-start="url(#u08v3is_fix_dimL)" marker-end="url(#u08v3is_fix_dim)" />
+    <text x="555" y="282" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h₁ = 1,20 m</text>
+    <line x1="110" y1="476" x2="110" y2="486" stroke="#657781" stroke-width="0.8" />
+    <line x1="490" y1="476" x2="490" y2="486" stroke="#657781" stroke-width="0.8" />
+    <line x1="110" y1="481" x2="490" y2="481" stroke="#657781" stroke-width="1.2" marker-start="url(#u08v3is_fix_dimL)" marker-end="url(#u08v3is_fix_dim)" />
+    <text x="300.0" y="499" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">L = 3,0 m; b = 1,8 m okomito na skicu</text>
+    <rect x="96" y="95" width="409" height="362" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08v3is_fix_cv" data-mf1-role="control-volume" />
+    <text x="300.5" y="86" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">nepomični KV; isprekidana granica nije stijenka</text>
+    <text x="370" y="45" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Akumulacija: dotok je veći od odvoda</text>
   </g>
 </svg>

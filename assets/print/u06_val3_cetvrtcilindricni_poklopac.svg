@@ -2,150 +2,133 @@
   <title id="u06v3cp_title">Četvrtcilindrični revizijski poklopac uz slobodnu površinu</title>
   <desc id="u06v3cp_desc">Pravi četvrtkružni luk sa središtem O gore lijevo, A desno na slobodnoj površini i B ispod O. Stvarna voda ispunjava četvrtinu valjka iznad luka. Sile vode na poklopac su desno i dolje. FH djeluje na dubini 2R/3, a FV na xV=4R/(3π) od lijeve stijenke. Rezultanta je 57,52 stupnja ispod horizontale.</desc>
   <defs>
-    <linearGradient id="u06v3cp_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u06v3cp_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u06v3cp_fr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u06v3cp_fg" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u06v3cp_pr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+      <path d="M0,0 L0,4 L6,2 z" fill="#356b83" />
     </marker>
     <marker id="u06v3cp_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u06v3cp_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u05p5_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u05p5_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u05p5_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u05p5_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u05p5_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u05p5_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u05p5_water" x1="0" y1="105" x2="0" y2="280" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u05p5_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="520" y="74" width="392" height="98" rx="9" fill="white" stroke="#e6c3bc" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="520" y="74" width="2" height="92" rx="1" fill="#c0392b" />
-  <rect x="520" y="176" width="392" height="98" rx="9" fill="white" stroke="#e6c3bc" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="520" y="176" width="2" height="92" rx="1" fill="#c0392b" />
-  <rect x="520" y="278" width="392" height="98" rx="9" fill="white" stroke="#bcdcc7" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="520" y="278" width="2" height="92" rx="1" fill="#1e8449" />
-  <rect x="520" y="384" width="392" height="34" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-  <text x="520" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Rastav i rezultanta sile</text>
-  <text x="540" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">1. Horizontalna komponenta</text>
-  <text x="540" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">
+  <text x="520" y="58" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Rastav i rezultanta sile</text>
+  <text x="540" y="96" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" fill="#263746">1. Horizontalna komponenta</text>
+  <text x="540" y="118" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" fill="#263746">
     <tspan font-style="italic">A</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">x</tspan> = R·b = 1,08 m²,  <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">Cx</tspan> = R/2 = 0,45 m</text>
-  <text x="540" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">
+  <text x="540" y="138" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" fill="#263746">
     <tspan font-style="italic">F</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">H</tspan> = ρ g <tspan font-style="italic">A</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">x</tspan>
     <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">Cx</tspan> = 998·9,81·1,08·0,45</text>
-  <text x="540" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">
+  <text x="540" y="158" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">
     <tspan font-style="italic">F</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">H</tspan> ≈ 4,76 kN  (<tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">H</tspan> = 2R/3 = 0,60 m)</text>
-  <text x="540" y="198" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">2. Vertikalna komponenta (težina V*)</text>
-  <text x="540" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">V* = πR²b/4 = π·0,81·1,20/4 ≈ 0,763 m³</text>
-  <text x="540" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">
+  <text x="540" y="198" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" fill="#263746">2. Vertikalna komponenta (težina V*)</text>
+  <text x="540" y="220" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" fill="#263746">V* = πR²b/4 = π·0,81·1,20/4 ≈ 0,763 m³</text>
+  <text x="540" y="240" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" fill="#263746">
     <tspan font-style="italic">F</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">V</tspan> = ρ g V* = 998·9,81·0,763</text>
-  <text x="540" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c0392b">
+    <tspan baseline-shift="sub" font-size="0.7em">V</tspan> = −ρ g V* = −998·9,81·0,763</text>
+  <text x="540" y="260" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">
     <tspan font-style="italic">F</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">V</tspan> ≈ 7,47 kN  (<tspan font-style="italic">x</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">V</tspan> ≈ −7,47 kN  (<tspan font-style="italic">x</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">V</tspan> = 4R/(3π) = 0,382 m)</text>
-  <text x="540" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1e8449">3. Rezultanta i kut</text>
-  <text x="540" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">
+  <text x="540" y="300" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" fill="#263746">3. Rezultanta i kut</text>
+  <text x="540" y="322" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" fill="#263746">
     <tspan font-style="italic">F</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">R</tspan> = √(<tspan font-style="italic">F</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">H</tspan>² + <tspan font-style="italic">F</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">V</tspan>²) = √(4,76² + 7,47²)</text>
-  <text x="540" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#1a2530">α = arctan(<tspan font-style="italic">F</tspan>
+  <text x="540" y="342" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" fill="#263746">α = arctan(<tspan font-style="italic">F</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">V</tspan>/<tspan font-style="italic">F</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">H</tspan>) = arctan(7,47/4,76)</text>
-  <text x="540" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449">
-    <tspan font-style="italic">F</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 8,86 kN,  α ≈ 57,5° ispod horizontale</text>
-  <text x="535" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#5a6a78">REZULTATI</text>
-  <text x="620" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan> = 4,76 kN</text>
-  <text x="730" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> = 7,47 kN</text>
-  <text x="840" y="406" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan> = 8,86 kN</text>
-  <g font-family="'Segoe UI',Arial,sans-serif" />
+    <tspan baseline-shift="sub" font-size="0.7em">H</tspan>) = arctan(−7,47/4,76)</text>
+  <text x="540" y="362" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">F<tspan baseline-shift="sub" font-size="0.75em">R</tspan> ≈ 8,86 kN; α ≈ −57,5° (+z gore)</text>
+  <text x="535" y="406" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-weight="700" fill="#263746">REZULTATI</text>
+  <text x="620" y="406" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan> = 4,76 kN</text>
+  <text x="730" y="406" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> = −7,47 kN</text>
+  <text x="840" y="406" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan> = 8,86 kN</text>
+  <g font-family="Arial, Liberation Sans, sans-serif" />
   <g id="u05p5_geometry">
-    <path d="M135 105 H310 A175 175 0 0 1 135 280 Z" fill="url(#u05p5_water)" stroke="none" stroke-width="1.2" id="u05p5_water-domain" />
+    <path d="M135 105 H310 A175 175 0 0 1 135 280 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u05p5_water-domain" />
     <rect x="123" y="87" width="12" height="205" fill="url(#u05p5_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="123" y="280" width="210" height="12" fill="url(#u05p5_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="310" y="87" width="12" height="18" fill="url(#u05p5_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-    <line x1="135" y1="105" x2="310" y2="105" stroke="#1565c0" stroke-width="2" />
+    <line x1="135" y1="105" x2="310" y2="105" stroke="#356b83" stroke-width="2" />
     <path d="M310 105 A175 175 0 0 1 135 280" fill="none" stroke="#3a4a56" stroke-width="4" id="u05p5_arc" data-cx="135" data-cy="105" data-radius="175" />
-    <circle cx="135" cy="105" r="3.5" fill="#c0392b" />
-    <text x="115" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">O</text>
-    <circle cx="310" cy="105" r="3.5" fill="#c0392b" />
-    <text x="322" y="97" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">A</text>
-    <circle cx="135" cy="280" r="3.5" fill="#c0392b" />
-    <text x="119" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start" font-weight="700">B</text>
-    <line x1="150" y1="221.66666666666669" x2="325" y2="221.66666666666669" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u05p5_force)" id="u05p5_FH" />
-    <text x="330" y="215.66666666666669" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan>
+    <circle cx="135" cy="105" r="3.5" fill="#356b83" />
+    <text x="115" y="96" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">O</text>
+    <circle cx="310" cy="105" r="3.5" fill="#356b83" />
+    <text x="322" y="97" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">A</text>
+    <circle cx="135" cy="280" r="3.5" fill="#356b83" />
+    <text x="119" y="294" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">B</text>
+    <line x1="150" y1="221.66666666666669" x2="325" y2="221.66666666666669" stroke="#356b83" stroke-width="2.2" marker-end="url(#u05p5_force)" id="u05p5_FH" />
+    <text x="330" y="215.66666666666669" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan>
     </text>
-    <line x1="209.27230677621782" y1="155" x2="209.27230677621782" y2="285" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u05p5_force)" id="u05p5_FV" />
-    <text x="221.27230677621782" y="177" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> ↓</text>
-    <line x1="209.27230677621782" y1="221.66666666666669" x2="270.2723067762178" y2="317.4852426011554" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u05p5_green)" />
-    <text x="285" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>
+    <line x1="209.27230677621782" y1="155" x2="209.27230677621782" y2="285" stroke="#356b83" stroke-width="2.2" marker-end="url(#u05p5_force)" id="u05p5_FV" />
+    <text x="221.27230677621782" y="177" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> ↓</text>
+    <line x1="209.27230677621782" y1="221.66666666666669" x2="270.2723067762178" y2="317.4852426011554" stroke="#356b83" stroke-width="2.2" marker-end="url(#u05p5_green)" />
+    <text x="285" y="330" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>
     </text>
-    <text x="163" y="145" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="start">voda = V*</text>
-    <text x="216" y="89" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">slobodna površina</text>
-    <text x="347" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">zrak</text>
-    <text x="347" y="177" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">p = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
+    <text x="163" y="145" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">voda = V*</text>
+    <text x="216" y="89" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">slobodna površina</text>
+    <text x="347" y="161" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">zrak</text>
+    <text x="347" y="177" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">p = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
     </text>
-    <line x1="67" y1="105" x2="77" y2="105" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="67" y1="280" x2="77" y2="280" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="72" y1="105" x2="72" y2="280" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u05p5_dimL)" marker-end="url(#u05p5_dim)" />
-    <text x="22" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">R = 0,90 m</text>
-    <line x1="397" y1="105" x2="407" y2="105" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="397" y1="221.66666666666669" x2="407" y2="221.66666666666669" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="402" y1="105" x2="402" y2="221.66666666666669" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u05p5_dimL)" marker-end="url(#u05p5_dim)" />
-    <text x="413" y="167.33333333333334" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">H</tspan>
+    <line x1="67" y1="105" x2="77" y2="105" stroke="#657781" stroke-width="0.8" />
+    <line x1="67" y1="280" x2="77" y2="280" stroke="#657781" stroke-width="0.8" />
+    <line x1="72" y1="105" x2="72" y2="280" stroke="#657781" stroke-width="1.2" marker-start="url(#u05p5_dimL)" marker-end="url(#u05p5_dim)" />
+    <text x="22" y="306" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">R = 0,90 m</text>
+    <line x1="397" y1="105" x2="407" y2="105" stroke="#657781" stroke-width="0.8" />
+    <line x1="397" y1="221.66666666666669" x2="407" y2="221.66666666666669" stroke="#657781" stroke-width="0.8" />
+    <line x1="402" y1="105" x2="402" y2="221.66666666666669" stroke="#657781" stroke-width="1.2" marker-start="url(#u05p5_dimL)" marker-end="url(#u05p5_dim)" />
+    <text x="413" y="167.33333333333334" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">H</tspan>
     </text>
-    <line x1="135" y1="43" x2="135" y2="53" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="209.27230677621782" y1="43" x2="209.27230677621782" y2="53" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="135" y1="48" x2="209.27230677621782" y2="48" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u05p5_dimL)" marker-end="url(#u05p5_dim)" />
-    <text x="172.1361533881089" y="66" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">x<tspan baseline-shift="sub" font-size="0.7em">V</tspan> = 0,382 m</text>
-    <line x1="135" y1="53" x2="135" y2="100" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-    <line x1="209.27230677621782" y1="53" x2="209.27230677621782" y2="100" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-    <text x="250" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">b = 1,20 m (okomito na presjek)</text>
-    <text x="250" y="393" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Sile vode na poklopac: F<tspan baseline-shift="sub" font-size="0.7em">H</tspan> →, F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> ↓.</text>
-    <text x="250" y="413" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">V* = πR²b/4; ovdje ga ispunjava stvarna voda.</text>
-    <line x1="255.4153505104818" y1="189.31573614360377" x2="278.3516077505736" y2="205.37587636143306" stroke="#1565c0" stroke-width="1.5" marker-end="url(#u05p5_normal)" id="u05p5_normal-vector" />
-    <text x="292" y="191" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">dF</text>
+    <line x1="135" y1="43" x2="135" y2="53" stroke="#657781" stroke-width="0.8" />
+    <line x1="209.27230677621782" y1="43" x2="209.27230677621782" y2="53" stroke="#657781" stroke-width="0.8" />
+    <line x1="135" y1="48" x2="209.27230677621782" y2="48" stroke="#657781" stroke-width="1.2" marker-start="url(#u05p5_dimL)" marker-end="url(#u05p5_dim)" />
+    <text x="172.1361533881089" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">x<tspan baseline-shift="sub" font-size="0.7em">V</tspan> = 0,382 m</text>
+    <line x1="135" y1="53" x2="135" y2="100" stroke="#657781" stroke-width="0.7" stroke-dasharray="3,3" />
+    <line x1="209.27230677621782" y1="53" x2="209.27230677621782" y2="100" stroke="#657781" stroke-width="0.7" stroke-dasharray="3,3" />
+    <text x="250" y="368" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">b = 1,20 m (okomito na presjek)</text>
+    <text x="250" y="393" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">+z gore; sile vode na poklopac: F<tspan baseline-shift="sub" font-size="0.7em">H</tspan> →, F<tspan baseline-shift="sub" font-size="0.7em">V</tspan> ↓.</text>
+    <text x="250" y="413" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">V* = πR²b/4; ovdje ga ispunjava stvarna voda.</text>
+    <line x1="255.4153505104818" y1="189.31573614360377" x2="278.3516077505736" y2="205.37587636143306" stroke="#356b83" stroke-width="1.5" marker-end="url(#u05p5_normal)" id="u05p5_normal-vector" />
+    <text x="292" y="191" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">dF</text>
   </g>
 </svg>

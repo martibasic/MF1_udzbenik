@@ -1,76 +1,75 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="u09vent_title u09vent_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:920px;height:auto;">
-<title id="u09vent_title">Venturi s diferencijalnim manometrom</title><desc id="u09vent_desc">Jedinstveno polje ulja prolazi kroz otvorene presjeke Venturija i ulazi u dva slijepa mjerna voda. Živa u povezanom U-vodu niža je na strani većeg tlaka. Unutarnji promjeri 60 i 30 mm prikazani su u omjeru 2:1. Razlika razina žive iznosi 0,18 m.</desc>
-<defs>
-<linearGradient id="u09vent_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u09vent_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u09vent_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u09vent_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u09vent_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u09vent_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u09vent_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="920" height="520" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<rect x="14" y="14" width="546" height="492" rx="12" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="574" y="14" width="332" height="492" rx="12" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<defs><linearGradient id="u09vent_field" gradientUnits="userSpaceOnUse" x1="0" y1="144" x2="0" y2="420"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
-<path id="u09vent_oilmain" d="M60 144 H160 L240 159 H310 L390 144 H528 V204 H390 L310 189 H240 L160 204 H60 Z" fill="url(#u09vent_field)" stroke="none" stroke-width="1.8" />
-<path id="u09vent_top" d="M60 142 H160 L240 157 H310 L390 142 H528" fill="none" stroke="#3a4a56" stroke-width="4" />
-<path id="u09vent_bottom" d="M60 206 H98 M110 206 H160 L240 191 H264 M276 191 H310 L390 206 H528" fill="none" stroke="#3a4a56" stroke-width="4" />
-<rect id="u09vent_leftoil" x="98" y="202" width="12" height="218" rx="0" fill="url(#u09vent_field)" stroke="none" stroke-width="1.2"/>
-<rect id="u09vent_rightoil" x="264" y="187" width="12" height="53" rx="0" fill="url(#u09vent_field)" stroke="none" stroke-width="1.2"/>
-<line x1="96" y1="204" x2="96" y2="420" stroke="#3a4a56" stroke-width="4"/>
-<line x1="112" y1="204" x2="112" y2="420" stroke="#3a4a56" stroke-width="4"/>
-<line x1="262" y1="189" x2="262" y2="240" stroke="#3a4a56" stroke-width="4"/>
-<line x1="278" y1="189" x2="278" y2="240" stroke="#3a4a56" stroke-width="4"/>
-<path id="u09vent_mercurywall" d="M104 420 V450 Q104 460 114 460 H260 Q270 460 270 450 V240" fill="none" stroke="#3a4a56" stroke-width="16" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09vent_mercurywater" d="M104 420 V450 Q104 460 114 460 H260 Q270 460 270 450 V240" fill="none" stroke="#b0b8c0" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round"/>
-<line id="u09vent_leftinterface" x1="98" y1="420" x2="110" y2="420" stroke="#808890" stroke-width="1.2"/>
-<line id="u09vent_rightinterface" x1="264" y1="240" x2="276" y2="240" stroke="#808890" stroke-width="1.2"/>
-<circle id="u09vent_one" cx="104" cy="174" r="3" fill="#c0392b"/>
-<text x="104" y="123" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">1</text>
-<circle id="u09vent_two" cx="270" cy="174" r="3" fill="#c0392b"/>
-<text x="270" y="142" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">2</text>
-<path d="M68 174 L88 174" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vent_v)"/>
-<path d="M241 174 L308 174" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vent_v)"/>
-<text x="354" y="127" font-size="11" fill="#b7600c" text-anchor="start">ulje: ρ = 870 kg/m³</text>
-<text x="320" y="395" font-size="11" fill="#1a2530" text-anchor="start">živa: ρHg = 13600 kg/m³</text>
-<line x1="279" y1="395" x2="312" y2="391" stroke="#7a8a96" stroke-width="1"/>
-<line x1="38" y1="144" x2="48" y2="144" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="38" y1="204" x2="48" y2="204" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vent_D1" d="M43 144 L43 204" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)"/>
-<text x="19" y="124" font-size="11" fill="#b7600c" text-anchor="start">D₁</text>
-<text x="18" y="224" font-size="11" fill="#b7600c" text-anchor="start">60 mm</text>
-<line x1="326" y1="159" x2="336" y2="159" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="326" y1="189" x2="336" y2="189" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vent_D2" d="M331 159 L331 189" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)"/>
-<text x="340" y="184" font-size="11" fill="#b7600c" text-anchor="start">D₂ = 30 mm</text>
-<line x1="113" y1="420" x2="215" y2="420" stroke="#b7600c" stroke-width="1" stroke-dasharray="4 4"/>
-<line x1="220" y1="240" x2="260" y2="240" stroke="#b7600c" stroke-width="1" stroke-dasharray="4 4"/>
-<line x1="211" y1="240" x2="221" y2="240" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="211" y1="420" x2="221" y2="420" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vent_dh" d="M216 240 L216 420" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)"/>
-<text x="138" y="318" font-size="12" fill="#b7600c" text-anchor="start">Δhm</text>
-<text x="132" y="338" font-size="11" fill="#b7600c" text-anchor="start">0,18 m</text>
-<text x="36" y="485" font-size="11" fill="#1a2530" text-anchor="start">Mjerni vodovi miruju; nema protoka kroz manometar.</text>
-<text x="36" y="500" font-size="10" fill="#1a2530" text-anchor="start">Promjeri i razlika razina žive: jednaka skala, 1 px/mm.</text>
-<rect x="590" y="34" width="299" height="103" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<text x="602" y="54" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">1. Hidrostatička razlika tlakova</text>
-<text x="602" y="77" font-size="12" fill="#1a2530" text-anchor="start">Δp = (ρHg − ρul)g Δhm</text>
-<text x="602" y="96" font-size="12" fill="#1a2530" text-anchor="start">= (13600 − 870)·9,81·0,18</text>
-<text x="602" y="115" font-size="12" fill="#1a2530" text-anchor="start">= 22,479 kPa</text>
-<rect x="590" y="150" width="299" height="89" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<text x="602" y="170" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">2. Kontinuitet</text>
-<text x="602" y="193" font-size="12" fill="#1a2530" text-anchor="start">v₂ = (D₁/D₂)² v₁ = 4v₁</text>
-<text x="602" y="212" font-size="12" fill="#1a2530" text-anchor="start">A₁v₁ = A₂v₂</text>
-<rect x="590" y="252" width="299" height="108" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<text x="602" y="272" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">3. Horizontalni Bernoulli</text>
-<text x="602" y="295" font-size="12" fill="#1a2530" text-anchor="start">Δp = ρul(v₂² − v₁²)/2</text>
-<text x="602" y="314" font-size="12" fill="#1a2530" text-anchor="start">v₁ = 1,856 m/s; v₂ = 7,424 m/s</text>
-<text x="602" y="333" font-size="12" fill="#1a2530" text-anchor="start">Q = 5,248 L/s</text>
-<rect x="590" y="376" width="299" height="75" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-<text x="602" y="396" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">4. Promjena HGL-a</text>
-<text x="602" y="419" font-size="12" fill="#1a2530" text-anchor="start">Δp/(ρul g) = 2,634 m</text>
-<text x="601" y="481" font-size="11" fill="#1a2530" text-anchor="start">Razlika tlakova ne daje apsolutni tlak.</text>
-</g>
+  <title id="u09vent_title">Venturi s diferencijalnim manometrom</title>
+  <desc id="u09vent_desc">Jedinstveno polje ulja prolazi kroz otvorene presjeke Venturija i ulazi u dva slijepa mjerna voda. Živa u povezanom U-vodu niža je na strani većeg tlaka. Unutarnji promjeri 60 i 30 mm prikazani su u omjeru 2:1. Razlika razina žive iznosi 0,18 m.</desc>
+  <defs>
+    <pattern id="u09vent_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u09vent_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u09vent_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u09vent_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs />
+    <path id="u09vent_oilmain" d="M60 144 H160 L240 159 H310 L390 144 H528 V204 H390 L310 189 H240 L160 204 H60 Z" fill="#eadfc5" stroke="none" stroke-width="1.8" />
+    <path id="u09vent_top" d="M60 142 H160 L240 157 H310 L390 142 H528" fill="none" stroke="#3a4a56" stroke-width="4" />
+    <path id="u09vent_bottom" d="M60 206 H98 M110 206 H160 L240 191 H264 M276 191 H310 L390 206 H528" fill="none" stroke="#3a4a56" stroke-width="4" />
+    <rect id="u09vent_leftoil" x="98" y="202" width="12" height="218" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
+    <rect id="u09vent_rightoil" x="264" y="187" width="12" height="53" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
+    <line x1="96" y1="204" x2="96" y2="420" stroke="#3a4a56" stroke-width="4" />
+    <line x1="112" y1="204" x2="112" y2="420" stroke="#3a4a56" stroke-width="4" />
+    <line x1="262" y1="189" x2="262" y2="240" stroke="#3a4a56" stroke-width="4" />
+    <line x1="278" y1="189" x2="278" y2="240" stroke="#3a4a56" stroke-width="4" />
+    <path id="u09vent_mercurywall" d="M104 420 V450 Q104 460 114 460 H260 Q270 460 270 450 V240" fill="none" stroke="#3a4a56" stroke-width="16" stroke-linecap="butt" stroke-linejoin="round" />
+    <path id="u09vent_mercurywater" d="M104 420 V450 Q104 460 114 460 H260 Q270 460 270 450 V240" fill="none" stroke="#a9b2b9" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
+    <line id="u09vent_leftinterface" x1="98" y1="420" x2="110" y2="420" stroke="#3a4a56" stroke-width="1.2" />
+    <line id="u09vent_rightinterface" x1="264" y1="240" x2="276" y2="240" stroke="#3a4a56" stroke-width="1.2" />
+    <circle id="u09vent_one" cx="104" cy="174" r="3" fill="#356b83" />
+    <text x="104" y="123" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">1</text>
+    <circle id="u09vent_two" cx="270" cy="174" r="3" fill="#356b83" />
+    <text x="270" y="142" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">2</text>
+    <path d="M68 174 L88 174" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vent_v)" />
+    <path d="M241 174 L308 174" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vent_v)" />
+    <text x="354" y="127" font-size="11" fill="#263746" text-anchor="start">ulje: ρ = 870 kg/m³</text>
+    <text x="320" y="395" font-size="11" fill="#263746" text-anchor="start">živa: ρHg = 13600 kg/m³</text>
+    <line x1="279" y1="395" x2="312" y2="391" stroke="#657781" stroke-width="1" />
+    <line x1="38" y1="144" x2="48" y2="144" stroke="#657781" stroke-width="1.2" />
+    <line x1="38" y1="204" x2="48" y2="204" stroke="#657781" stroke-width="1.2" />
+    <path id="u09vent_D1" d="M43 144 L43 204" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)" />
+    <text x="19" y="124" font-size="11" fill="#263746" text-anchor="start">D₁</text>
+    <text x="18" y="224" font-size="11" fill="#263746" text-anchor="start">60 mm</text>
+    <line x1="326" y1="159" x2="336" y2="159" stroke="#657781" stroke-width="1.2" />
+    <line x1="326" y1="189" x2="336" y2="189" stroke="#657781" stroke-width="1.2" />
+    <path id="u09vent_D2" d="M331 159 L331 189" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)" />
+    <text x="340" y="184" font-size="11" fill="#263746" text-anchor="start">D₂ = 30 mm</text>
+    <line x1="113" y1="420" x2="215" y2="420" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="220" y1="240" x2="260" y2="240" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="211" y1="240" x2="221" y2="240" stroke="#657781" stroke-width="1.2" />
+    <line x1="211" y1="420" x2="221" y2="420" stroke="#657781" stroke-width="1.2" />
+    <path id="u09vent_dh" d="M216 240 L216 420" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)" />
+    <text x="138" y="318" font-size="12" fill="#263746" text-anchor="start">Δhm</text>
+    <text x="132" y="338" font-size="11" fill="#263746" text-anchor="start">0,18 m</text>
+    <text x="36" y="485" font-size="11" fill="#263746" text-anchor="start">Mjerni vodovi miruju; nema protoka kroz manometar.</text>
+    <text x="36" y="500" font-size="10" fill="#263746" text-anchor="start">Promjeri i razlika razina žive: jednaka skala, 1 px/mm.</text>
+    <text x="602" y="54" font-size="13" fill="#263746" text-anchor="start" font-weight="700">1. Hidrostatička razlika tlakova</text>
+    <text x="602" y="77" font-size="12" fill="#263746" text-anchor="start">Δp = (ρHg − ρul)g Δhm</text>
+    <text x="602" y="96" font-size="12" fill="#263746" text-anchor="start">= (13600 − 870)·9,81·0,18</text>
+    <text x="602" y="115" font-size="12" fill="#263746" text-anchor="start">= 22,479 kPa</text>
+    <text x="602" y="170" font-size="13" fill="#263746" text-anchor="start" font-weight="700">2. Kontinuitet</text>
+    <text x="602" y="193" font-size="12" fill="#263746" text-anchor="start">v₂ = (D₁/D₂)² v₁ = 4v₁</text>
+    <text x="602" y="212" font-size="12" fill="#263746" text-anchor="start">A₁v₁ = A₂v₂</text>
+    <text x="602" y="272" font-size="13" fill="#263746" text-anchor="start" font-weight="700">3. Horizontalni Bernoulli</text>
+    <text x="602" y="295" font-size="12" fill="#263746" text-anchor="start">Δp = ρul(v₂² − v₁²)/2</text>
+    <text x="602" y="314" font-size="12" fill="#263746" text-anchor="start">v₁ = 1,856 m/s; v₂ = 7,424 m/s</text>
+    <text x="602" y="333" font-size="12" fill="#263746" text-anchor="start">Q = 5,248 L/s</text>
+    <text x="602" y="396" font-size="13" fill="#263746" text-anchor="start" font-weight="700">4. Promjena HGL-a</text>
+    <text x="602" y="419" font-size="12" fill="#263746" text-anchor="start">Δp/(ρul g) = 2,634 m</text>
+    <text x="601" y="481" font-size="11" fill="#263746" text-anchor="start">Razlika tlakova ne daje apsolutni tlak.</text>
+  </g>
 </svg>

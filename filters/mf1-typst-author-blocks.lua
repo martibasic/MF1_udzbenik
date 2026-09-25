@@ -157,7 +157,15 @@ local function render_author_block(div)
     return div
   end
 
-  if div.classes:includes("mf1-example-field") then return div end
+  -- A redundant native #block discards the field heading's boundary spacing.
+  -- Flatten only this presentation wrapper; all field content and IDs survive.
+  if div.classes:includes("mf1-example-field") then
+    local content = pandoc.List(div.content)
+    if div.identifier ~= "" then
+      content:insert(1, pandoc.RawBlock("typst", '#label(' .. pandoc.json.encode(div.identifier) .. ')'))
+    end
+    return content
+  end
   if div.classes:includes("mf1-minor-title") then
     if div.content[1] and div.content[1].t == "RawBlock" and tostring(div.content[1].format) == "typst" then
       if div.identifier ~= "" then div.content:insert(pandoc.RawBlock("typst", '#label(' .. pandoc.json.encode(div.identifier) .. ')')) end
@@ -249,6 +257,11 @@ local function render_span(span)
 end
 
 local function render_minor_heading(para)
+  if #para.content == 1 and para.content[1].t == "Link"
+    and pandoc.utils.stringify(para.content[1]) == "Vrati se na zadatak" then
+    return {pandoc.RawBlock("typst", "#block(sticky: true)["), para,
+      pandoc.RawBlock("typst", "]")}
+  end
   if #para.content == 0 or para.content[1].t ~= "Strong" then
     return nil
   end
@@ -277,6 +290,14 @@ local function render_minor_heading(para)
 end
 
 local function render_step_heading(header)
+  -- Pandoc emits the unnumbered frontmatter title as [0. ...], which Typst
+  -- parses as an enumeration. Escape its punctuation for an inline title and
+  -- an outline entry whose page number stays on the same line.
+  if header.level == 1 and header.content[1]
+    and header.content[1].t == "Str" and header.content[1].text == "0." then
+    header.content[1] = pandoc.RawInline("typst", "0\\.")
+    return header
+  end
   if pandoc.utils.stringify(header.content):match("Razrada koraka") then
     header.content = { pandoc.Str("Postupak"), pandoc.Space(), pandoc.Str("rješenja") }
     return header
@@ -295,8 +316,29 @@ local function render_step_heading(header)
 end
 
 local function configure_document(doc)
-  -- This block is emitted inside orange-book's body, after its own paragraph
-  -- defaults, so it intentionally wins without forking Quarto's template.
+  -- Keep short equation introductions with their display (also inside examples).
+  -- Long explanatory paragraphs retain ordinary pagination.
+  doc = doc:walk({ Blocks = function(blocks)
+    for i = #blocks - 1, 1, -1 do
+      local lead, following = blocks[i], blocks[i + 1]
+      if lead.t == "Para" and (following.t == "Para" or following.t == "Plain")
+        and #pandoc.utils.stringify(lead) <= 180 then
+        local next_display, lead_display, lead_image = false, false, false
+        following:walk({ Math = function(math)
+          if math.mathtype == "DisplayMath" then next_display = true end
+        end })
+        lead:walk({ Math = function(math)
+          if math.mathtype == "DisplayMath" then lead_display = true end
+        end, Image = function() lead_image = true end })
+        if next_display and not lead_display and not lead_image then
+          blocks:insert(i + 2, pandoc.RawBlock("typst", "]"))
+          blocks:insert(i, pandoc.RawBlock("typst", "#block(breakable: false)["))
+        end
+      end
+    end
+    return blocks
+  end })
+  -- This block is emitted inside the book body, after frontmatter defaults.
   -- Pandoc renders \boxed as a box containing another math.equation. Keep
   -- the outer equation's number, but prevent nested equations from inheriting
   -- orange-book's numbering (which otherwise doubles numbers and counters).
@@ -309,6 +351,19 @@ local function configure_document(doc)
 }]]
   ))
   return doc
+end
+
+local function keep_short_table(table)
+  local rows = #table.head.rows + #table.foot.rows
+  for _, body in ipairs(table.bodies) do
+    rows = rows + #body.head + #body.body
+  end
+  -- Compact reference tables should not strand their final row. Long tables
+  -- keep normal pagination with repeated column headings.
+  if rows <= 7 and #pandoc.utils.stringify(table) <= 1200 then
+    return {pandoc.RawBlock("typst", "#block(breakable: false)["), table,
+      pandoc.RawBlock("typst", "]")}
+  end
 end
 
 local function render_math(expression)
@@ -347,5 +402,6 @@ return {
   { Header = render_step_heading },
   { Para = render_minor_heading },
   { Div = render_author_block },
+  { Table = keep_short_table },
   { Pandoc = configure_document },
 }

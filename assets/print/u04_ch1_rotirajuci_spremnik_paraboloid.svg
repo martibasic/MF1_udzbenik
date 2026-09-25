@@ -2,144 +2,129 @@
   <title id="u04c1rsp_title">Rotirajući cilindrični spremnik s paraboloidnom slobodnom površinom</title>
   <desc id="u04c1rsp_desc">Aksijalni presjek otvorenog cilindričnog spremnika polumjera R=0,40 m i visine H=0,78 m. Pri kutnoj brzini omega=5,20 rad/s slobodna površina vode postaje paraboloid revolucije: na osi dubina h_C=0,490 m, uz stijenku h_R=0,710 m, razlika Delta h=0,221 m. Tlakovi na dnu: p_M,C=4,80 kPa u točki C, p_M,D=6,97 kPa u točki D. Granica prelijevanja: omega_max=6,64 rad/s odnosno n_max=63,4 okr/min.</desc>
   <defs>
-    <linearGradient id="u04c1rsp_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u04c1rsp_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u04c1rsp_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#657781" />
     </marker>
     <marker id="u04c1rsp_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#657781" />
     </marker>
     <marker id="u04c1rsp_pr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+      <path d="M0,0 L0,4 L6,2 z" fill="#356b83" />
     </marker>
     <marker id="u04c1rsp_om" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u04c1rsp_omL" markerWidth="7" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
   </defs>
-  <line x1="500" y1="34" x2="500" y2="486" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
   <rect x="166" y="224" width="14" height="156" fill="url(#u04c1rsp_hatch)" stroke="#3a4a56" stroke-width="1.3" />
   <rect x="340" y="224" width="14" height="156" fill="url(#u04c1rsp_hatch)" stroke="#3a4a56" stroke-width="1.3" />
   <rect x="166" y="380" width="188" height="14" fill="url(#u04c1rsp_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <path d="M180 237.94903160040775 Q260.0 326.15290519877675 340 237.94903160040775 L340 380 H180 Z" fill="url(#u04c1rsp_voda)" />
-  <path d="M180 237.94903160040775 Q260.0 326.15290519877675 340 237.94903160040775" fill="none" stroke="#1565c0" stroke-width="2.4" />
-  <path d="M180,224 Q260,368 340,224" fill="none" stroke="#8e44ad" stroke-width="1.7" stroke-dasharray="7,4" />
-  <line x1="260" y1="200" x2="260" y2="218" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
-  <line x1="260" y1="224" x2="260" y2="380" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
-  <path d="M222,196 A42,16 0 0 1 298,196" fill="none" stroke="#8e44ad" stroke-width="2.2" marker-end="url(#u04c1rsp_om)" />
-  <circle cx="260" cy="380" r="4.5" fill="#ffffff" stroke="#1a2530" stroke-width="1.6" />
-  <circle cx="260" cy="380" r="2.2" fill="#1a2530" />
-  <circle cx="340" cy="380" r="4.5" fill="#ffffff" stroke="#1a2530" stroke-width="1.6" />
-  <circle cx="340" cy="380" r="2.2" fill="#1a2530" />
-  <line x1="260" y1="384" x2="255" y2="400" stroke="#1a2530" stroke-width="0.7" />
-  <line x1="340" y1="384" x2="345" y2="400" stroke="#1a2530" stroke-width="0.7" />
-  <line x1="354" y1="282.05096839959225" x2="374" y2="282.05096839959225" stroke="#e67e22" stroke-width="0.7" />
-  <line x1="369" y1="237.94903160040775" x2="369" y2="282.05096839959225" stroke="#e67e22" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
-  <line x1="364" y1="282.05096839959225" x2="374" y2="282.05096839959225" stroke="#e67e22" stroke-width="1.2" />
-  <line x1="40" y1="466" x2="78" y2="466" stroke="#1565c0" stroke-width="2.4" />
-  <line x1="270" y1="466" x2="308" y2="466" stroke="#8e44ad" stroke-width="1.7" stroke-dasharray="7,4" />
-  <rect x="518" y="46" width="392" height="34" rx="8" fill="white" stroke="none" />
-  <rect x="518" y="90" width="392" height="52" rx="6" fill="white" stroke="#d6c2e3" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="518" y="146" width="392" height="76" rx="8" fill="white" stroke="#f0d8b8" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="518" y="146" width="6" height="76" rx="3" fill="#e67e22" />
-  <rect x="518" y="230" width="392" height="76" rx="8" fill="white" stroke="#f0d8b8" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="518" y="314" width="392" height="76" rx="8" fill="white" stroke="#bcd6ec" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="518" y="314" width="2" height="76" rx="1" fill="#1565c0" />
-  <rect x="518" y="398" width="392" height="76" rx="8" fill="white" stroke="#d6c2e3" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="518" y="398" width="2" height="76" rx="1" fill="#8e44ad" />
-  <line x1="180" y1="260" x2="340" y2="260" stroke="#b7600c" stroke-width="1.3" stroke-dasharray="6,4" opacity="0.85" />
-  <line x1="166" y1="224" x2="100" y2="224" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="166" y1="380" x2="100" y2="380" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="105" y1="224" x2="105" y2="380" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
-  <line x1="100" y1="224" x2="110" y2="224" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="100" y1="380" x2="110" y2="380" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="260" y1="282.05096839959225" x2="142" y2="282.05096839959225" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,2" />
-  <line x1="147" y1="282.05096839959225" x2="147" y2="380" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
-  <line x1="142" y1="282.05096839959225" x2="152" y2="282.05096839959225" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="142" y1="380" x2="152" y2="380" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="354" y1="237.94903160040775" x2="404" y2="237.94903160040775" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="354" y1="380" x2="404" y2="380" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="399" y1="237.94903160040775" x2="399" y2="380" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
-  <line x1="394" y1="237.94903160040775" x2="404" y2="237.94903160040775" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="394" y1="380" x2="404" y2="380" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="260" y1="394" x2="260" y2="436" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="340" y1="394" x2="340" y2="436" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="260" y1="431" x2="340" y2="431" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
-  <line x1="260" y1="426" x2="260" y2="436" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="340" y1="426" x2="340" y2="436" stroke="#b7600c" stroke-width="1.2" />
-  <rect x="518" y="230" width="2" height="76" rx="1" fill="#b7600c" />
-  <text x="260" y="50" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">Aksijalni presjek (paraboloid revolucije)</text>
-  <text x="270" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#5a6a78">os vrtnje</text>
-  <text x="260" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#8e44ad">
+  <path d="M180 237.94903160040775 Q260.0 326.15290519877675 340 237.94903160040775 L340 380 H180 Z" fill="#dcebf1" />
+  <path d="M180 237.94903160040775 Q260.0 326.15290519877675 340 237.94903160040775" fill="none" stroke="#356b83" stroke-width="2.4" />
+  <path d="M180,224 Q260,368 340,224" fill="none" stroke="#356b83" stroke-width="1.7" stroke-dasharray="7,4" />
+  <line x1="260" y1="200" x2="260" y2="218" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
+  <line x1="260" y1="224" x2="260" y2="380" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
+  <path d="M222,196 A42,16 0 0 1 298,196" fill="none" stroke="#356b83" stroke-width="2.2" marker-end="url(#u04c1rsp_om)" />
+  <circle cx="260" cy="380" r="4.5" fill="#ffffff" stroke="#3a4a56" stroke-width="1.6" />
+  <circle cx="260" cy="380" r="2.2" fill="#3a4a56" />
+  <circle cx="340" cy="380" r="4.5" fill="#ffffff" stroke="#3a4a56" stroke-width="1.6" />
+  <circle cx="340" cy="380" r="2.2" fill="#3a4a56" />
+  <line x1="260" y1="384" x2="255" y2="400" stroke="#3a4a56" stroke-width="0.7" />
+  <line x1="340" y1="384" x2="345" y2="400" stroke="#3a4a56" stroke-width="0.7" />
+  <line x1="354" y1="282.05096839959225" x2="374" y2="282.05096839959225" stroke="#657781" stroke-width="0.7" />
+  <line x1="369" y1="237.94903160040775" x2="369" y2="282.05096839959225" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+  <line x1="364" y1="282.05096839959225" x2="374" y2="282.05096839959225" stroke="#657781" stroke-width="1.2" />
+  <line x1="40" y1="466" x2="78" y2="466" stroke="#356b83" stroke-width="2.4" />
+  <line x1="270" y1="466" x2="308" y2="466" stroke="#356b83" stroke-width="1.7" stroke-dasharray="7,4" />
+  <line x1="180" y1="260" x2="340" y2="260" stroke="#657781" stroke-width="1.3" stroke-dasharray="6,4" opacity="0.85" />
+  <line x1="166" y1="224" x2="100" y2="224" stroke="#657781" stroke-width="0.7" />
+  <line x1="166" y1="380" x2="100" y2="380" stroke="#657781" stroke-width="0.7" />
+  <line x1="105" y1="224" x2="105" y2="380" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+  <line x1="100" y1="224" x2="110" y2="224" stroke="#657781" stroke-width="1.2" />
+  <line x1="100" y1="380" x2="110" y2="380" stroke="#657781" stroke-width="1.2" />
+  <line x1="260" y1="282.05096839959225" x2="142" y2="282.05096839959225" stroke="#657781" stroke-width="0.7" stroke-dasharray="3,2" />
+  <line x1="147" y1="282.05096839959225" x2="147" y2="380" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+  <line x1="142" y1="282.05096839959225" x2="152" y2="282.05096839959225" stroke="#657781" stroke-width="1.2" />
+  <line x1="142" y1="380" x2="152" y2="380" stroke="#657781" stroke-width="1.2" />
+  <line x1="354" y1="237.94903160040775" x2="404" y2="237.94903160040775" stroke="#657781" stroke-width="0.7" />
+  <line x1="354" y1="380" x2="404" y2="380" stroke="#657781" stroke-width="0.7" />
+  <line x1="399" y1="237.94903160040775" x2="399" y2="380" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+  <line x1="394" y1="237.94903160040775" x2="404" y2="237.94903160040775" stroke="#657781" stroke-width="1.2" />
+  <line x1="394" y1="380" x2="404" y2="380" stroke="#657781" stroke-width="1.2" />
+  <line x1="260" y1="394" x2="260" y2="436" stroke="#657781" stroke-width="0.7" />
+  <line x1="340" y1="394" x2="340" y2="436" stroke="#657781" stroke-width="0.7" />
+  <line x1="260" y1="431" x2="340" y2="431" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+  <line x1="260" y1="426" x2="260" y2="436" stroke="#657781" stroke-width="1.2" />
+  <line x1="340" y1="426" x2="340" y2="436" stroke="#657781" stroke-width="1.2" />
+  <text x="260" y="50" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">Aksijalni presjek (paraboloid revolucije)</text>
+  <text x="270" y="214" font-family="Arial, Liberation Sans, sans-serif" font-size="9.5" font-style="italic" fill="#263746">os vrtnje</text>
+  <text x="260" y="184" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#263746">
     <tspan font-weight="700">ω</tspan> = 5,20 rad/s</text>
-  <text x="251" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">C</text>
-  <text x="349" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">D</text>
-  <text x="226" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1565c0" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,C</tspan>
+  <text x="251" y="410" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">C</text>
+  <text x="349" y="410" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">D</text>
+  <text x="226" y="358" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,C</tspan>
   </text>
-  <text x="319" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#1565c0" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,D</tspan>
+  <text x="319" y="358" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,D</tspan>
   </text>
-  <text x="375" y="209" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#e67e22">Δh</text>
-  <text x="375" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#e67e22">≈ 0,221 m</text>
-  <text x="84" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">radni režim (ω = 5,20 rad/s)</text>
-  <text x="314" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">granica prelijevanja (ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan>)</text>
-  <text x="714" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#8e44ad">Paraboloidna slobodna površina − ključne jednadžbe</text>
-  <text x="528" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78">Oblik slobodne površine</text>
-  <text x="714" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="375" y="209" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-weight="700" fill="#263746">Δh</text>
+  <text x="375" y="224" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746">≈ 0,221 m</text>
+  <text x="84" y="470" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">radni režim (ω = 5,20 rad/s)</text>
+  <text x="314" y="470" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">granica prelijevanja (ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan>)</text>
+  <text x="714" y="68" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">Paraboloidna slobodna površina − ključne jednadžbe</text>
+  <text x="528" y="108" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">Oblik slobodne površine</text>
+  <text x="714" y="128" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">h</tspan>(<tspan font-style="italic">r</tspan>) = <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">C</tspan> + ω²<tspan font-style="italic">r</tspan>² / (2<tspan font-style="italic">g</tspan>)</text>
-  <text x="538" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#e67e22">1. Razlika razina Δ<tspan font-style="italic">h</tspan>
+  <text x="538" y="166" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746">1. Razlika razina Δ<tspan font-style="italic">h</tspan>
   </text>
-  <text x="714" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">Δ<tspan font-style="italic">h</tspan> = ω²<tspan font-style="italic">R</tspan>² / (2<tspan font-style="italic">g</tspan>) = 5,20² · 0,40² / (2 · 9,81)</text>
-  <text x="714" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#e67e22">Δ<tspan font-style="italic">h</tspan> ≈ 0,221 m</text>
-  <text x="714" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">
+  <text x="714" y="188" font-family="Arial, Liberation Sans, sans-serif" font-size="13" text-anchor="middle" fill="#263746">Δ<tspan font-style="italic">h</tspan> = ω²<tspan font-style="italic">R</tspan>² / (2<tspan font-style="italic">g</tspan>) = 5,20² · 0,40² / (2 · 9,81)</text>
+  <text x="714" y="210" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">Δ<tspan font-style="italic">h</tspan> ≈ 0,221 m</text>
+  <text x="714" y="272" font-family="Arial, Liberation Sans, sans-serif" font-size="13" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">C</tspan> = <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">0</tspan> − Δ<tspan font-style="italic">h</tspan>/2,  <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">R</tspan> = <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">0</tspan> + Δ<tspan font-style="italic">h</tspan>/2</text>
-  <text x="538" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">3. Manometarski tlakovi na dnu</text>
-  <text x="714" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">
+  <text x="538" y="334" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746">3. Manometarski tlakovi na dnu</text>
+  <text x="714" y="356" font-family="Arial, Liberation Sans, sans-serif" font-size="13" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">p</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">M</tspan> = ρ<tspan font-style="italic">g</tspan>
     <tspan font-style="italic">h</tspan>(<tspan font-style="italic">r</tspan>)</text>
-  <text x="714" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">
+  <text x="714" y="378" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">p</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">M,C</tspan> ≈ 4,80 kPa,  <tspan font-style="italic">p</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">M,D</tspan> ≈ 6,97 kPa</text>
-  <text x="538" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#8e44ad">4. Granica prelijevanja (<tspan font-style="italic">h</tspan>
+  <text x="538" y="418" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746">4. Granica prelijevanja (<tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">R</tspan> = <tspan font-style="italic">H</tspan>)</text>
-  <text x="714" y="440" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan> = √[4<tspan font-style="italic">g</tspan>(<tspan font-style="italic">H</tspan> − <tspan font-style="italic">h</tspan>
+  <text x="714" y="440" font-family="Arial, Liberation Sans, sans-serif" font-size="13" text-anchor="middle" fill="#263746">ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan> = √[4<tspan font-style="italic">g</tspan>(<tspan font-style="italic">H</tspan> − <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">0</tspan>) / <tspan font-style="italic">R</tspan>²]</text>
-  <text x="714" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#8e44ad">ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 6,64 rad/s,  <tspan font-style="italic">n</tspan>
+  <text x="714" y="462" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 6,64 rad/s,  <tspan font-style="italic">n</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">max</tspan> ≈ 63,4 okr/min</text>
-  <text x="714" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#5a6a78">∂<tspan font-style="italic">p</tspan>/∂<tspan font-style="italic">r</tspan> = ρω²<tspan font-style="italic">r</tspan>,  ∂<tspan font-style="italic">p</tspan>/∂<tspan font-style="italic">z</tspan> = −ρ<tspan font-style="italic">g</tspan>  →  <tspan font-style="italic">h</tspan>(<tspan font-style="italic">r</tspan>) paraboloid</text>
-  <text x="92" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c">
+  <text x="714" y="492" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#263746">∂<tspan font-style="italic">p</tspan>/∂<tspan font-style="italic">r</tspan> = ρω²<tspan font-style="italic">r</tspan>,  ∂<tspan font-style="italic">p</tspan>/∂<tspan font-style="italic">z</tspan> = −ρ<tspan font-style="italic">g</tspan>  →  <tspan font-style="italic">h</tspan>(<tspan font-style="italic">r</tspan>) paraboloid</text>
+  <text x="92" y="298" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">H</tspan>
   </text>
-  <text x="92.0" y="314.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#b7600c">= 0,78 m</text>
-  <text x="421" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#b7600c">
+  <text x="92.0" y="314.0" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" text-anchor="middle" fill="#263746">= 0,78 m</text>
+  <text x="421" y="306" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#263746">
     <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">R</tspan>
   </text>
-  <text x="421" y="322.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="start" fill="#b7600c">= 0,710 m</text>
-  <text x="300" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#b7600c">
+  <text x="421" y="322.0" font-family="Arial, Liberation Sans, sans-serif" font-size="10" text-anchor="start" fill="#263746">= 0,710 m</text>
+  <text x="300" y="450" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">R</tspan> = 0,40 m</text>
-  <text x="222" y="256" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" fill="#b7600c">
+  <text x="222" y="256" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746">
     <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 0,60 m (mirno)</text>
-  <text x="538" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">2. Dubine na osi i uz stijenku</text>
-  <text x="714" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#b7600c">
+  <text x="538" y="250" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746">2. Dubine na osi i uz stijenku</text>
+  <text x="714" y="294" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 0,490 m,  <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">R</tspan> ≈ 0,710 m</text>
-  <text x="129" y="331" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c" text-anchor="middle" transform="rotate(-90 129 331)">h<tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 0,490 m</text>
+  <text x="129" y="331" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle" transform="rotate(-90 129 331)">h<tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 0,490 m</text>
 </svg>

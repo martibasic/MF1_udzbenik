@@ -11,5 +11,21 @@
   "figure-gap": 14.0,
   "figure-padding": 4.0,
   "figure-line-height": 12.0,
-  "figure-font-family": "Arial, Liberation Sans, sans-serif"
+  "figure-font-family": "Arial, Liberation Sans, sans-serif",
+  "palette": {
+    "ink": "#263746",
+    "contour": "#3a4a56",
+    "auxiliary": "#657781",
+    "vector": "#356b83",
+    "fluid": "#dcebf1",
+    "second-fluid": "#eadfc5",
+    "mercury": "#a9b2b9",
+    "solid": "#d7dee3",
+    "gas": "#f3f6f7",
+    "solution": "#bdcfd2",
+    "mixture": "#cedee0",
+    "reference-light": "#c5cdd3",
+    "reference-dark": "#a8b8c2",
+    "paper": "#ffffff"
+  }
 }

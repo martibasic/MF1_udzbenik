@@ -1,66 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" role="img" aria-labelledby="u14re_title u14re_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
-<title id="u14re_title">Razvijeno strujanje u istoj kružnoj cijevi</title><desc id="u14re_desc">Voda i ulje u odvojenim režimima iste cijevi. Unutarnji promjer je šest milimetara. Profil ulja je paraboličan i nestaje na stijenkama; jedna ispuna predstavlja jedan fluid.</desc>
-<defs>
-<linearGradient id="u14re_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u14re_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u14re_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u14re_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u14re_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u14re_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u14re_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="880" height="460" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
-Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
-Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
-<defs>
-<marker id="u14re_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
-<marker id="u14re_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
-<marker id="u14re_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u14re_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
-</defs>
-<text x="440" y="32" font-size="19" fill="#1565c0" text-anchor="middle" font-weight="700">Ista geometrija · različiti režimi strujanja</text>
-<rect id="u14re_p1top" x="150" y="97" width="600" height="9" rx="0" fill="url(#u14re_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u14re_p1bottom" x="150" y="172" width="600" height="9" rx="0" fill="url(#u14re_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<defs><linearGradient id="u14re_p1field" gradientUnits="userSpaceOnUse" x1="0" y1="106" x2="0" y2="172"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<rect id="u14re_p1fluid" x="150" y="106" width="600" height="66" rx="0" fill="url(#u14re_p1field)" stroke="none" stroke-width="1.2"/>
-<text x="45" y="130" font-size="15" fill="#1565c0" text-anchor="start" font-weight="700">VODA</text>
-<text x="170" y="84" font-size="14" fill="#1e8449" text-anchor="start">v̄ = 1,20 m/s</text>
-<text x="390" y="84" font-size="13" fill="#1a2530" text-anchor="start">ν = 1,00 · 10⁻⁶ m²/s</text>
-<line x1="780" y1="106" x2="790" y2="106" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="780" y1="172" x2="790" y2="172" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u14re_p1D" d="M785 106 L785 172" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u14re_dim)" marker-end="url(#u14re_dim)"/>
-<text x="795" y="143" font-size="12" fill="#b7600c" text-anchor="start">D = 6 mm</text>
-<line x1="753" y1="106" x2="790" y2="106" stroke="#b7600c" stroke-width="1"/>
-<line x1="753" y1="172" x2="790" y2="172" stroke="#b7600c" stroke-width="1"/>
-<text x="640" y="84" font-size="15" fill="#1565c0" text-anchor="start" font-weight="700">Re = 7200</text>
-<path id="u14re_meanwater" d="M290 139 L500 139" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14re_v)"/>
-<text x="440" y="201" font-size="12" fill="#3a4a56" text-anchor="middle">Strelica prikazuje srednju brzinu; fluktuacije nisu nacrtane.</text>
-<rect id="u14re_p2top" x="150" y="291" width="600" height="9" rx="0" fill="url(#u14re_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u14re_p2bottom" x="150" y="366" width="600" height="9" rx="0" fill="url(#u14re_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<defs><linearGradient id="u14re_p2field" gradientUnits="userSpaceOnUse" x1="0" y1="300" x2="0" y2="366"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
-<rect id="u14re_p2fluid" x="150" y="300" width="600" height="66" rx="0" fill="url(#u14re_p2field)" stroke="none" stroke-width="1.2"/>
-<text x="45" y="324" font-size="15" fill="#b7600c" text-anchor="start" font-weight="700">ULJE</text>
-<text x="170" y="278" font-size="14" fill="#1e8449" text-anchor="start">v̄ = 0,30 m/s</text>
-<text x="390" y="278" font-size="13" fill="#1a2530" text-anchor="start">ν = 4,00 · 10⁻⁵ m²/s</text>
-<line x1="780" y1="300" x2="790" y2="300" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="780" y1="366" x2="790" y2="366" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u14re_p2D" d="M785 300 L785 366" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u14re_dim)" marker-end="url(#u14re_dim)"/>
-<text x="795" y="337" font-size="12" fill="#b7600c" text-anchor="start">D = 6 mm</text>
-<line x1="753" y1="300" x2="790" y2="300" stroke="#b7600c" stroke-width="1"/>
-<line x1="753" y1="366" x2="790" y2="366" stroke="#b7600c" stroke-width="1"/>
-<text x="640" y="278" font-size="15" fill="#b7600c" text-anchor="start" font-weight="700">Re = 45</text>
-<polyline id="u14re_oilprofile" points="340.000000,300.000000 344.937500,300.825000 349.750000,301.650000 354.437500,302.475000 359.000000,303.300000 363.437500,304.125000 367.750000,304.950000 371.937500,305.775000 376.000000,306.600000 379.937500,307.425000 383.750000,308.250000 387.437500,309.075000 391.000000,309.900000 394.437500,310.725000 397.750000,311.550000 400.937500,312.375000 404.000000,313.200000 406.937500,314.025000 409.750000,314.850000 412.437500,315.675000 415.000000,316.500000 417.437500,317.325000 419.750000,318.150000 421.937500,318.975000 424.000000,319.800000 425.937500,320.625000 427.750000,321.450000 429.437500,322.275000 431.000000,323.100000 432.437500,323.925000 433.750000,324.750000 434.937500,325.575000 436.000000,326.400000 436.937500,327.225000 437.750000,328.050000 438.437500,328.875000 439.000000,329.700000 439.437500,330.525000 439.750000,331.350000 439.937500,332.175000 440.000000,333.000000 439.937500,333.825000 439.750000,334.650000 439.437500,335.475000 439.000000,336.300000 438.437500,337.125000 437.750000,337.950000 436.937500,338.775000 436.000000,339.600000 434.937500,340.425000 433.750000,341.250000 432.437500,342.075000 431.000000,342.900000 429.437500,343.725000 427.750000,344.550000 425.937500,345.375000 424.000000,346.200000 421.937500,347.025000 419.750000,347.850000 417.437500,348.675000 415.000000,349.500000 412.437500,350.325000 409.750000,351.150000 406.937500,351.975000 404.000000,352.800000 400.937500,353.625000 397.750000,354.450000 394.437500,355.275000 391.000000,356.100000 387.437500,356.925000 383.750000,357.750000 379.937500,358.575000 376.000000,359.400000 371.937500,360.225000 367.750000,361.050000 363.437500,361.875000 359.000000,362.700000 354.437500,363.525000 349.750000,364.350000 344.937500,365.175000 340.000000,366.000000" fill="none" stroke="#1e8449" stroke-width="2" />
-<path id="u14re_oilvelocity0" d="M340 306 L373.0578512396694 306" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14re_v)"/>
-<path id="u14re_oilvelocity1" d="M340 315 L410.24793388429754 315" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14re_v)"/>
-<path id="u14re_oilvelocity2" d="M340 333 L440.0 333" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14re_v)"/>
-<path id="u14re_oilvelocity3" d="M340 351 L410.24793388429754 351" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14re_v)"/>
-<path id="u14re_oilvelocity4" d="M340 360 L373.0578512396694 360" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14re_v)"/>
-<line x1="340" y1="300" x2="340" y2="366" stroke="#7a8a96" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="490" y="328" font-size="13" fill="#1e8449" text-anchor="start">u(r) = 2v̄ [1 − (r/R)²]</text>
-<text x="490" y="349" font-size="12" fill="#1e8449" text-anchor="start">R = D/2; u(±R) = 0</text>
-<text x="440" y="395" font-size="12" fill="#3a4a56" text-anchor="middle">Parabolični profil brzine; strelice su lokalne brzine, a ne strujnice.</text>
-<text x="440" y="440" font-size="12" fill="#3a4a56" text-anchor="middle">Usporedni crteži imaju isti unutarnji promjer. Debljina stijenke je shematska.</text>
-</g>
+  <title id="u14re_title">Razvijeno strujanje u istoj kružnoj cijevi</title>
+  <desc id="u14re_desc">Voda i ulje u odvojenim režimima iste cijevi. Unutarnji promjer je šest milimetara. Profil ulja je paraboličan i nestaje na stijenkama; jedna ispuna predstavlja jedan fluid.</desc>
+  <defs>
+    <pattern id="u14re_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u14re_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u14re_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u14re_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs>
+      <marker id="u14re_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u14re_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u14re_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u14re_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
+      </marker>
+    </defs>
+    <text x="440" y="32" font-size="19" fill="#263746" text-anchor="middle" font-weight="700">Ista geometrija · različiti režimi strujanja</text>
+    <rect id="u14re_p1top" x="150" y="97" width="600" height="9" rx="0" fill="url(#u14re_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u14re_p1bottom" x="150" y="172" width="600" height="9" rx="0" fill="url(#u14re_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <defs />
+    <rect id="u14re_p1fluid" x="150" y="106" width="600" height="66" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <text x="45" y="130" font-size="15" fill="#263746" text-anchor="start" font-weight="700">VODA</text>
+    <text x="170" y="84" font-size="14" fill="#263746" text-anchor="start">v<tspan baseline-shift="sub" font-size="0.75em">A</tspan> = 1,20 m/s</text>
+    <text x="390" y="84" font-size="13" fill="#263746" text-anchor="start">ν = 1,00 · 10⁻⁶ m²/s</text>
+    <line x1="780" y1="106" x2="790" y2="106" stroke="#657781" stroke-width="1.2" />
+    <line x1="780" y1="172" x2="790" y2="172" stroke="#657781" stroke-width="1.2" />
+    <path id="u14re_p1D" d="M785 106 L785 172" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14re_dim)" marker-end="url(#u14re_dim)" />
+    <text x="795" y="143" font-size="12" fill="#263746" text-anchor="start">D = 6 mm</text>
+    <line x1="753" y1="106" x2="790" y2="106" stroke="#657781" stroke-width="1" />
+    <line x1="753" y1="172" x2="790" y2="172" stroke="#657781" stroke-width="1" />
+    <text x="640" y="84" font-size="15" fill="#263746" text-anchor="start" font-weight="700">Re = 7200</text>
+    <path id="u14re_meanwater" d="M290 139 L500 139" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14re_v)" />
+    <text x="440" y="201" font-size="12" fill="#263746" text-anchor="middle">Strelica prikazuje srednju brzinu; fluktuacije nisu nacrtane.</text>
+    <rect id="u14re_p2top" x="150" y="291" width="600" height="9" rx="0" fill="url(#u14re_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u14re_p2bottom" x="150" y="366" width="600" height="9" rx="0" fill="url(#u14re_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <defs />
+    <rect id="u14re_p2fluid" x="150" y="300" width="600" height="66" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
+    <text x="45" y="324" font-size="15" fill="#263746" text-anchor="start" font-weight="700">ULJE</text>
+    <text x="170" y="278" font-size="14" fill="#263746" text-anchor="start">v<tspan baseline-shift="sub" font-size="0.75em">B</tspan> = 0,30 m/s</text>
+    <text x="390" y="278" font-size="13" fill="#263746" text-anchor="start">ν = 4,00 · 10⁻⁵ m²/s</text>
+    <line x1="780" y1="300" x2="790" y2="300" stroke="#657781" stroke-width="1.2" />
+    <line x1="780" y1="366" x2="790" y2="366" stroke="#657781" stroke-width="1.2" />
+    <path id="u14re_p2D" d="M785 300 L785 366" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14re_dim)" marker-end="url(#u14re_dim)" />
+    <text x="795" y="337" font-size="12" fill="#263746" text-anchor="start">D = 6 mm</text>
+    <line x1="753" y1="300" x2="790" y2="300" stroke="#657781" stroke-width="1" />
+    <line x1="753" y1="366" x2="790" y2="366" stroke="#657781" stroke-width="1" />
+    <text x="640" y="278" font-size="15" fill="#263746" text-anchor="start" font-weight="700">Re = 45</text>
+    <polyline id="u14re_oilprofile" points="340.000000,300.000000 344.937500,300.825000 349.750000,301.650000 354.437500,302.475000 359.000000,303.300000 363.437500,304.125000 367.750000,304.950000 371.937500,305.775000 376.000000,306.600000 379.937500,307.425000 383.750000,308.250000 387.437500,309.075000 391.000000,309.900000 394.437500,310.725000 397.750000,311.550000 400.937500,312.375000 404.000000,313.200000 406.937500,314.025000 409.750000,314.850000 412.437500,315.675000 415.000000,316.500000 417.437500,317.325000 419.750000,318.150000 421.937500,318.975000 424.000000,319.800000 425.937500,320.625000 427.750000,321.450000 429.437500,322.275000 431.000000,323.100000 432.437500,323.925000 433.750000,324.750000 434.937500,325.575000 436.000000,326.400000 436.937500,327.225000 437.750000,328.050000 438.437500,328.875000 439.000000,329.700000 439.437500,330.525000 439.750000,331.350000 439.937500,332.175000 440.000000,333.000000 439.937500,333.825000 439.750000,334.650000 439.437500,335.475000 439.000000,336.300000 438.437500,337.125000 437.750000,337.950000 436.937500,338.775000 436.000000,339.600000 434.937500,340.425000 433.750000,341.250000 432.437500,342.075000 431.000000,342.900000 429.437500,343.725000 427.750000,344.550000 425.937500,345.375000 424.000000,346.200000 421.937500,347.025000 419.750000,347.850000 417.437500,348.675000 415.000000,349.500000 412.437500,350.325000 409.750000,351.150000 406.937500,351.975000 404.000000,352.800000 400.937500,353.625000 397.750000,354.450000 394.437500,355.275000 391.000000,356.100000 387.437500,356.925000 383.750000,357.750000 379.937500,358.575000 376.000000,359.400000 371.937500,360.225000 367.750000,361.050000 363.437500,361.875000 359.000000,362.700000 354.437500,363.525000 349.750000,364.350000 344.937500,365.175000 340.000000,366.000000" fill="none" stroke="#356b83" stroke-width="2" />
+    <path id="u14re_oilvelocity0" d="M340 306 L373.0578512396694 306" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14re_v)" />
+    <path id="u14re_oilvelocity1" d="M340 315 L410.24793388429754 315" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14re_v)" />
+    <path id="u14re_oilvelocity2" d="M340 333 L440.0 333" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14re_v)" />
+    <path id="u14re_oilvelocity3" d="M340 351 L410.24793388429754 351" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14re_v)" />
+    <path id="u14re_oilvelocity4" d="M340 360 L373.0578512396694 360" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14re_v)" />
+    <line x1="340" y1="300" x2="340" y2="366" stroke="#657781" stroke-width="1" stroke-dasharray="3 3" />
+    <text x="490" y="328" font-size="13" fill="#263746" text-anchor="start">u(r) = 2v<tspan baseline-shift="sub" font-size="0.75em">B</tspan> [1 − (r/R)²]</text>
+    <text x="490" y="349" font-size="12" fill="#263746" text-anchor="start">R = D/2; u(±R) = 0</text>
+    <text x="440" y="395" font-size="12" fill="#263746" text-anchor="middle">Parabolični profil brzine; strelice su lokalne brzine, a ne strujnice.</text>
+    <text x="440" y="440" font-size="12" fill="#263746" text-anchor="middle">Usporedni crteži imaju isti unutarnji promjer. Debljina stijenke je shematska.</text>
+  </g>
 </svg>

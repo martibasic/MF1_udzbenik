@@ -1,108 +1,114 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u13net_title u13net_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-<title id="u13net_title">Cjevovodna mreža: protoci i gubitci</title><desc id="u13net_desc">Spremnik A spojen je otvorenim dnom s dovodom do čvora C, gdje se voda dijeli u dvije paralelne grane i ponovno spaja u D. Odvod završava uronjenim otvorom u spremniku B. U svim dijelovima je isti povezani fluid bez zatvorenih pregrada. Kota H spaja dvije slobodne površine. Isprekidana energijska crta shematski povezuje A i B; pad između C i D jednak je po oba puta. Promjeri su shematski, bez brojčanog mjerila.</desc>
-<defs>
-<linearGradient id="u13net_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u13net_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u13net_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u13net_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u13net_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u13net_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u13net_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="980" height="560" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
-Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
-Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
-<defs>
-<marker id="u13net_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
-<marker id="u13net_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
-<marker id="u13net_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u13net_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
-</defs>
-<text x="45" y="49" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Mreža cjevovoda: dionice, čvorovi, otpori</text>
-<line x1="601" y1="34" x2="601" y2="532" stroke="#cfdce6" stroke-width="1" stroke-dasharray="4 5"/>
-<defs><linearGradient id="u13net_networkField" gradientUnits="userSpaceOnUse" x1="0" y1="121" x2="0" y2="407"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u13net_networkouter" d="M88 195 V273 H200 Q315 207 430 273 H515 V387 M200 273 Q315 365 430 273" fill="none" stroke="#3a4a56" stroke-width="29" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M88 195 V273 H200 Q315 207 430 273 H515 V387 M200 273 Q315 365 430 273" fill="none" stroke="url(#u13net_hatch)" stroke-width="27" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u13net_networkfluid" d="M88 195 V273 H200 Q315 207 430 273 H515 V387 M200 273 Q315 365 430 273" fill="none" stroke="url(#u13net_networkField)" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u13net_tankAfluid" d="M50 121 H126 V210 H50 Z" fill="url(#u13net_networkField)" stroke="none" stroke-width="1.8" />
-<path id="u13net_tankAouter0" d="M50 96 V210 H78" fill="none" stroke="#3a4a56" stroke-width="8" />
-<path d="M50 96 V210 H78" fill="none" stroke="url(#u13net_hatch)" stroke-width="6" />
-<path id="u13net_tankAouter1" d="M98 210 H126 V96" fill="none" stroke="#3a4a56" stroke-width="8" />
-<path d="M98 210 H126 V96" fill="none" stroke="url(#u13net_hatch)" stroke-width="6" />
-<path d="M50 121 H126 V210 H50 Z" fill="url(#u13net_networkField)" stroke="none" stroke-width="1.8" />
-<path id="u13net_tankAwall0" d="M50 96 V210 H78" fill="none" stroke="#3a4a56" stroke-width="1.3" />
-<path id="u13net_tankAwall1" d="M98 210 H126 V96" fill="none" stroke="#3a4a56" stroke-width="1.3" />
-<line id="u13net_surfaceA" x1="50" y1="121" x2="126" y2="121" stroke="#1565c0" stroke-width="1.5"/>
-<text x="90" y="110" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">A</text>
-<rect id="u13net_tankBfluid" x="472" y="340" width="86" height="67" rx="0" fill="url(#u13net_networkField)" stroke="none" stroke-width="1.2"/>
-<path id="u13net_tankBouter" d="M472 319 V407 H558 V319" fill="none" stroke="#3a4a56" stroke-width="8" />
-<path d="M472 319 V407 H558 V319" fill="none" stroke="url(#u13net_hatch)" stroke-width="6" />
-<path id="u13net_tankBwall" d="M472 319 V407 H558 V319" fill="none" stroke="#3a4a56" stroke-width="1.3" />
-<line id="u13net_surfaceBleft" x1="472" y1="340" x2="505" y2="340" stroke="#1565c0" stroke-width="1.5"/>
-<line id="u13net_surfaceBright" x1="525" y1="340" x2="558" y2="340" stroke="#1565c0" stroke-width="1.5"/>
-<rect id="u13net_outletWall501" x="501" y="320" width="4" height="67" rx="0" fill="url(#u13net_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u13net_outletWall525" x="525" y="320" width="4" height="67" rx="0" fill="url(#u13net_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u13net_outletWater" x="505" y="320" width="20" height="67" rx="0" fill="url(#u13net_networkField)" stroke="none" stroke-width="1.2"/>
-<text x="539" y="332" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">B</text>
-<circle id="u13net_nodeC" cx="200" cy="273" r="3" fill="#c0392b"/>
-<text x="200" y="304" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">C</text>
-<circle id="u13net_nodeD" cx="430" cy="273" r="3" fill="#c0392b"/>
-<text x="430" y="245" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">D</text>
-<path id="u13net_feedVelocity" d="M112 273 L174 273" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13net_v)"/>
-<text x="143" y="249" font-size="12" fill="#1e8449" text-anchor="middle">Q</text>
-<path id="u13net_drainVelocity" d="M448 273 L487 273" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13net_v)"/>
-<text x="467" y="249" font-size="12" fill="#1e8449" text-anchor="middle">Q</text>
-<path id="u13net_branchVelocity1" d="M285 240 L343 240" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13net_v)"/>
-<text x="315" y="214" font-size="12" fill="#1e8449" text-anchor="middle">Q₁</text>
-<path id="u13net_branchVelocity2" d="M285 319 L343 319" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13net_v)"/>
-<text x="315" y="353" font-size="12" fill="#1e8449" text-anchor="middle">Q₂</text>
-<line x1="88" y1="358" x2="88" y2="368" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="200" y1="358" x2="200" y2="368" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u13net_feedLength" d="M88 363 L200 363" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13net_dim)" marker-end="url(#u13net_dim)"/>
-<text x="144.0" y="380" font-size="11" fill="#b7600c" text-anchor="middle">dovod</text>
-<line x1="20" y1="121" x2="30" y2="121" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="20" y1="340" x2="30" y2="340" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u13net_H" d="M25 121 L25 340" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13net_dim)" marker-end="url(#u13net_dim)"/>
-<text x="35" y="234" font-size="13" fill="#b7600c" text-anchor="start">H</text>
-<line x1="25" y1="121" x2="44" y2="121" stroke="#b7600c" stroke-width="1"/>
-<line x1="25" y1="340" x2="461" y2="340" stroke="#b7600c" stroke-width="1" stroke-dasharray="4 4"/>
-<path id="u13net_egl" d="M90.000000 121.000000 L200.000000 187.000000 L430.000000 301.000000 L546.000000 340.000000" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="6 4"/>
-<text x="212" y="167" font-size="12" fill="#c0392b" text-anchor="start">EGL: shema ukupne energije</text>
-<text x="282" y="193" font-size="11" fill="#c0392b" text-anchor="start">hCD po oba puta jednako</text>
-<text x="43" y="446" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">H = hAC + hCD + hDB</text>
-<text x="43" y="471" font-size="12" fill="#1a2530" text-anchor="start">C i D: zajednički čvorovi; grane imaju isti pad energije.</text>
-<text x="43" y="494" font-size="12" fill="#1a2530" text-anchor="start">Q = Q₁ + Q₂; kroz dovod i odvod prolazi isti ukupni Q.</text>
-<text x="43" y="522" font-size="11" fill="#1a2530" text-anchor="start">Shematski promjeri i EGL; kota H spaja slobodne površine.</text>
-<rect x="621" y="49" width="331" height="291" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="621" y="49" width="331" height="33" rx="9" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="786" y="71" font-size="15" fill="#1565c0" text-anchor="middle" font-weight="700">Ključne jednadžbe poglavlja</text>
-<text x="786" y="101" font-size="11" fill="#1565c0" text-anchor="middle">1. Brzina i kontinuitet</text>
-<text x="786" y="123" font-size="15" fill="#1a2530" text-anchor="middle" font-weight="700">v = Q/A = 4Q/(πD²)</text>
-<text x="786" y="140" font-size="10" fill="#1a2530" text-anchor="middle">isti protok samo u seriji</text>
-<text x="786" y="160" font-size="11" fill="#1565c0" text-anchor="middle">2. Režim i trenje</text>
-<text x="786" y="182" font-size="15" fill="#1a2530" text-anchor="middle" font-weight="700">Re = vD/ν; λ = λ(Re, ε/D)</text>
-<text x="786" y="199" font-size="10" fill="#1a2530" text-anchor="middle">Darcyjev faktor; prijelaz traži oprez</text>
-<text x="786" y="219" font-size="11" fill="#1565c0" text-anchor="middle">3. Gubitak dionice</text>
-<text x="786" y="241" font-size="15" fill="#1a2530" text-anchor="middle" font-weight="700">hw = (λ L/D + Σξ) v²/(2g)</text>
-<text x="786" y="258" font-size="10" fill="#1a2530" text-anchor="middle">ista referentna brzina za sve ξ</text>
-<text x="786" y="278" font-size="11" fill="#1565c0" text-anchor="middle">4. Kvadratni model otpora</text>
-<text x="786" y="300" font-size="15" fill="#1a2530" text-anchor="middle" font-weight="700">hi = Ri Qi²</text>
-<text x="786" y="317" font-size="10" fill="#1a2530" text-anchor="middle">Ri približno stalan u promatranom rasponu</text>
-<rect x="621" y="360" width="331" height="171" rx="10" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.65" />
-<rect x="621" y="360" width="331" height="31" rx="9" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="786" y="382" font-size="15" fill="#1e8449" text-anchor="middle" font-weight="700">Pravila spajanja dionica</text>
-<text x="702" y="414" font-size="14" fill="#1a2530" text-anchor="middle" font-weight="700">Serija</text>
-<text x="867" y="414" font-size="14" fill="#1a2530" text-anchor="middle" font-weight="700">Paralela</text>
-<line x1="785" y1="400" x2="785" y2="505" stroke="#cfdce6" stroke-width="1" stroke-dasharray="3 3"/>
-<path d="M646 439 L758 439" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13net_v)"/>
-<text x="702.0" y="430" font-size="12" fill="#1e8449" text-anchor="middle">isti Q</text>
-<text x="702" y="474" font-size="14" fill="#1a2530" text-anchor="middle">hw = h₁ + h₂</text>
-<text x="702" y="497" font-size="13" fill="#1a2530" text-anchor="middle">Req = R₁ + R₂</text>
-<text x="867" y="444" font-size="14" fill="#1a2530" text-anchor="middle">isti hAB</text>
-<text x="867" y="474" font-size="14" fill="#1a2530" text-anchor="middle">Q = Q₁ + Q₂</text>
-<text x="867" y="497" font-size="11" fill="#1a2530" text-anchor="middle">1/√Req = 1/√R₁ + 1/√R₂</text>
-<text x="786" y="520" font-size="10" fill="#1a2530" text-anchor="middle">Otpori i njihove jedinice moraju pripadati istom modelu.</text>
-</g>
+  <title id="u13net_title">Cjevovodna mreža: protoci i gubitci</title>
+  <desc id="u13net_desc">Spremnik A spojen je otvorenim dnom s dovodom do čvora C, gdje se voda dijeli u dvije paralelne grane i ponovno spaja u D. Odvod završava uronjenim otvorom u spremniku B. U svim dijelovima je isti povezani fluid bez zatvorenih pregrada. Kota H spaja dvije slobodne površine. Isprekidana energijska crta shematski povezuje A i B; pad između C i D jednak je po oba puta. Promjeri su shematski, bez brojčanog mjerila.</desc>
+  <defs>
+    <pattern id="u13net_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u13net_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u13net_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u13net_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs>
+      <marker id="u13net_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u13net_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u13net_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u13net_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
+      </marker>
+    </defs>
+    <text x="45" y="49" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Mreža cjevovoda: dionice, čvorovi, otpori</text>
+    <line x1="601" y1="34" x2="601" y2="532" stroke="#c5cdd3" stroke-width="1" stroke-dasharray="4 5" />
+    <defs />
+    <path id="u13net_networkouter" d="M88 195 V273 H200 Q315 207 430 273 H515 V387 M200 273 Q315 365 430 273" fill="none" stroke="#3a4a56" stroke-width="29" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M88 195 V273 H200 Q315 207 430 273 H515 V387 M200 273 Q315 365 430 273" fill="none" stroke="url(#u13net_hatch)" stroke-width="27" stroke-linecap="butt" stroke-linejoin="round" />
+    <path id="u13net_networkfluid" d="M88 195 V273 H200 Q315 207 430 273 H515 V387 M200 273 Q315 365 430 273" fill="none" stroke="#dcebf1" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round" />
+    <path id="u13net_tankAfluid" d="M50 121 H126 V210 H50 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+    <path id="u13net_tankAouter0" d="M50 96 V210 H78" fill="none" stroke="#3a4a56" stroke-width="8" />
+    <path d="M50 96 V210 H78" fill="none" stroke="url(#u13net_hatch)" stroke-width="6" />
+    <path id="u13net_tankAouter1" d="M98 210 H126 V96" fill="none" stroke="#3a4a56" stroke-width="8" />
+    <path d="M98 210 H126 V96" fill="none" stroke="url(#u13net_hatch)" stroke-width="6" />
+    <path d="M50 121 H126 V210 H50 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+    <path id="u13net_tankAwall0" d="M50 96 V210 H78" fill="none" stroke="#3a4a56" stroke-width="1.3" />
+    <path id="u13net_tankAwall1" d="M98 210 H126 V96" fill="none" stroke="#3a4a56" stroke-width="1.3" />
+    <line id="u13net_surfaceA" x1="50" y1="121" x2="126" y2="121" stroke="#356b83" stroke-width="1.5" />
+    <text x="90" y="110" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">A</text>
+    <rect id="u13net_tankBfluid" x="472" y="340" width="86" height="67" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <path id="u13net_tankBouter" d="M472 319 V407 H558 V319" fill="none" stroke="#3a4a56" stroke-width="8" />
+    <path d="M472 319 V407 H558 V319" fill="none" stroke="url(#u13net_hatch)" stroke-width="6" />
+    <path id="u13net_tankBwall" d="M472 319 V407 H558 V319" fill="none" stroke="#3a4a56" stroke-width="1.3" />
+    <line id="u13net_surfaceBleft" x1="472" y1="340" x2="505" y2="340" stroke="#356b83" stroke-width="1.5" />
+    <line id="u13net_surfaceBright" x1="525" y1="340" x2="558" y2="340" stroke="#356b83" stroke-width="1.5" />
+    <rect id="u13net_outletWall501" x="501" y="320" width="4" height="67" rx="0" fill="url(#u13net_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u13net_outletWall525" x="525" y="320" width="4" height="67" rx="0" fill="url(#u13net_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u13net_outletWater" x="505" y="320" width="20" height="67" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <text x="539" y="332" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">B</text>
+    <circle id="u13net_nodeC" cx="200" cy="273" r="3" fill="#356b83" />
+    <text x="200" y="304" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">C</text>
+    <circle id="u13net_nodeD" cx="430" cy="273" r="3" fill="#356b83" />
+    <text x="430" y="245" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">D</text>
+    <path id="u13net_feedVelocity" d="M112 273 L174 273" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13net_v)" />
+    <text x="143" y="249" font-size="12" fill="#263746" text-anchor="middle">Q</text>
+    <path id="u13net_drainVelocity" d="M448 273 L487 273" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13net_v)" />
+    <text x="467" y="249" font-size="12" fill="#263746" text-anchor="middle">Q</text>
+    <path id="u13net_branchVelocity1" d="M285 240 L343 240" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13net_v)" />
+    <text x="315" y="214" font-size="12" fill="#263746" text-anchor="middle">Q₁</text>
+    <path id="u13net_branchVelocity2" d="M285 319 L343 319" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13net_v)" />
+    <text x="315" y="353" font-size="12" fill="#263746" text-anchor="middle">Q₂</text>
+    <line x1="88" y1="358" x2="88" y2="368" stroke="#657781" stroke-width="1.2" />
+    <line x1="200" y1="358" x2="200" y2="368" stroke="#657781" stroke-width="1.2" />
+    <path id="u13net_feedLength" d="M88 363 L200 363" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13net_dim)" marker-end="url(#u13net_dim)" />
+    <text x="144.0" y="380" font-size="11" fill="#263746" text-anchor="middle">dovod</text>
+    <line x1="20" y1="121" x2="30" y2="121" stroke="#657781" stroke-width="1.2" />
+    <line x1="20" y1="340" x2="30" y2="340" stroke="#657781" stroke-width="1.2" />
+    <path id="u13net_H" d="M25 121 L25 340" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13net_dim)" marker-end="url(#u13net_dim)" />
+    <text x="35" y="234" font-size="13" fill="#263746" text-anchor="start">H</text>
+    <line x1="25" y1="121" x2="44" y2="121" stroke="#657781" stroke-width="1" />
+    <line x1="25" y1="340" x2="461" y2="340" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
+    <path id="u13net_egl" d="M90.000000 121.000000 L200.000000 187.000000 L430.000000 301.000000 L546.000000 340.000000" fill="none" stroke="#356b83" stroke-width="1.8" />
+    <text x="212" y="167" font-size="12" fill="#263746" text-anchor="start">EGL: shema ukupne energije</text>
+    <text x="282" y="193" font-size="11" fill="#263746" text-anchor="start">hCD po oba puta jednako</text>
+    <text x="43" y="446" font-size="14" fill="#263746" text-anchor="start" font-weight="700">H = hAC + hCD + hDB</text>
+    <text x="43" y="471" font-size="12" fill="#263746" text-anchor="start">C i D: zajednički čvorovi; grane imaju isti pad energije.</text>
+    <text x="43" y="494" font-size="12" fill="#263746" text-anchor="start">Q = Q₁ + Q₂; kroz dovod i odvod prolazi isti ukupni Q.</text>
+    <text x="43" y="522" font-size="11" fill="#263746" text-anchor="start">Shematski promjeri i EGL; kota H spaja slobodne površine.</text>
+    <text x="786" y="71" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">Ključne jednadžbe poglavlja</text>
+    <text x="786" y="101" font-size="11" fill="#263746" text-anchor="middle">1. Brzina i kontinuitet</text>
+    <text x="786" y="123" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">v = Q/A = 4Q/(πD²)</text>
+    <text x="786" y="140" font-size="10" fill="#263746" text-anchor="middle">isti protok samo u seriji</text>
+    <text x="786" y="160" font-size="11" fill="#263746" text-anchor="middle">2. Režim i trenje</text>
+    <text x="786" y="182" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">Re = vD/ν; λ = λ(Re, ε/D)</text>
+    <text x="786" y="199" font-size="10" fill="#263746" text-anchor="middle">Darcyjev faktor; prijelaz traži oprez</text>
+    <text x="786" y="219" font-size="11" fill="#263746" text-anchor="middle">3. Gubitak dionice</text>
+    <text x="786" y="241" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">hw = (λ L/D + Σξ) v²/(2g)</text>
+    <text x="786" y="258" font-size="10" fill="#263746" text-anchor="middle">ista referentna brzina za sve ξ</text>
+    <text x="786" y="278" font-size="11" fill="#263746" text-anchor="middle">4. Kvadratni model otpora</text>
+    <text x="786" y="300" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">hi = Ri Qi²</text>
+    <text x="786" y="317" font-size="10" fill="#263746" text-anchor="middle">Ri približno stalan u promatranom rasponu</text>
+    <text x="786" y="382" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">Pravila spajanja dionica</text>
+    <text x="702" y="414" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Serija</text>
+    <text x="867" y="414" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Paralela</text>
+    <line x1="785" y1="400" x2="785" y2="505" stroke="#c5cdd3" stroke-width="1" stroke-dasharray="3 3" />
+    <path d="M646 439 L758 439" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13net_v)" />
+    <text x="702.0" y="430" font-size="12" fill="#263746" text-anchor="middle">isti Q</text>
+    <text x="702" y="474" font-size="14" fill="#263746" text-anchor="middle">hw = h₁ + h₂</text>
+    <text x="702" y="497" font-size="13" fill="#263746" text-anchor="middle">Req = R₁ + R₂</text>
+    <text x="867" y="444" font-size="14" fill="#263746" text-anchor="middle">isti hAB</text>
+    <text x="867" y="474" font-size="14" fill="#263746" text-anchor="middle">Q = Q₁ + Q₂</text>
+    <text x="867" y="497" font-size="11" fill="#263746" text-anchor="middle">1/√Req = 1/√R₁ + 1/√R₂</text>
+    <text x="786" y="520" font-size="10" fill="#263746" text-anchor="middle">Otpori i njihove jedinice moraju pripadati istom modelu.</text>
+  </g>
 </svg>

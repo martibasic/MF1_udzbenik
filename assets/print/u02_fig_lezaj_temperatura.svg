@@ -1,110 +1,111 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" role="img" aria-labelledby="u02flt_title u02flt_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:920px;height:auto;">
-<title id="u02flt_title">Temperatura i viskozni otpor koncentričnog ležaja</title><desc id="u02flt_desc">Dva jednaka razmotana uljna procjepa s mirnom čahurom i brzinom vratila udesno. Profili brzine su isti, sile ulja na vratilo suprotne su gibanju. Poprečni presjek označuje promjer vratila, smjer vrtnje i suprotan moment otpora. Snage iz punog računa su 579 i 57,9 W.</desc>
-<defs>
-<linearGradient id="u02flt_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u02flt_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u02flt_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u02flt_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u02flt_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u02flt_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u02flt_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="920" height="540" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
-Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
-Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
-<defs>
-<marker id="u02flt_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
-<marker id="u02flt_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
-<marker id="u02flt_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u02flt_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
-</defs>
-<defs><linearGradient id="u02flt_metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient></defs>
-<!-- Fluidna ispuna nije mapa tlaka, brzine ili temperature. Debljine stijenki uvećane su radi čitljivosti. -->
-<text x="338" y="31" font-size="16" fill="#1a2530" text-anchor="middle" font-weight="700">Couetteov model tankog koncentričnog procjepa</text>
-<text x="338" y="53" font-size="12" fill="#1565c0" text-anchor="middle">Ista geometrija i brzina; zadana viskoznost razlikuje se 10 puta.</text>
-<rect x="53" y="75" width="259" height="25" rx="5" fill="white" stroke="#c0392b" stroke-width="1" stroke-opacity="0.55" />
-<text x="183" y="92" font-size="12" fill="#c0392b" text-anchor="middle" font-weight="700">0 °C: μ₁ = 0,40 Pa·s</text>
-<rect id="u02flt_b0fixedbase" x="53" y="114" width="240" height="28" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<rect id="u02flt_b0fixed" x="53" y="114" width="240" height="28" rx="0" fill="url(#u02flt_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<text x="173" y="131" font-size="11" fill="#1565c0" text-anchor="middle">čahura: u = 0</text>
-<defs><linearGradient id="u02flt_b0field" gradientUnits="userSpaceOnUse" x1="0" y1="142" x2="0" y2="214"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
-<rect id="u02flt_b0fluid" x="53" y="142" width="240" height="72" rx="0" fill="url(#u02flt_b0field)" stroke="none" stroke-width="1.2"/>
-<rect id="u02flt_b0shaft" x="53" y="214" width="240" height="34" rx="0" fill="url(#u02flt_metal)" stroke="#3a4a56" stroke-width="1.2"/>
-<line id="u02flt_b0profile" x1="75" y1="142" x2="225" y2="214" stroke="#1565c0" stroke-width="1.8"/>
-<path id="u02flt_b0velocity1" d="M75 156.4 L105.0 156.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
-<path id="u02flt_b0velocity2" d="M75 170.8 L135.0 170.8" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
-<path id="u02flt_b0velocity3" d="M75 185.2 L165.0 185.2" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
-<path id="u02flt_b0velocity4" d="M75 199.6 L195.0 199.6" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
-<path id="u02flt_b0drag" d="M257 214 L199 214" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u02flt_forceMarker)"/>
-<text x="233" y="199" font-size="11" fill="#c0392b" text-anchor="middle">τ₁ ≈ 8,38 kPa</text>
-<text x="112" y="237" font-size="11" fill="white" text-anchor="middle">vratilo</text>
-<path id="u02flt_b0speed" d="M177 233 L237 233" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
-<text x="179" y="273" font-size="12" fill="#1565c0" text-anchor="middle">v ≈ 6,28 m/s</text>
-<rect x="370" y="75" width="259" height="25" rx="5" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-<text x="500" y="92" font-size="12" fill="#1e8449" text-anchor="middle" font-weight="700">90 °C: μ₂ = 0,040 Pa·s</text>
-<rect id="u02flt_b1fixedbase" x="370" y="114" width="240" height="28" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<rect id="u02flt_b1fixed" x="370" y="114" width="240" height="28" rx="0" fill="url(#u02flt_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<text x="490" y="131" font-size="11" fill="#1565c0" text-anchor="middle">čahura: u = 0</text>
-<defs><linearGradient id="u02flt_b1field" gradientUnits="userSpaceOnUse" x1="0" y1="142" x2="0" y2="214"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
-<rect id="u02flt_b1fluid" x="370" y="142" width="240" height="72" rx="0" fill="url(#u02flt_b1field)" stroke="none" stroke-width="1.2"/>
-<rect id="u02flt_b1shaft" x="370" y="214" width="240" height="34" rx="0" fill="url(#u02flt_metal)" stroke="#3a4a56" stroke-width="1.2"/>
-<line id="u02flt_b1profile" x1="392" y1="142" x2="542" y2="214" stroke="#1565c0" stroke-width="1.8"/>
-<path id="u02flt_b1velocity1" d="M392 156.4 L422.0 156.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
-<path id="u02flt_b1velocity2" d="M392 170.8 L452.0 170.8" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
-<path id="u02flt_b1velocity3" d="M392 185.2 L482.0 185.2" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
-<path id="u02flt_b1velocity4" d="M392 199.6 L512.0 199.6" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
-<path id="u02flt_b1drag" d="M574 214 L516 214" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u02flt_forceMarker)"/>
-<text x="550" y="199" font-size="11" fill="#c0392b" text-anchor="middle">τ₂ ≈ 838 Pa</text>
-<text x="429" y="237" font-size="11" fill="white" text-anchor="middle">vratilo</text>
-<path id="u02flt_b1speed" d="M494 233 L554 233" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)"/>
-<text x="496" y="273" font-size="12" fill="#1565c0" text-anchor="middle">v ≈ 6,28 m/s</text>
-<line x1="330" y1="142" x2="340" y2="142" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="330" y1="214" x2="340" y2="214" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u02flt_gap" d="M335 142 L335 214" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u02flt_dim)" marker-end="url(#u02flt_dim)"/>
-<text x="335" y="120" font-size="13" fill="#b7600c" text-anchor="middle">δ</text>
-<line x1="293" y1="142" x2="340" y2="142" stroke="#b7600c" stroke-width="1"/>
-<line x1="293" y1="214" x2="340" y2="214" stroke="#b7600c" stroke-width="1"/>
-<text x="335" y="297" font-size="12" fill="#1565c0" text-anchor="middle">δ = 0,30 mm; y od čahure prema vratilu; du/dy = v/δ</text>
-<text x="125" y="332" font-size="13" fill="#1a2530" text-anchor="middle" font-weight="700">Poprečni presjek</text>
-<circle id="u02flt_bushing" cx="123" cy="410" r="57" fill="url(#u02flt_hatch)" stroke="#3a4a56" stroke-width="1.4"/>
-<circle id="u02flt_annulus" cx="123" cy="410" r="47" fill="url(#u02flt_oil)" stroke="#3a4a56" stroke-width="1.4"/>
-<circle id="u02flt_shaftSection" cx="123" cy="410" r="40" fill="url(#u02flt_metal)" stroke="#3a4a56" stroke-width="1.4"/>
-<path id="u02flt_rotation" d="M97.60628663 392.21913047 L98.38253902 391.15907075 L99.20301305 390.13285597 L100.06623484 389.14232957 L100.97065375 388.18927090 L101.91464513 387.27539197 L102.89651323 386.40233445 L103.91449426 385.57166664 L104.96675959 384.78488072 L106.05141897 384.04339003 L107.16652397 383.34852656 L108.31007146 382.70153851 L109.48000724 382.10358812 L110.67422969 381.55574950 L111.89059356 381.05900678 L113.12691384 380.61425227 L114.38096966 380.22228491 L115.65050829 379.88380881 L116.93324920 379.59943200 L118.22688812 379.36966531 L119.52910124 379.19492149 L120.83754931 379.07551444 L122.14988191 379.01165866 L123.46374162 379.00346884 L124.77676828 379.05095972 L126.08660324 379.15404596 L127.39089358 379.31254241 L128.68729633 379.52616433 L129.97348268 379.79452799 L131.24714221 380.11715132 L132.50598697 380.49345476 L133.74775563 380.92276236 L134.97021753 381.40430291 L136.17117670 381.93721140 L137.34847581 382.52053054 L138.50000000 383.15321248 L139.62368073 383.83412071 L140.71749948 384.56203207 L141.77949136 385.33563898 L142.80774866 386.15355177 L143.80042427 387.01430118 L144.75573499 387.91634099 L145.67196475 388.85805084 L146.54746768 389.83773907 L147.38067106 390.85364582 L148.17007818 391.90394616 L148.91427097 392.98675339 L149.61191260 394.10012240 L150.26174987 395.24205319 L150.86261544 396.41049445 L151.41342993 397.60334725 L151.91320390 398.81846880 L152.36103958 400.05367631 L152.75613249 401.30675093 L153.09777290 402.57544169 L153.38534712 403.85746956 L153.61833856 405.15053158 L153.79632868 406.45230496 L153.91899774 407.76045125 L153.98612540 409.07262055 L153.99759107 410.38645575 L153.95337414 411.69959675 L153.85355406 413.00968466 L153.69831013 414.31436613 L153.48792123 415.61129747 L153.22276528 416.89814895 L152.90331860 418.17260893 L152.53015503 419.43238802 L152.10394491 420.67522322 L151.62545385 421.89888196 L151.09554140 423.10116611" fill="none" stroke="#1e8449" stroke-width="2" marker-end="url(#u02flt_reactionMarker)"/>
-<path id="u02flt_resistance" d="M185.53523731 439.16066006 L186.13915770 437.82888365 L186.71471986 436.48460823 L187.26166530 435.12843754 L187.77974835 433.76098071 L188.26873632 432.38285190 L188.72840959 430.99467010 L189.15856171 429.59705878 L189.55899947 428.19064567 L189.92954302 426.77606245 L190.27002594 425.35394444 L190.58029531 423.92493039 L190.86021176 422.48966212 L191.10964958 421.04878426 L191.32849674 419.60294397 L191.51665495 418.15279062 L191.67403969 416.69897554 L191.80058027 415.24215170 L191.89621987 413.78297340 L191.96091553 412.32209603 L191.99463818 410.86017571 L191.99737269 409.39786905 L191.96911783 407.93583283 L191.90988628 406.47472371 L191.81970465 405.01519793 L191.69861345 403.55791102 L191.54666705 402.10351749 L191.36393371 400.65267058 L191.15049550 399.20602191 L190.90644828 397.76422124 L190.63190166 396.32791612 L190.32697895 394.89775166 L189.99181711 393.47437020 L189.62656667 392.05841104 L189.23139167 390.65051014 L188.80646960 389.25129983 L188.35199132 387.86140857 L187.86816095 386.48146060 L187.35519578 385.11207571 L186.81332623 383.75386894 L186.24279566 382.40745032 L185.64386031 381.07342458 L185.01678919 379.75239087 L184.36186396 378.44494253 L183.67937874 377.15166678 L182.96964009 375.87314448 L182.23296676 374.60994986 L181.46968963 373.36265027 L180.68015151 372.13180593 L179.86470701 370.91796965 L179.02372239 369.72168662 L178.15757537 368.54349412 L177.26665495 367.38392133 L176.35136129 366.24348907 L175.41210548 365.12270954 L174.44930938 364.02208612 L173.46340541 362.94211316 L172.45483639 361.88327570 L171.42405530 360.84604931 L170.37152510 359.83089985 L169.29771853 358.83828327 L168.20311787 357.86864538 L167.08821476 356.92242169 L165.95350993 356.00003718 L164.79951303 355.10190613 L163.62674235 354.22843192 L162.43572465 353.38000687 L161.22699484 352.55701204 L160.00109582 351.75981707 L158.75857819 350.98878000 L157.50000000 350.24424714" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#u02flt_forceMarker)"/>
-<text x="91" y="408" font-size="15" fill="#1e8449" text-anchor="start">ω</text>
-<text x="194" y="368" font-size="11" fill="#c0392b" text-anchor="middle">Motpor</text>
-<line x1="83" y1="476" x2="83" y2="486" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="163" y1="476" x2="163" y2="486" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u02flt_shaftDiameter" d="M83 481 L163 481" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u02flt_dim)" marker-end="url(#u02flt_dim)"/>
-<text x="123.0" y="498" font-size="11" fill="#b7600c" text-anchor="middle">D = 50 mm</text>
-<line x1="83" y1="410" x2="83" y2="485" stroke="#b7600c" stroke-width="1"/>
-<line x1="163" y1="410" x2="163" y2="485" stroke="#b7600c" stroke-width="1"/>
-<rect x="273" y="331" width="365" height="172" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<text x="285" y="351" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">Zajednički podatci</text>
-<text x="285" y="374" font-size="12" fill="#1a2530" text-anchor="start">D = 50 mm; L = 70 mm; δ = 0,30 mm</text>
-<text x="285" y="393" font-size="12" fill="#1a2530" text-anchor="start">n = 2400 min⁻¹; ω ≈ 251,3 rad/s</text>
-<text x="285" y="412" font-size="12" fill="#1a2530" text-anchor="start">A = πDL; M = (τA)D/2; P = Mω</text>
-<text x="285" y="431" font-size="12" fill="#1a2530" text-anchor="start">Procjep je na skici uvećan.</text>
-<text x="285" y="450" font-size="12" fill="#1a2530" text-anchor="start">Vektori sila nisu u zajedničkom mjerilu.</text>
-<rect x="676" y="39" width="218" height="384" rx="9" fill="white" stroke="#cbdce9" stroke-width="1" stroke-opacity="0.65" />
-<rect x="676" y="39" width="218" height="28" rx="7" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="785.0" y="58" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">Usporedba rezultata</text>
-<text x="785" y="110" font-size="12" fill="#1565c0" text-anchor="middle">Naprezanje</text>
-<text x="731" y="140" font-size="14" fill="#c0392b" text-anchor="middle" font-weight="700">8,38 kPa</text>
-<text x="840" y="140" font-size="14" fill="#1e8449" text-anchor="middle" font-weight="700">838 Pa</text>
-<text x="785" y="185" font-size="12" fill="#1565c0" text-anchor="middle">Sila ulja</text>
-<text x="731" y="215" font-size="14" fill="#c0392b" text-anchor="middle" font-weight="700">92,1 N</text>
-<text x="840" y="215" font-size="14" fill="#1e8449" text-anchor="middle" font-weight="700">9,21 N</text>
-<text x="785" y="260" font-size="12" fill="#1565c0" text-anchor="middle">Moment otpora</text>
-<text x="731" y="290" font-size="14" fill="#c0392b" text-anchor="middle" font-weight="700">2,30 N·m</text>
-<text x="840" y="290" font-size="14" fill="#1e8449" text-anchor="middle" font-weight="700">0,230 N·m</text>
-<text x="785" y="335" font-size="12" fill="#1565c0" text-anchor="middle">Snaga</text>
-<text x="731" y="365" font-size="14" fill="#c0392b" text-anchor="middle" font-weight="700">579 W</text>
-<text x="840" y="365" font-size="14" fill="#1e8449" text-anchor="middle" font-weight="700">57,9 W</text>
-<rect x="676" y="440" width="218" height="63" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-<text x="688" y="460" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">P₁/P₂ = μ₁/μ₂ = 10</text>
-<text x="688" y="483" font-size="12" fill="#1a2530" text-anchor="start">Račun bez ranog zaokruživanja.</text>
-</g>
+  <title id="u02flt_title">Temperatura i viskozni otpor koncentričnog ležaja</title>
+  <desc id="u02flt_desc">Dva jednaka razmotana uljna procjepa s mirnom čahurom i brzinom vratila udesno. Profili brzine su isti, sile ulja na vratilo suprotne su gibanju. Poprečni presjek označuje promjer vratila, smjer vrtnje i suprotan moment otpora. Snage iz punog računa su 579 i 57,9 W.</desc>
+  <defs>
+    <pattern id="u02flt_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u02flt_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u02flt_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u02flt_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs>
+      <marker id="u02flt_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u02flt_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u02flt_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u02flt_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
+      </marker>
+    </defs>
+    <defs />
+    <text x="338" y="31" font-size="16" fill="#263746" text-anchor="middle" font-weight="700">Couetteov model tankog koncentričnog procjepa</text>
+    <text x="338" y="53" font-size="12" fill="#263746" text-anchor="middle">Ista geometrija i brzina; zadana viskoznost razlikuje se 10 puta.</text>
+    <text x="183" y="92" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">0 °C: μ₁ = 0,40 Pa·s</text>
+    <rect id="u02flt_b0fixed" x="53" y="114" width="240" height="28" rx="0" fill="url(#u02flt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <text x="173" y="131" font-size="11" fill="#263746" text-anchor="middle">čahura: u = 0</text>
+    <defs />
+    <rect id="u02flt_b0fluid" x="53" y="142" width="240" height="72" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
+    <rect id="u02flt_b0shaft" x="53" y="214" width="240" height="34" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <line id="u02flt_b0profile" x1="75" y1="142" x2="225" y2="214" stroke="#356b83" stroke-width="1.8" />
+    <path id="u02flt_b0velocity1" d="M75 156.4 L105.0 156.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)" />
+    <path id="u02flt_b0velocity2" d="M75 170.8 L135.0 170.8" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)" />
+    <path id="u02flt_b0velocity3" d="M75 185.2 L165.0 185.2" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)" />
+    <path id="u02flt_b0velocity4" d="M75 199.6 L195.0 199.6" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)" />
+    <path id="u02flt_b0drag" d="M257 214 L199 214" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02flt_forceMarker)" />
+    <text x="233" y="199" font-size="11" fill="#263746" text-anchor="middle">τ₁ ≈ 8,38 kPa</text>
+    <text x="112" y="237" font-size="11" fill="#263746" text-anchor="middle">vratilo</text>
+    <path id="u02flt_b0speed" d="M177 233 L237 233" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)" />
+    <text x="179" y="273" font-size="12" fill="#263746" text-anchor="middle">v ≈ 6,28 m/s</text>
+    <text x="500" y="92" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">90 °C: μ₂ = 0,040 Pa·s</text>
+    <rect id="u02flt_b1fixed" x="370" y="114" width="240" height="28" rx="0" fill="url(#u02flt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <text x="490" y="131" font-size="11" fill="#263746" text-anchor="middle">čahura: u = 0</text>
+    <defs />
+    <rect id="u02flt_b1fluid" x="370" y="142" width="240" height="72" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
+    <rect id="u02flt_b1shaft" x="370" y="214" width="240" height="34" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <line id="u02flt_b1profile" x1="392" y1="142" x2="542" y2="214" stroke="#356b83" stroke-width="1.8" />
+    <path id="u02flt_b1velocity1" d="M392 156.4 L422.0 156.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)" />
+    <path id="u02flt_b1velocity2" d="M392 170.8 L452.0 170.8" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)" />
+    <path id="u02flt_b1velocity3" d="M392 185.2 L482.0 185.2" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)" />
+    <path id="u02flt_b1velocity4" d="M392 199.6 L512.0 199.6" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)" />
+    <path id="u02flt_b1drag" d="M574 214 L516 214" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02flt_forceMarker)" />
+    <text x="550" y="199" font-size="11" fill="#263746" text-anchor="middle">τ₂ ≈ 838 Pa</text>
+    <text x="429" y="237" font-size="11" fill="#263746" text-anchor="middle">vratilo</text>
+    <path id="u02flt_b1speed" d="M494 233 L554 233" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02flt_axisMarker)" />
+    <text x="496" y="273" font-size="12" fill="#263746" text-anchor="middle">v ≈ 6,28 m/s</text>
+    <line x1="330" y1="142" x2="340" y2="142" stroke="#657781" stroke-width="1.2" />
+    <line x1="330" y1="214" x2="340" y2="214" stroke="#657781" stroke-width="1.2" />
+    <path id="u02flt_gap" d="M335 142 L335 214" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02flt_dim)" marker-end="url(#u02flt_dim)" />
+    <text x="335" y="120" font-size="13" fill="#263746" text-anchor="middle">δ</text>
+    <line x1="293" y1="142" x2="340" y2="142" stroke="#657781" stroke-width="1" />
+    <line x1="293" y1="214" x2="340" y2="214" stroke="#657781" stroke-width="1" />
+    <text x="335" y="297" font-size="12" fill="#263746" text-anchor="middle">δ = 0,30 mm; y od čahure prema vratilu; du/dy = v/δ</text>
+    <text x="125" y="332" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Poprečni presjek</text>
+    <circle id="u02flt_bushing" cx="123" cy="410" r="57" fill="url(#u02flt_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+    <circle id="u02flt_annulus" cx="123" cy="410" r="47" fill="#eadfc5" stroke="#3a4a56" stroke-width="1.4" />
+    <circle id="u02flt_shaftSection" cx="123" cy="410" r="40" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.4" />
+    <path id="u02flt_rotation" d="M97.60628663 392.21913047 L98.38253902 391.15907075 L99.20301305 390.13285597 L100.06623484 389.14232957 L100.97065375 388.18927090 L101.91464513 387.27539197 L102.89651323 386.40233445 L103.91449426 385.57166664 L104.96675959 384.78488072 L106.05141897 384.04339003 L107.16652397 383.34852656 L108.31007146 382.70153851 L109.48000724 382.10358812 L110.67422969 381.55574950 L111.89059356 381.05900678 L113.12691384 380.61425227 L114.38096966 380.22228491 L115.65050829 379.88380881 L116.93324920 379.59943200 L118.22688812 379.36966531 L119.52910124 379.19492149 L120.83754931 379.07551444 L122.14988191 379.01165866 L123.46374162 379.00346884 L124.77676828 379.05095972 L126.08660324 379.15404596 L127.39089358 379.31254241 L128.68729633 379.52616433 L129.97348268 379.79452799 L131.24714221 380.11715132 L132.50598697 380.49345476 L133.74775563 380.92276236 L134.97021753 381.40430291 L136.17117670 381.93721140 L137.34847581 382.52053054 L138.50000000 383.15321248 L139.62368073 383.83412071 L140.71749948 384.56203207 L141.77949136 385.33563898 L142.80774866 386.15355177 L143.80042427 387.01430118 L144.75573499 387.91634099 L145.67196475 388.85805084 L146.54746768 389.83773907 L147.38067106 390.85364582 L148.17007818 391.90394616 L148.91427097 392.98675339 L149.61191260 394.10012240 L150.26174987 395.24205319 L150.86261544 396.41049445 L151.41342993 397.60334725 L151.91320390 398.81846880 L152.36103958 400.05367631 L152.75613249 401.30675093 L153.09777290 402.57544169 L153.38534712 403.85746956 L153.61833856 405.15053158 L153.79632868 406.45230496 L153.91899774 407.76045125 L153.98612540 409.07262055 L153.99759107 410.38645575 L153.95337414 411.69959675 L153.85355406 413.00968466 L153.69831013 414.31436613 L153.48792123 415.61129747 L153.22276528 416.89814895 L152.90331860 418.17260893 L152.53015503 419.43238802 L152.10394491 420.67522322 L151.62545385 421.89888196 L151.09554140 423.10116611" fill="none" stroke="#356b83" stroke-width="2" marker-end="url(#u02flt_reactionMarker)" />
+    <path id="u02flt_resistance" d="M185.53523731 439.16066006 L186.13915770 437.82888365 L186.71471986 436.48460823 L187.26166530 435.12843754 L187.77974835 433.76098071 L188.26873632 432.38285190 L188.72840959 430.99467010 L189.15856171 429.59705878 L189.55899947 428.19064567 L189.92954302 426.77606245 L190.27002594 425.35394444 L190.58029531 423.92493039 L190.86021176 422.48966212 L191.10964958 421.04878426 L191.32849674 419.60294397 L191.51665495 418.15279062 L191.67403969 416.69897554 L191.80058027 415.24215170 L191.89621987 413.78297340 L191.96091553 412.32209603 L191.99463818 410.86017571 L191.99737269 409.39786905 L191.96911783 407.93583283 L191.90988628 406.47472371 L191.81970465 405.01519793 L191.69861345 403.55791102 L191.54666705 402.10351749 L191.36393371 400.65267058 L191.15049550 399.20602191 L190.90644828 397.76422124 L190.63190166 396.32791612 L190.32697895 394.89775166 L189.99181711 393.47437020 L189.62656667 392.05841104 L189.23139167 390.65051014 L188.80646960 389.25129983 L188.35199132 387.86140857 L187.86816095 386.48146060 L187.35519578 385.11207571 L186.81332623 383.75386894 L186.24279566 382.40745032 L185.64386031 381.07342458 L185.01678919 379.75239087 L184.36186396 378.44494253 L183.67937874 377.15166678 L182.96964009 375.87314448 L182.23296676 374.60994986 L181.46968963 373.36265027 L180.68015151 372.13180593 L179.86470701 370.91796965 L179.02372239 369.72168662 L178.15757537 368.54349412 L177.26665495 367.38392133 L176.35136129 366.24348907 L175.41210548 365.12270954 L174.44930938 364.02208612 L173.46340541 362.94211316 L172.45483639 361.88327570 L171.42405530 360.84604931 L170.37152510 359.83089985 L169.29771853 358.83828327 L168.20311787 357.86864538 L167.08821476 356.92242169 L165.95350993 356.00003718 L164.79951303 355.10190613 L163.62674235 354.22843192 L162.43572465 353.38000687 L161.22699484 352.55701204 L160.00109582 351.75981707 L158.75857819 350.98878000 L157.50000000 350.24424714" fill="none" stroke="#356b83" stroke-width="2" marker-end="url(#u02flt_forceMarker)" />
+    <text x="91" y="408" font-size="15" fill="#263746" text-anchor="start">ω</text>
+    <text x="194" y="368" font-size="11" fill="#263746" text-anchor="middle">Motpor</text>
+    <line x1="83" y1="476" x2="83" y2="486" stroke="#657781" stroke-width="1.2" />
+    <line x1="163" y1="476" x2="163" y2="486" stroke="#657781" stroke-width="1.2" />
+    <path id="u02flt_shaftDiameter" d="M83 481 L163 481" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02flt_dim)" marker-end="url(#u02flt_dim)" />
+    <text x="123.0" y="498" font-size="11" fill="#263746" text-anchor="middle">D = 50 mm</text>
+    <line x1="83" y1="410" x2="83" y2="485" stroke="#657781" stroke-width="1" />
+    <line x1="163" y1="410" x2="163" y2="485" stroke="#657781" stroke-width="1" />
+    <text x="285" y="351" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Zajednički podatci</text>
+    <text x="285" y="374" font-size="12" fill="#263746" text-anchor="start">D = 50 mm; L = 70 mm; δ = 0,30 mm</text>
+    <text x="285" y="393" font-size="12" fill="#263746" text-anchor="start">n = 2400 min⁻¹; ω ≈ 251,3 rad/s</text>
+    <text x="285" y="412" font-size="12" fill="#263746" text-anchor="start">A = πDL; M = (τA)D/2; P = Mω</text>
+    <text x="285" y="431" font-size="12" fill="#263746" text-anchor="start">Procjep je na skici uvećan.</text>
+    <text x="285" y="450" font-size="12" fill="#263746" text-anchor="start">Vektori sila nisu u zajedničkom mjerilu.</text>
+    <text x="785.0" y="58" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Usporedba rezultata</text>
+    <text x="785" y="110" font-size="12" fill="#263746" text-anchor="middle">Naprezanje</text>
+    <text x="731" y="140" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">8,38 kPa</text>
+    <text x="840" y="140" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">838 Pa</text>
+    <text x="785" y="185" font-size="12" fill="#263746" text-anchor="middle">Sila ulja</text>
+    <text x="731" y="215" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">92,1 N</text>
+    <text x="840" y="215" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">9,21 N</text>
+    <text x="785" y="260" font-size="12" fill="#263746" text-anchor="middle">Moment otpora</text>
+    <text x="731" y="290" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">2,30 N·m</text>
+    <text x="840" y="290" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">0,230 N·m</text>
+    <text x="785" y="335" font-size="12" fill="#263746" text-anchor="middle">Snaga</text>
+    <text x="731" y="365" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">579 W</text>
+    <text x="840" y="365" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">57,9 W</text>
+    <text x="688" y="460" font-size="13" fill="#263746" text-anchor="start" font-weight="700">P₁/P₂ = μ₁/μ₂ = 10</text>
+    <text x="688" y="483" font-size="12" fill="#263746" text-anchor="start">Račun bez ranog zaokruživanja.</text>
+  </g>
 </svg>

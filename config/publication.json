@@ -51,7 +51,8 @@
       "assets/typst/mf1-tokens.typ",
       "assets/typst/mf1-author-blocks.typ",
       "assets/typst/mf1-figures.typ",
-      "assets/typst/mf1-reading.typ"
+      "assets/typst/mf1-reading.typ",
+      "assets/typst/mf1-book.typ"
     ],
     "template-partials": [
       "assets/typst/typst-show.typ",

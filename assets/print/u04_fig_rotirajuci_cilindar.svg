@@ -2,136 +2,120 @@
   <title id="u04frc_title">Rotirajući cilindrični spremnik s paraboloidnom slobodnom površinom</title>
   <desc id="u04frc_desc">Aksijalni presjek otvorenog cilindra polumjera R=0,35 m koji rotira kutnom brzinom omega=6,0 rad/s. Slobodna površina je paraboloid: u osi pada za Delta h/2 = 11,25 cm ispod početne razine h0=0,28 m, a uz stijenku se uzdiže za Delta h/2 iznad nje. Ukupna razlika razina Delta h približno 22,5 cm. Desno: pregled formula s Delta h, h_rub i h_osa te okvir s rezultatima.</desc>
   <defs>
-    <linearGradient id="u04frc_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u04frc_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u04frc_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#657781" />
     </marker>
     <marker id="u04frc_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#657781" />
     </marker>
     <marker id="u04frc_dh" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#c0392b" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u04frc_dhL" markerWidth="7" markerHeight="6" refX="1" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#c0392b" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u04frc_dho" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#e67e22" />
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#657781" />
     </marker>
     <marker id="u04frc_dhoL" markerWidth="6" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#e67e22" />
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#657781" />
     </marker>
     <marker id="u04frc_om" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u04rot_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u04rot_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
   </defs>
-  <rect x="16" y="16" width="468" height="494.0" rx="14" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="498" y="16" width="366" height="494.0" rx="14" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-  <path d="M130 264.25688073394497 Q260.0 431.2293577981651 390 264.25688073394497 L390 410 H130 Z" fill="url(#u04frc_voda)" />
+  <path d="M130 264.25688073394497 Q260.0 431.2293577981651 390 264.25688073394497 L390 410 H130 Z" fill="#dcebf1" />
   <rect x="114" y="70" width="16" height="340" fill="url(#u04frc_hatch)" stroke="#3a4a56" stroke-width="1.3" />
   <rect x="390" y="70" width="16" height="340" fill="url(#u04frc_hatch)" stroke="#3a4a56" stroke-width="1.3" />
   <rect x="114" y="410" width="292" height="14" fill="url(#u04frc_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <path d="M130 264.25688073394497 Q260.0 431.2293577981651 390 264.25688073394497" fill="none" stroke="#1565c0" stroke-width="2.6" />
+  <path d="M130 264.25688073394497 Q260.0 431.2293577981651 390 264.25688073394497" fill="none" stroke="#356b83" stroke-width="2.6" />
   <line x1="105" y1="70" x2="139" y2="70" stroke="#3a4a56" stroke-width="1.3" />
   <line x1="381" y1="70" x2="415" y2="70" stroke="#3a4a56" stroke-width="1.3" />
-  <line x1="130" y1="306" x2="390" y2="306" stroke="#7a8a96" stroke-width="1.4" stroke-dasharray="8,5" />
-  <line x1="260" y1="60" x2="260" y2="424" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5,4" />
-  <path d="M 218,52 A 42,12 0 0 1 302,52" fill="none" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u04frc_om)" />
-  <line x1="130" y1="264.25688073394497" x2="104" y2="264.25688073394497" stroke="#c0392b" stroke-width="0.7" />
-  <line x1="130" y1="347.74311926605503" x2="104" y2="347.74311926605503" stroke="#c0392b" stroke-width="0.7" />
-  <line x1="110" y1="264.25688073394497" x2="98" y2="264.25688073394497" stroke="#c0392b" stroke-width="1.2" />
-  <line x1="110" y1="347.74311926605503" x2="98" y2="347.74311926605503" stroke="#c0392b" stroke-width="1.2" />
-  <line x1="104" y1="267.25688073394497" x2="104" y2="344.74311926605503" stroke="#c0392b" stroke-width="1.6" marker-start="url(#u04frc_dhL)" marker-end="url(#u04frc_dh)" />
-  <line x1="98" y1="264.25688073394497" x2="64" y2="264.25688073394497" stroke="#e67e22" stroke-width="0.7" />
-  <line x1="130" y1="306" x2="64" y2="306" stroke="#e67e22" stroke-width="0.7" />
-  <line x1="98" y1="347.74311926605503" x2="64" y2="347.74311926605503" stroke="#e67e22" stroke-width="0.7" />
-  <line x1="70" y1="264.25688073394497" x2="58" y2="264.25688073394497" stroke="#e67e22" stroke-width="1.2" />
-  <line x1="70" y1="306" x2="58" y2="306" stroke="#e67e22" stroke-width="1.2" />
-  <line x1="70" y1="347.74311926605503" x2="58" y2="347.74311926605503" stroke="#e67e22" stroke-width="1.2" />
-  <line x1="64" y1="267.25688073394497" x2="64" y2="303" stroke="#e67e22" stroke-width="1.4" marker-start="url(#u04frc_dhoL)" marker-end="url(#u04frc_dho)" />
-  <line x1="64" y1="309" x2="64" y2="344.74311926605503" stroke="#e67e22" stroke-width="1.4" marker-start="url(#u04frc_dhoL)" marker-end="url(#u04frc_dho)" />
-  <line x1="384" y1="264.25688073394497" x2="346" y2="244" stroke="#1565c0" stroke-width="0.8" />
-  <circle cx="384" cy="264.25688073394497" r="2" fill="#1565c0" />
-  <line x1="266" y1="347.74311926605503" x2="318" y2="380" stroke="#1565c0" stroke-width="0.8" />
-  <circle cx="260" cy="347.74311926605503" r="2" fill="#1565c0" />
-  <rect x="514" y="36" width="334" height="34" rx="8" fill="white" stroke="none" />
-  <rect x="514" y="52" width="334" height="18" fill="white" stroke="none" />
-  <rect x="514" y="86" width="334" height="90" rx="8" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="514" y="86" width="2" height="90" rx="1" fill="#1565c0" />
-  <rect x="514" y="184" width="334" height="99" rx="8" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="514" y="184" width="2" height="95.0" rx="1" fill="#1565c0" />
-  <rect x="514" y="274" width="334" height="99" rx="8" fill="white" stroke="#cfe0ee" stroke-width="1" stroke-opacity="0.65" transform="translate(0 13)" />
-  <rect x="514" y="274" width="2" height="95.0" rx="1" fill="#1565c0" transform="translate(0 13)" />
-  <rect x="528" y="392" width="306" height="76" rx="9" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" transform="translate(0 26)" />
-  <line x1="544" y1="416" x2="818" y2="416" stroke="#c8d6e4" stroke-width="1" transform="translate(0 26)" />
-  <line x1="406" y1="306" x2="446" y2="306" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="406" y1="410" x2="446" y2="410" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="440" y1="306" x2="428" y2="306" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="440" y1="410" x2="428" y2="410" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="434" y1="309" x2="434" y2="407" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04frc_dimL)" marker-end="url(#u04frc_dim)" />
-  <line x1="130" y1="424" x2="130" y2="446" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="390" y1="424" x2="390" y2="446" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="130" y1="450" x2="130" y2="434" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="390" y1="450" x2="390" y2="434" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="133" y1="442" x2="387" y2="442" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04frc_dimL)" marker-end="url(#u04frc_dim)" />
-  <text x="30" y="40" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1a2530">Aksijalni presjek</text>
-  <text x="30" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1a2530">rotirajućeg cilindra</text>
-  <text x="260" y="34" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" font-weight="700" text-anchor="middle" fill="#1e8449">ω = 6,0 rad/s</text>
-  <text x="340" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="end" font-style="italic" fill="#0d47a1">
+  <line x1="130" y1="306" x2="390" y2="306" stroke="#657781" stroke-width="1.4" stroke-dasharray="8,5" />
+  <line x1="260" y1="60" x2="260" y2="424" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
+  <path d="M 218,52 A 42,12 0 0 1 302,52" fill="none" stroke="#356b83" stroke-width="2.2" marker-end="url(#u04frc_om)" />
+  <line x1="130" y1="264.25688073394497" x2="104" y2="264.25688073394497" stroke="#356b83" stroke-width="0.7" />
+  <line x1="130" y1="347.74311926605503" x2="104" y2="347.74311926605503" stroke="#356b83" stroke-width="0.7" />
+  <line x1="110" y1="264.25688073394497" x2="98" y2="264.25688073394497" stroke="#356b83" stroke-width="1.2" />
+  <line x1="110" y1="347.74311926605503" x2="98" y2="347.74311926605503" stroke="#356b83" stroke-width="1.2" />
+  <line x1="104" y1="267.25688073394497" x2="104" y2="344.74311926605503" stroke="#356b83" stroke-width="1.6" marker-start="url(#u04frc_dhL)" marker-end="url(#u04frc_dh)" />
+  <line x1="98" y1="264.25688073394497" x2="64" y2="264.25688073394497" stroke="#657781" stroke-width="0.7" />
+  <line x1="130" y1="306" x2="64" y2="306" stroke="#657781" stroke-width="0.7" />
+  <line x1="98" y1="347.74311926605503" x2="64" y2="347.74311926605503" stroke="#657781" stroke-width="0.7" />
+  <line x1="70" y1="264.25688073394497" x2="58" y2="264.25688073394497" stroke="#657781" stroke-width="1.2" />
+  <line x1="70" y1="306" x2="58" y2="306" stroke="#657781" stroke-width="1.2" />
+  <line x1="70" y1="347.74311926605503" x2="58" y2="347.74311926605503" stroke="#657781" stroke-width="1.2" />
+  <line x1="64" y1="267.25688073394497" x2="64" y2="303" stroke="#657781" stroke-width="1.4" marker-start="url(#u04frc_dhoL)" marker-end="url(#u04frc_dho)" />
+  <line x1="64" y1="309" x2="64" y2="344.74311926605503" stroke="#657781" stroke-width="1.4" marker-start="url(#u04frc_dhoL)" marker-end="url(#u04frc_dho)" />
+  <line x1="384" y1="264.25688073394497" x2="346" y2="244" stroke="#356b83" stroke-width="0.8" />
+  <circle cx="384" cy="264.25688073394497" r="2" fill="#356b83" />
+  <line x1="266" y1="347.74311926605503" x2="318" y2="380" stroke="#356b83" stroke-width="0.8" />
+  <circle cx="260" cy="347.74311926605503" r="2" fill="#356b83" />
+  <line x1="406" y1="306" x2="446" y2="306" stroke="#657781" stroke-width="0.7" />
+  <line x1="406" y1="410" x2="446" y2="410" stroke="#657781" stroke-width="0.7" />
+  <line x1="440" y1="306" x2="428" y2="306" stroke="#657781" stroke-width="1.2" />
+  <line x1="440" y1="410" x2="428" y2="410" stroke="#657781" stroke-width="1.2" />
+  <line x1="434" y1="309" x2="434" y2="407" stroke="#657781" stroke-width="1.4" marker-start="url(#u04frc_dimL)" marker-end="url(#u04frc_dim)" />
+  <line x1="130" y1="424" x2="130" y2="446" stroke="#657781" stroke-width="0.7" />
+  <line x1="390" y1="424" x2="390" y2="446" stroke="#657781" stroke-width="0.7" />
+  <line x1="130" y1="450" x2="130" y2="434" stroke="#657781" stroke-width="1.2" />
+  <line x1="390" y1="450" x2="390" y2="434" stroke="#657781" stroke-width="1.2" />
+  <line x1="133" y1="442" x2="387" y2="442" stroke="#657781" stroke-width="1.4" marker-start="url(#u04frc_dimL)" marker-end="url(#u04frc_dim)" />
+  <text x="30" y="40" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746">Aksijalni presjek</text>
+  <text x="30" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746">rotirajućeg cilindra</text>
+  <text x="260" y="34" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-style="italic" font-weight="700" text-anchor="middle" fill="#263746">ω = 6,0 rad/s</text>
+  <text x="340" y="240" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" text-anchor="end" font-style="italic" fill="#263746">
     <tspan font-weight="700">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">rub</tspan> ≈ 0,392 m</text>
-  <text x="322" y="385" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-style="italic" fill="#0d47a1">
+  <text x="322" y="385" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" font-style="italic" fill="#263746">
     <tspan font-weight="700">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">osa</tspan> ≈ 0,168 m</text>
-  <text x="384" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="10" text-anchor="end" fill="#5a6a78" font-style="italic">mirna razina</text>
-  <text x="160" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#0d47a1">voda</text>
-  <text x="681" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Paraboloidna slobodna površina</text>
-  <text x="681" y="106" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Razlika razina rub - osa</text>
-  <text x="681" y="129" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530">Δh = ω² R² / (2g)</text>
-  <text x="681" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#3a4a56">= 6,0² · 0,35² / (2 · 9,81)</text>
-  <text x="681" y="168" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 0,225 m = 22,5 cm</text>
-  <text x="681" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Visina uz stijenku (uzdizanje)</text>
-  <text x="681" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="384" y="302" font-family="Arial, Liberation Sans, sans-serif" font-size="10" text-anchor="end" fill="#263746" font-style="italic">mirna razina</text>
+  <text x="160" y="396" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" fill="#263746">voda</text>
+  <text x="681" y="58" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">Paraboloidna slobodna površina</text>
+  <text x="681" y="106" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Razlika razina rub - osa</text>
+  <text x="681" y="129" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#263746">Δh = ω² R² / (2g)</text>
+  <text x="681" y="150" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746">= 6,0² · 0,35² / (2 · 9,81)</text>
+  <text x="681" y="168" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">≈ 0,225 m = 22,5 cm</text>
+  <text x="681" y="204" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Visina uz stijenku (uzdizanje)</text>
+  <text x="681" y="227" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">rub</tspan> = h₀ + Δh/2</text>
-  <text x="681" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#3a4a56" transform="translate(0 8)">= 0,28 + 0,11239</text>
-  <text x="681" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0" transform="translate(0 13)">≈ 0,392 m</text>
-  <text x="681" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78" transform="translate(0 13)">Visina u osi (spuštanje)</text>
-  <text x="681" y="317" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530" transform="translate(0 13)">
+  <text x="681" y="246" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746" transform="translate(0 8)">= 0,28 + 0,11239</text>
+  <text x="681" y="262" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 13)">≈ 0,392 m</text>
+  <text x="681" y="294" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746" transform="translate(0 13)">Visina u osi (spuštanje)</text>
+  <text x="681" y="317" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 13)">
     <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">osa</tspan> = h₀ − Δh/2</text>
-  <text x="681" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#3a4a56" transform="translate(0 13) translate(0 8)">= 0,28 − 0,11239</text>
-  <text x="681" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0" transform="translate(0 26)">≈ 0,168 m</text>
-  <text x="681" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78" transform="translate(0 26)">Simetrija oko h₀: razina uz rub raste koliko u osi pada.</text>
-  <text x="681" y="410" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78" transform="translate(0 26)">REZULTATI</text>
-  <text x="605" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b" transform="translate(0 26)">Δh ≈ 22,5 cm</text>
-  <text x="757" y="436" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1e8449" transform="translate(0 26)">
+  <text x="681" y="336" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746" transform="translate(0 13) translate(0 8)">= 0,28 − 0,11239</text>
+  <text x="681" y="352" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 26)">≈ 0,168 m</text>
+  <text x="681" y="378" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746" transform="translate(0 26)">Simetrija oko h₀: razina uz rub raste koliko u osi pada.</text>
+  <text x="681" y="410" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 26)">REZULTATI</text>
+  <text x="605" y="436" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 26)">Δh ≈ 22,5 cm</text>
+  <text x="757" y="436" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 26)">
     <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">rub</tspan> ≈ 0,392 m</text>
-  <text x="681" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0" transform="translate(0 26)">
+  <text x="681" y="458" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 26)">
     <tspan font-style="italic">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">osa</tspan> ≈ 0,168 m</text>
-  <text x="450" y="354" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#b7600c">
+  <text x="450" y="354" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" fill="#263746">
     <tspan font-weight="700">h</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">0</tspan>
   </text>
-  <text x="450.0" y="370.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#b7600c">= 0,28 m</text>
-  <text x="260" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c">
+  <text x="450.0" y="370.0" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746">= 0,28 m</text>
+  <text x="260" y="468" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746">
     <tspan font-style="italic" font-weight="700">2R</tspan> = 0,70 m</text>
-  <text x="92" y="306.0" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#c0392b" text-anchor="middle" transform="rotate(-90 92 306.0)">Δh ≈ 22,5 cm</text>
-  <text x="46" y="285.1284403669725" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#e67e22" text-anchor="end">Δh/2</text>
-  <text x="46" y="326.8715596330275" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#e67e22" text-anchor="end">Δh/2</text>
+  <text x="92" y="306.0" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle" transform="rotate(-90 92 306.0)">Δh ≈ 22,5 cm</text>
+  <text x="46" y="285.1284403669725" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="end">Δh/2</text>
+  <text x="46" y="326.8715596330275" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="end">Δh/2</text>
 </svg>

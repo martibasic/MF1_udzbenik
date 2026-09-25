@@ -1,136 +1,117 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="u08fup_title u08fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
   <title id="u08fup_title">Kontrolni volumen i bilanca mase</title>
-  <desc id="u08fup_desc">Lijevo apstraktni uređaj s ulazom, dvama izlazima i akumulacijom; narančasta isprekidana granica kontrolna je ploha, ne kruta stijenka. Normale su vanjske. Desno su masene jednadžbe, a dolje ventilirana komora s dva stvarna otvorena priključka. Strelice su tokovi, a oznaka akumulacije nije brzina fluida.</desc>
+  <desc id="u08fup_desc">Lijevo apstraktni uređaj s ulazom, dvama izlazima i akumulacijom; isprekidana granica kontrolna je ploha, ne kruta stijenka. Normale su vanjske. Desno su masene jednadžbe, a dolje ventilirana komora s dva stvarna otvorena priključka. Strelice su tokovi, a oznaka akumulacije nije brzina fluida.</desc>
   <defs>
-    <linearGradient id="u08fup_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u08fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="7" height="7" fill="#dfe5ea" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <rect width="7" height="7" fill="#dcebf1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u08fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u08fup_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u08fup_aO" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#e67e22" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#657781" />
     </marker>
     <marker id="u08fup_aBrown" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u08fup_aBlue" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+      <path d="M0,0 L0,4 L6,2 z" fill="#356b83" />
     </marker>
     <marker id="u08fup_aN" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#5a6a78" />
+      <path d="M0,0 L0,4 L6,2 z" fill="#657781" />
     </marker>
     <marker id="u08fup_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08fup_fix_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08fup_fix_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08fup_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08fup_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08fup_fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u08fup_fix_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u08fup_fix_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="28" y="28" width="540" height="414" rx="10" fill="white" stroke="#e1ebf3" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="180" y="170" width="240" height="170" rx="12" fill="#eef3f7" stroke="none" stroke-width="1.4" />
-  <path d="M210 200 Q260 230 310 200 T410 200" fill="none" stroke="#aed6f1" stroke-width="2" />
-  <path d="M210 235 Q260 265 310 235 T410 235" fill="none" stroke="#aed6f1" stroke-width="2" />
-  <path d="M210 270 Q260 300 310 270 T410 270" fill="none" stroke="#aed6f1" stroke-width="2" />
-  <path d="M210 305 Q260 335 310 305 T410 305" fill="none" stroke="#aed6f1" stroke-width="2" />
-  <line x1="300" y1="312" x2="300" y2="252" stroke="#e67e22" stroke-width="2.6" marker-end="url(#u08fup_aO)" />
-  <line x1="64" y1="220" x2="190" y2="220" stroke="#c0392b" stroke-width="3" marker-end="url(#u08fup_aR)" />
-  <line x1="150" y1="240" x2="134" y2="240" stroke="#5a6a78" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
-  <line x1="450" y1="200" x2="560" y2="200" stroke="#1e8449" stroke-width="3" marker-end="url(#u08fup_aG)" />
-  <line x1="450" y1="220" x2="466" y2="220" stroke="#5a6a78" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
-  <line x1="450" y1="310" x2="560" y2="310" stroke="#1e8449" stroke-width="3" marker-end="url(#u08fup_aG)" />
-  <line x1="450" y1="330" x2="466" y2="330" stroke="#5a6a78" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
-  <rect x="582" y="28" width="364" height="232" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="582" y="28" width="364" height="30" rx="10" fill="white" stroke="none" />
-  <rect x="582" y="44" width="364" height="14" fill="white" stroke="none" />
-  <line x1="604" y1="118" x2="924" y2="118" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="604" y1="176" x2="924" y2="176" stroke="#c8d6e4" stroke-width="1" />
-  <rect x="582" y="276" width="364" height="166" rx="10" fill="white" stroke="#cce7d4" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="582" y="276" width="364" height="26" rx="10" fill="white" stroke="none" />
-  <rect x="582" y="290" width="364" height="12" fill="white" stroke="none" />
-  <rect x="150" y="140" width="300" height="230" rx="14" fill="none" stroke="#b7600c" stroke-width="1.8" stroke-dasharray="8,5" />
-  <rect x="408" y="146" width="36" height="20" rx="4" fill="#fdf3e6" stroke="#b7600c" stroke-width="1" />
-  <rect x="46" y="402" width="504" height="32" rx="6" fill="white" stroke="#b7600c" stroke-width="1" stroke-opacity="0.55" />
-  <text x="46" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Kontrolni volumen — odabrani dio prostora</text>
-  <text x="46" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#5a6a78">umjesto praćenja čestice, prati se ulaz, izlaz i akumulacija mase</text>
-  <text x="300" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" font-style="italic" fill="#5a6a78">bilo koji proces / uređaj</text>
-  <text x="300" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#e67e22">akumulacija</text>
-  <text x="300" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="15" text-anchor="middle" fill="#e67e22">d<tspan font-style="italic">m</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">KV</tspan> / d<tspan font-style="italic">t</tspan>
+  <rect x="180" y="170" width="240" height="170" rx="12" fill="#dcebf1" stroke="none" stroke-width="1.4" />
+  <path d="M210 200 Q260 230 310 200 T410 200" fill="none" stroke="#c5cdd3" stroke-width="2" />
+  <path d="M210 235 Q260 265 310 235 T410 235" fill="none" stroke="#c5cdd3" stroke-width="2" />
+  <path d="M210 270 Q260 300 310 270 T410 270" fill="none" stroke="#c5cdd3" stroke-width="2" />
+  <path d="M210 305 Q260 335 310 305 T410 305" fill="none" stroke="#c5cdd3" stroke-width="2" />
+  <line x1="64" y1="220" x2="190" y2="220" stroke="#356b83" stroke-width="3" marker-end="url(#u08fup_aR)" />
+  <line x1="150" y1="240" x2="134" y2="240" stroke="#657781" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
+  <line x1="450" y1="200" x2="560" y2="200" stroke="#356b83" stroke-width="3" marker-end="url(#u08fup_aG)" />
+  <line x1="450" y1="220" x2="466" y2="220" stroke="#657781" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
+  <line x1="450" y1="310" x2="560" y2="310" stroke="#356b83" stroke-width="3" marker-end="url(#u08fup_aG)" />
+  <line x1="450" y1="330" x2="466" y2="330" stroke="#657781" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
+  <rect x="150" y="140" width="300" height="230" rx="14" fill="none" stroke="#657781" stroke-width="1.8" stroke-dasharray="8,5" />
+  <rect x="408" y="146" width="36" height="20" rx="4" fill="#eadfc5" stroke="#657781" stroke-width="1" />
+  <text x="46" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Kontrolni volumen — odabrani dio prostora</text>
+  <text x="46" y="75" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" fill="#263746">umjesto praćenja čestice, prati se ulaz, izlaz i akumulacija mase</text>
+  <text x="300" y="160" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" font-style="italic" fill="#263746">bilo koji proces / uređaj</text>
+  <text x="300" y="200" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">akumulacija</text>
+  <text x="300" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="15" text-anchor="middle" fill="#263746">d<tspan font-style="italic">m</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">CV</tspan> / d<tspan font-style="italic">t</tspan>
   </text>
-  <text x="64" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" fill="#c0392b">
+  <text x="64" y="208" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-style="italic" fill="#263746">
     <tspan font-weight="700">ṁ</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">ul</tspan>, ρ<tspan baseline-shift="sub" font-size="0.7em">1</tspan>, <tspan font-style="italic">A</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">1</tspan>, <tspan font-style="italic">v</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">1</tspan>
   </text>
-  <text x="132" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="end" font-style="italic" fill="#5a6a78">n̂</text>
-  <text x="476" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449">
+  <text x="132" y="254" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="end" font-style="italic" fill="#263746">n̂</text>
+  <text x="476" y="190" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">
     <tspan font-weight="700">ṁ</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">iz,1</tspan>
   </text>
-  <text x="470" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">n̂</text>
-  <text x="476" y="300" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1e8449">
+  <text x="470" y="234" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">n̂</text>
+  <text x="476" y="300" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">
     <tspan font-weight="700">ṁ</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">iz,2</tspan>
   </text>
-  <text x="470" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">n̂</text>
-  <text x="298" y="423" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="470" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">n̂</text>
+  <text x="298" y="423" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">
     Σ <tspan font-style="italic">ṁ</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">ul</tspan>
     − Σ <tspan font-style="italic">ṁ</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">iz</tspan>
     = d<tspan font-style="italic">m</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">KV</tspan> / d<tspan font-style="italic">t</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">CV</tspan> / d<tspan font-style="italic">t</tspan>
   </text>
-  <text x="764" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Ključne jednadžbe poglavlja</text>
-  <text x="764" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">opća masena bilanca (nestacionarno)</text>
-  <text x="764" y="103" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="764" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">Ključne jednadžbe poglavlja</text>
+  <text x="764" y="80" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" text-anchor="middle" fill="#263746">opća masena bilanca (nestacionarno)</text>
+  <text x="764" y="103" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#263746">
     Σ <tspan font-style="italic">ṁ</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">ul</tspan>
     − Σ <tspan font-style="italic">ṁ</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">iz</tspan>
     = d<tspan font-style="italic">m</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">KV</tspan> / d<tspan font-style="italic">t</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em">CV</tspan> / d<tspan font-style="italic">t</tspan>
   </text>
-  <text x="764" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">stacionarno strujanje (bez akumulacije)</text>
-  <text x="764" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="764" y="138" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" text-anchor="middle" fill="#263746">stacionarno strujanje (bez akumulacije)</text>
+  <text x="764" y="161" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#263746">
     Σ <tspan font-style="italic">ṁ</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">ul</tspan>
     = Σ <tspan font-style="italic">ṁ</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">iz</tspan>
     ,   <tspan font-style="italic">ṁ</tspan> = ρ <tspan font-style="italic">Q</tspan> = ρ <tspan font-style="italic">A v</tspan>
   </text>
-  <text x="764" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#5a6a78">nestlačiv fluid, jedan ulaz i jedan izlaz</text>
-  <text x="764" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#1565c0">
+  <text x="764" y="196" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" text-anchor="middle" fill="#263746">nestlačiv fluid, jedan ulaz i jedan izlaz</text>
+  <text x="764" y="220" font-family="Arial, Liberation Sans, sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">A</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">1</tspan>
     <tspan font-style="italic">v</tspan>
@@ -140,24 +121,24 @@
     <tspan font-style="italic">v</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">2</tspan>
   </text>
-  <text x="764" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78">kontinuitet je zakon očuvanja mase</text>
-  <text x="764" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449">Gdje se KV i kontinuitet primjenjuju</text>
-  <text x="426" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#b7600c">KV</text>
-  <text x="156" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#b7600c">kontrolna ploha KP (granica)</text>
+  <text x="764" y="246" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746">kontinuitet je zakon očuvanja mase</text>
+  <text x="764" y="295" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746">Gdje se KV i kontinuitet primjenjuju</text>
+  <text x="426" y="161" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">KV</text>
+  <text x="156" y="386" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746">kontrolna ploha KP (granica)</text>
   <g id="u08fup_fix_ventilation">
-    <rect x="688" y="319" width="154" height="89" fill="#f0f7ff" stroke="none" stroke-width="1.2" />
+    <rect x="688" y="319" width="154" height="89" fill="#ffffff" stroke="none" stroke-width="1.2" />
     <path d="M688 347 V319 H842 V347 M688 371 V408 H842 V371" fill="none" stroke="#3a4a56" stroke-width="3" />
-    <rect x="608" y="347" width="80" height="24" fill="url(#u08fup_fix_water)" stroke="none" stroke-width="1.2" />
-    <rect x="842" y="347" width="80" height="24" fill="url(#u08fup_fix_water)" stroke="none" stroke-width="1.2" />
+    <rect x="608" y="347" width="80" height="24" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <rect x="842" y="347" width="80" height="24" fill="#dcebf1" stroke="none" stroke-width="1.2" />
     <line x1="608" y1="347" x2="688" y2="347" stroke="#3a4a56" stroke-width="1.2" />
     <line x1="842" y1="347" x2="920" y2="347" stroke="#3a4a56" stroke-width="1.2" />
     <line x1="608" y1="371" x2="688" y2="371" stroke="#3a4a56" stroke-width="1.2" />
     <line x1="842" y1="371" x2="920" y2="371" stroke="#3a4a56" stroke-width="1.2" />
-    <line x1="618" y1="359" x2="674" y2="359" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08fup_fix_normal)" />
-    <line x1="850" y1="359" x2="914" y2="359" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u08fup_fix_green)" />
-    <text x="765" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">ventilirana komora</text>
-    <text x="765" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">ulaz → izlaz zraka</text>
-    <text x="765" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Krute stijenke imaju dva otvorena priključka.</text>
-    <text x="301" y="327" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">apstraktni uređaj; nije kruta ovojnica</text>
+    <line x1="618" y1="359" x2="674" y2="359" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08fup_fix_normal)" />
+    <line x1="850" y1="359" x2="914" y2="359" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08fup_fix_green)" />
+    <text x="765" y="353" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">ventilirana komora</text>
+    <text x="765" y="376" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">ulaz → izlaz zraka</text>
+    <text x="765" y="432" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Krute stijenke imaju dva otvorena priključka.</text>
+    <text x="301" y="327" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">apstraktni uređaj; nije kruta ovojnica</text>
   </g>
 </svg>

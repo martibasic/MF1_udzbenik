@@ -1,162 +1,156 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 820" role="img" aria-labelledby="u09kvs_title u09kvs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
-<title id="u09kvs_title">Skice vježbi kompresibilnog idealnog toka</title><desc id="u09kvs_desc">Z1: mirujući helij i dva smjera zvuka. Z2: otvoreni kružni vod s poprečnom kotom promjera. Z3: nepomične mjerne točke A i B udaljene 1,20 m, različita vremena putovanja uzvodno i nizvodno. Z4 i Z5: otvoreni izlazi konvergentnih sapnica; vanjski tok nije prikazan. Z6: prikaz mjernog dijela kanala, normalni val nije stijenka; statički priključci prolaze kroz stvarne otvore, Pitotova sonda desno od vala otvorena je prema dotoku. Ukupni tlak prije vala mjeri se u uzvodnoj mirnoj komori izvan prikaza. Shematske debljine stijenki i mjernih vodova.</desc>
-<defs>
-<linearGradient id="u09kvs_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u09kvs_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u09kvs_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u09kvs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u09kvs_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u09kvs_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u09kvs_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="960" height="820" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<!-- Opći plin koristi kanonsku plavu paletu. Gradijent je samo vizualna
-oznaka istog plina, nije karta gustoće ni tlaka. Pozadina/paneli preuzimaju
-neutralne boje postojećih skica. Strelice prikazuju brzine, ne sile. -->
-<defs><marker id="u09kvs_sound" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker></defs>
-<g id="u09kvs_z1" transform="translate(28 24)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z1</text>
-<text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Zvuk u mirujućem heliju</text>
-<text x="223" y="68" font-size="14" fill="#1a2530" text-anchor="middle">T = 300 K; v = 0</text>
-<rect id="u09kvs_z1ductgas" x="49" y="102" width="348" height="76" rx="0" fill="url(#u09kvs_water)" stroke="none" stroke-width="1.2"/>
-<rect id="u09kvs_z1ducttop" x="49" y="95" width="348" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u09kvs_z1ductbottom" x="49" y="178" width="348" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<line x1="66" y1="140" x2="380" y2="140" stroke="#7a8a96" stroke-width="1" stroke-dasharray="4 4"/>
-<circle id="u09kvs_z1origin" cx="223" cy="140" r="5" fill="#c0392b"/>
-<text x="223" y="163" font-size="14" fill="#c0392b" text-anchor="middle">O</text>
-<path id="u09kvs_z1left" d="M196 140 L118 140" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u09kvs_sound)"/>
-<text x="157.0" y="129" font-size="14" fill="#1565c0" text-anchor="middle">−a</text>
-<path id="u09kvs_z1right" d="M250 140 L328 140" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u09kvs_sound)"/>
-<text x="289.0" y="129" font-size="14" fill="#1565c0" text-anchor="middle">+a</text>
-<path id="u09kvs_z1axis" d="M341 209 L395 209" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u09kvs_sound)"/>
-<text x="368.0" y="198" font-size="14" fill="#1565c0" text-anchor="middle">x</text>
-<text x="61" y="219" font-size="14" fill="#1a2530" text-anchor="start">Poremećaj putuje u oba smjera.</text>
-</g>
-<g id="u09kvs_z2" transform="translate(486 24)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z2</text>
-<text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Machov broj u kružnom vodu</text>
-<text x="223" y="66" font-size="14" fill="#1a2530" text-anchor="middle">T = 20 °C; Q = 2,0 m³/s (lokalno)</text>
-<rect id="u09kvs_z2ductgas" x="59" y="110" width="270" height="70" rx="0" fill="url(#u09kvs_water)" stroke="none" stroke-width="1.2"/>
-<rect id="u09kvs_z2ducttop" x="59" y="103" width="270" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u09kvs_z2ductbottom" x="59" y="180" width="270" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<path id="u09kvs_z2flow" d="M117 145 L221 145" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09kvs_v)"/>
-<text x="169.0" y="136" font-size="14" fill="#1e8449" text-anchor="middle">v = Q/A</text>
-<line x1="335" y1="110" x2="364" y2="110" stroke="#b7600c" stroke-width="1"/>
-<line x1="335" y1="180" x2="364" y2="180" stroke="#b7600c" stroke-width="1"/>
-<line x1="353" y1="110" x2="363" y2="110" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="353" y1="180" x2="363" y2="180" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09kvs_z2diameter" d="M358 110 L358 180" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09kvs_dim)" marker-end="url(#u09kvs_dim)"/>
-<text x="337" y="93" font-size="14" fill="#b7600c" text-anchor="middle">D = 0,20 m</text>
-<text x="194" y="219" font-size="14" fill="#1a2530" text-anchor="middle">Uzdužni presjek; kružni vod.</text>
-</g>
-<g id="u09kvs_z3" transform="translate(28 286)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z3</text>
-<text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Dva smjera akustičkog mjerenja</text>
-<rect id="u09kvs_z3ductgas" x="36" y="91" width="374" height="89" rx="0" fill="url(#u09kvs_water)" stroke="none" stroke-width="1.2"/>
-<rect id="u09kvs_z3ducttop" x="36" y="84" width="374" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u09kvs_z3ductbottom" x="36" y="180" width="374" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<line id="u09kvs_z3Asection" x1="90" y1="91" x2="90" y2="180" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 4"/>
-<text x="90" y="78" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">A</text>
-<line id="u09kvs_z3Bsection" x1="350" y1="91" x2="350" y2="180" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 4"/>
-<text x="350" y="78" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">B</text>
-<path id="u09kvs_z3downstream" d="M106 123 L334 123" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u09kvs_sound)"/>
-<text x="220.0" y="112" font-size="14" fill="#1565c0" text-anchor="middle">tAB = 3,00 ms</text>
-<path id="u09kvs_z3upstream" d="M334 164 L106 164" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u09kvs_sound)"/>
-<text x="220.0" y="153" font-size="14" fill="#1565c0" text-anchor="middle">tBA = 4,00 ms</text>
-<path id="u09kvs_z3flow" d="M167 61 L263 61" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09kvs_v)"/>
-<text x="215.0" y="52" font-size="14" fill="#1e8449" text-anchor="middle">v</text>
-<line x1="90" y1="187" x2="90" y2="218" stroke="#b7600c" stroke-width="1"/>
-<line x1="350" y1="187" x2="350" y2="218" stroke="#b7600c" stroke-width="1"/>
-<line x1="90" y1="209" x2="90" y2="219" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="350" y1="209" x2="350" y2="219" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09kvs_z3length" d="M90 214 L350 214" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09kvs_dim)" marker-end="url(#u09kvs_dim)"/>
-<text x="220.0" y="231" font-size="13" fill="#b7600c" text-anchor="middle">L = 1,20 m</text>
-</g>
-<g id="u09kvs_z4" transform="translate(486 286)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z4</text>
-<text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Protutlak i izlazni tlak</text>
-<text x="23" y="65" font-size="14" fill="#1a2530" text-anchor="start">p₀,M = 7,00 bar</text>
-<text x="238" y="65" font-size="14" fill="#1a2530" text-anchor="start">pₐₜₘ = 1,00 bar(abs)</text>
-<path id="u09kvs_z4gas" d="M38 97 H120 C185 97 223 125 300 125 L300 161 C223 161 185 189 120 189 H38 Z" fill="url(#u09kvs_water)" stroke="none" stroke-width="1.8" />
-<path id="u09kvs_z4top" d="M38 97 H120 C185 97 223 125 300 125 L300 118 C223 118 185 90 120 90 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
-<path id="u09kvs_z4bottom" d="M38 189 H120 C185 189 223 161 300 161 L300 168 C223 168 185 196 120 196 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
-<line id="u09kvs_z4exit" x1="300" y1="118" x2="300" y2="168" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="4 4"/>
-<path d="M61 143 L102 143" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09kvs_v)"/>
-<text x="81.5" y="134" font-size="14" fill="#1e8449" text-anchor="middle">v</text>
-<path id="u09kvs_z4outflow" d="M262 143 L339 143" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09kvs_v)"/>
-<text x="52" y="177" font-size="13" fill="#1a2530" text-anchor="start">iz mirne komore</text>
-<text x="300" y="102" font-size="14" fill="#1565c0" text-anchor="middle">e: pₑ, Maₑ</text>
-<text x="354" y="173" font-size="13" fill="#1a2530" text-anchor="middle">pᵦ,M (bar):</text>
-<text x="354" y="192" font-size="13" fill="#1a2530" text-anchor="middle">I: 4,00; II: 3,00</text>
-<text x="223" y="230" font-size="12" fill="#1a2530" text-anchor="middle">Vanjski tok nije prikazan; izlaz je najmanji presjek.</text>
-</g>
-<g id="u09kvs_z5" transform="translate(28 548)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z5</text>
-<text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Provjera stvarnog otvora sapnice</text>
-<text x="23" y="64" font-size="14" fill="#1a2530" text-anchor="start">p₀ = 600 kPa(abs); T₀ = 300 K</text>
-<path id="u09kvs_z5gas" d="M38 97 H120 C185 97 223 125 300 125 L300 161 C223 161 185 189 120 189 H38 Z" fill="url(#u09kvs_water)" stroke="none" stroke-width="1.8" />
-<path id="u09kvs_z5top" d="M38 97 H120 C185 97 223 125 300 125 L300 118 C223 118 185 90 120 90 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
-<path id="u09kvs_z5bottom" d="M38 189 H120 C185 189 223 161 300 161 L300 168 C223 168 185 196 120 196 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
-<line id="u09kvs_z5exit" x1="300" y1="118" x2="300" y2="168" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="4 4"/>
-<path d="M61 143 L102 143" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09kvs_v)"/>
-<text x="81.5" y="134" font-size="14" fill="#1e8449" text-anchor="middle">v</text>
-<path id="u09kvs_z5outflow" d="M262 143 L339 143" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09kvs_v)"/>
-<text x="52" y="178" font-size="13" fill="#1a2530" text-anchor="start">iz napojne komore</text>
-<line x1="300" y1="125" x2="335" y2="89" stroke="#b7600c" stroke-width="1"/>
-<text x="280" y="83" font-size="14" fill="#b7600c" text-anchor="start">Ag = 48,0 mm²</text>
-<text x="326" y="184" font-size="13" fill="#1a2530" text-anchor="start">pᵦ = 100</text>
-<text x="335" y="201" font-size="13" fill="#1a2530" text-anchor="start">kPa(abs)</text>
-<text x="31" y="213" font-size="13" fill="#1a2530" text-anchor="start">ṁ = 0,0595 kg/s; An = 50,0 mm² (nazivno)</text>
-<text x="223" y="235" font-size="12" fill="#1a2530" text-anchor="middle">Ag je izmjereni slobodni otvor; vanjski tok nije prikazan.</text>
-</g>
-<g id="u09kvs_z6" transform="translate(486 548)">
-<rect x="0" y="0" width="446" height="248" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="14" fill="white" text-anchor="middle" font-weight="700">Z6</text>
-<text x="59" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Mjerenja prije i poslije vala</text>
-<text x="22" y="59" font-size="14" fill="#1a2530" text-anchor="start">p₀₁ = 626 ± 4 kPa</text>
-<text x="22" y="76" font-size="13" fill="#1a2530" text-anchor="start">iz mirne napojne komore</text>
-<text x="251" y="59" font-size="14" fill="#1a2530" text-anchor="start">p₀₂ = 451 ± 4 kPa</text>
-<text x="251" y="76" font-size="13" fill="#1a2530" text-anchor="start">podzvučna Pitotova sonda</text>
-<defs><linearGradient id="u09kvs_z6field" gradientUnits="userSpaceOnUse" x1="0" y1="109" x2="0" y2="183"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<rect id="u09kvs_z6gas" x="28" y="109" width="390" height="74" rx="0" fill="url(#u09kvs_z6field)" stroke="none" stroke-width="1.2"/>
-<rect id="u09kvs_z6top28" x="28" y="102" width="347" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u09kvs_z6top383" x="383" y="102" width="35" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u09kvs_z6bottom28" x="28" y="183" width="76" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u09kvs_z6bottom112" x="112" y="183" width="160" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u09kvs_z6bottom280" x="280" y="183" width="138" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<line id="u09kvs_z6shock" x1="209" y1="109" x2="209" y2="183" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6 4"/>
-<text x="209" y="98" font-size="14" fill="#c0392b" text-anchor="middle">val</text>
-<path id="u09kvs_z6before" d="M50 142 L136 142" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09kvs_v)"/>
-<text x="93.0" y="133" font-size="14" fill="#1e8449" text-anchor="middle">M₁ &gt; 1</text>
-<path id="u09kvs_z6after" d="M236 163 L273 163" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09kvs_v)"/>
-<text x="252" y="146" font-size="13" fill="#1e8449" text-anchor="middle">M₂ &lt; 1</text>
-<text x="108" y="97" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">1</text>
-<path id="u09kvs_z6p1wall" d="M108 183 V213" fill="none" stroke="#3a4a56" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09kvs_z6p1water" d="M108 183 V213" fill="none" stroke="url(#u09kvs_z6field)" stroke-width="4" stroke-linecap="butt" stroke-linejoin="round"/>
-<rect id="u09kvs_z6p1sensor" x="98" y="211" width="20" height="13" rx="2" fill="#909fa8" stroke="#3a4a56" stroke-width="1.2"/>
-<text x="276" y="97" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">2</text>
-<path id="u09kvs_z6p2wall" d="M276 183 V213" fill="none" stroke="#3a4a56" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09kvs_z6p2water" d="M276 183 V213" fill="none" stroke="url(#u09kvs_z6field)" stroke-width="4" stroke-linecap="butt" stroke-linejoin="round"/>
-<rect id="u09kvs_z6p2sensor" x="266" y="211" width="20" height="13" rx="2" fill="#909fa8" stroke="#3a4a56" stroke-width="1.2"/>
-<text x="22" y="241" font-size="13" fill="#1a2530" text-anchor="start">p₁ = 80,0 ± 0,4 kPa</text>
-<text x="250" y="241" font-size="13" fill="#1a2530" text-anchor="start">p₂ = 360,0 ± 1,8 kPa</text>
-<path id="u09kvs_z6pitotwall" d="M294 140 H360 Q379 140 379 121 V90" fill="none" stroke="#3a4a56" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09kvs_z6pitotwater" d="M294 140 H360 Q379 140 379 121 V90" fill="none" stroke="url(#u09kvs_z6field)" stroke-width="4" stroke-linecap="butt" stroke-linejoin="round"/>
-<rect id="u09kvs_z6pitotsensor" x="369" y="85" width="20" height="13" rx="2" fill="#909fa8" stroke="#3a4a56" stroke-width="1.2"/>
-<text x="351" y="170" font-size="12" fill="#1565c0" text-anchor="middle">otvor ←</text>
-<text x="195" y="205" font-size="12" fill="#1a2530" text-anchor="middle">Svi tlakovi: apsolutni.</text>
-</g>
-</g>
+  <title id="u09kvs_title">Skice vježbi kompresibilnog idealnog toka</title>
+  <desc id="u09kvs_desc">Z1: mirujući helij i dva smjera zvuka. Z2: otvoreni kružni vod s poprečnom kotom promjera. Z3: nepomične mjerne točke A i B udaljene 1,20 m, različita vremena putovanja uzvodno i nizvodno. Z4 i Z5: otvoreni izlazi konvergentnih sapnica; vanjski tok nije prikazan. Z6: prikaz mjernog dijela kanala, normalni val nije stijenka; statički priključci prolaze kroz stvarne otvore, Pitotova sonda desno od vala otvorena je prema dotoku. Ukupni tlak prije vala mjeri se u uzvodnoj mirnoj komori izvan prikaza. Shematske debljine stijenki i mjernih vodova.</desc>
+  <defs>
+    <pattern id="u09kvs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u09kvs_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u09kvs_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u09kvs_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs>
+      <marker id="u09kvs_sound" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+    </defs>
+    <g id="u09kvs_z1" transform="translate(28 24)">
+      <text x="31" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z1</text>
+      <text x="59" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Zvuk u mirujućem heliju</text>
+      <text x="223" y="68" font-size="14" fill="#263746" text-anchor="middle">T = 300 K; v = 0</text>
+      <rect id="u09kvs_z1ductgas" x="49" y="102" width="348" height="76" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+      <rect id="u09kvs_z1ducttop" x="49" y="95" width="348" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u09kvs_z1ductbottom" x="49" y="178" width="348" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="66" y1="140" x2="380" y2="140" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
+      <circle id="u09kvs_z1origin" cx="223" cy="140" r="5" fill="#356b83" />
+      <text x="223" y="163" font-size="14" fill="#263746" text-anchor="middle">O</text>
+      <path id="u09kvs_z1left" d="M196 140 L118 140" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_sound)" />
+      <text x="157.0" y="129" font-size="14" fill="#263746" text-anchor="middle">−a</text>
+      <path id="u09kvs_z1right" d="M250 140 L328 140" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_sound)" />
+      <text x="289.0" y="129" font-size="14" fill="#263746" text-anchor="middle">+a</text>
+      <path id="u09kvs_z1axis" d="M341 209 L395 209" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_sound)" />
+      <text x="368.0" y="198" font-size="14" fill="#263746" text-anchor="middle">x</text>
+      <text x="61" y="219" font-size="14" fill="#263746" text-anchor="start">Poremećaj putuje u oba smjera.</text>
+    </g>
+    <g id="u09kvs_z2" transform="translate(486 24)">
+      <text x="31" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z2</text>
+      <text x="59" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Machov broj u kružnom vodu</text>
+      <text x="223" y="66" font-size="14" fill="#263746" text-anchor="middle">T = 20 °C; Q = 2,0 m³/s (lokalno)</text>
+      <rect id="u09kvs_z2ductgas" x="59" y="110" width="270" height="70" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+      <rect id="u09kvs_z2ducttop" x="59" y="103" width="270" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u09kvs_z2ductbottom" x="59" y="180" width="270" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <path id="u09kvs_z2flow" d="M117 145 L221 145" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+      <text x="169.0" y="136" font-size="14" fill="#263746" text-anchor="middle">v = Q/A</text>
+      <line x1="335" y1="110" x2="364" y2="110" stroke="#657781" stroke-width="1" />
+      <line x1="335" y1="180" x2="364" y2="180" stroke="#657781" stroke-width="1" />
+      <line x1="353" y1="110" x2="363" y2="110" stroke="#657781" stroke-width="1.2" />
+      <line x1="353" y1="180" x2="363" y2="180" stroke="#657781" stroke-width="1.2" />
+      <path id="u09kvs_z2diameter" d="M358 110 L358 180" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09kvs_dim)" marker-end="url(#u09kvs_dim)" />
+      <text x="337" y="93" font-size="14" fill="#263746" text-anchor="middle">D = 0,20 m</text>
+      <text x="194" y="219" font-size="14" fill="#263746" text-anchor="middle">Uzdužni presjek; kružni vod.</text>
+    </g>
+    <g id="u09kvs_z3" transform="translate(28 286)">
+      <text x="31" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z3</text>
+      <text x="59" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Dva smjera akustičkog mjerenja</text>
+      <rect id="u09kvs_z3ductgas" x="36" y="91" width="374" height="89" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+      <rect id="u09kvs_z3ducttop" x="36" y="84" width="374" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u09kvs_z3ductbottom" x="36" y="180" width="374" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line id="u09kvs_z3Asection" x1="90" y1="91" x2="90" y2="180" stroke="#356b83" stroke-width="1" stroke-dasharray="3 4" />
+      <text x="90" y="78" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">A</text>
+      <line id="u09kvs_z3Bsection" x1="350" y1="91" x2="350" y2="180" stroke="#356b83" stroke-width="1" stroke-dasharray="3 4" />
+      <text x="350" y="78" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">B</text>
+      <path id="u09kvs_z3downstream" d="M106 123 L334 123" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_sound)" />
+      <text x="220.0" y="112" font-size="14" fill="#263746" text-anchor="middle">tAB = 3,00 ms</text>
+      <path id="u09kvs_z3upstream" d="M334 164 L106 164" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_sound)" />
+      <text x="220.0" y="153" font-size="14" fill="#263746" text-anchor="middle">tBA = 4,00 ms</text>
+      <path id="u09kvs_z3flow" d="M167 61 L263 61" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+      <text x="215.0" y="52" font-size="14" fill="#263746" text-anchor="middle">v</text>
+      <line x1="90" y1="187" x2="90" y2="218" stroke="#657781" stroke-width="1" />
+      <line x1="350" y1="187" x2="350" y2="218" stroke="#657781" stroke-width="1" />
+      <line x1="90" y1="209" x2="90" y2="219" stroke="#657781" stroke-width="1.2" />
+      <line x1="350" y1="209" x2="350" y2="219" stroke="#657781" stroke-width="1.2" />
+      <path id="u09kvs_z3length" d="M90 214 L350 214" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09kvs_dim)" marker-end="url(#u09kvs_dim)" />
+      <text x="220.0" y="231" font-size="13" fill="#263746" text-anchor="middle">L = 1,20 m</text>
+    </g>
+    <g id="u09kvs_z4" transform="translate(486 286)">
+      <text x="31" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z4</text>
+      <text x="59" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Protutlak i izlazni tlak</text>
+      <text x="23" y="65" font-size="14" fill="#263746" text-anchor="start">p₀,M = 7,00 bar</text>
+      <text x="238" y="65" font-size="14" fill="#263746" text-anchor="start">pₐₜₘ = 1,00 bar(abs)</text>
+      <path id="u09kvs_z4gas" d="M38 97 H120 C185 97 223 125 300 125 L300 161 C223 161 185 189 120 189 H38 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+      <path id="u09kvs_z4top" d="M38 97 H120 C185 97 223 125 300 125 L300 118 C223 118 185 90 120 90 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
+      <path id="u09kvs_z4bottom" d="M38 189 H120 C185 189 223 161 300 161 L300 168 C223 168 185 196 120 196 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
+      <line id="u09kvs_z4exit" x1="300" y1="118" x2="300" y2="168" stroke="#356b83" stroke-width="1.3" stroke-dasharray="4 4" />
+      <path d="M61 143 L102 143" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+      <text x="81.5" y="134" font-size="14" fill="#263746" text-anchor="middle">v</text>
+      <path id="u09kvs_z4outflow" d="M262 143 L339 143" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+      <text x="52" y="177" font-size="13" fill="#263746" text-anchor="start">iz mirne komore</text>
+      <text x="300" y="102" font-size="14" fill="#263746" text-anchor="middle">e: pₑ, Maₑ</text>
+      <text x="354" y="173" font-size="13" fill="#263746" text-anchor="middle">pᵦ,M (bar):</text>
+      <text x="354" y="192" font-size="13" fill="#263746" text-anchor="middle">I: 4,00; II: 3,00</text>
+      <text x="223" y="230" font-size="12" fill="#263746" text-anchor="middle">Vanjski tok nije prikazan; izlaz je najmanji presjek.</text>
+    </g>
+    <g id="u09kvs_z5" transform="translate(28 548)">
+      <text x="31" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z5</text>
+      <text x="59" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Provjera stvarnog otvora sapnice</text>
+      <text x="23" y="64" font-size="14" fill="#263746" text-anchor="start">p₀ = 600 kPa(abs); T₀ = 300 K</text>
+      <path id="u09kvs_z5gas" d="M38 97 H120 C185 97 223 125 300 125 L300 161 C223 161 185 189 120 189 H38 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+      <path id="u09kvs_z5top" d="M38 97 H120 C185 97 223 125 300 125 L300 118 C223 118 185 90 120 90 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
+      <path id="u09kvs_z5bottom" d="M38 189 H120 C185 189 223 161 300 161 L300 168 C223 168 185 196 120 196 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
+      <line id="u09kvs_z5exit" x1="300" y1="118" x2="300" y2="168" stroke="#356b83" stroke-width="1.3" stroke-dasharray="4 4" />
+      <path d="M61 143 L102 143" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+      <text x="81.5" y="134" font-size="14" fill="#263746" text-anchor="middle">v</text>
+      <path id="u09kvs_z5outflow" d="M262 143 L339 143" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+      <text x="52" y="178" font-size="13" fill="#263746" text-anchor="start">iz napojne komore</text>
+      <line x1="300" y1="125" x2="335" y2="89" stroke="#657781" stroke-width="1" />
+      <text x="280" y="83" font-size="14" fill="#263746" text-anchor="start">Ag = 48,0 mm²</text>
+      <text x="326" y="184" font-size="13" fill="#263746" text-anchor="start">pᵦ = 100</text>
+      <text x="335" y="201" font-size="13" fill="#263746" text-anchor="start">kPa(abs)</text>
+      <text x="31" y="213" font-size="13" fill="#263746" text-anchor="start">ṁ = 0,0595 kg/s; An = 50,0 mm² (nazivno)</text>
+      <text x="223" y="235" font-size="12" fill="#263746" text-anchor="middle">Ag je izmjereni slobodni otvor; vanjski tok nije prikazan.</text>
+    </g>
+    <g id="u09kvs_z6" transform="translate(486 548)">
+      <text x="31" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z6</text>
+      <text x="59" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Mjerenja prije i poslije vala</text>
+      <text x="22" y="59" font-size="14" fill="#263746" text-anchor="start">p₀₁ = 626 ± 4 kPa</text>
+      <text x="22" y="76" font-size="13" fill="#263746" text-anchor="start">iz mirne napojne komore</text>
+      <text x="251" y="59" font-size="14" fill="#263746" text-anchor="start">p₀₂ = 451 ± 4 kPa</text>
+      <text x="251" y="76" font-size="13" fill="#263746" text-anchor="start">podzvučna Pitotova sonda</text>
+      <defs />
+      <rect id="u09kvs_z6gas" x="28" y="109" width="390" height="74" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+      <rect id="u09kvs_z6top28" x="28" y="102" width="347" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u09kvs_z6top383" x="383" y="102" width="35" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u09kvs_z6bottom28" x="28" y="183" width="76" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u09kvs_z6bottom112" x="112" y="183" width="160" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u09kvs_z6bottom280" x="280" y="183" width="138" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line id="u09kvs_z6shock" x1="209" y1="109" x2="209" y2="183" stroke="#356b83" stroke-width="2.5" stroke-dasharray="6 4" />
+      <text x="209" y="98" font-size="14" fill="#263746" text-anchor="middle">val</text>
+      <path id="u09kvs_z6before" d="M50 142 L136 142" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+      <text x="93.0" y="133" font-size="14" fill="#263746" text-anchor="middle">M₁ &gt; 1</text>
+      <path id="u09kvs_z6after" d="M236 163 L273 163" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+      <text x="252" y="146" font-size="13" fill="#263746" text-anchor="middle">M₂ &lt; 1</text>
+      <text x="108" y="97" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">1</text>
+      <path id="u09kvs_z6p1wall" d="M108 183 V213" fill="none" stroke="#3a4a56" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+      <path id="u09kvs_z6p1water" d="M108 183 V213" fill="none" stroke="#dcebf1" stroke-width="4" stroke-linecap="butt" stroke-linejoin="round" />
+      <rect id="u09kvs_z6p1sensor" x="98" y="211" width="20" height="13" rx="2" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+      <text x="276" y="97" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">2</text>
+      <path id="u09kvs_z6p2wall" d="M276 183 V213" fill="none" stroke="#3a4a56" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+      <path id="u09kvs_z6p2water" d="M276 183 V213" fill="none" stroke="#dcebf1" stroke-width="4" stroke-linecap="butt" stroke-linejoin="round" />
+      <rect id="u09kvs_z6p2sensor" x="266" y="211" width="20" height="13" rx="2" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+      <text x="22" y="241" font-size="13" fill="#263746" text-anchor="start">p₁ = 80,0 ± 0,4 kPa</text>
+      <text x="250" y="241" font-size="13" fill="#263746" text-anchor="start">p₂ = 360,0 ± 1,8 kPa</text>
+      <path id="u09kvs_z6pitotwall" d="M294 140 H360 Q379 140 379 121 V90" fill="none" stroke="#3a4a56" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+      <path id="u09kvs_z6pitotwater" d="M294 140 H360 Q379 140 379 121 V90" fill="none" stroke="#dcebf1" stroke-width="4" stroke-linecap="butt" stroke-linejoin="round" />
+      <rect id="u09kvs_z6pitotsensor" x="369" y="85" width="20" height="13" rx="2" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+      <text x="351" y="170" font-size="12" fill="#263746" text-anchor="middle">otvor ←</text>
+      <text x="195" y="205" font-size="12" fill="#263746" text-anchor="middle">Svi tlakovi: apsolutni.</text>
+    </g>
+  </g>
 </svg>

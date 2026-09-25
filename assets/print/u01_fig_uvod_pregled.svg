@@ -1,125 +1,117 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 460" role="img" aria-labelledby="u01fup_title u01fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-<title id="u01fup_title">Osnove fluida i Pascalov zakon</title><desc id="u01fup_desc">Tri postojeća panela: kontinuum i tlačne sile na mali element, gustoća pri jednakim volumenima te povezani klipovi Pascalove preše. Tlak je skalar; strelice su sile na označeno tijelo.</desc>
-<defs>
-<linearGradient id="u01fup_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u01fup_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u01fup_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u01fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u01fup_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u01fup_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u01fup_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="980" height="460" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
-Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
-Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
-<defs>
-<marker id="u01fup_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
-<marker id="u01fup_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
-<marker id="u01fup_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u01fup_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
-</defs>
-<defs><linearGradient id="u01fup_metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient></defs>
-<g id="u01fup_continuum" transform="translate(30 30)">
-<rect x="0" y="0" width="290" height="400" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
-<rect x="0" y="0" width="290" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="21" width="290" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="145.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">1. Kontinuumski model</text>
-<text x="145" y="56" font-size="11" fill="#1565c0" text-anchor="middle">Fluid kao kontinuirano polje tlaka</text>
-<defs><linearGradient id="u01fup_tankfield" gradientUnits="userSpaceOnUse" x1="0" y1="110" x2="0" y2="270"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<rect x="43" y="110" width="204" height="160" rx="0" fill="url(#u01fup_tankfield)" stroke="none" stroke-width="1.2"/>
-<line x1="43" y1="110" x2="247" y2="110" stroke="#1565c0" stroke-width="2"/>
-<rect x="35" y="70" width="8" height="208" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="247" y="70" width="8" height="208" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="35" y="270" width="220" height="8" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u01fup_element" x="126" y="177" width="38" height="38" rx="0" fill="none" stroke="#1565c0" stroke-width="1.2"/>
-<path id="u01fup_elementForce0" d="M102 196 L126 196" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u01fup_pressureMarker)"/>
-<path id="u01fup_elementForce1" d="M188 196 L164 196" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u01fup_pressureMarker)"/>
-<path id="u01fup_elementForce2" d="M145 153 L145 177" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u01fup_pressureMarker)"/>
-<path id="u01fup_elementForce3" d="M145 239 L145 215" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u01fup_pressureMarker)"/>
-<text x="145" y="200" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">p</text>
-<text x="145" y="291" font-size="10" fill="#3a4a56" text-anchor="middle">Strelice: sile okoline na mali element.</text>
-<text x="18" y="313" font-size="11" fill="#3a4a56" text-anchor="start">• tlak u točki jednak je u svim smjerovima</text>
-<text x="18" y="333" font-size="11" fill="#3a4a56" text-anchor="start">• p je skalarno polje p(x, y, z)</text>
-<text x="18" y="353" font-size="11" fill="#3a4a56" text-anchor="start">• izotropnost ne znači jednak tlak svugdje</text>
-<rect x="18" y="370" width="254" height="23" rx="4" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
-<text x="145" y="386" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="700">Jednolik tlak na plohi: p = Fₙ / A</text>
-</g>
-<g id="u01fup_properties" transform="translate(340 30)">
-<rect x="0" y="0" width="300" height="400" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
-<rect x="0" y="0" width="300" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="21" width="300" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="150.0" y="21" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">2. Osnovne veličine fluida</text>
-<text x="150" y="56" font-size="11" fill="#3a4a56" text-anchor="middle">Jednak volumen, različita masa i težina</text>
-<defs><linearGradient id="u01fup_property0" gradientUnits="userSpaceOnUse" x1="0" y1="118" x2="0" y2="242"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
-<rect x="48" y="118" width="60" height="124" rx="0" fill="url(#u01fup_property0)" stroke="none" stroke-width="1.2"/>
-<line x1="48" y1="118" x2="108" y2="118" stroke="#1565c0" stroke-width="2"/>
-<rect x="40" y="88" width="8" height="162" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="108" y="88" width="8" height="162" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="40" y="242" width="76" height="8" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<text x="78" y="182" font-size="14" fill="#b7600c" text-anchor="middle">ulje</text>
-<text x="78" y="207" font-size="11" fill="#3a4a56" text-anchor="middle">V = 1 L</text>
-<text x="78" y="272" font-size="10" fill="#3a4a56" text-anchor="middle">ρ = 860 kg/m³</text>
-<defs><linearGradient id="u01fup_property1" gradientUnits="userSpaceOnUse" x1="0" y1="118" x2="0" y2="242"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<rect x="196" y="118" width="60" height="124" rx="0" fill="url(#u01fup_property1)" stroke="none" stroke-width="1.2"/>
-<line x1="196" y1="118" x2="256" y2="118" stroke="#1565c0" stroke-width="2"/>
-<rect x="188" y="88" width="8" height="162" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="256" y="88" width="8" height="162" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="188" y="242" width="76" height="8" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<text x="226" y="182" font-size="14" fill="#1565c0" text-anchor="middle">voda</text>
-<text x="226" y="207" font-size="11" fill="#3a4a56" text-anchor="middle">V = 1 L</text>
-<text x="226" y="272" font-size="10" fill="#3a4a56" text-anchor="middle">ρ = 1000 kg/m³</text>
-<rect x="121" y="145" width="59" height="53" rx="5" fill="#fff0ed" stroke="#c0392b" stroke-width="1.2"/>
-<text x="150" y="166" font-size="11" fill="#c0392b" text-anchor="middle">ΔG ≈</text>
-<text x="150" y="184" font-size="12" fill="#c0392b" text-anchor="middle" font-weight="700">1,37 N</text>
-<rect x="10" y="296" width="280" height="23" rx="4" fill="white" stroke="#b7600c" stroke-width="1" stroke-opacity="0.55" />
-<text x="150" y="312" font-size="12" fill="#b7600c" text-anchor="middle" font-weight="700">ρ = m / V (gustoća)</text>
-<rect x="10" y="322" width="280" height="23" rx="4" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-<text x="150" y="338" font-size="12" fill="#1e8449" text-anchor="middle" font-weight="700">γ = ρg (specifična težina)</text>
-<rect x="10" y="348" width="280" height="23" rx="4" fill="white" stroke="#8e44ad" stroke-width="1" stroke-opacity="0.55" />
-<text x="150" y="364" font-size="12" fill="#8e44ad" text-anchor="middle" font-weight="700">sᵣ = ρ / ρᵥ (relativna gustoća)</text>
-<text x="150" y="388" font-size="10" fill="#3a4a56" text-anchor="middle">sᵣ nema jedinicu; γ ima jedinicu N/m³.</text>
-</g>
-<g id="u01fup_pascal" transform="translate(660 30)">
-<rect x="0" y="0" width="290" height="400" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
-<rect x="0" y="0" width="290" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="21" width="290" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="145.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">3. Pascalov zakon</text>
-<text x="145" y="56" font-size="11" fill="#1565c0" text-anchor="middle">Jednak porast tlaka u povezanom fluidu</text>
-<path id="u01fup_pressouter0" d="M40.5 106 V220 H253.0 V106" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M40.5 106 V220 H253.0 V106" fill="none" stroke="white" stroke-width="9" />
-<path d="M40.5 106 V220 H253.0 V106" fill="none" stroke="url(#u01fup_hatch)" stroke-width="9" />
-<path id="u01fup_pressouter1" d="M75.5 106 V202 H163.0 V106" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M75.5 106 V202 H163.0 V106" fill="none" stroke="white" stroke-width="9" />
-<path d="M75.5 106 V202 H163.0 V106" fill="none" stroke="url(#u01fup_hatch)" stroke-width="9" />
-<defs><linearGradient id="u01fup_pressfield" gradientUnits="userSpaceOnUse" x1="0" y1="140" x2="0" y2="220"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u01fup_pressfluid" d="M40.5 140 H75.5 V202 H163.0 V140 H253.0 V220 H40.5 Z" fill="url(#u01fup_pressfield)" stroke="none" stroke-width="1.8" />
-<path id="u01fup_presswall0" d="M40.5 106 V220 H253.0 V106" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<path id="u01fup_presswall1" d="M75.5 106 V202 H163.0 V106" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<rect id="u01fup_presspiston0" x="40.5" y="124" width="35" height="16" rx="0" fill="url(#u01fup_metal)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u01fup_pressrod0" x="52.75" y="78" width="10.5" height="46" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="40.5" y="127" width="3" height="10" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect x="72.5" y="127" width="3" height="10" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect id="u01fup_presspiston1" x="163.0" y="124" width="90" height="16" rx="0" fill="url(#u01fup_metal)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u01fup_pressrod1" x="198.0" y="78" width="20" height="46" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="163.0" y="127" width="3" height="10" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect x="250.0" y="127" width="3" height="10" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<path id="u01fup_input" d="M58 62 L58 77" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01fup_forceMarker)"/>
-<text x="72" y="78" font-size="12" fill="#c0392b" text-anchor="start">F₁</text>
-<path id="u01fup_output" d="M208 187 L208 142" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u01fup_reactionMarker)"/>
-<text x="224" y="180" font-size="12" fill="#1e8449" text-anchor="start">F₂</text>
-<text x="145" y="210" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="700">p</text>
-<text x="145" y="242" font-size="10" fill="#3a4a56" text-anchor="middle">F₁: na mali klip; F₂: ulje na veliki klip.</text>
-<rect x="10" y="252" width="270" height="23" rx="4" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
-<text x="145" y="268" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">p = F₁/A₁ = F₂/A₂</text>
-<rect x="10" y="280" width="270" height="23" rx="4" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-<text x="145" y="296" font-size="13" fill="#1e8449" text-anchor="middle" font-weight="700">F₂ = (A₂/A₁) F₁</text>
-<rect x="10" y="308" width="270" height="23" rx="4" fill="white" stroke="#b7600c" stroke-width="1" stroke-opacity="0.55" />
-<text x="145" y="324" font-size="13" fill="#b7600c" text-anchor="middle" font-weight="700">A₁s₁ = A₂s₂</text>
-<rect x="10" y="336" width="270" height="23" rx="4" fill="white" stroke="#8e44ad" stroke-width="1" stroke-opacity="0.55" />
-<text x="145" y="352" font-size="13" fill="#8e44ad" text-anchor="middle" font-weight="700">F₁s₁ = F₂s₂</text>
-<text x="145" y="380" font-size="10" fill="#3a4a56" text-anchor="middle">Zanemarene visine, gubici i stlačivost.</text>
-</g>
-</g>
+  <title id="u01fup_title">Osnove fluida i Pascalov zakon</title>
+  <desc id="u01fup_desc">Tri postojeća panela: kontinuum i tlačne sile na mali element, gustoća pri jednakim volumenima te povezani klipovi Pascalove preše. Tlak je skalar; strelice su sile na označeno tijelo.</desc>
+  <defs>
+    <pattern id="u01fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u01fup_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u01fup_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#356b83" />
+    </marker>
+    <marker id="u01fup_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs>
+      <marker id="u01fup_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u01fup_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u01fup_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u01fup_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
+      </marker>
+    </defs>
+    <defs />
+    <g id="u01fup_continuum" transform="translate(30 30)">
+      <text x="145.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">1. Kontinuumski model</text>
+      <text x="145" y="56" font-size="11" fill="#263746" text-anchor="middle">Fluid kao kontinuirano polje tlaka</text>
+      <defs />
+      <rect x="43" y="110" width="204" height="160" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+      <line x1="43" y1="110" x2="247" y2="110" stroke="#356b83" stroke-width="2" />
+      <rect x="35" y="70" width="8" height="208" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="247" y="70" width="8" height="208" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="35" y="270" width="220" height="8" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u01fup_element" x="126" y="177" width="38" height="38" rx="0" fill="none" stroke="#356b83" stroke-width="1.2" />
+      <path id="u01fup_elementForce0" d="M102 196 L126 196" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01fup_pressureMarker)" />
+      <path id="u01fup_elementForce1" d="M188 196 L164 196" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01fup_pressureMarker)" />
+      <path id="u01fup_elementForce2" d="M145 153 L145 177" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01fup_pressureMarker)" />
+      <path id="u01fup_elementForce3" d="M145 239 L145 215" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01fup_pressureMarker)" />
+      <text x="145" y="200" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">p</text>
+      <text x="145" y="291" font-size="10" fill="#263746" text-anchor="middle">Strelice: sile okoline na mali element.</text>
+      <text x="18" y="313" font-size="11" fill="#263746" text-anchor="start">• tlak u točki jednak je u svim smjerovima</text>
+      <text x="18" y="333" font-size="11" fill="#263746" text-anchor="start">• p je skalarno polje p(x, y, z)</text>
+      <text x="18" y="353" font-size="11" fill="#263746" text-anchor="start">• izotropnost ne znači jednak tlak svugdje</text>
+      <text x="145" y="386" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">Jednolik tlak na plohi: p = Fₙ / A</text>
+    </g>
+    <g id="u01fup_properties" transform="translate(340 30)">
+      <text x="150.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">2. Osnovne veličine fluida</text>
+      <text x="150" y="56" font-size="11" fill="#263746" text-anchor="middle">Jednak volumen, različita masa i težina</text>
+      <defs />
+      <rect x="48" y="118" width="60" height="124" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
+      <line x1="48" y1="118" x2="108" y2="118" stroke="#356b83" stroke-width="2" />
+      <rect x="40" y="88" width="8" height="162" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="108" y="88" width="8" height="162" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="40" y="242" width="76" height="8" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <text x="78" y="182" font-size="14" fill="#263746" text-anchor="middle">ulje</text>
+      <text x="78" y="207" font-size="11" fill="#263746" text-anchor="middle">V = 1 L</text>
+      <text x="78" y="272" font-size="10" fill="#263746" text-anchor="middle">ρ = 860 kg/m³</text>
+      <defs />
+      <rect x="196" y="118" width="60" height="124" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+      <line x1="196" y1="118" x2="256" y2="118" stroke="#356b83" stroke-width="2" />
+      <rect x="188" y="88" width="8" height="162" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="256" y="88" width="8" height="162" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="188" y="242" width="76" height="8" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <text x="226" y="182" font-size="14" fill="#263746" text-anchor="middle">voda</text>
+      <text x="226" y="207" font-size="11" fill="#263746" text-anchor="middle">V = 1 L</text>
+      <text x="226" y="272" font-size="10" fill="#263746" text-anchor="middle">ρ = 1000 kg/m³</text>
+      <text x="150" y="166" font-size="11" fill="#263746" text-anchor="middle">ΔG ≈</text>
+      <text x="150" y="184" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">1,37 N</text>
+      <text x="150" y="312" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">ρ = m / V (gustoća)</text>
+      <text x="150" y="338" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">γ = ρg (specifična težina)</text>
+      <text x="150" y="364" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">sᵣ = ρ / ρᵥ (relativna gustoća)</text>
+      <text x="150" y="388" font-size="10" fill="#263746" text-anchor="middle">sᵣ nema jedinicu; γ ima jedinicu N/m³.</text>
+    </g>
+    <g id="u01fup_pascal" transform="translate(660 30)">
+      <text x="145.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">3. Pascalov zakon</text>
+      <text x="145" y="56" font-size="11" fill="#263746" text-anchor="middle">Jednak porast tlaka u povezanom fluidu</text>
+      <path id="u01fup_pressouter0" d="M40.5 106 V220 H253.0 V106" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
+      <path d="M40.5 106 V220 H253.0 V106" fill="none" stroke="#c5cdd3" stroke-width="9" />
+      <path d="M40.5 106 V220 H253.0 V106" fill="none" stroke="url(#u01fup_hatch)" stroke-width="9" />
+      <path id="u01fup_pressouter1" d="M75.5 106 V202 H163.0 V106" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
+      <path d="M75.5 106 V202 H163.0 V106" fill="none" stroke="#c5cdd3" stroke-width="9" />
+      <path d="M75.5 106 V202 H163.0 V106" fill="none" stroke="url(#u01fup_hatch)" stroke-width="9" />
+      <defs />
+      <path id="u01fup_pressfluid" d="M40.5 140 H75.5 V202 H163.0 V140 H253.0 V220 H40.5 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+      <path id="u01fup_presswall0" d="M40.5 106 V220 H253.0 V106" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+      <path id="u01fup_presswall1" d="M75.5 106 V202 H163.0 V106" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+      <rect id="u01fup_presspiston0" x="40.5" y="124" width="35" height="16" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u01fup_pressrod0" x="52.75" y="78" width="10.5" height="46" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="40.5" y="127" width="3" height="10" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+      <rect x="72.5" y="127" width="3" height="10" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+      <rect id="u01fup_presspiston1" x="163.0" y="124" width="90" height="16" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u01fup_pressrod1" x="198.0" y="78" width="20" height="46" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="163.0" y="127" width="3" height="10" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+      <rect x="250.0" y="127" width="3" height="10" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+      <path id="u01fup_input" d="M58 62 L58 77" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01fup_forceMarker)" />
+      <text x="72" y="78" font-size="12" fill="#263746" text-anchor="start">F₁</text>
+      <path id="u01fup_output" d="M208 187 L208 142" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01fup_reactionMarker)" />
+      <text x="224" y="180" font-size="12" fill="#263746" text-anchor="start">F₂</text>
+      <text x="145" y="210" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">p</text>
+      <text x="145" y="242" font-size="10" fill="#263746" text-anchor="middle">F₁: na mali klip; F₂: ulje na veliki klip.</text>
+      <text x="145" y="268" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">p = F₁/A₁ = F₂/A₂</text>
+      <text x="145" y="296" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F₂ = (A₂/A₁) F₁</text>
+      <text x="145" y="324" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">A₁s₁ = A₂s₂</text>
+      <text x="145" y="352" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F₁s₁ = F₂s₂</text>
+      <text x="145" y="380" font-size="10" fill="#263746" text-anchor="middle">Zanemarene visine, gubici i stlačivost.</text>
+    </g>
+  </g>
 </svg>

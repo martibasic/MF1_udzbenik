@@ -9,6 +9,8 @@ import xml.etree.ElementTree as ET
 from check_u10_sketch_geometry import check, node, path, line, delta, distance_to_path
 from check_u13_sketch_geometry import close, rect
 
+from sketch_style import check_uniform_fluid
+
 ROOT = Path(__file__).resolve().parents[1] / 'assets' / 'print'
 
 
@@ -30,9 +32,7 @@ def connected_fluid(root,prefix,routes):
     check(element.get('d').count('M')==1 and element.get('d').count('Z')==1,
           prefix+': jedna povezana fluidna domena')
     check(element.get('stroke')=='none',prefix+': ispuna ne dodaje kapu na otvor')
-    grad=node(root,element.get('fill')[5:-1])
-    check(grad.get('gradientUnits')=='userSpaceOnUse' and grad.get('x1')==grad.get('x2'),
-          prefix+': jednak prostorni gradijent, bez zakrpa na spojevima')
+    check_uniform_fluid(element, 'fill')
     walls=[path(e) for e in root.iter() if re.fullmatch(re.escape(prefix)+r'wall\d+',e.get('id',''))]
     check(bool(walls),prefix+': stvarne stijenke moraju biti označene')
     for w in walls:

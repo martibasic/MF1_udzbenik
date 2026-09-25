@@ -1,15 +1,29 @@
 {
   "u01_fig_gustoca_sr.svg": {
-    "rows": [["mini", "standard"]],
+    "rows": [
+      [
+        "mini",
+        "standard"
+      ]
+    ],
     "reason": "Jednostavna posuda uz usporedbu dvaju fluida; isti fizički font u obje podslike."
   },
   "u14_fig_pi_buckingham.svg": {
-    "rows": [["wide"]],
+    "rows": [
+      [
+        "wide"
+      ]
+    ],
     "preserve_table": true,
     "reason": "Dimenzijska matrica mora zadržati odnose redaka i stupaca."
   },
   "u07_vjezbe_skice.svg": {
-    "text_offsets_pt": {"47": [0, 22]},
+    "text_offsets_pt": {
+      "47": [
+        0,
+        22
+      ]
+    },
     "caption_anchor_panel": 5,
     "reason": "Dugi zadnji redak zajedničke legende treba dodatni redak na 9 pt."
   },
@@ -18,24 +32,227 @@
     "reason": "Zajednička legenda i opis ostaju uz posljednji red skica Z5 i Z6."
   },
   "u09_val2_slobodni_mlaz.svg": {
-    "text_tables": [[23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38]],
+    "text_tables": [
+      [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ]
+    ],
     "reason": "Tablica visine, brzine, vremena i dometa čuva četiri povezana stupca."
   },
   "u14_fig_odluka.svg": {
-    "spatial_text": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+    "spatial_text": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
     "reason": "Svako pitanje i odgovor ostaju na istoj razini uz pripadajuću strelicu."
   },
   "u12_vjezbe_skice.svg": {
-    "header_text": [58],
-    "reason": "Opis vodoravnih dovoda stoji iznad cijevi, izvan krute stijenke."
+    "header_text": [
+      58
+    ],
+    "reason": "Opis dovoda stoji iznad cijevi; napomena uz Z2 ispod koordinatnih osi.",
+    "footer_text": [
+      17
+    ],
+    "text_offsets_pt": {
+      "3": [
+        0,
+        -5
+      ]
+    }
   },
   "u05_fig_uvod_pregled.svg": {
-    "footer_text": [44, 45, 46, 47],
-    "text_offsets_pt": {"9": [-35, 0]},
+    "footer_text": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "text_offsets_pt": {
+      "9": [
+        -35,
+        0
+      ]
+    },
     "reason": "Objašnjenja ispod sile izdvojena su ispod crteža; ne smiju prelaziti preko stijenke."
   },
   "u04_fig_uvod_pregled.svg": {
-    "canvas_insets_pt": {"0": {"right": 9}, "2": {"right": 9}},
+    "canvas_insets_pt": {
+      "0": {
+        "right": 9
+      },
+      "2": {
+        "right": 9
+      }
+    },
     "reason": "Dodatni prostor desno za oznake razina h_R i h_0 izvan krute stijenke."
+  },
+  "u05_val1_pravokutna_zaklopka.svg": {
+    "rows": [
+      [
+        "standard",
+        "mini"
+      ]
+    ],
+    "canvas_insets_pt": {
+      "0": {
+        "left": 48
+      }
+    },
+    "text_offsets_pt": {
+      "37": [
+        -72,
+        0
+      ],
+      "38": [
+        -72,
+        0
+      ],
+      "39": [
+        -72,
+        0
+      ],
+      "40": [
+        -72,
+        0
+      ],
+      "7": [
+        0,
+        -2
+      ],
+      "41": [
+        0,
+        -5
+      ]
+    },
+    "reason": "Širi geometrijski panel i prostor lijevo za kote; odvojeni pogled na plohu ispod dna spremnika."
+  },
+  "u11_val2_mlaznica_prirubnica.svg": {
+    "text_offsets_pt": {
+      "11": [
+        20,
+        0
+      ]
+    },
+    "canvas_insets_pt": {
+      "0": {
+        "right": 25
+      }
+    },
+    "reason": "Oznaka sile ostaje desno od mjerne ploče i uz pripadnu strelicu."
+  },
+  "u12_ch2_pelton_rotor_moment.svg": {
+    "footer_text": [
+      14
+    ],
+    "reason": "Opis zajedničkog mjerila trokuta brzina stoji ispod crteža, izvan referentne kružnice rotora.",
+    "header_text": [
+      11,
+      12
+    ],
+    "text_offsets_pt": {
+      "10": [
+        -50,
+        0
+      ],
+      "7": [
+        -50,
+        8
+      ]
+    }
+  },
+  "u03_val1_diferencijalni_manometar.svg": {
+    "rows": [
+      [
+        "wide"
+      ],
+      [
+        "wide"
+      ]
+    ],
+    "text_offsets_pt": {
+      "29": [
+        0,
+        -8
+      ],
+      "30": [
+        4,
+        12
+      ],
+      "35": [
+        -5,
+        0
+      ],
+      "36": [
+        0,
+        4
+      ],
+      "37": [
+        -8,
+        0
+      ],
+      "39": [
+        8,
+        0
+      ]
+    },
+    "reason": "Manometar zauzima punu širinu zbog četiri visine i uskih krakova; slijed računa ostaje zaseban povezani panel.",
+    "header_text": [
+      28
+    ],
+    "footer_text": [
+      34
+    ],
+    "canvas_insets_pt": {
+      "0": {
+        "top": 20,
+        "bottom": 18
+      }
+    }
+  },
+  "u04_ch1_rotirajuci_spremnik_paraboloid.svg": {
+    "header_text": [
+      31
+    ],
+    "reason": "Podatak početne mirne razine stoji iznad crteža, izvan stijenke i osi vrtnje."
+  },
+  "u13_mreze_vjezbe_skice.svg": {
+    "canvas_insets_pt": {
+      "2": {
+        "top": 6
+      }
+    },
+    "reason": "Naslov i otpor gornje grane ostaju iznad fizičke širine stijenke cijevi."
   }
 }

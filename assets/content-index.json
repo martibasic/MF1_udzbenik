@@ -1552,7 +1552,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "aa9989a259e981eb59df8f8c1ab5a194e79e47425eaa49ee23210c60c17c4fac",
+      "source_sha256": "c0584f673774e5c6bcdcf1ddff19dd13b03b41f835bff6b03d23151d613aa731",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",
@@ -9085,8 +9085,8 @@
       "kind": "Figure",
       "document": "u11",
       "number": "11.4",
-      "caption": "Dijagram pitanja za prepoznavanje mogućih relevantnih grupa: slobodna površina upućuje na Fr, viskoznost na Re, kapljice na We i Bo, kavitacija na σ, periodičnost na St, a stlačivost na Ma. U jednom problemu može biti važno više grupa.",
-      "alt": "Dijagram pitanja za prepoznavanje mogućih relevantnih grupa: slobodna površina upućuje na Fr, viskoznost na Re, kapljice na We i Bo, kavitacija na σ, periodičnost na St, a stlačivost na Ma. U jednom problemu može biti važno više grupa.",
+      "caption": "Dijagram pitanja za prepoznavanje mogućih relevantnih grupa: slobodna površina upućuje na Fr, viskoznost na Re, kapljice na We i Bo, kavitacija na σ_kav, periodičnost na St, a stlačivost na Ma. U jednom problemu može biti važno više grupa.",
+      "alt": "Dijagram pitanja za prepoznavanje mogućih relevantnih grupa: slobodna površina upućuje na Fr, viskoznost na Re, kapljice na We i Bo, kavitacija na σ_kav, periodičnost na St, a stlačivost na Ma. U jednom problemu može biti važno više grupa.",
       "source": "../assets/print/u14_fig_odluka.svg",
       "type": "wide",
       "variants": {
@@ -9155,8 +9155,8 @@
       "kind": "Figure",
       "document": "u11",
       "number": "11.9",
-      "caption": "Kugla u struji, ilustrativna korelacija iz povezane bilježnice i zasebno označena zadana radna točka. Korelacija se ne izjednačuje sa zadanim podatkom C_D = 0,45 i ne produžuje se kroz krizu otpora.",
-      "alt": "Kugla u struji, ilustrativna korelacija iz povezane bilježnice i zasebno označena zadana radna točka. Korelacija se ne izjednačuje sa zadanim podatkom C_D = 0,45 i ne produžuje se kroz krizu otpora.",
+      "caption": "Kugla u struji, ilustrativna korelacija iz povezane bilježnice i zasebno označena zadana radna točka. Korelacija se ne izjednačuje sa zadanim podatkom C_d = 0,45 i ne produžuje se kroz krizu otpora.",
+      "alt": "Kugla u struji, ilustrativna korelacija iz povezane bilježnice i zasebno označena zadana radna točka. Korelacija se ne izjednačuje sa zadanim podatkom C_d = 0,45 i ne produžuje se kroz krizu otpora.",
       "source": "../assets/print/u14_ch1_kugla_struja.svg",
       "type": "composite",
       "variants": {

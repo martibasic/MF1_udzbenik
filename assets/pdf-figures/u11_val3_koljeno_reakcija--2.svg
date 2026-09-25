@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="447.874pt" height="23pt" viewBox="0 0 447.874 23" role="img"><title>Sila vode na sidreno koljeno</title><defs>
+    <pattern xmlns="http://www.w3.org/2000/svg" id="u11v3_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8"/>
+    </pattern>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u11v3_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u11v3_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u11v3_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83"/>
+    </marker>
+
+
+      <marker xmlns="http://www.w3.org/2000/svg" id="u11v3_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83"/>
+      </marker>
+      <marker xmlns="http://www.w3.org/2000/svg" id="u11v3_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83"/>
+      </marker>
+      <marker xmlns="http://www.w3.org/2000/svg" id="u11v3_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83"/>
+      </marker>
+      <marker xmlns="http://www.w3.org/2000/svg" id="u11v3_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/>
+      </marker>
+
+</defs><g font-family="Arial, Liberation Sans, sans-serif"><g transform="translate(223.937 13.5)"><text data-source-text="28" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">KV: isprekidana granica; uz stijenku se granice podudaraju.</text></g></g></svg>

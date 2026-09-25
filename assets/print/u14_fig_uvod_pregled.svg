@@ -3,84 +3,47 @@
   <desc id="u14fup_desc">Tri panela: lijevo usporedba karakterističnih mehanizama, sredina ključni brojevi Re, Fr, Eu, We i Ma, a desno prijenos koeficijenta otpora iz aerotunela uz jednak Reynoldsov broj i ostale jednake bezdimenzijske uvjete.</desc>
   <defs>
     <marker id="u14fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
   </defs>
-
-  <rect width="980" height="460" fill="#ffffff" />
-
-  <!-- ===================== PANEL 1: dominantna sila ===================== -->
-  <rect x="24" y="28" width="306" height="404" rx="10" fill="white" stroke="#c0392b" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="24" y="28" width="306" height="30" rx="10" fill="white" stroke="none" />
-  <rect x="24" y="50" width="306" height="8" fill="white" stroke="none" />
-  <text x="177" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c0392b">Usporedi mehanizme</text>
-
-  <!-- vaga 1: inercija vs viskoznost -->
-  <text x="44" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56">inercija ↔ viskoznost</text>
-  <rect x="44" y="100" width="133" height="24" fill="#fadbd8" stroke="#c0392b" stroke-width="1" />
-  <rect x="177" y="100" width="133" height="24" fill="#e5e9ec" stroke="#5d6d7e" stroke-width="1" />
-  <text x="177" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#c0392b">Re = ρvL / μ</text>
-
-  <!-- vaga 2: inercija vs gravitacija -->
-  <text x="44" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56">inercija ↔ gravitacija</text>
-  <rect x="44" y="194" width="133" height="24" fill="#fadbd8" stroke="#c0392b" stroke-width="1" />
-  <rect x="177" y="194" width="133" height="24" fill="#f3eafa" stroke="#8e44ad" stroke-width="1" />
-  <text x="177" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#8e44ad">Fr² = v² / (gL)</text>
-
-  <!-- vaga 3: inercija vs napetost -->
-  <text x="44" y="280" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56">inercija ↔ napetost</text>
-  <rect x="44" y="288" width="133" height="24" fill="#fadbd8" stroke="#c0392b" stroke-width="1" />
-  <rect x="177" y="288" width="133" height="24" fill="#eaf3fb" stroke="#1565c0" stroke-width="1" />
-  <text x="177" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#1565c0">We = ρv²L / σ</text>
-
-  <text x="177" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">Parovi su shematski prikaz,</text>
-  <text x="177" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">bez numeričkog mjerila.</text>
-
-  <!-- ===================== PANEL 2: kljucni brojevi ===================== -->
-  <rect x="342" y="28" width="306" height="404" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="342" y="28" width="306" height="30" rx="10" fill="white" stroke="none" />
-  <rect x="342" y="50" width="306" height="8" fill="white" stroke="none" />
-  <text x="495" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">Ključni brojevi</text>
-
-  <rect x="362" y="76" width="266" height="60" rx="6" fill="white" stroke="#c0392b" stroke-width="1" stroke-opacity="0.55" />
-  <text x="378" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#c0392b">Re = vL / ν</text>
-  <text x="378" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">inercija / viskoznost</text>
-
-  <rect x="362" y="144" width="266" height="60" rx="6" fill="white" stroke="#8e44ad" stroke-width="1" stroke-opacity="0.55" />
-  <text x="378" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#8e44ad">Fr = v / √(gL)</text>
-  <text x="378" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">slobodna površina</text>
-
-  <rect x="362" y="212" width="266" height="60" rx="6" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
-  <text x="378" y="240" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#1565c0">Eu = Δp / (ρv²)</text>
-  <text x="378" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">tlak, kavitacija</text>
-
-  <rect x="362" y="280" width="266" height="60" rx="6" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-  <text x="378" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#1e8449">We = ρv²L / σ</text>
-  <text x="378" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">kapljice, mlaz</text>
-
-  <rect x="362" y="348" width="266" height="60" rx="6" fill="#f4f6f7" stroke="#5d6d7e" stroke-width="1.1" />
-  <text x="378" y="376" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#5d6d7e">Ma = v / a</text>
-  <text x="378" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">stlačivost; prag je uvjetan</text>
-
-  <!-- ===================== PANEL 3: aerotunel ===================== -->
-  <rect x="660" y="28" width="296" height="404" rx="10" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="660" y="28" width="296" height="30" rx="10" fill="white" stroke="none" />
-  <rect x="660" y="50" width="296" height="8" fill="white" stroke="none" />
-  <text x="808" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1e8449">Model ↔ prototip (aerotunel)</text>
-
-  <!-- aerotunel kanal -->
-  <rect x="680" y="150" width="256" height="140" fill="#eef6f1"/>
-  <path id="u14fup_tunnelwalls" d="M680 150 H936 M680 290 H936" fill="none" stroke="#3a4a56" stroke-width="2"/>
-  <!-- strujanje -->
-  <line x1="690" y1="180" x2="740" y2="180" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
-  <line x1="690" y1="210" x2="740" y2="210" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
-  <!-- auto silueta -->
-  <path d="M745,278 Q748,250 772,246 L800,224 Q828,216 858,226 L892,250 Q908,256 910,278 Z" fill="#cfd8df" stroke="#3a4a56" stroke-width="1.5" />
-  <circle cx="788" cy="278" r="12" fill="#34495e" />
-  <circle cx="872" cy="278" r="12" fill="#34495e" />
-  <line x1="690" y1="270" x2="740" y2="270" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
-
-  <text x="808" y="338" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#14532d"><tspan font-weight="700">jednak Re + isti ostali uvjeti</tspan></text>
-  <text x="808" y="362" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">→ jednak C_d unutar</text>
-  <text x="808" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#5a6a78">granica odabranoga modela</text>
+  <text x="177" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">Usporedi mehanizme</text>
+  <text x="44" y="92" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746">inercija ↔ viskoznost</text>
+  <rect x="44" y="100" width="133" height="24" fill="#c5cdd3" stroke="#356b83" stroke-width="1" />
+  <rect x="177" y="100" width="133" height="24" fill="#d7dee3" stroke="#3a4a56" stroke-width="1" />
+  <text x="177" y="144" font-family="Arial, Liberation Sans, sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#263746">Re = ρvL / μ</text>
+  <text x="44" y="186" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746">inercija ↔ gravitacija</text>
+  <rect x="44" y="194" width="133" height="24" fill="#c5cdd3" stroke="#356b83" stroke-width="1" />
+  <rect x="177" y="194" width="133" height="24" fill="#c5cdd3" stroke="#356b83" stroke-width="1" />
+  <text x="177" y="238" font-family="Arial, Liberation Sans, sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#263746">Fr² = v² / (gL)</text>
+  <text x="44" y="280" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746">inercija ↔ napetost</text>
+  <rect x="44" y="288" width="133" height="24" fill="#c5cdd3" stroke="#356b83" stroke-width="1" />
+  <rect x="177" y="288" width="133" height="24" fill="#dcebf1" stroke="#356b83" stroke-width="1" />
+  <text x="177" y="332" font-family="Arial, Liberation Sans, sans-serif" font-size="16" font-style="italic" font-weight="700" text-anchor="middle" fill="#263746">We = ρv²L / σ</text>
+  <text x="177" y="386" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#263746">Parovi su shematski prikaz,</text>
+  <text x="177" y="404" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#263746">bez numeričkog mjerila.</text>
+  <text x="495" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">Ključni brojevi</text>
+  <text x="378" y="104" font-family="Arial, Liberation Sans, sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#263746">Re = vL / ν</text>
+  <text x="378" y="124" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">inercija / viskoznost</text>
+  <text x="378" y="172" font-family="Arial, Liberation Sans, sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#263746">Fr = v / √(gL)</text>
+  <text x="378" y="192" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">slobodna površina</text>
+  <text x="378" y="240" font-family="Arial, Liberation Sans, sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#263746">Eu = Δp / (ρv²)</text>
+  <text x="378" y="260" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">tlak, kavitacija</text>
+  <text x="378" y="308" font-family="Arial, Liberation Sans, sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#263746">We = ρv²L / σ</text>
+  <text x="378" y="328" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">kapljice, mlaz</text>
+  <text x="378" y="376" font-family="Arial, Liberation Sans, sans-serif" font-size="16" font-style="italic" font-weight="700" fill="#263746">Ma = v / a</text>
+  <text x="378" y="396" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">stlačivost; prag je uvjetan</text>
+  <text x="808" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">Model ↔ prototip (aerotunel)</text>
+  <rect x="680" y="150" width="256" height="140" fill="#cedee0" />
+  <path id="u14fup_tunnelwalls" d="M680 150 H936 M680 290 H936" fill="none" stroke="#3a4a56" stroke-width="2" />
+  <line x1="690" y1="180" x2="740" y2="180" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
+  <line x1="690" y1="210" x2="740" y2="210" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
+  <path d="M745,278 Q748,250 772,246 L800,224 Q828,216 858,226 L892,250 Q908,256 910,278 Z" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.5" />
+  <circle cx="788" cy="278" r="12" fill="#3a4a56" />
+  <circle cx="872" cy="278" r="12" fill="#3a4a56" />
+  <line x1="690" y1="270" x2="740" y2="270" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
+  <text x="808" y="338" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746">
+    <tspan font-weight="700">jednak Re + isti ostali uvjeti</tspan>
+  </text>
+  <text x="808" y="362" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#263746">→ jednak C<tspan baseline-shift="sub" font-size="0.75em">d</tspan> unutar</text>
+  <text x="808" y="380" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#263746">granica odabranoga modela</text>
 </svg>

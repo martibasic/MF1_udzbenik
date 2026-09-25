@@ -1,3 +1,5 @@
 # Original reference tables retain the spacing of the published archive.
 data/cfd/hydrofoil_experiment/sources/*.dat whitespace=-blank-at-eol
 .githooks/* text eol=lf
+# Quarto includes Typst fragments verbatim; CRLF can introduce paragraph breaks.
+assets/typst/*.typ text eol=lf

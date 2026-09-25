@@ -2,310 +2,254 @@
   <title id="u08vs_title">Zadaci Z1–Z6: kinematika i kontinuitet</title>
   <desc id="u08vs_desc">Izvorni raspored šest panela. Z1 ima otvorene krajeve proširenja. Z2 prikazuje zamišljenu kosu plohu i normalu pod 60 stupnjeva prema brzini; ploha nije stijenka. Z3 dva ulaza i jedan izlaz otvorene komore; Z4 dvije otvorene grane sa zadanim omjerom brzina. Z5 klip se giba udesno, a voda prolazi kroz stvaran središnji otvor, uz relativnu izlaznu brzinu w. Z6 homogena mješavina s uronjenim priključcima i slobodnim bokom od sadašnje razine do ruba. Strelice nisu sile. Geometrija je shematska; brojčane oznake određuju zadatak.</desc>
   <defs>
-    <linearGradient id="u08vs_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
-    <linearGradient id="u08vs_otop" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#cfe5cf" />
-      <stop offset="1" stop-color="#7fb37f" />
-    </linearGradient>
-    <linearGradient id="u08vs_mix" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#bcdee4" />
-      <stop offset="1" stop-color="#6ba5b1" />
-    </linearGradient>
     <pattern id="u08vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="7" height="7" fill="#e0e6ea" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.0" />
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.0" />
     </pattern>
     <marker id="u08vs_flo" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#1a2530" />
+      <path d="M0,0 L0,6 L8,3 z" fill="#3a4a56" />
     </marker>
     <marker id="u08vs_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u08vs_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u08vs_dhdt" markerWidth="7" markerHeight="6" refX="6.5" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#1e8449" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u08vs_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u08vs_fix_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u08vs_fix_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u08vs_fix_z1_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z1_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z1_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z1_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z1_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z1_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u08vs_fix_z1_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u08vs_fix_z1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u08vs_fix_z2_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z2_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z2_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z2_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z2_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z2_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u08vs_fix_z2_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u08vs_fix_z2_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u08vs_fix_z3_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z3_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z3_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z3_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z3_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z3_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u08vs_fix_z3_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u08vs_fix_z3_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u08vs_fix_z4_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z4_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z4_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z4_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z4_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z4_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u08vs_fix_z4_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u08vs_fix_z4_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u08vs_fix_z5_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z5_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z5_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z5_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z5_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z5_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u08vs_fix_z5_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u08vs_fix_z5_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u08vs_fix_z6_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z6_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z6_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z6_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z6_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u08vs_fix_z6_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u08vs_fix_z6_water" x1="0" y1="114" x2="0" y2="184" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u08vs_fix_z6_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="0" y="0" width="960" height="720" fill="white" stroke="none" stroke-width="1.2" />
   <g transform="translate(22 24)" id="u08vs_fix_z1">
-    <rect x="0" y="0" width="302" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
-    <rect x="0" y="0" width="302" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="302" height="10" fill="white" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z1  Proširenje cijevi</text>
-    <path d="M38 98.0 H108 L187 86.0 H257 V150.0 H187 L108 138.0 H38 Z" fill="url(#u08vs_fix_z1_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z1_fluid" />
+    <text x="14" y="18" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">Z1  Proširenje cijevi</text>
+    <path d="M38 98.0 H108 L187 86.0 H257 V150.0 H187 L108 138.0 H38 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08vs_fix_z1_fluid" />
     <polygon points="38.000000,98.000000 108.000000,98.000000 187.000000,86.000000 257.000000,86.000000 257.000000,80.000000 187.000000,80.000000 108.000000,92.000000 38.000000,92.000000" fill="url(#u08vs_fix_z1_hatch)" stroke="none" stroke-width="1.5" />
     <path d="M38 98.0 H108 L187 86.0 H257" fill="none" stroke="#3a4a56" stroke-width="1" />
     <polygon points="38.000000,138.000000 108.000000,138.000000 187.000000,150.000000 257.000000,150.000000 257.000000,156.000000 187.000000,156.000000 108.000000,144.000000 38.000000,144.000000" fill="url(#u08vs_fix_z1_hatch)" stroke="none" stroke-width="1.5" />
     <path d="M38 138.0 H108 L187 150.0 H257" fill="none" stroke="#3a4a56" stroke-width="1" />
-    <line x1="48" y1="118" x2="99" y2="118" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08vs_fix_z1_normal)" />
-    <line x1="217" y1="118" x2="237" y2="118" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u08vs_fix_z1_green)" />
-    <text x="73" y="107" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">v₁</text>
-    <text x="228" y="107" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="middle">v₂</text>
-    <line x1="21" y1="98" x2="31" y2="98" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="21" y1="138" x2="31" y2="138" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="26" y1="98" x2="26" y2="138" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u08vs_fix_z1_dimL)" marker-end="url(#u08vs_fix_z1_dim)" />
-    <text x="6" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">D₁</text>
-    <line x1="272" y1="86" x2="282" y2="86" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="272" y1="150" x2="282" y2="150" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="277" y1="86" x2="277" y2="150" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u08vs_fix_z1_dimL)" marker-end="url(#u08vs_fix_z1_dim)" />
-    <text x="269" y="166" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">D₂</text>
-    <rect x="105" y="69" width="91" height="93" fill="none" stroke="#8e44ad" stroke-width="1.2" stroke-dasharray="6,4" id="u08vs_fix_z1_cv" />
-    <text x="150.5" y="60" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle">KV</text>
-    <text x="151" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">D₁ = 100 mm; D₂ = 160 mm</text>
-    <text x="151" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">v₁ = 4,8 m/s; ρ = 998 kg/m³</text>
+    <line x1="48" y1="118" x2="99" y2="118" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z1_normal)" />
+    <line x1="217" y1="118" x2="237" y2="118" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z1_green)" />
+    <text x="73" y="107" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">v₁</text>
+    <text x="228" y="107" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">v₂</text>
+    <line x1="21" y1="98" x2="31" y2="98" stroke="#657781" stroke-width="0.8" />
+    <line x1="21" y1="138" x2="31" y2="138" stroke="#657781" stroke-width="0.8" />
+    <line x1="26" y1="98" x2="26" y2="138" stroke="#657781" stroke-width="1.2" marker-start="url(#u08vs_fix_z1_dimL)" marker-end="url(#u08vs_fix_z1_dim)" />
+    <text x="6" y="155" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">D₁</text>
+    <line x1="272" y1="86" x2="282" y2="86" stroke="#657781" stroke-width="0.8" />
+    <line x1="272" y1="150" x2="282" y2="150" stroke="#657781" stroke-width="0.8" />
+    <line x1="277" y1="86" x2="277" y2="150" stroke="#657781" stroke-width="1.2" marker-start="url(#u08vs_fix_z1_dimL)" marker-end="url(#u08vs_fix_z1_dim)" />
+    <text x="269" y="166" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">D₂</text>
+    <rect x="105" y="69" width="91" height="93" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08vs_fix_z1_cv" data-mf1-role="control-volume" />
+    <text x="150.5" y="60" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">KV</text>
+    <text x="151" y="192" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">D₁ = 100 mm; D₂ = 160 mm</text>
+    <text x="151" y="214" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">v₁ = 4,8 m/s; ρ = 998 kg/m³</text>
   </g>
   <g transform="translate(336 24)" id="u08vs_fix_z2">
-    <rect x="0" y="0" width="302" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
-    <rect x="0" y="0" width="302" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="302" height="10" fill="white" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z2  Kosa kontrolna ploha</text>
-    <line x1="80.9762979464426" y1="98.5" x2="197.0237020535574" y2="165.5" stroke="#8e44ad" stroke-width="3" id="u08vs_fix_z2_plane" />
-    <line x1="139" y1="132" x2="215" y2="132" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08vs_fix_z2_normal)" id="u08vs_fix_z2_velocity" />
+    <text x="14" y="18" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">Z2  Kosa kontrolna ploha</text>
+    <line x1="80.9762979464426" y1="98.5" x2="197.0237020535574" y2="165.5" stroke="#356b83" stroke-width="1.8" id="u08vs_fix_z2_plane" stroke-dasharray="6 4" />
+    <line x1="139" y1="132" x2="215" y2="132" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z2_normal)" id="u08vs_fix_z2_velocity" />
     <line x1="139" y1="132" x2="173" y2="73.11027254265818" stroke="#3a4a56" stroke-width="2.2" marker-end="url(#u08vs_fix_z2_axis)" id="u08vs_fix_z2_normal-vector" />
-    <path d="M168 132 A29 29 0 0 0 153.5 106.88526329025129" fill="none" stroke="#b7600c" stroke-width="1.1" />
-    <text x="189" y="115" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">60°</text>
-    <text x="180" y="70" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#3a4a56" text-anchor="middle">n</text>
-    <text x="221" y="126" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle">v</text>
-    <text x="84" y="93" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle">ploha A</text>
-    <text x="151" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Zamišljena ploha, nije stijenka.</text>
-    <text x="151" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">A = 0,0040 m²; v = 3,0 m/s</text>
-    <text x="151" y="220" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Kut je zadan prema normali n.</text>
+    <path d="M168 132 A29 29 0 0 0 153.5 106.88526329025129" fill="none" stroke="#657781" stroke-width="1.1" />
+    <text x="189" y="115" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">60°</text>
+    <text x="180" y="70" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">n</text>
+    <text x="221" y="126" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">v</text>
+    <text x="84" y="93" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">ploha A</text>
+    <text x="151" y="183" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Zamišljena ploha, nije stijenka.</text>
+    <text x="151" y="204" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">A = 0,0040 m²; v = 3,0 m/s</text>
+    <text x="151" y="220" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Kut je zadan prema normali n.</text>
   </g>
   <g transform="translate(650 24)" id="u08vs_fix_z3">
-    <rect x="0" y="0" width="296" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
-    <rect x="0" y="0" width="296" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="296" height="10" fill="white" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z3  Komora za miješanje</text>
-    <path d="M16 79 H104 V65 H210 V112 H280 V132 H210 V171 H104 V147 H16 V131 H104 V95 H16 Z" fill="url(#u08vs_fix_z3_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z3_fluid" />
+    <text x="14" y="18" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">Z3  Komora za miješanje</text>
+    <path d="M16 79 H104 V65 H210 V112 H280 V132 H210 V171 H104 V147 H16 V131 H104 V95 H16 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08vs_fix_z3_fluid" />
     <path d="M16 79 H104 V65 H210 V112 H280" fill="none" stroke="#3a4a56" stroke-width="2" />
     <path d="M280 132 H210 V171 H104 V147 H16" fill="none" stroke="#3a4a56" stroke-width="2" />
     <path d="M16 131 H104 V95 H16" fill="none" stroke="#3a4a56" stroke-width="2" />
-    <line x1="29" y1="87" x2="79" y2="87" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08vs_fix_z3_normal)" />
-    <line x1="29" y1="139" x2="79" y2="139" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08vs_fix_z3_normal)" />
-    <line x1="228" y1="122" x2="270" y2="122" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u08vs_fix_z3_green)" />
-    <text x="53" y="66" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Q₁</text>
-    <text x="51" y="165" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Q₂</text>
-    <text x="249" y="107" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Q₃</text>
-    <rect x="97" y="57" width="121" height="122" fill="none" stroke="#8e44ad" stroke-width="1.2" stroke-dasharray="6,4" id="u08vs_fix_z3_cv" />
-    <text x="157.5" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle">nepomični KV</text>
-    <text x="148" y="197" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Q₁ = 12 L/s; Q₂ = 8 L/s</text>
-    <text x="148" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">D₃ = 120 mm; nema akumulacije</text>
+    <line x1="29" y1="87" x2="79" y2="87" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z3_normal)" />
+    <line x1="29" y1="139" x2="79" y2="139" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z3_normal)" />
+    <line x1="228" y1="122" x2="270" y2="122" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z3_green)" />
+    <text x="53" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Q₁</text>
+    <text x="51" y="165" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Q₂</text>
+    <text x="249" y="107" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Q₃</text>
+    <rect x="97" y="57" width="121" height="122" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08vs_fix_z3_cv" data-mf1-role="control-volume" />
+    <text x="157.5" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">nepomični KV</text>
+    <text x="148" y="197" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Q₁ = 12 L/s; Q₂ = 8 L/s</text>
+    <text x="148" y="216" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">D₃ = 120 mm; nema akumulacije</text>
   </g>
   <g transform="translate(22 264)" id="u08vs_fix_z4">
-    <rect x="0" y="0" width="302" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
-    <rect x="0" y="0" width="302" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="302" height="10" fill="white" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z4  Razdjelna glava</text>
-    <path d="M28 104 H136 L219 62 H277 V88 H225 L162 123 L225 157 H277 V178 H219 L136 142 H28 Z" fill="url(#u08vs_fix_z4_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z4_fluid" />
+    <text x="14" y="18" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">Z4  Razdjelna glava</text>
+    <path d="M28 104 H136 L219 62 H277 V88 H225 L162 123 L225 157 H277 V178 H219 L136 142 H28 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08vs_fix_z4_fluid" />
     <path d="M28 104 H136 L219 62 H277" fill="none" stroke="#3a4a56" stroke-width="2" />
     <path d="M277 88 H225 L162 123 L225 157 H277" fill="none" stroke="#3a4a56" stroke-width="2" />
     <path d="M277 178 H219 L136 142 H28" fill="none" stroke="#3a4a56" stroke-width="2" />
-    <line x1="40" y1="123" x2="86" y2="123" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08vs_fix_z4_normal)" />
-    <line x1="235" y1="75" x2="268" y2="75" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u08vs_fix_z4_green)" />
-    <line x1="235" y1="167" x2="268" y2="167" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u08vs_fix_z4_green)" />
-    <text x="66" y="97" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Q</text>
-    <text x="247" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Q₂, v₂</text>
-    <text x="249" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Q₃, v₃</text>
-    <rect x="124" y="79" width="66" height="82" fill="none" stroke="#8e44ad" stroke-width="1.2" stroke-dasharray="6,4" id="u08vs_fix_z4_cv" />
-    <text x="157.0" y="70" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle">KV</text>
-    <text x="151" y="215" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Q = 30 L/s; v₂ = 2v₃ (zadano)</text>
-    <text x="70" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#3a4a56" text-anchor="middle">D₁ = 140 mm</text>
-    <text x="228" y="105" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#3a4a56" text-anchor="middle">D₂ = 90 mm</text>
-    <text x="233" y="143" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#3a4a56" text-anchor="middle">D₃ = 70 mm</text>
+    <line x1="40" y1="123" x2="86" y2="123" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z4_normal)" />
+    <line x1="235" y1="75" x2="268" y2="75" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z4_green)" />
+    <line x1="235" y1="167" x2="268" y2="167" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z4_green)" />
+    <text x="66" y="97" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Q</text>
+    <text x="247" y="54" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Q₂, v₂</text>
+    <text x="249" y="196" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Q₃, v₃</text>
+    <rect x="124" y="79" width="66" height="82" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08vs_fix_z4_cv" data-mf1-role="control-volume" />
+    <text x="157.0" y="70" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">KV</text>
+    <text x="151" y="215" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Q = 30 L/s; v₂ = 2v₃ (zadano)</text>
+    <text x="70" y="160" font-family="Arial, Liberation Sans, sans-serif" font-size="9" fill="#263746" text-anchor="middle">D₁ = 140 mm</text>
+    <text x="228" y="105" font-family="Arial, Liberation Sans, sans-serif" font-size="9" fill="#263746" text-anchor="middle">D₂ = 90 mm</text>
+    <text x="233" y="143" font-family="Arial, Liberation Sans, sans-serif" font-size="9" fill="#263746" text-anchor="middle">D₃ = 70 mm</text>
   </g>
   <g transform="translate(336 264)" id="u08vs_fix_z5">
-    <rect x="0" y="0" width="302" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
-    <rect x="0" y="0" width="302" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="302" height="10" fill="white" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z5  Klip s otvorom</text>
-    <path d="M14 109 H45 V81 H180 V109 H272 V123 H180 V151 H45 V123 H14 Z" fill="url(#u08vs_fix_z5_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z5_fluid" />
+    <text x="14" y="18" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">Z5  Klip s otvorom</text>
+    <path d="M14 109 H45 V81 H180 V109 H272 V123 H180 V151 H45 V123 H14 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08vs_fix_z5_fluid" />
     <rect x="40" y="75" width="217" height="6" fill="url(#u08vs_fix_z5_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="40" y="151" width="217" height="6" fill="url(#u08vs_fix_z5_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="39" y="81" width="6" height="28" fill="url(#u08vs_fix_z5_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -314,71 +258,67 @@
     <rect x="180" y="123" width="10" height="28" fill="url(#u08vs_fix_z5_hatch)" stroke="#3a4a56" stroke-width="1.2" id="u08vs_fix_z5_piston-bottom" />
     <line x1="14" y1="109" x2="39" y2="109" stroke="#3a4a56" stroke-width="1.2" />
     <line x1="14" y1="123" x2="39" y2="123" stroke="#3a4a56" stroke-width="1.2" />
-    <line x1="16" y1="116" x2="69" y2="116" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08vs_fix_z5_normal)" />
-    <line x1="203" y1="116" x2="262" y2="116" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u08vs_fix_z5_green)" />
+    <line x1="16" y1="116" x2="69" y2="116" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z5_normal)" />
+    <line x1="203" y1="116" x2="262" y2="116" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z5_green)" />
     <line x1="181" y1="59" x2="231" y2="59" stroke="#3a4a56" stroke-width="2.2" marker-end="url(#u08vs_fix_z5_axis)" />
-    <text x="241" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">u →</text>
-    <text x="78" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">in</tspan> = 1,00 L/s</text>
-    <text x="228" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1e8449" text-anchor="middle">w = 1,50 m/s</text>
-    <rect x="36" y="72" width="149" height="89" fill="none" stroke="#8e44ad" stroke-width="1.2" stroke-dasharray="6,4" id="u08vs_fix_z5_cv" />
-    <text x="110.5" y="63" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle" transform="translate(28 -8)">KV(t)</text>
-    <text x="111" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">voda</text>
-    <text x="153" y="181" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">D = 100 mm; d = 20 mm</text>
-    <text x="151" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">ℓ₀ = 0,20 m; s = 0,12 m</text>
-    <text x="151" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Izlazna brzina prema klipu: w.</text>
+    <text x="241" y="62" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">u →</text>
+    <text x="78" y="58" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">in</tspan> = 1,00 L/s</text>
+    <text x="228" y="102" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">w = 1,50 m/s</text>
+    <rect x="36" y="72" width="149" height="89" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08vs_fix_z5_cv" data-mf1-role="control-volume" />
+    <text x="110.5" y="63" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="translate(28 -8)">KV(t)</text>
+    <text x="111" y="102" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">voda</text>
+    <text x="153" y="181" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">D = 100 mm; d = 20 mm</text>
+    <text x="151" y="200" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">ℓ₀ = 0,20 m; s = 0,12 m</text>
+    <text x="151" y="218" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Izlazna brzina prema klipu: w.</text>
   </g>
   <g transform="translate(650 264)" id="u08vs_fix_z6">
-    <rect x="0" y="0" width="296" height="228" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
-    <rect x="0" y="0" width="296" height="26" fill="white" stroke="none" stroke-width="1.2" rx="10" />
-    <rect x="0" y="16" width="296" height="10" fill="white" stroke="none" stroke-width="1.2" />
-    <text x="14" y="18" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="700">Z6  Miješanje i akumulacija</text>
-    <rect x="77" y="114" width="162" height="70" fill="url(#u08vs_fix_z6_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z6_fluid" />
+    <text x="14" y="18" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">Z6  Miješanje i akumulacija</text>
+    <rect x="77" y="114" width="162" height="70" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08vs_fix_z6_fluid" />
     <rect x="68" y="66" width="9" height="61.0" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="68" y="147.0" width="9" height="6.0" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="68" y="173.0" width="9" height="11.0" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="239" y="66" width="9" height="89.0" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="239" y="177.0" width="9" height="7.0" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="68" y="184" width="180" height="9" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-    <line x1="77" y1="114" x2="239" y2="114" stroke="#1565c0" stroke-width="2" id="u08vs_fix_z6_surface" />
-    <rect x="13" y="132.0" width="64" height="10" fill="url(#u08vs_fix_z6_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z6_pipe-13-137" />
+    <line x1="77" y1="114" x2="239" y2="114" stroke="#356b83" stroke-width="2" id="u08vs_fix_z6_surface" />
+    <rect x="13" y="132.0" width="64" height="10" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08vs_fix_z6_pipe-13-137" />
     <rect x="13" y="127.0" width="64" height="5" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="13" y="142.0" width="64" height="5" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-    <rect x="13" y="158.0" width="64" height="10" fill="url(#u08vs_fix_z6_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z6_pipe-13-163" />
+    <rect x="13" y="158.0" width="64" height="10" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08vs_fix_z6_pipe-13-163" />
     <rect x="13" y="153.0" width="64" height="5" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="13" y="168.0" width="64" height="5" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-    <rect x="239" y="160.0" width="42" height="12" fill="url(#u08vs_fix_z6_water)" stroke="none" stroke-width="1.2" id="u08vs_fix_z6_pipe-239-166" />
+    <rect x="239" y="160.0" width="42" height="12" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08vs_fix_z6_pipe-239-166" />
     <rect x="239" y="155.0" width="42" height="5" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="239" y="172.0" width="42" height="5" fill="url(#u08vs_fix_z6_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-    <line x1="23" y1="137" x2="62" y2="137" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08vs_fix_z6_normal)" />
-    <line x1="23" y1="163" x2="62" y2="163" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u08vs_fix_z6_normal)" />
-    <line x1="247" y1="166" x2="273" y2="166" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u08vs_fix_z6_green)" />
-    <text x="38" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">A</tspan>
+    <line x1="23" y1="137" x2="62" y2="137" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z6_normal)" />
+    <line x1="23" y1="163" x2="62" y2="163" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z6_normal)" />
+    <line x1="247" y1="166" x2="273" y2="166" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z6_green)" />
+    <text x="38" y="124" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">A</tspan>
     </text>
-    <text x="38" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">B</tspan>
+    <text x="38" y="184" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">B</tspan>
     </text>
-    <text x="261" y="151" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Q₃</text>
-    <line x1="258" y1="66" x2="268" y2="66" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="258" y1="114" x2="268" y2="114" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="263" y1="66" x2="263" y2="114" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u08vs_fix_z6_dimL)" marker-end="url(#u08vs_fix_z6_dim)" />
-    <text x="267" y="95" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">f₀</text>
+    <text x="261" y="151" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Q₃</text>
+    <line x1="258" y1="66" x2="268" y2="66" stroke="#657781" stroke-width="0.8" />
+    <line x1="258" y1="114" x2="268" y2="114" stroke="#657781" stroke-width="0.8" />
+    <line x1="263" y1="66" x2="263" y2="114" stroke="#657781" stroke-width="1.2" marker-start="url(#u08vs_fix_z6_dimL)" marker-end="url(#u08vs_fix_z6_dim)" />
+    <text x="267" y="95" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">f₀</text>
     <line x1="77" y1="66" x2="239" y2="66" stroke="#3a4a56" stroke-width="1" stroke-dasharray="4,3" />
-    <line x1="160" y1="111" x2="160" y2="85" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u08vs_fix_z6_green)" />
-    <text x="149" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">homogeno</text>
-    <text x="148" y="46" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">f₀ = 0,560 m; A<tspan baseline-shift="sub" font-size="0.7em">T</tspan> = 4,8 m²</text>
-    <text x="148" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = 11 L/s; Q<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = 4 L/s</text>
-    <text x="148" y="221" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">D = 80 mm; v₃ = 1,6 m/s</text>
+    <line x1="160" y1="111" x2="160" y2="85" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08vs_fix_z6_green)" />
+    <text x="149" y="155" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">KV: homogeno</text>
+    <text x="148" y="46" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">f₀ = 0,560 m; A<tspan baseline-shift="sub" font-size="0.7em">T</tspan> = 4,8 m²</text>
+    <text x="148" y="206" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = 11 L/s; Q<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = 4 L/s</text>
+    <text x="148" y="221" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">D = 80 mm; v₃ = 1,6 m/s</text>
+    <path id="u08vs_fix_z6_controlVolume" d="M69 71 H246 V192 H69 Z" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" data-mf1-role="control-volume" />
   </g>
   <g transform="translate(22 504)">
-    <rect x="0" y="0" width="916" height="190" fill="white" stroke="#cfdde8" stroke-width="1" rx="10" stroke-opacity="0.65" />
-    <rect x="0" y="0" width="916" height="28" fill="white" stroke="none" stroke-width="1.2" rx="10" />
-    <text x="458" y="20" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">Bilanca mase i čitanje skica</text>
-    <text x="458" y="57" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">akumulacija = ulazni maseni protok − izlazni maseni protok</text>
-    <text x="25" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="start">Nepomična ploha: Q = ∫ v · n dA</text>
-    <text x="480" y="88" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1e8449" text-anchor="start">Gibajuća ploha: Q<tspan baseline-shift="sub" font-size="0.7em">rel</tspan> = ∫ (v − v<tspan baseline-shift="sub" font-size="0.7em">KP</tspan>) · n dA</text>
-    <text x="25" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Z2: puna ljubičasta crta jest zamišljena ploha.</text>
-    <text x="480" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Z5: klip je krut, osim središnjega otvora.</text>
-    <text x="25" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Isprekidana granica KV nije kruta stijenka.</text>
-    <text x="480" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Z6: nakon dosezanja ruba nastaje prelijevanje.</text>
-    <text x="458" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Strelice označuju brzine ili protoke, ne sile. Boja sama ne razlikuje dva fluida u istom vodu.</text>
+    <text x="458" y="20" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Bilanca mase i čitanje skica</text>
+    <text x="458" y="57" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">akumulacija = ulazni maseni protok − izlazni maseni protok</text>
+    <text x="25" y="88" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">Nepomična ploha: Q = ∫ v · n dA</text>
+    <text x="480" y="88" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">Gibajuća ploha: Q<tspan baseline-shift="sub" font-size="0.7em">rel</tspan> = ∫ (v − v<tspan baseline-shift="sub" font-size="0.7em">KP</tspan>) · n dA</text>
+    <text x="25" y="116" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Z2: isprekidana crta jest zamišljena ploha.</text>
+    <text x="480" y="116" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Z5: klip je krut, osim središnjega otvora.</text>
+    <text x="25" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Isprekidana granica KV nije kruta stijenka.</text>
+    <text x="480" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Z6: nakon dosezanja ruba nastaje prelijevanje.</text>
+    <text x="458" y="170" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Strelice označuju brzine ili protoke, ne sile. Boja sama ne razlikuje dva fluida u istom vodu.</text>
   </g>
 </svg>

@@ -1,266 +1,218 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="447.874pt" height="160.582pt" viewBox="0 0 447.874 160.582" role="img"><title>Zadaci Z1–Z6: uzgon i početni stabilitet</title><defs>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_oil" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fde68a"/>
-      <stop offset="100%" stop-color="#c8a000"/>
-    </linearGradient>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_hull" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9aaab4"/>
-      <stop offset="100%" stop-color="#5d6d7e"/>
-    </linearGradient>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b"/>
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449"/>
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aB" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0"/>
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c"/>
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aDimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c"/>
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aT" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#5a6a78"/>
+      <path d="M0,0 L0,4 L6,2 z" fill="#3a4a56"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_water" x1="0" y1="96" x2="0" y2="195" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_water" x1="0" y1="110" x2="0" y2="192" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_water" x1="0" y1="124" x2="0" y2="183" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_water" x1="0" y1="124" x2="0" y2="183" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_water" x1="0" y1="106.56" x2="0" y2="191" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_oil" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="94" y2="106.56">
-      <stop offset="0%" stop-color="#fde68a"/>
-      <stop offset="100%" stop-color="#c8a000"/>
-    </linearGradient>
-  </defs><g font-family="Arial, Liberation Sans, sans-serif"><g transform="translate(108.469 13.5)"><text data-source-text="1" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(21, 101, 192)">Z1 — Potpuno uronjeno tijelo</text></g><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><rect xmlns="http://www.w3.org/2000/svg" x="9" y="55" width="282" height="147" fill="url(#u07vs_fix_z1_water)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="4"/></g></g><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><line xmlns="http://www.w3.org/2000/svg" x1="9" y1="55" x2="291" y2="55" stroke="rgb(21, 101, 192)" stroke-width="1.575" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="5"/></g></g><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><rect xmlns="http://www.w3.org/2000/svg" x="100" y="109" width="100" height="77" fill="rgb(144, 159, 168)" stroke="rgb(58, 74, 86)" stroke-width="1.181" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="6"/></g></g><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><circle xmlns="http://www.w3.org/2000/svg" cx="150" cy="147.5" r="3.2" fill="rgb(30, 132, 73)" stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="7"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_green-print-0-8-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><line xmlns="http://www.w3.org/2000/svg" x1="150" y1="147.5" x2="150" y2="117" stroke="rgb(30, 132, 73)" stroke-width="1.732" marker-end="url(#u07vs_fix_z1_green-print-0-8-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" data-source-geometry="8"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_force-print-0-9-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><line xmlns="http://www.w3.org/2000/svg" x1="150" y1="147.5" x2="150" y2="184" stroke="rgb(192, 57, 43)" stroke-width="1.732" marker-end="url(#u07vs_fix_z1_force-print-0-9-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" data-source-geometry="9"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_normal-print-0-10-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><line xmlns="http://www.w3.org/2000/svg" x1="150" y1="73" x2="150" y2="106" stroke="rgb(21, 101, 192)" stroke-width="1.732" marker-end="url(#u07vs_fix_z1_normal-print-0-10-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" data-source-geometry="10"/></g></g><g transform="translate(120.323 46.414)"><text data-source-text="2" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(21, 101, 192)">F<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(21, 101, 192)" baseline-shift="-2">d</tspan> ↓</text></g><g transform="translate(120.323 70.864)"><text data-source-text="3" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(30, 132, 73)">F<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(30, 132, 73)" baseline-shift="-2">U</tspan> ↑</text></g><g transform="translate(120.323 108.65)"><text data-source-text="4" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(192, 57, 43)">G ↓</text></g><g transform="translate(108.469 144.414)"><text data-source-text="5" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(58, 74, 86)">V = 0,085 m³; m = 62 kg</text></g><g transform="translate(230.937 0)"><g transform="translate(108.469 13.5)"><text data-source-text="6" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(21, 101, 192)">Z2 — Gaz opterećenog pontona</text></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><rect xmlns="http://www.w3.org/2000/svg" x="9" y="96" width="282" height="99" fill="url(#u07vs_fix_z2_water)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="18"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="9" y1="96" x2="291" y2="96" stroke="rgb(21, 101, 192)" stroke-width="1.575" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="19"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><polygon xmlns="http://www.w3.org/2000/svg" points="48.500000,125.137946 251.500000,125.137946 251.500000,70.037946 48.500000,70.037946" fill="rgb(233, 238, 242)" stroke="rgb(58, 74, 86)" stroke-width="1.575" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="20"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><polygon xmlns="http://www.w3.org/2000/svg" points="50.675000,122.962946 249.325000,122.962946 249.325000,72.212946 50.675000,72.212946" fill="rgb(255, 255, 255)" stroke="rgb(144, 159, 168)" stroke-width="0.675" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="21"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><circle xmlns="http://www.w3.org/2000/svg" cx="150.00000000000003" cy="110.56897311105729" r="3.7" fill="rgb(30, 132, 73)" stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="22"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><polygon xmlns="http://www.w3.org/2000/svg" points="123.900000,70.037946 176.100000,70.037946 176.100000,54.087946 123.900000,54.087946" fill="rgb(203, 164, 107)" stroke="rgb(139, 94, 0)" stroke-width="1.181" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="24"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_green-print-1-25-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="150.00000000000003" y1="110.56897311105729" x2="150.00000000000003" y2="88.56897311105729" stroke="rgb(30, 132, 73)" stroke-width="1.732" marker-end="url(#u07vs_fix_z2_green-print-1-25-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" data-source-geometry="25"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_force-print-1-26-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="150.00000000000003" y1="39" x2="150.00000000000003" y2="59" stroke="rgb(192, 57, 43)" stroke-width="1.732" marker-end="url(#u07vs_fix_z2_force-print-1-26-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" data-source-geometry="26"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="22" y1="96" x2="32" y2="96" stroke="rgb(183, 96, 12)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="27"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="22" y1="125.13794622211455" x2="32" y2="125.13794622211455" stroke="rgb(183, 96, 12)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="28"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dimL-print-1-29-marker-start" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dim-print-1-29-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="27" y1="96" x2="27" y2="125.13794622211455" stroke="rgb(183, 96, 12)" stroke-width="0.945" marker-start="url(#u07vs_fix_z2_dimL-print-1-29-marker-start)" marker-end="url(#u07vs_fix_z2_dim-print-1-29-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="29"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="265" y1="70.03794622211456" x2="275" y2="70.03794622211456" stroke="rgb(183, 96, 12)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="31"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="265" y1="125.13794622211455" x2="275" y2="125.13794622211455" stroke="rgb(183, 96, 12)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="32"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dimL-print-1-33-marker-start" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dim-print-1-33-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="270" y1="70.03794622211456" x2="270" y2="125.13794622211455" stroke="rgb(183, 96, 12)" stroke-width="0.945" marker-start="url(#u07vs_fix_z2_dimL-print-1-33-marker-start)" marker-end="url(#u07vs_fix_z2_dim-print-1-33-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="33"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="48.5" y1="168" x2="48.5" y2="178" stroke="rgb(183, 96, 12)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="35"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="251.5" y1="168" x2="251.5" y2="178" stroke="rgb(183, 96, 12)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="36"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dimL-print-1-37-marker-start" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dim-print-1-37-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="48.5" y1="173" x2="251.5" y2="173" stroke="rgb(183, 96, 12)" stroke-width="0.945" marker-start="url(#u07vs_fix_z2_dimL-print-1-37-marker-start)" marker-end="url(#u07vs_fix_z2_dim-print-1-37-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="37"/></g></g><g transform="translate(203.305 65.372)"><text data-source-text="9" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(183, 96, 12)">H</text></g><g transform="translate(115.878 74.99)"><text data-source-text="7" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(30, 132, 73)">B</text></g><g transform="translate(4.741 74.99)"><text data-source-text="8" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(183, 96, 12)">h</text></g><g transform="translate(108.469 131.619)"><text data-source-text="10" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(183, 96, 12)">B = 1,40 m</text></g><g transform="translate(108.469 151.082)"><text data-source-text="11" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(58, 74, 86)">L = 2,60 m; H = 0,38 m; m = 730 kg</text></g></g></g></svg>
+  </defs><g font-family="Arial, Liberation Sans, sans-serif"><g transform="translate(108.469 13.5)"><text data-source-text="1" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(38, 55, 70)">Z1 — Potpuno uronjeno tijelo</text></g><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><rect xmlns="http://www.w3.org/2000/svg" x="9" y="55" width="282" height="147" fill="rgb(220, 235, 241)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="1"/></g></g><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><line xmlns="http://www.w3.org/2000/svg" x1="9" y1="55" x2="291" y2="55" stroke="rgb(53, 107, 131)" stroke-width="1.575" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="2"/></g></g><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><rect xmlns="http://www.w3.org/2000/svg" x="100" y="109" width="100" height="77" fill="rgb(215, 222, 227)" stroke="rgb(58, 74, 86)" stroke-width="1.181" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="3"/></g></g><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><circle xmlns="http://www.w3.org/2000/svg" cx="150" cy="147.5" r="3.2" fill="rgb(53, 107, 131)" stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="4"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_green-print-0-5-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><line xmlns="http://www.w3.org/2000/svg" x1="150" y1="147.5" x2="150" y2="117" stroke="rgb(53, 107, 131)" stroke-width="1.732" marker-end="url(#u07vs_fix_z1_green-print-0-5-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" data-source-geometry="5"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_force-print-0-6-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><line xmlns="http://www.w3.org/2000/svg" x1="150" y1="147.5" x2="150" y2="184" stroke="rgb(53, 107, 131)" stroke-width="1.732" marker-end="url(#u07vs_fix_z1_force-print-0-6-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" data-source-geometry="6"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_normal-print-0-7-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-24.896 -48.423) scale(0.741)"><g transform="matrix(1 0 0 1 30 36)"><line xmlns="http://www.w3.org/2000/svg" x1="150" y1="73" x2="150" y2="106" stroke="rgb(53, 107, 131)" stroke-width="1.732" marker-end="url(#u07vs_fix_z1_normal-print-0-7-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" data-source-geometry="7"/></g></g><g transform="translate(120.323 46.414)"><text data-source-text="2" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">F<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">d</tspan> ↓</text></g><g transform="translate(120.323 70.864)"><text data-source-text="3" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">F<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">U</tspan> ↑</text></g><g transform="translate(120.323 108.65)"><text data-source-text="4" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">G ↓</text></g><g transform="translate(108.469 144.414)"><text data-source-text="5" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">V = 0,085 m³; m = 62 kg</text></g><g transform="translate(230.937 0)"><g transform="translate(108.469 13.5)"><text data-source-text="6" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(38, 55, 70)">Z2 — Gaz opterećenog pontona</text></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><rect xmlns="http://www.w3.org/2000/svg" x="9" y="96" width="282" height="99" fill="rgb(220, 235, 241)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="13"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="9" y1="96" x2="291" y2="96" stroke="rgb(53, 107, 131)" stroke-width="1.575" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="14"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><polygon xmlns="http://www.w3.org/2000/svg" points="48.500000,125.137946 251.500000,125.137946 251.500000,70.037946 48.500000,70.037946" fill="rgb(220, 235, 241)" stroke="rgb(58, 74, 86)" stroke-width="1.575" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="15"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><polygon xmlns="http://www.w3.org/2000/svg" points="50.675000,122.962946 249.325000,122.962946 249.325000,72.212946 50.675000,72.212946" fill="rgb(255, 255, 255)" stroke="rgb(58, 74, 86)" stroke-width="0.675" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="16"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><circle xmlns="http://www.w3.org/2000/svg" cx="150.00000000000003" cy="110.56897311105729" r="3.7" fill="rgb(53, 107, 131)" stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="17"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><polygon xmlns="http://www.w3.org/2000/svg" points="123.900000,70.037946 176.100000,70.037946 176.100000,54.087946 123.900000,54.087946" fill="rgb(234, 223, 197)" stroke="rgb(53, 107, 131)" stroke-width="1.181" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="19"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_green-print-1-20-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="150.00000000000003" y1="110.56897311105729" x2="150.00000000000003" y2="88.56897311105729" stroke="rgb(53, 107, 131)" stroke-width="1.732" marker-end="url(#u07vs_fix_z2_green-print-1-20-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" data-source-geometry="20"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_force-print-1-21-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="150.00000000000003" y1="39" x2="150.00000000000003" y2="59" stroke="rgb(53, 107, 131)" stroke-width="1.732" marker-end="url(#u07vs_fix_z2_force-print-1-21-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" data-source-geometry="21"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="22" y1="96" x2="32" y2="96" stroke="rgb(101, 119, 129)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="22"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="22" y1="125.13794622211455" x2="32" y2="125.13794622211455" stroke="rgb(101, 119, 129)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="23"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dimL-print-1-24-marker-start" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dim-print-1-24-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="27" y1="96" x2="27" y2="125.13794622211455" stroke="rgb(101, 119, 129)" stroke-width="0.945" marker-start="url(#u07vs_fix_z2_dimL-print-1-24-marker-start)" marker-end="url(#u07vs_fix_z2_dim-print-1-24-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="24"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="265" y1="70.03794622211456" x2="275" y2="70.03794622211456" stroke="rgb(101, 119, 129)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="26"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="265" y1="125.13794622211455" x2="275" y2="125.13794622211455" stroke="rgb(101, 119, 129)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="27"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dimL-print-1-28-marker-start" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dim-print-1-28-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="270" y1="70.03794622211456" x2="270" y2="125.13794622211455" stroke="rgb(101, 119, 129)" stroke-width="0.945" marker-start="url(#u07vs_fix_z2_dimL-print-1-28-marker-start)" marker-end="url(#u07vs_fix_z2_dim-print-1-28-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="28"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="48.5" y1="168" x2="48.5" y2="178" stroke="rgb(101, 119, 129)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="30"/></g></g><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="251.5" y1="168" x2="251.5" y2="178" stroke="rgb(101, 119, 129)" stroke-width="0.675" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="31"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dimL-print-1-32-marker-start" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dim-print-1-32-marker-end" markerWidth="5.399" markerHeight="4.499" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-259.024 -36.568) scale(0.741)"><g transform="matrix(1 0 0 1 346 36)"><line xmlns="http://www.w3.org/2000/svg" x1="48.5" y1="173" x2="251.5" y2="173" stroke="rgb(101, 119, 129)" stroke-width="0.945" marker-start="url(#u07vs_fix_z2_dimL-print-1-32-marker-start)" marker-end="url(#u07vs_fix_z2_dim-print-1-32-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="32"/></g></g><g transform="translate(203.305 65.372)"><text data-source-text="9" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">H</text></g><g transform="translate(115.878 74.99)"><text data-source-text="7" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">B</text></g><g transform="translate(4.741 74.99)"><text data-source-text="8" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">h</text></g><g transform="translate(108.469 131.619)"><text data-source-text="10" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">B = 1,40 m</text></g><g transform="translate(108.469 151.082)"><text data-source-text="11" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">L = 2,60 m; H = 0,38 m; m = 730 kg</text></g></g></g></svg>

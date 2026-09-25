@@ -8,6 +8,8 @@ import math
 import re
 import xml.etree.ElementTree as ET
 
+from sketch_style import check_uniform_fluid
+
 ROOT = Path(__file__).resolve().parents[1] / 'assets' / 'print'
 NS = '{http://www.w3.org/2000/svg}'
 
@@ -139,9 +141,7 @@ def run():
         for fluid in (e for e in root.iter() if e.get('id','').endswith('fluid')):
             check(fluid.get('stroke')=='none' and fluid.get('d').count('M')==1
                   and fluid.get('d').count('Z')==1,name+': jedna povezana ispuna bez zatvorenih stijenki na otvorima')
-            gradient=node(root,fluid.get('fill')[5:-1])
-            check(gradient.get('gradientUnits')=='userSpaceOnUse'
-                  and gradient.get('x1')==gradient.get('x2'),name+': prostorno neprekinut vertikalni gradijent')
+            check_uniform_fluid(fluid, 'fill')
     intro,p1,p2,p3,p4,p5,p6,z=roots
     wall_and_openings(intro,'u11intro_pipe',[(58,187),(321,379)])
     elbow_width(intro,'u11intro_pipe',82,56)

@@ -1,90 +1,93 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" role="img" aria-labelledby="u02v2vk_title u02v2vk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-<title id="u02v2vk_title">Smicanje ulja i odvojeni kapilarni pokus</title><desc id="u02v2vk_desc">Lijevo uljni sloj 3 mm, brzina 0,90 m/s, sila otpora na pokretnoj ploči ulijevo. Desno odvojeni etanol u kapilari 1 mm s kontaktnim kutom 18 stupnjeva, otvorenim ulazom i usponom 10,8 mm.</desc>
-<defs>
-<linearGradient id="u02v2vk_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u02v2vk_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u02v2vk_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u02v2vk_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u02v2vk_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u02v2vk_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u02v2vk_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="980" height="440" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
-Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
-Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
-<defs>
-<marker id="u02v2vk_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
-<marker id="u02v2vk_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
-<marker id="u02v2vk_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u02v2vk_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
-</defs>
-<defs><linearGradient id="u02v2vk_metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient></defs>
-<!-- Fluidna ispuna nije mapa tlaka, brzine ili temperature. Debljine stijenki uvećane su radi čitljivosti. -->
-<rect x="35" y="43" width="441" height="373" rx="9" fill="white" stroke="#cbdce9" stroke-width="1" stroke-opacity="0.65" />
-<rect x="35" y="43" width="441" height="28" rx="7" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="255.5" y="62" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">Smicanje ulja između ploča</text>
-<defs><linearGradient id="u02v2vk_shearfield" gradientUnits="userSpaceOnUse" x1="0" y1="151" x2="0" y2="288"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient></defs>
-<rect id="u02v2vk_shearfluid" x="74" y="151" width="350" height="137" rx="0" fill="url(#u02v2vk_shearfield)" stroke="none" stroke-width="1.2"/>
-<rect id="u02v2vk_shearmoving" x="74" y="135" width="350" height="16" rx="0" fill="url(#u02v2vk_metal)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u02v2vk_shearfixedbase" x="74" y="288" width="350" height="14" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<rect id="u02v2vk_shearfixed" x="74" y="288" width="350" height="14" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<line id="u02v2vk_shearzero" x1="116.0" y1="288" x2="116.0" y2="151" stroke="#1565c0" stroke-width="1" stroke-dasharray="3 3"/>
-<line id="u02v2vk_shearprofile" x1="116.0" y1="288" x2="315.5" y2="151" stroke="#1565c0" stroke-width="1.7"/>
-<path id="u02v2vk_shearvelocity1" d="M116.0 260.6 L155.89999999999998 260.6" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)"/>
-<path id="u02v2vk_shearvelocity2" d="M116.0 233.2 L195.79999999999998 233.2" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)"/>
-<path id="u02v2vk_shearvelocity3" d="M116.0 205.8 L235.7 205.8" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)"/>
-<path id="u02v2vk_shearvelocity4" d="M116.0 178.4 L275.59999999999997 178.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)"/>
-<path id="u02v2vk_shearspeed" d="M179.0 108 L284.0 108" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)"/>
-<text x="231.5" y="97.0" font-size="13" fill="#3a4a56" text-anchor="middle">v</text>
-<path id="u02v2vk_sheardrag" d="M182.5 151 L88.0 151" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u02v2vk_reactionMarker)"/>
-<text x="89.75" y="174" font-size="13" fill="#1e8449" text-anchor="middle">Fᵥ</text>
-<path id="u02v2vk_shearpull" d="M354.0 143 L441.5 143" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u02v2vk_forceMarker)"/>
-<text x="417.0" y="131" font-size="13" fill="#c0392b" text-anchor="middle">F</text>
-<text x="326.0" y="229.08999999999997" font-size="11" fill="#1565c0" text-anchor="start">u(y)</text>
-<text x="249.0" y="321" font-size="10" fill="#1565c0" text-anchor="middle">donja stijenka: u = 0</text>
-<line x1="51" y1="151" x2="61" y2="151" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="51" y1="288" x2="61" y2="288" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u02v2vk_sheargap" d="M56 151 L56 288" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u02v2vk_dim)" marker-end="url(#u02v2vk_dim)"/>
-<text x="40" y="223.5" font-size="11" fill="#b7600c" text-anchor="start">δ</text>
-<text x="249" y="83" font-size="12" fill="#1565c0" text-anchor="middle">v = 0,90 m/s; δ = 3 mm; A = 0,18 m²</text>
-<text x="254" y="354" font-size="16" fill="#1565c0" text-anchor="middle" font-weight="700">τ = μv/δ = 126 Pa; F = 22,7 N</text>
-<text x="254" y="386" font-size="12" fill="#1565c0" text-anchor="middle">μ = 0,42 Pa·s; ρ = 870 kg/m³</text>
-<rect x="503" y="43" width="441" height="373" rx="9" fill="white" stroke="#cbdce9" stroke-width="1" stroke-opacity="0.65" />
-<rect x="503" y="43" width="441" height="28" rx="7" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="723.5" y="62" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">Odvojeni pokus: etanol u kapilari</text>
-<defs><linearGradient id="u02v2vk_capfield" gradientUnits="userSpaceOnUse" x1="0" y1="175.10186207991958" x2="0" y2="300"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u02v2vk_capfluid" d="M541.00000000 248.00000000 L639.00000000 248.00000000 L639.00000000 284.00000000 L644.00000000 284.00000000 L644.00000000 175.10186208 L644.08734403 175.36290587 L644.17923060 175.62238555 L644.27563172 175.88022206 L644.37651803 176.13633687 L644.48185879 176.39065196 L644.59162192 176.64308987 L644.70577398 176.89357370 L644.82428019 177.14202715 L644.94710447 177.38837455 L645.07420940 177.63254084 L645.20555626 177.87445166 L645.34110504 178.11403332 L645.48081445 178.35121283 L645.62464194 178.58591796 L645.77254369 178.81807720 L645.92447465 179.04761985 L646.08038854 179.27447597 L646.24023787 179.49857647 L646.40397395 179.71985308 L646.57154690 179.93823840 L646.74290568 180.15366591 L646.91799809 180.36606998 L647.09677079 180.57538592 L647.27916933 180.78154997 L647.46513815 180.98449933 L647.65462060 181.18417217 L647.84755897 181.38050767 L648.04389447 181.57344603 L648.24356731 181.76292848 L648.44651666 181.94889730 L648.65268071 182.13129584 L648.86199665 182.31006855 L649.07440073 182.48516095 L649.28982824 182.65651973 L649.50821356 182.82409268 L649.72949017 182.98782876 L649.95359067 183.14767809 L650.18044679 183.30359199 L650.40998943 183.45552295 L650.64214868 183.60342470 L650.87685380 183.74725218 L651.11403332 183.88696160 L651.35361498 184.02251038 L651.59552580 184.15385723 L651.83969209 184.28096216 L652.08603948 184.40378644 L652.33449294 184.52229266 L652.58497677 184.63644472 L652.83741468 184.74620785 L653.09172977 184.85154861 L653.34784458 184.95243491 L653.60568109 185.04883603 L653.86516076 185.14072260 L654.12620456 185.22806664 L654.38873296 185.31084152 L654.65266599 185.38902205 L654.91792327 185.46258440 L655.18442398 185.53150617 L655.45208696 185.59576637 L655.72083067 185.65534541 L655.99057324 185.71022516 L656.26123251 185.76038889 L656.53272604 185.80582133 L656.80497113 185.84650863 L657.07788484 185.88243840 L657.35138404 185.91359970 L657.62538543 185.93998303 L657.89980554 185.96158036 L658.17456079 185.97838511 L658.44956746 185.99039216 L658.72474181 185.99759786 L659.00000000 186.00000000 L659.27525819 185.99759786 L659.55043254 185.99039216 L659.82543921 185.97838511 L660.10019446 185.96158036 L660.37461457 185.93998303 L660.64861596 185.91359970 L660.92211516 185.88243840 L661.19502887 185.84650863 L661.46727396 185.80582133 L661.73876749 185.76038889 L662.00942676 185.71022516 L662.27916933 185.65534541 L662.54791304 185.59576637 L662.81557602 185.53150617 L663.08207673 185.46258440 L663.34733401 185.38902205 L663.61126704 185.31084152 L663.87379544 185.22806664 L664.13483924 185.14072260 L664.39431891 185.04883603 L664.65215542 184.95243491 L664.90827023 184.85154861 L665.16258532 184.74620785 L665.41502323 184.63644472 L665.66550706 184.52229266 L665.91396052 184.40378644 L666.16030791 184.28096216 L666.40447420 184.15385723 L666.64638502 184.02251038 L666.88596668 183.88696160 L667.12314620 183.74725218 L667.35785132 183.60342470 L667.59001057 183.45552295 L667.81955321 183.30359199 L668.04640933 183.14767809 L668.27050983 182.98782876 L668.49178644 182.82409268 L668.71017176 182.65651973 L668.92559927 182.48516095 L669.13800335 182.31006855 L669.34731929 182.13129584 L669.55348334 181.94889730 L669.75643269 181.76292848 L669.95610553 181.57344603 L670.15244103 181.38050767 L670.34537940 181.18417217 L670.53486185 180.98449933 L670.72083067 180.78154997 L670.90322921 180.57538592 L671.08200191 180.36606998 L671.25709432 180.15366591 L671.42845310 179.93823840 L671.59602605 179.71985308 L671.75976213 179.49857647 L671.91961146 179.27447597 L672.07552535 179.04761985 L672.22745631 178.81807720 L672.37535806 178.58591796 L672.51918555 178.35121283 L672.65889496 178.11403332 L672.79444374 177.87445166 L672.92579060 177.63254084 L673.05289553 177.38837455 L673.17571981 177.14202715 L673.29422602 176.89357370 L673.40837808 176.64308987 L673.51814121 176.39065196 L673.62348197 176.13633687 L673.72436828 175.88022206 L673.82076940 175.62238555 L673.91265597 175.36290587 L674.00000000 175.10186208 L674.00000000 284.00000000 L679.00000000 284.00000000 L679.00000000 248.00000000 L755.00000000 248.00000000 L755.00000000 300.00000000 L541.00000000 300.00000000 L541.00000000 248.00000000 Z" fill="url(#u02v2vk_capfield)" stroke="none" stroke-width="1.8" />
-<rect id="u02v2vk_captankleftbase" x="534" y="228" width="7" height="79" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<rect id="u02v2vk_captankleft" x="534" y="228" width="7" height="79" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u02v2vk_captankrightbase" x="755" y="228" width="7" height="79" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<rect id="u02v2vk_captankright" x="755" y="228" width="7" height="79" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u02v2vk_captankbottombase" x="534" y="300" width="228" height="7" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<rect id="u02v2vk_captankbottom" x="534" y="300" width="228" height="7" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<line id="u02v2vk_capsurface0" x1="541" y1="248" x2="639.0" y2="248" stroke="#1565c0" stroke-width="1.8"/>
-<rect id="u02v2vk_captube0leftbase" x="639.0" y="128" width="5" height="156" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<rect id="u02v2vk_captube0left" x="639.0" y="128" width="5" height="156" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u02v2vk_captube0rightbase" x="674.0" y="128" width="5" height="156" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<rect id="u02v2vk_captube0right" x="674.0" y="128" width="5" height="156" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<path id="u02v2vk_capinterface0" d="M644.0 175.10186207991958 A15.771933363574009 15.771933363574009 0 0 0 674.0 175.10186207991958" fill="none" stroke="#1565c0" stroke-width="1.8" />
-<line id="u02v2vk_capsurfaceLast" x1="679.0" y1="248" x2="755" y2="248" stroke="#1565c0" stroke-width="1.8"/>
-<path id="u02v2vk_capsigma0" d="M644.0 175.10186207991958 L636.5835921350013 152.2765056888359" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u02v2vk_pressureMarker)"/>
-<path id="u02v2vk_capsigma1" d="M674.0 175.10186207991958 L681.4164078649987 152.2765056888359" fill="none" stroke="#1565c0" stroke-width="2.3" marker-end="url(#u02v2vk_pressureMarker)"/>
-<line x1="644" y1="108" x2="644" y2="118" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="674" y1="108" x2="674" y2="118" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u02v2vk_diameter" d="M644 113 L674 113" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u02v2vk_dim)" marker-end="url(#u02v2vk_dim)"/>
-<text x="659.0" y="130" font-size="11" fill="#b7600c" text-anchor="middle">d = 1,0 mm</text>
-<line x1="781" y1="186" x2="791" y2="186" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="781" y1="248" x2="791" y2="248" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u02v2vk_height" d="M786 186 L786 248" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u02v2vk_dim)" marker-end="url(#u02v2vk_dim)"/>
-<line x1="674" y1="186" x2="791" y2="186" stroke="#b7600c" stroke-width="1"/>
-<line x1="755" y1="248" x2="791" y2="248" stroke="#b7600c" stroke-width="1"/>
-<text x="803" y="213" font-size="12" fill="#b7600c" text-anchor="start">h ≈ 10,8 mm</text>
-<text x="846" y="148" font-size="12" fill="#b7600c" text-anchor="middle">θ = 18°</text>
-<text x="846" y="267" font-size="11" fill="#1565c0" text-anchor="middle">ρ = 790 kg/m³</text>
-<text x="846" y="286" font-size="11" fill="#1565c0" text-anchor="middle">σ = 0,022 N/m</text>
-<text x="725" y="354" font-size="18" fill="#1565c0" text-anchor="middle" font-weight="700">h = 4σ cosθ/(ρgd)</text>
-<text x="725" y="386" font-size="10" fill="#3a4a56" text-anchor="middle">Promjer i visina prikazani su u različitim mjerilima.</text>
-</g>
+  <title id="u02v2vk_title">Smicanje ulja i odvojeni kapilarni pokus</title>
+  <desc id="u02v2vk_desc">Lijevo uljni sloj 3 mm, brzina 0,90 m/s, sila otpora na pokretnoj ploči ulijevo. Desno odvojeni etanol u kapilari 1 mm s kontaktnim kutom 18 stupnjeva, otvorenim ulazom i usponom 10,8 mm.</desc>
+  <defs>
+    <pattern id="u02v2vk_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u02v2vk_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u02v2vk_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u02v2vk_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs>
+      <marker id="u02v2vk_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u02v2vk_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u02v2vk_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u02v2vk_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
+      </marker>
+    </defs>
+    <defs />
+    <text x="255.5" y="62" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Smicanje ulja između ploča</text>
+    <defs />
+    <rect id="u02v2vk_shearfluid" x="74" y="151" width="350" height="137" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
+    <rect id="u02v2vk_shearmoving" x="74" y="135" width="350" height="16" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u02v2vk_shearfixed" x="74" y="288" width="350" height="14" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <line id="u02v2vk_shearzero" x1="116.0" y1="288" x2="116.0" y2="151" stroke="#356b83" stroke-width="1" stroke-dasharray="3 3" />
+    <line id="u02v2vk_shearprofile" x1="116.0" y1="288" x2="315.5" y2="151" stroke="#356b83" stroke-width="1.7" />
+    <path id="u02v2vk_shearvelocity1" d="M116.0 260.6 L155.89999999999998 260.6" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)" />
+    <path id="u02v2vk_shearvelocity2" d="M116.0 233.2 L195.79999999999998 233.2" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)" />
+    <path id="u02v2vk_shearvelocity3" d="M116.0 205.8 L235.7 205.8" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)" />
+    <path id="u02v2vk_shearvelocity4" d="M116.0 178.4 L275.59999999999997 178.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)" />
+    <path id="u02v2vk_shearspeed" d="M179.0 108 L284.0 108" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)" />
+    <text x="231.5" y="97.0" font-size="13" fill="#263746" text-anchor="middle">v</text>
+    <path id="u02v2vk_sheardrag" d="M182.5 151 L88.0 151" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02v2vk_reactionMarker)" />
+    <text x="89.75" y="174" font-size="13" fill="#263746" text-anchor="middle">Fᵥ</text>
+    <path id="u02v2vk_shearpull" d="M354.0 143 L441.5 143" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02v2vk_forceMarker)" />
+    <text x="417.0" y="131" font-size="13" fill="#263746" text-anchor="middle">F</text>
+    <text x="326.0" y="229.08999999999997" font-size="11" fill="#263746" text-anchor="start">u(y)</text>
+    <text x="249.0" y="321" font-size="10" fill="#263746" text-anchor="middle">donja stijenka: u = 0</text>
+    <line x1="51" y1="151" x2="61" y2="151" stroke="#657781" stroke-width="1.2" />
+    <line x1="51" y1="288" x2="61" y2="288" stroke="#657781" stroke-width="1.2" />
+    <path id="u02v2vk_sheargap" d="M56 151 L56 288" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02v2vk_dim)" marker-end="url(#u02v2vk_dim)" />
+    <text x="40" y="223.5" font-size="11" fill="#263746" text-anchor="start">δ</text>
+    <text x="249" y="83" font-size="12" fill="#263746" text-anchor="middle">v = 0,90 m/s; δ = 3 mm; A = 0,18 m²</text>
+    <text x="254" y="354" font-size="16" fill="#263746" text-anchor="middle" font-weight="700">τ = μv/δ = 126 Pa; F = 22,7 N</text>
+    <text x="254" y="386" font-size="12" fill="#263746" text-anchor="middle">μ = 0,42 Pa·s; ρ = 870 kg/m³</text>
+    <text x="723.5" y="62" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Odvojeni pokus: etanol u kapilari</text>
+    <defs />
+    <path id="u02v2vk_capfluid" d="M541.00000000 248.00000000 L639.00000000 248.00000000 L639.00000000 284.00000000 L644.00000000 284.00000000 L644.00000000 175.10186208 L644.08734403 175.36290587 L644.17923060 175.62238555 L644.27563172 175.88022206 L644.37651803 176.13633687 L644.48185879 176.39065196 L644.59162192 176.64308987 L644.70577398 176.89357370 L644.82428019 177.14202715 L644.94710447 177.38837455 L645.07420940 177.63254084 L645.20555626 177.87445166 L645.34110504 178.11403332 L645.48081445 178.35121283 L645.62464194 178.58591796 L645.77254369 178.81807720 L645.92447465 179.04761985 L646.08038854 179.27447597 L646.24023787 179.49857647 L646.40397395 179.71985308 L646.57154690 179.93823840 L646.74290568 180.15366591 L646.91799809 180.36606998 L647.09677079 180.57538592 L647.27916933 180.78154997 L647.46513815 180.98449933 L647.65462060 181.18417217 L647.84755897 181.38050767 L648.04389447 181.57344603 L648.24356731 181.76292848 L648.44651666 181.94889730 L648.65268071 182.13129584 L648.86199665 182.31006855 L649.07440073 182.48516095 L649.28982824 182.65651973 L649.50821356 182.82409268 L649.72949017 182.98782876 L649.95359067 183.14767809 L650.18044679 183.30359199 L650.40998943 183.45552295 L650.64214868 183.60342470 L650.87685380 183.74725218 L651.11403332 183.88696160 L651.35361498 184.02251038 L651.59552580 184.15385723 L651.83969209 184.28096216 L652.08603948 184.40378644 L652.33449294 184.52229266 L652.58497677 184.63644472 L652.83741468 184.74620785 L653.09172977 184.85154861 L653.34784458 184.95243491 L653.60568109 185.04883603 L653.86516076 185.14072260 L654.12620456 185.22806664 L654.38873296 185.31084152 L654.65266599 185.38902205 L654.91792327 185.46258440 L655.18442398 185.53150617 L655.45208696 185.59576637 L655.72083067 185.65534541 L655.99057324 185.71022516 L656.26123251 185.76038889 L656.53272604 185.80582133 L656.80497113 185.84650863 L657.07788484 185.88243840 L657.35138404 185.91359970 L657.62538543 185.93998303 L657.89980554 185.96158036 L658.17456079 185.97838511 L658.44956746 185.99039216 L658.72474181 185.99759786 L659.00000000 186.00000000 L659.27525819 185.99759786 L659.55043254 185.99039216 L659.82543921 185.97838511 L660.10019446 185.96158036 L660.37461457 185.93998303 L660.64861596 185.91359970 L660.92211516 185.88243840 L661.19502887 185.84650863 L661.46727396 185.80582133 L661.73876749 185.76038889 L662.00942676 185.71022516 L662.27916933 185.65534541 L662.54791304 185.59576637 L662.81557602 185.53150617 L663.08207673 185.46258440 L663.34733401 185.38902205 L663.61126704 185.31084152 L663.87379544 185.22806664 L664.13483924 185.14072260 L664.39431891 185.04883603 L664.65215542 184.95243491 L664.90827023 184.85154861 L665.16258532 184.74620785 L665.41502323 184.63644472 L665.66550706 184.52229266 L665.91396052 184.40378644 L666.16030791 184.28096216 L666.40447420 184.15385723 L666.64638502 184.02251038 L666.88596668 183.88696160 L667.12314620 183.74725218 L667.35785132 183.60342470 L667.59001057 183.45552295 L667.81955321 183.30359199 L668.04640933 183.14767809 L668.27050983 182.98782876 L668.49178644 182.82409268 L668.71017176 182.65651973 L668.92559927 182.48516095 L669.13800335 182.31006855 L669.34731929 182.13129584 L669.55348334 181.94889730 L669.75643269 181.76292848 L669.95610553 181.57344603 L670.15244103 181.38050767 L670.34537940 181.18417217 L670.53486185 180.98449933 L670.72083067 180.78154997 L670.90322921 180.57538592 L671.08200191 180.36606998 L671.25709432 180.15366591 L671.42845310 179.93823840 L671.59602605 179.71985308 L671.75976213 179.49857647 L671.91961146 179.27447597 L672.07552535 179.04761985 L672.22745631 178.81807720 L672.37535806 178.58591796 L672.51918555 178.35121283 L672.65889496 178.11403332 L672.79444374 177.87445166 L672.92579060 177.63254084 L673.05289553 177.38837455 L673.17571981 177.14202715 L673.29422602 176.89357370 L673.40837808 176.64308987 L673.51814121 176.39065196 L673.62348197 176.13633687 L673.72436828 175.88022206 L673.82076940 175.62238555 L673.91265597 175.36290587 L674.00000000 175.10186208 L674.00000000 284.00000000 L679.00000000 284.00000000 L679.00000000 248.00000000 L755.00000000 248.00000000 L755.00000000 300.00000000 L541.00000000 300.00000000 L541.00000000 248.00000000 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+    <rect id="u02v2vk_captankleftbase" x="534" y="228" width="7" height="79" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
+    <rect id="u02v2vk_captankleft" x="534" y="228" width="7" height="79" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u02v2vk_captankrightbase" x="755" y="228" width="7" height="79" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
+    <rect id="u02v2vk_captankright" x="755" y="228" width="7" height="79" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u02v2vk_captankbottom" x="534" y="300" width="228" height="7" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <line id="u02v2vk_capsurface0" x1="541" y1="248" x2="639.0" y2="248" stroke="#356b83" stroke-width="1.8" />
+    <rect id="u02v2vk_captube0leftbase" x="639.0" y="128" width="5" height="156" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
+    <rect id="u02v2vk_captube0left" x="639.0" y="128" width="5" height="156" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u02v2vk_captube0rightbase" x="674.0" y="128" width="5" height="156" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
+    <rect id="u02v2vk_captube0right" x="674.0" y="128" width="5" height="156" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <path id="u02v2vk_capinterface0" d="M644.0 175.10186207991958 A15.771933363574009 15.771933363574009 0 0 0 674.0 175.10186207991958" fill="none" stroke="#356b83" stroke-width="1.8" />
+    <line id="u02v2vk_capsurfaceLast" x1="679.0" y1="248" x2="755" y2="248" stroke="#356b83" stroke-width="1.8" />
+    <path id="u02v2vk_capsigma0" d="M644.0 175.10186207991958 L636.5835921350013 152.2765056888359" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02v2vk_pressureMarker)" />
+    <path id="u02v2vk_capsigma1" d="M674.0 175.10186207991958 L681.4164078649987 152.2765056888359" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02v2vk_pressureMarker)" />
+    <line x1="644" y1="108" x2="644" y2="118" stroke="#657781" stroke-width="1.2" />
+    <line x1="674" y1="108" x2="674" y2="118" stroke="#657781" stroke-width="1.2" />
+    <path id="u02v2vk_diameter" d="M644 113 L674 113" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02v2vk_dim)" marker-end="url(#u02v2vk_dim)" />
+    <text x="659.0" y="130" font-size="11" fill="#263746" text-anchor="middle">d = 1,0 mm</text>
+    <line x1="781" y1="186" x2="791" y2="186" stroke="#657781" stroke-width="1.2" />
+    <line x1="781" y1="248" x2="791" y2="248" stroke="#657781" stroke-width="1.2" />
+    <path id="u02v2vk_height" d="M786 186 L786 248" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02v2vk_dim)" marker-end="url(#u02v2vk_dim)" />
+    <line x1="674" y1="186" x2="791" y2="186" stroke="#657781" stroke-width="1" />
+    <line x1="755" y1="248" x2="791" y2="248" stroke="#657781" stroke-width="1" />
+    <text x="803" y="213" font-size="12" fill="#263746" text-anchor="start">h ≈ 10,8 mm</text>
+    <text x="846" y="148" font-size="12" fill="#263746" text-anchor="middle">θ = 18°</text>
+    <text x="846" y="267" font-size="11" fill="#263746" text-anchor="middle">ρ = 790 kg/m³</text>
+    <text x="846" y="286" font-size="11" fill="#263746" text-anchor="middle">σ = 0,022 N/m</text>
+    <text x="725" y="354" font-size="18" fill="#263746" text-anchor="middle" font-weight="700">h = 4σ cosθ/(ρgd)</text>
+    <text x="725" y="386" font-size="10" fill="#263746" text-anchor="middle">Promjer i visina prikazani su u različitim mjerilima.</text>
+  </g>
 </svg>

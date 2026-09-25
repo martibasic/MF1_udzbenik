@@ -1,207 +1,200 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" role="img" aria-labelledby="u09vs_title u09vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
-<title id="u09vs_title">Skice šest vježbi energijske bilance</title><desc id="u09vs_desc">Otvorena sapnica, konfuzor, silazno suženje, izdignuti Pitotov senzor, izbor grla te napunjen sifon s izlaznim mlazom. Kote visina odnose se na osi i površine; promjeri su poprečne mjere. Debljine cijevi sifona i sapnice uvećane su za čitljivost.</desc>
-<defs>
-<linearGradient id="u09vs_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u09vs_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u09vs_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u09vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u09vs_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u09vs_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u09vs_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="960" height="760" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<g id="u09vs_z1" transform="translate(28 32)">
-<rect x="0" y="0" width="446" height="230" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z1</text>
-<text x="58" y="29" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Istjecanje kroz bočnu sapnicu</text>
-<defs><linearGradient id="u09vs_z1field" gradientUnits="userSpaceOnUse" x1="0" y1="74" x2="0" y2="196"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u09vs_z1fluid" d="M90 74 H218 V143 H278 V153 H218 V196 H90 Z" fill="url(#u09vs_z1field)" stroke="none" stroke-width="1.8" />
-<rect x="82" y="57" width="8" height="147" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="218" y="57" width="8" height="86" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="218" y="153" width="8" height="51" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="82" y="196" width="144" height="8" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<line x1="90" y1="74" x2="218" y2="74" stroke="#1565c0" stroke-width="2"/>
-<line x1="218" y1="143" x2="278" y2="143" stroke="#3a4a56" stroke-width="1.5"/>
-<line x1="218" y1="153" x2="278" y2="153" stroke="#3a4a56" stroke-width="1.5"/>
-<path id="u09vs_z1jet" d="M278 148 Q325 148 372 186" fill="none" stroke="#1565c0" stroke-width="2.5" />
-<path d="M282 148 L320 148" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<text x="301.0" y="139" font-size="12" fill="#1e8449" text-anchor="middle">v</text>
-<line x1="60" y1="74" x2="70" y2="74" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="60" y1="148" x2="70" y2="148" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z1H" d="M65 74 L65 148" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)"/>
-<text x="15" y="105" font-size="12" fill="#b7600c" text-anchor="start">H</text>
-<text x="15" y="121" font-size="11" fill="#b7600c" text-anchor="start">3,20 m</text>
-<line x1="65" y1="74" x2="82" y2="74" stroke="#b7600c" stroke-width="1"/>
-<line x1="65" y1="148" x2="82" y2="148" stroke="#b7600c" stroke-width="1"/>
-<line x1="261" y1="143" x2="271" y2="143" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="261" y1="153" x2="271" y2="153" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z1d" d="M266 143 L266 153" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dimSmall)" marker-end="url(#u09vs_dimSmall)"/>
-<line x1="266" y1="140" x2="290" y2="106" stroke="#b7600c" stroke-width="1"/>
-<text x="284" y="93" font-size="12" fill="#b7600c" text-anchor="start">d = 26 mm</text>
-<text x="112" y="63" font-size="11" fill="#1565c0" text-anchor="start">pₐₜₘ</text>
-<text x="103" y="219" font-size="10" fill="#1a2530" text-anchor="start">Promjer sapnice uvećan za čitljivost.</text>
-</g>
-<g id="u09vs_z2" transform="translate(486 32)">
-<rect x="0" y="0" width="446" height="230" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z2</text>
-<text x="58" y="29" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Horizontalni konfuzor</text>
-<path id="u09vs_z2fluid" d="M34 93 H150 L240 133 H408 V173 H240 L150 213 H34 Z" fill="#eaf3fb" stroke="none" stroke-width="1.8" />
-<path id="u09vs_z2top" d="M34 93 H150 L240 133 H408" fill="none" stroke="#3a4a56" stroke-width="1.8" />
-<path id="u09vs_z2bottom" d="M34 213 H150 L240 173 H408" fill="none" stroke="#3a4a56" stroke-width="1.8" />
-<line x1="87" y1="88" x2="87" y2="218" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 4"/>
-<line x1="327" y1="128" x2="327" y2="178" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 4"/>
-<path d="M58 153 L80 153" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<text x="69.0" y="144" font-size="12" fill="#1e8449" text-anchor="middle">v₁</text>
-<path d="M302 153 L368 153" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<text x="335.0" y="144" font-size="12" fill="#1e8449" text-anchor="middle">v₂</text>
-<text x="80" y="80" font-size="11" fill="#1565c0" text-anchor="start">1: A₁ = 0,060 m²</text>
-<text x="262" y="119" font-size="11" fill="#1565c0" text-anchor="start">2: A₂ = 0,020 m²</text>
-<text x="130" y="57" font-size="11" fill="#1a2530" text-anchor="start">Q = 0,42 m³/s; ρ = 1,20 kg/m³</text>
-<text x="258" y="197" font-size="11" fill="#1a2530" text-anchor="start">z₁ = z₂; p₁ − p₂ = ?</text>
-</g>
-<g id="u09vs_z3" transform="translate(28 274)">
-<rect x="0" y="0" width="446" height="230" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z3</text>
-<text x="58" y="29" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Silazno suženje: tlak i visina</text>
-<defs><linearGradient id="u09vs_z3field" gradientUnits="userSpaceOnUse" x1="0" y1="82" x2="0" y2="209"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u09vs_z3fluid" d="M90 82 H154 C206 82 229 153.666667 282 153.666667 H365 V186.333333 H282 C229 186.333333 206 138 154 138 H90 Z" fill="url(#u09vs_z3field)" stroke="none" stroke-width="1.8" />
-<path id="u09vs_z3top" d="M90 82 H154 C206 82 229 153.666667 282 153.666667 H365" fill="none" stroke="#3a4a56" stroke-width="1.8" />
-<path id="u09vs_z3bottom" d="M90 138 H154 C206 138 229 186.333333 282 186.333333 H365" fill="none" stroke="#3a4a56" stroke-width="1.8" />
-<path d="M103 110 L126 110" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<text x="114.5" y="101" font-size="12" fill="#1e8449" text-anchor="middle">v₁</text>
-<path d="M286 170 L353 170" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<text x="319.5" y="161" font-size="12" fill="#1e8449" text-anchor="middle">v₂</text>
-<circle cx="138" cy="110" r="3" fill="#c0392b"/>
-<text x="138" y="72" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">1</text>
-<circle cx="282" cy="170" r="3" fill="#c0392b"/>
-<text x="282" y="143" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">2</text>
-<line x1="71" y1="82" x2="81" y2="82" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="71" y1="138" x2="81" y2="138" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z3D1" d="M76 82 L76 138" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)"/>
-<text x="12" y="57" font-size="11" fill="#b7600c" text-anchor="start">D₁=120 mm</text>
-<line x1="369" y1="153.666667" x2="379" y2="153.666667" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="369" y1="186.333333" x2="379" y2="186.333333" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z3D2" d="M374 153.666667 L374 186.333333" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)"/>
-<text x="317" y="211" font-size="11" fill="#b7600c" text-anchor="start">D₂=70 mm</text>
-<line x1="365" y1="170" x2="402" y2="170" stroke="#b7600c" stroke-width="1"/>
-<line x1="155" y1="110" x2="402" y2="110" stroke="#b7600c" stroke-width="1" stroke-dasharray="4 4"/>
-<line x1="398" y1="110" x2="408" y2="110" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="398" y1="170" x2="408" y2="170" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z3dz" d="M403 110 L403 170" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)"/>
-<text x="339" y="98" font-size="11" fill="#b7600c" text-anchor="start">Δz = 2,00 m</text>
-<text x="114" y="218" font-size="11" fill="#1a2530" text-anchor="start">Q = 20,0 L/s; p₂ − p₁ = ?</text>
-</g>
-<g id="u09vs_z4" transform="translate(486 274)">
-<rect x="0" y="0" width="446" height="230" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z4</text>
-<text x="58" y="29" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Pitot: senzor iznad otvora</text>
-<defs><linearGradient id="u09vs_z4field" gradientUnits="userSpaceOnUse" x1="0" y1="79" x2="0" y2="208"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<rect x="27" y="129" width="300" height="78" rx="0" fill="url(#u09vs_z4field)" stroke="none" stroke-width="1.2"/>
-<line x1="27" y1="129" x2="276" y2="129" stroke="#3a4a56" stroke-width="1.5"/>
-<line x1="292" y1="129" x2="327" y2="129" stroke="#3a4a56" stroke-width="1.5"/>
-<line x1="27" y1="207" x2="327" y2="207" stroke="#3a4a56" stroke-width="1.5"/>
-<path id="u09vs_z4probewall" d="M228 170 H268 Q284 170 284 154 V80" fill="none" stroke="#3a4a56" stroke-width="14" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09vs_z4probewater" d="M228 170 H268 Q284 170 284 154 V80" fill="none" stroke="url(#u09vs_z4field)" stroke-width="10" stroke-linecap="butt" stroke-linejoin="round"/>
-<rect x="265" y="55" width="38" height="25" rx="3" fill="#909fa8" stroke="#3a4a56" stroke-width="1.2"/>
-<text x="284" y="72" font-size="12" fill="white" text-anchor="middle" font-weight="700">S</text>
-<text x="80" y="58" font-size="11" fill="#1a2530" text-anchor="start">pM,S = 24,0 kPa</text>
-<line x1="191" y1="63" x2="261" y2="67" stroke="#7a8a96" stroke-width="1"/>
-<path d="M68 170 L123 170" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<text x="95.5" y="161" font-size="12" fill="#1e8449" text-anchor="middle">v</text>
-<circle cx="148" cy="170" r="3" fill="#c0392b"/>
-<text x="148" y="195" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">A</text>
-<circle cx="227" cy="170" r="3" fill="#c0392b"/>
-<text x="227" y="195" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">st</text>
-<text x="55" y="119" font-size="11" fill="#1a2530" text-anchor="start">pM,A = 16,0 kPa</text>
-<line x1="307" y1="80" x2="347" y2="80" stroke="#b7600c" stroke-width="1"/>
-<line x1="330" y1="170" x2="347" y2="170" stroke="#b7600c" stroke-width="1"/>
-<line x1="343" y1="80" x2="353" y2="80" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="343" y1="170" x2="353" y2="170" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z4dz" d="M348 80 L348 170" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)"/>
-<text x="360" y="118" font-size="11" fill="#b7600c" text-anchor="start">ΔzS</text>
-<text x="360" y="134" font-size="11" fill="#b7600c" text-anchor="start">1,20 m</text>
-<text x="40" y="222" font-size="10" fill="#1a2530" text-anchor="start">Mjerni vod: mirujuća voda, bez zračnih džepova.</text>
-</g>
-<g id="u09vs_z5" transform="translate(28 516)">
-<rect x="0" y="0" width="446" height="230" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z5</text>
-<text x="58" y="29" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Grlo: dva uvjeta za odabir</text>
-<defs><linearGradient id="u09vs_z5field" gradientUnits="userSpaceOnUse" x1="0" y1="100" x2="0" y2="200"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u09vs_z5fluid" d="M38 100 H130 L205 125 H268 L343 100 H408 V200 H343 L268 175 H205 L130 200 H38 Z" fill="url(#u09vs_z5field)" stroke="none" stroke-width="1.8" />
-<path id="u09vs_z5top" d="M38 100 H130 L205 125 H268 L343 100 H408" fill="none" stroke="#3a4a56" stroke-width="1.8" />
-<path id="u09vs_z5bottom" d="M38 200 H130 L205 175 H268 L343 200 H408" fill="none" stroke="#3a4a56" stroke-width="1.8" />
-<path d="M62 150 L84 150" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<text x="73.0" y="141" font-size="12" fill="#1e8449" text-anchor="middle">v₁</text>
-<path d="M208 150 L261 150" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<text x="234.5" y="141" font-size="12" fill="#1e8449" text-anchor="middle">vC</text>
-<circle cx="108" cy="150" r="3" fill="#c0392b"/>
-<text x="108" y="118" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">1</text>
-<circle cx="237" cy="150" r="3" fill="#c0392b"/>
-<text x="237" y="117" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">C</text>
-<text x="44" y="65" font-size="11" fill="#1a2530" text-anchor="start">D₁ = 100 mm; Q = 20,0 L/s</text>
-<text x="44" y="82" font-size="11" fill="#1a2530" text-anchor="start">p₁,abs = 150 kPa</text>
-<line x1="279" y1="125" x2="289" y2="125" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="279" y1="175" x2="289" y2="175" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z5diameter" d="M284 125 L284 175" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)"/>
-<text x="296" y="154.0" font-size="11" fill="#b7600c" text-anchor="start">d</text>
-<text x="130" y="220" font-size="11" fill="#1a2530" text-anchor="start">Ulošci: d = 40 / 50 / 60 mm</text>
-<text x="296" y="61" font-size="10" fill="#1a2530" text-anchor="start">pC,abs ≥ 60 kPa</text>
-<text x="296" y="78" font-size="10" fill="#1a2530" text-anchor="start">p₁ − pC ≥ 40 kPa</text>
-</g>
-<g id="u09vs_z6" transform="translate(486 516)">
-<rect x="0" y="0" width="446" height="242" rx="10" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="14" y="14" width="34" height="22" rx="5" fill="#1565c0" stroke="none" stroke-width="1.2"/>
-<text x="31" y="30" font-size="13" fill="white" text-anchor="middle" font-weight="700">Z6</text>
-<text x="58" y="29" font-size="13" fill="#1a2530" text-anchor="start" font-weight="700">Sifon i izlazni mlaz</text>
-<defs><linearGradient id="u09vs_z6field" gradientUnits="userSpaceOnUse" x1="0" y1="55.8" x2="0" y2="199"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<rect x="69" y="100" width="85" height="92" rx="0" fill="url(#u09vs_z6field)" stroke="none" stroke-width="1.2"/>
-<line x1="69" y1="100" x2="154" y2="100" stroke="#1565c0" stroke-width="2"/>
-<rect x="61" y="76" width="8" height="124" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="154" y="76" width="8" height="124" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="61" y="192" width="101" height="8" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<path id="u09vs_z6pipewall" d="M113 173 V71.8 Q113 55.8 129 55.8 H245 Q261 55.8 261 71.8 V151.6 Q261 167.6 277 167.6 H300" fill="none" stroke="#3a4a56" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09vs_z6pipewater" d="M113 173 V71.8 Q113 55.8 129 55.8 H245 Q261 55.8 261 71.8 V151.6 Q261 167.6 277 167.6 H300" fill="none" stroke="url(#u09vs_z6field)" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round"/>
-<circle id="u09vs_z6C" cx="193" cy="55.8" r="3" fill="#c0392b"/>
-<text x="193" y="44.8" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">C</text>
-<circle id="u09vs_z6A" cx="91" cy="100" r="3" fill="#c0392b"/>
-<text x="91" y="119" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">A</text>
-<circle id="u09vs_z6B" cx="300" cy="167.6" r="3" fill="#c0392b"/>
-<text x="300" y="154.6" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">B</text>
-<path d="M113 153 L113 127" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<path d="M195 55.8 L232 55.8" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<line x1="164" y1="100" x2="422" y2="100" stroke="#7a8a96" stroke-width="1" stroke-dasharray="4 4"/>
-<path id="u09vs_z6jet" d="M300 167.6 Q345.9251565049048 167.6 391.8503130098096 198.8" fill="none" stroke="#1565c0" stroke-width="2.1" />
-<path d="M301 167.6 L332 167.6" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09vs_v)"/>
-<line x1="163" y1="198.8" x2="426" y2="198.8" stroke="#3a4a56" stroke-width="1.5"/>
-<rect x="163" y="198.8" width="263" height="5" rx="0" fill="url(#u09vs_hatch)" stroke="none" stroke-width="1.2"/>
-<line x1="43" y1="55.8" x2="53" y2="55.8" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="43" y1="100" x2="53" y2="100" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z6zc" d="M48 55.8 L48 100" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)"/>
-<text x="11" y="82" font-size="10" fill="#b7600c" text-anchor="start">1,7 m</text>
-<line x1="48" y1="55.8" x2="98" y2="55.8" stroke="#b7600c" stroke-width="1"/>
-<line x1="48" y1="100" x2="60" y2="100" stroke="#b7600c" stroke-width="1"/>
-<line x1="416" y1="100" x2="426" y2="100" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="416" y1="167.6" x2="426" y2="167.6" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z6dz" d="M421 100 L421 167.6" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)"/>
-<text x="365" y="126" font-size="10" fill="#b7600c" text-anchor="start">Δz = 2,6 m</text>
-<line x1="416" y1="167.6" x2="426" y2="167.6" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="416" y1="198.8" x2="426" y2="198.8" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z6height" d="M421 167.6 L421 198.8" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)"/>
-<text x="364" y="191" font-size="10" fill="#b7600c" text-anchor="start">1,2 m</text>
-<line x1="300" y1="201" x2="300" y2="219" stroke="#b7600c" stroke-width="1"/>
-<line x1="391.8503130098096" y1="201" x2="391.8503130098096" y2="219" stroke="#b7600c" stroke-width="1"/>
-<line x1="300" y1="211" x2="300" y2="221" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="391.8503130098096" y1="211" x2="391.8503130098096" y2="221" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09vs_z6range" d="M300 216 L391.8503130098096 216" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)"/>
-<text x="345.9251565049048" y="233" font-size="11" fill="#b7600c" text-anchor="middle">x</text>
-<text x="166" y="118" font-size="10" fill="#1565c0" text-anchor="start">pₐₜₘ = 101,3 kPa</text>
-<text x="65" y="216" font-size="10" fill="#b7600c" text-anchor="start">D = 70 mm (uvećano)</text>
-</g>
-</g>
+  <title id="u09vs_title">Skice šest vježbi energijske bilance</title>
+  <desc id="u09vs_desc">Otvorena sapnica, konfuzor, silazno suženje, izdignuti Pitotov senzor, izbor grla te napunjen sifon s izlaznim mlazom. Kote visina odnose se na osi i površine; promjeri su poprečne mjere. Debljine cijevi sifona i sapnice uvećane su za čitljivost.</desc>
+  <defs>
+    <pattern id="u09vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u09vs_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u09vs_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u09vs_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#657781" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <g id="u09vs_z1" transform="translate(28 32)">
+      <text x="31" y="30" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z1</text>
+      <text x="58" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Istjecanje kroz bočnu sapnicu</text>
+      <defs />
+      <path id="u09vs_z1fluid" d="M90 74 H218 V143 H278 V153 H218 V196 H90 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+      <rect x="82" y="57" width="8" height="147" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="218" y="57" width="8" height="86" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="218" y="153" width="8" height="51" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="82" y="196" width="144" height="8" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="90" y1="74" x2="218" y2="74" stroke="#356b83" stroke-width="2" />
+      <line x1="218" y1="143" x2="278" y2="143" stroke="#3a4a56" stroke-width="1.5" />
+      <line x1="218" y1="153" x2="278" y2="153" stroke="#3a4a56" stroke-width="1.5" />
+      <path id="u09vs_z1jet" d="M278 148 Q325 148 372 186" fill="none" stroke="#356b83" stroke-width="2.5" />
+      <path d="M282 148 L320 148" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <text x="301.0" y="139" font-size="12" fill="#263746" text-anchor="middle">v</text>
+      <line x1="60" y1="74" x2="70" y2="74" stroke="#657781" stroke-width="1.2" />
+      <line x1="60" y1="148" x2="70" y2="148" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z1H" d="M65 74 L65 148" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" />
+      <text x="15" y="105" font-size="12" fill="#263746" text-anchor="start">H</text>
+      <text x="15" y="121" font-size="11" fill="#263746" text-anchor="start">3,20 m</text>
+      <line x1="65" y1="74" x2="82" y2="74" stroke="#657781" stroke-width="1" />
+      <line x1="65" y1="148" x2="82" y2="148" stroke="#657781" stroke-width="1" />
+      <line x1="261" y1="143" x2="271" y2="143" stroke="#657781" stroke-width="1.2" />
+      <line x1="261" y1="153" x2="271" y2="153" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z1d" d="M266 143 L266 153" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dimSmall)" marker-end="url(#u09vs_dimSmall)" />
+      <line x1="266" y1="140" x2="290" y2="106" stroke="#657781" stroke-width="1" />
+      <text x="284" y="93" font-size="12" fill="#263746" text-anchor="start">d = 26 mm</text>
+      <text x="112" y="63" font-size="11" fill="#263746" text-anchor="start">pₐₜₘ</text>
+      <text x="103" y="219" font-size="10" fill="#263746" text-anchor="start">Promjer sapnice uvećan za čitljivost.</text>
+    </g>
+    <g id="u09vs_z2" transform="translate(486 32)">
+      <text x="31" y="30" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z2</text>
+      <text x="58" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Horizontalni konfuzor</text>
+      <path id="u09vs_z2fluid" d="M34 93 H150 L240 133 H408 V173 H240 L150 213 H34 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+      <path id="u09vs_z2top" d="M34 93 H150 L240 133 H408" fill="none" stroke="#3a4a56" stroke-width="1.8" />
+      <path id="u09vs_z2bottom" d="M34 213 H150 L240 173 H408" fill="none" stroke="#3a4a56" stroke-width="1.8" />
+      <line x1="87" y1="88" x2="87" y2="218" stroke="#356b83" stroke-width="1" stroke-dasharray="4 4" />
+      <line x1="327" y1="128" x2="327" y2="178" stroke="#356b83" stroke-width="1" stroke-dasharray="4 4" />
+      <path d="M58 153 L80 153" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <text x="69.0" y="144" font-size="12" fill="#263746" text-anchor="middle">v₁</text>
+      <path d="M302 153 L368 153" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <text x="335.0" y="144" font-size="12" fill="#263746" text-anchor="middle">v₂</text>
+      <text x="80" y="80" font-size="11" fill="#263746" text-anchor="start">1: A₁ = 0,060 m²</text>
+      <text x="262" y="119" font-size="11" fill="#263746" text-anchor="start">2: A₂ = 0,020 m²</text>
+      <text x="130" y="57" font-size="11" fill="#263746" text-anchor="start">Q = 0,42 m³/s; ρ = 1,20 kg/m³</text>
+      <text x="258" y="197" font-size="11" fill="#263746" text-anchor="start">z₁ = z₂; p₁ − p₂ = ?</text>
+    </g>
+    <g id="u09vs_z3" transform="translate(28 274)">
+      <text x="31" y="30" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z3</text>
+      <text x="58" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Silazno suženje: tlak i visina</text>
+      <defs />
+      <path id="u09vs_z3fluid" d="M90 82 H154 C206 82 229 153.666667 282 153.666667 H365 V186.333333 H282 C229 186.333333 206 138 154 138 H90 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+      <path id="u09vs_z3top" d="M90 82 H154 C206 82 229 153.666667 282 153.666667 H365" fill="none" stroke="#3a4a56" stroke-width="1.8" />
+      <path id="u09vs_z3bottom" d="M90 138 H154 C206 138 229 186.333333 282 186.333333 H365" fill="none" stroke="#3a4a56" stroke-width="1.8" />
+      <path d="M103 110 L126 110" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <text x="114.5" y="101" font-size="12" fill="#263746" text-anchor="middle">v₁</text>
+      <path d="M286 170 L353 170" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <text x="319.5" y="161" font-size="12" fill="#263746" text-anchor="middle">v₂</text>
+      <circle cx="138" cy="110" r="3" fill="#356b83" />
+      <text x="138" y="72" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">1</text>
+      <circle cx="282" cy="170" r="3" fill="#356b83" />
+      <text x="282" y="143" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">2</text>
+      <line x1="71" y1="82" x2="81" y2="82" stroke="#657781" stroke-width="1.2" />
+      <line x1="71" y1="138" x2="81" y2="138" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z3D1" d="M76 82 L76 138" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" />
+      <text x="12" y="57" font-size="11" fill="#263746" text-anchor="start">D₁=120 mm</text>
+      <line x1="369" y1="153.666667" x2="379" y2="153.666667" stroke="#657781" stroke-width="1.2" />
+      <line x1="369" y1="186.333333" x2="379" y2="186.333333" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z3D2" d="M374 153.666667 L374 186.333333" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" />
+      <text x="317" y="211" font-size="11" fill="#263746" text-anchor="start">D₂=70 mm</text>
+      <line x1="365" y1="170" x2="402" y2="170" stroke="#657781" stroke-width="1" />
+      <line x1="155" y1="110" x2="402" y2="110" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
+      <line x1="398" y1="110" x2="408" y2="110" stroke="#657781" stroke-width="1.2" />
+      <line x1="398" y1="170" x2="408" y2="170" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z3dz" d="M403 110 L403 170" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" />
+      <text x="339" y="98" font-size="11" fill="#263746" text-anchor="start">Δz = 2,00 m</text>
+      <text x="114" y="218" font-size="11" fill="#263746" text-anchor="start">Q = 20,0 L/s; p₂ − p₁ = ?</text>
+    </g>
+    <g id="u09vs_z4" transform="translate(486 274)">
+      <text x="31" y="30" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z4</text>
+      <text x="58" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Pitot: senzor iznad otvora</text>
+      <defs />
+      <rect x="27" y="129" width="300" height="78" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+      <line x1="27" y1="129" x2="276" y2="129" stroke="#3a4a56" stroke-width="1.5" />
+      <line x1="292" y1="129" x2="327" y2="129" stroke="#3a4a56" stroke-width="1.5" />
+      <line x1="27" y1="207" x2="327" y2="207" stroke="#3a4a56" stroke-width="1.5" />
+      <path id="u09vs_z4probewall" d="M228 170 H268 Q284 170 284 154 V80" fill="none" stroke="#3a4a56" stroke-width="14" stroke-linecap="butt" stroke-linejoin="round" />
+      <path id="u09vs_z4probewater" d="M228 170 H268 Q284 170 284 154 V80" fill="none" stroke="#dcebf1" stroke-width="10" stroke-linecap="butt" stroke-linejoin="round" />
+      <rect x="265" y="55" width="38" height="25" rx="3" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" data-mf1-role="physical" id="u09vs_z4sensor" />
+      <text x="284" y="72" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">S</text>
+      <text x="80" y="58" font-size="11" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M</tspan>,S = 24,0 kPa</text>
+      <line x1="191" y1="63" x2="261" y2="67" stroke="#657781" stroke-width="1" />
+      <path d="M68 170 L123 170" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <text x="95.5" y="161" font-size="12" fill="#263746" text-anchor="middle">v</text>
+      <circle cx="148" cy="170" r="3" fill="#356b83" />
+      <text x="148" y="195" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">A</text>
+      <circle cx="227" cy="170" r="3" fill="#356b83" />
+      <text x="227" y="195" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">st</text>
+      <text x="55" y="119" font-size="11" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M</tspan>,A = 16,0 kPa</text>
+      <line x1="307" y1="80" x2="347" y2="80" stroke="#657781" stroke-width="1" />
+      <line x1="330" y1="170" x2="347" y2="170" stroke="#657781" stroke-width="1" />
+      <line x1="343" y1="80" x2="353" y2="80" stroke="#657781" stroke-width="1.2" />
+      <line x1="343" y1="170" x2="353" y2="170" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z4dz" d="M348 80 L348 170" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" />
+      <text x="360" y="118" font-size="11" fill="#263746" text-anchor="start">ΔzS</text>
+      <text x="360" y="134" font-size="11" fill="#263746" text-anchor="start">1,20 m</text>
+      <text x="40" y="222" font-size="10" fill="#263746" text-anchor="start">Mjerni vod: mirujuća voda, bez zračnih džepova.</text>
+    </g>
+    <g id="u09vs_z5" transform="translate(28 516)">
+      <text x="31" y="30" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z5</text>
+      <text x="58" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Grlo: dva uvjeta za odabir</text>
+      <defs />
+      <path id="u09vs_z5fluid" d="M38 100 H130 L205 125 H268 L343 100 H408 V200 H343 L268 175 H205 L130 200 H38 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+      <path id="u09vs_z5top" d="M38 100 H130 L205 125 H268 L343 100 H408" fill="none" stroke="#3a4a56" stroke-width="1.8" />
+      <path id="u09vs_z5bottom" d="M38 200 H130 L205 175 H268 L343 200 H408" fill="none" stroke="#3a4a56" stroke-width="1.8" />
+      <path d="M62 150 L84 150" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <text x="73.0" y="141" font-size="12" fill="#263746" text-anchor="middle">v₁</text>
+      <path d="M208 150 L261 150" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <text x="234.5" y="141" font-size="12" fill="#263746" text-anchor="middle">vC</text>
+      <circle cx="108" cy="150" r="3" fill="#356b83" />
+      <text x="108" y="118" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">1</text>
+      <circle cx="237" cy="150" r="3" fill="#356b83" />
+      <text x="237" y="117" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">C</text>
+      <text x="44" y="65" font-size="11" fill="#263746" text-anchor="start">D₁ = 100 mm; Q = 20,0 L/s</text>
+      <text x="44" y="82" font-size="11" fill="#263746" text-anchor="start">p₁,abs = 150 kPa</text>
+      <line x1="279" y1="125" x2="289" y2="125" stroke="#657781" stroke-width="1.2" />
+      <line x1="279" y1="175" x2="289" y2="175" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z5diameter" d="M284 125 L284 175" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" />
+      <text x="296" y="154.0" font-size="11" fill="#263746" text-anchor="start">d</text>
+      <text x="130" y="220" font-size="11" fill="#263746" text-anchor="start">Ulošci: d = 40 / 50 / 60 mm</text>
+      <text x="296" y="61" font-size="10" fill="#263746" text-anchor="start">pC,abs ≥ 60 kPa</text>
+      <text x="296" y="78" font-size="10" fill="#263746" text-anchor="start">p₁ − pC ≥ 40 kPa</text>
+    </g>
+    <g id="u09vs_z6" transform="translate(486 516)">
+      <text x="31" y="30" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z6</text>
+      <text x="58" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Sifon i izlazni mlaz</text>
+      <defs />
+      <rect x="69" y="100" width="85" height="92" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+      <line x1="69" y1="100" x2="154" y2="100" stroke="#356b83" stroke-width="2" />
+      <rect x="61" y="76" width="8" height="124" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="154" y="76" width="8" height="124" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="61" y="192" width="101" height="8" rx="0" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <path id="u09vs_z6pipewall" d="M113 173 V71.8 Q113 55.8 129 55.8 H245 Q261 55.8 261 71.8 V151.6 Q261 167.6 277 167.6 H300" fill="none" stroke="#3a4a56" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
+      <path id="u09vs_z6pipewater" d="M113 173 V71.8 Q113 55.8 129 55.8 H245 Q261 55.8 261 71.8 V151.6 Q261 167.6 277 167.6 H300" fill="none" stroke="#dcebf1" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+      <circle id="u09vs_z6C" cx="193" cy="55.8" r="3" fill="#356b83" />
+      <text x="193" y="44.8" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">C</text>
+      <circle id="u09vs_z6A" cx="91" cy="100" r="3" fill="#356b83" />
+      <text x="91" y="119" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">A</text>
+      <circle id="u09vs_z6B" cx="300" cy="167.6" r="3" fill="#356b83" />
+      <text x="300" y="154.6" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">B</text>
+      <path d="M113 153 L113 127" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <path d="M195 55.8 L232 55.8" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <line x1="164" y1="100" x2="422" y2="100" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
+      <path id="u09vs_z6jet" d="M300 167.6 Q345.9251565049048 167.6 391.8503130098096 198.8" fill="none" stroke="#356b83" stroke-width="2.1" />
+      <path d="M301 167.6 L332 167.6" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vs_v)" />
+      <line x1="163" y1="198.8" x2="426" y2="198.8" stroke="#3a4a56" stroke-width="1.5" />
+      <rect x="163" y="198.8" width="263" height="5" rx="0" fill="url(#u09vs_hatch)" stroke="none" stroke-width="1.2" />
+      <line x1="43" y1="55.8" x2="53" y2="55.8" stroke="#657781" stroke-width="1.2" />
+      <line x1="43" y1="100" x2="53" y2="100" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z6zc" d="M48 55.8 L48 100" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" />
+      <text x="11" y="82" font-size="10" fill="#263746" text-anchor="start">1,7 m</text>
+      <line x1="48" y1="55.8" x2="98" y2="55.8" stroke="#657781" stroke-width="1" />
+      <line x1="48" y1="100" x2="60" y2="100" stroke="#657781" stroke-width="1" />
+      <line x1="416" y1="100" x2="426" y2="100" stroke="#657781" stroke-width="1.2" />
+      <line x1="416" y1="167.6" x2="426" y2="167.6" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z6dz" d="M421 100 L421 167.6" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" />
+      <text x="365" y="126" font-size="10" fill="#263746" text-anchor="start">Δz = 2,6 m</text>
+      <line x1="416" y1="167.6" x2="426" y2="167.6" stroke="#657781" stroke-width="1.2" />
+      <line x1="416" y1="198.8" x2="426" y2="198.8" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z6height" d="M421 167.6 L421 198.8" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" />
+      <text x="364" y="191" font-size="10" fill="#263746" text-anchor="start">1,2 m</text>
+      <line x1="300" y1="201" x2="300" y2="219" stroke="#657781" stroke-width="1" />
+      <line x1="391.8503130098096" y1="201" x2="391.8503130098096" y2="219" stroke="#657781" stroke-width="1" />
+      <line x1="300" y1="211" x2="300" y2="221" stroke="#657781" stroke-width="1.2" />
+      <line x1="391.8503130098096" y1="211" x2="391.8503130098096" y2="221" stroke="#657781" stroke-width="1.2" />
+      <path id="u09vs_z6range" d="M300 216 L391.8503130098096 216" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" />
+      <text x="345.9251565049048" y="233" font-size="11" fill="#263746" text-anchor="middle">x</text>
+      <text x="166" y="118" font-size="10" fill="#263746" text-anchor="start">pₐₜₘ = 101,3 kPa</text>
+      <text x="65" y="216" font-size="10" fill="#263746" text-anchor="start">D = 70 mm (uvećano)</text>
+    </g>
+  </g>
 </svg>

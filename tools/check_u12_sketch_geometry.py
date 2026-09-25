@@ -11,6 +11,8 @@ from check_u10_sketch_geometry import (
     check, node, path, line, delta, distance_to_path, wall_and_openings,
 )
 
+from sketch_style import check_uniform_fluid
+
 ROOT = Path(__file__).resolve().parents[1] / 'assets' / 'print'
 
 
@@ -48,10 +50,7 @@ def main():
                 if e.tag.endswith('path'):
                     check(e.get('d').count('M')==1 and e.get('d').count('Z')==1,
                           'Jedna povezana ispuna za svaki povezani fluid')
-                grad=node(root,e.get('fill')[5:-1])
-                check(grad.get('x1')==grad.get('x2')
-                      and grad.get('gradientUnits')=='userSpaceOnUse',
-                      'Vertikalni prostorni gradijent bez skoka boje na priključcima')
+                check_uniform_fluid(e, 'fill')
     p='u12rt_'
     element=node(intro,p+'element')
     check(element.get('stroke-dasharray') is not None,'Zamišljeni element nije kruti spremnik')

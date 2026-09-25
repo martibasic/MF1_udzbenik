@@ -34,11 +34,12 @@ ostaje ista i kad se geometrija povećava ili smanjuje.
 | `figure-padding` | 4 pt oko sadržaja |
 
 Tanke crte imaju najmanje 0,5 pt. Debeli potezi koji grade cijev, masku ili
-stijenku zadržavaju svoje geometrijske omjere. Gradijenti fluida, šrafure,
+stijenku zadržavaju svoje geometrijske omjere. Jednolične ispune fluida, šrafure,
 smjerovi vektora, hvatišta i kote ostaju povezani s izvornom geometrijom.
 Uklanjaju se dekorativne kartice, pozadine zaglavlja, naglasne trake i okviri
 napomena. Granica kontrolnog volumena, kućište uređaja i mreža dimenzijske
-matrice nose značenje i nisu dekorativne kartice.
+matrice nose značenje i nisu dekorativne kartice. Fizički objekt koji nalikuje kartici označuje se
+`data-mf1-role="physical"` i izuzima iz uklanjanja dekoracije.
 
 ## Kompozicija bez promjene sadržaja
 
@@ -55,6 +56,9 @@ posuda i vrijednosti na osima zadržavaju prostornu pripadnost.
 Provjerene posebne kompozicije nalaze se u `assets/figure-compositions.json`:
 usporedba ulja i vode u U01, dimenzijska matrica, tablica dometa mlaza,
 dijagram odluke, zajedničke legende te odmak oznaka i napomena od stijenki.
+Manometar s četirima visinama koristi dva puna retka. `canvas_insets_pt`
+prima rubove `left`, `right`, `top` i `bottom` u tiskovnim točkama; gornji i
+donji rub odvajaju naslove i napomene od debelih fizičkih obrisa cijevi.
 Svaka iznimka mora objasniti razlog; ne smije smanjivati font ispod minimuma.
 Za novi složeni slučaj prvo promijeniti raspored, prijelom ili položaj oznake.
 
@@ -74,14 +78,13 @@ uvećanje, opis i poveznice. CSS tokene generira isti generator iz JSON-a.
 ```text
 node tools/build_print_figures.mjs
 node tools/audit_print_layouts.mjs
-quarto render
-quarto render --profile pdf --to typst
+python scripts/build_book.py --render all
 python tools/audit_pdf.py
 python tools/audit_pdf_layout.py
 node tools/audit_print_site.mjs _site
 ```
 
-HTML i PDF renderaju se redom, jer Quarto dijeli predmemoriju. Nakon HTML
+HTML, tiskovni HTML i PDF renderaju se redom u izoliranoj radnoj mapi. Nakon HTML
 rendera obnoviti JupyterLite i kopirati aktualni PDF u `_site/downloads/`
 prema objavnom workflowu. Potreban je instaliran Chrome/Chromium/Edge i
 `npm ci`; `CHROME_PATH` može odabrati preglednik.
@@ -99,8 +102,11 @@ prema stijenkama, fluidu, osima i vektorima. Ne dokazuju same fizikalnu
 točnost. Sadržaj, ID-jevi, 90 zadataka, 87 primjera i 94 figure ostaju predmet
 zasebnoga publikacijskog audita.
 
-Redizajn smanjuje polaznih 420 stranica na 340 uz povećanje
-minimalne veličine oznaka sa 7 na 9 pt. Regresijski raspon PDF audita je
-310–380 stranica: približno ±10 % novog prijeloma. To je kontrola potpunosti
-i neželjenog rasta dokumenta, a ne dopuštenje za sitniji tekst ili uklanjanje
-sadržaja. Promjena izvan raspona zahtijeva obrazloženje i ponovni pregled.
+Redizajn tiskovnih figura smanjio je tadašnjih 420 stranica na 340 uz povećanje
+minimalne veličine oznaka sa 7 na 9 pt. Tadašnji regresijski raspon bio je
+310–380 stranica. Naknadna [tipografska revizija](pdf-tipografija.md) mijenja
+prijelom teksta i naslovâ, uz nepromijenjene tiskovne figure i veličine oznaka.
+Njezin zasebno obrazloženi raspon je 270–335 stranica. Raspon je rani alarm za
+promjenu prijeloma, a potpunost se dodatno provjerava prema indeksu objekata
+u stvarnom PDF-u. Nije dopuštenje za sitniji tekst ili uklanjanje sadržaja.
+Promjena izvan raspona zahtijeva obrazloženje i ponovni pregled.

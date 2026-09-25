@@ -2,110 +2,99 @@
   <title id="u03btig_u03btg_title">Balans tlaka u spojenim posudama i efektivno polje sila</title>
   <desc id="u03btig_u03btg_desc">Lijevo: statika spojenih U-posuda s istim fluidom, jednaka razina slobodne površine implicira jednake tlakove na istoj dubini (p u točki A jednak p u točki B). Desno: prijelaz prema poglavlju 4 - ubrzani zatvoreni spremnik s nagnutom slobodnom površinom okomitom na efektivno polje sila g_eff, koje je vektorski zbroj g i minus a.</desc>
   <defs>
-    <linearGradient id="u03btig_u03btg_voda" x1="0" y1="200" x2="0" y2="390" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u03btig_u03btg_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u03btig_u03btg_pr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+      <path d="M0,0 L0,4 L6,2 z" fill="#356b83" />
     </marker>
     <marker id="u03btig_u03btg_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#657781" />
     </marker>
     <marker id="u03btig_u03btg_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#657781" />
     </marker>
     <marker id="u03btig_u03btg_geff" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u03btig_u03btg_g" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1a2530" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#3a4a56" />
     </marker>
     <marker id="u03btig_u03btg_a" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
   </defs>
-  <line x1="466" y1="38" x2="466" y2="432" stroke="#dce7f0" stroke-width="1.2" stroke-dasharray="4,5" />
   <rect x="72" y="120" width="10" height="270" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="186" y="120" width="10" height="250" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="290" y="160" width="10" height="210" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="394" y="160" width="10" height="230" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="72" y="390" width="332" height="10" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-  <rect x="82" y="240" width="104" height="150" fill="url(#u03btig_u03btg_voda)" />
-  <rect x="300" y="240" width="94" height="150" fill="url(#u03btig_u03btg_voda)" />
-  <rect x="186" y="370" width="114" height="20" fill="url(#u03btig_u03btg_voda)" />
-  <rect x="186" y="370" width="10" height="20" fill="url(#u03btig_u03btg_voda)" />
-  <rect x="290" y="370" width="10" height="20" fill="url(#u03btig_u03btg_voda)" />
+  <rect x="82" y="240" width="104" height="150" fill="#dcebf1" />
+  <rect x="300" y="240" width="94" height="150" fill="#dcebf1" />
+  <rect x="186" y="370" width="114" height="20" fill="#dcebf1" />
+  <rect x="186" y="370" width="10" height="20" fill="#dcebf1" />
+  <rect x="290" y="370" width="10" height="20" fill="#dcebf1" />
   <line x1="196" y1="370" x2="290" y2="370" stroke="#3a4a56" stroke-width="1.1" />
-  <line x1="82" y1="240" x2="186" y2="240" stroke="#1565c0" stroke-width="2.2" />
-  <line x1="300" y1="240" x2="394" y2="240" stroke="#1565c0" stroke-width="2.2" />
-  <line x1="56" y1="240" x2="420" y2="240" stroke="#7a8a96" stroke-width="1.1" stroke-dasharray="9,6" />
-  <circle cx="134" cy="320" r="4.5" fill="#1a2530" />
-  <circle cx="347" cy="320" r="4.5" fill="#1a2530" />
-  <line x1="158" y1="320" x2="142" y2="320" stroke="#1565c0" stroke-width="2" marker-end="url(#u03btig_u03btg_pr)" />
-  <line x1="110" y1="320" x2="126" y2="320" stroke="#1565c0" stroke-width="2" marker-end="url(#u03btig_u03btg_pr)" />
-  <line x1="370" y1="320" x2="355" y2="320" stroke="#1565c0" stroke-width="2" marker-end="url(#u03btig_u03btg_pr)" />
-  <line x1="324" y1="320" x2="339" y2="320" stroke="#1565c0" stroke-width="2" marker-end="url(#u03btig_u03btg_pr)" />
-  <rect x="100" y="408" width="240" height="36" rx="8" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.55" />
+  <line x1="82" y1="240" x2="186" y2="240" stroke="#356b83" stroke-width="2.2" />
+  <line x1="300" y1="240" x2="394" y2="240" stroke="#356b83" stroke-width="2.2" />
+  <line x1="56" y1="240" x2="420" y2="240" stroke="#657781" stroke-width="1.1" stroke-dasharray="9,6" />
+  <circle cx="134" cy="320" r="4.5" fill="#3a4a56" />
+  <circle cx="347" cy="320" r="4.5" fill="#3a4a56" />
   <rect x="500" y="120" width="290" height="10" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="500" y="370" width="290" height="10" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="500" y="120" width="10" height="260" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="780" y="120" width="10" height="260" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="510" y="130" width="270" height="240" fill="#ffffff" />
-  <polygon points="510,200 780,300 780,370 510,370" fill="url(#u03btig_u03btg_voda)" />
-  <line x1="510" y1="200" x2="780" y2="300" stroke="#1565c0" stroke-width="2.6" />
-  <line x1="494" y1="396" x2="796" y2="396" stroke="#5d6d7e" stroke-width="2" />
-  <circle cx="540" cy="392" r="10" fill="#909fa8" stroke="#3a4a56" stroke-width="1.4" />
-  <circle cx="750" cy="392" r="10" fill="#909fa8" stroke="#3a4a56" stroke-width="1.4" />
+  <polygon points="510,200 780,300 780,370 510,370" fill="#dcebf1" />
+  <line x1="510" y1="200" x2="780" y2="300" stroke="#356b83" stroke-width="2.6" />
+  <line x1="494" y1="396" x2="796" y2="396" stroke="#3a4a56" stroke-width="2" />
+  <circle cx="540" cy="392" r="10" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.4" />
+  <circle cx="750" cy="392" r="10" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.4" />
   <circle cx="540" cy="392" r="2" fill="#3a4a56" />
   <circle cx="750" cy="392" r="2" fill="#3a4a56" />
-  <line x1="612" y1="94" x2="678" y2="94" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u03btig_u03btg_a)" />
-  <line x1="510" y1="200" x2="620" y2="200" stroke="#7a8a96" stroke-width="1" stroke-dasharray="6,4" />
-  <path d="M552 200 A42 42 0 0 1 549.389 214.589" fill="none" stroke="#8e44ad" stroke-width="1.8" />
-  <rect x="634" y="259" width="12" height="12" fill="none" stroke="#1a2530" stroke-width="1" stroke-dasharray="2,2" />
-  <line x1="640" y1="265" x2="640" y2="346" stroke="#1a2530" stroke-width="2.4" marker-end="url(#u03btig_u03btg_g)" />
-  <line x1="640" y1="265" x2="610" y2="265" stroke="#c0392b" stroke-width="2.4" marker-end="url(#u03btig_u03btg_a)" />
-  <line x1="640" y1="265" x2="610" y2="346" stroke="#8e44ad" stroke-width="3" marker-end="url(#u03btig_u03btg_geff)" />
-  <line x1="610" y1="265" x2="610" y2="346" stroke="#bda0d0" stroke-width="0.8" stroke-dasharray="3,3" />
-  <line x1="640" y1="346" x2="610" y2="346" stroke="#bda0d0" stroke-width="0.8" stroke-dasharray="3,3" />
-  <path d="M640 310 A45 45 0 0 1 624.373 307.193" fill="none" stroke="#8e44ad" stroke-width="1.2" />
-  <rect x="500" y="408" width="290" height="36" rx="8" fill="white" stroke="#8e44ad" stroke-width="1" stroke-opacity="0.55" />
-  <line x1="50" y1="240" x2="76" y2="240" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="50" y1="320" x2="76" y2="320" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="44" y1="240" x2="56" y2="240" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="44" y1="320" x2="56" y2="320" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="50" y1="243" x2="50" y2="317" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u03btig_u03btg_dimL)" marker-end="url(#u03btig_u03btg_dim)" />
-  <line x1="82" y1="320" x2="394" y2="320" stroke="#b7600c" stroke-width="0.9" stroke-dasharray="4,4" />
-  <text x="40" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Spojene posude – statika</text>
-  <text x="40" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">isti fluid, ista razina → isti tlak na istoj dubini</text>
-  <text x="134" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#0d47a1">voda</text>
-  <text x="347" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#0d47a1">voda</text>
-  <text x="134" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#5a6a78">p₀</text>
-  <text x="347" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#5a6a78">p₀</text>
-  <text x="134" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">A</text>
-  <text x="347" y="342" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2530">B</text>
-  <text x="220" y="431" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1565c0">p<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = p₀ + ρ g h</text>
-  <text x="40" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">Usp. P3: u zatvorenom spremniku p<tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 133,0 kPa (manom. ≈ 31,7 kPa).</text>
-  <text x="492" y="56" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#8e44ad">Efektivno polje sila – prijelaz prema pog. 4</text>
-  <text x="492" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78">ubrzani spremnik: slobodna površina ⊥ g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
+  <line x1="612" y1="94" x2="678" y2="94" stroke="#356b83" stroke-width="2.6" marker-end="url(#u03btig_u03btg_a)" />
+  <line x1="510" y1="200" x2="620" y2="200" stroke="#657781" stroke-width="1" stroke-dasharray="6,4" />
+  <path d="M552 200 A42 42 0 0 1 549.389 214.589" fill="none" stroke="#356b83" stroke-width="1.8" />
+  <rect x="634" y="259" width="12" height="12" fill="none" stroke="#3a4a56" stroke-width="1" stroke-dasharray="2,2" />
+  <line x1="640" y1="265" x2="640" y2="346" stroke="#3a4a56" stroke-width="2.4" marker-end="url(#u03btig_u03btg_g)" />
+  <line x1="640" y1="265" x2="610" y2="265" stroke="#356b83" stroke-width="2.4" marker-end="url(#u03btig_u03btg_a)" />
+  <line x1="640" y1="265" x2="610" y2="346" stroke="#356b83" stroke-width="3" marker-end="url(#u03btig_u03btg_geff)" />
+  <line x1="610" y1="265" x2="610" y2="346" stroke="#356b83" stroke-width="0.8" stroke-dasharray="3,3" />
+  <line x1="640" y1="346" x2="610" y2="346" stroke="#356b83" stroke-width="0.8" stroke-dasharray="3,3" />
+  <path d="M640 310 A45 45 0 0 1 624.373 307.193" fill="none" stroke="#356b83" stroke-width="1.2" />
+  <line x1="50" y1="240" x2="76" y2="240" stroke="#657781" stroke-width="0.7" />
+  <line x1="50" y1="320" x2="76" y2="320" stroke="#657781" stroke-width="0.7" />
+  <line x1="44" y1="240" x2="56" y2="240" stroke="#657781" stroke-width="1.2" />
+  <line x1="44" y1="320" x2="56" y2="320" stroke="#657781" stroke-width="1.2" />
+  <line x1="50" y1="243" x2="50" y2="317" stroke="#657781" stroke-width="1.3" marker-start="url(#u03btig_u03btg_dimL)" marker-end="url(#u03btig_u03btg_dim)" />
+  <line x1="82" y1="320" x2="394" y2="320" stroke="#657781" stroke-width="0.9" stroke-dasharray="4,4" />
+  <text x="40" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Spojene posude – statika</text>
+  <text x="40" y="74" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">isti fluid, ista razina → isti tlak na istoj dubini</text>
+  <text x="134" y="272" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746">voda</text>
+  <text x="347" y="272" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746">voda</text>
+  <text x="134" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">p₀</text>
+  <text x="347" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">p₀</text>
+  <text x="134" y="342" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">A</text>
+  <text x="347" y="342" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">B</text>
+  <text x="220" y="431" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">p<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">B</tspan> = p₀ + ρ g h</text>
+  <text x="40" y="100" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746">Usp. P3: u zatvorenom spremniku p<tspan baseline-shift="sub" font-size="0.7em">C</tspan> ≈ 133,0 kPa (manom. ≈ 31,7 kPa).</text>
+  <text x="492" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Efektivno polje sila – prijelaz prema pog. 4</text>
+  <text x="492" y="74" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">ubrzani spremnik: slobodna površina ⊥ g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
   </text>
-  <text x="680" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#5a6a78">p₀</text>
-  <text x="710" y="98" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#c0392b">
+  <text x="680" y="170" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">p₀</text>
+  <text x="710" y="98" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">
     <tspan font-weight="700">a</tspan> → (ubrzanje)</text>
-  <text x="562" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" font-weight="700" fill="#8e44ad">α</text>
-  <text x="650" y="320" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#1a2530">g</text>
-  <text x="624" y="255" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#c0392b">
+  <text x="562" y="200" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-style="italic" font-weight="700" fill="#263746">α</text>
+  <text x="650" y="320" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#263746">g</text>
+  <text x="624" y="255" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">
     <tspan font-weight="700">−a</tspan>
   </text>
-  <text x="603" y="347" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#8e44ad">
+  <text x="603" y="347" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#263746">
     <tspan font-weight="700">g</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
   </text>
-  <text x="632" y="321" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad">α</text>
-  <text x="645" y="431" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#8e44ad">tan α = a / g  ,  g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan> = √(g² + a²)</text>
-  <text x="36" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#b7600c">h</text>
+  <text x="632" y="321" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">α</text>
+  <text x="645" y="431" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">tan α = a / g  ,  g<tspan baseline-shift="sub" font-size="0.7em">eff</tspan> = √(g² + a²)</text>
+  <text x="36" y="284" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">h</text>
 </svg>

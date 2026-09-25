@@ -186,6 +186,14 @@ Typst ima vlastiti prijelom: naslov ostaje uz sadržaj, caption uz sliku,
 kratki zadatci i redci figura drže se zajedno gdje stanu. Cijeli dugi izvod
 ili primjer ne zaključava se u jedan neprelomljiv blok.
 
+PDF naslovnicu, sadržaj, razdjelnike, zaglavlje i folio oblikuje
+`assets/typst/mf1-book.typ`; osnovni slog i naslove `mf1-reading.typ`, a
+autorske blokove `mf1-author-blocks.typ`. Brojači i dalje koriste Quarto i
+zajedničko stanje dodataka. Skala i razmaci definirani su u PDF tokenima;
+[obrazloženje i postupak provjere](pdf-tipografija.md) prate taj sustav.
+Typst include datoteke verzioniraju se s LF završetcima redaka kako Quarto
+na Windowsu ne bi unosio dodatne odlomke u sadržajne blokove predloška.
+
 ## Što provjere dokazuju
 
 `audit_architecture.py` provjerava model, izvedenice, objekte, reference,

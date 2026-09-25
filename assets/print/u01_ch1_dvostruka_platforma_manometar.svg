@@ -1,120 +1,124 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 620" role="img" aria-labelledby="u01ch1_title u01ch1_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-<title id="u01ch1_title">Dvostruka platforma s ručnom pumpom</title><desc id="u01ch1_desc">Jednaki vođeni cilindri nose platformu, a mali pumpni klip tlači povezano ulje. Prikazan je tlačni potez; nepovratni ventili i spremnik su izvan sheme. Jedan puni potez i pomak platforme imaju vlastite početne plohe. Zbroj poteza nije kota cilindra.</desc>
-<defs>
-<linearGradient id="u01ch1_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u01ch1_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u01ch1_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u01ch1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u01ch1_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u01ch1_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u01ch1_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="980" height="620" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
-Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
-Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
-<defs>
-<marker id="u01ch1_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
-<marker id="u01ch1_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
-<marker id="u01ch1_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u01ch1_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
-</defs>
-<defs><linearGradient id="u01ch1_metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient></defs>
-<path id="u01ch1_systemouter0" d="M50.0 220 V535 H731.7801930084539 V220" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M50.0 220 V535 H731.7801930084539 V220" fill="none" stroke="white" stroke-width="9" />
-<path d="M50.0 220 V535 H731.7801930084539 V220" fill="none" stroke="url(#u01ch1_hatch)" stroke-width="9" />
-<path id="u01ch1_systemouter1" d="M190.0 220 V511 H420.0 V220" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M190.0 220 V511 H420.0 V220" fill="none" stroke="white" stroke-width="9" />
-<path d="M190.0 220 V511 H420.0 V220" fill="none" stroke="url(#u01ch1_hatch)" stroke-width="9" />
-<path id="u01ch1_systemouter2" d="M560.0 220 V511 H706.2198069915461 V220" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M560.0 220 V511 H706.2198069915461 V220" fill="none" stroke="white" stroke-width="9" />
-<path d="M560.0 220 V511 H706.2198069915461 V220" fill="none" stroke="url(#u01ch1_hatch)" stroke-width="9" />
-<defs><linearGradient id="u01ch1_systemfield" gradientUnits="userSpaceOnUse" x1="0" y1="358" x2="0" y2="535"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u01ch1_systemfluid" d="M50.0 358 H190.0 V511 H420.0 V358 H560.0 V511 H706.2198069915461 V358 H731.7801930084539 V535 H50.0 Z" fill="url(#u01ch1_systemfield)" stroke="none" stroke-width="1.8" />
-<path id="u01ch1_systemwall0" d="M50.0 220 V535 H731.7801930084539 V220" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<path id="u01ch1_systemwall1" d="M190.0 220 V511 H420.0 V220" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<path id="u01ch1_systemwall2" d="M560.0 220 V511 H706.2198069915461 V220" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<rect id="u01ch1_systempiston0" x="50.0" y="332" width="140" height="26" rx="0" fill="url(#u01ch1_metal)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u01ch1_systemrod0" x="110.0" y="160" width="20" height="172" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="50.0" y="335" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect x="187.0" y="335" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect id="u01ch1_systempiston1" x="420.0" y="332" width="140" height="26" rx="0" fill="url(#u01ch1_metal)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u01ch1_systemrod1" x="480.0" y="160" width="20" height="172" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="420.0" y="335" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect x="557.0" y="335" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect id="u01ch1_systempiston2" x="706.2198069915461" y="332" width="25.560386016907753" height="26" rx="0" fill="url(#u01ch1_metal)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u01ch1_systemrod2" x="715.1659420974638" y="180" width="7.6681158050723255" height="152" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="706.2198069915461" y="335" width="2.5560386016907755" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect x="729.224154406763" y="335" width="2.5560386016907755" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect id="u01ch1_platform" x="30" y="132" width="550" height="28" rx="3" fill="#bcd6e5" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="155" y="73" width="300" height="41" rx="14" fill="#8db5cd" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="172" y="80" width="51" height="23" rx="4" fill="#d6eaf8" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="234" y="80" width="51" height="23" rx="4" fill="#d6eaf8" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="296" y="80" width="51" height="23" rx="4" fill="#d6eaf8" stroke="#1565c0" stroke-width="1.2"/>
-<rect x="358" y="80" width="51" height="23" rx="4" fill="#d6eaf8" stroke="#1565c0" stroke-width="1.2"/>
-<circle cx="201" cy="122" r="10" fill="#3a4a56"/>
-<circle cx="410" cy="122" r="10" fill="#3a4a56"/>
-<path id="u01ch1_load" d="M305 21 L305 71" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01ch1_forceMarker)"/>
-<text x="325" y="46" font-size="14" fill="#c0392b" text-anchor="start">G = 27,6 kN</text>
-<path id="u01ch1_liftForce0" d="M120 441 L120 360" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u01ch1_reactionMarker)"/>
-<text x="120" y="478" font-size="13" fill="#1e8449" text-anchor="middle">F<tspan baseline-shift="-2.86" font-size="9.75">L</tspan> = 13,8 kN</text>
-<path id="u01ch1_liftForce1" d="M490 441 L490 360" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u01ch1_reactionMarker)"/>
-<text x="490" y="478" font-size="13" fill="#1e8449" text-anchor="middle">F<tspan baseline-shift="-2.86" font-size="9.75">L</tspan> = 13,8 kN</text>
-<text x="305" y="305" font-size="12" fill="#b7600c" text-anchor="middle">A<tspan baseline-shift="-2.64" font-size="9.0">L</tspan> = 150 cm² svaki</text>
-<line x1="236" y1="307" x2="171" y2="345" stroke="#b7600c" stroke-width="1"/>
-<line x1="375" y1="307" x2="434" y2="345" stroke="#b7600c" stroke-width="1"/>
-<rect id="u01ch1_guide" x="17" y="128" width="7" height="365" rx="0" fill="url(#u01ch1_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u01ch1_slider" x="14" y="138" width="16" height="16" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
-<text x="310" y="179" font-size="11" fill="#3a4a56" text-anchor="middle">Platforma i cilindri: isti pomak</text>
-<path id="u01ch1_pumpForce" d="M719 136 L719 178" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01ch1_forceMarker)"/>
-<text x="650" y="126" font-size="14" fill="#c0392b" text-anchor="middle">Fₚ = 460 N</text>
-<text x="650" y="408" font-size="12" fill="#b7600c" text-anchor="middle">Aₚ = 5 cm²</text>
-<line x1="684" y1="409" x2="708" y2="350" stroke="#b7600c" stroke-width="1"/>
-<line id="u01ch1_liftInitial" x1="420.0" y1="388" x2="560.0" y2="388" stroke="#3a4a56" stroke-width="1.2" stroke-dasharray="4 3"/>
-<line x1="606" y1="358" x2="616" y2="358" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="606" y1="388" x2="616" y2="388" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u01ch1_liftStroke" d="M611 358 L611 388" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u01ch1_dim)" marker-end="url(#u01ch1_dim)"/>
-<text x="578" y="337" font-size="12" fill="#b7600c" text-anchor="start">s<tspan baseline-shift="-2.64" font-size="9.0">L</tspan> = 25 mm ↑</text>
-<line x1="564.0" y1="358" x2="616" y2="358" stroke="#b7600c" stroke-width="1"/>
-<line x1="564.0" y1="388" x2="616" y2="388" stroke="#b7600c" stroke-width="1"/>
-<line id="u01ch1_pumpInitial" x1="706.2198069915461" y1="258" x2="731.7801930084539" y2="258" stroke="#3a4a56" stroke-width="1.2" stroke-dasharray="4 3"/>
-<line x1="772" y1="258" x2="782" y2="258" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="772" y1="358" x2="782" y2="358" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u01ch1_pumpStroke" d="M777 258 L777 358" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u01ch1_dim)" marker-end="url(#u01ch1_dim)"/>
-<text x="779" y="232" font-size="12" fill="#b7600c" text-anchor="middle">sₕ</text>
-<text x="748" y="382" font-size="11" fill="#b7600c" text-anchor="start">180 mm ↓</text>
-<line x1="735.7801930084539" y1="258" x2="782" y2="258" stroke="#b7600c" stroke-width="1"/>
-<line x1="735.7801930084539" y1="358" x2="782" y2="358" stroke="#b7600c" stroke-width="1"/>
-<text x="324" y="526" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">p = 0,92 MPa; isti fluid</text>
-<g id="u01ch1_formulas" transform="translate(816 65)">
-<rect x="0" y="0" width="144" height="445" rx="8" fill="#fafcff" stroke="#c8d6e4" stroke-width="1.2"/>
-<rect x="0" y="0" width="144" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="21" width="144" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="72.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">Račun</text>
-<text x="72.0" y="55" font-size="11" fill="#5a6a78" text-anchor="middle">Tlak</text>
-<text x="72.0" y="79" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">p = Fₚ/Aₚ</text>
-<text x="72.0" y="100" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">= 0,92 MPa</text>
-<line x1="25" y1="118" x2="119" y2="118" stroke="#c8d6e4" stroke-width="1"/>
-<text x="72.0" y="133" font-size="11" fill="#5a6a78" text-anchor="middle">Dva cilindra</text>
-<text x="72.0" y="157" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">G = 2pA<tspan baseline-shift="-3.3" font-size="11.25">L</tspan></text>
-<text x="72.0" y="178" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">= 27,6 kN</text>
-<line x1="25" y1="196" x2="119" y2="196" stroke="#c8d6e4" stroke-width="1"/>
-<text x="72.0" y="211" font-size="11" fill="#5a6a78" text-anchor="middle">Zbroj hodova</text>
-<text x="72.0" y="235" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">Σsₚ = 1,50 m</text>
-<text x="72.0" y="256" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">1,50 / 0,180 ≈ 8,33</text>
-<line x1="25" y1="274" x2="119" y2="274" stroke="#c8d6e4" stroke-width="1"/>
-<text x="72.0" y="289" font-size="11" fill="#5a6a78" text-anchor="middle">Puni potezi</text>
-<text x="72.0" y="313" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">n = 9</text>
-<text x="72.0" y="334" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">podizaj 27 mm</text>
-<line x1="25" y1="352" x2="119" y2="352" stroke="#c8d6e4" stroke-width="1"/>
-<text x="72.0" y="367" font-size="11" fill="#5a6a78" text-anchor="middle">Točno 25 mm</text>
-<text x="72.0" y="391" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">8 punih + 60 mm</text>
-<text x="72.0" y="412" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">zadnji je djelomičan</text>
-<line x1="25" y1="430" x2="119" y2="430" stroke="#c8d6e4" stroke-width="1"/>
-</g>
-<text x="388" y="567" font-size="11" fill="#3a4a56" text-anchor="middle">Prikazan tlačni potez; ventili i spremnik nisu prikazani. Hodovi imaju zasebne skale.</text>
-<text x="490.0" y="593" font-size="11" fill="#3a4a56" text-anchor="middle">Crveno/zeleno: sile na označeno tijelo · Tamno: smjer pomaka · Smeđe: kote i geometrija.</text>
-<text x="490.0" y="609" font-size="10" fill="#3a4a56" text-anchor="middle">Ispuna označuje isti fluid, ne polje tlaka. Razmaci, hodovi i duljine sila nisu u istom mjerilu.</text>
-</g>
+  <title id="u01ch1_title">Dvostruka platforma s ručnom pumpom</title>
+  <desc id="u01ch1_desc">Jednaki vođeni cilindri nose platformu, a mali pumpni klip tlači povezano ulje. Prikazan je tlačni potez; nepovratni ventili i spremnik su izvan sheme. Jedan puni potez i pomak platforme imaju vlastite početne plohe. Zbroj poteza nije kota cilindra.</desc>
+  <defs>
+    <pattern id="u01ch1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u01ch1_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u01ch1_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u01ch1_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs>
+      <marker id="u01ch1_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u01ch1_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u01ch1_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u01ch1_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
+      </marker>
+    </defs>
+    <defs />
+    <path id="u01ch1_systemouter0" d="M50.0 220 V535 H731.7801930084539 V220" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M50.0 220 V535 H731.7801930084539 V220" fill="none" stroke="#c5cdd3" stroke-width="9" />
+    <path d="M50.0 220 V535 H731.7801930084539 V220" fill="none" stroke="url(#u01ch1_hatch)" stroke-width="9" />
+    <path id="u01ch1_systemouter1" d="M190.0 220 V511 H420.0 V220" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M190.0 220 V511 H420.0 V220" fill="none" stroke="#c5cdd3" stroke-width="9" />
+    <path d="M190.0 220 V511 H420.0 V220" fill="none" stroke="url(#u01ch1_hatch)" stroke-width="9" />
+    <path id="u01ch1_systemouter2" d="M560.0 220 V511 H706.2198069915461 V220" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M560.0 220 V511 H706.2198069915461 V220" fill="none" stroke="#c5cdd3" stroke-width="9" />
+    <path d="M560.0 220 V511 H706.2198069915461 V220" fill="none" stroke="url(#u01ch1_hatch)" stroke-width="9" />
+    <defs />
+    <path id="u01ch1_systemfluid" d="M50.0 358 H190.0 V511 H420.0 V358 H560.0 V511 H706.2198069915461 V358 H731.7801930084539 V535 H50.0 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+    <path id="u01ch1_systemwall0" d="M50.0 220 V535 H731.7801930084539 V220" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+    <path id="u01ch1_systemwall1" d="M190.0 220 V511 H420.0 V220" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+    <path id="u01ch1_systemwall2" d="M560.0 220 V511 H706.2198069915461 V220" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+    <rect id="u01ch1_systempiston0" x="50.0" y="332" width="140" height="26" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u01ch1_systemrod0" x="110.0" y="160" width="20" height="172" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="50.0" y="335" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    <rect x="187.0" y="335" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    <rect id="u01ch1_systempiston1" x="420.0" y="332" width="140" height="26" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u01ch1_systemrod1" x="480.0" y="160" width="20" height="172" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="420.0" y="335" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    <rect x="557.0" y="335" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    <rect id="u01ch1_systempiston2" x="706.2198069915461" y="332" width="25.560386016907753" height="26" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u01ch1_systemrod2" x="715.1659420974638" y="180" width="7.6681158050723255" height="152" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="706.2198069915461" y="335" width="2.5560386016907755" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    <rect x="729.224154406763" y="335" width="2.5560386016907755" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    <rect id="u01ch1_platform" x="30" y="132" width="550" height="28" rx="3" fill="#dcebf1" stroke="#356b83" stroke-width="1.2" />
+    <rect x="155" y="73" width="300" height="41" rx="14" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="172" y="80" width="51" height="23" rx="4" fill="#dcebf1" stroke="#356b83" stroke-width="1.2" />
+    <rect x="234" y="80" width="51" height="23" rx="4" fill="#dcebf1" stroke="#356b83" stroke-width="1.2" />
+    <rect x="296" y="80" width="51" height="23" rx="4" fill="#dcebf1" stroke="#356b83" stroke-width="1.2" />
+    <rect x="358" y="80" width="51" height="23" rx="4" fill="#dcebf1" stroke="#356b83" stroke-width="1.2" />
+    <circle cx="201" cy="122" r="10" fill="#3a4a56" />
+    <circle cx="410" cy="122" r="10" fill="#3a4a56" />
+    <path id="u01ch1_load" d="M305 21 L305 71" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01ch1_forceMarker)" />
+    <text x="325" y="46" font-size="14" fill="#263746" text-anchor="start">G = 27,6 kN</text>
+    <path id="u01ch1_liftForce0" d="M120 441 L120 360" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01ch1_reactionMarker)" />
+    <text x="120" y="478" font-size="13" fill="#263746" text-anchor="middle">F<tspan baseline-shift="-2.86" font-size="9.75">L</tspan> = 13,8 kN</text>
+    <path id="u01ch1_liftForce1" d="M490 441 L490 360" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01ch1_reactionMarker)" />
+    <text x="490" y="478" font-size="13" fill="#263746" text-anchor="middle">F<tspan baseline-shift="-2.86" font-size="9.75">L</tspan> = 13,8 kN</text>
+    <text x="305" y="305" font-size="12" fill="#263746" text-anchor="middle">A<tspan baseline-shift="-2.64" font-size="9.0">L</tspan> = 150 cm² svaki</text>
+    <line x1="236" y1="307" x2="171" y2="345" stroke="#657781" stroke-width="1" />
+    <line x1="375" y1="307" x2="434" y2="345" stroke="#657781" stroke-width="1" />
+    <rect id="u01ch1_guide" x="17" y="128" width="7" height="365" rx="0" fill="url(#u01ch1_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u01ch1_slider" x="14" y="138" width="16" height="16" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <text x="310" y="179" font-size="11" fill="#263746" text-anchor="middle">Platforma i cilindri: isti pomak</text>
+    <path id="u01ch1_pumpForce" d="M719 136 L719 178" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01ch1_forceMarker)" />
+    <text x="650" y="126" font-size="14" fill="#263746" text-anchor="middle">Fₚ = 460 N</text>
+    <text x="650" y="408" font-size="12" fill="#263746" text-anchor="middle">Aₚ = 5 cm²</text>
+    <line x1="684" y1="409" x2="708" y2="350" stroke="#657781" stroke-width="1" />
+    <line id="u01ch1_liftInitial" x1="420.0" y1="388" x2="560.0" y2="388" stroke="#3a4a56" stroke-width="1.2" stroke-dasharray="4 3" />
+    <line x1="606" y1="358" x2="616" y2="358" stroke="#657781" stroke-width="1.2" />
+    <line x1="606" y1="388" x2="616" y2="388" stroke="#657781" stroke-width="1.2" />
+    <path id="u01ch1_liftStroke" d="M611 358 L611 388" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01ch1_dim)" marker-end="url(#u01ch1_dim)" />
+    <text x="578" y="337" font-size="12" fill="#263746" text-anchor="start">s<tspan baseline-shift="-2.64" font-size="9.0">L</tspan> = 25 mm ↑</text>
+    <line x1="564.0" y1="358" x2="616" y2="358" stroke="#657781" stroke-width="1" />
+    <line x1="564.0" y1="388" x2="616" y2="388" stroke="#657781" stroke-width="1" />
+    <line id="u01ch1_pumpInitial" x1="706.2198069915461" y1="258" x2="731.7801930084539" y2="258" stroke="#3a4a56" stroke-width="1.2" stroke-dasharray="4 3" />
+    <line x1="772" y1="258" x2="782" y2="258" stroke="#657781" stroke-width="1.2" />
+    <line x1="772" y1="358" x2="782" y2="358" stroke="#657781" stroke-width="1.2" />
+    <path id="u01ch1_pumpStroke" d="M777 258 L777 358" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01ch1_dim)" marker-end="url(#u01ch1_dim)" />
+    <text x="779" y="232" font-size="12" fill="#263746" text-anchor="middle">sₕ</text>
+    <text x="748" y="382" font-size="11" fill="#263746" text-anchor="start">180 mm ↓</text>
+    <line x1="735.7801930084539" y1="258" x2="782" y2="258" stroke="#657781" stroke-width="1" />
+    <line x1="735.7801930084539" y1="358" x2="782" y2="358" stroke="#657781" stroke-width="1" />
+    <text x="324" y="526" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">p = 0,92 MPa; isti fluid</text>
+    <g id="u01ch1_formulas" transform="translate(816 65)">
+      <rect x="0" y="21" width="144" height="9" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
+      <text x="72.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Račun</text>
+      <text x="72.0" y="55" font-size="11" fill="#263746" text-anchor="middle">Tlak</text>
+      <text x="72.0" y="79" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">p = Fₚ/Aₚ</text>
+      <text x="72.0" y="100" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">= 0,92 MPa</text>
+      <text x="72.0" y="133" font-size="11" fill="#263746" text-anchor="middle">Dva cilindra</text>
+      <text x="72.0" y="157" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">G = 2pA<tspan baseline-shift="-3.3" font-size="11.25">L</tspan>
+      </text>
+      <text x="72.0" y="178" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">= 27,6 kN</text>
+      <text x="72.0" y="211" font-size="11" fill="#263746" text-anchor="middle">Zbroj hodova</text>
+      <text x="72.0" y="235" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">sₚ = 1,50 m</text>
+      <text x="72.0" y="256" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">1,50 / 0,180 ≈ 8,33</text>
+      <text x="72.0" y="289" font-size="11" fill="#263746" text-anchor="middle">Puni potezi</text>
+      <text x="72.0" y="313" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">n = 9</text>
+      <text x="72.0" y="334" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">podizaj 27 mm</text>
+      <text x="72.0" y="367" font-size="11" fill="#263746" text-anchor="middle">Točno 25 mm</text>
+      <text x="72.0" y="391" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">8 punih + 60 mm</text>
+      <text x="72.0" y="412" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">zadnji je djelomičan</text>
+    </g>
+    <text x="388" y="567" font-size="11" fill="#263746" text-anchor="middle">Prikazan tlačni potez; ventili i spremnik nisu prikazani. Hodovi imaju zasebne skale.</text>
+    <text x="490.0" y="593" font-size="11" fill="#263746" text-anchor="middle">Sile djeluju na označeno tijelo; pomaci i kote imaju zasebne oznake.</text>
+    <text x="490.0" y="609" font-size="10" fill="#263746" text-anchor="middle">Ispuna označuje isti fluid, ne polje tlaka. Razmaci, hodovi i duljine sila nisu u istom mjerilu.</text>
+  </g>
 </svg>

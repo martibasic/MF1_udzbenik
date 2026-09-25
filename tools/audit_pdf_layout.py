@@ -1,4 +1,4 @@
-"""Check rendered QR modules, equation clearance and bibliography placement.
+"""Check rendered typography, object numbering, QR modules and bibliography.
 
 These checks inspect the final PDF, complementing the source SVG viewport
 audit and human review. They do not certify physical accuracy of diagrams.
@@ -6,6 +6,7 @@ audit and human review. They do not certify physical accuracy of diagrams.
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import json
 from pathlib import Path
 import re
@@ -17,6 +18,102 @@ import pymupdf
 ROOT = Path(__file__).resolve().parents[1]
 QR_COLOUR = (17 / 255, 24 / 255, 39 / 255)
 FIGURE_TOKENS = json.loads((ROOT / "assets/figure-tokens.json").read_text(encoding="utf-8"))
+PDF_TOKENS = json.loads((ROOT / "design-system/tokens.json").read_text(encoding="utf-8"))["pdf"]
+
+
+def typography_issues(document: pymupdf.Document) -> list[str]:
+    """Measure rendered titles and equation numbers, not just style declarations.
+
+    The original CRLF regression put a heading number on its own line. A grid
+    must now put actual title text on the number's baseline. This also catches
+    broken multi-line headings without relying on a particular page count.
+    """
+    issues = []
+    title_keys = ("h1_pt", "h2_pt", "h3_pt", "h4_pt", "label_pt",
+                  "example_title_pt", "block_title_pt")
+    if any(PDF_TOKENS[key] <= PDF_TOKENS["font_size_pt"] for key in title_keys):
+        issues.append("svi strukturni naslovi moraju biti veći od osnovnog teksta")
+    sizes = {PDF_TOKENS[key] for key in title_keys}
+    margin = PDF_TOKENS["margin_x_mm"] * 72 / 25.4
+    equations = []
+    exercise_labels = []
+    key_labels = []
+    chapter = None
+    starts = {page: title.split(".", 1)[0]
+              for level, title, page in document.get_toc() if level == 1}
+    numbered_titles = 0
+    first_body = next((page for level, title, page in document.get_toc()
+                       if level == 1), 1)
+    for number, page in enumerate(document, 1):
+        if number in starts:
+            chapter = starts[number]
+        spans = [s for b in page.get_text("dict")["blocks"]
+                 for line in b.get("lines", []) for s in line["spans"]
+                 if s["text"].strip()]
+        body = [s for s in spans if 55 < s["bbox"][1] and s["bbox"][3] < 790]
+        for span in body:
+            text = span["text"].strip()
+            label = re.match(r"^([PZ]\d+)\.", text)
+            if label and span["font"] == "LibertinusSerif-Bold":
+                if chapter and chapter.isdigit():
+                    exercise_labels.append((chapter, label[1]))
+                elif chapter == "F":
+                    key_labels.append(label[1])
+            if (span["bbox"][0] > 470
+                    and re.fullmatch(r"\((?:\d+|[A-F])\.\d+\)", text)):
+                equations.append(text[1:-1])
+            if (number < first_body or "LibertinusSerif-Bold" != span["font"]
+                    or span["size"] < PDF_TOKENS["h4_pt"] - .05
+                    or not re.fullmatch(r"(?:\d+|[A-F])(?:\.\d+)*\.?", text)):
+                continue
+            numbered_titles += 1
+            if not any(abs(other["size"] - span["size"]) < .05
+                       and abs(other["origin"][1] - span["origin"][1]) < 1
+                       and other["bbox"][0] >= span["bbox"][2]
+                       and re.search(r"[A-Za-zČĆŽŠĐčćžšđ]", other["text"])
+                       for other in body):
+                issues.append(f"str. {number}: broj naslova {text} nema naslov u istom retku")
+        if number >= first_body and body:
+            last = max(body, key=lambda span: span["origin"][1])
+            # The standalone appendix divider is intentional, like part pages.
+            if (last["text"].strip() != "Dodaci" and "Bold" in last["font"]
+                    and any(abs(last["size"] - size) < .05 for size in sizes)):
+                issues.append(f"str. {number}: naslov ostaje bez sadržaja: {last['text']}")
+            if last["text"].strip() == "Vrati se na zadatak":
+                issues.append(f"str. {number}: naslov ključa ostaje samo uz povratnu poveznicu")
+        # Check ink-bearing characters: even MuPDF word boxes can include a
+        # trailing space or combine an accent with text on another baseline.
+        # Allow 3 pt optical overhang; headers and folios live outside the frame.
+        chars = [c for b in page.get_text("rawdict")["blocks"]
+                 for line in b.get("lines", []) for span in line["spans"]
+                 for c in span["chars"] if c["c"].strip()]
+        for char in chars:
+            x0, y0, x1, y1 = char["bbox"]
+            if (55 < y0 and y1 < 790
+                    and (x0 < margin - 3 or x1 > page.rect.width - margin + 3)):
+                issues.append(f"str. {number}: tekst izlazi iz stupca: {char['c']}")
+                break
+    index = json.loads((ROOT / "assets/content-index.json").read_text(encoding="utf8"))
+    expected = Counter(obj["number"] for obj in index["objects"].values()
+                       if obj["kind"] == "Equation")
+    actual = Counter(equations)
+    if actual != expected:
+        issues.append(f"numeracija jednadžbi: nedostaje {dict(expected - actual)}; "
+                      f"višak {dict(actual - expected)}")
+    expected_labels = Counter(
+        (index["documents"][obj["document"]]["number"], obj["label"])
+        for obj in index["objects"].values() if obj["kind"] in ("Example", "Problem"))
+    actual_labels = Counter(exercise_labels)
+    if actual_labels != expected_labels:
+        issues.append(f"P/Z naslovi po poglavljima: nedostaje {dict(expected_labels - actual_labels)}; "
+                      f"višak {dict(actual_labels - expected_labels)}")
+    expected_key = Counter(obj["label"] for obj in index["objects"].values()
+                           if obj["kind"] == "Problem")
+    if Counter(key_labels) != expected_key:
+        issues.append("ključ rezultata nema sve Z oznake prema indeksu")
+    if numbered_titles < 150:
+        issues.append(f"provjereno samo {numbered_titles} numeriranih naslova")
+    return issues
 
 
 def equation_issues(document: pymupdf.Document) -> list[str]:
@@ -199,6 +296,7 @@ def audit(path: Path) -> tuple[int, list[str]]:
         issues.extend(bibliography_issues(document))
         issues.extend(orphan_and_overflow_issues(document))
         issues.extend(figure_font_issues(document))
+        issues.extend(typography_issues(document))
     return checked, issues
 
 
@@ -215,7 +313,8 @@ def main() -> int:
             print(f"  - {issue}")
         return 1
     print(f"PDF layout PASS: {checked} raster-checked QR codes with links, equation clearance, "
-          "18 bibliography entries in E.7, captions and QR descriptions kept with content; figure labels >= 9 pt.")
+          "18 bibliography entries in E.7, captions and QR descriptions kept with content; "
+          "figure labels >= 9 pt; heading baselines, column bounds, equation numbers and P/Z labels match.")
     return 0
 
 

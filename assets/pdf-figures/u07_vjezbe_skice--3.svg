@@ -1,256 +1,208 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="447.874pt" height="164.442pt" viewBox="0 0 447.874 164.442" role="img"><title>Zadaci Z1–Z6: uzgon i početni stabilitet</title><defs>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_oil" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fde68a"/>
-      <stop offset="100%" stop-color="#c8a000"/>
-    </linearGradient>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_hull" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9aaab4"/>
-      <stop offset="100%" stop-color="#5d6d7e"/>
-    </linearGradient>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b"/>
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449"/>
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aB" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1565c0"/>
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c"/>
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aDimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c"/>
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_aT" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#5a6a78"/>
+      <path d="M0,0 L0,4 L6,2 z" fill="#3a4a56"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_water" x1="0" y1="96" x2="0" y2="195" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z2_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_water" x1="0" y1="110" x2="0" y2="192" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z3_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z4_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_water" x1="0" y1="124" x2="0" y2="183" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_water" x1="0" y1="124" x2="0" y2="183" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z5_b_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_water" x1="0" y1="106.56" x2="0" y2="191" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_oil" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="94" y2="106.56">
-      <stop offset="0%" stop-color="#fde68a"/>
-      <stop offset="100%" stop-color="#c8a000"/>
-    </linearGradient>
-  </defs><g font-family="Arial, Liberation Sans, sans-serif"><g transform="translate(108.469 13.5)"><text data-source-text="25" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(21, 101, 192)">Z5 — Oprema ili balast</text></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><rect xmlns="http://www.w3.org/2000/svg" x="15" y="124" width="130" height="59" fill="url(#u07vs_fix_z5_water)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="90"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><line xmlns="http://www.w3.org/2000/svg" x1="15" y1="124" x2="145" y2="124" stroke="rgb(21, 101, 192)" stroke-width="1.508" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="91"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="27.500000,139.586729 132.500000,139.586729 132.500000,97.586729 27.500000,97.586729" fill="rgb(233, 238, 242)" stroke="rgb(58, 74, 86)" stroke-width="1.508" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="92"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="28.550000,138.536729 131.450000,138.536729 131.450000,98.636729 28.550000,98.636729" fill="rgb(255, 255, 255)" stroke="rgb(144, 159, 168)" stroke-width="0.646" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="93"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><circle xmlns="http://www.w3.org/2000/svg" cx="80.00000000000004" cy="131.79336450679133" r="3.7" fill="rgb(30, 132, 73)" stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="94"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="70.900000,125.586729 89.100000,125.586729 89.100000,111.586729 70.900000,111.586729" fill="rgb(203, 164, 107)" stroke="rgb(139, 94, 0)" stroke-width="0.905" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="96"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><rect xmlns="http://www.w3.org/2000/svg" x="155" y="124" width="130" height="59" fill="url(#u07vs_fix_z5_b_water)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="98"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><line xmlns="http://www.w3.org/2000/svg" x1="155" y1="124" x2="285" y2="124" stroke="rgb(21, 101, 192)" stroke-width="1.508" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="99"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="167.500000,148.938766 272.500000,148.938766 272.500000,106.938766 167.500000,106.938766" fill="rgb(233, 238, 242)" stroke="rgb(58, 74, 86)" stroke-width="1.508" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="100"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="168.550000,147.888766 271.450000,147.888766 271.450000,107.988766 168.550000,107.988766" fill="rgb(255, 255, 255)" stroke="rgb(144, 159, 168)" stroke-width="0.646" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="101"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><circle xmlns="http://www.w3.org/2000/svg" cx="219.99999999999997" cy="136.46938321086617" r="3.7" fill="rgb(30, 132, 73)" stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="102"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><line xmlns="http://www.w3.org/2000/svg" x1="220.0" y1="106.93876642173235" x2="220.0" y2="78.93876642173235" stroke="rgb(58, 74, 86)" stroke-width="1.508" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="104"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="210.900000,78.938766 229.100000,78.938766 229.100000,64.938766 210.900000,64.938766" fill="rgb(203, 164, 107)" stroke="rgb(139, 94, 0)" stroke-width="0.905" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="105"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="178.000000,147.888766 262.000000,147.888766 262.000000,142.988766 178.000000,142.988766" fill="rgb(93, 109, 126)" stroke="rgb(58, 74, 86)" stroke-width="0.754" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="106"/></g></g><g transform="translate(62.038 73.83)"><text data-source-text="26" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(30, 132, 73)">B</text></g><g transform="translate(170.376 77.449)"><text data-source-text="28" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(30, 132, 73)">B</text></g><g transform="translate(54.3 124.29)"><text data-source-text="27" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(58, 74, 86)">A: spuštena oprema</text></g><g transform="translate(162.637 124.29)"><text data-source-text="29" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(58, 74, 86)">B: čvrsti balast</text></g><g transform="translate(108.469 142.832)"><text data-source-text="30" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(58, 74, 86)">Provjeri i GM i slobodni bok f.</text></g><g transform="translate(230.937 0)"><g transform="translate(108.469 13.5)"><text data-source-text="31" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(21, 101, 192)">Z6 — Dva fluida i intervali</text></g><g transform="translate(108.469 28.5)"><text data-source-text="33" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(58, 74, 86)">70 kg</text></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><rect xmlns="http://www.w3.org/2000/svg" x="9" y="106.56" width="266" height="84.44" fill="url(#u07vs_fix_z6_water)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="112"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><rect xmlns="http://www.w3.org/2000/svg" x="9" y="94" width="266" height="12.56" fill="url(#u07vs_fix_z6_oil)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="113"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="9" y1="106.56" x2="275" y2="106.56" stroke="rgb(58, 74, 86)" stroke-width="0.745" stroke-dasharray="5px, 3px" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="114"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="9" y1="94" x2="275" y2="94" stroke="rgb(21, 101, 192)" stroke-width="1.491" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="115"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="51.008638,134.806091 238.991362,122.273909 235.231707,65.879092 47.248984,78.411274" fill="rgb(233, 238, 242)" stroke="rgb(58, 74, 86)" stroke-width="1.491" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="116"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="53.201770,132.299654 236.484926,120.080777 233.038576,68.385528 49.755420,80.604405" fill="rgb(255, 255, 255)" stroke="rgb(144, 159, 168)" stroke-width="0.639" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="117"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><circle xmlns="http://www.w3.org/2000/svg" cx="137.80794183164406" cy="112.23481420756545" r="3.7" fill="rgb(30, 132, 73)" stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="118"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="80.003394,76.227646 101.934712,74.765558 100.785929,57.533809 78.854611,58.995897" fill="rgb(253, 230, 138)" stroke="rgb(139, 94, 0)" stroke-width="0.895" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="120"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="24" y1="94" x2="34" y2="94" stroke="rgb(183, 96, 12)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="122"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="24" y1="134.8060907913395" x2="34" y2="134.8060907913395" stroke="rgb(183, 96, 12)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="123"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dimL-print-5-124-marker-start" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dim-print-5-124-marker-end" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="29" y1="94" x2="29" y2="134.8060907913395" stroke="rgb(183, 96, 12)" stroke-width="0.895" marker-start="url(#u07vs_fix_z6_dimL-print-5-124-marker-start)" marker-end="url(#u07vs_fix_z6_dim-print-5-124-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="124"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="249" y1="94" x2="259" y2="94" stroke="rgb(183, 96, 12)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="126"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="249" y1="122.2739092086605" x2="259" y2="122.2739092086605" stroke="rgb(183, 96, 12)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="127"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dimL-print-5-128-marker-start" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dim-print-5-128-marker-end" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="254" y1="94" x2="254" y2="122.2739092086605" stroke="rgb(183, 96, 12)" stroke-width="0.895" marker-start="url(#u07vs_fix_z6_dimL-print-5-128-marker-start)" marker-end="url(#u07vs_fix_z6_dim-print-5-128-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="128"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="246" y1="94" x2="256" y2="94" stroke="rgb(183, 96, 12)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="130"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="246" y1="106.56" x2="256" y2="106.56" stroke="rgb(183, 96, 12)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="131"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dimL-print-5-132-marker-start" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dim-print-5-132-marker-end" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
-    </marker></defs><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="251" y1="94" x2="251" y2="106.56" stroke="rgb(183, 96, 12)" stroke-width="0.895" marker-start="url(#u07vs_fix_z6_dimL-print-5-132-marker-start)" marker-end="url(#u07vs_fix_z6_dim-print-5-132-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="132"/></g></g><g transform="translate(192.591 53.146)"><text data-source-text="36" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(183, 96, 12)">δ</text></g><g transform="translate(198.851 76.729)"><text data-source-text="35" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(183, 96, 12)">h<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(183, 96, 12)" baseline-shift="-2">D</tspan></text></g><g transform="translate(113.405 79.936)"><text data-source-text="32" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(30, 132, 73)">B</text></g><g transform="translate(4 81.632)"><text data-source-text="34" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(183, 96, 12)">h<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(183, 96, 12)" baseline-shift="-2">L</tspan></text></g><g transform="translate(111.207 127.487)"><text data-source-text="37" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(58, 74, 86)">h<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(58, 74, 86)" baseline-shift="-2">L</tspan> = 0,26 m; h<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(58, 74, 86)" baseline-shift="-2">D</tspan> = 0,18 m</text></g><g transform="translate(108.469 154.942)"><text data-source-text="38" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(58, 74, 86)">δ = 0,08 m; H = 0,36 m; e ulijevo</text></g></g></g></svg>
+  </defs><g font-family="Arial, Liberation Sans, sans-serif"><g transform="translate(108.469 13.5)"><text data-source-text="25" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(38, 55, 70)">Z5 — Oprema ili balast</text></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><rect xmlns="http://www.w3.org/2000/svg" x="15" y="124" width="130" height="59" fill="rgb(220, 235, 241)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="79"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><line xmlns="http://www.w3.org/2000/svg" x1="15" y1="124" x2="145" y2="124" stroke="rgb(53, 107, 131)" stroke-width="1.508" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="80"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="27.500000,139.586729 132.500000,139.586729 132.500000,97.586729 27.500000,97.586729" fill="rgb(220, 235, 241)" stroke="rgb(58, 74, 86)" stroke-width="1.508" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="81"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="28.550000,138.536729 131.450000,138.536729 131.450000,98.636729 28.550000,98.636729" fill="rgb(255, 255, 255)" stroke="rgb(58, 74, 86)" stroke-width="0.646" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="82"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><circle xmlns="http://www.w3.org/2000/svg" cx="80.00000000000004" cy="131.79336450679133" r="3.7" fill="rgb(53, 107, 131)" stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="83"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="70.900000,125.586729 89.100000,125.586729 89.100000,111.586729 70.900000,111.586729" fill="rgb(234, 223, 197)" stroke="rgb(53, 107, 131)" stroke-width="0.905" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="85"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><rect xmlns="http://www.w3.org/2000/svg" x="155" y="124" width="130" height="59" fill="rgb(220, 235, 241)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="87"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><line xmlns="http://www.w3.org/2000/svg" x1="155" y1="124" x2="285" y2="124" stroke="rgb(53, 107, 131)" stroke-width="1.508" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="88"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="167.500000,148.938766 272.500000,148.938766 272.500000,106.938766 167.500000,106.938766" fill="rgb(220, 235, 241)" stroke="rgb(58, 74, 86)" stroke-width="1.508" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="89"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="168.550000,147.888766 271.450000,147.888766 271.450000,107.988766 168.550000,107.988766" fill="rgb(255, 255, 255)" stroke="rgb(58, 74, 86)" stroke-width="0.646" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="90"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><circle xmlns="http://www.w3.org/2000/svg" cx="219.99999999999997" cy="136.46938321086617" r="3.7" fill="rgb(53, 107, 131)" stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="91"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><line xmlns="http://www.w3.org/2000/svg" x1="220.0" y1="106.93876642173235" x2="220.0" y2="78.93876642173235" stroke="rgb(58, 74, 86)" stroke-width="1.508" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="93"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="210.900000,78.938766 229.100000,78.938766 229.100000,64.938766 210.900000,64.938766" fill="rgb(234, 223, 197)" stroke="rgb(53, 107, 131)" stroke-width="0.905" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="94"/></g></g><g transform="translate(-275.357 -252.571) scale(0.774)"><g transform="matrix(1 0 0 1 346 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="178.000000,147.888766 262.000000,147.888766 262.000000,142.988766 178.000000,142.988766" fill="rgb(58, 74, 86)" stroke="rgb(58, 74, 86)" stroke-width="0.754" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="95"/></g></g><g transform="translate(62.038 73.83)"><text data-source-text="26" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">B</text></g><g transform="translate(170.376 77.449)"><text data-source-text="28" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">B</text></g><g transform="translate(54.3 124.29)"><text data-source-text="27" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">A: spuštena oprema</text></g><g transform="translate(162.637 124.29)"><text data-source-text="29" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">B: čvrsti balast</text></g><g transform="translate(108.469 142.832)"><text data-source-text="30" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">Provjeri i GM i slobodni bok f.</text></g><g transform="translate(230.937 0)"><g transform="translate(108.469 13.5)"><text data-source-text="31" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(38, 55, 70)">Z6 — Dva fluida i intervali</text></g><g transform="translate(108.469 28.5)"><text data-source-text="33" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">70 kg</text></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><rect xmlns="http://www.w3.org/2000/svg" x="9" y="106.56" width="266" height="84.44" fill="rgb(220, 235, 241)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="99"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><rect xmlns="http://www.w3.org/2000/svg" x="9" y="94" width="266" height="12.56" fill="rgb(234, 223, 197)" stroke="none" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="100"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="9" y1="106.56" x2="275" y2="106.56" stroke="rgb(58, 74, 86)" stroke-width="0.745" stroke-dasharray="5px, 3px" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="101"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="9" y1="94" x2="275" y2="94" stroke="rgb(53, 107, 131)" stroke-width="1.491" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="102"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="51.008638,134.806091 238.991362,122.273909 235.231707,65.879092 47.248984,78.411274" fill="rgb(220, 235, 241)" stroke="rgb(58, 74, 86)" stroke-width="1.491" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="103"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="53.201770,132.299654 236.484926,120.080777 233.038576,68.385528 49.755420,80.604405" fill="rgb(255, 255, 255)" stroke="rgb(58, 74, 86)" stroke-width="0.639" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="104"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><circle xmlns="http://www.w3.org/2000/svg" cx="137.80794183164406" cy="112.23481420756545" r="3.7" fill="rgb(53, 107, 131)" stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="105"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><polygon xmlns="http://www.w3.org/2000/svg" points="80.003394,76.227646 101.934712,74.765558 100.785929,57.533809 78.854611,58.995897" fill="rgb(234, 223, 197)" stroke="rgb(53, 107, 131)" stroke-width="0.895" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="107"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="24" y1="94" x2="34" y2="94" stroke="rgb(101, 119, 129)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="109"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="24" y1="134.8060907913395" x2="34" y2="134.8060907913395" stroke="rgb(101, 119, 129)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="110"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dimL-print-5-111-marker-start" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dim-print-5-111-marker-end" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="29" y1="94" x2="29" y2="134.8060907913395" stroke="rgb(101, 119, 129)" stroke-width="0.895" marker-start="url(#u07vs_fix_z6_dimL-print-5-111-marker-start)" marker-end="url(#u07vs_fix_z6_dim-print-5-111-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="111"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="249" y1="94" x2="259" y2="94" stroke="rgb(101, 119, 129)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="113"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="249" y1="122.2739092086605" x2="259" y2="122.2739092086605" stroke="rgb(101, 119, 129)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="114"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dimL-print-5-115-marker-start" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dim-print-5-115-marker-end" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="254" y1="94" x2="254" y2="122.2739092086605" stroke="rgb(101, 119, 129)" stroke-width="0.895" marker-start="url(#u07vs_fix_z6_dimL-print-5-115-marker-start)" marker-end="url(#u07vs_fix_z6_dim-print-5-115-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="115"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="246" y1="94" x2="256" y2="94" stroke="rgb(101, 119, 129)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="117"/></g></g><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="246" y1="106.56" x2="256" y2="106.56" stroke="rgb(101, 119, 129)" stroke-width="0.639" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-start="none" marker-mid="none" marker-end="none" data-source-geometry="118"/></g></g><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dimL-print-5-119-marker-start" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto-start-reverse" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><defs><marker xmlns="http://www.w3.org/2000/svg" id="u07vs_fix_z6_dim-print-5-119-marker-end" markerWidth="5.112" markerHeight="4.26" refX="6" refY="2.5" orient="auto" viewBox="0 0 6 5" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
+    </marker></defs><g transform="translate(-520.299 -234.827) scale(0.783)"><g transform="matrix(1 0 0 1 662 286)"><line xmlns="http://www.w3.org/2000/svg" x1="251" y1="94" x2="251" y2="106.56" stroke="rgb(101, 119, 129)" stroke-width="0.895" marker-start="url(#u07vs_fix_z6_dimL-print-5-119-marker-start)" marker-end="url(#u07vs_fix_z6_dim-print-5-119-marker-end)" fill="rgb(0, 0, 0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" opacity="1" marker-mid="none" data-source-geometry="119"/></g></g><g transform="translate(192.591 53.146)"><text data-source-text="36" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">δ</text></g><g transform="translate(198.851 76.729)"><text data-source-text="35" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">h<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">D</tspan></text></g><g transform="translate(113.405 79.936)"><text data-source-text="32" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">B</text></g><g transform="translate(4 81.632)"><text data-source-text="34" x="0" y="0" text-anchor="start" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">h<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">L</tspan></text></g><g transform="translate(111.207 127.487)"><text data-source-text="37" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">h<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">L</tspan> = 0,26 m; h<tspan font-size="9" font-weight="400" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">D</tspan> = 0,18 m</text></g><g transform="translate(108.469 154.942)"><text data-source-text="38" x="0" y="0" text-anchor="middle" font-size="9" font-weight="400" fill="rgb(38, 55, 70)">δ = 0,08 m; H = 0,36 m; e ulijevo</text></g></g></g></svg>

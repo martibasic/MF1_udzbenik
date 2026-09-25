@@ -3,162 +3,133 @@
   <desc id="u04fup_desc">Brod u zaokretu u lokalnoj aproksimaciji stalnog ubrzanja, jednadžbe relativnog mirovanja i aksijalni presjek separatora. Efektivna gravitacija okomita je na lokalnu slobodnu površinu. Dubina h mjeri se okomito pri nultom vertikalnom ubrzanju.</desc>
   <defs>
     <marker id="u04fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u04fup_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u04fup_aP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u04fup_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#657781" />
     </marker>
     <marker id="u04fup_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c" />
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#657781" />
     </marker>
-    <linearGradient id="u04fup_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
-    <linearGradient id="u04fup_hdr" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1a2e42" />
-      <stop offset="100%" stop-color="#243d54" />
-    </linearGradient>
-    <linearGradient id="u04fup_hull" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d8dee5" />
-      <stop offset="100%" stop-color="#8995a3" />
-    </linearGradient>
-    <linearGradient id="u04fup_sea" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7fb6d8" />
-      <stop offset="100%" stop-color="#3a6f8f" />
-    </linearGradient>
     <pattern id="u04fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.6" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.6" />
     </pattern>
   </defs>
-  <rect width="980" height="530" fill="#ffffff" />
-  <rect x="10" y="10" width="960" height="36" rx="12" fill="url(#u04fup_hdr)" />
-  <rect x="10" y="28" width="960" height="18" fill="url(#u04fup_hdr)" />
-  <rect x="22" y="58" width="324" height="450" rx="9" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="34" y="350" width="300" height="58" fill="url(#u04fup_sea)" opacity="0.55" />
-  <path d="M34,360 Q64,354 94,360 T154,360 T214,360 T274,360 T334,360" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.65" />
-  <path d="M34,376 Q64,370 94,376 T154,376 T214,376 T274,376 T334,376" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.5" />
-  <path d="M70,340 L298,340 L320,360 L48,360 Z" fill="url(#u04fup_hull)" stroke="#3a4a56" stroke-width="1.6" />
+  <rect x="34" y="350" width="300" height="58" fill="#dcebf1" opacity="0.55" />
+  <path d="M34,360 Q64,354 94,360 T154,360 T214,360 T274,360 T334,360" fill="none" stroke="#c5cdd3" stroke-width="0.9" opacity="0.65" />
+  <path d="M34,376 Q64,370 94,376 T154,376 T214,376 T274,376 T334,376" fill="none" stroke="#c5cdd3" stroke-width="0.9" opacity="0.5" />
+  <path d="M70,340 L298,340 L320,360 L48,360 Z" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.6" />
   <line x1="70" y1="340" x2="298" y2="340" stroke="#3a4a56" stroke-width="1.6" />
-  <polygon points="106,268 262,232 262,332 106,332" fill="url(#u04fup_water)" />
-  <line x1="106" y1="268" x2="262" y2="232" stroke="#1565c0" stroke-width="2.2" />
+  <polygon points="106,268 262,232 262,332 106,332" fill="#dcebf1" />
+  <line x1="106" y1="268" x2="262" y2="232" stroke="#356b83" stroke-width="2.2" />
   <rect x="98" y="200" width="8" height="140" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="262" y="200" width="8" height="140" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="98" y="332" width="172" height="8" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="98" y="195" width="8" height="6" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.0" />
   <rect x="262" y="195" width="8" height="6" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.0" />
-  <line x1="106" y1="250" x2="262" y2="250" stroke="#7a8a96" stroke-width="1.0" stroke-dasharray="6,4" />
-  <path d="M214 250 A30 30 0 0 0 213.232 243.254" fill="none" stroke="#8e44ad" stroke-width="1.4" />
-  <line x1="184" y1="250" x2="196" y2="302" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u04fup_aP)" />
-  <line x1="200" y1="178" x2="120" y2="178" stroke="#c0392b" stroke-width="2.6" marker-end="url(#u04fup_aR)" />
-  <path d="M 280,438 Q 184,420 102,440" fill="none" stroke="#1e8449" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#u04fup_aG)" />
-  <rect x="358" y="58" width="252" height="450" rx="9" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="358" y="58" width="252" height="34" rx="9" fill="white" stroke="none" />
-  <rect x="358" y="76" width="252" height="16" fill="white" stroke="none" />
-  <line x1="378" y1="174" x2="590" y2="174" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="378" y1="250" x2="590" y2="250" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="378" y1="326" x2="590" y2="326" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="378" y1="382" x2="590" y2="382" stroke="#c8d6e4" stroke-width="1" />
-  <rect x="372" y="434" width="224" height="44" rx="8" fill="#fff4e5" stroke="#c49a0a" stroke-width="1.2" />
-  <rect x="622" y="58" width="336" height="450" rx="9" fill="white" stroke="#8e44ad" stroke-width="1" stroke-opacity="0.65" />
-  <line x1="790" y1="156" x2="790" y2="402" stroke="#8e44ad" stroke-width="1.0" stroke-dasharray="5,4" />
-  <path d="M 680,200 Q 790,440 900,200 L 900,370 L 680,370 Z" fill="url(#u04fup_water)" />
+  <line x1="106" y1="250" x2="262" y2="250" stroke="#657781" stroke-width="1.0" stroke-dasharray="6,4" />
+  <path d="M214 250 A30 30 0 0 0 213.232 243.254" fill="none" stroke="#356b83" stroke-width="1.4" />
+  <line x1="184" y1="250" x2="196" y2="302" stroke="#356b83" stroke-width="2.4" marker-end="url(#u04fup_aP)" />
+  <line x1="200" y1="178" x2="120" y2="178" stroke="#356b83" stroke-width="2.6" marker-end="url(#u04fup_aR)" />
+  <path d="M 280,438 Q 184,420 102,440" fill="none" stroke="#356b83" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#u04fup_aG)" />
+  <line x1="790" y1="156" x2="790" y2="402" stroke="#356b83" stroke-width="1.0" stroke-dasharray="5,4" />
+  <path d="M 680,200 Q 790,440 900,200 L 900,370 L 680,370 Z" fill="#dcebf1" />
   <rect x="672" y="160" width="8" height="218" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="900" y="160" width="8" height="218" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="672" y="370" width="236" height="8" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
   <rect x="672" y="154" width="8" height="6" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.0" />
   <rect x="900" y="154" width="8" height="6" fill="url(#u04fup_hatch)" stroke="#3a4a56" stroke-width="1.0" />
-  <path d="M 680,200 Q 790,440 900,200" fill="none" stroke="#1565c0" stroke-width="2.4" />
-  <line x1="680" y1="260" x2="900" y2="260" stroke="#7a8a96" stroke-width="1.0" stroke-dasharray="6,4" />
-  <path d="M 740,138 A 50,14 0 0 1 840,138" fill="none" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u04fup_aG)" />
-  <line x1="740" y1="295.20661157024796" x2="705.289256" y2="330.206612" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u04fup_aP)" />
-  <line x1="840" y1="295.20661157024796" x2="874.710744" y2="330.206612" stroke="#8e44ad" stroke-width="2.4" marker-end="url(#u04fup_aP)" />
-  <line x1="790" y1="338" x2="790" y2="362" stroke="#8e44ad" stroke-width="1.8" marker-end="url(#u04fup_aP)" />
-  <line x1="274" y1="232" x2="284" y2="232" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="274" y1="250" x2="284" y2="250" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="288" y1="230" x2="288" y2="252" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="282" y1="252" x2="282" y2="232" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04fup_dim)" marker-end="url(#u04fup_dimL)" />
-  <line x1="106" y1="346" x2="106" y2="368" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="262" y1="346" x2="262" y2="368" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="104" y1="370" x2="104" y2="358" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="264" y1="370" x2="264" y2="358" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="108" y1="365" x2="260" y2="365" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04fup_dimL)" marker-end="url(#u04fup_dim)" />
-  <line x1="790" y1="384" x2="790" y2="404" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="900" y1="384" x2="900" y2="404" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="790" y1="406" x2="790" y2="394" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="900" y1="406" x2="900" y2="394" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="792" y1="400" x2="898" y2="400" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u04fup_dimL)" marker-end="url(#u04fup_dim)" />
-  <line x1="672" y1="200" x2="660" y2="200" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="790" y1="320" x2="660" y2="320" stroke="#b7600c" stroke-width="0.7" stroke-dasharray="3,3" />
-  <line x1="654" y1="200" x2="666" y2="200" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="654" y1="320" x2="666" y2="320" stroke="#b7600c" stroke-width="1.2" />
-  <line x1="660" y1="202" x2="660" y2="318" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u04fup_dimL)" marker-end="url(#u04fup_dim)" />
-  <text x="490" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Relativno mirovanje fluida — hidrostatika u efektivnom polju sila</text>
-  <text x="184" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0" text-anchor="middle">Brod u zaokretu</text>
-  <text x="184" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#3a5a7a" text-anchor="middle">površina se naginje prema vanjskoj strani zavoja</text>
-  <text x="266" y="247" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#7a8a96">h₀</text>
-  <text x="220" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#8e44ad">α</text>
-  <text x="160" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#8e44ad" text-anchor="end">
+  <path d="M 680,200 Q 790,440 900,200" fill="none" stroke="#356b83" stroke-width="2.4" />
+  <line x1="680" y1="260" x2="900" y2="260" stroke="#657781" stroke-width="1.0" stroke-dasharray="6,4" />
+  <path d="M 740,138 A 50,14 0 0 1 840,138" fill="none" stroke="#356b83" stroke-width="2.2" marker-end="url(#u04fup_aG)" />
+  <line x1="740" y1="295.20661157024796" x2="705.289256" y2="330.206612" stroke="#356b83" stroke-width="2.4" marker-end="url(#u04fup_aP)" />
+  <line x1="840" y1="295.20661157024796" x2="874.710744" y2="330.206612" stroke="#356b83" stroke-width="2.4" marker-end="url(#u04fup_aP)" />
+  <line x1="790" y1="338" x2="790" y2="362" stroke="#356b83" stroke-width="1.8" marker-end="url(#u04fup_aP)" />
+  <line x1="274" y1="232" x2="284" y2="232" stroke="#657781" stroke-width="0.7" />
+  <line x1="274" y1="250" x2="284" y2="250" stroke="#657781" stroke-width="0.7" />
+  <line x1="288" y1="230" x2="288" y2="252" stroke="#657781" stroke-width="1.2" />
+  <line x1="282" y1="252" x2="282" y2="232" stroke="#657781" stroke-width="1.4" marker-start="url(#u04fup_dim)" marker-end="url(#u04fup_dimL)" />
+  <line x1="106" y1="346" x2="106" y2="368" stroke="#657781" stroke-width="0.7" />
+  <line x1="262" y1="346" x2="262" y2="368" stroke="#657781" stroke-width="0.7" />
+  <line x1="104" y1="370" x2="104" y2="358" stroke="#657781" stroke-width="1.2" />
+  <line x1="264" y1="370" x2="264" y2="358" stroke="#657781" stroke-width="1.2" />
+  <line x1="108" y1="365" x2="260" y2="365" stroke="#657781" stroke-width="1.3" marker-start="url(#u04fup_dimL)" marker-end="url(#u04fup_dim)" />
+  <line x1="790" y1="384" x2="790" y2="404" stroke="#657781" stroke-width="0.7" />
+  <line x1="900" y1="384" x2="900" y2="404" stroke="#657781" stroke-width="0.7" />
+  <line x1="790" y1="406" x2="790" y2="394" stroke="#657781" stroke-width="1.2" />
+  <line x1="900" y1="406" x2="900" y2="394" stroke="#657781" stroke-width="1.2" />
+  <line x1="792" y1="400" x2="898" y2="400" stroke="#657781" stroke-width="1.3" marker-start="url(#u04fup_dimL)" marker-end="url(#u04fup_dim)" />
+  <line x1="672" y1="200" x2="660" y2="200" stroke="#657781" stroke-width="0.7" />
+  <line x1="790" y1="320" x2="660" y2="320" stroke="#657781" stroke-width="0.7" stroke-dasharray="3,3" />
+  <line x1="654" y1="200" x2="666" y2="200" stroke="#657781" stroke-width="1.2" />
+  <line x1="654" y1="320" x2="666" y2="320" stroke="#657781" stroke-width="1.2" />
+  <line x1="660" y1="202" x2="660" y2="318" stroke="#657781" stroke-width="1.4" marker-start="url(#u04fup_dimL)" marker-end="url(#u04fup_dim)" />
+  <text x="490" y="33" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746" text-anchor="middle">Relativno mirovanje fluida — hidrostatika u efektivnom polju sila</text>
+  <text x="184" y="80" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746" text-anchor="middle">Brod u zaokretu</text>
+  <text x="184" y="96" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746" text-anchor="middle">površina se naginje prema vanjskoj strani zavoja</text>
+  <text x="266" y="247" font-family="Arial, Liberation Sans, sans-serif" font-size="9.5" font-style="italic" fill="#263746">h₀</text>
+  <text x="220" y="248" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" fill="#263746">θ</text>
+  <text x="160" y="296" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" fill="#263746" text-anchor="end">
     <tspan font-weight="700">g</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
   </text>
-  <text x="208" y="182" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-style="italic" fill="#c0392b">a = v²/R</text>
-  <text x="184" y="456" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#1e8449" text-anchor="middle">putanja broda u zaokretu</text>
-  <text x="184" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle" font-style="italic" transform="translate(0 8)">Slobodna površina ostaje okomita na <tspan font-weight="700">g</tspan>
+  <text x="208" y="182" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" fill="#263746">a = v²/R</text>
+  <text x="184" y="456" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746" text-anchor="middle">putanja broda u zaokretu</text>
+  <text x="184" y="466" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle" font-style="italic" transform="translate(0 8)">Slobodna površina ostaje okomita na <tspan font-weight="700">g</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">eff</tspan>.</text>
-  <text x="184" y="480" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle" font-style="italic" transform="translate(0 16)">L ≪ R zavoja; lokalno stalno ubrzanje.</text>
-  <text x="484" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1565c0" text-anchor="middle">Ključni princip</text>
-  <text x="484" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">ravnoteža tlaka u efektivnom polju</text>
-  <text x="484" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#1a2530" text-anchor="middle">∇p = ρ <tspan fill="#8e44ad">g</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em" fill="#8e44ad">eff</tspan>
+  <text x="184" y="480" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle" font-style="italic" transform="translate(0 16)">L ≪ R zavoja; lokalno stalno ubrzanje.</text>
+  <text x="484" y="80" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746" text-anchor="middle">Ključni princip</text>
+  <text x="484" y="116" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">ravnoteža tlaka u efektivnom polju</text>
+  <text x="484" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#263746" text-anchor="middle">∇p = ρ <tspan fill="#263746">g</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em" fill="#263746">eff</tspan>
   </text>
-  <text x="484" y="161" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#5a6a78" text-anchor="middle" transform="translate(0 8)">
-    <tspan fill="#8e44ad" font-weight="700">g</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em" fill="#8e44ad">eff</tspan> = <tspan fill="#1a2530">g</tspan> − <tspan fill="#c0392b">a</tspan>
+  <text x="484" y="161" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746" text-anchor="middle" transform="translate(0 8)">
+    <tspan fill="#263746" font-weight="700">g</tspan>
+    <tspan baseline-shift="sub" font-size="0.7em" fill="#263746">eff</tspan> = <tspan fill="#263746">g</tspan> − <tspan fill="#263746">a</tspan>
   </text>
-  <text x="484" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">translatorno ubrzanje (kolica, brod, vozilo)</text>
-  <text x="484" y="217" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1a2530" text-anchor="middle">tan α = a / g</text>
-  <text x="484" y="238" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1565c0" text-anchor="middle">Δh = a L / g</text>
-  <text x="484" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">rotacija konstantnom ω (centrifuga)</text>
-  <text x="484" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1a2530" text-anchor="middle">z(r) = z<tspan baseline-shift="sub" font-size="0.7em">C</tspan> + ω² r² / (2g)</text>
-  <text x="484" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-style="italic" fill="#1565c0" text-anchor="middle">Δh = ω² R² / (2g)</text>
-  <text x="484" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#5a6a78" text-anchor="middle">tlak za okomitu dubinu h (a<tspan baseline-shift="sub" font-size="0.7em">z</tspan> = 0)</text>
-  <text x="484" y="369" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#1a2530" text-anchor="middle">p = p₀ + ρ g h</text>
-  <text x="484" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#3a4a56" text-anchor="middle">Hidrostatika ostaje – mijenja se samo</text>
-  <text x="484" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#3a4a56" text-anchor="middle">smjer i iznos efektivnog polja sila.</text>
-  <text x="484" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#8b5e00" text-anchor="middle">GRANICE MODELA</text>
-  <text x="484" y="467" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5a4a20" text-anchor="middle">prelijevanje tekućine · ogoljavanje dna</text>
-  <text x="790" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#8e44ad" text-anchor="middle">Centrifugalni separator</text>
-  <text x="790" y="96" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a3a78" text-anchor="middle">paraboloidna slobodna površina pri rotaciji</text>
-  <text x="794" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#8e44ad">os rotacije</text>
-  <text x="912" y="263" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-style="italic" fill="#7a8a96">h₀</text>
-  <text x="730" y="128" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-style="italic" font-weight="700" fill="#1e8449" text-anchor="end">ω</text>
-  <text x="745" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad">
+  <text x="484" y="192" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">translatorno ubrzanje (kolica, brod, vozilo)</text>
+  <text x="484" y="217" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#263746" text-anchor="middle">tan θ = a / g</text>
+  <text x="484" y="238" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746" text-anchor="middle">Δh = a L / g</text>
+  <text x="484" y="268" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">rotacija konstantnom ω (centrifuga)</text>
+  <text x="484" y="293" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#263746" text-anchor="middle">z(r) = z<tspan baseline-shift="sub" font-size="0.7em">C</tspan> + ω² r² / (2g)</text>
+  <text x="484" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746" text-anchor="middle">Δh = ω² R² / (2g)</text>
+  <text x="484" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">tlak za okomitu dubinu h (a<tspan baseline-shift="sub" font-size="0.7em">z</tspan> = 0)</text>
+  <text x="484" y="369" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#263746" text-anchor="middle">p = p₀ + ρ g h</text>
+  <text x="484" y="404" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746" text-anchor="middle">Hidrostatika ostaje – mijenja se samo</text>
+  <text x="484" y="418" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746" text-anchor="middle">smjer i iznos efektivnog polja sila.</text>
+  <text x="484" y="450" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-weight="700" fill="#263746" text-anchor="middle">GRANICE MODELA</text>
+  <text x="484" y="467" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">prelijevanje tekućine · ogoljavanje dna</text>
+  <text x="790" y="80" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746" text-anchor="middle">Centrifugalni separator</text>
+  <text x="790" y="96" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746" text-anchor="middle">paraboloidna slobodna površina pri rotaciji</text>
+  <text x="794" y="180" font-family="Arial, Liberation Sans, sans-serif" font-size="9.5" font-style="italic" fill="#263746">os rotacije</text>
+  <text x="912" y="263" font-family="Arial, Liberation Sans, sans-serif" font-size="9.5" font-style="italic" fill="#263746">h₀</text>
+  <text x="730" y="128" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-style="italic" font-weight="700" fill="#263746" text-anchor="end">ω</text>
+  <text x="745" y="324" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">
     <tspan font-weight="700">g</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
   </text>
-  <text x="820" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#8e44ad" text-anchor="end">
+  <text x="820" y="324" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746" text-anchor="end">
     <tspan font-weight="700">g</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
   </text>
-  <text x="795" y="358" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#3a4a56">
+  <text x="795" y="358" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746">
     <tspan font-weight="700">g</tspan>
   </text>
-  <text x="918" y="232" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#0d47a1">h<tspan baseline-shift="sub" font-size="0.7em">R</tspan>
+  <text x="918" y="232" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746">h<tspan baseline-shift="sub" font-size="0.7em">R</tspan>
   </text>
-  <text x="794" y="380" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#0d47a1">h<tspan baseline-shift="sub" font-size="0.7em">C</tspan>
+  <text x="794" y="367" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746">h<tspan baseline-shift="sub" font-size="0.7em">C</tspan>
   </text>
-  <text x="790" y="448" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle" font-style="italic">Centrifugalno polje ω²r → paraboloid.</text>
-  <text x="790" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle" font-style="italic">Primjene: separatori, centrifuge,</text>
-  <text x="790" y="476" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle" font-style="italic">procesne kade, lijevanje pod rotacijom.</text>
-  <text x="306" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="middle">Δh/2</text>
-  <text x="184" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="middle">L</text>
-  <text x="845" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="middle">R</text>
-  <text x="640" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" fill="#b7600c" text-anchor="middle">Δh</text>
+  <text x="790" y="448" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle" font-style="italic">Centrifugalno polje ω²r → paraboloid.</text>
+  <text x="790" y="462" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle" font-style="italic">Primjene: separatori, centrifuge,</text>
+  <text x="790" y="476" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle" font-style="italic">procesne kade, lijevanje pod rotacijom.</text>
+  <text x="306" y="244" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746" text-anchor="middle">Δh/2</text>
+  <text x="184" y="378" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746" text-anchor="middle">L</text>
+  <text x="845" y="416" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746" text-anchor="middle">R</text>
+  <text x="640" y="264" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746" text-anchor="middle">Δh</text>
 </svg>

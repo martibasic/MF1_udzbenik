@@ -1,228 +1,226 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 964" role="img" aria-labelledby="u13ex_title u13ex_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:960px;height:auto;">
-<title id="u13ex_title">Skice šest vježbi cjevovodnih mreža</title><desc id="u13ex_desc">Z1 i Z2: vodoravne cijevi s otvorenim krajevima, L mjeri razmak između referentnih presjeka, a D je unutarnji promjer. Z3: dva ogranka između istih čvorova, treba odabrati mjesto pasivnog prigušenja za jednake protoke. Z4: kvantitativne krivulje crpke i sustava s Colebrookovim faktorom trenja, osi H u metrima i Q u litrama u sekundi. Z5: tri alternativna kružna presjeka u omjeru unutarnjih promjera 80 prema 100 prema 125. Z6: napunjen usis, otvor cijevi je uronjen i odmaknut od dna; kota geodetskog uspona mjeri udaljenost od slobodne površine do referentnog usisnog presjeka crpke. Promjeri vodova u uzdužnim prikazima uvećani su prema duljinama. Crpka i ventil prikazani su simbolima.</desc>
-<defs>
-<linearGradient id="u13ex_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u13ex_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u13ex_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u13ex_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u13ex_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u13ex_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u13ex_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="960" height="964" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
-Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
-Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
-<defs>
-<marker id="u13ex_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
-<marker id="u13ex_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
-<marker id="u13ex_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u13ex_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
-</defs>
-<g id="u13ex_z1" transform="translate(28 22)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
-<rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
-<text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z1</text>
-<text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Gubitci vodoravne dionice</text>
-<path id="u13ex_z1outer0" d="M46 127 H392" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M46 127 H392" fill="none" stroke="url(#u13ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u13ex_z1outer1" d="M46 175 H392" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M46 175 H392" fill="none" stroke="url(#u13ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
-<defs><linearGradient id="u13ex_z1field" gradientUnits="userSpaceOnUse" x1="0" y1="127" x2="0" y2="175"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u13ex_z1fluid" d="M46 127 H392 V175 H46 Z" fill="url(#u13ex_z1field)" stroke="none" stroke-width="1.8" />
-<path id="u13ex_z1wall0" d="M46 127 H392" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<path id="u13ex_z1wall1" d="M46 175 H392" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<line id="u13ex_z1section1" x1="80" y1="123" x2="80" y2="180" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="80" y="115" font-size="13" fill="#1565c0" text-anchor="middle">1</text>
-<line x1="80" y1="183" x2="80" y2="219" stroke="#b7600c" stroke-width="1"/>
-<line id="u13ex_z1section2" x1="350" y1="123" x2="350" y2="180" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="350" y="115" font-size="13" fill="#1565c0" text-anchor="middle">2</text>
-<line x1="350" y1="183" x2="350" y2="219" stroke="#b7600c" stroke-width="1"/>
-<line x1="80" y1="210" x2="80" y2="220" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="350" y1="210" x2="350" y2="220" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u13ex_z1L" d="M80 215 L350 215" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)"/>
-<text x="215.0" y="232" font-size="11" fill="#b7600c" text-anchor="middle">L = 50 m</text>
-<line x1="405" y1="127" x2="415" y2="127" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="405" y1="175" x2="415" y2="175" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u13ex_z1D" d="M410 127 L410 175" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)"/>
-<text x="423" y="155.0" font-size="11" fill="#b7600c" text-anchor="start">D</text>
-<path id="u13ex_z1velocity" d="M177 151 L264 151" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13ex_v)"/>
-<text x="220.5" y="142" font-size="12" fill="#1e8449" text-anchor="middle">Q = 12 L/s</text>
-<path id="u13ex_z1valve" d="M203 82 L229 98 V82 L203 98 Z" fill="#f5f9fc" stroke="#3a4a56" stroke-width="1.3" />
-<line x1="216" y1="82" x2="216" y2="70" stroke="#3a4a56" stroke-width="1.3"/>
-<line x1="208" y1="70" x2="224" y2="70" stroke="#3a4a56" stroke-width="1.3"/>
-<line x1="216" y1="98" x2="216" y2="121" stroke="#3a4a56" stroke-width="1"/>
-<text x="44" y="75" font-size="12" fill="#1a2530" text-anchor="start">λ = 0,025</text>
-<text x="278" y="75" font-size="12" fill="#1a2530" text-anchor="start">Σξ = 4,0</text>
-<text x="31" y="264" font-size="11" fill="#1a2530" text-anchor="start">Ventil: simbol lokalnog otpora; prolaz je otvoren.</text>
-<text x="31" y="284" font-size="11" fill="#1a2530" text-anchor="start">D = 100 mm (uvećano); L je razmak presjeka 1–2.</text>
-</g>
-<g id="u13ex_z2" transform="translate(486 22)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
-<rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
-<text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z2</text>
-<text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Potpuno razvijen laminarni tok</text>
-<path id="u13ex_z2outer0" d="M46 127 H392" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M46 127 H392" fill="none" stroke="url(#u13ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u13ex_z2outer1" d="M46 175 H392" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M46 175 H392" fill="none" stroke="url(#u13ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
-<defs><linearGradient id="u13ex_z2field" gradientUnits="userSpaceOnUse" x1="0" y1="127" x2="0" y2="175"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u13ex_z2fluid" d="M46 127 H392 V175 H46 Z" fill="url(#u13ex_z2field)" stroke="none" stroke-width="1.8" />
-<path id="u13ex_z2wall0" d="M46 127 H392" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<path id="u13ex_z2wall1" d="M46 175 H392" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<line id="u13ex_z2section1" x1="80" y1="123" x2="80" y2="180" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="80" y="115" font-size="13" fill="#1565c0" text-anchor="middle">1</text>
-<line x1="80" y1="183" x2="80" y2="219" stroke="#b7600c" stroke-width="1"/>
-<line id="u13ex_z2section2" x1="350" y1="123" x2="350" y2="180" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="350" y="115" font-size="13" fill="#1565c0" text-anchor="middle">2</text>
-<line x1="350" y1="183" x2="350" y2="219" stroke="#b7600c" stroke-width="1"/>
-<line x1="80" y1="210" x2="80" y2="220" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="350" y1="210" x2="350" y2="220" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u13ex_z2L" d="M80 215 L350 215" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)"/>
-<text x="215.0" y="232" font-size="11" fill="#b7600c" text-anchor="middle">L = 5,0 m</text>
-<line x1="405" y1="127" x2="415" y2="127" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="405" y1="175" x2="415" y2="175" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u13ex_z2D" d="M410 127 L410 175" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)"/>
-<text x="423" y="155.0" font-size="11" fill="#b7600c" text-anchor="start">D</text>
-<path id="u13ex_z2velocity" d="M177 151 L264 151" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13ex_v)"/>
-<text x="220.5" y="142" font-size="12" fill="#1e8449" text-anchor="middle">Q = 6,0 · 10⁻⁶ m³/s</text>
-<text x="31" y="76" font-size="12" fill="#1a2530" text-anchor="start">ν = 3,0 · 10⁻⁶ m²/s; ρ = 1100 kg/m³</text>
-<text x="31" y="264" font-size="11" fill="#1a2530" text-anchor="start">Bez ulaznog područja i lokalnih gubitaka.</text>
-<text x="31" y="284" font-size="11" fill="#1a2530" text-anchor="start">D = 6,0 mm (uvećano); L je razmak presjeka 1–2.</text>
-</g>
-<g id="u13ex_z3" transform="translate(28 336)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
-<rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
-<text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z3</text>
-<text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Uravnoteženje dvaju ogranaka</text>
-<defs><linearGradient id="u13ex_z3field" gradientUnits="userSpaceOnUse" x1="0" y1="98" x2="0" y2="201"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u13ex_z3pipeouter" d="M25 149 H106 M106 149 V119 Q106 101 124 101 H322 Q340 101 340 119 V179 Q340 197 322 197 H124 Q106 197 106 179 V149 M340 149 H420" fill="none" stroke="#3a4a56" stroke-width="27" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M25 149 H106 M106 149 V119 Q106 101 124 101 H322 Q340 101 340 119 V179 Q340 197 322 197 H124 Q106 197 106 179 V149 M340 149 H420" fill="none" stroke="url(#u13ex_hatch)" stroke-width="25" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u13ex_z3pipefluid" d="M25 149 H106 M106 149 V119 Q106 101 124 101 H322 Q340 101 340 119 V179 Q340 197 322 197 H124 Q106 197 106 179 V149 M340 149 H420" fill="none" stroke="url(#u13ex_z3field)" stroke-width="18" stroke-linecap="butt" stroke-linejoin="round"/>
-<circle id="u13ex_z3A" cx="106" cy="149" r="3" fill="#c0392b"/>
-<text x="82" y="126" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">A</text>
-<circle id="u13ex_z3B" cx="340" cy="149" r="3" fill="#c0392b"/>
-<text x="364" y="126" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">B</text>
-<path id="u13ex_z3inlet" d="M32 149 L77 149" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13ex_v)"/>
-<text x="50" y="124" font-size="12" fill="#1e8449" text-anchor="middle">Q</text>
-<path id="u13ex_z3outlet" d="M370 149 L411 149" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13ex_v)"/>
-<text x="394" y="124" font-size="12" fill="#1e8449" text-anchor="middle">Q</text>
-<path id="u13ex_z3upperVelocity" d="M193 101 L256 101" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13ex_v)"/>
-<path id="u13ex_z3lowerVelocity" d="M193 197 L256 197" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13ex_v)"/>
-<text x="223" y="133" font-size="12" fill="#1e8449" text-anchor="middle">Q₁</text>
-<text x="223" y="175" font-size="12" fill="#1e8449" text-anchor="middle">Q₂</text>
-<text x="222" y="70" font-size="12" fill="#1a2530" text-anchor="middle">R₁ = 12 000 s²/m⁵</text>
-<text x="222" y="229" font-size="12" fill="#1a2530" text-anchor="middle">R₂ = 48 000 s²/m⁵</text>
-<text x="27" y="262" font-size="12" fill="#1a2530" text-anchor="start">Cilj: Q₁ = Q₂; ukupno Q = 20 L/s.</text>
-<text x="27" y="284" font-size="12" fill="#1a2530" text-anchor="start">U koju granu dodati prigušni ventil?</text>
-</g>
-<g id="u13ex_z4" transform="translate(486 336)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
-<rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
-<text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z4</text>
-<text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Radna točka uz promjenjivo trenje</text>
-<path d="M61 239 L398 239" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u13ex_axisMarker)"/>
-<text x="421" y="260" font-size="13" fill="#3a4a56" text-anchor="middle">Q (L/s)</text>
-<path d="M61 239 L61 65" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u13ex_axisMarker)"/>
-<text x="53" y="55" font-size="13" fill="#3a4a56" text-anchor="middle">H (m)</text>
-<line x1="61" y1="236.0" x2="61" y2="242.0" stroke="#3a4a56" stroke-width="1"/>
-<text x="61" y="256.0" font-size="11" fill="#1a2530" text-anchor="middle">0</text>
-<line x1="161" y1="236.0" x2="161" y2="242.0" stroke="#3a4a56" stroke-width="1"/>
-<text x="161" y="256.0" font-size="11" fill="#1a2530" text-anchor="middle">10</text>
-<line x1="261" y1="236.0" x2="261" y2="242.0" stroke="#3a4a56" stroke-width="1"/>
-<text x="261" y="256.0" font-size="11" fill="#1a2530" text-anchor="middle">20</text>
-<line x1="361" y1="236.0" x2="361" y2="242.0" stroke="#3a4a56" stroke-width="1"/>
-<text x="361" y="256.0" font-size="11" fill="#1a2530" text-anchor="middle">30</text>
-<line x1="58" y1="239.0" x2="64" y2="239.0" stroke="#3a4a56" stroke-width="1"/>
-<text x="52" y="243.0" font-size="11" fill="#1a2530" text-anchor="end">0</text>
-<line x1="58" y1="198.0" x2="64" y2="198.0" stroke="#3a4a56" stroke-width="1"/>
-<text x="52" y="202.0" font-size="11" fill="#1a2530" text-anchor="end">10</text>
-<line x1="58" y1="157.0" x2="64" y2="157.0" stroke="#3a4a56" stroke-width="1"/>
-<text x="52" y="161.0" font-size="11" fill="#1a2530" text-anchor="end">20</text>
-<line x1="58" y1="116.00000000000001" x2="64" y2="116.00000000000001" stroke="#3a4a56" stroke-width="1"/>
-<text x="52" y="120.00000000000001" font-size="11" fill="#1a2530" text-anchor="end">30</text>
-<line x1="58" y1="75.0" x2="64" y2="75.0" stroke="#3a4a56" stroke-width="1"/>
-<text x="52" y="79.0" font-size="11" fill="#1a2530" text-anchor="end">40</text>
-<path id="u13ex_z4pump" d="M111.000000 119.075000 L113.000000 119.325920 L115.000000 119.586680 L117.000000 119.857280 L119.000000 120.137720 L121.000000 120.428000 L123.000000 120.728120 L125.000000 121.038080 L127.000000 121.357880 L129.000000 121.687520 L131.000000 122.027000 L133.000000 122.376320 L135.000000 122.735480 L137.000000 123.104480 L139.000000 123.483320 L141.000000 123.872000 L143.000000 124.270520 L145.000000 124.678880 L147.000000 125.097080 L149.000000 125.525120 L151.000000 125.963000 L153.000000 126.410720 L155.000000 126.868280 L157.000000 127.335680 L159.000000 127.812920 L161.000000 128.300000 L163.000000 128.796920 L165.000000 129.303680 L167.000000 129.820280 L169.000000 130.346720 L171.000000 130.883000 L173.000000 131.429120 L175.000000 131.985080 L177.000000 132.550880 L179.000000 133.126520 L181.000000 133.712000 L183.000000 134.307320 L185.000000 134.912480 L187.000000 135.527480 L189.000000 136.152320 L191.000000 136.787000 L193.000000 137.431520 L195.000000 138.085880 L197.000000 138.750080 L199.000000 139.424120 L201.000000 140.108000 L203.000000 140.801720 L205.000000 141.505280 L207.000000 142.218680 L209.000000 142.941920 L211.000000 143.675000 L213.000000 144.417920 L215.000000 145.170680 L217.000000 145.933280 L219.000000 146.705720 L221.000000 147.488000 L223.000000 148.280120 L225.000000 149.082080 L227.000000 149.893880 L229.000000 150.715520 L231.000000 151.547000 L233.000000 152.388320 L235.000000 153.239480 L237.000000 154.100480 L239.000000 154.971320 L241.000000 155.852000 L243.000000 156.742520 L245.000000 157.642880 L247.000000 158.553080 L249.000000 159.473120 L251.000000 160.403000 L253.000000 161.342720 L255.000000 162.292280 L257.000000 163.251680 L259.000000 164.220920 L261.000000 165.200000 L263.000000 166.188920 L265.000000 167.187680 L267.000000 168.196280 L269.000000 169.214720 L271.000000 170.243000 L273.000000 171.281120 L275.000000 172.329080 L277.000000 173.386880 L279.000000 174.454520 L281.000000 175.532000 L283.000000 176.619320 L285.000000 177.716480 L287.000000 178.823480 L289.000000 179.940320 L291.000000 181.067000 L293.000000 182.203520 L295.000000 183.349880 L297.000000 184.506080 L299.000000 185.672120 L301.000000 186.848000 L303.000000 188.033720 L305.000000 189.229280 L307.000000 190.434680 L309.000000 191.649920 L311.000000 192.875000 L313.000000 194.109920 L315.000000 195.354680 L317.000000 196.609280 L319.000000 197.873720 L321.000000 199.148000 L323.000000 200.432120 L325.000000 201.726080 L327.000000 203.029880 L329.000000 204.343520 L331.000000 205.667000 L333.000000 207.000320 L335.000000 208.343480 L337.000000 209.696480 L339.000000 211.059320 L341.000000 212.432000 L343.000000 213.814520 L345.000000 215.206880 L347.000000 216.609080 L349.000000 218.021120 L351.000000 219.443000 L353.000000 220.874720 L355.000000 222.316280 L357.000000 223.767680 L359.000000 225.228920 L361.000000 226.700000" fill="none" stroke="#1565c0" stroke-width="2" />
-<path id="u13ex_z4system" d="M111.000000 202.734034 L113.000000 202.466290 L115.000000 202.188829 L117.000000 201.901656 L119.000000 201.604778 L121.000000 201.298202 L123.000000 200.981932 L125.000000 200.655975 L127.000000 200.320334 L129.000000 199.975013 L131.000000 199.620018 L133.000000 199.255350 L135.000000 198.881015 L137.000000 198.497015 L139.000000 198.103352 L141.000000 197.700030 L143.000000 197.287051 L145.000000 196.864417 L147.000000 196.432131 L149.000000 195.990195 L151.000000 195.538611 L153.000000 195.077380 L155.000000 194.606504 L157.000000 194.125985 L159.000000 193.635825 L161.000000 193.136024 L163.000000 192.626584 L165.000000 192.107507 L167.000000 191.578793 L169.000000 191.040444 L171.000000 190.492461 L173.000000 189.934844 L175.000000 189.367596 L177.000000 188.790716 L179.000000 188.204205 L181.000000 187.608065 L183.000000 187.002296 L185.000000 186.386899 L187.000000 185.761874 L189.000000 185.127223 L191.000000 184.482946 L193.000000 183.829043 L195.000000 183.165515 L197.000000 182.492363 L199.000000 181.809587 L201.000000 181.117187 L203.000000 180.415165 L205.000000 179.703521 L207.000000 178.982255 L209.000000 178.251367 L211.000000 177.510858 L213.000000 176.760728 L215.000000 176.000978 L217.000000 175.231609 L219.000000 174.452619 L221.000000 173.664010 L223.000000 172.865783 L225.000000 172.057936 L227.000000 171.240472 L229.000000 170.413389 L231.000000 169.576689 L233.000000 168.730371 L235.000000 167.874435 L237.000000 167.008883 L239.000000 166.133714 L241.000000 165.248928 L243.000000 164.354526 L245.000000 163.450508 L247.000000 162.536874 L249.000000 161.613624 L251.000000 160.680758 L253.000000 159.738278 L255.000000 158.786182 L257.000000 157.824471 L259.000000 156.853145 L261.000000 155.872204 L263.000000 154.881649 L265.000000 153.881479 L267.000000 152.871696 L269.000000 151.852298 L271.000000 150.823286 L273.000000 149.784660 L275.000000 148.736421 L277.000000 147.678568 L279.000000 146.611101 L281.000000 145.534021 L283.000000 144.447328 L285.000000 143.351022 L287.000000 142.245102 L289.000000 141.129570 L291.000000 140.004425 L293.000000 138.869667 L295.000000 137.725297 L297.000000 136.571314 L299.000000 135.407718 L301.000000 134.234511 L303.000000 133.051690 L305.000000 131.859258 L307.000000 130.657214 L309.000000 129.445557 L311.000000 128.224289 L313.000000 126.993408 L315.000000 125.752916 L317.000000 124.502812 L319.000000 123.243096 L321.000000 121.973769 L323.000000 120.694830 L325.000000 119.406279 L327.000000 118.108118 L329.000000 116.800344 L331.000000 115.482960 L333.000000 114.155964 L335.000000 112.819357 L337.000000 111.473138 L339.000000 110.117309 L341.000000 108.751869 L343.000000 107.376817 L345.000000 105.992155 L347.000000 104.597881 L349.000000 103.193997 L351.000000 101.780502 L353.000000 100.357396 L355.000000 98.924679 L357.000000 97.482352 L359.000000 96.030414 L361.000000 94.568865" fill="none" stroke="#c0392b" stroke-width="2" />
-<circle id="u13ex_z4operatingPoint" cx="251.2964471306686" cy="160.5416674823831" r="4" fill="white" stroke="#3a4a56" stroke-width="1.5"/>
-<text x="143" y="107" font-size="13" fill="#1565c0" text-anchor="start">Hp</text>
-<text x="313" y="64" font-size="13" fill="#c0392b" text-anchor="start">Hs(Q)</text>
-<line id="u13ex_z4staticHead" x1="62" y1="206.2" x2="386" y2="206.2" stroke="#b7600c" stroke-width="1" stroke-dasharray="4 4"/>
-<text x="352" y="196.2" font-size="11" fill="#b7600c" text-anchor="middle">Δz = 8 m</text>
-<text x="26" y="287" font-size="11" fill="#1a2530" text-anchor="start">D = 0,100 m; L = 150 m; ε = 0,100 mm; Σξ = 6.</text>
-</g>
-<g id="u13ex_z5" transform="translate(28 650)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
-<rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
-<text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z5</text>
-<text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Promjer za cijeli raspon otpora</text>
-<circle id="u13ex_z5wall0" cx="80" cy="137" r="28.2" fill="url(#u13ex_hatch)" stroke="#3a4a56" stroke-width="1.5"/>
-<defs><linearGradient id="u13ex_z5field0" gradientUnits="userSpaceOnUse" x1="0" y1="95" x2="0" y2="178"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<circle id="u13ex_z5bore0" cx="80" cy="137" r="23.2" fill="url(#u13ex_z5field0)" stroke="#3a4a56" stroke-width="1.3"/>
-<line x1="56.8" y1="168.2" x2="56.8" y2="199" stroke="#b7600c" stroke-width="1"/>
-<line x1="103.2" y1="168.2" x2="103.2" y2="199" stroke="#b7600c" stroke-width="1"/>
-<line x1="56.8" y1="191" x2="56.8" y2="201" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="103.2" y1="191" x2="103.2" y2="201" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u13ex_z5D0" d="M56.8 196 L103.2 196" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)"/>
-<text x="80.0" y="213" font-size="11" fill="#b7600c" text-anchor="middle">80 mm</text>
-<circle id="u13ex_z5wall1" cx="221" cy="137" r="34.0" fill="url(#u13ex_hatch)" stroke="#3a4a56" stroke-width="1.5"/>
-<defs><linearGradient id="u13ex_z5field1" gradientUnits="userSpaceOnUse" x1="0" y1="95" x2="0" y2="178"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<circle id="u13ex_z5bore1" cx="221" cy="137" r="28.999999999999996" fill="url(#u13ex_z5field1)" stroke="#3a4a56" stroke-width="1.3"/>
-<line x1="192.0" y1="174.0" x2="192.0" y2="199" stroke="#b7600c" stroke-width="1"/>
-<line x1="250.0" y1="174.0" x2="250.0" y2="199" stroke="#b7600c" stroke-width="1"/>
-<line x1="192.0" y1="191" x2="192.0" y2="201" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="250.0" y1="191" x2="250.0" y2="201" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u13ex_z5D1" d="M192.0 196 L250.0 196" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)"/>
-<text x="221.0" y="213" font-size="11" fill="#b7600c" text-anchor="middle">100 mm</text>
-<circle id="u13ex_z5wall2" cx="362" cy="137" r="41.25" fill="url(#u13ex_hatch)" stroke="#3a4a56" stroke-width="1.5"/>
-<defs><linearGradient id="u13ex_z5field2" gradientUnits="userSpaceOnUse" x1="0" y1="95" x2="0" y2="178"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<circle id="u13ex_z5bore2" cx="362" cy="137" r="36.25" fill="url(#u13ex_z5field2)" stroke="#3a4a56" stroke-width="1.3"/>
-<line x1="325.75" y1="181.25" x2="325.75" y2="199" stroke="#b7600c" stroke-width="1"/>
-<line x1="398.25" y1="181.25" x2="398.25" y2="199" stroke="#b7600c" stroke-width="1"/>
-<line x1="325.75" y1="191" x2="325.75" y2="201" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="398.25" y1="191" x2="398.25" y2="201" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u13ex_z5D2" d="M325.75 196 L398.25 196" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)"/>
-<text x="362.0" y="213" font-size="11" fill="#b7600c" text-anchor="middle">125 mm</text>
-<text x="223" y="69" font-size="12" fill="#1a2530" text-anchor="middle">Tri alternativna unutarnja presjeka</text>
-<text x="30" y="243" font-size="12" fill="#1a2530" text-anchor="start">Q = 18 L/s; L = 150 m; Σξ = 6.</text>
-<text x="30" y="264" font-size="12" fill="#1a2530" text-anchor="start">0,020 ≤ λ ≤ 0,028; zadani interval.</text>
-<text x="30" y="285" font-size="12" fill="#b7600c" text-anchor="start">Uvjet: hw ≤ 15 m za cijeli interval λ.</text>
-</g>
-<g id="u13ex_z6" transform="translate(486 650)">
-<rect x="0" y="0" width="446" height="298" rx="10" fill="white" stroke="#cfdce6" stroke-width="1" stroke-opacity="0.65" />
-<rect x="13" y="13" width="35" height="23" rx="5" fill="#e7edf2" stroke="none" stroke-width="1.2"/>
-<text x="30.5" y="30" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Z6</text>
-<text x="58" y="30" font-size="14" fill="#1a2530" text-anchor="start" font-weight="700">Usisna visina i referenca NPSH-a</text>
-<defs><linearGradient id="u13ex_z6field" gradientUnits="userSpaceOnUse" x1="0" y1="101" x2="0" y2="239"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<rect id="u13ex_z6reservoirFluid" x="51" y="177" width="111" height="62" rx="0" fill="url(#u13ex_z6field)" stroke="none" stroke-width="1.2"/>
-<path id="u13ex_z6tankOuter" d="M51 156 V239 H162 V156" fill="none" stroke="#3a4a56" stroke-width="8" />
-<path d="M51 156 V239 H162 V156" fill="none" stroke="url(#u13ex_hatch)" stroke-width="6" />
-<path id="u13ex_z6tankWall" d="M51 156 V239 H162 V156" fill="none" stroke="#3a4a56" stroke-width="1.3" />
-<path id="u13ex_z6pipeouter" d="M111 217 V121 Q111 101 131 101 H405" fill="none" stroke="#3a4a56" stroke-width="25" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M111 217 V121 Q111 101 131 101 H405" fill="none" stroke="url(#u13ex_hatch)" stroke-width="23" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u13ex_z6pipefluid" d="M111 217 V121 Q111 101 131 101 H405" fill="none" stroke="url(#u13ex_z6field)" stroke-width="16" stroke-linecap="butt" stroke-linejoin="round"/>
-<line id="u13ex_z6surfaceLeft" x1="51" y1="177" x2="98.5" y2="177" stroke="#1565c0" stroke-width="1.5"/>
-<line id="u13ex_z6surfaceRight" x1="123.5" y1="177" x2="162" y2="177" stroke="#1565c0" stroke-width="1.5"/>
-<path id="u13ex_z6upwardVelocity" d="M111 160 L111 127" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13ex_v)"/>
-<path id="u13ex_z6velocity" d="M203 101 L264 101" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u13ex_v)"/>
-<text x="233" y="78" font-size="12" fill="#1e8449" text-anchor="middle">Q</text>
-<circle id="u13ex_z6pumpSymbol" cx="350" cy="101" r="21" fill="none" stroke="#1e8449" stroke-width="2"/>
-<text x="350" y="67" font-size="11" fill="#1e8449" text-anchor="middle">crpka (simbol)</text>
-<circle id="u13ex_z6S" cx="303" cy="101" r="3" fill="#c0392b"/>
-<text x="303" y="133" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">S</text>
-<line x1="179" y1="101" x2="189" y2="101" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="179" y1="177" x2="189" y2="177" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u13ex_z6zs" d="M184 101 L184 177" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)"/>
-<text x="200" y="150" font-size="12" fill="#b7600c" text-anchor="start">zs = 2,0 m</text>
-<line x1="184" y1="101" x2="195" y2="101" stroke="#b7600c" stroke-width="1"/>
-<line x1="162" y1="177" x2="190" y2="177" stroke="#b7600c" stroke-width="1"/>
-<text x="31" y="144" font-size="13" fill="#1565c0" text-anchor="start">A</text>
-<text x="198" y="195" font-size="12" fill="#1a2530" text-anchor="start">Hatm = 10,2 m</text>
-<text x="198" y="216" font-size="11" fill="#1a2530" text-anchor="start">hw,s = 1,2 m; Hv = 0,35 m</text>
-<text x="31" y="269" font-size="11" fill="#1a2530" text-anchor="start">S: referentni usisni presjek; otvor u A je uronjen.</text>
-<text x="31" y="287" font-size="11" fill="#1a2530" text-anchor="start">Zadani NPSHr(q) vrijedi samo za nazivnu brzinu.</text>
-</g>
-</g>
+  <title id="u13ex_title">Skice šest vježbi cjevovodnih mreža</title>
+  <desc id="u13ex_desc">Z1 i Z2: vodoravne cijevi s otvorenim krajevima, L mjeri razmak između referentnih presjeka, a D je unutarnji promjer. Z3: dva ogranka između istih čvorova, treba odabrati mjesto pasivnog prigušenja za jednake protoke. Z4: kvantitativne krivulje crpke i sustava s Colebrookovim faktorom trenja, osi H u metrima i Q u litrama u sekundi. Z5: tri alternativna kružna presjeka u omjeru unutarnjih promjera 80 prema 100 prema 125. Z6: napunjen usis, otvor cijevi je uronjen i odmaknut od dna; kota geodetskog uspona mjeri udaljenost od slobodne površine do referentnog usisnog presjeka crpke. Promjeri vodova u uzdužnim prikazima uvećani su prema duljinama. Crpka i ventil prikazani su simbolima.</desc>
+  <defs>
+    <pattern id="u13ex_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u13ex_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u13ex_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u13ex_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs>
+      <marker id="u13ex_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u13ex_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u13ex_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u13ex_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
+      </marker>
+    </defs>
+    <g id="u13ex_z1" transform="translate(28 22)">
+      <text x="30.5" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z1</text>
+      <text x="58" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Gubitci vodoravne dionice</text>
+      <path id="u13ex_z1outer0" d="M46 127 H392" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round" />
+      <path d="M46 127 H392" fill="none" stroke="url(#u13ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" />
+      <path id="u13ex_z1outer1" d="M46 175 H392" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round" />
+      <path d="M46 175 H392" fill="none" stroke="url(#u13ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" />
+      <defs />
+      <path id="u13ex_z1fluid" d="M46 127 H392 V175 H46 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+      <path id="u13ex_z1wall0" d="M46 127 H392" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+      <path id="u13ex_z1wall1" d="M46 175 H392" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+      <line id="u13ex_z1section1" x1="80" y1="123" x2="80" y2="180" stroke="#356b83" stroke-width="1" stroke-dasharray="4 3" />
+      <text x="80" y="115" font-size="13" fill="#263746" text-anchor="middle">1</text>
+      <line x1="80" y1="183" x2="80" y2="219" stroke="#657781" stroke-width="1" />
+      <line id="u13ex_z1section2" x1="350" y1="123" x2="350" y2="180" stroke="#356b83" stroke-width="1" stroke-dasharray="4 3" />
+      <text x="350" y="115" font-size="13" fill="#263746" text-anchor="middle">2</text>
+      <line x1="350" y1="183" x2="350" y2="219" stroke="#657781" stroke-width="1" />
+      <line x1="80" y1="210" x2="80" y2="220" stroke="#657781" stroke-width="1.2" />
+      <line x1="350" y1="210" x2="350" y2="220" stroke="#657781" stroke-width="1.2" />
+      <path id="u13ex_z1L" d="M80 215 L350 215" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" />
+      <text x="215.0" y="232" font-size="11" fill="#263746" text-anchor="middle">L = 50 m</text>
+      <line x1="405" y1="127" x2="415" y2="127" stroke="#657781" stroke-width="1.2" />
+      <line x1="405" y1="175" x2="415" y2="175" stroke="#657781" stroke-width="1.2" />
+      <path id="u13ex_z1D" d="M410 127 L410 175" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" />
+      <text x="423" y="155.0" font-size="11" fill="#263746" text-anchor="start">D</text>
+      <path id="u13ex_z1velocity" d="M177 151 L264 151" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13ex_v)" />
+      <text x="220.5" y="142" font-size="12" fill="#263746" text-anchor="middle">Q = 12 L/s</text>
+      <path id="u13ex_z1valve" d="M203 82 L229 98 V82 L203 98 Z" fill="#ffffff" stroke="#3a4a56" stroke-width="1.3" />
+      <line x1="216" y1="82" x2="216" y2="70" stroke="#3a4a56" stroke-width="1.3" />
+      <line x1="208" y1="70" x2="224" y2="70" stroke="#3a4a56" stroke-width="1.3" />
+      <line x1="216" y1="98" x2="216" y2="121" stroke="#3a4a56" stroke-width="1" />
+      <text x="44" y="75" font-size="12" fill="#263746" text-anchor="start">λ = 0,025</text>
+      <text x="278" y="75" font-size="12" fill="#263746" text-anchor="start">Σξ = 4,0</text>
+      <text x="31" y="264" font-size="11" fill="#263746" text-anchor="start">Ventil: simbol lokalnog otpora; prolaz je otvoren.</text>
+      <text x="31" y="284" font-size="11" fill="#263746" text-anchor="start">D = 100 mm (uvećano); L je razmak presjeka 1–2.</text>
+    </g>
+    <g id="u13ex_z2" transform="translate(486 22)">
+      <text x="30.5" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z2</text>
+      <text x="58" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Potpuno razvijen laminarni tok</text>
+      <path id="u13ex_z2outer0" d="M46 127 H392" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round" />
+      <path d="M46 127 H392" fill="none" stroke="url(#u13ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" />
+      <path id="u13ex_z2outer1" d="M46 175 H392" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round" />
+      <path d="M46 175 H392" fill="none" stroke="url(#u13ex_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" />
+      <defs />
+      <path id="u13ex_z2fluid" d="M46 127 H392 V175 H46 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+      <path id="u13ex_z2wall0" d="M46 127 H392" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+      <path id="u13ex_z2wall1" d="M46 175 H392" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+      <line id="u13ex_z2section1" x1="80" y1="123" x2="80" y2="180" stroke="#356b83" stroke-width="1" stroke-dasharray="4 3" />
+      <text x="80" y="115" font-size="13" fill="#263746" text-anchor="middle">1</text>
+      <line x1="80" y1="183" x2="80" y2="219" stroke="#657781" stroke-width="1" />
+      <line id="u13ex_z2section2" x1="350" y1="123" x2="350" y2="180" stroke="#356b83" stroke-width="1" stroke-dasharray="4 3" />
+      <text x="350" y="115" font-size="13" fill="#263746" text-anchor="middle">2</text>
+      <line x1="350" y1="183" x2="350" y2="219" stroke="#657781" stroke-width="1" />
+      <line x1="80" y1="210" x2="80" y2="220" stroke="#657781" stroke-width="1.2" />
+      <line x1="350" y1="210" x2="350" y2="220" stroke="#657781" stroke-width="1.2" />
+      <path id="u13ex_z2L" d="M80 215 L350 215" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" />
+      <text x="215.0" y="232" font-size="11" fill="#263746" text-anchor="middle">L = 5,0 m</text>
+      <line x1="405" y1="127" x2="415" y2="127" stroke="#657781" stroke-width="1.2" />
+      <line x1="405" y1="175" x2="415" y2="175" stroke="#657781" stroke-width="1.2" />
+      <path id="u13ex_z2D" d="M410 127 L410 175" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" />
+      <text x="423" y="155.0" font-size="11" fill="#263746" text-anchor="start">D</text>
+      <path id="u13ex_z2velocity" d="M177 151 L264 151" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13ex_v)" />
+      <text x="220.5" y="142" font-size="12" fill="#263746" text-anchor="middle">Q = 6,0 · 10⁻⁶ m³/s</text>
+      <text x="31" y="76" font-size="12" fill="#263746" text-anchor="start">ν = 3,0 · 10⁻⁶ m²/s; ρ = 1100 kg/m³</text>
+      <text x="31" y="264" font-size="11" fill="#263746" text-anchor="start">Bez ulaznog područja i lokalnih gubitaka.</text>
+      <text x="31" y="284" font-size="11" fill="#263746" text-anchor="start">D = 6,0 mm (uvećano); L je razmak presjeka 1–2.</text>
+    </g>
+    <g id="u13ex_z3" transform="translate(28 336)">
+      <text x="30.5" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z3</text>
+      <text x="58" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Uravnoteženje dvaju ogranaka</text>
+      <defs />
+      <path id="u13ex_z3pipeouter" d="M25 149 H106 M106 149 V119 Q106 101 124 101 H322 Q340 101 340 119 V179 Q340 197 322 197 H124 Q106 197 106 179 V149 M340 149 H420" fill="none" stroke="#3a4a56" stroke-width="27" stroke-linecap="butt" stroke-linejoin="round" />
+      <path d="M25 149 H106 M106 149 V119 Q106 101 124 101 H322 Q340 101 340 119 V179 Q340 197 322 197 H124 Q106 197 106 179 V149 M340 149 H420" fill="none" stroke="url(#u13ex_hatch)" stroke-width="25" stroke-linecap="butt" stroke-linejoin="round" />
+      <path id="u13ex_z3pipefluid" d="M25 149 H106 M106 149 V119 Q106 101 124 101 H322 Q340 101 340 119 V179 Q340 197 322 197 H124 Q106 197 106 179 V149 M340 149 H420" fill="none" stroke="#dcebf1" stroke-width="18" stroke-linecap="butt" stroke-linejoin="round" />
+      <circle id="u13ex_z3A" cx="106" cy="149" r="3" fill="#356b83" />
+      <text x="82" y="126" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">A</text>
+      <circle id="u13ex_z3B" cx="340" cy="149" r="3" fill="#356b83" />
+      <text x="364" y="126" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">B</text>
+      <path id="u13ex_z3inlet" d="M32 149 L77 149" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13ex_v)" />
+      <text x="50" y="124" font-size="12" fill="#263746" text-anchor="middle">Q</text>
+      <path id="u13ex_z3outlet" d="M370 149 L411 149" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13ex_v)" />
+      <text x="394" y="124" font-size="12" fill="#263746" text-anchor="middle">Q</text>
+      <path id="u13ex_z3upperVelocity" d="M193 101 L256 101" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13ex_v)" />
+      <path id="u13ex_z3lowerVelocity" d="M193 197 L256 197" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13ex_v)" />
+      <text x="223" y="133" font-size="12" fill="#263746" text-anchor="middle">Q₁</text>
+      <text x="223" y="175" font-size="12" fill="#263746" text-anchor="middle">Q₂</text>
+      <text x="222" y="70" font-size="12" fill="#263746" text-anchor="middle">R₁ = 12 000 s²/m⁵</text>
+      <text x="222" y="229" font-size="12" fill="#263746" text-anchor="middle">R₂ = 48 000 s²/m⁵</text>
+      <text x="27" y="262" font-size="12" fill="#263746" text-anchor="start">Cilj: Q₁ = Q₂; ukupno Q = 20 L/s.</text>
+      <text x="27" y="284" font-size="12" fill="#263746" text-anchor="start">U koju granu dodati prigušni ventil?</text>
+    </g>
+    <g id="u13ex_z4" transform="translate(486 336)">
+      <text x="30.5" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z4</text>
+      <text x="58" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Radna točka uz promjenjivo trenje</text>
+      <path d="M61 239 L398 239" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u13ex_axisMarker)" />
+      <text x="421" y="260" font-size="13" fill="#263746" text-anchor="middle">Q (L/s)</text>
+      <path d="M61 239 L61 65" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u13ex_axisMarker)" />
+      <text x="53" y="55" font-size="13" fill="#263746" text-anchor="middle">H (m)</text>
+      <line x1="61" y1="236.0" x2="61" y2="242.0" stroke="#3a4a56" stroke-width="1" />
+      <text x="61" y="256.0" font-size="11" fill="#263746" text-anchor="middle">0</text>
+      <line x1="161" y1="236.0" x2="161" y2="242.0" stroke="#3a4a56" stroke-width="1" />
+      <text x="161" y="256.0" font-size="11" fill="#263746" text-anchor="middle">10</text>
+      <line x1="261" y1="236.0" x2="261" y2="242.0" stroke="#3a4a56" stroke-width="1" />
+      <text x="261" y="256.0" font-size="11" fill="#263746" text-anchor="middle">20</text>
+      <line x1="361" y1="236.0" x2="361" y2="242.0" stroke="#3a4a56" stroke-width="1" />
+      <text x="361" y="256.0" font-size="11" fill="#263746" text-anchor="middle">30</text>
+      <line x1="58" y1="239.0" x2="64" y2="239.0" stroke="#3a4a56" stroke-width="1" />
+      <text x="52" y="243.0" font-size="11" fill="#263746" text-anchor="end">0</text>
+      <line x1="58" y1="198.0" x2="64" y2="198.0" stroke="#3a4a56" stroke-width="1" />
+      <text x="52" y="202.0" font-size="11" fill="#263746" text-anchor="end">10</text>
+      <line x1="58" y1="157.0" x2="64" y2="157.0" stroke="#3a4a56" stroke-width="1" />
+      <text x="52" y="161.0" font-size="11" fill="#263746" text-anchor="end">20</text>
+      <line x1="58" y1="116.00000000000001" x2="64" y2="116.00000000000001" stroke="#3a4a56" stroke-width="1" />
+      <text x="52" y="120.00000000000001" font-size="11" fill="#263746" text-anchor="end">30</text>
+      <line x1="58" y1="75.0" x2="64" y2="75.0" stroke="#3a4a56" stroke-width="1" />
+      <text x="52" y="79.0" font-size="11" fill="#263746" text-anchor="end">40</text>
+      <path id="u13ex_z4pump" d="M111.000000 119.075000 L113.000000 119.325920 L115.000000 119.586680 L117.000000 119.857280 L119.000000 120.137720 L121.000000 120.428000 L123.000000 120.728120 L125.000000 121.038080 L127.000000 121.357880 L129.000000 121.687520 L131.000000 122.027000 L133.000000 122.376320 L135.000000 122.735480 L137.000000 123.104480 L139.000000 123.483320 L141.000000 123.872000 L143.000000 124.270520 L145.000000 124.678880 L147.000000 125.097080 L149.000000 125.525120 L151.000000 125.963000 L153.000000 126.410720 L155.000000 126.868280 L157.000000 127.335680 L159.000000 127.812920 L161.000000 128.300000 L163.000000 128.796920 L165.000000 129.303680 L167.000000 129.820280 L169.000000 130.346720 L171.000000 130.883000 L173.000000 131.429120 L175.000000 131.985080 L177.000000 132.550880 L179.000000 133.126520 L181.000000 133.712000 L183.000000 134.307320 L185.000000 134.912480 L187.000000 135.527480 L189.000000 136.152320 L191.000000 136.787000 L193.000000 137.431520 L195.000000 138.085880 L197.000000 138.750080 L199.000000 139.424120 L201.000000 140.108000 L203.000000 140.801720 L205.000000 141.505280 L207.000000 142.218680 L209.000000 142.941920 L211.000000 143.675000 L213.000000 144.417920 L215.000000 145.170680 L217.000000 145.933280 L219.000000 146.705720 L221.000000 147.488000 L223.000000 148.280120 L225.000000 149.082080 L227.000000 149.893880 L229.000000 150.715520 L231.000000 151.547000 L233.000000 152.388320 L235.000000 153.239480 L237.000000 154.100480 L239.000000 154.971320 L241.000000 155.852000 L243.000000 156.742520 L245.000000 157.642880 L247.000000 158.553080 L249.000000 159.473120 L251.000000 160.403000 L253.000000 161.342720 L255.000000 162.292280 L257.000000 163.251680 L259.000000 164.220920 L261.000000 165.200000 L263.000000 166.188920 L265.000000 167.187680 L267.000000 168.196280 L269.000000 169.214720 L271.000000 170.243000 L273.000000 171.281120 L275.000000 172.329080 L277.000000 173.386880 L279.000000 174.454520 L281.000000 175.532000 L283.000000 176.619320 L285.000000 177.716480 L287.000000 178.823480 L289.000000 179.940320 L291.000000 181.067000 L293.000000 182.203520 L295.000000 183.349880 L297.000000 184.506080 L299.000000 185.672120 L301.000000 186.848000 L303.000000 188.033720 L305.000000 189.229280 L307.000000 190.434680 L309.000000 191.649920 L311.000000 192.875000 L313.000000 194.109920 L315.000000 195.354680 L317.000000 196.609280 L319.000000 197.873720 L321.000000 199.148000 L323.000000 200.432120 L325.000000 201.726080 L327.000000 203.029880 L329.000000 204.343520 L331.000000 205.667000 L333.000000 207.000320 L335.000000 208.343480 L337.000000 209.696480 L339.000000 211.059320 L341.000000 212.432000 L343.000000 213.814520 L345.000000 215.206880 L347.000000 216.609080 L349.000000 218.021120 L351.000000 219.443000 L353.000000 220.874720 L355.000000 222.316280 L357.000000 223.767680 L359.000000 225.228920 L361.000000 226.700000" fill="none" stroke="#356b83" stroke-width="2" />
+      <path id="u13ex_z4system" d="M111.000000 202.734034 L113.000000 202.466290 L115.000000 202.188829 L117.000000 201.901656 L119.000000 201.604778 L121.000000 201.298202 L123.000000 200.981932 L125.000000 200.655975 L127.000000 200.320334 L129.000000 199.975013 L131.000000 199.620018 L133.000000 199.255350 L135.000000 198.881015 L137.000000 198.497015 L139.000000 198.103352 L141.000000 197.700030 L143.000000 197.287051 L145.000000 196.864417 L147.000000 196.432131 L149.000000 195.990195 L151.000000 195.538611 L153.000000 195.077380 L155.000000 194.606504 L157.000000 194.125985 L159.000000 193.635825 L161.000000 193.136024 L163.000000 192.626584 L165.000000 192.107507 L167.000000 191.578793 L169.000000 191.040444 L171.000000 190.492461 L173.000000 189.934844 L175.000000 189.367596 L177.000000 188.790716 L179.000000 188.204205 L181.000000 187.608065 L183.000000 187.002296 L185.000000 186.386899 L187.000000 185.761874 L189.000000 185.127223 L191.000000 184.482946 L193.000000 183.829043 L195.000000 183.165515 L197.000000 182.492363 L199.000000 181.809587 L201.000000 181.117187 L203.000000 180.415165 L205.000000 179.703521 L207.000000 178.982255 L209.000000 178.251367 L211.000000 177.510858 L213.000000 176.760728 L215.000000 176.000978 L217.000000 175.231609 L219.000000 174.452619 L221.000000 173.664010 L223.000000 172.865783 L225.000000 172.057936 L227.000000 171.240472 L229.000000 170.413389 L231.000000 169.576689 L233.000000 168.730371 L235.000000 167.874435 L237.000000 167.008883 L239.000000 166.133714 L241.000000 165.248928 L243.000000 164.354526 L245.000000 163.450508 L247.000000 162.536874 L249.000000 161.613624 L251.000000 160.680758 L253.000000 159.738278 L255.000000 158.786182 L257.000000 157.824471 L259.000000 156.853145 L261.000000 155.872204 L263.000000 154.881649 L265.000000 153.881479 L267.000000 152.871696 L269.000000 151.852298 L271.000000 150.823286 L273.000000 149.784660 L275.000000 148.736421 L277.000000 147.678568 L279.000000 146.611101 L281.000000 145.534021 L283.000000 144.447328 L285.000000 143.351022 L287.000000 142.245102 L289.000000 141.129570 L291.000000 140.004425 L293.000000 138.869667 L295.000000 137.725297 L297.000000 136.571314 L299.000000 135.407718 L301.000000 134.234511 L303.000000 133.051690 L305.000000 131.859258 L307.000000 130.657214 L309.000000 129.445557 L311.000000 128.224289 L313.000000 126.993408 L315.000000 125.752916 L317.000000 124.502812 L319.000000 123.243096 L321.000000 121.973769 L323.000000 120.694830 L325.000000 119.406279 L327.000000 118.108118 L329.000000 116.800344 L331.000000 115.482960 L333.000000 114.155964 L335.000000 112.819357 L337.000000 111.473138 L339.000000 110.117309 L341.000000 108.751869 L343.000000 107.376817 L345.000000 105.992155 L347.000000 104.597881 L349.000000 103.193997 L351.000000 101.780502 L353.000000 100.357396 L355.000000 98.924679 L357.000000 97.482352 L359.000000 96.030414 L361.000000 94.568865" fill="none" stroke="#356b83" stroke-width="2" stroke-dasharray="6 4" />
+      <circle id="u13ex_z4operatingPoint" cx="251.2964471306686" cy="160.5416674823831" r="4" fill="#ffffff" stroke="#3a4a56" stroke-width="1.5" />
+      <text x="143" y="107" font-size="13" fill="#263746" text-anchor="start">Hp</text>
+      <text x="313" y="64" font-size="13" fill="#263746" text-anchor="start">Hs(Q)</text>
+      <line id="u13ex_z4staticHead" x1="62" y1="206.2" x2="386" y2="206.2" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
+      <text x="352" y="196.2" font-size="11" fill="#263746" text-anchor="middle">Δz = 8 m</text>
+      <text x="26" y="287" font-size="11" fill="#263746" text-anchor="start">D = 0,100 m; L = 150 m; ε = 0,100 mm; Σξ = 6.</text>
+    </g>
+    <g id="u13ex_z5" transform="translate(28 650)">
+      <text x="30.5" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z5</text>
+      <text x="58" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Promjer za cijeli raspon otpora</text>
+      <circle id="u13ex_z5wall0" cx="80" cy="137" r="28.2" fill="url(#u13ex_hatch)" stroke="#3a4a56" stroke-width="1.5" />
+      <defs />
+      <circle id="u13ex_z5bore0" cx="80" cy="137" r="23.2" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.3" />
+      <line x1="56.8" y1="168.2" x2="56.8" y2="199" stroke="#657781" stroke-width="1" />
+      <line x1="103.2" y1="168.2" x2="103.2" y2="199" stroke="#657781" stroke-width="1" />
+      <line x1="56.8" y1="191" x2="56.8" y2="201" stroke="#657781" stroke-width="1.2" />
+      <line x1="103.2" y1="191" x2="103.2" y2="201" stroke="#657781" stroke-width="1.2" />
+      <path id="u13ex_z5D0" d="M56.8 196 L103.2 196" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" />
+      <text x="80.0" y="213" font-size="11" fill="#263746" text-anchor="middle">80 mm</text>
+      <circle id="u13ex_z5wall1" cx="221" cy="137" r="34.0" fill="url(#u13ex_hatch)" stroke="#3a4a56" stroke-width="1.5" />
+      <defs />
+      <circle id="u13ex_z5bore1" cx="221" cy="137" r="28.999999999999996" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.3" />
+      <line x1="192.0" y1="174.0" x2="192.0" y2="199" stroke="#657781" stroke-width="1" />
+      <line x1="250.0" y1="174.0" x2="250.0" y2="199" stroke="#657781" stroke-width="1" />
+      <line x1="192.0" y1="191" x2="192.0" y2="201" stroke="#657781" stroke-width="1.2" />
+      <line x1="250.0" y1="191" x2="250.0" y2="201" stroke="#657781" stroke-width="1.2" />
+      <path id="u13ex_z5D1" d="M192.0 196 L250.0 196" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" />
+      <text x="221.0" y="213" font-size="11" fill="#263746" text-anchor="middle">100 mm</text>
+      <circle id="u13ex_z5wall2" cx="362" cy="137" r="41.25" fill="url(#u13ex_hatch)" stroke="#3a4a56" stroke-width="1.5" />
+      <defs />
+      <circle id="u13ex_z5bore2" cx="362" cy="137" r="36.25" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.3" />
+      <line x1="325.75" y1="181.25" x2="325.75" y2="199" stroke="#657781" stroke-width="1" />
+      <line x1="398.25" y1="181.25" x2="398.25" y2="199" stroke="#657781" stroke-width="1" />
+      <line x1="325.75" y1="191" x2="325.75" y2="201" stroke="#657781" stroke-width="1.2" />
+      <line x1="398.25" y1="191" x2="398.25" y2="201" stroke="#657781" stroke-width="1.2" />
+      <path id="u13ex_z5D2" d="M325.75 196 L398.25 196" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" />
+      <text x="362.0" y="213" font-size="11" fill="#263746" text-anchor="middle">125 mm</text>
+      <text x="223" y="69" font-size="12" fill="#263746" text-anchor="middle">Tri alternativna unutarnja presjeka</text>
+      <text x="30" y="243" font-size="12" fill="#263746" text-anchor="start">Q = 18 L/s; L = 150 m; Σξ = 6.</text>
+      <text x="30" y="264" font-size="12" fill="#263746" text-anchor="start">0,020 ≤ λ ≤ 0,028; zadani interval.</text>
+      <text x="30" y="285" font-size="12" fill="#263746" text-anchor="start">Uvjet: hw ≤ 15 m za cijeli interval λ.</text>
+    </g>
+    <g id="u13ex_z6" transform="translate(486 650)">
+      <text x="30.5" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z6</text>
+      <text x="58" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Usisna visina i referenca NPSH-a</text>
+      <defs />
+      <rect id="u13ex_z6reservoirFluid" x="51" y="177" width="111" height="62" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+      <path id="u13ex_z6tankOuter" d="M51 156 V239 H162 V156" fill="none" stroke="#3a4a56" stroke-width="8" />
+      <path d="M51 156 V239 H162 V156" fill="none" stroke="url(#u13ex_hatch)" stroke-width="6" />
+      <path id="u13ex_z6tankWall" d="M51 156 V239 H162 V156" fill="none" stroke="#3a4a56" stroke-width="1.3" />
+      <path id="u13ex_z6pipeouter" d="M111 217 V121 Q111 101 131 101 H405" fill="none" stroke="#3a4a56" stroke-width="25" stroke-linecap="butt" stroke-linejoin="round" />
+      <path d="M111 217 V121 Q111 101 131 101 H405" fill="none" stroke="url(#u13ex_hatch)" stroke-width="23" stroke-linecap="butt" stroke-linejoin="round" />
+      <path id="u13ex_z6pipefluid" d="M111 217 V121 Q111 101 131 101 H405" fill="none" stroke="#dcebf1" stroke-width="16" stroke-linecap="butt" stroke-linejoin="round" />
+      <line id="u13ex_z6surfaceLeft" x1="51" y1="177" x2="98.5" y2="177" stroke="#356b83" stroke-width="1.5" />
+      <line id="u13ex_z6surfaceRight" x1="123.5" y1="177" x2="162" y2="177" stroke="#356b83" stroke-width="1.5" />
+      <path id="u13ex_z6upwardVelocity" d="M111 160 L111 127" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13ex_v)" />
+      <path id="u13ex_z6velocity" d="M203 101 L264 101" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13ex_v)" />
+      <text x="233" y="78" font-size="12" fill="#263746" text-anchor="middle">Q</text>
+      <circle id="u13ex_z6pumpSymbol" cx="350" cy="101" r="21" fill="none" stroke="#356b83" stroke-width="2" />
+      <text x="350" y="67" font-size="11" fill="#263746" text-anchor="middle">crpka (simbol)</text>
+      <circle id="u13ex_z6S" cx="303" cy="101" r="3" fill="#356b83" />
+      <text x="303" y="133" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">S</text>
+      <line x1="179" y1="101" x2="189" y2="101" stroke="#657781" stroke-width="1.2" />
+      <line x1="179" y1="177" x2="189" y2="177" stroke="#657781" stroke-width="1.2" />
+      <path id="u13ex_z6zs" d="M184 101 L184 177" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" />
+      <text x="200" y="150" font-size="12" fill="#263746" text-anchor="start">zs = 2,0 m</text>
+      <line x1="184" y1="101" x2="195" y2="101" stroke="#657781" stroke-width="1" />
+      <line x1="162" y1="177" x2="190" y2="177" stroke="#657781" stroke-width="1" />
+      <text x="31" y="144" font-size="13" fill="#263746" text-anchor="start">A</text>
+      <text x="198" y="195" font-size="12" fill="#263746" text-anchor="start">Hatm = 10,2 m</text>
+      <text x="198" y="216" font-size="11" fill="#263746" text-anchor="start">hw,s = 1,2 m; Hv = 0,35 m</text>
+      <text x="31" y="269" font-size="11" fill="#263746" text-anchor="start">S: referentni usisni presjek; otvor u A je uronjen.</text>
+      <text x="31" y="287" font-size="11" fill="#263746" text-anchor="start">Zadani NPSHr(q) vrijedi samo za nazivnu brzinu.</text>
+    </g>
+  </g>
 </svg>

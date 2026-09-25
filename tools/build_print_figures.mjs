@@ -58,6 +58,7 @@ try {
       const noteFills=new Set(['#fde8e8','#fdf2e9','#f5f1fa','#fef9e7','#fdf6ec']);
       const decorations=new Set();
       for(const e of ink){
+        if(e.e.getAttribute('data-mf1-role')==='physical')continue;
         const b=e.box,w=b[2]-b[0],h=b[3]-b[1], raw=e.e.getAttribute('stroke');
         const canvas=e.tag==='rect' && b[0]<=20 && b[1]<=20 && b[2]>=view.width-20 && b[3]>=view.height-20;
         const card=e.tag==='rect' && ((neutral.has(raw) && (e.rx>0 || w>200))
@@ -72,7 +73,7 @@ try {
       // Notes/badges have no physical ink inside. Never remove vessel walls,
       // fluid fills, axes, dimension lines, or a connected flowchart node.
       for(const e of ink){
-        if(decorations.has(e.index) || !['rect','circle'].includes(e.tag))continue;
+        if(decorations.has(e.index) || e.e.getAttribute('data-mf1-role')==='physical' || !['rect','circle'].includes(e.tag))continue;
         const inside=ink.filter(t=>t.index!==e.index && contains(e.box,t.box,1));
         const texts=inside.filter(t=>t.tag==='text' && t.text);
         const physical=inside.filter(t=>t.tag!=='text'&&!decorations.has(t.index));
@@ -221,7 +222,7 @@ try {
           const left=inset.left||0,right=inset.right||0;
           const scale=Math.min(.9,(width-2*pad-left-right)/(all[2]-all[0]));
           const gx=left+(width-left-right-scale*(all[2]-all[0]))/2-scale*all[0];
-          const gy=y-scale*all[1];
+          const gy=y+(inset.top||0)-scale*all[1];
           for(const g of geometries){
             const clone=g.e.cloneNode(true);clone.removeAttribute('transform');clone.removeAttribute('id');
             for(const prop of ['fill','stroke','stroke-width','stroke-linecap','stroke-linejoin','stroke-dasharray','fill-opacity','stroke-opacity','opacity','marker-start','marker-mid','marker-end']){
@@ -248,7 +249,7 @@ try {
             clone.setAttribute('data-source-geometry',g.index);
             xml+=`<g transform="translate(${round(gx)} ${round(gy)}) scale(${round(scale)})"><g transform="matrix(${g.matrix.map(round).join(' ')})">${clone.outerHTML}</g></g>`;
           }
-          let bottom=gy+all[3]*scale;
+          let bottom=gy+all[3]*scale+(inset.bottom||0);
           for(const t of spatial.sort((a,b)=>a.box[1]-b.box[1])){
             let x=gx+t.origin[0]*scale, yy=gy+t.origin[1]*scale;
             const anchor=['start','middle','end'].includes(t.anchor)?t.anchor:'start';
@@ -348,6 +349,7 @@ try {
         removed_decorations:[...decorations],panels:panels.map(p=>({width:p.width,height:p.height,kind:p.kind,conflicts:p.conflicts,geometry:p.geometry,texts:p.texts}))};
     }, { layout, tokens, name, recipe:compositions[name]||{} });
     const rows=result.rows.map((r,i)=>{
+      r.svg=r.svg.replace(/[ \t]+$/gm,'');
       const file=name.replace('.svg',`--${i+1}.svg`);writeFileSync(join(out,file),r.svg);
       return {file,width:r.width,height:r.height,panels:r.panels,keep_with_next:r.keep_with_next,sha256:createHash('sha256').update(r.svg).digest('hex')};
     });

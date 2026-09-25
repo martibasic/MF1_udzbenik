@@ -33,11 +33,12 @@ DEFAULT_PDF = REPO_ROOT / "_book" / "mehanika-fluida-1.pdf"
 
 EXPECTED_TITLE = BOOK["book"]["title"]
 EXPECTED_AUTHOR = BOOK["book"]["author"]
-# Print compositions keep diagram labels >= 9 pt; the reviewed layout has 340
-# pages. This regression envelope detects missing content or layout inflation;
-# it is not an author-contract limit. See docs/ispis-skica.md.
-MIN_PAGES = 310
-MAX_PAGES = 380
+# The reviewed typography uses about 303 pages with 11 pt body text and 9 pt
+# diagram labels. This bounded envelope is only an early layout alarm; actual
+# object completeness is checked by audit_pdf_layout.py against the book index.
+# Rebaselining rationale and visual review: docs/pdf-tipografija.md.
+MIN_PAGES = 270
+MAX_PAGES = 335
 MIN_FILE_SIZE = 1_000_000
 MIN_TEXT_CHARACTERS = 250_000
 

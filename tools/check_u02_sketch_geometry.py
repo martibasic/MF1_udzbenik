@@ -11,6 +11,8 @@ from check_u10_sketch_geometry import check, node, path, line, delta, distance_t
 from check_u13_sketch_geometry import close, rect
 from check_u01_sketch_geometry import inside, sample_segment, dimension
 
+from sketch_style import check_uniform_fluid
+
 ROOT = Path(__file__).resolve().parents[1] / 'assets' / 'print'
 
 
@@ -32,9 +34,7 @@ def capillary(root, prefix, count=1, convex=False):
     e=node(root,prefix+'fluid');fluid=path(e)
     check(e.get('stroke')=='none' and e.get('d').count('M')==1 and e.get('d').count('Z')==1,
           prefix+': one connected fill without a stroke over the openings')
-    grad=node(root,e.get('fill')[5:-1])
-    check(grad.get('gradientUnits')=='userSpaceOnUse' and grad.get('x1')==grad.get('x2'),
-          prefix+': one vertical spatial gradient')
+    check_uniform_fluid(e, 'fill')
     bottom=max(y for x,y in fluid);left=min(x for x,y in fluid)
     surface=line(node(root,prefix+'surface0'))[0][1]
     walls=[rect(e) for e in root.iter() if re.fullmatch(re.escape(prefix)+r'(?:tube\d+(?:left|right)|tank(?:left|right|bottom)|roof\d+|airwall\d+)',e.get('id',''))]

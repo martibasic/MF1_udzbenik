@@ -10,6 +10,8 @@ import xml.etree.ElementTree as ET
 from check_u10_sketch_geometry import check, node, path, line, delta, plate, wall_and_openings
 from check_u13_sketch_geometry import close, graph, rect
 
+from sketch_style import check_uniform_fluid
+
 ROOT = Path(__file__).resolve().parents[1] / 'assets' / 'print'
 
 
@@ -111,10 +113,9 @@ def main():
         check(len(ids) == len(set(ids)), 'SVG ID-jevi moraju biti jedinstveni')
         check(not any(e.tag.endswith('filter') for e in root.iter()), 'Nema sjena preko povezanog fluida')
         for e in root.iter():
-            if e.get('id', '').endswith('fluid') and e.get('fill', '').startswith('url('):
+            if e.get('id', '').endswith('fluid') and e.get('fill') != 'none':
                 check(e.get('d').count('M') == 1 and e.get('stroke') == 'none', 'Jedna povezana ispuna bez unutarnjih pregrada')
-                gradient = node(root, e.get('fill')[5:-1])
-                check(gradient.get('gradientUnits') == 'userSpaceOnUse', 'Isti prostorni gradijent kroz cijeli tok')
+                check_uniform_fluid(e)
     intro, p1, p2, p3, p4, p5, ex = roots
     guide(intro, 'u14intro_flow', 150)
     triangle(intro, 'u14intro_inletTriangle', 8, (16, 0), 5)

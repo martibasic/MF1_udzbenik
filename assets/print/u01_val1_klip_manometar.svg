@@ -1,82 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="u01v1km_title u01v1km_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-<title id="u01v1km_title">Opterećeni klip i tlak</title><desc id="u01v1km_desc">Povezani cilindri imaju otvoren donji spoj, jedinstvenu ispunu ulja i jednake visine tlačnih ploha. Kota d_k mjeri provrt; A2 označuje površinu čela. Crvena sila je opterećenje prvog klipa, zelena sila ulja na drugi klip.</desc>
-<defs>
-<linearGradient id="u01v1km_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u01v1km_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u01v1km_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u01v1km_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u01v1km_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u01v1km_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u01v1km_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="980" height="520" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
-Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
-Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
-<defs>
-<marker id="u01v1km_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
-<marker id="u01v1km_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
-<marker id="u01v1km_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u01v1km_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
-</defs>
-<defs><linearGradient id="u01v1km_metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#909fa8"/><stop offset="100%" stop-color="#5d6d7e"/></linearGradient></defs>
-<path id="u01v1km_systemouter0" d="M48.0 140 V400 H631.722348605376 V140" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M48.0 140 V400 H631.722348605376 V140" fill="none" stroke="white" stroke-width="9" />
-<path d="M48.0 140 V400 H631.722348605376 V140" fill="none" stroke="url(#u01v1km_hatch)" stroke-width="9" />
-<path id="u01v1km_systemouter1" d="M188.0 140 V376 H422.27765139462394 V140" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
-<path d="M188.0 140 V376 H422.27765139462394 V140" fill="none" stroke="white" stroke-width="9" />
-<path d="M188.0 140 V376 H422.27765139462394 V140" fill="none" stroke="url(#u01v1km_hatch)" stroke-width="9" />
-<defs><linearGradient id="u01v1km_systemfield" gradientUnits="userSpaceOnUse" x1="0" y1="260" x2="0" y2="400"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<path id="u01v1km_systemfluid" d="M48.0 260 H188.0 V376 H422.27765139462394 V260 H631.722348605376 V400 H48.0 Z" fill="url(#u01v1km_systemfield)" stroke="none" stroke-width="1.8" />
-<path id="u01v1km_systemwall0" d="M48.0 140 V400 H631.722348605376 V140" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<path id="u01v1km_systemwall1" d="M188.0 140 V376 H422.27765139462394 V140" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-<rect id="u01v1km_systempiston0" x="48.0" y="234" width="140" height="26" rx="0" fill="url(#u01v1km_metal)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u01v1km_systemrod0" x="108.0" y="85" width="20" height="149" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="48.0" y="237" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect x="185.0" y="237" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect id="u01v1km_systempiston1" x="422.27765139462394" y="234" width="209.44469721075217" height="26" rx="0" fill="url(#u01v1km_metal)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect id="u01v1km_systemrod1" x="517.0" y="85" width="20" height="149" rx="0" fill="#9aaab4" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="422.27765139462394" y="237" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect x="628.722348605376" y="237" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
-<rect x="97" y="70" width="42" height="15" rx="2" fill="#909fa8" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="506" y="70" width="42" height="15" rx="2" fill="#909fa8" stroke="#3a4a56" stroke-width="1.2"/>
-<path id="u01v1km_load" d="M118 29 L118 69" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u01v1km_forceMarker)"/>
-<text x="140" y="49" font-size="14" fill="#c0392b" text-anchor="start">G = 3,60 kN</text>
-<path id="u01v1km_oilForce" d="M527 348 L527 262" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u01v1km_reactionMarker)"/>
-<text x="544" y="322" font-size="14" fill="#1e8449" text-anchor="start">F₂ = 8,06 kN</text>
-<line x1="48.0" y1="210" x2="48.0" y2="220" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="188.0" y1="210" x2="188.0" y2="220" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u01v1km_diameter" d="M48.0 215 L188.0 215" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u01v1km_dim)" marker-end="url(#u01v1km_dim)"/>
-<text x="118.0" y="232" font-size="11" fill="#b7600c" text-anchor="middle">dₖ = 160 mm</text>
-<text x="309" y="240" font-size="14" fill="#b7600c" text-anchor="middle">A₂ = 450 cm²</text>
-<line x1="371" y1="240" x2="434.27765139462394" y2="247" stroke="#b7600c" stroke-width="1"/>
-<text x="118" y="317" font-size="15" fill="#1565c0" text-anchor="middle" font-weight="700">p</text>
-<text x="311" y="390" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">p ≈ 179 kPa</text>
-<text x="308" y="115" font-size="12" fill="#3a4a56" text-anchor="middle">Vanjske strane klipova: pₐₜₘ</text>
-<text x="120" y="438" font-size="12" fill="#3a4a56" text-anchor="middle">Aₖ ≈ 201 cm²</text>
-<text x="520" y="438" font-size="12" fill="#3a4a56" text-anchor="middle">A₂/Aₖ ≈ 2,24</text>
-<g id="u01v1km_formulas" transform="translate(680 100)">
-<rect x="0" y="0" width="280" height="310" rx="8" fill="white" stroke="#c8d6e4" stroke-width="1" stroke-opacity="0.65" />
-<rect x="0" y="0" width="280" height="30" rx="8" fill="white" stroke="none" stroke-width="1.2"/>
-<rect x="0" y="21" width="280" height="9" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="140.0" y="21" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">Ključne jednadžbe</text>
-<text x="140.0" y="55" font-size="11" fill="#5a6a78" text-anchor="middle">Površina prvog klipa</text>
-<text x="140.0" y="79" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">Aₖ = πdₖ² / 4</text>
-<text x="140.0" y="100" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">≈ 201 cm²</text>
-<line x1="25" y1="118" x2="255" y2="118" stroke="#c8d6e4" stroke-width="1"/>
-<text x="140.0" y="133" font-size="11" fill="#5a6a78" text-anchor="middle">Pretlak ispod klipova</text>
-<text x="140.0" y="157" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">p = G / Aₖ</text>
-<text x="140.0" y="178" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">≈ 179 kPa</text>
-<line x1="25" y1="196" x2="255" y2="196" stroke="#c8d6e4" stroke-width="1"/>
-<text x="140.0" y="211" font-size="11" fill="#5a6a78" text-anchor="middle">Sila ulja na drugi klip</text>
-<text x="140.0" y="235" font-size="15" fill="#3a4a56" text-anchor="middle" font-weight="700">F₂ = pA₂</text>
-<text x="140.0" y="256" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="700">≈ 8,06 kN</text>
-<line x1="25" y1="274" x2="255" y2="274" stroke="#c8d6e4" stroke-width="1"/>
-</g>
-<rect x="680" y="422" width="280" height="35" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" />
-<text x="820" y="445" font-size="12" fill="#1e8449" text-anchor="middle">Isti tlak · veća površina → veća sila</text>
-<text x="490.0" y="478" font-size="11" fill="#3a4a56" text-anchor="middle">Crveno/zeleno: sile na označeno tijelo · Tamno: smjer pomaka · Smeđe: kote i geometrija.</text>
-<text x="490.0" y="494" font-size="10" fill="#3a4a56" text-anchor="middle">Ispuna označuje isti fluid, ne polje tlaka. Razmaci, hodovi i duljine sila nisu u istom mjerilu.</text>
-</g>
+  <title id="u01v1km_title">Opterećeni klip i tlak</title>
+  <desc id="u01v1km_desc">Povezani cilindri imaju otvoren donji spoj, jedinstvenu ispunu ulja i jednake visine tlačnih ploha. Kota d_k mjeri provrt; A2 označuje površinu čela. Crvena sila je opterećenje prvog klipa, zelena sila ulja na drugi klip.</desc>
+  <defs>
+    <pattern id="u01v1km_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u01v1km_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u01v1km_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u01v1km_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs>
+      <marker id="u01v1km_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u01v1km_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u01v1km_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u01v1km_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
+      </marker>
+    </defs>
+    <defs />
+    <path id="u01v1km_systemouter0" d="M48.0 140 V400 H631.722348605376 V140" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M48.0 140 V400 H631.722348605376 V140" fill="none" stroke="#c5cdd3" stroke-width="9" />
+    <path d="M48.0 140 V400 H631.722348605376 V140" fill="none" stroke="url(#u01v1km_hatch)" stroke-width="9" />
+    <path id="u01v1km_systemouter1" d="M188.0 140 V376 H422.27765139462394 V140" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M188.0 140 V376 H422.27765139462394 V140" fill="none" stroke="#c5cdd3" stroke-width="9" />
+    <path d="M188.0 140 V376 H422.27765139462394 V140" fill="none" stroke="url(#u01v1km_hatch)" stroke-width="9" />
+    <defs />
+    <path id="u01v1km_systemfluid" d="M48.0 260 H188.0 V376 H422.27765139462394 V260 H631.722348605376 V400 H48.0 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+    <path id="u01v1km_systemwall0" d="M48.0 140 V400 H631.722348605376 V140" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+    <path id="u01v1km_systemwall1" d="M188.0 140 V376 H422.27765139462394 V140" fill="none" stroke="#3a4a56" stroke-width="1.4" />
+    <rect id="u01v1km_systempiston0" x="48.0" y="234" width="140" height="26" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u01v1km_systemrod0" x="108.0" y="85" width="20" height="149" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="48.0" y="237" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    <rect x="185.0" y="237" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    <rect id="u01v1km_systempiston1" x="422.27765139462394" y="234" width="209.44469721075217" height="26" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect id="u01v1km_systemrod1" x="517.0" y="85" width="20" height="149" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="422.27765139462394" y="237" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    <rect x="628.722348605376" y="237" width="3" height="20" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
+    <rect x="97" y="70" width="42" height="15" rx="2" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="506" y="70" width="42" height="15" rx="2" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
+    <path id="u01v1km_load" d="M118 29 L118 69" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01v1km_forceMarker)" />
+    <text x="140" y="49" font-size="14" fill="#263746" text-anchor="start">G = 3,60 kN</text>
+    <path id="u01v1km_oilForce" d="M527 348 L527 262" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01v1km_reactionMarker)" />
+    <text x="544" y="322" font-size="14" fill="#263746" text-anchor="start">F₂ = 8,06 kN</text>
+    <line x1="48.0" y1="210" x2="48.0" y2="220" stroke="#657781" stroke-width="1.2" />
+    <line x1="188.0" y1="210" x2="188.0" y2="220" stroke="#657781" stroke-width="1.2" />
+    <path id="u01v1km_diameter" d="M48.0 215 L188.0 215" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01v1km_dim)" marker-end="url(#u01v1km_dim)" />
+    <text x="118.0" y="232" font-size="11" fill="#263746" text-anchor="middle">dₖ = 160 mm</text>
+    <text x="309" y="240" font-size="14" fill="#263746" text-anchor="middle">A₂ = 450 cm²</text>
+    <line x1="371" y1="240" x2="434.27765139462394" y2="247" stroke="#657781" stroke-width="1" />
+    <text x="118" y="317" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">p</text>
+    <text x="311" y="390" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">p ≈ 179 kPa</text>
+    <text x="308" y="115" font-size="12" fill="#263746" text-anchor="middle">Vanjske strane klipova: pₐₜₘ</text>
+    <text x="120" y="438" font-size="12" fill="#263746" text-anchor="middle">Aₖ ≈ 201 cm²</text>
+    <text x="520" y="438" font-size="12" fill="#263746" text-anchor="middle">A₂/Aₖ ≈ 2,24</text>
+    <g id="u01v1km_formulas" transform="translate(680 100)">
+      <text x="140.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Ključne jednadžbe</text>
+      <text x="140.0" y="55" font-size="11" fill="#263746" text-anchor="middle">Površina prvog klipa</text>
+      <text x="140.0" y="79" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">Aₖ = πdₖ² / 4</text>
+      <text x="140.0" y="100" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">≈ 201 cm²</text>
+      <text x="140.0" y="133" font-size="11" fill="#263746" text-anchor="middle">Pretlak ispod klipova</text>
+      <text x="140.0" y="157" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">p = G / Aₖ</text>
+      <text x="140.0" y="178" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">≈ 179 kPa</text>
+      <text x="140.0" y="211" font-size="11" fill="#263746" text-anchor="middle">Sila ulja na drugi klip</text>
+      <text x="140.0" y="235" font-size="15" fill="#263746" text-anchor="middle" font-weight="700">F₂ = pA₂</text>
+      <text x="140.0" y="256" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">≈ 8,06 kN</text>
+    </g>
+    <text x="820" y="445" font-size="12" fill="#263746" text-anchor="middle">Isti tlak · veća površina → veća sila</text>
+    <text x="490.0" y="478" font-size="11" fill="#263746" text-anchor="middle">Sile djeluju na označeno tijelo; pomaci i kote imaju zasebne oznake.</text>
+    <text x="490.0" y="494" font-size="10" fill="#263746" text-anchor="middle">Ispuna označuje isti fluid, ne polje tlaka. Razmaci, hodovi i duljine sila nisu u istom mjerilu.</text>
+  </g>
 </svg>

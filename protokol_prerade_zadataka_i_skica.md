@@ -389,305 +389,86 @@ Tipične vrijednosti `max-width`:
 
 ---
 
-### Kanonska paleta boja
-
-Ova paleta je jedina dopuštena za nove SVG-ove. Derogacije od palete moraju biti obrazložene u komentaru unutar SVG-a.
-
-#### Fluidi
-
-| Fluid | Gornji stop | Donji stop | Primjena |
-|---|---|---|---|
-| Voda / opći fluid | `#aed6f1` | `#5b9ec9` | hidrostatika, tlak, cijevi |
-| Ulje / hidraulično ulje | `#fde68a` → `#c8a000` | zlatno-žuta | klizni ležajevi, kapilarnost ulje |
-| Gorivo (dizel, benzin) | `#fde68a` | `#d4a017` | cisterne, gorivni tank |
-| Živa | `#b0b8c0` | `#808890` | manometri s živom |
-
-Gradient se uvijek definira vertikalno (`x1="0" y1="0" x2="0" y2="1"`).
-
-#### Stijenke, kućišta i čvrsti elementi
-
-| Svrha | Boja |
-|---|---|
-| Gornja boja stijenke / klipa | `#909fa8` |
-| Donja boja stijenke / klipa | `#5d6d7e` |
-| Tamni rub/okvir geometrije | `#3a4a56` |
-| Srafura (linija u patternu) | `#7a8a96` |
-
-#### Vektori i oznake
-
-| Svrha | Boja | Napomena |
-|---|---|---|
-| Sila ulaz / opterećenje / kočenje | `#c0392b` | crvena |
-| Sila izlaz / rezultat / korisna | `#1e8449` | zelena |
-| Tlak / dubina / površinski napon | `#1565c0` | plava |
-| Kota / dimenzija | `#b7600c` | smeđa |
-| Efektivno polje sila (g_eff, rotacija) | `#8e44ad` | ljubičasta |
-| Kutna brzina ω / rotacija | `#1e8449` | zelena |
-| Δh/2 razmaci (paraboloid) | `#e67e22` | narančasta |
-
-#### Header bar uvodnih figure-blokova
-
-```xml
-<linearGradient id="PREFIXhdr" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0%" stop-color="#1a2e42"/>
-  <stop offset="100%" stop-color="#1a3a52"/>
-</linearGradient>
-<rect x="0" y="0" width="SIRINA" height="48" fill="url(#PREFIXhdr)"/>
-<text x="SIRINA/2" y="22" ... fill="white" text-anchor="middle">Naslov poglavlja</text>
-<text x="SIRINA/2" y="40" ... fill="#8aaccc" text-anchor="middle">ključne riječi · poglavlja</text>
-```
-
----
-
-### Standard srafure (hatch pattern)
-
-Srafura stijenki i kućišta uvijek je 45° dijagonala, veličina 7×7 px:
-
-```xml
-<pattern id="PREFIXh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-  <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
-</pattern>
-```
-
-Srafurirani elementi (stijenka, dno, kućište):
-
-```xml
-<rect x="..." y="..." width="..." height="..." fill="url(#PREFIXh)" stroke="#3a4a56" stroke-width="1.8"/>
-```
-
----
-
-### Standard kota (dimenzijskih linija)
-
-Kote se crtaju s dvo-smjernim markerima, tik-crtama i tekstom izmaknuti od geometrije.
-
-#### Marker definicije (u `<defs>`)
-
-```xml
-<!-- Desni/gornji kraj kote -->
-<marker id="PREFIXDim" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-  <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
-</marker>
-<!-- Lijevi/donji kraj kote (auto-start-reverse) -->
-<marker id="PREFIXDimL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto-start-reverse">
-  <path d="M0,0 L0,8 L8,4 z" fill="#b7600c"/>
-</marker>
-```
-
-#### Crtanje kote (vertikalna, primjer)
-
-```xml
-<!-- Tik-crte na oba kraja -->
-<line x1="x-5" y1="y1" x2="x+1" y2="y1" stroke="#b7600c" stroke-width="1.3"/>
-<line x1="x-5" y1="y2" x2="x+1" y2="y2" stroke="#b7600c" stroke-width="1.3"/>
-<!-- Dimenzijska linija s markerima -->
-<line x1="x-3" y1="y1+2" x2="x-3" y2="y2-2"
-      stroke="#b7600c" stroke-width="1.5"
-      marker-start="url(#PREFIXDimL)" marker-end="url(#PREFIXDim)"/>
-<!-- Oznaka -->
-<text x="x-12" y="(y1+y2)/2" font-family="..." font-size="12" font-style="italic"
-      fill="#b7600c" text-anchor="end">L</text>
-```
-
-Pravila:
-- Tekst kote uvijek izvan geometrije (barem 8 px odmak od tik-crte).
-- Kote za osi X ide ispod geometrije, za os Y s lijeve ili desne strane.
-- Numerička vrijednost (npr. `1,2 m`) navodi se ispod/pored oznake ako je relevantna.
-- Decimalni separator: **zarez** (hrvatska konvencija), npr. `1,2 m`, `22,5 cm`.
-
----
-
-### Standard strelica sila i vektora
-
-#### Marker definicije
-
-```xml
-<!-- Crvena sila (ulaz, opterećenje, ubrzanje) -->
-<marker id="PREFIXaR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-  <path d="M0,0 L0,8 L10,4 z" fill="#c0392b"/>
-</marker>
-<!-- Zelena sila (rezultat, korisna) -->
-<marker id="PREFIXaG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-  <path d="M0,0 L0,8 L10,4 z" fill="#1e8449"/>
-</marker>
-<!-- Plava sila (tlak, dubina) -->
-<marker id="PREFIXaB" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-  <path d="M0,0 L0,8 L10,4 z" fill="#1565c0"/>
-</marker>
-<!-- Ljubičasta (g_eff, efektivno polje) -->
-<marker id="PREFIXaP" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-  <path d="M0,0 L0,8 L10,4 z" fill="#8e44ad"/>
-</marker>
-```
-
-Strelica sile: `stroke-width="2.5–3.0"`, linija iste boje kao marker.  
-Strelica kote: `stroke-width="1.4–1.6"`, boja `#b7600c`.
-
----
-
-### Tipografija
-
-Jedina dopuštena font-family deklaracija:
-
-```xml
-font-family="'Segoe UI',Arial,sans-serif"
-```
-
-Veličine teksta:
-
-| Svrha | font-size | Stil |
-|---|---|---|
-| Naslov panela / poglavlja | `18` | `font-weight="700"` |
-| Podpodnaslov / caption panela | `13–14` | `font-weight="700"` |
-| Oznaka varijable (italic) | `11–14` | `font-style="italic"` |
-| Jednadžba (inline) | `14–22` | `font-style="italic"` |
-| Opisni tekst / legenda | `10–11` | normalni |
-| Kota broj | `10–12` | normalni ili italic |
-
-Pravila:
-- Tekst se ne smije naslanjati na geometriju: minimalan odmak 6 px.
-- `text-anchor="middle"` za središnje naslove panela; `text-anchor="end"` za oznake s desne na lijevu stranu.
-- Za jednadžbe u SVG-u koristiti Unicode znakove: `Δ`, `α`, `τ`, `μ`, `ν`, `ρ`, `σ`, `ω`, `²`, `³`, `·`, `≈`, `≤`, `≥`.
-
----
-
-### Konstruktivni detalji po tipu prizora
-
-#### Menisk (kapilarnost)
-
-U SVG koordinatama y raste prema dolje. Za tekućinu ispod sučelja konkavni
-menisk ima sredinu niže od krajeva: za ilustrativnu kvadratnu Bézierovu
-krivulju s krajevima na istoj visini kontrolna točka mora biti **ispod**
-krajeva (veći y). Konveksni menisk ima sredinu više i kontrolnu točku iznad.
-
-```xml
-<path d="M x1,y1 Q xc,yc_dolje x2,y1" fill="none" stroke="#1565c0" stroke-width="2.2"/>
-```
-
-Ako je kontaktni kut zadan brojem, sam oblik slova U nije dovoljan. Koristi
-kružni luk ili krivulju sa stvarno provjerenim tangentama na dodiru sa
-stijenkom. Kut θ mjeri se **kroz tekućinu**, između stijenke i tangente
-međupovršine; luk i oznaku po potrebi prikaži u povećanom detalju.
-Vektori površinske sile na tekućinu dodiruju kontaktnu liniju i slijede
-tangente prema stijenci. Kapilara mora imati stvarno otvoren, uronjen ulaz;
-ne prekrivaj stijenke fluidnom zakrpom. Formirana izlazna kapljica i puna
-kapilara čine neprekinut fluid, bez dodatnog unutarnjeg meniskusa.
-
-#### Slobodna površina (nagnuta, ubrzanje)
-
-Za linearno nagnutu slobodnu površinu:
-
-```xml
-<!-- Fluid (trapez) -->
-<polygon points="x_l,y_l x_r,y_r x_r,y_dno x_l,y_dno" fill="url(#PREFIXfl)" opacity="0.88"/>
-<!-- Slobodna površina -->
-<line x1="x_l" y1="y_l" x2="x_r" y2="y_r" stroke="#1565c0" stroke-width="2.4"/>
-<!-- Mirna razina (isprekidana) -->
-<line x1="x_l" y1="y_h0" x2="x_r" y2="y_h0" stroke="#7a8a96" stroke-width="1.4" stroke-dasharray="9,6"/>
-```
-
-Mirna razina uvijek isprekidana; slobodna površina puna linija, deblja.
-
-#### Paraboloid (rotirajući cilindar)
-
-Aproximacija kubičnim Bezierom koji daje vizualno točan paraboloid:
-
-```xml
-<path d="M x_l,y_rub C x_l,y_osa HALF,y_osa HALF,y_osa C HALF,y_osa x_r,y_osa x_r,y_rub"
-      fill="none" stroke="#1565c0" stroke-width="2.8"/>
-```
-
-gdje je `HALF` horizontalna sredina cilindra, `y_osa` najniža točka (os), `y_rub` najviša točka (rub).
-
-#### Osi simetrije
-
-Vertikalna os simetrije cilindra ili simetričnih elemenata:
-
-```xml
-<line x1="x_ctr" y1="y_top" x2="x_ctr" y2="y_bot"
-      stroke="#88a" stroke-width="1.2" stroke-dasharray="5,4"/>
-```
-
----
-
-### Kutija s rezultatima (result box)
-
-Za prikaz numeričkih rezultata unutar SVG-a:
-
-```xml
-<rect x="..." y="..." width="..." height="..." rx="7"
-      fill="white" stroke="#BOJA" stroke-width="1.4"/>
-<text ... font-size="13" font-style="italic" fill="#1a2530" text-anchor="middle">formula</text>
-<text ... font-size="13" font-weight="700" fill="#c0392b" text-anchor="middle">rezultat</text>
-```
-
-Pravila:
-- Konačni numerički rezultat uvijek `fill="#c0392b"` (crvena) ili `fill="#1e8449"` (zelena) i `font-weight="700"`.
-- Rubna boja kutije odgovara tematskoj boji odjeljka (plava za tlak, smeđa za kotu, zelena za rezultat…).
-
----
-
-### Filozofija uvodnog figure-bloka poglavlja (fig-uvod-uXX)
-
-Uvodni figure-blok **mora** prikazivati tri konceptualno odvojena panela:
-
-| Panel | Sadržaj |
-|---|---|
-| Lijevo (široki) | Fizikalni model – geometrija sustava, vektori sila, kote, oznake veličina |
-| Srednji ili gornji desni | Ključne jednadžbe poglavlja u kutijama (po jedna jednadžba po kutiji) |
-| Donji desni | Primjena u strojarstvu / industriji – scena koja se **ne smije ponavljati** u riješenim primjerima |
-
-Svaki panel ima naslov (tamni tekst, `font-weight="700"`) i laganu pozadinsku boju koja razlikuje panele.  
-Cijeli SVG ima tamni header bar s naslovom poglavlja i ključnim riječima.
-
-Zabranjeno u uvodnom figure-bloku:
-- Koristiti isti vizualni motiv koji se pojavljuje u bilo kojoj drugoj figuri istog poglavlja.
-- Prikazivati samo jedan prizor bez pregleda temeljnih ideja.
-- Izostaviti header bar s oznakom poglavlja.
-
----
-
-### Pravilo o vizualnoj raznolikosti unutar poglavlja
-
-1. Svaka figura u poglavlju prikazuje zasebnu fizikalnu scenu i zasebni geometrijski prizor.
-2. Zabranjeno je reciklirati isti motiv (npr. isto vozilo, ista posuda, ista geometrija ležaja) u različitim figurama istog poglavlja.
-3. Uvodni figure-blok najosjetljiviji je: smije prikazivati isključivo scene kojih **nema** u riješenim primjerima tog poglavlja.
-
----
-
-### Što nije dopušteno u SVG skicama
-
-1. Generiranje SVG-a matplotlib/Python kodom u Quarto izvoru.
-2. Kopiranje vizualnog rasporeda iz starih matplotlib skica bez strukturne promjene geometrije.
-3. Pojava istog vizualnog motiva u više od jedne figure unutar istog poglavlja.
-4. Izostanak `<title>` i `<desc>` elemenata (obavezno za pristupačnost).
-5. Globalni (ne-prefiksani) `id` atributi koji mogu kolidirati s drugim SVG-ima na istoj HTML stranici.
-6. Decimalna točka umjesto zareza u numeričkim vrijednostima (koristiti `1,2 m`, ne `1.2 m`).
-7. Font izvan `'Segoe UI', Arial, sans-serif`.
-8. Preklapanje teksta s geometrijom ili vektorima.
-9. Kote bez tik-crta na krajnjim točkama.
-10. Strelice sila bez `<marker>` elemenata (ne koristiti samo `stroke-width` za simulaciju strelice).
-
----
-
-### Operativni postupak za pisanje novih SVG-a
-
-Za **novu** datoteku koristiti `create_file`. Za **prepisivanje** postojeće datoteke koristiti PowerShell here-string:
-
-```powershell
-$svg = @'
-<svg ...>
-  ...
-</svg>
-'@
-$svg | Set-Content "assets\print\uXX_naziv.svg" -Encoding UTF8 -NoNewline
-Write-Host "OK $((Get-Item 'assets\print\uXX_naziv.svg').Length) bytes"
-```
-
-Provjera po završetku:
-1. Veličina datoteke razumna (tipično 5–25 KB za ručno pisani SVG).
-2. `quarto render chapters/uXX_naziv.qmd` prolazi bez grešaka.
-3. Vizualni pregled u browseru: nema preklapanja teksta, kote su čitljive, boje odgovaraju paleti.
+### Zajednički tehnički vizualni sustav (rujan 2026.)
+
+Ovaj standard slijedi izričito odobrenu reviziju svih skica. Zamjenjuje raniji
+standard dekorativnih gradijenata, naslovnih traka, obojenih okvira i boje za
+svaku vrstu vektora. Dobra geometrija i smislen raspored zadržavaju se.
+Prioritet je fizikalna točnost, zatim matematička i didaktička jasnoća.
+
+Autoritativna paleta i tiskovne veličine nalaze se u
+`assets/figure-tokens.json`; provjerava ih `tools/audit_sketch_design.py`.
+
+| Uloga | Prikaz |
+| --- | --- |
+| Tekst | tamna tinta `#263746`; značenje ne ovisi o boji |
+| Kruta kontura | `#3a4a56`, puna crta; presječena krutina šrafirana |
+| Fluid | jednolična svijetla ispuna `#dcebf1`, bez obruba preko otvora |
+| Drugi fluid | `#eadfc5`, uz obveznu oznaku vrste/gustoće |
+| Živa | siva `#a9b2b9`, uz oznaku Hg ili gustoće |
+| Otopina/mješavina | prigušene nijanse iz tokena, uvijek uz tekstualnu oznaku |
+| Vektori | `#356b83`; veličina i primatelj sile određeni oznakom |
+| Kote i pomoćne crte | `#657781`, tanje od glavnih kontura i vektora |
+| Kontrolna granica | bez ispune, isprekidana, jasno različita od stijenke |
+
+Nijansa označuje materijal ili grafičku ulogu, ne neizračunato polje tlaka,
+brzine ili gustoće. Isti spojeni fluid nema promjenu boje na priključku.
+Gradijenti, sjene, rasterizirani ukrasi i lažna perspektiva ne koriste se.
+Boja nikad nije jedina razlika između uspoređenih krivulja: dodati različitu
+vrstu crte, izravnu oznaku ili oblik točke. EGL je puna, a HGL isprekidana
+crta. Granice valjanosti modela moraju ostati jasno označene.
+
+### Linije, strelice i fizički objekti
+
+- Uobičajena kontura u izvornom koordinatnom sustavu ima oko 1,4–1,8 jedinica,
+  vektori 2,2–3, kote 1,2–1,4, pomoćne crte 0,6–1. Debljina poteza koji
+  gradi stvaran provrt ili debljinu stijenke dio je geometrije i ne normalizira se.
+- Vrh strelice definira se SVG markerom, odgovara boji crte i pokazuje
+  jednoznačan smjer. Dvostrana kota ima dva vrha i pomoćne krajnje crte.
+- Sile, brzine, ubrzanja i kote imaju vlastite oznake; tlak je skalar.
+  Sila mora imati jasno naznačeno tijelo na koje djeluje.
+- Granica kontrolnog volumena zatvorena je i isprekidana. Presijeca stvarne
+  ulaze/izlaze. Ako prati granicu fluida uz stijenku, to navesti u opisu.
+  Za sustav koji uključuje krutinu izričito navesti njegov sastav.
+- Krutina ne zatvara predviđeni prolaz. Uronjen usis stvarno je otvoren i
+  odmaknut od dna; sapnica, klipni otvor i ogranci ostaju prohodni.
+- Profil brzine zadovoljava prianjanje kada ga model traži; crte profila
+  ostaju u fluidu. Strujnica, putanja čestice i vektor brzine nisu sinonimi.
+- Menisk i tangenta odgovaraju kontaktnom kutu mjerenom kroz tekućinu.
+  Nagnuta slobodna površina okomita je na efektivnu gravitaciju; paraboloid
+  rotacije slijedi zadanu jednadžbu i volumen, uz provjeru ogoljavanja dna.
+
+### Tipografija i raspored
+
+Koristiti `font-family="Arial, Liberation Sans, sans-serif"`. Tehničke oznake
+ostaju neutralne i čitljive uz serifni tekst knjige. Indekse i eksponente
+pisati SVG `tspan` elementima, decimalne vrijednosti hrvatskim zarezom.
+U tiskovnoj izvedenici oznake su 9,5 pt, a najmanji tekst, uključujući indekse,
+9 pt. Generator odvojeno skalira geometriju i tekst prema
+[pravilima ispisnih figura](docs/ispis-skica.md).
+
+Tekst ne prelazi preko linija. Povezati oznaku s njezinim presjekom ili tijelom
+položajem ili nenametljivom vodilicom. Račun može stajati pokraj scene bez
+ukrasnog okvira. Panele koristiti kad odvajaju modele, stanja ili korake;
+ne nametati tri panela svakoj uvodnoj slici. Provjerena shema smije se
+ponoviti ako ponavljanje služi učenju, a ne prikriva ponavljanje zadataka.
+
+### Provedba i provjera
+
+1. Pročitati izvorni tekst i jednadžbe; pregledati fiziku, matematiku i
+   didaktičku funkciju svakoga panela prije oblikovanja.
+2. Sačuvati stabilne ID-jeve slika. Ne mijenjati podatke, rezultate ni
+   konvencije radi estetike. Ilustrativne vrijednosti izričito označiti.
+3. Urediti kanonski SVG. Za stvaran uređaj koji nalikuje okviru napomene
+   upotrijebiti `data-mf1-role="physical"`; generator ga mora očuvati.
+4. Provjeriti logičke izreze i indekse teksta u `assets/print-layouts.json`
+   i kompozicijama; tek nakon pregleda obnoviti hash izvora.
+5. Pokrenuti `python tools/audit_sketch_design.py`. Uključuje postojeće
+   neovisne provjere stvarne geometrije; njihov prolaz ne dokazuje didaktiku.
+6. Izvedenice obnoviti s `python scripts/build_book.py --write`. Render
+   pokrenuti kroz `python scripts/build_book.py --render all`.
+7. Pregledati mrežne skice, konačni PDF i čitljivost u sivom ispisu. Pokrenuti
+   puni `python scripts/check_publication.py` te osvježiti lokalni `_site/`.
 
 ---
 

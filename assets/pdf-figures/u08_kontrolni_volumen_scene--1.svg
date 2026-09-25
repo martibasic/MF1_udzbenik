@@ -1,139 +1,111 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="447.874pt" height="39pt" viewBox="0 0 447.874 39" role="img"><title>Kontinuitet kroz suženje, difuzor i spremnik</title><defs>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u08kvs-water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u08kvs-brine" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bcd8c8"/>
-      <stop offset="100%" stop-color="#4f8a6c"/>
-    </linearGradient>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u08kvs-mix" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#b6cfdc"/>
-      <stop offset="100%" stop-color="#508fa0"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u08kvs-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs-aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b"/>
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs-aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449"/>
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs-aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0"/>
+      <path d="M0,0 L0,4 L6,2 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs-aOr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#b7600c"/>
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs-aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c"/>
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs-aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#b7600c"/>
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_0_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_0_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_0_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_0_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_0_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_0_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_0_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_0_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_1_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_1_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_1_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_1_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_1_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_1_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_1_water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_tank_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_tank_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_tank_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_tank_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_tank_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_tank_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2"/>
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>
-    <linearGradient xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_tank_water" x1="0" y1="240" x2="0" y2="306" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1"/>
-      <stop offset="100%" stop-color="#5b9ec9"/>
-    </linearGradient>
     <pattern xmlns="http://www.w3.org/2000/svg" id="u08kvs_fix_tank_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1"/>
     </pattern>
-  </defs><g font-family="Arial, Liberation Sans, sans-serif"><g transform="translate(223.937 13.5)"><text data-source-text="1" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(21, 101, 192)">Opća bilanca mase u kontrolnom volumenu</text></g><g transform="translate(223.937 28.5)"><text data-source-text="2" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(21, 101, 192)">dm<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(21, 101, 192)" baseline-shift="-2">KV</tspan>/dt = Σ ṁ<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(21, 101, 192)" baseline-shift="-2">ul</tspan> − Σ ṁ<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(21, 101, 192)" baseline-shift="-2">iz</tspan> → stacionarno: Σ ṁ<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(21, 101, 192)" baseline-shift="-2">ul</tspan> = Σ ṁ<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(21, 101, 192)" baseline-shift="-2">iz</tspan></text></g></g></svg>
+  </defs><g font-family="Arial, Liberation Sans, sans-serif"><g transform="translate(223.937 13.5)"><text data-source-text="1" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(38, 55, 70)">Opća bilanca mase u kontrolnom volumenu</text></g><g transform="translate(223.937 28.5)"><text data-source-text="2" x="0" y="0" text-anchor="middle" font-size="9.5" font-weight="600" fill="rgb(38, 55, 70)">dm<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">CV</tspan>/dt = Σ ṁ<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">ul</tspan> − Σ ṁ<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">iz</tspan> → stacionarno: Σ ṁ<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">ul</tspan> = Σ ṁ<tspan font-size="9" font-weight="700" font-style="normal" fill="rgb(38, 55, 70)" baseline-shift="-2">iz</tspan></text></g></g></svg>

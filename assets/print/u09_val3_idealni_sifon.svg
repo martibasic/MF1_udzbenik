@@ -1,85 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 500" role="img" aria-labelledby="u09v3is_title u09v3is_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-<title id="u09v3is_title">Sifon s otvorenim izlazom</title><desc id="u09v3is_desc">Voda iz velikog bazena A prolazi kroz prethodno napunjen sifon stalnog promjera i izlazi slobodnim mlazom u B iznad prihvatnog kanala. B je 3,6 m ispod A, a os vrha C 2,2 m iznad A. HGL u cijevi je 3,6 m ispod A. Promjer cijevi uvećan je za čitljivost.</desc>
-<defs>
-<linearGradient id="u09v3is_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u09v3is_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u09v3is_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u09v3is_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u09v3is_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u09v3is_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u09v3is_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="940" height="500" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<line x1="545" y1="30" x2="545" y2="474" stroke="#dce7f0" stroke-width="1" stroke-dasharray="4 5"/>
-<text x="36" y="33" font-size="15" fill="#1a2530" text-anchor="start" font-weight="700">Napunjen sifon: A → C → B</text>
-<defs><linearGradient id="u09v3is_field" gradientUnits="userSpaceOnUse" x1="0" y1="82" x2="0" y2="422"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient></defs>
-<rect x="70" y="170" width="151" height="210" rx="0" fill="url(#u09v3is_field)" stroke="none" stroke-width="1.2"/>
-<line x1="70" y1="170" x2="221" y2="170" stroke="#1565c0" stroke-width="2"/>
-<rect x="62" y="149" width="8" height="239" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="221" y="149" width="8" height="239" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="62" y="380" width="167" height="8" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<path id="u09v3is_pipewall" d="M172 325 V100 Q172 82 190 82 H352 Q370 82 370 100 V314" fill="none" stroke="#3a4a56" stroke-width="18" stroke-linecap="butt" stroke-linejoin="round"/>
-<path id="u09v3is_pipewater" d="M172 325 V100 Q172 82 190 82 H352 Q370 82 370 100 V314" fill="none" stroke="url(#u09v3is_field)" stroke-width="14" stroke-linecap="butt" stroke-linejoin="round"/>
-<circle id="u09v3is_A" cx="111" cy="170" r="3" fill="#c0392b"/>
-<text x="111" y="190" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">A</text>
-<circle id="u09v3is_C" cx="270" cy="82" r="3" fill="#c0392b"/>
-<text x="270" y="67" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">C</text>
-<circle id="u09v3is_B" cx="370" cy="314" r="3" fill="#c0392b"/>
-<text x="392" y="319" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="700">B</text>
-<path d="M172 283 L172 228" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09v3is_v)"/>
-<path d="M248 82 L307 82" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09v3is_v)"/>
-<path d="M370 206 L370 261" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u09v3is_v)"/>
-<path id="u09v3is_jet" d="M363.00000 314 L363.02410 316 L363.04778 318 L363.07108 320 L363.09398 322 L363.11651 324 L363.13868 326 L363.16050 328 L363.18197 330 L363.20312 332 L363.22393 334 L363.24444 336 L363.26463 338 L363.28453 340 L363.30414 342 L363.32346 344 L363.34251 346 L363.36129 348 L363.37981 350 L363.39807 352 L363.41609 354 L363.43386 356 L363.45139 358 L363.46869 360 L363.48577 362 L363.50262 364 L363.51926 366 L363.53569 368 L363.55191 370 L363.56793 372 L363.58375 374 L363.59938 376 L363.61482 378 L363.63008 380 L363.64516 382 L363.66006 384 L363.67479 386 L363.68934 388 L363.70374 390 L363.71796 392 L363.73203 394 L363.74595 396 L376.25405 396 L376.26797 394 L376.28204 392 L376.29626 390 L376.31066 388 L376.32521 386 L376.33994 384 L376.35484 382 L376.36992 380 L376.38518 378 L376.40062 376 L376.41625 374 L376.43207 372 L376.44809 370 L376.46431 368 L376.48074 366 L376.49738 364 L376.51423 362 L376.53131 360 L376.54861 358 L376.56614 356 L376.58391 354 L376.60193 352 L376.62019 350 L376.63871 348 L376.65749 346 L376.67654 344 L376.69586 342 L376.71547 340 L376.73537 338 L376.75556 336 L376.77607 334 L376.79688 332 L376.81803 330 L376.83950 328 L376.86132 326 L376.88349 324 L376.90602 322 L376.92892 320 L376.95222 318 L376.97590 316 L377.00000 314 Z" fill="url(#u09v3is_field)" stroke="none" stroke-width="1.8" />
-<rect x="320" y="396" width="164" height="32" rx="0" fill="url(#u09v3is_field)" stroke="none" stroke-width="1.2"/>
-<line x1="320" y1="396" x2="484" y2="396" stroke="#1565c0" stroke-width="2"/>
-<rect x="312" y="370" width="8" height="66" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="484" y="370" width="8" height="66" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<rect x="312" y="428" width="180" height="8" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2"/>
-<text x="70" y="405" font-size="12" fill="#1a2530" text-anchor="start">bazen A; vA ≈ 0</text>
-<text x="325" y="454" font-size="11" fill="#1a2530" text-anchor="start">prihvatni kanal</text>
-<text x="396" y="339" font-size="11" fill="#1565c0" text-anchor="start">pB = pₐₜₘ</text>
-<text x="396" y="357" font-size="11" fill="#1565c0" text-anchor="start">vB = v</text>
-<text x="86" y="155" font-size="11" fill="#1565c0" text-anchor="start">pₐₜₘ</text>
-<line x1="234" y1="170" x2="498" y2="170" stroke="#7a8a96" stroke-width="1" stroke-dasharray="5 4"/>
-<text x="238" y="190" font-size="11" fill="#1a2530" text-anchor="start">zA = 0</text>
-<line x1="380" y1="314" x2="498" y2="314" stroke="#b7600c" stroke-width="1"/>
-<line x1="491" y1="170" x2="501" y2="170" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="491" y1="314" x2="501" y2="314" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09v3is_dz" d="M496 170 L496 314" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v3is_dim)" marker-end="url(#u09v3is_dim)"/>
-<text x="433" y="229" font-size="12" fill="#b7600c" text-anchor="start">Δz =</text>
-<text x="431" y="247" font-size="12" fill="#b7600c" text-anchor="start">3,6 m</text>
-<line x1="44" y1="82" x2="158" y2="82" stroke="#b7600c" stroke-width="1"/>
-<line x1="44" y1="170" x2="62" y2="170" stroke="#b7600c" stroke-width="1"/>
-<line x1="40" y1="82" x2="50" y2="82" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="40" y1="170" x2="50" y2="170" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09v3is_zc" d="M45 82 L45 170" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v3is_dim)" marker-end="url(#u09v3is_dim)"/>
-<text x="57" y="108" font-size="11" fill="#b7600c" text-anchor="start">zC =</text>
-<text x="57" y="124" font-size="11" fill="#b7600c" text-anchor="start">2,2 m</text>
-<line x1="363" y1="120" x2="363" y2="130" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="377" y1="120" x2="377" y2="130" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u09v3is_diameter" d="M363 125 L377 125" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u09v3is_dimSmall)" marker-end="url(#u09v3is_dimSmall)"/>
-<text x="370.0" y="142" font-size="11" fill="#b7600c" text-anchor="middle"></text>
-<line x1="379" y1="125" x2="402" y2="115" stroke="#b7600c" stroke-width="1"/>
-<text x="407" y="113" font-size="11" fill="#b7600c" text-anchor="start">D = 80 mm</text>
-<text x="34" y="481" font-size="10" fill="#1a2530" text-anchor="start">Visine: 40 px/m; promjer cijevi uvećan. Kote se odnose na os.</text>
-<rect x="570" y="48" width="345" height="92" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<text x="582" y="68" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">1. Bernoulli A → B</text>
-<text x="582" y="91" font-size="12" fill="#1a2530" text-anchor="start">pA = pB = pₐₜₘ; vA ≈ 0, vB = v</text>
-<text x="582" y="110" font-size="12" fill="#1a2530" text-anchor="start">v²/(2g) = Δz = 3,6 m</text>
-<text x="582" y="129" font-size="12" fill="#1a2530" text-anchor="start">v = 8,40 m/s; Q = 42,2 L/s</text>
-<rect x="570" y="158" width="345" height="92" rx="7" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<text x="582" y="178" font-size="13" fill="#1565c0" text-anchor="start" font-weight="700">2. Bernoulli A → C</text>
-<text x="582" y="201" font-size="12" fill="#1a2530" text-anchor="start">pC,man/(ρg) = −zC − v²/(2g)</text>
-<text x="582" y="220" font-size="12" fill="#1a2530" text-anchor="start">= −2,2 − 3,6 = −5,8 m</text>
-<text x="582" y="239" font-size="12" fill="#1a2530" text-anchor="start">HGLC = 2,2 − 5,8 = −3,6 m</text>
-<rect x="570" y="268" width="345" height="92" rx="7" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.65" />
-<text x="582" y="288" font-size="13" fill="#1e8449" text-anchor="start" font-weight="700">3. Apsolutna tlačna visina</text>
-<text x="582" y="311" font-size="12" fill="#1a2530" text-anchor="start">pC,abs/(ρg) = 10,2 − 5,8 = 4,4 m</text>
-<text x="582" y="330" font-size="12" fill="#1a2530" text-anchor="start">pC,abs = 43,2 kPa</text>
-<text x="582" y="349" font-size="12" fill="#1a2530" text-anchor="start">Rezerva tlačne visine: 4,15 m</text>
-<text x="585" y="394" font-size="11" fill="#1a2530" text-anchor="start">Pozitivna razlika vrijedi u idealnom modelu.</text>
-<text x="585" y="413" font-size="11" fill="#1a2530" text-anchor="start">Gubitci i prolazne pojave traže zasebnu provjeru.</text>
-<text x="585" y="453" font-size="12" fill="#1565c0" text-anchor="start">B je otvoreni izlaz, s nezanemarivom brzinom.</text>
-</g>
+  <title id="u09v3is_title">Sifon s otvorenim izlazom</title>
+  <desc id="u09v3is_desc">Voda iz velikog bazena A prolazi kroz prethodno napunjen sifon stalnog promjera i izlazi slobodnim mlazom u B iznad prihvatnog kanala. B je 3,6 m ispod A, a os vrha C 2,2 m iznad A. HGL u cijevi je 3,6 m ispod A. Promjer cijevi uvećan je za čitljivost.</desc>
+  <defs>
+    <pattern id="u09v3is_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u09v3is_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u09v3is_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u09v3is_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#657781" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <text x="36" y="33" font-size="15" fill="#263746" text-anchor="start" font-weight="700">Napunjen sifon: A → C → B</text>
+    <defs />
+    <rect x="70" y="170" width="151" height="210" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <line x1="70" y1="170" x2="221" y2="170" stroke="#356b83" stroke-width="2" />
+    <rect x="62" y="149" width="8" height="239" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="221" y="149" width="8" height="239" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="62" y="380" width="167" height="8" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <path id="u09v3is_pipewall" d="M172 325 V100 Q172 82 190 82 H352 Q370 82 370 100 V314" fill="none" stroke="#3a4a56" stroke-width="18" stroke-linecap="butt" stroke-linejoin="round" />
+    <path id="u09v3is_pipewater" d="M172 325 V100 Q172 82 190 82 H352 Q370 82 370 100 V314" fill="none" stroke="#dcebf1" stroke-width="14" stroke-linecap="butt" stroke-linejoin="round" />
+    <circle id="u09v3is_A" cx="111" cy="170" r="3" fill="#356b83" />
+    <text x="111" y="190" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">A</text>
+    <circle id="u09v3is_C" cx="270" cy="82" r="3" fill="#356b83" />
+    <text x="270" y="67" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">C</text>
+    <circle id="u09v3is_B" cx="370" cy="314" r="3" fill="#356b83" />
+    <text x="392" y="319" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">B</text>
+    <path d="M172 283 L172 228" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09v3is_v)" />
+    <path d="M248 82 L307 82" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09v3is_v)" />
+    <path d="M370 206 L370 261" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09v3is_v)" />
+    <path id="u09v3is_jet" d="M363.00000 314 L363.02410 316 L363.04778 318 L363.07108 320 L363.09398 322 L363.11651 324 L363.13868 326 L363.16050 328 L363.18197 330 L363.20312 332 L363.22393 334 L363.24444 336 L363.26463 338 L363.28453 340 L363.30414 342 L363.32346 344 L363.34251 346 L363.36129 348 L363.37981 350 L363.39807 352 L363.41609 354 L363.43386 356 L363.45139 358 L363.46869 360 L363.48577 362 L363.50262 364 L363.51926 366 L363.53569 368 L363.55191 370 L363.56793 372 L363.58375 374 L363.59938 376 L363.61482 378 L363.63008 380 L363.64516 382 L363.66006 384 L363.67479 386 L363.68934 388 L363.70374 390 L363.71796 392 L363.73203 394 L363.74595 396 L376.25405 396 L376.26797 394 L376.28204 392 L376.29626 390 L376.31066 388 L376.32521 386 L376.33994 384 L376.35484 382 L376.36992 380 L376.38518 378 L376.40062 376 L376.41625 374 L376.43207 372 L376.44809 370 L376.46431 368 L376.48074 366 L376.49738 364 L376.51423 362 L376.53131 360 L376.54861 358 L376.56614 356 L376.58391 354 L376.60193 352 L376.62019 350 L376.63871 348 L376.65749 346 L376.67654 344 L376.69586 342 L376.71547 340 L376.73537 338 L376.75556 336 L376.77607 334 L376.79688 332 L376.81803 330 L376.83950 328 L376.86132 326 L376.88349 324 L376.90602 322 L376.92892 320 L376.95222 318 L376.97590 316 L377.00000 314 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+    <rect x="320" y="396" width="164" height="32" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <line x1="320" y1="396" x2="484" y2="396" stroke="#356b83" stroke-width="2" />
+    <rect x="312" y="370" width="8" height="66" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="484" y="370" width="8" height="66" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <rect x="312" y="428" width="180" height="8" rx="0" fill="url(#u09v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+    <text x="70" y="405" font-size="12" fill="#263746" text-anchor="start">bazen A; vA ≈ 0</text>
+    <text x="325" y="454" font-size="11" fill="#263746" text-anchor="start">prihvatni kanal</text>
+    <text x="396" y="339" font-size="11" fill="#263746" text-anchor="start">pB = pₐₜₘ</text>
+    <text x="396" y="357" font-size="11" fill="#263746" text-anchor="start">vB = v</text>
+    <text x="86" y="155" font-size="11" fill="#263746" text-anchor="start">pₐₜₘ</text>
+    <line x1="234" y1="170" x2="498" y2="170" stroke="#657781" stroke-width="1" stroke-dasharray="5 4" />
+    <text x="238" y="190" font-size="11" fill="#263746" text-anchor="start">zA = 0</text>
+    <line x1="380" y1="314" x2="498" y2="314" stroke="#657781" stroke-width="1" />
+    <line x1="491" y1="170" x2="501" y2="170" stroke="#657781" stroke-width="1.2" />
+    <line x1="491" y1="314" x2="501" y2="314" stroke="#657781" stroke-width="1.2" />
+    <path id="u09v3is_dz" d="M496 170 L496 314" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09v3is_dim)" marker-end="url(#u09v3is_dim)" />
+    <text x="433" y="229" font-size="12" fill="#263746" text-anchor="start">Δz =</text>
+    <text x="431" y="247" font-size="12" fill="#263746" text-anchor="start">3,6 m</text>
+    <line x1="44" y1="82" x2="158" y2="82" stroke="#657781" stroke-width="1" />
+    <line x1="44" y1="170" x2="62" y2="170" stroke="#657781" stroke-width="1" />
+    <line x1="40" y1="82" x2="50" y2="82" stroke="#657781" stroke-width="1.2" />
+    <line x1="40" y1="170" x2="50" y2="170" stroke="#657781" stroke-width="1.2" />
+    <path id="u09v3is_zc" d="M45 82 L45 170" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09v3is_dim)" marker-end="url(#u09v3is_dim)" />
+    <text x="57" y="108" font-size="11" fill="#263746" text-anchor="start">zC =</text>
+    <text x="57" y="124" font-size="11" fill="#263746" text-anchor="start">2,2 m</text>
+    <line x1="363" y1="120" x2="363" y2="130" stroke="#657781" stroke-width="1.2" />
+    <line x1="377" y1="120" x2="377" y2="130" stroke="#657781" stroke-width="1.2" />
+    <path id="u09v3is_diameter" d="M363 125 L377 125" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09v3is_dimSmall)" marker-end="url(#u09v3is_dimSmall)" />
+    <text x="370.0" y="142" font-size="11" fill="#263746" text-anchor="middle" />
+    <line x1="379" y1="125" x2="402" y2="115" stroke="#657781" stroke-width="1" />
+    <text x="407" y="113" font-size="11" fill="#263746" text-anchor="start">D = 80 mm</text>
+    <text x="34" y="481" font-size="10" fill="#263746" text-anchor="start">Visine: 40 px/m; promjer cijevi uvećan. Kote se odnose na os.</text>
+    <text x="582" y="68" font-size="13" fill="#263746" text-anchor="start" font-weight="700">1. Bernoulli A → B</text>
+    <text x="582" y="91" font-size="12" fill="#263746" text-anchor="start">pA = pB = pₐₜₘ; vA ≈ 0, vB = v</text>
+    <text x="582" y="110" font-size="12" fill="#263746" text-anchor="start">v²/(2g) = Δz = 3,6 m</text>
+    <text x="582" y="129" font-size="12" fill="#263746" text-anchor="start">v = 8,40 m/s; Q = 42,2 L/s</text>
+    <text x="582" y="178" font-size="13" fill="#263746" text-anchor="start" font-weight="700">2. Bernoulli A → C</text>
+    <text x="582" y="201" font-size="12" fill="#263746" text-anchor="start">pC,man/(ρg) = −zC − v²/(2g)</text>
+    <text x="582" y="220" font-size="12" fill="#263746" text-anchor="start">= −2,2 − 3,6 = −5,8 m</text>
+    <text x="582" y="239" font-size="12" fill="#263746" text-anchor="start">HGLC = 2,2 − 5,8 = −3,6 m</text>
+    <text x="582" y="288" font-size="13" fill="#263746" text-anchor="start" font-weight="700">3. Apsolutna tlačna visina</text>
+    <text x="582" y="311" font-size="12" fill="#263746" text-anchor="start">pC,abs/(ρg) = 10,2 − 5,8 = 4,4 m</text>
+    <text x="582" y="330" font-size="12" fill="#263746" text-anchor="start">pC,abs = 43,2 kPa</text>
+    <text x="582" y="349" font-size="12" fill="#263746" text-anchor="start">Rezerva tlačne visine: 4,15 m</text>
+    <text x="585" y="394" font-size="11" fill="#263746" text-anchor="start">Pozitivna razlika vrijedi u idealnom modelu.</text>
+    <text x="585" y="413" font-size="11" fill="#263746" text-anchor="start">Gubitci i prolazne pojave traže zasebnu provjeru.</text>
+    <text x="585" y="453" font-size="12" fill="#263746" text-anchor="start">B je otvoreni izlaz, s nezanemarivom brzinom.</text>
+  </g>
 </svg>

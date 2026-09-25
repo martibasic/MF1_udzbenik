@@ -2,136 +2,109 @@
   <title id="u07c2pt_title">Izolirani puni bočni tank: ravnotežni nagib</title>
   <desc id="u07c2pt_desc">Trup je kruti pravokutnik nagnut 3,94 stupnja ulijevo, dok je vanjsko more vodoravno. Unutarnji lijevi tank potpuno je pun do krutog stropa, zatvoren i nema vezu s morem. Njegova voda dodaje se masi cijelog sklopa. B leži u centroidu vanjske istisnine, a ukupno G uključuje dodanu vodu. Sile su vertikalne, ne prate nagib trupa.</desc>
   <defs>
-    <linearGradient id="u07c2pt_sea" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
-    <linearGradient id="u07c2pt_tank" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9ec8e0" />
-      <stop offset="100%" stop-color="#4d8bb6" />
-    </linearGradient>
-    <linearGradient id="u07c2pt_hull" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#909fa8" />
-      <stop offset="100%" stop-color="#5d6d7e" />
-    </linearGradient>
     <pattern id="u07c2pt_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.0" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.0" />
     </pattern>
     <marker id="u07c2pt_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#c0392b" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u07c2pt_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u07c2pt_aP" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#8e44ad" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u07c2pt_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u07c2pt_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u07c2pt_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#c0392b" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u07c2pt_fix_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1e8449" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u07c2pt_fix_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#1565c0" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u07c2pt_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u07c2pt_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u07c2pt_fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
-    <linearGradient id="u07c2pt_fix_water" x1="0" y1="326" x2="0" y2="486" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#aed6f1" />
-      <stop offset="100%" stop-color="#5b9ec9" />
-    </linearGradient>
     <pattern id="u07c2pt_fix_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
   </defs>
-  <rect x="612" y="14" width="354" height="563.0" rx="12" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="624" y="60" width="330" height="32" rx="8" fill="white" stroke="none" />
-  <rect x="624" y="84" width="330" height="8" fill="white" stroke="none" />
-  <rect x="624" y="60" width="330" height="444" rx="8" fill="none" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-  <line x1="644" y1="162" x2="934" y2="162" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="644" y1="230" x2="934" y2="230" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="644" y1="298" x2="934" y2="298" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="644" y1="382" x2="934" y2="382" stroke="#c8d6e4" stroke-width="1" transform="translate(0 11)" />
-  <line x1="644" y1="450" x2="934" y2="450" stroke="#c8d6e4" stroke-width="1" transform="translate(0 11)" />
-  <rect x="624" y="502" width="330" height="62" rx="8" fill="white" stroke="#1e8449" stroke-width="1" stroke-opacity="0.55" transform="translate(0 11)" />
-  <text x="628" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Ključne jednadžbe i rezultati</text>
-  <text x="789" y="82" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Početna ravnoteža u modelu dodane mase</text>
-  <text x="789" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Masa vode u izoliranom tanku</text>
-  <text x="789" y="132" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="628" y="42" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Ključne jednadžbe i rezultati</text>
+  <text x="789" y="82" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">Početna ravnoteža u modelu dodane mase</text>
+  <text x="789" y="112" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Masa vode u izoliranom tanku</text>
+  <text x="789" y="132" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">m</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">w</tspan> = ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan> · L<tspan baseline-shift="sub" font-size="0.7em">t</tspan>B<tspan baseline-shift="sub" font-size="0.7em">t</tspan>H<tspan baseline-shift="sub" font-size="0.7em">t</tspan>
   </text>
-  <text x="789" y="150" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0" transform="translate(0 8)">≈ 277 t</text>
-  <text x="789" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Bočni pomak težišta sustava</text>
-  <text x="789" y="200" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="789" y="150" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 8)">≈ 277 t</text>
+  <text x="789" y="180" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Bočni pomak težišta sustava</text>
+  <text x="789" y="200" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">e</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">G</tspan> = m<tspan baseline-shift="sub" font-size="0.7em">w</tspan>·e<tspan baseline-shift="sub" font-size="0.7em">t</tspan> / (m<tspan baseline-shift="sub" font-size="0.7em">b</tspan> + m<tspan baseline-shift="sub" font-size="0.7em">w</tspan>)</text>
-  <text x="789" y="218" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0" transform="translate(0 8)">≈ 0,291 m</text>
-  <text x="789" y="248" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Novi srednji gaz</text>
-  <text x="789" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530">
+  <text x="789" y="218" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 8)">≈ 0,291 m</text>
+  <text x="789" y="248" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Novi srednji gaz</text>
+  <text x="789" y="268" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">
     <tspan font-style="italic">T</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">1</tspan> = (m<tspan baseline-shift="sub" font-size="0.7em">b</tspan> + m<tspan baseline-shift="sub" font-size="0.7em">w</tspan>) / (ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan> L B)</text>
-  <text x="789" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0" transform="translate(0 8)">≈ 3,48 m   (ΔT ≈ 0,23 m)</text>
-  <text x="789" y="316" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">Metacentarska visina</text>
-  <text x="789" y="334" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530">BM = I<tspan baseline-shift="sub" font-size="0.7em">T</tspan>/V = (L B³/12)/V ≈ 5,39 m</text>
-  <text x="789" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="13" text-anchor="middle" fill="#1a2530" transform="translate(0 8)">BG = KG′ − KB ≈ 2,90 − 1,74 = 1,16 m</text>
-  <text x="789" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1e8449" transform="translate(0 11)">GM = BM − BG ≈ 4,23 m   &gt; 0 ✓</text>
-  <text x="789" y="400" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78" transform="translate(0 11)">Ravnotežni kut nagiba</text>
-  <text x="789" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530" transform="translate(0 11)">tan θ = e<tspan baseline-shift="sub" font-size="0.7em">G</tspan>/GM = 0,291/4,23</text>
-  <text x="789" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#8e44ad" transform="translate(0 11) translate(0 8)">θ ≈ 3,94°</text>
-  <text x="789" y="468" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78" transform="translate(0 11)">GM &gt; 0 daje samo početnu stabilnost</text>
-  <text x="789" y="482" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#5a6a78" transform="translate(0 11)">idealiziranoga trupa; nije provjera oštećene stabilnosti.</text>
-  <text x="789" y="520" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78" transform="translate(0 11)">REZULTATI</text>
-  <text x="688" y="540" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c0392b" transform="translate(0 11)">
+  <text x="789" y="286" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 8)">≈ 3,48 m   (ΔT ≈ 0,23 m)</text>
+  <text x="789" y="316" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">Metacentarska visina</text>
+  <text x="789" y="334" font-family="Arial, Liberation Sans, sans-serif" font-size="13" text-anchor="middle" fill="#263746">BM = I<tspan baseline-shift="sub" font-size="0.7em">T</tspan>/V = (L B³/12)/V ≈ 5,39 m</text>
+  <text x="789" y="352" font-family="Arial, Liberation Sans, sans-serif" font-size="13" text-anchor="middle" fill="#263746" transform="translate(0 8)">BG = KG′ − KB ≈ 2,90 − 1,74 = 1,16 m</text>
+  <text x="789" y="370" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 11)">GM = BM − BG ≈ 4,23 m   &gt; 0 ✓</text>
+  <text x="789" y="400" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746" transform="translate(0 11)">Ravnotežni kut nagiba</text>
+  <text x="789" y="420" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 11)">tan θ = e<tspan baseline-shift="sub" font-size="0.7em">G</tspan>/GM = 0,291/4,23</text>
+  <text x="789" y="438" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 11) translate(0 8)">θ ≈ 3,94°</text>
+  <text x="789" y="468" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746" transform="translate(0 11)">GM &gt; 0 daje samo početnu stabilnost</text>
+  <text x="789" y="482" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746" transform="translate(0 11)">idealiziranoga trupa; nije provjera oštećene stabilnosti.</text>
+  <text x="789" y="520" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 11)">REZULTATI</text>
+  <text x="688" y="540" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 11)">
     <tspan font-style="italic">e</tspan>
     <tspan baseline-shift="sub" font-size="0.7em">G</tspan> ≈ 0,29 m</text>
-  <text x="789" y="540" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1565c0" transform="translate(0 11)">ΔT ≈ 0,23 m</text>
-  <text x="890" y="540" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449" transform="translate(0 11)">GM ≈ 4,23 m</text>
-  <text x="789" y="558" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#8e44ad" transform="translate(0 11)">θ ≈ 3,94°   (geom. dodir ruba pri ≈ 37,1°)</text>
-  <g font-family="'Segoe UI',Arial,sans-serif" />
-  <rect x="14" y="14" width="586" height="563.0" rx="12" fill="white" stroke="#d4e3f0" stroke-width="1" stroke-opacity="0.65" />
+  <text x="789" y="540" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 11)">ΔT ≈ 0,23 m</text>
+  <text x="890" y="540" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 11)">GM ≈ 4,23 m</text>
+  <text x="789" y="558" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746" transform="translate(0 11)">θ ≈ 3,94°   (geom. dodir ruba pri ≈ 37,1°)</text>
+  <g font-family="Arial, Liberation Sans, sans-serif" />
   <g id="u07c2pt_fix_scene">
-    <rect x="40" y="326" width="542" height="160" fill="url(#u07c2pt_fix_water)" stroke="none" stroke-width="1.2" />
-    <line x1="40" y1="326" x2="582" y2="326" stroke="#1565c0" stroke-width="2" id="u07c2pt_fix_free-surface" />
-    <polygon points="107.978556,433.793409 512.021444,405.966347 497.180344,190.476807 93.137457,218.303869" fill="#e9eef2" stroke="#3a4a56" stroke-width="2" id="u07c2pt_fix_hull" />
-    <polygon points="108.354772,433.361539 511.589574,405.590131 496.804128,190.908677 93.569327,218.680085" fill="white" stroke="#909fa8" stroke-width="0.8" />
-    <circle cx="296.7632623475194" cy="373.2836163954631" r="3.7" fill="#1e8449" id="u07c2pt_fix_buoyancy-center" />
-    <text x="306.7632623475194" y="377.2836163954631" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="start">B</text>
-    <polygon points="107.978556,433.793409 269.595711,422.662584 264.030299,341.854007 102.413144,352.984831" fill="url(#u07c2pt_fix_water)" stroke="#3a4a56" stroke-width="3" id="u07c2pt_fix_sealed-tank" />
-    <circle cx="186.00442770705575" cy="387.82370778866925" r="3" fill="#1565c0" />
-    <text x="186.00442770705575" y="360.82370778866925" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">potpuno pun tank</text>
-    <text x="186.00442770705575" y="376.82370778866925" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">bez slobodne površine</text>
-    <circle cx="296.770930299372" cy="342.2260860734158" r="3.7" fill="#c0392b" id="u07c2pt_fix_mass-center" />
-    <text x="306.770930299372" y="338.2260860734158" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#c0392b" text-anchor="start">G</text>
-    <line x1="296.770930299372" y1="299.2260860734158" x2="296.770930299372" y2="342.2260860734158" stroke="#c0392b" stroke-width="2.2" marker-end="url(#u07c2pt_fix_force)" />
-    <line x1="296.7632623475194" y1="416.2836163954631" x2="296.7632623475194" y2="373.2836163954631" stroke="#1e8449" stroke-width="2.2" marker-end="url(#u07c2pt_fix_green)" />
-    <text x="309.7632623475194" y="402.2836163954631" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1e8449" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan>
+    <rect x="40" y="326" width="542" height="160" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <line x1="40" y1="326" x2="582" y2="326" stroke="#356b83" stroke-width="2" id="u07c2pt_fix_free-surface" />
+    <polygon points="107.978556,433.793409 512.021444,405.966347 497.180344,190.476807 93.137457,218.303869" fill="#dcebf1" stroke="#3a4a56" stroke-width="2" id="u07c2pt_fix_hull" />
+    <polygon points="108.354772,433.361539 511.589574,405.590131 496.804128,190.908677 93.569327,218.680085" fill="#ffffff" stroke="#3a4a56" stroke-width="0.8" />
+    <circle cx="296.7632623475194" cy="373.2836163954631" r="3.7" fill="#356b83" id="u07c2pt_fix_buoyancy-center" />
+    <text x="306.7632623475194" y="377.2836163954631" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">B</text>
+    <polygon points="107.978556,433.793409 269.595711,422.662584 264.030299,341.854007 102.413144,352.984831" fill="#dcebf1" stroke="#3a4a56" stroke-width="3" id="u07c2pt_fix_sealed-tank" />
+    <circle cx="186.00442770705575" cy="387.82370778866925" r="3" fill="#356b83" />
+    <text x="186.00442770705575" y="360.82370778866925" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">potpuno pun tank</text>
+    <text x="186.00442770705575" y="376.82370778866925" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">bez slobodne površine</text>
+    <circle cx="296.770930299372" cy="342.2260860734158" r="3.7" fill="#356b83" id="u07c2pt_fix_mass-center" />
+    <text x="306.770930299372" y="338.2260860734158" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">G</text>
+    <line x1="296.770930299372" y1="299.2260860734158" x2="296.770930299372" y2="342.2260860734158" stroke="#356b83" stroke-width="2.2" marker-end="url(#u07c2pt_fix_force)" />
+    <line x1="296.7632623475194" y1="416.2836163954631" x2="296.7632623475194" y2="373.2836163954631" stroke="#356b83" stroke-width="2.2" marker-end="url(#u07c2pt_fix_green)" />
+    <text x="309.7632623475194" y="402.2836163954631" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan>
     </text>
-    <line x1="310.0" y1="419.8798780487805" x2="295.1589005266077" y2="204.39033824134373" stroke="#7a8a96" stroke-width="0.8" stroke-dasharray="4,4" />
-    <line x1="109.83369386470207" y1="460.72960128101533" x2="513.8765810036459" y2="432.9025397684048" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07c2pt_fix_dimL)" marker-end="url(#u07c2pt_fix_dim)" />
-    <text x="311.855137434174" y="464.8160705247101" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">B = 15 m</text>
-    <line x1="91.83886075321388" y1="199.44853426449833" x2="253.45601560879146" y2="188.3177096594541" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u07c2pt_fix_dimL)" marker-end="url(#u07c2pt_fix_dim)" />
-    <text x="172.64743818100266" y="211.8831219619762" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="middle">B<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 6 m</text>
-    <text x="300" y="48" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#3a4a56" text-anchor="middle" font-weight="700">Izolirani puni tank; nagnut trup, mirno more</text>
-    <text x="305" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">L = 80 m; L<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 15 m; H = 8 m; H<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 3 m</text>
-    <text x="300" y="121" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">θ ≈ 3,94° ulijevo; e<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 4,5 m u koordinatama trupa</text>
-    <text x="318" y="539" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">Vanjska ovojnica i strop tanka nepropusni su.</text>
-    <text x="318" y="558" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="middle">B: centar vanjske istisnine; G uključuje vodu u tanku.</text>
+    <line x1="310.0" y1="419.8798780487805" x2="295.1589005266077" y2="204.39033824134373" stroke="#657781" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="109.83369386470207" y1="460.72960128101533" x2="513.8765810036459" y2="432.9025397684048" stroke="#657781" stroke-width="1.2" marker-start="url(#u07c2pt_fix_dimL)" marker-end="url(#u07c2pt_fix_dim)" />
+    <text x="311.855137434174" y="464.8160705247101" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">B = 15 m</text>
+    <line x1="91.83886075321388" y1="199.44853426449833" x2="253.45601560879146" y2="188.3177096594541" stroke="#657781" stroke-width="1.2" marker-start="url(#u07c2pt_fix_dimL)" marker-end="url(#u07c2pt_fix_dim)" />
+    <text x="172.64743818100266" y="211.8831219619762" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">B<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 6 m</text>
+    <text x="300" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Izolirani puni tank; nagnut trup, mirno more</text>
+    <text x="305" y="92" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">L = 80 m; L<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 15 m; H = 8 m; H<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 3 m</text>
+    <text x="300" y="121" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">θ ≈ 3,94° ulijevo; e<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 4,5 m u koordinatama trupa</text>
+    <text x="318" y="539" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Vanjska ovojnica i strop tanka nepropusni su.</text>
+    <text x="318" y="558" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">B: centar vanjske istisnine; G uključuje vodu u tanku.</text>
   </g>
 </svg>

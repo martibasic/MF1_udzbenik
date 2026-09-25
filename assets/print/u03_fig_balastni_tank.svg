@@ -2,80 +2,61 @@
   <title id="u03fbt_title">Balastni tank u trupu broda - vanjska morska voda i unutarnja balastna voda</title>
   <desc id="u03fbt_desc">Tank dijeli lijevu oplatu i dno s vanjskim trupom: more izravno kvasi vanjsku stranu prozora i dna, a balast unutarnju. Tlačne sile na dno su okomite: izvana prema gore, iznutra prema dolje. Odzračnik je otvoren iznad palube. Vertikalno mjerilo je 36 jedinica po metru; more y80, voda u punom tanku y206, prozor y314, dno y386.</desc>
   <defs>
-    <linearGradient id="u03fbt_more" x1="0" y1="80" x2="0" y2="486" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#9ecadf" />
-      <stop offset="100%" stop-color="#3e7fa0" />
-    </linearGradient>
-    <linearGradient id="u03fbt_balast" x1="0" y1="206" x2="0" y2="386" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#cfe6f3" />
-      <stop offset="100%" stop-color="#7fb0cd" />
-    </linearGradient>
-    <linearGradient id="u03fbt_hull" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7a8a96" />
-      <stop offset="100%" stop-color="#3a4a56" />
-    </linearGradient>
     <pattern id="u03fbt_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="7" height="7" fill="#cfd6dc" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+      <rect width="7" height="7" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u03fbt_aB" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#1565c0" />
+      <path d="M0,0 L0,4 L6,2 z" fill="#356b83" />
     </marker>
     <marker id="u03fbt_aBL" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#3d8bd4" />
+      <path d="M0,0 L0,4 L6,2 z" fill="#356b83" />
     </marker>
     <marker id="u03fbt_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u03fbt_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
     </marker>
     <marker id="u03bal_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
     <marker id="u03bal_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#b7600c" stroke="none" stroke-width="1.2" />
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
   </defs>
-  <rect x="630" y="40" width="320" height="380" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-  <rect x="630" y="40" width="320" height="32" rx="10" fill="white" stroke="none" />
-  <rect x="630" y="64" width="320" height="8" fill="white" stroke="none" />
-  <line x1="650" y1="166" x2="930" y2="166" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="650" y1="244" x2="930" y2="244" stroke="#c8d6e4" stroke-width="1" />
-  <line x1="650" y1="324" x2="930" y2="324" stroke="#c8d6e4" stroke-width="1" />
-  <rect x="630" y="432" width="320" height="94" rx="8" fill="white" stroke="#c0392b" stroke-width="1" stroke-opacity="0.65" />
-  <text x="790" y="62" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">Hidrostatika - ključne jednadžbe</text>
-  <text x="790" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">1. Vanjski tlak na dnu tanka</text>
-  <text x="790" y="114" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">ext,dno</tspan> = ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan> · g · T<tspan baseline-shift="sub" font-size="0.7em">g</tspan>
+  <text x="790" y="62" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">Hidrostatika - ključne jednadžbe</text>
+  <text x="790" y="92" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">1. Vanjski tlak na dnu tanka</text>
+  <text x="790" y="114" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">p<tspan baseline-shift="sub" font-size="0.7em">ext,dno</tspan> = ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan> · g · T<tspan baseline-shift="sub" font-size="0.7em">g</tspan>
   </text>
-  <text x="790" y="134" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#5a6a78">= 1025 · 9,81 · 8,5</text>
-  <text x="790" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 85,5 kPa</text>
-  <text x="790" y="186" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">2. Unutarnji tlak (stanje A, pun)</text>
-  <text x="790" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">p<tspan baseline-shift="sub" font-size="0.7em">int,dno</tspan>
+  <text x="790" y="134" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" text-anchor="middle" fill="#263746">= 1025 · 9,81 · 8,5</text>
+  <text x="790" y="152" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">≈ 85,5 kPa</text>
+  <text x="790" y="186" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">2. Unutarnji tlak (stanje A, pun)</text>
+  <text x="790" y="208" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">p<tspan baseline-shift="sub" font-size="0.7em">int,dno</tspan>
     <tspan baseline-shift="super" font-size="0.7em">A</tspan> = ρ<tspan baseline-shift="sub" font-size="0.7em">b</tspan> · g · H<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 1000 · 9,81 · 5,0</text>
-  <text x="790" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#0d47a1">≈ 49,1 kPa</text>
-  <text x="790" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">3. Neto tlak na dno (vani &gt; unutra → prema unutra)</text>
-  <text x="790" y="286" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">Δp<tspan baseline-shift="sub" font-size="0.7em">dno</tspan>
+  <text x="790" y="228" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">≈ 49,1 kPa</text>
+  <text x="790" y="264" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">3. Neto tlak na dno (vani &gt; unutra → prema unutra)</text>
+  <text x="790" y="286" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">Δp<tspan baseline-shift="sub" font-size="0.7em">dno</tspan>
     <tspan baseline-shift="super" font-size="0.7em">A</tspan> = 85,5 − 49,1 ≈ 36,4 kPa</text>
-  <text x="790" y="308" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">Δp<tspan baseline-shift="sub" font-size="0.7em">dno</tspan>
+  <text x="790" y="308" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">Δp<tspan baseline-shift="sub" font-size="0.7em">dno</tspan>
     <tspan baseline-shift="super" font-size="0.7em">B</tspan> = 85,5 − 0 ≈ 85,5 kPa</text>
-  <text x="790" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">4. Neto tlak na prozor (stanje A)</text>
-  <text x="790" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1a2530">Δp<tspan baseline-shift="sub" font-size="0.7em">proz</tspan>
+  <text x="790" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">4. Neto tlak na prozor (stanje A)</text>
+  <text x="790" y="366" font-family="Arial, Liberation Sans, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" fill="#263746">Δp<tspan baseline-shift="sub" font-size="0.7em">proz</tspan>
     <tspan baseline-shift="super" font-size="0.7em">A</tspan> = ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan>g(T<tspan baseline-shift="sub" font-size="0.7em">g</tspan>−h<tspan baseline-shift="sub" font-size="0.7em">p</tspan>) − ρ<tspan baseline-shift="sub" font-size="0.7em">b</tspan>g(H<tspan baseline-shift="sub" font-size="0.7em">t</tspan>−h<tspan baseline-shift="sub" font-size="0.7em">p</tspan>)</text>
-  <text x="790" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#5a6a78">≈ 65,36 − 29,43</text>
-  <text x="790" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1565c0">≈ 35,9 kPa</text>
-  <text x="790" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#5a6a78">REZULTATI - neto tlak na stijenku</text>
-  <text x="708" y="472" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">stanje A, dno</text>
-  <text x="708" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">36,4 kPa ↑</text>
-  <text x="872" y="472" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">stanje B, dno</text>
-  <text x="872" y="490" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b">85,5 kPa ↑</text>
-  <text x="790" y="514" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#5a6a78">stanje A, prozor: <tspan font-weight="700" fill="#c0392b">35,9 kPa →</tspan>   (smjer: prema unutra)</text>
-  <g font-family="'Segoe UI',Arial,sans-serif">
-    <rect x="80" y="80" width="528" height="406" fill="url(#u03fbt_more)" stroke="none" stroke-width="1.2" />
-    <rect x="200" y="40" width="320" height="346" fill="#eef2f5" stroke="none" stroke-width="1.2" />
-    <line x1="80" y1="80" x2="200" y2="80" stroke="#1565c0" stroke-width="2" />
-    <line x1="520" y1="80" x2="608" y2="80" stroke="#1565c0" stroke-width="2" />
-    <rect x="210" y="206" width="230" height="180" fill="url(#u03fbt_balast)" stroke="none" stroke-width="1.2" />
+  <text x="790" y="386" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" text-anchor="middle" fill="#263746">≈ 65,36 − 29,43</text>
+  <text x="790" y="404" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">≈ 35,9 kPa</text>
+  <text x="790" y="450" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#263746">REZULTATI - neto tlak na stijenku</text>
+  <text x="708" y="472" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">stanje A, dno</text>
+  <text x="708" y="490" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">36,4 kPa ↑</text>
+  <text x="872" y="472" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">stanje B, dno</text>
+  <text x="872" y="490" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">85,5 kPa ↑</text>
+  <text x="790" y="514" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">stanje A, prozor: <tspan font-weight="700" fill="#263746">35,9 kPa →</tspan>   (smjer: prema unutra)</text>
+  <g font-family="Arial, Liberation Sans, sans-serif">
+    <rect x="80" y="80" width="528" height="406" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <rect x="200" y="40" width="320" height="346" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+    <line x1="80" y1="80" x2="200" y2="80" stroke="#356b83" stroke-width="2" />
+    <line x1="520" y1="80" x2="608" y2="80" stroke="#356b83" stroke-width="2" />
+    <rect x="210" y="206" width="230" height="180" fill="#dcebf1" stroke="none" stroke-width="1.2" />
     <rect x="200" y="40" width="10" height="264" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="200" y="324" width="10" height="62" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="510" y="40" width="10" height="356" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -87,64 +68,61 @@
     <rect x="338" y="198" width="102" height="8" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="312" y="23" width="6" height="183" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="332" y="23" width="6" height="183" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-    <rect x="318" y="23" width="14" height="183" fill="white" stroke="none" stroke-width="1.2" />
-    <line x1="318" y1="206" x2="332" y2="206" stroke="#1565c0" stroke-width="2" />
-    <rect x="200" y="304" width="10" height="20" fill="#aed6f1" stroke="#1565c0" stroke-width="1.4" />
-    <text x="365" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">paluba broda</text>
-    <text x="134" y="67" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">razina mora</text>
-    <text x="325" y="16" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
+    <rect x="318" y="23" width="14" height="183" fill="#ffffff" stroke="none" stroke-width="1.2" />
+    <line x1="318" y1="206" x2="332" y2="206" stroke="#356b83" stroke-width="2" />
+    <rect x="200" y="304" width="10" height="20" fill="#dcebf1" stroke="#356b83" stroke-width="1.4" />
+    <text x="365" y="33" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">paluba broda</text>
+    <text x="134" y="67" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">razina mora</text>
+    <text x="325" y="16" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
     </text>
-    <text x="401" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="middle">otvoren odzračnik</text>
+    <text x="401" y="108" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">otvoren odzračnik</text>
     <line x1="348" y1="105" x2="334" y2="105" stroke="#3a4a56" stroke-width="0.8" />
-    <text x="348" y="252" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1565c0" text-anchor="middle">balastna voda</text>
-    <text x="348" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">b</tspan> = 1000 kg/m³</text>
-    <text x="137" y="223" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">morska voda</text>
-    <text x="137" y="239" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1565c0" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 1025 kg/m³</text>
-    <line x1="161" y1="314" x2="197" y2="314" stroke="#1565c0" stroke-width="2.2" marker-end="url(#u03fbt_aB)" />
-    <line x1="250" y1="314" x2="213" y2="314" stroke="#3d8bd4" stroke-width="2.2" marker-end="url(#u03fbt_aBL)" />
-    <rect x="72" y="269" width="105" height="36" fill="white" stroke="#1565c0" stroke-width="0.8" rx="4" />
-    <text x="124" y="282" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">ext,proz</tspan>
+    <text x="348" y="252" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">balastna voda</text>
+    <text x="348" y="270" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">b</tspan> = 1000 kg/m³</text>
+    <text x="137" y="223" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">morska voda</text>
+    <text x="137" y="239" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 1025 kg/m³</text>
+    <line x1="161" y1="314" x2="197" y2="314" stroke="#356b83" stroke-width="2.2" marker-end="url(#u03fbt_aB)" />
+    <line x1="250" y1="314" x2="213" y2="314" stroke="#356b83" stroke-width="2.2" marker-end="url(#u03fbt_aBL)" />
+    <text x="124" y="282" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">ext,proz</tspan>
     </text>
-    <text x="124" y="301" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">65,36 kPa</text>
-    <rect x="255" y="289" width="95" height="38" fill="white" stroke="#3d8bd4" stroke-width="0.8" rx="4" />
-    <text x="303" y="302" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">int,proz</tspan>
+    <text x="124" y="301" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">65,36 kPa</text>
+    <text x="303" y="302" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">int,proz</tspan>
     </text>
-    <text x="303" y="322" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">29,43 kPa</text>
-    <text x="219" y="293" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56" text-anchor="start">prozor</text>
-    <line x1="280" y1="445" x2="280" y2="399" stroke="#1565c0" stroke-width="2.4" marker-end="url(#u03fbt_aB)" />
-    <line x1="320" y1="353" x2="320" y2="383" stroke="#3d8bd4" stroke-width="2.4" marker-end="url(#u03fbt_aBL)" />
-    <text x="378" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">int,dno</tspan>
+    <text x="303" y="322" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">29,43 kPa</text>
+    <text x="219" y="293" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="start">prozor</text>
+    <line x1="280" y1="445" x2="280" y2="399" stroke="#356b83" stroke-width="2.4" marker-end="url(#u03fbt_aB)" />
+    <line x1="320" y1="353" x2="320" y2="383" stroke="#356b83" stroke-width="2.4" marker-end="url(#u03fbt_aBL)" />
+    <text x="378" y="356" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">int,dno</tspan>
     </text>
-    <text x="378" y="373" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">49,05 kPa</text>
-    <text x="279" y="462" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">ext,dno</tspan> = 85,47 kPa</text>
-    <text x="433" y="433" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c0392b" text-anchor="middle">neto na dno: prema gore</text>
-    <line x1="42" y1="80" x2="80" y2="80" stroke="#b7600c" stroke-width="0.8" stroke-dasharray="4,3" />
-    <line x1="42" y1="386" x2="200" y2="386" stroke="#b7600c" stroke-width="0.8" stroke-dasharray="4,3" />
-    <line x1="35" y1="80" x2="45" y2="80" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="35" y1="386" x2="45" y2="386" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="40" y1="80" x2="40" y2="386" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" />
-    <text x="13" y="211" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">T<tspan baseline-shift="sub" font-size="0.7em">g</tspan>
+    <text x="378" y="373" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">49,05 kPa</text>
+    <text x="279" y="462" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">ext,dno</tspan> = 85,47 kPa</text>
+    <text x="433" y="433" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">neto na dno: prema gore</text>
+    <line x1="42" y1="80" x2="80" y2="80" stroke="#657781" stroke-width="0.8" stroke-dasharray="4,3" />
+    <line x1="42" y1="386" x2="200" y2="386" stroke="#657781" stroke-width="0.8" stroke-dasharray="4,3" />
+    <line x1="35" y1="80" x2="45" y2="80" stroke="#657781" stroke-width="0.8" />
+    <line x1="35" y1="386" x2="45" y2="386" stroke="#657781" stroke-width="0.8" />
+    <line x1="40" y1="80" x2="40" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" />
+    <text x="13" y="211" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">T<tspan baseline-shift="sub" font-size="0.7em">g</tspan>
     </text>
-    <text x="27" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="middle">8,5 m</text>
-    <line x1="450" y1="206" x2="490" y2="206" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="450" y1="386" x2="490" y2="386" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="475" y1="206" x2="485" y2="206" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="475" y1="386" x2="485" y2="386" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="480" y1="206" x2="480" y2="386" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" />
-    <text x="490" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">H<tspan baseline-shift="sub" font-size="0.7em">t</tspan>
+    <text x="27" y="228" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">8,5 m</text>
+    <line x1="450" y1="206" x2="490" y2="206" stroke="#657781" stroke-width="0.8" />
+    <line x1="450" y1="386" x2="490" y2="386" stroke="#657781" stroke-width="0.8" />
+    <line x1="475" y1="206" x2="485" y2="206" stroke="#657781" stroke-width="0.8" />
+    <line x1="475" y1="386" x2="485" y2="386" stroke="#657781" stroke-width="0.8" />
+    <line x1="480" y1="206" x2="480" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" />
+    <text x="490" y="284" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">H<tspan baseline-shift="sub" font-size="0.7em">t</tspan>
     </text>
-    <text x="490" y="301" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="start">5,0 m</text>
-    <line x1="520" y1="314" x2="571" y2="314" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="520" y1="386" x2="571" y2="386" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="560" y1="314" x2="570" y2="314" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="560" y1="386" x2="570" y2="386" stroke="#b7600c" stroke-width="0.8" />
-    <line x1="565" y1="314" x2="565" y2="386" stroke="#b7600c" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" />
-    <text x="577" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#b7600c" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">p</tspan>
+    <text x="490" y="301" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="start">5,0 m</text>
+    <line x1="520" y1="314" x2="571" y2="314" stroke="#657781" stroke-width="0.8" />
+    <line x1="520" y1="386" x2="571" y2="386" stroke="#657781" stroke-width="0.8" />
+    <line x1="560" y1="314" x2="570" y2="314" stroke="#657781" stroke-width="0.8" />
+    <line x1="560" y1="386" x2="570" y2="386" stroke="#657781" stroke-width="0.8" />
+    <line x1="565" y1="314" x2="565" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" />
+    <text x="577" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">p</tspan>
     </text>
-    <text x="579" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#b7600c" text-anchor="start">2,0 m</text>
-    <rect x="22" y="494" width="575" height="58" fill="white" stroke="#d4e3f0" stroke-width="1" rx="6" stroke-opacity="0.65" />
-    <text x="35" y="510" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#3a4a56" text-anchor="start">Stanje A: tank pun; stanje B: tank prazan, p<tspan baseline-shift="sub" font-size="0.7em">int,M</tspan> = 0.</text>
-    <text x="35" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#3a4a56" text-anchor="start">Tlačne sile djeluju na zajedničku oplatu; more i balast ostaju odvojeni.</text>
-    <text x="35" y="544" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#3a4a56" text-anchor="start">Debljine stijenki su shematske; kote određuju računske razine.</text>
+    <text x="579" y="360" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="start">2,0 m</text>
+    <text x="35" y="510" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Stanje A: tank pun; stanje B: tank prazan, p<tspan baseline-shift="sub" font-size="0.7em">int,M</tspan> = 0.</text>
+    <text x="35" y="528" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="start">Tlačne sile djeluju na zajedničku oplatu; more i balast ostaju odvojeni.</text>
+    <text x="35" y="544" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start">Debljine stijenki su shematske; kote određuju računske razine.</text>
   </g>
 </svg>

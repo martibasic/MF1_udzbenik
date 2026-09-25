@@ -1,78 +1,75 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="u14ball_title u14ball_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
-<title id="u14ball_title">Otpor kugle i jasno zadana korelacija</title><desc id="u14ball_desc">Kugla promjera dvadeset milimetara u zraku trideset metara u sekundi. Sila otpora usmjerena je kao dolazni tok. Desni logaritamski graf prikazuje korelaciju iz bilježnice do Reynoldsova broja dvjesto tisuća i zaseban zadani koeficijent 0,45 pri četrdeset tisuća.</desc>
-<defs>
-<linearGradient id="u14ball_water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aed6f1"/><stop offset="100%" stop-color="#5b9ec9"/></linearGradient>
-<linearGradient id="u14ball_oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#c8a000"/></linearGradient>
-<linearGradient id="u14ball_hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2e42"/><stop offset="100%" stop-color="#1a3a52"/></linearGradient>
-<pattern id="u14ball_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.8"/></pattern>
-<marker id="u14ball_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u14ball_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse"><path d="M0 0 L6 2.5 L0 5 Z" fill="#b7600c"/></marker>
-<marker id="u14ball_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse"><path d="M0 0 L3 1.5 L0 3 Z" fill="#b7600c"/></marker>
-</defs>
-<rect width="980" height="520" fill="white"/>
-<g font-family="'Segoe UI',Arial,sans-serif" fill="#1a2530">
-<!-- Zadržane neutralne boje i zaglavlja iz postojećih panela.
-Jedna prostorna ispuna predstavlja isti fluid; nije mapa tlaka ili brzine.
-Strelice imaju značenje iz oznake; izdvojeni vektori sila ne određuju hvatište. -->
-<defs>
-<marker id="u14ball_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#c0392b"/></marker>
-<marker id="u14ball_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1565c0"/></marker>
-<marker id="u14ball_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#1e8449"/></marker>
-<marker id="u14ball_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56"/></marker>
-</defs>
-<rect x="24" y="28" width="436" height="456" rx="10" fill="white" stroke="#1565c0" stroke-width="1" stroke-opacity="0.65" />
-<rect x="24" y="28" width="436" height="30" rx="10" fill="white" stroke="none" stroke-width="1.2"/>
-<rect x="24" y="50" width="436" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="242.0" y="49" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="700">Izolirana glatka kugla</text>
-<rect x="482" y="28" width="474" height="456" rx="10" fill="white" stroke="#c0392b" stroke-width="1" stroke-opacity="0.65" />
-<rect x="482" y="28" width="474" height="30" rx="10" fill="white" stroke="none" stroke-width="1.2"/>
-<rect x="482" y="50" width="474" height="8" rx="0" fill="white" stroke="none" stroke-width="1.2"/>
-<text x="719.0" y="49" font-size="14" fill="#c0392b" text-anchor="middle" font-weight="700">Cᴅ(Re): model i zadani podatak</text>
-<circle id="u14ball_sphere" cx="245" cy="236" r="58" fill="#cfd8df" stroke="#3a4a56" stroke-width="1.5"/>
-<path id="u14ball_v0" d="M62 204 L168 204" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14ball_v)"/>
-<path id="u14ball_v1" d="M62 236 L168 236" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14ball_v)"/>
-<path id="u14ball_v2" d="M62 268 L168 268" fill="none" stroke="#1e8449" stroke-width="2.3" marker-end="url(#u14ball_v)"/>
-<text x="117" y="183" font-size="14" fill="#1e8449" text-anchor="middle">v = 30 m/s</text>
-<path id="u14ball_drag" d="M303 236 L422 236" fill="none" stroke="#c0392b" stroke-width="2.3" marker-end="url(#u14ball_forceMarker)"/>
-<text x="363" y="213" font-size="13" fill="#c0392b" text-anchor="middle">Fᴅ = 76,3 mN</text>
-<line x1="187" y1="299" x2="187" y2="334" stroke="#b7600c" stroke-width="1"/>
-<line x1="303" y1="299" x2="303" y2="334" stroke="#b7600c" stroke-width="1"/>
-<line x1="187" y1="326" x2="187" y2="336" stroke="#b7600c" stroke-width="1.2"/>
-<line x1="303" y1="326" x2="303" y2="336" stroke="#b7600c" stroke-width="1.2"/>
-<path id="u14ball_diameter" d="M187 331 L303 331" fill="none" stroke="#b7600c" stroke-width="1.4" marker-start="url(#u14ball_dim)" marker-end="url(#u14ball_dim)"/>
-<text x="245.0" y="348" font-size="11" fill="#b7600c" text-anchor="middle">D = 20 mm</text>
-<text x="242" y="392" font-size="14" fill="#1565c0" text-anchor="middle">Re = 4,00 · 10⁴; zadano Cᴅ = 0,45</text>
-<text x="242" y="422" font-size="13" fill="#3a4a56" text-anchor="middle">A = πD²/4 (čeona površina)</text>
-<rect x="851.9473345902462" y="123" width="66.05266540975379" height="250" rx="0" fill="#f4f6f7" stroke="none" stroke-width="1.2"/>
-<line x1="540.0" y1="123" x2="540.0" y2="373" stroke="#d4e3f0" stroke-width="0.8"/>
-<text x="540.0" y="392" font-size="12" fill="#3a4a56" text-anchor="middle">10²</text>
-<line x1="634.5" y1="123" x2="634.5" y2="373" stroke="#d4e3f0" stroke-width="0.8"/>
-<text x="634.5" y="392" font-size="12" fill="#3a4a56" text-anchor="middle">10³</text>
-<line x1="729.0" y1="123" x2="729.0" y2="373" stroke="#d4e3f0" stroke-width="0.8"/>
-<text x="729.0" y="392" font-size="12" fill="#3a4a56" text-anchor="middle">10⁴</text>
-<line x1="823.5" y1="123" x2="823.5" y2="373" stroke="#d4e3f0" stroke-width="0.8"/>
-<text x="823.5" y="392" font-size="12" fill="#3a4a56" text-anchor="middle">10⁵</text>
-<line x1="918.0" y1="123" x2="918.0" y2="373" stroke="#d4e3f0" stroke-width="0.8"/>
-<text x="918.0" y="392" font-size="12" fill="#3a4a56" text-anchor="middle">10⁶</text>
-<line x1="540" y1="373.0" x2="918" y2="373.0" stroke="#d4e3f0" stroke-width="0.8"/>
-<text x="531" y="377.0" font-size="12" fill="#3a4a56" text-anchor="end">0,1</text>
-<line x1="540" y1="248.0" x2="918" y2="248.0" stroke="#d4e3f0" stroke-width="0.8"/>
-<text x="531" y="252.0" font-size="12" fill="#3a4a56" text-anchor="end">1</text>
-<line x1="540" y1="123.0" x2="918" y2="123.0" stroke="#d4e3f0" stroke-width="0.8"/>
-<text x="531" y="127.0" font-size="12" fill="#3a4a56" text-anchor="end">10</text>
-<line x1="540" y1="123" x2="540" y2="373" stroke="#3a4a56" stroke-width="1.5"/>
-<line x1="540" y1="373" x2="918" y2="373" stroke="#3a4a56" stroke-width="1.5"/>
-<text x="530" y="106" font-size="13" fill="#3a4a56" text-anchor="start">Cᴅ</text>
-<text x="927" y="377" font-size="12" fill="#3a4a56" text-anchor="start">Re</text>
-<polyline id="u14ball_correlation" points="540.000000,243.133470 541.299781,243.923711 542.599561,244.709327 543.899342,245.490359 545.199122,246.266847 546.498903,247.038829 547.798683,247.806345 549.098464,248.569431 550.398244,249.328126 551.698025,250.082465 552.997806,250.832483 554.297586,251.578214 555.597367,252.319692 556.897147,253.056947 558.196928,253.790012 559.496708,254.518915 560.796489,255.243684 562.096270,255.964347 563.396050,256.680928 564.695831,257.393452 565.995611,258.101941 567.295392,258.806416 568.595172,259.506895 569.894953,260.203396 571.194733,260.895935 572.494514,261.584524 573.794295,262.269176 575.094075,262.949900 576.393856,263.626703 577.693636,264.299590 578.993417,264.968564 580.293197,265.633627 581.592978,266.294775 582.892759,266.952004 584.192539,267.605308 585.492320,268.254676 586.792100,268.900096 588.091881,269.541553 589.391661,270.179028 590.691442,270.812499 591.991222,271.441942 593.291003,272.067330 594.590784,272.688631 595.890564,273.305810 597.190345,273.918829 598.490125,274.527647 599.789906,275.132219 601.089686,275.732494 602.389467,276.328420 603.689247,276.919940 604.989028,277.506992 606.288809,278.089511 607.588589,278.667428 608.888370,279.240668 610.188150,279.809153 611.487931,280.372800 612.787711,280.931522 614.087492,281.485227 615.387273,282.033817 616.687053,282.577191 617.986834,283.115243 619.286614,283.647861 620.586395,284.174929 621.886175,284.696326 623.185956,285.211926 624.485736,285.721598 625.785517,286.225206 627.085298,286.722610 628.385078,287.213663 629.684859,287.698216 630.984639,288.176113 632.284420,288.647194 633.584200,289.111295 634.883981,289.568248 636.183761,290.017881 637.483542,290.460015 638.783323,290.894470 640.083103,291.321063 641.382884,291.739606 642.682664,292.149908 643.982445,292.551776 645.282225,292.945015 646.582006,293.329428 647.881787,293.704815 649.181567,294.070976 650.481348,294.427712 651.781128,294.774820 653.080909,295.112102 654.380689,295.439359 655.680470,295.756392 656.980250,296.063007 658.280031,296.359013 659.579812,296.644221 660.879592,296.918447 662.179373,297.181513 663.479153,297.433247 664.778934,297.673483 666.078714,297.902063 667.378495,298.118837 668.678276,298.323667 669.978056,298.516421 671.277837,298.696981 672.577617,298.865240 673.877398,299.021102 675.177178,299.164488 676.476959,299.295330 677.776739,299.413575 679.076520,299.519189 680.376301,299.612151 681.676081,299.692457 682.975862,299.760124 684.275642,299.815182 685.575423,299.857684 686.875203,299.887700 688.174984,299.905318 689.474764,299.910647 690.774545,299.903816 692.074326,299.884972 693.374106,299.854282 694.673887,299.811934 695.973667,299.758134 697.273448,299.693106 698.573228,299.617094 699.873009,299.530361 701.172790,299.433185 702.472570,299.325862 703.772351,299.208706 705.072131,299.082042 706.371912,298.946214 707.671692,298.801578 708.971473,298.648500 710.271253,298.487360 711.571034,298.318549 712.870815,298.142464 714.170595,297.959513 715.470376,297.770109 716.770156,297.574671 718.069937,297.373621 719.369717,297.167387 720.669498,296.956394 721.969279,296.741073 723.269059,296.521849 724.568840,296.299149 725.868620,296.073394 727.168401,295.845003 728.468181,295.614389 729.767962,295.381957 731.067742,295.148107 732.367523,294.913229 733.667304,294.677706 734.967084,294.441909 736.266865,294.206198 737.566645,293.970925 738.866426,293.736426 740.166206,293.503027 741.465987,293.271041 742.765767,293.040767 744.065548,292.812491 745.365329,292.586484 746.665109,292.363004 747.964890,292.142295 749.264670,291.924586 750.564451,291.710092 751.864231,291.499014 753.164012,291.291538 754.463793,291.087837 755.763573,290.888070 757.063354,290.692381 758.363134,290.500902 759.662915,290.313752 760.962695,290.131037 762.262476,289.952850 763.562256,289.779273 764.862037,289.610375 766.161818,289.446215 767.461598,289.286840 768.761379,289.132289 770.061159,288.982588 771.360940,288.837756 772.660720,288.697802 773.960501,288.562726 775.260282,288.432520 776.560062,288.307169 777.859843,288.186652 779.159623,288.070938 780.459404,287.959993 781.759184,287.853775 783.058965,287.752238 784.358745,287.655329 785.658526,287.562993 786.958307,287.475169 788.258087,287.391792 789.557868,287.312794 790.857648,287.238105 792.157429,287.167650 793.457209,287.101353 794.756990,287.039135 796.056770,286.980916 797.356551,286.926612 798.656332,286.876142 799.956112,286.829419 801.255893,286.786358 802.555673,286.746873 803.855454,286.710877 805.155234,286.678282 806.455015,286.649001 807.754796,286.622947 809.054576,286.600033 810.354357,286.580172 811.654137,286.563278 812.953918,286.549265 814.253698,286.538048 815.553479,286.529543 816.853259,286.523667 818.153040,286.520338 819.452821,286.519474 820.752601,286.520996 822.052382,286.524824 823.352162,286.530881 824.651943,286.539091 825.951723,286.549379 827.251504,286.561671 828.551284,286.575896 829.851065,286.591981 831.150846,286.609860 832.450626,286.629462 833.750407,286.650723 835.050187,286.673577 836.349968,286.697961 837.649748,286.723814 838.949529,286.751074 840.249310,286.779684 841.549090,286.809585 842.848871,286.840723 844.148651,286.873042 845.448432,286.906489 846.748212,286.941014 848.047993,286.976566 849.347773,287.013096 850.647554,287.050557 851.947335,287.088903" fill="none" stroke="#1565c0" stroke-width="2.4" />
-<line x1="851.9473345902462" y1="123" x2="851.9473345902462" y2="373" stroke="#b7600c" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="910" y="144" font-size="11" fill="#b7600c" text-anchor="end">izvan</text>
-<text x="910" y="160" font-size="11" fill="#b7600c" text-anchor="end">raspona</text>
-<circle id="u14ball_givenpoint" cx="785.8946691804924" cy="291.34843577808203" r="4" fill="#c0392b" stroke="#c0392b" stroke-width="1.5"/>
-<line x1="785.8946691804924" y1="299.34843577808203" x2="756.8946691804924" y2="331.34843577808203" stroke="#c0392b" stroke-width="1"/>
-<text x="750.8946691804924" y="346.34843577808203" font-size="12" fill="#c0392b" text-anchor="middle">zadano 0,45</text>
-<text x="711" y="424" font-size="12" fill="#1565c0" text-anchor="middle">Plavo: korelacija iz bilježnice (Re ≤ 2 · 10⁵)</text>
-<text x="711" y="447" font-size="12" fill="#c0392b" text-anchor="middle">Crveno: zaseban ulazni podatak P5.</text>
-<text x="711" y="470" font-size="11" fill="#3a4a56" text-anchor="middle">Kriza otpora nije modelirana ovom krivuljom.</text>
-</g>
+  <title id="u14ball_title">Otpor kugle i jasno zadana korelacija</title>
+  <desc id="u14ball_desc">Kugla promjera dvadeset milimetara u zraku trideset metara u sekundi. Sila otpora usmjerena je kao dolazni tok. Desni logaritamski graf prikazuje korelaciju iz bilježnice do Reynoldsova broja dvjesto tisuća i zaseban zadani koeficijent 0,45 pri četrdeset tisuća.</desc>
+  <defs>
+    <pattern id="u14ball_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <marker id="u14ball_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u14ball_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
+    <marker id="u14ball_dimSmall" markerWidth="3" markerHeight="3" refX="3" refY="1.5" orient="auto-start-reverse">
+      <path d="M0 0 L3 1.5 L0 3 Z" fill="#356b83" />
+    </marker>
+  </defs>
+  <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+    <defs>
+      <marker id="u14ball_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u14ball_pressureMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u14ball_reactionMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+      </marker>
+      <marker id="u14ball_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
+      </marker>
+    </defs>
+    <text x="242.0" y="49" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Izolirana glatka kugla</text>
+    <text x="719.0" y="49" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">C<tspan baseline-shift="sub" font-size="0.75em">d</tspan>(Re): model i zadani podatak</text>
+    <circle id="u14ball_sphere" cx="245" cy="236" r="58" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.5" />
+    <path id="u14ball_v0" d="M62 204 L168 204" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14ball_v)" />
+    <path id="u14ball_v1" d="M62 236 L168 236" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14ball_v)" />
+    <path id="u14ball_v2" d="M62 268 L168 268" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14ball_v)" />
+    <text x="117" y="183" font-size="14" fill="#263746" text-anchor="middle">v = 30 m/s</text>
+    <path id="u14ball_drag" d="M303 236 L422 236" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14ball_forceMarker)" />
+    <text x="363" y="213" font-size="13" fill="#263746" text-anchor="middle">Fᴅ = 76,3 mN</text>
+    <line x1="187" y1="299" x2="187" y2="334" stroke="#657781" stroke-width="1" />
+    <line x1="303" y1="299" x2="303" y2="334" stroke="#657781" stroke-width="1" />
+    <line x1="187" y1="326" x2="187" y2="336" stroke="#657781" stroke-width="1.2" />
+    <line x1="303" y1="326" x2="303" y2="336" stroke="#657781" stroke-width="1.2" />
+    <path id="u14ball_diameter" d="M187 331 L303 331" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ball_dim)" marker-end="url(#u14ball_dim)" />
+    <text x="245.0" y="348" font-size="11" fill="#263746" text-anchor="middle">D = 20 mm</text>
+    <text x="242" y="392" font-size="14" fill="#263746" text-anchor="middle">Re = 4,00 · 10⁴; zadano C<tspan baseline-shift="sub" font-size="0.75em">d</tspan> = 0,45</text>
+    <text x="242" y="422" font-size="13" fill="#263746" text-anchor="middle">A = πD²/4 (čeona površina)</text>
+    <rect x="851.9473345902462" y="123" width="66.05266540975379" height="250" rx="0" fill="#d7dee3" stroke="none" stroke-width="1.2" />
+    <text x="540.0" y="392" font-size="12" fill="#263746" text-anchor="middle">10²</text>
+    <text x="634.5" y="392" font-size="12" fill="#263746" text-anchor="middle">10³</text>
+    <text x="729.0" y="392" font-size="12" fill="#263746" text-anchor="middle">10⁴</text>
+    <text x="823.5" y="392" font-size="12" fill="#263746" text-anchor="middle">10⁵</text>
+    <text x="918.0" y="392" font-size="12" fill="#263746" text-anchor="middle">10⁶</text>
+    <text x="531" y="377.0" font-size="12" fill="#263746" text-anchor="end">0,1</text>
+    <text x="531" y="252.0" font-size="12" fill="#263746" text-anchor="end">1</text>
+    <text x="531" y="127.0" font-size="12" fill="#263746" text-anchor="end">10</text>
+    <line x1="540" y1="123" x2="540" y2="373" stroke="#3a4a56" stroke-width="1.5" />
+    <line x1="540" y1="373" x2="918" y2="373" stroke="#3a4a56" stroke-width="1.5" />
+    <text x="530" y="106" font-size="13" fill="#263746" text-anchor="start">C<tspan baseline-shift="sub" font-size="0.75em">d</tspan>
+    </text>
+    <text x="927" y="377" font-size="12" fill="#263746" text-anchor="start">Re</text>
+    <polyline id="u14ball_correlation" points="540.000000,243.133470 541.299781,243.923711 542.599561,244.709327 543.899342,245.490359 545.199122,246.266847 546.498903,247.038829 547.798683,247.806345 549.098464,248.569431 550.398244,249.328126 551.698025,250.082465 552.997806,250.832483 554.297586,251.578214 555.597367,252.319692 556.897147,253.056947 558.196928,253.790012 559.496708,254.518915 560.796489,255.243684 562.096270,255.964347 563.396050,256.680928 564.695831,257.393452 565.995611,258.101941 567.295392,258.806416 568.595172,259.506895 569.894953,260.203396 571.194733,260.895935 572.494514,261.584524 573.794295,262.269176 575.094075,262.949900 576.393856,263.626703 577.693636,264.299590 578.993417,264.968564 580.293197,265.633627 581.592978,266.294775 582.892759,266.952004 584.192539,267.605308 585.492320,268.254676 586.792100,268.900096 588.091881,269.541553 589.391661,270.179028 590.691442,270.812499 591.991222,271.441942 593.291003,272.067330 594.590784,272.688631 595.890564,273.305810 597.190345,273.918829 598.490125,274.527647 599.789906,275.132219 601.089686,275.732494 602.389467,276.328420 603.689247,276.919940 604.989028,277.506992 606.288809,278.089511 607.588589,278.667428 608.888370,279.240668 610.188150,279.809153 611.487931,280.372800 612.787711,280.931522 614.087492,281.485227 615.387273,282.033817 616.687053,282.577191 617.986834,283.115243 619.286614,283.647861 620.586395,284.174929 621.886175,284.696326 623.185956,285.211926 624.485736,285.721598 625.785517,286.225206 627.085298,286.722610 628.385078,287.213663 629.684859,287.698216 630.984639,288.176113 632.284420,288.647194 633.584200,289.111295 634.883981,289.568248 636.183761,290.017881 637.483542,290.460015 638.783323,290.894470 640.083103,291.321063 641.382884,291.739606 642.682664,292.149908 643.982445,292.551776 645.282225,292.945015 646.582006,293.329428 647.881787,293.704815 649.181567,294.070976 650.481348,294.427712 651.781128,294.774820 653.080909,295.112102 654.380689,295.439359 655.680470,295.756392 656.980250,296.063007 658.280031,296.359013 659.579812,296.644221 660.879592,296.918447 662.179373,297.181513 663.479153,297.433247 664.778934,297.673483 666.078714,297.902063 667.378495,298.118837 668.678276,298.323667 669.978056,298.516421 671.277837,298.696981 672.577617,298.865240 673.877398,299.021102 675.177178,299.164488 676.476959,299.295330 677.776739,299.413575 679.076520,299.519189 680.376301,299.612151 681.676081,299.692457 682.975862,299.760124 684.275642,299.815182 685.575423,299.857684 686.875203,299.887700 688.174984,299.905318 689.474764,299.910647 690.774545,299.903816 692.074326,299.884972 693.374106,299.854282 694.673887,299.811934 695.973667,299.758134 697.273448,299.693106 698.573228,299.617094 699.873009,299.530361 701.172790,299.433185 702.472570,299.325862 703.772351,299.208706 705.072131,299.082042 706.371912,298.946214 707.671692,298.801578 708.971473,298.648500 710.271253,298.487360 711.571034,298.318549 712.870815,298.142464 714.170595,297.959513 715.470376,297.770109 716.770156,297.574671 718.069937,297.373621 719.369717,297.167387 720.669498,296.956394 721.969279,296.741073 723.269059,296.521849 724.568840,296.299149 725.868620,296.073394 727.168401,295.845003 728.468181,295.614389 729.767962,295.381957 731.067742,295.148107 732.367523,294.913229 733.667304,294.677706 734.967084,294.441909 736.266865,294.206198 737.566645,293.970925 738.866426,293.736426 740.166206,293.503027 741.465987,293.271041 742.765767,293.040767 744.065548,292.812491 745.365329,292.586484 746.665109,292.363004 747.964890,292.142295 749.264670,291.924586 750.564451,291.710092 751.864231,291.499014 753.164012,291.291538 754.463793,291.087837 755.763573,290.888070 757.063354,290.692381 758.363134,290.500902 759.662915,290.313752 760.962695,290.131037 762.262476,289.952850 763.562256,289.779273 764.862037,289.610375 766.161818,289.446215 767.461598,289.286840 768.761379,289.132289 770.061159,288.982588 771.360940,288.837756 772.660720,288.697802 773.960501,288.562726 775.260282,288.432520 776.560062,288.307169 777.859843,288.186652 779.159623,288.070938 780.459404,287.959993 781.759184,287.853775 783.058965,287.752238 784.358745,287.655329 785.658526,287.562993 786.958307,287.475169 788.258087,287.391792 789.557868,287.312794 790.857648,287.238105 792.157429,287.167650 793.457209,287.101353 794.756990,287.039135 796.056770,286.980916 797.356551,286.926612 798.656332,286.876142 799.956112,286.829419 801.255893,286.786358 802.555673,286.746873 803.855454,286.710877 805.155234,286.678282 806.455015,286.649001 807.754796,286.622947 809.054576,286.600033 810.354357,286.580172 811.654137,286.563278 812.953918,286.549265 814.253698,286.538048 815.553479,286.529543 816.853259,286.523667 818.153040,286.520338 819.452821,286.519474 820.752601,286.520996 822.052382,286.524824 823.352162,286.530881 824.651943,286.539091 825.951723,286.549379 827.251504,286.561671 828.551284,286.575896 829.851065,286.591981 831.150846,286.609860 832.450626,286.629462 833.750407,286.650723 835.050187,286.673577 836.349968,286.697961 837.649748,286.723814 838.949529,286.751074 840.249310,286.779684 841.549090,286.809585 842.848871,286.840723 844.148651,286.873042 845.448432,286.906489 846.748212,286.941014 848.047993,286.976566 849.347773,287.013096 850.647554,287.050557 851.947335,287.088903" fill="none" stroke="#356b83" stroke-width="2.4" />
+    <line x1="851.9473345902462" y1="123" x2="851.9473345902462" y2="373" stroke="#657781" stroke-width="1" stroke-dasharray="3 3" />
+    <text x="910" y="144" font-size="11" fill="#263746" text-anchor="end">izvan</text>
+    <text x="910" y="160" font-size="11" fill="#263746" text-anchor="end">raspona</text>
+    <circle id="u14ball_givenpoint" cx="785.8946691804924" cy="291.34843577808203" r="4" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
+    <line x1="785.8946691804924" y1="299.34843577808203" x2="756.8946691804924" y2="331.34843577808203" stroke="#356b83" stroke-width="1" />
+    <text x="750.8946691804924" y="346.34843577808203" font-size="12" fill="#263746" text-anchor="middle">zadano 0,45</text>
+    <text x="711" y="424" font-size="12" fill="#263746" text-anchor="middle">Krivulja: korelacija iz bilježnice (Re ≤ 2 · 10⁵)</text>
+    <text x="711" y="447" font-size="12" fill="#263746" text-anchor="middle">Točka: zaseban ulazni podatak P5.</text>
+    <text x="711" y="470" font-size="11" fill="#263746" text-anchor="middle">Kriza otpora nije modelirana ovom krivuljom.</text>
+  </g>
 </svg>

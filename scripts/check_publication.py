@@ -84,6 +84,7 @@ def main():
         [py, 'tools/audit_architecture.py'],
         [py, 'tools/audit_publication.py'],
         [py, 'tools/audit_typst.py'],
+        [py, 'tools/audit_sketch_design.py'],
         [node, 'tools/audit_print_layouts.mjs'],
         [py, 'scripts/normalize_public_text.py'],
         [py, 'scripts/generate_qr_assets.py'],

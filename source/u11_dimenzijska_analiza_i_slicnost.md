@@ -249,7 +249,7 @@ Posljednji se izraz svodi na $\lambda_L^3$ samo kada model i prototip imaju jedn
 
 Srž ovog poglavlja nije zapamtiti devet formula, nego prepoznati **skup** relevantnih grupa. Najprije se definiraju izlazna veličina, geometrija, fluid te početni i rubni uvjeti; zatim se iz jednadžbi ili Buckinghamova postupka izdvoje mogući mehanizmi. Procjena reda veličine pokazuje koje se grupe mogu zanemariti, a koje treba očuvati. Ako dvije važne grupe nije moguće istodobno uskladiti, odabire se prioritetna sličnost i procjenjuje mjerilna pogreška.
 
-![Dijagram pitanja za prepoznavanje mogućih relevantnih grupa: slobodna površina upućuje na Fr, viskoznost na Re, kapljice na We i Bo, kavitacija na σ, periodičnost na St, a stlačivost na Ma. U jednom problemu može biti važno više grupa.](../assets/print/u14_fig_odluka.svg){#fig-u14-odluka fig-align="center" fig-alt="Dijagram pitanja za prepoznavanje mogućih relevantnih grupa: slobodna površina upućuje na Fr, viskoznost na Re, kapljice na We i Bo, kavitacija na σ, periodičnost na St, a stlačivost na Ma. U jednom problemu može biti važno više grupa."}
+![Dijagram pitanja za prepoznavanje mogućih relevantnih grupa: slobodna površina upućuje na Fr, viskoznost na Re, kapljice na We i Bo, kavitacija na σ_kav, periodičnost na St, a stlačivost na Ma. U jednom problemu može biti važno više grupa.](../assets/print/u14_fig_odluka.svg){#fig-u14-odluka fig-align="center" fig-alt="Dijagram pitanja za prepoznavanje mogućih relevantnih grupa: slobodna površina upućuje na Fr, viskoznost na Re, kapljice na We i Bo, kavitacija na σ_kav, periodičnost na St, a stlačivost na Ma. U jednom problemu može biti važno više grupa."}
 
 ::: {.mf1-decision-grid}
 ::: {.mf1-decision-step}
@@ -569,7 +569,7 @@ $$ {#eq-slicnost-rijeseni-primjer-weberov-i-bondov-broj-raspad-03}
 2. Reynoldsov broj struje.
 3. silu otpora i vrijednost grupe $\Pi_1 = F_D/(\rho v^2 D^2)$.
 
-![Kugla u struji, ilustrativna korelacija iz povezane bilježnice i zasebno označena zadana radna točka. Korelacija se ne izjednačuje sa zadanim podatkom C_D = 0,45 i ne produžuje se kroz krizu otpora.](../assets/print/u14_ch1_kugla_struja.svg){#fig-u14-ch1-kugla fig-align="center" fig-alt="Kugla u struji, ilustrativna korelacija iz povezane bilježnice i zasebno označena zadana radna točka. Korelacija se ne izjednačuje sa zadanim podatkom C_D = 0,45 i ne produžuje se kroz krizu otpora."}
+![Kugla u struji, ilustrativna korelacija iz povezane bilježnice i zasebno označena zadana radna točka. Korelacija se ne izjednačuje sa zadanim podatkom C_d = 0,45 i ne produžuje se kroz krizu otpora.](../assets/print/u14_ch1_kugla_struja.svg){#fig-u14-ch1-kugla fig-align="center" fig-alt="Kugla u struji, ilustrativna korelacija iz povezane bilježnice i zasebno označena zadana radna točka. Korelacija se ne izjednačuje sa zadanim podatkom C_d = 0,45 i ne produžuje se kroz krizu otpora."}
 
 **Pretpostavke i model**
 
