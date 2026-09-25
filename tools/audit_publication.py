@@ -1,4 +1,4 @@
-"""Strogi audit kanonskoga javnog izdanja udžbenika MF1.
+"""Strogi audit kanonskoga javnog izdanja priručnika MF1.
 
 Za razliku od numeričkih verifiera, ovaj alat provjerava autorski i
 publikacijski ugovor: 15 kanonskih poglavlja, inventar primjera i zadataka,
@@ -58,7 +58,7 @@ DISPLAY_EQUATION_RE = re.compile(
     re.S,
 )
 WORKLOAD_RE = re.compile(
-    r"\*\*Procijenjeno vrijeme rada uz udžbenik:\*\*\s*(\d+)\s+sati",
+    r"\*\*Procijenjeno vrijeme rada uz priručnik:\*\*\s*(\d+)\s+sati",
     re.I,
 )
 HINT_HEADING_RE = re.compile(r"(?m)^\s*###\s+Naputak\s*$")
@@ -413,11 +413,11 @@ def audit() -> tuple[dict[str, object], list[str]]:
 
     introduction = SOURCE_DIR / "u00_kako_koristiti_udzbenik.md"
     if not introduction.is_file() or not re.search(
-        r"\b145\s+sati rada uz udžbenik\b",
+        r"\b145\s+sati rada uz priručnik\b",
         introduction.read_text(encoding="utf-8") if introduction.is_file() else "",
         re.I,
     ):
-        issues.append("U00 mora navesti ukupno 145 sati rada uz udžbenik")
+        issues.append("U00 mora navesti ukupno 145 sati rada uz priručnik")
 
     duplicates = {
         item_id: locations
