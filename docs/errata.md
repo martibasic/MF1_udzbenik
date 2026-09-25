@@ -1,4 +1,4 @@
-# Errata udžbenika Mehanika fluida 1
+# Errata priručnika „Mehanika fluida: modeli, problemi i rješenja”
 
 Ovo je javna evidencija potvrđenih pogrešaka u objavljenim release candidate i
 stabilnim izdanjima. Otvoreni razvojni dug prije objave vodi se u

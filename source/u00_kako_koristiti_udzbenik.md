@@ -1,6 +1,6 @@
-## O udžbeniku
+## O priručniku {#o-udžbeniku}
 
-Udžbenik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. Kroz petnaest poglavlja upoznat ćeš svojstva fluida, hidrostatiku i strujanje u cijevima, turbostrojevima i otvorenim kanalima.
+Priručnik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. Kroz petnaest poglavlja upoznat ćeš svojstva fluida, hidrostatiku i strujanje u cijevima, turbostrojevima i otvorenim kanalima.
 
 Pri prvom čitanju slijedi glavni tekst, riješene primjere i zadatke. *Dublje* i numerički mostovi dodatno su čitanje: osnovni MF1 možeš pratiti bez učenja CFD postupaka.
 
@@ -10,7 +10,7 @@ Pri prvom čitanju slijedi glavni tekst, riješene primjere i zadatke. *Dublje* 
 
 Pretpostavljaju se osnove mehanike, rada i energije te račun s jedinicama i vektorima. Diferencijalni i integralni račun primjenjuju se u izvodima, a vektorska analiza osobito je važna za diferencijalni opis toka. Ako preskačeš poglavlja, provjeri poznaješ li veličine i bilance na koje se novo gradivo poziva.
 
-Procijenjeno vrijeme uz poglavlja služi planiranju samostalnog rada. Ukupno je predviđeno približno **145 sati rada uz udžbenik**, uključujući zadatke i numeričke pokuse; to nije cjelokupno ECTS opterećenje kolegija.
+Procijenjeno vrijeme uz poglavlja služi planiranju samostalnog rada. Ukupno je predviđeno približno **145 sati rada uz priručnik**, uključujući zadatke i numeričke pokuse; to nije cjelokupno ECTS opterećenje kolegija.
 
 ## Struktura rada s poglavljem
 
@@ -43,7 +43,7 @@ U svakom je poglavlju šest zadataka, od T1 do T4. Zadatci nižih razina oslanja
 
 Numerički pokusi istražuju osjetljivost, bilance i pogrešku jednostavnih modela; nisu automatski CFD simulacije. Bilježnice (*Jupyter notebooks*) dostupne su preko poveznica ili QR kodova, bez prijave u JupyterLiteu, uz pričuvni Google Colab.
 
-**Za čitanje i rješavanje zadataka dovoljan je tekst udžbenika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. Izdanje u PDF-u namijenjeno je ispisu i radu bez mrežne veze.
+**Za čitanje i rješavanje zadataka dovoljan je tekst priručnika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. Izdanje u PDF-u namijenjeno je ispisu i radu bez mrežne veze.
 
 ## Dodaci za brzo snalaženje
 

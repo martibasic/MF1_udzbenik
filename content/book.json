@@ -2,8 +2,8 @@
   "$schema": "book.schema.json",
   "schema_version": 1,
   "book": {
-    "title": "Mehanika fluida 1",
-    "subtitle": "Integrirani udžbenik za strojarstvo i brodogradnju",
+    "title": "Mehanika fluida: modeli, problemi i rješenja",
+    "subtitle": "Priručnik za samostalan rad s numeričkim pokusima i primjenama u brodogradnji",
     "author": "Martina Bašić",
     "output-file": "mehanika-fluida-1"
   },
@@ -69,10 +69,10 @@
   ],
   "documents": {
     "u00": {
-      "title": "Kako koristiti udžbenik",
+      "title": "Kako koristiti priručnik",
       "source": "source/u00_kako_koristiti_udzbenik.md",
       "path": "chapters/u00_kako_koristiti_udzbenik.qmd",
-      "catalog_title": "Kako koristiti udžbenik",
+      "catalog_title": "Kako koristiti priručnik",
       "description": "Odakle početi, kako vježbati i gdje pronaći rezultate."
     },
     "u01": {

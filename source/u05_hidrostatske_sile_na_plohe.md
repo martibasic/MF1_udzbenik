@@ -21,7 +21,7 @@ gdje je $\mathbf n_f$ jedinična normala usmjerena **iz stvarnog fluida prema st
 Isti se račun pojavljuje na brodskim i procesnim poklopcima, ustavama retencijskih bazena, stijenkama rashladnih spremnika i zakrivljenim prijelazima vodnih građevina. Hidrostatika daje opterećenje fluida za zadanu geometriju i stanje. Ne provjerava sama po sebi čvrstoću, zamor, brtvljenje, stabilnost cijele konstrukcije ni normativnu prihvatljivost.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 11 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 11 sati.
 
 U osnovnom modelu fluid miruje, gustoća svakog homogenog sloja je stalna, gravitacijsko polje je jednoliko, a kapilarni učinci zanemarivi.
 

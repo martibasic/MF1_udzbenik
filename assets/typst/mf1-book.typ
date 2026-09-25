@@ -81,7 +81,7 @@
 
   page(header: none, footer: none, {
     v(16mm)
-    text(size: 10pt, fill: mf1-muted, "SVEUČILIŠNI UDŽBENIK")
+    text(size: 10pt, fill: mf1-muted, "PRIRUČNIK")
     v(45mm)
     block(below: 14pt, {
       set text(size: mf1-title-pt * 1pt, weight: "bold")

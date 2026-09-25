@@ -124,7 +124,7 @@ premještanju. Pravila proširenja opisuje [arhitektura](arhitektura.md).
 def print_collection(docs):
     text='''---
 title: "MF1 — pregled za ispis u pregledniku"
-subtitle: "Za pripremljen prijelom stranica preuzmi PDF udžbenika"
+subtitle: "Za pripremljen prijelom stranica preuzmi PDF priručnika"
 page-layout: article
 toc: false
 number-sections: false
@@ -133,7 +133,7 @@ mf1-print-collection: true
 
 <!-- Generated from the shared book hierarchy. -->
 ::: {.mf1-print-note .no-print}
-Za pripremljen prijelom stranica, sadržaj i bibliografiju preuzmi [PDF udžbenika](../downloads/mehanika-fluida-1.pdf). Ova stranica služi brzom ispisu iz preglednika.
+Za pripremljen prijelom stranica, sadržaj i bibliografiju preuzmi [PDF priručnika](../downloads/mehanika-fluida-1.pdf). Ova stranica služi brzom ispisu iz preglednika.
 :::
 
 ```{=html}

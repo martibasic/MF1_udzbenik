@@ -25,7 +25,7 @@ U dodatku D pojmovi verifikacije i validacije slijede NASA-in vodič [@nasa-cfd-
 ::: {.mf1-mini-summary}
 <p class="mf1-box-label">Pravilo korištenja izvora</p>
 
-Udžbenik je dovoljan za praćenje kolegija, ali svojstva fluida, empirijski koeficijenti, normativni kriteriji i softverski postupci moraju se provjeriti u izdanju izvora primjerenom godini i namjeni projekta.
+Priručnik je dovoljan za praćenje kolegija, ali svojstva fluida, empirijski koeficijenti, normativni kriteriji i softverski postupci moraju se provjeriti u izdanju izvora primjerenom godini i namjeni projekta.
 :::
 
 ## Bibliografski zapisi

@@ -21,7 +21,7 @@ local function catalog()
   local first=docs[model.parts[1].chapters[1]].path:gsub('%.qmd$','.html')
   local result={ '<nav class="mf1-print-toolbar" aria-label="Čitanje knjige"><a class="mf1-print-button primary" href="'..first..'">Počni s osnovama <span aria-hidden="true">→</span></a><a class="mf1-print-button secondary" href="downloads/'..model.book['output-file']..'.pdf">Preuzmi PDF</a></nav>',
     '<nav class="mf1-quick-links" aria-label="Brzi pristup"><a href="'..role_path('formulas')..'">Formule i oznake</a><a href="'..role_path('answers')..'">Rezultati zadataka</a><a href="jlite/lab/index.html">Numerički pokusi</a></nav>',
-    '<nav class="mf1-book-catalog" aria-label="Sadržaj udžbenika">'}
+    '<nav class="mf1-book-catalog" aria-label="Sadržaj priručnika">'}
   local function group(title,ids)
     table.insert(result,'<section><h2 class="mf1-section-title unnumbered">'..escape(title)..'</h2><div class="mf1-grid">')
     for _,id in ipairs(ids) do

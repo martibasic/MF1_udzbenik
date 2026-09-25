@@ -10,7 +10,7 @@ Integralne bilance odgovaraju na pitanje kolika je ukupna sila, protok ili snaga
 Isti diferencijalni model opisuje uljni film ležaja, razvoj profila u rashladnom kanalu, otpor trupa, odvajanje iza lopatice i polje brzine koje računa program za CFD. Razlika između analitičkog rješenja i simulacije nije u temeljnim zakonima: analitički račun uvodi snažne simetrije, a numerički alat iste lokalne bilance primjenjuje na mnogo ćelija [@schlichting2017; @pope2000].
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 10 sati.
 
 ## Materijalna derivacija {#sec-materijalna-derivacija}
 

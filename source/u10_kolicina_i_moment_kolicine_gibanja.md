@@ -10,7 +10,7 @@ Zakon količine gibanja povezuje protok, tlak i reakciju konstrukcije. Pri struj
 Koljeno, T-račva ili mlaznica prenosi silu na prirubnicu i nosač. U pumpnim stanicama, brodskim strojarnicama i protupožarnim monitorima to opterećenje određujemo iz tlačnih sila i promjene količine gibanja fluida.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 10 sati.
 
 ## Integralni zakon količine gibanja
 

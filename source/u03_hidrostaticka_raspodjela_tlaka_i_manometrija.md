@@ -10,7 +10,7 @@ Hidrostatika proučava raspodjelu tlaka u fluidu u mirovanju. Njezine se relacij
 Piezometri, U-manometri i diferencijalni manometri primjenjuju hidrostatsku ravnotežu za mjerenje tlaka. Isti se princip koristi za određivanje opterećenja koja voda stvara na različitim dubinama u spremnicima, kesonima i balastnim tankovima.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 9 sati.
 
 ### Diferencijalna jednadžba hidrostatike
 
@@ -181,7 +181,7 @@ $$p = p_{pov} + \rho g h$$ {#eq-hidrostatika-otvoreni-i-zatvoreni-spremnici-01}
 
 Najčešća pogreška ovdje nije u računu, nego u tome što se atmosfera mehanički uzme kao nula i kad za to nema fizikalnog opravdanja.
 
-Iz manometarskog tlaka $p_M$ (indeks $M$ = manometarski; ista oznaka koristi se u ostatku udžbenika) odmah se može čitati i piezometarska visina
+Iz manometarskog tlaka $p_M$ (indeks $M$ = manometarski; ista oznaka koristi se u ostatku priručnika) odmah se može čitati i piezometarska visina
 
 $$
 h_p = \frac{p_M}{\rho g},

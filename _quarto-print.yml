@@ -5,4 +5,4 @@ project:
   render:
     - chapters/za_ispis.qmd
 website:
-  title: Mehanika fluida 1
+  title: 'Mehanika fluida: modeli, problemi i rješenja'

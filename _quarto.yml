@@ -39,8 +39,8 @@ language: _language.yml
 author: Martina Bašić
 bibliography: references.bib
 book:
-  title: Mehanika fluida 1
-  subtitle: Integrirani udžbenik za strojarstvo i brodogradnju
+  title: 'Mehanika fluida: modeli, problemi i rješenja'
+  subtitle: Priručnik za samostalan rad s numeričkim pokusima i primjenama u brodogradnji
   author: Martina Bašić
   output-file: mehanika-fluida-1
   site-url: https://martibasic.github.io/MF1_udzbenik/
@@ -87,7 +87,7 @@ book:
     collapse-level: 3
   page-navigation: true
   page-footer:
-    left: Mehanika fluida 1
+    left: 'Mehanika fluida: modeli, problemi i rješenja'
     right: Martina Bašić
 execute:
   echo: false

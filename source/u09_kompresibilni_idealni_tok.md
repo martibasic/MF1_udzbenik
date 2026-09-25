@@ -10,7 +10,7 @@ U sporom toku kapljevine promjena tlaka gotovo ne mijenja gustoću, pa je model 
 Kompresibilnost je važna za odziv pneumatskog aktuatora, protok kroz sigurnosni ventil i širenje tlačnog vala kroz plinovod. U ovom poglavlju naučit ćeš prepoznati granicu nestlačivog modela i postaviti temeljni jednodimenzijski račun kompresibilnog toka.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 9 sati.
 
 ## Brzina zvuka {#sec-brzina-zvuka}
 

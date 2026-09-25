@@ -10,7 +10,7 @@ Analiza turbostrojeva i propulzijskih sustava temelji se na promjeni količine g
 Na Peltonovu kolu, vodomlaznom pogonu i mlaznici koja skreće tok isti zakoni povezuju silu, moment i snagu. Račun pokazuje koliko snage rotor prima, koliki je potisak i kako izlazni kut mijenja korisni učinak.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 9 sati.
 
 ## Zakon količine gibanja za lopatice i vodilice
 

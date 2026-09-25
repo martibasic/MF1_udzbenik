@@ -10,7 +10,7 @@ Kinematika strujanja može se opisati praćenjem pojedine čestice fluida ili pr
 Kontrolni volumen omogućuje praćenje mase koja ulazi, izlazi i ostaje u odabranom prostoru. Tako se analiziraju rashladni razdjelnici, ventilacijske komore i spremnici tijekom punjenja ili pražnjenja. Granicu biramo tako da obuhvati sve relevantne ulaze i izlaze.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 10 sati.
 
 ## Kinematika strujanja
 

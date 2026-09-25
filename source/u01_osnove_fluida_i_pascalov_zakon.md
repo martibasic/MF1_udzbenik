@@ -10,7 +10,7 @@ Za opis fluida najprije treba odabrati model i definirati veličine koje mjerimo
 Hidraulične dizalice, preše za oblikovanje lima i brodski kormilarski pogoni temelje se na prijenosu tlaka zatvorenim fluidom. U takvim sustavima tlak povezuje ulaznu silu, geometriju cilindara i radnu silu aktuatora.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 8 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 8 sati.
 
 ### Kontinuumski model
 

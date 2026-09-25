@@ -2,21 +2,21 @@
   "schema_version": 1,
   "documents": {
     "u00": {
-      "title": "Kako koristiti udžbenik",
+      "title": "Kako koristiti priručnik",
       "source": "source/u00_kako_koristiti_udzbenik.md",
       "path": "chapters/u00_kako_koristiti_udzbenik.qmd",
-      "catalog_title": "Kako koristiti udžbenik",
+      "catalog_title": "Kako koristiti priručnik",
       "description": "Odakle početi, kako vježbati i gdje pronaći rezultate.",
       "id": "u00",
       "kind": "frontmatter",
       "number": "0",
       "part": null,
-      "source_sha256": "ec262e2e1ecd6fc052ea80e78a555240995a0d6e32632f98079148a247830e21",
+      "source_sha256": "3d570ccf314d85caa2dcf7098a1204ec2993d22204d3beb658c8843c095ddb86",
       "sections": [
         {
           "id": "o-udžbeniku",
           "level": 2,
-          "title": "O udžbeniku",
+          "title": "O priručniku",
           "number": null
         },
         {
@@ -71,7 +71,7 @@
       "kind": "chapter",
       "number": "1",
       "part": "part-1",
-      "source_sha256": "9855e5794b07e8f38be055d2b2c03e402c582d2a7a104e164a223ffa60ea6a44",
+      "source_sha256": "a0011d818393460dd1ea4d0ae5074adaa7b38f6cb0851ae37f76c8e54a1ca117",
       "sections": [
         {
           "id": "fluid-kao-kontinuum",
@@ -216,7 +216,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "381e02e2529d6029a87fbfa0dab4c2a78b072c310fdfa4e9fa1e54ebeb5dfb13",
+      "source_sha256": "36aac9990931958325715beb17248f2594083dcb2e8152418a51ed43f2433fa4",
       "sections": [
         {
           "id": "viskoznost-i-međupovršinske-pojave",
@@ -364,7 +364,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "407c7288a323d02f47ebb4655b90303a82eec14bbafddeacddafcb2fedac2dcf",
+      "source_sha256": "2f2dbdbc640af6f95dabc133edea4a23fa1b7b92c9a99fda6539a58db472adb2",
       "sections": [
         {
           "id": "hidrostatička-raspodjela-tlaka",
@@ -507,7 +507,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "39ad15835d77fe9409e4e84a1b0bd08fa05c905ec886c10bcdde969b6f0a2ac7",
+      "source_sha256": "6f4369fd67d6c97cd634cf9cd655a60c5cc296085853be7c883e376edec2f040",
       "sections": [
         {
           "id": "relativno-mirovanje-fluida",
@@ -649,7 +649,7 @@
       "kind": "chapter",
       "number": "5",
       "part": "part-2",
-      "source_sha256": "5ade907f73e431f10e4747555537c0cea9e88e9d2041847dfc1d0b4859c84cd5",
+      "source_sha256": "95bde2df2dd29908a374556ba27c1410f90353208a4b0efaba025a64ebc4c231",
       "sections": [
         {
           "id": "hidrostatske-sile-na-plohe",
@@ -823,7 +823,7 @@
       "kind": "chapter",
       "number": "6",
       "part": "part-2",
-      "source_sha256": "9508b957e8742b4f5941c06064a7e8deec7729d73fc78ff221feb96ee6662c50",
+      "source_sha256": "79b80d4dfc246a852cab542746ca3acd2d04eb67e361207ef4d43cbf5c53ae72",
       "sections": [
         {
           "id": "uzgon-plivanje-i-početni-stabilitet",
@@ -983,7 +983,7 @@
       "kind": "chapter",
       "number": "7",
       "part": "part-3",
-      "source_sha256": "3a8b07c24ce650ced84cbf48d49d102ece056971bea21188e43752a88af2f2b1",
+      "source_sha256": "a74405f5a159b3533cb9ed6e9e9abfc91aaf58d28af6fea28e18357075f412c3",
       "sections": [
         {
           "id": "kinematika-kontrolni-volumen-i-kontinuitet",
@@ -1151,7 +1151,7 @@
       "kind": "chapter",
       "number": "8",
       "part": "part-3",
-      "source_sha256": "7b1ef537ee0b88877063c75107697e1df67a2845bef0b0dc92fa906ef720fc83",
+      "source_sha256": "f4e16ee2853f657c35a7c1ef8e6a79b826ed03892b38ce6c871e76f147b86dcb",
       "sections": [
         {
           "id": "energijska-jednadžba-i-bernoullijeva-jednadžba",
@@ -1290,7 +1290,7 @@
       "kind": "chapter",
       "number": "9",
       "part": "part-3",
-      "source_sha256": "3f84731f17e55c8305bc36ef2d7c2c545c6eedd79a9826e3da63d608efead6e1",
+      "source_sha256": "02fff732f6610c378c12f7129dd175a274e80e0182ed2c3e956e58c44d17a4f0",
       "sections": [
         {
           "id": "sec-kompresibilni-motivacija",
@@ -1401,7 +1401,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "fe58067baa44ba4f0e01333a9d1f936e69244921c58206498684b5972d3d32e8",
+      "source_sha256": "e44e4897eca65abe4d817fcfb2afdcd45eadf72bca7085c23bde81f213b39a1c",
       "sections": [
         {
           "id": "količina-i-moment-količine-gibanja",
@@ -1552,7 +1552,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "c0584f673774e5c6bcdcf1ddff19dd13b03b41f835bff6b03d23151d613aa731",
+      "source_sha256": "e5b1d9720a07ca479c694b5a72afae581517bb79ffe1bd84dc0ac11f2c3596c4",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",
@@ -1696,7 +1696,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "5a9cc27249302e11be7c117aa8590af443803f67db8e2021489144cda6bd8ad9",
+      "source_sha256": "ea8bde5c0e09d041705c3654ee0dd8965835c6f06b1be2cac0f9e38a1a0b6aa3",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1823,7 +1823,7 @@
       "kind": "chapter",
       "number": "13",
       "part": "part-5",
-      "source_sha256": "4b68fd9aebdb23d6fac8fb2f1ef396a66bdc1bc79c70b0f93a06bf2184c42b18",
+      "source_sha256": "d7ab53c561f92f70eff94b40d44599695721e2be1ac2388adcdff1b89933c494",
       "sections": [
         {
           "id": "sec-cjevovodi-motivacija",
@@ -1989,7 +1989,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "ec6a06182af41467296906436b9db1a8e0852aed0da9c50049b339ad2ede6cf3",
+      "source_sha256": "e4ee79421b7434c3460d4da2a7441dcbd5bd2d8f321e36b6bb8d3faced944f2d",
       "sections": [
         {
           "id": "turbostrojevi-i-propulzija",
@@ -2139,7 +2139,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "d5a8a50aec3d5a73a5338c0adae84c403e5304fb4abcb2eb50a33613fb1ccd87",
+      "source_sha256": "af2e5897fe9388978bc368d173f1890f19e90d2044355980f6efea277237d790",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2472,7 +2472,7 @@
       "kind": "appendix",
       "number": "E",
       "part": null,
-      "source_sha256": "6131dca404b0251129d6ccc99f82897633f6ce5570246dd8859fbe74d20a0cf1",
+      "source_sha256": "b42f31fde61005e31ac0cace16816b6cb78cc45d2706bfa9e28594b105dae422",
       "sections": [
         {
           "id": "literatura-i-izvori",

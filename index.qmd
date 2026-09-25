@@ -4,6 +4,6 @@ toc: false
 mf1-document-id: home
 ---
 
-# Mehanika fluida 1 {.unnumbered .mf1-home-title}
+# Mehanika fluida: modeli, problemi i rješenja {.unnumbered .mf1-home-title}
 
 {{< include source/index.md >}}

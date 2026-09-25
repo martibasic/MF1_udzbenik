@@ -10,7 +10,7 @@ Relativno mirovanje nastupa kada se fluid u odnosu na stijenke spremnika smiri, 
 Relativno mirovanje javlja se pri kočenju autocisterne, u gorivnom spremniku vozila, u procesnoj kadi na ubrzanoj platformi te pri rotaciji centrifuga i separatora. Slobodna površina i tlak tada ovise o efektivnom polju sila, a ne samo o gravitaciji.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 8 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 8 sati.
 
 ### Translatorno ubrzanje
 

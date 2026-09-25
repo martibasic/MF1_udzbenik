@@ -10,7 +10,7 @@ U cjevovodnom sustavu kontinuitet povezuje ulazne i izlazne protoke, a energijsk
 Iste bilance opisuju balastni vod broda, rashladni krug, protupožarnu mrežu i sustav grijanja. Uz protok i promjer cijevi provjeravamo radnu točku, godišnju potrošnju električne energije, osjetljivost na hrapavost i usisne uvjete crpke.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 12 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 12 sati.
 
 ## Realna energijska bilanca sustava {#sec-realna-energijska-bilanca}
 

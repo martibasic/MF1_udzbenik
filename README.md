@@ -1,9 +1,14 @@
-# Mehanika fluida 1
+# Mehanika fluida: modeli, problemi i rješenja
 
-Otvoreni radni repozitorij sveučilišnog udžbenika za temeljni kolegij mehanike
+*Priručnik za samostalan rad s numeričkim pokusima i primjenama u brodogradnji*
+
+Otvoreni radni repozitorij priručnika za temeljni kolegij mehanike
 fluida. Primarna su publika studenti strojarstva i brodogradnje, uz primjere iz
 građevinarstva, energetike, okolišnog, biomedicinskog i procesnog inženjerstva
 kada osvjetljavaju isti fizikalni model.
+
+Djelo se priprema za postupak odobravanja sveučilišnog priručnika; radno
+izdanje još ne označava odobrenje te kategorije.
 
 Aktualna grana sadrži arhitekturu **MF1 v2** s poglavljima U01–U15. Sadržajna i
 automatizirana znanstvena revizija provedene su, a sekvencijski proizvodni
@@ -22,7 +27,7 @@ navigaciji, početnom katalogu i [kartiranju izvora](docs/kanonska-struktura-sad
 
 Kanonski rukopis trenutačno obuhvaća **15 poglavlja, 87 riješenih primjera, 90
 samostalnih zadataka, šest dodataka, 17 notebookova, 1.216 stabilnih ID-jeva,
-795 prikazanih jednadžbi i 145 sati** planiranoga rada uz udžbenik. Tih 145
+795 prikazanih jednadžbi i 145 sati** planiranoga rada uz priručnik. Tih 145
 sati nije cijelo ECTS opterećenje kolegija. Ishodi, preduvjeti i raspodjela rada
 definirani su u
 [kurikularnoj matrici](docs/kurikularna_matrica.md).
@@ -35,7 +40,7 @@ definirani su u
   generirani HTML u toj mapi ne uređuje se ručno.
 - `components/`, `design-system/`, `styles/` i `web/` odvajaju semantiku,
   globalne tokene i prikaz. Model, predlošci i postupak proširenja opisani su u
-  [arhitekturi digitalnog udžbenika](docs/arhitektura.md).
+  [arhitekturi digitalnog priručnika](docs/arhitektura.md).
 - `assets/print/` sadrži statičke SVG skice, a `assets/qr/` QR kodove.
 - `notebooks/` sadrži 17 nastavnih notebooka.
 - `data/cfd/` sadrži tri mala V&V podatkovna paketa: dva su spremna nastavna

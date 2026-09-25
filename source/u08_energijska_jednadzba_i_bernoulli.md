@@ -12,7 +12,7 @@ Torricellijev zakon istjecanja povezuje brzinu mlaza s visinom stupca tekućine.
 Bernoullijeva jednadžba povezuje tlak i brzinu u Venturijevoj cijevi, Pitotovoj sondi, mlaznici i sifonu. Za svaki primjer najprije odabiremo presjeke i provjeravamo mogu li se gubitci zanemariti.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 10 sati.
 
 ## Mehanička energija idealnoga toka
 

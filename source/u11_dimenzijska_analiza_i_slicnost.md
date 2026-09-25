@@ -10,7 +10,7 @@ Dimenzijska analiza povezuje tlačne, viskozne, gravitacijske, inercijske i međ
 Brod se prije gradnje ispituje kao model u vučnom bazenu, automobil i zrakoplovno krilo u aerotunelu, a brodski vijak i centrifugalna crpka provjeravaju se na kavitaciju. Model i prototip ponašaju se jednako u bezdimenzijskom smislu samo ako su im jednaki **svi mjerodavni** brojevi te bezdimenzijski rubni i početni uvjeti. Kad to nije moguće, bira se prioritetna sličnost i kvantificira učinak neusklađenih grupa. Isti jezik povezuje vrtložno otpuštanje, raspad mlaza, stlačivost i prijenos rezultata iz laboratorija u pogon.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 9 sati.
 
 ## Dimenzije, jedinice i sila inercije kao referenca
 
@@ -922,12 +922,12 @@ Bezdimenzijski brojevi sažimaju fiziku, ali ne zamjenjuju je. Kada dva broja is
 
 **Kamo dalje nakon MF1**
 
-Udžbenik uz integralnu analizu uvodi i osnove stlačivoga toka, diferencijalnog opisa i otvorenih tokova. Njihova podrobnija obrada prirodno se nastavlja u sljedećim kolegijima:
+Priručnik uz integralnu analizu uvodi i osnove stlačivoga toka, diferencijalnog opisa i otvorenih tokova. Njihova podrobnija obrada prirodno se nastavlja u sljedećim kolegijima:
 
 - **granični sloj i otpor tijela** — kako granični sloj, odvajanje i raspodjela tlaka utječu na otpor i uzgon (koeficijent $C_d$, „otporna kriza” iz ovog poglavlja detaljno se obrađuje u aerodinamici i hidrodinamici);
 - **strujanje u otvorenim kanalima** — gdje vlada Froudeov broj, hidraulički skok i preljevi;
 - **stlačivo strujanje** — plinodinamika, mlaznice i udarni valovi; $Ma\approx0{,}3$ samo je čest orijentir za procjenu promjene gustoće zbog brzine, a ne granica područja;
 - **diferencijalna i računalna dinamika fluida** — lokalne bilance i njihov numerički zapis u []{.mf1-chapter-ref target="u12"}; zajednička mapa nalazi se u @sec-cfd-mapa.
 
-[]{.mf1-chapter-ref target="u11"} povezuje teme udžbenika zajedničkim jezikom omjera mehanizama i normiranih odziva. Ispravno bezdimenzioniranje ne počinje pogađanjem jednoga broja, nego jasnim popisom varijabli, jednadžbi i rubnih uvjeta te obrazloženim izborom relevantnih grupa.
+[]{.mf1-chapter-ref target="u11"} povezuje teme priručnika zajedničkim jezikom omjera mehanizama i normiranih odziva. Ispravno bezdimenzioniranje ne počinje pogađanjem jednoga broja, nego jasnim popisom varijabli, jednadžbi i rubnih uvjeta te obrazloženim izborom relevantnih grupa.
 :::

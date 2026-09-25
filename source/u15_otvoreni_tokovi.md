@@ -10,7 +10,7 @@ U punoj cijevi geometrija presjeka zadaje cijelu granicu toka. U otvorenom kanal
 Otvoreni tokovi pojavljuju se u odvodnim kanalima, preljevima brana, navodnjavanju i ispitnim bazenima. Uz kapacitet kanala treba odrediti smjer širenja poremećaja, položaj kritičnog presjeka i gubitak energije u hidrauličkom skoku.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 9 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 9 sati.
 
 ## Geometrija presjeka i hidraulička dubina {#sec-geometrija-kanala}
 

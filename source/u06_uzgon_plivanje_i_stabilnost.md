@@ -10,7 +10,7 @@ Analiza plivajućega tijela obuhvaća ukupnu težinu, istisnuti volumen te polo�
 Za plovilo ili plutajuću platformu uz istisnuti volumen treba poznavati položaj težišta i centra uzgona. Pomak tereta mijenja moment tih sila i nagib tijela. Taj se račun primjenjuje pri rasporedu opreme na pontonu, provjeri početnog stabiliteta plovila i analizi plutajuće dizalice.
 :::
 
-**Procijenjeno vrijeme rada uz udžbenik:** 10 sati.
+**Procijenjeno vrijeme rada uz priručnik:** 10 sati.
 
 ## Sila uzgona
 
