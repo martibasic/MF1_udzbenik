@@ -97,6 +97,12 @@ ostavljaju samo logove, a privremena radna mapa uklanja se kao i prije.
 propagaciju pogreške i prekid potomaka; `tools/test_render_workspace.py`
 provjerava očuvanje starih izlaza i dijagnostike nakon isteka vremena.
 
+Na Windowsu `taskkill /T` može trajati dulje od prvog zapisa potomka. Test
+prekida zato koristi potomka koji periodično piše i provjerava da se zapis
+više ne mijenja nakon povratka iz gašenja. Zapis nastao tijekom gašenja nije
+dokaz preživjelog procesa. Granica od pet sekundi za timeout i gašenje ostaje
+ista, a test dodatno potvrđuje da se potomak doista pokrenuo.
+
 U [Actionu 35981808104](https://github.com/martibasic/MF1_udzbenik/actions/runs/35981808104)
 PDF je prošao za 28,7 s, zajedno s oba PDF audita. Završni viewport audit
 otkrio je zasebno prelijevanje od 4 px u D06 i zbirnom ispisu pri 320 px.

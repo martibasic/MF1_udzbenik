@@ -38,7 +38,14 @@ class RenderProcessTests(unittest.TestCase):
     def test_timeout_stops_child_and_grandchild(self):
         with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()) as output:
             # A compiler grandchild must not survive to overwrite outputs later.
-            child = "import time; from pathlib import Path; time.sleep(2); Path('orphan.txt').write_text('bad')"
+            child = (
+                "import time\nfrom pathlib import Path\n"
+                "deadline = time.monotonic() + 10\n"
+                "while time.monotonic() < deadline:\n"
+                "    with Path('orphan.txt').open('a') as output:\n"
+                "        output.write('tick\\n')\n"
+                "    time.sleep(0.1)\n"
+            )
             code = ("import subprocess, sys, time; "
                     f"subprocess.Popen([sys.executable, '-c', {child!r}]); "
                     "print('compiler started', flush=True); time.sleep(30)")
@@ -46,8 +53,14 @@ class RenderProcessTests(unittest.TestCase):
             with self.assertRaises(subprocess.TimeoutExpired):
                 self.run_child(code, directory, timeout=0.8)
             self.assertLess(time.monotonic() - started, 5)
+            # taskkill /T may take longer than a child's first write. What
+            # matters is that the descendant stops when cleanup returns.
+            marker = Path(directory) / 'orphan.txt'
+            self.assertTrue(marker.exists(), 'The descendant must run before cleanup')
+            stopped_output = marker.read_bytes()
             time.sleep(2.1)
-            self.assertFalse((Path(directory) / 'orphan.txt').exists())
+            self.assertEqual(marker.read_bytes(), stopped_output,
+                             'The descendant continued writing after cleanup returned')
             self.assertIn('compiler started', (Path(directory) / 'render.log').read_text())
             self.assertIn('Render RUNNING', output.getvalue())
 
