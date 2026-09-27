@@ -2,7 +2,7 @@
 
 Izvorni SVG-ovi u `assets/print/` ostaju autoritativni za fiziku i mrežno
 izdanje. Tiskovne izvedenice u `assets/pdf-figures/` generiraju se iz iste
-geometrije i teksta. Ne uređuju se ručno. U ovom izdanju svih 94 referenciranih
+geometrije i teksta. Ne uređuju se ručno. U ovom izdanju svih 93 referenciranih
 skica jesu SVG-ovi; nema referenciranih PNG skica za obrezivanje. Zasebnih
 17 QR kodova zadržava svoj provjereni format i funkciju.
 
@@ -54,13 +54,28 @@ uz očuvanje matematičkih indeksa i zakrenutih kota. Oznake iznad različitih
 posuda i vrijednosti na osima zadržavaju prostornu pripadnost.
 
 Provjerene posebne kompozicije nalaze se u `assets/figure-compositions.json`:
-usporedba ulja i vode u U01, dimenzijska matrica, tablica dometa mlaza,
+usporedba ulja i vode u U01, dimenzijska matrica, putanje slobodnog mlaza,
 dijagram odluke, zajedničke legende te odmak oznaka i napomena od stijenki.
 Manometar s četirima visinama koristi dva puna retka. `canvas_insets_pt`
 prima rubove `left`, `right`, `top` i `bottom` u tiskovnim točkama; gornji i
 donji rub odvajaju naslove i napomene od debelih fizičkih obrisa cijevi.
 Svaka iznimka mora objasniti razlog; ne smije smanjivati font ispod minimuma.
 Za novi složeni slučaj prvo promijeniti raspored, prijelom ili položaj oznake.
+
+Skice prikazuju geometriju, kote, oznake veličina i kratke nazive prizora.
+Formule za račun, ključni principi, pretpostavke, napomene o mjerilu i dulja
+objašnjenja pripadaju običnom tekstu neposredno ispod slike. U skicama nema
+zasebnih panela „Osnovne relacije”, „Ključne jednadžbe” ni „Ključni princip”.
+Fizikalno važni profili i kvantitativni grafovi zadržavaju osi, podatke i
+kratke legende; trokuti brzina zadržavaju svoje vektore. Opis slike kratko
+imenuje prizor, a odlomak ispod objašnjava njegovo značenje.
+
+U reviziji svih 94 dotadašnjih figura objašnjenja su prenesena u kanonski
+tekst svih 15 poglavlja. Jedan isključivo tekstni prikaz mjerila sila postao
+je običan odlomak, uz očuvano sidro; preostale 93 figure zadržavaju prizore
+i dijagrame. Uklonjen je 61 tekstni panel. Kanonski SVG-ovi obrezani su i
+paneli složeni translacijom, bez skaliranja ili promjene fizičke geometrije.
+Tiskovni format sada se bira prema potrebama samoga prizora.
 
 Svaki tiskovni SVG ima vlastiti obrezani `viewBox` i dimenzije u pt. Typst
 umeće retke u toj fizičkoj veličini; ne rasteže ih na širinu stranice. Redci
@@ -99,7 +114,7 @@ svakoga učitanog tiskovnog retka.
 
 Automatske provjere dopunjuju vizualni pregled cijelog PDF-a i odnosa oznaka
 prema stijenkama, fluidu, osima i vektorima. Ne dokazuju same fizikalnu
-točnost. Sadržaj, ID-jevi, 90 zadataka, 87 primjera i 94 figure ostaju predmet
+točnost. Sadržaj, ID-jevi, 90 zadataka, 87 primjera i 93 figure ostaju predmet
 zasebnoga publikacijskog audita.
 
 Redizajn tiskovnih figura smanjio je tadašnjih 420 stranica na 340 uz povećanje

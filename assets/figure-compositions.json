@@ -6,7 +6,7 @@
         "standard"
       ]
     ],
-    "reason": "Jednostavna posuda uz usporedbu dvaju fluida; isti fizički font u obje podslike."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
   "u14_fig_pi_buckingham.svg": {
     "rows": [
@@ -15,47 +15,25 @@
       ]
     ],
     "preserve_table": true,
-    "reason": "Dimenzijska matrica mora zadržati odnose redaka i stupaca."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
   "u07_vjezbe_skice.svg": {
-    "text_offsets_pt": {
-      "47": [
-        0,
-        22
-      ]
-    },
+    "text_offsets_pt": {},
     "caption_anchor_panel": 5,
-    "reason": "Dugi zadnji redak zajedničke legende treba dodatni redak na 9 pt."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
   "u08_vjezbe_skice.svg": {
     "caption_anchor_panel": 5,
-    "reason": "Zajednička legenda i opis ostaju uz posljednji red skica Z5 i Z6."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
   "u09_val2_slobodni_mlaz.svg": {
-    "text_tables": [
-      [
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38
-      ]
-    ],
-    "reason": "Tablica visine, brzine, vremena i dometa čuva četiri povezana stupca."
+    "text_tables": [],
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka.",
+    "caption_anchor_panel": 0
   },
   "u14_fig_odluka.svg": {
     "spatial_text": [
+      1,
       2,
       3,
       4,
@@ -66,25 +44,16 @@
       9,
       10,
       11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19
+      12
     ],
-    "reason": "Svako pitanje i odgovor ostaju na istoj razini uz pripadajuću strelicu."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
   "u12_vjezbe_skice.svg": {
     "header_text": [
-      58
+      52
     ],
-    "reason": "Opis dovoda stoji iznad cijevi; napomena uz Z2 ispod koordinatnih osi.",
-    "footer_text": [
-      17
-    ],
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka.",
+    "footer_text": [],
     "text_offsets_pt": {
       "3": [
         0,
@@ -93,70 +62,60 @@
     }
   },
   "u05_fig_uvod_pregled.svg": {
-    "footer_text": [
-      44,
-      45,
-      46,
-      47
-    ],
+    "footer_text": [],
     "text_offsets_pt": {
       "9": [
         -35,
         0
       ]
     },
-    "reason": "Objašnjenja ispod sile izdvojena su ispod crteža; ne smiju prelaziti preko stijenke."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
   "u04_fig_uvod_pregled.svg": {
     "canvas_insets_pt": {
       "0": {
         "right": 9
       },
-      "2": {
+      "1": {
         "right": 9
       }
     },
-    "reason": "Dodatni prostor desno za oznake razina h_R i h_0 izvan krute stijenke."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
   "u05_val1_pravokutna_zaklopka.svg": {
-    "rows": [
-      [
-        "standard",
-        "mini"
-      ]
-    ],
     "canvas_insets_pt": {
       "0": {
         "left": 48
       }
     },
     "text_offsets_pt": {
-      "37": [
+      "15": [
         -72,
         0
       ],
-      "38": [
+      "16": [
         -72,
         0
       ],
-      "39": [
+      "17": [
         -72,
         0
       ],
-      "40": [
+      "18": [
         -72,
         0
       ],
-      "7": [
+      "4": [
         0,
         -2
       ],
-      "41": [
+      "19": [
         0,
         -5
       ]
     },
-    "reason": "Širi geometrijski panel i prostor lijevo za kote; odvojeni pogled na plohu ispod dna spremnika."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka.",
+    "caption_anchor_panel": 0
   },
   "u11_val2_mlaznica_prirubnica.svg": {
     "text_offsets_pt": {
@@ -170,82 +129,78 @@
         "right": 25
       }
     },
-    "reason": "Oznaka sile ostaje desno od mjerne ploče i uz pripadnu strelicu."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka.",
+    "caption_anchor_panel": 0
   },
   "u12_ch2_pelton_rotor_moment.svg": {
     "footer_text": [
-      14
+      13
     ],
-    "reason": "Opis zajedničkog mjerila trokuta brzina stoji ispod crteža, izvan referentne kružnice rotora.",
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka.",
     "header_text": [
-      11,
-      12
+      10,
+      11
     ],
     "text_offsets_pt": {
-      "10": [
+      "9": [
         -50,
         0
       ],
-      "7": [
+      "6": [
         -50,
         8
       ]
-    }
+    },
+    "caption_anchor_panel": 0
   },
   "u03_val1_diferencijalni_manometar.svg": {
-    "rows": [
-      [
-        "wide"
-      ],
-      [
-        "wide"
-      ]
-    ],
     "text_offsets_pt": {
-      "29": [
+      "2": [
         0,
         -8
       ],
-      "30": [
+      "3": [
         4,
         12
       ],
-      "35": [
+      "8": [
         -5,
         0
       ],
-      "36": [
+      "9": [
         0,
         4
       ],
-      "37": [
+      "10": [
         -8,
         0
       ],
-      "39": [
+      "12": [
         8,
         0
       ]
     },
-    "reason": "Manometar zauzima punu širinu zbog četiri visine i uskih krakova; slijed računa ostaje zaseban povezani panel.",
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka.",
     "header_text": [
-      28
+      1
     ],
     "footer_text": [
-      34
+      7
     ],
     "canvas_insets_pt": {
       "0": {
         "top": 20,
         "bottom": 18
       }
-    }
+    },
+    "caption_anchor_panel": 0
   },
   "u04_ch1_rotirajuci_spremnik_paraboloid.svg": {
     "header_text": [
-      31
+      15
     ],
-    "reason": "Podatak početne mirne razine stoji iznad crteža, izvan stijenke i osi vrtnje."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka.",
+    "caption_anchor_panel": 0
   },
   "u13_mreze_vjezbe_skice.svg": {
     "canvas_insets_pt": {
@@ -253,6 +208,216 @@
         "top": 6
       }
     },
-    "reason": "Naslov i otpor gornje grane ostaju iznad fizičke širine stijenke cijevi."
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u01_val1_klip_manometar.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u01_val2_hidraulicna_dizalica.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u01_ch1_dvostruka_platforma_manometar.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u01_fig_kocnica_vozila.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u02_fig_kinematicka_viskoznost.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u02_val2_viskoznost_kapilarnost.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u02_fig_kapilarni_uspon_etanol.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u02_ch1_kapilarni_mikrodozator_kapljica.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u02_fig_lezaj_temperatura.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u03_fig_zatvoreni_spremnik_tlak.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u03_ch1_zatvoreni_spremnik_ulje_ziva.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u03_fig_pumpa_usis.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u03_fig_balastni_tank.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u04_val2_laboratorijska_kolica.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u04_val3_kosa_stijenka.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u04_fig_rotirajuci_cilindar.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u04_fig_autocisterna_kocenje.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u05_val3_kosi_poklopac.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u05_ch1_pregrada_ulje_voda.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u06_val1_cetvrtina_kruga.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u06_val3_cetvrtcilindricni_poklopac.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u06_ch1_poklopac_spojnica.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u07_val2_ponton_gaz.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u07_val1_platforma_kompresor.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u07_ch1_platforma_ulje_voda_ormar.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u07_ch2_poplavljen_tank.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u07_fig_pumpno_kuciste.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u08_val1_difuzor_kontinuitet.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u08_val3_izjednacni_spremnik.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u08_ch1_mijesajuci_spremnik.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u08_fig_t_komad_hidraulika.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u09_egl_hgl_schema.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u09_val3_idealni_sifon.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u09_ch1_bypass_sifon_suzenje_mlaz.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u09_fig_venturijeva_cijev.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u11_val1_mlaz_na_plocu.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u11_val3_koljeno_reakcija.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u11_ch1_t_racva_konzola.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u11_ch2_y_racva_reakcija.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u10_fig_hidroenergetsko_koljeno.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u14_val1_reynolds_kanal.svg": {
+    "rows": [
+      [
+        "wide"
+      ]
+    ],
+    "text_offsets_pt": {
+      "3": [
+        0,
+        -6
+      ],
+      "4": [
+        0,
+        -6
+      ],
+      "6": [
+        0,
+        -6
+      ],
+      "8": [
+        0,
+        -6
+      ],
+      "9": [
+        0,
+        -6
+      ],
+      "11": [
+        0,
+        -6
+      ]
+    },
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u12_val1_vodilica_mlaza.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u12_fig_relativni_dotok.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u12_val3_pokretna_lopatica.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u12_ch1_pokretna_zakrivljena_lopatica.svg": {
+    "caption_anchor_panel": 1,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   }
 }

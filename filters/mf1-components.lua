@@ -61,7 +61,7 @@ local function example_fields(div)
   local result, current = pandoc.List(), nil
   for _, block in ipairs(div.content) do
     -- Solution steps describe a local algorithm, not subsections of the book.
-    if block.t == "Header" then
+    if block.t == "Header" and block.identifier:sub(1,5) ~= "task-" then
       local attr=block.attr
       attr.classes:insert("mf1-minor-title")
       block=pandoc.Div({pandoc.Para({pandoc.Strong(block.content)})},attr)
@@ -73,6 +73,11 @@ local function example_fields(div)
     if field then
       current=decorate(pandoc.Div({},pandoc.Attr("",{"mf1-example-field"})),field)
       result:insert(current)
+    elseif (block.t == "Div" and block.classes:includes("content-visible"))
+      or (block.t == "Para" and #block.content == 1 and block.content[1].t == "Span"
+        and block.content[1].classes:includes("mf1-task-level")) then
+      -- Hints, answers and the level label belong to the problem, not Required.
+      current=nil
     end
     if current then current.content:insert(block) else result:insert(block) end
   end
@@ -115,6 +120,11 @@ local function adapt_div(div)
         result:insert(current)
       end
       if current then current.content:insert(block) else result:insert(block) end
+    end
+    for _,problem in ipairs(result) do
+      if problem.t=="Div" and problem.classes:includes("mf1-problem") then
+        example_fields(problem)
+      end
     end
     div.content=result
   end

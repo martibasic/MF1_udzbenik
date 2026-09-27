@@ -108,7 +108,11 @@ def main():
         check(not any(e.tag.endswith('filter') for e in root.iter()),name+': no shadow filter')
     intro,kin,combined,ethanol,micro,bearing,z=roots
     for root,p in [(intro,'u02fup_'),(kin,'u02fkv_'),(combined,'u02v2vk_')]:shear(root,p+'shear')
-    for root,p in [(intro,'u02fup_'),(combined,'u02v2vk_'),(ethanol,'u02fku_')]:
+    # P2 now shows only its Couette problem. Capillarity has a dedicated P3
+    # figure and remains independently checked there and in the overview.
+    check(not any((e.get('id') or '').startswith('u02v2vk_cap') for e in combined.iter()),
+          'P2: no unrelated capillarity scene beside the shear problem')
+    for root,p in [(intro,'u02fup_'),(ethanol,'u02fku_')]:
         ar,wl,wr,surface=capillary(root,p+'cap')[0]
         tangent_forces(root,p+'cap',ar,18)
         hline=line(node(root,p+'height'))

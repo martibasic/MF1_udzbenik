@@ -1,2111 +1,1624 @@
 {
   "u01_ch1_dvostruka_platforma_manometar.svg": {
-    "source_sha1": "86903dab1e844451e87ddb7691854223332f36b7",
+    "source_sha1": "ab57e29b656a1acfac0e17c0aa9103717e7c7a22",
     "panels": [
       [
-        8,
-        15,
-        792,
-        587
-      ],
-      [
-        810,
-        59,
-        156,
-        457
+        12,
+        12,
+        807,
+        538
       ]
-    ],
-    "after": [
-      30
     ]
   },
   "u01_fig_gustoca_sr.svg": {
-    "source_sha1": "4e49e44ca01b0a9de56ce4de5e5fcacabf2e2e2a",
+    "source_sha1": "3a244add1e5b2e78c565aeb073c2e93d6b5cff1e",
     "panels": [
       [
-        24,
-        24,
-        442,
-        392
+        12,
+        12,
+        238,
+        314
       ],
       [
-        484,
-        24,
-        472,
-        392
+        274,
+        12,
+        368,
+        254
       ]
     ]
   },
   "u01_fig_kocnica_vozila.svg": {
-    "source_sha1": "69ddcfb9f111a57da6d4084ff9975104390fe454",
-    "panels": [
-      [
-        0,
-        0,
-        574.914,
-        577
-      ],
-      [
-        604,
-        24,
-        362,
-        563
-      ]
-    ]
-  },
-  "u01_fig_uvod_pregled.svg": {
-    "source_sha1": "42f8dbdb2e4c0f2c6f1bedf521a626e246a1374d",
-    "panels": [
-      [
-        24,
-        24,
-        302,
-        412
-      ],
-      [
-        334,
-        24,
-        312,
-        412
-      ],
-      [
-        654,
-        24,
-        302,
-        412
-      ]
-    ]
-  },
-  "u01_val1_klip_manometar.svg": {
-    "source_sha1": "874247d03931d5a997e168f732391fcfd3322104",
-    "panels": [
-      [
-        42,
-        23,
-        595.722,
-        424
-      ],
-      [
-        674,
-        94,
-        292,
-        369
-      ]
-    ],
-    "after": [
-      21,
-      22
-    ]
-  },
-  "u01_val2_hidraulicna_dizalica.svg": {
-    "source_sha1": "afbd877b3d8a25863e91556853ae3f1121d0e6d6",
-    "panels": [
-      [
-        54.392,
-        72,
-        611.608,
-        440
-      ],
-      [
-        694,
-        54,
-        272,
-        437
-      ]
-    ]
-  },
-  "u01_vjezbe_skice.svg": {
-    "source_sha1": "3be1ba7aa10fca85d5e051d4a9dcf55ec4df8a28",
-    "panels": [
-      [
-        23.0,
-        23.0,
-        304.0,
-        294.0
-      ],
-      [
-        338.0,
-        23.0,
-        304.0,
-        294.0
-      ],
-      [
-        653.0,
-        23.0,
-        304.0,
-        294.0
-      ],
-      [
-        23.0,
-        338.0,
-        304.0,
-        294.0
-      ],
-      [
-        338.0,
-        338.0,
-        304.0,
-        294.0
-      ],
-      [
-        653.0,
-        338.0,
-        304.0,
-        294.0
-      ]
-    ],
-    "after": [
-      68
-    ]
-  },
-  "u02_ch1_kapilarni_mikrodozator_kapljica.svg": {
-    "source_sha1": "736554d658b07e02a1268376c762d55bcff85aa3",
-    "panels": [
-      [
-        29,
-        50.48,
-        374,
-        448.64
-      ],
-      [
-        431,
-        23,
-        589,
-        456
-      ]
-    ]
-  },
-  "u02_fig_kapilarni_uspon_etanol.svg": {
-    "source_sha1": "ffca5c125ad897c784fce643aee80640e76736a2",
-    "panels": [
-      [
-        30,
-        15,
-        348,
-        410
-      ],
-      [
-        442,
-        56,
-        417,
-        354
-      ]
-    ]
-  },
-  "u02_fig_kinematicka_viskoznost.svg": {
-    "source_sha1": "442a029fdf7020222946e6e7ac651fd6949721bc",
-    "panels": [
-      [
-        25,
-        19,
-        411,
-        352
-      ],
-      [
-        436,
-        29,
-        441,
-        342
-      ]
-    ]
-  },
-  "u02_fig_lezaj_temperatura.svg": {
-    "source_sha1": "1268308e729e77e9321314c79bbae6ce7e19b4ed",
-    "panels": [
-      [
-        47,
-        8,
-        597,
-        501
-      ],
-      [
-        670,
-        33,
-        230,
-        476
-      ]
-    ]
-  },
-  "u02_fig_uvod_pregled.svg": {
-    "source_sha1": "736fa20cf48a7a51a07289259aebf6f5e1f5a350",
+    "source_sha1": "f5835056bc6a7223de2e2fbd099c4184eb18de55",
     "panels": [
       [
         12,
-        78,
-        482,
-        490
-      ],
-      [
-        496,
-        78,
-        472,
-        490
-      ]
-    ],
-    "before": [
-      1,
-      2
-    ]
-  },
-  "u02_val2_viskoznost_kapilarnost.svg": {
-    "source_sha1": "ee4b11f2f23e89de18afde55c947925c1abe1c8a",
-    "panels": [
-      [
-        29,
-        37,
-        453,
-        385
-      ],
-      [
-        497,
-        37,
-        453,
-        385
-      ]
-    ]
-  },
-  "u02_vjezbe_skice.svg": {
-    "source_sha1": "4e45416ae3442c0860e23e20a72dc815c216a73f",
-    "panels": [
-      [
-        20.0,
-        26.0,
-        296.0,
-        320.0
-      ],
-      [
-        332.0,
-        26.0,
-        296.0,
-        320.0
-      ],
-      [
-        644.0,
-        26.0,
-        296.0,
-        320.0
-      ],
-      [
-        20.0,
-        370.0,
-        296.0,
-        320.0
-      ],
-      [
-        332.0,
-        370.0,
-        296.0,
-        320.0
-      ],
-      [
-        644.0,
-        370.0,
-        296.0,
-        320.0
-      ]
-    ],
-    "after": [
-      61
-    ]
-  },
-  "u03_balans_tlaka_i_geff.svg": {
-    "source_sha1": "3a7aed9215f0c48f8db009eeee59350f201e115f",
-    "panels": [
-      [
-        26.374,
-        32,
-        439.626,
-        418
-      ],
-      [
-        466,
-        32,
-        336,
-        418
-      ]
-    ]
-  },
-  "u03_ch1_zatvoreni_spremnik_ulje_ziva.svg": {
-    "source_sha1": "260cc7f2c6a5c85ebd804859a1040590786a8967",
-    "panels": [
-      [
-        0,
-        0,
-        694,
-        547
-      ],
-      [
-        694,
-        34,
-        262,
-        482
-      ]
-    ]
-  },
-  "u03_fig_balastni_tank.svg": {
-    "source_sha1": "baf632c834a5738bf15c456c43bc4bab44bd54cb",
-    "panels": [
-      [
-        6,
-        0,
-        608,
-        558
-      ],
-      [
-        624,
-        34,
-        332,
-        498
-      ]
-    ]
-  },
-  "u03_fig_pumpa_usis.svg": {
-    "source_sha1": "8a59f3c9111adeb35653789cbb00c31a160a0bb8",
-    "panels": [
-      [
-        0,
-        0,
-        490,
-        550
-      ],
-      [
-        490,
-        28,
-        460,
-        517.078
-      ]
-    ]
-  },
-  "u03_fig_uvod_pregled.svg": {
-    "source_sha1": "ab7ec64de60314e239ee05c8f5d7297f4c387f5f",
-    "panels": [
-      [
-        14,
-        16,
-        352,
-        468
-      ],
-      [
-        370,
-        16,
-        308,
-        468.5
-      ],
-      [
-        680,
-        16,
-        286,
-        468
-      ]
-    ]
-  },
-  "u03_fig_zatvoreni_spremnik_tlak.svg": {
-    "source_sha1": "badd6e86cfcc9f43c141546057cdbbdabefb50c1",
-    "panels": [
-      [
-        8,
-        8,
-        447,
-        484
-      ],
-      [
-        458,
-        8,
-        414,
-        484
-      ]
-    ]
-  },
-  "u03_val1_diferencijalni_manometar.svg": {
-    "source_sha1": "f18b53360ea684146a0bab4012ad4b13cb963867",
-    "panels": [
-      [
-        8,
         12,
-        568,
-        480
-      ],
-      [
-        580,
-        12,
-        372,
-        480
-      ]
-    ]
-  },
-  "u03_vjezbe_skice.svg": {
-    "source_sha1": "905dd7884f967b466722eff902d31cefcf0213b8",
-    "panels": [
-      [
-        26.0,
-        32.0,
-        304.0,
-        344.0
-      ],
-      [
-        338.0,
-        32.0,
-        304.0,
-        344.0
-      ],
-      [
-        650.0,
-        32.0,
-        304.0,
-        344.0
-      ],
-      [
-        26.0,
-        384.0,
-        304.0,
-        344.0
-      ],
-      [
-        338.0,
-        384.0,
-        304.0,
-        344.0
-      ],
-      [
-        650.0,
-        384.0,
-        304.0,
-        344.0
-      ]
-    ],
-    "after": [
-      61
-    ]
-  },
-  "u04_ch1_rotirajuci_spremnik_paraboloid.svg": {
-    "source_sha1": "89db0aecc984750d114e35ed62c2d11e755019d9",
-    "panels": [
-      [
-        34,
-        28,
-        466,
-        464
-      ],
-      [
-        500,
-        28,
-        416,
-        473.133
-      ]
-    ]
-  },
-  "u04_fig_autocisterna_kocenje.svg": {
-    "source_sha1": "821e0502820f263953480a5ebbe3bb22096b9b41",
-    "panels": [
-      [
-        0,
-        0,
-        622,
-        514.2
-      ],
-      [
-        640,
-        94,
-        296,
-        416
-      ]
-    ]
-  },
-  "u04_fig_rotirajuci_cilindar.svg": {
-    "source_sha1": "7c49e513d649e073eb0b2a5e50852a301c6a5fa1",
-    "panels": [
-      [
-        10,
-        10,
-        485.861,
-        506
-      ],
-      [
-        508,
-        30,
-        346,
-        470
-      ]
-    ]
-  },
-  "u04_fig_uvod_pregled.svg": {
-    "source_sha1": "4b5b19bc8bbf3452c1442db534f2d597c32fc902",
-    "panels": [
-      [
-        16,
-        54,
-        336,
-        460
-      ],
-      [
-        355,
-        54,
-        261,
-        460
-      ],
-      [
-        620,
-        54,
-        344,
-        460
-      ]
-    ],
-    "before": [
-      1
-    ]
-  },
-  "u04_val2_laboratorijska_kolica.svg": {
-    "source_sha1": "5d7e50435eb0ada7b66140ad6fa08567cd7911fb",
-    "panels": [
-      [
-        8,
-        12,
-        568,
-        470
-      ],
-      [
-        580,
-        12,
-        332,
-        470
-      ]
-    ]
-  },
-  "u04_val3_kosa_stijenka.svg": {
-    "source_sha1": "bfa93bb3af6a2f0a3b3acfa9033943bd4c5ea27a",
-    "panels": [
-      [
-        0,
-        0,
-        486,
-        528
-      ],
-      [
-        488,
-        94,
-        438,
-        422
-      ]
-    ]
-  },
-  "u04_vjezbe_skice.svg": {
-    "source_sha1": "387dadb1144094106b1449c9b866eeb1543191ca",
-    "panels": [
-      [
-        26.0,
-        28.0,
-        452.0,
-        228.0
-      ],
-      [
-        482.0,
-        28.0,
-        452.0,
-        228.0
-      ],
-      [
-        26.0,
-        266.0,
-        452.0,
-        228.0
-      ],
-      [
-        482.0,
-        266.0,
-        452.0,
-        228.0
-      ],
-      [
-        26.0,
-        504.0,
-        452.0,
-        234.0
-      ],
-      [
-        482.0,
-        504.0,
-        452.0,
-        228.0
-      ]
-    ],
-    "after": [
-      90
-    ]
-  },
-  "u05_ch1_pregrada_ulje_voda.svg": {
-    "source_sha1": "68b2082bf054ac96872f30e191812c1df69d3089",
-    "panels": [
-      [
-        10,
-        10,
-        440,
-        539
-      ],
-      [
-        452,
-        10,
-        498,
-        539
-      ]
-    ]
-  },
-  "u05_fig_uvod_pregled.svg": {
-    "source_sha1": "4b45346b63199ccca09851ef8ed59974d6292d31",
-    "panels": [
-      [
-        18,
-        18,
-        367,
-        484
-      ],
-      [
-        385,
-        18,
-        253,
-        484
-      ],
-      [
-        640,
-        18,
-        322,
-        484
-      ]
-    ]
-  },
-  "u05_val1_pravokutna_zaklopka.svg": {
-    "source_sha1": "75314c6e00f22d53a60e8903802262b7681e205e",
-    "panels": [
-      [
-        18,
-        19.682,
-        431.398,
-        490
-      ],
-      [
-        452,
-        44,
-        424,
-        421.648
-      ]
-    ]
-  },
-  "u05_val3_kosi_poklopac.svg": {
-    "source_sha1": "68facf2dcb6448bf0520efef91a83ed30174ab0d",
-    "panels": [
-      [
-        34.0,
-        30.0,
-        454.0,
-        440.0
-      ],
-      [
-        488,
-        30.0,
-        430.0,
-        440.0
-      ]
-    ]
-  },
-  "u05_vjezbe_skice.svg": {
-    "source_sha1": "f41c5eb09ec42ecad1e798d28b6ea96bc836ea8f",
-    "panels": [
-      [
-        26.0,
-        28.0,
-        452.0,
-        228.0
-      ],
-      [
-        482.0,
-        28.0,
-        452.0,
-        228.0
-      ],
-      [
-        26.0,
-        272.0,
-        452.0,
-        228.0
-      ],
-      [
-        482.0,
-        272.0,
-        452.0,
-        234.0
-      ],
-      [
-        26.0,
-        516.0,
-        452.0,
-        228.0
-      ],
-      [
-        482.0,
-        516.0,
-        452.0,
-        228.0
-      ]
-    ],
-    "after": [
-      92
-    ]
-  },
-  "u06_ch1_poklopac_spojnica.svg": {
-    "source_sha1": "b8056adbbf220ad511f03f34848803e9ecca2f7d",
-    "panels": [
-      [
-        9,
-        22.391,
-        449.731,
-        452.739
-      ],
-      [
-        502,
-        34,
-        437.778,
-        490
-      ]
-    ]
-  },
-  "u06_val1_cetvrtina_kruga.svg": {
-    "source_sha1": "046f3077f083f341f549bb25a786e4061764e36e",
-    "panels": [
-      [
-        34,
-        21,
-        439.508,
-        481
-      ],
-      [
-        554,
-        44,
-        332,
-        458
-      ]
-    ]
-  },
-  "u06_val3_cetvrtcilindricni_poklopac.svg": {
-    "source_sha1": "310eaa4571e55c86cc3bd7b3ed6ea7d9e382d46c",
-    "panels": [
-      [
-        16.0,
-        37,
-        414.701,
-        384.089
-      ],
-      [
-        514,
-        37.378,
-        404,
-        386.622
-      ]
-    ]
-  },
-  "u07_ch1_platforma_ulje_voda_ormar.svg": {
-    "source_sha1": "44b071efa35796cec94d87c3b4cc1a91654b05ad",
-    "panels": [
-      [
-        44,
-        30,
-        544,
-        502.085
-      ],
-      [
-        588,
-        30,
-        370,
+        539,
         530
       ]
     ]
   },
-  "u07_ch2_poplavljen_tank.svg": {
-    "source_sha1": "db6b87aa33f3e1823530aeff978e275e475d9c19",
+  "u01_fig_uvod_pregled.svg": {
+    "source_sha1": "6399c42d7f534eb48430a9018ff7d3da53703d44",
     "panels": [
       [
-        8.0,
-        8.0,
-        598.0,
-        575.0
+        12,
+        12,
+        244,
+        294
       ],
       [
-        620,
-        21.404,
-        340.0,
-        559.596
+        280,
+        12,
+        248,
+        290
+      ],
+      [
+        552,
+        12,
+        237,
+        236
       ]
     ]
   },
-  "u07_fig_pumpno_kuciste.svg": {
-    "source_sha1": "92b0051e8b57ba75ca6ac0c65ca655070ee3ec2d",
+  "u01_val1_klip_manometar.svg": {
+    "source_sha1": "bdd16efa414fc5c5222d7f75977ca642da4baa59",
     "panels": [
       [
-        47,
-        33.651,
-        346,
-        411.396
-      ],
-      [
-        450,
-        28.651,
-        430.0,
-        419.349
+        12,
+        12,
+        608,
+        436
       ]
     ]
   },
-  "u07_fig_uvod_pregled.svg": {
-    "source_sha1": "0abc7c2cdd970733c6434dfedea461e7452083c1",
+  "u01_val2_hidraulicna_dizalica.svg": {
+    "source_sha1": "3deb519e797f035847f593f89779a47607aa8dd9",
     "panels": [
       [
-        21,
-        22,
-        459,
+        12,
+        12,
+        624,
         416
-      ],
-      [
-        484,
-        22,
-        488,
-        430
       ]
     ]
   },
-  "u07_val1_platforma_kompresor.svg": {
-    "source_sha1": "96b7b1f3c6a9e65ab0e7dc1bb561b67b168fb902",
+  "u01_vjezbe_skice.svg": {
+    "source_sha1": "0966fac26f599ddb10867d6f1a3e7a37ff4e4a17",
     "panels": [
       [
-        10,
-        10,
-        540,
-        500
+        12,
+        12,
+        288,
+        265
       ],
       [
-        554,
-        10,
-        397.232,
-        500
+        324,
+        12,
+        297,
+        299
+      ],
+      [
+        645,
+        12,
+        297,
+        299
+      ],
+      [
+        12,
+        339,
+        290,
+        216
+      ],
+      [
+        326,
+        339,
+        297,
+        256
+      ],
+      [
+        647,
+        339,
+        312,
+        256
       ]
     ]
   },
-  "u07_val2_ponton_gaz.svg": {
-    "source_sha1": "afdb374095601053221a8cdfc8eb8fab44109d66",
+  "u02_ch1_kapilarni_mikrodozator_kapljica.svg": {
+    "source_sha1": "3c0b08c1e7f5daf3f1079c87086320047bfa0ca6",
     "panels": [
       [
-        39,
-        28.659,
-        405.232,
-        441.341
+        12,
+        12,
+        386,
+        408
+      ]
+    ]
+  },
+  "u02_fig_kapilarni_uspon_etanol.svg": {
+    "source_sha1": "fe968d19ec07cf3138dd6cb62c55b3b62a223b8a",
+    "panels": [
+      [
+        12,
+        12,
+        354,
+        419
+      ]
+    ]
+  },
+  "u02_fig_kinematicka_viskoznost.svg": {
+    "source_sha1": "1a0d09006611428e74a5d8899bd35a2fcc714f85",
+    "panels": [
+      [
+        12,
+        12,
+        384,
+        289
+      ]
+    ]
+  },
+  "u02_fig_lezaj_temperatura.svg": {
+    "source_sha1": "d5c8b54a8f9720f5f1a4ae1cefcffcf618f1b0aa",
+    "panels": [
+      [
+        12,
+        12,
+        581,
+        507
+      ]
+    ]
+  },
+  "u02_fig_uvod_pregled.svg": {
+    "source_sha1": "c4b8cda7e22e67309751808a0218032f1bf7d2dc",
+    "panels": [
+      [
+        12,
+        12,
+        418,
+        305
       ],
       [
-        450,
-        44,
-        424,
+        454,
+        12,
+        362,
+        229
+      ]
+    ]
+  },
+  "u02_val2_viskoznost_kapilarnost.svg": {
+    "source_sha1": "95b5895435660d93ccf5a70939efdf12dc3b94cd",
+    "panels": [
+      [
+        12,
+        12,
+        426,
+        363
+      ]
+    ]
+  },
+  "u02_vjezbe_skice.svg": {
+    "source_sha1": "2228b756f85b42af882b21fb909d6b638684e198",
+    "panels": [
+      [
+        12,
+        12,
+        271,
+        308
+      ],
+      [
+        307,
+        12,
+        259,
+        283
+      ],
+      [
+        590,
+        12,
+        299,
+        297
+      ],
+      [
+        12,
+        348,
+        287,
+        326
+      ],
+      [
+        323,
+        348,
+        296,
+        300
+      ],
+      [
+        643,
+        348,
+        274,
+        308
+      ]
+    ]
+  },
+  "u03_balans_tlaka_i_geff.svg": {
+    "source_sha1": "5a1d749982573c63aa0f3423daf8fc305bad3e5e",
+    "panels": [
+      [
+        12,
+        12,
+        412,
+        381
+      ],
+      [
+        448,
+        12,
+        328,
+        383
+      ]
+    ]
+  },
+  "u03_ch1_zatvoreni_spremnik_ulje_ziva.svg": {
+    "source_sha1": "6126f1cbdaaf9d485360045ff86aaceaf9c7e992",
+    "panels": [
+      [
+        12,
+        12,
+        712,
+        465
+      ]
+    ]
+  },
+  "u03_fig_balastni_tank.svg": {
+    "source_sha1": "84848a9f0952ee9f765f5e70c5b4cb50fb2545f3",
+    "panels": [
+      [
+        12,
+        12,
+        620,
+        505
+      ]
+    ]
+  },
+  "u03_fig_pumpa_usis.svg": {
+    "source_sha1": "cae98b44c066528ec5368da1235ce89d866b7892",
+    "panels": [
+      [
+        12,
+        12,
+        472,
+        517
+      ]
+    ]
+  },
+  "u03_fig_uvod_pregled.svg": {
+    "source_sha1": "7c1698a4b9af49baaf7358713d3aab3817247946",
+    "panels": [
+      [
+        12,
+        12,
+        335,
+        412
+      ],
+      [
+        371,
+        12,
+        292,
+        434
+      ]
+    ]
+  },
+  "u03_fig_zatvoreni_spremnik_tlak.svg": {
+    "source_sha1": "eb5eb59c476af6fef08ee57d8debe0af340cf8ac",
+    "panels": [
+      [
+        12,
+        12,
+        436,
+        412
+      ]
+    ]
+  },
+  "u03_val1_diferencijalni_manometar.svg": {
+    "source_sha1": "95e20c77cfcf8ec59615a9cbbe698719fda167eb",
+    "panels": [
+      [
+        12,
+        12,
+        552,
         418
       ]
     ]
   },
-  "u07_vjezbe_skice.svg": {
-    "source_sha1": "db8f7edf302e3d5a0730270f9d7e78eaf26e77c1",
+  "u03_vjezbe_skice.svg": {
+    "source_sha1": "fdb610202162b7e1cdbd3c8b63916441ec48dac0",
     "panels": [
       [
-        28.0,
-        34.0,
-        304.0,
-        232.0
+        12,
+        12,
+        298,
+        317
       ],
       [
-        344.0,
-        34.0,
-        304.0,
-        232.0
+        334,
+        12,
+        270,
+        322
       ],
       [
-        660.0,
-        34.0,
-        288.0,
-        232.0
+        628,
+        12,
+        265,
+        325
       ],
       [
-        28.0,
-        284.0,
-        304.0,
-        232.0
+        12,
+        365,
+        281,
+        320
       ],
       [
-        344.0,
-        284.0,
-        304.0,
-        232.0
+        317,
+        365,
+        252,
+        299
       ],
       [
-        660.0,
-        284.0,
-        288.0,
-        232.0
+        593,
+        365,
+        272,
+        321
+      ]
+    ]
+  },
+  "u04_ch1_rotirajuci_spremnik_paraboloid.svg": {
+    "source_sha1": "e11a800903386187056707d7bee104223b9ac897",
+    "panels": [
+      [
+        12,
+        12,
+        423,
+        461
+      ]
+    ]
+  },
+  "u04_fig_autocisterna_kocenje.svg": {
+    "source_sha1": "57ee8eda96e71079e0cc48b5e8abc20d9602bedc",
+    "panels": [
+      [
+        12,
+        12,
+        615,
+        459
+      ]
+    ]
+  },
+  "u04_fig_rotirajuci_cilindar.svg": {
+    "source_sha1": "1ab56a469a74352bd9cbb578ec567cf95bff25a6",
+    "panels": [
+      [
+        12,
+        12,
+        489,
+        473
+      ]
+    ]
+  },
+  "u04_fig_uvod_pregled.svg": {
+    "source_sha1": "aed27a3c9f146ab0dc99a53c4ff31c6788135f05",
+    "panels": [
+      [
+        12,
+        12,
+        324,
+        414
       ],
       [
-        28.0,
-        538.0,
-        904.0,
-        194.0,
-        0,
-        14
+        360,
+        12,
+        322,
+        374
+      ]
+    ]
+  },
+  "u04_val2_laboratorijska_kolica.svg": {
+    "source_sha1": "84f7aa8e6bf990661b812e21df50269580f7de43",
+    "panels": [
+      [
+        12,
+        12,
+        545,
+        439
+      ]
+    ]
+  },
+  "u04_val3_kosa_stijenka.svg": {
+    "source_sha1": "9f0f86036ffa7eb344d698e3a1cd8f26f0c23f33",
+    "panels": [
+      [
+        12,
+        12,
+        450,
+        471
+      ]
+    ]
+  },
+  "u04_vjezbe_skice.svg": {
+    "source_sha1": "17497de41d6ded950cb7e616c1d12ad715474da7",
+    "panels": [
+      [
+        12,
+        12,
+        444,
+        234
+      ],
+      [
+        480,
+        12,
+        444,
+        234
+      ],
+      [
+        12,
+        274,
+        405,
+        228
+      ],
+      [
+        441,
+        274,
+        361,
+        237
+      ],
+      [
+        12,
+        539,
+        437,
+        238
+      ],
+      [
+        473,
+        539,
+        373,
+        233
+      ]
+    ]
+  },
+  "u05_ch1_pregrada_ulje_voda.svg": {
+    "source_sha1": "961778fdf075548cde78c0552c6f7453d8998b57",
+    "panels": [
+      [
+        12,
+        12,
+        425,
+        320
+      ]
+    ]
+  },
+  "u05_fig_uvod_pregled.svg": {
+    "source_sha1": "bdd1fa6b5b3fe8083723bfa7a21037216afa3f6a",
+    "panels": [
+      [
+        12,
+        12,
+        371,
+        423
+      ],
+      [
+        407,
+        12,
+        305,
+        471
+      ]
+    ]
+  },
+  "u05_val1_pravokutna_zaklopka.svg": {
+    "source_sha1": "ff8de2a15ed6e88ced619142a3e48340483a44bd",
+    "panels": [
+      [
+        12,
+        12,
+        436,
+        467
+      ]
+    ]
+  },
+  "u05_val3_kosi_poklopac.svg": {
+    "source_sha1": "cfb85346f4e7ce57264e39ac2bb90c75adf009a4",
+    "panels": [
+      [
+        12,
+        12,
+        429,
+        389
+      ]
+    ]
+  },
+  "u05_vjezbe_skice.svg": {
+    "source_sha1": "53657e9bc48b22bf832ec17f503ac8416789822c",
+    "panels": [
+      [
+        12,
+        12,
+        377,
+        229
+      ],
+      [
+        413,
+        12,
+        386,
+        213
+      ],
+      [
+        12,
+        269,
+        373,
+        230
+      ],
+      [
+        409,
+        269,
+        366,
+        241
+      ],
+      [
+        12,
+        538,
+        391,
+        230
+      ],
+      [
+        427,
+        538,
+        394,
+        229
+      ]
+    ]
+  },
+  "u06_ch1_poklopac_spojnica.svg": {
+    "source_sha1": "6f26b47ad7dfda174ef7cbe490a6b400438dba41",
+    "panels": [
+      [
+        12,
+        12,
+        462,
+        346
+      ]
+    ]
+  },
+  "u06_val1_cetvrtina_kruga.svg": {
+    "source_sha1": "f9ec28fc5f32ee43273defb4481b135ebf8ec6a0",
+    "panels": [
+      [
+        12,
+        12,
+        452,
+        478
+      ]
+    ]
+  },
+  "u06_val3_cetvrtcilindricni_poklopac.svg": {
+    "source_sha1": "62fd9887baaab6a58801dd47254f00fedf6c77ed",
+    "panels": [
+      [
+        12,
+        12,
+        427,
+        352
+      ]
+    ]
+  },
+  "u07_ch1_platforma_ulje_voda_ormar.svg": {
+    "source_sha1": "da99351aae1b615bfb3bb61876ada4c3b05fb73d",
+    "panels": [
+      [
+        12,
+        12,
+        524,
+        481
+      ]
+    ]
+  },
+  "u07_ch2_poplavljen_tank.svg": {
+    "source_sha1": "f28143da18ca5ca57f29142e4bb8ab66820e0aa5",
+    "panels": [
+      [
+        12,
+        12,
+        567,
+        475
+      ]
+    ]
+  },
+  "u07_fig_pumpno_kuciste.svg": {
+    "source_sha1": "28dd59f02cdc849dd497512e3a2719741aa221b3",
+    "panels": [
+      [
+        12,
+        12,
+        358,
+        387
+      ]
+    ]
+  },
+  "u07_fig_uvod_pregled.svg": {
+    "source_sha1": "5e9a2a006007715fc460503ad3f0c22fbfdef5ff",
+    "panels": [
+      [
+        12,
+        12,
+        459,
+        395
+      ],
+      [
+        495,
+        12,
+        480,
+        206
+      ]
+    ]
+  },
+  "u07_val1_platforma_kompresor.svg": {
+    "source_sha1": "2a6ffbeb2c8f932ac6006f856c44991142bd9397",
+    "panels": [
+      [
+        12,
+        12,
+        464,
+        403
+      ]
+    ]
+  },
+  "u07_val2_ponton_gaz.svg": {
+    "source_sha1": "a644c0591d69875be0ae103ce1af7afddcab1da6",
+    "panels": [
+      [
+        12,
+        12,
+        418,
+        437
+      ]
+    ]
+  },
+  "u07_vjezbe_skice.svg": {
+    "source_sha1": "1fd79c06e73be4b9518da203f90512c7effd5595",
+    "panels": [
+      [
+        12,
+        12,
+        306,
+        237
+      ],
+      [
+        342,
+        12,
+        306,
+        234
+      ],
+      [
+        672,
+        12,
+        296,
+        228
+      ],
+      [
+        12,
+        277,
+        292,
+        234
+      ],
+      [
+        328,
+        277,
+        294,
+        220
+      ],
+      [
+        646,
+        277,
+        291,
+        231
       ]
     ]
   },
   "u08_ch1_mijesajuci_spremnik.svg": {
-    "source_sha1": "c96f9cd7ac67ffb3ed0ea789ed3090f50c017d5b",
+    "source_sha1": "0d5f0e9de0d2db572812dc53fe41a3e5649ef0cb",
     "panels": [
       [
-        8,
-        8,
-        642,
-        504
-      ],
-      [
-        656,
-        8,
-        336,
-        504
+        12,
+        12,
+        601,
+        428
       ]
     ]
   },
   "u08_fig_kinematika.svg": {
-    "source_sha1": "87bc111a642ab821b337381dc3682530904b1702",
+    "source_sha1": "5a0da63ce579db6a776e56cbd77f569470250b16",
     "panels": [
       [
-        39,
-        19.219,
-        381,
-        331.781
+        12,
+        12,
+        360,
+        246
       ],
       [
-        420,
-        19.219,
-        381,
-        331.781
+        396,
+        12,
+        354,
+        213
       ]
-    ],
-    "after": [
-      11
     ]
   },
   "u08_fig_t_komad_hidraulika.svg": {
-    "source_sha1": "5988c7d94073a70e6d82106774636e862820e955",
+    "source_sha1": "e0f6678395e37223055eb4b202720815ce951e78",
     "panels": [
       [
-        9.0,
-        34.067,
-        386.843,
-        466.067
-      ],
-      [
-        492,
-        39.067,
-        442,
-        452.4
+        12,
+        12,
+        393,
+        445
       ]
     ]
   },
   "u08_fig_uvod_pregled.svg": {
-    "source_sha1": "a4bf4d13a680cde05526941751d4913a0d6c4fa3",
+    "source_sha1": "5dc4f21f20312bdeb391e4bac0da45a1fb48c0b0",
     "panels": [
       [
-        22,
-        22,
-        552,
-        426
+        12,
+        12,
+        538,
+        369
       ],
       [
-        580,
-        22,
-        372,
-        426
+        574,
+        12,
+        338,
+        113
       ]
     ]
   },
   "u08_kontrolni_volumen_scene.svg": {
-    "source_sha1": "08f122a91d575a22ee3b05b8afe3e9e70117c4c2",
+    "source_sha1": "bb8ac965bc6d9f6499bcc9e056c1ef7a61f156b0",
     "panels": [
       [
-        18,
-        80,
-        308,
-        430
+        12,
+        12,
+        282,
+        197
       ],
       [
-        330,
-        80,
-        310,
-        430
+        318,
+        12,
+        282,
+        197
       ],
       [
-        642,
-        80,
-        300,
-        430
+        624,
+        12,
+        289,
+        246
       ]
-    ],
-    "before": [
-      1,
-      2
     ]
   },
   "u08_val1_difuzor_kontinuitet.svg": {
-    "source_sha1": "c80ff1516195227deda5d94ef3288139d9beef97",
+    "source_sha1": "dcb1fe3cc579d3ca20006a0b201af8953e6c8b67",
     "panels": [
       [
-        10.0,
-        10.0,
-        512.0,
-        455.0
-      ],
-      [
-        522,
-        10.0,
-        368.0,
-        455.0
+        12,
+        12,
+        501,
+        397
       ]
     ]
   },
   "u08_val3_izjednacni_spremnik.svg": {
-    "source_sha1": "2951a53afbc09c682000f8bae3d7875110b12385",
+    "source_sha1": "df433781f5ee64c0d101793cb14cff0cc11a7799",
     "panels": [
       [
-        12.0,
-        23.687,
-        649.0,
-        484.375
-      ],
-      [
-        706.0,
-        74.0,
-        250.0,
-        442.0
+        12,
+        12,
+        662,
+        431
       ]
     ]
   },
   "u08_vjezbe_skice.svg": {
-    "source_sha1": "28c6a91f398e3b9289b8bfad94ddba902cf3bb89",
+    "source_sha1": "78eddfd7f54eeac531081c13c061ad306eb27c79",
     "panels": [
       [
-        20.0,
-        22.0,
-        306.0,
-        232.0
+        12,
+        12,
+        300,
+        234
       ],
       [
-        334.0,
-        22.0,
-        306.0,
-        232.0
+        336,
+        12,
+        237,
+        224
       ],
       [
-        648.0,
-        22.0,
-        300.0,
-        232.0
+        597,
+        12,
+        292,
+        236
       ],
       [
-        20.0,
-        262.0,
-        306.0,
-        232.0
+        12,
+        276,
+        289,
+        235
       ],
       [
-        334.0,
-        262.0,
-        306.0,
-        232.0
+        325,
+        276,
+        284,
+        220
       ],
       [
-        648.0,
-        262.0,
-        300.0,
-        232.0
-      ],
-      [
-        20.0,
-        502.0,
-        920.0,
-        194.0,
-        0,
-        14
+        633,
+        276,
+        293,
+        241
       ]
     ]
   },
   "u09_ch1_bypass_sifon_suzenje_mlaz.svg": {
-    "source_sha1": "866322fead168daaa881d3da4d80dd4f454e2c56",
+    "source_sha1": "cd7b718bb0fd53f2b633eb3967150bb800ed3bd7",
     "panels": [
       [
-        0,
-        0,
-        800,
-        605
-      ],
-      [
-        800,
-        24,
-        318,
-        581
+        12,
+        12,
+        785,
+        570
       ]
     ]
   },
   "u09_egl_hgl_schema.svg": {
-    "source_sha1": "25932b2d287a502de727624b3b80a8d954f8bbc3",
-    "panels": [
-      [
-        32,
-        14,
-        590,
-        497
-      ],
-      [
-        622,
-        22,
-        316,
-        479
-      ]
-    ]
-  },
-  "u09_fig_uvod_kompresibilni_tok.svg": {
-    "source_sha1": "6c3c7567d52628982edb28ddc1ccd3d869a2dfca",
-    "panels": [
-      [
-        39,
-        10,
-        232,
-        224
-      ],
-      [
-        334,
-        10,
-        292,
-        244
-      ],
-      [
-        679,
-        10,
-        242,
-        264
-      ]
-    ]
-  },
-  "u09_fig_uvod_pregled.svg": {
-    "source_sha1": "4f3f8b3763b6b1e1267a5a5f66960ca86049f704",
+    "source_sha1": "a4e917a33bb8e6a2708e5d9a61ce40e6ae46f827",
     "panels": [
       [
         12,
-        56,
-        539,
-        429
-      ],
-      [
-        557,
-        56,
-        390,
-        429
-      ]
-    ],
-    "before": [
-      1,
-      2
-    ]
-  },
-  "u09_fig_venturijeva_cijev.svg": {
-    "source_sha1": "57423f6ccf2b106b9c9e80a781ccd312fa395c9d",
-    "panels": [
-      [
-        8,
-        8,
-        557,
-        504
-      ],
-      [
-        568,
-        8,
-        344,
-        504
-      ]
-    ]
-  },
-  "u09_kompresibilni_vjezbe_skice.svg": {
-    "source_sha1": "8521be8e3e879d62228ca648c309c25380f81d44",
-    "panels": [
-      [
-        26.0,
-        22.0,
-        450.0,
-        252.0
-      ],
-      [
-        484.0,
-        22.0,
-        450.0,
-        252.0
-      ],
-      [
-        26.0,
-        284.0,
-        450.0,
-        252.0
-      ],
-      [
-        484.0,
-        284.0,
-        450.0,
-        252.0
-      ],
-      [
-        26.0,
-        546.0,
-        450.0,
-        252.0
-      ],
-      [
-        484.0,
-        546.0,
-        450.0,
-        252.0
-      ]
-    ]
-  },
-  "u09_val2_slobodni_mlaz.svg": {
-    "source_sha1": "b7aba2353ea538e1c1508671e2593b44d4756756",
-    "panels": [
-      [
-        0,
-        0,
-        490,
-        462
-      ],
-      [
-        498,
-        8,
-        394,
-        454
-      ]
-    ]
-  },
-  "u09_val3_idealni_sifon.svg": {
-    "source_sha1": "f75e5b13ec700e1aec8ac9120de6e42370e7cd1a",
-    "panels": [
-      [
-        0,
-        0,
-        545,
-        490
-      ],
-      [
-        545,
-        24,
-        376,
+        12,
+        582,
         456
       ]
     ]
   },
-  "u09_vjezbe_skice.svg": {
-    "source_sha1": "00b2320ae129f883fd48a84bc1872bf23775f874",
+  "u09_fig_uvod_kompresibilni_tok.svg": {
+    "source_sha1": "9dabd513f633a48fa73751bd354bd64a9354fae2",
     "panels": [
       [
-        26.0,
-        30.0,
-        450.0,
-        234.0
+        12,
+        12,
+        244,
+        189
       ],
       [
-        484.0,
-        30.0,
-        450.0,
-        234.0
+        280,
+        12,
+        304,
+        222
       ],
       [
-        26.0,
-        272.0,
-        450.0,
-        234.0
+        608,
+        12,
+        254,
+        248
+      ]
+    ]
+  },
+  "u09_fig_uvod_pregled.svg": {
+    "source_sha1": "6e7b1609998f6e2c3b47d02ed357edc37475f6d3",
+    "panels": [
+      [
+        12,
+        12,
+        507,
+        391
       ],
       [
-        484.0,
-        272.0,
-        450.0,
-        234.0
+        543,
+        12,
+        379,
+        147
+      ]
+    ]
+  },
+  "u09_fig_venturijeva_cijev.svg": {
+    "source_sha1": "6be571b95699cbcb804501db5847e17c5d4f8333",
+    "panels": [
+      [
+        12,
+        12,
+        534,
+        373
+      ]
+    ]
+  },
+  "u09_kompresibilni_vjezbe_skice.svg": {
+    "source_sha1": "1085b6aa8b32e34705bf6b2162fb3741bae603e1",
+    "panels": [
+      [
+        12,
+        12,
+        400,
+        216
       ],
       [
-        26.0,
-        514.0,
-        450.0,
-        234.0
+        436,
+        12,
+        374,
+        194
       ],
       [
-        484.0,
-        514.0,
-        450.0,
-        246.0
+        12,
+        256,
+        413,
+        241
+      ],
+      [
+        449,
+        256,
+        398,
+        203
+      ],
+      [
+        12,
+        525,
+        390,
+        223
+      ],
+      [
+        426,
+        525,
+        421,
+        251
+      ]
+    ]
+  },
+  "u09_val2_slobodni_mlaz.svg": {
+    "source_sha1": "5a92d986fe9eec48eb3f9035db3031a30051b998",
+    "panels": [
+      [
+        12,
+        12,
+        464,
+        399
+      ]
+    ]
+  },
+  "u09_val3_idealni_sifon.svg": {
+    "source_sha1": "41dd51d5ca88059ac92f8a86af997095a5a1a349",
+    "panels": [
+      [
+        12,
+        12,
+        489,
+        461
+      ]
+    ]
+  },
+  "u09_vjezbe_skice.svg": {
+    "source_sha1": "1798660938dcd25f59c6f46e4e7971ab52f31d95",
+    "panels": [
+      [
+        12,
+        12,
+        381,
+        211
+      ],
+      [
+        417,
+        12,
+        410,
+        225
+      ],
+      [
+        12,
+        265,
+        420,
+        227
+      ],
+      [
+        456,
+        265,
+        396,
+        214
+      ],
+      [
+        12,
+        520,
+        410,
+        229
+      ],
+      [
+        446,
+        520,
+        439,
+        242
       ]
     ]
   },
   "u10_fig_hidroenergetsko_koljeno.svg": {
-    "source_sha1": "e3926a252d005d5e8096331973a7bc5353febc19",
+    "source_sha1": "b44eb55450306be3015077853067c63f99b8d46f",
     "panels": [
       [
-        19,
-        25,
-        478.016,
-        391
-      ],
-      [
-        552,
-        22,
-        326,
-        303
+        12,
+        12,
+        490,
+        400
       ]
-    ],
-    "after": [
-      23
     ]
   },
   "u10_fig_uvod_pregled.svg": {
-    "source_sha1": "00503276289e6d22859def9bdf27f4991c3f16f1",
+    "source_sha1": "7bd24c71aab8039388242c90588f73b2396b79ac",
     "panels": [
       [
-        26,
-        20,
-        345,
-        467
+        12,
+        12,
+        339,
+        369
       ],
       [
-        380,
-        40,
-        309.5,
-        421
-      ],
-      [
-        689.5,
-        20,
-        267.5,
-        472
+        375,
+        12,
+        285,
+        420
       ]
     ]
   },
   "u11_ch1_t_racva_konzola.svg": {
-    "source_sha1": "ae659ce0c97f8d0fc15dff6d7591073730cbf20c",
+    "source_sha1": "8e70ebbeeedd718b9d1ae0dbb6ad0005f5485e33",
     "panels": [
       [
-        0,
-        0,
-        564,
-        553
-      ],
-      [
-        603,
-        22,
-        333,
-        395
+        12,
+        12,
+        555,
+        445
       ]
-    ],
-    "after": [
-      34
     ]
   },
   "u11_ch2_y_racva_reakcija.svg": {
-    "source_sha1": "6d080079c62ebd896b9a415c38ad4b41b8fddedc",
+    "source_sha1": "3f042eda0f9b6ab722e8f071cec3dd2d6e5c9edd",
     "panels": [
       [
-        19,
-        25,
-        541,
-        476
-      ],
-      [
-        604,
-        22,
-        334,
-        395
+        12,
+        12,
+        553,
+        485
       ]
-    ],
-    "keep_caption": true,
-    "after": [
-      33
     ]
   },
   "u11_fig_uvod_pregled.svg": {
-    "source_sha1": "bf83eec988d3f2add1be6e9712a987a192f46881",
+    "source_sha1": "78387c7a0771ad4d0ee7424f6bb3148392ef690d",
     "panels": [
       [
-        22,
-        25,
-        496.016,
-        464
-      ],
-      [
-        567,
-        22,
-        390,
-        395
+        12,
+        12,
+        508,
+        461
       ]
     ]
   },
   "u11_val1_mlaz_na_plocu.svg": {
-    "source_sha1": "61c86f8ec9e2700b0a0f83d03aff58b32542370e",
+    "source_sha1": "90a2f0d481336ca48fce44e1c9f913b6f41316cb",
     "panels": [
       [
-        22,
-        25,
-        468.016,
-        370
-      ],
-      [
-        527,
-        22,
-        349,
-        281
+        12,
+        12,
+        480,
+        379
       ]
-    ],
-    "after": [
-      18
     ]
   },
   "u11_val2_mlaznica_prirubnica.svg": {
-    "source_sha1": "89967862a93c3ad80117c0be4dce0b4dc80c2f1a",
+    "source_sha1": "c9f14d31f30a3c22739af6475a7d7bdad2fc5c5b",
     "panels": [
       [
-        17,
-        25,
-        586,
-        453
-      ],
-      [
-        619,
-        22,
-        317,
-        325
+        12,
+        12,
+        598,
+        462
       ]
-    ],
-    "after": [
-      25
     ]
   },
   "u11_val3_koljeno_reakcija.svg": {
-    "source_sha1": "ab6dd52770322da6975cb1c444ae85d32b323252",
+    "source_sha1": "d0119f84b813b084de752e8735ee33d987fe58b6",
     "panels": [
       [
-        0,
-        0,
-        496.016,
-        493
-      ],
-      [
-        536,
-        22,
-        382,
-        373
+        12,
+        12,
+        489,
+        429
       ]
-    ],
-    "after": [
-      28
     ]
   },
   "u11_vjezbe_skice.svg": {
-    "source_sha1": "5ab128546f6851969bcb8de8b09e21bf39bf1f89",
+    "source_sha1": "28fe92b023b41114b8b3cb7f2a0a177ac9c2a405",
     "panels": [
       [
-        28.0,
-        30.0,
-        450.0,
-        294.0
+        12,
+        12,
+        426,
+        290
       ],
       [
-        482.0,
-        30.0,
-        450.0,
-        294.0
+        462,
+        12,
+        426,
+        290
       ],
       [
-        28.0,
-        336.0,
-        450.0,
-        294.0
+        12,
+        330,
+        408,
+        291
       ],
       [
-        482.0,
-        336.0,
-        450.0,
-        294.0
+        444,
+        330,
+        422,
+        300
       ],
       [
-        28.0,
-        642.0,
-        450.0,
-        294.0
+        12,
+        658,
+        428,
+        297
       ],
       [
-        482.0,
-        642.0,
-        450.0,
-        294.0
+        464,
+        658,
+        443,
+        295
       ]
-    ],
-    "after": [
-      73
     ]
   },
   "u12_ch1_pokretna_zakrivljena_lopatica.svg": {
-    "source_sha1": "5585a00af41b0adcac5404bc3ce6796d503968d6",
+    "source_sha1": "83b56757deefa9fbb9385a6df6f5ffbfc7578af4",
     "panels": [
       [
-        28,
-        21,
-        361,
-        515
+        12,
+        12,
+        345,
+        376
       ],
       [
-        389,
-        21,
-        273,
-        515
-      ],
-      [
-        662,
-        25,
-        300,
-        511
+        381,
+        12,
+        210,
+        374
       ]
-    ],
-    "after": [
-      37
     ]
   },
   "u12_ch2_pelton_rotor_moment.svg": {
-    "source_sha1": "2bc403fb0f16010616603a7fb490d20cece9cd40",
+    "source_sha1": "37c531b1f1018e92360688679591e48d72b266a2",
     "panels": [
       [
-        10,
-        11,
-        474,
-        538
-      ],
-      [
-        491,
-        14,
-        474,
-        403
+        12,
+        12,
+        442,
+        517
       ]
-    ],
-    "after": [
-      35
     ]
   },
   "u12_fig_relativni_dotok.svg": {
-    "source_sha1": "7109315b87648af7368e89efa53c36fda4f15dd3",
+    "source_sha1": "8eb006a661baba71e0f9e11925b761333b6f80ca",
     "panels": [
       [
-        14,
-        14,
-        491,
-        502
-      ],
-      [
-        523,
-        25,
-        375,
-        382
+        12,
+        12,
+        412,
+        406
       ]
     ]
   },
   "u12_fig_uvod_pregled.svg": {
-    "source_sha1": "460024a4bccbb03a7ce512310347f982e79caf8c",
+    "source_sha1": "4a9284398e5be0ae41c8b9ee9f8fa71fa22103b7",
     "panels": [
       [
-        22,
-        23,
-        368,
-        491
+        12,
+        12,
+        315,
+        388
       ],
       [
-        390,
-        23,
-        250,
-        491
-      ],
-      [
-        642,
-        23,
-        296,
-        491
+        351,
+        12,
+        260,
+        351
       ]
-    ],
-    "after": [
-      39
     ]
   },
   "u12_fig_uvod_realni_tok.svg": {
-    "source_sha1": "e9dd3067cb2972dd2e3c098b6e3f78101552a52e",
+    "source_sha1": "66d0adfe4e7fdbccad7e7897c15fe155dd0c9861",
     "panels": [
       [
-        15.562,
-        11,
-        292.453,
-        315
+        12,
+        12,
+        305,
+        276
       ],
       [
-        344,
-        11,
-        278,
-        316
+        341,
+        12,
+        290,
+        291
       ],
       [
-        660.727,
-        11,
-        266.273,
-        316
+        655,
+        12,
+        279,
+        272
       ]
     ]
   },
   "u12_realni_tok_vjezbe_skice.svg": {
-    "source_sha1": "21ffb49c088bab92a76556622cbc632d59858f37",
+    "source_sha1": "2f06e3fe8d2d5ab7811338b072f6e235d6f4b42a",
     "panels": [
       [
-        26.0,
-        20.0,
-        450.0,
-        286.0
+        12,
+        12,
+        413,
+        259
       ],
       [
-        484.0,
-        20.0,
-        450.0,
-        286.0
+        449,
+        12,
+        391,
+        261
       ],
       [
-        26.0,
-        318.0,
-        450.0,
-        286.0
+        12,
+        301,
+        415,
+        279
       ],
       [
-        484.0,
-        318.0,
-        450.0,
-        286.0
+        451,
+        301,
+        418,
+        248
       ],
       [
-        26.0,
-        616.0,
-        450.0,
-        286.0
+        12,
+        608,
+        399,
+        280
       ],
       [
-        484.0,
-        616.0,
-        450.0,
-        286.0
+        435,
+        608,
+        418,
+        191
       ]
     ]
   },
   "u12_val1_vodilica_mlaza.svg": {
-    "source_sha1": "1931000c7cdfc16ad80ec3453d89b7bf85b56e00",
+    "source_sha1": "a8b6e5b9ee75af0710575b18dc56dae651166aee",
     "panels": [
       [
-        30,
-        20,
-        453,
-        464
-      ],
-      [
-        483,
-        22,
-        413,
-        462
+        12,
+        12,
+        411,
+        429
       ]
-    ],
-    "after": [
-      28
     ]
   },
   "u12_val3_pokretna_lopatica.svg": {
-    "source_sha1": "3b79d047d10a003a5cbdf11293b78eb03c6b8795",
+    "source_sha1": "42a17e5753a0fbaf645f0be16b0dcd8384f814c4",
     "panels": [
       [
-        14,
-        14,
-        492,
-        502
-      ],
-      [
-        520,
-        25,
-        439,
-        382
+        12,
+        12,
+        412,
+        406
       ]
     ]
   },
   "u12_vjezbe_skice.svg": {
-    "source_sha1": "cc06dfcceb7fc4b1a29b95212c62ae9ee20a3862",
+    "source_sha1": "bcd42e83c9281fc3c0758294af6c8ad8bd10de0b",
     "panels": [
       [
-        22.0,
-        22.0,
-        446.0,
-        306.0
+        12,
+        12,
+        402,
+        296
       ],
       [
-        472.0,
-        22.0,
-        446.0,
-        306.0
+        438,
+        12,
+        417,
+        298
       ],
       [
-        22.0,
-        338.0,
-        446.0,
-        306.0
+        12,
+        338,
+        383,
+        300
       ],
       [
-        472.0,
-        338.0,
-        446.0,
-        306.0
+        419,
+        338,
+        390,
+        274
       ],
       [
-        22.0,
-        654.0,
-        446.0,
-        306.0
+        12,
+        666,
+        439,
+        234
       ],
       [
-        472.0,
-        654.0,
-        446.0,
-        306.0
+        475,
+        666,
+        415,
+        289
       ]
-    ],
-    "after": [
-      66
     ]
   },
   "u13_fig_uvod_pregled.svg": {
-    "source_sha1": "0812229cb4de772c9e10ecdd1dcdcae2e9647470",
+    "source_sha1": "ac5656af719bac99481f232cdb2caa8012c2de7e",
     "panels": [
       [
-        14,
-        28,
-        593,
-        510
-      ],
-      [
-        615,
-        43,
-        343,
-        494
+        12,
+        12,
+        562,
+        395
       ]
     ]
   },
   "u13_mreze_vjezbe_skice.svg": {
-    "source_sha1": "5c79fd7412856dc389b6a077d64a630336baab04",
+    "source_sha1": "f86838fba5bf8f05469e23d88e300e1a4935407a",
     "panels": [
       [
-        26.0,
-        20.0,
-        450.0,
-        302.0
+        12,
+        12,
+        434,
+        293
       ],
       [
-        484.0,
-        20.0,
-        450.0,
-        302.0
+        470,
+        12,
+        434,
+        293
       ],
       [
-        26.0,
-        334.0,
-        450.0,
-        302.0
+        12,
+        333,
+        423,
+        272
       ],
       [
-        484.0,
-        334.0,
-        450.0,
-        302.0
+        459,
+        333,
+        445,
+        296
       ],
       [
-        26.0,
-        648.0,
-        450.0,
-        302.0
+        12,
+        657,
+        406,
+        274
       ],
       [
-        484.0,
-        648.0,
-        450.0,
-        302.0
+        442,
+        657,
+        408,
+        246
       ]
     ]
   },
   "u14_ch1_kugla_struja.svg": {
-    "source_sha1": "930455cea2057cbd10919f2d02dc0c071acee5ac",
+    "source_sha1": "c915f003a34bd3d06a16ecb129d3df21280de2b4",
     "panels": [
       [
-        18,
-        22,
-        448,
-        468
+        12,
+        12,
+        384,
+        388
       ],
       [
-        476,
-        22,
-        486,
-        468
+        420,
+        12,
+        453,
+        383
       ]
     ]
   },
   "u14_fig_odluka.svg": {
-    "source_sha1": "2d431b2984e036f16013e9352a45a0c6ea71d70a",
+    "source_sha1": "bd4f4154e31051d6af3fc5920bbc48c4809e9a84",
     "panels": [
       [
-        14,
-        14,
-        872,
-        534,
-        90
+        12,
+        12,
+        553,
+        389
       ]
     ]
   },
-  "u14_fig_omjer_sila.svg": {
-    "source_sha1": "79a72febf4c8ee88763308f548709e935f3072c7",
-    "panels": [
-      [
-        18,
-        22,
-        324,
-        430
-      ],
-      [
-        348,
-        22,
-        354,
-        430
-      ]
-    ],
-    "after": [
-      23,
-      24
-    ],
-    "keep_caption": true
-  },
   "u14_fig_pi_buckingham.svg": {
-    "source_sha1": "247cd04d2f72f36ecf89e0e755cda0551cddbbe0",
+    "source_sha1": "f6bafd51adfbdf5d1aac3ecb64a3be557fb7f001",
     "panels": [
       [
-        14,
-        14,
-        872,
-        438
+        12,
+        12,
+        804,
+        233
       ]
     ]
   },
   "u14_fig_uvod_pregled.svg": {
-    "source_sha1": "e6dd12af0ea8eedec635a2a1923f8b9791537f20",
+    "source_sha1": "dcf000f6b90d6a4d477fd25c701525b89f6c9bee",
     "panels": [
       [
-        18,
-        22,
-        317,
-        416
+        12,
+        12,
+        290,
+        301
       ],
       [
-        336,
-        22,
-        318,
-        416
-      ],
-      [
-        655,
-        22,
-        307,
-        416
+        326,
+        12,
+        280,
+        279
       ]
     ]
   },
   "u14_val1_reynolds_kanal.svg": {
-    "source_sha1": "c35183be9c5792388e95162082bab5bf5f08f251",
+    "source_sha1": "7b10e0e43ec3c5f91d39c89f483df4603ae66df7",
     "panels": [
       [
-        38,
-        5,
-        816.625,
-        444
+        12,
+        12,
+        828,
+        384
       ]
     ]
   },
   "u14_val2_brod_bazen.svg": {
-    "source_sha1": "415552bfa8c24b381899b584373e9bc67a574591",
+    "source_sha1": "5345066b9d6f2f6f40494937af5a7df788301394",
     "panels": [
       [
-        18,
-        22,
-        416,
-        404
+        12,
+        12,
+        404,
+        358
       ],
       [
-        446,
-        22,
-        416,
-        404
+        440,
+        12,
+        332,
+        358
       ]
-    ],
-    "before": [
-      7
-    ],
-    "after": [
-      10
     ]
   },
   "u14_val3_venturi_kavitacija.svg": {
-    "source_sha1": "a6d3b75ddc6b515ef84625fe788584779b2cb8dd",
+    "source_sha1": "7d01bfc4888bb9f7d2823bf05788858ccf970f0a",
     "panels": [
       [
-        40.797,
-        1,
-        804.846,
-        476,
-        90
+        12,
+        12,
+        818,
+        461
       ]
     ]
   },
   "u14_val4_kap_raspad.svg": {
-    "source_sha1": "3f3d378082eb9b8d180c48b53e7bc258b2e42707",
+    "source_sha1": "df034d035035a0b7cbb48599bb2456c6a5585a5d",
     "panels": [
       [
-        38,
-        67,
-        357.641,
-        293
-      ],
-      [
-        446,
-        71,
-        348,
-        303
+        12,
+        12,
+        469,
+        363
       ]
-    ],
-    "before": [
-      1
-    ],
-    "after": [
-      16
     ]
   },
   "u14_val5_mach_strouhal.svg": {
-    "source_sha1": "0a69d578c76f569d554abe9c997ce5c6b132bc33",
+    "source_sha1": "95111f54c8eb109cb1cba8077afd9ebcafdb8b96",
     "panels": [
       [
-        18,
-        22,
-        466,
-        416
+        12,
+        12,
+        429,
+        341
       ],
       [
-        494,
-        22,
-        468,
-        416
+        465,
+        12,
+        424,
+        227
       ]
     ]
   },
   "u14_vjezbe_skice.svg": {
-    "source_sha1": "77128b486506b72749c91d7e8245fb8bc4a0918b",
+    "source_sha1": "c7cd8dc0970bbf2cfbd26704b8b1a294fe90603a",
     "panels": [
       [
-        22.0,
-        26.0,
-        296.0,
-        296.0
+        12,
+        12,
+        258,
+        265
       ],
       [
-        342.0,
-        26.0,
-        296.0,
-        296.0
+        294,
+        12,
+        284,
+        232
       ],
       [
-        662.0,
-        26.0,
-        296.0,
-        296.0
+        602,
+        12,
+        268,
+        283
       ],
       [
-        22.0,
-        338.0,
-        296.0,
-        296.0
+        12,
+        323,
+        255,
+        253
       ],
       [
-        342.0,
-        338.0,
-        296.0,
-        296.0
+        291,
+        323,
+        272,
+        260
       ],
       [
-        658.0,
-        338.0,
-        300.0,
-        296.0
+        587,
+        323,
+        294,
+        254
       ]
     ]
   },
   "u15_fig_uvod_otvoreni_tok.svg": {
-    "source_sha1": "0b0617492178f48092a61e7ef0fef12f64210078",
+    "source_sha1": "5ad209c766b549e9b6bf7c04ceffaf38f7af3691",
     "panels": [
       [
-        4,
-        4,
-        952,
-        347,
-        90,
         12,
-        590
+        12,
+        944,
+        280
       ]
-    ],
-    "keep_caption": true
+    ]
   },
   "u15_vjezbe_skice.svg": {
-    "source_sha1": "d48005454a85b2fe297df0b71affa437aad58014",
+    "source_sha1": "7507c723048ac7e34ea2fad0cb0c1353257fdc22",
     "panels": [
       [
-        22.0,
-        20.0,
-        446.0,
-        312.0
+        12,
+        12,
+        395,
+        279
       ],
       [
-        472.0,
-        20.0,
-        446.0,
-        312.0
+        431,
+        12,
+        422,
+        300
       ],
       [
-        22.0,
-        345.0,
-        446.0,
-        312.0
+        12,
+        340,
+        413,
+        281
       ],
       [
-        472.0,
-        345.0,
-        446.0,
-        312.0
+        449,
+        340,
+        427,
+        283
       ],
       [
-        22.0,
-        670.0,
-        446.0,
-        312.0
+        12,
+        651,
+        430,
+        274
       ],
       [
-        472.0,
-        670.0,
-        446.0,
-        312.0
+        466,
+        651,
+        429,
+        308
       ]
     ]
   }

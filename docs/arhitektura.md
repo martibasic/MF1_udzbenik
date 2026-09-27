@@ -110,17 +110,33 @@ bez captiona ostaju bez izmišljenih naslova.
 
 ```markdown
 ::: {#ex-bilanca-primjer .mf1-we title="Bilanca odabranog sustava" level="T2"}
-**Zadano.** Postojeći podatci.
+**Tekst zadatka**
 
-**Traži se.** Postojeći zahtjev.
+Kratak opis sustava sa zadanim veličinama i nužnim pretpostavkama.
 
-**Rješenje.** Postojeći postupak.
+**Traži se**
+
+Postojeći zahtjev.
+
+**Rješenje**
+
+Postojeći postupak.
+
+**Provjera i tumačenje**
+
+Provjera dobivenog rezultata.
 :::
 
 ::: {.mf1-vjezbe-list}
 ### Odabir sustava {#task-odabir-sustava .unnumbered .unlisted}
 
-Iskaz zadatka.
+**Tekst zadatka**
+
+Iskaz zadatka sa zadanim veličinama.
+
+**Traži se**
+
+Zahtjev zadatka.
 
 [Razina: T1]{.mf1-task-level}
 :::
@@ -132,6 +148,21 @@ i u HTML-u (`data-level`). Polja koja ne postoje ne dodaju se. Stari zapisi
 Komponenta može sadržavati samo stvarna polja, bez obveze dopisivanja teksta.
 Za ostale uloge koristi se klasa iz `components/registry.json`, primjerice
 `.mf1-temelj`, `.mf1-izvod`, `.mf1-numerika`, `.mf1-zavrsni-okvir`.
+
+Kratki CFD primjer piše se zajedničkom komponentom uz pripadnu temu poglavlja.
+Može povezati više relacija i nadograditi primjer iz ranijeg poglavlja:
+
+```markdown
+::: {.mf1-cfd title="Računalna dinamika fluida"}
+**Konkretna primjena.** Pitanje o uređaju ili pojavi, izbor fizikalnog modela,
+ulazni podatci, izlazi i njihova provjera. Objasni kako se rezultat koristi
+i što novo pitanje dodaje ranijem modelu.
+:::
+```
+
+`CFDContext` koristi postojeći akcent za numeriku i isti oblik kao ostale
+kratke napomene. Naslov ne uvodi novu razinu sadržaja ni numeraciju; vidljivost
+se određuje u registru. Izvršivi numerički pokusi zadržavaju `.mf1-numerika`.
 
 Unutarnji koraci rješenja imaju `.mf1-step .unnumbered .unlisted`; adapter ih
 pretvara u manje naslove koji ne mijenjaju hijerarhiju ni TOC. Primjeri su
@@ -205,6 +236,15 @@ Ostali postojeći auditi provjeravaju numeriku, poveznice, PDF, skice,
 tipkovnicu, kontrast i prelijevanje na 320/768/1440 px.
 
 Automatska provjera ne zamjenjuje vizualni pregled PDF-a i složenih skica.
+Urednički obrazac primjera i zadataka definiran je u autorskom ugovoru.
+`audit_publication.py` provjerava redoslijed obveznih polja u kanonskim
+izvorima; zajednički adapter istim komponentama označuje polja primjera
+i samostalnih zadataka. PDF adapter uklanja samo prezentacijske omotače
+polja, prepoznaje i naslijeđenu interpunkciju oznaka te veže završnu razinu
+uz posljednju stavku bez blokiranja prijeloma ostalih zahtjeva.
+Razmaci `exercise_paragraph_spacing_em` i `exercise_list_spacing_em`
+u globalnim tokenima primjenjuju se na oba tipa zadataka.
+
 Posebno nakon promjene globalnog fonta ili margina treba obnoviti i pregledati
 sva tri izlaza. Znanstvena recenzija i studentski pilot ostaju odvojeni poslovi.
 

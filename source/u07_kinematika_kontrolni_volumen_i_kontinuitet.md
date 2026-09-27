@@ -1,5 +1,9 @@
 ![Pregled poglavlja: kinematika, kontrolni volumen i kontinuitet.](../assets/print/u08_fig_uvod_pregled.svg){#fig-uvod-u08 fig-align="center" fig-alt="Pregled poglavlja: kinematika, kontrolni volumen i kontinuitet."}
 
+**Tumačenje skice.** Kontrolni volumen odabrani je dio prostora u kojem pratimo ulaz, izlaz i akumulaciju mase: $\sum\dot m_{\mathrm{ul}}-\sum\dot m_{\mathrm{iz}}=\mathrm{d}m_{CV}/\mathrm{d}t$. U stacionarnom toku nema akumulacije, pa su ukupni ulazni i izlazni maseni protoci jednaki, uz $\dot m=\rho Q=\rho Av$. Za nestlačiv fluid s jednim ulazom i izlazom slijedi $A_1v_1=A_2v_2$.
+
+Prva shema predstavlja apstraktni uređaj, a ne krutu ovojnicu. Na prikazu ventilirane komore krute stijenke imaju dva otvorena priključka. Kontrolna ploha zamišljena je granica preko koje se računa tok mase; ne mora biti materijalna stijenka. Oznaka $\mathbf n$ predstavlja vanjsku jediničnu normalu kontrolne plohe.
+
 ## Kinematika, kontrolni volumen i kontinuitet
 
 Kinematika strujanja može se opisati praćenjem pojedine čestice fluida ili promatranjem odabranoga dijela prostora kroz koji fluid protječe. Zapis $A_1 v_1 = A_2 v_2$ samo je poseban slučaj opće bilance mase, odnosno jednadžbe kontinuiteta.
@@ -43,7 +47,9 @@ Iz polja brzine izvode se dvije krivulje koje se lako pomiješaju:
 - **Strujnica** (linija strujanja) je krivulja koja je u **jednom trenutku** u svakoj svojoj točki tangentna na vektor brzine. To je trenutna „slika smjera” strujanja.
 - **Trajektorija** (putanja) je stvarni put koji **jedna čestica** fluida prijeđe **kroz vrijeme**.
 
-![Strujnica je tangentna na vektore brzine u istom trenutku; trajektorija je putanja jedne čestice kroz vrijeme. U stacionarnom strujanju obje krivulje imaju isti oblik.](../assets/print/u08_fig_kinematika.svg){#fig-u08-kinematika fig-align="center" fig-alt="Strujnica je tangentna na vektore brzine u istom trenutku; trajektorija je putanja jedne čestice kroz vrijeme. U stacionarnom strujanju obje krivulje imaju isti oblik."}
+![Strujnica i trajektorija čestice.](../assets/print/u08_fig_kinematika.svg){#fig-u08-kinematika fig-align="center" fig-alt="Strujnica je tangentna na vektore brzine u istom trenutku; trajektorija je putanja jedne čestice kroz vrijeme. U stacionarnom strujanju obje krivulje imaju isti oblik."}
+
+**Tumačenje skice.** Strujnica je u svakoj točki tangentna na vektor brzine u istom trenutku. Trajektorija prati položaje jedne čestice kroz vrijeme. U stacionarnom strujanju te dvije krivulje imaju isti oblik.
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
@@ -51,6 +57,13 @@ U **stacionarnom** strujanju polje brzine se ne mijenja kroz vrijeme, pa čestic
 :::
 
 Skup strujnica koje prolaze rubom neke male zatvorene krivulje tvori **strujnu cijev**. U stacionarnom strujanju fluid ne prolazi kroz njezin plašt jer je brzina na njega tangentna; tako dobivamo zamišljenu cijev omeđenu strujnicama. Upravo je strujna cijev geometrijska podloga za kontinuitet i za Bernoullijevu jednadžbu u []{.mf1-chapter-ref target="u08"}.
+
+::: {.mf1-cfd title="Računalna dinamika fluida"}
+
+**Zadržava li se tekućina u kutu razdjelnika?** Vraćamo se rashladnom krugu i promatramo ulaznu komoru hladne ploče. Slika strujnica može pokazati područje kruženja, ali za vrijeme prolaska tekućine kroz komoru pratimo zamišljene čestice koje slijede izračunano polje brzine. CFD obično daje Eulerov opis: brzinu u položajima mreže; putanju dobivamo pomicanjem čestice kroz ta polja.
+
+Pri pulsirajućem dotoku polje se mijenja, pa trenutačna strujnica nije cijela putanja. Usporedbom dvaju položaja ulaza pratimo podjelu toka i raspodjelu vremena zadržavanja. Dug boravak može upozoriti na slabu izmjenu tekućine, ali za zaključak o lokalnom pregrijavanju trebamo i toplinski model. Tako sliku toka povezujemo s pitanjem koje zaista želimo riješiti.
+:::
 
 ### Stacionarno i nestacionarno strujanje
 
@@ -81,21 +94,14 @@ Time složeni dvo- ili trodimenzijski profil zamjenjujemo jednim brojem po presj
 ::: {#ex-u08-srednja-brzina-iz-profila-brzine-t2 .mf1-we}
 <p class="mf1-box-label">Srednja brzina iz profila brzine&nbsp;<span class="mf1-level">T2</span></p>
 
-**Kontekst:** U cijevi je brzina najveća u osi, a nula uz stijenku. Da bismo mogli koristiti jednostavni 1D kontinuitet, treba iz stvarnog profila odrediti srednju brzinu.
+**Tekst zadatka**
 
-**Zadano**
+U cijevi polumjera $R = 25\ \text{mm}$ zadano je stacionarno osnosimetrično strujanje s profilom $v(r) = v_{max}\left(1 - (r/R)^2\right)$ i najvećom brzinom $v_{max} = 3{,}0\ \text{m/s}$.
 
-- Polumjer cijevi: $R = 25\ \text{mm}$
-- Profil brzine: $v(r) = v_{max}\left(1 - (r/R)^2\right)$, $v_{max} = 3{,}0\ \text{m/s}$
+**Traži se**
 
-**Traženo**
-
-1. srednju brzinu $v$ i njezin odnos prema $v_{max}$.
-2. volumenski protok $Q$.
-
-**Pretpostavke i model**
-
-Strujanje je osnosimetrično i stacionarno; protok je $Q = \int_A v\,dA$ uz prstenasti element $dA = 2\pi r\, dr$.
+1. Odredi srednju brzinu $v$ i njezin odnos prema $v_{max}$.
+2. Odredi volumenski protok $Q$.
 
 **Rješenje**
 
@@ -117,11 +123,18 @@ $$
 Q = vA = 1{,}5 \cdot 1{,}963 \cdot 10^{-3} \approx 2{,}95 \cdot 10^{-3}\ \text{m}^3/\text{s} = 2{,}95\ \text{L/s}.
 $$ {#eq-kinematika-kv-rijeseni-primjer-srednja-brzina-iz-profila-brzin-03}
 
-**Provjera i komentar**
+**Provjera i tumačenje**
 
 1. Za ovaj (parabolični) profil srednja je brzina točno **pola** vršne — koristan orijentir.
 2. U 1D modelu cijeli profil zamjenjuje jedan broj $v = 1{,}5\ \text{m/s}$; upravo taj broj ulazi u $Q = Av$ i u kontinuitet.
 3. Da smo pogrešno uzeli $v_{max}$ umjesto srednje brzine, protok bismo precijenili dvostruko.
+:::
+
+::: {#cfd-razdjelnik-podjela-protoka .mf1-cfd title="Računalna dinamika fluida"}
+
+**Dobivaju li svi rashladni kanali jednak protok?** Ručni @ex-u08-rashladni-krug-baterijskog-paketa-elektricnog-vozila-t2 pretpostavlja jednaku podjelu i stalan ukupni protok čak nakon blokade kanala. Za provjeru podjele u CFD-u zadamo ukupni dotok i nizvodne otpore, a pojedinačne protoke izračunamo. Ako kanali završavaju u istom sabirniku, njegov tlak nije nužno jednak tlaku neposredno na svakom izlazu iz razdjelnika: između njih postoji otpor kanala. CFD izračunava raspodjelu, a $Q=\int_A\vec v\cdot\vec n\,dA$ daje protok svake grane.
+
+Točan zbroj izlaznih protoka još ne potvrđuje podjelu: odstupanja pojedinih grana mogu se poništiti. Uz ukupnu bilancu usporedimo udjele grana pri promjeni komore ili položaja ulaza. Najveća brzina na slici ne govori koji kanal prima najviše tekućine; važan je integral preko cijelog presjeka. Za promjenjivu gustoću istu provjeru provodimo masenim protocima.
 :::
 
 ### Materijalna derivacija: ubrzanje čestice
@@ -182,7 +195,9 @@ Jednadžba $A_1 v_1 = A_2 v_2$ kaže da se pri stacionarnom toku kroz jednu stru
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Interaktivni prikaz — Kontinuitet u suženju cijevi</p>
 
-Interaktivni prikaz omogućuje mijenjanje ulaznog i izlaznog promjera te volumenskog protoka uz neposredno praćenje brzine fluida duž cijevi. Profil brzine jasno pokazuje koliko se brzina povećava u suženju u odnosu na ulazni presjek.
+**Predvidi.** Kako prepolovljen promjer pri istom protoku mijenja brzinu? Hoće li se razina u spremniku približavati ravnoteži?
+
+**Provjeri i protumači.** Nakon suženja prijeđi na nestacionarni spremnik. Mijenjaj vremenski korak te zasebno usporedi bilancu mase i točnost tijeka razine.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u08_kontinuitet_suzenje.ipynb">Pokreni u pregledniku</a>
@@ -265,6 +280,13 @@ Prvi član s desne strane je **akumulacija** unutar kontrolnog volumena, drugi j
 Zakoni se tako pojavljuju kao primjene istoga teorema na različite veličine. Član relativnoga protoka postaje presudan za pokretne lopatice u []{.mf1-chapter-ref target="u14"}.
 :::
 
+::: {.mf1-cfd title="Računalna dinamika fluida"}
+
+**Klip koji potiskuje tekućinu.** U modelu hidraulične komore iz []{.mf1-chapter-ref target="u01"} zadani pomak klipa smanjuje prostor dostupan tekućini. Računske se ćelije mogu pomicati i mijenjati volumen, pa bilanca mora uključiti i to gibanje. Kroz pomičnu plohu fluid prolazi relativnom brzinom $\vec v-\vec v_{KP}$; na nepropusnom klipu fluid i ploha imaju istu normalnu brzinu.
+
+Za nestlačivu tekućinu u jednostavnoj komori smanjenje volumena mora odgovarati neto istjecanju kroz otvor. To provjerava račun prije dodavanja stlačivosti ili gibanja opterećenoga klipa. Ako ukupna masa odstupa pri samom pomicanju mreže, numerički opis stvara lažan izvor ili ponor. Ista bilanca pokretnih granica potrebna je i pri gibanju pontona ili lopatica.
+:::
+
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Diferencijalni oblik kontinuiteta — iz integralnog preko teorema o divergenciji</p>
 
@@ -308,8 +330,7 @@ Sljedeći primjeri obuhvaćaju tri osnovne situacije: suženje ili difuzor, mije
 Preskakanje tih koraka može dovesti do neopravdanog pojednostavnjivanja zadatka.
 
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički most — od kontrolnog volumena do ćelije</p>
+::: {.mf1-cfd title="Računalna dinamika fluida"}
 
 **Fizikalna poveznica.** Bilanca „akumulacija + neto izlaz = 0” vrijedi za spremnik i za svaku malu ćeliju. **Diskretizacija** kontinuiranu domenu dijeli na konačan broj područja i aproksimira tokove kroz njihove plohe. U metodi konačnih volumena (FVM), za nepomičnu ćeliju $i$ bez izvora mase, jedan zapis glasi
 
@@ -333,26 +354,19 @@ Oznaka $n$ označuje vremensku razinu, a $f$ plohu s vanjskom normalom. Za staci
 ::: {#ex-u08-voda-struji-kroz-difuzor-t2 .mf1-we}
 <p class="mf1-box-label">Voda struji kroz difuzor&nbsp;<span class="mf1-level">T2</span></p>
 
-**Kontekst:** U cjevovodu vodoopskrbnog sustava difuzor postupno proširuje presjek kako bi se smanjila brzina vode prije ulaska u sljedeći element. Projektant iz zadanih dimenzija i izlazne brzine određuje ulaznu brzinu te volumenski i maseni protok.
+**Tekst zadatka**
 
-**Zadano**
+Voda gustoće $\rho = 998\ \text{kg/m}^3$ stacionarno struji kroz difuzor ulaznog promjera $D_1 = 120\ \text{mm}$ i izlaznog promjera $D_2 = 180\ \text{mm}$. Srednja izlazna brzina iznosi $v_2 = 16\ \text{m/s}$. Vodu smatraj nestlačivom; difuzor nema drugih priključaka.
 
-- Ulazni promjer difuzora: $D_1 = 120\ \text{mm}$
-- Izlazni promjer difuzora: $D_2 = 180\ \text{mm}$
-- Srednja brzina na izlazu: $v_2 = 16\ \text{m/s}$
-- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
+**Traži se**
 
-**Traženo**
-
-1. srednju brzinu na ulazu $v_1$.
-2. volumenski protok $Q$.
-3. maseni protok $\dot{m}$.
+1. Odredi srednju brzinu na ulazu $v_1$.
+2. Odredi volumenski protok $Q$.
+3. Odredi maseni protok $\dot{m}$.
 
 ![Difuzor i kontinuitet](../assets/print/u08_val1_difuzor_kontinuitet.svg){#fig-u08-difuzor-i-kontinuitet fig-alt="Difuzor i kontinuitet"}
 
-**Pretpostavke i model**
-
-Promatra se jedan kontrolni volumen s jednom ulaznom i jednom izlaznom granom. Kako je tok stacionaran, a voda se može uzeti nestlačivom, kroz oba presjeka mora prolaziti isti volumenski protok.
+**Veza s proračunom.** U stacionarnom nestlačivom toku kroz oba presjeka prolazi isti volumenski protok. Širenje presjeka zato smanjuje srednju brzinu. Ta bilanca određuje brzine i protok, ali sama ne određuje tlak ni gubitak.
 
 **Rješenje**
 
@@ -384,7 +398,7 @@ $$
 \dot{m} = \rho Q = 998 \cdot 0{,}407 \approx 406\ \text{kg/s} \approx 4{,}06 \cdot 10^2\ \text{kg/s}.
 $$ {#eq-kinematika-kv-rijeseni-primjer-voda-struji-kroz-difuzor-t2-05}
 
-**Provjera i komentar**
+**Provjera i tumačenje**
 
 U užem ulaznom presjeku brzina mora biti veća nego na izlazu, jer isti protok prolazi kroz manju površinu. U ovom difuzoru to daje ulaznu brzinu od $36\ \text{m/s}$, volumenski protok od oko $0{,}407\ \text{m}^3/\text{s}$ i maseni protok od oko $406\ \text{kg/s}$.
 
@@ -399,29 +413,19 @@ U prethodnom primjeru difuzora ulazni i izlazni protok bili su jednaki. U spremn
 ::: {#ex-u08-izjednacni-spremnik-tijekom-ispiranja-filtra-t2 .mf1-we}
 <p class="mf1-box-label">Izjednačni spremnik tijekom ispiranja filtra&nbsp;<span class="mf1-level">T2</span></p>
 
-**Kontekst:** Tijekom ispiranja filtra u sustavu za pripremu vode izjednačni spremnik prima više vode nego što se odvodi servisnim ispustom, pa razina postupno raste. Operater procjenjuje brzinu porasta razine, vrijeme dosizanja gornje radne granice i pripadnu akumuliranu masu.
+**Tekst zadatka**
 
-**Zadano**
+Pravokutni spremnik stalne tlocrtne površine, duljine $L = 3{,}0\ \text{m}$ i širine $b = 1{,}8\ \text{m}$, prima vodu protokom $Q_{in} = 22\ \text{L/s} = 0{,}022\ \text{m}^3/\text{s}$, a odvodi je protokom $Q_{out} = 8\ \text{L/s} = 0{,}008\ \text{m}^3/\text{s}$. Oba su protoka stalna, a gustoća vode $\rho = 998\ \text{kg/m}^3$. Razina raste od $h_0 = 0{,}45\ \text{m}$ do radne granice $h_1 = 1{,}20\ \text{m}$.
 
-- Duljina pravokutnog izjednačnog spremnika: $L = 3{,}0\ \text{m}$
-- Širina spremnika: $b = 1{,}8\ \text{m}$
-- Stalni ulazni volumenski protok vode: $Q_{in} = 22\ \text{L/s} = 0{,}022\ \text{m}^3/\text{s}$
-- Stalni izlazni protok kroz servisni odvod: $Q_{out} = 8\ \text{L/s} = 0{,}008\ \text{m}^3/\text{s}$
-- Početna dubina vode: $h_0 = 0{,}45\ \text{m}$
-- Gornja dopuštena radna razina: $h_1 = 1{,}20\ \text{m}$
-- Gustoća vode: $\rho = 998\ \text{kg/m}^3$
+**Traži se**
 
-**Traženo**
-
-1. brzinu porasta razine vode $dh/dt$.
-2. vrijeme potrebno da razina poraste od $h_0$ do $h_1$.
-3. kolika se masa vode akumulira u spremniku do tog trenutka.
+1. Odredi brzinu porasta razine vode $dh/dt$.
+2. Odredi vrijeme potrebno da razina poraste od $h_0$ do $h_1$.
+3. Odredi kolika se masa vode akumulira u spremniku do tog trenutka.
 
 ![Izjednačni spremnik s akumulacijom](../assets/print/u08_val3_izjednacni_spremnik.svg){#fig-u08-izjednacni-spremnik-s-akumulacijom fig-alt="Izjednačni spremnik s akumulacijom"}
 
-**Pretpostavke i model**
-
-Promatra se kontrolni volumen koji obuhvaća cijeli spremnik. Tekućina je ista na ulazu i izlazu, gustoća se uzima konstantnom, a tlocrtna površina spremnika ne mijenja se s visinom. Zato se član akumulacije može zapisati preko promjene volumena, odnosno preko promjene razine.
+**Veza s proračunom.** Širina $b=1{,}8\,\mathrm{m}$ mjeri se okomito na skicu. Dotok veći od odvoda povećava volumen i razinu vode; tlocrtna površina povezuje te promjene. Isprekidana granica nepomičnoga kontrolnog volumena nije stijenka.
 
 **Rješenje**
 
@@ -461,7 +465,7 @@ $$
 \Delta m = \rho \Delta V = 998 \cdot 4{,}05 \approx 4{,}04 \cdot 10^3\ \text{kg} \approx 4040\ \text{kg}.
 $$ {#eq-kinematika-kv-rijeseni-primjer-izjednacni-spremnik-tijekom-isp-06}
 
-**Provjera i komentar**
+**Provjera i tumačenje**
 
 Razina vode u spremniku raste brzinom od oko $0{,}155\ \text{m/min}$, do gornje radne razine dolazi za oko $4{,}8$ minuta, a u tom se vremenu u spremniku akumulira oko $4{,}04\ \text{t}$ vode. To je tipičan primjer []{.mf1-chapter-ref target="u07"} u kojem razlika protoka postaje porast mase unutar kontrolnog volumena.
 
@@ -473,33 +477,23 @@ Razina vode u spremniku raste brzinom od oko $0{,}155\ \text{m/min}$, do gornje 
 ::: {#ex-u08-mijesajuci-izjednacni-spremnik-s-porastom-razine-t3 .mf1-ch}
 <p class="mf1-box-label">Izjednačni spremnik s miješanjem i porastom razine&nbsp;<span class="mf1-level">T3</span></p>
 
-**Kontekst:** U procesnom postrojenju miješajući izjednačni spremnik prima vodu i slanu otopinu iz dvaju ulaznih vodova, a homogenizirana mješavina izlazi kroz zajednički vod sporije nego što ulazi, pa razina postupno raste. Procesnom inženjeru trebaju izlazni protok, gustoća mješavine, brzina porasta razine te masa koja se akumulira u radnom rasponu.
+**Tekst zadatka**
 
-**Zadano**
+U pravokutni spremnik duljine $L = 4{,}2\ \text{m}$ i širine $b = 1{,}5\ \text{m}$ dotječu voda gustoće $\rho_A = 1000\ \text{kg/m}^3$, protokom $Q_A = 18\ \text{L/s} = 0{,}018\ \text{m}^3/\text{s}$, i slana otopina relativne gustoće $s_B = 1{,}10$, protokom $Q_B = 6\ \text{L/s} = 0{,}006\ \text{m}^3/\text{s}$. Izlazni vod promjera $D_3 = 100\ \text{mm}$ ima srednju brzinu $v_3 = 1{,}80\ \text{m/s}$.
 
-- Tlocrtne dimenzije pravokutnog miješajućeg izjednačnog spremnika: $L = 4{,}2\ \text{m}$, $b = 1{,}5\ \text{m}$
-- Gustoća vode (ulazna struja A): $\rho_A = 1000\ \text{kg/m}^3$
-- Volumenski protok vode: $Q_A = 18\ \text{L/s} = 0{,}018\ \text{m}^3/\text{s}$
-- Relativna gustoća slane otopine (ulazna struja B): $s_B = 1{,}10$
-- Volumenski protok slane otopine: $Q_B = 6\ \text{L/s} = 0{,}006\ \text{m}^3/\text{s}$
-- Promjer izlaznog voda: $D_3 = 100\ \text{mm}$
-- Trenutna srednja izlazna brzina: $v_3 = 1{,}80\ \text{m/s}$
-- Spremnik je dobro izmiješan, gustoća u spremniku jednaka je gustoći mješavine ulaznih struja
-- Početna razina: $h_0 = 0{,}80\ \text{m}$; razmatra se porast do $h_1 = 1{,}20\ \text{m}$
+Protoci su stalni, volumeni se pri miješanju zbrajaju, a sadržaj je dobro izmiješan. Početni sadržaj ima sastav spojenih dotoka. Promatra se porast razine od $h_0 = 0{,}80\ \text{m}$ do $h_1 = 1{,}20\ \text{m}$.
 
-**Traženo**
+**Traži se**
 
-1. izlazni volumenski protok $Q_3$.
-2. gustoću homogenizirane mješavine u spremniku i izlaznom vodu $\rho_3$.
-3. brzinu porasta razine $dh/dt$.
-4. vrijeme potrebno da razina poraste od $h_0$ do $h_1$.
-5. masu tekućine koja se akumulira u spremniku tijekom tog porasta.
+1. Odredi izlazni volumenski protok $Q_3$.
+2. Odredi gustoću homogenizirane mješavine u spremniku i izlaznom vodu $\rho_3$.
+3. Odredi brzinu porasta razine $dh/dt$.
+4. Odredi vrijeme potrebno da razina poraste od $h_0$ do $h_1$.
+5. Odredi masu tekućine koja se akumulira u spremniku tijekom tog porasta.
 
 ![Miješajući izjednačni spremnik](../assets/print/u08_ch1_mijesajuci_spremnik.svg){#fig-u08-mijesajuci-izjednacni-spremnik fig-alt="Miješajući izjednačni spremnik"}
 
-**Pretpostavke i model**
-
-Ovdje jedan kontrolni volumen obuhvaća cijeli spremnik. Izlazni tok zatvara se preko relacije $Q_3 = A_3 v_3$, gustoća homogenizirane mješavine dobiva se iz masene bilance ulaza, a porast razine dolazi iz volumenske akumulacije. U promatranom intervalu protoci su stalni, volumeni se pri miješanju zbrajaju, a početni sadržaj spremnika ima isti sastav kao spojeni dotoci. Ključ nije formula nego redoslijed: izlazni tok, zatim gustoća mješavine, pa tek onda član akumulacije.
+**Veza s proračunom.** Spremnik duljine $L=4{,}2\,\mathrm{m}$ i širine $b=1{,}5\,\mathrm{m}$ ima otvorene priključke i savršeno izmiješanu tekućinu. Početni sastav odgovara spojenim dotocima, pa gustoća ostaje stalna. Masena bilanca određuje gustoću smjese, a neto volumenski dotok promjenu razine.
 
 **Rješenje**
 
@@ -575,7 +569,7 @@ $$
 \Delta m = \rho_3 \Delta V = 1025 \cdot 2{,}52 \approx 2583\ \text{kg} \approx 2{,}58\ \text{t}.
 $$ {#eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-12}
 
-**Provjera i komentar**
+**Provjera i tumačenje**
 
 Ovaj zadatak povezuje postupke iz []{.mf1-chapter-ref target="u07"} u jednom kontrolnom volumenu: izlazni vod daje $Q_3 \approx 14{,}1\ \text{L/s}$, mješavina u spremniku ima gustoću oko $1025\ \text{kg/m}^3$, razina raste brzinom oko $0{,}094\ \text{m/min}$, a do porasta od $0{,}40\ \text{m}$ treba oko $4{,}3$ minute. U tom se vremenu akumulira oko $2{,}58$ t homogenizirane tekućine.
 
@@ -588,26 +582,27 @@ Kao sažetak poglavlja korisno je usporediti tri reprezentativna slučaja: suže
 
 ![Kontrolni volumen i kontinuitet](../assets/print/u08_kontrolni_volumen_scene.svg){#fig-u08-staticka-zamjena-za-kontrolni-volumen-i-kontinuitet fig-alt="Kontrolni volumen i kontinuitet"}
 
+**Tumačenje skice.** U nepomičnom kontrolnom volumenu opća bilanca glasi $\mathrm{d}m_{CV}/\mathrm{d}t=\sum\dot m_{\mathrm{ul}}-\sum\dot m_{\mathrm{iz}}$. U stacionarnom nestlačivom toku kroz suženje ili difuzor vrijedi $Q=A_1v_1=A_2v_2$, odnosno $v_2=v_1(D_1/D_2)^2$. Prepolovljenje promjera zato učetverostručuje brzinu, dok je u širem presjeku brzina manja. Sam kontinuitet ne određuje tlak.
+
+U komori s dvama dotocima i homogenom mješavinom stalne gustoće vrijedi $\rho_AQ_A+\rho_BQ_B-\rho_3Q_3=\rho_3A_T\,\mathrm{d}h/\mathrm{d}t$. Prikazan je slučaj akumulacije: ukupni ulaz nadmašuje izlaz, razina raste, a gustoća mješavine nalazi se između gustoća dotoka. Kontrolne granice presijecaju otvorene presjeke; nisu krute stijenke.
+
 ::: {#ex-u08-kontinuitet-kroz-razvodni-t-komad-hidraulicnog-sustava .mf1-we}
 <p class="mf1-box-label">Kontinuitet kroz razvodni T-komad hidrauličnog sustava &nbsp;<span class="mf1-level">T2</span></p>
 
 
-**Kontekst:** U hidrauličnom sustavu strojnice T-komad dijeli ulazni tok ulja iz crpke u dva ogranka: jedan za radni cilindar, drugi za hladnjak ulja. Projektant provjerava brzine u ograncima.
+**Tekst zadatka**
 
-**Zadano**
+T-komad dijeli stacionarni tok ulja gustoće $\rho = 870\ \text{kg/m}^3$ iz ulazne cijevi promjera $D_1 = 32\ \text{mm}$, pri brzini $v_1 = 4{,}5\ \text{m/s}$. Ogranak radnog cilindra promjera $D_2 = 20\ \text{mm}$ prima $60\%$ protoka. Ogranak hladnjaka prima preostalih $40\%$ i treba imati brzinu $v_3 = 3{,}0\ \text{m/s}$. Ulje smatraj nestlačivim.
 
-- Ulazna cijev: $D_1 = 32\ \text{mm}$, $v_1 = 4{,}5\ \text{m/s}$
-- Ogranak 1 (radni cilindar): $D_2 = 20\ \text{mm}$, volumni udio $60\%$ ulaznog toka
-- Ogranak 2 (hladnjak): $D_3 = ?$ mm, dobiva preostalih $40\%$
-- Gustoća ulja: $\rho = 870\ \text{kg/m}^3$
+**Traži se**
 
-**Traženo**
+1. Odredi volumni protok $Q_1$ na ulazu.
+2. Odredi protoke $Q_2$ i $Q_3$ u ograncima.
+3. Odredi brzinu $v_2$ u ogranku 1 i potrebni promjer $D_3$ ako je $v_3 = 3{,}0\ \text{m/s}$.
 
-1. Volumni protok $Q_1$ na ulazu.
-2. Protoci $Q_2$ i $Q_3$ u ograncima.
-3. Brzina $v_2$ u ogranku 1 i potrebni promjer $D_3$ ako je $v_3 = 3{,}0\ \text{m/s}$.
+![T-komad s jednim dovodom i dvama ograncima zadanih udjela protoka.](../assets/print/u08_fig_t_komad_hidraulika.svg){#fig-u08-t-komad-hidraulika fig-align="center" fig-alt="T-komad s jednim dovodom i dvama ograncima zadanih udjela protoka."}
 
-![Razvodni T-komad: D1=32 mm, D2=20 mm, v1=4,5 m/s, 60%/40% raspodjela](../assets/print/u08_fig_t_komad_hidraulika.svg){#fig-u08-t-komad-hidraulika fig-align="center" fig-alt="Razvodni T-komad: D1=32 mm, D2=20 mm, v1=4,5 m/s, 60%/40% raspodjela"}
+**Veza s proračunom.** Jedan dovod i dva otvorena ogranka čine neprekinutu domenu ulja. Udjeli protoka ovdje su zadani; kontinuitet ih ne predviđa iz samih promjera. Iz tih udjela zatim se određuju tražena brzina i presjek.
 
 **Rješenje**
 
@@ -631,7 +626,7 @@ $$
 A_3 = \frac{Q_3}{v_3} = \frac{1{,}45 \cdot 10^{-3}}{3{,}0} = 4{,}83 \cdot 10^{-4}\ \text{m}^2 \Rightarrow D_3 = \sqrt{\frac{4 A_3}{\pi}} = 24{,}8\ \text{mm}
 $$ {#eq-kinematika-kv-rijeseni-primjer-kontinuitet-kroz-razvodni-t-kom-05}
 
-**Provjera i komentar**
+**Provjera i tumačenje**
 
 Provjera: $Q_2 + Q_3 = 2{,}17 + 1{,}45 = 3{,}62\ \text{L/s} = Q_1$. Brzina $v_2 = 6{,}9\ \text{m/s}$ može se smanjiti povećanjem promjera. Ako se za usporedbu zada cilj manji od 6 m/s, povećanje $D_2$ na primjerice 22 mm zadovoljava taj cilj pri istom protoku. To je ilustracija izbora promjera, a ne univerzalna preporuka za hidraulične vodove.
 
@@ -642,24 +637,15 @@ Razdjelnik rashladnog kruga primjenjuje istu višegransku bilancu, ali dodaje od
 ::: {#ex-u08-rashladni-krug-baterijskog-paketa-elektricnog-vozila-t2 .mf1-we}
 <p class="mf1-box-label">Rashladni krug baterijskog paketa električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
 
-**Kontekst:** Rashladni kolektor baterijskog paketa razdjeljuje zadani protok na više paralelnih kanala. Primjer ispituje samo volumensku bilancu pri zatvaranju jedne grane; temperatura ćelija i upravljačka logika nisu dio modela.
+**Tekst zadatka**
 
-**Zadano**
+Rashladni kolektor ima glavni vod promjera $D_1 = 20\ \text{mm}$ i $n = 16$ jednakih paralelnih kanala promjera $d = 6\ \text{mm}$. Ukupni protok nestlačivog medija iznosi $Q = 25\ \text{L/min}$ i ostaje stalan i nakon zatvaranja jednog kanala. U oba stacionarna stanja protok se jednoliko dijeli na aktivne kanale jednakog otpora. Temperatura ćelija i upravljanje crpkom nisu dio modela.
 
-- Promjer glavnog voda: $D_1 = 20\ \text{mm}$
-- Promjer pojedinog rashladnog kanala uz modul: $d = 6\ \text{mm}$
-- Broj paralelnih kanala: $n = 16$
-- Ukupni volumenski protok rashladnog medija: $Q = 25\ \text{L/min}$
+**Traži se**
 
-**Traženo**
-
-1. Srednja brzina rashladnog medija u glavnom vodu;
-2. Srednja brzina u jednom paralelnom kanalu;
-3. Procjena: što se događa s brzinom u preostalim kanalima ako se jedan začepi?
-
-**Pretpostavke i model**
-
-Rashladni medij smatra se nestlačivim, gustoća se ne mijenja s temperaturom u promatranom radnom rasponu. Strujanje je stacionarno, profili brzina u presjecima aproksimirani su jednodimenzijskim srednjim vrijednostima. Svi paralelni kanali imaju iste dimenzije i isti hidraulički otpor, pa se ukupni protok raspoređuje jednoliko na sve aktivne kanale.
+1. Odredi srednju brzinu rashladnog medija u glavnom vodu.
+2. Odredi srednju brzinu u jednom paralelnom kanalu.
+3. Procijeni što se događa s brzinom u preostalim kanalima ako se jedan začepi.
 
 **Rješenje**
 
@@ -707,7 +693,7 @@ $$ {#eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-07}
 
 što je porast od približno $6{,}6\,\%$.
 
-**Provjera i komentar**
+**Provjera i tumačenje**
 
 Zatvaranje jedne od šesnaest jednakih grana u zadanom modelu povećava brzinu u ostalima za približno $6{,}6\,\%$. Iz toga se ne može zaključiti da je kvar toplinski ili sigurnosno prihvatljiv: blokirana grana nema protok, a procjena temperature zahtijeva toplinsku bilancu, svojstva ćelija, kontaktne otpore, senzore i konkretnu strategiju zaštite.
 :::
@@ -738,11 +724,11 @@ Masena bilanca koristi protoke izražene preko $\dot{m} = \rho Q$, dok volumensk
 Predstavlja brzinu promjene ukupne mase fluida unutar kontrolnog volumena. Ako je veći od nule, masa se akumulira (spremnik se puni); ako je manji od nule, masa u kontrolnom volumenu se smanjuje; ako je nula, nema neto akumulacije mase, što samo po sebi ne dokazuje da je cijelo strujanje stacionarno.
 :::
 
-4. Zašto je za pravilan proračun nužno najprije nacrtati kontrolni volumen?
+4. Zbroj izlaznih protoka razdjelnika jednak je ulaznome. Dokazuje li to da svaki rashladni kanal dobiva točan protok?
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Najprije zatvori kontrolnu plohu i označi sve ulaze i izlaze. Zatim provjeri postoji li akumulacija. Izostavljena grana ili zanemarena promjena mase u spremniku dovodi do pogrešne bilance i kad je račun algebarski točan.
+Ne. Zatvori kontrolnu plohu i obuhvati sve grane: ukupna bilanca nužna je provjera, ali pogreške pojedinih protoka mogu se poništiti. Podjelu dodatno određuju geometrija, otpori grana i rubni uvjeti.
 :::
 :::
 
@@ -754,7 +740,13 @@ U cijevima i nepomičnim komorama Z1, Z3 i Z4 tok je stacionaran, voda nestlači
 
 ### Protok kroz proširenje cijevi {#task-u08-voda-struji-kroz-cijev-koja-se-siri .unnumbered .unlisted}
 
-Voda struji kroz cijev koja se širi s promjera $D_1 = 0{,}10\ \text{m}$ na $D_2 = 0{,}16\ \text{m}$. Ako je ulazna srednja brzina $v_1 = 4{,}8\ \text{m/s}$, a gustoća vode $\rho = 998\ \text{kg/m}^3$, odredi izlaznu brzinu, volumenski protok i maseni protok.
+**Tekst zadatka**
+
+Voda struji kroz cijev koja se širi s promjera $D_1 = 0{,}10\ \text{m}$ na $D_2 = 0{,}16\ \text{m}$. Zadana je ulazna srednja brzina $v_1 = 4{,}8\ \text{m/s}$, a gustoća vode $\rho = 998\ \text{kg/m}^3$.
+
+**Traži se**
+
+Odredi izlaznu brzinu, volumenski protok i maseni protok.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -776,9 +768,14 @@ $Q \approx 37{,}7\ \text{L/s}$; $v_2 \approx 1{,}88\ \text{m/s}$; $\dot m \appro
 
 ### Protok kroz kosu kontrolnu plohu {#task-protok-kroz-kosu-kontrolnu-plohu .unnumbered .unlisted}
 
+**Tekst zadatka**
+
 U širokom toku vode odabrana je nepomična zamišljena ravna ploha površine $A=0{,}0040\ \text{m}^2$. Brzina vode jednolika je na toj plohi i iznosi $v=3{,}0\ \text{m/s}$. Kut između brzine i odabrane jedinične normale $\vec n$ iznosi $\alpha=60^\circ$, a gustoća vode je $\rho=998\ \text{kg/m}^3$. Ploha nije kruta stijenka i ne ometa strujanje.
 
-Odredi predznačeni volumenski i maseni protok kroz plohu. Što se mijenja ako istu plohu orijentiramo suprotnom normalom?
+**Traži se**
+
+1. Odredi predznačeni volumenski i maseni protok kroz plohu.
+2. Što se mijenja ako istu plohu orijentiramo suprotnom normalom?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -798,7 +795,13 @@ $v_n=1{,}50\ \text{m/s}$; $Q=+6{,}00\ \text{L/s}$; $\dot m=+5{,}988\ \text{kg/s}
 
 ### Bilanca komore za miješanje {#task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene .unnumbered .unlisted}
 
-U stacionarnu komoru ulaze dvije vodene struje protoka $Q_1=12\ \text{L/s}$ i $Q_2=8\ \text{L/s}$. Jedini izlaz ima promjer $D_3=120\ \text{mm}$. Odredi izlaznu srednju brzinu i napiši masenu bilancu; nema akumulacije ni drugih priključaka.
+**Tekst zadatka**
+
+U stacionarnu komoru ulaze dvije vodene struje protoka $Q_1=12\ \text{L/s}$ i $Q_2=8\ \text{L/s}$. Jedini izlaz ima promjer $D_3=120\ \text{mm}$. Nema akumulacije ni drugih priključaka.
+
+**Traži se**
+
+Odredi izlaznu srednju brzinu i napiši masenu bilancu.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -818,7 +821,13 @@ $Q_3 = 20\ \text{L/s}$; $v_3 \approx 1{,}77\ \text{m/s}$.
 
 ### Raspodjela protoka u dvije grane {#task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz .unnumbered .unlisted}
 
-U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 140\ \text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\ \text{mm}$ i $D_3 = 70\ \text{mm}$, pri čemu je zadano da je brzina u izlaznoj grani 2 dvostruko veća od brzine u izlaznoj grani 3. Taj omjer određuje radni režim, a ne slijedi samo iz promjera. Odredi protoke u granama.
+**Tekst zadatka**
+
+U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 140\ \text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\ \text{mm}$ i $D_3 = 70\ \text{mm}$, pri čemu je zadano da je brzina u izlaznoj grani 2 dvostruko veća od brzine u izlaznoj grani 3. Taj omjer određuje radni režim, a ne slijedi samo iz promjera.
+
+**Traži se**
+
+Odredi protoke u granama.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -840,11 +849,18 @@ $v_3 \approx 1{,}81\ \text{m/s}$, $v_2 \approx 3{,}62\ \text{m/s}$; $Q_2 \approx
 
 ### Klip s protočnim otvorom {#task-klip-s-protocnim-otvorom .unnumbered .unlisted}
 
-Vodom ispunjena vodoravna dozirna komora ima nepomični cilindar i klip koji se pomiče udesno. Voda ulazi kroz nepomični lijevi priključak, a izlazi kroz središnji otvor u klipu. Klip brtvi uz cilindar; nema drugih tokova ni zračnog džepa.
+**Tekst zadatka**
 
-Unutarnji promjer cilindra je $D=100\ \text{mm}$, promjer otvora $d=20\ \text{mm}$, stalni dotok $Q_{in}=1{,}00\ \text{L/s}$ i gustoća vode $\rho=998\ \text{kg/m}^3$. Srednja izlazna brzina vode u odnosu na klip održava se na $w=1{,}50\ \text{m/s}$ udesno. Početna duljina vodene komore je $\ell_0=0{,}20\ \text{m}$, a raspoloživi hod klipa $s=0{,}12\ \text{m}$. Model je jednodimenzijski, voda nestlačiva, a debljina klipa zanemariva za volumen komore.
+Vodom ispunjena vodoravna dozirna komora ima nepomični cilindar i klip koji se pomiče udesno. Voda ulazi kroz nepomični lijevi priključak, a izlazi kroz središnji otvor u klipu. Klip brtvi uz cilindar; nema drugih tokova ni zračnog džepa. Unutarnji promjer cilindra je $D=100\ \text{mm}$, promjer otvora $d=20\ \text{mm}$, stalni dotok $Q_{in}=1{,}00\ \text{L/s}$ i gustoća vode $\rho=998\ \text{kg/m}^3$.
 
-Odaberi kontrolni volumen omeđen nepomičnim cilindrom i gibajućim klipom. Iz bilance mase odredi brzinu klipa $u$, apsolutnu izlaznu brzinu, vrijeme do kraja hoda i porast mase u komori. Objasni zašto se na izlazu koristi brzina relativna prema klipu. Ako klip zaustavimo uz isti dotok, kolika bi morala postati relativna izlazna brzina da se nestlačivi model i dalje može održati? Ne računaju se sile potrebne za gibanje ili zaustavljanje.
+Srednja izlazna brzina vode u odnosu na klip održava se na $w=1{,}50\ \text{m/s}$ udesno. Početna duljina vodene komore je $\ell_0=0{,}20\ \text{m}$, a raspoloživi hod klipa $s=0{,}12\ \text{m}$. Model je jednodimenzijski, voda nestlačiva, a debljina klipa zanemariva za volumen komore. Ne računaju se sile potrebne za gibanje ili zaustavljanje.
+
+**Traži se**
+
+1. Odaberi kontrolni volumen omeđen nepomičnim cilindrom i gibajućim klipom.
+2. Iz bilance mase odredi brzinu klipa $u$, apsolutnu izlaznu brzinu, vrijeme do kraja hoda i porast mase u komori.
+3. Objasni zašto se na izlazu koristi brzina relativna prema klipu.
+4. Ako klip zaustavimo uz isti dotok, kolika bi morala postati relativna izlazna brzina da se nestlačivi model i dalje može održati?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -864,17 +880,18 @@ $Q_{out,rel}=0{,}4712\ \text{L/s}$; $u=0{,}06732\ \text{m/s}$ udesno; $v_{out}=1
 
 ### Bilanca spremnika s dvama fluidima {#task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce .unnumbered .unlisted}
 
-U spremniku za pripremu slane otopine dva dotoka ulaze u homogenu mješavinu. Izlazni je protok manji od ukupnog dotoka pa razina raste. Treba provjeriti koliko se tekućine zadrži u spremniku i dopušta li raspoloživi slobodni bok šest minuta rada uz zadane granice mjerenja.
+**Tekst zadatka**
 
 Miješajući spremnik tlocrtne površine $A_T = 4{,}8\ \text{m}^2$ prima vodu gustoće $\rho_A=1000\ \text{kg/m}^3$ protokom $Q_A = 0{,}011\ \text{m}^3/\text{s}$ i slanu otopinu gustoće $\rho_B = 1080\ \text{kg/m}^3$ protokom $Q_B = 0{,}004\ \text{m}^3/\text{s}$. Homogena mješavina izlazi kroz cijev promjera $D = 80\ \text{mm}$ srednjom brzinom $v_3 = 1{,}6\ \text{m/s}$.
 
-Pretpostavi aditivnost volumena, savršeno miješanje i da je spremnik na početku već napunjen mješavinom istog sastava kao spojeni dotoci; gustoća sadržaja i izlaza zato tijekom promatranih $6\ \text{min}$ ostaje jednaka omjeru ukupnoga ulaznog masenog i volumnog protoka.
+Promatra se $6\ \text{min}$ rada. Volumeni su aditivni, miješanje savršeno, a početni sadržaj ima sastav spojenih dotoka. Protoci su stalni u svakoj kombinaciji ulaza. Navedene granice zajamčeni su intervali, ne standardne nesigurnosti.
 
-Odredi izlazni volumenski protok, gustoću mješavine, brzinu porasta razine i masu akumuliranu u spremniku tijekom $6\ \text{min}$.
+Mjerila ulaznih protoka imaju granice $\pm2\ \%$ za $Q_A$ i $\pm3\ \%$ za $Q_B$, a izlazna brzina $v_3$ granicu $\pm0{,}08\ \text{m/s}$. Početni slobodni bok iznosi $0{,}560\ \text{m}$. Nakon dosezanja ruba prelijevanje je dodatni izlaz: linearni porast razine više ne vrijedi.
 
-Za intervalnu procjenu protoci su stalni unutar svake promatrane kombinacije, a navedene granice zajamčeni su intervali, ne standardne nesigurnosti. Mjerila ulaznih protoka imaju granice $\pm2\ \%$ za $Q_A$ i $\pm3\ \%$ za $Q_B$, a izlazna brzina $v_3$ granicu $\pm0{,}08\ \text{m/s}$. Početni slobodni bok iznosi $0{,}560\ \text{m}$.
+**Traži se**
 
-Konzervativno procijeni najveći porast razine, provjeri ostaje li šestominutni rad unutar geometrijskog kriterija slobodnog boka i odredi najdulje trajanje prije idealiziranog prelijevanja bez regulatora razine. Nakon dosezanja ruba prelijevanje je dodatni izlaz: linearni porast razine više ne vrijedi.
+1. Odredi izlazni volumenski protok, gustoću mješavine, brzinu porasta razine i masu akumuliranu u spremniku tijekom $6\ \text{min}$.
+2. Konzervativno procijeni najveći porast razine, provjeri ostaje li šestominutni rad unutar geometrijskog kriterija slobodnog boka i odredi najdulje trajanje prije idealiziranog prelijevanja bez regulatora razine.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -895,6 +912,10 @@ $Q_3=8{,}042\ \text{L/s}$; $\rho_{mix}=1021{,}3\ \text{kg/m}^3$; $dh/dt=1{,}450\
 :::::
 
 ![Skice uz zadatke za vježbu — cijevi, mješalice i razdjelnici protoka.](../assets/print/u08_vjezbe_skice.svg){#fig-u08-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — cijevi, mješalice i razdjelnici protoka."}
+
+**Napomene uz skice.** Akumulacija mase jednaka je razlici ukupnoga ulaznog i izlaznog masenog protoka. Za nepomičnu plohu tok volumena je $Q=\int\mathbf v\cdot\mathbf n\,\mathrm{d}A$, a za gibajuću plohu koristi se relativna brzina: $Q_{\mathrm{rel}}=\int(\mathbf v-\mathbf v_{KP})\cdot\mathbf n\,\mathrm{d}A$.
+
+U Z2 kut je zadan prema normali zamišljene plohe. U Z5 klip je krut osim središnjeg otvora, a $w$ je izlazna brzina u odnosu na klip. U Z6 nakon dosezanja ruba nastaje prelijevanje. Isprekidane kontrolne granice nisu stijenke; strelice označuju brzine ili protoke, ne sile. Različiti fluidi raspoznaju se iz oznaka, a ne samo iz boje.
 
 
 ::: {.mf1-zavrsni-okvir}

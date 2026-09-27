@@ -8,6 +8,7 @@ generator crteža. Dopunjuje numerički verifier i vizualni pregled.
 from pathlib import Path
 import math
 import xml.etree.ElementTree as ET
+from sketch_style import check_scene_canvas
 
 ASSETS = Path(__file__).resolve().parent.parent / "assets/print"
 
@@ -101,7 +102,7 @@ def main():
         check_hull(nodes,prefix,b,h,angle,ro,rw)
         print('PASS',prefix,'rigid hull, horizontal surfaces, integrated buoyancy center')
     root,nodes = read('u07_vjezbe_skice.svg')
-    assert root.get('viewBox') == '0 0 960 760'
+    check_scene_canvas('u07_vjezbe_skice.svg', root, 6)
     assert all('u07vs_fix_z'+str(i) in nodes for i in range(1,7))
     _,nodes = read('u07_fig_pumpno_kuciste.svg')
     body = nodes['u07fpk_fix_body']

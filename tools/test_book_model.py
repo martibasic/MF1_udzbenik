@@ -17,6 +17,87 @@ from build_book import figure_text_width
 
 
 class BookModelTests(unittest.TestCase):
+    def test_exercise_fields_in_both_formats(self):
+        index=json.loads((ROOT/'assets/content-index.json').read_text(encoding='utf8'))
+        example=next(o for o in index['objects'].values() if o['kind']=='Example')
+        problem=next(o for o in index['objects'].values() if o['kind']=='Problem')
+        source=f'''::: {{#{example['id']} .mf1-we title="Example"}}
+**Tekst zadatka.** Input A.
+
+**Traži se:** Request A.
+
+**Rješenje**
+
+Method A.
+
+**Provjera i tumačenje**
+
+Check A.
+:::
+
+::: {{.mf1-vjezbe-list}}
+### Task {{#{problem['id']} .unnumbered .unlisted}}
+
+**Tekst zadatka**
+
+Input B.
+
+**Traži se**
+
+7. First request.
+8. Final request.
+
+:::: {{.content-visible .mf1-hint-online when-format="html"}}
+Hint B.
+::::
+
+[Razina: T2]{{.mf1-task-level}}
+:::
+'''
+        command=[shutil.which('quarto'),'pandoc','-f','markdown','--lua-filter',str(ROOT/'filters/mf1-components.lua')]
+        html=subprocess.run(command+['-t','html5','--lua-filter',str(ROOT/'filters/mf1-html-components.lua')],
+                            input=source,text=True,encoding='utf8',capture_output=True,check=True).stdout
+        from audit_rendered_model import Page,Node
+        parser=Page.__new__(Page);super(Page,parser).__init__(convert_charrefs=True)
+        parser.root=Node();parser.stack=[parser.root];parser.feed(html)
+        task=next(n for n in parser.root.walk() if n.attrs.get('data-object-id')==problem['id'])
+        fields=[n for n in task.walk() if n.attrs.get('data-component') in ('Statement','Required')]
+        self.assertEqual([n.attrs['data-component'] for n in fields],['Statement','Required'])
+        self.assertIn('Final request.',fields[1].text())
+        self.assertNotIn('Hint B.',fields[1].text())
+        self.assertNotIn('Razina:',fields[1].text())
+        typst=subprocess.run(command+['-t','typst','--lua-filter',str(ROOT/'filters/mf1-typst-author-blocks.lua')],
+                             input=source,text=True,encoding='utf8',capture_output=True,check=True).stdout
+        self.assertEqual(typst.count('#mf1-minor-heading(['),6)
+        self.assertNotIn('Tekst zadatka.',typst)
+        self.assertNotIn('Traži se:',typst)
+        self.assertIn('First request.',typst)
+        self.assertIn('Final request.',typst)
+        self.assertIn('#mf1-task-level',typst)
+        self.assertIn('#mf1-exercise-body[',typst)
+        self.assertEqual(typst.count('#set enum('),1)
+        self.assertRegex(typst,r'start:\s*7')
+
+    def test_editorial_contract_rejects_missing_or_reordered_fields(self):
+        from audit_publication import editorial_field_issues
+        fields=['Tekst zadatka','Traži se','Rješenje','Provjera i tumačenje']
+        source='::: {#ex-test .mf1-we}\n'+'\n\n'.join('**'+f+'**\n\nContent.' for f in fields)+'\n:::\n'
+        source+='### Task {#task-test}\n\n**Tekst zadatka**\n\nInput.\n\n**Traži se**\n\nRequest.\n:::: {.content-visible}\nHint.\n::::\n'
+        self.assertEqual(editorial_field_issues(source),[])
+        self.assertEqual(len(editorial_field_issues(source.replace('**Tekst zadatka**','**Podatci**'))),2)
+        self.assertEqual(len(editorial_field_issues(source.replace('**Tekst zadatka**','**Zadano**'))),2)
+        self.assertTrue(editorial_field_issues(source.replace('**Rješenje**','**Traži se**')))
+
+    def test_answer_key_summary_omits_exercise_field_labels(self):
+        from generate_exercise_key import tasks_from_source
+        model=load_book()
+        for chapter in documents(model,kind='chapter'):
+            for task in tasks_from_source(ROOT/chapter['source']):
+                self.assertNotIn('**Zadano**',task['prompt'])
+                self.assertNotIn('**Tekst zadatka**',task['prompt'])
+                self.assertNotIn('**Traži se**',task['prompt'])
+                self.assertEqual(task['prompt'].count('$')%2,0)
+
     def test_typed_components_render_without_custom_html(self):
         index=json.loads((ROOT/'assets/content-index.json').read_text(encoding='utf8'))
         example=next(o for o in index['objects'].values() if o['kind']=='Example')

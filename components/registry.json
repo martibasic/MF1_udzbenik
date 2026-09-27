@@ -71,6 +71,15 @@
       ],
       "html": "section"
     },
+    "Statement": {
+      "classes": [
+        "mf1-statement"
+      ],
+      "labels": [
+        "Tekst zadatka"
+      ],
+      "html": "section"
+    },
     "Given": {
       "classes": [
         "mf1-given"
@@ -96,6 +105,7 @@
         "mf1-interpretation"
       ],
       "labels": [
+        "Provjera i tumačenje",
         "Tumačenje rezultata",
         "Provjera i komentar",
         "U tehnici to znači"
@@ -119,6 +129,17 @@
       "accent": "mf1-accent-d",
       "label": "Inženjerski kontekst",
       "role": "note"
+    },
+    "CFDContext": {
+      "classes": [
+        "mf1-cfd"
+      ],
+      "html": "section",
+      "pdf_mode": "rail",
+      "accent": "mf1-c-numerika",
+      "label": "Računalna dinamika fluida",
+      "role": "note",
+      "visibility": ["web", "pdf", "print"]
     },
     "NumericalBridge": {
       "classes": [

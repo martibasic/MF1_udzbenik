@@ -88,6 +88,9 @@ def tasks_from_source(path: Path) -> list[dict[str, str]]:
         prompt = re.split(
             r"(?m)^\s*:{3,}\s*(?:\{|$)|^###\s+|^\[Razina:", chunk, maxsplit=1
         )[0]
+        # Field headings organize the full exercise. They are not prose and
+        # must not leak into the shortened answer-key summary or its budget.
+        prompt = re.sub(r'(?m)^\*\*(?:Tekst zadatka|Zadano|Traži se)\*\*\s*$', '', prompt)
         hint_match = HINT_RE.search(chunk)
         answer_match = ANSWER_RE.search(chunk)
         # Višedijelni odgovor može izričito tražiti cijeli tekst u tiskanom

@@ -240,6 +240,30 @@ def _svg_accessibility(path: Path) -> list[str]:
     return issues
 
 
+def editorial_field_issues(text: str) -> list[str]:
+    """Check the shared writing pattern, including nested notes in examples."""
+    issues = []
+    stack = []
+    for line in text.splitlines():
+        if re.match(r'^:{3,}\s*\{', line):
+            match = EXAMPLE_RE.search(line)
+            stack.append((match[1] if match else None, []))
+        elif re.match(r'^:{3,}\s*$', line) and stack:
+            identifier, fields = stack.pop()
+            if identifier and fields != ['Tekst zadatka', 'Traži se', 'Rješenje', 'Provjera i tumačenje']:
+                issues.append(f'{identifier}: očekuju se polja Tekst zadatka / Traži se / Rješenje / Provjera i tumačenje, tim redom')
+        elif stack and stack[-1][0] and line in (
+            '**Tekst zadatka**', '**Traži se**', '**Rješenje**', '**Provjera i tumačenje**',
+            '**Kontekst**', '**Zadano**', '**Pretpostavke i model**'
+        ):
+            stack[-1][1].append(line.strip('*'))
+    for match in re.finditer(r'^### [^\n]*\{#(task-[^ }]+)[^\n]*\}\n(.*?)(?=^:{3,})', text, re.M | re.S):
+        fields = re.findall(r'^\*\*(Tekst zadatka|Zadano|Kontekst|Traži se)\*\*$', match[2], re.M)
+        if fields != ['Tekst zadatka', 'Traži se']:
+            issues.append(f'{match[1]}: očekuju se zasebna polja Tekst zadatka / Traži se')
+    return issues
+
+
 def audit() -> tuple[dict[str, object], list[str]]:
     chapters, issues = load_chapters()
     quarto_report, quarto_issues = _audit_quarto_contract()
@@ -253,6 +277,7 @@ def audit() -> tuple[dict[str, object], list[str]]:
 
     for chapter in chapters:
         code = f"U{chapter.number:02}"
+        issues.extend(f'{code}: {issue}' for issue in editorial_field_issues(chapter.text))
         examples = EXAMPLE_RE.findall(chapter.text)
         object_index = json.loads((REPO_ROOT / "assets/content-index.json").read_text(encoding="utf8"))["objects"]
         example_numbers = [object_index.get(identifier, {}).get("label", "").removeprefix("P") for identifier in examples]

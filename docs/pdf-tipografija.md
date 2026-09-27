@@ -100,3 +100,74 @@ Vizualna procjena čitljivosti nije dokaz didaktičke ili znanstvene kvalitete.
 Na krajevima poglavlja i uz nedjeljive tiskovne panele ostaju kraće stranice;
 ne rastežu se odlomci ili skice radi jednakog popunjavanja svakog lista.
 U ovoj reviziji nije provedena nova sadržajna recenzija.
+
+## Urednička dopuna zadataka — 26. rujna 2026.
+
+Nakon dopune CFD primjena polazno izdanje imalo je 315 stranica. Ova revizija
+obuhvaća način zadavanja i praćenja računa: svih 87 primjera ima polja
+„Zadano”, „Traži se”, „Rješenje” i „Provjera i tumačenje”, a svih 90 zadataka
+odvojene uvjete i zahtjeve. Zahtjevi se iskazuju izravnim glagolima; više
+zahtjeva tvori numerirani popis. Odvojena fizikalna stanja izričito se
+imenuju, a dulji se podatci raspoređuju u kratke odlomke. Brojevi, modeli,
+tolerancije, kontrolni rezultati i razine zadataka nisu promijenjeni.
+
+Primjeri i zadatci koriste jednake razmake: 1,2 em između odlomaka i
+1,0 em između stavki popisa, uz postojeći prored od 0,75 em. Oznake polja
+imaju 12 pt prije i 7 pt poslije. Izričiti razmak ispod oznake sprječava
+da promjena odlomnog razmaka udalji naslov od teksta kojem pripada.
+Posljednji zahtjev ostaje u istom numeriranom popisu i drži oznaku razine
+uz sebe; ostale stavke ostaju prelomive. Skice, fontovi i margine zadržani su.
+
+Zajednički HTML/Typst adapter prepoznaje i naslijeđene oznake s točkom ili
+dvotočkom. Izvori sada imaju jedinstven zapis bez završne interpunkcije.
+Generator ključa uklanja nazive polja prije sažimanja iskaza, čuvajući
+formule i postojeće naputke/rezultate. `audit_publication.py` trajno provjerava
+obvezna polja; regresijski testovi pokrivaju oba izlazna formata, brojanje
+popisa, odvajanje naputaka i sažimanje bez prekinutih formula.
+
+Usporedba s lokalnom početnom snimkom provjerava svih 90 skupova skalarnih
+ulaza, kontrolnih rezultata, tolerancija i neovisnih numeričkih ugovora,
+svih 796 izdvojenih jednadžbi, stabilne ID-jeve i nepromijenjene CFD odlomke.
+Snimka i izvještaji čuvaju se u ignoriranoj mapi `tools/tmp/editorial-review/`.
+Automatska provjera potpunosti dopunjuje urednički i vizualni pregled;
+ne predstavlja novu znanstvenu recenziju ili studentski pilot.
+
+PDF nakon te prve dopune imao je 333 stranice. Urednički pregled obuhvatio je uzorak od
+40 stranica: kontaktne preglede iz svih poglavlja i povećane prikaze
+kratkih primjera, složenih zadataka te njihovih nastavaka. Puni objavni CI
+prošao je za 850 s, uključujući 72 mrežna prikaza, A4 ispis, izvršavanje
+bilježnica i automatski audit svih stranica PDF-a. Regresijski raspon
+270–335 nije mijenjan. PDF knjige i PDF dostupan u mrežnom preuzimanju
+imaju isti SHA-256:
+`95bb681e951acfa3fea7a2e5225692373324dafca5c99635ff41f535ba76357b`.
+
+### Naknadno sažimanje iskaza i razdvajanje skice od računa
+
+Na dodatni zahtjev autora svih 87 primjera i 90 zadataka sada počinje
+poljem „Tekst zadatka”: u njemu su zajedno fizikalni postav, ulazne
+vrijednosti i potrebni uvjeti. Zasebno ostaje „Traži se”, a u primjerima
+slijede „Rješenje” i „Provjera i tumačenje”. Matematički model koji treba
+izvesti pripada rješenju. Tablice se zadržavaju za usporedna mjerenja.
+Time su uvodni dijelovi primjera skraćeni približno za trećinu, bez
+promjene jednadžbi, problemskih podataka, traženih odluka ili razina.
+
+Svih 57 skica u riješenim primjerima urednički je pregledano. Ponovljeni
+računi zamijenjeni su kratkim simboličkim relacijama, a oznake izračunatih
+veličina simbolima nepoznanica. Zadržani su smisleni kvantitativni grafovi,
+profili i trokuti brzina. Opisi slika više ne prepričavaju brojčano rješenje.
+Skice koriste sustav opisan u [ispis-skica.md](ispis-skica.md): u pravilu
+62 % širine za prizor i 34 % za relacije, uz font od najmanje 9 pt.
+
+Ugovor, registar komponenti, oba adaptera, generator ključa i audit
+usklađeni su s poljem „Tekst zadatka”. Lokalna snimka i usporedbe ove
+dopune nalaze se u ignoriranoj mapi `tools/tmp/concise-tasks-review/`.
+Automatska usporedba čuva svih 796 izdvojenih jednadžbi i stabilne ID-jeve;
+numerički verifieri zasebno provjeravaju rezultate. Prolaz audita ne
+zamjenjuje uredničku procjenu čitljivosti.
+
+Kontrolni render dopune imao je 314 stranica. Kontaktni pregled obuhvatio
+je 73 stranice s primjerima i vježbama iz svih 15 poglavlja, uz povećani
+pregled složenih iskaza i tiskovnih skica. Naknadno je dodatno razmaknuta
+usporedba Reynoldsovih režima, a preostali brojčani kriteriji premješteni
+iz zahtjeva u iskaze zadataka. Konačno izdanje ponovno prolazi puni
+objavni postupak; njegov zapis je `tools/tmp/concise-tasks-review/publication.log`.

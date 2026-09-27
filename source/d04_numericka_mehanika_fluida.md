@@ -2,10 +2,23 @@
 
 Ovaj dodatak povezuje ćelijsku bilancu iz []{.mf1-chapter-ref target="u07"}, analitičke reference iz []{.mf1-chapter-ref target="u08"} i lokalne jednadžbe iz []{.mf1-chapter-ref target="u12"}. CFD približno rješava odabrani model strujanja kada geometrija, rubni uvjeti ili promjene u vremenu otežavaju analitički račun.
 
+**Povezani primjeri kroz knjigu.** Odlomci *Računalna dinamika fluida* prate kako se model mijenja kada se promijeni pitanje. Za usporedno čitanje služe sljedeći nizovi:
+
+| Primjena | Povezani odlomci | Što želimo odlučiti |
+|---|---|---|
+| Rashladni krug baterije | [početni model](u01_osnove_fluida_i_pascalov_zakon.qmd#cfd-rashladni-krug-model) → [podjela protoka](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#cfd-razdjelnik-podjela-protoka) → [mjerenje i gubitak](u08_energijska_jednadzba_i_bernoulli.qmd#cfd-venturi-mjerenje-gubitak) → [toplina](u12_diferencijalni_opis_realnog_toka.qmd#cfd-hladna-ploca-toplina) → [radna točka](u13_gubici_cjevovodi_crpke_i_mreze.qmd#cfd-krug-radna-tocka) → [rotor](u14_turbostrojevi_i_propulzija.qmd#cfd-rotor-karakteristika) | raspored kanala, protoci i pogon |
+| Cisterna i ponton | [kočenje i valovi](u04_relativno_mirovanje_fluida.qmd#cfd-cisterna-kocenje) → [gaz i stabilitet](u06_uzgon_plivanje_i_stabilnost.qmd#cfd-ponton-gaz-stabilitet) → [prijenos mjerila](u11_dimenzijska_analiza_i_slicnost.qmd#cfd-ponton-slicnost) | učinak pregrada ili položaja tereta |
+| Gradski kanal s ustavom | [sila i moment](u05_hidrostatske_sile_na_plohe.qmd#cfd-ustava-opterecenje) → [vodostaji](u15_otvoreni_tokovi.qmd#cfd-kanal-vodostaji) → [mlaz i skok](u15_otvoreni_tokovi.qmd#cfd-ustava-hidraulicki-skok) | opterećenje pogona i umirni bazen |
+| Zračna sapnica | [prigušenje](u09_kompresibilni_idealni_tok.qmd#cfd-sapnica-prigusenje) → [udarni val](u09_kompresibilni_idealni_tok.qmd#cfd-sapnica-udarni-val) | potrošnja zraka i radno područje |
+
+: {.mf1-reference-table tbl-colwidths="[27,46,27]"}
+
+Pri svakom prijelazu provjeri što ostaje pretpostavka, koji podatak treba dodati i koju novu veličinu račun daje.
+
 ::: {.callout-tip icon="false"}
 ## Opseg dodatka {#što-se-ovdje-neće-dogoditi}
 
-**MF1** daje fizikalne zakone, pretpostavke i bilance. **Numerički mostovi** pokazuju njihov prijenos u račun. **Dublje** ovdje znači dodatno čitanje, izvan obveznog gradiva MF1; izvođenje shema i samostalno postavljanje rješavača pripadaju nastavku studija.
+**MF1** daje fizikalne zakone, pretpostavke i bilance. **Odlomci Računalna dinamika fluida** povezuju ih s konkretnim primjenama i postupnim proširenjem modela. **Dublje** ovdje znači dodatno čitanje, izvan obveznog gradiva MF1; izvođenje shema i samostalno postavljanje rješavača pripadaju nastavku studija.
 
 Za čitanje slijedi: @sec-cfd-mapa → @sec-cfd-polja-izlazi → @sec-cfd-venturi → @sec-cfd-vv-paketi. Prije vlastitog računa vrati se na @sec-cfd-kada-ne-treba.
 :::

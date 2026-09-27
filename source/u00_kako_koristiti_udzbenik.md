@@ -2,9 +2,9 @@
 
 Priručnik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. Kroz petnaest poglavlja upoznat ćeš svojstva fluida, hidrostatiku i strujanje u cijevima, turbostrojevima i otvorenim kanalima.
 
-Pri prvom čitanju slijedi glavni tekst, riješene primjere i zadatke. *Dublje* i numerički mostovi dodatno su čitanje: osnovni MF1 možeš pratiti bez učenja CFD postupaka.
+Pri prvom čitanju slijedi glavni tekst, riješene primjere i zadatke. *Dublje* i odlomci *Računalna dinamika fluida* dodatno su čitanje: osnovni MF1 možeš pratiti bez učenja CFD postupaka.
 
-**CFD put:** fizikalni zakoni → modeli, pretpostavke i bilance → analitička rješenja → kratki numerički mostovi → lokalne jednadžbe u []{.mf1-chapter-ref target="u12"} → model, provjera i odluka u [Venturijevu primjeru](#sec-cfd-venturi). CFD primjenjuje istu fiziku na složeniji prostor i vrijeme.
+**CFD put:** fizikalni zakoni → modeli, pretpostavke i bilance → analitička rješenja → povezani primjeri u odlomcima *Računalna dinamika fluida* → lokalne jednadžbe u []{.mf1-chapter-ref target="u12"} → model, provjera i odluka u [Venturijevu primjeru](#sec-cfd-venturi). CFD primjenjuje istu fiziku na složeniji prostor i vrijeme.
 
 ## Predznanje
 
@@ -21,6 +21,13 @@ Procijenjeno vrijeme uz poglavlja služi planiranju samostalnog rada. Ukupno je 
 5. Sažetak poglavlja okuplja osnovne modele, granice njihove primjene i inženjersko značenje rezultata.
 
 Kratki primjeri uvode pojedinu relaciju, a cjeloviti zadatci povezuju više koraka. Okviri *Fizikalno značenje* tumače rezultat, dok *Granica modela* objašnjava kada odabrane pretpostavke prestaju vrijediti.
+
+::: {.mf1-cfd title="Računalna dinamika fluida"}
+
+**Kako čitati CFD primjere.** Polazište je konkretno pitanje: dobivaju li svi rashladni kanali dovoljno tekućine, koliki val nastaje pri kočenju cisterne ili kako ustava mijenja razinu vode? Odlomak povezuje to pitanje s modelom, podatcima koje zadajemo i veličinama koje dobivamo iz računa. Uz rezultat pratimo provjeru i odluku koju on omogućuje.
+
+Neki se sustavi vraćaju kroz knjigu. Rashladnom krugu postupno dodajemo viskoznost, podjelu protoka, gubitke i crpku; plutanje pontona proširujemo na njihanje, a opterećenje ustave na tok nizvodno. Takvi primjeri pokazuju zašto novo pitanje traži dodatnu fiziku. Pregled poveznica i cjelovit postupak daje [dodatak o numeričkoj mehanici fluida](d04_numericka_mehanika_fluida.qmd).
+:::
 
 ## Oznake i razine zadataka
 

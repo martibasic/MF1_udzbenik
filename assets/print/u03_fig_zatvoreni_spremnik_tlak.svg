@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" role="img" aria-labelledby="u03fzst_title u03fzst_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 436" role="img" aria-labelledby="u03fzst_title u03fzst_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:460px;height:auto;">
   <title id="u03fzst_title">Tlak u priključku zatvorenog vodenog spremnika</title>
-  <desc id="u03fzst_desc">Zatvoreni vodeni spremnik s plinskim prostorom pretlaka p-G,m = 18 kPa iznad mirne razine vode i priključkom A na dubini h = 1,4 m. Lijevi panel: geometrija spremnika s kotom dubine, oznakom plinskog pretlaka i tlačnom kaskadom prema dolje. Desni panel: tri koraka rješenja - apsolutni tlak plinskog prostora p-G = 118,8 kPa, apsolutni tlak u točki A = 132,5 kPa, manometarski tlak u A = 31,7 kPa.</desc>
+  <desc id="u03fzst_desc">Zatvoreni vodeni spremnik s plinskim prostorom iznad vode i priključkom A na dubini h. Tlak raste prema dolje. Relacije razlikuju apsolutni i manometarski tlak.</desc>
   <defs>
     <pattern id="u03fzst_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
@@ -19,83 +19,38 @@
       <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
   </defs>
-  <rect x="100" y="86" width="264" height="14" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <rect x="100" y="100" width="14" height="306" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <rect x="350" y="100" width="14" height="306" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <rect x="100" y="406" width="264" height="14" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
-  <rect x="114" y="100" width="236" height="70" fill="#f3f6f7" />
-  <rect x="114" y="170" width="236" height="236" fill="#dcebf1" />
-  <line x1="114" y1="170" x2="350" y2="170" stroke="#356b83" stroke-width="2.4" />
-  <line x1="152" y1="120" x2="152" y2="164" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fzst_aB)" />
-  <line x1="232" y1="120" x2="232" y2="164" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fzst_aB)" />
-  <line x1="312" y1="120" x2="312" y2="164" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fzst_aB)" />
-  <rect x="56" y="302" width="44" height="16" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.3" />
-  <rect x="58" y="305" width="42" height="10" fill="#dcebf1" />
-  <rect x="100" y="305" width="14" height="10" fill="#dcebf1" />
-  <circle cx="56" cy="310" r="6" fill="#356b83" stroke="#356b83" stroke-width="1.4" />
-  <line x1="262" y1="180" x2="262" y2="300" stroke="#356b83" stroke-width="2.4" stroke-dasharray="5,4" marker-end="url(#u03fzst_aB)" />
-  <line x1="350" y1="170" x2="406" y2="170" stroke="#657781" stroke-width="0.7" />
-  <line x1="350" y1="310" x2="406" y2="310" stroke="#657781" stroke-width="0.7" />
-  <line x1="394" y1="170" x2="410" y2="170" stroke="#657781" stroke-width="1.2" />
-  <line x1="394" y1="310" x2="410" y2="310" stroke="#657781" stroke-width="1.2" />
-  <line x1="402" y1="173" x2="402" y2="307" stroke="#657781" stroke-width="1.3" marker-start="url(#u03fzst_aDimL)" marker-end="url(#u03fzst_aDim)" />
-  <text x="232" y="46" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" fill="#263746" text-anchor="middle">Zatvoreni vodeni spremnik</text>
-  <text x="232" y="64" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" fill="#263746" text-anchor="middle">plinski pretlak iznad mirne razine, priključak A na dubini h</text>
-  <text x="232" y="113" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-style="italic" fill="#263746" text-anchor="middle" font-weight="700">plin (zrak): <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">G,m</tspan> = 18 kPa</text>
-  <text x="46" y="295" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#263746" text-anchor="middle">A</text>
-  <text x="272" y="232" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746" font-weight="700">+ρ g h</text>
-  <text x="272" y="248" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746">hidrostatski</text>
-  <text x="272" y="260" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746">doprinos</text>
-  <text x="180" y="372" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-style="italic" fill="#263746">voda</text>
-  <text x="180" y="389" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">ρ = 998 kg/m³</text>
-  <text x="232" y="80" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">
-    <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">atm</tspan> = 100,8 kPa (okolina)</text>
-  <text x="232" y="446" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">Hod kroz fluid: kreni od plinskog prostora dolje za dubinu <tspan font-style="italic">h</tspan>
-  </text>
-  <text x="232" y="462" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">u priključku A vrijedi: <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">A</tspan> = <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">G</tspan> + ρ g h</text>
-  <text x="665" y="46" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" fill="#263746" text-anchor="middle">Postupak: tri koraka</text>
-  <text x="665" y="64" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" fill="#263746" text-anchor="middle">apsolutni i manometarski tlak u priključku A</text>
-  <text x="504" y="132" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" fill="#263746">
-    <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">G</tspan> = <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">atm</tspan> + <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">G,m</tspan> = 100,8 + 18,0 kPa</text>
-  <text x="504" y="158" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">
-    <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">G</tspan> = 118,8 kPa = 118 800 Pa</text>
-  <text x="504" y="210" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">2. Apsolutni tlak u točki A</text>
-  <text x="504" y="234" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" fill="#263746">
-    <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">A</tspan> = <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">G</tspan> + ρ g h</text>
-  <text x="504" y="258" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" fill="#263746">= 118 800 + 998 · 9,81 · 1,40</text>
-  <text x="504" y="282" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">
-    <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">A</tspan> ≈ 132 507 Pa ≈ 132,5 kPa</text>
-  <text x="504" y="336" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">3. Manometarski tlak u točki A</text>
-  <text x="504" y="360" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" fill="#263746">
-    <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">A,m</tspan> = <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">A</tspan> − <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">atm</tspan> = 132 507 − 100 800</text>
-  <text x="504" y="386" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">
-    <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">A,m</tspan> ≈ 31 707 Pa ≈ 31,7 kPa</text>
-  <text x="665" y="434" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#263746">REZULTATI</text>
-  <text x="545" y="458" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746">
-    <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">G</tspan> ≈ 118,8 kPa</text>
-  <text x="665" y="458" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746">
-    <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">A</tspan> ≈ 132,5 kPa</text>
-  <text x="790" y="458" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#263746">
-    <tspan font-style="italic">p</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">A,m</tspan> ≈ 31,7 kPa</text>
-  <text x="414" y="236" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#263746">h</text>
-  <text x="414.0" y="252.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">= 1,4 m</text>
-  <text x="504" y="108" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">1. Apsolutni tlak u plinskom prostoru</text>
+  <g id="u03fzst_title-scene-1" transform="translate(-15.9375 -8.0000)">
+    <rect x="100" y="86" width="264" height="14" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+    <rect x="100" y="100" width="14" height="306" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+    <rect x="350" y="100" width="14" height="306" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+    <rect x="100" y="406" width="264" height="14" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.4" />
+    <rect x="114" y="100" width="236" height="70" fill="#f3f6f7" />
+    <rect x="114" y="170" width="236" height="236" fill="#dcebf1" />
+    <line x1="114" y1="170" x2="350" y2="170" stroke="#356b83" stroke-width="2.4" />
+    <line x1="152" y1="120" x2="152" y2="164" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fzst_aB)" />
+    <line x1="232" y1="120" x2="232" y2="164" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fzst_aB)" />
+    <line x1="312" y1="120" x2="312" y2="164" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fzst_aB)" />
+    <rect x="56" y="302" width="44" height="16" fill="url(#u03fzst_hatch)" stroke="#3a4a56" stroke-width="1.3" />
+    <rect x="58" y="305" width="42" height="10" fill="#dcebf1" />
+    <rect x="100" y="305" width="14" height="10" fill="#dcebf1" />
+    <circle cx="56" cy="310" r="6" fill="#356b83" stroke="#356b83" stroke-width="1.4" />
+    <line x1="262" y1="180" x2="262" y2="300" stroke="#356b83" stroke-width="2.4" stroke-dasharray="5,4" marker-end="url(#u03fzst_aB)" />
+    <line x1="350" y1="170" x2="406" y2="170" stroke="#657781" stroke-width="0.7" />
+    <line x1="350" y1="310" x2="406" y2="310" stroke="#657781" stroke-width="0.7" />
+    <line x1="394" y1="170" x2="410" y2="170" stroke="#657781" stroke-width="1.2" />
+    <line x1="394" y1="310" x2="410" y2="310" stroke="#657781" stroke-width="1.2" />
+    <line x1="402" y1="173" x2="402" y2="307" stroke="#657781" stroke-width="1.3" marker-start="url(#u03fzst_aDimL)" marker-end="url(#u03fzst_aDim)" />
+    <text x="232" y="46" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" fill="#263746" text-anchor="middle">Zatvoreni vodeni spremnik</text>
+    <text x="232" y="113" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-style="italic" fill="#263746" text-anchor="middle" font-weight="700">plin (zrak): <tspan font-style="italic">p</tspan>
+      <tspan baseline-shift="sub" font-size="0.7em">G,m</tspan> = 18 kPa</text>
+    <text x="46" y="295" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#263746" text-anchor="middle">A</text>
+    <text x="272" y="232" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746" font-weight="700">hod tlaka</text>
+    <text x="180" y="372" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-style="italic" fill="#263746">voda</text>
+    <text x="180" y="389" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">ρ = 998 kg/m³</text>
+    <text x="232" y="80" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">
+      <tspan font-style="italic">p</tspan>
+      <tspan baseline-shift="sub" font-size="0.7em">atm</tspan> = 100,8 kPa (okolina)</text>
+    <text x="414" y="236" font-family="Arial, Liberation Sans, sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#263746">h</text>
+    <text x="414.0" y="252.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">= 1,4 m</text>
+  </g>
 </svg>

@@ -116,6 +116,12 @@ Mijenjaj samo ovisnosti koje zahvaća novi problem, ali provjeri ih sve.
 - Naputak i kontrolni rezultat ostaju u predviđenim HTML blokovima za odvojeni
   ispis. D06 i generirana polja manifesta ne uređuj ručno. Ručno održavani
   metapodatci primjera također se moraju provjeriti pri njihovoj zamjeni.
+- Iskaz piši prema aktualnom autorskom ugovoru: „Tekst zadatka” s ulazima i
+  potrebnim uvjetima u povezanom tekstu, zatim zasebno „Traži se”. Ne dodaj
+  ponovljene popise „Kontekst”, „Zadano” i „Pretpostavke”. Skica riješenog
+  primjera sadrži prizor, kote i kratke oznake; simboličke relacije i dulja
+  objašnjenja idu u običan odlomak ispod slike, a brojčani račun i rezultat
+  pripadaju rješenju. Opis slike ne ponavlja cijeli iskaz.
 - Provjeri da konceptualna pitanja nisu samo prisutna u izvoru nego i vidljiva
   studentu. Globalno CSS pravilo ne mijenjaj bez pregleda učinka na druga poglavlja.
 
@@ -448,8 +454,8 @@ U tiskovnoj izvedenici oznake su 9,5 pt, a najmanji tekst, uključujući indekse
 [pravilima ispisnih figura](docs/ispis-skica.md).
 
 Tekst ne prelazi preko linija. Povezati oznaku s njezinim presjekom ili tijelom
-položajem ili nenametljivom vodilicom. Račun može stajati pokraj scene bez
-ukrasnog okvira. Panele koristiti kad odvajaju modele, stanja ili korake;
+položajem ili nenametljivom vodilicom. Formule, principi i dulja objašnjenja
+idu u običan tekst ispod skice. Panele koristiti kad odvajaju modele ili stanja;
 ne nametati tri panela svakoj uvodnoj slici. Provjerena shema smije se
 ponoviti ako ponavljanje služi učenju, a ne prikriva ponavljanje zadataka.
 

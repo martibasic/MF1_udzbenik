@@ -8,6 +8,7 @@ from pathlib import Path
 import math
 import re
 import xml.etree.ElementTree as ET
+from sketch_style import check_scene_canvas
 
 ASSETS = Path(__file__).resolve().parent.parent / 'assets/print'
 
@@ -73,7 +74,7 @@ def main():
     p='u08vs_fix_z1_';fluid=polygon(ns[p+'fluid'])
     a=span(fluid,60,False);b=span(fluid,240,False)
     close((a[1]-a[0])/(b[1]-b[0]),100/160)
-    assert root.get('viewBox')=='0 0 960 720'
+    check_scene_canvas('u08_vjezbe_skice.svg', root, 6)
     assert all('u08vs_fix_z'+str(i) in ns for i in range(1,7))
     print('PASS Z1 diameters and six original practice panels')
 

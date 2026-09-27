@@ -9,6 +9,7 @@ Rasteri se ne zapisuju na disk.
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 import re
 import sys
@@ -119,7 +120,9 @@ def _chapter_destinations(document: pymupdf.Document) -> tuple[dict[str, int], l
     return selected, issues
 
 
-def _figure_numbering_issues(page_texts: list[str]) -> list[str]:
+def _figure_numbering_issues(
+    page_texts: list[str], objects: dict | None = None
+) -> list[str]:
     """Check actual caption sequences against the canonical chapter figures.
 
     A custom heading can accidentally bypass Quarto's counter reset while
@@ -130,19 +133,23 @@ def _figure_numbering_issues(page_texts: list[str]) -> list[str]:
     for text in page_texts:
         for chapter, number in re.findall(r"Slika\s+(\d+)\.(\d+)\s*:", text):
             numbers.setdefault(int(chapter), []).append(int(number))
+    if objects is None:
+        objects = json.loads((REPO_ROOT / "assets/content-index.json").read_text(
+            encoding="utf-8"))["objects"]
+    # A retained legacy #fig anchor can now point to ordinary prose. Only
+    # actual Figure objects participate in the canonical caption sequence.
+    expected: dict[int, list[int]] = {}
+    for obj in objects.values():
+        if obj["kind"] == "Figure":
+            chapter, number = map(int, obj["number"].split("."))
+            expected.setdefault(chapter, []).append(number)
     issues = []
-    for chapter in range(1, 16):
-        sources = list((REPO_ROOT / "source").glob(f"u{chapter:02d}_*.md"))
-        if len(sources) != 1:
-            issues.append(f"nejasan izvor za provjeru slika poglavlja {chapter}")
-            continue
-        source = sources[0].read_text(encoding="utf-8")
-        count = len(re.findall(r"\{#fig-[^\s}]+", source))
-        expected = list(range(1, count + 1))
-        if numbers.get(chapter, []) != expected:
+    for chapter in sorted(numbers.keys() | expected.keys()):
+        sequence = sorted(expected.get(chapter, []))
+        if numbers.get(chapter, []) != sequence:
             issues.append(
                 f"poglavlje {chapter}: oznake slika {numbers.get(chapter, [])}; "
-                f"očekuje se neprekinuto 1–{count} prema izvoru"
+                f"očekuje se {sequence} prema sadržajnom modelu"
             )
     return issues
 

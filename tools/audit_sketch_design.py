@@ -23,6 +23,11 @@ def main():
         def fail(message): issues.append(f'{name}: {message}')
         for e in root.iter():
             tag = e.tag.split('}')[-1]
+            if e.get('data-mf1-role') == 'formula-guide':
+                fail('formula guides belong in ordinary chapter text below the figure')
+            if tag == 'text' and re.match(r'^(osnovne relacije|ključn[iea] (?:princip|jednadžb|brojev))',
+                                         ' '.join(''.join(e.itertext()).split()).casefold()):
+                fail('explanatory heading belongs in chapter prose, not in the sketch')
             if tag in ('linearGradient', 'radialGradient', 'filter', 'image'):
                 fail(f'nontechnical/decorative rendering: {tag}')
             for attribute in ('fill', 'stroke'):

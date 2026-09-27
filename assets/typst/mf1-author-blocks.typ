@@ -10,8 +10,13 @@
   block(width: 100%, breakable: true,
     above: mf1-block-gap-pt * 1pt, below: mf1-block-gap-pt * 1pt,
     inset: padding, stroke: frame, {
-      set par(first-line-indent: 0pt, spacing: mf1-paragraph-spacing-em * 1em)
-      block(inset: (bottom: 6pt), breakable: false, sticky: true, {
+      set par(first-line-indent: 0pt, spacing: if mode == "example" {
+        mf1-exercise-paragraph-spacing-em * 1em
+      } else { mf1-paragraph-spacing-em * 1em })
+      set list(spacing: mf1-exercise-list-spacing-em * 1em) if mode == "example"
+      set enum(spacing: mf1-exercise-list-spacing-em * 1em) if mode == "example"
+      block(inset: (bottom: 6pt), below: if mode == "example" { 0pt } else { auto },
+        breakable: false, sticky: true, {
         set par(justify: false, leading: mf1-heading-leading-em * 1em)
         set text(size: if mode == "example" { mf1-example-title-pt * 1pt }
           else { mf1-block-title-pt * 1pt }, weight: "bold", fill: mf1-ink,
@@ -21,6 +26,15 @@
       body
     })
 }
+
+// Scope the same paragraph/list rhythm to unsolved exercises. Their titles
+// and numbered requests retain normal pagination inside this open block.
+#let mf1-exercise-body(body) = block(width: 100%, breakable: true, {
+  set par(first-line-indent: 0pt, spacing: mf1-exercise-paragraph-spacing-em * 1em)
+  set list(spacing: mf1-exercise-list-spacing-em * 1em)
+  set enum(spacing: mf1-exercise-list-spacing-em * 1em)
+  body
+})
 
 #let mf1-level(body) = box(inset: (x: 4pt, y: 1pt), {
   set text(size: mf1-level-pt * 1pt, weight: "regular", fill: mf1-muted)
@@ -33,7 +47,7 @@
 })
 
 #let mf1-minor-heading(title) = block(
-  above: mf1-minor-before-pt * 1pt, inset: (bottom: mf1-minor-after-pt * 1pt),
+  above: mf1-minor-before-pt * 1pt, below: mf1-minor-after-pt * 1pt,
   breakable: false, sticky: true, {
     set par(justify: false, leading: mf1-heading-leading-em * 1em)
     set text(size: mf1-label-pt * 1pt, weight: "bold",

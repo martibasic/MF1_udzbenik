@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 import re
 import sys
+import unicodedata
 import xml.etree.ElementTree as ET
 
 import pymupdf
@@ -229,8 +230,8 @@ def bibliography_issues(document: pymupdf.Document) -> list[str]:
     text = "\n".join(document[i].get_text() for i in range(starts[0] - 1, ends[0] - 1))
     heading = text.find("Bibliografski zapisi")
     numbers = re.findall(r"(?m)^\[(\d+)\]", text[heading:]) if heading >= 0 else []
-    if numbers != [str(i) for i in range(1, 19)]:
-        return [f"E.7 mora sadržavati svih 18 bibliografskih zapisa; nađene oznake {numbers}"]
+    if numbers != [str(i) for i in range(1, 22)]:
+        return [f"E.7 mora sadržavati 21 bibliografski zapis; nađene oznake {numbers}"]
     after_key = "\n".join(document[i].get_text() for i in range(ends[0] - 1, len(document)))
     if re.search(r"(?m)^\[1\]", after_key):
         return ["bibliografija se ponavlja iza dodatka F"]
@@ -271,7 +272,6 @@ def orphan_and_overflow_issues(document: pymupdf.Document) -> list[str]:
 def figure_font_issues(document: pymupdf.Document) -> list[str]:
     """SVG labels remain PDF text: check their actual physical size after layout."""
     issues = []
-    count = 0
     for number, page in enumerate(document, 1):
         for block in page.get_text("dict")["blocks"]:
             for line in block.get("lines", []):
@@ -281,11 +281,84 @@ def figure_font_issues(document: pymupdf.Document) -> list[str]:
                         continue
                     if not span["text"].strip():
                         continue
-                    count += 1
                     if span["size"] < FIGURE_TOKENS["figure-small-label-size"] - .03:
                         issues.append(f"str. {number}: oznaka skice {span['size']:.2f} pt: {span['text']}")
-    if count < 3000:
-        issues.append(f"nađeno samo {count} tekstnih raspona skica; provjeriti ugrađivanje SVG-a")
+    return issues
+
+
+def _normalise_label(text: str) -> str:
+    """Join wrapped label fragments and equivalent Unicode representations."""
+    return re.sub(r"\s+", "", unicodedata.normalize("NFKC", text))
+
+
+def _expected_figure_labels() -> dict[str, list[str]]:
+    index = json.loads((ROOT / "assets/content-index.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / "assets/pdf-figures/manifest.json").read_text(encoding="utf-8"))
+    expected = {}
+    for obj in index["objects"].values():
+        if obj["kind"] != "Figure":
+            continue
+        figure = manifest["figures"][Path(obj["source"]).name]
+        labels = []
+        for row in figure["rows"]:
+            svg = ET.parse(ROOT / "assets/pdf-figures" / row["file"])
+            labels.extend("".join(element.itertext())
+                          for element in svg.findall(".//{*}text"))
+        expected[obj["number"]] = labels
+    return expected
+
+
+def figure_label_issues(
+    document: pymupdf.Document, expected: dict[str, list[str]] | None = None
+) -> list[str]:
+    """Require every print-SVG label in the PDF before its own caption.
+
+    Figures may span several rows/pages. Captions delimit the label stream;
+    body text, running headers and folios are excluded by size and position.
+    Include fallback serif fonts, since Unicode labels can use them too.
+    Repeated labels consume separate occurrences. This replaces a stale
+    global text-span minimum that counted explanations formerly inside SVGs.
+    """
+    if expected is None:
+        expected = _expected_figure_labels()
+    issues = []
+    seen = set()
+    fragments = []
+    minimum = FIGURE_TOKENS["figure-small-label-size"] - .03
+    maximum = FIGURE_TOKENS["figure-label-size"] + .03
+    for number, page in enumerate(document, 1):
+        for block in page.get_text("dict")["blocks"]:
+            for line in block.get("lines", []):
+                for span in line["spans"]:
+                    caption = re.match(r"Slika\s+(\d+\.\d+):", span["text"])
+                    if caption:
+                        figure_number = caption[1]
+                        actual = _normalise_label("".join(fragments))
+                        fragments = []
+                        if figure_number not in expected:
+                            issues.append(f"str. {number}: neočekivana slika {figure_number}")
+                            continue
+                        if figure_number in seen:
+                            issues.append(f"str. {number}: ponovljena slika {figure_number}")
+                        seen.add(figure_number)
+                        labels = [_normalise_label(label) for label in expected[figure_number]]
+                        missing = []
+                        for label in sorted(filter(None, labels), key=len, reverse=True):
+                            if label not in actual:
+                                missing.append(label)
+                            else:
+                                actual = actual.replace(label, "", 1)
+                        if missing:
+                            issues.append(f"str. {number}, slika {figure_number}: "
+                                          f"nedostaju oznake skice {missing}")
+                    elif (minimum <= span["size"] <= maximum
+                          and 55 < span["bbox"][1] and span["bbox"][3] < 790
+                          and span["color"] != 0x536577):
+                        # Multi-line native captions use this colour; their
+                        # trailing lines must not supply the next figure's labels.
+                        fragments.append(span["text"])
+    for figure_number in sorted(expected.keys() - seen):
+        issues.append(f"slika {figure_number}: nedostaje opis za provjeru oznaka")
     return issues
 
 
@@ -296,6 +369,7 @@ def audit(path: Path) -> tuple[int, list[str]]:
         issues.extend(bibliography_issues(document))
         issues.extend(orphan_and_overflow_issues(document))
         issues.extend(figure_font_issues(document))
+        issues.extend(figure_label_issues(document))
         issues.extend(typography_issues(document))
     return checked, issues
 
@@ -313,8 +387,9 @@ def main() -> int:
             print(f"  - {issue}")
         return 1
     print(f"PDF layout PASS: {checked} raster-checked QR codes with links, equation clearance, "
-          "18 bibliography entries in E.7, captions and QR descriptions kept with content; "
-          "figure labels >= 9 pt; heading baselines, column bounds, equation numbers and P/Z labels match.")
+          "21 bibliography entries in E.7, captions and QR descriptions kept with content; "
+          "all print-SVG labels present per figure and >= 9 pt; "
+          "heading baselines, column bounds, equation numbers and P/Z labels match.")
     return 0
 
 

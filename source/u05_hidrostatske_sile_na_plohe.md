@@ -1,5 +1,9 @@
 ![Od raspodjele hidrostatskog tlaka do rezultantne sile i njezina pravca djelovanja na ravnoj plohi](../assets/print/u05_fig_uvod_pregled.svg){#fig-u05-pregled-sila-na-plohe fig-align="center" style="width:100%;max-width:980px;" fig-alt="Od raspodjele hidrostatskog tlaka do rezultantne sile i njezina pravca djelovanja na ravnoj plohi"}
 
+**Tumačenje skice.** Rezultanta tlaka na ravnu plohu jest $F=\rho gAh_C$: tlak u težištu množi se površinom. Za vertikalnu plohu dubina centra tlaka iznosi $h_{CP}=h_C+I_G/(Ah_C)$, gdje je $I_G$ aksijalni moment površine oko težišne osi. Vrijednosti su $bH^3/12$ za pravokutnik, $bH^3/36$ za trokut i $\pi d^4/64$ za krug.
+
+Na prikazanoj plohi tlak raste s dubinom, pa je CP ispod težišta C. Za nagnutu plohu iznos sile i dalje određuju $A$ i okomita dubina $h_C$; položaj hvatišta računa se s odgovarajućom geometrijom. Iznos sile određuje nosivost ploče, a njezin moment opterećenje zgloba, vijka i ukruta. U prikazanom poklopcu donji vijak prenosi veću komponentu reakcije od gornjeg zgloba. Isti se postupak primjenjuje na brodske pregrade, brane i taložnike.
+
 ## Hidrostatske sile na plohe
 
 Tlak je lokalna veličina, dok je opterećenje poklopca, vrata ili stijenke određeno njegovom raspodjelom po cijeloj plohi. Za hidrostatsku analizu određuju se:
@@ -127,7 +131,9 @@ Za $\theta=90^\circ$ dobiva se vertikalna ploha. Kada $\theta\to0$ tlak po vodor
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Numerički pokus — ravna ploha</p>
 
-Prije pokretanja predvidi kako će se promijeniti $F$ i razlika $h_{CP}-h_C$ kada se cijela ploha spusti dublje, a kako kada se pri istoj dubini težišta promijeni nagib.
+**Predvidi.** Kako se mijenjaju $F$ i $h_{CP}-h_C$ kada cijelu plohu spustiš dublje?
+
+**Provjeri i protumači.** Usporedi numeričku integraciju tlaka s analitičkim izrazima. Zatim pri istoj dubini težišta promijeni nagib i objasni razliku u hvatištu sile.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u05_sila_na_ravnu_plohu.ipynb">Pokreni u pregledniku</a>
@@ -137,12 +143,11 @@ Prije pokretanja predvidi kako će se promijeniti $F$ i razlika $h_{CP}-h_C$ kad
 :::
 
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički most — od tlaka do sile i hvatišta</p>
+::: {#cfd-ustava-opterecenje .mf1-cfd title="Računalna dinamika fluida"}
 
-**Fizikalna poveznica.** Hidrostatsko polje iz []{.mf1-chapter-ref target="u03"} daje silu $F=\int_Ap\,dA$. Podijelimo li ravnu plohu na male dijelove, računalo zbraja približne doprinose $p_iA_i$ i njihove momente oko zadane osi.
+**Zatvorena ustava i njezin pogon.** Za ustavu gradskoga kanala želimo znati silu vode i moment koji mora uravnotežiti pogon. U mirnom stanju zadamo razine vode s obiju strana. Izračunani tlak integriramo po cijeloj plohi, a svaki doprinos momentu množimo njegovim krakom prema osi ustave. Rezultanta i centar tlaka iz ručnog računa provjeravaju oba izlaza.
 
-**Provjera i primjena.** Za vrata u mirnoj vodi uspoređuju se i sila i hvatište s ručnim računom, uz istu razliku tlakova na dvjema stranama. Točna ukupna sila sama ne jamči točan moment. Pri udaru vala CFD može dati promjenjivo polje tlaka i vršno opterećenje oslonaca, za koje hidrostatika više nije dovoljna. Postupak povratka iz polja u silu nastavlja se u []{.mf1-chapter-ref target="u10"}.
+Zatim možemo istražiti djelomično otvaranje: pojavljuje se mlaz ispod ustave, pa hidrostatska raspodjela uz otvor više nije dovoljan opis. CFD tada povezuje položaj ustave, protok i opterećenje pogona. Točna ukupna sila ne jamči točan moment, a tlak u jednoj točki ne predstavlja cijelu plohu. Isti se postupak koristi za stijenku cisterne iz prethodnog poglavlja; nizvodni mlaz i skok pratimo u []{.mf1-chapter-ref target="u15"}.
 
 []{#verifikacija-cfd-a-ručnim-računom}
 :::
@@ -153,11 +158,19 @@ Prije pokretanja predvidi kako će se promijeniti $F$ i razlika $h_{CP}-h_C$ kad
 ::: {#ex-u05-vertikalna-pravokutna-zaklopka .mf1-we}
 <p class="mf1-box-label">Vertikalna pravokutna zaklopka <span class="mf1-level">T2</span></p>
 
-Pravokutna zaklopka širine $b=2{,}0\ \mathrm{m}$ i visine $H=3{,}0\ \mathrm{m}$ potpuno je uronjena u vodu gustoće $\rho=998\ \mathrm{kg/m^3}$. Gornji joj je rub na dubini $h_1=2{,}0\ \mathrm{m}$. Vanjska je strana na atmosferi. Odredi rezultantnu silu i centar tlaka.
+**Tekst zadatka**
+
+Kruta pravokutna zaklopka širine $b=2{,}0\ \mathrm{m}$ i visine $H=3{,}0\ \mathrm{m}$ potpuno je uronjena u mirujuću vodu gustoće $\rho=998\ \mathrm{kg/m^3}$. Gornji joj je rub na dubini $h_1=2{,}0\ \mathrm{m}$. Vanjska strana i slobodna površina vode izložene su atmosferi. Zanemari deformaciju zaklopke.
+
+**Traži se**
+
+Odredi rezultantnu silu i centar tlaka.
 
 ![Vertikalna pravokutna zaklopka s dubinama rubova, težištem i centrom tlaka](../assets/print/u05_val1_pravokutna_zaklopka.svg){#fig-u05-vertikalna-pravokutna-zaklopka fig-align="center" fig-alt="Vertikalna pravokutna zaklopka s dubinama rubova, težištem i centrom tlaka"}
 
-**Pretpostavke.** Računa se neto manometarski tlak; voda miruje i gustoća je stalna. Zaklopka je ravna, a deformacija se ne razmatra.
+**Veza s proračunom.** Tlak raste s dubinom, pa donji dio zaklopke nosi veće opterećenje. Rezultanta zato djeluje ispod težišta C. Površina i dubina težišta određuju silu, a raspodjela tlaka njezino hvatište.
+
+**Rješenje**
 
 Površina i dubina težišta jesu
 
@@ -189,17 +202,27 @@ $$ {#eq-sile-plohe-rijeseni-primjer-vertikalna-pravokutna-zaklopka-04}
 
 Centar tlaka je $1{,}714\ \mathrm{m}$ ispod gornjeg ruba.
 
-**Neovisna provjera.** Tlak na gornjem i donjem rubu iznosi $19{,}58$ i $48{,}95\ \mathrm{kPa}$. Srednja vrijednost linearnog dijagrama jest $34{,}27\ \mathrm{kPa}$, a $34{,}27\cdot6{,}0=205{,}6\ \mathrm{kN}$. Hvatište mora biti između težišta na $3{,}5\ \mathrm{m}$ i donjeg ruba na $5{,}0\ \mathrm{m}$, što je zadovoljeno.
+**Provjera i tumačenje**
+
+Tlak na gornjem i donjem rubu iznosi $19{,}58$ i $48{,}95\ \mathrm{kPa}$. Srednja vrijednost linearnog dijagrama jest $34{,}27\ \mathrm{kPa}$, a $34{,}27\cdot6{,}0=205{,}6\ \mathrm{kN}$. Hvatište mora biti između težišta na $3{,}5\ \mathrm{m}$ i donjeg ruba na $5{,}0\ \mathrm{m}$, što je zadovoljeno.
 :::
 
 ::: {#ex-u05-kosi-poklopac .mf1-we}
 <p class="mf1-box-label">Kosi poklopac sa spojnicom <span class="mf1-level">T2</span></p>
 
-Pravokutni poklopac širine $b=0{,}90\ \mathrm{m}$ i duljine $L=1{,}20\ \mathrm{m}$ zglobno je vezan na gornjem rubu $A$, koji je na dubini $h_A=0{,}80\ \mathrm{m}$. Ploha zatvara kut $\theta=60^\circ$ s vodoravnicom. Spojnica na donjem rubu djeluje okomito na plohu. Odredi hidrostatsku silu, njezin krak prema zglobu i silu spojnice.
+**Tekst zadatka**
+
+Pravokutni poklopac širine $b=0{,}90\ \mathrm{m}$ i duljine $L=1{,}20\ \mathrm{m}$ zglobno je vezan na gornjem rubu $A$, na dubini $h_A=0{,}80\ \mathrm{m}$. Ploha je nagnuta za $\theta=60^\circ$ prema vodoravnici, a spojnica na donjem rubu djeluje okomito na nju. Voda miruje, atmosferski se tlak poništava. Zanemari težinu poklopca i trenje zgloba.
+
+**Traži se**
+
+Odredi hidrostatsku silu, njezin krak prema zglobu i silu spojnice.
 
 ![Kosi poklopac s kutom prema vodoravnici, zglobom, centrom tlaka i spojnicom](../assets/print/u05_val3_kosi_poklopac.svg){#fig-u05-kosi-poklopac fig-align="center" fig-alt="Kosi poklopac s kutom prema vodoravnici, zglobom, centrom tlaka i spojnicom"}
 
-**Pretpostavke.** S obje strane poništava se atmosferski tlak; težina poklopca i trenje zgloba nisu dio zadanog modela. Rezultat je samo statičko opterećenje za tu idealizaciju.
+**Veza s proračunom.** Širina poklopca $b=0{,}90\,\mathrm{m}$ mjeri se okomito na ravninu skice. Sila vode djeluje okomito na poklopac; silu spojnice određuje njezin moment oko zgloba. Dubina u vodi i udaljenost duž poklopca nisu ista veličina.
+
+**Rješenje**
 
 Površina i dubina težišta su
 
@@ -229,17 +252,27 @@ $$
 T=\frac{M_A}{L}=7{,}89\ \mathrm{kN}.
 $$ {#eq-sile-plohe-rijeseni-primjer-kosi-poklopac-sa-spojnicom-t2-04}
 
-**Neovisna provjera.** Težište poklopca je $0{,}600\ \mathrm{m}$ od zgloba, a centar tlaka mora biti dalje niz plohu jer tlak raste: $0{,}600<s_{CP}<1{,}200\ \mathrm{m}$. Momentna bilanca izravno vraća $TL=Fs_{CP}$; usporedba samih iznosa $T$ i $F$ ne bi bila dovoljna.
+**Provjera i tumačenje**
+
+Težište poklopca je $0{,}600\ \mathrm{m}$ od zgloba, a centar tlaka mora biti dalje niz plohu jer tlak raste: $0{,}600<s_{CP}<1{,}200\ \mathrm{m}$. Momentna bilanca izravno vraća $TL=Fs_{CP}$; usporedba samih iznosa $T$ i $F$ ne bi bila dovoljna.
 :::
 
 ::: {#ex-u05-pregrada-ulje-voda .mf1-we}
 <p class="mf1-box-label">Zglobna pregrada s uljem iznad vode <span class="mf1-level">T3</span></p>
 
-Vertikalna pregrada širine $b=1{,}40\ \mathrm{m}$ zglobno je vezana na slobodnoj površini. Gornji sloj ulja ima $\rho_o=820\ \mathrm{kg/m^3}$ i visinu $h_o=1{,}00\ \mathrm{m}$, a donji sloj vode $\rho_w=1000\ \mathrm{kg/m^3}$ i visinu $h_w=1{,}80\ \mathrm{m}$. Donji rub pridržava vodoravna spojnica. Odredi silu, centar tlaka i statičke reakcije.
+**Tekst zadatka**
+
+Vertikalna pregrada širine $b=1{,}40\ \mathrm{m}$ zglobno je vezana na slobodnoj površini. S jedne strane zadržava ulje gustoće $\rho_o=820\ \mathrm{kg/m^3}$ i visine $h_o=1{,}00\ \mathrm{m}$ iznad vode gustoće $\rho_w=1000\ \mathrm{kg/m^3}$ i visine $h_w=1{,}80\ \mathrm{m}$. Druga strana je na atmosferi. Donji rub pridržava vodoravna spojnica. Fluidi miruju i ne miješaju se; zglob i spojnica su idealni.
+
+**Traži se**
+
+Odredi silu, centar tlaka i statičke reakcije.
 
 ![Zglobna vertikalna pregrada s izlomljenim dijagramom tlaka kroz ulje i vodu](../assets/print/u05_ch1_pregrada_ulje_voda.svg){#fig-u05-pregrada-ulje-voda fig-align="center" fig-alt="Zglobna vertikalna pregrada s izlomljenim dijagramom tlaka kroz ulje i vodu"}
 
-**Pretpostavke.** Fluidi miruju, ne miješaju se i svaki ima stalnu gustoću. Atmosferski tlak se poništava. Zglob i spojnica modeliraju se idealno; ne donosi se zaključak o njihovoj konstrukcijskoj dostatnosti.
+**Veza s proračunom.** Tlak je neprekinut na granici ulja i vode, ali mu se nagib mijenja s gustoćom. Sile $F_1$ i $F_2$ djeluju na pregradu, a $T$ i $R_A$ su reakcije spojnice i zgloba. Širina $b=1{,}40\,\mathrm{m}$ okomita je na skicu; duljine strelica sila su simbolične.
+
+**Rješenje**
 
 Na uljnom polju tlak čini trokut, pa je
 
@@ -284,7 +317,9 @@ T=\frac{M_A}{h_o+h_w}=32{,}578\ \mathrm{kN},\qquad
 R_A=F-T=15{,}574\ \mathrm{kN}.
 $$ {#eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-07}
 
-**Neovisna provjera.** Tlak je kontinuiran na razdjelnici: vodeno polje počinje s tlakom $\rho_o gh_o$, a ne s nulom. Zbroj sila zadovoljava $R_A+T=F$, a zbroj momenata $T(h_o+h_w)=M_A$. Izostavljanje pravokutnog doprinosa $F_{2,r}$ prekršilo bi i kontinuitet tlaka i obje bilance.
+**Provjera i tumačenje**
+
+Tlak je kontinuiran na razdjelnici: vodeno polje počinje s tlakom $\rho_o gh_o$, a ne s nulom. Zbroj sila zadovoljava $R_A+T=F$, a zbroj momenata $T(h_o+h_w)=M_A$. Izostavljanje pravokutnog doprinosa $F_{2,r}$ prekršilo bi i kontinuitet tlaka i obje bilance.
 :::
 
 ## Zakrivljena ploha: projekcija i pomoćni volumen
@@ -350,7 +385,9 @@ Funkcija $\operatorname{atan2}$ zadržava kvadrant; obični $\arctan(F_V/F_H)$ m
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Numerički pokus — zakrivljena ploha</p>
 
-Prije pokretanja odredi smjer $F_V$ samo iz strane koju fluid kvasi. Zatim mijenjaj dubinu i polumjer te usporedi numerički rast $F_H$ i $F_V$ s njihovim geometrijskim izrazima.
+**Predvidi.** Odredi smjer $F_V$ iz strane koju fluid kvasi, prije računanja iznosa.
+
+**Provjeri i protumači.** Mijenjaj dubinu i polumjer te usporedi numeričke komponente s projekcijom i pomoćnim volumenom. Objasni zašto rezultanta kružnog luka prolazi središtem zakrivljenosti.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u06_zakrivljena_ploha.ipynb">Pokreni u pregledniku</a>
@@ -359,12 +396,11 @@ Prije pokretanja odredi smjer $F_V$ samo iz strane koju fluid kvasi. Zatim mijen
 </div>
 :::
 
-::: {.mf1-numerika .kompakt}
-<p class="mf1-box-label">Numerički most — normala određuje smjer sile</p>
+::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-Na zakrivljenoj plohi mijenja se i smjer tlačne sile. Ako $\vec n_{f,i}$ pokazuje iz fluida u stijenku, sila **fluida na stijenku** približno je $\sum_i p_i\vec n_{f,i}A_i$; reakcija na fluid ima suprotan predznak. Za opterećenje s dviju strana uračunaju se oba tlaka.
+**Zakrivljeni zatvarač: oblik mijenja smjer opterećenja.** Za zakrivljeni zatvarač kanala CFD zbraja vektore $p_i\mathbf n_{f,i}A_i$ po plohama mreže. Normala ide iz fluida u zatvarač, pa rezultat daje silu fluida na konstrukciju. U mirovanju vodoravnu i vertikalnu komponentu provjeravamo projekcijom i pomoćnim volumenom; uzimamo u obzir tlakove na svim opterećenim stranama.
 
-Računalni prikaz mora razlučiti zakrivljenost i promjenu tlaka. U mirnom slučaju provjeri komponente projekcijom i pomoćnim volumenom iz ovoga poglavlja. Ista integracija primjenjuje se na trup složenog oblika; u strujanju se dodaje viskozno naprezanje (@sec-cfd-polja-izlazi).
+Ručni @ex-u05-zglobni-cetvrtcilindricni-poklopac pokazuje zašto moment računamo oko zgloba A, a ne središta zakrivljenosti O. Jednake rezultante dviju raspodjela tlaka ne jamče jednak moment: usporedi njihove krakove prema istoj osi. Pogon zato provjeravamo i silom i momentom. Nakon otvaranja dodaju se strujanje i viskozna naprezanja. Mreža zato mora vjerno opisati zakrivljenost, a konačan izlaz čine komponente sile i moment, povezane s konkretnim položajem zatvarača.
 :::
 
 
@@ -373,11 +409,19 @@ Računalni prikaz mora razlučiti zakrivljenost i promjenu tlaka. U mirnom sluč
 ::: {#ex-u05-potopljena-cetvrtina-kruga .mf1-we}
 <p class="mf1-box-label">Potopljena četvrtina kruga, sila prema gore <span class="mf1-level">T2</span></p>
 
-Četvrtcilindrična ploha ima polumjer $R=1{,}22\ \mathrm{m}$, širinu $b=1{,}83\ \mathrm{m}$ i gornju točku na dubini $h_1=2{,}44\ \mathrm{m}$. Voda gustoće $998\ \mathrm{kg/m^3}$ kvasi konveksnu vanjsku i donju stranu plohe. Odredi komponente, pravce djelovanja i rezultantu.
+**Tekst zadatka**
+
+Četvrtcilindrična ploha ima polumjer $R=1{,}22\ \mathrm{m}$, širinu $b=1{,}83\ \mathrm{m}$ i gornju točku na dubini $h_1=2{,}44\ \mathrm{m}$. Voda gustoće $998\ \mathrm{kg/m^3}$ kvasi konveksnu vanjsku i donju stranu. Atmosferski tlak se poništava, a krajnji učinci zanemaruju. Pozitivni vertikalni smjer je prema gore.
+
+**Traži se**
+
+Odredi komponente, pravce djelovanja i rezultantu.
 
 ![Potopljena četvrtcilindrična ploha s vodom na konveksnoj donjoj strani i vertikalnom silom prema gore](../assets/print/u06_val1_cetvrtina_kruga.svg){#fig-u05-potopljena-cetvrtcilindricna-ploha fig-align="center" fig-alt="Potopljena četvrtcilindrična ploha s vodom na konveksnoj donjoj strani i vertikalnom silom prema gore"}
 
-**Pretpostavke.** Atmosferski tlak se poništava. Zakrivljena ploha je cilindrična, bez krajnjih učinaka. Pozitivni vertikalni smjer odabran je prema gore.
+**Veza s proračunom.** Vodoravnu komponentu određuje vertikalna projekcija. Vertikalna komponenta usmjerena je prema gore; njezin pomoćni volumen $V^*$ nije druga tekućina. Oznaka $V_1$ označuje pravokutni dio tog volumena.
+
+**Rješenje**
 
 Vertikalna projekcija ima
 
@@ -426,17 +470,27 @@ $$ {#eq-sile-plohe-rijeseni-primjer-potopljena-cetvrtina-kruga-sila-07}
 
 pod kutom $48{,}1^\circ$ iznad horizontale.
 
-**Neovisna provjera.** Rezultanta mora biti između veće komponente i njihova zbroja: $74{,}28<99{,}81<140{,}95\ \mathrm{kN}$. Smjer se dodatno provjerava jednom lokalnom normalom na donjoj strani koju voda kvasi; ona ima pozitivnu vertikalnu komponentu neovisno o tome gdje je nacrtan $V^*$.
+**Provjera i tumačenje**
+
+Rezultanta mora biti između veće komponente i njihova zbroja: $74{,}28<99{,}81<140{,}95\ \mathrm{kN}$. Smjer se dodatno provjerava jednom lokalnom normalom na donjoj strani koju voda kvasi; ona ima pozitivnu vertikalnu komponentu neovisno o tome gdje je nacrtan $V^*$.
 :::
 
 ::: {#ex-u05-cetvrtcilindar-prema-dolje .mf1-we}
 <p class="mf1-box-label">Četvrtcilindrični poklopac uz slobodnu površinu <span class="mf1-level">T2</span></p>
 
-Poklopac širine $b=1{,}20\ \mathrm{m}$ i polumjera $R=0{,}90\ \mathrm{m}$ počinje na slobodnoj površini. Voda kvasi stranu na kojoj lokalne normale od fluida prema stijenci imaju vertikalne komponente prema dolje. Odredi komponente i rezultantu.
+**Tekst zadatka**
+
+Četvrtcilindrični poklopac širine $b=1{,}20\ \mathrm{m}$ i polumjera $R=0{,}90\ \mathrm{m}$ počinje na slobodnoj površini vode. Voda kvasi stranu prikazanu na skici: normale od fluida prema stijenci imaju vertikalne komponente prema dolje. Računaj neto manometarski tlak, jednak nuli na slobodnoj površini.
+
+**Traži se**
+
+Odredi komponente i rezultantu.
 
 ![Četvrtcilindrični poklopac uz slobodnu površinu s vertikalnom komponentom prema dolje](../assets/print/u06_val3_cetvrtcilindricni_poklopac.svg){#fig-u05-cetvrtcilindricni-poklopac-slobodna-povrsina fig-align="center" fig-alt="Četvrtcilindrični poklopac uz slobodnu površinu s vertikalnom komponentom prema dolje"}
 
-**Pretpostavke.** Računa se neto manometarski tlak; ploha je kružni cilindrični luk, a tlak na slobodnoj površini je nula.
+**Veza s proračunom.** Uz pozitivnu os $z$ prema gore, sila vode na poklopac ima vodoravnu komponentu udesno i vertikalnu prema dolje. Ovdje pomoćni volumen $V^*$ ispunjava stvarna voda. Predznak vertikalne sile slijedi iz strane koju voda kvasi.
+
+**Rješenje**
 
 Za vertikalnu projekciju
 
@@ -476,17 +530,27 @@ F_R=8{,}860\ \mathrm{kN},\qquad
 \alpha=-57{,}52^\circ.
 $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-06}
 
-**Neovisna provjera.** Izravna integracija po kružnom luku koji počinje na slobodnoj površini daje $F_H=\rho gbR^2/2$ i $|F_V|=\rho gb\pi R^2/4$. Zato mora vrijediti $|F_V|/F_H=\pi/2=1{,}571$; numerički je $7{,}474/4{,}758=1{,}571$.
+**Provjera i tumačenje**
+
+Izravna integracija po kružnom luku koji počinje na slobodnoj površini daje $F_H=\rho gbR^2/2$ i $|F_V|=\rho gb\pi R^2/4$. Zato mora vrijediti $|F_V|/F_H=\pi/2=1{,}571$; numerički je $7{,}474/4{,}758=1{,}571$.
 :::
 
 ::: {#ex-u05-zglobni-cetvrtcilindricni-poklopac .mf1-we}
 <p class="mf1-box-label">Zglobni poklopac s vertikalnom silom prema gore <span class="mf1-level">T3</span></p>
 
-Četvrtcilindrični poklopac širine $b=1{,}40\ \mathrm{m}$ i polumjera $R=1{,}10\ \mathrm{m}$ zglobno je vezan u gornjoj točki $A$ na slobodnoj površini. Donji rub pridržava vodoravna spojnica. Voda kvasi konveksnu donju i lijevu stranu. Odredi komponente i statičku silu spojnice.
+**Tekst zadatka**
+
+Kruti četvrtcilindrični poklopac širine $b=1{,}40\ \mathrm{m}$ i polumjera $R=1{,}10\ \mathrm{m}$ ima zglob u gornjoj točki $A$ na slobodnoj površini vode. Donji rub pridržava vodoravna spojnica. Voda miruje i kvasi konveksnu donju i lijevu stranu; atmosferski tlak se poništava. Zanemari težinu poklopca i trenje zgloba. Pozitivni vertikalni smjer je prema gore.
+
+**Traži se**
+
+Odredi komponente i statičku silu spojnice.
 
 ![Zglobni četvrtcilindrični poklopac s vodom na donjoj strani, silom prema gore i vodoravnom spojnicom](../assets/print/u06_ch1_poklopac_spojnica.svg){#fig-u05-zglobni-cetvrtcilindricni-poklopac fig-align="center" fig-alt="Zglobni četvrtcilindrični poklopac s vodom na donjoj strani, silom prema gore i vodoravnom spojnicom"}
 
-**Pretpostavke.** Voda miruje, atmosferski tlak se poništava, poklopac je krut, a njegova težina i trenje zgloba nisu uključeni. Pozitivni vertikalni smjer je prema gore.
+**Veza s proračunom.** O je središte kružnice, a os poklopca nalazi se u zglobu A. Sile djeluju na poklopac; spojnica je izvan presjeka širine $b=1{,}40\,\mathrm{m}$. Pomoćni volumen $V^*$ nalazi se na suhoj strani i daje vertikalnu komponentu prema gore. Za spojnicu zbroji momente oko A.
+
+**Rješenje**
 
 Horizontalna komponenta i njezin krak prema zglobu jesu
 
@@ -526,7 +590,9 @@ T=\frac{8{,}292\cdot0{,}733+13{,}026\cdot0{,}633}{1{,}10}
 =13{,}026\ \mathrm{kN}.
 $$ {#eq-sile-plohe-rijeseni-primjer-zglobni-poklopac-s-vertikalnom-06}
 
-**Neovisna provjera.** Za ovu posebnu geometriju
+**Provjera i tumačenje**
+
+Za ovu posebnu geometriju
 
 $$
 F_Hh_H=\rho gbR^3/3,
@@ -545,12 +611,18 @@ Zbroj je $\rho gb\pi R^3/4=F_VR$, pa identitet daje $T=F_V=13{,}026\ \mathrm{kN}
 1. Zašto je u hidrostatskoj sili važno razlikovati neto tlak od apsolutnog tlaka?
 2. Zašto je centar tlaka na uronjenoj ravnoj plohi niže od težišta plohe kada tlak raste s dubinom?
 3. Zašto je za zakrivljenu plohu često sigurnije rastaviti silu na vodoravnu i okomitu komponentu?
-4. Zašto izračunana hidrostatska sila nije potpuna provjera sigurnosti poklopca ili ustave?
+4. Dvije raspodjele tlaka daju jednaku silu na ustavu, ali različit moment oko istog zgloba. Daju li jednako opterećenje pogona?
 
 ::: {.callout-note collapse="true"}
 ### Odgovori
 
-Jednoliki referentni tlak može se poništiti samo ako djeluje s obje strane na isti način; u suprotnom mijenja i silu i hvatište. Dublji dijelovi nose veći tlak pa povlače rezultantu prema dolje. Na zakrivljenoj plohi normale mijenjaju smjer, a komponente se lakše vežu uz projekciju i težinu zamišljenog stupca fluida. Konstrukcijska sigurnost dodatno traži čvrstoću, rubne uvjete, dinamička opterećenja i odgovarajuće sigurnosne kriterije.
+1. Jednoliki referentni tlak može se poništiti samo ako djeluje s obje strane na isti način; u suprotnom mijenja i silu i hvatište.
+
+2. Dublji dijelovi nose veći tlak pa povlače rezultantu prema dolje.
+
+3. Na zakrivljenoj plohi normale mijenjaju smjer, a komponente se lakše vežu uz projekciju i težinu zamišljenog stupca fluida.
+
+4. Ne. Jednaka sila ne jamči jednak krak: moment ovisi o raspodjeli tlaka i hvatištu rezultante. Za pogon treba provjeriti i moment, a konstrukcijsku sigurnost zasebno.
 :::
 :::
 
@@ -560,11 +632,19 @@ U svim zadatcima uzmi $g=9{,}81\ \mathrm{m/s^2}$. Ako nije drukčije navedeno, v
 
 ![Skice zadataka Z1–Z6: ravne plohe, dvije razine vode, trokutasti poklopac i radijalni poklopac s osi u središtu kružnice](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe-skice fig-align="center" fig-alt="Šest skica s dimenzijama, stvarnom vodom i silama na poklopce; u Z5 os je u središtu kružnice O"}
 
+**Napomene uz skice.** Strelice prikazuju sile na poklopce, a dvostrane strelice kote; duljine sila nisu u mjerilu. U Z1 traže se rezultanta i njezino hvatište, a u Z2 komponente i iznos rezultante. U Z3 pregrada ne propušta vodu; račun obuhvaća silu, hvatište, moment u A i silu spojnice. Z4 je pogled okomito na plohu, pa je sila okomita na crtež; traže se najveća širina i centar tlaka te provjera širine $1{,}20\,\mathrm{m}$. U Z5 os je u O, a spojnica izvan presjeka; sile i moment odnose se na O. U Z6 oznaka $\pm$ predstavlja standardnu nesigurnost: uspoređuju se $F$, $u(F)$ i $z$, uz odluku na razini $2u$.
+
 ::::: {.mf1-vjezbe-list}
 
 ### Sila na pravokutni poklopac {#task-u05-ravna-pravokutna-zaklopka .unnumbered .unlisted}
 
-Vertikalni pravokutni poklopac širine $b=1{,}40\ \mathrm{m}$ i visine $H=1{,}80\ \mathrm{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1=1{,}10\ \mathrm{m}$. Odredi rezultantnu silu, dubinu centra tlaka i njegovu udaljenost od gornjeg ruba.
+**Tekst zadatka**
+
+Vertikalni pravokutni poklopac širine $b=1{,}40\ \mathrm{m}$ i visine $H=1{,}80\ \mathrm{m}$ nalazi se u vodi tako da mu je gornji rub na dubini $h_1=1{,}10\ \mathrm{m}$.
+
+**Traži se**
+
+Odredi rezultantnu silu, dubinu centra tlaka i njegovu udaljenost od gornjeg ruba.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
@@ -587,7 +667,13 @@ $F=49{,}34\ \mathrm{kN}$; $h_{CP}=2{,}135\ \mathrm{m}$; udaljenost od gornjeg ru
 
 ### Sila na zakrivljeni poklopac {#task-u05-zakrivljeni-poklopac-cetvrtine-kruga .unnumbered .unlisted}
 
-Zakrivljeni poklopac presjeka četvrtine kruga ima $R=0{,}65\ \mathrm{m}$ i širinu $b=1{,}20\ \mathrm{m}$. Gornja mu je točka na dubini $h_1=1{,}10\ \mathrm{m}$. Voda kvasi konveksnu vanjsku i donju stranu. Odredi $F_H$, predznačeni $F_V$ i $F_R$.
+**Tekst zadatka**
+
+Zakrivljeni poklopac presjeka četvrtine kruga ima $R=0{,}65\ \mathrm{m}$ i širinu $b=1{,}20\ \mathrm{m}$. Gornja mu je točka na dubini $h_1=1{,}10\ \mathrm{m}$. Voda kvasi konveksnu vanjsku i donju stranu.
+
+**Traži se**
+
+Odredi $F_H$, predznačeni $F_V$ i $F_R$.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
@@ -612,7 +698,15 @@ $F_H=10{,}88\ \mathrm{kN}$; $F_V=+12{,}30\ \mathrm{kN}$ prema gore; $F_R=16{,}42
 
 ### Pregrada između dviju razina vode {#task-pregrada-izmedu-dviju-razina-vode .unnumbered .unlisted}
 
-Vertikalna nepropusna pregrada širine $b=1{,}20\ \mathrm{m}$ i visine $H=3{,}00\ \mathrm{m}$ dijeli dva otvorena spremnika. Dubina vode iznad zajedničkog dna lijevo je $h_L=2{,}40\ \mathrm{m}$, a desno $h_D=1{,}20\ \mathrm{m}$. Pregrada je zglobno oslonjena u dnu $A$; u gornjoj točki $B$ pridržava je vodoravna spojnica. Zanemari trenje i moment težine pregrade. Odredi neto silu vode i visinu njezina pravca djelovanja iznad dna, moment vode oko $A$ te iznos i smjer sile spojnice. Uzmi $+x$ udesno, $+y$ prema gore i pozitivan moment suprotno kazaljci na satu.
+**Tekst zadatka**
+
+Vertikalna nepropusna pregrada širine $b=1{,}20\ \mathrm{m}$ i visine $H=3{,}00\ \mathrm{m}$ dijeli dva otvorena spremnika. Dubina vode iznad zajedničkog dna lijevo je $h_L=2{,}40\ \mathrm{m}$, a desno $h_D=1{,}20\ \mathrm{m}$. Pregrada je zglobno oslonjena u dnu $A$; u gornjoj točki $B$ pridržava je vodoravna spojnica. Zanemari trenje i moment težine pregrade.
+
+Uzmi $+x$ udesno, $+y$ prema gore i pozitivan moment suprotno kazaljci na satu.
+
+**Traži se**
+
+Odredi neto silu vode i visinu njezina pravca djelovanja iznad dna, moment vode oko $A$ te iznos i smjer sile spojnice.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
@@ -637,7 +731,18 @@ $F_x=+25{,}377\ \mathrm{kN}$; $y_R=0{,}9333\ \mathrm{m}$ iznad dna; $M_A=-23{,}6
 
 ### Širina trokutastog poklopca {#task-sirina-trokutastog-poklopca .unnumbered .unlisted}
 
-Vertikalni poklopac ima oblik jednakokračnog trokuta s vrhom gore, visinom $H=1{,}50\ \mathrm{m}$ i vodoravnom osnovicom širine $b$. Vrh je na dubini $h_0=0{,}40\ \mathrm{m}$ ispod slobodne površine vode; s druge strane je zrak na atmosferskom tlaku. Dopuštena rezultantna sila jest $F_{\max}=12{,}00\ \mathrm{kN}$. Odredi najveću širinu $b_{\max}$ i dubinu centra tlaka. Zadovoljava li ponuđeni poklopac širine $1{,}20\ \mathrm{m}$ ovaj uvjet? Visina i dubina vrha ostaju zadane pri promjeni širine; provjerava se samo navedeni uvjet sile, ne čvrstoća konstrukcije.
+**Tekst zadatka**
+
+Vertikalni poklopac ima oblik jednakokračnog trokuta s vrhom gore, visinom $H=1{,}50\ \mathrm{m}$ i vodoravnom osnovicom širine $b$. Vrh je na dubini $h_0=0{,}40\ \mathrm{m}$ ispod slobodne površine vode; s druge strane je zrak na atmosferskom tlaku. Dopuštena rezultantna sila jest $F_{\max}=12{,}00\ \mathrm{kN}$.
+
+Visina i dubina vrha ostaju zadane pri promjeni širine; provjerava se samo navedeni uvjet sile, ne čvrstoća konstrukcije.
+
+Ponuđeni poklopac ima širinu $1{,}20\ \mathrm{m}$.
+
+**Traži se**
+
+1. Odredi najveću širinu $b_{\max}$ i dubinu centra tlaka.
+2. Zadovoljava li ponuđeni poklopac ovaj uvjet?
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
@@ -662,11 +767,19 @@ $b_{\max}=1{,}1673\ \mathrm{m}$; $h_{CP}=1{,}4893\ \mathrm{m}$. Za $b=1{,}20\ \m
 
 ### Radijalni poklopac s težinom {#task-radijalni-poklopac-s-tezinom .unnumbered .unlisted}
 
+**Tekst zadatka**
+
 Kruti sklop četvrtcilindričnog poklopca i njegovih krakova okreće se oko osi kroz središte kružnice $O$, a ne oko kraja luka. Voda kvasi konveksnu lijevu i donju stranu, a s druge strane je zrak na atmosferskom tlaku.
 
-U presjeku s ishodištem u $O$, $+x$ udesno i $+y$ prema gore, krajevi su $A=(-R,0)$ i $B=(0,-R)$; $R=0{,}85\ \mathrm{m}$ i širina $b=1{,}30\ \mathrm{m}$. Os $O$ nalazi se $h_1=0{,}60\ \mathrm{m}$ ispod slobodne površine. Težina cijelog sklopa je $W=2{,}40\ \mathrm{kN}$ i djeluje na pravcu $x_G=-0{,}32\ \mathrm{m}$. Vodoravna spojnica u $B$ može samo vlačiti ulijevo, do $T_{\max}=1{,}00\ \mathrm{kN}$. Krakovi i spojnica su na suhoj strani ili izvan širine presjeka; njihovo dodatno hidrostatsko opterećenje zanemari.
+U presjeku s ishodištem u $O$, $+x$ udesno i $+y$ prema gore, krajevi su $A=(-R,0)$ i $B=(0,-R)$; $R=0{,}85\ \mathrm{m}$ i širina $b=1{,}30\ \mathrm{m}$. Os $O$ nalazi se $h_1=0{,}60\ \mathrm{m}$ ispod slobodne površine. Težina cijelog sklopa je $W=2{,}40\ \mathrm{kN}$ i djeluje na pravcu $x_G=-0{,}32\ \mathrm{m}$. Vodoravna spojnica u $B$ može samo vlačiti ulijevo, do $T_{\max}=1{,}00\ \mathrm{kN}$.
 
-Odaberi potreban model i odredi predznačene komponente sile vode, njezin moment oko $O$, silu spojnice i komponente reakcije osi na sklop. Može li spojnica održati ravnotežu? Obrazloži mijenja li porast $h_1$ potrebnu silu spojnice dok cijeli luk ostaje uronjen. Zanemari trenje osi; pozitivan moment je suprotno kazaljci na satu.
+Krakovi i spojnica su na suhoj strani ili izvan širine presjeka; njihovo dodatno hidrostatsko opterećenje zanemari. Zanemari trenje osi; pozitivan moment je suprotno kazaljci na satu.
+
+**Traži se**
+
+1. Odaberi potreban model i odredi predznačene komponente sile vode, njezin moment oko $O$, silu spojnice i komponente reakcije osi na sklop.
+2. Može li spojnica održati ravnotežu?
+3. Obrazloži mijenja li porast $h_1$ potrebnu silu spojnice dok cijeli luk ostaje uronjen.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
@@ -689,7 +802,14 @@ $F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}
 
 ### Nesigurnost sile na mjerni panel {#task-u05-nesigurnost-modela-i-mjerenja .unnumbered .unlisted}
 
-Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\ \mathrm{m}$ i $H=0{,}80\ \mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\ \mathrm{m}$ sa standardnom nesigurnošću $u(h_1)=0{,}020\ \mathrm{m}$, a gustoća je $\rho=998\ \mathrm{kg/m^3}$ uz $u(\rho)=3\ \mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\ \mathrm{kN}$ uz $u(F_m)=0{,}30\ \mathrm{kN}$. Pretpostavi neovisne ulaze i primijeni linearnu propagaciju nesigurnosti. Izračunaj predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\sqrt{u(F)^2+u(F_m)^2}$. Obrazloži podupiru li podatci tvrdnju o neslaganju na razini $2u$.
+**Tekst zadatka**
+
+Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\ \mathrm{m}$ i $H=0{,}80\ \mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\ \mathrm{m}$ sa standardnom nesigurnošću $u(h_1)=0{,}020\ \mathrm{m}$, a gustoća je $\rho=998\ \mathrm{kg/m^3}$ uz $u(\rho)=3\ \mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\ \mathrm{kN}$ uz $u(F_m)=0{,}30\ \mathrm{kN}$. Pretpostavi neovisne ulaze i primijeni linearnu propagaciju nesigurnosti.
+
+**Traži se**
+
+1. Izračunaj predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\sqrt{u(F)^2+u(F_m)^2}$.
+2. Obrazloži podupiru li podatci tvrdnju o neslaganju na razini $2u$.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}

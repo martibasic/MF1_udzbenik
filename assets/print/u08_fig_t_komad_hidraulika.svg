@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="u08ftkh-title u08ftkh-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:900px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417 469" role="img" aria-labelledby="u08ftkh-title u08ftkh-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:420px;height:auto;">
   <title id="u08ftkh-title">Razvod ulja kroz T-komad</title>
   <desc id="u08ftkh-desc">Jedno kontinuirano područje ulja povezuje ulaz D1 s gornjim izlazom D2 i donjim izlazom D3. Rubovi krutih stijenki završavaju uz otvore; nema čepova ni stijenke preko protoka. Unutarnje širine presjeka slijede omjer 32:20:24,8. Isprekidana granica KV presijeca sva tri voda. Strelice pokazuju smjer srednje brzine, nisu u mjerilu.</desc>
   <defs>
@@ -44,87 +44,40 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
   </defs>
-  <text x="500" y="60" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Tijek rješenja</text>
-  <text x="500" y="78" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">kontinuitet i geometrija presjeka korak po korak</text>
-  <text x="516" y="118" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" fill="#263746">1. Ulazni presjek i protok</text>
-  <text x="516" y="141" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746">
-    <tspan font-style="italic">A</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">1</tspan> = π <tspan font-style="italic">D</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">1</tspan>² / 4 = 8,042 · 10⁻⁴ m²</text>
-  <text x="516" y="166" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">
-    <tspan font-style="italic">Q</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">1</tspan> = <tspan font-style="italic">A</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">1</tspan>
-    <tspan font-style="italic">v</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 3,62 L/s</text>
-  <text x="516" y="210" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" fill="#263746">2. Podjela protoka (60 % / 40 %)</text>
-  <text x="516" y="234" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746">
-    <tspan font-style="italic">Q</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 0,60 <tspan font-style="italic">Q</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 2,17 L/s</text>
-  <text x="516" y="258" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746">
-    <tspan font-style="italic">Q</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 0,40 <tspan font-style="italic">Q</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1,45 L/s</text>
-  <text x="516" y="302" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" fill="#263746">3. Brzina u ogranku 1 (radni cilindar)</text>
-  <text x="516" y="325" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746">
-    <tspan font-style="italic">A</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">2</tspan> = π <tspan font-style="italic">D</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">2</tspan>² / 4 = 3,142 · 10⁻⁴ m²</text>
-  <text x="516" y="350" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">
-    <tspan font-style="italic">v</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">2</tspan> = <tspan font-style="italic">Q</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">2</tspan> / <tspan font-style="italic">A</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 6,9 m/s</text>
-  <text x="516" y="394" font-family="Arial, Liberation Sans, sans-serif" font-size="12.5" font-weight="700" fill="#263746">4. Potrebni promjer ogranka 2 (hladnjak), <tspan font-style="italic">v</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 3,0 m/s</text>
-  <text x="516" y="417" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746">
-    <tspan font-style="italic">A</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">3</tspan> = <tspan font-style="italic">Q</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">3</tspan> / <tspan font-style="italic">v</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 4,83 · 10⁻⁴ m²</text>
-  <text x="516" y="442" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">
-    <tspan font-style="italic">D</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">3</tspan> = √(4<tspan font-style="italic">A</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">3</tspan>/π) ≈ 24,8 mm</text>
-  <text x="713" y="478" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746">Provjera: <tspan font-style="italic">Q</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">2</tspan> + <tspan font-style="italic">Q</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 2,17 + 1,45 = 3,62 L/s = <tspan font-style="italic">Q</tspan>
-    <tspan baseline-shift="sub" font-size="0.7em">1</tspan> ✓</text>
-  <g font-family="Arial, Liberation Sans, sans-serif" />
-  <g id="u08ftkh_fix_scene">
-    <path d="M65 246 H273 V120 H303 V420 H265.8 V294 H65 Z" fill="#eadfc5" stroke="none" stroke-width="1.2" id="u08ftkh_fix_fluid" />
-    <path d="M65 242 H269 V120" fill="none" stroke="url(#u08ftkh_fix_hatch)" stroke-width="8" stroke-linejoin="miter" />
-    <path d="M307 120 V420" fill="none" stroke="url(#u08ftkh_fix_hatch)" stroke-width="8" stroke-linejoin="miter" />
-    <path d="M261.8 420 V298 H65" fill="none" stroke="url(#u08ftkh_fix_hatch)" stroke-width="8" stroke-linejoin="miter" />
-    <path d="M65 246 H273 V120" fill="none" stroke="#3a4a56" stroke-width="1.2" id="u08ftkh_fix_wall-0" />
-    <path d="M303 120 V420" fill="none" stroke="#3a4a56" stroke-width="1.2" id="u08ftkh_fix_wall-1" />
-    <path d="M265.8 420 V294 H65" fill="none" stroke="#3a4a56" stroke-width="1.2" id="u08ftkh_fix_wall-2" />
-    <line x1="90" y1="270" x2="200" y2="270" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08ftkh_fix_normal)" />
-    <line x1="287" y1="218" x2="287" y2="145" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08ftkh_fix_green)" />
-    <line x1="285" y1="335" x2="285" y2="401" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08ftkh_fix_normal)" />
-    <text x="139" y="220" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">Q₁ = 3,62 L/s</text>
-    <text x="139" y="235" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">v₁ = 4,5 m/s</text>
-    <text x="326" y="153" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Q₂ = 2,17 L/s</text>
-    <text x="326" y="171" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">v₂ = 6,9 m/s</text>
-    <text x="326" y="355" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Q₃ = 1,45 L/s</text>
-    <text x="326" y="373" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">v₃ = 3,0 m/s</text>
-    <line x1="40" y1="246" x2="50" y2="246" stroke="#657781" stroke-width="0.8" />
-    <line x1="40" y1="294" x2="50" y2="294" stroke="#657781" stroke-width="0.8" />
-    <line x1="45" y1="246" x2="45" y2="294" stroke="#657781" stroke-width="1.2" marker-start="url(#u08ftkh_fix_dimL)" marker-end="url(#u08ftkh_fix_dim)" />
-    <text x="15" y="274.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">D₁</text>
-    <text x="85" y="331" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">D₁ = 32 mm</text>
-    <line x1="273" y1="96" x2="273" y2="106" stroke="#657781" stroke-width="0.8" />
-    <line x1="303" y1="96" x2="303" y2="106" stroke="#657781" stroke-width="0.8" />
-    <line x1="273" y1="101" x2="303" y2="101" stroke="#657781" stroke-width="1.2" marker-start="url(#u08ftkh_fix_dimL)" marker-end="url(#u08ftkh_fix_dim)" />
-    <text x="288.0" y="119" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">D₂ = 20 mm</text>
-    <line x1="265.8" y1="438" x2="265.8" y2="448" stroke="#657781" stroke-width="0.8" />
-    <line x1="303" y1="438" x2="303" y2="448" stroke="#657781" stroke-width="0.8" />
-    <line x1="265.8" y1="443" x2="303" y2="443" stroke="#657781" stroke-width="1.2" marker-start="url(#u08ftkh_fix_dimL)" marker-end="url(#u08ftkh_fix_dim)" />
-    <text x="284.4" y="461" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">D₃ = 24,8 mm</text>
-    <rect x="228" y="222" width="100" height="94" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08ftkh_fix_cv" data-mf1-role="control-volume" />
-    <text x="278.0" y="213" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">KV</text>
-    <text x="230" y="55" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Razvod ulja kroz otvoreni T-komad</text>
-    <text x="234" y="492" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">Tri otvorena presjeka; jedna neprekinuta domena ulja.</text>
+  <g id="u08ftkh-title-scene-1" transform="translate(9.0000 -18.2000)">
+    <g id="u08ftkh_fix_scene">
+      <path d="M65 246 H273 V120 H303 V420 H265.8 V294 H65 Z" fill="#eadfc5" stroke="none" stroke-width="1.2" id="u08ftkh_fix_fluid" />
+      <path d="M65 242 H269 V120" fill="none" stroke="url(#u08ftkh_fix_hatch)" stroke-width="8" stroke-linejoin="miter" />
+      <path d="M307 120 V420" fill="none" stroke="url(#u08ftkh_fix_hatch)" stroke-width="8" stroke-linejoin="miter" />
+      <path d="M261.8 420 V298 H65" fill="none" stroke="url(#u08ftkh_fix_hatch)" stroke-width="8" stroke-linejoin="miter" />
+      <path d="M65 246 H273 V120" fill="none" stroke="#3a4a56" stroke-width="1.2" id="u08ftkh_fix_wall-0" />
+      <path d="M303 120 V420" fill="none" stroke="#3a4a56" stroke-width="1.2" id="u08ftkh_fix_wall-1" />
+      <path d="M265.8 420 V294 H65" fill="none" stroke="#3a4a56" stroke-width="1.2" id="u08ftkh_fix_wall-2" />
+      <line x1="90" y1="270" x2="200" y2="270" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08ftkh_fix_normal)" />
+      <line x1="287" y1="218" x2="287" y2="145" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08ftkh_fix_green)" />
+      <line x1="285" y1="335" x2="285" y2="401" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08ftkh_fix_normal)" />
+      <text x="139" y="220" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">Q₁</text>
+      <text x="139" y="235" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">v₁ = 4,5 m/s</text>
+      <text x="326" y="153" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Q₂</text>
+      <text x="326" y="171" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">v₂</text>
+      <text x="326" y="355" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Q₃</text>
+      <text x="326" y="373" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">v₃ = 3,0 m/s</text>
+      <line x1="40" y1="246" x2="50" y2="246" stroke="#657781" stroke-width="0.8" />
+      <line x1="40" y1="294" x2="50" y2="294" stroke="#657781" stroke-width="0.8" />
+      <line x1="45" y1="246" x2="45" y2="294" stroke="#657781" stroke-width="1.2" marker-start="url(#u08ftkh_fix_dimL)" marker-end="url(#u08ftkh_fix_dim)" />
+      <text x="15" y="274.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">D₁</text>
+      <text x="85" y="331" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">D₁ = 32 mm</text>
+      <line x1="273" y1="96" x2="273" y2="106" stroke="#657781" stroke-width="0.8" />
+      <line x1="303" y1="96" x2="303" y2="106" stroke="#657781" stroke-width="0.8" />
+      <line x1="273" y1="101" x2="303" y2="101" stroke="#657781" stroke-width="1.2" marker-start="url(#u08ftkh_fix_dimL)" marker-end="url(#u08ftkh_fix_dim)" />
+      <text x="288.0" y="119" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">D₂ = 20 mm</text>
+      <line x1="265.8" y1="438" x2="265.8" y2="448" stroke="#657781" stroke-width="0.8" />
+      <line x1="303" y1="438" x2="303" y2="448" stroke="#657781" stroke-width="0.8" />
+      <line x1="265.8" y1="443" x2="303" y2="443" stroke="#657781" stroke-width="1.2" marker-start="url(#u08ftkh_fix_dimL)" marker-end="url(#u08ftkh_fix_dim)" />
+      <text x="284.4" y="461" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">D₃</text>
+      <rect x="228" y="222" width="100" height="94" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08ftkh_fix_cv" data-mf1-role="control-volume" />
+      <text x="278.0" y="213" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">KV</text>
+      <text x="230" y="55" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Razvod ulja</text>
+    </g>
   </g>
 </svg>

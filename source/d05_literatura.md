@@ -20,6 +20,8 @@ Početna metacentrična analiza u poglavlju 6 jest obrazovni model, a nije zamje
 
 ## Numerička mehanika fluida
 
+Za prijelaz od zakona očuvanja do metode konačnih volumena, rubnih uvjeta i turbulencijskih modela služi otvoreno dostupan udžbenik Greenshieldsa i Wellera [@greenshieldsweller2022]. CFD odlomci u poglavljima daju kratke primjene te veze. Definiciju izdvojenog hidrostatskog tlaka ilustrira dokumentacija OpenFOAM-a [@openfoam-hydrostatic], a vezu rubnih podataka sa širenjem poremećaja NASA-in vodič za Wind-US [@nasa-wind-boundaries].
+
 U dodatku D pojmovi verifikacije i validacije slijede NASA-in vodič [@nasa-cfd-vv] i ASME V&V 20 [@asme-vv20-2009]. Profilni nastavni skup povezuje Ladsonov eksperiment [@ladson1988] s referentnim NASA TMR slučajem [@nasa-tmr-naca0012]. Postotno slaganje bez procjene eksperimentalne, iteracijske, diskretizacijske i modelske nesigurnosti nije opći kriterij valjanosti.
 
 ::: {.mf1-mini-summary}

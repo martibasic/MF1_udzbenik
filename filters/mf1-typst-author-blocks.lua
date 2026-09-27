@@ -140,11 +140,22 @@ local function render_author_block(div)
       local previous = #content
       if footer then
         while previous > 0 and content[previous].t ~= "Para"
-          and content[previous].t ~= "Plain" and content[previous].t ~= "Header" do
+          and content[previous].t ~= "Plain" and content[previous].t ~= "Header"
+          and content[previous].t ~= "OrderedList" do
           previous = previous - 1
         end
       end
-      if footer and previous > 0
+      if footer and previous > 0 and content[previous].t == "OrderedList" then
+        -- Keep only the final item and its level together. Leaving it in
+        -- the original enumeration preserves numbering AND item spacing.
+        local list=content[previous]
+        local count=#list.content
+        local last=pandoc.List(list.content[count])
+        last:insert(1,pandoc.RawBlock("typst", "#block(width: 100%, breakable: false)["))
+        last:insert(block)
+        last:insert(pandoc.RawBlock("typst", "]"))
+        list.content[count]=last
+      elseif footer and previous > 0
         and (content[previous].t == "Para" or content[previous].t == "Plain") then
         content:insert(previous, pandoc.RawBlock("typst", "#block(width: 100%, breakable: false)["))
         content:insert(block)
@@ -154,6 +165,11 @@ local function render_author_block(div)
       end
     end
     div.content = content
+    if div.classes:includes("mf1-problem") then
+      content:insert(1,pandoc.RawBlock("typst", "#mf1-exercise-body["))
+      content:insert(pandoc.RawBlock("typst", "]"))
+      return content
+    end
     return div
   end
 
@@ -267,14 +283,14 @@ local function render_minor_heading(para)
   end
 
   local first = para.content[1]
-  local label = pandoc.utils.stringify(first):gsub("%s*:%s*$", "")
+  local label = pandoc.utils.stringify(first):gsub("%s*[:.]%s*$", "")
   if not minor_heading_labels[label] then
     return nil
   end
 
   local result = pandoc.List()
   result:insert(pandoc.RawBlock("typst", "#mf1-minor-heading(["))
-  result:insert(pandoc.Plain(first.content))
+  result:insert(pandoc.Plain({pandoc.Str(label)}))
   result:insert(pandoc.RawBlock("typst", "])"))
 
   local remainder = pandoc.List(para.content)

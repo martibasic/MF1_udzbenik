@@ -11,7 +11,7 @@
       "kind": "frontmatter",
       "number": "0",
       "part": null,
-      "source_sha256": "3d570ccf314d85caa2dcf7098a1204ec2993d22204d3beb658c8843c095ddb86",
+      "source_sha256": "1e69dd50fc48dc67b4cc24bedb4ce913de862f9a4a29e4d383cb4ad3b20c6a31",
       "sections": [
         {
           "id": "o-udžbeniku",
@@ -71,7 +71,7 @@
       "kind": "chapter",
       "number": "1",
       "part": "part-1",
-      "source_sha256": "a0011d818393460dd1ea4d0ae5074adaa7b38f6cb0851ae37f76c8e54a1ca117",
+      "source_sha256": "c5ba7da2dc565f41879d5af9e1bcd46205f725a8eb7dba173c28b6f3d8edb72d",
       "sections": [
         {
           "id": "fluid-kao-kontinuum",
@@ -216,7 +216,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "36aac9990931958325715beb17248f2594083dcb2e8152418a51ed43f2433fa4",
+      "source_sha256": "403091134d07142a7d82fcce28ce62e17e7432bef2bfb075400ebd8ebd71b58d",
       "sections": [
         {
           "id": "viskoznost-i-međupovršinske-pojave",
@@ -364,7 +364,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "2f2dbdbc640af6f95dabc133edea4a23fa1b7b92c9a99fda6539a58db472adb2",
+      "source_sha256": "fc55ade7c56424dc25be071bce66b7d793c5f42dc3a765f9cb5d9b1034118d53",
       "sections": [
         {
           "id": "hidrostatička-raspodjela-tlaka",
@@ -507,7 +507,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "6f4369fd67d6c97cd634cf9cd655a60c5cc296085853be7c883e376edec2f040",
+      "source_sha256": "43ff7e6dc6567417a12f33f8a875eec71473c330cbf4e4dea13dce818b0c4e08",
       "sections": [
         {
           "id": "relativno-mirovanje-fluida",
@@ -649,7 +649,7 @@
       "kind": "chapter",
       "number": "5",
       "part": "part-2",
-      "source_sha256": "95bde2df2dd29908a374556ba27c1410f90353208a4b0efaba025a64ebc4c231",
+      "source_sha256": "dfb287a6dedeb169bb8d3ce3675c9445e03b4509e8dd79256dcf89c7d61e1f69",
       "sections": [
         {
           "id": "hidrostatske-sile-na-plohe",
@@ -823,7 +823,7 @@
       "kind": "chapter",
       "number": "6",
       "part": "part-2",
-      "source_sha256": "79b80d4dfc246a852cab542746ca3acd2d04eb67e361207ef4d43cbf5c53ae72",
+      "source_sha256": "9ebae801aab457b83afecf862e056a04629b7efc64f5019da42ceae6e9f14b88",
       "sections": [
         {
           "id": "uzgon-plivanje-i-početni-stabilitet",
@@ -983,7 +983,7 @@
       "kind": "chapter",
       "number": "7",
       "part": "part-3",
-      "source_sha256": "a74405f5a159b3533cb9ed6e9e9abfc91aaf58d28af6fea28e18357075f412c3",
+      "source_sha256": "4122e66865ed6d019398ab939eedafb82e31b935d02af1bc746554304c30c116",
       "sections": [
         {
           "id": "kinematika-kontrolni-volumen-i-kontinuitet",
@@ -1151,7 +1151,7 @@
       "kind": "chapter",
       "number": "8",
       "part": "part-3",
-      "source_sha256": "f4e16ee2853f657c35a7c1ef8e6a79b826ed03892b38ce6c871e76f147b86dcb",
+      "source_sha256": "6ca4ab25b1f9f0b2f44a627074ccaf2997c2a9108404cb1a9fb72375420dc0e6",
       "sections": [
         {
           "id": "energijska-jednadžba-i-bernoullijeva-jednadžba",
@@ -1290,7 +1290,7 @@
       "kind": "chapter",
       "number": "9",
       "part": "part-3",
-      "source_sha256": "02fff732f6610c378c12f7129dd175a274e80e0182ed2c3e956e58c44d17a4f0",
+      "source_sha256": "10728275f050ed119c476099f393938fd740c6175cddd1f3ad81e233abebebd0",
       "sections": [
         {
           "id": "sec-kompresibilni-motivacija",
@@ -1401,7 +1401,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "e44e4897eca65abe4d817fcfb2afdcd45eadf72bca7085c23bde81f213b39a1c",
+      "source_sha256": "7a3d7c614058bc93b66509ada575751207e0451b9fcff95d5c49257586cd8eb4",
       "sections": [
         {
           "id": "količina-i-moment-količine-gibanja",
@@ -1552,7 +1552,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "e5b1d9720a07ca479c694b5a72afae581517bb79ffe1bd84dc0ac11f2c3596c4",
+      "source_sha256": "bbd7f13d712467f57147e542d6ef945b11f2967ef0ad6fd968fb344d9c5f8fbe",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",
@@ -1653,7 +1653,6 @@
         "eq-slicnost-rijeseni-primjer-machov-i-strouhalov-broj-stlaci-03",
         "eq-slicnost-rijeseni-primjer-machov-i-strouhalov-broj-stlaci-04",
         "fig-uvod-u14",
-        "fig-u14-omjer-sila",
         "fig-u14-pi-buckingham",
         "fig-u14-odluka",
         "fig-u14-val1-reynolds",
@@ -1696,7 +1695,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "ea8bde5c0e09d041705c3654ee0dd8965835c6f06b1be2cac0f9e38a1a0b6aa3",
+      "source_sha256": "fc96fad93d48277cf636b6281a9ed58a4c50332137e1fec3550364a64ecee84a",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1823,7 +1822,7 @@
       "kind": "chapter",
       "number": "13",
       "part": "part-5",
-      "source_sha256": "d7ab53c561f92f70eff94b40d44599695721e2be1ac2388adcdff1b89933c494",
+      "source_sha256": "08da5d1b45a4cc8fa39047d168b9644865b49865fd8d204418c4efd15ae1b26a",
       "sections": [
         {
           "id": "sec-cjevovodi-motivacija",
@@ -1989,7 +1988,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "e4ee79421b7434c3460d4da2a7441dcbd5bd2d8f321e36b6bb8d3faced944f2d",
+      "source_sha256": "d6442b7c86d7693414bdb72d14945933bfbf551263cdcafd7b5b83039ff40dd2",
       "sections": [
         {
           "id": "turbostrojevi-i-propulzija",
@@ -2139,7 +2138,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "af2e5897fe9388978bc368d173f1890f19e90d2044355980f6efea277237d790",
+      "source_sha256": "2cb513ae5bc48dec3674b2c957ce9921704e0f839b2ad06eb8525b91c7ff0bfe",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2394,7 +2393,7 @@
       "kind": "appendix",
       "number": "D",
       "part": null,
-      "source_sha256": "414502b9131f814fad76641c6ab864ce6623962683695f7dd5ff868f26e7c3b1",
+      "source_sha256": "b8fa852395c01292d83707135fec86d40ba3a65b7f03255bcb1562a92b4040b1",
       "sections": [
         {
           "id": "mehanika-fluida-i-numerika-pregled",
@@ -2472,7 +2471,7 @@
       "kind": "appendix",
       "number": "E",
       "part": null,
-      "source_sha256": "b42f31fde61005e31ac0cace16816b6cb78cc45d2706bfa9e28594b105dae422",
+      "source_sha256": "e56bb3c632686109917b8c07b14ce7ab8d5625a50e3725a7568a022a43e8f04e",
       "sections": [
         {
           "id": "literatura-i-izvori",
@@ -2530,7 +2529,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "00202558b28e2bf07d53b8aacfbb2accc86cf795bb66de309168b6ebbee563cc",
+      "source_sha256": "d448e1b1044c90b7c99fe732b4058988c5203b6a45e3518cfddfaa3104f64756",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -3009,8 +3008,8 @@
       "kind": "Figure",
       "document": "u01",
       "number": "1.2",
-      "caption": "Gustoća, specifična težina i relativna gustoća ulja (ρ = 860 kg/m³) u usporedbi s vodom (ρ = 1000 kg/m³)",
-      "alt": "Gustoća, specifična težina i relativna gustoća ulja (ρ = 860 kg/m³) u usporedbi s vodom (ρ = 1000 kg/m³)",
+      "caption": "Usporedba gustoće, mase i težine jednakih volumena ulja i vode.",
+      "alt": "Usporedba gustoće, mase i težine jednakih volumena ulja i vode.",
       "source": "../assets/print/u01_fig_gustoca_sr.svg",
       "type": "composite",
       "variants": {
@@ -3026,7 +3025,7 @@
       "caption": "Opterećeni klip i tlak u zatvorenom cilindru",
       "alt": "Opterećeni klip i tlak u zatvorenom cilindru",
       "source": "../assets/print/u01_val1_klip_manometar.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u01_val1_klip_manometar.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -3040,7 +3039,7 @@
       "caption": "Servisna hidraulična dizalica",
       "alt": "Servisna hidraulična dizalica",
       "source": "../assets/print/u01_val2_hidraulicna_dizalica.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u01_val2_hidraulicna_dizalica.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -3054,7 +3053,7 @@
       "caption": "Dvostruka hidraulična platforma s ručnom pumpom",
       "alt": "Dvostruka hidraulična platforma s ručnom pumpom",
       "source": "../assets/print/u01_ch1_dvostruka_platforma_manometar.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u01_ch1_dvostruka_platforma_manometar.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -3065,10 +3064,10 @@
       "kind": "Figure",
       "document": "u01",
       "number": "1.6",
-      "caption": "Hidraulična kočnica vozila: papučica s polugom i = 5, glavni cilindar d_M = 20 mm i četiri kočna cilindra (prednji d_f = 35 mm, stražnji d_r = 30 mm). Isti tlak daje dvije jednake prednje i dvije jednake stražnje sile klipova. Krakovi poluge mjere se od istog zgloba; diskovi i kontakti nisu prikazani.",
-      "alt": "Hidraulična kočnica vozila: papučica s polugom $i = 5$, glavni cilindar $d_M = 20$ mm i četiri kočna cilindra (prednji $d_f = 35$ mm, stražnji $d_r = 30$ mm). Isti tlak daje dvije jednake prednje i dvije jednake stražnje sile klipova. Krakovi poluge mjere se od istog zgloba; diskovi i kontakti nisu prikazani.",
+      "caption": "Hidraulična kočnica: papučica, glavni cilindar i četiri kočna cilindra. Sile djeluju na klipove; diskovi i kontakti nisu prikazani.",
+      "alt": "Hidraulična kočnica: papučica, glavni cilindar i četiri kočna cilindra. Sile djeluju na klipove; diskovi i kontakti nisu prikazani.",
       "source": "../assets/print/u01_fig_kocnica_vozila.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u01_fig_kocnica_vozila.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -3079,7 +3078,7 @@
       "kind": "Figure",
       "document": "u01",
       "number": "1.7",
-      "caption": "Skice uz zadatke Z1–Z6: vaganje posude i ulja, servisna preša, provjera proračuna preše, mjerni cilindar, izbor pumpe i stol s tri cilindra. Skice nisu u mjerilu.",
+      "caption": "Skice uz Z1–Z6: gustoća, hidraulične preše i sustavi klipova.",
       "alt": "Šest panela prikazuje praznu i napunjenu posudu na vagi u Z1, ulaznu i izlaznu silu preša u Z2 i Z3, dovedeni volumen i pomak klipa u Z4, pumpu s jednim radnim cilindrom u Z5 te stol s tri jednaka cilindra u Z6.",
       "source": "../assets/print/u01_vjezbe_skice.svg",
       "type": "composite",
@@ -3607,10 +3606,10 @@
       "kind": "Figure",
       "document": "u02",
       "number": "2.2",
-      "caption": "Kratki primjer: ν = μ/ρ – kinematička viskoznost ulja (μ=0,18 Pa·s, ρ=900 kg/m³)",
-      "alt": "Kratki primjer: ν = μ/ρ – kinematička viskoznost ulja (μ=0,18 Pa·s, ρ=900 kg/m³)",
+      "caption": "Veza dinamičke i kinematičke viskoznosti ulja.",
+      "alt": "Veza dinamičke i kinematičke viskoznosti ulja.",
       "source": "../assets/print/u02_fig_kinematicka_viskoznost.svg",
-      "type": "composite",
+      "type": "mini",
       "variants": {
         "web": "../assets/print/u02_fig_kinematicka_viskoznost.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -3621,10 +3620,10 @@
       "kind": "Figure",
       "document": "u02",
       "number": "2.3",
-      "caption": "Viskoznost i kapilarnost",
-      "alt": "Viskoznost i kapilarnost",
+      "caption": "Smicanje ulja između nepomične i pokretne ploče.",
+      "alt": "Smicanje ulja između nepomične i pokretne ploče.",
       "source": "../assets/print/u02_val2_viskoznost_kapilarnost.svg",
-      "type": "composite",
+      "type": "mini",
       "variants": {
         "web": "../assets/print/u02_val2_viskoznost_kapilarnost.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -3635,10 +3634,10 @@
       "kind": "Figure",
       "document": "u02",
       "number": "2.4",
-      "caption": "Kapilarni uspon etanola u staklenoj kapilari (d=1,0 mm, θ=18°, h≈10,8 mm)",
-      "alt": "Kapilarni uspon etanola u staklenoj kapilari (d=1,0 mm, θ=18°, h≈10,8 mm)",
+      "caption": "Kapilarni uspon etanola i kontaktni kut kroz tekućinu.",
+      "alt": "Kapilarni uspon etanola i kontaktni kut kroz tekućinu.",
       "source": "../assets/print/u02_fig_kapilarni_uspon_etanol.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u02_fig_kapilarni_uspon_etanol.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -3652,7 +3651,7 @@
       "caption": "Dva odvojena stanja mikrodozatora: prirodni uspon s konkavnim meniskusom i puna kapilara s izlaznom kapljicom.",
       "alt": "Dva odvojena stanja mikrodozatora: prirodni uspon s konkavnim meniskusom i puna kapilara s izlaznom kapljicom.",
       "source": "../assets/print/u02_ch1_kapilarni_mikrodozator_kapljica.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u02_ch1_kapilarni_mikrodozator_kapljica.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -3663,10 +3662,10 @@
       "kind": "Figure",
       "document": "u02",
       "number": "2.6",
-      "caption": "Klizni ležaj pri hladnom startu (\\mu_1 = 0{,}40 Pa·s) i radnoj temperaturi (\\mu_2 = 0{,}040 Pa·s) – ista geometrija, faktor 10 razlike u viskoznosti, faktor 10 razlike u snazi trenja.",
-      "alt": "Klizni ležaj pri hladnom startu ($\\mu_1 = 0{,}40$ Pa·s) i radnoj temperaturi ($\\mu_2 = 0{,}040$ Pa·s) – ista geometrija, faktor 10 razlike u viskoznosti, faktor 10 razlike u snazi trenja.",
+      "caption": "Isti klizni ležaj pri hladnom startu i radnoj temperaturi; ulje pruža otpor vrtnji vratila.",
+      "alt": "Isti klizni ležaj pri hladnom startu i radnoj temperaturi; ulje pruža otpor vrtnji vratila.",
       "source": "../assets/print/u02_fig_lezaj_temperatura.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u02_fig_lezaj_temperatura.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -3677,7 +3676,7 @@
       "kind": "Figure",
       "document": "u02",
       "number": "2.7",
-      "caption": "Skice uz Z1–Z6: smicanje između ploča, kapljica i sapunasti mjehur, dva uljna procjepa, kapilarni uspon, mjerenje viskoznog otpora te igla s izlaznom kapljicom.",
+      "caption": "Skice uz Z1–Z6: viskozno smicanje, kapljice i kapilare.",
       "alt": "Skice uz Z1–Z6: smicanje između ploča, kapljica i sapunasti mjehur, dva uljna procjepa, kapilarni uspon, mjerenje viskoznog otpora te igla s izlaznom kapljicom.",
       "source": "../assets/print/u02_vjezbe_skice.svg",
       "type": "composite",
@@ -4205,10 +4204,10 @@
       "kind": "Figure",
       "document": "u03",
       "number": "3.2",
-      "caption": "Tlak u priključku zatvorenog vodenog spremnika (p_G=18 kPa, h=1,4 m)",
-      "alt": "Tlak u priključku zatvorenog vodenog spremnika (p_G=18 kPa, h=1,4 m)",
+      "caption": "Zatvoreni vodeni spremnik: plinski pretlak i dubina priključka A.",
+      "alt": "Zatvoreni vodeni spremnik: plinski pretlak i dubina priključka A.",
       "source": "../assets/print/u03_fig_zatvoreni_spremnik_tlak.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u03_fig_zatvoreni_spremnik_tlak.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -4222,7 +4221,7 @@
       "caption": "Diferencijalni manometar",
       "alt": "Diferencijalni manometar",
       "source": "../assets/print/u03_val1_diferencijalni_manometar.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u03_val1_diferencijalni_manometar.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -4236,7 +4235,7 @@
       "caption": "Zatvoreni vodeni spremnik i referentni uljni spremnik",
       "alt": "Zatvoreni vodeni spremnik i referentni uljni spremnik",
       "source": "../assets/print/u03_ch1_zatvoreni_spremnik_ulje_ziva.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u03_ch1_zatvoreni_spremnik_ulje_ziva.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -4261,10 +4260,10 @@
       "kind": "Figure",
       "document": "u03",
       "number": "3.6",
-      "caption": "Tlak na usisu pumpe za cirkulaciju ulja (H=2,4 m iznad razine, ρ=870 kg/m³)",
-      "alt": "Tlak na usisu pumpe za cirkulaciju ulja (H=2,4 m iznad razine, ρ=870 kg/m³)",
+      "caption": "Statički stupac ulja između slobodne površine i usisnog priključka pumpe.",
+      "alt": "Statički stupac ulja između slobodne površine i usisnog priključka pumpe.",
       "source": "../assets/print/u03_fig_pumpa_usis.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u03_fig_pumpa_usis.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -4275,10 +4274,10 @@
       "kind": "Figure",
       "document": "u03",
       "number": "3.7",
-      "caption": "Balastni tank u trupu broda na gazu T_g = 8{,}5 m: vanjska morska voda i unutarnja balastna voda do visine H_t = 5{,}0 m. Prozor je na h_p = 2 m iznad dna tanka.",
-      "alt": "Balastni tank u trupu broda na gazu $T_g = 8{,}5$ m: vanjska morska voda i unutarnja balastna voda do visine $H_t = 5{,}0$ m. Prozor je na $h_p = 2$ m iznad dna tanka.",
+      "caption": "Balastni tank: more izvana i balastna voda iznutra opterećuju prozor i dno.",
+      "alt": "Balastni tank: more izvana i balastna voda iznutra opterećuju prozor i dno.",
       "source": "../assets/print/u03_fig_balastni_tank.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u03_fig_balastni_tank.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -4289,7 +4288,7 @@
       "kind": "Figure",
       "document": "u03",
       "number": "3.8",
-      "caption": "Skice uz Z1–Z6: otvoreni spremnik, određivanje razine iz razlike tlakova, uljni U-manometar, slojevi ulja i vode, mjerenje podtlaka i izbor apsolutnog senzora.",
+      "caption": "Skice uz Z1–Z6: spremnici, slojevi fluida i manometri.",
       "alt": "Skice uz Z1–Z6: otvoreni spremnik, određivanje razine iz razlike tlakova, uljni U-manometar, slojevi ulja i vode, mjerenje podtlaka i izbor apsolutnog senzora.",
       "source": "../assets/print/u03_vjezbe_skice.svg",
       "type": "composite",
@@ -4827,7 +4826,7 @@
       "caption": "Otvoreni spremnik na laboratorijskim kolicima",
       "alt": "Otvoreni spremnik na laboratorijskim kolicima",
       "source": "../assets/print/u04_val2_laboratorijska_kolica.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u04_val2_laboratorijska_kolica.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -4841,7 +4840,7 @@
       "caption": "Zatvoreni servisni modul s kosom inspekcijskom stijenkom",
       "alt": "Zatvoreni servisni modul s kosom inspekcijskom stijenkom",
       "source": "../assets/print/u04_val3_kosa_stijenka.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u04_val3_kosa_stijenka.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -4852,10 +4851,10 @@
       "kind": "Figure",
       "document": "u04",
       "number": "4.4",
-      "caption": "Rotirajući cilindrični spremnik: paraboloidna slobodna površina (R=0,35 m, ω=6,0 rad/s)",
-      "alt": "Rotirajući cilindrični spremnik: paraboloidna slobodna površina (R=0,35 m, ω=6,0 rad/s)",
+      "caption": "Paraboloidna slobodna površina i dubine uz os i rub rotirajućeg cilindra.",
+      "alt": "Paraboloidna slobodna površina i dubine uz os i rub rotirajućeg cilindra.",
       "source": "../assets/print/u04_fig_rotirajuci_cilindar.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u04_fig_rotirajuci_cilindar.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -4869,7 +4868,7 @@
       "caption": "Rotirajući cilindrični spremnik",
       "alt": "Rotirajući cilindrični spremnik",
       "source": "../assets/print/u04_ch1_rotirajuci_spremnik_paraboloid.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u04_ch1_rotirajuci_spremnik_paraboloid.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -4880,10 +4879,10 @@
       "kind": "Figure",
       "document": "u04",
       "number": "4.6",
-      "caption": "Nagib goriva u autocisterni pri kočenju (L=1,2 m, h₀=0,45 m, a=3,8 m/s²)",
-      "alt": "Nagib goriva u autocisterni pri kočenju (L=1,2 m, h₀=0,45 m, a=3,8 m/s²)",
+      "caption": "Nagib goriva u otvorenom modelu autocisterne pri kočenju.",
+      "alt": "Nagib goriva u otvorenom modelu autocisterne pri kočenju.",
       "source": "../assets/print/u04_fig_autocisterna_kocenje.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u04_fig_autocisterna_kocenje.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -4894,7 +4893,7 @@
       "kind": "Figure",
       "document": "u04",
       "number": "4.7",
-      "caption": "Skice uz Z1–Z6: nagib pri ubrzanju, granica prelijevanja, vertikalno ubrzavanje i kočenje, tlakovi u rotirajućoj vodi, provjera smirivanja i rotacijski spremnik s ograničenjem dubine.",
+      "caption": "Skice uz Z1–Z6: translacija, rotacija i granice relativnog mirovanja.",
       "alt": "Skice uz Z1–Z6: nagib pri ubrzanju, granica prelijevanja, vertikalno ubrzavanje i kočenje, tlakovi u rotirajućoj vodi, provjera smirivanja i rotacijski spremnik s ograničenjem dubine.",
       "source": "../assets/print/u04_vjezbe_skice.svg",
       "type": "composite",
@@ -5418,7 +5417,7 @@
       "caption": "Vertikalna pravokutna zaklopka s dubinama rubova, težištem i centrom tlaka",
       "alt": "Vertikalna pravokutna zaklopka s dubinama rubova, težištem i centrom tlaka",
       "source": "../assets/print/u05_val1_pravokutna_zaklopka.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u05_val1_pravokutna_zaklopka.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -5432,7 +5431,7 @@
       "caption": "Kosi poklopac s kutom prema vodoravnici, zglobom, centrom tlaka i spojnicom",
       "alt": "Kosi poklopac s kutom prema vodoravnici, zglobom, centrom tlaka i spojnicom",
       "source": "../assets/print/u05_val3_kosi_poklopac.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u05_val3_kosi_poklopac.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -5446,7 +5445,7 @@
       "caption": "Zglobna vertikalna pregrada s izlomljenim dijagramom tlaka kroz ulje i vodu",
       "alt": "Zglobna vertikalna pregrada s izlomljenim dijagramom tlaka kroz ulje i vodu",
       "source": "../assets/print/u05_ch1_pregrada_ulje_voda.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u05_ch1_pregrada_ulje_voda.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -5460,7 +5459,7 @@
       "caption": "Potopljena četvrtcilindrična ploha s vodom na konveksnoj donjoj strani i vertikalnom silom prema gore",
       "alt": "Potopljena četvrtcilindrična ploha s vodom na konveksnoj donjoj strani i vertikalnom silom prema gore",
       "source": "../assets/print/u06_val1_cetvrtina_kruga.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u06_val1_cetvrtina_kruga.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -5474,7 +5473,7 @@
       "caption": "Četvrtcilindrični poklopac uz slobodnu površinu s vertikalnom komponentom prema dolje",
       "alt": "Četvrtcilindrični poklopac uz slobodnu površinu s vertikalnom komponentom prema dolje",
       "source": "../assets/print/u06_val3_cetvrtcilindricni_poklopac.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u06_val3_cetvrtcilindricni_poklopac.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -5488,7 +5487,7 @@
       "caption": "Zglobni četvrtcilindrični poklopac s vodom na donjoj strani, silom prema gore i vodoravnom spojnicom",
       "alt": "Zglobni četvrtcilindrični poklopac s vodom na donjoj strani, silom prema gore i vodoravnom spojnicom",
       "source": "../assets/print/u06_ch1_poklopac_spojnica.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u06_ch1_poklopac_spojnica.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -6226,7 +6225,7 @@
       "caption": "Ponton i gaz pri simetričnom opterećenju",
       "alt": "Ponton i gaz pri simetričnom opterećenju",
       "source": "../assets/print/u07_val2_ponton_gaz.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u07_val2_ponton_gaz.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -6240,7 +6239,7 @@
       "caption": "Plutajuća platforma s pomaknutim kompresorom",
       "alt": "Plutajuća platforma s pomaknutim kompresorom",
       "source": "../assets/print/u07_val1_platforma_kompresor.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u07_val1_platforma_kompresor.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -6254,7 +6253,7 @@
       "caption": "Plutajuća platforma na granici ulja i vode",
       "alt": "Plutajuća platforma na granici ulja i vode",
       "source": "../assets/print/u07_ch1_platforma_ulje_voda_ormar.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u07_ch1_platforma_ulje_voda_ormar.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -6265,10 +6264,10 @@
       "kind": "Figure",
       "document": "u06",
       "number": "6.5",
-      "caption": "Izolirani puni bočni tank u modelu dodane mase: trup 80\\times15\\times8 m i tank 15\\times6\\times3 m uz lijevu stijenku. Težište vode u tanku pomaknuto je 4,5 m od osi simetrije.",
-      "alt": "Izolirani puni bočni tank u modelu dodane mase: trup $80\\times15\\times8$ m i tank $15\\times6\\times3$ m uz lijevu stijenku. Težište vode u tanku pomaknuto je 4,5 m od osi simetrije.",
+      "caption": "Puni bočni tank u modelu dodane mase: zatvorena voda u tanku pomiče zajedničko težište broda.",
+      "alt": "Puni bočni tank u modelu dodane mase: zatvorena voda u tanku pomiče zajedničko težište broda.",
       "source": "../assets/print/u07_ch2_poplavljen_tank.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u07_ch2_poplavljen_tank.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -6279,10 +6278,10 @@
       "kind": "Figure",
       "document": "u06",
       "number": "6.6",
-      "caption": "Potonulo pumpno kućište: V=0,045 m³, m=85 kg, F_U≈453 N, G≈834 N",
-      "alt": "Potonulo pumpno kućište: V=0,045 m³, m=85 kg, F_U≈453 N, G≈834 N",
+      "caption": "Uzgon, težina i sila držanja potpuno uronjenoga pumpnog kućišta.",
+      "alt": "Uzgon, težina i sila držanja potpuno uronjenoga pumpnog kućišta.",
       "source": "../assets/print/u07_fig_pumpno_kuciste.svg",
-      "type": "composite",
+      "type": "mini",
       "variants": {
         "web": "../assets/print/u07_fig_pumpno_kuciste.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -6856,7 +6855,7 @@
       "kind": "Figure",
       "document": "u07",
       "number": "7.2",
-      "caption": "Strujnica je tangentna na vektore brzine u istom trenutku; trajektorija je putanja jedne čestice kroz vrijeme. U stacionarnom strujanju obje krivulje imaju isti oblik.",
+      "caption": "Strujnica i trajektorija čestice.",
       "alt": "Strujnica je tangentna na vektore brzine u istom trenutku; trajektorija je putanja jedne čestice kroz vrijeme. U stacionarnom strujanju obje krivulje imaju isti oblik.",
       "source": "../assets/print/u08_fig_kinematika.svg",
       "type": "composite",
@@ -6873,7 +6872,7 @@
       "caption": "Difuzor i kontinuitet",
       "alt": "Difuzor i kontinuitet",
       "source": "../assets/print/u08_val1_difuzor_kontinuitet.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u08_val1_difuzor_kontinuitet.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -6887,7 +6886,7 @@
       "caption": "Izjednačni spremnik s akumulacijom",
       "alt": "Izjednačni spremnik s akumulacijom",
       "source": "../assets/print/u08_val3_izjednacni_spremnik.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u08_val3_izjednacni_spremnik.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -6901,7 +6900,7 @@
       "caption": "Miješajući izjednačni spremnik",
       "alt": "Miješajući izjednačni spremnik",
       "source": "../assets/print/u08_ch1_mijesajuci_spremnik.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u08_ch1_mijesajuci_spremnik.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -6926,10 +6925,10 @@
       "kind": "Figure",
       "document": "u07",
       "number": "7.7",
-      "caption": "Razvodni T-komad: D1=32 mm, D2=20 mm, v1=4,5 m/s, 60%/40% raspodjela",
-      "alt": "Razvodni T-komad: D1=32 mm, D2=20 mm, v1=4,5 m/s, 60%/40% raspodjela",
+      "caption": "T-komad s jednim dovodom i dvama ograncima zadanih udjela protoka.",
+      "alt": "T-komad s jednim dovodom i dvama ograncima zadanih udjela protoka.",
       "source": "../assets/print/u08_fig_t_komad_hidraulika.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u08_fig_t_komad_hidraulika.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -7534,7 +7533,7 @@
       "caption": "Kontinuitet i energijske visine u horizontalnom konfuzoru",
       "alt": "Horizontalni konfuzor: otvoreni presjeci, stalni EGL i pad HGL-a pri ubrzanju zraka.",
       "source": "../assets/print/u09_egl_hgl_schema.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u09_egl_hgl_schema.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -7548,7 +7547,7 @@
       "caption": "Domet slobodnog mlaza",
       "alt": "Domet slobodnog mlaza",
       "source": "../assets/print/u09_val2_slobodni_mlaz.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u09_val2_slobodni_mlaz.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -7562,7 +7561,7 @@
       "caption": "Idealni sifon sa slobodnim izlazom B iznad prihvatnog kanala.",
       "alt": "Napunjen sifon: ulaz je uronjen u bazen A, vrh je C, a izlaz B otvoren prema atmosferi.",
       "source": "../assets/print/u09_val3_idealni_sifon.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u09_val3_idealni_sifon.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -7576,7 +7575,7 @@
       "caption": "Idealni obilazni sifon sa suženjem",
       "alt": "Idealni obilazni sifon sa suženjem",
       "source": "../assets/print/u09_ch1_bypass_sifon_suzenje_mlaz.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u09_ch1_bypass_sifon_suzenje_mlaz.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -7587,10 +7586,10 @@
       "kind": "Figure",
       "document": "u08",
       "number": "8.6",
-      "caption": "Venturijeva cijev: D1=60 mm, D2=30 mm, Δh_m=0,18 m žive, Q≈5,248 L/s",
-      "alt": "Venturijeva cijev: D1=60 mm, D2=30 mm, Δh_m=0,18 m žive, Q≈5,248 L/s",
+      "caption": "Venturijeva cijev i spojeni živin manometar za mjerenje razlike tlakova.",
+      "alt": "Venturijeva cijev i spojeni živin manometar za mjerenje razlike tlakova.",
       "source": "../assets/print/u09_fig_venturijeva_cijev.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u09_fig_venturijeva_cijev.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -7898,7 +7897,7 @@
       "kind": "Figure",
       "document": "u09",
       "number": "9.2",
-      "caption": "Skice za Z1–Z6: smjerovi zvučnog poremećaja, lokalni presjek voda, akustička mjerna duljina, izlaz konvergentne sapnice, stvarna površina otvora i mjerni presjeci oko udarnog vala.",
+      "caption": "Skice uz Z1–Z6: zvuk, sapnice i mjerenje preko udarnog vala.",
       "alt": "Šest skica s otvorenim prolazima. Z3 razlikuje prijenos zvuka uzvodno i nizvodno. Z4 označuje izlaz sapnice i zaseban protutlak. Z6 prikazuje normalni val u otvorenom kanalu, statičke priključke i podzvučnu Pitotovu sondu.",
       "source": "../assets/print/u09_kompresibilni_vjezbe_skice.svg",
       "type": "composite",
@@ -8532,7 +8531,7 @@
       "caption": "Pregled poglavlja: količina i moment količine gibanja.",
       "alt": "Pregled poglavlja: količina i moment količine gibanja.",
       "source": "../assets/print/u11_fig_uvod_pregled.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u11_fig_uvod_pregled.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -8546,7 +8545,7 @@
       "caption": "Mlaz na ploču",
       "alt": "Mlaz na ploču",
       "source": "../assets/print/u11_val1_mlaz_na_plocu.svg",
-      "type": "composite",
+      "type": "mini",
       "variants": {
         "web": "../assets/print/u11_val1_mlaz_na_plocu.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -8560,7 +8559,7 @@
       "caption": "Kalibracijska mlaznica na prirubnici",
       "alt": "Kalibracijska mlaznica na prirubnici",
       "source": "../assets/print/u11_val2_mlaznica_prirubnica.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u11_val2_mlaznica_prirubnica.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -8574,7 +8573,7 @@
       "caption": "Horizontalno koljeno i reakcija nosača",
       "alt": "Horizontalno koljeno i reakcija nosača",
       "source": "../assets/print/u11_val3_koljeno_reakcija.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u11_val3_koljeno_reakcija.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -8588,7 +8587,7 @@
       "caption": "T-račva na sidrenoj konzoli",
       "alt": "T-račva na sidrenoj konzoli",
       "source": "../assets/print/u11_ch1_t_racva_konzola.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u11_ch1_t_racva_konzola.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -8602,7 +8601,7 @@
       "caption": "Y-račva s mjerenom reakcijom konzole",
       "alt": "Y-račva s mjerenom reakcijom konzole",
       "source": "../assets/print/u11_ch2_y_racva_reakcija.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u11_ch2_y_racva_reakcija.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -8616,7 +8615,7 @@
       "caption": "Tlocrt hidroenergetskog koljena: izlaz skreće prema negativnoj osi y, a sila fluida na koljeno ima pozitivne komponente x i y.",
       "alt": "Otvoreno koljeno stalnog unutarnjeg promjera 200 mm zakreće tok 60 stupnjeva prema minus y. Tlak na izlaznom presjeku djeluje prema kontrolnom volumenu. Rezultanta sile fluida ide prema plus x i plus y; reakcija oslonca ima suprotan smjer.",
       "source": "../assets/print/u10_fig_hidroenergetsko_koljeno.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u10_fig_hidroenergetsko_koljeno.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -8627,7 +8626,7 @@
       "kind": "Figure",
       "document": "u10",
       "number": "10.8",
-      "caption": "Skice vježbi: sila i reakcija ploče, koljeno, moment ekscentričnog mlaza, pomični kontrolni volumen i Y-račva. Kote označuju unutarnje promjere ili okomite krakove; nacrtane strelice same ne zadaju iznose.",
+      "caption": "Skice uz Z1–Z6: sile mlaza, reakcije vodova i moment ekscentričnog mlaza.",
       "alt": "Šest skica s otvorenim presjecima i neprekinutim fluidom. Z4 odvaja okomiti krak momenta od udaljenosti po x. Z5 razlikuje brzinu mlaza, gibanje ploče i apsolutni izlaz. Z6 prikazuje tlocrt račve s pravom granom od 60 stupnjeva.",
       "source": "../assets/print/u11_vjezbe_skice.svg",
       "type": "composite",
@@ -9043,7 +9042,7 @@
       "kind": "Figure",
       "document": "u11",
       "number": "11.1",
-      "caption": "Pregled poglavlja: usporedba karakterističnih mjerila, ključni bezdimenzijski brojevi i prijenos koeficijenta otpora iz aerotunela uz odgovarajuće uvjete sličnosti.",
+      "caption": "Karakteristični mehanizmi te usporedba modela i prototipa.",
       "alt": "Pregled poglavlja: usporedba karakterističnih mjerila, ključni bezdimenzijski brojevi i prijenos koeficijenta otpora iz aerotunela uz odgovarajuće uvjete sličnosti.",
       "source": "../assets/print/u14_fig_uvod_pregled.svg",
       "type": "composite",
@@ -9052,26 +9051,12 @@
         "print_manifest": "assets/pdf-figures/manifest.json"
       }
     },
-    "fig-u14-omjer-sila": {
-      "id": "fig-u14-omjer-sila",
-      "kind": "Figure",
-      "document": "u11",
-      "number": "11.2",
-      "caption": "Karakteristična mjerila sila i njihovi omjeri. To nisu zadani vektori sila na pojedinu česticu niti jednadžba ravnoteže.",
-      "alt": "Karakteristična mjerila sila i njihovi omjeri. To nisu zadani vektori sila na pojedinu česticu niti jednadžba ravnoteže.",
-      "source": "../assets/print/u14_fig_omjer_sila.svg",
-      "type": "composite",
-      "variants": {
-        "web": "../assets/print/u14_fig_omjer_sila.svg",
-        "print_manifest": "assets/pdf-figures/manifest.json"
-      }
-    },
     "fig-u14-pi-buckingham": {
       "id": "fig-u14-pi-buckingham",
       "kind": "Figure",
       "document": "u11",
-      "number": "11.3",
-      "caption": "Shema Buckinghamova postupka: popis varijabli {F, ρ, v, D, μ}, dimenzijska matrica M-L-T i tvorba dviju Π-grupa Π₁ = F/(ρv²D²) i Π₂ = Re",
+      "number": "11.2",
+      "caption": "Dimenzijska matrica za silu otpora kugle.",
       "alt": "Shema Buckinghamova postupka: popis varijabli {F, ρ, v, D, μ}, dimenzijska matrica M-L-T i tvorba dviju Π-grupa Π₁ = F/(ρv²D²) i Π₂ = Re",
       "source": "../assets/print/u14_fig_pi_buckingham.svg",
       "type": "wide",
@@ -9084,11 +9069,11 @@
       "id": "fig-u14-odluka",
       "kind": "Figure",
       "document": "u11",
-      "number": "11.4",
-      "caption": "Dijagram pitanja za prepoznavanje mogućih relevantnih grupa: slobodna površina upućuje na Fr, viskoznost na Re, kapljice na We i Bo, kavitacija na σ_kav, periodičnost na St, a stlačivost na Ma. U jednom problemu može biti važno više grupa.",
+      "number": "11.3",
+      "caption": "Fizikalni mehanizmi i pripadne bezdimenzijske grupe.",
       "alt": "Dijagram pitanja za prepoznavanje mogućih relevantnih grupa: slobodna površina upućuje na Fr, viskoznost na Re, kapljice na We i Bo, kavitacija na σ_kav, periodičnost na St, a stlačivost na Ma. U jednom problemu može biti važno više grupa.",
       "source": "../assets/print/u14_fig_odluka.svg",
-      "type": "wide",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u14_fig_odluka.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -9098,11 +9083,11 @@
       "id": "fig-u14-val1-reynolds",
       "kind": "Figure",
       "document": "u11",
-      "number": "11.5",
-      "caption": "Isti kanal, dva fluida: voda daje turbulentni režim (Re = 7200), ulje izrazito laminarni (Re = 45) zbog veće relativne važnosti viskoznih učinaka",
-      "alt": "Isti kanal, dva fluida: voda daje turbulentni režim (Re = 7200), ulje izrazito laminarni (Re = 45) zbog veće relativne važnosti viskoznih učinaka",
+      "number": "11.4",
+      "caption": "Voda i ulje u istoj cijevi: usporedba uvjeta koji određuju Reynoldsov broj.",
+      "alt": "Voda i ulje u istoj cijevi: usporedba uvjeta koji određuju Reynoldsov broj.",
       "source": "../assets/print/u14_val1_reynolds_kanal.svg",
-      "type": "standard",
+      "type": "wide",
       "variants": {
         "web": "../assets/print/u14_val1_reynolds_kanal.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -9112,9 +9097,9 @@
       "id": "fig-u14-val2-brod",
       "kind": "Figure",
       "document": "u11",
-      "number": "11.6",
-      "caption": "Model broda (Lₘ = 6 m, vₘ = 1,8 m/s) i prototip (Lₛ = 150 m, vₛ = 9 m/s) pri istom Froudeovom broju Fr = 0,235; Reynoldsov broj se razlikuje 125 puta",
-      "alt": "Model broda (Lₘ = 6 m, vₘ = 1,8 m/s) i prototip (Lₛ = 150 m, vₛ = 9 m/s) pri istom Froudeovom broju Fr = 0,235; Reynoldsov broj se razlikuje 125 puta",
+      "number": "11.5",
+      "caption": "Model broda i prototip pri jednakom Froudeovu broju.",
+      "alt": "Model broda i prototip pri jednakom Froudeovu broju.",
       "source": "../assets/print/u14_val2_brod_bazen.svg",
       "type": "composite",
       "variants": {
@@ -9126,11 +9111,11 @@
       "id": "fig-u14-val3-venturi",
       "kind": "Figure",
       "document": "u11",
-      "number": "11.7",
-      "caption": "Venturijevo suženje s idealiziranim kriterijem dosezanja tlaka pare u grlu; jednofazni Bernoullijev model pri Q = 6 L/s daje nefizikalan tlak, a procjena praga iznosi Q približno 4,45 L/s.",
-      "alt": "Venturijevo suženje s idealiziranim kriterijem dosezanja tlaka pare u grlu; jednofazni Bernoullijev model pri Q = 6 L/s daje nefizikalan tlak, a procjena praga iznosi Q približno 4,45 L/s.",
+      "number": "11.6",
+      "caption": "Venturijevo suženje i granica valjanosti jednofaznog modela.",
+      "alt": "Tlak u grlu Venturijeva suženja prema jednofaznom modelu. Dio osi ispod tlaka pare pokazuje prekoračenje valjanosti modela.",
       "source": "../assets/print/u14_val3_venturi_kavitacija.svg",
-      "type": "wide",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u14_val3_venturi_kavitacija.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -9140,11 +9125,11 @@
       "id": "fig-u14-val4-kap",
       "kind": "Figure",
       "document": "u11",
-      "number": "11.8",
-      "caption": "Kap promjera d = 3 mm u struji zraka: zadani kriterij We_kr = 12 predviđa početak raspada pri We = 31,3; Bo je reda jedan.",
-      "alt": "Kap promjera d = 3 mm u struji zraka: zadani kriterij We_kr = 12 predviđa početak raspada pri We = 31,3; Bo je reda jedan.",
+      "number": "11.7",
+      "caption": "Kap u struji zraka: inercija, površinska napetost i gravitacija.",
+      "alt": "Kap u struji zraka: inercija, površinska napetost i gravitacija.",
       "source": "../assets/print/u14_val4_kap_raspad.svg",
-      "type": "composite",
+      "type": "mini",
       "variants": {
         "web": "../assets/print/u14_val4_kap_raspad.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -9154,8 +9139,8 @@
       "id": "fig-u14-ch1-kugla",
       "kind": "Figure",
       "document": "u11",
-      "number": "11.9",
-      "caption": "Kugla u struji, ilustrativna korelacija iz povezane bilježnice i zasebno označena zadana radna točka. Korelacija se ne izjednačuje sa zadanim podatkom C_d = 0,45 i ne produžuje se kroz krizu otpora.",
+      "number": "11.8",
+      "caption": "Kugla u struji: ilustrativna korelacija i zasebna zadana radna točka.",
       "alt": "Kugla u struji, ilustrativna korelacija iz povezane bilježnice i zasebno označena zadana radna točka. Korelacija se ne izjednačuje sa zadanim podatkom C_d = 0,45 i ne produžuje se kroz krizu otpora.",
       "source": "../assets/print/u14_ch1_kugla_struja.svg",
       "type": "composite",
@@ -9168,9 +9153,9 @@
       "id": "fig-u14-val5-mach",
       "kind": "Figure",
       "document": "u11",
-      "number": "11.10",
-      "caption": "Lijevo: plinski vod s Ma₁ = 0,234, pri kojem je nestlačiva aproksimacija često prihvatljiva, i Ma₂ = 0,468, pri kojem stlačivost treba uključiti. Desno: dimnjak s procijenjenom frekvencijom vrtložnog otpuštanja.",
-      "alt": "Lijevo: plinski vod s Ma₁ = 0,234, pri kojem je nestlačiva aproksimacija često prihvatljiva, i Ma₂ = 0,468, pri kojem stlačivost treba uključiti. Desno: dimnjak s procijenjenom frekvencijom vrtložnog otpuštanja.",
+      "number": "11.9",
+      "caption": "Plinski vod za procjenu stlačivosti i dimnjak za procjenu vrtložnog otpuštanja.",
+      "alt": "Plinski vod za procjenu stlačivosti i dimnjak za procjenu vrtložnog otpuštanja.",
       "source": "../assets/print/u14_val5_mach_strouhal.svg",
       "type": "composite",
       "variants": {
@@ -9182,8 +9167,8 @@
       "id": "fig-u14-vjezbe",
       "kind": "Figure",
       "document": "u11",
-      "number": "11.11",
-      "caption": "Skice šest vježbi: Reynoldsov i Machov broj, referentni tlak senzora, hidroprofil i njegov model, vrtložno otpuštanje te presjeci dvaju modela preljeva.",
+      "number": "11.10",
+      "caption": "Skice uz Z1–Z6: bezdimenzijski brojevi i modelska sličnost.",
       "alt": "Šest označenih skica Z1–Z6. Cijevni otvori i mjerni priključak prohodni su; promjeri i tetive mjere stvarne presjeke. Z4 uspoređuje geometrijski slične profile u vodi i zraku. Z6 prikazuje pravokutne presjeke modela 1:20 i 1:30 u istom grafičkom mjerilu.",
       "source": "../assets/print/u14_vjezbe_skice.svg",
       "type": "composite",
@@ -9473,7 +9458,7 @@
       "kind": "Figure",
       "document": "u12",
       "number": "12.2",
-      "caption": "Skice šest vježbi: kinematičko polje, prijenos količine gibanja između ploča, kapilara s tlačnim priključcima, suprotni pogoni uljnog filma, vanjski tok uz plohu i profinjenje mreže u istoj računskoj domeni.",
+      "caption": "Skice uz Z1–Z6: lokalni tok, viskozni pogoni i profinjenje mreže.",
       "alt": "Kote H i D mjere razmak stijenki i unutarnji promjer, L je razmak tlačnih priključaka; ploče su nepropusne, a mrežne crte nisu stijenke.",
       "source": "../assets/print/u12_realni_tok_vjezbe_skice.svg",
       "type": "composite",
@@ -9953,7 +9938,7 @@
       "caption": "Od pojedine dionice do serijsko-paralelne mreže: protok određuje brzinu i režim, a gubitci zatvaraju energijsku bilancu.",
       "alt": "Od pojedine dionice do serijsko-paralelne mreže: protok određuje brzinu i režim, a gubitci zatvaraju energijsku bilancu.",
       "source": "../assets/print/u13_fig_uvod_pregled.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u13_fig_uvod_pregled.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -9978,7 +9963,7 @@
       "kind": "Figure",
       "document": "u13",
       "number": "13.3",
-      "caption": "Skice šest vježbi: vodoravne dionice, uravnoteženje paralelnih grana, radna točka uz promjenjivo trenje, izbor unutarnjeg promjera i napunjen usis crpke.",
+      "caption": "Skice uz Z1–Z6: cjevovodi, paralelne grane, radna točka i usis crpke.",
       "alt": "D je unutarnji promjer, L povezuje referentne presjeke, a kota usisnog uspona polazi od slobodne površine i završava na visini usisnog presjeka crpke. Cijevi imaju otvorene krajeve i uronjen usis; krivulje radne točke izračunane su iz podataka zadatka.",
       "source": "../assets/print/u13_mreze_vjezbe_skice.svg",
       "type": "composite",
@@ -10649,7 +10634,7 @@
       "caption": "Vodilica mlaza na ispitnom stolu",
       "alt": "Vodilica mlaza na ispitnom stolu",
       "source": "../assets/print/u12_val1_vodilica_mlaza.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u12_val1_vodilica_mlaza.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -10660,10 +10645,10 @@
       "kind": "Figure",
       "document": "u14",
       "number": "14.3",
-      "caption": "Pokretna lopatica: c1=22 m/s, u=8 m/s, w1=14 m/s, relativni protok 63,6%",
-      "alt": "Pokretna lopatica: c1=22 m/s, u=8 m/s, w1=14 m/s, relativni protok 63,6%",
+      "caption": "Relativni dotok iz fiksne sapnice na pokretnu ravnu lopaticu.",
+      "alt": "Relativni dotok iz fiksne sapnice na pokretnu ravnu lopaticu.",
       "source": "../assets/print/u12_fig_relativni_dotok.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u12_fig_relativni_dotok.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -10677,7 +10662,7 @@
       "caption": "Pokretna ravna lopatica",
       "alt": "Pokretna ravna lopatica",
       "source": "../assets/print/u12_val3_pokretna_lopatica.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u12_val3_pokretna_lopatica.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -10705,7 +10690,7 @@
       "caption": "Peltonov rotor s jednim mlazom",
       "alt": "Peltonov rotor s jednim mlazom",
       "source": "../assets/print/u12_ch2_pelton_rotor_moment.svg",
-      "type": "composite",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u12_ch2_pelton_rotor_moment.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -10988,7 +10973,7 @@
       "caption": "Otvoreni tok prelazi iz mirnog u kritični i siloviti režim te kroz hidraulički skok ponovno u dublji tok.",
       "alt": "Otvoreni tok prelazi iz mirnog u kritični i siloviti režim te kroz hidraulički skok ponovno u dublji tok.",
       "source": "../assets/print/u15_fig_uvod_otvoreni_tok.svg",
-      "type": "wide",
+      "type": "standard",
       "variants": {
         "web": "../assets/print/u15_fig_uvod_otvoreni_tok.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -11484,8 +11469,32 @@
   },
   "references": [
     {
+      "document": "u01",
+      "target": "ex-u01-servisna-hidraulicna-dizalica-t2"
+    },
+    {
+      "document": "u02",
+      "target": "ex-u02-smicno-naprezanje-u-tankom-uljnom-sloju-t2"
+    },
+    {
+      "document": "u03",
+      "target": "ex-u03-tlak-na-usisu-pumpe-za-cirkulaciju-ulja"
+    },
+    {
+      "document": "u04",
+      "target": "ex-u04-nagib-goriva-u-spremniku-autocisterne-pri-kocenju"
+    },
+    {
       "document": "u05",
-      "target": "sec-cfd-polja-izlazi"
+      "target": "ex-u05-zglobni-cetvrtcilindricni-poklopac"
+    },
+    {
+      "document": "u06",
+      "target": "ex-u07-koliki-gaz-ima-radni-ponton-pri-simetricnom"
+    },
+    {
+      "document": "u07",
+      "target": "ex-u08-rashladni-krug-baterijskog-paketa-elektricnog-vozila-t2"
     },
     {
       "document": "u07",
@@ -11500,8 +11509,12 @@
       "target": "sec-cfd-venturi"
     },
     {
+      "document": "u09",
+      "target": "ex-normalni-udar"
+    },
+    {
       "document": "u10",
-      "target": "sec-cfd-polja-izlazi"
+      "target": "ex-u11-servisno-koljeno-na-sidrenom-nosacu-t2"
     },
     {
       "document": "u10",
@@ -11513,11 +11526,11 @@
     },
     {
       "document": "u11",
-      "target": "fig-u14-omjer-sila"
+      "target": "fig-u14-pi-buckingham"
     },
     {
       "document": "u11",
-      "target": "fig-u14-pi-buckingham"
+      "target": "ex-u14-froudeova-slicnost-model-broda-u-vucnom-bazenu"
     },
     {
       "document": "u11",
@@ -11537,11 +11550,27 @@
     },
     {
       "document": "u12",
-      "target": "sec-cfd-polja-izlazi"
+      "target": "ex-laminarni-mikrokanal"
     },
     {
       "document": "u12",
       "target": "sec-cfd-venturi"
+    },
+    {
+      "document": "u12",
+      "target": "eq-celijska-bilanca-mase"
+    },
+    {
+      "document": "u12",
+      "target": "sec-cfd-venturi"
+    },
+    {
+      "document": "u12",
+      "target": "sec-cfd-polja-izlazi"
+    },
+    {
+      "document": "u12",
+      "target": "sec-cfd-vv-paketi"
     },
     {
       "document": "u13",
@@ -11557,6 +11586,10 @@
     },
     {
       "document": "u13",
+      "target": "ex-radna-tocka-vfd"
+    },
+    {
+      "document": "u13",
       "target": "eq-poiseuille-u13"
     },
     {
@@ -11568,16 +11601,12 @@
       "target": "eq-npsha-spremnik"
     },
     {
-      "document": "u13",
-      "target": "sec-cfd-kada-ne-treba"
-    },
-    {
       "document": "u14",
-      "target": "sec-cfd-venturi"
+      "target": "ex-u12-propeler-dronskog-kvadkoptera-u-stanju-visa-t2"
     },
     {
       "document": "u15",
-      "target": "sec-cfd-kada-ne-treba"
+      "target": "ex-hidraulicki-skok-bazen"
     },
     {
       "document": "d02",
@@ -11662,7 +11691,7 @@
   ],
   "counts": {
     "Equation": 796,
-    "Figure": 94,
+    "Figure": 93,
     "Example": 87,
     "Problem": 90
   }

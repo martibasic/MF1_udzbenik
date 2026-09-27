@@ -22,7 +22,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera)
 
-**Sažetak.** U servisnoj hidrauličnoj preši mali klip promjera $d_1 = 28\ \text{mm}$ potiskuje ulje prema radnom klipu promjera $d_2 = 140\ \text{mm}$. Ako operater na mali klip djeluje silom $F_1 = 180\ \text{N}$, odredi tlak u ulju, silu na radnom…
+**Sažetak.** U servisnoj hidrauličnoj preši mali klip promjera $d_1 = 28\ \text{mm}$ potiskuje ulje prema radnom klipu promjera $d_2 = 140\ \text{mm}$. Operater na mali klip djeluje silom $F_1 = 180\ \text{N}$. Mali klip prijeđe put $s_1 = 120\ \text{mm}$…
 
 **Smjernica postupka.** Primjenjuju se $p = F_1/A_1$, $F_2 = pA_2$ te volumna bilanca $A_1 s_1 = A_2 s_2$.
 
@@ -62,7 +62,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra)
 
-**Sažetak.** Hidraulični radni stol podupiru tri jednaka cilindra, svaki površine $A_L = 95\ \text{cm}^2$. Ulje dovodi pumpni klip promjera $d = 22\ \text{mm}$ na koji djeluje sila $F_p = 360\ \text{N}$. Odredi tlak u ulju, ukupno idealno opterećenje…
+**Sažetak.** Hidraulični radni stol podupiru tri jednaka cilindra, svaki površine $A_L = 95\ \text{cm}^2$. Ulje dovodi pumpni klip promjera $d = 22\ \text{mm}$ na koji djeluje sila $F_p = 360\ \text{N}$. Potreban je podizaj stola $\Delta z = 18\ \text{mm}$…
 
 **Smjernica postupka.** Površina $A_p$ i tlak određuju se iz $p = F_p/A_p$, idealno opterećenje iz $G = 3pA_L$, a idealni hod pumpe iz volumne bilance $A_p s_p = 3A_L \Delta z$. Za stvarni sustav vrijedi $G_{kor}=\eta_FG$ i $s_{p,st}=s_p/\eta_V$. Konzervativna se odluka temelji na vrijednostima $\eta_{F,min}$ i $\eta_{V,min}$, a ne na srednjim vrijednostima.
 
@@ -94,7 +94,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd#task-ploca-izmedu-dva-procjepa)
 
-**Sažetak.** Tanka ploča klizi udesno brzinom $v = 0{,}30\ \text{m/s}$ između dviju nepomičnih paralelnih stijenki. Površina svake strane ploče u dodiru s uljem iznosi $A = 0{,}020\ \text{m}^2$. U oba procjepa nalazi se isto ulje. Gornji procjep ima…
+**Sažetak.** Ploča klizi udesno brzinom $v = 0{,}30\ \text{m/s}$ između dviju nepomičnih paralelnih stijenki. Površina svake strane ploče u dodiru s uljem iznosi $A = 0{,}020\ \text{m}^2$. Gornji procjep ima debljinu $\delta_1 = 1{,}0\ \text{mm}$…
 
 **Smjernica postupka.** Svaki procjep ima vlastitu promjenu brzine od nule do $v$. Izračunaj oba iznosa gradijenta zasebno. Sile ulja na pokretnoj ploči obje se suprotstavljaju njezinu gibanju pa se njihovi iznosi zbrajaju.
 
@@ -104,7 +104,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd#task-u02-kapilara-promjera-uronjena-je-u-etanol-za)
 
-**Sažetak.** Kapilara promjera $d = 0{,}60\ \text{mm}$ uronjena je u etanol za koji vrijedi $\sigma = 0{,}022\ \text{N/m}$, $\theta = 18^\circ$ i $\rho = 790\ \text{kg/m}^3$. Odredi kapilarni uspon i usporedi ga s usponom u drugoj kapilari promjera…
+**Sažetak.** Kapilara promjera $d = 0{,}60\ \text{mm}$ uronjena je u etanol za koji vrijedi $\sigma = 0{,}022\ \text{N/m}$, $\theta = 18^\circ$ i $\rho = 790\ \text{kg/m}^3$. Promjer druge kapilare je $1{,}20\ \text{mm}$. Odredi kapilarni uspon i…
 
 **Smjernica postupka.** $h = 4\sigma \cos\theta /(\rho g d)$; drugi slučaj računa se istom formulom samo s novim promjerom.
 
@@ -136,7 +136,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu)
 
-**Sažetak.** Otvoreni spremnik s vodom ima slobodnu površinu na atmosferskom tlaku. Odredi apsolutni i manometarski tlak u točki koja se nalazi na dubini $h = 2{,}40\ \text{m}$ ako je $p_{atm} = 100{,}8\ \text{kPa}$ i $\rho = 998\ \text{kg/m}^3$.
+**Sažetak.** Otvoreni spremnik s vodom ima slobodnu površinu na atmosferskom tlaku. Promatrana točka nalazi se na dubini $h = 2{,}40\ \text{m}$. Zadano je $p_{atm} = 100{,}8\ \text{kPa}$ i $\rho = 998\ \text{kg/m}^3$. Odredi apsolutni i manometarski…
 
 **Smjernica postupka.** Manometarski tlak je $p_M = \rho gh$, a apsolutni $p_{aps} = p_{atm} + p_M$.
 
@@ -198,7 +198,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-otvoreni-pravokutni-spremnik-duljine-i-pocetne-dubine)
 
-**Sažetak.** Otvoreni pravokutni spremnik duljine $L = 1{,}80\ \text{m}$ i početne dubine vode $h_0 = 0{,}34\ \text{m}$ giba se vodoravno stalnim ubrzanjem $a = 1{,}20\ \text{m/s}^2$. Odredi razliku razina između krajeva spremnika, lokalne dubine uz…
+**Sažetak.** Otvoreni pravokutni spremnik duljine $L = 1{,}80\ \text{m}$ i početne dubine vode $h_0 = 0{,}34\ \text{m}$ giba se vodoravno stalnim ubrzanjem $a = 1{,}20\ \text{m/s}^2$. Visina boka je $H = 0{,}46\ \text{m}$. Odredi razliku razina između…
 
 **Smjernica postupka.** $\Delta h = aL/g$; zatim $h_{str} = h_0 + \Delta h/2$ i $h_{pred} = h_0 - \Delta h/2$; usporedi $h_{str}$ s $H$.
 
@@ -218,7 +218,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce)
 
-**Sažetak.** Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. Sustav ubrzava prema gore s $a_z = 2{,}3\ \text{m/s}^2$. Odredi razliku tlakova između dna i vrha…
+**Sažetak.** Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. **Stanje 1.** Sustav ubrzava prema gore s $a_z = 2{,}3\ \text{m/s}^2$. **Stanje 2.** Cilindar se još…
 
 **Smjernica postupka.** Koristi efektivnu težinu fluida: $\Delta p = \rho (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho gh$. Os $z$ usmjeri prema gore; pri kočenju je $a_z<0$ iako je brzina još pozitivna.
 
@@ -238,7 +238,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-provjera-smirivanja-ubrzanog-fluida)
 
-**Sažetak.** Otvoreni pravokutni spremnik na vozilu ima duljinu $L = 1{,}50\ \text{m}$, početnu dubinu vode $h_0 = 0{,}300\ \text{m}$ i visinu boka $H = 0{,}550\ \text{m}$. Vozilo nakon pokretanja ubrzava stalno udesno s $a = 2{,}00\ \text{m/s}^2$. Za…
+**Sažetak.** Otvoreni pravokutni spremnik na vozilu ima duljinu $L = 1{,}50\ \text{m}$, početnu dubinu vode $h_0 = 0{,}300\ \text{m}$ i visinu boka $H = 0{,}550\ \text{m}$. Vozilo nakon pokretanja ubrzava stalno udesno s $a = 2{,}00\ \text{m/s}^2$.…
 
 **Smjernica postupka.** Najprije upotrijebi nagib slobodne površine i očuvanje volumena. Zatim odvojeno provjeri blizinu predviđenim razinama i promjenjivost kroz vrijeme; jedna podudarna točka ili prosjek nisu dovoljni.
 
@@ -248,7 +248,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen)
 
-**Sažetak.** Otvoreni cilindrični spremnik polumjera $R = 0{,}32\ \text{m}$ i visine $H = 0{,}62\ \text{m}$ ispunjen je vodom do početne srednje visine $h_0 = 0{,}46\ \text{m}$. Odredi najveću kutnu brzinu pri kojoj još nema prelijevanja. Zatim za…
+**Sažetak.** Otvoreni cilindrični spremnik polumjera $R = 0{,}32\ \text{m}$ i visine $H = 0{,}62\ \text{m}$ ispunjen je vodom do početne srednje visine $h_0 = 0{,}46\ \text{m}$. Za ovu geometrijsku provjeru središnji je usis zatvoren, pa nema protoka.…
 
 **Smjernica postupka.** U graničnom stanju vrijedi $h_{rub} = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim $h_{osa}$ i $h_{rub}$, a tlakove iz $p_M = \rho gh$. U provjeri tolerancije koristi $\omega=1{,}05\alpha\omega_{max}$ i iz uvjeta $h_{osa}\ge0{,}350\ \text{m}$ riješi gornju granicu za $\alpha$.
 
@@ -342,7 +342,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-metacentarska-visina-iz-pokusa-nagibanja)
 
-**Sažetak.** Pri nastavnom pokusu na zatvorenom pravokutnom pontonu pomicanjem utega određuje se početna metacentarska visina. Ponton u mirnoj vodi najprije stoji uspravno, a teret je na osi simetrije. Duljina je $L=3{,}00\ \text{m}$, širina…
+**Sažetak.** Zatvoreni pravokutni ponton u mirnoj vodi stoji uspravno, s utegom na osi simetrije. Duljina je $L=3{,}00\ \text{m}$, širina $B=1{,}40\ \text{m}$ i visina boka $H=0{,}50\ \text{m}$. Ukupna masa, uključujući uteg, iznosi $m=1200\ \text{kg}$…
 
 **Smjernica postupka.** Iz momentne ravnoteže $m_s e=mGM\tan\varphi$ najprije odredi izmjereni $GM$. Zatim primijeni $KG=KB+BM-GM$, uz $KB=h_m/2$ i $BM=B^2/(12h_m)$. U linearnom modelu rubni gazovi su $h_m\pm(B/2)\tan\varphi$.
 
@@ -362,7 +362,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-spustanje-opreme-ili-dodavanje-balasta)
 
-**Sažetak.** Na zatvorenom pravokutnom pontonu razmatraju se dvije odvojene preinake radi povećanja početnog stabiliteta. Sva oprema i balast postavljaju se simetrično, pa se računa uspravno stanje u mirnoj vodi. Ponton ima $L=3{,}00\ \text{m}$…
+**Sažetak.** Za zatvoreni pravokutni ponton razmotri dva zasebna plana povećanja početnog stabiliteta. Oprema i balast postavljaju se simetrično; ponton miruje uspravno. Ponton ima $L=3{,}00\ \text{m}$, $B=1{,}50\ \text{m}$, visinu boka $H=0{,}60\ \text{m}$…
 
 **Smjernica postupka.** Za svaki plan ponovno zatvori ukupnu masu i njezin vertikalni moment. Spuštanje opreme čuva masu; dodani balast mijenja i istisninu, $KB$ i $BM$. Dva uvjeta provjeri zasebno.
 
@@ -384,7 +384,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-voda-struji-kroz-cijev-koja-se-siri)
 
-**Sažetak.** Voda struji kroz cijev koja se širi s promjera $D_1 = 0{,}10\ \text{m}$ na $D_2 = 0{,}16\ \text{m}$. Ako je ulazna srednja brzina $v_1 = 4{,}8\ \text{m/s}$, a gustoća vode $\rho = 998\ \text{kg/m}^3$, odredi izlaznu brzinu, volumenski…
+**Sažetak.** Voda struji kroz cijev koja se širi s promjera $D_1 = 0{,}10\ \text{m}$ na $D_2 = 0{,}16\ \text{m}$. Zadana je ulazna srednja brzina $v_1 = 4{,}8\ \text{m/s}$, a gustoća vode $\rho = 998\ \text{kg/m}^3$. Odredi izlaznu brzinu, volumenski…
 
 **Smjernica postupka.** Najprije izračunaj $Q = A_1 v_1$, zatim $v_2 = Q/A_2$ i na kraju $\dot m = \rho Q$.
 
@@ -404,7 +404,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene)
 
-**Sažetak.** U stacionarnu komoru ulaze dvije vodene struje protoka $Q_1=12\ \text{L/s}$ i $Q_2=8\ \text{L/s}$. Jedini izlaz ima promjer $D_3=120\ \text{mm}$. Odredi izlaznu srednju brzinu i napiši masenu bilancu; nema akumulacije ni drugih priključaka.
+**Sažetak.** U stacionarnu komoru ulaze dvije vodene struje protoka $Q_1=12\ \text{L/s}$ i $Q_2=8\ \text{L/s}$. Jedini izlaz ima promjer $D_3=120\ \text{mm}$. Nema akumulacije ni drugih priključaka. Odredi izlaznu srednju brzinu i napiši masenu bilancu.
 
 **Smjernica postupka.** Za stacionarnu komoru za miješanje vrijedi $\dot m_1 + \dot m_2 = \dot m_3$; za vodu je dovoljno računati preko volumenskih protoka.
 
@@ -434,7 +434,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce)
 
-**Sažetak.** U spremniku za pripremu slane otopine dva dotoka ulaze u homogenu mješavinu. Izlazni je protok manji od ukupnog dotoka pa razina raste. Treba provjeriti koliko se tekućine zadrži u spremniku i dopušta li raspoloživi slobodni bok šest…
+**Sažetak.** Miješajući spremnik tlocrtne površine $A_T = 4{,}8\ \text{m}^2$ prima vodu gustoće $\rho_A=1000\ \text{kg/m}^3$ protokom $Q_A = 0{,}011\ \text{m}^3/\text{s}$ i slanu otopinu gustoće $\rho_B = 1080\ \text{kg/m}^3$ protokom $Q_B = 0{,}004\ \text{m}^3/\text{s}$…
 
 **Smjernica postupka.** Najprije izračunaj $Q_3 = A_3 v_3$, zatim gustoću mješavine iz masene bilance ulaza, a član akumulacije zatvori preko $Q_A + Q_B - Q_3 = A_T\,dh/dt$. Za najveći porast razine uzmi oba ulazna protoka na gornjoj, a izlaznu brzinu na donjoj granici. Najdulje trajanje slijedi iz $t_{max}=h_{slob}/(dh/dt)_{max}$.
 
@@ -508,7 +508,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-brzina-zvuka-helium)
 
-**Sažetak.** Helij miruje pri $T=300\ \text{K}$. Za $\gamma=1{,}667$ i $R=2077\ \text{J/(kg K)}$ izračunaj brzinu zvuka. Vrlo malen tlačni poremećaj nastaje u točki O: označi oba uzdužna smjera njegova širenja i predznake brzina prema osi $x$ sa skice.
+**Sažetak.** Helij miruje pri $T=300\ \text{K}$. Uzmi $\gamma=1{,}667$ i $R=2077\ \text{J/(kg K)}$. Vrlo malen tlačni poremećaj nastaje u točki O. 1. Izračunaj brzinu zvuka. 2. Označi oba uzdužna smjera njegova širenja i predznake brzina prema osi $x$…
 
 **Smjernica postupka.** Temperatura u relaciji za brzinu zvuka mora biti apsolutna. Plin miruje, pa je laboratorij ujedno sustav mirovanja plina; smjer širenja nije zadan smjerom nekoga srednjeg toka.
 
@@ -518,7 +518,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-mach-ventilacija)
 
-**Sažetak.** Zrak pri $T=20\ ^\circ\text{C}$ struji ravnim kružnim vodom promjera $D=0{,}20\ \text{m}$. Lokalni volumenski protok pri tom stanju jest $Q=2{,}0\ \text{m}^3/\text{s}$, a ne protok preračunat na standardne uvjete. Uz $\gamma=1{,}4$ i…
+**Sažetak.** Zrak pri $T=20\ ^\circ\text{C}$ struji ravnim kružnim vodom promjera $D=0{,}20\ \text{m}$. Lokalni volumenski protok pri tom stanju jest $Q=2{,}0\ \text{m}^3/\text{s}$, a ne protok preračunat na standardne uvjete. Uzmi $\gamma=1{,}4$ i…
 
 **Smjernica postupka.** Iz promjera odredi površinu kružnoga presjeka, zatim primijeni $v=Q/A$ i definiciju Machova broja. Za brzinu zvuka pretvori temperaturu u kelvine.
 
@@ -642,7 +642,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom)
 
-**Sažetak.** Zrak struji vodom unutarnjeg promjera $D=100\ \text{mm}$ lokalnim volumenskim protokom $Q=0{,}5\ \text{m}^3/\text{s}$; brzina zvuka je $a=340\ \text{m/s}$. Odredi srednju brzinu i Machov broj. Prosudi je li, bez velikih toplinskih i…
+**Sažetak.** Zrak struji vodom unutarnjeg promjera $D=100\ \text{mm}$ lokalnim volumenskim protokom $Q=0{,}5\ \text{m}^3/\text{s}$; brzina zvuka je $a=340\ \text{m/s}$. Zadani protok vrijedi na promatranom presjeku i nije sveden na standardno stanje.…
 
 **Smjernica postupka.** Iz unutarnjeg promjera odredi $A=\pi D^2/4$, zatim $v=Q/A$ i $Ma=v/a$. Vrijednost $Ma=0{,}3$ služi kao orijentacijski prag uz navedene pretpostavke.
 
@@ -662,7 +662,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-reynoldsova-slicnost-hidroprofila)
 
-**Sažetak.** Geometrijski sličan hidroprofil u vodi i njegov model u zraku služe za prijenos izmjerene sile otpora. Odredi brzinu modela za Reynoldsovu sličnost, provjeri Machov broj i iz jednakosti koeficijenata otpora izračunaj silu na prototipu.…
+**Sažetak.** Simetričan hidroprofil tetive $c_p=0{,}300\ \text{m}$ i raspona $b_p=0{,}600\ \text{m}$ nalazi se u vodi brzine $v_p=1{,}00\ \text{m/s}$, gustoće $\rho_p=1000\ \text{kg/m}^3$ i kinematičke viskoznosti $\nu_p=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$…
 
 **Smjernica postupka.** Za karakterističnu duljinu uzmi tetivu. Najprije izjednači $v_mc_m/\nu_m=v_pc_p/\nu_p$. Jednak je $C_D=F_D/(\rho v^2bc/2)$, pa omjer sila mora uključiti gustoću, kvadrat brzine i omjer površina. Ovdje se ne nameće Froudeova sličnost.
 
@@ -672,7 +672,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-frekvencija-otpustanja-vrtloga-iza-geometrijski-slicnog-tijela)
 
-**Sažetak.** Frekvencija otpuštanja vrtloga $f$ iza geometrijski sličnog tijela ovisi o brzini neporemećene struje $v$, karakterističnoj duljini $D$, gustoći $\rho$ i dinamičkoj viskoznosti $\mu$. Buckinghamovim postupkom, uz ponavljajuće varijable…
+**Sažetak.** Frekvencija otpuštanja vrtloga $f$ iza geometrijski sličnog tijela ovisi o brzini neporemećene struje $v$, karakterističnoj duljini $D$, gustoći $\rho$ i dinamičkoj viskoznosti $\mu$. Razmatra se izolirani kružni cilindar promjera…
 
 **Smjernica postupka.** U popis uključi i zavisnu varijablu $f$. Dimenzijska matrica treba dati rang $k$, pa tek potom primijeni $n-k$. Za svaku neponavljajuću varijablu napiši umnožak s nepoznatim eksponentima uz $\rho$, $v$ i $D$. Recipročna grupa $1/Re$ valjan je alternativni izbor.
 
@@ -694,7 +694,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-materijalna-derivacija)
 
-**Sažetak.** Zadano je jednodimenzijsko kinematičko polje $u(x,t)=at+bx^2$, gdje su $a=2\ \text{m/s}^2$ i $b=1\ \text{m}^{-1}\text{s}^{-1}$. Odredi brzinu, lokalno, konvektivno i ukupno ubrzanje čestice u $x=1\ \text{m}$, $t=2\ \text{s}$. Polje služi…
+**Sažetak.** Jednodimenzijsko kinematičko polje glasi $u(x,t)=at+bx^2$, gdje su $a=2\ \text{m/s}^2$ i $b=1\ \text{m}^{-1}\text{s}^{-1}$. Promatra se položaj $x=1\ \text{m}$, $t=2\ \text{s}$. Polje služi vježbi materijalne derivacije; nije zadano kao…
 
 **Smjernica postupka.** Najprije izračunaj lokalnu brzinu. U lokalnom članu deriviraj po vremenu uz stalan položaj; u konvektivnom pomnoži brzinu s prostornom derivacijom polja.
 
@@ -704,7 +704,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-viskozna-difuzija)
 
-**Sažetak.** Gornja ploča počinje kliziti iznad mirujućeg sloja vode, a donja ostaje nepomična. Razmak ploča je $H=10\ \text{mm}$, a kinematička viskoznost $\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$. Procijeni vremensko mjerilo prijenosa količine…
+**Sažetak.** Gornja ploča počinje kliziti iznad mirujućeg sloja vode, a donja ostaje nepomična. Razmak ploča je $H=10\ \text{mm}$, a kinematička viskoznost $\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$. 1. Procijeni vremensko mjerilo prijenosa…
 
 **Smjernica postupka.** Usporedi redove veličine vremenskog i viskoznog člana: $U/t_\nu\sim\nu U/H^2$. Prije računa pretvori milimetre u metre.
 
@@ -714,7 +714,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-poiseuille-inverzni)
 
-**Sažetak.** Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Obrnutim Poiseuilleovim računom procijeni viskoznost i Reynoldsov broj te utvrdi koji mjerni podatak najviše pridonosi…
+**Sažetak.** Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Sintetički nastavni podatci su $Q=0{,}300\pm0{,}003\ \text{mL/min}$, $\Delta p=p_1-p_2=652\pm5\ \text{Pa}$…
 
 **Smjernica postupka.** Invertiraj $Q=\pi D^4\Delta p/(128\mu L)$. Za neovisne standardne nesigurnosti vrijedi $[u(\mu)/\mu]^2=[4u(D)/D]^2+[u(\Delta p)/\Delta p]^2+[u(L)/L]^2+[u(Q)/Q]^2$.
 
@@ -724,7 +724,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-couette-povrat)
 
-**Sažetak.** Gibanje gornje ploče i nepovoljan gradijent tlaka pokreću ulje u suprotnim smjerovima u uskom procjepu. Odredi granični gradijent, smično naprezanje za dva zadana pogona i skiciraj pripadne profile brzine. Razlikuj povratni tok uz ploču…
+**Sažetak.** Gibanje gornje ploče i nepovoljan gradijent tlaka pokreću ulje u suprotnim smjerovima u uskom procjepu. Newtonski fluid ima $\mu=0{,}100\ \text{Pa s}$; donja ploča na $y=0$ miruje, a gornja na $y=H$ klizi u pozitivnom smjeru osi $x$…
 
 **Smjernica postupka.** Deriviraj profil i postavi $\tau_0=0$. Provjeri $u(0)=0$ i $u(H)=U$. Negativna brzina može nastati neposredno uz donju ploču; na samoj ploči ostaje nula.
 
@@ -734,7 +734,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-granicni-sloj-model)
 
-**Sažetak.** Na temelju lokalne vanjske brzine, njezina gradijenta i hrapavosti odluči može li Blasiusov model predvidjeti debljinu sloja uz ravnu plohu. Razdvoji uvjetnu referentnu procjenu od potvrđenog modela te obrazloži koje bi dodatne provjere…
+**Sažetak.** Sintetički nastavni podatci za vodu su $\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$, $\rho=998\ \text{kg/m}^3$, $x=0{,}400\ \text{m}$, $U_e=1{,}50\ \text{m/s}$ i $dU_e/dx=-0{,}250\ \text{s}^{-1}$. Ekvivalentna hrapavost iznosi…
 
 **Smjernica postupka.** Blasius zahtijeva glatku plohu, laminaran tok i nulti gradijent tlaka. U zadanom vanjskom toku vrijedi $dp_e/dx=-\rho U_e\,dU_e/dx$. Odvoji dokazano prekršen uvjet od pretpostavke koju podatci još ne potvrđuju.
 
@@ -744,7 +744,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-cfd-tri-mreze)
 
-**Sažetak.** Odaberi najgrublju mrežu koja zadovoljava zadane numeričke kriterije. Zatim procijeni slaganje CFD otpora profila s mjernom referencom i pokaži kako pretpostavljena nesigurnost utječe na odluku. **a) Izbor mreže.** Sintetički Poiseuilleov…
+**Sažetak.** **a) Izbor mreže.** Sintetički Poiseuilleov skup iz `data/cfd/poiseuille_laminar` prikazan je zaokruženo. Tri sustavno profinjene mreže imaju $h/h_f=(4;\ 2;\ 1)$, protoke $Q=(8{,}16814;\ 7{,}93252;\ 7{,}87362)\cdot10^{-6}\ \text{m}^3/\text{s}$…
 
 **Smjernica postupka.** Za monotoni niz koristi $p=\ln[(Q_c-Q_m)/(Q_m-Q_f)]/\ln r$ i $Q_{ext}=Q_f+(Q_f-Q_m)/(r^p-1)$. Zatim $GCI_f=F_s|(Q_f-Q_m)/Q_f|/(r^p-1)$; za $GCI_m$ zamijeni par $(Q_f,Q_m)$ parom $(Q_m,Q_c)$. Razlomke pretvori u postotke i provjeri oba uvjeta. U dijelu b) sve su nesigurnosti apsolutne i bezdimenzijske, kao $C_D$. Relativno odstupanje iznosi $100E/C_{D,ref}$ u postotcima. Provjeri sadrži li interval $[E-U_E;\ E+U_E]$ nulu. Veća nesigurnost širi interval, ali ne mijenja središnju razliku.
 
@@ -776,7 +776,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-uravnotezenje-paralelnih-grana)
 
-**Sažetak.** Dva rashladna ogranka između istih čvorova trebaju dobivati jednak protok. Odredi u koji ogranak treba ugraditi prigušni ventil i koliki dodatni otpor ventil mora imati. Zatim zatvori kontinuitet i usporedi gubitke na oba puta. Zadani…
+**Sažetak.** Dva rashladna ogranka između istih čvorova trebaju dobivati jednak protok. Zadani približno konstantni otpori grana bez novoga ventila jesu $R_1=12\,000\ \mathrm{s^2/m^5}$ i $R_2=48\,000\ \mathrm{s^2/m^5}$. Regulacija održava ukupni…
 
 **Smjernica postupka.** Cilj je $Q_1=Q_2=Q/2$. Izjednači ukupne gubitke između istih čvorova uz dodatak ventila. Prigušenje može povećati otpor, pa ne smiješ dobiti negativan $R_v$.
 
@@ -786,7 +786,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-radna-tocka-hrapavog-voda)
 
-**Sažetak.** Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Odredi radnu točku kad otpor cijevi ovisi o Reynoldsovu broju, pa zatim odvojeno izračunaj hidrauličku, vratilnu i električnu snagu. U svakoj iteraciji ponovno provjeri trenje…
+**Sažetak.** Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Sintetička karakteristika crpke zadana je brojevnim vrijednostima $H_p=30-30\,000Q^2$, uz $Q$ u $\mathrm{m^3/s}$ i $H_p$ u metrima. Razlika visina slobodnih površina je…
 
 **Smjernica postupka.** Za probni $Q$ odredi $v$, $Re$ i $\lambda$, pa $H_s=\Delta z+(\lambda L/D+\sum\xi)v^2/(2g)$. Mijenjaj $Q$ dok $H_p-H_s$ ne iščezne. Provjeri i izvorni Colebrookov rezidual. Zatim $P_h=\rho gQH_p$, $P_{vr}=P_h/\eta_p$ i $P_{el}=P_{vr}/\eta_m$.
 
@@ -806,7 +806,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-regulacija-energija-npsh)
 
-**Sažetak.** Usporedi prigušenje ventilom i regulaciju brzine za jednak traženi protok. Odredi godišnju energiju obiju mogućnosti i uštedu, a zatim provjeri što zadani usisni podatci dopuštaju zaključiti o radu pri nazivnoj i sniženoj brzini vrtnje.…
+**Sažetak.** Sintetičke nastavne karakteristike zadane su brojevnim vrijednostima: pri nazivnoj brzini $H_p(q)=24-0{,}012q^2$, izvorni sustav $H_s(q)=5+0{,}025q^2$, a prigušeni $H_{s,V}(q)=5+0{,}040q^2$. Ovdje je $q$ u $\mathrm{L/s}$, a sve visine u…
 
 **Smjernica postupka.** Prigušenu točku dobiješ iz $H_p=H_{s,V}$. Za isti $q$ bez prigušenja vrijedi $H_{p,s}(q)=24s^2-0{,}012q^2=H_s(q)$. Energiju računaj s $Q=10^{-3}q$ iz $P_{el}=\rho gQH/\eta$. Za usis upotrijebi [odgovarajući izraz](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-npsha-spremnik); zadani potrebni NPSH vrijedi samo pri nazivnoj brzini.
 
@@ -818,7 +818,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice)
 
-**Sažetak.** Vodeni mlaz udara okomito na nepomičnu ravnu ploču i slobodno se razlijeva uz njezinu prednju stranu. Odredi maseni protok i silu fluida na ploču u smjeru ulaznog mlaza. Zadano je $\rho=998\ \mathrm{kg/m^3}$, brzina $v=24\ \mathrm{m/s}$ i…
+**Sažetak.** Vodeni mlaz udara okomito na nepomičnu ravnu ploču i slobodno se razlijeva uz njezinu prednju stranu. Zadano je $\rho=998\ \mathrm{kg/m^3}$, brzina $v=24\ \mathrm{m/s}$ i promjer slobodnog mlaza $d=22\ \mathrm{mm}$. Ploča zahvaća cijeli…
 
 **Smjernica postupka.** Izračunaj $\dot m=\rho Av$. Bilanca količine gibanja daje silu ploče na fluid; za silu fluida na ploču promijeni predznak. Provjeri da nepomična ploča ne prima mehaničku snagu.
 
@@ -828,7 +828,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice)
 
-**Sažetak.** Nepomična vodilica zakreće pravokutni mlaz u vodoravnoj ravnini. Odredi predznačene komponente sile fluida na vodilicu te suprotnu reakciju nosača i njezin iznos. Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ ulazi brzinom $v=26\ \mathrm{m/s}$…
+**Sažetak.** Nepomična vodilica zakreće pravokutni mlaz u vodoravnoj ravnini. Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ ulazi brzinom $v=26\ \mathrm{m/s}$ kroz presjek širine $b=30\ \mathrm{mm}$ u tlocrtu i visine $h=16\ \mathrm{mm}$ okomito na njega.…
 
 **Smjernica postupka.** Najprije $\dot m=\rho bhv$. Rastavi izlaznu brzinu u istim osima kao ulaznu. Za ravnotežu vodilice vrijedi $\vec R=-\vec F_{f\to v}$; veća pozitivna izlazna komponenta duž osi y znači negativan $F_y$.
 
@@ -838,7 +838,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-izlaz-lopatice-iz-izmjerene-sile)
 
-**Sažetak.** Iz sile izmjerene na pokretnoj vodilici rekonstruiraj izlazni tok. Provjeri dopušta li rezultat pasivnu lopaticu s gubitkom relativne brzine te zatvori bilancu predane snage i gubitka mehaničke energije. Lopatica se pravocrtno giba…
+**Sažetak.** Lopatica se pravocrtno giba stalnom brzinom $u=12\ \mathrm{m/s}$ u smjeru $+x$. Apsolutna ulazna brzina je $\vec c_1=(32;0)\ \mathrm{m/s}$, a maseni protok kroz kontrolni volumen koji se giba s lopaticom jest $\dot m_{rel}=18\ \mathrm{kg/s}$…
 
 **Smjernica postupka.** Iz $\vec F_{f\to l}=\dot m_{rel}(\vec c_1-\vec c_2)$ dobiješ apsolutni izlaz. Zatim $\vec w_2=\vec c_2-(u,0)$ i kut funkcijom atan2. Provjeri $P=F_xu$ i $\dot E_g=\dot m_{rel}(|\vec c_1|^2-|\vec c_2|^2)/2-P$.
 
@@ -848,7 +848,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-dva-radijusa-i-rad-rotora)
 
-**Sažetak.** Na dvama presjecima rotora zadane su apsolutne brzine. Nacrtaj oba trokuta brzina, odredi predznak momenta i snage te zaključi predaje li rotor rad fluidu ili prima rad od njega. Razlikuj lokalne komponente brzine na ulazu i izlazu te…
+**Sažetak.** Rotor ima $r_1=0{,}060\ \mathrm{m}$, $r_2=0{,}140\ \mathrm{m}$, $\omega=200\ \mathrm{rad/s}$ i ukupni stacionarni maseni protok kroz rotor $\dot m=3{,}00\ \mathrm{kg/s}$. Komponente u lokalnim osima (tangencijalno, radijalno prema van)…
 
 **Smjernica postupka.** Za svaki presjek zasebno $u_i=\omega r_i$ i $\vec w_i=\vec c_i-(u_i,0)$. Pozitivan moment rotora na fluid jest $M_{r\to f}=\dot m(r_2c_{2t}-r_1c_{1t})$. Provjeri $P=M\omega=\dot m(u_2c_{2t}-u_1c_{1t})$.
 
@@ -858,7 +858,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-vodomlazni-pogon-uz-ogranicenu-snagu)
 
-**Sažetak.** Usporedi dva nastavna kandidata vodomlaznog pogona za jednak potisak pri zadanoj brzini broda. Izaberi izvedivu varijantu prema raspoloživoj električnoj snazi i objasni zašto veća izlazna brzina sama ne znači povoljniji pogon. Brod se…
+**Sažetak.** Brod se jednoliko giba brzinom $U=8{,}0\ \mathrm{m/s}$ kroz mirujuću vodu gustoće $\rho=1000\ \mathrm{kg/m^3}$. Potreban potisak je $T=2{,}00\ \mathrm{kN}$. U brodskom okviru voda ulazi brzinom $V_0=U$, a kandidati A i B izbacuju je…
 
 **Smjernica postupka.** U bilanci potiska zadrži ulazni tok količine gibanja: $T=\rho Q(V_j-U)$. Energijska bilanca brodskog okvira daje $P_h=\rho Q(V_j^2-U^2)/2$, a $P_{el}=P_h/\eta$. Površina sapnice je $Q/V_j$. Neovisno: $P_h=TU+\rho Q(V_j-U)^2/2$.
 
@@ -868,7 +868,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-u12-mlazna-platforma-ukupne-mase-ima-cetiri-jednake)
 
-**Sažetak.** Procijeni potisak idealizirane mlazne platforme i najveću masu prema zadanom statičkom kriteriju. Odvojeno prikaži nazivni rezultat i najnepovoljniji slučaj dopuštenih ulaza te navedi granice takve procjene. Trenutačna ukupna masa…
+**Sažetak.** Trenutačna ukupna masa platforme, uključujući zadržani fluid, jest $m=110\ \mathrm{kg}$. Četiri jednake sapnice unutarnjeg promjera $d=28\ \mathrm{mm}$ izbacuju vodu gustoće $\rho=998\ \mathrm{kg/m^3}$ okomito dolje brzinom $v=36\ \mathrm{m/s}$…
 
 **Smjernica postupka.** Zbroji četiri izlazne površine. Uz zadane pretpostavke $F_p=\rho Av^2$, masa lebdenja je $F_p/g$, a trenutačno $a=(F_p-mg)/m$. Za zadani kriterij koristi $d_{min}$ i $v_{min}$ te zahtijevaj $F_{p,min}\ge1{,}10\,mg$.
 
@@ -880,7 +880,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-otvoreni-fr)
 
-**Sažetak.** Pravokutni kanal širine $b=1{,}5\ \mathrm{m}$ vodi $Q=1{,}2\ \mathrm{m^3/s}$ pri dubini $y=0{,}60\ \mathrm{m}$. Odredi srednju brzinu, Froudeov broj te smjer i brzinu obaju dugih gravitacijskih poremećaja prema nepomičnoj obali. Pozitivan…
+**Sažetak.** Pravokutni kanal širine $b=1{,}5\ \mathrm{m}$ vodi $Q=1{,}2\ \mathrm{m^3/s}$ pri dubini $y=0{,}60\ \mathrm{m}$. Pozitivan smjer je nizvodno; primijeni model plitke vode s približno hidrostatičkim tlakom. Odredi srednju brzinu, Froudeov…
 
 **Smjernica postupka.** Iz kontinuiteta odredi $v$. Za pravokutni kanal $D_h=y$, pa je relativna brzina dugog vala $c=\sqrt{gy}$. Prema obali valovi imaju brzine $v-c$ i $v+c$; sačuvaj predznake.
 
@@ -890,7 +890,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-kriticna-dubina)
 
-**Sažetak.** U pravokutnom kanalu protok po jedinici širine je $q=3{,}0\ \mathrm{m^2/s}$. Za hidrostatički model i korekcijski faktor kinetičke energije jednak jedinici odredi kritičnu dubinu i minimalnu specifičnu energiju.
+**Sažetak.** U pravokutnom kanalu protok po jedinici širine je $q=3{,}0\ \mathrm{m^2/s}$. Primijeni hidrostatički model i korekcijski faktor kinetičke energije jednak jedinici. Odredi kritičnu dubinu i minimalnu specifičnu energiju.
 
 **Smjernica postupka.** Traži minimum funkcije $E(y)$ pri stalnom $q$. Kritično stanje provjeri i uvjetom $Fr=1$; specifična energija mjeri se od lokalnog dna.
 
@@ -900,7 +900,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-trapezni-presjek)
 
-**Sažetak.** U trapeznom kanalu razlikuj površinu poprečnog presjeka toka, širinu slobodne površine i omočen opseg. Iz geometrije odredi obje hidrauličke duljine, a zatim klasificiraj tok. Obrazloži koja duljina ulazi u brzinu gravitacijskog vala i…
+**Sažetak.** Simetrični trapezni kanal ima širinu dna $b=2{,}40\ \mathrm{m}$, pokos $z=1{,}50$ vodoravno na jedan okomito, dubinu $y=0{,}900\ \mathrm{m}$ i protok $Q=3{,}60\ \mathrm{m^3/s}$. Tok je jednodimenzijski s približno hidrostatičkim tlakom.…
 
 **Smjernica postupka.** Za pokos $z{:}1$ vrijedi $A=y(b+zy)$, $T=b+2zy$ i $P=b+2y\sqrt{1+z^2}$. U izrazu za $Fr$ upotrijebi $D_h=A/T$, a ne $R_h$.
 
@@ -910,7 +910,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-kontrolni-presjek-na-pragu)
 
-**Sažetak.** Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Provjeri može li voda prijeći preko širokog, blagog praga uz nepromijenjenu uzvodnu dubinu. Odredi graničnu visinu dna i odaberi ostvarivu dubinu na tjemenu prema neprekinutom…
+**Sažetak.** Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Pravokutni kanal stalne širine vodi $q=2{,}20\ \mathrm{m^2/s}$ pri podkritičnoj uzvodnoj dubini $y_1=1{,}200\ \mathrm{m}$. Dno na tjemenu je više za $\Delta z=0{,}120\ \mathrm{m}$…
 
 **Smjernica postupka.** Između presjeka sačuvaj $z+E$. Na tjemenu je $E_t=E_1-\Delta z$, a minimum je granica prolaza. Korijene traži s obje strane $y_c$; neprekinuti podkritični dotok bira dublju granu. Pri graničnoj visini obje se grane spajaju.
 
@@ -920,7 +920,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-skok-mjerenje)
 
-**Sažetak.** Provjeri zatvara li sintetički mjerni skup bilancu količine gibanja kroz hidraulički skok. Odaberi kontrolni volumen s rubnim presjecima izvan valjka skoka, prikaži vanjske sile i usporedi rezidual s mjernom nesigurnošću. Zaključak…
+**Sažetak.** Zadano je $Q=1{,}800\pm0{,}018\ \mathrm{m^3/s}$, $b=1{,}200\pm0{,}003\ \mathrm{m}$, $y_1=0{,}250\pm0{,}003\ \mathrm{m}$ i $y_2=1{,}220\pm0{,}008\ \mathrm{m}$; navedene su neovisne standardne nesigurnosti ($k=1$). Kanal je vodoravan i…
 
 **Smjernica postupka.** Najprije propagiraj $q=Q/b$. Za $M(y,q)=y^2/2+q^2/(gy)$ deriviraj rezidual prema $y_1$, $y_2$ i zajedničkom $q$, a zatim primijeni korijen zbroja kvadrata. Hidrostatičke sile djeluju u suprotnim smjerovima; težina nema uzdužnu komponentu.
 
@@ -930,7 +930,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-klimatski-kanal)
 
-**Sažetak.** Usporedi tri stanja održavanja oborinskog kanala i provjeri slobodni rub pri zadanom protoku. Zatim odvojeno provjeri disipacijski bazen pri projektnom dotoku i pri kapacitetima kanala. Obrazloži odluku uz zadani kriterij nepovoljnije…
+**Sažetak.** Simetrični trapezni kanal ima $b=3{,}00\ \mathrm{m}$, pokos $z=2{,}00$ vodoravno na jedan okomito, konstrukcijsku dubinu $H=1{,}50\ \mathrm{m}$ i nagib dna $S_0=0{,}00150$. Traže se projektni protok $Q_d=8{,}00\ \mathrm{m^3/s}$ i slobodni…
 
 **Smjernica postupka.** Na dopuštenoj dubini $H-f_{min}$ računaj kapacitet. Pri $Q_d$ numerički riješi Manningovu jednadžbu za dubinu. Veći $n$ smanjuje kapacitet i povećava normalnu dubinu. U bazenu koristi $q=Q/B$ i spregnute dubine; isti projektni dotok daje isti skok za sva stanja održavanja.
 

@@ -132,6 +132,7 @@ main .callout-warning .callout-title-container { color: var(--mf1-accent-d); }
 .mf1-application,
 .mf1-temelj,
 .mf1-fizikalno-znacenje,
+.mf1-cfd,
 .mf1-granica-modela,
 .mf1-numerika,
 .mf1-dublje {
@@ -154,7 +155,7 @@ main .callout-warning .callout-title-container { color: var(--mf1-accent-d); }
 .mf1-temelj { border-left-color: var(--mf1-c-gp); }
 .mf1-fizikalno-znacenje { border-left-color: var(--mf1-c-we); }
 .mf1-granica-modela { border-left-color: var(--mf1-c-po); }
-.mf1-numerika { border-left-color: var(--mf1-c-numerika); }
+.mf1-numerika, .mf1-cfd { border-left-color: var(--mf1-c-numerika); }
 .mf1-dublje { border-left-color: var(--mf1-c-ch); }
 
 /* Labela bloka — sans serif, mala caps */
@@ -185,7 +186,7 @@ main .callout-warning .callout-title-container { color: var(--mf1-accent-d); }
 .mf1-temelj .mf1-box-label { color: var(--mf1-c-gp); }
 .mf1-fizikalno-znacenje .mf1-box-label { color: var(--mf1-c-we); }
 .mf1-granica-modela .mf1-box-label { color: var(--mf1-c-po); }
-.mf1-numerika .mf1-box-label { color: var(--mf1-c-numerika); }
+.mf1-numerika .mf1-box-label, .mf1-cfd > .mf1-box-label { color: var(--mf1-c-numerika); }
 .mf1-dublje .mf1-box-label { color: var(--mf1-c-ch); }
 
 /* Razine T1–T4 — sitna plošica uz labelu */

@@ -78,6 +78,7 @@ def main():
         [py, 'tools/test_pre_push.py'],
         [py, 'tools/verify_all.py'],
         [py, 'tools/test_book_model.py'],
+        [py, 'tools/test_pdf_figure_labels.py'],
         [py, 'tools/test_render_workspace.py'],
         [py, 'tools/test_render_process.py'],
         [py, 'tools/test_component_visibility.py'],

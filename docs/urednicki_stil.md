@@ -16,6 +16,24 @@ mjerodavni za sadržaj.
 - Naslov i njegova oznaka trebaju jasno razlikovati odjeljak, primjer, korak
   rješenja i samostalni zadatak. Ne mijenjaj stabilni ID radi kraćeg naslova.
 
+## CFD objašnjenja i numerički pokusi
+
+- CFD odlomak povezuje pitanje iz poglavlja s konkretnim modelom, ulazima,
+  izlazima i odlukom. Uz riješeni primjer navedi koja njegova pretpostavka
+  u proširenom modelu postaje rezultat ili zahtijeva dodatne podatke.
+- Napomena uz skicu objašnjava izbor modela, oznake, smjerove i mjerilo.
+  Računski postupak pripada rješenju, a provjera tumači rezultat i granice
+  primjene. Ne ponavljaj isti niz formula na sva tri mjesta.
+- Dijagnostička provjera razlikuje ono što rezultat potvrđuje od onoga što
+  još ne potvrđuje: primjerice, točan ukupni protok ne potvrđuje točnu podjelu.
+  Ključna provjera mora biti u vidljivom tekstu. Postojeći skriveni blokovi
+  samoprovjere ne zamjenjuju tu provjeru; vidljivost određuje registar.
+- Uputa uz bilježnicu ima dvije kratke cjeline: **Predvidi** te
+  **Provjeri i protumači**. Koristi stvarne pokuse iz bilježnice; analitički
+  model, numeričku integraciju i sintetičke podatke jasno razlikuj od CFD-a.
+- Dodatak D sadrži zajednički postupak i provjere. Iz poglavlja uputi na
+  odgovarajući odjeljak, a iz pregleda primjena na konkretne CFD odlomke.
+
 ## Mrežno izdanje
 
 Glavni tekst koristi Source Serif 4, a naslovi i navigacija Inter. Taman tekst,
