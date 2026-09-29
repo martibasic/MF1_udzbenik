@@ -116,6 +116,8 @@ Ako su $Q$, $L$ i **$\lambda$ fiksni**, udvostručenje promjera smanjuje linijsk
 
 **Kako CFD rezultat postaje podatak za cjevovod?** Za novi razdjelnik rashladne ploče nema nužno pouzdanog tabličnog koeficijenta gubitka. Pri više zadanih radnih protoka iz CFD-a određujemo razliku tokova mehaničke energije na ulazu i izlazima, uz kote i nejednolike profile. Za pojedini put kroz razdjelnik možemo prikazati koeficijent $\xi$ s jasno navedenom referentnom brzinom i podjelom protoka.
 
+**Zastani i promisli.** Dvije paralelne grane imaju jednak pad energije, ali različite protoke. Je li narušen kontinuitet?
+
 Izvedeni otpori određuju podjelu protoka u modelu cijeloga kruga. Jednaki padovi energije između zajedničkih čvorova ne traže jednake protoke: provjeri otpore grana i zbroj protoka. Promjena lokalne geometrije zato može promijeniti i podjelu i potrebnu crpnu visinu. Sam statički pad tlaka nije uvijek gubitak: u proširenju se dio kinetičke energije vraća u tlak. Zato se u CFD obradi čuva energijska bilanca iz ranijega Venturijeva primjera.
 :::
 

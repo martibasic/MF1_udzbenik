@@ -120,4 +120,4 @@ Na korisnikov zahtjev za commit i push izvršeno je svih 17 notebookova u
 čistim kernelima; svi prolaze. Puni JupyterLite build i audit prolaze
 (17 notebookova, četiri proširenja, Python/Pyodide). Ponovljene brojčane,
 geometrijske i strukturne provjere prolaze, kao i provjere CFD paketa,
-QR kodova, generiranog ključa te poveznica renderiranog udžbenika.
+QR kodova, generiranog ključa te poveznica renderiranog sveučilišnog priručnika.

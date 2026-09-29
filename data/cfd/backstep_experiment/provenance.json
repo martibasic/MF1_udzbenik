@@ -1,0 +1,43 @@
+{
+  "case_id": "backstep_experiment",
+  "data_classification": "public_experiment_and_published_cfd",
+  "external_measurements_used": true,
+  "retrieved": "2026-09-27",
+  "archives": [
+    {
+      "file": "sources/cf.exp.dat",
+      "url": "https://tmbwg.github.io/turbmodels/Backstep_validation/cf.exp.dat",
+      "sha256_lf": "cd9b6434b7956bc58e859de6af654cd7f891e25303babf1dd8633d6c58f74276"
+    },
+    {
+      "file": "sources/backstep_cfl3d_cf_sst.dat",
+      "url": "https://tmbwg.github.io/turbmodels/Backstep_validation/backstep_cfl3d_cf_sst.dat",
+      "sha256_lf": "04709a5572afd5d8141af11082ed0e36abef00b4aed574ea4cef4244cb4c7a5c"
+    },
+    {
+      "file": "sources/profiles.exp.dat",
+      "url": "https://tmbwg.github.io/turbmodels/Backstep_validation/profiles.exp.dat",
+      "sha256_lf": "23e8b44db52bfc36c66af6b743a4080c34f0165eb213a3db29c0914e12cf598d"
+    }
+  ],
+  "construction": "Četiri izvorna retka prenesena su bez promjene; nultočka se računa linearnom interpolacijom. Nema digitiziranja slike ni lokalne CFD simulacije.",
+  "limitations": [
+    "Nema potpune procjene numeričke nesigurnosti objavljenog SSTm računa.",
+    "Objavljeni raspon 6,26 ± 0,10 ne proglašava se standardnom nesigurnošću ni 95-postotnim intervalom.",
+    "SSTm stranica navodi približno 6,50; interpolacija priložene tablice daje oko 6,543. Primjer koristi tablicu."
+  ],
+  "primary_sources": [
+    {
+      "url": "https://tmbwg.github.io/turbmodels/backstep_val.html",
+      "role": "uvjeti i mjerena duljina ponovnog priljubljivanja"
+    },
+    {
+      "url": "https://tmbwg.github.io/turbmodels/backstep_val_sst.html",
+      "role": "varijanta SSTm, kvazistacionarni rezultat i ograničenje mrežne studije"
+    },
+    {
+      "url": "https://doi.org/10.2514/3.8890",
+      "role": "izvorni eksperimentalni rad"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ Arhitektura i izvođenje svih prikaza opisani su u
 
 | Provjera arhitekture | Namjena |
 | --- | --- |
-| `test_book_model.py` | Premještanje poglavlja i objekata, očuvanje ID-jeva i formula, odbijanje neispravnih referencija, fizička širina figure iz PDF margine. |
+| `test_book_model.py` | Premještanje poglavlja i objekata, očuvanje ID-jeva i formula, odbijanje neispravnih referencija, unutarnje PDF poveznice na sva poglavlja/dodatke uz očuvane web poveznice, fizička širina figure iz PDF margine. |
 | `test_pdf_figure_labels.py` | Na malim stvarnim PDF-ovima provjerava nestale i ponovljene oznake, odvajanje slika, više stranica, najmanju veličinu slova i numeraciju prema modelu uz sačuvana tekstna sidra. |
 | `test_render_workspace.py` | Izolacija Quarto predmemorije, očuvanje izlaza nakon neuspjelog rendera ili izmjene izvora, zaključavanje između procesa. |
 | `test_render_process.py` | Stvarni procesi: trajni log, izlaz bez završnog novog retka, propagacija pogreške i prekid cijelog stabla pri zastoju. |
@@ -45,8 +45,9 @@ privremenom lokalnom repozitoriju. Priprema alata i ograničenja opisani su u
 | `qa_audit.py` | AST provjera koja pronalazi `_check(..., x, x)`, potvrđuje točno šest aktualnih task anchora po modulu, strogo validira svih 90 zapisa sheme v2, ponovno ih generira u memoriji te povezuje deklarirane result-ID-jeve sa stvarnim izvršenjem. |
 | `audit_publication.py` | Provjerava kanonsku strukturu U01–U15: 5–7 riješenih primjera i šest zadataka ciljane raspodjele po poglavlju, jedinstveni urednički obrazac obveznih polja, stabilne ID-jeve, slike i SVG pristupačnost, citate te javne JupyterLite poveznice. |
 | `audit_typst.py` | Provjerava da PDF profil uključuje nativnu Typst komponentu i Lua mapiranje svih standardnih autorskih blokova, da su dugi blokovi označeni kao prelomivi te da komponentu ne skriva `.gitignore`. |
-| `audit_pdf.py` | Provjerava stvarni nativni PDF: A4, regresijski raspon 270–335 stranica, metapodatke, kazalo, U01–U15 i slijed oznaka slika. Obrazloženje prijeloma: `docs/pdf-tipografija.md`. |
-| `audit_pdf_layout.py` | Na stvarnom PDF-u uspoređuje svih 17 rasterskih QR uzoraka s izvornim modulima i provjerava obje poveznice, razmak i potpunu numeraciju jednadžbi, P/Z naslove po poglavljima i ključ, 21 zapis literature u E.7, opise slika/QR blokova, sve oznake svake tiskovne skice i najmanje 9 pt, zajedničku osnovicu broja i naslova, osamljene naslove i granice tekstnog stupca. Dopunjuje, ne zamjenjuje vizualni pregled svih stranica. |
+| `audit_pdf.py` | Provjerava stvarni nativni PDF: A4, regresijski raspon 270–335 stranica, metapodatke, puni podnaslov, naziv publikacije, kazalo, U01–U15 i slijed oznaka slika. Odbija poveznice na izvorne `.qmd` datoteke i nerazriješena unutarnja odredišta. Obrazloženje prijeloma: `docs/pdf-tipografija.md`. |
+| `audit_rendered_site.py _site` | Provjerava stvarni HTML: kanonske stranice, lokalne poveznice i sidra, slike, hrvatske oznake i naziv publikacije. Stare tehničke putanje nisu vidljivi naziv djela. |
+| `audit_pdf_layout.py` | Na stvarnom PDF-u uspoređuje svih 17 rasterskih QR uzoraka s izvornim modulima i provjerava obje poveznice, razmak i potpunu numeraciju jednadžbi, P/Z naslove po poglavljima i ključ, 23 zapisa literature u E.7, opise slika/QR blokova, sve oznake svake tiskovne skice i najmanje 9 pt, zajedničku osnovicu broja i naslova, osamljene naslove i granice tekstnog stupca. Dopunjuje, ne zamjenjuje vizualni pregled svih stranica. |
 | `build_print_figures.mjs` | Iz kanonskih SVG-ova generira tiskovne izvedenice MINI/STANDARD/WIDE/COMPOSITE, zasebno slaže geometriju i oznake od 9–9,5 pt. Zajednički tokeni su u `assets/figure-tokens.json`; upute i iznimke opisane su u `docs/ispis-skica.md`. |
 | `audit_print_layouts.mjs` | Provjerava pokrivenost svih 93 izvora i svih njihovih tekstnih elemenata te poziva `audit_print_figures.mjs`: hashovi ulaza i izvedenica, sve neprazne oznake i indeksi, koordinate zadržane geometrije, font najmanje 9 pt, preklapanja i clipping. Aktualne brojeve elemenata ispisuje audit; skraćivanje dupliciranih računa ne mijenja obvezu potpune pokrivenosti. Potreban je Chrome/Chromium/Edge i `npm ci`. |
 | `audit_print_site.mjs` | Provjerava da se mrežne skice nisu zamijenile na zaslonu, a ispis prikazuje sve učitane tiskovne retke u zadanim fizičkim veličinama, bez skaliranja fonta i izlaska iz stranice. |
@@ -69,27 +70,27 @@ privremenom lokalnom repozitoriju. Priprema alata i ograničenja opisani su u
 | `check_u13_sketch_geometry.py` | Provjerava tri slike U13: povezane grane i otvorene priključke, suhe i omočene stijenke spremnika, uronjen usis, unutarnje promjere i kote, parabolični profil, kružno koljeno stalne širine, EGL/HGL te stvarne krivulje crpke i sustava uz Colebrookovu jednadžbu. Dopunjuje vizualni pregled. |
 | `check_u14_sketch_geometry.py` | Čita sedam SVG-ova U14 s naslijeđenim prefiksom u12: otvorene sapnice i vodilice, ploče i krak rotora izvan fluida, poprečne kote i kutove, stvarne trokute brzina, radijus i smjer vrtnje, reakcije te kontinuitet kružnih vodomlaznih vodova i četiriju mlazova. Dopunjuje vizualni pregled. |
 | `check_u15_sketch_geometry.py` | Provjerava dva SVG-a U15: stvarne trapezne površine i opsege, kote i pokose, brzine valova prema obali, krivulju energije, kritičnost i podkritičnu granu na pragu, neprekinuto dno, hidrostatičke sile i bilance rubnih presjeka skoka te granicu dubine bazena. Dopunjuje vizualni pregled. |
-| `validate_cfd_vv.py` | Read-only validator za `data/cfd/`: dva sintetička nastavna slučaja provjerava prema analitičkim modelima, bilancama i GCI-ju. Za javni NACA referentni skup uspoređuje sve kopirane brojeve s arhiviranim NASA tablicama, razlikuje točke od ćelija te čuva razliku između djelomičnih objavljenih dokaza i nedostajuće pune validacije. |
+| `verify_backstep_data.py`, `test_experimental_reference.py` | Arhivska podudarnost pokusa iza stepenice, pripadnost odabranih mjernih/CFD redaka izvornim tablicama i jednakost podataka u bilježnici. Sedam regresija odbija izmijenjene podatke i neopravdane tvrdnje o nesigurnosti ili konvergenciji. |
+| `validate_cfd_vv.py` | Read-only validator za `data/cfd/`: dva sintetička nastavna slučaja provjerava prema analitičkim modelima, bilancama i GCI-ju. Za javni NACA referentni skup uspoređuje sve kopirane brojeve s arhiviranim NASA tablicama, razlikuje točke od ćelija te čuva razliku između djelomičnih objavljenih dokaza i nedostajuće pune validacije. Za drugi referentni skup, tok iza stepenice, poziva arhivski verifier i čuva ograničenja objavljene CFD usporedbe. |
 
 ### Kako čitati rezultat
 
 Ne koristi se više zbirna tvrdnja poput „498/498 PASS”, jer je skrivala razliku
 između stvarne usporedbe i poziva koji rezultat uspoređuje sa samim sobom.
-Aktualni audit zabilježio je:
+Audit od 27. rujna 2026. zabilježio je:
 
-- 1.001 sirov rezultat svih 19 modula;
-- 924 usporedbe s neovisnom deklariranom ciljanom vrijednošću;
-- 77 zasebno označenih dimenzijskih, bilančnih, predznakovnih, graničnih ili kvalitativnih invarijanti;
+- 1.345 sirovih rezultata svih 19 modula;
+- 1.123 usporedbe s neovisnom deklariranom ciljanom vrijednošću;
+- 222 zasebno označene dimenzijskih, bilančnih, predznakovnih, graničnih ili kvalitativnih invarijanti;
 - 22 dodatna neovisna fizikalna golden testa;
 - 0 self-comparison rezultata i 0 AST tautologija;
 - 0 rupa na razini zadataka, 0 nepokrivenih modernih brojčanih primjera i 0 kanonskih poglavlja bez verifiera.
 
-Manifest sheme v2 sadrži 90/90 zadataka u skupini `golden`, 393 parsirana
-skalarna ulaza i 312 ugovora rezultata. Svi su ranije otvoreni T3/T4 zadatci u
+Manifest sheme v2 sadrži 90/90 zadataka u skupini `golden`. Svi su ranije otvoreni T3/T4 zadatci u
 novim poglavljima sada potpuno zadani; invarijante ostaju kao dodatna provjera
 fizike, a ne kao zamjena za nedostajući brojčani ugovor.
 
-Ti su brojevi početna snimka, ne obećanje trajnog fiksnog zbroja. Kanonski je
+Ti su brojevi datirana snimka, ne obećanje trajnog fiksnog zbroja. Kanonski je
 strojno čitljiv manifest, a aktualni izvještaj daje:
 
 ```

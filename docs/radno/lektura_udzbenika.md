@@ -1,6 +1,6 @@
-# Lektura udžbenika
+# Lektura sveučilišnog priručnika
 
-Zahtjev: „Sada kreni na lekturu udžbenika.” Polazište: `521c0ad`,
+Zahtjev: „Sada kreni na lekturu sveučilišnog priručnika.” Polazište: `521c0ad`,
 23. rujna 2026. Lektura je dovršena; završne dorade i obnovljena izdanja
 spremljeni su lokalno.
 
@@ -63,7 +63,7 @@ Za commit `81b19cc` uspješno su završili izgradnja i objava u
 uključujući notebooke, HTML, PDF, JupyterLite i pregled prikaza na više širina.
 Taj rezultat odnosi se na objavljeni U00–U03, ne na kasnije lokalne dorade.
 Ovaj međukommit obuhvaća početnu stranicu i prvi jezični prolaz kroz U00–U03;
-lektura ostatka udžbenika i završni zajednički prolaz još predstoje.
+lektura ostatka sveučilišnog priručnika i završni zajednički prolaz još predstoje.
 
 ### Provjere prije međukommita U04–U13
 
@@ -268,4 +268,4 @@ Završni PDF: `_book/mehanika-fluida-1.pdf`.
 SHA-256: `295fc447a5728124112d8b64d0c902df34a66d5bccdadf98bf7ca148c7b73b2f`.
 Radni logovi i rasteri nalaze se u ignoriranoj mapi `tools/tmp/lektura/`.
 Jezični pregled nije zamjena za zasebnu vanjsku stručnu recenziju modela
-i nastavnu evaluaciju udžbenika.
+i nastavnu evaluaciju sveučilišnog priručnika.

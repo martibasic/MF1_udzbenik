@@ -59,7 +59,7 @@ Nakon dodatnog citanja stvarnih javnih `WE`-ova i preostalih pilot-tragova, ovdj
 
 ## Pravilo ove faze
 
-1. Ovo je finalna urednicka presuda tekstualno citljivog treceg sloja za trenutni javni udzbenik: veze su ili `validirano` potvrdene ili eksplicitno zakljucene bez `1:1` migracije.
+1. Ovo je finalna urednicka presuda tekstualno citljivog treceg sloja za trenutni javni sveučilišni priručnik: veze su ili `validirano` potvrdene ili eksplicitno zakljucene bez `1:1` migracije.
 2. `preliminarni_cilj` je ovdje namjerno grub i vodi se po tematskom bloku izvora.
 3. `Virag` tekstualni blokovi su zatvoreni; izvan ovog closure-prolaza ostaju samo answers-only ili source-gap reference koje se ne vode kao otvorene migracijske veze.
 

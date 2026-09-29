@@ -1,0 +1,31 @@
+{
+  "case_id": "backstep_experiment",
+  "status": "experimental_reference",
+  "data_classification": "public_experiment_and_published_cfd",
+  "conditions": {
+    "Re_H": 36000,
+    "Mach": 0.128,
+    "roof_angle_deg": 0,
+    "reference_velocity_station_x_over_H": -4
+  },
+  "experiment": {
+    "authors": "Driver and Seegmiller",
+    "year": 1985,
+    "reattachment_x_over_H": 6.26,
+    "reported_half_width": 0.1,
+    "confidence_level": null,
+    "source": "https://tmbwg.github.io/turbmodels/backstep_val.html"
+  },
+  "cfd": {
+    "code": "CFL3D",
+    "model": "SSTm",
+    "time_description": "quasi-steady",
+    "local_simulation_performed": false,
+    "grid_convergence_established": false,
+    "source": "https://tmbwg.github.io/turbmodels/backstep_val_sst.html"
+  },
+  "files": {
+    "comparison": "comparison.csv"
+  },
+  "chapter_example": "ex-stepenica-mjerenje-cfd"
+}

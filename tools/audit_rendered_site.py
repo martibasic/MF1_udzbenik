@@ -211,6 +211,8 @@ def main() -> int:
                 )
                 break
         visible = parsed.visible_text
+        if re.search(r"\bud[zž]ben\w*", visible, re.IGNORECASE):
+            issues.append(f"{relative}: stari naziv publikacije u tekstu; koristi sveučilišni priručnik")
         untranslated_patterns = {
             "AUTHOR": r"\bAUTHOR\b",
             "Figure N": r"\bFigure\s+\d+",

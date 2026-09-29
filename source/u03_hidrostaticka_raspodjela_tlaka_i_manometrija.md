@@ -243,6 +243,8 @@ Ako je $p_M < 0$, to ne znači da je tlak „negativan” u apsolutnom smislu, n
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
+**Zastani i promisli.** CFD na usisu pokazuje negativan manometarski tlak, a senzor pozitivan apsolutni tlak. Moraju li se rezultati razlikovati?
+
 **Što znači nizak tlak na usisu?** Negativan manometarski tlak u CFD-u i pozitivan apsolutni tlak senzora mogu opisivati isto stanje. Prije zaključka o neslaganju usporedi njihove reference. Neki rješavači pohranjuju tlak podijeljen gustoćom, a neki izdvajaju hidrostatski doprinos, kao OpenFOAMov $p_{rgh}$ [@openfoam-hydrostatic]. Prije usporedbe s mjeračem treba obnoviti tlak u paskalima i njegovu referencu.
 
 Za opterećenje stijenke važna je razlika tlakova s njezinih strana. Za mogućnost nastanka pare važan je apsolutni tlak pri radnoj temperaturi. Ručni @ex-u03-tlak-na-usisu-pumpe-za-cirkulaciju-ulja razmatra mirujući stupac: prije procjene tlaka pare obnavlja apsolutni tlak. Negativan manometarski tlak sam ne dokazuje kavitaciju. Taj će se usisni problem nastaviti uz crpku u []{.mf1-chapter-ref target="u13"}.

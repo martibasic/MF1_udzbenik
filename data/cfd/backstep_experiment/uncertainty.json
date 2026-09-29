@@ -1,0 +1,11 @@
+{
+  "reported_reattachment_interval": [
+    6.16,
+    6.36
+  ],
+  "reported_interval_is_standard_uncertainty": false,
+  "coverage_probability": null,
+  "combined_validation_uncertainty": null,
+  "interpretation": "Objavljeni raspon mjerenja; izvor ne daje ovdje faktor pokrivanja. Usporedba s njim nije potpuna validacijska presuda.",
+  "Cf_error_column": "Prenesen iz izvorne tablice bez pretvaranja u standardnu nesigurnost."
+}

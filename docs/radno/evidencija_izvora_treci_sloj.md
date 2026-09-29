@@ -15,11 +15,11 @@ Ovo nije jos inventura pojedinacnih zadataka, nego ulazni katalog stvarnih izvor
 ### Knjige i vece zbirke
 
 - `private/materials/cengel-Fluid Mechanics_ Fundamentals and Applications  .pdf`
-  - tip: `udžbenik / zbirka primjera`
+  - tip: `knjiga / zbirka primjera`
   - uloga: treci sloj za dodatne varijante, rubne slucajeve i tezinske nadogradnje preko vise poglavlja.
 
 - `private/materials/zdravko-virag-mehanika-fluida.pdf`
-  - tip: `udžbenik / skripta`
+  - tip: `knjiga / skripta`
   - uloga: dodatni izvor za zadatke i formulacije kroz vise poglavlja.
 
 - `private/materials/zdravko-virag-mehanika-fluida.md`

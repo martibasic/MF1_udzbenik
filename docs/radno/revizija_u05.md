@@ -46,7 +46,7 @@ zaokruženu silu. P2 ima odgovarajući kut i normale. P3 treba odmaknuti kote
 od ruba. P4/P5 imaju lukove koji ne odgovaraju četvrtini kruga iz računa i
 pogrešno prikazanu okupanu stranu/pomoćni volumen. P6 ima neusklađen povratni
 luk pomoćnog volumena i oslonac zgloba. Ispraviti geometriju uz isti raspored,
-paletu, šrafure i fontove; ne zamjenjivati stil udžbenika.
+paletu, šrafure i fontove; ne zamjenjivati stil sveučilišnog priručnika.
 
 U kanonski izvor uključiti dosad nepovezanu datoteku `u05_vjezbe_skice.svg`,
 koja je prikazivala staru zbirku samo ravnih ploha. Prilagoditi je novim

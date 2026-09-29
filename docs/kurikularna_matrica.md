@@ -1,6 +1,6 @@
 # Kurikularna matrica MF1 v2
 
-Ovaj dokument je normativna urednička matrica. Kanonski tekst ostaje u `source/`, a matrica određuje redoslijed preduvjeta, minimalnu provjeru ishoda i planirano studentsko opterećenje. Ukupno ciljano opterećenje iznosi **145 sati rada uz udžbenik**; ne poistovjećuje se s cijelim ECTS opterećenjem kolegija.
+Ovaj dokument je normativna urednička matrica. Kanonski tekst ostaje u `source/`, a matrica određuje redoslijed preduvjeta, minimalnu provjeru ishoda i planirano studentsko opterećenje. Ukupno ciljano opterećenje iznosi **145 sati rada uz sveučilišni priručnik**; ne poistovjećuje se s cijelim ECTS opterećenjem kolegija.
 
 | Pog. | Jezgra i glavni ishod | Obvezna provjera ishoda | Lajtmotiv | Sati |
 |---:|---|---|---|---:|

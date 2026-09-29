@@ -99,3 +99,16 @@ niti nadomješta nedostajuću eksperimentalnu nesigurnost.
 NACA 0012 ovdje služi kao profilni primjer prenosiv na hidrodinamiku preko
 bezdimenzijskih koeficijenata. Slobodna površina, kavitacija, hrapavost i drugi
 učinci specifični za hidroprofil zahtijevaju zaseban model i podatke.
+
+## Ponovni pregled 27. rujna 2026.
+
+Pregled aktualnog Git stabla TMR-a nije pronašao nove datoteke u dvjema
+relevantnim NACA mapama. Zapis `follow_up_2026_09_27` u `source_review.json`
+čuva provjereni commit i usporedbu popisa. Nedostajuća dijagnostika zatvorena
+je kao dokumentirano ograničenje izvora; ne očekuje se da je korisnik pribavi.
+To ne mijenja znanstvenu granicu: potpuna validacija nije dokazana.
+
+Za još jednu usporedbu sa stvarnim mjerenjem uveden je zaseban
+[pokus iza stepenice](../backstep_experiment/README.md), povezan s novim
+P6 u U12 i postojećom bilježnicom. Njegovi podatci ne popunjavaju praznine
+NACA arhive; svaki primjer čuva vlastite uvjete i granice zaključivanja.

@@ -157,7 +157,7 @@ Za procjenu opaženog reda i GCI-ja koristi barem tri sustavno profinjene mreže
 
 Osjetljivost na hrapavost, ulazni profil ili turbulencijski model zasebna je analiza; nije ni mrežna konvergencija ni zamjena za mjerenje. Razlika viskoznog rješenja prema idealnom Bernoulliju uključuje stvarne gubitke i razliku pretpostavki. Na kraju izvijesti protok, definiciju $\Delta p$, gubitak i nesigurnost u odnosu na odluku, primjerice potrebnu crpnu visinu. Slaganje u jednoj radnoj točki ne potvrđuje cijelo radno područje.
 
-## Tri pripremljena V&V paketa {#sec-cfd-vv-paketi}
+## Pripremljeni V&V paketi {#sec-cfd-vv-paketi}
 
 Paketi u `data/cfd/` omogućuju obradu rezultata bez instalacije rješavača. Provjere se nadovezuju na poznato: analitičko rješenje daje referencu, kontinuitet bilancu, profinjenje numeričku procjenu, a eksperiment podatke za validaciju.[]{#tri-pripremljena-vv-paketa}
 
@@ -165,11 +165,12 @@ Paketi u `data/cfd/` omogućuju obradu rezultata bez instalacije rješavača. Pr
 |---|---|---|
 | [`poiseuille_laminar`](../data/cfd/poiseuille_laminar/README.md) | analitičko rješenje, tri sintetičke mreže, reziduali, protok, bilanca i GCI | vježba postupka; nije test određenog rješavača |
 | [`venturi_diffuser`](../data/cfd/venturi_diffuser/README.md) | sintetički 1D model s propisanim gubitkom, tri mreže i računski trag | obrada gubitka i konvergencije; nije stvarni CFD ni mjerenje |
+| [`backstep_experiment`](../data/cfd/backstep_experiment/README.md) | mjerena smična naprezanja i objavljeni CFL3D/SSTm rezultat | stvarna usporedba ponovnog priljubljivanja u @ex-stepenica-mjerenje-cfd |
 | [`hydrofoil_experiment`](../data/cfd/hydrofoil_experiment/README.md) | Ladsonova mjerenja [@ladson1988], FUN3D rezultati NASA TMR-a [@nasa-tmr-naca0012], nastavna dopuna nesigurnosti | mrežni trend i uvjetna usporedba otpora; nepotpuni dokazi za izvornu validaciju |
 
 Venturijev paket koristi vodu, promjere 100/50 mm i protok 10 L/s. To je zaseban nastavni skup iste vrste problema, a ne simulacija uljnog Venturija iz @sec-cfd-venturi. Propisani koeficijent gubitka $K=0{,}2$ ne prenosi se na taj primjer.
 
-Validator `python tools/validate_cfd_vv.py` provjerava reference, bilance, podrijetlo, opaženi red i GCI. **GCI nije automatski standardna nesigurnost**, a tri monotone vrijednosti nisu same dokaz asimptotskog područja. Za profil nedostaju izvorni reziduali, povijesti sila i masena bilanca; nastavna dopuna ne nadomješta te dokaze.
+Validator `python tools/validate_cfd_vv.py` provjerava reference, bilance, podrijetlo, opaženi red i GCI. **GCI nije automatski standardna nesigurnost**, a tri monotone vrijednosti nisu same dokaz asimptotskog područja. Profil ostaje primjer usporedbe uz nepotpun arhiv: izvorni reziduali, povijesti sila i masena bilanca nisu dostupni u pregledanim izvorima. Zaseban pokus iza stepenice daje stvarna mjerenja za izravan račun odstupanja; njegova usporedba jednog izlaza također ne zamjenjuje cjelovitu validaciju.
 
 **Veza sa Z6 u 12. poglavlju.** Najfiniji FUN3D rezultat $C_D=0{,}01222408822$ zaokružen je na $0{,}01222$. Ladsonove točke $(\alpha;C_D)=(8{,}08^\circ;0{,}00995)$ i $(10{,}10^\circ;0{,}01175)$ pri $Re_c=6\cdot10^6$, $Ma=0{,}15$ i prisilnom prijelazu (120 grit) daju linearnom interpolacijom na $10{,}00^\circ$ vrijednost $0{,}01166089$, zaokruženo $0{,}01166$.
 

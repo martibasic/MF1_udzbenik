@@ -292,6 +292,8 @@ $Ma_2<1$ i $p_2>p_1$, što odgovara fizikalno dopuštenom smjeru promjene. Obrnu
 
 ::: {#cfd-sapnica-udarni-val .mf1-cfd title="Računalna dinamika fluida"}
 
+**Zastani i promisli.** Iza adijabatskog normalnog udara statički tlak raste, ukupni tlak pada, a $T_0$ ostaje isti. Je li takav rezultat proturječan?
+
 **Udarni val unutar sapnice.** Pri promjeni nizvodnog tlaka val se može pomaknuti kroz divergentni dio i promijeniti tlakove na stijenci. Za svaki radni uvjet pratimo njegov položaj, stanja prije i poslije te gubitak ukupnog tlaka. Rast statičkog tlaka uz pad ukupnog tlaka nije proturječje: adijabatski val povisuje entropiju, a čuva stagnacijsku temperaturu.
 
 Ručni @ex-normalni-udar daje referentne skokove za normalan adijabatski val: uspoređujemo stanja izvan prijelaza uz iste ulazne podatke. CFD obično raspodijeli val preko nekoliko ćelija; ta numerička širina nije njegova fizička debljina. Omjere uspoređujemo izvan razmazanog prijelaza, a položaj vala provjeravamo profinjenjem. Za nestacionarni račun važan je i vremenski korak prema brzini prijenosa $|v|+a$. Time provjeravamo može li simulacija poduprijeti odluku o radnom području sapnice.

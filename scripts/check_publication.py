@@ -91,6 +91,7 @@ def main():
         [py, 'scripts/generate_qr_assets.py'],
         [py, 'scripts/generate_exercise_key.py'],
         [py, 'tools/validate_cfd_vv.py'],
+        [py, 'tools/test_experimental_reference.py'],
         [py, 'tools/test_legacy_notebook_generator.py'],
         [py, 'tools/execute_notebooks.py', '--timeout', '120'],
         [py, 'tools/test_interactive_labs.py'],

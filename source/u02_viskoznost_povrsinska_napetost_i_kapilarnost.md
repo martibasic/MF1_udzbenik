@@ -250,6 +250,8 @@ Formula za $h$ uključuje površinsku napetost $\sigma$, kontaktni kut $\theta$,
 
 **Punjenje kanala i zarobljeni zrak.** Potpuno napunjen kanal i kanal koji se tek puni dva su različita CFD problema. Pri punjenju hladne ploče tekućina istiskuje zrak, pa pratimo granicu faza i omogućujemo izlazak zraka kroz odzračnik. Površinska napetost i kontaktni kut određuju oblik meniska i kvašenje stijenke. U uskim prolazima mogu utjecati na to kojim putem tekućina napreduje i ostaje li zračni džep.
 
+**Zastani i promisli.** Model točno predviđa konačnu visinu u kapilari. Potvrđuje li to i točno vrijeme punjenja kanala?
+
 Usporedbom položaja odzračnika pratimo zaostali volumen zraka i vrijeme punjenja. Točna ravnotežna visina u kapilari ne potvrđuje vrijeme punjenja kanala: ono ovisi i o viskoznom otporu, odzračivanju i gibanju meniska. Za gibajuću kontaktnu liniju može trebati dodatni model kontaktnog kuta. Nakon uspješnog odzračivanja možemo prijeći na jednostavniji jednofazni model rada.
 :::
 

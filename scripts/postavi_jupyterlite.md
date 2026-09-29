@@ -2,7 +2,7 @@
 
 JupyterLite omogućuje pokretanje Jupyter notebooka izravno u pregledniku,
 bez ikakve prijave i bez lokalne instalacije. Pokreće se kao statički
-sklop uz Quarto mrežno izdanje udžbenika. Colab je samo pričuvni put.
+sklop uz Quarto mrežno izdanje sveučilišnog priručnika. Colab je samo pričuvni put.
 
 ## Postupak postavljanja (jednokratno)
 

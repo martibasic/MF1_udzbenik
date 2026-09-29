@@ -17,7 +17,7 @@ Ovo je prvi bazni inventar svih zadataka iz postojece skripte. On namjerno dolaz
 1. `inventory_id` je jedinstveni identifikator evidencije i rjesava probleme dvostruke ili resetirane numeracije.
 2. `legacy_ref` cuva izvornu oznaku iz skripte.
 3. `preliminarni_cilj` je radna oznaka prema trenutnom planu knjige, ne konacna presuda za svaki zadatak.
-4. `status` je polje zavrsne sinkronizacije: `validirano` oznacava obranjiv javni `1:1` prijenos, a preostalo `nije_uneseno` nakon closure-prolaza oznacava svjesnu urednicku odluku da donor nije prenesen kao zaseban javni `1:1` zadatak u trenutnom udzbeniku.
+4. `status` je polje zavrsne sinkronizacije: `validirano` oznacava obranjiv javni `1:1` prijenos, a preostalo `nije_uneseno` nakon closure-prolaza oznacava svjesnu urednicku odluku da donor nije prenesen kao zaseban javni `1:1` zadatak u trenutnom sveučilišnom priručniku.
 
 ## Prvi potvrdeni javni prijenosi nakon buildout prolaza
 
@@ -40,7 +40,7 @@ Ovaj dokument je krenuo kao bazni inventar, ali vise nije tocno da su sve stavke
 
 ## Zavrsni closure-prolaz bez laznih `1:1` veza
 
-Ovaj inventar sada daje i konacnu urednicku presudu za preostale rubne veze. Preostalo `status: nije_uneseno` nakon ovog closure-prolaza vise ne znaci dodatni backlog, nego svjesno zakljucenu odluku da donor nije prenesen kao zaseban javni `1:1` zadatak u trenutnom udzbeniku.
+Ovaj inventar sada daje i konacnu urednicku presudu za preostale rubne veze. Preostalo `status: nije_uneseno` nakon ovog closure-prolaza vise ne znaci dodatni backlog, nego svjesno zakljucenu odluku da donor nije prenesen kao zaseban javni `1:1` zadatak u trenutnom sveučilišnom priručniku.
 
 1. `U04`: kao sigurna veza potvrden je `v03_z32`, dok se `v03_z31`, `v03_z33` i `v04_z34-v04_z39` zakljucuju kao nepodudarni `1:1` donori; danasnji javni `U04` vec pokriva taj prostor kroz jedan skriptno potvrden primjer i dva urednicki samostalna rubna `WE`-a.
 2. `U07`: ni nakon dodavanja dvafluidnog modula kandidati `v03_z30`, `v06_z54`, `v06_z55` i `v07_z01-v07_z02` ne prelaze prag za `validirano`; blok se zakljucuje kao tematska granica uzgona, stabilnosti i zakrivljenih ploha bez ciste skriptne `1:1` potvrde.

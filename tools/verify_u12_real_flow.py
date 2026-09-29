@@ -10,6 +10,23 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
+def backstep_reattachment() -> dict[str, float]:
+    """Independently interpolate the published endpoints, preserving their provenance."""
+    path = REPO_ROOT / "data/cfd/backstep_experiment/comparison.csv"
+    with path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    result = {}
+    for series in ("experiment", "cfl3d_sstm"):
+        a, b = [r for r in rows if r["series"] == series]
+        xa, xb = float(a["x_over_H"]), float(b["x_over_H"])
+        fa, fb = float(a["Cf"]), float(b["Cf"])
+        # Barycentric form provides an independent expression for the printed formula.
+        result[series] = (xa * fb - xb * fa) / (fb - fa)
+    result["difference"] = result["cfl3d_sstm"] - 6.26
+    result["relative_percent"] = 100 * result["difference"] / 6.26
+    return result
+
+
 def _close(value: float, target: float, *, abs_tol: float) -> bool:
     return math.isfinite(value) and abs(value - target) <= abs_tol
 
@@ -343,6 +360,14 @@ def verify() -> list[dict[str, str]]:
     r = turbulence_intensity()
     _check(out, "U12.REAL.P5.Iu", r["intensity"], 0.060, "", abs_tol=0.0005)
     _check(out, "U12.REAL.P5.Iu_percent", r["percent"], 6.0, "%", abs_tol=0.05)
+
+    r = backstep_reattachment()
+    _check(out, "U12.REAL.P6.experimental_zero", r["experiment"], 6.279, "", abs_tol=0.0005)
+    _check(out, "U12.REAL.P6.cfd_zero", r["cfl3d_sstm"], 6.543, "", abs_tol=0.0005)
+    _check(out, "U12.REAL.P6.difference", r["difference"], 0.283, "H", abs_tol=0.0005)
+    _check(out, "U12.REAL.P6.relative_percent", r["relative_percent"], 4.5, "%", abs_tol=0.05)
+    _invariant(out, "U12.REAL.INV.backstep_range", 6.16 < r["experiment"] < 6.36 < r["cfl3d_sstm"],
+               "mjerni i CFD zaključci o objavljenom rasponu nisu usklađeni")
 
     r = exercise_material_derivative()
     _check(out, "U12.REAL.Z1.u", r["velocity"], 5.0, "m/s", abs_tol=0.05)

@@ -24,7 +24,7 @@ def regen_preview() -> None:
     chapters = []
     # u00, u01..u13, d01..d03
     for prefix, title_root in [
-        ("u00", "U00 — Kako koristiti udžbenik"),
+        ("u00", "U00 — Kako koristiti sveučilišni priručnik"),
         ("u01", "U01 — Osnove fluida i Pascalov zakon"),
         ("u02", "U02 — Viskoznost, površinska napetost i kapilarnost"),
         ("u03", "U03 — Hidrostatička raspodjela tlaka i manometrija"),
@@ -54,7 +54,7 @@ def regen_preview() -> None:
         "<head>",
         '<meta charset="utf-8">',
         '<meta name="viewport" content="width=device-width, initial-scale=1">',
-        "<title>MF1 udzbenik — preview SVG-eva</title>",
+        "<title>MF1 sveučilišni priručnik — preview SVG-eva</title>",
         "<style>",
         "body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f5f7fa; color: #1a2530; }",
         ".container { max-width: 1400px; margin: 0 auto; padding: 24px; }",
@@ -74,7 +74,7 @@ def regen_preview() -> None:
         "</style>",
         "</head>",
         "<body>",
-        '<header><h1>MF1 udzbenik — SVG preview</h1>',
+        '<header><h1>MF1 sveučilišni priručnik — SVG preview</h1>',
         "<nav>",
     ]
     for ch in chapters:

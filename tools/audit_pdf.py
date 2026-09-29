@@ -1,4 +1,4 @@
-"""Provjeri stvarni nativni PDF udžbenika nakon Quarto/Typst rendera.
+"""Provjeri stvarni nativni PDF sveučilišnog priručnika nakon Quarto/Typst rendera.
 
 Audit namjerno otvara konačni PDF, a ne međuizvor. Provjerava format svih
 stranica, opseg knjige, metapodatke, tekstualnu ekstrakciju sadržaja i svih
@@ -154,6 +154,30 @@ def _figure_numbering_issues(
     return issues
 
 
+def _document_link_issues(document: pymupdf.Document) -> list[str]:
+    """A standalone PDF must not launch book sources, and named targets must exist."""
+    names = document.resolve_names()
+    issues = []
+    for number, page in enumerate(document, 1):
+        for link in page.get_links():
+            if re.search(r"\.qmd(?:#.*)?$", link.get("file", ""), re.IGNORECASE):
+                issues.append(f"str. {number}: poveznica otvara izvor umjesto PDF odredišta: {link['file']}")
+            name = link.get("nameddest")
+            if name:
+                if name not in names:
+                    # get_links decodes UTF-8 name bytes as Latin-1 in this PyMuPDF;
+                    # resolve_names returns the correct Unicode keys.
+                    try:
+                        name = name.encode("latin1").decode("utf-8")
+                    except (UnicodeEncodeError, UnicodeDecodeError):
+                        pass
+                if name not in names or not 0 <= names[name].get("page", -1) < len(document):
+                    issues.append(f"str. {number}: nepostojeće PDF odredište {name!r}")
+            if link["kind"] == pymupdf.LINK_GOTO and not 0 <= link.get("page", -1) < len(document):
+                issues.append(f"str. {number}: unutarnja PDF poveznica nema valjanu stranicu")
+    return issues
+
+
 def _raster_issues(
     document: pymupdf.Document, destinations: dict[str, int]
 ) -> tuple[list[dict[str, object]], list[str]]:
@@ -240,10 +264,15 @@ def audit(pdf_path: Path) -> tuple[dict[str, object], list[str]]:
                 issues.append(issue)
 
         issues.extend(_a4_issues(document))
+        issues.extend(_document_link_issues(document))
 
         page_texts = [page.get_text("text") for page in document]
         issues.extend(_figure_numbering_issues(page_texts))
         full_text = _normalise("\n".join(page_texts))
+        if re.search(r"\bud[zž]ben\w*", full_text):
+            issues.append("PDF sadrži stari naziv publikacije; koristi sveučilišni priručnik")
+        if _normalise(BOOK["book"]["subtitle"]) not in _normalise(page_texts[0]):
+            issues.append("PDF naslovnica ne sadrži puni aktualni podnaslov")
         toc_text = _normalise("\n".join(page_texts[: min(8, page_count)]))
         text_character_count = len(re.sub(r"\s+", "", full_text))
         report["text_character_count"] = text_character_count

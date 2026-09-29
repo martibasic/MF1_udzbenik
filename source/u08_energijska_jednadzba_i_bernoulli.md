@@ -90,6 +90,8 @@ Svaki član ima izravno fizikalno značenje. Član $p/(\rho g)$ govori koliku bi
 
 **Venturi u rashladnom vodu: mjerenje i gubitak.** Mjerač iz []{.mf1-chapter-ref target="u03"} sužava tok i tako povećava brzinu u grlu. CFD daje statički tlak na priključcima i brzinu u presjecima. Za ovdje pretpostavljen nestlačiv tok ukupni tlak jest $p_t=p+\rho v^2/2$; na različitim kotama u mehaničku energiju ulazi i gravitacijski član. Bočni priključak i idealna Pitotova sonda zato ne očitavaju istu veličinu.
 
+**Zastani i promisli.** Statički tlak pada prema grlu Venturija. Smijemo li cijeli pad proglasiti gubitkom energije?
+
 Pad statičkog tlaka do grla nije sam dokaz gubitka: dio tlačne energije prelazi u kinetičku i može se vratiti u difuzoru. Provjeri ukupnu mehaničku energiju prije cijelog mjerača i poslije njega. Tako odvoji koristan mjerni signal od trajnog opterećenja crpke.
 :::
 

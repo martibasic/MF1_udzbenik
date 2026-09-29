@@ -25,7 +25,7 @@ Ovo je deveti radni dokument za sparivanje treceg sloja. Fokus je samo na bloku 
 
 ## Treci sloj Virag 1.x - preliminarna presuda
 
-- `VG-01-01` | skriptna_obitelj: `nema bliskog para` | druga_slojna_veza: `av11_01-av11_06` | presuda: `rezervni` | razlog: cisti zadatak o dimenzionalnoj nezavisnosti skupova je koristan za dodatak o slicnosti, ali nije dio glavnog toka udzbenika.
+- `VG-01-01` | skriptna_obitelj: `nema bliskog para` | druga_slojna_veza: `av11_01-av11_06` | presuda: `rezervni` | razlog: cisti zadatak o dimenzionalnoj nezavisnosti skupova je koristan za dodatak o slicnosti, ali nije dio glavnog toka sveučilišnog priručnika.
 - `VG-01-02` | skriptna_obitelj: `nema bliskog para` | druga_slojna_veza: `av11_01-av11_06` | presuda: `rezervni` | razlog: Pi-teorem uz turbulentni rubni sloj i tangencijalno naprezanje ostaje teorijsko-metodski rezervni zapis.
 - `VG-01-03` | skriptna_obitelj: `v05_z41-v05_z48` | druga_slojna_veza: `av03_01-av03_04` | presuda: `rezervni` | razlog: sila tlaka na uronjenu ravnu povrsinu ovdje se koristi samo kao podloga za Pi-teorem, pa je urednicki slabiji od izravnih hidrostatskih zadataka.
 - `VG-01-04` | skriptna_obitelj: `nema bliskog para` | druga_slojna_veza: `av10_01-av10_04` | presuda: `rezervni` | razlog: otpor gibanja broda dolazi kao teorija slicnosti i bolje ostaje u prosirenom aplikacijskom korpusu.

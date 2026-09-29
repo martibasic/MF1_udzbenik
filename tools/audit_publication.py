@@ -278,6 +278,8 @@ def audit() -> tuple[dict[str, object], list[str]]:
     for chapter in chapters:
         code = f"U{chapter.number:02}"
         issues.extend(f'{code}: {issue}' for issue in editorial_field_issues(chapter.text))
+        if chapter.text.count('**Zastani i promisli.**') != 1:
+            issues.append(f'{code}: očekuje se jedno izdvojeno konceptualno pitanje u vidljivom tekstu')
         examples = EXAMPLE_RE.findall(chapter.text)
         object_index = json.loads((REPO_ROOT / "assets/content-index.json").read_text(encoding="utf8"))["objects"]
         example_numbers = [object_index.get(identifier, {}).get("label", "").removeprefix("P") for identifier in examples]

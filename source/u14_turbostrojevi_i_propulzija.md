@@ -240,6 +240,8 @@ Za procjenu srednjeg rada može se koristiti MRF, aproksimacija povezanih rotira
 
 **Predvidi.** Zašto snaga nestaje pri nepomičnoj lopatici, iako sila postoji?
 
+**Zastani i promisli.** Ručni model jedne lopatice daje optimum $u=c_1/3$, a model cijelog kola $u=c_1/2$. Mora li jedan račun biti pogrešan?
+
 **Provjeri i protumači.** Prati trokut brzina i krivulju snage. Različiti optimumi sami ne znače pogrešku: prvi pokus zahvaća puni sapnički protok cijelog rotora, a dotok jednoj pokretnoj lopatici smanjuje se s njezinom brzinom. Nastavci obrađuju Z3–Z5.
 
 <div class="mf1-interaktivno-akcija">

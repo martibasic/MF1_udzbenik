@@ -167,6 +167,8 @@ Prva se javlja pojava s manjom kritičnom kutnom brzinom. Budući da se uspoređ
 
 **Kočenje cisterne s pregradama i bez njih.** Sada je pitanje hoće li prvi val udariti u pokrov i koliko će opteretiti prednju stijenku. Polazište je @ex-u04-nagib-goriva-u-spremniku-autocisterne-pri-kocenju. Njegov ravnotežni model proširujemo poviješću kočenja i praćenjem granice tekućine i zraka. Uspoređujemo praznu unutrašnjost s izvedbom koja ima pregrade i otvore kroz koje tekućina može prolaziti.
 
+**Zastani i promisli.** Pri stalnom kočenju CFD daje očekivani konačni nagib, ali je prvi val viši od ravnotežne razine. Dokazuje li to pogrešan račun?
+
 Viši prvi val od ravnotežne razine sam ne znači pogrešan CFD račun: ravnotežni nagib provjerava tek smireno stanje pri stalnom ubrzanju. Pratimo visinu vala, ukupnu silu i vrijeme smirivanja; pregrada pritom prima vlastito opterećenje. Prolazne vrhove provjeravamo profinjenjem mreže i vremenskog koraka te pokusom. Integraciju tlaka u silu obrađuje sljedeće poglavlje.
 :::
 

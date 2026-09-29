@@ -182,6 +182,23 @@ local function adapt_cite(cite)
   if object and (collection or object.kind=="Example" or object.kind=="Problem") then return reference(object.id) end
 end
 
+local function pdf_document_link(link)
+  if not FORMAT:match('typst') or link.target:match('^%a[%w+.-]*:') then return nil end
+  local path, fragment = link.target:match('^([^#]+)#?(.*)$')
+  local filename = path and path:match('([^/]+)%.qmd$')
+  if not filename then return nil end
+  for id, doc in pairs(documents) do
+    if doc.path:match('([^/]+)%.qmd$') == filename then
+      -- A standalone PDF must navigate within itself, including appendices.
+      -- The first canonical section is stable even when a title is renamed.
+      local section = index.documents[id].sections[1]
+      assert(fragment ~= '' or section, 'No PDF destination for '..doc.path)
+      link.target = '#'..(fragment ~= '' and fragment or section.id)
+      return link
+    end
+  end
+end
+
 local function adapt_blocks(blocks)
   local result=pandoc.List()
   for i,block in ipairs(blocks) do
@@ -289,5 +306,6 @@ return {
   {Meta=function(meta) collection=meta['mf1-print-collection'] and text(meta['mf1-print-collection'])=='true' or false end},
   {Div=adapt_div},
   {Blocks=adapt_blocks,Span=adapt_span,Cite=adapt_cite,Table=adapt_table,Figure=adapt_figure,FloatRefTarget=adapt_float,Callout=adapt_callout},
+  {Link=pdf_document_link},
   {Pandoc=collection_headers},
 }

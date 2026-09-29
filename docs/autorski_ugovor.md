@@ -1,6 +1,6 @@
 # Autorski ugovor sadržaja MF1
 
-Ovaj ugovor određuje javna i autorska sučelja udžbenika. CI smije odbiti promjenu koja ih krši.
+Ovaj ugovor određuje javna i autorska sučelja sveučilišnog priručnika. CI smije odbiti promjenu koja ih krši.
 
 ## Semantički blokovi
 
@@ -26,6 +26,12 @@ prethodne formule i ne predstavljaju svaki računalni pokus kao CFD.
 Novi pojam objašnjava se pri prvom spomenu; opis primjene ne predstavlja
 izmišljene brojčane rezultate kao izvedenu simulaciju ili mjerenje.
 Komponenta `CFDContext` u registru određuje prikaz u webu, PDF-u i ispisu.
+
+Svako glavno poglavlje u vidljivom tekstu izdvaja jedno postojeće pitanje
+oznakom **Zastani i promisli.** Student najprije oblikuje odgovor, a zatim
+čita pripadno tumačenje. Pitanje stoji uz odgovarajući CFD primjer ili
+numerički pokus. Arhivski skupovi samoprovjere zadržavaju postojeću
+vidljivost; izdvojeno pitanje ne ovisi o njihovu prikazu.
 
 Riješeni primjeri i cjeloviti vođeni zadatci prikazuju se bez vertikalne crte
 i bez lijeve uvlake cijelog bloka. Naslov izravno imenuje problem, primjerice

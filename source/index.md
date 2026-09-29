@@ -1,9 +1,9 @@
 ::: {.content-visible when-format="html"}
-[Priručnik · []{.mf1-book-meta key="author"}]{.mf1-eyebrow}
+[Sveučilišni priručnik · []{.mf1-book-meta key="author"}]{.mf1-eyebrow}
 :::
 
 ::: {.content-visible when-format="typst"}
-Ovaj priručnik vodi od fizikalnog modela i bilance do analitičkog rješenja, mjerenja i numeričke provjere. Primarna su publika studenti strojarstva i brodogradnje, a primjeri iz građevinarstva, energetike, okoliša, biomedicine i procesne tehnike koriste se kada isti zakon pokazuju iz drugog kuta.
+Ovaj sveučilišni priručnik vodi od fizikalnog modela i bilance do analitičkog rješenja, mjerenja i numeričke provjere. Primarna su publika studenti strojarstva i brodogradnje, a primjeri iz građevinarstva, energetike, okoliša, biomedicine i procesne tehnike koriste se kada isti zakon pokazuju iz drugog kuta.
 
 Uz izvode i riješene primjere nalaze se zadatci za samostalan rad. Dodatni numerički pokusi omogućuju istraživanje utjecaja podataka i pretpostavki na rezultat.
 :::
@@ -25,7 +25,7 @@ Od tlaka i hidrostatike do cjevovoda, turbostrojeva i otvorenih tokova — kroz 
 
 ## O priručniku {#sec-o-prirucniku}
 
-Priručnik je namijenjen studentima druge godine strojarstva i brodogradnje. Građevinski, energetski, okolišni, biomedicinski i procesni primjeri uključeni su kada prenose isti model i pomažu studentu prepoznati njegovu opću strukturu.
+Sveučilišni priručnik namijenjen je studentima druge godine strojarstva i brodogradnje. Građevinski, energetski, okolišni, biomedicinski i procesni primjeri uključeni su kada prenose isti model i pomažu studentu prepoznati njegovu opću strukturu.
 
 Primjene u brodogradnji obuhvaćaju hidrostatska opterećenja, uzgon i početni stabilitet, sličnost pri modelnim ispitivanjima te propulziju. Naglasak je na izboru fizikalnog modela, njegovim pretpostavkama i provjeri rezultata.
 

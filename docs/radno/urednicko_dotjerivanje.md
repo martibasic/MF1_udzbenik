@@ -1,4 +1,4 @@
-# Uredničko dotjerivanje cijelog udžbenika
+# Uredničko dotjerivanje cijelog sveučilišnog priručnika
 
 Zahtjev: „Sada se ponašaj kao editor i polišaj knjigu. Make it modern and sleek
 and easy to read.” Početno stanje: `573a0d3`, 23. rujna 2026.

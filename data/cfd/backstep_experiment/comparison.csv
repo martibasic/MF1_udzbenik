@@ -1,0 +1,5 @@
+series,x_over_H,Cf,reported_Cf_error
+experiment,5.882,-0.00022,6.2e-05
+experiment,7.09,0.00045,0.000167
+cfl3d_sstm,6.541666508,-1.252024276e-06,
+cfl3d_sstm,6.5625,1.319786043e-05,

@@ -26,6 +26,7 @@ EXPECTED_CASES = {
     "poiseuille_laminar",
     "venturi_diffuser",
     "hydrofoil_experiment",
+    "backstep_experiment",
 }
 
 
@@ -987,8 +988,8 @@ def validate(data_root: Path) -> tuple[Audit, int, int]:
     ids = [entry.get("case_id") for entry in case_entries]
     audit.require(len(ids) == len(set(ids)), "Manifest ima duplicirane case_id oznake")
     audit.require(
-        set(ids) == EXPECTED_CASES and len(ids) == 3,
-        f"Manifest mora sadrzavati tocno tri slucaja: {sorted(EXPECTED_CASES)}",
+        set(ids) == EXPECTED_CASES and len(ids) == len(EXPECTED_CASES),
+        f"Manifest mora sadrzavati sve ugovorene slucajeve: {sorted(EXPECTED_CASES)}",
     )
 
     ready_count = 0
@@ -1002,6 +1003,8 @@ def validate(data_root: Path) -> tuple[Audit, int, int]:
             required_key = "required_ready_case_files"
         elif status == "reference_ready":
             required_key = "required_reference_case_files"
+        elif status == "experimental_reference":
+            required_key = "required_experimental_case_files"
         else:
             required_key = "required_placeholder_files"
         for filename in manifest.get(required_key, []):
@@ -1042,6 +1045,13 @@ def validate(data_root: Path) -> tuple[Audit, int, int]:
                 case_dir, case_id, case, uncertainty, provenance, audit
             )
             detail = "public experiment + 3 FUN3D grids; archive diagnostics flagged"
+        elif status == "experimental_reference":
+            from verify_backstep_data import validate_case, validate_notebook
+            reference_count += 1
+            audit.issues.extend(validate_case(case_dir))
+            audit.issues.extend(validate_notebook(
+                REPO_ROOT / "notebooks/u12_poiseuille_konvergencija.ipynb", case_dir))
+            detail = "Driver-Seegmiller measurements + published CFL3D/SSTm; source rows and limits checked"
         elif status == "placeholder":
             _validate_placeholder(case_dir, case_id, case, uncertainty, provenance, audit)
             detail = "placeholder, no numerical CSV"
@@ -1078,7 +1088,7 @@ def main() -> int:
         for issue in audit.issues:
             print(f"  - {issue}")
         return 1
-    print("STATUS: PASS (referentni profil ima javne podatke i navedene arhivske praznine)")
+    print("STATUS: PASS (dva sintetička nastavna slučaja i dva javna referentna pokusa; granice dokaza očuvane)")
     return 0
 
 

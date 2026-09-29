@@ -1,6 +1,6 @@
 ## O priručniku {#o-udžbeniku}
 
-Priručnik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. Kroz petnaest poglavlja upoznat ćeš svojstva fluida, hidrostatiku i strujanje u cijevima, turbostrojevima i otvorenim kanalima.
+Sveučilišni priručnik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. Kroz petnaest poglavlja upoznat ćeš svojstva fluida, hidrostatiku i strujanje u cijevima, turbostrojevima i otvorenim kanalima.
 
 Pri prvom čitanju slijedi glavni tekst, riješene primjere i zadatke. *Dublje* i odlomci *Računalna dinamika fluida* dodatno su čitanje: osnovni MF1 možeš pratiti bez učenja CFD postupaka.
 
@@ -19,6 +19,8 @@ Procijenjeno vrijeme uz poglavlja služi planiranju samostalnog rada. Ukupno je 
 3. Riješeni primjeri uspostavljaju početnu jednadžbu i slijed proračuna.
 4. Zadatci za vježbu razvrstani su po razini samostalnog izbora modela; mrežno izdanje sadrži sklopive smjernice i kontrolne rezultate, a izdanje u PDF-u odgovarajući dodatak F.
 5. Sažetak poglavlja okuplja osnovne modele, granice njihove primjene i inženjersko značenje rezultata.
+
+Na pitanju **Zastani i promisli** najprije oblikuj vlastiti odgovor, pa ga usporedi s objašnjenjem koje slijedi. Pitanje provjerava izbor modela i značenje rezultata prije novoga računa.
 
 Kratki primjeri uvode pojedinu relaciju, a cjeloviti zadatci povezuju više koraka. Okviri *Fizikalno značenje* tumače rezultat, dok *Granica modela* objašnjava kada odabrane pretpostavke prestaju vrijediti.
 

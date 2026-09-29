@@ -1,8 +1,8 @@
 # Mehanika fluida: modeli, problemi i rješenja
 
-*Priručnik za samostalan rad s numeričkim pokusima i primjenama u brodogradnji*
+*Priručnik za samostalan rad s numeričkim pokusima i primjenama u brodogradnji i strojarstvu*
 
-Otvoreni radni repozitorij priručnika za temeljni kolegij mehanike
+Otvoreni radni repozitorij sveučilišnog priručnika za temeljni kolegij mehanike
 fluida. Primarna su publika studenti strojarstva i brodogradnje, uz primjere iz
 građevinarstva, energetike, okolišnog, biomedicinskog i procesnog inženjerstva
 kada osvjetljavaju isti fizikalni model.
@@ -10,13 +10,11 @@ kada osvjetljavaju isti fizikalni model.
 Djelo se priprema za postupak odobravanja sveučilišnog priručnika; radno
 izdanje još ne označava odobrenje te kategorije.
 
-Aktualna grana sadrži arhitekturu **MF1 v2** s poglavljima U01–U15. Sadržajna i
-automatizirana znanstvena revizija provedene su, a sekvencijski proizvodni
-build i tehnički QA potvrđuju da je stanje **tehnički spremno za `1.0-rc1`**.
-To nije oznaka `v1.0` ni potvrda javnoga deploya: zasebna stručna recenzija
-nastavnika mehanike fluida, primjenska recenzija iz strojarstva ili
-brodogradnje te studentski pilot ostaju obvezni izlazni kriteriji. Mjerodavan
-presjek nalazi se u
+Aktualna grana sadrži arhitekturu **MF1 v2** s poglavljima U01–U15. Tehnička
+provjera izdanja i javna objava vode se odvojeno od stručne recenzije i
+studentskog pilota. Priručnik još nije poslan na recenziju; tehnički prolaz
+ne znači oznaku `v1.0` ni formalno odobrenje djela. Mjerodavan datirani
+presjek, s razlikom između lokalne dorade i poslanog commita, nalazi se u
 [statusu izrade](status_izrade_udzbenika.md).
 
 ## Sadržaj v2
@@ -25,9 +23,9 @@ Aktualni dijelovi, poglavlja i dodaci definirani su u
 [modelu knjige](content/book.json). Njihov se popis automatski prikazuje u
 navigaciji, početnom katalogu i [kartiranju izvora](docs/kanonska-struktura-sadrzaja.md).
 
-Kanonski rukopis trenutačno obuhvaća **15 poglavlja, 87 riješenih primjera, 90
-samostalnih zadataka, šest dodataka, 17 notebookova, 1.216 stabilnih ID-jeva,
-795 prikazanih jednadžbi i 145 sati** planiranoga rada uz priručnik. Tih 145
+Kanonski rukopis trenutačno obuhvaća **15 poglavlja, 88 riješenih primjera, 90
+samostalnih zadataka, šest dodataka, 17 notebookova,
+797 prikazanih jednadžbi i 145 sati** planiranoga rada uz priručnik. Tih 145
 sati nije cijelo ECTS opterećenje kolegija. Ishodi, preduvjeti i raspodjela rada
 definirani su u
 [kurikularnoj matrici](docs/kurikularna_matrica.md).
@@ -43,8 +41,9 @@ definirani su u
   [arhitekturi digitalnog priručnika](docs/arhitektura.md).
 - `assets/print/` sadrži statičke SVG skice, a `assets/qr/` QR kodove.
 - `notebooks/` sadrži 17 nastavnih notebooka.
-- `data/cfd/` sadrži tri mala V&V podatkovna paketa: dva su spremna nastavna
-  slučaja, a jedan je pošteno ograničen referentni paket.
+- `data/cfd/` sadrži četiri V&V podatkovna paketa: dva sintetička nastavna
+  slučaja te javne reference za NACA 0012 i tok iza stepenice, s izričitim
+  granicama dostupnih eksperimentalnih i numeričkih dokaza.
 - `tools/` sadrži verifikatore, manifest zadataka sheme v2 i read-only QA
   provjere.
 - `docs/` sadrži autorska pravila, kurikularnu matricu i javnu erratu; radna
@@ -115,16 +114,15 @@ objave.
 ## Kako se čita QA izvještaj
 
 Aktualni `verify_all.py` obuhvaća svih 15 poglavlja kroz 19 modula i izvještava
-**1.340 stvarnih provjera: 1.119 usporedbi s unaprijed zadanim ciljem i 221
-invarijantnih, dimenzijskih ili graničnih provjera**. Manifest sheme v2 ima
-90/90 zadataka u skupini `golden`, 393 parsirana skalarna ulaza i 312 ugovora
-rezultata. Ne dopušta tautološku usporedbu rezultata sa samim sobom ni zadatak
+**1.345 stvarnih provjera: 1.123 usporedbe s unaprijed zadanim ciljem i 222
+invarijantne, dimenzijske ili granične provjere**. Manifest sheme v2 ima
+90/90 zadataka u skupini `golden`. Ne dopušta tautološku usporedbu rezultata sa samim sobom ni zadatak
 bez deklarirane provjere; aktualni presjek ima **0 self-comparison zapisa i 0
 rupa**. Odvojeni paket kritičnih fizikalnih regresija prolazi **22/22** provjere.
 
 Proizvodni QA izvršava notebookove i provjerava slike, poveznice,
 preusmjerenja, PDF te prikaz na širinama 320, 768 i 1.440 px. Rezultate čitaj
-iz izlaza posljednje izgradnje; arhivski presjek nalazi se u
+iz izlaza posljednje izgradnje; aktualni datirani presjek nalazi se u
 [statusu izrade](status_izrade_udzbenika.md).
 
 Automatizirane provjere ne ocjenjuju jasnoću objašnjenja niti mogu otkriti

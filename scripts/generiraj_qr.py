@@ -1,8 +1,8 @@
-"""Generiranje QR kodova za interaktivne prikaze u udžbeniku.
+"""Generiranje QR kodova za interaktivne prikaze u sveučilišnom priručniku.
 
 Ova skripta čita popis veza definiran u rječniku VEZE i za svaku
 generira SVG datoteku u mapi assets/qr/. Iste SVG datoteke koriste
-se u tiskanoj inačici udžbenika u okvirima `.mf1-interaktivno`.
+se u tiskanoj inačici sveučilišnog priručnika u okvirima `.mf1-interaktivno`.
 
 Pokretanje:
     python scripts/generiraj_qr.py
@@ -36,7 +36,7 @@ COLAB_PREDLOZAK = (
 )
 
 
-# Popis svih interaktivnih prikaza u udžbeniku.
+# Popis svih interaktivnih prikaza u sveučilišnom priručniku.
 # Ključ je oznaka prikaza (koristi se kao ime SVG datoteke),
 # vrijednost je ime notebook datoteke u mapi notebooks/.
 VEZE: dict[str, str] = {

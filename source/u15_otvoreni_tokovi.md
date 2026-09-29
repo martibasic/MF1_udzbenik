@@ -250,6 +250,8 @@ Nizvodna je dubina veća, a specifična energija manja. Potrebna duljina ili kon
 
 **Smirivanje mlaza iza ustave.** U []{.mf1-chapter-ref target="u05"} određivali smo opterećenje ustave, a sada pratimo što njezin brzi mlaz radi nizvodno. Za oblikovanje umirnog bazena zadamo dotok, otvor ustave i odgovarajuću nizvodnu razinu. CFD prati položaj skoka, njegov valjak i promjenjive sile na dno i stijenke. Uspoređujemo izvedbe bazena pri istim radnim uvjetima.
 
+**Zastani i promisli.** Model hidrauličkog skoka daje pad mehaničke energije, a bilanca količine gibanja se zatvara. Jesu li rezultati nespojivi?
+
 VOF prati volumni udio vode u ćeliji: 1 znači vodu, 0 zrak, a međuvrijednost ćeliju kroz koju prolazi granica faza. Ručni @ex-hidraulicki-skok-bazen daje spregnutu dubinu i gubitak uz hidrostatske presjeke izvan valjka. Te veličine, očuvanje vode te prostorno i vremensko profinjenje provjeravamo i u CFD-u. Pad mehaničke energije uz zatvorenu bilancu količine gibanja očekivana je posljedica disipacije u skoku. Nerazlučeni mjehurići traže dodatni opis. Za predviđanje erozije iza bazena treba još model dna i pronosa sedimenta; sama velika brzina upozorava na mjesto za daljnju analizu.
 :::
 

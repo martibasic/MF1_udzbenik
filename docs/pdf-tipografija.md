@@ -171,3 +171,22 @@ pregled složenih iskaza i tiskovnih skica. Naknadno je dodatno razmaknuta
 usporedba Reynoldsovih režima, a preostali brojčani kriteriji premješteni
 iz zahtjeva u iskaze zadataka. Konačno izdanje ponovno prolazi puni
 objavni postupak; njegov zapis je `tools/tmp/concise-tasks-review/publication.log`.
+
+## Konceptualna pitanja i eksperimentalni primjer — 27. rujna 2026.
+
+Dodano je 15 postojećih konceptualnih pitanja u vidljivi tijek poglavlja i
+jedan novi riješeni primjer na mjernim podatcima. Novi P6 u U12 slijedi ista
+polja i razmake kao ostali primjeri. Uvod mu je sažet nakon pregleda prijeloma.
+Pojmovnik koristi povezani stupac „Odredište”, a puni podnaslov uključuje
+strojarstvo. Sustav stilova, skice i njihove najmanje veličine slova ostali
+su nepromijenjeni.
+
+Završni PDF ima 318 stranica (prethodno 315). Kontaktno je pregledano
+35 odabranih stranica s naslovnicom, svih 15 pitanja, novim primjerom,
+pojmovnikom i dodatcima D/E, uz povećani pregled ključnih mjesta. Puni
+objavni CI prošao je za 838 s, uključujući automatski pregled svih
+stranica PDF-a, web, A4 i JupyterLite. Zapis i granice ove dorade nalaze se u
+[uredničkom izvještaju](radno/prirucnik_dorada_2026-09-27.md).
+
+SHA-256 aktualnog PDF-a i istovjetnog mrežnog preuzimanja:
+`7a11b4bd9effebcd2dd9fd667837d54443ed9019b1066e3cb15b59217c2b50a4`.

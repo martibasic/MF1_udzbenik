@@ -341,6 +341,8 @@ Otpor tijela → **koeficijent otpora** $C_d$; pad tlaka u cijevi → **koeficij
 
 **Mali ponton u bazenu i stvarni ponton u valovima.** U []{.mf1-chapter-ref target="u06"} provjeravali smo gaz i početni stabilitet. Za dinamički pokus manjega pontona sada treba uskladiti geometriju, raspodjelu mase i važne bezdimenzijske uvjete. Froudeova sličnost povezuje gibanje s gravitacijskim valovima, dok Reynoldsov broj određuje odnos inercije i viskoznosti. Ručni @ex-u14-froudeova-slicnost-model-broda-u-vucnom-bazenu računski pokazuje da ista voda pri promjeni mjerila ne čuva oba broja.
 
+**Zastani i promisli.** Model broda i prototip imaju isti Froudeov broj. Smijemo li bez dodatne provjere prenijeti i viskozni otpor?
+
 Jednak Froudeov broj zato ne potvrđuje prijenos viskoznog otpora. CFD računi obaju mjerila mogu pokazati osjetljivost otpora i prigušenja na promijenjeni $Re$, uz zasebne numeričke provjere; sami ne uklanjaju razliku mjerila. Za kapilarne učinke dodatno provjeravamo $We$ i $Bo$. Odabir modela tako počinje procjenom mehanizama prije izrade mreže; pregled daje @sec-cfd-mapa.
 :::
 

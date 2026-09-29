@@ -154,7 +154,7 @@ može izvesti arhivu samo u novu mapu izvan repozitorija ili unutar `tools/tmp/`
 python scripts/generiraj_notebooke.py --archive-output tools/tmp/stari-notebookovi
 ```
 
-Postojeća odredišta i izvori udžbenika zaštićeni su od prepisivanja.
+Postojeća odredišta i izvori sveučilišnog priručnika zaštićeni su od prepisivanja.
 `scripts/generiraj_qr.py` kompatibilna je ulazna točka aktualnog QR generatora:
 bez `--write` samo provjerava izlaze; za novo uređivanje koristi naredbu ispod.
 

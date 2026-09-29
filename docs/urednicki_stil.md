@@ -1,4 +1,4 @@
-# Urednički stil udžbenika
+# Urednički stil sveučilišnog priručnika
 
 Ovaj dokument opisuje zajednički prikaz i urednički glas nakon dotjerivanja
 knjige. Autorski ugovor, kurikularna matrica i pravila fizikalnih skica ostaju

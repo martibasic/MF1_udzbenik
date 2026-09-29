@@ -134,6 +134,8 @@ $$ {#eq-kinematika-kv-rijeseni-primjer-srednja-brzina-iz-profila-brzin-03}
 
 **Dobivaju li svi rashladni kanali jednak protok?** Ručni @ex-u08-rashladni-krug-baterijskog-paketa-elektricnog-vozila-t2 pretpostavlja jednaku podjelu i stalan ukupni protok čak nakon blokade kanala. Za provjeru podjele u CFD-u zadamo ukupni dotok i nizvodne otpore, a pojedinačne protoke izračunamo. Ako kanali završavaju u istom sabirniku, njegov tlak nije nužno jednak tlaku neposredno na svakom izlazu iz razdjelnika: između njih postoji otpor kanala. CFD izračunava raspodjelu, a $Q=\int_A\vec v\cdot\vec n\,dA$ daje protok svake grane.
 
+**Zastani i promisli.** Zbroj izlaznih protoka razdjelnika jednak je ulaznome. Dokazuje li to da svaki rashladni kanal dobiva točan protok?
+
 Točan zbroj izlaznih protoka još ne potvrđuje podjelu: odstupanja pojedinih grana mogu se poništiti. Uz ukupnu bilancu usporedimo udjele grana pri promjeni komore ili položaja ulaza. Najveća brzina na slici ne govori koji kanal prima najviše tekućine; važan je integral preko cijelog presjeka. Za promjenjivu gustoću istu provjeru provodimo masenim protocima.
 :::
 

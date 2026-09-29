@@ -102,6 +102,8 @@ Ova jednadžba pokazuje da plivajuće tijelo uranja toliko da masa istisnutog fl
 
 **Ponton s baterijskim spremnikom na palubi.** Najprije tražimo gaz u mirnoj vodi. U CFD modelu zadamo oblik trupa, masu i položaj težišta, a vertikalno gibanje tijela povežemo sa silama fluida. Uzgon nastaje integracijom tlaka po trupu; ne dodajemo ga još jednom kao zasebnu silu $\rho gV_{ist}$. Ručni @ex-u07-koliki-gaz-ima-radni-ponton-pri-simetricnom provjerava gaz uz simetričan teret i uspravan ponton.
 
+**Zastani i promisli.** Isti teret podignut je više na pontonu, a uspravni gaz ostao je jednak. Je li time potvrđen i jednak početni stabilitet?
+
 Isti gaz nakon podizanja tereta ne potvrđuje isti stabilitet. Za isti trup i masu viši $KG$ smanjuje $GM$, premda uspravna slika ostaje jednaka. Zato sljedeći račun dopušta naginjanje: uspoređujemo momente i gibanje, odvojeno od ravnotežnog gaza.
 
 []{#kako-računalo-prati-plutanje}

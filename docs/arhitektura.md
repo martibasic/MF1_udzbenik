@@ -1,4 +1,4 @@
-# Arhitektura digitalnog udžbenika
+# Arhitektura digitalnog sveučilišnog priručnika
 
 Knjiga ima jedan sadržajni model i tri izlaza: web, nativni PDF i ispis
 iz preglednika. Početni nalazi i odluke zapisani su u
@@ -182,7 +182,19 @@ kada je skriven. HTML razlikuje zaslon i ispis zajedničkim medijskim pravilima.
 Postojeća priprema i samoprovjera zadržavaju `[]`; promjena mehanizma nije
 odobrenje za promjenu vidljivog sadržaja.
 
+Prema uredničkoj odluci od 27. rujna 2026. jedno pitanje iz svakog skupa
+samoprovjere izdvojeno je u običan vidljivi tekst oznakom „Zastani i
+promisli.”, uz pripadni CFD odlomak ili numerički pokus. To nisu novi
+skriveni blokovi niti nova lista iznimaka u adapteru.
+
 ## Referencije i metapodatci
+
+U PDF-u poveznice na kanonske `.qmd` dokumente vode unutar iste publikacije:
+zadani fragment čuva se, a poveznica bez fragmenta vodi na prvi odjeljak
+prema indeksu sadržaja. Zajednički adapter primjenjuje isto pravilo na ručno
+pisane veze i generirane reference poglavlja. Web putanje i vanjske veze
+ostaju nepromijenjene. Audit konačnog PDF-a odbija pokušaje otvaranja
+izvornog `.qmd` dokumenta i provjerava postojanje unutarnjih odredišta.
 
 ```markdown
 Vidi @ex-bilanca-primjer i @task-odabir-sustava.

@@ -182,6 +182,8 @@ Mala promjena gustoće može biti važna kada je istisnuti volumen malen.
 
 **Hidraulična preša: sila i odziv nisu isto pitanje.** Ručni @ex-u01-servisna-hidraulicna-dizalica-t2 pretpostavlja sporo podizanje bez gubitaka: Pascalov zakon povezuje sile, a očuvanje volumena hodove. Ako želimo znati koliko brzo klip reagira nakon otvaranja ventila, model mora obuhvatiti dovod, ventil i promjenu volumena komore. Zadajemo pogon i opterećenje, a računamo tlakove i gibanje; ili zadamo gibanje klipa pa određujemo potrebnu silu. U CFD-u lokalni tok kroz ventil otkriva gdje nastaje dodatni pad tlaka.
 
+**Zastani i promisli.** Preša daje veću izlaznu silu. Student iz toga zaključuje da daje i veći izlazni rad. Koju veličinu još mora usporediti?
+
 Veća izlazna sila sama ne potvrđuje veći rad: usporedi i hodove. U sporoj granici, uz jednake visine i zanemarive gubitke, račun treba vratiti omjer sila $A_2/A_1$ i očuvanje istisnutoga volumena. Pri brzom odzivu treba razmotriti stlačivost tekućine preko modula $K$, podatljivost vodova i eventualni zarobljeni zrak. Za odziv cijele instalacije često najprije dostaje jednostavniji dinamički model; CFD se koristi za dio čiji prostorni tok bitno utječe na odgovor.
 :::
 

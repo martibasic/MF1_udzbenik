@@ -3,7 +3,51 @@
 Ovaj dokument prati sadržajne i tehničke promjene javnih izdanja. Potvrđene
 pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
-## Unreleased — tehnički spremno za `1.0-rc1`
+## Unreleased — radno izdanje
+
+Aktualno stanje i potvrđeni prolazi vode se u
+[statusu izrade](status_izrade_udzbenika.md). Donji datirani zapisi opisuju
+stanje pojedine revizije; stare brojke i navodi o objavi nisu aktualni status.
+
+### Pitanja, eksperimentalna usporedba i naziv — 27. rujna 2026.
+
+- U svih 15 poglavlja jedno od postojećih konceptualnih pitanja izdvojeno
+  je u vidljivi tekst uz pripadajuće CFD ili numeričko tumačenje.
+- Pojmovnik ima izravne poveznice na poglavlja i dodatke, s čitljivim
+  oznakama umjesto internih kodova.
+- U PDF-u kanonske poveznice i generirane reference poglavlja vode na
+  unutarnja odredišta, uključujući dodatke; više ne pokušavaju otvoriti
+  izvorne `.qmd` datoteke. Regresija čuva odvojeni web prikaz i vanjske veze.
+- Novi P6 u U12 uspoređuje mjerenje i CFD položaja ponovnog priljubljivanja
+  iza stepenice. Izvorne tablice Driverova i Seegmillerova pokusa te
+  objavljeni CFL3D rezultati arhivirani su s provenijencom. Postojeća
+  bilježnica i verifier provjeravaju isti račun; dodani su testovi arhiva
+  i podudarnosti bilježnice. Knjiga sada ima 88 primjera i 797 jednadžbi.
+- Ponovljen pregled javne NACA arhive dokumentira preostale granice
+  dostupnih dokaza; ne nadomješta ih izmišljenim podatcima i ne ostavlja
+  korisniku obvezu traženja nedostajućih zapisa.
+- Podnaslov glasi „Priručnik za samostalan rad s numeričkim pokusima i
+  primjenama u brodogradnji i strojarstvu”. Naziv publikacije usklađen je
+  na sveučilišni priručnik. Stabilna sidra i putanje ostaju sačuvani.
+  Auditi stvarnog HTML-a i PDF-a trajno provjeravaju naziv, a PDF audit i
+  potpuni aktualni podnaslov na naslovnici.
+- Središnji status obnovljen je prema aktualnim izvorima. Stručna recenzija
+  i studentski pilot ostaju budući koraci; priručnik još nije poslan na recenziju.
+
+### CFD primjene i ujednačeni zadaci — 26.–27. rujna 2026.
+
+- CFD objašnjenja u svih 15 poglavlja povezana su s konkretnim fizikalnim
+  sustavima, očekivanim rezultatima i provjerama valjanosti modela.
+- Postojećih 87 primjera i 90 zadataka dobilo je jedinstvena polja „Tekst
+  zadatka” i „Traži se”; primjeri imaju i „Rješenje” te „Provjera i tumačenje”.
+  Fizikalni postav i podatci objedinjeni su, zahtjevi iskazani izravnim
+  glagolima, a razmaci usklađeni u PDF-u i webu.
+- U 57 skica uz riješene primjere uklonjeno je ponavljanje cijelog računa;
+  zadržani su simbolički odnosi i smisleni grafovi. Tiskovne izvedenice
+  obnovljene su uz najmanje 9 pt za oznake.
+- Prethodno izdanje od 315 stranica prošlo je puni lokalni objavni CI i
+  GitHub Action za commit `8e05312`. Taj prolaz prethodi gornjoj dopuni i
+  ne služi kao njezina potvrda.
 
 ### Numeričke poveznice — 16. rujna 2026.
 

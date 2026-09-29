@@ -62,12 +62,12 @@ Za skice primijeni SVG standard iz protokola. Evidencije starih migracija u
   raspored u analizi. Ne uklanjaj jedini T4 niti dodaj Z7 radi zaobilaženja ugovora.
 - Razinu odredi prema stvarnim odlukama studenta. Ne povisuj oznaku samo radi
   kvote. Skup od 8–12 ideja jest banka alternativa, ne automatsko proširenje knjige.
-- Zahtjev za pregled ili prijedlog ne znači izmjenu udžbenika. Kad je provedba
+- Zahtjev za pregled ili prijedlog ne znači izmjenu sveučilišnog priručnika. Kad je provedba
   zatražena ili već odobrena, dovrši povezane izmjene i provjere bez novog
   potvrđivanja svakog koraka. Ne širi posao na druga poglavlja bez razloga iz zadatka.
 - Tekst, odgovor, skica, povezani notebook i verifikator moraju opisivati isti
   problem i podatke. Regeneracija manifesta sama ne dokazuje tu podudarnost.
-- Pri prilagodbi skica zadrži postojeći vizualni stil udžbenika (raspored panela,
+- Pri prilagodbi skica zadrži postojeći vizualni stil sveučilišnog priručnika (raspored panela,
   paletu, šrafure, gradijente i tipografiju). Zamjena zadatka sama po sebi ne znači
   odobrenje za vizualni redizajn; prilagodi prizor i oznake novom sadržaju.
 - Za PDF i ispis primijeni [sustav tiskovnih figura](docs/ispis-skica.md).

@@ -343,7 +343,10 @@
       "url": "https://www.cobaltcfd.com/pdfs/V%26VexternalTurbFlow.Freeman.AeroSci%26Tech.published.20140127.pdf",
       "sha256": "ab27a04828f2b0ecbad8fa240a759a102691a3ea12cccade8ec0c501882be601",
       "pages": 10,
-      "relevant_pdf_pages": [7, 8],
+      "relevant_pdf_pages": [
+        7,
+        8
+      ],
       "review_scope": "Full text; uncertainty statement on printed p. 90 (PDF p. 7) also inspected visually.",
       "finding": "The paper uses a 2.5 percent experimental uncertainty for CD at alpha=0 degrees, citing Ladson. Its NACA validation point is at zero incidence. It does not establish a complete uncertainty budget for the selected 10.10-degree point or supply the archived 10-degree FUN3D histories and boundary fluxes.",
       "applied_to_selected_measurement": false
@@ -378,5 +381,23 @@
     "fun3d_access": "NASA software request required; no public binary available for an immediate matching run.",
     "remaining_external_input": "Original per-run histories and flux records, and a complete measurement uncertainty budget at the comparison incidence. Another solver run cannot reconstruct missing experimental evidence or certify the archived run."
   },
-  "conclusion": "Reference comparison only. No complete validation verdict; requested diagnostics remain unavailable in the inspected public sources."
+  "conclusion": "Reference comparison only. No complete validation verdict; requested diagnostics remain unavailable in the inspected public sources.",
+  "follow_up_2026_09_27": {
+    "archive_tree_sha": "20a39f549dbff988a6accc421ac84dafc4487695",
+    "truncated": false,
+    "reviewed_folders": [
+      "NACA0012_validation",
+      "NACA0012numerics_val"
+    ],
+    "added_paths": [],
+    "removed_paths": [],
+    "primary_pages_rechecked": [
+      "https://tmbwg.github.io/turbmodels/naca0012_val.html",
+      "https://tmbwg.github.io/turbmodels/naca0012numerics_val_sa_withpv.html",
+      "https://ntrs.nasa.gov/citations/19880019495",
+      "https://fun3d.larc.nasa.gov/papers/aiaa-2015-1746.pdf"
+    ],
+    "editorial_resolution": "Nastavna usporedba profila ostaje dovršena uz označene pretpostavke. Potpuna validacija arhiva ne tvrdi se i ne čeka podatke od korisnika. Stvarnu dodatnu eksperimentalnu usporedbu pruža zaseban pokus iza stepenice.",
+    "replacement_for_missing_diagnostics": false
+  }
 }

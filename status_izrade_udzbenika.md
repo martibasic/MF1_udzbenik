@@ -1,141 +1,92 @@
-# Status izrade udžbenika MF1
+# Status izrade sveučilišnog priručnika MF1
 
-**Presjek:** 16. rujna 2026.
+**Presjek: 27. rujna 2026.** Ovaj dokument opisuje aktualno lokalno radno
+izdanje. Datirani zapisi u `docs/radno/`, dnevniku promjena i tipografskom
+izvještaju čuvaju povijest; njihovi brojevi nisu aktualni inventar.
 
-**Cilj izdanja:** tehničko stanje **spremno je za `1.0-rc1`**; `v1.0` dolazi tek
-nakon dviju neovisnih stručnih recenzija i studentskog pilota.
+**Naslov:** *Mehanika fluida: modeli, problemi i rješenja — Priručnik za
+samostalan rad s numeričkim pokusima i primjenama u brodogradnji i strojarstvu*
 
-Ovaj dokument opisuje stanje v2 revizije u aktualnoj radnoj grani. Kanonski
-izvori, HTML, nativni PDF i JupyterLite sekvencijski su izgrađeni i prošli
-tehnički QA. Time se ne tvrdi da je izdanju dodijeljena oznaka `v1.0`, da su
-ljudski kriteriji provedeni ili da je kandidat javno deployan.
+Prethodni commit `8e05312b4b70eb1c96b9b14d3585ea853c609149` prošao je puni
+lokalni objavni CI i [GitHub Action](https://github.com/martibasic/MF1_udzbenik/actions/runs/36302967616)
+(završen uspješno 27. rujna). Današnje dopune još nisu poslane na GitHub.
+Prolaz prethodnog commita nije dokaz provjere tih dopuna.
 
-## Legenda
+## Aktualni sadržaj i završene dorade
 
-- **Implementirano** — sadržaj ili provjera postoji i prolazi u radnoj grani.
-- **Tehnički RC spremno** — završni artefakt iz aktualnih izvora izgrađen je i
-  prošao pripadajući automatizirani i renderirani QA.
-- **Ljudski kriterij** — zahtijeva vanjske recenzente ili stvarne studente i ne
-  može se zatvoriti automatizacijom u repozitoriju.
+| Područje | Stanje i granica tvrdnje |
+|---|---|
+| Inventar | 15 poglavlja, 88 riješenih primjera, 90 samostalnih zadataka, šest dodataka, 797 prikazanih jednadžbi, 93 referencirane SVG skice, 23 bibliografska zapisa i 17 bilježnica. Planirano opterećenje ostaje 145 sati rada uz priručnik. |
+| Zadaci | Svako poglavlje ima šest zadataka u raspodjeli `2×T1 + 2×T2 + T3 + T4`. Iskazi i rezultati postojećih 90 zadataka nisu mijenjani u ovoj dopuni. |
+| CFD objašnjenja | Postojeći povezani primjeri i fizikalna tumačenja dobili su po jedno odabrano postojeće pitanje „Zastani i promisli” u svakom poglavlju. Slijedi ga pripadajuće tumačenje u tijeku teksta. |
+| Pojmovnik | Posljednji stupac sadrži poveznice na poglavlja i dodatke umjesto internih kodova U/D. Broj ili slovo odredišta tumači se u uvodu tablice. |
+| Eksperimentalni primjer | Novi P6 u U12, `ex-stepenica-mjerenje-cfd`, povezuje mjerenje ponovnog priljubljivanja iza stepenice i objavljeni CFD. Izvorne tablice, provenijenca, račun, bilježnica i verifier usklađeni su. |
+| CFD podatci | Dva sintetička nastavna paketa te dvije javne reference: NACA 0012 i tok iza stepenice. Sintetički paket nije stvarni pokus; referentni paket nije potpuna validacija. |
+| NACA arhivske praznine | Ponovljen pregled TMR arhive nije pronašao tražene povijesti reziduala/sila ni masenu bilancu. Izostanak je dokumentirano ograničenje izvora, a ne zadatak korisniku da pribavi podatke. Nastavna usporedba Z6 izričito razlikuje objavljene brojeve i pretpostavljene nesigurnosti. |
+| Naziv publikacije | Vidljivi tekst koristi naziv sveučilišni priručnik; naslov uključuje i strojarstvo. Stare putanje repozitorija i sidra sačuvani su radi postojećih poveznica. |
 
-## Sažetak po radnim tokovima
+## Provjere aktualne dopune
 
-| Radni tok | Status | Dokaz i granica tvrdnje |
-|---|---|---|
-| Arhitektura U01–U15 | **Implementirano** | Kanonski slijed ima 15 poglavlja i šest dodataka. Stari javni URL-ovi imaju prijelazna preusmjerenja, a `source/` ostaje jedini kanonski izvor. |
-| Sadržaj i opterećenje | **Implementirano** | Inventar sadrži 87 riješenih primjera, 90 samostalnih zadataka i 145 sati rada uz udžbenik. Svako glavno poglavlje ima šest zadataka u raspodjeli `2×T1 + 2×T2 + T3 + T4`. |
-| Konciznost glavnog teksta | **Implementirano** | Usporedivi regex inventar leksičkih tokena smanjen je sa 124.957 u prethodnih 14 poglavlja na 108.711 u RC-u s 15 poglavlja (`−13,00 %`), pa je kriterij rasta od najviše 5 % ispunjen. |
-| Znanstvena korektura | **Implementirano u rukopisu** | Ispravljeni su poznati P0/P1 nalazi o predznacima, referentnom tlaku, nestacionarnosti, radu strojeva, kavitaciji, stabilitetu i granicama modela. Automatizirane fizikalne regresije prolaze 22/22; neovisna stručna potvrda ostaje zaseban ljudski kriterij. |
-| Tekst i izvodi | **Implementirano** | Uvedeni su standardni blokovi, jasnije pretpostavke, granični slučajevi i granice modela; napredni detalji odvojeni su u blokove `Dublje` ili dodatke. |
-| Zadaci i ključ | **Implementirano** | Svih 90 zadataka ima stabilni ID, razinu, zapis u zasebnom D06 ključu i `golden` ugovor u manifestu sheme v2. Manifest sadrži 393 parsirana skalarna ulaza i 312 ugovora rezultata; naputci i kontrolni rezultati odvojeni su od iskaza zadatka. |
-| Numerički QA | **Implementirano** | `verify_all.py` obuhvaća 19 modula i prolazi 1.001 provjeru: 924 usporedbe s unaprijed zadanim ciljem te 77 invarijantnih, dimenzijskih ili graničnih provjera. Evidentirano je 0 self-comparison usporedbi, 0 rupa i 0 neprovjerenih zadataka. |
-| Notebookovi | **Implementirano** | Svih 17 notebookova slijedi obrazac `predvidi → izračunaj → provjeri`, ima najmanje dvije izvršive tvrdnje i analizu pogreške, konvergencije, osjetljivosti ili nesigurnosti. Lokalno izvršavanje u čistim kernelima prolazi 17/17. |
-| CFD V&V paketi | **2 spremna + 1 referentni** | Poiseuille i Venturi/difuzor imaju tri mreže, reziduale/monitore, masenu bilancu i GCI; oba su jasno označena kao sintetički nastavna. NACA 0012 ima javna mjerenja i tri najfinije FUN3D mreže, ali izvorna arhiva nema reziduale, monitore, maseni debalans ni potpuni mjerni budžet nesigurnosti. |
-| Stabilna javna sučelja | **Implementirano** | Inventar sadrži 1.185 stabilnih ID-jeva i 789 prikazanih jednadžbi. Unutarnje veze, 11 prijelaznih preusmjerenja i zabrana kopiranja kanonskog `source/` u javni izlaz provjeravaju se automatizirano. |
-| Skice i izvorna pristupačnost | **Tehnički RC spremno** | 143/143 SVG datoteke prošle su izvorni audit; završni HTML sadrži 210 renderiranih slika, a PDF i A4 prikaz uključeni su u izlazni vizualni QA. |
-| Hrvatska lokalizacija | **Tehnički RC spremno** | Hrvatski UI, tipkovnički fokus, smanjeno gibanje, mobilno prelamanje i kontrast provjereni su u 72 prikaza na 320, 768 i 1.440 px te u zasebnom A4 prikazu. |
-| HTML izdanje | **Tehnički RC spremno** | Sekvencijski izgrađen artefakt prolazi audit: 24 stranice, 210 slika, 1.916 veza, 420 sklopivih blokova i 11 preusmjerenja. |
-| Nativni PDF | **Tehnički RC spremno** | Quarto/Typst PDF ima 285 A4 stranica i 6.670.911 B; audit ekstrahira 507.553 znaka. Autorski blokovi i primjeri nativno su stilizirani, prvi red odlomka nema uvlaku, a razmak između odlomaka iznosi `0.72em`. |
-| JupyterLite | **Tehnički RC spremno** | Završni paket s Pyodide kernelom i svih 17 notebookova izgrađen je; strukturni audit i preglednički smoke-test kernela prolaze. Colab ostaje pričuvni put. |
-| Citati i normativne tvrdnje | **Implementirano u rukopisu** | Lokalni citati povezuju promjenjive i normativne tvrdnje s primarnim izvorima, a konstrukcijska i sigurnosna značenja ograničena su na stvarno provedeni model. Vanjski recenzenti provjeravaju konačnu stručnu dostatnost. |
-| Errata i dnevnik izmjena | **Implementirano** | Postoje javni issue obrazac, evidencija po stabilnom ID-ju i `CHANGELOG.md`; tablica errate ostaje prazna dok nema potvrđene pogreške objavljenoga izdanja. |
+Numerički QA prolazi **1.345 provjera u 19 modula**: 1.123 usporedbe s unaprijed
+zadanim ciljem i 222 invarijantne, dimenzijske ili granične provjere. Dodatne
+neovisne fizikalne regresije prolaze 22/22. Manifest pokriva 90/90 zadataka;
+nema deklariranih rupa ni tautoloških usporedbi.
 
-## Aktualna QA snimka
+Novi arhivski verifier provjerava izvorne datoteke, odabrane retke i podatke
+ugrađene u bilježnicu. Sedam regresijskih testova odbija promijenjeno mjerenje,
+oštećen arhivski izvor, izmišljenu razinu pouzdanosti ili mrežnu konvergenciju,
+pogrešan Reynoldsov broj i razilaženje podataka bilježnice.
 
-Provjere su pokrenute iz korijena repozitorija 16. rujna 2026. nad kanonskim
-izvorima i sekvencijski izgrađenim RC artefaktima.
+**Puni lokalni objavni CI: PASS (838 s).** Zajednički runner izgradio je
+web, PDF i JupyterLite iz završnih izvora; izvršio 17/17 bilježnica i provjerio
+tri interaktivna laboratorija, 72 mrežna prikaza na 320/768/1440 px te A4 ispis.
+Izvještaj: `tools/tmp/prirucnik-dorada-20260927/publication-final.log` (lokalni,
+ignorirani dokaz). Današnje promjene nisu commitane ni poslane na GitHub.
 
-| Provjera | Rezultat | Tumačenje |
-|---|---|---|
-| `python tools/generate_verification_manifest.py` | **PASS**, shema v2, 90/90 `golden` zadataka | Manifest se reproducibilno izvodi iz kanonskih zadataka; sadrži 393 parsirana skalarna ulaza i 312 ugovora rezultata. |
-| `python tools/verify_all.py` | **PASS**, 19 modula, 1.001/1.001 | 924 usporedbe s hard-coded ciljem + 77 invarijantnih, dimenzijskih ili graničnih provjera; 0 self-comparison zapisa i 0 rupa. |
-| `python tools/verify_physics.py` | **PASS**, 22/22 | Kritični golden testovi pokrivaju predznake, bilance, granične slučajeve i energetski ledger; nisu zamjena za čitanje cijeloga rukopisa. |
-| `python tools/execute_notebooks.py` | **PASS**, 17/17 | Svaki notebook izvršen je od početka u zasebnom čistom kernelu bez spremljenih izlaza. |
-| `python tools/validate_cfd_vv.py` | **PASS**, 2 spremna + 1 referentni | Validator čuva eksplicitne arhivske praznine NACA skupa i ne proizvodi sintetičke dokaze za njih. |
-| `python tools/audit_publication.py` | **PASS** | Potvrđuje 15 poglavlja, 87 primjera, 90 zadataka, šest dodataka, 145 sati, 1.185 stabilnih ID-jeva, 789 jednadžbi i 17 JupyterLite ulaza. |
-| `python tools/audit_rendered_site.py _site` | **PASS** | HTML ima 24 stranice, 210 slika, 1.916 veza, 420 sklopivih blokova i 11 preusmjerenja; kanonski Markdown nije javni resurs. |
-| `python tools/audit_pdf.py` | **PASS** | Nativni PDF ima 285 A4 stranica, 6.670.911 B i 507.553 tekstualno ekstrahirana znaka; metapodatci, kazalo, poglavlja i reprezentativni rasteri prolaze. |
-| `python tools/audit_jupyterlite.py _site/jlite` | **PASS**, 17 notebookova | Završni JupyterLite paket i Pyodide runtime strukturno su potpuni; preglednički kernel doseže stanje `Idle`. |
-| `npm run audit:viewports -- _site` | **PASS**, 72 prikaza + A4 | Provjerene su širine 320, 768 i 1.440 px, WCAG pravila, tipkovnica, overflow i zasebni A4 prikaz. |
+PDF ima **318 A4 stranica** i **6.662.819 B**. Kontaktni vizualni
+pregled obuhvatio je 35 odabranih stranica: naslovnicu, sva izdvojena
+pitanja, novi primjer, pojmovnik te dodatke D i E; novi primjer i ključne
+tablice dodatno su pregledani povećano. Pregled cijelog teksta PDF-a nije
+pronašao stari naziv publikacije. Automatski PDF audit provjerava sve stranice,
+ali taj prolaz nije tvrdnja o vizualnom čitanju svake od njih.
 
-### Poznato ograničenje alata
+Mrežni pregled potvrdio je 15 vidljivih pitanja, 121 poveznicu zadnjeg stupca
+pojmovnika, potpuni naslov i odsutnost starog naziva. Provjereno je i pomicanje
+tablica tipkovnicom na mobilnoj širini. PDF pojmovnik ima 123 valjana unutarnja
+odredišta, uključujući dvije zadržane poveznice u definicijama.
 
-Quartoov trenutačni Pandoc/Typst izlaz pri trima pojavama standardnog LaTeX
-operatora `\otimes` rabi Typstov zastarjeli alias `times.circle`, umjesto
-njegove izravne zamjene `times.o`. Upozorenja ne mijenjaju znak, numeriranje,
-unakrsne veze ni sadržaj PDF-a, a izgradnja i PDF audit prolaze. Izvor ostaje
-na standardnoj i semantički ispravnoj oznaci tenzorskog produkta; zamjena se
-ne provodi lokalnim zaobilaznim rješenjem koje bi narušilo prenosivost izvora.
+Lokalni pregled: <http://127.0.0.1:8766/>. Poslužuje `_site/`; preuzimanje PDF-a
+ima isti SHA-256 kao `_book/mehanika-fluida-1.pdf`:
+`7a11b4bd9effebcd2dd9fd667837d54443ed9019b1066e3cb15b59217c2b50a4`.
+Postupak i granice pregleda sažeti su u
+[zapisu dorade](docs/radno/prirucnik_dorada_2026-09-27.md).
 
-### Struktura numeričkih provjera
+## Granice eksperimentalne usporedbe
 
-| Kategorija | Broj | Status |
-|---|---:|---|
-| Usporedbe s unaprijed zadanim ciljem | 924 | prolazi |
-| Invarijantne, dimenzijske i granične provjere | 77 | prolazi |
-| Ukupno | 1.001 | prolazi |
-| Self-comparison usporedbe | 0 | nije dopušteno manifestom v2 |
-| Rupe ili zadatci bez provjere | 0 | nije dopušteno manifestom v2 |
+Objavljeni interval `x_r/H = 6,26 ± 0,10` nije sam po sebi standardna
+nesigurnost ni interval s poznatom razinom pouzdanosti. Odabrani CFD skup
+iza stepenice nema potpunu studiju mrežne konvergencije. Zato P6 uči odrediti
+položaj ponovnog priljubljivanja, usporediti ga s mjerenjem i imenovati
+nedostajuće provjere; ne proglašava model validiranim na osnovi jednog broja.
 
-Usporedba s ciljem provjerava izračun prema unaprijed deklariranoj vrijednosti i
-toleranciji. Invarijantna provjera ne ponavlja isti broj, nego provjerava
-dimenziju, bilancu, predznak, monotonost, granični slučaj ili red veličine.
-Manifest v2 čuva autoritativni tekst zadatka, strukturirane ulaze s jedinicama,
-pretpostavke, objavljene rezultate, tolerancije, neovisne provjere i
-pripadajuće verifier ID-jeve; svih 90 javnih zadataka ima `golden` ugovor.
+Za NACA primjer ostaje nepoznat potpuni mjerni budžet na usporednom napadnom
+kutu. Novi proračun ne bi retroaktivno dokazao konvergenciju starih objavljenih
+rezultata. Oba ograničenja opisana su uz podatke i u dodatku D.
 
-## Implementirani opseg v2
+## Stručna recenzija i studentski pilot
 
-1. Puna jezgra MF1 s 15 poglavlja, 87 primjera, 90 zadataka i šest dodataka.
-2. Tri uzdužna lajtmotiva i radni ritual
-   `izmjeri → idealiziraj → izračunaj → numerički provjeri → procijeni valjanost`.
-3. Kurikularna matrica s ukupno 145 sati rada uz udžbenik.
-4. Autorski ugovor za semantičke blokove, stabilne ID-jeve, manifest v2,
-   notebookove i SVG.
-5. Hrvatska Quarto lokalizacija te zajednički izvor za HTML i nativni Typst PDF.
-6. Sedamnaest izvršivih notebookova i JupyterLite/Colab poveznice.
-7. Tri CFD podatkovna paketa s provenijencom i strojnom validacijom strukture:
-   dva spremna nastavna slučaja i jedan ograničeni referentni paket.
-8. Reproducibilni numerički QA bez tautoloških usporedbi i deklariranih rupa.
-9. Javni tok za prijavu i praćenje errate.
-10. Sekvencijski izgrađeni i auditirani HTML, nativni PDF i JupyterLite te
-    završni viewport/WCAG pregled.
+Priručnik **još nije poslan na neovisnu stručnu recenziju**. Stručna i
+primjenska recenzija te studentski pilot nisu provedeni i nisu dio ove dorade.
+Automatske provjere, autorski pregled i uspješan deploy ne zamjenjuju te
+korake niti znače dodjelu oznake `v1.0` ili formalno odobrenje kategorije djela.
 
-## Tehnički kriteriji za 1.0-rc1
+Planirani postupci ostaju u [protokolu stručne recenzije](docs/protokol_strucne_recenzije.md)
+i [protokolu studentskog pilota](docs/protokol_studentskog_pilota.md).
+Posebno stručno čitanje naprednog dvofluidnog modela stabiliteta u U06 ostaje
+dio buduće recenzije. Ovim zapisom ne stvara se nova obveza prikupljanja podataka.
 
-Svi tehnički kriteriji su **zatvoreni**: aktualni commit ima sekvencijski
-izgrađene HTML/PDF/JupyterLite artefakte, audit javnih sučelja i pregledničkog
-kernela te završni viewport/WCAG i A4 pregled. Stanje je zato tehnički spremno
-za `1.0-rc1`. Ovaj zapis ne stvara Git oznaku, ne pokreće javni deploy i ne
-pretvara kandidata u `v1.0`.
+## Javni trag izmjena
 
-## Neizvršeni ljudski kriteriji za v1.0
-
-Sljedeća tri kriterija **nisu provedena** i ne mogu se označiti dovršenima samo
-promjenom repozitorija:
-
-- neovisnu stručnu provjeru potpisuje najmanje jedan nastavnik mehanike fluida;
-- odvojenu primjensku provjeru potpisuje recenzent iz strojarstva ili
-  brodogradnje;
-- pilot s 8–12 stvarnih studenata provjerava izbor modela i pretpostavki prije
-  algebre, uz cilj najmanje 80 % točnih izbora.
-
-Posebno se u stručnoj recenziji potvrđuje napredni dvofluidni model stabiliteta
-u javnom poglavlju U06: pretpostavke o ekvivalentnoj uzgonskoj masi, momentu
-vodne linije i valjanosti linearnoga nagiba moraju biti prihvaćene prije
-oznake `v1.0`.
-
-Nalazi se evidentiraju po stabilnim ID-jevima, ispravljaju i ponovno
-provjeravaju prije oznake `v1.0`.
-
-Postupci i obrasci nalaze se u
-[protokolu stručne recenzije](docs/protokol_strucne_recenzije.md) i
-[protokolu studentskog pilota](docs/protokol_studentskog_pilota.md).
-
-## Javni trag ispravaka
-
-Pogreške se prijavljuju kroz
-[GitHub obrazac](https://github.com/martibasic/MF1_udzbenik/issues/new?template=errata.yml).
-Potvrđeni zapisi ulaze u [javnu erratu](docs/errata.md), a promjene jednadžbi,
-brojčanih odgovora i područja valjanosti bilježe se u
-[dnevniku promjena](CHANGELOG.md).
+Potvrđene pogreške vode se u [errati](docs/errata.md), sadržajne i tehničke
+dorade u [dnevniku promjena](CHANGELOG.md), a provedene provjere u izlazu
+zajedničkog runnera `scripts/check_publication.py`.

@@ -40,7 +40,7 @@ author: Martina Bašić
 bibliography: references.bib
 book:
   title: 'Mehanika fluida: modeli, problemi i rješenja'
-  subtitle: Priručnik za samostalan rad s numeričkim pokusima i primjenama u brodogradnji
+  subtitle: Priručnik za samostalan rad s numeričkim pokusima i primjenama u brodogradnji i strojarstvu
   author: Martina Bašić
   output-file: mehanika-fluida-1
   site-url: https://martibasic.github.io/MF1_udzbenik/

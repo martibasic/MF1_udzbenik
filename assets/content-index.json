@@ -11,7 +11,7 @@
       "kind": "frontmatter",
       "number": "0",
       "part": null,
-      "source_sha256": "1e69dd50fc48dc67b4cc24bedb4ce913de862f9a4a29e4d383cb4ad3b20c6a31",
+      "source_sha256": "2918dad8a26a88c2881b8de13dd2d5e33110e902c575ae55f824721b3cee3bfc",
       "sections": [
         {
           "id": "o-udžbeniku",
@@ -71,7 +71,7 @@
       "kind": "chapter",
       "number": "1",
       "part": "part-1",
-      "source_sha256": "c5ba7da2dc565f41879d5af9e1bcd46205f725a8eb7dba173c28b6f3d8edb72d",
+      "source_sha256": "91e88c8a566eecdbb79b199b2eea9e5ce68793055c585b3b58d00bcac45bc4bc",
       "sections": [
         {
           "id": "fluid-kao-kontinuum",
@@ -216,7 +216,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "403091134d07142a7d82fcce28ce62e17e7432bef2bfb075400ebd8ebd71b58d",
+      "source_sha256": "55c6824f5ac287c051b179d10e4f539b11a98a6bf54504010657f5d7adad99e2",
       "sections": [
         {
           "id": "viskoznost-i-međupovršinske-pojave",
@@ -364,7 +364,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "fc55ade7c56424dc25be071bce66b7d793c5f42dc3a765f9cb5d9b1034118d53",
+      "source_sha256": "df323fb7ce8685783450820e2cb3bb82f5d628687f1758e7c5897e5b43b17861",
       "sections": [
         {
           "id": "hidrostatička-raspodjela-tlaka",
@@ -507,7 +507,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "43ff7e6dc6567417a12f33f8a875eec71473c330cbf4e4dea13dce818b0c4e08",
+      "source_sha256": "2bec3794dc5b0065d70317fba800eaa5b8726536977344e108e6cfa91f660639",
       "sections": [
         {
           "id": "relativno-mirovanje-fluida",
@@ -649,7 +649,7 @@
       "kind": "chapter",
       "number": "5",
       "part": "part-2",
-      "source_sha256": "dfb287a6dedeb169bb8d3ce3675c9445e03b4509e8dd79256dcf89c7d61e1f69",
+      "source_sha256": "4b702420971e61abd4e9683dedcbe8224a003e72668783f41d1e4bd2b007712c",
       "sections": [
         {
           "id": "hidrostatske-sile-na-plohe",
@@ -823,7 +823,7 @@
       "kind": "chapter",
       "number": "6",
       "part": "part-2",
-      "source_sha256": "9ebae801aab457b83afecf862e056a04629b7efc64f5019da42ceae6e9f14b88",
+      "source_sha256": "d72883b4e0456c06e9b38990f83a86bf0bd2a6b187e4736112dd877beba14714",
       "sections": [
         {
           "id": "uzgon-plivanje-i-početni-stabilitet",
@@ -983,7 +983,7 @@
       "kind": "chapter",
       "number": "7",
       "part": "part-3",
-      "source_sha256": "4122e66865ed6d019398ab939eedafb82e31b935d02af1bc746554304c30c116",
+      "source_sha256": "245b4266144c380d1eaa67f4df9e3f889089b0035efc3d4dd94d3585fb98e3ce",
       "sections": [
         {
           "id": "kinematika-kontrolni-volumen-i-kontinuitet",
@@ -1151,7 +1151,7 @@
       "kind": "chapter",
       "number": "8",
       "part": "part-3",
-      "source_sha256": "6ca4ab25b1f9f0b2f44a627074ccaf2997c2a9108404cb1a9fb72375420dc0e6",
+      "source_sha256": "f134733b48b4b0f77f4e5812ca5edd1f496eeaa2fdfe7c6d6dcdd3aa9f839def",
       "sections": [
         {
           "id": "energijska-jednadžba-i-bernoullijeva-jednadžba",
@@ -1290,7 +1290,7 @@
       "kind": "chapter",
       "number": "9",
       "part": "part-3",
-      "source_sha256": "10728275f050ed119c476099f393938fd740c6175cddd1f3ad81e233abebebd0",
+      "source_sha256": "9cef62083a69d72d9edc39a47d1ae378e21bd8b333112d4a31c4f5980429b826",
       "sections": [
         {
           "id": "sec-kompresibilni-motivacija",
@@ -1401,7 +1401,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "7a3d7c614058bc93b66509ada575751207e0451b9fcff95d5c49257586cd8eb4",
+      "source_sha256": "03b13c008487a9c131d5862982affaaa56ae9e773dc07c864c595726f1e9d4a0",
       "sections": [
         {
           "id": "količina-i-moment-količine-gibanja",
@@ -1552,7 +1552,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "bbd7f13d712467f57147e542d6ef945b11f2967ef0ad6fd968fb344d9c5f8fbe",
+      "source_sha256": "0ac81106392f289cb923a7201e9de292e563e6c17c4a7c06b42de82d71f0f5dd",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",
@@ -1695,7 +1695,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "fc96fad93d48277cf636b6281a9ed58a4c50332137e1fec3550364a64ecee84a",
+      "source_sha256": "6f3773cff6536d70e4326b2a7a6acc9af14318b54e88c336c2f1329c3a034cba",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1781,6 +1781,7 @@
         "eq-realni-tok-turbulentni-tok-srednja-vrijednost-nije-cijelo-p-02",
         "eq-realni-tok-turbulentni-tok-srednja-vrijednost-nije-cijelo-p-03",
         "eq-realni-tok-rijeseni-primjer-podatak-anemometra-a-ne-etiketa-01",
+        "eq-stepenica-interpolacija-priljubljivanja",
         "fig-realni-tok-pregled",
         "fig-realni-tok-vjezbe",
         "ex-konvektivno-ubrzanje",
@@ -1788,6 +1789,7 @@
         "ex-laminarni-mikrokanal",
         "ex-granicni-sloj",
         "ex-intenzitet-turbulencije",
+        "ex-stepenica-mjerenje-cfd",
         "task-materijalna-derivacija",
         "task-viskozna-difuzija",
         "task-poiseuille-inverzni",
@@ -1822,7 +1824,7 @@
       "kind": "chapter",
       "number": "13",
       "part": "part-5",
-      "source_sha256": "08da5d1b45a4cc8fa39047d168b9644865b49865fd8d204418c4efd15ae1b26a",
+      "source_sha256": "5190d5b3287e49ae172db9e8c44439ddccc0fb6b0eb6844bc7c2cab95080f7bc",
       "sections": [
         {
           "id": "sec-cjevovodi-motivacija",
@@ -1988,7 +1990,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "d6442b7c86d7693414bdb72d14945933bfbf551263cdcafd7b5b83039ff40dd2",
+      "source_sha256": "24735fec6b7751a08524d6d86140a2843dfe3876849fe790faaa12a2e8953cd5",
       "sections": [
         {
           "id": "turbostrojevi-i-propulzija",
@@ -2138,7 +2140,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "2cb513ae5bc48dec3674b2c957ce9921704e0f839b2ad06eb8525b91c7ff0bfe",
+      "source_sha256": "48707700eb6ac13d6acee2032f937c1442c1d05af8181524f5c1165dc7030010",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2325,7 +2327,7 @@
       "kind": "appendix",
       "number": "B",
       "part": null,
-      "source_sha256": "17552df57d2e569adf86519834344c89171f117e96adf336d1cdbd16b8ef9153",
+      "source_sha256": "2f4159c3513390bdcabe242f6d07b7f9a6792f397e94c1089fc6f2a96b959154",
       "sections": [
         {
           "id": "pojmovnik",
@@ -2393,7 +2395,7 @@
       "kind": "appendix",
       "number": "D",
       "part": null,
-      "source_sha256": "b8fa852395c01292d83707135fec86d40ba3a65b7f03255bcb1562a92b4040b1",
+      "source_sha256": "52bf968d1b09f35f6e94cbe13db3e8ae141e0608b81f07a34eed8a5c903d8743",
       "sections": [
         {
           "id": "mehanika-fluida-i-numerika-pregled",
@@ -2446,7 +2448,7 @@
         {
           "id": "sec-cfd-vv-paketi",
           "level": 2,
-          "title": "Tri pripremljena V&V paketa",
+          "title": "Pripremljeni V&V paketi",
           "number": "D.9"
         },
         {
@@ -2471,7 +2473,7 @@
       "kind": "appendix",
       "number": "E",
       "part": null,
-      "source_sha256": "e56bb3c632686109917b8c07b14ce7ab8d5625a50e3725a7568a022a43e8f04e",
+      "source_sha256": "9f28ef2aff0ad0b5367eb9949f25c314e7dbf73b7ce4424f1312932c5b0d060c",
       "sections": [
         {
           "id": "literatura-i-izvori",
@@ -9439,6 +9441,13 @@
       "number": "12.22",
       "latex": "I_u=0{,}48/8{,}0=0{,}060=6{,}0\\%."
     },
+    "eq-stepenica-interpolacija-priljubljivanja": {
+      "id": "eq-stepenica-interpolacija-priljubljivanja",
+      "kind": "Equation",
+      "document": "u12",
+      "number": "12.23",
+      "latex": "X_r=X_a-\\frac{C_{f,a}}{C_{f,b}-C_{f,a}}(X_b-X_a)."
+    },
     "fig-realni-tok-pregled": {
       "id": "fig-realni-tok-pregled",
       "kind": "Figure",
@@ -9511,6 +9520,15 @@
       "title": "Podatak anemometra, a ne etiketa režima",
       "level": "T3",
       "label": "P5"
+    },
+    "ex-stepenica-mjerenje-cfd": {
+      "id": "ex-stepenica-mjerenje-cfd",
+      "kind": "Example",
+      "document": "u12",
+      "number": "12.6",
+      "title": "Ponovno priljubljivanje toka: mjerenje i CFD",
+      "level": "T3",
+      "label": "P6"
     },
     "task-materijalna-derivacija": {
       "id": "task-materijalna-derivacija",
@@ -11686,13 +11704,21 @@
     },
     {
       "document": "d04",
+      "target": "ex-stepenica-mjerenje-cfd"
+    },
+    {
+      "document": "d04",
       "target": "sec-cfd-venturi"
+    },
+    {
+      "document": "d05",
+      "target": "ex-stepenica-mjerenje-cfd"
     }
   ],
   "counts": {
-    "Equation": 796,
+    "Equation": 797,
     "Figure": 93,
-    "Example": 87,
+    "Example": 88,
     "Problem": 90
   }
 }

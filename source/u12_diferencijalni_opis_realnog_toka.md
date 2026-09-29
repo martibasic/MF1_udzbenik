@@ -194,6 +194,8 @@ Faktor $64$ zato nije empirijska konstanta, nego posljedica stacionarnog, potpun
 
 **Jednostavan kanal prije složene hladne ploče.** Prije računa zavoja i razdjelnika provjerimo isti laminarni model na ravnom kanalu s poznatim rješenjem. Ručni @ex-laminarni-mikrokanal pretpostavlja potpuno razvijen tok: usporedba njegova pada tlaka mora isključiti dodatni pad u ulaznom području. Za idealizirani prorez koristimo rješenje između ploča.
 
+**Zastani i promisli.** Rezidual je malen, ali se pad tlaka mijenja pri profinjenju mreže. Koja je pogreška još nerazjašnjena?
+
 Mali rezidual uz promjenu pada tlaka na finijoj mreži još ne potvrđuje točnost. Usporedi profil, protok i smično naprezanje s analitikom; točna brzina u osi ne jamči točno trenje. Pokus na stvarnoj hladnoj ploči zasebno provjerava fizikalni model.
 :::
 
@@ -335,6 +337,42 @@ $$ {#eq-realni-tok-rijeseni-primjer-podatak-anemometra-a-ne-etiketa-01}
 **Provjera i tumačenje**
 
 To je opis izmjerenog signala na određenom mjestu i u određenom frekvencijskom pojasu. Sam broj ne određuje je li profil potpuno razvijen niti koji turbulencijski model treba odabrati.
+:::
+
+::: {#ex-stepenica-mjerenje-cfd .mf1-we}
+<p class="mf1-box-label">Ponovno priljubljivanje toka: mjerenje i CFD <span class="mf1-level">T3</span></p>
+
+**Tekst zadatka**
+
+U pokusu Drivera i Seegmillera dno kanala spušta se za $H$, uz vodoravan gornji zid. Turbulentni zrak ($Re_H\approx36\,000$) odvaja se na rubu i priljubljuje nizvodno. Koristi $X=x/H$ od ruba i $C_f=\tau_w/(\rho U_{ref}^2/2)$, gdje je $U_{ref}$ uzvodna brzina u sredini kanala pri $X\approx-4$. Predznak $C_f$ prati srednje zidno smicanje.
+
+Tablica daje mjerenja i objavljeni kvazistacionarni CFD rezultat CFL3D-a s modelom turbulencije SSTm. CFD brojevi zaokruženi su iz [izvornih datoteka](../data/cfd/backstep_experiment/README.md). Eksperimentalni položaj iznosi $X_r=6{,}26\pm0{,}10$ [@driver-seegmiller1985; @tmr-backstep].
+
+| Izvor | $X_a$ | $10^3C_{f,a}$ | $X_b$ | $10^3C_{f,b}$ |
+|---|---:|---:|---:|---:|
+| Mjerenje | 5,882 | −0,220 | 7,090 | 0,450 |
+| CFL3D / SSTm | 6,541667 | −0,0012520 | 6,562500 | 0,013198 |
+
+**Traži se**
+
+1. Linearnom interpolacijom odredi nultočku $C_f$ za oba niza.
+2. Usporedi CFD nultočku s objavljenim eksperimentalnim položajem i protumači što usporedba dokazuje.
+
+**Rješenje**
+
+Za promjenu iz negativnog u pozitivno smicanje između zadanih točaka vrijedi
+
+$$
+X_r=X_a-\frac{C_{f,a}}{C_{f,b}-C_{f,a}}(X_b-X_a).
+$$ {#eq-stepenica-interpolacija-priljubljivanja}
+
+Faktor $10^3$ poništava se u omjeru. Mjerni redci daju $X_{r,m}\approx6{,}279$, a CFD redci $X_{r,CFD}\approx6{,}543$. U odnosu na objavljenu mjernu vrijednost $6{,}26$ CFD predviđa položaj približno $0{,}283H$ nizvodnije, odnosno oko $4{,}5\,\%$ veću duljinu.
+
+**Provjera i tumačenje**
+
+Obje nultočke leže između pripadnih zadanih položaja. Mjerna interpolacija nalazi se u objavljenom rasponu $6{,}16$–$6{,}36$, dok je CFD rezultat izvan njega. Time je utvrđeno odstupanje ove veličine; uzrok još nije razdvojen na utjecaj mreže, ulaznog sloja i modela turbulencije. Izvor ne daje potpunu studiju mrežne konvergencije za ovaj CFD prikaz, a oznaku $\pm0{,}10$ ne pretvaramo u standardnu nesigurnost ni 95-postotni interval.
+
+Za difuzor rashladnog ili brodskog ventilacijskog voda takva usporedba provjerava predviđa li model duljinu područja povratnog toka. Podudaranje jedne nultočke ipak ne potvrđuje cijeli profil brzine ni gubitak tlaka.
 :::
 
 ## Veza s CFD-om: diskretizacija nije nova fizika {#sec-realni-tok-cfd}

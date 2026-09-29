@@ -230,8 +230,8 @@ def bibliography_issues(document: pymupdf.Document) -> list[str]:
     text = "\n".join(document[i].get_text() for i in range(starts[0] - 1, ends[0] - 1))
     heading = text.find("Bibliografski zapisi")
     numbers = re.findall(r"(?m)^\[(\d+)\]", text[heading:]) if heading >= 0 else []
-    if numbers != [str(i) for i in range(1, 22)]:
-        return [f"E.7 mora sadržavati 21 bibliografski zapis; nađene oznake {numbers}"]
+    if numbers != [str(i) for i in range(1, 24)]:
+        return [f"E.7 mora sadržavati 23 bibliografska zapisa; nađene oznake {numbers}"]
     after_key = "\n".join(document[i].get_text() for i in range(ends[0] - 1, len(document)))
     if re.search(r"(?m)^\[1\]", after_key):
         return ["bibliografija se ponavlja iza dodatka F"]
@@ -387,7 +387,7 @@ def main() -> int:
             print(f"  - {issue}")
         return 1
     print(f"PDF layout PASS: {checked} raster-checked QR codes with links, equation clearance, "
-          "21 bibliography entries in E.7, captions and QR descriptions kept with content; "
+          "23 bibliography entries in E.7, captions and QR descriptions kept with content; "
           "all print-SVG labels present per figure and >= 9 pt; "
           "heading baselines, column bounds, equation numbers and P/Z labels match.")
     return 0

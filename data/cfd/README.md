@@ -3,12 +3,13 @@
 Ova mapa sadrži male, strojno čitljive nastavne slučajeve za učenje razlike
 između **verifikacije rješenja** i **validacije fizikalnog modela**. Podatci nisu
 izvoz komercijalnog CFD rješavača ili rješavača otvorenog koda, osim kada to
-zapis podrijetla izričito navodi; profilni slučaj sadrži objavljene FUN3D rezultate.
+zapis podrijetla izričito navodi; profilni slučaj sadrži objavljene FUN3D rezultate, a slučaj iza stepenice CFL3D/SSTm rezultate.
 
 | Slučaj | Status | Uloga | Referentno rješenje ili podatci |
 |---|---|---|---|
 | `poiseuille_laminar` | spreman | verifikacija rješenja | analitičko Hagen–Poiseuilleovo rješenje |
 | `venturi_diffuser` | spreman | pedagoška verifikacija postupka | sintetički niz prema 1D Bernoulliju i propisanom gubitku |
+| `backstep_experiment` | eksperimentalna referenca | usporedba položaja ponovnog priljubljivanja | mjerenja Drivera–Seegmillera i objavljeni CFL3D/SSTm |
 | `hydrofoil_experiment` | referentni skup | profilna validacija uz eksplicitne nedostatke arhivskih podataka | Ladsonov eksperiment + NASA TMR FUN3D mreže |
 
 ## Važno ograničenje

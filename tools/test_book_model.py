@@ -17,6 +17,30 @@ from build_book import figure_text_width
 
 
 class BookModelTests(unittest.TestCase):
+    def test_pdf_document_links_follow_canonical_sections(self):
+        index=json.loads((ROOT/'assets/content-index.json').read_text(encoding='utf8'))
+        source=[]
+        for i,doc in enumerate(documents(load_book())):
+            paths=[doc['path'],'/'+doc['path'],'./'+doc['path'],Path(doc['path']).name]
+            source.append(f"[{doc['id']}]({paths[i%len(paths)]})")
+        source.extend([
+            '[section](d04_numericka_mehanika_fluida.qmd#sec-cfd-vv-paketi)',
+            '[]{.mf1-chapter-ref target="u03"}',
+            '[external](https://example.org/external.qmd)',
+        ])
+        command=[shutil.which('quarto'),'pandoc','-f','markdown','--lua-filter',str(ROOT/'filters/mf1-components.lua')]
+        rendered={fmt:subprocess.run(command+['-t',fmt],input='\n\n'.join(source),
+                                    text=True,encoding='utf8',capture_output=True,check=True).stdout
+                  for fmt in ('typst','html5')}
+        for doc in documents(load_book()):
+            anchor=index['documents'][doc['id']]['sections'][0]['id']
+            self.assertIn('#link(<'+anchor+'>)['+doc['id']+']',rendered['typst'])
+            self.assertIn(Path(doc['path']).name,rendered['html5'])
+        self.assertIn('#link(<sec-cfd-vv-paketi>)[section]',rendered['typst'])
+        self.assertIn('#link(<hidrostatička-raspodjela-tlaka>)[pog. 3',rendered['typst'])
+        self.assertIn('#link("https://example.org/external.qmd")[external]',rendered['typst'])
+        self.assertEqual(rendered['typst'].count('.qmd'),1)
+
     def test_exercise_fields_in_both_formats(self):
         index=json.loads((ROOT/'assets/content-index.json').read_text(encoding='utf8'))
         example=next(o for o in index['objects'].values() if o['kind']=='Example')
