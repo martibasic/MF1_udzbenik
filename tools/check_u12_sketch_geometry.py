@@ -88,11 +88,20 @@ def main():
     p='u12vs_'
     for n in range(1,7):node(tasks,p+f'z{n}')
     arrows=[line(node(tasks,p+f'z1velocity{i}')) for i in range(3)]
-    # Coordinate tick spacing is 100 px/m, while velocity has its own scale.
-    for i,(a,b) in enumerate(arrows):
-        x=(a[0]-arrows[0][0][0])/100
-        close((b[0]-a[0])/16,2*2+x*x,'Z1: lokalne brzine moraju slijediti at+bx²')
+    # Z1 traži brzinu u x = 1 m: strelice smiju pokazati samo smjer i porast
+    # brzine niz x (b > 0), ali ne omjer v(0) : v(1) : v(2) = 4 : 5 : 8, iz kojeg
+    # bi se uz očiti v(0) = at očitao traženi v(1).
+    lengths=[b[0]-a[0] for a,b in arrows]
+    for a,b in arrows:
+        check(b[0]>a[0],'Z1: brzina u +x smjeru')
         close(a[1],b[1],'Z1: aksijalne brzine')
+    check(lengths[0]<lengths[1]<lengths[2],'Z1: brzina raste niz x')
+    exact=[2*2+x*x for x in (0,1,2)]
+    check(all(abs(lengths[i]/lengths[0]-exact[i]/exact[0])>0.15 for i in (1,2)),
+          'Z1: duljine strelica ne smiju biti u mjerilu traženih brzina')
+    unknown=''.join(node(tasks,p+'z1unknown').itertext())
+    check(unknown=='v = ?','Z1: tražena brzina označena upitnikom')
+    close(float(node(tasks,p+'z1unknown').get('x')),(arrows[1][0][0]+arrows[1][1][0])/2,'Z1: upitnik stoji uz strelicu u x = 1 m')
     dim=line(node(tasks,p+'z1x'));A=node(tasks,p+'z1A')
     close(dim[0][0],arrows[0][0][0],'Z1: početak kote x=0')
     close(dim[1][0],float(A.get('cx')),'Z1: kraj kote je položaj A')
@@ -141,7 +150,7 @@ def main():
             close(previous[1],h,'Z6: ne mijenjaj fizičku širinu domene')
             close(previous[2]/step,2,'Z6: oba koraka se prepolavljaju')
         previous=w,h,step
-    print('U12 SVG PASS: 2 slike; povezan fluid, otvoreni priključci, nepropusne ploče, kote, smjerovi, rast sloja, srednji signal i pročišćenje mreže.')
+    print('U12 SVG PASS: 2 slike; povezan fluid, otvoreni priključci, nepropusne ploče, kote, smjerovi, rast sloja, srednji signal, pročišćenje mreže i Z1 bez brzina u mjerilu rezultata.')
 
 
 if __name__=='__main__':

@@ -426,7 +426,7 @@ $$ {#eq-anemometar-ulazni-uvjet-rans}
 
 **Tekst zadatka**
 
-U pokusu Drivera i Seegmillera dno kanala spušta se za $H$, uz vodoravan gornji zid. Turbulentni zrak ($Re_H\approx36\,000$) odvaja se na rubu i priljubljuje nizvodno. Koristi $X=x/H$ od ruba i $C_f=\tau_w/(\rho U_{ref}^2/2)$, gdje je $U_{ref}$ uzvodna brzina u sredini kanala pri $X\approx-4$. Predznak $C_f$ prati srednje zidno smicanje.
+U pokusu Drivera i Seegmillera dno kanala spušta se za visinu stepenice $H_{st}$, uz vodoravan gornji zid. Turbulentni zrak ($Re_{st}\approx36\,000$, prema visini stepenice) odvaja se na rubu i priljubljuje nizvodno. Koristi $X=x/H_{st}$ od ruba i $C_f=\tau_w/(\rho U_{ref}^2/2)$, gdje je $U_{ref}$ uzvodna brzina u sredini kanala pri $X\approx-4$. Predznak $C_f$ prati srednje zidno smicanje.
 
 Tablica daje mjerenja i objavljeni kvazistacionarni CFD rezultat CFL3D-a s modelom turbulencije SSTm. CFD brojevi zaokruženi su iz [izvornih datoteka](../data/cfd/backstep_experiment/README.md). Eksperimentalni položaj iznosi $X_r=6{,}26\pm0{,}10$ [@driver-seegmiller1985; @tmr-backstep].
 
@@ -448,7 +448,7 @@ $$
 X_r=X_a-\frac{C_{f,a}}{C_{f,b}-C_{f,a}}(X_b-X_a).
 $$ {#eq-stepenica-interpolacija-priljubljivanja}
 
-Faktor $10^3$ poništava se u omjeru. Mjerni redci daju $X_{r,m}\approx6{,}279$ (linearna interpolacija preko razmaka $1{,}2H$ gruba je provjera, jer $C_f$ oko priljubljivanja nije linearan), a CFD redci $X_{r,CFD}\approx6{,}543$. U odnosu na objavljenu mjernu vrijednost $6{,}26$ CFD predviđa položaj približno $0{,}283H$ nizvodnije, odnosno oko $4{,}5\,\%$ veću duljinu.
+Faktor $10^3$ poništava se u omjeru. Mjerni redci daju $X_{r,m}\approx6{,}279$ (linearna interpolacija preko razmaka $1{,}2H_{st}$ gruba je provjera, jer $C_f$ oko priljubljivanja nije linearan), a CFD redci $X_{r,CFD}\approx6{,}543$. U odnosu na objavljenu mjernu vrijednost $6{,}26$ CFD predviđa položaj približno $0{,}283H_{st}$ nizvodnije, odnosno oko $4{,}5\,\%$ veću duljinu.
 
 **Provjera i tumačenje**
 
@@ -505,7 +505,7 @@ Lijeva strana je razlika viskoznih tokova količine gibanja kroz dvije plohe će
 
 ![Skice uz Z1–Z6: lokalni tok, viskozni pogoni i profinjenje mreže.](../assets/print/u12_realni_tok_vjezbe_skice.svg){#fig-realni-tok-vjezbe fig-align="center" fig-alt="Kote H i D mjere razmak stijenki i unutarnji promjer, L je razmak tlačnih priključaka; ploče su nepropusne, a mrežne crte nisu stijenke."}
 
-**Napomene uz skice.** Z1 prikazuje kinematičko polje pri $t=2\,\mathrm{s}$, a ne cijev. U Z3 promjer kapilare uvećan je u odnosu na mjernu duljinu. U Z4 $G=\mathrm{d}p/\mathrm{d}x>0$ znači da tlak raste udesno, pa tlačni pogon djeluje suprotno gibanju gornje ploče. U Z5 $k_s$ predstavlja ekvivalentnu hrapavost. U Z6 mrežne crte nisu krute stijenke; profinjenje ne mijenja domenu.
+**Napomene uz skice.** Z1 prikazuje kinematičko polje pri $t=2\,\mathrm{s}$, a ne cijev; strelice pokazuju samo smjer i porast brzine niz $x$, a duljine im nisu u mjerilu traženih brzina. U Z3 promjer kapilare uvećan je u odnosu na mjernu duljinu. U Z4 $\mathrm{d}p/\mathrm{d}x>0$ znači da tlak raste udesno, pa tlačni pogon djeluje suprotno gibanju gornje ploče. U Z5 $k_s$ predstavlja ekvivalentnu hrapavost. U Z6 mrežne crte nisu krute stijenke; profinjenje ne mijenja domenu.
 
 ::::: {.mf1-vjezbe-list}
 
@@ -568,27 +568,27 @@ $t_\nu\sim H^2/\nu=100\ \text{s}$. To je karakteristično vremensko mjerilo; vri
 
 **Tekst zadatka**
 
-Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Sintetički nastavni podatci su $Q=0{,}300\pm0{,}003\ \text{mL/min}$, $\Delta p=p_1-p_2=652\pm5\ \text{Pa}$, $L=0{,}200\pm0{,}001\ \text{m}$ i $D=0{,}500\pm0{,}005\ \text{mm}$. Znakovi $\pm$ označuju neovisne standardne nesigurnosti. Newtonski fluid ima gustoću $\rho=998\ \text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini.
+Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Sintetički nastavni podatci su $Q=0{,}300\pm0{,}003\ \text{mL/min}$, $\Delta p=p_1-p_2=652\pm5\ \text{Pa}$, $L=0{,}200\pm0{,}001\ \text{m}$ i $D=0{,}500\pm0{,}005\ \text{mm}$. Znakovi $\pm$ označuju neovisne standardne nesigurnosti; standardnu nesigurnost veličine $x$ označujemo sa $s(x)$, jer je $u$ u ovom poglavlju brzina ploče. Newtonski fluid ima gustoću $\rho=998\ \text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini.
 
 U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje na stijenku; pretpostavi da su ulazni učinci ograničeni na dio ispred mjernog razmaka.
 
 **Traži se**
 
 1. Obrnutim Poiseuilleovim računom procijeni viskoznost i Reynoldsov broj te utvrdi koji mjerni podatak najviše pridonosi nesigurnosti.
-2. Procijeni $u(\mu)$ linearnom propagacijom nesigurnosti uz korijen zbroja kvadrata doprinosa (RSS) i posebno pokaži doprinos promjera.
+2. Procijeni $s(\mu)$ linearnom propagacijom nesigurnosti uz korijen zbroja kvadrata doprinosa (RSS) i posebno pokaži doprinos promjera.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Invertiraj $Q=\pi D^4\Delta p/(128\mu L)$. Za neovisne standardne nesigurnosti vrijedi $[u(\mu)/\mu]^2=[4u(D)/D]^2+[u(\Delta p)/\Delta p]^2+[u(L)/L]^2+[u(Q)/Q]^2$.
+Invertiraj $Q=\pi D^4\Delta p/(128\mu L)$. Za neovisne standardne nesigurnosti vrijedi $[s(\mu)/\mu]^2=[4s(D)/D]^2+[s(\Delta p)/\Delta p]^2+[s(L)/L]^2+[s(Q)/Q]^2$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$\mu\approx1{,}000\ \text{mPa s}$, $u(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Sam promjer doprinosi relativnoj standardnoj nesigurnosti od $4\,\%$, pa ima najveći doprinos ukupnoj mjernoj nesigurnosti.
+$\mu\approx1{,}000\ \text{mPa s}$, $s(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Sam promjer doprinosi relativnoj standardnoj nesigurnosti od $4\,\%$, pa ima najveći doprinos ukupnoj mjernoj nesigurnosti.
 :::
 ::::
 
@@ -598,15 +598,15 @@ $\mu\approx1{,}000\ \text{mPa s}$, $u(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\ap
 
 **Tekst zadatka**
 
-Gibanje gornje ploče i nepovoljan gradijent tlaka pokreću ulje u suprotnim smjerovima u uskom procjepu. Newtonski fluid ima $\mu=0{,}100\ \text{Pa s}$; donja ploča na $y=0$ miruje, a gornja na $y=H$ klizi u pozitivnom smjeru osi $x$ brzinom $u=2{,}00\ \text{m/s}$. Razmak je $H=1{,}00\ \text{mm}$. Za potpuno razvijeni laminarni tok i konstantan $G=dp/dx>0$ vrijedi $v(y)=uy/H+G(y^2-Hy)/(2\mu)$.
+Gibanje gornje ploče i nepovoljan gradijent tlaka pokreću ulje u suprotnim smjerovima u uskom procjepu. Newtonski fluid ima $\mu=0{,}100\ \text{Pa s}$; donja ploča na $y=0$ miruje, a gornja na $y=H$ klizi u pozitivnom smjeru osi $x$ brzinom $u=2{,}00\ \text{m/s}$. Razmak je $H=1{,}00\ \text{mm}$. Za potpuno razvijeni laminarni tok i konstantan gradijent tlaka $dp/dx>0$ vrijedi $v(y)=uy/H+(dp/dx)(y^2-Hy)/(2\mu)$.
 
 Ovdje je $\tau_0$ komponenta sile fluida na donju ploču po jedinici površine u smjeru osi $x$. Obje ploče su nepropusne, uz njih nema klizanja.
 
-Usporedi $G=0{,}90G_{krit}$ i $G=1{,}10G_{krit}$.
+Usporedi $dp/dx=0{,}90\,(dp/dx)_{krit}$ i $dp/dx=1{,}10\,(dp/dx)_{krit}$.
 
 **Traži se**
 
-1. Odredi $G_{krit}$ pri kojem $\tau_0=\mu v'(0)$ mijenja znak, zatim $\tau_0$ za oba zadana omjera $G/G_{krit}$.
+1. Odredi kritični gradijent $(dp/dx)_{krit}$ pri kojem $\tau_0=\mu v'(0)$ mijenja znak, zatim $\tau_0$ za oba zadana gradijenta.
 2. Skiciraj profile brzine za oba zadana pogona. Razlikuj povratni tok uz ploču od prolaza kroz nju.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
@@ -620,7 +620,7 @@ Deriviraj profil i postavi $\tau_0=0$. Provjeri $v(0)=0$ i $v(H)=u$. Negativna b
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$G_{krit}=4{,}00\cdot10^5\ \text{Pa/m}$. Pri $0{,}90G_{krit}$ vrijedi $\tau_0=+20{,}0\ \text{Pa}$ i $v(y)>0$ za $0<y\le H$; pri $1{,}10G_{krit}$ vrijedi $\tau_0=-20{,}0\ \text{Pa}$ i povratni tok u $0<y<H/11$. U oba profila $v(0)=0$ i $v(H)=u$; fluid ne prolazi kroz ploče.
+$(dp/dx)_{krit}=4{,}00\cdot10^5\ \text{Pa/m}$. Pri $0{,}90\,(dp/dx)_{krit}$ vrijedi $\tau_0=+20{,}0\ \text{Pa}$ i $v(y)>0$ za $0<y\le H$; pri $1{,}10\,(dp/dx)_{krit}$ vrijedi $\tau_0=-20{,}0\ \text{Pa}$ i povratni tok u $0<y<H/11$. U oba profila $v(0)=0$ i $v(H)=u$; fluid ne prolazi kroz ploče.
 :::
 ::::
 
@@ -658,32 +658,32 @@ $Re_x=6{,}00\cdot10^5$, $\delta_B\approx2{,}58\ \text{mm}$, $k_s/\delta_B\approx
 
 **Tekst zadatka**
 
-**a) Izbor mreže.** Sintetički Poiseuilleov skup iz `data/cfd/poiseuille_laminar` prikazan je zaokruženo. Tri sustavno profinjene mreže imaju $h/h_f=(4;\ 2;\ 1)$, protoke $Q=(8{,}16814;\ 7{,}93252;\ 7{,}87362)\cdot10^{-6}\ \text{m}^3/\text{s}$ i masene debalanse $(0{,}040;\ 0{,}010;\ 0{,}0025)\,\%$, redom od grube do fine. Računaj s ovdje ispisanim brojevima, uz $r=2$ i $F_s=1{,}25$; zahtijeva se $GCI\le0{,}50\,\%$ i maseni debalans najviše $0{,}0050\,\%$.
+**a) Izbor mreže.** Sintetički Poiseuilleov skup iz `data/cfd/poiseuille_laminar` prikazan je zaokruženo. Tri sustavno profinjene mreže imaju $h/h_f=(4;\ 2;\ 1)$, protoke $(Q_g;\ Q_{sr};\ Q_f)=(8{,}16814;\ 7{,}93252;\ 7{,}87362)\cdot10^{-6}\ \text{m}^3/\text{s}$ i masene debalanse $(0{,}040;\ 0{,}010;\ 0{,}0025)\,\%$, redom od grube do fine. Računaj s ovdje ispisanim brojevima, uz omjer koraka susjednih mreža $\lambda_h=2$ i $F_s=1{,}25$; zahtijeva se $GCI\le0{,}50\,\%$ i maseni debalans najviše $0{,}0050\,\%$.
 
-**b) Usporedba otpora.** Za NACA 0012 pri $Re_c=6\cdot10^6$, $Ma=0{,}15$ i $\alpha=10{,}00^\circ$ uzmi $C_{D,CFD}=0{,}01222$ (najfinija FUN3D mreža) i $C_{D,ref}=0{,}01166$ (linearna interpolacija javnih mjerenja na isti kut; podrijetlo i ograde u dodatku D). Zadane standardne nesigurnosti nastavnog scenarija jesu mjerna $u_m=0{,}00020$, numerička $u_n=0{,}00010$ (ukupna; GCI iz dijela a) ne pribraja se) i doprinos usklađivanja uvjeta i interpolacije $u_v=0{,}00010$, uz neovisne normalne doprinose centrirane na nulu nakon korekcija. To su pretpostavke za vježbu, a ne objavljene nesigurnosti NASA-ina pokusa. Usporedba je sukladna zadanom kriteriju ako $|E|\le U_E$ (faktor pokrivanja $k=2$, približno 95 %). Dodatno razmotri $u_m=0{,}00030$ uz ostale iste vrijednosti.
+**b) Usporedba otpora.** Za NACA 0012 pri $Re_l=6\cdot10^6$ (prema tetivi $l$), $Ma=0{,}15$ i napadnom kutu $\theta=10{,}00^\circ$ uzmi $C_{D,CFD}=0{,}01222$ (najfinija FUN3D mreža) i $C_{D,ref}=0{,}01166$ (linearna interpolacija javnih mjerenja na isti kut; podrijetlo i ograde u dodatku D). Zadane standardne nesigurnosti nastavnog scenarija jesu mjerna $s_{mj}=0{,}00020$, numerička $s_{num}=0{,}00010$ (ukupna; GCI iz dijela a) ne pribraja se) i doprinos usklađivanja uvjeta i interpolacije $s_{uv}=0{,}00010$, uz neovisne normalne doprinose centrirane na nulu nakon korekcija. To su pretpostavke za vježbu, a ne objavljene nesigurnosti NASA-ina pokusa. Usporedba je sukladna zadanom kriteriju ako $|E|\le 2s_E$, gdje je $s_E$ standardna nesigurnost razlike (dvostruka standardna nesigurnost daje približno 95 % pokrivanja). Dodatno razmotri $s_{mj}=0{,}00030$ uz ostale iste vrijednosti.
 
 **Traži se**
 
-1. **Dio a).** Odredi opaženi red $p$, Richardsonovu ekstrapolaciju $Q_{ext}$ te $GCI_m$ i $GCI_f$ srednje i fine mreže. Odaberi najgrublju mrežu koja zadovoljava zadane numeričke kriterije.
-2. **Dio b).** Izračunaj $E=C_{D,CFD}-C_{D,ref}$, relativno odstupanje prema referenci i proširenu nesigurnost razlike $U_E=2\sqrt{u_m^2+u_n^2+u_v^2}$.
-3. Ponovi odluku za veći zadani $u_m$, uz ostale iste vrijednosti. Objasni znači li eventualno zadovoljen kriterij točniji model i zašto rezultat dijela a) ne dokazuje valjanost profilnog modela.
+1. **Dio a).** Odredi opaženi red konvergencije $n_h$, Richardsonovu ekstrapolaciju $Q_{ext}$ te $GCI_{sr}$ i $GCI_f$ srednje i fine mreže. Odaberi najgrublju mrežu koja zadovoljava zadane numeričke kriterije.
+2. **Dio b).** Izračunaj $E=C_{D,CFD}-C_{D,ref}$, relativno odstupanje prema referenci i proširenu nesigurnost razlike $2s_E=2\sqrt{s_{mj}^2+s_{num}^2+s_{uv}^2}$.
+3. Ponovi odluku za veći zadani $s_{mj}$, uz ostale iste vrijednosti. Objasni znači li eventualno zadovoljen kriterij točniji model i zašto rezultat dijela a) ne dokazuje valjanost profilnog modela.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Za monotoni niz koristi $p=\ln[(Q_c-Q_m)/(Q_m-Q_f)]/\ln r$ i $Q_{ext}=Q_f+(Q_f-Q_m)/(r^p-1)$. Zatim $GCI_f=F_s|(Q_f-Q_m)/Q_f|/(r^p-1)$; za $GCI_m$ zamijeni par $(Q_f,Q_m)$ parom $(Q_m,Q_c)$. Razlomke pretvori u postotke i provjeri oba uvjeta.
+Za monotoni niz koristi $n_h=\ln[(Q_g-Q_{sr})/(Q_{sr}-Q_f)]/\ln\lambda_h$ i $Q_{ext}=Q_f+(Q_f-Q_{sr})/(\lambda_h^{n_h}-1)$. Zatim $GCI_f=F_s|(Q_f-Q_{sr})/Q_f|/(\lambda_h^{n_h}-1)$; za $GCI_{sr}$ zamijeni par $(Q_f,Q_{sr})$ parom $(Q_{sr},Q_g)$. Razlomke pretvori u postotke i provjeri oba uvjeta.
 
-U dijelu b) sve su nesigurnosti apsolutne i bezdimenzijske, kao $C_D$. Relativno odstupanje iznosi $100E/C_{D,ref}$ u postotcima. Provjeri sadrži li interval $[E-U_E;\ E+U_E]$ nulu. Veća nesigurnost širi interval, ali ne mijenja središnju razliku.
+U dijelu b) sve su nesigurnosti apsolutne i bezdimenzijske, kao $C_D$. Relativno odstupanje iznosi $100E/C_{D,ref}$ u postotcima. Provjeri sadrži li interval $[E-2s_E;\ E+2s_E]$ nulu. Veća nesigurnost širi interval, ali ne mijenja središnju razliku.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true" data-key-full="true"}
 ### Kontrolni rezultat
 
-**a)** $p\approx2{,}000$, $Q_{ext}\approx7{,}8540\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_m\approx1{,}237\,\%$ i $GCI_f\approx0{,}312\,\%$. Odabire se fina mreža: debalans je $0{,}0025\,\%$; srednja krši oba uvjeta, gruba maseni uvjet.
+**a)** $n_h\approx2{,}000$, $Q_{ext}\approx7{,}8540\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_{sr}\approx1{,}237\,\%$ i $GCI_f\approx0{,}312\,\%$. Odabire se fina mreža: debalans je $0{,}0025\,\%$; srednja krši oba uvjeta, gruba maseni uvjet.
 
-**b)** $E=+0{,}00056$, odnosno približno $+4{,}80\,\%$; CFD daje veći otpor. Za $u_m=0{,}00020$ dobiva se $U_E\approx0{,}000490$ i $|E|/U_E\approx1{,}14>1$: kriterij nije zadovoljen. Za $u_m=0{,}00030$ vrijedi $U_E\approx0{,}000663$ i $|E|/U_E\approx0{,}844<1$: kriterij je zadovoljen. Razlika ostaje ista; širi interval znači slabiju sposobnost razlikovanja modela od reference, a ne poboljšanje modela. To je uvjetna procjena za zadane nastavne pretpostavke: stvarna validacija traži dokumentirane reziduale, povijesti sila, masenu bilancu i stvarni budžet nesigurnosti (dodatak D). Konvergencija Poiseuilleova protoka ne potvrđuje turbulentni otpor profila.
+**b)** $E=+0{,}00056$, odnosno približno $+4{,}80\,\%$; CFD daje veći otpor. Za $s_{mj}=0{,}00020$ dobiva se $2s_E\approx0{,}000490$ i $|E|/(2s_E)\approx1{,}14>1$: kriterij nije zadovoljen. Za $s_{mj}=0{,}00030$ vrijedi $2s_E\approx0{,}000663$ i $|E|/(2s_E)\approx0{,}844<1$: kriterij je zadovoljen. Razlika ostaje ista; širi interval znači slabiju sposobnost razlikovanja modela od reference, a ne poboljšanje modela. To je uvjetna procjena za zadane nastavne pretpostavke: stvarna validacija traži dokumentirane reziduale, povijesti sila, masenu bilancu i stvarni budžet nesigurnosti (dodatak D). Konvergencija Poiseuilleova protoka ne potvrđuje turbulentni otpor profila.
 :::
 ::::
 
