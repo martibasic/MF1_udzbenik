@@ -4,12 +4,13 @@ Oblik valjka i vodoravne duljine nisu predviđanje 1D modela. Bilance se
 provjeravaju u rubnim presjecima, a otvorenost i spojeni fluid cijelim tokom.
 """
 import math
+import re
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from check_u10_sketch_geometry import check, node, path, line, delta, distance_to_path, wall_and_openings
 from check_u13_sketch_geometry import close
 
-from sketch_style import check_uniform_fluid
+from sketch_style import check_uniform_fluid, check_arrow_semantics
 
 ROOT=Path(__file__).resolve().parents[1]/'assets'/'print'
 G=9.81
@@ -66,6 +67,14 @@ def trapezoid(root,prefix,b,z,H,y,scale):
     return wall,fluid
 
 
+def texts(root):
+    return [''.join(e.itertext()) for e in root.iter() if e.tag.endswith('text')]
+
+
+def absent(root,id,message):
+    check(not any(e.get('id')==id for e in root.iter()),message)
+
+
 def main():
     intro=ET.parse(ROOT/'u15_fig_uvod_otvoreni_tok.svg').getroot()
     ex=ET.parse(ROOT/'u15_vjezbe_skice.svg').getroot()
@@ -77,6 +86,8 @@ def main():
             if e.get('id','').endswith('fluid'):
                 check(e.get('d').count('M')==1 and e.get('stroke')=='none','Jedna povezana ispuna po fluidnoj domeni')
                 check_uniform_fluid(e, 'fill')
+        issues=check_arrow_semantics(root)
+        check(not issues,'Stil vektora: '+'; '.join(issues))
 
     p='u15intro_';q,yup,base,scale=1.4,1.3,245,90
     bed,surface=flow(intro,p+'channel')
@@ -102,24 +113,34 @@ def main():
     for name,depth in (('upstreamDepth',yup),('downstreamDepth',y2)):
         close(delta(node(intro,p+name))[1],scale*depth,'Uvod: kote stvarnih dubina')
     vectors_inside(intro,p,['inletVelocity','criticalVelocity','superVelocity','outletVelocity'],bed,surface)
+    # Oznake: početna mirna dubina/brzina s indeksom 0, silovit presjek ispred skoka 1, mirni iza skoka 2;
+    # v_s je u knjizi brzina broda i ne smije označavati silovit tok.
+    labels=texts(intro)
+    check('vs' not in labels and 'y1' not in labels,'Uvod: bez v_s i bez y_1 za početnu mirnu dubinu')
+    check(all(t in labels for t in ('v0','vc','v1','v2','y0','y2')),'Uvod: oznake v0, vc, v1, v2, y0, y2')
 
     p='u15ex_'
     for n in range(1,7):node(ex,p+'z'+str(n))
     trapezoid(ex,p+'z1section',1.5,0,.86,.6,90)
     close(delta(node(ex,p+'z1b'))[0],1.5*90,'Z1: poprečna širina')
     close(delta(node(ex,p+'z1y'))[1],.6*90,'Z1: dubina')
-    v=1.2/(1.5*.6);c=math.sqrt(G*.6)
-    for name,value in (('upstreamWave',v-c),('downstreamWave',v+c),('velocity',v)):
-        dx,dy=delta(node(ex,p+'z1'+name))
-        close(dx/25,value,'Z1: stvarna potpisana brzina prema obali')
-        close(dy,0,'Z1: uzdužno širenje poremećaja')
+    # Z1 traži smjer i predznak v - c i v + c: valovi se ne crtaju, samo nepoznanice.
+    for name in ('upstreamWave','downstreamWave'):
+        absent(ex,p+'z1'+name,'Z1: skica ne smije crtati traženi smjer vala')
+    z1=node(ex,p+'z1')
+    check([e.get('id') for e in z1.iter() if e.get('data-mf1-vector')]==[p+'z1velocity'],'Z1: jedini vektor je smjer toka v')
+    dx,dy=delta(node(ex,p+'z1velocity'))
+    check(dx>0,'Z1: tok nizvodno (+x)');close(dy,0,'Z1: uzdužni tok')
+    check('v − c = ?' in texts(z1) and 'v + c = ?' in texts(z1),'Z1: nepoznanice v − c = ? i v + c = ?')
     for x,y in path(node(ex,p+'z2energyCurve')):
         depth=(x-46)/166;E=(254-y)/57
         close(E,energy(depth,3),'Z2: stvarna energijska krivulja',tol=1e-7)
-    minimum=node(ex,p+'z2minimum')
-    depth=(float(minimum.get('cx'))-46)/166;E=(254-float(minimum.get('cy')))/57
-    close(3/math.sqrt(G*depth**3),1,'Z2: minimum daje Fr=1')
-    close(E,1.5*depth,'Z2: minimum energije')
+    # Z2 traži y_c i E_min: minimum nije označen, a osi nemaju podjela (kvalitativni prikaz).
+    for id in ('z2minimum','z2criticalProjection'):
+        absent(ex,p+id,'Z2: skica ne smije označiti traženi minimum')
+    z2=node(ex,p+'z2')
+    check(not any(re.fullmatch(r'[\d,]+',t.strip()) for t in texts(z2)),'Z2: bez brojčanih podjela osi')
+    check(not any(e.tag.endswith('circle') for e in z2.iter()),'Z2: bez točke na krivulji')
     for x,y in path(node(ex,p+'z2depthAsymptote')):
         close((254-y)/57,(x-46)/166,'Z2: pomoćni pravac E=y')
     trapezoid(ex,p+'z3section',2.4,1.5,1.3,.9,50)
@@ -129,10 +150,21 @@ def main():
     key=path(node(ex,p+'z3slopeKey'))
     close((key[1][0]-key[0][0])/(key[2][1]-key[1][1]),1.5,'Z3: ključ pokosa u istom omjeru')
     bed,surface=flow(ex,p+'z4channel');base,scale,q=238,100,2.2
+    # Z4 traži y_t: zadane visine (y1, dz) su u mjerilu, a površina nad pragom shematska (ravna),
+    # pa nacrtana dubina na tjemenu nije izračunati korijen.
+    E1=energy(1.2,q);Et=E1-.12;yc=(q*q/G)**(1/3)
+    lo,hi=yc,1.2
+    for _ in range(200):
+        mid=(lo+hi)/2
+        lo,hi=(lo,mid) if energy(mid,q)<Et else (mid,hi)
+    yt_result=(lo+hi)/2
     for (x,yb),(xx,yt) in zip(bed,surface):
-        depth=(yb-yt)/scale;z=(base-yb)/scale
-        close(z+energy(depth,q),energy(1.2,q),'Z4: bilanca između stvarnih presjeka',tol=1e-7)
-        check(depth>(q*q/G)**(1/3),'Z4: čitav tok ostaje podkritičan')
+        check(abs(yt-surface[0][1])<1e-6,'Z4: shematska ravna slobodna površina')
+    crest_depth=(at(bed,248)-at(surface,248))/scale
+    check(abs(crest_depth-yt_result)>.05*yt_result,'Z4: nacrtana dubina na tjemenu nije traženi y_t')
+    check(any(t=='yt = ?' for t in texts(node(ex,p+'z4'))),'Z4: nepoznanica y_t = ?')
+    close(math.hypot(*delta(node(ex,p+'z4inflow'))),math.hypot(*delta(node(ex,p+'z4crestVelocity'))),
+          'Z4: shematske jednake brzine ne otkrivaju omjer v_t/v_1')
     crest=line(node(ex,p+'z4crestSection'))
     close(crest[0][1],at(surface,248),'Z4: presjek počinje na površini')
     close(crest[1][1],at(bed,248),'Z4: presjek završava na tjemenu dna')
@@ -160,8 +192,13 @@ def main():
     y1=(bed[0][1]-surface[0][1])/scale;y2=(bed[-1][1]-surface[-1][1])/scale
     close(y1,.35,'Z6: propisana ulazna dubina bazena')
     M=lambda y:y*y/2+q*q/(G*y)
-    close(M(y1),M(y2),'Z6: spregnute dubine pri projektnom protoku',tol=1e-7)
-    close((base-line(node(ex,p+'z6allowedDepthLine'))[0][1])/scale,1.4,'Z6: dopuštena dubina mjerena od dna bazena')
+    # Z6 traži spregnutu dubinu i usporedbu s y_2,dop: nizvodna dubina je shematska,
+    # nije spregnuta, a crta dopuštene dubine ne stoji uz vodu.
+    check(abs(M(y1)-M(y2))>.02*M(y1),'Z6: nacrtana nizvodna dubina nije izračunata spregnuta dubina')
+    check(y2>y1,'Z6: skok podiže razinu')
+    absent(ex,p+'z6allowedDepthLine','Z6: bez crte dopuštene dubine uz nacrtanu vodu')
+    z6=texts(node(ex,p+'z6'))
+    check('y2 = ?' in z6 and any('y2,dop = 1,40 m' in t for t in z6),'Z6: y2 = ? i y_2,dop samo kao podatak')
     close(delta(node(ex,p+'z6y2'))[1],scale*y2,'Z6: kota stvarne nizvodne dubine')
     vectors_inside(ex,p,['z6flow'],bed,surface)
     print('U15 SVG PASS: 2 slike; otvoreni tokovi, neprekinuto dno, valovi, E(y), trapezni presjeci, kritičnost, kota praga, sile skoka i granica bazena.')
