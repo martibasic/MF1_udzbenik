@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 622 486" role="img" aria-labelledby="u11v2_title u11v2_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:622px;height:auto;">
   <title id="u11v2_title">Otvorena mlaznica s prirubnicom</title>
-  <desc id="u11v2_desc">Uzdužni presjek mlaznice i mlaza koji udara u ploču. Omjer promjera je 220 prema 90. Prirubnica ima otvor između unutarnjih stijenki. Jedna ispuna povezuje ulaz, sapnicu, slobodan mlaz i radijalno razlijevanje uz ploču. Debljina sloja uz ploču je shematska. Isprekidani KV mlaznice omeđen je presjecima 1 i 2; udar u ploču zasebna je bilanca.</desc>
+  <desc id="u11v2_desc">Uzdužni presjek mlaznice i mlaza koji udara u ploču. Omjer promjera je 220 prema 90. Prirubnica ima otvor između unutarnjih stijenki. Jedna ispuna povezuje ulaz, sapnicu, slobodan mlaz i radijalno razlijevanje uz ploču. Debljina sloja uz ploču je shematska. Isprekidani KV mlaznice omeđen je presjecima 1 i 2; udar u ploču zasebna je bilanca. Strelica pM1A1 tlačna je sila na fluid u presjeku 1, a FP sila mlaza na ploču.</desc>
   <defs>
     <pattern id="u11v2_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -48,10 +48,10 @@
       <line x1="201" y1="142" x2="177" y2="154" stroke="#356b83" stroke-width="1" />
       <line id="u11v2_section2" x1="410" y1="220.25" x2="410" y2="279.75" stroke="#356b83" stroke-width="1.2" stroke-dasharray="4 4" />
       <text x="410" y="212.25" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">2</text>
-      <path d="M64 250 L102 250" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_v)" />
-      <text x="83.0" y="241" font-size="12" fill="#263746" text-anchor="middle">v₁</text>
+      <path d="M64 250 L94 250" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_v)" />
+      <text x="79.0" y="237" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
       <path d="M440 250 L503 250" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_v)" />
-      <text x="471.5" y="241" font-size="12" fill="#263746" text-anchor="middle">v₂</text>
+      <text x="471.5" y="237" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
       <path d="M535.5 195 L535.5 146" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_v)" />
       <path d="M535.5 311 L535.5 364" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_v)" />
       <line x1="23" y1="189.5" x2="33" y2="189.5" stroke="#657781" stroke-width="1.2" />
@@ -62,11 +62,13 @@
       <line x1="429" y1="274.75" x2="439" y2="274.75" stroke="#657781" stroke-width="1.2" />
       <path id="u11v2_d" d="M434 225.25 L434 274.75" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11v2_dim)" marker-end="url(#u11v2_dim)" />
       <text x="371" y="313" font-size="13" fill="#263746" text-anchor="start">d = 90 mm</text>
-      <text x="39" y="366" font-size="14" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.7em">M1</tspan>
+      <text x="118" y="366" font-size="14" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.7em">M1</tspan>
       </text>
       <text x="341" y="366" font-size="14" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M2</tspan> = 0</text>
       <path id="u11v2_pressure1" d="M165 210 L204 210" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_pressureMarker)" />
+      <text x="167" y="231" font-size="12" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M1</tspan>A<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
       <path id="u11v2_plateforce" d="M558 255 L597 255" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_forceMarker)" />
+      <text x="578" y="242" font-size="12" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.75em">P</tspan></text>
       <text x="578" y="286" font-size="12" fill="#263746" text-anchor="middle">215 N</text>
       <path d="M514 465 L546 465" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u11v2_axisMarker)" />
       <text x="554" y="469" font-size="13" fill="#263746" text-anchor="middle">x</text>

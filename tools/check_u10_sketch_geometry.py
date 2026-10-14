@@ -132,7 +132,7 @@ def branch(root, prefix, velocity_id, diameter_id):
 def run():
     names=('u11_fig_uvod_pregled','u11_val1_mlaz_na_plocu','u11_val2_mlaznica_prirubnica',
            'u11_val3_koljeno_reakcija','u11_ch1_t_racva_konzola','u11_ch2_y_racva_reakcija',
-           'u10_fig_hidroenergetsko_koljeno','u11_vjezbe_skice')
+           'u10_fig_hidroenergetsko_koljeno','u11_vjezbe_skice','u11_val_rotirajuca_mlaznica')
     roots=[ET.parse(ROOT/(name+'.svg')).getroot() for name in names]
     for root,name in zip(roots,names):
         ids=[e.get('id') for e in root.iter() if e.get('id')]
@@ -142,7 +142,7 @@ def run():
             check(fluid.get('stroke')=='none' and fluid.get('d').count('M')==1
                   and fluid.get('d').count('Z')==1,name+': jedna povezana ispuna bez zatvorenih stijenki na otvorima')
             check_uniform_fluid(fluid, 'fill')
-    intro,p1,p2,p3,p4,p5,p6,z=roots
+    intro,p1,p2,p3,p4,p5,p6,z,p7=roots
     wall_and_openings(intro,'u11intro_pipe',[(58,187),(321,379)])
     elbow_width(intro,'u11intro_pipe',82,56)
     check(node(intro,'u11intro_cv').get('d')==node(intro,'u11intro_pipefluid').get('d'),
@@ -152,7 +152,39 @@ def run():
     check(float(node(intro,'u11intro_flangeleft').get('x'))+float(node(intro,'u11intro_flangeleft').get('width'))<=293
           and float(node(intro,'u11intro_flangeright').get('x'))>=349,
           'Uvod: prirubnica mora ostaviti cijeli otvor 56 px')
-    plate(p1,'u11v1_jet')
+    # P1: Peltonova lopatica u gibanju. Mlaz ulazi na osi, razdjelni greben lezi
+    # na osi, oba izlaza su otvorena i skrenuta za 165 stupnjeva (15 stupnjeva
+    # prema dolaznom mlazu); lopatica je simetricna oko osi mlaza.
+    exit_up=(254.962174713555,136.579770447828); exit_lo=(254.962174713555,305.420229552172)
+    wall_and_openings(p1,'u11v1_bucket',[(44,221),exit_up,exit_lo])
+    w0=path(node(p1,'u11v1_bucketwall0')); w1=path(node(p1,'u11v1_bucketwall1'))
+    check(w0[-1]==(300.0,221.0)==w1[0],'P1: razdjelni greben lezi na osi mlaza')
+    check(len(w0)==len(w1) and all(abs(a[0]-b[0])<1e-6 and abs((a[1]-221)+(b[1]-221))<1e-6
+                                    for a,b in zip(reversed(w0),w1)),'P1: lopatica simetricna oko osi mlaza')
+    for id,sign in (('u11v1_outtop',1),('u11v1_outbottom',-1)):
+        dx,dy=delta(node(p1,id))
+        check(dx<0 and dy*sign<0 and abs(dy/dx-sign*math.tan(math.radians(15)))<1e-5,
+              id+': relativni izlaz skrenut za 165 stupnjeva, 15 stupnjeva prema dolaznom mlazu')
+    for id in ('u11v1_inflow','u11v1_motion','u11v1_force'):
+        dx,dy=delta(node(p1,id)); check(dx>0 and dy==0,id+': mlaz, gibanje lopatice i sila na lopaticu u smjeru +x')
+    check(node(p1,'u11v1_bucketcontrolVolume').get('d')==node(p1,'u11v1_bucketfluid').get('d'),
+          'P1: pomicni KV obuhvaca tocno vodu uz lopaticu')
+    jet_top=float(node(p1,'u11v1_jettop').get('y1')); jet_bot=float(node(p1,'u11v1_jetbottom').get('y1'))
+    check(abs((jet_top+jet_bot)/2-221)<1e-9 and abs(math.dist(*line(node(p1,'u11v1_d')))-(jet_bot-jet_top))<1e-9,
+          'P1: kota d mjeri stvarni promjer mlaza oko osi')
+    # P7: rotirajuca mlaznica. Dva tangencijalna mlaza suprotnih smjerova, obodna
+    # brzina suprotna mlazu, kota R od osi dovoda do osi mlaznice.
+    wall_and_openings(p7,'u11rot_head',[(400,262),(120,158)])
+    jr=delta(node(p7,'u11rot_jetright')); jl=delta(node(p7,'u11rot_jetleft')); us=delta(node(p7,'u11rot_speed'))
+    check(jr[0]==0 and jl[0]==0 and jr[1]>0 and jl[1]<0,'P7: mlazovi tangencijalni i suprotni')
+    check(us[0]==0 and us[1]*jr[1]<0,'P7: obodna brzina suprotna relativnom mlazu')
+    inlet=node(p7,'u11rot_inlet'); hub=path(node(p7,'u11rot_headwall1'))
+    cx,cy=float(inlet.get('cx')),float(inlet.get('cy'))
+    check(cx==(232+288)/2 and cy==(182+238)/2,'P7: dovod lezi na osi vrtnje u sredistu glave')
+    a,b=line(node(p7,'u11rot_R'))
+    check(a[0]==cx and b[0]==(392+408)/2 and a[1]==b[1],'P7: kota R mjeri od osi vrtnje do osi mlaznice')
+    check(node(p7,'u11rot_headcontrolVolume').get('d')==node(p7,'u11rot_headfluid').get('d'),
+          'P7: KV obuhvaca tocno vodu u glavi i mlaznicama')
     wall_and_openings(p2,'u11v2_nozzle',[(45,250)])
     top,bottom=(node(p2,'u11v2_flange'+x) for x in ('top','bottom'))
     check(float(top.get('y'))+float(top.get('height'))<=189.5 and float(bottom.get('y'))>=310.5,
@@ -190,7 +222,30 @@ def run():
           'P6: stalni promjer kroz cijeli zavoj od 60°')
     px,py=delta(node(p6,'u10he_pressure2'))
     check(px<0 and py<0 and abs(px*vy-py*vx)<1e-8,'P6: izlazni tlak djeluje suprotno brzini')
-    for n in (1,2,4,5):plate(z,'u11vs_z'+str(n))
+    for n in (4,5):plate(z,'u11vs_z'+str(n))
+    # Z1: vodomlazni pogon u sustavu broda; usis u dnu i sapnica u zrcalu stvarno otvoreni.
+    wall_and_openings(z,'u11vs_z1',[(120,190),(300,147.5)])
+    for id,sign in (('u11vs_z1jet',1),('u11vs_z1thrust',-1),('u11vs_z1stream',1)):
+        dx,dy=delta(node(z,id)); check(dx*sign>0 and dy==0,id+': mlaz prema krmi, potisak prema pramcu')
+    dx,dy=delta(node(z,'u11vs_z1inlet')); check(dx==0 and dy<0,'Z1: voda ulazi kroz otvor u dnu prema gore')
+    hull0,hull1=line(node(z,'u11vs_z1hull0')),line(node(z,'u11vs_z1hull1'))
+    check(max(p[0] for p in hull0)<=100 and min(p[0] for p in hull1)>=140,'Z1: dno trupa ostavlja otvor usisa')
+    tt,tb=line(node(z,'u11vs_z1transomtop')),line(node(z,'u11vs_z1transombottom'))
+    check(max(p[1] for p in tt)<=135 and min(p[1] for p in tb)>=160,'Z1: krmeno zrcalo ostavlja otvor sapnice')
+    check(node(z,'u11vs_z1controlVolume').get('d')==node(z,'u11vs_z1fluid').get('d'),'Z1: KV obuhvaca vodu u pogonu')
+    # Z2: aktuatorski disk; strujna cijev se suzava, disk je presjek cijevi.
+    tube=path(node(z,'u11vs_z2fluid')); widths=[]
+    for x in range(41,400):
+        cuts=sorted(a[1]+(b[1]-a[1])*(x-a[0])/(b[0]-a[0]) for a,b in zip(tube,tube[1:])
+                    if min(a[0],b[0])<=x<max(a[0],b[0]))
+        check(len(cuts)==2 and cuts[1]>cuts[0],'Z2: jedna povezana strujna cijev'); widths.append(cuts[1]-cuts[0])
+    check(all(b<=a+1e-9 for a,b in zip(widths,widths[1:])),'Z2: strujna cijev se suzava od v_A prema v_j')
+    disk=line(node(z,'u11vs_z2disk'))
+    check(disk[0][0]==disk[1][0] and all(distance_to_path(p,tube)<2e-5 for p in disk)
+          and node(z,'u11vs_z2disk').get('stroke-dasharray') is not None,'Z2: disk je presjek strujne cijevi, ne stijenka')
+    for id,sign in (('u11vs_z2vA',1),('u11vs_z2vd',1),('u11vs_z2vj',1),('u11vs_z2thrust',-1)):
+        dx,dy=delta(node(z,id)); check(dx*sign>0 and dy==0,id+': tok udesno, potisak na propeler ulijevo')
+    check(abs(math.dist(*line(node(z,'u11vs_z2D')))-math.dist(*disk))<1e-9,'Z2: kota D mjeri promjer diska')
     wall_and_openings(z,'u11vs_z3',[(36,187),(230,75)])
     elbow_width(z,'u11vs_z3',60,60)
     O,C=(node(z,'u11vs_z4'+x) for x in ('O','C'))
@@ -206,7 +261,7 @@ def run():
     check([math.dist(*line(node(z,'u11vs_z6D'+str(i)))) for i in (1,2)]==[56,36]
           and abs(math.dist(*line(node(z,'u11vs_z6D3')))-32)<1e-9,
           'Z6: promjeri 140:90:80 u istom mjerilu')
-    print('PASS U10: osam SVG-ova; otvorene granice, stijenke, omjeri i normalni presjeci, krak momenta i smjerovi vektora.')
+    print('PASS U10: devet SVG-ova; otvorene granice, stijenke, omjeri i normalni presjeci, lopatica, rotirajuca mlaznica, vodomlazni pogon, aktuatorski disk, krak momenta i smjerovi vektora.')
 
 
 if __name__ == '__main__':
