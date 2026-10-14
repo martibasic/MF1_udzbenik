@@ -91,6 +91,11 @@ def run():
     top=element(z,'u09vs_z3top').get('d')
     bottom=element(z,'u09vs_z3bottom').get('d')
     check(top.endswith('H365') and bottom.endswith('H365'),"Z3: vodoravni izlaz")
+    near(length(z,'u09vs_z2D1')/length(z,'u09vs_z2d'),100/50,"Z2: omjer promjera 100:50")
+    ztop=element(z,'u09vs_z2top').get('d')
+    check('H85 M95' in ztop and 'H195 M205' in ztop,"Z2: otvoreni tlačni priključci na ulazu i u grlu")
+    for tap,y in (('u09vs_z2tap1',123),('u09vs_z2tap2',138)):
+        t=element(z,tap);near(float(t.get('y'))+float(t.get('height')),y,tap+": priključak spojen na fluid")
     a=length(z,'u09vs_z6zc')/1.7
     near(length(z,'u09vs_z6dz')/2.6,a,"Z6: zajednička skala visinskih kota")
     near(length(z,'u09vs_z6height')/1.2,a,"Z6: visina izlaza prema tlu")
@@ -132,17 +137,34 @@ def run():
     check(C+(float(tube.get('stroke-width'))+4)/2<149,"P3: cijev iznad krutog ruba bazena")
 
     p4=svg('u09_ch1_bypass_sifon_suzenje_mlaz.svg','u09ch1_')
-    scale=length(p4,'u09ch1_heightA')/4.2
-    for id,value in [('heightC',1.5),('dropAB',2.8),('heightB',1.4)]:
-        near(length(p4,'u09ch1_'+id)/scale,value,"P4: dosljedna kota "+id)
-    near(length(p4,'u09ch1_dC')/length(p4,'u09ch1_D'),.8,"P4: grlo 80:100")
-    near(float(element(p4,'u09ch1_leftwater').get('stroke-width')),
-         length(p4,'u09ch1_D'),"P4: D je unutarnji otvor cijevi")
-    pipe(p4,'u09ch1_left');pipe(p4,'u09ch1_right')
-    check(95 < numbers(element(p4,'u09ch1_leftwater'))[0] < 220,
-          "P4: ulazna os unutar bazena")
-    check(dot(p4,'u09ch1_C')[1]+12<251,"P4: sifon prolazi iznad ruba")
-    parabola(p4,'u09ch1_jet',scale,2.8,1.4)
+    scale=length(p4,'u09ch1_heightU')/3.0
+    near(length(p4,'u09ch1_heightP')/scale,2.0,"P4: kota crpke iznad vodne linije")
+    near(length(p4,'u09ch1_ballast')/scale,1.5,"P4: vodna linija u balastu 1,5 m niže")
+    A,P,U=(dot(p4,'u09ch1_'+name) for name in ('A','P','U'))
+    wl=float(element(p4,'u09ch1_waterline').get('y1'))
+    near(A[1],wl,"P4: točka A leži na vodnoj liniji")
+    near(dimension(p4,'u09ch1_heightU')[1],wl,"P4: kota z_u počinje na vodnoj liniji")
+    near((U[1]-wl)/scale,3.0,"P4: usisni otvor 3,0 m ispod vodne linije")
+    near((wl-P[1])/scale,2.0,"P4: ulaz u crpku 2,0 m iznad vodne linije")
+    water=numbers(element(p4,'u09ch1_pipewater'))
+    near(water[-2],P[1],"P4: usisni vod završava na visini ulaza u crpku")
+    near(water[-1],P[0],"P4: usisni vod završava na ulazu u crpku")
+    pipe(p4,'u09ch1_pipe')
+    near(float(element(p4,'u09ch1_pipewater').get('stroke-width')),
+         length(p4,'u09ch1_D'),"P4: D je unutarnji otvor voda")
+    chamber=element(p4,'u09ch1_chamber')
+    cx,cy=float(chamber.get('x')),float(chamber.get('y'))
+    check(cx<water[0]<cx+float(chamber.get('width')) and abs(water[1]-cy)<1e-9,
+          "P4: vod počinje u fluidu usisne košare")
+    opening=element(p4,'u09ch1_opening');oy=float(opening.get('y'));oh=float(opening.get('height'))
+    for plate in ('plating-upper','plating-lower'):
+        e=element(p4,'u09ch1_'+plate);py=float(e.get('y'));ph=float(e.get('height'))
+        check(py+ph<=oy or py>=oy+oh,"P4: oplata ne zatvara otvor košare ("+plate+")")
+    check(oy<U[1]<oy+oh,"P4: točka U u otvoru košare")
+    gr=[element(p4,f'u09ch1_grating-{i}') for i in (1,2,3)]
+    check(sum(abs(float(g.get('y2'))-float(g.get('y1'))) for g in gr)<0.4*oh
+          and all(oy<float(g.get('y1'))<oy+oh for g in gr),"P4: rešetka ne zatvara otvor")
+    check(float(element(p4,'u09ch1_sea').get('y'))==wl,"P4: more počinje na vodnoj liniji")
 
     p5=svg('u09_fig_venturijeva_cijev.svg','u09vent_')
     near(length(p5,'u09vent_D1')/length(p5,'u09vent_D2'),2,"P5: omjer promjera 2:1")
