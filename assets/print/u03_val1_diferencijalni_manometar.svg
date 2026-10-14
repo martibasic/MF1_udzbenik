@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 442" role="img" aria-labelledby="u03v1dm_title u03v1dm_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:576px;height:auto;">
   <title id="u03v1dm_title">Diferencijalni manometar između vodova sa slatkom i morskom vodom</title>
-  <desc id="u03v1dm_desc">Jedan živin U-manometar, zračni most i silazni krak morske vode. Hod p1 prema p2 silazi 0,60 m kroz vodu, penje se 0,10 m kroz živu i neto 0,70 m kroz zrak, pa silazi 0,40 m kroz morsku vodu. Presjek cijevi je ujednačen; nema pregrada na spojevima.</desc>
+  <desc id="u03v1dm_desc">Jedan živin U-manometar, zračni most i silazni krak morske vode; vertikalne kote u zajedničkom mjerilu. Hod p1 prema p2 silazi 0,60 m kroz vodu, penje se 0,10 m kroz živu i neto 0,70 m kroz zrak, pa silazi 0,40 m kroz morsku vodu. Presjek cijevi je ujednačen; nema pregrada na spojevima.</desc>
   <defs>
     <pattern id="u03v1dm_zrak" width="10" height="10" patternUnits="userSpaceOnUse">
-      <rect width="10" height="10" fill="#eadfc5" />
-      <circle cx="5" cy="5" r="0.8" fill="#eadfc5" />
+      <rect width="10" height="10" fill="#f3f6f7" />
+      <circle cx="5" cy="5" r="0.8" fill="#f3f6f7" />
     </pattern>
     <marker id="u03v1dm_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
@@ -50,9 +50,9 @@
       <circle cx="520" cy="260" r="3.5" fill="#356b83" />
       <text x="515" y="240" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700" transform="translate(25 26)">p<tspan baseline-shift="sub" font-size="0.7em">2</tspan>
       </text>
-      <text x="95" y="192" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="translate(0 -12)">slatka voda</text>
-      <text x="487" y="294" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">morska voda</text>
-      <text x="361" y="150" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">zrak</text>
+      <text x="95" y="192" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="translate(0 -12)">slatka voda, ρ<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
+      <text x="487" y="294" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">morska voda, ρ<tspan baseline-shift="sub" font-size="0.7em">mv</tspan></text>
+      <text x="361" y="150" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">zrak, ρ<tspan baseline-shift="sub" font-size="0.7em">zr</tspan></text>
       <text x="212" y="419" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">živa, ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan>
       </text>
       <line x1="70" y1="220" x2="115" y2="220" stroke="#3a4a56" stroke-width="0.8" stroke-dasharray="4,3" />

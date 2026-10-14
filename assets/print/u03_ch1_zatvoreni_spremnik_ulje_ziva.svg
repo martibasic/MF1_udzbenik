@@ -1,20 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 489" role="img" aria-labelledby="u03c1zsuz_title u03c1zsuz_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:736px;height:auto;">
-  <title id="u03c1zsuz_title">Zatvoreni vodeni spremnik s referentnim uljnim spremnikom i živinim U-manometrom</title>
-  <desc id="u03c1zsuz_desc">Zatvoreni vodeni i otvoreni uljni spremnik povezani su prohodnim živinim U-manometrom. Točka 2 je 0,13 m iznad točke 1, a površina ulja 0,12 m ispod površine vode. Sve vertikalne kote imaju zajedničko mjerilo. Spojevi su bez poprečnih stijenki i promjene unutarnjeg promjera.</desc>
+  <title id="u03c1zsuz_title">Teretni tank s inertnim plinom, uljem i vodenim talogom: ullage otvor, sondiranje i tlačni mjerač na dnu</title>
+  <desc id="u03c1zsuz_desc">Presjek teretnog tanka tankera. Iznad ulja je inertni plin pod pretlakom, na dnu tanak sloj morske vode. Ullage otvor na palubi ima referentnu točku 18,60 m iznad dna; ullage vrpca očitava U_m = 2,31 m do površine ulja, a ullage U iz tlaka na dnu je traženi rezultat, a sonda s pastom debljinu vode 0,35 m. Tlačni mjerač razine na dnu pokazuje p_M,dno = 141,0 kPa. Vertikalno mjerilo je 20 jedinica po metru: referentna točka y58, površina ulja y104,2, granica ulja i vode y423, dno y430. Širina tanka je shematska.</desc>
   <defs>
     <pattern id="u03c1zsuz_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.2" />
     </pattern>
-    <marker id="u03c1zsuz_aDim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
-    </marker>
-    <marker id="u03c1zsuz_aDimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#356b83" />
-    </marker>
-    <marker id="u03c1zsuz_aBlue" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#356b83" />
-    </marker>
     <marker id="u03p3_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
@@ -22,88 +13,61 @@
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
   </defs>
-  <g id="u03c1zsuz_title-scene-1" transform="translate(21.0000 -6.0000)">
+  <g id="u03c1zsuz_title-scene-1" transform="translate(0 0)">
     <g font-family="Arial, Liberation Sans, sans-serif">
-      <rect x="50" y="70" width="170" height="50" fill="#f3f6f7" stroke="none" stroke-width="1.2" />
-      <rect x="50" y="120" width="170" height="260" fill="#dcebf1" stroke="none" stroke-width="1.2" />
-      <rect x="36" y="56" width="198" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="36" y="70" width="14" height="310" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="36" y="380" width="198" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="220" y="70" width="14" height="180" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="220" y="278" width="14" height="102" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="480" y="141.6" width="120" height="238.4" fill="#eadfc5" stroke="none" stroke-width="1.2" />
-      <rect x="466" y="100" width="14" height="126.6" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="466" y="254.6" width="14" height="125.4" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="600" y="100" width="14" height="280" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="466" y="380" width="148" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <path d="M220 264 H285 V430 H420 V240.6 H480" fill="none" stroke="#3a4a56" stroke-width="29" stroke-linejoin="round" />
-      <path d="M220 264 H285 V430 H420 V240.6 H480" fill="none" stroke="#c5cdd3" stroke-width="28" stroke-linejoin="round" />
-      <path d="M220 264 H285 V430 H420 V240.6 H480" fill="none" stroke="url(#u03c1zsuz_hatch)" stroke-width="28" stroke-linejoin="round" />
-      <path d="M220 264 H285 V318" fill="none" stroke="#dcebf1" stroke-width="20" stroke-linejoin="round" />
-      <path d="M285 318 V430 H420 V285.6" fill="none" stroke="#a9b2b9" stroke-width="20" stroke-linejoin="round" />
-      <path d="M420 285.6 V240.6 H480" fill="none" stroke="#eadfc5" stroke-width="20" stroke-linejoin="round" />
-      <line x1="50" y1="120" x2="220" y2="120" stroke="#356b83" stroke-width="2" />
-      <line x1="480" y1="141.6" x2="600" y2="141.6" stroke="#356b83" stroke-width="2" />
-      <line x1="275" y1="318" x2="295" y2="318" stroke="#3a4a56" stroke-width="1.2" />
-      <line x1="410" y1="285.6" x2="430" y2="285.6" stroke="#3a4a56" stroke-width="1.2" />
-      <circle cx="220" cy="264" r="3.5" fill="#356b83" />
-      <text x="201" y="283" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">1</text>
-      <circle cx="480" cy="240.6" r="3.5" fill="#356b83" />
-      <text x="492" y="258.6" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">2</text>
-      <circle cx="95" cy="336" r="3.5" fill="#356b83" />
-      <text x="105" y="340" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">C</text>
-      <text x="135" y="43" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Spremnik A (zatvoren)</text>
-      <text x="135" y="94" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746" text-anchor="middle">plin, p<tspan baseline-shift="sub" font-size="0.7em">G</tspan>
-      </text>
-      <text x="95" y="202" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746" text-anchor="middle">voda</text>
-      <text x="110" y="219" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1000 kg/m³</text>
-      <text x="540" y="84" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Spremnik B (otvoren)</text>
-      <text x="540" y="116" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">0</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
-      </text>
-      <text x="540" y="302" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746" text-anchor="middle">ulje</text>
-      <text x="540" y="319" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 850 kg/m³</text>
-      <line x1="220" y1="264" x2="252" y2="264" stroke="#657781" stroke-width="0.7" />
-      <line x1="245" y1="318" x2="275" y2="318" stroke="#657781" stroke-width="0.7" />
-      <line x1="241" y1="264" x2="251" y2="264" stroke="#657781" stroke-width="0.8" />
-      <line x1="241" y1="318" x2="251" y2="318" stroke="#657781" stroke-width="0.8" />
-      <line x1="246" y1="264" x2="246" y2="318" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
-      <text x="254" y="301" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">a</text>
-      <text x="253" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">0,30 m</text>
-      <line x1="430" y1="285.6" x2="461" y2="285.6" stroke="#657781" stroke-width="0.7" />
-      <line x1="449" y1="240.6" x2="461" y2="240.6" stroke="#657781" stroke-width="0.7" />
-      <line x1="452" y1="240.6" x2="462" y2="240.6" stroke="#657781" stroke-width="0.8" />
-      <line x1="452" y1="285.6" x2="462" y2="285.6" stroke="#657781" stroke-width="0.8" />
-      <line x1="457" y1="240.6" x2="457" y2="285.6" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
-      <text x="440" y="270" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">b</text>
-      <text x="456" y="309" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">0,25 m</text>
-      <line x1="299" y1="285.6" x2="405" y2="285.6" stroke="#3a4a56" stroke-width="0.8" stroke-dasharray="4,3" />
-      <line x1="299" y1="318" x2="405" y2="318" stroke="#3a4a56" stroke-width="0.8" stroke-dasharray="4,3" />
-      <line x1="346" y1="285.6" x2="356" y2="285.6" stroke="#657781" stroke-width="0.8" />
-      <line x1="346" y1="318" x2="356" y2="318" stroke="#657781" stroke-width="0.8" />
-      <line x1="351" y1="285.6" x2="351" y2="318" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
-      <text x="363" y="305" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Δh</text>
-      <text x="356" y="343" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">0,18 m</text>
-      <line x1="176" y1="120" x2="186" y2="120" stroke="#657781" stroke-width="0.8" />
-      <line x1="176" y1="264" x2="186" y2="264" stroke="#657781" stroke-width="0.8" />
-      <line x1="181" y1="120" x2="181" y2="264" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
-      <text x="189" y="173" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">1</tspan>
-      </text>
-      <text x="189" y="189" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start">0,80 m</text>
-      <line x1="19" y1="120" x2="29" y2="120" stroke="#657781" stroke-width="0.8" />
-      <line x1="19" y1="336" x2="29" y2="336" stroke="#657781" stroke-width="0.8" />
-      <line x1="24" y1="120" x2="24" y2="336" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
-      <text x="13" y="228" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="rotate(-90 13 228)">h<tspan baseline-shift="sub" font-size="0.7em">C</tspan> = 1,20 m</text>
-      <line x1="24" y1="120" x2="50" y2="120" stroke="#657781" stroke-width="0.7" />
-      <line x1="24" y1="336" x2="90" y2="336" stroke="#657781" stroke-width="0.7" />
-      <line x1="645" y1="141.6" x2="655" y2="141.6" stroke="#657781" stroke-width="0.8" />
-      <line x1="645" y1="240.6" x2="655" y2="240.6" stroke="#657781" stroke-width="0.8" />
-      <line x1="650" y1="141.6" x2="650" y2="240.6" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
-      <text x="660" y="185" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">2</tspan>
-      </text>
-      <text x="660" y="203" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start">0,55 m</text>
-      <line x1="614" y1="141.6" x2="656" y2="141.6" stroke="#657781" stroke-width="0.7" />
-      <line x1="485" y1="240.6" x2="656" y2="240.6" stroke="#657781" stroke-width="0.7" />
-      <text x="352" y="464" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">živa, ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> = 13 600 kg/m³</text>
+      <rect id="u03c1zsuz_gas" x="164" y="84" width="396" height="20.2" fill="#f3f6f7" stroke="none" />
+      <rect id="u03c1zsuz_oil" x="164" y="104.2" width="396" height="318.8" fill="#eadfc5" stroke="none" />
+      <rect id="u03c1zsuz_water" x="164" y="423" width="396" height="7" fill="#dcebf1" stroke="none" />
+      <rect id="u03c1zsuz_standpipe-gas" x="304" y="58" width="22" height="26" fill="#f3f6f7" stroke="none" />
+      <rect id="u03c1zsuz_wall-left" x="150" y="70" width="14" height="374" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u03c1zsuz_wall-right" x="560" y="70" width="14" height="374" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u03c1zsuz_bottom" x="150" y="430" width="424" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u03c1zsuz_deck-left" x="150" y="70" width="150" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u03c1zsuz_deck-right" x="330" y="70" width="244" height="14" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u03c1zsuz_standpipe-left" x="300" y="58" width="4" height="12" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1" />
+      <rect id="u03c1zsuz_standpipe-right" x="326" y="58" width="4" height="12" fill="url(#u03c1zsuz_hatch)" stroke="#3a4a56" stroke-width="1" />
+      <line id="u03c1zsuz_oil-surface" x1="164" y1="104.2" x2="560" y2="104.2" stroke="#356b83" stroke-width="2" />
+      <line id="u03c1zsuz_interface" x1="164" y1="423" x2="560" y2="423" stroke="#657781" stroke-width="1" />
+      <line id="u03c1zsuz_ref-mark" x1="330" y1="58" x2="352" y2="58" stroke="#3a4a56" stroke-width="1.2" />
+      <line id="u03c1zsuz_ullage-tape" x1="310" y1="58" x2="310" y2="104.2" stroke="#3a4a56" stroke-width="1" stroke-dasharray="4,3" />
+      <rect x="307" y="100.2" width="6" height="4" fill="#3a4a56" stroke="none" />
+      <line id="u03c1zsuz_sounding-tape" x1="320" y1="58" x2="320" y2="430" stroke="#3a4a56" stroke-width="1" stroke-dasharray="4,3" />
+      <rect x="317" y="414" width="6" height="16" fill="#3a4a56" stroke="none" />
+      <circle id="u03c1zsuz_bottom-gauge" cx="200" cy="427" r="5" fill="#ffffff" stroke="#3a4a56" stroke-width="1.4" />
+      <line x1="200" y1="432" x2="200" y2="460" stroke="#3a4a56" stroke-width="0.8" />
+      <circle id="u03c1zsuz_gas-gauge" cx="480" cy="60" r="5" fill="#ffffff" stroke="#3a4a56" stroke-width="1.4" />
+      <line x1="480" y1="65" x2="480" y2="84" stroke="#3a4a56" stroke-width="0.8" />
+      <text x="30" y="40" font-size="13" fill="#263746" font-weight="700">Teretni tank (presjek)</text>
+      <text x="30" y="57" font-size="11" fill="#263746">A<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 600 m²</text>
+      <text x="225" y="66" font-size="11" fill="#263746" text-anchor="middle">paluba</text>
+      <text x="356" y="54" font-size="11" fill="#263746" text-anchor="start">referentna točka ullagea</text>
+      <text x="364" y="98" font-size="11" fill="#263746" text-anchor="middle">inertni plin</text>
+      <text x="492" y="50" font-size="11" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.7em">M,pl</tspan> = 3,0 kPa</text>
+      <text x="364" y="250" font-size="13" fill="#263746" text-anchor="middle">plinsko ulje</text>
+      <text x="364" y="268" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 860 kg/m³</text>
+      <text x="440" y="408" font-size="11" fill="#263746" text-anchor="middle">morska voda (talog), ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1025 kg/m³</text>
+      <line x1="440" y1="411" x2="440" y2="425" stroke="#657781" stroke-width="0.7" />
+      <text x="310" y="124" font-size="10" fill="#263746" text-anchor="end">ullage vrpca: U<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 2,31 m</text>
+      <text x="312" y="414" font-size="10" fill="#263746" text-anchor="end">sonda s pastom</text>
+      <text x="200" y="474" font-size="11" fill="#263746" text-anchor="middle">tlačni mjerač razine, p<tspan baseline-shift="sub" font-size="0.7em">M,dno</tspan> = 141,0 kPa</text>
+      <line x1="574" y1="58" x2="704" y2="58" stroke="#657781" stroke-width="0.7" />
+      <line x1="560" y1="104.2" x2="646" y2="104.2" stroke="#657781" stroke-width="0.7" />
+      <line x1="560" y1="423" x2="646" y2="423" stroke="#657781" stroke-width="0.7" />
+      <line x1="574" y1="430" x2="704" y2="430" stroke="#657781" stroke-width="0.7" />
+      <line x1="605" y1="58" x2="615" y2="58" stroke="#657781" stroke-width="0.8" />
+      <line x1="605" y1="104.2" x2="615" y2="104.2" stroke="#657781" stroke-width="0.8" />
+      <line id="u03c1zsuz_dim-u" x1="610" y1="58" x2="610" y2="104.2" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+      <text x="616" y="85" font-size="11" fill="#263746" text-anchor="start">U = ?</text>
+      <line x1="635" y1="104.2" x2="645" y2="104.2" stroke="#657781" stroke-width="0.8" />
+      <line x1="635" y1="423" x2="645" y2="423" stroke="#657781" stroke-width="0.8" />
+      <line id="u03c1zsuz_dim-ho" x1="640" y1="104.2" x2="640" y2="423" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+      <text x="646" y="262" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">o</tspan></text>
+      <text x="646" y="278" font-size="10" fill="#263746" text-anchor="start">= ?</text>
+      <text x="580" y="446" font-size="10" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 0,35 m</text>
+      <line x1="695" y1="58" x2="705" y2="58" stroke="#657781" stroke-width="0.8" />
+      <line x1="695" y1="430" x2="705" y2="430" stroke="#657781" stroke-width="0.8" />
+      <line id="u03c1zsuz_dim-href" x1="700" y1="58" x2="700" y2="430" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+      <text x="716" y="236" font-size="11" fill="#263746" text-anchor="middle" transform="rotate(-90 716 236)">H<tspan baseline-shift="sub" font-size="0.7em">ref</tspan> = 18,60 m</text>
     </g>
   </g>
 </svg>
