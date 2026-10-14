@@ -66,7 +66,7 @@ def vertical_intersections(poly, x):
                   for a,b in zip(poly,poly[1:]) if min(a[0],b[0]) <= x < max(a[0],b[0]))
 
 
-def nozzle(root, prefix, convergent):
+def nozzle(root, prefix, convergent, area_ratio=None):
     gas = element(root,prefix+'gas')
     check(gas.get('stroke') == 'none',prefix+': rub ispune ne zatvara ulaz/izlaz')
     gas_poly = polygon(gas)
@@ -88,7 +88,12 @@ def nozzle(root, prefix, convergent):
         mid=len(widths)//2
         check(all(b<a for a,b in zip(widths[:mid+1],widths[1:mid+1]))
               and all(b>a for a,b in zip(widths[mid:],widths[mid+1:])),prefix+': točno jedno grlo između konvergentnog i divergentnog dijela')
-        check(max(abs(a-b) for a,b in zip(widths,widths[::-1]))<1e-6,prefix+': simetričan uzdužni profil')
+        if area_ratio is not None:
+            # Osnosimetrična sapnica: omjer površina izlaza i grla jednak je
+            # kvadratu omjera nacrtanih promjera.
+            exit_cuts = vertical_intersections(gas_poly, right-1e-6)
+            ratio = ((exit_cuts[1]-exit_cuts[0])/min(widths))**2
+            check(abs(ratio/area_ratio-1) < 0.01, prefix+': omjer površina izlaza i grla Ae/A* prema tekstu')
 
 
 def shock(root,front_id,before_id,after_id,top,bottom):
@@ -108,12 +113,40 @@ def run():
         ids=[e.get('id') for e in root.iter() if e.get('id')]
         check(len(ids)==len(set(ids)),'Jedinstveni identifikatori')
         check(not any(e.tag.endswith('filter') for e in root.iter()),'Nema filtara sjene')
-    nozzle(intro,'u09fukt_nozzle',False)
-    for prefix in ('u09kvs_z4','u09kvs_z5'):
+    nozzle(intro,'u09fukt_nozzle',False,area_ratio=160/100)
+    intro_gas=polygon(element(intro,'u09fukt_nozzlegas'))
+    exit_line=element(intro,'u09fukt_exit')
+    check(float(exit_line.get('x1'))==float(exit_line.get('x2'))==max(x for x,y in intro_gas)
+          and sorted(vertical_intersections(intro_gas,float(exit_line.get('x1'))-1e-6))
+          and exit_line.get('stroke-dasharray') is not None,
+          'Uvod: izlazni presjek Ae označen je na stvarnom otvorenom izlazu sapnice, ne kao stijenka')
+    for prefix in ('u09kvs_z2','u09kvs_z4','u09kvs_z5'):
         nozzle(tasks,prefix,True)
         x1,y1,x2,y2=numbers(element(tasks,prefix+'outflow'))
         exit=element(tasks,prefix+'exit')
         check(x1<float(exit.get('x1'))<x2 and y1==y2,prefix+': strelica prolazi otvorenim izlaznim presjekom')
+    # Z2: boca, ventil (konvergentni kritični presjek) i vod prema motoru dijele
+    # neprekinut plin; kruti rubovi ne zatvaraju ni ulaz ventila ni njegov izlaz.
+    z2gas=polygon(element(tasks,'u09kvs_z2gas'))
+    z2left,z2right=min(x for x,y in z2gas),max(x for x,y in z2gas)
+    inlet=vertical_intersections(z2gas,z2left+1e-6); outlet=vertical_intersections(z2gas,z2right-1e-6)
+    bottle=element(tasks,'u09kvs_z2bottlegas'); pipe=element(tasks,'u09kvs_z2pipegas')
+    bx,by,bw,bh=(float(bottle.get(k)) for k in ('x','y','width','height'))
+    px,py,pw,ph=(float(pipe.get(k)) for k in ('x','y','width','height'))
+    check(bx+bw==z2left and by<=inlet[0] and by+bh>=inlet[1],'Z2: boca se otvara izravno u ulaz ventila')
+    check(px==z2right and py<outlet[0] and py+ph>outlet[1],
+          'Z2: vod prema motoru širi je od kritičnog presjeka i obuhvaća cijeli izlaz ventila')
+    top_cuts=vertical_intersections(polygon(element(tasks,'u09kvs_z2top')),z2right-1e-6)
+    bottom_cuts=vertical_intersections(polygon(element(tasks,'u09kvs_z2bottom')),z2right-1e-6)
+    check(min(top_cuts)<=py and max(bottom_cuts)>=py+ph,
+          'Z2: stijenka ventila zatvara stepenicu prema širem vodu, bez procjepa')
+    check(bottle.get('fill')==pipe.get('fill')==element(tasks,'u09kvs_z2gas').get('fill'),'Z2: isti plin u boci, ventilu i vodu')
+    check(outlet[1]-outlet[0]<inlet[1]-inlet[0]<=bh,'Z2: kritični presjek je najmanji otvor na putu zraka')
+    for wall_id in ('u09kvs_z2bottletop','u09kvs_z2bottlebottom','u09kvs_z2bottleleft','u09kvs_z2pipetop','u09kvs_z2pipebottom'):
+        wall=element(tasks,wall_id)
+        wx,wy,ww,wh=(float(wall.get(k)) for k in ('x','y','width','height'))
+        for gx,gy,gw,gh in ((bx,by,bw,bh),(px,py,pw,ph)):
+            check(wx+ww<=gx or wx>=gx+gw or wy+wh<=gy or wy>=gy+gh,wall_id+': stijenka ne ulazi u plin')
     shock(intro,'u09fukt_shockfront','u09fukt_before','u09fukt_after',60,175)
     shock(tasks,'u09kvs_z6shock','u09kvs_z6before','u09kvs_z6after',109,183)
     for id,direction in [('z1left',-1),('z1right',1),('z3downstream',1),('z3upstream',-1)]:
@@ -123,10 +156,10 @@ def run():
     x1,y1,x2,y2=numbers(element(tasks,'u09kvs_z3length'))
     check(x1==float(a.get('x1')) and x2==float(b.get('x1')) and y1==y2,
           'Z3: kota obuhvaća točno nepomične mjerne točke A i B')
-    d=element(tasks,'u09kvs_z2ductgas')
-    x1,y1,x2,y2=numbers(element(tasks,'u09kvs_z2diameter'))
-    check(x1==x2 and y1==float(d.get('y')) and y2==y1+float(d.get('height')),
-          'Z2: kota mjeri unutarnji promjer, ne vanjsku stijenku')
+    for text in tasks.iter():
+        label=''.join(text.itertext()).strip() if text.tag.endswith('text') else ''
+        if re.match(r'^M[₁₂]',label) or label.startswith('Ma'):
+            check(label.startswith('Ma'),'Machov broj označen je kao Ma, ne M')
     gas=element(tasks,'u09kvs_z6gas')
     wall_rects=[e for e in element(tasks,'u09kvs_z6') if e.tag.endswith('rect')
                 and (e.get('id','').startswith('u09kvs_z6top') or e.get('id','').startswith('u09kvs_z6bottom'))]
