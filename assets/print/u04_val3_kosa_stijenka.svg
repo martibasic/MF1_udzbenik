@@ -41,9 +41,9 @@
   </defs>
   <g id="u04v3ks_title-scene-1" transform="translate(8.0000 -31.0000)">
     <circle cx="105" cy="438" r="2.5" fill="#3a4a56" />
-    <line x1="105" y1="438" x2="105" y2="488" stroke="#356b83" stroke-width="2.4" marker-end="url(#u04v3ks_aBlk)" />
-    <line x1="105" y1="438" x2="87.67074413863405" y2="438" stroke="#356b83" stroke-width="2.2" marker-end="url(#u04v3ks_aV)" />
-    <line x1="105" y1="438" x2="87.67074413863405" y2="488" stroke="#356b83" stroke-width="2.6" marker-end="url(#u04v3ks_aV)" />
+    <line x1="105" y1="438" x2="105" y2="488" stroke="#356b83" stroke-width="2" marker-end="url(#u04v3ks_aBlk)" stroke-dasharray="6 3" data-mf1-vector="acceleration" />
+    <line x1="105" y1="438" x2="87.67074413863405" y2="438" stroke="#356b83" stroke-width="2" marker-end="url(#u04v3ks_aV)" stroke-dasharray="6 3" data-mf1-vector="acceleration" />
+    <line x1="105" y1="438" x2="87.67074413863405" y2="488" stroke="#356b83" stroke-width="2" marker-end="url(#u04v3ks_aV)" stroke-dasharray="6 3" data-mf1-vector="acceleration" />
     <text x="135" y="422" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">Efektivno polje sila</text>
     <text x="111" y="482" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="start" fill="#263746">
       <tspan font-weight="700">g</tspan>
@@ -72,19 +72,19 @@
       <text x="405" y="198" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">p = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
       </text>
       <text x="158" y="350" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">tekućina, ρ = 960 kg/m³</text>
-      <line x1="242" y1="80" x2="278" y2="80" stroke="#356b83" stroke-width="2.4" marker-end="url(#u04v3ks_aR)" />
-      <text x="260" y="68" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle">a = 3,4 m/s²</text>
-      <line id="u04v3ks_p1" x1="261.8458353759526" y1="252.94827526395522" x2="291.4250764525994" y2="263.2" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
-      <line id="u04v3ks_p2" x1="253.1332903248381" y1="272.1070374370392" x2="284.56269113149847" y2="283.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
-      <line id="u04v3ks_p3" x1="243.45268471248863" y1="293.3945509626881" x2="276.93781855249745" y2="305.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
-      <line id="u04v3ks_p4" x1="233.77207910013917" y1="314.68206448833695" x2="269.3129459734964" y2="327.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
-      <line id="u04v3ks_p5" x1="225.05953404902465" y1="333.8408266614209" x2="262.4505606523955" y2="346.8" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+      <line x1="242" y1="80" x2="278" y2="80" stroke="#356b83" stroke-width="2" marker-end="url(#u04v3ks_aR)" stroke-dasharray="6 3" data-mf1-vector="acceleration" />
+      <text x="260" y="68" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle"><tspan font-weight="700">a</tspan> = 3,4 m/s²</text>
+      <line id="u04v3ks_p1" x1="261.8458353759526" y1="252.94827526395522" x2="291.4250764525994" y2="263.2" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" data-mf1-vector="pressure" />
+      <line id="u04v3ks_p2" x1="253.1332903248381" y1="272.1070374370392" x2="284.56269113149847" y2="283.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" data-mf1-vector="pressure" />
+      <line id="u04v3ks_p3" x1="243.45268471248863" y1="293.3945509626881" x2="276.93781855249745" y2="305.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" data-mf1-vector="pressure" />
+      <line id="u04v3ks_p4" x1="233.77207910013917" y1="314.68206448833695" x2="269.3129459734964" y2="327.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" data-mf1-vector="pressure" />
+      <line id="u04v3ks_p5" x1="225.05953404902465" y1="333.8408266614209" x2="262.4505606523955" y2="346.8" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" data-mf1-vector="pressure" />
       <line x1="40" y1="250" x2="292" y2="250" stroke="#657781" stroke-width="0.8" stroke-dasharray="3,3" />
       <line x1="40" y1="360" x2="80" y2="360" stroke="#657781" stroke-width="0.8" stroke-dasharray="3,3" />
       <line x1="39" y1="250" x2="49" y2="250" stroke="#657781" stroke-width="0.8" />
       <line x1="39" y1="360" x2="49" y2="360" stroke="#657781" stroke-width="0.8" />
-      <line x1="44" y1="250" x2="44" y2="360" stroke="#657781" stroke-width="1.2" marker-start="url(#u04fix_dimL)" marker-end="url(#u04fix_dim)" />
-      <text x="27" y="305" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle" transform="rotate(-90 27 305)">H = 0,55 m</text>
+      <line x1="44" y1="250" x2="44" y2="360" stroke="#657781" stroke-width="1.2" marker-start="url(#u04fix_dimL)" marker-end="url(#u04fix_dim)" data-mf1-role="dimension" />
+      <text x="27" y="305" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle" transform="rotate(-90 27 305)">Δz<tspan baseline-shift="sub" font-size="0.7em">AB</tspan> = 0,55 m</text>
       <text x="236" y="392" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,B</tspan>
       </text>
       <line x1="245" y1="380" x2="255" y2="365" stroke="#657781" stroke-width="0.7" />
@@ -92,7 +92,7 @@
       <line x1="390" y1="261" x2="290" y2="280" stroke="#657781" stroke-width="0.8" />
       <line x1="257.8756371049949" y1="360" x2="299.8756371049949" y2="360" stroke="#3a4a56" stroke-width="0.8" />
       <path d="M287.8756371049949 360 A30 30 0 0 0 267.699869956429 331.6541987433623" fill="none" stroke="#3a4a56" stroke-width="1" />
-      <text x="292" y="349" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">φ</text>
+      <text x="292" y="349" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">θ<tspan baseline-shift="sub" font-size="0.7em">AB</tspan></text>
       <line x1="80" y1="175.13761467889907" x2="148" y2="175.13761467889907" stroke="#657781" stroke-width="0.8" stroke-dasharray="3,3" />
       <path d="M130 175.13761467889907 A50 50 0 0 1 127.24300209439618 191.51133609795585" fill="none" stroke="#356b83" stroke-width="1.2" />
       <text x="154" y="187" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">θ</text>

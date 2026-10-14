@@ -1,8 +1,8 @@
 ![Pregled poglavlja: Relativno mirovanje fluida](../assets/print/u04_fig_uvod_pregled.svg){#fig-uvod-u04 fig-align="center" fig-alt="Pregled poglavlja: Relativno mirovanje fluida"}
 
-**Tumačenje skice.** U sustavu koji translatorno ubrzava fluid miruje pod djelovanjem efektivnog polja $\vec g_{\mathrm{eff}}=\vec g-\vec a$, pa je $\nabla p=\rho\vec g_{\mathrm{eff}}$. Slobodna površina okomita je na to polje. Za vodoravno ubrzanje vrijede $\tan\theta=a/g$ i $\Delta h=aL/g$. U zavoju broda $a=v^2/R$ vrijedi lokalno kada je duljina spremnika mnogo manja od polumjera zavoja; površina se podiže na vanjskoj strani zavoja.
+**Tumačenje skice.** U sustavu koji translatorno ubrzava fluid miruje pod djelovanjem efektivnog polja $\vec g_{\mathrm{eff}}=\vec g-\vec a$, pa je $\nabla p=\rho\vec g_{\mathrm{eff}}$. Slobodna površina okomita je na to polje. Za vodoravno ubrzanje vrijede $\tan\theta=a/g$ i $\Delta h=aL/g$. U zavoju broda $a=v_s^2/R_z$ vrijedi lokalno kada je duljina spremnika mnogo manja od polumjera zavoja $R_z$; površina se podiže na vanjskoj strani zavoja.
 
-Pri stalnoj vrtnji centrifugalno ubrzanje $\omega^2r$ oblikuje paraboloid $z(r)=z_C+\omega^2r^2/(2g)$, uz $\Delta h=\omega^2R^2/(2g)$. Za okomitu dubinu $h$ i bez vertikalnog ubrzanja ostaje $p=p_{pov}+\rho gh$. Primjene su separatori, centrifuge, procesne kade i lijevanje pod rotacijom. Prije primjene treba provjeriti prelijevanje i ogoljavanje dna.
+Pri stalnoj vrtnji centrifugalno ubrzanje $\omega^2r$ oblikuje paraboloid $h(r)=h_C+\omega^2r^2/(2g)$, gdje je $h_C$ visina površine na osi, uz $\Delta h=\omega^2R^2/(2g)$ za spremnik polumjera $R$. Za okomitu dubinu $h$ i bez vertikalnog ubrzanja ostaje $p=p_{pov}+\rho gh$. Primjene su separatori, centrifuge, procesne kade i lijevanje pod rotacijom. Prije primjene treba provjeriti prelijevanje i ogoljavanje dna.
 
 ## Relativno mirovanje fluida
 
@@ -248,7 +248,7 @@ Viši prvi val od ravnotežne razine sam ne znači pogrešan CFD račun: ravnote
 
 **Tekst zadatka**
 
-Otvoreni pravokutni spremnik duljine $L = 1{,}60\ \text{m}$ i širine $B = 0{,}80\ \text{m}$ sadrži vodu početne visine $h_0 = 0{,}42\ \text{m}$. Ubrzava se udesno stalnim ubrzanjem $a = 1{,}35\ \text{m/s}^2$. Promatraj relativno mirovanje nakon smirivanja valova, bez prelijevanja i ogoljavanja dna.
+Otvoreni pravokutni spremnik duljine $L = 1{,}60\ \text{m}$ i širine $b = 0{,}80\ \text{m}$ sadrži vodu početne visine $h_0 = 0{,}42\ \text{m}$. Ubrzava se udesno stalnim ubrzanjem $a = 1{,}35\ \text{m/s}^2$. Promatraj relativno mirovanje nakon smirivanja valova, bez prelijevanja i ogoljavanja dna.
 
 **Traži se**
 
@@ -294,17 +294,17 @@ Razina je viša na stražnjoj strani jer nagib određuje smjer ubrzanja, a ne br
 
 **Tekst zadatka**
 
-Zatvoreni modul s tekućinom gustoće $\rho = 960\ \text{kg/m}^3$ ubrzava se vodoravno s $a = 3{,}4\ \text{m/s}^2$. Jednoliki plinski pretlak iznad tekućine iznosi $p_{M,pl} = 16\ \text{kPa}$. Vanjsku stijenku `AB` treba postaviti okomito na slobodnu površinu. Površina završava u `A`, a dno `B` je vertikalno niže za $H = 0{,}55\ \text{m}$.
+Zatvoreni modul s tekućinom gustoće $\rho = 960\ \text{kg/m}^3$ ubrzava se vodoravno s $a = 3{,}4\ \text{m/s}^2$. Jednoliki plinski pretlak iznad tekućine iznosi $p_{M,pl} = 16\ \text{kPa}$. Vanjsku stijenku `AB` treba postaviti okomito na slobodnu površinu. Površina završava u `A`, a donji kraj stijenke `B` vertikalno je niže za $\Delta z_{AB} = 0{,}55\ \text{m}$.
 
 Vanjska strana stijenke izložena je atmosferi; njezin gornji nastavak zatvara plinski prostor do poklopca. Zanemari prolazne oscilacije i promjenu gustoće plina.
 
 **Traži se**
 
-1. Odredi kut $\varphi$ pod kojim stijenku `AB` treba postaviti prema vodoravnici.
+1. Odredi kut $\theta_{AB}$ pod kojim stijenku `AB` treba postaviti prema vodoravnici.
 2. Odredi duljinu stijenke `AB`.
 3. Odredi raspodjelu manometarskog tlaka duž stijenke `AB` i tlak u točki `B`.
 
-![Zatvoreni servisni modul s kosom inspekcijskom stijenkom](../assets/print/u04_val3_kosa_stijenka.svg){#fig-u04-zatvoreni-servisni-modul-s-kosom-inspekcijskom-stijenkom fig-alt="Zatvoreni servisni modul s kosom inspekcijskom stijenkom AB: plinski pretlak iznad nagnute slobodne površine, strelice tlaka okomite na stijenku i oznake kutova theta i phi."}
+![Zatvoreni servisni modul s kosom inspekcijskom stijenkom](../assets/print/u04_val3_kosa_stijenka.svg){#fig-u04-zatvoreni-servisni-modul-s-kosom-inspekcijskom-stijenkom fig-alt="Zatvoreni servisni modul s kosom inspekcijskom stijenkom AB: plinski pretlak iznad nagnute slobodne površine, strelice tlaka okomite na stijenku i oznake kutova theta i theta_AB."}
 
 **Veza s proračunom.** Stijenka je usporedna s efektivnim poljem; strelice tlaka okomite su na nju i rastu od `A` prema `B`. Integraciju te raspodjele u silu i hvatište obrađuje []{.mf1-chapter-ref target="u05"}.
 
@@ -319,13 +319,13 @@ $$ {#eq-relativno-mirovanje-rijeseni-primjer-zatvoreni-servisni-modul-s-koso-01}
 Ako slobodna površina mora biti okomita na stijenku `AB`, tada stijenka mora zatvarati s vodoravnicom kut
 
 $$
-\varphi = 90^\circ - \theta = 90^\circ - 19{,}1^\circ = 70{,}9^\circ \approx 71^\circ.
+\theta_{AB} = 90^\circ - \theta = 90^\circ - 19{,}1^\circ = 70{,}9^\circ \approx 71^\circ.
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-zatvoreni-servisni-modul-s-koso-02}
 
-Duljina stijenke slijedi iz zadane vertikalne projekcije $H$:
+Duljina stijenke slijedi iz zadane vertikalne projekcije $\Delta z_{AB}$:
 
 $$
-s = \frac{H}{\sin\varphi} = \frac{0{,}55}{\sin 70{,}9^\circ} \approx 0{,}582\ \text{m}.
+s = \frac{\Delta z_{AB}}{\sin\theta_{AB}} = \frac{0{,}55}{\sin 70{,}9^\circ} \approx 0{,}582\ \text{m}.
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-zatvoreni-servisni-modul-s-koso-03}
 
 Efektivna težina po jedinici mase ima iznos
@@ -346,11 +346,11 @@ $$
 p_{M,B} = p_{M,pl} + \rho g_{eff}\, s = 16000 + 960 \cdot 10{,}38 \cdot 0{,}582 \approx 21{,}8\ \text{kPa}.
 $$ {#eq-tlak-dna-kose-stijenke}
 
-Isti se rezultat dobiva po komponentama: `B` je $H$ niže i $s\cos\varphi = 0{,}191\ \text{m}$ pomaknut prema stražnjoj strani modula, pa je $p_{M,B} = p_{M,pl} + \rho\,(gH + a\, s\cos\varphi) = 16000 + 960\,(9{,}81 \cdot 0{,}55 + 3{,}4 \cdot 0{,}191) \approx 21{,}8\ \text{kPa}$. U računu se koriste nezaokružene vrijednosti $s$ i $g_{eff}$.
+Isti se rezultat dobiva po komponentama: `B` je $\Delta z_{AB}$ niže i $s\cos\theta_{AB} = 0{,}191\ \text{m}$ pomaknut prema stražnjoj strani modula, pa je $p_{M,B} = p_{M,pl} + \rho\,(g\,\Delta z_{AB} + a\, s\cos\theta_{AB}) = 16000 + 960\,(9{,}81 \cdot 0{,}55 + 3{,}4 \cdot 0{,}191) \approx 21{,}8\ \text{kPa}$. U računu se koriste nezaokružene vrijednosti $s$ i $g_{eff}$.
 
 **Provjera i tumačenje**
 
-Budući da je $a < g$, kut $\varphi$ mora biti veći od $45^\circ$. Gradijent $\rho g_{eff}$ uzduž `AB` veći je od $\rho g$ jer stijenka slijedi efektivno polje, a ne vertikalu; plinski pretlak ovdje nosi veći dio opterećenja nego tekućina.
+Budući da je $a < g$, kut $\theta_{AB}$ mora biti veći od $45^\circ$. Gradijent $\rho g_{eff}$ uzduž `AB` veći je od $\rho g$ jer stijenka slijedi efektivno polje, a ne vertikalu; plinski pretlak ovdje nosi veći dio opterećenja nego tekućina.
 :::
 
 ::: {#ex-tank-broda-u-kruznom-zavoju .mf1-we}
@@ -358,16 +358,16 @@ Budući da je $a < g$, kut $\varphi$ mora biti veći od $45^\circ$. Gradijent $\
 
 **Tekst zadatka**
 
-Brod plovi stalnom brzinom $v_s = 12\ \text{čv} = 6{,}17\ \text{m/s}$ ustaljenim kružnim zavojem polumjera $R = 180\ \text{m}$. Poprečni balastni tank širine $B_t = 9{,}0\ \text{m}$ i visine $H = 2{,}20\ \text{m}$ djelomično je ispunjen morskom vodom gustoće $\rho = 1025\ \text{kg/m}^3$ do mirne razine $h_0 = 1{,}60\ \text{m}$; odzračen je prema palubi, a uz obje bočne stijenke ima sondnu cijev. Brod plovi bez nagiba, a voda u tanku u odnosu na brod miruje.<span id="ex-u04-rotirajuci-cilindricni-spremnik-bez-prelijevanja-t2"></span>
+Brod plovi stalnom brzinom $v_s = 12\ \text{čv} = 6{,}17\ \text{m/s}$ ustaljenim kružnim zavojem polumjera $R_z = 180\ \text{m}$. Poprečni balastni tank širine $b_t = 9{,}0\ \text{m}$ i visine $H = 2{,}20\ \text{m}$ djelomično je ispunjen morskom vodom gustoće $\rho_{mv} = 1025\ \text{kg/m}^3$ do mirne razine $h_0 = 1{,}60\ \text{m}$; odzračen je prema palubi, a uz obje bočne stijenke ima sondnu cijev. Brod plovi bez nagiba, a voda u tanku u odnosu na brod miruje.<span id="ex-u04-rotirajuci-cilindricni-spremnik-bez-prelijevanja-t2"></span>
 
 **Traži se**
 
 1. Odredi centripetalno ubrzanje tanka i kut nagiba slobodne površine.
 2. Odredi razliku razina između vanjske i unutarnje strane zavoja te očitanja obiju sondi.
 3. Provjeri prelijevanje i odredi brzinu pri kojoj bi površina u istom zavoju dosegnula vrh tanka.
-4. Procijeni opravdanost lokalne aproksimacije $a = v_s^2/R$ za širinu tanka.
+4. Procijeni opravdanost lokalne aproksimacije $a = v_s^2/R_z$ za širinu tanka.
 
-![Poprečni presjek broda u zavoju: tank s nagnutom slobodnom površinom, sondne cijevi uz obje stijenke i smjer prema središtu zavoja.](../assets/print/u04_fig_rotirajuci_cilindar.svg){#fig-tank-broda-u-kruznom-zavoju fig-align="center" fig-alt="Poprečni presjek broda koji skreće: balastni tank širine B_t s vodom čija je površina viša na vanjskoj strani zavoja, dvije sondne cijevi, kote h_u i h_v, strelica prema središtu zavoja i smjer prividne sile."}
+![Poprečni presjek broda u zavoju: tank s nagnutom slobodnom površinom, sondne cijevi uz obje stijenke i smjer prema središtu zavoja.](../assets/print/u04_fig_rotirajuci_cilindar.svg){#fig-tank-broda-u-kruznom-zavoju fig-align="center" fig-alt="Poprečni presjek broda koji skreće: balastni tank širine b_t s vodom čija je površina viša na vanjskoj strani zavoja, dvije sondne cijevi, kote h_u i h_v, strelica prema središtu zavoja i smjer prividne sile."}
 
 **Veza s proračunom.** U okviru broda prividna (inercijska) sila djeluje od središta zavoja, pa se površina podiže na vanjskoj strani; sonde mjere lokalne visine od dna. Visine i širina nacrtane su u istom mjerilu, bez uvećanja nagiba.
 
@@ -376,14 +376,14 @@ Brod plovi stalnom brzinom $v_s = 12\ \text{čv} = 6{,}17\ \text{m/s}$ ustaljeni
 Centripetalno ubrzanje i nagib površine:
 
 $$
-a = \frac{v_s^2}{R} = \frac{6{,}17^2}{180} = 0{,}2115\ \text{m/s}^2, \qquad \tan\theta = \frac{a}{g} = 0{,}02156 \quad\Longrightarrow\quad \theta \approx 1{,}24^\circ.
+a = \frac{v_s^2}{R_z} = \frac{6{,}17^2}{180} = 0{,}2115\ \text{m/s}^2, \qquad \tan\theta = \frac{a}{g} = 0{,}02156 \quad\Longrightarrow\quad \theta \approx 1{,}24^\circ.
 $$ {#eq-brod-u-zavoju-ubrzanje-i-nagib}
 
 Razlika razina preko širine tanka te razine uz vanjsku stijenku $h_v$ i unutarnju stijenku $h_u$:
 
 $$
 \begin{aligned}
-\Delta h &= \frac{a B_t}{g} = \frac{0{,}2115 \cdot 9{,}0}{9{,}81} = 0{,}194\ \text{m}, \\
+\Delta h &= \frac{a\, b_t}{g} = \frac{0{,}2115 \cdot 9{,}0}{9{,}81} = 0{,}194\ \text{m}, \\
 h_v &= h_0 + \frac{\Delta h}{2} = 1{,}697\ \text{m}, \qquad h_u = h_0 - \frac{\Delta h}{2} = 1{,}503\ \text{m}.
 \end{aligned}
 $$ {#eq-brod-u-zavoju-razine-uz-stijenke}
@@ -394,20 +394,20 @@ Prelijevanje: $h_v = 1{,}697\ \text{m} < H = 2{,}20\ \text{m}$, pa ga nema. Vrh 
 
 $$
 \begin{aligned}
-a_{max} &= \frac{g\,\Delta h_{max}}{B_t} = \frac{9{,}81 \cdot 1{,}20}{9{,}0} = 1{,}308\ \text{m/s}^2, \\
-v_{max} &= \sqrt{a_{max} R} = \sqrt{1{,}308 \cdot 180} = 15{,}3\ \text{m/s} \approx 29{,}8\ \text{čv},
+a_{max} &= \frac{g\,\Delta h_{max}}{b_t} = \frac{9{,}81 \cdot 1{,}20}{9{,}0} = 1{,}308\ \text{m/s}^2, \\
+v_{max} &= \sqrt{a_{max} R_z} = \sqrt{1{,}308 \cdot 180} = 15{,}3\ \text{m/s} \approx 29{,}8\ \text{čv},
 \end{aligned}
 $$ {#eq-brod-u-zavoju-granica-prelijevanja}
 
 daleko iznad brzine broda; u ustaljenom zavoju tank se ne prelijeva.
 
-Lokalna aproksimacija: ubrzanje $v_s^2/r$ mijenja se preko tanka za $B_t/R = 5\ \%$. Točan račun u rotirajućem okviru daje paraboloid $z = \omega^2 r^2/(2g)$ s $\omega = v_s/R$, pa je razlika razina između polumjera $R \pm B_t/2$
+Lokalna aproksimacija: ubrzanje $v_s^2/r$ mijenja se preko tanka za $b_t/R_z = 5\ \%$. Točan račun u rotirajućem okviru daje paraboloid $z = \omega^2 r^2/(2g)$ s $\omega = v_s/R_z$, pa je razlika razina između polumjera $R_z \pm b_t/2$
 
 $$
-\Delta h = \frac{\omega^2}{2g}\left[\left(R + \tfrac{B_t}{2}\right)^2 - \left(R - \tfrac{B_t}{2}\right)^2\right] = \frac{\omega^2 R B_t}{g} = \frac{v_s^2 B_t}{R g},
+\Delta h = \frac{\omega^2}{2g}\left[\left(R_z + \tfrac{b_t}{2}\right)^2 - \left(R_z - \tfrac{b_t}{2}\right)^2\right] = \frac{\omega^2 R_z b_t}{g} = \frac{v_s^2 b_t}{R_z g},
 $$ {#eq-brod-u-zavoju-paraboloid-provjera}
 
-identično linearnom rezultatu. Zakrivljenost pomiče srednju razinu za $\omega^2 B_t^2/(24g) \approx 0{,}4\ \text{mm}$, zanemarivo prema razlučivosti sonde.
+identično linearnom rezultatu. Zakrivljenost pomiče srednju razinu za $\omega^2 b_t^2/(24g) \approx 0{,}4\ \text{mm}$, zanemarivo prema razlučivosti sonde.
 
 **Provjera i tumačenje**
 
@@ -420,7 +420,7 @@ identično linearnom rezultatu. Zakrivljenost pomiče srednju razinu za $\omega^
 
 **Tekst zadatka**
 
-Otvoreni cilindrični spremnik polumjera $R = 0{,}40\ \text{m}$ i visine $H = 0{,}78\ \text{m}$ sadrži vodu gustoće $\rho = 1000\ \text{kg/m}^3$, početne visine $h_0 = 0{,}60\ \text{m}$. Pri kutnoj brzini $\omega = 5{,}20\ \text{rad/s}$ voda je u relativnom mirovanju i rotira kao kruto tijelo. Zanemari površinsku napetost, zapljuskivanje i otpor zraka. Volumen je stalan do prvog prelijevanja.
+Otvoreni cilindrični spremnik polumjera $R = 0{,}40\ \text{m}$ i visine $H = 0{,}78\ \text{m}$ sadrži vodu gustoće $\rho_w = 1000\ \text{kg/m}^3$, početne visine $h_0 = 0{,}60\ \text{m}$. Pri kutnoj brzini $\omega = 5{,}20\ \text{rad/s}$ voda je u relativnom mirovanju i rotira kao kruto tijelo. Zanemari površinsku napetost, zapljuskivanje i otpor zraka. Volumen je stalan do prvog prelijevanja.
 
 **Traži se**
 
@@ -462,13 +462,13 @@ $$ {#eq-relativno-mirovanje-2-dubina-na-osi-i-uz-stijenku-02}
 Na dnu spremnika lokalni manometarski tlak dobiva se iz lokalne dubine ispod slobodne površine. U osi spremnika vrijedi
 
 $$
-p_{M,C} = \rho g h_C = 1000 \cdot 9{,}81 \cdot 0{,}4897 = 4804\ \text{Pa} \approx 4{,}80\ \text{kPa}.
+p_{M,C} = \rho_w g h_C = 1000 \cdot 9{,}81 \cdot 0{,}4897 = 4804\ \text{Pa} \approx 4{,}80\ \text{kPa}.
 $$ {#eq-relativno-mirovanje-3-tlak-na-dnu-u-tockama-c-01}
 
 Uz stijenku je dubina veća, pa je
 
 $$
-p_{M,D} = \rho g h_R = 1000 \cdot 9{,}81 \cdot 0{,}7103 = 6968\ \text{Pa} \approx 6{,}97\ \text{kPa}.
+p_{M,D} = \rho_w g h_R = 1000 \cdot 9{,}81 \cdot 0{,}7103 = 6968\ \text{Pa} \approx 6{,}97\ \text{kPa}.
 $$ {#eq-relativno-mirovanje-3-tlak-na-dnu-u-tockama-c-02}
 
 ### 4. Granica prelijevanja {.unnumbered .unlisted .mf1-step}
@@ -645,7 +645,7 @@ Srednja radijalna brzina na razdjelnici $v_{rel} = Q/(2\pi r_i H_b) \approx 5 \c
 
 ::::: {.mf1-vjezbe-list}
 
-Uzmi $g = 9{,}81\ \text{m/s}^2$ i, gdje nije drukčije zadano, gustoću vode $\rho = 1000\ \text{kg/m}^3$. U Z1–Z4 i Z6 promatraju se ustaljena stanja relativnog mirovanja, bez protoka kroz spremnik; Z5 provjerava opravdanost te pretpostavke. Gustoće i geometrija smatraju se stalnima, a površinska napetost zanemaruje se. Očitanja u Z4 i Z5 sintetički su nastavni podatci.
+Uzmi $g = 9{,}81\ \text{m/s}^2$ i, gdje nije drukčije zadano, gustoću vode $\rho_w = 1000\ \text{kg/m}^3$. U Z1–Z4 i Z6 promatraju se ustaljena stanja relativnog mirovanja, bez protoka kroz spremnik; Z5 provjerava opravdanost te pretpostavke. Gustoće i geometrija smatraju se stalnima, a površinska napetost zanemaruje se. Očitanja u Z4 i Z5 sintetički su nastavni podatci.
 
 ### Slobodna površina pri ubrzanju {#task-u04-otvoreni-pravokutni-spremnik-duljine-i-pocetne-dubine .unnumbered .unlisted}
 
@@ -703,7 +703,7 @@ $a_{max} \approx 1{,}68\ \text{m/s}^2$.
 
 **Tekst zadatka**
 
-Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. **Stanje 1.** Sustav ubrzava prema gore s $a_z = 2{,}3\ \text{m/s}^2$. **Stanje 2.** Cilindar se još giba prema gore, ali usporava uz ubrzanje iznosa $2{,}3\ \text{m/s}^2$ prema dolje.
+Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho_o = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. **Stanje 1.** Sustav ubrzava prema gore s $a_z = 2{,}3\ \text{m/s}^2$. **Stanje 2.** Cilindar se još giba prema gore, ali usporava uz ubrzanje iznosa $2{,}3\ \text{m/s}^2$ prema dolje.
 
 **Traži se**
 
@@ -713,7 +713,7 @@ Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho = 870\ \text
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Koristi efektivnu težinu fluida: $\Delta p = \rho (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho gh$. Os $z$ usmjeri prema gore; pri kočenju je $a_z<0$ iako je brzina još pozitivna.
+Koristi efektivnu težinu fluida: $\Delta p = \rho_o (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho_o gh$. Os $z$ usmjeri prema gore; pri kočenju je $a_z<0$ iako je brzina još pozitivna.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -732,7 +732,7 @@ $\Delta p \approx 7{,}90\ \text{kPa}$; u mirovanju $\Delta p_0 \approx 6{,}40\ \
 
 **Tekst zadatka**
 
-Zatvorena cilindrična posuda potpuno je ispunjena vodom gustoće $\rho = 1000\ \text{kg/m}^3$ i vrti se stalnom brzinom oko okomite osi. Voda je dosegnula vrtnju krutoga tijela. Dva senzora u točkama `A` i `B` nalaze se na istoj visini, na polumjerima $r_A = 80\ \text{mm}$ i $r_B = 240\ \text{mm}$.
+Zatvorena cilindrična posuda potpuno je ispunjena vodom gustoće $\rho_w = 1000\ \text{kg/m}^3$ i vrti se stalnom brzinom oko okomite osi. Voda je dosegnula vrtnju krutoga tijela. Dva senzora u točkama `A` i `B` nalaze se na istoj visini, na polumjerima $r_A = 80\ \text{mm}$ i $r_B = 240\ \text{mm}$.
 
 Mjere manometarske tlakove $p_{M,A} = 12{,}40\ \text{kPa}$ i $p_{M,B} = 14{,}00\ \text{kPa}$ prema istoj referenci; očitanja se odnose izravno na označene točke.
 
@@ -828,7 +828,7 @@ Radni režim definiran je s $\omega = 0{,}80\,\omega_{max}$.
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-U graničnom stanju vrijedi $h_{rub} = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim $h_{osa}$ i $h_{rub}$, a tlakove iz $p_M = \rho gh$. U provjeri tolerancije koristi $\omega=1{,}05k\omega_{max}$ i iz uvjeta $h_{osa}\ge0{,}350\ \text{m}$ riješi gornju granicu za $k$.
+U graničnom stanju vrijedi $h_R = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim dubinu u osi $h_C$ i uz stijenku $h_R$, a tlakove iz $p_M = \rho_w gh$. U provjeri tolerancije koristi $\omega=1{,}05k\omega_{max}$ i iz uvjeta $h_C\ge0{,}350\ \text{m}$ riješi gornju granicu za $k$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -845,7 +845,7 @@ $\omega_{max}\approx7{,}83$ rad/s. Za $k=0{,}80$: dubine (os, rub) ≈ (0,3576; 
 
 ![Skice uz Z1–Z6: translacija, rotacija i granice relativnog mirovanja.](../assets/print/u04_vjezbe_skice.svg){#fig-u04-vjezbe fig-align="center" fig-alt="Skice uz Z1–Z6: nagib pri ubrzanju, granica prelijevanja, vertikalno ubrzavanje i kočenje, tlakovi u rotirajućoj vodi, provjera smirivanja i rotacijski spremnik s ograničenjem dubine."}
 
-**Napomene uz skice.** Z2 prikazuje prvi dodir ruba dok je dno još pokriveno. U Z3 `B` je dno, a `A` vrh cilindra; strelice brzine i ubrzanja razlikuju se. U Z4 posuda je potpuno ispunjena, A i B su na istoj visini, a smjer vrtnje nije zadan. U Z5 točke su očitanja, a crta referentni model. Z6 prikazuje zatvoren usis bez protoka. Visine unutar panela imaju zajedničko mjerilo, dok su vodoravne širine shematske.
+**Napomene uz skice.** Z2 prikazuje prvi dodir ruba dok je dno još pokriveno. U Z3 `B` je dno, a `A` vrh cilindra; strelica brzine ima otvoren vrh, a strelice ubrzanja crtkane su i imaju pun vrh. U Z4 posuda je potpuno ispunjena, A i B su na istoj visini, a smjer vrtnje nije zadan. U Z5 točke su očitanja; referentni model nije ucrtan. Z6 prikazuje zatvoren usis bez protoka. Zadane visine ($H$, $h_0$) unutar panela imaju zajedničko mjerilo, ali nagnute površine u Z1 i Z5 i radni paraboloid u Z6 shematski su i ne prikazuju traženi rezultat; vodoravne širine su shematske.
 
 ## Sažetak
 

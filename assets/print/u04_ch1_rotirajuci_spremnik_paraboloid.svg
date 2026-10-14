@@ -21,6 +21,7 @@
     <marker id="u04c1rsp_omL" markerWidth="7" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
+    <marker id="u04c1rsp_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
   <g id="u04c1rsp_title-scene-1" transform="translate(-16.0000 -14.5108)">
     <rect x="166" y="224" width="14" height="156" fill="url(#u04c1rsp_hatch)" stroke="#3a4a56" stroke-width="1.3" />
@@ -31,7 +32,7 @@
     <path d="M180,224 Q260,368 340,224" fill="none" stroke="#356b83" stroke-width="1.7" stroke-dasharray="7,4" />
     <line x1="260" y1="200" x2="260" y2="218" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
     <line x1="260" y1="224" x2="260" y2="380" stroke="#657781" stroke-width="1" stroke-dasharray="5,4" />
-    <path d="M222,196 A42,16 0 0 1 298,196" fill="none" stroke="#356b83" stroke-width="2.2" marker-end="url(#u04c1rsp_om)" />
+    <path d="M222,196 A42,16 0 0 1 298,196" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u04c1rsp_vopen)" data-mf1-vector="angular-velocity" />
     <circle cx="260" cy="380" r="4.5" fill="#ffffff" stroke="#3a4a56" stroke-width="1.6" />
     <circle cx="260" cy="380" r="2.2" fill="#3a4a56" />
     <circle cx="340" cy="380" r="4.5" fill="#ffffff" stroke="#3a4a56" stroke-width="1.6" />
@@ -39,28 +40,28 @@
     <line x1="260" y1="384" x2="255" y2="400" stroke="#3a4a56" stroke-width="0.7" />
     <line x1="340" y1="384" x2="345" y2="400" stroke="#3a4a56" stroke-width="0.7" />
     <line x1="354" y1="282.05096839959225" x2="374" y2="282.05096839959225" stroke="#657781" stroke-width="0.7" />
-    <line x1="369" y1="237.94903160040775" x2="369" y2="282.05096839959225" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+    <line x1="369" y1="237.94903160040775" x2="369" y2="282.05096839959225" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" data-mf1-role="dimension" />
     <line x1="364" y1="282.05096839959225" x2="374" y2="282.05096839959225" stroke="#657781" stroke-width="1.2" />
     <line x1="40" y1="466" x2="78" y2="466" stroke="#356b83" stroke-width="2.4" />
     <line x1="270" y1="466" x2="308" y2="466" stroke="#356b83" stroke-width="1.7" stroke-dasharray="7,4" />
     <line x1="180" y1="260" x2="340" y2="260" stroke="#657781" stroke-width="1.3" stroke-dasharray="6,4" opacity="0.85" />
     <line x1="166" y1="224" x2="100" y2="224" stroke="#657781" stroke-width="0.7" />
     <line x1="166" y1="380" x2="100" y2="380" stroke="#657781" stroke-width="0.7" />
-    <line x1="105" y1="224" x2="105" y2="380" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+    <line x1="105" y1="224" x2="105" y2="380" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" data-mf1-role="dimension" />
     <line x1="100" y1="224" x2="110" y2="224" stroke="#657781" stroke-width="1.2" />
     <line x1="100" y1="380" x2="110" y2="380" stroke="#657781" stroke-width="1.2" />
     <line x1="260" y1="282.05096839959225" x2="142" y2="282.05096839959225" stroke="#657781" stroke-width="0.7" stroke-dasharray="3,2" />
-    <line x1="147" y1="282.05096839959225" x2="147" y2="380" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+    <line x1="147" y1="282.05096839959225" x2="147" y2="380" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" data-mf1-role="dimension" />
     <line x1="142" y1="282.05096839959225" x2="152" y2="282.05096839959225" stroke="#657781" stroke-width="1.2" />
     <line x1="142" y1="380" x2="152" y2="380" stroke="#657781" stroke-width="1.2" />
     <line x1="354" y1="237.94903160040775" x2="404" y2="237.94903160040775" stroke="#657781" stroke-width="0.7" />
     <line x1="354" y1="380" x2="404" y2="380" stroke="#657781" stroke-width="0.7" />
-    <line x1="399" y1="237.94903160040775" x2="399" y2="380" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+    <line x1="399" y1="237.94903160040775" x2="399" y2="380" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" data-mf1-role="dimension" />
     <line x1="394" y1="237.94903160040775" x2="404" y2="237.94903160040775" stroke="#657781" stroke-width="1.2" />
     <line x1="394" y1="380" x2="404" y2="380" stroke="#657781" stroke-width="1.2" />
     <line x1="260" y1="394" x2="260" y2="436" stroke="#657781" stroke-width="0.7" />
     <line x1="340" y1="394" x2="340" y2="436" stroke="#657781" stroke-width="0.7" />
-    <line x1="260" y1="431" x2="340" y2="431" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" />
+    <line x1="260" y1="431" x2="340" y2="431" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" data-mf1-role="dimension" />
     <line x1="260" y1="426" x2="260" y2="436" stroke="#657781" stroke-width="1.2" />
     <line x1="340" y1="426" x2="340" y2="436" stroke="#657781" stroke-width="1.2" />
     <text x="260" y="50" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">Aksijalni presjek (paraboloid revolucije)</text>
@@ -72,13 +73,13 @@
     </text>
     <text x="319" y="358" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,D</tspan>
     </text>
-    <text x="373" y="264" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-weight="700" fill="#263746">Δh</text>
+    <text x="373" y="264" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">Δh</text>
     <text x="84" y="470" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">radni režim (ω = 5,20 rad/s)</text>
     <text x="314" y="470" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">granica prelijevanja (ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan>)</text>
-    <text x="99" y="298" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#263746"><tspan font-style="italic">H</tspan></text>
+    <text x="99" y="298" font-family="Arial, Liberation Sans, sans-serif" font-size="13" text-anchor="end" fill="#263746"><tspan font-style="italic">H</tspan></text>
     <text x="99" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" text-anchor="end" fill="#263746">= 0,78 m</text>
-    <text x="405" y="306" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="start" fill="#263746"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan></text>
-    <text x="300" y="450" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#263746"><tspan font-style="italic">R</tspan> = 0,40 m</text>
+    <text x="405" y="306" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="start" fill="#263746"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan></text>
+    <text x="300" y="450" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" text-anchor="middle" fill="#263746"><tspan font-style="italic">R</tspan> = 0,40 m</text>
     <text x="264" y="256" font-family="Arial, Liberation Sans, sans-serif" font-size="9.5" font-style="italic" fill="#263746"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 0,60 m</text>
     <text x="129" y="331" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle" transform="rotate(-90 129 331)">h<tspan baseline-shift="sub" font-size="0.7em">C</tspan>
     </text>

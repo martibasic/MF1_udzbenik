@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 639 483" role="img" aria-labelledby="u04fak_title u04fak_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:639px;height:auto;">
   <title id="u04fak_title">Nagib goriva u autocisterni pri kočenju</title>
-  <desc id="u04fak_desc">Idealizirani otvoreni pravokutni spremnik na vozilu koje se giba udesno i koči ubrzanjem ulijevo; tanja strelica pokazuje samo smjer vožnje. Gorivo je više uz prednju stijenku. Sve dubine, duljina i nagib u istom su mjerilu; granice modela su prelijevanje i ogoljavanje dna.</desc>
+  <desc id="u04fak_desc">Idealizirani otvoreni pravokutni spremnik na vozilu koje se giba udesno i koči ubrzanjem ulijevo; tanja puna strelica s otvorenim vrhom pokazuje samo smjer brzine vožnje, a crtkana strelica ubrzanje. Gorivo je više uz prednju stijenku. Sve dubine, duljina i nagib u istom su mjerilu; granice modela su prelijevanje i ogoljavanje dna.</desc>
   <defs>
     <marker id="u04fak_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
@@ -29,6 +29,7 @@
     <marker id="u04truck_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
+    <marker id="u04fak_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
   <g id="u04fak_title-scene-1" transform="translate(-1.3333 -24.4000)">
     <rect x="60" y="395" width="500" height="14" fill="#3a4a56" stroke="#3a4a56" stroke-width="1.2" />
@@ -54,33 +55,33 @@
       <text x="310" y="122" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">otvoreni pravokutni model spremnika</text>
       <text x="130" y="104" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">stražnja</text>
       <text x="490" y="104" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">prednja</text>
-      <line x1="380" y1="70" x2="280" y2="70" stroke="#356b83" stroke-width="2.6" marker-end="url(#u04fak_aR)" />
-      <text x="390" y="74" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">a = 3,8 m/s² (kočenje)</text>
-      <line x1="130" y1="70" x2="220" y2="70" stroke="#356b83" stroke-width="1.6" marker-end="url(#u04fak_aV)" />
+      <line x1="380" y1="70" x2="280" y2="70" stroke="#356b83" stroke-width="2" marker-end="url(#u04fak_aR)" stroke-dasharray="6 3" data-mf1-vector="acceleration" />
+      <text x="390" y="74" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start"><tspan font-weight="700">a</tspan> = 3,8 m/s² (kočenje)</text>
+      <line x1="130" y1="70" x2="220" y2="70" stroke="#356b83" stroke-width="1.6" marker-end="url(#u04fak_vopen)" data-mf1-vector="velocity" />
       <text x="175" y="58" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">smjer vožnje</text>
       <line x1="54" y1="140" x2="118" y2="140" stroke="#657781" stroke-width="0.7" />
       <line x1="54" y1="380" x2="118" y2="380" stroke="#657781" stroke-width="0.7" />
       <line x1="49" y1="140" x2="59" y2="140" stroke="#657781" stroke-width="0.8" />
       <line x1="49" y1="380" x2="59" y2="380" stroke="#657781" stroke-width="0.8" />
-      <line x1="54" y1="140" x2="54" y2="380" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+      <line x1="54" y1="140" x2="54" y2="380" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" data-mf1-role="dimension" />
       <text x="36" y="260" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle" transform="rotate(-90 36 260)">H = 0,80 m</text>
       <line x1="88" y1="314.7247706422018" x2="118" y2="314.7247706422018" stroke="#657781" stroke-width="0.7" />
       <line x1="88" y1="380" x2="118" y2="380" stroke="#657781" stroke-width="0.7" />
       <line x1="83" y1="314.7247706422018" x2="93" y2="314.7247706422018" stroke="#657781" stroke-width="0.8" />
       <line x1="83" y1="380" x2="93" y2="380" stroke="#657781" stroke-width="0.8" />
-      <line x1="88" y1="314.7247706422018" x2="88" y2="380" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+      <line x1="88" y1="314.7247706422018" x2="88" y2="380" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" data-mf1-role="dimension" />
       <text x="75" y="350" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle" transform="rotate(-90 75 350)">h<tspan baseline-shift="sub" font-size="0.7em">str</tspan>
       </text>
       <line x1="502" y1="175.27522935779814" x2="522" y2="175.27522935779814" stroke="#657781" stroke-width="0.7" />
       <line x1="502" y1="380" x2="522" y2="380" stroke="#657781" stroke-width="0.7" />
       <line x1="517" y1="175.27522935779814" x2="527" y2="175.27522935779814" stroke="#657781" stroke-width="0.8" />
       <line x1="517" y1="380" x2="527" y2="380" stroke="#657781" stroke-width="0.8" />
-      <line x1="522" y1="175.27522935779814" x2="522" y2="380" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+      <line x1="522" y1="175.27522935779814" x2="522" y2="380" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" data-mf1-role="dimension" />
       <text x="546" y="255" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle" transform="rotate(-90 546 255)">h<tspan baseline-shift="sub" font-size="0.7em">pred</tspan>
       </text>
       <line x1="130" y1="456" x2="130" y2="466" stroke="#657781" stroke-width="0.8" />
       <line x1="490" y1="456" x2="490" y2="466" stroke="#657781" stroke-width="0.8" />
-      <line x1="130" y1="461" x2="490" y2="461" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+      <line x1="130" y1="461" x2="490" y2="461" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" data-mf1-role="dimension" />
       <text x="310.0" y="481" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">L = 1,20 m</text>
       <line x1="130" y1="392" x2="130" y2="466" stroke="#657781" stroke-width="0.7" />
       <line x1="490" y1="392" x2="490" y2="466" stroke="#657781" stroke-width="0.7" />
@@ -89,11 +90,11 @@
       <line x1="240" y1="314.7247706422018" x2="330" y2="314.7247706422018" stroke="#657781" stroke-width="0.7" stroke-dasharray="3,3" />
       <line x1="275" y1="175.27522935779814" x2="285" y2="175.27522935779814" stroke="#657781" stroke-width="0.8" />
       <line x1="275" y1="245" x2="285" y2="245" stroke="#657781" stroke-width="0.8" />
-      <line x1="280" y1="175.27522935779814" x2="280" y2="245" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+      <line x1="280" y1="175.27522935779814" x2="280" y2="245" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" data-mf1-role="dimension" />
       <text x="294" y="214.13761467889907" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Δh/2</text>
       <line x1="275" y1="245" x2="285" y2="245" stroke="#657781" stroke-width="0.8" />
       <line x1="275" y1="314.7247706422018" x2="285" y2="314.7247706422018" stroke="#657781" stroke-width="0.8" />
-      <line x1="280" y1="245" x2="280" y2="314.7247706422018" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" />
+      <line x1="280" y1="245" x2="280" y2="314.7247706422018" stroke="#657781" stroke-width="1.2" marker-start="url(#u04truck_dimL)" marker-end="url(#u04truck_dim)" data-mf1-role="dimension" />
       <text x="294" y="283.8623853211009" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">Δh/2</text>
       <text x="205" y="237" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">h<tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 0,45 m</text>
       <text x="310" y="357" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">gorivo, ρ = 750 kg/m³</text>
