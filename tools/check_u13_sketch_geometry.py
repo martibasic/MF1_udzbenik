@@ -151,15 +151,24 @@ def main():
     def inverse(point):return (point[0]-61)/10*1e-3,(239-point[1])/4.1
     for x,y in path(node(c,p+'z4pump')):
         Q,H=inverse((x,y));close(H,30-30000*Q*Q,'Z4: crpkina krivulja i jedinice osi',tol=1e-6)
-    for x,y in path(node(c,p+'z4system')):
-        Q,H=inverse((x,y));v=4*Q/(math.pi*.1**2);Re=v*.1/1e-6
-        lam=((H-8)*2*9.81/v**2-6)*.1/150
-        residual=1/math.sqrt(lam)+2*math.log10(.001/3.7+2.51/(Re*math.sqrt(lam)))
-        check(Re>4000 and abs(residual)<2e-6,'Z4: svaka točka krivulje zatvara Colebrook i energiju')
     close(inverse((61,line(node(c,p+'z4staticHead'))[0][1]))[1],8,'Z4: stvarna statička visina 8 m')
-    op=node(c,p+'z4operatingPoint');Q,H=inverse((float(op.get('cx')),float(op.get('cy'))))
-    close(Q*1000,19.029644713,'Z4: nacrtano presjecište odgovara neovisnom korijenu',tol=1e-6)
-    close(H,19.136178663,'Z4: visina presjecišta',tol=1e-6)
+    # Z4 traži radnu točku: skica smije pokazati samo zadanu krivulju crpke i
+    # statičku visinu, ne krivulju sustava (Colebrook) ni presjecište.
+    z4=node(c,p+'z4')
+    for hidden in ('z4system','z4operatingPoint'):
+        check(all(e.get('id')!=p+hidden for e in c.iter()),'Z4: skica ne smije prikazati '+hidden)
+    check(not any(e.tag.endswith(('circle','ellipse','polyline','polygon')) for e in z4.iter()),
+          'Z4: nema označene radne točke ni dodatne krivulje')
+    curves=[e.get('id') for e in z4.iter() if e.tag.endswith('path') and len(path(e))>2]
+    check(curves==[p+'z4pump'],'Z4: jedina nacrtana krivulja je zadana karakteristika crpke')
+    for e in z4.iter():
+        if e.tag.endswith('line') and e.get('id')!=p+'z4staticHead':
+            a,b=line(e)
+            check(math.dist(a,b)<=6+1e-9,'Z4: osim statičke visine nema pomoćnih crta (npr. prema Q_op ili H_op)')
+    unknown=''.join(node(c,p+'z4unknown').itertext())
+    check(unknown.endswith('= ?') and 'radna točka' in unknown,'Z4: krivulja sustava i radna točka označene su kao nepoznanica')
+    check(not any(''.join(t.itertext()).strip()=='Hs' for t in z4.iter() if t.tag.endswith('text')),
+          'Z4: nema oznake nacrtane krivulje sustava')
     radii=[]
     for i,D in enumerate((80,100,125)):
         e=node(c,p+f'z5bore{i}');radius=float(e.get('r'));cx=float(e.get('cx'));radii.append(radius)
@@ -186,6 +195,10 @@ def main():
     close(dim[0][1],float(S.get('cy')),'Z6: kota počinje na visini referentnog usisa')
     close(dim[1][1],y_wl,'Z6: kota završava na vodnoj liniji')
     close(dim[0][1]-dim[1][1],1.8*38,'Z6: S je 1,8 m ispod vodne linije (napunjen usis)')
+    # z_s je visina usisnog presjeka iznad slobodne površine (P6, jednadžba NPSH_a):
+    # kod napunjenog usisa oznaka mora nositi negativan predznak.
+    zs_labels=[''.join(t.itertext()) for t in node(c,p+'z6').iter() if t.tag.endswith('text') and ''.join(t.itertext()).startswith('zs')]
+    check(zs_labels==['zs = −1,8 m'],'Z6: z_s = −1,8 m (presjek ispod vodne linije)')
     for name in ('z6inletVelocity','z6velocity'):
         dx,dy=delta(node(c,p+name));check(dx>0 and dy==0,'Z6: tok ulazi iz mora prema crpki')
     check(node(c,p+'z6pumpSymbol').get('fill')=='none','Z6: simbol crpke nije pregrada')
@@ -237,7 +250,7 @@ def main():
         if t.tag.endswith('text') and t.get('x'):
             pt=(float(t.get('x')),float(t.get('y')))
             check(all(distance_to_path(pt,line(outer[k]))>ow[k]/2 for k in pipes),'P3: oznaka ne leži na cijevi: '+''.join(t.itertext()))
-    print('U13 SVG PASS: 4 slike; otvoreni spojeni vodovi, petlja gradske mreže, napunjen brodski usis, kote, profili, kružno koljeno, EGL/HGL i kvantitativne crpne krivulje.')
+    print('U13 SVG PASS: 4 slike; otvoreni spojeni vodovi, petlja gradske mreže, napunjen brodski usis, kote, profili, kružno koljeno, EGL/HGL te kvantitativna crpna krivulja Z4 bez otkrivene krivulje sustava i radne točke.')
 
 
 if __name__=='__main__':main()

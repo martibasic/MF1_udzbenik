@@ -312,8 +312,8 @@ def diameter_selection(
 def ballast_regulation_task(
     rho=1025.0, eta=0.70, hours=1500.0,
     pump=(22.0, 0.010), system=(4.0, 0.015), throttled=(4.0, 0.026),
-    p_atm=101.3e3, p_v=4.2e3, z_s=1.8, h_ws=1.4, npshr=(2.5, 0.004),
-    ballast_depth=0.4,
+    p_atm=101.3e3, p_v=4.2e3, z_s=-1.8, h_ws=1.4, npshr=(2.5, 0.004),
+    z_s_ballast=-0.4,
 ):
     q = math.sqrt((pump[0] - throttled[0]) / (pump[1] + throttled[1]))
     H_throttled = pump[0] - pump[1] * q**2
@@ -324,7 +324,9 @@ def ballast_regulation_task(
     P_el_vfd = rho * G * Q * H_open / eta
     head_atm = p_atm / (rho * G)
     head_v = p_v / (rho * G)
-    NPSH_a = head_atm + z_s - h_ws - head_v
+    # z_s je visina usisnog presjeka iznad slobodne povrsine (napunjen usis: z_s < 0),
+    # ista definicija kao u P6 i jednadzbi NPSH_a iz spremnika.
+    NPSH_a = head_atm - z_s - h_ws - head_v
     NPSH_r = npshr[0] + npshr[1] * q**2
     return {
         "q": q,
@@ -339,7 +341,7 @@ def ballast_regulation_task(
         "NPSH_a": NPSH_a,
         "NPSH_r": NPSH_r,
         "NPSH_difference": NPSH_a - NPSH_r,
-        "NPSH_a_ballast": head_atm + ballast_depth - h_ws - head_v,
+        "NPSH_a_ballast": head_atm - z_s_ballast - h_ws - head_v,
     }
 
 
@@ -517,7 +519,7 @@ def verify():
                "Nova brzina mora zatvoriti radnu tocku, a usteda razliku godisnjih energija.")
     _invariant(out, "U13.CANON.Z6.flooded_suction_absolute_reference",
                r["NPSH_a"] > r["NPSH_a_ballast"] > 0
-               and abs(r["NPSH_a"] - (101.3e3/(1025*G) + 1.8 - 1.4 - 4.2e3/(1025*G))) < 1e-12
+               and abs(r["NPSH_a"] - (101.3e3/(1025*G) - (-1.8) - 1.4 - 4.2e3/(1025*G))) < 1e-12
                and ballast_regulation_task(p_v=12.0e3)["NPSH_a"] < r["NPSH_a"]
                and ballast_regulation_task(rho=1000.0)["E_throttled_MWh"] < r["E_throttled_MWh"],
                "Napunjen usis povecava NPSHa; topliji fluid ga smanjuje, a morska voda povecava snagu.")

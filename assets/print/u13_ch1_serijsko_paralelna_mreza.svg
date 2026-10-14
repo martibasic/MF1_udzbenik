@@ -2,6 +2,7 @@
   <title id="u13hc_title">Petlja gradske vodovodne mreže A–B–C–D</title>
   <desc id="u13hc_desc">Četiri čvora spojena cijevima u zatvorenu petlju. U čvor A ulazi 40 L/s, u čvorovima B, C i D izlaze potrošnje 12, 16 i 12 L/s. Duljine strelica dotoka i potrošnji razmjerne su protocima 40 : 12 : 16 : 12. Uz svaku cijev navedeni su unutarnji promjer i duljina; širine provrta nacrtane su razmjerno promjerima 150, 100, 125 i 150 mm (uvećano prema duljinama), a duljine cijevi nisu u mjerilu. Kružna strelica u sredini označuje obilazni smjer A–B–C–D u kojem se protoci broje pozitivno. Promjeri cijevi uvećani su prema duljinama; nije prikazan rezultat.</desc>
   <defs>
+    <marker id="u13hc_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <pattern id="u13hc_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
     </pattern>
@@ -41,13 +42,13 @@
       <text x="356" y="76" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">B</text>
       <text x="356" y="292" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">C</text>
       <text x="174" y="292" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">D</text>
-      <path id="u13hc_inflowA" d="M50 90 L174 90" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13hc_v)" />
+      <path id="u13hc_inflowA" d="M50 90 L174 90" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13hc_vopen)" data-mf1-vector="velocity" />
       <text x="40" y="80" font-size="11" fill="#263746" text-anchor="start">Q<tspan baseline-shift="sub" font-size="0.75em">A</tspan> = 40 L/s</text>
-      <path id="u13hc_outflowB" d="M356 90 L393 90" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13hc_v)" />
+      <path id="u13hc_outflowB" d="M356 90 L393 90" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13hc_vopen)" data-mf1-vector="velocity" />
       <text x="364" y="110" font-size="11" fill="#263746" text-anchor="start">Q<tspan baseline-shift="sub" font-size="0.75em">B</tspan> = 12 L/s</text>
-      <path id="u13hc_outflowC" d="M356 270 L406 270" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13hc_v)" />
+      <path id="u13hc_outflowC" d="M356 270 L406 270" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13hc_vopen)" data-mf1-vector="velocity" />
       <text x="364" y="262" font-size="11" fill="#263746" text-anchor="start">Q<tspan baseline-shift="sub" font-size="0.75em">C</tspan> = 16 L/s</text>
-      <path id="u13hc_outflowD" d="M174 270 L137 270" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13hc_v)" />
+      <path id="u13hc_outflowD" d="M174 270 L137 270" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13hc_vopen)" data-mf1-vector="velocity" />
       <text x="170" y="260" font-size="11" fill="#263746" text-anchor="end">Q<tspan baseline-shift="sub" font-size="0.75em">D</tspan> = 12 L/s</text>
       <text x="265" y="64" font-size="11" fill="#263746" text-anchor="middle">AB: D = 150 mm, L = 300 m</text>
       <text x="376" y="180" font-size="11" fill="#263746" text-anchor="start">BC: D = 100 mm</text>
@@ -55,7 +56,7 @@
       <text x="265" y="310" font-size="11" fill="#263746" text-anchor="middle">CD: D = 125 mm, L = 200 m</text>
       <text x="152" y="180" font-size="11" fill="#263746" text-anchor="end">DA: D = 150 mm</text>
       <text x="152" y="195" font-size="11" fill="#263746" text-anchor="end">L = 350 m</text>
-      <path id="u13hc_loopDirection" d="M241 180 Q241 150 265 150 Q289 150 289 180" fill="none" stroke="#657781" stroke-width="1.6" marker-end="url(#u13hc_loop)" />
+      <path id="u13hc_loopDirection" d="M241 180 Q241 150 265 150 Q289 150 289 180" fill="none" stroke="#657781" stroke-width="1.6" marker-end="url(#u13hc_loop)" data-mf1-role="path" />
       <text x="265" y="214" font-size="11" fill="#263746" text-anchor="middle">obilazni smjer, Q &gt; 0</text>
       <text x="20" y="340" font-size="11" fill="#263746" text-anchor="start">Promjeri uvećani prema duljinama; λ = 0,022 za sve cijevi, lokalni gubitci zanemareni.</text>
     </g>
