@@ -253,14 +253,58 @@ def run():
     check(abs(bx/ey-.20/.35)<1e-10,'Z4: krakovi b i e moraju biti u istom mjerilu')
     check(math.dist(*line(node(z,'u11vs_z4b')))==bx and math.dist(*line(node(z,'u11vs_z4e')))==ey,
           'Z4: kote moraju mjeriti stvarne koordinate O i C')
+    # Skice zadataka ne otkrivaju traženi rezultat: zadani podatci ostaju u mjerilu,
+    # nepoznanice su shematske.
+    # Z2: zadane v_A i v_j određuju omjer promjera daleko ispred i iza diska
+    # (A_A/A_j = v_j/v_A); tražena v_d ne smije se očitati ni iz promjera na disku
+    # (kontinuitet bi dao 7,0 m/s) ni iz duljine strelice (6 : 7 : 8).
+    vA,vd,vj=(math.dist(*line(node(z,'u11vs_z2'+k))) for k in ('vA','vd','vj'))
+    check(abs(vj/vA-8/6)<1e-9,'Z2: zadane brzine v_A i v_j u omjeru 6 : 8')
+    check(abs(widths[0]/widths[-1]-math.sqrt(8/6))<0.01,'Z2: promjeri daleko ispred i iza diska u omjeru zadanih brzina')
+    vd_from_tube=6*(widths[0]/math.dist(*disk))**2
+    check(abs(vd_from_tube-7.0)>0.3 and abs(vd/vA*6-7.0)>0.3,'Z2: v_d se ne smije očitati iz skice u mjerilu rezultata')
+    # Z5: apsolutna izlazna brzina v₂ (iznos i smjer) se traži; izlaz je samo
+    # shematski uz ploču, ne pod kutom arctan((v−u)/u) ni u omjeru 14,42 : 20.
+    vin=math.dist(*line(node(z,'u11vs_z5inflow')))
     for id,sign in [('u11vs_z5outtop',-1),('u11vs_z5outbottom',1)]:
         dx,dy=delta(node(z,id))
-        check(dx>0 and abs(dy/dx-sign*(20-8)/8)<1e-9,id+': apsolutna izlazna brzina mora imati v₂x=u i |v₂y|=v−u')
+        check(dx==0 and dy*sign>0,id+': izlaz shematski uz ploču, prema van')
+        check(abs(math.hypot(dx,dy)/vin-math.hypot(8,12)/20)>0.1,id+': duljina v₂ nije u mjerilu rezultata')
+    # Z6: nominalne brzine v₁ : v₂ : v₃ = 2,60 : 3,77 : 3,18 se traže -> jednake duljine.
+    z6len=[math.dist(*line(e)) for e in z.iter() if e.get('data-mf1-vector')=='velocity'
+           and e.get('d','').startswith(('M87 199','M324 199','M242 172'))]
+    check(len(z6len)==3 and max(z6len)-min(z6len)<1e-6,'Z6: brzine nisu u omjeru traženog rezultata (jednake duljine)')
     out=branch(z,'u11vs_z6','u11vs_z6branchvelocity','u11vs_z6D3')
     wall_and_openings(z,'u11vs_z6',[(36,199),(412,199),out])
     check([math.dist(*line(node(z,'u11vs_z6D'+str(i)))) for i in (1,2)]==[56,36]
           and abs(math.dist(*line(node(z,'u11vs_z6D3')))-32)<1e-9,
           'Z6: promjeri 140:90:80 u istom mjerilu')
+    # Vrsta vektora prema standardu skica (14. 10. 2026.): sila i moment deblje
+    # s punim vrhom, brzina i kutna brzina tanje s otvorenim vrhom.
+    kinds=[(intro,{'u11intro_inflow':'velocity','u11intro_outflow':'velocity','u11intro_pressure1':'force',
+                   'u11intro_pressure2':'force','u11intro_weight':'force',
+                   'u11intro_reactionx':'force','u11intro_reactiony':'force'}),
+           (p1,{'u11v1_inflow':'velocity','u11v1_outtop':'velocity','u11v1_motion':'velocity','u11v1_force':'force'}),
+           (p5,{'u11ch2_branchvelocity':'velocity','u11ch2_reaction':'force'}),
+           (p7,{'u11rot_jetright':'velocity','u11rot_jetleft':'velocity','u11rot_speed':'velocity',
+                'u11rot_omega':'angular-velocity','u11rot_moment':'moment'}),
+           (z,{'u11vs_z1jet':'velocity','u11vs_z1thrust':'force','u11vs_z2vd':'velocity',
+               'u11vs_z2thrust':'force','u11vs_z5motion':'velocity'})]
+    for root,table in kinds:
+        for id,kind in table.items():
+            check(node(root,id).get('data-mf1-vector')==kind,id+': vrsta vektora mora biti '+kind)
+    # Notacija: težina F_G (G je težište), sila stijenke na fluid R_st→f
+    # (R je reakcija nosača), krak mlaznice r, koordinate točke C (x_C, y_C).
+    def labels(root):
+        return {''.join(e.itertext()).strip() for e in root.iter() if e.tag==NS+'text'}
+    check({'FG','Rst→f,x','Rst→f,y'}<=labels(intro) and not {'G','Rx','Ry'}&labels(intro),
+          'Uvod: težina F_G i komponente sile stijenke na fluid R_st→f')
+    check('r = 0,25 m' in labels(p7) and 'R = 0,25 m' not in labels(p7),'P7: krak mlaznice r, ne R')
+    check({'xC = 0,20 m','yC = 0,35 m'}<=labels(z) and not {'b = 0,20 m','e = 0,35 m'}&labels(z),
+          'Z4: koordinate točke C označene x_C i y_C')
+    check({'FT = ? (voda → brod)','FT = ? (voda → propeler)','vd = ?','Fx = ?','v2 = ?'}<=labels(z),
+          'Z1, Z2, Z4, Z5: tražene veličine označene kao nepoznanice „?”')
+    check(not any('vd = (' in s for s in labels(z)),'Z2: relacija za traženu v_d ne stoji na skici')
     print('PASS U10: devet SVG-ova; otvorene granice, stijenke, omjeri i normalni presjeci, lopatica, rotirajuca mlaznica, vodomlazni pogon, aktuatorski disk, krak momenta i smjerovi vektora.')
 
 

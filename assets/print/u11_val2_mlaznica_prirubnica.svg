@@ -26,6 +26,7 @@
     <marker id="u11v2_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
     </marker>
+  <marker id="u11v2_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></marker>
   </defs>
   <g id="u11v2_title-scene-1" transform="translate(1.0000 -10.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
@@ -48,31 +49,31 @@
       <line x1="201" y1="142" x2="177" y2="154" stroke="#356b83" stroke-width="1" />
       <line id="u11v2_section2" x1="410" y1="220.25" x2="410" y2="279.75" stroke="#356b83" stroke-width="1.2" stroke-dasharray="4 4" />
       <text x="410" y="212.25" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">2</text>
-      <path d="M64 250 L94 250" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_v)" />
-      <text x="79.0" y="237" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
-      <path d="M440 250 L503 250" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_v)" />
-      <text x="471.5" y="237" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
-      <path d="M535.5 195 L535.5 146" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_v)" />
-      <path d="M535.5 311 L535.5 364" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_v)" />
+      <path d="M64 250 L94 250" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11v2_vopen)" data-mf1-vector="velocity" />
+      <text x="79.0" y="237" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">v<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
+      <path d="M440 250 L503 250" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11v2_vopen)" data-mf1-vector="velocity" />
+      <text x="471.5" y="237" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">v<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+      <path d="M535.5 195 L535.5 146" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11v2_vopen)" data-mf1-vector="velocity" />
+      <path d="M535.5 311 L535.5 364" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11v2_vopen)" data-mf1-vector="velocity" />
       <line x1="23" y1="189.5" x2="33" y2="189.5" stroke="#657781" stroke-width="1.2" />
       <line x1="23" y1="310.5" x2="33" y2="310.5" stroke="#657781" stroke-width="1.2" />
-      <path id="u11v2_D" d="M28 189.5 L28 310.5" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11v2_dim)" marker-end="url(#u11v2_dim)" />
+      <path id="u11v2_D" d="M28 189.5 L28 310.5" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11v2_dim)" marker-end="url(#u11v2_dim)" data-mf1-role="dimension" />
       <text x="43" y="132" font-size="13" fill="#263746" text-anchor="start">D = 220 mm</text>
       <line x1="429" y1="225.25" x2="439" y2="225.25" stroke="#657781" stroke-width="1.2" />
       <line x1="429" y1="274.75" x2="439" y2="274.75" stroke="#657781" stroke-width="1.2" />
-      <path id="u11v2_d" d="M434 225.25 L434 274.75" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11v2_dim)" marker-end="url(#u11v2_dim)" />
+      <path id="u11v2_d" d="M434 225.25 L434 274.75" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11v2_dim)" marker-end="url(#u11v2_dim)" data-mf1-role="dimension" />
       <text x="371" y="313" font-size="13" fill="#263746" text-anchor="start">d = 90 mm</text>
       <text x="118" y="366" font-size="14" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.7em">M1</tspan>
       </text>
       <text x="341" y="366" font-size="14" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M2</tspan> = 0</text>
-      <path id="u11v2_pressure1" d="M165 210 L204 210" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_pressureMarker)" />
+      <path id="u11v2_pressure1" d="M165 210 L204 210" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u11v2_pressureMarker)" data-mf1-vector="force" />
       <text x="167" y="231" font-size="12" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M1</tspan>A<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
-      <path id="u11v2_plateforce" d="M558 255 L597 255" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11v2_forceMarker)" />
-      <text x="578" y="242" font-size="12" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.75em">P</tspan></text>
+      <path id="u11v2_plateforce" d="M558 255 L597 255" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u11v2_forceMarker)" data-mf1-vector="force" />
+      <text x="578" y="242" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">F<tspan baseline-shift="sub" font-size="0.75em">P</tspan></text>
       <text x="578" y="286" font-size="12" fill="#263746" text-anchor="middle">215 N</text>
-      <path d="M514 465 L546 465" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u11v2_axisMarker)" />
+      <path d="M514 465 L546 465" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u11v2_axisMarker)" data-mf1-role="axis" />
       <text x="554" y="469" font-size="13" fill="#263746" text-anchor="middle">x</text>
-      <path d="M514 465 L514 433" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u11v2_axisMarker)" />
+      <path d="M514 465 L514 433" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u11v2_axisMarker)" data-mf1-role="axis" />
       <text x="514" y="424" font-size="13" fill="#263746" text-anchor="middle">y</text>
       <path id="u11v2_nozzlecontrolVolume" d="M157 189.5 H180 L410 225.25 V274.75 L180 310.5 H157 Z" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" data-mf1-role="control-volume" />
     </g>

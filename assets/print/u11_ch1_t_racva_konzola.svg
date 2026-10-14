@@ -26,6 +26,7 @@
     <marker id="u11ch1_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
     </marker>
+  <marker id="u11ch1_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></marker>
   </defs>
   <g id="u11ch1_title-scene-1" transform="translate(-3.0000 -10.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
@@ -46,37 +47,40 @@
       <text x="521" y="240" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">2</text>
       <line id="u11ch1_section3" x1="278" y1="103" x2="322" y2="103" stroke="#356b83" stroke-width="1.2" stroke-dasharray="4 4" />
       <text x="339" y="108" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">3</text>
-      <path d="M118 270 L152 270" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11ch1_v)" />
-      <text x="135.0" y="257" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
-      <path d="M431 270 L508 270" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11ch1_v)" />
-      <text x="424" y="274" font-size="12" fill="#263746" text-anchor="end">v<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
-      <path d="M300 205 L300 128" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11ch1_v)" />
-      <text x="300.0" y="116" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">3</tspan></text>
-      <path id="u11ch1_pressure1" d="M67 291 L105 291" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11ch1_pressureMarker)" />
+      <path d="M118 270 L152 270" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11ch1_vopen)" data-mf1-vector="velocity" />
+      <text x="135.0" y="257" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">v<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
+      <path d="M431 270 L508 270" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11ch1_vopen)" data-mf1-vector="velocity" />
+      <text x="424" y="274" font-size="12" fill="#263746" text-anchor="end" font-weight="700">v<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+      <path d="M300 205 L300 128" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11ch1_vopen)" data-mf1-vector="velocity" />
+      <text x="300.0" y="116" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">v<tspan baseline-shift="sub" font-size="0.75em">3</tspan></text>
+      <path id="u11ch1_pressure1" d="M67 291 L105 291" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u11ch1_pressureMarker)" data-mf1-vector="force" />
       <text x="110" y="295" font-size="12" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M1</tspan>A<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
       <text x="69" y="195" font-size="13" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M1</tspan> = 40 kPa</text>
       <text x="399" y="221" font-size="13" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M2</tspan> = 0</text>
       <text x="354" y="130" font-size="13" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M3</tspan> = 0</text>
       <line x1="27" y1="234" x2="37" y2="234" stroke="#657781" stroke-width="1.2" />
       <line x1="27" y1="306" x2="37" y2="306" stroke="#657781" stroke-width="1.2" />
-      <path id="u11ch1_D1" d="M32 234 L32 306" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11ch1_dim)" marker-end="url(#u11ch1_dim)" />
+      <path id="u11ch1_D1" d="M32 234 L32 306" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11ch1_dim)" marker-end="url(#u11ch1_dim)" data-mf1-role="dimension" />
       <text x="62" y="334" font-size="13" fill="#263746" text-anchor="start">D<tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 180 mm</text>
       <line x1="548" y1="252" x2="558" y2="252" stroke="#657781" stroke-width="1.2" />
       <line x1="548" y1="288" x2="558" y2="288" stroke="#657781" stroke-width="1.2" />
-      <path id="u11ch1_D2" d="M553 252 L553 288" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11ch1_dim)" marker-end="url(#u11ch1_dim)" />
+      <path id="u11ch1_D2" d="M553 252 L553 288" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11ch1_dim)" marker-end="url(#u11ch1_dim)" data-mf1-role="dimension" />
       <text x="408" y="317" font-size="13" fill="#263746" text-anchor="start">D<tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 90 mm</text>
       <line x1="284" y1="72" x2="284" y2="82" stroke="#657781" stroke-width="1.2" />
       <line x1="316" y1="72" x2="316" y2="82" stroke="#657781" stroke-width="1.2" />
-      <path id="u11ch1_D3" d="M284 77 L316 77" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11ch1_dim)" marker-end="url(#u11ch1_dim)" />
+      <path id="u11ch1_D3" d="M284 77 L316 77" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11ch1_dim)" marker-end="url(#u11ch1_dim)" data-mf1-role="dimension" />
       <text x="339" y="77" font-size="13" fill="#263746" text-anchor="start">D<tspan baseline-shift="sub" font-size="0.75em">3</tspan> = 80 mm</text>
-      <path d="M494 168 L524 168" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u11ch1_axisMarker)" />
+      <path d="M494 168 L524 168" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u11ch1_axisMarker)" data-mf1-role="axis" />
       <text x="532" y="172" font-size="13" fill="#263746" text-anchor="middle">x</text>
-      <path d="M494 168 L494 138" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u11ch1_axisMarker)" />
+      <path d="M494 168 L494 138" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u11ch1_axisMarker)" data-mf1-role="axis" />
       <text x="494" y="129" font-size="13" fill="#263746" text-anchor="middle">y</text>
-      <path id="u11ch1_forcex" d="M79 406 L164.632 406" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11ch1_forceMarker)" />
-      <path id="u11ch1_forcey" d="M79 406 L79 454.48" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11ch1_forceMarker)" />
-      <path id="u11ch1_forceresultant" d="M79 406 L164.632 454.48" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11ch1_forceMarker)" />
+      <path id="u11ch1_forcex" d="M79 406 L164.632 406" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u11ch1_forceMarker)" data-mf1-vector="force" />
+      <path id="u11ch1_forcey" d="M79 406 L79 454.48" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u11ch1_forceMarker)" data-mf1-vector="force" />
+      <path id="u11ch1_forceresultant" d="M79 406 L164.632 454.48" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u11ch1_forceMarker)" data-mf1-vector="force" />
       <text x="75" y="389" font-size="12" fill="#263746" text-anchor="start">Fluid → račva</text>
+      <text x="171" y="410" font-size="12" fill="#263746" text-anchor="start" font-weight="700">F<tspan baseline-shift="sub" font-size="0.75em">x</tspan></text>
+      <text x="71" y="448" font-size="12" fill="#263746" text-anchor="end" font-weight="700">F<tspan baseline-shift="sub" font-size="0.75em">y</tspan></text>
+      <text x="171" y="463" font-size="12" fill="#263746" text-anchor="start" font-weight="700">F</text>
       <text x="224" y="414" font-size="13" fill="#263746" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.75em">x</tspan> &gt; 0, F<tspan baseline-shift="sub" font-size="0.75em">y</tspan> &lt; 0</text>
       <path id="u11ch1_teecontrolVolume" d="M56 234 H228 Q284 234 284 196 V103 H316 V220 Q316 252 350 252 H533 V288 H364 Q313 288 259 306 H56 Z" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" data-mf1-role="control-volume" />
     </g>

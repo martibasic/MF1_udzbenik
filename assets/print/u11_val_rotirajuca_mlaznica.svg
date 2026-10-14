@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-labelledby="u11rot_title u11rot_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:520px;height:auto;">
   <title id="u11rot_title">Rotirajuća mlaznica za pranje tanka</title>
-  <desc id="u11rot_desc">Tlocrt glave s dva kraka duljine R od osi vrtnje. Voda se dovodi duž osi, okomito na sliku, i izlazi kroz dvije mlaznice tangencijalno u suprotnim smjerovima, pa se sile ponistavaju, a momenti zbrajaju. Glava se vrti suprotno od mlazova; obodna brzina u suprotna je relativnoj izlaznoj brzini w i znatno manja od nje. Otvori mlaznica su stvarno otvoreni; krute stijenke slijede rub fluida.</desc>
+  <desc id="u11rot_desc">Tlocrt glave s dva kraka duljine r od osi vrtnje. Voda se dovodi duž osi, okomito na sliku, i izlazi kroz dvije mlaznice tangencijalno u suprotnim smjerovima, pa se sile ponistavaju, a momenti zbrajaju. Glava se vrti suprotno od mlazova; obodna brzina u suprotna je relativnoj izlaznoj brzini w i znatno manja od nje. Otvori mlaznica su stvarno otvoreni; krute stijenke slijede rub fluida.</desc>
   <defs>
     <pattern id="u11rot_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -14,6 +14,7 @@
     <marker id="u11rot_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
     </marker>
+  <marker id="u11rot_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></marker>
   </defs>
   <g id="u11rot_title-scene-1" transform="translate(0.0000 0.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
@@ -31,28 +32,28 @@
       <circle id="u11rot_inlet" cx="260" cy="210" r="7" fill="none" stroke="#356b83" stroke-width="1.6" />
       <circle cx="260" cy="210" r="2.2" fill="#356b83" />
       <text x="260" y="150" font-size="13" fill="#263746" text-anchor="middle">dovod Q = 2,80 L/s duž osi (okomito na sliku)</text>
-      <path id="u11rot_jetright" d="M400 268 L400 318" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11rot_v)" />
-      <text x="410" y="300" font-size="13" fill="#263746" text-anchor="start">w</text>
-      <path id="u11rot_jetleft" d="M120 152 L120 102" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11rot_v)" />
-      <text x="110" y="122" font-size="13" fill="#263746" text-anchor="end">w</text>
-      <path id="u11rot_speed" d="M430 229 L430 207" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11rot_v)" />
-      <text x="440" y="222" font-size="13" fill="#263746" text-anchor="start">u = ωR</text>
-      <path id="u11rot_omega" d="M300 255 Q318 210 300 165" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11rot_v)" />
-      <text x="322" y="188" font-size="14" fill="#263746" text-anchor="start">ω</text>
-      <path id="u11rot_moment" d="M220 165 Q202 210 220 255" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u11rot_v)" />
-      <text x="198" y="188" font-size="14" fill="#263746" text-anchor="end">M</text>
+      <path id="u11rot_jetright" d="M400 268 L400 318" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11rot_vopen)" data-mf1-vector="velocity" />
+      <text x="410" y="300" font-size="13" fill="#263746" text-anchor="start" font-weight="700">w</text>
+      <path id="u11rot_jetleft" d="M120 152 L120 102" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11rot_vopen)" data-mf1-vector="velocity" />
+      <text x="110" y="122" font-size="13" fill="#263746" text-anchor="end" font-weight="700">w</text>
+      <path id="u11rot_speed" d="M430 229 L430 207" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11rot_vopen)" data-mf1-vector="velocity" />
+      <text x="440" y="222" font-size="13" fill="#263746" text-anchor="start"><tspan font-weight="700">u</tspan> = ωr</text>
+      <path id="u11rot_omega" d="M300 255 Q318 210 300 165" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11rot_vopen)" data-mf1-vector="angular-velocity" />
+      <text x="322" y="188" font-size="14" fill="#263746" text-anchor="start" font-weight="700">ω</text>
+      <path id="u11rot_moment" d="M220 165 Q202 210 220 255" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u11rot_v)" data-mf1-vector="moment" />
+      <text x="198" y="188" font-size="14" fill="#263746" text-anchor="end" font-weight="700">M</text>
       <text x="196" y="265" font-size="12" fill="#263746" text-anchor="end">voda → glava</text>
       <line x1="260" y1="244" x2="260" y2="300" stroke="#657781" stroke-width="1" />
       <line x1="400" y1="268" x2="400" y2="300" stroke="#657781" stroke-width="1" stroke-dasharray="3 3" />
-      <path id="u11rot_R" d="M260 300 L400 300" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11rot_dim)" marker-end="url(#u11rot_dim)" />
-      <text x="330" y="318" font-size="13" fill="#263746" text-anchor="middle">R = 0,25 m</text>
+      <path id="u11rot_R" d="M260 300 L400 300" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u11rot_dim)" marker-end="url(#u11rot_dim)" data-mf1-role="dimension" />
+      <text x="330" y="318" font-size="13" fill="#263746" text-anchor="middle">r = 0,25 m</text>
       <line x1="409" y1="256" x2="436" y2="256" stroke="#657781" stroke-width="1" />
       <text x="440" y="260" font-size="13" fill="#263746" text-anchor="start">d = 10 mm</text>
       <text x="260" y="352" font-size="13" fill="#263746" text-anchor="middle">glava; n = 60 min⁻¹ (reduktor koči)</text>
       <text x="28" y="394" font-size="13" fill="#263746" text-anchor="start">mlazovi izlaze na atmosferski tlak; os vrtnje u točki dovoda</text>
-      <path d="M440 380 L480 380" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u11rot_axisMarker)" />
+      <path d="M440 380 L480 380" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u11rot_axisMarker)" data-mf1-role="axis" />
       <text x="488" y="384" font-size="13" fill="#263746" text-anchor="middle">x</text>
-      <path d="M440 380 L440 340" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u11rot_axisMarker)" />
+      <path d="M440 380 L440 340" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u11rot_axisMarker)" data-mf1-role="axis" />
       <text x="440" y="331" font-size="13" fill="#263746" text-anchor="middle">y</text>
       <path id="u11rot_headcontrolVolume" d="M288 202 H392 Q408 202 408 218 V262 H392 V218 H288 V228 Q288 238 278 238 H242 Q232 238 232 228 V218 H128 Q112 218 112 202 V158 H128 V202 H232 V192 Q232 182 242 182 H278 Q288 182 288 192 Z" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" data-mf1-role="control-volume" />
     </g>
