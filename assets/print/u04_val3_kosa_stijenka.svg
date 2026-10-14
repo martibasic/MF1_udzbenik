@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474 495" role="img" aria-labelledby="u04v3ks_title u04v3ks_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:474px;height:auto;">
   <title id="u04v3ks_title">Zatvoreni servisni modul s kosom inspekcijskom stijenkom</title>
-  <desc id="u04v3ks_desc">Zatvoreni modul s plinskim pretlakom i nepropusnom kosom vanjskom stijenkom AB. S druge strane stijenke je atmosferski tlak. Slobodna površina završava u A; rezultanta neto tlaka djeluje okomito na AB, u točki određenoj udaljenošću y_R od A.</desc>
+  <desc id="u04v3ks_desc">Zatvoreni modul s plinskim pretlakom i nepropusnom kosom vanjskom stijenkom AB. S druge strane stijenke je atmosferski tlak. Slobodna površina završava u A; manometarski tlak uzduž AB raste linearno od plinskog pretlaka u A do p_M,B u B, a strelice tlaka okomite su na stijenku. Sila i hvatište obrađuju se u poglavlju o silama na plohe. Umetak crta g, -a i g_eff u pravom omjeru a/g; strelica ubrzanja modula samo pokazuje smjer.</desc>
   <defs>
     <pattern id="u04v3ks_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -24,7 +24,7 @@
       <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83" />
     </marker>
     <marker id="u04v3ks_aBlk" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#3a4a56" />
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
     <clipPath id="u04v3ks_modClip">
       <rect x="80" y="120" width="360" height="240" />
@@ -41,72 +41,61 @@
   </defs>
   <g id="u04v3ks_title-scene-1" transform="translate(8.0000 -31.0000)">
     <circle cx="105" cy="438" r="2.5" fill="#3a4a56" />
-    <line x1="105" y1="438" x2="105" y2="488" stroke="#3a4a56" stroke-width="2.4" marker-end="url(#u04v3ks_aBlk)" />
+    <line x1="105" y1="438" x2="105" y2="488" stroke="#356b83" stroke-width="2.4" marker-end="url(#u04v3ks_aBlk)" />
     <line x1="105" y1="438" x2="87.67074413863405" y2="438" stroke="#356b83" stroke-width="2.2" marker-end="url(#u04v3ks_aV)" />
     <line x1="105" y1="438" x2="87.67074413863405" y2="488" stroke="#356b83" stroke-width="2.6" marker-end="url(#u04v3ks_aV)" />
     <text x="135" y="422" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">Efektivno polje sila</text>
-    <text x="93" y="478" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#263746">
+    <text x="111" y="482" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="start" fill="#263746">
       <tspan font-weight="700">g</tspan>
     </text>
     <text x="82" y="434" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#263746">−<tspan font-weight="700">a</tspan>
     </text>
-    <text x="68" y="495" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">
-      <tspan font-weight="700">g</tspan>
-      <tspan baseline-shift="sub" font-size="0.7em">eff</tspan>
-    </text>
-    <text x="111" y="465" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746">θ</text>
+    <text x="58" y="490" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746"><tspan font-weight="700">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
+    <text x="97" y="472" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746">θ</text>
     <g>
       <rect x="80" y="120" width="261.05606523955146" height="240" fill="none" stroke="none" stroke-width="1.2" />
-      <path d="M80 120 H341.05606523955146 L296 250 L80 175.13761467889907 Z" fill="#eadfc5" stroke="none" stroke-width="1.2" />
+      <path d="M80 120 H341.05606523955146 L296 250 L80 175.13761467889907 Z" fill="#f3f6f7" stroke="none" stroke-width="1.2" />
       <path d="M80 175.13761467889907 L296 250 L257.8756371049949 360 H80 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <rect x="66" y="106" width="288.05606523955146" height="14" fill="url(#u04v3ks_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect x="66" y="120" width="14" height="240" fill="url(#u04v3ks_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect x="66" y="360" width="204.8756371049949" height="14" fill="url(#u04v3ks_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <path d="M341.05606523955146 120 L257.8756371049949 360 L270.8756371049949 360 L354.05606523955146 120 Z" fill="url(#u04v3ks_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <line x1="80" y1="175.13761467889907" x2="296" y2="250" stroke="#356b83" stroke-width="2.4" />
-      <line x1="296" y1="250" x2="257.8756371049949" y2="360" stroke="#3a4a56" stroke-width="3" />
+      <line id="u04v3ks_free-surface" x1="80" y1="175.13761467889907" x2="296" y2="250" stroke="#356b83" stroke-width="2.4" />
+      <line id="u04v3ks_wall-ab" x1="296" y1="250" x2="257.8756371049949" y2="360" stroke="#3a4a56" stroke-width="3" />
       <circle cx="296" cy="250" r="3.5" fill="#356b83" />
       <text x="308" y="240" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">A</text>
       <circle cx="257.8756371049949" cy="360" r="3.5" fill="#356b83" />
-      <text x="237.8756371049949" y="352" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">B</text>
-      <text x="92" y="141" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.7em">M0</tspan> = 16 kPa</text>
+      <text x="247" y="357" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="end" font-weight="700">B</text>
+      <text x="92" y="141" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.7em">M,pl</tspan> = 16 kPa</text>
       <text x="92" y="157" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start">jednoliki pretlak plina</text>
       <text x="405" y="180" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">vanjski prostor</text>
       <text x="405" y="198" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">p = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
       </text>
       <text x="158" y="350" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">tekućina, ρ = 960 kg/m³</text>
-      <line x1="160" y1="80" x2="360" y2="80" stroke="#356b83" stroke-width="2.6" marker-end="url(#u04v3ks_red)" />
+      <line x1="242" y1="80" x2="278" y2="80" stroke="#356b83" stroke-width="2.4" marker-end="url(#u04v3ks_aR)" />
       <text x="260" y="68" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle">a = 3,4 m/s²</text>
-      <line x1="261.8458353759526" y1="252.94827526395522" x2="291.4250764525994" y2="263.2" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
-      <line x1="253.1332903248381" y1="272.1070374370392" x2="284.56269113149847" y2="283.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
-      <line x1="243.45268471248863" y1="293.3945509626881" x2="276.93781855249745" y2="305.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
-      <line x1="233.77207910013917" y1="314.68206448833695" x2="269.3129459734964" y2="327.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
-      <line x1="225.05953404902465" y1="333.8408266614209" x2="262.4505606523955" y2="346.8" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
-      <line x1="275.9625908520362" y1="307.8138187475072" x2="330.76447328153574" y2="326.80733559361306" stroke="#356b83" stroke-width="2.6" marker-end="url(#u04v3ks_aG)" />
-      <text x="365" y="347" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">R</tspan>
-      </text>
-      <line x1="40" y1="250" x2="80" y2="250" stroke="#657781" stroke-width="0.8" stroke-dasharray="3,3" />
+      <line id="u04v3ks_p1" x1="261.8458353759526" y1="252.94827526395522" x2="291.4250764525994" y2="263.2" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+      <line id="u04v3ks_p2" x1="253.1332903248381" y1="272.1070374370392" x2="284.56269113149847" y2="283.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+      <line id="u04v3ks_p3" x1="243.45268471248863" y1="293.3945509626881" x2="276.93781855249745" y2="305.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+      <line id="u04v3ks_p4" x1="233.77207910013917" y1="314.68206448833695" x2="269.3129459734964" y2="327.0" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+      <line id="u04v3ks_p5" x1="225.05953404902465" y1="333.8408266614209" x2="262.4505606523955" y2="346.8" stroke="#356b83" stroke-width="1.5" marker-end="url(#u04v3ks_aP)" />
+      <line x1="40" y1="250" x2="292" y2="250" stroke="#657781" stroke-width="0.8" stroke-dasharray="3,3" />
       <line x1="40" y1="360" x2="80" y2="360" stroke="#657781" stroke-width="0.8" stroke-dasharray="3,3" />
       <line x1="39" y1="250" x2="49" y2="250" stroke="#657781" stroke-width="0.8" />
       <line x1="39" y1="360" x2="49" y2="360" stroke="#657781" stroke-width="0.8" />
       <line x1="44" y1="250" x2="44" y2="360" stroke="#657781" stroke-width="1.2" marker-start="url(#u04fix_dimL)" marker-end="url(#u04fix_dim)" />
       <text x="27" y="305" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle" transform="rotate(-90 27 305)">H = 0,55 m</text>
-      <line x1="296" y1="250" x2="225.13549685840576" y2="225.43941787141483" stroke="#657781" stroke-width="0.7" />
-      <line x1="275.9625908520362" y1="307.8138187475072" x2="205.09808771044197" y2="283.253236618922" stroke="#657781" stroke-width="0.7" />
-      <line x1="225.13549685840576" y1="225.43941787141483" x2="205.09808771044197" y2="283.253236618922" stroke="#657781" stroke-width="1.2" marker-start="url(#u04fix_dimL)" marker-end="url(#u04fix_dim)" />
-      <line x1="221.35605669085407" y1="224.12952015789028" x2="228.91493702595744" y2="226.74931558493938" stroke="#657781" stroke-width="0.8" />
-      <line x1="201.3186475428903" y1="281.94333890539747" x2="208.87752787799366" y2="284.56313433244657" stroke="#657781" stroke-width="0.8" />
-      <text x="151" y="292" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">y<tspan baseline-shift="sub" font-size="0.7em">R</tspan>
+      <text x="236" y="392" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,B</tspan>
       </text>
-      <line x1="185" y1="288" x2="215.11679228442387" y2="254.34632724516842" stroke="#657781" stroke-width="0.7" />
+      <line x1="245" y1="380" x2="255" y2="365" stroke="#657781" stroke-width="0.7" />
       <text x="397" y="264" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">s</text>
-      <line x1="349" y1="261" x2="290" y2="280" stroke="#657781" stroke-width="0.8" />
+      <line x1="390" y1="261" x2="290" y2="280" stroke="#657781" stroke-width="0.8" />
       <line x1="257.8756371049949" y1="360" x2="299.8756371049949" y2="360" stroke="#3a4a56" stroke-width="0.8" />
       <path d="M287.8756371049949 360 A30 30 0 0 0 267.699869956429 331.6541987433623" fill="none" stroke="#3a4a56" stroke-width="1" />
-      <text x="370" y="382" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">α</text>
+      <text x="292" y="349" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">φ</text>
       <line x1="80" y1="175.13761467889907" x2="148" y2="175.13761467889907" stroke="#657781" stroke-width="0.8" stroke-dasharray="3,3" />
       <path d="M130 175.13761467889907 A50 50 0 0 1 127.24300209439618 191.51133609795585" fill="none" stroke="#356b83" stroke-width="1.2" />
-      <text x="170" y="183.13761467889907" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">θ</text>
+      <text x="154" y="187" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">θ</text>
     </g>
   </g>
 </svg>
