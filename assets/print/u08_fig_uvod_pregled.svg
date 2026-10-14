@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 924 393" role="img" aria-labelledby="u08fup_title u08fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:924px;height:auto;">
   <title id="u08fup_title">Kontrolni volumen i bilanca mase</title>
-  <desc id="u08fup_desc">Lijevo apstraktni uređaj s ulazom, dvama izlazima i akumulacijom; isprekidana granica kontrolna je ploha, ne kruta stijenka. Normale su vanjske. Desno su masene jednadžbe, a dolje ventilirana komora s dva stvarna otvorena priključka. Strelice su tokovi, a oznaka akumulacije nije brzina fluida.</desc>
+  <desc id="u08fup_desc">Lijevo apstraktni uređaj s ulazom, dvama izlazima i akumulacijom; isprekidana granica kontrolna je ploha, ne kruta stijenka. Vanjske jedinične normale n označene su kratkim strelicama. Desno gore je ventilirana komora s dva stvarna otvorena priključka; zrak u komori i priključcima isti je fluid jednake ispune. Strelice su tokovi, a oznaka akumulacije nije brzina fluida.</desc>
   <defs>
     <pattern id="u08fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#dcebf1" />
@@ -22,7 +22,7 @@
       <path d="M0,0 L0,4 L6,2 z" fill="#356b83" />
     </marker>
     <marker id="u08fup_aN" markerWidth="6" markerHeight="4" refX="5.5" refY="2" orient="auto">
-      <path d="M0,0 L0,4 L6,2 z" fill="#657781" />
+      <path d="M0,0 L0,4 L6,2 z" fill="#356b83" />
     </marker>
     <marker id="u08fup_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
@@ -54,42 +54,30 @@
     <path d="M210 270 Q260 300 310 270 T410 270" fill="none" stroke="#c5cdd3" stroke-width="2" />
     <path d="M210 305 Q260 335 310 305 T410 305" fill="none" stroke="#c5cdd3" stroke-width="2" />
     <line x1="64" y1="220" x2="190" y2="220" stroke="#356b83" stroke-width="3" marker-end="url(#u08fup_aR)" />
-    <line x1="150" y1="240" x2="134" y2="240" stroke="#657781" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
+    <line x1="150" y1="240" x2="134" y2="240" stroke="#356b83" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
     <line x1="450" y1="200" x2="560" y2="200" stroke="#356b83" stroke-width="3" marker-end="url(#u08fup_aG)" />
-    <line x1="450" y1="220" x2="466" y2="220" stroke="#657781" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
+    <line x1="450" y1="220" x2="466" y2="220" stroke="#356b83" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
     <line x1="450" y1="310" x2="560" y2="310" stroke="#356b83" stroke-width="3" marker-end="url(#u08fup_aG)" />
-    <line x1="450" y1="330" x2="466" y2="330" stroke="#657781" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
+    <line x1="450" y1="330" x2="466" y2="330" stroke="#356b83" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
     <rect x="150" y="140" width="300" height="230" rx="14" fill="none" stroke="#657781" stroke-width="1.8" stroke-dasharray="8,5" />
     <rect x="408" y="146" width="36" height="20" rx="4" fill="#eadfc5" stroke="#657781" stroke-width="1" />
     <text x="46" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Kontrolni volumen</text>
     <text x="300" y="160" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" font-style="italic" fill="#263746">bilo koji proces / uređaj</text>
     <text x="300" y="200" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">akumulacija</text>
-    <text x="300" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="15" text-anchor="middle" fill="#263746">d<tspan font-style="italic">m</tspan>
-      <tspan baseline-shift="sub" font-size="0.7em">CV</tspan> / d<tspan font-style="italic">t</tspan>
-    </text>
-    <text x="64" y="208" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-style="italic" fill="#263746">
-      <tspan font-weight="700">ṁ</tspan>
-      <tspan baseline-shift="sub" font-size="0.7em">ul</tspan>, ρ<tspan baseline-shift="sub" font-size="0.7em">1</tspan>, <tspan font-style="italic">A</tspan>
-      <tspan baseline-shift="sub" font-size="0.7em">1</tspan>, <tspan font-style="italic">v</tspan>
-      <tspan baseline-shift="sub" font-size="0.7em">1</tspan>
-    </text>
-    <text x="132" y="254" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="end" font-style="italic" fill="#263746">n</text>
-    <text x="476" y="190" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">
-      <tspan font-weight="700">ṁ</tspan>
-      <tspan baseline-shift="sub" font-size="0.7em">iz,1</tspan>
-    </text>
-    <text x="470" y="234" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">n</text>
-    <text x="476" y="300" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">
-      <tspan font-weight="700">ṁ</tspan>
-      <tspan baseline-shift="sub" font-size="0.7em">iz,2</tspan>
-    </text>
-    <text x="470" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">n</text>
+    <text x="300" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="15" text-anchor="middle" fill="#263746">d<tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">KV</tspan>/d<tspan font-style="italic">t</tspan></text>
+    <text x="64" y="190" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.7em">1</tspan>, A<tspan baseline-shift="sub" font-size="0.7em">1</tspan>, v<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+    <text x="64" y="210" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-style="italic" fill="#263746">ṁ<tspan baseline-shift="sub" font-size="0.7em">ul</tspan></text>
+    <text x="132" y="254" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="end" font-style="italic" font-weight="700" fill="#263746">n</text>
+    <text x="476" y="190" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">ṁ<tspan baseline-shift="sub" font-size="0.7em">iz,1</tspan></text>
+    <text x="470" y="234" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" font-weight="700" fill="#263746">n</text>
+    <text x="476" y="300" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">ṁ<tspan baseline-shift="sub" font-size="0.7em">iz,2</tspan></text>
+    <text x="470" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" font-weight="700" fill="#263746">n</text>
     <text x="426" y="161" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">KV</text>
     <text x="156" y="386" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" fill="#263746">kontrolna ploha KP (granica)</text>
   </g>
   <g id="u08fup_title-scene-2" transform="translate(-22.0000 -295.0000)">
     <g id="u08fup_fix_ventilation">
-      <rect x="688" y="319" width="154" height="89" fill="#ffffff" stroke="none" stroke-width="1.2" />
+      <rect x="688" y="319" width="154" height="89" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <path d="M688 347 V319 H842 V347 M688 371 V408 H842 V371" fill="none" stroke="#3a4a56" stroke-width="3" />
       <rect x="608" y="347" width="80" height="24" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <rect x="842" y="347" width="80" height="24" fill="#dcebf1" stroke="none" stroke-width="1.2" />
@@ -98,7 +86,7 @@
       <line x1="608" y1="371" x2="688" y2="371" stroke="#3a4a56" stroke-width="1.2" />
       <line x1="842" y1="371" x2="920" y2="371" stroke="#3a4a56" stroke-width="1.2" />
       <line x1="618" y1="359" x2="674" y2="359" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08fup_fix_normal)" />
-      <line x1="850" y1="359" x2="914" y2="359" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08fup_fix_green)" />
+      <line x1="854" y1="359" x2="910" y2="359" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08fup_fix_green)" />
       <text x="765" y="353" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">ventilirana komora</text>
     </g>
   </g>

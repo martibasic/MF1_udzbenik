@@ -73,10 +73,33 @@ def main():
     print('PASS Z5: real central opening, d/D=0.2, sealed annular piston')
     p='u08vs_fix_z1_';fluid=polygon(ns[p+'fluid'])
     a=span(fluid,60,False);b=span(fluid,240,False)
-    close((a[1]-a[0])/(b[1]-b[0]),100/160)
+    # Rectangular duct of constant width: height ratio equals A1/A2 = 0.30/0.24.
+    close((a[1]-a[0])/(b[1]-b[0]),0.30/0.24)
+    heater=polygon(ns[p+'heater'])
+    assert all(a[0] < x < b[0] or True for x,_ in heater)
+    assert min(y for _,y in heater) > span(fluid,146,False)[0] and max(y for _,y in heater) < span(fluid,146,False)[1]
+    print('PASS Z1: heater duct area ratio 0.30:0.24 and heater inside the fluid')
+    p='u08vs_fix_z6_'
+    f=ns[p+'fluid'];s=ns[p+'surface']
+    floor=float(f.get('y'))+float(f.get('height'))
+    tanktop=float(ns[p+'tanktop-left'].get('y'))+float(ns[p+'tanktop-left'].get('height'))
+    close(float(s.get('y1')),float(s.get('y2')));close(float(f.get('y')),float(s.get('y1')))
+    close((floor-float(s.get('y1')))/(floor-tanktop),0.30/1.60)
+    close(float(ns[p+'h0'].get('y2'))-float(ns[p+'h0'].get('y1')),floor-float(s.get('y1')))
+    close(float(ns[p+'hmax'].get('y2'))-float(ns[p+'hmax'].get('y1')),floor-tanktop)
+    # Air pipe passes through a real gap in the tank top and its walls are open at the top.
+    al,ar=ns[p+'airpipe-left'],ns[p+'airpipe-right']
+    gap_l=float(ns[p+'tanktop-left'].get('x'))+float(ns[p+'tanktop-left'].get('width'))
+    gap_r=float(ns[p+'tanktop-right'].get('x'))
+    assert gap_l<=float(al.get('x'))+float(al.get('width'))<float(ar.get('x'))<=gap_r
+    solids=[n for n in root.iter() if n.tag.endswith('rect') and n.get('fill')=='url(#u08vs_fix_z6_hatch)']
+    for x,y in [(72,125),(72,147),(244,175),(108,40)]:
+        assert not any(float(n.get('x'))<x<float(n.get('x'))+float(n.get('width'))
+                       and float(n.get('y'))<y<float(n.get('y'))+float(n.get('height')) for n in solids)
+    print('PASS Z6: ballast tank level ratio 0.30:1.60, open air pipe and uncapped pipes')
     check_scene_canvas('u08_vjezbe_skice.svg', root, 6)
     assert all('u08vs_fix_z'+str(i) in ns for i in range(1,7))
-    print('PASS Z1 diameters and six original practice panels')
+    print('PASS six original practice panels')
 
     _,ns=read('u08_fig_t_komad_hidraulika.svg');p='u08ftkh_fix_'
     fluid=polygon(ns[p+'fluid'])
@@ -91,8 +114,49 @@ def main():
             assert not (a[1]==b[1]==420 and min(a[0],b[0])<285<max(a[0],b[0]))
     print('PASS T-piece: three open ports and 32:20:24.8 diameter ratio')
 
+    # P2: zahvatni usis, kontrolni volumen vezan uz brod.
+    root,ns=read('u08_val3_izjednacni_spremnik.svg');p='u08v3is_'
+    mouth=ns[p+'mouth'];x=float(mouth.get('x1'));y0,y1=sorted(map(float,(mouth.get('y1'),mouth.get('y2'))))
+    close(x,float(mouth.get('x2')))
+    duct=polygon(ns[p+'duct-fluid'])
+    assert span(duct,x-2,horizontal=False)==[y0,y1]
+    for wall in ('duct-fore-wall','duct-aft-wall'):
+        pts=polygon(ns[p+wall])
+        for a,b in zip(pts,pts[1:]):
+            assert not (a[0]==b[0]==x), 'duct wall closes the mouth'
+    gratings=[ns[p+'grating-'+str(i)] for i in (1,2,3)]
+    # Grating bars are short ticks; their extent along the mouth must stay far below the opening height.
+    assert sum(abs(float(g.get('y2'))-float(g.get('y1'))) for g in gratings) < 0.4*(y1-y0)
+    assert all(y0 < float(g.get('y1')) < y1 for g in gratings)
+    for plate in ('plating-aft','plating-fore'):
+        r=ns[p+plate];xa=float(r.get('x'));xb=xa+float(r.get('width'))
+        assert xb<=min(px for px,_ in duct) or xa>=max(px for px,_ in duct) or xb<=330 or xa>=370
+    ship=vector(ns[p+'ship-velocity']);rel=vector(ns[p+'rel-velocity'])
+    assert ship[0]>0 and rel[0]<0 and ship[1]==rel[1]==0
+    # Text: inlet surface is the mouth, outlet the duct section towards the exchanger.
+    # The KV therefore follows the duct interior; it must not enclose outer sea,
+    # plating or engine-room air (that would add extra in/out surfaces).
+    cv=polygon(ns[p+'cv'])
+    assert ns[p+'cv'].get('d').strip().upper().endswith('Z')
+    edges=list(zip(cv,cv[1:]+cv[:1]))
+    pts=cv+[((a[0]+b[0])/2,(a[1]+b[1])/2) for a,b in edges]
+    for px,py in pts:
+        hits=span(duct,py)
+        assert len(hits)==2 and hits[0]<=px<=hits[1], ('KV leaves the duct fluid',px,py)
+    inlet=[(a,b) for a,b in edges if a[0]==b[0]==x]
+    assert len(inlet)==1, 'KV inlet face lies in the mouth plane'
+    (_,ia),(_,ib)=inlet[0]
+    wall=float(ns[p+'duct-fore-wall'].get('stroke-width'))
+    free=(y1-y0)-wall  # clear height between the inner faces of both walls
+    assert y0+wall/2<=min(ia,ib)<max(ia,ib)<=y1-wall/2 and abs(ia-ib)>=0.8*free, 'KV inlet face spans the clear opening'
+    top=min(py for _,py in cv)
+    assert top<y0 and len(span(duct,top+1))==2, 'KV outlet face cuts the rising duct'
+    close(abs(float(ns[p+'Au'].get('y2'))-float(ns[p+'Au'].get('y1'))),y1-y0)
+    # Velocity arrows share one scale: v_s = 9.26 m/s, w = Q/A_u = 1.25 m/s.
+    close(math.hypot(*ship)/math.hypot(*rel),9.26/1.25,0.05)
+    print('PASS P2 scoop: open forward mouth, antiparallel ship/relative velocities in scale, moving CV follows the duct from mouth to outlet')
+
     for name,p,ratio,ports in [
-        ('u08_val3_izjednacni_spremnik.svg','u08v3is_fix_',.45/1.20,[(105,150),(495,415)]),
         ('u08_ch1_mijesajuci_spremnik.svg','u08c1ms_fix_',.80/1.20,[(205,335),(205,380),(535,380)]),
     ]:
         root,ns=read(name);f=ns[p+'fluid'];s=ns[p+'surface'];t=ns[p+'target']

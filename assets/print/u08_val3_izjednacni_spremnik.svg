@@ -1,88 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 686 455" role="img" aria-labelledby="u08v3is_title u08v3is_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:686px;height:auto;">
-  <title id="u08v3is_title">Izjednačni spremnik s porastom razine</title>
-  <desc id="u08v3is_desc">Jedinstveno područje vode nalazi se ispod h0. Neispunjeni prostor do isprekidane h1 predstavlja budući porast, ne drugi fluid. Ulazna cijev prolazi kroz stvaran otvor i završava uronjenim otvorenim koljenom; odvod je uronjen i otvoren. Kote h0 i h1 mjere se od istog dna. Isprekidana granica označuje nepomični kontrolni volumen.</desc>
+  <title id="u08v3is_title">Zahvatni usis morske vode na brodu u plovidbi</title>
+  <desc id="u08v3is_desc">Presjek dna trupa; pramac je desno i brod se giba udesno brzinom broda. Zahvatni usis ima otvor okrenut prema pramcu ispod oplate dna i kanal koji se kroz oplatu uspinje prema rashladnom sustavu. More daleko od broda miruje. Isprekidani kontrolni volumen vezan je uz brod i giba se s njim; prati unutarnju stranu stijenki kanala, a ulazna ploha mu je ravnina otvora, izlazna presjek kanala prema izmjenjivaču. U otvoru je označena brzina vode relativna prema brodu; duljine strelica brzine broda i relativne brzine u omjeru su 9,26 : 1,25. Rešetka je prikazana shematski i ne zatvara otvor.</desc>
   <defs>
     <pattern id="u08v3is_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
-    </pattern>
-    <marker id="u08v3is_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
-    </marker>
-    <marker id="u08v3is_aG" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
-    </marker>
-    <marker id="u08v3is_aO" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#eadfc5" />
-    </marker>
-    <marker id="u08v3is_aDim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83" />
-    </marker>
-    <marker id="u08v3is_aDimR" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0,0 L0,5 L6,2.5 z" fill="#356b83" />
-    </marker>
-    <marker id="u08v3is_fix_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
-    </marker>
-    <marker id="u08v3is_fix_green" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
-    </marker>
-    <marker id="u08v3is_fix_normal" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
-    </marker>
-    <marker id="u08v3is_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2" />
-    </marker>
-    <marker id="u08v3is_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
-    </marker>
-    <marker id="u08v3is_fix_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
-      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
-    </marker>
-    <pattern id="u08v3is_fix_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" stroke-width="1.2" />
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" />
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
+    <marker id="u08v3is_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u08v3is_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
+    </marker>
   </defs>
-  <g id="u08v3is_title-scene-1" transform="translate(6.0000 -71.0000)">
-    <g id="u08v3is_fix_scene">
-      <rect x="110" y="350" width="380" height="90" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08v3is_fix_fluid" />
-      <rect x="101" y="110" width="9" height="25.0" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="101" y="165.0" width="9" height="275.0" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="490" y="110" width="9" height="290.0" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="490" y="430.0" width="9" height="10.0" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="101" y="440" width="398" height="9" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <line x1="110" y1="350" x2="490" y2="350" stroke="#356b83" stroke-width="2" id="u08v3is_fix_surface" />
-      <path d="M30 150 H155 V380" fill="none" stroke="#3a4a56" stroke-width="29" stroke-linejoin="round" />
-      <path d="M30 150 H155 V380" fill="none" stroke="#c5cdd3" stroke-width="28" stroke-linejoin="round" />
-      <path d="M30 150 H155 V380" fill="none" stroke="url(#u08v3is_fix_hatch)" stroke-width="28" stroke-linejoin="round" />
-      <path d="M30 150 H155 V380" fill="none" stroke="#dcebf1" stroke-width="20" stroke-linejoin="round" />
-      <rect x="490" y="405.0" width="120" height="20" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08v3is_fix_pipe-490-415" />
-      <rect x="490" y="400.0" width="120" height="5" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="490" y="425.0" width="120" height="5" fill="url(#u08v3is_fix_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <line x1="45" y1="150" x2="90" y2="150" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08v3is_fix_normal)" />
-      <line x1="535" y1="415" x2="595" y2="415" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08v3is_fix_green)" />
-      <text x="69" y="130" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">in</tspan> = 22 L/s</text>
-      <text x="565" y="388" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">out</tspan> = 8 L/s</text>
-      <line x1="110" y1="200" x2="490" y2="200" stroke="#356b83" stroke-width="1.3" stroke-dasharray="6,4" id="u08v3is_fix_target" />
-      <text x="320" y="192" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">ciljana razina h₁</text>
-      <text x="350" y="342" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">početna razina h₀</text>
-      <line x1="315" y1="330" x2="315" y2="220" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08v3is_fix_green)" />
-      <text x="370" y="295" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">budući porast ΔV</text>
-      <text x="370" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">iznad sadašnje vode</text>
-      <text x="340" y="404" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">voda, ρ = 998 kg/m³</text>
-      <line x1="68" y1="350" x2="78" y2="350" stroke="#657781" stroke-width="0.8" />
-      <line x1="68" y1="440" x2="78" y2="440" stroke="#657781" stroke-width="0.8" />
-      <line x1="73" y1="350" x2="73" y2="440" stroke="#657781" stroke-width="1.2" marker-start="url(#u08v3is_fix_dimL)" marker-end="url(#u08v3is_fix_dim)" />
-      <text x="18" y="467" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h₀ = 0,45 m</text>
-      <line x1="645" y1="200" x2="655" y2="200" stroke="#657781" stroke-width="0.8" />
-      <line x1="645" y1="440" x2="655" y2="440" stroke="#657781" stroke-width="0.8" />
-      <line x1="650" y1="200" x2="650" y2="440" stroke="#657781" stroke-width="1.2" marker-start="url(#u08v3is_fix_dimL)" marker-end="url(#u08v3is_fix_dim)" />
-      <text x="555" y="282" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h₁ = 1,20 m</text>
-      <line x1="110" y1="476" x2="110" y2="486" stroke="#657781" stroke-width="0.8" />
-      <line x1="490" y1="476" x2="490" y2="486" stroke="#657781" stroke-width="0.8" />
-      <line x1="110" y1="481" x2="490" y2="481" stroke="#657781" stroke-width="1.2" marker-start="url(#u08v3is_fix_dimL)" marker-end="url(#u08v3is_fix_dim)" />
-      <text x="300.0" y="499" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">L</text>
-      <rect x="96" y="95" width="409" height="362" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08v3is_fix_cv" data-mf1-role="control-volume" />
+  <g id="u08v3is_title-scene-1" transform="translate(0.0000 0.0000)">
+    <g font-family="Arial, Liberation Sans, sans-serif">
+      <text x="24" y="26" font-size="15" font-weight="700" fill="#263746">Zahvatni usis morske vode: kontrolni volumen vezan uz brod</text>
+      <rect id="u08v3is_sea" x="20" y="210" width="646" height="200" fill="#dcebf1" stroke="none" />
+      <path id="u08v3is_duct-fluid" d="M400 215 H370 V60 H330 V255 H400 Z" fill="#dcebf1" stroke="none" />
+      <rect id="u08v3is_plating-aft" x="20" y="200" width="310" height="10" fill="url(#u08v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u08v3is_plating-fore" x="370" y="200" width="296" height="10" fill="url(#u08v3is_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <path id="u08v3is_duct-fore-wall" d="M400 215 H370 V60" fill="none" stroke="#3a4a56" stroke-width="4" stroke-linecap="butt" stroke-linejoin="round" />
+      <path id="u08v3is_duct-aft-wall" d="M400 255 H330 V60" fill="none" stroke="#3a4a56" stroke-width="4" stroke-linecap="butt" stroke-linejoin="round" />
+      <line id="u08v3is_grating-1" x1="397" y1="223" x2="403" y2="223" stroke="#3a4a56" stroke-width="1.4" />
+      <line id="u08v3is_grating-2" x1="397" y1="235" x2="403" y2="235" stroke="#3a4a56" stroke-width="1.4" />
+      <line id="u08v3is_grating-3" x1="397" y1="247" x2="403" y2="247" stroke="#3a4a56" stroke-width="1.4" />
+      <line id="u08v3is_mouth" x1="400" y1="215" x2="400" y2="255" stroke="#356b83" stroke-width="1.2" stroke-dasharray="3 3" />
+      <path id="u08v3is_cv" d="M400 220 H365 V70 H335 V250 H400 Z" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" data-mf1-role="control-volume" />
+      <text x="376" y="64" font-size="11" fill="#263746" text-anchor="start">KV vezan uz brod, giba se brzinom v<tspan baseline-shift="sub" font-size="0.7em">s</tspan></text>
+      <line id="u08v3is_outlet-velocity" x1="350" y1="112" x2="350" y2="74" stroke="#356b83" stroke-width="2.3" marker-end="url(#u08v3is_v)" />
+      <text x="412" y="92" font-size="11" fill="#263746" text-anchor="start">Q = 180 m³/h</text>
+      <text x="412" y="108" font-size="11" fill="#263746" text-anchor="start">prema izmjenjivaču</text>
+      <text x="120" y="92" font-size="11" fill="#263746" text-anchor="start">strojarnica</text>
+      <text x="150" y="194" font-size="11" fill="#263746" text-anchor="start">dno trupa (oplata)</text>
+      <line id="u08v3is_ship-velocity" x1="440" y1="150" x2="640" y2="150" stroke="#356b83" stroke-width="2.6" marker-end="url(#u08v3is_v)" />
+      <text x="440" y="140" font-size="12" fill="#263746" text-anchor="start">brod: v<tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 18 čv (9,26 m/s)</text>
+      <text x="640" y="170" font-size="11" fill="#263746" text-anchor="end">pramac</text>
+      <line id="u08v3is_rel-velocity" x1="435" y1="235" x2="408" y2="235" stroke="#356b83" stroke-width="2.3" marker-end="url(#u08v3is_v)" />
+      <text x="442" y="229" font-size="12" fill="#263746" text-anchor="start">w = Q/A<tspan baseline-shift="sub" font-size="0.7em">u</tspan></text>
+      <text x="442" y="250" font-size="11" fill="#263746" text-anchor="start">relativno prema brodu</text>
+      <text x="470" y="330" font-size="11" fill="#263746" text-anchor="start">daleko od broda more miruje: v = 0</text>
+      <text x="40" y="398" font-size="11" fill="#263746" text-anchor="start">more, ρ = 1025 kg/m³</text>
+      <line x1="404" y1="215" x2="438" y2="215" stroke="#657781" stroke-width="1" />
+      <line x1="404" y1="255" x2="438" y2="255" stroke="#657781" stroke-width="1" />
+      <line id="u08v3is_Au" x1="432" y1="215" x2="432" y2="255" stroke="#657781" stroke-width="1.2" marker-start="url(#u08v3is_dim)" marker-end="url(#u08v3is_dim)" />
+      <text x="408" y="276" font-size="11" fill="#263746" text-anchor="start">otvor A<tspan baseline-shift="sub" font-size="0.7em">u</tspan> = 0,040 m² (okrenut prema pramcu)</text>
+      <text x="408" y="308" font-size="11" fill="#263746" text-anchor="start">rešetka: slobodno φ = 0,55 (shematski)</text>
+      <text x="200" y="300" font-size="11" fill="#263746" text-anchor="start">kanal usisa</text>
+      <line x1="262" y1="296" x2="328" y2="240" stroke="#657781" stroke-width="1" />
     </g>
   </g>
 </svg>
