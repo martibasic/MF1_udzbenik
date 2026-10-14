@@ -16,13 +16,13 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Kontrolni rezultat ili kriterij.** $\rho_1=858\ \text{kg/m}^3$, $\rho_2=861\ \text{kg/m}^3$, $\bar\rho=859{,}5\ \text{kg/m}^3$; $\bar\gamma\approx8{,}432\ \text{kN/m}^3$, $s_r=0{,}8595$. Masa ulja jest razlika ukupne mase i mase posude. Sama razlika gustoća ne dokazuje nehomogenost: nedostaju podatci o mjernoj točnosti.
 
-### Z2. Kormilarski stroj s dva cilindra {#key-task-kormilarski-stroj-dva-cilindra .unnumbered .unlisted}
+### Z2. Kormilarski stroj s četiri cilindra {#key-task-kormilarski-stroj-dva-cilindra .unnumbered .unlisted}
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-kormilarski-stroj-dva-cilindra)
 
-**Smjernica postupka.** Iz $A=\pi d^2/4$ i $F=p_MA$ slijedi sila. Oba kraka daju moment istoga smisla, $M=2Fr$. Dobavljeni volumen jednak je istisnutom volumenu jednoga cilindra, $V=As$; drugi cilindar istodobno vraća jednak volumen.
+**Smjernica postupka.** Iz $A=\pi d^2/4$ i $F=p_MA$ slijedi sila. Dva cilindra pod tlakom guraju suprotne krakove u suprotnim smjerovima, pa daju moment istoga smisla, $M=2Fr$; povratni cilindri pri zanemarivom tlaku ne pridonose momentu. Oba cilindra pod tlakom pritom se produljuju za $s$, pa crpka dobavlja $V=2As$; povratni par istodobno vraća jednak volumen.
 
-**Kontrolni rezultat ili kriterij.** $A\approx1{,}227\cdot10^{-2}\ \text{m}^2$; $F\approx73{,}6\ \text{kN}$; $M\approx88{,}4\ \text{kN m}$; $V\approx3{,}68\ \text{L}$. Moment ovisi o tlaku, površini i kraku; hod klipa određuje samo dobavljeni volumen, ne silu.
+**Kontrolni rezultat ili kriterij.** $A\approx1{,}227\cdot10^{-2}\ \text{m}^2$; $F\approx73{,}6\ \text{kN}$; $M\approx88{,}4\ \text{kN m}$; $V\approx7{,}36\ \text{L}$. Moment ovisi o tlaku, površini i kraku; hod klipa određuje samo dobavljeni volumen, ne silu. Oba cilindra pod tlakom produljuju se, pa dobava nije istisnuti volumen samo jednoga cilindra.
 
 ### Z3. Provjera pogrešnog proračuna preše {#key-task-pogreske-omjera-sile-i-pomaka .unnumbered .unlisted}
 
@@ -52,9 +52,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u01_osnove_fluida_i_pascalov_zakon.qmd#task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra)
 
-**Smjernica postupka.** Površina $A_p$ i tlak određuju se iz $p_M = F_p/A_p$, idealno opterećenje iz $G = 3p_MA_L$, a idealni hod crpke iz volumne bilance $A_p s_p = 3A_L \Delta z$. Za stvarni sustav vrijedi $G_{kor}=\eta_FG$ i $s_{p,st}=s_p/\eta_V$. Konzervativna se odluka temelji na vrijednostima $\eta_{F,min}$ i $\eta_{V,min}$, a ne na srednjim vrijednostima.
+**Smjernica postupka.** Površina $A_p$ i tlak određuju se iz $p_M = F_p/A_p$, idealno opterećenje iz $F_G = 3p_MA_L$, a idealni hod crpke iz volumenske bilance $A_p s_p = 3A_L \Delta z$. Za stvarni sustav vrijedi $F_{G,kor}=\eta_F F_G$ i $s_{p,st}=s_p/\eta_V$. Konzervativna se odluka temelji na vrijednostima $\eta_{F,min}$ i $\eta_{V,min}$, a ne na srednjim vrijednostima.
 
-**Kontrolni rezultat ili kriterij.** $p_M \approx 947\ \text{kPa}$; $G \approx 27{,}0\ \text{kN}$; $s_p \approx 1{,}35\ \text{m}$. Nominalno je $G_{kor}\approx23{,}2\ \text{kN}$ i $s_{p,st}\approx1{,}50\ \text{m}$, a konzervativno $G_{kor,min}\approx22{,}1\ \text{kN}$ i $s_{p,st,max}\approx1{,}55\ \text{m}$. Oba zadana brojčana kriterija jesu zadovoljena, ali s malim rezervama, približno $0{,}1\ \text{kN}$ i $0{,}05\ \text{m}$; to nije potpuna provjera stroja ni odobrenje za puštanje u rad.
+**Kontrolni rezultat ili kriterij.** $p_M \approx 947\ \text{kPa}$; $F_G \approx 27{,}0\ \text{kN}$; $s_p \approx 1{,}35\ \text{m}$. Nominalno je $F_{G,kor}\approx23{,}2\ \text{kN}$ i $s_{p,st}\approx1{,}50\ \text{m}$, a konzervativno $F_{G,kor,min}\approx22{,}1\ \text{kN}$ i $s_{p,st,max}\approx1{,}55\ \text{m}$. Oba zadana brojčana kriterija jesu zadovoljena, ali s malim rezervama, približno $0{,}1\ \text{kN}$ i $0{,}05\ \text{m}$; to nije potpuna provjera stroja ni odobrenje za puštanje u rad.
 
 ## Viskoznost, površinska napetost i kapilarnost
 
@@ -112,7 +112,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu)
 
-**Smjernica postupka.** Manometarski tlak je $p_M = \rho gh$, a apsolutni $p_{aps} = p_{atm} + p_M$.
+**Smjernica postupka.** Manometarski tlak je $p_M = \rho_w gh$, a apsolutni $p_{aps} = p_{atm} + p_M$.
 
 **Kontrolni rezultat ili kriterij.** $p_M \approx 23{,}5\ \text{kPa}$; $p_{aps} \approx 124{,}3\ \text{kPa}$.
 
@@ -138,7 +138,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Debljine slojeva moraju dati ukupnu visinu. Tlak na dnu dobiva se zbrajanjem dvaju hidrostatičkih doprinosa. Kao provjeru usporedi zadani tlak s tlakovima koje bi dala ista ukupna visina čistog ulja i čiste vode.
 
-**Kontrolni rezultat ili kriterij.** $h_u \approx 0{,}601\ \text{m}$; $h_w \approx 0{,}899\ \text{m}$; $p_{M,granica} \approx 5{,}015\ \text{kPa}$. Obje su debljine pozitivne, a $12{,}508 < 13{,}830 < 14{,}715\ \text{kPa}$. Tlak je na ravnoj granici kontinuiran; nagib $dp/dh$ raste s $8{,}339$ na $9{,}810\ \text{kPa/m}$ pri ulasku iz ulja u vodu.
+**Kontrolni rezultat ili kriterij.** $h_o \approx 0{,}601\ \text{m}$; $h_w \approx 0{,}899\ \text{m}$; $p_{M,granica} \approx 5{,}015\ \text{kPa}$. Obje su debljine pozitivne, a $12{,}508 < 13{,}830 < 14{,}715\ \text{kPa}$. Tlak je na ravnoj granici kontinuiran; nagib $dp/dh$ raste s $8{,}339$ na $9{,}810\ \text{kPa/m}$ pri ulasku iz ulja u vodu.
 
 ### Z5. Izbor manometra za podtlak {#key-task-izbor-manometra-za-podtlak .unnumbered .unlisted}
 
@@ -146,7 +146,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Kreni od atmosferskog tlaka i penjanja kroz manometarsku tekućinu prema strani podtlaka. Ista gustoća određuje i potrebnu visinu za zadani tlak i promjenu tlaka pri pogrešci visine. Provjeri oba ograničenja za svaki fluid.
 
-**Kontrolni rezultat ili kriterij.** Za ulje, vodu i živu redom: $\Delta h \approx 0{,}711$; $0{,}613$; $0{,}04497\ \text{m}$, a granice tlačne pogreške su $8{,}44$; $9{,}79$; $133{,}42\ \text{Pa}$. Bira se **voda**: ulje traži preveliku razliku razina, a živa daje preveliku tlačnu pogrešku. Razina je viša u kraku spojenom s plinom; $p_{gas,aps} = 92{,}6\ \text{kPa}$. Veća gustoća skraćuje stupac, ali pri istoj pogrešci očitanja povećava tlačnu pogrešku.
+**Kontrolni rezultat ili kriterij.** Za ulje, vodu i živu redom: $\Delta h \approx 0{,}711$; $0{,}613$; $0{,}04497\ \text{m}$, a granice tlačne pogreške su $8{,}44$; $9{,}79$; $133{,}42\ \text{Pa}$. Bira se **voda**: ulje traži preveliku razliku razina, a živa daje preveliku tlačnu pogrešku. Razina je viša u kraku spojenom s plinom; $p_{pl} \approx 92{,}6\ \text{kPa}$ (aps.). Veća gustoća skraćuje stupac, ali pri istoj pogrešci očitanja povećava tlačnu pogrešku.
 
 ### Z6. Tlak plina iz manometarskog mjerenja {#key-task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor .unnumbered .unlisted}
 
@@ -178,7 +178,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce)
 
-**Smjernica postupka.** Koristi efektivnu težinu fluida: $\Delta p = \rho (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho gh$. Os $z$ usmjeri prema gore; pri kočenju je $a_z<0$ iako je brzina još pozitivna.
+**Smjernica postupka.** Koristi efektivnu težinu fluida: $\Delta p = \rho_o (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho_o gh$. Os $z$ usmjeri prema gore; pri kočenju je $a_z<0$ iako je brzina još pozitivna.
 
 **Kontrolni rezultat ili kriterij.** $\Delta p \approx 7{,}90\ \text{kPa}$; u mirovanju $\Delta p_0 \approx 6{,}40\ \text{kPa}$ — oko 23 % više. Pri gibanju prema gore uz kočenje $a_z=-2{,}3\ \text{m/s}^2$ dobiva se $\Delta p \approx 4{,}90\ \text{kPa}$. Gradijent određuje ubrzanje, a ne smjer brzine.
 
@@ -202,7 +202,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen)
 
-**Smjernica postupka.** U graničnom stanju vrijedi $h_{rub} = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim $h_{osa}$ i $h_{rub}$, a tlakove iz $p_M = \rho gh$. U provjeri tolerancije koristi $\omega=1{,}05k\omega_{max}$ i iz uvjeta $h_{osa}\ge0{,}350\ \text{m}$ riješi gornju granicu za $k$.
+**Smjernica postupka.** U graničnom stanju vrijedi $h_R = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim dubinu u osi $h_C$ i uz stijenku $h_R$, a tlakove iz $p_M = \rho_w gh$. U provjeri tolerancije koristi $\omega=1{,}05k\omega_{max}$ i iz uvjeta $h_C\ge0{,}350\ \text{m}$ riješi gornju granicu za $k$.
 
 **Kontrolni rezultat ili kriterij.** $\omega_{max}\approx7{,}83$ rad/s. Za $k=0{,}80$: dubine (os, rub) ≈ (0,3576; 0,5624) m, tlakovi ≈ (3,51; 5,52) kPa. Uz +5 % brzine: omjer 0,84, dubine ≈ (0,3471; 0,5729) m; nema prelijevanja, ali dubina u osi nije dovoljna. $k_{max}\approx0{,}790$. Preporuka $k=0{,}78$: pri najvećem odstupanju dubine ≈ (0,35268; 0,56732) m, rezerva 2,68 mm. Vrijedi za ustaljeni model sa zatvorenim usisom.
 
@@ -246,15 +246,15 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Nacrtaj jednu lokalnu tlačnu normalu i provjeri njezin pravac prema $O$. Za ravnotežu izdvoji cijeli kruti sklop; tek nakon momentne jednadžbe zatvori ravnotežu sila. Zasebno provjeri predznak i kapacitet spojnice.
 
-**Kontrolni rezultat ili kriterij.** $F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}=0$. $T=0{,}904\ \mathrm{kN}$ ulijevo, manje od $T_{\max}$; $R_{Ox}=-10{,}185\ \mathrm{kN}$, $R_{Oy}=-11{,}313\ \mathrm{kN}$. Sve tlačne normale prolaze kroz $O$; $T=W|x_G|/R$ ne ovisi o $h_1$ u zadanom modelu.
+**Kontrolni rezultat ili kriterij.** $F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}=0$. $T=0{,}904\ \mathrm{kN}$ ulijevo, manje od $T_{\max}$; $R_{Ox}=-10{,}185\ \mathrm{kN}$, $R_{Oy}=-11{,}313\ \mathrm{kN}$. Sve tlačne normale prolaze kroz $O$; $T=F_G|x_G|/R$ ne ovisi o $h_1$ u zadanom modelu.
 
 ### Z6. Nesigurnost sile na mjerni panel {#key-task-u05-nesigurnost-modela-i-mjerenja .unnumbered .unlisted}
 
 [Vrati se na zadatak](u05_hidrostatske_sile_na_plohe.qmd#task-u05-nesigurnost-modela-i-mjerenja)
 
-**Smjernica postupka.** Za $F=\rho gbH(h_1+H/2)$ relativna nesigurnost zbog dvaju nesigurnih ulaza jest $u(F)/F=\sqrt{[u(\rho)/\rho]^2+[u(h_1)/(h_1+H/2)]^2}$.
+**Smjernica postupka.** Za $F=\rho gbH(h_1+H/2)$ relativna nesigurnost zbog dvaju nesigurnih ulaza jest $s(F)/F=\sqrt{[s(\rho)/\rho]^2+[s(h_1)/(h_1+H/2)]^2}$.
 
-**Kontrolni rezultat ili kriterij.** $F=12{,}218\ \mathrm{kN}$; $u(F)=0{,}192\ \mathrm{kN}$; kombinirana nesigurnost razlike $0{,}356\ \mathrm{kN}$; $z=1{,}74$. Budući da je $z<2$, ovaj skup podataka ne pokazuje neslaganje na zadanoj razini, ali time model nije općenito validiran.
+**Kontrolni rezultat ili kriterij.** $F=12{,}218\ \mathrm{kN}$; $s(F)=0{,}192\ \mathrm{kN}$; kombinirana nesigurnost razlike $0{,}356\ \mathrm{kN}$; $z=1{,}74$. Budući da je $z<2$, ovaj skup podataka ne pokazuje neslaganje na zadanoj razini, ali time model nije općenito validiran.
 
 ## Uzgon, plivanje i početni stabilitet
 
@@ -262,15 +262,15 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno)
 
-**Smjernica postupka.** Uzgon je $F_U = \rho gV$; potom usporedi $F_U$ i težinu $G = mg$ da dobiješ potrebnu dodatnu silu.
+**Smjernica postupka.** Uzgon je $F_U = \rho gV$; potom usporedi $F_U$ i težinu $F_G = mg$ da dobiješ potrebnu dodatnu silu.
 
-**Kontrolni rezultat ili kriterij.** $F_U \approx 832\ \text{N}$; kako je $F_U > G = 608\ \text{N}$, treba dodatna sila prema dolje $\approx 224\ \text{N}$.
+**Kontrolni rezultat ili kriterij.** $F_U \approx 832\ \text{N}$; kako je $F_U > F_G = 608\ \text{N}$, treba dodatna sila prema dolje $\approx 224\ \text{N}$.
 
 ### Z2. Gaz opterećenog pontona {#key-task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine .unnumbered .unlisted}
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine)
 
-**Smjernica postupka.** Iz vertikalne ravnoteže vrijedi $\rho gV_{ist} = (m_p + m_t)g$; srednji gaz slijedi iz $V_{ist} = LBT$.
+**Smjernica postupka.** Iz vertikalne ravnoteže vrijedi $\rho gV_{ist} = (m_p + m_t)g$; srednji gaz slijedi iz $V_{ist} = LbT$.
 
 **Kontrolni rezultat ili kriterij.** $V_{ist} \approx 0{,}73\ \text{m}^3$; srednji gaz $T \approx 0{,}20\ \text{m}$; dodatna masa do ruba $\approx 650\ \text{kg}$.
 
@@ -278,7 +278,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-metacentarska-visina-iz-pokusa-nagibanja)
 
-**Smjernica postupka.** Iz momentne ravnoteže $m_s e=mGM\tan\varphi$ najprije odredi izmjereni $GM$. Zatim primijeni $KG=KB+BM-GM$, uz $KB=T_m/2$ i $BM=B^2/(12T_m)$. U linearnom modelu rubni gazovi su $T_m\pm(B/2)\tan\varphi$.
+**Smjernica postupka.** Iz momentne ravnoteže $m_s e=mGM\tan\varphi$ najprije odredi izmjereni $GM$. Zatim primijeni $KG=KB+BM-GM$, uz $KB=T_m/2$ i $BM=b^2/(12T_m)$. U linearnom modelu rubni gazovi su $T_m\pm(b/2)\tan\varphi$.
 
 **Kontrolni rezultat ili kriterij.** $T_m=0{,}2863\ \text{m}$; $GM=0{,}5724\ \text{m}$; $KG=0{,}1412\ \text{m}$. Gazovi su $T_L=0{,}2496\ \text{m}$ i $T_D=0{,}3230\ \text{m}$: oba su između $0$ i $H$. Kut $3^\circ<5^\circ$ zadovoljava zadani kriterij; pozitivan $GM$ dokazuje samo početni stabilitet.
 
@@ -288,7 +288,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** U oba fluida vrijedi $\rho gV_{ist} = mg$; razlika je samo u uronjenom volumenu vrata i tijela areometra.
 
-**Kontrolni rezultat ili kriterij.** $\rho_{ulje} \approx 992{,}4\ \text{kg/m}^3$; uron je veći jer ulje ima manju gustoću pa je za istu težinu potreban veći istisnuti volumen.
+**Kontrolni rezultat ili kriterij.** $\rho_o \approx 992{,}4\ \text{kg/m}^3$; uron je veći jer ulje ima manju gustoću pa je za istu težinu potreban veći istisnuti volumen.
 
 ### Z5. Spuštanje opreme ili dodavanje balasta {#key-task-spustanje-opreme-ili-dodavanje-balasta .unnumbered .unlisted}
 
@@ -302,9 +302,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta)
 
-**Smjernica postupka.** Najprije uzmi $T_m=(T_L+T_D)/2$ i $\Delta=\rho_oV_o+\rho_wV_w$. Za položaje uzgonskih doprinosa vrijedi $z_{B,o}=T_m-\delta/2$ i $z_{B,w}=(T_m-\delta)/2$, pa izračunaj $KB_{eq}$ njihovim uzgonskim težinjenjem. U ovom modelu $BM_{eq}=\rho_w I_T/\Delta$, gdje je $I_T=LB^3/12$, a $GM_{eq}=KB_{eq}+BM_{eq}-KG$. Tek zatim primijeni $m_a e=\Delta GM_{eq}\tan\theta$ i $\tan\theta=(T_L-T_D)/B$. Za konzervativni omotač izračunaj svih $2^5=32$ rubnih kombinacija pet nesigurnih skalarnih ulaza.
+**Smjernica postupka.** Najprije uzmi $T_m=(T_L+T_D)/2$ i $\Delta=\rho_oV_o+\rho_wV_w$. Za položaje uzgonskih doprinosa vrijedi $z_{B,o}=T_m-\delta/2$ i $z_{B,w}=(T_m-\delta)/2$, pa izračunaj $KB_{eq}$ njihovim uzgonskim težinjenjem. U ovom modelu $BM_{eq}=\rho_w I_T/\Delta$, gdje je $I_T=Lb^3/12$, a $GM_{eq}=KB_{eq}+BM_{eq}-KG$. Tek zatim primijeni $m_a e=\Delta GM_{eq}\tan\varphi$ i $\tan\varphi=(T_L-T_D)/b$. Za konzervativni omotač izračunaj svih $2^5=32$ rubnih kombinacija pet nesigurnih skalarnih ulaza.
 
-**Kontrolni rezultat ili kriterij.** $T_m=0{,}220\ \text{m}$; $(V_o,V_w)=(0{,}269;0{,}470)\ \text{m}^3$; $\Delta=689{,}9\ \text{kg}$; $y_B=0{,}0389\ \text{m}$. $(KB_{eq},BM_{eq},GM_{eq})=(0{,}105;0{,}583;0{,}488)\ \text{m}$. $e=0{,}321\ \text{m}$ ulijevo; $e_{max}=0{,}3546\ \text{m}>0{,}34\ \text{m}$: raspored se ne prihvaća. Sve rubne kombinacije imaju $\delta<T_L,T_D<H$ i $|\theta|<5^\circ$.
+**Kontrolni rezultat ili kriterij.** $T_m=0{,}220\ \text{m}$; $(V_o,V_w)=(0{,}269;0{,}470)\ \text{m}^3$; $\Delta=689{,}9\ \text{kg}$; $y_B=0{,}0389\ \text{m}$. $(KB_{eq},BM_{eq},GM_{eq})=(0{,}105;0{,}583;0{,}488)\ \text{m}$. $e=0{,}321\ \text{m}$ ulijevo; $e_{max}=0{,}3546\ \text{m}>0{,}34\ \text{m}$: raspored se ne prihvaća. Sve rubne kombinacije imaju $\delta<T_L,T_D<H$ i $|\varphi|<5^\circ$.
 
 ## Kinematika, kontrolni volumen i kontinuitet
 
@@ -320,7 +320,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-protok-kroz-kosu-kontrolnu-plohu)
 
-**Smjernica postupka.** Protok određuje normalna komponenta brzine: $Q=Av\cos\alpha$. Kut je zadan prema normali, a ne prema samoj plohi.
+**Smjernica postupka.** Protok određuje normalna komponenta brzine: $Q=Av\cos\theta$. Kut je zadan prema normali, a ne prema samoj plohi.
 
 **Kontrolni rezultat ili kriterij.** $v_n=1{,}50\ \text{m/s}$; $Q=+6{,}00\ \text{L/s}$; $\dot m=+5{,}988\ \text{kg/s}$. Za suprotnu normalu protoci su $-6{,}00\ \text{L/s}$ i $-5{,}988\ \text{kg/s}$; fizički tok ostaje isti.
 
@@ -352,9 +352,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-balastni-tank-dvodna-mijesanje-i-odzracnik)
 
-**Smjernica postupka.** Masena bilanca ulaza daje gustoću mješavine; akumulaciju zatvori preko $Q_m + Q_s - Q_{iz} = A_T\,dh/dt$. Kriterij: razina nakon 15 min mora ostati ispod $h_{max}$ za svaku dopuštenu kombinaciju protoka.
+**Smjernica postupka.** Masena bilanca ulaza daje gustoću mješavine; akumulaciju zatvori preko $Q_{mv} + Q_w - Q_{iz} = A_T\,dh/dt$. Kriterij: razina nakon 15 min mora ostati ispod $h_{max}$ za svaku dopuštenu kombinaciju protoka.
 
-**Kontrolni rezultat ili kriterij.** $\rho_{mix} \approx 1021{,}6\ \text{kg/m}^3$; $dh/dt = 1{,}312\ \text{mm/s}$; nominalno $h(15\ \text{min}) \approx 1{,}48\ \text{m}$ i $\Delta m \approx 43{,}4\ \text{t}$. Konzervativno $dh/dt_{max} = 1{,}460\ \text{mm/s}$ i $h(15\ \text{min}) \approx 1{,}61\ \text{m} > 1{,}60\ \text{m}$; odzračnik se doseže za $890\ \text{s} \approx 14{,}8\ \text{min}$. Nominalno prolazi, zajamčeno ne: skratiti operaciju, uvesti nadzor razine ili suziti nesigurnost mjerila.
+**Kontrolni rezultat ili kriterij.** $\rho_{mj} \approx 1021{,}6\ \text{kg/m}^3$; $dh/dt = 1{,}312\ \text{mm/s}$; nominalno $h(15\ \text{min}) \approx 1{,}48\ \text{m}$ i $\Delta m \approx 43{,}4\ \text{t}$. Konzervativno $dh/dt_{max} = 1{,}460\ \text{mm/s}$ i $h(15\ \text{min}) \approx 1{,}61\ \text{m} > 1{,}60\ \text{m}$; odzračnik se doseže za $890\ \text{s} \approx 14{,}8\ \text{min}$. Nominalno prolazi, zajamčeno ne: skratiti operaciju, uvesti nadzor razine ili suziti nesigurnost mjerila.
 
 ## Energijska jednadžba i Bernoulli
 
@@ -414,7 +414,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Temperatura u relaciji za brzinu zvuka mora biti apsolutna. Plin miruje, pa je laboratorij ujedno sustav mirovanja plina; smjer širenja nije zadan smjerom nekoga srednjeg toka.
 
-**Kontrolni rezultat ili kriterij.** $a\approx1019\ \text{m/s}$; desno je brzina $+a$, lijevo $-a$. Srednja brzina helija ostaje $v=0$; strelice prikazuju širenje poremećaja.
+**Kontrolni rezultat ili kriterij.** $a\approx1019\ \text{m/s}$; poremećaj se širi u oba smjera: udesno brzinom $+a$, ulijevo $-a$. Srednja brzina helija ostaje $v=0$; ucrtane strelice prikazuju širenje poremećaja, ne tok plina.
 
 ### Z2. Zrak za upućivanje brodskog dizelskog motora {#key-task-zrak-za-upucivanje-motora .unnumbered .unlisted}
 
@@ -444,7 +444,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-sapnica-model)
 
-**Smjernica postupka.** Najprije usporedi $p_b/p_0$ s kritičnim omjerom. Napiši zagušeni protok kao $\dot m=C_dA_gK(p_0,T_0)$. Protok određuje produkt; odvojeno mjerenje stvarne površine omogućuje procjenu koeficijenta. Nazivna površina nije mjerenje stvarnog prolaza.
+**Smjernica postupka.** Najprije usporedi $p_b/p_0$ s kritičnim omjerom. Napiši zagušeni protok kao $\dot m=C_dA_g\,(\dot m_{max}/A^*)$, gdje omjer $\dot m_{max}/A^*$ prema @eq-priguseni-protok ovisi samo o $p_0$ i $T_0$. Protok određuje produkt; odvojeno mjerenje stvarne površine omogućuje procjenu koeficijenta. Nazivna površina nije mjerenje stvarnog prolaza.
 
 **Kontrolni rezultat ili kriterij.** $p_b/p_0=0{,}167<0{,}528$; $C_dA_g\approx42{,}50\ \text{mm}^2$. Za $A_g=48{,}0\ \text{mm}^2$: $\dot m_{ideal}\approx0{,}0672\ \text{kg/s}$ i $C_d\approx0{,}885$. Sama razlika površine ne objašnjava manji protok. Bez optike poznat je samo produkt, ne svaki faktor. Veći otvor sam ne jamči $C_d=1$.
 
@@ -452,9 +452,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-udarni-val-podaci)
 
-**Smjernica postupka.** Izoliraj $Ma_1$ iz statičkog omjera. Za $r=p_2/p_1$ vrijedi $u(r)/r=\sqrt{(u(p_1)/p_1)^2+(u(p_2)/p_2)^2}$. Analogno računaj $u(r_0)$. Relaciju za $Ma_2$ poveži s lokalnim zaustavnim omjerima i dobij $G(Ma_1)$. Primijeni $u(G)=|G'(Ma_1)|u(Ma_1)$ te $u(G-r_0)=\sqrt{u(G)^2+u(r_0)^2}$; derivaciju smiješ procijeniti središnjom razlikom.
+**Smjernica postupka.** Izoliraj $Ma_1$ iz statičkog omjera. Za omjer $p_2/p_1$ vrijedi $s(p_2/p_1)/(p_2/p_1)=\sqrt{(s(p_1)/p_1)^2+(s(p_2)/p_2)^2}$. Analogno računaj $s(\Lambda_{mj})$. Relaciju za $Ma_2$ poveži s lokalnim zaustavnim omjerima i dobij $\Lambda(Ma_1)$. Primijeni $s(\Lambda)=|\Lambda'(Ma_1)|\,s(Ma_1)$ te $s(\Lambda-\Lambda_{mj})=\sqrt{s(\Lambda)^2+s(\Lambda_{mj})^2}$; derivaciju smiješ procijeniti središnjom razlikom.
 
-**Kontrolni rezultat ili kriterij.** $Ma_1=2{,}000\pm0{,}007$; $G=0{,}7209\pm0{,}0032$; $r_0=0{,}7204\pm0{,}0079$; $u(G-r_0)=0{,}0085$. Normirana razlika $0{,}050<1$: podatci su konzistentni. Statički tlakovi sami daju modelsku procjenu, ne neovisno mjerenje gubitka zaustavnog tlaka. Nadzvučna Pitotova sonda stvara vlastiti val i bez korekcije ne daje $p_{01}$.
+**Kontrolni rezultat ili kriterij.** $Ma_1=2{,}000\pm0{,}007$; $\Lambda=0{,}7209\pm0{,}0032$; $\Lambda_{mj}=0{,}7204\pm0{,}0079$; $s(\Lambda-\Lambda_{mj})=0{,}0085$. Normirana razlika $0{,}050<1$: podatci su konzistentni. Statički tlakovi sami daju modelsku procjenu, ne neovisno mjerenje gubitka zaustavnog tlaka. Nadzvučna Pitotova sonda stvara vlastiti val i bez korekcije ne daje $p_{01}$.
 
 ## Količina i moment količine gibanja
 
@@ -470,7 +470,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-propeler-aktuatorski-disk)
 
-**Smjernica postupka.** Prema @eq-aktuatorski-disk-brzina brzina kroz disk srednja je vrijednost brzina daleko ispred i iza njega. Maseni protok računaj s površinom diska i $v_d$, a potisak iz @eq-aktuatorski-disk-potisak. Provjeri da isti potisak slijedi iz skoka tlaka $\rho(v_j^2-v_A^2)/2$ pomnoženog površinom diska.
+**Smjernica postupka.** Prema @eq-aktuatorski-disk-brzina brzina kroz disk srednja je vrijednost brzina daleko ispred i iza njega. Maseni protok računaj s površinom diska i $v_d$, a potisak iz @eq-aktuatorski-disk-potisak. Provjeri da isti potisak slijedi iz skoka tlaka $\rho_{mv}(v_j^2-v_A^2)/2$ pomnoženog površinom diska.
 
 **Kontrolni rezultat ili kriterij.** $v_d=7{,}00\ \text{m/s}$; $\dot m\approx9{,}02\cdot10^{4}\ \text{kg/s}$; $F_T\approx180\ \text{kN}$ (isto iz $\Delta p\,A_d$ s $\Delta p\approx14{,}35\ \text{kPa}$); $P_T\approx1{,}08\ \text{MW}$; $\eta_i=0{,}857$.
 
@@ -486,9 +486,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-moment-ekscentricnog-mlaza)
 
-**Smjernica postupka.** Količina gibanja daje $F_x=\rho Qv$, $F_y=0$. Za kruti sklop ploče i nosača upotrijebi $M_{O,z}=bF_y-eF_x$. Uklještenje prenosi i silu i moment; krak je okomita udaljenost od O do pravca djelovanja sile.
+**Smjernica postupka.** Količina gibanja daje $F_x=\rho Qv$, $F_y=0$. Za kruti sklop ploče i nosača upotrijebi $M_{O,z}=x_CF_y-y_CF_x$. Uklještenje prenosi i silu i moment; krak je okomita udaljenost od O do pravca djelovanja sile.
 
-**Kontrolni rezultat ili kriterij.** $F_x\approx+287{,}4\ \text{N}$, $F_y=0$; $M_{O,z}\approx-100{,}6\ \text{N m}$ (u smjeru kazaljke). Oslonac daje $R_x\approx-287{,}4\ \text{N}$, $R_y=0$ i $M_{R,z}\approx+100{,}6\ \text{N m}$. Krak je $e=0{,}35\ \text{m}$, a ne $\sqrt{b^2+e^2}$. Promjena $b$ sama ne mijenja moment jer je $F_y=0$.
+**Kontrolni rezultat ili kriterij.** $F_x\approx+287{,}4\ \text{N}$, $F_y=0$; $M_{O,z}\approx-100{,}6\ \text{N m}$ (u smjeru kazaljke). Oslonac daje $R_x\approx-287{,}4\ \text{N}$, $R_y=0$ i $M_{R,z}\approx+100{,}6\ \text{N m}$. Krak je $y_C=0{,}35\ \text{m}$, a ne $\sqrt{x_C^2+y_C^2}$. Promjena $x_C$ sama ne mijenja moment jer je $F_y=0$.
 
 ### Z5. Mlaz na ploču koja se udaljava {#key-task-mlaz-na-pomicnu-plocu .unnumbered .unlisted}
 
@@ -514,7 +514,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Iz $A=ab$ i $P=2(a+b)$ slijedi $D_h=2ab/(a+b)$; za kvadrat se svodi na stranicu, a za kružnu cijev na $D$. Brzina je $v=Q/A$. Usporedi $Re$ s obje duljine.
 
-**Kontrolni rezultat ili kriterij.** $v=8{,}00\ \text{m/s}$, $D_h=0{,}2667\ \text{m}$, $Re=1{,}42\cdot10^5$: turbulentno. S duljom stranicom $Re=2{,}13\cdot10^5$, 1,5 puta više; dijagram $\lambda(Re,\varepsilon/D)$ za nekružne presjeke definiran je s $D_h$, pa bi takav $Re$ dao pogrešan $\lambda$.
+**Kontrolni rezultat ili kriterij.** $v=8{,}00\ \text{m/s}$, $D_h=0{,}2667\ \text{m}$, $Re=1{,}42\cdot10^5$: turbulentno. S duljom stranicom $Re=2{,}13\cdot10^5$, 1,5 puta više; dijagram $\lambda(Re,k_s/D)$ za nekružne presjeke definiran je s $D_h$, pa bi takav $Re$ dao pogrešan $\lambda$.
 
 ### Z2. Machov broj i izbor modela {#key-task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom .unnumbered .unlisted}
 
@@ -528,9 +528,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak)
 
-**Smjernica postupka.** U brojnik kavitacijskog broja ulazi $p_{abs}-p_v$, pri čemu je $p_{abs}=p_{atm}+p_M$. Za drugu brzinu provjeri novu vrijednost nazivnika. Za granični pretlak riješi $p_{atm}+p_{M,min}-p_v=\sigma_{kr}\rho v_2^2/2$.
+**Smjernica postupka.** U brojnik kavitacijskog broja ulazi $p_{aps}-p_v$, pri čemu je $p_{aps}=p_{atm}+p_M$. Za drugu brzinu provjeri novu vrijednost nazivnika. Za granični pretlak riješi $p_{atm}+p_{M,min}-p_v=\sigma_{kr}\rho v_2^2/2$.
 
-**Kontrolni rezultat ili kriterij.** $p_{abs}=80{,}0\ \text{kPa}$; $\sigma_1\approx9{,}708>3$, a $\sigma_2\approx2{,}427<3$. Prvi režim zadovoljava, drugi ne zadovoljava zadani kriterij. Pri $v_2$ treba $p_{abs,min}=98{,}34\ \text{kPa}$, odnosno $p_{M,min}=-1{,}660\ \text{kPa}$. To je granica kriterija bez dodatne rezerve.
+**Kontrolni rezultat ili kriterij.** $p_{aps}=80{,}0\ \text{kPa}$; $\sigma_{kav,1}\approx9{,}708>3$, a $\sigma_{kav,2}\approx2{,}427<3$. Prvi režim zadovoljava, drugi ne zadovoljava zadani kriterij. Pri $v_2$ treba $p_{aps,min}=98{,}34\ \text{kPa}$, odnosno $p_{M,min}=-1{,}660\ \text{kPa}$. To je granica kriterija bez dodatne rezerve.
 
 ### Z4. Hidroprofil u vodi i model u zraku {#key-task-reynoldsova-slicnost-hidroprofila .unnumbered .unlisted}
 
@@ -578,9 +578,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-poiseuille-inverzni)
 
-**Smjernica postupka.** Invertiraj $Q=\pi D^4\Delta p/(128\mu L)$. Za neovisne standardne nesigurnosti vrijedi $[u(\mu)/\mu]^2=[4u(D)/D]^2+[u(\Delta p)/\Delta p]^2+[u(L)/L]^2+[u(Q)/Q]^2$.
+**Smjernica postupka.** Invertiraj $Q=\pi D^4\Delta p/(128\mu L)$. Za neovisne standardne nesigurnosti vrijedi $[s(\mu)/\mu]^2=[4s(D)/D]^2+[s(\Delta p)/\Delta p]^2+[s(L)/L]^2+[s(Q)/Q]^2$.
 
-**Kontrolni rezultat ili kriterij.** $\mu\approx1{,}000\ \text{mPa s}$, $u(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Sam promjer doprinosi relativnoj standardnoj nesigurnosti od $4\,\%$, pa ima najveći doprinos ukupnoj mjernoj nesigurnosti.
+**Kontrolni rezultat ili kriterij.** $\mu\approx1{,}000\ \text{mPa s}$, $s(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Sam promjer doprinosi relativnoj standardnoj nesigurnosti od $4\,\%$, pa ima najveći doprinos ukupnoj mjernoj nesigurnosti.
 
 ### Z4. Povratni tok između ploča {#key-task-couette-povrat .unnumbered .unlisted}
 
@@ -588,7 +588,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Deriviraj profil i postavi $\tau_0=0$. Provjeri $v(0)=0$ i $v(H)=u$. Negativna brzina može nastati neposredno uz donju ploču; na samoj ploči ostaje nula.
 
-**Kontrolni rezultat ili kriterij.** $G_{krit}=4{,}00\cdot10^5\ \text{Pa/m}$. Pri $0{,}90G_{krit}$ vrijedi $\tau_0=+20{,}0\ \text{Pa}$ i $v(y)>0$ za $0<y\le H$; pri $1{,}10G_{krit}$ vrijedi $\tau_0=-20{,}0\ \text{Pa}$ i povratni tok u $0<y<H/11$. U oba profila $v(0)=0$ i $v(H)=u$; fluid ne prolazi kroz ploče.
+**Kontrolni rezultat ili kriterij.** $(dp/dx)_{krit}=4{,}00\cdot10^5\ \text{Pa/m}$. Pri $0{,}90\,(dp/dx)_{krit}$ vrijedi $\tau_0=+20{,}0\ \text{Pa}$ i $v(y)>0$ za $0<y\le H$; pri $1{,}10\,(dp/dx)_{krit}$ vrijedi $\tau_0=-20{,}0\ \text{Pa}$ i povratni tok u $0<y<H/11$. U oba profila $v(0)=0$ i $v(H)=u$; fluid ne prolazi kroz ploče.
 
 ### Z5. Izbor modela graničnog sloja {#key-task-granicni-sloj-model .unnumbered .unlisted}
 
@@ -602,9 +602,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u12_diferencijalni_opis_realnog_toka.qmd#task-cfd-tri-mreze)
 
-**Smjernica postupka.** Za monotoni niz koristi $p=\ln[(Q_c-Q_m)/(Q_m-Q_f)]/\ln r$ i $Q_{ext}=Q_f+(Q_f-Q_m)/(r^p-1)$. Zatim $GCI_f=F_s|(Q_f-Q_m)/Q_f|/(r^p-1)$; za $GCI_m$ zamijeni par $(Q_f,Q_m)$ parom $(Q_m,Q_c)$. Razlomke pretvori u postotke i provjeri oba uvjeta. U dijelu b) sve su nesigurnosti apsolutne i bezdimenzijske, kao $C_D$. Relativno odstupanje iznosi $100E/C_{D,ref}$ u postotcima. Provjeri sadrži li interval $[E-U_E;\ E+U_E]$ nulu. Veća nesigurnost širi interval, ali ne mijenja središnju razliku.
+**Smjernica postupka.** Za monotoni niz koristi $n_h=\ln[(Q_g-Q_{sr})/(Q_{sr}-Q_f)]/\ln\lambda_h$ i $Q_{ext}=Q_f+(Q_f-Q_{sr})/(\lambda_h^{n_h}-1)$. Zatim $GCI_f=F_s|(Q_f-Q_{sr})/Q_f|/(\lambda_h^{n_h}-1)$; za $GCI_{sr}$ zamijeni par $(Q_f,Q_{sr})$ parom $(Q_{sr},Q_g)$. Razlomke pretvori u postotke i provjeri oba uvjeta. U dijelu b) sve su nesigurnosti apsolutne i bezdimenzijske, kao $C_D$. Relativno odstupanje iznosi $100E/C_{D,ref}$ u postotcima. Provjeri sadrži li interval $[E-2s_E;\ E+2s_E]$ nulu. Veća nesigurnost…
 
-**Kontrolni rezultat ili kriterij.** **a)** $p\approx2{,}000$, $Q_{ext}\approx7{,}8540\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_m\approx1{,}237\,\%$ i $GCI_f\approx0{,}312\,\%$. Odabire se fina mreža: debalans je $0{,}0025\,\%$; srednja krši oba uvjeta, gruba maseni uvjet. **b)** $E=+0{,}00056$, odnosno približno $+4{,}80\,\%$; CFD daje veći otpor. Za $u_m=0{,}00020$ dobiva se $U_E\approx0{,}000490$ i $|E|/U_E\approx1{,}14>1$: kriterij nije zadovoljen. Za $u_m=0{,}00030$ vrijedi $U_E\approx0{,}000663$ i $|E|/U_E\approx0{,}844<1$: kriterij je zadovoljen. Razlika ostaje ista; širi interval znači slabiju sposobnost razlikovanja modela od reference, a ne poboljšanje modela. To je uvjetna procjena za zadane nastavne pretpostavke: stvarna validacija traži dokumentirane reziduale, povijesti sila, masenu bilancu i stvarni budžet nesigurnosti (dodatak D). Konvergencija Poiseuilleova protoka ne potvrđuje turbulentni otpor profila.
+**Kontrolni rezultat ili kriterij.** **a)** $n_h\approx2{,}000$, $Q_{ext}\approx7{,}8540\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_{sr}\approx1{,}237\,\%$ i $GCI_f\approx0{,}312\,\%$. Odabire se fina mreža: debalans je $0{,}0025\,\%$; srednja krši oba uvjeta, gruba maseni uvjet. **b)** $E=+0{,}00056$, odnosno približno $+4{,}80\,\%$; CFD daje veći otpor. Za $s_{mj}=0{,}00020$ dobiva se $2s_E\approx0{,}000490$ i $|E|/(2s_E)\approx1{,}14>1$: kriterij nije zadovoljen. Za $s_{mj}=0{,}00030$ vrijedi $2s_E\approx0{,}000663$ i $|E|/(2s_E)\approx0{,}844<1$: kriterij je zadovoljen. Razlika ostaje ista; širi interval znači slabiju sposobnost razlikovanja modela od reference, a ne poboljšanje modela. To je uvjetna procjena za zadane nastavne pretpostavke: stvarna validacija traži dokumentirane reziduale, povijesti sila, masenu bilancu i stvarni budžet nesigurnosti (dodatak D). Konvergencija Poiseuilleova protoka ne potvrđuje turbulentni otpor profila.
 
 ## Gubitci, cjevovodi, crpke i mreže
 
@@ -644,17 +644,17 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-robustan-izbor-promjera)
 
-**Smjernica postupka.** Za svaki $D$: $v=4Q/(\pi D^2)$, $Re=vD/\nu$, $\varepsilon/D$, pa $\lambda$ iz [odgovarajući izraz](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-swamee-jain) i $h_w=(\lambda L/D+\sum\xi)v^2/(2g)$. I $Re$ i $\varepsilon/D$ mijenjaju se s promjerom, pa se mijenja i $\lambda$. Odluku donesi prema najmanjem promjeru s $h_w\le15\ \mathrm{m}$, a zatim ponovi račun s većom hrapavošću.
+**Smjernica postupka.** Za svaki $D$: $v=4Q/(\pi D^2)$, $Re=vD/\nu$, $k_s/D$, pa $\lambda$ iz [odgovarajući izraz](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-swamee-jain) i $h_w=(\lambda L/D+\sum\xi)v^2/(2g)$. I $Re$ i $k_s/D$ mijenjaju se s promjerom, pa se mijenja i $\lambda$. Odluku donesi prema najmanjem promjeru s $h_w\le15\ \mathrm{m}$, a zatim ponovi račun s većom hrapavošću.
 
-**Kontrolni rezultat ili kriterij.** Nova cijev: $\lambda\approx0{,}0238/0{,}0228/0{,}0221$ i $h_w\approx33{,}1/10{,}8/3{,}56\ \mathrm{m}$ za 80/100/125 mm; svi su tokovi turbulentni ($Re\approx1{,}8$–$2{,}9\cdot10^5$). Najmanji dopušteni promjer je 100 mm. Nakon starenja ($\varepsilon=0{,}50\ \mathrm{mm}$) za 100 mm je $\lambda\approx0{,}0309$ i $h_w\approx14{,}0\ \mathrm{m}$, još unutar granice, ali s rezervom od samo $1\ \mathrm{m}$.
+**Kontrolni rezultat ili kriterij.** Nova cijev: $\lambda\approx0{,}0238/0{,}0228/0{,}0221$ i $h_w\approx33{,}1/10{,}8/3{,}56\ \mathrm{m}$ za 80/100/125 mm; svi su tokovi turbulentni ($Re\approx1{,}8$–$2{,}9\cdot10^5$). Najmanji dopušteni promjer je 100 mm. Nakon starenja ($k_s=0{,}50\ \mathrm{mm}$) za 100 mm je $\lambda\approx0{,}0309$ i $h_w\approx14{,}0\ \mathrm{m}$, još unutar granice, ali s rezervom od samo $1\ \mathrm{m}$.
 
 ### Z6. Regulacija balastne crpke i usisna rezerva {#key-task-balastna-crpka-regulacija-npsh .unnumbered .unlisted}
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-balastna-crpka-regulacija-npsh)
 
-**Smjernica postupka.** Model: presjecište $H_p=H_{s,V}$, afinitetno skaliranje $H_{p,s}(q)=s^2H_p(q/s)$ pri istom $q$, $P_{el}=\rho gQH/\eta$ i usisna bilanca [odgovarajući izraz](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-npsha-spremnik) s negativnim geodetskim usponom (napunjen usis). Kriterij: $NPSH_a-NPSH_r$ uz marginu proizvođača; potrebni NPSH vrijedi samo pri nazivnoj brzini.
+**Smjernica postupka.** Model: presjecište $H_p=H_{s,V}$, afinitetno skaliranje $H_{p,2}(Q)=s^2H_p(Q/s)$ pri istom $Q$, $P_{el}=\rho gQH/\eta$ (s $Q$ u $\mathrm{m^3/s}$) i usisna bilanca [odgovarajući izraz](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-npsha-spremnik) uz $z_s<0$ (napunjen usis). Kriterij: $NPSH_a-NPSH_r$ uz marginu proizvođača; potrebni NPSH vrijedi samo pri nazivnoj brzini.
 
-**Kontrolni rezultat ili kriterij.** $q\approx22{,}36\ \mathrm{L/s}$; $(H_V,H_s)\approx(17{,}00;11{,}50)\ \mathrm{m}$ i $s\approx0{,}866$. $(E_V,E_s,\Delta E)\approx(8{,}19;5{,}54;2{,}65)\ \mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a,NPSH_r,NPSH_a-NPSH_r)\approx(10{,}06;4{,}50;5{,}56)\ \mathrm{m}$; u balastnom stanju $NPSH_a\approx8{,}66\ \mathrm{m}$. Za odluku nedostaju kriterij margine proizvođača, $NPSH_r(q,n_2)$ za sniženu brzinu, stvarni porast $h_{w,s}$ zbog zaprljanog filtra te provjera uvlačenja zraka pri njihanju i trimu, što NPSH ne opisuje.
+**Kontrolni rezultat ili kriterij.** $Q\approx22{,}36\ \mathrm{L/s}$; $(H_V,H_s)\approx(17{,}00;11{,}50)\ \mathrm{m}$ i $s\approx0{,}866$. $(E_V,E_s,\Delta E)\approx(8{,}19;5{,}54;2{,}65)\ \mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a,NPSH_r,NPSH_a-NPSH_r)\approx(10{,}06;4{,}50;5{,}56)\ \mathrm{m}$; u balastnom stanju $NPSH_a\approx8{,}66\ \mathrm{m}$. Za odluku nedostaju kriterij margine proizvođača, $NPSH_r(q,n_2)$ za sniženu brzinu, stvarni porast $h_{w,s}$ zbog zaprljanog filtra te provjera uvlačenja zraka pri njihanju i trimu, što NPSH ne opisuje.
 
 ## Turbostrojevi i propulzija
 
@@ -678,9 +678,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-izlaz-lopatice-iz-izmjerene-sile)
 
-**Smjernica postupka.** Iz $\vec F_{f\to l}=\dot m_{rel}(\vec c_1-\vec c_2)$ dobiješ apsolutni izlaz. Zatim $\vec w_2=\vec c_2-(u,0)$ i kut funkcijom atan2. Provjeri $P=F_xu$ i $\dot E_g=\dot m_{rel}(|\vec c_1|^2-|\vec c_2|^2)/2-P$.
+**Smjernica postupka.** Iz $\vec F_{f\to l}=\dot m_{rel}(\vec c_1-\vec c_2)$ dobiješ apsolutni izlaz. Zatim $\vec w_2=\vec c_2-(u,0)$ i kut $\beta_2=\operatorname{atan2}(w_{2y},-w_{2x})$. Provjeri $P=F_xu$ i $\dot E_g=\dot m_{rel}(|\vec c_1|^2-|\vec c_2|^2)/2-P$.
 
-**Kontrolni rezultat ili kriterij.** $\vec c_2\approx(-2{,}722;8{,}500)\ \mathrm{m/s}$, $\vec w_2\approx(-14{,}722;8{,}500)\ \mathrm{m/s}$; $k\approx0{,}850$ i $\beta_2\approx150{,}00^\circ$. Vrijedi $P=7{,}500\ \mathrm{kW}$ i $\dot E_g\approx0{,}999\ \mathrm{kW}$. Oba uvjeta pasivnosti su zadovoljena.
+**Kontrolni rezultat ili kriterij.** $\vec c_2\approx(-2{,}722;8{,}500)\ \mathrm{m/s}$, $\vec w_2\approx(-14{,}722;8{,}500)\ \mathrm{m/s}$; $k\approx0{,}850$ i $\beta_2\approx30{,}00^\circ$ (skretanje $\theta=150{,}00^\circ$ od $+x$). Vrijedi $P=7{,}500\ \mathrm{kW}$ i $\dot E_g\approx0{,}999\ \mathrm{kW}$. Oba uvjeta pasivnosti su zadovoljena.
 
 ### Z4. Dva radijusa i rad rotora {#key-task-dva-radijusa-i-rad-rotora .unnumbered .unlisted}
 
@@ -728,7 +728,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-trapezni-presjek)
 
-**Smjernica postupka.** Za pokos $z{:}1$ vrijedi $A=y(b+zy)$, $T=b+2zy$ i $P=b+2y\sqrt{1+z^2}$. U izrazu za $Fr$ upotrijebi $y_h=A/T$, a ne $R_h$.
+**Smjernica postupka.** Za pokos $m_{pok}{:}1$ vrijedi $A=y(b+m_{pok}y)$, $T=b+2m_{pok}y$ i $P=b+2y\sqrt{1+m_{pok}^2}$. U izrazu za $Fr$ upotrijebi $y_h=A/T$, a ne $R_h$.
 
 **Kontrolni rezultat ili kriterij.** $A=3{,}375\ \mathrm{m^2}$, $T=5{,}100\ \mathrm{m}$, $P\approx5{,}645\ \mathrm{m}$, $y_h\approx0{,}6618\ \mathrm{m}$, $R_h\approx0{,}5979\ \mathrm{m}$, $v\approx1{,}0667\ \mathrm{m/s}$ i $Fr\approx0{,}4186$ (mirni tok).
 
@@ -744,15 +744,15 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-skok-mjerenje)
 
-**Smjernica postupka.** Model: bilanca količine gibanja s impulsnom funkcijom [odgovarajući izraz](u15_otvoreni_tokovi.qmd#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01) u rubnim presjecima izvan valjka, uz zajednički $q=Q/b$ u oba presjeka i hidrostatičke sile suprotnih smjerova. Kriterij: linearna propagacija standardnih nesigurnosti (GUM) i sukladnost ako je $|R|\le2u_R$; slaganje ne dokazuje pretpostavke modela.
+**Smjernica postupka.** Model: bilanca količine gibanja s impulsnom funkcijom [odgovarajući izraz](u15_otvoreni_tokovi.qmd#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01) u rubnim presjecima izvan valjka, uz zajednički $q=Q/b$ u oba presjeka i hidrostatičke sile suprotnih smjerova. Kriterij: linearna propagacija standardnih nesigurnosti (GUM) i sukladnost ako je $|\Delta_I|\le2s_{\Delta}$; slaganje ne dokazuje pretpostavke modela.
 
-**Kontrolni rezultat ili kriterij.** $q=1{,}5000\ \mathrm{m^2/s}$, $u_q\approx0{,}01546\ \mathrm{m^2/s}$, $R\approx-0{,}01648\ \mathrm{m^2}$ i $u_R\approx0{,}02010\ \mathrm{m^2}$. Omjer $|R|/u_R\approx0{,}820<2$: mjerenja su sukladna bilanci prema zadanom kriteriju. Teorijska dubina je $1{,}2353\ \mathrm{m}$. Slaganje samo po sebi ne dokazuje sve pretpostavke modela; najveći doprinos $u_R$ daje zajednički $q$, pa bi za strožu provjeru trebalo točnije mjeriti protok.
+**Kontrolni rezultat ili kriterij.** $q=1{,}5000\ \mathrm{m^2/s}$, $s_q\approx0{,}01546\ \mathrm{m^2/s}$, $\Delta_I\approx-0{,}01648\ \mathrm{m^2}$ i $s_{\Delta}\approx0{,}02010\ \mathrm{m^2}$. Omjer $|\Delta_I|/s_{\Delta}\approx0{,}820<2$: mjerenja su sukladna bilanci prema zadanom kriteriju. Teorijska dubina je $1{,}2353\ \mathrm{m}$. Slaganje samo po sebi ne dokazuje sve pretpostavke modela; najveći doprinos $s_{\Delta}$ daje zajednički $q$, pa bi za strožu provjeru trebalo točnije mjeriti protok.
 
 ### Z6. Propusnost oborinskog kanala {#key-task-klimatski-kanal .unnumbered .unlisted}
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-klimatski-kanal)
 
-**Smjernica postupka.** Na dopuštenoj dubini $H-f_{min}$ izračunaj $A$, $P$, $R_h$ i kapacitet iz [odgovarajući izraz](u15_otvoreni_tokovi.qmd#eq-manning). Pri $Q_d$ numerički riješi Manningovu jednadžbu po dubini (bisekcija ili tablica); veći $n$ smanjuje kapacitet i povećava normalnu dubinu. U bazenu koristi $q=Q_d/B$ i [odgovarajući izraz](u15_otvoreni_tokovi.qmd#eq-spregnute-dubine).
+**Smjernica postupka.** Na dopuštenoj dubini $y_{kon}-f_{min}$ izračunaj $A$, $P$, $R_h$ i kapacitet iz [odgovarajući izraz](u15_otvoreni_tokovi.qmd#eq-manning). Pri $Q_d$ numerički riješi Manningovu jednadžbu po dubini (bisekcija ili tablica); veći $n$ smanjuje kapacitet i povećava normalnu dubinu. U bazenu koristi $q=Q_d/b_{baz}$ i [odgovarajući izraz](u15_otvoreni_tokovi.qmd#eq-spregnute-dubine).
 
 **Kontrolni rezultat ili kriterij.** Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6{,}047)$; $y_n=(0{,}985;1{,}189;1{,}380)$; $f=(0{,}515;0{,}311;0{,}120)$. Slobodni rub zadovoljavaju A i B, C ne. Pri $Q_d$ je $y_2=1{,}059\ \mathrm{m}<1{,}40\ \mathrm{m}$.
 

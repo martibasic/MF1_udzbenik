@@ -55,11 +55,11 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Kontrolna građevina | Ustava, preljev ili prag koji nameće vezu protoka i razine u otvorenom toku. | [15](u15_otvoreni_tokovi.qmd) |
 | Kontrolni volumen | Odabrani dio prostora (KV) preko čije granice (KP) se vode tokovi mase, energije i količine gibanja. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [10](u10_kolicina_i_moment_kolicine_gibanja.qmd) |
 | Korelacijska linija ITTC 1957 | Dogovorna krivulja $C_F=0{,}075/(\log_{10}Re-2)^2$ za otpor trenja. | [11](u11_dimenzijska_analiza_i_slicnost.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
-| Kormilarski stroj | Hidraulički pogon kormila; s dva cilindra $M=2Fr$ i dobava $V=As$. | [1](u01_osnove_fluida_i_pascalov_zakon.qmd) |
+| Kormilarski stroj | Hidraulički pogon kormila; u Rapsonovu rasporedu s četiri cilindra dijagonalni par pod tlakom daje $M=2Fr$ i dobavu $V=2As$, a povratni par vraća ulje. | [1](u01_osnove_fluida_i_pascalov_zakon.qmd) |
 | Kritična dubina | Dubina $y_c$ minimalne specifične energije pri zadanom protoku; $Fr=1$, općenito $Q^2T/(gA^3)=1$. | [15](u15_otvoreni_tokovi.qmd) |
 | Kritično stanje | Stanje pri $Ma=1$, oznake sa zvjezdicom ($p^*$, $T^*$, $A^*$); za zrak $p^*/p_0=0{,}528$. | [9](u09_kompresibilni_idealni_tok.qmd) |
-| Kut nestajanja stabiliteta | Nagib pri kojem $GZ$ ponovno postaje nula. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
-| Kut uronjenja ruba palube | Nagib pri kojem rub palube dotakne vodnu liniju; okomiti bokovi: $\tan\varphi_{lim}=2f/B$. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
+| Kut nestajanja stabiliteta | Nagib $\varphi_v$ pri kojem $GZ$ ponovno postaje nula. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
+| Kut uronjenja ruba palube | Nagib pri kojem rub palube dotakne vodnu liniju; okomiti bokovi: $\tan\varphi_{lim}=2f/b$. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
 | Laminarni tok | Uređen režim u kojem viskozni prijenos nije nadjačan turbulentnim miješanjem; prag ovisi o geometriji i smetnjama. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Linijski gubitak | Pad energijske visine $h_l=\lambda(L/D)v^2/(2g)$ duž dionice zbog trenja uz stijenku. | [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Lokalni gubitak | Pad $h_{loc}=\xi v_{ref}^2/(2g)$ na armaturi ili promjeni geometrije, uz navedenu referentnu brzinu. | [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
@@ -72,7 +72,7 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Metacentarska visina | $GM=KB+BM-KG$; znak daje početni stabilitet, ne stabilitet pri velikim kutovima ili oštećenju. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
 | Metoda dodane težine | Oštećeni stabilitet: voda u izoliranom naplavljenom prostoru računa se kao ukrcana masa. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
 | Metoda konačnih elemenata (FEM) | Diskretizacija funkcijama oblika na elementima u slabom obliku; alternativa metodi konačnih volumena. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
-| Moodyjev dijagram | Prikaz $\lambda(Re,\varepsilon/D)$: laminarni pravac $64/Re$ i turbulentne krivulje prema Colebrooku. | [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
+| Moodyjev dijagram | Prikaz $\lambda(Re,k_s/D)$: laminarni pravac $64/Re$ i turbulentne krivulje prema Colebrooku. | [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Mrežna konvergencija | Provjera ustaljuje li se tražena veličina pri sustavnom profinjenju mreže; traži barem tri mreže. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
 | MRF i klizajuća mreža | CFD prikaz rotora: MRF bez pomicanja mreže za srednji rad, klizajuća mreža za pulsacije lopatica. | [14](u14_turbostrojevi_i_propulzija.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
 | Nadvođe | Visina $f=H-T$ od vodne linije do ruba palube. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
@@ -114,7 +114,7 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Stlačivost | Promjena gustoće s tlakom, opisana s $K$ za tekućine ili jednadžbom stanja i $Ma$ za plinove. | [1](u01_osnove_fluida_i_pascalov_zakon.qmd), [9](u09_kompresibilni_idealni_tok.qmd), [11](u11_dimenzijska_analiza_i_slicnost.qmd) |
 | Strouhalov broj | $St=fL/v$, omjer vremena nestacionarnosti i konvektivnog vremena. | [11](u11_dimenzijska_analiza_i_slicnost.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
 | Strujnica | Krivulja trenutačno tangencijalna vektoru brzine. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd) |
-| Sustrujanje | Usporeni tok iza trupa; propeler napreduje brzinom $v_A=(1-w_s)v_s$. | [14](u14_turbostrojevi_i_propulzija.qmd) |
+| Sustrujanje | Usporeni tok iza trupa; propeler napreduje brzinom $v_A=(1-\chi)v_s$, gdje je $\chi$ koeficijent sustrujanja. | [14](u14_turbostrojevi_i_propulzija.qmd) |
 | Tlačni mjerač razine | Senzor na dnu tanka: $p_{M,dno}=p_{M,pl}+\sum\rho_igh_i$; traži gustoće slojeva i pretlak plina. | [3](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd) |
 | Trajektorija čestice | Put jedne čestice kroz vrijeme; u stacionarnom toku podudara se sa strujnicom. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd) |
 | Turbulencija | Trodimenzijsko nestacionarno gibanje širokog raspona skala koje pojačava miješanje; turbulencijski model je aproksimacija toka. | [12](u12_diferencijalni_opis_realnog_toka.qmd) |

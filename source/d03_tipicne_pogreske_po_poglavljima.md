@@ -69,7 +69,7 @@ Miješanje apsolutnog, manometarskog i vakuumskog tlaka; pogrešni predznaci pri
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u manometru; prema dolje tlak raste, prema gore pada. Za slojeve zatvori i ukupnu visinu i tlak. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku $\rho g\,\delta h$ i rezervu skale. Za teretni tank zapiši $p_{M,dno}=p_{M,pl}+\rho_ogh_o+\rho_wgh_w$ i debljinu vode uzmi iz sondiranja. Za usis crpke u radu trebaju gubitci, brzinska visina i usporedba $NPSH_a$ s proizvođačevim $NPSH_r$, oboje s apsolutnim tlakom.
+Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u manometru; prema dolje tlak raste, prema gore pada. Za slojeve zatvori i ukupnu visinu i tlak. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku $\rho g\,\delta h$ i rezervu skale. Za teretni tank zapiši $p_{M,dno}=p_{M,pl}+\rho_ogh_o+\rho_{mv}gh_w$ i debljinu vode uzmi iz sondiranja. Za usis crpke u radu trebaju gubitci, brzinska visina i usporedba $NPSH_a$ s proizvođačevim $NPSH_r$, oboje s apsolutnim tlakom.
 :::
 ::::
 
@@ -117,7 +117,7 @@ Zadaj orijentaciju plohe i referentni tlak, zasebno zatvori silu i moment te za 
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Zamjena volumena tijela istisninom; miješanje ravnoteže sila s početnim stabilitetom; proglašavanje pozitivnoga $GM$ dokazom stabiliteta pri velikim kutovima ili u oštećenom stanju; zanemarivanje slobodne površine djelomično punih tankova, koja smanjuje efektivni $GM$ za $\rho_ti_t/(\rho V_{ist})$; zaključivanje samo iz sniženja $KG$ bez promjene $KB$, $BM$ i nadvođa (Z5); morski balast računan gustoćom slatke vode ($1000$ umjesto $1025\ \text{kg/m}^3$); poprečni pomak centra uzgona $y_B$ proglašen polugom stabiliteta $GZ$; $\sin\varphi_{lim}=2f/B$ umjesto $\tan\varphi_{lim}=2f/B$ za kut uronjenja ruba palube; fiksiranje mase neovisno o nesigurnim gazovima (Z6).
+Zamjena volumena tijela istisninom; miješanje ravnoteže sila s početnim stabilitetom; proglašavanje pozitivnoga $GM$ dokazom stabiliteta pri velikim kutovima ili u oštećenom stanju; zanemarivanje slobodne površine djelomično punih tankova, koja smanjuje efektivni $GM$ za $\rho_ti_t/(\rho V_{ist})$; zaključivanje samo iz sniženja $KG$ bez promjene $KB$, $BM$ i nadvođa (Z5); morski balast računan gustoćom slatke vode ($1000$ umjesto $1025\ \text{kg/m}^3$); poprečni pomak centra uzgona $y_B$ proglašen polugom stabiliteta $GZ$; $\sin\varphi_{lim}=2f/b$ umjesto $\tan\varphi_{lim}=2f/b$ za kut uronjenja ruba palube; fiksiranje mase neovisno o nesigurnim gazovima (Z6).
 :::
 
 ::: {.mf1-error-column}
@@ -225,7 +225,7 @@ Provjeri apsolutni referentni tlak, rang dimenzijske matrice i relevantne grupe.
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Gubitak nestacionarnoga ili konvektivnoga člana (Z1); miješanje strujnice i putanje čestice; rješavanje Navier–Stokesovih jednadžbi bez početnih i rubnih uvjeta; tumačenje vremenskog mjerila $H^2/\nu$ kao točnog vremena uspostave profila (Z2); tumačenje lokalnog povratnog toka kao prolaza kroz stijenku (Z4); primjena Blasiusova rješenja uz gradijent tlaka ili hrapavost (Z5); poistovjećivanje numeričke konvergencije s validacijom (Z6); ulazna specifična disipacija $\omega$ proglašena „izmjerenom” iako senzor daje samo intenzitet $I$, a duljinska skala $\ell$ je pretpostavka.
+Gubitak nestacionarnoga ili konvektivnoga člana (Z1); miješanje strujnice i putanje čestice; rješavanje Navier–Stokesovih jednadžbi bez početnih i rubnih uvjeta; tumačenje vremenskog mjerila $H^2/\nu$ kao točnog vremena uspostave profila (Z2); tumačenje lokalnog povratnog toka kao prolaza kroz stijenku (Z4); primjena Blasiusova rješenja uz gradijent tlaka ili hrapavost (Z5); poistovjećivanje numeričke konvergencije s validacijom (Z6); ulazna specifična disipacija $\omega$ proglašena „izmjerenom” iako senzor daje samo intenzitet $I_t$, a duljinska skala $\ell$ je pretpostavka.
 :::
 
 ::: {.mf1-error-column}
@@ -243,7 +243,7 @@ Zadrži lokalno i konvektivno ubrzanje dok pretpostavke ne uklone članove, zada
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Uporaba $\lambda=64/Re$ bez provjere da je tok laminaran, ili turbulentne korelacije pri $Re<2300$ (Z2); zadržavanje istog $\lambda$ pri promjeni protoka (Z4) ili isti $\lambda$ za sve ponuđene promjere, iako se mijenjaju $Re$ i $\varepsilon/D$; zbrajanje koeficijenata $\xi$ definiranih uz različite referentne brzine (proširenje, grananje) kao da vrijede za istu brzinu; prigušivanje već otpornijeg ogranka radi jednakih protoka (Z3); miješanje razina snage $P_h$, $P_{vr}$, $P_{el}$ i jedinica (kW i W; $h_w$ u m i $\Delta p$ u Pa); manometarski tlak u $NPSH_a$; primjena istog $NPSH_r$ pri različitim brzinama vrtnje (Z6).
+Uporaba $\lambda=64/Re$ bez provjere da je tok laminaran, ili turbulentne korelacije pri $Re<2300$ (Z2); zadržavanje istog $\lambda$ pri promjeni protoka (Z4) ili isti $\lambda$ za sve ponuđene promjere, iako se mijenjaju $Re$ i $k_s/D$; zbrajanje koeficijenata $\xi$ definiranih uz različite referentne brzine (proširenje, grananje) kao da vrijede za istu brzinu; prigušivanje već otpornijeg ogranka radi jednakih protoka (Z3); miješanje razina snage $P_h$, $P_{vr}$, $P_{el}$ i jedinica (kW i W; $h_w$ u m i $\Delta p$ u Pa); manometarski tlak u $NPSH_a$; primjena istog $NPSH_r$ pri različitim brzinama vrtnje (Z6).
 :::
 
 ::: {.mf1-error-column}

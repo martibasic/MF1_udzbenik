@@ -369,7 +369,72 @@ Detaljna analiza: [docs/radno/skice-2026-10/notebooks.md](docs/radno/skice-2026-
 | u15 c05, c07, c09, c11 | neobjašnjene crte i točke; M umjesto I; bez n | legende i oznake prema tekstu | ispravljeno |
 | web/filters/includes/components | nema crteža | — | — |
 
-## Stavke koje trebaju tvoju odluku
+## Provedba odluka autorice (14. listopada 2026.)
+
+Autorica je 14. listopada odobrila sve prijedloge iz odjeljaka A–E1 ispod. Popis u nastavku ostaje kao zapis o odlukama. Pune evidencije po poglavljima, s tablicama staro → novo, nalaze se u `docs/radno/skice-2026-10/provedba/uNN.md`.
+
+**A. Proturječja u tekstu.** Sve stavke su ispravljene.
+
+- **Pog. 1, Z2:** kormilarski stroj sada je četverocilindrični Rapsonov stroj; tlak drži dijagonalni par cilindara, a povratni par vraća ulje.
+  - Moment ostaje M = 2Fr = 88,4 kN·m.
+  - Dobava je ispravljena na V = 2As = 7,36 L (prije 3,68 L).
+  - Uz iskaz su usklađeni verifikator, skica i D01/D02.
+  - Stabilni ID `#task-kormilarski-stroj-dva-cilindra` je zadržan.
+- **Pog. 5, Z2:** „konkavnu” → „konveksnu”.
+- **Pog. 6, P1:** zahtjev je tražio „silu držanja prema dolje”, a rješenje daje oko 381 N prema gore. Zahtjev sada traži iznos i smjer.
+- **Ostalo:** usklađeni su p_pl, p_aps, alt-tekstovi, „L/s”, „volumenski” i p_aps,C.
+
+**B. Skice zadataka više ne otkrivaju rezultat.** Načelo je primijenjeno na sve skice zadataka Z1–Z6, ne samo na popis B.
+
+- Traženi smjerovi, krivulje, radne točke, kutovi, razine, gazovi i dometi više nisu nacrtani u mjerilu rezultata. Nepoznanica je shematska i označena s „?”.
+- Zadani podatci ostaju u mjerilu.
+- Napomene uz skice više ne tvrde zajedničko mjerilo tamo gdje ga nema.
+- Checkeri sada provjeravaju da rezultat nije prikazan. Primjeri: element ne postoji, omjer odstupa od rezultata za više od 15 %, kut nije traženi.
+
+**E1. Stil vektora.** Vektori sada imaju propisan stil i atribut `data-mf1-vector`; strelice koje nisu vektori imaju `data-mf1-role`. Svih 953 strelica u 95 skica je razvrstano.
+
+- Sila i moment: deblja crta i pun vrh.
+- Brzina, smjer protoka, pomak i kutna brzina: tanja crta i otvoren vrh.
+- Ubrzanje i efektivno polje: isprekidana crta.
+- Tlak i normala: tanka crta i mali vrh.
+- Oznake vektora pisane su podebljano.
+
+Pravilo je zapisano u [urednički stil](docs/urednicki_stil.md) i u protokol skica. Legenda za čitatelja je odjeljak „Strelice na skicama” u uvodnom poglavlju. Provjerava ga `tools/audit_sketch_design.py` (`check_arrow_semantics` u `tools/sketch_style.py`).
+
+Sive strelice brzine lopatice, brzine broda i vrtnje u pog. 14 te pomaci u pog. 1 sada su u vektorskom stilu.
+
+**C i D. Notacija.** Standard je dopunjen. Primijenjen je u tekstu, jednadžbama, skicama, bilježnicama i dodatcima D01–D05; D06 je generiran.
+
+| Veličina | Oznaka |
+|---|---|
+| težina | $F_G$ ($G$ samo težište) |
+| širina broda ili pontona | $b$ ($B$ samo središte istisnine) |
+| kut poprečnog nagiba | $\varphi$ |
+| gustoće vode, morske vode, ulja | $\rho_w$, $\rho_{mv}$, $\rho_o$ (indeks $v$ samo para, $m$ samo model) |
+| polumjer zavoja | $R_z$ |
+| udio otvorene površine | $\psi$ |
+| ekvivalentna hrapavost | $k_s$ ($\varepsilon$ samo disipacija) |
+| visina dobave crpke; visina turbine | $H_p$, $H_t$ |
+| standardna nesigurnost | $s(x)$ |
+| kutovi lopatice | $\beta_1$, $\beta_2$ od smjera $-u$ (zadani kutovi preračunati, rezultati isti) |
+| koeficijent sustrujanja | $\chi$ |
+
+Lokalne dvoznačnosti po poglavljima razriješene su novim oznakama koje nisu zauzete u knjizi. Popisane su u [rječniku oznaka](RJECNIK_OZNAKA.md).
+
+Nazivlje je ujednačeno: „Darcyjev koeficijent trenja”, „hidrostatički”, „piezometarski”, „zaustavna entalpija”.
+
+**Namjerno ostavljeno.** Razlozi su u evidencijama provedbe.
+
+- Opći $\rho$ u zadatcima s jednim fluidom.
+- Indeks $m$ u $T_m$ (srednji gaz) i $F_m$ (izmjerena sila).
+- Duljina ležaja $L$ u pog. 2, P4, koja se vidi samo u tekstu, jer bi uzdužni pogled bio novi panel.
+- Omjeri koji nisu čitljivi (zadržan je poredak).
+- Vrlo kratke strelice u pog. 14 i 15, kod kojih se vidi uglavnom vrh.
+- Ključevi `u` i `u_ref` u bilježnici pog. 12, koje čita test laboratorija.
+- Putanje slobodnog mlaza u pog. 8, koje su crte, a ne strelice.
+- Nekorištena datoteka `u14_fig_omjer_sila.svg` uz sačuvano sidro.
+
+## Stavke koje trebaju tvoju odluku (stanje 13. 10. — provedeno 14. 10., vidi gore)
 
 Najprije sažetak po vrsti, zatim potpun popis po poglavljima s citatima i prijedlozima.
 

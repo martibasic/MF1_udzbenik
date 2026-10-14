@@ -35,7 +35,7 @@ Ovdje su kratice potrebne za dublje čitanje. Opće definicije CFD-a, reziduala 
 | $k$–$\varepsilon$, $k$–$\omega$ SST | primjeri modela zatvaranja turbulentnih korelacija | @sec-turbulencija |
 | SIMPLE / PISO / PIMPLE | primjeri algoritama sprezanja tlaka i brzine (usklađivanja tlaka, brzine i tokova kroz plohe); izbor ovisi o formulaciji i vremenskom opisu | @sec-realni-tok-cfd |
 | MRF / klizajuća mreža | stacionarna aproksimacija referentnih okvira / praćenje relativnog gibanja dijelova mreže | []{.mf1-chapter-ref target="u14"} |
-| VOF — *Volume of Fluid* | opis međupovršine volumnim udjelom faze; prikaz izoplohe udjela $0{,}5$ samo je način vizualizacije granice | []{.mf1-chapter-ref target="u15"} |
+| VOF — *Volume of Fluid* | opis međupovršine volumenskim udjelom faze; prikaz izoplohe udjela $0{,}5$ samo je način vizualizacije granice | []{.mf1-chapter-ref target="u15"} |
 | Zidne funkcije / $y^+$ | model područja uz stijenku / bezdimenzijska udaljenost; zahtjevi ovise o odabranoj obradi stijenke | @sec-turbulencija |
 | GCI — *Grid Convergence Index* | procjena diskretizacijske nesigurnosti odabrane veličine iz sustavnog profinjenja | @sec-cfd-vv-paketi |
 
@@ -172,11 +172,11 @@ Venturijev paket koristi vodu, promjere 100/50 mm i protok 10 L/s. To je zaseban
 
 Validator `python tools/validate_cfd_vv.py` provjerava reference, bilance, podrijetlo, opaženi red i GCI. **GCI nije automatski standardna nesigurnost**, a tri monotone vrijednosti nisu same dokaz asimptotskog područja. Profil ostaje primjer usporedbe uz nepotpun arhiv: izvorni reziduali, povijesti sila i masena bilanca nisu dostupni u pregledanim izvorima. Zaseban pokus iza stepenice daje stvarna mjerenja za izravan račun odstupanja; njegova usporedba jednog izlaza također ne zamjenjuje cjelovitu validaciju.
 
-**Veza sa Z6 u 12. poglavlju.** Najfiniji FUN3D rezultat $C_D=0{,}01222408822$ zaokružen je na $0{,}01222$. Ladsonove točke (napadni kut; $C_D$) $=(8{,}08^\circ;0{,}00995)$ i $(10{,}10^\circ;0{,}01175)$ pri $Re_c=6\cdot10^6$, $Ma=0{,}15$ i prisilnom prijelazu (120 grit) daju linearnom interpolacijom na $10{,}00^\circ$ vrijednost $0{,}01166089$, zaokruženo $0{,}01166$.
+**Veza sa Z6 u 12. poglavlju.** Najfiniji FUN3D rezultat $C_D=0{,}01222408822$ zaokružen je na $0{,}01222$. Ladsonove točke (napadni kut; $C_D$) $=(8{,}08^\circ;0{,}00995)$ i $(10{,}10^\circ;0{,}01175)$ pri $Re_l=6\cdot10^6$, $Ma=0{,}15$ i prisilnom prijelazu (120 grit) daju linearnom interpolacijom na $10{,}00^\circ$ vrijednost $0{,}01166089$, zaokruženo $0{,}01166$.
 
-Zadani $u_m=0{,}00020$, $u_n=0{,}00010$ i $u_v=0{,}00010$ **nastavne su pretpostavke**, ne objavljene nesigurnosti pokusa ili rješavača. Red veličine $u_v$ motivira lokalni nagib približno $0{,}000891$ po stupnju: nesigurnost kuta reda $0{,}1^\circ$ dala bi doprinos oko $0{,}00009$. Doprinos $u_n$ obuhvaća ukupnu numeričku nesigurnost scenarija; ne dodaje mu se ponovno GCI, osobito ne iz drugog slučaja.
+Zadani $s_{mj}=0{,}00020$, $s_{num}=0{,}00010$ i $s_{uv}=0{,}00010$ **nastavne su pretpostavke**, ne objavljene nesigurnosti pokusa ili rješavača. Red veličine $s_{uv}$ motivira lokalni nagib približno $0{,}000891$ po stupnju: nesigurnost kuta reda $0{,}1^\circ$ dala bi doprinos oko $0{,}00009$. Doprinos $s_{num}$ obuhvaća ukupnu numeričku nesigurnost scenarija; ne dodaje mu se ponovno GCI, osobito ne iz drugog slučaja.
 
-Uz zadane neovisne, centrirane normalne doprinose s poznatim standardnim nesigurnostima zbrajaju se varijance, a $k=2$ daje približno 95 % pokrivanja. Kriterij $|E|\le U_E$ ispituje slaganje na toj točki. Povećanje $u_m$ na $0{,}00030$ širi interval, ali ne poboljšava CFD model. Pretpostavke i podrijetlo sačuvani su u `teaching_comparison.json`.
+Uz zadane neovisne, centrirane normalne doprinose s poznatim standardnim nesigurnostima zbrajaju se varijance, $s_E=\sqrt{s_{mj}^2+s_{num}^2+s_{uv}^2}$, a dvostruka standardna nesigurnost razlike $2s_E$ daje približno 95 % pokrivanja. Kriterij $|E|\le 2s_E$ ispituje slaganje na toj točki. Povećanje $s_{mj}$ na $0{,}00030$ širi interval, ali ne poboljšava CFD model. Pretpostavke i podrijetlo sačuvani su u `teaching_comparison.json`.
 
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Aeroprofil nije automatski hidroprofil</p>

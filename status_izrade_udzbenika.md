@@ -16,6 +16,8 @@ brojke u nastavku tamo gdje se razlikuju.
 | Pregled | Nove i preuređene skice pregledane su kao PNG; PDF uzorkovano (str. 59, 75, 99–104, 172, 186, 214–217). Cijeli PDF nije vizualno pročitan. |
 | Granica tvrdnje | Didaktička kvaliteta novih zadataka autorska je procjena; prolaz CI-ja ne dokazuje je. Neovisna stručna recenzija i studentski pilot još nisu provedeni. |
 
+**Provedba odluka — 14. listopada 2026.** Proturječja u tekstu su ispravljena. Skice zadataka više ne otkrivaju rezultate. Uveden je stil vektora s provjerom, a notacija je ujednačena u tekstu, skicama, bilježnicama i dodatcima (vidi `IZVJESTAJ_SKICE.md`, odjeljak „Provedba odluka autorice”). Stanje provjera navedeno je u dnevniku promjena i u zapisu commita.
+
 **Fizikalni pregled skica — 13. listopada 2026. (grana `popravak-skica`).** Ispravljene su 94 od 95 skica i 13 od 17 bilježnica (vidi `IZVJESTAJ_SKICE.md`). Puni lokalni CI: PASS (756 s). PDF ima 324 stranice, SHA-256 `9b510d0844df1c43…`. Ništa nije commitano. Otvorene stavke za odluku autorice navedene su na kraju izvještaja.
 
 **Presjek: 27. rujna 2026.** Ovaj dokument opisuje aktualno lokalno radno

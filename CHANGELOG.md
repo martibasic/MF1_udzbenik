@@ -3,6 +3,19 @@
 Ovaj dokument prati sadržajne i tehničke promjene javnih izdanja. Potvrđene
 pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
+## Provedba odluka o skicama i notaciji — 14. listopada 2026.
+
+- Ispravljena su proturječja u tekstu. Najvažnije: kormilarski stroj u pog. 1, Z2 sada je četverocilindrični Rapsonov stroj, uz V = 2As = 7,36 L.
+- Skice zadataka više ne otkrivaju tražene rezultate; checkeri provjeravaju da rezultat nije prikazan.
+- Uveden je stil vektora s atributom `data-mf1-vector`, legendom u uvodnom poglavlju i provjerom u `audit_sketch_design`.
+- Notacija je ujednačena u tekstu, skicama, bilježnicama i dodatcima. Primjeri:
+  - $F_G$ za težinu, $b$ za širinu broda, $\varphi$ za kut nagiba;
+  - $\rho_w$, $\rho_{mv}$ i $\rho_o$ za gustoće vode, morske vode i ulja;
+  - $k_s$ za hrapavost, $H_p$ i $H_t$ za visine crpke i turbine, $s(x)$ za nesigurnost;
+  - $\beta$ od smjera $-u$, $\chi$ za sustrujanje.
+- Rezultati verifikatora su nepromijenjeni, osim namjerne dobave u pog. 1, Z2. Evidencija je u `docs/radno/skice-2026-10/provedba/`.
+- Puni lokalni objavni CI: PASS (913 s); PDF ima 326 stranica.
+
 ## Fizikalni pregled skica — 13. listopada 2026.
 
 - Pregledano je 95 SVG skica i 17 bilježnica, skica po skica, uz tablice vektora i oznaka. Ispravljene su 94 skice i 13 bilježnica (samo kod crteža). Analize su u `docs/radno/skice-2026-10/`, sažetak i stavke za odluku autorice u `IZVJESTAJ_SKICE.md`, a rječnik oznaka u `RJECNIK_OZNAKA.md`.
