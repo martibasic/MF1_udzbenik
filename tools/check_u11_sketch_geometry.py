@@ -192,6 +192,39 @@ def main():
         flow=6/math.sqrt(lam)*width_m*depth_m
         close(flow,480/lam**2.5,'Presjek modela mora zadovoljiti kontinuitet i Froudeovo skaliranje',tol=1e-10)
     close(geometry[0][0]/geometry[1][0],1.5,'Dva kanala: omjer širina');close(geometry[0][1]/geometry[1][1],1.5,'Dva kanala: omjer dubina')
+    # Skice zadataka ne smiju nacrtati rezultat u mjerilu.
+    # Z4: v_m = 45 m/s je traženo; strelice modela i prototipa ostaju jednake (neutralne), ne 45 : 1.
+    close(delta(node(r,'u14vs_mvelocity'))[0],delta(node(r,'u14vs_pvelocity'))[0],'Z4: strelica v_m ne smije biti u mjerilu rezultata')
+    # Z5: valna duljina traga v/f = D/St bila bi 5,26 D; nacrtani razmak istosmjernih vrtloga mora biti shematski.
+    z5=[points(node(r,f'u14vs_z5wake{i}'))[0][0] for i in (0,2)]
+    z5_d=2*float(node(r,'u14vs_z5cylinder').get('r'))
+    check(abs((z5[1]-z5[0])/z5_d-1/0.190)>0.2/0.190,'Z5: razmak vrtloga ne smije otkriti frekvenciju')
+    texts=lambda g:[''.join(e.itertext()).strip() for e in node(r,g).iter() if e.tag.endswith('text')]
+    check(any(t=='v = ?' for t in texts('u14vs_z2')) and any(t=='f = ?' or t.endswith('f = ?') for t in texts('u14vs_z5'))
+          and any(t=='vm = ?' for t in texts('u14vs_z4')),'Z2, Z4, Z5: nepoznanice označene s „?”')
+    # Z6: modelske dubine i širine su međurezultati; bez brojeva i bez mjerne trake (vidi se samo zadani omjer 30/20).
+    check(not any(t.startswith(('hm','Lpr,m')) and '=' in t for t in texts('u14vs_z6')),'Z6: kote modela bez brojčanih vrijednosti')
+    width_labels=[e for e in node(r,'u14vs_z6').iter() if e.tag.endswith('text') and ''.join(e.itertext()).strip()=='Lpr,m']
+    check(len(width_labels)==2,'Z6: obje kote širine nose oznaku L_pr,m (b je zauzet visinom kanala i rasponom)')
+    check(not any(''.join(e.itertext()).strip().startswith('b') for e in node(r,'u14vs_z6').iter() if e.tag.endswith('text')),
+          'Z6: širina preljeva ne smije biti označena s b')
+    check(not any('α' in ''.join(e.itertext()) for e in r.iter() if e.tag.endswith('text')),
+          'Z4: α je rezerviran za korekcijski faktor')
+
+    # Vrsta vektora prema standardu od 14. 10. 2026. (stil provjerava audit_sketch_design).
+    kinds={'u14_ch1_kugla_struja.svg':{'u14ball_drag':'force','u14ball_v0':'velocity'},
+           'u14_val4_kap_raspad.svg':{'u14drop_g':'acceleration','u14drop_air0':'velocity'},
+           'u14_val5_mach_strouhal.svg':{'u14ma_wind':'velocity','u14ma_wake0':'angular-velocity'},
+           'u14_vjezbe_skice.svg':{'u14vs_z5wake0':'angular-velocity','u14vs_mvelocity':'velocity'},
+           'u14_val2_brod_bazen.svg':{'u14ship_pvelocity':'velocity','u14ship_mvelocity':'velocity'}}
+    for name,expected in kinds.items():
+        r=svg(name)
+        for eid,kind in expected.items():
+            check(node(r,eid).get('data-mf1-vector')==kind,f'{name}: {eid} mora biti vektor vrste {kind}')
+    # Indeks v samo za paru: voda w, ulje o.
+    for name in ('u14_val1_reynolds_kanal.svg','u14_val4_kap_raspad.svg'):
+        labels=[''.join(e.itertext()).strip() for e in svg(name).iter() if e.tag.endswith('text')]
+        check(not any(t.startswith(('νv','ρv','νu')) for t in labels),f'{name}: voda nosi indeks w, ulje o')
     print('PASS U11: devet SVG-ova; otvoreni prolazi, povezani fluidi, pravokutni presjek Z1 s kotama, geometrijska sličnost, stvarne kote, profili, vektori i kvantitativni grafovi.')
 
 

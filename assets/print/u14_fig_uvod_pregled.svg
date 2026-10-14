@@ -5,6 +5,7 @@
     <marker id="u14fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
     </marker>
+    <marker id="u14fup_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
   <g id="u14fup_title-scene-1" transform="translate(-20.0000 -11.0000)">
     <text x="177" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">Usporedi mehanizme</text>
@@ -19,15 +20,15 @@
     <rect x="177" y="288" width="133" height="24" fill="#d7dee3" stroke="#657781" stroke-width="1" />
   </g>
   <g id="u14fup_title-scene-2" transform="translate(-342.0000 -11.0000)">
-    <text x="808" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">Model i prototip</text>
+    <text x="808" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">Model u aerotunelu</text>
     <rect x="680" y="150" width="256" height="140" fill="#dcebf1" />
     <path id="u14fup_tunnelwalls" d="M680 150 H936 M680 290 H936" fill="none" stroke="#3a4a56" stroke-width="2" />
-    <line x1="690" y1="180" x2="728" y2="180" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
-    <line x1="690" y1="210" x2="728" y2="210" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
+    <line x1="690" y1="180" x2="728" y2="180" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14fup_vopen)" data-mf1-vector="velocity" />
+    <line x1="690" y1="210" x2="728" y2="210" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14fup_vopen)" data-mf1-vector="velocity" />
     <path d="M745,278 Q748,250 772,246 L800,224 Q828,216 858,226 L892,250 Q908,256 910,278 Z" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.5" />
     <text x="930" y="172" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="end" fill="#263746">model: Re<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = Re<tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
     <circle cx="788" cy="278" r="12" fill="#3a4a56" />
     <circle cx="872" cy="278" r="12" fill="#3a4a56" />
-    <line x1="690" y1="270" x2="728" y2="270" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
+    <line x1="690" y1="270" x2="728" y2="270" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14fup_vopen)" data-mf1-vector="velocity" />
   </g>
 </svg>

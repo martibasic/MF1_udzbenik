@@ -1,4 +1,4 @@
-![Karakteristični mehanizmi te usporedba modela i prototipa.](../assets/print/u14_fig_uvod_pregled.svg){#fig-uvod-u14 fig-align="center" fig-alt="Pregled poglavlja: usporedba karakterističnih mjerila, ključni bezdimenzijski brojevi i prijenos koeficijenta otpora iz aerotunela uz odgovarajuće uvjete sličnosti."}
+![Karakteristični mehanizmi i model u aerotunelu.](../assets/print/u14_fig_uvod_pregled.svg){#fig-uvod-u14 fig-align="center" fig-alt="Pregled poglavlja: lijevo shematski parovi mjerila inercije prema viskoznosti, gravitaciji i površinskoj napetosti; desno model automobila u aerotunelu s jednolikim dotokom, ispitan pri jednakom Reynoldsovu broju kao prototip."}
 
 **Tumačenje skice.** Parovi mjerila na skici shematski su i nemaju numeričko mjerilo. Aerotunel prenosi $C_D$ pri jednakom $Re$ samo ako su i ostali relevantni uvjeti isti.
 
@@ -122,7 +122,7 @@ gdje je $a$ brzina zvuka, a $K$ modul stlačivosti. Za plinska strujanja bez vel
 **Koeficijent trenja, otpora i tlaka kao bezdimenzijski rezultati.** Rezultati proračuna otpora mogu se prikazati i bezdimenzijskim koeficijentima, dobivenima normiranjem sila ili naprezanja:
 
 $$
-\lambda = \lambda\!\left(Re, \frac{\varepsilon}{D}\right), \qquad
+\lambda = \lambda\!\left(Re, \frac{k_s}{D}\right), \qquad
 C_D = \frac{F_D}{\tfrac{1}{2}\rho v^2 A}.
 $$ {#eq-slicnost-bezdimenzijske-grupe-kao-omjeri-mehanizama-09}
 
@@ -170,14 +170,14 @@ gdje je $n$ broj fizikalnih veličina, a $k$ rang dimenzijske matrice (u mehanic
 
 Slika [-@fig-u14-pi-buckingham] prikazuje taj postupak shematski na primjeru otpora kugle.
 
-![Dimenzijska matrica za silu otpora kugle.](../assets/print/u14_fig_pi_buckingham.svg){#fig-u14-pi-buckingham fig-align="center" fig-alt="Shema Buckinghamova postupka: popis varijabli {F, ρ, v, D, μ}, dimenzijska matrica M-L-T i tvorba dviju Π-grupa Π₁ = F/(ρv²D²) i Π₂ = Re"}
+![Dimenzijska matrica za silu otpora kugle.](../assets/print/u14_fig_pi_buckingham.svg){#fig-u14-pi-buckingham fig-align="center" fig-alt="Dimenzijska matrica za otpor kugle: stupci F_D, ρ, v, D i μ, retci dimenzija M, L i T s eksponentima F_D (1, 1, −2), ρ (1, −3, 0), v (0, 1, −1), D (0, 1, 0) i μ (1, −1, −1). Π-grupe nisu na slici; izvode se u tekstu."}
 
-**Tumačenje matrice.** Za pet varijabli $F_D$, $\rho$, $v$, $D$ i $\mu$ dimenzijska matrica ima rang tri, pa dobivamo $n-k=5-3=2$ neovisne bezdimenzijske grupe. Jedan izbor je $\Pi_1=F_D/(\rho v^2D^2)$ i $\Pi_2=\rho vD/\mu=Re$. Veza $\Pi_1=f(\Pi_2)$ vodi zapisu $C_D=\Phi(Re)$, uz odabranu definiciju koeficijenta otpora.
+**Tumačenje matrice.** Za pet varijabli $F_D$, $\rho$, $v$, $D$ i $\mu$ dimenzijska matrica ima rang tri, pa dobivamo $n-k=5-3=2$ neovisne bezdimenzijske grupe. Jedan izbor je $\Pi_1=F_D/(\rho v^2D^2)$ i $\Pi_2=\rho vD/\mu=Re$. Veza $\Pi_1=\Phi_1(\Pi_2)$ vodi zapisu $C_D=\Phi(Re)$, uz odabranu definiciju koeficijenta otpora; $\Phi$ i $\Phi_1$ su nepoznate funkcije.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Dimenzijska analiza pada tlaka u cijevi</p>
 
-Ukupni pad tlaka na ravnoj cijevnoj dionici može ovisiti o gustoći $\rho$, srednjoj brzini $v$, promjeru $D$, duljini $L$, viskoznosti $\mu$ i hrapavosti stijenke $\varepsilon$. Skup od $n = 7$ veličina ($\Delta p,\rho,v,D,L,\mu,\varepsilon$) ima $k = 3$ neovisne dimenzije, pa nastaju četiri $\Pi$-grupe.
+Ukupni pad tlaka na ravnoj cijevnoj dionici može ovisiti o gustoći $\rho$, srednjoj brzini $v$, promjeru $D$, duljini $L$, viskoznosti $\mu$ i hrapavosti stijenke $k_s$. Skup od $n = 7$ veličina ($\Delta p,\rho,v,D,L,\mu,k_s$) ima $k = 3$ neovisne dimenzije, pa nastaju četiri $\Pi$-grupe.
 
 Uz ponavljajuće varijable $\rho, v, D$ tvore se grupe:
 
@@ -185,13 +185,13 @@ $$
 \Pi_1 = \frac{\Delta p}{\rho v^2}, \qquad
 \Pi_2 = \frac{\rho v D}{\mu} = Re, \qquad
 \Pi_3 = \frac{L}{D}, \qquad
-\Pi_4 = \frac{\varepsilon}{D}.
+\Pi_4 = \frac{k_s}{D}.
 $$ {#eq-slicnost-matematicki-izvod-dimenzijska-analiza-pada-tlaka-01}
 
 Iz teorema slijedi da su sve grupe povezane jednom funkcijom:
 
 $$
-\frac{\Delta p}{\rho v^2} = \phi\!\left(Re, \frac{L}{D}, \frac{\varepsilon}{D}\right).
+\frac{\Delta p}{\rho v^2} = \Phi\!\left(Re, \frac{L}{D}, \frac{k_s}{D}\right).
 $$ {#eq-slicnost-matematicki-izvod-dimenzijska-analiza-pada-tlaka-02}
 
 ::: {.callout-note}
@@ -209,13 +209,13 @@ $$ {#eq-slicnost-razrada-koraka-01}
 Odatle $a = -1$, $b = -2$, $c = 0$, pa je $\Pi_1 = \Delta p/(\rho v^2)$, što je Eulerov broj.
 :::
 
-Dimenzijska analiza sama ne određuje oblik funkcije $\phi$ niti dokazuje linearnost s $L$. Dodatna fizikalna pretpostavka glasi: strujanje je potpuno razvijeno u jednolikoj ravnoj cijevi, pa je srednji gradijent tlaka konstantan i jednake se dionice mogu zbrajati. Tek tada je $\Delta p\propto L$, pa se funkcija može zapisati u Darcy–Weisbachovu obliku
+Dimenzijska analiza sama ne određuje oblik funkcije $\Phi$ niti dokazuje linearnost s $L$. Dodatna fizikalna pretpostavka glasi: strujanje je potpuno razvijeno u jednolikoj ravnoj cijevi, pa je srednji gradijent tlaka konstantan i jednake se dionice mogu zbrajati. Tek tada je $\Delta p\propto L$, pa se funkcija može zapisati u Darcy–Weisbachovu obliku
 
 $$
-\Delta p = \lambda\,\frac{L}{D}\,\frac{\rho v^2}{2}, \qquad \lambda = \lambda\!\left(Re, \frac{\varepsilon}{D}\right),
+\Delta p = \lambda\,\frac{L}{D}\,\frac{\rho v^2}{2}, \qquad \lambda = \lambda\!\left(Re, \frac{k_s}{D}\right),
 $$ {#eq-slicnost-razrada-koraka-02}
 
-Dimenzijska analiza tako ograničava dopuštenu ovisnost, a pretpostavka potpuno razvijenoga toka izdvaja $L/D$. Sama funkcija $\lambda(Re,\varepsilon/D)$ dobiva se analitički u laminarnom toku ili empirijski/numerički u turbulentnom.
+Dimenzijska analiza tako ograničava dopuštenu ovisnost, a pretpostavka potpuno razvijenoga toka izdvaja $L/D$. Sama funkcija $\lambda(Re,k_s/D)$ dobiva se analitički u laminarnom toku ili empirijski/numerički u turbulentnom.
 :::
 
 ::: {.mf1-izvod}
@@ -246,7 +246,7 @@ Za $\Pi_2 = \mu\,\rho^a v^b D^c$ s $[\mu]=\mathsf{M}\mathsf{L}^{-1}\mathsf{T}^{-
 Time je cijeli problem otpora sveden na jednu funkciju jedne varijable:
 
 $$
-\frac{F_D}{\rho v^2 D^2} = f(Re) \quad\Longleftrightarrow\quad C_D = \frac{F_D}{\tfrac{1}{2}\rho v^2 A} = \Phi(Re),
+\frac{F_D}{\rho v^2 D^2} = \Phi_1(Re) \quad\Longleftrightarrow\quad C_D = \frac{F_D}{\tfrac{1}{2}\rho v^2 A} = \Phi(Re),
 $$ {#eq-slicnost-matematicki-izvod-otpor-kugle-daje-cd-re-02}
 
 Unutar navedenih pretpostavki jedna krivulja $C_D(Re)$ obuhvaća Stokesov režim $C_D=24/Re$ pri vrlo malom $Re$ i područje otporne krize. Hrapavost, blizina stijenke, slobodna turbulencija ili stlačivost uveli bi dodatne parametre i promijenili krivulju.
@@ -260,11 +260,11 @@ Da bi se rezultati ispitivanja modela mogli prenijeti na stvarni objekt (prototi
 - **kinematička sličnost** — polja brzina su geometrijski slična (iste linije strujanja, brzine u istom omjeru);
 - **dinamička sličnost** — sile na model i prototip u istom su omjeru, što znači da su **mjerodavni bezdimenzijski brojevi jednaki**.
 
-Ako su jednaki svi relevantni brojevi, izmjereni koeficijenti ($C_D$, $C_p$, $\lambda$) izravno se prenose.
+Ako su jednaki svi relevantni brojevi, izmjereni koeficijenti ($C_D$, $C_p$, $\lambda$) izravno se prenose. Veličine modela nose indeks $m$, a prototipa indeks $p$; kada je prototip brod, umjesto $p$ piše se indeks $s$ ($L_s$, $v_s$, $Re_s$, $C_{F,s}$).
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Praktičan problem je što se svi brojevi rijetko mogu izjednačiti istovremeno. Za model broda u istom fluidu jednak $Fr$ traži $v_m=v_p/\sqrt{\lambda_L}$, dok jednak $Re$ traži $v_m=v_p\lambda_L$. Ti su zahtjevi za $\lambda_L\ne1$ međusobno nespojivi. U vučnom bazenu zato se prioritetno čuva Froudeova sličnost, a viskozni se doprinos računa zasebno prema Froudeovoj hipotezi (@eq-froudeova-hipoteza). Drugi fluid ili promijenjeni tlak/temperatura mogu približiti dodatnu sličnost, ali uvode praktična ograničenja i nove provjere.
+Praktičan problem je što se svi brojevi rijetko mogu izjednačiti istovremeno. Za model broda u istom fluidu jednak $Fr$ traži $v_m=v_s/\sqrt{\lambda_L}$, dok jednak $Re$ traži $v_m=v_s\lambda_L$. Ti su zahtjevi za $\lambda_L\ne1$ međusobno nespojivi. U vučnom bazenu zato se prioritetno čuva Froudeova sličnost, a viskozni se doprinos računa zasebno prema Froudeovoj hipotezi (@eq-froudeova-hipoteza). Drugi fluid ili promijenjeni tlak/temperatura mogu približiti dodatnu sličnost, ali uvode praktična ograničenja i nove provjere.
 :::
 
 Skaliranje veličina slijedi iz odabranog broja. Pri Froudeovoj sličnosti, uz jednako gravitacijsko ubrzanje i mjerilo $\lambda_L=L_p/L_m$, vrijedi:
@@ -385,7 +385,7 @@ Ne: jednak Froudeov broj ne potvrđuje prijenos viskoznog otpora. CFD računi ob
 
 **Tekst zadatka**
 
-Kroz razvijeni ravni kružni kanal promjera $D = 6\ \text{mm}$ u jednom slučaju teče voda brzinom $v_A = 1{,}2\ \text{m/s}$, s $\nu_v = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$, a u drugom ulje brzinom $v_B = 0{,}30\ \text{m/s}$, s $\nu_u = 4{,}0 \cdot 10^{-5}\ \text{m}^2/\text{s}$. Za procjenu početka prijelaznog područja uzmi orijentacijsku vrijednost $Re=2300$ [@white2011].
+Kroz razvijeni ravni kružni kanal promjera $D = 6\ \text{mm}$ u jednom slučaju teče voda brzinom $v_A = 1{,}2\ \text{m/s}$, s $\nu_w = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$, a u drugom ulje brzinom $v_B = 0{,}30\ \text{m/s}$, s $\nu_o = 4{,}0 \cdot 10^{-5}\ \text{m}^2/\text{s}$. Za procjenu početka prijelaznog područja uzmi orijentacijsku vrijednost $Re=2300$ [@white2011].
 
 **Traži se**
 
@@ -401,24 +401,24 @@ Kroz razvijeni ravni kružni kanal promjera $D = 6\ \text{mm}$ u jednom slučaju
 Za vodu:
 
 $$
-Re_A = \frac{v_A D}{\nu_v} = \frac{1{,}2 \cdot 0{,}006}{1{,}0 \cdot 10^{-6}} = 7200 \quad (>4000 \Rightarrow \text{turbulentno}).
+Re_A = \frac{v_A D}{\nu_w} = \frac{1{,}2 \cdot 0{,}006}{1{,}0 \cdot 10^{-6}} = 7200 \quad (>4000 \Rightarrow \text{turbulentno}).
 $$ {#eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-01}
 
 Za ulje:
 
 $$
-Re_B = \frac{v_B D}{\nu_u} = \frac{0{,}30 \cdot 0{,}006}{4{,}0 \cdot 10^{-5}} = 45 \quad (\ll 2300 \Rightarrow \text{izrazito laminarno}).
+Re_B = \frac{v_B D}{\nu_o} = \frac{0{,}30 \cdot 0{,}006}{4{,}0 \cdot 10^{-5}} = 45 \quad (\ll 2300 \Rightarrow \text{izrazito laminarno}).
 $$ {#eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-02}
 
 Brzina vode koja odgovara $Re=2300$:
 
 $$
-v_{kr} = \frac{Re_{kr}\,\nu_v}{D} = \frac{2300 \cdot 1{,}0 \cdot 10^{-6}}{0{,}006} \approx 0{,}383\ \text{m/s}.
+v_{kr} = \frac{Re_{kr}\,\nu_w}{D} = \frac{2300 \cdot 1{,}0 \cdot 10^{-6}}{0{,}006} \approx 0{,}383\ \text{m/s}.
 $$ {#eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-03}
 
 **Provjera i tumačenje**
 
-Pri istom $D$ omjer $Re_A/Re_B=160$ potječe od $\nu_u/\nu_v=40$ i $v_A/v_B=4$: režim određuje omjer inercije i viskoznosti, a ne geometrija. Ulju bi za isti prag trebala brzina $40$ puta veća od $v_{kr}$ vode, oko $15\ \text{m/s}$.
+Pri istom $D$ omjer $Re_A/Re_B=160$ potječe od $\nu_o/\nu_w=40$ i $v_A/v_B=4$: režim određuje omjer inercije i viskoznosti, a ne geometrija. Ulju bi za isti prag trebala brzina $40$ puta veća od $v_{kr}$ vode, oko $15\ \text{m/s}$.
 :::
 
 ::: {#ex-u14-froudeova-slicnost-model-broda-u-vucnom-bazenu .mf1-we}
@@ -431,13 +431,13 @@ Brod duljine $L_s = 150\ \text{m}$ i brzine $v_s = 9{,}0\ \text{m/s}$ ispituje s
 **Traži se**
 
 1. Odredi duljinu i brzinu modela iz uvjeta $Fr_m = Fr_s$.
-2. Odredi Froudeov broj te omjer Reynoldsovih brojeva prototipa i modela.
+2. Odredi Froudeov broj te omjer Reynoldsovih brojeva broda i modela.
 3. Objasni zašto se Reynoldsova sličnost ne može istovremeno zadovoljiti.
 4. Odredi $C_F$ prema liniji ITTC 1957 za model i brod te objasni zašto se izmjereni otpor modela ne smije pomnožiti s $\lambda_L^3$.
 
-![Model broda i prototip pri jednakom Froudeovu broju.](../assets/print/u14_val2_brod_bazen.svg){#fig-u14-val2-brod fig-align="center" fig-alt="Model broda i prototip pri jednakom Froudeovu broju."}
+![Brod i model pri jednakom Froudeovu broju.](../assets/print/u14_val2_brod_bazen.svg){#fig-u14-val2-brod fig-align="center" fig-alt="Brod (prototip) i geometrijski sličan model 1 : 25 pri jednakom Froudeovu broju."}
 
-**Veza s proračunom.** Model i prototip nacrtani su u različitim grafičkim mjerilima; stvarne dimenzije daju kote. Valovi nisu nacrtani.
+**Veza s proračunom.** Model i brod nacrtani su u različitim grafičkim mjerilima; stvarne dimenzije daju kote. Valovi nisu nacrtani.
 
 **Rješenje**
 
@@ -453,7 +453,7 @@ $$
 v_m = \frac{v_s}{\sqrt{\lambda_L}} = \frac{9{,}0}{\sqrt{25}} = 1{,}8\ \text{m/s}.
 $$ {#eq-slicnost-rijeseni-primjer-froudeova-slicnost-model-broda-02}
 
-Froudeov broj (jednak na modelu i prototipu):
+Froudeov broj (jednak na modelu i brodu):
 
 $$
 Fr = \frac{v_s}{\sqrt{g L_s}} = \frac{9{,}0}{\sqrt{9{,}81 \cdot 150}} \approx 0{,}235.
@@ -548,7 +548,7 @@ Kontrola: $Q/Q_{\max}=6{,}0/4{,}45=1{,}35$ i $(\sigma_{kr}/\sigma_{kav})^{1/2}=(
 
 **Tekst zadatka**
 
-Vodena kap promjera $d = 3\ \text{mm}$ giba se relativnom brzinom $v = 25\ \text{m/s}$ kroz zrak gustoće $\rho_{zr} = 1{,}2\ \text{kg/m}^3$. Gustoća vode je $\rho_v = 1000\ \text{kg/m}^3$, a površinska napetost $\sigma = 0{,}072\ \text{N/m}$. Za pojednostavljenu procjenu raspada uzmi orijentacijski prag $We_{kr}=12$. Zanemari viskoznost i vremenski razvoj deformacije.
+Vodena kap promjera $d = 3\ \text{mm}$ giba se relativnom brzinom $v = 25\ \text{m/s}$ kroz zrak gustoće $\rho_{zr} = 1{,}2\ \text{kg/m}^3$. Gustoća vode je $\rho_w = 1000\ \text{kg/m}^3$, a površinska napetost $\sigma = 0{,}072\ \text{N/m}$. Za pojednostavljenu procjenu raspada uzmi orijentacijski prag $We_{kr}=12$. Zanemari viskoznost i vremenski razvoj deformacije.
 
 **Traži se**
 
@@ -573,12 +573,12 @@ Dobiveni $We>12$ prema zadanom kriteriju predviđa početak raspada.
 Bondov broj:
 
 $$
-Bo = \frac{(\rho_v-\rho_{zr})g\,d^2}{\sigma}
+Bo = \frac{(\rho_w-\rho_{zr})g\,d^2}{\sigma}
 = \frac{(1000-1{,}2)\cdot9{,}81\cdot0{,}003^2}{0{,}072}
 \approx1{,}22.
 $$ {#eq-slicnost-rijeseni-primjer-weberov-i-bondov-broj-raspad-02}
 
-Kapilarna duljina $L_c=\sqrt{\sigma/[(\rho_v-\rho_{zr})g]}\approx2{,}71\ \text{mm}$ blizu je $d$, pa je $Bo$ reda jedan. Kritična brzina prema **zadanom** kriteriju $We=12$ glasi:
+Kapilarna duljina $L_c=\sqrt{\sigma/[(\rho_w-\rho_{zr})g]}\approx2{,}71\ \text{mm}$ blizu je $d$, pa je $Bo$ reda jedan. Kritična brzina prema **zadanom** kriteriju $We=12$ glasi:
 
 $$
 v_{kr} = \sqrt{\frac{We_{kr}\,\sigma}{\rho_{zr}\,d}} = \sqrt{\frac{12 \cdot 0{,}072}{1{,}2 \cdot 0{,}003}} \approx 15{,}5\ \text{m/s}.
@@ -613,7 +613,7 @@ Glatka kugla promjera $D = 20\ \text{mm}$ nalazi se u jednolikoj ustaljenoj stru
 Varijable $\{F_D, \rho, v, D, \mu\}$ daju $n = 5$, dimenzije $\mathsf{M}, \mathsf{L}, \mathsf{T}$ daju $k = 3$, pa nastaju $\Pi = 5 - 3 = 2$ grupe:
 
 $$
-\Pi_1 = \frac{F_D}{\rho v^2 D^2}, \qquad \Pi_2 = \frac{\rho v D}{\mu} = Re \quad\Rightarrow\quad C_D = f(Re).
+\Pi_1 = \frac{F_D}{\rho v^2 D^2}, \qquad \Pi_2 = \frac{\rho v D}{\mu} = Re \quad\Rightarrow\quad C_D = \Phi(Re).
 $$ {#eq-slicnost-1-dimenzijska-analiza-01}
 
 ### 2. Reynoldsov broj {.unnumbered .unlisted .mf1-step}
@@ -638,7 +638,7 @@ $$ {#eq-slicnost-3-sila-otpora-i-grupa-1-02}
 
 **Provjera i tumačenje**
 
-1. Kontrola: $\Pi_1/C_D=0{,}177/0{,}45=0{,}393=\pi/8$, pa su $\Pi_1$ i $C_D$ ista informacija, različito normirana. Dimenzijska analiza daje oblik $C_D=f(Re)$; samu krivulju daju mjerenja.
+1. Kontrola: $\Pi_1/C_D=0{,}177/0{,}45=0{,}393=\pi/8$, pa su $\Pi_1$ i $C_D$ ista informacija, različito normirana. Dimenzijska analiza daje oblik $C_D=\Phi(Re)$; samu krivulju daju mjerenja.
 2. Granica modela: za glatku kuglu u struji male slobodne turbulencije otporna kriza javlja se približno pri $Re$ reda nekoliko $10^5$, kada prijelaz graničnog sloja odgađa odvajanje i $C_D$ naglo pada. Položaj krize osjetljiv je na hrapavost i poremećaje, pa zadani konstantni $C_D=0{,}45$ vrijedi samo u radnom području zadatka.
 :::
 
@@ -747,7 +747,7 @@ Za mnoga plinska strujanja bez velikog zagrijavanja i tlačnih promjena $Ma<0{,}
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Najprije se popišu svi mehanizmi i bezdimenzijski rubni uvjeti koji mogu utjecati na traženi rezultat. Procjenom reda veličine izdvajaju se grupe koje nisu zanemarive. Kod slobodne površine često je prioritetan $Fr$, u cijevi su važni $Re$ i $\varepsilon/D$, a kod kapljica uz $We$ često treba provjeriti i viskozni učinak. Jedna dominantna grupa dovoljna je samo ako su ostale doista zanemarive ili jednake.
+Najprije se popišu svi mehanizmi i bezdimenzijski rubni uvjeti koji mogu utjecati na traženi rezultat. Procjenom reda veličine izdvajaju se grupe koje nisu zanemarive. Kod slobodne površine često je prioritetan $Fr$, u cijevi su važni $Re$ i $k_s/D$, a kod kapljica uz $We$ često treba provjeriti i viskozni učinak. Jedna dominantna grupa dovoljna je samo ako su ostale doista zanemarive ili jednake.
 :::
 :::
 
@@ -769,7 +769,7 @@ Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $a=0{,}
 
 1. Odredi srednju brzinu i hidraulički promjer.
 2. Odredi Reynoldsov broj i prosudi režim.
-3. Koliki bi $Re$ ispao da se umjesto $D_h$ uzme dulja stranica $a$? Objasni zašto takav broj nije usporediv s dijagramom $\lambda(Re,\varepsilon/D)$.
+3. Koliki bi $Re$ ispao da se umjesto $D_h$ uzme dulja stranica $a$? Objasni zašto takav broj nije usporediv s dijagramom $\lambda(Re,k_s/D)$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -783,7 +783,7 @@ Iz $A=ab$ i $P=2(a+b)$ slijedi $D_h=2ab/(a+b)$; za kvadrat se svodi na stranicu,
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$v=8{,}00\ \text{m/s}$, $D_h=0{,}2667\ \text{m}$, $Re=1{,}42\cdot10^5$: turbulentno. S duljom stranicom $Re=2{,}13\cdot10^5$, 1,5 puta više; dijagram $\lambda(Re,\varepsilon/D)$ za nekružne presjeke definiran je s $D_h$, pa bi takav $Re$ dao pogrešan $\lambda$.
+$v=8{,}00\ \text{m/s}$, $D_h=0{,}2667\ \text{m}$, $Re=1{,}42\cdot10^5$: turbulentno. S duljom stranicom $Re=2{,}13\cdot10^5$, 1,5 puta više; dijagram $\lambda(Re,k_s/D)$ za nekružne presjeke definiran je s $D_h$, pa bi takav $Re$ dao pogrešan $\lambda$.
 :::
 ::::
 
@@ -836,7 +836,7 @@ Usporedi brzine $v_1=4{,}00\ \text{m/s}$ i $v_2=8{,}00\ \text{m/s}$ pri istom tl
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-U brojnik kavitacijskog broja ulazi $p_{abs}-p_v$, pri čemu je $p_{abs}=p_{atm}+p_M$. Za drugu brzinu provjeri novu vrijednost nazivnika. Za granični pretlak riješi $p_{atm}+p_{M,min}-p_v=\sigma_{kr}\rho v_2^2/2$.
+U brojnik kavitacijskog broja ulazi $p_{aps}-p_v$, pri čemu je $p_{aps}=p_{atm}+p_M$. Za drugu brzinu provjeri novu vrijednost nazivnika. Za granični pretlak riješi $p_{atm}+p_{M,min}-p_v=\sigma_{kr}\rho v_2^2/2$.
 :::
 ::::
 
@@ -844,7 +844,7 @@ U brojnik kavitacijskog broja ulazi $p_{abs}-p_v$, pri čemu je $p_{abs}=p_{atm}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$p_{abs}=80{,}0\ \text{kPa}$; $\sigma_1\approx9{,}708>3$, a $\sigma_2\approx2{,}427<3$. Prvi režim zadovoljava, drugi ne zadovoljava zadani kriterij. Pri $v_2$ treba $p_{abs,min}=98{,}34\ \text{kPa}$, odnosno $p_{M,min}=-1{,}660\ \text{kPa}$. To je granica kriterija bez dodatne rezerve.
+$p_{aps}=80{,}0\ \text{kPa}$; $\sigma_{kav,1}\approx9{,}708>3$, a $\sigma_{kav,2}\approx2{,}427<3$. Prvi režim zadovoljava, drugi ne zadovoljava zadani kriterij. Pri $v_2$ treba $p_{aps,min}=98{,}34\ \text{kPa}$, odnosno $p_{M,min}=-1{,}660\ \text{kPa}$. To je granica kriterija bez dodatne rezerve.
 :::
 ::::
 
@@ -959,7 +959,7 @@ Redom za $\lambda_L=20,30$: $v_m\approx(1{,}342;1{,}095)\ \text{m/s}$, $Q_m\appr
 
 ![Skice uz Z1–Z6: bezdimenzijski brojevi i modelska sličnost.](../assets/print/u14_vjezbe_skice.svg){#fig-u14-vjezbe fig-align="center" fig-alt="Šest označenih skica Z1–Z6. Z1 je pravokutni presjek kanala s kotama stranica; cijevni otvori i mjerni priključak prohodni su; promjeri i tetive mjere stvarne presjeke. Z4 uspoređuje geometrijski slične profile u vodi i zraku. Z6 prikazuje pravokutne presjeke modela 1:20 i 1:30 u istom grafičkom mjerilu."}
 
-**Napomene uz skice.** U Z1 i Z6 simbol $\odot$ označuje tok prema promatraču; u Z1 kote $a$ i $b$ mjere unutarnje stranice kanala. U Z3 manometarski tlak isti je u oba režima. U Z4 raspon $b$ okomit je na crtež. U Z5 vrtlozi imaju suprotne smjerove vrtnje. U Z6 $F_m$ je izmjerena sila vode na preljev, a oba modelska presjeka prikazana su u istom grafičkom mjerilu.
+**Napomene uz skice.** U Z1 i Z6 simbol $\odot$ označuje tok prema promatraču; u Z1 kote $a$ i $b$ mjere unutarnje stranice kanala. U Z3 manometarski tlak isti je u oba režima. U Z4 raspon $b$ okomit je na crtež. U Z5 vrtlozi imaju suprotne smjerove vrtnje; njihov je razmak shematski i ne prikazuje traženu frekvenciju. U Z6 $F_m$ je izmjerena sila vode na preljev, a $h_m$ i $L_{pr,m}$ dubina i širina pravokutnog referentnog presjeka modela; širina nije zadana zasebno jer slijedi iz $Q=vhL_{pr}$ i geometrijske sličnosti. Oba modelska presjeka prikazana su u istom grafičkom mjerilu.
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
@@ -968,7 +968,7 @@ Redom za $\lambda_L=20,30$: $v_m\approx(1{,}342;1{,}095)\ \text{m/s}$, $Q_m\appr
 - Popiši sve relevantne grupe, procijeni im red veličine i obrazloži koje zanemaruješ.
 - $Re$ mjeri relativnu važnost viskoznosti, ali sam ne određuje režim u svakoj geometriji; za plin provjeri i $Ma$ te toplinske i tlačne promjene.
 - Kad dvije važne grupe nije moguće očuvati (npr. $Re$ i $Fr$ kod broda), bira se prioritetna sličnost, a neusklađeni doprinos korigira (Froudeova hipoteza, ITTC 1957).
-- Krivulje poput $C_D(Re)$ i $\lambda(Re,\varepsilon/D)$ prenose se samo uz jednaku bezdimenzijsku geometriju i rubne uvjete.
+- Krivulje poput $C_D(Re)$ i $\lambda(Re,k_s/D)$ prenose se samo uz jednaku bezdimenzijsku geometriju i rubne uvjete.
 
 **Najčešća pogreška**
 

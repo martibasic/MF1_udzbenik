@@ -26,21 +26,22 @@
     <marker id="u14ship_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
     </marker>
+    <marker id="u14ship_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
   <g id="u14ship_title-scene-1" transform="translate(-12.0000 -12.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
-      <text x="226.0" y="49" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Prototip (more)</text>
+      <text x="226.0" y="49" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Brod (more)</text>
       <path id="u14ship_pfluid" d="M36 251.2 H128.44 L148.6 289.0 H295.6 L313.24 251.2 H416 V370 H36 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
       <line id="u14ship_pfreeleft" x1="36" y1="251.2" x2="128.44" y2="251.2" stroke="#356b83" stroke-width="1.7" />
       <line id="u14ship_pfreeright" x1="313.24" y1="251.2" x2="416" y2="251.2" stroke="#356b83" stroke-width="1.7" />
       <path id="u14ship_phull" d="M115 226 L325 226 L295.6 289.0 L148.6 289.0 Z" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.6" />
-      <path id="u14ship_pvelocity" d="M215.5 191 L315.5 191" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14ship_v)" />
-      <text x="265.5" y="182" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">s</tspan> = 9,0 m/s</text>
+      <path id="u14ship_pvelocity" data-mf1-vector="velocity" d="M215.5 191 L315.5 191" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14ship_vopen)" />
+      <text x="265.5" y="182" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.75em">s</tspan> = 9,0 m/s</text>
       <line x1="115" y1="297.0" x2="115" y2="336" stroke="#657781" stroke-width="1" />
       <line x1="325" y1="297.0" x2="325" y2="336" stroke="#657781" stroke-width="1" />
       <line x1="115" y1="325" x2="115" y2="335" stroke="#657781" stroke-width="1.2" />
       <line x1="325" y1="325" x2="325" y2="335" stroke="#657781" stroke-width="1.2" />
-      <path id="u14ship_plength" d="M115 330 L325 330" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ship_dim)" marker-end="url(#u14ship_dim)" />
+      <path id="u14ship_plength" data-mf1-role="dimension" d="M115 330 L325 330" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ship_dim)" marker-end="url(#u14ship_dim)" />
       <text x="220.0" y="347" font-size="11" fill="#263746" text-anchor="middle">L<tspan baseline-shift="sub" font-size="0.75em">s</tspan> = 150 m</text>
     </g>
   </g>
@@ -51,13 +52,13 @@
       <line id="u14ship_mfreeleft" x1="514" y1="252.8" x2="615.76" y2="252.8" stroke="#356b83" stroke-width="1.7" />
       <line id="u14ship_mfreeright" x1="694.96" y1="252.8" x2="794" y2="252.8" stroke="#356b83" stroke-width="1.7" />
       <path id="u14ship_mhull" d="M610 242 L700 242 L687.4 269.0 L624.4 269.0 Z" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.6" />
-      <path id="u14ship_mvelocity" d="M637 207 L677 207" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14ship_v)" />
-      <text x="657" y="193" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">m</tspan></text>
+      <path id="u14ship_mvelocity" data-mf1-vector="velocity" d="M637 207 L677 207" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14ship_vopen)" />
+      <text x="657" y="193" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.75em">m</tspan></text>
       <line x1="610" y1="277.0" x2="610" y2="336" stroke="#657781" stroke-width="1" />
       <line x1="700" y1="277.0" x2="700" y2="336" stroke="#657781" stroke-width="1" />
       <line x1="610" y1="325" x2="610" y2="335" stroke="#657781" stroke-width="1.2" />
       <line x1="700" y1="325" x2="700" y2="335" stroke="#657781" stroke-width="1.2" />
-      <path id="u14ship_mlength" d="M610 330 L700 330" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ship_dim)" marker-end="url(#u14ship_dim)" />
+      <path id="u14ship_mlength" data-mf1-role="dimension" d="M610 330 L700 330" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ship_dim)" marker-end="url(#u14ship_dim)" />
       <text x="655.0" y="347" font-size="11" fill="#263746" text-anchor="middle">L<tspan baseline-shift="sub" font-size="0.75em">m</tspan></text>
       <rect x="500" y="242" width="14" height="128" rx="0" fill="url(#u14ship_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect x="794" y="242" width="14" height="128" rx="0" fill="url(#u14ship_hatch)" stroke="#3a4a56" stroke-width="1.2" />

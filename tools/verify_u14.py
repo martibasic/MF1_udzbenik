@@ -7,9 +7,9 @@ from fractions import Fraction
 TOL = 0.01
 
 # Zajednicka svojstva (kako su navedena u tekstu poglavlja)
-RHO_V = 1000.0       # voda, kg/m^3
-NU_V = 1.0e-6        # voda, m^2/s
-SIGMA_V = 0.072      # voda-zrak, N/m
+RHO_W = 1000.0       # voda, kg/m^3
+NU_W = 1.0e-6        # voda, m^2/s
+SIGMA_W = 0.072      # voda-zrak, N/m
 PV_V = 2340.0        # tlak isparavanja vode pri 20 C, Pa
 RHO_A = 1.2          # zrak, kg/m^3
 NU_A = 1.5e-5        # zrak, m^2/s
@@ -41,7 +41,7 @@ def _invariant(out, rid, condition, details=""):
 
 
 # --------------------------------------------------------------------------
-def primjer_1_reynolds(D=0.006, v_voda=1.2, nu_voda=NU_V,
+def primjer_1_reynolds(D=0.006, v_voda=1.2, nu_voda=NU_W,
                        v_ulje=0.30, nu_ulje=4.0e-5, Re_kr=2300.0):
     Re_A = v_voda * D / nu_voda
     Re_B = v_ulje * D / nu_ulje
@@ -49,7 +49,7 @@ def primjer_1_reynolds(D=0.006, v_voda=1.2, nu_voda=NU_V,
     return {"Re_A": Re_A, "Re_B": Re_B, "v_krit_voda": v_krit_voda}
 
 
-def primjer_2_froude(lam=25.0, L_s=150.0, v_s=9.0, nu=NU_V, g=G):
+def primjer_2_froude(lam=25.0, L_s=150.0, v_s=9.0, nu=NU_W, g=G):
     L_m = L_s / lam
     v_m = v_s / math.sqrt(lam)
     Fr = v_s / math.sqrt(g * L_s)
@@ -66,7 +66,7 @@ def primjer_2_froude(lam=25.0, L_s=150.0, v_s=9.0, nu=NU_V, g=G):
 
 
 def primjer_3_venturi(D1=0.060, D2=0.020, Q=0.006, p1=101300.0,
-                      rho=RHO_V, p_v=PV_V):
+                      rho=RHO_W, p_v=PV_V):
     A1 = math.pi * D1**2 / 4
     A2 = math.pi * D2**2 / 4
     v1 = Q / A1
@@ -84,8 +84,8 @@ def primjer_3_venturi(D1=0.060, D2=0.020, Q=0.006, p1=101300.0,
             "p2_pred": p2_pred, "p_v": p_v}
 
 
-def primjer_4_weber(d=0.003, v=25.0, rho_a=RHO_A, sigma=SIGMA_V,
-                    rho_w=RHO_V, g=G, We_kr=12.0):
+def primjer_4_weber(d=0.003, v=25.0, rho_a=RHO_A, sigma=SIGMA_W,
+                    rho_w=RHO_W, g=G, We_kr=12.0):
     We = rho_a * v**2 * d / sigma
     Bo = (rho_w-rho_a) * g * d**2 / sigma
     v_crit = math.sqrt(We_kr * sigma / (rho_a * d))
@@ -137,11 +137,11 @@ def zadatak_2(lam=20.0, v_s=4.5, Q_s=350.0):
 
 
 def zadatak_3(p_M=-20000.0, p_atm=100000.0, v1=4.0, v2=8.0,
-              p_v=PV_V, rho=RHO_V, sigma_kr=3.0):
-    p_abs=p_atm+p_M
+              p_v=PV_V, rho=RHO_W, sigma_kr=3.0):
+    p_aps=p_atm+p_M
     p_min=p_v+sigma_kr*0.5*rho*v2**2
-    return {"p_abs":p_abs,"sigma1":(p_abs-p_v)/(0.5*rho*v1**2),
-            "sigma2":(p_abs-p_v)/(0.5*rho*v2**2),
+    return {"p_aps":p_aps,"sigma1":(p_aps-p_v)/(0.5*rho*v1**2),
+            "sigma2":(p_aps-p_v)/(0.5*rho*v2**2),
             "p_min":p_min,"p_M_min":p_min-p_atm}
 
 
@@ -200,7 +200,7 @@ def buckingham_vortex():
     return dimensions,rank,repeating_rank,exponents
 
 
-def zadatak_6(dp=18000.0, v=2.0, D=0.050, L=20.0, rho=RHO_V, nu=NU_V):
+def zadatak_6(dp=18000.0, v=2.0, D=0.050, L=20.0, rho=RHO_W, nu=NU_W):
     Eu = dp / (rho * v**2)
     lam = 2 * Eu * D / L
     Re = v * D / nu
@@ -208,11 +208,11 @@ def zadatak_6(dp=18000.0, v=2.0, D=0.050, L=20.0, rho=RHO_V, nu=NU_V):
 
 
 def zadatak_6_froude_model(lam_L=20.0, v_p=6.0, Q_p=480.0,
-                          F_m=28.0, dF_m=.6, h_p=7.5, nu=NU_V):
+                          F_m=28.0, dF_m=.6, h_p=7.5, nu=NU_W):
     v_m=v_p/math.sqrt(lam_L)
     Q_m=Q_p/lam_L**2.5
     h_m=h_p/lam_L
-    return {"v_m":v_m,"Q_m":Q_m,"h_m":h_m,"b_m":Q_m/(v_m*h_m),
+    return {"v_m":v_m,"Q_m":Q_m,"h_m":h_m,"L_pr_m":Q_m/(v_m*h_m),
             "Re_m":v_m*h_m/nu,"F_p":F_m*lam_L**3,"dF_p":dF_m*lam_L**3,
             "lower":(F_m-dF_m)*lam_L**3,"upper":(F_m+dF_m)*lam_L**3,
             "eligible":Q_m<=.300 and F_m-dF_m>10.0}
@@ -295,7 +295,7 @@ def verify():
     _check(out, "U14.Z2.Ma", r["Ma"], 0.187, "", abs_tol=.0005)
 
     r = zadatak_3()
-    _check(out, "U14.Z3.p_abs_kPa", r["p_abs"]/1000, 80.0, "kPa", abs_tol=1e-10)
+    _check(out, "U14.Z3.p_abs_kPa", r["p_aps"]/1000, 80.0, "kPa", abs_tol=1e-10)
     _check(out, "U14.Z3.sigma1", r["sigma1"], 9.708, "", abs_tol=.000500001)
     _check(out, "U14.Z3.sigma2", r["sigma2"], 2.427, "", abs_tol=.0005)
     _check(out, "U14.Z3.p_min_kPa", r["p_min"]/1000, 98.34, "kPa", abs_tol=.005)
@@ -354,7 +354,7 @@ def verify():
                    "Fr se mora sačuvati na istom referentnom presjeku.")
         _invariant(out,f"U14.Z6.Re_mismatch_{scale}",abs((6*7.5/1e-6)/result['Re_m']-scale**1.5)<1e-10,
                    "Re se ne smije izjednačiti primjenom Froudeove sličnosti s istim fluidom.")
-        _invariant(out,f"U14.Z6.continuity_{scale}",abs(result['b_m']*scale-480/(6*7.5))<1e-12,
+        _invariant(out,f"U14.Z6.continuity_{scale}",abs(result["L_pr_m"]*scale-480/(6*7.5))<1e-12,
                    "Q,v,h moraju dati geometrijski slične pravokutne presjeke.")
 
     return out
