@@ -419,5 +419,13 @@
   "u12_ch1_pokretna_zakrivljena_lopatica.svg": {
     "caption_anchor_panel": 1,
     "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u13_ch1_serijsko_paralelna_mreza.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u11_val_rotirajuca_mlaznica.svg": {
+    "caption_anchor_panel": 0,
+    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   }
 }

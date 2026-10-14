@@ -1,5 +1,23 @@
 # Status izrade sveučilišnog priručnika MF1
 
+## Recenzentska revizija — 13. listopada 2026. (grana `recenzija-2026-10`)
+
+Provedeno je deset prioritetnih nalaza autorskog recenzentskog pregleda; sažetak
+je u [dnevniku promjena](CHANGELOG.md), a evidencija zamjena u
+`docs/radno/revizija_u01.md`–`revizija_u15.md`. Ovaj odjeljak zamjenjuje
+brojke u nastavku tamo gdje se razlikuju.
+
+| Područje | Stanje |
+|---|---|
+| Inventar | 15 poglavlja, 90 riješenih primjera, 90 zadataka (svako poglavlje 2×T1, 2×T2, T3, T4), 820 jednadžbi, 95 SVG skica, 17 bilježnica, 145 sati. |
+| Numerika | `verify_all`: 1572 rezultata, 1273 usporedbe s ciljem, 299 invarijanti, 22 neovisna fizikalna testa, 90/90 zadataka u manifestu, 0 rupa i 0 tautologija. |
+| Puni lokalni objavni CI | PASS (822 s, nakon sažimanja) nad radnim stablom prije zapisa ovog odjeljka i dnevnika promjena; log `tools/tmp/recenzija-2026-10/publication.log`. Promjene nisu commitane ni poslane. |
+| PDF | 323 A4 stranice nakon sažimanja (bilo 354); regresijski raspon 290–355 uz obrazloženje u `docs/pdf-tipografija.md`. SHA-256 `_book` i `_site/downloads`: `0308b04c389b906825228d6d58229df556d66b7aa71cbdcd43d6868bb4010e2d`. |
+| Pregled | Nove i preuređene skice pregledane su kao PNG; PDF uzorkovano (str. 59, 75, 99–104, 172, 186, 214–217). Cijeli PDF nije vizualno pročitan. |
+| Granica tvrdnje | Didaktička kvaliteta novih zadataka autorska je procjena; prolaz CI-ja ne dokazuje je. Neovisna stručna recenzija i studentski pilot još nisu provedeni. |
+
+**Fizikalni pregled skica — 13. listopada 2026. (grana `popravak-skica`).** Ispravljene su 94 od 95 skica i 13 od 17 bilježnica (vidi `IZVJESTAJ_SKICE.md`). Puni lokalni CI: PASS (756 s). PDF ima 324 stranice, SHA-256 `9b510d0844df1c43…`. Ništa nije commitano. Otvorene stavke za odluku autorice navedene su na kraju izvještaja.
+
 **Presjek: 27. rujna 2026.** Ovaj dokument opisuje aktualno lokalno radno
 izdanje. Datirani zapisi u `docs/radno/`, dnevniku promjena i tipografskom
 izvještaju čuvaju povijest; njihovi brojevi nisu aktualni inventar.

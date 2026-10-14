@@ -3,11 +3,69 @@
 Ovaj dokument prati sadržajne i tehničke promjene javnih izdanja. Potvrđene
 pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
+## Fizikalni pregled skica — 13. listopada 2026.
+
+- Pregledano je 95 SVG skica i 17 bilježnica, skica po skica, uz tablice vektora i oznaka. Ispravljene su 94 skice i 13 bilježnica (samo kod crteža). Analize su u `docs/radno/skice-2026-10/`, sažetak i stavke za odluku autorice u `IZVJESTAJ_SKICE.md`, a rječnik oznaka u `RJECNIK_OZNAKA.md`.
+- Glavni ispravci su:
+  - duljine vektora prema kontinuitetu, ravnoteži i količini gibanja;
+  - fizikalno pogrešna geometrija (more unutar broda, sile kroz poklopac, omjer sapnice, nagib EGL-a, promjeri cijevi petlje, kontrolni volumen);
+  - oznake usklađene s tekstom i standardom notacije;
+  - pravi indeksi.
+- Tekst, brojevi i rješenja nisu mijenjani. Checkeri su postroženi, nijedan nije oslabljen. PDF ima 324 stranice.
+
 ## Unreleased — radno izdanje
 
 Aktualno stanje i potvrđeni prolazi vode se u
 [statusu izrade](status_izrade_udzbenika.md). Donji datirani zapisi opisuju
 stanje pojedine revizije; stare brojke i navodi o objavi nisu aktualni status.
+
+### Recenzentska revizija cijele knjige — 12.–13. listopada 2026.
+
+Provedeno je deset prioritetnih nalaza autorskog recenzentskog pregleda
+(stručni recenzent mehanike fluida i primjenski recenzent brodogradnje).
+Evidencija po poglavljima je u `docs/radno/revizija_u01.md`–`revizija_u15.md`.
+
+- **Ispravci:** kut uronjenja ruba palube u pog. 6 (tan umjesto sin,
+  31,1° umjesto 37,1°) u tekstu i verifikatoru; plutajuća osnova vjetroagregata
+  sa stvarnim podatcima stabilnog spara; zaokruživanja i nerealni podatci u
+  pog. 3, 4, 7, 8, 10.
+- **Izvodi koji su nedostajali:** Reynoldsov transportni teorem (pog. 7),
+  energijska jednadžba s crpkom, turbinom, gubitcima i α (pog. 8), brzina
+  zvuka, omjer površina A/A*, normalni val i porast entropije (pog. 9),
+  moment količine gibanja i aktuatorski disk (pog. 10), konstitutivna
+  relacija do Navier–Stokesove jednadžbe, Poiseuilleova jednadžba,
+  Reynoldsovo osrednjavanje i jednodimenzijski primjer konačnih volumena
+  (pog. 12), Darcyjev koeficijent iz ravnoteže sila i Hardy–Crossova
+  metoda (pog. 13), idealna učinkovitost propelera i Eulerova visina crpke
+  (pog. 14), hidraulički skok i opći kritični uvjet (pog. 15), dvofluidni
+  metacentarski radijus i granica malog kuta (pog. 6), paraboloid rotacije
+  premješten u teoriju (pog. 4).
+- **Brodogradnja u svim poglavljima:** kormilarski stroj, ležaj statvene
+  cijevi, procjep limova, bočni balastni tank, sondiranje teretnog tanka,
+  tank u zavoju, separator goriva, vodonepropusna vrata, zahvatni usis,
+  usisni vod rashladne crpke, zrak za upućivanje motora, Peltonova lopatica,
+  vodomlazni potisak, aktuatorski disk propelera, Froudeova hipoteza i
+  ITTC 1957, granični sloj modela broda, balastna crpka, propeler u
+  napredovanju i plitkovodni Froudeov broj broda.
+- **Struktura:** 90 riješenih primjera (pog. 9 i 10 dobili su po jedan),
+  zamijenjeni ponovljeni zadatci uz zadržan raspored 2×T1, 2×T2, T3, T4,
+  blok granice modela u svakom poglavlju, novo pitanje samoprovjere umjesto
+  ponovljenog pitanja „Zastani i promisli”, usklađene razine T.
+- **Notacija i nazivlje:** jedinstveni standard u `docs/urednicki_stil.md`
+  primijenjen u svim poglavljima i dodatcima (v, ξ, ζ, κ, p_M, p_aps, p_0,
+  y_h, nadvođe, poluga stabiliteta, zagušenje i prigušenje, crpka).
+- **Dodatci:** sažetak formula poredan po poglavljima i dopunjen svim
+  novim relacijama; pojmovnik proširen s 99 na 126 natuknica; dodatak s
+  tipičnim pogreškama dopunjen klasičnim pogreškama i općim formulacijama.
+- **Skice i alati:** novi i preuređeni SVG prizori, dva nova geometrijska
+  checkera (pog. 3 i 4), stroži postojeći checkeri; regresijski raspon PDF-a
+  pomaknut uz obrazloženje u `docs/pdf-tipografija.md`.
+- **Sažimanje (354 → 323 stranice):** ključ rezultata bez ponovljenog sažetka
+  iskaza, sažetak formula bez brojčanih primjera (oko pola kraći), pojmovnik
+  sveden na jednorečenične definicije, provjere uz primjere, napomene uz skice
+  i završni okviri svedeni na stvarne provjere, uklonjena ponavljanja pog. 10
+  u pog. 14 i lokalni izvod u bloku „Dublje” pog. 10. Izvodi, primjeri, zadatci
+  i CFD odlomci nisu uklanjani.
 
 ### Pitanja, eksperimentalna usporedba i naziv — 27. rujna 2026.
 
