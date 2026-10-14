@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 654 338" role="img" aria-labelledby="u01fgs_title u01fgs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:654px;height:auto;">
   <title id="u01fgs_title">Gustoća i specifična težina ulja</title>
-  <desc id="u01fgs_desc">Isti volumen ulja i vode ima različitu masu i težinu. Težina ulja nacrtana je kroz njegovo težište; nije sila na dno posude. Kota dubine završava na unutarnjem dnu i slobodnoj površini.</desc>
+  <desc id="u01fgs_desc">Isti volumen ulja i vode ima različitu masu i težinu. Težina ulja nacrtana je kroz njegovo težište; nije sila na dno posude.</desc>
   <defs>
     <pattern id="u01fgs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -31,18 +31,12 @@
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u01fgs_oilPanel" transform="translate(30 30)">
         <text x="215.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Ulje u posudi</text>
-        <rect x="144" y="110" width="146" height="180" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
+        <rect id="u01fgs_oil" x="144" y="110" width="146" height="180" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
         <line x1="144" y1="110" x2="290" y2="110" stroke="#356b83" stroke-width="2" />
         <rect x="136" y="70" width="8" height="228" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="290" y="70" width="8" height="228" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="136" y="290" width="162" height="8" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <line x1="106" y1="110" x2="116" y2="110" stroke="#657781" stroke-width="1.2" />
-        <line x1="106" y1="290" x2="116" y2="290" stroke="#657781" stroke-width="1.2" />
-        <path id="u01fgs_h" d="M111 110 L111 290" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01fgs_dim)" marker-end="url(#u01fgs_dim)" />
-        <text x="88" y="206" font-size="14" fill="#263746" text-anchor="middle">h</text>
-        <line x1="111" y1="110" x2="137" y2="110" stroke="#657781" stroke-width="1" />
-        <line x1="111" y1="290" x2="137" y2="290" stroke="#657781" stroke-width="1" />
-        <text x="217" y="151" font-size="20" fill="#263746" text-anchor="middle" font-weight="700">V</text>
+        <text x="217" y="151" font-size="16" fill="#263746" text-anchor="middle">V</text>
         <text x="217" y="176" font-size="14" fill="#263746" text-anchor="middle">m, ρ</text>
         <circle id="u01fgs_centerOfMass" cx="217" cy="200" r="3" fill="#356b83" />
         <path id="u01fgs_weight" d="M217 200 L217 264" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01fgs_forceMarker)" />

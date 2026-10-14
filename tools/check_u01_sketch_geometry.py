@@ -80,6 +80,40 @@ def comb(root,prefix,count,ratios):
     return pistons
 
 
+def steering(root,prefix):
+    """Z2: two rams on a double-ended tiller; same oil, opposite thrusts, one torque sense."""
+    poly,walls=connected_fluid(root,prefix+'system',[[(60,260),(60,272),(262,272),(262,62),(240,62),(240,110)]])
+    tiller=rect(node(root,prefix+'tiller'));stock=node(root,prefix+'stock')
+    cx,cy=float(stock.get('cx')),float(stock.get('cy'))
+    close(cx,tiller[0]+tiller[2]/2,'Z2: struk kormila u sredini ruda');close(cy,tiller[1]+tiller[3]/2,'Z2: struk na osi ruda')
+    arms=[];bores=[];thrusts=[]
+    for i in range(2):
+        x,y,w,h=rect(node(root,prefix+f'systempiston{i}'))
+        rx,ry,rw,rh=rect(node(root,prefix+f'systemrod{i}'))
+        close(rx+rw/2,x+w/2,'Z2: klipnjača i klip imaju istu os');check(0<rw<w,'Z2: klipnjača tanja od klipa')
+        face=(y+h) if i==0 else y            # lijevi klip gura prema gore, desni prema dolje
+        for xx in (x+w*.1,x+w*.5,x+w*.9):close(distance_to_path((xx,face),poly),0,'Z2: tlačna ploha klipa dodiruje ulje')
+        check(all(not inside(p,poly) for p in sample_segment((rx+1,ry+1),(rx+1,ry+rh-1))),'Z2: klipnjača ostaje izvan ulja')
+        end=(tiller[1]+tiller[3]) if i==0 else tiller[1]
+        close(ry if i==0 else ry+rh,end,'Z2: klipnjača dodiruje rudo');close(ry+rh if i==0 else ry,y if i==0 else y+h,'Z2: klipnjača završava na klipu')
+        dx,dy=delta(node(root,prefix+f'force{i}'))
+        check(abs(dx)<1e-9 and dy*(-1 if i==0 else 1)>0,'Z2: sila ulja gura klip prema rudu')
+        a,b=line(node(root,prefix+f'force{i}'));check(inside(a,poly),'Z2: sila ulja počinje u ulju')
+        arms.append(rx+rw/2-cx);bores.append(w);thrusts.append(dy)
+    close(bores[0],bores[1],'Z2: oba cilindra istoga promjera')
+    # Krakovi jednaki, na suprotnim stranama struka; vertikalne sile daju moment istoga smisla.
+    torque=[arm*dy for arm,dy in zip(arms,thrusts)]   # >0: satni smisao na zaslonu (y prema dolje)
+    check(abs(abs(arms[0])-abs(arms[1]))<1e-9 and arms[0]*arms[1]<0,'Z2: jednaki krakovi na suprotnim stranama')
+    check(torque[0]>0 and torque[1]>0,'Z2: oba cilindra daju moment istoga smisla')
+    e=node(root,prefix+'moment');tk=re.findall(r'[A-Za-z]|[-+]?(?:[0-9]*[.][0-9]+|[0-9]+)',e.get('d'))
+    check(len(tk)==11 and tk[0]=='M' and tk[3]=='A' and tk[7]=='0' and tk[8]=='1','Z2: luk momenta u satnom smislu kao sile')
+    x1,y1,r1,x2,y2=map(float,(tk[1],tk[2],tk[4],tk[9],tk[10]))
+    close(math.dist((x1,y1),(cx,cy)),r1,'Z2: luk momenta oko struka');close(math.dist((x2,y2),(cx,cy)),r1,'Z2: luk momenta oko struka')
+    dimension(root,prefix+'arm0',(60,186),(150,186));dimension(root,prefix+'arm1',(150,186),(240,186))
+    close(abs(arms[0]),90,'Z2: kota kraka odgovara klipnjači');close(abs(arms[1]),90,'Z2: kota kraka odgovara klipnjači')
+    dimension(root,prefix+'d',(228,141),(252,141));close(bores[1],24,'Z2: kota promjera odgovara provrtu')
+
+
 def vertical(root,id,sign):
     dx,dy=delta(node(root,id));check(abs(dx)<1e-9 and sign*dy>0,id+': pogrešan smjer sile ili pomaka')
 
@@ -107,13 +141,17 @@ def main():
         center=(element[0]+element[2]/2,element[1]+element[3]/2)
         check(math.dist(b,center)<math.dist(a,center),'Uvod: tlak sabija mali element')
     vertical(intro,'u01fup_input',1);vertical(intro,'u01fup_output',-1)
-    dimension(density,'u01fgs_h',(111,110),(111,290))
+    # P1 tekst nema dubinu h: kota je uklonjena; tezina mora ostati unutar ulja.
+    check(not any(e.get('id')=='u01fgs_h' for e in density.iter()),'P1: bez kote h koje nema u tekstu')
     weight=line(node(density,'u01fgs_weight'))
+    oil=rect(node(density,'u01fgs_oil'))
+    for pt in weight:check(oil[0]<pt[0]<oil[0]+oil[2] and oil[1]<pt[1]<oil[1]+oil[3],'P1: tezina ostaje unutar ulja')
     close(math.dist(weight[0],((144+290)/2,(110+290)/2)),0,'P1: težina djeluje kroz težište ulja')
     vertical(density,'u01fgs_weight',1)
     pi=comb(p2,'u01v1km_system',2,[1,math.sqrt(.045/(math.pi*.16**2/4))])
     dimension(p2,'u01v1km_diameter',(pi[0][0],215),(pi[0][0]+pi[0][2],215))
     vertical(p2,'u01v1km_load',1);vertical(p2,'u01v1km_oilForce',-1)
+    close(math.dist(*line(node(p2,'u01v1km_oilForce')))/math.dist(*line(node(p2,'u01v1km_load'))),.045/(math.pi*.16**2/4),'P2: F_2/G = A_2/A_k',tol=0.02)
     pi=comb(p3,'u01v2hd_system',2,[1,math.sqrt(35)])
     dimension(p3,'u01v2hd_inputStroke',(152,190),(152,330))
     dimension(p3,'u01v2hd_outputStroke',(655,330),(655,334))
@@ -123,8 +161,12 @@ def main():
         close(b[0]-a[0],pi[i][2],'P3: početni presjek pripada istom klipu')
     vertical(p3,'u01v2hd_input',1);vertical(p3,'u01v2hd_output',-1)
     comb(p4,'u01ch1_system',3,[1,1,1/math.sqrt(30)])
-    dimension(p4,'u01ch1_liftStroke',(611,358),(611,388))
+    dimension(p4,'u01ch1_liftStroke',(611,358),(611,358+100*25/180))
     dimension(p4,'u01ch1_pumpStroke',(777,258),(777,358))
+    close(math.dist(*line(node(p4,'u01ch1_pumpStroke')))/math.dist(*line(node(p4,'u01ch1_liftStroke'))),180/25,'P4: kote s_h i s_L u istom mjerilu (180:25)',tol=1e-4)
+    lens={k:math.dist(*line(node(p4,'u01ch1_'+k))) for k in ('load','liftForce0','liftForce1','pumpForce')}
+    close(lens['load'],2*lens['liftForce0'],'P4: G=2F_L u duljinama strelica',tol=1e-6)
+    check(lens['liftForce0']==lens['liftForce1']>lens['pumpForce'],'P4: poredak F_L > F_p')
     for id,sign in [('load',1),('pumpForce',1),('liftForce0',-1),('liftForce1',-1)]:vertical(p4,'u01ch1_'+id,sign)
     # True perpendicular moment arms from the same pivot for vertical forces.
     lever=line(node(brakes,'u01fkv_lever'))
@@ -146,7 +188,13 @@ def main():
         dx,dy=delta(node(brakes,f'u01fkv_workForce{i}'))
         check(abs(dy)<1e-9 and dx*(1 if i<2 else -1)>0,'P5: sila ulja prema klipu')
     vertical(brakes,'u01fkv_foot',1);vertical(brakes,'u01fkv_masterForce',1)
-    for num,ratio in [(2,5),(3,3),(5,math.sqrt(4*.003/math.pi)/.009)]:
+    # Arrow lengths keep the order F_n < F_M < F_r < F_f and the exact F_f/F_r=(35/30)^2.
+    L={k:math.dist(*line(node(brakes,'u01fkv_'+k))) for k in ('foot','masterForce','workForce0','workForce1','workForce2','workForce3')}
+    check(L['foot']<L['masterForce']<L['workForce1']<L['workForce0'],'P5: poredak duljina F_n < F_M < F_r < F_f')
+    close(L['workForce0'],L['workForce3'],'P5: jednake sile prednjih klipova');close(L['workForce1'],L['workForce2'],'P5: jednake sile stražnjih klipova')
+    close(L['workForce0']/L['workForce1'],(35/30)**2,'P5: F_f/F_r=(d_f/d_r)^2',tol=0.01)
+    steering(z,'u01vs_z2')
+    for num,ratio in [(3,3),(5,math.sqrt(4*.003/math.pi)/.009)]:
         pi=comb(z,f'u01vs_z{num}system',2,[1,ratio])
         if num<5:
             for i in (0,1):dimension(z,f'u01vs_z{num}d{i+1}',(pi[i][0],259),(pi[i][0]+pi[i][2],259))
@@ -161,7 +209,7 @@ def main():
     # Equal cup areas: doubled measured liquid volume must double its height.
     h1=rect(node(z,'u01vs_z1fluid1'))[3];h2=rect(node(z,'u01vs_z1fluid2'))[3]
     close(h2/h1,2,'Z1: punjenja 50 i 100 cm³ u istoj posudi')
-    print('U01 SVG PASS: 7 slika; povezani fluidi, otvoreni priključci, klipovi, sile, promjeri, kote hodova i poluga 5:1.')
+    print('U01 SVG PASS: 7 slika; povezani fluidi, otvoreni priključci, klipovi, sile, promjeri, kote hodova, poluga 5:1 i kormilarski stroj Z2.')
 
 
 if __name__=='__main__':main()

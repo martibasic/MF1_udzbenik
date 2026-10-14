@@ -93,7 +93,8 @@
         <text x="72" y="78" font-size="12" fill="#263746" text-anchor="start">F₁</text>
         <path id="u01fup_output" d="M208 187 L208 142" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01fup_reactionMarker)" />
         <text x="224" y="180" font-size="12" fill="#263746" text-anchor="start">F₂</text>
-        <text x="145" y="210" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">p</text>
+        <text x="58" y="186" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">p</text>
+        <text x="186" y="204" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">p</text>
       </g>
     </g>
   </g>
