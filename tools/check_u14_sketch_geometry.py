@@ -125,19 +125,77 @@ def main():
     close(guide(p1, 'u14p1_flow', 120, 24/19), delta(node(p1, 'u14p1_b'))[1], 'P1: kota stvarne širine ulaza')
     direction(p1, 'u14p1_outflow', 120)
     angle(p1, 'u14p1_turnAngle', 120)
-    for r, prefix, c1, u in ((p2, 'u14p2_', 22, 8), (p3, 'u14p3_', 24, 9)):
-        plate(r, prefix+'jet')
-        triangle(r, prefix+'inletTriangle', u, (c1-u, 0), 5)
-        top, bottom = line(node(r, prefix+'jettop')), line(node(r, prefix+'jetbottom'))
-        close(bottom[0][1]-top[0][1], delta(node(r, prefix+'d'))[1], prefix+': d normalan na ulazni mlaz')
-        for name, sign in (('outTop', -1), ('outBottom', 1)):
-            dx, dy = delta(node(r, prefix+name))
-            close(dx, 3*u, prefix+': apsolutni izlaz ima komponentu u')
-            close(dy, sign*3*(c1-u), prefix+': relativni izlaz duž ploče')
-            arrow = line(node(r, prefix+name))
-            solid = rect(node(r, prefix+'jetplate'))
-            check(arrow[0][1] < solid[1] if sign == -1 else arrow[0][1] > solid[1]+solid[3],
-                  prefix+': apsolutni izlaz počinje izvan ruba ploče')
+    # P2 (datoteka fig_relativni_dotok): aktuatorski disk propelera u napredovanju.
+    rho, FT, vA, D = 1025.0, 160e3, 6.0, 3.2
+    CT = FT/(0.5*rho*vA*vA*math.pi*D*D/4)
+    vd = vA*(1+math.sqrt(1+CT))/2
+    vw = 2*vd-vA
+    tube = path(node(p2, 'u14p2_tubefluid'))
+    check(node(p2, 'u14p2_controlVolume').get('d') == node(p2, 'u14p2_tubefluid').get('d'),
+          'P2: kontrolni volumen obuhvaća točno strujnu cijev')
+    def width_at(x):
+        ys = [y for px, y in tube if abs(px-x) < 1e-6]
+        check(len(ys) >= 2, 'P2: presjek strujne cijevi na x=%g' % x)
+        return max(ys)-min(ys)
+    disk = line(node(p2, 'u14p2_disk'))
+    close(disk[0][0], disk[1][0], 'P2: disk je okomit na os')
+    w_inf, w_disk, w_w = width_at(60), width_at(disk[0][0]), width_at(400)
+    close(w_disk, disk[1][1]-disk[0][1], 'P2: disk završava na rubu strujne cijevi')
+    close((w_inf/w_disk)**2, vd/vA, 'P2: uzvodni presjek iz kontinuiteta', tol=2e-5)
+    close((w_w/w_disk)**2, vd/vw, 'P2: presjek dalekog traga iz kontinuiteta', tol=2e-5)
+    check(w_inf > w_disk > w_w, 'P2: strujna cijev se sužava nizvodno')
+    check(all(y > disk[0][1]-1e-9 and y < disk[1][1]+1e-9 for px, y in tube if abs(px-disk[0][0]) < 1e-6),
+          'P2: fluid prolazi kroz cijeli propusni disk')
+    lengths = {}
+    for name in ('vA', 'vd', 'vw'):
+        dx, dy = delta(node(p2, 'u14p2_'+name))
+        close(dy, 0, 'P2: brzina duž osi')
+        check(dx > 0, 'P2: brzina prema krmi')
+        lengths[name] = dx
+    close(lengths['vd']/lengths['vA'], vd/vA, 'P2: v_d iz Froudeova teorema u zajedničkom mjerilu', tol=2e-5)
+    close(lengths['vw']/lengths['vA'], vw/vA, 'P2: v_j (oznaka u14p2_vw) iz bilance količine gibanja', tol=2e-5)
+    close(lengths['vd'], (lengths['vA']+lengths['vw'])/2, 'P2: brzina u disku je aritmetička sredina', tol=2e-5)
+    direction(p2, 'u14p2_thrust', 180)
+    close(delta(node(p2, 'u14p2_D'))[1], w_disk, 'P2: kota D mjeri promjer diska')
+
+    # P3 (datoteka val3_pokretna_lopatica): radijalno kolo crpke i trokuti brzina.
+    om = 2*math.pi*1450/60
+    r1, r2, b1, b2, Q = .060, .130, .035, .020, .045
+    u1, u2 = om*r1, om*r2
+    cm1, cm2 = Q/(2*math.pi*r1*b1), Q/(2*math.pi*r2*b2)
+    beta1, beta2 = math.atan2(cm1, u1), math.radians(25)
+    rim, eye, hub = node(p3, 'u14p3_rim'), node(p3, 'u14p3_eye'), node(p3, 'u14p3_hub')
+    centre = tuple(float(rim.get(k)) for k in ('cx', 'cy'))
+    same_point(centre, tuple(float(eye.get(k)) for k in ('cx', 'cy')), 'P3: koncentrični rub i oko kola')
+    same_point(centre, tuple(float(hub.get(k)) for k in ('cx', 'cy')), 'P3: koncentrična glavina')
+    R2, R1, Rh = float(rim.get('r')), float(eye.get('r')), float(hub.get('r'))
+    close(R2/R1, r2/r1, 'P3: omjer polumjera 130:60')
+    check(eye.get('fill') == '#dcebf1', 'P3: oko kola (aksijalni ulaz) prikazano je kao fluid, ne kao krutina')
+    check(0 < Rh <= 0.35*R1, 'P3: glavina na vratilu znatno je manja od r1 i ne zatvara oko kola')
+    check(hub.get('fill', '').startswith('url(#u14p3_hatch'), 'P3: glavina je šrafirana krutina')
+    import re as _re
+    blades = [e for e in p3.iter() if _re.fullmatch(r'u14p3_blade\d+', e.get('id', ''))]
+    check(len(blades) == 6, 'P3: šest lopatica')
+    for blade in blades:
+        nums = list(map(float, _re.findall(r'-?\d+(?:\.\d+)?', blade.get('d'))))
+        P0, P1, P2 = (nums[0], nums[1]), (nums[2], nums[3]), (nums[4], nums[5])
+        close(math.dist(P0, centre), R1, 'P3: lopatica počinje na r1 (rub oka kola)')
+        close(math.dist(P2, centre), R2, 'P3: lopatica završava na rubu kola')
+        for point, d, beta in ((P0, (P1[0]-P0[0], P1[1]-P0[1]), beta1), (P2, (P2[0]-P1[0], P2[1]-P1[1]), beta2)):
+            phi = math.atan2(point[1]-centre[1], point[0]-centre[0])
+            t = (-math.sin(phi), math.cos(phi))   # smjer vrtnje (u smjeru kazaljke na zaslonu)
+            rad = (math.cos(phi), math.sin(phi))
+            ang = math.atan2(d[0]*rad[0]+d[1]*rad[1], -(d[0]*t[0]+d[1]*t[1]))
+            close(ang, beta, 'P3: kut lopatice od smjera -u iz podataka', tol=1e-6)
+    rotation = path(node(p3, 'u14p3_rotation'))
+    a, b = rotation[-2:]
+    check((a[0]-centre[0])*(b[1]-a[1])-(a[1]-centre[1])*(b[0]-a[0]) > 0, 'P3: vrtnja u smjeru kazaljke, kao pozitivni tangencijalni smjer')
+    spoke = line(node(p3, 'u14p3_r2'))
+    same_point(spoke[0], centre, 'P3: kota r2 od osi'); close(math.dist(spoke[1], centre), R2, 'P3: kota r2 do ruba')
+    spoke = line(node(p3, 'u14p3_r1'))
+    same_point(spoke[0], centre, 'P3: kota r1 od osi'); close(math.dist(spoke[1], centre), R1, 'P3: kota r1 do ruba oka kola')
+    triangle(p3, 'u14p3_inletTriangle', u1, (-u1, cm1), 8)
+    triangle(p3, 'u14p3_outletTriangle', u2, (-cm2/math.tan(beta2), cm2), 8)
     width = guide(p4, 'u14p4_flow', 150)
     close(width, delta(node(p4, 'u14p4_d'))[1], 'P4: stvarna poprečna kota d')
     triangle(p4, 'u14p4_inletTriangle', 10, (16, 0), 7)
@@ -155,6 +213,10 @@ def main():
     rim_point = tuple(float(rim.get(k)) for k in ('cx', 'cy'))
     radius = float(orbit.get('r'))
     same_point(rim_point, (center[0], center[1]-radius), 'P5: B na vrhu kružne putanje')
+    # Krak tangencijalne sile M = F_x r: r završava na osi mlaza (mlaz tangencijalan na kružnicu r).
+    jet_axis = (path(node(p5, 'u14p5_flowwall0'))[0][1]+path(node(p5, 'u14p5_flowwall1'))[0][1])/2
+    close(rim_point[1], jet_axis, 'P5: B i kota r na osi mlaza, ne na dnu lopatice')
+    close(line(node(p5, 'u14p5_inflow'))[0][1], jet_axis, 'P5: c1 na osi mlaza')
     dim = line(node(p5, 'u14p5_radius'))
     close(dim[0][1], rim_point[1], 'P5: početak kote na obodu')
     close(dim[1][1], center[1], 'P5: kraj kote na osi')
@@ -202,7 +264,7 @@ def main():
     direction(ex, 'u14ex_z6inletRight', 180)
     direction(ex, 'u14ex_z6thrust', 90)
     direction(ex, 'u14ex_z6weight', -90)
-    print('U14 SVG PASS: 7 slika; otvoreni tokovi, nepropusne ploče, kote/kutovi, stvarni trokuti brzina, radijus i vrtnja, reakcije, kontinuitet i četiri mlaza.')
+    print('U14 SVG PASS: 7 slika; otvoreni tokovi, strujna cijev diska, radijalno kolo, kote/kutovi, stvarni trokuti brzina, radijus i vrtnja, reakcije, kontinuitet i četiri mlaza.')
 
 
 if __name__ == '__main__':
