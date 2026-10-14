@@ -413,7 +413,7 @@ Autoritativna paleta i tiskovne veličine nalaze se u
 | Drugi fluid | `#eadfc5`, uz obveznu oznaku vrste/gustoće |
 | Živa | siva `#a9b2b9`, uz oznaku Hg ili gustoće |
 | Otopina/mješavina | prigušene nijanse iz tokena, uvijek uz tekstualnu oznaku |
-| Vektori | `#356b83`; veličina i primatelj sile određeni oznakom |
+| Vektori | `#356b83`; vrsta veličine određena stilom i atributom `data-mf1-vector` (sila i moment: deblja crta, pun vrh; brzina i kutna brzina: tanja crta, otvoren vrh; ubrzanje: isprekidana crta, pun vrh; tlak i normala: tanka crta, mali pun vrh — standard od 14. 10. 2026. u `docs/urednicki_stil.md`); primatelj sile određen oznakom |
 | Kote i pomoćne crte | `#657781`, tanje od glavnih kontura i vektora |
 | Kontrolna granica | bez ispune, isprekidana, jasno različita od stijenke |
 

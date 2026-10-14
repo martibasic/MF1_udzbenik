@@ -8,7 +8,7 @@ import re
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
-from sketch_style import ROOT, PALETTE, TOKENS
+from sketch_style import ROOT, PALETTE, TOKENS, check_arrow_semantics
 
 
 def main():
@@ -59,6 +59,8 @@ def main():
                     colour = head.get('fill') if head.get('fill', 'none') != 'none' else head.get('stroke')
                     if colour != e.get('stroke'):
                         fail(f'arrowhead does not match its line: {e.get("id", attribute)}')
+        for issue in check_arrow_semantics(root):
+            fail(issue)
         # Distinctions that must remain readable in monochrome.
         for a,b in [('u09egl_egl','u09egl_hgl'),('u09v2_jet1','u09v2_jet3'),('u13ex_z4pump','u13ex_z4system')]:
             if a in ids and b in ids and ids[a].get('stroke-dasharray') == ids[b].get('stroke-dasharray'):

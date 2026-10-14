@@ -48,6 +48,20 @@ Razine T1–T4, sitno navedene na kraju zadatka, pokazuju koliko samostalnog izb
 
 U svakom je poglavlju šest zadataka, od T1 do T4. Zadatci nižih razina oslanjaju se na izravnu primjenu modela, dok T3 i T4 zahtijevaju obrazloženje odabranoga postupka, pretpostavki i zaključka.
 
+## Strelice na skicama
+
+Svi vektori na skicama imaju istu boju, a vrstu veličine pokazuju debljina crte, vrh strelice i crtkanje. Isti stil vrijedi kroz cijeli priručnik.
+
+| Prikaz | Veličina |
+| --- | --- |
+| deblja puna crta, pun trokutasti vrh | sila, težina $F_G$, uzgon $F_U$, reakcija, tlačna sila $pA$; zakrivljena: moment |
+| tanja puna crta, otvoren vrh | brzina, smjer protoka, pomak (hod); zakrivljena: kutna brzina $\omega$ |
+| isprekidana crta, pun vrh | ubrzanje i efektivno polje ($\vec a$, $\vec g$, $\vec g_{\mathrm{eff}}$) |
+| tanka crta, mali pun vrh | raspodijeljeni tlak na stijenci; jedinična normala $\vec n$ |
+| siva tanka crta s vrhovima na oba kraja | kota (duljina, visina, promjer) |
+
+Oznake vektora uz strelice pisane su podebljano, a oznake skalara (kote, tlakovi, gustoće) obično. Sila uvijek ima naznačeno tijelo na koje djeluje. Duljine strelica iste vrste unutar jedne skice razmjerne su iznosima; kada pravi omjer nije čitljiv, zadržan je poredak, a tekst uz skicu to navodi.
+
 ## Numerički pokusi i izdanja
 
 Numerički pokusi istražuju osjetljivost, bilance i pogrešku jednostavnih modela; nisu automatski CFD simulacije. Bilježnice (*Jupyter notebooks*) dostupne su preko poveznica ili QR kodova, bez prijave u JupyterLiteu, uz pričuvni Google Colab.

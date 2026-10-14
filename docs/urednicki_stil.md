@@ -99,6 +99,31 @@ spomenu s izričitom napomenom.
 | kavitacijska rezerva | $NPSH_a$, $NPSH_r$ | |
 | kontrolni volumen i ploha | KV, KP; indeksi ul, iz | |
 | stabilitet | $B$, $G$, $M$, $KB$, $BM$, $KG$, $GM$ | bez nadvlake |
+| težina | $F_G$ ili $mg$ | $G$ samo težište (stabilitet), ne težina |
+| gustoće vode, morske vode, ulja, žive, zraka | $\rho_w$, $\rho_{mv}$, $\rho_o$, $\rho_{Hg}$, $\rho_{zr}$ | indeks $v$ samo para ($p_v$); indeks $m$ samo model (pog. 11, 14) |
+| relativna gustoća | $s_r=\rho/\rho_w$ | |
+| kut poprečnog nagiba; ostali kutovi | $\varphi$; $\theta$ | |
+| širina broda ili pontona | $b$ | $B$ samo središte istisnine |
+| polumjer zavoja | $R_z$ | $R$ polumjer spremnika ili luka |
+| tlak na slobodnoj površini; tlak plina | $p_{pov}$; $p_{pl}$ | |
+| udio otvorene površine rešetke | $\psi$ | |
+| ekvivalentna hrapavost; disipacija turbulentne kinetičke energije | $k_s$, relativno $k_s/D$; $\varepsilon$ | $\varepsilon$ samo disipacija (model $k$–$\varepsilon$); tolerancije s indeksom ($\varepsilon_h$) |
+| visina dobave crpke; visina turbine | $H_p$; $H_t$ | ne $h_p$, $h_t$ |
+| standardna nesigurnost | $s(x)$; $s_E$, $s_\Delta$ | ne $u(x)$ ($u$ je brzina krute granice) |
+| koeficijent sustrujanja; faktor učinka rotora | $\chi$; $FM$ | samo pog. 14 |
+| kut lopatice | $\beta_1$, $\beta_2$ od smjera $-u$ | kut skretanja mlaza $\theta$ |
+| volumenski protok | $Q$ u m$^3$/s ili L/s | jedinica „L/s” (veliko L) |
+
+Vektori na skicama (standard od 14. listopada 2026.): jedna boja `#356b83`,
+a vrsta veličine određena je stilom i atributom `data-mf1-vector`. Sila i moment:
+deblja puna crta (2,4–3,4) i pun vrh. Brzina, smjer protoka i kutna brzina: tanja
+crta (1,3–2,0) i otvoren vrh. Ubrzanje i efektivno polje: isprekidana crta
+(1,6–2,4) i pun vrh. Raspodijeljeni tlak i jedinična normala: tanka crta (0,8–1,6)
+i pun vrh. Strelice koje nisu vektori (kote, osi, vodilice, strujnice, putanje,
+dijagrami) nose `data-mf1-role` i ne koriste vektorsku boju. Oznaka vektora uz
+strelicu piše se podebljano, oznake skalara obično. Pravilo provjerava
+`tools/audit_sketch_design.py`; legenda za čitatelja nalazi se u uvodnom
+poglavlju „Kako koristiti priručnik”.
 
 Nazivlje: crpka; hidraulički; hidrostatički; meniskus; Reynoldsov transportni
 teorem; zaustavne veličine; kalorički savršen plin; zagušenje (choking) prema
