@@ -132,3 +132,49 @@ u stvarnom pregledniku doseže Python (Pyodide) / Idle. PDF ima 313 A4
 stranica; audit i usporedba kopije za preuzimanje prolaze. Zasebni
 geometrijski testovi U09/U10 također prolaze. Poslužiteljski CI nakon
 pusha provjerava isto stanje na propisanom Pythonu 3.12 i Quarto 1.9.37.
+
+
+## Revizija 12. 10. 2026. (provedba recenzentskih nalaza)
+
+Izvor: stručna recenzija od 12. 10. 2026. i brief koordinatora. Opseg obuhvaća kanonski izvor, `verify_u11.py` (U11), skice `u11_val1_mlaz_na_plocu.svg`, `u11_val3_koljeno_reakcija.svg` i `u11_vjezbe_skice.svg`, novu skicu `u11_val_rotirajuca_mlaznica.svg`, checker `check_u10_sketch_geometry.py` i bilježnicu `u11_sila_na_koljeno.ipynb`. Prema planu knjige poglavlje dobiva jedan riješeni primjer više (6 → 7).
+
+### Matrica zamjena
+
+| P/Z | Stari ID i stanje | Odluka | Razina | Završni ID | Kontrolni rezultat | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| P1 | `ex-u11-mlaz-vode-na-mirnu-ravnu-plocu-t2`; trivijalan, klon Z1 | ZAMIJENITI Peltonovom lopaticom u gibanju (pomični KV, θ = 165°, energetska provjera, kolo, u = v/2) | T2 | `ex-peltonova-lopatica-u-gibanju`, slika `fig-peltonova-lopatica-u-gibanju` (ista datoteka) | ṁ_rel 35,3 kg/s; F 1248 N; P 14,98 kW; kolo 2080 N i 24,96 kW; P_max 26,0 kW | provedeno |
+| P2 | `ex-u11-kalibracijska-mlaznica-na-prirubnici-t2` | ZADRŽATI; konvencija R_{st→f} | T2 | isti | nepromijenjen | provedeno |
+| P3 | `ex-u11-servisno-koljeno-na-sidrenom-nosacu-t2`; ξ ≈ 3,5 | PREPRAVITI p_M2 s 18 na 43 kPa (ξ ≈ 0,34); dodan brojčani β (1,02 i 4/3) | T2 | isti | F = (1402, −665) N; 1,55 kN | provedeno |
+| P4 | `ex-u11-t-racva-na-sidrenoj-konzoli-t3` | PREPRAVITI lanac zaokruživanja | T3 | isti | v1 4,48; 891/503 N; 1023 N | provedeno |
+| P5 | `ex-u11-y-racva-s-mjerenom-reakcijom-konzole-t4` | PREPRAVITI konvenciju R; p/(ρg) | T4 | isti | 912 N | provedeno |
+| P6 | `ex-u11-sila-na-koljeno-tlacnog-voda-male-hidroelektrane` | PREPRAVITI: θ, vektorska bilanca, impulsna funkcija I | T2 | isti | 9,83 kN; 60° | provedeno |
+| P7 | novo | DODATI rotirajuću mlaznicu za pranje tanka | T2 | `ex-rotirajuca-mlaznica-pranje-tanka`, `fig-rotirajuca-mlaznica` | w 17,8 m/s; M 11,4 N m; P 71 W; M0 12,4 N m; n_max ≈ 680 min⁻¹ | provedeno |
+| Z1 | `task-u11-vodeni-mlaz-promjera-izlazi-iz-sapnice-brzinom` | ZAMIJENITI potiskom vodomlaznog pogona | T1 | `task-vodomlazni-potisak-broda` | ṁ 1845 kg/s; F_T 25,8 kN; P_T 465 kW; η 0,72 | provedeno |
+| Z2 | `task-u11-mlaz-vode-udara-okomito-na-nepomicnu-plocu` | ZAMIJENITI propelerom kao aktuatorskim diskom | T1 | `task-propeler-aktuatorski-disk` | v_d 7,00 m/s; F_T 180 kN; P_T 1,08 MW; η_i 0,857 | provedeno |
+| Z3 | `task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez`; ξ ≈ 5,5 | PREPRAVITI p_M2 sa 150 na 175 kPa (ξ ≈ 0,91) | T2 | isti | (1,500, −1,460) kN; 2,093 kN | provedeno |
+| Z4–Z6 | `task-moment-ekscentricnog-mlaza`, `task-mlaz-na-pomicnu-plocu`, `task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz` | ZADRŽATI | T2/T3/T4 | isti | nepromijenjeni | provedeno |
+
+Stari ID-jevi Z1 i Z2 ostaju kao `<span id>`.
+
+### Teorija, notacija, skice i provjere
+
+- Teorija:
+  - `.mf1-temelj` za moment količine gibanja (`eq-moment-kolicine-gibanja`);
+  - mlazni pogon (`eq-potisak-mlaznog-pogona`);
+  - `.mf1-izvod` aktuatorskog diska;
+  - `.mf1-granica-modela` s četiri stavke.
+- Blok „Dublje” skraćen je na polovicu. Uklonjene su jednadžbe 02–04 i 06; nemaju vanjskih referenci.
+- Notacija: v⃗ posvuda (u⃗ samo u „Dublje”); kut θ; F⃗, R⃗_{st→f} i R⃗; I = pA + ṁv; „u ovom poglavlju”.
+- Duplicirano pitanje u „Provjeri sebe” zamijenjeno je novim.
+- Skice:
+  - P1 preuređena u Peltonovu lopaticu;
+  - nova `u11_val_rotirajuca_mlaznica.svg` (viewBox 0 0 520 420);
+  - paneli Z1 i Z2 u istim okvirima;
+  - natpisi p_M2 = 43 kPa (P3) i 175 kPa (Z3).
+- `check_u10_sketch_geometry.py` sada provjerava devet SVG-ova. Rezultat: PASS.
+- `verify_u11.py`: 115/115. Stari P1/Z1/Z2 ID-jevi uklonjeni su.
+- Bilježnica:
+  - Z3 sada koristi 175 kPa, a zlatne komponente su (1499,616; −1460,346);
+  - oznaka kuta je θ;
+  - izlazi ćelija su ispražnjeni (izvršava koordinator).
+- Nova SVG datoteka nema unos u `assets/print-layouts.json` (dodaje koordinator).

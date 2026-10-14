@@ -3,8 +3,8 @@
 Pokriva:
 - Kratki primjer (T1): Gustoca, specificna tezina, relativna gustoca
 - Primjer 1 (T2): Optereceni klip
-- Primjer 2 (T2): Servisna hidraulicna dizalica
-- Cjeloviti zadatak 1 (T3): Dvostruka platforma s rucnom pumpom
+- Primjer 2 (T2): Servisna hidraulicka dizalica
+- Cjeloviti zadatak 1 (T3): Dvostruka platforma s rucnom crpkom
 - Primjer hidraulicne kocnice i primjer robotske stege
 - Zadaci za vjezbu 1-6 (T1-T4)
 
@@ -145,13 +145,14 @@ def zadatak_1(m0: float = 0.0426, m1: float = 0.0855, m2: float = 0.1287,
             "gamma": rho * g, "sr": rho / rho_v}
 
 
-def zadatak_2(d_1: float = 0.028, d_2: float = 0.140, F_1: float = 180.0, s_1: float = 0.120):
-    A_1 = math.pi * d_1**2 / 4
-    A_2 = math.pi * d_2**2 / 4
-    p = F_1 / A_1
-    F_2 = p * A_2
-    s_2 = (A_1 / A_2) * s_1
-    return {"p": p, "F_2": F_2, "s_2": s_2}
+def zadatak_2(p_M: float = 6.0e6, d: float = 0.125, r: float = 0.60, s: float = 0.30):
+    """Kormilarski stroj: dva cilindra na rudu s dva kraka, klipnjace okomite na rudo."""
+    A = math.pi * d**2 / 4
+    F = p_M * A
+    arms = (r, r)                      # oba kraka istoga smisla momenta
+    M = sum(F * arm for arm in arms)
+    V = A * s                          # crpka puni jedan cilindar, drugi vraca isti volumen
+    return {"A": A, "F": F, "M": M, "V": V}
 
 
 def zadatak_3(d1: float = 0.020, d2: float = 0.060, F1: float = 100.0,
@@ -291,12 +292,17 @@ def verify() -> list[dict]:
                "Promjena mase posude uz iste mase ulja mijenja gustocu.")
 
     z2 = zadatak_2()
-    _check(out, "U01.Z2.p_kPa", z2["p"] / 1000, 292.0, "kPa", abs_tol=0.5)
-    _check(out, "U01.Z2.F_2_kN", z2["F_2"] / 1000, 4.5, "kN")
-    _check(out, "U01.Z2.s_2_mm", z2["s_2"] * 1000, 4.8, "mm")
-    _invariant(out, "U01.Z2.volume_balance",
-               abs(0.028**2 * 0.120 - 0.140**2 * z2["s_2"]) < 1e-12,
-               "Klipovi ne istiskuju jednake volumene.")
+    _check(out, "U01.Z2.A_m2", z2["A"], 1.227e-2, "m^2", abs_tol=5e-6)
+    _check(out, "U01.Z2.F_kN", z2["F"] / 1000, 73.6, "kN", abs_tol=0.05)
+    _check(out, "U01.Z2.M_kNm", z2["M"] / 1000, 88.4, "kN m", abs_tol=0.05)
+    _check(out, "U01.Z2.V_L", z2["V"] * 1000, 3.68, "L", abs_tol=0.005)
+    doubled = zadatak_2(p_M=12.0e6)
+    _invariant(out, "U01.Z2.moment_balance",
+               abs(z2["M"] - 2 * 6.0e6 * math.pi * 0.125**2 / 4 * 0.60) < 1e-6
+               and abs(doubled["F"] - 2 * z2["F"]) < 1e-9
+               and abs(doubled["M"] - 2 * z2["M"]) < 1e-9
+               and doubled["V"] == z2["V"] and zadatak_2(s=0.0)["V"] == 0.0,
+               "Moment mora biti zbroj dvaju jednakih krakova, linearan u tlaku; volumen ovisi samo o hodu.")
 
     z3 = zadatak_3()
     _check(out, "U01.Z3.area_ratio", z3["ratio"], 9.0, "1", rel=1e-9)

@@ -56,7 +56,13 @@ def primjer_2_froude(lam=25.0, L_s=150.0, v_s=9.0, nu=NU_V, g=G):
     Re_s = v_s * L_s / nu
     Re_m = v_m * L_m / nu
     Re_ratio = Re_s / Re_m
-    return {"L_m": L_m, "v_m": v_m, "Fr": Fr, "Re_ratio": Re_ratio}
+    # ITTC 1957 korelacijska linija za model i brod; omjer snaga za
+    # Froudeovski prenosiv dio otpora pri jednakoj gustoci.
+    C_F_m = 0.075 / (math.log10(Re_m) - 2) ** 2
+    C_F_s = 0.075 / (math.log10(Re_s) - 2) ** 2
+    return {"L_m": L_m, "v_m": v_m, "Fr": Fr, "Re_ratio": Re_ratio,
+            "Re_m": Re_m, "Re_s": Re_s, "C_F_m": C_F_m, "C_F_s": C_F_s,
+            "P_ratio": lam**3 * (v_s / v_m)}
 
 
 def primjer_3_venturi(D1=0.060, D2=0.020, Q=0.006, p1=101300.0,
@@ -71,8 +77,11 @@ def primjer_3_venturi(D1=0.060, D2=0.020, Q=0.006, p1=101300.0,
     v2_max = math.sqrt((p1 - p_v) / (0.5 * rho * (1 - beta**2)))
     Q_max = A2 * v2_max
     sigma = (p1 - p_v) / (0.5 * rho * v2**2)
+    # Idealizirani prag u konvenciji p_ref=p1, v_ref=v2: p2=p_v.
+    sigma_kr = 1 - beta**2
     return {"v1": v1, "v2": v2, "p2_pred_kPa": p2_pred / 1000,
-            "Q_max_Ls": Q_max * 1000, "sigma": sigma}
+            "Q_max_Ls": Q_max * 1000, "sigma": sigma, "sigma_kr": sigma_kr,
+            "p2_pred": p2_pred, "p_v": p_v}
 
 
 def primjer_4_weber(d=0.003, v=25.0, rho_a=RHO_A, sigma=SIGMA_V,
@@ -111,11 +120,14 @@ def primjer_6_mach_strouhal(D=0.080, Q1=0.40, Q2=0.80, a=A_SOUND,
 
 
 # --------------------------------------------------------------------------
-def zadatak_1(D_a=0.0003, v_a=0.005, nu_a=3.3e-6,
-              D_v=0.30, v_v=1.5, nu_v=NU_V):
-    Re_krv = v_a * D_a / nu_a
-    Re_voda = v_v * D_v / nu_v
-    return {"Re_krv": Re_krv, "Re_voda": Re_voda}
+def zadatak_1(a=0.400, b=0.200, Q=0.640, nu=NU_A):
+    """Z1: pravokutni ventilacijski kanal, Re s hidraulickim promjerom."""
+    A = a * b
+    P = 2 * (a + b)
+    D_h = 4 * A / P
+    v = Q / A
+    return {"v": v, "D_h": D_h, "Re": v * D_h / nu, "Re_dulja": v * a / nu,
+            "Re_kraca": v * b / nu}
 
 
 def zadatak_2(lam=20.0, v_s=4.5, Q_s=350.0):
@@ -219,6 +231,15 @@ def verify():
     _check(out, "U14.P2.v_m", r["v_m"], 1.8, "m/s", rel=0.01)
     _check(out, "U14.P2.Fr", r["Fr"], 0.235, "", rel=0.02)
     _check(out, "U14.P2.Re_ratio", r["Re_ratio"], 125.0, "", rel=0.01)
+    _check(out, "U14.P2.C_F_m", r["C_F_m"], 2.96e-3, "", rel=0.005)
+    _check(out, "U14.P2.C_F_s", r["C_F_s"], 1.48e-3, "", rel=0.005)
+    _check(out, "U14.P2.P_ratio", r["P_ratio"], 78125.0, "", rel=1e-9)
+    _invariant(out, "U14.P2.friction_decreases_with_Re",
+               r["C_F_m"] > r["C_F_s"] > 0 and abs(r["C_F_m"]/r["C_F_s"] - 2.0) < 0.02,
+               "ITTC linija mora dati manji C_F pri vecem Re; omjer oko 2 za ova mjerila.")
+    _invariant(out, "U14.P2.power_scaling",
+               abs(r["P_ratio"] - 25.0**3.5) < 1e-9,
+               "Omjer snaga mora biti lambda^3.5 = lambda^3 * sqrt(lambda).")
 
     r = primjer_3_venturi()
     _check(out, "U14.P3.v1", r["v1"], 2.122, "m/s", rel=0.01)
@@ -226,6 +247,14 @@ def verify():
     _check(out, "U14.P3.p2_pred_kPa", r["p2_pred_kPa"], -78.8, "kPa", rel=0.02)
     _check(out, "U14.P3.Q_max_Ls", r["Q_max_Ls"], 4.45, "L/s", rel=0.02)
     _check(out, "U14.P3.sigma", r["sigma"], 0.543, "", rel=0.02)
+    _check(out, "U14.P3.sigma_kr", r["sigma_kr"], 0.988, "", abs_tol=0.0005)
+    _invariant(out, "U14.P3.cavitation_criterion_consistent",
+               (r["sigma"] < r["sigma_kr"]) == (r["p2_pred"] < r["p_v"]),
+               "Kriterij sigma<sigma_kr mora dati isti zakljucak kao p2<p_v.")
+    at_limit = primjer_3_venturi(Q=r["Q_max_Ls"] / 1000)
+    _invariant(out, "U14.P3.threshold_limit",
+               abs(at_limit["sigma"] - at_limit["sigma_kr"]) < 1e-9,
+               "Pri granicnom protoku sigma mora biti jednaka pragu.")
 
     r = primjer_4_weber()
     _check(out, "U14.P4.We", r["We"], 31.25, "", rel=0.01)
@@ -247,8 +276,19 @@ def verify():
     _check(out, "U14.P6.Q_mj_Ls", r["Q_mj_Ls"], 53.0, "L/s", rel=0.02)
 
     r = zadatak_1()
-    _check(out, "U14.Z1.Re_krv", r["Re_krv"], 0.455, "", abs_tol=.0005)
-    _check(out, "U14.Z1.Re_voda", r["Re_voda"], 450000.0, "", abs_tol=1e-7)
+    _check(out, "U14.Z1.v", r["v"], 8.00, "m/s", abs_tol=0.005)
+    _check(out, "U14.Z1.D_h", r["D_h"], 0.2667, "m", abs_tol=0.00005)
+    _check(out, "U14.Z1.Re", r["Re"], 1.42e5, "", rel=0.002)
+    _check(out, "U14.Z1.Re_dulja", r["Re_dulja"], 2.13e5, "", rel=0.002)
+    _invariant(out, "U14.Z1.hydraulic_diameter_bounds",
+               r["Re_kraca"] < r["Re"] < r["Re_dulja"]
+               and abs(r["Re_dulja"] / r["Re"] - 1.5) < 1e-12,
+               "D_h mora lezati izmedju stranica; omjer (a+b)/(2b)=1,5.")
+    square = zadatak_1(a=0.3, b=0.3)
+    _invariant(out, "U14.Z1.square_limit", abs(square["D_h"] - 0.3) < 1e-12,
+               "Za kvadratni presjek D_h mora biti jednak stranici.")
+    _invariant(out, "U14.Z1.turbulent_regime", r["Re"] > 4000,
+               "Zadani kanal mora biti iznad orijentacijskog prijelaznog podrucja.")
 
     r = zadatak_5()
     _check(out, "U14.Z2.v", r["v"], 63.66, "m/s", abs_tol=.005)

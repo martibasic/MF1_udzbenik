@@ -129,3 +129,49 @@ i izbor pogona uz ograničenje, umjesto još triju izravnih računa iste sile.
 Automatizirane provjere potvrđuju navedena svojstva, ne cijelu didaktičku
 kvalitetu. Zajednička provjera svih notebookova i 72 prikaza za konačno
 izdanje slijedi nakon U15 i povratnog pregleda U01/U02.
+
+
+## Revizija 12. 10. 2026.
+
+Provedba nalaza neovisne stručne recenzije (odobreno od autorice). Opseg:
+spajanje peterostrukog objašnjenja bilance na lopatici u jedan Izvod, dovršetak
+aktuatorskog diska do idealne učinkovitosti, Peltonovo kolo s punim protokom,
+zamjena P2/P3 radijalnim kolom crpke i propelerom u napredovanju, redoslijed
+primjera, Granica modela, MRF, nazivlje (crpka, $F_T$, $v_s$, $v_j$, $v_A$,
+$C_{Th}$, $w_s$) i završni okvir.
+
+| Mjesto | Prije (ID, razina) | Odluka | Poslije (ID, razina) | Kontrolni rezultat | Provjere |
+| --- | --- | --- | --- | --- | --- |
+| teorija r. 40–160 | odjeljak „Matematički izvod” + callout „Postupak rješenja” + Izvod optimuma | SPOJENO u jedan `.mf1-izvod` (pitanje → bilanca → RTT → koraci → dva optimuma → provjera → konvencija kuta $\beta_2=180^\circ-\beta$); zadržani eq-ID-jevi 01–06, razrada-koraka-02/04/05, optimum-03/07 | — | — | čitanje |
+| teorija | aktuatorski disk do $v_d$ | DOPUNJENO: $\eta_i=v_A/v_d$, $C_{Th}$, `eq-idealna-ucinkovitost-propelera`, `eq-idealna-ucinkovitost-ct`, sustrujanje $v_A=(1-w_s)v_s$; NOVI blok Granica modela (disk i Peltonova lopatica) | — | — | — |
+| CFD r. 220 | „MRF” bez objašnjenja | raspisano (više referentnih okvira), klizajuća mreža, provjera $P=M\omega$ vs Eulerov tok momenta | — | — | — |
+| P1 | `ex-u12-vodilica-mlaza-na-ispitnom-stolu-t2`, T2 | ZADRŽAN; „Provjera” svedena na stvarnu provjeru (reakcija, disipacija) | isti | isti | `U12.P1.*` |
+| P2 | `ex-u12-relativni-dotok-na-pokretnu-lopaticu-t1`, T1 | UKLONJEN (ponavljao P3–P5) | mjesto preuzima premješteni P4 → P2 `ex-u12-pokretna-zakrivljena-lopatica-s-relativnim-izlazom-t3`, T3 | isti; nova energijska provjera 7,85 = 7,23 + 0,62 kW | `U12.P2.*` |
+| P3 | `ex-u12-pokretna-ravna-lopatica-u-mlazu-t2`, T2 | UKLONJEN (isti postupak) | mjesto preuzima premješteni P5 → P3 `ex-u12-peltonov-rotor-s-jednim-mlazom-i-momentom`, T4, PROŠIREN korakom 5 | kolo: $\dot m=47{,}04$ kg/s, $F_x=1353$ N, $M=622{,}5$ N m, $P=20{,}86$ kW, $\eta_h=0{,}923$, $P_{el}=18{,}8$ kW; bilanca 20,86+1,09+0,66=22,6 kW | `U12.P3.*` |
+| P4 | — | NOVI | `ex-radijalno-kolo-crpke-euler`, T2; slika `u12_val3_pokretna_lopatica.svg` ponovno nacrtana (`fig-radijalno-kolo-crpke-trokuti`) | $u=9{,}11/19{,}74$, $c_m=3{,}41/2{,}755$ m/s, $\beta_1=20{,}5^\circ$, $c_{2t}=13{,}83$, $e=273{,}0$ J/kg, $H_{th}=27{,}8$ m, $P=12{,}6$ kW | `U12.P4.*`, checker (lopatice, trokuti) |
+| P5 | — | NOVI | `ex-propeler-u-napredovanju`, T3; slika `u12_fig_relativni_dotok.svg` ponovno nacrtana (`fig-aktuatorski-disk-propelera`) | $C_{Th}=1{,}078$, $v_d=7{,}32$, $v_w=8{,}65$ m/s, $P_i=1172$ kW, $\eta_i=0{,}819$; $D=2{,}6$ m: $\eta_i=0{,}763$ | `U12.P5.*`, checker (strujna cijev, brzine, $F_T$) |
+| P6 | `ex-u12-propeler-dronskog-kvadkoptera-u-stanju-visa-t2`, T2 | ZADRŽAN; $F_T$, provjera količinom gibanja, veza s $\eta_i=0$ u visu | isti | isti | `U12.P6.*` |
+| Z1–Z6 | — | ZADRŽANI; Z5 oznake $v_s$, $v_j$, $F_T$ i rečenica da je $\eta_{prop}=2v_s/(v_j+v_s)$ Froudeova učinkovitost; Z6 $F_T$ | isti ID-jevi | nepromijenjeni | `U12.Z*` |
+| samoprovjera 2 | duplikat „Zastani” | ZAMIJENJENO pitanjem o dva promjera propelera | — | — | — |
+| završni okvir | ishodi samo za vodilicu | USKLAĐEN s matricom (znak rada, trokut brzina, raspoloživa snaga, propulzija) | — | — | — |
+
+Skice: `u12_fig_uvod_pregled.svg` i `u12_vjezbe_skice.svg` samo natpisi
+($v_s$, $v_j$, $F_T$); geometrija nepromijenjena. Nove skice generirane iz
+podataka primjera (presjeci strujne cijevi iz kontinuiteta; kutovi lopatica
+20,5°/25° iz tangenti kvadratnih lukova; trokuti u mjerilu 5 px/(m/s)).
+Checker `check_u14_sketch_geometry.py` provjerava novu geometriju jednako
+strogo kao staru (2e-5 px). Bilježnica `u12_pelton_lopatica.ipynb` (Z3–Z5)
+nije mijenjana: podatci Z3–Z5 su isti, mijenjane su samo oznake u tekstu.
+
+Broj riječi: teorija 3001 → 2827, primjeri 3027 → 3311 (kolo u P3 i dva
+sadržajno bogatija nova primjera), ukupno 7769 → 7929. Cilj −1500 riječi nije
+dosegnut jer su istodobno dodani traženi sadržaji (idealna učinkovitost,
+Granica modela, MRF, Peltonovo kolo); daljnje kraćenje moguće je samo
+uklanjanjem sadržaja koji recenzija traži.
+
+Provjere: `verify_u12.py` 110 rezultata, 0 FAIL; `check_u14_sketch_geometry.py`
+PASS (7 slika). Reference `#cfd-rotor-karakteristika`,
+`@ex-u12-propeler-dronskog-kvadkoptera-u-stanju-visa-t2`,
+`#task-izlaz-lopatice-iz-izmjerene-sile` i svi `#sec-/#eq-/#fig-` ID-jevi koji
+nisu zamijenjeni ostali su; CFD okvir „Propeler iza trupa” preusmjeren na
+`@ex-propeler-u-napredovanju`.

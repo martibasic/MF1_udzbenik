@@ -255,3 +255,66 @@ Fizikalne aproksimacije ostaju izričito označene; ovo nije tvrdnja da je
 statička kapljica vjeran model cijeloga procesa doziranja. Završni prolaz kroz
 72 prikaza, A4 ispis, WCAG i JupyterLite Python do stanja Idle prošao je
 23. rujna 2026.; zajednička evidencija sadrži dovršeni pregled svih zahtjeva.
+
+## Revizija 12. 10. 2026. — provedba nalaza stručne recenzije
+
+Autorica je odobrila provedbu svih nalaza recenzije (12. 10. 2026.).
+Radna grana `recenzija-2026-10`; generatori bez `--write`.
+
+### Matrica zamjena
+
+| Mjesto | Postojeća uloga / odluka | Nova aktivnost | Razina | Stabilni ID | Status |
+| --- | --- | --- | --- | --- | --- |
+| Z1 | Viskozna sila između ploča; ZADRŽATI | brzina ploče $u$ | T1 | `task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se` | ugrađeno |
+| Z2 | Kapljica i mjehur; ZADRŽATI | oznake $p_u$, $p_{atm}$ u napomeni uz skicu | T1 | `task-kapljica-i-sapunasti-mjehur` | ugrađeno |
+| Z3 | Ploča između dvaju procjepa; ZADRŽATI | brzina ploče $u$ | T2 | `task-ploca-izmedu-dva-procjepa` | ugrađeno |
+| Z4 | Etanol u kapilari, dvojnik P3 s neopravdanom oznakom T2; ZAMIJENITI | Morska voda u procjepu između limova: izvod $h=2\sigma\cos\theta/(\rho gb)$, usporedba s kružnom formulom (faktor 2), hidrofobni premaz (predznak, ulazna barijera) | T2 | `task-kapilarni-uspon-u-procjepu-limova` (stari `task-u02-kapilara-promjera-uronjena-je-u-etanol-za` ostaje kao `<span>`) | ugrađeno |
+| Z5 | Newtonski model iz mjerenja; ZADRŽATI | površina $A$ (ne $S$), brzina ploče $u$ | T3 | `task-newtonski-model-iz-mjerenja` | ugrađeno |
+| Z6 | Kapilarna igla pod tlakom; ZADRŽATI | — | T4 | `task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na` | nepromijenjeno |
+
+### Ostale provedene stavke
+
+- Izvod restrukturiran: „Matematički izvod — Newtonov zakon viskoznosti u
+  Couetteovu sloju” (pitanje → bilanca sloja $d\tau/dy=0$ → konstitutivni model
+  → linearan profil → $\tau=\mu u/\delta$, $F=\mu Au/\delta$ → provjera);
+  novi `eq-couette-bilanca-sloja`, `eq-couette-linearni-profil`. Izvod
+  kapilarnog uspona premješten iza Youngove jednadžbe u vlastiti blok
+  „Matematički izvod — Ravnoteža kapilarnog uspona” (ID-jevi jednadžbi
+  05–07 i `razrada-koraka-01/02` zadržani). Uklonjeni duplikati:
+  `eq-reologija-razrada-koraka-03`,
+  `eq-reologija-matematicki-izvod-youngova-jednadzba-i-podrijetl-03`, odjeljak
+  „Newtonov zakon viskoznosti” s `eq-reologija-newtonov-zakon-viskoznosti-01/02`
+  (sadržaj spojen s uvodom i izvodom).
+- Novi blok „Granica modela — Newtonski sloj i statički meniskus”.
+- P5 prekontekstualiziran u ležaj statvene cijevi (isti brojevi, isti ID,
+  ista skica; u skici `vratilo`→`osovina`, brzina osovine $u$).
+- Notacija: brzina fluida $v$, brzina ploče/osovine $u$, komponente $v_i$ u
+  tenzorskom bloku (napomena o $u_i$), $A$ umjesto $S$, $p_u$ i $p_{ok}$ u
+  Young–Laplaceu, $p_{atm}$ umjesto $p_0$ u P4, `\tau` bez Unicode/`{}`
+  artefakata, meniskus, ASCII sidro `tlacni-skok-na-kapljici`, „laboratorij
+  na čipu (engl. lab-on-chip)”, kavitacija definirana uz uputu na pog. 13,
+  P6 bez tvrdnje o newtonskoj krvi, CFD „Hladno pokretanje” s provjerom prema
+  Hagen–Poiseuilleu (pog. 12).
+- „Provjeri sebe” 4: zamijenjeno pitanjem o dvjema kapljicama različitih promjera.
+- Skice: `u02_vjezbe_skice.svg` panel Z4 (dva procjepa: čisti čelik 30°,
+  premaz 105°), oznake $u$/$v(y)$/$A$/$p_u$; `u02_fig_uvod_pregled.svg`,
+  `u02_fig_kinematicka_viskoznost.svg`, `u02_val2_viskoznost_kapilarnost.svg`,
+  `u02_fig_lezaj_temperatura.svg` (oznaka brzine $u$, osovina),
+  `u02_ch1_kapilarni_mikrodozator_kapljica.svg` ($p_{atm}$).
+  `check_u02_sketch_geometry.py`: Z4 provjerava kut 30° kroz tekućinu,
+  plitki konveksni luk 105° ispod slobodne površine, jednake širine procjepa,
+  uronjene otvore, kontinuitet tekućine i omjer uspona i spuštanja.
+- Notebook `u02_kapilarni_uspon.ipynb`: osnovni slučaj prebačen sa starog
+  Z4 na P3 ($d=1{,}0$ mm, $h=10{,}80$ mm); dodana provjera Z4 (faktor 2).
+
+### Kontrolni račun Z4
+
+$h_1=2\cdot0{,}073\cos30^\circ/(1025\cdot9{,}81\cdot0{,}20\cdot10^{-3})=62{,}87$ mm;
+kružna formula s $d=b$: 125,7 mm; premaz: $h_2=-18{,}79$ mm, ulazna barijera
+$\rho g|h_2|=2\sigma|\cos\theta_2|/b=188{,}9$ Pa.
+
+### Provjere
+
+- `python tools/verify_u02.py`: 83 rezultata, 0 FAIL.
+- `python tools/check_u02_sketch_geometry.py`: PASS (7 SVG-ova).
+- Notebook izvršen u čistom kernelu (vidi izvještaj provedbe).

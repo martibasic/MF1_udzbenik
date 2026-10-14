@@ -120,7 +120,7 @@ def build(root=ROOT) -> str:
         "",
         "## Ključ smjernica i kontrolnih rezultata",
         "",
-        "Pronađi poglavlje i oznaku zadatka Z1–Z6. Uz svaki zadatak nalaze se kratka smjernica, kontrolni rezultat ili kriterij te poveznica na puni iskaz.",
+        "Pronađi poglavlje i oznaku zadatka Z1–Z6. Uz svaki zadatak nalaze se kratka smjernica i kontrolni rezultat ili kriterij; puni iskaz s podatcima otvara poveznica „Vrati se na zadatak”.",
         "",
         "Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke, jedinice te barem jednu neovisnu fizikalnu vezu. Otvoreni dijelovi zadataka T3 i T4 mogu imati više prihvatljivih odgovora.",
         "",
@@ -140,7 +140,6 @@ def build(root=ROOT) -> str:
             seen.add(task["id"])
             total += 1
             key_id = f"key-{task['id']}"
-            prompt = portable_xrefs(task["prompt"], wrapper_name)
             hint = portable_xrefs(task["hint"], wrapper_name)
             answer = portable_xrefs(task["answer"], wrapper_name)
             lines.extend(
@@ -148,8 +147,6 @@ def build(root=ROOT) -> str:
                     f"### Z{task['number']}. {task['title']} {{#{key_id} .unnumbered .unlisted}}",
                     "",
                     f"[Vrati se na zadatak]({wrapper_name}#{task['id']})",
-                    "",
-                    f"**Sažetak.** {prompt}",
                     "",
                     *(
                         [f"**Smjernica postupka.** {hint}", ""]

@@ -272,3 +272,56 @@ punog hoda, prije odluke o devet cijelih poteza. U P6 uklonjeno je rano
 zaokruživanje površina pri računu tlaka i sile: sila se provjerava izravno
 omjerom kvadrata promjera. Konačni rezultati, podatci i ID-jevi ostaju isti.
 Obnovljeni su HTML U01, cjeloviti HTML za ispis i zajednički nativni PDF.
+
+## Revizija 12. 10. 2026. — provedba nalaza stručne recenzije
+
+Autorica je odobrila provedbu svih nalaza recenzije (recenzent mehanike
+fluida, 12. 10. 2026.). Radna grana `recenzija-2026-10`; generatori nisu
+pokretani s `--write`, manifest, D06 i omotači ostaju koordinatoru.
+
+### Matrica zamjena
+
+| Mjesto | Postojeća uloga / odluka | Nova aktivnost | Razina | Stabilni ID | Status |
+| --- | --- | --- | --- | --- | --- |
+| Z1 | Gustoća iz vaganja; ZADRŽATI | — | T1 | `task-gustoca-ulja-iz-vaganja` | nepromijenjeno |
+| Z2 | Servisna preša, dvojnik P3; ZAMIJENITI | Hidraulički kormilarski stroj: dva cilindra na rudu s dva kraka; sila na klip, moment na struk, dobavljeni volumen | T1 | `task-kormilarski-stroj-dva-cilindra` (stari `task-u01-u-servisnoj-hidraulicnoj-presi-mali-klip-promjera` ostaje kao `<span>`) | ugrađeno |
+| Z3 | Provjera pogrešnog proračuna; ZADRŽATI | notacija $p_M$ | T2 | `task-pogreske-omjera-sile-i-pomaka` | ugrađeno |
+| Z4 | Mjerni cilindar i stlačivost; ZADRŽATI | razlika tlakova označena $\Delta p$ | T2 | `task-promjer-cilindra-iz-volumena` | ugrađeno |
+| Z5 | Izbor crpke; ZADRŽATI | nazivlje crpka, $p_M$ | T3 | `task-izbor-pumpe-sila-i-hod` | ugrađeno |
+| Z6 | Nosivost stola; ZADRŽATI | nazivlje crpka, $p_M$ | T4 | `task-u01-hidraulicni-radni-stol-podupiru-tri-jednaka-cilindra` | ugrađeno |
+
+### Ostale provedene stavke
+
+- Blok „Matematički izvod — Pascalov zakon i očuvanje rada”: $\Delta p=F_1/A_1$
+  slijedi iz ravnoteže klipa (ne „definira se”), rezultat $F_1s_1=F_2s_2$
+  stoji iza koraka, dodana provjera graničnih slučajeva i uputa da se jednolik
+  prijenos dokazuje hidrostatičkom jednadžbom u pog. 3. Svi `eq-` ID-jevi zadržani.
+- Granica modela dobila je oznaku „Granica modela — …” i definicije $\Delta V_p$, $A_L$, $s_L$.
+- Nazivlje: hidraulički/hidraulička, crpka/crpni klip (ID-jevi, putanje i
+  `eq-` oznake nisu dirani). Uklonjeno trostruko „35 puta”; P4 „Provjera i
+  tumačenje” skraćena na tumačenje; ispravljena rečenica o projekcijama u
+  Cauchyjevu tetraedru; u P3 razdvojen pokus stlačivosti od glavnog primjera.
+- Notacija: manometarski tlak $p_M$ u P2–P6 i Z2–Z6 te u uvodu liste zadataka.
+- „Provjeri sebe” 2: pitanje koje je ponavljalo „Zastani i promisli” zamijenjeno
+  pitanjem o kočnim cilindrima različitih promjera i visinskoj razlici.
+- Skica `u01_vjezbe_skice.svg`: panel Z2 preuređen u tlocrt kormilarskog
+  stroja (isti okvir panela, isti prefiks ID-jeva); `title`/`desc` i
+  „Napomene uz skice” usklađeni. `check_u01_sketch_geometry.py` dobio je
+  funkciju `steering` (povezano ulje, klipovi na ulju, klipnjače izvan ulja,
+  jednaki krakovi, isti smisao momenta, luk momenta oko struka, kote).
+- Notebook `u01_hidraulicna_presa.ipynb`: osnovni scenarij prebačen sa
+  starog Z2 na Z3 (20/60 mm, 100 N, 90 mm → 900 N, 10 mm); nazivlje crpka.
+
+### Kontrolni račun Z2
+
+$A=\pi\cdot0{,}125^2/4=1{,}2272\cdot10^{-2}$ m²; $F=6{,}0\cdot10^6\cdot A=73{,}63$ kN;
+$M=2Fr=88{,}36$ kN m; $V=As=3{,}682$ L. Invarijante: moment je zbroj dvaju
+jednakih krakova, linearan u tlaku; volumen ovisi samo o hodu.
+
+### Provjere
+
+- `python tools/verify_u01.py`: 84 rezultata, 0 FAIL.
+- `python tools/check_u01_sketch_geometry.py`: PASS (7 SVG-ova).
+- `python tools/execute_notebooks.py --notebook u01_hidraulicna_presa.ipynb`: OK.
+- Manifest i D06 nisu regenerirani (koordinator); `content-index.json` i
+  `verification_manifest.json` zato su privremeno zastarjeli za Z2.

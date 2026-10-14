@@ -175,3 +175,44 @@ PDF-a u mapu za preuzimanje, prolazi: 24 HTML stranice, 210 slika, 1916 veza
 i 434 sklopiva bloka. Manifest, ključ i normalizacija javnog teksta aktualni
 su; `git diff --check` prolazi. Dodatno je vizualno potvrđen novi prijelom
 jednadžbi (3.30) i (3.35) na stranicama 57 i 59, bez sudara s brojevima.
+
+## Revizija 12. 10. 2026.
+
+Provedba nalaza stručne recenzije (recenzent mehanike fluida) na grani
+`recenzija-2026-10`, uz odobrenje autorice. Opseg: riješeni primjeri, teorija,
+CFD odlomci, notacija i skice U03; zadatci Z1–Z6, njihovi podatci, razine,
+naputci i kontrolni rezultati nisu mijenjani (u Z2 i Z6 samo je oznaka tlaka
+plina usklađena na $p_{pl}$). Raspored ostaje 2×T1, 2×T2, T3, T4 i šest primjera.
+
+| Mjesto P/Z | Postojeći ID i uloga | Odluka i nova didaktička korist | Nova razina | Novi/zadržani ID | Povezane datoteke i provjere | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| P1 | `ex-u03-tlak-u-prikljucku-zatvorenog-vodenog-spremnika-t1`, zatvoreni spremnik | ZADRŽATI; notacija $p_{pl}$, $p_{M,pl}$, $p_{M,A}$ | T1 | zadržan | verifier (result-ID `U03.P1.p_pl_kPa`) | Provedeno |
+| P2 | `ex-u03-diferencijalni-manometar-izme-u-slatke-i-morske` | ZADRŽATI bez izmjene; bilježnica P2 ostaje ista | T3 | zadržan | — | Provedeno |
+| P3 | `ex-u03-zatvoreni-vodeni-spremnik-s-uljnim-referentnim-spremnikom`, isti postupak kao Z6 | ZAMIJENITI sondiranjem teretnog tanka: tlačni mjerač razine na dnu, pretlak inertnog plina, vodeni talog, ullage; odluka o dvofluidnom modelu i zanemarivanju stupca plina | T3 | `ex-sondiranje-teretnog-tanka-s-tlacnim-mjeracem-razine` (stari ID kao span) | SVG `u03_ch1_zatvoreni_spremnik_ulje_ziva.svg` (novi prizor, fig-ID `fig-sondiranje-teretnog-tanka`), verifier `U03.CH1.*`, checker | Provedeno |
+| P4 | `ex-u03-tlak-na-usisu-pumpe-za-cirkulaciju-ulja` | ZADRŽATI; nazivlje crpka, $NPSH_a$/$NPSH_r$; ID i eq-ID-jevi ostaju | T2 | zadržan | — | Provedeno |
+| P5 | `ex-u03-balastni-tank-broda-tlak-iznutra-i-izvana` | PREPRAVITI brodograđevno: bočni balastni tank dvobokog tankera, balast morske vode 1025 kg/m³, ploča oplate P umjesto prozora, sondna cijev, stanje C iz sondiranja i ullage; neto tlak jednolik $\rho g(T_g-H_t)$ | T2 | zadržan | SVG `u03_fig_balastni_tank.svg`, verifier `U03.balastni.*`, checker | Provedeno |
+| P6 | `ex-u03-iot-tlacni-senzor-za-otkrivanje-propustanja-u` | PREPRAVITI: čvor B je podnožje vodotornja, razina u tornju iz tlaka (lajtmotiv vodotoranj); zaokruživanja 372,0 / 148,0 / 249,3 | T2 | zadržan | verifier `U03.iot.*` | Provedeno |
+
+Ostale izmjene: uklonjena redundancija $p=p_{pov}+\rho gh$ (jednadžbe
+`razrada-koraka-02/03` spojene u `razrada-koraka-01`); CFD odlomak o Venturiju
+zamijenjen hidrostatičkom inicijalizacijom balastnog tanka s provjerom
+$p_{rgh}$; dodan blok „Granica modela”; most prema U04 (slika
+`u03_balans_tlaka_i_geff`) premješten pred Sažetak; ispravljena najava P3,
+predznak sile na desnu plohu kvadra i uvjet istog fluida za diferencijalni
+manometar; notacija $p_{pov}$ (tlak slobodne površine), $p_{pl}$ (plin),
+$p_{M,X}$, piezometarska visina, hidrostatički; drugo pitanje u „Provjeri sebe”
+više ne ponavlja „Zastani i promisli”.
+
+Kontrolni računi (Python, od nule): P3 $h_o=15{,}9401$ m, $U=2{,}3099$ m,
+$p_{aps}=242{,}0$ kPa, jednofluidni model 16,357 m (+250 m³), bez pretlaka
+16,296 m (+213 m³), stupac plina 27,2 Pa; P5 85,47/65,36/50,28/30,17 kPa, neto
+35,19 kPa na dnu i ploči, stanje C 55,30 kPa; P6 372,03 kPa, 147,97 kPa,
+249,27 kPa, $h_T=15{,}11$ m, pad 5,11 m. `rewrite_status=preradeno`,
+`rewrite_level=P3` za P3 (scenarij, ulazi, izlazi, odluka); P5/P6 su
+prepravke bez praga 3/5. Izvor ideja je recenzija i autorska konstrukcija.
+`sketch_requirement`: P3 i P5 potrebna (prizor, kote, sonda); P6 bez skice
+kao i prije. Verifikator: uklonjene mrtve funkcije `primjer_2`, `primjer_4`,
+stari `primjer_vodotoranj` i `cjeloviti_1`; dodani `cjeloviti_sondiranje`,
+novi `primjer_balastni`, `primjer_vodotoranj`. Novi `check_u03_sketch_geometry.py`
+provjerava slojeve, mjerilo 20 i 36 px/m, otvoren ullage otvor, sondu
+iznad dna i oznake. D06 i manifest obnavlja koordinator generatorima.

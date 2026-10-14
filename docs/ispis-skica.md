@@ -121,7 +121,7 @@ Redizajn tiskovnih figura smanjio je tadašnjih 420 stranica na 340 uz povećanj
 minimalne veličine oznaka sa 7 na 9 pt. Tadašnji regresijski raspon bio je
 310–380 stranica. Naknadna [tipografska revizija](pdf-tipografija.md) mijenja
 prijelom teksta i naslovâ, uz nepromijenjene tiskovne figure i veličine oznaka.
-Njezin zasebno obrazloženi raspon je 270–335 stranica. Raspon je rani alarm za
+Njezin zasebno obrazloženi raspon bio je 270–335 stranica; nakon recenzentske dopune 12. listopada 2026. iznosi 290–355 stranica (vidi tipografsku reviziju). Raspon je rani alarm za
 promjenu prijeloma, a potpunost se dodatno provjerava prema indeksu objekata
 u stvarnom PDF-u. Nije dopuštenje za sitniji tekst ili uklanjanje sadržaja.
 Promjena izvan raspona zahtijeva obrazloženje i ponovni pregled.

@@ -1,4 +1,4 @@
-"""Numerička verifikacija kanonskoga U14; naslijeđeni namespace U12."""
+"""Numerička verifikacija kanonskoga U14 (vodilica, lopatica, Peltonovo kolo, radijalno kolo crpke, propeler, dron, Z1-Z6); naslijeđeni namespace U12."""
 from __future__ import annotations
 
 import math
@@ -55,24 +55,6 @@ def primjer_2_ukljestena(Q=0.015, v=12.5, h=0.45, l=0.70, alpha_deg=60.0,
     return {"d": d, "R_x": R_x, "R_y": R_y, "M_O": M_O}
 
 
-def primjer_3_relativni(d=0.038, c_1=22.0, u=8.0, rho=998.0):
-    A = math.pi * d**2 / 4
-    w_1 = c_1 - u
-    m_rel = rho * A * w_1
-    m_full = rho * A * c_1
-    ratio = m_rel / m_full
-    return {"w_1": w_1, "m_rel": m_rel, "ratio": ratio}
-
-
-def primjer_4_pokretna_ravna(d=0.040, c_1=24.0, u=9.0, rho=998.0):
-    A = math.pi * d**2 / 4
-    c_r = c_1 - u
-    m_rel = rho * A * c_r
-    F = m_rel * (c_1 - u)
-    P = F * u
-    return {"m_rel": m_rel, "F": F, "P": P}
-
-
 def cjeloviti_1_zakrivljena(d=0.045, c_1=26.0, u=10.0, k=0.90,
                              beta_deg=30.0, rho=998.0):
     A = math.pi * d**2 / 4
@@ -95,7 +77,8 @@ def cjeloviti_1_zakrivljena(d=0.045, c_1=26.0, u=10.0, k=0.90,
 
 
 def cjeloviti_2_pelton(d=0.044, c_1=31.0, n=320.0, r=0.46, k=0.90,
-                        beta_deg=20.0, rho=998.0, P_G=9.5e3):
+                        beta_deg=20.0, rho=998.0, P_G=9.5e3,
+                        eta_m=0.96, eta_G=0.94):
     A = math.pi * d**2 / 4
     omega = 2 * math.pi * n / 60
     u = omega * r
@@ -109,9 +92,19 @@ def cjeloviti_2_pelton(d=0.044, c_1=31.0, n=320.0, r=0.46, k=0.90,
     F_f_x = -F_l_x
     M = F_f_x * r
     P = M * omega
-    dP = P - P_G
+    m_full = rho * A * c_1
+    F_wheel = m_full * (c_1 - c_2x)
+    P_wheel = F_wheel * u
+    P_jet = 0.5 * m_full * c_1**2
+    c_2y = w_2 * math.sin(beta)
+    loss_blade = 0.5 * m_full * (w_1**2 - w_2**2)
+    exit_kinetic = 0.5 * m_full * (c_2x**2 + c_2y**2)
     return {"u": u, "w_1": w_1, "m_rel": m_rel, "c_2x": c_2x,
-            "F_f_x": F_f_x, "M": M, "P": P, "dP": dP}
+            "F_f_x": F_f_x, "M": M, "P": P, "dP": P - P_G,
+            "m_full": m_full, "F_wheel": F_wheel, "M_wheel": F_wheel * r,
+            "P_wheel": P_wheel, "P_jet": P_jet, "eta_h": P_wheel / P_jet,
+            "P_el_available": P_wheel * eta_m * eta_G,
+            "loss_blade": loss_blade, "exit_kinetic": exit_kinetic}
 
 
 def cjeloviti_3_flyboard(m=150.0, d=0.050, v=15.0, h=10.0, rho=1000.0, g=9.81):
@@ -150,6 +143,41 @@ def primjer_hidromlazni(d=0.120, v_mlaz=8.5, rho=1005.0, V_plovilo=1.2):
     F_p = m_dot * v_mlaz
     P_kin = 0.5 * m_dot * v_mlaz**2
     return {"A": A, "m_dot": m_dot, "F_p": F_p, "P_kin": P_kin}
+
+
+def primjer_radijalno_kolo(n=1450.0, r1=0.060, r2=0.130, b1=0.035, b2=0.020,
+                            Q=0.045, beta2_deg=25.0, rho=1025.0, g=9.81, eta_h=0.82):
+    """Eulerova visina radijalnog kola bez predvrtnje; kut lopatice od smjera -u."""
+    omega = 2 * math.pi * n / 60
+    u1, u2 = omega * r1, omega * r2
+    cm1 = Q / (2 * math.pi * r1 * b1)
+    cm2 = Q / (2 * math.pi * r2 * b2)
+    beta1 = math.degrees(math.atan2(cm1, u1))
+    w2t = -cm2 / math.tan(math.radians(beta2_deg))
+    c2t = u2 + w2t
+    e = u2 * c2t
+    c2 = math.hypot(c2t, cm2)
+    w1 = math.hypot(u1, cm1)
+    w2 = math.hypot(w2t, cm2)
+    split = (c2**2 - cm1**2) / 2 + (u2**2 - u1**2) / 2 + (w1**2 - w2**2) / 2
+    return {"omega": omega, "u1": u1, "u2": u2, "cm1": cm1, "cm2": cm2,
+            "beta1": beta1, "w2t": w2t, "w2": w2, "c2t": c2t, "c2": c2,
+            "e": e, "H_th": e / g, "P": rho * Q * e, "M": rho * Q * e / omega,
+            "split": split, "H_real": eta_h * e / g}
+
+
+def primjer_propeler(F_T=160e3, v_A=6.0, D=3.2, rho=1025.0):
+    """Jednoliko opterećen aktuatorski disk u napredovanju."""
+    A = math.pi * D**2 / 4
+    C_Th = F_T / (0.5 * rho * v_A**2 * A)
+    root = math.sqrt(1 + C_Th)
+    v_d = v_A * (1 + root) / 2
+    v_w = 2 * v_d - v_A
+    P_i = F_T * v_d
+    return {"A": A, "C_Th": C_Th, "v_d": v_d, "v_w": v_w, "induced": v_d - v_A,
+            "dp": F_T / A, "P_useful": F_T * v_A, "P_i": P_i, "eta_i": 2 / (1 + root),
+            "wake_power": 0.5 * rho * A * v_d * (v_w - v_A)**2,
+            "thrust_check": rho * A * v_d * (v_w - v_A)}
 
 
 def primjer_kvadrokopter(m=2.4, rotor_count=4, D=0.280, rho=1.045,
@@ -278,30 +306,78 @@ def verify():
     _check(out, "U12.P1.F_f_x", r["F_f_x"], 404.4, "N", rel=0.02)
     _check(out, "U12.P1.R", r["R"], 451.0, "N", rel=0.02)
 
-    r = primjer_3_relativni()
-    _check(out, "U12.P2.w_1", r["w_1"], 14.0, "m/s")
-    _check(out, "U12.P2.m_rel", r["m_rel"], 15.85, "kg/s", rel=0.02)
-    _check(out, "U12.P2.ratio", r["ratio"], 0.636, "", rel=0.02)
-
-    r = primjer_4_pokretna_ravna()
-    _check(out, "U12.P3.m_rel", r["m_rel"], 18.81, "kg/s", rel=0.02)
-    _check(out, "U12.P3.F", r["F"], 282.0, "N", rel=0.02)
-    _check(out, "U12.P3.P", r["P"], 2540.0, "W", rel=0.02)
-
     r = cjeloviti_1_zakrivljena()
-    _check(out, "U12.P4.m_rel", r["m_rel"], 25.4, "kg/s", rel=0.02)
-    _check(out, "U12.P4.c_2x", r["c_2x"], -2.47, "m/s", rel=0.05)
-    _check(out, "U12.P4.F_f_x", r["F_f_x"], 723.0, "N", rel=0.02)
-    _check(out, "U12.P4.F", r["F"], 746.0, "N", rel=0.02)
-    _check(out, "U12.P4.P", r["P"], 7230.0, "W", rel=0.02)
+    _check(out, "U12.P2.m_rel", r["m_rel"], 25.4, "kg/s", rel=0.02)
+    _check(out, "U12.P2.c_2x", r["c_2x"], -2.47, "m/s", rel=0.05)
+    _check(out, "U12.P2.F_f_x", r["F_f_x"], 723.0, "N", rel=0.02)
+    _check(out, "U12.P2.F", r["F"], 746.0, "N", rel=0.02)
+    _check(out, "U12.P2.P", r["P"], 7230.0, "W", rel=0.02)
+    drop = 0.5*r["m_rel"]*(26**2-(r["c_2x"]**2+r["c_2y"]**2))
+    _invariant(out, "U12.P2.energy_split", abs(drop-r["P"]-0.5*r["m_rel"]*(16**2-14.4**2))<1e-9
+               and abs(r["F_f_x"]-r["m_rel"]*16*(1+0.9*math.cos(math.radians(30))))<1e-9,
+               "Pad kinetičke energije mora biti snaga plus gubitak relativne brzine; kutna konvencija beta2=180-beta.")
 
     r = cjeloviti_2_pelton()
-    _check(out, "U12.P5.u", r["u"], 15.41, "m/s", rel=0.02)
-    _check(out, "U12.P5.w_1", r["w_1"], 15.59, "m/s", rel=0.02)
-    _check(out, "U12.P5.m_rel", r["m_rel"], 23.65, "kg/s", rel=0.02)
-    _check(out, "U12.P5.F_f_x", r["F_f_x"], 680.3, "N", rel=0.02)
-    _check(out, "U12.P5.M", r["M"], 313.0, "Nm", rel=0.02)
-    _check(out, "U12.P5.P_kW", r["P"] / 1000, 10.49, "kW", rel=0.02)
+    _check(out, "U12.P3.u", r["u"], 15.41, "m/s", rel=0.02)
+    _check(out, "U12.P3.w_1", r["w_1"], 15.59, "m/s", rel=0.02)
+    _check(out, "U12.P3.m_rel", r["m_rel"], 23.65, "kg/s", rel=0.02)
+    _check(out, "U12.P3.F_f_x", r["F_f_x"], 680.3, "N", rel=0.02)
+    _check(out, "U12.P3.M", r["M"], 313.0, "Nm", rel=0.02)
+    _check(out, "U12.P3.P_kW", r["P"] / 1000, 10.49, "kW", rel=0.02)
+    _check(out, "U12.P3.m_full", r["m_full"], 47.04, "kg/s", rel=0.005)
+    _check(out, "U12.P3.F_wheel", r["F_wheel"], 1353.0, "N", rel=0.005)
+    _check(out, "U12.P3.M_wheel", r["M_wheel"], 622.5, "Nm", rel=0.005)
+    _check(out, "U12.P3.P_wheel_kW", r["P_wheel"] / 1000, 20.86, "kW", rel=0.005)
+    _check(out, "U12.P3.P_jet_kW", r["P_jet"] / 1000, 22.60, "kW", rel=0.005)
+    _check(out, "U12.P3.eta_h", r["eta_h"], 0.923, "", rel=0.005)
+    _check(out, "U12.P3.P_el_available_kW", r["P_el_available"] / 1000, 18.8, "kW", rel=0.01)
+    _invariant(out, "U12.P3.wheel_vs_blade_and_energy",
+               abs(r["P_wheel"]/r["P"] - 31/r["w_1"]) < 1e-9
+               and abs(r["P_wheel"]+r["loss_blade"]+r["exit_kinetic"]-r["P_jet"]) < 1e-6
+               and r["P_el_available"] > 9.5e3 and abs(r["u"]/31-0.5) < 0.01,
+               "Omjer snaga kola i lopatice jest c1/w1; snaga kola, gubitak lopatice i izlazna energija zatvaraju snagu mlaza.")
+
+    r = primjer_radijalno_kolo()
+    _check(out, "U12.P4.u1", r["u1"], 9.11, "m/s", rel=0.005)
+    _check(out, "U12.P4.u2", r["u2"], 19.74, "m/s", rel=0.005)
+    _check(out, "U12.P4.cm1", r["cm1"], 3.41, "m/s", rel=0.005)
+    _check(out, "U12.P4.cm2", r["cm2"], 2.755, "m/s", rel=0.005)
+    _check(out, "U12.P4.beta1", r["beta1"], 20.5, "degree", rel=0.005)
+    _check(out, "U12.P4.w2t", r["w2t"], -5.91, "m/s", rel=0.005)
+    _check(out, "U12.P4.c2t", r["c2t"], 13.83, "m/s", rel=0.005)
+    _check(out, "U12.P4.e", r["e"], 273.0, "J/kg", rel=0.005)
+    _check(out, "U12.P4.H_th", r["H_th"], 27.8, "m", rel=0.005)
+    _check(out, "U12.P4.P_kW", r["P"] / 1000, 12.6, "kW", rel=0.005)
+    _check(out, "U12.P4.M", r["M"], 82.9, "Nm", rel=0.005)
+    _check(out, "U12.P4.H_real", r["H_real"], 22.8, "m", rel=0.005)
+    _invariant(out, "U12.P4.euler_split_and_sign",
+               abs(r["split"]-r["e"]) < 1e-9 and r["e"] > 0
+               and primjer_radijalno_kolo(beta2_deg=90.0)["e"] > r["e"]
+               and primjer_radijalno_kolo(beta2_deg=5.0)["e"] < 0,
+               "Rastav rada vraća Eulerov izraz; radijalna lopatica daje više, prejako nagnuta unatrag mijenja predznak.")
+
+    r = primjer_propeler()
+    _check(out, "U12.P5.A", r["A"], 8.04, "m2", rel=0.005)
+    _check(out, "U12.P5.C_Th", r["C_Th"], 1.078, "", rel=0.005)
+    _check(out, "U12.P5.v_d", r["v_d"], 7.32, "m/s", rel=0.005)
+    _check(out, "U12.P5.v_w", r["v_w"], 8.65, "m/s", rel=0.005)
+    _check(out, "U12.P5.induced", r["induced"], 1.32, "m/s", rel=0.01)
+    _check(out, "U12.P5.dp_kPa", r["dp"] / 1000, 19.9, "kPa", rel=0.005)
+    _check(out, "U12.P5.P_useful_kW", r["P_useful"] / 1000, 960.0, "kW", rel=1e-9)
+    _check(out, "U12.P5.P_i_kW", r["P_i"] / 1000, 1172.0, "kW", rel=0.005)
+    _check(out, "U12.P5.eta_i", r["eta_i"], 0.819, "", rel=0.005)
+    small = primjer_propeler(D=2.6)
+    _check(out, "U12.P5.C_Th_small", small["C_Th"], 1.633, "", rel=0.005)
+    _check(out, "U12.P5.v_d_small", small["v_d"], 7.87, "m/s", rel=0.005)
+    _check(out, "U12.P5.P_i_small_kW", small["P_i"] / 1000, 1259.0, "kW", rel=0.005)
+    _check(out, "U12.P5.eta_i_small", small["eta_i"], 0.763, "", rel=0.005)
+    _invariant(out, "U12.P5.momentum_energy_and_size",
+               abs(r["thrust_check"]-160e3) < 1e-6
+               and abs(r["P_i"]-r["P_useful"]-r["wake_power"]) < 1e-6
+               and abs(r["eta_i"]-r["P_useful"]/r["P_i"]) < 1e-12
+               and small["eta_i"] < r["eta_i"] and small["induced"] > r["induced"]
+               and abs(primjer_propeler(F_T=1.0)["eta_i"]-1) < 1e-5,
+               "Disk vraća potisak, trag nosi razliku snaga, manji disk ima manju idealnu učinkovitost, a lagano opterećenje tezi eta_i=1.")
 
     r = primjer_kvadrokopter()
     _check(out, "U12.P6.thrust", r["thrust"], 5.886, "N", rel=0.02)

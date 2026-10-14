@@ -447,6 +447,8 @@ def verify() -> list[dict[str, str]]:
     _check(out, "U15.P4.y2_y1", r["depth_ratio"], 4.94, "", abs_tol=0.005)
     _check(out, "U15.P4.y2", r["downstream_depth"], 1.24, "m", abs_tol=0.005)
     _check(out, "U15.P4.delta_E", r["energy_loss"], 0.774, "m", abs_tol=0.0005)
+    _invariant(out, "U15.P4.tailwater_decision", 1.00 < r["downstream_depth"] < 1.40,
+               "Nizvodni vodostaj 1,00 m ne drži skok uz ustavu, a 1,40 m ga potapa.")
 
     r = manning_channel()
     _check(out, "U15.P5.A", r["area"], 3.0, "m^2", abs_tol=0.05)
@@ -494,7 +496,7 @@ def verify() -> list[dict[str, str]]:
     _check(out, "U15.Z3.A", r["area"], 3.375, "m^2", abs_tol=0.0005)
     _check(out, "U15.Z3.T", r["top_width"], 5.100, "m", abs_tol=0.0005)
     _check(out, "U15.Z3.P", r["wetted_perimeter"], 5.645, "m", abs_tol=0.0005)
-    _check(out, "U15.Z3.Dh", r["hydraulic_depth"], 0.6618, "m", abs_tol=0.00005)
+    _check(out, "U15.Z3.yh", r["hydraulic_depth"], 0.6618, "m", abs_tol=0.00005)
     _check(out, "U15.Z3.Rh", r["hydraulic_radius"], 0.5979, "m", abs_tol=0.00005)
     _check(out, "U15.Z3.v", r["velocity"], 1.0667, "m/s", abs_tol=0.00005)
     _check(out, "U15.Z3.Fr", r["froude"], 0.4186, "1", abs_tol=0.00005)
@@ -599,84 +601,20 @@ def verify() -> list[dict[str, str]]:
     _check(out, "U15.Z6.freeboard_C", freeboards[2], 0.120, "m", abs_tol=0.0005)
     _check(
         out,
-        "U15.Z6.Qcap_conservative_A",
-        conservative_capacities[0],
-        10.583,
-        "m^3/s",
-        abs_tol=0.0005,
-    )
-    _check(
-        out,
-        "U15.Z6.Qcap_conservative_B",
-        conservative_capacities[1],
-        7.055,
-        "m^3/s",
-        abs_tol=0.0005,
-    )
-    _check(
-        out,
-        "U15.Z6.Qcap_conservative_C",
-        conservative_capacities[2],
-        4.922,
-        "m^3/s",
-        abs_tol=0.0005,
-    )
-    _check(
-        out,
         "U15.Z6.y2_design",
         float(r["design_jump_depth"]),
         1.059,
         "m",
         abs_tol=0.0005,
     )
-    _check(
-        out,
-        "U15.Z6.y2_capacity_A",
-        capacity_jump_depths[0],
-        1.628,
-        "m",
-        abs_tol=0.0005,
-    )
-    _check(
-        out,
-        "U15.Z6.y2_capacity_B",
-        capacity_jump_depths[1],
-        1.080,
-        "m",
-        abs_tol=0.0005,
-    )
-    _check(
-        out,
-        "U15.Z6.y2_capacity_C",
-        capacity_jump_depths[2],
-        0.765,
-        "m",
-        abs_tol=0.0005,
-    )
-    _check(
-        out,
-        "U15.Z6.robust_state_count",
-        float(r["robust_state_count"]),
-        1.0,
-        "1",
-        abs_tol=0.05,
-    )
-    _check(
-        out,
-        "U15.Z6.basin_exceedance_count",
-        float(r["basin_exceedance_count"]),
-        1.0,
-        "1",
-        abs_tol=0.05,
-    )
     _invariant(out, "U15.Z6.capacity_freeboard_and_basin",
-               all(a>b for a,b in zip(mean_capacities,conservative_capacities))
-               and all(a<b for a,b in zip(normal_depths,r['conservative_depths']))
-               and r['conservative_depths'][0]<1.2<r['conservative_depths'][1]
+               all(a>b for a,b in zip(mean_capacities,mean_capacities[1:]))
+               and all(a<b for a,b in zip(normal_depths,normal_depths[1:]))
+               and [f>=0.3 for f in freeboards]==[True,True,False]
                and all(abs(_manning_trapezoid_discharge(y,n,3,2,.0015)-8)<1e-10
                        for y,n in zip(normal_depths,(.018,.026,.035)))
-               and capacity_jump_depths[0]>1.4>r['design_jump_depth'],
-               "Veća hrapavost smanjuje rezervu; korijeni zatvaraju Manning; kapacitet A prelazi granicu bazena.")
+               and r['design_jump_depth']<1.4,
+               "Veća hrapavost smanjuje kapacitet i rezervu; A i B zadovoljavaju rub, C ne; korijeni zatvaraju Manning; bazen pri Qd unutar granice.")
 
     froude_dimension = _dim_product(
         VELOCITY,

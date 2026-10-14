@@ -1,5 +1,37 @@
 # Revizija U11 — dimenzijska analiza i sličnost
 
+## Revizija 12. 10. 2026. (provedba nalaza stručne recenzije)
+
+Autorica je odobrila provedbu svih nalaza recenzenta mehanike fluida.
+Provedeno u `source/u11_dimenzijska_analiza_i_slicnost.md`, `tools/verify_u14.py`,
+`assets/print/u14_vjezbe_skice.svg` i `tools/check_u11_sketch_geometry.py`;
+bilježnica `u14_cd_re_kugla.ipynb` (P5, Z4, Z6) nije mijenjana jer se podatci
+tih mjesta nisu promijenili.
+
+Teorija: dodana Froudeova hipoteza $C_T=C_F(Re)+C_R(Fr)$ (`eq-froudeova-hipoteza`),
+linija ITTC 1957 (`eq-ittc-1957`), omjer snaga $\lambda_L^{7/2}$
+(`eq-froude-skaliranje-snage`) i blok „Granica modela — Froudeova hipoteza i
+korelacijska linija”; eksponenti $\Pi_1$, $\Pi_2$ u izvodu otpora kugle
+(`eq-kugla-eksponenti-pi1`); definiran $T$ u $y_h=A/T$; napomena o konvenciji
+$Eu$ bez ½ i o $\lambda_L$ prema $\lambda$. Notacija: koeficijent otpora tijela
+dosljedno $C_D$ (koeficijent istjecanja ostaje $C_d$, referenca ispravljena
+na u08), tetiva $l$ umjesto $c$ u Z4, $v(r)$ u skici P1, „zračni vod” u P6,
+uklonjena samoreferencija na vlastito poglavlje. Pitanje 2 u „Provjeri sebe”
+zamijenjeno (duboko uronjeni hidroprofil i $Fr$).
+
+| Mjesto | Postojeći ID i uloga | Odluka | Razina | Završni ID | Kontrolni rezultat | Provjere |
+| --- | --- | --- | --- | --- | --- | --- |
+| P2 | `ex-u14-froudeova-slicnost-model-broda-u-vucnom-bazenu` | DOPUNITI: korak 4, $C_F$ po ITTC 1957 za model i brod, zašto ne $\lambda_L^3$ | T2 | isti | $C_{F,m}=2{,}96\cdot10^{-3}$, $C_{F,s}=1{,}48\cdot10^{-3}$, $P_p/P_m=\lambda_L^{7/2}=7{,}81\cdot10^4$ | `U14.P2.C_F_m`, `U14.P2.C_F_s`, `U14.P2.P_ratio`, invarijante |
+| P3 | `ex-u14-kavitacija-u-venturijevom-suzenju-t2` | DOPUNITI: konvencija $\sigma_{kav}$ ($p_{ref}=p_1$, $v_{ref}=v_2$) i prag $\sigma_{kr}=1-(A_2/A_1)^2$ | T2 | isti | $\sigma_{kr}\approx0{,}988>0{,}543$ | `U14.P3.sigma_kr`, invarijante kriterija i granice |
+| Z1 | `task-u14-krv-tece-arteriolom-promjera-brzinom-a-voda`; ponavljao postupak P1 | ZAMIJENITI: pravokutni ventilacijski kanal strojarnice, odluka o $D_h$ | T1 | `task-ventilacijski-kanal-hidraulicki-promjer` (stari ID kao `<span>`) | $v=8{,}00$ m/s, $D_h=0{,}2667$ m, $Re=1{,}42\cdot10^5$; s duljom stranicom $2{,}13\cdot10^5$ | `U14.Z1.v`, `U14.Z1.D_h`, `U14.Z1.Re`, `U14.Z1.Re_dulja`, 3 invarijante; panel Z1 u SVG-u i checker |
+| Z4 | `task-reynoldsova-slicnost-hidroprofila` | NOTACIJA: tetiva $l_p$, $l_m$, $A=bl$ (tekst i SVG) | T2 | isti | nepromijenjen | nepromijenjene |
+
+Provjere: `verify_u14.py` 84 rezultata bez pada (prije 71);
+`check_u11_sketch_geometry.py` PASS (novi panel Z1: omjer stranica 2:1,
+jednolika stijenka, kote na unutarnjim stijenkama, simbol toka unutar fluida);
+`audit_sketch_design.py` bez poruka za U11 skice. Ovo je autorska provedba
+recenzentskih nalaza; D01/D03/D06 i manifest obnavlja koordinator.
+
 ## Opseg i dijagnoza prije provedbe (22. rujna 2026.)
 
 Nakon korisnikova zahtjeva izvršen je commit/push dovršenih U09/U10

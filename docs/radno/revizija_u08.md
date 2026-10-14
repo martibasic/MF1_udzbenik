@@ -121,3 +121,55 @@ Na korisnikov zahtjev za commit i push izvršeno je svih 17 notebookova u
 (17 notebookova, četiri proširenja, Python/Pyodide). Ponovljene brojčane,
 geometrijske i strukturne provjere prolaze, kao i provjere CFD paketa,
 QR kodova, generiranog ključa te poveznica renderiranog sveučilišnog priručnika.
+
+## Revizija 12. 10. 2026.
+
+Provedba nalaza stručne recenzije, odobrena od autorice. Opseg: izvodi
+(Euler, Bernoulli, nova energijska jednadžba iz RTT-a), pretpostavke, granica
+modela, spojeni CFD odlomak, P3 (notacija), P4 (zamjena), P6, Z2 (zamjena),
+Z4 (brodski kontekst), Z5/Z6 (notacija), skice, verifier `verify_u09`,
+checker `check_u08_sketch_geometry.py`. P5 i bilježnica `u09_venturi.ipynb`
+nisu dirani.
+
+| P/Z | Princip, postupak i uloga | Odluka i didaktička korist | Razina / ID |
+| --- | --- | --- | --- |
+| Teorija | Tri integracije iste jednadžbe; nema energijske jednadžbe | PREPRAVITI: uklonjen duplicirani Euler i callout; dodan izvod „Energijska jednadžba iz RTT-a” s definicijom $\alpha$, $h_p$, $h_t$, $h_w$; Bernoulli kao poseban slučaj; obrazloženje primjene između mirne površine i presjeka; blok Granica modela; spojen CFD odlomak s ASCII sidrom; sidro `#cfd-venturi-mjerenje-gubitak` sačuvano | `eq-energijska-jednadzba-kv`, `eq-korekcijski-faktor-kineticke-energije` |
+| P1–P3 | Konfuzor, mlaz, sifon | ZADRŽATI; P3 s $p/(\rho g)$, $p_{M,C}$, $p_{aps,C}$ i napomenom o izboru točaka | postojeći |
+| P4 | Obilazni sifon sa suženjem, treći sifon | ZAMIJENITI: usisni vod rashladne crpke morske vode; izbor referentnih presjeka i apsolutne reference, zadani $h_w$, visina iznad tlaka pare kao most prema $NPSH_a$ u pog. 13, brod u balastu | T3; `ex-usisni-vod-rashladne-crpke-morske-vode` |
+| P5 | Venturi s uljem | NE DIRATI (bilježnica) | T2; postojeći |
+| P6 | Pitot na letjelici | ZADRŽATI; podatci usklađeni (p = 91,3 kPa, 12 °C → 1,115 kg/m³), razlika 1,45 m/s = 5,5 % | T2; postojeći |
+| Z1 | Torricelli | ZADRŽATI | T1; postojeći |
+| Z2 | Ventilacijski konfuzor, klon P1 | ZAMIJENITI: Venturijeva cijev za vodu s diferencijalnim pretvaračem (100/50 mm, 12,2 kPa) | T1; `task-venturijeva-cijev-rashladne-vode` |
+| Z3 | Silazno suženje | ZADRŽATI | T2; postojeći |
+| Z4 | Pitot s izdignutim senzorom | PREPRAVITI kontekst: Pitotov brzinomjer riječnog broda, iste brojke, dodano 12,2 čv; $p_{M,0}$ | T2; postojeći |
+| Z5 | Odabir grla | ZADRŽATI; $p_{aps,1}$, $p_{aps,C}$ | T3; postojeći |
+| Z6 | Sifon s gubitcima | ZADRŽATI; $h_w=\zeta v^2/(2g)$, $\zeta_\Sigma$, $\zeta_C$, $p_{aps,C}$, poziv na energijsku jednadžbu | T4; postojeći |
+
+Raspored ostaje 2×T1 (Z1, Z2), 2×T2 (Z3, Z4), T3 (Z5), T4 (Z6); šest
+riješenih primjera.
+
+Staro → novo:
+
+- `ex-u09-idealni-bypass-sifon-sa-suzenjem-u-vrhu` → P4 gore (bez aliasa; nema
+  vanjskih uputa). `fig-u09-idealni-bypass-sifon-sa-suzenjem` →
+  `fig-usisni-vod-rashladne-crpke` (ista datoteka `u09_ch1_bypass_sifon_suzenje_mlaz.svg`).
+- `task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s` → Z2 gore (span alias).
+- Uklonjene jednadžbe: `eq-energijska-bilanca-matematicki-izvod-bernoullijeva-jednadzba-iz-eul-01`,
+  `eq-energijska-bilanca-razrada-koraka-01..03` (duplikati; nema vanjskih uputa).
+- Sidro `#provjera-cfd-a-analitičkim-rješenjem` → `#provjera-cfd-a-analitickim-rjesenjem`.
+
+Kontrolni rezultati: P4 $v=2{,}83$ m/s, $p_{aps,P}=65{,}0$ kPa ($-36{,}3$ kPa
+manometarski; idealno 77,1 kPa), visina iznad tlaka pare 6,65 m, teorijska
+granica $z_{P,max}=8{,}24$ m, u balastu 49,9 kPa i 5,15 m. Z2 $Q=10{,}0$ L/s,
+$v_2=5{,}11$ m/s, pad piezometarske crte 1,25 m. Z4 dodatno 12,2 čv.
+
+Nazivlje: energijska crta (EGL), piezometarska crta (HGL), piezometarska
+visina, zaustavni tlak $p_0$ (stagnacijski jednom kao sinonim), $p_{M,\cdot}$,
+$p_{aps,\cdot}$, crpka, $\zeta$ umjesto $K$, „u ovom poglavlju” umjesto
+samoreferencije.
+
+Skice: `u09_ch1_bypass_sifon_suzenje_mlaz.svg` (novi prizor usisnog voda, isti
+viewBox), `u09_vjezbe_skice.svg` (paneli Z2 i Z4 unutar postojećih okvira).
+Checker provjerava kote 3,0/2,0/1,5 m u istom mjerilu, otvor košare kroz
+oplatu, početak voda u fluidu košare, otvorene priključke Venturija i omjer
+100:50. Nije rađeno: commit, generatori s `--write`, D01–D06 (koordinator).

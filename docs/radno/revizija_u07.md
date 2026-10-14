@@ -125,3 +125,57 @@ za 24 HTML stranice, 212 slika, 1918 poveznica i 434 sklopiva bloka.
 QR kodovi i generirani ključ aktualni su, a CFD provjera prolazi za sva
 tri paketa. Nedostajući alati instalirani su u privremeno lokalno Python
 okruženje, bez promjene projektnih ovisnosti.
+
+## Revizija 12. 10. 2026.
+
+Provedba nalaza stručne recenzije (recenzent mehanike fluida), odobrena od
+autorice. Opseg: teorija (RTT, bilanca mase, granica modela, CFD odlomci),
+P1, P2, Z1, Z3, Z5, Z6, četiri skice, verifier `verify_u08`, checker
+`check_u07_sketch_geometry.py`. Bilježnica `u08_kontinuitet_suzenje.ipynb`
+koristi vlastite podatke (12 L/s, 120/60 mm, spremnik s $k\sqrt h$) i nije
+mijenjana.
+
+| P/Z | Princip, postupak i uloga | Odluka i didaktička korist | Razina / ID |
+| --- | --- | --- | --- |
+| Teorija | RTT iskazan bez izvoda, iza bilance mase | PREPRAVITI: izvod RTT-a (sustav u $t$ i $t+\Delta t$, rubni volumeni, limes, provjera predznaka) prije bilance mase; bilanca mase kao $\eta=1$; blok Granica modela; naziv „Reynoldsov transportni teorem”; energijska jednadžba iz RTT-a sada u pog. 8 | `eq-rtt-dva-trenutka`; stari ID RTT-a zadržan |
+| P1 | Difuzor, kontinuitet | ZADRŽATI uz realne podatke: $v_2=1{,}6$ m/s → $v_1=3{,}6$ m/s, 40,7 L/s, 40,6 kg/s | T2; postojeći |
+| P2 | Izjednačni spremnik, isti postupak kao P3 | ZAMIJENITI: zahvatni usis morske vode na brodu u plovidbi, kontrolni volumen vezan uz brod, relativna naspram apsolutne brzine | T2; `ex-zahvatni-usis-morske-vode-u-plovidbi` |
+| P3 | Miješajući spremnik | ZADRŽATI; skraćena provjera | T3; postojeći |
+| P4 | T-komad | ZADRŽATI; „ogranak 2” | T2; postojeći |
+| P5 | Rashladni krug EV | ZADRŽATI; CFD odlomak razdjelnika premješten iza njega (sidro `#cfd-razdjelnik-podjela-protoka` sačuvano) | T2; postojeći |
+| Z1 | Proširenje cijevi, klon P1 | ZAMIJENITI: grijač ventilacijskog zraka strojarnice, promjena gustoće, masena naspram volumenske bilance | T2; `task-grijac-ventilacijskog-zraka-strojarnice` |
+| Z2 | Kosa kontrolna ploha | ZADRŽATI (predznak normale, provjera RTT-a) | T1; postojeći |
+| Z3 | Komora za miješanje | ZADRŽATI; razina T2 → T1 (primjena zadanog zakona) | T1; postojeći |
+| Z4 | Razdjelna glava | ZADRŽATI | T2; postojeći |
+| Z5 | Klip s protočnim otvorom | ZADRŽATI; indeksi ul/iz | T3; postojeći |
+| Z6 | Miješajući spremnik, ≈P3 | ZAMIJENITI: balastni tank dvodna, morska i slatka voda, prebačajna crpka, odzračna cijev, zajamčeni intervali i odluka o nadzoru | T4; `task-balastni-tank-dvodna-mijesanje-i-odzracnik` |
+
+Raspored ostaje 2×T1 (Z2, Z3), 2×T2 (Z1, Z4), T3 (Z5), T4 (Z6); šest
+riješenih primjera.
+
+Staro → novo (stari ID-jevi ostaju span aliasi):
+
+- `ex-u08-izjednacni-spremnik-tijekom-ispiranja-filtra-t2` → P2 gore (primjer;
+  bez aliasa jer se na njega ništa nije upućivalo).
+- `task-u08-voda-struji-kroz-cijev-koja-se-siri` → Z1 gore.
+- `task-u08-mijesajuci-spremnik-tlocrtne-povrsine-prima-vodu-gustoce` → Z6 gore.
+- `fig-u08-izjednacni-spremnik-s-akumulacijom` → `fig-zahvatni-usis-morske-vode`
+  (ista datoteka `u08_val3_izjednacni_spremnik.svg`, novi prizor).
+
+Kontrolni rezultati: P2 $\dot m=51{,}3$ kg/s, $w=1{,}25$ m/s, $w_r=2{,}27$ m/s,
+$v_{aps}=8{,}01$ m/s (pogrešni račun apsolutnom brzinom 328 kg/s). Z1
+$\dot m=4{,}32$ kg/s, $v_2=17{,}6$ m/s, $Q_1=3{,}60$, $Q_2=4{,}24$ m³/s. Z6
+$\rho_{mix}=1021{,}6$ kg/m³, $dh/dt=1{,}312$ mm/s, $h(15\ \text{min})=1{,}48$ m,
+$\Delta m=43{,}4$ t; konzervativno 1,460 mm/s, 1,61 m > 1,60 m, odzračnik za
+890 s. Nominalno prolazi, zajamčeno ne.
+
+Skice: `u08_val3_izjednacni_spremnik.svg` (novi prizor zahvatnog usisa, isti
+viewBox), `u08_val1_difuzor_kontinuitet.svg` (oznaka $v_2$),
+`u08_vjezbe_skice.svg` (paneli Z1 i Z6 unutar postojećih okvira). Checker
+provjerava otvoren prednji otvor usisa, antiparalelne brzine broda i relativne
+brzine, KV koji obuhvaća otvor, omjer visina kanala 0,30:0,24 s grijačem u
+fluidu te omjer razina 0,30:1,60 i otvorenu odzračnu cijev balastnog tanka.
+Vizualni pregled i PDF izvedenice pripadaju koordinatoru.
+
+Notacija: $m_{KV}$, indeksi ul/iz, $\vec v$, KV/KP u cijelom poglavlju.
+Nije rađeno: commit, generatori s `--write`, D01–D06 (koordinator).

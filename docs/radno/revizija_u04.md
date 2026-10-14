@@ -186,3 +186,37 @@ Ovo je lokalna validacija. Udaljeni objavni CI, ponovno izvršavanje
 notebooka i gradnja JupyterLite nisu dio ovog popravka. Quarto 1.9.32
 uspješno je izradio knjigu; CI koristi 1.9.37. Ranija upozorenja za
 `times.circle` u U10 ostaju. Commit i push nisu napravljeni.
+
+## Revizija 12. 10. 2026.
+
+Provedba nalaza stručne recenzije na grani `recenzija-2026-10`, uz odobrenje
+autorice. Zadatci Z1–Z6 nisu sadržajno mijenjani (u Z3 uvedene oznake A/B
+prema skici, u Z6 omjer brzina $k$ umjesto $\alpha$). Ostaje 2×T1, 2×T2, T3, T4
+i šest primjera; bilježnica `u04_paraboloidna_povrsina.ipynb` nije mijenjana.
+
+| Mjesto P/Z | Postojeći ID i uloga | Odluka i nova didaktička korist | Nova razina | Novi/zadržani ID | Povezane datoteke i provjere | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Teorija | izvod paraboloida u callout-u P4 | PREMJESTITI u `.mf1-izvod` ispred bloka o očuvanju volumena (isti eq-ID-jevi); CFD „Pokretanje” i interaktivni prikaz izvan P4; dodan blok „Granica modela” | — | zadržani eq-ID-jevi | — | Provedeno |
+| P1 | `ex-u04-otvoreni-spremnik-na-laboratorijskim-kolicima-t2` | ZADRŽATI; $h_{str}/h_{pred}$, kut 7,8° iz nezaokruženog tangensa | T2 | zadržan | verifier `U04.P1.theta_deg` | Provedeno |
+| P2 | `ex-u04-zatvoreni-servisni-modul-s-kosom-inspekcijskom-stijenkom` | PREPRAVITI: bez rezultante i hvatišta (gradivo U05); kut $\varphi$, $s$, $g_{eff}$, raspodjela tlaka duž AB i $p_{M,B}=21{,}8$ kPa s provjerom po komponentama | T2 | zadržan (uklonjeni eq-ID-jevi `...-koso-05..08`, novi `eq-tlak-uzduz-kose-stijenke-g-eff`, `eq-tlak-dna-kose-stijenke`) | SVG `u04_val3_kosa_stijenka.svg` (uklonjeni $F_R$ i $y_R$, oznaka $p_{M,B}$, $\varphi$), verifier `U04.P3.*`, checker | Provedeno |
+| P3 | `ex-u04-rotirajuci-cilindricni-spremnik-bez-prelijevanja-t2`, podskup P4 | ZAMIJENITI balastnim tankom broda u kružnom zavoju: $a=v_s^2/R$, nagib 1,24°, sonde 1,70/1,50 m, granica prelijevanja 29,8 čv, provjera lokalne aproksimacije paraboloidom | T2 | `ex-tank-broda-u-kruznom-zavoju` (stari ID kao span) | SVG `u04_fig_rotirajuci_cilindar.svg` (novi prizor, fig-ID `fig-tank-broda-u-kruznom-zavoju`), verifier `U04.P3b.*`, checker | Provedeno |
+| P4 | `ex-u04-rotirajuci-cilindricni-spremnik-s-granicom-prelijevanja-t3` | ZADRŽATI; uklonjen callout, upućivanje na izvod; „zapljuskivanje” | T3 | zadržan | — | Provedeno |
+| P5 | `ex-u04-nagib-goriva-u-spremniku-autocisterne-pri-kocenju` | ZADRŽATI; $h_{pred}/h_{str}$ | T2 | zadržan | — | Provedeno |
+| P6 | `ex-u04-laboratorijska-centrifuga-za-odvajanje-plazme-od-eritrocita` | ZAMIJENITI brodskim centrifugalnim separatorom goriva: $\Delta p=\tfrac12\rho\omega^2(r_2^2-r_o^2)$, razdjelnica iz ravnoteže tlakova (neovisna o $\omega$), osjetljivost na gustoću, kvantitativna granica relativnog mirovanja (Coriolis/centrifugalno $1{,}5\cdot10^{-4}$) | T3 | `ex-centrifugalni-separator-goriva` (stari ID kao span) | verifier `U04.P6.*`; bez skice (kao i stari P6) | Provedeno |
+
+Nazivlje i notacija: zapljuskivanje (ne valjanje), udar vala o pokrov,
+prividna (inercijska) sila, $\vec g_{eff}$, $p_{pov}$, $p_{M,pl}$, uklonjeni
+`{}` artefakti; četvrto pitanje u „Provjeri sebe” zamijenjeno; napomena uz
+skicu Z3 usklađena s tekstom. Kontrolni računi (Python, od nule): P2
+$p_{M,B}=21\,801{,}9$ Pa oba puta; P3 $a=0{,}2115$ m/s², $\Delta h=0{,}1940$ m,
+$h_v/h_u=1{,}697/1{,}503$ m, $v_{max}=15{,}34$ m/s, korekcija zakrivljenosti
+0,40 mm; P6 $\omega=754{,}0$ rad/s, 6954 g, 32,71 bar, $r_i=88{,}96$ mm (140,3 mm
+za 950 kg/m³), $t_z=14{,}0$ s, Coriolis/centrifugalno $1{,}48\cdot10^{-4}$.
+`rewrite_status=preradeno`, `rewrite_level=P3` za P3 i P6; P2 je prepravak.
+`sketch_requirement`: P3 potrebna (nagib u stvarnom omjeru, sonde, smjer prema
+središtu), P2 prepravljena, P6 bez skice. Verifikator: uklonjene mrtve funkcije
+`primjer_2_kada`, `primjer_6_vatrogasna`, `primjer_centrifuga`, `primjer_4_rotacija`;
+dodani `primjer_brod_u_zavoju`, `primjer_separator`. Novi
+`check_u04_sketch_geometry.py` provjerava nagib $a/g$ bez uvećanja, očuvanje
+volumena, otvorene sonde, okomitost tlaka na AB i izostanak sile/hvatišta.
+D06 i manifest obnavlja koordinator generatorima.

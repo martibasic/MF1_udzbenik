@@ -112,3 +112,39 @@ Nije pokrenut novi JupyterLite build, svih 17 notebookova ni puni CI/WCAG
 workflow; zadatak nije uključivao objavu. Lokalni Quarto je 1.9.32 (CI 1.9.37).
 Postojeća upozorenja Typsta za `times.circle` u U10 ostaju izvan opsega.
 Promjene nisu commitane niti poslane na GitHub.
+
+## Revizija 12. 10. 2026.
+
+Provedba nalaza stručne recenzije (recenzent mehanike fluida i brodske
+hidrostatike), odobrene od autorice. Opseg: tekst teorije, skice Z1/Z2,
+verifikator `verify_u05_integrated` i checker geometrije. Razine Z ostaju
+T1, T1, T2, T2, T3, T4; broj primjera ostaje 6 (zamjene 1:1, bez dodavanja).
+
+| Nalaz recenzije | Provedeno | Mjesto |
+| --- | --- | --- |
+| Brodograđevni lajtmotiv (brodski otvor) nije realiziran; Z1 klon P1 | Z1 zamijenjen vodonepropusnim vratima naplavljenog odjeljka (morska voda 1025 kg/m³, šarke i dva zasuna; sila, h_CP, moment oko osi šarki, sile zasuna) | `task-vodonepropusna-vrata-naplavljenog-odjeljka`, T1 |
+| Pet četvrtcilindričnih ploha; Z2 klon P4; tekst tvrdi da rezultanta kroz O ne vrijedi općenito, a nikad to ne pokazuje | Z2 zamijenjen paraboličnim pokrovom suhog kanala (voda iznad pokrova, F_x, F_z, pravci, F_R, moment oko A; normale nemaju zajedničku točku) | `task-parabolicni-pokrov-suhog-kanala`, T1 |
+| $\|F_V\|=\rho gV^*$ naveden, ne izveden | Dopisana bilanca sila na stupac fluida (težina, tlak na zatvarajućoj plohi, bočni tlakovi, reakcija plohe) | izvod „Vertikalna komponenta iz bilance stupca fluida” |
+| Pog. 5 bez `.mf1-izvod`, `.mf1-fizikalno-znacenje`, `.mf1-granica-modela` | Pet izvoda omotano s pitanjem i provjerom; dodano „Fizikalno značenje” uz centar tlaka i „Granica modela” za zakrivljene plohe | odjeljci ravne i zakrivljene plohe |
+| P4: referentna vertikala za $x_V$; P6: $M_A=F_V R$ | Navedeno „od vertikale kroz O”; u provjerama P4 i P6 iskorišteno da rezultanta kružnog luka prolazi kroz O (skica P4 već ima kotu $x_V$ od vertikale kroz O, bez izmjene) | P4, P6 |
+| CFD okvir ustave nije vezan uz konkretan P/Z | Vezan uz Z3 i P3; navedeni ulazi, izlazi, provjera i odluka | `#cfd-ustava-opterecenje` (ID zadržan) |
+| Dvostruko „Zastani i promisli” | Četvrto pitanje samoprovjere zamijenjeno pitanjem o $\sin^2\theta$ naspram $\sin\theta$ | „Provjeri sebe” |
+| Notacija i nazivlje | $s\to y$ (koordinata duž plohe, $y_{CP}$), $p_0\to p_{pl}$, „hidrostatički” u tekstu, gramatika r. 343; P1 označen T1 | cijelo poglavlje |
+
+Matrica zamjena (staro → novo):
+
+| Mjesto | Stari ID (ostaje kao `<span>` alias) | Novi ID | Razina | Kontrolni rezultat |
+| --- | --- | --- | --- | --- |
+| Z1 | `task-u05-ravna-pravokutna-zaklopka` | `task-vodonepropusna-vrata-naplavljenog-odjeljka` | T1 | $F_x=+28{,}31$ kN; $h_{CP}=2{,}297$ m; $M_{\text{šarke}}=11{,}33$ kN m; zasuni 14,16 kN (donji 7,94, gornji 6,22 kN) |
+| Z2 | `task-u05-zakrivljeni-poklopac-cetvrtine-kruga` | `task-parabolicni-pokrov-suhog-kanala` | T1 | $F_x=-5{,}948$ kN na 0,600 m; $F_z=-5{,}287$ kN na 0,900 m; $F_R=7{,}958$ kN; $M_A=-8{,}327$ kN m |
+
+Provjere: `verify_u05_integrated.py` 100/100 (Z1: integral tlaka, ravnoteža
+zasuna, utjecaj gustoće; Z2: izravna integracija $p\,\mathbf n\,dA$ po paraboli,
+predznaci, nepostojanje zajedničke točke normala, skaliranje s $H$; P4: moment
+oko O). `check_u05_sketch_geometry.py` PASS: Z1 omjeri vrata, položaj oznake
+sile u centru tlaka, zasuni i šarke; Z2 kvadratna Bézierova krivulja kao točna
+parabola (kontrolna točka na sjecištu tangenata), pravci $F_H$/$F_V$ i lokalna
+normala. Skica `u05_vjezbe_skice.svg`: paneli Z1 i Z2 nacrtani unutar postojećih
+okvira; `<desc>` ažuriran. Notebookovi nisu mijenjani (ne opisuju Z1/Z2).
+D06 i manifest obnavlja koordinator generatorima; `print-layouts.json` (sha skice)
+također. Didaktička procjena ostaje autorska, ne dokaz CI-ja.

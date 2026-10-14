@@ -66,23 +66,22 @@ def verify() -> list[dict]:
     )
 
     # Hidrostatika: promjena manometarskog tlaka mora biti rho*g*Delta z.
-    p3 = verify_u03.primjer_vodotoranj()
+    # P6 U03: cvor A je 38 m ispod podnozja vodotornja B.
+    p3 = verify_u03.primjer_vodotoranj(p_A=520e3, dz=38.0)
     _append_close(
         out,
         "QA.GOLDEN.HYDROSTATIC_GRADIENT",
-        p3["p_man"],
-        998.0 * 9.81 * p3["dH"],
+        520e3 - p3["p_B_gauge"],
+        998.0 * 9.81 * 38.0,
     )
 
     # Kontinuitet: ulazni i izlazni volumni tok moraju biti jednaki.
-    p8 = verify_u08.zadatak_1()
-    A8_1 = math.pi * 0.10**2 / 4
-    A8_2 = math.pi * 0.16**2 / 4
+    p8 = verify_u08.primjer_1_difuzor()
     _append_close(
         out,
         "QA.GOLDEN.CONTINUITY_ONE_IN_ONE_OUT",
-        A8_1 * 4.8,
-        A8_2 * p8["v_2"],
+        p8["A_1"] * p8["v_1"],
+        p8["A_2"] * 1.6,
     )
 
     # Realni Bernoulli: ukupni gubitak je zbroj nenegativnih doprinosa.

@@ -106,3 +106,39 @@ Izvršene provjere 22. rujna 2026.:
 Provjere ne zamjenjuju neovisnu stručnu recenziju ni studentski pilot.
 Zajednički završni build cijelog višepoglavnog cilja slijedi nakon U02;
 provjera trenutačne objave vodi se u zajedničkoj evidenciji.
+
+
+## Revizija 12. 10. 2026.
+
+Provedba nalaza neovisne stručne recenzije (odobreno od autorice). Opseg: izvod
+Darcyjeva koeficijenta, petlja gradske mreže umjesto serijsko-paralelnog P3,
+zamjena Z1/Z2/Z6, prerada Z5, nazivlje i notacija ($\zeta$, $p_{aps}$, $NPSH_a$).
+
+| Mjesto | Prije (ID, razina) | Odluka | Poslije (ID, razina) | Kontrolni rezultat | Provjere |
+| --- | --- | --- | --- | --- | --- |
+| teorija | samo Izvod Colebrookove iteracije | NOVI Izvod iz ravnoteže sila na odsječak: $\tau_w=(D/4)\Delta p/L$, $\lambda=8\tau_w/(\rho v^2)$, laminarno $64/Re$, Poiseuille kao provjera; Colebrook, Swamee–Jain i Blasius kao numerički korak | `eq-ravnoteza-odsjecka-cijevi`, `eq-lambda-iz-smicnog-naprezanja`, `eq-swamee-jain`; zadržani `eq-lambda-laminarno`, `eq-poiseuille-u13`, `eq-colebrook-white` | — | čitanje |
+| teorija | serijski/paralelni spoj | DODAN odlomak o petlji i Hardy–Crossova korekcija `eq-hardy-cross`; $\zeta=\lambda L/D+\sum\xi$ uz `eq-gubitak-dionice` | — | — | — |
+| CFD r. 112 | razdjelnik + „Zastani” o paralelnim granama | RAZDVOJENO: CFD okvir samo razdjelnik (pitanje → model → podatci → izlaz → provjera → odluka); „Zastani i promisli” premješten u numerički pokus paralelnih grana | — | — | — |
+| P3 | `ex-serijsko-paralelna-mreza`, T3 | ZAMIJENJEN | `ex-petlja-gradske-mreze`, T3; slika `u13_ch1_serijsko_paralelna_mreza.svg` (ponovno nacrtana, `fig-petlja-gradske-mreze`) | $R=7181/45\,445/11\,913/8378$; $\Delta Q_1=-2{,}92$, $\Delta Q_2=-0{,}19$ L/s; $Q=18{,}89/6{,}89/-9{,}11/-21{,}11$ L/s; pad A–C 4,72 m oba puta | verifier `U13.CANON.P3.*`, checker |
+| Z1 | `task-gubitci-ravne-dionice`, T1 | ZAMIJENJEN obrnutim zadatkom (stari ID kao alias) | `task-dopusteni-pad-tlaka-dionice`, T1 | $h_w=2{,}554$ m, $\zeta=16{,}5$, $v=1{,}743$ m/s, $Q_{max}=13{,}69$ L/s, linijski udio 75,8 % | verifier, SVG natpisi |
+| Z2 | `task-laminarna-cijev-smjese`, T1 | ZAMIJENJEN: isti vod, dva fluida, izbor režima (alias zadržan) | `task-dva-fluida-isti-vod`, T1 | A: $Re=796$, $\lambda=0{,}0804$, 7,73 kPa; B: $Re=4775$, Blasius $\lambda=0{,}0381$, 3,38 kPa; pri $2Q$ 15,5 i 11,4 kPa | verifier, SVG natpisi |
+| Z3 | `task-uravnotezenje-paralelnih-grana`, T2 | ZADRŽAN | isti | isti | — |
+| Z4 | `task-radna-tocka-hrapavog-voda`, T2 | ZADRŽAN; izričito „alat obvezan” | isti, T2 | isti (19,030 L/s …) | — |
+| Z5 | `task-robustan-izbor-promjera`, T3 (interval $\lambda$) | PRERAĐEN: interval uklonjen, $\lambda(Re,\varepsilon/D)$ Swamee–Jainom, provjera starenja; ID zadržan | isti ID, T3 | $\lambda=0{,}0238/0{,}0228/0{,}0221$, $h_w=33{,}1/10{,}8/3{,}56$ m → 100 mm; staro $\varepsilon=0{,}5$ mm: $\lambda=0{,}0309$, $h_w=14{,}0$ m | verifier, SVG natpisi |
+| Z6 | `task-regulacija-energija-npsh`, T4 | ZAMIJENJEN brodskom balastnom crpkom (alias zadržan) | `task-balastna-crpka-regulacija-npsh`, T4 | $q=22{,}36$ L/s, $H_V=17{,}00$, $H_s=11{,}50$ m, $s=0{,}866$, $E=8{,}19/5{,}54/2{,}65$ MWh; $NPSH_a=10{,}06$, $NPSH_r=4{,}50$ m, balastno 8,66 m | verifier, SVG panel Z6, notebook |
+| samoprovjera 3 | duplikat „Zastani” | ZAMIJENJENO pitanjem o istom $\Delta Q$ u petlji | — | — | — |
+
+Neovisno riješeno prije pisanja (Python, scratchpad): petlja konvergira na
+$Q_{AB}=18{,}892$ L/s nakon 2 iteracije unutar 0,001 L/s od potpune
+konvergencije; brzine 0,74–1,19 m/s, $Re=0{,}9$–$1{,}8\cdot10^5$.
+Z6: $E_V=8{,}1907$, $E_s=5{,}5408$ MWh; $NPSH_a=10{,}057$ m.
+
+Provjere: `verify_u13_integrated.py` 106 rezultata, 0 FAIL (nove invarijante:
+čvorovi i petlja, konvergencija, obrnuti račun Z1, režimi i skaliranje Z2,
+starenje Z5, napunjen usis Z6). `check_u13_sketch_geometry.py` PASS (4 slike;
+novi testovi: čvorovi petlje, obilazni smjer, usisni koš u oplati, S ispod
+vodne linije 1,8 m). Bilježnica `u13_paralelne_grane.ipynb` (Z6 ćelije
+usklađene) izvršena u čistom kernelu: PASS. Manifest, D06 i izvedenice tiska
+nisu generirani (koordinator). Oznaka `task-robustan-izbor-promjera` zadržana
+iako zadatak više nije „robustan” u smislu intervala; preimenovanje bi tražilo
+novi alias bez sadržajne koristi.

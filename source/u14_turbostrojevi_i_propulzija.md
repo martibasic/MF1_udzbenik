@@ -1,175 +1,86 @@
 ![Pregled poglavlja: turbostrojevi i propulzija kroz pokretne lopatice, moment i potisak.](../assets/print/u12_fig_uvod_pregled.svg){#fig-uvod-u12 fig-align="center" fig-alt="Pregled poglavlja: turbostrojevi i propulzija kroz pokretne lopatice, moment i potisak."}
 
-**Tumačenje skice.** Apsolutna, obodna i relativna brzina povezane su vektorski, $\mathbf c=\mathbf u+\mathbf w$. Kontrolni volumen jedne pokretne lopatice prima relativni maseni protok $\dot m_{\mathrm{rel}}=\rho A(c_1-u)$. Sila fluida na lopaticu je $F_x=\dot m_{\mathrm{rel}}(c_1-c_{2x})$, a prenesena snaga $P=F_xu$.
+**Tumačenje skice.** Apsolutna, obodna i relativna brzina povezane su vektorski, $\vec c=\vec u+\vec w$; kontrolni volumen jedne pokretne lopatice prima relativni maseni protok $\dot m_{\mathrm{rel}}=\rho A(c_1-u)$, dok kolo zahvaća puni sapnički protok. Za rotor Eulerova veza daje $P=\dot m(u_2c_{2t}-u_1c_{1t})=M\omega$.
 
-Za rad rotora na fluid Eulerova veza daje $P=\dot m(u_2c_{2t}-u_1c_{1t})=M\omega$. U ovdje razmatranim idealnim modelima optimum jedne lopatice nastaje pri $u_{\mathrm{opt}}=c_1/3$, a kola koje zahvaća puni protok pri $u_{\mathrm{opt}}=c_1/2$; modeli imaju različit zahvaćeni maseni protok.
-
-Na shemi vodomlaznog pogona brzine vode zadane su u brodskom okviru, s osi $x$ prema krmi i $V_j>V_0=U$. Uz jednake tlakove i visine presjeka potisak je $T=\dot m(V_j-V_0)$, a hidraulička snaga $P_h=\dot m(V_j^2-V_0^2)/2$. Krug označuje crpku; kućište i duljine su shematski. Isprekidana kontrolna granica uz stijenke prati njihove obrise.
+Na shemi vodomlaznog pogona brzine su u brodskom okviru, s osi $x$ prema krmi: voda ulazi brzinom broda $v_s$ i izlazi brzinom mlaza $v_j>v_s$; krug označuje crpku.
 
 ## Turbostrojevi i propulzija
 
-Analiza turbostrojeva i propulzijskih sustava temelji se na promjeni količine gibanja fluida u kontrolnom volumenu. Taj pristup određuje reakciju nosača, snagu na pokretnim lopaticama i mlazni potisak.
+Turbostrojevi i propulzori izmjenjuju energiju s fluidom promjenom njegove količine gibanja i momenta količine gibanja.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Na Peltonovu kolu, vodomlaznom pogonu i mlaznici koja skreće tok isti zakoni povezuju silu, moment i snagu. Račun pokazuje koliko snage rotor prima, koliki je potisak i kako izlazni kut mijenja korisni učinak.
+Na Peltonovu kolu, radnom kolu balastne crpke, brodskom propeleru i vodomlaznom pogonu isti zakoni povezuju silu, moment i snagu. Račun pokazuje koliko snage rotor prima ili predaje, koliki je potisak i kako izlazni kut lopatice mijenja korisni učinak.
 :::
 
 **Procijenjeno vrijeme rada uz priručnik:** 9 sati.
 
-## Zakon količine gibanja za lopatice i vodilice
+## Od lopatice do turbostroja
 
-Kad mlaz promijeni smjer ili iznos brzine, mora postojati sila koja je uzrokovala tu promjenu količine gibanja. Za nepomični kontrolni volumen, stacionaran tok te jedan ulaz i izlaz osnovni zapis je
-
-$$\sum \vec{F} = \dot{m}(\vec{V}_{izl} - \vec{V}_{ul})$$ {#eq-turbostrojevi-fizikalni-uvod-i-matematicki-izvod-01}
+Bilanca količine gibanja na nepomičnoj vodilici i na lopatici koja se giba stalnom brzinom izvedena je u []{.mf1-chapter-ref target="u10"}: u kontrolnom volumenu koji prati lopaticu masa ulazi relativnom brzinom $\vec w=\vec c-\vec u$, $\dot m_{rel}=\rho Aw_n$, a sila na fluid slijedi iz promjene apsolutne brzine; @ex-peltonova-lopatica-u-gibanju pokazuje taj račun na Peltonovoj lopatici. Ovdje se iz iste bilance izvode ono što je specifično za turbostrojeve: utjecaj kuta i gubitka u lopatici, dva optimuma obodne brzine, Eulerova jednadžba s trokutima brzina i idealna učinkovitost propulzije. Oznake slijede turbostrojarski standard: $c$ apsolutna, $u$ obodna i $w$ relativna brzina.
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Za vodilicu, a uz odgovarajući relativni protok i za pokretnu lopaticu, ovaj zakon kaže: sila potrebna za skretanje ili usporavanje mlaza proporcionalna je masenom protoku i promjeni vektora brzine. Za idealizirani Peltonov rotor s punim sapničkim protokom relativna brzina ulaza jest $w_1=c_1-u$. Snaga je umnožak tangencijalne sile i obodne brzine, pa pri $u=0$ postoji sila bez snage, a pri $u\to c_1$ relativna ulazna brzina teži nuli. Između tih granica model daje maksimum pri $u=c_1/2$.
-:::
-
-To je osnova za daljnju analizu u []{.mf1-chapter-ref target="u14"}: nepomična vodilica, pokretna lopatica, moment na rotoru i mlazni potisak. Zato predznake i smjerove treba odrediti prije uvrštavanja brojeva u jednadžbe.
-
-## Matematički izvod
-
-Za stacionarni tok kroz vodilicu ili lopaticu najprije se određuje maseni protok
-
-$$
-\dot m = \rho A v_n,
-$$ {#eq-turbostrojevi-matematicki-izvod-01}
-
-gdje je $v_n$ komponenta brzine okomita na ulazni presjek. Za nepomičnu vodilicu ili lopaticu, uz zanemarive razlike tlakova prema atmosferi i uz zanemarivu težinu u promatranoj ravnini, zakon količine gibanja daje
-
-$$
-\vec F_{okoline\to fluid} = \dot m(\vec c_2 - \vec c_1).
-$$ {#eq-turbostrojevi-matematicki-izvod-02}
-
-Najčešća pogreška u ovom postupku odnosi se na predznak: ta jednadžba najprije daje silu okoline na fluid. Suprotan predznak daje silu fluida na vodilicu; reakcija nosača na mirnu vodilicu ima suprotan smjer od te sile:
-
-$$
-\vec F_{fluid\to vodilicu} = -\dot m(\vec c_2 - \vec c_1).
-$$ {#eq-turbostrojevi-matematicki-izvod-03}
-
-U komponentnom zapisu odmah se vidi kako svaki izlazni zaokret ili pad brzine stvara novu reakciju po odgovarajućoj osi. Time ista jednadžba količine gibanja u []{.mf1-chapter-ref target="u14"} povezuje dva tipa primjene: ako fluid izgubi tangencijalnu komponentu brzine, rotor ili lopatica primaju silu, moment i snagu; ako fluid dobije brzinu prema dolje ili unatrag, cijeli sustav prima potisak.
-
-Za pokretnu lopaticu prvi korak nije sila nego razdvajanje apsolutne i relativne brzine. Opći Reynoldsov transportni teorem iz []{.mf1-chapter-ref target="u07"} daje, u inercijskom okviru,
-
-$$
-\frac{d}{dt}\int_{KV(t)}\rho\vec c\,dV
-+\int_{KP(t)}\rho\vec c\bigl[(\vec c-\vec v_{KP})\cdot\vec n\bigr]\,dA
-=\sum\vec F.
-$$ {#eq-turbostrojevi-matematicki-izvod-04}
-
-Količina gibanja u integrandu računa se apsolutnom brzinom $\vec c$, dok masu kroz gibajuću plohu prenosi relativna brzina $\vec c-\vec v_{KP}$. Ako je kontrolna ploha vezana uz lopaticu koja se lokalno giba brzinom $\vec u$, tada je $\vec v_{KP}=\vec u$ i
-
-$$
-\vec w_1 = \vec c_1 - \vec u, \qquad \dot m_{rel} = \rho A w_{1n}.
-$$ {#eq-turbostrojevi-matematicki-izvod-05}
-
-Ako je akumulacija količine gibanja u tako odabranom volumenu jednaka nuli i postoje jedan ulaz i izlaz s 1D profilima, bilanca se reducira na
-
-$$
-\vec F_{okoline\to fluid} = \dot m_{rel}(\vec c_2 - \vec c_1),
-\qquad
-\vec F_{fluid\to lopaticu} = -\vec F_{okoline\to fluid}.
-$$ {#eq-turbostrojevi-matematicki-izvod-06}
-
-Za pojedinačnu lopaticu koja se pravocrtno giba stalnom brzinom to je izravan radni model. Za cijeli rotor sigurnije je primijeniti moment količine gibanja na nepomični prstenasti kontrolni volumen; ako se prati pojedinačni rotirajući volumen, član akumulacije odnosno članovi neinercijskoga okvira ne smiju se prešutjeti.
-
-::: {.callout-note}
-## Postupak rješenja
-Od relativne brzine ($\vec{w}$) do sile na pokretnu lopaticu
-
-**1. Relativni ulaz:** Lopatica se giba brzinom $u$, pa fluid prilazi lopatici relativnom brzinom $w_1 = c_1 - u$ (u 1D slučaju u smjeru mlaza). Maseni protok koji zaista prolazi kroz lopaticu:
-$$\dot{m} = \rho A w_1.$$ {#eq-turbostrojevi-razrada-koraka-01}
-
-**2. Relativni izlaz:** Lopatica skreće relativni tok za kut $\beta_2$. U relativnom okviru izlazna brzina je $w_2 = w_1$ (bez gubitaka). U apsolutnom okviru:
-$$c_{2x} = u + w_2\cos\beta_2, \qquad c_{2y} = w_2\sin\beta_2.$$ {#eq-turbostrojevi-razrada-koraka-02}
-
-**3. Promjena količine gibanja** (u apsolutnom okviru) najprije daje silu lopatice na fluid:
-$$F_{lop\to f,x} = \dot{m}(c_{2x} - c_1) = \dot{m}w_1(\cos\beta_2 - 1).$$ {#eq-turbostrojevi-razrada-koraka-03}
-
-Sila fluida na lopaticu ima suprotan predznak:
-$$F_{f\to lop,x}=\dot m w_1(1-\cos\beta_2).$$ {#eq-turbostrojevi-razrada-koraka-04}
-
-**4. Snaga koju fluid predaje lopatici:**
-$$P_{f\to lop}=F_{f\to lop,x}u=\dot{m}w_1u(1-\cos\beta_2).$$ {#eq-turbostrojevi-razrada-koraka-05}
-
-Za $\beta_2 = 180°$ (idealno skretanje u suprotni smjer) funkcija snage jedne lopatice glasi $P(u)=2\rho A(c_1-u)^2u$. Tek deriviranjem se pokazuje da joj je maksimum pri $u=c_1/3$. Za kolo s mnogo lopatica puni sapnički protok ostaje stalan, pa drugi model daje $u=c_1/2$.
+Snaga je umnožak tangencijalne sile i obodne brzine: pri $u=0$ postoji sila bez snage, a pri $u\to c_1$ relativni dotok nestaje; između tih granica leži optimum koji izvod u nastavku određuje.
 :::
 
 ::: {.mf1-izvod}
-<p class="mf1-box-label">Matematički izvod — Optimum obodne brzine za jednu lopaticu i za kolo</p>
+<p class="mf1-box-label">Matematički izvod — Kut lopatice, gubitak relativne brzine i dva optimuma obodne brzine</p>
 
-Razlikuju se dva pedagoški važna granična slučaja koja daju različite optimalne obodne brzine, ovisno o tome kako se računa maseni protok kroz lopaticu.
+**Fizikalno pitanje.** Kako kut skretanja i gubitak relativne brzine mijenjaju silu na lopaticu i pri kojoj obodnoj brzini lopatica odnosno kolo prima najviše snage?
 
-**Slučaj 1: Jedna lopatica koja se udaljava u smjeru mlaza**
+**Bilanca.** Kontrolni volumen prati lopaticu; prema bilanci količine gibanja iz []{.mf1-chapter-ref target="u10"} sila fluida na lopaticu jednaka je $\dot m_{rel}(\vec c_1-\vec c_2)$, uz atmosferski tlak na slobodnim presjecima.
 
-Pri pojedinačnoj lopatici koja se giba u smjeru mlaza, relativni dotok određuje koliko fluida u jedinici vremena dolazi do lopatice. Maseni protok koji efektivno djeluje na lopaticu je relativni protok
-
-$$
-\dot m = \rho A (c_1 - u),
-$$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-01}
-
-pa se sila i snaga zapisuju kao
+**Koraci.** Neka se lopatica giba u smjeru mlaza ($+x$) brzinom $u$, pa je $w_1=c_1-u$. Relativni izlaz $w_2=kw_1$ ($k\le1$ opisuje gubitak relativne brzine) skrenut je za kut $\beta_2$ mjeren od smjera gibanja $+x$; $\beta_2=180^\circ$ znači puni povrat. Apsolutni izlaz ima komponente
 
 $$
-F = \dot m\,(c_1 - u)(1 - \cos\beta_2) = \rho A (c_1 - u)^2 (1 - \cos\beta_2),
-$$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-02}
+c_{2x} = u + w_2\cos\beta_2, \qquad c_{2y} = w_2\sin\beta_2,
+$$ {#eq-turbostrojevi-razrada-koraka-02}
+
+pa je sila fluida na lopaticu u smjeru gibanja
 
 $$
-P = F\,u = \rho A (1 - \cos\beta_2)(c_1 - u)^2 u.
-$$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-03}
+F_{f\to lop,x}=\dot m_{rel}(c_1-c_{2x})=\dot m_{rel}\,w_1(1-k\cos\beta_2),
+$$ {#eq-turbostrojevi-razrada-koraka-04}
 
-Uvjet maksimuma snage je $dP/du = 0$. Deriviranjem se dobiva
+a snaga koju fluid predaje lopatici
+
+$$
+P_{f\to lop}=F_{f\to lop,x}\,u=\dot m_{rel}\,w_1u\,(1-k\cos\beta_2).
+$$ {#eq-turbostrojevi-razrada-koraka-05}
+
+Rad daje samo komponenta sile u smjeru gibanja; komponenta $F_y$ opterećuje ležajeve, ali ne prenosi snagu.
+
+**Rezultat: dva optimuma.** Što ulazi u $\dot m$, odlučuje o položaju maksimuma snage.
+
+*Jedna lopatica koja se udaljava od sapnice* prima samo relativni dotok $\dot m_{rel}=\rho A(c_1-u)$, pa je
 
 $$
 \begin{aligned}
-\frac{dP}{du} &= \rho A (1 - \cos\beta_2)\Bigl[(c_1 - u)^2 - 2(c_1 - u)u\Bigr] \\
-&= \rho A (1 - \cos\beta_2)(c_1 - u)(c_1 - 3u).
+P &= \rho A (1 - k\cos\beta_2)(c_1 - u)^2 u, \\
+\frac{dP}{du}&=\rho A (1 - k\cos\beta_2)(c_1 - u)(c_1 - 3u),
 \end{aligned}
-$$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-04}
+$$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-03}
 
-Netrivijalno rješenje ($c_1 - u \ne 0$) daje **$u_{opt} = c_1/3$**.
+odakle $u_{opt}=c_1/3$.
 
-**Slučaj 2: Kolo s mnogo lopatica (Peltonov rotor)**
-
-Pri rotoru s velikim brojem lopatica mlaz uvijek nalazi sljedeću lopaticu, pa cijeli protok kroz sapnicu sudjeluje u izmjeni količine gibanja:
+*Kolo s mnogo lopatica* (Peltonov rotor) stalno nalazi sljedeću lopaticu, pa cijeli sapnički protok $\dot m=\rho Ac_1$ sudjeluje u izmjeni količine gibanja:
 
 $$
-\dot m = \rho A c_1.
-$$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-05}
-
-Ukupna tangencijalna sila na lopatice i snaga predana rotoru tada su
-
-$$
-F = \dot m\,(c_1 - u)(1 - \cos\beta_2) = \rho A c_1 (c_1 - u)(1 - \cos\beta_2),
-$$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-06}
-
-$$
-P = F\,u = \rho A c_1 (1 - \cos\beta_2)(c_1 - u)\,u.
+P = \rho A c_1 (1 - k\cos\beta_2)(c_1 - u)\,u,
+\qquad
+\frac{dP}{du} = \rho A c_1 (1 - k\cos\beta_2)(c_1 - 2u),
 $$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-07}
 
-Uvjet $dP/du = 0$ daje
+odakle $u_{opt}=c_1/2$, klasičan rezultat za Peltonovu turbinu. Ni jedan od dvaju rezultata nije pogrešan: razlikuju se kontrolni volumeni i zahvaćeni protoci.
 
-$$
-\frac{dP}{du} = \rho A c_1 (1 - \cos\beta_2)\bigl[(c_1 - u) - u\bigr] = \rho A c_1 (1 - \cos\beta_2)(c_1 - 2u) = 0,
-$$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-08}
+**Provjera.** Pri $u=0$ sila je najveća, a snaga nula; pri $u\to c_1$ relativni dotok i sila nestaju. Pri $u=c_1/2$, $k=1$ i $\beta_2=180^\circ$ apsolutna izlazna brzina kola je nula, pa fluid preda svu kinetičku energiju. Ako geometrija ograniči skretanje na $\beta_2=165^\circ$, faktor $(1-\cos\beta_2)$ pada s $2$ na približno $1{,}97$, odnosno za oko $1{,}7\,\%$; to nije ukupni gubitak turbine, jer se brzinski, volumetrijski i mehanički gubitci procjenjuju zasebno.
 
-odakle slijedi **$u_{opt} = c_1/2$**.
-
-**Fizikalna interpretacija razlike:**
-
-Ključna razlika između dvaju slučajeva leži u tome koji maseni protok ulazi u proračun:
-
-- Pri pojedinačnoj lopatici, $\dot m$ ovisi o $(c_1 - u)$, što daje kvadratnu ovisnost sile o relativnoj brzini. Optimum je niži ($u_{opt} = c_1/3$) jer veće $u$ smanjuje maseni protok.
-- Pri kolu s mnogo lopatica $\dot m$ je konstantan, pa sila linearno opada s $(c_1 - u)$. Optimum je viši ($u_{opt} = c_1/2$) — klasičan rezultat za Peltonove turbine.
-
-U oba slučaja idealni izlazni kut $\beta_2=180^\circ$ daje faktor $(1-\cos\beta_2)=2$. Ako geometrija, primjerice, ograniči skretanje na $\beta_2=165^\circ$, faktor pada na $(1-\cos165^\circ)\approx1{,}97$, odnosno za oko $1{,}7\,\%$ prema tom idealnom kutnom faktoru. To nije ukupni gubitak turbine: brzinski, volumetrijski i mehanički gubitci procjenjuju se zasebno.
+**Konvencija kuta.** U izvodu je $\beta_2$ kut skretanja od $+x$. U riješenim primjerima i u konstrukciji turbostrojeva kut lopatice $\beta$ mjeri se od smjera suprotnog gibanju lopatice ($-u$), pa vrijedi $\beta_2=180^\circ-\beta$ i $(1-k\cos\beta_2)=(1+k\cos\beta)$. Kutovi lopatica $\beta_1$, $\beta_2$ ne smiju se miješati s korekcijskim faktorom količine gibanja $\beta$ iz drugih poglavlja.
 :::
 
-Kad je zanimljiv mehanički izlaz stroja, ključna više nije bilo koja komponenta sile nego tangencijalna komponenta, jer upravo ona predaje rad pri gibanju oboda:
+Za rotor je mjerodavna tangencijalna komponenta sile, jer jedina predaje rad pri gibanju oboda:
 
 $$
 P = F_t u = M\omega
@@ -177,35 +88,29 @@ $$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-09}
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Snaga $P = F_t u$ pokazuje da pri čistoj vrtnji rad rotoru predaje tangencijalna sila. Kada su ulaz i izlaz na istom polumjeru, ona se određuje iz promjene tangencijalne komponente brzine. Radijalna promjena brzine mijenja opterećenje ležajeva, ali ne i snagu. Promjena aksijalne komponente brzine mijenja aksijalne sile, ali tangencijalna komponenta je jedina koja djeluje u smjeru vrtnje. Zato je svaki kut lopatice — ulazni i izlazni — izravno uvjet za korisni učinak, a ne samo geometrijski detalj.
+Radijalna i aksijalna promjena brzine opterećuju ležajeve, ali ne prenose snagu; rad daje samo promjena tangencijalne komponente. Zato su ulazni i izlazni kut lopatice izravni uvjeti korisnog učinka, a ne geometrijski detalj.
 :::
 
-Kad se ulaz i izlaz rotora čitaju na različitim radijusima $r_1$ i $r_2$, više nije dovoljno gledati silu — treba krenuti od **momenta količine gibanja**, što vodi na klasičnu Eulerovu turbinsku jednadžbu.
+Kad su ulaz i izlaz rotora na različitim polumjerima $r_1$ i $r_2$, umjesto sile treba primijeniti **moment količine gibanja**.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Eulerova turbinska jednadžba iz momenta količine gibanja</p>
 
-Polazi se od integralnog oblika momenta količine gibanja za stacionarni kontrolni volumen koji obuhvaća rotor. Pozitivan moment u sljedećem zapisu znači moment **rotora na fluid**. Pri svođenju ukupnoga vanjskog momenta na moment rotora pretpostavlja se da momenti tlaka i volumnih sila oko osi nemaju doprinos, odnosno da su zasebno uračunani:
+**Fizikalno pitanje.** Koliki moment i snagu izmjenjuju rotor i fluid ako su poznate apsolutne brzine na ulaznom i izlaznom polumjeru?
 
-$$
-\sum \vec M = \int_{KP} \rho\,(\vec r \times \vec c)\,(\vec c\cdot\vec n)\,dA,
-$$ {#eq-turbostrojevi-matematicki-izvod-eulerova-turbinska-jednadzba-i-01}
-
-gdje je $\vec r$ vektor položaja točke na kontrolnoj plohi od osi rotacije, a $\vec c$ apsolutna brzina fluida u toj točki.
-
-Za rotor s jednim ulaznim presjekom na polumjeru $r_1$ i jednim izlaznim presjekom na polumjeru $r_2$, s jednolikom raspodjelom brzine u svakom presjeku, integral se svodi na razliku doprinosa izlaza i ulaza:
+**Bilanca.** Nepomični kontrolni volumen obuhvaća rotor, a pol je na osi vrtnje. Moment količine gibanja @eq-moment-kolicine-gibanja iz []{.mf1-chapter-ref target="u10"} vrijedi s apsolutnom brzinom $\vec c$. Pozitivan moment znači moment **rotora na fluid**; momenti tlaka i volumnih sila oko osi nemaju doprinos ili su zasebno uračunani. Za jedan ulaz na $r_1$ i jedan izlaz na $r_2$ s jednolikim brzinama:
 
 $$
 \vec M = \dot m\,(\vec r_2 \times \vec c_2) - \dot m\,(\vec r_1 \times \vec c_1).
 $$ {#eq-turbostrojevi-matematicki-izvod-eulerova-turbinska-jednadzba-i-02}
 
-Komponenta momenta oko osi vrtnje rotora čita se iz vektorskog produkta: na zadanom radijusu $r$ doprinos momentu daje samo tangencijalna komponenta brzine $c_t$ jer ona jedina ima krak $r$ oko osi (radijalna komponenta prolazi kroz os, a aksijalna je paralelna s osi). Zato je predznačena komponenta momenta oko osi
+**Koraci.** Osnu komponentu daje samo tangencijalna komponenta $c_t$: radijalna prolazi kroz os, a aksijalna joj je paralelna. Zato je
 
 $$
 M_{r\to f} = \dot m\,(r_2 c_{2t} - r_1 c_{1t}).
 $$ {#eq-turbostrojevi-matematicki-izvod-eulerova-turbinska-jednadzba-i-03}
 
-Reakcijski moment fluida na rotor ima suprotan predznak, $M_{f\to r}=-M_{r\to f}$. To je jezgra **Eulerove jednadžbe turbostrojarstva** za pumpe, ventilatore, turbine i kompresore.
+Reakcijski moment fluida na rotor ima suprotan predznak, $M_{f\to r}=-M_{r\to f}$. To je jezgra **Eulerove jednadžbe turbostrojarstva** za crpke, ventilatore, turbine i kompresore.
 
 Množenjem s kutnom brzinom $\omega$ dobivaju se dvije jednako valjane, ali suprotno orijentirane bilance snage:
 
@@ -215,22 +120,22 @@ P_{r\to f}=\dot m\,(u_2c_{2t}-u_1c_{1t}),
 P_{f\to r}=\dot m\,(u_1c_{1t}-u_2c_{2t}).
 $$ {#eq-turbostrojevi-matematicki-izvod-eulerova-turbinska-jednadzba-i-04}
 
-Pozitivan $P_{r\to f}$ opisuje rad koji rotor predaje fluidu, kao u pumpi ili ventilatoru. Pozitivan $P_{f\to r}$ opisuje rad koji fluid predaje rotoru, kao u turbini. Ovdje je $u_i=\omega r_i$. Za Peltonov rotor vrijedi $r_1=r_2=r$ i $u_1=u_2=u$, pa turbinski izlaz postaje
+Pozitivan $P_{r\to f}$ opisuje rad koji rotor predaje fluidu, kao u crpki ili ventilatoru. Pozitivan $P_{f\to r}$ opisuje rad koji fluid predaje rotoru, kao u turbini. Ovdje je $u_i=\omega r_i$. Za Peltonov rotor vrijedi $r_1=r_2=r$ i $u_1=u_2=u$, pa turbinski izlaz postaje
 
 $$
 P_{f\to r} = \dot m\,u\,(c_{1t} - c_{2t}),
 $$ {#eq-turbostrojevi-matematicki-izvod-eulerova-turbinska-jednadzba-i-05}
 
-što je upravo izraz koji se ranije dobio za sile na pokretnoj lopatici — sad u jeziku komponenti brzine umjesto izlaznog kuta.
+**Provjera.** To je isti izraz koji daje sila na pokretnu lopaticu, $F_xu$ iz [-@eq-turbostrojevi-razrada-koraka-04], samo zapisan komponentama brzine umjesto izlaznog kuta.
 :::
 
-Iz Eulerove jednadžbe odmah se vidi da korisni rad ne daje bilo koja komponenta brzine, nego promjena momenta količine gibanja oko osi rotora — to je razlog zašto su ulazni i izlazni kutovi lopatica središnji projektni parametri svakoga turbostroja.
+Korisni rad daje samo promjena momenta količine gibanja oko osi, pa su ulazni i izlazni kutovi lopatica središnji projektni parametri svakoga turbostroja; @ex-radijalno-kolo-crpke-euler to pokazuje na radnom kolu crpke.
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
 **Crpka rashladnog kruga iznutra.** Dosad smo crpku opisivali njezinom karakteristikom. Ako želimo promijeniti lopatice ili objasniti neravnomjerno strujanje, CFD obuhvaća rotor i nepomično kućište. Zadamo brzinu vrtnje, svojstva fluida i kompatibilne uvjete dotoka i izlaza. Veza $\vec c=\vec w+\vec u$ određuje tumačenje brzina: na lopatici je relativna brzina prianjajućeg fluida nula, a apsolutna jednaka brzini lopatice.
 
-Za procjenu srednjeg rada može se koristiti MRF, aproksimacija povezanih rotirajućih i nepomičnih područja. Za pulsacije pri prolazu lopatica uz jezik kućišta klizajuća mreža prati relativno gibanje kroz vrijeme. Izbor ovisi o pitanju: srednja crpna visina i vremenski promjenjivo opterećenje traže različitu razinu opisa.
+Za procjenu srednjeg rada može se koristiti MRF (*Multiple Reference Frame*, više referentnih okvira): rotorsko područje rješava se u okviru koji rotira s kolom, nepomično kućište u mirujućem okviru, a na spoju se polja preslikavaju bez pomicanja mreže. Za pulsacije pri prolazu lopatica uz jezik kućišta klizajuća mreža (*sliding mesh*) fizički pomiče rotorski dio mreže kroz vrijeme. Izbor ovisi o pitanju: srednja crpna visina i vremenski promjenjivo opterećenje traže različitu razinu opisa. Provjera je obvezna u oba slučaja: snaga iz integriranog momenta $P=M\omega$ mora se podudarati s Eulerovim tokom momenta količine gibanja $\dot m(u_2c_{2t}-u_1c_{1t})$ između ulaznog i izlaznog presjeka; razlika otkriva nekonvergiranu mrežu ili propuštanje kroz spoj okvira.
 
 []{#strujanje-gledano-s-lopatice}
 :::
@@ -251,7 +156,7 @@ Za procjenu srednjeg rada može se koristiti MRF, aproksimacija povezanih rotira
 </div>
 
 <div class="mf1-interaktivno-pitanja">
-**Pitanja za samostalno istraživanje:** (a) Zašto model rotora s punim sapničkim protokom daje maksimalnu snagu pri $u=c_1/2$ kada su $k$ i $\beta_2$ konstantni? (b) Kakva je teorijska maksimalna snaga pri $\beta_2=180°$ i zašto stvarne lopatice nemaju potpuni povrat mlaza? (c) Pri $u=0$, kolika je snaga predana rotoru iako sila postoji?
+**Pitanja za samostalno istraživanje:** (a) Zašto puni sapnički protok daje maksimum pri $u=c_1/2$? (b) Zašto stvarne lopatice nemaju potpuni povrat mlaza ($\beta_2=180°$)?
 </div>
 :::
 
@@ -262,98 +167,62 @@ Za procjenu srednjeg rada može se koristiti MRF, aproksimacija povezanih rotira
 Snaga na promatranim rotorskim plohama slijedi iz $P=M\omega$. Treba jasno navesti koje su plohe i gubitci uključeni; gubitci motora i ležajeva nisu automatski dio CFD-a. Dobivenu karakteristiku vraćamo u model rashladnog kruga. Tako promjena lopatice dobiva mjerljiv učinak na radni protok, crpnu visinu i potrebnu pogonsku snagu.
 :::
 
-Kod propulzije sustav predaje energiju fluidu. Ako vozilo ili platforma izbacuje mlaz dok je ulazna brzina okolnog fluida u smjeru potiska mala ili zanemariva, iz jednadžbe količine gibanja slijedi
-
-$$
-F_p = \dot m(v_{izl} - v_{ul}) \approx \dot m v = \rho A v^2.
-$$ {#eq-turbostrojevi-interaktivni-prikaz-trokuti-brzina-i-snaga-na-01}
-
-Za propelere i rotore koji stoje u mjestu i ubrzavaju okolni fluid (helikopter u visu, dron koji lebdi, brodski propeler pri statičkom potisku) koristi se nešto profinjeniji model — teorija aktuatorskog diska — koja vodi na izvod brzine kroz rotor pri zadanom potisku.
+Kod propulzije sustav predaje energiju fluidu. Potisak vodomlaznog pogona @eq-potisak-mlaznog-pogona i aktuatorski disk s brzinom kroz disk @eq-aktuatorski-disk-brzina izvedeni su u []{.mf1-chapter-ref target="u10"}; ovdje se disk proširuje na lebdenje, idealnu učinkovitost pri zadanom opterećenju i usporedbu promjera.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Aktuatorski disk i Froudeov teorem</p>
 
-Promatra se idealizirani rotor (propeler, dron, helikopter) kao tanki disk površine $A$ kroz koji fluid ulazi iz okoline i izlazi ubrzano u mlaznoj traci. Pretpostavlja se stacionarno, jednodimenzijsko, nestlačivo strujanje bez viskoznih gubitaka izvan idealiziranoga tlačnog skoka na disku; opterećenje je jednoliko po disku, nema vrtložne komponente brzine, vršnih ni glavinskih gubitaka, utjecaja tla ni međudjelovanja susjednih rotora. U modelu se definiraju četiri presjeka:
+**Fizikalno pitanje.** Kolika je brzina kroz disk i koliko snage stoji zadani potisak, u lebdenju i u napredovanju?
 
-- presjek $\infty$ (daleko ispred diska): brzina $v_\infty$, atmosferski tlak $p_\infty$;
-- presjek tik ispred diska: brzina $v_d$, tlak $p_d^-$;
-- presjek tik iza diska: brzina $v_d$ (kontinuitet zahtijeva istu brzinu kroz disk), tlak $p_d^+ > p_d^-$;
-- presjek $w$ (u dalekoj traci, gdje se tlak vraća na atmosferski): brzina $v_w$, tlak $p_\infty$.
+**Bilanca.** Idealizirani rotor je tanki disk površine $A$ u stacionarnom, jednodimenzijskom, nestlačivom toku bez viskoznih gubitaka izvan tlačnog skoka na disku; opterećenje je jednoliko, bez vrtnje traga, vršnih gubitaka, utjecaja tla i susjednih rotora. Daleko ispred voda ima brzinu $v_A$, kroz disk $v_d$, a u dalekom tragu $v_j$, sve pri tlaku okoline. Zakon količine gibanja za strujnu cijev, $F_T=\rho Av_d(v_j-v_A)$, i tlačni skok s Bernoullijem ispred i iza diska, $F_T=\tfrac12\rho A(v_j^2-v_A^2)$, daju Froudeov teorem $v_d=\tfrac12(v_A+v_j)$, @eq-aktuatorski-disk-brzina.
 
-Maseni protok kroz strujnu cijev je konstantan: $\dot m = \rho A v_d$.
-
-**Zakon količine gibanja** za cijelu strujnu cijev daje potisak
+**Lebdeći režim** ($v_A = 0$) — dron u visu, helikopter na mjestu, statički test propelera — daje $v_d = v_j/2$, pa potisak postaje
 
 $$
-F_p = \dot m\,(v_w - v_\infty) = \rho A v_d (v_w - v_\infty).
-$$ {#eq-turbostrojevi-matematicki-izvod-aktuatorski-disk-i-froudeov-te-01}
-
-**Bernoullijeva jednadžba** primijenjena dva puta — ispred diska (od $\infty$ do $d^-$) i iza diska (od $d^+$ do $w$, jer je disk jedino mjesto predaje energije pa Bernoullijeva jednadžba vrijedi zasebno u području ispred i iza njega) — daje
-
-$$
-p_\infty + \tfrac{1}{2}\rho v_\infty^2 = p_d^- + \tfrac{1}{2}\rho v_d^2,
-$$ {#eq-turbostrojevi-matematicki-izvod-aktuatorski-disk-i-froudeov-te-02}
-
-$$
-p_d^+ + \tfrac{1}{2}\rho v_d^2 = p_\infty + \tfrac{1}{2}\rho v_w^2.
-$$ {#eq-turbostrojevi-matematicki-izvod-aktuatorski-disk-i-froudeov-te-03}
-
-Oduzimanjem prve jednadžbe od druge dobiva se tlačni skok preko diska
-
-$$
-\Delta p_d = p_d^+ - p_d^- = \tfrac{1}{2}\rho (v_w^2 - v_\infty^2).
-$$ {#eq-turbostrojevi-matematicki-izvod-aktuatorski-disk-i-froudeov-te-04}
-
-Potisak se može alternativno izračunati i kao tlačna sila na disku:
-
-$$
-F_p = \Delta p_d \cdot A = \tfrac{1}{2}\rho A (v_w^2 - v_\infty^2).
-$$ {#eq-turbostrojevi-matematicki-izvod-aktuatorski-disk-i-froudeov-te-05}
-
-Izjednačavanjem dvaju izraza za $F_p$ (preko količine gibanja i preko tlaka) dobiva se **Froudeov teorem**:
-
-$$
-\rho A v_d (v_w - v_\infty) = \tfrac{1}{2}\rho A (v_w - v_\infty)(v_w + v_\infty),
-$$ {#eq-turbostrojevi-matematicki-izvod-aktuatorski-disk-i-froudeov-te-06}
-
-odakle nakon kraćenja s $\rho A (v_w - v_\infty)$ slijedi
-
-$$
-\boxed{v_d = \tfrac{1}{2}(v_\infty + v_w)},
-$$ {#eq-turbostrojevi-matematicki-izvod-aktuatorski-disk-i-froudeov-te-07}
-
-što znači da je brzina kroz disk **aritmetička sredina** brzine ispred diska i u dalekoj traci.
-
-**Lebdeći režim** ($v_\infty = 0$) — dron u visu, helikopter na mjestu, statički test propelera — daje $v_d = v_w/2$, pa potisak postaje
-
-$$
-F_p = \rho A v_d \cdot v_w = \rho A v_d \cdot 2 v_d = 2\rho A v_d^2.
+F_T = \rho A v_d \cdot v_j = \rho A v_d \cdot 2 v_d = 2\rho A v_d^2.
 $$ {#eq-turbostrojevi-matematicki-izvod-aktuatorski-disk-i-froudeov-te-08}
 
-Iz toga slijedi i izravna formula koja se koristi u praksi:
+odnosno
 
 $$
-v_d = \sqrt{\frac{F_p}{2\rho A}}.
+v_d = \sqrt{\frac{F_T}{2\rho A}}.
 $$ {#eq-turbostrojevi-matematicki-izvod-aktuatorski-disk-i-froudeov-te-09}
 
-Ova relacija pokazuje da je inducirana brzina kroz idealni rotor proporcionalna $\sqrt{F_p/A}$. Za isti potisak veća diskovna površina smanjuje induciranu brzinu i idealnu induciranu snagu $P_i=F_pv_d$. To ne jamči veću ukupnu korisnost stvarnog rotora, jer ona ovisi i o profilu lopatice, broju okretaja, vršnim gubitcima, motoru i drugim učincima koje ovaj model ne sadrži.
+Za isti potisak veća diskovna površina smanjuje induciranu brzinu i idealnu snagu $P_i=F_Tv_d$.
+
+**Rezultat za rotor u napredovanju.** Snaga predana fluidu jest porast toka kinetičke energije, $P_i=\tfrac12\dot m(v_j^2-v_A^2)=F_Tv_d$, a korisna snaga $F_Tv_A$; njihov je omjer idealna (Froudeova) učinkovitost iz @eq-aktuatorski-disk-potisak
+
+$$
+\eta_i=\frac{F_Tv_A}{F_Tv_d}=\frac{v_A}{v_d}=\frac{2v_A}{v_A+v_j}.
+$$ {#eq-idealna-ucinkovitost-propelera}
+
+Uvede li se koeficijent opterećenja potiskom $C_{Th}=F_T/(\tfrac12\rho v_A^2A)$, iz $F_T=\tfrac12\rho A(v_j^2-v_A^2)$ slijedi $v_j/v_A=\sqrt{1+C_{Th}}$, pa je
+
+$$
+\eta_i=\frac{2}{1+\sqrt{1+C_{Th}}},
+\qquad
+v_d=\frac{v_A}{2}\left(1+\sqrt{1+C_{Th}}\right).
+$$ {#eq-idealna-ucinkovitost-ct}
+
+**Provjera.** Za $C_{Th}\to0$ (velik disk, malo opterećenje) $\eta_i\to1$; za $v_A\to0$ (vis) $\eta_i\to0$ jer potisak bez brzine ne daje korisnu snagu, iako $P_i>0$. Za vodomlazni pogon isti izraz daje $\eta_i=2v_s/(v_s+v_j)$: velika brzina mlaza kupuje potisak skupom kinetičkom energijom traga. Stvarni propeler dodaje vrtnju traga, profilne i vršne gubitke, pa je njegova učinkovitost u slobodnoj vožnji $\eta_0$ uvijek manja od $\eta_i$; iza trupa broda brzina napredovanja manja je od brzine broda, $v_A=(1-w_s)v_s$, gdje je $w_s$ koeficijent sustrujanja.
 :::
 
-Isti zakon zato vodi i Peltonov rotor i potisni sustav: u prvom slučaju fluid gubi korisnu tangencijalnu količinu gibanja i stroj prima rad, a u drugom slučaju fluidu se povećava količina gibanja u smjeru mlaza, a na platformu djeluje suprotno usmjeren potisak. Nova fizika nije u drugoj formuli, nego u tome tko preuzima reakciju i u kojem se referentnom okviru čita tok.
+::: {.mf1-granica-modela}
+<p class="mf1-box-label">Granica modela — aktuatorski disk i Peltonova lopatica</p>
 
-To je pravi strojarski smisao []{.mf1-chapter-ref target="u14"}. Na Peltonovu kolu loš odabir obodne brzine odmah smanjuje moment i snagu generatora. Na vodilici ili ispitnoj glavi pogrešno pročitan izlazni vektor znači pogrešnu reakciju nosača. Na propeleru ili vodomlaznome pogonu ista matematika povezuje ubrzanje fluida s potiskom sustava.
-
+Aktuatorski disk pretpostavlja jednoliko opterećenje, nestlačiv fluid bez viskoznosti, bez vrtnje traga i bez međudjelovanja s trupom; zato daje gornju granicu učinkovitosti i donju granicu inducirane brzine, a ne radnu točku stvarnog propelera. Sustrujanje $w_s$, odbitak potiska i kavitacija zahtijevaju podatke o trupu i lopaticama. Model jedne pokretne lopatice s $\rho A(c_1-u)$ opisuje samo trenutačni doprinos lopatice koja se udaljava od sapnice; snaga Peltonova kola slijedi iz punog sapničkog protoka $\rho Ac_1$, uz zasebno procijenjene hidrauličke, mehaničke i generatorske gubitke.
+:::
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Propeler iza trupa: kada trebamo pojedine lopatice?** Ručni @ex-u12-propeler-dronskog-kvadkoptera-u-stanju-visa-t2 koristi jednoliko opterećene diskove bez međudjelovanja. Za propeler iza trupa CFD može zadržati disk kao raspodijeljenu silu na fluid, a uključiti nejednolik dotok i trag trupa. Potreban je zakon opterećenja, primjerice iz poznate karakteristike propelera. Takav model omogućuje ispitivanje međudjelovanja trupa i prosječnog propulzijskog učinka uz manji računski trošak.
+**Propeler iza trupa: kada trebamo pojedine lopatice?** Ručni @ex-propeler-u-napredovanju koristi jednoliko opterećen disk u jednolikom dotoku bez trupa. Za propeler iza trupa CFD može zadržati disk kao raspodijeljenu silu na fluid, a uključiti nejednolik dotok i trag trupa. Potreban je zakon opterećenja, primjerice iz poznate karakteristike propelera. Takav model omogućuje ispitivanje međudjelovanja trupa i prosječnog propulzijskog učinka uz manji računski trošak.
 
 Za promjenjivo opterećenje pojedine lopatice ili lokalnu kavitaciju treba detaljniji model rotora i odgovarajuća fizika. Potisak provjeravamo bilancom količine gibanja, uključujući tlakove na granicama, a snagu momentom i brzinom vrtnje. Potisak sam ne određuje brzinu plovila: povezuje se s otporom trupa. Time se nastavak priče o plutanju i sličnosti povezuje s pogonom.
 :::
 
 ## Riješeni primjeri
 
-Međurezultati u prikazu zaokruženi su radi čitljivosti. Završne sile, momenti i snage računaju se iz nezaokruženih vrijednosti.
+Međurezultati su zaokruženi radi čitljivosti; završne vrijednosti računaju se iz nezaokruženih.
 
 ::: {#ex-u12-vodilica-mlaza-na-ispitnom-stolu-t2 .mf1-we}
 <p class="mf1-box-label">Vodilica mlaza na ispitnom stolu&nbsp;<span class="mf1-level">T2</span></p>
@@ -370,7 +239,7 @@ Nepomična vodilica skreće vodeni mlaz u horizontalnoj ravnini za $\beta = 120^
 
 ![Vodilica mlaza na ispitnom stolu](../assets/print/u12_val1_vodilica_mlaza.svg){#fig-u12-vodilica-mlaza-na-ispitnom-stolu fig-alt="Vodilica mlaza na ispitnom stolu"}
 
-**Veza s proračunom.** Dubina mlaza $h=14\,\mathrm{mm}$ mjeri se okomito na tlocrt. Promjenu brzine prati promjena širine mlaza uz isti protok. Vektori sila fluida na vodilicu izdvojeni su radi prikaza smjera i ne zadaju hvatišta; reakcija nosača im je suprotna. Isprekidana kontrolna granica uz vodilicu podudara se sa stijenkom.
+**Veza s proračunom.** Dubina $h=14\,\mathrm{mm}$ mjeri se okomito na tlocrt; vektori sila fluida na vodilicu ne zadaju hvatišta, a reakcija nosača im je suprotna.
 
 **Rješenje**
 
@@ -418,119 +287,9 @@ $$ {#eq-turbostrojevi-rijeseni-primjer-vodilica-mlaza-na-ispitnom-stol-07}
 
 **Provjera i tumačenje**
 
-1. Maseni protok reda desetak kilograma u sekundi razuman je za ovakav presjek i brzinu mlaza.
-2. Komponenta po osi $x$ mora biti dominantna jer ulazna projekcija brzine po toj osi znatno nadmašuje izlaznu.
-3. Reakcija reda nekoliko stotina njutna razumna je za mlaz brzine reda dvadesetak metara u sekundi.
+Iznos reakcije mora biti jednak $\dot m\,|\vec v_2-\vec v_1|=12{,}07\cdot37{,}3=450\ \text{N}$, što se podudara. Smanjenje iznosa brzine s 24 na 19 m/s znači da vodilica nije idealna; razlika kinetičke energije $\dot m(v_1^2-v_2^2)/2\approx1{,}3\ \text{kW}$ disipira se u vodilici, jer nepomična vodilica ne prima mehaničku snagu.
 :::
 
-
-::: {#ex-u12-relativni-dotok-na-pokretnu-lopaticu-t1 .mf1-we}
-<p class="mf1-box-label">Relativni dotok na pokretnu lopaticu&nbsp;<span class="mf1-level">T1</span></p>
-
-**Tekst zadatka**
-
-Mlaz vode gustoće $\rho = 998\ \text{kg/m}^3$ izlazi iz sapnice promjera $d = 38\ \text{mm}$ apsolutnom brzinom $c_1 = 22\ \text{m/s}$. Jedna lopatica zahvaća cijeli mlaz i giba se u njegovu smjeru brzinom $u = 8\ \text{m/s}$. Kontrolni volumen prati lopaticu.
-
-**Traži se**
-
-1. Odredi relativnu ulaznu brzinu $w_1$.
-2. Odredi relativni maseni protok $\dot m_{rel}$ kroz pokretni kontrolni volumen.
-3. Usporedi taj relativni protok s punim masenim protokom sapnice.
-
-![Relativni dotok iz fiksne sapnice na pokretnu ravnu lopaticu.](../assets/print/u12_fig_relativni_dotok.svg){#fig-u12-relativni-dotok-lopatica fig-align="center" fig-alt="Relativni dotok iz fiksne sapnice na pokretnu ravnu lopaticu."}
-
-**Veza s proračunom.** Kontrolni volumen prati ploču: masa koja do nje stiže računa se relativnom ulaznom brzinom. Taj dotok razlikuje se od protoka kroz nepomičnu sapnicu. Relativni izlaz prati ploču. Ulazni vektori imaju zajedničko mjerilo, a debljina razlijevanja je shematska.
-
-**Rješenje**
-
-Površina sapnice iznosi
-
-$$
-A = \frac{\pi d^2}{4} = \frac{\pi \cdot 0{,}038^2}{4} = 1{,}134 \cdot 10^{-3}\ \text{m}^2.
-$$ {#eq-turbostrojevi-rijeseni-primjer-relativni-dotok-na-pokretnu-lop-01}
-
-Relativna ulazna brzina prema lopatici je
-
-$$
-w_1 = c_1-u = 22-8 = 14\ \text{m/s}.
-$$ {#eq-turbostrojevi-rijeseni-primjer-relativni-dotok-na-pokretnu-lop-02}
-
-Zato relativni maseni protok iznosi
-
-$$
-\dot m_{rel} = \rho A w_1 = 998 \cdot 1{,}134 \cdot 10^{-3} \cdot 14 = 15{,}85\ \text{kg/s}.
-$$ {#eq-turbostrojevi-rijeseni-primjer-relativni-dotok-na-pokretnu-lop-03}
-
-Puni maseni protok sapnice bio bi
-
-$$
-\dot m = \rho A c_1 = 998 \cdot 1{,}134 \cdot 10^{-3} \cdot 22 = 24{,}90\ \text{kg/s}.
-$$ {#eq-turbostrojevi-rijeseni-primjer-relativni-dotok-na-pokretnu-lop-04}
-
-Dakle, kroz pokretni kontrolni volumen stvarno ulazi samo
-
-$$
-\frac{\dot m_{rel}}{\dot m} = \frac{c_1-u}{c_1} = \frac{14}{22} \approx 0{,}636
-$$ {#eq-turbostrojevi-rijeseni-primjer-relativni-dotok-na-pokretnu-lop-05}
-
-odnosno oko $63{,}6\%$ punog sapničkog protoka.
-
-**Provjera i tumačenje**
-
-1. Ako bi lopatica mirovala, moralo bi biti $w_1 = c_1$.
-2. Kako se lopatica giba u istom smjeru kao mlaz, relativni protok mora biti manji od punog sapničkog protoka.
-3. Kad bi bilo $u \to c_1$, relativni bi dotok težio nuli.
-:::
-
-::: {#ex-u12-pokretna-ravna-lopatica-u-mlazu-t2 .mf1-we}
-<p class="mf1-box-label">Pokretna ravna lopatica u mlazu&nbsp;<span class="mf1-level">T2</span></p>
-
-**Tekst zadatka**
-
-Vodeni mlaz gustoće $\rho = 998\ \text{kg/m}^3$ izlazi iz sapnice promjera $d = 40\ \text{mm}$ apsolutnom brzinom $c_1 = 24\ \text{m/s}$. Ravna lopatica zahvaća cijeli mlaz i giba se u njegovu smjeru brzinom $u = 9\ \text{m/s}$. Voda nakon udara napušta lopaticu s apsolutnom vodoravnom komponentom brzine jednakom $u$. Zanemari gubitke.
-
-**Traži se**
-
-1. Odredi maseni protok koji stvarno ulazi u pokretni kontrolni volumen.
-2. Odredi silu mlaza na lopaticu.
-3. Odredi snagu koju mlaz predaje lopatici.
-
-![Pokretna ravna lopatica](../assets/print/u12_val3_pokretna_lopatica.svg){#fig-u12-pokretna-ravna-lopatica fig-alt="Pokretna ravna lopatica"}
-
-**Veza s proračunom.** Kontrolni volumen prati ploču, pa se dotok računa relativnom brzinom, a promjena količine gibanja apsolutnim brzinama. Oznaka $c$ predstavlja apsolutnu brzinu fluida, a $u$ brzinu ploče; relativni izlaz prati njezinu prednju stranu. Ulazni vektori imaju zajedničko mjerilo, dok je debljina razlijevanja shematska.
-
-**Rješenje**
-
-Površina mlaza iznosi
-
-$$
-A = \frac{\pi d^2}{4} = \frac{\pi \cdot 0{,}04^2}{4} = 1{,}257 \cdot 10^{-3}\ \text{m}^2.
-$$ {#eq-turbostrojevi-rijeseni-primjer-pokretna-ravna-lopatica-u-mlazu-01}
-
-Relativna ulazna brzina prema lopatici je $c_r = c_1-u = 24-9 = 15\ \text{m/s}$, pa je maseni protok koji stvarno ulazi u pokretni kontrolni volumen
-
-$$
-\dot{m}_{rel} = \rho \frac{\pi d^2}{4} c_r = 998 \cdot \frac{\pi\cdot0{,}040^2}{4} \cdot 15 \approx 18{,}81\ \text{kg/s}.
-$$ {#eq-turbostrojevi-rijeseni-primjer-pokretna-ravna-lopatica-u-mlazu-02}
-
-Kako voda nakon udara u apsolutnom sustavu odlazi s vodoravnom brzinom $u$, promjena vodoravne komponente brzine iznosi $c_1-u = 15\ \text{m/s}$, pa sila lopatice na fluid glasi
-
-$$
-F_{l\to f} = \dot{m}_{rel}(u-c_1) \approx -282{,}2\ \text{N}.
-$$ {#eq-turbostrojevi-rijeseni-primjer-pokretna-ravna-lopatica-u-mlazu-03}
-
-Zato fluid na lopaticu djeluje silom suprotnog smjera, pa je traženi iznos sile $F = 282{,}2\ \text{N} \approx 282\ \text{N}$. Snaga predana lopatici iznosi
-
-$$
-P = Fu = 282{,}2 \cdot 9 \approx 2540\ \text{W} = 2{,}54\ \text{kW}.
-$$ {#eq-turbostrojevi-rijeseni-primjer-pokretna-ravna-lopatica-u-mlazu-04}
-
-**Provjera i tumačenje**
-
-1. Ako bi lopatica mirovala, sila bi morala biti veća nego u ovom slučaju jer bi relativni dotok bio veći.
-2. Ako bi se lopatica gibala brzinom jednakom brzini mlaza, relativni dotok pao bi na nulu i nestala bi i sila.
-3. Snaga mora biti reda nekoliko kilovata jer se sila reda nekoliko stotina njutna prenosi na brzinu reda deset metara u sekundi.
-:::
 
 ::: {#ex-u12-pokretna-zakrivljena-lopatica-s-relativnim-izlazom-t3 .mf1-ch}
 <p class="mf1-box-label">Pokretna zakrivljena lopatica s relativnim izlazom&nbsp;<span class="mf1-level">T3</span></p>
@@ -548,7 +307,7 @@ Zakrivljena lopatica giba se brzinom $u = 10\ \text{m/s}$ u smjeru vodenog mlaza
 
 ![Pokretna zakrivljena lopatica](../assets/print/u12_ch1_pokretna_zakrivljena_lopatica.svg){#fig-u12-pokretna-zakrivljena-lopatica fig-alt="Pokretna zakrivljena lopatica"}
 
-**Veza s proračunom.** Na ulazu i izlazu brzina lopatice ima isti smjer prema $+x$. Relativni izlaz najprije pretvori u apsolutni, pa tek onda sastavi bilancu količine gibanja. Sile djeluju na lopaticu, a njihovi vektori izdvojeni su radi čitljivosti. Vodilica dodiruje vanjski rub toka; prolaz i slobodni izlaz ostaju otvoreni. Trokuti imaju zajedničko mjerilo, a kontrolna granica uz vodilicu prati stijenku.
+**Veza s proračunom.** Brzina lopatice na ulazu i izlazu ima smjer $+x$; prikazane sile djeluju na lopaticu, a trokuti imaju zajedničko mjerilo.
 
 **Rješenje**
 
@@ -600,11 +359,7 @@ $$ {#eq-turbostrojevi-cjeloviti-zadatak-pokretna-zakrivljena-lopatica-07}
 
 **Provjera i tumačenje**
 
-Ovaj cjeloviti zadatak zatvara puni prijelaz kroz []{.mf1-chapter-ref target="u14"}: relativni dotok daje $\dot{m}_{rel} \approx 25{,}4\ \text{kg/s}$, relativni izlaz mora se prevesti u apsolutni vektor $\vec{c}_2 \approx (-2{,}47,\ 7{,}20)\ \text{m/s}$, a tek tada se dobiva sila mlaza na lopaticu od oko $(723, -183)\ \text{N}$. Budući da rad proizvodi samo komponenta sile u smjeru gibanja, lopatica prima snagu od oko $7{,}23\ \text{kW}$.
-
-1. Maseni protok kroz pokretni kontrolni volumen mora biti manji od punog sapničkog protoka jer je $w_1 = c_1-u < c_1$.
-2. Komponenta $F_x$ mora ostati dominantna jer se ulazna i izlazna komponenta brzine u tom smjeru najviše razlikuju.
-3. Kad bi se lopatica gibala brzinom jednakom brzini mlaza, relativni dotok bi nestao, pa bi nestale i sila i snaga.
+Energijska bilanca: fluid gubi $\dot m_{rel}(c_1^2-|\vec c_2|^2)/2=7{,}85\ \text{kW}$, lopatica prima $7{,}23\ \text{kW}$, a $0{,}62\ \text{kW}=\dot m_{rel}(w_1^2-w_2^2)/2$ disipira se zbog $k=0{,}90$. Uz $\beta_2=180^\circ-30^\circ$ [-@eq-turbostrojevi-razrada-koraka-04] daje istih $F_x=723\ \text{N}$.
 :::
 
 ::: {#ex-u12-peltonov-rotor-s-jednim-mlazom-i-momentom .mf1-ch}
@@ -612,9 +367,9 @@ Ovaj cjeloviti zadatak zatvara puni prijelaz kroz []{.mf1-chapter-ref target="u1
 
 **Tekst zadatka**
 
-Jedna Peltonova lopatica zahvaća cijeli vodeni mlaz gustoće $\rho = 998\ \text{kg/m}^3$, promjera sapnice $d = 44\ \text{mm}$ i apsolutne brzine $c_1 = 31\ \text{m/s}$. Rotor polumjera $r = 0{,}46\ \text{m}$ vrti se stalnom brzinom $n = 320\ \text{min}^{-1}$. Relativni izlaz određen je s $w_2 = k w_1$, $k = 0{,}90$, pod kutom $\beta = 20^\circ$ iznad negativne tangencijalne osi $x$. Tražena snaga generatora je $P_G = 9{,}5\ \text{kW}$.
+Jedna Peltonova lopatica zahvaća cijeli vodeni mlaz gustoće $\rho = 998\ \text{kg/m}^3$, promjera sapnice $d = 44\ \text{mm}$ i apsolutne brzine $c_1 = 31\ \text{m/s}$. Rotor polumjera $r = 0{,}46\ \text{m}$ vrti se stalnom brzinom $n = 320\ \text{min}^{-1}$. Relativni izlaz određen je s $w_2 = k w_1$, $k = 0{,}90$, pod kutom $\beta = 20^\circ$ iznad negativne tangencijalne osi $x$. Tražena snaga generatora je $P_G = 9{,}5\ \text{kW}$, mehanička učinkovitost rotora i ležajeva $\eta_m=0{,}96$, a učinkovitost generatora $\eta_G=0{,}94$.
 
-Ulaz i izlaz su na atmosferi. Kontrolni volumen prati jednu lopaticu; tijekom kratkog prolaza fluida smjer obodne brzine smatra se stalnim, a rotacijska akumulacija zanemaruje. Računa se trenutačni doprinos lopatice, ne kontinuirana snaga cijelog rotora.
+Ulaz i izlaz su na atmosferi. U prvom dijelu kontrolni volumen prati jednu lopaticu; tijekom kratkog prolaza fluida smjer obodne brzine smatra se stalnim, a rotacijska akumulacija zanemaruje. U drugom dijelu računa se cijelo kolo, koje slijedom lopatica zahvaća puni sapnički protok.
 
 **Traži se**
 
@@ -622,11 +377,11 @@ Ulaz i izlaz su na atmosferi. Kontrolni volumen prati jednu lopaticu; tijekom kr
 2. Odredi maseni protok kroz pokretni kontrolni volumen $\dot{m}_{rel}$ i apsolutni izlazni vektor $\vec{c}_2$.
 3. Odredi komponente i iznos sile fluida na lopaticu.
 4. Odredi moment na obodu rotora i snagu koju mlaz predaje rotoru.
-5. Usporedi trenutačnu idealiziranu snagu lopatice s traženom snagom generatora i objasni zašto ta usporedba sama ne dokazuje pogonsku dostatnost rotora.
+5. Odredi silu, moment i snagu cijeloga kola s punim sapničkim protokom, hidrauličku učinkovitost kola i raspoloživu električnu snagu te objasni zašto se za kolo ne smije uzeti protok jedne lopatice.
 
 ![Peltonov rotor s jednim mlazom](../assets/print/u12_ch2_pelton_rotor_moment.svg){#fig-u12-peltonov-rotor-s-jednim-mlazom fig-alt="Peltonov rotor s jednim mlazom"}
 
-**Veza s proračunom.** Prikazan je lokalni doprinos jedne lopatice tijekom kratkog prolaza, uz zanemarenu rotacijsku akumulaciju. Tangencijalna sila daje moment oko osi rotora; zahvaćeni relativni dotok ne zamjenjuje se punim sapničkim protokom. Trokuti brzina imaju zajedničke jedinice i mjerilo. Isprekidana kontrolna granica uz lopaticu podudara se sa stijenkom.
+**Veza s proračunom.** Skica prikazuje jednu lopaticu tijekom kratkog prolaza; moment oko osi daje tangencijalna sila, a trokuti brzina imaju zajedničko mjerilo.
 
 **Rješenje**
 
@@ -688,25 +443,155 @@ $$
 P = M\omega = 312{,}95 \cdot 33{,}51 = 10{,}49\ \text{kW},
 $$ {#eq-turbostrojevi-cjeloviti-zadatak-reprezentativna-peltonova-lopa-09}
 
-što odgovara i zapisu $P=F_xu=680{,}3\cdot15{,}41=10{,}49\ \text{kW}$. Trenutačna idealizirana vrijednost veća je od $9{,}50\ \text{kW}$ za $0{,}99\ \text{kW}$, ali iz toga se ne smije zaključiti da cijeli rotor može trajno pogoniti takav generator. Model koristi relativni dotok $\rho A(c_1-u)$ jedne pokretne lopatice; kontinuirani Peltonov rotor zahvaća puni sapnički protok slijedom lopatica i traži zasebnu bilancu cijeloga kola te hidrauličke, mehaničke i generatorske gubitke.
+što odgovara i zapisu $P=F_xu=680{,}3\cdot15{,}41=10{,}49\ \text{kW}$. To je trenutačni doprinos jedne lopatice koja se udaljava od sapnice i **nije** snaga kola: voda koju ta lopatica ne stigne zahvatiti ne nestaje, nego pogađa sljedeću lopaticu.
+
+### 5. Cijelo kolo s punim sapničkim protokom {.mf1-step .unnumbered .unlisted}
+
+Kolo zahvaća sav protok sapnice, $\dot m=\rho Ac_1=998\cdot1{,}521\cdot10^{-3}\cdot31=47{,}04\ \text{kg/s}$. Trokut brzina svake lopatice je isti kao gore, pa je tangencijalna sila na kolo
+
+$$
+F_{x,kolo}=\dot m\,(c_1-c_{2x})=47{,}04\,(31-2{,}23)=1353\ \text{N},
+$$ {#eq-pelton-kolo-sila}
+
+moment $M_{kolo}=F_{x,kolo}\,r=622{,}5\ \text{N m}$ i snaga
+
+$$
+P_{kolo}=M_{kolo}\,\omega=F_{x,kolo}\,u=1353\cdot15{,}41=20{,}86\ \text{kW}.
+$$ {#eq-pelton-kolo-snaga}
+
+Snaga mlaza iznosi $\tfrac12\dot mc_1^2=22{,}60\ \text{kW}$, pa je hidraulička učinkovitost kola $\eta_h=20{,}86/22{,}60=0{,}923$; upravo je to Eulerov zapis $P=\dot m\,u\,(c_{1t}-c_{2t})$ s punim protokom. Raspoloživa električna snaga $P_{kolo}\,\eta_m\eta_G=20{,}86\cdot0{,}96\cdot0{,}94=18{,}8\ \text{kW}$ premašuje $P_G=9{,}5\ \text{kW}$; generator bi dakle radio na oko polovici raspoložive snage, što je odluka o regulaciji sapnice, ne o dostatnosti kola. Usporedba s $10{,}49\ \text{kW}$ jedne lopatice bila bi pogrešna: ona vrijedi za lopaticu koja bježi od mlaza, a kolo s $u/c_1\approx0{,}50$ radi upravo u optimumu modela s punim protokom.
 
 **Provjera i tumačenje**
 
-Ovaj `T4` zadatak zatvara račun reprezentativne lopatice u []{.mf1-chapter-ref target="u14"}: dobivaju se trenutačna tangencijalna sila od oko $680\ \text{N}$, doprinos momentu od oko $313\ \text{N m}$ i idealizirana snaga od oko $10{,}5\ \text{kW}$. Granica modela namjerno je dio odgovora: maseni protok jedne pokretne lopatice ne smije se bez nove postavke proglasiti kontinuiranim protokom cijeloga rotora.
-
-1. U ovom stanju je $u>c_1/3$, pa dodatno povećanje brzine smanjuje snagu lokalnog modela jedne lopatice. Općenito snaga najprije raste, a zatim pada; sila sama ne određuje položaj maksimuma.
-2. U ovom stanju tangencijalna komponenta sile veća je od normalne. Moment oko osi u lokalnom modelu proizvodi tangencijalna komponenta; iz toga ne slijedi opći uvjet za omjer tih sila.
-3. Ako se iz relativnog izlaza izravno pročita moment bez povratka na apsolutni vektor $\vec{c}_2$, pogrešno se računa promjena momenta količine gibanja.
+Omjer snaga $P_{kolo}/P_{lop}=c_1/(c_1-u)=1{,}99$ jednak je omjeru zahvaćenih protoka; kolo s $u/c_1=0{,}497$ radi u svojem optimumu, a model jedne lopatice preporučio bi $u=c_1/3$. Gubitak u lopatici $\dot m(w_1^2-w_2^2)/2=47{,}04\,(15{,}59^2-14{,}03^2)/2=1{,}09\ \text{kW}$ zajedno s izlaznom kinetičkom energijom $\dot m|\vec c_2|^2/2=0{,}66\ \text{kW}$ zatvara bilancu: $20{,}86+1{,}09+0{,}66=22{,}6\ \text{kW}$.
 :::
 
-Posljednji primjer mijenja medij i uređaj, ali ne i metodu: Peltonov impulsni rotor zamjenjuje aktuatorski disk, a bilanca količine gibanja povezuje potisak, induciranu brzinu i snagu.
+::: {#ex-radijalno-kolo-crpke-euler .mf1-we}
+<p class="mf1-box-label">Radijalno kolo balastne crpke i Eulerova visina&nbsp;<span class="mf1-level">T2</span></p>
+
+**Tekst zadatka**
+
+Radijalno kolo balastne crpke vrti se brzinom $n = 1450\ \text{min}^{-1}$ i dobavlja morsku vodu gustoće $\rho = 1025\ \text{kg/m}^3$ protokom $Q = 0{,}045\ \text{m}^3\text{/s}$. Ulazni polumjer lopatica je $r_1 = 0{,}060\ \text{m}$ uz širinu kanala $b_1 = 0{,}035\ \text{m}$, izlazni polumjer $r_2 = 0{,}130\ \text{m}$ uz širinu $b_2 = 0{,}020\ \text{m}$. Fluid ulazi bez predvrtnje ($c_{1t}=0$), lopatice su unatrag zakrivljene s izlaznim kutom $\beta_2 = 25^\circ$ mjerenim od smjera $-u$, a fluid napušta lopaticu točno pod tim kutom (beskonačno mnogo tankih lopatica). Tlak i volumne sile nemaju moment oko osi, tok je stacionaran, a zadebljanje lopatica zanemari.
+
+**Traži se**
+
+1. Odredi obodne brzine $u_1$, $u_2$ i meridijanske komponente $c_{m1}$, $c_{m2}$.
+2. Nacrtaj ulazni i izlazni trokut brzina, odredi $\vec w_1$, $\vec w_2$, kut $\beta_1$ za ulaz bez udara i tangencijalnu komponentu $c_{2t}$.
+3. Odredi specifični rad, teorijsku (Eulerovu) visinu $H_{th}$, snagu na kolu i predznak rada.
+
+![Radijalno kolo crpke s ulaznim i izlaznim trokutom brzina](../assets/print/u12_val3_pokretna_lopatica.svg){#fig-radijalno-kolo-crpke-trokuti fig-align="center" fig-alt="Presjek radijalnog kola s unatrag zakrivljenim lopaticama i smjerom vrtnje; uz ulazni polumjer nacrtan je trokut brzina s radijalnim c1, a uz izlazni polumjer trokut s u2, w2 pod kutom beta2 i apsolutnom brzinom c2. Oba trokuta imaju isto mjerilo."}
+
+**Veza s proračunom.** Pozitivni tangencijalni smjer prati vrtnju; trokuti su nacrtani u zajedničkom mjerilu iz podataka zadatka.
+
+**Rješenje**
+
+Kutna brzina je $\omega=2\pi n/60=151{,}8\ \text{rad/s}$, pa su obodne brzine
+
+$$
+u_1=\omega r_1=9{,}11\ \text{m/s},
+\qquad
+u_2=\omega r_2=19{,}74\ \text{m/s}.
+$$ {#eq-crpka-obodne-brzine}
+
+Kontinuitet kroz cilindrične presjeke daje meridijanske komponente
+
+$$
+\begin{aligned}
+c_{m1}&=\frac{Q}{2\pi r_1b_1}=\frac{0{,}045}{2\pi\cdot0{,}060\cdot0{,}035}=3{,}41\ \text{m/s}, \\
+c_{m2}&=\frac{Q}{2\pi r_2b_2}=2{,}755\ \text{m/s}.
+\end{aligned}
+$$ {#eq-crpka-meridijanske-brzine}
+
+Na ulazu je $\vec c_1=(0;\,3{,}41)$ m/s u lokalnim osima (tangencijalno, radijalno), pa je $\vec w_1=\vec c_1-(u_1;0)=(-9{,}11;\,3{,}41)$ m/s. Kut lopatice za ulaz bez udara, mjeren od smjera $-u$,
+
+$$
+\beta_1=\arctan\frac{c_{m1}}{u_1}=\arctan\frac{3{,}41}{9{,}11}=20{,}5^\circ.
+$$ {#eq-crpka-ulazni-kut}
+
+Na izlazu relativna brzina slijedi lopaticu: $\vec w_2=(-c_{m2}/\tan\beta_2;\,c_{m2})=(-5{,}91;\,2{,}755)$ m/s, $|\vec w_2|=6{,}52$ m/s, pa je
+
+$$
+c_{2t}=u_2+w_{2t}=19{,}74-5{,}91=13{,}83\ \text{m/s},
+\qquad
+\vec c_2=(13{,}83;\,2{,}755)\ \text{m/s}.
+$$ {#eq-crpka-izlazna-brzina}
+
+Eulerova jednadžba s $c_{1t}=0$ daje specifični rad rotora na fluid i teorijsku visinu
+
+$$
+\begin{aligned}
+e_{r\to f}&=u_2c_{2t}-u_1c_{1t}=19{,}74\cdot13{,}83=273{,}0\ \text{J/kg}, \\
+H_{th}&=\frac{e_{r\to f}}{g}=27{,}8\ \text{m}.
+\end{aligned}
+$$ {#eq-crpka-eulerova-visina}
+
+Snaga koju kolo predaje fluidu je $P_{r\to f}=\rho Q\,e_{r\to f}=1025\cdot0{,}045\cdot273{,}0=12{,}6\ \text{kW}$; pozitivan predznak znači crpni režim (rotor radi na fluid), a moment na vratilu iznosi $M=P/\omega=82{,}9\ \text{N m}$.
+
+**Provjera i tumačenje**
+
+Rastav rada $e=(c_2^2-c_1^2)/2+(u_2^2-u_1^2)/2+(w_1^2-w_2^2)/2=93{,}6+153{,}3+26{,}1=273{,}0$ J/kg vraća Eulerov rezultat; većinu visine daje centrifugalni porast tlaka. $H_{th}$ je gornja granica: klizanje i hidraulički gubitci daju stvarnu visinu reda $0{,}82\cdot27{,}8\approx22{,}8$ m, koju treba usporediti s karakteristikom sustava iz []{.mf1-chapter-ref target="u13"}.
+:::
+
+::: {#ex-propeler-u-napredovanju .mf1-we}
+<p class="mf1-box-label">Brodski propeler u napredovanju i idealna učinkovitost&nbsp;<span class="mf1-level">T3</span></p>
+
+**Tekst zadatka**
+
+Propeler obalnog broda promjera $D = 3{,}2\ \text{m}$ mora pri brzini napredovanja $v_A = 6{,}0\ \text{m/s}$ dati potisak $F_T = 160\ \text{kN}$ u morskoj vodi gustoće $\rho = 1025\ \text{kg/m}^3$. Modeliraj ga jednoliko opterećenim aktuatorskim diskom u jednolikom dotoku, bez vrtnje traga i bez utjecaja trupa. Alternativa je propeler promjera $D' = 2{,}6\ \text{m}$ pri istim $F_T$ i $v_A$.
+
+**Traži se**
+
+1. Odredi koeficijent opterećenja potiskom $C_{Th}$, brzinu kroz disk $v_d$, brzinu dalekog traga $v_j$ i tlačni skok na disku.
+2. Odredi korisnu snagu, idealnu snagu $P_i$ i idealnu učinkovitost $\eta_i$.
+3. Usporedi oba promjera i obrazloži koji model (disk ili račun po lopaticama) odgovara kojem pitanju; navedi što sustrujanje mijenja.
+
+![Aktuatorski disk propelera u napredovanju: strujna cijev, brzine i potisak](../assets/print/u12_fig_relativni_dotok.svg){#fig-aktuatorski-disk-propelera fig-align="center" fig-alt="Strujna cijev koja se sužava od dalekog uzvodnog presjeka preko tankog diska propelera do dalekog traga; strelice brzina vA, vd i vw rastu nizvodno u zajedničkom mjerilu, potisak FT djeluje na disk prema pramcu, a kota D označuje promjer diska."}
+
+**Veza s proračunom.** Brzine su u okviru propelera; presjeci strujne cijevi slijede iz kontinuiteta $A_\infty v_A=Av_d=A_jv_j$. Potisak $F_T$ je sila na brod, suprotna ubrzanju vode.
+
+**Rješenje**
+
+Površina diska je $A=\pi D^2/4=8{,}04\ \text{m}^2$, a koeficijent opterećenja
+
+$$
+C_{Th}=\frac{F_T}{\tfrac12\rho v_A^2A}=\frac{160\,000}{0{,}5\cdot1025\cdot6{,}0^2\cdot8{,}04}=1{,}078.
+$$ {#eq-propeler-ct}
+
+Iz [-@eq-idealna-ucinkovitost-ct] slijedi $\sqrt{1+C_{Th}}=1{,}441$, pa su
+
+$$
+v_d=\frac{v_A}{2}\left(1+\sqrt{1+C_{Th}}\right)=7{,}32\ \text{m/s},
+\qquad
+v_j=2v_d-v_A=8{,}65\ \text{m/s}.
+$$ {#eq-propeler-brzine}
+
+Inducirana brzina u disku iznosi $v_d-v_A=1{,}32\ \text{m/s}$, a tlačni skok $\Delta p_d=F_T/A=19{,}9\ \text{kPa}$. Korisna snaga je $F_Tv_A=960\ \text{kW}$, idealna snaga predana vodi
+
+$$
+P_i=F_Tv_d=160\,000\cdot7{,}32=1172\ \text{kW},
+$$ {#eq-propeler-idealna-snaga}
+
+a idealna učinkovitost
+
+$$
+\eta_i=\frac{2}{1+\sqrt{1+C_{Th}}}=\frac{2}{2{,}441}=0{,}819=\frac{960}{1172}.
+$$ {#eq-propeler-eta-i}
+
+Za manji propeler $D'=2{,}6\ \text{m}$ je $A'=5{,}31\ \text{m}^2$, $C_{Th}'=1{,}633$, $v_d'=7{,}87\ \text{m/s}$, $P_i'=1259\ \text{kW}$ i $\eta_i'=0{,}763$.
+
+**Provjera i tumačenje**
+
+Količina gibanja $\rho Av_d(v_j-v_A)=160\ \text{kN}$ vraća zadani potisak, a $P_i-F_Tv_A=212\ \text{kW}$ jest kinetička energija traga $\tfrac12\dot m(v_j-v_A)^2$. Veći disk štedi oko $87\ \text{kW}$ idealne snage, pa se bira najveći propeler koji gaz i trup dopuštaju; disk daje donju granicu snage, a broj okretaja, moment, kavitacija i stvarna $\eta_0\approx0{,}55$–$0{,}70$ traže račun po lopaticama. Iza trupa je $v_A=(1-w_s)v_s$: za $v_s=7{,}0\ \text{m/s}$ zadani $v_A$ odgovara $w_s\approx0{,}14$.
+:::
+
+Posljednji primjer prenosi aktuatorski disk iz mora u zrak: mijenjaju se medij i uređaj, ali ne i metoda, jer bilanca količine gibanja i dalje povezuje potisak, induciranu brzinu i snagu.
 
 ::: {#ex-u12-propeler-dronskog-kvadkoptera-u-stanju-visa-t2 .mf1-we}
 <p class="mf1-box-label">Propeler dronskog kvadkoptera u stanju visa &nbsp;<span class="mf1-level">T2</span></p>
 
 **Tekst zadatka**
 
-Kvadkopter mase $m = 2{,}4\ \text{kg}$ lebdi s četiri jednako opterećena propelera promjera $D = 280\ \text{mm}$. Na visini $1\,500\ \text{m}$ i temperaturi $5^\circ\text{C}$ gustoća zraka je $\rho = 1{,}045\ \text{kg/m}^3$. Faktor učinka $\eta = 0{,}70$ predstavlja omjer idealne inducirane i potrebne snage na vratilu.
+Kvadkopter mase $m = 2{,}4\ \text{kg}$ lebdi s četiri jednako opterećena propelera promjera $D = 280\ \text{mm}$. Na visini $1\,500\ \text{m}$ i temperaturi $5^\circ\text{C}$ gustoća zraka je $\rho = 1{,}045\ \text{kg/m}^3$. Faktor učinka (*figure of merit*) $\eta = 0{,}70$ predstavlja omjer idealne inducirane i potrebne snage na vratilu.
 
 Svaki propeler modeliraj jednoliko opterećenim aktuatorskim diskom u nestlačivom zraku koji daleko ispred drona miruje. Zanemari međudjelovanje mlaznih traka, utjecaj trupa te gubitke motora, regulatora i baterije. Ukupni potisak uravnotežuje težinu.
 
@@ -722,7 +607,7 @@ Svaki propeler modeliraj jednoliko opterećenim aktuatorskim diskom u nestlačiv
 Iz ravnoteže sila u visu, potisak po pojedinom propeleru:
 
 $$
-F_p = \frac{m\,g}{4} = \frac{2{,}4 \cdot 9{,}81}{4} \approx 5{,}886\ \text{N}.
+F_T = \frac{m\,g}{4} = \frac{2{,}4 \cdot 9{,}81}{4} \approx 5{,}886\ \text{N}.
 $$ {#eq-turbostrojevi-rijeseni-primjer-propeler-dronskog-kvadkoptera-u-01}
 
 Površina diska pojedinog propelera:
@@ -734,7 +619,7 @@ $$ {#eq-turbostrojevi-rijeseni-primjer-propeler-dronskog-kvadkoptera-u-02}
 Prema teoriji aktuatorskog diska, srednja brzina protoka zraka kroz disk u stacionarnom visu iznosi:
 
 $$
-v = \sqrt{\frac{F_p}{2\rho A}} = \sqrt{\frac{5{,}886}{2 \cdot 1{,}045 \cdot 6{,}158 \cdot 10^{-2}}}.
+v = \sqrt{\frac{F_T}{2\rho A}} = \sqrt{\frac{5{,}886}{2 \cdot 1{,}045 \cdot 6{,}158 \cdot 10^{-2}}}.
 $$ {#eq-turbostrojevi-rijeseni-primjer-propeler-dronskog-kvadkoptera-u-03}
 
 Računaju se redom $2\rho A \approx 0{,}1287$ i $5{,}886 / 0{,}1287 \approx 45{,}73$:
@@ -746,7 +631,7 @@ $$ {#eq-turbostrojevi-rijeseni-primjer-propeler-dronskog-kvadkoptera-u-04}
 Idealna mehanička snaga koju propeler predaje zraku:
 
 $$
-P_{id} = F_p \cdot v = 5{,}886 \cdot 6{,}76 \approx 39{,}8\ \text{W}.
+P_{id} = F_T \cdot v = 5{,}886 \cdot 6{,}76 \approx 39{,}8\ \text{W}.
 $$ {#eq-turbostrojevi-rijeseni-primjer-propeler-dronskog-kvadkoptera-u-05}
 
 Potrebna mehanička snaga na vratilu uz zadani faktor učinka:
@@ -763,13 +648,13 @@ $$ {#eq-turbostrojevi-rijeseni-primjer-propeler-dronskog-kvadkoptera-u-07}
 
 **Provjera i tumačenje**
 
-Dobivenih $6{,}76\ \text{m/s}$ idealna je inducirana brzina kroz disk za zadano opterećenje. Veći disk pri istom potisku smanjio bi induciranu brzinu i idealnu snagu, ali stvarni izbor propelera mora uključiti i profilne, vršne i pogonske gubitke. Baterija kapaciteta $5\,000\ \text{mAh}$ pri $14{,}8\ \text{V}$ nominalno sadrži $74\ \text{Wh}$, pa bi gornja procjena samo iz dobivenih $227\ \text{W}$ bila
+Provjera količinom gibanja: $\rho Av_d\cdot2v_d=1{,}045\cdot0{,}0616\cdot6{,}76\cdot13{,}5=5{,}89\ \text{N}$. U visu je $v_A=0$, pa je $\eta_i$ iz [-@eq-idealna-ucinkovitost-propelera] nula iako disk troši $39{,}8\ \text{W}$; mjera kvalitete je faktor učinka. Baterija kapaciteta $5\,000\ \text{mAh}$ pri $14{,}8\ \text{V}$ nominalno sadrži $74\ \text{Wh}$, pa bi gornja procjena samo iz dobivenih $227\ \text{W}$ bila
 
 $$
 t=\frac{74\ \text{Wh}}{227{,}47\ \text{W}}\approx0{,}325\ \text{h}\approx19{,}5\ \text{min}.
 $$ {#eq-turbostrojevi-rijeseni-primjer-propeler-dronskog-kvadkoptera-u-08}
 
-To nije predviđanje stvarnog trajanja leta: treba uračunati iskoristivu, ne nominalnu energiju baterije, učinkovitost motora i regulatora, pomoćne potrošače, manevarsku rezervu te međudjelovanje rotora i trupa. Manja gustoća zraka povećava idealnu induciranu snagu za isti potisak i diskovnu površinu, ali njezin učinak na stvarno trajanje također ovisi o radnoj točki cijelog pogona.
+To je gornja granica, ne trajanje leta: nedostaju iskoristiva energija baterije, učinkovitost motora i regulatora, pomoćni potrošači i rezerva.
 :::
 
 ::: {.mf1-samoprovjera}
@@ -784,11 +669,11 @@ Sljedeća pitanja služe za samostalnu provjeru razumijevanja prije prelaska na 
 Apsolutna brzina $\vec{c}$ promatra se u nepomičnom (zemaljskom) okviru. Obodna brzina $\vec{u}$ je brzina same lopatice u istom okviru. Relativna brzina $\vec{w} = \vec{c} - \vec{u}$ je brzina fluida u okviru koji se giba s lopaticom. Maseni protok kroz lopaticu računa se iz relativne brzine, a promjena količine gibanja u apsolutnim brzinama.
 :::
 
-2. Ručni model jedne lopatice daje optimum $u=c_1/3$, a model cijelog kola $u=c_1/2$. Mora li jedan račun biti pogrešan?
+2. Dva propelera daju isti potisak pri istoj brzini napredovanja. Zašto veći disk ima veću idealnu učinkovitost i zašto ni on ne doseže $\eta_i=1$?
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Ne. Uz stalni relativni izlazni kut i koeficijent $k$ kolo zahvaća puni sapnički protok, a dotok jednoj lopatici smanjuje se kako raste njezina brzina. Različiti kontrolni volumeni zato daju različite ovisnosti snage o $u$. Najprije usporedi zahvaćeni protok, pa tek onda optimume.
+Isti potisak kroz veću površinu traži manju induciranu brzinu, pa trag odnosi manje kinetičke energije; $C_{Th}$ pada i $\eta_i=2/(1+\sqrt{1+C_{Th}})$ raste. Granica $\eta_i\to1$ zahtijevala bi $C_{Th}\to0$, dakle beskonačno velik disk; stvarni propeler uz to gubi na vrtnji traga, profilnom otporu i vršnim gubitcima.
 :::
 
 3. Što se događa s mlazom iza Peltonove lopatice pri optimalnoj obodnoj brzini i idealnom izlaznom kutu od $180^\circ$?
@@ -810,9 +695,9 @@ Vrijedi za rotirajuće lopatične strojeve u kojima fluid mijenja smjer ili izno
 
 ![Skice vježbi: sile na ploču i vodilicu, obrnuti račun izlaza lopatice, dva trokuta brzina, vodomlazni pogon i razdjelnik s četirima izlazima.](../assets/print/u12_vjezbe_skice.svg){#fig-u12-vjezbe fig-align="center" fig-alt="Slobodni mlazovi završavaju na prednjoj strani ploče ili prate otvorenu vodilicu. Kote mjere unutarnje presjeke; relativne i apsolutne brzine odvojene su od sila. Voda u razdjelnik platforme ulazi kroz dva otvorena vodoravna priključka."}
 
-**Napomene uz skice.** Z1 prikazuje vodu gustoće $998\,\mathrm{kg/m^3}$ bez izlazne komponente brzine okomite na ploču. U Z2 promatra se horizontalna ravnina, s ulazom prema $+x$ i izlazom prema $+y$. U Z3 zadan je relativni maseni protok $18\,\mathrm{kg/s}$; izlaz i koeficijent $k$ treba odrediti. U Z4 vrijedi $\mathbf c=\mathbf u+\mathbf w$; lokalna tangencijalna os ide udesno, radijalna gore, a oba trokuta imaju isto mjerilo.
+**Napomene uz skice.** U Z2 promatra se horizontalna ravnina, s ulazom prema $+x$ i izlazom prema $+y$. U Z4 vrijedi $\vec c=\vec u+\vec w$; lokalna tangencijalna os ide udesno, radijalna gore, a oba trokuta imaju isto mjerilo.
 
-U Z5 traži se $T=2{,}00\,\mathrm{kN}$ uz $\eta=0{,}80$ i $P_{\mathrm{el}}\le40{,}0\,\mathrm{kW}$. Brzine su u brodskom okviru: voda teče prema krmi, uz $V_0=U=8\,\mathrm{m/s}$. Kružni presjeci i brzine uspoređuju se u istoj skali; krug označuje stroj, a duljine su shematske. Z6 prikazuje početno mirovanje platforme i fluida; sile dovoda određene su pretpostavkom zadatka. Isprekidane kontrolne granice uz stijenke prate njihove obrise.
+U Z5 brzine su u brodskom okviru: voda teče prema krmi, ulazi brzinom broda $v_s$ i izlazi brzinom mlaza $v_j$; presjeci i brzine su u istoj skali, krug označuje stroj. Z6 prikazuje početno mirovanje platforme i fluida.
 
 ::::: {.mf1-vjezbe-list}
 
@@ -934,7 +819,7 @@ $(u_1,u_2)=(12;28)\ \mathrm{m/s}$; $\vec w_1=(-7;4)\ \mathrm{m/s}$, $\vec w_2=(-
 
 **Tekst zadatka**
 
-Brod se jednoliko giba brzinom $U=8{,}0\ \mathrm{m/s}$ kroz mirujuću vodu gustoće $\rho=1000\ \mathrm{kg/m^3}$. Potreban potisak je $T=2{,}00\ \mathrm{kN}$. U brodskom okviru voda ulazi brzinom $V_0=U$, a kandidati A i B izbacuju je unatrag brzinama $V_{j,A}=20{,}0\ \mathrm{m/s}$ i $V_{j,B}=30{,}0\ \mathrm{m/s}$. Svaki kandidat ima jednu kružnu izlaznu sapnicu.
+Brod se jednoliko giba brzinom $v_s=8{,}0\ \mathrm{m/s}$ kroz mirujuću vodu gustoće $\rho=1000\ \mathrm{kg/m^3}$. Potreban potisak je $F_T=2{,}00\ \mathrm{kN}$. U brodskom okviru voda ulazi brzinom broda $v_s$ (bez sustrujanja), a kandidati A i B izbacuju je unatrag brzinama mlaza $v_{j,A}=20{,}0\ \mathrm{m/s}$ i $v_{j,B}=30{,}0\ \mathrm{m/s}$. Svaki kandidat ima jednu kružnu izlaznu sapnicu.
 
 Zanemari razliku geodetskih visina, vanjske tlačne doprinose potisku, utjecaj traga trupa i gubitke u dovodu i sapnici. Referentne presjeke uzmi s jednakim atmosferskim tlakom. Tok je stacionaran u brodskom okviru, uz jednak ulazni i izlazni maseni protok. Za obje varijante zadana učinkovitost pretvorbe električne u hidrauličku snagu pogona jest $\eta=0{,}80$, a dostupno je najviše $P_{el,max}=40{,}0\ \mathrm{kW}$.
 
@@ -942,19 +827,19 @@ Ne poistovjećuj $\eta_{prop}$ sa zadanom učinkovitošću pogona.
 
 **Traži se**
 
-1. Odredi potreban $Q$, unutarnji promjer izlaza, snagu predanu fluidu $P_h$, električnu snagu i propulzijsku učinkovitost $\eta_{prop}=TU/P_h$.
-2. Zatvori bilancu korisne snage i kinetičke energije daleke trake te obrazloži izbor. Izaberi izvedivu varijantu prema raspoloživoj električnoj snazi i objasni zašto veća izlazna brzina sama ne znači povoljniji pogon.
+1. Odredi potreban $Q$, unutarnji promjer izlaza, snagu predanu fluidu $P_h$, električnu snagu i propulzijsku učinkovitost $\eta_{prop}=F_Tv_s/P_h$. Provjeri da je $\eta_{prop}=2v_s/(v_j+v_s)$, dakle upravo Froudeova idealna učinkovitost iz [-@eq-idealna-ucinkovitost-propelera] s $v_A=v_s$.
+2. Zatvori bilancu korisne snage i kinetičke energije dalekog traga te obrazloži izbor. Izaberi izvedivu varijantu prema raspoloživoj električnoj snazi i objasni zašto veća izlazna brzina sama ne znači povoljniji pogon.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-U bilanci potiska zadrži ulazni tok količine gibanja: $T=\rho Q(V_j-U)$. Energijska bilanca brodskog okvira daje $P_h=\rho Q(V_j^2-U^2)/2$, a $P_{el}=P_h/\eta$. Površina sapnice je $Q/V_j$. Neovisno: $P_h=TU+\rho Q(V_j-U)^2/2$.
+U bilanci potiska zadrži ulazni tok količine gibanja: $F_T=\rho Q(v_j-v_s)$. Energijska bilanca brodskog okvira daje $P_h=\rho Q(v_j^2-v_s^2)/2$, a $P_{el}=P_h/\eta$. Površina sapnice je $Q/v_j$. Neovisno: $P_h=F_Tv_s+\rho Q(v_j-v_s)^2/2$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-Za A/B: $Q\approx(166{,}67;90{,}91)\ \mathrm{L/s}$, $d\approx(103{,}01;62{,}12)\ \mathrm{mm}$, $P_h=(28;38)\ \mathrm{kW}$, $P_{el}=(35;47{,}5)\ \mathrm{kW}$ i $\eta_{prop}\approx(0{,}571;0{,}421)$. Obje varijante daju $TU=16\ \mathrm{kW}$; u traci ostaje 12 odnosno 22 kW. Granicu 40 kW zadovoljava samo A.
+Za A/B: $Q\approx(166{,}67;90{,}91)\ \mathrm{L/s}$, $d\approx(103{,}01;62{,}12)\ \mathrm{mm}$, $P_h=(28;38)\ \mathrm{kW}$, $P_{el}=(35;47{,}5)\ \mathrm{kW}$ i $\eta_{prop}\approx(0{,}571;0{,}421)$. Obje varijante daju $F_Tv_s=16\ \mathrm{kW}$; u traci ostaje 12 odnosno 22 kW, a $\eta_{prop}$ se podudara s $2v_s/(v_j+v_s)$. Granicu 40 kW zadovoljava samo A.
 :::
 ::::
 
@@ -977,13 +862,13 @@ Primijeni kvazistacionarni model u trenutku kad platforma miruje, uz zanemarenu 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Zbroji četiri izlazne površine. Uz zadane pretpostavke $F_p=\rho Av^2$, masa lebdenja je $F_p/g$, a trenutačno $a=(F_p-mg)/m$. Za zadani kriterij koristi $d_{min}$ i $v_{min}$ te zahtijevaj $F_{p,min}\ge1{,}10\,mg$.
+Zbroji četiri izlazne površine. Uz zadane pretpostavke $F_T=\rho Av^2$, masa lebdenja je $F_T/g$, a trenutačno $a=(F_T-mg)/m$. Za zadani kriterij koristi $d_{min}$ i $v_{min}$ te zahtijevaj $F_{T,min}\ge1{,}10\,mg$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$F_p\approx3{,}186\ \mathrm{kN}$, masa lebdenja $324{,}7\ \mathrm{kg}$ i početno $a\approx19{,}15\ \mathrm{m/s^2}$. Za $d_{min}=27{,}7\ \mathrm{mm}$ i $v_{min}=34{,}5\ \mathrm{m/s}$: $F_{p,min}\approx2{,}863\ \mathrm{kN}$ i $m_{krit}\approx265{,}3\ \mathrm{kg}$. Zaključak vrijedi u zadanom modelu; nedostaju stvarne sile dovoda, dinamika, stabilnost, konstrukcijska i upravljačka provjera.
+$F_T\approx3{,}186\ \mathrm{kN}$, masa lebdenja $324{,}7\ \mathrm{kg}$ i početno $a\approx19{,}15\ \mathrm{m/s^2}$. Za $d_{min}=27{,}7\ \mathrm{mm}$ i $v_{min}=34{,}5\ \mathrm{m/s}$: $F_{T,min}\approx2{,}863\ \mathrm{kN}$ i $m_{krit}\approx265{,}3\ \mathrm{kg}$. Zaključak vrijedi u zadanom modelu; nedostaju stvarne sile dovoda, dinamika, stabilnost, konstrukcijska i upravljačka provjera.
 :::
 ::::
 
@@ -995,31 +880,17 @@ $F_p\approx3{,}186\ \mathrm{kN}$, masa lebdenja $324{,}7\ \mathrm{kg}$ i početn
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
 
-**Sažeta provjera prije računa**
+- Kontrolni volumen prati lopaticu (protok $\rho A(c_1-u)$) ili obuhvaća cijelo kolo (puni sapnički protok $\rho Ac_1$); o tome ovisi i optimum, $c_1/3$ odnosno $c_1/2$.
+- Trokut brzina zatvara $\vec c=\vec u+\vec w$ u svakom presjeku; rad daje samo tangencijalna komponenta apsolutne brzine.
+- Eulerova jednadžba $P_{r\to f}=\dot m(u_2c_{2t}-u_1c_{1t})$ svojim predznakom razlikuje crpku od turbine.
+- Kut lopatice mjeri se od smjera $-u$; u izvodu skretanja vrijedi $\beta_2=180^\circ-\beta$.
+- Idealna učinkovitost propulzije $\eta_i=2/(1+\sqrt{1+C_{Th}})$ raste s promjerom diska; trag odnosi razliku $P_i-F_Tv_A$.
 
-- Prije pisanja jednadžbi nacrtaj kontrolni volumen i osi.
-- Treba jasno razlikovati koju silu daje jednadžba količine gibanja: silu okoline na fluid ili silu fluida na okolinu.
-- Treba rastaviti izlaznu brzinu na komponente u istom koordinatnom sustavu kao ulaznu.
-- Maseni protok računaj iz površine i normalne brzine istoga presjeka, uz relativnu brzinu za pomičnu kontrolnu plohu.
-- Treba razdvojiti silu fluida na vodilicu od reakcije nosača.
-
-**Najčešća pogreška**
-
-Najčešća pogreška nije u masenom protoku, nego u tome što se bez promjene predznaka uzme sila vodilice na fluid kao konačan odgovor. Taj korak treba uvijek jasno označiti prije iskazivanja konačnog rezultata.
+**Najčešća pogreška.** Snagu Peltonova kola računati s relativnim dotokom jedne lopatice ili silu vodilice na fluid navesti kao konačan odgovor bez promjene predznaka.
 
 **Nakon ovoga poglavlja mora biti moguće**
 
-1. postaviti kontrolni volumen za mlaz i vodilicu.
-2. iz promjene vektora brzine odrediti komponente sile, reakcije i osnovni moment u uklještenju.
-3. koristiti istu bilancu količine gibanja kao osnovu za lopatice, moment i mlazni potisak.
-
-**U tehnici to znači**
-
-Peltonovo kolo, vodomlazni pogon i mlazna ispitna glava rade dobro samo ako je ispravno pročitano koliko količine gibanja fluid predaje lopatici ili konstrukciji. Iz iste jednadžbe zato ovdje proizlaze sila, moment, snaga i potisak, ovisno o tome što se promatra kao radni izlaz sustava.
-
-**Granica modela**
-
-Maksimalna sila nije isto što i maksimalna snaga, a idealizirana promjena vektora brzine nije dovoljna ako su važni gubitci u lopatici, neujednačen profil brzine ili složenija geometrija mlaza. U stvarnom stroju izbor kuta i brzine uvijek treba čitati zajedno s učinkovitošću, a ne samo sa silom.
-
-[]{.mf1-chapter-ref target="u14"} počinje kontrolnim volumenom, ne turbinom. Jasno čitanje promjene količine gibanja na mirnoj vodilici daje stabilnu osnovu i za reakcije nosača i za kasnije pokretne lopatice.
+1. odrediti silu i snagu na pokretnoj lopatici i Peltonovu kolu uz zadani kut i gubitak;
+2. nacrtati trokute brzina rotora i iz Eulerove jednadžbe odrediti predznak rada, specifični rad i raspoloživu snagu;
+3. iz aktuatorskog diska odrediti induciranu brzinu, idealnu snagu i učinkovitost te objasniti ulogu sustrujanja.
 :::

@@ -1,5 +1,45 @@
 # Revizija U12 — diferencijalni opis realnog toka
 
+## Revizija 12. 10. 2026. (provedba nalaza stručne recenzije)
+
+Autorica je odobrila provedbu svih nalaza. Provedeno u
+`source/u12_diferencijalni_opis_realnog_toka.md`, `tools/verify_u12_real_flow.py`
+te oznakama brzine u `assets/print/u12_fig_uvod_realni_tok.svg` i
+`assets/print/u12_realni_tok_vjezbe_skice.svg`. Podatci P6 i Z6 iz `data/cfd`
+i bilježnica `u12_poiseuille_konvergencija.ipynb` (Z3, Z4, Z6) nisu mijenjani.
+
+Izvodi: novi blok „Matematički izvod — Od Cauchyjeve jednadžbe do
+Navier–Stokesove” (`eq-newtonska-konstitutivna-relacija`,
+`eq-divergencija-viskoznog-naprezanja`, veza s $\tau=\mu\,dv/dy$ iz u02);
+Poiseuilleova ODE s rubnim uvjetima (`eq-poiseuille-ode`); Reynoldsovo
+osrednjavanje (`eq-reynoldsovo-osrednjavanje`) s imenima $k$–$\varepsilon$ i
+$k$–$\omega$ SST te objašnjenjem oznake SSTm; 1-D primjer konačnih volumena za
+Poiseuilleov tok (`eq-poiseuille-fvm-celija`), SIMPLE/PISO i FEM imenovani u
+`sec-realni-tok-cfd`. Novi blok „Fizikalno značenje” uz granični sloj i
+odvajanje; granica modela preimenovana u obrazac „Granica modela — …” s
+definicijom tenzora $\mathbf D$. Notacija: brzina fluida $\vec v$, $v$, $v_i$,
+indeksna notacija uvedena jednom rečenicom; brzina ploče $u$; srednja
+presječna brzina $v$; $\overline{v}$ i $v'$ u turbulenciji; $U_\infty$, $U_e$
+uz definiciju; pokazatelj $K$ u Z5 preimenovan u $m$ (Falkner–Skanov
+parametar) jer je $K$ rezerviran za volumni modul. Pitanje 5 u „Provjeri
+sebe” zamijenjeno (brzina u osi vs. $\tau_w$). P6: napomena o interpolaciji
+preko $1{,}2H$. Z6: tekst skraćen, podatci i kriteriji nepromijenjeni. Sirova
+`.qmd` poveznica zamijenjena makroom; pojašnjen uvjet „nulti gradijent” ($p$ vs.
+$p_{rgh}$).
+
+| Mjesto | Postojeći ID i uloga | Odluka | Razina | Završni ID | Kontrolni rezultat | Provjere |
+| --- | --- | --- | --- | --- | --- | --- |
+| P4 | `ex-granicni-sloj`; Blasius na ravnoj ploči, isti podatci kao Z5 | ZAMIJENITI: granični sloj na trupu modela broda iz pog. 11 P2 (stimulatori turbulencije, turbulentna $\delta$ na krmi, $C_F$ po ITTC 1957) | T2 | `ex-granicni-sloj-trupa-modela` (stari ID kao `<span>`) | $Re_{x_1}=5{,}4\cdot10^5$, $\delta_B=2{,}04$ mm, $Re_L=1{,}08\cdot10^7$, $\delta\approx88$ mm, $C_{F,m}=2{,}96\cdot10^{-3}$, $C_{F,s}=1{,}48\cdot10^{-3}$ | `U12.REAL.P4.*` (6 golden, 2 invarijante) |
+| P5 | `ex-intenzitet-turbulencije`; jedno dijeljenje s oznakom T3 | PREPRAVITI u stvarnu odluku: $I\to k$ uz izotropiju, $\omega$ iz dogovorne skale $\ell=0{,}07D$ s osjetljivošću | T3 | isti | $I=6{,}0$ %, $k=0{,}346$ m²/s², $\omega\approx51$ s⁻¹, $\varepsilon\approx1{,}59$ m²/s³ | `U12.REAL.P5.*` (5 golden, 2 invarijante) |
+| Z5 | `task-granicni-sloj-model` | NOTACIJA: $K\to m$; brojevi isti | T3 | isti | $m=-0{,}0667$ | nepromijenjene |
+| Z6 | `task-cfd-tri-mreze` | SKRATITI tekst; podatci i kriteriji isti | T4 | isti | nepromijenjen | nepromijenjene |
+
+Provjere: `verify_u12_real_flow.py` 76 rezultata bez pada (prije 66);
+`check_u12_sketch_geometry.py` PASS; `audit_sketch_design.py` bez poruka za
+U12 skice. Nije stvorena nova skica za P4 (stari P4 nije imao skicu; nova bi
+datoteka bila opcionalna). Ovo je autorska provedba recenzentskih nalaza;
+D01/D02/D04/D06 i manifest usklađuje koordinator.
+
 ## Dijagnoza prije provedbe
 
 Pet primjera pokriva konvektivno ubrzanje, Couette–Poiseuilleov tok,

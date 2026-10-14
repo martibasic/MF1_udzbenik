@@ -115,3 +115,38 @@ početni model s razlikama višeg reda u kutu, a ne provjera konačne stabilnost
 Lokalni Quarto je 1.9.32 (CI koristi 1.9.37); postojeća upozorenja Typsta o
 `times.circle` u U10 nisu povezana s ovom izmjenom. Puni JupyterLite build
 i udaljeni GitHub Actions nisu pokretani. Izmjene nisu commitane ni pushane.
+
+## Revizija 12. 10. 2026.
+
+Provedba nalaza stručne recenzije (brodska hidrostatika), odobrene od autorice.
+Zadatci Z1–Z6 nisu mijenjani sadržajno (samo oznake $T$, $\Delta$, nadvođe i po
+jedna rečenica konteksta u Z3/Z5); razine ostaju T1, T1, T2, T2, T3, T4. Broj
+primjera ostaje 6; P5 (pumpno kućište) premješten je odmah iza izvoda uzgona i
+sada je P1, a ID `ex-u07-uzgon-na-potonulo-pumpno-kuciste-pri-ispitivanju` ostaje.
+
+| Nalaz recenzije | Provedeno | Mjesto |
+| --- | --- | --- |
+| Kut uronjenja ruba palube računan sa $\sin$ (37,1°) | Ispravljen uvjet $F_b\cos\theta=(B/2)\sin\theta$, $\tan\theta_{lim}=2F_b/B$, 31,1°; verifikator `atan` + invarijanta | P4 (CH2), `verify_u07.py` |
+| Spar fizikalno neuvjerljiv (gaz 17 m, 78 m iznad vode) | Novi podatci $D=12$ m, $H=100$ m, $m=9000$ t: $T=77{,}6$ m, $f=22{,}4$ m, $KB=38{,}8$ m, $BM=0{,}116$ m, $KM=38{,}9$ m; uvjet $KG<KM$, primjeri $GM$ s balastom i bez njega; T3 opravdan izborom modela (njihalo, ne vodna linija) | P6 `ex-u07-plutajuci-vjetroagregat-tipa-cilindricne-plovne-osnove-t3` |
+| Dvofluidni $BM_{eq}$ bez izvoda | Dopisan izvod s dvama klinovima ($\rho_oI_T\theta+(\rho_w-\rho_o)I_T\theta$) i granicama $\rho_o\to\rho_w$, $\rho_o\to0$ | izvod BM, `#eq-metacentarski-radijus-dva-fluida` |
+| Granica malog kuta samo deklarativna; P2 6,84° vs 5° u Z3/Z6 | Blok „Granica modela” s wall-sided polugom $GZ=(GM+\tfrac12BM\tan^2\theta)\sin\theta$; u P2 korekcija 0,9 %, u P3 0,4 %; obrazložena granica 5° | `#eq-poluga-okomiti-bokovi`, P2, P3 |
+| „Neovisna provjera” $y_B=BM\tan\theta$ tautološka | Preimenovano u konzistentnost; neovisna kontrola wall-sided izrazom | P2, P3 |
+| Dupli izvod, redoslijed GM prije BM, orphan odlomci | Uklonjen callout „Postupak rješenja”; momentna ravnoteža $m_ke=\Delta GM\tan\theta$ izvedena iz povratnog momenta unutar izvoda BM (ID jednadžbe zadržan); uklonjeni odlomci o nepostojećem međukoraku; r. 80 obrazloženje za proizvoljan oblik; r. 450 „plutajuće tijelo” | teorija |
+| Slobodna površina bez formule | Blok „Dublje”: $\delta GM=-\rho_ti_t/(\rho V_{ist})$, tank iz P4 napola pun: $-0{,}065$ m | `#eq-ucinak-slobodne-povrsine` |
+| Nazivlje i notacija | nadvođe, poluga stabiliteta, poprečni nagib, kut nestajanja stabiliteta, centar uzgona, stabilitet, metoda dodane težine (P4), pridružena masa (CFD); $V_{ist}$, $T$ ($T_m$, $T_L$, $T_D$, $T_0$), $\Delta$ masa istisnine, $BM$/$GM$ bez nadvlake; drugo pitanje samoprovjere zamijenjeno (jednak $GM$, različit $BM$) | cijelo poglavlje; oznake $T_L$/$T_D$/$T$ i u skicama |
+
+Matrica zamjena: nema zamijenjenih zadataka (Z1–Z6 ID-jevi i kontrolni rezultati
+nepromijenjeni; Z6 $\Delta=689{,}9$ kg i dalje odgovara `verify_physics`).
+Promijenjeni primjer P6 (spar) zadržava ID; novi kontrolni rezultati navedeni su
+u tablici.
+
+Provjere: `verify_u07.py` 112/112 (nove provjere: `U07.CH2.theta_lim_deg` 31,1°,
+geometrija ruba palube, slobodna površina, spar KB/BM/KM/GM, wall-sided korekcije
+i invarijanta granice malog kuta). `check_u06_sketch_geometry.py` PASS (bez
+geometrijskih izmjena; promijenjene su samo tekstne oznake gaza u
+`u07_ch1_platforma_ulje_voda_ormar.svg`, `u07_val1_platforma_kompresor.svg`,
+`u07_val2_ponton_gaz.svg` i `u07_vjezbe_skice.svg`). Skica za spar nije dodana
+(zahtijevala bi novu SVG datoteku). Drugi numerički pokus ($GZ$ wall-sided) nije
+izrađen jer traži novu bilježnicu i CI. `audit_publication` javlja da redoslijed
+primjera P1–P6 treba obnoviti generatorom indeksa (koordinator). Didaktička
+procjena ostaje autorska.

@@ -38,38 +38,41 @@ def primjer_1_kolica(L=1.60, h_0=0.42, a=1.35, g=9.81):
     return {"dh": dh, "h_str": h_str, "h_pred": h_pred, "theta_deg": theta_deg}
 
 
-def primjer_2_kada(L=1.80, H=0.72, h_0=0.54, B=0.95, rho=970.0, g=9.81):
-    h_str = H
-    h_pred = 2 * h_0 - h_str
-    dh = h_str - h_pred
-    a_max = g * dh / L
-    F_R = 0.5 * rho * g * B * h_str**2
-    return {"h_pred": h_pred, "dh": dh, "a_max": a_max, "F_R": F_R}
-
-
-def primjer_3_modul(a=3.4, g=9.81, H=0.55, p_M0=16e3, rho=960.0):
+def primjer_3_modul(a=3.4, g=9.81, H=0.55, p_M_pl=16e3, rho=960.0):
+    """P2: kosa stijenka usporedna s g_eff; raspodjela tlaka duz AB i tlak u B."""
     theta = math.atan(a / g)
-    theta_deg = math.degrees(theta)
-    alpha_deg = 90 - theta_deg
-    alpha = math.radians(alpha_deg)
-    s = H / math.sin(alpha)
+    phi = math.pi / 2 - theta
+    s = H / math.sin(phi)
     g_eff = math.sqrt(g**2 + a**2)
-    A_AB = s
-    F_0 = p_M0 * A_AB
-    F_h = 0.5 * rho * g_eff * s**2
-    F_R = F_0 + F_h
-    y_R = (F_0 * (s / 2) + F_h * (2 * s / 3)) / F_R
+    gradient = rho * g_eff
+    p_B = p_M_pl + gradient * s
+    p_B_components = p_M_pl + rho * (g * H + a * s * math.cos(phi))
     return {
-        "theta_deg": theta_deg, "alpha_deg": alpha_deg, "s": s, "g_eff": g_eff,
-        "F_0": F_0, "F_h": F_h, "F_R": F_R, "y_R": y_R,
+        "theta_deg": math.degrees(theta), "phi_deg": math.degrees(phi), "s": s,
+        "g_eff": g_eff, "gradient": gradient, "p_B": p_B,
+        "p_B_components": p_B_components, "dx": s * math.cos(phi),
     }
 
 
-def primjer_4_rotacija(R=0.35, h_0=0.28, omega=6.0, g=9.81):
-    dh = omega**2 * R**2 / (2 * g)
-    h_rub = h_0 + dh / 2
-    h_osa = h_0 - dh / 2
-    return {"dh": dh, "h_rub": h_rub, "h_osa": h_osa}
+def primjer_brod_u_zavoju(v=6.17, R=180.0, B=9.0, h_0=1.60, H=2.20,
+                          rho=1025.0, g=9.81):
+    """P3: balastni tank broda u ustaljenom kruznom zavoju."""
+    a = v**2 / R
+    theta_deg = math.degrees(math.atan(a / g))
+    dh = a * B / g
+    h_v = h_0 + dh / 2
+    h_u = h_0 - dh / 2
+    a_max = 2 * g * (H - h_0) / B
+    v_max = math.sqrt(a_max * R)
+    omega = v / R
+    dh_parabola = omega**2 * ((R + B / 2)**2 - (R - B / 2)**2) / (2 * g)
+    return {
+        "a": a, "theta_deg": theta_deg, "dh": dh, "h_v": h_v, "h_u": h_u,
+        "overflow": h_v >= H, "a_max": a_max, "v_max": v_max,
+        "v_max_kn": v_max / 0.5144, "dh_parabola": dh_parabola,
+        "curvature_mm": omega**2 * B**2 / (24 * g) * 1000,
+        "p_v": rho * g * h_v, "p_u": rho * g * h_u,
+    }
 
 
 def cjeloviti_1_rotacija(R=0.40, H=0.78, h_0=0.60, omega=5.20,
@@ -103,20 +106,27 @@ def primjer_5_autocisterna(L=1.20, h_0=0.45, H=0.80, a=3.8, rho=750.0, g=9.81):
     }
 
 
-def primjer_centrifuga(n=4000.0, r_d=0.095, r_v=0.025,
-                        rho=1060.0, g=9.81):
+def primjer_separator(n=7200.0, r_o=0.045, r_w=0.047, r_2=0.120,
+                      rho_o=930.0, rho_w=960.0, Q_lph=1500.0, H_b=0.15, g=9.81):
+    """P6: centrifugalni separator goriva - tlak u bubnju i razdjelnica."""
     omega = 2 * math.pi * n / 60
-    a_cf = omega**2 * r_d
-    dp = 0.5 * rho * omega**2 * (r_d**2 - r_v**2)
-    return {"omega": omega, "a_cf": a_cf, "a_cf_g": a_cf / g, "dp": dp}
+    dp = 0.5 * rho_o * omega**2 * (r_2**2 - r_o**2)
 
+    def interface(rho_oil):
+        ri2 = (rho_w * r_w**2 - rho_oil * r_o**2) / (rho_w - rho_oil)
+        return math.sqrt(ri2) if ri2 > 0 else float("nan")
 
-def primjer_6_vatrogasna(L=2.40, h_0=1.20, H=1.60, a=4.5, g=9.81):
-    dh = a * L / g
-    h_pred = h_0 + dh / 2
-    h_str = h_0 - dh / 2
-    theta_deg = math.degrees(math.atan(a / g))
-    return {"dh": dh, "h_pred": h_pred, "h_str": h_str, "theta_deg": theta_deg}
+    r_i = interface(rho_o)
+    Q = Q_lph / 1000 / 3600
+    V = math.pi * (r_2**2 - r_o**2) * H_b
+    v_rel = Q / (2 * math.pi * r_i * H_b)
+    return {
+        "omega": omega, "acc_g": omega**2 * r_2 / g, "dp": dp,
+        "r_i": r_i, "r_i_950": interface(950.0),
+        "V": V, "t_res": V / Q, "v_rel": v_rel,
+        "speed_ratio": v_rel / (omega * r_i),
+        "coriolis_ratio": 2 * omega * v_rel / (omega**2 * r_i),
+    }
 
 
 def zadatak_1(L=1.80, h_0=0.34, a=1.20, H=0.46, g=9.81):
@@ -169,6 +179,7 @@ def zadatak_5(L=1.50, h_0=.300, H=.550, a=2.00, g=9.81,
 
 def zadatak_6(R=0.32, H=0.62, h_0=0.46, rho=1000.0, g=9.81,
               alpha=0.80, overspeed=0.05, h_axis_min=0.350):
+    # ``alpha`` je omjer zadane i granicne brzine, u tekstu zadatka oznacen k.
     omega_max = math.sqrt(4 * g * (H - h_0) / R**2)
     omega = alpha * omega_max
     dh = omega**2 * R**2 / (2 * g)
@@ -195,22 +206,39 @@ def verify():
     _check(out, "U04.P1.dh", r["dh"], 0.220, "m")
     _check(out, "U04.P1.h_str", r["h_str"], 0.530, "m")
     _check(out, "U04.P1.h_pred", r["h_pred"], 0.310, "m")
-    _check(out, "U04.P1.theta_deg", r["theta_deg"], 7.9, "deg", rel=0.02)
+    _check(out, "U04.P1.theta_deg", r["theta_deg"], 7.8, "deg", rel=0.005)
 
     r = primjer_3_modul()
-    _check(out, "U04.P3.theta_deg", r["theta_deg"], 19.1, "deg", rel=0.02)
-    _check(out, "U04.P3.alpha_deg", r["alpha_deg"], 70.9, "deg", rel=0.02)
-    _check(out, "U04.P3.s", r["s"], 0.582, "m")
-    _check(out, "U04.P3.g_eff", r["g_eff"], 10.38, "m/s^2")
-    _check(out, "U04.P3.F_0", r["F_0"], 9313.55, "N", rel=1e-6)
-    _check(out, "U04.P3.F_h", r["F_h"], 1688.62, "N", rel=5e-6)
-    _check(out, "U04.P3.F_R", r["F_R"], 11002.17, "N", rel=1e-6)
-    _check(out, "U04.P3.y_R", r["y_R"], 0.30594, "m", rel=1e-5)
+    _check(out, "U04.P3.theta_deg", r["theta_deg"], 19.1, "deg", rel=0.002)
+    _check(out, "U04.P3.phi_deg", r["phi_deg"], 70.9, "deg", rel=0.001)
+    _check(out, "U04.P3.s", r["s"], 0.582, "m", rel=0.001)
+    _check(out, "U04.P3.g_eff", r["g_eff"], 10.38, "m/s^2", rel=0.001)
+    _check(out, "U04.P3.gradient_Pa_m", r["gradient"], 9967.0, "Pa/m", rel=1e-4)
+    _check(out, "U04.P3.p_B_kPa", r["p_B"] / 1000, 21.8, "kPa", rel=0.001)
+    _check(out, "U04.P3.dx_m", r["dx"], 0.191, "m", rel=0.002)
+    _invariant(out, "U04.P3.wall_parallel_to_g_eff",
+               abs(r["p_B"] - r["p_B_components"]) < 1e-9 and r["phi_deg"] > 45,
+               "Tlak u B po g_eff i po komponentama mora biti isti; kut stijenke veci od 45 stupnjeva.")
 
-    r = primjer_4_rotacija()
-    _check(out, "U04.P4.dh", r["dh"], 0.225, "m")
-    _check(out, "U04.P4.h_rub", r["h_rub"], 0.392385, "m", rel=2e-6)
-    _check(out, "U04.P4.h_osa", r["h_osa"], 0.167615, "m", rel=3e-6)
+    r = primjer_brod_u_zavoju()
+    _check(out, "U04.P3b.a", r["a"], 0.2115, "m/s2", rel=2e-4)
+    _check(out, "U04.P3b.theta_deg", r["theta_deg"], 1.24, "deg", rel=0.004)
+    _check(out, "U04.P3b.dh", r["dh"], 0.194, "m", rel=1e-3)
+    _check(out, "U04.P3b.h_v", r["h_v"], 1.697, "m", rel=1e-4)
+    _check(out, "U04.P3b.h_u", r["h_u"], 1.503, "m", rel=1e-4)
+    _check(out, "U04.P3b.a_max", r["a_max"], 1.308, "m/s2", rel=1e-6)
+    _check(out, "U04.P3b.v_max", r["v_max"], 15.3, "m/s", rel=0.003)
+    _check(out, "U04.P3b.v_max_kn", r["v_max_kn"], 29.8, "kn", rel=0.002)
+    _check(out, "U04.P3b.curvature_mm", r["curvature_mm"], 0.4, "mm", rel=0.02)
+    _invariant(out, "U04.P3b.volume_and_no_overflow",
+               abs((r["h_v"] + r["h_u"]) / 2 - 1.60) < 1e-12 and not r["overflow"],
+               "Srednja razina sondi mora ostati h_0, bez prelijevanja.")
+    _invariant(out, "U04.P3b.paraboloid_equals_linear",
+               abs(r["dh_parabola"] - r["dh"]) < 1e-12,
+               "Tocan paraboloid u rotirajucem okviru daje isti dh kao linearna aproksimacija.")
+    _invariant(out, "U04.P3b.outer_side_higher",
+               r["h_v"] > r["h_u"] and r["p_v"] > r["p_u"],
+               "Razina i tlak na dnu moraju biti veci na vanjskoj strani zavoja.")
 
     r = cjeloviti_1_rotacija()
     _check(out, "U04.CH1.dh", r["dh"], 0.2205, "m")
@@ -228,11 +256,25 @@ def verify():
     _check(out, "U04.P5.a_overflow", r["a_overflow"], 5.72, "m/s2", rel=0.02)
     _check(out, "U04.P5.a_dry", r["a_dry"], 7.36, "m/s2", rel=0.02)
 
-    r = primjer_centrifuga()
-    _check(out, "U04.P6.omega", r["omega"], 418.9, "rad/s", rel=0.02)
-    _check(out, "U04.P6.a_cf", r["a_cf"], 1.666e4, "m/s2", rel=0.02)
-    _check(out, "U04.P6.a_cf_g", r["a_cf_g"], 1.699e3, "g", rel=0.02)
-    _check(out, "U04.P6.dp_kPa", r["dp"] / 1000, 781.0, "kPa", rel=0.02)
+    r = primjer_separator()
+    _check(out, "U04.P6.omega", r["omega"], 754.0, "rad/s", rel=1e-4)
+    _check(out, "U04.P6.acc_g", r["acc_g"], 6950.0, "g", rel=1e-3)
+    _check(out, "U04.P6.dp_bar", r["dp"] / 1e5, 32.7, "bar", rel=5e-4)
+    _check(out, "U04.P6.r_i_mm", r["r_i"] * 1000, 89.0, "mm", rel=1e-3)
+    _check(out, "U04.P6.r_i_950_mm", r["r_i_950"] * 1000, 140.0, "mm", rel=3e-3)
+    _check(out, "U04.P6.V_m3", r["V"], 5.83e-3, "m3", rel=1e-3)
+    _check(out, "U04.P6.t_res_s", r["t_res"], 14.0, "s", rel=1e-3)
+    _check(out, "U04.P6.v_rel", r["v_rel"], 5e-3, "m/s", rel=0.01)
+    _check(out, "U04.P6.coriolis_ratio", r["coriolis_ratio"], 1.5e-4, "", rel=0.02)
+    _invariant(out, "U04.P6.interface_inside_bowl",
+               0.047 < r["r_i"] < 0.120 and r["r_i_950"] > 0.120,
+               "Razdjelnica mora biti unutar bubnja za 930 kg/m3, a izvan njega za 950 kg/m3.")
+    _invariant(out, "U04.P6.interface_independent_of_speed",
+               abs(primjer_separator(n=3600.0)["r_i"] - r["r_i"]) < 1e-12,
+               "Polozaj razdjelnice ne smije ovisiti o kutnoj brzini.")
+    _invariant(out, "U04.P6.relative_rest_justified",
+               r["speed_ratio"] < 1e-3 and r["coriolis_ratio"] < 1e-3,
+               "Relativna brzina i Coriolisov clan moraju biti zanemarivi prema krutoj vrtnji.")
 
     z1 = zadatak_1()
     _check(out, "U04.Z1.dh", z1["dh"], 0.22, "m")

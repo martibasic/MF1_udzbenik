@@ -27,7 +27,7 @@ def _invariant(out, rid, condition, details):
                 "details": "" if condition else details})
 
 
-def primjer_1_difuzor(D_1=0.120, D_2=0.180, v_2=16.0, rho=998.0):
+def primjer_1_difuzor(D_1=0.120, D_2=0.180, v_2=1.6, rho=998.0):
     A_1 = math.pi * D_1**2 / 4
     A_2 = math.pi * D_2**2 / 4
     v_1 = A_2 / A_1 * v_2
@@ -47,15 +47,18 @@ def primjer_2_mjesanje(Q_A=0.150, Q_B=0.030, s_B=0.80, D_C=0.30, rho_A=1000.0):
             "m_dot_C": m_dot_C, "rho_C": rho_C}
 
 
-def primjer_3_izjednacni(L=3.0, b=1.8, Q_in=0.022, Q_out=0.008,
-                          h_0=0.45, h_1=1.20, rho=998.0):
-    A_T = L * b
-    dhdt = (Q_in - Q_out) / A_T
-    dh = h_1 - h_0
-    dV = A_T * dh
-    t = dV / (Q_in - Q_out)
-    dm = rho * dV
-    return {"A_T": A_T, "dhdt": dhdt, "dV": dV, "t": t, "dm": dm}
+def primjer_2_zahvatni_usis(v_s_kn=18.0, rho=1025.0, A_u=0.040, phi=0.55,
+                            Q_m3h=180.0):
+    """P2: zahvatni usis morske vode, kontrolni volumen vezan uz brod."""
+    v_s = v_s_kn * 1852.0 / 3600.0
+    Q = Q_m3h / 3600.0
+    m_dot = rho * Q
+    w = Q / A_u                   # relativno prema brodu, u usis
+    w_r = Q / (phi * A_u)         # u slobodnim otvorima rešetke
+    v_abs = v_s - w               # apsolutno, prema pramcu
+    m_dot_wrong = rho * A_u * v_abs
+    return {"v_s": v_s, "Q": Q, "m_dot": m_dot, "w": w, "w_r": w_r,
+            "v_abs": v_abs, "m_dot_wrong": m_dot_wrong}
 
 
 def cjeloviti_1_mijesajuci(L=4.2, b=1.5, Q_A=0.018, Q_B=0.006, s_B=1.10,
@@ -116,13 +119,13 @@ def primjer_ev_hladenje(D_1=0.020, d=0.006, n=16, Q_L_min=25.0):
     }
 
 
-def zadatak_1(D_1=0.10, D_2=0.16, v_1=4.8, rho=998.0):
-    A_1 = math.pi * D_1**2 / 4
-    A_2 = math.pi * D_2**2 / 4
-    Q = A_1 * v_1
-    v_2 = Q / A_2
-    m_dot = rho * Q
-    return {"v_2": v_2, "Q": Q, "m_dot": m_dot}
+def zadatak_1(rho_1=1.20, v_1=12.0, A_1=0.30, rho_2=1.02, A_2=0.24):
+    """Z1: grijač ventilacijskog zraka, masena bilanca uz promjenu gustoće."""
+    m_dot = rho_1 * A_1 * v_1
+    v_2 = m_dot / (rho_2 * A_2)
+    Q_1 = A_1 * v_1
+    Q_2 = A_2 * v_2
+    return {"m_dot": m_dot, "v_2": v_2, "Q_1": Q_1, "Q_2": Q_2}
 
 
 def zadatak_2(A=0.004, v=3.0, alpha_deg=60.0, rho=998.0):
@@ -160,30 +163,30 @@ def zadatak_5(D=0.100, d=0.020, Q_in=0.001, w=1.50,
             "dm": rho*A_p*stroke, "w_stopped": Q_in/A_o}
 
 
-def zadatak_6(A_T=4.8, Q_A=0.011, Q_B=0.004, rho_B=1080.0, D=0.080,
-               v_3=1.6, t_min=6.0, rho_A=1000.0,
-               rel_Q_A=0.02, rel_Q_B=0.03, dv_3=0.08,
-               freeboard=0.560):
-    A_3 = math.pi * D**2 / 4
-    Q_3 = A_3 * v_3
-    m_dot = rho_A * Q_A + rho_B * Q_B
-    rho_mix = m_dot / (Q_A + Q_B)
-    dhdt = (Q_A + Q_B - Q_3) / A_T
-    dm = rho_mix * (Q_A + Q_B - Q_3) * (t_min * 60)
-    Q_A_hi = Q_A * (1 + rel_Q_A)
-    Q_B_hi = Q_B * (1 + rel_Q_B)
-    Q_3_lo = A_3 * (v_3 - dv_3)
-    dhdt_max = (Q_A_hi + Q_B_hi - Q_3_lo) / A_T
-    rise_max = dhdt_max * t_min * 60
-    safe_time = freeboard / dhdt_max
+def zadatak_6(A_T=36.0, h_0=0.30, h_max=1.60, rho_m=1025.0, rho_s=1000.0,
+               Q_m_h=250.0, Q_s_h=40.0, Q_iz_h=120.0, t_min=15.0,
+               rel_m=0.04, rel_s=0.05, rel_iz=0.06):
+    """Z6: balastni tank dvodna, miješanje morske i slatke vode, odzračnik."""
+    Q_m, Q_s, Q_iz = (x / 3600.0 for x in (Q_m_h, Q_s_h, Q_iz_h))
+    rho_mix = (rho_m * Q_m + rho_s * Q_s) / (Q_m + Q_s)
+    Q_net = Q_m + Q_s - Q_iz
+    dhdt = Q_net / A_T
+    t = t_min * 60.0
+    h_t = h_0 + dhdt * t
+    dm = rho_mix * Q_net * t
+    Q_net_max = Q_m * (1 + rel_m) + Q_s * (1 + rel_s) - Q_iz * (1 - rel_iz)
+    dhdt_max = Q_net_max / A_T
+    h_t_max = h_0 + dhdt_max * t
+    t_air = (h_max - h_0) / dhdt_max
     return {
-        "Q_3": Q_3,
         "rho_mix": rho_mix,
+        "Q_net": Q_net,
         "dhdt": dhdt,
+        "h_t": h_t,
         "dm": dm,
         "dhdt_max": dhdt_max,
-        "rise_max": rise_max,
-        "safe_time": safe_time,
+        "h_t_max": h_t_max,
+        "t_air": t_air,
     }
 
 
@@ -203,15 +206,17 @@ def verify():
     _check(out, "U08.KIN.Q", r["Q"], 2.945e-3, "m^3/s")
 
     r = primjer_1_difuzor()
-    _check(out, "U08.P1.v_1", r["v_1"], 36.0, "m/s")
-    _check(out, "U08.P1.Q", r["Q"], 0.407, "m^3/s")
-    _check(out, "U08.P1.m_dot", r["m_dot"], 406.0, "kg/s")
+    _check(out, "U08.P1.v_1", r["v_1"], 3.6, "m/s", rel=1e-10)
+    _check(out, "U08.P1.Q_Ls", r["Q"] * 1000, 40.7, "L/s", rel=0.002)
+    _check(out, "U08.P1.m_dot", r["m_dot"], 40.6, "kg/s", rel=0.002)
 
-    r = primjer_3_izjednacni()
-    _check(out, "U08.P3.A_T", r["A_T"], 5.40, "m^2")
-    _check(out, "U08.P3.dhdt_mm_s", r["dhdt"] * 1000, 2.59, "mm/s")
-    _check(out, "U08.P3.t", r["t"], 289.0, "s", rel=0.02)
-    _check(out, "U08.P3.dm", r["dm"], 4040.0, "kg", rel=0.02)
+    r = primjer_2_zahvatni_usis()
+    _check(out, "U08.P2.v_s", r["v_s"], 9.26, "m/s", rel=0.001)
+    _check(out, "U08.P2.m_dot", r["m_dot"], 51.3, "kg/s", rel=0.002)
+    _check(out, "U08.P2.w", r["w"], 1.25, "m/s", rel=1e-10)
+    _check(out, "U08.P2.w_r", r["w_r"], 2.27, "m/s", rel=0.002)
+    _check(out, "U08.P2.v_abs", r["v_abs"], 8.01, "m/s", rel=0.001)
+    _check(out, "U08.P2.m_dot_wrong", r["m_dot_wrong"], 328.0, "kg/s", rel=0.002)
 
     r = cjeloviti_1_mijesajuci()
     _check(out, "U08.CH1.Q_3", r["Q_3"], 0.01414, "m^3/s")
@@ -233,9 +238,10 @@ def verify():
     _check(out, "U08.P6.rise_percent", r["rise_percent"], 6.67, "%", rel=0.02)
 
     r = zadatak_1()
-    _check(out, "U08.Z1.v_2", r["v_2"], 1.875, "m/s", rel=0.02)
-    _check(out, "U08.Z1.Q_Ls", r["Q"] * 1000, 37.70, "L/s", rel=0.02)
-    _check(out, "U08.Z1.m_dot", r["m_dot"], 37.62, "kg/s", rel=0.02)
+    _check(out, "U08.Z1.m_dot", r["m_dot"], 4.32, "kg/s", rel=1e-10)
+    _check(out, "U08.Z1.v_2", r["v_2"], 17.6, "m/s", rel=0.003)
+    _check(out, "U08.Z1.Q_1", r["Q_1"], 3.60, "m^3/s", rel=1e-10)
+    _check(out, "U08.Z1.Q_2", r["Q_2"], 4.24, "m^3/s", rel=0.002)
 
     r = zadatak_2()
     _check(out, "U08.Z2.v_n", r["v_n"], 1.50, "m/s", rel=0.001)
@@ -262,18 +268,26 @@ def verify():
     _check(out, "U08.Z5.w_stopped", r["w_stopped"], 3.1831, "m/s", rel=0.001)
 
     r = zadatak_6()
-    _check(out, "U08.Z6.Q_3_Ls", r["Q_3"] * 1000, 8.04, "L/s", rel=0.02)
-    _check(out, "U08.Z6.rho_mix", r["rho_mix"], 1021.3, "kg/m^3", rel=0.001)
-    _check(out, "U08.Z6.dhdt_mm_s", r["dhdt"] * 1000, 1.45, "mm/s", rel=0.02)
-    _check(out, "U08.Z6.dm", r["dm"], 2558.0, "kg", rel=0.001)
-    _check(out, "U08.Z6.dhdt_max_mm_s", r["dhdt_max"] * 1000, 1.604, "mm/s", rel=0.02)
-    _check(out, "U08.Z6.rise_max", r["rise_max"], 0.577, "m", rel=0.02)
-    _check(out, "U08.Z6.safe_time", r["safe_time"], 349.0, "s", rel=0.02)
+    _check(out, "U08.Z6.rho_mix", r["rho_mix"], 1021.6, "kg/m^3", rel=0.0001)
+    _check(out, "U08.Z6.dhdt_mm_s", r["dhdt"] * 1000, 1.312, "mm/s", rel=0.001)
+    _check(out, "U08.Z6.h_15min", r["h_t"], 1.48, "m", rel=0.002)
+    _check(out, "U08.Z6.dm_t", r["dm"] / 1000, 43.4, "t", rel=0.001)
+    _check(out, "U08.Z6.dhdt_max_mm_s", r["dhdt_max"] * 1000, 1.460, "mm/s", rel=0.001)
+    _check(out, "U08.Z6.h_15min_max", r["h_t_max"], 1.61, "m", rel=0.003)
+    _check(out, "U08.Z6.t_air_s", r["t_air"], 890.0, "s", rel=0.001)
 
     z1,z2,z3,z4,z5,z6 = (zadatak_1(),zadatak_2(),zadatak_3(),
                          zadatak_4(),zadatak_5(),zadatak_6())
-    _invariant(out, "U08.INV.z1_flux", abs(math.pi*.16**2/4*z1["v_2"]-z1["Q"]) < 1e-14
-               and z1["v_2"] < 4.8, "Prosirenje ne zatvara protok ili ubrzava vodu.")
+    _invariant(out, "U08.INV.z1_mass_not_volume", abs(1.02*.24*z1["v_2"]-z1["m_dot"]) < 1e-12
+               and z1["Q_2"] > z1["Q_1"] and z1["v_2"] > 12.0
+               and abs(zadatak_1(rho_2=1.20)["Q_2"]-z1["Q_1"]) < 1e-12,
+               "Grijac ne zatvara masenu bilancu ili volumenski protok ne raste s padom gustoce.")
+    p2 = primjer_2_zahvatni_usis()
+    _invariant(out, "U08.INV.p2_relative_velocity", abs(1025*.040*p2["w"]-p2["m_dot"]) < 1e-12
+               and abs(primjer_2_zahvatni_usis(v_s_kn=0.0)["m_dot"]-p2["m_dot"]) < 1e-12
+               and abs(primjer_2_zahvatni_usis(v_s_kn=0.0)["v_abs"]+p2["w"]) < 1e-12
+               and p2["m_dot_wrong"] > 6*p2["m_dot"],
+               "Tok kroz pomicnu plohu ne ovisi samo o relativnoj brzini.")
     _invariant(out, "U08.INV.z2_orientation", abs(zadatak_2(alpha_deg=90)["Q"]) < 1e-14
                and abs(zadatak_2(alpha_deg=0)["Q"]-.012) < 1e-14
                and abs(zadatak_2(alpha_deg=120)["Q"]+z2["Q"]) < 1e-14,
@@ -294,17 +308,18 @@ def verify():
     _invariant(out, "U08.INV.z5_stopped_limit", abs(zadatak_5(w=z5["w_stopped"])["u"]) < 1e-14
                and z5["w_stopped"] > 1.5,
                "Zaustavljeni klip uz zadani dotok ne zatvara izlaz.")
-    _invariant(out, "U08.INV.z6_mass", 1000 < z6["rho_mix"] < 1080
-               and abs(z6["dm"]/360-(1000*.011+1080*.004-z6["rho_mix"]*z6["Q_3"])) < 1e-12,
+    Qm,Qs,Qiz = 250/3600,40/3600,120/3600
+    _invariant(out, "U08.INV.z6_mass", 1000 < z6["rho_mix"] < 1025
+               and abs(z6["dm"]/900-(1025*Qm+1000*Qs-z6["rho_mix"]*Qiz)) < 1e-9,
                "Mijesanje i akumulacija nisu maseno konzistentni.")
     from itertools import product
-    rises = [(qa+qb-math.pi*.08**2/4*v)*360/4.8 for qa,qb,v in product(
-             (.011*.98,.011*1.02),(.004*.97,.004*1.03),(1.52,1.68))]
-    _invariant(out, "U08.INV.z6_interval_and_rim", abs(max(rises)-z6["rise_max"]) < 1e-14
-               and z6["dhdt"]*360 < .560 < z6["rise_max"]
-               and abs(z6["safe_time"]*z6["dhdt_max"]-.560) < 1e-14
-               and z6["safe_time"] < 360,
-               "Nominalni i intervalni geometrijski kriterij nisu ispravno razdvojeni.")
+    levels = [.30+(Qm*(1+a)+Qs*(1+b)-Qiz*(1+c))*900/36.0 for a,b,c in product(
+              (-.04,.04),(-.05,.05),(-.06,.06))]
+    _invariant(out, "U08.INV.z6_interval_and_airpipe", abs(max(levels)-z6["h_t_max"]) < 1e-12
+               and z6["h_t"] < 1.60 < z6["h_t_max"]
+               and abs(.30+z6["t_air"]*z6["dhdt_max"]-1.60) < 1e-12
+               and z6["t_air"] < 900,
+               "Nominalni i intervalni kriterij odzracne cijevi nisu ispravno razdvojeni.")
 
     return out
 

@@ -3,6 +3,7 @@
 Ulazne vrijednosti prepisane su iz kanonskog Markdown poglavlja, a svaki
 objavljeni broj usporeduje se s rezultatom ponovno izracunatim iz fizikalne
 relacije. Dimenzijske i granicne provjere vode se odvojeno kao invarijante.
+Izentropski eksponent u izvoru nosi oznaku kappa.
 """
 from __future__ import annotations
 
@@ -10,7 +11,7 @@ from fractions import Fraction
 import math
 
 
-GAMMA_AIR = 1.4
+KAPPA_AIR = 1.4
 R_AIR = 287.0  # J/(kg K)
 
 
@@ -83,13 +84,60 @@ GAS_CONSTANT = _dim_product(
 )
 
 
+def stagnation_pressure_ratio(mach: float, kappa: float = KAPPA_AIR) -> float:
+    return (1.0 + (kappa - 1.0) * mach**2 / 2.0) ** (kappa / (kappa - 1.0))
+
+
+def area_ratio(mach: float, kappa: float = KAPPA_AIR) -> float:
+    """A/A* kvazijednodimenzijskog izentropskog toka."""
+    return (1.0 / mach) * (
+        (2.0 / (kappa + 1.0)) * (1.0 + (kappa - 1.0) * mach**2 / 2.0)
+    ) ** ((kappa + 1.0) / (2.0 * (kappa - 1.0)))
+
+
+def mach_from_area_ratio(ratio: float, subsonic: bool, kappa: float = KAPPA_AIR) -> float:
+    low, high = (1.0e-4, 1.0) if subsonic else (1.0, 50.0)
+    for _ in range(300):
+        mid = 0.5 * (low + high)
+        if (area_ratio(mid, kappa) > ratio) == subsonic:
+            low = mid
+        else:
+            high = mid
+    return 0.5 * (low + high)
+
+
+def choked_mass_flow(
+    reservoir_pressure: float,
+    reservoir_temperature: float,
+    throat_area: float,
+    kappa: float = KAPPA_AIR,
+    gas_constant: float = R_AIR,
+) -> float:
+    return (
+        throat_area
+        * reservoir_pressure
+        / math.sqrt(reservoir_temperature)
+        * math.sqrt(kappa / gas_constant)
+        * (2.0 / (kappa + 1.0)) ** ((kappa + 1.0) / (2.0 * (kappa - 1.0)))
+    )
+
+
+def critical_ratios(kappa: float = KAPPA_AIR) -> dict[str, float]:
+    base = 2.0 / (kappa + 1.0)
+    return {
+        "T_ratio": base,
+        "p_ratio": base ** (kappa / (kappa - 1.0)),
+        "rho_ratio": base ** (1.0 / (kappa - 1.0)),
+    }
+
+
 def acoustic_line(
     temperature: float = 293.0,
     length: float = 85.0,
-    gamma: float = GAMMA_AIR,
+    kappa: float = KAPPA_AIR,
     gas_constant: float = R_AIR,
 ) -> dict[str, float]:
-    sound_speed = math.sqrt(gamma * gas_constant * temperature)
+    sound_speed = math.sqrt(kappa * gas_constant * temperature)
     return {"sound_speed": sound_speed, "travel_time": length / sound_speed}
 
 
@@ -97,12 +145,12 @@ def compressor_intake(
     temperature: float = 293.15,
     diameter: float = 0.080,
     volume_flow: float = 0.42,
-    gamma: float = GAMMA_AIR,
+    kappa: float = KAPPA_AIR,
     gas_constant: float = R_AIR,
 ) -> dict[str, float]:
     area = math.pi * diameter**2 / 4.0
     velocity = volume_flow / area
-    sound_speed = math.sqrt(gamma * gas_constant * temperature)
+    sound_speed = math.sqrt(kappa * gas_constant * temperature)
     mach = velocity / sound_speed
     return {
         "area": area,
@@ -116,15 +164,22 @@ def stagnation_state(
     temperature: float = 260.0,
     pressure_kpa: float = 55.0,
     mach: float = 0.80,
-    gamma: float = GAMMA_AIR,
+    kappa: float = KAPPA_AIR,
+    gas_constant: float = R_AIR,
 ) -> dict[str, float]:
-    temperature_ratio = 1.0 + (gamma - 1.0) * mach**2 / 2.0
-    pressure_ratio = temperature_ratio ** (gamma / (gamma - 1.0))
+    temperature_ratio = 1.0 + (kappa - 1.0) * mach**2 / 2.0
+    pressure_ratio = temperature_ratio ** (kappa / (kappa - 1.0))
+    density = pressure_kpa * 1000.0 / (gas_constant * temperature)
+    velocity = mach * math.sqrt(kappa * gas_constant * temperature)
     return {
         "temperature_ratio": temperature_ratio,
         "stagnation_temperature": temperature * temperature_ratio,
         "pressure_ratio": pressure_ratio,
         "stagnation_pressure_kpa": pressure_kpa * pressure_ratio,
+        "density": density,
+        "velocity": velocity,
+        "incompressible_rise_kpa": density * velocity**2 / 2.0 / 1000.0,
+        "compressible_rise_kpa": pressure_kpa * (pressure_ratio - 1.0),
     }
 
 
@@ -132,17 +187,12 @@ def choked_orifice(
     reservoir_pressure: float = 600_000.0,
     reservoir_temperature: float = 300.0,
     throat_area: float = 50.0e-6,
-    gamma: float = GAMMA_AIR,
+    kappa: float = KAPPA_AIR,
     gas_constant: float = R_AIR,
 ) -> dict[str, float]:
-    critical_ratio = (2.0 / (gamma + 1.0)) ** (gamma / (gamma - 1.0))
-    mass_flow = (
-        throat_area
-        * reservoir_pressure
-        / math.sqrt(reservoir_temperature)
-        * math.sqrt(gamma / gas_constant)
-        * (2.0 / (gamma + 1.0))
-        ** ((gamma + 1.0) / (2.0 * (gamma - 1.0)))
+    critical_ratio = critical_ratios(kappa)["p_ratio"]
+    mass_flow = choked_mass_flow(
+        reservoir_pressure, reservoir_temperature, throat_area, kappa, gas_constant
     )
     return {
         "mass_flow": mass_flow,
@@ -152,52 +202,143 @@ def choked_orifice(
 
 
 def normal_shock(
-    upstream_mach: float = 2.0, gamma: float = GAMMA_AIR
+    upstream_mach: float = 2.0, kappa: float = KAPPA_AIR, gas_constant: float = R_AIR
 ) -> dict[str, float]:
     upstream_mach_sq = upstream_mach**2
     downstream_mach_sq = (
-        1.0 + (gamma - 1.0) * upstream_mach_sq / 2.0
-    ) / (gamma * upstream_mach_sq - (gamma - 1.0) / 2.0)
+        1.0 + (kappa - 1.0) * upstream_mach_sq / 2.0
+    ) / (kappa * upstream_mach_sq - (kappa - 1.0) / 2.0)
     downstream_mach = math.sqrt(downstream_mach_sq)
-    pressure_ratio = 1.0 + 2.0 * gamma / (gamma + 1.0) * (
+    pressure_ratio = 1.0 + 2.0 * kappa / (kappa + 1.0) * (
         upstream_mach_sq - 1.0
     )
+    temperature_ratio = pressure_ratio * (
+        (2.0 + (kappa - 1.0) * upstream_mach_sq) / ((kappa + 1.0) * upstream_mach_sq)
+    )
     total_pressure_ratio = pressure_ratio * (
-        (1.0 + (gamma - 1.0) * downstream_mach_sq / 2.0)
-        / (1.0 + (gamma - 1.0) * upstream_mach_sq / 2.0)
-    ) ** (gamma / (gamma - 1.0))
+        (1.0 + (kappa - 1.0) * downstream_mach_sq / 2.0)
+        / (1.0 + (kappa - 1.0) * upstream_mach_sq / 2.0)
+    ) ** (kappa / (kappa - 1.0))
+    cp = kappa * gas_constant / (kappa - 1.0)
+    entropy_rise = cp * math.log(temperature_ratio) - gas_constant * math.log(pressure_ratio)
+
+    def critical_mach(mach: float) -> float:
+        return math.sqrt((kappa + 1.0) * mach**2 / (2.0 + (kappa - 1.0) * mach**2))
+
     return {
         "downstream_mach": downstream_mach,
         "pressure_ratio": pressure_ratio,
+        "temperature_ratio": temperature_ratio,
         "total_pressure_ratio": total_pressure_ratio,
+        "entropy_rise": entropy_rise,
+        "critical_mach_product": critical_mach(upstream_mach) * critical_mach(downstream_mach),
+    }
+
+
+def kd_nozzle_regimes(
+    throat_area: float = 100.0e-6,
+    exit_area: float = 160.0e-6,
+    reservoir_pressure: float = 500_000.0,
+    reservoir_temperature: float = 300.0,
+    kappa: float = KAPPA_AIR,
+    gas_constant: float = R_AIR,
+) -> dict[str, float]:
+    """Javni primjer P6: tri karakteristicna protutlaka K-D sapnice."""
+
+    ratio = exit_area / throat_area
+    mach_sub = mach_from_area_ratio(ratio, True, kappa)
+    mach_sup = mach_from_area_ratio(ratio, False, kappa)
+    p_exit_sub = reservoir_pressure / stagnation_pressure_ratio(mach_sub, kappa)
+    p_exit_sup = reservoir_pressure / stagnation_pressure_ratio(mach_sup, kappa)
+    shock = normal_shock(mach_sup, kappa, gas_constant)
+    return {
+        "area_ratio": ratio,
+        "mach_exit_subsonic": mach_sub,
+        "mach_exit_supersonic": mach_sup,
+        "p_exit_I_kpa": p_exit_sub / 1000.0,
+        "p_exit_III_kpa": p_exit_sup / 1000.0,
+        "mach_after_exit_shock": shock["downstream_mach"],
+        "exit_shock_pressure_ratio": shock["pressure_ratio"],
+        "p_exit_II_kpa": p_exit_sup * shock["pressure_ratio"] / 1000.0,
+        "mass_flow": choked_mass_flow(
+            reservoir_pressure, reservoir_temperature, throat_area, kappa, gas_constant
+        ),
+    }
+
+
+def shock_position(
+    back_pressure: float,
+    throat_area: float = 100.0e-6,
+    exit_area: float = 160.0e-6,
+    reservoir_pressure: float = 500_000.0,
+    kappa: float = KAPPA_AIR,
+) -> dict[str, float]:
+    """Polozaj normalnog vala u divergentnom dijelu za zadani protutlak."""
+
+    ratio = exit_area / throat_area
+
+    def exit_state(upstream_mach: float) -> tuple[float, float, float]:
+        shock = normal_shock(upstream_mach, kappa)
+        total_ratio = shock["total_pressure_ratio"]
+        exit_mach = mach_from_area_ratio(ratio * total_ratio, True, kappa)
+        exit_pressure = reservoir_pressure * total_ratio / stagnation_pressure_ratio(exit_mach, kappa)
+        return exit_pressure, exit_mach, total_ratio
+
+    low, high = 1.0, mach_from_area_ratio(ratio, False, kappa)
+    for _ in range(300):
+        mid = 0.5 * (low + high)
+        if exit_state(mid)[0] > back_pressure:
+            low = mid
+        else:
+            high = mid
+    upstream_mach = 0.5 * (low + high)
+    exit_pressure, exit_mach, total_ratio = exit_state(upstream_mach)
+    return {
+        "upstream_mach": upstream_mach,
+        "shock_area_ratio": area_ratio(upstream_mach, kappa),
+        "total_pressure_ratio": total_ratio,
+        "exit_mach": exit_mach,
+        "exit_pressure_kpa": exit_pressure / 1000.0,
     }
 
 
 def exercise_sound_speed_helium(
     temperature: float = 300.0,
-    gamma: float = 1.667,
+    kappa: float = 1.667,
     gas_constant: float = 2077.0,
 ) -> float:
-    return math.sqrt(gamma * gas_constant * temperature)
+    return math.sqrt(kappa * gas_constant * temperature)
 
 
-def exercise_ventilation_mach(
-    temperature: float = 293.15,
-    diameter: float = 0.20,
-    volume_flow: float = 2.0,
-    gamma: float = GAMMA_AIR,
+def exercise_starting_air(
+    reservoir_pressure: float = 30.0e5,
+    reservoir_temperature: float = 293.0,
+    throat_area: float = 120.0e-6,
+    back_pressure: float = 8.0e5,
+    required_mass: float = 2.50,
+    kappa: float = KAPPA_AIR,
     gas_constant: float = R_AIR,
-) -> float:
-    area = math.pi * diameter**2 / 4.0
-    velocity = volume_flow / area
-    return velocity / math.sqrt(gamma * gas_constant * temperature)
+) -> dict[str, float]:
+    """Z2: zrak za upucivanje brodskog dizelskog motora kroz zagusen ventil."""
+
+    pressure_ratio = back_pressure / reservoir_pressure
+    choked = pressure_ratio < critical_ratios(kappa)["p_ratio"]
+    mass_flow = choked_mass_flow(
+        reservoir_pressure, reservoir_temperature, throat_area, kappa, gas_constant
+    )
+    return {
+        "pressure_ratio": pressure_ratio,
+        "choked": float(choked),
+        "mass_flow": mass_flow,
+        "duration": required_mass / mass_flow,
+    }
 
 
 def exercise_acoustic_measurement(
     length: float = 1.20,
     downstream_time: float = 0.003,
     upstream_time: float = 0.004,
-    gamma: float = GAMMA_AIR,
+    kappa: float = KAPPA_AIR,
     gas_constant: float = R_AIR,
 ) -> dict[str, float]:
     downstream_speed = length / downstream_time
@@ -207,7 +348,7 @@ def exercise_acoustic_measurement(
     return {
         "sound_speed": sound_speed,
         "velocity": velocity,
-        "temperature": sound_speed**2 / (gamma * gas_constant),
+        "temperature": sound_speed**2 / (kappa * gas_constant),
         "mach": velocity / sound_speed,
         "downstream_speed": downstream_speed,
         "upstream_speed": upstream_speed,
@@ -215,22 +356,20 @@ def exercise_acoustic_measurement(
 
 
 def exercise_critical_pressure_bar(
-    reservoir_pressure_bar: float = 8.0, gamma: float = GAMMA_AIR
+    reservoir_pressure_bar: float = 8.0, kappa: float = KAPPA_AIR
 ) -> float:
-    return reservoir_pressure_bar * (2.0 / (gamma + 1.0)) ** (
-        gamma / (gamma - 1.0)
-    )
+    return reservoir_pressure_bar * critical_ratios(kappa)["p_ratio"]
 
 
 def convergent_exit(
     back_pressure_bar: float,
     reservoir_pressure_bar: float = 8.0,
-    gamma: float = GAMMA_AIR,
+    kappa: float = KAPPA_AIR,
 ) -> dict[str, float]:
-    critical = exercise_critical_pressure_bar(reservoir_pressure_bar, gamma)
+    critical = exercise_critical_pressure_bar(reservoir_pressure_bar, kappa)
     exit_pressure = max(back_pressure_bar, critical)
-    mach = math.sqrt(2.0 / (gamma - 1.0) * (
-        (reservoir_pressure_bar / exit_pressure) ** ((gamma - 1.0) / gamma) - 1.0
+    mach = math.sqrt(2.0 / (kappa - 1.0) * (
+        (reservoir_pressure_bar / exit_pressure) ** ((kappa - 1.0) / kappa) - 1.0
     ))
     return {"exit_pressure_bar": exit_pressure, "mach": mach}
 
@@ -264,15 +403,11 @@ def exercise_nozzle_identification(
     measured_mass_flow: float = 0.0595,
     measured_area: float = 48.0e-6,
     back_pressure: float = 100_000.0,
-    gamma: float = GAMMA_AIR,
+    kappa: float = KAPPA_AIR,
     gas_constant: float = R_AIR,
 ) -> dict[str, float]:
-    flow_factor = (
-        reservoir_pressure
-        / math.sqrt(reservoir_temperature)
-        * math.sqrt(gamma / gas_constant)
-        * (2.0 / (gamma + 1.0))
-        ** ((gamma + 1.0) / (2.0 * (gamma - 1.0)))
+    flow_factor = choked_mass_flow(
+        reservoir_pressure, reservoir_temperature, 1.0, kappa, gas_constant
     )
     discharge_area = measured_mass_flow / flow_factor
     discharge_coefficient = discharge_area / measured_area
@@ -293,25 +428,25 @@ def exercise_shock_measurements(
     u_p2_kpa: float = 1.8,
     u_p01_kpa: float = 4.0,
     u_p02_kpa: float = 4.0,
-    gamma: float = GAMMA_AIR,
+    kappa: float = KAPPA_AIR,
 ) -> dict[str, float]:
     static_ratio = p2_kpa / p1_kpa
     upstream_mach = math.sqrt(
-        1.0 + (static_ratio - 1.0) * (gamma + 1.0) / (2.0 * gamma)
+        1.0 + (static_ratio - 1.0) * (kappa + 1.0) / (2.0 * kappa)
     )
     u_static_ratio = static_ratio * math.sqrt(
         (u_p1_kpa / p1_kpa) ** 2 + (u_p2_kpa / p2_kpa) ** 2
     )
     u_upstream_mach = (
-        (gamma + 1.0) / (4.0 * gamma * upstream_mach) * u_static_ratio
+        (kappa + 1.0) / (4.0 * kappa * upstream_mach) * u_static_ratio
     )
-    theoretical_total_ratio = normal_shock(upstream_mach, gamma)[
+    theoretical_total_ratio = normal_shock(upstream_mach, kappa)[
         "total_pressure_ratio"
     ]
     derivative_step = 1.0e-5
     total_ratio_derivative = (
-        normal_shock(upstream_mach + derivative_step, gamma)["total_pressure_ratio"]
-        - normal_shock(upstream_mach - derivative_step, gamma)["total_pressure_ratio"]
+        normal_shock(upstream_mach + derivative_step, kappa)["total_pressure_ratio"]
+        - normal_shock(upstream_mach - derivative_step, kappa)["total_pressure_ratio"]
     ) / (2.0 * derivative_step)
     u_theoretical_total_ratio = abs(total_ratio_derivative) * u_upstream_mach
     measured_total_ratio = p02_kpa / p01_kpa
@@ -370,6 +505,29 @@ def verify() -> list[dict[str, str]]:
         "kPa",
         abs_tol=0.05,
     )
+    _check(out, "U09.COMP.P3.rho", r["density"], 0.737, "kg/m^3", abs_tol=0.0005)
+    _check(out, "U09.COMP.P3.v", r["velocity"], 258.6, "m/s", abs_tol=0.05)
+    _check(
+        out,
+        "U09.COMP.P3.incompressible_rise",
+        r["incompressible_rise_kpa"],
+        24.6,
+        "kPa",
+        abs_tol=0.05,
+    )
+    _check(
+        out,
+        "U09.COMP.P3.compressible_rise",
+        r["compressible_rise_kpa"],
+        28.8,
+        "kPa",
+        abs_tol=0.05,
+    )
+
+    crit = critical_ratios()
+    _check(out, "U09.COMP.THEORY.Tstar_T0", crit["T_ratio"], 0.833, "", abs_tol=0.0005)
+    _check(out, "U09.COMP.THEORY.pstar_p0", crit["p_ratio"], 0.528, "", abs_tol=0.0005)
+    _check(out, "U09.COMP.THEORY.rhostar_rho0", crit["rho_ratio"], 0.634, "", abs_tol=0.0005)
 
     r = choked_orifice()
     _check(out, "U09.COMP.P4.mdot_max", r["mass_flow"], 0.0700, "kg/s", abs_tol=0.00005)
@@ -386,6 +544,30 @@ def verify() -> list[dict[str, str]]:
     r = normal_shock()
     _check(out, "U09.COMP.P5.M2", r["downstream_mach"], 0.577, "", abs_tol=0.0005)
     _check(out, "U09.COMP.P5.p2_p1", r["pressure_ratio"], 4.50, "", abs_tol=0.005)
+    _check(out, "U09.COMP.P5.T2_T1", r["temperature_ratio"], 1.688, "", abs_tol=0.0005)
+    _check(out, "U09.COMP.P5.delta_s", r["entropy_rise"], 94.0, "J/(kg K)", abs_tol=0.5)
+    _check(
+        out,
+        "U09.COMP.P5.prandtl_product",
+        r["critical_mach_product"],
+        1.000,
+        "",
+        abs_tol=1e-9,
+    )
+
+    p6 = kd_nozzle_regimes()
+    _check(out, "U09.COMP.P6.Ma_e_sub", p6["mach_exit_subsonic"], 0.397, "", abs_tol=0.0005)
+    _check(out, "U09.COMP.P6.Ma_e_sup", p6["mach_exit_supersonic"], 1.935, "", abs_tol=0.0005)
+    _check(out, "U09.COMP.P6.p_e_I", p6["p_exit_I_kpa"], 448.5, "kPa", abs_tol=0.05)
+    _check(out, "U09.COMP.P6.p_e_III", p6["p_exit_III_kpa"], 70.7, "kPa", abs_tol=0.05)
+    _check(out, "U09.COMP.P6.Ma2_exit_shock", p6["mach_after_exit_shock"], 0.589, "", abs_tol=0.0005)
+    _check(out, "U09.COMP.P6.p2_p1_exit_shock", p6["exit_shock_pressure_ratio"], 4.20, "", abs_tol=0.005)
+    _check(out, "U09.COMP.P6.p_e_II", p6["p_exit_II_kpa"], 297.0, "kPa", abs_tol=0.5)
+    _check(out, "U09.COMP.P6.mdot", p6["mass_flow"], 0.117, "kg/s", abs_tol=0.0005)
+    inside = shock_position(350_000.0)
+    _check(out, "U09.COMP.P6.shock_area_ratio", inside["shock_area_ratio"], 1.39, "", abs_tol=0.005)
+    _check(out, "U09.COMP.P6.shock_Ma1", inside["upstream_mach"], 1.75, "", abs_tol=0.005)
+    _check(out, "U09.COMP.P6.shock_p02_p01", inside["total_pressure_ratio"], 0.833, "", abs_tol=0.0005)
 
     _check(
         out,
@@ -395,16 +577,11 @@ def verify() -> list[dict[str, str]]:
         "m/s",
         abs_tol=0.5,
     )
-    _check(
-        out,
-        "U09.COMP.Z2.Ma",
-        exercise_ventilation_mach(),
-        0.186,
-        "",
-        abs_tol=0.0006,
-    )
-    z2_velocity = 2.0 / (math.pi * 0.20**2 / 4.0)
-    _check(out, "U09.COMP.Z2.v", z2_velocity, 63.66, "m/s", abs_tol=0.005)
+
+    z2 = exercise_starting_air()
+    _check(out, "U09.COMP.Z2.pb_p0", z2["pressure_ratio"], 0.267, "", abs_tol=0.0005)
+    _check(out, "U09.COMP.Z2.mdot", z2["mass_flow"], 0.850, "kg/s", abs_tol=0.0005)
+    _check(out, "U09.COMP.Z2.t", z2["duration"], 2.94, "s", abs_tol=0.005)
 
     z3 = exercise_acoustic_measurement()
     _check(out, "U09.COMP.Z3.a", z3["sound_speed"], 350.0, "m/s", abs_tol=0.5)
@@ -532,14 +709,12 @@ def verify() -> list[dict[str, str]]:
         out,
         "U09.COMP.INV.dimension_choked_mass_flow",
         mass_flow_dimension == _dim_product(MASS, _dim_power(TIME, Fraction(-1))),
-        "formula prigusenog protoka nije dimenzije kg/s",
+        "formula zagusenog protoka nije dimenzije kg/s",
     )
 
     small_mach = 1.0e-3
-    exact_pressure_increment = (
-        1.0 + (GAMMA_AIR - 1.0) * small_mach**2 / 2.0
-    ) ** (GAMMA_AIR / (GAMMA_AIR - 1.0)) - 1.0
-    incompressible_increment = GAMMA_AIR * small_mach**2 / 2.0
+    exact_pressure_increment = stagnation_pressure_ratio(small_mach) - 1.0
+    incompressible_increment = KAPPA_AIR * small_mach**2 / 2.0
     low_mach_error = abs(
         exact_pressure_increment / incompressible_increment - 1.0
     )
@@ -549,6 +724,14 @@ def verify() -> list[dict[str, str]]:
         low_mach_error < 1.0e-6,
         f"relativna pogreska niskog-Machova limesa je {low_mach_error:.3g}",
     )
+    p3 = stagnation_state()
+    _invariant(
+        out,
+        "U09.COMP.P3.incompressible_underestimates",
+        p3["incompressible_rise_kpa"] < p3["compressible_rise_kpa"]
+        and abs(p3["incompressible_rise_kpa"] / p3["compressible_rise_kpa"] - 0.854) < 0.001,
+        "Nestlacivi Pitotov izraz mora pri Ma=0,8 podcijeniti p0-p za oko 15 %.",
+    )
 
     critical_ratio = choked_orifice()["critical_ratio"]
     _invariant(
@@ -556,6 +739,65 @@ def verify() -> list[dict[str, str]]:
         "U09.COMP.INV.critical_pressure_range",
         0.0 < critical_ratio < 1.0,
         f"kriticni omjer tlaka mora biti u (0, 1), dobiveno {critical_ratio:.6g}",
+    )
+    # Kriticni omjeri slijede iz zaustavnih relacija pri Ma=1.
+    _invariant(
+        out,
+        "U09.COMP.THEORY.critical_from_stagnation",
+        abs(stagnation_pressure_ratio(1.0) * crit["p_ratio"] - 1.0) < 1e-12
+        and abs((1.0 + 0.2) * crit["T_ratio"] - 1.0) < 1e-12,
+        "Kriticni omjeri moraju biti reciprocne zaustavne relacije pri Ma=1.",
+    )
+    # A/A* je 1 u grlu i raste na obje strane; dva korijena P6 obuhvacaju Ma=1.
+    _invariant(
+        out,
+        "U09.COMP.THEORY.area_ratio_minimum",
+        abs(area_ratio(1.0) - 1.0) < 1e-12
+        and all(area_ratio(m) > 1.0 for m in (0.2, 0.6, 0.9, 1.1, 1.5, 3.0))
+        and area_ratio(0.5) > area_ratio(0.8) and area_ratio(1.5) < area_ratio(2.5),
+        "A/A* mora imati minimum 1 u grlu i rasti prema obje strane.",
+    )
+    _invariant(
+        out,
+        "U09.COMP.P6.two_roots",
+        p6["mach_exit_subsonic"] < 1.0 < p6["mach_exit_supersonic"]
+        and abs(area_ratio(p6["mach_exit_subsonic"]) - 1.6) < 1e-9
+        and abs(area_ratio(p6["mach_exit_supersonic"]) - 1.6) < 1e-9,
+        "Oba izlazna Machova broja moraju vratiti A_e/A*=1,6.",
+    )
+    _invariant(
+        out,
+        "U09.COMP.P6.back_pressure_ordering",
+        p6["p_exit_III_kpa"] < p6["p_exit_II_kpa"] < p6["p_exit_I_kpa"] < 500.0,
+        "Karakteristicni protutlakovi moraju biti uredjeni III<II<I<p0.",
+    )
+    _invariant(
+        out,
+        "U09.COMP.P6.regime_decision",
+        p6["p_exit_III_kpa"] < 100.0 < p6["p_exit_II_kpa"]
+        and p6["p_exit_II_kpa"] < 350.0 < p6["p_exit_I_kpa"],
+        "p_b=100 kPa mora dati nadzvucni izlaz, a p_b=350 kPa val unutar sapnice.",
+    )
+    _invariant(
+        out,
+        "U09.COMP.P6.shock_inside_consistency",
+        abs(inside["exit_pressure_kpa"] - 350.0) < 1e-6
+        and 1.0 < inside["upstream_mach"] < p6["mach_exit_supersonic"]
+        and 1.0 < inside["shock_area_ratio"] < 1.6
+        and inside["exit_mach"] < 1.0,
+        "Val unutar divergentnog dijela mora izlaz dovesti tocno na protutlak.",
+    )
+    _invariant(
+        out,
+        "U09.COMP.P6.shock_limits",
+        abs(shock_position(p6["p_exit_II_kpa"] * 1000.0)["shock_area_ratio"] - 1.6) < 1e-6,
+        "Za p_b=p_e,II val mora stajati tocno u izlaznom presjeku.",
+    )
+    _invariant(
+        out,
+        "U09.COMP.P6.mass_flow_independent_of_back_pressure",
+        abs(p6["mass_flow"] - choked_orifice(500_000.0, 300.0, 100.0e-6)["mass_flow"]) < 1e-15,
+        "Zagusen protok K-D sapnice ovisi samo o p0, T0 i grlu.",
     )
 
     shock = normal_shock()
@@ -569,6 +811,31 @@ def verify() -> list[dict[str, str]]:
         ),
         "normalni val nije dao M2<1, p2/p1>1 i p02/p01<1",
     )
+    _invariant(
+        out,
+        "U09.COMP.P5.entropy_and_total_pressure",
+        shock["entropy_rise"] > 0.0
+        and abs(math.exp(-shock["entropy_rise"] / R_AIR) - shock["total_pressure_ratio"]) < 1e-12,
+        "Porast entropije mora odgovarati padu zaustavnog tlaka exp(-ds/R).",
+    )
+    reversed_shock = normal_shock(shock["downstream_mach"])
+    _invariant(
+        out,
+        "U09.COMP.P5.reverse_shock_forbidden",
+        reversed_shock["entropy_rise"] < 0.0,
+        "Obrnuti skok iz podzvucnog u nadzvucni tok mora smanjiti entropiju.",
+    )
+
+    _invariant(out, "U09.COMP.Z2.choked_regime",
+               z2["choked"] == 1.0 and z2["pressure_ratio"] < crit["p_ratio"],
+               "Zrak za upucivanje mora kroz ventil teci zaguseno.")
+    _invariant(out, "U09.COMP.Z2.back_pressure_irrelevant",
+               abs(exercise_starting_air(back_pressure=4.0e5)["mass_flow"] - z2["mass_flow"]) < 1e-15
+               and exercise_starting_air(reservoir_pressure=15.0e5)["mass_flow"] < z2["mass_flow"],
+               "Protok zagusenog ventila ne ovisi o protutlaku, a raste s tlakom boce.")
+    _invariant(out, "U09.COMP.Z2.duration_is_lower_bound",
+               z2["duration"] * z2["mass_flow"] == 2.50 and z2["duration"] > 0.0,
+               "Trajanje uz stalno stanje boce mora vratiti zadanu masu.")
 
     _invariant(out, "U09.COMP.Z3.upstream_propagation",
                0.0 < z3["velocity"] < z3["sound_speed"] and z3["upstream_speed"] < 0.0,
@@ -592,12 +859,12 @@ def verify() -> list[dict[str, str]]:
         state = convergent_exit(back)
         t = 300.0 / (1.0 + 0.2 * state["mach"]**2)
         density = state["exit_pressure_bar"] * 1e5 / (R_AIR * t)
-        return density * state["mach"] * math.sqrt(GAMMA_AIR * R_AIR * t)
+        return density * state["mach"] * math.sqrt(KAPPA_AIR * R_AIR * t)
     max_flux = choked_orifice(reservoir_pressure=8e5, throat_area=1.0)["mass_flow"]
     _invariant(out, "U09.COMP.Z4.mass_flux_plateau",
                exit_flux(5.0) < max_flux
                and all(abs(exit_flux(back) / max_flux - 1.0) < 1e-12 for back in (4.0, 2.0, 0.1)),
-               "rho_e v_e mora prije prigušenja biti manji, a potom ostati na maksimumu.")
+               "rho_e v_e mora prije zagušenja biti manji, a potom ostati na maksimumu.")
 
     # Z5: samo mjerenje protoka određuje umnožak C_d A_g, ne oba faktora.
     area_1, discharge_1 = 1.0e-4, 0.80
@@ -618,10 +885,10 @@ def verify() -> list[dict[str, str]]:
         z5["back_pressure_ratio"] < critical_ratio
         and z5["ideal_mass_flow"] > 0.0595
         and 0.0 < z5["discharge_coefficient"] < 1.0,
-        "Izmjereni otvor sam ne smije objasniti izmjereni manji prigušeni protok.",
+        "Izmjereni otvor sam ne smije objasniti izmjereni manji zagušeni protok.",
     )
 
-    # Neovisne granične provjere Z6: p2/p1 monotono određuje M1>1, a ukupni
+    # Neovisne granične provjere Z6: p2/p1 monotono određuje M1>1, a zaustavni
     # tlak mora pasti kroz val. Brojčani mjerni ugovor provjeren je iznad.
     shock_15 = normal_shock(1.5)
     shock_20 = normal_shock(2.0)
@@ -635,10 +902,10 @@ def verify() -> list[dict[str, str]]:
         out,
         "U09.COMP.Z6.total_pressure_loss",
         0.0 < shock_20["total_pressure_ratio"] < shock_15["total_pressure_ratio"] < 1.0,
-        "Normalni val mora smanjiti ukupni tlak, sve više pri većem M1.",
+        "Normalni val mora smanjiti zaustavni tlak, sve više pri većem M1.",
     )
     # Independent Rankine-Hugoniot form of the total-pressure ratio (NACA 1135).
-    m, g = z6["upstream_mach"], GAMMA_AIR
+    m, g = z6["upstream_mach"], KAPPA_AIR
     density_ratio = (g + 1.0) * m**2 / ((g - 1.0) * m**2 + 2.0)
     direct_total_ratio = density_ratio ** (g / (g - 1.0)) * (
         (g + 1.0) / (2.0 * g * m**2 - (g - 1.0))
@@ -647,7 +914,7 @@ def verify() -> list[dict[str, str]]:
         out,
         "U09.COMP.Z6.independent_total_pressure_relation",
         abs(direct_total_ratio - z6["theoretical_total_ratio"]) < 1e-12,
-        "Dva neovisna oblika relacije ukupnog tlaka moraju se slagati.",
+        "Dva neovisna oblika relacije zaustavnog tlaka moraju se slagati.",
     )
     temperature_ratio = shock["pressure_ratio"] / density_ratio
     speed_ratio = 1.0 / density_ratio
@@ -656,11 +923,14 @@ def verify() -> list[dict[str, str]]:
     _invariant(out, "U09.COMP.Z6.mass_momentum_energy",
                abs((shock["pressure_ratio"] + g*m*m/density_ratio) - (1.0+g*m*m)) < 1e-12
                and abs(energy_after - energy_before) < 1e-12,
-               "Skok mora očuvati tok količine gibanja i ukupnu entalpiju uz isti maseni protok.")
+               "Skok mora očuvati tok količine gibanja i zaustavnu entalpiju uz isti maseni protok.")
     weak = normal_shock(1.0)
     _invariant(out, "U09.COMP.Z6.vanishing_shock",
-               all(abs(value-1.0) < 1e-12 for value in weak.values()),
-               "Pri M1=1 skok nestaje: M2 i oba omjera tlakova moraju biti 1.")
+               all(abs(weak[key]-1.0) < 1e-12 for key in
+                   ("downstream_mach", "pressure_ratio", "temperature_ratio",
+                    "total_pressure_ratio", "critical_mach_product"))
+               and abs(weak["entropy_rise"]) < 1e-9,
+               "Pri M1=1 skok nestaje: M2, svi omjeri i entropija moraju biti trivijalni.")
     _invariant(out, "U09.COMP.Z6.measurement_decision",
                z6["normalized_difference"] < 1.0,
                "Zadani podatci moraju zadovoljiti objavljeni kriterij kombinirane standardne nesigurnosti.")

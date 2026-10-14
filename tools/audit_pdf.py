@@ -38,8 +38,8 @@ EXPECTED_AUTHOR = BOOK["book"]["author"]
 # diagram labels. This bounded envelope is only an early layout alarm; actual
 # object completeness is checked by audit_pdf_layout.py against the book index.
 # Rebaselining rationale and visual review: docs/pdf-tipografija.md.
-MIN_PAGES = 270
-MAX_PAGES = 335
+MIN_PAGES = 290
+MAX_PAGES = 355
 MIN_FILE_SIZE = 1_000_000
 MIN_TEXT_CHARACTERS = 250_000
 

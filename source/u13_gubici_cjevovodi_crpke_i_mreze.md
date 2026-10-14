@@ -68,7 +68,7 @@ Zato je doprinos $h_w$ nenegativan, a u idealnom graničnom slučaju $\mu=0$ nes
 
 ![U realnom toku energijska crta pada zbog linijskih i lokalnih gubitaka; lokalni element daje nagliji pad.](../assets/print/u10_fig_uvod_pregled.svg){#fig-energijska-crta-gubitci fig-align="center" fig-alt="U realnom toku energijska crta pada zbog linijskih i lokalnih gubitaka; lokalni element daje nagliji pad."}
 
-**Tumačenje skice.** Ukupna energijska crta EGL pada zbog linijskih i lokalnih gubitaka; HGL prikazuje zbroj tlačne i geodetske visine. U referentnim presjecima s $\alpha=1$ razmak je $EGL-HGL=v^2/(2g)$. Za različite profile brzine treba upotrijebiti odgovarajuće korekcijske faktore.
+**Tumačenje skice.** EGL pada zbog linijskih i lokalnih gubitaka; HGL prikazuje zbroj tlačne i geodetske visine, a uz $\alpha=1$ razmak je $EGL-HGL=v^2/(2g)$.
 
 Bez stroja energijska bilanca glasi $H_1=H_2+h_w$, uz $h_w\ge0$. Ukupni gubitak je $h_w=h_l+\sum h_{\mathrm{loc}}$, gdje je $h_l=\lambda(L/D)v^2/(2g)$, a $h_{\mathrm{loc}}=\xi v_{\mathrm{ref}}^2/(2g)$. Svaki lokalni koeficijent mora biti vezan uz svoju referentnu brzinu. Prikazani laminarni profil zadovoljava prianjanje na stijenkama; koljeno mijenja smjer toka bez pregrade ili prekida prolaza.
 
@@ -100,6 +100,8 @@ $$
 h_w=\left(\lambda\frac{L}{D}+\sum_j\xi_j\right)\frac{v^2}{2g}.
 $$ {#eq-gubitak-dionice}
 
+Zagrada je ukupni koeficijent otpora dionice, $\zeta=\lambda L/D+\sum\xi$, pa je $h_w=\zeta\,v^2/(2g)$; $\zeta$ se odnosi na brzinu u toj dionici i ne smije se zbrajati s koeficijentima dionica drugog promjera.
+
 Linijski i lokalni doprinosi ne predstavljaju dvije nove sile. Oba sažimaju nepovratnu pretvorbu mehaničke energije u unutarnju energiju zbog viskoznih naprezanja i miješanja. Darcy–Weisbachova korelacija i Moodyjev dijagram standardni su prikaz otpora razvijenoga toka u kružnim cijevima [@moody1944; @white2011].
 
 ### Promjer je najjača geometrijska poluga {#sec-utjecaj-promjera}
@@ -114,11 +116,9 @@ Ako su $Q$, $L$ i **$\lambda$ fiksni**, udvostručenje promjera smanjuje linijsk
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Kako CFD rezultat postaje podatak za cjevovod?** Za novi razdjelnik rashladne ploče nema nužno pouzdanog tabličnog koeficijenta gubitka. Pri više zadanih radnih protoka iz CFD-a određujemo razliku tokova mehaničke energije na ulazu i izlazima, uz kote i nejednolike profile. Za pojedini put kroz razdjelnik možemo prikazati koeficijent $\xi$ s jasno navedenom referentnom brzinom i podjelom protoka.
+**Kako CFD rezultat postaje podatak za cjevovod?** Za novi razdjelnik rashladne ploče nema nužno pouzdanog tabličnog koeficijenta gubitka. Model je stacionarni nestlačivi RANS račun razdjelnika s ulaznim protokom i tlakom na izlazima; podatci su geometrija, hrapavost i više radnih protoka. Izlaz je razlika tokova mehaničke energije između ulaza i svakog izlaza, uz kote i nejednolike profile ($\alpha\neq1$), iz koje se za svaki put kroz razdjelnik izvodi koeficijent $\xi$ s jasno navedenom referentnom brzinom i podjelom protoka.
 
-**Zastani i promisli.** Dvije paralelne grane imaju jednak pad energije, ali različite protoke. Je li narušen kontinuitet?
-
-Izvedeni otpori određuju podjelu protoka u modelu cijeloga kruga. Jednaki padovi energije između zajedničkih čvorova ne traže jednake protoke: provjeri otpore grana i zbroj protoka. Promjena lokalne geometrije zato može promijeniti i podjelu i potrebnu crpnu visinu. Sam statički pad tlaka nije uvijek gubitak: u proširenju se dio kinetičke energije vraća u tlak. Zato se u CFD obradi čuva energijska bilanca iz ranijega Venturijeva primjera.
+Provjera: sam statički pad tlaka nije uvijek gubitak, jer se u proširenju dio kinetičke energije vraća u tlak, pa se čuva energijska bilanca iz ranijega Venturijeva primjera; izvedeni $\xi$ mora biti približno neovisan o protoku u turbulentnom području. Odluka: tako dobiveni otpori ulaze u model cijeloga kruga i mogu promijeniti podjelu protoka i potrebnu crpnu visinu.
 :::
 
 ## Od Reynoldsova broja do koeficijenta trenja {#sec-koeficijent-trenja}
@@ -132,21 +132,42 @@ Q\longrightarrow v=\frac{Q}{A}
 \longrightarrow h_w.
 $$ {#eq-cjevovodi-3-od-reynoldsova-broja-do-koeficijenta-trenja-01}
 
-Za potpuno razvijen laminarni tok newtonskog fluida u kružnoj cijevi vrijedi
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Darcyjev koeficijent iz ravnoteže sila i njegov račun</p>
+
+**Fizikalno pitanje.** Kolika sila stijenke koči potpuno razvijen tok u ravnoj kružnoj cijevi i kako se ona sažima u jedan bezdimenzijski koeficijent?
+
+**Bilanca.** Promatra se odsječak fluida duljine $L$ koji ispunjava cijev promjera $D$. U razvijenom stacionarnom toku količina gibanja odsječka se ne mijenja, pa tlačna sila na presjecima mora uravnotežiti smičnu silu stijenke na fluid, $\tau_w$ po omočenoj plohi $\pi DL$:
 
 $$
-\lambda=\frac{64}{Re}.
+\Delta p\,\frac{\pi D^2}{4}=\tau_w\,\pi D L
+\quad\Rightarrow\quad
+\tau_w=\frac{D}{4}\,\frac{\Delta p}{L}.
+$$ {#eq-ravnoteza-odsjecka-cijevi}
+
+Za vodoravnu cijev vrijedi $\Delta p=\rho g h_l$. Uvrštavanjem Darcy–Weisbachova zapisa [-@eq-darcy-weisbach] dobiva se
+
+$$
+\lambda=\frac{8\tau_w}{\rho v^2},
+$$ {#eq-lambda-iz-smicnog-naprezanja}
+
+dakle $\lambda$ nije ništa drugo nego bezdimenzijsko smično naprezanje stijenke. Taj zapis vrijedi za svaki režim; samo veza $\tau_w(v)$ ovisi o režimu.
+
+**Koraci za laminarni tok.** Hagen–Poiseuilleov parabolični profil ima na stijenci $\tau_w=8\mu v/D$. Uvrštavanjem u [-@eq-lambda-iz-smicnog-naprezanja] slijedi
+
+$$
+\lambda=\frac{8\cdot8\mu v/D}{\rho v^2}=\frac{64\mu}{\rho vD}=\frac{64}{Re}.
 $$ {#eq-lambda-laminarno}
 
-Uvrsti li se taj izraz u Darcy–Weisbachovu jednadžbu, dobiva se Hagen–Poiseuilleov rezultat
+**Rezultat.** Uvrsti li se $\lambda=64/Re$ natrag u Darcy–Weisbachovu jednadžbu, dobiva se Hagen–Poiseuilleov zapis
 
 $$
 \Delta p=\rho gh_l=\frac{128\mu L}{\pi D^4}Q.
 $$ {#eq-poiseuille-u13}
 
-To je ključni granični slučaj: u laminarnom području $\Delta p\propto Q$, a ne $Q^2$. Kvadratni zapis u Darcyjevoj formuli ne dokazuje kvadratnu ovisnost jer je $\lambda\propto1/Q$.
+**Provjera.** U laminarnom području $\Delta p\propto Q$, a ne $Q^2$: kvadratni oblik Darcyjeve formule ne dokazuje kvadratnu ovisnost jer je $\lambda\propto1/Q$. Isti zapis vrijedi i u CFD-u: integral $\tau_w$ po stijenci razvijene dionice mora vratiti $64/Re$, inače domena nije razvijena ili mreža nije dovoljna.
 
-Za turbulentni potpuno razvijeni tok u kružnoj cijevi Colebrook–Whiteova implicitna jednadžba povezuje $\lambda$, $Re$ i relativnu hrapavost [@colebrook1939]:
+**Numerički korak za turbulentni tok.** U turbulentnom režimu $\tau_w$ ovisi i o hrapavosti. Colebrook–Whiteova implicitna jednadžba povezuje $\lambda$, $Re$ i relativnu hrapavost [@colebrook1939]:
 
 $$
 \frac{1}{\sqrt{\lambda}}
@@ -156,16 +177,7 @@ $$
 \right).
 $$ {#eq-colebrook-white}
 
-Jednadžba se rješava iterativno ili se $\lambda$ očitava iz Moodyjeva dijagrama. U prijelaznom području približno između $Re=2300$ i $4000$ režim je osjetljiv na ulazne poremećaje, hrapavost i povijest toka; jedna univerzalna korelacija ondje nije pouzdana. Ti pragovi odnose se na unutarnji tok u kružnoj cijevi, a ne na svako strujanje.
-
-::: {.mf1-izvod}
-<p class="mf1-box-label">Izvod — zašto je Colebrookov račun iterativan</p>
-
-**Fizikalno pitanje.** Za zadane $Q,D,\nu$ i $\varepsilon$ traži se otpor turbulentne dionice.
-
-**Postavljanje.** Iz protoka se izračunaju $v$, $Re$ i $\varepsilon/D$. U [-@eq-colebrook-white] nepoznata $\lambda$ pojavljuje se izvan i unutar logaritma.
-
-**Numerički korak.** Odabere se početna procjena, primjerice $\lambda_0=0{,}02$, i ponavlja
+Nepoznata $\lambda$ pojavljuje se izvan i unutar logaritma, pa se odabere početna procjena, primjerice $\lambda_0=0{,}02$, i ponavlja
 
 $$
 \lambda_{k+1}=\left[
@@ -176,9 +188,16 @@ $$
 \right]^{-2}
 $$ {#eq-cjevovodi-izvod-zasto-je-colebrookov-racun-iterativan-01}
 
-dok razlika dviju uzastopnih vrijednosti ne postane manja od zadane tolerancije. Treba provjeriti i rezidual izvorne jednadžbe, ne samo promjenu iterata.
+dok razlika dviju uzastopnih vrijednosti ne postane manja od zadane tolerancije. Treba provjeriti i rezidual izvorne jednadžbe, ne samo promjenu iterata. Za ručni račun dovoljne su eksplicitne aproksimacije: Swamee–Jainova
 
-**Granice.** Kad $\varepsilon/D\to0$, hrapavost nestaje iz dominantnog člana; pri vrlo velikom $Re$ i konačnoj hrapavosti viskozni član postaje malen pa $\lambda$ teži vrijednosti određenoj uglavnom s $\varepsilon/D$.
+$$
+\lambda=\frac{0{,}25}{\left[\log_{10}\!\left(\frac{\varepsilon/D}{3{,}7}+\frac{5{,}74}{Re^{0{,}9}}\right)\right]^2},
+\qquad 5000<Re<10^8,
+$$ {#eq-swamee-jain}
+
+koja od Colebrookove odstupa za oko 1 %, a za hidraulički glatku cijev i $4000<Re<10^5$ Blasiusova $\lambda=0{,}3164\,Re^{-1/4}$. Koeficijent se može očitati i iz Moodyjeva dijagrama.
+
+**Granice.** Kad $\varepsilon/D\to0$, hrapavost nestaje iz dominantnog člana; pri vrlo velikom $Re$ i konačnoj hrapavosti viskozni član postaje malen pa $\lambda$ teži vrijednosti određenoj uglavnom s $\varepsilon/D$. U prijelaznom području približno između $Re=2300$ i $4000$ režim je osjetljiv na ulazne poremećaje, hrapavost i povijest toka; jedna univerzalna korelacija ondje nije pouzdana. Ti pragovi odnose se na unutarnji tok u kružnoj cijevi, a ne na svako strujanje.
 :::
 
 ::: {.mf1-interaktivno}
@@ -231,6 +250,14 @@ $$ {#eq-paralelni-otpor}
 
 Analogija s električnim otporom korisna je samo do određene granice: hidraulički je odnos ovdje kvadratan, a $R$ se mijenja s protokom ako se mijenja $\lambda$. Za opću mrežu zato se jednadžbe kontinuiteta u čvorovima i energijske jednadžbe po neovisnim putovima rješavaju zajedno i iterativno.
 
+U gradskoj distribucijskoj mreži cijevi tvore zatvorene **petlje**. U svakom čvoru zbroj dotoka jednak je zbroju odtoka, a oko svake petlje zbroj predznačenih gubitaka iščezava jer se vraćamo u istu točku iste energijske visine. Hardy–Crossova metoda polazi od bilo koje raspodjele protoka koja zadovoljava čvorove i ispravlja je u svakoj petlji istim iznosom $\Delta Q$, čime čvorne bilance ostaju netaknute. Linearizacijom $R(Q+\Delta Q)|Q+\Delta Q|\approx RQ|Q|+2R|Q|\Delta Q$ dobiva se
+
+$$
+\Delta Q=-\frac{\sum_i R_iQ_i|Q_i|}{2\sum_i R_i|Q_i|},
+$$ {#eq-hardy-cross}
+
+gdje se protoci broje pozitivno u odabranom obilaznom smjeru petlje. Postupak se ponavlja dok rezidual petlje ne padne ispod zadane tolerancije; @ex-petlja-gradske-mreze pokazuje dvije iteracije.
+
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje — što se izjednačuje?</p>
 
@@ -240,9 +267,11 @@ Dvije paralelne grane počinju u istom čvoru i završavaju u istom čvoru. Zato
 ::: {.mf1-interaktivno}
 <p class="mf1-box-label">Numerički pokus — paralelne grane</p>
 
-**Predvidi.** Koja grana preuzima najveći protok? Zašto jednak pad energije ne traži jednake protoke?
+**Predvidi.** Koja grana preuzima najveći protok?
 
-**Provjeri i protumači.** Promijeni promjer jedne grane i prati sve protoke, kontinuitet i gubitke između čvorova. Pokus vrijedi za turbulentne grane; nastavci zasebno obrađuju Z3 i Z6.
+**Zastani i promisli.** Dvije paralelne grane imaju jednak pad energije, ali različite protoke. Je li narušen kontinuitet?
+
+**Provjeri i protumači.** Nije: jednak pad energije slijedi iz zajedničkih krajnjih čvorova, a protoci ovise o otporima grana; kontinuitet traži samo da njihov zbroj odgovara dotoku. Promijeni promjer jedne grane i prati sve protoke, kontinuitet i gubitke između čvorova. Pokus vrijedi za turbulentne grane; nastavci zasebno obrađuju Z3 i Z6.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u13_paralelne_grane.ipynb" target="_blank" rel="noopener">Pokreni u JupyterLiteu</a>
@@ -320,7 +349,7 @@ Na usisu crpke apsolutni tlak može biti nizak zbog geodetskog uspona, brzinske 
 
 $$
 NPSH_a=
-\frac{p_{s,abs}}{\rho g}
+\frac{p_{aps,s}}{\rho g}
 +\frac{v_s^2}{2g}
 -\frac{p_v}{\rho g},
 $$ {#eq-npsha}
@@ -392,7 +421,7 @@ $$ {#eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-04}
 
 **Provjera i tumačenje**
 
-$\Delta p/(\rho g)=37\,400/(1000\cdot9{,}81)=3{,}81\ \mathrm{m}$ vraća ukupni gubitak. Oba su doprinosa pozitivna i njihov zbroj veći je od svakog pojedinačnog doprinosa.
+$\Delta p/(\rho g)=37\,400/(1000\cdot9{,}81)=3{,}81\ \mathrm{m}$ vraća ukupni gubitak; lokalni elementi daju trećinu ukupnog gubitka, pa ih se u kratkom vodu ne smije zanemariti.
 :::
 
 ::: {#ex-laminarni-rashladni-vod .mf1-we}
@@ -442,76 +471,67 @@ $$
 \Delta p=\frac{128\mu LQ}{\pi D^4}=13{,}37\ \mathrm{kPa}.
 $$ {#eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-04}
 
-Jednak rezultat iz dvaju ekvivalentnih zapisa provjerava i faktor 64 i pretvorbu protoka. Pri udvostručenju $Q$ ovaj laminarni pad tlaka udvostručio bi se.
+Podudaranje dvaju zapisa provjerava faktor 64 i pretvorbu protoka.
 :::
 
-::: {#ex-serijsko-paralelna-mreza .mf1-we}
-<p class="mf1-box-label">Serijsko-paralelna mreža između spremnika <span class="mf1-level">T3</span></p>
+::: {#ex-petlja-gradske-mreze .mf1-we}
+<p class="mf1-box-label">Petlja gradske vodovodne mreže <span class="mf1-level">T3</span></p>
 
 **Tekst zadatka**
 
-Otvorene spremnike s razlikom razina $H=12{,}0\ \mathrm{m}$ povezuju dovod 0, paralelne grane 1 i 2 te odvod 3. Promjeri i ukupni koeficijenti gubitaka $K_i=\lambda_iL_i/D_i+\sum\xi_i$ zadani su u tablici. Za svaku dionicu vrijedi $h_i=K_iv_i^2/(2g)$.
+Dio gradske distribucijske mreže čini jedna petlja s čvorovima A, B, C i D. U čvor A ulazi $Q_A=40{,}0\ \mathrm{L/s}$, a potrošnje su $Q_B=12{,}0\ \mathrm{L/s}$, $Q_C=16{,}0\ \mathrm{L/s}$ i $Q_D=12{,}0\ \mathrm{L/s}$. Cijevi su od lijevanog željeza; za promatrani raspon Reynoldsovih brojeva uzmi stalan $\lambda=0{,}022$ i zanemari lokalne gubitke.
 
-| dionica | $D$ [mm] | $K$ |
+| cijev | $D$ [mm] | $L$ [m] |
 |---|---:|---:|
-| dovod 0 | 100 | 8,52 |
-| grana 1 | 80 | 12,80 |
-| grana 2 | 60 | 15,23 |
-| odvod 3 | 100 | 5,52 |
+| AB | 150 | 300 |
+| BC | 100 | 250 |
+| CD | 125 | 200 |
+| DA | 150 | 350 |
 
 **Traži se**
 
-1. Odredi brzine i protoke u paralelnim granama, ukupni protok i gubitke po dionicama.
-2. Provjeri kontinuitet i energijsku bilancu.
+1. Odredi otpore $R_i$ i početnu raspodjelu protoka koja zadovoljava čvorove.
+2. Provedi dvije Hardy–Crossove iteracije i navedi protoke, gubitke te rezidual petlje.
+3. Provjeri kontinuitet u svim čvorovima i razliku piezometarskih visina između A i C po oba puta.
+
+![Petlja gradske mreže A–B–C–D: dotok u A, potrošnje u čvorovima i obilazni smjer petlje.](../assets/print/u13_ch1_serijsko_paralelna_mreza.svg){#fig-petlja-gradske-mreze fig-align="center" fig-alt="Četiri čvora spojena u zatvorenu petlju; u A ulazi 40 L/s, u B, C i D izlaze potrošnje; cijevi imaju različite promjere i duljine, a strelica označuje obilazni smjer u kojem se protoci broje pozitivno."}
+
+**Veza s proračunom.** Protok se broji pozitivno u smjeru A→B→C→D→A; promjeri cijevi uvećani su prema duljinama.
 
 **Rješenje**
 
-Jednakost gubitaka paralelnih grana daje
+Iz [-@eq-hidraulicki-otpor] bez lokalnih gubitaka, $R=8\lambda L/(\pi^2gD^5)$:
 
 $$
-K_1v_1^2=K_2v_2^2
-\quad\Rightarrow\quad
-v_2=\sqrt{\frac{K_1}{K_2}}v_1=0{,}9168v_1.
-$$ {#eq-cjevovodi-rijeseni-primjer-serijsko-paralelna-mreza-izme-u-01}
+R_{AB}=7181,\quad R_{BC}=45\,445,\quad R_{CD}=11\,913,\quad R_{DA}=8378\ \ \mathrm{s^2/m^5}.
+$$ {#eq-petlja-otpori}
 
-Kontinuitet daje
+Početna raspodjela koja zatvara čvorove: $Q_{AB}=22{,}0$, $Q_{BC}=10{,}0$, $Q_{CD}=-6{,}0$ i $Q_{DA}=-18{,}0\ \mathrm{L/s}$ (negativan predznak znači tok suprotno obilaznom smjeru, dakle A→D i D→C). Provjera čvora C: $10{,}0+6{,}0=16{,}0\ \mathrm{L/s}$.
 
-$$
-Q=A_1v_1+A_2v_2,
-$$ {#eq-cjevovodi-rijeseni-primjer-serijsko-paralelna-mreza-izme-u-02}
-
-pa uz zadane promjere slijedi $v_0=v_3=0{,}9700v_1$. Energijska bilanca između spremnika tada je
+Prva iteracija prema [-@eq-hardy-cross], s protocima u $\mathrm{m^3/s}$:
 
 $$
-12{,}0=
-\left[K_0(0{,}9700)^2+K_1+K_3(0{,}9700)^2\right]
-\frac{v_1^2}{2g}.
-$$ {#eq-cjevovodi-rijeseni-primjer-serijsko-paralelna-mreza-izme-u-03}
-
-Iz toga se dobiva
-
-$$
-v_1=3{,}009\ \mathrm{m/s},
-\qquad v_2=2{,}758\ \mathrm{m/s},
-$$ {#eq-cjevovodi-rijeseni-primjer-serijsko-paralelna-mreza-izme-u-04}
+\begin{aligned}
+\sum R_iQ_i|Q_i|&=3{,}476+4{,}544-0{,}429-2{,}715=4{,}877\ \mathrm{m}, \\
+2\sum R_i|Q_i|&=1669\ \mathrm{s/m^2},
+\end{aligned}
+$$ {#eq-petlja-iteracija-1}
 
 $$
-Q_1=15{,}12\ \mathrm{L/s},
-\qquad Q_2=7{,}80\ \mathrm{L/s},
-\qquad Q=22{,}92\ \mathrm{L/s}.
-$$ {#eq-cjevovodi-rijeseni-primjer-serijsko-paralelna-mreza-izme-u-05}
+\Delta Q=-\frac{4{,}877}{1669}=-2{,}92\ \mathrm{L/s}.
+$$ {#eq-petlja-korekcija-1}
 
-Gubitci su
+Novi protoci su $19{,}08$, $7{,}08$, $-8{,}92$ i $-20{,}92\ \mathrm{L/s}$. Druga iteracija daje $\sum R_iQ_i|Q_i|=0{,}276\ \mathrm{m}$, $2\sum R_i|Q_i|=1481\ \mathrm{s/m^2}$ i $\Delta Q=-0{,}19\ \mathrm{L/s}$, pa su protoci
 
 $$
-h_0=3{,}70\ \mathrm{m},
-\qquad h_{1}=h_{2}=5{,}91\ \mathrm{m},
-\qquad h_3=2{,}40\ \mathrm{m}.
-$$ {#eq-cjevovodi-rijeseni-primjer-serijsko-paralelna-mreza-izme-u-06}
+Q_{AB}=18{,}89,\quad Q_{BC}=6{,}89,\quad Q_{CD}=-9{,}11,\quad Q_{DA}=-21{,}11\ \mathrm{L/s},
+$$ {#eq-petlja-protoci}
+
+a gubitci $h_{AB}=2{,}56$, $h_{BC}=2{,}16$, $h_{DC}=0{,}99$ i $h_{AD}=3{,}73\ \mathrm{m}$. Rezidual petlje nakon druge iteracije iznosi $2{,}56+2{,}16-0{,}99-3{,}73=0{,}00\ \mathrm{m}$ (nezaokruženo $1{,}1\ \mathrm{mm}$).
 
 **Provjera i tumačenje**
 
-Kontinuitet daje $15{,}12+7{,}80=22{,}92\ \mathrm{L/s}$; energijska bilanca daje $3{,}70+5{,}91+2{,}40=12{,}01\ \mathrm{m}$, što se unutar zaokruživanja podudara sa zadanih $12{,}0\ \mathrm{m}$. Šira grana nosi veći protok, kako se očekuje.
+Čvorovi: A $18{,}89+21{,}11=40{,}0$; B $18{,}89-12{,}0=6{,}89$; C $6{,}89+9{,}11=16{,}0$; D $21{,}11-12{,}0=9{,}11\ \mathrm{L/s}$. Pad od A do C iznosi $4{,}72\ \mathrm{m}$ putem B i putem D. Brzine $0{,}74$–$1{,}19\ \mathrm{m/s}$ uobičajene su za distribucijske vodove; stalan $\lambda$ pri $Re\approx0{,}9$–$1{,}8\cdot10^5$ stvarni bi projekt provjerio Swamee–Jainovom ili Colebrookovom relacijom. U mreži s više petlja cijev zajednička dvjema petljama prima obje korekcije.
 :::
 
 ::: {#ex-radna-tocka-vfd .mf1-we}
@@ -567,7 +587,7 @@ $$ {#eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-06}
 
 **Provjera i tumačenje**
 
-Omjer brzina nije jednak omjeru radnih protoka $17{,}24/19{,}94=0{,}865$ jer se statičkih $6\ \mathrm{m}$ ne skalira s $n^2$. Da je $H_{stat}=0$ i da su obje radne točke slične, jednostavan afinitetni omjer bio bi mnogo bliži. U stvarnom odabiru treba provjeriti učinkovitost, dopušteno područje rada i proizvođačeve krivulje.
+Omjer brzina nije jednak omjeru radnih protoka $17{,}24/19{,}94=0{,}865$ jer se statičkih $6\ \mathrm{m}$ ne skalira s $n^2$; tek uz $H_{stat}=0$ afinitetni bi omjer vrijedio.
 :::
 
 ::: {#ex-energijski-ledger-hladenja .mf1-we}
@@ -613,7 +633,7 @@ Nakon čišćenja potrošnja pada na $5{,}92\ \mathrm{MWh/god}$, odnosno štedi 
 
 **Provjera i tumačenje**
 
-Ukupna učinkovitost iznosi $\eta_p\eta_m\eta_f=0{,}696$. Omjer $P_h/P_{el}=0{,}706/1{,}015=0{,}696$ potvrđuje bilancu pretvorbe energije. Ušteda je razmjerna promjeni visine samo zato što su $Q$ i sve učinkovitosti ovdje izričito zadržani konstantnima.
+Omjer $P_h/P_{el}=0{,}706/1{,}015=0{,}696=\eta_p\eta_m\eta_f$ zatvara lanac pretvorbe. Ušteda je razmjerna promjeni visine samo zato što su $Q$ i učinkovitosti zadržani stalnima.
 :::
 
 ::: {#ex-npsha-usisne-crpke .mf1-we}
@@ -644,12 +664,12 @@ $$ {#eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-02}
 Bernoullijeva bilanca od slobodne površine do usisnog presjeka daje
 
 $$
-\frac{p_{s,abs}}{\rho g}
+\frac{p_{aps,s}}{\rho g}
 =\frac{p_{atm}}{\rho g}-z_s-\frac{v_s^2}{2g}-h_{w,s}
 =5{,}847\ \mathrm{m},
 $$ {#eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-03}
 
-odnosno $p_{s,abs}=57{,}36\ \mathrm{kPa}$. Raspoloživi NPSH jest
+odnosno $p_{aps,s}=57{,}36\ \mathrm{kPa}$. Raspoloživi NPSH jest
 
 $$
 NPSH_a=5{,}847+0{,}395-0{,}239=6{,}00\ \mathrm{m}.
@@ -657,7 +677,7 @@ $$ {#eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-04}
 
 **Provjera i tumačenje**
 
-Izravni zapis [-@eq-npsha-spremnik] daje $10{,}296-2{,}600-1{,}453-0{,}239=6{,}00\ \mathrm{m}$. Rezultat je raspoloživa vrijednost sustava, a ne presuda o kavitaciji. Za zaključak treba $NPSH_r$ pri istom protoku i brzini te kriterij margine proizvođača.
+Izravni zapis [-@eq-npsha-spremnik] daje $10{,}296-2{,}600-1{,}453-0{,}239=6{,}00\ \mathrm{m}$, isto kao preko $p_{aps,s}$. Za zaključak o kavitaciji treba $NPSH_r$ pri istom protoku i brzini te margina proizvođača.
 :::
 
 ::: {.mf1-samoprovjera}
@@ -679,12 +699,12 @@ Koeficijent je definiran prema određenoj referentnoj brzini. Ako se promjer mij
 Jer je u laminarnom toku $\lambda=64/Re\propto1/v$. Umnožak $\lambda v^2$ zato je proporcionalan $v$, odnosno $Q$.
 :::
 
-3. Dvije paralelne grane imaju jednak pad energije, ali različite protoke. Je li narušen kontinuitet?
+3. Zašto Hardy–Crossova korekcija $\Delta Q$ ima isti iznos za sve cijevi jedne petlje?
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
 
-Nije. Jednak pad energije slijedi iz zajedničkih krajnjih čvorova, a protoci ovise o otporima grana. Kontinuitet zahtijeva da njihov zbroj odgovara ukupnom dotoku. U serijskim dionicama bez odvajanja protok ostaje isti.
+Jer se u svakom čvoru petlje isti $\Delta Q$ jednom dodaje dolaznoj i jednom odlaznoj cijevi, pa čvorne bilance ostaju zadovoljene. Mijenja se samo kruženje oko petlje, a ono se podešava dok zbroj predznačenih gubitaka ne iščezne.
 :::
 
 4. Zašto $NPSH_a=6\ \mathrm{m}$ nije dovoljan podatak za tvrdnju da crpka neće kavitirati?
@@ -698,60 +718,64 @@ Nedostaju proizvođačev $NPSH_r$ pri radnoj točki i zahtijevana margina. $NPSH
 
 ## Zadaci za samostalan rad {#sec-u13-zadatci}
 
-![Skice uz Z1–Z6: cjevovodi, paralelne grane, radna točka i usis crpke.](../assets/print/u13_mreze_vjezbe_skice.svg){#fig-cjevovodne-vjezbe fig-align="center" fig-alt="D je unutarnji promjer, L povezuje referentne presjeke, a kota usisnog uspona polazi od slobodne površine i završava na visini usisnog presjeka crpke. Cijevi imaju otvorene krajeve i uronjen usis; krivulje radne točke izračunane su iz podataka zadatka."}
+![Skice uz Z1–Z6: cjevovodi, paralelne grane, radna točka, izbor promjera i usis balastne crpke.](../assets/print/u13_mreze_vjezbe_skice.svg){#fig-cjevovodne-vjezbe fig-align="center" fig-alt="D je unutarnji promjer, L povezuje referentne presjeke. Cijevi imaju otvorene krajeve; krivulje radne točke izračunane su iz podataka zadatka. U Z6 usisni koš u oplati broda nalazi se ispod vodne linije, a kota mjeri dubinu referentnog usisnog presjeka crpke ispod vodne linije."}
 
-**Napomene uz skice.** U Z1 ventil predstavlja lokalni otpor uz otvoren prolaz. U Z1 i Z2 duljina $L$ povezuje referentne presjeke, a promjeri su uvećani; Z2 zanemaruje ulazno područje i lokalne gubitke. U Z3 treba odabrati granu za dodatni prigušni ventil. Z5 zahtijeva $h_w\le15\,\mathrm{m}$ u cijelom zadanom intervalu faktora trenja.
+**Napomene uz skice.** U Z1 ventil predstavlja lokalni otpor uz otvoren prolaz. U Z1 i Z2 duljina $L$ povezuje referentne presjeke, a promjeri su uvećani. Z5 prikazuje tri ponuđena unutarnja presjeka.
 
-U Z6 S je referentni usisni presjek crpke, a otvor u A uronjen je u spremnik. Zadana funkcija $NPSH_r(q)$ vrijedi samo za nazivnu brzinu vrtnje.
+U Z6 S je referentni usisni presjek balastne crpke ispod vodne linije, a usisni koš je otvor u oplati broda. Zadana funkcija $NPSH_r(q)$ vrijedi samo za nazivnu brzinu vrtnje.
 
 ::::: {.mf1-vjezbe-list}
 
-### Gubitci ravne dionice {#task-gubitci-ravne-dionice .unnumbered .unlisted}
+<span id="task-gubitci-ravne-dionice"></span>
+
+### Dopušteni pad tlaka dionice {#task-dopusteni-pad-tlaka-dionice .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ stacionarno protječe vodoravnom cijevi stalnog unutarnjeg promjera $D=0{,}10\ \mathrm{m}$ i duljine $L=50\ \mathrm{m}$, protokom $Q=0{,}012\ \mathrm{m^3/s}$. Zadani su Darcyjev faktor $\lambda=0{,}025$ i $\sum\xi=4{,}0$ za armaturu između promatranih presjeka, svi prema brzini u toj cijevi. U oba presjeka uzmi isti profil brzine.
+Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ stacionarno protječe vodoravnom cijevi stalnog unutarnjeg promjera $D=0{,}10\ \mathrm{m}$ i duljine $L=50\ \mathrm{m}$. Zadani su Darcyjev koeficijent $\lambda=0{,}025$ i $\sum\xi=4{,}0$ za armaturu između promatranih presjeka, svi prema brzini u toj cijevi. Mjerni pretvornici dopuštaju najveći pad tlaka $\Delta p_{dop}=25{,}0\ \mathrm{kPa}$ između presjeka 1 i 2. U oba presjeka uzmi isti profil brzine.
 
 **Traži se**
 
-Odredi brzinu, linijski, lokalni i ukupni gubitak te pad tlaka.
+Odredi najveći dopušteni protok $Q_{max}$, pripadnu brzinu te udio linijskog gubitka u ukupnom.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
 ### Naputak
-Najprije izračunaj $A$ i $v=Q/A$. Tek zatim zajedničku brzinsku visinu pomnoži s $\lambda L/D$ odnosno $\sum\xi$. Za jednake visine i profile presjeka tlak pada zbog gubitaka.
+Pretvori $\Delta p_{dop}$ u visinu $h_w$, sastavi $\zeta=\lambda L/D+\sum\xi$ i iz $h_w=\zeta v^2/(2g)$ izluči $v$; tek zatim $Q=vA$. Udio linijskog gubitka je $(\lambda L/D)/\zeta$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-note collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$v=1{,}528\ \mathrm{m/s}$, $h_l=1{,}487\ \mathrm{m}$, $h_{loc}=0{,}476\ \mathrm{m}$, $h_w=1{,}963\ \mathrm{m}$ i $\Delta p=19{,}2\ \mathrm{kPa}$. Provjeri da je $\Delta p/(\rho g)=h_w$.
+$h_w=2{,}554\ \mathrm{m}$, $\zeta=16{,}5$, $v=1{,}743\ \mathrm{m/s}$ i $Q_{max}=13{,}69\ \mathrm{L/s}$. Linijski gubitak čini $75{,}8\ \%$ ukupnog. Provjeri unatrag da $\zeta v^2/(2g)$ vraća $h_w$.
 :::
 ::::
 
 [Razina: T1]{.mf1-task-level}
 
-### Laminarni tok viskozne smjese {#task-laminarna-cijev-smjese .unnumbered .unlisted}
+<span id="task-laminarna-cijev-smjese"></span>
+
+### Isti vod, dva fluida i dva režima {#task-dva-fluida-isti-vod .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Newtonska smjesa gustoće $\rho=1100\ \mathrm{kg/m^3}$ i kinematičke viskoznosti $\nu=3{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ stacionarno protječe kružnom vodoravnom cijevi $D=6{,}0\ \mathrm{mm}$, protokom $Q=6{,}0\cdot10^{-6}\ \mathrm{m^3/s}$. Promatrani razmak $L=5{,}0\ \mathrm{m}$ nalazi se u potpuno razvijenom toku uz prianjanje na stijenku; ulazno područje i lokalne gubitke izostavi.
+Kroz kružnu vodoravnu cijev $D=8{,}0\ \mathrm{mm}$ naizmjence protječu dva newtonska fluida istim protokom $Q=3{,}0\cdot10^{-5}\ \mathrm{m^3/s}$: smjesa A gustoće $\rho_A=1080\ \mathrm{kg/m^3}$ i kinematičke viskoznosti $\nu_A=6{,}0\cdot10^{-6}\ \mathrm{m^2/s}$ te voda B s $\rho_B=998\ \mathrm{kg/m^3}$ i $\nu_B=1{,}0\cdot10^{-6}\ \mathrm{m^2/s}$. Promatrani razmak $L=4{,}0\ \mathrm{m}$ nalazi se u potpuno razvijenom toku; ulazno područje i lokalne gubitke izostavi. Cijev je hidraulički glatka.
 
 **Traži se**
 
-1. Odredi $Re$, Darcyjev faktor $\lambda$ i $\Delta p$.
-2. Kako se pad tlaka promijeni ako udvostručiš protok dok tok ostaje laminaran?
+1. Za svaki fluid odredi $Re$, odluči o režimu, odaberi pripadni zapis za $\lambda$ i izračunaj $\Delta p$.
+2. Kako se $\Delta p$ svakog fluida promijeni pri udvostručenju protoka ako režim ostane isti?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
 ### Naputak
-Izračunaj režim prije izbora korelacije. Ako je tok laminaran, upotrijebi $\lambda=64/Re$; rezultat zatim provjeri Poiseuilleovim zakonom.
+Brzina je ista za oba fluida; razlikuju se samo $Re$. Za $Re<2300$ upotrijebi $\lambda=64/Re$, a za $Re>4000$ u glatkoj cijevi Blasiusov zapis $\lambda=0{,}3164\,Re^{-1/4}$. Udvostručenje $Q$ u laminarnom toku udvostručuje $\Delta p$, a u Blasiusovu području množi ga s $2^{1{,}75}$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-note collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$v=0{,}212\ \mathrm{m/s}$, $Re=424$, $\lambda=0{,}1508$ i $\Delta p=3{,}11\ \mathrm{kPa}$. Udvostručenje $Q$ uz ostale iste podatke udvostručuje $\Delta p$ dok tok ostaje laminaran.
+$v=0{,}597\ \mathrm{m/s}$. A: $Re=796$ (laminarno), $\lambda=0{,}0804$, $\Delta p_A=7{,}73\ \mathrm{kPa}$. B: $Re=4775$ (turbulentno), $\lambda=0{,}0381$, $\Delta p_B=3{,}38\ \mathrm{kPa}$. Pri $2Q$: $\Delta p_A=15{,}5\ \mathrm{kPa}$ (ostaje laminarno, $Re=1592$), $\Delta p_B\approx11{,}4\ \mathrm{kPa}$.
 :::
 ::::
 
@@ -799,7 +823,7 @@ Interval traženja radne točke jest $0{,}005\le Q\le0{,}030\ \mathrm{m^3/s}$. E
 
 **Traži se**
 
-1. Numerički riješi radnu točku u zadanom intervalu, uz pomoć bilježnice ili drugog računskog alata. U svakoj iteraciji ponovno provjeri trenje u cijevi. Upotrijebi Darcy–Weisbachov model i Colebrookovu jednadžbu; konačno provjeri turbulentni režim.
+1. Numerički riješi radnu točku u zadanom intervalu; računski alat (bilježnica, tablični kalkulator ili program) ovdje je obvezan jer se $\lambda$ i radna točka određuju iterativno. U svakoj iteraciji ponovno provjeri trenje u cijevi. Upotrijebi Darcy–Weisbachov model i Colebrookovu jednadžbu; konačno provjeri turbulentni režim.
 2. Izvijesti $Q_{op}$, $H_{op}$, $Re$ i $\lambda$ te provjeri zadane granice obaju reziduala.
 3. Odredi $P_h$, $P_{vr}$ i $P_{el}$.
 
@@ -818,58 +842,58 @@ $Q_{op}\approx19{,}030\ \mathrm{L/s}$, $H_{op}\approx19{,}136\ \mathrm{m}$, $Re\
 
 [Razina: T2]{.mf1-task-level}
 
-### Izbor promjera uz nesiguran otpor {#task-robustan-izbor-promjera .unnumbered .unlisted}
+### Najmanji promjer uz dopušteni gubitak {#task-robustan-izbor-promjera .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Vod duljine $L=150\ \mathrm{m}$ mora prenositi $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $\sum\xi=6{,}0$, prema brzini u odabranom vodu. Za svaki ponuđeni promjer zadana granica Darcyjeva faktora zbog nepoznatog stanja cijevi jest $0{,}020\le\lambda\le0{,}028$; to je interval mogućih vrijednosti, a ne standardna nesigurnost. Dostupni unutarnji promjeri su 80, 100 i 125 mm.
-
-Dopušteni gubitak visine jest $h_w\le15\ \mathrm{m}$ u cijelom zadanom intervalu otpora.
+Vod duljine $L=150\ \mathrm{m}$ mora prenositi vodu ($\nu=1{,}0\cdot10^{-6}\ \mathrm{m^2/s}$) protokom $Q=0{,}018\ \mathrm{m^3/s}$. Zbroj lokalnih koeficijenata iznosi $\sum\xi=6{,}0$, prema brzini u odabranom vodu. Dostupni unutarnji promjeri su 80, 100 i 125 mm, a ekvivalentna hrapavost nove cijevi $\varepsilon=0{,}15\ \mathrm{mm}$. Dopušteni gubitak visine jest $h_w\le15\ \mathrm{m}$.
 
 **Traži se**
 
-1. Odaberi najmanji ponuđeni promjer koji zadovoljava dopušteni gubitak.
-2. Objasni zašto nije dovoljan račun samo s donjom granicom otpora.
+1. Za svaki ponuđeni promjer odredi $Re$, provjeri režim, izračunaj $\lambda$ eksplicitnom turbulentnom korelacijom i $h_w$; odaberi najmanji promjer koji zadovoljava.
+2. Obrazloži zašto nije dopušteno preuzeti jedan $\lambda$ za sve promjere i provjeri zadovoljava li odabrani promjer i nakon starenja cijevi, kada hrapavost poraste na $\varepsilon=0{,}50\ \mathrm{mm}$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
 ### Naputak
-Za svaki ponuđeni promjer izračunaj brzinu, a zatim raspon $h_w$ za obje granice $\lambda$. Odluku donesi prema najvećem gubitku. Pri fiksnom protoku i promjeru gubitak raste s $\lambda$.
+Za svaki $D$: $v=4Q/(\pi D^2)$, $Re=vD/\nu$, $\varepsilon/D$, pa $\lambda$ iz [-@eq-swamee-jain] i $h_w=(\lambda L/D+\sum\xi)v^2/(2g)$. I $Re$ i $\varepsilon/D$ mijenjaju se s promjerom, pa se mijenja i $\lambda$. Odluku donesi prema najmanjem promjeru s $h_w\le15\ \mathrm{m}$, a zatim ponovi račun s većom hrapavošću.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-note collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-Rasponi $h_w$ su približno 28,4–38,2 m za 80 mm, 9,64–12,85 m za 100 mm i 3,29–4,34 m za 125 mm. Najmanji izbor koji zadovoljava cijeli interval jest 100 mm: gornja granica $12{,}85<15\ \mathrm{m}$. Promjer 80 mm ne zadovoljava ni uz najmanji zadani otpor.
+Nova cijev: $\lambda\approx0{,}0238/0{,}0228/0{,}0221$ i $h_w\approx33{,}1/10{,}8/3{,}56\ \mathrm{m}$ za 80/100/125 mm; svi su tokovi turbulentni ($Re\approx1{,}8$–$2{,}9\cdot10^5$). Najmanji dopušteni promjer je 100 mm. Nakon starenja ($\varepsilon=0{,}50\ \mathrm{mm}$) za 100 mm je $\lambda\approx0{,}0309$ i $h_w\approx14{,}0\ \mathrm{m}$, još unutar granice, ali s rezervom od samo $1\ \mathrm{m}$.
 :::
 ::::
 
 [Razina: T3]{.mf1-task-level}
 
-### Regulacija crpke, energija i usisna rezerva {#task-regulacija-energija-npsh .unnumbered .unlisted}
+<span id="task-regulacija-energija-npsh"></span>
+
+### Regulacija balastne crpke i usisna rezerva {#task-balastna-crpka-regulacija-npsh .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Sintetičke nastavne karakteristike zadane su brojevnim vrijednostima: pri nazivnoj brzini $H_p(q)=24-0{,}012q^2$, izvorni sustav $H_s(q)=5+0{,}025q^2$, a prigušeni $H_{s,V}(q)=5+0{,}040q^2$. Ovdje je $q$ u $\mathrm{L/s}$, a sve visine u metrima. Fluid je voda gustoće $\rho=1000\ \mathrm{kg/m^3}$. Ukupna učinkovitost električna–hidraulička pretpostavlja se jednakom $\eta=0{,}72$ u obje uspoređene točke; pogon radi $t=5000\ \mathrm{h/god}$. Primijeni afinitetno skaliranje iste crpke, uz zadanu stalnu učinkovitost.
+Balastna crpka broda puni balastni tank morskom vodom gustoće $\rho=1025\ \mathrm{kg/m^3}$ preko usisnog koša u oplati. Sintetičke nastavne karakteristike zadane su brojevnim vrijednostima, s $q$ u $\mathrm{L/s}$ i visinama u metrima: pri nazivnoj brzini $H_p(q)=22-0{,}010q^2$, sustav s otvorenim ventilom $H_s(q)=4+0{,}015q^2$, a prigušeni sustav $H_{s,V}(q)=4+0{,}026q^2$. Ukupna učinkovitost električna–hidraulička pretpostavlja se jednakom $\eta=0{,}70$ u obje uspoređene točke; crpka radi $t=1500\ \mathrm{h/god}$. Primijeni afinitetno skaliranje iste crpke uz zadanu stalnu učinkovitost.
 
-Pri protoku prigušenog sustava zadani su $H_{atm}=10{,}2\ \mathrm{m}$, usisni geodetski uspon $z_s=2{,}0\ \mathrm{m}$, usisni gubitak $h_{w,s}=1{,}2\ \mathrm{m}$ i visina tlaka pare $H_v=0{,}35\ \mathrm{m}$. Sintetički model potrebnog NPSH-a **pri nazivnoj brzini** jest $NPSH_r=2+0{,}003q^2$ u metrima.
+Pri protoku prigušenog sustava referentni usisni presjek S crpke nalazi se $z_s=1{,}8\ \mathrm{m}$ **ispod** vodne linije (napunjen usis), atmosferski tlak je $p_{atm}=101{,}3\ \mathrm{kPa}$, usisni gubitak koša, filtra i armature $h_{w,s}=1{,}4\ \mathrm{m}$, a tlak pare mora na $30\ \mathrm{^\circ C}$ $p_v=4{,}2\ \mathrm{kPa}$. Sintetički model potrebnog NPSH-a **pri nazivnoj brzini** jest $NPSH_r=2{,}5+0{,}004q^2$ u metrima.
 
 **Traži se**
 
 1. Odredi radnu točku prigušenog sustava, $q$, $H_V$ i godišnju električnu energiju $E_V$.
 2. Za isti protok, uz ponovno otvoren ventil, odredi omjer brzina $s=n_2/n_1$, potrebnu visinu $H_s$, godišnju energiju $E_s$ i uštedu $\Delta E$.
-3. Odredi $NPSH_a$ i razliku $NPSH_a-NPSH_r$ za prigušeni slučaj. Navedi koji podatci nedostaju za konačnu odluku o usisu obaju načina regulacije; dani $NPSH_r$ nemoj nekritički prenijeti na sniženu brzinu.
+3. Odredi $NPSH_a$ s apsolutnim tlakom i razliku $NPSH_a-NPSH_r$ za prigušeni slučaj. Zatim odluči koji podatci nedostaju da bi se usis proglasio prihvatljivim za oba načina regulacije i u balastnom stanju broda, kad je presjek S samo $0{,}4\ \mathrm{m}$ ispod vodne linije; dani $NPSH_r$ nemoj nekritički prenijeti na sniženu brzinu.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-tip collapse="true" data-hint-key="true"}
 ### Naputak
-Prigušenu točku dobiješ iz $H_p=H_{s,V}$. Za isti $q$ bez prigušenja vrijedi $H_{p,s}(q)=24s^2-0{,}012q^2=H_s(q)$. Energiju računaj s $Q=10^{-3}q$ iz $P_{el}=\rho gQH/\eta$. Za usis upotrijebi [-@eq-npsha-spremnik]; zadani potrebni NPSH vrijedi samo pri nazivnoj brzini.
+Model: presjecište $H_p=H_{s,V}$, afinitetno skaliranje $H_{p,s}(q)=s^2H_p(q/s)$ pri istom $q$, $P_{el}=\rho gQH/\eta$ i usisna bilanca [-@eq-npsha-spremnik] s negativnim geodetskim usponom (napunjen usis). Kriterij: $NPSH_a-NPSH_r$ uz marginu proizvođača; potrebni NPSH vrijedi samo pri nazivnoj brzini.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
-::: {.callout-note collapse="true" data-answer-key="true"}
+::: {.callout-note collapse="true" data-answer-key="true" data-key-full="true"}
 ### Kontrolni rezultat
-$q\approx19{,}12\ \mathrm{L/s}$; $(H_V,H_s)\approx(19{,}62;14{,}13)\ \mathrm{m}$ i $s\approx0{,}878$. $(E_V,E_s,\Delta E)\approx(25{,}54;18{,}41;7{,}14)\ \mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a,NPSH_r,NPSH_a-NPSH_r)\approx(6{,}65;3{,}10;3{,}55)\ \mathrm{m}$. Nedostaju kriterij margine i dopušteno radno područje, a za sniženu brzinu i odgovarajući $NPSH_r(q,n_2)$.
+$q\approx22{,}36\ \mathrm{L/s}$; $(H_V,H_s)\approx(17{,}00;11{,}50)\ \mathrm{m}$ i $s\approx0{,}866$. $(E_V,E_s,\Delta E)\approx(8{,}19;5{,}54;2{,}65)\ \mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a,NPSH_r,NPSH_a-NPSH_r)\approx(10{,}06;4{,}50;5{,}56)\ \mathrm{m}$; u balastnom stanju $NPSH_a\approx8{,}66\ \mathrm{m}$. Za odluku nedostaju kriterij margine proizvođača, $NPSH_r(q,n_2)$ za sniženu brzinu, stvarni porast $h_{w,s}$ zbog zaprljanog filtra te provjera uvlačenja zraka pri njihanju i trimu, što NPSH ne opisuje.
 :::
 ::::
 
@@ -883,13 +907,11 @@ $q\approx19{,}12\ \mathrm{L/s}$; $(H_V,H_s)\approx(19{,}62;14{,}13)\ \mathrm{m}$
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Sažeta mapa modela</p>
 
-1. Nacrtaj sustav, presjeke, osi i referencu tlaka.
-2. Napiši kontinuitet i realnu energijsku bilancu prije korelacija.
-3. Za svaku dionicu idi redom $Q\to v\to Re\to\lambda\to h_w$.
-4. U seriji zbrajaj gubitke pri istom $Q$; u paraleli izjednači pad energije i zatvori čvor.
-5. Radnu točku odredi presjecištem karakteristika crpke i sustava; statička visina ne slijedi afinitetne zakone.
-6. Odvojeno vodi $P_h$, $P_{vr}$ i $P_{el}$ te godišnju energiju.
-7. Na usisu koristi apsolutni tlak i usporedi $NPSH_a$ s odgovarajućim $NPSH_r$ i kriterijem proizvođača.
+1. Nacrtaj sustav, presjeke i referencu tlaka; napiši kontinuitet i realnu energijsku bilancu prije korelacija.
+2. Za svaku dionicu idi redom $Q\to v\to Re\to\lambda\to h_w$.
+3. U seriji zbrajaj gubitke; u paraleli izjednači pad energije; u petlji ispravljaj protoke istim $\Delta Q$.
+4. Radnu točku odredi presjecištem karakteristika crpke i sustava; statička visina ne slijedi afinitetne zakone.
+5. Odvojeno vodi $P_h$, $P_{vr}$ i $P_{el}$; na usisu koristi apsolutni tlak i usporedi $NPSH_a$ s $NPSH_r$.
 
-Najbrža provjera rezultata jest kombinacija četiriju pitanja: jesu li svi gubitci pozitivni, zatvara li se bilanca protoka, vraća li zbroj gubitaka raspoloživu visinu i je li promjena radne točke fizikalno u očekivanom smjeru?
+**Najčešća pogreška.** Zbrajati lokalne koeficijente s različitim referentnim brzinama ili afinitetne zakone primijeniti na cijeli sustav sa statičkom visinom.
 :::

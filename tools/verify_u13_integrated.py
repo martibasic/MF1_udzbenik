@@ -1,6 +1,6 @@
 """Neovisna numerička provjera kanonskoga U13.
 
-Obuhvaća šest javnih primjera i šest zadataka iz integriranoga poglavlja
+Obuhvaća šest javnih primjera (uključujući petlju gradske mreže) i šest zadataka iz integriranoga poglavlja
 ``source/u13_gubici_cjevovodi_crpke_i_mreze.md``. Golden vrijednosti su
 objavljeni, zaokruženi rezultati, a dodatne invarijante provjeravaju bilance,
 monotonost i granične odluke.
@@ -81,45 +81,45 @@ def laminar_pipe(rho, nu, D, L, Q, g=G):
     }
 
 
-def series_parallel_network(
-    H=12.0,
-    D0=0.10,
-    K0=8.52,
-    D1=0.08,
-    K1=12.80,
-    D2=0.06,
-    K2=15.23,
-    D3=0.10,
-    K3=5.52,
+def hardy_cross_loop(
+    lam=0.022,
+    pipes=(("AB", 0.150, 300.0), ("BC", 0.100, 250.0), ("CD", 0.125, 200.0), ("DA", 0.150, 350.0)),
+    initial=(0.022, 0.010, -0.006, -0.018),
+    inflow=0.040,
+    demands=(0.012, 0.016, 0.012),
+    iterations=2,
     g=G,
 ):
-    A0 = math.pi * D0**2 / 4
-    A1 = math.pi * D1**2 / 4
-    A2 = math.pi * D2**2 / 4
-    ratio_v2_v1 = math.sqrt(K1 / K2)
-    Q_factor = A1 + A2 * ratio_v2_v1
-    ratio_v0_v1 = Q_factor / A0
-    coefficient = K0 * ratio_v0_v1**2 + K1 + K3 * ratio_v0_v1**2
-    v1 = math.sqrt(2 * g * H / coefficient)
-    v2 = ratio_v2_v1 * v1
-    Q1 = A1 * v1
-    Q2 = A2 * v2
-    Q = Q1 + Q2
-    v0 = Q / A0
-    h0 = K0 * v0**2 / (2 * g)
-    hp = K1 * v1**2 / (2 * g)
-    h3 = K3 * v0**2 / (2 * g)
+    """Jedna petlja A-B-C-D-A; protok pozitivan u obilaznom smjeru."""
+    R = [8 * lam * L / (math.pi**2 * g * D**5) for _, D, L in pipes]
+    Q = list(initial)
+    history = []
+    for _ in range(iterations):
+        num = sum(r * q * abs(q) for r, q in zip(R, Q))
+        den = 2 * sum(r * abs(q) for r, q in zip(R, Q))
+        dQ = -num / den
+        history.append({"residual": num, "slope": den, "dQ": dQ})
+        Q = [q + dQ for q in Q]
+    losses = [r * q * abs(q) for r, q in zip(R, Q)]
+    residual = sum(losses)
+    qB, qC, qD = demands
+    nodes = {
+        "A": Q[0] - Q[3] - inflow,
+        "B": Q[0] - Q[1] - qB,
+        "C": Q[1] - Q[2] - qC,
+        "D": Q[2] - Q[3] - qD,
+    }
+    velocities = [4 * abs(q) / (math.pi * D**2) for q, (_, D, _) in zip(Q, pipes)]
     return {
-        "ratio_v2_v1": ratio_v2_v1,
-        "ratio_v0_v1": ratio_v0_v1,
-        "v1": v1,
-        "v2": v2,
-        "Q1": Q1,
-        "Q2": Q2,
+        "R": R,
         "Q": Q,
-        "h0": h0,
-        "hp": hp,
-        "h3": h3,
+        "losses": losses,
+        "history": history,
+        "loop_residual": residual,
+        "nodes": nodes,
+        "drop_AC_via_B": losses[0] + losses[1],
+        "drop_AC_via_D": -(losses[2] + losses[3]),
+        "velocities": velocities,
     }
 
 
@@ -193,6 +193,32 @@ def suction_npsh(
     }
 
 
+def allowed_pressure_drop(dp=25000.0, D=0.10, L=50.0, lam=0.025, sum_xi=4.0, rho=998.0, g=G):
+    h_w = dp / (rho * g)
+    zeta = lam * L / D + sum_xi
+    v = math.sqrt(2 * g * h_w / zeta)
+    A = math.pi * D**2 / 4
+    return {"h_w": h_w, "zeta": zeta, "v": v, "Q": v * A,
+            "line_share": (lam * L / D) / zeta, "check_h": zeta * v**2 / (2 * g)}
+
+
+def two_fluids_same_pipe(D=0.008, L=4.0, Q=3.0e-5, fluids=((1080.0, 6.0e-6), (998.0, 1.0e-6)), g=G):
+    A = math.pi * D**2 / 4
+    v = Q / A
+    out = []
+    for rho, nu in fluids:
+        Re = v * D / nu
+        if Re < 2300:
+            lam, regime = 64 / Re, "laminar"
+        elif Re > 4000:
+            lam, regime = 0.3164 * Re**-0.25, "turbulent"
+        else:
+            raise ValueError("Prijelazno područje nije obuhvaćeno zadanim modelima.")
+        h = lam * L / D * v**2 / (2 * g)
+        out.append({"Re": Re, "lam": lam, "regime": regime, "dp": rho * g * h})
+    return {"v": v, "fluids": out}
+
+
 def parallel_branches(R1=12000.0, R2=48000.0, Q=0.020):
     ratio = math.sqrt(R2 / R1)
     Q1 = ratio / (1 + ratio) * Q
@@ -258,49 +284,62 @@ def pump_operating_point(
     return result
 
 
-def diameter_robustness(
+def swamee_jain(Re, relative_roughness):
+    return 0.25 / math.log10(relative_roughness / 3.7 + 5.74 / Re**0.9) ** 2
+
+
+def diameter_selection(
     diameters=(0.080, 0.100, 0.125),
     L=150.0,
     Q=0.018,
     sum_xi=6.0,
-    lam_bounds=(0.020, 0.028),
+    epsilon=0.15e-3,
+    nu=1.0e-6,
     limit=15.0,
 ):
-    ranges = {}
+    states = {}
     for D in diameters:
         A = math.pi * D**2 / 4
         v = Q / A
-        ranges[D] = tuple(
-            (lam * L / D + sum_xi) * v**2 / (2 * G) for lam in lam_bounds
-        )
-    acceptable = [D for D in diameters if max(ranges[D]) <= limit]
-    return {"ranges": ranges, "selected": min(acceptable)}
+        Re = v * D / nu
+        lam = swamee_jain(Re, epsilon / D)
+        states[D] = {"v": v, "Re": Re, "lam": lam,
+                     "h_w": (lam * L / D + sum_xi) * v**2 / (2 * G)}
+    acceptable = [D for D in diameters if states[D]["h_w"] <= limit]
+    return {"states": states, "selected": min(acceptable)}
 
 
-def regulation_task():
-    q = math.sqrt((24 - 5) / (0.012 + 0.040))
-    H_throttled = 24 - 0.012 * q**2
+def ballast_regulation_task(
+    rho=1025.0, eta=0.70, hours=1500.0,
+    pump=(22.0, 0.010), system=(4.0, 0.015), throttled=(4.0, 0.026),
+    p_atm=101.3e3, p_v=4.2e3, z_s=1.8, h_ws=1.4, npshr=(2.5, 0.004),
+    ballast_depth=0.4,
+):
+    q = math.sqrt((pump[0] - throttled[0]) / (pump[1] + throttled[1]))
+    H_throttled = pump[0] - pump[1] * q**2
     Q = q * 1e-3
-    P_el_throttled = 1000 * G * Q * H_throttled / 0.72
-    H_open = 5 + 0.025 * q**2
-    speed_ratio = math.sqrt((H_open + 0.012 * q**2) / 24)
-    P_el_vfd = 1000 * G * Q * H_open / 0.72
-    saving_MWh = (P_el_throttled - P_el_vfd) * 5000 / 1e6
-    NPSH_a = 10.2 - 2.0 - 1.2 - 0.35
-    NPSH_r = 2 + 0.003 * q**2
+    P_el_throttled = rho * G * Q * H_throttled / eta
+    H_open = system[0] + system[1] * q**2
+    speed_ratio = math.sqrt((H_open + pump[1] * q**2) / pump[0])
+    P_el_vfd = rho * G * Q * H_open / eta
+    head_atm = p_atm / (rho * G)
+    head_v = p_v / (rho * G)
+    NPSH_a = head_atm + z_s - h_ws - head_v
+    NPSH_r = npshr[0] + npshr[1] * q**2
     return {
         "q": q,
         "H_throttled": H_throttled,
-        "P_el_throttled": P_el_throttled,
         "H_open": H_open,
         "speed_ratio": speed_ratio,
+        "P_el_throttled": P_el_throttled,
         "P_el_vfd": P_el_vfd,
-        "E_throttled_MWh": P_el_throttled*5000/1e6,
-        "E_vfd_MWh": P_el_vfd*5000/1e6,
-        "saving_MWh": saving_MWh,
+        "E_throttled_MWh": P_el_throttled * hours / 1e6,
+        "E_vfd_MWh": P_el_vfd * hours / 1e6,
+        "saving_MWh": (P_el_throttled - P_el_vfd) * hours / 1e6,
         "NPSH_a": NPSH_a,
         "NPSH_r": NPSH_r,
         "NPSH_difference": NPSH_a - NPSH_r,
+        "NPSH_a_ballast": head_atm + ballast_depth - h_ws - head_v,
     }
 
 
@@ -324,18 +363,34 @@ def verify():
     _check(out, "U13.CANON.P2.dp_poiseuille_kPa", r["dp_poiseuille"] / 1000, 13.37, "kPa", rel=0.02)
     _invariant(out, "U13.CANON.P2.model_agreement", _close(r["dp"], r["dp_poiseuille"], 1e-10), "Darcy i Poiseuille moraju se podudarati.")
 
-    r = series_parallel_network()
-    _check(out, "U13.CANON.P3.ratio_v2_v1", r["ratio_v2_v1"], 0.9168, "", rel=0.02)
-    _check(out, "U13.CANON.P3.ratio_v0_v1", r["ratio_v0_v1"], 0.9700, "", rel=0.02)
-    _check(out, "U13.CANON.P3.v1", r["v1"], 3.009, "m/s", rel=0.02)
-    _check(out, "U13.CANON.P3.v2", r["v2"], 2.758, "m/s", rel=0.02)
-    _check(out, "U13.CANON.P3.Q1_Ls", r["Q1"] * 1000, 15.12, "L/s", rel=0.02)
-    _check(out, "U13.CANON.P3.Q2_Ls", r["Q2"] * 1000, 7.80, "L/s", rel=0.02)
-    _check(out, "U13.CANON.P3.Q_Ls", r["Q"] * 1000, 22.92, "L/s", rel=0.02)
-    _check(out, "U13.CANON.P3.h0", r["h0"], 3.70, "m", rel=0.02)
-    _check(out, "U13.CANON.P3.hp", r["hp"], 5.91, "m", rel=0.02)
-    _check(out, "U13.CANON.P3.h3", r["h3"], 2.40, "m", rel=0.02)
-    _invariant(out, "U13.CANON.P3.energy_balance", _close(r["h0"] + r["hp"] + r["h3"], 12.0, 0.002), "Gubitci moraju zatvoriti 12 m.")
+    r = hardy_cross_loop()
+    _check(out, "U13.CANON.P3.R_AB", r["R"][0], 7181.0, "s2/m5", rel=0.002)
+    _check(out, "U13.CANON.P3.R_BC", r["R"][1], 45445.0, "s2/m5", rel=0.002)
+    _check(out, "U13.CANON.P3.R_CD", r["R"][2], 11913.0, "s2/m5", rel=0.002)
+    _check(out, "U13.CANON.P3.R_DA", r["R"][3], 8378.0, "s2/m5", rel=0.002)
+    _check(out, "U13.CANON.P3.residual_1", r["history"][0]["residual"], 4.877, "m", rel=0.002)
+    _check(out, "U13.CANON.P3.dQ_1_Ls", r["history"][0]["dQ"] * 1000, -2.92, "L/s", rel=0.01)
+    _check(out, "U13.CANON.P3.dQ_2_Ls", r["history"][1]["dQ"] * 1000, -0.19, "L/s", rel=0.03)
+    _check(out, "U13.CANON.P3.Q_AB_Ls", r["Q"][0] * 1000, 18.89, "L/s", rel=0.002)
+    _check(out, "U13.CANON.P3.Q_BC_Ls", r["Q"][1] * 1000, 6.89, "L/s", rel=0.002)
+    _check(out, "U13.CANON.P3.Q_CD_Ls", r["Q"][2] * 1000, -9.11, "L/s", rel=0.002)
+    _check(out, "U13.CANON.P3.Q_DA_Ls", r["Q"][3] * 1000, -21.11, "L/s", rel=0.002)
+    _check(out, "U13.CANON.P3.h_AB", r["losses"][0], 2.56, "m", rel=0.005)
+    _check(out, "U13.CANON.P3.h_BC", r["losses"][1], 2.16, "m", rel=0.005)
+    _check(out, "U13.CANON.P3.h_DC", -r["losses"][2], 0.99, "m", rel=0.005)
+    _check(out, "U13.CANON.P3.h_AD", -r["losses"][3], 3.73, "m", rel=0.005)
+    _check(out, "U13.CANON.P3.drop_AC", r["drop_AC_via_B"], 4.72, "m", rel=0.005)
+    _invariant(out, "U13.CANON.P3.nodes_and_loop",
+               all(abs(v) < 1e-12 for v in r["nodes"].values())
+               and abs(r["loop_residual"]) < 0.002
+               and abs(r["drop_AC_via_B"] - r["drop_AC_via_D"]) < 0.002,
+               "Čvorovi moraju ostati zatvoreni, a petlja i oba puta A-C usklađeni nakon dvije iteracije.")
+    converged = hardy_cross_loop(iterations=12)
+    _invariant(out, "U13.CANON.P3.convergence_and_velocities",
+               abs(converged["loop_residual"]) < 1e-9
+               and all(abs(a - b) < 1e-5 for a, b in zip(converged["Q"], r["Q"]))
+               and all(0.5 < v < 2.0 for v in r["velocities"]),
+               "Dvije iteracije moraju biti unutar 0,01 L/s od konvergiranog rješenja, uz realne brzine.")
 
     r = pump_speed_example()
     _check(out, "U13.CANON.P4.q_op_Ls", r["q_op"], 19.94, "L/s", rel=0.02)
@@ -361,22 +416,35 @@ def verify():
     _check(out, "U13.CANON.P6.p_abs_kPa", r["p_abs"] / 1000, 57.36, "kPa", rel=0.02)
     _check(out, "U13.CANON.P6.NPSH_a", r["NPSH_a"], 6.00, "m", rel=0.02)
 
-    Q = 0.012
-    A = math.pi * 0.10**2 / 4
-    r = section_losses(0.10, 50.0, Q / A, 0.025, 4.0, rho=998.0)
-    _check(out, "U13.CANON.Z1.v", Q / A, 1.528, "m/s", abs_tol=0.0005)
-    _check(out, "U13.CANON.Z1.h_l", r["h_l"], 1.487, "m", abs_tol=0.0005)
-    _check(out, "U13.CANON.Z1.h_loc", r["h_loc"], 0.476, "m", abs_tol=0.0005)
-    _check(out, "U13.CANON.Z1.h_w", r["h_w"], 1.963, "m", abs_tol=0.0005)
-    _check(out, "U13.CANON.Z1.dp_kPa", r["dp"] / 1000, 19.2, "kPa", abs_tol=0.05)
+    r = allowed_pressure_drop()
+    _check(out, "U13.CANON.Z1.h_w", r["h_w"], 2.554, "m", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z1.zeta", r["zeta"], 16.5, "", abs_tol=1e-9)
+    _check(out, "U13.CANON.Z1.v", r["v"], 1.743, "m/s", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z1.Q_max_Ls", r["Q"] * 1000, 13.69, "L/s", abs_tol=0.005)
+    _check(out, "U13.CANON.Z1.line_share_pct", r["line_share"] * 100, 75.8, "%", abs_tol=0.05)
+    _invariant(out, "U13.CANON.Z1.inverse_closes_forward",
+               abs(r["check_h"] - r["h_w"]) < 1e-12
+               and _close(section_losses(0.10, 50.0, r["v"], 0.025, 4.0, rho=998.0)["dp"], 25000.0, 1e-10),
+               "Izlučena brzina mora vratiti dopušteni pad tlaka izravnim računom.")
 
-    r = laminar_pipe(1100.0, 3.0e-6, 0.006, 5.0, 6.0e-6)
-    _check(out, "U13.CANON.Z2.v", r["v"], 0.212, "m/s", abs_tol=0.0005)
-    _check(out, "U13.CANON.Z2.Re", r["Re"], 424.0, "", abs_tol=0.5)
-    _check(out, "U13.CANON.Z2.lam", r["lam"], 0.1508, "", abs_tol=0.00005)
-    _check(out, "U13.CANON.Z2.dp_kPa", r["dp"] / 1000, 3.11, "kPa", abs_tol=0.005)
-    r_double = laminar_pipe(1100.0, 3.0e-6, 0.006, 5.0, 12.0e-6)
-    _invariant(out, "U13.CANON.Z2.linear_Q_scaling", _close(r_double["dp"] / r["dp"], 2.0, 1e-10), "Laminarni dp mora se udvostručiti s Q.")
+    r = two_fluids_same_pipe()
+    a, b = r["fluids"]
+    _check(out, "U13.CANON.Z2.v", r["v"], 0.597, "m/s", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z2.Re_A", a["Re"], 796.0, "", abs_tol=0.5)
+    _check(out, "U13.CANON.Z2.lam_A", a["lam"], 0.0804, "", abs_tol=0.00005)
+    _check(out, "U13.CANON.Z2.dp_A_kPa", a["dp"] / 1000, 7.73, "kPa", abs_tol=0.005)
+    _check(out, "U13.CANON.Z2.Re_B", b["Re"], 4775.0, "", abs_tol=0.5)
+    _check(out, "U13.CANON.Z2.lam_B", b["lam"], 0.0381, "", abs_tol=0.00005)
+    _check(out, "U13.CANON.Z2.dp_B_kPa", b["dp"] / 1000, 3.38, "kPa", abs_tol=0.005)
+    double = two_fluids_same_pipe(Q=6.0e-5)
+    _check(out, "U13.CANON.Z2.dp_A_double_kPa", double["fluids"][0]["dp"] / 1000, 15.5, "kPa", abs_tol=0.05)
+    _check(out, "U13.CANON.Z2.dp_B_double_kPa", double["fluids"][1]["dp"] / 1000, 11.4, "kPa", abs_tol=0.05)
+    _invariant(out, "U13.CANON.Z2.regimes_and_scaling",
+               a["regime"] == "laminar" and b["regime"] == "turbulent"
+               and abs(double["fluids"][0]["dp"] / a["dp"] - 2.0) < 1e-12
+               and abs(double["fluids"][1]["dp"] / b["dp"] - 2**1.75) < 1e-12
+               and double["fluids"][0]["Re"] < 2300,
+               "Isti vod daje laminarni i turbulentni režim; skaliranja s Q moraju pratiti 64/Re i Blasiusa.")
 
     r = balanced_branches()
     _check(out, "U13.CANON.Z3.Q1_Ls", r["Q1"] * 1000, 10.00, "L/s", abs_tol=0.005)
@@ -410,33 +478,49 @@ def verify():
                rougher["Q"]<r["Q"] and rougher["lam"]>r["lam"] and rougher["H"]>r["H"],
                "Veca hrapavost mora smanjiti protok na zadanoj padajucoj crpkinoj krivulji.")
 
-    r = diameter_robustness()
-    _check(out, "U13.CANON.Z5.D080_low", r["ranges"][0.080][0], 28.4, "m", abs_tol=0.05)
-    _check(out, "U13.CANON.Z5.D080_high", r["ranges"][0.080][1], 38.2, "m", abs_tol=0.05)
-    _check(out, "U13.CANON.Z5.D100_low", r["ranges"][0.100][0], 9.64, "m", abs_tol=0.005)
-    _check(out, "U13.CANON.Z5.D100_high", r["ranges"][0.100][1], 12.85, "m", abs_tol=0.005)
-    _check(out, "U13.CANON.Z5.D125_low", r["ranges"][0.125][0], 3.29, "m", abs_tol=0.005)
-    _check(out, "U13.CANON.Z5.D125_high", r["ranges"][0.125][1], 4.34, "m", abs_tol=0.005)
+    r = diameter_selection()
+    st = r["states"]
+    _check(out, "U13.CANON.Z5.lam_080", st[0.080]["lam"], 0.0238, "", abs_tol=0.00005)
+    _check(out, "U13.CANON.Z5.lam_100", st[0.100]["lam"], 0.0228, "", abs_tol=0.00005)
+    _check(out, "U13.CANON.Z5.lam_125", st[0.125]["lam"], 0.0221, "", abs_tol=0.00005)
+    _check(out, "U13.CANON.Z5.h_w_080", st[0.080]["h_w"], 33.1, "m", abs_tol=0.05)
+    _check(out, "U13.CANON.Z5.h_w_100", st[0.100]["h_w"], 10.8, "m", abs_tol=0.05)
+    _check(out, "U13.CANON.Z5.h_w_125", st[0.125]["h_w"], 3.56, "m", abs_tol=0.005)
     _check(out, "U13.CANON.Z5.selected_mm", r["selected"] * 1000, 100.0, "mm", abs_tol=0)
-    _invariant(out, "U13.CANON.Z5.robust_limit", max(r["ranges"][r["selected"]]) < 15.0, "Odabrani promjer mora zadovoljiti najgori slučaj.")
+    aged = diameter_selection(epsilon=0.50e-3)
+    _check(out, "U13.CANON.Z5.lam_100_aged", aged["states"][0.100]["lam"], 0.0309, "", abs_tol=0.00005)
+    _check(out, "U13.CANON.Z5.h_w_100_aged", aged["states"][0.100]["h_w"], 14.0, "m", abs_tol=0.05)
+    _invariant(out, "U13.CANON.Z5.regime_and_ageing",
+               all(v["Re"] > 5000 for v in st.values())
+               and st[0.080]["lam"] > st[0.100]["lam"] > st[0.125]["lam"]
+               and aged["selected"] == 0.100 and aged["states"][0.100]["h_w"] < 15.0
+               and all(aged["states"][D]["lam"] > st[D]["lam"] for D in st),
+               "Svi kandidati turbulentni; lambda raste s hrapavošću, a odabrani promjer ostaje unutar granice.")
 
-    r = regulation_task()
-    _check(out, "U13.CANON.Z6.q_Ls", r["q"], 19.12, "L/s", abs_tol=0.005)
-    _check(out, "U13.CANON.Z6.H_throttled", r["H_throttled"], 19.62, "m", abs_tol=0.005)
-    _check(out, "U13.CANON.Z6.E_throttled_MWh", r["E_throttled_MWh"], 25.54, "MWh/god", abs_tol=0.005)
-    _check(out, "U13.CANON.Z6.H_open", r["H_open"], 14.13, "m", abs_tol=0.005)
-    _check(out, "U13.CANON.Z6.speed_ratio", r["speed_ratio"], 0.878, "", abs_tol=0.0005)
-    _check(out, "U13.CANON.Z6.E_vfd_MWh", r["E_vfd_MWh"], 18.41, "MWh/god", abs_tol=0.005)
-    _check(out, "U13.CANON.Z6.saving_MWh", r["saving_MWh"], 7.14, "MWh", abs_tol=0.005)
-    _check(out, "U13.CANON.Z6.NPSH_a", r["NPSH_a"], 6.65, "m", abs_tol=0.005)
-    _check(out, "U13.CANON.Z6.NPSH_r", r["NPSH_r"], 3.10, "m", abs_tol=0.005)
-    _check(out, "U13.CANON.Z6.NPSH_difference", r["NPSH_difference"], 3.55, "m", abs_tol=0.005)
+    r = ballast_regulation_task()
+    _check(out, "U13.CANON.Z6.q_Ls", r["q"], 22.36, "L/s", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.H_throttled", r["H_throttled"], 17.00, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.E_throttled_MWh", r["E_throttled_MWh"], 8.19, "MWh/god", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.H_open", r["H_open"], 11.50, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.speed_ratio", r["speed_ratio"], 0.866, "", abs_tol=0.0005)
+    _check(out, "U13.CANON.Z6.E_vfd_MWh", r["E_vfd_MWh"], 5.54, "MWh/god", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.saving_MWh", r["saving_MWh"], 2.65, "MWh", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.NPSH_a", r["NPSH_a"], 10.06, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.NPSH_r", r["NPSH_r"], 4.50, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.NPSH_difference", r["NPSH_difference"], 5.56, "m", abs_tol=0.005)
+    _check(out, "U13.CANON.Z6.NPSH_a_ballast", r["NPSH_a_ballast"], 8.66, "m", abs_tol=0.005)
     _invariant(out, "U13.CANON.Z6.regulation_and_energy_balance",
-               abs(24*r["speed_ratio"]**2-0.012*r["q"]**2-r["H_open"])<1e-12
+               abs(22*r["speed_ratio"]**2-0.010*r["q"]**2-r["H_open"])<1e-12
                and 0<r["speed_ratio"]<1
                and abs(r["E_throttled_MWh"]-r["E_vfd_MWh"]-r["saving_MWh"])<1e-12
                and r["saving_MWh"]>0,
                "Nova brzina mora zatvoriti radnu tocku, a usteda razliku godisnjih energija.")
+    _invariant(out, "U13.CANON.Z6.flooded_suction_absolute_reference",
+               r["NPSH_a"] > r["NPSH_a_ballast"] > 0
+               and abs(r["NPSH_a"] - (101.3e3/(1025*G) + 1.8 - 1.4 - 4.2e3/(1025*G))) < 1e-12
+               and ballast_regulation_task(p_v=12.0e3)["NPSH_a"] < r["NPSH_a"]
+               and ballast_regulation_task(rho=1000.0)["E_throttled_MWh"] < r["E_throttled_MWh"],
+               "Napunjen usis povecava NPSHa; topliji fluid ga smanjuje, a morska voda povecava snagu.")
 
     return out
 

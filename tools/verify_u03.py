@@ -31,19 +31,11 @@ def _invariant(out, rid, condition, details):
     })
 
 
-def primjer_1(rho=998.0, p_G_m=18e3, h=1.40, p_atm=100.8e3, g=9.81):
-    p_G = p_atm + p_G_m
-    p_A = p_G + rho * g * h
+def primjer_1(rho=998.0, p_pl_m=18e3, h=1.40, p_atm=100.8e3, g=9.81):
+    p_pl = p_atm + p_pl_m
+    p_A = p_pl + rho * g * h
     p_A_m = p_A - p_atm
-    return {"p_G": p_G, "p_A": p_A, "p_A_m": p_A_m}
-
-
-def primjer_2(G_k=25.0, d_k=0.30, h1=0.25, h2=0.50, rho=1000.0, g=9.81):
-    A_k = math.pi * d_k**2 / 4
-    p_c = G_k / A_k
-    p_A = p_c + rho * g * h1
-    p_B = p_c - rho * g * (h2 - h1)
-    return {"A_k": A_k, "p_c": p_c, "p_A": p_A, "p_B": p_B}
+    return {"p_pl": p_pl, "p_A": p_A, "p_A_m": p_A_m}
 
 
 def primjer_3(rho_v=1000.0, rho_mv=1035.0, rho_Hg=13600.0, rho_zr=1.2,
@@ -53,26 +45,22 @@ def primjer_3(rho_v=1000.0, rho_mv=1035.0, rho_Hg=13600.0, rho_zr=1.2,
     return {"dp_bez_zraka": dp_bez_zraka, "dp_sa_zrakom": dp_sa_zrakom}
 
 
-def primjer_4(rho=1000.0, rho_Hg=13600.0, dh=0.18, h=1.20,
-              p_0=101325.0, g=9.81):
-    p_g = p_0 - rho_Hg * g * dh
-    p_g_m = p_g - p_0
-    p_A = p_g + rho * g * h
-    p_A_m = p_A - p_0
-    return {"p_g": p_g, "p_g_m": p_g_m, "p_A": p_A, "p_A_m": p_A_m}
-
-
-def cjeloviti_1(rho_w=1000.0, rho_o=850.0, rho_Hg=13600.0,
-                h1=0.80, h2=0.55, a=0.30, b=0.25, dh=0.18, h_C=1.20,
-                p_0=101325.0, g=9.81):
-    p_2 = p_0 + rho_o * g * h2
-    p_1 = p_2 - rho_w * g * a + rho_Hg * g * dh + rho_o * g * b
-    p_G = p_1 - rho_w * g * h1
-    p_G_m = p_G - p_0
-    p_C = p_G + rho_w * g * h_C
-    p_C_m = p_C - p_0
-    return {"p_1": p_1, "p_2": p_2, "p_G": p_G, "p_G_m": p_G_m,
-            "p_C": p_C, "p_C_m": p_C_m}
+def cjeloviti_sondiranje(p_dno=141.0e3, p_pl=3.0e3, rho_o=860.0, rho_w=1025.0,
+                         h_w=0.35, H_ref=18.60, U_m=2.31, A_t=600.0,
+                         p_atm=101.0e3, rho_pl=1.2, g=9.81):
+    """P3: sondiranje teretnog tanka s tlacnim mjeracem razine (U03, cjeloviti)."""
+    p_water = rho_w * g * h_w
+    h_o = (p_dno - p_pl - p_water) / (rho_o * g)
+    U = H_ref - h_w - h_o
+    p_aps = p_atm + p_dno
+    h_single = (p_dno - p_pl) / (rho_o * g)          # vodeni talog racunan kao ulje
+    h_nogas = (p_dno - p_water) / (rho_o * g)        # zaboravljen pretlak plina
+    return {
+        "p_water": p_water, "h_o": h_o, "U": U, "U_m": U_m, "p_aps": p_aps,
+        "h_single": h_single, "dV_single": (h_single - h_o) * A_t,
+        "h_nogas": h_nogas, "dV_nogas": (h_nogas - h_o) * A_t,
+        "p_gas_column": rho_pl * g * U,
+    }
 
 
 def primjer_pumpa(H=2.40, rho=870.0, p_atm=101.3e3, p_v=200.0, g=9.81):
@@ -82,22 +70,41 @@ def primjer_pumpa(H=2.40, rho=870.0, p_atm=101.3e3, p_v=200.0, g=9.81):
     return {"p_man": p_man, "p_aps": p_aps, "H_max": H_max}
 
 
-def primjer_vodotoranj(Z_t=84.0, Z_k=68.0, rho=998.0, p_atm=100.5e3, g=9.81):
-    dH = Z_t - Z_k
-    p_man = rho * g * dH
-    p_aps = p_atm + p_man
-    return {"dH": dH, "p_man": p_man, "p_aps": p_aps}
+def primjer_balastni(T_g=8.5, H_t=5.0, h_p=2.0, h_s=3.0,
+                     rho_m=1025.0, rho_b=1025.0, g=9.81):
+    """P5: bocni balastni tank s morskom vodom izvana i iznutra."""
+    p_ext_dno = rho_m * g * T_g
+    p_ext_P = rho_m * g * (T_g - h_p)
+    p_int_dno_A = rho_b * g * H_t
+    p_int_P_A = rho_b * g * (H_t - h_p)
+    return {
+        "p_ext_dno": p_ext_dno, "p_ext_P": p_ext_P,
+        "p_int_dno_A": p_int_dno_A, "p_int_P_A": p_int_P_A,
+        "delta_dno_A": p_ext_dno - p_int_dno_A,
+        "delta_P_A": p_ext_P - p_int_P_A,
+        "delta_dno_B": p_ext_dno,
+        "delta_P_B": p_ext_P,
+        "ullage_C": H_t - h_s,
+        "delta_dno_C": p_ext_dno - rho_b * g * h_s,
+        "uniform_net": rho_m * g * (T_g - H_t),
+    }
 
 
-def primjer_iot_tlak(p_A=520e3, dz=38.0, rho=998.0,
-                      p_atm=101.3e3, dp_alarm=50e3, g=9.81):
+def primjer_vodotoranj(p_A=520e3, dz=38.0, rho=998.0,
+                       p_atm=101.3e3, dp_alarm=50e3, g=9.81):
+    """P6: tlak u mrezi iz kote vodotornja i IoT senzor."""
     hydrostatic_drop = rho * g * dz
     p_B_gauge = p_A - hydrostatic_drop
+    h_tower = p_B_gauge / (rho * g)
+    equivalent_head = dp_alarm / (rho * g)
     return {
         "hydrostatic_drop": hydrostatic_drop,
         "p_B_gauge": p_B_gauge,
         "p_B_abs": p_B_gauge + p_atm,
-        "equivalent_head": dp_alarm / (rho * g),
+        "h_tower": h_tower,
+        "head_A": p_A / (rho * g),
+        "equivalent_head": equivalent_head,
+        "h_tower_after": h_tower - equivalent_head,
     }
 
 
@@ -157,31 +164,11 @@ def zadatak_6(h1=0.65, dh=0.210, h_tocka=1.30, rho_w=998.0, rho_Hg=13600.0,
     }
 
 
-# ------------ Faza 1.5 dodatak: Balastni tank broda ----------------
-def primjer_balastni(T_g=8.5, H_t=5.0, h_p=2.0, rho_m=1025.0, rho_b=1000.0, g=9.81):
-    # Stanje A (tank pun)
-    p_ext_dno = rho_m * g * T_g
-    p_int_dno_A = rho_b * g * H_t
-    delta_dno_A = p_ext_dno - p_int_dno_A
-    delta_dno_B = p_ext_dno - 0.0  # Stanje B (prazan)
-    p_ext_proz = rho_m * g * (T_g - h_p)
-    p_int_proz_A = rho_b * g * (H_t - h_p)
-    delta_proz_A = p_ext_proz - p_int_proz_A
-    return {
-        "p_ext_dno": p_ext_dno,
-        "p_ext_proz": p_ext_proz,
-        "p_int_proz_A": p_int_proz_A,
-        "delta_dno_A": delta_dno_A,
-        "delta_dno_B": delta_dno_B,
-        "delta_proz_A": delta_proz_A,
-    }
-
-
 def verify():
     out = []
 
     r = primjer_1()
-    _check(out, "U03.P1.p_G_kPa", r["p_G"] / 1000, 118.8, "kPa")
+    _check(out, "U03.P1.p_pl_kPa", r["p_pl"] / 1000, 118.8, "kPa")
     _check(out, "U03.P1.p_A_kPa", r["p_A"] / 1000, 132.506532, "kPa", rel=1e-9)
     _check(out, "U03.P1.p_A_m_kPa", r["p_A_m"] / 1000, 31.706532, "kPa", rel=1e-9)
 
@@ -189,13 +176,28 @@ def verify():
     _check(out, "U03.P3.dp_bez_zraka_Pa", r["dp_bez_zraka"], 3394.26, "Pa", rel=1e-9)
     _check(out, "U03.P3.dp_sa_zrakom_Pa", r["dp_sa_zrakom"], 3402.50, "Pa", rel=2e-7)
 
-    r = cjeloviti_1()
-    _check(out, "U03.CH1.p_2_kPa", r["p_2"] / 1000, 105.9, "kPa")
-    _check(out, "U03.CH1.p_1_kPa", r["p_1"] / 1000, 129.1, "kPa")
-    _check(out, "U03.CH1.p_G_kPa", r["p_G"] / 1000, 121.2, "kPa")
-    _check(out, "U03.CH1.p_G_m_kPa", r["p_G_m"] / 1000, 19.9, "kPa")
-    _check(out, "U03.CH1.p_C_kPa", r["p_C"] / 1000, 133.0, "kPa")
-    _check(out, "U03.CH1.p_C_m_kPa", r["p_C_m"] / 1000, 31.7, "kPa")
+    r = cjeloviti_sondiranje()
+    _check(out, "U03.CH1.p_water_Pa", r["p_water"], 3519.3, "Pa", rel=2e-5)
+    _check(out, "U03.CH1.h_o_m", r["h_o"], 15.940, "m", rel=1e-4)
+    _check(out, "U03.CH1.U_m", r["U"], 2.310, "m", rel=1e-3)
+    _check(out, "U03.CH1.p_aps_dno_kPa", r["p_aps"] / 1000, 242.0, "kPa", rel=1e-9)
+    _check(out, "U03.CH1.h_single_fluid_m", r["h_single"], 16.357, "m", rel=5e-5)
+    _check(out, "U03.CH1.dV_single_fluid_m3", r["dV_single"], 250.0, "m3", rel=2e-3)
+    _check(out, "U03.CH1.h_no_gas_m", r["h_nogas"], 16.296, "m", rel=5e-5)
+    _check(out, "U03.CH1.dV_no_gas_m3", r["dV_nogas"], 213.0, "m3", rel=2e-3)
+    _check(out, "U03.CH1.gas_column_Pa", r["p_gas_column"], 27.2, "Pa", rel=2e-3)
+    _invariant(out, "U03.CH1.ullage_tape_agreement",
+               abs(r["U"] - r["U_m"]) < 1e-3,
+               "Ullage iz tlaka i ullage vrpce moraju se slagati unutar 1 mm.")
+    _invariant(out, "U03.CH1.geometry_closure",
+               abs(r["h_o"] + 0.35 + r["U"] - 18.60) < 1e-12,
+               "Stupci ulja, vode i ullage ne zatvaraju visinu do referentne tocke.")
+    _invariant(out, "U03.CH1.simplifications_overestimate",
+               r["h_single"] > r["h_nogas"] > r["h_o"],
+               "Oba pojednostavljenja moraju precijeniti stupac ulja.")
+    _invariant(out, "U03.CH1.gas_column_negligible",
+               r["p_gas_column"] < 1e-3 * 141.0e3,
+               "Stupac inertnog plina mora biti ispod promila ocitanja na dnu.")
 
     r = primjer_pumpa()
     _check(out, "U03.pumpa.p_man_kPa", r["p_man"] / 1000, -20.48328, "kPa", rel=1e-9)
@@ -292,20 +294,43 @@ def verify():
         "Vakuumski i nadtlacni manometar nemaju ocekivane predznake.",
     )
 
-    # Faza 1.5: Balastni tank broda
+    # P5: bocni balastni tank broda (morska voda izvana i iznutra)
     r = primjer_balastni()
-    _check(out, "U03.balastni.p_ext_proz_kPa", r["p_ext_proz"] / 1000, 65.36, "kPa", rel=0.00002)
-    _check(out, "U03.balastni.p_int_proz_kPa", r["p_int_proz_A"] / 1000, 29.43, "kPa", rel=1e-9)
-    _check(out, "U03.balastni.p_ext_dno_kPa", r["p_ext_dno"] / 1000, 85.5, "kPa")
-    _check(out, "U03.balastni.delta_dno_A_kPa", r["delta_dno_A"] / 1000, 36.4, "kPa")
-    _check(out, "U03.balastni.delta_dno_B_kPa", r["delta_dno_B"] / 1000, 85.5, "kPa")
-    _check(out, "U03.balastni.delta_proz_A_kPa", r["delta_proz_A"] / 1000, 35.9, "kPa")
+    _check(out, "U03.balastni.p_ext_dno_kPa", r["p_ext_dno"] / 1000, 85.47, "kPa", rel=5e-5)
+    _check(out, "U03.balastni.p_ext_P_kPa", r["p_ext_P"] / 1000, 65.36, "kPa", rel=2e-5)
+    _check(out, "U03.balastni.p_int_dno_A_kPa", r["p_int_dno_A"] / 1000, 50.28, "kPa", rel=1e-4)
+    _check(out, "U03.balastni.p_int_P_A_kPa", r["p_int_P_A"] / 1000, 30.17, "kPa", rel=2e-4)
+    _check(out, "U03.balastni.delta_dno_A_kPa", r["delta_dno_A"] / 1000, 35.19, "kPa", rel=1e-4)
+    _check(out, "U03.balastni.delta_P_A_kPa", r["delta_P_A"] / 1000, 35.19, "kPa", rel=1e-4)
+    _check(out, "U03.balastni.delta_dno_B_kPa", r["delta_dno_B"] / 1000, 85.47, "kPa", rel=5e-5)
+    _check(out, "U03.balastni.delta_P_B_kPa", r["delta_P_B"] / 1000, 65.36, "kPa", rel=2e-5)
+    _check(out, "U03.balastni.ullage_C_m", r["ullage_C"], 2.0, "m", rel=1e-12)
+    _check(out, "U03.balastni.delta_dno_C_kPa", r["delta_dno_C"] / 1000, 55.30, "kPa", rel=1e-4)
+    _invariant(out, "U03.balastni.uniform_net_pressure",
+               abs(r["delta_dno_A"] - r["delta_P_A"]) < 1e-9
+               and abs(r["delta_dno_A"] - r["uniform_net"]) < 1e-9,
+               "Jednake gustoce moraju dati jednolik neto tlak rho*g*(T_g-H_t) na zajednickoj oplati.")
+    _invariant(out, "U03.balastni.state_ordering",
+               r["delta_dno_B"] > r["delta_dno_C"] > r["delta_dno_A"] > 0,
+               "Prazan tank mora opteretiti dno jace od djelomicno punog, a ovaj jace od punog.")
+    _invariant(out, "U03.balastni.density_difference_gradient",
+               abs(primjer_balastni(rho_b=1000.0)["delta_P_A"]
+                   - primjer_balastni(rho_b=1000.0)["delta_dno_A"]
+                   + 25 * 9.81 * 2.0) < 1e-9,
+               "Pri razlicitim gustocama neto tlak mora rasti s dubinom za (rho_m-rho_b)*g.")
 
-    r = primjer_iot_tlak()
-    _check(out, "U03.iot.hydrostatic_drop_kPa", r["hydrostatic_drop"] / 1000, 372.1, "kPa", rel=0.02)
-    _check(out, "U03.iot.p_B_gauge_kPa", r["p_B_gauge"] / 1000, 147.9, "kPa", rel=0.02)
-    _check(out, "U03.iot.p_B_abs_kPa", r["p_B_abs"] / 1000, 249.2, "kPa", rel=0.02)
-    _check(out, "U03.iot.equivalent_head", r["equivalent_head"], 5.11, "m", rel=0.02)
+    # P6: tlak u mrezi iz kote vodotornja i IoT senzor
+    r = primjer_vodotoranj()
+    _check(out, "U03.iot.hydrostatic_drop_kPa", r["hydrostatic_drop"] / 1000, 372.0, "kPa", rel=1e-4)
+    _check(out, "U03.iot.p_B_gauge_kPa", r["p_B_gauge"] / 1000, 148.0, "kPa", rel=3e-4)
+    _check(out, "U03.iot.p_B_abs_kPa", r["p_B_abs"] / 1000, 249.3, "kPa", rel=2e-4)
+    _check(out, "U03.iot.h_tower_m", r["h_tower"], 15.11, "m", rel=3e-4)
+    _check(out, "U03.iot.head_A_m", r["head_A"], 53.1, "m", rel=3e-4)
+    _check(out, "U03.iot.equivalent_head", r["equivalent_head"], 5.11, "m", rel=1e-3)
+    _check(out, "U03.iot.h_tower_after_m", r["h_tower_after"], 10.0, "m", rel=1e-3)
+    _invariant(out, "U03.iot.tower_level_closure",
+               abs(r["h_tower"] + 38.0 - r["head_A"]) < 1e-9,
+               "Kota slobodne povrsine vodotornja mora zatvoriti piezometarsku visinu u A.")
 
     return out
 

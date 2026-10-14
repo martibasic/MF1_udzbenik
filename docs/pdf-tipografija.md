@@ -190,3 +190,27 @@ stranica PDF-a, web, A4 i JupyterLite. Zapis i granice ove dorade nalaze se u
 
 SHA-256 aktualnog PDF-a i istovjetnog mrežnog preuzimanja:
 `7a11b4bd9effebcd2dd9fd667837d54443ed9019b1066e3cb15b59217c2b50a4`.
+
+## Recenzentska dopuna sadržaja — 12. listopada 2026.
+
+Provedba recenzentskih nalaza dodala je sadržaj, a ne promijenila prijelom:
+izvode koji su nedostajali (Reynoldsov transportni teorem, energijska
+jednadžba, brzina zvuka, omjer površina, normalni val, Navier–Stokesova
+konstitutivna relacija, Poiseuilleova jednadžba, Darcyjev koeficijent iz
+ravnoteže sila, hidraulički skok), dva nova riješena primjera (88 → 90),
+blokove granica modela u svim poglavljima te znatno prošireni dodatak A
+(sažetak formula), pojmovnik i dodatak s tipičnim pogreškama. Osnovni font,
+margine, veličine oznaka u skicama i tiskovni formati figura nisu mijenjani.
+
+PDF je narastao s 318 na 352 stranice i izašao iz raspona 270–335. Raspon
+je pomaknut po istom načelu kao ranije, na oko ±10 % oko novog prijeloma:
+**320–390**. Potpunost se i dalje ne zaključuje iz broja stranica nego iz
+kontrole svih P/Z oznaka i brojeva jednadžbi prema kanonskom indeksu u
+`tools/audit_pdf_layout.py`.
+
+Nakon toga je tekst sažet bez uklanjanja izvoda, primjera, zadataka i CFD
+odlomaka: ključ rezultata više ne ponavlja sažetak iskaza zadatka, sažetak
+formula više nema brojčane primjere, pojmovnik je sveden na jednorečenične
+definicije, a provjere uz primjere, napomene uz skice i završni okviri
+poglavlja svedeni su na stvarne provjere. PDF je pao na 323 stranice, pa je
+raspon po istom načelu postavljen na **290–355**.

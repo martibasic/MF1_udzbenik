@@ -130,3 +130,49 @@ je datoteci u `_book/`. Izvršene su i brojčane, strukturne i geometrijske
 provjere. Za QR/JupyterLite korišten je postojeći `tools/tmp/publish-env`;
 zadani lokalni Python nema te dvije ovisnosti. Poslužiteljski CI zasebno
 izvršava zaključane ovisnosti na Pythonu 3.12.
+
+
+## Revizija 12. 10. 2026. (provedba recenzentskih nalaza)
+
+Izvor: stručna recenzija od 12. 10. 2026. i brief koordinatora. Opseg obuhvaća kanonski izvor, verifier `verify_u09_compressible.py`, skice `u09_fig_uvod_kompresibilni_tok.svg` i `u09_kompresibilni_vjezbe_skice.svg` te checker `check_u09_sketch_geometry.py`. Bilježnica `u09_kompresibilna_sapnica.ipynb` nije dirana jer su Z4 i Z5 ostali nepromijenjeni. Prema planu knjige poglavlje dobiva jedan riješeni primjer više (5 → 6).
+
+### Matrica zamjena
+
+| P/Z | Stari ID i stanje | Odluka | Razina | Završni ID | Kontrolni rezultat | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| P1 | `ex-akusticko-vrijeme` | ZADRŽATI; κ umjesto γ | T1 | isti | 343 m/s; 0,248 s | provedeno |
+| P2 | `ex-odabir-modela-kompresibilnosti`; nerealna brzina | PREPRAVITI kontekst u usisni vod kompresora turbopuhala (80–110 m/s realno); brojevi isti | T2 → T1 | isti | 83,6 m/s; Ma 0,244; +30 %: 0,317 | provedeno |
+| P3 | `ex-stagnacijski-zrak` | PREPRAVITI provjeru: brojčana pogreška nestlačivog modela (24,6 prema 28,8 kPa, −15 %) | T2 → T1 | isti | T0 293,3 K; p0 83,8 kPa | provedeno |
+| P4 | `ex-priguseni-ventil` | ZADRŽATI; kritični omjeri premješteni u teoriju; nazivlje zagušenje | T3 → T2 | isti | 0,0700 kg/s; 317 kPa | provedeno |
+| P5 | `ex-normalni-udar` | ZADRŽATI; dodana Prandtlova provjera | T3 → T2 | isti | Ma2 0,577; p2/p1 4,50 | provedeno |
+| P6 | novo | DODATI režim K-D sapnice (Ae/A* = 1,6, tri karakteristična protutlaka, odluka za 100 i 350 kPa, položaj vala) | T3 | `ex-kd-sapnica-rezim` | Ma_e 0,397/1,935; p_e,I 448,5, p_e,II 297, p_e,III 70,7 kPa; ṁ 0,117 kg/s; val pri A/A* = 1,39 | provedeno |
+| Z1 | `task-brzina-zvuka-helium` | ZADRŽATI; κ | T1 | isti | 1019 m/s | provedeno |
+| Z2 | `task-mach-ventilacija`; klon P2 | ZAMIJENITI zrakom za upućivanje brodskog dizelskog motora (boca 30 bar, zagušeni ventil) | T1 | `task-zrak-za-upucivanje-motora` | pb/p0 0,267, zagušeno; 0,850 kg/s; 2,94 s | provedeno |
+| Z3 | `task-akusticko-mjerenje-toka` | ZADRŽATI; κ | T2 | isti | nepromijenjen | provedeno |
+| Z4 | `task-priguseni-protok` | ZADRŽATI; nazivlje zagušen | T2 | isti | nepromijenjen | provedeno |
+| Z5 | `task-sapnica-model` | ZADRŽATI; κ, zagušenje | T3 | isti | nepromijenjen | provedeno |
+| Z6 | `task-udarni-val-podaci` | ZADRŽATI; Ma umjesto M, zaustavni tlak | T4 | isti | nepromijenjen | provedeno |
+
+Stari anchor Z2 ostaje kao `<span id="task-mach-ventilacija">`.
+
+### Teorija i notacija
+
+- Dodani blokovi `.mf1-izvod`:
+  - brzina zvuka iz bilance preko tankog vala;
+  - A/A* (`eq-omjer-povrsina`) i zagušeni protok iz ṁ = ρ*a*A*;
+  - Prandtlova relacija (`eq-prandtlova-relacija`), `eq-normalni-skok` (sada i T2/T1) i entropija (`eq-entropija-udar`, Δs = +94 J/(kg K) pri Ma1 = 2).
+- Kritični omjeri (`eq-kriticni-omjeri`) premješteni su u teoriju.
+- Dodan je novi blok `.mf1-granica-modela` za idealni 1D model.
+- Nazivlje i oznake: κ, Ma, zaustavne veličine, kalorički savršen plin, zagušenje, CFL.
+- Zadržani su ID-jevi `eq-priguseni-protok`, `cfd-sapnica-prigusenje`, `cfd-sapnica-udarni-val`, `ex-normalni-udar` i `sec-sapnica-prigusenje`.
+- Duplicirano pitanje u „Provjeri sebe” zamijenjeno je novim.
+
+### Skice i provjere
+
+- `u09_kompresibilni_vjezbe_skice.svg`:
+  - panel Z2 (boca, ventil kao kritični presjek, vod prema motoru) unutar istog okvira;
+  - natpisi Z6 promijenjeni u Ma₁ i Ma₂.
+- `u09_fig_uvod_kompresibilni_tok.svg`: dodan izlazni presjek `u09fukt_exit` s natpisima p₀, T₀ i Aₑ, pᵦ. Nova datoteka nije bila potrebna.
+- `check_u09_sketch_geometry.py`: dodane su provjere ventila Z2, izlaza u uvodnoj skici i oznake Ma. Rezultat: PASS, 1246 provjera.
+- `verify_u09_compressible.py`: 100/100. Uklonjeni su stari ID-jevi U09.COMP.Z2.Ma i Z2.v.
+- Nije pokrenuto: generatori s `--write` i render. To radi koordinator.

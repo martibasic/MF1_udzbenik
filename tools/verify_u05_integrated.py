@@ -134,6 +134,52 @@ def integrate(f, lo, hi, n=800):
         (4 if i % 2 else 2) * f(lo + i * step) for i in range(1, n)))
 
 
+def task_watertight_door(b=0.80, H=1.60, h1=1.40, rho=1025.0, g=G):
+    """Z1: vrata sa šarkama na jednom i dva zasuna na drugom okomitom rubu."""
+    r = rectangular_gate(b, H, h1, rho=rho, g=g)
+    M_hinge = r["F"] * b / 2          # tlak ne ovisi o vodoravnom položaju
+    dogs_total = r["F"] / 2
+    arm = r["h_cp"] - h1
+    dog_lower = dogs_total * arm / H
+    dog_upper = dogs_total - dog_lower
+    return {**r, "M_hinge": M_hinge, "dogs_total": dogs_total,
+            "offset": arm, "dog_lower": dog_lower, "dog_upper": dog_upper}
+
+
+def task_parabolic_cover(b=1.50, L=1.20, H=0.90, rho=RHO_WATER, g=G, n=2000):
+    """Z2: parabola z=-H(x/L)^2 s tjemenom A na slobodnoj površini uz stijenku.
+
+    Voda kvasi gornju stranu; normala iz fluida u pokrov je (z', -1)/sqrt(1+z'^2).
+    Vraća analitičke vrijednosti i neovisnu numeričku integraciju p n dA.
+    """
+    F_x = -rho * g * b * H**2 / 2
+    F_z = -rho * g * b * H * L / 3
+    depth_x = 2 * H / 3
+    x_z = 3 * L / 4
+    M_A = -(abs(F_x) * depth_x + abs(F_z) * x_z)   # oba doprinosa u smjeru kazaljke
+    z = lambda x: -H * (x / L) ** 2
+    dz = lambda x: -2 * H * x / L**2
+    p = lambda x: rho * g * (-z(x))
+    F_x_num = integrate(lambda x: p(x) * dz(x) * b, 0, L, n)
+    F_z_num = integrate(lambda x: -p(x) * b, 0, L, n)
+    M_num = integrate(lambda x: x * (-p(x) * b) - z(x) * (p(x) * dz(x) * b), 0, L, n)
+    F_R = math.hypot(F_x, F_z)
+    return {"F_x": F_x, "F_z": F_z, "depth_x": depth_x, "x_z": x_z, "F_R": F_R,
+            "M_A": M_A, "F_x_num": F_x_num, "F_z_num": F_z_num, "M_num": M_num}
+
+
+def parabola_normal_intersection(L, H, x1, x2):
+    """Sjecište normala parabole z=-H(x/L)^2 u točkama x1 i x2."""
+    def normal(x):
+        zp = -2 * H * x / L**2
+        return (x, -H * (x / L) ** 2), (zp, -1.0)   # točka, smjer normale
+    (px, pz), (dx1, dz1) = normal(x1)
+    (qx, qz), (dx2, dz2) = normal(x2)
+    det = dx1 * (-dz2) - dz1 * (-dx2)
+    t = ((qx - px) * (-dz2) - (qz - pz) * (-dx2)) / det
+    return px + t * dx1, pz + t * dz1
+
+
 def task_two_levels(b=1.20, H=3.0, h_left=2.40, h_right=1.20):
     # Moment sile udesno na y>0 je negativan za pozitivnu rotaciju CCW.
     F = RHO_WATER * G * b * (h_left**2 - h_right**2) / 2
@@ -223,6 +269,10 @@ def verify():
     _check(out, "U05.CANON.P4.x_V", r["x_from_wall"], 0.584, "m", rel=0.02)
     _check(out, "U05.CANON.P4.F_R_kN", r["F_R"] / 1000, 99.81, "kN", rel=0.02)
     _check(out, "U05.CANON.P4.angle", r["angle"], 48.1, "deg", rel=0.02)
+    _check(out, "U05.CANON.P4.moment_about_O_kNm", r["F_H"] * (r["h_H"] - 2.44) / 1000, 43.4, "kNm", rel=0.005)
+    _invariant(out, "U05.CANON.P4.resultant_through_centre",
+               abs(r["F_H"] * (r["h_H"] - 2.44) - r["F_V"] * r["x_from_wall"]) < 1e-6,
+               "Rezultanta kružnog luka mora prolaziti kroz O.")
 
     r = quarter_cylinder(0.90, 1.20, 0.0, vertical_sign=-1)
     _check(out, "U05.CANON.P5.F_H_kN", r["F_H"] / 1000, 4.758, "kN", rel=0.02)
@@ -243,15 +293,53 @@ def verify():
     _check(out, "U05.CANON.P6.angle", r["angle"], 57.52, "deg", rel=0.02)
     _check(out, "U05.CANON.P6.T_kN", r["T"] / 1000, 13.026, "kN", rel=0.02)
 
-    r = rectangular_gate(1.40, 1.80, 1.10)
-    _check(out, "U05.CANON.Z1.F_kN", r["F"] / 1000, 49.34, "kN", rel=0.02)
-    _check(out, "U05.CANON.Z1.h_cp", r["h_cp"], 2.135, "m", rel=0.02)
-    _check(out, "U05.CANON.Z1.offset", r["h_cp"] - 1.10, 1.035, "m", rel=0.02)
+    r = task_watertight_door()
+    _check(out, "U05.CANON.Z1.F_kN", r["F"] / 1000, 28.31, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z1.h_cp", r["h_cp"], 2.297, "m", rel=0.001)
+    _check(out, "U05.CANON.Z1.offset", r["offset"], 0.897, "m", rel=0.001)
+    _check(out, "U05.CANON.Z1.M_hinge_kNm", r["M_hinge"] / 1000, 11.33, "kNm", rel=0.001)
+    _check(out, "U05.CANON.Z1.dogs_total_kN", r["dogs_total"] / 1000, 14.16, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z1.dog_lower_kN", r["dog_lower"] / 1000, 7.94, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z1.dog_upper_kN", r["dog_upper"] / 1000, 6.22, "kN", rel=0.001)
+    q = lambda depth: 1025.0 * G * depth * 0.80
+    f_num = integrate(q, 1.40, 3.00)
+    h_num = integrate(lambda depth: depth * q(depth), 1.40, 3.00) / f_num
+    _invariant(out, "U05.CANON.Z1.pressure_integration",
+               abs(f_num - r["F"]) < 1e-6 and abs(h_num - r["h_cp"]) < 1e-9,
+               "Integral tlaka po vratima ne vraća silu i centar tlaka.")
+    _invariant(out, "U05.CANON.Z1.support_balance",
+               abs(r["dog_lower"] + r["dog_upper"] - r["F"] / 2) < 1e-9
+               and abs(r["dog_lower"] * 1.60 - r["F"] / 2 * r["offset"]) < 1e-9
+               and r["dog_lower"] > r["dog_upper"] > 0,
+               "Zasuni ne zatvaraju silu i moment reda uz slobodni rub.")
+    _invariant(out, "U05.CANON.Z1.seawater_heavier",
+               r["F"] > task_watertight_door(rho=998.0)["F"]
+               and abs(r["h_cp"] - task_watertight_door(rho=998.0)["h_cp"]) < 1e-12,
+               "Gustoća mora mijenja silu, a ne položaj centra tlaka.")
 
-    r = quarter_cylinder(0.65, 1.20, 1.10, vertical_sign=1)
-    _check(out, "U05.CANON.Z2.F_H_kN", r["F_H"] / 1000, 10.88, "kN", rel=0.02)
-    _check(out, "U05.CANON.Z2.F_V_kN", r["F_V"] / 1000, 12.30, "kN", rel=0.02)
-    _check(out, "U05.CANON.Z2.F_R_kN", r["F_R"] / 1000, 16.42, "kN", rel=0.02)
+    r = task_parabolic_cover()
+    _check(out, "U05.CANON.Z2.F_x_kN", r["F_x"] / 1000, -5.948, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z2.depth_x", r["depth_x"], 0.600, "m", rel=0.001)
+    _check(out, "U05.CANON.Z2.F_z_kN", r["F_z"] / 1000, -5.287, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z2.x_z", r["x_z"], 0.900, "m", rel=0.001)
+    _check(out, "U05.CANON.Z2.F_R_kN", r["F_R"] / 1000, 7.958, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z2.M_A_kNm", r["M_A"] / 1000, -8.327, "kNm", rel=0.001)
+    _invariant(out, "U05.CANON.Z2.direct_integration",
+               abs(r["F_x_num"] - r["F_x"]) < 1e-6 and abs(r["F_z_num"] - r["F_z"]) < 1e-6
+               and abs(r["M_num"] - r["M_A"]) < 1e-6,
+               "Integral p n dA po paraboli ne vraća projekciju, pomoćni volumen i moment.")
+    _invariant(out, "U05.CANON.Z2.signs", r["F_x"] < 0 and r["F_z"] < 0 and r["M_A"] < 0,
+               "Voda iznad pokrova mora gurati prema stijenci i prema dolje.")
+    px, pz = parabola_normal_intersection(1.20, 0.90, 0.30, 0.90)
+    qx, qz = parabola_normal_intersection(1.20, 0.90, 0.60, 0.90)
+    _invariant(out, "U05.CANON.Z2.no_common_centre",
+               math.hypot(px - qx, pz - qz) > 0.05
+               and abs(abs(r["F_x"]) * (pz + r["depth_x"]) - abs(r["F_z"]) * (r["x_z"] - px)) > 100.0,
+               "Normale parabole ne smiju imati zajedničku točku kao kružni luk.")
+    limit = task_parabolic_cover(H=0.09)
+    _invariant(out, "U05.CANON.Z2.flat_limit",
+               abs(limit["F_x"] / r["F_x"] - 0.01) < 1e-12 and abs(limit["F_z"] / r["F_z"] - 0.1) < 1e-12,
+               "Vodoravna komponenta raste s H^2, vertikalna linearno s H.")
 
     r = task_two_levels()
     _check(out, "U05.CANON.Z3.F_kN", r["F"] / 1000, 25.377, "kN", rel=0.001)

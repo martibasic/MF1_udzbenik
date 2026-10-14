@@ -112,11 +112,14 @@ def zadatak_3(A=0.020, v=0.30, delta_1=1.0e-3, delta_2=2.0e-3, mu=0.12):
             "F": F_1 + F_2, "F_wrong": mu * A * v / (delta_1 + delta_2)}
 
 
-def zadatak_4(d1=0.60e-3, d2=1.20e-3, sigma=0.022, theta_deg=18.0, rho=790.0, g=9.81):
-    cos_t = math.cos(math.radians(theta_deg))
-    h1 = 4 * sigma * cos_t / (rho * g * d1)
-    h2 = 4 * sigma * cos_t / (rho * g * d2)
-    return {"h1": h1, "h2": h2}
+def zadatak_4(b=0.20e-3, sigma=0.073, rho=1025.0, g=9.81, theta1_deg=30.0, theta2_deg=105.0):
+    """Procjep sirine b izmedu dviju paralelnih ploha: dvije kontaktne linije po duljini L nose stupac b*L*h."""
+    def gap_rise(theta_deg):
+        return 2 * sigma * math.cos(math.radians(theta_deg)) / (rho * g * b)
+    h1 = gap_rise(theta1_deg)
+    h2 = gap_rise(theta2_deg)
+    h_tube = 4 * sigma * math.cos(math.radians(theta1_deg)) / (rho * g * b)
+    return {"h1": h1, "h2": h2, "h_tube": h_tube, "entry_barrier": rho * g * abs(h2)}
 
 
 def zadatak_5(S=0.010, delta=1.0e-3, velocities=(0.10, 0.20, 0.40),
@@ -244,10 +247,20 @@ def verify() -> list:
                "Promjena smjera brzine mora promijeniti smjer potrebne vucne sile.")
 
     z4 = zadatak_4()
-    _check(out, "U02.Z4.h1_mm", z4["h1"] * 1000, 18.0, "mm", abs_tol=0.05)
-    _check(out, "U02.Z4.h2_mm", z4["h2"] * 1000, 9.0, "mm", abs_tol=0.05)
-    _invariant(out, "U02.Z4.inverse_diameter", abs(z4["h1"] / z4["h2"] - 2.0) < 1e-12,
-               "Udvostrucenje promjera nije prepolovilo kapilarni uspon.")
+    _check(out, "U02.Z4.h1_mm", z4["h1"] * 1000, 62.9, "mm", abs_tol=0.05)
+    _check(out, "U02.Z4.h_tube_mm", z4["h_tube"] * 1000, 125.7, "mm", abs_tol=0.05)
+    _check(out, "U02.Z4.h2_mm", z4["h2"] * 1000, -18.8, "mm", abs_tol=0.05)
+    _check(out, "U02.Z4.entry_barrier_Pa", z4["entry_barrier"], 189.0, "Pa", abs_tol=0.5)
+    # Ravnoteza po jedinici duljine procjepa: 2*sigma*cos(theta) = rho*g*b*h.
+    _invariant(out, "U02.Z4.force_balance_per_length",
+               abs(2 * 0.073 * math.cos(math.radians(30.0)) - 1025.0 * 9.81 * 0.20e-3 * z4["h1"]) < 1e-12
+               and abs(z4["h_tube"] / z4["h1"] - 2.0) < 1e-12,
+               "Bilanca po duljini procjepa ne zatvara se ili kruzna formula ne daje dvostruki uspon.")
+    _invariant(out, "U02.Z4.sign_and_scaling",
+               z4["h2"] < 0 < z4["h1"] and abs(zadatak_4(theta1_deg=90.0)["h1"]) < 1e-14
+               and abs(zadatak_4(b=0.10e-3)["h1"] - 2 * z4["h1"]) < 1e-12
+               and abs(z4["entry_barrier"] - 2 * 0.073 * abs(math.cos(math.radians(105.0))) / 0.20e-3) < 1e-9,
+               "Predznak, kut 90 stupnjeva, skaliranje 1/b ili ulazna barijera nisu dosljedni.")
 
     z5 = zadatak_5()
     _check(out, "U02.Z5.gradient_1", z5["gradients"][0], 100.0, "1/s")

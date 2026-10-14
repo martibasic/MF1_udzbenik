@@ -71,3 +71,39 @@ tipkovnicu. Vizualna provjera mora obuhvatiti i stvarne PDF prijelome,
 čitljivost skica te potpunost matematičkih izraza.
 
 Tehnička podloga: [Quarto — prilagođeni Typst formati](https://quarto.org/docs/output-formats/typst-custom.html).
+
+## Notacija i nazivlje (standard od 12. listopada 2026.)
+
+Jedna veličina ima jednu oznaku kroz cijelu knjigu; dodatak A navodi iznimke.
+Kad se u pojedinom poglavlju nužno koristi druga oznaka, uvodi se pri prvom
+spomenu s izričitom napomenom.
+
+| Veličina | Oznaka | Napomena |
+| --- | --- | --- |
+| brzina fluida | $v$, $\vec v$, komponente $v_x$, $v_i$ | ne $u$, $\mathbf u$, $V$ |
+| brzina krute granice | $u$ (lopatica, klip, ploča); $v_s$, $v_m$, $v_p$ (brod, model, prototip); $v_A$ (napredovanje propelera); $v_j$ (mlaz) | turbostrojevi: $c$ apsolutna, $w$ relativna, $u$ obodna |
+| vanjska brzina graničnog sloja, brzina trenja | $U_e$, $U_\infty$, $u_\tau$ | uz definiciju |
+| brzina zvuka; brzina površinskog vala | $a$; $c$ (samo pog. 15) | |
+| volumen; istisnina; masa istisnine; gaz; nadvođe | $V$; $V_{ist}$; $\Delta$; $T$; $f$ | |
+| tlak atmosferski, manometarski, apsolutni, pare, zaustavni | $p_{atm}$, $p_M$, $p_{aps}$, $p_v$, $p_0$ | $p_0$ samo zaustavni; Bernoulli s $p/(\rho g)$ |
+| gubitci; koeficijenti | $h_w$, $h_l$, $h_{loc}$; $\xi$, $\zeta=\lambda L/D+\sum\xi$, $\lambda$ | $K$ samo volumni modul; $\lambda_L$ mjerilo duljina |
+| izentropski eksponent; specifična težina | $\kappa$; $\gamma$ | |
+| bezdimenzijski brojevi | $Ma$, $Re$, $Fr$, $We$, $St$, $Bo$, $Eu=\Delta p/(\rho v^2)$ | |
+| korekcijski faktori; kutovi | $\alpha$, $\beta$; $\theta$, $\varphi$ | kutovi lopatica $\beta_1$, $\beta_2$ samo u pog. 14 |
+| hidraulički promjer, dubina, radijus | $D_h=4A/P$, $y_h=A/T$, $R_h=A/P$ | $T$ širina slobodne površine (pog. 15) |
+| centar tlaka | $h_{CP}$, $y_{CP}$ | |
+| protok po širini; volumenski; maseni | $q$ (samo pog. 15); $Q$; $\dot m$ | |
+| tetiva profila; toplinski kapacitet | $l$; $c_p$ | |
+| potisak; temperatura | $F_T$; $T$ | |
+| kavitacijski broj | $\sigma_{kav}=(p_{ref}-p_v)/(\tfrac12\rho v_{ref}^2)$ | referentno mjesto navesti |
+| kavitacijska rezerva | $NPSH_a$, $NPSH_r$ | |
+| kontrolni volumen i ploha | KV, KP; indeksi ul, iz | |
+| stabilitet | $B$, $G$, $M$, $KB$, $BM$, $KG$, $GM$ | bez nadvlake |
+
+Nazivlje: crpka; hidraulički; hidrostatički; meniskus; Reynoldsov transportni
+teorem; zaustavne veličine; kalorički savršen plin; zagušenje (choking) prema
+prigušenju (throttling); energijska crta (EGL) i piezometarska crta (HGL);
+Darcyjev koeficijent trenja; volumenski protok; metacentarska visina;
+stabilitet, nadvođe, poluga stabiliteta $GZ$, poprečni nagib, kut nestajanja
+stabiliteta, metoda dodane težine; zapljuskivanje; prividna sila; impulsna
+funkcija. Poglavlje ne upućuje samo na sebe brojem; piše „u ovom poglavlju”.

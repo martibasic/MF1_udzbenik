@@ -101,3 +101,36 @@ Ovo je lokalna provjera U15. Zajednički završni HTML/PDF/JupyterLite build
 cijeloga ciklusa slijedi nakon ponovnog pregleda U01 i U02. Geometrijske
 i numeričke provjere dopunjuju autorski pregled; same ne dokazuju
 didaktičku kvalitetu ni valjanost izvan navedenih pretpostavki modela.
+
+
+## Revizija 12. 10. 2026.
+
+Provedba nalaza neovisne stručne recenzije (odobreno od autorice). Opseg:
+izvodi (kritična dubina, spregnute dubine iz bilance količine gibanja),
+Granica modela, Fizikalno značenje (Froudeov broj kanala i broda), opći
+kritični uvjet, kontrolne građevine, razine T, lektura i notacija ($y_h$, $T$,
+$c$, impulsna funkcija $I$).
+
+| Mjesto | Prije (ID, razina) | Odluka | Poslije (ID, razina) | Kontrolni rezultat | Provjere |
+| --- | --- | --- | --- | --- | --- |
+| teorija | $y_c$ izveden u prozi | OMOTAN u `.mf1-izvod` s drugom derivacijom i provjerom $Fr=1$; DODAN opći kritični uvjet `eq-opci-kriticni-uvjet` ($Q^2T/(gA^3)=1$) | — | — | čitanje |
+| teorija | skok: relacije navedene | NOVI `.mf1-izvod` iz bilance količine gibanja: sile $\rho g b y^2/2$, tok $\rho b q^2/y$, impulsna funkcija $I/(\rho g b)$, dijeljenje s $(y_1-y_2)$, kvadratna za $y_2/y_1$, $\Delta E$; provjera $Fr_1\to1$ i $Fr_1<1$; NOVA Granica modela | zadržani `eq-spregnute-dubine`, `eq-gubitak-skoka`, ID funkcije | — | — |
+| teorija | — | NOVI odjeljak `sec-kontrolne-gradevine`: `eq-istjecanje-ispod-ustave`, `eq-preljev-siroki` (empirijski $C_d$, $C_w$) | — | — | — |
+| teorija | — | NOVI `.mf1-fizikalno-znacenje`: $Fr$ kanala vs $Fr$ broda, $Fr_h=v_s/\sqrt{gh}$, squat, blokada bazena | — | — | — |
+| P4 | `ex-hidraulicki-skok-bazen`, T3 | DOPUNJEN odlukom o nizvodnom vodostaju (1,00 m → skok odnesen; 1,40 m → potopljen) | isti ID, T3 | $y_2=1{,}2353$ m; $1{,}00<y_2<1{,}40$ | `U15.P4.tailwater_decision` |
+| P5 | `ex-manning-osjetljivost`, T3 | razina T2; lektura („Kapacitet”), $S_f=S_0$, ID jednadžbe | isti ID, T2 | isti | — |
+| Z1–Z3 | — | ZADRŽANI; $y_h$ umjesto $D_h$ | isti | isti (`U15.Z3.yh`) | verifier |
+| Z4 | `task-kontrolni-presjek-na-pragu`, T2 | razina T3 (izbor grane uz obrazloženje i rezidual); podatci nepromijenjeni | isti, T3 | isti | — |
+| Z5 | `task-skok-mjerenje`, T3 | razina T4; rezidual $R=(I_2-I_1)/(\rho gb)$; naputak samo model i kriterij; `data-key-full` | isti, T4 | isti | verifier (ID-jevi bez „M”) |
+| Z6 | `task-klimatski-kanal`, T4 | razina T2: traženo svedeno na kapacitet, normalnu dubinu i slobodni rub po stanju te bazen pri $Q_d$; podatci (uključujući $\pm u_n$, koje koristi bilježnica) nepromijenjeni | isti, T2 | $Q_{cap}=11{,}759/8{,}141/6{,}047$; $y_n=0{,}985/1{,}189/1{,}380$; $f=0{,}515/0{,}311/0{,}120$ (A, B da; C ne); $y_2(Q_d)=1{,}059$ m | verifier: uklonjeni `Qcap_conservative_*`, `y2_capacity_*`, `robust_state_count`, `basin_exceedance_count` |
+| samoprovjera 3 | duplikat „Zastani” | ZAMIJENJENO pitanjem o položaju skoka pri premalom nizvodnom vodostaju | — | — | — |
+
+Raspored razina nakon revizije: Z1 T1, Z2 T1, Z3 T2, Z4 T3, Z5 T4, Z6 T2
+(2×T1, 2×T2, T3, T4). Bilježnica `u15_otvoreni_tokovi.ipynb` nije mijenjana
+(podatci Z4–Z6 isti; njezin nastavak s $n+2u_n$ sada prelazi traženo Z6, što
+tekst zadatka izričito kaže). Skica `u15_vjezbe_skice.svg`: samo natpis Z3
+($y_h$); geometrija nepromijenjena.
+
+Provjere: `verify_u15_open_channels.py` 73 rezultata, 0 FAIL;
+`check_u15_sketch_geometry.py` PASS. Broj riječi 3354 → 4192 (izvodi,
+granica, kontrolne građevine, Froude broda).

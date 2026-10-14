@@ -44,19 +44,24 @@ def primjer_3_sifon(D=0.080, dz=3.6, z_C=2.2, g=9.81, rho=1000.0):
     return {"v": v, "Q": Q, "p_C_g": p_C_g, "HGL_C": z_C+p_C_g}
 
 
-def cjeloviti_1_bypass(D=0.100, d_C=0.080, dz_AB=2.8, z_C=1.5, h_B=1.4,
-                       g=9.81, atm_h=10.2):
-    v_B = math.sqrt(2 * g * dz_AB)
-    A = math.pi * D**2 / 4
-    Q = A * v_B
-    A_C = math.pi * d_C**2 / 4
-    v_C = Q / A_C
-    p_C_g = -(v_C**2 / (2 * g) + z_C)
-    p_C_abs = atm_h + p_C_g
-    t = math.sqrt(2 * h_B / g)
-    x = v_B * t
-    return {"v_B": v_B, "Q": Q, "v_C": v_C,
-            "p_C_g": p_C_g, "p_C_abs": p_C_abs, "x": x}
+def cjeloviti_1_usisni_vod(z_P=2.0, D=0.150, Q_m3h=180.0, rho=1025.0,
+                           p_v=2.3e3, p_atm=101.3e3, h_w=1.2, g=9.81,
+                           dz_ballast=1.5):
+    """P4: usisni vod rashladne crpke morske vode, tlak na ulazu u crpku."""
+    Q = Q_m3h / 3600.0
+    v = 4 * Q / (math.pi * D**2)
+    h_v = v**2 / (2 * g)
+    h_atm = p_atm / (rho * g)
+    h_vap = p_v / (rho * g)
+    h_P = h_atm - z_P - h_v - h_w
+    p_P = h_P * rho * g
+    p_P_ideal = (h_atm - z_P - h_v) * rho * g
+    npsh = h_P - h_vap + h_v
+    z_max = h_atm - h_vap - h_v - h_w
+    h_P_b = h_atm - (z_P + dz_ballast) - h_v - h_w
+    return {"v": v, "h_v": h_v, "h_P": h_P, "p_P": p_P, "p_M": p_P - p_atm,
+            "p_P_ideal": p_P_ideal, "npsh": npsh, "z_max": z_max,
+            "p_P_ballast": h_P_b * rho * g, "npsh_ballast": h_P_b - h_vap + h_v}
 
 
 def primjer_venturi(D_1=0.060, D_2=0.030, dh_m=0.18, rho_Hg=13600.0,
@@ -103,11 +108,13 @@ def zadatak_1(H=3.20, d=0.026, rho=998.0, g=9.81):
     return {"v": v, "Q": Q, "m_dot": m_dot}
 
 
-def zadatak_2(A_1=0.060, A_2=0.020, Q=0.42, rho=1.20):
-    v_1 = Q / A_1
-    v_2 = Q / A_2
-    dp = rho / 2 * (v_2**2 - v_1**2)
-    return {"dp": dp}
+def zadatak_2(D_1=0.100, d=0.050, dp=12.2e3, rho=998.0, g=9.81):
+    """Z2: Venturijeva cijev za vodu s diferencijalnim pretvaracem."""
+    ratio = (D_1 / d)**2
+    v_1 = math.sqrt(2 * dp / (rho * (ratio**2 - 1)))
+    v_2 = ratio * v_1
+    Q = math.pi * D_1**2 / 4 * v_1
+    return {"v_1": v_1, "v_2": v_2, "Q": Q, "dHGL": dp / (rho * g)}
 
 
 def zadatak_3(D_1=0.120, D_2=0.070, Q=0.020, dz=2.0, rho=1000.0, g=9.81):
@@ -122,7 +129,8 @@ def zadatak_3(D_1=0.120, D_2=0.070, Q=0.020, dz=2.0, rho=1000.0, g=9.81):
 def zadatak_4(p_S=24e3, p_A=16e3, dz=1.2, rho=1000.0, g=9.81):
     p_st = p_S + rho*g*dz
     dp = p_st-p_A
-    return {"p_st": p_st, "dp": dp, "v": math.sqrt(2*dp/rho),
+    v = math.sqrt(2*dp/rho)
+    return {"p_st": p_st, "dp": dp, "v": v, "v_kn": v * 3600 / 1852,
             "v_wrong": math.sqrt(2*(p_S-p_A)/rho)}
 
 
@@ -214,13 +222,17 @@ def verify():
     _check(out, "U09.P3.p_C_g", r["p_C_g"], -5.8, "m")
     _check(out, "U09.P3.HGL_C", r["HGL_C"], -3.6, "m", rel=1e-10)
 
-    r = cjeloviti_1_bypass()
-    _check(out, "U09.CH1.v_B", r["v_B"], 7.41, "m/s")
-    _check(out, "U09.CH1.Q_Ls", r["Q"] * 1000, 58.2, "L/s", rel=0.02)
-    _check(out, "U09.CH1.v_C", r["v_C"], 11.58, "m/s")
-    _check(out, "U09.CH1.p_C_g", r["p_C_g"], -8.34, "m", rel=0.02)
-    _check(out, "U09.CH1.p_C_abs", r["p_C_abs"], 1.86, "m", rel=0.02)
-    _check(out, "U09.CH1.x", r["x"], 3.96, "m", rel=0.02)
+    r = cjeloviti_1_usisni_vod()
+    _check(out, "U09.CH1.v", r["v"], 2.83, "m/s", rel=0.001)
+    _check(out, "U09.CH1.h_v", r["h_v"], 0.408, "m", rel=0.001)
+    _check(out, "U09.CH1.h_P", r["h_P"], 6.47, "m", rel=0.001)
+    _check(out, "U09.CH1.p_P_kPa", r["p_P"] / 1000, 65.0, "kPa", rel=0.001)
+    _check(out, "U09.CH1.p_M_kPa", r["p_M"] / 1000, -36.3, "kPa", rel=0.001)
+    _check(out, "U09.CH1.p_P_ideal_kPa", r["p_P_ideal"] / 1000, 77.1, "kPa", rel=0.001)
+    _check(out, "U09.CH1.npsh_m", r["npsh"], 6.65, "m", rel=0.001)
+    _check(out, "U09.CH1.z_max_m", r["z_max"], 8.24, "m", rel=0.001)
+    _check(out, "U09.CH1.p_P_ballast_kPa", r["p_P_ballast"] / 1000, 49.9, "kPa", rel=0.001)
+    _check(out, "U09.CH1.npsh_ballast_m", r["npsh_ballast"], 5.15, "m", rel=0.001)
 
     r = primjer_venturi()
     _check(out, "U09.venturi.dp", r["dp"], 22478.634, "Pa", rel=1e-10)
@@ -231,7 +243,7 @@ def verify():
     _check(out, "U09.P6.v", r["v"], 26.1, "m/s", rel=0.02)
     _check(out, "U09.P6.v_dense", r["v_dense"], 24.7, "m/s", rel=0.02)
     _check(out, "U09.P6.Re_s", r["Re_s"], 8700.0, "", rel=0.02)
-    _check(out, "U09.P6.change_percent", r["change_percent"], 5.4, "%", rel=0.05)
+    _check(out, "U09.P6.change_percent", r["change_percent"], 5.5, "%", rel=0.01)
 
     r = zadatak_1()
     _check(out, "U09.Z1.v", r["v"], 7.92, "m/s", rel=0.02)
@@ -239,7 +251,10 @@ def verify():
     _check(out, "U09.Z1.m_dot", r["m_dot"], 4.20, "kg/s", rel=0.02)
 
     r = zadatak_2()
-    _check(out, "U09.Z2.dp", r["dp"], 235.0, "Pa", rel=0.02)
+    _check(out, "U09.Z2.v_1", r["v_1"], 1.28, "m/s", rel=0.003)
+    _check(out, "U09.Z2.v_2", r["v_2"], 5.11, "m/s", rel=0.001)
+    _check(out, "U09.Z2.Q_Ls", r["Q"] * 1000, 10.0, "L/s", rel=0.003)
+    _check(out, "U09.Z2.dHGL_m", r["dHGL"], 1.25, "m", rel=0.005)
 
     r = zadatak_3()
     _check(out, "U09.Z3.v_1", r["v_1"], 1.768, "m/s", rel=.0005)
@@ -248,6 +263,7 @@ def verify():
 
     r = zadatak_4()
     _check(out, "U09.Z4.v", r["v"], 6.288, "m/s", rel=.0005)
+    _check(out, "U09.Z4.v_kn", r["v_kn"], 12.2, "čv", rel=.002)
     _check(out, "U09.Z4.v_wrong", r["v_wrong"], 4.000, "m/s", rel=1e-10)
     _check(out, "U09.Z4.p_st_kPa", r["p_st"]/1000, 35.772, "kPa", rel=1e-10)
     _check(out, "U09.Z4.dp_kPa", r["dp"]/1000, 19.772, "kPa", rel=1e-10)
@@ -277,8 +293,16 @@ def verify():
     a,b,c,d,e,f=(zadatak_1(),zadatak_2(),zadatak_3(),zadatak_4(),zadatak_5(),zadatak_6())
     _invariant(out, "U09.INV.z1_energy_mass", abs(a['v']**2/2-9.81*3.2)<1e-12
               and abs(a['m_dot']-998*a['Q'])<1e-12, "Istjecanje ne zatvara energiju i masu.")
-    _invariant(out, "U09.INV.z2_energy", abs(b['dp']-.6*((.42/.02)**2-(.42/.06)**2))<1e-10,
-              "Konfuzor ne zatvara energiju.")
+    _invariant(out, "U09.INV.z2_energy", abs(998/2*(b['v_2']**2-b['v_1']**2)-12.2e3)<1e-8
+              and abs(b['v_2']-4*b['v_1'])<1e-12
+              and abs(zadatak_2(dp=4*12.2e3)['Q']-2*b['Q'])<1e-12,
+              "Venturi ne zatvara energiju, kontinuitet ili korijenski zakon protoka.")
+    ch1=cjeloviti_1_usisni_vod()
+    _invariant(out, "U09.INV.ch1_energy", abs(ch1['h_P']+ch1['h_v']+2.0+1.2-101.3e3/(1025*9.81))<1e-12
+              and ch1['p_P_ideal']>ch1['p_P']>0
+              and abs(cjeloviti_1_usisni_vod(z_P=ch1['z_max'])['p_P']-2.3e3)<1e-8
+              and ch1['npsh']>ch1['npsh_ballast']>0,
+              "Usisni vod ne zatvara energijsku jednadzbu ili granicu tlaka pare.")
     _invariant(out, "U09.INV.z3_bernoulli", abs(c['dp']/1000+c['v_2']**2/2-c['v_1']**2/2-9.81*2)<1e-12
               and c['dp']>0 and c['dHGL']<0, "Silazno suzenje ne zatvara predznake i energiju.")
     _invariant(out, "U09.INV.z3_horizontal_limit", zadatak_3(dz=0)['dp']<0

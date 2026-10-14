@@ -139,25 +139,58 @@ def microchannel(
     }
 
 
-def flat_plate_boundary_layer(
-    free_stream_velocity: float = 1.5,
-    x: float = 0.40,
+def ittc_1957(reynolds: float) -> float:
+    """Korelacijska linija ITTC 1957 za koeficijent otpora trenja."""
+    return 0.075 / (math.log10(reynolds) - 2.0) ** 2
+
+
+def ship_model_boundary_layer(
+    model_length: float = 6.0,
+    model_velocity: float = 1.8,
     kinematic_viscosity: float = 1.0e-6,
+    stimulator_fraction: float = 0.05,
+    ship_reynolds: float = 1.35e9,
 ) -> dict[str, float]:
-    reynolds_x = free_stream_velocity * x / kinematic_viscosity
-    delta = 5.0 * x / math.sqrt(reynolds_x)
+    """P4: granicni sloj na trupu modela broda (ravna ploca iste duljine)."""
+    x1 = stimulator_fraction * model_length
+    reynolds_x1 = model_velocity * x1 / kinematic_viscosity
+    delta_laminar = 5.0 * x1 / math.sqrt(reynolds_x1)
+    reynolds_L = model_velocity * model_length / kinematic_viscosity
+    delta_turbulent = 0.37 * model_length / reynolds_L ** 0.2
     return {
-        "reynolds_x": reynolds_x,
-        "delta_mm": 1000.0 * delta,
-        "delta_over_x": delta / x,
+        "x1": x1,
+        "reynolds_x1": reynolds_x1,
+        "delta_laminar_mm": 1000.0 * delta_laminar,
+        "delta_laminar_over_x": delta_laminar / x1,
+        "reynolds_L": reynolds_L,
+        "delta_turbulent_mm": 1000.0 * delta_turbulent,
+        "delta_turbulent_over_L": delta_turbulent / model_length,
+        "C_F_model": ittc_1957(reynolds_L),
+        "C_F_ship": ittc_1957(ship_reynolds),
     }
 
 
 def turbulence_intensity(
-    mean_velocity: float = 8.0, rms_fluctuation: float = 0.48
+    mean_velocity: float = 8.0,
+    rms_fluctuation: float = 0.48,
+    duct_diameter: float = 0.30,
+    length_scale_fraction: float = 0.07,
+    c_mu: float = 0.09,
 ) -> dict[str, float]:
+    """P5: intenzitet, k uz izotropiju te omega i epsilon iz dogovorne skale."""
     intensity = rms_fluctuation / mean_velocity
-    return {"intensity": intensity, "percent": 100.0 * intensity}
+    k = 1.5 * (intensity * mean_velocity) ** 2
+    length_scale = length_scale_fraction * duct_diameter
+    omega = math.sqrt(k) / (c_mu**0.25 * length_scale)
+    epsilon = c_mu * k * omega
+    return {
+        "intensity": intensity,
+        "percent": 100.0 * intensity,
+        "k": k,
+        "length_scale": length_scale,
+        "omega": omega,
+        "epsilon": epsilon,
+    }
 
 
 def exercise_material_derivative(
@@ -352,14 +385,37 @@ def verify() -> list[dict[str, str]]:
     )
     _check(out, "U12.REAL.P3.Re", r["reynolds"], 12.7, "", abs_tol=0.05)
 
-    r = flat_plate_boundary_layer()
-    _check(out, "U12.REAL.P4.Re_x", r["reynolds_x"], 6.0e5, "", abs_tol=500.0)
-    _check(out, "U12.REAL.P4.delta99", r["delta_mm"], 2.58, "mm", abs_tol=0.005)
-    _check(out, "U12.REAL.P4.delta_x", r["delta_over_x"], 0.0065, "", abs_tol=0.00005)
+    r = ship_model_boundary_layer()
+    _check(out, "U12.REAL.P4.Re_x1", r["reynolds_x1"], 5.4e5, "", abs_tol=500.0)
+    _check(out, "U12.REAL.P4.delta_laminar_mm", r["delta_laminar_mm"], 2.04, "mm", abs_tol=0.005)
+    _check(out, "U12.REAL.P4.Re_L", r["reynolds_L"], 1.08e7, "", abs_tol=5000.0)
+    _check(out, "U12.REAL.P4.delta_turbulent_mm", r["delta_turbulent_mm"], 88.0, "mm", abs_tol=1.0)
+    _check(out, "U12.REAL.P4.C_F_model", r["C_F_model"], 2.96e-3, "", abs_tol=0.005e-3)
+    _check(out, "U12.REAL.P4.C_F_ship", r["C_F_ship"], 1.48e-3, "", abs_tol=0.005e-3)
+    _invariant(out, "U12.REAL.P4.friction_and_thin_layer",
+               r["C_F_model"] > r["C_F_ship"]
+               and abs(r["C_F_model"] / r["C_F_ship"] - 2.0) < 0.02
+               and 0.0 < r["delta_turbulent_over_L"] < 0.02
+               and r["delta_turbulent_mm"] > r["delta_laminar_mm"],
+               "C_F mora padati s Re (omjer oko 2), a sloj na krmi ostati tanak i deblji od laminarnog pramcanog.")
+    _invariant(out, "U12.REAL.P4.consistent_with_U11",
+               abs(r["reynolds_L"] / r["reynolds_x1"] - 20.0) < 1e-9
+               and abs(1.35e9 / r["reynolds_L"] - 125.0) < 1e-6,
+               "Re_L/Re_x1 = 1/0,05 i Re_s/Re_m = 125 moraju odgovarati P2 u pog. 11.")
 
     r = turbulence_intensity()
-    _check(out, "U12.REAL.P5.Iu", r["intensity"], 0.060, "", abs_tol=0.0005)
-    _check(out, "U12.REAL.P5.Iu_percent", r["percent"], 6.0, "%", abs_tol=0.05)
+    _check(out, "U12.REAL.P5.I", r["intensity"], 0.060, "", abs_tol=0.0005)
+    _check(out, "U12.REAL.P5.I_percent", r["percent"], 6.0, "%", abs_tol=0.05)
+    _check(out, "U12.REAL.P5.k", r["k"], 0.346, "m^2/s^2", abs_tol=0.0005)
+    _check(out, "U12.REAL.P5.omega", r["omega"], 51.0, "1/s", abs_tol=0.5)
+    _check(out, "U12.REAL.P5.epsilon", r["epsilon"], 1.59, "m^2/s^3", abs_tol=0.005)
+    halved = turbulence_intensity(length_scale_fraction=0.035)
+    _invariant(out, "U12.REAL.P5.length_scale_sensitivity",
+               abs(halved["omega"] / r["omega"] - 2.0) < 1e-12 and halved["k"] == r["k"],
+               "Prepolovljena duljinska skala mora udvostruciti omega, a ne mijenjati k.")
+    _invariant(out, "U12.REAL.P5.epsilon_consistency",
+               abs(r["epsilon"] - 0.09**0.75 * r["k"]**1.5 / r["length_scale"]) < 1e-12,
+               "epsilon = C_mu k omega mora odgovarati C_mu^(3/4) k^(3/2)/l.")
 
     r = backstep_reattachment()
     _check(out, "U12.REAL.P6.experimental_zero", r["experiment"], 6.279, "", abs_tol=0.0005)
@@ -583,12 +639,13 @@ def verify() -> list[dict[str, str]]:
         f"udvostrucenje Q ne udvostrucuje dp; odstupanje je {linearity_error:.3g}",
     )
 
-    layer = flat_plate_boundary_layer()
+    layer = ship_model_boundary_layer()
     _invariant(
         out,
         "U12.REAL.INV.thin_boundary_layer_limit",
-        0.0 < layer["delta_over_x"] < 0.01,
-        f"delta/x={layer['delta_over_x']:.6g} nije u tankom granicnom slucaju",
+        0.0 < layer["delta_laminar_over_x"] < 0.01
+        and 0.0 < z5["delta_mm"] / 1000.0 / 0.400 < 0.01,
+        f"delta/x={layer['delta_laminar_over_x']:.6g} nije u tankom granicnom slucaju",
     )
 
     # Neovisne modelske provjere Z3: dimenzija inverznog modela i četvrta

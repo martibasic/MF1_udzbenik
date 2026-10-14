@@ -9,7 +9,7 @@ Ovaj dodatak povezuje ćelijsku bilancu iz []{.mf1-chapter-ref target="u07"}, an
 | Rashladni krug baterije | [početni model](u01_osnove_fluida_i_pascalov_zakon.qmd#cfd-rashladni-krug-model) → [podjela protoka](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#cfd-razdjelnik-podjela-protoka) → [mjerenje i gubitak](u08_energijska_jednadzba_i_bernoulli.qmd#cfd-venturi-mjerenje-gubitak) → [toplina](u12_diferencijalni_opis_realnog_toka.qmd#cfd-hladna-ploca-toplina) → [radna točka](u13_gubici_cjevovodi_crpke_i_mreze.qmd#cfd-krug-radna-tocka) → [rotor](u14_turbostrojevi_i_propulzija.qmd#cfd-rotor-karakteristika) | raspored kanala, protoci i pogon |
 | Cisterna i ponton | [kočenje i valovi](u04_relativno_mirovanje_fluida.qmd#cfd-cisterna-kocenje) → [gaz i stabilitet](u06_uzgon_plivanje_i_stabilnost.qmd#cfd-ponton-gaz-stabilitet) → [prijenos mjerila](u11_dimenzijska_analiza_i_slicnost.qmd#cfd-ponton-slicnost) | učinak pregrada ili položaja tereta |
 | Gradski kanal s ustavom | [sila i moment](u05_hidrostatske_sile_na_plohe.qmd#cfd-ustava-opterecenje) → [vodostaji](u15_otvoreni_tokovi.qmd#cfd-kanal-vodostaji) → [mlaz i skok](u15_otvoreni_tokovi.qmd#cfd-ustava-hidraulicki-skok) | opterećenje pogona i umirni bazen |
-| Zračna sapnica | [prigušenje](u09_kompresibilni_idealni_tok.qmd#cfd-sapnica-prigusenje) → [udarni val](u09_kompresibilni_idealni_tok.qmd#cfd-sapnica-udarni-val) | potrošnja zraka i radno područje |
+| Zračna sapnica | [zagušenje](u09_kompresibilni_idealni_tok.qmd#cfd-sapnica-prigusenje) → [udarni val](u09_kompresibilni_idealni_tok.qmd#cfd-sapnica-udarni-val) | potrošnja zraka i radno područje |
 
 : {.mf1-reference-table tbl-colwidths="[27,46,27]"}
 
@@ -33,9 +33,9 @@ Ovdje su kratice potrebne za dublje čitanje. Opće definicije CFD-a, reziduala 
 | FEM — *Finite Element Method* | metoda konačnih elemenata; drugi način diskretizacije istih modelskih jednadžbi | @sec-realni-tok-cfd |
 | RANS / LES / DNS | osrednjavanje / razrješavanje velikih / svih relevantnih turbulentnih skala | @sec-turbulencija |
 | $k$–$\varepsilon$, $k$–$\omega$ SST | primjeri modela zatvaranja turbulentnih korelacija | @sec-turbulencija |
-| SIMPLE / PISO / PIMPLE | primjeri algoritama usklađivanja tlaka, brzine i tokova; izbor ovisi o formulaciji i vremenskom opisu | @sec-realni-tok-cfd |
+| SIMPLE / PISO / PIMPLE | primjeri algoritama sprezanja tlaka i brzine (usklađivanja tlaka, brzine i tokova kroz plohe); izbor ovisi o formulaciji i vremenskom opisu | @sec-realni-tok-cfd |
 | MRF / klizajuća mreža | stacionarna aproksimacija referentnih okvira / praćenje relativnog gibanja dijelova mreže | []{.mf1-chapter-ref target="u14"} |
-| VOF — *Volume of Fluid* | opis međupovršine volumnim udjelom faze; prikaz $\alpha=0{,}5$ samo je način vizualizacije granice | []{.mf1-chapter-ref target="u15"} |
+| VOF — *Volume of Fluid* | opis međupovršine volumnim udjelom faze; prikaz izoplohe udjela $0{,}5$ samo je način vizualizacije granice | []{.mf1-chapter-ref target="u15"} |
 | Zidne funkcije / $y^+$ | model područja uz stijenku / bezdimenzijska udaljenost; zahtjevi ovise o odabranoj obradi stijenke | @sec-turbulencija |
 | GCI — *Grid Convergence Index* | procjena diskretizacijske nesigurnosti odabrane veličine iz sustavnog profinjenja | @sec-cfd-vv-paketi |
 
@@ -47,40 +47,40 @@ Slika polja pomaže pronaći područje niskog tlaka ili odvajanja; odluku nosi i
 
 ## Rječnik MF1 → CFD: prijevod pojmova {#sec-cfd-mapa}
 
-Tablica je središnja mapa: ista jednadžba dobiva prostorni numerički zapis, a polje se zatim svodi na traženi izlaz. Oznake $\mathbf u$ i $\vec v$ u knjizi predstavljaju brzinu fluida; u turbostrojevima razlikujemo apsolutnu $\vec c$, relativnu $\vec w$ i obodnu $\vec u$.[]{#rječnik-mf1-cfd-prijevod-pojmova}
+Tablica je središnja mapa: ista jednadžba dobiva prostorni numerički zapis, a polje se zatim svodi na traženi izlaz. Brzina fluida u knjizi je $v$ (vektor $\vec v$, komponente $v_i$); $u$ označuje brzinu krute granice (lopatica, klip), a u turbostrojevima razlikujemo apsolutnu $\vec c$, relativnu $\vec w$ i obodnu $\vec u$. Vanjska brzina graničnog sloja $U_e$ i brzina trenja $u_\tau=\sqrt{\tau_w/\rho}$ koriste se uz definiciju.[]{#rječnik-mf1-cfd-prijevod-pojmova}
 
 | MF1 koncept | Jednadžba ili veza | Fizikalno značenje | CFD uloga | Tipičan izlaz |
 |---|---|---|---|---|
 | Tlak | $p=F_n/A$ za jednolik tlak | normalno opterećenje | skalarno polje $p$ | tlak, $\Delta p$ |
-| Brzina i gustoća | $\mathbf u(\mathbf x,t)$, $\rho=dm/dV$ | gibanje i masa po volumenu | vektorsko polje brzine; gustoća zadana ili promjenjiva | profil, maseni protok |
-| Hidrostatika | $dp/dz=-\rho g$ | ravnoteža s težinom | referentni test tlačnog polja | tlak po dubini |
-| Viskoznost | $\tau=\mu\,du/dy$ u jednostavnom smicanju | prijenos količine gibanja | konstitutivna veza i viskozni član | smicanje na stijenci |
+| Brzina i gustoća | $\vec v(\vec x,t)$, $\rho=dm/dV$ | gibanje i masa po volumenu | vektorsko polje brzine; gustoća zadana ili promjenjiva | profil, maseni protok |
+| Hidrostatika | $dp/dz=-\rho g$ | ravnoteža s težinom | referentni test tlačnog polja (mirni balastni tank); rješavači često pohranjuju $p_{rgh}$, tlak bez hidrostatičkog doprinosa, koji u mirnoj vodi mora biti konstantan | tlak po dubini, neto tlak na oplatu |
+| Viskoznost | $\tau=\mu\,dv/dy$ u jednostavnom smicanju | prijenos količine gibanja | konstitutivna veza i viskozni član | smicanje na stijenci |
 | Površinska napetost | $\Delta p=\sigma(1/R_1+1/R_2)$ | ravnoteža na zakrivljenom sučelju | međupovršinska sila i kontaktni kut | oblik meniska |
 | Kontrolni volumen i kontinuitet | @eq-lokalna-kontinuitet | očuvanje mase | bilanca po ćelijama i plohama | $Q$, akumulacija |
 | Količina gibanja | @eq-navier-stokes-nestlacivi | ubrzanje određuju sile | lokalna bilanca uz pretpostavke modela | tlak, brzina, sila |
 | Energija | akumulacija = neto prijenos + izvori | prijenos i pretvorba energije | energijska jednadžba kada je potrebna | temperatura, entalpija |
 | Bernoulli | $p/\rho+v^2/2+gz=\mathrm{const.}$ | idealna mehanička energija | referenca pod istim pretpostavkama | odnos tlaka i brzine |
-| Hidrostatska sila i uzgon | $\mathbf F_p=-\int_Ap\mathbf n_b\,dA$ | rezultanta tlaka | integracija po površini tijela | sila, moment, gaz |
+| Hidrostatička sila i uzgon | $\vec F_p=-\int_Ap\,\vec n_b\,dA$ | rezultanta tlaka | integracija po površini tijela | sila, moment, gaz |
 | Sličnost | $Re,Fr,Ma,We$ | omjeri važnih učinaka | izbor fizike i skaliranje | $C_D$, $C_p$, $\lambda$ |
-| Turbulencija | $-\rho\overline{u_i'u_j'}$ u RANS-u | prijenos srednje količine gibanja fluktuacijama | dodatne korelacije treba zatvoriti | srednji profil, otpor |
-| Gubitci | $h_L=\xi v_{ref}^2/(2g)$ | pad mehaničke energije | izlaz polja za 1D model | $h_L$, $\xi$, snaga |
+| Turbulencija | $-\rho\overline{v_i'v_j'}$ u RANS-u | prijenos srednje količine gibanja fluktuacijama | dodatne korelacije treba zatvoriti | srednji profil, otpor |
+| Gubitci | $h_{loc}=\xi v_{ref}^2/(2g)$ | pad mehaničke energije | izlaz polja za 1D model | $h_w$, $\xi$, snaga |
 | Rotor | $P=M\omega$ | prijenos rada | moment iz polja u odabranom okviru | snaga, učinkovitost |
 
-Normala $\mathbf n_b$ usmjerena je iz tijela u fluid; $\mathbf F_p$ djeluje na tijelo. Za uzgon se integrira hidrostatski tlak, a za ukupnu silu u viskoznom toku dodaje se viskozna trakcija. Polumjeri su u Young–Laplaceovoj relaciji predznačeni prema odabranoj normali. Detaljan izbor fizike prema $Re$, $Fr$, $Ma$ i $We$ dan je u []{.mf1-chapter-ref target="u11"}.
+Normala $\vec n_b$ usmjerena je iz tijela u fluid; $\vec F_p$ djeluje na tijelo. Za uzgon se integrira hidrostatički tlak, a za ukupnu silu u viskoznom toku dodaje se viskozna trakcija. Polumjeri su u Young–Laplaceovoj relaciji predznačeni prema odabranoj normali. Detaljan izbor fizike prema $Re$, $Fr$, $Ma$ i $We$ dan je u []{.mf1-chapter-ref target="u11"}.
 
 ## Kako se MF1 jednadžbe slažu u CFD slici {#sec-cfd-polja-izlazi}
 
-Ćelijska bilanca @eq-celijska-bilanca-mase pokazuje prijelaz **jednadžba → algebarski sustav**. Nakon povezivanja s količinom gibanja i potrebnim dodatnim modelima dobivamo vrijednosti $p_i$, $\mathbf u_i$ i, prema slučaju, $\rho_i$ ili $T_i$. Vrijednost u ćeliji predstavlja lokalnu aproksimaciju polja; vrijednosti na plohama izračunavaju se dosljedno odabranoj shemi.[]{#kako-se-mf1-jednadžbe-slažu-u-cfd-slici}
+Ćelijska bilanca @eq-celijska-bilanca-mase pokazuje prijelaz **jednadžba → algebarski sustav**. Nakon povezivanja s količinom gibanja i potrebnim dodatnim modelima dobivamo vrijednosti $p_i$, $\vec v_i$ i, prema slučaju, $\rho_i$ ili $T_i$. Vrijednost u ćeliji predstavlja lokalnu aproksimaciju polja; vrijednosti na plohama izračunavaju se dosljedno odabranoj shemi.[]{#kako-se-mf1-jednadžbe-slažu-u-cfd-slici}
 
 Drugi je prijelaz **polje → inženjerska veličina → odluka**:
 
 | Polje ili izvedena veličina | Obrada | Izlaz i odluka |
 |---|---|---|
-| $p(\mathbf x,t)$ | očitanje na zadanim mjestima ili jasno definirani prosjeci presjeka | $\Delta p$: mjerenje protoka ili tlačno opterećenje |
-| $\mathbf u(\mathbf x,t)$ | $Q=\int_A\mathbf u\cdot\mathbf n\,dA$; uz $\rho$ daje maseni protok | raspodjela protoka po granama |
+| $p(\vec x,t)$ | očitanje na zadanim mjestima ili jasno definirani prosjeci presjeka | $\Delta p$: mjerenje protoka ili tlačno opterećenje |
+| $\vec v(\vec x,t)$ | $Q=\int_A\vec v\cdot\vec n\,dA$; uz $\rho$ daje maseni protok | raspodjela protoka po granama |
 | Tlak i viskozno naprezanje | površinski zbroj sila i njihovih momenata | opterećenje nosača ili moment rotora |
-| Gradijent brzine uz zid | $\tau_w=\mu(\partial u_t/\partial n)_w$ za jednostavan lokalni viskozni opis | trenje; prikladnost geometrije i obrade stijenke |
-| Tlak, brzina i kota | bilančna razlika mehaničke energije na usklađenim presjecima | $h_L$, potrebna crpna snaga |
+| Gradijent brzine uz zid | $\tau_w=\mu(\partial v_t/\partial n)_w$ za jednostavan lokalni viskozni opis | trenje; prikladnost geometrije i obrade stijenke |
+| Tlak, brzina i kota | bilančna razlika mehaničke energije na usklađenim presjecima | $h_w$, potrebna crpna snaga |
 
 Za Venturi pad **statičkog** tlaka do grla velikim dijelom znači ubrzavanje. Trajni gubitak određuje pad **ukupne mehaničke energije**, uz profile i kote iz energijske bilance. Samo pod odgovarajućim uvjetima jednakih brzina i visina statički pad tlaka izravno mjeri gubitak. Sličnu razliku treba čuvati između lokalne vrijednosti i prosjeka, te između trenutnog i vremenski osrednjenog opterećenja.
 
@@ -90,7 +90,7 @@ CFD je metoda za pitanja kojima jednostavniji model više ne daje dovoljan odgov
 
 | Pitanje | Dovoljan početni model | Razlog za proširenje |
 |---|---|---|
-| Sila idealne hidraulične preše | Pascalov zakon | lokalni tok kroz ventil |
+| Sila idealne hidrauličke preše | Pascalov zakon | lokalni tok kroz ventil |
 | Tlak i sila u mirnom spremniku | hidrostatika i površinska integracija | zapljuskivanje, prolazno opterećenje |
 | Gaz i mali nagib plovila | istisnina i početni stabilitet | dinamika u valovima |
 | Protok jednostavnog Venturija | kontinuitet i Bernoulli | gubitci: najprije 1D korekcija; zatim lokalni tok |
@@ -168,11 +168,11 @@ Paketi u `data/cfd/` omogućuju obradu rezultata bez instalacije rješavača. Pr
 | [`backstep_experiment`](../data/cfd/backstep_experiment/README.md) | mjerena smična naprezanja i objavljeni CFL3D/SSTm rezultat | stvarna usporedba ponovnog priljubljivanja u @ex-stepenica-mjerenje-cfd |
 | [`hydrofoil_experiment`](../data/cfd/hydrofoil_experiment/README.md) | Ladsonova mjerenja [@ladson1988], FUN3D rezultati NASA TMR-a [@nasa-tmr-naca0012], nastavna dopuna nesigurnosti | mrežni trend i uvjetna usporedba otpora; nepotpuni dokazi za izvornu validaciju |
 
-Venturijev paket koristi vodu, promjere 100/50 mm i protok 10 L/s. To je zaseban nastavni skup iste vrste problema, a ne simulacija uljnog Venturija iz @sec-cfd-venturi. Propisani koeficijent gubitka $K=0{,}2$ ne prenosi se na taj primjer.
+Venturijev paket koristi vodu, promjere 100/50 mm i protok 10 L/s. To je zaseban nastavni skup iste vrste problema, a ne simulacija uljnog Venturija iz @sec-cfd-venturi. Propisani koeficijent gubitka $\xi=0{,}2$ (u datotekama paketa označen `K`) ne prenosi se na taj primjer.
 
 Validator `python tools/validate_cfd_vv.py` provjerava reference, bilance, podrijetlo, opaženi red i GCI. **GCI nije automatski standardna nesigurnost**, a tri monotone vrijednosti nisu same dokaz asimptotskog područja. Profil ostaje primjer usporedbe uz nepotpun arhiv: izvorni reziduali, povijesti sila i masena bilanca nisu dostupni u pregledanim izvorima. Zaseban pokus iza stepenice daje stvarna mjerenja za izravan račun odstupanja; njegova usporedba jednog izlaza također ne zamjenjuje cjelovitu validaciju.
 
-**Veza sa Z6 u 12. poglavlju.** Najfiniji FUN3D rezultat $C_D=0{,}01222408822$ zaokružen je na $0{,}01222$. Ladsonove točke $(\alpha;C_D)=(8{,}08^\circ;0{,}00995)$ i $(10{,}10^\circ;0{,}01175)$ pri $Re_c=6\cdot10^6$, $Ma=0{,}15$ i prisilnom prijelazu (120 grit) daju linearnom interpolacijom na $10{,}00^\circ$ vrijednost $0{,}01166089$, zaokruženo $0{,}01166$.
+**Veza sa Z6 u 12. poglavlju.** Najfiniji FUN3D rezultat $C_D=0{,}01222408822$ zaokružen je na $0{,}01222$. Ladsonove točke (napadni kut; $C_D$) $=(8{,}08^\circ;0{,}00995)$ i $(10{,}10^\circ;0{,}01175)$ pri $Re_c=6\cdot10^6$, $Ma=0{,}15$ i prisilnom prijelazu (120 grit) daju linearnom interpolacijom na $10{,}00^\circ$ vrijednost $0{,}01166089$, zaokruženo $0{,}01166$.
 
 Zadani $u_m=0{,}00020$, $u_n=0{,}00010$ i $u_v=0{,}00010$ **nastavne su pretpostavke**, ne objavljene nesigurnosti pokusa ili rješavača. Red veličine $u_v$ motivira lokalni nagib približno $0{,}000891$ po stupnju: nesigurnost kuta reda $0{,}1^\circ$ dala bi doprinos oko $0{,}00009$. Doprinos $u_n$ obuhvaća ukupnu numeričku nesigurnost scenarija; ne dodaje mu se ponovno GCI, osobito ne iz drugog slučaja.
 

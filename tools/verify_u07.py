@@ -138,11 +138,15 @@ def primjer_6_privezni_ponton(L=6.00, B=2.40, m_p=1800.0, m_o=600.0, e=0.60,
     }
 
 
-def primjer_plutajuci_vjetroagregat(m=1.10e6, D=9.0, H=95.0,
-                                     rho=1025.0):
+def primjer_plutajuci_vjetroagregat(m=9.00e6, D=12.0, H=100.0,
+                                     rho=1025.0, KG_low=32.0, KG_high=45.0):
     A = math.pi * D**2 / 4
     V = m / rho
     draft = V / A
+    I_T = math.pi * D**4 / 64
+    KB = draft / 2
+    BM = I_T / V
+    KM = KB + BM
     return {
         "A": A,
         "V": V,
@@ -150,7 +154,19 @@ def primjer_plutajuci_vjetroagregat(m=1.10e6, D=9.0, H=95.0,
         "freeboard": H - draft,
         "draft_plus": 1.05 * m / (rho * A),
         "draft_minus": 0.95 * m / (rho * A),
+        "I_T": I_T, "KB": KB, "BM": BM, "KM": KM,
+        "GM_low": KM - KG_low, "GM_high": KM - KG_high,
     }
+
+
+def wall_sided_shift(GM, BM, tan_theta):
+    """Točna poluga trupa s okomitim bokovima: GZ=(GM+BM tan^2/2) sin."""
+    return (GM + 0.5 * BM * tan_theta**2) * tan_theta
+
+
+def free_surface_loss(L_t, B_t, V_displ, rho_t=1025.0, rho=1025.0):
+    i_t = L_t * B_t**3 / 12
+    return {"i_t": i_t, "dGM": -rho_t * i_t / (rho * V_displ)}
 
 
 def zadatak_1(V=0.085, m=62.0, rho=998.0, g=9.81):
@@ -289,7 +305,8 @@ def cjeloviti_2_poplavljen_tank(L=80.0, B=15.0, H=8.0, m_b=4000e3,
     Fb = H - T_1
     dz_palube = (B / 2) * math.sin(math.radians(theta_deg))
     Fb_L = Fb - dz_palube
-    theta_lim = math.degrees(math.asin(Fb / (B / 2)))
+    # Rub palube uroni kad Fb cos(theta) = (B/2) sin(theta): tan(theta) = 2 Fb / B.
+    theta_lim = math.degrees(math.atan(2 * Fb / B))
     return {"V_w": V_w, "m_w": m_w, "e_G": e_G, "KG_new": KG_new,
             "T_1": T_1, "dT": dT, "BM": BM, "GM": GM,
             "theta_deg": theta_deg, "Fb_L": Fb_L, "theta_lim": theta_lim}
@@ -513,15 +530,49 @@ def verify():
     _check(out, "U07.CH2.BM_m", r["BM"], 5.394, "m", rel=0.02)
     _check(out, "U07.CH2.GM_m", r["GM"], 4.230, "m", rel=0.02)
     _check(out, "U07.CH2.theta_deg", r["theta_deg"], 3.94, "deg", rel=0.02)
-    _check(out, "U07.CH2.theta_lim_deg", r["theta_lim"], 37.1, "deg", rel=0.02)
+    _check(out, "U07.CH2.theta_lim_deg", r["theta_lim"], 31.1, "deg", rel=0.02)
+    _invariant(out, "U07.CH2.deck_edge_geometry",
+               abs((8.0 - r["T_1"]) * math.cos(math.radians(r["theta_lim"]))
+                   - 7.5 * math.sin(math.radians(r["theta_lim"]))) < 1e-9
+               and r["theta_lim"] < math.degrees(math.asin((8.0 - r["T_1"]) / 7.5)),
+               "Kut uronjenja ruba palube mora zadovoljiti Fb cos = (B/2) sin.")
+    fs = free_surface_loss(15.0, 6.0, (4000e3 + r["m_w"]) / 1025.0)
+    _check(out, "U07.CH2.free_surface_i_t", fs["i_t"], 270.0, "m4")
+    _check(out, "U07.CH2.free_surface_dGM", fs["dGM"], -0.065, "m", rel=0.02)
+    _invariant(out, "U07.CH2.free_surface_sign", fs["dGM"] < 0 and r["GM"] + fs["dGM"] > 4.1,
+               "Slobodna povrsina mora smanjiti GM, ali ne poništiti ga u ovom primjeru.")
 
     r = primjer_plutajuci_vjetroagregat()
-    _check(out, "U07.wind.A", r["A"], 63.62, "m2", rel=0.02)
-    _check(out, "U07.wind.V", r["V"], 1073.2, "m3", rel=0.02)
-    _check(out, "U07.wind.draft", r["draft"], 16.87, "m", rel=0.02)
-    _check(out, "U07.wind.freeboard", r["freeboard"], 78.13, "m", rel=0.02)
-    _check(out, "U07.wind.draft_plus", r["draft_plus"], 17.71, "m", rel=0.02)
-    _check(out, "U07.wind.draft_minus", r["draft_minus"], 16.02, "m", rel=0.02)
+    _check(out, "U07.wind.A", r["A"], 113.1, "m2", rel=0.005)
+    _check(out, "U07.wind.V", r["V"], 8780.0, "m3", rel=0.005)
+    _check(out, "U07.wind.draft", r["draft"], 77.6, "m", rel=0.005)
+    _check(out, "U07.wind.freeboard", r["freeboard"], 22.4, "m", rel=0.005)
+    _check(out, "U07.wind.draft_plus", r["draft_plus"], 81.5, "m", rel=0.005)
+    _check(out, "U07.wind.draft_minus", r["draft_minus"], 73.8, "m", rel=0.005)
+    _check(out, "U07.wind.KB", r["KB"], 38.8, "m", rel=0.005)
+    _check(out, "U07.wind.I_T", r["I_T"], 1018.0, "m4", rel=0.005)
+    _check(out, "U07.wind.BM", r["BM"], 0.116, "m", rel=0.01)
+    _check(out, "U07.wind.KM", r["KM"], 38.9, "m", rel=0.005)
+    _check(out, "U07.wind.GM_ballast", r["GM_low"], 6.9, "m", rel=0.01)
+    _check(out, "U07.wind.GM_no_ballast", r["GM_high"], -6.1, "m", rel=0.01)
+    _invariant(out, "U07.wind.pendulum_stability",
+               r["BM"] < 0.01 * r["KB"] and r["GM_high"] < 0 < r["GM_low"]
+               and abs(r["draft"] + r["freeboard"] - 100.0) < 1e-9,
+               "Spar: stabilitet dolazi iz KB-KG, ne iz BM; gaz i nadvođe moraju dati H.")
+
+    # Granica malog kuta: točna poluga trupa s okomitim bokovima.
+    p3 = primjer_3_kompresor()
+    e_ws = (676.0 + 190.0) / 190.0 * wall_sided_shift(p3["GM"], p3["BM"], p3["tan_theta"])
+    _check(out, "U07.P3.e_wall_sided", e_ws, 0.1352, "m", rel=0.005)
+    _check(out, "U07.P3.wall_sided_correction_pct",
+           100 * 0.5 * p3["BM"] * p3["tan_theta"]**2 / p3["GM"], 0.87, "%", rel=0.02)
+    ch1 = cjeloviti_1_platforma_ulje_voda()
+    e_ws_ch1 = 828.0 / 180.0 * wall_sided_shift(ch1["GM_eq"], ch1["BM_eq"], ch1["tan_theta"])
+    _check(out, "U07.CH1.e_wall_sided", e_ws_ch1, 0.165, "m", rel=0.005)
+    _invariant(out, "U07.INV.small_angle_bound",
+               0 < (e_ws - p3["e"]) / p3["e"] < 0.01 and 0 < (e_ws_ch1 - ch1["e"]) / ch1["e"] < 0.005
+               and 0.5 * p3["BM"] * math.tan(math.radians(5))**2 / p3["GM"] < 0.005,
+               "Korekcija drugog reda mora ostati ispod 1 % (6,84°) i 0,5 % (5°).")
 
     return out
 

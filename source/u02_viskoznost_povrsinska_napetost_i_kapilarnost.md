@@ -1,8 +1,8 @@
 ![Pregled poglavlja: Viskoznost, površinska napetost i kapilarnost](../assets/print/u02_fig_uvod_pregled.svg){#fig-uvod-u02 fig-align="center" fig-alt="Pregled poglavlja: Viskoznost, površinska napetost i kapilarnost"}
 
-**Tumačenje skice.** U stacionarnom Couetteovu sloju bez gradijenta tlaka brzina raste od nule na donjoj stijenci do $v$ na gornjoj. Oznaka $F_v$ predstavlja silu ulja na ploču, a $F$ vanjsku vučnu silu. Newtonski model daje $\tau=\mu\,\mathrm{d}u/\mathrm{d}y$, dok je $\nu=\mu/\rho$; svojstva i valjanost modela uspoređuju se pri istoj temperaturi.
+**Tumačenje skice.** U stacionarnom Couetteovu sloju bez gradijenta tlaka brzina fluida $v$ raste od nule na donjoj stijenci do brzine ploče $u$ na gornjoj. Oznaka $F_v$ predstavlja silu ulja na ploču, a $F$ vanjsku vučnu silu. Newtonski model daje $\tau=\mu\,\mathrm{d}v/\mathrm{d}y$, dok je $\nu=\mu/\rho$; svojstva i valjanost modela uspoređuju se pri istoj temperaturi.
 
-U kapilari tekućina kvasi stijenku, a kontaktni kut mjeri se kroz tekućinu. Vertikalna komponenta površinske sile $F_{\sigma,z}=\sigma\pi d\cos\theta$ uravnotežuje težinu stupca $\rho g(\pi d^2/4)h$, pa je $h=4\sigma\cos\theta/(\rho gd)$. Time se smični otpor u volumenu fluida razlikuje od površinskih sila na granici faza.
+U kapilari tekućina kvasi stijenku, a kontaktni kut mjeri se kroz tekućinu; vertikalna komponenta površinske sile po obodu uravnotežuje težinu podignutog stupca. Time se smični otpor u volumenu fluida razlikuje od površinskih sila na granici faza.
 
 ## Viskoznost i međupovršinske pojave
 
@@ -11,7 +11,7 @@ Uz tlak, opisan u []{.mf1-chapter-ref target="u01"}, ponašanje fluida određuju
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
 
-Viskoznost određuje uvjete podmazivanja ležajeva i kliznih vodilica te radno područje motornih i hidrauličnih ulja pri različitim temperaturama. Površinska napetost i kapilarnost važne su u raspršivačima, premazima, zavarivačkim kupkama i prijenosu vlage kroz porozne materijale.
+Viskoznost određuje uvjete podmazivanja ležajeva i kliznih vodilica te radno područje motornih i hidrauličkih ulja pri različitim temperaturama. Površinska napetost i kapilarnost važne su u raspršivačima, premazima, zavarivačkim kupkama i prijenosu vlage kroz porozne materijale.
 :::
 
 **Procijenjeno vrijeme rada uz priručnik:** 9 sati.
@@ -21,77 +21,55 @@ Viskoznost određuje uvjete podmazivanja ležajeva i kliznih vodilica te radno p
 Kad se slojevi fluida gibaju relativno jedan prema drugom, pojavljuje se smično naprezanje i otpor gibanju. U newtonskom fluidu vrijedi
 
 $$
-{}\tau = \mu \frac{dv}{dy}
+\tau = \mu \frac{dv}{dy}
 $$ {#eq-reologija-fizikalni-uvod-i-matematicki-izvod-01}
 
-U izrazu je $\tau$ smično naprezanje, $\mu$ dinamička viskoznost, a $dv/dy$ gradijent brzine po okomici na smjer gibanja. Smično je naprezanje tangencijalna sila po jedinici površine između susjednih slojeva fluida. Za zadanu viskoznost veći gradijent brzine zahtijeva veće smično naprezanje. Dinamička viskoznost vode pri sobnoj je temperaturi reda veličine $10^{-3}\ \text{Pa s}$, dok ulja mogu imati znatno veće vrijednosti. Viskoznost ovisi o temperaturi i vrsti fluida [@white2011].
+U izrazu je $\tau$ smično naprezanje, $\mu$ dinamička viskoznost, a $dv/dy$ gradijent brzine fluida $v$ po okomici $y$ na smjer gibanja. Smično je naprezanje tangencijalna sila po jedinici površine između susjednih slojeva fluida. To nije univerzalni zakon za sve fluide, nego model za one kod kojih je odnos linearan; u ovom se poglavlju brzina pomične krute granice (ploče, vratila) označuje s $u$, a brzina fluida s $v$. Dinamička viskoznost vode pri sobnoj je temperaturi reda veličine $10^{-3}\ \text{Pa s}$, dok ulja mogu imati znatno veće vrijednosti. Viskoznost ovisi o temperaturi i vrsti fluida [@white2011].
 
 ::: {.mf1-izvod}
-<p class="mf1-box-label">Konstitutivna motivacija — Newtonov zakon viskoznosti i ravnoteža kapilarnog uspona</p>
+<p class="mf1-box-label">Matematički izvod — Newtonov zakon viskoznosti u Couetteovu sloju</p>
 
-Promatra se tanak sloj fluida između dviju ravnih paralelnih ploča površine $A$ i razmaka $\delta$. Donja ploča miruje, a gornja se giba brzinom $U$. Pretpostavljaju se stacionarno laminarno strujanje newtonskoga fluida, prianjanje fluida na obje ploče, zanemarivi rubni učinci i gradijent tlaka u smjeru gibanja jednak nuli. Tada je Couetteov profil brzine linearan. Pokusno utvrđena proporcionalnost smičnoga naprezanja i gradijenta brzine jest **konstitutivni model**, a ne posljedica ravnoteže sila sama po sebi. Za ovaj se slučaj piše razmjer
+**Pitanje.** Kolika je sila potrebna da se gornja od dviju ravnih paralelnih ploča površine $A$ i razmaka $\delta$ giba stalnom brzinom $u$ dok donja miruje, ako je među njima newtonski fluid?
+
+**Pretpostavke.** Stacionarno laminarno strujanje, prianjanje fluida na obje ploče ($v(0)=0$, $v(\delta)=u$), zanemarivi rubni učinci i gradijent tlaka u smjeru gibanja jednak nuli. Brzina fluida $v$ ima samo komponentu u smjeru gibanja ploče i ovisi samo o koordinati $y$ okomitoj na ploče. Pokus pokazuje da je vučna sila razmjerna površini i brzini, a obrnuto razmjerna razmaku:
 
 $$
-F \propto A\frac{U}{\delta}.
+F \propto A\frac{u}{\delta}.
 $$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-01}
 
-Uvođenjem konstante razmjernosti $\mu$ dobiva se
+**Bilanca.** Promatra se tanak sloj fluida između $y$ i $y+dy$. Na njegovu gornju plohu susjedni sloj djeluje smičnim naprezanjem $\tau(y+dy)$, a na donju $-\tau(y)$; tlak je u smjeru gibanja jednolik, a sloj se ne ubrzava. Ravnoteža sila u smjeru gibanja daje
 
 $$
-F = \mu A\frac{U}{\delta}.
-$$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-02}
+\tau(y+dy)\,A-\tau(y)\,A=0 \qquad\Longrightarrow\qquad \frac{d\tau}{dy}=0,
+$$ {#eq-couette-bilanca-sloja}
 
-Dijeljenjem s površinom slijedi smično naprezanje
+pa je smično naprezanje jednako na svakoj visini procjepa. Ta bilanca vrijedi za svaki fluid; o vrsti fluida ovisi tek kako se $\tau$ veže uz gibanje.
 
-$$
-τ = \frac{F}{A} = \mu\frac{U}{\delta}.
-$$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-03}
-
-Kad se prijelaz s jedne brzine na drugu više ne promatra kao konačna razlika nego kao lokalni gradijent profila brzine, omjer $U/\delta$ prelazi u diferencijalni zapis $dv/dy$, pa nastaje Newtonov zakon viskoznosti
+**Konstitutivni model.** Pokusno utvrđena proporcionalnost smičnoga naprezanja i gradijenta brzine jest **konstitutivni model** newtonskog fluida, a ne posljedica ravnoteže sila:
 
 $$
-τ = \mu\frac{dv}{dy}.
+\tau = \mu\frac{dv}{dy}.
 $$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-04}
 
-U tom zapisu $\tau$ označuje komponentu smičnoga naprezanja s unaprijed odabranim pozitivnim smjerovima. Promijene li se orijentacija normale ili smjer brzine, mijenja se i predznak te komponente; $|\tau|$ je njezin iznos. Veličina $\mu$ mjeri unutarnji otpor fluida relativnom klizanju slojeva, a $dv/dy$ pokazuje koliko se brzo brzina mijenja po okomici na strujanje.
-
-Za kapilarni uspon promatra se kružna kapilara promjera $d$. Površinska napetost $\sigma$ djeluje duž cijeloga oboda, a vodoravne komponente sila po obodu međusobno se poništavaju. Zbroj njihovih vertikalnih komponenti iznosi
+**Koraci.** Uvrštavanjem konstitutivnog modela u bilancu slijedi $\mu\,d^2v/dy^2=0$, pa je profil brzine linearan; uz prianjanje na objema pločama
 
 $$
-F_{\sigma,z} = \sigma\pi d\cos\theta,
-$$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-05}
+v(y)=u\,\frac{y}{\delta}, \qquad \frac{dv}{dy}=\frac{u}{\delta}.
+$$ {#eq-couette-linearni-profil}
 
-Pri računu visine zanemaruju se volumen meniskusa i promjena njegove zakrivljenosti zbog težine. Tada je težina podignutoga stupca tekućine
-
-$$
-G = \rho gV = \rho g\frac{\pi d^2}{4}h.
-$$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-06}
-
-U ravnoteži mora vrijediti $F_{\sigma,z}=G$, pa slijedi
+Smično naprezanje tada je jednako na obje ploče,
 
 $$
-\sigma \pi d \cos\theta = \rho g \frac{\pi d^2}{4} h
-$$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-07}
+\tau = \mu\frac{u}{\delta},
+$$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-03}
 
-Iz jednadžbe ravnoteže, dijeljenjem s $\pi d$, slijedi
-$$
-\sigma \cos\theta = \rho g \frac{d}{4} h.
-$$ {#eq-reologija-razrada-koraka-01}
-
-Izoliranjem $h$ dobiva se
-$$
-h = \frac{4\sigma \cos\theta}{\rho g d}.
-$$ {#eq-reologija-razrada-koraka-02}
-
-Faktor $\pi$ zajednički je objema stranama jednadžbe ravnoteže, a nakon kraćenja jedne potencije promjera $d$ promjer ostaje u nazivniku konačnoga izraza.
-
-i zato
+a vučna sila na gornju ploču
 
 $$
-h = \frac{4\sigma \cos\theta}{\rho g d}.
-$$ {#eq-reologija-razrada-koraka-03}
+F = \tau A = \mu A\frac{u}{\delta}.
+$$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-02}
 
-Iz iste relacije čita se i puni fizikalni smisao pojave: veća površinska napetost povećava uspon, veći promjer kapilare ga smanjuje, a znak člana $\cos\theta$ odlučuje radi li se o usponu ili padu. Kad je $\theta < 90^\circ$, tekućina kvasi stijenku i stupac raste; kad je $\theta > 90^\circ$, kapilarna pojava djeluje u suprotnom smjeru. Omjeri površinske napetosti prema inerciji i prema gravitaciji formaliziraju se Weberovim i Bondovim brojem u []{.mf1-chapter-ref target="u11"}.
+**Rezultat i provjera.** Dobiveni izraz ima upravo pokusom utvrđen oblik, što određuje $\mu$ kao konstantu razmjernosti s jedinicom $\mathrm{Pa\,s}$. Za $u\to0$ sila nestaje, a tanji procjep uz istu brzinu daje veću silu. Linearan profil nije ulazna pretpostavka nego posljedica bilance i newtonskog modela; za nenewtonski fluid u istom sloju $\tau$ je i dalje stalan po visini, ali gradijent brzine ne mora biti. U zapisu $\tau$ označuje komponentu smičnoga naprezanja s unaprijed odabranim pozitivnim smjerovima: promijene li se orijentacija normale ili smjer brzine, mijenja se i predznak te komponente, a $|\tau|$ je njezin iznos.
 :::
 
 ### Dinamička i kinematička viskoznost
@@ -108,14 +86,12 @@ $$ {#eq-reologija-dinamicka-i-kinematicka-viskoznost-02}
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Kinematička viskoznost $\nu$ kombinira viskozni prijenos količine gibanja ($\mu$) s masenom inercijom ($\rho$), pa se može tumačiti kao **difuzivnost količine gibanja**. Upravo $\nu$ nastupa u Reynoldsovu broju $Re=UL/\nu$. Dva nestlačiva newtonska fluida s jednakim $\nu$ imaju isti Reynoldsov broj pri istoj referentnoj brzini i duljini; isti bezdimenzijski uzorak strujanja očekuje se tek za geometrijski slične domene, jednake bezdimenzijske rubne uvjete i jednake ostale relevantne bezdimenzijske skupine.
+Kinematička viskoznost $\nu$ kombinira viskozni prijenos količine gibanja ($\mu$) s masenom inercijom ($\rho$), pa se može tumačiti kao **difuzivnost količine gibanja**. Upravo $\nu$ nastupa u Reynoldsovu broju $Re=vL/\nu$. Dva nestlačiva newtonska fluida s jednakim $\nu$ imaju isti Reynoldsov broj pri istoj referentnoj brzini i duljini; isti bezdimenzijski uzorak strujanja očekuje se tek za geometrijski slične domene, jednake bezdimenzijske rubne uvjete i jednake ostale relevantne bezdimenzijske skupine.
 :::
-
-Dinamička viskoznost mjeri otpor fluida smicanju, a kinematička viskoznost povezuje taj otpor s gustoćom fluida. Kinematička viskoznost primjenjuje se, primjerice, pri određivanju Reynoldsova broja.
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Hladno pokretanje rashladnog kruga.** Razdjelnik koji dobro radi nakon zagrijavanja može pri hladnom pokretanju pružati drukčiji otpor. Za usporedbu najprije izračunamo isti zadani protok pri dvjema temperaturama, uz pripadne gustoće i viskoznosti. CFD tada daje potrebnu razliku tlakova i podjelu protoka po kanalima. Relacija $\nu=\mu/\rho$ služi ispravnom unosu svojstava; jedinica u programu određuje traži li se dinamička ili kinematička viskoznost.
+**Hladno pokretanje rashladnog kruga.** Razdjelnik koji dobro radi nakon zagrijavanja može pri hladnom pokretanju pružati drukčiji otpor. Za usporedbu najprije izračunamo isti zadani protok pri dvjema temperaturama, uz pripadne gustoće i viskoznosti. CFD tada daje potrebnu razliku tlakova i podjelu protoka po kanalima. Relacija $\nu=\mu/\rho$ služi ispravnom unosu svojstava; jedinica u programu određuje traži li se dinamička ili kinematička viskoznost. Provjera: za laminarno strujanje u jednom ravnom kanalu numerički pad tlaka najprije se uspoređuje s analitičkim Hagen–Poiseuilleovim rješenjem iz []{.mf1-chapter-ref target="u12"}; tek mreža koja ga reproducira smije se upotrijebiti za podjelu protoka po kanalima razdjelnika.
 
 Veća viskoznost pri istom laminarnom protoku povećava potrebno tlačno opterećenje. U stvarnom sustavu crpka ne mora održati taj protok: novi se protok određuje zajednički s karakteristikom crpke u []{.mf1-chapter-ref target="u13"}. Ako se temperatura osjetno mijenja unutar uređaja, model se proširuje temperaturnim poljem i ovisnošću svojstava o temperaturi.
 :::
@@ -125,7 +101,7 @@ Veća viskoznost pri istom laminarnom protoku povećava potrebno tlačno optere�
 
 **Tekst zadatka**
 
-Hidraulično ulje ima dinamičku viskoznost $\mu = 0{,}18\ \text{Pa s}$ i gustoću $\rho = 900\ \text{kg/m}^3$.
+Hidrauličko ulje ima dinamičku viskoznost $\mu = 0{,}18\ \text{Pa s}$ i gustoću $\rho = 900\ \text{kg/m}^3$.
 
 **Traži se**
 
@@ -133,7 +109,7 @@ Odredi kinematičku viskoznost $\nu$.
 
 ![Veza dinamičke i kinematičke viskoznosti ulja.](../assets/print/u02_fig_kinematicka_viskoznost.svg){#fig-u02-kinematicka-viskoznost fig-align="center" fig-alt="Veza dinamičke i kinematičke viskoznosti ulja."}
 
-**Veza s proračunom.** Dinamičku i kinematičku viskoznost povezuje $\nu=\mu/\rho$, uz $1\,\mathrm{cSt}=10^{-6}\,\mathrm{m^2/s}$. Skica prikazuje smicanje: $\tau=\mu\,\mathrm{d}u/\mathrm{d}y$, pa je za brojčanu vrijednost naprezanja potrebno poznavati gradijent brzine. Obje označene sile djeluju na pokretnu ploču.
+**Veza s proračunom.** Skica podsjeća na smicanje: za naprezanje bi trebao i gradijent brzine, koji ovdje nije zadan. Obje označene sile djeluju na pokretnu ploču; $1\,\mathrm{cSt}=10^{-6}\,\mathrm{m^2/s}$.
 
 **Rješenje**
 
@@ -151,35 +127,18 @@ $$ {#eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-02}
 
 **Provjera i tumačenje**
 
-Kinematička viskoznost ima jedinicu površine po vremenu. Pri istoj dinamičkoj viskoznosti veća gustoća daje manju kinematičku viskoznost. Izračun određuje odnos dviju mjera viskoznosti, bez određivanja smičnoga naprezanja.
+Jedinica: $\mathrm{Pa\,s/(kg/m^3)=m^2/s}$. Vrijednost $2{,}00\cdot10^{-4}\ \mathrm{m^2/s}=200\ \mathrm{cSt}$ oko 200 je puta veća od vode pri sobnoj temperaturi ($\approx1\ \mathrm{cSt}$).
 :::
-
-### Newtonov zakon viskoznosti
-
-Za newtonski fluid smično naprezanje raste linearno s gradijentom brzine:
-
-$$
-{}\tau = \mu \frac{dv}{dy}
-$$ {#eq-reologija-newtonov-zakon-viskoznosti-01}
-
-To nije univerzalni zakon za sve fluide, nego model za one fluide kod kojih je odnos linearan. U jednostavnom sloju fluida između dviju paralelnih ploča, ako je profil brzine linearan, vrijedi i praktični zapis
-
-$$
-{}\tau = \mu \frac{v}{\delta}
-$$ {#eq-reologija-newtonov-zakon-viskoznosti-02}
-
-gdje je $\delta$ razmak među pločama.
-
 
 ::: {.mf1-dublje}
 <p class="mf1-box-label">Tenzor viskoznih naprezanja u trodimenzijskom strujanju</p>
 
-Newtonov zakon viskoznosti $\tau = \mu\,dv/dy$ predstavljen je za **jednodimenzijsko strujanje** u kojem brzina ima samo jednu komponentu, a gradijent samo u jednom smjeru. U realnim trodimenzijskim strujanjima brzina ima tri komponente $u_1, u_2, u_3$ koje mogu varirati u sva tri smjera $x_1, x_2, x_3$, pa viskozno dodatno naprezanje postaje tenzor drugog reda.
+Newtonov zakon viskoznosti $\tau = \mu\,dv/dy$ predstavljen je za **jednodimenzijsko strujanje** u kojem brzina ima samo jednu komponentu, a gradijent samo u jednom smjeru. U realnim trodimenzijskim strujanjima brzina ima tri komponente $v_1, v_2, v_3$ (u literaturi često $u_i$) koje mogu varirati u sva tri smjera $x_1, x_2, x_3$, pa viskozno dodatno naprezanje postaje tenzor drugog reda.
 
 Za **nestlačivi newtonski fluid** poopćeni Newtonov zakon glasi
 
 $$
-\tau_{ij} = \mu\!\left(\frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i}\right),
+\tau_{ij} = \mu\!\left(\frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i}\right),
 $$ {#eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-01}
 
 gdje indeksi $i, j = 1, 2, 3$ označuju koordinatne smjerove. Komponenta $\tau_{ij}$ djeluje u smjeru osi $i$ na plohu okomitu na os $j$: izvandijagonalne komponente ($i\ne j$) jesu smične, a dijagonalne ($i=j$) jesu viskozna normalna dodatna naprezanja.
@@ -189,7 +148,7 @@ Tenzor je **simetričan** ($\tau_{ij} = \tau_{ji}$), što fizikalno znači da su
 Iz tenzorskog oblika slijedi važan rezultat: trag tenzora (zbroj dijagonalnih elemenata) za nestlačivi fluid iščezava
 
 $$
-\tau_{11} + \tau_{22} + \tau_{33} = 2\mu\!\left(\frac{\partial u_1}{\partial x_1} + \frac{\partial u_2}{\partial x_2} + \frac{\partial u_3}{\partial x_3}\right) = 2\mu\,\nabla\cdot\vec{u} = 0,
+\tau_{11} + \tau_{22} + \tau_{33} = 2\mu\!\left(\frac{\partial v_1}{\partial x_1} + \frac{\partial v_2}{\partial x_2} + \frac{\partial v_3}{\partial x_3}\right) = 2\mu\,\nabla\cdot\vec{v} = 0,
 $$ {#eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-02}
 
 što znači da viskoznost ne dodaje vlastiti **izotropni dio** naprezanja — taj je dio u potpunosti pokriven tlakom $p$.
@@ -238,21 +197,55 @@ Veličina $\sigma$ koja se koristi u kapilarnom usponu i u svim formulama koje s
 Kvašenje i nekvašenje time prestaju biti svojstvo same tekućine — postaju **svojstvo para tekućina–krutina**. Ista voda u staklenoj kapilari kvasi ($\theta \approx 0$), u teflonskoj ne kvasi ($\theta > 90^\circ$), a kapilarni uspon ili pad mijenja predznak.
 :::
 
-Za kapilarni uspon vrijedi radni zapis
+::: {.mf1-izvod}
+<p class="mf1-box-label">Matematički izvod — Ravnoteža kapilarnog uspona</p>
+
+**Pitanje.** Do koje se visine $h$ tekućina penje u uskoj kružnoj kapilari promjera $d$ uronjenoj u široku posudu, ako je kontaktni kut $\theta$?
+
+**Pretpostavke.** Ravnotežno stanje, stalan kontaktni kut duž oboda, zanemariv volumen meniskusa i promjena njegove zakrivljenosti zbog težine, široka posuda čija se razina ne mijenja.
+
+**Bilanca.** Površinska napetost $\sigma$ djeluje duž cijeloga oboda $\pi d$ kontaktne linije, u smjeru tangente na slobodnu površinu. Vodoravne komponente sila po obodu međusobno se poništavaju, a zbroj njihovih vertikalnih komponenti iznosi
 
 $$
-h = \frac{4\sigma \cos\theta}{\rho g d}
-$$ {#eq-reologija-matematicki-izvod-youngova-jednadzba-i-podrijetl-03}
+F_{\sigma,z} = \sigma\pi d\cos\theta.
+$$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-05}
 
-Formula za $h$ uključuje površinsku napetost $\sigma$, kontaktni kut $\theta$, gustoću $\rho$, gravitacijsko ubrzanje $g$ i promjer kapilare $d$. Član $\cos\theta$ određuje smjer pojave: za $\theta>90^\circ$ kapilarni je pomak negativan i razina se spušta. Kako je $h$ obrnuto proporcionalan promjeru, prepolovljenje promjera udvostručuje visinu uspona. Kapilarnost je stoga važna u tankim porama, a obično zanemariva u cijevima centimetarskoga ili većeg promjera.
+Težina stupca tekućine podignutoga iznad razine u posudi jest
+
+$$
+G = \rho gV = \rho g\frac{\pi d^2}{4}h.
+$$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-06}
+
+U ravnoteži mora vrijediti $F_{\sigma,z}=G$, pa slijedi
+
+$$
+\sigma \pi d \cos\theta = \rho g \frac{\pi d^2}{4} h.
+$$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-07}
+
+**Koraci.** Dijeljenjem s $\pi d$ faktor $\pi$ i jedna potencija promjera krate se:
+
+$$
+\sigma \cos\theta = \rho g \frac{d}{4} h.
+$$ {#eq-reologija-razrada-koraka-01}
+
+**Rezultat.** Izoliranjem $h$ dobiva se radni izraz kapilarnog uspona
+
+$$
+h = \frac{4\sigma \cos\theta}{\rho g d}.
+$$ {#eq-reologija-razrada-koraka-02}
+
+**Provjera.** Jedinice: $\mathrm{(N/m)/(kg\,m^{-3}\cdot m\,s^{-2}\cdot m)=m}$. Za $\theta=90^\circ$ uspona nema, za $\theta>90^\circ$ izraz daje spuštanje razine, a prepolovljenje promjera udvostručuje $h$. Za procjep između dviju paralelnih ploha ista bilanca po jedinici duljine daje faktor 2 umjesto 4 (Z4). Omjeri površinske napetosti prema inerciji i prema gravitaciji formaliziraju se Weberovim i Bondovim brojem u []{.mf1-chapter-ref target="u11"}.
+:::
+
+Budući da je $h$ prema @eq-reologija-razrada-koraka-02 obrnuto razmjeran promjeru, kapilarnost je važna u tankim porama i procjepima, a obično zanemariva u cijevima centimetarskoga ili većeg promjera.
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Punjenje kanala i zarobljeni zrak.** Potpuno napunjen kanal i kanal koji se tek puni dva su različita CFD problema. Pri punjenju hladne ploče tekućina istiskuje zrak, pa pratimo granicu faza i omogućujemo izlazak zraka kroz odzračnik. Površinska napetost i kontaktni kut određuju oblik meniska i kvašenje stijenke. U uskim prolazima mogu utjecati na to kojim putem tekućina napreduje i ostaje li zračni džep.
+**Punjenje kanala i zarobljeni zrak.** Potpuno napunjen kanal i kanal koji se tek puni dva su različita CFD problema. Pri punjenju hladne ploče tekućina istiskuje zrak, pa pratimo granicu faza i omogućujemo izlazak zraka kroz odzračnik. Površinska napetost i kontaktni kut određuju oblik meniskusa i kvašenje stijenke. U uskim prolazima mogu utjecati na to kojim putem tekućina napreduje i ostaje li zračni džep.
 
 **Zastani i promisli.** Model točno predviđa konačnu visinu u kapilari. Potvrđuje li to i točno vrijeme punjenja kanala?
 
-Usporedbom položaja odzračnika pratimo zaostali volumen zraka i vrijeme punjenja. Točna ravnotežna visina u kapilari ne potvrđuje vrijeme punjenja kanala: ono ovisi i o viskoznom otporu, odzračivanju i gibanju meniska. Za gibajuću kontaktnu liniju može trebati dodatni model kontaktnog kuta. Nakon uspješnog odzračivanja možemo prijeći na jednostavniji jednofazni model rada.
+Usporedbom položaja odzračnika pratimo zaostali volumen zraka i vrijeme punjenja. Točna ravnotežna visina u kapilari ne potvrđuje vrijeme punjenja kanala: ono ovisi i o viskoznom otporu, odzračivanju i gibanju meniskusa. Za gibajuću kontaktnu liniju može trebati dodatni model kontaktnog kuta. Nakon uspješnog odzračivanja možemo prijeći na jednostavniji jednofazni model rada.
 :::
 
 ::: {.mf1-interaktivno}
@@ -270,19 +263,17 @@ Usporedbom položaja odzračnika pratimo zaostali volumen zraka i vrijeme punjen
 
 :::
 
-Male promjene promjera kapilare ili kontaktnoga kuta uzrokuju odgovarajuću promjenu visine stupca. Kada je $\theta>90^\circ$, izraz daje negativnu vrijednost $h$, što označuje kapilarni pad.
-
-Za zakrivljenu slobodnu površinu nastaje karakterističan skok tlaka koji je posljedica iste ravnoteže sila kao i kod kapilarnog uspona, samo primijenjene na zatvoreni mjehurić. Za kapljicu s jednom granicom faza tlačni skok iznosi $\Delta p = 4\sigma/d$, dok je za sapunasti mjehur s dvjema slobodnim površinama $\Delta p = 8\sigma/d$.
+Na zakrivljenoj slobodnoj površini nastaje skok tlaka koji je posljedica iste ravnoteže sila kao i kod kapilarnog uspona, samo primijenjene na zatvorenu kapljicu ili mjehurić.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Young–Laplaceov zakon za kapljicu i mjehurić</p>
 
-Promatra se sferna kapljica polumjera $r$ koja je u dodiru s okolnim plinom. Tlak unutar kapljice ($p_u$) veći je od tlaka u plinu ($p_v$) zbog djelovanja površinske napetosti. Ravnoteža sila najlakše se postavlja po horizontalnoj presječnoj ravnini koja prolazi kroz ekvator kapljice; gornja polusfera mora ostati u ravnoteži pod djelovanjem dviju suprotno usmjerenih sila:
+Promatra se sferna kapljica polumjera $r$ koja je u dodiru s okolnim plinom. Tlak unutar kapljice $p_u$ veći je od tlaka u okolnom plinu $p_{ok}$ zbog djelovanja površinske napetosti. Ravnoteža sila najlakše se postavlja po horizontalnoj presječnoj ravnini koja prolazi kroz ekvator kapljice; gornja polusfera mora ostati u ravnoteži pod djelovanjem dviju suprotno usmjerenih sila:
 
 - sile tlačne razlike, koja tjera polusferu od ekvatora prema van — djeluje na projiciranu kružnu površinu $A_{proj} = \pi r^2$ i iznosi
 
 $$
-F_{tlak} = (p_u - p_v)\,\pi r^2,
+F_{tlak} = (p_u - p_{ok})\,\pi r^2,
 $$ {#eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-01}
 
 - sile površinske napetosti, koja gornju polusferu vuče prema dolje duž ekvatorske kružnice duljine $L = 2\pi r$:
@@ -294,13 +285,13 @@ $$ {#eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-02}
 U ravnoteži vrijedi $F_{tlak} = F_\sigma$, odnosno
 
 $$
-(p_u - p_v)\,\pi r^2 = \sigma \cdot 2\pi r,
+(p_u - p_{ok})\,\pi r^2 = \sigma \cdot 2\pi r,
 $$ {#eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-03}
 
 odakle se kraćenjem zajedničkog faktora $\pi r$ dobiva tlačni skok
 
 $$
-\Delta p = p_u - p_v = \frac{2\sigma}{r} = \frac{4\sigma}{d}.
+\Delta p = p_u - p_{ok} = \frac{2\sigma}{r} = \frac{4\sigma}{d}.
 $$ {#eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-04}
 
 Za **sapunasti mjehur** s dvjema slobodnim površinama (unutarnjom i vanjskom stranom opne) sila površinske napetosti je dvostruka jer obje površine opne imaju približno isti ekvatorski obod:
@@ -321,20 +312,26 @@ $$
 \Delta p = \sigma\!\left(\frac{1}{R_1} + \frac{1}{R_2}\right),
 $$ {#eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-07}
 
-Pri tome je ovdje $\Delta p=p_{unutra}-p_{vani}$, a zakrivljenosti su pozitivne za konveksnu kapljicu promatranu iz unutarnje faze. Uz drugu orijentaciju normale predznaci zakrivljenosti i tlačnoga skoka moraju se promijeniti zajedno. Za sferu ($R_1 = R_2 = r$) tako se dobiva $\Delta p = 2\sigma/r$, a za cilindar ($R_2 \to \infty$) $\Delta p = \sigma/R$.
+Pri tome je ovdje $\Delta p=p_u-p_{ok}$, a zakrivljenosti su pozitivne za konveksnu kapljicu promatranu iz unutarnje faze. Uz drugu orijentaciju normale predznaci zakrivljenosti i tlačnoga skoka moraju se promijeniti zajedno. Za sferu ($R_1 = R_2 = r$) tako se dobiva $\Delta p = 2\sigma/r$, a za cilindar ($R_2 \to \infty$) $\Delta p = \sigma/R$.
 :::
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Zakrivljena površina zahtijeva tlačni skok koji uravnotežuje površinsku napetost. Što je manji promjer, to je veća zakrivljenost i veći potreban skok tlaka. Faktor 4 za kapljicu nastaje jer sfera ima jednu granicu faza i polumjer $r=d/2$; faktor 8 za sapunasti mjehur dolazi od dviju površina opne. Pri kavitaciji mjehuri pare mogu nastati i rasti kada lokalni **apsolutni** tlak dovoljno padne u odnosu na tlak pare. Stvarni prag ovisi i o prisutnim jezgrama, otopljenim plinovima te Laplaceovu nadtlaku $2\sigma/r$; površinska napetost zato otežava rast vrlo malih jezgara, a ne daje jednostavan kriterij „tlaka koji zatvara mikrokapljicu”.
+Zakrivljena površina zahtijeva tlačni skok koji uravnotežuje površinsku napetost. Što je manji promjer, to je veća zakrivljenost i veći potreban skok tlaka. Faktor 4 za kapljicu nastaje jer sfera ima jednu granicu faza i polumjer $r=d/2$; faktor 8 za sapunasti mjehur dolazi od dviju površina opne. Pri kavitaciji, nastanku i rastu mjehura pare u tekućini, mjehuri mogu nastati i rasti kada lokalni **apsolutni** tlak dovoljno padne u odnosu na tlak pare $p_v$; uvjet usisa crpke i mjera $NPSH$ obrađuju se u []{.mf1-chapter-ref target="u13"}. Stvarni prag ovisi i o prisutnim jezgrama, otopljenim plinovima te Laplaceovu nadtlaku $2\sigma/r$; površinska napetost zato otežava rast vrlo malih jezgara, a ne daje jednostavan kriterij „tlaka koji zatvara mikrokapljicu”.
 :::
 
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Od mirne kapljice do raspršivanja.** Kod mlaznice za raspršivanje tekućine zanima nas ostaje li mlaz povezan ili se raspada na kapljice. Prije takva nestacionarnog računa isti model međupovršine provjeravamo mirnom sfernom kapljicom: treba sačuvati njezin volumen i dati skok tlaka $4\sigma/d$ bez znatnog neželjenog strujanja. Faktor 8 pripada opni s dvjema površinama.
+**Od mirne kapljice do raspršivanja.** Kod mlaznice za raspršivanje tekućine zanima nas ostaje li mlaz povezan ili se raspada na kapljice. Prije takva nestacionarnog računa isti model međupovršine provjeravamo mirnom sfernom kapljicom: treba sačuvati njezin volumen i dati skok tlaka $4\sigma/d$ bez znatnog neželjenog strujanja.
 
 U mlaznici zatim uspoređujemo brzinu dotoka, svojstva tekućine i okolnog plina te oblik otvora. Prate se oblik mlaza i veličine kapljica koje mreža može razlučiti. Mreža koja dobro opisuje veliki mlaz ne mora opisati najsitnije kapljice; za njih može trebati zaseban model. To povezuje površinsku napetost s inercijom, čiji omjer kasnije opisuje Weberov broj.
+:::
+
+::: {.mf1-granica-modela}
+<p class="mf1-box-label">Granica modela — Newtonski sloj i statički meniskus</p>
+
+Svi računi u ovom poglavlju počivaju na četirima pretpostavkama koje treba provjeriti prije uvrštavanja. Newtonski model vrijedi samo ako je omjer $\tau$ i $dv/dy$ stalan u ispitanom rasponu i pri istoj temperaturi; suspenzije, polimerne otopine i krv pri malim gradijentima to ne zadovoljavaju (Z5). Linearni Couetteov profil zahtijeva stacionarno smicanje bez gradijenta tlaka i bez zagrijavanja smicanjem; u ležaju s ekscentricitetom ili u kanalu pogonjenom tlakom profil je drukčiji, pa $\tau=\mu u/\delta$ daje samo procjenu. Kapilarni izrazi opisuju statički meniskus sa stalnim kontaktnim kutom; histereza kuta, hrapavost i onečišćenje stijenke mijenjaju $\theta$, a vrijeme punjenja uopće nije obuhvaćeno. U tlačnim bilancama kapljice zanemaren je hidrostatički član $\rho gD$ kroz visinu kapljice; kad je rezerva modela manja od te skale (Z6), ravnotežni račun ne odlučuje o stvarnom uređaju.
 :::
 
 ## Riješeni primjeri
@@ -344,7 +341,7 @@ U mlaznici zatim uspoređujemo brzinu dotoka, svojstva tekućine i okolnog plina
 
 **Tekst zadatka**
 
-Između paralelnih ploča nalazi se uljni sloj debljine $\delta = 3\ \text{mm}$, viskoznosti $\mu = 0{,}42\ \text{Pa s}$ i gustoće $\rho = 870\ \text{kg/m}^3$. Donja ploča miruje, a gornja, aktivne površine $A = 0{,}18\ \text{m}^2$, giba se jednoliko brzinom $v = 0{,}90\ \text{m/s}$. Uz prianjanje na stijenkama pretpostavi linearni profil brzine.
+Između paralelnih ploča nalazi se uljni sloj debljine $\delta = 3\ \text{mm}$, viskoznosti $\mu = 0{,}42\ \text{Pa s}$ i gustoće $\rho = 870\ \text{kg/m}^3$. Donja ploča miruje, a gornja, aktivne površine $A = 0{,}18\ \text{m}^2$, giba se jednoliko brzinom $u = 0{,}90\ \text{m/s}$. Uz prianjanje na stijenkama pretpostavi linearni profil brzine.
 
 **Traži se**
 
@@ -355,7 +352,7 @@ Između paralelnih ploča nalazi se uljni sloj debljine $\delta = 3\ \text{mm}$,
 
 ![Smicanje ulja između nepomične i pokretne ploče.](../assets/print/u02_val2_viskoznost_kapilarnost.svg){#fig-u02-viskoznost-i-kapilarnost fig-alt="Smicanje ulja između nepomične i pokretne ploče."}
 
-**Veza s proračunom.** Prianjanje određuje brzine fluida na objema pločama. Bez gradijenta tlaka profil u ovom modelu raste linearno kroz procjep; njegov nagib određuje smično naprezanje. Pogonska i otporna sila djeluju na pomičnu ploču.
+**Veza s proračunom.** Zbog prianjanja fluid uz donju ploču miruje, a uz gornju ima njezinu brzinu. Pogonska i otporna sila djeluju na pomičnu ploču.
 
 **Rješenje**
 
@@ -368,13 +365,13 @@ $$ {#eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-01}
 pa je gradijent brzine
 
 $$
-\frac{dv}{dy} = \frac{v}{\delta} = \frac{0{,}90}{0{,}003} = 300\ \text{s}^{-1}.
+\frac{dv}{dy} = \frac{u}{\delta} = \frac{0{,}90}{0{,}003} = 300\ \text{s}^{-1}.
 $$ {#eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-02}
 
 smično naprezanje iznosi
 
 $$
-{}\tau = \mu \frac{dv}{dy} = 0{,}42 \cdot 300 = 126\ \text{Pa}.
+\tau = \mu \frac{dv}{dy} = 0{,}42 \cdot 300 = 126\ \text{Pa}.
 $$ {#eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-03}
 
 Sila na ploči zato je
@@ -391,9 +388,7 @@ $$ {#eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-05}
 
 **Provjera i tumačenje**
 
-1. Manji razmak među pločama mora povećati gradijent brzine.
-2. Veća viskoznost mora povećati smično naprezanje i potrebnu silu.
-3. Red veličine sile od nekoliko desetaka njutna razuman je za ovakav sloj i površinu.
+Energijska bilanca: snaga vučne sile $Fu=22{,}68\cdot0{,}90\approx20{,}4\ \mathrm{W}$ jednaka je viskoznoj disipaciji u sloju $\mu(u/\delta)^2A\delta=0{,}42\cdot300^2\cdot0{,}18\cdot0{,}003\approx20{,}4\ \mathrm{W}$.
 :::
 
 ::: {#ex-u02-kapilarni-uspon-etanola-u-staklenoj-cjevcici-t1 .mf1-we}
@@ -409,7 +404,7 @@ Odredi visinu kapilarnog uspona $h$.
 
 ![Kapilarni uspon etanola i kontaktni kut kroz tekućinu.](../assets/print/u02_fig_kapilarni_uspon_etanol.svg){#fig-u02-kapilarni-uspon-etanol fig-align="center" fig-alt="Kapilarni uspon etanola i kontaktni kut kroz tekućinu."}
 
-**Veza s proračunom.** Uspon se zaustavlja kada vertikalna komponenta površinske sile uravnoteži težinu podignutog stupca. Kontaktni kut mjeri se kroz tekućinu. Visina i promjer prikazani su u različitim mjerilima.
+**Veza s proračunom.** Kontaktni kut mjeri se kroz tekućinu. Visina i promjer prikazani su u različitim mjerilima.
 
 **Rješenje**
 
@@ -421,9 +416,7 @@ $$ {#eq-reologija-rijeseni-primjer-kapilarni-uspon-etanola-u-stakl-01}
 
 **Provjera i tumačenje**
 
-1. Kako je $\theta < 90^\circ$, razina mora rasti, a ne padati.
-2. Tanja kapilara mora dati veći uspon.
-3. Neto uspon mora biti manji nego u slučaju potpunog kvašenja jer je ovdje $\cos\theta < 1$.
+Kako je $\theta < 90^\circ$, razina raste. Pri potpunom kvašenju ($\theta=0$) uspon bi bio $11{,}4\ \mathrm{mm}$; dobiveni $10{,}8\ \mathrm{mm}$ manji je upravo za faktor $\cos18^\circ\approx0{,}951$.
 :::
 
 ::: {#ex-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom-t3 .mf1-ch}
@@ -433,7 +426,7 @@ $$ {#eq-reologija-rijeseni-primjer-kapilarni-uspon-etanola-u-stakl-01}
 
 Vertikalna staklena kapilara promjera $d=0{,}80\ \mathrm{mm}$ povezana je sa širokim spremnikom vode gustoće $\rho=998\ \mathrm{kg/m^3}$ i površinske napetosti $\sigma=0{,}072\ \mathrm{N/m}$. Izlaz je $H=60\ \mathrm{mm}$ iznad površine spremnika. Pri punjenju kontaktni je kut $\theta=0^\circ$, a zrak slobodno izlazi. Nakon punjenja promatra se sferna izlazna kapljica promjera $D=2{,}4\ \mathrm{mm}$, povezana s vodom bez unutarnjeg meniskusa. Kontaktna linija zadržana je na rubu izlaza; kut punjenja ne određuje oblik kapljice.
 
-Iznad spremnika može se zadati pretlak $p_M$. Okolni tlak je $p_0=101325\ \mathrm{Pa}$, a $g=9{,}81\ \mathrm{m/s^2}$. Oba su stanja kvazistatička. Zanemari gubitke, promjenu razine spremnika te težinu i deformaciju kapljice; njezin rast i odvajanje nisu obuhvaćeni.
+Iznad spremnika može se zadati pretlak $p_M$. Okolni atmosferski tlak je $p_{atm}=101325\ \mathrm{Pa}$, a $g=9{,}81\ \mathrm{m/s^2}$. Oba su stanja kvazistatička. Zanemari gubitke, promjenu razine spremnika te težinu i deformaciju kapljice; njezin rast i odvajanje nisu obuhvaćeni.
 
 **Traži se**
 
@@ -444,7 +437,7 @@ Iznad spremnika može se zadati pretlak $p_M$. Okolni tlak je $p_0=101325\ \math
 
 ![Dva odvojena stanja mikrodozatora: prirodni uspon s konkavnim meniskusom i puna kapilara s izlaznom kapljicom.](../assets/print/u02_ch1_kapilarni_mikrodozator_kapljica.svg){#fig-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom fig-alt="Dva odvojena stanja mikrodozatora: prirodni uspon s konkavnim meniskusom i puna kapilara s izlaznom kapljicom."}
 
-**Veza s proračunom.** Razlikuj punjenje igle s konkavnim meniskom od stanja s već formiranom konveksnom kapljicom: zakrivljenost mijenja predznak tlačnog skoka. Statički račun ne opisuje odvajanje kapljice. Promjer igle i visina stupca nisu u zajedničkom grafičkom mjerilu.
+**Veza s proračunom.** Razlikuj punjenje igle s konkavnim meniskusom od stanja s već formiranom konveksnom kapljicom: zakrivljenost mijenja predznak tlačnog skoka. Promjer igle i visina stupca nisu u zajedničkom grafičkom mjerilu.
 
 **Rješenje**
 
@@ -458,7 +451,7 @@ h_{cap}=\frac{4\sigma\cos\theta}{\rho gd}
 \approx36{,}8\ \mathrm{mm}.
 $$ {#eq-reologija-1-kapilarni-uspon-01}
 
-### 2. Tlačni skok na kapljici []{#tlačni-skok-na-kapljici} {#tlakovni-skok-na-kapljici .unnumbered .unlisted .mf1-step}
+### 2. Tlačni skok na kapljici {#tlacni-skok-na-kapljici .unnumbered .unlisted .mf1-step}
 
 Za zadanu sfernu idealizaciju vrijedi
 
@@ -470,7 +463,7 @@ $$ {#eq-reologija-2-tlakovni-skok-na-kapljici-01}
 Apsolutni tlak prema tome iznosi
 
 $$
-p_{in}=p_0+\Delta p=101325+120=101445\ \mathrm{Pa}
+p_u=p_{atm}+\Delta p=101325+120=101445\ \mathrm{Pa}
 \approx101{,}45\ \mathrm{kPa}.
 $$ {#eq-reologija-2-tlakovni-skok-na-kapljici-02}
 
@@ -484,7 +477,7 @@ p_{M,1}=\max\!\left(0,\rho gH-\frac{4\sigma}{d}\right)
 \approx227\ \mathrm{Pa}.
 $$ {#eq-reologija-3-najmanji-potreban-pretlak-u-spremniku-01}
 
-Pri formiranoj kapljici tlak vode na izlazu viši je od okolnoga. Od slobodne površine spremnika do izlaza vrijedi $p_{izlaz}-p_0=p_M-\rho gH$. Stoga
+Pri formiranoj kapljici tlak vode na izlazu viši je od okolnoga. Od slobodne površine spremnika do izlaza vrijedi $p_{izlaz}-p_{atm}=p_M-\rho gH$. Stoga
 
 $$
 p_{M,2}=\rho gH+\Delta p
@@ -500,57 +493,57 @@ Budući da je $h_{cap}\approx36{,}8\ \mathrm{mm}<H=60\ \mathrm{mm}$, za dosezanj
 
 **Provjera i tumačenje**
 
-Manji promjer cijevi olakšava kapilarno punjenje; pri već formiranoj kapljici zadanog $D$ taj promjer ne ulazi u ovu statičku tlačnu bilancu. Manji $D$ povećava Laplaceov skok. Zanemarena hidrostatička promjena kroz duljinu $D$ reda je $\rho gD\approx23{,}5\ \mathrm{Pa}$: za finiju procjenu tlaka treba uključiti težinu i stvarnu zakrivljenost kapljice. Ovdje objavljene vrijednosti služe provjeri jasno zadanoga idealiziranog modela.
+Manji promjer cijevi olakšava kapilarno punjenje; pri već formiranoj kapljici zadanog $D$ taj promjer ne ulazi u ovu statičku tlačnu bilancu. Manji $D$ povećava Laplaceov skok. Zanemarena hidrostatička promjena kroz duljinu $D$ reda je $\rho gD\approx23{,}5\ \mathrm{Pa}$: za finiju procjenu tlaka treba uključiti težinu i stvarnu zakrivljenost kapljice.
 :::
 
 ::: {#ex-u02-hladni-start-i-radna-temperatura-koliko-kosta .mf1-we}
-<p class="mf1-box-label">Utjecaj temperature na viskozni otpor kliznog ležaja &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Utjecaj temperature na viskozni otpor ležaja statvene cijevi&nbsp;<span class="mf1-level">T2</span></p>
 
 
 **Tekst zadatka**
 
-Koncentrični klizni ležaj ima promjer vratila $D = 50\ \text{mm}$, duljinu $L = 70\ \text{mm}$ i uljni procjep $\delta = 0{,}30\ \text{mm}$. Vratilo se vrti brzinom $n = 2400\ \text{min}^{-1}$. Pri $T_1 = 0^\circ\text{C}$ viskoznost je $\mu_1 = 0{,}40\ \text{Pa s}$, a pri $T_2 = 90^\circ\text{C}$ iznosi $\mu_2 = 0{,}040\ \text{Pa s}$.
+Uljem podmazani koncentrični ležaj statvene cijevi manjeg plovila ima promjer osovine propelera $D = 50\ \text{mm}$, duljinu $L = 70\ \text{mm}$ i uljni procjep $\delta = 0{,}30\ \text{mm}$. Osovina se vrti brzinom $n = 2400\ \text{min}^{-1}$. Pri hladnom isplovljenju zimi ulje ima $T_1 = 0^\circ\text{C}$ i viskoznost $\mu_1 = 0{,}40\ \text{Pa s}$, a za gornju nastavnu granicu zagrijanog ulja uzmi $T_2 = 90^\circ\text{C}$ i $\mu_2 = 0{,}040\ \text{Pa s}$.
 
-U oba stanja primijeni Couetteov model s prianjanjem i linearnim profilom; koordinata $y$ raste od čahure prema vratilu. Geometrija i brzina vrtnje ostaju iste. Zanemari ekscentricitet, hidrodinamički klin, rubni tok i zagrijavanje smicanjem. Ovo je usporedba utjecaja zadane viskoznosti, a ne radna karta motora.
+U oba stanja primijeni Couetteov model s prianjanjem i linearnim profilom; koordinata $y$ raste od čahure prema osovini, a obodna brzina osovine je $u$. Geometrija i brzina vrtnje ostaju iste. Zanemari ekscentricitet, hidrodinamički klin, rubni tok i zagrijavanje smicanjem. Ovo je usporedba utjecaja zadane viskoznosti, a ne radna karta ležaja ni propisni proračun osovinskog voda.
 
 **Traži se**
 
-1. Odredi obodnu brzinu vratila i gradijent brzine u procjepu.
+1. Odredi obodnu brzinu osovine $u$ i gradijent brzine u procjepu.
 2. Odredi smično naprezanje pri obje temperature.
 3. Odredi zakretni moment trenja pri obje temperature.
-4. Odredi snagu koju motor mora trošiti samo na svladavanje viskoznog trenja pri obje temperature i omjer snaga pri nižoj i višoj temperaturi.
+4. Odredi snagu koju pogon mora trošiti samo na svladavanje viskoznog trenja u ležaju pri obje temperature i omjer snaga pri nižoj i višoj temperaturi.
 
-![Isti klizni ležaj pri hladnom startu i radnoj temperaturi; ulje pruža otpor vrtnji vratila.](../assets/print/u02_fig_lezaj_temperatura.svg){#fig-u02-lezaj-temperatura fig-align="center" fig-alt="Isti klizni ležaj pri hladnom startu i radnoj temperaturi; ulje pruža otpor vrtnji vratila."}
+![Isti ležaj statvene cijevi pri hladnom isplovljenju i zagrijanom ulju; ulje pruža otpor vrtnji osovine.](../assets/print/u02_fig_lezaj_temperatura.svg){#fig-u02-lezaj-temperatura fig-align="center" fig-alt="Isti ležaj statvene cijevi pri hladnom isplovljenju i zagrijanom ulju; ulje pruža otpor vrtnji osovine."}
 
-**Veza s proračunom.** Uspoređuje se isti tanki koncentrični procjep pri dvjema temperaturama: geometrija i brzina ostaju iste, a zadana viskoznost razlikuje se deset puta. Koordinata $y$ raste od nepomične čahure prema vratilu. Procjep je uvećan radi čitljivosti, a vektori sila nisu u zajedničkom mjerilu.
+**Veza s proračunom.** Koordinata $y$ raste od nepomične čahure prema osovini, čija obodna brzina $u$ daje brzinu fluida uz nju. Procjep je uvećan radi čitljivosti, a vektori sila nisu u zajedničkom mjerilu.
 
 **Rješenje**
 
-Obodna brzina vratila ne ovisi o temperaturi:
+Obodna brzina osovine ne ovisi o temperaturi:
 
 $$
-v = \frac{\pi D n}{60} = \frac{\pi \cdot 0{,}050 \cdot 2400}{60} \approx 6{,}28\ \text{m/s}
+u = \frac{\pi D n}{60} = \frac{\pi \cdot 0{,}050 \cdot 2400}{60} \approx 6{,}28\ \text{m/s}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-01}
 
 Gradijent brzine u procjepu:
 
 $$
-\frac{dv}{dy} \approx \frac{v}{\delta} = \frac{6{,}28}{0{,}30 \cdot 10^{-3}} \approx 2{,}09 \cdot 10^4\ \text{s}^{-1}
+\frac{dv}{dy} \approx \frac{u}{\delta} = \frac{6{,}28}{0{,}30 \cdot 10^{-3}} \approx 2{,}09 \cdot 10^4\ \text{s}^{-1}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-02}
 
 Smično naprezanje pri hladnom startu:
 
 $$
-\tau_1 = \mu_1 \frac{v}{\delta} \approx 8{,}38 \cdot 10^3\ \text{Pa}
+\tau_1 = \mu_1 \frac{u}{\delta} \approx 8{,}38 \cdot 10^3\ \text{Pa}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-03}
 
 Smično naprezanje pri radnoj temperaturi:
 
 $$
-\tau_2 = \mu_2 \frac{v}{\delta} \approx 838\ \text{Pa}
+\tau_2 = \mu_2 \frac{u}{\delta} \approx 838\ \text{Pa}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-04}
 
-Omočena površina vratila:
+Omočena površina osovine:
 
 $$
 A = \pi D L = \pi \cdot 0{,}050 \cdot 0{,}070 \approx 1{,}10 \cdot 10^{-2}\ \text{m}^2
@@ -574,7 +567,7 @@ $$
 \omega = \frac{2\pi n}{60} \approx 251{,}3\ \text{rad/s}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-08}
 
-Snaga koju motor mora trošiti samo zbog viskoznog trenja, izračunana iz nezaokruženih veličina:
+Snaga koju pogon mora trošiti samo zbog viskoznog trenja u ležaju, izračunana iz nezaokruženih veličina:
 
 $$
 P_1 = M_1 \omega \approx 579\ \text{W}
@@ -592,17 +585,16 @@ $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-11}
 
 **Provjera i tumačenje**
 
-1. U ovom namjerno ograničenom modelu smično naprezanje, sila trenja, moment i snaga linearno se mijenjaju s viskoznošću. Zato faktor 10 u zadanoj $\mu$ daje faktor 10 u tim izlaznim veličinama.
-2. Dobivenih $579\ \text{W}$ nije prognoza stvarnoga gubitka određenoga motora: rezultat snažno ovisi o idealiziranom procjepu i izostavljenim hidrodinamičkim i toplinskim učincima.
-3. Omjer $P_1/P_2=\mu_1/\mu_2$ vrijedi jer su u usporedbi geometrija i brzina umjetno zadržane jednakima. U konstrukciji se istodobno biraju geometrija ležaja, dovod maziva, režim rada i odgovarajuće reološko-temperaturno svojstvo ulja; nijedan od tih čimbenika sam nije potpuna mjera.
+1. Dvije neovisne staze daju istu snagu: $F_1u\approx92{,}1\cdot6{,}28\approx579\ \text{W}=M_1\omega$. U ovom modelu sve izlazne veličine linearne su u $\mu$, pa faktor 10 u viskoznosti daje faktor 10 u snazi samo zato što su geometrija i brzina zadržane jednakima.
+2. Dobivenih $579\ \text{W}$ nije prognoza gubitka stvarnoga osovinskog voda; u službi ulje statvene cijevi obično radi hladnije od gornje nastavne granice, a prekomjerna temperatura ležaja signal je za uzbunu, ne radno stanje.
 :::
 
 ::: {#ex-u02-mikrofluidicki-kanal-u-lab-on-chip-ure .mf1-we}
-<p class="mf1-box-label">Mikrofluidički kanal u lab-on-chip uređaju za dijagnostiku &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Mikrofluidički kanal u laboratoriju na čipu za dijagnostiku&nbsp;<span class="mf1-level">T2</span></p>
 
 **Tekst zadatka**
 
-Vertikalni kružni mikrokanal promjera $d = 60\ \mu\text{m}$ puni se razrijeđenim uzorkom krvi gustoće $\rho = 1010\ \text{kg/m}^3$ i površinske napetosti $\sigma = 0{,}055\ \text{N/m}$. Obrađena površina PDMS-a ima kontaktni kut $\theta = 25^\circ$; za usporedbu razmotri hidrofobni premaz s kutom $\theta = 110^\circ$. Kut je svojstvo zadane površine, a ne univerzalna vrijednost za PDMS. Promatraj ravnotežu jednofazne newtonske tekućine uz stalan kut duž stijenke, bez kinetike punjenja, histereze i promjene površinske obrade.
+Vertikalni kružni mikrokanal dijagnostičkog laboratorija na čipu (engl. *lab-on-chip*) promjera $d = 60\ \mu\text{m}$ puni se razrijeđenim uzorkom krvi gustoće $\rho = 1010\ \text{kg/m}^3$ i površinske napetosti $\sigma = 0{,}055\ \text{N/m}$. Obrađena površina PDMS-a ima kontaktni kut $\theta = 25^\circ$; za usporedbu razmotri hidrofobni premaz s kutom $\theta = 110^\circ$. Kut je svojstvo zadane površine, a ne univerzalna vrijednost za PDMS. Promatraj statičku ravnotežu jednofazne tekućine uz stalan kut duž stijenke, bez kinetike punjenja, histereze i promjene površinske obrade; viskoznost ne ulazi u ravnotežni račun, pa nenewtonsko ponašanje krvi ovdje nije bitno.
 
 **Traži se**
 
@@ -646,7 +638,7 @@ Negativna vrijednost znači kapilarnu depresiju u vertikalnoj cijevi. Ako tekuć
 
 **Provjera i tumačenje**
 
-Ravnotežna visina od oko $33{,}5\ \text{cm}$ pokazuje da je za zadanu idealnu kapilaru gravitacijska granica mnogo veća od centimetarske duljine uređaja. Time još nije dokazana pouzdanost ili brzina punjenja: za to treba uključiti viskozni otpor, zarobljeni plin, geometrijske prijelaze i dinamički kontaktni kut. Tlačni skok od $3{,}3\ \text{kPa}$ karakterizira meniskus; dimenzioniranje spojnica i pasivnih ventila zahtijeva puni raspon tlakova i stvarne uvjete kvašenja.
+Dosljednost: hidrostatički tlak stupca $\rho gh=1010\cdot9{,}81\cdot0{,}335\approx3{,}32\ \mathrm{kPa}$ jednak je tlačnom skoku na meniskusu, kako i mora biti u ravnoteži. Visina od $33{,}5\ \text{cm}$ mnogo je veća od centimetarske duljine uređaja, pa gravitacija ne ograničava punjenje; brzinu punjenja ovaj račun ne daje.
 :::
 
 
@@ -656,7 +648,7 @@ Ravnotežna visina od oko $33{,}5\ \text{cm}$ pokazuje da je za zadanu idealnu k
 1. Zašto dinamička viskoznost nije isto što i gustoća fluida?
 2. Zašto Newtonov zakon viskoznosti nije univerzalan za svaki fluid i svaki režim?
 3. Zašto kapilarni uspon ovisi o kontaktnom kutu, a ne samo o promjeru kapilare?
-4. Model točno predviđa konačnu visinu u kapilari. Potvrđuje li to i točno vrijeme punjenja kanala?
+4. Dvije kapljice iste tekućine imaju promjere 1 mm i 2 mm. U kojoj je unutarnji tlak veći? Što se dogodi ako ih spojiš tankom cjevčicom?
 
 ::: {.callout-note collapse="true"}
 ### Odgovori
@@ -667,7 +659,7 @@ Ravnotežna visina od oko $33{,}5\ \text{cm}$ pokazuje da je za zadanu idealnu k
 
 3. Kontaktni kut određuje kvasi li tekućina stijenku pa zato mijenja predznak i iznos kapilarnog učinka.
 
-4. Ne. Konačna visina provjerava ravnotežu; vrijeme punjenja dodatno ovisi o viskoznom otporu, geometriji, zarobljenom plinu i dinamici meniskusa.
+4. U manjoj: prema Young–Laplaceovu zakonu tlačni skok $4\sigma/d$ raste sa smanjenjem promjera. Spojene cjevčicom, tekućina teče iz manje u veću kapljicu, pa se manja prazni, a ne izjednačuju se.
 :::
 :::
 
@@ -692,7 +684,7 @@ U Z1 i Z3 pretpostavi stacionarno laminarno smicanje newtonskog fluida, prianjan
 
 **Tekst zadatka**
 
-Između dviju paralelnih ploča nalazi se glicerin debljine $\delta = 2{,}4\ \text{mm}$. Gornja ploča površine $A = 0{,}22\ \text{m}^2$ giba se stalnom brzinom $v = 0{,}65\ \text{m/s}$, donja ploča miruje, a dinamička viskoznost glicerina iznosi $\mu = 0{,}84\ \text{Pa s}$.
+Između dviju paralelnih ploča nalazi se glicerin debljine $\delta = 2{,}4\ \text{mm}$. Gornja ploča površine $A = 0{,}22\ \text{m}^2$ giba se stalnom brzinom $u = 0{,}65\ \text{m/s}$, donja ploča miruje, a dinamička viskoznost glicerina iznosi $\mu = 0{,}84\ \text{Pa s}$.
 
 **Traži se**
 
@@ -701,7 +693,7 @@ Odredi gradijent brzine, smično naprezanje i silu potrebnu za gibanje ploče.
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-$dv/dy = v/\delta$, zatim $\tau = \mu dv/dy$ i na kraju $F = \tau A$.
+$dv/dy = u/\delta$, zatim $\tau = \mu\, dv/dy$ i na kraju $F = \tau A$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -748,7 +740,7 @@ $\Delta p_k=100\ \text{Pa}$; $\Delta p_m=200\ \text{Pa}$; $\Delta p_m/\Delta p_k
 
 **Tekst zadatka**
 
-Ploča klizi udesno brzinom $v = 0{,}30\ \text{m/s}$ između dviju nepomičnih paralelnih stijenki. Površina svake strane ploče u dodiru s uljem iznosi $A = 0{,}020\ \text{m}^2$. Gornji procjep ima debljinu $\delta_1 = 1{,}0\ \text{mm}$, donji $\delta_2 = 2{,}0\ \text{mm}$, a ulje u oba procjepa dinamičku viskoznost $\mu = 0{,}12\ \text{Pa s}$. Student zamjenjuje dva procjepa jednim razmakom $\delta_1+\delta_2$ i piše $F=\mu Av/(\delta_1+\delta_2)$.
+Ploča klizi udesno brzinom $u = 0{,}30\ \text{m/s}$ između dviju nepomičnih paralelnih stijenki. Površina svake strane ploče u dodiru s uljem iznosi $A = 0{,}020\ \text{m}^2$. Gornji procjep ima debljinu $\delta_1 = 1{,}0\ \text{mm}$, donji $\delta_2 = 2{,}0\ \text{mm}$, a ulje u oba procjepa dinamičku viskoznost $\mu = 0{,}12\ \text{Pa s}$. Student zamjenjuje dva procjepa jednim razmakom $\delta_1+\delta_2$ i piše $F=\mu Au/(\delta_1+\delta_2)$.
 
 **Traži se**
 
@@ -759,7 +751,7 @@ Ploča klizi udesno brzinom $v = 0{,}30\ \text{m/s}$ između dviju nepomičnih p
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Svaki procjep ima vlastitu promjenu brzine od nule do $v$. Izračunaj oba iznosa gradijenta zasebno. Sile ulja na pokretnoj ploči obje se suprotstavljaju njezinu gibanju pa se njihovi iznosi zbrajaju.
+Svaki procjep ima vlastitu promjenu brzine fluida od nule do brzine ploče $u$. Izračunaj oba iznosa gradijenta zasebno. Sile ulja na pokretnoj ploči obje se suprotstavljaju njezinu gibanju pa se njihovi iznosi zbrajaju.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -771,27 +763,30 @@ $|\tau_1|=36\ \text{Pa}$, $|\tau_2|=18\ \text{Pa}$; $F_1=0{,}72\ \text{N}$, $F_2
 
 [Razina: T2]{.mf1-task-level}
 
-### Kapilarni uspon etanola {#task-u02-kapilara-promjera-uronjena-je-u-etanol-za .unnumbered .unlisted}
+<span id="task-u02-kapilara-promjera-uronjena-je-u-etanol-za"></span>
+
+### Morska voda u procjepu između limova {#task-kapilarni-uspon-u-procjepu-limova .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Kapilara promjera $d = 0{,}60\ \text{mm}$ uronjena je u etanol za koji vrijedi $\sigma = 0{,}022\ \text{N/m}$, $\theta = 18^\circ$ i $\rho = 790\ \text{kg/m}^3$. Promjer druge kapilare je $1{,}20\ \text{mm}$.
+U preklopnom spoju dvaju čeličnih limova brodske konstrukcije ostaje uski procjep širine $b = 0{,}20\ \text{mm}$ između dviju paralelnih ploha. Duljina procjepa duž spoja mnogo je veća od širine, a donji je rub uronjen u morsku vodu gustoće $\rho = 1025\ \text{kg/m}^3$ i površinske napetosti $\sigma = 0{,}073\ \text{N/m}$. Na očišćenom čeliku kontaktni kut iznosi $\theta_1 = 30^\circ$, a na hidrofobnom zaštitnom premazu $\theta_2 = 105^\circ$. Promatra se ravnotežno stanje uz stalan kontaktni kut; podatci su nastavni.
 
 **Traži se**
 
-Odredi kapilarni uspon i usporedi ga s usponom u drugoj kapilari.
+1. Iz ravnoteže vertikalne komponente površinske sile i težine podignutoga stupca izvedi izraz za uspon između dviju paralelnih ploha i odredi $h_1$ za očišćeni čelik.
+2. Usporedi rezultat s onim koji bi dala formula za kružnu kapilaru promjera $d=b$ i objasni odakle razlika.
+3. Odredi $h_2$ za premazani procjep i protumači predznak: što znači za zadržavanje vode u spoju?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-$h = 4\sigma \cos\theta /(\rho g d)$; drugi slučaj računa se istom formulom samo s novim promjerom.
+Promatraj dio procjepa duljine $L$: dvije kontaktne linije ukupne duljine $2L$ nose stupac volumena $bLh$. Kružna kapilara ima drukčiji omjer oboda i presjeka. Negativan $h$ znači spuštanje razine, odnosno ulaznu barijeru za suh procjep.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-
-$h \approx 18{,}0\ \text{mm}$; kod $d = 1{,}2\ \text{mm}$ upola manje, $h \approx 9{,}0\ \text{mm}$.
+$h=2\sigma\cos\theta/(\rho gb)$; $h_1\approx62{,}9\ \text{mm}$. Kružna formula s $d=b$ dala bi $125{,}7\ \text{mm}$, dvostruko više, jer kružni presjek ima dvostruko dulju kontaktnu liniju po jedinici površine presjeka. Za premaz $h_2\approx-18{,}8\ \text{mm}$: razina u procjepu spušta se ispod vanjske, a suh procjep voda ne puni bez nadtlaka od oko $189\ \text{Pa}$.
 :::
 ::::
 
@@ -803,23 +798,23 @@ $h \approx 18{,}0\ \text{mm}$; kod $d = 1{,}2\ \text{mm}$ upola manje, $h \appro
 
 **Tekst zadatka**
 
-U nastavnom pokusu ispituju se uzorci A i B između nepomične i pokretne ploče. Samo jedna strana pokretne ploče površine $S = 0{,}010\ \text{m}^2$ dodiruje uzorak; razmak ploča je $\delta = 1{,}0\ \text{mm}$. Pri stalnoj temperaturi dobiveni su sljedeći sintetički podatci. Za ovu idealiziranu usporedbu zanemari mjernu nesigurnost, trenje mehanizma, klizanje uz stijenku i rubne učinke.
+U nastavnom pokusu ispituju se uzorci A i B između nepomične i pokretne ploče. Samo jedna strana pokretne ploče površine $A = 0{,}010\ \text{m}^2$ dodiruje uzorak; razmak ploča je $\delta = 1{,}0\ \text{mm}$. Pri stalnoj temperaturi dobiveni su sljedeći sintetički podatci. Za ovu idealiziranu usporedbu zanemari mjernu nesigurnost, trenje mehanizma, klizanje uz stijenku i rubne učinke.
 
 Smični je profil u svakom stacionarnom pokusu linearan; newtonsko ponašanje tek treba provjeriti.
 
-| Brzina $v$ (m/s) | Vučna sila uzorka A (N) | Vučna sila uzorka B (N) |
+| Brzina ploče $u$ (m/s) | Vučna sila uzorka A (N) | Vučna sila uzorka B (N) |
 | ---: | ---: | ---: |
 | 0,10 | 0,20 | 0,30 |
 | 0,20 | 0,40 | 0,45 |
 | 0,40 | 0,80 | 0,60 |
 
-Za predviđanje uzmi $v_* = 0{,}30\ \text{m/s}$.
+Za predviđanje uzmi $u_* = 0{,}30\ \text{m/s}$.
 
 **Traži se**
 
 1. Za svaki red odredi iznos gradijenta brzine i naprezanja te omjer naprezanja i gradijenta brzine.
 2. Za koji je uzorak prihvatljiv newtonski model sa stalnom viskoznošću u ispitanom rasponu?
-3. Tim modelom predvidi silu pri brzini $v_*$.
+3. Tim modelom predvidi silu pri brzini $u_*$.
 4. Za drugi uzorak pokaži koliko bi na najvećoj mjerenoj brzini pogriješio račun sa stalnom viskoznošću određenom samo iz prvog retka.
 5. Jesu li tri retka dovoljna za jedinstven izbor nenewtonskog zakona ili za zaključak o ponašanju izvan ispitanog raspona?
 
@@ -877,14 +872,14 @@ $h_{cap}\approx58{,}8\ \mathrm{mm}$; $p_{M,1}=0$. Nominalno $p_{M,2}\approx0{,}5
 
 :::::
 
-![Skice uz Z1–Z6: viskozno smicanje, kapljice i kapilare.](../assets/print/u02_vjezbe_skice.svg){#fig-u02-vjezbe fig-align="center" fig-alt="Skice uz Z1–Z6: smicanje između ploča, kapljica i sapunasti mjehur, dva uljna procjepa, kapilarni uspon, mjerenje viskoznog otpora te igla s izlaznom kapljicom."}
+![Skice uz Z1–Z6: viskozno smicanje, kapljice i kapilare.](../assets/print/u02_vjezbe_skice.svg){#fig-u02-vjezbe fig-align="center" fig-alt="Skice uz Z1–Z6: smicanje između ploča, kapljica i sapunasti mjehur, dva uljna procjepa, procjep između limova s usponom i spuštanjem morske vode, mjerenje viskoznog otpora te igla s izlaznom kapljicom."}
 
-**Napomene uz skice.** U Z1 donja ploča miruje, a sile djeluju na gornju ploču. U Z2 vanjski zrak ima tlak $p_0$, pa je $\Delta p=p_{\mathrm{in}}-p_0$; debljina sapunastog filma uvećana je, a težina zanemarena. U Z3 obje vanjske stijenke miruju. U Z5 uzorak dodiruje samo donju stranu ploče. U Z6 primjenjuje se statički model uz zanemarenu težinu kapljice. Visine i promjeri kapilara imaju zasebna mjerila; omjeri unutar Z4 odgovaraju zadanim podatcima.
+**Napomene uz skice.** U Z1 donja ploča miruje, a sile djeluju na gornju ploču. U Z2 vanjski zrak ima tlak $p_{atm}$, pa je $\Delta p=p_u-p_{atm}$; debljina sapunastog filma uvećana je, a težina zanemarena. U Z3 obje vanjske stijenke miruju. U Z5 uzorak dodiruje samo donju stranu ploče. U Z4 lijevi procjep prikazuje očišćeni čelik (uspon, konkavni meniskus), a desni premazani (spuštanje, konveksni meniskus); širina procjepa i visine imaju zasebna mjerila, omjer uspona i spuštanja odgovara zadanim podatcima.
 
 ## Sažetak
 
 Viskoznost opisuje otpor relativnom gibanju slojeva fluida. Za newtonski fluid smično je naprezanje razmjerno gradijentu brzine, pri čemu dinamička viskoznost $\mu$ povezuje te veličine, a kinematička viskoznost $\nu=\mu/\rho$ uključuje i gustoću fluida. Newtonov zakon viskoznosti nije primjenjiv na nenewtonske fluide, za koje se primjenjuju odgovarajući konstitutivni modeli.
 
-Površinska napetost opisuje energiju međupovršine i silu po jediničnoj duljini kontaktne linije. Zajedno s kontaktnim kutom određuje kapilarni uspon ili pad, prema $h=4\sigma\cos\theta/(\rho gd)$. Zakrivljenost međupovršine uzrokuje tlačni skok opisan Young–Laplaceovim zakonom. Za sfernu kapljicu vrijedi $\Delta p=4\sigma/d$, a za sapunasti mjehur s dvjema međupovršinama $\Delta p=8\sigma/d$.
+Površinska napetost opisuje energiju međupovršine i silu po jediničnoj duljini kontaktne linije. Zajedno s kontaktnim kutom određuje kapilarni uspon ili pad, prema $h=4\sigma\cos\theta/(\rho gd)$ za kružnu kapilaru i $h=2\sigma\cos\theta/(\rho gb)$ za procjep širine $b$. Zakrivljenost međupovršine uzrokuje tlačni skok opisan Young–Laplaceovim zakonom. Za sfernu kapljicu vrijedi $\Delta p=4\sigma/d$, a za sapunasti mjehur s dvjema međupovršinama $\Delta p=8\sigma/d$.
 
 Prikazani modeli pretpostavljaju definirana svojstva fluida i međupovršine, idealiziranu geometriju te ravnotežno ili kvazistacionarno stanje. Na odstupanja u stvarnim sustavima utječu temperaturna ovisnost viskoznosti, nenewtonsko ponašanje, hrapavost i onečišćenje stijenke, histereza kontaktnoga kuta, viskozni gubitci i dinamika međupovršine.
