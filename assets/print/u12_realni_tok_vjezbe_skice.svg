@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 881 900" role="img" aria-labelledby="u12vs_title u12vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:881px;height:auto;">
   <title id="u12vs_title">Skice šest vježbi realnog toka</title>
-  <desc id="u12vs_desc">Z1: kinematičko polje u trenutku t jednako 2 sekunde, s točkom A na x jednako 1 metar. Z2: voda između pokretne gornje i nepomične donje ploče, razmak 10 milimetara. Z3: otvorena kapilara s dva stvarno otvorena tlačna priključka na istoj visini, razmak L i unutarnji promjer D; promjer uvećan prema duljini. Z4: ulje između ploča, gornja vuče desno, tlak raste udesno i pokreće ulje ulijevo. Z5: vanjski tok iznad nepropusne ravne plohe; x je od početka plohe do promatranog presjeka, ekvivalentna hrapavost nije nacrtana kao visina zuba. Z6: tri shematske mreže iste domene s upola manjim korakom u oba smjera; mrežne crte nisu stijenke.</desc>
+  <desc id="u12vs_desc">Z1: kinematičko polje v(x, t) u trenutku t jednako 2 sekunde; promatrani položaj x jednako 1 metar označen je točkom, a duljine strelica odnose se kao lokalne brzine 4 : 5 : 8 u x = 0, 1 i 2 metra. Z2: voda između pokretne gornje i nepomične donje ploče, razmak 10 milimetara. Z3: otvorena kapilara s dva stvarno otvorena tlačna priključka na istoj visini, razmak L i unutarnji promjer D; promjer uvećan prema duljini. Z4: ulje između ploča, gornja vuče desno, tlak raste udesno i pokreće ulje ulijevo. Z5: vanjski tok iznad nepropusne ravne plohe; x je od početka plohe do promatranog presjeka, ekvivalentna hrapavost nije nacrtana kao visina zuba. Z6: tri shematske mreže iste domene s upola manjim korakom u oba smjera; mrežne crte nisu stijenke.</desc>
   <defs>
     <pattern id="u12vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -44,13 +44,13 @@
         <line x1="250" y1="179" x2="250" y2="190" stroke="#3a4a56" stroke-width="1" />
         <text x="250" y="205" font-size="12" fill="#263746" text-anchor="middle">2</text>
         <circle id="u12vs_z1A" cx="150" cy="126" r="3" fill="#356b83" />
-        <text x="150" y="153" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">A</text>
+        <text x="314" y="114" font-size="13" fill="#263746" text-anchor="middle">v(x, t)</text>
         <path d="M50 184 L399 184" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u12vs_axisMarker)" />
         <text x="394" y="205" font-size="13" fill="#263746" text-anchor="middle">x (m)</text>
         <line x1="50" y1="228" x2="50" y2="238" stroke="#657781" stroke-width="1.2" />
         <line x1="150" y1="228" x2="150" y2="238" stroke="#657781" stroke-width="1.2" />
         <path id="u12vs_z1x" d="M50 233 L150 233" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u12vs_dim)" marker-end="url(#u12vs_dim)" />
-        <text x="100.0" y="250" font-size="11" fill="#263746" text-anchor="middle">xA = 1 m</text>
+        <text x="100.0" y="250" font-size="11" fill="#263746" text-anchor="middle">x = 1 m</text>
       </g>
     </g>
   </g>
@@ -63,7 +63,7 @@
         <rect id="u12vs_z2top" x="102" y="93" width="286" height="10" rx="0" fill="url(#u12vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u12vs_z2bottom" x="102" y="194" width="286" height="10" rx="0" fill="url(#u12vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <path id="u12vs_z2plateVelocity" d="M218 75 L310 75" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u12vs_v)" />
-        <text x="264.0" y="66" font-size="12" fill="#263746" text-anchor="middle">gornja ploča: U, od t = 0</text>
+        <text x="264.0" y="66" font-size="12" fill="#263746" text-anchor="middle">gornja ploča: u, od t = 0</text>
         <text x="191" y="224" font-size="12" fill="#263746" text-anchor="start">donja ploča miruje</text>
         <text x="230" y="150" font-size="14" fill="#263746" text-anchor="middle">voda</text>
         <line x1="72" y1="103" x2="82" y2="103" stroke="#657781" stroke-width="1.2" />
@@ -96,10 +96,10 @@
         <path id="u12vs_z3wall2" d="M329 92 V136 H392" fill="none" stroke="#3a4a56" stroke-width="1.4" />
         <path id="u12vs_z3wall3" d="M43 180 H392" fill="none" stroke="#3a4a56" stroke-width="1.4" />
         <rect id="u12vs_z3sensor1" x="90" y="74" width="28" height="18" rx="3" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
-        <text x="104" y="64" font-size="14" fill="#263746" text-anchor="middle">p₁</text>
+        <text x="104" y="64" font-size="14" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
         <line x1="104" y1="188" x2="104" y2="216" stroke="#657781" stroke-width="1" />
         <rect id="u12vs_z3sensor2" x="310" y="74" width="28" height="18" rx="3" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
-        <text x="324" y="64" font-size="14" fill="#263746" text-anchor="middle">p₂</text>
+        <text x="324" y="64" font-size="14" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
         <line x1="324" y1="188" x2="324" y2="216" stroke="#657781" stroke-width="1" />
         <path id="u12vs_z3velocity" d="M170 158 L260 158" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u12vs_v)" />
         <text x="215.0" y="149" font-size="12" fill="#263746" text-anchor="middle">Q</text>
@@ -125,7 +125,7 @@
         <rect id="u12vs_z4top" x="111" y="95" width="274" height="10" rx="0" fill="url(#u12vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u12vs_z4bottom" x="111" y="199" width="274" height="10" rx="0" fill="url(#u12vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <path id="u12vs_z4plateVelocity" d="M219 77 L312 77" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u12vs_v)" />
-        <text x="265.5" y="68" font-size="12" fill="#263746" text-anchor="middle">U = 2,00 m/s</text>
+        <text x="265.5" y="68" font-size="12" fill="#263746" text-anchor="middle">u = 2,00 m/s</text>
         <path id="u12vs_z4pressureDrive" d="M285 157 L194 157" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u12vs_pressureMarker)" />
         <text x="240" y="142" font-size="13" fill="#263746" text-anchor="middle">tlačni pogon</text>
         <text x="224" y="189" font-size="12" fill="#263746" text-anchor="middle">ulje; μ = 0,100 Pa s</text>
@@ -154,8 +154,8 @@
         <rect id="u12vs_z5plate" x="50" y="194" width="346" height="10" rx="0" fill="url(#u12vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <line id="u12vs_z5section" x1="326" y1="88" x2="326" y2="194" stroke="#356b83" stroke-width="1.3" stroke-dasharray="5 4" />
         <path id="u12vs_z5externalVelocity" d="M206 113 L298 113" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u12vs_v)" />
-        <text x="252.0" y="104" font-size="12" fill="#263746" text-anchor="middle">Ue = 1,50 m/s</text>
-        <text x="102" y="66" font-size="13" fill="#263746" text-anchor="start">dUe/dx = −0,250 s⁻¹</text>
+        <text x="252.0" y="104" font-size="12" fill="#263746" text-anchor="middle">U<tspan baseline-shift="sub" font-size="0.7em">e</tspan> = 1,50 m/s</text>
+        <text x="102" y="66" font-size="13" fill="#263746" text-anchor="start">dU<tspan baseline-shift="sub" font-size="0.7em">e</tspan>/dx = −0,250 s⁻¹</text>
         <text x="207" y="171" font-size="12" fill="#263746" text-anchor="start">promatrani presjek</text>
         <line x1="50" y1="225" x2="50" y2="235" stroke="#657781" stroke-width="1.2" />
         <line x1="326" y1="225" x2="326" y2="235" stroke="#657781" stroke-width="1.2" />
@@ -163,7 +163,7 @@
         <text x="188.0" y="247" font-size="11" fill="#263746" text-anchor="middle">x = 0,400 m</text>
         <line x1="50" y1="208" x2="50" y2="234" stroke="#657781" stroke-width="1" />
         <line x1="326" y1="208" x2="326" y2="234" stroke="#657781" stroke-width="1" />
-        <text x="30" y="270" font-size="12" fill="#263746" text-anchor="start">ks = 5,0 μm</text>
+        <text x="30" y="270" font-size="12" fill="#263746" text-anchor="start">k<tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 5,0 μm</text>
       </g>
     </g>
   </g>
@@ -182,7 +182,7 @@
         <line id="u12vs_z6grid0h1" x1="31" y1="128.0" x2="143" y2="128.0" stroke="#3a4a56" stroke-width="0.7" stroke-dasharray="2 2" />
         <line id="u12vs_z6grid0h2" x1="31" y1="156.0" x2="143" y2="156.0" stroke="#3a4a56" stroke-width="0.7" stroke-dasharray="2 2" />
         <text x="87.0" y="79" font-size="13" fill="#263746" text-anchor="middle">gruba</text>
-        <text x="87.0" y="181" font-size="12" fill="#263746" text-anchor="middle">h/hf = 4</text>
+        <text x="87.0" y="181" font-size="12" fill="#263746" text-anchor="middle">h/h<tspan baseline-shift="sub" font-size="0.7em">f</tspan> = 4</text>
         <rect id="u12vs_z6domain1" x="167" y="100" width="112" height="56" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <line id="u12vs_z6grid1v0" x1="167.0" y1="100" x2="167.0" y2="156" stroke="#3a4a56" stroke-width="0.7" stroke-dasharray="2 2" />
         <line id="u12vs_z6grid1v1" x1="181.0" y1="100" x2="181.0" y2="156" stroke="#3a4a56" stroke-width="0.7" stroke-dasharray="2 2" />
@@ -199,7 +199,7 @@
         <line id="u12vs_z6grid1h3" x1="167" y1="142.0" x2="279" y2="142.0" stroke="#3a4a56" stroke-width="0.7" stroke-dasharray="2 2" />
         <line id="u12vs_z6grid1h4" x1="167" y1="156.0" x2="279" y2="156.0" stroke="#3a4a56" stroke-width="0.7" stroke-dasharray="2 2" />
         <text x="223.0" y="79" font-size="13" fill="#263746" text-anchor="middle">srednja</text>
-        <text x="223.0" y="181" font-size="12" fill="#263746" text-anchor="middle">h/hf = 2</text>
+        <text x="223.0" y="181" font-size="12" fill="#263746" text-anchor="middle">h/h<tspan baseline-shift="sub" font-size="0.7em">f</tspan> = 2</text>
         <rect id="u12vs_z6domain2" x="303" y="100" width="112" height="56" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <line id="u12vs_z6grid2v0" x1="303.0" y1="100" x2="303.0" y2="156" stroke="#3a4a56" stroke-width="0.7" stroke-dasharray="2 2" />
         <line id="u12vs_z6grid2v1" x1="310.0" y1="100" x2="310.0" y2="156" stroke="#3a4a56" stroke-width="0.7" stroke-dasharray="2 2" />
@@ -228,7 +228,7 @@
         <line id="u12vs_z6grid2h7" x1="303" y1="149.0" x2="415" y2="149.0" stroke="#3a4a56" stroke-width="0.7" stroke-dasharray="2 2" />
         <line id="u12vs_z6grid2h8" x1="303" y1="156.0" x2="415" y2="156.0" stroke="#3a4a56" stroke-width="0.7" stroke-dasharray="2 2" />
         <text x="359.0" y="79" font-size="13" fill="#263746" text-anchor="middle">fina</text>
-        <text x="359.0" y="181" font-size="12" fill="#263746" text-anchor="middle">h/hf = 1</text>
+        <text x="359.0" y="181" font-size="12" fill="#263746" text-anchor="middle">h/h<tspan baseline-shift="sub" font-size="0.7em">f</tspan> = 1</text>
       </g>
     </g>
   </g>
