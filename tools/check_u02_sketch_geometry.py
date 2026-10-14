@@ -63,12 +63,21 @@ def capillary(root, prefix, count=1, convex=False):
     return results
 
 
-def tangent_forces(root,prefix,arc,theta):
+def tangent_forces(root,prefix,arc,theta,tip_at_contact=False,fluid=None):
+    """Surface force on the liquid along the meniscus tangent, up and toward the wall.
+
+    With theta > 0 an arrow starting on the contact line would cross the thin wall,
+    so it is drawn with its tip on the contact line and its tail in the liquid.
+    """
     cx,cy,r,measured,a,b=arc
     close(measured,theta,prefix+': contact angle from actual arc',tol=1e-5)
     for i,p in enumerate((a,b)):
         e=node(root,prefix+f'sigma{i}');u,v=line(e)
-        close(math.dist(u,p),0,prefix+': surface force starts on contact line')
+        if tip_at_contact:
+            close(math.dist(v,p),0,prefix+': surface-force tip on the contact line')
+            check(inside(u,fluid) and distance_to_path(u,fluid)>1,prefix+': surface-force tail lies in the liquid, not across the wall')
+        else:
+            close(math.dist(u,p),0,prefix+': surface force starts on contact line')
         dx,dy=delta(e)
         close(math.degrees(math.atan2(abs(dx),-dy)),theta,prefix+': tangent direction',tol=1e-5)
         check(dy<0 and dx*(-1 if i==0 else 1)>=-1e-10,prefix+': liquid pulled up and toward wall')
@@ -118,7 +127,7 @@ def main():
           'P2: no unrelated capillarity scene beside the shear problem')
     for root,p in [(intro,'u02fup_'),(ethanol,'u02fku_')]:
         ar,wl,wr,surface=capillary(root,p+'cap')[0]
-        tangent_forces(root,p+'cap',ar,18)
+        tangent_forces(root,p+'cap',ar,18,tip_at_contact=True,fluid=path(node(root,p+'capfluid')))
         hline=line(node(root,p+'height'))
         close(hline[0][1],ar[1]+ar[2],p+': height starts at meniscus apex')
         close(hline[1][1],surface,p+': height ends at free surface')
@@ -146,13 +155,18 @@ def main():
     check(float(node(z,'u02vs_z2inner').get('r'))<float(node(z,'u02vs_z2outer1').get('r')),'Z2: two separate soap-film interfaces')
     up=rect(node(z,'u02vs_z3upperFluid'));down=rect(node(z,'u02vs_z3lowerFluid'));plate=rect(node(z,'u02vs_z3moving'))
     close(down[3]/up[3],2,'Z3: gap ratio 2')
-    d0,d1,pull=(-delta(node(z,'u02vs_z3drag0'))[0],-delta(node(z,'u02vs_z3drag1'))[0],delta(node(z,'u02vs_z3pull'))[0])
-    close(d0,2*d1,'Z3: F1=2F2 for the 1:2 gaps',tol=1e-6);close(pull,d0+d1,'Z3: pull balances both resistances',tol=1e-6)
+    # Z3 asks for the direction of each resistance: the sketch names F1 and F2 as unknowns only.
+    ids={e.get('id') for e in z.iter()}
+    check(not any((i or '').startswith('u02vs_z3drag') for i in ids),'Z3: resistance arrows would reveal the asked directions')
+    for k,(lo,hi) in ((1,(up[1],up[1]+up[3])),(2,(down[1],down[1]+down[3]))):
+        lab=node(z,f'u02vs_z3label{k}')
+        check(''.join(lab.itertext()).replace(' ','')==('F₁=?' if k==1 else 'F₂=?'),'Z3: unknown resistance labelled with ?')
+        check(lo<float(lab.get('y'))<hi,'Z3: each unknown sits in its own gap')
+    check(delta(node(z,'u02vs_z3pull'))[0]>0,'Z3: pull acts in the direction of motion')
     p0=line(node(z,'u02vs_z3profile0'));close(delta(node(z,'u02vs_z3speed'))[0],p0[1][0]-p0[0][0],'Z3: plate speed arrow equals u',tol=1e-6)
     for i,(a,b) in enumerate((line(node(z,'u02vs_z3profile0')),line(node(z,'u02vs_z3profile1')))):
         if i==0:close(a[1],up[1],'Z3 upper zero');close(b[1],plate[1],'Z3 upper moving wall')
         else:close(a[1],plate[1]+plate[3],'Z3 lower moving wall');close(b[1],down[1]+down[3],'Z3 lower zero')
-        check(delta(node(z,f'u02vs_z3drag{i}'))[0]<0,'Z3: both resistances point left')
         dimension(z,f'u02vs_z3gap{i+1}',(26 if i==0 else 278,up[1] if i==0 else down[1]),(26 if i==0 else 278,up[1]+up[3] if i==0 else down[1]+down[3]))
     # Z4: two equal plate gaps in sea water; clean steel rises (concave, 30 deg),
     # hydrophobic coating depresses (shallow convex meniscus below the free surface, 105 deg).
@@ -161,24 +175,27 @@ def main():
     ln=line(node(z,'u02vs_z4height0'))
     close(ln[0][1],ar[1]+ar[2],'Z4: rise measured from meniscus apex');close(ln[1][1],surface,'Z4: rise measured to free surface')
     rise=math.dist(*ln);gap0=wr[0]-wl[0]-wl[2]
+    check(abs(rise/gap0-62.873/0.20)>100,'Z4: h1 must not be drawn at the result scale of the gap width b')
     dimension(z,'u02vs_z4gap0',(wl[0]+wl[2],61),(wr[0],61))
-    e=node(z,'u02vs_z4interface1');tk=re.findall(r'[A-Za-z]|[-+]?(?:[0-9]*[.][0-9]+|[0-9]+)',e.get('d'))
-    check(len(tk)==11 and tk[0]=='M' and tk[3]=='A' and tk[7]=='0' and tk[8]=='1','Z4: coated gap needs a shallow convex arc')
-    x1,y1,r,x2,y2=map(float,(tk[1],tk[2],tk[4],tk[9],tk[10]))
-    close(y1,y2,'Z4: coated contact lips at equal height');check(y1>surface,'Z4: coated liquid below the free surface')
-    a=(x2-x1)/2;cx=(x1+x2)/2;cy=y1+math.sqrt(r*r-a*a);apex=cy-r
-    close(180-math.degrees(math.acos(a/r)),105,'Z4: coated contact angle 105 degrees through the liquid',tol=1e-5)
+    # Coated gap: h2 and its sign are asked, so neither meniscus nor level is shown;
+    # a "?" window hides the gap around the free-surface level (only theta_2 is given).
+    ids={e.get('id') for e in z.iter()}
+    check('u02vs_z4interface1' not in ids and 'u02vs_z4height1' not in ids,'Z4: coated-gap meniscus and h2 must not be drawn')
     wl1=rect(node(z,'u02vs_z4tube1left'));wr1=rect(node(z,'u02vs_z4tube1right'))
-    close(wl1[0]+wl1[2],x1,'Z4: coated left contact on inner wall');close(wr1[0],x2,'Z4: coated right contact on inner wall')
     close(wr1[0]-wl1[0]-wl1[2],gap0,'Z4: both gaps have the same width b')
     check(surface<wl1[1]+wl1[3]<284-5,'Z4: coated gap mouth immersed above the floor')
-    fluid=path(node(z,'u02vs_z4fluid'))
-    for p in sample_segment((cx,275),(cx,apex+3),101):
+    hx,hy,hw,hh=rect(node(z,'u02vs_z4hidden'))
+    check(hx<=wl1[0] and hx+hw>=wr1[0]+wr1[2],'Z4: window covers the whole coated gap')
+    check(hy<surface-15 and hy+hh>surface+15,'Z4: window hides any level near the free surface')
+    texts=[(''.join(e.itertext()).strip(),e) for e in z.iter() if e.tag.endswith('text')]
+    check(any(s=='?' and hx<float(e.get('x'))<hx+hw and hy<float(e.get('y'))<hy+hh for s,e in texts),'Z4: unknown level marked with ?')
+    check(any(s.replace(' ','')=='h₂=?' for s,e in texts),'Z4: h2 named as unknown')
+    fluid=path(node(z,'u02vs_z4fluid'));cx=wl1[0]+wl1[2]+gap0/2
+    for p in sample_segment((cx,275),(cx,hy+hh+2),101):
         check(inside(p,fluid) and distance_to_path(p,fluid)>1,'Z4: liquid continuous from tank into the coated gap')
+    top=min(y for x,y in fluid if wl1[0]+wl1[2]-1e-9<=x<=wr1[0]+1e-9)
+    check(hy<top<hy+hh,'Z4: liquid boundary in the coated gap stays hidden')
     dimension(z,'u02vs_z4gap1',(wl1[0]+wl1[2],61),(wr1[0],61))
-    ln=line(node(z,'u02vs_z4height1'))
-    close(ln[0][1],surface,'Z4: depression measured from free surface');close(ln[1][1],apex,'Z4: depression measured to meniscus apex')
-    close(rise/math.dist(*ln),0.062873/0.018790,'Z4: rise/depression ratio follows the data',tol=0.02)
     ar,wl,wr,surface=capillary(z,'u02vs_z6',convex=True)[0]
     close(2*ar[2]/(wr[0]-wl[0]-wl[2]),1.8/.5,'Z6: D/d nominal ratio')
     dimension(z,'u02vs_z6height',(269,wl[1]),(269,surface))
@@ -202,7 +219,7 @@ def main():
                 txt=''.join(t.itertext())
                 check(not re.search(r'(stijenka|čahura): u = 0',txt),name+': u is the moving-wall speed; use v = 0 at a fixed wall')
                 check('p₀' not in txt,name+': p_0 is reserved for stagnation pressure')
-    print('U02 SVG PASS: 7 images; open immersed mouths, continuous liquid, circular menisci and 18° tangents, no-slip profiles, force directions, true dimensions and ratios.')
+    print('U02 SVG PASS: 7 images; open immersed mouths, continuous liquid, circular menisci and 18° tangents (tips on the contact line), no-slip profiles, force directions, unknowns not revealed in Z3/Z4, true dimensions and ratios.')
 
 
 if __name__=='__main__':main()

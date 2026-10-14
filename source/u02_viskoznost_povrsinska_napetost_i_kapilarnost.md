@@ -213,10 +213,10 @@ $$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-05}
 Težina stupca tekućine podignutoga iznad razine u posudi jest
 
 $$
-G = \rho gV = \rho g\frac{\pi d^2}{4}h.
+F_G = \rho gV = \rho g\frac{\pi d^2}{4}h.
 $$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-06}
 
-U ravnoteži mora vrijediti $F_{\sigma,z}=G$, pa slijedi
+U ravnoteži mora vrijediti $F_{\sigma,z}=F_G$, pa slijedi
 
 $$
 \sigma \pi d \cos\theta = \rho g \frac{\pi d^2}{4} h.
@@ -872,9 +872,9 @@ $h_{cap}\approx58{,}8\ \mathrm{mm}$; $p_{M,1}=0$. Nominalno $p_{M,2}\approx0{,}5
 
 :::::
 
-![Skice uz Z1–Z6: viskozno smicanje, kapljice i kapilare.](../assets/print/u02_vjezbe_skice.svg){#fig-u02-vjezbe fig-align="center" fig-alt="Skice uz Z1–Z6: smicanje između ploča, kapljica i sapunasti mjehur, dva uljna procjepa, procjep između limova s usponom i spuštanjem morske vode, mjerenje viskoznog otpora te igla s izlaznom kapljicom."}
+![Skice uz Z1–Z6: viskozno smicanje, kapljice i kapilare.](../assets/print/u02_vjezbe_skice.svg){#fig-u02-vjezbe fig-align="center" fig-alt="Skice uz Z1–Z6: smicanje između ploča, kapljica i sapunasti mjehur, dva uljna procjepa, procjep između limova s usponom morske vode u očišćenom procjepu i neprikazanom razinom u premazanom procjepu, mjerenje viskoznog otpora te igla s izlaznom kapljicom."}
 
-**Napomene uz skice.** U Z1 donja ploča miruje, a sile djeluju na gornju ploču. U Z2 vanjski zrak ima tlak $p_{atm}$, pa je $\Delta p=p_u-p_{atm}$; debljina sapunastog filma uvećana je, a težina zanemarena. U Z3 obje vanjske stijenke miruju. U Z5 uzorak dodiruje samo donju stranu ploče. U Z4 lijevi procjep prikazuje očišćeni čelik (uspon, konkavni meniskus), a desni premazani (spuštanje, konveksni meniskus); širina procjepa i visine imaju zasebna mjerila, omjer uspona i spuštanja odgovara zadanim podatcima.
+**Napomene uz skice.** U Z1 donja ploča miruje, a sile djeluju na gornju ploču. U Z2 vanjski zrak ima tlak $p_{atm}$, pa je $\Delta p=p_u-p_{atm}$; debljina sapunastog filma uvećana je, a težina zanemarena. U Z3 obje vanjske stijenke miruju, a otpori $F_1$ i $F_2$ označeni su samo kao nepoznanice, bez smjera. U Z5 uzorak dodiruje samo donju stranu ploče; $F_v$ je sila uzorka na ploču, a $F$ vučna sila dinamometra. U Z4 lijevi procjep prikazuje očišćeni čelik (uspon, konkavni meniskus); u desnom, premazanom procjepu zadan je samo kut $\theta_2$, a razina je skrivena oznakom „?” jer je $h_2$ traženi rezultat. Širina procjepa i visine imaju zasebna mjerila.
 
 ## Sažetak
 

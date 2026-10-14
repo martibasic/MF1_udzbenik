@@ -26,6 +26,15 @@
     <marker id="u02v2vk_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
     </marker>
+    <marker id="u02v2vk_vF" viewBox="0 0 7 6" markerWidth="5.75" markerHeight="4.93" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u02v2vk_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </marker>
+    <marker id="u02v2vk_vP" viewBox="0 0 7 6" markerWidth="6" markerHeight="5.14" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
   </defs>
   <g id="u02v2vk_title-scene-1" transform="translate(-16.0000 -26.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
@@ -35,21 +44,21 @@
       <rect id="u02v2vk_shearfixed" x="74" y="288" width="350" height="14" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <line id="u02v2vk_shearzero" x1="116.0" y1="288" x2="116.0" y2="151" stroke="#356b83" stroke-width="1" stroke-dasharray="3 3" />
       <line id="u02v2vk_shearprofile" x1="116.0" y1="288" x2="315.5" y2="151" stroke="#356b83" stroke-width="1.7" />
-      <path id="u02v2vk_shearvelocity1" d="M116.0 260.6 L155.89999999999998 260.6" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)" />
-      <path id="u02v2vk_shearvelocity2" d="M116.0 233.2 L195.79999999999998 233.2" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)" />
-      <path id="u02v2vk_shearvelocity3" d="M116.0 205.8 L235.7 205.8" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)" />
-      <path id="u02v2vk_shearvelocity4" d="M116.0 178.4 L275.59999999999997 178.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)" />
-      <path id="u02v2vk_shearspeed" d="M116.0 108 L315.5 108" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02v2vk_axisMarker)" />
-      <text x="215.75" y="97.0" font-size="13" fill="#263746" text-anchor="middle">u</text>
-      <path id="u02v2vk_sheardrag" d="M182.5 151 L88.0 151" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02v2vk_reactionMarker)" />
-      <text x="89.75" y="174" font-size="13" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
-      <path id="u02v2vk_shearpull" d="M347.0 143 L441.5 143" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02v2vk_forceMarker)" />
-      <text x="417.0" y="131" font-size="13" fill="#263746" text-anchor="middle">F</text>
-      <text x="326.0" y="229.08999999999997" font-size="11" fill="#263746" text-anchor="start">v(y)</text>
+      <path id="u02v2vk_shearvelocity1" d="M116.0 260.6 L155.89999999999998 260.6" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02v2vk_vopen)" data-mf1-vector="velocity" />
+      <path id="u02v2vk_shearvelocity2" d="M116.0 233.2 L195.79999999999998 233.2" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02v2vk_vopen)" data-mf1-vector="velocity" />
+      <path id="u02v2vk_shearvelocity3" d="M116.0 205.8 L235.7 205.8" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02v2vk_vopen)" data-mf1-vector="velocity" />
+      <path id="u02v2vk_shearvelocity4" d="M116.0 178.4 L275.59999999999997 178.4" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02v2vk_vopen)" data-mf1-vector="velocity" />
+      <path id="u02v2vk_shearspeed" d="M116.0 108 L315.5 108" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02v2vk_vopen)" data-mf1-vector="velocity" />
+      <text x="215.75" y="97.0" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">u</text>
+      <path id="u02v2vk_sheardrag" d="M182.5 151 L88.0 151" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u02v2vk_vF)" data-mf1-vector="force" />
+      <text x="89.75" y="174" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
+      <path id="u02v2vk_shearpull" d="M347.0 143 L441.5 143" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u02v2vk_vF)" data-mf1-vector="force" />
+      <text x="417.0" y="131" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F</text>
+      <text x="326.0" y="229.08999999999997" font-size="11" fill="#263746" text-anchor="start" font-weight="700">v(y)</text>
       <text x="249.0" y="321" font-size="10" fill="#263746" text-anchor="middle">nepomična stijenka: v = 0</text>
       <line x1="51" y1="151" x2="61" y2="151" stroke="#657781" stroke-width="1.2" />
       <line x1="51" y1="288" x2="61" y2="288" stroke="#657781" stroke-width="1.2" />
-      <path id="u02v2vk_sheargap" d="M56 151 L56 288" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02v2vk_dim)" marker-end="url(#u02v2vk_dim)" />
+      <path id="u02v2vk_sheargap" d="M56 151 L56 288" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02v2vk_dim)" marker-end="url(#u02v2vk_dim)" data-mf1-role="dimension" />
       <text x="40" y="223.5" font-size="11" fill="#263746" text-anchor="start">δ</text>
       <text x="249" y="83" font-size="12" fill="#263746" text-anchor="middle">u = 0,90 m/s; δ = 3 mm; A = 0,18 m²</text>
       <text x="254" y="346" font-size="12" fill="#263746" text-anchor="middle">μ = 0,42 Pa s; ρ = 870 kg/m³</text>
