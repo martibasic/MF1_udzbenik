@@ -75,7 +75,7 @@ def check_cargo_tank():
     gg = n["u03c1zsuz_gas-gauge"]
     assert f(gg, "cy") < f(gas, "y")
     labels = " | ".join(texts(root))
-    for needed in ("860", "1025", "3,0 kPa", "18,60", "2,31", "0,35", "M,dno"):
+    for needed in ("860", "ρmv = 1025", "3,0 kPa", "18,60", "2,31", "0,35", "M,dno"):
         assert needed in labels, needed
     assert "kPa</" not in labels and "15,94" not in labels, "rezultati ne idu u skicu"
     print("PASS u03 cargo tank: layered fluids, 20 px/m dimensions, open ullage hatch, bottom gauge")
@@ -113,6 +113,9 @@ def check_ballast_tank():
     assert abs(f(air, "y") + f(air, "height") - f(ballast, "y")) < 1e-9, "razina u sondi jednaka razini u tanku"
     labels = " | ".join(texts(root))
     assert labels.count("1025") == 2 and "1000" not in labels
+    # Gustoća mora ρ_mv (indeks m samo model), kota ploče z_P (h_p je piezometarska visina).
+    assert "ρmv = 1025" in labels and "ρm = " not in labels
+    assert "zP" in labels.split(" | ") and "hp" not in labels.split(" | ")
     assert "ploča P" in labels and "sondna cijev" in labels and "prozor" not in labels
     print("PASS u03 ballast tank: equal seawater densities, 36 px/m dimensions, plate P in shell, open sounding pipe")
 
@@ -125,10 +128,31 @@ def check_bridge_labels():
     print("PASS u03 bridge sketch: free-surface pressure labelled p_pov")
 
 
+def check_exercises():
+    """Skice zadataka ne smiju otkrivati rezultat (načelo odobreno 14. 10. 2026.)."""
+    root, n = read("u03_vjezbe_skice.svg")
+    oil, water, iface = n["u03vs_z4_oil"], n["u03vs_z4_water"], n["u03vs_z4_interface"]
+    top, bottom = f(oil, "y"), f(water, "y") + f(water, "height")
+    # Slojevi se dodiruju na nacrtanoj granici.
+    assert abs(f(oil, "y") + f(oil, "height") - f(iface, "y1")) < 1e-9 and abs(f(water, "y") - f(iface, "y1")) < 1e-9
+    assert abs(f(n["u03vs_z4_dim-ho"], "y2") - f(iface, "y1")) < 1e-9 and abs(f(n["u03vs_z4_dim-hw"], "y1") - f(iface, "y1")) < 1e-9
+    # Granica NIJE u omjeru rezultata h_o/H (Z4: H = 1,50 m, p_M,A = 13,83 kPa).
+    g, H, rho_o, rho_w, p = 9.81, 1.50, 850.0, 1000.0, 13.83e3
+    h_o = (rho_w * g * H - p) / ((rho_w - rho_o) * g)
+    ratio = (f(iface, "y1") - top) / (bottom - top)
+    assert 0 < ratio < 1 and abs(ratio - h_o / H) > 0.05, (ratio, h_o / H)
+    # Točke koje tekst ne imenuje nisu označene (Z1, Z3; u Z6 samo A iz napomene).
+    for group, banned in (("u03vs_z1", {"A", "a"}), ("u03vs_z3", {"A", "a"}), ("u03vs_z6", {"C"})):
+        labels = {" ".join("".join(t.itertext()).split()) for t in n[group].iter() if t.tag.endswith("text")}
+        assert not labels & banned, (group, labels & banned)
+    print("PASS u03 exercises: Z4 interface not at result ratio, unnamed points unlabelled")
+
+
 def main():
     check_cargo_tank()
     check_ballast_tank()
     check_bridge_labels()
+    check_exercises()
 
 
 if __name__ == "__main__":

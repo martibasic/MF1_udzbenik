@@ -45,7 +45,7 @@
       <text x="492" y="50" font-size="11" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.7em">M,pl</tspan> = 3,0 kPa</text>
       <text x="364" y="250" font-size="13" fill="#263746" text-anchor="middle">plinsko ulje</text>
       <text x="364" y="268" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 860 kg/m³</text>
-      <text x="440" y="408" font-size="11" fill="#263746" text-anchor="middle">morska voda (talog), ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1025 kg/m³</text>
+      <text x="440" y="408" font-size="11" fill="#263746" text-anchor="middle">morska voda (talog), ρ<tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 1025 kg/m³</text>
       <line x1="440" y1="411" x2="440" y2="425" stroke="#657781" stroke-width="0.7" />
       <text x="310" y="124" font-size="10" fill="#263746" text-anchor="end">ullage vrpca: U<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 2,31 m</text>
       <text x="312" y="414" font-size="10" fill="#263746" text-anchor="end">sonda s pastom</text>
@@ -56,17 +56,17 @@
       <line x1="574" y1="430" x2="704" y2="430" stroke="#657781" stroke-width="0.7" />
       <line x1="605" y1="58" x2="615" y2="58" stroke="#657781" stroke-width="0.8" />
       <line x1="605" y1="104.2" x2="615" y2="104.2" stroke="#657781" stroke-width="0.8" />
-      <line id="u03c1zsuz_dim-u" x1="610" y1="58" x2="610" y2="104.2" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+      <line id="u03c1zsuz_dim-u" x1="610" y1="58" x2="610" y2="104.2" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" data-mf1-role="dimension" />
       <text x="616" y="85" font-size="11" fill="#263746" text-anchor="start">U = ?</text>
       <line x1="635" y1="104.2" x2="645" y2="104.2" stroke="#657781" stroke-width="0.8" />
       <line x1="635" y1="423" x2="645" y2="423" stroke="#657781" stroke-width="0.8" />
-      <line id="u03c1zsuz_dim-ho" x1="640" y1="104.2" x2="640" y2="423" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+      <line id="u03c1zsuz_dim-ho" x1="640" y1="104.2" x2="640" y2="423" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" data-mf1-role="dimension" />
       <text x="646" y="262" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">o</tspan></text>
       <text x="646" y="278" font-size="10" fill="#263746" text-anchor="start">= ?</text>
       <text x="580" y="446" font-size="10" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 0,35 m</text>
       <line x1="695" y1="58" x2="705" y2="58" stroke="#657781" stroke-width="0.8" />
       <line x1="695" y1="430" x2="705" y2="430" stroke="#657781" stroke-width="0.8" />
-      <line id="u03c1zsuz_dim-href" x1="700" y1="58" x2="700" y2="430" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" />
+      <line id="u03c1zsuz_dim-href" x1="700" y1="58" x2="700" y2="430" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" data-mf1-role="dimension" />
       <text x="716" y="236" font-size="11" fill="#263746" text-anchor="middle" transform="rotate(-90 716 236)">H<tspan baseline-shift="sub" font-size="0.7em">ref</tspan> = 18,60 m</text>
     </g>
   </g>

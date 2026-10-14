@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 905 698" role="img" aria-labelledby="u03vs_title u03vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:905px;height:auto;">
   <title id="u03vs_title">Skice uz zadatke Z1–Z6 iz hidrostatike i manometrije</title>
-  <desc id="u03vs_desc">Z1: otvoreni spremnik i dubina promatrane točke. Z2: tlakovi u plinu G i uz dno A određuju visinu vode. Z3: priključna točka u ulju 0,12 m je iznad granice ulja i žive, otvorena površina žive desno je viša za Δh. Z4: ulje iznad vode bez krute pregrade; zbroj nepoznatih debljina jednak je ukupnoj visini. Z5: jedan otvoreni U-manometar s jednom od triju mogućih tekućina; viša je površina na strani podtlaka. Z6: spojni vod potpuno ispunjen vodom vodi do granice vode i žive na istoj visini kao priključak A. Dublja točka je na dubini h2; živa u otvorenom kraku je viša. Plinski prostori i zrak u otvorenim kracima imaju ispunu plina. Svi su donji spojevi prohodni. Tlakovi su skalarne oznake, dvostrane strelice su kote, ne sile niti tok. Skice nisu u mjerilu.</desc>
+  <desc id="u03vs_desc">Z1: otvoreni spremnik i dubina promatrane točke. Z2: tlakovi u plinu G i uz dno A određuju visinu vode. Z3: priključna točka u ulju 0,12 m je iznad granice ulja i žive, otvorena površina žive desno je viša za Δh. Z4: ulje iznad vode bez krute pregrade; zbroj nepoznatih debljina jednak je ukupnoj visini, a granica slojeva nacrtana je shematski na polovini, ne u omjeru rezultata. Z5: jedan otvoreni U-manometar s jednom od triju mogućih tekućina; viša je površina na strani podtlaka. Z6: spojni vod potpuno ispunjen vodom vodi do granice vode i žive na istoj visini kao priključak A. Dublja točka je na dubini h2; živa u otvorenom kraku je viša. Plinski prostori i zrak u otvorenim kracima imaju ispunu plina. Svi su donji spojevi prohodni. Tlakovi su skalarne oznake, dvostrane strelice su kote, ne sile niti tok. Skice nisu u mjerilu.</desc>
   <defs>
     <pattern id="u03vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.4" />
@@ -28,7 +28,7 @@
         <circle cx="142" cy="246" r="3.5" fill="#356b83" />
         <line x1="245" y1="136" x2="257" y2="136" stroke="#657781" stroke-width="0.8" />
         <line x1="245" y1="246" x2="257" y2="246" stroke="#657781" stroke-width="0.8" />
-        <line x1="251" y1="136" x2="251" y2="246" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+        <line x1="251" y1="136" x2="251" y2="246" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
         <text x="260" y="180" font-size="11" fill="#263746" text-anchor="start">h =</text>
         <text x="254" y="198" font-size="10.5" fill="#263746" text-anchor="start">2,40 m</text>
         <line x1="232" y1="136" x2="257" y2="136" stroke="#657781" stroke-width="0.8" />
@@ -56,7 +56,7 @@
         <line x1="107" y1="252" x2="225" y2="252" stroke="#657781" stroke-width="0.8" />
         <line x1="212" y1="138" x2="224" y2="138" stroke="#657781" stroke-width="0.8" />
         <line x1="212" y1="252" x2="224" y2="252" stroke="#657781" stroke-width="0.8" />
-        <line x1="218" y1="138" x2="218" y2="252" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+        <line x1="218" y1="138" x2="218" y2="252" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
         <text x="234" y="195.0" font-size="11" fill="#263746" text-anchor="start">h = ?</text>
         <text x="150" y="304" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">A</tspan> − p<tspan baseline-shift="sub" font-size="0.75em">pl</tspan> = 17,62 kPa</text>
       </g>
@@ -81,11 +81,11 @@
         <line x1="85" y1="210" x2="206" y2="210" stroke="#657781" stroke-width="1" stroke-dasharray="4,3" />
         <line x1="158" y1="130" x2="170" y2="130" stroke="#657781" stroke-width="0.8" />
         <line x1="158" y1="210" x2="170" y2="210" stroke="#657781" stroke-width="0.8" />
-        <line x1="164" y1="130" x2="164" y2="210" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+        <line x1="164" y1="130" x2="164" y2="210" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
         <text x="178" y="177" font-size="11" fill="#263746" text-anchor="start">Δh</text>
         <line x1="30" y1="158" x2="42" y2="158" stroke="#657781" stroke-width="0.8" />
         <line x1="30" y1="210" x2="42" y2="210" stroke="#657781" stroke-width="0.8" />
-        <line x1="36" y1="158" x2="36" y2="210" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+        <line x1="36" y1="158" x2="36" y2="210" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
         <text x="3" y="188" font-size="10" fill="#263746" text-anchor="start">0,12</text>
         <text x="3" y="200" font-size="10" fill="#263746" text-anchor="start">m</text>
         <text x="150" y="312" font-size="11" fill="#263746" text-anchor="middle">Δh = 0,185 m</text>
@@ -97,33 +97,33 @@
       <g id="u03vs_z4" transform="translate(28 386)">
         <text x="20" y="24" font-size="10" fill="#263746" text-anchor="middle" font-weight="700">Z4</text>
         <text x="38" y="24" font-size="12.5" fill="#263746" text-anchor="start" font-weight="600">Debljina sloja ulja</text>
-        <rect x="70" y="105" width="102" height="62" fill="#eadfc5" stroke="none" stroke-width="1.2" rx="0" />
-        <rect x="70" y="167" width="102" height="93" fill="#dcebf1" stroke="none" stroke-width="1.2" rx="0" />
+        <rect id="u03vs_z4_oil" x="70" y="105" width="102" height="77.5" fill="#eadfc5" stroke="none" stroke-width="1.2" rx="0" />
+        <rect id="u03vs_z4_water" x="70" y="182.5" width="102" height="77.5" fill="#dcebf1" stroke="none" stroke-width="1.2" rx="0" />
         <path d="M60 66 H70 V260 H172 V66 H182 V270 H60 Z" fill="url(#u03vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <line x1="70" y1="105" x2="172" y2="105" stroke="#356b83" stroke-width="2" />
-        <line x1="70" y1="167" x2="172" y2="167" stroke="#3a4a56" stroke-width="1.4" />
+        <line id="u03vs_z4_interface" x1="70" y1="182.5" x2="172" y2="182.5" stroke="#3a4a56" stroke-width="1.4" />
         <text x="121" y="88" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">atm</tspan></text>
-        <text x="121" y="141" font-size="12" fill="#263746" text-anchor="middle">ulje</text>
-        <text x="121" y="219" font-size="12" fill="#263746" text-anchor="middle">voda</text>
+        <text x="121" y="148" font-size="12" fill="#263746" text-anchor="middle">ulje</text>
+        <text x="121" y="226" font-size="12" fill="#263746" text-anchor="middle">voda</text>
         <circle cx="121" cy="260" r="3.5" fill="#356b83" />
         <text x="131" y="252" font-size="12" fill="#263746" text-anchor="start" font-weight="700">A</text>
         <line x1="30" y1="105" x2="42" y2="105" stroke="#657781" stroke-width="0.8" />
         <line x1="30" y1="260" x2="42" y2="260" stroke="#657781" stroke-width="0.8" />
-        <line x1="36" y1="105" x2="36" y2="260" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+        <line x1="36" y1="105" x2="36" y2="260" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
         <text x="20" y="174" font-size="12" fill="#263746" text-anchor="middle">H</text>
         <text x="20" y="191" font-size="10" fill="#263746" text-anchor="middle">1,50 m</text>
         <line x1="42" y1="105" x2="60" y2="105" stroke="#657781" stroke-width="0.8" />
         <line x1="42" y1="260" x2="60" y2="260" stroke="#657781" stroke-width="0.8" />
         <line x1="208" y1="105" x2="220" y2="105" stroke="#657781" stroke-width="0.8" />
-        <line x1="208" y1="167" x2="220" y2="167" stroke="#657781" stroke-width="0.8" />
-        <line x1="214" y1="105" x2="214" y2="167" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-        <text x="230" y="140" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.75em">u</tspan> = ?</text>
-        <line x1="208" y1="167" x2="220" y2="167" stroke="#657781" stroke-width="0.8" />
+        <line x1="208" y1="182.5" x2="220" y2="182.5" stroke="#657781" stroke-width="0.8" />
+        <line id="u03vs_z4_dim-ho" x1="214" y1="105" x2="214" y2="182.5" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
+        <text x="230" y="148" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.75em">o</tspan> = ?</text>
+        <line x1="208" y1="182.5" x2="220" y2="182.5" stroke="#657781" stroke-width="0.8" />
         <line x1="208" y1="260" x2="220" y2="260" stroke="#657781" stroke-width="0.8" />
-        <line x1="214" y1="167" x2="214" y2="260" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
-        <text x="230" y="217" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.75em">w</tspan> = ?</text>
+        <line id="u03vs_z4_dim-hw" x1="214" y1="182.5" x2="214" y2="260" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
+        <text x="230" y="225" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.75em">w</tspan> = ?</text>
         <line x1="182" y1="105" x2="220" y2="105" stroke="#657781" stroke-width="0.8" />
-        <line x1="182" y1="167" x2="220" y2="167" stroke="#657781" stroke-width="0.8" />
+        <line x1="182" y1="182.5" x2="220" y2="182.5" stroke="#657781" stroke-width="0.8" />
         <line x1="182" y1="260" x2="220" y2="260" stroke="#657781" stroke-width="0.8" />
         <text x="150" y="302" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">M,A</tspan> = 13,83 kPa</text>
       </g>
@@ -147,7 +147,7 @@
         <line x1="105" y1="216" x2="203" y2="216" stroke="#657781" stroke-width="1" stroke-dasharray="4,3" />
         <line x1="149" y1="141" x2="161" y2="141" stroke="#657781" stroke-width="0.8" />
         <line x1="149" y1="216" x2="161" y2="216" stroke="#657781" stroke-width="0.8" />
-        <line x1="155" y1="141" x2="155" y2="216" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+        <line x1="155" y1="141" x2="155" y2="216" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
         <text x="170" y="181" font-size="11" fill="#263746" text-anchor="start">Δh</text>
         <text x="154" y="246" font-size="11" fill="#263746" text-anchor="middle">jedna tekućina</text>
       </g>
@@ -186,15 +186,15 @@
         <line x1="191" y1="169" x2="238" y2="169" stroke="#657781" stroke-width="0.8" stroke-dasharray="3,3" />
         <line x1="212" y1="169" x2="224" y2="169" stroke="#657781" stroke-width="0.8" />
         <line x1="212" y1="190" x2="224" y2="190" stroke="#657781" stroke-width="0.8" />
-        <line x1="218" y1="169" x2="218" y2="190" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+        <line x1="218" y1="169" x2="218" y2="190" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
         <text x="203" y="212" font-size="11" fill="#263746" text-anchor="start">Δh</text>
         <line x1="38" y1="125" x2="50" y2="125" stroke="#657781" stroke-width="0.8" />
         <line x1="38" y1="190" x2="50" y2="190" stroke="#657781" stroke-width="0.8" />
-        <line x1="44" y1="125" x2="44" y2="190" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+        <line x1="44" y1="125" x2="44" y2="190" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
         <text x="55" y="161" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
         <line x1="92" y1="125" x2="104" y2="125" stroke="#657781" stroke-width="0.8" />
         <line x1="92" y1="255" x2="104" y2="255" stroke="#657781" stroke-width="0.8" />
-        <line x1="98" y1="125" x2="98" y2="255" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" />
+        <line x1="98" y1="125" x2="98" y2="255" stroke="#657781" stroke-width="1.4" marker-start="url(#u03vs_dimL)" marker-end="url(#u03vs_dim)" data-mf1-role="dimension" />
         <text x="76" y="227" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
         <text x="150" y="308" font-size="10.5" fill="#263746" text-anchor="middle">h<tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 0,65 m; h<tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 1,30 m; Δh = 0,210 m</text>
       </g>

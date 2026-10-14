@@ -69,16 +69,16 @@
       <text x="330" y="252" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">balastna voda</text>
       <text x="330" y="270" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">b</tspan> = 1025 kg/m³</text>
       <text x="137" y="223" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">morska voda</text>
-      <text x="137" y="239" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 1025 kg/m³</text>
-      <line x1="151" y1="314" x2="197" y2="314" stroke="#356b83" stroke-width="2.2" marker-end="url(#u03fbt_aB)" />
-      <line x1="234" y1="314" x2="213" y2="314" stroke="#356b83" stroke-width="2.2" marker-end="url(#u03fbt_aBL)" />
+      <text x="137" y="239" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 1025 kg/m³</text>
+      <line x1="151" y1="314" x2="197" y2="314" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fbt_aB)" data-mf1-vector="pressure" />
+      <line x1="234" y1="314" x2="213" y2="314" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fbt_aBL)" data-mf1-vector="pressure" />
       <text x="124" y="282" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,ext,P</tspan>
       </text>
       <text x="303" y="302" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,int,P</tspan><tspan baseline-shift="super" font-size="0.7em">A</tspan>
       </text>
       <text x="219" y="293" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="start">ploča P</text>
-      <line x1="280" y1="459" x2="280" y2="399" stroke="#356b83" stroke-width="2.4" marker-end="url(#u03fbt_aB)" />
-      <line x1="320" y1="348" x2="320" y2="383" stroke="#356b83" stroke-width="2.4" marker-end="url(#u03fbt_aBL)" />
+      <line x1="280" y1="459" x2="280" y2="399" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fbt_aB)" data-mf1-vector="pressure" />
+      <line x1="320" y1="348" x2="320" y2="383" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fbt_aBL)" data-mf1-vector="pressure" />
       <text x="314" y="368" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end">p<tspan baseline-shift="sub" font-size="0.7em">M,int,dno</tspan><tspan baseline-shift="super" font-size="0.7em">A</tspan>
       </text>
       <text x="279" y="475" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,ext,dno</tspan>
@@ -88,7 +88,7 @@
       <line x1="42" y1="386" x2="200" y2="386" stroke="#657781" stroke-width="0.8" stroke-dasharray="4,3" />
       <line x1="35" y1="80" x2="45" y2="80" stroke="#657781" stroke-width="0.8" />
       <line x1="35" y1="386" x2="45" y2="386" stroke="#657781" stroke-width="0.8" />
-      <line id="u03fbt_dim-tg" x1="40" y1="80" x2="40" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" />
+      <line id="u03fbt_dim-tg" x1="40" y1="80" x2="40" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" data-mf1-role="dimension" />
       <text x="13" y="211" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">T<tspan baseline-shift="sub" font-size="0.7em">g</tspan>
       </text>
       <text x="34" y="228" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="end">8,5 m</text>
@@ -96,7 +96,7 @@
       <line x1="450" y1="386" x2="480" y2="386" stroke="#657781" stroke-width="0.8" />
       <line x1="465" y1="206" x2="475" y2="206" stroke="#657781" stroke-width="0.8" />
       <line x1="465" y1="386" x2="475" y2="386" stroke="#657781" stroke-width="0.8" />
-      <line id="u03fbt_dim-ht" x1="470" y1="206" x2="470" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" />
+      <line id="u03fbt_dim-ht" x1="470" y1="206" x2="470" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" data-mf1-role="dimension" />
       <text x="476" y="284" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">H<tspan baseline-shift="sub" font-size="0.7em">t</tspan>
       </text>
       <text x="476" y="301" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="start">5,0 m</text>
@@ -104,8 +104,8 @@
       <line x1="520" y1="386" x2="571" y2="386" stroke="#657781" stroke-width="0.8" />
       <line x1="560" y1="314" x2="570" y2="314" stroke="#657781" stroke-width="0.8" />
       <line x1="560" y1="386" x2="570" y2="386" stroke="#657781" stroke-width="0.8" />
-      <line id="u03fbt_dim-hp" x1="565" y1="314" x2="565" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" />
-      <text x="577" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">p</tspan>
+      <line id="u03fbt_dim-hp" x1="565" y1="314" x2="565" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" data-mf1-role="dimension" />
+      <text x="577" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">z<tspan baseline-shift="sub" font-size="0.7em">P</tspan>
       </text>
       <text x="579" y="360" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="start">2,0 m</text>
     </g>
