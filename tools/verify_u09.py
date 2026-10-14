@@ -65,13 +65,13 @@ def cjeloviti_1_usisni_vod(z_P=2.0, D=0.150, Q_m3h=180.0, rho=1025.0,
 
 
 def primjer_venturi(D_1=0.060, D_2=0.030, dh_m=0.18, rho_Hg=13600.0,
-                     rho_ul=870.0, g=9.81):
-    dp = (rho_Hg - rho_ul) * g * dh_m
+                     rho_o=870.0, g=9.81):
+    dp = (rho_Hg - rho_o) * g * dh_m
     A_1 = math.pi * D_1**2 / 4
     # ratio = (D_1/D_2)^4
     ratio_v2_v1 = (D_1 / D_2)**2
     # Δp = ρ/2 (v_2² - v_1²) = ρ/2 v_1² (ratio² - 1)
-    v_1 = math.sqrt(2 * dp / (rho_ul * (ratio_v2_v1**2 - 1)))
+    v_1 = math.sqrt(2 * dp / (rho_o * (ratio_v2_v1**2 - 1)))
     v_2 = ratio_v2_v1 * v_1
     Q = A_1 * v_1
     return {"dp": dp, "v_1": v_1, "v_2": v_2, "Q": Q}
@@ -151,8 +151,8 @@ def zadatak_5(Q=.020, D_1=.100, p_1=150e3, p_min=60e3,
 
 
 def zadatak_6(D=0.070, dz=2.6, z_C=1.7, h_exit=1.2, g=9.81,
-               p_atm=101.3e3, rho=1000.0, K_sum=2.0, dK_sum=0.5,
-               K_C=1.2, dK_C=0.3):
+               p_atm=101.3e3, rho=1000.0, zeta_sum=2.0, dzeta_sum=0.5,
+               zeta_C=1.2, dzeta_C=0.3):
     v = math.sqrt(2 * g * dz)
     A = math.pi * D**2 / 4
     Q = A * v
@@ -160,17 +160,17 @@ def zadatak_6(D=0.070, dz=2.6, z_C=1.7, h_exit=1.2, g=9.81,
     p_C_abs = p_atm + rho * g * p_C_g
     t = math.sqrt(2 * h_exit / g)
     x = v * t
-    v_real = math.sqrt(2 * g * dz / (1 + K_sum))
+    v_real = math.sqrt(2 * g * dz / (1 + zeta_sum))
     Q_real = A * v_real
-    Q_max = A * math.sqrt(2 * g * dz / (1 + K_sum - dK_sum))
-    Q_min = A * math.sqrt(2 * g * dz / (1 + K_sum + dK_sum))
-    # Najmanji tlak nastaje uz najveći K_C i najmanji ukupni K_sum.
-    vh_at_p_min = dz / (1 + K_sum - dK_sum)
+    Q_max = A * math.sqrt(2 * g * dz / (1 + zeta_sum - dzeta_sum))
+    Q_min = A * math.sqrt(2 * g * dz / (1 + zeta_sum + dzeta_sum))
+    # Najmanji tlak nastaje uz najveći zeta_C i najmanji ukupni zeta_sum.
+    vh_at_p_min = dz / (1 + zeta_sum - dzeta_sum)
     p_C_abs_min = p_atm - rho * g * (
-        z_C + (1 + K_C + dK_C) * vh_at_p_min
+        z_C + (1 + zeta_C + dzeta_C) * vh_at_p_min
     )
-    p_C_abs_max = p_atm-rho*g*(z_C+(1+K_C-dK_C)*dz/(1+K_sum+dK_sum))
-    p_C_abs_real = p_atm-rho*g*(z_C+(1+K_C)*dz/(1+K_sum))
+    p_C_abs_max = p_atm-rho*g*(z_C+(1+zeta_C-dzeta_C)*dz/(1+zeta_sum+dzeta_sum))
+    p_C_abs_real = p_atm-rho*g*(z_C+(1+zeta_C)*dz/(1+zeta_sum))
     return {
         "v": v,
         "Q": Q,
@@ -318,13 +318,13 @@ def verify():
               "Rubovi promjera ne zatvaraju zadane nejednakosti.")
     _invariant(out, "U09.INV.z5_selection", e['accepted']==[.050], "Odabir ne zadovoljava oba tlacna uvjeta.")
     from itertools import product
-    corners=[zadatak_6(K_sum=ks,dK_sum=0,K_C=kc,dK_C=0)
+    corners=[zadatak_6(zeta_sum=ks,dzeta_sum=0,zeta_C=kc,dzeta_C=0)
              for ks,kc in product((1.5,2.5),(.9,1.5))]
     _invariant(out, "U09.INV.z6_corners", abs(min(r['p_C_abs_real'] for r in corners)-f['p_C_abs_min'])<1e-8
               and abs(max(r['p_C_abs_real'] for r in corners)-f['p_C_abs_max'])<1e-8
               and min(r['Q_real'] for r in corners)<.015<max(r['Q_real'] for r in corners)
               and f['p_C_abs_min']>30000, "Intervalni rubovi i odluka nisu konzistentni.")
-    no_loss=zadatak_6(K_sum=0,dK_sum=0,K_C=0,dK_C=0)
+    no_loss=zadatak_6(zeta_sum=0,dzeta_sum=0,zeta_C=0,dzeta_C=0)
     _invariant(out, "U09.INV.z6_ideal_limit", abs(no_loss['Q_real']-f['Q'])<1e-12
               and abs(no_loss['p_C_abs_real']-f['p_C_abs'])<1e-8,
               "Nulti gubitci ne vracaju idealni sifon.")

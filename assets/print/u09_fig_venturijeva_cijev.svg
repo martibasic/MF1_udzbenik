@@ -2,6 +2,7 @@
   <title id="u09vent_title">Venturi s diferencijalnim manometrom</title>
   <desc id="u09vent_desc">Jedinstveno polje ulja prolazi kroz otvorene presjeke Venturija i ulazi u dva slijepa mjerna voda. Živa u povezanom U-vodu niža je na strani većeg tlaka. Unutarnji promjeri 60 i 30 mm prikazani su u omjeru 2:1. Razlika razina žive iznosi 0,18 m. Strelice brzine na ulazu i u grlu odnose se 1 : 4 prema kontinuitetu.</desc>
   <defs>
+    <marker id="u09vent_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <pattern id="u09vent_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
     </pattern>
@@ -34,25 +35,25 @@
       <text x="104" y="123" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">1</text>
       <circle id="u09vent_two" cx="270" cy="174" r="3" fill="#356b83" />
       <text x="270" y="142" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">2</text>
-      <path d="M68 174 L88 174" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vent_v)" />
-      <path d="M236 174 L316 174" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09vent_v)" />
-      <text x="354" y="127" font-size="11" fill="#263746" text-anchor="start">ulje: ρ<tspan baseline-shift="sub" font-size="0.7em">ul</tspan> = 870 kg/m³</text>
+      <path d="M68 174 L88 174" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09vent_vopen)" data-mf1-vector="velocity" />
+      <path d="M236 174 L316 174" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09vent_vopen)" data-mf1-vector="velocity" />
+      <text x="354" y="127" font-size="11" fill="#263746" text-anchor="start">ulje: ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 870 kg/m³</text>
       <text x="320" y="395" font-size="11" fill="#263746" text-anchor="start">živa: ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> = 13600 kg/m³</text>
       <line x1="279" y1="395" x2="312" y2="391" stroke="#657781" stroke-width="1" />
       <line x1="38" y1="144" x2="48" y2="144" stroke="#657781" stroke-width="1.2" />
       <line x1="38" y1="204" x2="48" y2="204" stroke="#657781" stroke-width="1.2" />
-      <path id="u09vent_D1" d="M43 144 L43 204" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)" />
+      <path id="u09vent_D1" d="M43 144 L43 204" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)" data-mf1-role="dimension" />
       <text x="19" y="124" font-size="11" fill="#263746" text-anchor="start">D<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
       <text x="18" y="224" font-size="11" fill="#263746" text-anchor="start">60 mm</text>
       <line x1="326" y1="159" x2="336" y2="159" stroke="#657781" stroke-width="1.2" />
       <line x1="326" y1="189" x2="336" y2="189" stroke="#657781" stroke-width="1.2" />
-      <path id="u09vent_D2" d="M331 159 L331 189" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)" />
+      <path id="u09vent_D2" d="M331 159 L331 189" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)" data-mf1-role="dimension" />
       <text x="340" y="184" font-size="11" fill="#263746" text-anchor="start">D<tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 30 mm</text>
       <line x1="113" y1="420" x2="215" y2="420" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
       <line x1="220" y1="240" x2="260" y2="240" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
       <line x1="211" y1="240" x2="221" y2="240" stroke="#657781" stroke-width="1.2" />
       <line x1="211" y1="420" x2="221" y2="420" stroke="#657781" stroke-width="1.2" />
-      <path id="u09vent_dh" d="M216 240 L216 420" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)" />
+      <path id="u09vent_dh" d="M216 240 L216 420" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vent_dim)" marker-end="url(#u09vent_dim)" data-mf1-role="dimension" />
       <text x="138" y="318" font-size="12" fill="#263746" text-anchor="start">Δh<tspan baseline-shift="sub" font-size="0.7em">m</tspan></text>
       <text x="132" y="338" font-size="11" fill="#263746" text-anchor="start">0,18 m</text>
     </g>

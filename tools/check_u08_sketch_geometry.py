@@ -102,7 +102,36 @@ def run():
     A,C,B=(dot(z,'u09vs_z6'+name)[1] for name in ('A','C','B'))
     near((A-C)/a,1.7,"Z6: vrh C se kotira na osi")
     near((B-A)/a,2.6,"Z6: pogonska visina A–B")
-    parabola(z,'u09vs_z6jet',a,2.6,1.2)
+    # Z6 asks for the jet range x (ideal 2*sqrt(2.6*1.2) = 3.53 m). Only the given heights
+    # are to scale; the jet is a schematic parabola that must NOT reproduce the result.
+    jet=element(z,'u09vs_z6jet')
+    check(re.sub(r'[-\d.\s,]','',jet.get('d')) == 'MQ',"Z6: kvadratna putanja mlaza")
+    x0,y0,xc,yc,x1,y1=numbers(jet)
+    near(yc,y0,"Z6: vodoravna početna tangenta mlaza")
+    near(xc,(x0+x1)/2,"Z6: x je linearan u vremenu leta")
+    near((y1-y0)/a,1.2,"Z6: mlaz pada do tla (zadana visina izlaza)")
+    x_ideal=2*math.sqrt(2.6*1.2)
+    check(abs((x1-x0)/a-x_ideal)/x_ideal>0.15,"Z6: traženi domet nije nacrtan u mjerilu visina")
+    rng=dimension(z,'u09vs_z6range')
+    near(rng[0],x0,"Z6: kota dometa počinje na izlazu");near(rng[2],x1,"Z6: kota dometa završava na kraju nacrtanog mlaza")
+    check('?' in ''.join(element(z,'u09vs_z6xlabel').itertext()),"Z6: domet označen kao nepoznanica")
+    # Z5: throat diameter is the unknown (correct insert 50 mm = D1/2). The sketch must not
+    # draw any offered insert (40/50/60 mm) to scale; the throat is schematic and labelled
+    # "d = ?". Velocity arrows still follow continuity for the drawn geometry.
+    z5d=length(z,'u09vs_z5diameter')
+    z5top=numbers(element(z,'u09vs_z5top'))
+    z5D1=numbers(element(z,'u09vs_z5bottom'))[1]-z5top[1]
+    ratio=z5d/z5D1
+    check(all(abs(ratio-c)>0.03 for c in (.40,.50,.60)),
+          "Z5: nacrtano grlo nije ni jedan ponuđeni uložak (rješenje nije u mjerilu)")
+    check(not 0.43183<=ratio<=0.52328,"Z5: nacrtano grlo izvan dopuštenog intervala rješenja")
+    near(z5top[4]-z5top[1],(z5D1-z5d)/2,"Z5: kota d na stvarnom grlu")
+    v1=numbers(element(z,'u09vs_z5v1'));v2=numbers(element(z,'u09vs_z5v2'))
+    near((v2[2]-v2[0])/(v1[2]-v1[0]),(z5D1/z5d)**2,"Z5: strelice brzine prema nacrtanoj geometriji",0.02*(z5D1/z5d)**2)
+    label=''.join(element(z,'u09vs_z5dlabel').itertext())
+    check('?' in label,"Z5: promjer grla označen kao nepoznanica")
+    z5texts=[''.join(t.itertext()).strip() for t in element(z,'u09vs_z5').findall('s:text',NS)]
+    check('C' not in z5texts and '2' in z5texts,"Z5: grlo je presjek 2 (C je samo vrh sifona)")
     pipe(z,'u09vs_z6pipe');pipe(z,'u09vs_z4probe')
     # Sensor height is read from the actual closed instrument body, not its label.
     sensor=next(e for e in element(z,'u09vs_z4').findall('s:rect',NS)

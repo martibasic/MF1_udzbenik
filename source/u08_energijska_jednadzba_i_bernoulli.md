@@ -244,23 +244,23 @@ $$ {#eq-korekcijski-faktor-kineticke-energije}
 Za jednolik profil $\alpha = 1$, za razvijeni laminarni parabolični profil $\alpha = 2$, a u turbulentnim cijevnim tokovima obično $1{,}03$–$1{,}1$. Dijeljenjem s $\dot m g$ i uvođenjem visina
 
 $$
-h_p = \frac{\dot W_{crpka}}{\dot m g},\qquad
-h_t = \frac{\dot W_{turbina}}{\dot m g},\qquad
+H_p = \frac{\dot W_{crpka}}{\dot m g},\qquad
+H_t = \frac{\dot W_{turbina}}{\dot m g},\qquad
 h_w = \frac{(e_{u,2} - e_{u,1}) - \dot Q/\dot m}{g}
 $$ {#eq-energijska-jednadzba-visine-definicije}
 
 dobiva se **energijska jednadžba kontrolnog volumena** u metrima fluida:
 
 $$
-\frac{p_1}{\rho g} + \alpha_1\frac{v_1^2}{2g} + z_1 + h_p
-= \frac{p_2}{\rho g} + \alpha_2\frac{v_2^2}{2g} + z_2 + h_t + h_w .
+\frac{p_1}{\rho g} + \alpha_1\frac{v_1^2}{2g} + z_1 + H_p
+= \frac{p_2}{\rho g} + \alpha_2\frac{v_2^2}{2g} + z_2 + H_t + h_w .
 $$ {#eq-energijska-jednadzba-kv}
 
 Član $h_w$ je **gubitak visine**: mehanička energija koju trenje nepovratno pretvara u unutarnju energiju i toplinu, pa je prema drugom zakonu termodinamike $h_w \ge 0$.
 
-**Rezultat.** Bernoullijeva jednadžba poseban je slučaj @eq-energijska-jednadzba-kv za $h_p = h_t = h_w = 0$ i $\alpha_1 = \alpha_2 = 1$. U ovom se poglavlju računa upravo tako; brojčana uporaba $\alpha \ne 1$, gubitaka i rada crpke pripada []{.mf1-chapter-ref target="u13"}, a @ex-usisni-vod-rashladne-crpke-morske-vode i Z6 koriste zadani $h_w$ kao prvi korak prema njemu.
+**Rezultat.** Bernoullijeva jednadžba poseban je slučaj @eq-energijska-jednadzba-kv za $H_p = H_t = h_w = 0$ i $\alpha_1 = \alpha_2 = 1$. U ovom se poglavlju računa upravo tako; brojčana uporaba $\alpha \ne 1$, gubitaka i rada crpke pripada []{.mf1-chapter-ref target="u13"}, a @ex-usisni-vod-rashladne-crpke-morske-vode i Z6 koriste zadani $h_w$ kao prvi korak prema njemu.
 
-**Provjera.** Svi članovi imaju dimenziju duljine. Za $h_w > 0$ energijska crta (EGL) pada u smjeru toka; crpka je podiže za $h_p$, turbina spušta za $h_t$. Za nejednolik profil $\alpha > 1$, pa zanemarivanje korekcije podcjenjuje kinetičku energiju toka.
+**Provjera.** Svi članovi imaju dimenziju duljine. Za $h_w > 0$ energijska crta (EGL) pada u smjeru toka; crpka je podiže za $H_p$, turbina spušta za $H_t$. Za nejednolik profil $\alpha > 1$, pa zanemarivanje korekcije podcjenjuje kinetičku energiju toka.
 :::
 
 Uz izvod treba jasno navesti i pretpostavke modela. U ovom poglavlju Bernoulli vrijedi samo kad su dovoljno dobro opravdane sljedeće pretpostavke:
@@ -345,11 +345,11 @@ Kod slobodnog mlaza ista bilanca najprije daje izlaznu brzinu, a zatim se nastav
 
 **Tekst zadatka**
 
-Slobodna površina velikog otvorenog spremnika vode nalazi se $H = 4{,}0\ \text{m}$ iznad tla. Mala bočna rupica ispušta vodoravni mlaz. Usporedi otvore na visinama $h = 1{,}0\ \text{m}$, $h = 2{,}0\ \text{m}$ i $h = 3{,}0\ \text{m}$ iznad tla. Površina i mlaz izloženi su atmosferi; zanemari brzinu površine, gubitke i otpor zraka.
+Slobodna površina velikog otvorenog spremnika vode nalazi se $H = 4{,}0\ \text{m}$ iznad tla. Mala bočna rupica ispušta vodoravni mlaz. Usporedi otvore na visinama $h_1 = 1{,}0\ \text{m}$, $h_2 = 2{,}0\ \text{m}$ i $h_3 = 3{,}0\ \text{m}$ iznad tla. Površina i mlaz izloženi su atmosferi; zanemari brzinu površine, gubitke i otpor zraka.
 
 **Traži se**
 
-1. Izračunaj domet mlaza za sva tri zadana položaja otvora.
+1. Izračunaj domete mlaza $x_1$, $x_2$ i $x_3$ za sva tri zadana položaja otvora.
 2. Odredi položaj otvora koji daje najveći domet.
 
 ![Domet slobodnog mlaza](../assets/print/u09_val2_slobodni_mlaz.svg){#fig-u09-domet-slobodnog-mlaza fig-alt="Domet slobodnog mlaza"}
@@ -366,22 +366,22 @@ $$ {#eq-energijska-bilanca-rijeseni-primjer-domet-slobodnog-mlaza-iz-veliko-01}
 
 Sada izračunajmo domet za tri zadana položaja.
 
-Za $h = 1{,}0\ \text{m}$:
+Za $h_1 = 1{,}0\ \text{m}$:
 
 $$
-x = 2\sqrt{1{,}0(4{,}0 - 1{,}0)} = 2\sqrt{3} \approx 3{,}46\ \text{m}.
+x_1 = 2\sqrt{1{,}0(4{,}0 - 1{,}0)} = 2\sqrt{3} \approx 3{,}46\ \text{m}.
 $$ {#eq-energijska-bilanca-rijeseni-primjer-domet-slobodnog-mlaza-iz-veliko-02}
 
-Za $h = 2{,}0\ \text{m}$:
+Za $h_2 = 2{,}0\ \text{m}$:
 
 $$
-x = 2\sqrt{2{,}0(4{,}0 - 2{,}0)} = 2\sqrt{4} = 4{,}00\ \text{m}.
+x_2 = 2\sqrt{2{,}0(4{,}0 - 2{,}0)} = 2\sqrt{4} = 4{,}00\ \text{m}.
 $$ {#eq-energijska-bilanca-rijeseni-primjer-domet-slobodnog-mlaza-iz-veliko-03}
 
-Za $h = 3{,}0\ \text{m}$:
+Za $h_3 = 3{,}0\ \text{m}$:
 
 $$
-x = 2\sqrt{3{,}0(4{,}0 - 3{,}0)} = 2\sqrt{3} \approx 3{,}46\ \text{m}.
+x_3 = 2\sqrt{3{,}0(4{,}0 - 3{,}0)} = 2\sqrt{3} \approx 3{,}46\ \text{m}.
 $$ {#eq-energijska-bilanca-rijeseni-primjer-domet-slobodnog-mlaza-iz-veliko-04}
 
 Vidimo da je domet najveći kad je otvor postavljen na polovicu visine slobodne površine iznad tla, odnosno za $h = H/2$. Tada vrijedi $x_{max} = H$, pa je u ovom primjeru maksimalni domet jednak
@@ -392,7 +392,7 @@ $$ {#eq-energijska-bilanca-rijeseni-primjer-domet-slobodnog-mlaza-iz-veliko-05}
 
 **Provjera i tumačenje**
 
-Nizak otvor daje veliku brzinu, ali kratko vrijeme leta; visok obrnuto. Položaji $h$ i $H-h$ daju isti domet jer u izrazu stoji njihov umnožak, što potvrđuju jednaki rezultati za 1 m i 3 m.
+Nizak otvor daje veliku brzinu, ali kratko vrijeme leta; visok obrnuto. Položaji $h$ i $H-h$ daju isti domet jer u izrazu stoji njihov umnožak, što potvrđuju jednaki dometi $x_1 = x_3$ za 1 m i 3 m.
 :::
 
 ::: {#ex-u09-privremeni-sifon-za-praznjenje-servisnog-bazena-t2 .mf1-we}
@@ -406,7 +406,7 @@ Napunjen sifon stalnog promjera $D = 80\ \text{mm}$ odvodi vodu iz velikog otvor
 
 1. Odredi brzinu strujanja $v$ u sifonskoj cijevi.
 2. Odredi volumenski protok $Q$.
-3. Odredi tlačnu visinu $p_C/(\rho g)$ u najvišoj točki `C` i idealiziranu razliku apsolutne tlačne visine prema zadanoj visini tlaka pare.
+3. Odredi manometarsku tlačnu visinu $p_{M,C}/(\rho g)$ u najvišoj točki `C` i idealiziranu razliku apsolutne tlačne visine prema zadanoj visini tlaka pare.
 
 ![Idealni sifon sa slobodnim izlazom B iznad prihvatnog kanala.](../assets/print/u09_val3_idealni_sifon.svg){#fig-u09-idealni-sifon-izme-u-dviju-razina fig-alt="Napunjen sifon: ulaz je uronjen u bazen A, vrh je C, a izlaz B otvoren prema atmosferi."}
 
@@ -441,7 +441,7 @@ $$ {#eq-energijska-bilanca-rijeseni-primjer-privremeni-sifon-za-praznjenje-04}
 Sada zapišimo Bernoullija između slobodne površine bazena `A` i vrha sifona `C`. Uzmimo $z_A = 0$, pa je $z_C = 2{,}2\ \text{m}$:
 
 $$
-\frac{p_{atm}}{\rho g} = \frac{p_C}{\rho g} + \frac{v^2}{2g} + z_C.
+\frac{p_{atm}}{\rho g} = \frac{p_{aps,C}}{\rho g} + \frac{v^2}{2g} + z_C.
 $$ {#eq-energijska-bilanca-rijeseni-primjer-privremeni-sifon-za-praznjenje-05}
 
 Ako radimo s manometarskim tlakom u odnosu na atmosferu, to prelazi u $0 = p_{M,C}/(\rho g) + 3{,}6 + 2{,}2$, pa je
@@ -511,7 +511,7 @@ v &= \frac{4Q}{\pi D^2} = \frac{4 \cdot 0{,}0500}{\pi \cdot 0{,}150^2} = 2{,}83\
 \end{aligned}
 $$ {#eq-usisni-vod-brzina}
 
-Energijska jednadžba @eq-energijska-jednadzba-kv između A i P bez stroja ($h_p = h_t = 0$, $\alpha = 1$) glasi
+Energijska jednadžba @eq-energijska-jednadzba-kv između A i P bez stroja ($H_p = H_t = 0$, $\alpha = 1$) glasi
 
 $$
 \frac{p_{atm}}{\rho g} = \frac{p_{aps,P}}{\rho g} + \frac{v^2}{2g} + z_P + h_w .
@@ -566,7 +566,7 @@ Bilanca u metrima: $6{,}47 + 0{,}408 + 2{,}0 + 1{,}2 \approx 10{,}07$. Da smo A 
 
 **Tekst zadatka**
 
-Horizontalna Venturijeva cijev ulaznog promjera $D_1 = 60\ \text{mm}$ i promjera grla $D_2 = 30\ \text{mm}$ provodi ulje gustoće $\rho_{ul} = 870\ \text{kg/m}^3$. Živin diferencijalni manometar gustoće $\rho_{Hg} = 13600\ \text{kg/m}^3$ pokazuje razliku razina $\Delta h_m = 0{,}18\ \text{m}$. Strujanje je stacionarno; zanemari gubitke.
+Horizontalna Venturijeva cijev ulaznog promjera $D_1 = 60\ \text{mm}$ i promjera grla $D_2 = 30\ \text{mm}$ provodi ulje gustoće $\rho_o = 870\ \text{kg/m}^3$. Živin diferencijalni manometar gustoće $\rho_{Hg} = 13600\ \text{kg/m}^3$ pokazuje razliku razina $\Delta h_m = 0{,}18\ \text{m}$. Strujanje je stacionarno; zanemari gubitke.
 
 **Traži se**
 
@@ -580,22 +580,22 @@ Odredi volumenski protok ulja $Q$.
 
 Razlika tlakova između presjeka 1 i 2 iz diferencijalnog manometra:
 $$
-\Delta p = (\rho_{Hg} - \rho_{ul})\,g\,\Delta h_m = (13600 - 870) \cdot 9{,}81 \cdot 0{,}18 \approx 22{,}479\ \text{kPa}
+\Delta p = (\rho_{Hg} - \rho_o)\,g\,\Delta h_m = (13600 - 870) \cdot 9{,}81 \cdot 0{,}18 \approx 22{,}479\ \text{kPa}
 $$ {#eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-01}
 
 Za horizontalnu cijev ($z_1 = z_2$) iz Bernoullija:
 $$
-\Delta p = \frac{\rho_{ul}}{2}(v_2^2 - v_1^2)
+\Delta p = \frac{\rho_o}{2}(v_2^2 - v_1^2)
 $$ {#eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-02}
 
 Iz kontinuiteta: $v_2 = v_1(A_1/A_2) = v_1(D_1/D_2)^2 = 4 v_1$
 
 $$
-\Delta p = \frac{\rho_{ul}}{2}(16 v_1^2 - v_1^2) = \frac{15\rho_{ul}}{2} v_1^2
+\Delta p = \frac{\rho_o}{2}(16 v_1^2 - v_1^2) = \frac{15\rho_o}{2} v_1^2
 $$ {#eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-03}
 
 $$
-v_1 = \sqrt{\frac{2\Delta p}{15\rho_{ul}}} = \sqrt{\frac{2 \cdot 22478{,}634}{15 \cdot 870}} \approx \sqrt{3{,}445} \approx 1{,}856\ \text{m/s}
+v_1 = \sqrt{\frac{2\Delta p}{15\rho_o}} = \sqrt{\frac{2 \cdot 22478{,}634}{15 \cdot 870}} \approx \sqrt{3{,}445} \approx 1{,}856\ \text{m/s}
 $$ {#eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-04}
 
 $$
@@ -650,10 +650,10 @@ $$
 v = \sqrt{681{,}6} \approx 26{,}1\ \text{m/s}.
 $$ {#eq-energijska-bilanca-rijeseni-primjer-pitot-staticka-sonda-na-bespilo-03}
 
-U gušćem zraku, uz $\rho = 1{,}25\ \text{kg/m}^3$ i isti izmjereni $\Delta p$, brzina bi se preračunala na:
+U gušćem zraku, uz $\rho = 1{,}25\ \text{kg/m}^3$ i isti izmjereni $\Delta p$, brzina bi se preračunala na $v'$:
 
 $$
-v_o = \sqrt{\frac{2 \cdot 380}{1{,}25}} = \sqrt{608} \approx 24{,}7\ \text{m/s}.
+v' = \sqrt{\frac{2 \cdot 380}{1{,}25}} = \sqrt{608} \approx 24{,}7\ \text{m/s}.
 $$ {#eq-energijska-bilanca-rijeseni-primjer-pitot-staticka-sonda-na-bespilo-04}
 
 Razlika u izračunatoj brzini iznosi približno $1{,}45\ \text{m/s}$ ili $5{,}5\,\%$ od $26{,}1\ \text{m/s}$ — značajna pogreška ako se ne primjenjuje korekcija prema lokalnoj gustoći zraka.
@@ -829,7 +829,7 @@ Zaustavni manometarski tlak je $p_{M,0}=35{,}772\ \text{kPa}$, a razlika prema s
 
 **Tekst zadatka**
 
-Kroz vodoravni mjerni sklop prolazi zadani stalni protok vode $Q=20{,}0\ \text{L/s}$ pri gustoći $\rho=1000\ \text{kg/m}^3$. Ulazni promjer je $D_1=100\ \text{mm}$, a apsolutni ulazni tlak $p_{aps,1}=150\ \text{kPa}$. Glatki zamjenjivi ulošci imaju promjere grla $d=40$, $50$ ili $60\ \text{mm}$. U idealnom modelu bez gubitaka potrebno je istodobno ostvariti apsolutni tlak u grlu $p_{aps,C}\ge60\ \text{kPa}$ i razliku statičkih tlakova za mjerenje $p_1-p_C\ge40\ \text{kPa}$.
+Kroz vodoravni mjerni sklop prolazi zadani stalni protok vode $Q=20{,}0\ \text{L/s}$ pri gustoći $\rho=1000\ \text{kg/m}^3$. Ulazni promjer je $D_1=100\ \text{mm}$, a apsolutni ulazni tlak $p_{aps,1}=150\ \text{kPa}$. Glatki zamjenjivi ulošci imaju promjere grla $d=40$, $50$ ili $60\ \text{mm}$. U idealnom modelu bez gubitaka potrebno je istodobno ostvariti apsolutni tlak u grlu (presjek 2) $p_{aps,2}\ge60\ \text{kPa}$ i razliku statičkih tlakova za mjerenje $p_1-p_2\ge40\ \text{kPa}$.
 
 Pretpostavi jednolike brzine u referentnim presjecima; zadani protok i ulazni tlak održavaju se za svaki uložak. Tlačni prag je zadani pogonski kriterij, a ne tlak pare vode.
 
@@ -861,7 +861,7 @@ Sifon je prethodno napunjen vodom, a ulaz je uronjen. U kvazistacionarnom trenut
 
 Zatim primijeni energijsku jednadžbu @eq-energijska-jednadzba-kv s $\alpha=1$ i gubitkom visine $h_w=\zeta v^2/(2g)$. Za izvedeni sustav ukupni koeficijent gubitaka od spremnika do izlaza iznosi $\zeta_\Sigma=2{,}0\pm0{,}5$, a do vrha sifona $\zeta_C=1{,}2\pm0{,}3$; oba su definirana uz brzinu u sifonu. Oznake ± ovdje daju zajamčene intervale, ne standardne nesigurnosti; dopuštene su sve njihove kombinacije. Primijeni bilance $\Delta z=(1+\zeta_\Sigma)v^2/(2g)$ i $p_{aps,C}=p_{atm}-\rho g[z_C+(1+\zeta_C)v^2/(2g)]$.
 
-Sustav treba zajamčiti $Q\ge15{,}0\ \text{L/s}$ i apsolutni tlak $p_C\ge30\ \text{kPa}$.
+Sustav treba zajamčiti $Q\ge15{,}0\ \text{L/s}$ i apsolutni tlak $p_{aps,C}\ge30\ \text{kPa}$.
 
 **Traži se**
 
@@ -889,7 +889,7 @@ Idealno: $v\approx7{,}14$ m/s, $Q\approx27{,}5$ L/s, $p_{aps,C}\approx59{,}1$ kP
 
 ![Skice vježbi: istjecanje, Venturijeva cijev, silazno suženje, brodski Pitotov brzinomjer, izbor grla i sifon s mlazom.](../assets/print/u09_vjezbe_skice.svg){#fig-u09-vjezbe fig-align="center" fig-alt="Skice vježbi: istjecanje, Venturijeva cijev, silazno suženje, brodski Pitotov brzinomjer, izbor grla i sifon s mlazom."}
 
-**Napomene uz skice.** U Z1 promjer sapnice uvećan je radi čitljivosti. U Z2 priključci pretvarača nalaze se na ulazu i u grlu. U Z4 mjerni vod ispunjen je mirujućom vodom bez zračnih džepova, a voda ispod dna trupa nastrujava brzinom broda.
+**Napomene uz skice.** U Z1 promjer sapnice uvećan je radi čitljivosti. U Z2 priključci pretvarača nalaze se na ulazu i u grlu. U Z4 mjerni vod ispunjen je mirujućom vodom bez zračnih džepova, pramac je lijevo, a voda ispod dna trupa nastrujava brzinom broda. U Z5 promjer grla nacrtan je shematski i ne odgovara nijednom ponuđenom ulošku; strelice brzine prate samo nacrtanu geometriju. U Z6 kote visina imaju zajedničko mjerilo, a putanja mlaza i domet $x$ shematski su.
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

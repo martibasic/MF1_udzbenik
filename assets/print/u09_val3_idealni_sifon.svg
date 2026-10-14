@@ -2,6 +2,7 @@
   <title id="u09v3is_title">Sifon s otvorenim izlazom</title>
   <desc id="u09v3is_desc">Voda iz velikog bazena A prolazi kroz prethodno napunjen sifon stalnog promjera i izlazi slobodnim mlazom u B iznad prihvatnog kanala. B je 3,6 m ispod A, a os vrha C 2,2 m iznad A. HGL nije ucrtan; prema rješenju leži 3,6 m ispod površine A. Strelice brzine u cijevi stalnog promjera jednake su duljine. Promjer cijevi uvećan je za čitljivost.</desc>
   <defs>
+    <marker id="u09v3is_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <pattern id="u09v3is_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
     </pattern>
@@ -31,10 +32,10 @@
       <text x="270" y="67" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">C</text>
       <circle id="u09v3is_B" cx="370" cy="314" r="3" fill="#356b83" />
       <text x="392" y="319" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">B</text>
-      <path d="M172 283 L172 228" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09v3is_v)" />
-      <path d="M250 82 L305 82" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09v3is_v)" />
-      <path d="M370 206 L370 261" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09v3is_v)" />
-      <text x="386" y="240" font-size="12" fill="#263746" text-anchor="start">v</text>
+      <path d="M172 283 L172 228" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09v3is_vopen)" data-mf1-vector="velocity" />
+      <path d="M250 82 L305 82" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09v3is_vopen)" data-mf1-vector="velocity" />
+      <path d="M370 206 L370 261" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09v3is_vopen)" data-mf1-vector="velocity" />
+      <text x="386" y="240" font-size="12" fill="#263746" text-anchor="start"><tspan font-weight="700">v</tspan></text>
       <path id="u09v3is_jet" d="M363.00000 314 L363.02410 316 L363.04778 318 L363.07108 320 L363.09398 322 L363.11651 324 L363.13868 326 L363.16050 328 L363.18197 330 L363.20312 332 L363.22393 334 L363.24444 336 L363.26463 338 L363.28453 340 L363.30414 342 L363.32346 344 L363.34251 346 L363.36129 348 L363.37981 350 L363.39807 352 L363.41609 354 L363.43386 356 L363.45139 358 L363.46869 360 L363.48577 362 L363.50262 364 L363.51926 366 L363.53569 368 L363.55191 370 L363.56793 372 L363.58375 374 L363.59938 376 L363.61482 378 L363.63008 380 L363.64516 382 L363.66006 384 L363.67479 386 L363.68934 388 L363.70374 390 L363.71796 392 L363.73203 394 L363.74595 396 L376.25405 396 L376.26797 394 L376.28204 392 L376.29626 390 L376.31066 388 L376.32521 386 L376.33994 384 L376.35484 382 L376.36992 380 L376.38518 378 L376.40062 376 L376.41625 374 L376.43207 372 L376.44809 370 L376.46431 368 L376.48074 366 L376.49738 364 L376.51423 362 L376.53131 360 L376.54861 358 L376.56614 356 L376.58391 354 L376.60193 352 L376.62019 350 L376.63871 348 L376.65749 346 L376.67654 344 L376.69586 342 L376.71547 340 L376.73537 338 L376.75556 336 L376.77607 334 L376.79688 332 L376.81803 330 L376.83950 328 L376.86132 326 L376.88349 324 L376.90602 322 L376.92892 320 L376.95222 318 L376.97590 316 L377.00000 314 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
       <rect x="320" y="396" width="164" height="32" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <line x1="320" y1="396" x2="484" y2="396" stroke="#356b83" stroke-width="2" />
@@ -51,19 +52,19 @@
       <line x1="380" y1="314" x2="498" y2="314" stroke="#657781" stroke-width="1" />
       <line x1="491" y1="170" x2="501" y2="170" stroke="#657781" stroke-width="1.2" />
       <line x1="491" y1="314" x2="501" y2="314" stroke="#657781" stroke-width="1.2" />
-      <path id="u09v3is_dz" d="M496 170 L496 314" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09v3is_dim)" marker-end="url(#u09v3is_dim)" />
+      <path id="u09v3is_dz" d="M496 170 L496 314" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09v3is_dim)" marker-end="url(#u09v3is_dim)" data-mf1-role="dimension" />
       <text x="433" y="229" font-size="12" fill="#263746" text-anchor="start">Δz =</text>
       <text x="431" y="247" font-size="12" fill="#263746" text-anchor="start">3,6 m</text>
       <line x1="44" y1="82" x2="158" y2="82" stroke="#657781" stroke-width="1" />
       <line x1="44" y1="170" x2="62" y2="170" stroke="#657781" stroke-width="1" />
       <line x1="40" y1="82" x2="50" y2="82" stroke="#657781" stroke-width="1.2" />
       <line x1="40" y1="170" x2="50" y2="170" stroke="#657781" stroke-width="1.2" />
-      <path id="u09v3is_zc" d="M45 82 L45 170" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09v3is_dim)" marker-end="url(#u09v3is_dim)" />
+      <path id="u09v3is_zc" d="M45 82 L45 170" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09v3is_dim)" marker-end="url(#u09v3is_dim)" data-mf1-role="dimension" />
       <text x="57" y="108" font-size="11" fill="#263746" text-anchor="start">z<tspan baseline-shift="sub" font-size="0.7em">C</tspan> =</text>
       <text x="57" y="124" font-size="11" fill="#263746" text-anchor="start">2,2 m</text>
       <line x1="363" y1="120" x2="363" y2="130" stroke="#657781" stroke-width="1.2" />
       <line x1="377" y1="120" x2="377" y2="130" stroke="#657781" stroke-width="1.2" />
-      <path id="u09v3is_diameter" d="M363 125 L377 125" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09v3is_dimSmall)" marker-end="url(#u09v3is_dimSmall)" />
+      <path id="u09v3is_diameter" d="M363 125 L377 125" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09v3is_dimSmall)" marker-end="url(#u09v3is_dimSmall)" data-mf1-role="dimension" />
       <line x1="379" y1="125" x2="402" y2="115" stroke="#657781" stroke-width="1" />
       <text x="407" y="113" font-size="11" fill="#263746" text-anchor="start">D = 80 mm</text>
     </g>
