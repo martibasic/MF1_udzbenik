@@ -26,6 +26,15 @@
     <marker id="u01fgs_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
     </marker>
+    <marker id="u01fgs_vF" viewBox="0 0 7 6" markerWidth="5.75" markerHeight="4.93" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u01fgs_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </marker>
+    <marker id="u01fgs_vP" viewBox="0 0 7 6" markerWidth="6" markerHeight="5.14" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
   </defs>
   <g id="u01fgs_title-scene-1" transform="translate(-90.1016 -14.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
@@ -39,8 +48,8 @@
         <text x="217" y="151" font-size="16" fill="#263746" text-anchor="middle">V</text>
         <text x="217" y="176" font-size="14" fill="#263746" text-anchor="middle">m, ρ</text>
         <circle id="u01fgs_centerOfMass" cx="217" cy="200" r="3" fill="#356b83" />
-        <path id="u01fgs_weight" d="M217 200 L217 264" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u01fgs_forceMarker)" />
-        <text x="233" y="240" font-size="13" fill="#263746" text-anchor="start">G</text>
+        <path id="u01fgs_weight" d="M217 200 L217 264" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01fgs_vF)" data-mf1-vector="force" />
+        <text x="233" y="240" font-size="13" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">G</tspan></text>
       </g>
     </g>
   </g>
@@ -60,7 +69,7 @@
         <rect x="390" y="90" width="8" height="208" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="294" y="290" width="104" height="8" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <text x="346" y="174" font-size="14" fill="#263746" text-anchor="middle">voda</text>
-        <text x="346" y="318" font-size="11" fill="#263746" text-anchor="middle">ρ = 1000 kg/m³</text>
+        <text x="346" y="318" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1000 kg/m³</text>
       </g>
     </g>
   </g>

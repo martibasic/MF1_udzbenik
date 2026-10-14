@@ -146,12 +146,17 @@ def zadatak_1(m0: float = 0.0426, m1: float = 0.0855, m2: float = 0.1287,
 
 
 def zadatak_2(p_M: float = 6.0e6, d: float = 0.125, r: float = 0.60, s: float = 0.30):
-    """Kormilarski stroj: dva cilindra na rudu s dva kraka, klipnjace okomite na rudo."""
+    """Kormilarski stroj s cetiri cilindra (Rapsonov raspored), klipnjace okomite na rudo.
+
+    Na svakom kraku je par suprotnih cilindara. Dijagonalni par pod tlakom p_M
+    gura suprotne krakove u suprotnim smjerovima (moment istoga smisla) i pri
+    zakretu se oba cilindra produljuju; drugi par vraca ulje pri p_M ~ 0.
+    """
     A = math.pi * d**2 / 4
     F = p_M * A
-    arms = (r, r)                      # oba kraka istoga smisla momenta
+    arms = (r, r)                      # dijagonalni par pod tlakom: oba kraka istoga smisla momenta
     M = sum(F * arm for arm in arms)
-    V = A * s                          # crpka puni jedan cilindar, drugi vraca isti volumen
+    V = len(arms) * A * s              # crpka puni oba cilindra pod tlakom; povratni par vraca isti volumen
     return {"A": A, "F": F, "M": M, "V": V}
 
 
@@ -295,7 +300,7 @@ def verify() -> list[dict]:
     _check(out, "U01.Z2.A_m2", z2["A"], 1.227e-2, "m^2", abs_tol=5e-6)
     _check(out, "U01.Z2.F_kN", z2["F"] / 1000, 73.6, "kN", abs_tol=0.05)
     _check(out, "U01.Z2.M_kNm", z2["M"] / 1000, 88.4, "kN m", abs_tol=0.05)
-    _check(out, "U01.Z2.V_L", z2["V"] * 1000, 3.68, "L", abs_tol=0.005)
+    _check(out, "U01.Z2.V_L", z2["V"] * 1000, 7.36, "L", abs_tol=0.005)
     doubled = zadatak_2(p_M=12.0e6)
     _invariant(out, "U01.Z2.moment_balance",
                abs(z2["M"] - 2 * 6.0e6 * math.pi * 0.125**2 / 4 * 0.60) < 1e-6
@@ -303,6 +308,10 @@ def verify() -> list[dict]:
                and abs(doubled["M"] - 2 * z2["M"]) < 1e-9
                and doubled["V"] == z2["V"] and zadatak_2(s=0.0)["V"] == 0.0,
                "Moment mora biti zbroj dvaju jednakih krakova, linearan u tlaku; volumen ovisi samo o hodu.")
+    _invariant(out, "U01.Z2.pressurised_pair_volume_work",
+               abs(z2["V"] - 2 * z2["A"] * 0.30) < 1e-15
+               and abs(6.0e6 * z2["V"] - 2 * z2["F"] * 0.30) < 1e-6,
+               "Oba cilindra pod tlakom produljuju se: dobava 2As, a rad crpke p_M V jednak je radu dviju sila 2Fs.")
 
     z3 = zadatak_3()
     _check(out, "U01.Z3.area_ratio", z3["ratio"], 9.0, "1", rel=1e-9)

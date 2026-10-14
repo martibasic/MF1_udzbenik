@@ -51,6 +51,7 @@ def connected_fluid(root,prefix,routes):
 
 
 def comb(root,prefix,count,ratios):
+    """ratios=None: diameters are schematic (checked separately), not to the data scale."""
     pistons=[rect(node(root,prefix+f'piston{i}')) for i in range(count)]
     poly=path(node(root,prefix+'fluid'))
     bottom=max(y for x,y in poly)
@@ -68,7 +69,8 @@ def comb(root,prefix,count,ratios):
         routes.append([(xa,a[1]+a[3]+4),(xa,ym),(xb,ym),(xb,b[1]+b[3]+4)])
     poly,walls=connected_fluid(root,prefix,routes)
     for i,(x,y,w,h) in enumerate(pistons):
-        close(w/pistons[0][2],ratios[i],prefix+': omjer promjera mora odgovarati podatcima',tol=1e-9)
+        if ratios is not None:
+            close(w/pistons[0][2],ratios[i],prefix+': omjer promjera mora odgovarati podatcima',tol=1e-9)
         for xx in (x+w*.1,x+w*.5,x+w*.9):
             close(distance_to_path((xx,y+h),poly),0,prefix+': tlačna ploha klipa dodiruje tekućinu')
         rx,ry,rw,rh=rect(node(root,prefix+f'rod{i}'))
@@ -81,8 +83,12 @@ def comb(root,prefix,count,ratios):
 
 
 def steering(root,prefix):
-    """Z2: two rams on a double-ended tiller; same oil, opposite thrusts, one torque sense."""
-    poly,walls=connected_fluid(root,prefix+'system',[[(60,260),(60,272),(262,272),(262,62),(240,62),(240,110)]])
+    """Z2: four-ram (Rapson) gear on a double-ended tiller.
+
+    The diagonal pair shares the pressurised oil, pushes the arms in opposite
+    directions and gives one torque sense; the opposite pair only returns oil.
+    """
+    poly,walls=connected_fluid(root,prefix+'system',[[(60,260),(60,272),(274,272),(274,62),(240,62),(240,110)]])
     tiller=rect(node(root,prefix+'tiller'));stock=node(root,prefix+'stock')
     cx,cy=float(stock.get('cx')),float(stock.get('cy'))
     close(cx,tiller[0]+tiller[2]/2,'Z2: struk kormila u sredini ruda');close(cy,tiller[1]+tiller[3]/2,'Z2: struk na osi ruda')
@@ -112,6 +118,30 @@ def steering(root,prefix):
     dimension(root,prefix+'arm0',(60,186),(150,186));dimension(root,prefix+'arm1',(150,186),(240,186))
     close(abs(arms[0]),90,'Z2: kota kraka odgovara klipnjači');close(abs(arms[1]),90,'Z2: kota kraka odgovara klipnjači')
     dimension(root,prefix+'d',(228,141),(252,141));close(bores[1],24,'Z2: kota promjera odgovara provrtu')
+    # Return pair: coaxial with the pressurised ram of the same arm, on the other side of the tiller,
+    # in its own oil space (not connected to the pressurised loop) and without an oil force.
+    for i in range(2):
+        x,y,w,h=rect(node(root,prefix+f'returnpiston{i}'))
+        rx,ry,rw,rh=rect(node(root,prefix+f'returnrod{i}'))
+        sx,sy,sw,sh=rect(node(root,prefix+f'systempiston{i}'))
+        close(x,sx,'Z2: povratni klip koaksijalan s tlačenim klipom istoga kraka');close(w,sw,'Z2: sva četiri cilindra istoga promjera')
+        close(rx+rw/2,x+w/2,'Z2: povratna klipnjača i klip imaju istu os')
+        if i==0:   # left arm: pressurised ram below, return ram above the tiller
+            check(y+h<=tiller[1] and sy>=tiller[1]+tiller[3],'Z2: lijevi par s obje strane ruda')
+            close(ry+rh,tiller[1],'Z2: povratna klipnjača dodiruje rudo');close(ry,y+h,'Z2: povratna klipnjača završava na klipu')
+        else:      # right arm: pressurised ram above, return ram below the tiller
+            check(y>=tiller[1]+tiller[3] and sy+sh<=tiller[1],'Z2: desni par s obje strane ruda')
+            close(ry,tiller[1]+tiller[3],'Z2: povratna klipnjača dodiruje rudo');close(ry+rh,y,'Z2: povratna klipnjača završava na klipu')
+        rpoly=path(node(root,prefix+f'return{i}fluid'))
+        face=y if i==0 else y+h
+        for xx in (x+w*.1,x+w*.5,x+w*.9):close(distance_to_path((xx,face),rpoly),0,'Z2: povratni klip zatvara svoje ulje')
+        check(not any(inside(p,poly) for p in rpoly) and not any(inside(p,rpoly) for p in poly),
+              'Z2: povratni cilindar nije spojen s tlačnom granom')
+        check(min(yy for xx,yy in rpoly)<y if i==0 else max(yy for xx,yy in rpoly)>y+h,'Z2: ulje iza povratnog klipa')
+    check(not any(re.fullmatch(re.escape(prefix)+r'return.*force.*',e.get('id','')) for e in root.iter()),
+          'Z2: povratni cilindri pri zanemarivom tlaku nemaju silu ulja')
+    texts=[''.join(e.itertext()) for e in root.iter() if e.tag.endswith('text')]
+    check(texts.count('povrat')==2,'Z2: oba povratna priključka označena')
 
 
 def vertical(root,id,sign):
@@ -151,7 +181,7 @@ def main():
     pi=comb(p2,'u01v1km_system',2,[1,math.sqrt(.045/(math.pi*.16**2/4))])
     dimension(p2,'u01v1km_diameter',(pi[0][0],215),(pi[0][0]+pi[0][2],215))
     vertical(p2,'u01v1km_load',1);vertical(p2,'u01v1km_oilForce',-1)
-    close(math.dist(*line(node(p2,'u01v1km_oilForce')))/math.dist(*line(node(p2,'u01v1km_load'))),.045/(math.pi*.16**2/4),'P2: F_2/G = A_2/A_k',tol=0.02)
+    close(math.dist(*line(node(p2,'u01v1km_oilForce')))/math.dist(*line(node(p2,'u01v1km_load'))),.045/(math.pi*.16**2/4),'P2: F_2/F_G = A_2/A_k',tol=0.02)
     pi=comb(p3,'u01v2hd_system',2,[1,math.sqrt(35)])
     dimension(p3,'u01v2hd_inputStroke',(152,190),(152,330))
     dimension(p3,'u01v2hd_outputStroke',(655,330),(655,334))
@@ -165,7 +195,7 @@ def main():
     dimension(p4,'u01ch1_pumpStroke',(777,258),(777,358))
     close(math.dist(*line(node(p4,'u01ch1_pumpStroke')))/math.dist(*line(node(p4,'u01ch1_liftStroke'))),180/25,'P4: kote s_h i s_L u istom mjerilu (180:25)',tol=1e-4)
     lens={k:math.dist(*line(node(p4,'u01ch1_'+k))) for k in ('load','liftForce0','liftForce1','pumpForce')}
-    close(lens['load'],2*lens['liftForce0'],'P4: G=2F_L u duljinama strelica',tol=1e-6)
+    close(lens['load'],2*lens['liftForce0'],'P4: F_G=2F_L u duljinama strelica',tol=1e-6)
     check(lens['liftForce0']==lens['liftForce1']>lens['pumpForce'],'P4: poredak F_L > F_p')
     for id,sign in [('load',1),('pumpForce',1),('liftForce0',-1),('liftForce1',-1)]:vertical(p4,'u01ch1_'+id,sign)
     # True perpendicular moment arms from the same pivot for vertical forces.
@@ -194,22 +224,33 @@ def main():
     close(L['workForce0'],L['workForce3'],'P5: jednake sile prednjih klipova');close(L['workForce1'],L['workForce2'],'P5: jednake sile stražnjih klipova')
     close(L['workForce0']/L['workForce1'],(35/30)**2,'P5: F_f/F_r=(d_f/d_r)^2',tol=0.01)
     steering(z,'u01vs_z2')
-    for num,ratio in [(3,3),(5,math.sqrt(4*.003/math.pi)/.009)]:
-        pi=comb(z,f'u01vs_z{num}system',2,[1,ratio])
+    # Z5: the pump bore is schematic, so the sketch must not reveal the chosen 8/9/10 mm option.
+    for num,ratio in [(3,3),(5,None)]:
+        pi=comb(z,f'u01vs_z{num}system',2,None if ratio is None else [1,ratio])
         if num<5:
             for i in (0,1):dimension(z,f'u01vs_z{num}d{i+1}',(pi[i][0],259),(pi[i][0]+pi[i][2],259))
         vertical(z,f'u01vs_z{num}input',1)
         vertical(z,f'u01vs_z{num}motion0',1);vertical(z,f'u01vs_z{num}motion1',-1)
+    pump,load=rect(node(z,'u01vs_z5systempiston0')),rect(node(z,'u01vs_z5systempiston1'))
+    implied=1000*math.sqrt(4*.003/math.pi)*pump[2]/load[2]
+    check(all(abs(implied-d)/d>.15 for d in (8,9,10)),'Z5: nacrtani crpni klip ne smije odgovarati nijednom ponuđenom promjeru')
     connected_fluid(z,'u01vs_z4system',[[(16,165),(180,165),(200,165)]])
     dimension(z,'u01vs_z4stroke',(138,101),(204,101))
     close(line(node(z,'u01vs_z4initial'))[0][0],138,'Z4: početna tlačna ploha')
     close(rect(node(z,'u01vs_z4piston'))[0],204,'Z4: konačna tlačna ploha')
     comb(z,'u01vs_z6system',4,[1,1,1,.022/math.sqrt(4*.0095/math.pi)])
     vertical(z,'u01vs_z6load',1);vertical(z,'u01vs_z6pumpForce',1);vertical(z,'u01vs_z6lift',-1)
+    # Asked results must not be readable at the result scale (only given data are to scale).
+    L=lambda id:math.dist(*line(node(z,id)))
+    check(abs(L('u01vs_z3output')/L('u01vs_z3input')-9)>3,'Z3: F2/F1 ne smije biti nacrtan u omjeru rezultata 9')
+    check(abs(L('u01vs_z3motion1')/L('u01vs_z3motion0')-1/9)>.3,'Z3: s2/s1 ne smije biti nacrtan u omjeru rezultata 1/9')
+    check(abs(L('u01vs_z5motion0')/L('u01vs_z5motion1')-.4716/.010)>10,'Z5: zbroj hodova crpke ne smije biti u mjerilu rezultata')
+    check(abs(L('u01vs_z6pumpMotion')/L('u01vs_z6lift')-1.35/.018)>10,'Z6: hod crpke ne smije biti u mjerilu rezultata prema podizaju')
+    check(abs(L('u01vs_z6load')/L('u01vs_z6pumpForce')-27.0e3/360)>10,'Z6: F_G ne smije biti u mjerilu rezultata prema F_p')
     # Equal cup areas: doubled measured liquid volume must double its height.
     h1=rect(node(z,'u01vs_z1fluid1'))[3];h2=rect(node(z,'u01vs_z1fluid2'))[3]
     close(h2/h1,2,'Z1: punjenja 50 i 100 cm³ u istoj posudi')
-    print('U01 SVG PASS: 7 slika; povezani fluidi, otvoreni priključci, klipovi, sile, promjeri, kote hodova, poluga 5:1 i kormilarski stroj Z2.')
+    print('U01 SVG PASS: 7 slika; povezani fluidi, otvoreni priključci, klipovi, sile, promjeri, kote hodova, poluga 5:1, četverocilindrični kormilarski stroj Z2 i neutralni crpni klip Z5.')
 
 
 if __name__=='__main__':main()
