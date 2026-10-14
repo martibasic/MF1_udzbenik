@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 929 686" role="img" aria-labelledby="u02vs_title u02vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:929px;height:auto;">
   <title id="u02vs_title">Šest vježbi smicanja i kapilarnosti</title>
-  <desc id="u02vs_desc">Vučena ploča, jedna i dvije međupovršine, dva zasebna uljna procjepa u omjeru 1:2, otvorene kapilare s omjerom promjera 1:2 i visina 2:1, mjerenje vučne sile te potpuno ispunjena igla i izlazna kapljica. Sile su na naznačenoj ploči; fluid ne prolazi kroz stijenke.</desc>
+  <desc id="u02vs_desc">Vučena ploča, jedna i dvije međupovršine, dva zasebna uljna procjepa u omjeru 1:2, procjep između dvaju limova s usponom na čistom čeliku i spuštanjem na hidrofobnom premazu, mjerenje vučne sile te potpuno ispunjena igla i izlazna kapljica. Sile su na naznačenoj ploči; fluid ne prolazi kroz stijenke.</desc>
   <defs>
     <pattern id="u02vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -40,19 +40,19 @@
         <path id="u02vs_z1velocity2" d="M79.24 189.4 L125.29599999999999 189.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
         <path id="u02vs_z1velocity3" d="M79.24 169.6 L148.32399999999998 169.6" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
         <path id="u02vs_z1velocity4" d="M79.24 149.8 L171.35199999999998 149.8" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
-        <path id="u02vs_z1speed" d="M115.6 87 L176.2 87" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
-        <text x="145.89999999999998" y="76.0" font-size="13" fill="#263746" text-anchor="middle">v</text>
+        <path id="u02vs_z1speed" d="M79.24 87 L194.38 87" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
+        <text x="136.81" y="76.0" font-size="13" fill="#263746" text-anchor="middle">u</text>
         <path id="u02vs_z1drag" d="M117.62 130 L63.08 130" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02vs_reactionMarker)" />
-        <text x="64.09" y="153" font-size="13" fill="#263746" text-anchor="middle">Fᵥ</text>
-        <path id="u02vs_z1pull" d="M216.60000000000002 122 L267.1 122" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02vs_forceMarker)" />
+        <text x="64.09" y="153" font-size="13" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
+        <path id="u02vs_z1pull" d="M212.56 122 L267.1 122" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02vs_forceMarker)" />
         <text x="252.96" y="110" font-size="13" fill="#263746" text-anchor="middle">F</text>
-        <text x="200.44" y="186.43" font-size="11" fill="#263746" text-anchor="start">u(y)</text>
+        <text x="200.44" y="186.43" font-size="11" fill="#263746" text-anchor="start">v(y)</text>
         <line x1="32" y1="130" x2="42" y2="130" stroke="#657781" stroke-width="1.2" />
         <line x1="32" y1="229" x2="42" y2="229" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z1gap" d="M37 130 L37 229" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
         <text x="21" y="183.5" font-size="11" fill="#263746" text-anchor="start">δ</text>
-        <text x="146" y="271" font-size="11" fill="#263746" text-anchor="middle">v = 0,65 m/s; δ = 2,4 mm</text>
-        <text x="146" y="289" font-size="11" fill="#263746" text-anchor="middle">A = 0,22 m²; μ = 0,84 Pa·s</text>
+        <text x="146" y="271" font-size="11" fill="#263746" text-anchor="middle">u = 0,65 m/s; δ = 2,4 mm</text>
+        <text x="146" y="289" font-size="11" fill="#263746" text-anchor="middle">A = 0,22 m²; glicerin: μ = 0,84 Pa s</text>
       </g>
     </g>
   </g>
@@ -64,7 +64,7 @@
         <text x="74" y="82" font-size="12" fill="#263746" text-anchor="middle">kapljica</text>
         <text x="74" y="103" font-size="11" fill="#263746" text-anchor="middle">1 međupovršina</text>
         <text x="74" y="156" font-size="11" fill="#263746" text-anchor="middle">tekućina</text>
-        <text x="74" y="177" font-size="12" fill="#263746" text-anchor="middle">pin</text>
+        <text x="74" y="177" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">u</tspan></text>
         <line x1="30" y1="222" x2="30" y2="232" stroke="#657781" stroke-width="1.2" />
         <line x1="118" y1="222" x2="118" y2="232" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z2diameter0" d="M30 227 L118 227" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
@@ -74,12 +74,13 @@
         <text x="218" y="82" font-size="12" fill="#263746" text-anchor="middle">sapunasti mjehur</text>
         <text x="218" y="103" font-size="11" fill="#263746" text-anchor="middle">2 međupovršine</text>
         <text x="218" y="156" font-size="11" fill="#263746" text-anchor="middle">zrak</text>
-        <text x="218" y="177" font-size="12" fill="#263746" text-anchor="middle">pin</text>
+        <text x="218" y="177" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">u</tspan></text>
         <line x1="174" y1="222" x2="174" y2="232" stroke="#657781" stroke-width="1.2" />
         <line x1="262" y1="222" x2="262" y2="232" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z2diameter1" d="M174 227 L262 227" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
         <text x="218.0" y="244" font-size="11" fill="#263746" text-anchor="middle">d</text>
         <text x="146" y="264" font-size="11" fill="#263746" text-anchor="middle">d = 1,20 mm; σ = 0,030 N/m</text>
+        <text x="146" y="163" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">atm</tspan></text>
       </g>
     </g>
   </g>
@@ -106,10 +107,10 @@
         <text x="62" y="123" font-size="13" fill="#263746" text-anchor="middle">F₁</text>
         <path id="u02vs_z3drag1" d="M158 148 L126 148" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02vs_reactionMarker)" />
         <text x="64" y="170" font-size="13" fill="#263746" text-anchor="middle">F₂</text>
-        <path id="u02vs_z3pull" d="M225 141 L279 141" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02vs_forceMarker)" />
+        <path id="u02vs_z3pull" d="M183 141 L279 141" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02vs_forceMarker)" />
         <text x="269" y="127" font-size="13" fill="#263746" text-anchor="middle">F</text>
-        <path id="u02vs_z3speed" d="M157 51 L233 51" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
-        <text x="247" y="55" font-size="13" fill="#263746" text-anchor="middle">v</text>
+        <path id="u02vs_z3speed" d="M143 51 L233 51" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
+        <text x="247" y="55" font-size="13" fill="#263746" text-anchor="middle">u</text>
         <line x1="21" y1="86" x2="31" y2="86" stroke="#657781" stroke-width="1.2" />
         <line x1="21" y1="134" x2="31" y2="134" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z3gap1" d="M26 86 L26 134" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
@@ -118,53 +119,57 @@
         <line x1="273" y1="244" x2="283" y2="244" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z3gap2" d="M278 148 L278 244" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
         <text x="259" y="200.0" font-size="11" fill="#263746" text-anchor="start">δ₂</text>
-        <text x="146" y="278" font-size="10" fill="#263746" text-anchor="middle">δ₁ = 1 mm; δ₂ = 2 mm; v = 0,30 m/s</text>
+        <text x="146" y="278" font-size="10" fill="#263746" text-anchor="middle">δ₁ = 1 mm; δ₂ = 2 mm; u = 0,30 m/s</text>
       </g>
     </g>
   </g>
   <g id="u02vs_title-scene-4" transform="translate(-11.0000 -19.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u02vs_z4" transform="translate(22 372)">
-        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z4  Kapilare otvorene na oba kraja</text>
-        <path id="u02vs_z4fluid" d="M20.00000000 215.00000000 L65.00000000 215.00000000 L65.00000000 268.00000000 L70.00000000 268.00000000 L70.00000000 124.91420230 L70.04076055 125.03602274 L70.08364095 125.15711325 L70.12862814 125.27743696 L70.17570841 125.39695720 L70.22486744 125.51563758 L70.27609023 125.63344194 L70.32936119 125.75033439 L70.38466409 125.86627934 L70.44198209 125.98124145 L70.50129772 126.09518573 L70.56259292 126.20807744 L70.62584902 126.31988222 L70.69104674 126.43056599 L70.75816624 126.54009505 L70.82718705 126.64843603 L70.89808817 126.75555593 L70.97084799 126.86142212 L71.04544434 126.96600235 L71.12185451 127.06926477 L71.20005522 127.17117792 L71.28002265 127.27171076 L71.36173244 127.37083266 L71.44515970 127.46851343 L71.53027902 127.56472332 L71.61706447 127.65943302 L71.70548961 127.75261368 L71.79552752 127.84423691 L71.88715075 127.93427482 L71.98033141 128.02269996 L72.07504111 128.10948541 L72.17125100 128.19460473 L72.26893177 128.27803199 L72.36805367 128.35974178 L72.46858651 128.43970921 L72.57049966 128.51790992 L72.67376208 128.59432009 L72.77834231 128.66891644 L72.88420850 128.74167626 L72.99132840 128.81257738 L73.09966938 128.88159819 L73.20919844 128.94871769 L73.31988222 129.01391541 L73.43168699 129.07717151 L73.54457870 129.13846671 L73.65852298 129.19778234 L73.77348509 129.25510034 L73.88943004 129.31040324 L74.00632249 129.36367420 L74.12412685 129.41489699 L74.24280723 129.46405602 L74.36232747 129.51113629 L74.48265118 129.55612348 L74.60374169 129.59900388 L74.72556213 129.63976443 L74.84807538 129.67839271 L74.97124413 129.71487696 L75.09503086 129.74920605 L75.21939786 129.78136955 L75.34430725 129.81135764 L75.46972098 129.83916119 L75.59560085 129.86477174 L75.72190851 129.88818148 L75.84860549 129.90938329 L75.97565319 129.92837069 L76.10301292 129.94513792 L76.23064589 129.95967986 L76.35851320 129.97199208 L76.48657592 129.98207084 L76.61479503 129.98991305 L76.74313148 129.99551634 L76.87154618 129.99887900 L77.00000000 130.00000000 L77.12845382 129.99887900 L77.25686852 129.99551634 L77.38520497 129.98991305 L77.51342408 129.98207084 L77.64148680 129.97199208 L77.76935411 129.95967986 L77.89698708 129.94513792 L78.02434681 129.92837069 L78.15139451 129.90938329 L78.27809149 129.88818148 L78.40439915 129.86477174 L78.53027902 129.83916119 L78.65569275 129.81135764 L78.78060214 129.78136955 L78.90496914 129.74920605 L79.02875587 129.71487696 L79.15192462 129.67839271 L79.27443787 129.63976443 L79.39625831 129.59900388 L79.51734882 129.55612348 L79.63767253 129.51113629 L79.75719277 129.46405602 L79.87587315 129.41489699 L79.99367751 129.36367420 L80.11056996 129.31040324 L80.22651491 129.25510034 L80.34147702 129.19778234 L80.45542130 129.13846671 L80.56831301 129.07717151 L80.68011778 129.01391541 L80.79080156 128.94871769 L80.90033062 128.88159819 L81.00867160 128.81257738 L81.11579150 128.74167626 L81.22165769 128.66891644 L81.32623792 128.59432009 L81.42950034 128.51790992 L81.53141349 128.43970921 L81.63194633 128.35974178 L81.73106823 128.27803199 L81.82874900 128.19460473 L81.92495889 128.10948541 L82.01966859 128.02269996 L82.11284925 127.93427482 L82.20447248 127.84423691 L82.29451039 127.75261368 L82.38293553 127.65943302 L82.46972098 127.56472332 L82.55484030 127.46851343 L82.63826756 127.37083266 L82.71997735 127.27171076 L82.79994478 127.17117792 L82.87814549 127.06926477 L82.95455566 126.96600235 L83.02915201 126.86142212 L83.10191183 126.75555593 L83.17281295 126.64843603 L83.24183376 126.54009505 L83.30895326 126.43056599 L83.37415098 126.31988222 L83.43740708 126.20807744 L83.49870228 126.09518573 L83.55801791 125.98124145 L83.61533591 125.86627934 L83.67063881 125.75033439 L83.72390977 125.63344194 L83.77513256 125.51563758 L83.82429159 125.39695720 L83.87137186 125.27743696 L83.91635905 125.15711325 L83.95923945 125.03602274 L84.00000000 124.91420230 L84.00000000 268.00000000 L89.00000000 268.00000000 L89.00000000 215.00000000 L197.00000000 215.00000000 L197.00000000 268.00000000 L202.00000000 268.00000000 L202.00000000 162.32840461 L202.08152110 162.57204548 L202.16728190 162.81422651 L202.25725628 163.05487392 L202.35141683 163.29391441 L202.44973487 163.53127516 L202.55218046 163.76688388 L202.65872238 164.00066879 L202.76932818 164.23255868 L202.88396418 164.46248291 L203.00259544 164.69037145 L203.12518584 164.91615488 L203.25169804 165.13976443 L203.38209349 165.36113198 L203.51633248 165.58019010 L203.65437411 165.79687206 L203.79617634 166.01111186 L203.94169597 166.22284424 L204.09088868 166.43200470 L204.24370902 166.63852954 L204.40011044 166.84235584 L204.56004530 167.04342151 L204.72346488 167.24166532 L204.89031941 167.43702686 L205.06055804 167.62944664 L205.23412894 167.81886604 L205.41097923 168.00522735 L205.59105504 168.18847383 L205.77430151 168.36854963 L205.96066282 168.54539992 L206.15008222 168.71897082 L206.34250200 168.88920945 L206.53786354 169.05606398 L206.73610735 169.21948356 L206.93717302 169.37941842 L207.14099932 169.53581984 L207.34752416 169.68864018 L207.55668462 169.83783289 L207.76841700 169.98335252 L207.98265680 170.12515475 L208.19933876 170.26319638 L208.41839688 170.39743537 L208.63976443 170.52783082 L208.86337398 170.65434302 L209.08915741 170.77693342 L209.31704595 170.89556468 L209.54697019 171.01020068 L209.77886008 171.12080648 L210.01264498 171.22734840 L210.24825370 171.32979399 L210.48561445 171.42811203 L210.72465494 171.52227259 L210.96530235 171.61224696 L211.20748338 171.69800776 L211.45112425 171.77952886 L211.69615076 171.85678542 L211.94248826 171.92975391 L212.19006172 171.99841211 L212.43879572 172.06273910 L212.68861450 172.12271528 L212.93944196 172.17832239 L213.19120169 172.22954348 L213.44381701 172.27636297 L213.69721097 172.31876657 L213.95130638 172.35674139 L214.20602585 172.39027584 L214.46129177 172.41935972 L214.71702640 172.44398416 L214.97315184 172.46414167 L215.22959007 172.47982611 L215.48626297 172.49103269 L215.74309235 172.49775800 L216.00000000 172.50000000 L216.25690765 172.49775800 L216.51373703 172.49103269 L216.77040993 172.47982611 L217.02684816 172.46414167 L217.28297360 172.44398416 L217.53870823 172.41935972 L217.79397415 172.39027584 L218.04869362 172.35674139 L218.30278903 172.31876657 L218.55618299 172.27636297 L218.80879831 172.22954348 L219.06055804 172.17832239 L219.31138550 172.12271528 L219.56120428 172.06273910 L219.80993828 171.99841211 L220.05751174 171.92975391 L220.30384924 171.85678542 L220.54887575 171.77952886 L220.79251662 171.69800776 L221.03469765 171.61224696 L221.27534506 171.52227259 L221.51438555 171.42811203 L221.75174630 171.32979399 L221.98735502 171.22734840 L222.22113992 171.12080648 L222.45302981 171.01020068 L222.68295405 170.89556468 L222.91084259 170.77693342 L223.13662602 170.65434302 L223.36023557 170.52783082 L223.58160312 170.39743537 L223.80066124 170.26319638 L224.01734320 170.12515475 L224.23158300 169.98335252 L224.44331538 169.83783289 L224.65247584 169.68864018 L224.85900068 169.53581984 L225.06282698 169.37941842 L225.26389265 169.21948356 L225.46213646 169.05606398 L225.65749800 168.88920945 L225.84991778 168.71897082 L226.03933718 168.54539992 L226.22569849 168.36854963 L226.40894496 168.18847383 L226.58902077 168.00522735 L226.76587106 167.81886604 L226.93944196 167.62944664 L227.10968059 167.43702686 L227.27653512 167.24166532 L227.43995470 167.04342151 L227.59988956 166.84235584 L227.75629098 166.63852954 L227.90911132 166.43200470 L228.05830403 166.22284424 L228.20382366 166.01111186 L228.34562589 165.79687206 L228.48366752 165.58019010 L228.61790651 165.36113198 L228.74830196 165.13976443 L228.87481416 164.91615488 L228.99740456 164.69037145 L229.11603582 164.46248291 L229.23067182 164.23255868 L229.34127762 164.00066879 L229.44781954 163.76688388 L229.55026513 163.53127516 L229.64858317 163.29391441 L229.74274372 163.05487392 L229.83271810 162.81422651 L229.91847890 162.57204548 L230.00000000 162.32840461 L230.00000000 268.00000000 L235.00000000 268.00000000 L235.00000000 215.00000000 L269.00000000 215.00000000 L269.00000000 284.00000000 L20.00000000 284.00000000 L20.00000000 215.00000000 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z4  Procjep između dvaju limova</text>
+        <path id="u02vs_z4fluid" d="M20 215 L65 215 L65 268 L70 268 L70.00000000 143.95854812 L70.11666667 144.15420085 L70.23333333 144.33813181 L70.35000000 144.51174892 L70.46666667 144.67618111 L70.58333333 144.83235027 L70.70000000 144.98102093 L70.81666667 145.12283559 L70.93333333 145.25834036 L71.05000000 145.38800414 L71.16666667 145.51223301 L71.28333333 145.63138145 L71.40000000 145.74576103 L71.51666667 145.85564731 L71.63333333 145.96128536 L71.75000000 146.06289425 L71.86666667 146.16067071 L71.98333333 146.25479210 L72.10000000 146.34541898 L72.21666667 146.43269717 L72.33333333 146.51675952 L72.45000000 146.59772744 L72.56666667 146.67571213 L72.68333333 146.75081573 L72.80000000 146.82313224 L72.91666667 146.89274833 L73.03333333 146.95974409 L73.15000000 147.02419362 L73.26666667 147.08616560 L73.38333333 147.14572373 L73.50000000 147.20292723 L73.61666667 147.25783113 L73.73333333 147.31048667 L73.85000000 147.36094156 L73.96666667 147.40924027 L74.08333333 147.45542422 L74.20000000 147.49953208 L74.31666667 147.54159986 L74.43333333 147.58166116 L74.55000000 147.61974729 L74.66666667 147.65588741 L74.78333333 147.69010866 L74.90000000 147.72243628 L75.01666667 147.75289372 L75.13333333 147.78150269 L75.25000000 147.80828330 L75.36666667 147.83325411 L75.48333333 147.85643220 L75.60000000 147.87783322 L75.71666667 147.89747147 L75.83333333 147.91535993 L75.95000000 147.93151033 L76.06666667 147.94593315 L76.18333333 147.95863768 L76.30000000 147.96963206 L76.41666667 147.97892329 L76.53333333 147.98651725 L76.65000000 147.99241872 L76.76666667 147.99663142 L76.88333333 147.99915799 L77.00000000 148.00000000 L77.11666667 147.99915799 L77.23333333 147.99663142 L77.35000000 147.99241872 L77.46666667 147.98651725 L77.58333333 147.97892329 L77.70000000 147.96963206 L77.81666667 147.95863768 L77.93333333 147.94593315 L78.05000000 147.93151033 L78.16666667 147.91535993 L78.28333333 147.89747147 L78.40000000 147.87783322 L78.51666667 147.85643220 L78.63333333 147.83325411 L78.75000000 147.80828330 L78.86666667 147.78150269 L78.98333333 147.75289372 L79.10000000 147.72243628 L79.21666667 147.69010866 L79.33333333 147.65588741 L79.45000000 147.61974729 L79.56666667 147.58166116 L79.68333333 147.54159986 L79.80000000 147.49953208 L79.91666667 147.45542422 L80.03333333 147.40924027 L80.15000000 147.36094156 L80.26666667 147.31048667 L80.38333333 147.25783113 L80.50000000 147.20292723 L80.61666667 147.14572373 L80.73333333 147.08616560 L80.85000000 147.02419362 L80.96666667 146.95974409 L81.08333333 146.89274833 L81.20000000 146.82313224 L81.31666667 146.75081573 L81.43333333 146.67571213 L81.55000000 146.59772744 L81.66666667 146.51675952 L81.78333333 146.43269717 L81.90000000 146.34541898 L82.01666667 146.25479210 L82.13333333 146.16067071 L82.25000000 146.06289425 L82.36666667 145.96128536 L82.48333333 145.85564731 L82.60000000 145.74576103 L82.71666667 145.63138145 L82.83333333 145.51223301 L82.95000000 145.38800414 L83.06666667 145.25834036 L83.18333333 145.12283559 L83.30000000 144.98102093 L83.41666667 144.83235027 L83.53333333 144.67618111 L83.65000000 144.51174892 L83.76666667 144.33813181 L83.88333333 144.15420085 L84.00000000 143.95854812 L84 268 L89 268 L89 215 L197 215 L197 268 L202 268 L202.00000000 235.92156748 L202.11666667 235.89058562 L202.23333333 235.86016020 L202.35000000 235.83028928 L202.46666667 235.80097098 L202.58333333 235.77220343 L202.70000000 235.74398484 L202.81666667 235.71631343 L202.93333333 235.68918749 L203.05000000 235.66260533 L203.16666667 235.63656532 L203.28333333 235.61106584 L203.40000000 235.58610533 L203.51666667 235.56168228 L203.63333333 235.53779519 L203.75000000 235.51444262 L203.86666667 235.49162316 L203.98333333 235.46933543 L204.10000000 235.44757811 L204.21666667 235.42634988 L204.33333333 235.40564948 L204.45000000 235.38547569 L204.56666667 235.36582730 L204.68333333 235.34670316 L204.80000000 235.32810215 L204.91666667 235.31002317 L205.03333333 235.29246516 L205.15000000 235.27542710 L205.26666667 235.25890799 L205.38333333 235.24290688 L205.50000000 235.22742284 L205.61666667 235.21245497 L205.73333333 235.19800241 L205.85000000 235.18406433 L205.96666667 235.17063993 L206.08333333 235.15772844 L206.20000000 235.14532912 L206.31666667 235.13344126 L206.43333333 235.12206419 L206.55000000 235.11119726 L206.66666667 235.10083984 L206.78333333 235.09099136 L206.90000000 235.08165125 L207.01666667 235.07281899 L207.13333333 235.06449408 L207.25000000 235.05667605 L207.36666667 235.04936446 L207.48333333 235.04255889 L207.60000000 235.03625897 L207.71666667 235.03046434 L207.83333333 235.02517468 L207.95000000 235.02038969 L208.06666667 235.01610909 L208.18333333 235.01233266 L208.30000000 235.00906018 L208.41666667 235.00629147 L208.53333333 235.00402637 L208.65000000 235.00226476 L208.76666667 235.00100654 L208.88333333 235.00025163 L209.00000000 235.00000000 L209.11666667 235.00025163 L209.23333333 235.00100654 L209.35000000 235.00226476 L209.46666667 235.00402637 L209.58333333 235.00629147 L209.70000000 235.00906018 L209.81666667 235.01233266 L209.93333333 235.01610909 L210.05000000 235.02038969 L210.16666667 235.02517468 L210.28333333 235.03046434 L210.40000000 235.03625897 L210.51666667 235.04255889 L210.63333333 235.04936446 L210.75000000 235.05667605 L210.86666667 235.06449408 L210.98333333 235.07281899 L211.10000000 235.08165125 L211.21666667 235.09099136 L211.33333333 235.10083984 L211.45000000 235.11119726 L211.56666667 235.12206419 L211.68333333 235.13344126 L211.80000000 235.14532912 L211.91666667 235.15772844 L212.03333333 235.17063993 L212.15000000 235.18406433 L212.26666667 235.19800241 L212.38333333 235.21245497 L212.50000000 235.22742284 L212.61666667 235.24290688 L212.73333333 235.25890799 L212.85000000 235.27542710 L212.96666667 235.29246516 L213.08333333 235.31002317 L213.20000000 235.32810215 L213.31666667 235.34670316 L213.43333333 235.36582730 L213.55000000 235.38547569 L213.66666667 235.40564948 L213.78333333 235.42634988 L213.90000000 235.44757811 L214.01666667 235.46933543 L214.13333333 235.49162316 L214.25000000 235.51444262 L214.36666667 235.53779519 L214.48333333 235.56168228 L214.60000000 235.58610533 L214.71666667 235.61106584 L214.83333333 235.63656532 L214.95000000 235.66260533 L215.06666667 235.68918749 L215.18333333 235.71631343 L215.30000000 235.74398484 L215.41666667 235.77220343 L215.53333333 235.80097098 L215.65000000 235.83028928 L215.76666667 235.86016020 L215.88333333 235.89058562 L216.00000000 235.92156748 L216 268 L221 268 L221 215 L269 215 L269 284 L20 284 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
         <rect id="u02vs_z4tankleftbase" x="13" y="195" width="7" height="96" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
         <rect id="u02vs_z4tankleft" x="13" y="195" width="7" height="96" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u02vs_z4tankrightbase" x="269" y="195" width="7" height="96" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
         <rect id="u02vs_z4tankright" x="269" y="195" width="7" height="96" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u02vs_z4tankbottom" x="13" y="284" width="263" height="7" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <line id="u02vs_z4surface0" x1="20" y1="215" x2="65.0" y2="215" stroke="#356b83" stroke-width="1.8" />
-        <rect id="u02vs_z4tube0leftbase" x="65.0" y="79" width="5" height="189" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
-        <rect id="u02vs_z4tube0left" x="65.0" y="79" width="5" height="189" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <rect id="u02vs_z4tube0rightbase" x="84.0" y="79" width="5" height="189" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
-        <rect id="u02vs_z4tube0right" x="84.0" y="79" width="5" height="189" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <path id="u02vs_z4interface0" d="M70.0 124.91420230396248 A7.3602355696678705 7.3602355696678705 0 0 0 84.0 124.91420230396248" fill="none" stroke="#356b83" stroke-width="1.8" />
-        <line id="u02vs_z4surface1" x1="89.0" y1="215" x2="197.0" y2="215" stroke="#356b83" stroke-width="1.8" />
-        <rect id="u02vs_z4tube1leftbase" x="197.0" y="79" width="5" height="189" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
-        <rect id="u02vs_z4tube1left" x="197.0" y="79" width="5" height="189" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <rect id="u02vs_z4tube1rightbase" x="230.0" y="79" width="5" height="189" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
-        <rect id="u02vs_z4tube1right" x="230.0" y="79" width="5" height="189" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <path id="u02vs_z4interface1" d="M202.0 162.32840460792497 A14.720471139335741 14.720471139335741 0 0 0 230.0 162.32840460792497" fill="none" stroke="#356b83" stroke-width="1.8" />
-        <line id="u02vs_z4surfaceLast" x1="235.0" y1="215" x2="269" y2="215" stroke="#356b83" stroke-width="1.8" />
-        <line x1="70.0" y1="56" x2="70.0" y2="66" stroke="#657781" stroke-width="1.2" />
-        <line x1="84.0" y1="56" x2="84.0" y2="66" stroke="#657781" stroke-width="1.2" />
-        <path id="u02vs_z4diameter0" d="M70.0 61 L84.0 61" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dimSmall)" marker-end="url(#u02vs_dimSmall)" />
-        <text x="77.0" y="78" font-size="11" fill="#263746" text-anchor="middle">d₁</text>
-        <line x1="120" y1="130" x2="130" y2="130" stroke="#657781" stroke-width="1.2" />
+        <line id="u02vs_z4surface0" x1="20" y1="215" x2="65" y2="215" stroke="#356b83" stroke-width="1.8" />
+        <rect id="u02vs_z4tube0leftbase" x="65" y="79" width="5" height="189" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
+        <rect id="u02vs_z4tube0left" x="65" y="79" width="5" height="189" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <rect id="u02vs_z4tube0rightbase" x="84" y="79" width="5" height="189" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
+        <rect id="u02vs_z4tube0right" x="84" y="79" width="5" height="189" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <path id="u02vs_z4interface0" d="M70.0 143.95854812 A8.08290377 8.08290377 0 0 0 84.0 143.95854812" fill="none" stroke="#356b83" stroke-width="1.8" />
+        <line id="u02vs_z4surface1" x1="89" y1="215" x2="197" y2="215" stroke="#356b83" stroke-width="1.8" />
+        <rect id="u02vs_z4tube1leftbase" x="197" y="79" width="5" height="189" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
+        <rect id="u02vs_z4tube1left" x="197" y="79" width="5" height="189" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <rect id="u02vs_z4tube1rightbase" x="216" y="79" width="5" height="189" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
+        <rect id="u02vs_z4tube1right" x="216" y="79" width="5" height="189" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <path id="u02vs_z4interface1" d="M202.0 235.92156748 A27.04592314 27.04592314 0 0 1 216.0 235.92156748" fill="none" stroke="#356b83" stroke-width="1.8" />
+        <line id="u02vs_z4surfaceLast" x1="221" y1="215" x2="269" y2="215" stroke="#356b83" stroke-width="1.8" />
+        <line x1="70" y1="56" x2="70" y2="66" stroke="#657781" stroke-width="1.2" />
+        <line x1="84" y1="56" x2="84" y2="66" stroke="#657781" stroke-width="1.2" />
+        <path id="u02vs_z4gap0" d="M70 61 L84 61" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dimSmall)" marker-end="url(#u02vs_dimSmall)" />
+        <text x="77.0" y="52" font-size="11" fill="#263746" text-anchor="middle">b</text>
+        <line x1="120" y1="148.0" x2="130" y2="148.0" stroke="#657781" stroke-width="1.2" />
         <line x1="120" y1="215" x2="130" y2="215" stroke="#657781" stroke-width="1.2" />
-        <path id="u02vs_z4height0" d="M125 130 L125 215" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
-        <text x="134" y="176.5" font-size="11" fill="#263746" text-anchor="start">h₁</text>
-        <line x1="84.0" y1="130" x2="130" y2="130" stroke="#657781" stroke-width="1" />
-        <line x1="202.0" y1="56" x2="202.0" y2="66" stroke="#657781" stroke-width="1.2" />
-        <line x1="230.0" y1="56" x2="230.0" y2="66" stroke="#657781" stroke-width="1.2" />
-        <path id="u02vs_z4diameter1" d="M202.0 61 L230.0 61" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
-        <text x="216.0" y="78" font-size="11" fill="#263746" text-anchor="middle">d₂</text>
-        <line x1="249" y1="172.5" x2="259" y2="172.5" stroke="#657781" stroke-width="1.2" />
-        <line x1="249" y1="215" x2="259" y2="215" stroke="#657781" stroke-width="1.2" />
-        <path id="u02vs_z4height1" d="M254 172.5 L254 215" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
-        <text x="239" y="197.75" font-size="11" fill="#263746" text-anchor="start">h₂</text>
-        <line x1="230.0" y1="172.5" x2="259" y2="172.5" stroke="#657781" stroke-width="1" />
-        <text x="146" y="279" font-size="10" fill="#263746" text-anchor="middle">etanol; isti fluid ispod ulaza</text>
-        <text x="146" y="307" font-size="10" fill="#263746" text-anchor="middle">d₁ = 0,60 mm; d₂ = 1,20 mm; θ = 18°</text>
+        <path id="u02vs_z4height0" d="M125 148.0 L125 215" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
+        <text x="134" y="185" font-size="11" fill="#263746" text-anchor="start">h₁</text>
+        <line x1="84" y1="148.0" x2="130" y2="148.0" stroke="#657781" stroke-width="1" />
+        <text x="94" y="100" font-size="10" fill="#263746" text-anchor="start">čisti čelik</text>
+        <text x="94" y="114" font-size="10" fill="#263746" text-anchor="start">θ₁ = 30°</text>
+        <line x1="202" y1="56" x2="202" y2="66" stroke="#657781" stroke-width="1.2" />
+        <line x1="216" y1="56" x2="216" y2="66" stroke="#657781" stroke-width="1.2" />
+        <path id="u02vs_z4gap1" d="M202 61 L216 61" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dimSmall)" marker-end="url(#u02vs_dimSmall)" />
+        <text x="209.0" y="52" font-size="11" fill="#263746" text-anchor="middle">b</text>
+        <line x1="240" y1="215" x2="250" y2="215" stroke="#657781" stroke-width="1.2" />
+        <line x1="240" y1="235.0" x2="250" y2="235.0" stroke="#657781" stroke-width="1.2" />
+        <path id="u02vs_z4height1" d="M245 215 L245 235.0" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
+        <text x="252" y="229" font-size="11" fill="#263746" text-anchor="start">h₂</text>
+        <line x1="216" y1="235.0" x2="250" y2="235.0" stroke="#657781" stroke-width="1" />
+        <text x="226" y="100" font-size="10" fill="#263746" text-anchor="start">premaz</text>
+        <text x="226" y="114" font-size="10" fill="#263746" text-anchor="start">θ₂ = 105°</text>
+        <text x="146" y="279" font-size="10" fill="#263746" text-anchor="middle">morska voda; isti fluid ispod ulaza</text>
+        <text x="146" y="307" font-size="10" fill="#263746" text-anchor="middle">b = 0,20 mm; ρ = 1025 kg/m³; σ = 0,073 N/m</text>
       </g>
     </g>
   </g>
@@ -182,22 +187,22 @@
         <path id="u02vs_z5velocity2" d="M68.4 197.2 L107.16 197.2" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
         <path id="u02vs_z5velocity3" d="M68.4 179.8 L126.54 179.8" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
         <path id="u02vs_z5velocity4" d="M68.4 162.4 L145.92000000000002 162.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
-        <path id="u02vs_z5speed" d="M99.0 102 L150.0 102" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
-        <text x="124.5" y="91.0" font-size="13" fill="#263746" text-anchor="middle">v</text>
-        <text x="170.39999999999998" y="194.59" font-size="11" fill="#263746" text-anchor="start">u(y)</text>
-        <text x="133.0" y="265" font-size="10" fill="#263746" text-anchor="middle">donja stijenka: u = 0</text>
+        <path id="u02vs_z5speed" d="M68.4 102 L165.3 102" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02vs_axisMarker)" />
+        <text x="116.85" y="91.0" font-size="13" fill="#263746" text-anchor="middle">u</text>
+        <text x="170.39999999999998" y="194.59" font-size="11" fill="#263746" text-anchor="start">v(y)</text>
+        <text x="133.0" y="265" font-size="10" fill="#263746" text-anchor="middle">nepomična stijenka: v = 0</text>
         <line x1="25" y1="145" x2="35" y2="145" stroke="#657781" stroke-width="1.2" />
         <line x1="25" y1="232" x2="35" y2="232" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z5gap" d="M30 145 L30 232" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
         <text x="14" y="192.5" font-size="11" fill="#263746" text-anchor="start">δ</text>
-        <path id="u02vs_z5drag" d="M105 145 L56 145" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02vs_reactionMarker)" />
-        <text x="72" y="164" font-size="13" fill="#263746" text-anchor="middle">Fᵥ</text>
+        <path id="u02vs_z5drag" d="M94 145 L56 145" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02vs_reactionMarker)" />
+        <text x="72" y="120" font-size="13" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
         <line x1="218" y1="137" x2="235" y2="137" stroke="#3a4a56" stroke-width="1.5" />
         <circle id="u02vs_z5sensor" cx="247" cy="137" r="12" fill="#ffffff" stroke="#3a4a56" stroke-width="1.4" />
         <line x1="243" y1="142" x2="252" y2="131" stroke="#3a4a56" stroke-width="1.2" />
-        <path id="u02vs_z5pull" d="M259 137 L286 137" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02vs_forceMarker)" />
-        <text x="274" y="123" font-size="13" fill="#263746" text-anchor="middle">F</text>
-        <text x="146" y="281" font-size="10" fill="#263746" text-anchor="middle">S = 0,010 m²; δ = 1 mm; uzorci A i B</text>
+        <path id="u02vs_z5pull" d="M259 137 L297 137" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02vs_forceMarker)" />
+        <text x="278" y="123" font-size="13" fill="#263746" text-anchor="middle">F</text>
+        <text x="146" y="281" font-size="10" fill="#263746" text-anchor="middle">A = 0,010 m²; δ = 1 mm; uzorci A i B</text>
       </g>
     </g>
   </g>
@@ -237,8 +242,7 @@
         <path id="u02vs_z6height" d="M269 93 L269 239" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" />
         <line x1="190" y1="93" x2="274" y2="93" stroke="#657781" stroke-width="1" />
         <line x1="249" y1="239" x2="274" y2="239" stroke="#657781" stroke-width="1" />
-        <text x="260" y="154" font-size="12" fill="#263746" text-anchor="end">H</text>
-        <text x="260" y="173" font-size="11" fill="#263746" text-anchor="end">42 mm</text>
+        <text x="260" y="160" font-size="12" fill="#263746" text-anchor="end">H = 42 mm</text>
         <line x1="176" y1="140" x2="176" y2="150" stroke="#657781" stroke-width="1.2" />
         <line x1="190" y1="140" x2="190" y2="150" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z6needleDiameter" d="M176 145 L190 145" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dimSmall)" marker-end="url(#u02vs_dimSmall)" />
@@ -246,7 +250,7 @@
         <text x="45" y="122" font-size="11" fill="#263746" text-anchor="start">d = 0,50 mm</text>
         <text x="45" y="158" font-size="11" fill="#263746" text-anchor="start">puna igla</text>
         <text x="45" y="176" font-size="11" fill="#263746" text-anchor="start">bez meniskusa</text>
-        <text x="95" y="219" font-size="11" fill="#263746" text-anchor="middle">zrak: p₀ + p<tspan baseline-shift="sub" font-size="0.75em">M</tspan>
+        <text x="95" y="219" font-size="11" fill="#263746" text-anchor="middle">zrak: p<tspan baseline-shift="sub" font-size="0.75em">atm</tspan> + p<tspan baseline-shift="sub" font-size="0.75em">M</tspan>
         </text>
         <text x="98" y="266" font-size="11" fill="#263746" text-anchor="middle">voda</text>
       </g>

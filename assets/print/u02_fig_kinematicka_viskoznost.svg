@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 313" role="img" aria-labelledby="u02fkv_title u02fkv_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:420px;height:auto;">
   <title id="u02fkv_title">Dinamička i kinematička viskoznost</title>
-  <desc id="u02fkv_desc">Lijevo je opći sloj ulja između ploča s prianjanjem, desno veza dinamičke viskoznosti, gustoće i kinematičke viskoznosti. Nije zadan brojčani gradijent brzine.</desc>
+  <desc id="u02fkv_desc">Sloj ulja između nepomične i pokretne ploče s prianjanjem; obje sile djeluju na pokretnu ploču. Zadane su dinamička viskoznost i gustoća ulja; gradijent brzine nije zadan.</desc>
   <defs>
     <pattern id="u02fkv_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -39,14 +39,16 @@
       <path id="u02fkv_shearvelocity2" d="M102.19999999999999 204.6 L172.88 204.6" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02fkv_axisMarker)" />
       <path id="u02fkv_shearvelocity3" d="M102.19999999999999 178.4 L208.21999999999997 178.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02fkv_axisMarker)" />
       <path id="u02fkv_shearvelocity4" d="M102.19999999999999 152.2 L243.55999999999997 152.2" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02fkv_axisMarker)" />
-      <path id="u02fkv_shearspeed" d="M158.0 83 L251.0 83" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02fkv_axisMarker)" />
-      <text x="204.5" y="72.0" font-size="13" fill="#263746" text-anchor="middle">v</text>
+      <path id="u02fkv_shearspeed" d="M102.2 83 L278.9 83" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02fkv_axisMarker)" />
+      <text x="190.55" y="72.0" font-size="13" fill="#263746" text-anchor="middle">u</text>
       <path id="u02fkv_sheardrag" d="M161.1 126 L77.39999999999999 126" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02fkv_reactionMarker)" />
-      <text x="78.95" y="149" font-size="13" fill="#263746" text-anchor="middle">Fᵥ</text>
-      <path id="u02fkv_shearpull" d="M313.0 118 L390.5 118" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02fkv_forceMarker)" />
+      <text x="78.95" y="149" font-size="13" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
+      <path id="u02fkv_shearpull" d="M306.8 118 L390.5 118" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02fkv_forceMarker)" />
       <text x="368.8" y="106" font-size="13" fill="#263746" text-anchor="middle">F</text>
-      <text x="288.2" y="200.67" font-size="11" fill="#263746" text-anchor="start">u(y)</text>
-      <text x="220.0" y="290" font-size="10" fill="#263746" text-anchor="middle">donja stijenka: u = 0</text>
+      <text x="288.2" y="200.67" font-size="11" fill="#263746" text-anchor="start">v(y)</text>
+      <text x="365" y="228" font-size="11" fill="#263746" text-anchor="end">ulje: μ = 0,18 Pa s</text>
+      <text x="365" y="246" font-size="11" fill="#263746" text-anchor="end">ρ = 900 kg/m³</text>
+      <text x="220.0" y="290" font-size="10" fill="#263746" text-anchor="middle">nepomična stijenka: v = 0</text>
       <line x1="42" y1="126" x2="52" y2="126" stroke="#657781" stroke-width="1.2" />
       <line x1="42" y1="257" x2="52" y2="257" stroke="#657781" stroke-width="1.2" />
       <path id="u02fkv_sheargap" d="M47 126 L47 257" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02fkv_dim)" marker-end="url(#u02fkv_dim)" />

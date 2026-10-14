@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 828 329" role="img" aria-labelledby="u02fup_title u02fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:828px;height:auto;">
   <title id="u02fup_title">Viskoznost i kapilarnost</title>
-  <desc id="u02fup_desc">Couetteovo smicanje između ploča s prianjanjem i silama na gornjoj ploči; otvorena kapilara s konkavnim meniskusom i visinom uspona; osnovne jednadžbe.</desc>
+  <desc id="u02fup_desc">Couetteovo smicanje ulja između ploča s prianjanjem i silama na gornjoj ploči; otvorena kapilara s konkavnim meniskusom, tangencijalnim površinskim silama σ i visinom uspona.</desc>
   <defs>
     <pattern id="u02fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -39,14 +39,15 @@
       <path id="u02fup_shearvelocity2" d="M116.03999999999999 278.6 L194.01599999999996 278.6" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02fup_axisMarker)" />
       <path id="u02fup_shearvelocity3" d="M116.03999999999999 249.4 L233.00399999999996 249.4" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02fup_axisMarker)" />
       <path id="u02fup_shearvelocity4" d="M116.03999999999999 220.2 L271.99199999999996 220.2" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02fup_axisMarker)" />
-      <path id="u02fup_shearspeed" d="M177.6 148 L280.2 148" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02fup_axisMarker)" />
-      <text x="228.89999999999998" y="137.0" font-size="13" fill="#263746" text-anchor="middle">v</text>
+      <path id="u02fup_shearspeed" d="M116.04 148 L310.98 148" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u02fup_axisMarker)" />
+      <text x="213.51" y="137.0" font-size="13" fill="#263746" text-anchor="middle">u</text>
       <path id="u02fup_sheardrag" d="M181.01999999999998 191 L88.67999999999998 191" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02fup_reactionMarker)" />
-      <text x="90.39" y="214" font-size="13" fill="#263746" text-anchor="middle">Fᵥ</text>
-      <path id="u02fup_shearpull" d="M348.6 183 L434.1 183" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02fup_forceMarker)" />
+      <text x="90.39" y="214" font-size="13" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
+      <path id="u02fup_shearpull" d="M341.76 183 L434.1 183" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02fup_forceMarker)" />
       <text x="410.15999999999997" y="171" font-size="13" fill="#263746" text-anchor="middle">F</text>
-      <text x="321.24" y="274.22" font-size="11" fill="#263746" text-anchor="start">u(y)</text>
-      <text x="246.0" y="370" font-size="10" fill="#263746" text-anchor="middle">donja stijenka: u = 0</text>
+      <text x="321.24" y="274.22" font-size="11" fill="#263746" text-anchor="start">v(y)</text>
+      <text x="405" y="327" font-size="11" fill="#263746" text-anchor="end">ulje</text>
+      <text x="246.0" y="370" font-size="10" fill="#263746" text-anchor="middle">nepomična stijenka: v = 0</text>
       <line x1="52" y1="191" x2="62" y2="191" stroke="#657781" stroke-width="1.2" />
       <line x1="52" y1="337" x2="62" y2="337" stroke="#657781" stroke-width="1.2" />
       <path id="u02fup_sheargap" d="M57 191 L57 337" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02fup_dim)" marker-end="url(#u02fup_dim)" />
@@ -72,6 +73,7 @@
       <line id="u02fup_capsurfaceLast" x1="648.0" y1="249" x2="717" y2="249" stroke="#356b83" stroke-width="1.8" />
       <path id="u02fup_capsigma0" d="M617.0 181.55494713593032 L609.2745751406263 157.77853422855148" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02fup_pressureMarker)" />
       <path id="u02fup_capsigma1" d="M643.0 181.55494713593032 L650.7254248593737 157.77853422855148" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u02fup_pressureMarker)" />
+      <text x="657" y="163" font-size="13" fill="#263746" text-anchor="start">σ</text>
       <line x1="617" y1="118" x2="617" y2="128" stroke="#657781" stroke-width="1.2" />
       <line x1="643" y1="118" x2="643" y2="128" stroke="#657781" stroke-width="1.2" />
       <path id="u02fup_diameter" d="M617 123 L643 123" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02fup_dim)" marker-end="url(#u02fup_dim)" />

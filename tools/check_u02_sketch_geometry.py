@@ -90,7 +90,11 @@ def shear(root,prefix,forces=True):
         close(distance_to_path(v,[a,b]),0,prefix+': arrow head on linear profile')
     dimension(root,prefix+'gap',(x-18,y),(x-18,y+h))
     check(delta(node(root,prefix+'speed'))[0]>0,prefix+': plate speed')
+    # The plate-speed arrow shows the same u as the fluid velocity at the moving wall.
+    close(delta(node(root,prefix+'speed'))[0],b[0]-a[0],prefix+': plate speed arrow equals profile velocity u',tol=1e-6)
     if forces:
+        # Steady motion: pull and oil resistance on the plate have equal magnitude.
+        close(-delta(node(root,prefix+'drag'))[0],delta(node(root,prefix+'pull'))[0],prefix+': F equals F_v in steady motion',tol=1e-6)
         check(delta(node(root,prefix+'drag'))[0]<0<delta(node(root,prefix+'pull'))[0],prefix+': resistance opposes motion')
         for id in ('drag','pull'):
             yy=line(node(root,prefix+id))[0][1]
@@ -135,27 +139,46 @@ def main():
     close(2*formed[0][2]/(formed[2][0]-formed[1][0]-formed[1][2]),3,'P4: D/d=3')
     shear(z,'u02vs_z1');shear(z,'u02vs_z5',forces=False)
     check(delta(node(z,'u02vs_z5drag'))[0]<0<delta(node(z,'u02vs_z5pull'))[0],'Z5: dynamometer pulls opposite oil resistance')
+    close(-delta(node(z,'u02vs_z5drag'))[0],delta(node(z,'u02vs_z5pull'))[0],'Z5: steady pull equals resistance',tol=1e-6)
     for i in range(2):
         circle=node(z,f'u02vs_z2outer{i}')
         close(math.dist(*line(node(z,f'u02vs_z2diameter{i}'))),2*float(circle.get('r')),'Z2: true diameter')
     check(float(node(z,'u02vs_z2inner').get('r'))<float(node(z,'u02vs_z2outer1').get('r')),'Z2: two separate soap-film interfaces')
     up=rect(node(z,'u02vs_z3upperFluid'));down=rect(node(z,'u02vs_z3lowerFluid'));plate=rect(node(z,'u02vs_z3moving'))
     close(down[3]/up[3],2,'Z3: gap ratio 2')
+    d0,d1,pull=(-delta(node(z,'u02vs_z3drag0'))[0],-delta(node(z,'u02vs_z3drag1'))[0],delta(node(z,'u02vs_z3pull'))[0])
+    close(d0,2*d1,'Z3: F1=2F2 for the 1:2 gaps',tol=1e-6);close(pull,d0+d1,'Z3: pull balances both resistances',tol=1e-6)
+    p0=line(node(z,'u02vs_z3profile0'));close(delta(node(z,'u02vs_z3speed'))[0],p0[1][0]-p0[0][0],'Z3: plate speed arrow equals u',tol=1e-6)
     for i,(a,b) in enumerate((line(node(z,'u02vs_z3profile0')),line(node(z,'u02vs_z3profile1')))):
         if i==0:close(a[1],up[1],'Z3 upper zero');close(b[1],plate[1],'Z3 upper moving wall')
         else:close(a[1],plate[1]+plate[3],'Z3 lower moving wall');close(b[1],down[1]+down[3],'Z3 lower zero')
         check(delta(node(z,f'u02vs_z3drag{i}'))[0]<0,'Z3: both resistances point left')
         dimension(z,f'u02vs_z3gap{i+1}',(26 if i==0 else 278,up[1] if i==0 else down[1]),(26 if i==0 else 278,up[1]+up[3] if i==0 else down[1]+down[3]))
-    cap=capillary(z,'u02vs_z4',2)
-    widths=[r[2][0]-r[1][0]-r[1][2] for r in cap]
-    close(widths[1]/widths[0],2,'Z4: diameter ratio 2')
-    heights=[]
-    for i,(ar,wl,wr,surface) in enumerate(cap):
-        close(ar[3],18,'Z4: each angle is 18 degrees')
-        ln=line(node(z,f'u02vs_z4height{i}'))
-        close(ln[0][1],ar[1]+ar[2],'Z4: meniscus endpoint');close(ln[1][1],surface,'Z4: free-surface endpoint')
-        heights.append(math.dist(*ln))
-    close(heights[0]/heights[1],2,'Z4: inverse height ratio')
+    # Z4: two equal plate gaps in sea water; clean steel rises (concave, 30 deg),
+    # hydrophobic coating depresses (shallow convex meniscus below the free surface, 105 deg).
+    ar,wl,wr,surface=capillary(z,'u02vs_z4',1)[0]
+    close(ar[3],30,'Z4: contact angle 30 degrees on clean steel')
+    ln=line(node(z,'u02vs_z4height0'))
+    close(ln[0][1],ar[1]+ar[2],'Z4: rise measured from meniscus apex');close(ln[1][1],surface,'Z4: rise measured to free surface')
+    rise=math.dist(*ln);gap0=wr[0]-wl[0]-wl[2]
+    dimension(z,'u02vs_z4gap0',(wl[0]+wl[2],61),(wr[0],61))
+    e=node(z,'u02vs_z4interface1');tk=re.findall(r'[A-Za-z]|[-+]?(?:[0-9]*[.][0-9]+|[0-9]+)',e.get('d'))
+    check(len(tk)==11 and tk[0]=='M' and tk[3]=='A' and tk[7]=='0' and tk[8]=='1','Z4: coated gap needs a shallow convex arc')
+    x1,y1,r,x2,y2=map(float,(tk[1],tk[2],tk[4],tk[9],tk[10]))
+    close(y1,y2,'Z4: coated contact lips at equal height');check(y1>surface,'Z4: coated liquid below the free surface')
+    a=(x2-x1)/2;cx=(x1+x2)/2;cy=y1+math.sqrt(r*r-a*a);apex=cy-r
+    close(180-math.degrees(math.acos(a/r)),105,'Z4: coated contact angle 105 degrees through the liquid',tol=1e-5)
+    wl1=rect(node(z,'u02vs_z4tube1left'));wr1=rect(node(z,'u02vs_z4tube1right'))
+    close(wl1[0]+wl1[2],x1,'Z4: coated left contact on inner wall');close(wr1[0],x2,'Z4: coated right contact on inner wall')
+    close(wr1[0]-wl1[0]-wl1[2],gap0,'Z4: both gaps have the same width b')
+    check(surface<wl1[1]+wl1[3]<284-5,'Z4: coated gap mouth immersed above the floor')
+    fluid=path(node(z,'u02vs_z4fluid'))
+    for p in sample_segment((cx,275),(cx,apex+3),101):
+        check(inside(p,fluid) and distance_to_path(p,fluid)>1,'Z4: liquid continuous from tank into the coated gap')
+    dimension(z,'u02vs_z4gap1',(wl1[0]+wl1[2],61),(wr1[0],61))
+    ln=line(node(z,'u02vs_z4height1'))
+    close(ln[0][1],surface,'Z4: depression measured from free surface');close(ln[1][1],apex,'Z4: depression measured to meniscus apex')
+    close(rise/math.dist(*ln),0.062873/0.018790,'Z4: rise/depression ratio follows the data',tol=0.02)
     ar,wl,wr,surface=capillary(z,'u02vs_z6',convex=True)[0]
     close(2*ar[2]/(wr[0]-wl[0]-wl[2]),1.8/.5,'Z6: D/d nominal ratio')
     dimension(z,'u02vs_z6height',(269,wl[1]),(269,surface))
@@ -164,6 +187,8 @@ def main():
         x,y,w,h=rect(node(bearing,f'u02flt_b{i}fluid'));a,b=line(node(bearing,f'u02flt_b{i}profile'))
         close(a[1],y,'Bearing: zero at bushing');close(b[1],y+h,'Bearing: speed at shaft')
         check(delta(node(bearing,f'u02flt_b{i}drag'))[0]<0<delta(node(bearing,f'u02flt_b{i}speed'))[0],'Bearing: oil opposes shaft motion')
+        close(delta(node(bearing,f'u02flt_b{i}speed'))[0],b[0]-a[0],'Bearing: shaft speed arrow equals u at the shaft',tol=1e-6)
+    check(-delta(node(bearing,'u02flt_b0drag'))[0]>-delta(node(bearing,'u02flt_b1drag'))[0],'Bearing: tau1 (0 C) longer than tau2 (90 C)')
     dimension(bearing,'u02flt_gap',(335,142),(335,214))
     shaft=node(bearing,'u02flt_shaftSection')
     close(math.dist(*line(node(bearing,'u02flt_shaftDiameter'))),2*float(shaft.get('r')),'Bearing: shaft diameter')
@@ -171,6 +196,12 @@ def main():
         pts=path(node(bearing,'u02flt_'+id))
         cross=sum((a[0]-123)*(b[1]-410)-(a[1]-410)*(b[0]-123) for a,b in zip(pts,pts[1:]))
         check(sign*cross>0,'Bearing: resisting moment opposite angular speed')
+    for name,root in zip(names,roots):
+        for t in root.iter():
+            if t.tag.endswith('text'):
+                txt=''.join(t.itertext())
+                check(not re.search(r'(stijenka|čahura): u = 0',txt),name+': u is the moving-wall speed; use v = 0 at a fixed wall')
+                check('p₀' not in txt,name+': p_0 is reserved for stagnation pressure')
     print('U02 SVG PASS: 7 images; open immersed mouths, continuous liquid, circular menisci and 18° tangents, no-slip profiles, force directions, true dimensions and ratios.')
 
 
