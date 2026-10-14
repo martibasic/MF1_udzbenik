@@ -1,240 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="u13c1spm_title u13c1spm_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:940px;height:auto;">
-  <title id="u13c1spm_title">Serijsko-paralelna mreza izmedu dvaju spremnika</title>
-  <desc id="u13c1spm_desc">Lijevo: dva otvorena spremnika A i B s razlikom razina H = 12 m, dovodni vod A-C, dvije paralelne grane C-D (grana 1 D = 80 mm i grana 2 D = 60 mm) i odvodni vod D-B. Desno: ukupni koeficijenti otpora, odnos brzina, raspodjela protoka, energijska bilanca i disipirana snaga.</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-labelledby="u13hc_title u13hc_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:520px;height:auto;">
+  <title id="u13hc_title">Petlja gradske vodovodne mreže A–B–C–D</title>
+  <desc id="u13hc_desc">Četiri čvora spojena cijevima u zatvorenu petlju. U čvor A ulazi 40 L/s, u čvorovima B, C i D izlaze potrošnje 12, 16 i 12 L/s. Duljine strelica dotoka i potrošnji razmjerne su protocima 40 : 12 : 16 : 12. Uz svaku cijev navedeni su unutarnji promjer i duljina; širine provrta nacrtane su razmjerno promjerima 150, 100, 125 i 150 mm (uvećano prema duljinama), a duljine cijevi nisu u mjerilu. Kružna strelica u sredini označuje obilazni smjer A–B–C–D u kojem se protoci broje pozitivno. Promjeri cijevi uvećani su prema duljinama; nije prikazan rezultat.</desc>
   <defs>
-    <linearGradient id="u13c1spm_voda" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aed6f1" />
-      <stop offset="1" stop-color="#5b9ec9" />
-    </linearGradient>
-    <linearGradient id="u13c1spm_vodapipe" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#b8dceb" />
-      <stop offset="1" stop-color="#6ba9c8" />
-    </linearGradient>
-    <pattern id="u13c1spm_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="7" height="7" fill="#dde3e8" />
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#7a8a96" stroke-width="1.1" />
+    <pattern id="u13hc_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
     </pattern>
-    <marker id="u13c1spm_q" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <path d="M0,0 L0,5 L7,2.5 z" fill="#1e8449" />
+    <marker id="u13hc_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
     </marker>
-    <marker id="u13c1spm_dim" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
-    </marker>
-    <marker id="u13c1spm_dimL" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
-      <path d="M0,0 L0,6 L7,3 z" fill="#b7600c" />
+    <marker id="u13hc_loop" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#657781" />
     </marker>
   </defs>
-
-  <!-- pozadina -->
-  <!-- ============ LIJEVI PANEL: fizikalna mreza ============ -->
-  <rect x="20" y="20" width="560" height="520" rx="12" fill="#ffffff" stroke="#dce8f0" stroke-width="1.2" />
-
-  <!-- referentne dashed razine za H -->
-  <line x1="34" y1="92" x2="568" y2="92" stroke="#9aaab7" stroke-width="0.8" stroke-dasharray="5,4" />
-  <line x1="34" y1="196" x2="568" y2="196" stroke="#9aaab7" stroke-width="0.8" stroke-dasharray="5,4" />
-
-  <!-- ===== TANK A (lijevo, visoka razina) ===== -->
-  <!-- gornji rub otvorenog tanka -->
-  <line x1="56" y1="74" x2="142" y2="74" stroke="#3a4a56" stroke-width="2" />
-  <!-- stijenke (pune visine, do zajednickog dna y=420) -->
-  <rect x="50" y="74" width="6" height="346" fill="url(#u13c1spm_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <rect x="142" y="74" width="6" height="346" fill="url(#u13c1spm_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <!-- voda u tanku A (od povrsine y=92 do dna y=420) -->
-  <rect x="56" y="92" width="86" height="328" fill="url(#u13c1spm_voda)" />
-  <!-- slobodna povrsina A -->
-  <line x1="56" y1="92" x2="142" y2="92" stroke="#1565c0" stroke-width="2" />
-  <!-- oznaka razine A -->
-  <!-- ===== TANK B (desno, niza razina) ===== -->
-  <line x1="422" y1="178" x2="508" y2="178" stroke="#3a4a56" stroke-width="2" />
-  <rect x="416" y="178" width="6" height="242" fill="url(#u13c1spm_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <rect x="508" y="178" width="6" height="242" fill="url(#u13c1spm_hatch)" stroke="#3a4a56" stroke-width="1" />
-  <!-- voda u tanku B (od povrsine y=196 do dna y=420) -->
-  <rect x="422" y="196" width="86" height="224" fill="url(#u13c1spm_voda)" />
-  <line x1="422" y1="196" x2="508" y2="196" stroke="#1565c0" stroke-width="2" />
-  <!-- zajednicko dno -->
-  <rect x="50" y="420" width="464" height="14" fill="url(#u13c1spm_hatch)" stroke="#3a4a56" stroke-width="1" />
-
-  <!-- ===== KOTA H (razlika razina) ===== -->
-  <!-- ============ MREZA CJEVOVODA ============ -->
-  <!-- Cvor C centriran (256, 322), Cvor D (412, 322); cjevovodi pune boje (vodapipe) -->
-  <!-- DOVOD A-C (D0): jedan kontinuirani path kroz stijenku A iznad zajednickog dna -->
-  <!-- Izlazi iz tanka A na y=370 (port), ide horizontalno do x=190, zatim gore do C(256,322) preko zakretanja -->
-
-  <!-- horizontalan dovod od stijenke A do zakretanja (y=362..380, x=148..200) -->
-  <rect x="142" y="362" width="58" height="18" fill="url(#u13c1spm_vodapipe)" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- vertikalan dovod (x=182..200, y=314..362) - puni koljeno -->
-  <rect x="182" y="314" width="18" height="48" fill="url(#u13c1spm_vodapipe)" stroke="none" />
-  <!-- horizontalan gornji dovod do C (y=314..332, x=182..256) -->
-  <rect x="182" y="314" width="74" height="18" fill="url(#u13c1spm_vodapipe)" stroke="none" />
-  <!-- vanjske konture dovoda - jedan polyline da izbjegnem unutarnja crna stitcha -->
-  <path d="M 142,362 L 182,362 L 182,332 L 256,332 L 256,314 L 182,314 L 182,362 M 142,380 L 200,380 L 200,332" fill="none" stroke="#3a4a56" stroke-width="1.2" />
-  <!-- Cista vanjska kontura dovoda kao zatvoreni polyline -->
-  <path d="M 148,362 L 182,362 L 182,314 L 256,314 L 256,332 L 200,332 L 200,380 L 148,380 Z" fill="none" stroke="#3a4a56" stroke-width="1.3" />
-  <!-- port fluid overlay preko stjenke A -->
-  <rect x="142" y="362" width="6" height="18" fill="url(#u13c1spm_vodapipe)" />
-
-  <!-- PARALELNE GRANE: grana 1 (gore, deblja D1=80, visina 16), grana 2 (dole, tanja D2=60, visina 12) -->
-  <!-- Grana 1: smooth path izmedu C (256,322) i D (412,322), peak y=270 -->
-  <!-- Vanjska kontura kao zatvoreni polyline (debljina 16) -->
-  <path d="M 256,316 L 286,278 L 382,278 L 412,316 L 412,328 L 382,290 L 286,290 L 256,328 Z" fill="url(#u13c1spm_vodapipe)" stroke="#3a4a56" stroke-width="1.3" />
-
-  <!-- Grana 2: tanja (debljina 12), peak y=370 -->
-  <path d="M 256,317 L 286,358 L 382,358 L 412,317 L 412,327 L 382,368 L 286,368 L 256,327 Z" fill="url(#u13c1spm_vodapipe)" stroke="#3a4a56" stroke-width="1.3" />
-
-  <!-- ODVOD D-B (D3) - simetricno dovodu -->
-  <path d="M 414,314 L 466,314 L 466,380 L 514,380 L 514,362 L 484,362 L 484,332 L 414,332 Z" fill="url(#u13c1spm_vodapipe)" stroke="#3a4a56" stroke-width="1.3" />
-  <!-- ispuna interna -->
-  <rect x="466" y="314" width="18" height="48" fill="url(#u13c1spm_vodapipe)" stroke="none" />
-  <!-- port fluid overlay preko stjenke B -->
-  <rect x="508" y="362" width="6" height="18" fill="url(#u13c1spm_vodapipe)" />
-
-  <!-- CVOROVI C i D (preko spojeva pipea) -->
-  <!-- ============ STRELICE PROTOKA Q ============ -->
-  <!-- Q (ukupni) u dovodu (donji horizontalni segment) -->
-  <line x1="156" y1="371" x2="186" y2="371" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u13c1spm_q)" />
-  <!-- Q1 u gornjoj grani -->
-  <line x1="312" y1="284" x2="358" y2="284" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u13c1spm_q)" />
-  <!-- Q2 u donjoj grani -->
-  <line x1="312" y1="362" x2="358" y2="362" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u13c1spm_q)" />
-  <!-- Q u odvodu (donji segment) -->
-  <line x1="500" y1="371" x2="476" y2="371" stroke="#1e8449" stroke-width="2.4" marker-end="url(#u13c1spm_q)" />
-  <!-- ============ DIONICE - kratke inline oznake unutar figure ============ -->
-  <!-- Grana 1 label (gornji centar, iznad pipe1) -->
-  <!-- Grana 2 label (donji centar, ispod pipe2 ali iznad floor) -->
-  <!-- Dovod label - kratko ispod horiz. dovoda -->
-  <!-- Odvod label -->
-  <!-- ============ ZADANI PODACI - tabela ispod figure ============ -->
-  <rect x="30" y="448" width="540" height="84" rx="7" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.1" />
-  <!-- header tabele -->
-  <line x1="40" y1="490" x2="562" y2="490" stroke="#cfe0ee" stroke-width="0.8" />
-
-  <!-- redovi -->
-  <!-- zadnji red odvod -->
-  <!-- ============ DESNI PANEL: rjesenje (5 koraka + rezultati) ============ -->
-  <rect x="594" y="20" width="372" height="520" rx="12" fill="#ffffff" stroke="#dce8f0" stroke-width="1.2" />
-
-  <!-- header bar -->
-  <rect x="594" y="20" width="372" height="36" rx="12" fill="#1565c0" />
-  <rect x="594" y="40" width="372" height="16" fill="#1565c0" />
-  <!-- Korak 1: pristup K -->
-  <rect x="604" y="68" width="352" height="62" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.1" />
-  <rect x="604" y="68" width="5" height="62" rx="2.5" fill="#1565c0" />
-  <!-- Korak 2: odnos brzina -->
-  <rect x="604" y="138" width="352" height="78" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.1" />
-  <rect x="604" y="138" width="5" height="78" rx="2.5" fill="#1565c0" />
-  <!-- Korak 3: energijska bilanca -->
-  <rect x="604" y="224" width="352" height="98" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.1" />
-  <rect x="604" y="224" width="5" height="98" rx="2.5" fill="#1565c0" />
-  <!-- Korak 4: protoci -->
-  <rect x="604" y="330" width="352" height="74" rx="8" fill="#f5f9fd" stroke="#cfe0ee" stroke-width="1.1" />
-  <rect x="604" y="330" width="5" height="74" rx="2.5" fill="#1565c0" />
-  <!-- Korak 5: gubici i provjera -->
-  <rect x="604" y="412" width="352" height="76" rx="8" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.1" />
-  <!-- REZULTAT badge (disipirana snaga) -->
-  <rect x="604" y="498" width="352" height="36" rx="8" fill="#e8f5e9" stroke="#1e8449" stroke-width="1.4" />
-  <line x1="142" y1="92" x2="216" y2="92" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="416" y1="196" x2="216" y2="196" stroke="#b7600c" stroke-width="0.7" />
-  <line x1="216" y1="92" x2="216" y2="196" stroke="#b7600c" stroke-width="1.3" marker-start="url(#u13c1spm_dimL)" marker-end="url(#u13c1spm_dim)" />
-  <circle cx="256" cy="322" r="6.5" fill="#fbe9a8" stroke="#b7600c" stroke-width="1.8" />
-  <circle cx="412" cy="322" r="6.5" fill="#fbe9a8" stroke="#b7600c" stroke-width="1.8" />
-  <rect x="604" y="412" width="5" height="76" rx="2.5" fill="#b7600c" />
-  <text x="99" y="68" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#5a6a78">p₀ (atm)</text>
-  <text x="99" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#0d47a1">A</text>
-  <text x="99" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#0d47a1">spremnik A</text>
-
-  <text x="465" y="172" font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" text-anchor="middle" fill="#5a6a78">p₀ (atm)</text>
-  <text x="465" y="190" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#0d47a1">B</text>
-  <text x="465" y="262" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#0d47a1">spremnik B</text>
-
-  <text x="256" y="307" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3a4a56">C</text>
-  <text x="412" y="307" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#3a4a56">D</text>
-
-  <text x="171" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">Q</tspan></text>
-
-  <text x="334" y="272" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-
-  <text x="334" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
-
-  <text x="488" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1e8449"><tspan font-style="italic">Q</tspan></text>
-
-  <text x="334" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0">grana 1 (C–D)</text>
-  <text x="334" y="259" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 80 mm</text>
-
-  <text x="334" y="403" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1565c0">grana 2 (C–D)</text>
-  <text x="334" y="416" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 60 mm</text>
-
-  <text x="171" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">dovod</tspan> A–C</text>
-  <text x="488" y="412" font-family="'Segoe UI',Arial,sans-serif" font-size="11" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">odvod</tspan> D–B</text>
-
-  <text x="40" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1a2530">Zadani parametri dionica:</text>
-
-  <text x="46" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#5a6a78">dionica</text>
-  <text x="146" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">D</tspan> [mm]</text>
-  <text x="220" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">L</tspan> [m]</text>
-  <text x="294" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#5a6a78">λ</text>
-  <text x="368" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#5a6a78">Σξ</text>
-  <text x="466" y="486" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#5a6a78"><tspan font-style="italic">K</tspan> = λ<tspan font-style="italic">L</tspan>/<tspan font-style="italic">D</tspan> + Σξ</text>
-
-  <text x="46" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">dovod A–C (0)</text>
-  <text x="146" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">100</text>
-  <text x="220" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">28</text>
-  <text x="294" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">0,024</text>
-  <text x="368" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">1,8</text>
-  <text x="466" y="503" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1565c0">8,52</text>
-
-  <text x="46" y="516" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">grana 1 (C–D)</text>
-  <text x="146" y="516" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">80</text>
-  <text x="220" y="516" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">32</text>
-  <text x="294" y="516" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">0,026</text>
-  <text x="368" y="516" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">2,4</text>
-  <text x="466" y="516" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1565c0">12,80</text>
-
-  <text x="46" y="529" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">grana 2 (C–D)</text>
-  <text x="146" y="529" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">60</text>
-  <text x="220" y="529" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">26</text>
-  <text x="294" y="529" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">0,028</text>
-  <text x="368" y="529" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">3,1</text>
-  <text x="466" y="529" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1565c0">15,23</text>
-
-  <text x="46" y="542" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#1a2530">odvod D–B (3)</text>
-  <text x="146" y="542" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">100</text>
-  <text x="220" y="542" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">18</text>
-  <text x="294" y="542" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">0,024</text>
-  <text x="368" y="542" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" text-anchor="middle" fill="#1a2530">1,2</text>
-  <text x="466" y="542" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1565c0">5,52</text>
-
-  <text x="780" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">Rješenje mreže — redoslijed koraka</text>
-
-  <text x="618" y="86" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">1. Koeficijent otpora dionice</text>
-  <text x="780" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">K</tspan> = λ <tspan font-style="italic">L</tspan>/<tspan font-style="italic">D</tspan> + Σξ</text>
-  <text x="780" y="124" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">(serijski se zbrajaju, paralelni izjednačeni)</text>
-
-  <text x="618" y="156" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">2. Odnos brzina u paralelnim granama</text>
-  <text x="780" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">K</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>² = <tspan font-style="italic">K</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>²</text>
-  <text x="780" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> / <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = √(<tspan font-style="italic">K</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>/<tspan font-style="italic">K</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>) ≈ 0,917</text>
-
-  <text x="618" y="242" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">3. Energijska bilanca A → B</text>
-  <text x="780" y="263" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">H</tspan> = (<tspan font-style="italic">K</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan>+<tspan font-style="italic">K</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan>)<tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan>²/2g + <tspan font-style="italic">K</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>²/2g</text>
-  <text x="780" y="284" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 0,970 <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>  →  12,0 = 26,0 · <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>²/2g</text>
-  <text x="780" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#c0392b"><tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 3,01 m/s,  <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 2,76 m/s,  <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan>=<tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 2,92 m/s</text>
-
-  <text x="618" y="348" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">4. Protoci po dionicama</text>
-  <text x="780" y="368" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">i</tspan> = <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">i</tspan> <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">i</tspan>,  <tspan font-style="italic">Q</tspan> = <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> + <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
-  <text x="622" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1565c0"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> ≈ 15,1 L/s</text>
-  <text x="780" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#1565c0"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> ≈ 7,8 L/s</text>
-  <text x="938" y="390" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="end" fill="#1e8449"><tspan font-style="italic">Q</tspan> ≈ 22,9 L/s</text>
-
-  <text x="622" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 3,70 m</text>
-  <text x="780" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 5,91 m</text>
-  <text x="938" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" text-anchor="end" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 2,40 m</text>
-  <text x="780" y="484" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#5a6a78">bilanca zatvara mrežu</text>
-
-  <text x="618" y="521" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#5a6a78">REZULTAT</text>
-  <text x="938" y="521" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#1e8449"><tspan font-style="italic">P</tspan><tspan baseline-shift="sub" font-size="0.7em">gub</tspan> = ρ g <tspan font-style="italic">Q</tspan> <tspan font-style="italic">H</tspan> ≈ 2,70 kW</text>
-
-<text x="225" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#b7600c"><tspan font-style="italic">H</tspan> = 12,0 m</text>
-
-  <text x="618" y="430" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b7600c">5. Gubici po dionicama i provjera</text>
-  <text x="780" y="470" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> + <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> + <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = 12,01 m ≈ <tspan font-style="italic">H</tspan></text>
-  </svg>
+  <g id="u13hc_title-scene-1" transform="translate(0 0)">
+    <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
+      <text x="20" y="28" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Petlja gradske mreže: čvorovi A, B, C, D</text>
+      <g id="u13hc_networkouter" fill="none" stroke="#3a4a56" stroke-linecap="butt">
+        <path id="u13hc_outerAB" d="M178.5 90 L349.1667 90" stroke-width="23" />
+        <path id="u13hc_outerBC" d="M340 78.5 L340 280.3333" stroke-width="18.3333" />
+        <path id="u13hc_outerCD" d="M349.1667 270 L178.5 270" stroke-width="20.6667" />
+        <path id="u13hc_outerDA" d="M190 280.3333 L190 78.5" stroke-width="23" />
+      </g>
+      <g fill="none" stroke="url(#u13hc_hatch)" stroke-linecap="butt">
+        <path d="M179.5 90 L348.1667 90" stroke-width="21" />
+        <path d="M340 79.5 L340 279.3333" stroke-width="16.3333" />
+        <path d="M348.1667 270 L179.5 270" stroke-width="18.6667" />
+        <path d="M190 279.3333 L190 79.5" stroke-width="21" />
+      </g>
+      <g id="u13hc_networkfluid" fill="none" stroke="#dcebf1" stroke-linecap="butt">
+        <path id="u13hc_fluidAB" d="M183 90 L344.6667 90" stroke="#dcebf1" stroke-width="14" />
+        <path id="u13hc_fluidBC" d="M340 83 L340 275.8333" stroke="#dcebf1" stroke-width="9.3333" />
+        <path id="u13hc_fluidCD" d="M344.6667 270 L183 270" stroke="#dcebf1" stroke-width="11.6667" />
+        <path id="u13hc_fluidDA" d="M190 275.8333 L190 83" stroke="#dcebf1" stroke-width="14" />
+      </g>
+      <circle id="u13hc_nodeA" cx="190" cy="90" r="4" fill="#356b83" />
+      <circle id="u13hc_nodeB" cx="340" cy="90" r="4" fill="#356b83" />
+      <circle id="u13hc_nodeC" cx="340" cy="270" r="4" fill="#356b83" />
+      <circle id="u13hc_nodeD" cx="190" cy="270" r="4" fill="#356b83" />
+      <text x="174" y="76" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">A</text>
+      <text x="356" y="76" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">B</text>
+      <text x="356" y="292" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">C</text>
+      <text x="174" y="292" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">D</text>
+      <path id="u13hc_inflowA" d="M50 90 L174 90" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13hc_v)" />
+      <text x="40" y="80" font-size="11" fill="#263746" text-anchor="start">Q<tspan baseline-shift="sub" font-size="0.75em">A</tspan> = 40 L/s</text>
+      <path id="u13hc_outflowB" d="M356 90 L393 90" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13hc_v)" />
+      <text x="364" y="110" font-size="11" fill="#263746" text-anchor="start">Q<tspan baseline-shift="sub" font-size="0.75em">B</tspan> = 12 L/s</text>
+      <path id="u13hc_outflowC" d="M356 270 L406 270" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13hc_v)" />
+      <text x="364" y="262" font-size="11" fill="#263746" text-anchor="start">Q<tspan baseline-shift="sub" font-size="0.75em">C</tspan> = 16 L/s</text>
+      <path id="u13hc_outflowD" d="M174 270 L137 270" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u13hc_v)" />
+      <text x="170" y="260" font-size="11" fill="#263746" text-anchor="end">Q<tspan baseline-shift="sub" font-size="0.75em">D</tspan> = 12 L/s</text>
+      <text x="265" y="64" font-size="11" fill="#263746" text-anchor="middle">AB: D = 150 mm, L = 300 m</text>
+      <text x="376" y="180" font-size="11" fill="#263746" text-anchor="start">BC: D = 100 mm</text>
+      <text x="376" y="195" font-size="11" fill="#263746" text-anchor="start">L = 250 m</text>
+      <text x="265" y="310" font-size="11" fill="#263746" text-anchor="middle">CD: D = 125 mm, L = 200 m</text>
+      <text x="152" y="180" font-size="11" fill="#263746" text-anchor="end">DA: D = 150 mm</text>
+      <text x="152" y="195" font-size="11" fill="#263746" text-anchor="end">L = 350 m</text>
+      <path id="u13hc_loopDirection" d="M241 180 Q241 150 265 150 Q289 150 289 180" fill="none" stroke="#657781" stroke-width="1.6" marker-end="url(#u13hc_loop)" />
+      <text x="265" y="214" font-size="11" fill="#263746" text-anchor="middle">obilazni smjer, Q &gt; 0</text>
+      <text x="20" y="340" font-size="11" fill="#263746" text-anchor="start">Promjeri uvećani prema duljinama; λ = 0,022 za sve cijevi, lokalni gubitci zanemareni.</text>
+    </g>
+  </g>
+</svg>

@@ -1,4 +1,4 @@
-"""Čita tri stvarna SVG-a U13: topologija toka, kote, profili i krivulje.
+"""Čita četiri stvarna SVG-a U13: topologija toka, petlja, kote, profili i krivulje.
 
 Ne ovisi o privremenom generatoru skica. Kvantitativne krivulje provjerava
 iz njihovih nacrtanih koordinata i izvornih jednadžbi zadatka.
@@ -95,6 +95,17 @@ def main():
     close(egl[0][1],HA,'EGL polazi sa slobodne površine')
     close(egl[-1][1],HB,'EGL završava na slobodnoj površini')
     check(all(y2>y1 for (_,y1),(_,y2) in zip(egl,egl[1:])),'EGL pada u smjeru toka bez stroja')
+    # Kote padova EGL (Tumačenje skice: H = h_AC + h_CD + h_DB) između razina EGL u A, C, D i B.
+    cx,dx_=float(node(a,p+'nodeC').get('cx')),float(node(a,p+'nodeD').get('cx'))
+    levels=[egl[0][1]]+[next(y for x,y in egl if abs(x-xx)<1e-6) for xx in (cx,dx_)]+[egl[-1][1]]
+    total=0
+    for name,(y0,y1) in zip(('hAC','hCD','hDB'),zip(levels,levels[1:])):
+        k0,k1=line(node(a,p+name))
+        close(k0[0],k1[0],name+': kota je okomita')
+        close(k0[1],y0,name+': počinje na razini EGL uzvodnog mjesta')
+        close(k1[1],y1,name+': završava na razini EGL nizvodnog mjesta')
+        total+=k1[1]-k0[1]
+    close(total,dim[1][1]-dim[0][1],'h_AC + h_CD + h_DB = H')
 
     p='u13loss_';reservoir_wall_and_openings(b,p+'pipe',p+'surface',[(340,300)])
     egl,hgl=path(node(b,p+'egl')),path(node(b,p+'hgl'))
@@ -156,19 +167,77 @@ def main():
         close(dim[0][0],cx-radius,'Z5: prvi kraj unutarnjeg promjera')
         close(dim[1][0],cx+radius,'Z5: drugi kraj unutarnjeg promjera')
         close(radius/D,.29,'Z5: točan međusobni omjer ponuđenih promjera')
+    # Z6: balastna crpka s napunjenim usisom kroz usisni koš u oplati.
     parts,width=graph(c,p+'z6pipe');inlet=parts[0][0]
-    surface=line(node(c,p+'z6surfaceLeft'))[0][1]
-    tank=rect(node(c,p+'z6reservoirFluid'))
-    check(surface+width/2<inlet[1]<tank[1]+tank[3]-width,
-          'Z6: otvor dovoljno uronjen i ne dodiruje dno')
+    waterline=line(node(c,p+'z6waterline'));y_wl=waterline[0][1]
+    close(waterline[1][1],y_wl,'Z6: vodna linija je vodoravna')
+    sea=rect(node(c,p+'z6seaFluid'))
+    close(sea[1],y_wl,'Z6: more počinje na vodnoj liniji')
+    close(sea[0]+sea[2],inlet[0],'Z6: more doseže oplatu na mjestu usisnog koša')
+    close(waterline[1][0],inlet[0],'Z6: vodna linija završava na oplati')
+    check(y_wl+width/2<inlet[1]<sea[1]+sea[3]-width/2,'Z6: usisni koš je ispod vodne linije i iznad dna prikaza')
+    upper=path(node(c,p+'z6hullWall0'));lower=path(node(c,p+'z6hullWall1'))
+    close(upper[-1][0],inlet[0],'Z6: gornja oplata leži na usisnom košu');close(lower[0][0],inlet[0],'Z6: donja oplata leži na usisnom košu')
+    close(lower[0][1]-upper[-1][1],width+4,'Z6: otvor koša propušta puni provrt usisa')
+    close((lower[0][1]+upper[-1][1])/2,inlet[1],'Z6: koš centriran na usisni vod')
+    check(upper[0][1]<y_wl,'Z6: oplata se nastavlja iznad vodne linije')
     S=node(c,p+'z6S');dim=line(node(c,p+'z6zs'))
-    close(dim[0][1],float(S.get('cy')),'Z6: kota završava na visini referentnog usisa')
-    close(dim[1][1],surface,'Z6: druga granica je slobodna površina')
-    close(dim[1][1]-dim[0][1],2*38,'Z6: usisni uspon 2 m')
-    left=line(node(c,p+'z6surfaceLeft'))[-1];right=line(node(c,p+'z6surfaceRight'))[0]
-    outerwidth=float(node(c,p+'z6pipeouter').get('stroke-width'))
-    close(right[0]-left[0],outerwidth,'Z6: slobodna površina se prekida na vanjskim stijenkama cijevi')
-    print('U13 SVG PASS: 3 slike; otvoreni spojeni vodovi, uronjen usis, kote, profili, kružno koljeno, EGL/HGL i kvantitativne crpne krivulje.')
+    close(float(S.get('cy')),inlet[1],'Z6: referentni presjek S na osi usisnog voda')
+    close(dim[0][1],float(S.get('cy')),'Z6: kota počinje na visini referentnog usisa')
+    close(dim[1][1],y_wl,'Z6: kota završava na vodnoj liniji')
+    close(dim[0][1]-dim[1][1],1.8*38,'Z6: S je 1,8 m ispod vodne linije (napunjen usis)')
+    for name in ('z6inletVelocity','z6velocity'):
+        dx,dy=delta(node(c,p+name));check(dx>0 and dy==0,'Z6: tok ulazi iz mora prema crpki')
+    check(node(c,p+'z6pumpSymbol').get('fill')=='none','Z6: simbol crpke nije pregrada')
+
+    # P3: petlja gradske mreže.
+    d=ET.parse(ROOT/'u13_ch1_serijsko_paralelna_mreza.svg').getroot()
+    ids=[e.get('id') for e in d.iter() if e.get('id')]
+    check(len(ids)==len(set(ids)),'P3: jedinstveni ID-jevi')
+    p='u13hc_'
+    nodes={k:(float(node(d,p+'node'+k).get('cx')),float(node(d,p+'node'+k).get('cy'))) for k in 'ABCD'}
+    # Svaka cijev ima vlastiti provrt razmjeran zadanom D (tablica P3), a stijenka
+    # ostaje izvan provrta. Krajevi se produžuju točno do vanjskog ruba susjedne
+    # cijevi istog sloja, pa kutovi ostaju zatvoreni bez izbočenja provrta u stijenku.
+    diam={'AB':150,'BC':100,'CD':125,'DA':150}
+    pipes=list(diam)
+    fluid={k:node(d,p+'fluid'+k) for k in pipes}
+    outer={k:node(d,p+'outer'+k) for k in pipes}
+    fw={k:float(fluid[k].get('stroke-width')) for k in pipes}
+    ow={k:float(outer[k].get('stroke-width')) for k in pipes}
+    for k in pipes:
+        check(fluid[k].get('stroke')=='#dcebf1','P3: provrt '+k+' je jednolika fluidna ispuna')
+        close(fw[k]/fw['AB'],diam[k]/diam['AB'],'P3: širina provrta '+k+' razmjerna D',tol=1e-4)
+        close(ow[k]-fw[k],9,'P3: stijenka '+k+' iste debljine, izvan provrta',tol=1e-4)
+    check(node(d,p+'networkfluid').get('stroke-linecap')=='butt' and node(d,p+'networkouter').get('stroke-linecap')=='butt',
+          'P3: bez zaobljenih kapa preko spojeva')
+    def neighbour(k,n):return next(q for q in pipes if q!=k and n in q)
+    parts=[]
+    for k in pipes:
+        a,b=nodes[k[0]],nodes[k[1]]
+        for layer,widths in ((fluid[k],fw),(outer[k],ow)):
+            s0,s1=line(layer)
+            L=math.dist(a,b);u=((b[0]-a[0])/L,(b[1]-a[1])/L)
+            for pt,nd,sgn in ((s0,a,-1),(s1,b,1)):
+                ext=widths[neighbour(k,k[0] if sgn<0 else k[1])]/2
+                close(math.dist(pt,(nd[0]+sgn*ext*u[0],nd[1]+sgn*ext*u[1])),0,
+                      'P3: cijev '+k+' spaja čvor i završava na rubu susjedne cijevi',tol=1e-3)
+        parts.append(line(fluid[k]))
+    width=max(fw.values())
+    dx,dy=delta(node(d,p+'inflowA'));check(dx>0 and dy==0,'P3: dotok ulazi u A')
+    close(line(node(d,p+'inflowA'))[1][0]+16,nodes['A'][0],'P3: dotok završava na čvoru A, izvan oznake čvora')
+    for k,sign in (('B',1),('C',1),('D',-1)):
+        a,b=line(node(d,p+'outflow'+k));check((b[0]-a[0])*sign>0 and b[1]==a[1]==nodes[k][1],'P3: potrošnja izlazi iz čvora '+k)
+    arc=path(node(d,p+'loopDirection'))
+    centre=(sum(nodes[k][0] for k in nodes)/4,sum(nodes[k][1] for k in nodes)/4)
+    a,b=arc[-2:]
+    check((a[0]-centre[0])*(b[1]-a[1])-(a[1]-centre[1])*(b[0]-a[0])>0,'P3: obilazni smjer A-B-C-D je u smjeru kazaljke')
+    check(all(distance_to_path(pt,line(outer[k]))>ow[k]/2+2.5 for pt in arc for k in pipes),'P3: strelica obilaznog smjera ne prelazi preko cijevi')
+    for t in d.iter():
+        if t.tag.endswith('text') and t.get('x'):
+            pt=(float(t.get('x')),float(t.get('y')))
+            check(all(distance_to_path(pt,line(outer[k]))>ow[k]/2 for k in pipes),'P3: oznaka ne leži na cijevi: '+''.join(t.itertext()))
+    print('U13 SVG PASS: 4 slike; otvoreni spojeni vodovi, petlja gradske mreže, napunjen brodski usis, kote, profili, kružno koljeno, EGL/HGL i kvantitativne crpne krivulje.')
 
 
 if __name__=='__main__':main()
