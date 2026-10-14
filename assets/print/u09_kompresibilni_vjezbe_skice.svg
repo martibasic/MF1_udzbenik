@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 859 788" role="img" aria-labelledby="u09kvs_title u09kvs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:859px;height:auto;">
   <title id="u09kvs_title">Skice vježbi kompresibilnog idealnog toka</title>
-  <desc id="u09kvs_desc">Z1: mirujući helij i dva smjera zvuka. Z2: boca stlačenog zraka za upućivanje motora, ventil idealiziran kao konvergentni kritični presjek A* i otvoreni vod prema motoru, širi od kritičnog presjeka, u kojem vlada protutlak pb; stanje boce je zaustavno. Z3: nepomične mjerne točke A i B udaljene 1,20 m, različita vremena putovanja uzvodno i nizvodno. Z4 i Z5: otvoreni izlazi konvergentnih sapnica; vanjski tok nije prikazan. Z6: prikaz mjernog dijela kanala, normalni val nije stijenka; statički priključci prolaze kroz stvarne otvore, Pitotova sonda otvorom u presjeku 2, desno od vala, okrenuta je prema dotoku. Zaustavni tlak prije vala mjeri se u uzvodnoj mirnoj komori izvan prikaza. Shematske debljine stijenki i mjernih vodova.</desc>
+  <desc id="u09kvs_desc">Z1: mirujući helij, točka poremećaja O i os x; smjerovi širenja nisu nacrtani jer ih student ucrtava. Z2: boca stlačenog zraka za upućivanje motora, ventil idealiziran kao konvergentni kritični presjek A* i otvoreni vod prema motoru, širi od kritičnog presjeka, u kojem vlada protutlak pb; stanje boce je zaustavno. Z3: nepomične mjerne točke A i B udaljene 1,20 m, različita vremena putovanja uzvodno i nizvodno. Z4 i Z5: otvoreni izlazi konvergentnih sapnica; vanjski tok nije prikazan. Z6: prikaz mjernog dijela kanala, normalni val nije stijenka; statički priključci prolaze kroz stvarne otvore, Pitotova sonda otvorom u presjeku 2, desno od vala, okrenuta je prema dotoku. Zaustavni tlak prije vala mjeri se u uzvodnoj mirnoj komori izvan prikaza. Shematske debljine stijenki i mjernih vodova.</desc>
   <defs>
     <pattern id="u09kvs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -17,6 +17,9 @@
     <marker id="u09kvs_sound" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
     </marker>
+  <marker id="u09kvs_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></marker>
+    <marker id="u09kvs_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" /></marker>
+    <marker id="u09kvs_pathMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#657781" /></marker>
   </defs>
   <g id="u09kvs_title-scene-1" transform="translate(-25.8281 -17.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
@@ -30,11 +33,7 @@
         <line x1="66" y1="140" x2="380" y2="140" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
         <circle id="u09kvs_z1origin" cx="223" cy="140" r="5" fill="#356b83" />
         <text x="223" y="163" font-size="14" fill="#263746" text-anchor="middle">O</text>
-        <path id="u09kvs_z1left" d="M196 140 L118 140" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_sound)" />
-        <text x="157.0" y="129" font-size="14" fill="#263746" text-anchor="middle">a</text>
-        <path id="u09kvs_z1right" d="M250 140 L328 140" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_sound)" />
-        <text x="289.0" y="129" font-size="14" fill="#263746" text-anchor="middle">a</text>
-        <path id="u09kvs_z1axis" d="M341 209 L395 209" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_sound)" />
+        <path id="u09kvs_z1axis" d="M341 209 L395 209" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u09kvs_axisMarker)" data-mf1-role="axis" />
         <text x="368.0" y="198" font-size="14" fill="#263746" text-anchor="middle">x</text>
       </g>
     </g>
@@ -46,7 +45,7 @@
         <text x="59" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Zrak za upućivanje motora</text>
         <text x="23" y="62" font-size="13" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">0</tspan> = 30,0 bar(abs); T<tspan baseline-shift="sub" font-size="0.75em">0</tspan> = 293 K</text>
         <text x="250" y="62" font-size="13" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">b</tspan> = 8,0 bar(abs)</text>
-        <text x="192" y="80" font-size="13" fill="#263746" text-anchor="middle">ventil: A* = 120 mm²</text>
+        <text x="192" y="80" font-size="13" fill="#263746" text-anchor="middle">ventil: A<tspan baseline-shift="super" font-size="0.75em">*</tspan> = 120 mm²</text>
         <text x="300" y="80" font-size="13" fill="#263746" text-anchor="middle">prema motoru</text>
         <rect id="u09kvs_z2bottlegas" x="40" y="100" width="110" height="80" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <rect id="u09kvs_z2bottletop" x="33" y="93" width="117" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -61,8 +60,8 @@
         <rect id="u09kvs_z2pipegas" x="235" y="120" width="130" height="40" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <rect id="u09kvs_z2pipetop" x="235" y="113" width="130" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u09kvs_z2pipebottom" x="235" y="160" width="130" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <path id="u09kvs_z2outflow" d="M212 140 L292 140" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
-        <text x="318" y="144" font-size="13" fill="#263746" text-anchor="middle">ṁ</text>
+        <path id="u09kvs_z2outflow" d="M212 140 L292 140" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09kvs_vopen)" data-mf1-vector="velocity" />
+        <text x="318" y="144" font-size="13" fill="#263746" text-anchor="middle">ṁ = ?</text>
         <text x="220" y="181" font-size="13" fill="#263746" text-anchor="start">m = 2,50 kg po upućivanju;</text>
         <text x="220" y="196" font-size="13" fill="#263746" text-anchor="start">stanje boce ≈ stalno</text>
       </g>
@@ -80,17 +79,17 @@
         <text x="90" y="78" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">A</text>
         <line id="u09kvs_z3Bsection" x1="350" y1="91" x2="350" y2="180" stroke="#356b83" stroke-width="1" stroke-dasharray="3 4" />
         <text x="350" y="78" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">B</text>
-        <path id="u09kvs_z3downstream" d="M106 123 L334 123" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_sound)" />
+        <path id="u09kvs_z3downstream" d="M106 123 L334 123" fill="none" stroke="#657781" stroke-width="1.4" marker-end="url(#u09kvs_pathMarker)" data-mf1-role="path" />
         <text x="220.0" y="112" font-size="14" fill="#263746" text-anchor="middle">t<tspan baseline-shift="sub" font-size="0.75em">AB</tspan> = 3,00 ms</text>
-        <path id="u09kvs_z3upstream" d="M334 164 L106 164" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_sound)" />
+        <path id="u09kvs_z3upstream" d="M334 164 L106 164" fill="none" stroke="#657781" stroke-width="1.4" marker-end="url(#u09kvs_pathMarker)" data-mf1-role="path" />
         <text x="220.0" y="153" font-size="14" fill="#263746" text-anchor="middle">t<tspan baseline-shift="sub" font-size="0.75em">BA</tspan> = 4,00 ms</text>
-        <path id="u09kvs_z3flow" d="M167 61 L263 61" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
-        <text x="215.0" y="52" font-size="14" fill="#263746" text-anchor="middle">v</text>
+        <path id="u09kvs_z3flow" d="M167 61 L263 61" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09kvs_vopen)" data-mf1-vector="velocity" />
+        <text x="215.0" y="52" font-size="14" fill="#263746" text-anchor="middle"><tspan font-weight="700">v</tspan> = ?</text>
         <line x1="90" y1="187" x2="90" y2="218" stroke="#657781" stroke-width="1" />
         <line x1="350" y1="187" x2="350" y2="218" stroke="#657781" stroke-width="1" />
         <line x1="90" y1="209" x2="90" y2="219" stroke="#657781" stroke-width="1.2" />
         <line x1="350" y1="209" x2="350" y2="219" stroke="#657781" stroke-width="1.2" />
-        <path id="u09kvs_z3length" d="M90 214 L350 214" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09kvs_dim)" marker-end="url(#u09kvs_dim)" />
+        <path id="u09kvs_z3length" d="M90 214 L350 214" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09kvs_dim)" marker-end="url(#u09kvs_dim)" data-mf1-role="dimension" />
         <text x="220.0" y="231" font-size="13" fill="#263746" text-anchor="middle">L = 1,20 m</text>
       </g>
     </g>
@@ -106,9 +105,9 @@
         <path id="u09kvs_z4top" d="M38 97 H120 C185 97 223 125 300 125 L300 118 C223 118 185 90 120 90 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
         <path id="u09kvs_z4bottom" d="M38 189 H120 C185 189 223 161 300 161 L300 168 C223 168 185 196 120 196 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
         <line id="u09kvs_z4exit" x1="300" y1="118" x2="300" y2="168" stroke="#356b83" stroke-width="1.3" stroke-dasharray="4 4" />
-        <path d="M61 143 L102 143" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
-        <text x="81.5" y="134" font-size="14" fill="#263746" text-anchor="middle">v</text>
-        <path id="u09kvs_z4outflow" d="M262 143 L339 143" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+        <path d="M61 143 L102 143" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09kvs_vopen)" data-mf1-vector="velocity" />
+        <text x="81.5" y="134" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">v</text>
+        <path id="u09kvs_z4outflow" d="M262 143 L339 143" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09kvs_vopen)" data-mf1-vector="velocity" />
         <text x="52" y="177" font-size="13" fill="#263746" text-anchor="start">iz mirne komore</text>
         <text x="300" y="102" font-size="14" fill="#263746" text-anchor="middle">e: p<tspan baseline-shift="sub" font-size="0.75em">e</tspan>, Ma<tspan baseline-shift="sub" font-size="0.75em">e</tspan></text>
         <text x="354" y="173" font-size="13" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">b,M</tspan> (bar):</text>
@@ -126,9 +125,9 @@
         <path id="u09kvs_z5top" d="M38 97 H120 C185 97 223 125 300 125 L300 118 C223 118 185 90 120 90 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
         <path id="u09kvs_z5bottom" d="M38 189 H120 C185 189 223 161 300 161 L300 168 C223 168 185 196 120 196 H38 Z" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.8" />
         <line id="u09kvs_z5exit" x1="300" y1="118" x2="300" y2="168" stroke="#356b83" stroke-width="1.3" stroke-dasharray="4 4" />
-        <path d="M61 143 L102 143" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
-        <text x="81.5" y="134" font-size="14" fill="#263746" text-anchor="middle">v</text>
-        <path id="u09kvs_z5outflow" d="M262 143 L339 143" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+        <path d="M61 143 L102 143" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09kvs_vopen)" data-mf1-vector="velocity" />
+        <text x="81.5" y="134" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">v</text>
+        <path id="u09kvs_z5outflow" d="M262 143 L339 143" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09kvs_vopen)" data-mf1-vector="velocity" />
         <text x="52" y="178" font-size="13" fill="#263746" text-anchor="start">iz napojne komore</text>
         <line x1="300" y1="125" x2="335" y2="89" stroke="#657781" stroke-width="1" />
         <text x="280" y="83" font-size="14" fill="#263746" text-anchor="start">A<tspan baseline-shift="sub" font-size="0.75em">g</tspan> = 48,0 mm²</text>
@@ -155,9 +154,9 @@
         <rect id="u09kvs_z6bottom280" x="280" y="183" width="138" height="7" rx="0" fill="url(#u09kvs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <line id="u09kvs_z6shock" x1="209" y1="109" x2="209" y2="183" stroke="#356b83" stroke-width="2.5" stroke-dasharray="6 4" />
         <text x="209" y="98" font-size="14" fill="#263746" text-anchor="middle">val</text>
-        <path id="u09kvs_z6before" d="M50 142 L136 142" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+        <path id="u09kvs_z6before" d="M50 142 L136 142" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09kvs_vopen)" data-mf1-vector="velocity" />
         <text x="93.0" y="133" font-size="14" fill="#263746" text-anchor="middle">Ma<tspan baseline-shift="sub" font-size="0.75em">1</tspan> &gt; 1</text>
-        <path id="u09kvs_z6after" d="M236 163 L273 163" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u09kvs_v)" />
+        <path id="u09kvs_z6after" d="M236 163 L273 163" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09kvs_vopen)" data-mf1-vector="velocity" />
         <text x="252" y="146" font-size="13" fill="#263746" text-anchor="middle">Ma<tspan baseline-shift="sub" font-size="0.75em">2</tspan> &lt; 1</text>
         <text x="108" y="97" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">1</text>
         <path id="u09kvs_z6p1wall" d="M108 183 V213" fill="none" stroke="#3a4a56" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />

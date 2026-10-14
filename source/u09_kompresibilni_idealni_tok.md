@@ -1,6 +1,6 @@
 ![Kompresibilni tok povezuje širenje tlačnog vala, zagušenje u sapnici i skok veličina kroz udarni val.](../assets/print/u09_fig_uvod_kompresibilni_tok.svg){#fig-kompresibilni-pregled fig-align="center" fig-alt="Kompresibilni tok povezuje širenje tlačnog vala, zagušenje u sapnici i skok veličina kroz udarni val."}
 
-**Tumačenje skice.** Tlačni poremećaj širi se relativno prema plinu; u mirujućem plinu brzine su $-a$ i $+a$. U izentropskoj konvergentno-divergentnoj sapnici pri zagušenju grlo $A^*$ doseže $Ma=1$, a izlazni presjek $A_e$ i protutlak $p_b$ određuju što se događa u divergentnom dijelu. Kroz normalni udarni val nadzvučni tok prelazi u podzvučni: statički tlak raste, $p_2>p_1$, zaustavni tlak pada, $p_{02}<p_{01}$, dok zaustavna temperatura ostaje ista, $T_{02}=T_{01}$.
+**Tumačenje skice.** Tlačni poremećaj širi se relativno prema plinu; u mirujućem plinu brzine su $-a$ i $+a$. U izentropskoj konvergentno-divergentnoj sapnici pri zagušenju grlo $A^*$ doseže $Ma=1$, a izlazni presjek $A_e$ i protutlak $p_b$ određuju što se događa u divergentnom dijelu. Sapnica je nacrtana kao osnosimetrična, s omjerom površina izlaza i grla $A_e/A^*=1{,}6$ iz @ex-kd-sapnica-rezim; omjer nacrtanih promjera zato je $\sqrt{1{,}6}\approx1{,}26$. Kroz normalni udarni val nadzvučni tok prelazi u podzvučni: statički tlak raste, $p_2>p_1$, zaustavni tlak pada, $p_{02}<p_{01}$, dok zaustavna temperatura ostaje ista, $T_{02}=T_{01}$.
 
 ## Kompresibilnost fluida {#sec-kompresibilni-motivacija}
 
@@ -397,7 +397,7 @@ Prandtlova relacija potvrđuje rezultat: $Ma_1^*=1{,}633$ i $Ma_2^*=0{,}612$ daj
 
 **Tekst zadatka**
 
-Ispitna konvergentno-divergentna sapnica (shema na @fig-kompresibilni-pregled) ima grlo $A^*=100\ \text{mm}^2$ i izlazni presjek $A_e=160\ \text{mm}^2$. Napaja se zrakom iz mirne komore stanja $p_0=500\ \text{kPa(abs)}$ i $T_0=300\ \text{K}$; uzmi $\kappa=1{,}4$ i $R=287\ \text{J/(kg K)}$. Tok do eventualnog udarnog vala i iza njega smatraj izentropskim; val, ako postoji, smatraj normalnim.
+Ispitna osnosimetrična konvergentno-divergentna sapnica (shema na @fig-kompresibilni-pregled) ima grlo $A^*=100\ \text{mm}^2$ i izlazni presjek $A_e=160\ \text{mm}^2$. Napaja se zrakom iz mirne komore stanja $p_0=500\ \text{kPa(abs)}$ i $T_0=300\ \text{K}$; uzmi $\kappa=1{,}4$ i $R=287\ \text{J/(kg K)}$. Tok do eventualnog udarnog vala i iza njega smatraj izentropskim; val, ako postoji, smatraj normalnim.
 
 **Traži se**
 
@@ -405,7 +405,7 @@ Ispitna konvergentno-divergentna sapnica (shema na @fig-kompresibilni-pregled) i
 2. Odredi protutlak pri kojem normalni val stoji točno u izlaznom presjeku.
 3. Za protutlakove $p_b=100\ \text{kPa(abs)}$ i $p_b=350\ \text{kPa(abs)}$ odluči o režimu: potpuno nadzvučni izlaz ili val unutar divergentnog dijela. Odredi maseni protok u oba slučaja.
 
-**Veza s proračunom.** Na skici je $A^*$ grlo, a $A_e$ izlazni presjek; protutlak $p_b$ djeluje izvan izlaza i nije nužno jednak izlaznom tlaku $p_e$.
+**Veza s proračunom.** Na skici je $A^*$ grlo, a $A_e$ izlazni presjek; za osnosimetričnu sapnicu omjer površina $1{,}6$ odgovara omjeru promjera $1{,}26$. Protutlak $p_b$ djeluje izvan izlaza i nije nužno jednak izlaznom tlaku $p_e$.
 
 **Rješenje**
 
@@ -489,9 +489,9 @@ Sve relacije ovog poglavlja pretpostavljaju kalorički savršen plin sa stalnim 
 
 ![Skice uz Z1–Z6: zvuk, zrak za upućivanje, sapnice i mjerenje preko udarnog vala.](../assets/print/u09_kompresibilni_vjezbe_skice.svg){#fig-vjezbe-kompresibilni-tok fig-align="center" fig-alt="Šest skica s otvorenim prolazima. Z2 prikazuje bocu stlačenog zraka, ventil s kritičnim presjekom i vod prema motoru. Z3 razlikuje prijenos zvuka uzvodno i nizvodno. Z4 označuje izlaz sapnice i zaseban protutlak. Z6 prikazuje normalni val u otvorenom kanalu, statičke priključke i podzvučnu Pitotovu sondu."}
 
-**Napomene uz skice.** U Z1 poremećaj putuje u oba smjera. U Z2 ventil je idealiziran kao kritični presjek $A^*$ između boce i voda prema motoru; stanje boce uzima se kao zaustavno. U Z4 izlaz konvergentne sapnice njezin je najmanji presjek; vanjski tok nije prikazan. U Z5 $A_g$ označuje izmjereni slobodni otvor, različit od nazivne površine $A_n$. U Z6 svi označeni tlakovi su apsolutni.
+**Napomene uz skice.** U Z1 skica prikazuje samo točku poremećaja O i os $x$; smjerove širenja ucrtaj sam. U Z2 ventil je idealiziran kao kritični presjek $A^*$ između boce i voda prema motoru; stanje boce uzima se kao zaustavno. U Z4 izlaz konvergentne sapnice njezin je najmanji presjek; vanjski tok nije prikazan. U Z5 $A_g$ označuje izmjereni slobodni otvor, različit od nazivne površine $A_n$. U Z6 svi označeni tlakovi su apsolutni.
 
-U zadatcima plin promatraj kao kalorički savršen. Brzina zvuka odnosi se na plin, a brzine i vremena prijelaza između nepomičnih točaka na laboratorij. Duljina strelice ne zadaje iznos; isprekidana crta označuje presjek ili val, ne stijenku.
+U zadatcima plin promatraj kao kalorički savršen. Brzina zvuka odnosi se na plin, a brzine i vremena prijelaza između nepomičnih točaka na laboratorij. Duljina strelice ne zadaje iznos, a oznaka „?” označuje traženu veličinu; isprekidana crta označuje presjek ili val, ne stijenku.
 
 ::::: {.mf1-vjezbe-list}
 
@@ -504,7 +504,7 @@ Helij miruje pri $T=300\ \text{K}$. Uzmi $\kappa=1{,}667$ i $R=2077\ \text{J/(kg
 **Traži se**
 
 1. Izračunaj brzinu zvuka.
-2. Označi oba uzdužna smjera njegova širenja i predznake brzina prema osi $x$ sa skice.
+2. Ucrtaj na skicu oba uzdužna smjera njegova širenja i označi predznake brzina prema osi $x$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -517,7 +517,7 @@ Temperatura u relaciji za brzinu zvuka mora biti apsolutna. Plin miruje, pa je l
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$a\approx1019\ \text{m/s}$; desno je brzina $+a$, lijevo $-a$. Srednja brzina helija ostaje $v=0$; strelice prikazuju širenje poremećaja.
+$a\approx1019\ \text{m/s}$; poremećaj se širi u oba smjera: udesno brzinom $+a$, ulijevo $-a$. Srednja brzina helija ostaje $v=0$; ucrtane strelice prikazuju širenje poremećaja, ne tok plina.
 :::
 ::::
 
@@ -629,7 +629,7 @@ Za nastavnu provjeru konvergentne sapnice zadani su sintetički podatci: $p_0=60
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Najprije usporedi $p_b/p_0$ s kritičnim omjerom. Napiši zagušeni protok kao $\dot m=C_dA_gK(p_0,T_0)$. Protok određuje produkt; odvojeno mjerenje stvarne površine omogućuje procjenu koeficijenta. Nazivna površina nije mjerenje stvarnog prolaza.
+Najprije usporedi $p_b/p_0$ s kritičnim omjerom. Napiši zagušeni protok kao $\dot m=C_dA_g\,(\dot m_{max}/A^*)$, gdje omjer $\dot m_{max}/A^*$ prema @eq-priguseni-protok ovisi samo o $p_0$ i $T_0$. Protok određuje produkt; odvojeno mjerenje stvarne površine omogućuje procjenu koeficijenta. Nazivna površina nije mjerenje stvarnog prolaza.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -648,12 +648,12 @@ $p_b/p_0=0{,}167<0{,}528$; $C_dA_g\approx42{,}50\ \text{mm}^2$. Za $A_g=48{,}0\ 
 
 U nastavnom skupu sintetičkih podataka za stacionarni normalni val u zračnom kanalu statički priključci prije i poslije vala daju $p_1=80{,}0\pm0{,}4\ \text{kPa(abs)}$ i $p_2=360{,}0\pm1{,}8\ \text{kPa(abs)}$. Zaustavni tlak prije vala dobiva se neovisnim mjerenjem u velikoj mirnoj napojnoj komori: $p_{01}=626\pm4\ \text{kPa(abs)}$. Pretpostavi izentropski put od komore do presjeka 1, bez ranijeg vala.
 
-Podzvučna Pitotova sonda u presjeku 2, otvorom okrenuta uzvodno, daje $p_{02}=451\pm4\ \text{kPa(abs)}$. Zanemari poremećaj glavnog toka sondom i gubitke u mjernim vodovima. Sve oznake $\pm$ označuju male, međusobno neovisne standardne nesigurnosti mjerenja; $\kappa=1{,}4$ smatraj točnim.
+Podzvučna Pitotova sonda u presjeku 2, otvorom okrenuta uzvodno, daje $p_{02}=451\pm4\ \text{kPa(abs)}$. Zanemari poremećaj glavnog toka sondom i gubitke u mjernim vodovima. Sve oznake $\pm$ označuju male, međusobno neovisne standardne nesigurnosti mjerenja; standardnu nesigurnost veličine $x$ označujemo sa $s(x)$. $\kappa=1{,}4$ smatraj točnim.
 
 **Traži se**
 
 1. Iz omjera $p_2/p_1$ odredi $Ma_1$ i njegovu standardnu nesigurnost linearnom propagacijom nesigurnosti uz korijen zbroja kvadrata doprinosa (RSS).
-2. Izračunaj teorijski omjer $G=p_{02}/p_{01}$ i njegovu nesigurnost, usporedi ga s izravno mjerenim omjerom $r_0$ te odluči jesu li konzistentni prema kriteriju $|G-r_0|\leq u(G-r_0)$.
+2. Izračunaj teorijski omjer zaustavnih tlakova $\Lambda=p_{02}/p_{01}$ i njegovu nesigurnost, usporedi ga s izravno mjerenim omjerom $\Lambda_{mj}$ te odluči jesu li konzistentni prema kriteriju $|\Lambda-\Lambda_{mj}|\leqs(\Lambda-\Lambda_{mj})$.
 3. Izračunaj normiranu razliku.
 4. Objasni zašto sami statički tlakovi ne predstavljaju neovisnu mjernu potvrdu pada zaustavnog tlaka i zašto obična nekorigirana Pitotova sonda ispred vala ne bi izravno dala $p_{01}$.
 
@@ -661,14 +661,14 @@ Podzvučna Pitotova sonda u presjeku 2, otvorom okrenuta uzvodno, daje $p_{02}=4
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Izoliraj $Ma_1$ iz statičkog omjera. Za $r=p_2/p_1$ vrijedi $u(r)/r=\sqrt{(u(p_1)/p_1)^2+(u(p_2)/p_2)^2}$. Analogno računaj $u(r_0)$. Relaciju za $Ma_2$ poveži s lokalnim zaustavnim omjerima i dobij $G(Ma_1)$. Primijeni $u(G)=|G'(Ma_1)|u(Ma_1)$ te $u(G-r_0)=\sqrt{u(G)^2+u(r_0)^2}$; derivaciju smiješ procijeniti središnjom razlikom.
+Izoliraj $Ma_1$ iz statičkog omjera. Za omjer $p_2/p_1$ vrijedi $s(p_2/p_1)/(p_2/p_1)=\sqrt{(s(p_1)/p_1)^2+(s(p_2)/p_2)^2}$. Analogno računaj $s(\Lambda_{mj})$. Relaciju za $Ma_2$ poveži s lokalnim zaustavnim omjerima i dobij $\Lambda(Ma_1)$. Primijeni $s(\Lambda)=|\Lambda'(Ma_1)|\,s(Ma_1)$ te $s(\Lambda-\Lambda_{mj})=\sqrt{s(\Lambda)^2+s(\Lambda_{mj})^2}$; derivaciju smiješ procijeniti središnjom razlikom.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$Ma_1=2{,}000\pm0{,}007$; $G=0{,}7209\pm0{,}0032$; $r_0=0{,}7204\pm0{,}0079$; $u(G-r_0)=0{,}0085$. Normirana razlika $0{,}050<1$: podatci su konzistentni. Statički tlakovi sami daju modelsku procjenu, ne neovisno mjerenje gubitka zaustavnog tlaka. Nadzvučna Pitotova sonda stvara vlastiti val i bez korekcije ne daje $p_{01}$.
+$Ma_1=2{,}000\pm0{,}007$; $\Lambda=0{,}7209\pm0{,}0032$; $\Lambda_{mj}=0{,}7204\pm0{,}0079$; $s(\Lambda-\Lambda_{mj})=0{,}0085$. Normirana razlika $0{,}050<1$: podatci su konzistentni. Statički tlakovi sami daju modelsku procjenu, ne neovisno mjerenje gubitka zaustavnog tlaka. Nadzvučna Pitotova sonda stvara vlastiti val i bez korekcije ne daje $p_{01}$.
 :::
 ::::
 

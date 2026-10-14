@@ -1,7 +1,8 @@
 """Provjera stvarne geometrije skica kompresibilnog U09 (zasebno pokretanje).
 
 Provjerava otvorene prolaze, monotonost sapnica, kotu između mjernih točaka,
-smjerove zvuka i prolaze mjernih vodova. Ne zamjenjuje vizualni pregled.
+smjerove akustičkih signala, odsutnost traženog smjera širenja u Z1 i prolaze
+mjernih vodova. Ne zamjenjuje vizualni pregled.
 """
 from pathlib import Path
 import re
@@ -149,7 +150,27 @@ def run():
             check(wx+ww<=gx or wx>=gx+gw or wy+wh<=gy or wy>=gy+gh,wall_id+': stijenka ne ulazi u plin')
     shock(intro,'u09fukt_shockfront','u09fukt_before','u09fukt_after',60,175)
     shock(tasks,'u09kvs_z6shock','u09kvs_z6before','u09kvs_z6after',109,183)
-    for id,direction in [('z1left',-1),('z1right',1),('z3downstream',1),('z3upstream',-1)]:
+    # Z1 traži da student sam ucrta oba smjera širenja: skica ne smije
+    # prikazati ni strelice širenja ni oznaku brzine a (ni s predznakom).
+    z1=element(tasks,'u09kvs_z1')
+    check(all(tasks.find(f'.//*[@id="u09kvs_{id}"]') is None for id in ('z1left','z1right')),
+          'Z1: strelice smjera širenja nisu nacrtane')
+    z1arrows=[e for e in z1.iter() if e.get('marker-end') or e.get('marker-start')]
+    check([e.get('id') for e in z1arrows]==['u09kvs_z1axis'] and z1arrows[0].get('data-mf1-role')=='axis',
+          'Z1: jedina strelica je os x (nevektorska), bez nacrtanog smjera poremećaja')
+    x1,y1,x2,y2=numbers(z1arrows[0])
+    check(x2>x1 and y1==y2,'Z1: os x usmjerena udesno, kao referenca za predznake')
+    z1labels={''.join(e.itertext()).strip() for e in z1.iter() if e.tag.endswith('text')}
+    check(not z1labels & {'a','−a','+a','-a','±a'},'Z1: nema oznake brzine širenja a na skici')
+    # Ostale skice zadataka ne crtaju traženi rezultat u mjerilu: Z6 omjer
+    # strelica ispred i iza vala nije omjer v₁/v₂ = 2,667 za traženi Ma₁ = 2,
+    # a tražene veličine Z2 (ṁ) i Z3 (v) označene su kao nepoznanice.
+    b6,a6=(numbers(element(tasks,'u09kvs_z6'+k)) for k in ('before','after'))
+    check(abs((b6[2]-b6[0])/(a6[2]-a6[0])/(2.4*2**2/(0.4*2**2+2))-1)>0.05,
+          'Z6: omjer strelica brzine nije u mjerilu traženog rezultata (Ma₁ = 2)')
+    all_labels={''.join(e.itertext()).strip() for e in tasks.iter() if e.tag.endswith('text')}
+    check({'ṁ = ?','v = ?'}<=all_labels,'Z2, Z3: tražene veličine označene „?”')
+    for id,direction in [('z3downstream',1),('z3upstream',-1)]:
         x1,y1,x2,y2=numbers(element(tasks,'u09kvs_'+id))
         check((x2-x1)*direction>0 and y1==y2,id+': ispravan uzdužni smjer signala')
     a,b=(element(tasks,'u09kvs_z3'+x+'section') for x in ('A','B'))
