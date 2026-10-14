@@ -10,7 +10,8 @@ import math
 import re
 import xml.etree.ElementTree as ET
 
-from verify_u05_integrated import quarter_cylinder
+from verify_u05_integrated import (quarter_cylinder, task_watertight_door,
+                                   task_parabolic_cover)
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -77,13 +78,54 @@ def main():
         print(f"PASS {name}: circular arc, normal, pressure arms and moment")
 
     _, nodes = read("u05_vjezbe_skice.svg")
-    check_arc(nodes["u05vs_z2_arc"], 210, 125, 44)
+    # Z1: pogled okomito na vrata; omjeri H/b i h1/H te oznaka sile u centru tlaka.
+    door = nodes["u05vs_z1_door"]
+    x, y, w, h = [float(door.get(k)) for k in ("x", "y", "width", "height")]
+    z1 = task_watertight_door()
+    surface = float(nodes["u05vs_z1_surface"].get("y1"))
+    assert nodes["u05vs_z1_surface"].get("y1") == nodes["u05vs_z1_surface"].get("y2")
+    close(h / w, 1.60 / 0.80)
+    close((y - surface) / h, 1.40 / 1.60)
+    mark = nodes["u05vs_z1_force_mark"]
+    close(float(mark.get("cx")), x + w / 2)
+    close((float(mark.get("cy")) - surface) / h * 1.60, z1["h_cp"], 2e-3)
+    for dog, edge in (("u05vs_z1_dog_top", y), ("u05vs_z1_dog_bottom", y + h)):
+        close(float(nodes[dog].get("cy")), edge)
+        assert float(nodes[dog].get("cx")) > x + w
+    for hinge in ("u05vs_z1_hinge_top", "u05vs_z1_hinge_bottom"):
+        assert float(nodes[hinge].get("x")) + float(nodes[hinge].get("width")) <= x
+    # Z2: kvadratna Bezierova krivulja s kontrolnom točkom na sjecištu tangenata
+    # jest točna parabola s tjemenom A i vodoravnom tangentom u A.
+    tokens = re.findall(r"[A-Za-z]|-?\d+(?:\.\d+)?", nodes["u05vs_z2_parabola"].get("d"))
+    assert tokens[0] == "M" and tokens[3] == "Q" and len(tokens) == 8, tokens
+    ax, ay, cx_, cy_, bx, by = map(float, tokens[1:3] + tokens[4:])
+    close(cx_, (ax + bx) / 2)
+    close(cy_, ay)
+    close((by - ay) / (bx - ax), 0.90 / 1.20)
+    scale = (bx - ax) / 1.20
+    z2 = task_parabolic_cover()
+    fh, fv = nodes["u05vs_z2_FH"], nodes["u05vs_z2_FV"]
+    assert fh.get("y1") == fh.get("y2") and fv.get("x1") == fv.get("x2")
+    close((float(fh.get("y1")) - ay) / scale, z2["depth_x"])
+    close((float(fv.get("x1")) - ax) / scale, z2["x_z"])
+    assert float(fh.get("x2")) < float(fh.get("x1"))      # prema stijenci
+    assert float(fv.get("y2")) > float(fv.get("y1"))      # prema dolje
+    # Voda je iznad pokrova: pravci F_H i F_V ne daju nulti moment oko A (nije kružni luk).
+    assert abs(abs(z2["F_x"]) * z2["depth_x"] - abs(z2["F_z"]) * z2["x_z"]) > 500
+    nx1, ny1, nx2, ny2 = [float(nodes["u05vs_z2_normal"].get(k)) for k in ("x1", "y1", "x2", "y2")]
+    xs = (nx2 - ax) / scale
+    close((ny2 - ay) / scale, 0.90 * (xs / 1.20) ** 2, 1e-3)          # vrh strelice na paraboli
+    slope = 2 * 0.90 * xs / 1.20**2                                     # dy/dx u SVG smjeru
+    close((nx2 - nx1) * 1 + (ny2 - ny1) * slope, 0, 0.15)             # okomito na tangentu
+    assert nx2 < nx1 and ny2 > ny1                                      # iz vode u pokrov
+    water = nodes["u05vs_z2_water-domain"].get("d")
+    assert water.startswith("M48 50") and " Z" in water and f"Q{cx_:g} {cy_:g} {ax:g} {ay:g}" in water
     check_arc(nodes["u05vs_z5_arc"], 207, 103, 70)
     check_normal(nodes["u05vs_z5_normal"], 207, 103, 70)
     assert nodes["u05vs_z4_triangle"].get("d") == "M144.0 78 L218 190 H70 Z"
     for n in range(1, 7):
         assert f"u05vs_z{n}" in nodes
-    print("PASS practice panels: Z2/Z5 arcs, Z5 normal, triangular orientation, six panels")
+    print("PASS practice panels: Z1 door view, Z2 parabola and forces, Z5 arc and normal, triangular orientation, six panels")
 
 
 if __name__ == "__main__":
