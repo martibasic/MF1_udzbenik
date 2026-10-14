@@ -27,17 +27,21 @@ def _invariant(out, rid, condition, details=""):
                 "verification": "invariant", "details": "" if condition else details})
 
 
-def primjer_1_vodilica(b=0.036, h=0.014, v_1=24.0, v_2=19.0, beta_deg=120.0,
+def primjer_1_vodilica(b=0.036, h=0.014, v_1=24.0, v_2=19.0, theta_deg=120.0,
                         rho=998.0):
+    """Nepomična vodilica; theta je kut skretanja od +x (ne kut lopatice beta)."""
     A = b * h
     m_dot = rho * A * v_1
-    beta = math.radians(beta_deg)
-    v_2x = v_2 * math.cos(beta)
-    v_2y = v_2 * math.sin(beta)
+    theta = math.radians(theta_deg)
+    v_2x = v_2 * math.cos(theta)
+    v_2y = v_2 * math.sin(theta)
     F_f_x = -m_dot * (v_2x - v_1)
     F_f_y = -m_dot * (v_2y - 0)
     R = math.sqrt(F_f_x**2 + F_f_y**2)
-    return {"m_dot": m_dot, "F_f_x": F_f_x, "F_f_y": F_f_y, "R": R}
+    # Reakcija nosača R = -F_f; kut theta_R mjeri se iznad negativne osi x.
+    theta_R = math.degrees(math.atan2(-F_f_y, F_f_x))
+    return {"m_dot": m_dot, "F_f_x": F_f_x, "F_f_y": F_f_y, "R": R,
+            "theta_R": theta_R}
 
 
 def primjer_2_ukljestena(Q=0.015, v=12.5, h=0.45, l=0.70, alpha_deg=60.0,
@@ -56,12 +60,13 @@ def primjer_2_ukljestena(Q=0.015, v=12.5, h=0.45, l=0.70, alpha_deg=60.0,
 
 
 def cjeloviti_1_zakrivljena(d=0.045, c_1=26.0, u=10.0, k=0.90,
-                             beta_deg=30.0, rho=998.0):
+                             beta2_deg=30.0, rho=998.0):
+    """Kut lopatice beta2 mjeri se od smjera -u (konvencija cijelog poglavlja)."""
     A = math.pi * d**2 / 4
     w_1 = c_1 - u
     m_rel = rho * A * w_1
     w_2 = k * w_1
-    beta = math.radians(beta_deg)
+    beta = math.radians(beta2_deg)
     w_2x = -w_2 * math.cos(beta)
     w_2y = w_2 * math.sin(beta)
     c_2x = u + w_2x
@@ -77,15 +82,16 @@ def cjeloviti_1_zakrivljena(d=0.045, c_1=26.0, u=10.0, k=0.90,
 
 
 def cjeloviti_2_pelton(d=0.044, c_1=31.0, n=320.0, r=0.46, k=0.90,
-                        beta_deg=20.0, rho=998.0, P_G=9.5e3,
+                        beta2_deg=20.0, rho=998.0, P_G=9.5e3,
                         eta_m=0.96, eta_G=0.94):
+    """Kut lopatice beta2 mjeri se od smjera -u."""
     A = math.pi * d**2 / 4
     omega = 2 * math.pi * n / 60
     u = omega * r
     w_1 = c_1 - u
     m_rel = rho * A * w_1
     w_2 = k * w_1
-    beta = math.radians(beta_deg)
+    beta = math.radians(beta2_deg)
     w_2x = -w_2 * math.cos(beta)
     c_2x = u + w_2x
     F_l_x = m_rel * (c_2x - c_1)
@@ -125,13 +131,13 @@ def cjeloviti_3_flyboard(m=150.0, d=0.050, v=15.0, h=10.0, rho=1000.0, g=9.81):
             "v_10": v_10, "dh": dh, "h_max": h_max, "t_iznad_10": t_iznad_10}
 
 
-def primjer_pelton_lopatica(d=0.060, c_1=40.0, u=18.0, beta2_deg=165.0,
+def primjer_pelton_lopatica(d=0.060, c_1=40.0, u=18.0, beta2_deg=15.0,
                               rho=998.0):
     A = math.pi * d**2 / 4
     w_1 = c_1 - u
     m_dot = rho * A * w_1
     w_2 = w_1
-    c_2x = u + w_2 * math.cos(math.radians(beta2_deg))
+    c_2x = u - w_2 * math.cos(math.radians(beta2_deg))  # beta2 od smjera -u
     F_t = m_dot * (c_1 - c_2x)
     P = F_t * u
     return {"w_1": w_1, "m_dot": m_dot, "c_2x": c_2x, "F_t": F_t, "P": P}
@@ -181,14 +187,14 @@ def primjer_propeler(F_T=160e3, v_A=6.0, D=3.2, rho=1025.0):
 
 
 def primjer_kvadrokopter(m=2.4, rotor_count=4, D=0.280, rho=1.045,
-                          eta=0.70, g=9.81, battery_Wh=74.0):
-    """Javni primjer aktuatorskoga diska kvadrokoptera u visu."""
+                          FM=0.70, g=9.81, battery_Wh=74.0):
+    """Javni primjer aktuatorskoga diska kvadrokoptera u visu (FM: faktor učinka)."""
 
     thrust = m * g / rotor_count
     A = math.pi * D**2 / 4
-    induced_velocity = math.sqrt(thrust / (2 * rho * A))
-    P_ideal = thrust * induced_velocity
-    P_shaft = P_ideal / eta
+    induced_velocity = math.sqrt(thrust / (2 * rho * A))  # v_d
+    P_ideal = thrust * induced_velocity  # P_i
+    P_shaft = P_ideal / FM
     P_total = rotor_count * P_shaft
     duration_min = battery_Wh / P_total * 60
     return {
@@ -207,10 +213,11 @@ def zadatak_1(d=0.022, v=24.0, rho=998.0):
     return {"m_dot": m_dot, "F": m_dot*v, "P": 0.0}
 
 
-def zadatak_2(v=26.0, b=0.030, h=0.016, beta_deg=110.0, rho=998.0):
+def zadatak_2(v=26.0, b=0.030, h=0.016, theta_deg=110.0, rho=998.0):
+    """Nepomična vodilica; theta je kut skretanja od +x prema +y."""
     m_dot = rho*b*h*v
-    beta = math.radians(beta_deg)
-    c2x,c2y = v*math.cos(beta),v*math.sin(beta)
+    theta = math.radians(theta_deg)
+    c2x,c2y = v*math.cos(theta),v*math.sin(theta)
     Fx,Fy = m_dot*(v-c2x),-m_dot*c2y
     return {"m_dot":m_dot,"F_x":Fx,"F_y":Fy,"R_x":-Fx,"R_y":-Fy,
             "R":math.hypot(Fx,Fy),"c2x":c2x,"c2y":c2y}
@@ -226,9 +233,11 @@ def zadatak_3(c1=32.0, u=12.0, m_rel=18.0, Fx=625.0, Fy=-153.0):
     w2 = math.hypot(w2x,w2y)
     P = Fx*u
     loss = .5*m_rel*(w1*w1-w2*w2)
+    # Kut lopatice beta2 od smjera -u (-x) prema +y; skretanje theta = 180 - beta2.
+    beta2 = math.degrees(math.atan2(w2y,-w2x))
     return {"c2x":c2x,"c2y":c2y,"w2x":w2x,"w2y":w2y,
             "w1":w1,"w2":w2,"k":w2/w1,
-            "beta_deg":math.degrees(math.atan2(w2y,w2x)),"P":P,"loss":loss,
+            "beta_deg":beta2,"theta_deg":180.0-beta2,"P":P,"loss":loss,
             "absolute_kinetic_drop":.5*m_rel*(c1*c1-c2x*c2x-c2y*c2y)}
 
 
@@ -243,19 +252,19 @@ def zadatak_4(r1=.060, r2=.140, omega=200.0, m_dot=3.00,
             "P":m_dot*specific_work,"e":specific_work}
 
 
-def zadatak_5(T=2000.0, U=8.0, rho=1000.0, eta=.80,
+def zadatak_5(F_T=2000.0, v_s=8.0, rho=1000.0, eta=.80,
               jet_speeds=(20.0,30.0), electric_limit=40000.0):
     candidates=[]
-    for Vj in jet_speeds:
-        if Vj <= U or U < 0 or T <= 0 or not 0 < eta <= 1:
-            raise ValueError("Model zahtijeva Vj>U>=0, T>0 i 0<eta<=1.")
-        m_dot = T/(Vj-U)
+    for v_j in jet_speeds:
+        if v_j <= v_s or v_s < 0 or F_T <= 0 or not 0 < eta <= 1:
+            raise ValueError("Model zahtijeva v_j>v_s>=0, F_T>0 i 0<eta<=1.")
+        m_dot = F_T/(v_j-v_s)
         Q = m_dot/rho
-        d = math.sqrt(4*Q/(math.pi*Vj))
-        Ph = .5*m_dot*(Vj*Vj-U*U)
-        candidates.append({"Vj":Vj,"m_dot":m_dot,"Q":Q,"d":d,
-                           "Ph":Ph,"Pel":Ph/eta,"useful":T*U,
-                           "eta_prop":T*U/Ph,"wake":.5*m_dot*(Vj-U)**2})
+        d = math.sqrt(4*Q/(math.pi*v_j))
+        Ph = .5*m_dot*(v_j*v_j-v_s*v_s)
+        candidates.append({"v_j":v_j,"m_dot":m_dot,"Q":Q,"d":d,
+                           "Ph":Ph,"Pel":Ph/eta,"useful":F_T*v_s,
+                           "eta_prop":F_T*v_s/Ph,"wake":.5*m_dot*(v_j-v_s)**2})
     feasible=[i+1 for i,r in enumerate(candidates) if r["Pel"]<=electric_limit]
     return {"candidates":candidates,"feasible":feasible}
 
@@ -271,11 +280,11 @@ def zadatak_6(m=110.0, d=0.028, n_sapnica=4, v=36.0, rho=998.0,
 
 
 # ------------ Faza 1.5 dodatak: Krivulja snage P(u) i optimum (CH T3) ----------------
-def cjeloviti_4_optimum(d=0.050, c_1=30.0, beta2_deg=165.0, k=0.90,
+def cjeloviti_4_optimum(d=0.050, c_1=30.0, beta2_deg=15.0, k=0.90,
                          rho=998.0, R_rotor=0.20):
     A = math.pi * d**2 / 4
     m_dot = rho * A * c_1
-    faktor = 1 - k * math.cos(math.radians(beta2_deg))  # 1 - k*cos(beta2)
+    faktor = 1 + k * math.cos(math.radians(beta2_deg))  # 1 + k*cos(beta2), beta2 od -u
     # Sila i snaga kao funkcija u:
     def F(u):
         return m_dot * (c_1 - u) * faktor
@@ -301,10 +310,17 @@ def cjeloviti_4_optimum(d=0.050, c_1=30.0, beta2_deg=165.0, k=0.90,
 def verify():
     out = []
 
+    # Izvod i samoprovjera: beta2 od smjera -u; beta2 = 15 deg (skretanje 165 deg).
+    factor15 = 1 + math.cos(math.radians(15.0))
+    _check(out, "U12.izvod.factor_beta2_15", factor15, 1.97, "", rel=0.005)
+    _check(out, "U12.izvod.drop_beta2_15_pct", 100*(2-factor15)/2, 1.7, "%", rel=0.02)
+    _check(out, "U12.izvod.ratio_beta2_15", factor15/2, 0.983, "", rel=0.001)
+
     r = primjer_1_vodilica()
     _check(out, "U12.P1.m_dot", r["m_dot"], 12.07, "kg/s", rel=0.02)
     _check(out, "U12.P1.F_f_x", r["F_f_x"], 404.4, "N", rel=0.02)
     _check(out, "U12.P1.R", r["R"], 451.0, "N", rel=0.02)
+    _check(out, "U12.P1.theta_R", r["theta_R"], 26.2, "degree", rel=0.005)
 
     r = cjeloviti_1_zakrivljena()
     _check(out, "U12.P2.m_rel", r["m_rel"], 25.4, "kg/s", rel=0.02)
@@ -315,7 +331,7 @@ def verify():
     drop = 0.5*r["m_rel"]*(26**2-(r["c_2x"]**2+r["c_2y"]**2))
     _invariant(out, "U12.P2.energy_split", abs(drop-r["P"]-0.5*r["m_rel"]*(16**2-14.4**2))<1e-9
                and abs(r["F_f_x"]-r["m_rel"]*16*(1+0.9*math.cos(math.radians(30))))<1e-9,
-               "Pad kinetičke energije mora biti snaga plus gubitak relativne brzine; kutna konvencija beta2=180-beta.")
+               "Pad kinetičke energije mora biti snaga plus gubitak relativne brzine; F_x = m w1 (1 + k cos beta2), beta2 od -u.")
 
     r = cjeloviti_2_pelton()
     _check(out, "U12.P3.u", r["u"], 15.41, "m/s", rel=0.02)
@@ -413,7 +429,8 @@ def verify():
     _check(out, "U12.Z3.w2x", r["w2x"], -14.722, "m/s", abs_tol=.0005)
     _check(out, "U12.Z3.w2y", r["w2y"], 8.500, "m/s", abs_tol=.0005)
     _check(out, "U12.Z3.k", r["k"], .850, "", abs_tol=.0005)
-    _check(out, "U12.Z3.beta", r["beta_deg"], 150.00, "degree", abs_tol=.005)
+    _check(out, "U12.Z3.beta", r["beta_deg"], 30.00, "degree", abs_tol=.005)
+    _check(out, "U12.Z3.theta", r["theta_deg"], 150.00, "degree", abs_tol=.005)
     _check(out, "U12.Z3.P_kW", r["P"]/1000, 7.500, "kW", abs_tol=.0005)
     _check(out, "U12.Z3.loss_kW", r["loss"]/1000, .999, "kW", abs_tol=.0005)
     _invariant(out, "U12.Z3.momentum_and_energy",
@@ -464,10 +481,10 @@ def verify():
                and all(abs(c["Ph"]-c["useful"]-c["wake"])<1e-8 for c in (a,b))
                and a["Q"]>b["Q"] and a["eta_prop"]>b["eta_prop"],
                "Oba toka daju isti potisak, ali samo A zadovoljava elektricnu granicu.")
-    static=zadatak_5(U=0.0)["candidates"][0]
+    static=zadatak_5(v_s=0.0)["candidates"][0]
     _invariant(out, "U12.Z5.static_limit", static["Ph"]>0 and static["useful"]==0
                and static["eta_prop"]==0,
-               "Statički potisak ne daje korisnu translacijsku snagu TU.")
+               "Statički potisak ne daje korisnu translacijsku snagu F_T v_s.")
 
     r = zadatak_6()
     _check(out, "U12.Z6.F_p_kN", r["F_p"]/1000, 3.186, "kN", abs_tol=.0005)

@@ -10,9 +10,22 @@ import xml.etree.ElementTree as ET
 from check_u10_sketch_geometry import check, node, path, line, delta, plate, wall_and_openings
 from check_u13_sketch_geometry import close, graph, rect
 
-from sketch_style import check_uniform_fluid
+from sketch_style import check_uniform_fluid, check_arrow_semantics
 
 ROOT = Path(__file__).resolve().parents[1] / 'assets' / 'print'
+
+
+def vector_kind(root, id, kind):
+    """Vector style of 14 Oct 2026: brzine krute granice (u, brzina broda) i vrtnja nisu iznimka."""
+    check(node(root, id).get('data-mf1-vector') == kind, id+': vektor mora imati stil '+kind)
+
+
+def text_of(e):
+    return ''.join(e.itertext())
+
+
+def absent(root, id, message):
+    check(not any(e.get('id') == id for e in root.iter()), message)
 
 
 def same_point(a, b, message):
@@ -116,7 +129,24 @@ def main():
             if e.get('id', '').endswith('fluid') and e.get('fill') != 'none':
                 check(e.get('d').count('M') == 1 and e.get('stroke') == 'none', 'Jedna povezana ispuna bez unutarnjih pregrada')
                 check_uniform_fluid(e)
+        issues = check_arrow_semantics(root)
+        check(not issues, 'Stil vektora (sila/brzina/kutna brzina): '+'; '.join(issues))
     intro, p1, p2, p3, p4, p5, ex = roots
+    # Brzina lopatice u, brzina broda i vrtnja crtaju se kao vektori (ne siva pomoćna boja).
+    for r, ids, kind in (
+            (intro, ('u14intro_inletTriangleu', 'u14intro_motion', 'u14intro_shipMotion'), 'velocity'),
+            (p3, ('u14p3_inletTriangleu', 'u14p3_outletTriangleu'), 'velocity'),
+            (p4, ('u14p4_inletTriangleu', 'u14p4_outletTriangleu', 'u14p4_motion'), 'velocity'),
+            (p5, ('u14p5_inletTriangleu', 'u14p5_outletTriangleu', 'u14p5_motion'), 'velocity'),
+            (ex, ('u14ex_z3motion',), 'velocity'),
+            (p3, ('u14p3_rotation',), 'angular-velocity'),
+            (p5, ('u14p5_rotation',), 'angular-velocity'),
+            (intro, ('u14intro_force', 'u14intro_thrust'), 'force'),
+            (p1, ('u14p1_forceX', 'u14p1_forceY', 'u14p1_reaction'), 'force'),
+            (ex, ('u14ex_z1force', 'u14ex_z3forceX', 'u14ex_z3forceY',
+                  'u14ex_z6thrust', 'u14ex_z6weight'), 'force')):
+        for id in ids:
+            vector_kind(r, id, kind)
     guide(intro, 'u14intro_flow', 150)
     triangle(intro, 'u14intro_inletTriangle', 8, (16, 0), 5)
     duct(intro, 'u14intro_duct', 8, 20)
@@ -239,19 +269,64 @@ def main():
     close(delta(node(ex, 'u14ex_z1d'))[1], 26, 'Z1: poprečna kota mlaza')
     guide(ex, 'u14ex_z2', 110, 1)
     angle(ex, 'u14ex_z2angle', 110)
-    fx, fy = 26*26*.03*.016*998*(1-math.cos(math.radians(110))), -26*26*.03*.016*998*math.sin(math.radians(110))
-    direction(ex, 'u14ex_z2reaction', math.degrees(math.atan2(-fy, -fx)))
+    # Z2 traži predznačene komponente i reakciju: smjer R se ne crta, samo "R = ?".
+    absent(ex, 'u14ex_z2reaction', 'Z2: skica ne smije crtati traženi smjer reakcije')
+    check(not any(e.get('data-mf1-vector') == 'force' for e in node(ex, 'u14ex_z2').iter()),
+          'Z2: nijedna sila nije nacrtana')
+    check(any(text_of(e) == 'R = ?' for e in node(ex, 'u14ex_z2').iter()), 'Z2: nepoznanica R = ?')
     direction(p1, 'u14p1_reaction', math.degrees(math.atan2(198.635, -404.406)))
-    guide(ex, 'u14ex_z3', math.degrees(math.atan2(8.5, 32-625/18-12)))
-    triangle(ex, 'u14ex_z4one', 200*.06, (5-200*.06, 4), 5)
-    triangle(ex, 'u14ex_z4two', 200*.14, (20-200*.14, 6), 5)
+    # Z3 traži beta2 i k: izlaz je nacrtan shematski, ne pod traženim kutom i bez širine iz k.
+    result_exit = math.degrees(math.atan2(8.5, 32-625/18-12))   # 150 deg od +x (beta2 = 30 deg od -u)
+    k_result = math.hypot(32-625/18-12, 8.5)/(32-12)
+    dx, dy = delta(node(ex, 'u14ex_z3relativeExit'))
+    drawn_exit = math.degrees(math.atan2(-dy, dx))
+    check(abs(drawn_exit-result_exit) >= 10, 'Z3: smjer w2 ne smije biti nacrtan pod traženim kutom')
+    inner, outer = path(node(ex, 'u14ex_z3freeEdge')), path(node(ex, 'u14ex_z3outerEdge'))
+    widths_ratio = math.dist(inner[-2], outer[-2])/math.dist(inner[0], outer[0])
+    check(abs(widths_ratio-1/k_result) > 0.05, 'Z3: širina izlaza ne smije otkrivati traženi k')
+    guide(ex, 'u14ex_z3', drawn_exit)
+    z3_texts = [text_of(e) for e in node(ex, 'u14ex_z3').iter() if e.tag.endswith('text')]
+    check('w2 = ?' in z3_texts and any('shematski' in t for t in z3_texts),
+          'Z3: nepoznanica w2 = ? i napomena o shematskom smjeru')
+    # Z4 traži trokute: na skici su samo zadani c1, c2 u lokalnim osima, bez u i w.
+    for name in ('one', 'two'):
+        for part in ('u', 'w'):
+            absent(ex, 'u14ex_z4'+name+part, 'Z4: skica ne smije crtati traženi vektor '+part)
+    z4 = node(ex, 'u14ex_z4')
+    z4_vectors = [e.get('id') for e in z4.iter() if e.get('data-mf1-vector')]
+    check(sorted(z4_vectors) == ['u14ex_z4onec', 'u14ex_z4twoc'], 'Z4: jedini vektori su zadani c1 i c2')
+    for name, c in (('one', (5, 4)), ('two', (20, 6))):
+        same_point(delta(node(ex, 'u14ex_z4'+name+'c')), (5*c[0], -5*c[1]), 'Z4: zadani c u zajedničkom mjerilu')
+        origin = line(node(ex, 'u14ex_z4'+name+'c'))[0]
+        same_point(line(node(ex, 'u14ex_z4'+name+'AxisT'))[0], origin, 'Z4: lokalne osi u početku c')
+        same_point(line(node(ex, 'u14ex_z4'+name+'AxisR'))[0], origin, 'Z4: lokalne osi u početku c')
+        direction(ex, 'u14ex_z4'+name+'AxisT', 0)
+        direction(ex, 'u14ex_z4'+name+'AxisR', 90)
+    z4_texts = [text_of(e) for e in z4.iter() if e.tag.endswith('text')]
+    check(any(t.startswith('r1 = ') for t in z4_texts) and any(t.startswith('r2 = ') for t in z4_texts)
+          and any(t.startswith('ω = ') for t in z4_texts), 'Z4: zadani r1, r2 i ω')
+    # Jedna referenca kuta: beta samo kao kut lopatice s indeksom; skretanje vodilice je theta.
+    for r in roots:
+        check(not any('β =' in text_of(e) for e in r.iter() if e.tag.endswith('text')),
+              'Kut lopatice nosi indeks (β1, β2); kut skretanja je θ')
+    check(any(text_of(e) == 'θ = 120°' for e in p1.iter()), 'P1: kut skretanja θ')
+    check(any(text_of(e) == 'θ = 110°' for e in ex.iter()), 'Z2: kut skretanja θ')
+    # Z5 traži Q i d: zadane brzine su u zajedničkoj skali, a presjeci shematski
+    # (jednaki ulazi, izlaz iz kontinuiteta brzina), pa omjeri ne daju ni Q_A/Q_B ni d_A/d_B.
+    inlets, outlets = [], []
     for i, vj in enumerate((20, 30)):
         di, do = duct(ex, 'u14ex_z5duct'+str(i), 8, vj)
-        Q = 2000/(1000*(vj-8))
-        close(do, 280*math.sqrt(4*Q/(math.pi*vj)), 'Z5: promjer iz potiska i kontinuiteta u zajedničkoj skali')
+        inlets.append(di)
+        outlets.append(do)
         close(delta(node(ex, 'u14ex_z5d'+str(i)))[1], do, 'Z5: kota završava na unutarnjim rubovima')
         close(delta(node(ex, 'u14ex_z5inflow'+str(i)))[0], 3*8, 'Z5: zajednička skala ulaznih brzina')
         close(delta(node(ex, 'u14ex_z5outflow'+str(i)))[0], 3*vj, 'Z5: zajednička skala izlaznih brzina')
+    QA, QB = 2000/(1000*12), 2000/(1000*22)
+    dA, dB = math.sqrt(4*QA/(math.pi*20)), math.sqrt(4*QB/(math.pi*30))
+    close(inlets[0], inlets[1], 'Z5: jednaki shematski ulazi ne otkrivaju omjer protoka')
+    check(abs(outlets[0]/outlets[1]-dA/dB) > 0.1*dA/dB, 'Z5: omjer izlaznih promjera ne smije biti traženi d_A/d_B')
+    check(any('d' in text_of(e) and '= ?' in text_of(e) for e in node(ex, 'u14ex_z5').iter()),
+          'Z5: nepoznati promjeri označeni s ?')
     parts, width = graph(ex, 'u14ex_z6manifold')
     check(len(parts) == 5, 'Z6: glavni dovod i četiri izlazna ogranka')
     for i, part in enumerate(parts[1:]):
@@ -264,6 +339,11 @@ def main():
     direction(ex, 'u14ex_z6inletRight', 180)
     direction(ex, 'u14ex_z6thrust', 90)
     direction(ex, 'u14ex_z6weight', -90)
+    # Z6 traži F_T i ubrzanje: duljine F_T i mg su jednake (shematske), ne otkrivaju F_T > mg.
+    close(math.hypot(*delta(node(ex, 'u14ex_z6thrust'))), math.hypot(*delta(node(ex, 'u14ex_z6weight'))),
+          'Z6: shematske jednake duljine sila')
+    check(any('F' in text_of(e) and '= ?' in text_of(e) for e in node(ex, 'u14ex_z6').iter()),
+          'Z6: traženi potisak označen s ?')
     print('U14 SVG PASS: 7 slika; otvoreni tokovi, strujna cijev diska, radijalno kolo, kote/kutovi, stvarni trokuti brzina, radijus i vrtnja, reakcije, kontinuitet i četiri mlaza.')
 
 

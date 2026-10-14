@@ -2,14 +2,15 @@
   <title id="u14p2_title">Aktuatorski disk propelera u napredovanju</title>
   <desc id="u14p2_desc">Strujna cijev u okviru propelera sužava se od dalekog uzvodnog presjeka preko tankog propusnog diska do dalekog nizvodnog presjeka (traga); presjeci slijede iz kontinuiteta. Strelice brzina vA, vd i vj nacrtane su u zajedničkom mjerilu i rastu nizvodno. Potisak FT djeluje na disk, dakle na brod, suprotno ubrzanju vode. Kota D označuje promjer diska. Isprekidana granica je kontrolni volumen strujne cijevi.</desc>
   <defs>
+    <marker id="u14p2_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <marker id="u14p2_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
     </marker>
     <marker id="u14p2_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
       <path d="M0 0 L6 2.5 L0 5 Z" fill="#657781" />
     </marker>
-    <marker id="u14p2_forceMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    <marker id="u14p2_forceMarker" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L6 2.5 L0 5 Z" fill="#356b83" />
     </marker>
     <marker id="u14p2_axisMarker" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0 0 L7 3 L0 6 Z" fill="#3a4a56" />
@@ -23,22 +24,23 @@
       <path id="u14p2_controlVolume" d="M60.0000000 179.2861396 Q140.0000000 179.2861396 220.0000000 186.0000000 Q310.0000000 191.1050248 400.0000000 191.1050248 L400.0000000 308.8949752 Q310.0000000 308.8949752 220.0000000 314.0000000 Q140.0000000 320.7138604 60.0000000 320.7138604 Z" fill="none" stroke="#263746" stroke-width="1.6" stroke-dasharray="6 4" data-mf1-role="control-volume" />
       <line id="u14p2_disk" x1="220.0000000" y1="186.0000000" x2="220.0000000" y2="314.0000000" stroke="#3a4a56" stroke-width="3" />
       <text x="220.0000000" y="354.0000000" font-size="11" fill="#263746" text-anchor="middle">disk (propustan)</text>
-      <path id="u14p2_vA" d="M72.0000000 250.0000000 L132.0000000 250.0000000" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14p2_v)" />
-      <text x="102.0000000" y="240.0000000" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">A</tspan> = 6,0 m/s</text>
-      <path id="u14p2_vd" d="M224.0000000 250.0000000 L297.2487800 250.0000000" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14p2_v)" />
-      <text x="260.6243900" y="240.0000000" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">d</tspan></text>
-      <path id="u14p2_vw" d="M307.5024400 290.0000000 L394.0000000 290.0000000" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14p2_v)" />
-      <text x="350.7512200" y="282.0000000" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">j</tspan></text>
-      <path id="u14p2_thrust" d="M220.0000000 150.0000000 L160.0000000 150.0000000" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14p2_forceMarker)" />
-      <text x="190.0000000" y="138.0000000" font-size="12" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.75em">T</tspan> na brod</text>
+      <path id="u14p2_vA" d="M72.0000000 250.0000000 L132.0000000 250.0000000" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14p2_vopen)" data-mf1-vector="velocity" />
+      <text x="102.0000000" y="240.0000000" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">v<tspan baseline-shift="sub" font-size="0.75em">A</tspan> = 6,0 m/s</text>
+      <path id="u14p2_vd" d="M224.0000000 250.0000000 L297.2487800 250.0000000" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14p2_vopen)" data-mf1-vector="velocity" />
+      <text x="260.6243900" y="240.0000000" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">v<tspan baseline-shift="sub" font-size="0.75em">d</tspan></text>
+      <path id="u14p2_vw" d="M307.5024400 290.0000000 L394.0000000 290.0000000" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14p2_vopen)" data-mf1-vector="velocity" />
+      <text x="350.7512200" y="282.0000000" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">v<tspan baseline-shift="sub" font-size="0.75em">j</tspan></text>
+      <path id="u14p2_thrust" d="M220.0000000 150.0000000 L160.0000000 150.0000000" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u14p2_forceMarker)" data-mf1-vector="force" />
+      <text x="175.0000000" y="138.0000000" font-size="12" fill="#263746" text-anchor="end" font-weight="700">F<tspan baseline-shift="sub" font-size="0.75em">T</tspan></text>
+      <text x="179.0000000" y="138.0000000" font-size="12" fill="#263746" text-anchor="start">na brod</text>
       <line x1="212.0000000" y1="186.0000000" x2="194.0000000" y2="186.0000000" stroke="#657781" stroke-width="1" />
       <line x1="212.0000000" y1="314.0000000" x2="194.0000000" y2="314.0000000" stroke="#657781" stroke-width="1" />
-      <path id="u14p2_D" d="M200.0000000 186.0000000 L200.0000000 314.0000000" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14p2_dim)" marker-end="url(#u14p2_dim)" />
+      <path id="u14p2_D" d="M200.0000000 186.0000000 L200.0000000 314.0000000" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14p2_dim)" marker-end="url(#u14p2_dim)" data-mf1-role="dimension" />
       <text x="194.0000000" y="284.0000000" font-size="11" fill="#263746" text-anchor="end">D = 3,2 m</text>
       <text x="60.0000000" y="167.2861396" font-size="11" fill="#263746" text-anchor="start">daleko uzvodno, tlak okoline</text>
       <text x="400.0000000" y="179.1050248" font-size="11" fill="#263746" text-anchor="end">daleko nizvodno (trag), tlak okoline</text>
       <text x="220.0000000" y="336.0000000" font-size="11" fill="#263746" text-anchor="middle">tlačni skok Δp<tspan baseline-shift="sub" font-size="0.75em">d</tspan></text>
-      <path d="M40 395 L100 395" fill="none" stroke="#3a4a56" stroke-width="1.6" marker-end="url(#u14p2_axisMarker)" />
+      <path d="M40 395 L100 395" fill="none" stroke="#3a4a56" stroke-width="1.6" marker-end="url(#u14p2_axisMarker)" data-mf1-role="axis" />
       <text x="108" y="399" font-size="12" fill="#263746" text-anchor="start">x (prema krmi)</text>
       <text x="20" y="420" font-size="11" fill="#263746" text-anchor="start">Presjeci iz kontinuiteta; brzine u zajedničkom mjerilu.</text>
     </g>
