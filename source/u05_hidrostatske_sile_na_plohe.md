@@ -1,6 +1,6 @@
 ![Od raspodjele hidrostatičkog tlaka do rezultantne sile i njezina pravca djelovanja na ravnoj plohi](../assets/print/u05_fig_uvod_pregled.svg){#fig-u05-pregled-sila-na-plohe fig-align="center" style="width:100%;max-width:980px;" fig-alt="Od raspodjele hidrostatičkog tlaka do rezultantne sile i njezina pravca djelovanja na ravnoj plohi"}
 
-**Tumačenje skice.** Rezultanta tlaka na ravnu plohu jest $F=\rho gAh_C$: tlak u težištu množi se površinom. Za vertikalnu plohu dubina centra tlaka iznosi $h_{CP}=h_C+I_G/(Ah_C)$, gdje je $I_G$ aksijalni moment površine oko težišne osi. Vrijednosti su $bH^3/12$ za pravokutnik, $bH^3/36$ za trokut i $\pi d^4/64$ za krug.
+**Tumačenje skice.** Rezultanta tlaka na ravnu plohu jest $F=\rho gAh_C$: tlak u težištu množi se površinom. Za vertikalnu plohu visine $H$ čiji je gornji rub na dubini $h_1$ težište je na dubini $h_C=h_1+H/2$, a dubina centra tlaka iznosi $h_{CP}=h_C+I_G/(Ah_C)$, gdje je $I_G$ aksijalni moment površine oko težišne osi. Vrijednosti su $bH^3/12$ za pravokutnik, $bH^3/36$ za trokut i $\pi d^4/64$ za krug.
 
 Na prikazanoj plohi tlak raste s dubinom, pa je CP ispod težišta C i donji vijak prenosi veću komponentu reakcije od gornjeg zgloba. Isti se postupak primjenjuje na brodske pregrade, brane i taložnike.
 
@@ -406,10 +406,10 @@ Nakon određivanja predznačenih komponenti,
 
 $$
 F_R=\sqrt{F_H^2+F_V^2},\qquad
-\alpha=\operatorname{atan2}(F_V,F_H).
+\theta_R=\operatorname{atan2}(F_V,F_H).
 $$ {#eq-sile-plohe-vertikalna-komponenta-i-njezin-smjer-02}
 
-Funkcija $\operatorname{atan2}$ zadržava kvadrant; obični $\arctan(F_V/F_H)$ može sakriti pogrešan predznak. Na kružnom luku u ravninskom presjeku sve lokalne tlačne sile prolaze središtem zakrivljenosti, pa kroz njega prolazi i rezultanta. To geometrijsko svojstvo ne vrijedi za proizvoljnu zakrivljenu plohu: normale parabolične ili eliptične plohe nemaju zajedničku točku, pa moment oko bilo koje osi treba računati iz obiju komponenata i njihovih krakova (zadatak Z2).
+Kut $\theta_R$ rezultante mjeri se od vodoravnice; indeks $R$ razlikuje ga od kuta nagiba ravne plohe $\theta$. Funkcija $\operatorname{atan2}$ zadržava kvadrant; obični $\arctan(F_V/F_H)$ može sakriti pogrešan predznak. Na kružnom luku u ravninskom presjeku sve lokalne tlačne sile prolaze središtem zakrivljenosti, pa kroz njega prolazi i rezultanta. To geometrijsko svojstvo ne vrijedi za proizvoljnu zakrivljenu plohu: normale parabolične ili eliptične plohe nemaju zajedničku točku, pa moment oko bilo koje osi treba računati iz obiju komponenata i njihovih krakova (zadatak Z2).
 
 **Provjera.** Za četvrtinu valjka koja počinje na slobodnoj površini izravna integracija daje $F_H=\rho gbR^2/2$ i $|F_V|=\rho gb\pi R^2/4$, što je upravo projekcija i pomoćni volumen.
 :::
@@ -571,7 +571,7 @@ Stoga je
 
 $$
 F_R=8{,}860\ \mathrm{kN},\qquad
-\alpha=-57{,}52^\circ.
+\theta_R=-57{,}52^\circ.
 $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-06}
 
 **Provjera i tumačenje**
@@ -674,9 +674,9 @@ Zbroj je $\rho gb\pi R^3/4=F_VR$, pa je $T=F_V=13{,}026\ \mathrm{kN}$. Isto slij
 
 U svim zadatcima uzmi $g=9{,}81\ \mathrm{m/s^2}$. Ako nije drukčije navedeno, voda ima $\rho=998\ \mathrm{kg/m^3}$, atmosfera djeluje s obje strane gdje je prisutna i računa se neto manometarski tlak. Skica sa stranom koju fluid kvasi, normalom i pozitivnim smjerovima dio je postavljanja modela.
 
-![Skice zadataka Z1–Z6: vodonepropusna vrata, parabolični pokrov, dvije razine vode, trokutasti poklopac, radijalni poklopac s osi u središtu kružnice i mjerni panel](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe-skice fig-align="center" fig-alt="Šest skica s dimenzijama, stvarnom vodom i silama na vrata i poklopce; u Z1 pogled okomito na vrata sa šarkama i zasunima, u Z2 parabolični pokrov, u Z5 os je u središtu kružnice O"}
+![Skice zadataka Z1–Z6: vodonepropusna vrata, parabolični pokrov, dvije razine vode, trokutasti poklopac, radijalni poklopac s osi u središtu kružnice i mjerni panel](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe-skice fig-align="center" fig-alt="Šest skica s dimenzijama i stvarnom vodom; tražene sile vode nisu nacrtane nego su označene upitnikom; u Z1 pogled okomito na vrata sa šarkama i zasunima, u Z2 parabolični pokrov s lokalnom tlačnom silom, u Z5 os je u središtu kružnice O"}
 
-**Napomene uz skice.** Strelice prikazuju sile na vrata i poklopce, a dvostrane strelice kote; duljine sila nisu u mjerilu. Z1 i Z4 su pogledi okomito na plohu, pa je sila okomita na crtež; u Z1 su šarke na lijevom, a zasuni na desnom rubu. U Z2 voda je iznad paraboličnog pokrova, a ispod njega suhi kanal. U Z3 pregrada ne propušta vodu. U Z5 os je u O, a spojnica izvan presjeka. U Z6 oznaka $\pm$ predstavlja standardnu nesigurnost.
+**Napomene uz skice.** Strelice prikazuju zadane sile i lokalne tlačne sile, a dvostrane strelice kote; duljine sila nisu u mjerilu. Tražene sile vode nisu nacrtane: u Z1, Z2 i Z6 označene su s „?”, pa smjer i hvatište treba odrediti iz modela. Z1 i Z4 su pogledi okomito na plohu, pa je sila okomita na crtež; u Z1 su šarke na lijevom, a zasuni na desnom rubu. U Z2 voda je iznad paraboličnog pokrova, a ispod njega suhi kanal; nacrtana je samo jedna lokalna tlačna sila $d\mathbf F$. U Z3 pregrada ne propušta vodu. U Z5 os je u O, a spojnica izvan presjeka. U Z6 oznaka $\pm$ predstavlja standardnu nesigurnost.
 
 ::::: {.mf1-vjezbe-list}
 
@@ -717,7 +717,7 @@ $F_x=+28{,}31\ \mathrm{kN}$; $h_{CP}=2{,}297\ \mathrm{m}$ ($0{,}897\ \mathrm{m}$
 
 **Tekst zadatka**
 
-Uz okomitu stijenku otvorenog bazena nalazi se suhi instalacijski kanal na atmosferskom tlaku, pokriven krutim zakrivljenim pokrovom širine $b=1{,}50\ \mathrm{m}$ (okomito na presjek). Presjek pokrova je parabola s tjemenom $A$ na slobodnoj površini uz stijenku i vodoravnom tangentom u $A$; pokrov završava u točki $B$ na vodoravnoj udaljenosti $L=1{,}20\ \mathrm{m}$ od stijenke i dubini $H=0{,}90\ \mathrm{m}$, gdje se spaja s dnom kanala. Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ kvasi gornju (konkavnu) stranu pokrova; atmosferski se tlak poništava. Uzmi $+x$ od stijenke prema vodi, $+z$ prema gore i pozitivan moment suprotno kazaljci na satu.
+Uz okomitu stijenku otvorenog bazena nalazi se suhi instalacijski kanal na atmosferskom tlaku, pokriven krutim zakrivljenim pokrovom širine $b=1{,}50\ \mathrm{m}$ (okomito na presjek). Presjek pokrova je parabola s tjemenom $A$ na slobodnoj površini uz stijenku i vodoravnom tangentom u $A$; pokrov završava u točki $B$ na vodoravnoj udaljenosti $L=1{,}20\ \mathrm{m}$ od stijenke i dubini $H=0{,}90\ \mathrm{m}$, gdje se spaja s dnom kanala. Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ kvasi gornju (konveksnu) stranu pokrova; atmosferski se tlak poništava. Uzmi $+x$ od stijenke prema vodi, $+z$ prema gore i pozitivan moment suprotno kazaljci na satu.
 
 **Traži se**
 
@@ -819,7 +819,7 @@ $b_{\max}=1{,}1673\ \mathrm{m}$; $h_{CP}=1{,}4893\ \mathrm{m}$. Za $b=1{,}20\ \m
 
 Kruti sklop četvrtcilindričnog poklopca i njegovih krakova okreće se oko osi kroz središte kružnice $O$, a ne oko kraja luka. Voda kvasi konveksnu lijevu i donju stranu, a s druge strane je zrak na atmosferskom tlaku.
 
-U presjeku s ishodištem u $O$, $+x$ udesno i $+y$ prema gore, krajevi su $A=(-R,0)$ i $B=(0,-R)$; $R=0{,}85\ \mathrm{m}$ i širina $b=1{,}30\ \mathrm{m}$. Os $O$ nalazi se $h_1=0{,}60\ \mathrm{m}$ ispod slobodne površine. Težina cijelog sklopa je $W=2{,}40\ \mathrm{kN}$ i djeluje na pravcu $x_G=-0{,}32\ \mathrm{m}$. Vodoravna spojnica u $B$ može samo vlačiti ulijevo, do $T_{\max}=1{,}00\ \mathrm{kN}$.
+U presjeku s ishodištem u $O$, $+x$ udesno i $+y$ prema gore, krajevi su $A=(-R,0)$ i $B=(0,-R)$; $R=0{,}85\ \mathrm{m}$ i širina $b=1{,}30\ \mathrm{m}$. Os $O$ nalazi se $h_1=0{,}60\ \mathrm{m}$ ispod slobodne površine. Težina cijelog sklopa je $F_G=2{,}40\ \mathrm{kN}$ i djeluje na pravcu $x_G=-0{,}32\ \mathrm{m}$. Vodoravna spojnica u $B$ može samo vlačiti ulijevo, do $T_{\max}=1{,}00\ \mathrm{kN}$.
 
 Krakovi i spojnica su na suhoj strani ili izvan širine presjeka; njihovo dodatno hidrostatičko opterećenje zanemari. Zanemari trenje osi; pozitivan moment je suprotno kazaljci na satu.
 
@@ -842,7 +842,7 @@ Nacrtaj jednu lokalnu tlačnu normalu i provjeri njezin pravac prema $O$. Za rav
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}=0$. $T=0{,}904\ \mathrm{kN}$ ulijevo, manje od $T_{\max}$; $R_{Ox}=-10{,}185\ \mathrm{kN}$, $R_{Oy}=-11{,}313\ \mathrm{kN}$. Sve tlačne normale prolaze kroz $O$; $T=W|x_G|/R$ ne ovisi o $h_1$ u zadanom modelu.
+$F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}=0$. $T=0{,}904\ \mathrm{kN}$ ulijevo, manje od $T_{\max}$; $R_{Ox}=-10{,}185\ \mathrm{kN}$, $R_{Oy}=-11{,}313\ \mathrm{kN}$. Sve tlačne normale prolaze kroz $O$; $T=F_G|x_G|/R$ ne ovisi o $h_1$ u zadanom modelu.
 :::
 ::::
 
@@ -852,18 +852,18 @@ $F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}
 
 **Tekst zadatka**
 
-Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\ \mathrm{m}$ i $H=0{,}80\ \mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\ \mathrm{m}$ sa standardnom nesigurnošću $u(h_1)=0{,}020\ \mathrm{m}$, a gustoća je $\rho=998\ \mathrm{kg/m^3}$ uz $u(\rho)=3\ \mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\ \mathrm{kN}$ uz $u(F_m)=0{,}30\ \mathrm{kN}$. Pretpostavi neovisne ulaze i primijeni linearnu propagaciju nesigurnosti.
+Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\ \mathrm{m}$ i $H=0{,}80\ \mathrm{m}$. Gornji rub je na izmjerenoj dubini $h_1=0{,}90\ \mathrm{m}$ sa standardnom nesigurnošću $s(h_1)=0{,}020\ \mathrm{m}$, a gustoća je $\rho=998\ \mathrm{kg/m^3}$ uz $s(\rho)=3\ \mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\ \mathrm{kN}$ uz $s(F_m)=0{,}30\ \mathrm{kN}$. Standardnu nesigurnost veličine $x$ označujemo sa $s(x)$, kao u ostatku priručnika. Pretpostavi neovisne ulaze i primijeni linearnu propagaciju nesigurnosti.
 
 **Traži se**
 
-1. Izračunaj predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\sqrt{u(F)^2+u(F_m)^2}$.
-2. Obrazloži podupiru li podatci tvrdnju o neslaganju na razini $2u$.
+1. Izračunaj predviđanje $F$, njegovu standardnu nesigurnost i normirano odstupanje $z=|F-F_m|/\sqrt{s(F)^2+s(F_m)^2}$.
+2. Obrazloži podupiru li podatci tvrdnju o neslaganju na razini $2s$.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Za $F=\rho gbH(h_1+H/2)$ relativna nesigurnost zbog dvaju nesigurnih ulaza jest $u(F)/F=\sqrt{[u(\rho)/\rho]^2+[u(h_1)/(h_1+H/2)]^2}$.
+Za $F=\rho gbH(h_1+H/2)$ relativna nesigurnost zbog dvaju nesigurnih ulaza jest $s(F)/F=\sqrt{[s(\rho)/\rho]^2+[s(h_1)/(h_1+H/2)]^2}$.
 :::
 ::::
 ::::
@@ -872,7 +872,7 @@ Za $F=\rho gbH(h_1+H/2)$ relativna nesigurnost zbog dvaju nesigurnih ulaza jest 
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$F=12{,}218\ \mathrm{kN}$; $u(F)=0{,}192\ \mathrm{kN}$; kombinirana nesigurnost razlike $0{,}356\ \mathrm{kN}$; $z=1{,}74$. Budući da je $z<2$, ovaj skup podataka ne pokazuje neslaganje na zadanoj razini, ali time model nije općenito validiran.
+$F=12{,}218\ \mathrm{kN}$; $s(F)=0{,}192\ \mathrm{kN}$; kombinirana nesigurnost razlike $0{,}356\ \mathrm{kN}$; $z=1{,}74$. Budući da je $z<2$, ovaj skup podataka ne pokazuje neslaganje na zadanoj razini, ali time model nije općenito validiran.
 :::
 ::::
 

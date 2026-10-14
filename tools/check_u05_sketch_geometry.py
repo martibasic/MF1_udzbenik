@@ -11,7 +11,8 @@ import re
 import xml.etree.ElementTree as ET
 
 from verify_u05_integrated import (quarter_cylinder, task_watertight_door,
-                                   task_parabolic_cover)
+                                   task_parabolic_cover, task_triangle,
+                                   task_radial_gate)
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -45,6 +46,17 @@ def check_normal(node, cx, cy, radius, outward=False):
     close(math.hypot(rx, ry), radius)
     close(rx*dy-ry*dx, 0)
     assert (rx*dx+ry*dy > 0) == outward
+
+
+def unknown_not_drawn(nodes, panel, label_id, allowed_vectors=()):
+    """Skica zadatka ne smije nacrtati traženu silu: u panelu nema vektora
+    sile osim zadanih, a nepoznanica je označena upitnikom."""
+    for node in nodes[panel].iter():
+        kind = node.get("data-mf1-vector")
+        if kind == "force":
+            assert node.get("id") in allowed_vectors, (panel, node.get("id"))
+    text = "".join(nodes[label_id].itertext())
+    assert "?" in text, (label_id, text)
 
 
 def main():
@@ -86,9 +98,13 @@ def main():
     assert nodes["u05vs_z1_surface"].get("y1") == nodes["u05vs_z1_surface"].get("y2")
     close(h / w, 1.60 / 0.80)
     close((y - surface) / h, 1.40 / 1.60)
-    mark = nodes["u05vs_z1_force_mark"]
-    close(float(mark.get("cx")), x + w / 2)
-    close((float(mark.get("cy")) - surface) / h * 1.60, z1["h_cp"], 2e-3)
+    # Tražena sila i njezino hvatište (centar tlaka) ne smiju biti nacrtani.
+    assert "u05vs_z1_force_mark" not in nodes
+    for node in nodes["u05vs_z1"].iter():
+        if node.tag.endswith("circle") and node.get("stroke") == "#356b83":
+            cy = float(node.get("cy"))
+            assert abs((cy - surface) / h * 1.60 - z1["h_cp"]) > 0.05, "CP mark"
+    unknown_not_drawn(nodes, "u05vs_z1", "u05vs_z1_unknown")
     for dog, edge in (("u05vs_z1_dog_top", y), ("u05vs_z1_dog_bottom", y + h)):
         close(float(nodes[dog].get("cy")), edge)
         assert float(nodes[dog].get("cx")) > x + w
@@ -104,12 +120,13 @@ def main():
     close((by - ay) / (bx - ax), 0.90 / 1.20)
     scale = (bx - ax) / 1.20
     z2 = task_parabolic_cover()
-    fh, fv = nodes["u05vs_z2_FH"], nodes["u05vs_z2_FV"]
-    assert fh.get("y1") == fh.get("y2") and fv.get("x1") == fv.get("x2")
-    close((float(fh.get("y1")) - ay) / scale, z2["depth_x"])
-    close((float(fv.get("x1")) - ax) / scale, z2["x_z"])
-    assert float(fh.get("x2")) < float(fh.get("x1"))      # prema stijenci
-    assert float(fv.get("y2")) > float(fv.get("y1"))      # prema dolje
+    # Skica zadatka ne otkriva rezultat: nema strelica F_H/F_V u hvatištima
+    # ni s predznakom; nacrtana je samo lokalna tlačna sila dF (postavljanje modela).
+    assert "u05vs_z2_FH" not in nodes and "u05vs_z2_FV" not in nodes
+    vectors = [n for n in nodes["u05vs_z2"].iter() if n.get("data-mf1-vector")]
+    assert [n.get("id") for n in vectors] == ["u05vs_z2_normal"], vectors
+    assert vectors[0].get("data-mf1-vector") == "pressure"
+    unknown_not_drawn(nodes, "u05vs_z2", "u05vs_z2_unknown")
     # Voda je iznad pokrova: pravci F_H i F_V ne daju nulti moment oko A (nije kružni luk).
     assert abs(abs(z2["F_x"]) * z2["depth_x"] - abs(z2["F_z"]) * z2["x_z"]) > 500
     nx1, ny1, nx2, ny2 = [float(nodes["u05vs_z2_normal"].get(k)) for k in ("x1", "y1", "x2", "y2")]
@@ -123,9 +140,23 @@ def main():
     check_arc(nodes["u05vs_z5_arc"], 207, 103, 70)
     check_normal(nodes["u05vs_z5_normal"], 207, 103, 70)
     assert nodes["u05vs_z4_triangle"].get("d") == "M144.0 78 L218 190 H70 Z"
+    # Z4: nacrtana širina (nepoznanica) nije u mjerilu b_max ni ponuđenih 1,20 m.
+    b_drawn = (218 - 70) / (190 - 78) * 1.50
+    for b_ref in (task_triangle()["b_max"], 1.20):
+        assert abs(b_drawn - b_ref) > 0.10, (b_drawn, b_ref)
+    # Z5: duljina strelice T (iznos se traži) nije u mjerilu težine F_G.
+    fg, t = nodes["u05vs_z5_FG"], nodes["u05vs_z5_T"]
+    l_fg = abs(float(fg.get("y2")) - float(fg.get("y1")))
+    l_t = abs(float(t.get("x2")) - float(t.get("x1")))
+    z5 = task_radial_gate()
+    assert abs(l_t / l_fg - z5["T"] / 2.40e3) > 0.2, (l_t, l_fg)
+    # Z6: tražena sila F nije nacrtana (ni u centru tlaka).
+    unknown_not_drawn(nodes, "u05vs_z6", "u05vs_z6_unknown")
+    assert not any(n.get("marker-end") for n in nodes["u05vs_z6"].iter()
+                   if n.get("data-mf1-role") != "dimension")
     for n in range(1, 7):
         assert f"u05vs_z{n}" in nodes
-    print("PASS practice panels: Z1 door view, Z2 parabola and forces, Z5 arc and normal, triangular orientation, six panels")
+    print("PASS practice panels: Z1 door view, Z2 parabola and local normal, Z1/Z2/Z6 unknown forces not drawn, Z5 arc and normal, triangular orientation, six panels")
 
 
 if __name__ == "__main__":
