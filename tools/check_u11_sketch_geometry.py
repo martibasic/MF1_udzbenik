@@ -103,6 +103,8 @@ def main():
             close(distance_to_path(endpoint,hull),0,'Površina mora stati na vanjskoj stijenci trupa')
     for a,b in zip(*normal):
         close(a[0],b[0],'Geometrijska sličnost trupova x');close(a[1],b[1],'Geometrijska sličnost trupova y')
+    # v_m = v_s/sqrt(25): the model arrow must at least preserve the order of speeds.
+    check(0<delta(node(r,'u14ship_mvelocity'))[0]<delta(node(r,'u14ship_pvelocity'))[0],'Brod: strelica v_m mora biti kraća od v_s')
 
     r=svg('u14_val3_venturi_kavitacija.svg');prefix='u14vent_'
     wall_and_openings(r,prefix+'pipe',[(80,150),(820,150)])
@@ -129,6 +131,7 @@ def main():
             check(abs(plotted-p_abs)<.03,'Venturi: krivulja mora zadovoljiti kontinuitet i Bernoulli do 0,03 Pa')
             check(p_abs<=2340+.02 if name=='invalid' else p_abs>=2340-.02,'Krivulja pogrešno razvrstana prema tlaku pare')
     a,b=line(node(r,prefix+'v2'));check(360<a[0]<b[0]<520 and a[1]==b[1]==150,'v₂ mora biti u osi grla')
+    check(delta(node(r,prefix+'v2'))[0]>2*delta(node(r,prefix+'v1'))[0]>0,'Venturi: kontinuitet traži v₂ znatno veći od v₁ (9:1)')
 
     r=svg('u14_val4_kap_raspad.svg');diameter(r,'u14drop_drop','u14drop_diameter',True)
     check(not any('forceMarker' in e.get('marker-end','') for e in r.iter()),'Kap: površinska napetost nije radijalna sila')
@@ -149,7 +152,17 @@ def main():
 
     r=svg('u14_vjezbe_skice.svg')
     for n in range(1,7):node(r,f'u14vs_z{n}')
-    for p in ('a','v'):diameter(r,f'u14vs_{p}fluid',f'u14vs_{p}diameter',False)
+    fluid=rect(node(r,'u14vs_z1fluid'));wall=rect(node(r,'u14vs_z1wall'))
+    close(fluid[2]/fluid[3],0.400/0.200,'Z1: omjer stranica presjeka a:b = 2:1')
+    t=fluid[0]-wall[0]
+    check(t>0 and abs(wall[0]+wall[2]-fluid[0]-fluid[2]-t)<1e-9 and abs(fluid[1]-wall[1]-t)<1e-9
+          and abs(wall[1]+wall[3]-fluid[1]-fluid[3]-t)<1e-9,'Z1: stijenka jednolike debljine zatvara cijeli presjek')
+    a,b=line(node(r,'u14vs_z1a'));close(a[1],b[1],'Z1: kota a je vodoravna')
+    close(a[0],fluid[0],'Z1: kota a počinje na unutarnjoj stijenci');close(b[0],fluid[0]+fluid[2],'Z1: kota a završava na unutarnjoj stijenci')
+    a,b=line(node(r,'u14vs_z1b'));close(a[0],b[0],'Z1: kota b je okomita')
+    close(a[1],fluid[1],'Z1: kota b počinje na unutarnjoj stijenci');close(b[1],fluid[1]+fluid[3],'Z1: kota b završava na unutarnjoj stijenci')
+    flow=node(r,'u14vs_z1flow');cx,cy=float(flow.get('cx')),float(flow.get('cy'))
+    check(fluid[0]<cx<fluid[0]+fluid[2] and fluid[1]<cy<fluid[1]+fluid[3],'Z1: simbol toka mora ležati unutar fluida')
     pipe_rect(r,'u14vs_z2pipe','u14vs_z2D')
     wall_and_openings(r,'u14vs_z3pipe',[(28,172),(264,172)])
     # The pressure port is intentionally narrower than a main-flow opening.
@@ -179,7 +192,7 @@ def main():
         flow=6/math.sqrt(lam)*width_m*depth_m
         close(flow,480/lam**2.5,'Presjek modela mora zadovoljiti kontinuitet i Froudeovo skaliranje',tol=1e-10)
     close(geometry[0][0]/geometry[1][0],1.5,'Dva kanala: omjer širina');close(geometry[0][1]/geometry[1][1],1.5,'Dva kanala: omjer dubina')
-    print('PASS U11: devet izmijenjenih SVG-ova; otvoreni prolazi, povezani fluidi, geometrijska sličnost, stvarne kote, profili, vektori i kvantitativni grafovi.')
+    print('PASS U11: devet SVG-ova; otvoreni prolazi, povezani fluidi, pravokutni presjek Z1 s kotama, geometrijska sličnost, stvarne kote, profili, vektori i kvantitativni grafovi.')
 
 
 if __name__ == '__main__':

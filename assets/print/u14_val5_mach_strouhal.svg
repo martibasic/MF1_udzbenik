@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 901 365" role="img" aria-labelledby="u14ma_title u14ma_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:901px;height:auto;">
   <title id="u14ma_title">Machov broj u vodu i Strouhalov broj dimnjaka</title>
-  <desc id="u14ma_desc">Otvoren plinski vod i tlocrt kružnog dimnjaka. Promjer je normalan na tok. Vrtlozi imaju naizmjenične suprotne smjerove vrtnje; razmaci su shematski, a frekvencija slijedi iz zadanoga Strouhalova broja.</desc>
+  <desc id="u14ma_desc">Otvoren zračni vod (D = 80 mm, Q_1 i Q_2, a = 340 m/s) s brojevnim pravcem Machova broja i pragom 0,3 te tlocrt kružnog dimnjaka (D_d = 2,0 m, v = 12 m/s, St ≈ 0,2, f_n = 0,6 Hz). Promjer je normalan na tok. Vrtlozi iza dimnjaka imaju naizmjenične suprotne smjerove vrtnje (gornji u smjeru kazaljke na satu, donji suprotno); razmaci su shematski, a frekvencija slijedi iz zadanoga Strouhalova broja.</desc>
   <defs>
     <pattern id="u14ma_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -29,16 +29,17 @@
   </defs>
   <g id="u14ma_title-scene-1" transform="translate(-25.0000 -12.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
-      <text x="251.0" y="49" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Plinski vod · lokalni Q</text>
+      <text x="251.0" y="49" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Zračni vod</text>
       <rect id="u14ma_ducttop" x="70" y="110" width="380" height="9" rx="0" fill="url(#u14ma_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect id="u14ma_ductbottom" x="70" y="187" width="380" height="9" rx="0" fill="url(#u14ma_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect id="u14ma_ductfluid" x="70" y="119" width="380" height="68" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <path id="u14ma_velocity" d="M153 153 L300 153" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14ma_v)" />
-      <text x="226.5" y="144" font-size="12" fill="#263746" text-anchor="middle">Q₁ = 0,40; Q₂ = 0,80 m³/s</text>
+      <text x="226.5" y="144" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 0,40; Q<tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 0,80 m³/s</text>
       <line x1="49" y1="119" x2="59" y2="119" stroke="#657781" stroke-width="1.2" />
       <line x1="49" y1="187" x2="59" y2="187" stroke="#657781" stroke-width="1.2" />
       <path id="u14ma_diameter" d="M54 119 L54 187" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ma_dim)" marker-end="url(#u14ma_dim)" />
-      <text x="170" y="216" font-size="13" fill="#263746" text-anchor="start">D = 80 mm; a = 340 m/s</text>
+      <text x="78" y="180" font-size="12" fill="#263746" text-anchor="start">D = 80 mm</text>
+      <text x="260" y="216" font-size="13" fill="#263746" text-anchor="middle">zrak: a = 340 m/s</text>
       <rect x="70" y="275" width="114" height="18" rx="0" fill="#cedee0" stroke="none" stroke-width="1.2" />
       <rect x="184" y="275" width="266" height="18" rx="0" fill="#c5cdd3" stroke="none" stroke-width="1.2" />
       <line x1="70" y1="284" x2="450" y2="284" stroke="#3a4a56" stroke-width="1.5" />
@@ -50,11 +51,11 @@
       <text x="450" y="319" font-size="11" fill="#263746" text-anchor="middle">1</text>
       <line x1="158.92000000000002" y1="249" x2="158.92000000000002" y2="282" stroke="#356b83" stroke-width="1.2" />
       <circle cx="158.92000000000002" cy="284" r="3" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
-      <text x="158.92000000000002" y="245" font-size="12" fill="#263746" text-anchor="middle">Ma₁</text>
+      <text x="158.92000000000002" y="245" font-size="12" fill="#263746" text-anchor="middle">Ma<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
       <line x1="247.84" y1="267" x2="247.84" y2="282" stroke="#356b83" stroke-width="1.2" />
       <circle cx="247.84" cy="284" r="3" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
-      <text x="247.84" y="263" font-size="12" fill="#263746" text-anchor="middle">Ma₂</text>
-      <text x="262" y="350" font-size="13" fill="#263746" text-anchor="middle">Ma = 0,3</text>
+      <text x="247.84" y="263" font-size="12" fill="#263746" text-anchor="middle">Ma<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+      <text x="262" y="345" font-size="13" fill="#263746" text-anchor="middle">Ma</text>
     </g>
   </g>
   <g id="u14ma_title-scene-2" transform="translate(-50.0000 -12.0000)">
@@ -62,7 +63,8 @@
       <text x="728.0" y="49" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Dimnjak: tlocrt</text>
       <circle id="u14ma_cylinder" cx="617" cy="201" r="28" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.5" />
       <path id="u14ma_wind" d="M527 201 L577 201" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14ma_v)" />
-      <text x="579" y="128" font-size="13" fill="#263746" text-anchor="middle">v = 12 m/s</text>
+      <text x="552" y="189" font-size="13" fill="#263746" text-anchor="middle">v = 12 m/s</text>
+      <text x="840" y="128" font-size="13" fill="#263746" text-anchor="middle">St ≈ 0,2; f<tspan baseline-shift="sub" font-size="0.75em">n</tspan> = 0,6 Hz</text>
       <line x1="655" y1="173" x2="665" y2="173" stroke="#657781" stroke-width="1.2" />
       <line x1="655" y1="229" x2="665" y2="229" stroke="#657781" stroke-width="1.2" />
       <path id="u14ma_chimneyd" d="M660 173 L660 229" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ma_dim)" marker-end="url(#u14ma_dim)" />

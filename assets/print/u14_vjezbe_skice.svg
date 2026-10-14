@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 893 595" role="img" aria-labelledby="u14vs_title u14vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:893px;height:auto;">
   <title id="u14vs_title">Skice šest vježbi dimenzijske analize i sličnosti</title>
-  <desc id="u14vs_desc">Z1 uspoređuje presjeke u odvojenim grafičkim mjerilima. Z2 ima otvoreni vod; Z3 otvoreni tlačni priključak. Z4 prikazuje slične profile u zajedničkom mjerilu s rasponom okomitim na crtež. Z5 je kružni cilindar s naizmjeničnim vrtlozima. Z6 su pravokutni referentni presjeci dvaju modela preljeva u istom grafičkom mjerilu. Simbol točke u krugu označava tok prema promatraču.</desc>
+  <desc id="u14vs_desc">Z1 prikazuje pravokutni presjek ventilacijskog kanala s kotama unutarnjih stranica a i b. Z2 ima otvoreni vod; Z3 otvoreni tlačni priključak. Z4 prikazuje slične profile u zajedničkom mjerilu s rasponom okomitim na crtež. Z5 je kružni cilindar s naizmjeničnim vrtlozima. Z6 su pravokutni referentni presjeci dvaju modela preljeva u istom grafičkom mjerilu. Simbol točke u krugu označava tok prema promatraču.</desc>
   <defs>
     <pattern id="u14vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -31,31 +31,22 @@
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u14vs_z1" transform="translate(24 28)">
         <text x="29" y="29" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z1</text>
-        <text x="57" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Re u dvama presjecima</text>
-        <circle id="u14vs_awall" cx="69" cy="122" r="24" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.5" />
-        <circle id="u14vs_afluid" cx="69" cy="122" r="20" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.5" />
-        <circle cx="69" cy="122" r="5" fill="none" stroke="#356b83" stroke-width="1.5" />
-        <circle cx="69" cy="122" r="1.5" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
-        <text x="69" y="66" font-size="12" fill="#263746" text-anchor="middle">arteriola</text>
-        <line x1="49" y1="178" x2="49" y2="188" stroke="#657781" stroke-width="1.2" />
-        <line x1="89" y1="178" x2="89" y2="188" stroke="#657781" stroke-width="1.2" />
-        <path id="u14vs_adiameter" d="M49 183 L89 183" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text x="69.0" y="200" font-size="11" fill="#263746" text-anchor="middle">Dₐ = 0,3 mm</text>
-        <line x1="49" y1="125" x2="49" y2="178" stroke="#657781" stroke-width="1" />
-        <line x1="89" y1="125" x2="89" y2="178" stroke="#657781" stroke-width="1" />
-        <circle id="u14vs_vwall" cx="204" cy="122" r="50" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.5" />
-        <circle id="u14vs_vfluid" cx="204" cy="122" r="46" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.5" />
-        <circle cx="204" cy="122" r="5" fill="none" stroke="#356b83" stroke-width="1.5" />
-        <circle cx="204" cy="122" r="1.5" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
-        <text x="204" y="66" font-size="12" fill="#263746" text-anchor="middle">vodovod</text>
-        <line x1="158" y1="178" x2="158" y2="188" stroke="#657781" stroke-width="1.2" />
-        <line x1="250" y1="178" x2="250" y2="188" stroke="#657781" stroke-width="1.2" />
-        <path id="u14vs_vdiameter" d="M158 183 L250 183" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text x="204.0" y="200" font-size="11" fill="#263746" text-anchor="middle">Dᵥ = 0,30 m</text>
-        <line x1="158" y1="125" x2="158" y2="178" stroke="#657781" stroke-width="1" />
-        <line x1="250" y1="125" x2="250" y2="178" stroke="#657781" stroke-width="1" />
-        <text x="69" y="225" font-size="11" fill="#263746" text-anchor="middle">vₐ = 5 mm/s</text>
-        <text x="204" y="225" font-size="11" fill="#263746" text-anchor="middle">vᵥ = 1,5 m/s</text>
+        <text x="57" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Re pravokutnog kanala</text>
+        <text x="148" y="60" font-size="12" fill="#263746" text-anchor="middle">ventilacijski kanal, presjek</text>
+        <rect id="u14vs_z1wall" x="60" y="70" width="176" height="94" rx="0" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.5" />
+        <rect id="u14vs_z1fluid" x="66" y="76" width="164" height="82" rx="0" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.5" />
+        <circle id="u14vs_z1flow" cx="148" cy="117" r="5" fill="none" stroke="#356b83" stroke-width="1.5" />
+        <circle cx="148" cy="117" r="1.5" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
+        <line x1="66" y1="170" x2="66" y2="188" stroke="#657781" stroke-width="1" />
+        <line x1="230" y1="170" x2="230" y2="188" stroke="#657781" stroke-width="1" />
+        <path id="u14vs_z1a" d="M66 183 L230 183" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
+        <text x="148" y="178" font-size="11" fill="#263746" text-anchor="middle">a</text>
+        <line x1="240" y1="76" x2="258" y2="76" stroke="#657781" stroke-width="1" />
+        <line x1="240" y1="158" x2="258" y2="158" stroke="#657781" stroke-width="1" />
+        <path id="u14vs_z1b" d="M253 76 L253 158" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
+        <text x="257" y="121" font-size="11" fill="#263746" text-anchor="start">b</text>
+        <text x="148" y="204" font-size="11" fill="#263746" text-anchor="middle">a = 0,400 m; b = 0,200 m</text>
+        <text x="148" y="226" font-size="11" fill="#263746" text-anchor="middle">zrak: Q = 0,640 m³/s, ν = 1,50 · 10⁻⁵ m²/s</text>
         <text x="146" y="256" font-size="11" fill="#263746" text-anchor="middle">⊙ Tok prema promatraču.</text>
       </g>
     </g>
@@ -70,7 +61,7 @@
         <rect id="u14vs_z2pipefluid" x="28" y="130" width="236" height="54" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <path id="u14vs_z2velocity" d="M72 157 L214 157" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14vs_v)" />
         <text x="143.0" y="148" font-size="12" fill="#263746" text-anchor="middle">v = ?</text>
-        <text x="146" y="76" font-size="13" fill="#263746" text-anchor="middle">Q = 0,50 m³/s (lokalni)</text>
+        <text x="146" y="76" font-size="13" fill="#263746" text-anchor="middle">Q = 0,5 m³/s (lokalni)</text>
         <text x="146" y="100" font-size="12" fill="#263746" text-anchor="middle">a = 340 m/s</text>
         <line x1="270" y1="130" x2="280" y2="130" stroke="#657781" stroke-width="1.2" />
         <line x1="270" y1="184" x2="280" y2="184" stroke="#657781" stroke-width="1.2" />
@@ -84,7 +75,7 @@
       <g id="u14vs_z3" transform="translate(664 28)">
         <text x="29" y="29" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z3</text>
         <text x="57" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Senzor i kavitacija</text>
-        <text x="146" y="63" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">M</tspan> = −20,0 kPa; pₐₜₘ = 100 kPa</text>
+        <text x="146" y="63" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">M</tspan> = −20,0 kPa; p<tspan baseline-shift="sub" font-size="0.75em">atm</tspan> = 100,0 kPa</text>
         <path id="u14vs_z3pipeouter0" d="M28 147 H165 V120" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round" />
         <path d="M28 147 H165 V120" fill="none" stroke="url(#u14vs_hatch)" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" />
         <path id="u14vs_z3pipeouter1" d="M175 120 V147 H264" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round" />
@@ -100,8 +91,9 @@
         <text x="195" y="108" font-size="11" fill="#263746" text-anchor="start">senzor</text>
         <path id="u14vs_z3velocity" d="M67 172 L121 172" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14vs_v)" />
         <text x="94.0" y="163" font-size="12" fill="#263746" text-anchor="middle">v</text>
-        <text x="146" y="226" font-size="12" fill="#263746" text-anchor="middle">v₁ = 4,00; v₂ = 8,00 m/s</text>
-        <text x="146" y="273" font-size="12" fill="#263746" text-anchor="middle">pᵥ = 2340 Pa; σₖᵣ = 3,0</text>
+        <text x="146" y="226" font-size="12" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 4,00; v<tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 8,00 m/s</text>
+        <text x="146" y="250" font-size="12" fill="#263746" text-anchor="middle">voda: ρ = 1000 kg/m³</text>
+        <text x="146" y="273" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">v</tspan> = 2340 Pa; σ<tspan baseline-shift="sub" font-size="0.75em">kr</tspan> = 3,0</text>
       </g>
     </g>
   </g>
@@ -111,26 +103,30 @@
         <text x="29" y="29" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z4</text>
         <text x="57" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Hidroprofil i model</text>
         <text x="146" y="58" font-size="11" fill="#263746" text-anchor="middle">Bočni presjeci; napadni kut α = 0°</text>
-        <path id="u14vs_pfoil" d="M71.000000 105.000000 L73.250000 101.590975 L75.500000 100.293504 L77.750000 99.352703 L80.000000 98.601567 L82.250000 97.975206 L84.500000 97.440181 L86.750000 96.976501 L89.000000 96.571036 L91.250000 96.214573 L93.500000 95.900327 L95.750000 95.623109 L98.000000 95.378826 L100.250000 95.164173 L102.500000 94.976419 L104.750000 94.813274 L107.000000 94.672785 L109.250000 94.553267 L111.500000 94.453247 L113.750000 94.371426 L116.000000 94.306650 L118.250000 94.257884 L120.500000 94.224195 L122.750000 94.204734 L125.000000 94.198729 L127.250000 94.205470 L129.500000 94.224305 L131.750000 94.254632 L134.000000 94.295891 L136.250000 94.347563 L138.500000 94.409166 L140.750000 94.480248 L143.000000 94.560387 L145.250000 94.649188 L147.500000 94.746281 L149.750000 94.851318 L152.000000 94.963974 L154.250000 95.083942 L156.500000 95.210935 L158.750000 95.344682 L161.000000 95.484930 L163.250000 95.631440 L165.500000 95.783989 L167.750000 95.942369 L170.000000 96.106384 L172.250000 96.275851 L174.500000 96.450601 L176.750000 96.630476 L179.000000 96.815329 L181.250000 97.005026 L183.500000 97.199443 L185.750000 97.398466 L188.000000 97.601992 L190.250000 97.809929 L192.500000 98.022194 L194.750000 98.238713 L197.000000 98.459423 L199.250000 98.684268 L201.500000 98.913204 L203.750000 99.146194 L206.000000 99.383210 L208.250000 99.624233 L210.500000 99.869253 L212.750000 100.118268 L215.000000 100.371285 L217.250000 100.628317 L219.500000 100.889388 L221.750000 101.154529 L224.000000 101.423778 L226.250000 101.697183 L228.500000 101.974797 L230.750000 102.256683 L233.000000 102.542912 L235.250000 102.833562 L237.500000 103.128717 L239.750000 103.428471 L242.000000 103.732924 L244.250000 104.042184 L246.500000 104.356367 L248.750000 104.675596 L251.000000 105.000000 L251.000000 105.000000 L248.750000 105.324404 L246.500000 105.643633 L244.250000 105.957816 L242.000000 106.267076 L239.750000 106.571529 L237.500000 106.871283 L235.250000 107.166438 L233.000000 107.457088 L230.750000 107.743317 L228.500000 108.025203 L226.250000 108.302817 L224.000000 108.576222 L221.750000 108.845471 L219.500000 109.110612 L217.250000 109.371683 L215.000000 109.628715 L212.750000 109.881732 L210.500000 110.130747 L208.250000 110.375767 L206.000000 110.616790 L203.750000 110.853806 L201.500000 111.086796 L199.250000 111.315732 L197.000000 111.540577 L194.750000 111.761287 L192.500000 111.977806 L190.250000 112.190071 L188.000000 112.398008 L185.750000 112.601534 L183.500000 112.800557 L181.250000 112.994974 L179.000000 113.184671 L176.750000 113.369524 L174.500000 113.549399 L172.250000 113.724149 L170.000000 113.893616 L167.750000 114.057631 L165.500000 114.216011 L163.250000 114.368560 L161.000000 114.515070 L158.750000 114.655318 L156.500000 114.789065 L154.250000 114.916058 L152.000000 115.036026 L149.750000 115.148682 L147.500000 115.253719 L145.250000 115.350812 L143.000000 115.439613 L140.750000 115.519752 L138.500000 115.590834 L136.250000 115.652437 L134.000000 115.704109 L131.750000 115.745368 L129.500000 115.775695 L127.250000 115.794530 L125.000000 115.801271 L122.750000 115.795266 L120.500000 115.775805 L118.250000 115.742116 L116.000000 115.693350 L113.750000 115.628574 L111.500000 115.546753 L109.250000 115.446733 L107.000000 115.327215 L104.750000 115.186726 L102.500000 115.023581 L100.250000 114.835827 L98.000000 114.621174 L95.750000 114.376891 L93.500000 114.099673 L91.250000 113.785427 L89.000000 113.428964 L86.750000 113.023499 L84.500000 112.559819 L82.250000 112.024794 L80.000000 111.398433 L77.750000 110.647297 L75.500000 109.706496 L73.250000 108.409025 L71.000000 105.000000 Z" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.2" />
+        <path id="u14vs_pfoil" d="M71.000000 105.000000 L73.250000 101.590975 L75.500000 100.293504 L77.750000 99.352703 L80.000000 98.601567 L82.250000 97.975206 L84.500000 97.440181 L86.750000 96.976501 L89.000000 96.571036 L91.250000 96.214573 L93.500000 95.900327 L95.750000 95.623109 L98.000000 95.378826 L100.250000 95.164173 L102.500000 94.976419 L104.750000 94.813274 L107.000000 94.672785 L109.250000 94.553267 L111.500000 94.453247 L113.750000 94.371426 L116.000000 94.306650 L118.250000 94.257884 L120.500000 94.224195 L122.750000 94.204734 L125.000000 94.198729 L127.250000 94.205470 L129.500000 94.224305 L131.750000 94.254632 L134.000000 94.295891 L136.250000 94.347563 L138.500000 94.409166 L140.750000 94.480248 L143.000000 94.560387 L145.250000 94.649188 L147.500000 94.746281 L149.750000 94.851318 L152.000000 94.963974 L154.250000 95.083942 L156.500000 95.210935 L158.750000 95.344682 L161.000000 95.484930 L163.250000 95.631440 L165.500000 95.783989 L167.750000 95.942369 L170.000000 96.106384 L172.250000 96.275851 L174.500000 96.450601 L176.750000 96.630476 L179.000000 96.815329 L181.250000 97.005026 L183.500000 97.199443 L185.750000 97.398466 L188.000000 97.601992 L190.250000 97.809929 L192.500000 98.022194 L194.750000 98.238713 L197.000000 98.459423 L199.250000 98.684268 L201.500000 98.913204 L203.750000 99.146194 L206.000000 99.383210 L208.250000 99.624233 L210.500000 99.869253 L212.750000 100.118268 L215.000000 100.371285 L217.250000 100.628317 L219.500000 100.889388 L221.750000 101.154529 L224.000000 101.423778 L226.250000 101.697183 L228.500000 101.974797 L230.750000 102.256683 L233.000000 102.542912 L235.250000 102.833562 L237.500000 103.128717 L239.750000 103.428471 L242.000000 103.732924 L244.250000 104.042184 L246.500000 104.356367 L248.750000 104.675596 L251.000000 105.000000 L251.000000 105.000000 L248.750000 105.324404 L246.500000 105.643633 L244.250000 105.957816 L242.000000 106.267076 L239.750000 106.571529 L237.500000 106.871283 L235.250000 107.166438 L233.000000 107.457088 L230.750000 107.743317 L228.500000 108.025203 L226.250000 108.302817 L224.000000 108.576222 L221.750000 108.845471 L219.500000 109.110612 L217.250000 109.371683 L215.000000 109.628715 L212.750000 109.881732 L210.500000 110.130747 L208.250000 110.375767 L206.000000 110.616790 L203.750000 110.853806 L201.500000 111.086796 L199.250000 111.315732 L197.000000 111.540577 L194.750000 111.761287 L192.500000 111.977806 L190.250000 112.190071 L188.000000 112.398008 L185.750000 112.601534 L183.500000 112.800557 L181.250000 112.994974 L179.000000 113.184671 L176.750000 113.369524 L174.500000 113.549399 L172.250000 113.724149 L170.000000 113.893616 L167.750000 114.057631 L165.500000 114.216011 L163.250000 114.368560 L161.000000 114.515070 L158.750000 114.655318 L156.500000 114.789065 L154.250000 114.916058 L152.000000 115.036026 L149.750000 115.148682 L147.500000 115.253719 L145.250000 115.350812 L143.000000 115.439613 L140.750000 115.519752 L138.500000 115.590834 L136.250000 115.652437 L134.000000 115.704109 L131.750000 115.745368 L129.500000 115.775695 L127.250000 115.794530 L125.000000 115.801271 L122.750000 115.795266 L120.500000 115.775805 L118.250000 115.742116 L116.000000 115.693350 L113.750000 115.628574 L111.500000 115.546753 L109.250000 115.446733 L107.000000 115.327215 L104.750000 115.186726 L102.500000 115.023581 L100.250000 114.835827 L98.000000 114.621174 L95.750000 114.376891 L93.500000 114.099673 L91.250000 113.785427 L89.000000 113.428964 L86.750000 113.023499 L84.500000 112.559819 L82.250000 112.024794 L80.000000 111.398433 L77.750000 110.647297 L75.500000 109.706496 L73.250000 108.409025 L71.000000 105.000000 Z" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <path id="u14vs_pvelocity" d="M23 105 L60 105" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14vs_v)" />
-        <text x="177" y="84" font-size="11" fill="#263746" text-anchor="middle">voda: bₚ = 0,600 m</text>
+        <text x="136" y="74" font-size="10" fill="#263746" text-anchor="middle">voda: ρ<tspan baseline-shift="sub" font-size="0.75em">p</tspan> = 1000 kg/m³; ν<tspan baseline-shift="sub" font-size="0.75em">p</tspan> = 1,00 · 10⁻⁶ m²/s</text>
+        <text x="10" y="92" font-size="11" fill="#263746" text-anchor="start">v<tspan baseline-shift="sub" font-size="0.75em">p</tspan> = 1,00 m/s</text>
         <line x1="71" y1="124" x2="71" y2="134" stroke="#657781" stroke-width="1.2" />
         <line x1="251" y1="124" x2="251" y2="134" stroke="#657781" stroke-width="1.2" />
         <path id="u14vs_pchord" d="M71 129 L251 129" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text x="161.0" y="146" font-size="11" fill="#263746" text-anchor="middle">cₚ = 0,300 m</text>
+        <text x="161.0" y="146" font-size="11" fill="#263746" text-anchor="middle">l<tspan baseline-shift="sub" font-size="0.75em">p</tspan> = 0,300 m</text>
         <line x1="71" y1="108" x2="71" y2="124" stroke="#657781" stroke-width="1" />
         <line x1="251" y1="108" x2="251" y2="124" stroke="#657781" stroke-width="1" />
-        <text x="151" y="167" font-size="11" fill="#263746" text-anchor="middle">vₚ = 1,00 m/s</text>
-        <path id="u14vs_mfoil" d="M71.000000 203.000000 L71.750000 201.863658 L72.500000 201.431168 L73.250000 201.117568 L74.000000 200.867189 L74.750000 200.658402 L75.500000 200.480060 L76.250000 200.325500 L77.000000 200.190345 L77.750000 200.071524 L78.500000 199.966776 L79.250000 199.874370 L80.000000 199.792942 L80.750000 199.721391 L81.500000 199.658806 L82.250000 199.604425 L83.000000 199.557595 L83.750000 199.517756 L84.500000 199.484416 L85.250000 199.457142 L86.000000 199.435550 L86.750000 199.419295 L87.500000 199.408065 L88.250000 199.401578 L89.000000 199.399576 L89.750000 199.401823 L90.500000 199.408102 L91.250000 199.418211 L92.000000 199.431964 L92.750000 199.449188 L93.500000 199.469722 L94.250000 199.493416 L95.000000 199.520129 L95.750000 199.549729 L96.500000 199.582094 L97.250000 199.617106 L98.000000 199.654658 L98.750000 199.694647 L99.500000 199.736978 L100.250000 199.781561 L101.000000 199.828310 L101.750000 199.877147 L102.500000 199.927996 L103.250000 199.980790 L104.000000 200.035461 L104.750000 200.091950 L105.500000 200.150200 L106.250000 200.210159 L107.000000 200.271776 L107.750000 200.335009 L108.500000 200.399814 L109.250000 200.466155 L110.000000 200.533997 L110.750000 200.603310 L111.500000 200.674065 L112.250000 200.746238 L113.000000 200.819808 L113.750000 200.894756 L114.500000 200.971068 L115.250000 201.048731 L116.000000 201.127737 L116.750000 201.208078 L117.500000 201.289751 L118.250000 201.372756 L119.000000 201.457095 L119.750000 201.542772 L120.500000 201.629796 L121.250000 201.718176 L122.000000 201.807926 L122.750000 201.899061 L123.500000 201.991599 L124.250000 202.085561 L125.000000 202.180971 L125.750000 202.277854 L126.500000 202.376239 L127.250000 202.476157 L128.000000 202.577641 L128.750000 202.680728 L129.500000 202.785456 L130.250000 202.891865 L131.000000 203.000000 L131.000000 203.000000 L130.250000 203.108135 L129.500000 203.214544 L128.750000 203.319272 L128.000000 203.422359 L127.250000 203.523843 L126.500000 203.623761 L125.750000 203.722146 L125.000000 203.819029 L124.250000 203.914439 L123.500000 204.008401 L122.750000 204.100939 L122.000000 204.192074 L121.250000 204.281824 L120.500000 204.370204 L119.750000 204.457228 L119.000000 204.542905 L118.250000 204.627244 L117.500000 204.710249 L116.750000 204.791922 L116.000000 204.872263 L115.250000 204.951269 L114.500000 205.028932 L113.750000 205.105244 L113.000000 205.180192 L112.250000 205.253762 L111.500000 205.325935 L110.750000 205.396690 L110.000000 205.466003 L109.250000 205.533845 L108.500000 205.600186 L107.750000 205.664991 L107.000000 205.728224 L106.250000 205.789841 L105.500000 205.849800 L104.750000 205.908050 L104.000000 205.964539 L103.250000 206.019210 L102.500000 206.072004 L101.750000 206.122853 L101.000000 206.171690 L100.250000 206.218439 L99.500000 206.263022 L98.750000 206.305353 L98.000000 206.345342 L97.250000 206.382894 L96.500000 206.417906 L95.750000 206.450271 L95.000000 206.479871 L94.250000 206.506584 L93.500000 206.530278 L92.750000 206.550812 L92.000000 206.568036 L91.250000 206.581789 L90.500000 206.591898 L89.750000 206.598177 L89.000000 206.600424 L88.250000 206.598422 L87.500000 206.591935 L86.750000 206.580705 L86.000000 206.564450 L85.250000 206.542858 L84.500000 206.515584 L83.750000 206.482244 L83.000000 206.442405 L82.250000 206.395575 L81.500000 206.341194 L80.750000 206.278609 L80.000000 206.207058 L79.250000 206.125630 L78.500000 206.033224 L77.750000 205.928476 L77.000000 205.809655 L76.250000 205.674500 L75.500000 205.519940 L74.750000 205.341598 L74.000000 205.132811 L73.250000 204.882432 L72.500000 204.568832 L71.750000 204.136342 L71.000000 203.000000 Z" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.2" />
+        <text x="161" y="163" font-size="11" fill="#263746" text-anchor="middle">b<tspan baseline-shift="sub" font-size="0.75em">p</tspan> = 0,600 m</text>
+        <path id="u14vs_mfoil" d="M71.000000 203.000000 L71.750000 201.863658 L72.500000 201.431168 L73.250000 201.117568 L74.000000 200.867189 L74.750000 200.658402 L75.500000 200.480060 L76.250000 200.325500 L77.000000 200.190345 L77.750000 200.071524 L78.500000 199.966776 L79.250000 199.874370 L80.000000 199.792942 L80.750000 199.721391 L81.500000 199.658806 L82.250000 199.604425 L83.000000 199.557595 L83.750000 199.517756 L84.500000 199.484416 L85.250000 199.457142 L86.000000 199.435550 L86.750000 199.419295 L87.500000 199.408065 L88.250000 199.401578 L89.000000 199.399576 L89.750000 199.401823 L90.500000 199.408102 L91.250000 199.418211 L92.000000 199.431964 L92.750000 199.449188 L93.500000 199.469722 L94.250000 199.493416 L95.000000 199.520129 L95.750000 199.549729 L96.500000 199.582094 L97.250000 199.617106 L98.000000 199.654658 L98.750000 199.694647 L99.500000 199.736978 L100.250000 199.781561 L101.000000 199.828310 L101.750000 199.877147 L102.500000 199.927996 L103.250000 199.980790 L104.000000 200.035461 L104.750000 200.091950 L105.500000 200.150200 L106.250000 200.210159 L107.000000 200.271776 L107.750000 200.335009 L108.500000 200.399814 L109.250000 200.466155 L110.000000 200.533997 L110.750000 200.603310 L111.500000 200.674065 L112.250000 200.746238 L113.000000 200.819808 L113.750000 200.894756 L114.500000 200.971068 L115.250000 201.048731 L116.000000 201.127737 L116.750000 201.208078 L117.500000 201.289751 L118.250000 201.372756 L119.000000 201.457095 L119.750000 201.542772 L120.500000 201.629796 L121.250000 201.718176 L122.000000 201.807926 L122.750000 201.899061 L123.500000 201.991599 L124.250000 202.085561 L125.000000 202.180971 L125.750000 202.277854 L126.500000 202.376239 L127.250000 202.476157 L128.000000 202.577641 L128.750000 202.680728 L129.500000 202.785456 L130.250000 202.891865 L131.000000 203.000000 L131.000000 203.000000 L130.250000 203.108135 L129.500000 203.214544 L128.750000 203.319272 L128.000000 203.422359 L127.250000 203.523843 L126.500000 203.623761 L125.750000 203.722146 L125.000000 203.819029 L124.250000 203.914439 L123.500000 204.008401 L122.750000 204.100939 L122.000000 204.192074 L121.250000 204.281824 L120.500000 204.370204 L119.750000 204.457228 L119.000000 204.542905 L118.250000 204.627244 L117.500000 204.710249 L116.750000 204.791922 L116.000000 204.872263 L115.250000 204.951269 L114.500000 205.028932 L113.750000 205.105244 L113.000000 205.180192 L112.250000 205.253762 L111.500000 205.325935 L110.750000 205.396690 L110.000000 205.466003 L109.250000 205.533845 L108.500000 205.600186 L107.750000 205.664991 L107.000000 205.728224 L106.250000 205.789841 L105.500000 205.849800 L104.750000 205.908050 L104.000000 205.964539 L103.250000 206.019210 L102.500000 206.072004 L101.750000 206.122853 L101.000000 206.171690 L100.250000 206.218439 L99.500000 206.263022 L98.750000 206.305353 L98.000000 206.345342 L97.250000 206.382894 L96.500000 206.417906 L95.750000 206.450271 L95.000000 206.479871 L94.250000 206.506584 L93.500000 206.530278 L92.750000 206.550812 L92.000000 206.568036 L91.250000 206.581789 L90.500000 206.591898 L89.750000 206.598177 L89.000000 206.600424 L88.250000 206.598422 L87.500000 206.591935 L86.750000 206.580705 L86.000000 206.564450 L85.250000 206.542858 L84.500000 206.515584 L83.750000 206.482244 L83.000000 206.442405 L82.250000 206.395575 L81.500000 206.341194 L80.750000 206.278609 L80.000000 206.207058 L79.250000 206.125630 L78.500000 206.033224 L77.750000 205.928476 L77.000000 205.809655 L76.250000 205.674500 L75.500000 205.519940 L74.750000 205.341598 L74.000000 205.132811 L73.250000 204.882432 L72.500000 204.568832 L71.750000 204.136342 L71.000000 203.000000 Z" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <path id="u14vs_mvelocity" d="M23 203 L60 203" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14vs_v)" />
-        <text x="177" y="182" font-size="11" fill="#263746" text-anchor="middle">zrak: bₘ = 0,200 m</text>
+        <text x="136" y="182" font-size="10" fill="#263746" text-anchor="middle">zrak: ρ<tspan baseline-shift="sub" font-size="0.75em">m</tspan> = 1,20 kg/m³; ν<tspan baseline-shift="sub" font-size="0.75em">m</tspan> = 1,50 · 10⁻⁵ m²/s</text>
+        <text x="146" y="201" font-size="11" fill="#263746" text-anchor="start">b<tspan baseline-shift="sub" font-size="0.75em">m</tspan> = 0,200 m</text>
+        <text x="146" y="215" font-size="11" fill="#263746" text-anchor="start">a<tspan baseline-shift="sub" font-size="0.75em">m</tspan> = 340 m/s</text>
+        <text x="146" y="230" font-size="11" fill="#263746" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.75em">D,m</tspan> = 0,405 N</text>
         <line x1="71" y1="222" x2="71" y2="232" stroke="#657781" stroke-width="1.2" />
         <line x1="131" y1="222" x2="131" y2="232" stroke="#657781" stroke-width="1.2" />
         <path id="u14vs_mchord" d="M71 227 L131 227" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text x="101.0" y="244" font-size="11" fill="#263746" text-anchor="middle">cₘ = 0,100 m</text>
+        <text x="101.0" y="244" font-size="11" fill="#263746" text-anchor="middle">l<tspan baseline-shift="sub" font-size="0.75em">m</tspan> = 0,100 m</text>
         <line x1="71" y1="206" x2="71" y2="222" stroke="#657781" stroke-width="1" />
         <line x1="131" y1="206" x2="131" y2="222" stroke="#657781" stroke-width="1" />
-        <text x="202" y="238" font-size="11" fill="#263746" text-anchor="middle">vₘ = ?</text>
+        <text x="10" y="224" font-size="11" fill="#263746" text-anchor="start">v<tspan baseline-shift="sub" font-size="0.75em">m</tspan> = ?</text>
       </g>
     </g>
   </g>
@@ -142,7 +138,7 @@
         <text x="146" y="65" font-size="10" fill="#263746" text-anchor="middle">ρ = 1,20 kg/m³; μ = 1,80 · 10⁻⁵ Pa s</text>
         <circle id="u14vs_z5cylinder" cx="80" cy="164" r="22" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.5" />
         <path id="u14vs_z5velocity" d="M22 164 L48 164" fill="none" stroke="#356b83" stroke-width="2.3" marker-end="url(#u14vs_v)" />
-        <text x="65" y="112" font-size="12" fill="#263746" text-anchor="middle">v = 12,0 m/s</text>
+        <text x="10" y="136" font-size="12" fill="#263746" text-anchor="start">v = 12,0 m/s</text>
         <line x1="107" y1="142" x2="117" y2="142" stroke="#657781" stroke-width="1.2" />
         <line x1="107" y1="186" x2="117" y2="186" stroke="#657781" stroke-width="1.2" />
         <path id="u14vs_z5D" d="M112 142 L112 186" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
@@ -164,6 +160,7 @@
         <text x="29" y="29" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z6</text>
         <text x="57" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Dva modela preljeva</text>
         <text x="146" y="62" font-size="10" fill="#263746" text-anchor="middle">Referentni presjeci u istom mjerilu crteža</text>
+        <text x="146" y="77" font-size="10" fill="#263746" text-anchor="middle">v<tspan baseline-shift="sub" font-size="0.75em">p</tspan> = 6,00 m/s; h<tspan baseline-shift="sub" font-size="0.75em">p</tspan> = 7,50 m; Q<tspan baseline-shift="sub" font-size="0.75em">p</tspan> = 480 m³/s</text>
         <rect id="u14vs_awater" x="28" y="127.5" width="117.33333333333333" height="82.5" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <rect id="u14vs_aleftwall" x="23" y="115.5" width="5" height="99.5" rx="0" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u14vs_arightwall" x="145.33333333333331" y="115.5" width="5" height="99.5" rx="0" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -171,16 +168,15 @@
         <line id="u14vs_asurface" x1="28" y1="127.5" x2="145.33333333333331" y2="127.5" stroke="#356b83" stroke-width="1.5" />
         <circle cx="86.66666666666666" cy="168.75" r="6" fill="none" stroke="#356b83" stroke-width="1.5" />
         <circle cx="86.66666666666666" cy="168.75" r="1.5" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
-        <text x="86.66666666666666" y="87" font-size="12" fill="#263746" text-anchor="middle">λL = 20</text>
+        <text x="86.66666666666666" y="97" font-size="12" fill="#263746" text-anchor="middle">λ<tspan baseline-shift="sub" font-size="0.75em">L</tspan> = 20</text>
         <line x1="11" y1="127.5" x2="21" y2="127.5" stroke="#657781" stroke-width="1.2" />
         <line x1="11" y1="210" x2="21" y2="210" stroke="#657781" stroke-width="1.2" />
         <path id="u14vs_adepth" d="M16 127.5 L16 210" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text transform="translate(8 168.75) rotate(-90)" text-anchor="middle" font-size="11" fill="#263746">hₘ</text>
+        <text transform="translate(8 168.75) rotate(-90)" text-anchor="middle" font-size="11" fill="#263746">h<tspan baseline-shift="sub" font-size="0.75em">m</tspan></text>
         <line x1="28" y1="223" x2="28" y2="233" stroke="#657781" stroke-width="1.2" />
         <line x1="145.33333333333331" y1="223" x2="145.33333333333331" y2="233" stroke="#657781" stroke-width="1.2" />
         <path id="u14vs_awidth" d="M28 228 L145.33333333333331 228" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text x="86.66666666666666" y="245" font-size="11" fill="#263746" text-anchor="middle">bₘ</text>
-        <text x="86.66666666666666" y="110" font-size="10" fill="#263746" text-anchor="middle">28,0 ± 0,6 N</text>
+        <text x="86.66666666666666" y="112" font-size="10" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.75em">m</tspan> = 28,0 ± 0,6 N</text>
         <rect id="u14vs_bwater" x="184" y="155.0" width="78.22222222222221" height="55.0" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <rect id="u14vs_bleftwall" x="179" y="143.0" width="5" height="72.0" rx="0" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u14vs_brightwall" x="262.22222222222223" y="143.0" width="5" height="72.0" rx="0" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -188,16 +184,16 @@
         <line id="u14vs_bsurface" x1="184" y1="155.0" x2="262.22222222222223" y2="155.0" stroke="#356b83" stroke-width="1.5" />
         <circle cx="223.11111111111111" cy="182.5" r="6" fill="none" stroke="#356b83" stroke-width="1.5" />
         <circle cx="223.11111111111111" cy="182.5" r="1.5" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
-        <text x="223.11111111111111" y="87" font-size="12" fill="#263746" text-anchor="middle">λL = 30</text>
+        <text x="223.11111111111111" y="97" font-size="12" fill="#263746" text-anchor="middle">λ<tspan baseline-shift="sub" font-size="0.75em">L</tspan> = 30</text>
         <line x1="167" y1="155.0" x2="177" y2="155.0" stroke="#657781" stroke-width="1.2" />
         <line x1="167" y1="210" x2="177" y2="210" stroke="#657781" stroke-width="1.2" />
         <path id="u14vs_bdepth" d="M172 155.0 L172 210" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text transform="translate(164 182.5) rotate(-90)" text-anchor="middle" font-size="11" fill="#263746">hₘ</text>
+        <text transform="translate(164 182.5) rotate(-90)" text-anchor="middle" font-size="11" fill="#263746">h<tspan baseline-shift="sub" font-size="0.75em">m</tspan></text>
         <line x1="184" y1="223" x2="184" y2="233" stroke="#657781" stroke-width="1.2" />
         <line x1="262.22222222222223" y1="223" x2="262.22222222222223" y2="233" stroke="#657781" stroke-width="1.2" />
         <path id="u14vs_bwidth" d="M184 228 L262.22222222222223 228" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text x="223.11111111111111" y="245" font-size="11" fill="#263746" text-anchor="middle">bₘ</text>
-        <text x="223.11111111111111" y="110" font-size="10" fill="#263746" text-anchor="middle">8,00 ± 0,20 N</text>
+        <text x="223.11111111111111" y="112" font-size="10" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.75em">m</tspan> = 8,00 ± 0,20 N</text>
+        <text x="146" y="250" font-size="10" fill="#263746" text-anchor="middle">ν = 1,00 · 10⁻⁶ m²/s; Q<tspan baseline-shift="sub" font-size="0.75em">lim</tspan> = 300 L/s; F<tspan baseline-shift="sub" font-size="0.75em">min</tspan> = 10,0 N</text>
       </g>
     </g>
   </g>

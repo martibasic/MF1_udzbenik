@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 618 325" role="img" aria-labelledby="u14fup_title u14fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:618px;height:auto;">
   <title id="u14fup_title">Pregled poglavlja: bezdimenzijski brojevi, dimenzijska analiza i sličnost</title>
-  <desc id="u14fup_desc">Tri panela: lijevo usporedba karakterističnih mehanizama, sredina ključni brojevi Re, Fr, Eu, We i Ma, a desno prijenos koeficijenta otpora iz aerotunela uz jednak Reynoldsov broj i ostale jednake bezdimenzijske uvjete.</desc>
+  <desc id="u14fup_desc">Dva panela: lijevo shematski parovi mjerila inercije prema viskoznosti, gravitaciji i površinskoj napetosti, bez numeričkog mjerila; desno model automobila u aerotunelu s jednolikim dotokom, za prijenos koeficijenta otpora na prototip pri jednakom Reynoldsovu broju i ostalim jednakim bezdimenzijskim uvjetima.</desc>
   <defs>
     <marker id="u14fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
@@ -9,24 +9,25 @@
   <g id="u14fup_title-scene-1" transform="translate(-20.0000 -11.0000)">
     <text x="177" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">Usporedi mehanizme</text>
     <text x="44" y="92" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746">inercija ↔ viskoznost</text>
-    <rect x="44" y="100" width="133" height="24" fill="#c5cdd3" stroke="#356b83" stroke-width="1" />
-    <rect x="177" y="100" width="133" height="24" fill="#d7dee3" stroke="#3a4a56" stroke-width="1" />
+    <rect x="44" y="100" width="133" height="24" fill="#c5cdd3" stroke="#657781" stroke-width="1" />
+    <rect x="177" y="100" width="133" height="24" fill="#d7dee3" stroke="#657781" stroke-width="1" />
     <text x="44" y="186" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746">inercija ↔ gravitacija</text>
-    <rect x="44" y="194" width="133" height="24" fill="#c5cdd3" stroke="#356b83" stroke-width="1" />
-    <rect x="177" y="194" width="133" height="24" fill="#c5cdd3" stroke="#356b83" stroke-width="1" />
-    <text x="44" y="280" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746">inercija ↔ napetost</text>
-    <rect x="44" y="288" width="133" height="24" fill="#c5cdd3" stroke="#356b83" stroke-width="1" />
-    <rect x="177" y="288" width="133" height="24" fill="#dcebf1" stroke="#356b83" stroke-width="1" />
+    <rect x="44" y="194" width="133" height="24" fill="#c5cdd3" stroke="#657781" stroke-width="1" />
+    <rect x="177" y="194" width="133" height="24" fill="#d7dee3" stroke="#657781" stroke-width="1" />
+    <text x="44" y="280" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746">inercija ↔ površinska napetost</text>
+    <rect x="44" y="288" width="133" height="24" fill="#c5cdd3" stroke="#657781" stroke-width="1" />
+    <rect x="177" y="288" width="133" height="24" fill="#d7dee3" stroke="#657781" stroke-width="1" />
   </g>
   <g id="u14fup_title-scene-2" transform="translate(-342.0000 -11.0000)">
     <text x="808" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#263746">Model i prototip</text>
-    <rect x="680" y="150" width="256" height="140" fill="#cedee0" />
+    <rect x="680" y="150" width="256" height="140" fill="#dcebf1" />
     <path id="u14fup_tunnelwalls" d="M680 150 H936 M680 290 H936" fill="none" stroke="#3a4a56" stroke-width="2" />
-    <line x1="690" y1="180" x2="740" y2="180" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
-    <line x1="690" y1="210" x2="740" y2="210" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
-    <path d="M745,278 Q748,250 772,246 L800,224 Q828,216 858,226 L892,250 Q908,256 910,278 Z" fill="#dcebf1" stroke="#3a4a56" stroke-width="1.5" />
+    <line x1="690" y1="180" x2="728" y2="180" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
+    <line x1="690" y1="210" x2="728" y2="210" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
+    <path d="M745,278 Q748,250 772,246 L800,224 Q828,216 858,226 L892,250 Q908,256 910,278 Z" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.5" />
+    <text x="930" y="172" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="end" fill="#263746">model: Re<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = Re<tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
     <circle cx="788" cy="278" r="12" fill="#3a4a56" />
     <circle cx="872" cy="278" r="12" fill="#3a4a56" />
-    <line x1="690" y1="270" x2="740" y2="270" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
+    <line x1="690" y1="270" x2="728" y2="270" stroke="#356b83" stroke-width="2.4" marker-end="url(#u14fup_aR)" />
   </g>
 </svg>
