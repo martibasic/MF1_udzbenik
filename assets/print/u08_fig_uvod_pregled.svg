@@ -2,6 +2,8 @@
   <title id="u08fup_title">Kontrolni volumen i bilanca mase</title>
   <desc id="u08fup_desc">Lijevo apstraktni uređaj s ulazom, dvama izlazima i akumulacijom; isprekidana granica kontrolna je ploha, ne kruta stijenka. Vanjske jedinične normale n označene su kratkim strelicama. Desno gore je ventilirana komora s dva stvarna otvorena priključka; zrak u komori i priključcima isti je fluid jednake ispune. Strelice su tokovi, a oznaka akumulacije nije brzina fluida.</desc>
   <defs>
+    <marker id="u08fup_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="u08fup_vsmall" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 Z" fill="#356b83" stroke="none"/></marker>
     <pattern id="u08fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#dcebf1" />
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
@@ -53,12 +55,12 @@
     <path d="M210 235 Q260 265 310 235 T410 235" fill="none" stroke="#c5cdd3" stroke-width="2" />
     <path d="M210 270 Q260 300 310 270 T410 270" fill="none" stroke="#c5cdd3" stroke-width="2" />
     <path d="M210 305 Q260 335 310 305 T410 305" fill="none" stroke="#c5cdd3" stroke-width="2" />
-    <line x1="64" y1="220" x2="190" y2="220" stroke="#356b83" stroke-width="3" marker-end="url(#u08fup_aR)" />
-    <line x1="150" y1="240" x2="134" y2="240" stroke="#356b83" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
-    <line x1="450" y1="200" x2="560" y2="200" stroke="#356b83" stroke-width="3" marker-end="url(#u08fup_aG)" />
-    <line x1="450" y1="220" x2="466" y2="220" stroke="#356b83" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
-    <line x1="450" y1="310" x2="560" y2="310" stroke="#356b83" stroke-width="3" marker-end="url(#u08fup_aG)" />
-    <line x1="450" y1="330" x2="466" y2="330" stroke="#356b83" stroke-width="1.2" marker-end="url(#u08fup_aN)" />
+    <line x1="64" y1="220" x2="190" y2="220" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08fup_vopen)" data-mf1-vector="velocity" />
+    <line x1="150" y1="240" x2="134" y2="240" stroke="#356b83" stroke-width="1.2" marker-end="url(#u08fup_vsmall)" data-mf1-vector="unit" />
+    <line x1="450" y1="200" x2="560" y2="200" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08fup_vopen)" data-mf1-vector="velocity" />
+    <line x1="450" y1="220" x2="466" y2="220" stroke="#356b83" stroke-width="1.2" marker-end="url(#u08fup_vsmall)" data-mf1-vector="unit" />
+    <line x1="450" y1="310" x2="560" y2="310" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08fup_vopen)" data-mf1-vector="velocity" />
+    <line x1="450" y1="330" x2="466" y2="330" stroke="#356b83" stroke-width="1.2" marker-end="url(#u08fup_vsmall)" data-mf1-vector="unit" />
     <rect x="150" y="140" width="300" height="230" rx="14" fill="none" stroke="#657781" stroke-width="1.8" stroke-dasharray="8,5" />
     <rect x="408" y="146" width="36" height="20" rx="4" fill="#eadfc5" stroke="#657781" stroke-width="1" />
     <text x="46" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Kontrolni volumen</text>
@@ -85,8 +87,8 @@
       <line x1="842" y1="347" x2="920" y2="347" stroke="#3a4a56" stroke-width="1.2" />
       <line x1="608" y1="371" x2="688" y2="371" stroke="#3a4a56" stroke-width="1.2" />
       <line x1="842" y1="371" x2="920" y2="371" stroke="#3a4a56" stroke-width="1.2" />
-      <line x1="618" y1="359" x2="674" y2="359" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08fup_fix_normal)" />
-      <line x1="854" y1="359" x2="910" y2="359" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08fup_fix_green)" />
+      <line x1="618" y1="359" x2="674" y2="359" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08fup_vopen)" data-mf1-vector="velocity" />
+      <line x1="854" y1="359" x2="910" y2="359" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08fup_vopen)" data-mf1-vector="velocity" />
       <text x="765" y="353" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">ventilirana komora</text>
     </g>
   </g>

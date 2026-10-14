@@ -1,7 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 525 421" role="img" aria-labelledby="u08v1dk_title u08v1dk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:525px;height:auto;">
   <title id="u08v1dk_title">Difuzor i kontinuitet</title>
-  <desc id="u08v1dk_desc">Difuzor s ulaznim promjerom D1 = 120 mm i izlaznim promjerom D2 = 180 mm. Ulazna brzina je nepoznata, izlazna zadana; duljine strelica u omjeru 3,6 : 1,6 slijede kontinuitet, a kratke blijede strelice skraćuju se prema izlazu. Kontrolni volumen obuhvaća cijeli difuzor i presijeca presjeke 1 i 2.</desc>
+  <desc id="u08v1dk_desc">Difuzor s ulaznim promjerom D1 = 120 mm i izlaznim promjerom D2 = 180 mm. Ulazna brzina je nepoznata, izlazna zadana; duljine strelica u omjeru 3,6 : 1,6 slijede kontinuitet, a kratke sive strelice smjera strujnica skraćuju se prema izlazu. Kontrolni volumen obuhvaća cijeli difuzor i presijeca presjeke 1 i 2.</desc>
   <defs>
+    <marker id="u08v1dk_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="u08v1dk_strm_aux" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <path d="M0,0 L0,4 L6,2 z" fill="#657781" />
+    </marker>
     <pattern id="u08v1dk_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
@@ -41,32 +45,32 @@
     <line x1="40" y1="240" x2="478" y2="240" stroke="#657781" stroke-width="0.8" stroke-dasharray="6,5" />
     <line x1="135" y1="200" x2="135" y2="280" stroke="#356b83" stroke-width="1.4" stroke-dasharray="5,4" />
     <line x1="400" y1="180" x2="400" y2="300" stroke="#356b83" stroke-width="1.4" stroke-dasharray="5,4" />
-    <line x1="62" y1="240" x2="132" y2="240" stroke="#356b83" stroke-width="3" marker-end="url(#u08v1dk_vR)" />
-    <line x1="408" y1="240" x2="439" y2="240" stroke="#356b83" stroke-width="3" marker-end="url(#u08v1dk_vG)" />
+    <line x1="62" y1="240" x2="132" y2="240" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08v1dk_vopen)" data-mf1-vector="velocity" />
+    <line x1="408" y1="240" x2="439" y2="240" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08v1dk_vopen)" data-mf1-vector="velocity" />
     <rect x="130" y="135" width="275" height="215" fill="none" stroke="#657781" stroke-width="1.6" stroke-dasharray="9,5" rx="6" />
     <circle cx="135" cy="120" r="11" fill="#ffffff" stroke="#356b83" stroke-width="1.5" />
     <circle cx="400" cy="120" r="11" fill="#ffffff" stroke="#356b83" stroke-width="1.5" />
     <g opacity="0.55" stroke="#356b83" stroke-width="1.3" fill="none">
-      <line x1="200" y1="222" x2="250.7" y2="216.9" marker-end="url(#u08v1dk_strm)" stroke="#356b83" />
-      <line x1="200" y1="258" x2="250.7" y2="263.1" marker-end="url(#u08v1dk_strm)" stroke="#356b83" />
-      <line x1="270" y1="212" x2="307.6" y2="206.4" marker-end="url(#u08v1dk_strm)" stroke="#356b83" />
-      <line x1="270" y1="268" x2="307.6" y2="273.6" marker-end="url(#u08v1dk_strm)" stroke="#356b83" />
-      <line x1="345" y1="200" x2="376.0" y2="198.4" marker-end="url(#u08v1dk_strm)" stroke="#356b83" />
-      <line x1="345" y1="280" x2="376.0" y2="281.6" marker-end="url(#u08v1dk_strm)" stroke="#356b83" />
+      <line x1="200" y1="222" x2="250.7" y2="216.9" marker-end="url(#u08v1dk_strm_aux)" stroke="#657781" data-mf1-role="streamline" />
+      <line x1="200" y1="258" x2="250.7" y2="263.1" marker-end="url(#u08v1dk_strm_aux)" stroke="#657781" data-mf1-role="streamline" />
+      <line x1="270" y1="212" x2="307.6" y2="206.4" marker-end="url(#u08v1dk_strm_aux)" stroke="#657781" data-mf1-role="streamline" />
+      <line x1="270" y1="268" x2="307.6" y2="273.6" marker-end="url(#u08v1dk_strm_aux)" stroke="#657781" data-mf1-role="streamline" />
+      <line x1="345" y1="200" x2="376.0" y2="198.4" marker-end="url(#u08v1dk_strm_aux)" stroke="#657781" data-mf1-role="streamline" />
+      <line x1="345" y1="280" x2="376.0" y2="281.6" marker-end="url(#u08v1dk_strm_aux)" stroke="#657781" data-mf1-role="streamline" />
     </g>
     <line x1="60" y1="200" x2="42" y2="200" stroke="#657781" stroke-width="0.7" />
     <line x1="60" y1="280" x2="42" y2="280" stroke="#657781" stroke-width="0.7" />
-    <line x1="46" y1="204" x2="46" y2="276" stroke="#657781" stroke-width="1.3" marker-start="url(#u08v1dk_dimL)" marker-end="url(#u08v1dk_dim)" />
+    <line x1="46" y1="204" x2="46" y2="276" stroke="#657781" stroke-width="1.3" marker-start="url(#u08v1dk_dimL)" marker-end="url(#u08v1dk_dim)" data-mf1-role="dimension" />
     <line x1="400" y1="180" x2="470" y2="180" stroke="#657781" stroke-width="0.7" />
     <line x1="400" y1="300" x2="470" y2="300" stroke="#657781" stroke-width="0.7" />
-    <line x1="465" y1="184" x2="465" y2="296" stroke="#657781" stroke-width="1.3" marker-start="url(#u08v1dk_dimL)" marker-end="url(#u08v1dk_dim)" />
+    <line x1="465" y1="184" x2="465" y2="296" stroke="#657781" stroke-width="1.3" marker-start="url(#u08v1dk_dimL)" marker-end="url(#u08v1dk_dim)" data-mf1-role="dimension" />
     <text x="40" y="50" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Difuzor s kontrolnim volumenom</text>
     <text x="142" y="270" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">A<tspan baseline-shift="sub" font-size="0.7em">1</tspan>
     </text>
     <text x="378" y="290" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">A<tspan baseline-shift="sub" font-size="0.7em">2</tspan>
     </text>
-    <text x="97" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">v<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-    <text x="410" y="210" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">v<tspan baseline-shift="sub" font-size="0.7em">2</tspan> =</text>
+    <text x="97" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="middle" fill="#263746">v<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+    <text x="410" y="210" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> =</text>
     <text x="410" y="228" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746">1,6 m/s</text>
     <text x="268" y="370" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746">kontrolni volumen (KV)</text>
     <text x="135" y="124" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">1</text>

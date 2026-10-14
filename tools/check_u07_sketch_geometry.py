@@ -97,6 +97,18 @@ def main():
         assert not any(float(n.get('x'))<x<float(n.get('x'))+float(n.get('width'))
                        and float(n.get('y'))<y<float(n.get('y'))+float(n.get('height')) for n in solids)
     print('PASS Z6: ballast tank level ratio 0.30:1.60, open air pipe and uncapped pipes')
+    # Requested results must not be drawn to scale (only given data are).
+    L=lambda k: math.hypot(*vector(ns['u08vs_fix_'+k]))
+    label=lambda k: ''.join(ns['u08vs_fix_'+k].itertext())
+    v2v1=17.6471/12.0  # Z1 result v2/v1 (rho1*A1/(rho2*A2))
+    assert abs(L('z1_v2')/L('z1_v1')-v2v1)/v2v1 > 0.15 and '?' in label('z1_v2label'), 'Z1 reveals v2'
+    q3=L('z3_q1')*20/12  # Q3 = Q1 + Q2 = 20 L/s on the Q1 scale (12 L/s)
+    assert abs(L('z3_q2')/L('z3_q1')-8/12) < 0.01, 'Z3 given Q2:Q1'
+    assert abs(L('z3_q3')-q3)/q3 > 0.15 and '?' in label('z3_q3label'), 'Z3 reveals Q3'
+    assert abs(L('z4_v2')/L('z4_v3')-2) < 0.02, 'Z4 given v2 = 2 v3'
+    v2v1=3.6197/1.9488  # Z4 result v2 relative to the inlet velocity Q/A1
+    assert abs(L('z4_v2')/L('z4_v1')-v2v1)/v2v1 > 0.15, 'Z4 reveals v2'
+    print('PASS Z1/Z3/Z4: requested v2, Q3, v2 not drawn to the result scale; given ratios kept')
     check_scene_canvas('u08_vjezbe_skice.svg', root, 6)
     assert all('u08vs_fix_z'+str(i) in ns for i in range(1,7))
     print('PASS six original practice panels')
@@ -179,6 +191,20 @@ def main():
         slope=(b[1]-a[1])/(b[0]-a[0]);close(y,a[1]+slope*(x-a[0]))
         dx,dy=vector(n);close(dy,slope*dx)
     print('PASS kinematics: all four velocities tangent to the actual drawn curve')
+
+    # Notation of 14 Oct 2026: angle theta (alpha only correction factors), open-area
+    # fraction psi, relative density s_r, mixture density rho_mj, Croatian stream indices.
+    def texts(name):
+        root=ET.parse(ASSETS/name).getroot()
+        return [''.join(t.itertext()) for t in root.iter() if t.tag.endswith('text')]
+    z=texts('u08_vjezbe_skice.svg')
+    assert any('θ = 60°' in t for t in z) and not any('α' in t for t in z)
+    assert any('Qmv' in t for t in z) and any('Qw' in t for t in z) and not any(t.startswith('Qm ') or t.startswith('Qs ') for t in z)
+    assert any('ψ = 0,55' in t for t in texts('u08_val3_izjednacni_spremnik.svg'))
+    c=texts('u08_ch1_mijesajuci_spremnik.svg')
+    assert 'ρmj' in c and any(t.startswith('sr = ') for t in c) and any(t.startswith('ρw = ') for t in c)
+    assert any('ρmj' in t for t in texts('u08_kontrolni_volumen_scene.svg'))
+    print('PASS notation: θ, ψ, s_r, ρ_w, ρ_mj, Q_mv, Q_w on the sketches')
 
 
 if __name__=='__main__':

@@ -2,6 +2,7 @@
   <title id="u08kvs-title">Kontinuitet kroz suženje, difuzor i spremnik</title>
   <desc id="u08kvs-desc">Tri izvorna panela. Cijevni krajevi otvoreni su, a promjeri su kotirani poprečno na os cijevi. Krute stijenke prate vanjski rub istog kontinuiranog fluida. Miješajući spremnik ima dva uronjena otvorena dotoka i otvoren odvod; buduća razina označena je isprekidano bez lažnoga sloja. Tlak u difuzoru ne zaključuje se iz same bilance mase. U suženju i difuzoru omjer promjera je 2:1, pa je omjer duljina strelica brzine 1:4 prema kontinuitetu.</desc>
   <defs>
+    <marker id="u08kvs-aR_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <pattern id="u08kvs-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
     </pattern>
@@ -120,15 +121,15 @@
       <path d="M60 178.0 H125 L200 195.5 H280" fill="none" stroke="#3a4a56" stroke-width="1" />
       <polygon points="60.000000,248.000000 125.000000,248.000000 200.000000,230.500000 280.000000,230.500000 280.000000,236.500000 200.000000,236.500000 125.000000,254.000000 60.000000,254.000000" fill="url(#u08kvs_fix_0_hatch)" stroke="none" stroke-width="1.5" />
       <path d="M60 248.0 H125 L200 230.5 H280" fill="none" stroke="#3a4a56" stroke-width="1" />
-      <line x1="65" y1="213" x2="84" y2="213" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08kvs_fix_0_normal)" />
-      <line x1="202" y1="213" x2="278" y2="213" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08kvs_fix_0_green)" />
+      <line x1="65" y1="213" x2="84" y2="213" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08kvs-aR_vopen)" data-mf1-vector="velocity" />
+      <line x1="202" y1="213" x2="278" y2="213" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08kvs-aR_vopen)" data-mf1-vector="velocity" />
       <line x1="42" y1="178.0" x2="52" y2="178.0" stroke="#657781" stroke-width="0.8" />
       <line x1="42" y1="248.0" x2="52" y2="248.0" stroke="#657781" stroke-width="0.8" />
-      <line x1="47" y1="178.0" x2="47" y2="248.0" stroke="#657781" stroke-width="1.2" marker-start="url(#u08kvs_fix_0_dimL)" marker-end="url(#u08kvs_fix_0_dim)" />
+      <line x1="47" y1="178.0" x2="47" y2="248.0" stroke="#657781" stroke-width="1.2" marker-start="url(#u08kvs_fix_0_dimL)" marker-end="url(#u08kvs_fix_0_dim)" data-mf1-role="dimension" />
       <text x="37" y="159" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
       <line x1="285" y1="195.5" x2="295" y2="195.5" stroke="#657781" stroke-width="0.8" />
       <line x1="285" y1="230.5" x2="295" y2="230.5" stroke="#657781" stroke-width="0.8" />
-      <line x1="290" y1="195.5" x2="290" y2="230.5" stroke="#657781" stroke-width="1.2" marker-start="url(#u08kvs_fix_0_dimL)" marker-end="url(#u08kvs_fix_0_dim)" />
+      <line x1="290" y1="195.5" x2="290" y2="230.5" stroke="#657781" stroke-width="1.2" marker-start="url(#u08kvs_fix_0_dimL)" marker-end="url(#u08kvs_fix_0_dim)" data-mf1-role="dimension" />
       <text x="280" y="159" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
       <rect x="120" y="165" width="95" height="103" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08kvs_fix_0_cv" data-mf1-role="control-volume" />
       <text x="167.5" y="156" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">KV</text>
@@ -142,15 +143,15 @@
       <path d="M372 195.5 H437 L512 178.0 H592" fill="none" stroke="#3a4a56" stroke-width="1" />
       <polygon points="372.000000,230.500000 437.000000,230.500000 512.000000,248.000000 592.000000,248.000000 592.000000,254.000000 512.000000,254.000000 437.000000,236.500000 372.000000,236.500000" fill="url(#u08kvs_fix_1_hatch)" stroke="none" stroke-width="1.5" />
       <path d="M372 230.5 H437 L512 248.0 H592" fill="none" stroke="#3a4a56" stroke-width="1" />
-      <line x1="376" y1="213" x2="452" y2="213" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08kvs_fix_1_normal)" />
-      <line x1="530" y1="213" x2="549" y2="213" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08kvs_fix_1_green)" />
+      <line x1="376" y1="213" x2="452" y2="213" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08kvs-aR_vopen)" data-mf1-vector="velocity" />
+      <line x1="530" y1="213" x2="549" y2="213" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08kvs-aR_vopen)" data-mf1-vector="velocity" />
       <line x1="354" y1="195.5" x2="364" y2="195.5" stroke="#657781" stroke-width="0.8" />
       <line x1="354" y1="230.5" x2="364" y2="230.5" stroke="#657781" stroke-width="0.8" />
-      <line x1="359" y1="195.5" x2="359" y2="230.5" stroke="#657781" stroke-width="1.2" marker-start="url(#u08kvs_fix_1_dimL)" marker-end="url(#u08kvs_fix_1_dim)" />
+      <line x1="359" y1="195.5" x2="359" y2="230.5" stroke="#657781" stroke-width="1.2" marker-start="url(#u08kvs_fix_1_dimL)" marker-end="url(#u08kvs_fix_1_dim)" data-mf1-role="dimension" />
       <text x="349" y="159" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
       <line x1="597" y1="178.0" x2="607" y2="178.0" stroke="#657781" stroke-width="0.8" />
       <line x1="597" y1="248.0" x2="607" y2="248.0" stroke="#657781" stroke-width="0.8" />
-      <line x1="602" y1="178.0" x2="602" y2="248.0" stroke="#657781" stroke-width="1.2" marker-start="url(#u08kvs_fix_1_dimL)" marker-end="url(#u08kvs_fix_1_dim)" />
+      <line x1="602" y1="178.0" x2="602" y2="248.0" stroke="#657781" stroke-width="1.2" marker-start="url(#u08kvs_fix_1_dimL)" marker-end="url(#u08kvs_fix_1_dim)" data-mf1-role="dimension" />
       <text x="592" y="159" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
       <rect x="432" y="165" width="95" height="103" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08kvs_fix_1_cv" data-mf1-role="control-volume" />
       <text x="479.5" y="156" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">KV</text>
@@ -172,20 +173,20 @@
       <rect x="880" y="275.0" width="45" height="12" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u08kvs_fix_tank_pipe-880-281" />
       <rect x="880" y="270.0" width="45" height="5" fill="url(#u08kvs_fix_tank_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect x="880" y="287.0" width="45" height="5" fill="url(#u08kvs_fix_tank_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <line x1="665" y1="265" x2="692" y2="265" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08kvs_fix_tank_normal)" />
-      <line x1="889" y1="281" x2="919" y2="281" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08kvs_fix_tank_green)" />
+      <line x1="665" y1="265" x2="692" y2="265" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08kvs-aR_vopen)" data-mf1-vector="velocity" />
+      <line x1="889" y1="281" x2="919" y2="281" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08kvs-aR_vopen)" data-mf1-vector="velocity" />
       <path d="M839 163 V275" fill="none" stroke="#3a4a56" stroke-width="19" stroke-linejoin="round" />
       <path d="M839 163 V275" fill="none" stroke="#c5cdd3" stroke-width="18" stroke-linejoin="round" />
       <path d="M839 163 V275" fill="none" stroke="url(#u08kvs_fix_tank_hatch)" stroke-width="18" stroke-linejoin="round" />
       <path d="M839 163 V275" fill="none" stroke="#dcebf1" stroke-width="12" stroke-linejoin="round" />
-      <line x1="839" y1="173" x2="839" y2="206" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08kvs_fix_tank_normal)" />
+      <line x1="839" y1="173" x2="839" y2="206" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08kvs-aR_vopen)" data-mf1-vector="velocity" />
       <text x="674" y="244" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan></text>
       <text x="857" y="177" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">B</tspan></text>
       <text x="912" y="263" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan></text>
       <line x1="704" y1="213" x2="878" y2="213" stroke="#356b83" stroke-width="1" stroke-dasharray="5,4" />
-      <line x1="775" y1="235" x2="775" y2="217" stroke="#356b83" stroke-width="2.2" marker-end="url(#u08kvs_fix_tank_green)" />
+      <line x1="775" y1="235" x2="775" y2="217" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08kvs-aR_vopen)" data-mf1-vector="velocity" />
       <text x="782" y="231" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start">d<tspan font-style="italic">h</tspan>/d<tspan font-style="italic">t</tspan></text>
-      <text x="776" y="294" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">KV: mješavina; <tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> konst.</text>
+      <text x="776" y="294" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">KV: mješavina; <tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">mj</tspan> konst.</text>
       <path id="u08kvs_fix_tank_controlVolume" d="M693 190 H890 V314 H693 Z" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" data-mf1-role="control-volume" />
     </g>
   </g>

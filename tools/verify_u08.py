@@ -47,36 +47,36 @@ def primjer_2_mjesanje(Q_A=0.150, Q_B=0.030, s_B=0.80, D_C=0.30, rho_A=1000.0):
             "m_dot_C": m_dot_C, "rho_C": rho_C}
 
 
-def primjer_2_zahvatni_usis(v_s_kn=18.0, rho=1025.0, A_u=0.040, phi=0.55,
+def primjer_2_zahvatni_usis(v_s_kn=18.0, rho=1025.0, A_u=0.040, psi=0.55,
                             Q_m3h=180.0):
     """P2: zahvatni usis morske vode, kontrolni volumen vezan uz brod."""
     v_s = v_s_kn * 1852.0 / 3600.0
     Q = Q_m3h / 3600.0
     m_dot = rho * Q
     w = Q / A_u                   # relativno prema brodu, u usis
-    w_r = Q / (phi * A_u)         # u slobodnim otvorima rešetke
+    w_r = Q / (psi * A_u)         # u slobodnim otvorima rešetke
     v_abs = v_s - w               # apsolutno, prema pramcu
     m_dot_wrong = rho * A_u * v_abs
     return {"v_s": v_s, "Q": Q, "m_dot": m_dot, "w": w, "w_r": w_r,
             "v_abs": v_abs, "m_dot_wrong": m_dot_wrong}
 
 
-def cjeloviti_1_mijesajuci(L=4.2, b=1.5, Q_A=0.018, Q_B=0.006, s_B=1.10,
+def cjeloviti_1_mijesajuci(L=4.2, b=1.5, Q_A=0.018, Q_B=0.006, s_r=1.10,
                             D_3=0.100, v_3=1.80, h_0=0.80, h_1=1.20,
-                            rho_A=1000.0):
-    rho_B = s_B * rho_A
+                            rho_w=1000.0):
+    rho_B = s_r * rho_w
     A_3 = math.pi * D_3**2 / 4
     Q_3 = A_3 * v_3
-    m_dot_in = rho_A * Q_A + rho_B * Q_B
-    Q_in = Q_A + Q_B
-    rho_3 = m_dot_in / Q_in
+    m_dot_ul = rho_w * Q_A + rho_B * Q_B
+    Q_ul = Q_A + Q_B
+    rho_mj = m_dot_ul / Q_ul  # gustoća mješavine
     A_T = L * b
     dhdt = (Q_A + Q_B - Q_3) / A_T
     dh = h_1 - h_0
     dV = A_T * dh
     t = dV / (Q_A + Q_B - Q_3)
-    dm = rho_3 * dV
-    return {"rho_B": rho_B, "Q_3": Q_3, "rho_3": rho_3,
+    dm = rho_mj * dV
+    return {"rho_B": rho_B, "Q_3": Q_3, "rho_3": rho_mj,
             "dhdt": dhdt, "t": t, "dm": dm}
 
 
@@ -128,8 +128,8 @@ def zadatak_1(rho_1=1.20, v_1=12.0, A_1=0.30, rho_2=1.02, A_2=0.24):
     return {"m_dot": m_dot, "v_2": v_2, "Q_1": Q_1, "Q_2": Q_2}
 
 
-def zadatak_2(A=0.004, v=3.0, alpha_deg=60.0, rho=998.0):
-    v_n = v * math.cos(math.radians(alpha_deg))
+def zadatak_2(A=0.004, v=3.0, theta_deg=60.0, rho=998.0):
+    v_n = v * math.cos(math.radians(theta_deg))
     Q = A * v_n
     return {"v_n": v_n, "Q": Q, "m_dot": rho*Q}
 
@@ -163,23 +163,23 @@ def zadatak_5(D=0.100, d=0.020, Q_in=0.001, w=1.50,
             "dm": rho*A_p*stroke, "w_stopped": Q_in/A_o}
 
 
-def zadatak_6(A_T=36.0, h_0=0.30, h_max=1.60, rho_m=1025.0, rho_s=1000.0,
-               Q_m_h=250.0, Q_s_h=40.0, Q_iz_h=120.0, t_min=15.0,
-               rel_m=0.04, rel_s=0.05, rel_iz=0.06):
+def zadatak_6(A_T=36.0, h_0=0.30, h_max=1.60, rho_mv=1025.0, rho_w=1000.0,
+               Q_mv_h=250.0, Q_w_h=40.0, Q_iz_h=120.0, t_min=15.0,
+               rel_mv=0.04, rel_w=0.05, rel_iz=0.06):
     """Z6: balastni tank dvodna, miješanje morske i slatke vode, odzračnik."""
-    Q_m, Q_s, Q_iz = (x / 3600.0 for x in (Q_m_h, Q_s_h, Q_iz_h))
-    rho_mix = (rho_m * Q_m + rho_s * Q_s) / (Q_m + Q_s)
-    Q_net = Q_m + Q_s - Q_iz
+    Q_mv, Q_w, Q_iz = (x / 3600.0 for x in (Q_mv_h, Q_w_h, Q_iz_h))
+    rho_mj = (rho_mv * Q_mv + rho_w * Q_w) / (Q_mv + Q_w)
+    Q_net = Q_mv + Q_w - Q_iz
     dhdt = Q_net / A_T
     t = t_min * 60.0
     h_t = h_0 + dhdt * t
-    dm = rho_mix * Q_net * t
-    Q_net_max = Q_m * (1 + rel_m) + Q_s * (1 + rel_s) - Q_iz * (1 - rel_iz)
+    dm = rho_mj * Q_net * t
+    Q_net_max = Q_mv * (1 + rel_mv) + Q_w * (1 + rel_w) - Q_iz * (1 - rel_iz)
     dhdt_max = Q_net_max / A_T
     h_t_max = h_0 + dhdt_max * t
     t_air = (h_max - h_0) / dhdt_max
     return {
-        "rho_mix": rho_mix,
+        "rho_mix": rho_mj,
         "Q_net": Q_net,
         "dhdt": dhdt,
         "h_t": h_t,
@@ -247,7 +247,7 @@ def verify():
     _check(out, "U08.Z2.v_n", r["v_n"], 1.50, "m/s", rel=0.001)
     _check(out, "U08.Z2.Q_Ls", r["Q"]*1000, 6.00, "L/s", rel=0.001)
     _check(out, "U08.Z2.m_dot", r["m_dot"], 5.988, "kg/s", rel=0.001)
-    _check(out, "U08.Z2.reverse_Q_Ls", zadatak_2(alpha_deg=120)["Q"]*1000, -6.00, "L/s", rel=0.001)
+    _check(out, "U08.Z2.reverse_Q_Ls", zadatak_2(theta_deg=120)["Q"]*1000, -6.00, "L/s", rel=0.001)
 
     r = zadatak_3()
     _check(out, "U08.Z3.Q_3_Ls", r["Q_3"] * 1000, 20.0, "L/s")
@@ -288,9 +288,9 @@ def verify():
                and abs(primjer_2_zahvatni_usis(v_s_kn=0.0)["v_abs"]+p2["w"]) < 1e-12
                and p2["m_dot_wrong"] > 6*p2["m_dot"],
                "Tok kroz pomicnu plohu ne ovisi samo o relativnoj brzini.")
-    _invariant(out, "U08.INV.z2_orientation", abs(zadatak_2(alpha_deg=90)["Q"]) < 1e-14
-               and abs(zadatak_2(alpha_deg=0)["Q"]-.012) < 1e-14
-               and abs(zadatak_2(alpha_deg=120)["Q"]+z2["Q"]) < 1e-14,
+    _invariant(out, "U08.INV.z2_orientation", abs(zadatak_2(theta_deg=90)["Q"]) < 1e-14
+               and abs(zadatak_2(theta_deg=0)["Q"]-.012) < 1e-14
+               and abs(zadatak_2(theta_deg=120)["Q"]+z2["Q"]) < 1e-14,
                "Predznak ili normalna komponenta protoka nisu konzistentni.")
     _invariant(out, "U08.INV.z3_mass", abs(998*.020-998*math.pi*.12**2/4*z3["v_3"]) < 1e-12,
                "Mjesalica ne zatvara masenu bilancu.")
