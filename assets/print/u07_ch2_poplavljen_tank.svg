@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 591 499" role="img" aria-labelledby="u07c2pt_title u07c2pt_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:591px;height:auto;">
   <title id="u07c2pt_title">Izolirani puni bočni tank: ravnotežni nagib</title>
-  <desc id="u07c2pt_desc">Trup je kruti pravokutnik nagnut ulijevo, dok je vanjsko more vodoravno. Unutarnji lijevi tank potpuno je pun do krutog stropa, zatvoren i nema vezu s morem. Njegova voda dodaje se masi cijelog sklopa. B leži u centroidu vanjske istisnine, a ukupno G uključuje dodanu vodu. Sile su vertikalne, ne prate nagib trupa.</desc>
+  <desc id="u07c2pt_desc">Trup je kruti pravokutnik nagnut ulijevo, dok je vanjsko more vodoravno. Unutarnji lijevi tank potpuno je pun do krutog stropa, zatvoren i nema vezu s morem. Njegova voda dodaje se masi cijelog sklopa. B leži u centroidu vanjske istisnine, a zajedničko težište G uključuje dodanu vodu; težina F-G djeluje kroz G, uzgon F-U kroz B. Sile su vertikalne, ne prate nagib trupa. Ekscentar tanka e-t nije kotiran.</desc>
   <defs>
     <pattern id="u07c2pt_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
@@ -57,20 +57,20 @@
       <text x="186.00442770705575" y="360.82370778866925" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">potpuno pun tank</text>
       <text x="186.00442770705575" y="376.82370778866925" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">bez slobodne površine</text>
       <circle cx="296.770930299372" cy="342.2260860734158" r="3.7" fill="#356b83" id="u07c2pt_fix_mass-center" />
+      <text x="313.5" y="312.2260860734158" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">G</tspan></text>
       <text x="306.770930299372" y="338.2260860734158" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">G</text>
-      <line x1="296.770930299372" y1="299.2260860734158" x2="296.770930299372" y2="342.2260860734158" stroke="#356b83" stroke-width="2.2" marker-end="url(#u07c2pt_fix_force)" />
-      <line x1="296.7632623475194" y1="416.2836163954631" x2="296.7632623475194" y2="373.2836163954631" stroke="#356b83" stroke-width="2.2" marker-end="url(#u07c2pt_fix_green)" />
-      <text x="309.7632623475194" y="402.2836163954631" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan>
-      </text>
+      <line x1="296.770930299372" y1="299.2260860734158" x2="296.770930299372" y2="342.2260860734158" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07c2pt_fix_force)" data-mf1-vector="force" />
+      <line x1="296.7632623475194" y1="416.2836163954631" x2="296.7632623475194" y2="373.2836163954631" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07c2pt_fix_green)" data-mf1-vector="force" />
+      <text x="309.7632623475194" y="402.2836163954631" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">U</tspan></text>
       <line x1="310.0" y1="419.8798780487805" x2="295.1589005266077" y2="204.39033824134373" stroke="#657781" stroke-width="0.8" stroke-dasharray="4,4" />
-      <line x1="109.83369386470207" y1="460.72960128101533" x2="513.8765810036459" y2="432.9025397684048" stroke="#657781" stroke-width="1.2" marker-start="url(#u07c2pt_fix_dimL)" marker-end="url(#u07c2pt_fix_dim)" />
+      <line x1="109.83369386470207" y1="460.72960128101533" x2="513.8765810036459" y2="432.9025397684048" stroke="#657781" stroke-width="1.2" marker-start="url(#u07c2pt_fix_dimL)" marker-end="url(#u07c2pt_fix_dim)" data-mf1-role="dimension" />
       <line x1="107.978556" y1="433.793409" x2="109.83369386470207" y2="460.72960128101533" stroke="#657781" stroke-width="0.6" />
       <line x1="512.021444" y1="405.966347" x2="513.8765810036459" y2="432.9025397684048" stroke="#657781" stroke-width="0.6" />
-      <text x="311.855137434174" y="464.8160705247101" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">B = 15 m</text>
-      <line x1="91.83886075321388" y1="199.44853426449833" x2="253.45601560879146" y2="188.3177096594541" stroke="#657781" stroke-width="1.2" marker-start="url(#u07c2pt_fix_dimL)" marker-end="url(#u07c2pt_fix_dim)" />
+      <text x="311.855137434174" y="464.8160705247101" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan> = 15 m</text>
+      <line x1="91.83886075321388" y1="199.44853426449833" x2="253.45601560879146" y2="188.3177096594541" stroke="#657781" stroke-width="1.2" marker-start="url(#u07c2pt_fix_dimL)" marker-end="url(#u07c2pt_fix_dim)" data-mf1-role="dimension" />
       <line x1="93.137457" y1="218.303869" x2="91.70" y2="197.4" stroke="#657781" stroke-width="0.6" />
       <line x1="264.030299" y1="341.854007" x2="253.32" y2="186.3" stroke="#657781" stroke-width="0.6" stroke-dasharray="3,3" />
-      <text x="172.64743818100266" y="186" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">B<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 6 m</text>
+      <text x="172.64743818100266" y="186" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 6 m</text>
       <text x="300" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Brod s punim tankom</text>
     </g>
   </g>

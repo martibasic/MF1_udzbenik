@@ -11,6 +11,8 @@ import xml.etree.ElementTree as ET
 from sketch_style import check_scene_canvas
 
 ASSETS = Path(__file__).resolve().parent.parent / "assets/print"
+# Skice zadataka u kojima je položaj centra uzgona tražen (Z6: y_B, KB_eq).
+RESULT_CENTER_HIDDEN = {'u07vs_fix_z6_'}
 
 
 def read(name):
@@ -71,8 +73,69 @@ def check_hull(nodes, prefix, width, height, angle, rho_o=1000, rho_w=1000):
     assert min(p[0][1],p[1][1]) > (yi if yi else y)
     assert max(p[2][1],p[3][1]) < y
     expected = integrate(p,y,yi,rho_o,rho_w)
+    if prefix in RESULT_CENTER_HIDDEN:
+        # Centar uzgona je tražen rezultat (y_B, KB_eq): skica ga ne smije nacrtati.
+        assert prefix+'buoyancy-center' not in nodes, prefix
+        return
     center = nodes[prefix+'buoyancy-center']
     assert math.dist(expected,(float(center.get('cx')),float(center.get('cy')))) < 2e-6
+
+
+def drawn_drafts(nodes, prefix, width):
+    """Gazovi lijevog i desnog donjeg kuta (m) iz nacrtane vodne linije."""
+    p = points(nodes[prefix+'hull'])
+    scale = math.dist(p[0], p[1]) / width
+    y = float(nodes[prefix+'free-surface'].get('y1'))
+    return (p[0][1]-y)/scale, (p[1][1]-y)/scale
+
+
+def check_results_not_drawn(nodes):
+    """Skice zadataka ne smiju u mjerilu prikazati tražene gazove ni položaj
+    tereta: nacrtana vrijednost mora se jasno razlikovati od rezultata, a
+    nepoznanica je označena upitnikom."""
+    from verify_u07 import zadatak_2, zadatak_3, zadatak_5, zadatak_6
+    margin = 0.03  # m; razlika veća od svake mjerne nesigurnosti s crteža
+
+    def unknown(label_id):
+        assert '?' in ''.join(nodes[label_id].itertext()), label_id
+
+    t2 = drawn_drafts(nodes, 'u07vs_fix_z2_', 1.40)
+    assert abs(t2[0]-t2[1]) < 1e-9 and abs(t2[0]-zadatak_2()['h']) > margin, t2
+    unknown('u07vs_fix_z2_unknown')
+    # Z1: traženi F_U i smjer/iznos F_d ne smiju se očitati iz duljina.
+    fu, fg = nodes['u07vs_fix_z1_FU'], nodes['u07vs_fix_z1_FG']
+    lu = abs(float(fu.get('y2'))-float(fu.get('y1'))); lg = abs(float(fg.get('y2'))-float(fg.get('y1')))
+    z1 = __import__('verify_u07').zadatak_1()
+    assert abs(lu-lg) < 1e-9 and abs(lu/lg - z1['F_U']/z1['G']) > 0.1, (lu, lg)
+    forces = [n for n in nodes['u07vs_fix_z1'].iter() if n.get('data-mf1-vector') == 'force']
+    assert {n.get('id') for n in forces} == {'u07vs_fix_z1_FU', 'u07vs_fix_z1_FG'}, forces
+    unknown('u07vs_fix_z1_unknown')
+    z3 = zadatak_3()
+    t3 = drawn_drafts(nodes, 'u07vs_fix_z3_', 1.40)
+    assert abs(t3[0]-z3['h_L']) > margin and abs(t3[1]-z3['h_D']) > margin, t3
+    unknown('u07vs_fix_z3_unknown')
+    z5 = zadatak_5()
+    tA = drawn_drafts(nodes, 'u07vs_fix_z5_', 1.50)[0]
+    tB = drawn_drafts(nodes, 'u07vs_fix_z5_b_', 1.50)[0]
+    assert abs(tA-tB) < 1e-6, (tA, tB)          # isti shematski gaz: ne otkriva razliku planova
+    for t in (z5['initial']['h'], z5['A']['h'], z5['B']['h']):
+        assert abs(tA-t) > margin, (tA, t)
+    unknown('u07vs_fix_z5_unknown'); unknown('u07vs_fix_z5_b_unknown')
+    # Z6: gazovi su zadani; nacrtani položaj akumulatora ne smije biti traženi e.
+    hull = points(nodes['u07vs_fix_z6_hull'])
+    deck_l, deck_r = hull[3], hull[2]
+    ux, uy = deck_r[0]-deck_l[0], deck_r[1]-deck_l[1]
+    scale = math.hypot(ux, uy) / 1.20
+    ux, uy = ux/(scale*1.20), uy/(scale*1.20)
+    mid = ((deck_l[0]+deck_r[0])/2, (deck_l[1]+deck_r[1])/2)
+    box = [n for n in nodes['u07vs_fix_z6'].iter()
+           if n.tag.endswith('polygon') and n.get('fill') == '#eadfc5']
+    assert len(box) == 1
+    q = points(box[0])
+    cx, cy = sum(x for x, _ in q)/4, sum(y for _, y in q)/4
+    e_drawn = abs((cx-mid[0])*ux + (cy-mid[1])*uy) / scale
+    assert abs(e_drawn-zadatak_6()['e']) > margin, e_drawn
+    unknown('u07vs_fix_z6_unknown')
 
 
 def main():
@@ -104,11 +167,12 @@ def main():
     root,nodes = read('u07_vjezbe_skice.svg')
     check_scene_canvas('u07_vjezbe_skice.svg', root, 6)
     assert all('u07vs_fix_z'+str(i) in nodes for i in range(1,7))
+    check_results_not_drawn(nodes)
     _,nodes = read('u07_fig_pumpno_kuciste.svg')
     body = nodes['u07fpk_fix_body']
     assert float(body.get('y')) > 115
     assert float(body.get('y'))+float(body.get('height')) < 393
-    print('PASS six practice panels and fully submerged casing without bottom contact')
+    print('PASS six practice panels (Z2/Z3/Z5 drafts and Z6 accumulator not at result scale, unknowns marked) and fully submerged casing without bottom contact')
 
 
 if __name__ == '__main__':

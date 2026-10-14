@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 987 419" role="img" aria-labelledby="u07fup_title u07fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
   <title id="u07fup_title">Uzgon i početni stabilitet</title>
-  <desc id="u07fup_desc">Lijevo je potpuno uronjeno tijelo s centrom uzgona u centroidu istisnine. FU je rezultanta razlike tlačnih sila; ne zbraja se ponovno s njima. Desno kruto plivajuće tijelo nagnuto udesno ima vodoravnu vodnu liniju, centar uzgona B pomaknut prema uronjenijoj strani, težište G na nagnutoj osi i metacentar M iznad G na sjecištu uzgonskog pravca i nagnute osi. Težina G kroz G i jednako velik uzgon F-U kroz B stvaraju povratni moment (suprotno nagibu) za prikazani mali nagib.</desc>
+  <desc id="u07fup_desc">Lijevo je potpuno uronjeno tijelo s centrom uzgona u centroidu istisnine. FU je rezultanta razlike tlačnih sila; ne zbraja se ponovno s njima. Desno kruto plivajuće tijelo nagnuto udesno ima vodoravnu vodnu liniju, centar uzgona B pomaknut prema uronjenijoj strani, težište G na nagnutoj osi i metacentar M iznad G na sjecištu uzgonskog pravca i nagnute osi. Težina F-G kroz težište G i jednako velik uzgon F-U kroz B stvaraju povratni moment (suprotno nagibu) za prikazani mali nagib.</desc>
   <defs>
     <pattern id="u07fup_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
@@ -74,28 +74,27 @@
       <rect x="48" y="100" width="414" height="310" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <line x1="48" y1="100" x2="462" y2="100" stroke="#356b83" stroke-width="2" />
       <rect x="178" y="185" width="140" height="130" fill="#d7dee3" stroke="#3a4a56" stroke-width="2" id="u07fup_fix_body" />
-      <line x1="199" y1="159" x2="199" y2="182" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" />
-      <line x1="199" y1="347" x2="199" y2="317" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" />
-      <line x1="225" y1="159" x2="225" y2="182" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" />
-      <line x1="225" y1="347" x2="225" y2="317" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" />
-      <line x1="272" y1="159" x2="272" y2="182" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" />
-      <line x1="272" y1="347" x2="272" y2="317" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" />
-      <line x1="299" y1="159" x2="299" y2="182" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" />
-      <line x1="299" y1="347" x2="299" y2="317" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" />
+      <line x1="199" y1="159" x2="199" y2="182" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" data-mf1-vector="pressure" />
+      <line x1="199" y1="347" x2="199" y2="317" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" data-mf1-vector="pressure" />
+      <line x1="225" y1="159" x2="225" y2="182" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" data-mf1-vector="pressure" />
+      <line x1="225" y1="347" x2="225" y2="317" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" data-mf1-vector="pressure" />
+      <line x1="272" y1="159" x2="272" y2="182" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" data-mf1-vector="pressure" />
+      <line x1="272" y1="347" x2="272" y2="317" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" data-mf1-vector="pressure" />
+      <line x1="299" y1="159" x2="299" y2="182" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" data-mf1-vector="pressure" />
+      <line x1="299" y1="347" x2="299" y2="317" stroke="#356b83" stroke-width="1.4" marker-end="url(#u07fup_fix_normal)" data-mf1-vector="pressure" />
       <circle cx="248" cy="250" r="4" fill="#356b83" id="u07fup_fix_buoyancy-center" />
       <text x="235" y="251" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="end">B</text>
-      <line x1="248" y1="250" x2="248" y2="207" stroke="#356b83" stroke-width="2.2" marker-end="url(#u07fup_fix_green)" />
-      <text x="260" y="218" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">U</tspan>
-      </text>
-      <line x1="248" y1="250" x2="248" y2="298" stroke="#356b83" stroke-width="2.2" marker-end="url(#u07fup_fix_force)" />
-      <text x="260" y="284" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">G</text>
+      <line x1="248" y1="250" x2="248" y2="207" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07fup_fix_green)" data-mf1-vector="force" />
+      <text x="260" y="218" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">U</tspan></text>
+      <line x1="248" y1="250" x2="248" y2="298" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07fup_fix_force)" data-mf1-vector="force" />
+      <text x="260" y="284" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">G</tspan></text>
       <line x1="73" y1="100" x2="83" y2="100" stroke="#657781" stroke-width="0.8" />
       <line x1="73" y1="185" x2="83" y2="185" stroke="#657781" stroke-width="0.8" />
-      <line x1="78" y1="100" x2="78" y2="185" stroke="#657781" stroke-width="1.2" marker-start="url(#u07fup_fix_dimL)" marker-end="url(#u07fup_fix_dim)" />
+      <line x1="78" y1="100" x2="78" y2="185" stroke="#657781" stroke-width="1.2" marker-start="url(#u07fup_fix_dimL)" marker-end="url(#u07fup_fix_dim)" data-mf1-role="dimension" />
       <text x="59" y="146.5" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
       <line x1="39" y1="100" x2="49" y2="100" stroke="#657781" stroke-width="0.8" />
       <line x1="39" y1="315" x2="49" y2="315" stroke="#657781" stroke-width="0.8" />
-      <line x1="44" y1="100" x2="44" y2="315" stroke="#657781" stroke-width="1.2" marker-start="url(#u07fup_fix_dimL)" marker-end="url(#u07fup_fix_dim)" />
+      <line x1="44" y1="100" x2="44" y2="315" stroke="#657781" stroke-width="1.2" marker-start="url(#u07fup_fix_dimL)" marker-end="url(#u07fup_fix_dim)" data-mf1-role="dimension" />
       <text x="27" y="211.5" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
       <text x="252" y="52" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Potpuno uronjeno tijelo</text>
       <text x="247" y="146" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan><tspan font-style="italic">A</tspan></text>
@@ -119,10 +118,10 @@
       <text x="752.7717551119689" y="296.1242403745907" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">M</text>
       <line x1="730.0" y1="387.0" x2="745.5873873075274" y2="276.0899763009441" stroke="#657781" stroke-width="0.8" stroke-dasharray="3,3" />
       <line x1="742.7717551119689" y1="296.1242403745907" x2="742.7717551119689" y2="377.7909070412596" stroke="#356b83" stroke-width="0.7" stroke-dasharray="3,3" />
-      <line x1="737.2370012499234" y1="310.50606042543836" x2="737.2370012499234" y2="335.50606042543836" stroke="#356b83" stroke-width="2.2" marker-end="url(#u07fup_stab_force)" />
-      <line x1="742.7717551119689" y1="402.7909070412596" x2="742.7717551119689" y2="377.7909070412596" stroke="#356b83" stroke-width="2.2" marker-end="url(#u07fup_stab_green)" />
-      <text x="751" y="414" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">uzgon <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">U</tspan></text>
-      <text x="729" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end">težina <tspan font-style="italic">G</tspan></text>
+      <line x1="737.2370012499234" y1="310.50606042543836" x2="737.2370012499234" y2="335.50606042543836" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07fup_stab_force)" data-mf1-vector="force" />
+      <line x1="742.7717551119689" y1="402.7909070412596" x2="742.7717551119689" y2="377.7909070412596" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07fup_stab_green)" data-mf1-vector="force" />
+      <text x="751" y="414" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">uzgon <tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">U</tspan></text>
+      <text x="729" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end">težina <tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">G</tspan></text>
     </g>
   </g>
 </svg>
