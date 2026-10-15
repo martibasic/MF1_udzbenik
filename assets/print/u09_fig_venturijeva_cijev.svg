@@ -37,7 +37,7 @@
       <text x="270" y="142" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">2</text>
       <path d="M68 174 L88 174" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09vent_vopen)" data-mf1-vector="velocity" />
       <path d="M236 174 L316 174" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09vent_vopen)" data-mf1-vector="velocity" />
-      <text x="354" y="127" font-size="11" fill="#263746" text-anchor="start">ulje: ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 870 kg/m³</text>
+      <text x="354" y="127" font-size="11" fill="#263746" text-anchor="start">ulje: ρ<tspan baseline-shift="sub" font-size="0.7em">u</tspan> = 870 kg/m³</text>
       <text x="320" y="395" font-size="11" fill="#263746" text-anchor="start">živa: ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan> = 13600 kg/m³</text>
       <line x1="279" y1="395" x2="312" y2="391" stroke="#657781" stroke-width="1" />
       <line x1="38" y1="144" x2="48" y2="144" stroke="#657781" stroke-width="1.2" />

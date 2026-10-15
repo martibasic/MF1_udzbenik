@@ -77,7 +77,7 @@
       "kind": "chapter",
       "number": "1",
       "part": "part-1",
-      "source_sha256": "1372719958f5fcee3f727338a011c5bcce073a833d84eeda5fe265c3174aaa3a",
+      "source_sha256": "d66df292bbc110a5df8a529810d8dd4cc2b4515bfc4af1d19cac96f4ffecda68",
       "sections": [
         {
           "id": "fluid-kao-kontinuum",
@@ -222,7 +222,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "ec13414899d807a7f90d4c20a2a2a9b619db2ecc702d9a503c7c1ce684baf8b7",
+      "source_sha256": "05fd1fa3710c0138fb16d3570b0b94456f5cd236d89f86f8defc0b66cd49e27c",
       "sections": [
         {
           "id": "viskoznost-i-međupovršinske-pojave",
@@ -362,7 +362,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "32c1f8fbd93a058b29dced3b36edfabd456def34859da265fafdb095412675d9",
+      "source_sha256": "d302cb0a7d25d4d32cd4f77f9bcaccfa3c9f252122dd4b505fef18553cdfd50c",
       "sections": [
         {
           "id": "hidrostatička-raspodjela-tlaka",
@@ -500,7 +500,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "f5bac88bda4d5206b414c055a6f21ba44acb11986a2d39741df0dba800518c69",
+      "source_sha256": "fd7e7c462d5756c43e81418fecbed2604de28f0526ab12da0f7918288ccd1fd3",
       "sections": [
         {
           "id": "relativno-mirovanje-fluida",
@@ -639,7 +639,7 @@
       "kind": "chapter",
       "number": "5",
       "part": "part-2",
-      "source_sha256": "e09aeee613c74f654a6c3afa4b374b758dc6fdd6d18e417a71f223b8e97470e9",
+      "source_sha256": "6a6d50f63db64de1799a7728754f1df04887c49f61fb56ef963ce8b56a608343",
       "sections": [
         {
           "id": "hidrostatske-sile-na-plohe",
@@ -813,7 +813,7 @@
       "kind": "chapter",
       "number": "6",
       "part": "part-2",
-      "source_sha256": "1af98cd6cf88c92c8d49e836843c5c750bff50b585bb8cc23885adb4e9cf072c",
+      "source_sha256": "2cf762355f4326532d3dad1518451673a09b25698bfaa389ad350bb053d66ab0",
       "sections": [
         {
           "id": "uzgon-plivanje-i-početni-stabilitet",
@@ -974,7 +974,7 @@
       "kind": "chapter",
       "number": "7",
       "part": "part-3",
-      "source_sha256": "d97567d0ab6db26e1d5abe5fcee675d77d93e4089b091d42587b35b107eb9aad",
+      "source_sha256": "c8301be4c887fc263d80fc29eb4d500039a151c793350be18df3dc81ad6dde48",
       "sections": [
         {
           "id": "kinematika-kontrolni-volumen-i-kontinuitet",
@@ -1141,7 +1141,7 @@
       "kind": "chapter",
       "number": "8",
       "part": "part-3",
-      "source_sha256": "ffe9bbea97696dc07fc9a6226f4093072935d9419bf12c2df0fbbaab27fae837",
+      "source_sha256": "fc58df962adbd5a2783c7d6ebbf3911a2e1e50347bec4b43c5806dedd6937f0c",
       "sections": [
         {
           "id": "energijska-jednadžba-i-bernoullijeva-jednadžba",
@@ -1276,7 +1276,7 @@
       "kind": "chapter",
       "number": "9",
       "part": "part-3",
-      "source_sha256": "4a31f3f61a5077cb060445a86bc3cfa72e20b65a8c1d135822c31448af0aa21b",
+      "source_sha256": "6a09b6bcf26d86f2ba632f5e7c5bd435f4efff629cab6ce5391e0c9cf77a959f",
       "sections": [
         {
           "id": "sec-kompresibilni-motivacija",
@@ -1400,7 +1400,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "aca09d7d13d49e600aade8068bfe48940674c32455cb11318229c739aa04e27c",
+      "source_sha256": "a00e7b0cc1306de78eac95c85739fd3b48c647ce9dab4bb08dedd0023c3a4a94",
       "sections": [
         {
           "id": "količina-i-moment-količine-gibanja",
@@ -1570,7 +1570,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "55cf0db2bfad8ad0a246471b4113d858560b482ba3971879f2ae6391ef468e90",
+      "source_sha256": "25718ef59aaf4b2b31a38d8c3216e64f86cba260e62fad62de39f3cf1af39877",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",
@@ -1719,7 +1719,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "366d95b1e3a49b04d09bab8c70baad4929e287765d3abcc1f13c5905aa3e0f67",
+      "source_sha256": "5789eff08d66725c81eb1dd7609efae4fdf7020a5796f76e1f009502b0a3e67d",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1856,7 +1856,7 @@
       "kind": "chapter",
       "number": "13",
       "part": "part-5",
-      "source_sha256": "42bfec17d1068114e6a4e9484dd8d591595845b0636391859bfc3cab4b36a0bb",
+      "source_sha256": "238e4b21c3f5fb2309bfd38cf0f66dbbc0ef678048a4c5597181915d6ee7bbe4",
       "sections": [
         {
           "id": "sec-cjevovodi-motivacija",
@@ -2025,7 +2025,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "28f42155a3932735eeb5179bda8ee32307d7736e655dd7f6d18f911eb18f5aff",
+      "source_sha256": "fa257434cd423bf2a000b439f6b3971515bdb570e1369133f2df3b30d6d8fd3c",
       "sections": [
         {
           "id": "turbostrojevi-i-propulzija",
@@ -2149,7 +2149,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "14486faab05815d31f9fbc5ec274d8027c357829ee9b160c0c984fcbca4e1d11",
+      "source_sha256": "b6e474186a21f0f6dec57a3780d967165531105ea3bb0e13835d061e6d9fe230",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2265,7 +2265,7 @@
       "kind": "appendix",
       "number": "A",
       "part": null,
-      "source_sha256": "26300e916dc4ddbdc59f6c5100672358158f3b662a5272d3e280ea1578de22e1",
+      "source_sha256": "d40d2cc88ac0b46fbc84b91a8080e62ed129baa137aad54330680d0d95a796ea",
       "sections": [
         {
           "id": "sažetak-formula-oznaka-i-tipičnih-jedinica",
@@ -2381,7 +2381,7 @@
       "kind": "appendix",
       "number": "C",
       "part": null,
-      "source_sha256": "70ab59c9e3cca85aa8ab4fcc0f584f47b1b8a58abdd31a2bdc5ea2dac33b5570",
+      "source_sha256": "d19d86f52bfe7a3a19ef54d601b20a95d753254d13ef33a02a8aeb78f318b4dc",
       "sections": [
         {
           "id": "tipične-pogreške-i-preventivni-filtar-prije-računa",
@@ -2427,7 +2427,7 @@
       "kind": "appendix",
       "number": "D",
       "part": null,
-      "source_sha256": "3f77cd0d8f1b4f8c6a569b2bc124f9188aaa326321f2481ace9b422834db72b6",
+      "source_sha256": "a917f4d4079fb3124dcbec32efa4eb0b9396ea3d7ae9543f4afdd9b80bf8039e",
       "sections": [
         {
           "id": "mehanika-fluida-i-numerika-pregled",
@@ -2563,7 +2563,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "63fad4855208a096fb401abd5e809c6971c66595ec4eb9c44cf2af6bdbc98f79",
+      "source_sha256": "d323fedb7d1bf2d9cc96fbf0dcc39d7552d38738bf82032cfd4be37bb368866f",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -2692,7 +2692,7 @@
       "kind": "Equation",
       "document": "u01",
       "number": "1.4",
-      "latex": "s_r = \\frac{\\rho}{\\rho_w}"
+      "latex": "s_r = \\frac{\\rho}{\\rho_v}"
     },
     "eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-01": {
       "id": "eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-01",
@@ -2706,7 +2706,7 @@
       "kind": "Equation",
       "document": "u01",
       "number": "1.6",
-      "latex": "\\rho_w = 1000\\ \\text{kg/m}^3."
+      "latex": "\\rho_v = 1000\\ \\text{kg/m}^3."
     },
     "eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-03": {
       "id": "eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-03",
@@ -2720,7 +2720,7 @@
       "kind": "Equation",
       "document": "u01",
       "number": "1.8",
-      "latex": "s_r = \\frac{\\rho}{\\rho_w} = \\frac{860}{1000} = 0{,}86."
+      "latex": "s_r = \\frac{\\rho}{\\rho_v} = \\frac{860}{1000} = 0{,}86."
     },
     "eq-svojstva-tlak-pascalov-zakon-kao-prvi-inzenjerski-alat-01": {
       "id": "eq-svojstva-tlak-pascalov-zakon-kao-prvi-inzenjerski-alat-01",
@@ -3979,7 +3979,7 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.24",
-      "latex": "p_A = p_{pl} + \\rho_w g h = 118800 + 998 \\cdot 9{,}81 \\cdot 1{,}40 = 132506{,}532\\ \\text{Pa} \\approx 132{,}5\\ \\text{kPa}."
+      "latex": "p_A = p_{pl} + \\rho_v g h = 118800 + 998 \\cdot 9{,}81 \\cdot 1{,}40 = 132506{,}532\\ \\text{Pa} \\approx 132{,}5\\ \\text{kPa}."
     },
     "eq-hidrostatika-rijeseni-primjer-tlak-u-prikljucku-zatvorenog-vo-03": {
       "id": "eq-hidrostatika-rijeseni-primjer-tlak-u-prikljucku-zatvorenog-vo-03",
@@ -3993,7 +3993,7 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.26",
-      "latex": "\\begin{aligned}\n&p_1 + \\rho_w g h_1 - \\rho_{Hg} g h_2 + \\rho_{mv} g h_4 = p_2 \\\\\n\\Longrightarrow\\quad &p_1 - p_2 = g\\left(\\rho_{Hg} h_2 - \\rho_{mv} h_4 - \\rho_w h_1\\right).\n\\end{aligned}"
+      "latex": "\\begin{aligned}\n&p_1 + \\rho_v g h_1 - \\rho_{Hg} g h_2 + \\rho_{mv} g h_4 = p_2 \\\\\n\\Longrightarrow\\quad &p_1 - p_2 = g\\left(\\rho_{Hg} h_2 - \\rho_{mv} h_4 - \\rho_v h_1\\right).\n\\end{aligned}"
     },
     "eq-hidrostatika-rijeseni-primjer-diferencijalni-manometar-izme-u-02": {
       "id": "eq-hidrostatika-rijeseni-primjer-diferencijalni-manometar-izme-u-02",
@@ -4007,7 +4007,7 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.28",
-      "latex": "\\begin{aligned}\np_1 + \\rho_w g h_1 - \\rho_{Hg} g h_2 - \\rho_{zr} g h_3 + \\rho_{mv} g h_4 &= p_2, \\\\\np_1 - p_2 &= g\\left(\\rho_{Hg} h_2 + \\rho_{zr} h_3 - \\rho_{mv} h_4 - \\rho_w h_1\\right).\n\\end{aligned}"
+      "latex": "\\begin{aligned}\np_1 + \\rho_v g h_1 - \\rho_{Hg} g h_2 - \\rho_{zr} g h_3 + \\rho_{mv} g h_4 &= p_2, \\\\\np_1 - p_2 &= g\\left(\\rho_{Hg} h_2 + \\rho_{zr} h_3 - \\rho_{mv} h_4 - \\rho_v h_1\\right).\n\\end{aligned}"
     },
     "eq-hidrostatika-rijeseni-primjer-diferencijalni-manometar-izme-u-04": {
       "id": "eq-hidrostatika-rijeseni-primjer-diferencijalni-manometar-izme-u-04",
@@ -4028,21 +4028,21 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.31",
-      "latex": "p_{M,dno} = p_{M,pl} + \\rho_o g h_o + \\rho_{mv} g h_w."
+      "latex": "p_{M,dno} = p_{M,pl} + \\rho_u g h_u + \\rho_{mv} g h_v."
     },
     "eq-sondiranje-visina-stupca-ulja": {
       "id": "eq-sondiranje-visina-stupca-ulja",
       "kind": "Equation",
       "document": "u03",
       "number": "3.32",
-      "latex": "\\begin{aligned}\nh_o &= \\frac{p_{M,dno} - p_{M,pl} - \\rho_{mv} g h_w}{\\rho_o g} = \\frac{141000 - 3000 - 3519{,}3}{860 \\cdot 9{,}81} \\\\\n&= \\frac{134480{,}7}{8436{,}6} = 15{,}940\\ \\text{m}.\n\\end{aligned}"
+      "latex": "\\begin{aligned}\nh_u &= \\frac{p_{M,dno} - p_{M,pl} - \\rho_{mv} g h_v}{\\rho_u g} = \\frac{141000 - 3000 - 3519{,}3}{860 \\cdot 9{,}81} \\\\\n&= \\frac{134480{,}7}{8436{,}6} = 15{,}940\\ \\text{m}.\n\\end{aligned}"
     },
     "eq-sondiranje-ullage-iz-geometrije": {
       "id": "eq-sondiranje-ullage-iz-geometrije",
       "kind": "Equation",
       "document": "u03",
       "number": "3.33",
-      "latex": "U = H_{ref} - h_w - h_o = 18{,}60 - 0{,}35 - 15{,}940 = 2{,}310\\ \\text{m}."
+      "latex": "U = H_{ref} - h_v - h_u = 18{,}60 - 0{,}35 - 15{,}940 = 2{,}310\\ \\text{m}."
     },
     "eq-sondiranje-apsolutni-tlak-dna": {
       "id": "eq-sondiranje-apsolutni-tlak-dna",
@@ -4056,7 +4056,7 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.35",
-      "latex": "h' = \\frac{p_{M,dno} - p_{M,pl}}{\\rho_o g} = \\frac{138000}{8436{,}6} = 16{,}357\\ \\text{m}."
+      "latex": "h' = \\frac{p_{M,dno} - p_{M,pl}}{\\rho_u g} = \\frac{138000}{8436{,}6} = 16{,}357\\ \\text{m}."
     },
     "eq-sondiranje-pogreska-volumena-ulja": {
       "id": "eq-sondiranje-pogreska-volumena-ulja",
@@ -4077,7 +4077,7 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.38",
-      "latex": "p_M = -\\rho_o g H = -870 \\cdot 9{,}81 \\cdot 2{,}40 = -20483{,}28\\ \\text{Pa}"
+      "latex": "p_M = -\\rho_u g H = -870 \\cdot 9{,}81 \\cdot 2{,}40 = -20483{,}28\\ \\text{Pa}"
     },
     "eq-hidrostatika-rijeseni-primjer-tlak-na-usisu-pumpe-za-02": {
       "id": "eq-hidrostatika-rijeseni-primjer-tlak-na-usisu-pumpe-za-02",
@@ -4098,7 +4098,7 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.41",
-      "latex": "H_{max} = \\frac{p_{atm} - p_v}{\\rho_o g} = \\frac{101300 - 200}{870 \\cdot 9{,}81} = \\frac{101100}{8534{,}7} \\approx 11{,}8\\ \\text{m}"
+      "latex": "H_{max} = \\frac{p_{atm} - p_v}{\\rho_u g} = \\frac{101300 - 200}{870 \\cdot 9{,}81} = \\frac{101100}{8534{,}7} \\approx 11{,}8\\ \\text{m}"
     },
     "eq-hidrostatika-rijeseni-primjer-balastni-tank-broda-tlak-iznutr-01": {
       "id": "eq-hidrostatika-rijeseni-primjer-balastni-tank-broda-tlak-iznutr-01",
@@ -4140,7 +4140,7 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.47",
-      "latex": "p_{M,B} = p_{M,A} - \\rho_w g \\Delta z = 520 \\cdot 10^3 - 998 \\cdot 9{,}81 \\cdot 38."
+      "latex": "p_{M,B} = p_{M,A} - \\rho_v g \\Delta z = 520 \\cdot 10^3 - 998 \\cdot 9{,}81 \\cdot 38."
     },
     "eq-hidrostatika-rijeseni-primjer-iot-tlacni-senzor-za-otkrivanje-02": {
       "id": "eq-hidrostatika-rijeseni-primjer-iot-tlacni-senzor-za-otkrivanje-02",
@@ -4161,14 +4161,14 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.50",
-      "latex": "h_T = \\frac{p_{M,B}}{\\rho_w g} = \\frac{147{,}97 \\cdot 10^3}{998 \\cdot 9{,}81} = 15{,}11\\ \\text{m}."
+      "latex": "h_T = \\frac{p_{M,B}}{\\rho_v g} = \\frac{147{,}97 \\cdot 10^3}{998 \\cdot 9{,}81} = 15{,}11\\ \\text{m}."
     },
     "eq-hidrostatika-rijeseni-primjer-iot-tlacni-senzor-za-otkrivanje-04": {
       "id": "eq-hidrostatika-rijeseni-primjer-iot-tlacni-senzor-za-otkrivanje-04",
       "kind": "Equation",
       "document": "u03",
       "number": "3.51",
-      "latex": "\\Delta h = \\frac{\\Delta p}{\\rho_w g} = \\frac{50 \\cdot 10^3}{998 \\cdot 9{,}81} = 5{,}11\\ \\text{m}."
+      "latex": "\\Delta h = \\frac{\\Delta p}{\\rho_v g} = \\frac{50 \\cdot 10^3}{998 \\cdot 9{,}81} = 5{,}11\\ \\text{m}."
     },
     "fig-uvod-u03": {
       "id": "fig-uvod-u03",
@@ -4218,7 +4218,7 @@
       "document": "u03",
       "number": "3.4",
       "caption": "Teretni tank s inertnim plinom, uljem i vodenim talogom: ullage otvor, sondiranje i tlačni mjerač na dnu.",
-      "alt": "Presjek teretnog tanka: inertni plin iznad ulja, tanak sloj vode na dnu, ullage otvor s referentnom točkom na palubi i tlačni mjerač razine na dnu, s kotama H_ref, U, h_o i h_w.",
+      "alt": "Presjek teretnog tanka: inertni plin iznad ulja, tanak sloj vode na dnu, ullage otvor s referentnom točkom na palubi i tlačni mjerač razine na dnu, s kotama H_ref, U, h_u i h_v.",
       "source": "../assets/print/u03_ch1_zatvoreni_spremnik_ulje_ziva.svg",
       "type": "wide",
       "variants": {
@@ -4682,14 +4682,14 @@
       "kind": "Equation",
       "document": "u04",
       "number": "4.42",
-      "latex": "p_{M,C} = \\rho_w g h_C = 1000 \\cdot 9{,}81 \\cdot 0{,}4897 = 4804\\ \\text{Pa} \\approx 4{,}80\\ \\text{kPa}."
+      "latex": "p_{M,C} = \\rho_v g h_C = 1000 \\cdot 9{,}81 \\cdot 0{,}4897 = 4804\\ \\text{Pa} \\approx 4{,}80\\ \\text{kPa}."
     },
     "eq-relativno-mirovanje-3-tlak-na-dnu-u-tockama-c-02": {
       "id": "eq-relativno-mirovanje-3-tlak-na-dnu-u-tockama-c-02",
       "kind": "Equation",
       "document": "u04",
       "number": "4.43",
-      "latex": "p_{M,D} = \\rho_w g h_R = 1000 \\cdot 9{,}81 \\cdot 0{,}7103 = 6968\\ \\text{Pa} \\approx 6{,}97\\ \\text{kPa}."
+      "latex": "p_{M,D} = \\rho_v g h_R = 1000 \\cdot 9{,}81 \\cdot 0{,}7103 = 6968\\ \\text{Pa} \\approx 6{,}97\\ \\text{kPa}."
     },
     "eq-relativno-mirovanje-4-granica-prelijevanja-01": {
       "id": "eq-relativno-mirovanje-4-granica-prelijevanja-01",
@@ -4745,14 +4745,14 @@
       "kind": "Equation",
       "document": "u04",
       "number": "4.51",
-      "latex": "\\begin{aligned}\n\\Delta p &= \\frac{1}{2}\\rho_o\\omega^2\\left(r_2^2 - r_o^2\\right) = \\frac{1}{2} \\cdot 930 \\cdot 754{,}0^2 \\cdot \\left(0{,}120^2 - 0{,}045^2\\right) \\\\\n&\\approx 3{,}27 \\cdot 10^6\\ \\text{Pa} \\approx 32{,}7\\ \\text{bar}.\n\\end{aligned}"
+      "latex": "\\begin{aligned}\n\\Delta p &= \\frac{1}{2}\\rho_u\\omega^2\\left(r_2^2 - r_u^2\\right) = \\frac{1}{2} \\cdot 930 \\cdot 754{,}0^2 \\cdot \\left(0{,}120^2 - 0{,}045^2\\right) \\\\\n&\\approx 3{,}27 \\cdot 10^6\\ \\text{Pa} \\approx 32{,}7\\ \\text{bar}.\n\\end{aligned}"
     },
     "eq-separator-ravnoteza-razdjelnice": {
       "id": "eq-separator-ravnoteza-razdjelnice",
       "kind": "Equation",
       "document": "u04",
       "number": "4.52",
-      "latex": "\\frac{1}{2}\\rho_o\\omega^2\\left(r_i^2 - r_o^2\\right) = \\frac{1}{2}\\rho_w\\omega^2\\left(r_i^2 - r_w^2\\right) \\quad\\Longrightarrow\\quad r_i^2 = \\frac{\\rho_w r_w^2 - \\rho_o r_o^2}{\\rho_w - \\rho_o}."
+      "latex": "\\begin{aligned}\n&\\frac{1}{2}\\rho_u\\omega^2\\left(r_i^2 - r_u^2\\right) = \\frac{1}{2}\\rho_v\\omega^2\\left(r_i^2 - r_v^2\\right) \\\\\n\\Longrightarrow\\quad &r_i^2 = \\frac{\\rho_v r_v^2 - \\rho_u r_u^2}{\\rho_v - \\rho_u}.\n\\end{aligned}"
     },
     "eq-separator-polumjer-razdjelnice": {
       "id": "eq-separator-polumjer-razdjelnice",
@@ -4766,7 +4766,7 @@
       "kind": "Equation",
       "document": "u04",
       "number": "4.54",
-      "latex": "V = \\pi\\left(r_2^2 - r_o^2\\right)H_b = 5{,}83 \\cdot 10^{-3}\\ \\text{m}^3, \\qquad t_z = \\frac{V}{Q} = \\frac{5{,}83 \\cdot 10^{-3}}{4{,}17 \\cdot 10^{-4}} \\approx 14\\ \\text{s}."
+      "latex": "V = \\pi\\left(r_2^2 - r_u^2\\right)H_b = 5{,}83 \\cdot 10^{-3}\\ \\text{m}^3, \\qquad t_z = \\frac{V}{Q} = \\frac{5{,}83 \\cdot 10^{-3}}{4{,}17 \\cdot 10^{-4}} \\approx 14\\ \\text{s}."
     },
     "fig-uvod-u04": {
       "id": "fig-uvod-u04",
@@ -5126,21 +5126,21 @@
       "kind": "Equation",
       "document": "u05",
       "number": "5.22",
-      "latex": "F_1=\\frac12\\rho_o gb h_o^2=5{,}631\\ \\mathrm{kN}."
+      "latex": "F_1=\\frac12\\rho_u gb h_u^2=5{,}631\\ \\mathrm{kN}."
     },
     "eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-02": {
       "id": "eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-02",
       "kind": "Equation",
       "document": "u05",
       "number": "5.23",
-      "latex": "F_{2,r}=\\rho_o gbh_oh_w=20{,}271\\ \\mathrm{kN},"
+      "latex": "F_{2,r}=\\rho_u gbh_uh_v=20{,}271\\ \\mathrm{kN},"
     },
     "eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-03": {
       "id": "eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-03",
       "kind": "Equation",
       "document": "u05",
       "number": "5.24",
-      "latex": "F_{2,t}=\\frac12\\rho_wgbh_w^2=22{,}249\\ \\mathrm{kN}."
+      "latex": "F_{2,t}=\\frac12\\rho_vgbh_v^2=22{,}249\\ \\mathrm{kN}."
     },
     "eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-04": {
       "id": "eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-04",
@@ -5154,7 +5154,7 @@
       "kind": "Equation",
       "document": "u05",
       "number": "5.26",
-      "latex": "M_A=\nF_1\\frac{2h_o}{3}\n+F_{2,r}\\left(h_o+\\frac{h_w}{2}\\right)\n+F_{2,t}\\left(h_o+\\frac{2h_w}{3}\\right)\n=91{,}218\\ \\mathrm{kN\\,m}."
+      "latex": "M_A=\nF_1\\frac{2h_u}{3}\n+F_{2,r}\\left(h_u+\\frac{h_v}{2}\\right)\n+F_{2,t}\\left(h_u+\\frac{2h_v}{3}\\right)\n=91{,}218\\ \\mathrm{kN\\,m}."
     },
     "eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-06": {
       "id": "eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-06",
@@ -5168,7 +5168,7 @@
       "kind": "Equation",
       "document": "u05",
       "number": "5.28",
-      "latex": "T=\\frac{M_A}{h_o+h_w}=32{,}578\\ \\mathrm{kN},\\qquad\nR_A=F-T=15{,}574\\ \\mathrm{kN}."
+      "latex": "T=\\frac{M_A}{h_u+h_v}=32{,}578\\ \\mathrm{kN},\\qquad\nR_A=F-T=15{,}574\\ \\mathrm{kN}."
     },
     "eq-sile-plohe-zakrivljena-ploha-projekcija-i-pomocni-volumen-01": {
       "id": "eq-sile-plohe-zakrivljena-ploha-projekcija-i-pomocni-volumen-01",
@@ -5696,14 +5696,14 @@
       "kind": "Equation",
       "document": "u06",
       "number": "6.17",
-      "latex": "V_{ist}\\cdot BB' = \\int_{A_{wl}} y \\cdot (y\\varphi)\\, dA = \\varphi \\int_{A_{wl}} y^2\\, dA = \\varphi\\, I_T,"
+      "latex": "V_{ist}\\cdot BB' = \\int_{A_{vl}} y \\cdot (y\\varphi)\\, dA = \\varphi \\int_{A_{vl}} y^2\\, dA = \\varphi\\, I_T,"
     },
     "eq-uzgon-stabilitet-matematicki-izvod-metacentarski-radijus-02": {
       "id": "eq-uzgon-stabilitet-matematicki-izvod-metacentarski-radijus-02",
       "kind": "Equation",
       "document": "u06",
       "number": "6.18",
-      "latex": "I_T = \\int_{A_{wl}} y^2\\, dA"
+      "latex": "I_T = \\int_{A_{vl}} y^2\\, dA"
     },
     "eq-uzgon-stabilitet-matematicki-izvod-metacentarski-radijus-03": {
       "id": "eq-uzgon-stabilitet-matematicki-izvod-metacentarski-radijus-03",
@@ -5738,7 +5738,7 @@
       "kind": "Equation",
       "document": "u06",
       "number": "6.23",
-      "latex": "BM_{eq}=\\frac{\\rho_w I_T}{\\rho_oV_o+\\rho_wV_w}."
+      "latex": "BM_{eq}=\\frac{\\rho_v I_T}{\\rho_uV_u+\\rho_vV_v}."
     },
     "eq-uzgon-stabilitet-matematicki-izvod-metacentarski-radijus-07": {
       "id": "eq-uzgon-stabilitet-matematicki-izvod-metacentarski-radijus-07",
@@ -5913,21 +5913,21 @@
       "kind": "Equation",
       "document": "u06",
       "number": "6.48",
-      "latex": "V_o = L b \\delta = 3{,}00 \\cdot 1{,}20 \\cdot 0{,}10 = 0{,}360\\ \\text{m}^3,"
+      "latex": "V_u = L b \\delta = 3{,}00 \\cdot 1{,}20 \\cdot 0{,}10 = 0{,}360\\ \\text{m}^3,"
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-04": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-04",
       "kind": "Equation",
       "document": "u06",
       "number": "6.49",
-      "latex": "V_w = L b (T_m - \\delta) = 3{,}00 \\cdot 1{,}20 \\cdot (0{,}25 - 0{,}10) = 0{,}540\\ \\text{m}^3."
+      "latex": "V_v = L b (T_m - \\delta) = 3{,}00 \\cdot 1{,}20 \\cdot (0{,}25 - 0{,}10) = 0{,}540\\ \\text{m}^3."
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-05": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-05",
       "kind": "Equation",
       "document": "u06",
       "number": "6.50",
-      "latex": "\\Delta=\\rho_o V_o + \\rho_w V_w = 800 \\cdot 0{,}360 + 1000 \\cdot 0{,}540 = 288 + 540 = 828\\ \\text{kg},"
+      "latex": "\\Delta=\\rho_u V_u + \\rho_v V_v = 800 \\cdot 0{,}360 + 1000 \\cdot 0{,}540 = 288 + 540 = 828\\ \\text{kg},"
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-06": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-06",
@@ -5941,42 +5941,42 @@
       "kind": "Equation",
       "document": "u06",
       "number": "6.52",
-      "latex": "\\begin{aligned}\nT_{w,L} &= T_L - \\delta = 0{,}30 - 0{,}10 = 0{,}20\\ \\text{m}, \\\\\nT_{w,D} &= T_D - \\delta = 0{,}20 - 0{,}10 = 0{,}10\\ \\text{m},\n\\end{aligned}"
+      "latex": "\\begin{aligned}\nT_{v,L} &= T_L - \\delta = 0{,}30 - 0{,}10 = 0{,}20\\ \\text{m}, \\\\\nT_{v,D} &= T_D - \\delta = 0{,}20 - 0{,}10 = 0{,}10\\ \\text{m},\n\\end{aligned}"
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-08": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-08",
       "kind": "Equation",
       "document": "u06",
       "number": "6.53",
-      "latex": "T_{w,m} = T_m - \\delta = 0{,}15\\ \\text{m}."
+      "latex": "T_{v,m} = T_m - \\delta = 0{,}15\\ \\text{m}."
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-09": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-09",
       "kind": "Equation",
       "document": "u06",
       "number": "6.54",
-      "latex": "y_{B,w} = \\frac{b(T_{w,L} - T_{w,D})}{12 T_{w,m}} = \\frac{1{,}20(0{,}20 - 0{,}10)}{12 \\cdot 0{,}15} \\approx 0{,}0667\\ \\text{m}"
+      "latex": "y_{B,v} = \\frac{b(T_{v,L} - T_{v,D})}{12 T_{v,m}} = \\frac{1{,}20(0{,}20 - 0{,}10)}{12 \\cdot 0{,}15} \\approx 0{,}0667\\ \\text{m}"
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-10": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-10",
       "kind": "Equation",
       "document": "u06",
       "number": "6.55",
-      "latex": "y_B = \\frac{\\rho_w V_w}{\\rho_o V_o + \\rho_w V_w} y_{B,w} = \\frac{540}{828} \\cdot 0{,}0667 \\approx 0{,}0435\\ \\text{m} \\approx 4{,}35\\ \\text{cm}."
+      "latex": "y_B = \\frac{\\rho_v V_v}{\\rho_u V_u + \\rho_v V_v} y_{B,v} = \\frac{540}{828} \\cdot 0{,}0667 \\approx 0{,}0435\\ \\text{m} \\approx 4{,}35\\ \\text{cm}."
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-11": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-11",
       "kind": "Equation",
       "document": "u06",
       "number": "6.56",
-      "latex": "KB_{eq}=\\frac{\\rho_oV_oz_{B,o}+\\rho_wV_wz_{B,w}}\n{\\rho_oV_o+\\rho_wV_w}\n=\\frac{288\\cdot0{,}20+540\\cdot0{,}075}{828}\n\\approx0{,}1185\\ \\text{m}."
+      "latex": "KB_{eq}=\\frac{\\rho_uV_uz_{B,u}+\\rho_vV_vz_{B,v}}\n{\\rho_uV_u+\\rho_vV_v}\n=\\frac{288\\cdot0{,}20+540\\cdot0{,}075}{828}\n\\approx0{,}1185\\ \\text{m}."
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-12": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-12",
       "kind": "Equation",
       "document": "u06",
       "number": "6.57",
-      "latex": "BM_{eq}=\\frac{\\rho_w I_T}{\\rho_oV_o+\\rho_wV_w}\n=\\frac{1000\\cdot0{,}432}{828}\n\\approx0{,}5217\\ \\text{m}."
+      "latex": "BM_{eq}=\\frac{\\rho_v I_T}{\\rho_uV_u+\\rho_vV_v}\n=\\frac{1000\\cdot0{,}432}{828}\n\\approx0{,}5217\\ \\text{m}."
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-13": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-13",
@@ -6004,7 +6004,7 @@
       "kind": "Equation",
       "document": "u06",
       "number": "6.61",
-      "latex": "\\rho_o L b \\delta + \\rho_w L b (T_0 - \\delta) = m_p,"
+      "latex": "\\rho_u L b \\delta + \\rho_v L b (T_0 - \\delta) = m_p,"
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-17": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-17",
@@ -6025,35 +6025,35 @@
       "kind": "Equation",
       "document": "u06",
       "number": "6.64",
-      "latex": "V_w = L_t b_t H_t = 15 \\cdot 6 \\cdot 3 = 270\\ \\text{m}^3,"
+      "latex": "V_v = L_t b_t H_t = 15 \\cdot 6 \\cdot 3 = 270\\ \\text{m}^3,"
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-02": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-02",
       "kind": "Equation",
       "document": "u06",
       "number": "6.65",
-      "latex": "m_w = \\rho_{mv} V_w = 1025 \\cdot 270 \\approx 277\\,000\\ \\text{kg} \\approx 277\\ \\text{t}."
+      "latex": "m_v = \\rho_{mv} V_v = 1025 \\cdot 270 \\approx 277\\,000\\ \\text{kg} \\approx 277\\ \\text{t}."
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-03": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-03",
       "kind": "Equation",
       "document": "u06",
       "number": "6.66",
-      "latex": "e_G = \\frac{m_w \\cdot e_t}{m_b + m_w} = \\frac{277 \\cdot 4{,}5}{4000 + 277} = \\frac{1247}{4277} \\approx 0{,}291\\ \\text{m}."
+      "latex": "e_G = \\frac{m_v \\cdot e_t}{m_b + m_v} = \\frac{277 \\cdot 4{,}5}{4000 + 277} = \\frac{1247}{4277} \\approx 0{,}291\\ \\text{m}."
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-04": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-04",
       "kind": "Equation",
       "document": "u06",
       "number": "6.67",
-      "latex": "KG' = \\frac{m_b \\cdot KG_b + m_w \\cdot (H_t/2)}{m_b + m_w} = \\frac{4000 \\cdot 3{,}0 + 277 \\cdot 1{,}5}{4277} \\approx 2{,}90\\ \\text{m}."
+      "latex": "KG' = \\frac{m_b \\cdot KG_b + m_v \\cdot (H_t/2)}{m_b + m_v} = \\frac{4000 \\cdot 3{,}0 + 277 \\cdot 1{,}5}{4277} \\approx 2{,}90\\ \\text{m}."
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-05": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-05",
       "kind": "Equation",
       "document": "u06",
       "number": "6.68",
-      "latex": "T_1 = \\frac{m_b + m_w}{\\rho_{mv} L b} = \\frac{4277 \\cdot 10^3}{1025 \\cdot 80 \\cdot 15} \\approx 3{,}478\\ \\text{m}."
+      "latex": "T_1 = \\frac{m_b + m_v}{\\rho_{mv} L b} = \\frac{4277 \\cdot 10^3}{1025 \\cdot 80 \\cdot 15} \\approx 3{,}478\\ \\text{m}."
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-06": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-06",
@@ -6074,7 +6074,7 @@
       "kind": "Equation",
       "document": "u06",
       "number": "6.71",
-      "latex": "V_{ist} = \\frac{m_b + m_w}{\\rho_{mv}} = \\frac{4277 \\cdot 10^3}{1025} \\approx 4172\\ \\text{m}^3."
+      "latex": "V_{ist} = \\frac{m_b + m_v}{\\rho_{mv}} = \\frac{4277 \\cdot 10^3}{1025} \\approx 4172\\ \\text{m}^3."
     },
     "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-09": {
       "id": "eq-uzgon-stabilitet-cjeloviti-zadatak-izolirani-puni-bocni-tank-kao-09",
@@ -6637,7 +6637,7 @@
       "kind": "Equation",
       "document": "u07",
       "number": "7.37",
-      "latex": "\\rho_B = s_r \\rho_w = 1{,}10 \\cdot 1000 = 1100\\ \\text{kg/m}^3."
+      "latex": "\\rho_B = s_r \\rho_v = 1{,}10 \\cdot 1000 = 1100\\ \\text{kg/m}^3."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-02": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-02",
@@ -6658,7 +6658,7 @@
       "kind": "Equation",
       "document": "u07",
       "number": "7.40",
-      "latex": "\\dot{m}_{ul} = \\rho_w Q_A + \\rho_B Q_B = 1000 \\cdot 0{,}018 + 1100 \\cdot 0{,}006 = 18 + 6{,}6 = 24{,}6\\ \\text{kg/s}."
+      "latex": "\\dot{m}_{ul} = \\rho_v Q_A + \\rho_B Q_B = 1000 \\cdot 0{,}018 + 1100 \\cdot 0{,}006 = 18 + 6{,}6 = 24{,}6\\ \\text{kg/s}."
     },
     "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-05": {
       "id": "eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-05",
@@ -7025,7 +7025,7 @@
       "kind": "Equation",
       "document": "u08",
       "number": "8.1",
-      "latex": "\\frac{p}{\\rho g} + \\frac{v^2}{2g} + z = \\text{const.}"
+      "latex": "\\frac{p}{\\rho g} + \\frac{v^2}{2g} + z = \\text{konst.}"
     },
     "eq-energijska-bilanca-fizikalni-uvod-i-matematicki-izvod-02": {
       "id": "eq-energijska-bilanca-fizikalni-uvod-i-matematicki-izvod-02",
@@ -7109,14 +7109,14 @@
       "kind": "Equation",
       "document": "u08",
       "number": "8.13",
-      "latex": "\\frac{p_1}{\\rho} + \\frac{v_1^2}{2} + gz_1 = \\frac{p_2}{\\rho} + \\frac{v_2^2}{2} + gz_2 = \\text{const.}"
+      "latex": "\\frac{p_1}{\\rho} + \\frac{v_1^2}{2} + gz_1 = \\frac{p_2}{\\rho} + \\frac{v_2^2}{2} + gz_2 = \\text{konst.}"
     },
     "eq-energijska-bilanca-razrada-koraka-07": {
       "id": "eq-energijska-bilanca-razrada-koraka-07",
       "kind": "Equation",
       "document": "u08",
       "number": "8.14",
-      "latex": "\\frac{p}{\\rho g} + \\frac{v^2}{2g} + z = \\text{const.}"
+      "latex": "\\frac{p}{\\rho g} + \\frac{v^2}{2g} + z = \\text{konst.}"
     },
     "eq-energijska-bilanca-matematicki-izvod-alternativni-izvod-bernoullija-01": {
       "id": "eq-energijska-bilanca-matematicki-izvod-alternativni-izvod-bernoullija-01",
@@ -7165,7 +7165,7 @@
       "kind": "Equation",
       "document": "u08",
       "number": "8.21",
-      "latex": "\\frac{p}{\\rho g} + \\frac{v^2}{2g} + z = \\text{const.}"
+      "latex": "\\frac{p}{\\rho g} + \\frac{v^2}{2g} + z = \\text{konst.}"
     },
     "eq-energijska-jednadzba-rtt": {
       "id": "eq-energijska-jednadzba-rtt",
@@ -7193,14 +7193,14 @@
       "kind": "Equation",
       "document": "u08",
       "number": "8.25",
-      "latex": "H_p = \\frac{\\dot W_{crpka}}{\\dot m g},\\qquad\nH_t = \\frac{\\dot W_{turbina}}{\\dot m g},\\qquad\nh_w = \\frac{(e_{u,2} - e_{u,1}) - \\dot Q/\\dot m}{g}"
+      "latex": "H_p = \\frac{\\dot W_{crpka}}{\\dot m g},\\qquad\nH_t = \\frac{\\dot W_{turbina}}{\\dot m g},\\qquad\nh_g = \\frac{(e_{u,2} - e_{u,1}) - \\dot Q/\\dot m}{g}"
     },
     "eq-energijska-jednadzba-kv": {
       "id": "eq-energijska-jednadzba-kv",
       "kind": "Equation",
       "document": "u08",
       "number": "8.26",
-      "latex": "\\frac{p_1}{\\rho g} + \\alpha_1\\frac{v_1^2}{2g} + z_1 + H_p\n= \\frac{p_2}{\\rho g} + \\alpha_2\\frac{v_2^2}{2g} + z_2 + H_t + h_w ."
+      "latex": "\\frac{p_1}{\\rho g} + \\alpha_1\\frac{v_1^2}{2g} + z_1 + H_p\n= \\frac{p_2}{\\rho g} + \\alpha_2\\frac{v_2^2}{2g} + z_2 + H_t + h_g ."
     },
     "eq-energijska-bilanca-rijeseni-primjer-pad-statickog-tlaka-u-konfuzoru-01": {
       "id": "eq-energijska-bilanca-rijeseni-primjer-pad-statickog-tlaka-u-konfuzoru-01",
@@ -7347,7 +7347,7 @@
       "kind": "Equation",
       "document": "u08",
       "number": "8.47",
-      "latex": "\\frac{p_{atm}}{\\rho g} = \\frac{p_{aps,P}}{\\rho g} + \\frac{v^2}{2g} + z_P + h_w ."
+      "latex": "\\frac{p_{atm}}{\\rho g} = \\frac{p_{aps,P}}{\\rho g} + \\frac{v^2}{2g} + z_P + h_g ."
     },
     "eq-usisni-vod-tlak": {
       "id": "eq-usisni-vod-tlak",
@@ -7368,7 +7368,7 @@
       "kind": "Equation",
       "document": "u08",
       "number": "8.50",
-      "latex": "z_{P,max} = \\frac{p_{atm} - p_v}{\\rho g} - \\frac{v^2}{2g} - h_w = 10{,}07 - 0{,}229 - 0{,}408 - 1{,}2 = 8{,}24\\ \\text{m}."
+      "latex": "z_{P,max} = \\frac{p_{atm} - p_v}{\\rho g} - \\frac{v^2}{2g} - h_g = 10{,}07 - 0{,}229 - 0{,}408 - 1{,}2 = 8{,}24\\ \\text{m}."
     },
     "eq-usisni-vod-balast": {
       "id": "eq-usisni-vod-balast",
@@ -7382,28 +7382,28 @@
       "kind": "Equation",
       "document": "u08",
       "number": "8.52",
-      "latex": "\\Delta p = (\\rho_{Hg} - \\rho_o)\\,g\\,\\Delta h_m = (13600 - 870) \\cdot 9{,}81 \\cdot 0{,}18 \\approx 22{,}479\\ \\text{kPa}"
+      "latex": "\\Delta p = (\\rho_{Hg} - \\rho_u)\\,g\\,\\Delta h_m = (13600 - 870) \\cdot 9{,}81 \\cdot 0{,}18 \\approx 22{,}479\\ \\text{kPa}"
     },
     "eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-02": {
       "id": "eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-02",
       "kind": "Equation",
       "document": "u08",
       "number": "8.53",
-      "latex": "\\Delta p = \\frac{\\rho_o}{2}(v_2^2 - v_1^2)"
+      "latex": "\\Delta p = \\frac{\\rho_u}{2}(v_2^2 - v_1^2)"
     },
     "eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-03": {
       "id": "eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-03",
       "kind": "Equation",
       "document": "u08",
       "number": "8.54",
-      "latex": "\\Delta p = \\frac{\\rho_o}{2}(16 v_1^2 - v_1^2) = \\frac{15\\rho_o}{2} v_1^2"
+      "latex": "\\Delta p = \\frac{\\rho_u}{2}(16 v_1^2 - v_1^2) = \\frac{15\\rho_u}{2} v_1^2"
     },
     "eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-04": {
       "id": "eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-04",
       "kind": "Equation",
       "document": "u08",
       "number": "8.55",
-      "latex": "v_1 = \\sqrt{\\frac{2\\Delta p}{15\\rho_o}} = \\sqrt{\\frac{2 \\cdot 22478{,}634}{15 \\cdot 870}} \\approx \\sqrt{3{,}445} \\approx 1{,}856\\ \\text{m/s}"
+      "latex": "v_1 = \\sqrt{\\frac{2\\Delta p}{15\\rho_u}} = \\sqrt{\\frac{2 \\cdot 22478{,}634}{15 \\cdot 870}} \\approx \\sqrt{3{,}445} \\approx 1{,}856\\ \\text{m/s}"
     },
     "eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-05": {
       "id": "eq-energijska-bilanca-rijeseni-primjer-venturijeva-cijev-za-mjerenje-p-05",
@@ -8975,7 +8975,7 @@
       "kind": "Equation",
       "document": "u11",
       "number": "11.21",
-      "latex": "C_T=\\frac{R_T}{\\tfrac12\\rho v^2 A_w}=C_F(Re)+C_R(Fr),"
+      "latex": "C_T=\\frac{R_T}{\\tfrac12\\rho v^2 A_{opl}}=C_F(Re)+C_R(Fr),"
     },
     "eq-ittc-1957": {
       "id": "eq-ittc-1957",
@@ -8996,21 +8996,21 @@
       "kind": "Equation",
       "document": "u11",
       "number": "11.24",
-      "latex": "Re_A = \\frac{v_A D}{\\nu_w} = \\frac{1{,}2 \\cdot 0{,}006}{1{,}0 \\cdot 10^{-6}} = 7200 \\quad (>4000 \\Rightarrow \\text{turbulentno})."
+      "latex": "Re_A = \\frac{v_A D}{\\nu_v} = \\frac{1{,}2 \\cdot 0{,}006}{1{,}0 \\cdot 10^{-6}} = 7200 \\quad (>4000 \\Rightarrow \\text{turbulentno})."
     },
     "eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-02": {
       "id": "eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-02",
       "kind": "Equation",
       "document": "u11",
       "number": "11.25",
-      "latex": "Re_B = \\frac{v_B D}{\\nu_o} = \\frac{0{,}30 \\cdot 0{,}006}{4{,}0 \\cdot 10^{-5}} = 45 \\quad (\\ll 2300 \\Rightarrow \\text{izrazito laminarno})."
+      "latex": "Re_B = \\frac{v_B D}{\\nu_u} = \\frac{0{,}30 \\cdot 0{,}006}{4{,}0 \\cdot 10^{-5}} = 45 \\quad (\\ll 2300 \\Rightarrow \\text{izrazito laminarno})."
     },
     "eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-03": {
       "id": "eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-03",
       "kind": "Equation",
       "document": "u11",
       "number": "11.26",
-      "latex": "v_{kr} = \\frac{Re_{kr}\\,\\nu_w}{D} = \\frac{2300 \\cdot 1{,}0 \\cdot 10^{-6}}{0{,}006} \\approx 0{,}383\\ \\text{m/s}."
+      "latex": "v_{kr} = \\frac{Re_{kr}\\,\\nu_v}{D} = \\frac{2300 \\cdot 1{,}0 \\cdot 10^{-6}}{0{,}006} \\approx 0{,}383\\ \\text{m/s}."
     },
     "eq-slicnost-rijeseni-primjer-froudeova-slicnost-model-broda-01": {
       "id": "eq-slicnost-rijeseni-primjer-froudeova-slicnost-model-broda-01",
@@ -9101,7 +9101,7 @@
       "kind": "Equation",
       "document": "u11",
       "number": "11.39",
-      "latex": "Bo = \\frac{(\\rho_w-\\rho_{zr})g\\,d^2}{\\sigma}\n= \\frac{(1000-1{,}2)\\cdot9{,}81\\cdot0{,}003^2}{0{,}072}\n\\approx1{,}22."
+      "latex": "Bo = \\frac{(\\rho_v-\\rho_{zr})g\\,d^2}{\\sigma}\n= \\frac{(1000-1{,}2)\\cdot9{,}81\\cdot0{,}003^2}{0{,}072}\n\\approx1{,}22."
     },
     "eq-slicnost-rijeseni-primjer-weberov-i-bondov-broj-raspad-03": {
       "id": "eq-slicnost-rijeseni-primjer-weberov-i-bondov-broj-raspad-03",
@@ -9545,7 +9545,7 @@
       "kind": "Equation",
       "document": "u12",
       "number": "12.19",
-      "latex": "\\tau_w=\\mu\\left.\\frac{\\partial v_x}{\\partial y}\\right|_w."
+      "latex": "\\tau_{st}=\\mu\\left.\\frac{\\partial v_x}{\\partial y}\\right|_w."
     },
     "eq-blasius-procjene": {
       "id": "eq-blasius-procjene",
@@ -9601,7 +9601,7 @@
       "kind": "Equation",
       "document": "u12",
       "number": "12.27",
-      "latex": "y^+=\\frac{u_\\tau y}{\\nu},\\qquad u_\\tau=\\sqrt{\\frac{|\\tau_w|}{\\rho}}."
+      "latex": "y^+=\\frac{u_\\tau y}{\\nu},\\qquad u_\\tau=\\sqrt{\\frac{|\\tau_{st}|}{\\rho}}."
     },
     "eq-realni-tok-rijeseni-primjer-podatak-anemometra-a-ne-etiketa-01": {
       "id": "eq-realni-tok-rijeseni-primjer-podatak-anemometra-a-ne-etiketa-01",
@@ -9772,7 +9772,7 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.1",
-      "latex": "\\underbrace{\\frac{p_1}{\\rho g}+z_1+\\alpha_1\\frac{v_1^2}{2g}}_{H_1}\n+H_p\n=\n\\underbrace{\\frac{p_2}{\\rho g}+z_2+\\alpha_2\\frac{v_2^2}{2g}}_{H_2}\n+H_t+h_w ."
+      "latex": "\\underbrace{\\frac{p_1}{\\rho g}+z_1+\\alpha_1\\frac{v_1^2}{2g}}_{H_1}\n+H_p\n=\n\\underbrace{\\frac{p_2}{\\rho g}+z_2+\\alpha_2\\frac{v_2^2}{2g}}_{H_2}\n+H_t+h_g ."
     },
     "eq-cjevovodi-1-realna-energijska-bilanca-sustava-sec-realna-01": {
       "id": "eq-cjevovodi-1-realna-energijska-bilanca-sustava-sec-realna-01",
@@ -9793,7 +9793,7 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.4",
-      "latex": "\\rho gQh_w=\\int_V\\Phi\\,dV."
+      "latex": "\\rho gQh_g=\\int_V\\Phi\\,dV."
     },
     "eq-darcy-weisbach": {
       "id": "eq-darcy-weisbach",
@@ -9814,7 +9814,7 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.7",
-      "latex": "h_w=\\left(\\lambda\\frac{L}{D}+\\sum_j\\xi_j\\right)\\frac{v^2}{2g}."
+      "latex": "h_g=\\left(\\lambda\\frac{L}{D}+\\sum_j\\xi_j\\right)\\frac{v^2}{2g}."
     },
     "eq-linijski-gubitak-protok": {
       "id": "eq-linijski-gubitak-protok",
@@ -9828,21 +9828,21 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.9",
-      "latex": "Q\\longrightarrow v=\\frac{Q}{A}\n\\longrightarrow Re=\\frac{vD}{\\nu}\n\\longrightarrow \\lambda(Re,k_s/D)\n\\longrightarrow h_w."
+      "latex": "Q\\longrightarrow v=\\frac{Q}{A}\n\\longrightarrow Re=\\frac{vD}{\\nu}\n\\longrightarrow \\lambda(Re,k_s/D)\n\\longrightarrow h_g."
     },
     "eq-ravnoteza-odsjecka-cijevi": {
       "id": "eq-ravnoteza-odsjecka-cijevi",
       "kind": "Equation",
       "document": "u13",
       "number": "13.10",
-      "latex": "\\Delta p\\,\\frac{\\pi D^2}{4}=\\tau_w\\,\\pi D L\n\\quad\\Rightarrow\\quad\n\\tau_w=\\frac{D}{4}\\,\\frac{\\Delta p}{L}."
+      "latex": "\\Delta p\\,\\frac{\\pi D^2}{4}=\\tau_{st}\\,\\pi D L\n\\quad\\Rightarrow\\quad\n\\tau_{st}=\\frac{D}{4}\\,\\frac{\\Delta p}{L}."
     },
     "eq-lambda-iz-smicnog-naprezanja": {
       "id": "eq-lambda-iz-smicnog-naprezanja",
       "kind": "Equation",
       "document": "u13",
       "number": "13.11",
-      "latex": "\\lambda=\\frac{8\\tau_w}{\\rho v^2},"
+      "latex": "\\lambda=\\frac{8\\tau_{st}}{\\rho v^2},"
     },
     "eq-lambda-laminarno": {
       "id": "eq-lambda-laminarno",
@@ -9884,7 +9884,7 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.17",
-      "latex": "h_w=RQ^2,\n\\qquad\nR=\\frac{8}{\\pi^2g}\n\\left(\\frac{\\lambda L}{D^5}+\\frac{\\sum\\xi}{D^4}\\right)."
+      "latex": "h_g=RQ^2,\n\\qquad\nR=\\frac{8}{\\pi^2g}\n\\left(\\frac{\\lambda L}{D^5}+\\frac{\\sum\\xi}{D^4}\\right)."
     },
     "eq-paralelni-otpor": {
       "id": "eq-paralelni-otpor",
@@ -9905,7 +9905,7 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.20",
-      "latex": "H_s(Q)=\\Delta z+h_w(Q)."
+      "latex": "H_s(Q)=\\Delta z+h_g(Q)."
     },
     "eq-cjevovodi-5-crpka-karakteristika-sustava-i-radna-tocka-01": {
       "id": "eq-cjevovodi-5-crpka-karakteristika-sustava-i-radna-tocka-01",
@@ -9947,7 +9947,7 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.26",
-      "latex": "P_{el}\\longrightarrow P_{vr}\\longrightarrow P_h\n\\longrightarrow\n\\begin{cases}\n\\rho gQ\\Delta z & \\text{promjena potencijalne energije},\\\\\n\\rho gQh_w & \\text{disipacija u sustavu}.\n\\end{cases}"
+      "latex": "P_{el}\\longrightarrow P_{vr}\\longrightarrow P_h\n\\longrightarrow\n\\begin{cases}\n\\rho gQ\\Delta z & \\text{promjena potencijalne energije},\\\\\n\\rho gQh_g & \\text{disipacija u sustavu}.\n\\end{cases}"
     },
     "eq-npsha": {
       "id": "eq-npsha",
@@ -9961,7 +9961,7 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.28",
-      "latex": "NPSH_a=\n\\frac{p_{atm}}{\\rho g}-z_s-h_{w,s}-\\frac{p_v}{\\rho g}."
+      "latex": "NPSH_a=\n\\frac{p_{atm}}{\\rho g}-z_s-h_{g,s}-\\frac{p_v}{\\rho g}."
     },
     "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-01": {
       "id": "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-01",
@@ -9982,14 +9982,14 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.31",
-      "latex": "h_{loc}=4{,}6(0{,}294)=1{,}35\\ \\mathrm{m},\n\\qquad\nh_w=3{,}82\\ \\mathrm{m}."
+      "latex": "h_{loc}=4{,}6(0{,}294)=1{,}35\\ \\mathrm{m},\n\\qquad\nh_g=3{,}82\\ \\mathrm{m}."
     },
     "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-04": {
       "id": "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-04",
       "kind": "Equation",
       "document": "u13",
       "number": "13.32",
-      "latex": "\\Delta p=\\rho gh_w=1000\\cdot9{,}81\\cdot3{,}82\n=37{,}4\\ \\mathrm{kPa}."
+      "latex": "\\Delta p=\\rho gh_g=1000\\cdot9{,}81\\cdot3{,}82\n=37{,}4\\ \\mathrm{kPa}."
     },
     "eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-01": {
       "id": "eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-01",
@@ -10129,14 +10129,14 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.52",
-      "latex": "h_{w,s}=\\left(0{,}030\\frac{5}{0{,}08}+1{,}8\\right)\n\\frac{2{,}785^2}{2\\cdot9{,}81}\n=1{,}453\\ \\mathrm{m}."
+      "latex": "h_{g,s}=\\left(0{,}030\\frac{5}{0{,}08}+1{,}8\\right)\n\\frac{2{,}785^2}{2\\cdot9{,}81}\n=1{,}453\\ \\mathrm{m}."
     },
     "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-03": {
       "id": "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-03",
       "kind": "Equation",
       "document": "u13",
       "number": "13.53",
-      "latex": "\\frac{p_{aps,s}}{\\rho g}\n=\\frac{p_{atm}}{\\rho g}-z_s-\\frac{v_s^2}{2g}-h_{w,s}\n=5{,}847\\ \\mathrm{m},"
+      "latex": "\\frac{p_{aps,s}}{\\rho g}\n=\\frac{p_{atm}}{\\rho g}-z_s-\\frac{v_s^2}{2g}-h_{g,s}\n=5{,}847\\ \\mathrm{m},"
     },
     "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-04": {
       "id": "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-04",
@@ -10996,14 +10996,14 @@
       "kind": "Equation",
       "document": "u15",
       "number": "15.13",
-      "latex": "Q=C_w\\,b\\,\\sqrt{g}\\left(\\tfrac23H\\right)^{3/2}\\approx1{,}70\\,C_w\\,b\\,H^{3/2},"
+      "latex": "Q=C_{pr}\\,b\\,\\sqrt{g}\\left(\\tfrac23H\\right)^{3/2}\\approx1{,}70\\,C_{pr}\\,b\\,H^{3/2},"
     },
     "eq-otvoreni-tokovi-postupno-promjenjiv-tok-i-kontrolni-presjek-sec-01": {
       "id": "eq-otvoreni-tokovi-postupno-promjenjiv-tok-i-kontrolni-presjek-sec-01",
       "kind": "Equation",
       "document": "u15",
       "number": "15.14",
-      "latex": "z_1+y_1+\\alpha_1\\frac{v_1^2}{2g}\n=z_2+y_2+\\alpha_2\\frac{v_2^2}{2g}+h_w."
+      "latex": "z_1+y_1+\\alpha_1\\frac{v_1^2}{2g}\n=z_2+y_2+\\alpha_2\\frac{v_2^2}{2g}+h_g."
     },
     "eq-postupno-promjenjivi-tok": {
       "id": "eq-postupno-promjenjivi-tok",

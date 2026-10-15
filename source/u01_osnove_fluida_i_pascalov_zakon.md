@@ -1,14 +1,18 @@
+Tekućine i plinovi zajedno se nazivaju fluidima. Od krutina se razlikuju po tome što se pod djelovanjem tangencijalnog naprezanja neprekidno deformiraju, odnosno teku. Fluid koji miruje zato ne može preuzeti smično naprezanje: na svaku plohu s kojom je u dodiru djeluje samo okomito, tlakom. To jednostavno svojstvo polazište je cijele hidrostatike, a u ovom poglavlju vodi do Pascalova zakona i hidrauličkog prijenosa sile.
+
+Iako je fluid građen od molekula, u tehničkim proračunima promatramo ga kao neprekidnu sredinu, kontinuum. U takvom modelu gustoća, tlak i brzina imaju određenu vrijednost u svakoj točki prostora. Gustoća $\rho=m/V$ kazuje koliko mase sadrži jedinica volumena, specifična težina $\gamma=\rho g$ koliko ta masa teži, a relativna gustoća $s_r=\rho/\rho_v$ uspoređuje fluid s vodom. Litra ulja gustoće $860\ \text{kg/m}^3$ tako je za približno $1{,}37\ \text{N}$ lakša od litre vode.
+
+Tlak je okomita sila po jedinici površine, $p=F_n/A$. U mirujućem fluidu u istoj točki jednak je u svim smjerovima, pa je skalarna veličina, iako se od točke do točke može mijenjati. Porast tlaka s dubinom obrađuje se u []{.mf1-chapter-ref target="u03"}.
+
+Pascalov zakon kaže da se promjena tlaka nametnuta na jednom mjestu zatvorenog mirujućeg fluida prenosi nesmanjena u sve njegove točke. U hidrauličkim sustavima tlak koji stvaraju klipovi mnogo je veći od razlika zbog visine, pa je tlak u cijelom sustavu praktički isti: $p=F_1/A_1=F_2/A_2$. Mala sila $F_1$ na malom klipu zato daje veliku silu $F_2=(A_2/A_1)F_1$ na velikom klipu. Energija se pritom ne stvara: zbog nestlačivosti ulja istisnuti volumeni su jednaki, $A_1s_1=A_2s_2$, pa veliki klip prijeđe proporcionalno kraći put, a u idealnom modelu bez gubitaka vrijedi $F_1s_1=F_2s_2$.
+
+Na tom se načelu temelje hidrauličke dizalice i preše, kočnice vozila te brodski kormilarski strojevi. Poglavlje redom obrađuje kontinuumski model i tlak, osnovne veličine fluida i Pascalov zakon, a zatim ih primjenjuje na hidraulički prijenos sile. Pritom pokazuje i granice idealnog modela: gubitke, stlačivost, propuštanje i visinske razlike.
+
+Slika ispod sažima te tri ideje. Lijevo okolni fluid tlačnim silama sabija mali element sa svih strana. U sredini jednaki volumeni ulja i vode imaju različite gustoće, a time i različite mase i težine. Desno je Pascalov prijenos: sila $F_1$ djeluje na mali klip, a $F_2$ je sila ulja na veliki klip, uz zanemarene visinske razlike, gubitke i stlačivost.
+
 ![Kontinuum i tlačne sile na mali element, svojstva ulja i vode te Pascalov prijenos između povezanih klipova](../assets/print/u01_fig_uvod_pregled.svg){#fig-uvod-u01 fig-align="center" fig-alt="Kontinuum i tlačne sile na mali element, svojstva ulja i vode te Pascalov prijenos između povezanih klipova"}
 
-**Tumačenje skice.** U mirujućem fluidu tlak je skalarno polje $p(x,y,z)$: u istoj točki jednak je u svim smjerovima, ali se može mijenjati od točke do točke. Strelice prikazuju tlačne sile okoline na mali element. Za jednolik tlak na plohi vrijedi $p=F_n/A$.
-
-Pri jednakom volumenu različite gustoće daju različite mase i težine: $\rho=m/V$, $\gamma=\rho g$ i $s_r=\rho/\rho_w$. Za prikazanu litru ulja i vode razlika težina iznosi približno $1{,}37\,\mathrm{N}$.
-
-U povezanim cilindrima porast tlaka prenosi se jednako: $p=F_1/A_1=F_2/A_2$. Zato je $F_2=(A_2/A_1)F_1$, uz $A_1s_1=A_2s_2$ i, u idealnom modelu, $F_1s_1=F_2s_2$. Sila $F_1$ djeluje na mali klip, a $F_2$ označuje silu ulja na veliki klip; zanemareni su visinske razlike, gubitci i stlačivost.
-
 ## Fluid kao kontinuum
-
-Ovo poglavlje uvodi kontinuum, gustoću i tlak te Pascalov zakon primjenjuje na prijenos sile u hidrauličkim sustavima.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -56,10 +60,10 @@ $$
 $$ {#eq-svojstva-tlak-osnovne-velicine-koje-se-najcesce-mijesaju-02}
 
 $$
-s_r = \frac{\rho}{\rho_w}
+s_r = \frac{\rho}{\rho_v}
 $$ {#eq-svojstva-tlak-osnovne-velicine-koje-se-najcesce-mijesaju-03}
 
-Gustoća $\rho$ jest masa po jedinici volumena. Specifična težina $\gamma = \rho g$ jest težinska sila po jedinici volumena u zadanome gravitacijskom polju. Relativna gustoća $s_r$ bezdimenzijski je omjer gustoće fluida i referentne gustoće vode $\rho_w$. Primjerice, vrijednost $s_r=0{,}86$ za ulje pokazuje da je njegova gustoća manja od gustoće vode, dok je za živu $s_r\approx13{,}6$.
+Gustoća $\rho$ jest masa po jedinici volumena. Specifična težina $\gamma = \rho g$ jest težinska sila po jedinici volumena u zadanome gravitacijskom polju. Relativna gustoća $s_r$ bezdimenzijski je omjer gustoće fluida i referentne gustoće vode $\rho_v$. Primjerice, vrijednost $s_r=0{,}86$ za ulje pokazuje da je njegova gustoća manja od gustoće vode, dok je za živu $s_r\approx13{,}6$.
 
 Izraz $\rho=m/V$ daje gustoću homogenog fluida, odnosno srednju gustoću promatranog volumena. Kada se gustoća mijenja s položajem, lokalno pišemo $\rho=dm/dV$. Referentna gustoća vode u omjeru $s_r$ određuje se pri zadanoj temperaturi; u zadatcima se često usvaja približna vrijednost $1000\ \text{kg/m}^3$.
 
@@ -75,7 +79,7 @@ g = 9{,}81\ \text{m/s}^2
 $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-01}
 
 $$
-\rho_w = 1000\ \text{kg/m}^3.
+\rho_v = 1000\ \text{kg/m}^3.
 $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-02}
 
 **Traži se**
@@ -85,7 +89,7 @@ $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-02}
 
 ![Usporedba gustoće, mase i težine jednakih volumena ulja i vode.](../assets/print/u01_fig_gustoca_sr.svg){#fig-u01-gustoca-sr fig-align="center" fig-alt="Usporedba gustoće, mase i težine jednakih volumena ulja i vode."}
 
-**Uz skicu.** Težina $F_G$ odnosi se samo na ulje, bez posude; usporedba s vodom vrijedi za jednake volumene.
+**Uz skicu.** Lijevo je ulje u posudi: težina $F_G$ odnosi se samo na ulje, bez posude, i djeluje u njegovu težištu. Desno su jednaki volumeni ulja i vode s istom razinom. Strelice njihovih težina, $F_G$ i $F_{G,v}$, nacrtane su u omjeru gustoća, pa je njihov omjer upravo relativna gustoća $s_r=\rho/\rho_v$.
 
 **Rješenje**
 
@@ -98,7 +102,7 @@ $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-03}
 Relativna gustoća dobiva se omjerom prema vodi:
 
 $$
-s_r = \frac{\rho}{\rho_w} = \frac{860}{1000} = 0{,}86.
+s_r = \frac{\rho}{\rho_v} = \frac{860}{1000} = 0{,}86.
 $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-04}
 
 **Provjera i tumačenje**
@@ -644,7 +648,7 @@ U hidrauličkim zadatcima manometarski tlak $p_M$ označuje razliku tlakova prek
 
 **Tekst zadatka**
 
-Prazna posuda ima masu $m_0 = 42{,}6\ \text{g}$. S volumenom ulja $V_1 = 50{,}0\ \text{cm}^3$ njezina ukupna masa iznosi $m_1 = 85{,}5\ \text{g}$, a s volumenom $V_2 = 100{,}0\ \text{cm}^3$ ukupna masa iznosi $m_2 = 128{,}7\ \text{g}$. Oba mjerenja odnose se na isto homogeno ulje pri istoj temperaturi. Uzmi $g = 9{,}81\ \text{m/s}^2$ i referentnu gustoću vode $\rho_w = 1000\ \text{kg/m}^3$.
+Prazna posuda ima masu $m_0 = 42{,}6\ \text{g}$. S volumenom ulja $V_1 = 50{,}0\ \text{cm}^3$ njezina ukupna masa iznosi $m_1 = 85{,}5\ \text{g}$, a s volumenom $V_2 = 100{,}0\ \text{cm}^3$ ukupna masa iznosi $m_2 = 128{,}7\ \text{g}$. Oba mjerenja odnose se na isto homogeno ulje pri istoj temperaturi. Uzmi $g = 9{,}81\ \text{m/s}^2$ i referentnu gustoću vode $\rho_v = 1000\ \text{kg/m}^3$.
 
 **Traži se**
 

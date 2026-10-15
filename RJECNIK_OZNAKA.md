@@ -4,8 +4,6 @@ Sastavljen 13. listopada 2026. za fizikalni pregled skica, osvježen 14. listopa
 
 ## Mjerodavni standard (preneseno iz `docs/urednicki_stil.md`)
 
-Prijepis odjeljka „Notacija i nazivlje (standard od 12. listopada 2026.)”, stanje 14. 10. 2026.
-
 Jedna veličina ima jednu oznaku kroz cijelu knjigu; dodatak A navodi iznimke.
 Kad se u pojedinom poglavlju nužno koristi druga oznaka, uvodi se pri prvom
 spomenu s izričitom napomenom.
@@ -18,7 +16,7 @@ spomenu s izričitom napomenom.
 | brzina zvuka; brzina površinskog vala | $a$; $c$ (samo pog. 15) | |
 | volumen; istisnina; masa istisnine; gaz; nadvođe | $V$; $V_{ist}$; $\Delta$; $T$; $f$ | |
 | tlak atmosferski, manometarski, apsolutni, pare, zaustavni | $p_{atm}$, $p_M$, $p_{aps}$, $p_v$, $p_0$ | $p_0$ samo zaustavni; Bernoulli s $p/(\rho g)$ |
-| gubitci; koeficijenti | $h_w$, $h_l$, $h_{loc}$; $\xi$, $\zeta=\lambda L/D+\sum\xi$, $\lambda$ | $K$ samo volumni modul; $\lambda_L$ mjerilo duljina |
+| gubitci; koeficijenti | $h_g$, $h_l$, $h_{loc}$; $\xi$, $\zeta=\lambda L/D+\sum\xi$, $\lambda$ | $K$ samo volumni modul; $\lambda_L$ mjerilo duljina |
 | izentropski eksponent; specifična težina | $\kappa$; $\gamma$ | |
 | bezdimenzijski brojevi | $Ma$, $Re$, $Fr$, $We$, $St$, $Bo$, $Eu=\Delta p/(\rho v^2)$ | |
 | korekcijski faktori; kutovi | $\alpha$, $\beta$; $\theta$, $\varphi$ | kutovi lopatica $\beta_1$, $\beta_2$ samo u pog. 14 |
@@ -32,8 +30,8 @@ spomenu s izričitom napomenom.
 | kontrolni volumen i ploha | KV, KP; indeksi ul, iz | |
 | stabilitet | $B$, $G$, $M$, $KB$, $BM$, $KG$, $GM$ | bez nadvlake |
 | težina | $F_G$ ili $mg$ | $G$ samo težište (stabilitet), ne težina |
-| gustoće vode, morske vode, ulja, žive, zraka | $\rho_w$, $\rho_{mv}$, $\rho_o$, $\rho_{Hg}$, $\rho_{zr}$ | indeks $v$ samo para ($p_v$); indeks $m$ samo model (pog. 11, 14) |
-| relativna gustoća | $s_r=\rho/\rho_w$ | |
+| gustoće vode, morske vode, ulja, žive, zraka | $\rho_v$, $\rho_{mv}$, $\rho_u$, $\rho_{Hg}$, $\rho_{zr}$ | hrvatski indeksi: $v$ voda, $u$ ulje (i $\nu_v$, $\nu_u$, $h_v$, $h_u$ za slojeve); $p_v$ ostaje tlak pare; indeks $m$ samo model (pog. 11, 14) |
+| relativna gustoća | $s_r=\rho/\rho_v$ | |
 | kut poprečnog nagiba; ostali kutovi | $\varphi$; $\theta$ | |
 | širina broda ili pontona | $b$ | $B$ samo središte istisnine |
 | polumjer zavoja | $R_z$ | $R$ polumjer spremnika ili luka |
@@ -41,6 +39,7 @@ spomenu s izričitom napomenom.
 | udio otvorene površine rešetke | $\psi$ | |
 | ekvivalentna hrapavost; disipacija turbulentne kinetičke energije | $k_s$, relativno $k_s/D$; $\varepsilon$ | $\varepsilon$ samo disipacija (model $k$–$\varepsilon$); tolerancije s indeksom ($\varepsilon_h$) |
 | visina dobave crpke; visina turbine | $H_p$; $H_t$ | ne $h_p$, $h_t$ |
+| gubitak visine; smično naprezanje na stijenci; koeficijent preljeva | $h_g$ (s indeksima $h_{g,s}$, $h_{g,1}$…); $\tau_{st}$; $C_{pr}$ | hrvatski indeksi (gubitak, stijenka, preljev); ne $h_w$, $\tau_w$, $C_w$ |
 | standardna nesigurnost | $s(x)$; $s_E$, $s_\Delta$ | ne $u(x)$ ($u$ je brzina krute granice) |
 | koeficijent sustrujanja; faktor učinka rotora | $\chi$; $FM$ | samo pog. 14 |
 | kut lopatice | $\beta_1$, $\beta_2$ od smjera $-u$ | kut skretanja mlaza $\theta$ |
@@ -64,7 +63,6 @@ Darcyjev koeficijent trenja; volumenski protok; metacentarska visina;
 stabilitet, nadvođe, poluga stabiliteta $GZ$, poprečni nagib, kut nestajanja
 stabiliteta, metoda dodane težine; zapljuskivanje; prividna sila; impulsna
 funkcija. Poglavlje ne upućuje samo na sebe brojem; piše „u ovom poglavlju”.
-
 
 ## Poglavlje 1
 
@@ -232,7 +230,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | p_M,dno | manometarski tlak na dnu tanka | Pa | P3 (141,0 kPa) |
 | ρ_o | gustoća ulja | kg/m³ | P3 (860, teret), P4 (870), Z3 (860), Z4 (850), Z5 (860) |
 | ρ_w | gustoća (slatke) vode | kg/m³ | P1 (998), P2 (1000), P6 (998), Z1 (998), Z2 (998), Z4 (1000), Z5 (998), Z6 (998) |
-| h_o, h_w | visina stupca ulja, debljina vodenog sloja | m | P3 (h_w = 0,35); Z4 (h_o, h_w) |
+| h_u, h_v | visina stupca ulja, debljina vodenog sloja | m | P3 (h_v = 0,35); Z4 (h_u, h_v) |
 | H_ref | visina referentne točke ullagea iznad dna | m | P3 (18,60) |
 | U_m, U | očitanje ullage vrpce; ullage iz tlaka i geometrije | m | P3 (U_m = 2,31) |
 | A_t | tlocrtna površina tanka | m² | P3 (600) |
@@ -302,7 +300,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | h_v, h_u | razina uz vanjsku / unutarnju stijenku | m | P3 |
 | v_max | brzina broda na granici prelijevanja | m/s | P3 |
 | ρ; ρ_mv; ρ_w; ρ_o | gustoća (općenito; P2 960, P5 gorivo 750); morske vode (P3, 1025); vode (P4, uvod u vježbe, Z4, Z6 naputak); ulja (Z3, 870) | kg/m³ | izvodi, P2–P5, Z3, Z4, Z6 |
-| n, r_2, r_o, r_w, r_i | brzina vrtnje; polumjeri bubnja, izlaza, razdjelnice | okr/min, m | P6 |
+| n, r_2, r_u, r_v, r_i | brzina vrtnje; polumjeri bubnja, izlaza, razdjelnice | okr/min, m | P6 |
 | ρ_o, ρ_w | gustoća goriva, vode | kg/m³ | P6 |
 | Q, H_b, V, t_z, \vec v_rel | protok, visina bubnja, volumen, vrijeme zadržavanja, relativna brzina | — | P6; r. 92–106 |
 | h, A, B | visina stupca; vrh, dno cilindra | m | Z3 |
@@ -328,7 +326,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | $p$ | (manometarski) tlak $\rho gh$ | Pa | cijelo poglavlje |
 | $p_{pl}$ | jednoliki tlak plina iznad slobodne površine | Pa | „Referentni tlak”, centar tlaka |
 | $p_{\mathrm{net}}$ | neto tlak | Pa | eq …referentni-tlak-02 |
-| $\rho$; $\rho_o$, $\rho_w$ | gustoća vode; ulja, vode (P3) | kg/m³ | svugdje; P3 |
+| $\rho$; $\rho_u$, $\rho_v$ | gustoća vode; ulja, vode (P3) | kg/m³ | svugdje; P3 |
 | $g$ | ubrzanje sile teže | m/s² | svugdje |
 | $h$ | vertikalna dubina od slobodne površine | m | izvodi |
 | $h_a$, $h_b$ | dubine rubova pojasa | m | izvod rezultante |
@@ -338,7 +336,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | $h_0$ | dubina početka osi $y$ (izvod nagnute plohe); dubina vrha trokuta (Z4) | m | izvod nagnute plohe; Z4 |
 | $h_1$ | dubina gornjeg ruba (P1, Z1, Z6); dubina gornje točke luka (P4); dubina osi O (Z5) | m | P1, P4, Z1, Z5, Z6 |
 | $h_A$ | dubina zgloba A | m | P2 |
-| $h_o$, $h_w$ | visine sloja ulja / vode | m | P3 |
+| $h_u$, $h_v$ | visine sloja ulja / vode | m | P3 |
 | $h_L$, $h_D$ | dubine vode lijevo / desno | m | Z3 |
 | $h_{Cx}$ | dubina težišta vertikalne projekcije | m | zakrivljena ploha, P4, P5 |
 | $h_H$ | dubina pravca djelovanja $F_H$ | m | P4, P5, P6 |
@@ -380,7 +378,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 8. P3: $F_2$ se pojavljuje samo u „Veza s proračunom” (skica), u rješenju samo $F_{2,r}$, $F_{2,t}$.
 9. Uvod (redak 3): rezultanta na ravnu plohu je $F$; $F_R$ se rabi samo za zakrivljenu plohu — skice su usklađene s tim.
 10. $F_m$ (izmjerena sila, Z6): pravilo „indeks $m$ samo model” u standardu stoji uz gustoće; namjerno zadržano (prijedlog ako se pravilo poopći: $F_{izm}$).
-11. Generički $\rho$ u zadatcima s jednim fluidom (npr. Z1 morska voda 1025, P1 998) namjerno je zadržan; $\rho_o$, $\rho_w$ rabe se gdje su dva fluida (P3).
+11. Generički $\rho$ u zadatcima s jednim fluidom (npr. Z1 morska voda 1025, P1 998) namjerno je zadržan; $\rho_u$, $\rho_v$ rabe se gdje su dva fluida (P3).
 
 
 ## Poglavlje 6
@@ -388,16 +386,16 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | simbol | naziv veličine | jedinica | gdje se pojavljuje |
 |---|---|---|---|
 | $F_U$ | sila uzgona | N | uvod, izvod, P1, Z1, skice |
-| $\rho$; $\rho_{mv}$; $\rho_o$, $\rho_w$; $\rho_t$ | gustoća fluida u kojem tijelo pluta; morske vode (P5, spar); ulja/vode (P4, Z4, Z6, dva fluida); tekućine u tanku | kg/m³ | svugdje |
+| $\rho$; $\rho_{mv}$; $\rho_u$, $\rho_v$; $\rho_t$ | gustoća fluida u kojem tijelo pluta; morske vode (P5, spar); ulja/vode (P4, Z4, Z6, dva fluida); tekućine u tanku | kg/m³ | svugdje |
 | $g$ | ubrzanje sile teže | m/s² | svugdje |
 | $V$; $V_{ist}$ | volumen tijela (Z1); istisnuti volumen | m³ | izvod, P1–P6, Z1 |
-| $V_o$, $V_w$ | istisnina u ulju / vodi | m³ | P4, Z6 |
+| $V_u$, $V_v$ | istisnina u ulju / vodi | m³ | P4, Z6 |
 | $V_{max}$, $m_{max}$, $\Delta m$ | najveća istisnina / masa, rezerva mase | m³; kg | P2 |
 | $p_{pov}$; $p_1$, $p_2$ | tlak na slobodnoj površini (izvod Arhimeda); tlak na gornjoj/donjoj plohi | Pa | izvod (eq …matematicki-izvod-01/02) |
 | $h_1$, $h_2$ | dubina gornje/donje plohe (izvod); uroni vrata areometra (Z4) | m; mm | izvod; Z4 |
-| $A$; $A_{wl}$ | vodoravna površina prizme (izvod); površina vodne linije; površina presjeka spara (P6) | m² | izvod, BM izvod, P6 |
+| $A$; $A_{vl}$ | vodoravna površina prizme (izvod); površina vodne linije; površina presjeka spara (P6) | m² | izvod, BM izvod, P6 |
 | $F_1$, $F_2$ | tlačne sile na gornju/donju plohu | N | izvod |
-| $m$; $m_p$, $m_o$, $m_k$, $m_t$, $m_s$, $m_a$, $m_b$, $m_w$, $m_0$, $m_{uk}$ | masa tijela/sustava; pontona, opreme (P2), kompresora (P3) i ormara (P4), tereta (Z2), utega (Z3), akumulatora (Z6), broda (P5), vode u tanku (P5), početna masa (Z5), ukupna masa (P6) | kg, t | P1–P6, Z1–Z6 |
+| $m$; $m_p$, $m_o$, $m_k$, $m_t$, $m_s$, $m_a$, $m_b$, $m_v$, $m_0$, $m_{uk}$ | masa tijela/sustava; pontona, opreme (P2), kompresora (P3) i ormara (P4), tereta (Z2), utega (Z3), akumulatora (Z6), broda (P5), vode u tanku (P5), početna masa (Z5), ukupna masa (P6) | kg, t | P1–P6, Z1–Z6 |
 | $F_G$ | težina $mg$; točka $G$ je samo težište | N | uvod, P1, Z1 (naputak, kontrolni rezultat), „Napomene uz skice”; skice uvod, P1, P5, Z1, Z2 |
 | $F_{neto}$; $F_d$ | neto sila (P1); dodatna sila držanja (Z1, samo „Napomene uz skice”) | N | P1; Z1 |
 | $\Delta$ | masa istisnine $\rho V_{ist}$ | kg | izvodi, P4, Z3, Z6 |
@@ -405,7 +403,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | $D$ | promjer spara | m | P6 |
 | $d$ | promjer vrata areometra | mm | Z4 |
 | $T$; $T_m$; $T_L$, $T_D$; $T_0$, $T_1$; $\Delta T$, $\Delta T_m$ | gaz; srednji gaz; gazovi lijevog/desnog ruba; gaz prije/poslije; promjena gaza | m | P2–P6, Z2, Z3, Z5, Z6 |
-| $T_{w,L}$, $T_{w,D}$, $T_{w,m}$ | vodene dubine rubova / srednja (dva fluida) | m | P4 |
+| $T_{v,L}$, $T_{v,D}$, $T_{v,m}$ | vodene dubine rubova / srednja (dva fluida) | m | P4 |
 | $\delta$ | debljina sloja ulja | m | P4, Z6, izvod dva fluida |
 | $f$, $f_L$ | nadvođe; preostalo nadvođe lijevog ruba | m | P2 (tekst), P5, P6 |
 | $\varphi$ | kut poprečnog nagiba | rad, ° | izvodi, P3, P4, P5, Z3 |
@@ -416,8 +414,8 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | $KB_{eq}$, $BM_{eq}$, $GM_{eq}$ | ekvivalentne veličine za dva fluida | m | P4, Z6 |
 | $KG_p$, $KG_k$, $KG_b$, $KG'$, $KG_0$ | visine težišta platforme, kompresora/ormara, broda, nova, početna | m | P3, P4, P5, Z5 |
 | $GZ$ | poluga stabiliteta | m | izvodi |
-| $y_B$; $y_{B,w}$; $\bar x$, $\bar x_{1,2}$; $A_1$, $A_2$ | bočni pomak centra uzgona; vodenog dijela; težišta trapeza i dijelova | m; m² | izvodi, P3, P4 |
-| $z_{B,o}$, $z_{B,w}$ | visine centara uzgonskih doprinosa | m | P4 |
+| $y_B$; $y_{B,v}$; $\bar x$, $\bar x_{1,2}$; $A_1$, $A_2$ | bočni pomak centra uzgona; vodenog dijela; težišta trapeza i dijelova | m; m² | izvodi, P3, P4 |
+| $z_{B,u}$, $z_{B,v}$ | visine centara uzgonskih doprinosa | m | P4 |
 | $I_T$; $i_t$ | drugi moment vodne linije; slobodne površine tanka | m⁴ | izvodi, P4–P6 |
 | $\delta GM$ | učinak slobodne površine | m | okvir „Učinak slobodne površine” |
 | $e$; $e_G$; $e_t$ | udaljenost tereta od osi (pomak utega u Z3); bočni pomak težišta sustava; ekscentar tanka | m | P3, P4, Z3, Z6; P5 |
@@ -467,8 +465,8 @@ Izvor: stvarni tekst poglavlja (retci u zagradama). Oznake skica: prefiks datote
 | $w$, $w_r$ | relativna brzina prema brodu u otvoru / u rešetki | m/s | P2 (432–449) |
 | $\vec i$ | jedinični vektor osi $x$ (prema pramcu) | — | P2 (427) |
 | $L$, $b$ | duljina, širina spremnika | m | P3 ch (475) |
-| $\rho_w$, $Q_A$ | gustoća vode; protok vode A | kg/m³, m³/s | P3 ch (475) |
-| $s_r$, $\rho_B=s_r\rho_w$, $Q_B$ | relativna gustoća, gustoća i protok otopine B | —, kg/m³, m³/s | P3 ch (475, 496) |
+| $\rho_v$, $Q_A$ | gustoća vode; protok vode A | kg/m³, m³/s | P3 ch (475) |
+| $s_r$, $\rho_B=s_r\rho_v$, $Q_B$ | relativna gustoća, gustoća i protok otopine B | —, kg/m³, m³/s | P3 ch (475, 496) |
 | $D_3$, $v_3$, $A_3$, $Q_3$ | izlazni vod: promjer, brzina, površina, protok | mm, m/s, m², m³/s | P3 ch (475–509); Z3 (795) |
 | $\rho_{mj}$ | gustoća homogenizirane mješavine | kg/m³ | P3 ch (482, 526), tumačenje skice kontrolnog volumena; Z6 |
 | $h$, $h_0$, $h_1$, $\Delta h$, $dh/dt$ | razina, početna/ciljna, porast, brzina porasta | m, m/s | P3 ch (477–545) |
@@ -484,7 +482,7 @@ Izvor: stvarni tekst poglavlja (retci u zagradama). Oznake skica: prefiks datote
 | $w$, $Q_{iz,rel}$, $v_{iz}$ | izlazna brzina relativna prema klipu; protok; apsolutna | m/s, L/s | Z5 (851, 863, 870) |
 | $\ell_0$, $\ell(t)$, $s$ | početna duljina komore; duljina; hod klipa | m | Z5 (851, 863) |
 | $h_{max}$ | visina početka odzračne cijevi | m | Z6 (882) |
-| $\rho_{mv}$, $Q_{mv}$; $\rho_w$, $Q_w$; $Q_{iz}$; $\rho_{mj}$ | morska, slatka voda; odvod; mješavina | kg/m³, m³/h | Z6 (882, 901) |
+| $\rho_{mv}$, $Q_{mv}$; $\rho_v$, $Q_v$; $Q_{iz}$; $\rho_{mj}$ | morska, slatka voda; odvod; mješavina | kg/m³, m³/h | Z6 (882, 901) |
 | $n$ (FVM), $f$, $i$ | vremenska razina, ploha, ćelija | — | CFD (335–340) |
 
 #### Uočene nedosljednosti oznaka (ne rješavam, samo bilježim)
@@ -515,7 +513,7 @@ Izvor: stvarni tekst poglavlja (retci u zagradama). Oznake skica: prefiks datote
 | $\dot Q$, $\dot W$, $\dot W_s$, $\dot W_p$ | toplinski tok, snaga (rad vratila, tlačni rad) | W | 222–233 |
 | $e$, $e_u$ | ukupna i unutarnja specifična energija | J/kg | 222 |
 | $\alpha$ | korekcijski faktor kinetičke energije | — | 239–244, 255; Z6 (862) |
-| $H_p$, $H_t$, $h_w$ | visina dobave crpke, visina turbine; gubitak visine | m | 247–263; P4 ch (485), Z6 (862) |
+| $H_p$, $H_t$, $h_g$ | visina dobave crpke, visina turbine; gubitak visine | m | 247–263; P4 ch (485), Z6 (862) |
 | $\dot m$ | maseni protok | kg/s | P1 (296) |
 | $Q$ | volumenski protok | m³/s, L/s | P1, P3, P4, P5, Z1–Z6 |
 | $A_1$, $A_2$ | ulazna / izlazna površina konfuzora | m² | P1 (296) |
@@ -533,7 +531,7 @@ Izvor: stvarni tekst poglavlja (retci u zagradama). Oznake skica: prefiks datote
 | $p_{aps,P}$, $p_{M,P}$ | apsolutni / manometarski tlak na ulazu crpke | kPa | P4 ch (517–529) |
 | $NPSH_a$, $NPSH_r$, $z_{P,max}$ | raspoloživa / potrebna usisna visina; granična visina crpke | m | P4 ch (539–543) |
 | $D_1$, $D_2$ | ulazni promjer, promjer grla Venturija | mm | P5 (569) |
-| $\rho_o$, $\rho_{Hg}$, $\Delta h_m$ | gustoća ulja, žive; razlika razina žive | kg/m³, m | P5 (569) |
+| $\rho_u$, $\rho_{Hg}$, $\Delta h_m$ | gustoća ulja, žive; razlika razina žive | kg/m³, m | P5 (569) |
 | $p_0$, $p_\infty$ | zaustavni, statički tlak (Pitot) | Pa | P6 (623–638) |
 | $R$, $T$, $\nu$, $D_s$, $Re_s$ | plinska konstanta, temperatura, kin. viskoznost, promjer sonde, Re sonde | — | P6 (623–664) |
 | $v'$ | brzina preračunata uz gušći zrak | m/s | P6 (656) |
@@ -634,7 +632,7 @@ Izvor: stvarni tekst poglavlja (retci prema stanju 13. 10. 2026.). SVG-ovi ovog 
 | $\beta$; $\alpha$ | koeficijent količine gibanja; Coriolisov koeficijent | – | r. 68–84, 157, P3 |
 | $v_{lok}$, $v_{max}$, $r$, $R$ | lokalna brzina, najveća brzina, radijalna koordinata, polumjer cijevi | m/s, m | r. 73–82 — **$R$ ovdje polumjer** |
 | $Q$, $Q_1$, $Q_2$, $Q_3$ | volumenski protok | m³/s; L/s (P2, P5, P7, Z4) | cijelo poglavlje; skice P6 „Q = 0,18 m³/s”, P7 „Q = 2,80 L/s”, Z1, Z3, Z4 „Q = 16,0 L/s”, Z6 |
-| $\rho$; $\rho_w$; $\rho_{mv}$ | gustoća (opće formule, P1–P7); vode (preambula vježbi, $\rho=\rho_w=998$); morske vode (Z1, Z2) | kg/m³ | cijelo poglavlje |
+| $\rho$; $\rho_v$; $\rho_{mv}$ | gustoća (opće formule, P1–P7); vode (preambula vježbi, $\rho=\rho_v=998$); morske vode (Z1, Z2) | kg/m³ | cijelo poglavlje |
 | $p_{M1}$, $p_{M2}$, $p_M$, $p_{M,i}$ | manometarski tlak na presjeku; P6 jedan tlak $p_M$ | Pa, kPa | P2–P6, Z3, Z6; skice |
 | $A$, $A_1$, $A_2$, $A_3$, $A_j$, $A_d$ | površina presjeka, mlaza, diska | m² | cijelo poglavlje |
 | $D$, $D_1$, $D_2$, $D_3$, $d$ | promjer | mm, m | P1–P7, Z2, Z3, Z5, Z6; skice |
@@ -703,12 +701,12 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01 r. 29–38, 132–1
 | $D$ | promjer cijevi/kugle/cilindra | m, mm | izvodi, P1, P-kugla, P5, Z2, Z5 |
 | $v_m$, $v_p$, $Q_p$, $Q_m$, $F_p$, $F_m$, $P_p$, $P_m$ | veličine modela i prototipa | m/s, m³/s, N, W | Froudeovo skaliranje, Z4, Z6 |
 | $L_s$, $v_s$, $L_m$, $v_m$, $Re_s$, $Re_m$ | brod (prototip; indeks $s$ uveden pri prvoj uporabi) i model | m, m/s, – | P2, okvir „Fizikalno značenje” |
-| $R_T$, $C_T$, $C_F$, $C_R$, $A_w$, $C_{F,m}$, $C_{F,s}$ | ukupni otpor broda, koeficijenti ukupnog, trenja i preostalog otpora, oplakana površina | N, –, m² | Froudeova hipoteza, P2 |
-| $v_A$, $v_B$, $\nu_w$, $\nu_o$ | brzina vode i ulja; kinematička viskoznost vode i ulja | m/s, m²/s | P1 |
+| $R_T$, $C_T$, $C_F$, $C_R$, $A_{opl}$, $C_{F,m}$, $C_{F,s}$ | ukupni otpor broda, koeficijenti ukupnog, trenja i preostalog otpora, oplakana površina | N, –, m² | Froudeova hipoteza, P2 |
+| $v_A$, $v_B$, $\nu_v$, $\nu_u$ | brzina vode i ulja; kinematička viskoznost vode i ulja | m/s, m²/s | P1 |
 | $Re_A$, $Re_B$, $Re_{kr}$, $v_{kr}$ | Reynoldsovi brojevi P1, orijentacijski prag, brzina vode pri $Re=2300$ | –, m/s | P1 |
 | $D_1$, $D_2$, $A_1$, $A_2$, $v_1$, $v_2$, $p_1$, $p_2$, $Q$ | presjeci Venturija (1 ulaz, 2 grlo) | mm, m², m/s, Pa, L/s | P3 |
 | $v_{2,\max}$, $Q_{\max}$ | idealizirani granični protok uz $p_2=p_v$ | m/s, L/s | P3 |
-| $d$, $\rho_{zr}$, $\rho_w$, $We_{kr}$, $v_{kr}$ | promjer kapi, gustoća zraka i vode, prag raspada, kritična brzina | mm, kg/m³, –, m/s | P4 |
+| $d$, $\rho_{zr}$, $\rho_v$, $We_{kr}$, $v_{kr}$ | promjer kapi, gustoća zraka i vode, prag raspada, kritična brzina | mm, kg/m³, –, m/s | P4 |
 | $Q_1$, $Q_2$, $Ma_1$, $Ma_2$, $Q_{lim}$ | protoci i Machovi brojevi zračnog voda, granični protok za $Ma=0{,}3$ | m³/s, – | P5 |
 | $D_d$, $f_n$, $v_{rez}$ | promjer dimnjaka, vlastita frekvencija, rezonantna brzina | m, Hz, m/s | P5 |
 | $a$, $b$, $A$, $P$, $D_h=4A/P$ | stranice pravokutnog presjeka, površina, oplakani opseg, hidraulički promjer | m, m², m | Z1 |
@@ -756,7 +754,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | $p_1$, $p_2$ | tlakovi na priključcima | Pa | Z3 |
 | $\lambda$ | Darcyjev koeficijent trenja | – | izvod |
 | $Re$, $Re_x$, $Re_L$, $Re_s$, $Re_{st}$, $Re_l$ | Reynoldsovi brojevi ($Re_{st}$ prema visini stepenice, $Re_l$ prema tetivi profila) | – | posvuda |
-| $\tau_w$; $\tau_0$ | smično naprezanje na stijenci; sila fluida na donju ploču po površini (x-komp.) | Pa | granični sloj; Z4 |
+| $\tau_{st}$; $\tau_0$ | smično naprezanje na stijenci; sila fluida na donju ploču po površini (x-komp.) | Pa | granični sloj; Z4 |
 | $\delta_{99}$, $\delta_B$, $\delta$ | debljina graničnog sloja (99 %), Blasiusova referentna, turbulentna | m | granični sloj, P4, Z5, uvodna skica |
 | $U_\infty$; $U_e$; $dU_e/dx$; $p_e$ | neporemećena brzina; vanjska brzina; gradijent; vanjski tlak | m/s; 1/s; Pa | granični sloj, P4, Z5 |
 | $C_{f,x}$, $C_F$, $C_{F,m}$, $C_{F,s}$, $C_f$ | lokalni/ukupni koeficijent trenja | – | Blasius, P4, P7 |
@@ -789,7 +787,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | $Re$, $\nu$, $\mu$, $\rho$ | Reynoldsov broj, viskoznosti, gustoća | –; m²/s; Pa s; kg/m³ | posvuda |
 | $\lambda$, $\lambda_0$, $\lambda_k$ | Darcyjev koeficijent trenja (iteracije) | – | posvuda |
 | $k_s$, $k_s/D$ | ekvivalentna hrapavost, relativna hrapavost | m (mm) | Colebrook, Z4, Z5 |
-| $h_w$, $h_l$, $h_{loc}$, $h_{w,s}$ | ukupni, linijski, lokalni gubitak; usisni gubitak | m | posvuda, NPSH, Z6 |
+| $h_g$, $h_l$, $h_{loc}$, $h_{g,s}$ | ukupni, linijski, lokalni gubitak; usisni gubitak | m | posvuda, NPSH, Z6 |
 | $h_{AB}$, $h_{AC}$, $h_{CD}$, $h_{DB}$, $h_{BC}$, $h_{DC}$, $h_{AD}$ | gubitci između čvorova | m | uvodna skica (Tumačenje), P3, Z3 |
 | $\xi$, $\sum\xi$, $\zeta$ | lokalni koeficijent, zbroj, ukupni koeficijent dionice | – | posvuda |
 | $R$, $R_i$, $R_{eq}$, $R_v$; $R_{AB}$… | hidraulički otpor ($h=RQ^2$) | s²/m⁵ | mreže, P3, Z3 |
@@ -805,7 +803,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | $p_{aps,s}$, $p_{atm}$, $p_v$; $z_s$ | apsolutni tlak na usisu, atmosferski, tlak pare; visina usisnog presjeka iznad slobodne površine ($z_s<0$ kod napunjenog usisa, Z6 $z_s=-1{,}8$ m) | Pa; m | NPSH, P6, Z6 |
 | $p_1$, $p_2$, $\Delta p$, $\Delta p_{dop}$ | tlakovi presjeka, pad tlaka, dopušteni pad | Pa | bilanca, P1, Z1, Z2 |
 | $\alpha$ | koeficijent kinetičke energije | – | bilanca |
-| $\tau_w$, $\Phi$, $S_{ij}$ | smično naprezanje na stijenci, disipacija, tenzor brzine deformacije | Pa; W/m³; 1/s | izvod, „Fizikalni temelj” |
+| $\tau_{st}$, $\Phi$, $S_{ij}$ | smično naprezanje na stijenci, disipacija, tenzor brzine deformacije | Pa; W/m³; 1/s | izvod, „Fizikalni temelj” |
 
 #### Neusklađenosti oznaka (zabilježeno, ne rješava se)
 
@@ -813,7 +811,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 2. **Ukupna učinkovitost:** $\eta_p$ (crpka, hidraulička/vratilna) u P5/Z4, a $\eta$ (električna–hidraulička) u Z6.
 3. **Gubitci petlje** imenovani prema stvarnom smjeru ($h_{DC}$, $h_{AD}$), a protoci prema obilaznom smjeru ($Q_{CD}$, $Q_{DA}$) — tekst to objašnjava, ali miješa dva načina imenovanja.
 4. **$s=n_2/n_1$** (P4, Z6) uz indeks $s$ za usis i sustav ($v_s$, $z_s$, $H_s$): namjerno zadržano; krivulja crpke pri $n_2$ označena je $H_{p,2}$ kako se ne bi sudarala s $H_s$.
-5. **Z2:** fluid B (voda) ima $\rho_B$, $\nu_B$ (oznake slučaja A/B), a ne $\rho_w$, $\nu_w$; namjerno zadržano.
+5. **Z2:** fluid B (voda) ima $\rho_B$, $\nu_B$ (oznake slučaja A/B), a ne $\rho_v$, $\nu_v$; namjerno zadržano.
 
 
 ## Poglavlje 14
@@ -874,9 +872,9 @@ Napomena: SVG-ovi ovog poglavlja imaju naslijeđeni prefiks datoteke `u12_`, a I
 | $m_{pok}$ | koeficijent pokosa trapeznog kanala (vodoravno : okomito) | – | Z3, Z6 |
 | $\Delta z$, $\Delta z_{max}$ | povišenje dna (prag), najveće bez uspora | m | Z4 |
 | $S_0$, $S_f$ | nagib dna, nagib energijske linije | – | postupno promjenjiv tok, Manning, Z6 |
-| $h_w$ | ukupni gubitak visine između presjeka (linijski i lokalni) | m | jedn. postupno promjenjivog toka |
+| $h_g$ | ukupni gubitak visine između presjeka (linijski i lokalni) | m | jedn. postupno promjenjivog toka |
 | $C_d$, $C_c$, $a$ | koeficijent istjecanja, kontrakcije, otvor ustave | –, –, m | kontrolne građevine |
-| $C_w$, $H$ | koeficijent preljeva; energijska visina iznad krune (jedino značenje $H$ u poglavlju) | –, m | preljev |
+| $C_{pr}$, $H$ | koeficijent preljeva; energijska visina iznad krune (jedino značenje $H$ u poglavlju) | –, m | preljev |
 | $I$, $I_1$, $I_2$ | impulsna funkcija $pA+\dot mv$ | N | skok, uvodna skica, Z5 |
 | $n$, $n_A$, $n_B$, $n_C$ | Manningov koeficijent | s/m^(1/3) | Manning, Z6 |
 | $f$, $f_{min}$ | slobodni rub | m | Z6 |

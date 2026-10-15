@@ -1,12 +1,16 @@
+Crpka i ventilator predaju rad fluidu, turbina ga od fluida preuzima, a brodski propeler i vodomlazni pogon ubrzavaju vodu prema krmi i reakcijom dobivaju potisak. Svi ti turbostrojevi i propulzori izmjenjuju energiju s fluidom promjenom njegove količine gibanja i momenta količine gibanja, pa se poglavlje izravno oslanja na bilance kontrolnog volumena iz []{.mf1-chapter-ref target="u10"}. Novo je to što se lopatice gibaju, pa brzinu koju vidi nepomični promatrač treba razlikovati od one koju vidi lopatica.
+
+Prema turbostrojarskom standardu $c$ je apsolutna brzina fluida, $u$ obodna brzina lopatice, a $w$ relativna brzina fluida; povezane su vektorski, $\vec c=\vec u+\vec w$. Kontrolni volumen koji prati jednu pokretnu lopaticu prima relativni maseni protok $\dot m_{rel}=\rho A(c_1-u)$, dok kolo s mnogo lopatica zahvaća puni sapnički protok $\dot m=\rho Ac_1$. Zato jedna lopatica prima najveću snagu pri $u=c_1/3$, a Peltonovo kolo pri $u=c_1/2$. Kad su ulaz i izlaz rotora na različitim polumjerima, moment količine gibanja vodi do Eulerove jednadžbe turbostrojarstva, $P=\dot m(u_2c_{2t}-u_1c_{1t})=M\omega$; ta je snaga pozitivna kad rotor predaje rad fluidu, kao u crpki. Rad daje samo promjena tangencijalne komponente brzine $c_t$, pa su kutovi lopatica $\beta_1$ i $\beta_2$, mjereni od smjera $-u$, izravni projektni parametri.
+
+Kod propulzije sustav predaje energiju fluidu. Za aktuatorski disk, idealizirani propeler, idealna (Froudeova) učinkovitost $\eta_i=2v_A/(v_A+v_j)$ pokazuje da velika brzina mlaza kupuje potisak $F_T$ skupom kinetičkom energijom traga. Za isti potisak veći disk traži manju induciranu brzinu i snagu, kao kod drona u visu. Iza trupa broda brzina napredovanja manja je od brzine broda, $v_A=(1-\chi)v_s$, gdje je $\chi$ koeficijent sustrujanja.
+
+Poglavlje redom obrađuje pokretnu lopaticu s kutom skretanja i gubitkom relativne brzine, Eulerovu jednadžbu s trokutima brzina na radnom kolu balastne crpke te aktuatorski disk u visu i napredovanju. Radna točka crpke u cjevovodu određuje se u []{.mf1-chapter-ref target="u13"}, a potisak se povezuje s otporom trupa, koji se iz modelnih ispitivanja prenosi Froudeovom sličnošću iz []{.mf1-chapter-ref target="u11"}. Modeli s jednolikim brzinama na presjecima i jednoliko opterećenim diskom bez vrtnje traga i utjecaja trupa daju gornju granicu učinkovitosti; hidrauličke, mehaničke i generatorske gubitke treba procijeniti zasebno.
+
+Slika ispod lijevo prikazuje jednu pokretnu lopaticu: gore je trokut brzina na ulazu, gdje su $u$, $w$ i $c$ kolinearni, a isprekidana crta omeđuje kontrolni volumen koji prati lopaticu. Mlaz ulazi brzinom $c_1$, izlazi relativnom brzinom $w_2$, a $F_x$ je sila fluida na lopaticu u smjeru njezina gibanja brzinom $u$. Desno je shema vodomlaznog pogona s brzinama u brodskom okviru i osi $x$ prema krmi: voda ulazi brzinom broda $v_s$ i izlazi brzinom mlaza $v_j>v_s$, a krug označuje crpku. Potisak $F_T$ djeluje na brod prema pramcu, a donja strelica prikazuje brzinu broda $v_s$ prema tlu.
+
 ![Pregled poglavlja: turbostrojevi i propulzija kroz pokretne lopatice, moment i potisak.](../assets/print/u12_fig_uvod_pregled.svg){#fig-uvod-u12 fig-align="center" fig-alt="Pregled poglavlja: turbostrojevi i propulzija kroz pokretne lopatice, moment i potisak."}
 
-**Tumačenje skice.** Apsolutna, obodna i relativna brzina povezane su vektorski, $\vec c=\vec u+\vec w$; kontrolni volumen jedne pokretne lopatice prima relativni maseni protok $\dot m_{\mathrm{rel}}=\rho A(c_1-u)$, dok kolo zahvaća puni sapnički protok. Za rotor Eulerova veza daje $P=\dot m(u_2c_{2t}-u_1c_{1t})=M\omega$.
-
-Na shemi vodomlaznog pogona brzine su u brodskom okviru, s osi $x$ prema krmi: voda ulazi brzinom broda $v_s$ i izlazi brzinom mlaza $v_j>v_s$; krug označuje crpku.
-
 ## Turbostrojevi i propulzija
-
-Turbostrojevi i propulzori izmjenjuju energiju s fluidom promjenom njegove količine gibanja i momenta količine gibanja.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>

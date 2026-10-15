@@ -1,8 +1,14 @@
+Kad autocisterna koči, brod plovi u zavoju ili centrifuga rotira, tekućina se nakon prolaznog zapljuskivanja smiri u nagnutom ili zakrivljenom položaju. Tada se giba sa spremnikom kao kruto tijelo, bez smičnih naprezanja, pa u sustavu vezanom uz spremnik problem ostaje statički, uz gravitaciju i prividnu (inercijsku) silu. O obliku slobodne površine ovise potrebna slobodna visina, opterećenje stijenki i položaj usisa.
+
+U sustavu koji se giba stalnim translatornim ubrzanjem fluid miruje pod djelovanjem efektivnog polja $\vec g_{\mathrm{eff}}=\vec g-\vec a$, pa ravnoteža elementa daje $\nabla p=\rho\vec g_{\mathrm{eff}}$. Slobodna površina okomita je na to polje. Za vodoravno ubrzanje površina se naginje tako da vrijedi $\tan\theta=a/g$, a razlika razina na krajevima spremnika duljine $L$ iznosi $\Delta h=aL/g$. Isti model opisuje spremnik broda u zavoju: centripetalno ubrzanje $a=v_s^2/R_z$ vrijedi lokalno kada je duljina spremnika mnogo manja od polumjera zavoja $R_z$, a površina se podiže na vanjskoj strani zavoja.
+
+Pri stalnoj vrtnji kutnom brzinom $\omega$ oko okomite osi centrifugalno ubrzanje $\omega^2r$ raste s udaljenošću od osi i oblikuje paraboloid $h(r)=h_C+\omega^2r^2/(2g)$, gdje je $h_C$ visina površine na osi. Za spremnik polumjera $R$ razlika razina između stijenke i osi iznosi $\Delta h=\omega^2R^2/(2g)$. Za okomitu dubinu $h$ ispod slobodne površine i bez vertikalnog ubrzanja ostaje $p=p_{pov}+\rho gh$, kao u klasičnoj hidrostatici iz []{.mf1-chapter-ref target="u03"}. Primjene su separatori, centrifuge, procesne kade i lijevanje pod rotacijom, a u brodogradnji spremnici goriva i tekućeg tereta pri manevrima.
+
+Poglavlje najprije izvodi ravnotežu u neinercijskom sustavu i nagib površine pri translatornom ubrzanju, uključujući vertikalnu komponentu, a zatim paraboloid pri krutoj vrtnji i razine koje iz očuvanja volumena zadovoljavaju $(h_C+h_R)/2=h_0$. Izrazi vrijede samo uz stalno ubrzanje ili stalnu kutnu brzinu. Prije primjene treba provjeriti prelijevanje i ogoljavanje dna jer nakon prvog praga formule za punu površinu više ne vrijede. Integraciju raspodijeljenog tlaka u silu na stijenku obrađuje []{.mf1-chapter-ref target="u05"}, a utjecaj pomaka tekućine na stabilitet broda razmatra se u []{.mf1-chapter-ref target="u06"}.
+
+Slika ispod prikazuje oba slučaja. Lijevo je poprečni presjek broda u zavoju sa spremnikom duljine $L$: ubrzanje $\vec a$ usmjereno je prema središtu zavoja, pa je $\vec g_{\mathrm{eff}}$ otklonjeno prema vanjskoj strani. Površina okomita na to polje zatvara s mirnom razinom $h_0$ kut $\theta$ te se na vanjskoj strani podiže za $\Delta h/2$, a na unutarnjoj za isto toliko spušta. Desno je otvoreni spremnik polumjera $R$ koji se vrti kutnom brzinom $\omega$ oko osi rotacije. Polje $\vec g_{\mathrm{eff}}$ okomito je na lokalnu paraboloidnu površinu, a na osi se svodi na $\vec g$. Površina je na osi na visini $h_C$, uz stijenku na visini $h_R$, a njihova razlika jest $\Delta h$.
+
 ![Pregled poglavlja: Relativno mirovanje fluida](../assets/print/u04_fig_uvod_pregled.svg){#fig-uvod-u04 fig-align="center" fig-alt="Pregled poglavlja: Relativno mirovanje fluida"}
-
-**Tumačenje skice.** U sustavu koji translatorno ubrzava fluid miruje pod djelovanjem efektivnog polja $\vec g_{\mathrm{eff}}=\vec g-\vec a$, pa je $\nabla p=\rho\vec g_{\mathrm{eff}}$. Slobodna površina okomita je na to polje. Za vodoravno ubrzanje vrijede $\tan\theta=a/g$ i $\Delta h=aL/g$. U zavoju broda $a=v_s^2/R_z$ vrijedi lokalno kada je duljina spremnika mnogo manja od polumjera zavoja $R_z$; površina se podiže na vanjskoj strani zavoja.
-
-Pri stalnoj vrtnji centrifugalno ubrzanje $\omega^2r$ oblikuje paraboloid $h(r)=h_C+\omega^2r^2/(2g)$, gdje je $h_C$ visina površine na osi, uz $\Delta h=\omega^2R^2/(2g)$ za spremnik polumjera $R$. Za okomitu dubinu $h$ i bez vertikalnog ubrzanja ostaje $p=p_{pov}+\rho gh$. Primjene su separatori, centrifuge, procesne kade i lijevanje pod rotacijom. Prije primjene treba provjeriti prelijevanje i ogoljavanje dna.
 
 ## Relativno mirovanje fluida
 
@@ -420,7 +426,7 @@ identično linearnom rezultatu. Zakrivljenost pomiče srednju razinu za $\omega^
 
 **Tekst zadatka**
 
-Otvoreni cilindrični spremnik polumjera $R = 0{,}40\ \text{m}$ i visine $H = 0{,}78\ \text{m}$ sadrži vodu gustoće $\rho_w = 1000\ \text{kg/m}^3$, početne visine $h_0 = 0{,}60\ \text{m}$. Pri kutnoj brzini $\omega = 5{,}20\ \text{rad/s}$ voda je u relativnom mirovanju i rotira kao kruto tijelo. Zanemari površinsku napetost, zapljuskivanje i otpor zraka. Volumen je stalan do prvog prelijevanja.
+Otvoreni cilindrični spremnik polumjera $R = 0{,}40\ \text{m}$ i visine $H = 0{,}78\ \text{m}$ sadrži vodu gustoće $\rho_v = 1000\ \text{kg/m}^3$, početne visine $h_0 = 0{,}60\ \text{m}$. Pri kutnoj brzini $\omega = 5{,}20\ \text{rad/s}$ voda je u relativnom mirovanju i rotira kao kruto tijelo. Zanemari površinsku napetost, zapljuskivanje i otpor zraka. Volumen je stalan do prvog prelijevanja.
 
 **Traži se**
 
@@ -462,13 +468,13 @@ $$ {#eq-relativno-mirovanje-2-dubina-na-osi-i-uz-stijenku-02}
 Na dnu spremnika lokalni manometarski tlak dobiva se iz lokalne dubine ispod slobodne površine. U osi spremnika vrijedi
 
 $$
-p_{M,C} = \rho_w g h_C = 1000 \cdot 9{,}81 \cdot 0{,}4897 = 4804\ \text{Pa} \approx 4{,}80\ \text{kPa}.
+p_{M,C} = \rho_v g h_C = 1000 \cdot 9{,}81 \cdot 0{,}4897 = 4804\ \text{Pa} \approx 4{,}80\ \text{kPa}.
 $$ {#eq-relativno-mirovanje-3-tlak-na-dnu-u-tockama-c-01}
 
 Uz stijenku je dubina veća, pa je
 
 $$
-p_{M,D} = \rho_w g h_R = 1000 \cdot 9{,}81 \cdot 0{,}7103 = 6968\ \text{Pa} \approx 6{,}97\ \text{kPa}.
+p_{M,D} = \rho_v g h_R = 1000 \cdot 9{,}81 \cdot 0{,}7103 = 6968\ \text{Pa} \approx 6{,}97\ \text{kPa}.
 $$ {#eq-relativno-mirovanje-3-tlak-na-dnu-u-tockama-c-02}
 
 ### 4. Granica prelijevanja {.unnumbered .unlisted .mf1-step}
@@ -545,12 +551,12 @@ Budući da je $0 < h_{str} < h_{pred} < H$, nema ni prelijevanja ni ogoljavanja.
 
 **Tekst zadatka**
 
-Brodski centrifugalni separator odvaja vodu iz teškog goriva. Bubanj se vrti brzinom $n = 7200\ \text{okr/min}$; unutarnji polumjer bubnja iznosi $r_2 = 120\ \text{mm}$. Pročišćeno gorivo izlazi na polumjeru $r_o = 45\ \text{mm}$, a voda preko gravitacijskog diska na polumjeru $r_w = 47\ \text{mm}$; oba su izlaza otvorena prema istom tlaku. Pri temperaturi separacije gustoća goriva iznosi $\rho_o = 930\ \text{kg/m}^3$, a vode $\rho_w = 960\ \text{kg/m}^3$. Protok goriva iznosi $Q = 1500\ \text{L/h}$, a djelotvorna visina bubnja $H_b = 0{,}15\ \text{m}$. Tekućine u bubnju modeliraj kao fluid u relativnom mirovanju s cilindričnom razdjelnicom; gravitaciju zanemari.<span id="ex-u04-laboratorijska-centrifuga-za-odvajanje-plazme-od-eritrocita"></span>
+Brodski centrifugalni separator odvaja vodu iz teškog goriva. Bubanj se vrti brzinom $n = 7200\ \text{okr/min}$; unutarnji polumjer bubnja iznosi $r_2 = 120\ \text{mm}$. Pročišćeno gorivo izlazi na polumjeru $r_u = 45\ \text{mm}$, a voda preko gravitacijskog diska na polumjeru $r_v = 47\ \text{mm}$; oba su izlaza otvorena prema istom tlaku. Pri temperaturi separacije gustoća goriva iznosi $\rho_u = 930\ \text{kg/m}^3$, a vode $\rho_v = 960\ \text{kg/m}^3$. Protok goriva iznosi $Q = 1500\ \text{L/h}$, a djelotvorna visina bubnja $H_b = 0{,}15\ \text{m}$. Tekućine u bubnju modeliraj kao fluid u relativnom mirovanju s cilindričnom razdjelnicom; gravitaciju zanemari.<span id="ex-u04-laboratorijska-centrifuga-za-odvajanje-plazme-od-eritrocita"></span>
 
 **Traži se**
 
 1. Odredi kutnu brzinu i centrifugalno ubrzanje na obodu bubnja u jedinicama $g$.
-2. Odredi razliku tlakova u gorivu između izlaza $r_o$ i oboda $r_2$.
+2. Odredi razliku tlakova u gorivu između izlaza $r_u$ i oboda $r_2$.
 3. Odredi polumjer razdjelnice goriva i vode $r_i$ i protumači što se događa ako gustoća goriva naraste na $950\ \text{kg/m}^3$.
 4. Procijeni je li pretpostavka relativnog mirovanja opravdana pri zadanom protoku.
 
@@ -566,11 +572,11 @@ Gravitacija je oko $7000$ puta slabija od centrifugalnog ubrzanja na obodu, pa j
 
 ### 2. Tlak u gorivu {.unnumbered .unlisted .mf1-step}
 
-Integracija radijalnog gradijenta $\partial p/\partial r = \rho_o\omega^2 r$ od $r_o$ do $r_2$ daje
+Integracija radijalnog gradijenta $\partial p/\partial r = \rho_u\omega^2 r$ od $r_u$ do $r_2$ daje
 
 $$
 \begin{aligned}
-\Delta p &= \frac{1}{2}\rho_o\omega^2\left(r_2^2 - r_o^2\right) = \frac{1}{2} \cdot 930 \cdot 754{,}0^2 \cdot \left(0{,}120^2 - 0{,}045^2\right) \\
+\Delta p &= \frac{1}{2}\rho_u\omega^2\left(r_2^2 - r_u^2\right) = \frac{1}{2} \cdot 930 \cdot 754{,}0^2 \cdot \left(0{,}120^2 - 0{,}045^2\right) \\
 &\approx 3{,}27 \cdot 10^6\ \text{Pa} \approx 32{,}7\ \text{bar}.
 \end{aligned}
 $$ {#eq-separator-razlika-tlakova-u-gorivu}
@@ -580,7 +586,10 @@ $$ {#eq-separator-razlika-tlakova-u-gorivu}
 Na razdjelnici polumjera $r_i$ tlak je isti s obje strane. Hod od izlaza goriva kroz gorivo i hod od izlaza vode kroz vodu, oba od istog tlaka na izlazima, daju
 
 $$
-\frac{1}{2}\rho_o\omega^2\left(r_i^2 - r_o^2\right) = \frac{1}{2}\rho_w\omega^2\left(r_i^2 - r_w^2\right) \quad\Longrightarrow\quad r_i^2 = \frac{\rho_w r_w^2 - \rho_o r_o^2}{\rho_w - \rho_o}.
+\begin{aligned}
+&\frac{1}{2}\rho_u\omega^2\left(r_i^2 - r_u^2\right) = \frac{1}{2}\rho_v\omega^2\left(r_i^2 - r_v^2\right) \\
+\Longrightarrow\quad &r_i^2 = \frac{\rho_v r_v^2 - \rho_u r_u^2}{\rho_v - \rho_u}.
+\end{aligned}
 $$ {#eq-separator-ravnoteza-razdjelnice}
 
 Kutna brzina se krati: položaj razdjelnice ovisi samo o gustoćama i polumjerima izlaza. Uvrštavanjem
@@ -592,14 +601,14 @@ r_i^2 &= \frac{960 \cdot 0{,}047^2 - 930 \cdot 0{,}045^2}{960 - 930} = \frac{2{,
 \end{aligned}
 $$ {#eq-separator-polumjer-razdjelnice}
 
-Razdjelnica leži između izlaza i oboda ($r_w < r_i < r_2$), pa voda tvori prsten uz obod, a gorivo izlazi čisto. Za $\rho_o = 950\ \text{kg/m}^3$ nazivnik pada na $10$ i $r_i \approx 140\ \text{mm} > r_2$: vodeni prsten nestaje, gorivo probija prema izlazu vode. Gravitacijski disk, odnosno $r_w$, zato se bira prema gustoći goriva.
+Razdjelnica leži između izlaza i oboda ($r_v < r_i < r_2$), pa voda tvori prsten uz obod, a gorivo izlazi čisto. Za $\rho_u = 950\ \text{kg/m}^3$ nazivnik pada na $10$ i $r_i \approx 140\ \text{mm} > r_2$: vodeni prsten nestaje, gorivo probija prema izlazu vode. Gravitacijski disk, odnosno $r_v$, zato se bira prema gustoći goriva.
 
 ### 4. Granica pretpostavke relativnog mirovanja {.unnumbered .unlisted .mf1-step}
 
 Volumen tekućine u bubnju i vrijeme zadržavanja iznose
 
 $$
-V = \pi\left(r_2^2 - r_o^2\right)H_b = 5{,}83 \cdot 10^{-3}\ \text{m}^3, \qquad t_z = \frac{V}{Q} = \frac{5{,}83 \cdot 10^{-3}}{4{,}17 \cdot 10^{-4}} \approx 14\ \text{s}.
+V = \pi\left(r_2^2 - r_u^2\right)H_b = 5{,}83 \cdot 10^{-3}\ \text{m}^3, \qquad t_z = \frac{V}{Q} = \frac{5{,}83 \cdot 10^{-3}}{4{,}17 \cdot 10^{-4}} \approx 14\ \text{s}.
 $$ {#eq-separator-vrijeme-zadrzavanja}
 
 Srednja radijalna brzina na razdjelnici $v_{rel} = Q/(2\pi r_i H_b) \approx 5 \cdot 10^{-3}\ \text{m/s}$ zanemariva je prema obodnoj brzini $\omega r_i \approx 67\ \text{m/s}$, a Coriolisov član $2\omega v_{rel} \approx 7{,}5\ \text{m/s}^2$ iznosi $1{,}5 \cdot 10^{-4}$ centrifugalnog $\omega^2 r_i \approx 5{,}1 \cdot 10^4\ \text{m/s}^2$. Polje tlaka i položaj razdjelnice zato se smiju računati kao za relativno mirovanje.
@@ -645,7 +654,7 @@ Srednja radijalna brzina na razdjelnici $v_{rel} = Q/(2\pi r_i H_b) \approx 5 \c
 
 ::::: {.mf1-vjezbe-list}
 
-Uzmi $g = 9{,}81\ \text{m/s}^2$ i, gdje nije drukčije zadano, gustoću vode $\rho_w = 1000\ \text{kg/m}^3$. U Z1–Z4 i Z6 promatraju se ustaljena stanja relativnog mirovanja, bez protoka kroz spremnik; Z5 provjerava opravdanost te pretpostavke. Gustoće i geometrija smatraju se stalnima, a površinska napetost zanemaruje se. Očitanja u Z4 i Z5 sintetički su nastavni podatci.
+Uzmi $g = 9{,}81\ \text{m/s}^2$ i, gdje nije drukčije zadano, gustoću vode $\rho_v = 1000\ \text{kg/m}^3$. U Z1–Z4 i Z6 promatraju se ustaljena stanja relativnog mirovanja, bez protoka kroz spremnik; Z5 provjerava opravdanost te pretpostavke. Gustoće i geometrija smatraju se stalnima, a površinska napetost zanemaruje se. Očitanja u Z4 i Z5 sintetički su nastavni podatci.
 
 ### Slobodna površina pri ubrzanju {#task-u04-otvoreni-pravokutni-spremnik-duljine-i-pocetne-dubine .unnumbered .unlisted}
 
@@ -703,7 +712,7 @@ $a_{max} \approx 1{,}68\ \text{m/s}^2$.
 
 **Tekst zadatka**
 
-Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho_o = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. **Stanje 1.** Sustav ubrzava prema gore s $a_z = 2{,}3\ \text{m/s}^2$. **Stanje 2.** Cilindar se još giba prema gore, ali usporava uz ubrzanje iznosa $2{,}3\ \text{m/s}^2$ prema dolje.
+Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho_u = 870\ \text{kg/m}^3$ ima visinu stupca fluida $h = 0{,}75\ \text{m}$. **Stanje 1.** Sustav ubrzava prema gore s $a_z = 2{,}3\ \text{m/s}^2$. **Stanje 2.** Cilindar se još giba prema gore, ali usporava uz ubrzanje iznosa $2{,}3\ \text{m/s}^2$ prema dolje.
 
 **Traži se**
 
@@ -713,7 +722,7 @@ Zatvoreni vertikalni cilindar potpuno ispunjen uljem gustoće $\rho_o = 870\ \te
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Koristi efektivnu težinu fluida: $\Delta p = \rho_o (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho_o gh$. Os $z$ usmjeri prema gore; pri kočenju je $a_z<0$ iako je brzina još pozitivna.
+Koristi efektivnu težinu fluida: $\Delta p = \rho_u (g+a_z)h$; za usporedbu u mirovanju uzmi $\Delta p_0 = \rho_u gh$. Os $z$ usmjeri prema gore; pri kočenju je $a_z<0$ iako je brzina još pozitivna.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -732,7 +741,7 @@ $\Delta p \approx 7{,}90\ \text{kPa}$; u mirovanju $\Delta p_0 \approx 6{,}40\ \
 
 **Tekst zadatka**
 
-Zatvorena cilindrična posuda potpuno je ispunjena vodom gustoće $\rho_w = 1000\ \text{kg/m}^3$ i vrti se stalnom brzinom oko okomite osi. Voda je dosegnula vrtnju krutoga tijela. Dva senzora u točkama `A` i `B` nalaze se na istoj visini, na polumjerima $r_A = 80\ \text{mm}$ i $r_B = 240\ \text{mm}$.
+Zatvorena cilindrična posuda potpuno je ispunjena vodom gustoće $\rho_v = 1000\ \text{kg/m}^3$ i vrti se stalnom brzinom oko okomite osi. Voda je dosegnula vrtnju krutoga tijela. Dva senzora u točkama `A` i `B` nalaze se na istoj visini, na polumjerima $r_A = 80\ \text{mm}$ i $r_B = 240\ \text{mm}$.
 
 Mjere manometarske tlakove $p_{M,A} = 12{,}40\ \text{kPa}$ i $p_{M,B} = 14{,}00\ \text{kPa}$ prema istoj referenci; očitanja se odnose izravno na označene točke.
 
@@ -828,7 +837,7 @@ Radni režim definiran je s $\omega = 0{,}80\,\omega_{max}$.
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-U graničnom stanju vrijedi $h_R = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim dubinu u osi $h_C$ i uz stijenku $h_R$, a tlakove iz $p_M = \rho_w gh$. U provjeri tolerancije koristi $\omega=1{,}05k\omega_{max}$ i iz uvjeta $h_C\ge0{,}350\ \text{m}$ riješi gornju granicu za $k$.
+U graničnom stanju vrijedi $h_R = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim dubinu u osi $h_C$ i uz stijenku $h_R$, a tlakove iz $p_M = \rho_v gh$. U provjeri tolerancije koristi $\omega=1{,}05k\omega_{max}$ i iz uvjeta $h_C\ge0{,}350\ \text{m}$ riješi gornju granicu za $k$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}

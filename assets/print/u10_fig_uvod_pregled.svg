@@ -56,7 +56,7 @@
       <line x1="355" y1="108" x2="365" y2="108" stroke="#657781" stroke-width="1.2" />
       <line x1="355" y1="260" x2="365" y2="260" stroke="#657781" stroke-width="1.2" />
       <path id="u13loss_lossHead" d="M360 108 L360 260" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13loss_dim)" marker-end="url(#u13loss_dim)" data-mf1-role="dimension" />
-      <text x="343" y="193" font-size="12" fill="#263746" text-anchor="end">h<tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
+      <text x="343" y="193" font-size="12" fill="#263746" text-anchor="end">h<tspan baseline-shift="sub" font-size="0.7em">g</tspan></text>
       <line x1="275" y1="231.607143" x2="285" y2="231.607143" stroke="#657781" stroke-width="1.2" />
       <line x1="275" y1="271.607143" x2="285" y2="271.607143" stroke="#657781" stroke-width="1.2" />
       <path id="u13loss_velocityHead" d="M280 231.607143 L280 271.607143" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13loss_dim)" marker-end="url(#u13loss_dim)" data-mf1-role="dimension" />

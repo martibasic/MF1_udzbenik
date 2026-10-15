@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 852 408" role="img" aria-labelledby="u14re_title u14re_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:852px;height:auto;">
   <title id="u14re_title">Razvijeno strujanje u istoj kružnoj cijevi</title>
-  <desc id="u14re_desc">Voda (v_A = 1,2 m/s, nu_w) i ulje (v_B = 0,30 m/s, nu_o) u odvojenim režimima iste cijevi. Unutarnji promjer je šest milimetara; strelica uz vodu je srednja brzina. Profil ulja je paraboličan i nestaje na stijenkama; jedna ispuna predstavlja jedan fluid.</desc>
+  <desc id="u14re_desc">Voda (v_A = 1,2 m/s, nu_v) i ulje (v_B = 0,30 m/s, nu_u) u odvojenim režimima iste cijevi. Unutarnji promjer je šest milimetara; strelica uz vodu je srednja brzina. Profil ulja je paraboličan i nestaje na stijenkama; jedna ispuna predstavlja jedan fluid.</desc>
   <defs>
     <pattern id="u14re_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -36,7 +36,7 @@
       <rect id="u14re_p1fluid" x="150" y="106" width="600" height="66" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <text x="45" y="130" font-size="15" fill="#263746" text-anchor="start" font-weight="700">VODA</text>
       <text x="170" y="84" font-size="14" fill="#263746" text-anchor="start"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.75em">A</tspan> = 1,2 m/s</text>
-      <text x="390" y="84" font-size="13" fill="#263746" text-anchor="start">ν<tspan baseline-shift="sub" font-size="0.75em">w</tspan> = 1,0 · 10⁻⁶ m²/s</text>
+      <text x="390" y="84" font-size="13" fill="#263746" text-anchor="start">ν<tspan baseline-shift="sub" font-size="0.75em">v</tspan> = 1,0 · 10⁻⁶ m²/s</text>
       <line x1="780" y1="106" x2="790" y2="106" stroke="#657781" stroke-width="1.2" />
       <line x1="780" y1="172" x2="790" y2="172" stroke="#657781" stroke-width="1.2" />
       <path id="u14re_p1D" data-mf1-role="dimension" d="M785 106 L785 172" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14re_dim)" marker-end="url(#u14re_dim)" />
@@ -51,7 +51,7 @@
       <rect id="u14re_p2fluid" x="150" y="300" width="600" height="66" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
       <text x="45" y="324" font-size="15" fill="#263746" text-anchor="start" font-weight="700">ULJE</text>
       <text x="170" y="278" font-size="14" fill="#263746" text-anchor="start"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.75em">B</tspan> = 0,30 m/s</text>
-      <text x="390" y="278" font-size="13" fill="#263746" text-anchor="start">ν<tspan baseline-shift="sub" font-size="0.75em">o</tspan> = 4,0 · 10⁻⁵ m²/s</text>
+      <text x="390" y="278" font-size="13" fill="#263746" text-anchor="start">ν<tspan baseline-shift="sub" font-size="0.75em">u</tspan> = 4,0 · 10⁻⁵ m²/s</text>
       <line x1="780" y1="300" x2="790" y2="300" stroke="#657781" stroke-width="1.2" />
       <line x1="780" y1="366" x2="790" y2="366" stroke="#657781" stroke-width="1.2" />
       <path id="u14re_p2D" data-mf1-role="dimension" d="M785 300 L785 366" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14re_dim)" marker-end="url(#u14re_dim)" />

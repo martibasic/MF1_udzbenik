@@ -1,6 +1,14 @@
-![Otvoreni tok prelazi iz mirnog u kritični i siloviti režim te kroz hidraulički skok ponovno u dublji tok.](../assets/print/u15_fig_uvod_otvoreni_tok.svg){#fig-otvoreni-tok-pregled fig-align="center" fig-alt="Otvoreni tok prelazi iz mirnog u kritični i siloviti režim te kroz hidraulički skok ponovno u dublji tok."}
+Rijeka, odvodni kanal i preljev brane prenose vodu kojoj je gornja granica izložena atmosferi. Takav tok pokreće gravitacija, a dubina nije zadana geometrijom, nego se prilagođuje protoku, nagibu i otporu dna te nizvodnim uvjetima. Pri istom protoku voda može teći duboko i polagano ili plitko i brzo, a povratak iz brzog u spori tok redovito je nagao. O tim stanjima ovise kapacitet kanala, razina vode uzvodno od građevine i zaštita dna od erozije.
 
-**Tumačenje skice.** Ilustrativni tok ima $q=1{,}40\,\mathrm{m^2/s}$ i početnu mirnu dubinu $y_0=1{,}30\,\mathrm{m}$ uz brzinu $v_0$; $z$ je visina dna, a do skoka vrijedi $z+E=\mathrm{konst}$. Na tjemenu je kritična brzina $v_c$. Indeksi 1 i 2 označuju, kao u izvodu hidrauličkog skoka, silovit presjek neposredno ispred skoka ($y_1$, $v_1$) i mirni presjek iza njega ($y_2$, $v_2$). U skoku je impulsna funkcija jednaka, $I_1=I_2$, a specifična energija opada, $E_2<E_1$. Duljina skoka je shematska.
+Režim toka određuje Froudeov broj $Fr=v/\sqrt{gy_h}$, omjer srednje brzine i brzine dugoga gravitacijskog vala $c=\sqrt{gy_h}$. Pri $Fr<1$ tok je miran i poremećaj putuje i uzvodno, pri $Fr>1$ siloviti tok odnosi poremećaje nizvodno, a kritični tok, $Fr=1$, razdvaja ta dva režima. Za pravokutni kanal s protokom po jedinici širine $q=vy$ specifična energija $E=y+q^2/(2gy^2)$ najmanja je pri kritičnoj dubini $y_c=(q^2/g)^{1/3}$, uz $E_{min}=\tfrac32y_c$. Nagli prijelaz iz silovitog u mirni tok jest hidraulički skok: u njemu je impulsna funkcija jednaka, $I_1=I_2$, a specifična energija opada, $E_2<E_1$. Zato se skok računa bilancom količine gibanja, a ne Bernoullijevom jednadžbom.
+
+Energijska bilanca s gubitkom visine $h_g$ nastavlja []{.mf1-chapter-ref target="u08"} i []{.mf1-chapter-ref target="u13"}, a bilanca skoka primjenjuje zakon količine gibanja iz []{.mf1-chapter-ref target="u10"}. Froudeov broj broda iz []{.mf1-chapter-ref target="u11"} na isti način uspoređuje brzinu s brzinom gravitacijskog vala, a ustava čije se opterećenje računa u []{.mf1-chapter-ref target="u05"} ovdje postaje kontrolna građevina. Primjene su odvodni i oborinski kanali, preljevi i umirni bazeni iza ustava, vučni bazeni te plovidba u plitkoj vodi.
+
+Poglavlje redom obrađuje geometriju presjeka, Froudeov broj i širenje poremećaja, specifičnu energiju i kritičnu dubinu s ustavom i širokim preljevom, postupno promjenjiv tok, hidraulički skok te uniformni tok s Manningovom jednadžbom. Jednodimenzijski model sa srednjom brzinom pretpostavlja blag nagib i približno hidrostatičku raspodjelu tlaka; ne opisuje unutrašnjost skoka ni tok preko kratkoga zakrivljenog praga. Koeficijenti $C_d$, $C_{pr}$ i Manningov $n$ empirijski su i vrijede samo u ispitanom rasponu.
+
+Slika ispod prikazuje ilustrativni tok s $q=1{,}40\,\mathrm{m^2/s}$ preko blagog praga. Lijevo je mirni tok početne dubine $y_0=1{,}30\,\mathrm{m}$ i brzine $v_0$. Na tjemenu praga tok prolazi kritičnim presjekom s kritičnom brzinom $v_c$, a niz nizvodnu stranu ubrzava u siloviti tok. Visina dna $z$ mijenja se duž praga, a do skoka vrijedi $z+E=\mathrm{konst}$. Indeksi 1 i 2 označuju, kao u izvodu hidrauličkog skoka, silovit presjek neposredno ispred skoka ($y_1$, $v_1$) i mirni presjek iza njega ($y_2$, $v_2$); isprekidane crte omeđuju kontrolni volumen skoka. Duljina skoka je shematska.
+
+![Otvoreni tok prelazi iz mirnog u kritični i siloviti režim te kroz hidraulički skok ponovno u dublji tok.](../assets/print/u15_fig_uvod_otvoreni_tok.svg){#fig-otvoreni-tok-pregled fig-align="center" fig-alt="Otvoreni tok prelazi iz mirnog u kritični i siloviti režim te kroz hidraulički skok ponovno u dublji tok."}
 
 ## Otvoreni tokovi {#sec-otvoreni-tok-motivacija}
 
@@ -160,7 +168,7 @@ Energija je izračunata iz nezaokružene kritične dubine.
 
 **Provjera i tumačenje**
 
-$v_c=q/y_c=2{,}70\ \text{m/s}$ i $v_c/\sqrt{gy_c}=1{,}00$; stvarni preljev dodaje empirijski koeficijent $C_w$ (odjeljak o kontrolnim građevinama).
+$v_c=q/y_c=2{,}70\ \text{m/s}$ i $v_c/\sqrt{gy_c}=1{,}00$; stvarni preljev dodaje empirijski koeficijent $C_{pr}$ (odjeljak o kontrolnim građevinama).
 :::
 
 ### Kontrolne građevine: ustava i preljev {#sec-kontrolne-gradevine}
@@ -175,10 +183,10 @@ $$ {#eq-istjecanje-ispod-ustave}
 gdje $C_d$ sažima kontrakciju i gubitke i mora doći iz ispitivanja za konkretnu geometriju. Preko širokog preljeva tok prolazi kritičnim presjekom, pa se iz $y_c=\tfrac23H$ uz energijsku visinu $H$ iznad krune (u ovom poglavlju $H$ označuje samo tu energijsku visinu) dobiva
 
 $$
-Q=C_w\,b\,\sqrt{g}\left(\tfrac23H\right)^{3/2}\approx1{,}70\,C_w\,b\,H^{3/2},
+Q=C_{pr}\,b\,\sqrt{g}\left(\tfrac23H\right)^{3/2}\approx1{,}70\,C_{pr}\,b\,H^{3/2},
 $$ {#eq-preljev-siroki}
 
-s empirijskim $C_w$ blizu jedinice za dobro zaobljen prag. Obje relacije daju uzvodnu razinu za zadani protok, a dubinu ispod ustave $y_1\approx C_ca$ koju @ex-hidraulicki-skok-bazen uzima kao izmjerenu; koeficijenti su empirijski i vrijede samo u ispitanom rasponu.
+s empirijskim $C_{pr}$ blizu jedinice za dobro zaobljen prag. Obje relacije daju uzvodnu razinu za zadani protok, a dubinu ispod ustave $y_1\approx C_ca$ koju @ex-hidraulicki-skok-bazen uzima kao izmjerenu; koeficijenti su empirijski i vrijede samo u ispitanom rasponu.
 
 ## Postupno promjenjiv tok i kontrolni presjek {#sec-postupno-promjenjiv-tok}
 
@@ -186,10 +194,10 @@ Između presjeka energijska bilanca može se zapisati
 
 $$
 z_1+y_1+\alpha_1\frac{v_1^2}{2g}
-=z_2+y_2+\alpha_2\frac{v_2^2}{2g}+h_w.
+=z_2+y_2+\alpha_2\frac{v_2^2}{2g}+h_g.
 $$ {#eq-otvoreni-tokovi-postupno-promjenjiv-tok-i-kontrolni-presjek-sec-01}
 
-Ovdje je $z$ visina dna iznad referentne razine, a $h_w$ ukupni gubitak visine između presjeka (linijski gubitak trenja i eventualni lokalni gubitci). Kod postupno promjenjivog toka dubina se mijenja na duljini mnogo većoj od dubine pa je raspodjela tlaka približno hidrostatička. Diferencijalni zapis za prizmatični kanal jest
+Ovdje je $z$ visina dna iznad referentne razine, a $h_g$ ukupni gubitak visine između presjeka (linijski gubitak trenja i eventualni lokalni gubitci). Kod postupno promjenjivog toka dubina se mijenja na duljini mnogo većoj od dubine pa je raspodjela tlaka približno hidrostatička. Diferencijalni zapis za prizmatični kanal jest
 
 $$
 \frac{dy}{dx}=\frac{S_0-S_f}{1-Fr^2},

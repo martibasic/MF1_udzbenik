@@ -4,7 +4,7 @@
     "tools/build_print_figures.mjs": "22705860348828e72bee5f344e81e90cc4464d8147830f93b09b1899d77d3981",
     "assets/figure-tokens.json": "6480c6aeef3c6a2e275086b7c66cba7280fb14d43eadc41c7ba9aa9a59e182fb",
     "assets/figure-compositions.json": "e55c7898d8bb45338946f8e4931cceee06e4378dedf0909366f8d54bfe048174",
-    "assets/print-layouts.json": "e320b1dc23e7ce7cfcd7b83d2a93fdc63a52a71f1835f9e89a72ad005aad448a"
+    "assets/print-layouts.json": "3fda967888e6bafc5bd45bda54551b41ff6c4104912ab87a4dd7dde63aac30a0"
   },
   "tokens": {
     "text-width-pt": 447.874,
@@ -146,13 +146,13 @@
             1
           ],
           "keep_with_next": true,
-          "sha256": "16cad356408010d7ff06b53f2b0d5eebf90457a2980a8337309be2e03b2b60e1"
+          "sha256": "43ed6da447a269a9f9201827acb79a825ce57f7b638a23f74b15b1f5832f6490"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
-      "source_text_count": 8,
-      "source_geometry_count": 17,
+      "source_text_count": 12,
+      "source_geometry_count": 22,
       "removed_decorations": [],
       "panels": [
         {
@@ -178,7 +178,7 @@
         },
         {
           "width": 277.68188000000004,
-          "height": 198.83837459302327,
+          "height": 213.83837459302327,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -191,17 +191,26 @@
             19,
             20,
             21,
-            22
+            22,
+            25,
+            27,
+            28,
+            30,
+            31
           ],
           "texts": [
             5,
             6,
             7,
-            8
+            8,
+            9,
+            10,
+            11,
+            12
           ]
         }
       ],
-      "source_sha1": "6c92e43b95da6df51f0d0ece61022d16693dd4a5"
+      "source_sha1": "fab48cb4539ff5d4cc97021707e46ce3554455c6"
     },
     "u01_fig_kocnica_vozila.svg": {
       "rows": [
@@ -337,7 +346,7 @@
             2
           ],
           "keep_with_next": true,
-          "sha256": "e6ff285e9ba3233d6590565b896f2a5813a8bb53e02360295e4f31a77fa13e8a"
+          "sha256": "72b403b512d22033770dc674ba8e294a29b691450cc39661381cffcfde95e4ae"
         }
       ],
       "kind": "composite",
@@ -434,7 +443,7 @@
           ]
         }
       ],
-      "source_sha1": "2ac48b6e5f041a21717ffcd90de4cdb7972959eb"
+      "source_sha1": "99d399f34319d9a724db983a1ca20a91ed6717e4"
     },
     "u01_val1_klip_manometar.svg": {
       "rows": [
@@ -1804,7 +1813,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "8f8169ebd2eccef46e40d1f30c0ef6c2645560226d5311539bf4110b242e5d74"
+          "sha256": "eeec13ad9f1b9ed8cfa443512898ab91119b14cf5c1e402b9bfb276f512cc573"
         }
       ],
       "kind": "wide",
@@ -1877,7 +1886,7 @@
           ]
         }
       ],
-      "source_sha1": "891b86bf35fa2d2edd6e686dc97e9a995493d7eb"
+      "source_sha1": "6fdefdf58e04411d13322afb1a7af04a43d53af1"
     },
     "u03_fig_balastni_tank.svg": {
       "rows": [
@@ -1993,7 +2002,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "116696b21288883ec25e3071c0a3e28693713be07eb571b5fabd7473d3d0a919"
+          "sha256": "e7f66eacd074485db78ab35bd7dc24968e1034459257f2bceeb17e3301fb06be"
         }
       ],
       "kind": "standard",
@@ -2053,7 +2062,7 @@
           ]
         }
       ],
-      "source_sha1": "ca44d22a76c0a533d67d582f1322cfa925dc6469"
+      "source_sha1": "333e1f72aee7241157a0092b213f65d4ecaada6e"
     },
     "u03_fig_uvod_pregled.svg": {
       "rows": [
@@ -2194,7 +2203,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "898f0cd1eb92bf7df8e66749fb48ad2197544e5cb36218e0d100b2fca0f48bc4"
+          "sha256": "1e4fcf92703c386c03595c5cf2f1e0a925770663bfacb5ed5da1a1a7bf0aef08"
         }
       ],
       "kind": "standard",
@@ -2243,7 +2252,7 @@
           ]
         }
       ],
-      "source_sha1": "9188460bd8ec7586ce34d31e1745112fca18bb87"
+      "source_sha1": "42ec638e9314d646cebf2168e95ff73a14e7e1f6"
     },
     "u03_val1_diferencijalni_manometar.svg": {
       "rows": [
@@ -2255,7 +2264,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "6df3ccbea954b64a6df73ac661db29cff8afa5eae2b6ce3077bcda604091e4e3"
+          "sha256": "cbdc39ce6a2c11b9e759cf1fc8e9804b56f2edb1728fcf2bb0285d4f64017ed8"
         }
       ],
       "kind": "standard",
@@ -2319,7 +2328,7 @@
           ]
         }
       ],
-      "source_sha1": "1d60ad67b584ff1e0c56c5d01d81ac3f67a9e863"
+      "source_sha1": "0fb3a685b16a9488ecfd669fd898badcd7a4a314"
     },
     "u03_vjezbe_skice.svg": {
       "rows": [
@@ -2343,7 +2352,7 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "e844d5ac32e6b0584352beaff6f81222fcaf9a53f0f7db131fe0a8b2f932d4f0"
+          "sha256": "dcaf7b2b8392a48aa1ff0abe117585d2e2a05422a4f324dc0a0e85c986d2beee"
         },
         {
           "file": "u03_vjezbe_skice--3.svg",
@@ -2454,7 +2463,7 @@
         },
         {
           "width": 216.937,
-          "height": 211.47127037500377,
+          "height": 212.37009368960332,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -2570,7 +2579,7 @@
           ]
         }
       ],
-      "source_sha1": "24fb5d662283728c17a061c081e061884e7914d2"
+      "source_sha1": "97ca62e33de1019f64703bcd393834aefc7f392b"
     },
     "u04_ch1_rotirajuci_spremnik_paraboloid.svg": {
       "rows": [
@@ -3168,7 +3177,7 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "1a173593a9f449efb088098dbb0c8ab29d40fe950ccbe6c7f07745aeef4352fc"
+          "sha256": "2d208e62c57aa63c7e184fffcf2ef1aa307c300c214fdd48ec1f15b0b383174c"
         },
         {
           "file": "u04_vjezbe_skice--3.svg",
@@ -3418,19 +3427,19 @@
           ]
         }
       ],
-      "source_sha1": "f6d0546b4233fedbf43ac8801a051aa3abccf562"
+      "source_sha1": "b05bbb8627fb0115a1390bc9ca5308f5ec04b75f"
     },
     "u05_ch1_pregrada_ulje_voda.svg": {
       "rows": [
         {
           "file": "u05_ch1_pregrada_ulje_voda--1.svg",
           "width": 277.682,
-          "height": 219.076,
+          "height": 219.213,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "10fd59c77273e06fc30fbec93ce9c87bf92976dc9f7ca12f940cc230358df784"
+          "sha256": "e2003638beff432103ed1223fed8092542b7af0fd0a66f7af1456153116354d0"
         }
       ],
       "kind": "standard",
@@ -3441,7 +3450,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 219.07624875983248,
+          "height": 219.2133431022251,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -3501,7 +3510,7 @@
           ]
         }
       ],
-      "source_sha1": "87c61d624b3bcb9e342dd50e1a4b201ea6b3f2ef"
+      "source_sha1": "ea5f55bd6c041184a17f0a238a63d1d26ee3e4d4"
     },
     "u05_fig_uvod_pregled.svg": {
       "rows": [
@@ -4308,7 +4317,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "e2bc18b69ee56b17b3a966a9280d782eb869d70ab90d09e6376c04e6cb10da08"
+          "sha256": "7f1c65a9d66b3fe918a87f81e9b08b5eb410ceacf6720b05a4da1d5047f70aa8"
         }
       ],
       "kind": "standard",
@@ -4366,7 +4375,7 @@
           ]
         }
       ],
-      "source_sha1": "7dbfb12bd948956f933673f0412cfb0dc2123cd7"
+      "source_sha1": "260dd8ac505dd819eb01d44386559dba1a8dee65"
     },
     "u07_ch2_poplavljen_tank.svg": {
       "rows": [
@@ -4719,7 +4728,7 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "4e3e43760b4710a5e1d91e25083de2f20b57e4b78e112a671a1f9572d3fcf18a"
+          "sha256": "227bf26a9698aa1ef770c0bddbae1b5e2df656f9d2565444635fc22235d9155e"
         }
       ],
       "kind": "composite",
@@ -4917,7 +4926,7 @@
           ]
         }
       ],
-      "source_sha1": "5c0bcbeebc33f2e6626bc2c396bf1d60826f74f9"
+      "source_sha1": "600e0f9d297f3ee0d09c81eb0cf3272f74a6e4d9"
     },
     "u08_ch1_mijesajuci_spremnik.svg": {
       "rows": [
@@ -4929,7 +4938,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "2ceb77decd298791e0f121e57d9aa23ab92d380d17efef8579a5b8c03d5ad8fe"
+          "sha256": "4526d0379655ee6b55b0bdc9911b11e8a275513abf4ab69c904629b46e39215f"
         }
       ],
       "kind": "wide",
@@ -4999,7 +5008,7 @@
           ]
         }
       ],
-      "source_sha1": "c751c678c95c400d95d2d0e3ae94f74eb577539f"
+      "source_sha1": "d6c10cc86f9a86b2221a7a5353223d8783fe3cbe"
     },
     "u08_fig_kinematika.svg": {
       "rows": [
@@ -5510,7 +5519,7 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "8dd23cdd87e2a09a1da1c2bc94e592bce99387650716f2e40feb6d36047565fe"
+          "sha256": "6987fdb7b53cacfcb1dce02eac24567028b88496dec342ee294c5ff06feb21d6"
         }
       ],
       "kind": "composite",
@@ -5705,7 +5714,7 @@
           ]
         }
       ],
-      "source_sha1": "12f8e3e4e5a1175bbc3007b58c5f8ce616b8f7a9"
+      "source_sha1": "bd759e301eb0a32a7d40c87af3bc397ff5a93d68"
     },
     "u09_ch1_bypass_sifon_suzenje_mlaz.svg": {
       "rows": [
@@ -5717,7 +5726,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "358ac527e2d0a368e6b2a61808d2407dd16eb09c356b766ac92d1392874cf1fa"
+          "sha256": "a438039400e7657e077a7b2de0adec05b2ce2be266f21ec4986e365112fed512"
         }
       ],
       "kind": "standard",
@@ -5805,7 +5814,7 @@
           ]
         }
       ],
-      "source_sha1": "3302801f41900acf2b2cbef95dc01ea2a4822970"
+      "source_sha1": "1da94f9c0aee2f978f823d99f072d3d627044820"
     },
     "u09_egl_hgl_schema.svg": {
       "rows": [
@@ -6047,7 +6056,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "87db175ac48593286e0898949021af9bb3995b3ce10c11bff07116f2d4b25675"
+          "sha256": "761673dc57fe13d1155595c512fa8aa8ffea6b7030b1e47a5cc3c4be384306e4"
         }
       ],
       "kind": "standard",
@@ -6105,7 +6114,7 @@
           ]
         }
       ],
-      "source_sha1": "06a16a3029253b74a5b2677dfaf20e28635ec135"
+      "source_sha1": "86f8e14edd130f4045aee2472a82f3490b6cd907"
     },
     "u09_kompresibilni_vjezbe_skice.svg": {
       "rows": [
@@ -6869,7 +6878,7 @@
             1
           ],
           "keep_with_next": true,
-          "sha256": "4d7820694126d158471d41682f932e352c7d1fff151176475a3c5dd7a25a1ae3"
+          "sha256": "8e8ad3a37fecaa0b87d63278b31b50c99add927169b7f915f4707d6824b02ca1"
         }
       ],
       "kind": "composite",
@@ -6967,7 +6976,7 @@
           ]
         }
       ],
-      "source_sha1": "c5f2e60d6b26cd5ae71dfed723d4c1f842f8f92e"
+      "source_sha1": "3a196e5d708a5a4c7c3ecc2472bcbdcaf352d82d"
     },
     "u11_ch1_t_racva_konzola.svg": {
       "rows": [
@@ -9020,7 +9029,7 @@
             4
           ],
           "keep_with_next": false,
-          "sha256": "6f8e828222ef8bdd697078d9056741e26c80ecd0ba1ebe3b006e84c1c659276b"
+          "sha256": "9bd507dbf55fa3ca941d679e9e13e2cb010a54745bc6e8d72639fac9210381d0"
         },
         {
           "file": "u13_mreze_vjezbe_skice--4.svg",
@@ -9030,7 +9039,7 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "4a0480707c64a43fe7c9581e300b65a7dd4829ecd89b4f9eb8600d98e5846b86"
+          "sha256": "4dfaecb55e3748fda7cef93b208fb0375d867be6c4ac2a51538af369e9aa9855"
         }
       ],
       "kind": "composite",
@@ -9267,7 +9276,7 @@
           ]
         }
       ],
-      "source_sha1": "72f5881253029e6304ba498383929aef50241bb2"
+      "source_sha1": "bd753ad75d77fd24f7c1b27fabed531c56729900"
     },
     "u14_ch1_kugla_struja.svg": {
       "rows": [
@@ -9544,7 +9553,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "67ddc9267d23a486afc48e5d50ec0fc379dcb1cdb7d0c73edc3f0f92986ebdbe"
+          "sha256": "de0160b4374fb129eea96c23d15c474ab7c7c23532e2fac175f4f9f50d7f69e3"
         }
       ],
       "kind": "wide",
@@ -9599,7 +9608,7 @@
           ]
         }
       ],
-      "source_sha1": "bc380ecd2e3395d7499bf31567fb1e8ea171e98b"
+      "source_sha1": "aa9c3d64cca32f8cd80d1a12bac73b5099cc7448"
     },
     "u14_val2_brod_bazen.svg": {
       "rows": [
@@ -9752,7 +9761,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "2c3e9232b542af981c84051b2321169b06ad7f0c76d5fedb38a15d8b8ebf2ec4"
+          "sha256": "53d2e31ac38ada6f8e38d6381742b38b51c0397370ad63f6abc7acb6dfccf538"
         }
       ],
       "kind": "mini",
@@ -9792,7 +9801,7 @@
           ]
         }
       ],
-      "source_sha1": "a5cfd49ce04f5f73e58fada93e026683f5c2b9b8"
+      "source_sha1": "bd08a6e681516197d6dd2af06054e89d61b9d5e3"
     },
     "u14_val5_mach_strouhal.svg": {
       "rows": [

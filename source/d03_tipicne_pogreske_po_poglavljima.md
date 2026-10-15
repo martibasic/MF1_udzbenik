@@ -69,7 +69,7 @@ Miješanje apsolutnog, manometarskog i vakuumskog tlaka; pogrešni predznaci pri
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u manometru; prema dolje tlak raste, prema gore pada. Za slojeve zatvori i ukupnu visinu i tlak. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku $\rho g\,\delta h$ i rezervu skale. Za teretni tank zapiši $p_{M,dno}=p_{M,pl}+\rho_ogh_o+\rho_{mv}gh_w$ i debljinu vode uzmi iz sondiranja. Za usis crpke u radu trebaju gubitci, brzinska visina i usporedba $NPSH_a$ s proizvođačevim $NPSH_r$, oboje s apsolutnim tlakom.
+Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u manometru; prema dolje tlak raste, prema gore pada. Za slojeve zatvori i ukupnu visinu i tlak. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku $\rho g\,\delta h$ i rezervu skale. Za teretni tank zapiši $p_{M,dno}=p_{M,pl}+\rho_ugh_u+\rho_{mv}gh_v$ i debljinu vode uzmi iz sondiranja. Za usis crpke u radu trebaju gubitci, brzinska visina i usporedba $NPSH_a$ s proizvođačevim $NPSH_r$, oboje s apsolutnim tlakom.
 :::
 ::::
 
@@ -243,7 +243,7 @@ Zadrži lokalno i konvektivno ubrzanje dok pretpostavke ne uklone članove, zada
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Uporaba $\lambda=64/Re$ bez provjere da je tok laminaran, ili turbulentne korelacije pri $Re<2300$ (Z2); zadržavanje istog $\lambda$ pri promjeni protoka (Z4) ili isti $\lambda$ za sve ponuđene promjere, iako se mijenjaju $Re$ i $k_s/D$; zbrajanje koeficijenata $\xi$ definiranih uz različite referentne brzine (proširenje, grananje) kao da vrijede za istu brzinu; prigušivanje već otpornijeg ogranka radi jednakih protoka (Z3); miješanje razina snage $P_h$, $P_{vr}$, $P_{el}$ i jedinica (kW i W; $h_w$ u m i $\Delta p$ u Pa); manometarski tlak u $NPSH_a$; primjena istog $NPSH_r$ pri različitim brzinama vrtnje (Z6).
+Uporaba $\lambda=64/Re$ bez provjere da je tok laminaran, ili turbulentne korelacije pri $Re<2300$ (Z2); zadržavanje istog $\lambda$ pri promjeni protoka (Z4) ili isti $\lambda$ za sve ponuđene promjere, iako se mijenjaju $Re$ i $k_s/D$; zbrajanje koeficijenata $\xi$ definiranih uz različite referentne brzine (proširenje, grananje) kao da vrijede za istu brzinu; prigušivanje već otpornijeg ogranka radi jednakih protoka (Z3); miješanje razina snage $P_h$, $P_{vr}$, $P_{el}$ i jedinica (kW i W; $h_g$ u m i $\Delta p$ u Pa); manometarski tlak u $NPSH_a$; primjena istog $NPSH_r$ pri različitim brzinama vrtnje (Z6).
 :::
 
 ::: {.mf1-error-column}

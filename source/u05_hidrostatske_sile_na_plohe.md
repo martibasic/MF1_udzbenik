@@ -1,8 +1,14 @@
+Fluid koji miruje djeluje na plohu samo okomitim tlakom, a taj tlak raste s dubinom. Za dimenzioniranje vrata, poklopca ili pregrade potrebni su iznos, smjer i pravac djelovanja rezultantne sile, jer o njima ovise reakcije u zglobovima, vijcima i osloncima. Polazište je raspodjela tlaka izvedena u []{.mf1-chapter-ref target="u03"}, a u ovom se poglavlju ta raspodjela integrira po plohi.
+
+Na ravnoj plohi sve lokalne tlačne sile imaju isti smjer, pa je rezultanta $F=\rho gAh_C$: tlak u težištu množi se površinom $A$. Za vertikalnu plohu visine $H$ čiji je gornji rub na dubini $h_1$ težište je na dubini $h_C=h_1+H/2$. Rezultanta ne djeluje u težištu, nego u centru tlaka na dubini $h_{CP}=h_C+I_G/(Ah_C)$, gdje je $I_G$ aksijalni moment površine oko težišne osi. Za pravokutnik širine $b$ iznosi $bH^3/12$, za trokut s osnovicom $b$ i visinom $H$ iznosi $bH^3/36$, a za krug promjera $d$ iznosi $\pi d^4/64$. Budući da tlak raste s dubinom, centar tlaka CP leži ispod težišta C, a razmak $I_G/(Ah_C)$ smanjuje se što je ploha dublje.
+
+Na zakrivljenoj plohi lokalne normale mijenjaju smjer, pa se rezultanta traži po komponentama. Iznos horizontalne komponente jednak je sili na vertikalnu projekciju plohe, $|F_H|=\rho gA_xh_{Cx}$, a iznos vertikalne komponente težini fluida u pomoćnom volumenu između plohe i razine slobodne površine, $|F_V|=\rho gV^*$. Smjer svake komponente određuje jedinična normala $\mathbf n_f$ usmjerena iz stvarnog fluida prema stijenci. Jednoliki tlak plina $p_{pl}$ koji se s druge strane plohe ne poništava mijenja i silu i položaj njezina hvatišta.
+
+Poglavlje redom obrađuje izbor referentnog tlaka i smjera sile, rezultantu i centar tlaka na vertikalnoj i nagnutoj ravnoj plohi te komponente sile na zakrivljenoj plohi. Model pretpostavlja mirujući fluid, homogene slojeve stalne gustoće, jednoliko gravitacijsko polje i zanemarive kapilarne učinke. Hidrostatika pritom daje opterećenje konstrukcije, ne i njezinu čvrstoću. Isti se postupak primjenjuje na brodske pregrade i vodonepropusna vrata, brane, ustave i taložnike. Uzgon kao rezultanta tlaka po zatvorenoj plohi obrađuje se u []{.mf1-chapter-ref target="u06"}, a tlak uz ustavu ispod koje voda struji u []{.mf1-chapter-ref target="u15"}.
+
+Slika ispod povezuje model i primjenu. Lijevo je vertikalna ploha površine $A$ i visine $H$ u stijenci spremnika s vodom gustoće $\rho$. Trapezna raspodjela tlaka okomita je na plohu i raste od vrha prema dnu, a rezultanta $F$ djeluje u centru tlaka CP, ispod težišta C na dubini $h_C$. Desno je inspekcijski poklopac na stijenci spremnika s gornjim zglobom i donjim vijkom; gornji mu je rub na dubini $h_1$, a s vanjske strane je zrak. Na prikazanoj plohi tlak raste s dubinom, pa je CP ispod C i donji vijak prenosi veću komponentu reakcije od gornjeg zgloba.
+
 ![Od raspodjele hidrostatičkog tlaka do rezultantne sile i njezina pravca djelovanja na ravnoj plohi](../assets/print/u05_fig_uvod_pregled.svg){#fig-u05-pregled-sila-na-plohe fig-align="center" style="width:100%;max-width:980px;" fig-alt="Od raspodjele hidrostatičkog tlaka do rezultantne sile i njezina pravca djelovanja na ravnoj plohi"}
-
-**Tumačenje skice.** Rezultanta tlaka na ravnu plohu jest $F=\rho gAh_C$: tlak u težištu množi se površinom. Za vertikalnu plohu visine $H$ čiji je gornji rub na dubini $h_1$ težište je na dubini $h_C=h_1+H/2$, a dubina centra tlaka iznosi $h_{CP}=h_C+I_G/(Ah_C)$, gdje je $I_G$ aksijalni moment površine oko težišne osi. Vrijednosti su $bH^3/12$ za pravokutnik, $bH^3/36$ za trokut i $\pi d^4/64$ za krug.
-
-Na prikazanoj plohi tlak raste s dubinom, pa je CP ispod težišta C i donji vijak prenosi veću komponentu reakcije od gornjeg zgloba. Isti se postupak primjenjuje na brodske pregrade, brane i taložnike.
 
 ## Hidrostatske sile na plohe
 
@@ -283,7 +289,7 @@ Centar tlaka mora biti niže od težišta duž plohe jer tlak raste: $0{,}600<y_
 
 **Tekst zadatka**
 
-Vertikalna pregrada širine $b=1{,}40\ \mathrm{m}$ zglobno je vezana na slobodnoj površini. S jedne strane zadržava ulje gustoće $\rho_o=820\ \mathrm{kg/m^3}$ i visine $h_o=1{,}00\ \mathrm{m}$ iznad vode gustoće $\rho_w=1000\ \mathrm{kg/m^3}$ i visine $h_w=1{,}80\ \mathrm{m}$. Druga strana je na atmosferi. Donji rub pridržava vodoravna spojnica. Fluidi miruju i ne miješaju se; zglob i spojnica su idealni.
+Vertikalna pregrada širine $b=1{,}40\ \mathrm{m}$ zglobno je vezana na slobodnoj površini. S jedne strane zadržava ulje gustoće $\rho_u=820\ \mathrm{kg/m^3}$ i visine $h_u=1{,}00\ \mathrm{m}$ iznad vode gustoće $\rho_v=1000\ \mathrm{kg/m^3}$ i visine $h_v=1{,}80\ \mathrm{m}$. Druga strana je na atmosferi. Donji rub pridržava vodoravna spojnica. Fluidi miruju i ne miješaju se; zglob i spojnica su idealni.
 
 **Traži se**
 
@@ -298,17 +304,17 @@ Odredi silu, centar tlaka i statičke reakcije.
 Na uljnom polju tlak čini trokut, pa je
 
 $$
-F_1=\frac12\rho_o gb h_o^2=5{,}631\ \mathrm{kN}.
+F_1=\frac12\rho_u gb h_u^2=5{,}631\ \mathrm{kN}.
 $$ {#eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-01}
 
 Na vodenom polju ostaje pravokutni doprinos uljnog stupca i trokutni doprinos vode:
 
 $$
-F_{2,r}=\rho_o gbh_oh_w=20{,}271\ \mathrm{kN},
+F_{2,r}=\rho_u gbh_uh_v=20{,}271\ \mathrm{kN},
 $$ {#eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-02}
 
 $$
-F_{2,t}=\frac12\rho_wgbh_w^2=22{,}249\ \mathrm{kN}.
+F_{2,t}=\frac12\rho_vgbh_v^2=22{,}249\ \mathrm{kN}.
 $$ {#eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-03}
 
 Ukupna sila iznosi
@@ -321,9 +327,9 @@ Momenti oko gornjeg zgloba računaju se preko težišta svakog dijela dijagrama 
 
 $$
 M_A=
-F_1\frac{2h_o}{3}
-+F_{2,r}\left(h_o+\frac{h_w}{2}\right)
-+F_{2,t}\left(h_o+\frac{2h_w}{3}\right)
+F_1\frac{2h_u}{3}
++F_{2,r}\left(h_u+\frac{h_v}{2}\right)
++F_{2,t}\left(h_u+\frac{2h_v}{3}\right)
 =91{,}218\ \mathrm{kN\,m}.
 $$ {#eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-05}
 
@@ -334,13 +340,13 @@ h_{CP}=\frac{M_A}{F}=1{,}894\ \mathrm{m},
 $$ {#eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-06}
 
 $$
-T=\frac{M_A}{h_o+h_w}=32{,}578\ \mathrm{kN},\qquad
+T=\frac{M_A}{h_u+h_v}=32{,}578\ \mathrm{kN},\qquad
 R_A=F-T=15{,}574\ \mathrm{kN}.
 $$ {#eq-sile-plohe-rijeseni-primjer-zglobna-pregrada-s-uljem-iznad-07}
 
 **Provjera i tumačenje**
 
-Tlak je kontinuiran na razdjelnici: vodeno polje počinje s tlakom $\rho_o gh_o$, a ne s nulom; bez doprinosa $F_{2,r}$ to ne bi vrijedilo. Bilance $R_A+T=F$ i $T(h_o+h_w)=M_A$ su zatvorene.
+Tlak je kontinuiran na razdjelnici: vodeno polje počinje s tlakom $\rho_u gh_u$, a ne s nulom; bez doprinosa $F_{2,r}$ to ne bi vrijedilo. Bilance $R_A+T=F$ i $T(h_u+h_v)=M_A$ su zatvorene.
 :::
 
 ## Zakrivljena ploha: projekcija i pomoćni volumen

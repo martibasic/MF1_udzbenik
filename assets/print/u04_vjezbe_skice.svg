@@ -113,7 +113,7 @@
         <line x1="63" y1="167" x2="63" y2="104" stroke="#356b83" stroke-width="1.6" marker-end="url(#u04vs_vopen)" data-mf1-vector="velocity" />
         <text x="56" y="94" font-size="13" fill="#263746" text-anchor="start" font-weight="700">v</text>
         <text x="63" y="207" font-size="10.5" fill="#263746" text-anchor="middle">v prema gore</text>
-        <text x="268" y="48" font-size="12" fill="#263746" text-anchor="start">ρ<tspan baseline-shift="sub" font-size="0.75em">o</tspan> = 870 kg/m³</text>
+        <text x="268" y="48" font-size="12" fill="#263746" text-anchor="start">ρ<tspan baseline-shift="sub" font-size="0.75em">u</tspan> = 870 kg/m³</text>
         <text x="268" y="67" font-size="12" fill="#263746" text-anchor="start">h = 0,75 m</text>
         <text x="291" y="101" font-size="12" fill="#263746" text-anchor="middle">I</text>
         <text x="376" y="101" font-size="12" fill="#263746" text-anchor="middle">II</text>
@@ -152,7 +152,7 @@
         <line x1="142.5" y1="198" x2="223.5" y2="198" stroke="#657781" stroke-width="1.4" marker-start="url(#u04vs_dimL)" marker-end="url(#u04vs_dim)" data-mf1-role="dimension" />
         <text x="183.0" y="213" font-size="11" fill="#263746" text-anchor="middle">r<tspan baseline-shift="sub" font-size="0.75em">B</tspan>
         </text>
-        <text x="267" y="47" font-size="12" fill="#263746" text-anchor="start">ρ<tspan baseline-shift="sub" font-size="0.75em">w</tspan> = 1000 kg/m³</text>
+        <text x="267" y="47" font-size="12" fill="#263746" text-anchor="start">ρ<tspan baseline-shift="sub" font-size="0.75em">v</tspan> = 1000 kg/m³</text>
         <text x="267" y="67" font-size="12" fill="#263746" text-anchor="start">r<tspan baseline-shift="sub" font-size="0.75em">A</tspan> = 80 mm</text>
         <text x="267" y="87" font-size="12" fill="#263746" text-anchor="start">r<tspan baseline-shift="sub" font-size="0.75em">B</tspan> = 240 mm</text>
         <text x="267" y="110" font-size="11" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">M,A</tspan> = 12,40 kPa</text>

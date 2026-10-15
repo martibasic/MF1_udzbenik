@@ -1,6 +1,14 @@
-![Diferencijalni opis povezuje lokalnu bilancu količine gibanja, rast graničnog sloja i turbulentne fluktuacije.](../assets/print/u12_fig_uvod_realni_tok.svg){#fig-realni-tok-pregled fig-align="center" fig-alt="Diferencijalni opis povezuje lokalnu bilancu količine gibanja, rast graničnog sloja i turbulentne fluktuacije."}
+Realni fluid prianja uz svaku krutu plohu i opire se smicanju. Uz trup broda, lopaticu crpke ili stijenku cijevi brzina se zato mijenja u tankom sloju velikoga gradijenta, ondje nastaju smično naprezanje i disipacija, a pri porastu tlaka u smjeru toka tok se može odvojiti od plohe. O tim pojavama ovise otpor trenja, zagrijavanje uljnog filma u ležaju i pad tlaka u kanalu. Idealni model iz []{.mf1-chapter-ref target="u08"} ih ne sadrži, pa ih u ovom poglavlju opisujemo lokalnim bilancama.
 
-**Tumačenje skice.** Rubovi zamišljenog elementa nisu krute stijenke; prikazane su $x$-komponente naprezanja. Laminarni sloj uz plohu ($\mathrm{d}p/\mathrm{d}x=0$) raste kao $\delta_{99}\propto\sqrt{x}$, uz uvećano okomito mjerilo. Signal $v(t)=\overline{v}+v'(t)$ sintetička je shema, a ne mjerenje.
+Čestica fluida ubrzava zbog promjene polja u vremenu i zbog prelaska u područje druge brzine, što sažima materijalna derivacija $D\vec v/Dt=\partial\vec v/\partial t+(\vec v\cdot\nabla)\vec v$. Za nestlačiv fluid lokalna bilanca mase daje $\nabla\cdot\vec v=0$, a drugi Newtonov zakon za element, uz newtonsku vezu naprezanja i brzine deformacije, daje Navier–Stokesovu jednadžbu $\rho\,D\vec v/Dt=-\nabla p+\mu\nabla^2\vec v+\rho\vec b$. Njezin je najjednostavniji poseban slučaj zakon viskoznosti iz []{.mf1-chapter-ref target="u02"}. Jednadžbe određuju polje tek uz početne i rubne uvjete, prije svega uz uvjet prianjanja $\vec v=\vec 0$ na nepomičnoj stijenci.
+
+Poglavlje redom obrađuje materijalnu derivaciju, lokalne bilance i rubne uvjete, a zatim kanonska rješenja: tok između paralelnih ploča i Hagen–Poiseuilleov tok u cijevi, iz kojega slijedi $\lambda=64/Re$. Granični sloj uvodi smično naprezanje stijenke $\tau_{st}$, Blasiusove procjene i odvajanje. Turbulentni tok opisuje se rastavom brzine na srednju vrijednost i fluktuaciju te Reynoldsovim naprezanjima, a završni odjeljak povezuje te jednadžbe s CFD-om. Reynoldsov broj nastavlja se na sličnost iz []{.mf1-chapter-ref target="u11"}, a laminarni rezultat i $\tau_{st}$ polazište su modela gubitaka u []{.mf1-chapter-ref target="u13"}.
+
+Isti model opisuje uljni film kliznog ležaja, granični sloj na trupu modela u vučnom bazenu, rashladne kanale i ulazne uvjete ventilacijskog voda u CFD proračunu. Analitička rješenja vrijede samo uz svoje pretpostavke: newtonski fluid, konstantne $\rho$ i $\mu$ te stacionaran, potpuno razvijen laminarni tok; Blasiusove procjene traže glatku ravnu plohu bez gradijenta tlaka. Turbulencijski model zatvara nepoznate korelacije, a diskretizacija u CFD-u ne uvodi novu fiziku, pa numerička konvergencija ne zamjenjuje validaciju.
+
+Slika ispod povezuje tri razine opisa. Lijevo je zamišljeni element fluida dimenzija $dx$ i $dy$; njegovi rubovi nisu krute stijenke, a prikazane su samo $x$-komponente naprezanja: tlak $p$ i $p+dp$ na bočnim plohama te smično naprezanje $\tau_{xy}$ i $\tau_{xy}+d\tau_{xy}$ na donjoj i gornjoj plohi. U sredini je laminarni granični sloj uz ravnu plohu bez gradijenta tlaka ($dp/dx=0$): uz vanjsku brzinu $U_\infty$ njegova debljina $\delta_{99}$ raste s udaljenošću $x$ od prednjeg ruba kao $\delta_{99}\propto\sqrt{x}$, a okomito mjerilo je uvećano. Desno je signal brzine $v(t)=\overline{v}+v'(t)$ koji fluktuira oko srednje vrijednosti $\overline{v}=8{,}0\ \text{m/s}$; to je sintetička shema, a ne mjerenje.
+
+![Diferencijalni opis povezuje lokalnu bilancu količine gibanja, rast graničnog sloja i turbulentne fluktuacije.](../assets/print/u12_fig_uvod_realni_tok.svg){#fig-realni-tok-pregled fig-align="center" fig-alt="Diferencijalni opis povezuje lokalnu bilancu količine gibanja, rast graničnog sloja i turbulentne fluktuacije."}
 
 ## Diferencijalni opis realnog toka {#sec-realni-tok-motivacija}
 
@@ -259,7 +267,7 @@ Srednja brzina je $0{,}0255\ \text{m/s}$ i $Re\approx12{,}7$, pa je laminarna pr
 Kada gotovo jednoliko strujanje naiđe na stijenku, uvjet prianjanja stvara tanko područje velikoga gradijenta brzine. Izvan njega viskozni učinak može biti malen; unutar njega određuje smično naprezanje
 
 $$
-\tau_w=\mu\left.\frac{\partial v_x}{\partial y}\right|_w.
+\tau_{st}=\mu\left.\frac{\partial v_x}{\partial y}\right|_w.
 $$ {#eq-realni-tok-granicni-sloj-smicno-naprezanje-i-odvajanje-sec-01}
 
 Za laminarni granični sloj uz ravnu ploču bez gradijenta tlaka Blasiusovo rješenje daje procjene
@@ -374,10 +382,10 @@ Ako je cilj promjenjivo opterećenje ili detaljno miješanje, treba odabrati vre
 Uz stijenku je korisna bezdimenzijska udaljenost
 
 $$
-y^+=\frac{u_\tau y}{\nu},\qquad u_\tau=\sqrt{\frac{|\tau_w|}{\rho}}.
+y^+=\frac{u_\tau y}{\nu},\qquad u_\tau=\sqrt{\frac{|\tau_{st}|}{\rho}}.
 $$ {#eq-realni-tok-turbulentni-tok-srednja-vrijednost-nije-cijelo-p-03}
 
-Ovdje je $y$ udaljenost od stijenke, a $u_\tau$ nenegativna brzina trenja, definirana iznosom smičnog naprezanja. Predznak $\tau_w$ zasebno opisuje smjer smicanja. Položaj prve ćelije i model strujanja uz stijenku moraju biti usklađeni: izravno razrješavanje viskoznog podsloja i zidna funkcija ne traže isti $y^+$.
+Ovdje je $y$ udaljenost od stijenke, a $u_\tau$ nenegativna brzina trenja, definirana iznosom smičnog naprezanja. Predznak $\tau_{st}$ zasebno opisuje smjer smicanja. Položaj prve ćelije i model strujanja uz stijenku moraju biti usklađeni: izravno razrješavanje viskoznog podsloja i zidna funkcija ne traže isti $y^+$.
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
@@ -426,7 +434,7 @@ $$ {#eq-anemometar-ulazni-uvjet-rans}
 
 **Tekst zadatka**
 
-U pokusu Drivera i Seegmillera dno kanala spušta se za visinu stepenice $H_{st}$, uz vodoravan gornji zid. Turbulentni zrak ($Re_{st}\approx36\,000$, prema visini stepenice) odvaja se na rubu i priljubljuje nizvodno. Koristi $X=x/H_{st}$ od ruba i $C_f=\tau_w/(\rho U_{ref}^2/2)$, gdje je $U_{ref}$ uzvodna brzina u sredini kanala pri $X\approx-4$. Predznak $C_f$ prati srednje zidno smicanje.
+U pokusu Drivera i Seegmillera dno kanala spušta se za visinu stepenice $H_{st}$, uz vodoravan gornji zid. Turbulentni zrak ($Re_{st}\approx36\,000$, prema visini stepenice) odvaja se na rubu i priljubljuje nizvodno. Koristi $X=x/H_{st}$ od ruba i $C_f=\tau_{st}/(\rho U_{ref}^2/2)$, gdje je $U_{ref}$ uzvodna brzina u sredini kanala pri $X\approx-4$. Predznak $C_f$ prati srednje zidno smicanje.
 
 Tablica daje mjerenja i objavljeni kvazistacionarni CFD rezultat CFL3D-a s modelom turbulencije SSTm. CFD brojevi zaokruženi su iz [izvornih datoteka](../data/cfd/backstep_experiment/README.md). Eksperimentalni položaj iznosi $X_r=6{,}26\pm0{,}10$ [@driver-seegmiller1985; @tmr-backstep].
 
@@ -483,7 +491,7 @@ Lijeva strana je razlika viskoznih tokova količine gibanja kroz dvije plohe će
 1. Kako stacionarni tok može imati nenulto ubrzanje?
 2. Koja pretpostavka omogućuje zapis $\mu\nabla^2\vec v$?
 3. Zašto Hagen–Poiseuilleov rezultat mora biti test svakog općeg modela gubitaka?
-4. Što fizikalno znači promjena znaka $\tau_w$?
+4. Što fizikalno znači promjena znaka $\tau_{st}$?
 5. Gruba mreža pogađa brzinu u osi cijevi. Zašto to još ne jamči točno smično naprezanje na stijenci?
 
 ::: {.callout-note collapse="true"}
@@ -496,7 +504,7 @@ Lijeva strana je razlika viskoznih tokova količine gibanja kroz dvije plohe će
 
 4. Promjena znaka označuje promjenu smjera smicanja i lokalni povratni tok; zaključak o odvajanju zahtijeva odgovarajuću geometriju i uvjete graničnog sloja.
 
-5. Smično naprezanje $\tau_w=\mu\,dv/dr|_R$ ovisi o nagibu profila u prvoj ćeliji uz stijenku, a ne o vrijednosti u osi; gruba mreža može pogoditi maksimum i protok uz pogrešan nagib. Zato se uz protok provjeravaju i $\tau_w$ ili $\lambda$, koji su osjetljiviji na razlučivost uz stijenku, a mrežna konvergencija provjerava se pri istom modelu.
+5. Smično naprezanje $\tau_{st}=\mu\,dv/dr|_R$ ovisi o nagibu profila u prvoj ćeliji uz stijenku, a ne o vrijednosti u osi; gruba mreža može pogoditi maksimum i protok uz pogrešan nagib. Zato se uz protok provjeravaju i $\tau_{st}$ ili $\lambda$, koji su osjetljiviji na razlučivost uz stijenku, a mrežna konvergencija provjerava se pri istom modelu.
 :::
 :::
 

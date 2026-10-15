@@ -65,7 +65,7 @@
         <rect x="40" y="242" width="76" height="8" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <text x="78" y="182" font-size="14" fill="#263746" text-anchor="middle">ulje</text>
         <text x="78" y="207" font-size="11" fill="#263746" text-anchor="middle">V = 1 L</text>
-        <text x="78" y="272" font-size="10" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 860 kg/m³</text>
+        <text x="78" y="272" font-size="10" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">u</tspan> = 860 kg/m³</text>
         <rect x="196" y="118" width="60" height="124" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <line x1="196" y1="118" x2="256" y2="118" stroke="#356b83" stroke-width="2" />
         <rect x="188" y="88" width="8" height="162" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -73,7 +73,7 @@
         <rect x="188" y="242" width="76" height="8" rx="0" fill="url(#u01fup_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <text x="226" y="182" font-size="14" fill="#263746" text-anchor="middle">voda</text>
         <text x="226" y="207" font-size="11" fill="#263746" text-anchor="middle">V = 1 L</text>
-        <text x="226" y="272" font-size="10" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1000 kg/m³</text>
+        <text x="226" y="272" font-size="10" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 1000 kg/m³</text>
       </g>
     </g>
   </g>
@@ -99,9 +99,9 @@
         <rect x="163.0" y="127" width="3" height="10" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
         <rect x="250.0" y="127" width="3" height="10" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
         <path id="u01fup_input" d="M58 62 L58 77" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01fup_vF)" data-mf1-vector="force" />
-        <text x="72" y="78" font-size="12" fill="#263746" font-weight="700" text-anchor="start">F₁</text>
+        <text x="72" y="78" font-size="12" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
         <path id="u01fup_output" d="M208 187 L208 142" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01fup_vF)" data-mf1-vector="force" />
-        <text x="224" y="180" font-size="12" fill="#263746" font-weight="700" text-anchor="start">F₂</text>
+        <text x="224" y="180" font-size="12" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
         <text x="58" y="186" font-size="12" fill="#263746" text-anchor="middle">p</text>
         <text x="186" y="204" font-size="12" fill="#263746" text-anchor="middle">p</text>
       </g>

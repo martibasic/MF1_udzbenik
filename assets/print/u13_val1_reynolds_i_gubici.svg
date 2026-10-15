@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" role="img" aria-labelledby="u13v1rig_title u13v1rig_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:880px;height:auto;">
   <title id="u13v1rig_title">Cjevovodna dionica Reynolds i ukupni gubici energije</title>
-  <desc id="u13v1rig_desc">Lijevo: vodoravna dionica cijevi promjera D = 0,09 m i duljine L = 42 m s protokom Q = 0,018 m^3/s, apsolutnom hrapavoscu epsilon = 0,15 mm i lokalnim otporima koljena i ventila ciji je zbroj koeficijenata sigma ksi = 5,2. Desno: stog formula za povrsinu presjeka A, srednju brzinu v, Reynoldsov broj Re, brzinsku visinu v^2/2g, linijski gubitak h_l i lokalni gubitak sigma h_loc, sa zavrsnim ukupnim gubitkom h_w priblizno 7,3 m i badge rezultata.</desc>
+  <desc id="u13v1rig_desc">Lijevo: vodoravna dionica cijevi promjera D = 0,09 m i duljine L = 42 m s protokom Q = 0,018 m^3/s, apsolutnom hrapavoscu epsilon = 0,15 mm i lokalnim otporima koljena i ventila ciji je zbroj koeficijenata sigma ksi = 5,2. Desno: stog formula za povrsinu presjeka A, srednju brzinu v, Reynoldsov broj Re, brzinsku visinu v^2/2g, linijski gubitak h_l i lokalni gubitak sigma h_loc, sa zavrsnim ukupnim gubitkom h_g priblizno 7,3 m i badge rezultata.</desc>
 
   <defs>
     <linearGradient id="u13v1rig_voda" x1="0" y1="0" x2="0" y2="1">
@@ -104,10 +104,10 @@
   <text x="76" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530"><tspan font-style="italic">D</tspan> = 0,09 m  ·  <tspan font-style="italic">L</tspan> = 42 m  ·  <tspan font-style="italic">Q</tspan> = 0,018 m³/s</text>
   <text x="76" y="378" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">ε = 0,15 mm  ·  Σξ = 5,2  ·  ν = 1,0·10⁻⁶ m²/s</text>
   <text x="76" y="396" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#1a2530">Moodyjev dijagram → λ ≈ 0,027  (za <tspan font-style="italic">Re</tspan>, ε/<tspan font-style="italic">D</tspan>)</text>
-  <text x="76" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">Traci: srednja brzina v, Reynoldsov broj Re, ukupni gubitak energije h<tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
+  <text x="76" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-style="italic" fill="#5a6a78">Traci: srednja brzina v, Reynoldsov broj Re, ukupni gubitak energije h<tspan baseline-shift="sub" font-size="0.7em">g</tspan></text>
 
   <text x="500" y="58" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Redoslijed proracuna</text>
-  <text x="500" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">A → v → Re → λ (Moody) → h<tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
+  <text x="500" y="75" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5a6a78">A → v → Re → λ (Moody) → h<tspan baseline-shift="sub" font-size="0.7em">g</tspan></text>
 
   <text x="516" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#1565c0">1. Površina presjeka i srednja brzina</text>
   <text x="516" y="127" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530"><tspan font-style="italic">A</tspan> = π<tspan font-style="italic">D</tspan>²/4 = π·0,09²/4 ≈ 6,36·10⁻³ m²</text>
@@ -124,12 +124,12 @@
 
   <text x="516" y="352" font-family="'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#c0392b">4. Lokalni gubitak i ukupni</text>
   <text x="516" y="371" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#1a2530">Σ<tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">loc</tspan> = Σξ·<tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>) = 5,2·0,408 ≈ 2,12 m</text>
-  <text x="516" y="389" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">l</tspan> + Σ<tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">loc</tspan> ≈ 5,14 + 2,12 ≈ 7,26 m</text>
+  <text x="516" y="389" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c0392b"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">g</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">l</tspan> + Σ<tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">loc</tspan> ≈ 5,14 + 2,12 ≈ 7,26 m</text>
 
   <text x="514" y="431" font-family="'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="700" fill="#5a6a78">REZULTATI</text>
   <text x="592" y="431" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1565c0"><tspan font-style="italic">v</tspan> ≈ 2,83 m/s</text>
   <text x="690" y="431" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1565c0"><tspan font-style="italic">Re</tspan> ≈ 2,55·10⁵</text>
-  <text x="861" y="431" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449" text-anchor="end"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> ≈ 7,3 m</text>
+  <text x="861" y="431" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e8449" text-anchor="end"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">g</tspan> ≈ 7,3 m</text>
 <text x="245" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="12" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">L</tspan> = 42 m</text>
 
   <text x="462" y="208" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#b7600c"><tspan font-style="italic">D</tspan></text>

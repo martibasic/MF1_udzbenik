@@ -50,7 +50,7 @@
       <circle cx="520" cy="260" r="3.5" fill="#356b83" />
       <text x="515" y="240" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" transform="translate(25 26)">p<tspan baseline-shift="sub" font-size="0.7em">2</tspan>
       </text>
-      <text x="95" y="192" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="translate(0 -12)">slatka voda, ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan></text>
+      <text x="95" y="192" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="translate(0 -12)">slatka voda, ρ<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
       <text x="487" y="294" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">morska voda, ρ<tspan baseline-shift="sub" font-size="0.7em">mv</tspan></text>
       <text x="361" y="150" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">zrak, ρ<tspan baseline-shift="sub" font-size="0.7em">zr</tspan></text>
       <text x="212" y="419" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">živa, ρ<tspan baseline-shift="sub" font-size="0.7em">Hg</tspan>

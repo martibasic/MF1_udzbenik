@@ -1,6 +1,14 @@
-![Karakteristični mehanizmi i model u aerotunelu.](../assets/print/u14_fig_uvod_pregled.svg){#fig-uvod-u14 fig-align="center" fig-alt="Pregled poglavlja: lijevo shematski parovi mjerila inercije prema viskoznosti, gravitaciji i površinskoj napetosti; desno model automobila u aerotunelu s jednolikim dotokom, ispitan pri jednakom Reynoldsovu broju kao prototip."}
+Brod se prije gradnje ispituje kao model u vučnom bazenu, a automobil ili krilo u aerotunelu. Mjerenje na modelu korisno je samo ako znamo kako ga prenijeti na prototip, a za to treba znati koji fizikalni mehanizmi određuju tok i u kakvom su međusobnom omjeru. Dimenzijska analiza odgovara na to pitanje bez rješavanja jednadžbi gibanja: veličine problema slaže u bezdimenzijske grupe i tako smanjuje broj parametara koje treba ispitati ili izračunati.
 
-**Tumačenje skice.** Parovi mjerila na skici shematski su i nemaju numeričko mjerilo. Aerotunel prenosi $C_D$ pri jednakom $Re$ samo ako su i ostali relevantni uvjeti isti.
+Polazište su karakteristična mjerila sila. Inercija $F_i\sim\rho v^2L^2$ prisutna je u gotovo svakom strujanju, pa služi kao referenca: Reynoldsov broj $Re=\rho vL/\mu$ uspoređuje je s viskoznošću, kvadrat Froudeova broja $Fr=v/\sqrt{gL}$ s gravitacijom, a Weberov broj $We=\rho v^2L/\sigma$ s površinskom napetošću. Eulerov broj $Eu=\Delta p/(\rho v^2)$ i kavitacijski broj $\sigma_{kav}$ normiraju tlak, Strouhalov broj $St=fL/v$ uspoređuje vremenske skale, a Machov broj $Ma=v/a$ brzinu toka i brzinu zvuka. Koeficijenti $C_p$, $C_D$ i $\lambda$ normirani su odzivi koje mjerimo ili računamo. Koliko je neovisnih grupa, kaže Buckinghamov $\Pi$ teorem: $n-k$, gdje je $n$ broj fizikalnih veličina, a $k$ rang dimenzijske matrice.
+
+Model i prototip ponašaju se jednako u bezdimenzijskom smislu ako su geometrijski, kinematički i dinamički slični, odnosno ako su im jednaki svi mjerodavni bezdimenzijski brojevi. Jednaka vrijednost samo jedne grupe nije dovoljna: aerotunel prenosi $C_D$ pri jednakom $Re$ samo ako su i ostali relevantni uvjeti isti, primjerice relativna hrapavost, $Ma$, slobodna turbulencija i blizina stijenke. U vučnom bazenu jednak $Fr$ i jednak $Re$ u istoj vodi nisu spojivi, pa se čuva Froudeova sličnost, a viskozni otpor ispravlja se prema Froudeovoj hipotezi.
+
+Poglavlje redom obrađuje dimenzije i mjerila sila, bezdimenzijske grupe kao omjere mehanizama, uvjete prijenosa rezultata, Buckinghamov teorem, sličnost i modelska ispitivanja te odluku o tome što bezdimenzionirati. Dimenzijska analiza pritom samo ograničava dopuštenu ovisnost; oblik funkcije daju teorija, pokus ili numerički račun. Oslanja se na Bernoullijevu jednadžbu iz []{.mf1-chapter-ref target="u08"} i stlačivost iz []{.mf1-chapter-ref target="u09"}. Darcyjev koeficijent trenja $\lambda(Re,k_s/D)$ i kavitacija na usisu crpke nastavljaju se u []{.mf1-chapter-ref target="u13"}, brodski vijak u []{.mf1-chapter-ref target="u14"}, a Froudeov broj i kritično strujanje u []{.mf1-chapter-ref target="u15"}.
+
+Slika ispod ima dva panela. Lijevi uspoređuje inerciju s viskoznošću, gravitacijom i površinskom napetošću; ti parovi odgovaraju brojevima $Re$, $Fr^2$ i $We$. Parovi mjerila shematski su i nemaju numeričko mjerilo, pa duljine traka ne prikazuju stvarne omjere. Desni panel prikazuje model automobila u aerotunelu s jednolikim dotokom, ispitan pri $Re_m=Re_p$, odnosno pri jednakom Reynoldsovu broju modela i prototipa.
+
+![Karakteristični mehanizmi i model u aerotunelu.](../assets/print/u14_fig_uvod_pregled.svg){#fig-uvod-u14 fig-align="center" fig-alt="Pregled poglavlja: lijevo shematski parovi mjerila inercije prema viskoznosti, gravitaciji i površinskoj napetosti; desno model automobila u aerotunelu s jednolikim dotokom, ispitan pri jednakom Reynoldsovu broju kao prototip."}
 
 ## Dimenzijska analiza i sličnost
 
@@ -280,10 +288,10 @@ Posljednji se izraz svodi na $\lambda_L^3$ samo kada model i prototip imaju jedn
 **Froudeova hipoteza i korekcija viskoznog otpora.** Jednak $Fr$ ne čuva $Re$, pa se ukupni otpor broda $R_T$ rastavlja prema Froudeovoj hipotezi
 
 $$
-C_T=\frac{R_T}{\tfrac12\rho v^2 A_w}=C_F(Re)+C_R(Fr),
+C_T=\frac{R_T}{\tfrac12\rho v^2 A_{opl}}=C_F(Re)+C_R(Fr),
 $$ {#eq-froudeova-hipoteza}
 
-gdje je $A_w$ oplakana površina trupa, $C_F$ koeficijent otpora trenja ekvivalentne ravne ploče iste duljine i oplakane površine, a $C_R$ preostali, pretežno valni otpor. Hipoteza pretpostavlja da $C_R$ ovisi samo o $Fr$, pa je jednak na modelu i brodu, dok se $C_F$ računa za svaki $Re$ zasebno korelacijskom linijom ITTC 1957
+gdje je $A_{opl}$ oplakana površina trupa, $C_F$ koeficijent otpora trenja ekvivalentne ravne ploče iste duljine i oplakane površine, a $C_R$ preostali, pretežno valni otpor. Hipoteza pretpostavlja da $C_R$ ovisi samo o $Fr$, pa je jednak na modelu i brodu, dok se $C_F$ računa za svaki $Re$ zasebno korelacijskom linijom ITTC 1957
 
 $$
 C_F=\frac{0{,}075}{\left(\log_{10}Re-2\right)^2}
@@ -385,7 +393,7 @@ Ne: jednak Froudeov broj ne potvrđuje prijenos viskoznog otpora. CFD računi ob
 
 **Tekst zadatka**
 
-Kroz razvijeni ravni kružni kanal promjera $D = 6\ \text{mm}$ u jednom slučaju teče voda brzinom $v_A = 1{,}2\ \text{m/s}$, s $\nu_w = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$, a u drugom ulje brzinom $v_B = 0{,}30\ \text{m/s}$, s $\nu_o = 4{,}0 \cdot 10^{-5}\ \text{m}^2/\text{s}$. Za procjenu početka prijelaznog područja uzmi orijentacijsku vrijednost $Re=2300$ [@white2011].
+Kroz razvijeni ravni kružni kanal promjera $D = 6\ \text{mm}$ u jednom slučaju teče voda brzinom $v_A = 1{,}2\ \text{m/s}$, s $\nu_v = 1{,}0 \cdot 10^{-6}\ \text{m}^2/\text{s}$, a u drugom ulje brzinom $v_B = 0{,}30\ \text{m/s}$, s $\nu_u = 4{,}0 \cdot 10^{-5}\ \text{m}^2/\text{s}$. Za procjenu početka prijelaznog područja uzmi orijentacijsku vrijednost $Re=2300$ [@white2011].
 
 **Traži se**
 
@@ -401,24 +409,24 @@ Kroz razvijeni ravni kružni kanal promjera $D = 6\ \text{mm}$ u jednom slučaju
 Za vodu:
 
 $$
-Re_A = \frac{v_A D}{\nu_w} = \frac{1{,}2 \cdot 0{,}006}{1{,}0 \cdot 10^{-6}} = 7200 \quad (>4000 \Rightarrow \text{turbulentno}).
+Re_A = \frac{v_A D}{\nu_v} = \frac{1{,}2 \cdot 0{,}006}{1{,}0 \cdot 10^{-6}} = 7200 \quad (>4000 \Rightarrow \text{turbulentno}).
 $$ {#eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-01}
 
 Za ulje:
 
 $$
-Re_B = \frac{v_B D}{\nu_o} = \frac{0{,}30 \cdot 0{,}006}{4{,}0 \cdot 10^{-5}} = 45 \quad (\ll 2300 \Rightarrow \text{izrazito laminarno}).
+Re_B = \frac{v_B D}{\nu_u} = \frac{0{,}30 \cdot 0{,}006}{4{,}0 \cdot 10^{-5}} = 45 \quad (\ll 2300 \Rightarrow \text{izrazito laminarno}).
 $$ {#eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-02}
 
 Brzina vode koja odgovara $Re=2300$:
 
 $$
-v_{kr} = \frac{Re_{kr}\,\nu_w}{D} = \frac{2300 \cdot 1{,}0 \cdot 10^{-6}}{0{,}006} \approx 0{,}383\ \text{m/s}.
+v_{kr} = \frac{Re_{kr}\,\nu_v}{D} = \frac{2300 \cdot 1{,}0 \cdot 10^{-6}}{0{,}006} \approx 0{,}383\ \text{m/s}.
 $$ {#eq-slicnost-rijeseni-primjer-reynoldsov-broj-u-dva-sustava-03}
 
 **Provjera i tumačenje**
 
-Pri istom $D$ omjer $Re_A/Re_B=160$ potječe od $\nu_o/\nu_w=40$ i $v_A/v_B=4$: režim određuje omjer inercije i viskoznosti, a ne geometrija. Ulju bi za isti prag trebala brzina $40$ puta veća od $v_{kr}$ vode, oko $15\ \text{m/s}$.
+Pri istom $D$ omjer $Re_A/Re_B=160$ potječe od $\nu_u/\nu_v=40$ i $v_A/v_B=4$: režim određuje omjer inercije i viskoznosti, a ne geometrija. Ulju bi za isti prag trebala brzina $40$ puta veća od $v_{kr}$ vode, oko $15\ \text{m/s}$.
 :::
 
 ::: {#ex-u14-froudeova-slicnost-model-broda-u-vucnom-bazenu .mf1-we}
@@ -548,7 +556,7 @@ Kontrola: $Q/Q_{\max}=6{,}0/4{,}45=1{,}35$ i $(\sigma_{kr}/\sigma_{kav})^{1/2}=(
 
 **Tekst zadatka**
 
-Vodena kap promjera $d = 3\ \text{mm}$ giba se relativnom brzinom $v = 25\ \text{m/s}$ kroz zrak gustoće $\rho_{zr} = 1{,}2\ \text{kg/m}^3$. Gustoća vode je $\rho_w = 1000\ \text{kg/m}^3$, a površinska napetost $\sigma = 0{,}072\ \text{N/m}$. Za pojednostavljenu procjenu raspada uzmi orijentacijski prag $We_{kr}=12$. Zanemari viskoznost i vremenski razvoj deformacije.
+Vodena kap promjera $d = 3\ \text{mm}$ giba se relativnom brzinom $v = 25\ \text{m/s}$ kroz zrak gustoće $\rho_{zr} = 1{,}2\ \text{kg/m}^3$. Gustoća vode je $\rho_v = 1000\ \text{kg/m}^3$, a površinska napetost $\sigma = 0{,}072\ \text{N/m}$. Za pojednostavljenu procjenu raspada uzmi orijentacijski prag $We_{kr}=12$. Zanemari viskoznost i vremenski razvoj deformacije.
 
 **Traži se**
 
@@ -573,12 +581,12 @@ Dobiveni $We>12$ prema zadanom kriteriju predviđa početak raspada.
 Bondov broj:
 
 $$
-Bo = \frac{(\rho_w-\rho_{zr})g\,d^2}{\sigma}
+Bo = \frac{(\rho_v-\rho_{zr})g\,d^2}{\sigma}
 = \frac{(1000-1{,}2)\cdot9{,}81\cdot0{,}003^2}{0{,}072}
 \approx1{,}22.
 $$ {#eq-slicnost-rijeseni-primjer-weberov-i-bondov-broj-raspad-02}
 
-Kapilarna duljina $L_c=\sqrt{\sigma/[(\rho_w-\rho_{zr})g]}\approx2{,}71\ \text{mm}$ blizu je $d$, pa je $Bo$ reda jedan. Kritična brzina prema **zadanom** kriteriju $We=12$ glasi:
+Kapilarna duljina $L_c=\sqrt{\sigma/[(\rho_v-\rho_{zr})g]}\approx2{,}71\ \text{mm}$ blizu je $d$, pa je $Bo$ reda jedan. Kritična brzina prema **zadanom** kriteriju $We=12$ glasi:
 
 $$
 v_{kr} = \sqrt{\frac{We_{kr}\,\sigma}{\rho_{zr}\,d}} = \sqrt{\frac{12 \cdot 0{,}072}{1{,}2 \cdot 0{,}003}} \approx 15{,}5\ \text{m/s}.

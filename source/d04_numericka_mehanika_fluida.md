@@ -47,7 +47,7 @@ Slika polja pomaže pronaći područje niskog tlaka ili odvajanja; odluku nosi i
 
 ## Rječnik MF1 → CFD: prijevod pojmova {#sec-cfd-mapa}
 
-Tablica je središnja mapa: ista jednadžba dobiva prostorni numerički zapis, a polje se zatim svodi na traženi izlaz. Brzina fluida u knjizi je $v$ (vektor $\vec v$, komponente $v_i$); $u$ označuje brzinu krute granice (lopatica, klip), a u turbostrojevima razlikujemo apsolutnu $\vec c$, relativnu $\vec w$ i obodnu $\vec u$. Vanjska brzina graničnog sloja $U_e$ i brzina trenja $u_\tau=\sqrt{\tau_w/\rho}$ koriste se uz definiciju.[]{#rječnik-mf1-cfd-prijevod-pojmova}
+Tablica je središnja mapa: ista jednadžba dobiva prostorni numerički zapis, a polje se zatim svodi na traženi izlaz. Brzina fluida u knjizi je $v$ (vektor $\vec v$, komponente $v_i$); $u$ označuje brzinu krute granice (lopatica, klip), a u turbostrojevima razlikujemo apsolutnu $\vec c$, relativnu $\vec w$ i obodnu $\vec u$. Vanjska brzina graničnog sloja $U_e$ i brzina trenja $u_\tau=\sqrt{\tau_{st}/\rho}$ koriste se uz definiciju.[]{#rječnik-mf1-cfd-prijevod-pojmova}
 
 | MF1 koncept | Jednadžba ili veza | Fizikalno značenje | CFD uloga | Tipičan izlaz |
 |---|---|---|---|---|
@@ -59,11 +59,11 @@ Tablica je središnja mapa: ista jednadžba dobiva prostorni numerički zapis, a
 | Kontrolni volumen i kontinuitet | @eq-lokalna-kontinuitet | očuvanje mase | bilanca po ćelijama i plohama | $Q$, akumulacija |
 | Količina gibanja | @eq-navier-stokes-nestlacivi | ubrzanje određuju sile | lokalna bilanca uz pretpostavke modela | tlak, brzina, sila |
 | Energija | akumulacija = neto prijenos + izvori | prijenos i pretvorba energije | energijska jednadžba kada je potrebna | temperatura, entalpija |
-| Bernoulli | $p/\rho+v^2/2+gz=\mathrm{const.}$ | idealna mehanička energija | referenca pod istim pretpostavkama | odnos tlaka i brzine |
+| Bernoulli | $p/\rho+v^2/2+gz=\mathrm{konst.}$ | idealna mehanička energija | referenca pod istim pretpostavkama | odnos tlaka i brzine |
 | Hidrostatička sila i uzgon | $\vec F_p=-\int_Ap\,\vec n_b\,dA$ | rezultanta tlaka | integracija po površini tijela | sila, moment, gaz |
 | Sličnost | $Re,Fr,Ma,We$ | omjeri važnih učinaka | izbor fizike i skaliranje | $C_D$, $C_p$, $\lambda$ |
 | Turbulencija | $-\rho\overline{v_i'v_j'}$ u RANS-u | prijenos srednje količine gibanja fluktuacijama | dodatne korelacije treba zatvoriti | srednji profil, otpor |
-| Gubitci | $h_{loc}=\xi v_{ref}^2/(2g)$ | pad mehaničke energije | izlaz polja za 1D model | $h_w$, $\xi$, snaga |
+| Gubitci | $h_{loc}=\xi v_{ref}^2/(2g)$ | pad mehaničke energije | izlaz polja za 1D model | $h_g$, $\xi$, snaga |
 | Rotor | $P=M\omega$ | prijenos rada | moment iz polja u odabranom okviru | snaga, učinkovitost |
 
 Normala $\vec n_b$ usmjerena je iz tijela u fluid; $\vec F_p$ djeluje na tijelo. Za uzgon se integrira hidrostatički tlak, a za ukupnu silu u viskoznom toku dodaje se viskozna trakcija. Polumjeri su u Young–Laplaceovoj relaciji predznačeni prema odabranoj normali. Detaljan izbor fizike prema $Re$, $Fr$, $Ma$ i $We$ dan je u []{.mf1-chapter-ref target="u11"}.
@@ -79,8 +79,8 @@ Drugi je prijelaz **polje → inženjerska veličina → odluka**:
 | $p(\vec x,t)$ | očitanje na zadanim mjestima ili jasno definirani prosjeci presjeka | $\Delta p$: mjerenje protoka ili tlačno opterećenje |
 | $\vec v(\vec x,t)$ | $Q=\int_A\vec v\cdot\vec n\,dA$; uz $\rho$ daje maseni protok | raspodjela protoka po granama |
 | Tlak i viskozno naprezanje | površinski zbroj sila i njihovih momenata | opterećenje nosača ili moment rotora |
-| Gradijent brzine uz zid | $\tau_w=\mu(\partial v_t/\partial n)_w$ za jednostavan lokalni viskozni opis | trenje; prikladnost geometrije i obrade stijenke |
-| Tlak, brzina i kota | bilančna razlika mehaničke energije na usklađenim presjecima | $h_w$, potrebna crpna snaga |
+| Gradijent brzine uz zid | $\tau_{st}=\mu(\partial v_t/\partial n)_w$ za jednostavan lokalni viskozni opis | trenje; prikladnost geometrije i obrade stijenke |
+| Tlak, brzina i kota | bilančna razlika mehaničke energije na usklađenim presjecima | $h_g$, potrebna crpna snaga |
 
 Za Venturi pad **statičkog** tlaka do grla velikim dijelom znači ubrzavanje. Trajni gubitak određuje pad **ukupne mehaničke energije**, uz profile i kote iz energijske bilance. Samo pod odgovarajućim uvjetima jednakih brzina i visina statički pad tlaka izravno mjeri gubitak. Sličnu razliku treba čuvati između lokalne vrijednosti i prosjeka, te između trenutnog i vremenski osrednjenog opterećenja.
 

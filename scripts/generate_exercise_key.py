@@ -51,10 +51,19 @@ def compact(text: str, limit: int = 240) -> str:
             return value
     # Finish any formula crossing the summary boundary, even if it exceeds
     # the preferred length. Cutting TeX leaves broken math in HTML and PDF.
-    for formula in re.finditer(r"(?<!\\)\$(?:\\.|[^\\$])*\$", value):
-        if formula.start() < cut < formula.end():
-            cut = formula.end()
+    formulas = [(f.start(), f.end()) for f in re.finditer(r"(?<!\\)\$(?:\\.|[^\\$])*\$", value)]
+    for start, end in formulas:
+        if start < cut < end:
+            cut = end
             break
+    # Prefer ending on a complete sentence so the printed key never stops mid-thought;
+    # the full hint stays in the online chapter.
+    abbreviation = re.compile(r"(?:\b(?:npr|tj|engl|pog|sl|itd|odn|br|str|izd|dr|tzv|god)|\b\w)\.$", re.I)
+    sentence_ends = [m.end() for m in re.finditer(r"[.!?](?=\s)", value[:cut + 1])
+                     if m.end() >= 0.4 * limit and not any(s < m.start() < e for s, e in formulas)
+                     and not abbreviation.search(value[:m.end()])]
+    if cut < len(value) and sentence_ends:
+        return value[:sentence_ends[-1]]
     return value[:cut].rstrip(" ,;:") + ("…" if cut < len(value) else "")
 
 

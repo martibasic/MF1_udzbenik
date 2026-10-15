@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 654 338" role="img" aria-labelledby="u01fgs_title u01fgs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:654px;height:auto;">
   <title id="u01fgs_title">Gustoća i specifična težina ulja</title>
-  <desc id="u01fgs_desc">Isti volumen ulja i vode ima različitu masu i težinu. Težina ulja nacrtana je kroz njegovo težište; nije sila na dno posude.</desc>
+  <desc id="u01fgs_desc">Lijevo: ulje volumena V, mase m i gustoće ρ u posudi; težina samo ulja F_G djeluje u njegovu težištu. Desno: jednaki volumeni ulja i vode s istom razinom; težine F_G i F_G,v nacrtane su u omjeru gustoća 860 : 1000, što je relativna gustoća ulja.</desc>
   <defs>
     <pattern id="u01fgs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -39,7 +39,7 @@
   <g id="u01fgs_title-scene-1" transform="translate(-90.1016 -14.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u01fgs_oilPanel" transform="translate(30 30)">
-        <text x="215.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Ulje u posudi</text>
+        <text x="215.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">1. Ulje u posudi</text>
         <rect id="u01fgs_oil" x="144" y="110" width="146" height="180" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
         <line x1="144" y1="110" x2="290" y2="110" stroke="#356b83" stroke-width="2" />
         <rect x="136" y="70" width="8" height="228" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -53,7 +53,7 @@
       </g>
     </g>
   </g>
-  <g id="u01fgs_title-scene-2" transform="translate(-258.0000 -96.0000)">
+  <g id="u01fgs_title-scene-2" transform="translate(-258.0000 -56.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u01fgs_comparison" transform="translate(490 30)">
         <rect x="62" y="110" width="88" height="180" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
@@ -69,7 +69,16 @@
         <rect x="390" y="90" width="8" height="208" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="294" y="290" width="104" height="8" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <text x="346" y="174" font-size="14" fill="#263746" text-anchor="middle">voda</text>
-        <text x="346" y="318" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1000 kg/m³</text>
+        <text x="226" y="58" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">2. Jednak volumen ulja i vode</text>
+        <line id="u01fgs_equalLevel" x1="162" y1="110" x2="290" y2="110" stroke="#657781" stroke-width="1" stroke-dasharray="5 4" />
+        <text x="226" y="102" font-size="12" fill="#263746" text-anchor="middle">jednak V</text>
+        <circle cx="106" cy="200" r="3" fill="#356b83" />
+        <path id="u01fgs_weightOil" d="M106 200 L106 260.2" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01fgs_vF)" data-mf1-vector="force" />
+        <text x="116" y="248" font-size="13" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">G</tspan></text>
+        <circle cx="346" cy="200" r="3" fill="#356b83" />
+        <path id="u01fgs_weightWater" d="M346 200 L346 270" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01fgs_vF)" data-mf1-vector="force" />
+        <text x="356" y="254" font-size="13" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">G,v</tspan></text>
+        <text x="346" y="318" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 1000 kg/m³</text>
       </g>
     </g>
   </g>

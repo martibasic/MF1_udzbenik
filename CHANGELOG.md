@@ -3,6 +3,16 @@
 Ovaj dokument prati sadržajne i tehničke promjene javnih izdanja. Potvrđene
 pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
+## Uvodi poglavlja i hrvatski indeksi — 15. listopada 2026.
+
+- Pog. 1 sada počinje uvodnim tekstom o fluidu, kontinuumu, gustoći, tlaku i Pascalovu zakonu. Uvodna slika slijedi iza teksta, a blok „Tumačenje skice” je uklonjen.
+- Slika 1.2 ima numerirane prizore „Ulje u posudi” i „Jednak volumen ulja i vode”. Strelice težina $F_G$ i $F_{G,v}$ nacrtane su u omjeru gustoća, a tekst ispod slike to objašnjava.
+- Indeksi za vodu i ulje sada su hrvatski: $\rho_v$ i $\rho_u$ (te $\nu_v$, $\nu_u$). Oznake slojeva u pog. 3 i 5 su $h_u$ i $h_v$; u pog. 6 to su $V_v$, $V_u$, $m_v$, $T_{v,\cdot}$ i $A_{vl}$. Usto: $Q_v$ u pog. 7 i $A_{opl}$ u pog. 11. Promjene su provedene u tekstu, skicama, bilježnici, D01, standardu i rječniku; $p_v$ ostaje tlak pare.
+- Uvodni tekst ima svih 15 poglavlja. Uvodna slika slijedi iza njega, a uvodni blok „Tumačenje skice” je uklonjen; njegov sadržaj je prenesen u uvod. Pravilo je zapisano u autorskom ugovoru.
+- Ostali engleski indeksi prevedeni su na hrvatske: gubitak visine $h_w\to h_g$, smično naprezanje na stijenci $\tau_w\to\tau_{st}$, koeficijent preljeva $C_w\to C_{pr}$ te „const.” → „konst.”.
+- Ključ rezultata (D06) skraćuje smjernicu postupka na kraju rečenice. Puni naputak ostaje u mrežnom izdanju.
+- Usklađenost PDF-a i mrežne knjige provjerena je usporedbom tekstnih odsječaka svih poglavlja i dodataka.
+
 ## Provedba odluka o skicama i notaciji — 14. listopada 2026.
 
 - Ispravljena su proturječja u tekstu. Najvažnije: kormilarski stroj u pog. 1, Z2 sada je četverocilindrični Rapsonov stroj, uz V = 2As = 7,36 L.

@@ -199,12 +199,12 @@ def main():
         return [''.join(t.itertext()) for t in root.iter() if t.tag.endswith('text')]
     z=texts('u08_vjezbe_skice.svg')
     assert any('θ = 60°' in t for t in z) and not any('α' in t for t in z)
-    assert any('Qmv' in t for t in z) and any('Qw' in t for t in z) and not any(t.startswith('Qm ') or t.startswith('Qs ') for t in z)
+    assert any('Qmv' in t for t in z) and any('Qv' in t for t in z) and not any('Qw' in t for t in z) and not any(t.startswith('Qm ') or t.startswith('Qs ') for t in z)
     assert any('ψ = 0,55' in t for t in texts('u08_val3_izjednacni_spremnik.svg'))
     c=texts('u08_ch1_mijesajuci_spremnik.svg')
-    assert 'ρmj' in c and any(t.startswith('sr = ') for t in c) and any(t.startswith('ρw = ') for t in c)
+    assert 'ρmj' in c and any(t.startswith('sr = ') for t in c) and any(t.startswith('ρv = ') for t in c) and not any(t.startswith('ρw') for t in c)
     assert any('ρmj' in t for t in texts('u08_kontrolni_volumen_scene.svg'))
-    print('PASS notation: θ, ψ, s_r, ρ_w, ρ_mj, Q_mv, Q_w on the sketches')
+    print('PASS notation: θ, ψ, s_r, ρ_v, ρ_mj, Q_mv, Q_v on the sketches (hrvatski indeksi)')
 
 
 if __name__=='__main__':

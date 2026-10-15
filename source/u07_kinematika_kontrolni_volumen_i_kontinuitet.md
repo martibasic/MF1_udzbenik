@@ -1,10 +1,16 @@
+U statici je fluid mirovao, pa je bilo dovoljno poznavati raspodjelu tlaka. Čim fluid struji, najprije treba opisati kako se giba i koliko ga prolazi kroz pojedine presjeke; tek tada se mogu računati tlakovi, sile i energija. Kinematika strujanja to čini na dva načina: Lagrangeov opis prati pojedinu česticu fluida, a Eulerov opis zadaje polje brzine $\vec v(x,y,z,t)$ u nepomičnim točkama prostora. U inženjerskim se proračunima pretežno primjenjuje Eulerov opis jer daje stanje na odabranom mjestu, primjerice u presjeku cijevi ili na ulazu u crpku.
+
+Poglavlje najprije iz polja brzine izvodi strujnicu, trajektoriju i strujnu cijev, razlikuje stacionarno i nestacionarno strujanje te materijalnom derivacijom rastavlja ubrzanje čestice na lokalni i konvektivni član. Stvarni profil brzine u presjeku zatim zamjenjuje srednjom normalnom brzinom $\bar v_n=Q/A$, uz volumenski protok $Q=\int_A\vec v\cdot\vec n\,dA$. Na tom jednodimenzijskom modelu počiva integralna analiza u nastavku knjige.
+
+Kontrolni volumen (KV) odabrani je dio prostora u kojem pratimo ulaz, izlaz i akumulaciju mase. Omeđuje ga kontrolna ploha (KP), zamišljena granica preko koje se računa tok mase, a $\vec n$ njezina je vanjska jedinična normala. Opća bilanca mase glasi $\sum\dot m_{ul}-\sum\dot m_{iz}=dm_{KV}/dt$, uz $\dot m=\rho Q$ i $Q=Av$. Zapis $A_1v_1=A_2v_2$ samo je poseban slučaj te bilance, odnosno jednadžbe kontinuiteta: vrijedi za stacionaran tok jednoga fluida stalne gustoće kroz jedan ulaz i jedan izlaz. Most između sustava i kontrolnog volumena daje Reynoldsov transportni teorem, iz kojeg slijedi i diferencijalni oblik kontinuiteta $\partial\rho/\partial t+\nabla\cdot(\rho\vec v)=0$.
+
+Takvom se bilancom analiziraju rashladni razdjelnici, ventilacijske komore strojarnice, balastni tankovi pri punjenju i pražnjenju te zahvatni usis broda u plovidbi, kroz čiju kontrolnu plohu fluid prolazi relativnom brzinom. Isti se teorem primjenjuje na energiju u []{.mf1-chapter-ref target="u08"} i na količinu gibanja u []{.mf1-chapter-ref target="u10"}. Srednja brzina ne govori ništa o obliku profila, vrtloženju ni tlaku; za njih trebaju te bilance ili lokalni opis iz []{.mf1-chapter-ref target="u12"}.
+
+Slika ispod prikazuje kontrolni volumen u dva oblika. Lijevo je apstraktni uređaj, koji predstavlja bilo koji proces, a ne krutu ovojnicu: u kontrolni volumen KV ulazi struja gustoće $\rho_1$, presjeka $A_1$ i brzine $v_1$ s masenim protokom $\dot m_{ul}$, izlaze dvije struje $\dot m_{iz,1}$ i $\dot m_{iz,2}$, a unutar njega masa se akumulira brzinom $dm_{KV}/dt$. Isprekidana crta je kontrolna ploha KP; kratke strelice $\vec n$ vanjske su jedinične normale, na ulazu suprotne toku, a na izlazima u smjeru toka. Strelice označuju tokove, a oznaka akumulacije nije brzina fluida. Desno gore je ventilirana komora: njezine krute stijenke imaju dva stvarno otvorena priključka, a zrak u komori i priključcima isti je fluid.
+
 ![Pregled poglavlja: kinematika, kontrolni volumen i kontinuitet.](../assets/print/u08_fig_uvod_pregled.svg){#fig-uvod-u08 fig-align="center" fig-alt="Pregled poglavlja: kinematika, kontrolni volumen i kontinuitet."}
 
-**Tumačenje skice.** Kontrolni volumen odabrani je dio prostora u kojem pratimo ulaz, izlaz i akumulaciju mase: $\sum\dot m_{ul}-\sum\dot m_{iz}=\mathrm{d}m_{KV}/\mathrm{d}t$. Prva shema predstavlja apstraktni uređaj, a ne krutu ovojnicu; na prikazu ventilirane komore krute stijenke imaju dva otvorena priključka. Kontrolna ploha (KP) zamišljena je granica preko koje se računa tok mase, a $\vec n$ njezina je vanjska jedinična normala.
-
 ## Kinematika, kontrolni volumen i kontinuitet
-
-Kinematika strujanja može se opisati praćenjem pojedine čestice fluida ili promatranjem odabranoga dijela prostora kroz koji fluid protječe. Zapis $A_1 v_1 = A_2 v_2$ samo je poseban slučaj opće bilance mase, odnosno jednadžbe kontinuiteta.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -316,7 +322,7 @@ $$
 \frac{\partial\rho}{\partial t} + \nabla\cdot(\rho\vec{v}) = 0.
 $$ {#eq-kinematika-kv-matematicki-izvod-diferencijalni-oblik-kontinuit-04}
 
-To je **diferencijalna jednadžba kontinuiteta** u najopćenitijem obliku — vrijedi i za stlačive i za nestlačive fluide. Za **nestlačivi fluid** ($\rho = \text{const.}$, pa $\partial\rho/\partial t = 0$ i $\nabla\rho = 0$) ona se reducira na
+To je **diferencijalna jednadžba kontinuiteta** u najopćenitijem obliku — vrijedi i za stlačive i za nestlačive fluide. Za **nestlačivi fluid** ($\rho = \text{konst.}$, pa $\partial\rho/\partial t = 0$ i $\nabla\rho = 0$) ona se reducira na
 
 $$
 \nabla\cdot\vec{v} = 0.
@@ -472,7 +478,7 @@ $w \ll v_s$: usis zahvaća samo mali dio vode koja nailazi na otvor, ostatak se 
 
 **Tekst zadatka**
 
-U pravokutni spremnik duljine $L = 4{,}2\ \text{m}$ i širine $b = 1{,}5\ \text{m}$ dotječu voda gustoće $\rho_w = 1000\ \text{kg/m}^3$, protokom $Q_A = 18\ \text{L/s} = 0{,}018\ \text{m}^3/\text{s}$, i slana otopina relativne gustoće $s_r = 1{,}10$, protokom $Q_B = 6\ \text{L/s} = 0{,}006\ \text{m}^3/\text{s}$. Izlazni vod promjera $D_3 = 100\ \text{mm}$ ima srednju brzinu $v_3 = 1{,}80\ \text{m/s}$.
+U pravokutni spremnik duljine $L = 4{,}2\ \text{m}$ i širine $b = 1{,}5\ \text{m}$ dotječu voda gustoće $\rho_v = 1000\ \text{kg/m}^3$, protokom $Q_A = 18\ \text{L/s} = 0{,}018\ \text{m}^3/\text{s}$, i slana otopina relativne gustoće $s_r = 1{,}10$, protokom $Q_B = 6\ \text{L/s} = 0{,}006\ \text{m}^3/\text{s}$. Izlazni vod promjera $D_3 = 100\ \text{mm}$ ima srednju brzinu $v_3 = 1{,}80\ \text{m/s}$.
 
 Protoci su stalni, volumeni se pri miješanju zbrajaju, a sadržaj je dobro izmiješan. Početni sadržaj ima sastav spojenih dotoka. Promatra se porast razine od $h_0 = 0{,}80\ \text{m}$ do $h_1 = 1{,}20\ \text{m}$.
 
@@ -493,7 +499,7 @@ Protoci su stalni, volumeni se pri miješanju zbrajaju, a sadržaj je dobro izmi
 Najprije od relativne gustoće dobivamo gustoću slane otopine:
 
 $$
-\rho_B = s_r \rho_w = 1{,}10 \cdot 1000 = 1100\ \text{kg/m}^3.
+\rho_B = s_r \rho_v = 1{,}10 \cdot 1000 = 1100\ \text{kg/m}^3.
 $$ {#eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-01}
 
 Površina izlaznog presjeka iznosi
@@ -511,7 +517,7 @@ $$ {#eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-03}
 Za homogeniziranu mješavinu najprije zatvaramo masenu bilancu dviju ulaznih struja. Ukupni ulazni maseni protok je
 
 $$
-\dot{m}_{ul} = \rho_w Q_A + \rho_B Q_B = 1000 \cdot 0{,}018 + 1100 \cdot 0{,}006 = 18 + 6{,}6 = 24{,}6\ \text{kg/s}.
+\dot{m}_{ul} = \rho_v Q_A + \rho_B Q_B = 1000 \cdot 0{,}018 + 1100 \cdot 0{,}006 = 18 + 6{,}6 = 24{,}6\ \text{kg/s}.
 $$ {#eq-kinematika-kv-cjeloviti-zadatak-mijesajuci-izjednacni-spremnik-04}
 
 Ukupni ulazni volumenski protok iznosi
@@ -879,9 +885,9 @@ $Q_{iz,rel}=0{,}4712\ \text{L/s}$; $u=0{,}06732\ \text{m/s}$ udesno; $v_{iz}=1{,
 
 **Tekst zadatka**
 
-Balastni tank dvodna ima stalnu tlocrtnu površinu $A_T = 36{,}0\ \text{m}^2$. Odzračna cijev počinje na visini $h_{max} = 1{,}60\ \text{m}$ iznad dna tanka, a početna razina je $h_0 = 0{,}30\ \text{m}$. Balastna crpka dovodi morsku vodu gustoće $\rho_{mv} = 1025\ \text{kg/m}^3$ protokom $Q_{mv} = 250\ \text{m}^3/\text{h}$, sustav ispiranja slatku vodu gustoće $\rho_w = 1000\ \text{kg/m}^3$ protokom $Q_w = 40\ \text{m}^3/\text{h}$, a prebačajna crpka istodobno odvodi homogenu mješavinu u susjedni tank protokom $Q_{iz} = 120\ \text{m}^3/\text{h}$.
+Balastni tank dvodna ima stalnu tlocrtnu površinu $A_T = 36{,}0\ \text{m}^2$. Odzračna cijev počinje na visini $h_{max} = 1{,}60\ \text{m}$ iznad dna tanka, a početna razina je $h_0 = 0{,}30\ \text{m}$. Balastna crpka dovodi morsku vodu gustoće $\rho_{mv} = 1025\ \text{kg/m}^3$ protokom $Q_{mv} = 250\ \text{m}^3/\text{h}$, sustav ispiranja slatku vodu gustoće $\rho_v = 1000\ \text{kg/m}^3$ protokom $Q_v = 40\ \text{m}^3/\text{h}$, a prebačajna crpka istodobno odvodi homogenu mješavinu u susjedni tank protokom $Q_{iz} = 120\ \text{m}^3/\text{h}$.
 
-Volumeni su aditivni, miješanje savršeno, početni sadržaj ima sastav spojenih dotoka, a protoci su stalni. Mjerila protoka imaju zajamčene granice $\pm4\ \%$ za $Q_{mv}$, $\pm5\ \%$ za $Q_w$ i $\pm6\ \%$ za $Q_{iz}$; dopuštene su sve kombinacije. Operacija je planirana na $t = 15\ \text{min}$ bez nadzora razine. Kad razina dosegne odzračnu cijev, voda izlazi na palubu i linearni model prestaje vrijediti. Nastavni model ne zamjenjuje plan upravljanja balastom.
+Volumeni su aditivni, miješanje savršeno, početni sadržaj ima sastav spojenih dotoka, a protoci su stalni. Mjerila protoka imaju zajamčene granice $\pm4\ \%$ za $Q_{mv}$, $\pm5\ \%$ za $Q_v$ i $\pm6\ \%$ za $Q_{iz}$; dopuštene su sve kombinacije. Operacija je planirana na $t = 15\ \text{min}$ bez nadzora razine. Kad razina dosegne odzračnu cijev, voda izlazi na palubu i linearni model prestaje vrijediti. Nastavni model ne zamjenjuje plan upravljanja balastom.
 
 **Traži se**
 
@@ -891,7 +897,7 @@ Volumeni su aditivni, miješanje savršeno, početni sadržaj ima sastav spojeni
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Masena bilanca ulaza daje gustoću mješavine; akumulaciju zatvori preko $Q_{mv} + Q_w - Q_{iz} = A_T\,dh/dt$. Kriterij: razina nakon 15 min mora ostati ispod $h_{max}$ za svaku dopuštenu kombinaciju protoka.
+Masena bilanca ulaza daje gustoću mješavine; akumulaciju zatvori preko $Q_{mv} + Q_v - Q_{iz} = A_T\,dh/dt$. Kriterij: razina nakon 15 min mora ostati ispod $h_{max}$ za svaku dopuštenu kombinaciju protoka.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -908,7 +914,7 @@ $\rho_{mj} \approx 1021{,}6\ \text{kg/m}^3$; $dh/dt = 1{,}312\ \text{mm/s}$; nom
 
 ![Skice uz zadatke za vježbu — grijač zraka, kosa ploha, komora, razdjelnik, klip i balastni tank.](../assets/print/u08_vjezbe_skice.svg){#fig-u08-vjezbe fig-align="center" fig-alt="Skice uz zadatke za vježbu — grijač zraka, kosa ploha, komora, razdjelnik, klip i balastni tank."}
 
-**Napomene uz skice.** U Z1 gustoća zraka na izlazu manja je od ulazne. U Z2 kut je zadan prema normali zamišljene plohe. U Z5 klip je krut osim središnjeg otvora, a $w$ je izlazna brzina u odnosu na klip; strelice $u$ i $w$ nisu u mjerilu. U Z6 odzračna cijev određuje najvišu dopuštenu razinu, a strelice protoka prikazuju samo poredak $Q_{mv} > Q_{iz} > Q_w$. Isprekidane kontrolne granice nisu stijenke; strelice označuju brzine ili protoke, ne sile. Tražene brzine i protoci nisu nacrtani u mjerilu: u Z1 i Z3 strelice $v_2$ i $Q_3$ shematske su, a u Z4 nacrtan je samo zadani omjer $v_2=2v_3$.
+**Napomene uz skice.** U Z1 gustoća zraka na izlazu manja je od ulazne. U Z2 kut je zadan prema normali zamišljene plohe. U Z5 klip je krut osim središnjeg otvora, a $w$ je izlazna brzina u odnosu na klip; strelice $u$ i $w$ nisu u mjerilu. U Z6 odzračna cijev određuje najvišu dopuštenu razinu, a strelice protoka prikazuju samo poredak $Q_{mv} > Q_{iz} > Q_v$. Isprekidane kontrolne granice nisu stijenke; strelice označuju brzine ili protoke, ne sile. Tražene brzine i protoci nisu nacrtani u mjerilu: u Z1 i Z3 strelice $v_2$ i $Q_3$ shematske su, a u Z4 nacrtan je samo zadani omjer $v_2=2v_3$.
 
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>

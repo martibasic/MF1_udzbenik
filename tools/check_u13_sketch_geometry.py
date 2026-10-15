@@ -95,7 +95,7 @@ def main():
     close(egl[0][1],HA,'EGL polazi sa slobodne površine')
     close(egl[-1][1],HB,'EGL završava na slobodnoj površini')
     check(all(y2>y1 for (_,y1),(_,y2) in zip(egl,egl[1:])),'EGL pada u smjeru toka bez stroja')
-    # Kote padova EGL (Tumačenje skice: H = h_AC + h_CD + h_DB) između razina EGL u A, C, D i B.
+    # Kote padova EGL (uvod poglavlja: H = h_AC + h_CD + h_DB) između razina EGL u A, C, D i B.
     cx,dx_=float(node(a,p+'nodeC').get('cx')),float(node(a,p+'nodeD').get('cx'))
     levels=[egl[0][1]]+[next(y for x,y in egl if abs(x-xx)<1e-6) for xx in (cx,dx_)]+[egl[-1][1]]
     total=0

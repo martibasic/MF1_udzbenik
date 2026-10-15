@@ -1,12 +1,18 @@
+Tlak, opisan u []{.mf1-chapter-ref target="u01"}, nije jedino svojstvo koje određuje ponašanje fluida. Kad se susjedni slojevi gibaju jedan prema drugom, fluid se opire smicanju, a na granici tekućine s plinom ili krutom stijenkom djeluju sile koje oblikuju slobodnu površinu. Prva je pojava viskoznost, a druga površinska napetost. Obje se u ovom poglavlju opisuju jednostavnim modelima koji se izravno primjenjuju u inženjerskom proračunu.
+
+Viskoznost se najjasnije vidi u stacionarnom Couetteovu sloju bez gradijenta tlaka. Fluid prianja uz obje stijenke, pa brzina fluida $v$ raste od nule na nepomičnoj donjoj stijenci do brzine ploče $u$ na gornjoj. Za newtonski fluid smično je naprezanje razmjerno gradijentu brzine, $\tau=\mu\,dv/dy$, gdje je $\mu$ dinamička viskoznost, a $\nu=\mu/\rho$ kinematička viskoznost. Taj je odnos konstitutivni model, a ne opći zakon. Viskoznost se snažno mijenja s temperaturom, pa se svojstva fluida i valjanost newtonskog modela uspoređuju pri istoj temperaturi.
+
+Površinska napetost $\sigma$ djeluje na granici faza kao sila po jedinici duljine kontaktne linije. U uskoj kapilari tekućina koja kvasi stijenku penje se iznad razine u posudi. Kontaktni kut $\theta$ mjeri se kroz tekućinu, a vertikalna komponenta površinske sile po obodu uravnotežuje težinu podignutog stupca, što daje $h=4\sigma\cos\theta/(\rho g d)$. Zakrivljena površina kapljice ili mjehura uz to zahtijeva tlačni skok prema Young–Laplaceovu zakonu. Time se smični otpor u volumenu fluida jasno razlikuje od površinskih sila na granici faza.
+
+Viskoznost određuje podmazivanje ležajeva, primjerice ležaja statvene cijevi brodskog osovinskog voda, i radno područje motornih i hidrauličkih ulja. Kapilarnost je važna u uskim procjepima limova brodske konstrukcije, raspršivačima i premazima. Poglavlje redom obrađuje Newtonov zakon viskoznosti, dinamičku i kinematičku viskoznost, površinsku napetost i kontaktni kut, kapilarni uspon te tlačni skok na kapljici i mjehuru. Modeli vrijede za newtonski fluid, stacionaran linearni profil i statički meniskus. Omjeri površinske napetosti prema inerciji i gravitaciji formaliziraju se Weberovim i Bondovim brojem u []{.mf1-chapter-ref target="u11"}, a tenzorski oblik viskoznog naprezanja obrađuje se u []{.mf1-chapter-ref target="u12"}.
+
+Slika ispod prikazuje obje pojave. Lijevo je ulje u procjepu debljine $\delta$ između nepomične donje stijenke, na kojoj je $v=0$, i gornje ploče koja se giba brzinom $u$; strelice profila $v(y)$ pokazuju linearan porast brzine fluida. Na gornju ploču djeluju dvije sile: $F$ je vanjska vučna sila, a $F_v$ sila ulja na ploču, usmjerena suprotno gibanju. Desno je otvorena kapilara promjera $d$ čiji je ulaz uronjen u tekućinu u posudi. Pri $\theta<90^\circ$ meniskus je konkavan, sile površinske napetosti $\sigma$ djeluju duž oboda, a $h$ je visina stupca iznad razine u posudi.
+
 ![Pregled poglavlja: Viskoznost, površinska napetost i kapilarnost](../assets/print/u02_fig_uvod_pregled.svg){#fig-uvod-u02 fig-align="center" fig-alt="Pregled poglavlja: Viskoznost, površinska napetost i kapilarnost"}
-
-**Tumačenje skice.** U stacionarnom Couetteovu sloju bez gradijenta tlaka brzina fluida $v$ raste od nule na donjoj stijenci do brzine ploče $u$ na gornjoj. Oznaka $F_v$ predstavlja silu ulja na ploču, a $F$ vanjsku vučnu silu. Newtonski model daje $\tau=\mu\,\mathrm{d}v/\mathrm{d}y$, dok je $\nu=\mu/\rho$; svojstva i valjanost modela uspoređuju se pri istoj temperaturi.
-
-U kapilari tekućina kvasi stijenku, a kontaktni kut mjeri se kroz tekućinu; vertikalna komponenta površinske sile po obodu uravnotežuje težinu podignutog stupca. Time se smični otpor u volumenu fluida razlikuje od površinskih sila na granici faza.
 
 ## Viskoznost i međupovršinske pojave
 
-Uz tlak, opisan u []{.mf1-chapter-ref target="u01"}, ponašanje fluida određuju viskoznost i međupovršinske pojave. Viskoznost opisuje otpor relativnom gibanju susjednih slojeva fluida, a površinska napetost djeluje na granici faza te određuje oblik slobodne površine i kapilarne pojave.
+Viskoznost opisuje otpor relativnom gibanju susjednih slojeva fluida, a površinska napetost djeluje na granici faza te određuje oblik slobodne površine i kapilarne pojave.
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>

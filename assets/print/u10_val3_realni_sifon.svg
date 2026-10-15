@@ -151,8 +151,8 @@
        HGL u A = 0  -> y = 180
        HGL u B = 0  (slobodni izlaz u atm)  -> y = 180 (na razini B-tocke)
        Glavna ideja: EGL pada od A do B linearno (priblizno), sto znaci da kod C lezi ispod cijevi.
-       EGL na C: -(z_C + v^2/2g + h_w_AC) = -(1,8 + 0,324 + 0,92) = -3,04 m + ... ne, to je p_C/gama
-       Pravilno: EGL na C = EGL(A) - h_w(A->C) = 0 - (1,44 + 0,5)*0,324 = -0,629 m
+       EGL na C: -(z_C + v^2/2g + h_g_AC) = -(1,8 + 0,324 + 0,92) = -3,04 m + ... ne, to je p_C/gama
+       Pravilno: EGL na C = EGL(A) - h_g(A->C) = 0 - (1,44 + 0,5)*0,324 = -0,629 m
          (HGL = EGL - v^2/2g = -0,629 - 0,324 = -0,953 m)
        Vizualizirati EGL kao crvena isprekidana, HGL kao ljubicasta isprekidana.
        Ovdje pojednostavljujemo: rastemo od A linearno do B (pad ukupno 2,6 m + 0 = 2,6 m), te oznacimo p_C/gama strelicom.

@@ -111,7 +111,7 @@
   <rect x="524" y="156" width="6" height="84" rx="3" fill="#1565c0" />
   <!-- Korak 3: h_loc lokalni -->
   <rect x="524" y="250" width="424" height="84" rx="9" fill="#fdf8f2" stroke="#ecd9c2" stroke-width="1.2" />
-  <!-- Korak 4: zbroj h_w + Delta p (rezultat) -->
+  <!-- Korak 4: zbroj h_g + Delta p (rezultat) -->
   <rect x="524" y="344" width="424" height="128" rx="9" fill="#f1f9f3" stroke="#cce7d4" stroke-width="1.2" />
   <rect x="524" y="344" width="6" height="128" rx="3" fill="#1e8449" />
   <line x1="552" y1="426" x2="920" y2="426" stroke="#c8d6e4" stroke-width="1" />
@@ -152,7 +152,7 @@
   <text x="36" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530"><tspan font-weight="700">Zadano:</tspan> <tspan font-style="italic">D</tspan> = 28 mm, <tspan font-style="italic">L</tspan> = 1,20 m, <tspan font-style="italic">v</tspan> = 2,8 m/s, <tspan font-style="italic">λ</tspan> = 0,028</text>
   <text x="36" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#1a2530">         <tspan font-style="italic">ρ</tspan> = 1060 kg/m³ (smjesa s glikolom),  Σξ = 4,2</text>
 
-  <text x="524" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Izvod ukupnog gubitka <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> i pada tlaka Δ<tspan font-style="italic">p</tspan></text>
+  <text x="524" y="42" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1a2530">Izvod ukupnog gubitka <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">g</tspan> i pada tlaka Δ<tspan font-style="italic">p</tspan></text>
 
   <text x="540" y="84" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1565c0">1. Kineticka visina (baza za sve gubitke)</text>
   <text x="736" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">v</tspan>² / (2<tspan font-style="italic">g</tspan>) = 2,8² / (2·9,81)</text>
@@ -164,9 +164,9 @@
 
   <text x="736" y="298" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">loc</tspan> = Σξ · <tspan font-style="italic">v</tspan>²/(2<tspan font-style="italic">g</tspan>) = 4,2 · 0,400</text>
   <text x="540" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e8449">4. Ukupni gubitak i pad tlaka</text>
-  <text x="736" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">l</tspan> + <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">loc</tspan> = 0,480 + 1,678</text>
+  <text x="736" y="392" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">g</tspan> = <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">l</tspan> + <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">loc</tspan> = 0,480 + 1,678</text>
   <text x="736" y="414" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1e8449">= 2,158 m</text>
-  <text x="736" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530">Δ<tspan font-style="italic">p</tspan> = <tspan font-style="italic">ρ</tspan> <tspan font-style="italic">g</tspan> <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1060 · 9,81 · 2,158</text>
+  <text x="736" y="446" font-family="'Segoe UI',Arial,sans-serif" font-size="14" text-anchor="middle" fill="#1a2530">Δ<tspan font-style="italic">p</tspan> = <tspan font-style="italic">ρ</tspan> <tspan font-style="italic">g</tspan> <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">g</tspan> = 1060 · 9,81 · 2,158</text>
   <text x="736" y="466" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#c0392b">≈ 22 440 Pa ≈ 22,4 kPa</text>
 <text x="244" y="91" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#b7600c"><tspan font-style="italic">L</tspan> = 1,20 m</text>
 

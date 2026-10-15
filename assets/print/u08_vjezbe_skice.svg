@@ -304,7 +304,7 @@
       <line x1="47" y1="147" x2="62" y2="147" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
       <line x1="247" y1="175" x2="273" y2="175" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
       <text x="38" y="109" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">mv</tspan> more</text>
-      <text x="4" y="170" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> slatka</text>
+      <text x="4" y="170" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan> slatka</text>
       <text x="266" y="197" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">iz</tspan></text>
       <line x1="53" y1="163" x2="63" y2="163" stroke="#657781" stroke-width="0.8" />
       <line x1="53" y1="184" x2="63" y2="184" stroke="#657781" stroke-width="0.8" />
@@ -320,7 +320,7 @@
       <text x="180" y="60" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">tanktop</text>
       <text x="158" y="180" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">KV: homogena mješavina</text>
       <text x="148" y="206" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">T</tspan> = 36 m²; <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 0,30 m; <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> = 1,60 m</text>
-      <text x="148" y="221" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 250; <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 40; <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">iz</tspan> = 120 m³/h</text>
+      <text x="148" y="221" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 250; <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 40; <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">iz</tspan> = 120 m³/h</text>
       <path id="u08vs_fix_z6_controlVolume" d="M69 74 H246 V192 H69 Z" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" data-mf1-role="control-volume" />
     </g>
   </g>

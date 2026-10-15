@@ -55,24 +55,24 @@
     <text x="252" y="70" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746" transform="translate(0 22)">A</text>
     <text x="263" y="70" font-family="Arial, Liberation Sans, sans-serif" font-size="9.5" fill="#263746" transform="translate(0 22)">(zglob)</text>
         <text x="252" y="324" font-family="Arial, Liberation Sans, sans-serif" font-size="9.5" fill="#263746">spojnica</text>
-    <text x="276" y="156" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.75em">o</tspan><tspan baseline-shift="baseline">gh</tspan><tspan baseline-shift="sub" font-size="0.75em">o</tspan></text>
-    <text x="434" y="320" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" text-anchor="end" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.75em">o</tspan><tspan baseline-shift="baseline">gh</tspan><tspan baseline-shift="sub" font-size="0.75em">o</tspan><tspan baseline-shift="baseline"> + ρ</tspan><tspan baseline-shift="sub" font-size="0.75em">w</tspan><tspan baseline-shift="baseline">gh</tspan><tspan baseline-shift="sub" font-size="0.75em">w</tspan></text>
+    <text x="276" y="156" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.75em">u</tspan><tspan baseline-shift="baseline">gh</tspan><tspan baseline-shift="sub" font-size="0.75em">u</tspan></text>
+    <text x="434" y="320" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" text-anchor="end" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.75em">u</tspan><tspan baseline-shift="baseline">gh</tspan><tspan baseline-shift="sub" font-size="0.75em">u</tspan><tspan baseline-shift="baseline"> + ρ</tspan><tspan baseline-shift="sub" font-size="0.75em">v</tspan><tspan baseline-shift="baseline">gh</tspan><tspan baseline-shift="sub" font-size="0.75em">v</tspan></text>
     <text x="160" y="122" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">ulje</text>
-    <text x="160" y="138" font-family="Arial, Liberation Sans, sans-serif" font-size="10" text-anchor="middle" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.75em">o</tspan> = 820 kg/m³</text>
+    <text x="160" y="138" font-family="Arial, Liberation Sans, sans-serif" font-size="10" text-anchor="middle" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.75em">u</tspan> = 820 kg/m³</text>
     <text x="160" y="228" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">voda</text>
-    <text x="160" y="244" font-family="Arial, Liberation Sans, sans-serif" font-size="10" text-anchor="middle" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.75em">w</tspan> = 1000 kg/m³</text>
+    <text x="160" y="244" font-family="Arial, Liberation Sans, sans-serif" font-size="10" text-anchor="middle" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.75em">v</tspan> = 1000 kg/m³</text>
     <text x="285" y="129" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#263746">F<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
     <text x="350" y="241" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#263746" transform="translate(0 10)">F<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
     <text x="360" y="227" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746">h<tspan baseline-shift="sub" font-size="0.7em">CP</tspan>
     </text>
     <text x="174" y="300" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" font-weight="700" text-anchor="end" fill="#263746">T</text>
     <text x="266" y="72" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" font-weight="700" text-anchor="middle" fill="#263746">R<tspan baseline-shift="sub" font-size="0.7em">A</tspan></text>
-    <text x="43" y="118" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#263746">h<tspan baseline-shift="sub" font-size="0.75em">o</tspan>
+    <text x="43" y="118" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#263746">h<tspan baseline-shift="sub" font-size="0.75em">u</tspan>
     </text>
     <text x="43" y="134.0" font-family="Arial, Liberation Sans, sans-serif" font-size="10" text-anchor="middle" fill="#263746">= 1,00 m</text>
-    <text x="43" y="228" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#263746">h<tspan baseline-shift="sub" font-size="0.75em">w</tspan>
+    <text x="43" y="228" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="#263746">h<tspan baseline-shift="sub" font-size="0.75em">v</tspan>
     </text>
     <text x="43" y="244.0" font-family="Arial, Liberation Sans, sans-serif" font-size="10" text-anchor="middle" fill="#263746">= 1,80 m</text>
-        <text x="414.0" y="198.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#263746">h<tspan baseline-shift="sub" font-size="0.75em">o</tspan><tspan baseline-shift="baseline"> + h</tspan><tspan baseline-shift="sub" font-size="0.75em">w</tspan></text>
+        <text x="414.0" y="198.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="end" fill="#263746">h<tspan baseline-shift="sub" font-size="0.75em">u</tspan><tspan baseline-shift="baseline"> + h</tspan><tspan baseline-shift="sub" font-size="0.75em">v</tspan></text>
   </g>
 </svg>

@@ -86,7 +86,7 @@ spomenu s izričitom napomenom.
 | brzina zvuka; brzina površinskog vala | $a$; $c$ (samo pog. 15) | |
 | volumen; istisnina; masa istisnine; gaz; nadvođe | $V$; $V_{ist}$; $\Delta$; $T$; $f$ | |
 | tlak atmosferski, manometarski, apsolutni, pare, zaustavni | $p_{atm}$, $p_M$, $p_{aps}$, $p_v$, $p_0$ | $p_0$ samo zaustavni; Bernoulli s $p/(\rho g)$ |
-| gubitci; koeficijenti | $h_w$, $h_l$, $h_{loc}$; $\xi$, $\zeta=\lambda L/D+\sum\xi$, $\lambda$ | $K$ samo volumni modul; $\lambda_L$ mjerilo duljina |
+| gubitci; koeficijenti | $h_g$, $h_l$, $h_{loc}$; $\xi$, $\zeta=\lambda L/D+\sum\xi$, $\lambda$ | $K$ samo volumni modul; $\lambda_L$ mjerilo duljina |
 | izentropski eksponent; specifična težina | $\kappa$; $\gamma$ | |
 | bezdimenzijski brojevi | $Ma$, $Re$, $Fr$, $We$, $St$, $Bo$, $Eu=\Delta p/(\rho v^2)$ | |
 | korekcijski faktori; kutovi | $\alpha$, $\beta$; $\theta$, $\varphi$ | kutovi lopatica $\beta_1$, $\beta_2$ samo u pog. 14 |
@@ -100,8 +100,8 @@ spomenu s izričitom napomenom.
 | kontrolni volumen i ploha | KV, KP; indeksi ul, iz | |
 | stabilitet | $B$, $G$, $M$, $KB$, $BM$, $KG$, $GM$ | bez nadvlake |
 | težina | $F_G$ ili $mg$ | $G$ samo težište (stabilitet), ne težina |
-| gustoće vode, morske vode, ulja, žive, zraka | $\rho_w$, $\rho_{mv}$, $\rho_o$, $\rho_{Hg}$, $\rho_{zr}$ | indeks $v$ samo para ($p_v$); indeks $m$ samo model (pog. 11, 14) |
-| relativna gustoća | $s_r=\rho/\rho_w$ | |
+| gustoće vode, morske vode, ulja, žive, zraka | $\rho_v$, $\rho_{mv}$, $\rho_u$, $\rho_{Hg}$, $\rho_{zr}$ | hrvatski indeksi: $v$ voda, $u$ ulje (i $\nu_v$, $\nu_u$, $h_v$, $h_u$ za slojeve); $p_v$ ostaje tlak pare; indeks $m$ samo model (pog. 11, 14) |
+| relativna gustoća | $s_r=\rho/\rho_v$ | |
 | kut poprečnog nagiba; ostali kutovi | $\varphi$; $\theta$ | |
 | širina broda ili pontona | $b$ | $B$ samo središte istisnine |
 | polumjer zavoja | $R_z$ | $R$ polumjer spremnika ili luka |
@@ -109,6 +109,7 @@ spomenu s izričitom napomenom.
 | udio otvorene površine rešetke | $\psi$ | |
 | ekvivalentna hrapavost; disipacija turbulentne kinetičke energije | $k_s$, relativno $k_s/D$; $\varepsilon$ | $\varepsilon$ samo disipacija (model $k$–$\varepsilon$); tolerancije s indeksom ($\varepsilon_h$) |
 | visina dobave crpke; visina turbine | $H_p$; $H_t$ | ne $h_p$, $h_t$ |
+| gubitak visine; smično naprezanje na stijenci; koeficijent preljeva | $h_g$ (s indeksima $h_{g,s}$, $h_{g,1}$…); $\tau_{st}$; $C_{pr}$ | hrvatski indeksi (gubitak, stijenka, preljev); ne $h_w$, $\tau_w$, $C_w$ |
 | standardna nesigurnost | $s(x)$; $s_E$, $s_\Delta$ | ne $u(x)$ ($u$ je brzina krute granice) |
 | koeficijent sustrujanja; faktor učinka rotora | $\chi$; $FM$ | samo pog. 14 |
 | kut lopatice | $\beta_1$, $\beta_2$ od smjera $-u$ | kut skretanja mlaza $\theta$ |

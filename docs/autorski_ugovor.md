@@ -67,6 +67,9 @@ U skici ostaju samo kote, oznake veličina i kratki opisi prizora. Osnovne
 relacije, ključni principi, upute i dulja objašnjenja pišu se kao obični
 odlomci neposredno ispod slike, s prirodnom oznakom poput „Veza s proračunom”,
 „Tumačenje skice” ili „Napomene uz skice”. Ne dodaju se bočni tekstni paneli.
+Poglavlje ne počinje slikom: najprije dolazi uvodni tekst koji objašnjava
+fizikalne pojave, zakone i primjene poglavlja, a uvodna slika slijedi ispod
+njega i prati taj tekst (odluka autorice od 15. listopada 2026.).
 Brojčane zamjene, međurezultati i kontrolni rezultati pripadaju rješenju, pa se
 ne ponavljaju u bočnom računskom panelu ni u opisu skice. Dijagrami koji
 uspoređuju modele ili prikazuju traženu fizikalnu ovisnost zadržavaju svoje

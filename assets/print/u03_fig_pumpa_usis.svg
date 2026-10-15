@@ -47,7 +47,7 @@
     <text x="40" y="46" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Crpka iznad spremnika</text>
     <text x="320" y="426" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" font-style="italic" text-anchor="middle" fill="#263746">p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan> = 101,3 kPa</text>
     <text x="300" y="492" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#263746">ulje</text>
-    <text x="300" y="507" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" text-anchor="middle" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 870 kg/m³</text>
+    <text x="300" y="507" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" text-anchor="middle" fill="#263746">ρ<tspan baseline-shift="sub" font-size="0.7em">u</tspan> = 870 kg/m³</text>
     <text x="225" y="137" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746" text-anchor="middle">crpka</text>
     <text x="368" y="113" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" font-style="italic" text-anchor="middle" fill="#263746">tlačni vod</text>
     <text x="248" y="190" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" fill="#263746"><tspan font-weight="700">U</tspan> – usis</text>

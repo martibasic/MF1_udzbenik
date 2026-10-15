@@ -221,10 +221,10 @@ def main():
         r=svg(name)
         for eid,kind in expected.items():
             check(node(r,eid).get('data-mf1-vector')==kind,f'{name}: {eid} mora biti vektor vrste {kind}')
-    # Indeks v samo za paru: voda w, ulje o.
+    # Hrvatski indeksi: voda v, ulje u (nikad engleski w, o).
     for name in ('u14_val1_reynolds_kanal.svg','u14_val4_kap_raspad.svg'):
         labels=[''.join(e.itertext()).strip() for e in svg(name).iter() if e.tag.endswith('text')]
-        check(not any(t.startswith(('νv','ρv','νu')) for t in labels),f'{name}: voda nosi indeks w, ulje o')
+        check(not any(t.startswith(('νw','ρw','νo','ρo')) for t in labels),f'{name}: voda nosi indeks v, ulje u')
     print('PASS U11: devet SVG-ova; otvoreni prolazi, povezani fluidi, pravokutni presjek Z1 s kotama, geometrijska sličnost, stvarne kote, profili, vektori i kvantitativni grafovi.')
 
 

@@ -81,7 +81,7 @@
       <line x1="224.78" y1="102.59" x2="222.30" y2="73.0" stroke="#657781" stroke-width="0.6" />
       <line x1="281.81" y1="214.24" x2="275.62" y2="140.0" stroke="#657781" stroke-width="0.7" stroke-dasharray="3,3" />
       <text x="488" y="370" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">voda</text>
-      <text x="290" y="505" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">T<tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 0,30 m; T<tspan baseline-shift="sub" font-size="0.7em">D</tspan> = 0,20 m; δ = 0,10 m; ρ<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 800 kg/m³; ρ<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1000 kg/m³</text>
+      <text x="290" y="505" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">T<tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 0,30 m; T<tspan baseline-shift="sub" font-size="0.7em">D</tspan> = 0,20 m; δ = 0,10 m; ρ<tspan baseline-shift="sub" font-size="0.7em">u</tspan> = 800 kg/m³; ρ<tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 1000 kg/m³</text>
     </g>
   </g>
 </svg>

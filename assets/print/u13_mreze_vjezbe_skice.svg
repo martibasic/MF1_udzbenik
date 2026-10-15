@@ -191,7 +191,7 @@
         <path id="u13ex_z5D2" d="M325.75 196 L398.25 196" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" data-mf1-role="dimension" />
         <text x="362.0" y="213" font-size="11" fill="#263746" text-anchor="middle">125 mm</text>
         <text x="223" y="69" font-size="12" fill="#263746" text-anchor="middle">Tri alternativna unutarnja presjeka</text>
-        <text x="30" y="243" font-size="12" fill="#263746" text-anchor="start">Q = 0,018 m³/s; L = 150 m; Σξ = 6,0; h<tspan baseline-shift="sub" font-size="0.75em">w</tspan> ≤ 15 m.</text>
+        <text x="30" y="243" font-size="12" fill="#263746" text-anchor="start">Q = 0,018 m³/s; L = 150 m; Σξ = 6,0; h<tspan baseline-shift="sub" font-size="0.75em">g</tspan> ≤ 15 m.</text>
         <text x="30" y="264" font-size="12" fill="#263746" text-anchor="start">k<tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 0,15 mm (nova), 0,50 mm (stara); λ(Re, k<tspan baseline-shift="sub" font-size="0.7em">s</tspan>/D) računaj.</text>
       </g>
     </g>
@@ -226,7 +226,7 @@
         <text x="140" y="162" font-size="11" fill="#263746" text-anchor="end">usisni koš</text>
         <text x="156" y="74" font-size="11" fill="#263746" text-anchor="start">oplata broda</text>
         <text x="236" y="58" font-size="11" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">atm</tspan> = 101,3 kPa; p<tspan baseline-shift="sub" font-size="0.75em">v</tspan> = 4,2 kPa</text>
-        <text x="236" y="74" font-size="11" fill="#263746" text-anchor="start">(30 °C); h<tspan baseline-shift="sub" font-size="0.75em">w,s</tspan> = 1,4 m;</text>
+        <text x="236" y="74" font-size="11" fill="#263746" text-anchor="start">(30 °C); h<tspan baseline-shift="sub" font-size="0.75em">g,s</tspan> = 1,4 m;</text>
         <text x="236" y="90" font-size="11" fill="#263746" text-anchor="start">NPSH<tspan baseline-shift="sub" font-size="0.75em">r</tspan> pri nazivnoj brzini</text>
       </g>
     </g>

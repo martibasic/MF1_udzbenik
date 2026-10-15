@@ -11,7 +11,7 @@
     ]
   },
   "u01_fig_gustoca_sr.svg": {
-    "source_sha1": "6c92e43b95da6df51f0d0ece61022d16693dd4a5",
+    "source_sha1": "fab48cb4539ff5d4cc97021707e46ce3554455c6",
     "panels": [
       [
         12,
@@ -23,7 +23,7 @@
         274,
         12,
         368,
-        254
+        290
       ]
     ]
   },
@@ -39,7 +39,7 @@
     ]
   },
   "u01_fig_uvod_pregled.svg": {
-    "source_sha1": "2ac48b6e5f041a21717ffcd90de4cdb7972959eb",
+    "source_sha1": "99d399f34319d9a724db983a1ca20a91ed6717e4",
     "panels": [
       [
         12,
@@ -255,7 +255,7 @@
     ]
   },
   "u03_ch1_zatvoreni_spremnik_ulje_ziva.svg": {
-    "source_sha1": "891b86bf35fa2d2edd6e686dc97e9a995493d7eb",
+    "source_sha1": "6fdefdf58e04411d13322afb1a7af04a43d53af1",
     "panels": [
       [
         12,
@@ -277,7 +277,7 @@
     ]
   },
   "u03_fig_pumpa_usis.svg": {
-    "source_sha1": "ca44d22a76c0a533d67d582f1322cfa925dc6469",
+    "source_sha1": "333e1f72aee7241157a0092b213f65d4ecaada6e",
     "panels": [
       [
         12,
@@ -305,7 +305,7 @@
     ]
   },
   "u03_fig_zatvoreni_spremnik_tlak.svg": {
-    "source_sha1": "9188460bd8ec7586ce34d31e1745112fca18bb87",
+    "source_sha1": "42ec638e9314d646cebf2168e95ff73a14e7e1f6",
     "panels": [
       [
         12,
@@ -316,7 +316,7 @@
     ]
   },
   "u03_val1_diferencijalni_manometar.svg": {
-    "source_sha1": "1d60ad67b584ff1e0c56c5d01d81ac3f67a9e863",
+    "source_sha1": "0fb3a685b16a9488ecfd669fd898badcd7a4a314",
     "panels": [
       [
         12,
@@ -327,7 +327,7 @@
     ]
   },
   "u03_vjezbe_skice.svg": {
-    "source_sha1": "24fb5d662283728c17a061c081e061884e7914d2",
+    "source_sha1": "97ca62e33de1019f64703bcd393834aefc7f392b",
     "panels": [
       [
         12,
@@ -440,7 +440,7 @@
     ]
   },
   "u04_vjezbe_skice.svg": {
-    "source_sha1": "f6d0546b4233fedbf43ac8801a051aa3abccf562",
+    "source_sha1": "b05bbb8627fb0115a1390bc9ca5308f5ec04b75f",
     "panels": [
       [
         12,
@@ -481,7 +481,7 @@
     ]
   },
   "u05_ch1_pregrada_ulje_voda.svg": {
-    "source_sha1": "87c61d624b3bcb9e342dd50e1a4b201ea6b3f2ef",
+    "source_sha1": "ea5f55bd6c041184a17f0a238a63d1d26ee3e4d4",
     "panels": [
       [
         12,
@@ -605,7 +605,7 @@
     ]
   },
   "u07_ch1_platforma_ulje_voda_ormar.svg": {
-    "source_sha1": "7dbfb12bd948956f933673f0412cfb0dc2123cd7",
+    "source_sha1": "260dd8ac505dd819eb01d44386559dba1a8dee65",
     "panels": [
       [
         12,
@@ -677,7 +677,7 @@
     ]
   },
   "u07_vjezbe_skice.svg": {
-    "source_sha1": "5c0bcbeebc33f2e6626bc2c396bf1d60826f74f9",
+    "source_sha1": "600e0f9d297f3ee0d09c81eb0cf3272f74a6e4d9",
     "panels": [
       [
         12,
@@ -718,7 +718,7 @@
     ]
   },
   "u08_ch1_mijesajuci_spremnik.svg": {
-    "source_sha1": "c751c678c95c400d95d2d0e3ae94f74eb577539f",
+    "source_sha1": "d6c10cc86f9a86b2221a7a5353223d8783fe3cbe",
     "panels": [
       [
         12,
@@ -819,7 +819,7 @@
     ]
   },
   "u08_vjezbe_skice.svg": {
-    "source_sha1": "12f8e3e4e5a1175bbc3007b58c5f8ce616b8f7a9",
+    "source_sha1": "bd759e301eb0a32a7d40c87af3bc397ff5a93d68",
     "panels": [
       [
         12,
@@ -860,7 +860,7 @@
     ]
   },
   "u09_ch1_bypass_sifon_suzenje_mlaz.svg": {
-    "source_sha1": "3302801f41900acf2b2cbef95dc01ea2a4822970",
+    "source_sha1": "1da94f9c0aee2f978f823d99f072d3d627044820",
     "panels": [
       [
         12,
@@ -922,7 +922,7 @@
     ]
   },
   "u09_fig_venturijeva_cijev.svg": {
-    "source_sha1": "06a16a3029253b74a5b2677dfaf20e28635ec135",
+    "source_sha1": "86f8e14edd130f4045aee2472a82f3490b6cd907",
     "panels": [
       [
         12,
@@ -1048,7 +1048,7 @@
     ]
   },
   "u10_fig_uvod_pregled.svg": {
-    "source_sha1": "c5f2e60d6b26cd5ae71dfed723d4c1f842f8f92e",
+    "source_sha1": "3a196e5d708a5a4c7c3ecc2472bcbdcaf352d82d",
     "panels": [
       [
         12,
@@ -1366,7 +1366,7 @@
     ]
   },
   "u13_mreze_vjezbe_skice.svg": {
-    "source_sha1": "72f5881253029e6304ba498383929aef50241bb2",
+    "source_sha1": "bd753ad75d77fd24f7c1b27fabed531c56729900",
     "panels": [
       [
         12,
@@ -1463,7 +1463,7 @@
     ]
   },
   "u14_val1_reynolds_kanal.svg": {
-    "source_sha1": "bc380ecd2e3395d7499bf31567fb1e8ea171e98b",
+    "source_sha1": "aa9c3d64cca32f8cd80d1a12bac73b5099cc7448",
     "panels": [
       [
         12,
@@ -1502,7 +1502,7 @@
     ]
   },
   "u14_val4_kap_raspad.svg": {
-    "source_sha1": "a5cfd49ce04f5f73e58fada93e026683f5c2b9b8",
+    "source_sha1": "bd08a6e681516197d6dd2af06054e89d61b9d5e3",
     "panels": [
       [
         12,

@@ -1,8 +1,14 @@
+Kada fluid struji kroz koljeno, mlaznicu ili račvu, mijenja mu se iznos ili smjer brzine, a za to su potrebne sile. Fluid ih dobiva od stijenki i od susjednog fluida na ulaznim i izlaznim presjecima, a prema trećem Newtonovu zakonu suprotnom silom opterećuje cijev, prirubnicu i nosač. Kontinuitet iz []{.mf1-chapter-ref target="u07"} i Bernoullijeva jednadžba iz []{.mf1-chapter-ref target="u08"} daju brzine i tlakove, ali ne i tu silu. Zato drugi Newtonov zakon primjenjujemo na kontrolni volumen.
+
+Za stacionaran tok kroz nepomičan kontrolni volumen zbroj svih vanjskih sila na fluid jednak je promjeni toka količine gibanja: $\vec F_p+\vec F_G+\vec R_{st\to f}=\sum_{\mathrm{iz}}\dot m\vec v-\sum_{\mathrm{ul}}\dot m\vec v$. Lijevo su rezultanta tlačnih sila na presjecima $\vec F_p$, težina fluida u kontrolnom volumenu $\vec F_G$ i sila stijenke na fluid $\vec R_{st\to f}$. Tlačna sila na presjeku $i$ jest $\vec F_{p,i}=-p_{M,i}A_i\vec n_i$, gdje je $\vec n_i$ vanjska normala, pa pri pretlaku potiskuje fluid u kontrolni volumen. Za jedan ulaz i jedan izlaz maseni je protok isti na oba presjeka, $\dot m=\rho_1A_1v_1=\rho_2A_2v_2$. Brzine i sile zbrajaju se vektorski.
+
+Sila kojom fluid djeluje na stijenku ima suprotan smjer, $\vec F=-\vec R_{st\to f}$, a reakcija nosača $\vec R$ slijedi tek iz ravnoteže samog elementa, uz njegovu težinu i ostale priključne sile. Zato uz svaku silu treba reći na koje tijelo djeluje. Isti zakon, zapisan u sustavu tijela koje se giba stalnom brzinom, opisuje mlaz na lopaticu ili ploču te potisak vodomlaznog pogona i propelera. Vektorskim množenjem položajem $\vec r$ prelazi u zakon momenta količine gibanja, kojim se računaju rotirajuće mlaznice, raspršivači i rotori.
+
+Poglavlje redom obrađuje integralni zakon, silu na cijevno koljeno, pomični kontrolni volumen s mlaznim pogonom i aktuatorskim diskom te moment količine gibanja. Primjene su koljena i račve u brodskim strojarnicama, vodomlazni pogon, brodski vijak i stroj za pranje tankova. Radni model pretpostavlja stacionaran tok i jednolike profile brzine na presjecima ($\beta=1$); prolazne pojave poput vodenog udara traže i član akumulacije. Lokalni oblik zakona vodi do Navier–Stokesove jednadžbe u []{.mf1-chapter-ref target="u12"}, a Eulerova turbinska jednadžba i stvarni propeler obrađuju se u []{.mf1-chapter-ref target="u14"}.
+
+Slika ispod prikazuje sile na fluid u koljenu koje skreće tok za $90°$. Fluid ulazi kroz presjek 1 vodoravno, brzinom $\vec v_1$ u smjeru osi $x$, a izlazi kroz presjek 2 prema dolje brzinom $\vec v_2$. Granica KV obuhvaća fluid u koljenu i siječe tok na oba presjeka. Na presjecima djeluju tlačne sile $p_{M1}A_1$ i $p_{M2}A_2$ usmjerene u kontrolni volumen, a u sredini težina $\vec F_G$. Strelice $R_{st\to f,x}$ i $R_{st\to f,y}$ u donjem lijevom kutu pokazuju pretpostavljene pozitivne smjerove komponenata sile stijenke na fluid; stvarne predznake određuje račun.
+
 ![Pregled poglavlja: količina i moment količine gibanja.](../assets/print/u11_fig_uvod_pregled.svg){#fig-uvod-u11 fig-align="center" fig-alt="Pregled poglavlja: količina i moment količine gibanja."}
-
-**Tumačenje skice.** Za stacionaran tok kroz fiksni kontrolni volumen zbroj svih vanjskih sila na fluid jednak je promjeni toka količine gibanja: $\vec F_p+\vec F_G+\vec R_{st\to f}=\sum_{\mathrm{iz}}\dot m\vec v-\sum_{\mathrm{ul}}\dot m\vec v$. Tlačna sila na presjeku je $\vec F_{p,i}=-p_{M,i}A_i\vec n_i$, gdje je $\vec n_i$ vanjska normala.
-
-Za jedan ulaz i izlaz vrijedi $\dot m=\rho_1A_1v_1=\rho_2A_2v_2$. Brzine i sile zbrajaju se vektorski. Strelice $R_{st\to f,x}$ i $R_{st\to f,y}$ pokazuju pretpostavljene pozitivne smjerove komponenata sile stijenke na fluid; predznake određuje račun. Sila fluida na stijenku ima suprotan smjer, $\vec F=-\vec R_{st\to f}$, a reakcija nosača $\vec R$ slijedi tek iz ravnoteže samog elementa. Težina fluida u kontrolnom volumenu označena je s $\vec F_G$.
 
 ## Količina i moment količine gibanja
 
@@ -138,7 +144,7 @@ Integralni zakon za stacionarno strujanje ($d/dt = 0$):
 $$
 \int_{KP} \rho \vec{v}(\vec{v}\cdot\vec{n})\,dS = \sum \vec{F}.
 $$ {#eq-momentum-razrada-koraka-01}
-Za presjeke s jednodimenzijskim profilom brzine ($v = $ const. po presjeku):
+Za presjeke s jednodimenzijskim profilom brzine ($v = $ konst. po presjeku):
 - na ulazu: $\vec{v}\cdot\vec{n} = -v_1$ (normala je usmjerena prema van, a brzina prema unutra), taj član daje $-\dot{m}\vec{v}_1$
 - na izlazu: $\vec{v}\cdot\vec{n} = +v_2$, daje $+\dot{m}\vec{v}_2$
 
@@ -918,7 +924,7 @@ Vrijedi i tada, jer zakon količine gibanja proizlazi iz Newtonovih zakona i ne 
 
 ## Zadaci za vježbu
 
-Za cijevne elemente i slobodne mlazove slatke vode uzmi $\rho=\rho_w=998\ \text{kg/m}^3$; za morsku vodu u Z1 i Z2 gustoća $\rho=\rho_{mv}$ zadana je u zadatku. Svugdje vrijede jednoliki profili brzine. Tlakovi označeni s $p_M$ su manometarski. Za cijevne elemente promatraju se samo komponente u horizontalnoj ravnini $xy$; težina i oslanjanje okomito na tu ravninu nisu dio traženog opterećenja. Osi i presjeci prikazani su na @fig-u11-vjezbe. Sila fluida na element označena je s $\vec F$, potisak s $F_T$, a reakcija nosača na element s $\vec R$.
+Za cijevne elemente i slobodne mlazove slatke vode uzmi $\rho=\rho_v=998\ \text{kg/m}^3$; za morsku vodu u Z1 i Z2 gustoća $\rho=\rho_{mv}$ zadana je u zadatku. Svugdje vrijede jednoliki profili brzine. Tlakovi označeni s $p_M$ su manometarski. Za cijevne elemente promatraju se samo komponente u horizontalnoj ravnini $xy$; težina i oslanjanje okomito na tu ravninu nisu dio traženog opterećenja. Osi i presjeci prikazani su na @fig-u11-vjezbe. Sila fluida na element označena je s $\vec F$, potisak s $F_T$, a reakcija nosača na element s $\vec R$.
 
 ::::: {.mf1-vjezbe-list}
 

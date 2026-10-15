@@ -83,7 +83,7 @@
       <path id="u09ch1_D" d="M331 305 L349 305" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dimSmall)" marker-end="url(#u09ch1_dimSmall)" data-mf1-role="dimension" />
       <line x1="352" y1="305" x2="392" y2="290" stroke="#657781" stroke-width="1" />
       <text x="396" y="288" font-size="11" fill="#263746" text-anchor="start">D = 150 mm (uvećano)</text>
-      <text x="396" y="400" font-size="11" fill="#263746" text-anchor="start">gubitak voda h<tspan baseline-shift="sub" font-size="0.7em">w</tspan> = 1,2 m</text>
+      <text x="396" y="400" font-size="11" fill="#263746" text-anchor="start">gubitak voda h<tspan baseline-shift="sub" font-size="0.7em">g</tspan> = 1,2 m</text>
       <text x="396" y="416" font-size="11" fill="#263746" text-anchor="start">(rešetka, ventil, filtar, koljena)</text>
       <rect id="u09ch1_bottom" x="300" y="560" width="260" height="8" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <text x="400" y="553" font-size="11" fill="#263746" text-anchor="start">dno trupa</text>
