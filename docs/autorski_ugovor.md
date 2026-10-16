@@ -13,6 +13,11 @@ Ovaj ugovor određuje javna i autorska sučelja sveučilišnog priručnika. CI s
 - `Dublje` — sadržaj koji nije potreban za temeljni ishod poglavlja.
 
 Odgovarajuće CSS klase su `.mf1-temelj`, `.mf1-izvod`, `.mf1-fizikalno-znacenje`, `.mf1-cfd`, `.mf1-granica-modela`, `.mf1-numerika` i `.mf1-dublje`.
+Naslov takvog bloka malo je veći od teksta bloka, u webu i u PDF-u.
+
+Poglavlje ima jedan sažetak, na kraju, iza zadataka za vježbu: odjeljak
+**Sažetak** ili završni okvir. Između riješenih primjera i zadataka ne stoji
+drugi sažetak (odluka autorice od 16. listopada 2026.).
 
 Odlomci `Računalna dinamika fluida` umeću se uz pripadnu fiziku kroz sva glavna
 poglavlja. Imaju zajednički naslov i konkretan tematski uvod, obično jedan

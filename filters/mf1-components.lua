@@ -179,7 +179,14 @@ end
 local function adapt_cite(cite)
   if #cite.citations~=1 then return nil end
   local object=index.objects[cite.citations[1].id]
-  if object and (collection or object.kind=="Example" or object.kind=="Problem") then return reference(object.id) end
+  if object and (collection or object.kind=="Example" or object.kind=="Problem") then
+    -- [-@id] ispisuje samo broj, pa tekst sam sklanja imenicu:
+    -- "u primjeru [-@ex-...]", "prema jednadžbi [-@eq-...]".
+    if cite.citations[1].mode=="SuppressAuthor" then
+      return reference(object.id,{pandoc.Str(object.number)})
+    end
+    return reference(object.id)
+  end
 end
 
 local function pdf_document_link(link)

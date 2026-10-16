@@ -1,18 +1,18 @@
 Bernoullijeva jednadžba iz []{.mf1-chapter-ref target="u08"} pretpostavlja stalnu gustoću, a Pascalov zakon iz []{.mf1-chapter-ref target="u01"} opisuje novu ravnotežu kao da je promjena tlaka trenutačno stigla u sve točke fluida. U stvarnom fluidu informacija o promjeni tlaka putuje konačnom brzinom, a u plinu pri velikoj brzini ili velikoj promjeni tlaka mijenjaju se i gustoća i temperatura. U ovom poglavlju gradimo jednodimenzijski model idealnog kompresibilnog toka i iz njega određujemo kada je nestlačivi račun još prihvatljiv.
 
-Tlačni poremećaj širi se relativno prema plinu brzinom zvuka $a$, koja za kalorički savršen plin iznosi $a=\sqrt{\kappa RT}$, uz izentropski eksponent $\kappa$. U mirujućem plinu brzine širenja zato su $-a$ i $+a$. Machov broj $Ma=v/a$ uspoređuje brzinu toka s brzinom širenja poremećaja, a $Ma<0{,}3$ korisna je inženjerska heuristika za model konstantne gustoće. Zaustavne veličine $T_0$, $p_0$ i $\rho_0$ opisuju stanje koje bi tok dosegnuo usporavanjem do mirovanja; za temperaturu vrijedi $T_0/T=1+\tfrac{\kappa-1}{2}Ma^2$.
+Tlačni poremećaj širi se u odnosu na plin brzinom zvuka $a$, koja za kalorički savršen plin iznosi $a=\sqrt{\kappa RT}$, uz izentropski eksponent $\kappa$. U mirujućem plinu brzine širenja zato su $-a$ i $+a$. Machov broj $Ma=v/a$ uspoređuje brzinu toka s brzinom širenja poremećaja, a granica $Ma<0{,}3$ korisna je inženjerska heuristika za model konstantne gustoće. Zaustavne veličine $T_0$, $p_0$ i $\rho_0$ opisuju stanje koje bi tok dosegnuo usporavanjem do mirovanja; za temperaturu vrijedi $T_0/T=1+\tfrac{\kappa-1}{2}Ma^2$.
 
-Relacija $dA/A=(Ma^2-1)\,dv/v$ pokazuje da podzvučni tok ubrzava u suženju, a nadzvučni u proširenju. U izentropskoj konvergentno-divergentnoj sapnici pri zagušenju grlo $A^*$ doseže $Ma=1$, a maseni protok najveću vrijednost određenu s $p_0$, $T_0$ i $A^*$. Izlazni presjek $A_e$ i protutlak $p_b$ određuju što se događa u divergentnom dijelu: tok ondje ostaje podzvučan, ubrzava do nadzvučnog izlaza ili prolazi kroz normalni udarni val. Kroz normalni udarni val nadzvučni tok prelazi u podzvučni: statički tlak raste, $p_2>p_1$, zaustavni tlak pada, $p_{02}<p_{01}$, dok zaustavna temperatura ostaje ista, $T_{02}=T_{01}$.
+Relacija $dA/A=(Ma^2-1)\,dv/v$ pokazuje da podzvučni tok ubrzava u suženju, a nadzvučni u proširenju. U izentropskoj konvergentno-divergentnoj sapnici pri zagušenju tok u grlu $A^*$ doseže $Ma=1$, a maseni protok najveću vrijednost određenu s $p_0$, $T_0$ i $A^*$. Izlazni presjek $A_e$ i protutlak $p_b$ određuju što se događa u divergentnom dijelu: tok ondje ostaje podzvučan, ubrzava do nadzvučnog izlaza ili prolazi kroz normalni udarni val. Kroz normalni udarni val nadzvučni tok prelazi u podzvučni: statički tlak raste, $p_2>p_1$, zaustavni tlak pada, $p_{02}<p_{01}$, dok zaustavna temperatura ostaje ista, $T_{02}=T_{01}$.
 
-Takav račun treba za odziv pneumatskih vodova, kapacitet sigurnosnih otvora, usis turbopuhala i sustav stlačenog zraka za upućivanje brodskog dizelskog motora. Poglavlje redom obrađuje brzinu zvuka, Machov broj, zaustavne veličine, sapnicu i zagušenje te normalni udarni val, a završava postupkom analize. Model pretpostavlja kalorički savršen plin sa stalnim $\kappa$, jednolike veličine po presjeku te zanemarivo trenje i izmjenu topline. Sile koje tok i mlaz prenose na konstrukciju računaju se integralnom bilancom količine gibanja u []{.mf1-chapter-ref target="u10"}.
+Takav je račun potreban za odziv pneumatskih vodova, kapacitet sigurnosnih otvora, usis turbopuhala i sustav stlačenog zraka za upućivanje brodskog dizelskog motora. Poglavlje redom obrađuje brzinu zvuka, Machov broj, zaustavne veličine, sapnicu i zagušenje te normalni udarni val, a završava postupkom analize. Model pretpostavlja kalorički savršen plin sa stalnim $\kappa$, jednolike veličine po presjeku te zanemarivo trenje i izmjenu topline. Sile koje tok i mlaz prenose na konstrukciju računaju se integralnom bilancom količine gibanja u []{.mf1-chapter-ref target="u10"}.
 
-Slika ispod prikazuje tri temeljne pojave. Lijevo je tlačni poremećaj iz izvora O u mirujućem plinu ($v=0$), s frontama koje se šire brzinama $-a$ i $+a$. U sredini je izentropska sapnica napajana iz komore stanja $p_0$, $T_0$: u konvergentnom dijelu je $Ma<1$, u grlu $A^*$ vrijedi $Ma=1$, a u divergentnom dijelu $Ma>1$ sve do izlaznog presjeka $A_e$, iza kojeg djeluje protutlak $p_b$. Sapnica je nacrtana kao osnosimetrična, s omjerom površina izlaza i grla $A_e/A^*=1{,}6$ iz @ex-kd-sapnica-rezim; omjer nacrtanih promjera zato je $\sqrt{1{,}6}\approx1{,}26$. Desno je normalni udarni val kroz koji tok s $Ma_1>1$ prelazi u tok s $Ma_2<1$.
+Slika ispod prikazuje tri temeljne pojave. Lijevo je tlačni poremećaj iz izvora O u mirujućem plinu ($v=0$), s frontama koje se šire brzinama $-a$ i $+a$. U sredini je izentropska sapnica napajana iz komore stanja $p_0$, $T_0$: u konvergentnom dijelu je $Ma<1$, u grlu $A^*$ vrijedi $Ma=1$, a u divergentnom dijelu $Ma>1$ sve do izlaznog presjeka $A_e$, iza kojeg djeluje protutlak $p_b$. Sapnica je nacrtana kao osnosimetrična, s omjerom površina izlaza i grla $A_e/A^*=1{,}6$ iz primjera [-@ex-kd-sapnica-rezim]; omjer nacrtanih promjera zato je $\sqrt{1{,}6}\approx1{,}26$. Desno je normalni udarni val kroz koji tok s $Ma_1>1$ prelazi u tok s $Ma_2<1$.
 
 ![Kompresibilni tok povezuje širenje tlačnog vala, zagušenje u sapnici i skok veličina kroz udarni val.](../assets/print/u09_fig_uvod_kompresibilni_tok.svg){#fig-kompresibilni-pregled fig-align="center" fig-alt="Kompresibilni tok povezuje širenje tlačnog vala, zagušenje u sapnici i skok veličina kroz udarni val."}
 
 ## Kompresibilnost fluida {#sec-kompresibilni-motivacija}
 
-U sporom toku kapljevine promjena tlaka gotovo ne mijenja gustoću, pa je model konstantne gustoće izvrstan. Kod plina pri velikoj brzini ili velikoj promjeni tlaka isti korak više nije dopušten: dio energije toka pohranjuje se u stlačivanje i zagrijavanje plina. Tada uz masu, količinu gibanja i energiju treba pratiti i vezu između tlaka, gustoće i temperature [@anderson2021].
+U sporom toku kapljevine promjena tlaka gotovo ne mijenja gustoću, pa je model konstantne gustoće izvrstan. Kod plina pri velikoj brzini ili velikoj promjeni tlaka takvo pojednostavljenje više nije dopušteno: dio energije toka pohranjuje se u stlačivanje i zagrijavanje plina. Tada uz masu, količinu gibanja i energiju treba pratiti i vezu između tlaka, gustoće i temperature [@anderson2021].
 
 ::: {.mf1-application}
 <p class="mf1-box-label">Inženjerski kontekst</p>
@@ -24,7 +24,7 @@ Kompresibilnost je važna za odziv pneumatskog aktuatora, protok kroz sigurnosni
 
 ## Brzina zvuka {#sec-brzina-zvuka}
 
-Promatra se vrlo malen tlačni poremećaj koji se kroz fluid širi bez značajne izmjene topline s okolinom. Za takav brzi, gotovo reverzibilni poremećaj vrijedi lokalna izentropska veza
+Promatramo vrlo malen tlačni poremećaj koji se kroz fluid širi bez znatne izmjene topline s okolinom. Za takav brzi, gotovo reverzibilni poremećaj vrijedi lokalna izentropska veza
 
 $$
 a^2=\left(\frac{\partial p}{\partial \rho}\right)_s,
@@ -37,9 +37,9 @@ gdje je $a$ brzina zvuka, a indeks $s$ označuje konstantnu entropiju. Jednadžb
 
 **Pitanje.** Kojom brzinom $a$ putuje slab tlačni poremećaj kroz mirujući fluid?
 
-**Bilanca.** Promatra se kontrolni volumen koji putuje zajedno s ravnim valom. U njegovu sustavu val miruje, fluid ulazi brzinom $a$ sa stanjem $p$, $\rho$, a izlazi brzinom $a-\mathrm{d}v$ sa stanjem $p+\mathrm{d}p$, $\rho+\mathrm{d}\rho$. Presjek je stalan, trenje i izmjena topline zanemarivi su.
+**Bilanca.** Promatramo kontrolni volumen koji putuje zajedno s ravnim valom. U sustavu vezanom uz njega val miruje, fluid ulazi brzinom $a$ sa stanjem $p$, $\rho$, a izlazi brzinom $a-\mathrm{d}v$ sa stanjem $p+\mathrm{d}p$, $\rho+\mathrm{d}\rho$. Presjek je stalan, a trenje i izmjena topline zanemarivi su.
 
-**Koraci.** Kontinuitet daje $\rho a=(\rho+\mathrm{d}\rho)(a-\mathrm{d}v)$, a nakon odbacivanja produkta diferencijala
+**Koraci.** Kontinuitet daje $\rho a=(\rho+\mathrm{d}\rho)(a-\mathrm{d}v)$, a nakon zanemarivanja umnoška diferencijala
 
 $$
 \rho\,\mathrm{d}v=a\,\mathrm{d}\rho.
@@ -51,9 +51,9 @@ $$
 \mathrm{d}p=\rho a\,\mathrm{d}v.
 $$ {#eq-izvod-zvuk-kolicina-gibanja}
 
-Uvrštavanjem @eq-izvod-zvuk-kontinuitet slijedi $\mathrm{d}p=a^2\,\mathrm{d}\rho$.
+Uvrštavanjem jednadžbe [-@eq-izvod-zvuk-kontinuitet] slijedi $\mathrm{d}p=a^2\,\mathrm{d}\rho$.
 
-**Rezultat.** $a^2=\mathrm{d}p/\mathrm{d}\rho$; budući da je poremećaj malen i brz, derivacija se uzima duž izentrope, što je @eq-brzina-zvuka-opca.
+**Rezultat.** $a^2=\mathrm{d}p/\mathrm{d}\rho$; budući da je poremećaj malen i brz, derivacija se uzima duž izentrope, čime se dobiva @eq-brzina-zvuka-opca.
 
 **Provjera.** Za nestlačiv model $\mathrm{d}\rho\to0$ pri konačnom $\mathrm{d}p$, pa $a\to\infty$: to je upravo idealizacija trenutačnog prijenosa tlaka iz hidrostatike.
 :::
@@ -70,12 +70,12 @@ $$
 a=\sqrt{\kappa RT}.
 $$ {#eq-brzina-zvuka-plin}
 
-Za kapljevinu se često koristi $a=\sqrt{K/\rho}$, gdje je $K$ izentropski volumni modul. Stijenka elastične cijevi dodatno smanjuje brzinu tlačnog vala; zato se vodeni udar ne smije računati samo svojstvima vode kada je deformacija cijevi važna.
+Za kapljevinu se često koristi $a=\sqrt{K/\rho}$, gdje je $K$ izentropski volumni modul. Stijenka elastične cijevi dodatno smanjuje brzinu tlačnog vala; zato se vodeni udar, kada je deformacija cijevi važna, ne smije računati samo iz svojstava vode.
 
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Granica modela — Pascalov zakon i konačna brzina zvuka</p>
 
-Pascalov zakon opisuje novu statičku ravnotežu nestlačivog modela; ne tvrdi da stvarni poremećaj putuje beskonačnom brzinom. Informacija o promjeni tlaka u stvarnom fluidu putuje konačnom brzinom $a$.
+Pascalov zakon opisuje novu statičku ravnotežu nestlačivog modela; on ne tvrdi da stvarni poremećaj putuje beskonačnom brzinom. Informacija o promjeni tlaka u stvarnom fluidu putuje konačnom brzinom $a$.
 :::
 
 ::: {#ex-akusticko-vrijeme .mf1-we}
@@ -87,7 +87,7 @@ Mirujući zrak temperature $T=293\ \text{K}$ ispunjava vod duljine $L=85\ \text{
 
 **Traži se**
 
-Procijeni najkraće vrijeme u kojem promjena ventila može biti opažena na drugom kraju.
+Procijeni najkraće vrijeme za koje se promjena položaja ventila može opaziti na drugom kraju voda.
 
 **Rješenje**
 
@@ -103,13 +103,13 @@ $0{,}248\ \text{s}$ samo je kauzalna donja granica; stvarni odziv tlaka i protok
 
 ## Machov broj i kriterij nestlačivosti {#sec-machov-broj}
 
-Machov broj uspoređuje brzinu toka i brzinu širenja malog tlačnog poremećaja:
+Machov broj uspoređuje brzinu toka s brzinom širenja malog tlačnog poremećaja:
 
 $$
 Ma=\frac{v}{a}.
 $$ {#eq-mach}
 
-Kriterij $Ma<0{,}3$ korisna je inženjerska heuristika, a ne univerzalni zakon. U izentropskom toku kaloričkoga savršenog plina relativna promjena gustoće pri $Ma=0{,}3$ iznosi oko 5 %, a pri manjem $Ma$ još manje. I pri malom Machovu broju gustoća može snažno varirati zbog grijanja, kemijske reakcije ili velike hidrostatičke razlike; kriterij se zato uvijek provjerava zajedno s termodinamičkim uvjetima.
+Kriterij $Ma<0{,}3$ korisna je inženjerska heuristika, a ne univerzalni zakon. U izentropskom toku kaloričkoga savršenog plina relativna promjena gustoće pri $Ma=0{,}3$ iznosi oko 5 %, a pri manjem $Ma$ još manje. I pri malom Machovu broju gustoća se može znatno mijenjati zbog grijanja, kemijske reakcije ili velike hidrostatičke razlike; kriterij se zato uvijek provjerava zajedno s termodinamičkim uvjetima.
 
 ::: {#ex-odabir-modela-kompresibilnosti .mf1-we}
 <p class="mf1-box-label">Usisni vod kompresora turbopuhala <span class="mf1-level">T1</span></p>
@@ -135,14 +135,14 @@ Model konstantne gustoće može biti početna procjena ako su zagrijavanje i pad
 
 **Provjera i tumačenje**
 
-Pri $Ma=0{,}3$ izentropska promjena gustoće iznosi oko 5 %; u ventilacijskim vodovima ($10$–$20\ \text{m/s}$) pitanje se ne postavlja. Odluku treba donijeti prema lokalnom maksimumu brzine, a ne srednjoj brzini u najvećem presjeku.
+Pri $Ma=0{,}3$ izentropska promjena gustoće iznosi oko 5 %; u ventilacijskim vodovima ($10$–$20\ \text{m/s}$) pitanje se ne postavlja. Odluku treba donijeti prema lokalnom maksimumu brzine, a ne prema srednjoj brzini u najvećem presjeku.
 :::
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Zračna sapnica za čišćenje hladne ploče.** Za mlaz stlačenog zraka zanima nas potrošnja zraka i stanje mlaza na izlazu. Za razliku od ranijega tekućinskog kruga, u sapnici se gustoća i temperatura mogu znatno promijeniti. CFD zato zajedno rješava masu, količinu gibanja i energiju, uz jednadžbu stanja. Tlak u $p=\rho RT$ mora biti apsolutan, a temperatura u kelvinima.
+**Zračna sapnica za čišćenje hladne ploče.** Za mlaz stlačenog zraka zanimaju nas potrošnja zraka i stanje mlaza na izlazu. Za razliku od ranije obrađenoga kruga s kapljevinom, u sapnici se gustoća i temperatura mogu znatno promijeniti. CFD zato zajedno rješava masu, količinu gibanja i energiju, uz jednadžbu stanja. Tlak u $p=\rho RT$ mora biti apsolutan, a temperatura u kelvinima.
 
-Zadamo stanje dovodnoga spremnika, geometriju sapnice i uvjete okoline. Pratimo maseni protok, lokalni Machov broj i temperaturu. Mali Machov broj u širokom dovodu nije dovoljan da cijeli model proglasimo nestlačivim: u grlu tok snažno ubrzava. Time ista geometrijska ideja suženja dobiva dodatnu fiziku koja u vodenom Venturiju nije bila potrebna. Odluka o sapnici donosi se iz potrošnje zraka i stanja mlaza, a ne iz samog ulaznog $Ma$.
+Zadamo stanje dovodnoga spremnika, geometriju sapnice i uvjete okoline. Pratimo maseni protok, lokalni Machov broj i temperaturu. Mali Machov broj u širokom dovodu nije dovoljan da cijeli model proglasimo nestlačivim: u grlu tok snažno ubrzava. Ista geometrijska ideja suženja time dobiva dodatnu fiziku, koja u Venturijevoj cijevi s vodom nije bila potrebna. Odluka o sapnici donosi se iz potrošnje zraka i stanja mlaza, a ne iz samog ulaznog $Ma$.
 :::
 
 ## Zaustavne veličine u izentropskom toku {#sec-stagnacijske-velicine}
@@ -180,7 +180,7 @@ Zaustavna temperatura ostaje konstantna i kroz adijabatski udarni val, ali zaust
 
 **Tekst zadatka**
 
-Zrak ispred Pitotove sonde ima statičku temperaturu $T=260\ \text{K}$, statički tlak $p=55\ \text{kPa}$ i Machov broj $Ma=0{,}80$. Uzmi $\kappa=1{,}4$ i izentropsko zaustavljanje.
+Zrak ispred Pitotove sonde ima statičku temperaturu $T=260\ \text{K}$, statički tlak $p=55\ \text{kPa}$ i Machov broj $Ma=0{,}80$. Uzmi $\kappa=1{,}4$ i pretpostavi izentropsko zaustavljanje.
 
 **Traži se**
 
@@ -200,34 +200,34 @@ $$ {#eq-kompresibilni-tok-rijeseni-primjer-pitotova-sonda-u-brzom-strujanj-02}
 
 **Provjera i tumačenje**
 
-Nestlačivi izraz $p_0-p=\rho v^2/2$ više nije zadani model. Uz $\rho=p/(RT)=0{,}737\ \text{kg/m}^3$ i $v=Ma\,a=0{,}8\cdot323{,}2=258{,}6\ \text{m/s}$ on bi dao $\rho v^2/2=24{,}6\ \text{kPa}$, dok kompresibilni račun daje $p_0-p=28{,}8\ \text{kPa}$: nestlačiva procjena podcjenjuje razliku za oko 15 %. Kada $Ma\to0$, binomni razvoj kompresibilne relacije vraća nestlačivu dinamičku tlačnu skalu.
+Nestlačivi izraz $p_0-p=\rho v^2/2$ ovdje više nije prikladan. Uz $\rho=p/(RT)=0{,}737\ \text{kg/m}^3$ i $v=Ma\,a=0{,}8\cdot323{,}2=258{,}6\ \text{m/s}$ on bi dao $\rho v^2/2=24{,}6\ \text{kPa}$, dok kompresibilni račun daje $p_0-p=28{,}8\ \text{kPa}$: nestlačiva procjena podcjenjuje razliku za oko 15 %. Kada $Ma\to0$, binomni razvoj kompresibilne relacije vraća nestlačivu dinamičku tlačnu skalu.
 :::
 
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Što zadati na granicama zračne sapnice?** U velikom dovodnom spremniku brzina je mala, pa njegovo stanje opisujemo zaustavnim tlakom i temperaturom. Za podzvučni ulaz u sapnicu često zadamo te veličine i smjer toka, a na podzvučnom izlazu statički tlak. Brzina i statička temperatura proizlaze iz rješenja; proizvoljno dodatno zadavanje masenog protoka moglo bi preodrediti problem [@nasa-wind-boundaries].
+**Što zadati na granicama zračne sapnice?** U velikom dovodnom spremniku brzina je mala, pa njegovo stanje opisujemo zaustavnim tlakom i temperaturom. Za podzvučni ulaz u sapnicu često zadajemo te veličine i smjer toka, a na podzvučnom izlazu statički tlak. Brzina i statička temperatura proizlaze iz rješenja; proizvoljno dodatno zadavanje masenog protoka moglo bi preodrediti problem [@nasa-wind-boundaries].
 
 Tako možemo usporediti dvije sapnice pri istom dovodnom stanju i vidjeti koju potrošnju zraka traže. Ako je cilj udar mlaza u predmet, domena mora obuhvatiti i vanjski mlaz do predmeta: sama izlazna brzina ne daje raspodjelu opterećenja. Broj i vrsta rubnih podataka pritom ovise o lokalnom režimu i smjeru širenja poremećaja.
 :::
 
 ## Sapnica i zagušenje protoka {#sec-sapnica-prigusenje}
 
-Za stacionarni kvazijednodimenzijski tok vrijedi $\rho Av=\text{konst.}$, pa diferenciranjem
+Za stacionarni kvazijednodimenzijski tok vrijedi $\rho Av=\text{konst.}$, pa diferenciranjem slijedi
 
 $$
 \frac{d\rho}{\rho}+\frac{dA}{A}+\frac{dv}{v}=0.
 $$ {#eq-kompresibilni-tok-sapnica-i-prigusenje-protoka-sec-sapnica-priguse-01}
 
-Za izentropski tok bez značajne promjene visine Eulerova jednadžba glasi $dp+\rho v\,dv=0$. Uz $dp=a^2\,d\rho$ slijedi $d\rho/\rho=-Ma^2\,dv/v$. Uvrštavanjem u kontinuitet dobiva se ključna relacija
+Za izentropski tok bez znatne promjene visine Eulerova jednadžba glasi $dp+\rho v\,dv=0$. Uz $dp=a^2\,d\rho$ slijedi $d\rho/\rho=-Ma^2\,dv/v$. Uvrštavanjem u kontinuitet dobiva se ključna relacija
 
 $$
 \boxed{\frac{dA}{A}=(Ma^2-1)\frac{dv}{v}}.
 $$ {#eq-area-brzina}
 
-Za podzvučni tok ubrzavanje zahtijeva suženje; za nadzvučni tok ubrzavanje zahtijeva širenje. Pri glatkom prijelazu kroz $Ma=1$ vrijedi $dA/dx=0$; u konvergentno-divergentnoj sapnici to je grlo. Samo postojanje grla ne jamči zvučni tok: važan je i nizvodni tlak.
+U podzvučnom toku ubrzavanje zahtijeva suženje, a u nadzvučnom proširenje. Pri glatkom prijelazu kroz $Ma=1$ vrijedi $dA/dx=0$; u konvergentno-divergentnoj sapnici to je grlo. Samo postojanje grla ne jamči zvučni tok: važan je i nizvodni tlak.
 
-**Kritično stanje.** Stanje u kojem je $Ma=1$ označuje se zvjezdicom. Uvrštavanjem $Ma=1$ u @eq-t0-t i @eq-stagnacijski-omjeri slijede kritični omjeri
+**Kritično stanje.** Stanje u kojem je $Ma=1$ označuje se zvjezdicom. Uvrštavanjem $Ma=1$ u jednadžbe [-@eq-t0-t] i [-@eq-stagnacijski-omjeri] slijede kritični omjeri
 
 $$
 \frac{T^*}{T_0}=\frac{2}{\kappa+1},\qquad
@@ -244,20 +244,22 @@ koji za zrak ($\kappa=1{,}4$) iznose $0{,}833$, $0{,}528$ i $0{,}634$. Kritični
 
 **Bilanca.** Maseni protok jednak je u svakom presjeku, pa i u kritičnom: $\rho vA=\rho^*a^*A^*$.
 
-**Koraci.** Omjer površina raspiše se preko zaustavnog stanja:
+**Koraci.** Omjer površina raspisujemo preko zaustavnog stanja:
 
 $$
 \frac{A}{A^*}=\frac{\rho^*}{\rho}\frac{a^*}{v}
 =\frac{\rho^*}{\rho_0}\frac{\rho_0}{\rho}\sqrt{\frac{T^*}{T_0}\frac{T_0}{T}}\frac{1}{Ma},
 $$ {#eq-izvod-omjer-povrsina-korak}
 
-gdje je iskorišteno $a^*/v=a^*/(Ma\,a)=\sqrt{T^*/T}/Ma$. Uvrštavanjem @eq-stagnacijski-omjeri i @eq-kriticni-omjeri te zbrajanjem eksponenata $1/(\kappa-1)+1/2=(\kappa+1)/(2(\kappa-1))$ dobiva se
+gdje je iskorišteno $a^*/v=a^*/(Ma\,a)=\sqrt{T^*/T}/Ma$.
+
+Jednadžbe [-@eq-stagnacijski-omjeri] i [-@eq-kriticni-omjeri] uvrstimo u taj izraz i zbrojimo eksponente $1/(\kappa-1)+1/2=(\kappa+1)/(2(\kappa-1))$. Tako dobivamo
 
 $$
 \boxed{\frac{A}{A^*}=\frac{1}{Ma}\left[\frac{2}{\kappa+1}\left(1+\frac{\kappa-1}{2}Ma^2\right)\right]^{\frac{\kappa+1}{2(\kappa-1)}}}.
 $$ {#eq-omjer-povrsina}
 
-Za maseni protok kroz grlo vrijedi $\dot m=\rho^*a^*A^*$ s $\rho^*=\rho_0(\rho^*/\rho_0)$, $\rho_0=p_0/(RT_0)$ i $a^*=\sqrt{\kappa RT^*}=\sqrt{\kappa RT_0\cdot2/(\kappa+1)}$; sređivanjem
+Za maseni protok kroz grlo vrijedi $\dot m=\rho^*a^*A^*$ s $\rho^*=\rho_0(\rho^*/\rho_0)$, $\rho_0=p_0/(RT_0)$ i $a^*=\sqrt{\kappa RT^*}=\sqrt{\kappa RT_0\cdot2/(\kappa+1)}$, pa sređivanjem dobivamo
 
 $$
 \dot m_{max}=A^*\frac{p_0}{\sqrt{T_0}}
@@ -265,12 +267,12 @@ $$
 \left(\frac{2}{\kappa+1}\right)^{\frac{\kappa+1}{2(\kappa-1)}}.
 $$ {#eq-priguseni-protok}
 
-**Rezultat.** Relacija @eq-omjer-povrsina ima za svaki $A/A^*>1$ dva rješenja, podzvučno i nadzvučno; @eq-priguseni-protok daje gornju granicu masenog protoka kroz zadano grlo pri zadanom zaustavnom stanju.
+**Rezultat.** Jednadžba [-@eq-omjer-povrsina] ima za svaki $A/A^*>1$ dva rješenja, podzvučno i nadzvučno, a @eq-priguseni-protok daje gornju granicu masenog protoka kroz zadano grlo pri zadanom zaustavnom stanju.
 
-**Provjera.** Za $Ma=1$ uglata zagrada jednaka je jedinici pa je $A/A^*=1$. Za $Ma\to0$ i $Ma\to\infty$ omjer raste bez granice, što odgovara minimumu površine u grlu. Uvrštavanjem jedinica u jednadžbu [-@eq-priguseni-protok] dobiva se $\text{m}^2\cdot\text{Pa}\cdot\text{K}^{-1/2}\cdot(\text{J/(kg K)})^{-1/2}=\text{kg/s}$.
+**Provjera.** Za $Ma=1$ uglata zagrada jednaka je jedinici, pa je $A/A^*=1$. Za $Ma\to0$ i $Ma\to\infty$ omjer raste bez granice, što odgovara minimumu površine u grlu. Uvrštavanjem jedinica u jednadžbu [-@eq-priguseni-protok] dobiva se $\text{m}^2\cdot\text{Pa}\cdot\text{K}^{-1/2}\cdot(\text{J/(kg K)})^{-1/2}=\text{kg/s}$.
 :::
 
-Kada je nizvodni tlak dovoljno nizak, maseni protok dostiže granicu iz jednadžbe [-@eq-priguseni-protok] i daljnje snižavanje nizvodnog tlaka više ga ne povećava uz iste $p_0$, $T_0$ i površinu grla: tok je **zagušen** (engl. *choked*). Zagušenje treba razlikovati od prigušenja, namjernog smanjenja tlaka ventilom.
+Kada je nizvodni tlak dovoljno nizak, maseni protok dostiže granicu iz jednadžbe [-@eq-priguseni-protok]: uz iste $p_0$, $T_0$ i površinu grla daljnje ga snižavanje nizvodnog tlaka više ne povećava, pa je tok **zagušen** (engl. *choked*). Zagušenje treba razlikovati od prigušenja, namjernog smanjenja tlaka ventilom.
 
 ::: {#ex-priguseni-ventil .mf1-we}
 <p class="mf1-box-label">Gornja granica protoka sigurnosnog otvora <span class="mf1-level">T2</span></p>
@@ -291,7 +293,7 @@ $$
 =0{,}0700\ \text{kg/s}.
 $$ {#eq-kompresibilni-tok-rijeseni-primjer-gornja-granica-protoka-sigurnos-01}
 
-Prema @eq-kriticni-omjeri granični nizvodni tlak iznosi
+Prema jednadžbi [-@eq-kriticni-omjeri] granični nizvodni tlak iznosi
 
 $$
 p^*=0{,}528\,p_0=317\ \text{kPa(abs)}.
@@ -299,19 +301,19 @@ $$ {#eq-kompresibilni-tok-rijeseni-primjer-gornja-granica-protoka-sigurnos-02}
 
 **Provjera i tumačenje**
 
-Odluka o režimu traži apsolutne tlakove: s manometarskim $p_0=499\ \text{kPa}$ (uz $p_{atm}=101\ \text{kPa}$) granica bi pogrešno ispala $263\ \text{kPa}$. Stvarni ventil traži koeficijent istjecanja i normirani proračun kapaciteta; vrijednost nije sigurnosna certifikacija.
+Odluka o režimu traži apsolutne tlakove: s manometarskim tlakom $p_0=499\ \text{kPa}$ (uz $p_{atm}=101\ \text{kPa}$) granica bi pogrešno ispala $263\ \text{kPa}$. Za stvarni ventil potrebni su koeficijent istjecanja i normirani proračun kapaciteta; izračunana vrijednost ne zamjenjuje sigurnosnu certifikaciju.
 :::
 
 ::: {#cfd-sapnica-prigusenje .mf1-cfd title="Računalna dinamika fluida"}
 
-**Zašto dodatno snižavanje izlaznog tlaka prestaje povećavati protok?** Za istu idealnu sapnicu zadržimo $p_0$, $T_0$ i grlo, a postupno snižavajmo nizvodni tlak. CFD treba pokazati porast masenog protoka do zagušenja i približavanje graničnoj vrijednosti iz jednadžbe [-@eq-priguseni-protok] za 1D model. Protok i lokalni $Ma$ zajedno pokazuju ograničenje dovoda zraka.
+**Zašto dodatno snižavanje izlaznog tlaka prestaje povećavati protok?** Za istu idealnu sapnicu zadržimo $p_0$, $T_0$ i grlo, a postupno snižavajmo nizvodni tlak. CFD treba pokazati porast masenog protoka do zagušenja i njegovo približavanje graničnoj vrijednosti 1D modela iz jednadžbe [-@eq-priguseni-protok]. Protok i lokalni $Ma$ zajedno pokazuju ograničenje dovoda zraka.
 
-U konvergentno-divergentnoj sapnici daljnja promjena nizvodnih uvjeta može mijenjati raspodjelu tlaka i položaj udarnog vala, iako je grlo već zagušeno. Na potpuno nadzvučnom izlazu ne namećemo neovisan tlak; za utjecaj okolnog zraka proširujemo domenu tako da obuhvati odgovarajuće prijelaze [@nasa-wind-boundaries]. Tako razlikujemo najveći protok od pitanja kakav mlaz izlazi iz uređaja.
+U konvergentno-divergentnoj sapnici daljnja promjena nizvodnih uvjeta može promijeniti raspodjelu tlaka i položaj udarnog vala, iako je grlo već zagušeno. Na potpuno nadzvučnom izlazu ne namećemo neovisan tlak; za utjecaj okolnog zraka proširujemo domenu tako da obuhvati odgovarajuće prijelaze [@nasa-wind-boundaries]. Tako pitanje najvećeg protoka odvajamo od pitanja kakav mlaz izlazi iz uređaja.
 :::
 
 ## Normalni udarni val: Hugoniotov uvjet {#sec-normalni-udarni-val}
 
-Udarni val je vrlo tanak ireverzibilni prijelaz. Za stacionarni normalni val u adijabatskom kanalu konstantne površine bilance su
+Udarni val vrlo je tanak ireverzibilan prijelaz. Za stacionarni normalni val u adijabatskom kanalu konstantne površine bilance glase
 
 $$
 \rho_1v_1=\rho_2v_2,
@@ -332,7 +334,7 @@ Eliminacija brzina iz tih triju bilanci daje Hugoniotovu relaciju $h_2-h_1=\tfra
 
 **Pitanje.** Kakvo stanje mora vladati iza normalnog vala ako je ispred njega $Ma_1$, i zašto je dopušten samo prijelaz iz nadzvučnog u podzvučni tok?
 
-**Bilanca.** Tri bilance iznad, uz $h=c_pT=a^2/(\kappa-1)$.
+**Bilanca.** Tri navedene bilance, uz $h=c_pT=a^2/(\kappa-1)$.
 
 **Koraci.** Energijska bilanca kaže da je zaustavna entalpija ista s obje strane; izražena preko kritične brzine zvuka $a^*$ (stanje u kojem bi tok imao $Ma=1$) glasi
 
@@ -342,13 +344,13 @@ $$
 a^2=\frac{\kappa+1}{2}a^{*2}-\frac{\kappa-1}{2}v^2.
 $$ {#eq-izvod-udar-energija}
 
-Podijeli li se bilanca količine gibanja s $\rho_1v_1=\rho_2v_2$ i iskoristi $p/\rho=a^2/\kappa$, dobiva se
+Podijelimo li bilancu količine gibanja s $\rho_1v_1=\rho_2v_2$ i iskoristimo li $p/\rho=a^2/\kappa$, dobivamo
 
 $$
 \frac{1}{\kappa}\left(\frac{a_1^2}{v_1}-\frac{a_2^2}{v_2}\right)=v_2-v_1.
 $$ {#eq-izvod-udar-kolicina-gibanja}
 
-Uvrštavanjem @eq-izvod-udar-energija za $a_1^2$ i $a_2^2$ i sređivanjem lijeva strana postaje $(v_2-v_1)\bigl[\tfrac{\kappa+1}{2\kappa}\tfrac{a^{*2}}{v_1v_2}+\tfrac{\kappa-1}{2\kappa}\bigr]$. Za pravi val $v_2\ne v_1$, pa dijeljenjem s $(v_2-v_1)$ slijedi Prandtlova relacija
+Uvrštavanjem izraza iz jednadžbe [-@eq-izvod-udar-energija] za $a_1^2$ i $a_2^2$ te sređivanjem lijeva strana postaje $(v_2-v_1)\bigl[\tfrac{\kappa+1}{2\kappa}\tfrac{a^{*2}}{v_1v_2}+\tfrac{\kappa-1}{2\kappa}\bigr]$. Za stvarni val vrijedi $v_2\ne v_1$, pa dijeljenjem s $(v_2-v_1)$ slijedi Prandtlova relacija
 
 $$
 \boxed{v_1v_2=a^{*2}}.
@@ -371,7 +373,7 @@ $$ {#eq-entropija-udar}
 
 Za $Ma_1=2$ i zrak: $T_2/T_1=1{,}688$, $p_2/p_1=4{,}50$, pa je $\Delta s=1004{,}5\ln1{,}688-287\ln4{,}50=+94\ \text{J/(kg K)}$. Obrnuti prijelaz (iz $Ma=0{,}577$ u $Ma=2$) zadovoljava iste tri bilance, ali bi dao $\Delta s=-94\ \text{J/(kg K)}$, što drugi zakon termodinamike isključuje.
 
-**Provjera.** Sve relacije @eq-normalni-skok za $Ma_1=1$ daju jedinicu: val nestaje. Zaustavni tlak iza vala, $p_{02}=p_2\,(p_{02}/p_2)$, uvijek je manji od $p_{01}$ jer je $p_{02}/p_{01}=\exp(-\Delta s/R)$.
+**Provjera.** Za $Ma_1=1$ sve relacije iz jednadžbe [-@eq-normalni-skok] daju jedinicu: val nestaje. Zaustavni tlak iza vala, $p_{02}=p_2\,(p_{02}/p_2)$, uvijek je manji od $p_{01}$ jer je $p_{02}/p_{01}=\exp(-\Delta s/R)$.
 :::
 
 ::: {#ex-normalni-udar .mf1-we}
@@ -405,7 +407,7 @@ Prandtlova relacija potvrđuje rezultat: $Ma_1^*=1{,}633$ i $Ma_2^*=0{,}612$ daj
 
 **Tekst zadatka**
 
-Ispitna osnosimetrična konvergentno-divergentna sapnica (shema na @fig-kompresibilni-pregled) ima grlo $A^*=100\ \text{mm}^2$ i izlazni presjek $A_e=160\ \text{mm}^2$. Napaja se zrakom iz mirne komore stanja $p_0=500\ \text{kPa(abs)}$ i $T_0=300\ \text{K}$; uzmi $\kappa=1{,}4$ i $R=287\ \text{J/(kg K)}$. Tok do eventualnog udarnog vala i iza njega smatraj izentropskim; val, ako postoji, smatraj normalnim.
+Ispitna osnosimetrična konvergentno-divergentna sapnica (shema na slici [-@fig-kompresibilni-pregled]) ima grlo $A^*=100\ \text{mm}^2$ i izlazni presjek $A_e=160\ \text{mm}^2$. Napaja se zrakom iz mirne komore stanja $p_0=500\ \text{kPa(abs)}$ i $T_0=300\ \text{K}$; uzmi $\kappa=1{,}4$ i $R=287\ \text{J/(kg K)}$. Tok ispred eventualnog udarnog vala i iza njega smatraj izentropskim; val, ako postoji, smatraj normalnim.
 
 **Traži se**
 
@@ -419,18 +421,18 @@ Ispitna osnosimetrična konvergentno-divergentna sapnica (shema na @fig-kompresi
 
 ### 1. Dva izentropska rješenja za $A_e/A^*=1{,}6$ {.mf1-step .unnumbered .unlisted}
 
-Jednadžba @eq-omjer-povrsina s $A_e/A^*=1{,}6$ nema zatvoreno rješenje po $Ma$; rješava se pokušajem ili iz tablice. Podzvučna grana daje $Ma_{e}=0{,}397$ (provjera: $\tfrac{1}{0{,}397}\bigl[\tfrac{1{,}0315}{1{,}2}\bigr]^{3}=1{,}600$), a nadzvučna $Ma_{e}=1{,}935$ (provjera: $\tfrac{1}{1{,}935}\bigl[\tfrac{1{,}749}{1{,}2}\bigr]^{3}=1{,}600$). Pripadni izlazni tlakovi iz @eq-stagnacijski-omjeri jesu
+Jednadžba [-@eq-omjer-povrsina] s $A_e/A^*=1{,}6$ nema rješenje po $Ma$ u zatvorenom obliku; rješava se iterativno ili pomoću tablica. Podzvučna grana daje $Ma_{e}=0{,}397$ (provjera: $\tfrac{1}{0{,}397}\bigl[\tfrac{1{,}0315}{1{,}2}\bigr]^{3}=1{,}600$), a nadzvučna $Ma_{e}=1{,}935$ (provjera: $\tfrac{1}{1{,}935}\bigl[\tfrac{1{,}749}{1{,}2}\bigr]^{3}=1{,}600$). Iz jednadžbe [-@eq-stagnacijski-omjeri] slijede pripadni izlazni tlakovi
 
 $$
 p_{e,\mathrm{I}}=\frac{500}{1{,}0315^{3{,}5}}=448{,}5\ \text{kPa},\qquad
 p_{e,\mathrm{III}}=\frac{500}{1{,}749^{3{,}5}}=70{,}7\ \text{kPa}.
 $$ {#eq-kd-sapnica-izlazni-tlakovi}
 
-Prvi je najviši protutlak pri kojem je grlo zagušeno uz posve podzvučni divergentni dio; treći je projektni protutlak potpuno nadzvučnog, izentropskog izlaza.
+Prvi je najviši protutlak pri kojem je grlo zagušeno uz posve podzvučni divergentni dio, a treći (III) projektni protutlak potpuno nadzvučnog, izentropskog izlaza.
 
 ### 2. Normalni val u izlaznom presjeku {.mf1-step .unnumbered .unlisted}
 
-Ispred vala vlada nadzvučno stanje $Ma_1=1{,}935$, $p_1=70{,}7\ \text{kPa}$. Iz @eq-normalni-skok slijede $Ma_2=0{,}589$ i $p_2/p_1=4{,}20$, pa je
+Ispred vala vlada nadzvučno stanje $Ma_1=1{,}935$, $p_1=70{,}7\ \text{kPa}$. Iz jednadžbe [-@eq-normalni-skok] slijede $Ma_2=0{,}589$ i $p_2/p_1=4{,}20$, pa je
 
 $$
 p_{e,\mathrm{II}}=4{,}20\cdot70{,}7=297\ \text{kPa}.
@@ -438,7 +440,7 @@ $$ {#eq-kd-sapnica-val-na-izlazu}
 
 ### 3. Odluka o režimu i maseni protok {.mf1-step .unnumbered .unlisted}
 
-Za $p_b=100\ \text{kPa}$ vrijedi $p_{e,\mathrm{III}}<p_b<p_{e,\mathrm{II}}$: divergentni dio ostaje potpuno nadzvučan, a mlaz izlazi s $p_e=70{,}7\ \text{kPa}<p_b$ (preekspandiran) i prilagođava se protutlaku kosim valovima izvan sapnice. Za $p_b=350\ \text{kPa}$ vrijedi $p_{e,\mathrm{II}}<p_b<p_{e,\mathrm{I}}$: normalni val stoji unutar divergentnog dijela, iza njega tok je podzvučan i izlazi s $p_e=p_b$. U oba slučaja grlo je zagušeno, pa @eq-priguseni-protok daje isti protok
+Za $p_b=100\ \text{kPa}$ vrijedi $p_{e,\mathrm{III}}<p_b<p_{e,\mathrm{II}}$: divergentni dio ostaje potpuno nadzvučan, a mlaz izlazi s $p_e=70{,}7\ \text{kPa}<p_b$ (preekspandiran) i prilagođava se protutlaku kosim valovima izvan sapnice. Za $p_b=350\ \text{kPa}$ vrijedi $p_{e,\mathrm{II}}<p_b<p_{e,\mathrm{I}}$: normalni val stoji unutar divergentnog dijela, iza njega je tok podzvučan i izlazi s $p_e=p_b$. U oba slučaja grlo je zagušeno, pa @eq-priguseni-protok daje isti protok
 
 $$
 \dot m=100\cdot10^{-6}\frac{500000}{\sqrt{300}}\sqrt{\frac{1{,}4}{287}}\left(\frac{2}{2{,}4}\right)^{3}=0{,}117\ \text{kg/s}.
@@ -446,30 +448,30 @@ $$ {#eq-kd-sapnica-maseni-protok}
 
 **Provjera i tumačenje**
 
-Redoslijed $p_{e,\mathrm{III}}<p_{e,\mathrm{II}}<p_{e,\mathrm{I}}<p_0$ mora vrijediti za svaku sapnicu. Za $p_b=350\ \text{kPa}$ iteracija (izvan ispitne razine) smješta val u presjek $A_x/A^*=1{,}39$ (ispred njega $Ma_1=1{,}75$); on smanjuje zaustavni tlak na $0{,}833\,p_0$, pa podzvučni ostatak izlazi upravo s $350\ \text{kPa}$: položaj vala određuje protutlak. Iznad $448{,}5\ \text{kPa}$ grlo više nije zagušeno.
+Redoslijed $p_{e,\mathrm{III}}<p_{e,\mathrm{II}}<p_{e,\mathrm{I}}<p_0$ mora vrijediti za svaku sapnicu. Za $p_b=350\ \text{kPa}$ iteracija, koja nadilazi ispitnu razinu, smješta val u presjek $A_x/A^*=1{,}39$ (ispred njega $Ma_1=1{,}75$); on smanjuje zaustavni tlak na $0{,}833\,p_0$, pa podzvučni ostatak izlazi upravo s $350\ \text{kPa}$: položaj vala određuje protutlak. Iznad $448{,}5\ \text{kPa}$ grlo više nije zagušeno.
 :::
 
 ::: {#cfd-sapnica-udarni-val .mf1-cfd title="Računalna dinamika fluida"}
 
-**Zastani i promisli.** Iza adijabatskog normalnog udara statički tlak raste, zaustavni tlak pada, a $T_0$ ostaje isti. Je li takav rezultat proturječan?
+**Zastani i promisli.** Iza adijabatskog normalnog udarnog vala statički tlak raste, zaustavni tlak pada, a $T_0$ ostaje ista. Je li takav rezultat proturječan?
 
-**Udarni val unutar sapnice.** Pri promjeni nizvodnog tlaka val se može pomaknuti kroz divergentni dio i promijeniti tlakove na stijenci. Za svaki radni uvjet pratimo njegov položaj, stanja prije i poslije te gubitak zaustavnog tlaka. Rast statičkog tlaka uz pad zaustavnog tlaka nije proturječje: adijabatski val povisuje entropiju, a čuva zaustavnu temperaturu.
+**Udarni val unutar sapnice.** Pri promjeni nizvodnog tlaka val se može pomaknuti kroz divergentni dio i promijeniti tlakove na stijenci. Za svaki radni uvjet pratimo njegov položaj, stanja ispred i iza njega te gubitak zaustavnog tlaka. Rast statičkog tlaka uz pad zaustavnog tlaka nije proturječje: adijabatski val povisuje entropiju, a čuva zaustavnu temperaturu.
 
-Ručni @ex-normalni-udar daje referentne skokove za normalan adijabatski val, a @ex-kd-sapnica-rezim karakteristične protutlakove sapnice: uspoređujemo stanja izvan prijelaza uz iste ulazne podatke. CFD obično raspodijeli val preko nekoliko ćelija; ta numerička širina nije njegova fizička debljina. Omjere uspoređujemo izvan razmazanog prijelaza, a položaj vala provjeravamo profinjenjem. Za nestacionarni račun važan je i vremenski korak prema najvećoj brzini širenja signala $|v|+a$ (Courant–Friedrichs–Lewyjev, CFL uvjet). Time provjeravamo može li simulacija poduprijeti odluku o radnom području sapnice.
+Ručni proračun u primjeru [-@ex-normalni-udar] daje referentne skokove za normalni adijabatski val, a primjer [-@ex-kd-sapnica-rezim] karakteristične protutlakove sapnice: uz iste ulazne podatke uspoređujemo stanja izvan prijelaza. CFD obično razmaže val preko nekoliko ćelija; ta numerička širina nije njegova fizička debljina. Omjere uspoređujemo izvan razmazanog prijelaza, a položaj vala provjeravamo profinjenjem. Za nestacionarni račun važan je i vremenski korak prema najvećoj brzini širenja signala $|v|+a$ (Courant–Friedrichs–Lewyjev, CFL uvjet). Time provjeravamo može li simulacija poduprijeti odluku o radnom području sapnice.
 :::
 
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Granica modela — Idealni jednodimenzijski kompresibilni tok</p>
 
-Sve relacije ovog poglavlja pretpostavljaju kalorički savršen plin sa stalnim $\kappa$, jednolike veličine po presjeku, zanemarivo trenje i izmjenu topline te, osim samog vala, izentropski tok. Zanemareni su granični sloj uz stijenku, koji smanjuje efektivni presjek grla, interakcija vala s graničnim slojem, koja razmazuje i naginje stvarni val, te realna svojstva plina pri visokim temperaturama. Iz modela se ne smije zaključiti o kapacitetu stvarnog ventila bez koeficijenta istjecanja ni o opterećenju konstrukcije mlazom bez vanjske domene.
+Sve relacije ovog poglavlja pretpostavljaju kalorički savršen plin sa stalnim $\kappa$, jednolike veličine po presjeku, zanemarivo trenje i izmjenu topline te, osim samog vala, izentropski tok. Zanemareni su granični sloj uz stijenku, koji smanjuje efektivni presjek grla, interakcija vala s graničnim slojem, koja razmazuje i naginje stvarni val, te realna svojstva plina pri visokim temperaturama. Iz modela se ne smije zaključivati o kapacitetu stvarnog ventila bez koeficijenta istjecanja ni o opterećenju konstrukcije mlazom bez vanjske domene.
 :::
 
 ## Postupak analize kompresibilnoga toka {#sec-kompresibilni-ritual}
 
 1. Odredi apsolutne tlakove i temperaturno stanje.
-2. Procijeni lokalni najveći Machov broj $Ma$, ne samo ulaznu srednju vrijednost.
+2. Procijeni najveći lokalni Machov broj $Ma$, a ne samo srednju vrijednost na ulazu.
 3. Odluči je li proces približno izentropski, adijabatski s gubitcima ili s izmjenom topline.
-4. Napiši kontinuitet, energiju i jednadžbu stanja; količinu gibanja dodaj kad postoji sila ili udarni val.
+4. Napiši jednadžbu kontinuiteta, energijsku jednadžbu i jednadžbu stanja; jednadžbu količine gibanja dodaj kad postoji sila ili udarni val.
 5. Provjeri zagušenje, smjer porasta entropije i granični slučaj $Ma\to0$.
 
 ::: {.mf1-samoprovjera}
@@ -488,7 +490,7 @@ Sve relacije ovog poglavlja pretpostavljaju kalorički savršen plin sa stalnim 
 
 3. Za $Ma>1$ relacija površina–brzina daje $dA>0$ kada je $dv>0$.
 
-4. Kroz zvučno grlo informacija o nizvodnom tlaku ne može putovati uzvodno, pa protok ovisi samo o $p_0$, $T_0$ i $A^*$; prema @eq-priguseni-protok on raste proporcionalno s $p_0$.
+4. Kroz zvučno grlo informacija o nizvodnom tlaku ne može putovati uzvodno, pa protok ovisi samo o $p_0$, $T_0$ i $A^*$; prema jednadžbi [-@eq-priguseni-protok] on raste razmjerno s $p_0$.
 :::
 :::
 
@@ -497,7 +499,7 @@ Sve relacije ovog poglavlja pretpostavljaju kalorički savršen plin sa stalnim 
 
 ![Skice uz Z1–Z6: zvuk, zrak za upućivanje, sapnice i mjerenje preko udarnog vala.](../assets/print/u09_kompresibilni_vjezbe_skice.svg){#fig-vjezbe-kompresibilni-tok fig-align="center" fig-alt="Šest skica s otvorenim prolazima. Z2 prikazuje bocu stlačenog zraka, ventil s kritičnim presjekom i vod prema motoru. Z3 razlikuje prijenos zvuka uzvodno i nizvodno. Z4 označuje izlaz sapnice i zaseban protutlak. Z6 prikazuje normalni val u otvorenom kanalu, statičke priključke i podzvučnu Pitotovu sondu."}
 
-**Napomene uz skice.** U Z1 skica prikazuje samo točku poremećaja O i os $x$; smjerove širenja ucrtaj sam. U Z2 ventil je idealiziran kao kritični presjek $A^*$ između boce i voda prema motoru; stanje boce uzima se kao zaustavno. U Z4 izlaz konvergentne sapnice njezin je najmanji presjek; vanjski tok nije prikazan. U Z5 $A_g$ označuje izmjereni slobodni otvor, različit od nazivne površine $A_n$. U Z6 svi označeni tlakovi su apsolutni.
+**Napomene uz skice.** U Z1 skica prikazuje samo točku poremećaja O i os $x$; smjerove širenja ucrtaj sam. U Z2 je ventil idealiziran kao kritični presjek $A^*$ između boce i voda prema motoru; stanje boce uzima se kao zaustavno. U Z4 izlaz konvergentne sapnice njezin je najmanji presjek; vanjski tok nije prikazan. U Z5 $A_g$ označuje izmjereni slobodni otvor, različit od nazivne površine $A_n$. U Z6 su svi označeni tlakovi apsolutni.
 
 U zadatcima plin promatraj kao kalorički savršen. Brzina zvuka odnosi se na plin, a brzine i vremena prijelaza između nepomičnih točaka na laboratorij. Duljina strelice ne zadaje iznos, a oznaka „?” označuje traženu veličinu; isprekidana crta označuje presjek ili val, ne stijenku.
 
@@ -525,7 +527,7 @@ Temperatura u relaciji za brzinu zvuka mora biti apsolutna. Plin miruje, pa je l
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$a\approx1019\ \text{m/s}$; poremećaj se širi u oba smjera: udesno brzinom $+a$, ulijevo $-a$. Srednja brzina helija ostaje $v=0$; ucrtane strelice prikazuju širenje poremećaja, ne tok plina.
+$a\approx1019\ \text{m/s}$; poremećaj se širi u oba smjera: udesno brzinom $+a$, a ulijevo brzinom $-a$. Srednja brzina helija ostaje $v=0$; ucrtane strelice prikazuju širenje poremećaja, ne tok plina.
 :::
 ::::
 
@@ -537,7 +539,7 @@ $a\approx1019\ \text{m/s}$; poremećaj se širi u oba smjera: udesno brzinom $+a
 
 **Tekst zadatka**
 
-Boca stlačenog zraka za upućivanje brodskog dizelskog motora sadrži zrak stanja $p_0=30{,}0\ \text{bar(abs)}$ i $T_0=293\ \text{K}$. Pri upućivanju zrak teče kroz ventil čiji je najmanji slobodni presjek $A^*=120\ \text{mm}^2$ u vod prema motoru u kojem vlada tlak $p_b=8{,}0\ \text{bar(abs)}$. Za jedno upućivanje motor treba masu zraka $m=2{,}50\ \text{kg}$. Uzmi $\kappa=1{,}4$ i $R=287\ \text{J/(kg K)}$, ventil smatraj idealnim otvorom bez gubitaka, a stanje boce tijekom upućivanja približno stalnim.
+Boca stlačenog zraka za upućivanje brodskog dizelskog motora sadrži zrak stanja $p_0=30{,}0\ \text{bar(abs)}$ i $T_0=293\ \text{K}$. Pri upućivanju zrak kroz ventil najmanjeg slobodnog presjeka $A^*=120\ \text{mm}^2$ teče u vod prema motoru, u kojem vlada tlak $p_b=8{,}0\ \text{bar(abs)}$. Za jedno upućivanje motoru je potrebna masa zraka $m=2{,}50\ \text{kg}$. Uzmi $\kappa=1{,}4$ i $R=287\ \text{J/(kg K)}$, ventil smatraj idealnim otvorom bez gubitaka, a stanje boce tijekom upućivanja približno stalnim.
 
 **Traži se**
 
@@ -549,7 +551,7 @@ Boca stlačenog zraka za upućivanje brodskog dizelskog motora sadrži zrak stan
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Usporedi omjer apsolutnih tlakova $p_b/p_0$ s kritičnim omjerom $0{,}528$. Ako je tok zagušen, maseni protok daje @eq-priguseni-protok s podatcima boce kao zaustavnim stanjem, a trajanje je $t=m/\dot m$. Pad tlaka boce tijekom upućivanja produljuje stvarno vrijeme.
+Usporedi omjer apsolutnih tlakova $p_b/p_0$ s kritičnim omjerom $0{,}528$. Ako je tok zagušen, maseni protok izračunaj iz jednadžbe [-@eq-priguseni-protok], uzimajući stanje boce kao zaustavno, a trajanje je $t=m/\dot m$. Pad tlaka boce tijekom upućivanja produljuje stvarno vrijeme.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -568,25 +570,25 @@ $p_b/p_0=0{,}267<0{,}528$: tok je zagušen i protok ne ovisi o tlaku u vodu. $\d
 
 **Tekst zadatka**
 
-U ravnom vodu zrak stacionarno i jednoliko struji od A prema B. Nepomične akustičke mjerne točke udaljene su $L=1{,}20\ \text{m}$. Malen signal putuje iz A u B za $t_{AB}=3{,}00\ \text{ms}$, a iz B u A za $t_{BA}=4{,}00\ \text{ms}$. To su vremena samog putovanja nakon korekcije kašnjenja elektronike. Zanemari refleksije i raspršenje te uzmi $\kappa=1{,}4$ i $R=287\ \text{J/(kg K)}$.
+U ravnom vodu zrak stacionarno i jednoliko struji od A prema B. Nepomične akustičke mjerne točke međusobno su udaljene $L=1{,}20\ \text{m}$. Malen signal putuje iz A u B za $t_{AB}=3{,}00\ \text{ms}$, a iz B u A za $t_{BA}=4{,}00\ \text{ms}$. To su čista vremena putovanja, dobivena nakon korekcije kašnjenja elektronike. Zanemari refleksije i raspršenje te uzmi $\kappa=1{,}4$ i $R=287\ \text{J/(kg K)}$.
 
 **Traži se**
 
 1. Odredi brzinu toka $v$, brzinu zvuka $a$, statičku temperaturu $T$ i $Ma$.
-2. Objasni zašto je uzvodni prijenos moguć i zašto $L/t_{AB}$ nije sama brzina zvuka.
+2. Objasni zašto je prijenos signala uzvodno moguć i zašto $L/t_{AB}$ nije sama brzina zvuka.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-U laboratoriju nizvodni signal ima brzinu $v+a$, a uzvodni $v-a<0$. Zato je $L/t_{AB}=a+v$ i $L/t_{BA}=a-v$. Zbrajanjem i oduzimanjem razdvoji $a$ i $v$, pa tek onda iz zvučne brzine odredi temperaturu.
+U laboratoriju nizvodni signal ima brzinu $v+a$, a uzvodni $v-a<0$. Zato je $L/t_{AB}=a+v$ i $L/t_{BA}=a-v$. Zbrajanjem i oduzimanjem razdvoji $a$ i $v$, pa tek onda iz brzine zvuka odredi temperaturu.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$v=50{,}0\ \text{m/s}$, $a=350\ \text{m/s}$, $T\approx304{,}9\ \text{K}$ i $Ma\approx0{,}143$. Laboratorijske brzine signala jesu $+400$ i $-300\ \text{m/s}$. Uzvodni signal stiže jer je $v<a$; nizvodno ga tok prenosi zajedno sa širenjem relativno prema plinu.
+$v=50{,}0\ \text{m/s}$, $a=350\ \text{m/s}$, $T\approx304{,}9\ \text{K}$ i $Ma\approx0{,}143$. Laboratorijske brzine signala jesu $+400$ i $-300\ \text{m/s}$. Uzvodni signal stiže jer je $v<a$; nizvodno se brzina toka zbraja s brzinom širenja u odnosu na plin.
 :::
 ::::
 
@@ -596,18 +598,18 @@ $v=50{,}0\ \text{m/s}$, $a=350\ \text{m/s}$, $T\approx304{,}9\ \text{K}$ i $Ma\a
 
 **Tekst zadatka**
 
-Velika mirna komora napaja konvergentnu sapnicu fiksne geometrije. Manometarski tlak komore jest $p_{0,M}=7{,}00\ \text{bar}$, a atmosferski $p_{atm}=1{,}00\ \text{bar(abs)}$. Razmotri dvije stacionarne postavke manometarskog protutlaka: $p_{b,M}^{(I)}=4{,}00\ \text{bar}$ i $p_{b,M}^{(II)}=3{,}00\ \text{bar}$. Za zrak uzmi $\kappa=1{,}4$; tok do izlaza smatraj izentropskim. Kapacitet se ne traži.
+Velika mirna komora napaja konvergentnu sapnicu fiksne geometrije. Manometarski tlak komore iznosi $p_{0,M}=7{,}00\ \text{bar}$, a atmosferski $p_{atm}=1{,}00\ \text{bar(abs)}$. Razmotri dvije stacionarne postavke manometarskog protutlaka: $p_{b,M}^{(I)}=4{,}00\ \text{bar}$ i $p_{b,M}^{(II)}=3{,}00\ \text{bar}$. Za zrak uzmi $\kappa=1{,}4$; tok do izlaza smatraj izentropskim. Kapacitet se ne traži.
 
 **Traži se**
 
 1. Odredi kritični apsolutni tlak $p^*$, režim u oba slučaja te izlazne $p_e$ i $Ma_e$.
-2. Objasni može li se protok dalje povećavati snižavanjem protutlaka u slučaju II uz iste zaustavne uvjete.
+2. Objasni može li se u slučaju II protok povećati daljnjim snižavanjem protutlaka uz iste zaustavne uvjete.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Omjere tvori iz apsolutnih tlakova. Najmanji presjek konvergentne sapnice jest izlaz. Ako je $p_b>p^*$, vrijedi $p_e=p_b$ i Machov broj slijedi iz izentropskog omjera $p_0/p_e$. Pri zagušenju izlaz ima $Ma_e=1$ i $p_e=p^*$; daljnja prilagodba protutlaku odvija se izvan sapnice.
+Omjere računaj s apsolutnim tlakovima. Najmanji presjek konvergentne sapnice jest izlaz. Ako je $p_b>p^*$, vrijedi $p_e=p_b$, a Machov broj slijedi iz izentropskog omjera $p_0/p_e$. Pri zagušenju je na izlazu $Ma_e=1$ i $p_e=p^*$; daljnja prilagodba protutlaku odvija se izvan sapnice.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -624,27 +626,27 @@ $p_0=8{,}00\ \text{bar(abs)}$, $p^*\approx4{,}226\ \text{bar(abs)}$. I: $p_b=p_e
 
 **Tekst zadatka**
 
-Za nastavnu provjeru konvergentne sapnice zadani su sintetički podatci: $p_0=600\ \text{kPa(abs)}$, $T_0=300\ \text{K}$, $p_b=100\ \text{kPa(abs)}$ i $\dot m=0{,}0595\ \text{kg/s}$. Nazivna površina izlaza jest $A_n=50{,}0\ \text{mm}^2$, a neovisno optičko mjerenje stvarnog slobodnog presjeka daje $A_g=48{,}0\ \text{mm}^2$. U ovom zadatku zanemari mjerne nesigurnosti. Za zrak uz $\kappa=1{,}4$ i $R=287\ \text{J/(kg K)}$ koristi model $\dot m=C_d\dot m_{ideal}(A_g,p_0,T_0)$.
+Za nastavnu provjeru konvergentne sapnice zadani su sintetički podatci: $p_0=600\ \text{kPa(abs)}$, $T_0=300\ \text{K}$, $p_b=100\ \text{kPa(abs)}$ i $\dot m=0{,}0595\ \text{kg/s}$. Nazivna površina izlaza iznosi $A_n=50{,}0\ \text{mm}^2$, a neovisno optičko mjerenje stvarnog slobodnog presjeka daje $A_g=48{,}0\ \text{mm}^2$. U ovom zadatku zanemari mjerne nesigurnosti. Za zrak uz $\kappa=1{,}4$ i $R=287\ \text{J/(kg K)}$ koristi model $\dot m=C_d\dot m_{ideal}(A_g,p_0,T_0)$.
 
 **Traži se**
 
 1. Provjeri uvjet zagušenja i odredi produkt $C_dA_g$ koji slijedi iz protoka.
 2. Bi li samo manji stvarni otvor uz $C_d=1$ objasnio podatke?
-3. Izračunaj idealni protok kroz izmjereni otvor i pripadajući $C_d$.
+3. Izračunaj idealni protok kroz izmjereni otvor i pripadni $C_d$.
 4. Objasni što bi se moglo zaključiti bez optičkog mjerenja i zašto zamjena nazivnim otvorom sama ne jamči idealni protok.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Najprije usporedi $p_b/p_0$ s kritičnim omjerom. Napiši zagušeni protok kao $\dot m=C_dA_g\,(\dot m_{max}/A^*)$, gdje omjer $\dot m_{max}/A^*$ prema @eq-priguseni-protok ovisi samo o $p_0$ i $T_0$. Protok određuje produkt; odvojeno mjerenje stvarne površine omogućuje procjenu koeficijenta. Nazivna površina nije mjerenje stvarnog prolaza.
+Najprije usporedi $p_b/p_0$ s kritičnim omjerom. Napiši zagušeni protok kao $\dot m=C_dA_g\,(\dot m_{max}/A^*)$, gdje omjer $\dot m_{max}/A^*$ prema jednadžbi [-@eq-priguseni-protok] ovisi samo o $p_0$ i $T_0$. Protok određuje samo produkt; odvojeno mjerenje stvarne površine omogućuje procjenu koeficijenta. Nazivna površina nije mjerenje stvarnog prolaza.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$p_b/p_0=0{,}167<0{,}528$; $C_dA_g\approx42{,}50\ \text{mm}^2$. Za $A_g=48{,}0\ \text{mm}^2$: $\dot m_{ideal}\approx0{,}0672\ \text{kg/s}$ i $C_d\approx0{,}885$. Sama razlika površine ne objašnjava manji protok. Bez optike poznat je samo produkt, ne svaki faktor. Veći otvor sam ne jamči $C_d=1$.
+$p_b/p_0=0{,}167<0{,}528$; $C_dA_g\approx42{,}50\ \text{mm}^2$. Za $A_g=48{,}0\ \text{mm}^2$: $\dot m_{ideal}\approx0{,}0672\ \text{kg/s}$ i $C_d\approx0{,}885$. Sama razlika površine ne objašnjava manji protok. Bez optičkog mjerenja poznat je samo produkt, a ne pojedini faktori. Veći otvor sam ne jamči $C_d=1$.
 :::
 ::::
 
@@ -654,22 +656,22 @@ $p_b/p_0=0{,}167<0{,}528$; $C_dA_g\approx42{,}50\ \text{mm}^2$. Za $A_g=48{,}0\ 
 
 **Tekst zadatka**
 
-U nastavnom skupu sintetičkih podataka za stacionarni normalni val u zračnom kanalu statički priključci prije i poslije vala daju $p_1=80{,}0\pm0{,}4\ \text{kPa(abs)}$ i $p_2=360{,}0\pm1{,}8\ \text{kPa(abs)}$. Zaustavni tlak prije vala dobiva se neovisnim mjerenjem u velikoj mirnoj napojnoj komori: $p_{01}=626\pm4\ \text{kPa(abs)}$. Pretpostavi izentropski put od komore do presjeka 1, bez ranijeg vala.
+U nastavnom skupu sintetičkih podataka za stacionarni normalni val u zračnom kanalu statički priključci ispred i iza vala daju $p_1=80{,}0\pm0{,}4\ \text{kPa(abs)}$ i $p_2=360{,}0\pm1{,}8\ \text{kPa(abs)}$. Zaustavni tlak ispred vala dobiva se neovisnim mjerenjem u velikoj mirnoj napojnoj komori: $p_{01}=626\pm4\ \text{kPa(abs)}$. Pretpostavi izentropski tok od komore do presjeka 1, bez prethodnog udarnog vala.
 
-Podzvučna Pitotova sonda u presjeku 2, otvorom okrenuta uzvodno, daje $p_{02}=451\pm4\ \text{kPa(abs)}$. Zanemari poremećaj glavnog toka sondom i gubitke u mjernim vodovima. Sve oznake $\pm$ označuju male, međusobno neovisne standardne nesigurnosti mjerenja; standardnu nesigurnost veličine $x$ označujemo sa $s(x)$. $\kappa=1{,}4$ smatraj točnim.
+Podzvučna Pitotova sonda u presjeku 2, otvorom okrenuta uzvodno, daje $p_{02}=451\pm4\ \text{kPa(abs)}$. Zanemari poremećaj glavnog toka sondom i gubitke u mjernim vodovima. Sve vrijednosti iza znaka $\pm$ jesu male, međusobno neovisne standardne nesigurnosti mjerenja; standardnu nesigurnost veličine $x$ označujemo sa $s(x)$. Izentropski eksponent $\kappa=1{,}4$ smatraj točnim.
 
 **Traži se**
 
 1. Iz omjera $p_2/p_1$ odredi $Ma_1$ i njegovu standardnu nesigurnost linearnom propagacijom nesigurnosti uz korijen zbroja kvadrata doprinosa (RSS).
-2. Izračunaj teorijski omjer zaustavnih tlakova $\Lambda=p_{02}/p_{01}$ i njegovu nesigurnost, usporedi ga s izravno mjerenim omjerom $\Lambda_{mj}$ te odluči jesu li konzistentni prema kriteriju $|\Lambda-\Lambda_{mj}|\leqs(\Lambda-\Lambda_{mj})$.
+2. Izračunaj teorijski omjer zaustavnih tlakova $\Lambda=p_{02}/p_{01}$ i njegovu nesigurnost, usporedi ga s izravno izmjerenim omjerom $\Lambda_{mj}$ te odluči jesu li konzistentni prema kriteriju $|\Lambda-\Lambda_{mj}|\leq s(\Lambda-\Lambda_{mj})$.
 3. Izračunaj normiranu razliku.
-4. Objasni zašto sami statički tlakovi ne predstavljaju neovisnu mjernu potvrdu pada zaustavnog tlaka i zašto obična nekorigirana Pitotova sonda ispred vala ne bi izravno dala $p_{01}$.
+4. Objasni zašto sami statički tlakovi nisu neovisna mjerna potvrda pada zaustavnog tlaka i zašto obična nekorigirana Pitotova sonda ispred vala ne bi izravno dala $p_{01}$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Izoliraj $Ma_1$ iz statičkog omjera. Za omjer $p_2/p_1$ vrijedi $s(p_2/p_1)/(p_2/p_1)=\sqrt{(s(p_1)/p_1)^2+(s(p_2)/p_2)^2}$. Analogno računaj $s(\Lambda_{mj})$. Relaciju za $Ma_2$ poveži s lokalnim zaustavnim omjerima i dobij $\Lambda(Ma_1)$. Primijeni $s(\Lambda)=|\Lambda'(Ma_1)|\,s(Ma_1)$ te $s(\Lambda-\Lambda_{mj})=\sqrt{s(\Lambda)^2+s(\Lambda_{mj})^2}$; derivaciju smiješ procijeniti središnjom razlikom.
+Iz omjera statičkih tlakova izrazi $Ma_1$. Za omjer $p_2/p_1$ vrijedi $s(p_2/p_1)/(p_2/p_1)=\sqrt{(s(p_1)/p_1)^2+(s(p_2)/p_2)^2}$. Analogno računaj $s(\Lambda_{mj})$. Relaciju za $Ma_2$ poveži s lokalnim zaustavnim omjerima i dobij $\Lambda(Ma_1)$. Primijeni $s(\Lambda)=|\Lambda'(Ma_1)|\,s(Ma_1)$ te $s(\Lambda-\Lambda_{mj})=\sqrt{s(\Lambda)^2+s(\Lambda_{mj})^2}$; derivaciju smiješ procijeniti središnjom razlikom.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -690,7 +692,7 @@ $Ma_1=2{,}000\pm0{,}007$; $\Lambda=0{,}7209\pm0{,}0032$; $\Lambda_{mj}=0{,}7204\
 
 **Predvidi.** Skiciraj maseni protok pri snižavanju protutlaka. Gdje očekuješ plato?
 
-**Provjeri i protumači.** Usporedi nestlačivu i izentropsku procjenu pri malom padu tlaka, zatim prati zagušenje. Objasni zašto plato predstavlja fizikalno ograničenje modela, a ne zasićenje numeričkog računa.
+**Provjeri i protumači.** Usporedi nestlačivu i izentropsku procjenu pri malom padu tlaka, zatim prati zagušenje. Objasni zašto je plato fizikalno ograničenje modela, a ne zasićenje numeričkog računa.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u09_kompresibilna_sapnica.ipynb">Pokreni u pregledniku</a>
@@ -702,10 +704,10 @@ $Ma_1=2{,}000\pm0{,}007$; $\Lambda=0{,}7209\pm0{,}0032$; $\Lambda_{mj}=0{,}7204\
 ::: {.mf1-zavrsni-okvir}
 <p class="mf1-box-label">Za ponijeti iz poglavlja</p>
 
-- Brzina zvuka mjeri termodinamičku krutost fluida i postavlja konačnu brzinu prijenosa informacije.
+- Brzina zvuka mjeri termodinamičku krutost fluida i određuje konačnu brzinu prijenosa informacije.
 - Machov broj služi početnom odabiru modela, ali ne zamjenjuje provjeru grijanja i ukupne promjene tlaka.
 - Izentropske zaustavne relacije vrijede samo bez ireverzibilnih gubitaka.
 - Omjer površina $A/A^*$ ima podzvučno i nadzvučno rješenje; koje vrijedi, odlučuje protutlak.
-- Zagušenje ograničuje maseni protok; snižavanje nizvodnog tlaka nakon toga ne povećava protok.
+- Zagušenje ograničuje maseni protok: kada nastupi, daljnje snižavanje nizvodnog tlaka više ga ne povećava.
 - Udarni val čuva masu, količinu gibanja i zaustavnu entalpiju, ali povećava entropiju i smanjuje zaustavni tlak.
 :::

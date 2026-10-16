@@ -3,6 +3,18 @@
 Ovaj dokument prati sadržajne i tehničke promjene javnih izdanja. Potvrđene
 pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
+## Lektura priručnika — 16. listopada 2026.
+
+- Jezična i stilska lektura svih poglavlja, uvoda, predgovora i dodataka A–E: padeži, sročnost, red riječi, zarezi, kalkovi, preduge rečenice i nazivlje. Formule, brojevi, oznake i struktura nisu mijenjani, što je provjereno usporedbom sa stanjem prije lekture.
+- Upućivanja u kosom padežu („u primjer 7.6”, „prema jednadžba 9.20”) sada glase „u primjeru 7.6”, „prema jednadžbi 9.20”. Filtar poštuje oblik `[-@id]` i za primjere i zadatke.
+- Ispravljena formula u pog. 9, Z6 (`\leqs` se nije ispisivao), pokvaren popis u pog. 10 te ostaci indeksa $w$ (pog. 12, D03, D04); zapis $\vec g_{eff}$ je ujednačen.
+- Izvještaji i sadržajni nalazi za odluku autorice nalaze se u `docs/radno/lektura-2026-10/`.
+
+## Naslovi blokova i jedan sažetak po poglavlju — 16. listopada 2026.
+
+- Naslovi uvučenih obojenih blokova (npr. „Fizikalno značenje”, „Računalna dinamika fluida”, „Izvod”, „Granica modela”) malo su veći od teksta bloka: u webu 1,08 rem umjesto 0,82 rem, u PDF-u 12 pt umjesto 11,5 pt uz osnovni tekst od 11 pt.
+- Iz pog. 1–4 uklonjen je okvir „Za ponijeti iz poglavlja” (prikazan kao „Sažetak”) između riješenih primjera i zadataka za vježbu. Svako poglavlje sada ima jedan sažetak, na kraju. Pravilo je u autorskom ugovoru, a `tools/audit_publication.py` odbija sažetak ispred zadataka ili dva sažetka u poglavlju.
+
 ## Uvodi poglavlja i hrvatski indeksi — 15. listopada 2026.
 
 - Pog. 1 sada počinje uvodnim tekstom o fluidu, kontinuumu, gustoći, tlaku i Pascalovu zakonu. Uvodna slika slijedi iza teksta, a blok „Tumačenje skice” je uklonjen.

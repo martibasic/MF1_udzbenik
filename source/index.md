@@ -3,9 +3,9 @@
 :::
 
 ::: {.content-visible when-format="typst"}
-Ovaj sveučilišni priručnik vodi od fizikalnog modela i bilance do analitičkog rješenja, mjerenja i numeričke provjere. Primarna su publika studenti strojarstva i brodogradnje, a primjeri iz građevinarstva, energetike, okoliša, biomedicine i procesne tehnike koriste se kada isti zakon pokazuju iz drugog kuta.
+Ovaj sveučilišni priručnik vodi čitatelja od fizikalnog modela i bilance do analitičkog rješenja, mjerenja i numeričke provjere. Namijenjen je ponajprije studentima strojarstva i brodogradnje, a primjeri iz građevinarstva, energetike, zaštite okoliša, biomedicine i procesne tehnike uključeni su kad isti zakon pokazuju iz drugoga kuta.
 
-Uz izvode i riješene primjere nalaze se zadatci za samostalan rad. Dodatni numerički pokusi omogućuju istraživanje utjecaja podataka i pretpostavki na rezultat.
+Uz izvode i riješene primjere priručnik donosi zadatke za samostalan rad. U dodatnim numeričkim pokusima može se istražiti kako podatci i pretpostavke utječu na rezultat.
 :::
 
 :::: {.content-visible when-format="html"}
@@ -25,15 +25,15 @@ Od tlaka i hidrostatike do cjevovoda, turbostrojeva i otvorenih tokova — kroz 
 
 ## O priručniku {#sec-o-prirucniku}
 
-Sveučilišni priručnik namijenjen je studentima druge godine strojarstva i brodogradnje. Građevinski, energetski, okolišni, biomedicinski i procesni primjeri uključeni su kada prenose isti model i pomažu studentu prepoznati njegovu opću strukturu.
+Sveučilišni priručnik namijenjen je studentima druge godine strojarstva i brodogradnje. Primjeri iz građevinarstva, energetike, zaštite okoliša, biomedicine i procesne tehnike uključeni su kad prenose isti model i pomažu studentu prepoznati njegovu opću strukturu.
 
-Primjene u brodogradnji obuhvaćaju hidrostatska opterećenja, uzgon i početni stabilitet, sličnost pri modelnim ispitivanjima te propulziju. Naglasak je na izboru fizikalnog modela, njegovim pretpostavkama i provjeri rezultata.
+Primjene u brodogradnji obuhvaćaju hidrostatička opterećenja, uzgon i početni stabilitet, sličnost pri modelskim ispitivanjima te propulziju. Naglasak je na izboru fizikalnog modela, njegovim pretpostavkama i provjeri rezultata.
 
-Rješavanje tehničkog zadatka započinje skicom sustava i navođenjem pretpostavki, nakon čega slijede odgovarajuća bilanca, proračun i provjera rezultata. Napredni blokovi *Dublje* nisu preduvjet za prvo čitanje osnovnoga teksta.
+Rješavanje tehničkog zadatka počinje skicom sustava i popisom pretpostavki; zatim slijede odgovarajuća bilanca, proračun i provjera rezultata. Napredni blokovi *Dublje* nisu potrebni za prvo čitanje osnovnog teksta.
 
 ## Numerički pokusi {#lajtmotivi-i-numerika}
 
-Uz odabrana poglavlja dostupne su bilježnice koje se mogu pokrenuti u pregledniku. One omogućuju promjenu ulaznih podataka i usporedbu izračuna s teorijskim očekivanjem. Za razumijevanje glavnog teksta nije potrebno programiranje; dodatak D uvodi numeričke metode i provjeru simulacija.
+Uz odabrana poglavlja dostupne su bilježnice koje se pokreću u pregledniku. U njima se mogu mijenjati ulazni podatci, a izračun usporediti s teorijskim očekivanjem. Za razumijevanje glavnog teksta programiranje nije potrebno; numeričke metode i provjeru simulacija uvodi dodatak D.
 
 ## Impresum
 

@@ -188,6 +188,18 @@ main .callout-warning .callout-title-container { color: var(--mf1-accent-d); }
 .mf1-granica-modela .mf1-box-label { color: var(--mf1-c-po); }
 .mf1-numerika .mf1-box-label, .mf1-cfd > .mf1-box-label { color: var(--mf1-c-numerika); }
 .mf1-dublje .mf1-box-label { color: var(--mf1-c-ch); }
+/* Naslov uvučenog obojenog bloka malo je veći od teksta bloka (1rem),
+   kao i u PDF-u, gdje je naslov bloka veći od osnovnog teksta. */
+.mf1-izvod > .mf1-box-label,
+.mf1-application > .mf1-box-label,
+.mf1-temelj > .mf1-box-label,
+.mf1-fizikalno-znacenje > .mf1-box-label,
+.mf1-cfd > .mf1-box-label,
+.mf1-granica-modela > .mf1-box-label,
+.mf1-dublje > .mf1-box-label {
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
 
 /* Razine T1–T4 — sitna plošica uz labelu */
 .mf1-level {
@@ -352,8 +364,9 @@ h3.mf1-step {
 }
 .mf1-numerika.kompakt .mf1-box-label {
   color: var(--mf1-c-numerika);
-  font-size: 0.74rem;
-  letter-spacing: 0.11em;
+  font-size: 1.08rem;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
 }
 .mf1-numerika.kompakt .mf1-box-label::before { content: none; }
 

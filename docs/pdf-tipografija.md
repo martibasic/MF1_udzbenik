@@ -17,7 +17,8 @@ za formule te postojeći fontovi skica. A4 i margine od 26 mm vodoravno i
 | Poglavlje | 22 pt |
 | Podpoglavlje | 15 pt |
 | Odjeljak / naslov riješenog primjera | 12,5 pt |
-| Najniži strukturni podnaslov / naslov napomene | 11,5 pt |
+| Naslov bloka (npr. Fizikalno značenje, Računalna dinamika fluida) / napomene | 12 pt |
+| Najniži strukturni podnaslov | 11,5 pt |
 | Oznaka koraka rješenja | 11,25 pt |
 | Osnovni tekst i formule | 11 pt |
 | Sadržaj: poglavlje / podpoglavlje | 11,5 / 10,5 pt |

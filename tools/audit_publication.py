@@ -152,6 +152,33 @@ def _audit_quarto_contract() -> tuple[dict[str, object], list[str]]:
     }, issues
 
 
+TASKS_HEADING_RE = re.compile(r"(?m)^## Zad(?:a|at)ci (?:za vježbu|za samostalan rad)\b")
+SUMMARY_HEADING_RE = re.compile(r"(?m)^## Sažetak\b")
+SUMMARY_BOX_RE = re.compile(r"\{\.mf1-zavrsni-okvir\b")
+
+
+def summary_issues(text: str) -> list[str]:
+    """Poglavlje ima jedan sažetak, na kraju, iza zadataka za vježbu.
+
+    Sažetak je odjeljak ``## Sažetak`` ili završni okvir; okvir smije stajati
+    unutar tog odjeljka. Drugi sažetak između riješenih primjera i zadataka
+    ponavlja završni (odluka autorice od 16. listopada 2026.).
+    """
+    tasks = TASKS_HEADING_RE.search(text)
+    headings = [m.start() for m in SUMMARY_HEADING_RE.finditer(text)]
+    boxes = [m.start() for m in SUMMARY_BOX_RE.finditer(text)]
+    if not headings and not boxes:
+        return ["nedostaje završni sažetak poglavlja"]
+    issues = []
+    if len(headings) > 1 or len(boxes) > 1:
+        issues.append("poglavlje smije imati samo jedan sažetak")
+    if tasks and any(pos < tasks.start() for pos in headings + boxes):
+        issues.append("sažetak stoji ispred zadataka za vježbu; jedini sažetak dolazi na kraju poglavlja")
+    if headings and any(pos < headings[0] for pos in boxes):
+        issues.append("završni okvir stoji izvan odjeljka Sažetak, pa poglavlje ima dva sažetka")
+    return issues
+
+
 def load_chapters() -> tuple[list[Chapter], list[str]]:
     chapters: list[Chapter] = []
     issues: list[str] = []
@@ -306,8 +333,7 @@ def audit() -> tuple[dict[str, object], list[str]]:
             for marker in ("mf1-samoprovjera", "mf1-questions", "Konceptualna provjera")
         ):
             issues.append(f"{code}: nedostaje konceptualna samoprovjera bez formule")
-        if "mf1-zavrsni-okvir" not in chapter.text:
-            issues.append(f"{code}: nedostaje završni okvir granica i poruke modela")
+        issues.extend(f"{code}: {issue}" for issue in summary_issues(chapter.text))
 
         hint_headings = len(HINT_HEADING_RE.findall(chapter.text))
         hint_keys = len(HINT_KEY_RE.findall(chapter.text))

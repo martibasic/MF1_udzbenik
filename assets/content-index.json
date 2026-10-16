@@ -11,7 +11,7 @@
       "kind": "frontmatter",
       "number": "0",
       "part": null,
-      "source_sha256": "29f18c37b6c5c8fd3dadc179f19c500d893f1fd3523d04187b363fea6b8a5b5c",
+      "source_sha256": "9cca26f49eddfe26b458040078d1cf79292820838eac0073480f01d0447590b7",
       "sections": [
         {
           "id": "o-udžbeniku",
@@ -77,7 +77,7 @@
       "kind": "chapter",
       "number": "1",
       "part": "part-1",
-      "source_sha256": "d66df292bbc110a5df8a529810d8dd4cc2b4515bfc4af1d19cac96f4ffecda68",
+      "source_sha256": "bf633ce94b0341634bf102d8d3a2df65d4000db4da9f2819fb8794b7155f8235",
       "sections": [
         {
           "id": "fluid-kao-kontinuum",
@@ -222,7 +222,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "05fd1fa3710c0138fb16d3570b0b94456f5cd236d89f86f8defc0b66cd49e27c",
+      "source_sha256": "dc4d859f2fc23c52efbe2d4a966220f9585033feebe3bc9d5d834f7fcee950c5",
       "sections": [
         {
           "id": "viskoznost-i-međupovršinske-pojave",
@@ -362,7 +362,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "d302cb0a7d25d4d32cd4f77f9bcaccfa3c9f252122dd4b505fef18553cdfd50c",
+      "source_sha256": "eae2132b98d24e2c10c92f90d3a4951661064283e5b7a3604103ad1820934515",
       "sections": [
         {
           "id": "hidrostatička-raspodjela-tlaka",
@@ -500,7 +500,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "fd7e7c462d5756c43e81418fecbed2604de28f0526ab12da0f7918288ccd1fd3",
+      "source_sha256": "b004c4e4eec3f368ee080937c7ee8805b321c23b1ac68f95193fa870254993e7",
       "sections": [
         {
           "id": "relativno-mirovanje-fluida",
@@ -639,7 +639,7 @@
       "kind": "chapter",
       "number": "5",
       "part": "part-2",
-      "source_sha256": "6a6d50f63db64de1799a7728754f1df04887c49f61fb56ef963ce8b56a608343",
+      "source_sha256": "9e0d2aeff144d9a1789ac6cdecbe9ed9b7f904ea05e5276e0508e5040608598d",
       "sections": [
         {
           "id": "hidrostatske-sile-na-plohe",
@@ -813,7 +813,7 @@
       "kind": "chapter",
       "number": "6",
       "part": "part-2",
-      "source_sha256": "2cf762355f4326532d3dad1518451673a09b25698bfaa389ad350bb053d66ab0",
+      "source_sha256": "6a5b1644c0131ab55f58652fe6d9c9e285ad40bc1b2e0877b48b14e527bfa45a",
       "sections": [
         {
           "id": "uzgon-plivanje-i-početni-stabilitet",
@@ -974,7 +974,7 @@
       "kind": "chapter",
       "number": "7",
       "part": "part-3",
-      "source_sha256": "c8301be4c887fc263d80fc29eb4d500039a151c793350be18df3dc81ad6dde48",
+      "source_sha256": "772e247aee371955410240bf7c221c2b04035e01a5ac9f55cd6d9f6f444bcb70",
       "sections": [
         {
           "id": "kinematika-kontrolni-volumen-i-kontinuitet",
@@ -1141,7 +1141,7 @@
       "kind": "chapter",
       "number": "8",
       "part": "part-3",
-      "source_sha256": "fc58df962adbd5a2783c7d6ebbf3911a2e1e50347bec4b43c5806dedd6937f0c",
+      "source_sha256": "ef5261da8e5ae15704fe508c0bca2c0e09b180f76a2c4db74baeeb96c8c9b9aa",
       "sections": [
         {
           "id": "energijska-jednadžba-i-bernoullijeva-jednadžba",
@@ -1276,7 +1276,7 @@
       "kind": "chapter",
       "number": "9",
       "part": "part-3",
-      "source_sha256": "6a09b6bcf26d86f2ba632f5e7c5bd435f4efff629cab6ce5391e0c9cf77a959f",
+      "source_sha256": "078fab902c20be737d2727cf6b32955278a8414398f4d26091877922246a62ac",
       "sections": [
         {
           "id": "sec-kompresibilni-motivacija",
@@ -1400,7 +1400,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "a00e7b0cc1306de78eac95c85739fd3b48c647ce9dab4bb08dedd0023c3a4a94",
+      "source_sha256": "e57ef9c68e436dda210c190012dc2590f5ea25fe5ca6ec082717dac4469b44a9",
       "sections": [
         {
           "id": "količina-i-moment-količine-gibanja",
@@ -1570,7 +1570,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "25718ef59aaf4b2b31a38d8c3216e64f86cba260e62fad62de39f3cf1af39877",
+      "source_sha256": "c3780a1269981c65bfd4059c8479f14504490cace5c87692dbea319bcc8d94e5",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",
@@ -1719,7 +1719,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "5789eff08d66725c81eb1dd7609efae4fdf7020a5796f76e1f009502b0a3e67d",
+      "source_sha256": "9ad98e98527a018aadf7cb14c1021d277af9926a5c797c3c78110bb241a1c402",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1856,7 +1856,7 @@
       "kind": "chapter",
       "number": "13",
       "part": "part-5",
-      "source_sha256": "238e4b21c3f5fb2309bfd38cf0f66dbbc0ef678048a4c5597181915d6ee7bbe4",
+      "source_sha256": "3cb3ac2923884b213d450351ad4e7e1bb47334d9e9ff6e64b1ba0489533d2570",
       "sections": [
         {
           "id": "sec-cjevovodi-motivacija",
@@ -2025,7 +2025,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "fa257434cd423bf2a000b439f6b3971515bdb570e1369133f2df3b30d6d8fd3c",
+      "source_sha256": "44b40fa88cf6026f6dcae249b96da4c8c8f9e7f4bc9d17e53153c636d7289bcb",
       "sections": [
         {
           "id": "turbostrojevi-i-propulzija",
@@ -2149,7 +2149,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "b6e474186a21f0f6dec57a3780d967165531105ea3bb0e13835d061e6d9fe230",
+      "source_sha256": "f8583b001bffcf176d72285fffa981bb56179cf80f250dc8b9d0f81baba9fb3d",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2265,7 +2265,7 @@
       "kind": "appendix",
       "number": "A",
       "part": null,
-      "source_sha256": "d40d2cc88ac0b46fbc84b91a8080e62ed129baa137aad54330680d0d95a796ea",
+      "source_sha256": "3efccb95b4f1e50abaa7c27689ca15c448d7ba88c1d266a519634de1bc029f96",
       "sections": [
         {
           "id": "sažetak-formula-oznaka-i-tipičnih-jedinica",
@@ -2359,7 +2359,7 @@
       "kind": "appendix",
       "number": "B",
       "part": null,
-      "source_sha256": "156e479c7dea352d139a9dcaae700fe4807749db9b9c863d8f4742911446318e",
+      "source_sha256": "fe0613faa7850aa26a01aef99c762b7bb204af894d418b9005709691a2df725f",
       "sections": [
         {
           "id": "pojmovnik",
@@ -2381,7 +2381,7 @@
       "kind": "appendix",
       "number": "C",
       "part": null,
-      "source_sha256": "d19d86f52bfe7a3a19ef54d601b20a95d753254d13ef33a02a8aeb78f318b4dc",
+      "source_sha256": "149b714b721538a7d48fc29fd656d0cbd433883bf43f4cb32b13137fc19818d0",
       "sections": [
         {
           "id": "tipične-pogreške-i-preventivni-filtar-prije-računa",
@@ -2427,7 +2427,7 @@
       "kind": "appendix",
       "number": "D",
       "part": null,
-      "source_sha256": "a917f4d4079fb3124dcbec32efa4eb0b9396ea3d7ae9543f4afdd9b80bf8039e",
+      "source_sha256": "93b9f0e215d033744ef1dc102353dd6555336b147c2a3f368d0608a9129626f1",
       "sections": [
         {
           "id": "mehanika-fluida-i-numerika-pregled",
@@ -2505,7 +2505,7 @@
       "kind": "appendix",
       "number": "E",
       "part": null,
-      "source_sha256": "ef66662f6818a2a96df45c114fa73bf0e6a88ed67970f092e2e604d7a92943a7",
+      "source_sha256": "bc45aaf37c4cf765d750cfbf1484b3b35cefff4f4a2df70e238fcf6f69a44b4d",
       "sections": [
         {
           "id": "literatura-i-izvori",
@@ -2563,7 +2563,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "d323fedb7d1bf2d9cc96fbf0dcc39d7552d38738bf82032cfd4be37bb368866f",
+      "source_sha256": "944a79cc97b06941e30bdddacf0abc29265e06f060602e23a5bd7b458558a931",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -5463,7 +5463,7 @@
       "document": "u05",
       "number": "5.8",
       "caption": "Skice zadataka Z1–Z6: vodonepropusna vrata, parabolični pokrov, dvije razine vode, trokutasti poklopac, radijalni poklopac s osi u središtu kružnice i mjerni panel",
-      "alt": "Šest skica s dimenzijama i stvarnom vodom; tražene sile vode nisu nacrtane nego su označene upitnikom; u Z1 pogled okomito na vrata sa šarkama i zasunima, u Z2 parabolični pokrov s lokalnom tlačnom silom, u Z5 os je u središtu kružnice O",
+      "alt": "Šest skica s dimenzijama i stvarnom vodom; tražene sile vode nisu nacrtane, nego su označene upitnikom; u Z1 pogled okomito na vrata sa šarkama i zasunima, u Z2 parabolični pokrov s lokalnom tlačnom silom, u Z5 os je u središtu kružnice O",
       "source": "../assets/print/u05_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -6861,8 +6861,8 @@
       "kind": "Figure",
       "document": "u07",
       "number": "7.5",
-      "caption": "Miješajući izjednačni spremnik",
-      "alt": "Miješajući izjednačni spremnik",
+      "caption": "Izjednačni spremnik s miješanjem",
+      "alt": "Izjednačni spremnik s miješanjem",
       "source": "../assets/print/u08_ch1_mijesajuci_spremnik.svg",
       "type": "wide",
       "variants": {
@@ -6953,7 +6953,7 @@
       "kind": "Example",
       "document": "u07",
       "number": "7.5",
-      "title": "Kontinuitet kroz razvodni T-komad hidrauličnog sustava",
+      "title": "Kontinuitet kroz razvodni T-komad hidrauličkog sustava",
       "level": "T2",
       "label": "P5"
     },
@@ -7613,7 +7613,7 @@
       "kind": "Problem",
       "document": "u08",
       "number": "8.2",
-      "title": "Venturijeva cijev u vodu rashladne vode",
+      "title": "Venturijeva cijev u cjevovodu rashladne vode",
       "level": "T1",
       "label": "Z2"
     },
@@ -8677,7 +8677,7 @@
       "document": "u10",
       "number": "10.7",
       "caption": "Tlocrt hidroenergetskog koljena: izlaz skreće prema negativnoj osi y, a sila fluida na koljeno ima pozitivne komponente x i y.",
-      "alt": "Otvoreno koljeno stalnog unutarnjeg promjera 200 mm zakreće tok 60 stupnjeva prema minus y. Tlak na izlaznom presjeku djeluje prema kontrolnom volumenu. Rezultanta sile fluida ide prema plus x i plus y; reakcija oslonca ima suprotan smjer.",
+      "alt": "Otvoreno koljeno stalnog unutarnjeg promjera 200 mm zakreće tok za 60 stupnjeva prema minus y. Tlak na izlaznom presjeku djeluje prema kontrolnom volumenu. Rezultanta sile fluida ide prema plus x i plus y; reakcija oslonca ima suprotan smjer.",
       "source": "../assets/print/u10_fig_hidroenergetsko_koljeno.svg",
       "type": "standard",
       "variants": {
@@ -8705,7 +8705,7 @@
       "document": "u10",
       "number": "10.9",
       "caption": "Skice uz Z1–Z6: vodomlazni pogon, aktuatorski disk, reakcije vodova i moment ekscentričnog mlaza.",
-      "alt": "Šest skica s otvorenim presjecima i neprekinutim fluidom. Z1 prikazuje krmu brodice s usisom, vodomlaznim pogonom i mlazom prema krmi. Z2 prikazuje strujnu cijev kroz aktuatorski disk s brzinama ispred, na disku i iza njega. Z4 odvaja okomiti krak momenta od udaljenosti po x. Z5 razlikuje brzinu mlaza, gibanje ploče i shematski izlaz vode uz ploču. Z6 prikazuje tlocrt račve s pravom granom od 60 stupnjeva.",
+      "alt": "Šest skica s otvorenim presjecima i neprekinutim fluidom. Z1 prikazuje krmu brodice s usisom, vodomlaznim pogonom i mlazom prema krmi. Z2 prikazuje strujnu cijev kroz aktuatorski disk s brzinama ispred, na disku i iza njega. Z4 odvaja okomiti krak momenta od udaljenosti po x. Z5 razlikuje brzinu mlaza, gibanje ploče i shematski izlaz vode uz ploču. Z6 prikazuje tlocrt račve s ravnom granom i granom pod 60 stupnjeva.",
       "source": "../assets/print/u11_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -9545,7 +9545,7 @@
       "kind": "Equation",
       "document": "u12",
       "number": "12.19",
-      "latex": "\\tau_{st}=\\mu\\left.\\frac{\\partial v_x}{\\partial y}\\right|_w."
+      "latex": "\\tau_{st}=\\mu\\left.\\frac{\\partial v_x}{\\partial y}\\right|_{st}."
     },
     "eq-blasius-procjene": {
       "id": "eq-blasius-procjene",
@@ -11109,7 +11109,7 @@
       "document": "u15",
       "number": "15.2",
       "caption": "Skice vježbi: valovi, minimum energije, trapezni presjek, povišeno dno, kontrolni volumen skoka i provjera oborinskog kanala.",
-      "alt": "Poprečne kote razlikuju dno, slobodnu širinu i dubinu. Uzdužni prikazi imaju otvoren tok iznad neprekinutog dna; sile na rubovima kontrolnog volumena skoka su suprotne.",
+      "alt": "Poprečne kote razlikuju dno, širinu slobodne površine i dubinu. Uzdužni prikazi imaju otvoren tok iznad neprekinutog dna; sile na rubovima kontrolnog volumena skoka suprotnog su smjera.",
       "source": "../assets/print/u15_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -11310,24 +11310,24 @@
       "term": "Energijska crta (EGL)",
       "document": "d02"
     },
-    "term-eulerova-jednadzba-turbostroja": {
-      "id": "term-eulerova-jednadzba-turbostroja",
-      "term": "Eulerova jednadžba turbostroja",
-      "document": "d02"
-    },
     "term-eulerov-broj": {
       "id": "term-eulerov-broj",
       "term": "Eulerov broj",
       "document": "d02"
     },
-    "term-froudeova-hipoteza": {
-      "id": "term-froudeova-hipoteza",
-      "term": "Froudeova hipoteza",
+    "term-eulerova-jednadzba-turbostroja": {
+      "id": "term-eulerova-jednadzba-turbostroja",
+      "term": "Eulerova jednadžba turbostroja",
       "document": "d02"
     },
     "term-froudeov-broj": {
       "id": "term-froudeov-broj",
       "term": "Froudeov broj",
+      "document": "d02"
+    },
+    "term-froudeova-hipoteza": {
+      "id": "term-froudeova-hipoteza",
+      "term": "Froudeova hipoteza",
       "document": "d02"
     },
     "term-gaz": {
@@ -11830,6 +11830,16 @@
       "term": "Volumni modul elastičnosti",
       "document": "d02"
     },
+    "term-weberov-broj": {
+      "id": "term-weberov-broj",
+      "term": "Weberov broj",
+      "document": "d02"
+    },
+    "term-young-laplaceova-relacija": {
+      "id": "term-young-laplaceova-relacija",
+      "term": "Young–Laplaceova relacija",
+      "document": "d02"
+    },
     "term-zagusenje-sapnice-choking": {
       "id": "term-zagusenje-sapnice-choking",
       "term": "Zagušenje sapnice (choking)",
@@ -11843,16 +11853,6 @@
     "term-zaustavna-stagnacijska-velicina": {
       "id": "term-zaustavna-stagnacijska-velicina",
       "term": "Zaustavna (stagnacijska) veličina",
-      "document": "d02"
-    },
-    "term-weberov-broj": {
-      "id": "term-weberov-broj",
-      "term": "Weberov broj",
-      "document": "d02"
-    },
-    "term-young-laplaceova-relacija": {
-      "id": "term-young-laplaceova-relacija",
-      "term": "Young–Laplaceova relacija",
       "document": "d02"
     }
   },
@@ -12552,26 +12552,6 @@
     {
       "document": "d05",
       "target": "ex-stepenica-mjerenje-cfd"
-    },
-    {
-      "document": "d06",
-      "target": "eq-priguseni-protok"
-    },
-    {
-      "document": "d06",
-      "target": "eq-priguseni-protok"
-    },
-    {
-      "document": "d06",
-      "target": "eq-potisak-mlaznog-pogona"
-    },
-    {
-      "document": "d06",
-      "target": "eq-aktuatorski-disk-brzina"
-    },
-    {
-      "document": "d06",
-      "target": "eq-aktuatorski-disk-potisak"
     }
   ],
   "counts": {
